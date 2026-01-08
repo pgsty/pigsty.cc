@@ -63,6 +63,21 @@
    Base Styles
    ============================================ */
 
+/* Ensure html and body have no gaps and match hero background */
+html {
+  background: var(--pigsty-dark);
+}
+
+body.landing-page {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  color: var(--pigsty-gray-100);
+  background: var(--pigsty-dark);
+  overflow-x: hidden;
+}
+
 .landing-page {
   font-family: var(--font-sans);
   line-height: 1.6;
@@ -159,9 +174,10 @@
 }
 
 .landing-header.scrolled {
-  background: rgba(15, 20, 25, 0.95);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  background: rgba(15, 20, 25, 0.98);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 .landing-nav {
@@ -2074,6 +2090,30 @@
   border-top: 1px solid rgba(255, 255, 255, 0.05);
   color: var(--pigsty-gray-500);
   font-size: 0.85rem;
+}
+
+.footer-copyright a {
+  color: var(--pigsty-gray-400);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.footer-copyright a:visited {
+  color: var(--pigsty-gray-400);
+}
+
+.footer-copyright a:hover {
+  color: var(--pigsty-gray-300);
+}
+
+.footer-icp a {
+  color: var(--pigsty-gray-500);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.footer-icp a:hover {
+  color: var(--pigsty-gray-300);
 }
 
 .footer-lang-switch a {
