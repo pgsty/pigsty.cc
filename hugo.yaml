@@ -1,0 +1,195 @@
+#=======================================#
+# Basics
+#=======================================#
+baseURL: https://pigsty.cc/
+title: PIGSTY
+languageCode: zh-CN
+defaultContentLanguage: zh-cn
+enableRobotsTXT: true
+enableGitInfo: true
+
+#=======================================#
+# Hugo Module (replaces theme: docsy)
+#=======================================#
+module:
+  proxy: direct
+  hugoVersion:
+    extended: true
+    min: "0.146.0"
+  imports:
+    - path: github.com/google/docsy
+      disable: false
+
+#=======================================#
+# Menu Customization
+#=======================================#
+menu:
+  main:
+    - identifier: docs
+      name: 文档
+      weight: 10
+      url: /docs/
+      pre: <i class='fa-solid fa-book'></i>
+
+    - weight: 50
+      url: 'https://github.com/pgsty/pigsty/'
+      pre: <i class='fab fa-github'></i>
+
+
+#=======================================#
+# Taxonomies Support
+#=======================================#
+taxonomies:
+  module: module          # Pigsty INFRA NODE ETCD PGSQL REDIS MINIO DOCKER APP
+  categories: categories  # Overview Concept Arch Config Param Playbook Admin Monitor Dashboard FAQ
+  tags: tags              # misc
+
+#=======================================#
+# Blog Setting
+#=======================================#
+permalinks:
+  blog: '/:sections/:contentbasename/'
+
+#=======================================#
+# External Services, Google Analytics
+#=======================================#
+services:
+  googleAnalytics:
+    id: "G-LG1V9WTKGE"
+
+#=======================================#
+# Image processing configuration
+#=======================================#
+imaging:
+  resampleFilter: CatmullRom
+  quality: 75
+  anchor: smart
+
+#=======================================#
+# Markdown Configuration
+#=======================================#
+markup:
+  goldmark:
+    parser:
+      attribute:
+        block: true
+    renderer:
+      unsafe: true
+  highlight:
+    style: tango
+    codeFences: true
+    noClasses: true
+
+#=======================================#
+# Outputs
+#=======================================#
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+  section:
+    - HTML
+    - RSS
+    - print
+
+#=======================================#
+# Site Params
+#=======================================#
+params:
+  # metadata
+  description: 'Pigsty 是开源免费的 PostgreSQL 数据库发行版，提供本地优先的RDS，以及开箱即用的监控、管控、IaC、高可用，以及PG生态的 440 余款插件'
+  version: 4.0.0
+  copyright:
+    authors: Ruohang Feng
+    from_year: 2018
+  privacy_policy: /docs/about/privacy
+
+  # Time format
+  time_format_blog: 2006年01月02日
+  time_format_default: '2006-01-02'
+
+  # Project info
+  archived_version: false
+  url_latest_version: 'https://pigsty.cc'
+  github_repo: 'https://github.com/pgsty/pigsty.cc'
+  github_project_repo: 'https://github.com/pgsty/pigsty'
+
+  # Version dropdown menu
+  version_menu: "版本"
+  versions:
+    - version: "Pigsty English Site"
+      url: 'https://pigsty.io'
+    - version: "Pigsty v3.7 文档"
+      url: 'https://doc.pgsty.com/zh'
+    - version: "Pigsty v3.4 文档"
+      url: 'https://v34.pigsty.cc/zh'
+    - version: "Pigsty v2.7 文档"
+      url: 'https://v27.pigsty.cc'
+    - version: "Pigsty v1.5 文档"
+      url: 'https://v15.pigsty.cc/docs'
+
+  # Taxonomy display settings
+  taxonomy:
+    taxonomyCloud: [module, categories, tags]
+    taxonomyCloudTitle: [模块, 分类, 标签]
+    taxonomyPageHeader: [模块, 分类, 标签]
+
+  # Search
+  offlineSearch: true
+  prism_syntax_highlighting: false
+
+  # UI settings
+  ui:
+    breadcrumb_disable: false
+    navbar_logo: true
+    navbar_translucent_over_cover_disable: false
+    sidebar_menu_compact: true
+    sidebar_search_disable: false
+    sidebar_menu_foldable: true
+    sidebar_cache_limit: 1000
+    sidebar_root_enabled: true
+    sidebar_menu_truncate: 0
+    ul_show: 3
+    showLightDarkModeMenu: true
+
+    # Feedback section (requires Google Analytics)
+    feedback:
+      enable: true
+      "yes": >-
+        感谢反馈！请 <a href="https://github.com/pgsty/pigsty/issues/new">告诉我们如何改进</a>。
+      "no": >-
+        抱歉给您带来不便。请 <a href="https://github.com/pgsty/pigsty/issues/new">告诉我们如何改进</a>。
+
+    # Reading time
+    readingtime:
+      enable: false
+
+  # Links
+  links:
+    user:
+      - name: 邮件
+        url: 'mailto:rh@vonng.com'
+        icon: fa fa-envelope
+        desc: 发送邮件给作者
+      - name: GitHub
+        url: 'https://github.com/pgsty/pigsty'
+        icon: fab fa-github
+        desc: Pigsty 代码仓库
+      - name: Twitter
+        url: 'https://x.com/PlGSTY'
+        icon: fab fa-twitter
+        desc: 关注 Twitter 获取最新动态
+    developer:
+      - name: 微信
+        url: /img/pigsty/pigsty-cc.jpg
+        icon: fa fa-comment
+        desc: 微信群 & 公众号
+      - name: Discord
+        url: 'https://discord.gg/wDzt5VyWEz'
+        icon: fab fa-discord
+        desc: Discord 频道
+      - name: Telegram
+        url: 'https://t.me/joinchat/gV9zfZraNPM3YjFh'
+        icon: fab fa-telegram
+        desc: Telegram 群组

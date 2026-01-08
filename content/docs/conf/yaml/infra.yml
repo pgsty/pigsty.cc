@@ -1,0 +1,47 @@
+---
+#==============================================================#
+# File      :   infra.yml
+# Desc      :   Infra Only Config
+# Ctime     :   2025-12-16
+# Mtime     :   2025-12-30
+# Docs      :   https://doc.pgsty.com/infra
+# License   :   Apache-2.0 @ https://pigsty.io/docs/about/license/
+# Copyright :   2018-2026  Ruohang Feng / Vonng (rh@vonng.com)
+#==============================================================#
+
+# This is the config template for deploy victoria stack alone
+# tutorial: https://doc.pgsty.com/infra
+#
+# Usage:
+#   curl https://repo.pigsty.io/get | bash
+#   ./configure -c infra
+#   ./infra.yml
+
+all:
+  children:
+    infra:
+      hosts:
+        10.10.10.10: { infra_seq: 1 }
+        #10.10.10.11: { infra_seq: 2 } # you can add more nodes if you want
+        #10.10.10.12: { infra_seq: 3 } # don't forget to assign unique infra_seq for each node
+      vars:
+        docker_enabled: true            # enabled docker with ./docker.yml
+        docker_registry_mirrors: ["https://docker.1panel.live","https://docker.1ms.run","https://docker.xuanyuan.me","https://registry-1.docker.io"]
+        pg_exporters:     # bin/pgmon-add pg-rds
+          20001: { pg_cluster: pg-rds ,pg_seq: 1 ,pg_host: 10.10.10.10 ,pg_exporter_url: 'postgres://postgres:postgres@10.10.10.10:5432/postgres' }
+
+  vars:                                 # global variables
+    version: v4.0.0                     # pigsty version string
+    admin_ip: 10.10.10.10               # admin node ip address
+    region: default                     # upstream mirror region: default,china,europe
+    node_tune: oltp                     # node tuning specs: oltp,olap,tiny,crit
+    infra_portal:                       # infra services exposed via portal
+      home : { domain: i.pigsty }       # default domain name
+    repo_enabled: false                 # online installation without repo
+    node_repo_modules: node,infra,pgsql # add these repos directly
+    #haproxy_enabled: false              # enable haproxy on infra node?
+    #vector_enabled: false               # enable vector on infra node?
+
+    # DON't FORGET TO CHANGE DEFAULT PASSWORDS!
+    grafana_admin_password: pigsty
+...

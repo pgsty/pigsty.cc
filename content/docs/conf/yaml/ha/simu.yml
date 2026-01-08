@@ -1,0 +1,393 @@
+---
+#==============================================================#
+# File      :   simu.yml
+# Desc      :   Pigsty Simubox: a 20 node prod simulation env
+# Ctime     :   2023-07-20
+# Mtime     :   2025-12-23
+# Docs      :   https://doc.pgsty.com/config
+# License   :   AGPLv3 @ https://doc.pgsty.com/about/license
+# Copyright :   2018-2025  Ruohang Feng / Vonng (rh@vonng.com)
+#==============================================================#
+
+all:
+
+  children:
+
+    #==========================================================#
+    # infra: 3 nodes
+    #==========================================================#
+    # ./infra.yml -l infra
+    # ./docker.yml -l infra (optional)
+    infra:
+      hosts:
+        10.10.10.10: {}
+        10.10.10.11: { repo_enabled: false }
+        10.10.10.12: { repo_enabled: false }
+      vars:
+        docker_enabled: true
+        node_conf: oltp         # use oltp template for infra nodes
+        pg_conf: oltp.yml       # use oltp template for infra pgsql
+        pg_exporters:           # bin/pgmon-add pg-meta2/pg-src2/pg-dst2
+          20001: {pg_cluster: pg-meta2   ,pg_seq: 1 ,pg_host: 10.10.10.10, pg_databases: [{ name: meta }]}
+          20002: {pg_cluster: pg-meta2   ,pg_seq: 2 ,pg_host: 10.10.10.11, pg_databases: [{ name: meta }]}
+          20003: {pg_cluster: pg-meta2   ,pg_seq: 3 ,pg_host: 10.10.10.12, pg_databases: [{ name: meta }]}
+
+          20004: {pg_cluster: pg-src2    ,pg_seq: 1 ,pg_host: 10.10.10.31, pg_databases: [{ name: src }]}
+          20005: {pg_cluster: pg-src2    ,pg_seq: 2 ,pg_host: 10.10.10.32, pg_databases: [{ name: src }]}
+          20006: {pg_cluster: pg-src2    ,pg_seq: 3 ,pg_host: 10.10.10.33, pg_databases: [{ name: src }]}
+
+          20007: {pg_cluster: pg-dst2    ,pg_seq: 1 ,pg_host: 10.10.10.41, pg_databases: [{ name: dst }]}
+          20008: {pg_cluster: pg-dst2    ,pg_seq: 2 ,pg_host: 10.10.10.42, pg_databases: [{ name: dst }]}
+          20009: {pg_cluster: pg-dst2    ,pg_seq: 3 ,pg_host: 10.10.10.43, pg_databases: [{ name: dst }]}
+
+
+    #==========================================================#
+    # nodes: 23 nodes
+    #==========================================================#
+    # ./node.yml
+    nodes:
+      hosts:
+        10.10.10.10 : { nodename: meta1  ,node_cluster: meta   ,pg_cluster: pg-meta  ,pg_seq: 1 ,pg_role: primary, infra_seq: 1 }
+        10.10.10.11 : { nodename: meta2  ,node_cluster: meta   ,pg_cluster: pg-meta  ,pg_seq: 2 ,pg_role: replica, infra_seq: 2 }
+        10.10.10.12 : { nodename: meta3  ,node_cluster: meta   ,pg_cluster: pg-meta  ,pg_seq: 3 ,pg_role: replica, infra_seq: 3 }
+        10.10.10.18 : { nodename: proxy1 ,node_cluster: proxy  ,vip_address: 10.10.10.20 ,vip_vrid: 20 ,vip_interface: eth1 ,vip_role: master }
+        10.10.10.19 : { nodename: proxy2 ,node_cluster: proxy  ,vip_address: 10.10.10.20 ,vip_vrid: 20 ,vip_interface: eth1 ,vip_role: backup }
+        10.10.10.21 : { nodename: minio1 ,node_cluster: minio  ,minio_cluster: minio ,minio_seq: 1 }
+        10.10.10.22 : { nodename: minio2 ,node_cluster: minio  ,minio_cluster: minio ,minio_seq: 2 }
+        10.10.10.23 : { nodename: minio3 ,node_cluster: minio  ,minio_cluster: minio ,minio_seq: 3 }
+        10.10.10.24 : { nodename: minio4 ,node_cluster: minio  ,minio_cluster: minio ,minio_seq: 4 }
+        10.10.10.25 : { nodename: etcd1  ,node_cluster: etcd   ,etcd_cluster: etcd ,etcd_seq: 1 }
+        10.10.10.26 : { nodename: etcd2  ,node_cluster: etcd   ,etcd_cluster: etcd ,etcd_seq: 2 }
+        10.10.10.27 : { nodename: etcd3  ,node_cluster: etcd   ,etcd_cluster: etcd ,etcd_seq: 3 }
+        10.10.10.28 : { nodename: etcd4  ,node_cluster: etcd   ,etcd_cluster: etcd ,etcd_seq: 4 }
+        10.10.10.29 : { nodename: etcd5  ,node_cluster: etcd   ,etcd_cluster: etcd ,etcd_seq: 5 }
+        10.10.10.31 : { nodename: pg-src-1 ,node_cluster: pg-src ,node_id_from_pg: true }
+        10.10.10.32 : { nodename: pg-src-2 ,node_cluster: pg-src ,node_id_from_pg: true }
+        10.10.10.33 : { nodename: pg-src-3 ,node_cluster: pg-src ,node_id_from_pg: true }
+        10.10.10.41 : { nodename: pg-dst-1 ,node_cluster: pg-dst ,node_id_from_pg: true }
+        10.10.10.42 : { nodename: pg-dst-2 ,node_cluster: pg-dst ,node_id_from_pg: true }
+        10.10.10.43 : { nodename: pg-dst-3 ,node_cluster: pg-dst ,node_id_from_pg: true }
+
+    #==========================================================#
+    # etcd: 5 nodes dedicated etcd cluster
+    #==========================================================#
+    # ./etcd.yml -l etcd;
+    etcd:
+      hosts:
+        10.10.10.25: {}
+        10.10.10.26: {}
+        10.10.10.27: {}
+        10.10.10.28: {}
+        10.10.10.29: {}
+      vars: {}
+
+    #==========================================================#
+    # minio: 4 nodes dedicated minio cluster
+    #==========================================================#
+    # ./minio.yml -l minio;
+    minio:
+      hosts:
+        10.10.10.21: {}
+        10.10.10.22: {}
+        10.10.10.23: {}
+        10.10.10.24: {}
+      vars:
+        minio_data: '/data{1...4}' # 4 node x 4 disk
+        minio_users:                      # list of minio user to be created
+          - { access_key: pgbackrest  ,secret_key: S3User.Backup ,policy: pgsql }
+          - { access_key: s3user_meta ,secret_key: S3User.Meta   ,policy: meta  }
+          - { access_key: s3user_data ,secret_key: S3User.Data   ,policy: data  }
+
+
+    #==========================================================#
+    # proxy: 2 nodes used as dedicated haproxy server
+    #==========================================================#
+    # ./node.yml -l proxy
+    proxy:
+      hosts:
+        10.10.10.18: {}
+        10.10.10.19: {}
+      vars:
+        vip_enabled: true
+        haproxy_services:      # expose minio service : sss.pigsty:9000
+          - name: minio        # [REQUIRED] service name, unique
+            port: 9000         # [REQUIRED] service port, unique
+            balance: leastconn # Use leastconn algorithm and minio health check
+            options: [ "option httpchk", "option http-keep-alive", "http-check send meth OPTIONS uri /minio/health/live", "http-check expect status 200" ]
+            servers:           # reload service with ./node.yml -t haproxy_config,haproxy_reload
+              - { name: minio-1 ,ip: 10.10.10.21 ,port: 9000 ,options: 'check-ssl ca-file /etc/pki/ca.crt check port 9000' }
+              - { name: minio-2 ,ip: 10.10.10.22 ,port: 9000 ,options: 'check-ssl ca-file /etc/pki/ca.crt check port 9000' }
+              - { name: minio-3 ,ip: 10.10.10.23 ,port: 9000 ,options: 'check-ssl ca-file /etc/pki/ca.crt check port 9000' }
+              - { name: minio-4 ,ip: 10.10.10.24 ,port: 9000 ,options: 'check-ssl ca-file /etc/pki/ca.crt check port 9000' }
+
+    #==========================================================#
+    # pg-meta: reuse infra node as meta cmdb
+    #==========================================================#
+    # ./pgsql.yml -l pg-meta
+    pg-meta:
+      hosts:
+        10.10.10.10: { pg_seq: 1 , pg_role: primary }
+        10.10.10.11: { pg_seq: 2 , pg_role: replica }
+        10.10.10.12: { pg_seq: 3 , pg_role: replica }
+      vars:
+        pg_cluster: pg-meta
+        pg_vip_enabled: true
+        pg_vip_address: 10.10.10.2/24
+        pg_vip_interface: eth1
+        pg_users:
+          - {name: dbuser_meta     ,password: DBUser.Meta     ,pgbouncer: true ,roles: [dbrole_admin]    ,comment: pigsty admin user }
+          - {name: dbuser_view     ,password: DBUser.Viewer   ,pgbouncer: true ,roles: [dbrole_readonly] ,comment: read-only viewer for meta database }
+          - {name: dbuser_grafana  ,password: DBUser.Grafana  ,pgbouncer: true ,roles: [dbrole_admin]    ,comment: admin user for grafana database    }
+          - {name: dbuser_bytebase ,password: DBUser.Bytebase ,pgbouncer: true ,roles: [dbrole_admin]    ,comment: admin user for bytebase database   }
+          - {name: dbuser_kong     ,password: DBUser.Kong     ,pgbouncer: true ,roles: [dbrole_admin]    ,comment: admin user for kong api gateway    }
+          - {name: dbuser_gitea    ,password: DBUser.Gitea    ,pgbouncer: true ,roles: [dbrole_admin]    ,comment: admin user for gitea service       }
+          - {name: dbuser_wiki     ,password: DBUser.Wiki     ,pgbouncer: true ,roles: [dbrole_admin]    ,comment: admin user for wiki.js service     }
+          - {name: dbuser_noco     ,password: DBUser.Noco     ,pgbouncer: true ,roles: [dbrole_admin]    ,comment: admin user for nocodb service      }
+        pg_databases:
+          - { name: meta ,baseline: cmdb.sql ,comment: pigsty meta database ,schemas: [pigsty] ,extensions: [{name: vector}]}
+          - { name: grafana  ,owner: dbuser_grafana  ,revokeconn: true ,comment: grafana primary database }
+          - { name: bytebase ,owner: dbuser_bytebase ,revokeconn: true ,comment: bytebase primary database }
+          - { name: kong     ,owner: dbuser_kong     ,revokeconn: true ,comment: kong the api gateway database }
+          - { name: gitea    ,owner: dbuser_gitea    ,revokeconn: true ,comment: gitea meta database }
+          - { name: wiki     ,owner: dbuser_wiki     ,revokeconn: true ,comment: wiki meta database }
+          - { name: noco     ,owner: dbuser_noco     ,revokeconn: true ,comment: nocodb database }
+        pg_hba_rules:
+          - { user: dbuser_view , db: all ,addr: infra ,auth: pwd ,title: 'allow grafana dashboard access cmdb from infra nodes' }
+        pg_libs: 'pg_stat_statements, auto_explain' # add timescaledb to shared_preload_libraries
+        node_crontab:  # make a full backup on monday 1am, and an incremental backup during weekdays
+          - '00 01 * * 1 postgres /pg/bin/pg-backup full'
+          - '00 01 * * 2,3,4,5,6,7 postgres /pg/bin/pg-backup'
+
+    #==========================================================#
+    # pg-src: dedicate 3 node source cluster
+    #==========================================================#
+    # ./pgsql.yml -l pg-src
+    pg-src:
+      hosts:
+        10.10.10.31: { pg_seq: 1 ,pg_role: primary }
+        10.10.10.32: { pg_seq: 2 ,pg_role: replica }
+        10.10.10.33: { pg_seq: 3 ,pg_role: replica }
+      vars:
+        pg_cluster: pg-src
+        pg_vip_enabled: true
+        pg_vip_address: 10.10.10.3/24
+        pg_vip_interface: eth1
+        pg_users:  [{ name: test , password: test , pgbouncer: true , roles: [ dbrole_admin ] }]
+        pg_databases: [{ name: src }]
+
+
+    #==========================================================#
+    # pg-dst: dedicate 3 node destination cluster
+    #==========================================================#
+    # ./pgsql.yml -l pg-dst
+    pg-dst:
+      hosts:
+        10.10.10.41: { pg_seq: 1 ,pg_role: primary }
+        10.10.10.42: { pg_seq: 2 ,pg_role: replica }
+        10.10.10.43: { pg_seq: 3 ,pg_role: replica }
+      vars:
+        pg_cluster: pg-dst
+        pg_vip_enabled: true
+        pg_vip_address: 10.10.10.4/24
+        pg_vip_interface: eth1
+        pg_users: [ { name: test , password: test , pgbouncer: true , roles: [ dbrole_admin ] } ]
+        pg_databases: [ { name: dst } ]
+
+
+    #==========================================================#
+    # redis-meta: reuse the 5 etcd nodes as redis sentinel
+    #==========================================================#
+    # ./redis.yml -l redis-meta
+    redis-meta:
+      hosts:
+        10.10.10.25: { redis_node: 1 , redis_instances: { 26379: {} } }
+        10.10.10.26: { redis_node: 2 , redis_instances: { 26379: {} } }
+        10.10.10.27: { redis_node: 3 , redis_instances: { 26379: {} } }
+        10.10.10.28: { redis_node: 4 , redis_instances: { 26379: {} } }
+        10.10.10.29: { redis_node: 5 , redis_instances: { 26379: {} } }
+      vars:
+        redis_cluster: redis-meta
+        redis_password: 'redis.meta'
+        redis_mode: sentinel
+        redis_max_memory: 256MB
+        redis_sentinel_monitor:  # primary list for redis sentinel, use cls as name, primary ip:port
+          - { name: redis-src, host: 10.10.10.31, port: 6379 ,password: redis.src, quorum: 1 }
+          - { name: redis-dst, host: 10.10.10.41, port: 6379 ,password: redis.dst, quorum: 1 }
+
+    #==========================================================#
+    # redis-src: reuse pg-src 3 nodes for redis
+    #==========================================================#
+    # ./redis.yml -l redis-src
+    redis-src:
+      hosts:
+        10.10.10.31: { redis_node: 1 , redis_instances: {6379: {  } }}
+        10.10.10.32: { redis_node: 2 , redis_instances: {6379: { replica_of: '10.10.10.31 6379' }, 6380: { replica_of: '10.10.10.32 6379' } }}
+        10.10.10.33: { redis_node: 3 , redis_instances: {6379: { replica_of: '10.10.10.31 6379' }, 6380: { replica_of: '10.10.10.33 6379' } }}
+      vars:
+        redis_cluster: redis-src
+        redis_password: 'redis.src'
+        redis_max_memory: 64MB
+
+    #==========================================================#
+    # redis-dst: reuse pg-dst 3 nodes for redis
+    #==========================================================#
+    # ./redis.yml -l redis-dst
+    redis-dst:
+      hosts:
+        10.10.10.41: { redis_node: 1 , redis_instances: {6379: {  }                               }}
+        10.10.10.42: { redis_node: 2 , redis_instances: {6379: { replica_of: '10.10.10.41 6379' } }}
+        10.10.10.43: { redis_node: 3 , redis_instances: {6379: { replica_of: '10.10.10.41 6379' } }}
+      vars:
+        redis_cluster: redis-dst
+        redis_password: 'redis.dst'
+        redis_max_memory: 64MB
+
+    #==========================================================#
+    # pg-tmp: reuse proxy nodes as pgsql cluster
+    #==========================================================#
+    # ./pgsql.yml -l pg-tmp
+    pg-tmp:
+      hosts:
+        10.10.10.18: { pg_seq: 1 ,pg_role: primary }
+        10.10.10.19: { pg_seq: 2 ,pg_role: replica }
+      vars:
+        pg_cluster: pg-tmp
+        pg_users: [ { name: test , password: test , pgbouncer: true , roles: [ dbrole_admin ] } ]
+        pg_databases: [ { name: tmp } ]
+
+    #==========================================================#
+    # pg-etcd: reuse etcd nodes as pgsql cluster
+    #==========================================================#
+    # ./pgsql.yml -l pg-etcd
+    pg-etcd:
+      hosts:
+        10.10.10.25: { pg_seq: 1 ,pg_role: primary }
+        10.10.10.26: { pg_seq: 2 ,pg_role: replica }
+        10.10.10.27: { pg_seq: 3 ,pg_role: replica }
+        10.10.10.28: { pg_seq: 4 ,pg_role: replica }
+        10.10.10.29: { pg_seq: 5 ,pg_role: offline }
+      vars:
+        pg_cluster: pg-etcd
+        pg_users: [ { name: test , password: test , pgbouncer: true , roles: [ dbrole_admin ] } ]
+        pg_databases: [ { name: etcd } ]
+
+    #==========================================================#
+    # pg-minio: reuse minio nodes as pgsql cluster
+    #==========================================================#
+    # ./pgsql.yml -l pg-minio
+    pg-minio:
+      hosts:
+        10.10.10.21: { pg_seq: 1 ,pg_role: primary }
+        10.10.10.22: { pg_seq: 2 ,pg_role: replica }
+        10.10.10.23: { pg_seq: 3 ,pg_role: replica }
+        10.10.10.24: { pg_seq: 4 ,pg_role: replica }
+      vars:
+        pg_cluster: pg-minio
+        pg_users: [ { name: test , password: test , pgbouncer: true , roles: [ dbrole_admin ] } ]
+        pg_databases: [ { name: minio } ]
+
+    #==========================================================#
+    # ferret: reuse pg-src as mongo (ferretdb)
+    #==========================================================#
+    # ./mongo.yml -l ferret
+    ferret:
+      hosts:
+        10.10.10.31: { mongo_seq: 1 }
+        10.10.10.32: { mongo_seq: 2 }
+        10.10.10.33: { mongo_seq: 3 }
+      vars:
+        mongo_cluster: ferret
+        mongo_pgurl: 'postgres://test:test@10.10.10.31:5432/src'
+
+
+  #============================================================#
+  # Global Variables
+  #============================================================#
+  vars:
+
+    #==========================================================#
+    # INFRA
+    #==========================================================#
+    version: v4.0.0                   # pigsty version string
+    admin_ip: 10.10.10.10             # admin node ip address
+    region: china                     # upstream mirror region: default|china|europe
+    infra_portal:                     # infra services exposed via portal
+      home         : { domain: i.pigsty }     # default domain name
+      minio        : { domain: m.pigsty    ,endpoint: "10.10.10.21:9001" ,scheme: https ,websocket: true }
+      postgrest    : { domain: api.pigsty  ,endpoint: "127.0.0.1:8884" }
+      pgadmin      : { domain: adm.pigsty  ,endpoint: "127.0.0.1:8885" }
+      pgweb        : { domain: cli.pigsty  ,endpoint: "127.0.0.1:8886" }
+      bytebase     : { domain: ddl.pigsty  ,endpoint: "127.0.0.1:8887" }
+      jupyter      : { domain: lab.pigsty  ,endpoint: "127.0.0.1:8888"  , websocket: true }
+      supa         : { domain: supa.pigsty ,endpoint: "10.10.10.10:8000", websocket: true }
+
+    #==========================================================#
+    # NODE
+    #==========================================================#
+    node_id_from_pg: false            # use nodename rather than pg identity as hostname
+    node_conf: tiny                   # use small node template
+    node_timezone: Asia/Hong_Kong     # use Asia/Hong_Kong Timezone
+    node_dns_servers:                 # DNS servers in /etc/resolv.conf
+      - 10.10.10.10
+      - 10.10.10.11
+    node_etc_hosts:
+      - 10.10.10.10 i.pigsty
+      - 10.10.10.20 sss.pigsty        # point minio service domain to the L2 VIP of proxy cluster
+    node_ntp_servers:                 # NTP servers in /etc/chrony.conf
+      - pool cn.pool.ntp.org iburst
+      - pool 10.10.10.10 iburst
+    node_admin_ssh_exchange: false    # exchange admin ssh key among node cluster
+
+    #==========================================================#
+    # PGSQL
+    #==========================================================#
+    pg_conf: tiny.yml
+    pgbackrest_method: minio          # USE THE HA MINIO THROUGH A LOAD BALANCER
+    pg_dbsu_ssh_exchange: false       # do not exchange dbsu ssh key among pgsql cluster
+    pgbackrest_repo:                  # pgbackrest repo: https://pgbackrest.org/configuration.html#section-repository
+      local:                          # default pgbackrest repo with local posix fs
+        path: /pg/backup              # local backup directory, `/pg/backup` by default
+        retention_full_type: count    # retention full backups by count
+        retention_full: 2             # keep 2, at most 3 full backup when using local fs repo
+      minio:                          # optional minio repo for pgbackrest
+        type: s3                      # minio is s3-compatible, so s3 is used
+        s3_endpoint: sss.pigsty       # minio endpoint domain name, `sss.pigsty` by default
+        s3_region: us-east-1          # minio region, us-east-1 by default, useless for minio
+        s3_bucket: pgsql              # minio bucket name, `pgsql` by default
+        s3_key: pgbackrest            # minio user access key for pgbackrest
+        s3_key_secret: S3User.Backup  # minio user secret key for pgbackrest
+        s3_uri_style: path            # use path style uri for minio rather than host style
+        path: /pgbackrest             # minio backup path, default is `//pgbackrest`
+        storage_port: 9000            # minio port, 9000 by default
+        storage_ca_file: /etc/pki/ca.crt  # minio ca file path, `/etc/pki/ca.crt` by default
+        block: y                      # Enable block incremental backup
+        bundle: y                     # bundle small files into a single file
+        bundle_limit: 20MiB           # Limit for file bundles, 20MiB for object storage
+        bundle_size: 128MiB           # Target size for file bundles, 128MiB for object storage
+        cipher_type: aes-256-cbc      # enable AES encryption for remote backup repo
+        cipher_pass: pgBackRest       # AES encryption password, default is 'pgBackRest'
+        retention_full_type: time     # retention full backup by time on minio repo
+        retention_full: 14            # keep full backup for last 14 days
+
+
+    #==========================================================#
+    # Repo
+    #==========================================================#
+    repo_packages: [
+      node-bootstrap, infra-package, infra-addons, node-package1, node-package2, pgsql-utility, extra-modules,
+      pg18-core ,pg18-time ,pg18-gis ,pg18-rag ,pg18-fts ,pg18-olap ,pg18-feat ,pg18-lang ,pg18-type ,pg18-util ,pg18-func ,pg18-admin ,pg18-stat ,pg18-sec ,pg18-fdw ,pg18-sim ,pg18-etl
+    ]
+
+    #----------------------------------------------#
+    # PASSWORD : https://doc.pgsty.com/config/security
+    #----------------------------------------------#
+    grafana_admin_password: pigsty
+    grafana_view_password: DBUser.Viewer
+    pg_admin_password: DBUser.DBA
+    pg_monitor_password: DBUser.Monitor
+    pg_replication_password: DBUser.Replicator
+    patroni_password: Patroni.API
+    haproxy_admin_password: pigsty
+    minio_secret_key: S3User.MinIO
+    etcd_root_password: Etcd.Root
+...

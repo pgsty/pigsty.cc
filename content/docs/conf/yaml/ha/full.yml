@@ -1,0 +1,175 @@
+---
+#==============================================================#
+# File      :   full.yml
+# Desc      :   Pigsty Local Sandbox 4-node Demo Config
+# Ctime     :   2020-05-22
+# Mtime     :   2025-12-12
+# Docs      :   https://doc.pgsty.com/config
+# License   :   Apache-2.0 @ https://pigsty.io/docs/about/license/
+# Copyright :   2018-2026  Ruohang Feng / Vonng (rh@vonng.com)
+#==============================================================#
+
+
+all:
+
+  #==============================================================#
+  # Clusters, Nodes, and Modules
+  #==============================================================#
+  children:
+
+    # infra: monitor, alert, repo, etc..
+    infra:
+      hosts:
+        10.10.10.10: { infra_seq: 1 }
+      vars:
+        docker_enabled: true      # enabled docker with ./docker.yml
+        #docker_registry_mirrors: ["https://docker.1panel.live","https://docker.1ms.run","https://docker.xuanyuan.me","https://registry-1.docker.io"]
+
+    # etcd cluster for HA postgres DCS
+    etcd:
+      hosts:
+        10.10.10.10: { etcd_seq: 1 }
+      vars:
+        etcd_cluster: etcd
+
+    # minio (single node, used as backup repo)
+    minio:
+      hosts:
+        10.10.10.10: { minio_seq: 1 }
+      vars:
+        minio_cluster: minio
+        minio_users:                      # list of minio user to be created
+          - { access_key: pgbackrest  ,secret_key: S3User.Backup ,policy: pgsql }
+          - { access_key: s3user_meta ,secret_key: S3User.Meta   ,policy: meta  }
+          - { access_key: s3user_data ,secret_key: S3User.Data   ,policy: data  }
+
+    # postgres cluster: pg-meta
+    pg-meta:
+      hosts:
+        10.10.10.10: { pg_seq: 1, pg_role: primary }
+      vars:
+        pg_cluster: pg-meta
+        pg_users:
+          - { name: dbuser_meta ,password: DBUser.Meta     ,pgbouncer: true ,roles: [ dbrole_admin ]    ,comment: pigsty admin user }
+          - { name: dbuser_view ,password: DBUser.Viewer   ,pgbouncer: true ,roles: [ dbrole_readonly ] ,comment: read-only viewer for meta database }
+        pg_databases:
+          - { name: meta ,baseline: cmdb.sql ,comment: pigsty meta database ,schemas: [ pigsty ] }
+        pg_hba_rules:
+          - { user: dbuser_view , db: all ,addr: infra ,auth: pwd ,title: 'allow grafana dashboard access cmdb from infra nodes' }
+        pg_vip_enabled: true
+        pg_vip_address: 10.10.10.2/24
+        pg_vip_interface: eth1
+        node_crontab:  # make a full backup 1 am everyday
+          - '00 01 * * * postgres /pg/bin/pg-backup full'
+
+    # pgsql 3 node ha cluster: pg-test
+    pg-test:
+      hosts:
+        10.10.10.11: { pg_seq: 1, pg_role: primary }   # primary instance, leader of cluster
+        10.10.10.12: { pg_seq: 2, pg_role: replica }   # replica instance, follower of leader
+        10.10.10.13: { pg_seq: 3, pg_role: replica, pg_offline_query: true } # replica with offline access
+      vars:
+        pg_cluster: pg-test           # define pgsql cluster name
+        pg_users:  [{ name: test , password: test , pgbouncer: true , roles: [ dbrole_admin ] }]
+        pg_databases: [{ name: test }]
+        pg_vip_enabled: true
+        pg_vip_address: 10.10.10.3/24
+        pg_vip_interface: eth1
+        node_crontab:  # make a full backup on monday 1am, and an incremental backup during weekdays
+          - '00 01 * * 1 postgres /pg/bin/pg-backup full'
+          - '00 01 * * 2,3,4,5,6,7 postgres /pg/bin/pg-backup'
+
+    #----------------------------------#
+    # redis ms, sentinel, native cluster
+    #----------------------------------#
+    redis-ms: # redis classic primary & replica
+      hosts: { 10.10.10.10: { redis_node: 1 , redis_instances: { 6379: { }, 6380: { replica_of: '10.10.10.10 6379' } } } }
+      vars: { redis_cluster: redis-ms ,redis_password: 'redis.ms' ,redis_max_memory: 64MB }
+
+    redis-meta: # redis sentinel x 3
+      hosts: { 10.10.10.11: { redis_node: 1 , redis_instances: { 26379: { } ,26380: { } ,26381: { } } } }
+      vars:
+        redis_cluster: redis-meta
+        redis_password: 'redis.meta'
+        redis_mode: sentinel
+        redis_max_memory: 16MB
+        redis_sentinel_monitor: # primary list for redis sentinel, use cls as name, primary ip:port
+          - { name: redis-ms, host: 10.10.10.10, port: 6379 ,password: redis.ms, quorum: 2 }
+
+    redis-test: # redis native cluster: 3m x 3s
+      hosts:
+        10.10.10.12: { redis_node: 1 ,redis_instances: { 6379: { } ,6380: { } ,6381: { } } }
+        10.10.10.13: { redis_node: 2 ,redis_instances: { 6379: { } ,6380: { } ,6381: { } } }
+      vars: { redis_cluster: redis-test ,redis_password: 'redis.test' ,redis_mode: cluster, redis_max_memory: 32MB }
+
+
+  #==============================================================#
+  # Global Parameters
+  #==============================================================#
+  vars:
+    version: v4.0.0                   # pigsty version string
+    admin_ip: 10.10.10.10             # admin node ip address
+    region: default                   # upstream mirror region: default|china|europe
+    node_tune: oltp                   # node tuning specs: oltp,olap,tiny,crit
+    pg_conf: oltp.yml                 # pgsql tuning specs: {oltp,olap,tiny,crit}.yml
+    proxy_env:                        # global proxy env when downloading packages
+      no_proxy: "localhost,127.0.0.1,10.0.0.0/8,192.168.0.0/16,*.pigsty,*.aliyun.com,mirrors.*,*.myqcloud.com,*.tsinghua.edu.cn"
+      # http_proxy:  # set your proxy here: e.g http://user:pass@proxy.xxx.com
+      # https_proxy: # set your proxy here: e.g http://user:pass@proxy.xxx.com
+      # all_proxy:   # set your proxy here: e.g http://user:pass@proxy.xxx.com
+    infra_portal:                     # infra services exposed via portal
+      home : { domain: i.pigsty }     # default domain name
+      #minio : { domain: m.pigsty ,endpoint: "${admin_ip}:9001" ,scheme: https ,websocket: true }
+
+    #----------------------------------#
+    # MinIO Related Options
+    #----------------------------------#
+    node_etc_hosts: [ '${admin_ip} i.pigsty sss.pigsty' ]
+    pgbackrest_method: minio          # if you want to use minio as backup repo instead of 'local' fs, uncomment this
+    pgbackrest_repo:                  # pgbackrest repo: https://pgbackrest.org/configuration.html#section-repository
+      local:                          # default pgbackrest repo with local posix fs
+        path: /pg/backup              # local backup directory, `/pg/backup` by default
+        retention_full_type: count    # retention full backups by count
+        retention_full: 2             # keep 2, at most 3 full backup when using local fs repo
+      minio:                          # optional minio repo for pgbackrest
+        type: s3                      # minio is s3-compatible, so s3 is used
+        s3_endpoint: sss.pigsty       # minio endpoint domain name, `sss.pigsty` by default
+        s3_region: us-east-1          # minio region, us-east-1 by default, useless for minio
+        s3_bucket: pgsql              # minio bucket name, `pgsql` by default
+        s3_key: pgbackrest            # minio user access key for pgbackrest
+        s3_key_secret: S3User.Backup  # minio user secret key for pgbackrest
+        s3_uri_style: path            # use path style uri for minio rather than host style
+        path: /pgbackrest             # minio backup path, default is `/pgbackrest`
+        storage_port: 9000            # minio port, 9000 by default
+        storage_ca_file: /etc/pki/ca.crt  # minio ca file path, `/etc/pki/ca.crt` by default
+        block: y                      # Enable block incremental backup
+        bundle: y                     # bundle small files into a single file
+        bundle_limit: 20MiB           # Limit for file bundles, 20MiB for object storage
+        bundle_size: 128MiB           # Target size for file bundles, 128MiB for object storage
+        cipher_type: aes-256-cbc      # enable AES encryption for remote backup repo
+        cipher_pass: pgBackRest       # AES encryption password, default is 'pgBackRest'
+        retention_full_type: time     # retention full backup by time on minio repo
+        retention_full: 14            # keep full backup for last 14 days
+
+    #----------------------------------#
+    # Repo, Node, Packages
+    #----------------------------------#
+    repo_remove: true                 # remove existing repo on admin node during repo bootstrap
+    node_repo_remove: true            # remove existing node repo for node managed by pigsty
+    repo_extra_packages: [ pg18-main ] #,pg18-core ,pg18-time ,pg18-gis ,pg18-rag ,pg18-fts ,pg18-olap ,pg18-feat ,pg18-lang ,pg18-type ,pg18-util ,pg18-func ,pg18-admin ,pg18-stat ,pg18-sec ,pg18-fdw ,pg18-sim ,pg18-etl]
+    pg_version: 18                    # default postgres version
+    #pg_extensions: [pg18-time ,pg18-gis ,pg18-rag ,pg18-fts ,pg18-feat ,pg18-lang ,pg18-type ,pg18-util ,pg18-func ,pg18-admin ,pg18-stat ,pg18-sec ,pg18-fdw ,pg18-sim ,pg18-etl ,pg18-olap]
+
+    #----------------------------------------------#
+    # PASSWORD : https://doc.pgsty.com/config/security
+    #----------------------------------------------#
+    grafana_admin_password: pigsty
+    grafana_view_password: DBUser.Viewer
+    pg_admin_password: DBUser.DBA
+    pg_monitor_password: DBUser.Monitor
+    pg_replication_password: DBUser.Replicator
+    patroni_password: Patroni.API
+    haproxy_admin_password: pigsty
+    minio_secret_key: S3User.MinIO
+    etcd_root_password: Etcd.Root
+...

@@ -1,0 +1,1329 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Lang }}" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>{{ .Title }} - {{ .Site.Title }}</title>
+  <meta name="description" content="{{ .Description | default .Site.Params.description }}">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+  <link rel="apple-touch-icon" href="/img/logo/logo.png">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="{{ .Title }}">
+  <meta property="og:description" content="{{ .Description | default .Site.Params.description }}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ .Permalink }}">
+  <meta property="og:image" content="{{ .Site.BaseURL }}img/pigsty/banner.zh.jpg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ .Title }}">
+  <meta name="twitter:description" content="{{ .Description | default .Site.Params.description }}">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Landing Page CSS -->
+  <link rel="stylesheet" href="/css/landing.css">
+
+  <!-- Analytics -->
+  {{ with .Site.Config.Services.GoogleAnalytics.ID }}
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ . }}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', '{{ . }}');
+  </script>
+  {{ end }}
+</head>
+<body class="landing-page">
+
+  <!-- ============================================
+       Navigation Header
+       ============================================ -->
+  <header class="landing-header">
+    <div class="landing-container">
+      <nav class="landing-nav">
+        <a href="/" class="nav-brand">
+          <img src="/img/logo/logo.svg" alt="Pigsty" class="nav-logo">
+          <span class="nav-title">PIGSTY</span>
+        </a>
+
+        <div class="nav-links">
+          <a href="/docs/" class="nav-link">文档</a>
+          <a href="https://pgext.cloud" class="nav-link" target="_blank">扩展</a>
+          <a href="/blog/" class="nav-link">博客</a>
+          <a href="/price/" class="nav-link">服务</a>
+          <a href="https://github.com/Vonng/pigsty" class="nav-link nav-link--icon" target="_blank" title="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+
+        <button class="mobile-menu-toggle" aria-label="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu">
+    <a href="/docs/" class="mobile-menu-link">文档</a>
+    <a href="https://pgext.cloud/zh" class="mobile-menu-link" target="_blank">扩展</a>
+    <a href="/blog/" class="mobile-menu-link">博客</a>
+    <a href="/price" class="mobile-menu-link">服务</a>
+    <a href="https://github.com/Vonng/pigsty" class="mobile-menu-link" target="_blank">
+      <i class="fab fa-github"></i> GitHub
+    </a>
+  </div>
+
+
+  <!-- ============================================
+       Section 1: Hero (Cinematic Layout)
+       ============================================ -->
+  <section class="hero" id="hero">
+    <div class="hero-container">
+      <!-- Left: Text Content -->
+      <div class="hero-left">
+        <h1 class="hero-title animate-fade-in-up">
+          <span class="hero-title-main">PostgreSQL in Great</span>
+          <span class="hero-title-accent">STYle</span>
+        </h1>
+
+        <p class="hero-subtitle animate-fade-in-up animate-delay-100">
+          开箱即用的 PostgreSQL 发行版，本地优先的 FLOSS RDS
+        </p>
+
+        <div class="command-box animate-fade-in-up animate-delay-200">
+          <span class="command-prompt">$</span>
+          <code class="command-text">curl -fsSL https://repo.pigsty.cc/get | bash</code>
+          <button class="command-copy" title="复制命令">
+            <i class="fas fa-copy"></i>
+          </button>
+        </div>
+
+        <div class="hero-buttons animate-fade-in-up animate-delay-300">
+          <a href="/docs/setup/install/" class="btn btn-primary">
+            <i class="fas fa-rocket"></i> 立即安装
+          </a>
+          <a href="https://demo.pigsty.cc" class="btn btn-secondary" target="_blank">
+            <i class="fas fa-play"></i> 在线演示
+          </a>
+        </div>
+      </div>
+
+      <!-- Right: Hero Image -->
+      <div class="hero-right animate-fade-in-up animate-delay-100">
+        <img src="/img/pigsty/motherboard.gif" alt="Pigsty Architecture" class="hero-image">
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       Section 2: Pain Points
+       ============================================ -->
+  <section class="landing-section pain-points" id="problems">
+    <div class="landing-container">
+      <div class="section-header" data-reveal>
+        <h2 class="section-title">使用 PostgreSQL，你是否觉得……</h2>
+      </div>
+
+      <div class="pain-grid">
+
+        <div class="pain-card" data-reveal>
+          <div class="pain-icon">😵</div>
+          <h3 class="pain-title">自建太复杂，根本搞不定？</h3>
+          <p class="pain-desc">HA/PITR/安全/监控，全整明白要多久？</p>
+          <p class="pain-detail">没有专业 DBA，花样太多，玩不转也学不动</p>
+        </div>
+
+        <div class="pain-card" data-reveal>
+          <div class="pain-icon">🧩</div>
+          <h3 class="pain-title">扩展装不上，想用没得用？</h3>
+          <p class="pain-desc">要个 pg_duckdb，云上功能阉割不提供？</p>
+          <p class="pain-detail">自己编译？零散的源码与独立镜像难堪大用</p>
+        </div>
+
+        <div class="pain-card" data-reveal>
+          <div class="pain-icon">💸</div>
+          <h3 class="pain-title">RDS 太贵，持续大出血？</h3>
+          <p class="pain-desc">比裸金属贵 5-20 倍，天价买来渣渣云服务</p>
+          <p class="pain-detail">规模越大，出血越痛，还被云厂商牢牢锁死</p>
+        </div>
+
+      </div>
+
+      <p class="pain-solution" data-reveal>
+        <strong>Pigsty</strong> 为你解决所有这些问题，而且 <strong>开源免费</strong>
+      </p>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       Section 3: Core Features (Zigzag)
+       ============================================ -->
+  <section class="landing-section features-zigzag" id="features">
+    <div class="landing-container">
+      <div class="section-header" data-reveal>
+        <h2 class="section-title">一套 Pigsty，所有问题迎刃而解</h2>
+        <p class="section-subtitle">四大核心能力，让你像专家一样管理 PostgreSQL</p>
+      </div>
+
+      <!-- Feature 1: High Availability -->
+      <div class="feature-row" data-reveal>
+        <div class="feature-content">
+          <h4 class="feature-label"><span class="feature-emoji">🛡️</span> 高可用标杆架构</h4>
+          <h3 class="feature-title">故障自愈，高枕无忧</h3>
+          <ul class="feature-list">
+            <li>基于 <strong>Patroni + Etcd</strong> 自动故障切换，HAProxy 流量自动均衡</li>
+            <li>预置 <strong>pgBackRest PITR</strong> 时间点恢复，删库跑路也能找回数据</li>
+            <li>内置 <strong>SSL/TLS</strong> 加密与访问控制模型，SELinux 防火墙全搞定</li>
+          </ul>
+          <div class="feature-cta">
+            <span class="feature-value">告别半夜故障值班 OnCall，睡醒起来慢慢弄</span>
+            <a href="/docs/concept/ha/" class="feature-link">
+              了解架构详情 <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+        <div class="feature-visual">
+          <img src="/img/pigsty/ha.png" alt="Pigsty HA Architecture" class="feature-image">
+        </div>
+      </div>
+
+      <!-- Feature 2: Infrastructure as Code -->
+      <div class="feature-row feature-row--reverse" data-reveal>
+        <div class="feature-content">
+          <h4 class="feature-label"><span class="feature-emoji">⚙️</span> 基础设施即代码</h4>
+          <h3 class="feature-title">言出法随，一键部署</h3>
+          <ul class="feature-list">
+            <li>用配置声明你想要的状态，Pigsty 帮你实现，无需操心复杂细节</li>
+            <li>海量可选定制选项，生产开发测试共享一套架构，仅有配置不同</li>
+            <li>Ansible 幂等剧本，无需 K8s 与 Docker，<strong>裸机</strong>也能玩转云原生</li>
+          </ul>
+          <div class="feature-cta">
+            <span class="feature-value">一键复刻完整生产环境，单枪匹马管理海量集群</span>
+            <a href="/docs/conf/" class="feature-link">
+              参阅配置示例 <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+        <div class="feature-visual">
+          <pre class="feature-code"><span class="comment"># pigsty.yml - 定义一个3节点HA集群</span>
+<span class="key">pg-test</span>:
+  <span class="key">hosts</span>:
+    <span class="value">10.10.10.11</span>: { <span class="key">pg_role</span>: <span class="string">primary</span> }
+    <span class="value">10.10.10.12</span>: { <span class="key">pg_role</span>: <span class="string">replica</span> }
+    <span class="value">10.10.10.13</span>: { <span class="key">pg_role</span>: <span class="string">replica</span> }
+  <span class="key">vars</span>:
+    <span class="key">pg_cluster</span>: <span class="string">pg-test</span>
+    <span class="key">pg_version</span>: <span class="value">18</span>
+    <span class="key">pg_users</span>:
+      - { <span class="key">name</span>: <span class="string">dbuser_app</span>, <span class="key">password</span>: <span class="string">DBUser.App</span> }
+    <span class="key">pg_databases</span>:
+      - { <span class="key">name</span>: <span class="string">app</span>, <span class="key">extensions</span>: [ <span class="string">vector</span> ]}</pre>
+        </div>
+      </div>
+
+      <!-- Feature 3: Observability -->
+      <div class="feature-row" data-reveal>
+        <div class="feature-content">
+          <h4 class="feature-label"><span class="feature-emoji">📊</span> 可观测性全家桶</h4>
+          <h3 class="feature-title">洞若观火，尽在掌握</h3>
+          <ul class="feature-list">
+            <li>基于 <strong>Grafana + Victoria / Prometheus </strong> 的 SOTA 可观测性技术栈</li>
+            <li><strong>3000+</strong> 监控指标，<strong>40+</strong> 精调仪表盘，无需配置，开箱即用</li>
+            <li>可独立部署使用，监控现有 RDS / PostgreSQL 实例</li>
+          </ul>
+          <div class="feature-cta">
+            <span class="feature-value">快速定位问题，数据驱动决策，告别空对空无效扯皮</span>
+            <a href="https://demo.pigsty.cc" class="feature-link" target="_blank">
+              体验在线演示 <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+        <div class="feature-visual">
+          <img src="/img/pigsty/dashboard.jpg" alt="Pigsty Monitoring Dashboard" class="feature-image">
+        </div>
+      </div>
+
+      <!-- Feature 4: Extensions -->
+      <div class="feature-row feature-row--reverse" data-reveal>
+        <div class="feature-content">
+          <h4 class="feature-label"><span class="feature-emoji">🧩</span> 数据库扩展生态</h4>
+          <h3 class="feature-title">海纳百川，开箱即用</h3>
+          <ul class="feature-list">
+            <li><strong>440+</strong> PostgreSQL 扩展，覆盖 <strong>14</strong> 大 Linux 发行版，即装即用</li>
+            <li><strong>8 种 PG 内核</strong>：兼容 Oracle、MySQL、SQL Server、MongoDB … </li>
+            <li>功能模块：MinIO、Redis、Ferret、Docker、Supabase 自建支持</li>
+          </ul>
+          <div class="feature-cta">
+            <span class="feature-value">灵活组合搭配，想要什么就装什么，完全自由，自主可控</span>
+            <a href="https://pgext.cloud/zh/list" class="feature-link">
+              浏览扩展目录 <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+        <div class="feature-visual">
+          <img src="/img/pigsty/ecosystem.jpg" alt="PostgreSQL Extension Ecosystem" class="feature-image">
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       Section 4: Extensions & Kernels Combined
+       ============================================ -->
+  <section class="landing-section ecosystem-section" id="ecosystem">
+    <div class="landing-container">
+      <div class="section-header" data-reveal>
+        <h2 class="section-title">440 扩展插件，十大内核分支</h2>
+        <p class="section-subtitle">
+          Pigsty 为您解锁 PostgreSQL RDS 的无限可能
+          <span class="section-links">
+            <a href="https://pgext.cloud" target="_blank">扩展目录 <i class="fas fa-external-link-alt"></i></a>
+            <a href="/docs/pgsql/kernel/">内核分支 <i class="fas fa-arrow-right"></i></a>
+          </span>
+        </p>
+      </div>
+
+      <!-- Scrolling Extensions Marquee -->
+      <div class="extensions-marquee" data-reveal>
+        <!-- Row 1: Scroll Left -->
+        <div class="marquee-row" data-direction="left">
+          <div class="marquee-content">
+            <a href="https://pgext.cloud/e/vector" class="ext-pill" target="_blank">pgvector</a>
+            <a href="https://pgext.cloud/e/postgis" class="ext-pill" target="_blank">postgis</a>
+            <a href="https://pgext.cloud/e/timescaledb" class="ext-pill" target="_blank">timescaledb</a>
+            <a href="https://pgext.cloud/e/citus" class="ext-pill" target="_blank">citus</a>
+            <a href="https://pgext.cloud/e/age" class="ext-pill" target="_blank">age</a>
+            <a href="https://pgext.cloud/e/pg_duckdb" class="ext-pill" target="_blank">pg_duckdb</a>
+            <a href="https://pgext.cloud/e/zhparser" class="ext-pill" target="_blank">zhparser</a>
+            <a href="https://pgext.cloud/e/pg_cron" class="ext-pill" target="_blank">pg_cron</a>
+            <a href="https://pgext.cloud/e/pgroonga" class="ext-pill" target="_blank">pgroonga</a>
+            <a href="https://pgext.cloud/e/documentdb" class="ext-pill" target="_blank">documentdb</a>
+            <a href="https://pgext.cloud/e/columnar" class="ext-pill" target="_blank">hydra</a>
+            <a href="https://pgext.cloud/e/pg_parquet" class="ext-pill" target="_blank">pg_parquet</a>
+            <a href="https://pgext.cloud/e/vchord" class="ext-pill" target="_blank">vchord</a>
+            <a href="https://pgext.cloud/e/pgml" class="ext-pill" target="_blank">pgml</a>
+            <a href="https://pgext.cloud/e/pg_graphql" class="ext-pill" target="_blank">pg_graphql</a>
+            <a href="https://pgext.cloud/e/pg_search" class="ext-pill" target="_blank">pg_search</a>
+            <a href="https://pgext.cloud/e/rum" class="ext-pill" target="_blank">rum</a>
+            <a href="https://pgext.cloud/e/hll" class="ext-pill" target="_blank">hll</a>
+            <!-- Duplicate for seamless loop -->
+            <a href="https://pgext.cloud/e/vector" class="ext-pill" target="_blank">pgvector</a>
+            <a href="https://pgext.cloud/e/postgis" class="ext-pill" target="_blank">postgis</a>
+            <a href="https://pgext.cloud/e/timescaledb" class="ext-pill" target="_blank">timescaledb</a>
+            <a href="https://pgext.cloud/e/citus" class="ext-pill" target="_blank">citus</a>
+            <a href="https://pgext.cloud/e/age" class="ext-pill" target="_blank">age</a>
+            <a href="https://pgext.cloud/e/pg_duckdb" class="ext-pill" target="_blank">pg_duckdb</a>
+            <a href="https://pgext.cloud/e/zhparser" class="ext-pill" target="_blank">zhparser</a>
+            <a href="https://pgext.cloud/e/pg_cron" class="ext-pill" target="_blank">pg_cron</a>
+            <a href="https://pgext.cloud/e/pgroonga" class="ext-pill" target="_blank">pgroonga</a>
+            <a href="https://pgext.cloud/e/documentdb" class="ext-pill" target="_blank">documentdb</a>
+            <a href="https://pgext.cloud/e/columnar" class="ext-pill" target="_blank">hydra</a>
+            <a href="https://pgext.cloud/e/pg_parquet" class="ext-pill" target="_blank">pg_parquet</a>
+            <a href="https://pgext.cloud/e/vchord" class="ext-pill" target="_blank">vchord</a>
+            <a href="https://pgext.cloud/e/pgml" class="ext-pill" target="_blank">pgml</a>
+            <a href="https://pgext.cloud/e/pg_graphql" class="ext-pill" target="_blank">pg_graphql</a>
+            <a href="https://pgext.cloud/e/pg_search" class="ext-pill" target="_blank">pg_search</a>
+            <a href="https://pgext.cloud/e/rum" class="ext-pill" target="_blank">rum</a>
+            <a href="https://pgext.cloud/e/hll" class="ext-pill" target="_blank">hll</a>
+          </div>
+        </div>
+
+        <!-- Row 2: Scroll Right -->
+        <div class="marquee-row" data-direction="right">
+          <div class="marquee-content">
+            <a href="https://pgext.cloud/e/pg_repack" class="ext-pill" target="_blank">pg_repack</a>
+            <a href="https://pgext.cloud/e/pg_stat_statements" class="ext-pill" target="_blank">pg_stat_statements</a>
+            <a href="https://pgext.cloud/e/pg_hint_plan" class="ext-pill" target="_blank">pg_hint_plan</a>
+            <a href="https://pgext.cloud/e/pgaudit" class="ext-pill" target="_blank">pgaudit</a>
+            <a href="https://pgext.cloud/e/pg_partman" class="ext-pill" target="_blank">pg_partman</a>
+            <a href="https://pgext.cloud/e/pg_tle" class="ext-pill" target="_blank">pg_tle</a>
+            <a href="https://pgext.cloud/e/wrappers" class="ext-pill" target="_blank">wrappers</a>
+            <a href="https://pgext.cloud/e/pgsodium" class="ext-pill" target="_blank">pgsodium</a>
+            <a href="https://pgext.cloud/e/pg_qualstats" class="ext-pill" target="_blank">pg_qualstats</a>
+            <a href="https://pgext.cloud/e/pg_stat_monitor" class="ext-pill" target="_blank">pg_stat_monitor</a>
+            <a href="https://pgext.cloud/e/orafce" class="ext-pill" target="_blank">orafce</a>
+            <a href="https://pgext.cloud/e/mysql_fdw" class="ext-pill" target="_blank">mysql_fdw</a>
+            <a href="https://pgext.cloud/e/oracle_fdw" class="ext-pill" target="_blank">oracle_fdw</a>
+            <a href="https://pgext.cloud/e/mongo_fdw" class="ext-pill" target="_blank">mongo_fdw</a>
+            <a href="https://pgext.cloud/e/sqlite_fdw" class="ext-pill" target="_blank">sqlite_fdw</a>
+            <a href="https://pgext.cloud/e/pglogical" class="ext-pill" target="_blank">pglogical</a>
+            <a href="https://pgext.cloud/e/wal2json" class="ext-pill" target="_blank">wal2json</a>
+            <!-- Duplicate for seamless loop -->
+            <a href="https://pgext.cloud/e/pg_repack" class="ext-pill" target="_blank">pg_repack</a>
+            <a href="https://pgext.cloud/e/pg_stat_statements" class="ext-pill" target="_blank">pg_stat_statements</a>
+            <a href="https://pgext.cloud/e/pg_hint_plan" class="ext-pill" target="_blank">pg_hint_plan</a>
+            <a href="https://pgext.cloud/e/pgaudit" class="ext-pill" target="_blank">pgaudit</a>
+            <a href="https://pgext.cloud/e/pg_partman" class="ext-pill" target="_blank">pg_partman</a>
+            <a href="https://pgext.cloud/e/pg_tle" class="ext-pill" target="_blank">pg_tle</a>
+            <a href="https://pgext.cloud/e/wrappers" class="ext-pill" target="_blank">wrappers</a>
+            <a href="https://pgext.cloud/e/pgsodium" class="ext-pill" target="_blank">pgsodium</a>
+            <a href="https://pgext.cloud/e/pg_qualstats" class="ext-pill" target="_blank">pg_qualstats</a>
+            <a href="https://pgext.cloud/e/pg_stat_monitor" class="ext-pill" target="_blank">pg_stat_monitor</a>
+            <a href="https://pgext.cloud/e/orafce" class="ext-pill" target="_blank">orafce</a>
+            <a href="https://pgext.cloud/e/mysql_fdw" class="ext-pill" target="_blank">mysql_fdw</a>
+            <a href="https://pgext.cloud/e/oracle_fdw" class="ext-pill" target="_blank">oracle_fdw</a>
+            <a href="https://pgext.cloud/e/mongo_fdw" class="ext-pill" target="_blank">mongo_fdw</a>
+            <a href="https://pgext.cloud/e/sqlite_fdw" class="ext-pill" target="_blank">sqlite_fdw</a>
+            <a href="https://pgext.cloud/e/pglogical" class="ext-pill" target="_blank">pglogical</a>
+            <a href="https://pgext.cloud/e/wal2json" class="ext-pill" target="_blank">wal2json</a>
+          </div>
+        </div>
+
+        <!-- Row 3: Scroll Left -->
+        <div class="marquee-row" data-direction="left">
+          <div class="marquee-content">
+            <a href="https://pgext.cloud/e/pgrouting" class="ext-pill" target="_blank">pgrouting</a>
+            <a href="https://pgext.cloud/e/h3" class="ext-pill" target="_blank">pg_h3</a>
+            <a href="https://pgext.cloud/e/mobilitydb" class="ext-pill" target="_blank">mobilitydb</a>
+            <a href="https://pgext.cloud/e/timescaledb_toolkit" class="ext-pill" target="_blank">timescaledb_toolkit</a>
+            <a href="https://pgext.cloud/e/periods" class="ext-pill" target="_blank">periods</a>
+            <a href="https://pgext.cloud/e/pg_analytics" class="ext-pill" target="_blank">pg_analytics</a>
+            <a href="https://pgext.cloud/e/pg_mooncake" class="ext-pill" target="_blank">pg_mooncake</a>
+            <a href="https://pgext.cloud/e/vectorscale" class="ext-pill" target="_blank">pgvectorscale</a>
+            <a href="https://pgext.cloud/e/vectorize" class="ext-pill" target="_blank">pg_vectorize</a>
+            <a href="https://pgext.cloud/e/pg_bigm" class="ext-pill" target="_blank">pg_bigm</a>
+            <a href="https://pgext.cloud/e/plv8" class="ext-pill" target="_blank">plv8</a>
+            <a href="https://pgext.cloud/e/pllua" class="ext-pill" target="_blank">pllua</a>
+            <a href="https://pgext.cloud/e/plr" class="ext-pill" target="_blank">plr</a>
+            <a href="https://pgext.cloud/e/pgtap" class="ext-pill" target="_blank">pgtap</a>
+            <a href="https://pgext.cloud/e/hypopg" class="ext-pill" target="_blank">hypopg</a>
+            <a href="https://pgext.cloud/e/pgmq" class="ext-pill" target="_blank">pgmq</a>
+            <a href="https://pgext.cloud/e/pg_ivm" class="ext-pill" target="_blank">pg_ivm</a>
+            <!-- Duplicate for seamless loop -->
+            <a href="https://pgext.cloud/e/pgrouting" class="ext-pill" target="_blank">pgrouting</a>
+            <a href="https://pgext.cloud/e/h3" class="ext-pill" target="_blank">pg_h3</a>
+            <a href="https://pgext.cloud/e/mobilitydb" class="ext-pill" target="_blank">mobilitydb</a>
+            <a href="https://pgext.cloud/e/timescaledb_toolkit" class="ext-pill" target="_blank">timescaledb_toolkit</a>
+            <a href="https://pgext.cloud/e/periods" class="ext-pill" target="_blank">periods</a>
+            <a href="https://pgext.cloud/e/pg_analytics" class="ext-pill" target="_blank">pg_analytics</a>
+            <a href="https://pgext.cloud/e/pg_mooncake" class="ext-pill" target="_blank">pg_mooncake</a>
+            <a href="https://pgext.cloud/e/vectorscale" class="ext-pill" target="_blank">pgvectorscale</a>
+            <a href="https://pgext.cloud/e/vectorize" class="ext-pill" target="_blank">pg_vectorize</a>
+            <a href="https://pgext.cloud/e/pg_bigm" class="ext-pill" target="_blank">pg_bigm</a>
+            <a href="https://pgext.cloud/e/plv8" class="ext-pill" target="_blank">plv8</a>
+            <a href="https://pgext.cloud/e/pllua" class="ext-pill" target="_blank">pllua</a>
+            <a href="https://pgext.cloud/e/plr" class="ext-pill" target="_blank">plr</a>
+            <a href="https://pgext.cloud/e/pgtap" class="ext-pill" target="_blank">pgtap</a>
+            <a href="https://pgext.cloud/e/hypopg" class="ext-pill" target="_blank">hypopg</a>
+            <a href="https://pgext.cloud/e/pgmq" class="ext-pill" target="_blank">pgmq</a>
+            <a href="https://pgext.cloud/e/pg_ivm" class="ext-pill" target="_blank">pg_ivm</a>
+          </div>
+        </div>
+
+        <!-- Row 4: Scroll Right -->
+        <div class="marquee-row" data-direction="right">
+          <div class="marquee-content">
+            <a href="https://pgext.cloud/e/pg_profile" class="ext-pill" target="_blank">pg_profile</a>
+            <a href="https://pgext.cloud/e/pg_squeeze" class="ext-pill" target="_blank">pg_squeeze</a>
+            <a href="https://pgext.cloud/e/pg_show_plans" class="ext-pill" target="_blank">pg_show_plans</a>
+            <a href="https://pgext.cloud/e/pg_stat_kcache" class="ext-pill" target="_blank">pg_stat_kcache</a>
+            <a href="https://pgext.cloud/e/anon" class="ext-pill" target="_blank">pg_anon</a>
+            <a href="https://pgext.cloud/e/pg_tde" class="ext-pill" target="_blank">pg_tde</a>
+            <a href="https://pgext.cloud/e/credcheck" class="ext-pill" target="_blank">credcheck</a>
+            <a href="https://pgext.cloud/e/supabase_vault" class="ext-pill" target="_blank">pg_vault</a>
+            <a href="https://pgext.cloud/e/http" class="ext-pill" target="_blank">pg_http</a>
+            <a href="https://pgext.cloud/e/pg_net" class="ext-pill" target="_blank">pg_net</a>
+            <a href="https://pgext.cloud/e/duckdb_fdw" class="ext-pill" target="_blank">duckdb_fdw</a>
+            <a href="https://pgext.cloud/e/redis_fdw" class="ext-pill" target="_blank">redis_fdw</a>
+            <a href="https://pgext.cloud/e/kafka_fdw" class="ext-pill" target="_blank">kafka_fdw</a>
+            <a href="https://pgext.cloud/e/hdfs_fdw" class="ext-pill" target="_blank">hdfs_fdw</a>
+            <a href="https://pgext.cloud/e/postgres_fdw" class="ext-pill" target="_blank">postgres_fdw</a>
+            <a href="https://pgext.cloud/e/dblink" class="ext-pill" target="_blank">dblink</a>
+            <a href="https://pgext.cloud/e/repmgr" class="ext-pill" target="_blank">repmgr</a>
+            <!-- Duplicate for seamless loop -->
+            <a href="https://pgext.cloud/e/pg_profile" class="ext-pill" target="_blank">pg_profile</a>
+            <a href="https://pgext.cloud/e/pg_squeeze" class="ext-pill" target="_blank">pg_squeeze</a>
+            <a href="https://pgext.cloud/e/pg_show_plans" class="ext-pill" target="_blank">pg_show_plans</a>
+            <a href="https://pgext.cloud/e/pg_stat_kcache" class="ext-pill" target="_blank">pg_stat_kcache</a>
+            <a href="https://pgext.cloud/e/anon" class="ext-pill" target="_blank">pg_anon</a>
+            <a href="https://pgext.cloud/e/pg_tde" class="ext-pill" target="_blank">pg_tde</a>
+            <a href="https://pgext.cloud/e/credcheck" class="ext-pill" target="_blank">credcheck</a>
+            <a href="https://pgext.cloud/e/supabase_vault" class="ext-pill" target="_blank">pg_vault</a>
+            <a href="https://pgext.cloud/e/http" class="ext-pill" target="_blank">pg_http</a>
+            <a href="https://pgext.cloud/e/pg_net" class="ext-pill" target="_blank">pg_net</a>
+            <a href="https://pgext.cloud/e/duckdb_fdw" class="ext-pill" target="_blank">duckdb_fdw</a>
+            <a href="https://pgext.cloud/e/redis_fdw" class="ext-pill" target="_blank">redis_fdw</a>
+            <a href="https://pgext.cloud/e/kafka_fdw" class="ext-pill" target="_blank">kafka_fdw</a>
+            <a href="https://pgext.cloud/e/hdfs_fdw" class="ext-pill" target="_blank">hdfs_fdw</a>
+            <a href="https://pgext.cloud/e/postgres_fdw" class="ext-pill" target="_blank">postgres_fdw</a>
+            <a href="https://pgext.cloud/e/dblink" class="ext-pill" target="_blank">dblink</a>
+            <a href="https://pgext.cloud/e/repmgr" class="ext-pill" target="_blank">repmgr</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Kernels Grid: 2 rows x 5 columns -->
+      <div class="kernels-grid-new" data-reveal>
+        <a href="/docs/pgsql/kernel/supabase/" class="kernel-card-new">
+          <span class="kernel-icon-new"><img src="/img/icon/supabase.svg" alt="Supabase"></span>
+          <span class="kernel-name-new">Supabase</span>
+          <span class="kernel-desc-new">后端即服务</span>
+        </a>
+        <a href="/docs/pgsql/kernel/citus/" class="kernel-card-new">
+          <span class="kernel-icon-new"><img src="/img/icon/citus.svg" alt="Citus"></span>
+          <span class="kernel-name-new">Citus</span>
+          <span class="kernel-desc-new">水平分布式</span>
+        </a>
+        <a href="/docs/pgsql/kernel/babelfish/" class="kernel-card-new">
+          <span class="kernel-icon-new"><img src="/img/icon/babelfish.svg" alt="Babelfish"></span>
+          <span class="kernel-name-new">Babelfish</span>
+          <span class="kernel-desc-new">SQL Server 兼容</span>
+        </a>
+        <a href="/docs/pgsql/kernel/ivorysql/" class="kernel-card-new">
+          <span class="kernel-icon-new"><img src="/img/icon/ivorysql.svg" alt="IvorySQL"></span>
+          <span class="kernel-name-new">IvorySQL</span>
+          <span class="kernel-desc-new">Oracle 兼容</span>
+        </a>
+        <a href="/docs/pgsql/kernel/openhalo/" class="kernel-card-new">
+          <span class="kernel-icon-new"><img src="/img/icon/halo.png" alt="OpenHalo"></span>
+          <span class="kernel-name-new">OpenHalo</span>
+          <span class="kernel-desc-new">MySQL 兼容</span>
+        </a>
+        <a href="/docs/pgsql/kernel/percona/" class="kernel-card-new">
+          <span class="kernel-icon-new"><img src="/img/icon/pgsql.svg" alt="Percona"></span>
+          <span class="kernel-name-new">Percona</span>
+          <span class="kernel-desc-new">透明数据加密</span>
+        </a>
+        <a href="/docs/ferret/" class="kernel-card-new">
+          <span class="kernel-icon-new"><img src="/img/icon/ferretdb.svg" alt="FerretDB"></span>
+          <span class="kernel-name-new">FerretDB</span>
+          <span class="kernel-desc-new">MongoDB 兼容</span>
+        </a>
+        <a href="/docs/pgsql/kernel/orioledb/" class="kernel-card-new">
+          <span class="kernel-icon-new"><img src="/img/icon/oriole.png" alt="OrioleDB"></span>
+          <span class="kernel-name-new">OrioleDB</span>
+          <span class="kernel-desc-new">OLTP 优化</span>
+        </a>
+        <a href="/docs/pgsql/kernel/polardb/" class="kernel-card-new">
+          <span class="kernel-icon-new"><img src="/img/icon/polardb.svg" alt="PolarDB"></span>
+          <span class="kernel-name-new">PolarDB PG</span>
+          <span class="kernel-desc-new">云原生 RAC</span>
+        </a>
+        <a href="/docs/pgsql/kernel/polardb/" class="kernel-card-new">
+          <span class="kernel-icon-new"><img src="/img/icon/polardb.svg" alt="PolarDB-O"></span>
+          <span class="kernel-name-new">PolarDB-O</span>
+          <span class="kernel-desc-new">国产信创内核</span>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       Dashboard Gallery: Slow scrolling showcase
+       ============================================ -->
+  <section class="dashboard-gallery-section">
+    <div class="dashboard-gallery-marquee">
+      <div class="dashboard-gallery-track">
+        <div class="dashboard-gallery-slide" data-src="/img/dashboard/pigsty.jpg" data-alt="Pigsty Overview"></div>
+        <div class="dashboard-gallery-slide" data-src="/img/dashboard/pgsql-overview.jpg" data-alt="PGSQL Overview"></div>
+        <div class="dashboard-gallery-slide" data-src="/img/dashboard/pgsql-cluster.jpg" data-alt="PGSQL Cluster"></div>
+        <div class="dashboard-gallery-slide" data-src="/img/dashboard/pgsql-instance.jpg" data-alt="PGSQL Instance"></div>
+        <div class="dashboard-gallery-slide" data-src="/img/dashboard/pgsql-database.jpg" data-alt="PGSQL Database"></div>
+        <div class="dashboard-gallery-slide" data-src="/img/dashboard/pgsql-query.jpg" data-alt="PGSQL Query"></div>
+        <div class="dashboard-gallery-slide" data-src="/img/dashboard/pgsql-session.jpg" data-alt="PGSQL Session"></div>
+        <div class="dashboard-gallery-slide" data-src="/img/dashboard/pgsql-replication.jpg" data-alt="PGSQL Replication"></div>
+        <div class="dashboard-gallery-slide" data-src="/img/dashboard/pgsql-persist.jpg" data-alt="PGSQL Persist"></div>
+        <div class="dashboard-gallery-slide" data-src="/img/dashboard/pgsql-proxy.jpg" data-alt="PGSQL Proxy"></div>
+        <div class="dashboard-gallery-slide" data-src="/img/dashboard/pgsql-pgbouncer.jpg" data-alt="PGSQL PgBouncer"></div>
+        <div class="dashboard-gallery-slide" data-src="/img/dashboard/pgsql-xacts.jpg" data-alt="PGSQL Transactions"></div>
+        <div class="dashboard-gallery-slide" data-src="/img/dashboard/pgcat-table.jpg" data-alt="PGCat Table"></div>
+        <div class="dashboard-gallery-slide" data-src="/img/dashboard/pgcat-query.jpg" data-alt="PGCat Query"></div>
+        <div class="dashboard-gallery-slide" data-src="/img/dashboard/node-overview.jpg" data-alt="Node Overview"></div>
+        <div class="dashboard-gallery-slide" data-src="/img/dashboard/node-instance.jpg" data-alt="Node Instance"></div>
+        <div class="dashboard-gallery-slide" data-src="/img/dashboard/infra-overview.jpg" data-alt="Infra Overview"></div>
+        <div class="dashboard-gallery-slide" data-src="/img/dashboard/etcd-overview.jpg" data-alt="ETCD Overview"></div>
+        <div class="dashboard-gallery-slide" data-src="/img/dashboard/redis-overview.jpg" data-alt="Redis Overview"></div>
+        <div class="dashboard-gallery-slide" data-src="/img/dashboard/minio-overview.jpg" data-alt="MinIO Overview"></div>
+        <!-- Duplicate for seamless loop -->
+        <div class="dashboard-gallery-slide" data-src="/img/dashboard/pigsty.jpg" data-alt="Pigsty Overview"></div>
+        <div class="dashboard-gallery-slide" data-src="/img/dashboard/pgsql-overview.jpg" data-alt="PGSQL Overview"></div>
+        <div class="dashboard-gallery-slide" data-src="/img/dashboard/pgsql-cluster.jpg" data-alt="PGSQL Cluster"></div>
+        <div class="dashboard-gallery-slide" data-src="/img/dashboard/pgsql-instance.jpg" data-alt="PGSQL Instance"></div>
+        <div class="dashboard-gallery-slide" data-src="/img/dashboard/pgsql-database.jpg" data-alt="PGSQL Database"></div>
+        <div class="dashboard-gallery-slide" data-src="/img/dashboard/pgsql-query.jpg" data-alt="PGSQL Query"></div>
+        <div class="dashboard-gallery-slide" data-src="/img/dashboard/pgsql-session.jpg" data-alt="PGSQL Session"></div>
+        <div class="dashboard-gallery-slide" data-src="/img/dashboard/pgsql-replication.jpg" data-alt="PGSQL Replication"></div>
+        <div class="dashboard-gallery-slide" data-src="/img/dashboard/pgsql-persist.jpg" data-alt="PGSQL Persist"></div>
+        <div class="dashboard-gallery-slide" data-src="/img/dashboard/pgsql-proxy.jpg" data-alt="PGSQL Proxy"></div>
+        <div class="dashboard-gallery-slide" data-src="/img/dashboard/pgsql-pgbouncer.jpg" data-alt="PGSQL PgBouncer"></div>
+        <div class="dashboard-gallery-slide" data-src="/img/dashboard/pgsql-xacts.jpg" data-alt="PGSQL Transactions"></div>
+        <div class="dashboard-gallery-slide" data-src="/img/dashboard/pgcat-table.jpg" data-alt="PGCat Table"></div>
+        <div class="dashboard-gallery-slide" data-src="/img/dashboard/pgcat-query.jpg" data-alt="PGCat Query"></div>
+        <div class="dashboard-gallery-slide" data-src="/img/dashboard/node-overview.jpg" data-alt="Node Overview"></div>
+        <div class="dashboard-gallery-slide" data-src="/img/dashboard/node-instance.jpg" data-alt="Node Instance"></div>
+        <div class="dashboard-gallery-slide" data-src="/img/dashboard/infra-overview.jpg" data-alt="Infra Overview"></div>
+        <div class="dashboard-gallery-slide" data-src="/img/dashboard/etcd-overview.jpg" data-alt="ETCD Overview"></div>
+        <div class="dashboard-gallery-slide" data-src="/img/dashboard/redis-overview.jpg" data-alt="Redis Overview"></div>
+        <div class="dashboard-gallery-slide" data-src="/img/dashboard/minio-overview.jpg" data-alt="MinIO Overview"></div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- ============================================
+       Section 6: Social Proof
+       ============================================ -->
+  <section class="landing-section social-proof" id="users">
+    <div class="landing-container">
+      <div class="section-header" data-reveal>
+        <h2 class="section-title">Pigsty 被各行各业的公司所信任</h2>
+      </div>
+
+      <!-- Logo Marquee -->
+      <div class="logos-marquee" data-reveal>
+        <div class="logos-marquee-row" data-direction="left">
+          <div class="logos-marquee-content">
+            <div class="logo-item"><img src="/img/user//tantan.png" alt="探探"></div>
+            <div class="logo-item"><img src="/img/user//bilibili.png" alt="Bilibili"></div>
+            <div class="logo-item"><img src="/img/user//airwallex.png" alt="Airwallex"></div>
+            <div class="logo-item"><img src="/img/user//momenta.png" alt="Momenta"></div>
+            <div class="logo-item"><img src="/img/user//meitu.png" alt="美图"></div>
+            <div class="logo-item"><img src="/img/user//polardb.png" alt="PolarDB"></div>
+            <div class="logo-item"><img src="/img/user//bitdeer.png" alt="Bitdeer"></div>
+            <div class="logo-item"><img src="/img/user//oci.png" alt="OCI"></div>
+            <div class="logo-item"><img src="/img/user//huafon.png" alt="华峰"></div>
+            <div class="logo-item"><img src="/img/user//linkfog.png" alt="Linkfog"></div>
+            <div class="logo-item"><img src="/img/user//motphys.png" alt="Motphys"></div>
+            <div class="logo-item"><img src="/img/user//yingshijufeng.png" alt="影视飓风"></div>
+            <!-- Duplicate for seamless loop -->
+            <div class="logo-item"><img src="/img/user//tantan.png" alt="探探"></div>
+            <div class="logo-item"><img src="/img/user//bilibili.png" alt="Bilibili"></div>
+            <div class="logo-item"><img src="/img/user//airwallex.png" alt="Airwallex"></div>
+            <div class="logo-item"><img src="/img/user//momenta.png" alt="Momenta"></div>
+            <div class="logo-item"><img src="/img/user//meitu.png" alt="美图"></div>
+            <div class="logo-item"><img src="/img/user//polardb.png" alt="PolarDB"></div>
+            <div class="logo-item"><img src="/img/user//bitdeer.png" alt="Bitdeer"></div>
+            <div class="logo-item"><img src="/img/user//oci.png" alt="OCI"></div>
+            <div class="logo-item"><img src="/img/user//huafon.png" alt="华峰"></div>
+            <div class="logo-item"><img src="/img/user//linkfog.png" alt="Linkfog"></div>
+            <div class="logo-item"><img src="/img/user//motphys.png" alt="Motphys"></div>
+            <div class="logo-item"><img src="/img/user//yingshijufeng.png" alt="影视飓风"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial" data-reveal>
+        <blockquote class="testimonial-quote">
+          我们用 Pigsty 管理了上百套 PostgreSQL 集群，250 万 PG QPS<br>
+          只用了 1.5 个 DBA，总 TCO 成本是公有云的 5% —— 探探
+        </blockquote>
+      </div>
+
+      <div class="stats-grid" data-reveal>
+        <div class="stat-item">
+          <div class="stat-value" data-count="4471">4471</div>
+          <div class="stat-label">GitHub Stars</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value">2.5M+</div>
+          <div class="stat-label">QPS 验证</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value">6+</div>
+          <div class="stat-label">年持续迭代</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value">#1</div>
+          <div class="stat-label">中国 PG 开源生态影响力</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       Section 7: Join the Community
+       ============================================ -->
+  <section class="landing-section community-section" id="community">
+    <div class="landing-container">
+      <div class="section-header" data-reveal>
+        <h2 class="section-title">加入社区</h2>
+        <p class="section-subtitle">看看大家怎么说</p>
+      </div>
+
+      <!-- Community Links -->
+      <div class="community-buttons" data-reveal>
+        <a href="/img/pigsty/pigsty-cc.jpg" class="community-btn" target="_blank">
+          <i class="fab fa-weixin"></i> 微信群组
+        </a>
+        <a href="https://github.com/pgsty/pigsty" class="community-btn" target="_blank">
+          <i class="fab fa-github"></i> GitHub
+        </a>
+        <a href="https://discord.gg/wDzt5VyWEz" class="community-btn" target="_blank">
+          <i class="fab fa-discord"></i> Discord
+        </a>
+        <a href="https://t.me/joinchat/gV9zfZraNPM3YjFh" class="community-btn" target="_blank">
+          <i class="fab fa-telegram"></i> Telegram
+        </a>
+      </div>
+
+      <!-- Testimonials Marquee -->
+      <div class="testimonials-marquee" data-reveal>
+        <!-- Row 1: Scroll Left -->
+        <div class="testimonials-row" data-direction="left">
+          <div class="testimonials-content">
+            <div class="testimonial-card">
+              <div class="testimonial-header">
+                <img src="/img/avatar/vonng.jpg" alt="Ruohang Feng" class="testimonial-avatar">
+                <div class="testimonial-info">
+                  <div class="testimonial-name">Ruohang Feng</div>
+                  <div class="testimonial-title">Founder @ Pigsty</div>
+                </div>
+              </div>
+              <p class="testimonial-text">"Pigsty is a software written to solve our own problems. And it does it well. So we open-sourced it and hope it can help you too."</p>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-header">
+                <img src="/img/avatar/vedran.jpg" alt="Vedran B." class="testimonial-avatar">
+                <div class="testimonial-info">
+                  <div class="testimonial-name">Vedran B.</div>
+                  <div class="testimonial-title">Junior DBA & Full-Stack Developer</div>
+                </div>
+              </div>
+              <p class="testimonial-text">"This is cool and long overdue: The official PostgreSQL extension manager (called pig) has been released and it seems supported by the official PostgreSQL org. So, no more tedious digging through outdated readmes, cryptic configure scripts, or random GitHub forks & patches just to install some required extension. We are all pigs now."</p>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-header">
+                <img src="/img/avatar/terryzheng.jpg" alt="Terry Zheng" class="testimonial-avatar">
+                <div class="testimonial-info">
+                  <div class="testimonial-name">Terry Zheng</div>
+                  <div class="testimonial-title">Senior Software Engineer</div>
+                </div>
+              </div>
+              <p class="testimonial-text">"Pigsty is a better local open source RDS for PostgreSQL alternative. I wonder if there anything similar for Redis and MySQL."</p>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-header">
+                <img src="/img/avatar/darraghoriordan.jpg" alt="Darragh ORiordan" class="testimonial-avatar">
+                <div class="testimonial-info">
+                  <div class="testimonial-name">Darragh ORiordan</div>
+                  <div class="testimonial-title">Principal Engineer & Cloud Architect</div>
+                </div>
+              </div>
+              <p class="testimonial-text">"If you ever have to set up a postgres instance for production outside of RDS/Managed, Pigsty is a brilliant implementation"</p>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-header">
+                <img src="/img/avatar/grzegorzglab.jpg" alt="Grzegorz Głąb" class="testimonial-avatar">
+                <div class="testimonial-info">
+                  <div class="testimonial-name">Grzegorz Głąb</div>
+                  <div class="testimonial-title">Spiritus Movens / Serendipitous Planner</div>
+                </div>
+              </div>
+              <p class="testimonial-text">"Great toolbox: Pigsty - 'PostgreSQL In Great STYle': Postgres, Infras, Graphics, Service, Toolbox, it's all Yours."</p>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-header">
+                <img src="/img/avatar/paulhewson.jpg" alt="Paul Hewson" class="testimonial-avatar">
+                <div class="testimonial-info">
+                  <div class="testimonial-name">Paul Hewson</div>
+                  <div class="testimonial-title">Data Scientist / Statistician</div>
+                </div>
+              </div>
+              <p class="testimonial-text">"This is neat, self hosted PostgreSQL as a service"</p>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-header">
+                <img src="/img/avatar/francois.jpg" alt="François-Guillaume Ribreau" class="testimonial-avatar">
+                <div class="testimonial-info">
+                  <div class="testimonial-name">François-Guillaume Ribreau</div>
+                  <div class="testimonial-title">Hacker, Maker, Tech Advisor</div>
+                </div>
+              </div>
+              <p class="testimonial-text">"Looking for a self-hosted PostgreSQL RDS alternative? You won't believe what this project does"</p>
+            </div>
+            <!-- Duplicate for seamless loop -->
+            <div class="testimonial-card">
+              <div class="testimonial-header">
+                <img src="/img/avatar/vonng.jpg" alt="Ruohang Feng" class="testimonial-avatar">
+                <div class="testimonial-info">
+                  <div class="testimonial-name">Ruohang Feng</div>
+                  <div class="testimonial-title">Founder @ Pigsty</div>
+                </div>
+              </div>
+              <p class="testimonial-text">"Pigsty is a software written to solve our own problems. And it does it well. So we open-sourced it and hope it can help you too."</p>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-header">
+                <img src="/img/avatar/vedran.jpg" alt="Vedran B." class="testimonial-avatar">
+                <div class="testimonial-info">
+                  <div class="testimonial-name">Vedran B.</div>
+                  <div class="testimonial-title">Junior DBA & Full-Stack Developer</div>
+                </div>
+              </div>
+              <p class="testimonial-text">"This is cool and long overdue: The official PostgreSQL extension manager (called pig) has been released and it seems supported by the official PostgreSQL org. So, no more tedious digging through outdated readmes, cryptic configure scripts, or random GitHub forks & patches just to install some required extension. We are all pigs now."</p>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-header">
+                <img src="/img/avatar/terryzheng.jpg" alt="Terry Zheng" class="testimonial-avatar">
+                <div class="testimonial-info">
+                  <div class="testimonial-name">Terry Zheng</div>
+                  <div class="testimonial-title">Senior Software Engineer</div>
+                </div>
+              </div>
+              <p class="testimonial-text">"Pigsty is a better local open source RDS for PostgreSQL alternative. I wonder if there anything similar for Redis and MySQL."</p>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-header">
+                <img src="/img/avatar/darraghoriordan.jpg" alt="Darragh ORiordan" class="testimonial-avatar">
+                <div class="testimonial-info">
+                  <div class="testimonial-name">Darragh ORiordan</div>
+                  <div class="testimonial-title">Principal Engineer & Cloud Architect</div>
+                </div>
+              </div>
+              <p class="testimonial-text">"If you ever have to set up a postgres instance for production outside of RDS/Managed, Pigsty is a brilliant implementation"</p>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-header">
+                <img src="/img/avatar/grzegorzglab.jpg" alt="Grzegorz Głąb" class="testimonial-avatar">
+                <div class="testimonial-info">
+                  <div class="testimonial-name">Grzegorz Głąb</div>
+                  <div class="testimonial-title">Spiritus Movens / Serendipitous Planner</div>
+                </div>
+              </div>
+              <p class="testimonial-text">"Great toolbox: Pigsty - 'PostgreSQL In Great STYle': Postgres, Infras, Graphics, Service, Toolbox, it's all Yours."</p>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-header">
+                <img src="/img/avatar/paulhewson.jpg" alt="Paul Hewson" class="testimonial-avatar">
+                <div class="testimonial-info">
+                  <div class="testimonial-name">Paul Hewson</div>
+                  <div class="testimonial-title">Data Scientist / Statistician</div>
+                </div>
+              </div>
+              <p class="testimonial-text">"This is neat, self hosted PostgreSQL as a service"</p>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-header">
+                <img src="/img/avatar/francois.jpg" alt="François-Guillaume Ribreau" class="testimonial-avatar">
+                <div class="testimonial-info">
+                  <div class="testimonial-name">François-Guillaume Ribreau</div>
+                  <div class="testimonial-title">Hacker, Maker, Tech Advisor</div>
+                </div>
+              </div>
+              <p class="testimonial-text">"Looking for a self-hosted PostgreSQL RDS alternative? You won't believe what this project does"</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 2: Scroll Right -->
+        <div class="testimonials-row" data-direction="right">
+          <div class="testimonials-content">
+            <div class="testimonial-card">
+              <div class="testimonial-header">
+                <img src="/img/avatar/anirudha.jpg" alt="Anirudha S." class="testimonial-avatar">
+                <div class="testimonial-info">
+                  <div class="testimonial-name">Anirudha S.</div>
+                  <div class="testimonial-title">Enterprise Architect</div>
+                </div>
+              </div>
+              <p class="testimonial-text">"Pigsty aims to harness the collective power of PostgreSQL ecosystem extensions and democratize access to production-grade database services and with GCP a great start ahead!"</p>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-header">
+                <img src="/img/avatar/marcin.jpg" alt="Marcin Gwóźdź" class="testimonial-avatar">
+                <div class="testimonial-info">
+                  <div class="testimonial-name">Marcin Gwóźdź</div>
+                  <div class="testimonial-title">Director of FerretDB</div>
+                </div>
+              </div>
+              <p class="testimonial-text">"You can easily now use FerretDB with Pigsty: the a battery-included, local-first, open-source RDS PG alternative."</p>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-header">
+                <img src="/img/avatar/peterzaitsev.jpg" alt="Peter Zaitsev" class="testimonial-avatar">
+                <div class="testimonial-info">
+                  <div class="testimonial-name">Peter Zaitsev</div>
+                  <div class="testimonial-title">Entrepreneur | Technologist</div>
+                </div>
+              </div>
+              <p class="testimonial-text">"Pigsty: PostgreSQL in Great STYle, Battery-Included Free RDS Alternative!"</p>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-header">
+                <img src="/img/avatar/philippenoel.jpg" alt="Philippe Noël" class="testimonial-avatar">
+                <div class="testimonial-info">
+                  <div class="testimonial-name">Philippe Noël</div>
+                  <div class="testimonial-title">Founder @ ParadeDB</div>
+                </div>
+              </div>
+              <p class="testimonial-text">"Proud for @ParadeDB to be included in Pigsty! Pigsty is truly one of the best ways to run Postgres and its whole ecosystem. Probably the more comprehensive list of extensions in Postgres"</p>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-header">
+                <img src="/img/avatar/brokenmind.jpg" alt="Broken Mind" class="testimonial-avatar">
+                <div class="testimonial-info">
+                  <div class="testimonial-name">Broken Mind</div>
+                  <div class="testimonial-title">Cognitive Sys Optimization Engineer</div>
+                </div>
+              </div>
+              <p class="testimonial-text">"man... this is so fun, the open source community always have the gold, is the postgres the best!! awesome work from the last released! a bunch of extensions to help community"</p>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-header">
+                <img src="/img/avatar/cocoonkid.jpg" alt="ɘɿuɔɐɿɈ" class="testimonial-avatar">
+                <div class="testimonial-info">
+                  <div class="testimonial-name">ɘɿuɔɐɿɈ</div>
+                  <div class="testimonial-title">Architect</div>
+                </div>
+              </div>
+              <p class="testimonial-text">"I want to take a moment to express my immense gratitude to the dedicated developers, maintainers, and contributors of the Pigsty project - a remarkable repository."</p>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-header">
+                <img src="/img/avatar/yurii.jpg" alt="Yurii Rashkovskii" class="testimonial-avatar">
+                <div class="testimonial-info">
+                  <div class="testimonial-name">Yurii Rashkovskii</div>
+                  <div class="testimonial-title">Founder @ Omnigres</div>
+                </div>
+              </div>
+              <p class="testimonial-text">"Pigsty Is Postgres All Batteries Included. Did I say All? No, it's a little bit more than that."</p>
+            </div>
+            <!-- Duplicate for seamless loop -->
+            <div class="testimonial-card">
+              <div class="testimonial-header">
+                <img src="/img/avatar/anirudha.jpg" alt="Anirudha S." class="testimonial-avatar">
+                <div class="testimonial-info">
+                  <div class="testimonial-name">Anirudha S.</div>
+                  <div class="testimonial-title">Enterprise Architect</div>
+                </div>
+              </div>
+              <p class="testimonial-text">"Pigsty aims to harness the collective power of PostgreSQL ecosystem extensions and democratize access to production-grade database services and with GCP a great start ahead!"</p>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-header">
+                <img src="/img/avatar/marcin.jpg" alt="Marcin Gwóźdź" class="testimonial-avatar">
+                <div class="testimonial-info">
+                  <div class="testimonial-name">Marcin Gwóźdź</div>
+                  <div class="testimonial-title">Director of FerretDB</div>
+                </div>
+              </div>
+              <p class="testimonial-text">"You can easily now use FerretDB with Pigsty: the a battery-included, local-first, open-source RDS PG alternative."</p>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-header">
+                <img src="/img/avatar/peterzaitsev.jpg" alt="Peter Zaitsev" class="testimonial-avatar">
+                <div class="testimonial-info">
+                  <div class="testimonial-name">Peter Zaitsev</div>
+                  <div class="testimonial-title">Entrepreneur | Technologist</div>
+                </div>
+              </div>
+              <p class="testimonial-text">"Pigsty: PostgreSQL in Great STYle, Battery-Included Free RDS Alternative!"</p>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-header">
+                <img src="/img/avatar/philippenoel.jpg" alt="Philippe Noël" class="testimonial-avatar">
+                <div class="testimonial-info">
+                  <div class="testimonial-name">Philippe Noël</div>
+                  <div class="testimonial-title">Founder @ ParadeDB</div>
+                </div>
+              </div>
+              <p class="testimonial-text">"Proud for @ParadeDB to be included in Pigsty! Pigsty is truly one of the best ways to run Postgres and its whole ecosystem. Probably the more comprehensive list of extensions in Postgres"</p>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-header">
+                <img src="/img/avatar/brokenmind.jpg" alt="Broken Mind" class="testimonial-avatar">
+                <div class="testimonial-info">
+                  <div class="testimonial-name">Broken Mind</div>
+                  <div class="testimonial-title">Cognitive Sys Optimization Engineer</div>
+                </div>
+              </div>
+              <p class="testimonial-text">"man... this is so fun, the open source community always have the gold, is the postgres the best!! awesome work from the last released! a bunch of extensions to help community"</p>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-header">
+                <img src="/img/avatar/cocoonkid.jpg" alt="ɘɿuɔɐɿɈ" class="testimonial-avatar">
+                <div class="testimonial-info">
+                  <div class="testimonial-name">ɘɿuɔɐɿɈ</div>
+                  <div class="testimonial-title">Architect</div>
+                </div>
+              </div>
+              <p class="testimonial-text">"I want to take a moment to express my immense gratitude to the dedicated developers, maintainers, and contributors of the Pigsty project - a remarkable repository."</p>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-header">
+                <img src="/img/avatar/yurii.jpg" alt="Yurii Rashkovskii" class="testimonial-avatar">
+                <div class="testimonial-info">
+                  <div class="testimonial-name">Yurii Rashkovskii</div>
+                  <div class="testimonial-title">Founder @ Omnigres</div>
+                </div>
+              </div>
+              <p class="testimonial-text">"Pigsty Is Postgres All Batteries Included. Did I say All? No, it's a little bit more than that."</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 3: Scroll Left -->
+        <div class="testimonials-row" data-direction="left">
+          <div class="testimonials-content">
+            <div class="testimonial-card">
+              <div class="testimonial-header">
+                <img src="/img/avatar/dexteryang.jpg" alt="Dexter Yang" class="testimonial-avatar">
+                <div class="testimonial-info">
+                  <div class="testimonial-name">Dexter Yang</div>
+                  <div class="testimonial-title">Architect, Hacker</div>
+                </div>
+              </div>
+              <p class="testimonial-text">"Pigsty, which adopts the currently popular 'fair-code' model for IaaS / PaaS / BaaS / Serverless DB. Unlike M3O (an 'AWS alternative' project) that's geared more toward developers, pigsty is squarely aimed at dba / ops teams."</p>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-header">
+                <img src="/img/avatar/vitaliykukharik.jpg" alt="Vitaliy Kukharik" class="testimonial-avatar">
+                <div class="testimonial-info">
+                  <div class="testimonial-name">Vitaliy Kukharik</div>
+                  <div class="testimonial-title">Founder & CTO @ Autobase</div>
+                </div>
+              </div>
+              <p class="testimonial-text">"If you haven't heard about Pigsty extension repository yet, take a look at this. A lot of extremely useful work has been done! Thanks Vonng for this contribution."</p>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-header">
+                <img src="/img/avatar/grantzhou.jpg" alt="Grant Zhou" class="testimonial-avatar">
+                <div class="testimonial-info">
+                  <div class="testimonial-name">Grant Zhou</div>
+                  <div class="testimonial-title">President at Highgo Software</div>
+                </div>
+              </div>
+              <p class="testimonial-text">"You can use Pigsty to serve IvorySQL - Oracle compatible PostgreSQL fork as a local-first RDS"</p>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-header">
+                <img src="/img/avatar/digoalzhou.jpg" alt="Digoal Zhou" class="testimonial-avatar">
+                <div class="testimonial-info">
+                  <div class="testimonial-name">Digoal Zhou</div>
+                  <div class="testimonial-title">PostgreSQL Expert</div>
+                </div>
+              </div>
+              <p class="testimonial-text">"Pigsty is ideal for managing multiple PG or PolarDB databases, especially if you have extensive extension requirements. Highly recommended!"</p>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-header">
+                <img src="/img/avatar/alitrack.jpg" alt="Steven Lee" class="testimonial-avatar">
+                <div class="testimonial-info">
+                  <div class="testimonial-name">Steven Lee</div>
+                  <div class="testimonial-title">Author of duckdb_fdw</div>
+                </div>
+              </div>
+              <p class="testimonial-text">"Thanks for including the duckdb_fdw in Pigsty. Hope to see more extensions in the future!"</p>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-header">
+                <img src="/img/avatar/viggy.jpg" alt="Vignesh Ravichandran" class="testimonial-avatar">
+                <div class="testimonial-info">
+                  <div class="testimonial-name">Vignesh Ravichandran</div>
+                  <div class="testimonial-title">Postgres Contributor</div>
+                </div>
+              </div>
+              <p class="testimonial-text">"IMHO, Pigsty is underrated. It deserves more visibility. Production grade @PostgreSQL but with full control !"</p>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-header">
+                <img src="/img/avatar/hubo.jpg" alt="Bo Hu" class="testimonial-avatar">
+                <div class="testimonial-info">
+                  <div class="testimonial-name">Bo Hu</div>
+                  <div class="testimonial-title">Co-founder of FeatBit</div>
+                </div>
+              </div>
+              <p class="testimonial-text">"Pigsty boosts our PostgreSQL expertise and ensures critical use cases for FeatBit's PostgreSQL solution are rock-solid."</p>
+            </div>
+            <!-- Duplicate for seamless loop -->
+            <div class="testimonial-card">
+              <div class="testimonial-header">
+                <img src="/img/avatar/dexteryang.jpg" alt="Dexter Yang" class="testimonial-avatar">
+                <div class="testimonial-info">
+                  <div class="testimonial-name">Dexter Yang</div>
+                  <div class="testimonial-title">Architect, Hacker</div>
+                </div>
+              </div>
+              <p class="testimonial-text">"Pigsty, which adopts the currently popular 'fair-code' model for IaaS / PaaS / BaaS / Serverless DB. Unlike M3O (an 'AWS alternative' project) that's geared more toward developers, pigsty is squarely aimed at dba / ops teams."</p>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-header">
+                <img src="/img/avatar/vitaliykukharik.jpg" alt="Vitaliy Kukharik" class="testimonial-avatar">
+                <div class="testimonial-info">
+                  <div class="testimonial-name">Vitaliy Kukharik</div>
+                  <div class="testimonial-title">Founder & CTO @ Autobase</div>
+                </div>
+              </div>
+              <p class="testimonial-text">"If you haven't heard about Pigsty extension repository yet, take a look at this. A lot of extremely useful work has been done! Thanks Vonng for this contribution."</p>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-header">
+                <img src="/img/avatar/grantzhou.jpg" alt="Grant Zhou" class="testimonial-avatar">
+                <div class="testimonial-info">
+                  <div class="testimonial-name">Grant Zhou</div>
+                  <div class="testimonial-title">President at Highgo Software</div>
+                </div>
+              </div>
+              <p class="testimonial-text">"You can use Pigsty to serve IvorySQL - Oracle compatible PostgreSQL fork as a local-first RDS"</p>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-header">
+                <img src="/img/avatar/digoalzhou.jpg" alt="Digoal Zhou" class="testimonial-avatar">
+                <div class="testimonial-info">
+                  <div class="testimonial-name">Digoal Zhou</div>
+                  <div class="testimonial-title">PostgreSQL Expert</div>
+                </div>
+              </div>
+              <p class="testimonial-text">"Pigsty is ideal for managing multiple PG or PolarDB databases, especially if you have extensive extension requirements. Highly recommended!"</p>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-header">
+                <img src="/img/avatar/alitrack.jpg" alt="Steven Lee" class="testimonial-avatar">
+                <div class="testimonial-info">
+                  <div class="testimonial-name">Steven Lee</div>
+                  <div class="testimonial-title">Author of duckdb_fdw</div>
+                </div>
+              </div>
+              <p class="testimonial-text">"Thanks for including the duckdb_fdw in Pigsty. Hope to see more extensions in the future!"</p>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-header">
+                <img src="/img/avatar/viggy.jpg" alt="Vignesh Ravichandran" class="testimonial-avatar">
+                <div class="testimonial-info">
+                  <div class="testimonial-name">Vignesh Ravichandran</div>
+                  <div class="testimonial-title">Postgres Contributor</div>
+                </div>
+              </div>
+              <p class="testimonial-text">"IMHO, Pigsty is underrated. It deserves more visibility. Production grade @PostgreSQL but with full control !"</p>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-header">
+                <img src="/img/avatar/hubo.jpg" alt="Bo Hu" class="testimonial-avatar">
+                <div class="testimonial-info">
+                  <div class="testimonial-name">Bo Hu</div>
+                  <div class="testimonial-title">Co-founder of FeatBit</div>
+                </div>
+              </div>
+              <p class="testimonial-text">"Pigsty boosts our PostgreSQL expertise and ensures critical use cases for FeatBit's PostgreSQL solution are rock-solid."</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       Section 8: Quick Start (CTA)
+       ============================================ -->
+  <section class="landing-section quickstart-section" id="quickstart">
+    <div class="landing-container">
+      <div class="section-header" data-reveal>
+        <h2 class="section-title"><i class="fas fa-bolt"></i> 轻松交付，立等可取</h2>
+      </div>
+
+      <!-- Three Steps -->
+      <div class="steps-grid-new" data-reveal>
+        <!-- Step 1: Download -->
+        <div class="step-card-new">
+          <div class="step-header">
+            <span class="step-number-new">1</span>
+            <a href="/docs/setup/install/" class="step-title-new">下载安装</a>
+          </div>
+          <div class="step-cmd">
+            <code class="step-cmd-text" data-copy="curl -fsSL https://repo.pigsty.cc/get | bash">curl https://pigsty.cc/get | bash</code>
+            <button class="step-cmd-copy" title="复制命令"><i class="fas fa-copy"></i></button>
+          </div>
+        </div>
+
+        <!-- Step 2: Configure -->
+        <div class="step-card-new">
+          <div class="step-header">
+            <span class="step-number-new">2</span>
+            <a href="/docs/setup/install#配置" class="step-title-new">编辑配置</a>
+          </div>
+          <div class="step-cmd">
+            <code class="step-cmd-text" data-copy="cd ~/pigsty; ./configure -g; vi .pigsty.yml">./configure</code>
+            <button class="step-cmd-copy" title="复制命令"><i class="fas fa-copy"></i></button>
+          </div>
+        </div>
+
+        <!-- Step 3: Deploy -->
+        <div class="step-card-new">
+          <div class="step-header">
+            <span class="step-number-new">3</span>
+            <a href="/docs/setup/install/#部署" class="step-title-new">一键部署</a>
+          </div>
+          <div class="step-cmd">
+            <code class="step-cmd-text">./install.yml</code>
+            <button class="step-cmd-copy" title="复制命令"><i class="fas fa-copy"></i></button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Asciinema Player -->
+      <div class="asciinema-container" data-reveal>
+        <div id="asciinema-player"></div>
+      </div>
+
+      <!-- Installation Options -->
+      <div class="install-options" data-reveal>
+        <a href="/docs/setup/install/" class="install-option">
+          <div class="install-option-icon"><i class="fas fa-rocket"></i></div>
+          <div class="install-option-content">
+            <h4 class="install-option-title">单机安装</h4>
+            <p class="install-option-desc">联网在线安装最新版本</p>
+          </div>
+        </a>
+
+        <a href="/docs/setup/offline/" class="install-option">
+          <div class="install-option-icon"><i class="fas fa-box"></i></div>
+          <div class="install-option-content">
+            <h4 class="install-option-title">离线安装</h4>
+            <p class="install-option-desc">无网从离线包中冷启动</p>
+          </div>
+        </a>
+
+        <a href="/docs/setup/slim/" class="install-option">
+          <div class="install-option-icon"><i class="fas fa-feather"></i></div>
+          <div class="install-option-content">
+            <h4 class="install-option-title">精简安装</h4>
+            <p class="install-option-desc">只要纯净的 PostgreSQL</p>
+          </div>
+        </a>
+      </div>
+
+      <!-- Platform Support -->
+      <div class="platforms" data-reveal>
+        <strong>支持系统：</strong>
+        Linux x86_64 / Arm64 · EL 8 / 9 / 10 · Ubuntu 22 / 24 · Debian 12 / 13
+      </div>
+    </div>
+  </section>
+
+  <!-- Asciinema Player (v3.13.5 local) -->
+  <link rel="stylesheet" type="text/css" href="/css/asciinema-player.css" />
+  <script src="/js/asciinema-player.min.js"></script>
+
+
+  <!-- ============================================
+       Section 8: Final CTA
+       ============================================ -->
+  <section class="final-cta" id="cta">
+    <div class="final-cta-content" data-reveal>
+      <h2 class="final-cta-title">准备好掌控你的数据库了吗？</h2>
+
+      <div class="command-box">
+        <span class="command-prompt">$</span>
+        <code class="command-text">curl -fsSL https://repo.pigsty.cc/get | bash</code>
+        <button class="command-copy" title="复制命令">
+          <i class="fas fa-copy"></i>
+        </button>
+      </div>
+
+      <div class="final-cta-buttons">
+        <a href="/docs/setup/install/" class="btn btn-primary">
+          <i class="fas fa-rocket"></i> 立即安装
+        </a>
+        <a href="https://demo.pigsty.cc" class="btn btn-secondary" target="_blank">
+          <i class="fas fa-play"></i> 在线演示
+        </a>
+        <a href="/price/" class="btn btn-outline">
+          <i class="fas fa-headset"></i> 商业服务
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       Section 9: Footer
+       ============================================ -->
+  <footer class="landing-footer">
+    <div class="landing-container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="footer-logo">
+            <img src="/img/logo/logo.svg" alt="Pigsty">
+            PIGSTY
+          </a>
+          <p class="footer-tagline">
+            <span class="hl-p">P</span>ostgreSQL <span class="hl-i">I</span>n <span class="hl-g">G</span>reat <span class="hl-s">S</span><span class="hl-t">T</span><span class="hl-y">Y</span>le —<br>
+            开箱即用的 PostgreSQL 发行版
+          </p>
+          <p class="footer-slogan">
+            助您用 <span class="hl-good">好数据库</span>，<span class="hl-use">用好</span>数据库
+          </p>
+        </div>
+
+        <div class="footer-column">
+          <h4 class="footer-column-title">产品</h4>
+          <ul class="footer-links">
+            <li><a href="/docs/about/feature/">特性介绍</a></li>
+            <li><a href="/docs/about/module/">功能模块</a></li>
+            <li><a href="https://demo.pigsty.cc" target="_blank">在线演示</a></li>
+            <li><a href="/price/">服务定价</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4 class="footer-column-title">资源</h4>
+          <ul class="footer-links">
+            <li><a href="/docs/">中文文档</a></li>
+            <li><a href="https://pgext.cloud/zh/" target="_blank">扩展目录</a></li>
+            <li><a href="/blog/">技术博客</a></li>
+            <li><a href="/blog/pigsty/">发布注记</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4 class="footer-column-title">社区</h4>
+          <ul class="footer-links">
+            <li><a href="https://github.com/Vonng/pigsty" target="_blank">GitHub</a></li>
+            <li><a href="https://discord.gg/wDzt5VyWEz" target="_blank">Discord</a></li>
+            <li><a href="https://t.me/joinchat/gV9zfZraNPM3YjFh" target="_blank">Telegram</a></li>
+            <li><a href="/img/pigsty/pigsty-cc.jpg">微信群组</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4 class="footer-column-title">关于</h4>
+          <ul class="footer-links">
+            <li><a href="https://vonng.com" target="_blank">作者博客</a></li>
+            <li><a href="/docs/about/license/">开源协议</a></li>
+            <li><a href="/docs/about/privacy/">隐私政策</a></li>
+            <li><a href="mailto:rh@vonng.com">联系我们</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2018-2025 Ruohang Feng (Vonng)</div>
+        <div class="footer-lang-switch">
+          <a href="https://pigsty.io" target="_blank">English</a>
+          <a href="/">中文</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+<script src="/js/landing.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,102 @@
+{{ define "main" -}}
+
+<div class="td-content">
+<h1>{{ .Title }}</h1>
+{{ with .Content }}{{ . }}{{ end -}}
+</div>
+{{ if (and .Parent .Parent.IsHome) -}}
+  {{ $.Scratch.Set "blog-pages" (where .Site.RegularPages "Section" .Section) -}}
+{{ else -}}
+  {{$.Scratch.Set "blog-pages" .Pages -}}
+{{ end -}}
+
+{{ if .Pages -}}
+<div class="td-blog-posts">
+  {{ $pager := .Paginate (( $.Scratch.Get "blog-pages").GroupByDate "2006" ) -}}
+  {{ range $pager.PageGroups -}}
+  <div class="h2">{{ T "post_posts_in" }} {{ .Key }}</div>
+  <ul class="td-blog-posts-list">
+    {{ range .Pages -}}
+    {{/* 支持 manualLink 外部链接 */}}
+    {{ $manualLink := cond (isset .Params "manuallink") .Params.manualLink .RelPermalink }}
+    {{ $isExternal := isset .Params "manuallink" }}
+    {{ $target := cond $isExternal "_blank" "" }}
+    <li class="td-blog-posts-list__item">
+      <div class="td-blog-posts-list__body">
+        <h5 class="mt-0 mb-1">
+          <a href="{{ $manualLink }}"{{ if $isExternal }} target="_blank" rel="noopener"{{ end }}>{{ .Title }}</a>
+          {{ if $isExternal }}<i class="fa-solid fa-arrow-up-right-from-square fa-xs text-muted"></i>{{ end }}
+        </h5>
+        <p class="mb-2 mb-md-3"><small class="text-body-secondary">
+          {{- .Date.Format ($.Param "time_format_blog") }} {{ T "ui_in"}} {{ .CurrentSection.LinkTitle -}}
+        </small></p>
+        <header class="article-meta">
+          {{- partial "taxonomy_terms_article_wrapper.html" . -}}
+          {{ if (and (not .Params.hide_readingtime) (.Site.Params.ui.readingtime.enable)) -}}
+            {{- partial "reading-time.html" . -}}
+          {{ end -}}
+        </header>
+        {{/* 优先使用 front matter 中的 images，其次是 Page Bundle 的 featured image */}}
+        {{ $featuredImage := "" }}
+        {{ $pageTitle := .Title }}
+        {{ with .Params.images }}
+          {{ $featuredImage = index . 0 }}
+        {{ else }}
+          {{ $image := (.Resources.ByType "image").GetMatch "**featured*" }}
+          {{ with $image }}
+            {{ $featuredImage = .RelPermalink }}
+          {{ end }}
+        {{ end }}
+        {{/* 外部链接博客使用 description/summary，普通博客使用内容截断 */}}
+        {{ $summary := "" }}
+        {{ if $isExternal }}
+          {{/* 外部链接：优先使用 description，其次是 summary */}}
+          {{ with .Description }}
+            {{ $summary = . }}
+          {{ else }}
+            {{ with .Params.summary }}
+              {{ $summary = . }}
+            {{ end }}
+          {{ end }}
+        {{ else }}
+          {{/* 普通博客：使用内容截断（原来的行为） */}}
+          {{ $summary = .Plain | truncate 250 }}
+        {{ end }}
+        {{/* 使用 flex 布局确保图片和描述框宽度一致 */}}
+        <div class="d-none d-md-flex align-items-start gap-3 pt-1">
+          {{ with $featuredImage }}
+          <figure class="flex-shrink-0 mb-0" style="width: 250px">
+            <a href="{{ $manualLink }}"{{ if $isExternal }} target="_blank" rel="noopener"{{ end }}>
+              <img src="{{ . }}" alt="{{ $pageTitle }}" width="250" height="125" style="object-fit: cover;">
+            </a>
+          </figure>
+          {{ end }}
+          <div class="flex-grow-1">
+            <p class="pt-0 mt-0">{{ $summary | safeHTML }}</p>
+            <p class="pt-0 mb-0">
+              <a href="{{ $manualLink }}"{{ if $isExternal }} target="_blank" rel="noopener"{{ end }} aria-label="{{ T "ui_read_more"}} - {{ .LinkTitle }}">
+                {{ T "ui_read_more"}}{{ if $isExternal }} <i class="fa-solid fa-arrow-up-right-from-square fa-xs"></i>{{ end }}
+              </a>
+            </p>
+          </div>
+        </div>
+        {{/* 移动端布局：无图片，简单显示 */}}
+        <div class="d-md-none">
+          <p class="pt-0 mt-0">{{ $summary | safeHTML }}</p>
+          <p class="pt-0 mb-0">
+            <a href="{{ $manualLink }}"{{ if $isExternal }} target="_blank" rel="noopener"{{ end }} aria-label="{{ T "ui_read_more"}} - {{ .LinkTitle }}">
+              {{ T "ui_read_more"}}{{ if $isExternal }} <i class="fa-solid fa-arrow-up-right-from-square fa-xs"></i>{{ end }}
+            </a>
+          </p>
+        </div>
+      </div>
+    </li>
+    {{ end -}}
+  </ul>
+  {{ end -}}
+</div>
+<div class="td-blog-posts__pagination">
+  {{ partial "pagination.html" . -}}
+</div>
+{{- end -}}
+{{ end -}}

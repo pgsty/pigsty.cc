@@ -1,0 +1,84 @@
+---
+#==============================================================#
+# File      :   ivory.yml
+# Desc      :   IvorySQL 4 (Oracle Compatible) template
+# Ctime     :   2024-08-05
+# Mtime     :   2025-12-28
+# Docs      :   https://doc.pgsty.com/pgsql/kernel/ivorysql
+# License   :   Apache-2.0 @ https://pigsty.io/docs/about/license/
+# Copyright :   2018-2026  Ruohang Feng / Vonng (rh@vonng.com)
+#==============================================================#
+
+# This is the config template for IvorySQL 5 Kernel,
+# Which is a PostgreSQL 18 fork with Oracle Compatibility
+# tutorial: https://doc.pgsty.com/pgsql/kernel/ivorysql
+#
+# Usage:
+#   curl https://repo.pigsty.io/get | bash
+#   ./configure -c ivory
+#   ./deploy.yml
+
+all:
+  children:
+    infra: { hosts: { 10.10.10.10: { infra_seq: 1 }} ,vars: { repo_enabled: false }}
+    etcd:  { hosts: { 10.10.10.10: { etcd_seq: 1  }} ,vars: { etcd_cluster: etcd  }}
+    #minio: { hosts: { 10.10.10.10: { minio_seq: 1 }} ,vars: { minio_cluster: minio }}
+
+    #----------------------------------------------#
+    # IvorySQL Database Cluster
+    #----------------------------------------------#
+    pg-meta:
+      hosts:
+        10.10.10.10: { pg_seq: 1, pg_role: primary }
+      vars:
+        pg_cluster: pg-meta
+        pg_users:
+          - {name: dbuser_meta ,password: DBUser.Meta   ,pgbouncer: true ,roles: [dbrole_admin]    ,comment: pigsty admin user }
+          - {name: dbuser_view ,password: DBUser.Viewer ,pgbouncer: true ,roles: [dbrole_readonly] ,comment: read-only viewer for meta database }
+        pg_databases:
+          - {name: meta ,baseline: cmdb.sql ,comment: pigsty meta database ,schemas: [pigsty]}
+        pg_hba_rules:
+          - {user: dbuser_view , db: all ,addr: infra ,auth: pwd ,title: 'allow grafana dashboard access cmdb from infra nodes'}
+        node_crontab: [ '00 01 * * * postgres /pg/bin/pg-backup full' ] # make a full backup every 1am
+
+        # IvorySQL Ad Hoc Settings
+        pg_mode: ivory                                                 # Use IvorySQL Oracle Compatible Mode
+        pg_packages: [ ivorysql, pgsql-common ]                        # install IvorySQL instead of postgresql kernel
+        pg_libs: 'liboracle_parser, pg_stat_statements, auto_explain'  # pre-load oracle parser
+
+  vars:                               # global variables
+    #----------------------------------------------#
+    # INFRA : https://doc.pgsty.com/infra/param
+    #----------------------------------------------#
+    version: v4.0.0                   # pigsty version string
+    admin_ip: 10.10.10.10             # admin node ip address
+    region: default                   # upstream mirror region: default,china,europe
+    infra_portal:                     # infra services exposed via portal
+      home : { domain: i.pigsty }     # default domain name
+
+    #----------------------------------------------#
+    # NODE : https://doc.pgsty.com/node/param
+    #----------------------------------------------#
+    nodename_overwrite: false           # do not overwrite node hostname on single node mode
+    node_repo_modules: node,infra,pgsql # add these repos directly to the singleton node
+    node_tune: oltp                     # node tuning specs: oltp,olap,tiny,crit
+
+    #----------------------------------------------#
+    # PGSQL : https://doc.pgsty.com/pgsql/param
+    #----------------------------------------------#
+    pg_version: 18                      # IvorySQL kernel is compatible with postgres 18
+    pg_conf: oltp.yml                   # pgsql tuning specs: {oltp,olap,tiny,crit}.yml
+
+    #----------------------------------------------#
+    # PASSWORD : https://doc.pgsty.com/config/security
+    #----------------------------------------------#
+    grafana_admin_password: pigsty
+    grafana_view_password: DBUser.Viewer
+    pg_admin_password: DBUser.DBA
+    pg_monitor_password: DBUser.Monitor
+    pg_replication_password: DBUser.Replicator
+    patroni_password: Patroni.API
+    haproxy_admin_password: pigsty
+    minio_secret_key: S3User.MinIO
+    etcd_root_password: Etcd.Root
+...

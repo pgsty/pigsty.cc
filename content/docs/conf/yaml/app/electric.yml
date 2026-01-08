@@ -1,0 +1,115 @@
+---
+#==============================================================#
+# File      :   electric.yml
+# Desc      :   pigsty config for running 1-node electric app
+# Ctime     :   2025-03-29
+# Mtime     :   2025-12-12
+# Docs      :   https://doc.pgsty.com/app/odoo
+# License   :   Apache-2.0 @ https://pigsty.io/docs/about/license/
+# Copyright :   2018-2026  Ruohang Feng / Vonng (rh@vonng.com)
+#==============================================================#
+
+# tutorial: https://doc.pgsty.com/app/electric
+# quick start: https://electric-sql.com/docs/quickstart
+# how to use this template:
+#
+#  curl -fsSL https://repo.pigsty.io/get | bash; cd ~/pigsty
+# ./bootstrap                 # prepare local repo & ansible
+# ./configure -c app/electric # use this dify config template
+# vi pigsty.yml               # IMPORTANT: CHANGE CREDENTIALS!!
+# ./deploy.yml                # install pigsty & pgsql & minio
+# ./docker.yml                # install docker & docker-compose
+# ./app.yml                   # install dify with docker-compose
+
+all:
+  children:
+    # infra cluster for proxy, monitor, alert, etc..
+    infra:
+      hosts: { 10.10.10.10: { infra_seq: 1 } }
+      vars:
+
+        app: electric
+        apps:       # define all applications
+          electric: # app name, should have corresponding ~/pigsty/app/electric folder
+            conf:   # override /opt/electric/.env config file : https://electric-sql.com/docs/api/config
+              DATABASE_URL: 'postgresql://electric:DBUser.Electric@10.10.10.10:5432/electric?sslmode=require'
+              ELECTRIC_PORT: 8002
+              ELECTRIC_PROMETHEUS_PORT: 8003
+              ELECTRIC_INSECURE: true
+              #ELECTRIC_SECRET: 1U6ItbhoQb4kGUU5wXBLbxvNf
+
+    # etcd cluster for ha postgres
+    etcd: { hosts: { 10.10.10.10: { etcd_seq: 1 } }, vars: { etcd_cluster: etcd } }
+
+    # minio cluster, s3 compatible object storage
+    #minio: { hosts: { 10.10.10.10: { minio_seq: 1 } }, vars: { minio_cluster: minio } }
+
+    # postgres example cluster: pg-meta
+    pg-meta:
+      hosts: { 10.10.10.10: { pg_seq: 1, pg_role: primary } }
+      vars:
+        pg_cluster: pg-meta
+        pg_users:
+          - {name: electric ,password: DBUser.Electric ,pgbouncer: true , replication: true ,roles: [dbrole_admin] ,comment: electric main user }
+        pg_databases: [{ name: electric , owner: electric }]
+        pg_hba_rules:
+          - { user: electric , db: replication ,addr: infra ,auth: ssl ,title: 'allow electric intranet/docker ssl access' }
+
+  #==============================================================#
+  # Global Parameters
+  #==============================================================#
+  vars:
+
+    #----------------------------------#
+    # Meta Data
+    #----------------------------------#
+    version: v4.0.0                   # pigsty version string
+    admin_ip: 10.10.10.10             # admin node ip address
+    region: default                   # upstream mirror region: default|china|europe
+    node_tune: oltp                   # node tuning specs: oltp,olap,tiny,crit
+    pg_conf: oltp.yml                 # pgsql tuning specs: {oltp,olap,tiny,crit}.yml
+
+    docker_enabled: true              # enable docker on app group
+    #docker_registry_mirrors: ["https://docker.1panel.live","https://docker.1ms.run","https://docker.xuanyuan.me","https://registry-1.docker.io"]
+
+    proxy_env:                        # global proxy env when downloading packages
+      no_proxy: "localhost,127.0.0.1,10.0.0.0/8,192.168.0.0/16,*.pigsty,*.aliyun.com,mirrors.*,*.myqcloud.com,*.tsinghua.edu.cn"
+      # http_proxy:  # set your proxy here: e.g http://user:pass@proxy.xxx.com
+      # https_proxy: # set your proxy here: e.g http://user:pass@proxy.xxx.com
+      # all_proxy:   # set your proxy here: e.g http://user:pass@proxy.xxx.com
+    infra_portal:                     # domain names and upstream servers
+      home : { domain: i.pigsty }
+      electric:
+        domain: elec.pigsty
+        endpoint: "${admin_ip}:8002"
+        websocket: true               # apply free ssl cert with certbot: make cert
+        certbot: odoo.pigsty          # <----- replace with your own domain name!
+
+    #----------------------------------#
+    # Safe Guard
+    #----------------------------------#
+    # you can enable these flags after bootstrap, to prevent purging running etcd / pgsql instances
+    etcd_safeguard: false             # prevent purging running etcd instance?
+    pg_safeguard: false               # prevent purging running postgres instance? false by default
+
+    #----------------------------------#
+    # Repo, Node, Packages
+    #----------------------------------#
+    repo_enabled: false
+    node_repo_modules: node,infra,pgsql
+    pg_version: 18                    # default postgres version
+    #pg_extensions: [ pg18-time ,pg18-gis ,pg18-rag ,pg18-fts ,pg18-olap ,pg18-feat ,pg18-lang ,pg18-type ,pg18-util ,pg18-func ,pg18-admin ,pg18-stat ,pg18-sec ,pg18-fdw ,pg18-sim ,pg18-etl]
+
+    #----------------------------------------------#
+    # PASSWORD : https://doc.pgsty.com/config/security
+    #----------------------------------------------#
+    grafana_admin_password: pigsty
+    grafana_view_password: DBUser.Viewer
+    pg_admin_password: DBUser.DBA
+    pg_monitor_password: DBUser.Monitor
+    pg_replication_password: DBUser.Replicator
+    patroni_password: Patroni.API
+    haproxy_admin_password: pigsty
+    minio_secret_key: S3User.MinIO
+    etcd_root_password: Etcd.Root
+...

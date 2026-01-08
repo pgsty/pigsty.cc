@@ -1,0 +1,189 @@
+// Custom styles for Pigsty.cc
+
+// 覆盖 Docsy 默认的内容最大宽度（从 80% 改为 90%）
+// 影响：段落、代码块、blockquote、表格、asciinema 播放器等
+.td-max-width-on-larger-screens {
+  @include media-breakpoint-up(lg) {
+    max-width: 90%;
+  }
+}
+
+// Force blog sidebar to expand all menu items
+// body.td-blog nav.foldable-nav ul.foldable {
+//   display: block !important;
+// }
+
+// Add spacing and separator before feedback section
+.feedback--title {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid #dee2e6;
+}
+
+// 加宽左侧导航栏（仅桌面端）
+@include media-breakpoint-up(xl) {
+  .td-sidebar__inner {
+    flex: 0 1 400px !important;  // 从默认 320px 增加到 400px
+  }
+}
+
+// 侧边栏分割线样式
+.td-sidebar-nav__section.sidebar-divider {
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  padding-top: 0;
+  padding-bottom: 0;
+  border: none;
+}
+
+// 分割线链接样式（不可点击）
+.td-sidebar-link__divider {
+  cursor: default !important;
+  pointer-events: none;
+  display: block !important;
+  font-weight: 600 !important;
+  font-size: 0.75rem !important;
+  color: #6c757d !important;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  padding: 0.75rem 0 0.5rem 0 !important;
+  margin: 0 !important;
+  position: relative;
+  background: transparent !important;
+
+  // 深色模式下的文字颜色
+  @media (prefers-color-scheme: dark) {
+    color: #adb5bd !important;
+  }
+
+  // 文字上方的分割线
+  &::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(
+      to right,
+      rgba(108, 117, 125, 0.4) 0%,
+      rgba(108, 117, 125, 0.2) 70%,
+      rgba(108, 117, 125, 0) 100%
+    );
+    margin-bottom: 0.75rem;
+
+    @media (prefers-color-scheme: dark) {
+      background: linear-gradient(
+        to right,
+        rgba(173, 181, 189, 0.3) 0%,
+        rgba(173, 181, 189, 0.15) 70%,
+        rgba(173, 181, 189, 0) 100%
+      );
+    }
+  }
+
+  // 移除 hover 效果
+  &:hover {
+    background: transparent !important;
+    color: #6c757d !important;
+
+    @media (prefers-color-scheme: dark) {
+      color: #adb5bd !important;
+    }
+  }
+
+  // 移除图标（如果有）
+  i {
+    display: none;
+  }
+
+  // 文字容器
+  span {
+    display: block;
+    white-space: nowrap;
+  }
+}
+
+// 全宽表格样式（与正文宽度对齐，大屏幕上 90%）
+// 使用方法：在 Markdown 表格后添加 {.full-width}
+.td-content table.full-width {
+  width: 100% !important;
+  display: table;
+
+  @include media-breakpoint-up(lg) {
+    max-width: 90%;
+  }
+}
+
+// 全宽表格样式（拉满整个容器宽度）
+// 使用方法：在 Markdown 表格后添加 {.full-width-full}
+.td-content table.full-width-full {
+  width: 100% !important;
+  max-width: 100%;
+  display: table;
+}
+
+// 紧凑型全宽表格（无斑马纹，与正文宽度对齐）
+// 使用方法：在 Markdown 表格后添加 {.td-initial .full-width}
+.td-content table.td-initial.full-width {
+  width: 100% !important;
+  display: table;
+
+  @include media-breakpoint-up(lg) {
+    max-width: 90%;
+  }
+}
+
+// 紧凑型全宽表格（无斑马纹，拉满整个容器宽度）
+// 使用方法：在 Markdown 表格后添加 {.td-initial .full-width-full}
+.td-content table.td-initial.full-width-full {
+  width: 100% !important;
+  max-width: 100%;
+  display: table;
+}
+
+// 最后一列延伸表格（与正文宽度对齐，大屏幕上 90%）
+// 前面几列宽度刚好够用，最后一列延伸到末尾
+// 使用方法：在 Markdown 表格后添加 {.full-width .stretch-last}
+.td-content table.stretch-last {
+  width: 100% !important;
+  display: table;
+  table-layout: auto;
+
+  @include media-breakpoint-up(lg) {
+    max-width: 90%;
+  }
+
+  // 除最后一列外，所有列收缩到内容宽度
+  th:not(:last-child),
+  td:not(:last-child) {
+    width: 1%;
+    white-space: nowrap;
+  }
+
+  // 最后一列自动填充剩余空间
+  th:last-child,
+  td:last-child {
+    width: auto;
+  }
+}
+
+// 最后一列延伸表格（拉满整个容器宽度）
+// 使用方法：在 Markdown 表格后添加 {.full-width-full .stretch-last-full}
+.td-content table.stretch-last-full {
+  width: 100% !important;
+  max-width: 100%;
+  display: table;
+  table-layout: auto;
+
+  // 除最后一列外，所有列收缩到内容宽度
+  th:not(:last-child),
+  td:not(:last-child) {
+    width: 1%;
+    white-space: nowrap;
+  }
+
+  // 最后一列自动填充剩余空间
+  th:last-child,
+  td:last-child {
+    width: auto;
+  }
+}

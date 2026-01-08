@@ -1,0 +1,107 @@
+---
+#==============================================================#
+# File      :   trio.yml
+# Desc      :   Pigsty 3-node security enhance template
+# Ctime     :   2020-05-22
+# Mtime     :   2025-12-12
+# Docs      :   https://doc.pgsty.com/config
+# License   :   Apache-2.0 @ https://pigsty.io/docs/about/license/
+# Copyright :   2018-2026  Ruohang Feng / Vonng (rh@vonng.com)
+#==============================================================#
+
+# 3 infra node, 3 etcd node, 3 pgsql node, and 1 minio node
+
+all:
+
+  #==============================================================#
+  # Clusters, Nodes, and Modules
+  #==============================================================#
+  children:
+
+    #----------------------------------#
+    # infra: monitor, alert, repo, etc..
+    #----------------------------------#
+    infra: # infra cluster for proxy, monitor, alert, etc
+      hosts: # 1 for common usage, 3 nodes for production
+        10.10.10.10: { infra_seq: 1 } # identity required
+        10.10.10.11: { infra_seq: 2, repo_enabled: false }
+        10.10.10.12: { infra_seq: 3, repo_enabled: false }
+      vars:
+        patroni_watchdog_mode: off # do not fencing infra
+
+    etcd: # dcs service for postgres/patroni ha consensus
+      hosts: # 1 node for testing, 3 or 5 for production
+        10.10.10.10: { etcd_seq: 1 }  # etcd_seq required
+        10.10.10.11: { etcd_seq: 2 }  # assign from 1 ~ n
+        10.10.10.12: { etcd_seq: 3 }  # odd number please
+      vars: # cluster level parameter override roles/etcd
+        etcd_cluster: etcd  # mark etcd cluster name etcd
+        etcd_safeguard: false # safeguard against purging
+        etcd_clean: true # purge etcd during init process
+
+    minio: # minio cluster, s3 compatible object storage
+      hosts: { 10.10.10.10: { minio_seq: 1 } }
+      vars: { minio_cluster: minio }
+
+    pg-meta: # 3 instance postgres cluster `pg-meta`
+      hosts:
+        10.10.10.10: { pg_seq: 1, pg_role: primary }
+        10.10.10.11: { pg_seq: 2, pg_role: replica }
+        10.10.10.12: { pg_seq: 3, pg_role: replica , pg_offline_query: true }
+      vars:
+        pg_cluster: pg-meta
+        pg_users:
+          - { name: dbuser_meta , password: DBUser.Meta ,pgbouncer: true ,roles: [ dbrole_admin ]    ,comment: pigsty admin user }
+          - { name: dbuser_view , password: DBUser.View ,pgbouncer: true ,roles: [ dbrole_readonly ] ,comment: read-only viewer for meta database }
+        pg_databases:
+          - { name: meta ,baseline: cmdb.sql ,comment: pigsty meta database ,schemas: [ pigsty ] ,extensions: [ { name: vector } ] }
+        pg_vip_enabled: true
+        pg_vip_address: 10.10.10.2/24
+        pg_vip_interface: eth1
+
+
+  #==============================================================#
+  # Global Parameters
+  #==============================================================#
+  vars:
+
+    #----------------------------------#
+    # Meta Data
+    #----------------------------------#
+    version: v4.0.0                   # pigsty version string
+    admin_ip: 10.10.10.10             # admin node ip address
+    region: default                   # upstream mirror region: default|china|europe
+    node_tune: oltp                   # node tuning specs: oltp,olap,tiny,crit
+    pg_conf: oltp.yml                 # pgsql tuning specs: {oltp,olap,tiny,crit}.yml
+    #docker_registry_mirrors: ["https://docker.1panel.live","https://docker.1ms.run","https://docker.xuanyuan.me","https://registry-1.docker.io"]
+    proxy_env:                        # global proxy env when downloading packages
+      no_proxy: "localhost,127.0.0.1,10.0.0.0/8,192.168.0.0/16,*.pigsty,*.aliyun.com,mirrors.*,*.myqcloud.com,*.tsinghua.edu.cn"
+      # http_proxy:  # set your proxy here: e.g http://user:pass@proxy.xxx.com
+      # https_proxy: # set your proxy here: e.g http://user:pass@proxy.xxx.com
+      # all_proxy:   # set your proxy here: e.g http://user:pass@proxy.xxx.com
+    infra_portal:                     # infra services exposed via portal
+      home         : { domain: i.pigsty }     # default domain name
+      #minio        : { domain: m.pigsty ,endpoint: "${admin_ip}:9001" ,scheme: https ,websocket: true }
+
+    #----------------------------------#
+    # Repo, Node, Packages
+    #----------------------------------#
+    repo_remove: true                 # remove existing repo on admin node during repo bootstrap
+    node_repo_remove: true            # remove existing node repo for node managed by pigsty
+    repo_extra_packages: [ pg18-main ] #,pg18-core ,pg18-time ,pg18-gis ,pg18-rag ,pg18-fts ,pg18-olap ,pg18-feat ,pg18-lang ,pg18-type ,pg18-util ,pg18-func ,pg18-admin ,pg18-stat ,pg18-sec ,pg18-fdw ,pg18-sim ,pg18-etl]
+    pg_version: 18                    # default postgres version
+    #pg_extensions: [ pg18-time ,pg18-gis ,pg18-rag ,pg18-fts ,pg18-olap ,pg18-feat ,pg18-lang ,pg18-type ,pg18-util ,pg18-func ,pg18-admin ,pg18-stat ,pg18-sec ,pg18-fdw ,pg18-sim ,pg18-etl]
+
+    #----------------------------------------------#
+    # PASSWORD : https://doc.pgsty.com/config/security
+    #----------------------------------------------#
+    grafana_admin_password: pigsty
+    grafana_view_password: DBUser.Viewer
+    pg_admin_password: DBUser.DBA
+    pg_monitor_password: DBUser.Monitor
+    pg_replication_password: DBUser.Replicator
+    patroni_password: Patroni.API
+    haproxy_admin_password: pigsty
+    minio_secret_key: S3User.MinIO
+    etcd_root_password: Etcd.Root
+...

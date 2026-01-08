@@ -1,0 +1,117 @@
+{{- /*
+  Asciinema Player Shortcode for Hugo/Docsy
+
+  Usage:
+    {{< asciinema file="demo.cast" >}}
+    {{< asciinema file="demo.cast" theme="dracula" speed="2" autoplay="true" loop="true" >}}
+    {{< asciinema file="demo.cast" markers="1.5:Installation,3.2:Configuration,5.8:Testing" >}}
+
+  Parameters:
+    file           - Path to .cast file (required). Supports assets/, static/, or remote URLs
+    theme          - Player theme: asciinema, tango, solarized-dark, solarized-light, monokai, dracula
+    speed          - Playback speed multiplier (default: 1)
+    autoplay       - Auto-start playback (default: false)
+    loop           - Loop playback (default: false)
+    preload        - Preload recording (default: false)
+    startAt        - Start time in seconds (default: 0)
+    cols           - Fixed terminal width
+    rows           - Fixed terminal height
+    idleTimeLimit  - Max idle time between frames
+    poster         - Poster frame: "npt:2.5" or "data:text/plain,..."
+    fit            - Fit mode: width, height, both, none (default: width)
+    markers        - Timeline markers in "time:label,time:label" format
+    pauseOnMarkers - Pause at each marker (default: false)
+*/ -}}
+
+{{- $file := .Get "file" | default (.Get 0) -}}
+{{- $theme := .Get "theme" | default "asciinema" -}}
+{{- $speed := .Get "speed" | default 1 -}}
+{{- $autoplay := .Get "autoplay" -}}
+{{- $loop := .Get "loop" -}}
+{{- $preload := .Get "preload" -}}
+{{- $poster := .Get "poster" -}}
+{{- $cols := .Get "cols" -}}
+{{- $rows := .Get "rows" -}}
+{{- $startAt := .Get "startAt" | default 0 -}}
+{{- $idleTimeLimit := .Get "idleTimeLimit" -}}
+{{- $fit := .Get "fit" | default "width" -}}
+{{- $markers := .Get "markers" -}}
+{{- $pauseOnMarkers := .Get "pauseOnMarkers" -}}
+
+{{- $id := printf "asciinema-%s" (md5 $file) -}}
+{{- $castURL := "" -}}
+
+{{- /* Resolve file path: remote URL, assets/, or static/ */ -}}
+{{- if hasPrefix $file "http" -}}
+  {{- $castURL = $file -}}
+{{- else -}}
+  {{- $resource := resources.Get $file -}}
+  {{- if $resource -}}
+    {{- $castURL = $resource.RelPermalink -}}
+  {{- else -}}
+    {{- $castURL = (printf "/%s" $file) -}}
+  {{- end -}}
+{{- end -}}
+
+{{- /* Load CSS/JS only once per page (v3.13.5 local) */ -}}
+{{- if not (.Page.Scratch.Get "asciinema-loaded") -}}
+  {{- .Page.Scratch.Set "asciinema-loaded" true -}}
+<link rel="stylesheet" href="/css/asciinema-player.css" />
+<script src="/js/asciinema-player.min.js"></script>
+{{- end -}}
+
+<div id="{{ $id }}" class="asciinema-container td-max-width-on-larger-screens" style="margin: 1em 0;"></div>
+
+<script>
+(function() {
+  var opts = {
+    theme: "{{ $theme }}",
+    speed: {{ $speed }},
+    startAt: {{ $startAt }},
+    fit: "{{ $fit }}"
+  };
+
+  {{- if eq $autoplay "true" }}
+  opts.autoPlay = true;
+  {{- end }}
+  {{- if eq $loop "true" }}
+  opts.loop = true;
+  {{- end }}
+  {{- if eq $preload "true" }}
+  opts.preload = true;
+  {{- end }}
+  {{- if $poster }}
+  opts.poster = "{{ $poster }}";
+  {{- end }}
+  {{- if $cols }}
+  opts.cols = {{ $cols }};
+  {{- end }}
+  {{- if $rows }}
+  opts.rows = {{ $rows }};
+  {{- end }}
+  {{- if $idleTimeLimit }}
+  opts.idleTimeLimit = {{ $idleTimeLimit }};
+  {{- end }}
+  {{- if eq $pauseOnMarkers "true" }}
+  opts.pauseOnMarkers = true;
+  {{- end }}
+
+  {{- /* Parse markers: "1.5:Label1,3.2:Label2" -> [[1.5, "Label1"], [3.2, "Label2"]] */ -}}
+  {{- if $markers }}
+  opts.markers = [
+    {{- $markerList := split $markers "," -}}
+    {{- range $i, $m := $markerList -}}
+      {{- $parts := split $m ":" -}}
+      {{- $time := float (index $parts 0) -}}
+      {{- $label := "" -}}
+      {{- if gt (len $parts) 1 -}}
+        {{- $label = index $parts 1 -}}
+      {{- end -}}
+      {{- if $i }},{{ end }}[{{ $time }}, "{{ $label }}"]
+    {{- end -}}
+  ];
+  {{- end }}
+
+  AsciinemaPlayer.create("{{ $castURL }}", document.getElementById("{{ $id }}"), opts);
+})();
+</script>
