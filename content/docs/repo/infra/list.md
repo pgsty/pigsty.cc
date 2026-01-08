@@ -67,7 +67,7 @@ allow_loading_unsigned_plugins = victoriametrics-logs-datasource,victoriametrics
 
 | 名称                                                                        | 版本       | 许可证                                                                                   | 备注                   |
 |---------------------------------------------------------------------------|----------|---------------------------------------------------------------------------------------|----------------------|
-| [`pg_exporter`](https://github.com/Vonng/pg_exporter)                     | `1.1.0`  | [Apache-2.0](https://github.com/Vonng/pg_exporter/blob/master/LICENSE)                | 高级 Postgres 指标导出器    |
+| [`pg_exporter`](https://github.com/pgsty/pg_exporter)                     | `1.1.1`  | [Apache-2.0](https://github.com/pgsty/pg_exporter/blob/master/LICENSE)                | 高级 Postgres 指标导出器    |
 | [`pgbackrest_exporter`](https://github.com/woblerr/pgbackrest_exporter)   | `0.22.0` | [MIT](https://github.com/woblerr/pgbackrest_exporter/blob/master/LICENSE)             | 导出 pgbackrest 指标     |
 | [`node_exporter`](https://github.com/prometheus/node_exporter)            | `1.10.2` | [Apache-2.0](https://github.com/prometheus/node_exporter/blob/master/LICENSE)         | 导出 Linux 节点指标        |
 | [`keepalived_exporter`](https://github.com/mehdy/keepalived-exporter)     | `1.7.0`  | [GPL-3.0](https://github.com/mehdy/keepalived-exporter/blob/master/LICENSE)           | 导出 keepalived/VIP 指标 |
@@ -122,23 +122,43 @@ PostgreSQL 相关工具、数据库管理系统和其他实用程序
 
 Pig 包管理器、PostgreSQL 工具和其他数据库相关实用程序
 
-| 名称                                                                                      | 版本       | 许可证                                                                                     | 备注                              |
-|-----------------------------------------------------------------------------------------|----------|-----------------------------------------------------------------------------------------|---------------------------------|
-| [`pig`](https://github.com/pgsty/pig)                                                   | `0.9.0`  | [Apache-2.0](https://github.com/pgsty/pig/blob/main/LICENSE)                            | PG 包管理器                         |
-| [`vip-manager`](https://github.com/cybertec-postgresql/vip-manager)                     | `4.0.0`  | [BSD-2](https://github.com/cybertec-postgresql/vip-manager/blob/master/LICENSE)         | 将 L2 VIP 绑定到 PG 主节点             |
-| [`pgflo`](https://github.com/pgflo/pg_flo)                                              | `0.0.15` | [Apache-2.0](https://github.com/pgflo/pg_flo/blob/main/LICENSE)                         | 实时流式传输、转换和路由 PG 数据              |
-| [`pgschema`](https://github.com/schemagood/pgschema)                                    | `1.4.2`  | [Apache-2.0](https://github.com/schemagood/pgschema/blob/main/LICENSE)                  | 执行 PG 模式迁移                      |
-| [`pg_timetable`](https://github.com/cybertec-postgresql/pg_timetable)                   | `6.2.0`  | [PostgreSQL](https://github.com/cybertec-postgresql/pg_timetable/blob/master/LICENSE)   | PostgreSQL 高级调度                 |
-| [`timescaledb-tools`](https://github.com/timescale/timescaledb-tune)                    | `0.18.1` | [Apache-2.0](https://github.com/timescale/timescaledb-tune/blob/main/LICENSE)           | 优化 timescaledb 参数               |
-| [`timescaledb-event-streamer`](https://github.com/noctarius/timescaledb-event-streamer) | `0.20.0` | [Apache-2.0](https://github.com/noctarius/timescaledb-event-streamer/blob/main/LICENSE) | timescaledb 超表 CDC              |
-| [`dblab`](https://github.com/danvergara/dblab)                                          | `0.34.2` | [MIT](https://github.com/danvergara/dblab/blob/main/LICENSE)                            | 多数据库命令行工具                       |
-| [`sqlcmd`](https://github.com/microsoft/go-sqlcmd)                                      | `1.8.0`  | [MIT](https://github.com/microsoft/go-sqlcmd/blob/main/LICENSE)                         | MS SQL Server 数据库客户端            |
-| [`pev2`](https://github.com/dalibo/pev2)                                                | `1.19.0` | [PostgreSQL](https://github.com/dalibo/pev2/blob/master/LICENSE.md)                     | PostgreSQL 执行计划可视化工具 2          |
-| [`genai-toolbox`](https://github.com/googleapis/genai-toolbox)                          | `0.23.0` | [Apache-2.0](https://github.com/googleapis/genai-toolbox/blob/main/LICENSE)             | Google 数据库 MCP 服务器              |
-| [`sealos`](https://github.com/labring/sealos)                                           | `5.0.1`  | [Apache-2.0](https://github.com/labring/sealos/blob/main/LICENSE)                       | 开箱即用的 Kubernetes 发行版            |
-| [`vray`](https://github.com/v2fly/v2ray-core)                                           | `5.28.0` | [MIT](https://github.com/v2fly/v2ray-core/blob/master/LICENSE)                          | 构建代理以绕过网络限制                     |
-| [`uv`](https://github.com/astral-sh/uv)                                                 | `0.9.18` | [MIT](https://github.com/astral-sh/uv/blob/main/LICENSE-MIT)                            | 新一代 Python 包管理器                 |
-| [`ccm`](https://github.com/foreveryh/claude-code-switch)                                | `2.0.76` | [MIT](https://github.com/foreveryh/claude-code-switch/blob/main/LICENSE)                | Claude API 切换工具（以及 Claude Code） |
-| [`asciinema`](https://github.com/asciinema/asciinema)                                   | `3.0.1`  | [GPL-3.0](https://github.com/asciinema/asciinema/blob/develop/LICENSE)                  | 终端会话记录，流式传输与播放器                 |
+| 名称                                                                                      | 版本        | 许可证                                                                                     | 备注                             |
+|-----------------------------------------------------------------------------------------|-----------|-----------------------------------------------------------------------------------------|--------------------------------|
+| [`pig`](https://github.com/pgsty/pig)                                                   | `0.9.0`   | [Apache-2.0](https://github.com/pgsty/pig/blob/main/LICENSE)                            | PG 包管理器                        |
+| [`vip-manager`](https://github.com/cybertec-postgresql/vip-manager)                     | `4.0.0`   | [BSD-2](https://github.com/cybertec-postgresql/vip-manager/blob/master/LICENSE)         | 将 L2 VIP 绑定到 PG 主节点            |
+| [`pgflo`](https://github.com/pgflo/pg_flo)                                              | `0.0.15`  | [Apache-2.0](https://github.com/pgflo/pg_flo/blob/main/LICENSE)                         | 实时流式传输、转换和路由 PG 数据             |
+| [`pgschema`](https://github.com/schemagood/pgschema)                                    | `1.4.2`   | [Apache-2.0](https://github.com/schemagood/pgschema/blob/main/LICENSE)                  | 执行 PG 模式迁移                     |
+| [`pg_timetable`](https://github.com/cybertec-postgresql/pg_timetable)                   | `6.2.0`   | [PostgreSQL](https://github.com/cybertec-postgresql/pg_timetable/blob/master/LICENSE)   | PostgreSQL 高级调度                |
+| [`timescaledb-tools`](https://github.com/timescale/timescaledb-tune)                    | `0.18.1`  | [Apache-2.0](https://github.com/timescale/timescaledb-tune/blob/main/LICENSE)           | 优化 timescaledb 参数              |
+| [`timescaledb-event-streamer`](https://github.com/noctarius/timescaledb-event-streamer) | `0.20.0`  | [Apache-2.0](https://github.com/noctarius/timescaledb-event-streamer/blob/main/LICENSE) | timescaledb 超表 CDC             |
+| [`dblab`](https://github.com/danvergara/dblab)                                          | `0.34.2`  | [MIT](https://github.com/danvergara/dblab/blob/main/LICENSE)                            | 多数据库命令行工具                      |
+| [`sqlcmd`](https://github.com/microsoft/go-sqlcmd)                                      | `1.8.0`   | [MIT](https://github.com/microsoft/go-sqlcmd/blob/main/LICENSE)                         | MS SQL Server 数据库客户端           |
+| [`pev2`](https://github.com/dalibo/pev2)                                                | `1.19.0`  | [PostgreSQL](https://github.com/dalibo/pev2/blob/master/LICENSE.md)                     | PostgreSQL 执行计划可视化工具 2         |
+| [`sealos`](https://github.com/labring/sealos)                                           | `5.0.1`   | [Apache-2.0](https://github.com/labring/sealos/blob/main/LICENSE)                       | 开箱即用的 Kubernetes 发行版           |
+| [`vray`](https://github.com/v2fly/v2ray-core)                                           | `5.28.0`  | [MIT](https://github.com/v2fly/v2ray-core/blob/master/LICENSE)                          | 构建代理以绕过网络限制                    |
+| [`postgrest`](https://github.com/PostgREST/postgrest)                                   | `3.6.7`   | [MIT](https://github.com/PostgREST/postgrest/blob/main/LICENSE)                         | PostgreSQL RESTful API 服务器     |
+| [`npgsqlrest`](https://github.com/vb-consulting/NpgsqlRest)                             | `0.9.0`   | [MIT](https://github.com/vb-consulting/NpgsqlRest/blob/master/LICENSE.md)               | .NET PostgreSQL REST API 生成器   |
 {.stretch-last}
+
+
+--------
+
+## AI
+
+AI Agent，MCP 工具箱，Python 包管理，编码 IDE……
+
+| 名称                                                             | 版本        | 许可证                                                                         | 备注                             |
+|----------------------------------------------------------------|-----------|-----------------------------------------------------------------------------|--------------------------------|
+| [`claude`](https://github.com/anthropics/claude-code)          | `2.1.1`   | [Proprietary](https://www.anthropic.com/legal/terms)                        | Claude Code - Anthropic 代理编程工具 |
+| [`opencode`](https://github.com/opencode-ai/opencode)          | `1.0.223` | [MIT](https://github.com/opencode-ai/opencode/blob/main/LICENSE)            | 终端 AI 编程助手                     |
+| [`code-server`](https://github.com/coder/code-server)          | `4.107.0` | [MIT](https://github.com/coder/code-server/blob/main/LICENSE)               | 浏览器中的 VS Code                  |
+| [`genai-toolbox`](https://github.com/googleapis/genai-toolbox) | `0.24.0`  | [Apache-2.0](https://github.com/googleapis/genai-toolbox/blob/main/LICENSE) | Google 数据库 MCP 服务器             |
+| [`uv`](https://github.com/astral-sh/uv)                        | `0.9.18`  | [MIT](https://github.com/astral-sh/uv/blob/main/LICENSE-MIT)                | 新一代 Python 包管理器                |
+{.stretch-last}
+
+
+
+
+
+
 
