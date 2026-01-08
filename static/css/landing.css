@@ -2092,38 +2092,47 @@ body.landing-page {
   font-size: 0.85rem;
 }
 
-.footer-copyright a {
+.footer-copyright a,
+.footer-copyright a:link,
+.footer-copyright a:visited,
+.footer-copyright a:active {
   color: var(--pigsty-gray-400);
   text-decoration: none;
   transition: color var(--transition-fast);
 }
 
-.footer-copyright a:visited {
-  color: var(--pigsty-gray-400);
-}
-
 .footer-copyright a:hover {
-  color: var(--pigsty-gray-300);
+  color: var(--pigsty-white);
+  text-decoration: none;
 }
 
-.footer-icp a {
+.footer-icp a,
+.footer-icp a:link,
+.footer-icp a:visited,
+.footer-icp a:active {
   color: var(--pigsty-gray-500);
   text-decoration: none;
   transition: color var(--transition-fast);
 }
 
 .footer-icp a:hover {
-  color: var(--pigsty-gray-300);
+  color: var(--pigsty-white);
+  text-decoration: none;
 }
 
-.footer-lang-switch a {
+.footer-lang-switch a,
+.footer-lang-switch a:link,
+.footer-lang-switch a:visited,
+.footer-lang-switch a:active {
   color: var(--pigsty-gray-400);
   text-decoration: none;
   margin-left: 16px;
+  transition: color var(--transition-fast);
 }
 
 .footer-lang-switch a:hover {
   color: var(--pigsty-white);
+  text-decoration: none;
 }
 
 @media (max-width: 968px) {

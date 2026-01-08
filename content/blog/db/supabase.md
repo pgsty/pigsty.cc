@@ -34,6 +34,10 @@ vi pigsty.yml              # 编辑域名、密码、密钥...
 
 ![](https://doc.pgsty.com/img/docs/supabase-login.png)
 
+
+{{< asciinema file="demo/supabase.cast" markers="0:检查环境,11:安装,43:配置,307:Docker,321:域名,340:App,350:检查" theme="solarized-light" speed="1.3" autoplay="true" loop="true" >}}
+
+
 ------
 
 ## 目录
@@ -67,11 +71,11 @@ Supabase 还为小微创业者提供了“慷慨”的免费云服务额度 —�
 
 既然 Supabase 云服务这么香，为什么要自建呢？
 
-最直观的原因是是我们在《[云数据库是智商税吗？](https://blog.vonng.com/cloud/rds/)》中提到过的：当你的数据/计算规模超出云计算适用光谱（Supabase：4C/8G/500MB免费存储），成本很容易出现爆炸式增长。
-而且在当下，足够可靠的 [本地企业级 NVMe SSD](https://blog.vonng.com/cloud/bonus/) 在性价比上与 [云端存储](https://blog.vonng.com/cloud/ebs/) 有着三到四个数量级的优势，而自建能更好地利用这一点。
+最直观的原因是是我们在《[云数据库是智商税吗？](https://vonng.com/cloud/rds/)》中提到过的：当你的数据/计算规模超出云计算适用光谱（Supabase：4C/8G/500MB免费存储），成本很容易出现爆炸式增长。
+而且在当下，足够可靠的 [本地企业级 NVMe SSD](https://vonng.com/cloud/bonus/) 在性价比上与 [云端存储](https://vonng.com/cloud/ebs/) 有着三到四个数量级的优势，而自建能更好地利用这一点。
 
 另一个重要的原因是 **功能**， Supabase 云服务的功能受限 —— 很多强力PG扩展因为多租户安全挑战与许可证的原因无法以云服务的形式。
-故而尽管 [扩展是 PostgreSQL 的核心特色](https://blog.vonng.com/pg/pg-eat-db-world)，在 Supabase 云服务上也依然只有 **64** 个扩展可用。
+故而尽管 [扩展是 PostgreSQL 的核心特色](https://vonng.com/pg/pg-eat-db-world)，在 Supabase 云服务上也依然只有 **64** 个扩展可用。
 而通过 Pigsty 自建的 Supabase 则提供了多达 [**437**](https://pgext.cloud/zh/list) 个开箱即用的 PG 扩展。
 
 此外，自主可控与规避供应商锁定也是自建的重要原因 —— 尽管 Supabase 虽然旨在提供一个无供应商锁定的 Google Firebase 开源替代，但实际上自建高标准企业级的 Supabase 门槛并不低。
@@ -95,7 +99,7 @@ Supabase 内置了一系列由他们自己开发维护的 PG 扩展插件，并�
 
 同时，我们在 Supabase 自建部署中默认 [安装](https://doc.pgsty.com/zh/pgsql/extension/install)绝大多数扩展，您可以参考可用扩展列表按需 [启用](https://doc.pgsty.com/zh/pgsql/extension/create)。
 
-同时，Pigsty 还会负责好底层 [高可用](https://doc.pgsty.com/feat/ha/) [PostgreSQL](https://doc.pgsty.com/zh/pgsql/) 数据库集群，高可用 [MinIO](https://doc.pgsty.com/zh/minio/) 对象存储集群的自动搭建，甚至是 [Docker](https://doc.pgsty.com/zh/docker/) 容器底座的部署与 [Nginx](https://doc.pgsty.com/admin/portal) 反向代理，[域名配置](https://doc.pgsty.com/zh/admin/domain) 与 [HTTPS证书签发](https://doc.pgsty.com/zh/admin/cert)。 您可以使用 Docker Compose 拉起任意数量的无状态 Supabase 容器集群，并将状态存储在外部 Pigsty 自托管数据库服务中。
+同时，Pigsty 还会负责好底层 [高可用](https://doc.pgsty.com/feat/ha/) [PostgreSQL](/docs/pgsql/) 数据库集群，高可用 [MinIO](/docs/minio/) 对象存储集群的自动搭建，甚至是 [Docker](/docs/docker/) 容器底座的部署与 [Nginx](/docs/infra/admin/portal) 反向代理，[域名配置](https://doc.pgsty.com/zh/admin/domain) 与 [HTTPS证书签发](https://doc.pgsty.com/zh/admin/cert)。 您可以使用 Docker Compose 拉起任意数量的无状态 Supabase 容器集群，并将状态存储在外部 Pigsty 自托管数据库服务中。
 
 在这一自建部署架构中，您获得了使用不同内核的自由（PG 15-18，OrioleDB），加装 [**437**](https://pgext.cloud/list/) 个扩展的自由，扩容与伸缩 Supabase / Postgres / MinIO 的自由，
 免于数据库运维杂务的自由，以及免于供应商锁定，本地运行到地老天荒的自由。 而相比于使用云服务需要付出的代价，不过是准备服务器和多敲几行命令而已。

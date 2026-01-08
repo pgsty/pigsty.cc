@@ -37,6 +37,12 @@ categories: [参考]
 
 {{< readfile file="yaml/supabase.yml" code="true" lang="yaml" >}}
 
+--------
+
+## 安装过程
+
+{{< asciinema file="demo/supabase.cast" markers="0:检查环境,11:安装,43:配置,307:Docker,321:域名,340:App,350:检查" theme="solarized-light" speed="1.3" autoplay="true" loop="true" >}}
+
 
 --------
 

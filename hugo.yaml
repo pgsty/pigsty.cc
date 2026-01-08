@@ -31,11 +31,6 @@ menu:
       url: /docs/
       pre: <i class='fa-solid fa-book'></i>
 
-    - weight: 50
-      url: 'https://github.com/pgsty/pigsty/'
-      pre: <i class='fab fa-github'></i>
-
-
 #=======================================#
 # Taxonomies Support
 #=======================================#
