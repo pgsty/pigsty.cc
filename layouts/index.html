@@ -12,6 +12,10 @@
   <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
   <link rel="apple-touch-icon" href="/img/logo/logo.png">
 
+  <!-- Safari/iOS theme color - matches hero background -->
+  <meta name="theme-color" content="#0f1419">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
   <!-- Open Graph -->
   <meta property="og:title" content="{{ .Title }}">
   <meta property="og:description" content="{{ .Description | default .Site.Params.description }}">
@@ -1313,7 +1317,10 @@
       </div>
 
       <div class="footer-bottom">
-        <div>© 2018-2025 Ruohang Feng (Vonng)</div>
+        <div class="footer-copyright">© 2018-2026 <a href="https://vonng.com" target="_blank">冯若航</a> (<a href="https://github.com/Vonng" target="_blank">Vonng</a>)</div>
+        <div class="footer-icp">
+          <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener">浙ICP备15016890号-2</a>
+        </div>
         <div class="footer-lang-switch">
           <a href="https://pigsty.io" target="_blank">English</a>
           <a href="/">中文</a>

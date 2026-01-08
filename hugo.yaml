@@ -172,19 +172,23 @@ params:
         url: 'mailto:rh@vonng.com'
         icon: fa fa-envelope
         desc: 发送邮件给作者
-      - name: GitHub
-        url: 'https://github.com/pgsty/pigsty'
+      - name: GitHub - Vonng
+        url: 'https://github.com/Vonng'
         icon: fab fa-github
-        desc: Pigsty 代码仓库
-      - name: Twitter
+        desc: Pigsty code repository
+      - name: X - Vonng
+        url: 'https://x.com/RonVonng'
+        icon: fab fa-x-twitter
+        desc: 在 X 上关注老冯
+      - name: X - Pigsty
         url: 'https://x.com/PlGSTY'
         icon: fab fa-twitter
         desc: 关注 Twitter 获取最新动态
+      - name: LinkedIn - Vonng
+        url: 'https://www.linkedin.com/in/vonng/'
+        icon: fab fa-linkedin
+        desc: 在 LinkedIn 上关注老冯
     developer:
-      - name: 微信
-        url: /img/pigsty/pigsty-cc.jpg
-        icon: fa fa-comment
-        desc: 微信群 & 公众号
       - name: Discord
         url: 'https://discord.gg/wDzt5VyWEz'
         icon: fab fa-discord
@@ -193,3 +197,15 @@ params:
         url: 'https://t.me/joinchat/gV9zfZraNPM3YjFh'
         icon: fab fa-telegram
         desc: Telegram 群组
+      - name: 微信
+        url: /img/pigsty/pigsty-cc.jpg
+        icon: fab fa-weixin
+        desc: 微信群 & 公众号
+      - name: 论坛
+        url: 'https://github.com/orgs/pgsty/discussions'
+        icon: fab fa-discourse
+        desc: 代码仓库
+      - name: GitHub
+        url: 'https://github.com/pgsty/pigsty'
+        icon: fab fa-github
+        desc: Pigsty Discussion Forum
