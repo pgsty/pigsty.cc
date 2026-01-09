@@ -2,7 +2,7 @@
 title: PGSQL 架构
 weight: 203
 description: PostgreSQL 模块的组件交互与数据流。
-icon: fa-brands fa-space-awesome
+icon: fas fa-database
 module: [PGSQL]
 categories: [概念]
 ---
@@ -37,19 +37,19 @@ PGSQL 模块在生产环境中以 **集群** 的形式组织，这些 **集群**
 
 下图是 PGSQL 模块的架构示意图，展示了各组件之间的交互关系：
 
-| 组件                                        | 种类     | 描述                                              |
-|:------------------------------------------|--------|:------------------------------------------------|
-| [**PostgreSQL**](#postgresql)             | 数据库    | 世界上最先进的开源关系型数据库，PGSQL 模块的核心。                    |
-| [**Patroni**](#patroni)                   | 高可用    | 托管 PostgreSQL 进程，协调故障转移、选主、配置变更。                 |
-| [**etcd**](/docs/etcd/)                   | DCS    | 分布式一致性存储，用于保存集群元数据与领导者信息。                       |
-| [**Pgbouncer**](#pgbouncer)               | 连接池    | 轻量级连接池中间件，复用连接、降低开销、提供额外灵活性。                    |
-| [**HAProxy**](#haproxy)                   | 负载均衡   | 对外暴露服务端口，根据角色分发流量至主库或从库。                        |
-| [**vip-manager**](#vip-manager)           | VIP管理  | 将 L2 VIP 绑定到当前主库节点，实现透明漂移。【可选】                   |
-| [**pgBackRest**](#pgbackrest)             | 备份恢复   | 全量/增量备份与 WAL 归档，支持本地与对象存储。                       |
-| [**pg_exporter**](#pg_exporter)           | 指标导出   | 导出 PostgreSQL 监控指标供 Prometheus 抓取。              |
-| [**pgbouncer_exporter**](#pgbouncer_exporter) | 指标导出   | 导出 Pgbouncer 连接池指标。                             |
-| [**pgbackrest_exporter**](#pgbackrest_exporter) | 指标导出   | 导出备份状态指标。                                       |
-| [**Vector**](/docs/node/)                 | 日志采集   | 收集 PostgreSQL、Patroni、Pgbouncer 等日志推送至中心。       |
+| 组件                                              | 种类    | 描述                                        |
+|:------------------------------------------------|-------|:------------------------------------------|
+| [**PostgreSQL**](#postgresql)                   | 数据库   | 世界上最先进的开源关系型数据库，PGSQL 模块的核心。              |
+| [**Patroni**](#patroni)                         | 高可用   | 托管 PostgreSQL 进程，协调故障转移、选主、配置变更。          |
+| [**etcd**](/docs/etcd/)                         | DCS   | 分布式一致性存储，用于保存集群元数据与领导者信息。                 |
+| [**Pgbouncer**](#pgbouncer)                     | 连接池   | 轻量级连接池中间件，复用连接、降低开销、提供额外灵活性。              |
+| [**HAProxy**](#haproxy)                         | 负载均衡  | 对外暴露服务端口，根据角色分发流量至主库或从库。                  |
+| [**vip-manager**](#vip-manager)                 | VIP管理 | 将 L2 VIP 绑定到当前主库节点，实现透明漂移。【可选】            |
+| [**pgBackRest**](#pgbackrest)                   | 备份恢复  | 全量/增量备份与 WAL 归档，支持本地与对象存储。                |
+| [**pg_exporter**](#pg_exporter)                 | 指标导出  | 导出 PostgreSQL 监控指标供 Prometheus 抓取。        |
+| [**pgbouncer_exporter**](#pgbouncer_exporter)   | 指标导出  | 导出 Pgbouncer 连接池指标。                       |
+| [**pgbackrest_exporter**](#pgbackrest_exporter) | 指标导出  | 导出备份状态指标。                                 |
+| [**Vector**](/docs/node/)                       | 日志采集  | 收集 PostgreSQL、Patroni、Pgbouncer 等日志推送至中心。 |
 
 [![pigsty-arch](/img/pigsty/arch.png)](/docs/pgsql/)
 

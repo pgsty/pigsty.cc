@@ -390,3 +390,4 @@ VictoriaMetrics 也是独立抓取环境中所有服务的监控指标，
 如果您对 Grafana 进行修改，例如添加新的仪表板，或者修改数据源配置，这些变更只会影响当前节点上的 Grafana 实例。
 如果您希望所有节点上的 Grafana 保持一致，可以使用一个 PostgreSQL 数据库作为共享存储，详情参考 [**教程：配置 Grafana 高可用**](/docs/infra/admin/grafana)。
 
+[![](/img/dashboard/infra-overview.webp)](https://demo.pigsty.cc/ui/d/infra-overview)

@@ -7,33 +7,49 @@ categories: [参考]
 ---
 
 Supabase 很好，拥有属于你自己的 supabase 则好上加好。
-Pigsty 可以帮助您在自己的服务器上（物理机/虚拟机/云服务器），一键自建企业级 supabase —— 更多扩展，更好性能，更深入的控制，更合算的成本。
+Pigsty 可以帮助您在自己的服务器上（物理机/虚拟机/云服务器），一键自建企业级 supabase
+—— 更多扩展，更好性能，更深入的控制，更合算的成本。
 
 > Pigsty 是 Supabase 官网文档上列举的三种自建部署之一：[Self-hosting: Third-Party Guides](https://supabase.com/docs/guides/self-hosting#third-party-guides)
+
+本教程需要您有 Linux 基础知识，否则建议直接使用 Supabase 云服务或 “Docker Compose” 自建。
+
 
 
 --------
 
 ## 简短版本
 
-[准备](/docs/deploy/prepare) [**Linux 系统**](/docs/deploy/prepare)，执行 Pigsty [标准安装](/docs/setup/install) 流程，选择 `supabase` 配置模板，依次执行：
+[准备](/docs/deploy/prepare) [**Linux 系统**](/docs/deploy/prepare)，执行 Pigsty [**标准单机安装**](/docs/setup/install) 流程，选择 `supabase` 配置模板，依次执行：
 
 ```bash
 curl -fsSL https://repo.pigsty.cc/get | bash; cd ~/pigsty
 ./configure -c supabase    # 使用 supabase 配置（请在 pigsty.yml 中更改凭据）
 vi pigsty.yml              # 编辑域名、密码、密钥...
-./deploy.yml               # 安装 pigsty
-./docker.yml               # 安装 docker compose 组件
+./deploy.yml               # 标准单机部署 pigsty
+./docker.yml               # 安装 docker 模块
 ./app.yml                  # 使用 docker 启动 supabase 无状态部分（可能较慢）
 ```
 
 安装完毕后，使用浏览器访问 `8000` 端口造访 Supa Studio，用户名 `supabase`，密码 `pigsty`。
 
-![](/img/docs/supabase-login.png)
+![](/img/pigsty/supabase.webp)
 
 {{< asciinema file="demo/supabase.cast" markers="0:检查环境,11:安装,43:配置,307:Docker,321:域名,340:App,350:检查" theme="solarized-light" speed="1.3" autoplay="true" loop="true" >}}
 
 
+
+--------
+
+## 检查清单
+
+- [ ] 至少一台 1C2G 的服务器
+- [ ] 带有静态内网 IPv4 地址
+- [ ] 安装支持的 [**Linux 发行版**](/docs/ref/linux)
+- [ ] [**标准安装**](/docs/setup/install) Pigsty
+- [ ] 修改配置文件，域名，密码，IP 地址
+- [ ] [**安装 Docker 模块**](/docs/docker)，确保代理/镜像站可用
+- [ ] 使用 Pigsty 提供的 [`app.yml`](/docs/docker/playbook) 拉起 Supabase
 
 
 ------
