@@ -21,19 +21,17 @@ Pigsty 提供了 [**INFRA 模块**](/docs/infra) 来解决这个问题 —— �
 |:------------------------------------------|--------|:--------------------------------------------------------------------|
 | [**Nginx**](#nginx)                       | Web服务器 | [**Web 界面**](/docs/setup/webui) 的统一入口，[**本地软件仓库**](#repo)，内部服务的反向代理 |
 | [**Repo**](#repo)                         | 软件仓库   | APT / DNF 仓库，下载有所有部署需要的 RPM/DEB 包及其依赖                               |
-| [**Grafana**](#Grafana)                   | 可视化平台  | 呈现监控指标、日志与链路追踪，承载监控大屏、巡检报表以及自定义数据应用。                                |
-| [**VictoriaMetrics**](#VictoriaMetrics)   | 时序数据库  | 拉取全部监控指标，兼容 Prometheus API，并通过 VMUI 提供查询界面。                         |
-| [**VictoriaLogs**](#VictoriaLogs)         | 日志平台   | 集中收集存储日志，所有节点默认运行 Vector，将系统日志与数据库日志推送到此。                           |
-| [**VictoriaTraces**](#VictoriaTraces)     | 链路追踪   | 收集慢 SQL、服务链路等追踪数据。                                                  |
-| [**VMAlert**](#VMAlert)                   | 告警计算   | 评估告警规则，将事件推送至 Alertmanager。                                         |
-| [**AlertManager**](#AlertManager)         | 告警管理   | 聚合告警事件，分发告警通知，支持邮件、Webhook 等渠道。                                     |
-| [**BlackboxExporter**](#BlackboxExporter) | 黑盒探测   | 探测各个 IP/VIP/URL 的可达性。                                               |
-| [**DNSMASQ**](#DNSMASQ)                   | DNS解析  | 提供 DNS 解析服务，解析 Pigsty 内部使用到的域名。【可选】                                 |
-| [**Chronyd**](#Chronyd)                   | 时间同步   | 提供 NTP 时间同步服务，确保所有节点时间一致。 【可选】                                      |
+| [**Grafana**](#grafana)                   | 可视化平台  | 呈现监控指标、日志与链路追踪，承载监控大屏、巡检报表以及自定义数据应用。                                |
+| [**VictoriaMetrics**](#victoriametrics)   | 时序数据库  | 拉取全部监控指标，兼容 Prometheus API，并通过 VMUI 提供查询界面。                         |
+| [**VictoriaLogs**](#victorialogs)         | 日志平台   | 集中收集存储日志，所有节点默认运行 Vector，将系统日志与数据库日志推送到此。                           |
+| [**VictoriaTraces**](#victoriatraces)     | 链路追踪   | 收集慢 SQL、服务链路等追踪数据。                                                  |
+| [**VMAlert**](#vmalert)                   | 告警计算   | 评估告警规则，将事件推送至 Alertmanager。                                         |
+| [**AlertManager**](#alertmanager)         | 告警管理   | 聚合告警事件，分发告警通知，支持邮件、Webhook 等渠道。                                     |
+| [**BlackboxExporter**](#blackboxexporter) | 黑盒探测   | 探测各个 IP/VIP/URL 的可达性。                                               |
+| [**DNSMASQ**](#dnsmasq)                   | DNS解析  | 提供 DNS 解析服务，解析 Pigsty 内部使用到的域名。【可选】                                 |
+| [**Chronyd**](#chronyd)                   | 时间同步   | 提供 NTP 时间同步服务，确保所有节点时间一致。 【可选】                                      |
 | [**CA**](/docs/concept/sec/ca)            | 证书签发   | 签发环境内的加密证书                                                          |
 | [**Ansible**](/docs/setup/playbook)       | 发起管理   | 批量，声明式，无 Agent 管理大量服务器的工具                                           |
-
-
 
 [![pigsty-arch](/img/pigsty/arch.png)](/docs/infra/)
 
@@ -97,9 +95,10 @@ Pigsty 会在安装时，默认在 Infra 节点上创建一个 **本地软件仓
 | [**`http://10.10.10.10/pigsty`**](http://10.10.10.10/pigsty) | [**`http://i.pigsty/pigsty`**](http://i.pigsty/pigsty) | [**`https://i.pigsty/pigsty`**](https://i.pigsty/pigsty) | [**`https://demo.pigsty.cc/pigsty`**](https://demo.pigsty.cc/pigsty) |
 {.full-width}
 
-
 Pigsty 支持 [**离线安装**](/docs/setup/offline)，实质上是将做好的本地软件仓库提前复制到目标环境中。
 当 Pigsty 执行生产部署，需要创建本地软件仓库时，如果发现本地已经存在 **`/www/pigsty/repo_complete`** 标记文件，则会跳过从上游下载软件包的步骤，直接使用已有的软件包，避免联网下载。
+
+[![repo](/img/pigsty/repo.webp)](https://demo.pigsty.cc/pigsty/)
 
 更多信息，请参阅：[**配置：INFRA - REPO**](/docs/infra/param/#repo)
 
@@ -123,6 +122,8 @@ Pigsty 预置了基于 **VictoriaMetrics** / **Logs** / **Traces** 的大量监�
 **Grafana** 亦可作为低代码可视化平台使用，因此默认安装 **ECharts**、victoriametrics-datasource、victorialogs-datasource 等插件，
 同时将 **Vector** / **Victoria** 数据源统一注册为 `vmetrics-*`、`vlogs-*`、`vtraces-*`，方便扩展自定义仪表板。
 
+![dashboard](/img/dashboard/pigsty.jpg)
+
 更多信息请参阅：[**配置：INFRA - GRAFANA**](/docs/infra/param/#grafana)。
 
 
@@ -143,7 +144,9 @@ Pigsty 预置了基于 **VictoriaMetrics** / **Logs** / **Traces** 的大量监�
 **VictoriaMetrics** 完全兼容 **Prometheus** API，支持 PromQL 查询、远程读写协议以及 Alertmanager API。
 内置的 **VMUI** 提供即席查询界面，可直接探索指标数据，也可作为 **Grafana** 的数据源使用。
 
-更多信息请参阅：[**配置：INFRA - VICTORIA**](/docs/infra/param/#victoria)
+[![vmetrics](/img/pigsty/vmetrics.webp)](https://demo.pigsty.cc/vmetrics/vmui)
+
+更多信息请参阅：[**配置：INFRA - VMETRICS**](/docs/infra/param/#vmetrics_enabled)
 
 
 ----------------
@@ -162,7 +165,9 @@ Pigsty 预置了基于 **VictoriaMetrics** / **Logs** / **Traces** 的大量监�
 所有纳管节点默认运行 **Vector** Agent，负责收集系统日志、PostgreSQL 日志、Patroni 日志、Pgbouncer 日志等，结构化处理后推送至 **VictoriaLogs**。
 内置 Web UI 支持日志检索与过滤，也可配合 **Grafana** 的 victorialogs-datasource 插件进行可视化分析。
 
-更多信息请参阅：[**配置：INFRA - VICTORIA**](/docs/infra/param/#victoria)
+[![vlogs](/img/pigsty/vmlogs.webp)](https://demo.pigsty.cc/vlogs/select/vmui)
+
+更多信息请参阅：[**配置：INFRA - VLOGS**](/docs/infra/param/#vlogs_enabled)
 
 
 ----------------
@@ -181,7 +186,7 @@ Pigsty 预置了基于 **VictoriaMetrics** / **Logs** / **Traces** 的大量监�
 **VictoriaTraces** 提供 **Jaeger** 兼容接口，可用于分析服务调用链路与数据库慢查询。
 结合 **Grafana** 面板，能够快速定位性能瓶颈，追溯问题根因。
 
-更多信息请参阅：[**配置：INFRA - VICTORIA**](/docs/infra/param/#victoria)
+更多信息请参阅：[**配置：INFRA - VTRACES**](/docs/infra/param/#vtraces_enabled)
 
 
 ----------------
@@ -200,7 +205,9 @@ Pigsty 预置了基于 **VictoriaMetrics** / **Logs** / **Traces** 的大量监�
 **VMAlert** 从 **VictoriaMetrics** 读取指标数据，周期性执行告警规则评估。
 Pigsty 预置了 PGSQL、NODE、REDIS 等模块的告警规则，覆盖常见故障场景，开箱即用。
 
-更多信息请参阅：[**配置：INFRA - PROMETHEUS**](/docs/infra/param/#prometheus)
+[![vmalert](/img/pigsty/vmalert.webp)](https://demo.pigsty.cc/vmalert/vmalert/groups)
+
+更多信息请参阅：[**配置：INFRA - VMALERT**](/docs/infra/param/#vmalert_enabled)
 
 
 ----------------
@@ -219,10 +226,12 @@ Pigsty 预置了 PGSQL、NODE、REDIS 等模块的告警规则，覆盖常见故
 **AlertManager** 支持多种通知渠道：邮件、Webhook、Slack、PagerDuty、企业微信等。
 通过配置告警路由规则，可实现按严重程度、模块类型进行差异化分发，支持静默、抑制等高级功能。
 
-更多信息请参阅：[**配置：INFRA - PROMETHEUS**](/docs/infra/param/#prometheus)
+[![alertmanager](/img/pigsty/alertmanager.webp)](https://demo.pigsty.cc/alertmgr/)
+
+更多信息请参阅：[**配置：INFRA - AlertManager**](/docs/infra/param/#alertmanager_enabled)
 
 
-----------------
+--------
 
 ## BlackboxExporter
 
@@ -230,18 +239,20 @@ Pigsty 预置了 PGSQL、NODE、REDIS 等模块的告警规则，覆盖常见故
 
 默认监听 `9115` 端口，挂载于 **Nginx** `/blackbox` 路径上：
 
-|          IP访问（替换）           |     域名（HTTP）      | 域名（HTTPS）|
-|:----------------------:|:-----------:|:---------:|:-----------------------:|
-| [**`http://10.10.10.10/blackbox`**](http://10.10.10.10/blackbox) | [**`http://i.pigsty/blackbox`**](http://i.pigsty/blackbox) | [**`https://i.pigsty/blackbox`**](https://i.pigsty/blackbox) |
+|          IP访问（替换）           |     域名（HTTP）      | 域名（HTTPS）| 公开演示 |
+|:----------------------:|:-----------:|:---------:|:-----------------------:|:----:|
+| [**`http://10.10.10.10/blackbox`**](http://10.10.10.10/blackbox) | [**`http://i.pigsty/blackbox`**](http://i.pigsty/blackbox) | [**`https://i.pigsty/blackbox`**](https://i.pigsty/blackbox) | [**`https://demo.pigsty.cc/blackbox`**](https://demo.pigsty.cc/blackbox) |
 {.full-width}
 
 支持 ICMP Ping、TCP 端口、HTTP/HTTPS 端点等多种探测方式。
 可用于监控 VIP 可达性、服务端口存活、外部依赖健康状态等场景，是判断故障影响范围的重要手段。
 
-更多信息请参阅：[**配置：INFRA - PROMETHEUS**](/docs/infra/param/#prometheus)
+[![blackbox](/img/pigsty/blackbox.webp)](https://demo.pigsty.cc/blackbox/)
+
+更多信息请参阅：[**配置：INFRA - BLACKBOX**](/docs/infra/param/#blackbox_exporter)
 
 
-----------------
+--------
 
 ## Ansible
 
@@ -258,60 +269,63 @@ Pigsty 在安装时会自动在管理节点（Infra 节点）上安装 **Ansible
 更多信息请参阅：[**剧本：Pigsty Playbook**](/docs/setup/playbook)
 
 
-----------------
+--------
 
 ## DNSMASQ
 
-**DNSMASQ** 提供环境内的 DNS 解析服务，将 Pigsty 内部使用的域名解析到对应 IP 地址。
+**DNSMASQ** 在 [**INFRA节点**](/docs/concept/arch/node#infra节点) 上提供环境内的 DNS 解析服务，将域名解析到对应 IP 地址。
 
-请注意，DNS 是完全可选的模块，Pigsty 本身不依赖 DNS 即可正常运行。
+DNSMASQ 默认监听 `53` 端口（UDP/TCP），为环境内所有节点提供 DNS 解析服务，解析记录位于 的 `/infra/hosts` 目录中。
 
-默认监听 `53` 端口（UDP/TCP），为环境内所有节点提供 DNS 解析：
-
-| 协议      | 端口   | 配置文件目录          |
-|:--------|:-----|:----------------|
-| UDP/TCP | `53` | `/infra/hosts/` |
-
-其他模块在部署时会自动将域名注册到 INFRA 节点的 **DNSMASQ** 服务中，例如：
-
+其他模块在部署时会自动将域名注册到 INFRA 节点的 **DNSMASQ** 服务中，您可以按需使用。
+DNS 是完全可选的模块，**Pigsty 本身不依赖它即可正常运行**。
 客户端节点可将 INFRA 节点配置为 DNS 服务器，即可通过域名访问各服务，无需记忆 IP 地址。
+
+- [**`dns_records`**](/docs/infra/param/#dns_records) : 写入 INFRA 节点的默认解析记录
+- [**`node_dns_servers`**](/docs/node/param/#node_dns_servers) ：为节点配置 DNS 服务器，默认通过 [**`admin_ip`**](/docs/infra/param/#admin_ip) 指向 INFRA 节点。（也可以 [**不配置**](/docs/node/param#node_dns_method)）
 
 更多信息请参阅：[**配置：INFRA - DNS**](/docs/infra/param/#dns) 与 [**教程：DNS：配置域名解析**](/docs/infra/admin/domain)
 
 
-----------------
+--------
 
 ## Chronyd
 
-**Chronyd** 提供 NTP 时间同步服务，确保环境内所有节点时钟一致。
-
-默认监听 `123` 端口（UDP），作为环境内的时间源：
-
-| 协议   | 端口    | 说明              |
-|:-----|:------|:----------------|
-| UDP  | `123` | NTP 时间同步服务      |
+**Chronyd** 提供 NTP 时间同步服务，确保环境内所有节点时钟一致。默认监听 `123` 端口（UDP），作为环境内的时间源。
 
 时间同步对分布式系统至关重要：日志排查需要时间戳对齐，证书校验依赖时钟准确，**PostgreSQL** 流复制也对时钟偏移敏感。
 在隔离网络环境中，INFRA 节点可作为内部 NTP 服务器，其他节点同步至此。
 
-更多信息请参阅：[**配置：NODE - NTP**](/docs/node/param/#node_time)
+在 Pigsty 中，默认所有节点都会启动 chonyd 服务用于时间同步。默认使用 [**`pool.ntp.org`**](/docs/node/param#node_ntp_servers) 公共 NTP 服务器作为上游时间源。
+Chronyd 本质上归属 [**Node 模块**](/docs/node) 管理，但在网络隔离的环境中，你使用 [**`admin_ip`**](/docs/infra/param/#admin_ip) 指向 INFRA 节点上的 Chronyd 服务作为内部时间源。
+此时 [**INFRA节点**](/docs/concept/arch/node#infra节点) 上的 Chronyd 服务将充当内部时间同步基础设施的角色。
+更多信息请参阅：[**配置：NODE - TIME**](/docs/node/param/#node_time)
 
 
-----------------
+--------
 
-## 节点与Infra的关系
+## INFRA节点与普通节点
 
+在 Pigsty 中，节点与基础设施的关系是 **弱循环依赖**：node_monitor → infra → node
 
+[**NODE模块**](/docs/node) 本身不依赖 [**INFRA模块**](/docs/infra)，但节点模块中的监控功能（node_monitor）需要依赖基础设施模块提供的监控平台与服务。
 
-----------------
+因此，在 [**`infra.yml`**](/docs/infra/playbook#infrayml) 和 [**`deploy`**](/docs/setup/playbook) 剧本中，
+采用了一种 “交织部署” 的技术：
 
-## 节点关系
+- 首先初始化所有 [**普通节点**](/docs/concept/arch/node#普通节点) 上的 [**NODE模块**](/docs/node)，但是不配置监控，因为基础设施服务尚未部署完成。
+- 然后初始化 [**INFRA节点**](/docs/concept/arch/node#infra节点) 上的 [**INFRA模块**](/docs/infra)，此时监控已经可用
+- 然后回过头来，重新配置所有 [**普通节点**](/docs/concept/arch/node#普通节点) 上的监控功能，连接到已经部署完成的监控平台
 
-普通的节点，会通过 [**`admin_ip`**](/docs/infra/param/#admin_ip) 参数来引用某个 [**INFRA节点**](#infra节点) 作为它们的基础设施提供者。
+如果您不追求 “一次性” 部署所有节点，也可以采用 [**分阶段部署**](/docs/setup/config#加入基础设施) 的方式，先初始化 INFRA 节点，然后再初始化其他普通节点即可。
+
+### 节点与基础设施是如何耦合的？
+
+普通节点会通过 [**`admin_ip`**](/docs/infra/param/#admin_ip) 参数来引用某个 [**INFRA节点**](#infra节点) 作为它们的基础设施提供者。
 
 例如，当你配置了全局的 `admin_ip = 10.10.10.10`，那么通常意味着所有节点都会使用这个 IP 上的基础设施服务。
 
-以下是引用 `${admin_ip}` 的配置参数列表
+这样的设计允许你快速，批量的切换节点的基础设施提供者 —— 以下是 **可能** 引用 `${admin_ip}` 的配置参数列表：
 
 | 参数                                                                       |             模块             | 默认值                             | 说明             |
 |:-------------------------------------------------------------------------|:--------------------------:|---------------------------------|----------------|
@@ -322,25 +336,57 @@ Pigsty 在安装时会自动在管理节点（Infra 节点）上安装 **Ansible
 | [**`node_default_etc_hosts`**](/docs/node/param/#node_default_etc_hosts) |  [**`NODE`**](/docs/node)  | `["${admin_ip} i.pigsty"]`      | 默认静态 DNS 记录    |
 | [**`node_etc_hosts`**](/docs/node/param/#node_etc_hosts)                 |  [**`NODE`**](/docs/node)  | `[]`                            | 自定义静态 DNS 记录   |
 | [**`node_dns_servers`**](/docs/node/param/#node_dns_servers)             |  [**`NODE`**](/docs/node)  | `["${admin_ip}"]`               | 动态 DNS 服务器地址   |
-| [**`node_ntp_servers`**](/docs/node/param/#node_ntp_servers)             |  [**`NODE`**](/docs/node)  | `["${admin_ip}"]`               | NTP 时间服务器（可选）  |
+| [**`node_ntp_servers`**](/docs/node/param/#node_ntp_servers)             |  [**`NODE`**](/docs/node)  | `["pool pool.ntp.org iburst"]`  | NTP 时间服务器（可选）  |
 {.full-width}
 
-这是一种弱依赖关系
+例如，当节点安装软件的时候，`local` 仓库指向的就是 `admin_ip:80/pigsty` 上的 Nginx 本地软件仓库。DNS 服务器指向的也是 `admin_ip:53` 上的 [**DNSMASQ**](#dnsmasq)。
+但这并不是强制要求的，例如，节点完全可以忽略并不使用 `local` 仓库，直接从互联网上游源安装（大部分单机配置模板）；DNS 服务器也完全可以不配置与不使用，Pigsty 本身并无对 DNS 服务器的依赖。
+
+--------
+
+## INFRA节点与ADMIN节点 
+
+通常发起管理的 [**ADMIN节点**](/docs/concept/arch/node#admin节点) 会与基础设施节点（[**INFRA节点**](/docs/concept/arch/node#infra节点)）重合。
+在 [**单机部署**](/docs/setup/install) 就是这样的。在多节点部署中，如果有多个 INFRA 节点，管理节点通常是 `infra` 分组中的第一个，其余作为备用。
+不过，也有例外存在。您可能会出于各种原因，将两者分离开来：
+
+例如在 [**大规模生产环境部署**](/docs/deploy) 中，一种经典模式是使用 1-2 台归属于 DBA 组的的专用管理主机（微型虚拟机即可），
+作为整个环境的控制中枢，并使用 2-3 台高配置的物理机（或者更多！），作为整个环境的监控基础设施。这时候管理节点就与基础设施节点分离开来了。
+这时候，你在配置文件中填入的 [**admin_ip**](/docs/infra/param/#admin_ip) 应该指向某个 INFRA 节点的 IP 地址，而不是当前 ADMIN 节点的 IP 地址。
+这是因为历史遗留原因：Pigsty 设计之初，ADMIN 节点 与 INFRA 节点 是强绑定的概念，后来才逐渐演化出分离的能力，因此参数名称未做修改。
+
+另一种常见的情况是 [**本地管理云节点**](/docs/setup)，例如，您可以在自己的笔记本上安装 Ansible，然后填入你的云节点作为 “被管理对象”。
+在这种情况下，您的笔记本充当 ADMIN 节点，而云服务器充当 INFRA 节点。
+
+```yaml
+all:
+  children:
+    infra:   { hosts: { 10.10.10.10: { infra_seq: 1 , ansible_host: your_ssh_alias } } }  # <--- 利用 ansible_host 指向云节点（填入 ssh 别名）
+    etcd:    { hosts: { 10.10.10.10: { etcd_seq: 1 } }, vars: { etcd_cluster: etcd } }    # ssh 连接会使用 ssh your_ssh_alias
+    pg-meta: { hosts: { 10.10.10.10: { pg_seq: 1, pg_role: primary } }, vars: { pg_cluster: pg-meta } }
+  vars:
+    version: v4.0.0
+    admin_ip: 10.10.10.10
+    region: default
+```
 
 
-通常管理节点与基础设施节点（INFRA 节点）重合。若有多个 INFRA 节点，管理节点通常是其中第一个，其他作为备份。
+--------
 
-在大规模生产环境部署的时候，您可能会出于各种原因，将安装 Ansible 管理节点与运行 Infra 模块的节点分离开来。
-例如，使用 1-2 台迷你的专用主机，归属于 DBA 组，作为整个环境的控制中枢，ADMIN 节点。
-使用 2-3 台高配置的物理机，作为整个环境的监控基础设施 `INFRA` 节点。
+## 多个 INFRA 节点
 
-下表展示了不同规模部署中各类节点的典型数量：
+默认情况下，Pigsty 只需要一个 INFRA 节点即可满足大部分需求。INFRA 模块挂了，也不会影响其他节点上的数据库服务。
 
-| 部署规模 | ADMIN | INFRA | ETCD | MINIO | PGSQL |
-|:----:|:-----:|:-----:|:----:|:-----:|:-----:|
-| 单机开发 |   1   |   1   |  1   |   0   |   1   |
-| 三节点  |   1   |   3   |  3   |   0   |   3   |
-| 小型生产 |   1   |   2   |  3   |   0   |  N    |
-| 大型生产 |   2   |   3   |  5   |  4+   |   N   |
-{.full-width}
+但是，在一些对监控与告警要求极高的生产环境中，您可能希望部署多个 INFRA 节点，来提升基础设施的可用性。
+一种常见的部署是使用两个 Infra 节点，提供一份冗余副本，并互相监控对方… 
+或者使用更多，部署分布式的 Victoria 集群实现无限水平扩展。
+
+每个 Infra 节点都是 **独立** 的，Nginx 指向的都是本机上的服务。
+VictoriaMetrics 也是独立抓取环境中所有服务的监控指标，
+日志会默认推送到所有 VictoriaLogs 日志采集端点上。
+唯一的例外是 Grafana，每一个 Grafana 中都会注册所有的 VictoriaMetrics / Logs / Traces / PostgreSQL 实例作为数据源。
+因此每一个 Grafana 实例都能看到完整的监控数据。
+
+如果您对 Grafana 进行修改，例如添加新的仪表板，或者修改数据源配置，这些变更只会影响当前节点上的 Grafana 实例。
+如果您希望所有节点上的 Grafana 保持一致，可以使用一个 PostgreSQL 数据库作为共享存储，详情参考 [**教程：配置 Grafana 高可用**](/docs/infra/admin/grafana)。
 

@@ -4,7 +4,7 @@
 # Desc      :   pigsty config for redis clusters
 # Ctime     :   2022-11-09
 # Mtime     :   2025-12-12
-# Docs      :   https://doc.pgsty.com/config
+# Docs      :   https://pigsty.io/docs/redis
 # License   :   Apache-2.0 @ https://pigsty.io/docs/about/license/
 # Copyright :   2018-2026  Ruohang Feng / Vonng (rh@vonng.com)
 #==============================================================#
@@ -57,9 +57,6 @@ all:
     redis_exporter_options: ''        # cli args and extra options for redis exporter
 
     # redis instance
-    redis_safeguard: false            # prevent purging running redis instance?
-    redis_clean: true                 # purging existing redis during init?
-    redis_rmdata: true                # remove redis data when purging redis server?
     redis_mode: standalone            # redis mode: standalone,cluster,sentinel
     redis_conf: redis.conf            # redis config template path, except sentinel
     redis_bind_address: '0.0.0.0'     # redis bind address, empty string will use host ip
@@ -74,7 +71,7 @@ all:
 
 
     #----------------------------------------------#
-    # PASSWORD : https://doc.pgsty.com/config/security
+    # PASSWORD : https://pigsty.io/docs/setup/security/
     #----------------------------------------------#
     grafana_admin_password: pigsty
     haproxy_admin_password: pigsty

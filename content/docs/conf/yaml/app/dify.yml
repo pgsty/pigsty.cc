@@ -4,12 +4,12 @@
 # Desc      :   pigsty config for running 1-node dify app
 # Ctime     :   2025-02-24
 # Mtime     :   2025-12-12
-# Docs      :   https://doc.pgsty.com/app/odoo
+# Docs      :   https://pigsty.io/docs/app/odoo
 # License   :   Apache-2.0 @ https://pigsty.io/docs/about/license/
 # Copyright :   2018-2026  Ruohang Feng / Vonng (rh@vonng.com)
 #==============================================================#
 # Last Verified Dify Version: v1.8.1 on 2025-0908
-# tutorial: https://doc.pgsty.com/app/dify
+# tutorial: https://pigsty.io/docs/app/dify
 # how to use this template:
 #
 #  curl -fsSL https://repo.pigsty.io/get | bash; cd ~/pigsty
@@ -41,7 +41,7 @@ all:
               # change domain, mirror, proxy, secret key
               NGINX_SERVER_NAME: dify.pigsty
               # A secret key for signing and encryption, gen with `openssl rand -base64 42` (CHANGE PASSWORD!)
-              SECRET_KEY: sk-somerandomkey
+              SECRET_KEY: sk-9f73s3ljTXVcMT3Blb3ljTqtsKiGHXVcMT3BlbkFJLK7U
               # expose DIFY nginx service with port 5001 by default
               DIFY_PORT: 5001
               # where to store dify files? the default is ./volume, we'll use another volume created above
@@ -114,7 +114,7 @@ all:
     pg_version: 18
 
     #----------------------------------------------#
-    # PASSWORD : https://doc.pgsty.com/config/security
+    # PASSWORD : https://pigsty.io/docs/setup/security/
     #----------------------------------------------#
     grafana_admin_password: pigsty
     grafana_view_password: DBUser.Viewer

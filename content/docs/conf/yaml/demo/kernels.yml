@@ -4,7 +4,7 @@
 # Desc      :   Pigsty Prod with babelfish, ivorysql and polardb
 # Ctime     :   2023-07-20
 # Mtime     :   2025-12-12
-# Docs      :   https://doc.pgsty.com/config
+# Docs      :   https://pigsty.io/docs/conf
 # License   :   Apache-2.0 @ https://pigsty.io/docs/about/license/
 # Copyright :   2018-2026  Ruohang Feng / Vonng (rh@vonng.com)
 #==============================================================#
@@ -479,7 +479,7 @@ all:
       jupyter      : { domain: lab.pigsty  ,endpoint: "127.0.0.1:8888"  , websocket: true }
       supa         : { domain: supa.pigsty ,endpoint: "10.10.10.10:8000", websocket: true }
     dns_records:                      # dynamic dns records resolved by dnsmasq
-      - 10.10.10.1 i.pigsty a.pigsty p.pigsty g.pigsty
+      - 10.10.10.1 i.pigsty
 
     #==========================================================#
     # NODE
@@ -530,7 +530,7 @@ all:
         retention_full: 14            # keep full backup for last 14 days
 
     #----------------------------------------------#
-    # PASSWORD : https://doc.pgsty.com/config/security
+    # PASSWORD : https://pigsty.io/docs/setup/security/
     #----------------------------------------------#
     grafana_admin_password: pigsty
     grafana_view_password: DBUser.Viewer
