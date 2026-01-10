@@ -231,7 +231,7 @@ categories: [参考]
 
 ## `PG_ID`
 
-以下是一些常用的参数，用于标识 PGSQL 模块中的[实体](/docs/pgsql/arch#实体概念图)：集群、实例、服务等...
+以下是一些常用的参数，用于标识 PGSQL 模块中的[实体](/docs/concept/model/pgsql)：集群、实例、服务等...
 
 
 ```yaml
@@ -1895,7 +1895,7 @@ pgb_default_hba_rules:            # pgbouncer default host-based authentication 
 
 本节定义了用于 [pgBackRest](https://pgbackrest.org/) 的变量，它被用于 PGSQL 时间点恢复 PITR 。
 
-查看 [PGSQL 备份 & PITR](/docs/pgsql/arch/pitr) 以获取详细信息。
+查看 [PGSQL 备份 & PITR](/docs/pgsql/backup/pitr) 以获取详细信息。
 
 
 ```yaml

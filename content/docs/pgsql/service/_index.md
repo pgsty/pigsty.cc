@@ -81,7 +81,7 @@ psql postgres://dbuser_dba:DBUser.DBA@pg-meta:5436/meta     # pg-meta-default : 
 psql postgres://dbuser_stats:DBUser.Stats@pg-meta:5438/meta # pg-meta-offline : 通过离线的 postgres(5432) 直接连接
 ```
 
-从示例集群[架构图](/docs/pgsql/arch)上可以看出这四种服务的工作方式：
+从示例集群[架构图](/docs/concept/arch)上可以看出这四种服务的工作方式：
 
 [![pigsty-ha.png](/img/pigsty/ha.png)](/docs/concept/ha)
 

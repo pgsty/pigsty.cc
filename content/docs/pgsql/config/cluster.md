@@ -37,7 +37,7 @@ pg-test:
     pg_cluster: pg-test
 ```
 
-这段配置言简意赅，自我描述，仅由 [**身份参数**](/docs/pgsql/arch/ident) 构成，请注意 Ansible Group 分组名应当与 [`pg_cluster`](/docs/pgsql/param#pg_cluster) 保持一致。
+这段配置言简意赅，自我描述，仅由 [**身份参数**](/docs/model/pgsql#身份参数) 构成，请注意 Ansible Group 分组名应当与 [`pg_cluster`](/docs/pgsql/param#pg_cluster) 保持一致。
 
 使用以下命令创建该集群：
 

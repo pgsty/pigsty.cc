@@ -1,5 +1,5 @@
 ---
-title: 模块化架构
+title: 积木式架构
 weight: 160
 description: Pigsty 的模块化架构介绍 —— 声明式组合，按需定制，自由部署。
 icon: fa-solid fa-archway

@@ -17,11 +17,11 @@ Pigsty 遵循 IaC 与 GitOPS 的理念：使用声明式的 [**配置清单**](/
 Pigsty 诞生之初是为了解决超大规模 PostgreSQL 集群的运维管理问题，背后的想法很简单 —— 我们需要有在十分钟内在就绪的服务器上复刻整套基础设施（100+数据库集群 + PG/Redis + 可观测性）的能力。
 任何 GUI + ClickOps 都无法在如此短的时间内完成如此复杂的任务，这让 CLI + IaC 成为唯一的选择 —— 它提供了精确，高效的控制能力。
 
-配置清单 [**`pigsty.yml`**](/docs/setup/config) 文件描述了整个部署的状态，无论是 生产环境（prod），预发环境（staging）， 测试环境（test），还是 开发环境（devbox），
+[**配置清单**](/docs/concept/iac/inventory) **`pigsty.yml`** 文件描述了整个部署的状态，无论是 生产环境（prod），预发环境（staging）， 测试环境（test），还是 开发环境（devbox），
 基础设施的区别仅在于配置清单的不同，而部署交付的逻辑则是完全相同的。
 
-您可以使用 git 对这份部署的 “种子/基因” 进行版本控制与审计，而且，Pigsty 甚至支持将配置清单以数据库表的形式存储在 PostgreSQL CMDB 中，更进一步实现 Infra as Data 的能力。
-无缝与您现有的工作流程集成与对接。
+您可以使用 git 对这份部署的 “种子/基因” 进行版本控制与审计，而且，Pigsty 甚至支持将配置清单以数据库表的形式存储在 PostgreSQL [**CMDB**](/docs/concept/iac/cmdb) 中，
+更进一步从 Infra as Code 升级为 Infra as Data，无缝与您现有的工作流程集成与对接。
 
 IaC 面向专业用户与企业场景而设计，但也针对个人开发者，SMB 进行了深度优化。
 即使您并非专业 DBA，也无需了解这几百个调节开关与旋钮，所有参数都带有表现良好的默认值，
@@ -87,7 +87,7 @@ bin/pgsql-add pg-test   # 创建 pg-test 集群
 ![pigsty-iac.jpg](/img/pigsty/iac.jpg)
 
 你可以使用不同的的实例角色，例如 [**主库**](/docs/pgsql/config#读写主库)（primary），[**从库**](/docs/pgsql/config#只读从库)（replica），[**离线从库**](/docs/pgsql/config#读写主库)（offline），[**延迟从库**](/docs/pgsql/config#延迟集群)（delayed），[**同步备库**](/docs/pgsql/config#同步备库)（sync standby）；
-以及不同的集群：例如 [**备份集群**](/docs/pgsql/config#备份集群)（Standby Cluster），[**Citus集群**](/docs/pgsql/config#citus集群)，甚至是 [**Redis**](/docs/redis) / [**MinIO**](/docs/minio) / [**Etcd**](/docs/etcd) 集群
+以及不同的集群：例如 [**备份集群**](/docs/pgsql/config#备份集群)（Standby Cluster），[**Citus 集群**](/docs/pgsql/config#citus集群)，甚至是 [**Redis**](/docs/redis) / [**MinIO**](/docs/minio) / [**Etcd**](/docs/etcd) 集群
 
 
 -----------------
@@ -193,7 +193,7 @@ pg-meta:
 您还可以通过声明式的配置，深度定制 Pigsty 的访问控制能力。例如下面的配置文件对 `pg-meta` 集群进行了深度安全定制：
 
 使用三节点核心集群模板：`crit.yml`，确保数据一致性有限，故障切换数据零丢失。
-启用了 L2 VIP，并将数据库与连接池的监听地址限制在了 本地环回IP + 内网IP + VIP 三个特定地址。 
+启用了 L2 VIP，并将数据库与连接池的监听地址限制在了本地环回 IP + 内网 IP + VIP 三个特定地址。
 模板强制启用了 Patroni 的 SSL API，与 Pgbouncer 的 SSL，并在 HBA 规则中强制要求使用 SSL 访问数据库集群。
 同时还在 `pg_libs` 中启用了 `$libdir/passwordcheck` 扩展，来强制执行密码强度安全策略。
 
@@ -264,7 +264,7 @@ pg-meta-delay:                    # delayed instance for pg-meta (1 hour ago)
 
 -----------------
 
-## Citus分布式集群
+## Citus 分布式集群
 
 下面是一个四节点的 Citus 分布式集群的声明式配置：
 
@@ -300,7 +300,7 @@ all:
 
 ----------------
 
-## Redis集群
+## Redis 集群
 
 下面给出了 Redis 主从集群、哨兵集群、以及 Redis Cluster 的声明配置样例
 
@@ -329,7 +329,7 @@ redis-test: # redis native cluster: 3m x 3s
 
 ---------------- 
 
-## ETCD集群
+## ETCD 集群
 
 下面给出了一个三节点的 Etcd 集群声明式配置样例：
 
@@ -348,7 +348,7 @@ etcd: # dcs service for postgres/patroni ha consensus
 
 ----------------
 
-## MinIO集群
+## MinIO 集群
 
 下面给出了一个三节点的 MinIO 集群声明式配置样例：
 

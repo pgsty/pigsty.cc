@@ -374,4 +374,4 @@ tail -f /pg/log/postgresql-*.log | grep -i auth
 - [**HBA 配置**](/docs/pgsql/config/hba/)：HBA 规则的配置语法与参数详解
 - [**用户管理**](/docs/pgsql/admin/user/)：用户与角色的管理操作
 - [**访问控制**](/docs/pgsql/config/acl/)：角色体系与权限模型
-- [**安全与合规**](/docs/pgsql/arch/sec/)：PostgreSQL 集群的安全特性
+- [**安全与合规**](/docs/concept/sec/)：PostgreSQL 集群的安全特性

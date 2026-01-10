@@ -562,7 +562,7 @@ pg-backup incr  # 执行增量备份
 pb info         # 打印备份信息 （pgbackrest info）
 ```
 
-参阅[备份恢复](/docs/pgsql/arch/pitr#备份)获取更多信息。
+参阅[备份恢复](/docs/pgsql/backup/pitr#备份)获取更多信息。
 
 
 <details><summary>示例：创建备份</summary>
@@ -605,7 +605,7 @@ pg-pitr --backup=latest                 # 恢复到最新的备份集
 pg-pitr --backup=20221108-105325        # 恢复到特定备份集，备份集可以使用 pgbackrest info 列出
 ```
 
-该命令会输出操作手册，请按照说明进行操作。查看[备份恢复-PITR](/docs/pgsql/arch/pitr#恢复)获取详细信息。
+该命令会输出操作手册，请按照说明进行操作。查看 [**备份恢复-PITR**](/docs/pgsql/backup/pitr#恢复)获取详细信息。
 
 <details><summary>示例：使用原始pgBackRest命令进行 PITR</summary>
 

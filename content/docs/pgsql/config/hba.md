@@ -590,14 +590,14 @@ head -30 /pg/data/pg_hba.conf
 
 ## 相关参数
 
-| 参数 | 说明 |
-|------|------|
-| `pg_pwd_enc` | 密码加密方式：`scram-sha-256`（默认）或 `md5` |
-| `pg_dbsu` | 数据库超级用户名 |
-| `pg_replication_username` | 复制用户名 |
-| `pg_monitor_username` | 监控用户名 |
-| `pg_admin_username` | 管理员用户名 |
-| `node_firewall_intranet` | 内网 CIDR 定义 |
+| 参数                        | 说明                                |
+|---------------------------|-----------------------------------|
+| `pg_pwd_enc`              | 密码加密方式：`scram-sha-256`（默认）或 `md5` |
+| `pg_dbsu`                 | 数据库超级用户名                          |
+| `pg_replication_username` | 复制用户名                             |
+| `pg_monitor_username`     | 监控用户名                             |
+| `pg_admin_username`       | 管理员用户名                            |
+| `node_firewall_intranet`  | 内网 CIDR 定义                        |
 
 
 ----------------
@@ -607,4 +607,4 @@ head -30 /pg/data/pg_hba.conf
 - [**HBA 管理**](/docs/pgsql/admin/hba/)：HBA 规则的日常管理操作
 - [**用户配置**](/docs/pgsql/config/user/)：用户与角色配置
 - [**访问控制**](/docs/pgsql/config/acl/)：角色体系与权限模型
-- [**安全与合规**](/docs/pgsql/arch/sec/)：PostgreSQL 集群的安全特性
+- [**安全与合规**](/docs/concept/sec/)：PostgreSQL 集群的安全特性

@@ -22,7 +22,7 @@ sidebar_root_for: self
 
 > 了解关于 PostgreSQL 的重要主题与概念。
 
-- [系统架构](/docs/pgsql/arch)
+- [系统架构](/docs/concept/arch/pgsql)
 - [集群配置](/docs/pgsql/config)
 - [扩展插件](/docs/ref/extension)
 - [用户/角色](/docs/pgsql/config/user)
@@ -31,7 +31,7 @@ sidebar_root_for: self
 - [认证/HBA](/docs/pgsql/config/hba)
 - [访问控制](/docs/pgsql/security/)
 - [管理预案](/docs/pgsql/admin)
-- [备份恢复](/docs/pgsql/arch/pitr)
+- [备份恢复](/docs/pgsql/backup/pitr)
 - [监控接入](/docs/pgsql/monitor)
 - [集群迁移](/docs/pgsql/migration)
 - [仪表盘](/docs/pgsql/monitor/dashboard)
@@ -43,7 +43,7 @@ sidebar_root_for: self
 
 > [描述](/docs/pgsql/config) 你想要的 PostgreSQL 集群
 
-- [身份参数](/docs/pgsql/arch#身份参数)：定义PostgreSQL集群的身份参数
+- [身份参数](/docs/concept/model/pgsql#身份参数)：定义PostgreSQL集群的身份参数
 - [读写主库](/docs/pgsql/config#读写主库)：创建由单一主库构成的单实例“集群“
 - [只读从库](/docs/pgsql/config#只读从库)：创建一主一从的两节点基础高可用集群
 - [离线从库](/docs/pgsql/config#离线从库)：创建专用于OLAP/ETL/交互式查询的特殊只读实例

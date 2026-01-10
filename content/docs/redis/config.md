@@ -12,7 +12,7 @@ categories: [参考]
 
 ## 概念
 
-Redis的实体概念模型与[PostgreSQL](/docs/pgsql/arch#实体概念图)几乎相同，同样包括 **集群（Cluster）** 与 **实例（Instance）** 的概念。注意这里的Cluster指的不是Redis原生集群方案中的集群。
+Redis的实体概念模型与[PostgreSQL](/docs/concept/model/pgsql#实体概念图)几乎相同，同样包括 **集群（Cluster）** 与 **实例（Instance）** 的概念。注意这里的Cluster指的不是Redis原生集群方案中的集群。
 
 REDIS模块与PGSQL模块核心的区别在于，Redis通常采用 **单机多实例** 部署，而不是 PostgreSQL 的 1:1 部署：一个物理/虚拟机节点上通常会部署 **多个** Redis实例，以充分利用多核CPU。因此[配置](#配置)和[管理](#管理)Redis实例的方式与PGSQL稍有不同。
 

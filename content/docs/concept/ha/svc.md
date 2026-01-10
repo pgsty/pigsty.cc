@@ -1,6 +1,6 @@
 ---
 title: 服务接入
-weight: 221
+weight: 4000
 description: Pigsty 使用 HAProxy 提供服务接入，并提供可选的 pgBouncer 池化连接，以及可选的 L2 VIP 与 DNS 接入。
 icon: fa-solid fa-arrow-down-up-across-line
 module: [PGSQL]
