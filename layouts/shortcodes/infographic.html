@@ -1,0 +1,70 @@
+{{- /*
+  AntV Infographic Shortcode for Hugo/Docsy
+
+  Usage:
+    {{< infographic >}}
+    infographic list-row-simple-horizontal-arrow
+    data
+      items
+        - label Step 1
+          desc Start
+        - label Step 2
+          desc In Progress
+    {{< /infographic >}}
+
+    {{< infographic width="100%" height="600px" >}}
+    infographic compare-vs-horizontal
+    data
+      title PostgreSQL vs MySQL
+      items
+        - label PostgreSQL
+          desc 功能强大的开源数据库
+        - label MySQL
+          desc 流行的开源数据库
+    theme
+      colorPrimary #336791
+    {{< /infographic >}}
+
+  Parameters:
+    width   - Container width (default: 100%)
+    height  - Container height (default: auto)
+
+  Notes:
+    - Uses AntV Infographic DSL syntax (similar to Mermaid)
+    - ~200 built-in templates available
+    - Outputs high-quality SVG
+    - See: https://infographic.antv.vision/
+*/ -}}
+
+{{- $width := .Get "width" | default "100%" -}}
+{{- $height := .Get "height" | default "auto" -}}
+{{- $id := printf "infographic-%s" (md5 .Inner) -}}
+
+{{- /* Load Infographic JS only once per page */ -}}
+{{- if not (.Page.Scratch.Get "infographic-loaded") -}}
+  {{- .Page.Scratch.Set "infographic-loaded" true -}}
+<script src="/js/infographic.min.js"></script>
+{{- end -}}
+
+<div id="{{ $id }}" class="infographic-container" style="width: {{ $width }}; height: {{ $height }}; margin: 1em 0;"></div>
+
+<script>
+(function() {
+  var dom = document.getElementById('{{ $id }}');
+  if (!dom) return;
+
+  var syntax = {{ .Inner | safeJS | printf "`%s`" }};
+
+  try {
+    var ig = new AntVInfographic.Infographic({
+      container: dom,
+      width: '{{ $width }}',
+      height: '{{ $height }}',
+    });
+    ig.render(syntax);
+  } catch (e) {
+    console.error('Infographic render error:', e);
+    dom.innerHTML = '<pre style="color: red;">Infographic Error: ' + e.message + '</pre>';
+  }
+})();
+</script>

@@ -1,0 +1,83 @@
+{{- /*
+  ECharts Shortcode for Hugo/Docsy
+
+  Usage:
+    {{< echarts >}}
+    { "xAxis": { "type": "category", "data": ["A", "B", "C"] }, "yAxis": { "type": "value" }, "series": [{ "data": [10, 20, 30], "type": "bar" }] }
+    {{< /echarts >}}
+
+    {{< echarts width="100%" height="500px" >}}
+    xAxis:
+      type: category
+      data: ["Mon", "Tue", "Wed", "Thu", "Fri"]
+    yAxis:
+      type: value
+    series:
+      - data: [150, 230, 224, 218, 135]
+        type: line
+    {{< /echarts >}}
+
+  Parameters:
+    width   - Chart width (default: 100%)
+    height  - Chart height (default: 400px)
+    theme   - ECharts theme: light, dark (default: auto based on page theme)
+
+  Notes:
+    - Supports both JSON and YAML format for chart options
+    - Automatically resizes on window resize
+    - Responds to light/dark theme switching
+*/ -}}
+
+{{- $width := .Get "width" | default "100%" -}}
+{{- $height := .Get "height" | default "400px" -}}
+{{- $theme := .Get "theme" -}}
+{{- $id := printf "echarts-%s" (md5 .Inner) -}}
+
+{{- /* Parse JSON or YAML options */ -}}
+{{- $options := .Inner | transform.Unmarshal -}}
+
+{{- /* Load ECharts JS only once per page */ -}}
+{{- if not (.Page.Scratch.Get "echarts-loaded") -}}
+  {{- .Page.Scratch.Set "echarts-loaded" true -}}
+<script src="/js/echarts.min.js"></script>
+{{- end -}}
+
+<div id="{{ $id }}" class="echarts-container" style="width: {{ $width }}; height: {{ $height }}; margin: 1em 0;"></div>
+
+<script>
+(function() {
+  var dom = document.getElementById('{{ $id }}');
+  if (!dom) return;
+
+  {{- /* Determine theme */ -}}
+  {{- if $theme }}
+  var theme = '{{ $theme }}';
+  {{- else }}
+  var theme = document.documentElement.getAttribute('data-bs-theme') === 'dark' ? 'dark' : null;
+  {{- end }}
+
+  var chart = echarts.init(dom, theme);
+  var options = {{ $options | jsonify | safeJS }};
+  chart.setOption(options);
+
+  // Handle window resize
+  window.addEventListener('resize', function() {
+    chart.resize();
+  });
+
+  {{- /* Handle theme switching (Docsy uses data-bs-theme attribute) */ -}}
+  {{- if not $theme }}
+  var observer = new MutationObserver(function(mutations) {
+    mutations.forEach(function(mutation) {
+      if (mutation.attributeName === 'data-bs-theme') {
+        var newTheme = document.documentElement.getAttribute('data-bs-theme') === 'dark' ? 'dark' : null;
+        chart.dispose();
+        chart = echarts.init(dom, newTheme);
+        chart.setOption(options);
+      }
+    });
+  });
+  observer.observe(document.documentElement, { attributes: true, attributeFilter: ['data-bs-theme'] });
+  {{- end }}
+})();
+</script>
