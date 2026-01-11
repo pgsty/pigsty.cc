@@ -108,7 +108,7 @@ Pigsty 提供三种监控模式，以适应不同的监控需求。
 ## 监控现有集群
 
 **如果目标DB节点可以被Pigsty所管理**（`ssh`可达且`sudo`可用），那么您可以使用 [`pgsql.yml`](/docs/pgsql/playbook#pgsqlyml) 剧本中的`pg_exporter`任务，
-使用与标准部署相同的的方式，在目标节点上部署监控组件：PG Exporter。您也可以使用该剧本的 `pgbouncer`，`pgbouncer_exporter` 任务在已有实例节点上部署连接池及其监控。此外，您也可以使用 [**`node.yml`**](/docs/node/playbook#nodeyml) 中的 `node_exporter`， `haproxy`， `vector` 部署主机监控，负载均衡，日志收集组件。从而获得与原生Pigsty数据库实例完全一致的使用体验。
+使用与标准部署相同的方式，在目标节点上部署监控组件：PG Exporter。您也可以使用该剧本的 `pgbouncer`，`pgbouncer_exporter` 任务在已有实例节点上部署连接池及其监控。此外，您也可以使用 [**`node.yml`**](/docs/node/playbook#nodeyml) 中的 `node_exporter`， `haproxy`， `vector` 部署主机监控，负载均衡，日志收集组件。从而获得与原生Pigsty数据库实例完全一致的使用体验。
 
 现有集群的定义方式与 Pigsty 所管理的集群定义方式完全相同，您只是选择性执行 `pgsql.yml` 剧本中的部分任务，而不是执行整个剧本。
 

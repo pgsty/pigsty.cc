@@ -417,7 +417,7 @@ node_packages: [openssh-server]   # packages to be installed current nodes with 
 
 参数名称： `node_repo_modules`， 类型： `string`， 层次：`C/A`
 
-需要在节点上添加的的软件源模块列表，形式同 [`repo_modules`](#repo_modules)。默认值为 `local`，即使用 [`repo_upstream`](#repo_upstream) 中 `local` 所指定的本地软件源。
+需要在节点上添加的软件源模块列表，形式同 [`repo_modules`](#repo_modules)。默认值为 `local`，即使用 [`repo_upstream`](#repo_upstream) 中 `local` 所指定的本地软件源。
 
 当 Pigsty 纳管节点时，会根据此参数的值来过滤 [`repo_upstream`](#repo_upstream) 中的条目，只有 `module` 字段与此参数值匹配的条目才会被添加到节点的软件源中。
 

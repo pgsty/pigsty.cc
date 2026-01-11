@@ -79,7 +79,7 @@ Ansible 在 macOS 上也可用。您可以使用 [**Homebrew**](https://brew.sh/
 
 ## 执行剧本
 
-Ansible 剧本（Playbook）是包含要执行的一系列任务定义的的可执行 YAML 文件。
+Ansible 剧本（Playbook）是包含要执行的一系列任务定义的可执行 YAML 文件。
 执行剧本需要您的环境变量 `PATH` 中有 `ansible-playbook` 可执行文件。
 运行 `./node.yml` 剧本本质上是执行 `ansible-playbook node.yml` 命令。
 

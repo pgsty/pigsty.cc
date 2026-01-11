@@ -91,7 +91,7 @@ AWS、Azure、GCP、Aliyun 等公有云厂商为初创企业提供了许多便�
 
 这正是 Pigsty要做的事 —— **一个更好的，开源免费的RDS替代**。让用户能够在任何地方（包括云服务器）上，一键拉起有比云RDS更好的数据库服务。
 
-Pigsty 是是对 PostgreSQL 的彻底补完，**更是对云数据库的辛辣嘲讽**。它本意是“猪圈”，但更是 Postgres In Great STYle 的缩写，即“**全盛状态下的 PostgreSQL**”。
+Pigsty 是对 PostgreSQL 的彻底补完，**更是对云数据库的辛辣嘲讽**。它本意是“猪圈”，但更是 Postgres In Great STYle 的缩写，即“**全盛状态下的 PostgreSQL**”。
 
 Pigsty 本身是一款完全开源免费的软件，我们纯粹靠提供 [**咨询与服务**](/docs/about/service) 来维持运营
 建设良好的系统也许跑个几年都不会遇到需要 ”兜底“ 的问题，但数据库的问题一但出现就不是小问题。

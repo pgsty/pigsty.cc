@@ -16,7 +16,7 @@ Redis的实体概念模型与 [PostgreSQL](/docs/concept/model/pgsql#实体概�
 
 REDIS模块与PGSQL模块核心的区别在于，Redis通常采用 **单机多实例** 部署，而不是 PostgreSQL 的 1:1 部署：一个物理/虚拟机节点上通常会部署 **多个** Redis实例，以充分利用多核CPU。因此 [配置](#配置) 和 [管理](#管理) Redis实例的方式与PGSQL稍有不同。
 
-在Pigsty管理的Redis中，节点完全隶属于集群，即目前尚不允许在一个节点上部署两个不同集群的Redis实例，但这并不影响您在在一个节点上部署多个独立 Redis 主从实例。当然这样也会有一些局限性，例如在这种情况下您就无法为同一个节点上的不同实例指定不同的密码了。
+在Pigsty管理的Redis中，节点完全隶属于集群，即目前尚不允许在一个节点上部署两个不同集群的Redis实例，但这并不影响您在一个节点上部署多个独立 Redis 主从实例。当然这样也会有一些局限性，例如在这种情况下您就无法为同一个节点上的不同实例指定不同的密码了。
 
 
 -------
@@ -51,7 +51,7 @@ Redis有三种不同的工作模式，由 [`redis_mode`](param#redis_mode) 参�
 
 * 一个1节点，一主一从的 Redis Standalone 集群：`redis-ms`
 * 一个1节点，3实例的Redis Sentinel集群：`redis-sentinel`
-* 一个2节点，6实例的的 Redis Cluster集群： `redis-cluster`
+* 一个2节点，6实例的 Redis Cluster集群： `redis-cluster`
 
 ```yaml
 redis-ms: # redis 经典主从集群

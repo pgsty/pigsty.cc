@@ -105,7 +105,7 @@ pg_monitor_password: DBUser.Monitor
 ./copy-progress  # 打印逻辑复制进度
 ./copy-diff      # 通过计数表快速比较 src 和 dst 的差异
 
-# 这些脚本将在在线迁移中运行，该迁移将停止 src 集群，复制序列号（逻辑复制不复制序列号！）
+# 这些脚本将在线迁移中运行，该迁移将停止 src 集群，复制序列号（逻辑复制不复制序列号！）
 ./copy-seq [n]   # 同步序列号，如果给出了 n，则会应用额外的偏移
 
 # 你必须根据你的访问方式（dns,vip,haproxy,pgbouncer等），将应用流量切换至新的集群！

@@ -86,7 +86,7 @@ bin/pgsql-add pg-test   # 创建 pg-test 集群
 
 ![pigsty-iac.jpg](/img/pigsty/iac.jpg)
 
-你可以使用不同的的实例角色，例如 [**主库**](/docs/pgsql/config#读写主库)（primary），[**从库**](/docs/pgsql/config#只读从库)（replica），[**离线从库**](/docs/pgsql/config#读写主库)（offline），[**延迟从库**](/docs/pgsql/config#延迟集群)（delayed），[**同步备库**](/docs/pgsql/config#同步备库)（sync standby）；
+你可以使用不同的实例角色，例如 [**主库**](/docs/pgsql/config#读写主库)（primary），[**从库**](/docs/pgsql/config#只读从库)（replica），[**离线从库**](/docs/pgsql/config#读写主库)（offline），[**延迟从库**](/docs/pgsql/config#延迟集群)（delayed），[**同步备库**](/docs/pgsql/config#同步备库)（sync standby）；
 以及不同的集群：例如 [**备份集群**](/docs/pgsql/config#备份集群)（Standby Cluster），[**Citus 集群**](/docs/pgsql/config#citus集群)，甚至是 [**Redis**](/docs/redis) / [**MinIO**](/docs/minio) / [**Etcd**](/docs/etcd) 集群
 
 

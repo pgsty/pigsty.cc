@@ -60,7 +60,7 @@ Pigsty 同时支持那些与 PostgreSQL 内核带有紧密联系的 <span class=
 - [**`SUPABASE`**](/docs/pgsql/kernel/supabase): Pigsty 允许用户在现有高可用 PostgreSQL 集群基础上，运行火爆的 Firebase 开源替代 —— Supabase ！
 - [**`GREENPLUM`**](/docs/pgsql/kernel/greenplum)：基于 PostgreSQL 12 内核的 MPP 数据仓库，目前仅提供监控支持与 RPM 安装支持。(**Beta**)
 - [**`CLOUDBERRY`**](/docs/pgsql/kernel/cloudberry)：Greenplum 闭源后原班开发者打造的开源分支，基于 PG 14 内核，目前仅提供RPM安装支持。(**Beta**)
-- [**`NEON`**](/docs/pgsql/kernel/neon)：带有数据库分支功能特性的的无服务器 PostgreSQL 内核 (**WIP**)
+- [**`NEON`**](/docs/pgsql/kernel/neon)：带有数据库分支功能特性的无服务器 PostgreSQL 内核 (**WIP**)
 
 
 ----------------
