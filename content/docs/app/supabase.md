@@ -102,7 +102,7 @@ Supabase 内置了一系列由他们自己开发维护的 PG 扩展插件，并�
 |---------------------------------------------------------|--------------------------------------------------------|
 | [`pg_graphql`](https://pgext.cloud/e/pg_graphql/)       | 提供PG内的GraphQL支持 (RUST)，Rust扩展，由PIGSTY提供                |
 | [`pg_jsonschema`](https://pgext.cloud/e/pg_jsonschema/) | 提供JSON Schema校验能力，Rust扩展，由PIGSTY提供                     |
-| [`wrappers`](https://pgext.cloud/e/wrappers/)           | Supabase提供的外部数据源包装器捆绑包,，Rust扩展，由PIGSTY提供               |
+| [`wrappers`](https://pgext.cloud/e/wrappers/)           | Supabase提供的外部数据源包装器捆绑包，Rust扩展，由PIGSTY提供               |
 | [`index_advisor`](https://pgext.cloud/e/index_advisor/) | 查询索引建议器，SQL扩展，由PIGSTY提供                                |
 | [`pg_net`](https://pgext.cloud/e/pg_net/)               | 用 SQL 进行异步非阻塞HTTP/HTTPS 请求的扩展 (supabase)，C扩展，由PIGSTY提供 |
 | [`vault`](https://pgext.cloud/e/supabase_vault/)        | 在 Vault 中存储加密凭证的扩展 (supabase)，C扩展，由PIGSTY提供            |

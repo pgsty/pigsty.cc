@@ -8,7 +8,7 @@ categories: [参考]
 
 ## 模块导航
 
-每个模块均包含若干预置剧本,以下表格列出了各模块及其包含的剧本数量与说明:
+每个模块均包含若干预置剧本，以下表格列出了各模块及其包含的剧本数量与说明：
 
 |                  模块                   | 数量 | 说明                |
 |:-------------------------------------:|:--:|-------------------|
@@ -35,12 +35,12 @@ categories: [参考]
 | [**`infra-rm.yml`**](/docs/infra/playbook#infra-rmyml)               | [**`INFRA`**](/docs/infra)   | 从 infra 节点移除基础设施组件                |
 | [**`cache.yml`**](/docs/infra/playbook#cacheyml)                     | [**`INFRA`**](/docs/infra)   | 从现有仓库创建离线安装包缓存                    |
 | [**`cert.yml`**](/docs/infra/playbook#certyml)                       | [**`INFRA`**](/docs/infra)   | 使用 Pigsty 自签名 CA 签发证书             |
-| [**`node.yml`**](/docs/node/playbook#nodeyml)                        | [**`NODE`**](/docs/node)     | 纳管节点,调整节点到期望状态                    |
+| [**`node.yml`**](/docs/node/playbook#nodeyml)                        | [**`NODE`**](/docs/node)     | 纳管节点，调整节点到期望状态                    |
 | [**`node-rm.yml`**](/docs/node/playbook#node-rmyml)                  | [**`NODE`**](/docs/node)     | 从 Pigsty 中移除纳管节点                  |
 | [**`etcd.yml`**](/docs/etcd/playbook#etcdyml)                        | [**`ETCD`**](/docs/etcd)     | 安装与配置 Etcd 集群                     |
 | [**`etcd-rm.yml`**](/docs/etcd/playbook#etcd-rmyml)                  | [**`ETCD`**](/docs/etcd)     | 移除 Etcd 集群或成员                     |
 | [**`pgsql.yml`**](/docs/pgsql/playbook#pgsqlyml)                     | [**`PGSQL`**](/docs/pgsql)   | 初始化 PostgreSQL 集群或添加新的从库          |
-| [**`pgsql-rm.yml`**](/docs/pgsql/playbook#pgsql-rmyml)               | [**`PGSQL`**](/docs/pgsql)   | 移除 PostgreSQL 集群,或移除某个实例          |
+| [**`pgsql-rm.yml`**](/docs/pgsql/playbook#pgsql-rmyml)               | [**`PGSQL`**](/docs/pgsql)   | 移除 PostgreSQL 集群，或移除某个实例          |
 | [**`pgsql-user.yml`**](/docs/pgsql/playbook#pgsql-useryml)           | [**`PGSQL`**](/docs/pgsql)   | 在现有的 PostgreSQL 集群中添加新的业务用户       |
 | [**`pgsql-db.yml`**](/docs/pgsql/playbook#pgsql-dbyml)               | [**`PGSQL`**](/docs/pgsql)   | 在现有的 PostgreSQL 集群中添加新的业务数据库      |
 | [**`pgsql-monitor.yml`**](/docs/pgsql/playbook#pgsql-monitoryml)     | [**`PGSQL`**](/docs/pgsql)   | 将远程 PostgreSQL 实例纳入监控中            |
@@ -61,7 +61,7 @@ categories: [参考]
 
 ### 保护机制
 
-多个模块提供了防误删保险,通过 `*_safeguard` 参数控制:
+多个模块提供了防误删保险，通过 `*_safeguard` 参数控制：
 
 - **PGSQL**: [**`pg_safeguard`**](/docs/pgsql/param#pg_safeguard) 参数用于防止误删 PostgreSQL 集群
 - **ETCD**: [**`etcd_safeguard`**](/docs/etcd/param#etcd_safeguard) 参数用于防止误删 Etcd 集群
@@ -69,7 +69,7 @@ categories: [参考]
 
 默认情况下，这些 safeguard 参数均未启用（未定义）。建议在生产环境中为已初始化的集群显式设置为 `true`。
 
-当保护开关设置为 `true` 时,对应的 `*-rm.yml` 剧本会立即中止执行,防止误删。可以通过命令行参数强制覆盖:
+当保护开关设置为 `true` 时，对应的 `*-rm.yml` 剧本会立即中止执行，防止误删。可以通过命令行参数强制覆盖：
 
 ```bash
 ./pgsql-rm.yml -l pg-test -e pg_safeguard=false
@@ -91,11 +91,11 @@ categories: [参考]
 
 ### 幂等性
 
-大部分剧本都是幂等的,可以重复执行。但需要注意:
+大部分剧本都是幂等的，可以重复执行。但需要注意：
 
 - `infra.yml` 默认**不会**清除数据，可安全重复执行。所有 clean 参数（`vmetrics_clean`、`vlogs_clean`、`vtraces_clean`、`grafana_clean`、`nginx_clean`）默认均为 `false`
 - 如需清除基础设施数据重建，需显式设置对应的 clean 参数为 `true`
-- 重复执行 `*-rm.yml` 删除剧本需格外小心,确保在正确的目标上执行
+- 重复执行 `*-rm.yml` 删除剧本需格外小心，确保在正确的目标上执行
 
 
 ### 任务标签

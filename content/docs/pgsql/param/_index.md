@@ -318,7 +318,7 @@ PostgreSQL 集群模式，默认值为 `pgsql`，即标准的 PostgreSQL 集群�
 
 参数名称： `pg_cluster`， 类型： `string`， 层次：`C`
 
-PostgreSQL 集群名称，必选的身份标识参数,没有默认值
+PostgreSQL 集群名称，必选的身份标识参数，没有默认值
 
 集群名将用作资源的命名空间。
 
