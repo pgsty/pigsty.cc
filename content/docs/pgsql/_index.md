@@ -1,8 +1,7 @@
 ---
 title: 模块：PGSQL
 weight: 1000
-description: "如何使用 Pigsty 部署并管理世界上最先进的开源关系型数据库 —— PostgreSQL，按需定制，开箱即用！
-"
+description: "如何使用 Pigsty 部署并管理世界上最先进的开源关系型数据库 —— PostgreSQL，按需定制，开箱即用！"
 icon: fas fa-database fa-bounce
 module: [PGSQL]
 categories: [参考]
@@ -29,7 +28,7 @@ sidebar_root_for: self
 - [数据库](/docs/pgsql/config/db)
 - [服务/接入](/docs/pgsql/service/)
 - [认证/HBA](/docs/pgsql/config/hba)
-- [访问控制](/docs/pgsql/security/)
+- [访问控制](/docs/concept/sec/ac/)
 - [管理预案](/docs/pgsql/admin)
 - [备份恢复](/docs/pgsql/backup/pitr)
 - [监控接入](/docs/pgsql/monitor)

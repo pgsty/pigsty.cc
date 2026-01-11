@@ -8,6 +8,7 @@ categories: [参考]
 ---
 
 Pigsty 是一个“配置驱动”的 PostgreSQL 平台：所有行为都来自 `~/pigsty/conf/*.yml` 清单与 [`PGSQL` 参数](/docs/pgsql/param) 的组合。
+
 只要写好配置，你就能在几分钟内复刻出一套包含实例、用户、数据库、访问控制、扩展与调优策略的定制集群。
 
 

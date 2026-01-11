@@ -1,6 +1,6 @@
 ---
 title: 用户管理
-weight: 1605
+weight: 20
 description: 用户管理：创建、修改、删除用户，管理角色成员关系，连接池用户配置
 icon: fa-solid fa-users
 module: [PGSQL]
@@ -21,7 +21,26 @@ categories: [任务]
 - [连接池用户](#连接池用户)
 - [操作速查](#操作速查)
 
-请注意，用户的所有属性都可以通过重新执行剧本进行修改，剧本是幂等的。
+
+----------------
+
+## 太长不看
+
+首先在 [**配置清单**](/docs/concept/iac/inventory) 中 [**定义用户**](/docs/pgsql/config/user)，然后使用 `bin/pgsql-user <cls> <username>` 创建或修改用户。
+
+```yaml
+pg-meta:
+  hosts: { 10.10.10.10: { pg_seq: 1, pg_role: primary } }
+  vars:
+    pg_cluster: pg-meta
+    pg_users:
+      - { name: your_user ,password: 'your_password' }
+```
+
+```bash
+bin/pgsql-user pg-meta your_user    # 等效为 ./pgsql-user.yml -l pg-meta -e username=your_user
+```
+
 
 
 ----------------
@@ -721,4 +740,4 @@ ORDER BY rolvaliduntil;
 
 关于用户定义的完整参数参考，请参考 [用户配置](/docs/pgsql/config/user) 一节。
 
-关于用户的访问权限，请参考 [ACL：角色权限](/docs/pgsql/security/#默认角色) 一节。
+关于用户的访问权限，请参考 [ACL：角色权限](/docs/concept/sec/ac/#默认角色) 一节。

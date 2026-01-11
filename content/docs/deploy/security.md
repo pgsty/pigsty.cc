@@ -9,9 +9,9 @@ categories: [教程]
 
 Pigsty 的默认配置已经足以覆盖绝大多数场景对于安全的需求。
 
-Pigsty 已经提供了开箱即用的[认证](/docs/pgsql/config/hba)与[访问控制](/docs/pgsql/security/)模型，对于绝大多数场景已经足够安全。
+Pigsty 已经提供了开箱即用的[认证](/docs/pgsql/config/hba)与[访问控制](/docs/concept/sec/ac/)模型，对于绝大多数场景已经足够安全。
 
-[![pigsty-acl.jpg](/img/pigsty/acl.jpg)](/docs/pgsql/security/)
+[![pigsty-acl.jpg](/img/pigsty/acl.jpg)](/docs/concept/sec/ac/)
 
 如果您希望进一步加固系统的安全性，那么以下建议供您参考：
 

@@ -9,7 +9,7 @@ categories: [参考]
 
 > Pigsty 中基于主机的身份认证 HBA（Host-Based Authentication）详解。
 
-认证是 [访问控制](/docs/pgsql/security/) 与 [权限系统](/docs/pgsql/security/#权限系统) 的基石，PostgreSQL拥有多种[认证](https://www.postgresql.org/docs/current/client-authentication.html)方法。
+认证是 [访问控制](/docs/concept/sec/ac/) 与 [权限系统](/docs/concept/sec/ac/#权限系统) 的基石，PostgreSQL拥有多种[认证](https://www.postgresql.org/docs/current/client-authentication.html)方法。
 
 这里主要介绍 HBA：Host Based Authentication，HBA规则定义了哪些用户能够通过哪些方式从哪些地方访问哪些数据库。
 

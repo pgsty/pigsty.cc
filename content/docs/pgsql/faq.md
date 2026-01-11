@@ -14,7 +14,7 @@ categories: [参考]
 
 从 Pigsty v4.0 开始，使用 `pg` 管理别名管理全局的 Patroni / PostgreSQL 集群的权限被收紧到了管理节点上的管理员分组（`admin`）。
 
-[**`node.yml`**](/docs/node/playbook#nodeyml) 剧本创建的管理员（`dba`）默认具有此权限，而当前用户如果想要获得这个权限，需要你显式地将该用户加入到 `admin` 组中。
+[**`node.yml`**](/docs/node/playbook#nodeyml) 剧本创建的管理员（`dba`）默认具有此权限，而其他用户如果想要获得这个权限，需要你显式地将该用户加入到 `admin` 组中。
 
 ```bash
 sudo usermod -aG admin <username>
@@ -77,27 +77,6 @@ sudo usermod -aG admin <username>
 
 
 
------------------------
-
-## 如何为 PostgreSQL 启用大页/HugePage？
-
-> 使用 `node_hugepage_count` 和 `node_hugepage_ratio` 或 `/pg/bin/pg-tune-hugepage`
-
-如果你计划启用大页（HugePage），请考虑使用 [`node_hugepage_count`](/docs/node/param#node_hugepage_count) 和 [`node_hugepage_ratio`](/docs/node/param#node_hugepage_ratio)，并配合 `./node.yml -t node_tune` 进行应用。
-
-大页对于数据库来说有利有弊，利是内存是专门管理的，不用担心被挪用，降低数据库 OOM 风险。缺点是某些场景下可能对性能由负面影响。
-
-在 PostgreSQL 启动前，您需要分配 **足够多的** 大页，浪费的部分可以使用 `pg-tune-hugepage` 脚本对其进行回收，不过此脚本仅 PostgreSQL 15+ 可用。
-
-如果你的 PostgreSQL 已经在运行，你可以使用下面的办法启动大页（仅 PG15+ 可用）：
-
-```bash
-sync; echo 3 > /proc/sys/vm/drop_caches   # 刷盘，释放系统缓存（请做好数据库性能受到冲击的准备）
-sudo /pg/bin/pg-tune-hugepage             # 将 nr_hugepages 写入 /etc/sysctl.d/hugepage.conf
-pg restart <cls>                          # 重启 postgres 以使用 hugepage
-```
-
-
 
 
 
@@ -108,7 +87,7 @@ pg restart <cls>                          # 重启 postgres 以使用 hugepage
 
 > 使用 `crit.yml` 参数模板，设置 `pg_rpo` 为 `0`，或[配置集群](/docs/pgsql/admin#配置集群)为同步提交模式。
 
-考虑使用 [同步备库](/docs/pgsql/config#同步备库) 和 [法定多数提交](/docs/pgsql/config#法定人数提交) 来确保故障转移过程中的零数据丢失。
+考虑使用 [**同步备库**](/docs/pgsql/config#同步备库) 和 [**法定多数提交**](/docs/pgsql/config#法定人数提交) 来确保故障转移过程中的零数据丢失。
 
 更多细节，可以参考 [安全考量 - 可用性](/docs/setup/security#可用性) 的相关介绍。
 
@@ -125,7 +104,9 @@ pg restart <cls>                          # 重启 postgres 以使用 hugepage
 
 默认情况下，[`pg_dummy_filesize`](/docs/pgsql/param#pg_dummy_filesize) 设置为 `64MB`。在生产环境中，建议将其增加到 `8GB` 或更大。
 
-它将被放置在 PGSQL 主数据磁盘上的 `/pg/dummy` 路径下。你可以删除该文件以释放一些紧急空间：至少可以让你在该节点上运行一些 shell 脚本来进一步回收其他空间。
+它将被放置在 PGSQL 主数据磁盘上的 `/pg/dummy` 路径下。你可以删除该文件以释放一些紧急空间：
+
+至少可以让你在该节点上运行一些 shell 脚本来进一步回收其他空间（例如日志/WAL，过时数据，WAL归档与备份）。
 
 
 

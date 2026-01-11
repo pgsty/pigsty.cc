@@ -3,9 +3,9 @@ title: Citus 集群部署
 weight: 2003
 date: 2025-01-11
 description: 如何部署 Citus 高可用分布式集群？
-icon: fa-solid fa-arrow-right-from-bracket
+icon: fa-solid fa-hexagon-nodes
 module: [PGSQL]
-categories: [任务, 教程, 概念]
+categories: [教程]
 ---
 
 Citus 是一个 PostgreSQL 扩展，可以将 PostgreSQL 原地转换为一个分布式数据库，并实现在多个节点上水平扩展，以处理大量数据和大量查询。

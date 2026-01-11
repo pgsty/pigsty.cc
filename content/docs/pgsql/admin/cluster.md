@@ -1,6 +1,6 @@
 ---
 title: 集群管理
-weight: 1604
+weight: 10
 description: 创建/销毁 PostgreSQL 集群，以及对现有集群进行扩容与缩容的标准操作指南。
 icon: fa-solid fa-circle-up
 module: [PGSQL]
@@ -17,17 +17,13 @@ categories: [任务]
 要创建一个新的Postgres集群，请首先在配置清单中定义，然后进行初始化：
 
 ```bash
-bin/node-add <cls>                # 为集群 <cls> 初始化节点                  # ./node.yml  -l <cls> 
-bin/pgsql-add <cls>               # 初始化集群 <cls> 的pgsql实例             # ./pgsql.yml -l <cls>
+bin/node-add <cls>    # 为集群 <cls> 初始化节点       # ./node.yml  -l <cls> 
+bin/pgsql-add <cls>   # 初始化集群 <cls> 的pgsql实例  # ./pgsql.yml -l <cls>
 ```
 
 > 请注意，PGSQL 模块需要在 Pigsty 纳管的节点上安装，请先使用 `bin/node-add` 纳管节点。
 
-<details><summary>示例：创建集群</summary>
-
-[![asciicast](https://asciinema.org/a/568810.svg)](https://asciinema.org/a/568810)
-
-</details>
+**示例：创建集群**
 
 
 

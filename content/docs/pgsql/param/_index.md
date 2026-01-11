@@ -478,7 +478,7 @@ pg_exporters: # list all remote instances here, alloc a unique unused local port
 * PostgreSQL集群/实例特定的HBA规则： [`pg_default_services`](#pg_default_services)
 * Pgbouncer连接池特定HBA规则： [`pgb_hba_rules`](#pgb_hba_rules)
 
-[默认](/docs/pgsql/security/#默认用户)的数据库用户及其凭据，强烈建议在生产环境中修改这些用户的密码。
+[默认](/docs/concept/sec/ac/#默认用户)的数据库用户及其凭据，强烈建议在生产环境中修改这些用户的密码。
 
 * PG管理员用户：[`pg_admin_username`](#pg_admin_username) / [`pg_admin_password`](#pg_admin_password)
 * PG复制用户： [`pg_replication_username`](#pg_replication_username) / [`pg_replication_password`](#pg_replication_password)
@@ -1603,9 +1603,9 @@ pgsodium 获取密钥脚本的路径，默认使用 Pigsty 模板中的 `pgsodiu
 
 如果说 [`PG_BOOTSTRAP`](#pg_bootstrap) 是创建一个新的集群，那么 PG_PROVISION 就是在集群中创建默认的对象，包括：
 
-* [默认角色](/docs/pgsql/security/#默认角色)
-* [默认用户](/docs/pgsql/security/#默认用户)
-* [默认权限](/docs/pgsql/security/#默认权限)
+* [默认角色](/docs/concept/sec/ac/#默认角色)
+* [默认用户](/docs/concept/sec/ac/#默认用户)
+* [默认权限](/docs/concept/sec/ac/#默认权限)
 * [默认HBA规则](/docs/pgsql/config/hba#默认hba)
 * 默认模式
 * 默认扩展
@@ -1718,7 +1718,7 @@ pgb_default_hba_rules:            # pgbouncer 默认 HBA 规则集，按 order �
 
 Postgres 集群中的默认角色和用户。
 
-Pigsty有一个内置的角色系统，请查看[PGSQL访问控制：角色系统](/docs/pgsql/security/#角色系统)了解详情。
+Pigsty有一个内置的角色系统，请查看[PGSQL访问控制：角色系统](/docs/concept/sec/ac/#角色系统)了解详情。
 
 ```yaml
 pg_default_roles:                 # postgres集群中的默认角色和用户
@@ -1762,7 +1762,7 @@ pg_default_privileges:            # 管理员用户创建时的默认权限
   - GRANT CREATE     ON SCHEMAS   TO dbrole_admin
 ```
 
-Pigsty 基于默认角色系统提供了相应的默认权限设置，请查看[PGSQL访问控制：权限](/docs/pgsql/security/#默认权限)了解详情。
+Pigsty 基于默认角色系统提供了相应的默认权限设置，请查看[PGSQL访问控制：权限](/docs/concept/sec/ac/#默认权限)了解详情。
 
 
 

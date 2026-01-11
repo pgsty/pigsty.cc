@@ -683,4 +683,4 @@ ALTER DATABASE "myapp" SET "statement_timeout" = '30s';
 
 关于数据库管理操作，请参考 [数据库管理](/docs/pgsql/admin/db) 一节。
 
-关于数据库的访问权限，请参考 [ACL：数据库权限](/docs/pgsql/security/#数据库权限) 一节。
+关于数据库的访问权限，请参考 [ACL：数据库权限](/docs/concept/sec/ac/#数据库权限) 一节。

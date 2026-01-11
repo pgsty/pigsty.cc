@@ -1,28 +1,29 @@
 ---
-title: HBA 管理
-weight: 1602
+title: 管理 PostgreSQL HBA 认证规则
+linkTitle: HBA 管理
+weight: 50
 description: PostgreSQL 与 Pgbouncer HBA 规则的日常管理操作：刷新、重载、验证与故障排查。
 icon: fa-solid fa-key
 module: [PGSQL]
-categories: [管理]
+categories: [任务]
 ---
 
 > HBA 规则的变更需要重新渲染配置文件并重载服务。本文介绍 HBA 规则的日常管理操作。
 
+--------
 
-----------------
+## 速查手册
 
-## 快速参考
-
-| 操作             | 命令                                                       |
-|----------------|----------------------------------------------------------|
-| 刷新集群 HBA       | `bin/pgsql-hba <cls>`                                    |
-| 刷新特定实例         | `bin/pgsql-hba <cls> <ip>...`                            |
-| 仅刷新 PostgreSQL | `./pgsql.yml -l <cls> -t pg_hba,pg_reload`               |
-| 仅刷新 Pgbouncer  | `./pgsql.yml -l <cls> -t pgbouncer_hba,pgbouncer_reload` |
-| 查看当前 HBA       | `psql -c "TABLE pg_hba_file_rules"`                      |
-| 验证 HBA 配置      | `psql -c "SELECT pg_reload_conf()"`                      |
-
+| 操作              | 命令                                                       |
+|-----------------|----------------------------------------------------------|
+| 刷新集群 HBA        | `bin/pgsql-hba <cls>`                                    |
+| 刷新特定实例          | `bin/pgsql-hba <cls> <ip>...`                            |
+| 仅刷新 PostgreSQL  | `./pgsql.yml -l <cls> -t pg_hba,pg_reload`               |
+| 仅刷新 Pgbouncer   | `./pgsql.yml -l <cls> -t pgbouncer_hba,pgbouncer_reload` |
+| 查看当前 HBA (BASH) | `cat /pg/data/pg_hba.conf`                               |
+| 查看当前 HBA (SQL)  | `psql -c "TABLE pg_hba_file_rules"`                      |
+| 重载 HBA 配置       | `psql -c "SELECT pg_reload_conf()"`                      |
+{.full-width}
 
 ----------------
 

@@ -1,8 +1,9 @@
 ---
-title: 实例恢复
+title: 利用 xfs 实现实例 Fork
+linkTitle: Fork 实例
 weight: 1708
 description: 在同一台机器上克隆实例并执行时间点恢复
-icon: fa-solid fa-rotate-left
+icon: fa-solid fa-code-fork
 categories: [任务]
 ---
 

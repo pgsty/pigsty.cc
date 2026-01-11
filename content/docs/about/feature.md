@@ -17,7 +17,7 @@ categories: [参考]
 ## 价值主张
 
 - [**可扩展性**](/img/pigsty/ecosystem.png)： 强力[**扩展**](/docs/ref/extension)开箱即用：深度整合 **PostGIS**, **TimescaleDB**, **Citus**, **PGVector** 等 [**440**](https://pgext.cloud/zh/list) 插件与 Oracle / SQL Server 的 [**兼容内核**](/docs/pgsql/kernel)。
-- [**可靠性**](/img/pigsty/arch.png)：快速创建[**高可用**](/docs/concept/ha/)、故障自愈的 [**PostgreSQL**](/docs/pgsql) 集群，自动预置的[**时间点恢复**](/docs/concept/pitr/)、[**访问控制**](/docs/pgsql/security/)、自签名 [**CA**](/docs/concept/sec/ca) 与 [**SSL**](/docs/setup/security/)，确保数据坚如磐石。
+- [**可靠性**](/img/pigsty/arch.png)：快速创建[**高可用**](/docs/concept/ha/)、故障自愈的 [**PostgreSQL**](/docs/pgsql) 集群，自动预置的[**时间点恢复**](/docs/concept/pitr/)、[**访问控制**](/docs/concept/sec/ac/)、自签名 [**CA**](/docs/concept/sec/ca) 与 [**SSL**](/docs/setup/security/)，确保数据坚如磐石。
 - [**可观测性**](/img/pigsty/dashboard.jpg)： 基于 [**Prometheus**](/docs/infra#prometheus) & [**Grafana**](/docs/infra#grafana) 现代可观测性技术栈，提供惊艳的监控最佳实践。模块化设计，可独立使用：[**画廊**](https://github.com/pgsty/pigsty/wiki/Gallery) & [**Demo**](https://demo.pigsty.cc)。
 - [**可用性**](/img/pigsty/ha.png)：交付稳定可靠，自动路由，事务池化、读写分离的高性能数据库[**服务**](/docs/pgsql/service/#默认服务)，通过 HAProxy，Pgbouncer，VIP 提供灵活的[**接入**](/docs/pgsql/service/#接入服务)模式。
 - [**可维护性**](/img/pigsty/iac.jpg)：[**简单易用**](/docs/setup/install)，[**基础设施即代码**](/docs/pgsql/config)，[**管理SOP预案**](/docs/pgsql/admin/)，自动调参，本地软件仓库，[**Vagrant**](/docs/deploy/vagrant) [**沙箱**](/docs/deploy/sandbox) 与 [**Terraform**](/docs/deploy/terraform) 模板，不停机[**迁移**](/docs/pgsql/migration)方案。
@@ -111,7 +111,7 @@ Pigsty 中的组件被抽象可独立部署的 [**模块**](/docs/ref/module/)�
 不仅如此，你还可以使用 [**`FerretDB`**](/docs/ferret/) 提供 MongoDB 兼容性，使用 [**`Supabase`**](/docs/pgsql/kernel/supabase) 提供 Firebase 兼容，并使用 [**`PolarDB`**](/docs/pgsql/kernel/polardb) 满足国产化合规要求。
 更多专业版/试点模块将不断引入 Pigsty，如 [**`GPSQL`**](/docs/pgsql/kernel/greenplum)，[KAFKA](/docs/pilot/kafka/)，[DUCKDB](/docs/pilot/duckdb/)，[VICTORIA](/docs/pilot/victoria/)，[TIGERBEETLE](/docs/pilot/tigerbeetle/)，[KUBERNETES](/docs/pilot/kube/)，[CONSUL](/docs/pilot/consul/)，[JUPYTER](/docs/pilot/jupyter/)，[GREENPLUM](/docs/pgsql/kernel/greenplum/)，[CLOUDBERRY](/docs/pgsql/kernel/cloudberry/)，[MYSQL](/docs/pilot/mysql/), …
 
-[![pigsty-sandbox(/img/pigsty/sandbox.png)](/docs/ref/module/)
+[![pigsty-sandbox](/img/pigsty/sandbox.png)](/docs/ref/module/)
 
 
 
@@ -183,7 +183,7 @@ Pigsty 使用声明式的接口对外提供服务，将系统的可控制性拔�
 
 Pigsty 会创建自签名的 CA （或使用您提供的 CA）签发证书，加密网络通信。需要保护的敏感管理页面与API端点都受到密码保护。
 数据库备份使用 AES 算法加密，数据库密码使用 scram-sha-256 算法加密，并提供插件强制执行密码强度策略。
-Pigsty 提供了一套开箱即用，简单易用，便于扩展的 [**ACL**](/docs/pgsql/security/) 模型，提供读/写/管理/ETL 的权限区分，并带有遵循最小权限原则的 [**HBA**](/docs/pgsql/config/hba) 规则集，通过多重防护确保系统机密性。
+Pigsty 提供了一套开箱即用，简单易用，便于扩展的 [**ACL**](/docs/concept/sec/ac/) 模型，提供读/写/管理/ETL 的权限区分，并带有遵循最小权限原则的 [**HBA**](/docs/pgsql/config/hba) 规则集，通过多重防护确保系统机密性。
 
 Pigsty 默认启用数据库校验和避免静默数据腐坏，通过从库副本提供坏块兜底。提供 CRIT 数据零丢失配置模板，使用 watchdog 确保为高可用 Fencing 兜底。
 您可以通过 audit 插件审计数据库操作，系统与数据库日志全部收集备查，以满足合规要求。
