@@ -643,7 +643,7 @@ node_kernel_modules: [ softdog, ip_vs, ip_vs_rr, ip_vs_wrr, ip_vs_sh ]
 * `olap`：常规OLAP模板，优化吞吐量
 * `crit`：核心金融业务模板，优化脏页数量
 
-通常，数据库的调优模板 [`pg_conf`](/docs/pgsql/param#pg_conf)应当与机器调优模板配套。
+通常，数据库的调优模板 [`pg_conf`](/docs/pgsql/param#pg_conf) 应当与机器调优模板配套。
 
 
 

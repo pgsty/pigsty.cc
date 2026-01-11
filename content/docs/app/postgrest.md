@@ -11,7 +11,7 @@ categories: [参考]
 
 ## PostgREST
 
-[PostgREST](https://postgrest.org/en/stable/index.html)是一个自动根据 PostgreSQL 数据库模式生成 REST API的二进制组件。
+[PostgREST](https://postgrest.org/en/stable/index.html) 是一个自动根据 PostgreSQL 数据库模式生成 REST API的二进制组件。
 
 例如，以下命令将使用docker拉起 postgrest （本地 8884 端口，使用默认管理员用户，暴露Pigsty CMDB模式）
 

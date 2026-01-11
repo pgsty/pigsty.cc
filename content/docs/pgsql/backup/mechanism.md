@@ -145,7 +145,7 @@ node_crontab:  # 周一凌晨1点全量备份，工作日增量备份
 - tmp：`/pg/spool` 用作 pgbackrest 的临时 spool 目录
 - data：`/pg/backup` 用于存储数据（当选择默认的 `local` 文件系统备份仓库时）
 
-此外，在 [PITR 恢复](/docs/pgsql/backup/restore)过程中，Pigsty 会创建临时的 `/pg/conf/pitr.conf` pgbackrest 配置文件，
+此外，在 [PITR 恢复](/docs/pgsql/backup/restore) 过程中，Pigsty 会创建临时的 `/pg/conf/pitr.conf` pgbackrest 配置文件，
 并将 postgres 恢复日志写入 `/pg/tmp/recovery.log` 文件。
 
 ### 监控

@@ -370,7 +370,7 @@ PGSQL 实例的角色，可以是：`primary`、`replica`、`standby` 或 `offli
 
 参数名称： `pg_upstream`， 类型： `ip`， 层次：`I`
 
-[备份集群](/docs/pgsql/config#备份集群)或级联从库的上游实例 IP 地址。
+[备份集群](/docs/pgsql/config#备份集群) 或级联从库的上游实例 IP 地址。
 
 在集群的 `primary` 实例上设置 `pg_upstream` ，表示此集群是一个 [备份集群](/docs/pgsql/config#备份集群)，该实例将作为 `standby leader`，从上游集群接收并应用更改。
 
@@ -489,7 +489,7 @@ pg_exporters: # list all remote instances here, alloc a unique unused local port
 * PostgreSQL集群/实例特定的HBA规则： [`pg_default_services`](#pg_default_services)
 * Pgbouncer连接池特定HBA规则： [`pgb_hba_rules`](#pgb_hba_rules)
 
-[默认](/docs/concept/sec/ac/#默认用户)的数据库用户及其凭据，强烈建议在生产环境中修改这些用户的密码。
+[默认](/docs/concept/sec/ac/#默认用户) 的数据库用户及其凭据，强烈建议在生产环境中修改这些用户的密码。
 
 * PG管理员用户：[`pg_admin_username`](#pg_admin_username) / [`pg_admin_password`](#pg_admin_password)
 * PG复制用户： [`pg_replication_username`](#pg_replication_username) / [`pg_replication_password`](#pg_replication_password)
@@ -1861,7 +1861,7 @@ pg_default_hba_rules:             # postgres default host-based authentication r
 
 默认值为常见场景提供了足够的安全级别，请查看 [PGSQL身份验证](/docs/pgsql/config/hba) 了解详情。
 
-本参数为 [HBA](/docs/pgsql/config/hba#define-hba)规则对象组成的数组，在形式上与 [`pg_hba_rules`](#pg_hba_rules) 完全一致。
+本参数为 [HBA](/docs/pgsql/config/hba#define-hba) 规则对象组成的数组，在形式上与 [`pg_hba_rules`](#pg_hba_rules) 完全一致。
 建议在全局配置统一的 [`pg_default_hba_rules`](#pg_default_hba_rules)，针对特定集群使用 [`pg_hba_rules`](#pg_hba_rules) 进行额外定制。两个参数中的规则都会依次应用，后者优先级更高。
 
 

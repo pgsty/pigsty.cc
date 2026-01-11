@@ -238,7 +238,7 @@ bin/pgsql-db <cls> <dbname>       # ./pgsql-db.yml -l <cls> -e dbname=<dbname>
 
 ## 重载服务
 
-[服务](/docs/pgsql/service/)是 PostgreSQL 对外提供能力的访问点（PGURL可达），由主机节点上的 HAProxy 对外暴露。
+[服务](/docs/pgsql/service/) 是 PostgreSQL 对外提供能力的访问点（PGURL可达），由主机节点上的 HAProxy 对外暴露。
 
 当集群成员发生变化时使用此任务，例如：[添加](#添加实例)／[移除](#移除实例) 副本，[主从切换](#主动切换)／故障转移 / 暴露新服务，或更新现有服务的配置（例如，LB权重）
 
@@ -606,7 +606,7 @@ pg-pitr --backup=latest                 # 恢复到最新的备份集
 pg-pitr --backup=20221108-105325        # 恢复到特定备份集，备份集可以使用 pgbackrest info 列出
 ```
 
-该命令会输出操作手册，请按照说明进行操作。查看 [**备份恢复-PITR**](/docs/pgsql/backup/pitr#恢复)获取详细信息。
+该命令会输出操作手册，请按照说明进行操作。查看 [**备份恢复-PITR**](/docs/pgsql/backup/pitr#恢复) 获取详细信息。
 
 <details><summary>示例：使用原始pgBackRest命令进行 PITR</summary>
 

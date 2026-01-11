@@ -21,7 +21,7 @@ categories: [参考]
 - [**可观测性**](/img/pigsty/dashboard.jpg)： 基于 [**Prometheus**](/docs/infra#prometheus) & [**Grafana**](/docs/infra#grafana) 现代可观测性技术栈，提供惊艳的监控最佳实践。模块化设计，可独立使用：[**画廊**](https://github.com/pgsty/pigsty/wiki/Gallery) & [**Demo**](https://demo.pigsty.cc)。
 - [**可用性**](/img/pigsty/ha.png)：交付稳定可靠，自动路由，事务池化、读写分离的高性能数据库 [**服务**](/docs/pgsql/service/#默认服务)，通过 HAProxy，Pgbouncer，VIP 提供灵活的 [**接入**](/docs/pgsql/service/#接入服务) 模式。
 - [**可维护性**](/img/pigsty/iac.jpg)：[**简单易用**](/docs/setup/install)，[**基础设施即代码**](/docs/pgsql/config)，[**管理SOP预案**](/docs/pgsql/admin/)，自动调参，本地软件仓库，[**Vagrant**](/docs/deploy/vagrant) [**沙箱**](/docs/deploy/sandbox) 与 [**Terraform**](/docs/deploy/terraform) 模板，不停机 [**迁移**](/docs/pgsql/migration) 方案。
-- [**可组合性**](/img/pigsty/sandbox.png)：[**模块化**](/docs/concept/arch#模块)架构设计，可复用的 [**Infra**](/docs/infra)，多样的可选 [**模块**](/docs/ref/module/)：[**Redis**](/docs/redis), [**MinIO**](/docs/minio), [**ETCD**](/docs/etcd), [**FerretDB**](/docs/ferret), [**DuckDB**](https://github.com/pgsty/pigsty/tree/master/app/duckdb), [**Docker**](/docs/app/), [**Supabase**](https://github.com/pgsty/pigsty/tree/master/app/supabase)。
+- [**可组合性**](/img/pigsty/sandbox.png)：[**模块化**](/docs/concept/arch#模块) 架构设计，可复用的 [**Infra**](/docs/infra)，多样的可选 [**模块**](/docs/ref/module/)：[**Redis**](/docs/redis), [**MinIO**](/docs/minio), [**ETCD**](/docs/etcd), [**FerretDB**](/docs/ferret), [**DuckDB**](https://github.com/pgsty/pigsty/tree/master/app/duckdb), [**Docker**](/docs/app/), [**Supabase**](https://github.com/pgsty/pigsty/tree/master/app/supabase)。
 
 ![](/img/pigsty/banner.png)
 

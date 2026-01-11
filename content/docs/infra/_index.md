@@ -35,7 +35,7 @@ categories: [参考]
 
 
 
-在 Pigsty 中，[PGSQL](/docs/pgsql) 模块会使用到 [**INFRA节点**](/docs/concept/arch/node#infra节点)上的一些服务，具体来说包括：
+在 Pigsty 中，[PGSQL](/docs/pgsql) 模块会使用到 [**INFRA节点**](/docs/concept/arch/node#infra节点) 上的一些服务，具体来说包括：
 
 * 数据库集群/主机节点的域名，依赖 INFRA 节点的 DNSMASQ **解析**。
 * 在数据库节点软件上**安装**，需要用到 INFRA 节点上的 Nginx 托管的本地 yum/apt 软件源。
@@ -341,7 +341,7 @@ INFRA模块剧本 [`infra-rm.yml`](https://github.com/pgsty/pigsty/blob/main/inf
 
 ### `deploy.yml`
 
-INFRA模块剧本 [`deploy.yml`](https://github.com/pgsty/pigsty/blob/main/deploy.yml)用于在**所有节点**上一次性完整安装 Pigsty
+INFRA模块剧本 [`deploy.yml`](https://github.com/pgsty/pigsty/blob/main/deploy.yml) 用于在**所有节点**上一次性完整安装 Pigsty
 
 该剧本在 [剧本：一次性安装](/docs/setup/playbook#部署剧本) 中有更详细的介绍。
 

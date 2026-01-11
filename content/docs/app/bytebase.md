@@ -10,7 +10,7 @@ categories: [任务]
 
 ## ByteBase
 
-[ByteBase](https://bytebase.com/)是一个进行数据库模式变更的工具，以下命令将在元节点 8887 端口启动一个ByteBase。
+[ByteBase](https://bytebase.com/) 是一个进行数据库模式变更的工具，以下命令将在元节点 8887 端口启动一个ByteBase。
 
 ```
 mkdir -p /data/bytebase/data;

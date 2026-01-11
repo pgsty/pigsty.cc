@@ -9,7 +9,7 @@ categories: [参考]
 
 > 分离读写操作，正确路由流量，稳定可靠地交付 PostgreSQL 集群提供的能力。
 
-[服务](#服务概述)是一种抽象：它是数据库集群对外提供能力的形式，并封装了底层集群的细节。
+[服务](#服务概述) 是一种抽象：它是数据库集群对外提供能力的形式，并封装了底层集群的细节。
 
 服务对于生产环境中的 [稳定接入](#接入服务) 至关重要，在 [高可用](/docs/concept/ha) 集群自动故障时方显其价值，[单机用户](#单机用户) 通常不需要操心这个概念。
 
@@ -82,7 +82,7 @@ psql postgres://dbuser_dba:DBUser.DBA@pg-meta:5436/meta     # pg-meta-default : 
 psql postgres://dbuser_stats:DBUser.Stats@pg-meta:5438/meta # pg-meta-offline : 通过离线的 postgres(5432) 直接连接
 ```
 
-从示例集群 [架构图](/docs/concept/arch/pgsql)上可以看出这四种服务的工作方式：
+从示例集群 [架构图](/docs/concept/arch/pgsql) 上可以看出这四种服务的工作方式：
 
 [![pigsty-ha.png](/img/pigsty/ha.png)](/docs/concept/ha)
 

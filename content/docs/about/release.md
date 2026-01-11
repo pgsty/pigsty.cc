@@ -1808,7 +1808,7 @@ c5b2b1a4867eee624e57aed58ac65a80  pigsty-pkg-v2.5.0.ubuntu22.x86_64.tgz
 ## v2.4.1
 
 - [Supabase](https://supabase.com/) 支持：开源的 Firebase 替代，现可使用 Pigsty 本地托管的 PostgreSQL 实例作为数据存储。
-- [PostgresML](https://postgresml.org/)支持：使用SQL完成经典机器学习算法，训练、微调、调用大语言模型（hugging face）。
+- [PostgresML](https://postgresml.org/) 支持：使用SQL完成经典机器学习算法，训练、微调、调用大语言模型（hugging face）。
 - [FerretDB](https://github.com/FerretDB/FerretDB) v1.10 支持，在 PostgreSQL 上提供 MongoDB API与协议兼容能力。
 - GraphQL扩展: [`pg_graphql`](https://github.com/supabase/pg_graphql)：从现有模式中反射出 GraphQL 模式，提供库内 GraphQL 查询能力。
 - JWT支持扩展：[`pgjwt`](https://github.com/michelp/pgjwt) 允许您使用 SQL 验证签发 JWT (JSON Web Tokens)。
@@ -1828,7 +1828,7 @@ c5b2b1a4867eee624e57aed58ac65a80  pigsty-pkg-v2.5.0.ubuntu22.x86_64.tgz
 **亮点特性**
 
 - [Supabase](https://supabase.com/) 支持：开源的 Firebase 替代，现可使用 Pigsty 托管的 PostgreSQL 实例存储数据。
-- [PostgresML](https://postgresml.org/)支持：在 PostgreSQL 运行各类模型（hugging face），向量操作，经典机器学习算法。
+- [PostgresML](https://postgresml.org/) 支持：在 PostgreSQL 运行各类模型（hugging face），向量操作，经典机器学习算法。
 - GraphQL支持扩展: [`pg_graphql`](https://github.com/supabase/pg_graphql)：从现有模式中反射出 GraphQL 模式，提供库内 GraphQL 查询能力。
 - 异步HTTP客户端扩展： [`pg_net`](https://github.com/supabase/pg_net) 允许您使用 SQL 发起非阻塞的 HTTP/HTTPS 请求
 - JWT支持扩展：[`pgjwt`](https://github.com/michelp/pgjwt) 允许您使用 SQL 验证签发 JWT (JSON Web Tokens)

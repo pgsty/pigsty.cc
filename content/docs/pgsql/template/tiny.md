@@ -341,7 +341,7 @@ pg-growing:
     node_tune: oltp      # 从 tiny 改为 oltp
 ```
 
-3. [重新配置集群](/docs/pgsql/admin#配置集群)或重新部署
+3. [重新配置集群](/docs/pgsql/admin#配置集群) 或重新部署
 
 
 ----------------

@@ -9,7 +9,7 @@ categories: [参考]
 
 ## PGWeb客户端工具
 
-[PGWeb](https://github.com/sosedoff/pgweb)是一款基于浏览器的PG客户端工具，使用以下命令，在元节点上拉起PGWEB服务，默认为主机`8886`端口。可使用域名： http://cli.pigsty 访问，公开Demo：http://cli.pigsty.cc。
+[PGWeb](https://github.com/sosedoff/pgweb) 是一款基于浏览器的PG客户端工具，使用以下命令，在元节点上拉起PGWEB服务，默认为主机`8886`端口。可使用域名： http://cli.pigsty 访问，公开Demo：http://cli.pigsty.cc。
 
 ```bash
 # docker stop pgweb; docker rm pgweb
