@@ -1735,7 +1735,7 @@ curl https://get.pigsty.cc/latest | bash
     - 移除 `pg_embedding`，因为开发者不再对其进行维护，建议使用 `pgvector` 替换。
     - 新扩展（EL）：点云插件 `pointcloud` 支持，Ubuntu原生带有此扩展。
     - 新扩展（EL）： `imgsmlr`， `pg_similarity`，`pg_bigm` 用于搜索。
-    - 重新编译 `pg_filedump` 为 PG 大版本无关的软件包。。
+    - 重新编译 `pg_filedump` 为 PG 大版本无关的软件包。
     - 新收纳 `hydra` 列存储扩展，不再默认安装 `citus` 扩展。
 
 - 软件更新：
