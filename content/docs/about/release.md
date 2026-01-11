@@ -291,7 +291,7 @@ fec238e811b0f838770602ed1c93a5a1  pigsty-pkg-v4.0.0.u22.x86_64.tgz
 
 **API变化**
 
-- 为并行执行的相关参数设置了更合理的优化策略，详见 [**调参说明**](/docs/pgsql/admin/tune)
+- 为并行执行的相关参数设置了更合理的优化策略，详见 [**调参说明**](/docs/pgsql/template/tune)
 - 在 `rich` 与 `full` 模板中，不再默认安装 citus 扩展，因为 citus 尚未支持 PG 18
 - PG 参数模板中，新增 duckdb 系列扩展存根。
 - 为 `min_wal_size`, `max_wal_size`, `max_slot_wal_keep_size` 设置 200，2000，3000 GB 的封顶上限值。

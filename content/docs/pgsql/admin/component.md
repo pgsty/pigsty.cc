@@ -1,8 +1,9 @@
 ---
-title: 常用预案
-weight: 1603
+title: 管理 PostgreSQL 中的组件
+linkTitle: 组件管理
+weight: 60
 description: Pigsty 中常用的 PostgreSQL 管理预案，用于维护生产环境中的数据库集群。
-icon: fa-solid fa-list-check
+icon: fa-solid fa-gears
 module: [PGSQL]
 categories: [任务]
 ---

@@ -82,7 +82,7 @@ pg-grafana:
 
 该命令是 Ansible Playbook [`pgsql.yml`](/docs/pgsql/playbook#pgsqlyml)，用于创建数据库集群。
 
-定义在 [`pg_users`](/docs/pgsql/config#pg_users) 与 [`pg_databases`](/docs/pgsql/config#pg_databases) 中的业务用户与业务数据库会在集群初始化时自动创建，因此使用该配置时，集群创建完毕后，（在没有DNS支持的情况下）您可以使用以下连接串[访问](/docs/concept/ac)数据库（任一即可）：
+定义在 [`pg_users`](/docs/pgsql/config#pg_users) 与 [`pg_databases`](/docs/pgsql/config#pg_databases) 中的业务用户与业务数据库会在集群初始化时自动创建，因此使用该配置时，集群创建完毕后，（在没有DNS支持的情况下）您可以使用以下连接串 [访问](/docs/concept/sec/ac) 数据库（任一即可）：
 
 ```bash
 postgres://dbuser_grafana:DBUser.Grafana@10.10.10.11:5432/grafana # 主库直连
@@ -177,7 +177,7 @@ bin/pgsql-db pg-meta grafana # 在`pg-meta`集群上创建`grafana`数据库
 
 ### 检查连接串可达性
 
-您可以使用不同的[服务](/docs/concept/svc)或[接入](/docs/concept/ac)方式访问数据库，例如：
+您可以使用不同的 [服务](/docs/concept/ha/svc) 或 [接入](/docs/concept/sec/ac) 方式访问数据库，例如：
 
 ```bash
 postgres://dbuser_grafana:DBUser.Grafana@meta:5432/grafana # 直连

@@ -1895,7 +1895,7 @@ pgb_default_hba_rules:            # pgbouncer default host-based authentication 
 
 本节定义了用于 [pgBackRest](https://pgbackrest.org/) 的变量，它被用于 PGSQL 时间点恢复 PITR 。
 
-查看 [PGSQL 备份 & PITR](/docs/pgsql/backup/pitr) 以获取详细信息。
+查看 [PGSQL 备份 & PITR](/docs/pgsql/tutorial/pitr) 以获取详细信息。
 
 
 ```yaml

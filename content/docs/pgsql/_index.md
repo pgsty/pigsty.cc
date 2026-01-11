@@ -30,7 +30,7 @@ sidebar_root_for: self
 - [认证/HBA](/docs/pgsql/config/hba)
 - [访问控制](/docs/concept/sec/ac/)
 - [管理预案](/docs/pgsql/admin)
-- [备份恢复](/docs/pgsql/backup/pitr)
+- [备份恢复](/docs/pgsql/tutorial/pitr)
 - [监控接入](/docs/pgsql/monitor)
 - [集群迁移](/docs/pgsql/migration)
 - [仪表盘](/docs/pgsql/monitor/dashboard)
