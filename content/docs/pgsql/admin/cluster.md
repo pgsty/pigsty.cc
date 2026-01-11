@@ -1,7 +1,8 @@
 ---
-title: 集群管理
+title: 管理 PostgreSQL 数据库集群
+linkTitle: 集群管理
 weight: 10
-description: 创建/销毁 PostgreSQL 集群，以及对现有集群进行扩容与缩容的标准操作指南。
+description: 创建/销毁 PostgreSQL 集群，以及对现有集群进行扩容，缩容，克隆集群，设置备份集群，
 icon: fa-solid fa-circle-up
 module: [PGSQL]
 categories: [任务]

@@ -1,5 +1,6 @@
 ---
-title: 用户管理
+title: 管理 PostgreSQL 用户，角色，与权限
+linkTitle: 用户管理
 weight: 20
 description: 用户管理：创建、修改、删除用户，管理角色成员关系，连接池用户配置
 icon: fa-solid fa-users

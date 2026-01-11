@@ -98,7 +98,16 @@ INFRA 模块会为节点赋予 `infra-N` 形式的标识，用于监控系统中
 
 ## 服务门户
 
-INFRA 节点通过 Nginx 提供统一的 Web 服务入口。[**`infra_portal`**](/docs/infra/param#infra_portal) 参数定义了通过 Nginx 暴露的服务列表：
+INFRA 节点通过 Nginx 提供统一的 Web 服务入口。[**`infra_portal`**](/docs/infra/param#infra_portal) 参数定义了通过 Nginx 暴露的服务列表。
+
+默认配置只定义了首页服务器：
+
+```yaml
+infra_portal:
+  home : { domain: i.pigsty }
+```
+
+Pigsty 会自动为启用的组件（如 Grafana、VictoriaMetrics、AlertManager 等）配置反向代理端点。如果需要通过独立域名访问这些服务，可以显式添加配置：
 
 ```yaml
 infra_portal:
@@ -107,8 +116,6 @@ infra_portal:
   prometheus   : { domain: p.pigsty, endpoint: "${admin_ip}:8428" }   # VMUI
   alertmanager : { domain: a.pigsty, endpoint: "${admin_ip}:9059" }
 ```
-
-用户通过访问不同的域名，Nginx 会将请求路由到对应的后端服务：
 
 | 域名            | 服务              | 说明              |
 |:--------------|:----------------|:----------------|

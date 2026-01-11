@@ -96,7 +96,7 @@ cat ~/pigsty/pigsty.yml
 
 请尽可能提供与错误有关的日志。**请不要粘贴类似 “Failed to start xxx service” 之类没有信息量的内容**。
 
-您可以从 Grafana / Loki 中查询日志，或从以下位置获取日志：
+您可以从 Grafana / VictoriaLogs 中查询日志，或从以下位置获取日志：
 
 - Syslog:    `/var/log/messages` (rhel) or `/var/log/syslog` (debian)
 - Postgres:   `/pg/log/postgres/*`

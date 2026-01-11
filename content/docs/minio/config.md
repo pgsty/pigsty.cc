@@ -361,10 +361,10 @@ MinIO 默认通过 `9001` 端口（由 [`minio_admin_port`](param#minio_admin_po
 infra_portal:
   home         : { domain: h.pigsty }
   grafana      : { domain: g.pigsty ,endpoint: "${admin_ip}:3000" , websocket: true }
-  prometheus   : { domain: p.pigsty ,endpoint: "${admin_ip}:9090" }
-  alertmanager : { domain: a.pigsty ,endpoint: "${admin_ip}:9093" }
+  vmetrics     : { domain: v.pigsty ,endpoint: "${admin_ip}:8428" }
+  alertmanager : { domain: a.pigsty ,endpoint: "${admin_ip}:9059" }
   blackbox     : { endpoint: "${admin_ip}:9115" }
-  loki         : { endpoint: "${admin_ip}:3100" }
+  vlogs        : { endpoint: "${admin_ip}:9428" }
 
   # MinIO 管理页面需要 HTTPS / Websocket 才能工作
   minio        : { domain: m.pigsty     ,endpoint: "10.10.10.10:9001" ,scheme: https ,websocket: true }

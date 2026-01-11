@@ -1,8 +1,9 @@
 ---
-title: 版本升级
-weight: 1611
+title: 升级 PostgreSQL 大小版本 
+linkTitle: 版本升级
+weight: 90
 description: 如何升级（或降级） PostgreSQL 小版本内核，以及如何进行大版本升级。
-icon: fa-solid fa-circle-up
+icon: fa-solid fa-plane-up
 module: [PGSQL]
 categories: [任务]
 ---

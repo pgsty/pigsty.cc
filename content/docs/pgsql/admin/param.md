@@ -1,9 +1,9 @@
 ---
-title: 管理 PostgreSQL 中的组件
-linkTitle: 组件管理
-weight: 70
-description: Pigsty 中常用的 PostgreSQL 管理预案，用于维护生产环境中的数据库集群。
-icon: fa-solid fa-gears
+title: 管理 PostgreSQL 配置参数
+linkTitle: 参数管理
+weight: 60
+description: 预先设置或修改 PostgreSQL 的参数，在不同的层面进行阐述配置
+icon: fa-solid fa-code
 module: [PGSQL]
 categories: [任务]
 ---

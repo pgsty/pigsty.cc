@@ -83,7 +83,7 @@ categories: [概念]
 |   `victoriaLogs`    |  `9428`  | 日志收集服务器            |
 |  `victoriaTraces`   | `10428`  | 链路追踪收集服务器          |
 |      `vmalert`      |  `8880`  | 告警与衍生指标计算规则        |
-|   `alertmanager`    |  `9093`  | 告警聚合分发/屏蔽管理        |
+|   `alertmanager`    |  `9059`  | 告警聚合分发/屏蔽管理        |
 | `blackbox_exporter` |  `9115`  | 黑盒探测，ping 节点 / vip |
 |      `dnsmasq`      |   `53`   | 内部 DNS 域名解析        |
 |      `chronyd`      |  `123`   | NTP 时间服务器          |

@@ -207,10 +207,10 @@ psql postgres://dbuser_odoo:DBUser.Odoo@10.10.10.10:5432/odoo
     infra_portal:                     # 域名和上游服务器
       home         : { domain: h.pigsty }
       grafana      : { domain: g.pigsty    ,endpoint: "${admin_ip}:3000" , websocket: true }
-      prometheus   : { domain: p.pigsty    ,endpoint: "${admin_ip}:9058" }
+      vmetrics     : { domain: v.pigsty    ,endpoint: "${admin_ip}:8428" }
       alertmanager : { domain: a.pigsty    ,endpoint: "${admin_ip}:9059" }
       blackbox     : { endpoint: "${admin_ip}:9115" }
-      loki         : { endpoint: "${admin_ip}:3100" }
+      vlogs        : { endpoint: "${admin_ip}:9428" }
       odoo         : { domain: odoo.pigsty, endpoint: "127.0.0.1:8069", websocket: true }  # <------ 添加这一行
 ./infra.yml -t nginx   # 设置 nginx 基础设施门户
 ```

@@ -73,10 +73,10 @@ all:
     infra_portal:
       home         : { domain: h.pigsty }
       grafana      : { domain: g.pigsty ,endpoint: "${admin_ip}:3000" , websocket: true }
-      prometheus   : { domain: p.pigsty ,endpoint: "${admin_ip}:9058" }
+      vmetrics     : { domain: v.pigsty ,endpoint: "${admin_ip}:8428" }
       alertmanager : { domain: a.pigsty ,endpoint: "${admin_ip}:9059" }
       blackbox     : { endpoint: "${admin_ip}:9115" }
-      loki         : { endpoint: "${admin_ip}:3100" }
+      vlogs        : { endpoint: "${admin_ip}:9428" }
 
       # 在此处添加 pgadmin 上游服务器定义
       pgadmin      : { domain: adm.pigsty  ,endpoint: "127.0.0.1:8885" }
