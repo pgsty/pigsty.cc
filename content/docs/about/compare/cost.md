@@ -24,6 +24,7 @@ categories: [参考]
 | AWS C5D.METAL 96C 200G (按月无预付) |    100    | AWS RDS PostgreSQL db.T2 (2x)  |   440   |
 | AWS C5D.METAL 96C 200G (预付三年)  |    80     | AWS RDS PostgreSQL db.M5 (4x)  |   611   |
 | AWS C7A.METAL 192C 384G (预付三年) |   104.8   | AWS RDS PostgreSQL db.R6G (8x) |   786   |
+{.full-width}
 
 
 --------------------
@@ -44,6 +45,7 @@ categories: [参考]
 | AWS 中国/宁夏按需     | ¥197,489 / 月    | 237       |
 | AWS 中国/宁夏1年不预付  | ¥143,176 / 月    | 171       |
 | AWS 中国/宁夏3年全预付  | ¥647k + 116k/月  | 160.6     |
+{.full-width}
 
 我们可以对比一下自建与云数据库的成本差异：
 
@@ -52,6 +54,7 @@ categories: [参考]
 | IDC托管服务器 64C / 384G / 3.2TB NVME SSD 660K IOPS (2～3台)              | 3.0 ~ 4.5 |
 | 阿里云 RDS PG 高可用版 pg.x4m.8xlarge.2c, 64C / 256GB / 3.2TB ESSD PL3    | 25 ～ 50   |
 | AWS RDS PG 高可用版 db.m5.16xlarge, 64C / 256GB / 3.2TB io1 x 80k IOPS | 160 ～ 217 |
+{.full-width}
 
 
 
@@ -75,6 +78,7 @@ categories: [参考]
 |            |           |         |            |
 | DHH @ 2023 |  ¥ 22.0   |         |            |
 | 探探 IDC 自建  |  ¥ 18.0   |         |            |
+{.full-width}
 
 
 ### 含 NVMe SSD / ESSD PL3 情况下的等效价格对比
@@ -93,6 +97,7 @@ categories: [参考]
 |            |           |                 |             |
 | DHH @ 2023 |  ¥ 25.3   |                 |             |
 | 探探 IDC 自建  |  ¥ 19.5   |                 |             |
+{.full-width}
 
 > DHH案例：192核配12.8TB Gen4 SSD (1c:66)；探探案例： 64核配3.2T Gen3 MLC SSD (1c:50)。
 >
@@ -111,6 +116,7 @@ categories: [参考]
 | 可靠性      | UBER < 1e-18，折合18个9 MTBF: 200万小时 5DWPD，持续三年          | 数据可靠性 9个9 [存储与数据可靠性](https://help.aliyun.com/document_detail/476273.html)                                                                                                                                       | **持久性**：99.999%，5个9 （0.001% 年故障率） [io2 说明](https://aws.amazon.com/cn/blogs/storage/achieve-higher-database-performance-using-amazon-ebs-io2-block-express-volumes/) |
 | 成本       | **16 ¥/TB·****月** ( 5年均摊 / 3.2T MLC ) 5 年质保，¥3000 零售 | **3200¥/TB·****月** （原价 6400¥，包月4000¥） 3年预付整体打5折才有此价格                                                                                                                                                            | **1900 ¥/TB·****月** 使用最大规格 65536GB 256K IOPS 最优惠状态                                                                                                                  |
 | SLA      | 5年质保 出问题直接换新                                         | [Aliyun RDS SLA](https://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud201910310944_35008.html?spm=a2c4g.11186623.0.0.270e6e37n8Exh5) 可用性 99.99%: 月费 15% 99%: 月费 30% 95%: 月费 100% | [Amazon RDS SLA](https://d1.awsstatic.com/legal/amazonrdsservice/Amazon-RDS-Service-Level-Agreement-Chinese.pdf) 可用性 99.95%: 月费 15% 99%: 月费 25% 95%: 月费 100%        |
+{.full-width}
 
 --------------------
 
@@ -129,6 +135,7 @@ categories: [参考]
 |                                                       **其他参考价**                                                        |  **高性能存储**   | **顶配底折价** | **与采购NVMe SSD** | **价格参考** |
 |                                                       S3 Express                                                       |    0.160     |   67200   |     DHH 12T     |   1400   |
 |                                                        EBS io2                                                         | 0.125 + IOPS |  114000   |  Shannon 3.2T   |   900    |
+{.full-width}
 
 --------------------
 

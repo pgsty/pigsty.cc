@@ -30,6 +30,7 @@ Pigsty 针对 Infra 模块提供了以下监控面板：
 | [VictoriaTraces Instance](https://demo.pigsty.cc/d/vtraces-instance) | Trace 存储与查询 |
 | [Inventory CMDB](https://demo.pigsty.cc/d/inventory-cmdb) | CMDB 可视化 |
 | [ETCD Overview](https://demo.pigsty.cc/d/etcd-overview) | etcd 集群监控 |
+{.full-width}
 
 
 ----------------
@@ -42,6 +43,7 @@ Pigsty 针对 INFRA 模块提供了以下两条告警规则：
 |:---------|:-----|
 | `InfraDown` | 基础设施组件出现宕机 |
 | `AgentDown` | 监控 Agent 代理出现宕机 |
+{.full-width}
 
 可在 [`files/victoria/rules/infra.yml`](https://github.com/pgsty/pigsty/blob/main/files/victoria/rules/infra.yml) 中修改或添加新的基础设施告警规则。
 

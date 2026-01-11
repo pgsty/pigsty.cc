@@ -169,6 +169,7 @@ PolarDB 可用的完整插件列表：
 | polar_worker          | 1.0     | polar_worker                                                          |
 | unaccent              | 1.1     | text search dictionary that removes accents                           |
 | postgres_fdw          | 1.0     | foreign-data wrapper for remote PostgreSQL servers                    |
+{.full-width}
 
 - Pigsty 专业版提供 PolarDB 离线安装支持，扩展插件编译支持，以及针对 PolarDB 集群进行专门适配的监控与管控支持。
 - Pigsty 与阿里云内核团队有合作，可以提供有偿内核兜底支持服务。

@@ -68,6 +68,7 @@ PG Exporter 开箱即用提供 4 个核心内置指标：
 | `pg_version` | Gauge | PostgreSQL 服务器版本号 |
 | `pg_in_recovery` | Gauge | 如果服务器处于恢复模式（从库）则为 1，主库则为 0 |
 | `pg_exporter_build_info` | Gauge | 导出器版本和构建信息 |
+{.full-width}
 
 ### 配置文件
 

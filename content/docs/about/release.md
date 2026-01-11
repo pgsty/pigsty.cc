@@ -62,6 +62,7 @@ Pigsty 当前的最新稳定版本为 [**v3.7.0**](#v370)，最新的测试版�
 |       v0.0.3       | 2020-06-22 | 接口设计改进                                                  | [v0.0.3](https://github.com/pgsty/pigsty/commit/4c5c68ccd57bc32a9e9c98aa3f264aa19f45c7ee) |
 |       v0.0.2       | 2020-04-30 | 首次提交                                                    | [v0.0.2](https://github.com/pgsty/pigsty/commit/dd646775624ddb33aef7884f4f030682bdc371f8) |
 |       v0.0.1       | 2019-05-15 | 概念原型                                                    |   [v0.0.1](https://github.com/Vonng/pg/commit/fa2ade31f8e81093eeba9d966c20120054f0646b)   |
+{.full-width}
 
 ------
 
@@ -96,6 +97,7 @@ curl https://pigsty.cc/get | bash -s v4.0.0
 | pg_exporter   | 1.1.1          | pgbackrest_exporter | 0.22.0          |
 | minio         | 20251203       | pig                 | 0.9.0           |
 | uv            | 0.9.18 (**新**) | opencode            | 1.0.223 (**新**) |
+{.full-width}
 
 
 **PostgreSQL 扩展*
@@ -115,6 +117,7 @@ curl https://pigsty.cc/get | bash -s v4.0.0
 | Prometheus | VictoriaMetrics |
 | Loki       | VictoriaLogs    |
 | Promtail   | Vector          |
+{.full-width}
 
 **参数变更**
 
@@ -124,6 +127,7 @@ curl https://pigsty.cc/get | bash -s v4.0.0
 | `node_disable_selinux`  | `node_selinux_mode` (disabled/permissive/enforcing) |
 | `pg_pwd_enc`            | 已移除                                                 |
 | `infra_pip`             | `infra_uv`                                          |
+{.full-width}
 
 **默认值变更**
 
@@ -132,6 +136,7 @@ curl https://pigsty.cc/get | bash -s v4.0.0
 | `grafana_clean`            | true → false             |
 | `effective_io_concurrency` | 1000 → 200               |
 | `install.yml`              | 重命名为 `deploy.yml`（保留软链接） |
+{.full-width}
 
 **可观测性**
 
@@ -231,6 +236,7 @@ curl https://pigsty.cc/get | bash -s v4.0.0
 | EL 8/9/10          |   ✅    |    ✅    |
 | Debian 11/12/13    |   ✅    |    ✅    |
 | Ubuntu 22.04/24.04 |   ✅    |    ✅    |
+{.full-width}
 
 **PostgreSQL**: 13, 14, 15, 16, 17, 18
 

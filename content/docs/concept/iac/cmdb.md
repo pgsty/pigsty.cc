@@ -31,6 +31,7 @@ Pigsty 允许您使用 PostgreSQL **元数据库** 作为动态配置源，取�
 | **外部集成** | 需要解析 YAML     | 标准 SQL 接口，任意语言轻松对接   |
 | **规模扩展** | 文件过大时难以维护     | 管理规模伸缩至物理极限          |
 | **动态生成** | 静态文件，修改后需手动应用 | 即时生效，实时反映配置变更        |
+{.full-width}
 
 Pigsty 在样板数据库 [**`pg-meta.meta`**](https://github.com/pgsty/pigsty/blob/main/conf/meta.yml#L52) 的模式基线定义中，提供了 Pigsty CMDB 的数据库模式。
 
@@ -98,6 +99,7 @@ CMDB 的数据库模式定义在 [`files/cmdb.sql`](https://github.com/pgsty/pig
 | `pigsty.host_var` | 主机变量，对应主机级别的变量 | `(cls, ip, key)` |
 | `pigsty.default_var` | 默认变量定义，存储参数的元信息 | `key` |
 | `pigsty.job` | 作业记录表，记录执行的任务 | `id` |
+{.full-width}
 
 ### 表结构详解
 
@@ -178,6 +180,7 @@ CMDB 提供了一系列视图，用于查询和展示配置数据：
 | `pigsty.pg_service` | PostgreSQL 服务定义视图 |
 | `pigsty.pg_hba` | PostgreSQL HBA 规则视图 |
 | `pigsty.pg_remote` | 远程 PostgreSQL 实例视图 |
+{.full-width}
 
 **`pigsty.inventory`** 是最核心的视图，它将数据库中的配置数据转换为 Ansible 所需的 JSON 格式：
 
@@ -198,6 +201,7 @@ Pigsty 提供了三个便利脚本来管理 CMDB：
 | [`bin/inventory_load`](https://github.com/pgsty/pigsty/blob/main/bin/inventory_load) | 将 YAML 配置文件加载到 PostgreSQL 数据库中 |
 | [`bin/inventory_cmdb`](https://github.com/pgsty/pigsty/blob/main/bin/inventory_cmdb) | 切换配置源为 CMDB（动态清单脚本） |
 | [`bin/inventory_conf`](https://github.com/pgsty/pigsty/blob/main/bin/inventory_conf) | 切换配置源为静态配置文件 `pigsty.yml` |
+{.full-width}
 
 
 ### inventory_load
@@ -437,3 +441,4 @@ CMDB 是 Pigsty 配置管理的高级方案，适用于需要管理大量集群�
 | **切换到 CMDB** |  `bin/inventory_cmdb`  |
 | **切换到 YAML** |  `bin/inventory_conf`  |
 |   **核心视图**   |   `pigsty.inventory`   |
+{.full-width}

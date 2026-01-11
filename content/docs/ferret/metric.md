@@ -67,4 +67,5 @@ linkTitle: 指标列表
 | scrape_samples_scraped                     | Unknown | `cls`, `ip`, `ins`, `instance`, `job`                                                                                                      | N/A                                                                         |
 | scrape_series_added                        | Unknown | `cls`, `ip`, `ins`, `instance`, `job`                                                                                                      | N/A                                                                         |
 | up                                         | Unknown | `cls`, `ip`, `ins`, `instance`, `job`                                                                                                      | N/A                                                                         |
+{.full-width}
 

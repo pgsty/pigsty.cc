@@ -17,6 +17,7 @@ Pigsty 使用 [pgBackRest](https://pgbackrest.org/) 管理 PostgreSQL 备份，�
 | [管理](admin)               | 常用备份管理命令                             |
 | [恢复](restore)             | 使用剧本恢复到特定时间点                         |
 | [示例](example)             | 沙箱示例：手工执行恢复操作                        |
+{.full-width}
 
 
 {{% alert color="warning" title="免责声明" %}}

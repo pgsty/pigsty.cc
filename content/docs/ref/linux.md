@@ -23,6 +23,7 @@ Pigsty 推荐使用的操作系统版本：RockyLinux 10.0、Ubuntu 24.04、Debi
 | Ubuntu 24.04 (`noble`) | <b class="text-danger">aarch64</b> |  [`u24.aarch64`](https://github.com/pgsty/pigsty/blob/main/roles/node_id/vars/u24.aarch64.yml)  | <i class="fas fa-circle-check text-primary"></i> | <i class="fas fa-circle-check text-primary"></i> | <i class="fas fa-circle-check text-primary"></i> | <i class="fas fa-circle-check text-primary"></i> | <i class="fas fa-circle-check text-primary"></i> | <i class="fas fa-circle-check text-primary"></i> |
 | Debian 13 (`trixie`)   | <b class="text-sky-600">x86_64</b> |   [`d13.x86_64`](https://github.com/pgsty/pigsty/blob/main/roles/node_id/vars/d13.x86_64.yml)   | <i class="fas fa-circle-check text-primary"></i> | <i class="fas fa-circle-check text-primary"></i> | <i class="fas fa-circle-check text-primary"></i> | <i class="fas fa-circle-check text-primary"></i> | <i class="fas fa-circle-check text-primary"></i> | <i class="fas fa-circle-check text-primary"></i> |
 | Debian 13 (`trixie`)   | <b class="text-danger">aarch64</b> |  [`d13.aarch64`](https://github.com/pgsty/pigsty/blob/main/roles/node_id/vars/d13.aarch64.yml)  | <i class="fas fa-circle-check text-primary"></i> | <i class="fas fa-circle-check text-primary"></i> | <i class="fas fa-circle-check text-primary"></i> | <i class="fas fa-circle-check text-primary"></i> | <i class="fas fa-circle-check text-primary"></i> | <i class="fas fa-circle-check text-primary"></i> |
+{.full-width}
 
 
 ----------------
@@ -41,6 +42,7 @@ Pigsty 支持 RHEL / Rocky / Alma / Anolis / CentOS 8、9、10 版本。
 | RHEL8 / Rocky8 / Alma8    | <b class="text-danger">aarch64</b> |  [`el8.aarch64`](https://github.com/pgsty/pigsty/blob/main/roles/node_id/vars/el8.aarch64.yml)  | <i class="fas fa-circle-check text-secondary"></i> | <i class="fas fa-circle-check text-secondary"></i> | <i class="fas fa-circle-check text-secondary"></i> |   <i class="fas fa-circle-check text-secondary"></i>    |   <i class="fas fa-circle-check text-secondary"></i>    |   <i class="fas fa-circle-check text-secondary"></i>    |
 | RHEL7 / CentOS7           | <b class="text-sky-600">x86_64</b> |   [`el7.x86_64`](https://github.com/pgsty/pigsty/blob/main/roles/node_id/vars/el7.x86_64.yml)   |                                                    |                                                    |                                                    | <i class="fas fa-triangle-exclamation text-danger"></i> | <i class="fas fa-triangle-exclamation text-danger"></i> | <i class="fas fa-triangle-exclamation text-danger"></i> |
 | RHEL7 / CentOS7           | <b class="text-danger">aarch64</b> |                                                -                                                |                                                    |                                                    |                                                    |                                                         |                                                         |                                                         |
+{.full-width}
 
 {{% alert title="推荐使用 RockyLinux 10.0 与 9.6" color="success" %}}
 请注意，[PGDG Yum 仓库](https://www.postgresql.org/about/news/postgresql-rpm-repository-now-supports-multiple-rhel-minor-versions-3202/) 从 EL9 / EL10 开始，针对 **EL 小版本** 进行构建，目前支持的小版本为：9.6, 9.7, 10.0, 10.1。
@@ -71,6 +73,7 @@ Pigsty 支持 Ubuntu 24.04 / 22.04：
 | Ubuntu 22.04 (`jammy`) | <b class="text-danger">aarch64</b> | [`u22.aarch64`](https://github.com/pgsty/pigsty/blob/main/roles/node_id/vars/u22.aarch64.yml) | <i class="fas fa-circle-check text-primary"></i> | <i class="fas fa-circle-check text-primary"></i> |    <i class="fas fa-circle-check text-primary"></i>     |    <i class="fas fa-circle-check text-primary"></i>     |    <i class="fas fa-circle-check text-primary"></i>     |    <i class="fas fa-circle-check text-primary"></i>     |
 | Ubuntu 20.04 (`focal`) | <b class="text-sky-600">x86_64</b> |  [`u20.x86_64`](https://github.com/pgsty/pigsty/blob/main/roles/node_id/vars/u20.x86_64.yml)  |                                                  |                                                  | <i class="fas fa-triangle-exclamation text-danger"></i> | <i class="fas fa-triangle-exclamation text-danger"></i> | <i class="fas fa-triangle-exclamation text-danger"></i> | <i class="fas fa-triangle-exclamation text-danger"></i> |
 | Ubuntu 20.04 (`focal`) | <b class="text-danger">aarch64</b> |                                               -                                               |                                                  |                                                  |                                                         |                                                         |                                                         |                                                         |
+{.full-width}
 
 {{% alert title="推荐使用 Ubuntu 22.04 / 24.04 LTS" color="success" %}}
 Ubuntu 24.04 在系统可靠性/稳定性与软件版本的新颖性/齐全性上取得了良好的平衡，推荐使用此系统。
@@ -96,6 +99,7 @@ Pigsty 支持 Debian 12 / 13，推荐使用最新的 Debian 13.1
 | Debian 12 (`bookworm`) | <b class="text-danger">aarch64</b> | [`d12.aarch64`](https://github.com/pgsty/pigsty/blob/main/roles/node_id/vars/d12.aarch64.yml) | <i class="fas fa-circle-check text-primary"></i> | <i class="fas fa-circle-check text-primary"></i> |    <i class="fas fa-circle-check text-primary"></i>     |    <i class="fas fa-circle-check text-primary"></i>     |    <i class="fas fa-circle-check text-primary"></i>     |    <i class="fas fa-circle-check text-primary"></i>     |
 | Debian 11 (`bullseye`) | <b class="text-sky-600">x86_64</b> |  [`d11.x86_64`](https://github.com/pgsty/pigsty/blob/main/roles/node_id/vars/d11.x86_64.yml)  |                                                  |                                                  | <i class="fas fa-triangle-exclamation text-danger"></i> | <i class="fas fa-triangle-exclamation text-danger"></i> | <i class="fas fa-triangle-exclamation text-danger"></i> | <i class="fas fa-triangle-exclamation text-danger"></i> |
 | Debian 11 (`bullseye`) | <b class="text-danger">aarch64</b> |                                               -                                               |                                                  |                                                  |                                                         |                                                         |                                                         |                                                         |
+{.full-width}
 
 {{% alert title="推荐使用 Debian 12.11 / 13.1" color="success" %}}
 {{% /alert %}}
@@ -113,12 +117,13 @@ Debian 11 已经于 2024-07 进入 EOL。如需在老旧操作系统上获得扩
 
 | **系统**         | 镜像                                                                                             |
 |:---------------|:-----------------------------------------------------------------------------------------------|
-| Rocky 8.10     | [`generic/rocky8`](https://portal.cloud.hashicorp.com/vagrant/discover/rocky8)                 |                               
-| Rocky 9.6      | [`generic/rocky9`](https://portal.cloud.hashicorp.com/vagrant/discover/rocky9)                 |                               
-| Debian 12.11   | [`generic/debian12`](https://portal.cloud.hashicorp.com/vagrant/discover/debian12)             |                           
-| Debian 13      | [`generic/debian13`](https://portal.cloud.hashicorp.com/vagrant/discover/debian13)             |                           
-| Ubuntu 22.04   | [`generic/ubuntu2204`](https://portal.cloud.hashicorp.com/vagrant/discover/ubuntu2204)         |                       
-| Ubuntu 24.04.2 | [`bento/ubuntu-24.04`](https://portal.cloud.hashicorp.com/vagrant/discover/bento/ubuntu-24.04) |   
+| Rocky 8.10     | [`generic/rocky8`](https://portal.cloud.hashicorp.com/vagrant/discover/rocky8)                 |
+| Rocky 9.6      | [`generic/rocky9`](https://portal.cloud.hashicorp.com/vagrant/discover/rocky9)                 |
+| Debian 12.11   | [`generic/debian12`](https://portal.cloud.hashicorp.com/vagrant/discover/debian12)             |
+| Debian 13      | [`generic/debian13`](https://portal.cloud.hashicorp.com/vagrant/discover/debian13)             |
+| Ubuntu 22.04   | [`generic/ubuntu2204`](https://portal.cloud.hashicorp.com/vagrant/discover/ubuntu2204)         |
+| Ubuntu 24.04.2 | [`bento/ubuntu-24.04`](https://portal.cloud.hashicorp.com/vagrant/discover/bento/ubuntu-24.04) |
+{.full-width}
 
 
 ----------------
@@ -136,6 +141,7 @@ Debian 11 已经于 2024-07 进入 EOL。如需在老旧操作系统上获得扩
 | Ubuntu 24.04 | `ubuntu_24_04_x64_20G_alibase_20240923.vhd`    |
 | Debian 12.11 | `debian_12_11_x64_20G_alibase_20241201.vhd`    |
 | Debian 13.2  | `debian_13_x64_20G_alibase_20250101.vhd`       |
+{.full-width}
 
 
 | **aarch64**  | 镜像                                               |
@@ -147,3 +153,4 @@ Debian 11 已经于 2024-07 进入 EOL。如需在老旧操作系统上获得扩
 | Ubuntu 24.04 | `ubuntu_24_04_arm64_20G_alibase_20251126.vhd`    |
 | Debian 12.11 | `debian_12_11_arm64_20G_alibase_20250825.vhd`    |
 | Debian 13.2  | `debian_13_2_arm64_20G_alibase_20251121.vhd`     |
+{.full-width}

@@ -73,18 +73,21 @@ Pigsty 针对 NODE 实现了以下告警规则：
 | `VectorDown`     | WARN | 日志收集代理离线（Vector）  |
 | `DockerDown`     | WARN | 容器引擎离线            |
 | `KeepalivedDown` | WARN | Keepalived 守护进程离线 |
+{.full-width}
 
 ### CPU 告警
 
 | 规则 | 级别 | 说明 |
 |---|:---:|---|
 | `NodeCpuHigh` | WARN | CPU 使用率超过 70% |
+{.full-width}
 
 ### 调度告警
 
 | 规则 | 级别 | 说明 |
 |---|:---:|---|
 | `NodeLoadHigh` | WARN | 标准化负载超过 100% |
+{.full-width}
 
 ### 内存告警
 
@@ -92,6 +95,7 @@ Pigsty 针对 NODE 实现了以下告警规则：
 |---|:---:|---|
 | `NodeOutOfMem` | WARN | 可用内存少于 10% |
 | `NodeMemSwapped` | WARN | Swap 使用率超过 1% |
+{.full-width}
 
 ### 文件系统告警
 
@@ -100,12 +104,14 @@ Pigsty 针对 NODE 实现了以下告警规则：
 | `NodeFsSpaceFull` | WARN | 磁盘使用率超过 90% |
 | `NodeFsFilesFull` | WARN | Inode 使用率超过 90% |
 | `NodeFdFull` | WARN | 文件描述符使用率超过 90% |
+{.full-width}
 
 ### 磁盘告警
 
 | 规则 | 级别 | 说明 |
 |---|:---:|---|
 | `NodeDiskSlow` | WARN | 读写延迟超过 32ms |
+{.full-width}
 
 ### 网络协议告警
 
@@ -113,9 +119,11 @@ Pigsty 针对 NODE 实现了以下告警规则：
 |---|:---:|---|
 | `NodeTcpErrHigh` | WARN | TCP 错误率超过 1/分钟 |
 | `NodeTcpRetransHigh` | WARN | TCP 重传率超过 1% |
+{.full-width}
 
 ### 时间同步告警
 
 | 规则 | 级别 | 说明 |
 |---|:---:|---|
 | `NodeTimeDrift` | WARN | 系统时间未同步 |
+{.full-width}

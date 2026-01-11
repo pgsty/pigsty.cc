@@ -21,6 +21,7 @@ categories: [参考]
 | `repo create` | 创建本地 YUM/APT 仓库 | 需要 sudo 或 root 权限 |
 | `repo cache`  | 从本地仓库创建离线包      | 需要 sudo 或 root 权限 |
 | `repo boot`   | 从离线包引导仓库        | 需要 sudo 或 root 权限 |
+{.full-width}
 
 
 ## 快速入门
@@ -60,6 +61,7 @@ pig repo update                       # 更新系统包缓存
 | `groonga` | PGroonga 仓库 | groonga |
 | `mssql` | WiltonDB 仓库 | wiltondb |
 | `percona` | Percona PG + PG_TDE | percona |
+{.full-width}
 
 除此之外，pig 还自带了一些其他数据库的 APT/DNF 仓库：`redis`, `kubernetes`, `grafana`, `clickhouse`, `gitlab`, `haproxy`, `mongodb`, `mysql`，在此不再展开。
 
@@ -134,6 +136,7 @@ pig repo add pgdg --region=china # 使用中国镜像
 |:---:|:---|
 | EL | `/etc/yum.repos.d/<module>.repo` |
 | Debian | `/etc/apt/sources.list.d/<module>.list` |
+{.full-width}
 
 
 ## repo set
@@ -161,6 +164,7 @@ pig repo rm pgdg pigsty -u       # 移除并更新缓存
 |:---:|:---|
 | EL | `/etc/yum.repos.d/backup/` |
 | Debian | `/etc/apt/sources.list.d/backup/` |
+{.full-width}
 
 
 ## repo update
@@ -175,6 +179,7 @@ pig repo update                  # 更新包缓存
 |:---:|:---|
 | EL | `dnf makecache` |
 | Debian | `apt update` |
+{.full-width}
 
 
 ## repo create
@@ -190,6 +195,7 @@ pig repo create /srv/repo        # 在自定义位置创建
 |:---:|:---|
 | EL | `createrepo_c` |
 | Debian | `dpkg-dev` |
+{.full-width}
 
 
 ## repo cache

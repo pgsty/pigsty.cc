@@ -84,6 +84,7 @@ TINY 模板使用保守的内存分配策略：
 | `maintenance_work_mem` | shared_buffers × 25% | 用于 VACUUM、CREATE INDEX |
 | `work_mem` | 16MB - **256MB** | 更小的排序/哈希内存 |
 | `effective_cache_size` | 总内存 - shared_buffers | 可用于缓存的预估内存 |
+{.full-width}
 
 **work_mem 计算逻辑**（与 OLTP 不同）：
 ```
@@ -184,6 +185,7 @@ pg_stat_statements.track_planning: off
 | default_statistics_target | **200** | 400 | 节省空间 |
 | pg_stat_statements.max | **2500** | 10000 | 减少内存占用 |
 | io_workers | **3** | 25% cpu | 固定低值 |
+{.full-width}
 
 
 ----------------

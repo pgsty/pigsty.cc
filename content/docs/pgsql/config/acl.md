@@ -35,6 +35,7 @@ Pigsty 预置了一套精简的 ACL 模型，全部通过以下参数描述：
 | `replicator`       | 用户      | 用于流复制与备份，继承监控与只读权限                |
 | `dbuser_dba`       | 用户      | 主要管理员账号，同时同步到 pgbouncer               |
 | `dbuser_monitor`   | 用户      | 监控账号，具备 `pg_monitor` 权限，默认记录慢 SQL     |
+{.full-width}
 
 这些定义位于 `pg_default_roles`，理论上可以自定义，但若要替换名称，必须同步更新 HBA/ACL/脚本中的引用。
 
@@ -65,6 +66,7 @@ pg_default_roles:
 | `pg_admin_password`          | `DBUser.DBA`       | 管理员密码                     |
 | `pg_monitor_username`        | `dbuser_monitor`   | 监控用户                       |
 | `pg_monitor_password`        | `DBUser.Monitor`   | 监控用户密码                   |
+{.full-width}
 
 > 如果修改这些参数，请同步在 `pg_default_roles` 中更新对应用户的定义，以避免角色属性不一致。
 

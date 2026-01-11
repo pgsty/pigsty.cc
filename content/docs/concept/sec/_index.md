@@ -57,6 +57,7 @@ Pigsty 默认启用以下安全特性：
 | **角色系统**   | 四层权限            | 只读/读写/管理员/离线          |
 | **数据校验**   | 启用              | 检测存储层数据损坏             |
 | **审计日志**   | 启用              | 记录连接和慢查询              |
+{.full-width}
 
 ### 可增强配置
 
@@ -69,6 +70,7 @@ Pigsty 默认启用以下安全特性：
 | 客户端证书 | HBA 使用 `cert` 认证 | 金融级 |
 | 备份加密 | 配置 `cipher_type` | 合规要求 |
 | 防火墙 | 配置 `node_firewall_mode` | 基础设施 |
+{.full-width}
 
 
 
@@ -116,6 +118,7 @@ flowchart TB
 | [**访问控制**](ac/)                    | 角色系统、权限模型、数据库隔离 | 如何控制用户权限？|
 | [**加密通信**](ca/)                    | SSL/TLS、本地 CA、证书管理 | 如何保护数据传输？|
 | **合规清单**                           | 等保三级与 SOC2 详细对照 | 如何满足合规要求？|
+{.full-width}
 
 
 ----------------
@@ -164,6 +167,7 @@ Pigsty 默认创建以下系统用户：
 | `dbuser_dba` | 管理员用户 | `DBUser.DBA` | **必须修改** |
 | `dbuser_monitor` | 监控用户 | `DBUser.Monitor` | **必须修改** |
 | `replicator` | 复制用户 | `DBUser.Replicator` | **必须修改** |
+{.full-width}
 
 ```yaml
 # pigsty.yml - 修改默认密码
@@ -338,6 +342,7 @@ Pigsty 自动生成本地 CA 并签发证书：
 | 审计日志 | ✅ | ✅ | 连接日志 + 慢查询 |
 | 数据完整性 | ✅ | ✅ | 数据校验和 |
 | 备份恢复 | ✅ | ✅ | pgBackRest |
+{.full-width}
 
 ### SOC 2 Type II
 
@@ -348,6 +353,7 @@ Pigsty 自动生成本地 CA 并签发证书：
 | CC7.2 系统监控 | ✅ | Prometheus + Grafana |
 | CC9.1 业务连续性 | ✅ | 高可用 + PITR |
 | A1.2 数据恢复 | ✅ | pgBackRest 备份 |
+{.full-width}
 
 **图例**：✅ 默认满足 · ⚠️ 需要额外配置
 

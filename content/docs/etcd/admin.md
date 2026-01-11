@@ -163,6 +163,7 @@ PostgreSQL 高可用组件 Patroni 通过 [`pg_etcd_password`](/docs/pgsql/param
 | etcdctl 环境变量 | `/etc/profile.d/etcdctl.sh` | `./etcd.yml -t etcd_config` |
 | Patroni DCS 配置 | `/pg/bin/patroni.yml` | `./pgsql.yml -t pg_conf` |
 | VIP-Manager 配置 | `/etc/default/vip-manager` | `./pgsql.yml -t pg_vip_config` |
+{.full-width}
 
 **刷新 etcd 成员配置文件**：
 

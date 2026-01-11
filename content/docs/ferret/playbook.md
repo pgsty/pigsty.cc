@@ -33,6 +33,7 @@ Pigsty 提供了一个内置剧本 [`mongo.yml`](https://github.com/pgsty/pigsty
 | `mongo_cert`     | 签发 FerretDB SSL 证书        |
 | `mongo_launch`   | 启动 FerretDB 服务            |
 | `mongo_register` | 将 FerretDB 注册到 Prometheus |
+{.full-width}
 
 
 ----------------

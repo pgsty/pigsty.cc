@@ -50,6 +50,7 @@ Pigsty 的离线仓库中不同版本的扩展支持范围不同：12/13 只提�
 | `ivory`  | IvorySQL（Oracle 兼容语法）                   |
 | `oriole` | OrioleDB 存储引擎                           |
 | `oracle` | PostgreSQL + ora 兼容（`pg_mode: oracle`）  |
+{.full-width}
 
 选择模式后，Pigsty 会自动加载对应的模板、依赖包与 Patroni 配置。以部署 Citus 为例：
 
@@ -111,6 +112,7 @@ pg-analytics:
 | `olap.yml` | 针对分析场景优化               |
 | `crit.yml` | 强调同步提交/最小延迟，适合金融等零丢失场景 |
 | `tiny.yml` | 轻量机 / 边缘场景 / 资源受限环境    |
+{.full-width}
 
 你可以直接替换模板或自定义一个 YAML 文件放在 `templates/` 下，然后在集群 `vars` 里指定。
 

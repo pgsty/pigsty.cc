@@ -19,4 +19,5 @@ Pigsty 提供了多种开箱即用的配置模板，适用于不同的使用场�
 | 高可用模板 | [`ha/simu`](/docs/conf/simu/)、[`ha/full`](/docs/conf/full/)、[`ha/safe`](/docs/conf/safe/)、[`ha/trio`](/docs/conf/trio/)、[`ha/dual`](/docs/conf/dual/)                                                                                                                        |
 | 应用模版  | [`app/odoo`](/docs/conf/odoo/)、[`app/dify`](/docs/conf/dify/)、[`app/electric`](/docs/conf/electric/)、[`app/maybe`](/docs/conf/maybe/)、[`app/teable`](/docs/conf/teable/)、[`app/registry`](/docs/conf/registry/)                                                              |
 | 其他模版  | [`demo/el`](/docs/conf/el/)、[`demo/debian`](/docs/conf/debian/)、[`demo/demo`](/docs/conf/demo/)、[`demo/minio`](/docs/conf/minio/)、[`build/oss`](/docs/conf/oss/)、[`build/pro`](/docs/conf/pro/)                                                                              |
+{.full-width}
 

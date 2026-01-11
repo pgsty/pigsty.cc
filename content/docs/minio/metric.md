@@ -90,4 +90,5 @@ categories: [参考]
 | scrape_samples_scraped                           | Unknown | `ip`, `job`, `cls`, `instance`, `ins`                          | N/A                                                                                                                                         |
 | scrape_series_added                              | Unknown | `ip`, `job`, `cls`, `instance`, `ins`                          | N/A                                                                                                                                         |
 | up                                               | Unknown | `ip`, `job`, `cls`, `instance`, `ins`                          | N/A                                                                                                                                         |
+{.full-width}
 

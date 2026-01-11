@@ -95,6 +95,7 @@ Pigsty 在 [`terraform/spec/`](https://github.com/pgsty/pigsty/tree/main/terrafo
 | [`aliyun-pro.tf`](https://github.com/pgsty/pigsty/tree/main/terraform/spec/aliyun-pro.tf) | 阿里云 | 多发行版测试模板，用于跨操作系统测试 |
 | [`aws-cn.tf`](https://github.com/pgsty/pigsty/tree/main/terraform/spec/aws-cn.tf) | AWS | AWS 中国区 4 节点环境 |
 | [`tencentcloud.tf`](https://github.com/pgsty/pigsty/tree/main/terraform/spec/tencentcloud.tf) | 腾讯云 | 腾讯云 4 节点环境 |
+{.full-width}
 
 使用模板时，将模板文件复制为 `terraform.tf`：
 
@@ -174,6 +175,7 @@ export ALICLOUD_REGION="cn-shanghai"
 | Ubuntu 24.04 | `u24` | `ubuntu_24_04_x64` | `ubuntu_24_04_arm64` |
 | Anolis 8.9 | `an8` | `anolisos_8_9_x64` | - |
 | Alibaba Cloud Linux 3 | `al3` | `aliyun_3_0_x64` | - |
+{.full-width}
 
 ### OSS 存储配置
 

@@ -28,6 +28,7 @@ IP地址即配置清单中主机的 `inventory_hostname`，体现为 `<cluster>.
 |               `inventory_hostname`               |   `ip`   | **-** | **必选** | **节点IP地址** |
 |     [`nodename`](/docs/node/param/#nodename)     | `string` | **I** | 可选     | **节点名称**   |
 | [`node_cluster`](/docs/node/param/#node_cluster) | `string` | **C** | 可选     | **节点集群名称** |
+{.full-width}
 
 [`nodename`](/docs/node/param/#nodename) 与 [`node_cluster`](/docs/node/param/#node_cluster) 两个参数是可选的，如果不提供，会使用节点现有的主机名，和固定值 `nodes` 作为默认值。在 Pigsty 的监控系统中，这两者将会被用作节点的 **集群标识**（`cls`）与 **实例标识**（`ins`）。
 

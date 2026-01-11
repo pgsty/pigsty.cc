@@ -121,6 +121,7 @@ superuser_reserved_connections: 10
 | `maintenance_work_mem` | shared_buffers × 25% | 用于 VACUUM、CREATE INDEX |
 | `work_mem` | 64MB - 1GB | 与 OLTP 相同 |
 | `effective_cache_size` | 总内存 - shared_buffers | 可用于缓存的预估内存 |
+{.full-width}
 
 ### WAL 配置（关键差异）
 
@@ -215,6 +216,7 @@ shared_preload_libraries: '$libdir/passwordcheck, pg_stat_statements, auto_expla
 | log_disconnections | **on** | off | 审计合规 |
 | passwordcheck | **启用** | 未启用 | 密码安全 |
 | vacuum_defer_cleanup_age | 500000 | 0 | 从库追赶缓冲 |
+{.full-width}
 
 
 ----------------

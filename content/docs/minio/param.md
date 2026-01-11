@@ -43,6 +43,7 @@ MinIO 模块的参数列表，共有 **21** 个参数，分为两个部分：
 | [`minio_endpoint`](#minio_endpoint)     | `string` |  `C`  | minio 部署的客户端别名对应的端点             |
 | [`minio_buckets`](#minio_buckets)       | `bucket[]` | `C` | 待创建的 minio 存储桶列表                |
 | [`minio_users`](#minio_users)           | `user[]` |  `C`  | 待创建的 minio 用户列表                 |
+{.full-width}
 
 [`MINIO_REMOVE`](#minio_remove) 参数组控制 MinIO 集群的移除行为，包括防误删保险、数据清理以及软件包卸载。
 
@@ -51,6 +52,7 @@ MinIO 模块的参数列表，共有 **21** 个参数，分为两个部分：
 | [`minio_safeguard`](#minio_safeguard) | `bool` | `G/C/A` | 防止意外删除？默认为 false          |
 | [`minio_rm_data`](#minio_rm_data)     | `bool` | `G/C/A` | 移除时是否删除 minio 数据？默认为 true |
 | [`minio_rm_pkg`](#minio_rm_pkg)       | `bool` | `G/C/A` | 移除时是否卸载 minio 软件包？默认为 false |
+{.full-width}
 
 其中，`minio_volumes` 与 `minio_endpoint` 为自动生成的参数，但您可以显式覆盖指定这两个参数。
 

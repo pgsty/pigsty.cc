@@ -54,6 +54,7 @@ PIG 与 Pigsty 扩展仓库支持以下 Linux 发行版和 PostgreSQL 版本组�
 | `u22.aarch64` | Ubuntu | 22 | 22.04.5 | Ubuntu 22.04 ARM | 13-18 | ✅ |
 | `u24.x86_64` | Ubuntu | 24 | 24.04.3 | Ubuntu 24.04 x86 | 13-18 | ✅ |
 | `u24.aarch64` | Ubuntu | 24 | 24.04.3 | Ubuntu 24.04 ARM | 13-18 | ✅ |
+{.full-width}
 
 **说明：**
 

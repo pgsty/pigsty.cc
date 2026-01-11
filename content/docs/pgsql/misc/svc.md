@@ -71,6 +71,7 @@ Pigsty默认为每个 PostgreSQL 数据库集群提供四种不同的服务，�
 | [replica](#replica服务) | 5434 | 生产只读，连接到备库连接池（6432）   |
 | [default](#default服务) | 5436 | 管理，ETL写入，直接访问主库（5432） |
 | [offline](#offline服务) | 5438 | OLAP、ETL、个人用户、交互式查询   |
+{.full-width}
 
 以默认的 `pg-meta` 集群为例，它提供四种默认服务：
 
@@ -384,6 +385,7 @@ Pigsty的服务交付边界止步于集群的HAProxy，用户可以用各种手�
 | 集群 VIP 地址 | `10.10.10.3`  | 通过由 `vip-manager` 管理的 L2 VIP 地址访问，绑定到主节点 |
 | 实例主机名     | `pg-test-1`   | 通过任何实例主机名访问（由 dnsmasq @ infra 节点解析）      |
 | 实例 IP 地址  | `10.10.10.11` | 访问任何实例的 IP 地址                            |
+{.full-width}
 
 **端口**
 
@@ -397,6 +399,7 @@ Pigsty 使用不同的 **端口** 来区分 [pg services](#服务概述)
 | 5434 | replica   | 服务  | 访问备份 pgbouncer (或 postgres) |
 | 5436 | default   | 服务  | 访问主 postgres                |
 | 5438 | offline   | 服务  | 访问离线 postgres               |
+{.full-width}
 
 **组合**
 

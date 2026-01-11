@@ -21,6 +21,7 @@ Pigsty 在集群初始化或 HBA 刷新时渲染以下配置文件：
 |---------|------|------|
 | PostgreSQL HBA | `/pg/data/pg_hba.conf` | PostgreSQL 服务器的 HBA 规则 |
 | Pgbouncer HBA | `/etc/pgbouncer/pgb_hba.conf` | 连接池 Pgbouncer 的 HBA 规则 |
+{.full-width}
 
 HBA 规则由以下参数控制：
 
@@ -30,6 +31,7 @@ HBA 规则由以下参数控制：
 | [`pg_hba_rules`](#pg_hba_rules) | G/C/I | PostgreSQL 集群/实例级追加规则 |
 | [`pgb_default_hba_rules`](#pgb_default_hba_rules) | G | Pgbouncer 全局默认 HBA 规则 |
 | [`pgb_hba_rules`](#pgb_hba_rules) | G/C/I | Pgbouncer 集群/实例级追加规则 |
+{.full-width}
 
 规则特性：
 
@@ -129,6 +131,7 @@ Pgbouncer 集群/实例级 HBA 追加规则。
 | `role` | string | 否 | `common` | 实例角色过滤，见[角色过滤](#角色过滤) |
 | `order` | int | 否 | `1000` | 排序权重，数字小的排前面，见[排序机制](#排序机制) |
 | `rules` | list | 是* | - | 原始 HBA 文本行列表，与 `addr` 二选一 |
+{.full-width}
 
 > `addr` 和 `rules` 必须指定其一。使用 `rules` 时可以直接写原始 HBA 格式。
 
@@ -149,6 +152,7 @@ Pigsty 提供地址别名，简化 HBA 规则编写：
 | `intra` / `intranet` | `10.0.0.0/8`, `172.16.0.0/12`, `192.168.0.0/16` | 内网 CIDR 网段 |
 | `world` / `all` | `0.0.0.0/0` + `::/0` | 任意地址（IPv4 + IPv6） |
 | `<CIDR>` | 直接使用 | 如 `192.168.1.0/24`、`10.1.1.100/32` |
+{.full-width}
 
 内网 CIDR 可通过 `node_firewall_intranet` 参数自定义：
 
@@ -177,6 +181,7 @@ Pigsty 提供认证方式别名，简化配置：
 | `deny` / `reject` | `reject` | `host` | 拒绝连接 |
 | `ident` | `ident` | `host` | OS 用户映射（PostgreSQL） |
 | `peer` | `peer` | `local` | OS 用户映射（Pgbouncer/本地） |
+{.full-width}
 
 > `pg_pwd_enc` 默认为 `scram-sha-256`，可设为 `md5` 以兼容老客户端。
 
@@ -193,6 +198,7 @@ HBA 规则支持以下用户占位符，渲染时自动替换为实际用户名�
 | `${repl}` | `replicator` | 复制用户 |
 | `${monitor}` | `dbuser_monitor` | 监控用户 |
 | `${admin}` | `dbuser_dba` | 管理员用户 |
+{.full-width}
 
 这些变量的实际值由对应参数控制：
 
@@ -218,6 +224,7 @@ HBA 规则的 `role` 字段控制规则在哪些实例上生效：
 | `offline` | 仅离线实例生效（`pg_role: offline` 或 `pg_offline_query: true`） |
 | `standby` | 备库实例 |
 | `delayed` | 延迟从库实例 |
+{.full-width}
 
 角色过滤基于实例的 `pg_role` 变量进行匹配。不匹配的规则会被注释掉（以 `#` 开头）。
 
@@ -244,6 +251,7 @@ PostgreSQL HBA 是**首条匹配生效**，规则顺序至关重要。Pigsty 通
 | `0 - 99` | 用户高优先规则（在所有默认规则之前） |
 | `100 - 650` | 默认规则区（间隔 50，便于插入） |
 | `1000+` | 用户规则默认值（不填 `order` 时追加到最后） |
+{.full-width}
 
 ### 默认规则 Order 分配
 
@@ -263,6 +271,7 @@ PostgreSQL HBA 是**首条匹配生效**，规则顺序至关重要。Pigsty 通
 | 550 | dbrole_readonly localhost |
 | 600 | dbrole_readonly intra |
 | 650 | dbrole_offline intra |
+{.full-width}
 
 **Pgbouncer 默认规则**：
 
@@ -275,6 +284,7 @@ PostgreSQL HBA 是**首条匹配生效**，规则顺序至关重要。Pigsty 通
 | 300 | admin intra pwd |
 | 350 | admin world deny |
 | 400 | all intra pwd |
+{.full-width}
 
 ### 排序示例
 
@@ -598,6 +608,7 @@ head -30 /pg/data/pg_hba.conf
 | `pg_monitor_username`     | 监控用户名                             |
 | `pg_admin_username`       | 管理员用户名                            |
 | `node_firewall_intranet`  | 内网 CIDR 定义                        |
+{.full-width}
 
 
 ----------------

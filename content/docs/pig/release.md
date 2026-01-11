@@ -39,6 +39,7 @@ categories: [参考]
 | [v0.1.1](#v011) | 2025-01-09 | 更新扩展列表                            | [v0.1.1](https://github.com/pgsty/pig/releases/tag/v0.1.1) |
 | [v0.1.0](#v010) | 2024-12-29 | repo、ext、sty 和自更新                 | [v0.1.0](https://github.com/pgsty/pig/releases/tag/v0.1.0) |
 | [v0.0.1](#v001) | 2024-12-23 | 创世发布                              | [v0.0.1](https://github.com/pgsty/pig/releases/tag/v0.0.1) |
+{.full-width}
 
 
 

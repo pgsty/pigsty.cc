@@ -160,6 +160,7 @@ bin/pgsql-user <cls> <username>    # 幂等操作，可重复执行
 | `pgbouncer` | 是否加入连接池 | `pgbouncer: true` |
 | `pool_mode` | 连接池模式 | `pool_mode: session` |
 | `pool_connlimit` | 连接池连接限制 | `pool_connlimit: 50` |
+{.full-width}
 
 ### 修改密码
 
@@ -280,6 +281,7 @@ pg-drop-role <role_name> [successor_role] [options]
 | `-v, --verbose` | 显示详细输出 |
 | `-h, --host` | 数据库主机 |
 | `-p, --port` | 数据库端口 |
+{.full-width}
 
 **示例：**
 
@@ -425,6 +427,7 @@ PostgreSQL 16 引入了更细粒度的角色成员关系控制：
 | `admin` | ADMIN OPTION | 允许将角色授予其他用户 |
 | `set` | SET OPTION | 允许 SET ROLE 切换到该角色 |
 | `inherit` | INHERIT OPTION | 是否自动继承角色权限 |
+{.full-width}
 
 **注意**：`set` 和 `inherit` 选项仅在 PostgreSQL 16+ 中有效，在早期版本会被忽略并在生成的 SQL 中添加警告注释。
 
@@ -480,6 +483,7 @@ ALTER USER "dbuser_app" SET "statement_timeout" = DEFAULT;
 | `search_path` | Schema 搜索路径 | `'app,public'` |
 | `log_statement` | 日志记录级别 | `'ddl'` |
 | `temp_file_limit` | 临时文件大小限制 | `'10GB'` |
+{.full-width}
 
 
 ----------------
@@ -585,6 +589,7 @@ dbuser_app                  = pool_mode=transaction max_user_connections=50
 | `transaction` | 事务结束后归还连接（默认） | 大多数 OLTP 应用 |
 | `session` | 会话结束后归还连接 | 需要会话状态的应用（如 DBA 操作） |
 | `statement` | 语句结束后归还连接 | 无状态简单查询 |
+{.full-width}
 
 ### 从连接池移除用户
 
@@ -622,6 +627,7 @@ dbuser_app                  = pool_mode=transaction max_user_connections=50
 | 查看用户详情 | `psql -c '\du+ <username>'` |
 | 查看连接池用户 | `cat /etc/pgbouncer/userlist.txt` |
 | 查看用户选项 | `cat /etc/pgbouncer/useropts.txt` |
+{.full-width}
 
 ### 常见操作示例
 

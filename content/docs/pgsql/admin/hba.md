@@ -82,6 +82,7 @@ bin/pgsql-hba --help
 | `pg_reload`        | 重载 PostgreSQL 配置（需配合 `pg_reload=true`） |
 | `pgbouncer_hba`    | 渲染 Pgbouncer HBA 配置文件                  |
 | `pgbouncer_reload` | 重载 Pgbouncer 配置                        |
+{.full-width}
 
 
 ----------------
@@ -94,6 +95,7 @@ HBA 配置文件由 Ansible 渲染生成：
 |------------|-------------------------------|---------------------------------------|
 | PostgreSQL | `/pg/data/pg_hba.conf`        | `roles/pgsql/templates/pg_hba.conf`   |
 | Pgbouncer  | `/etc/pgbouncer/pgb_hba.conf` | `roles/pgsql/templates/pgbouncer.hba` |
+{.full-width}
 
 > **警告**：不要直接编辑这些文件，下次执行 playbook 时会被覆盖。所有变更应在 `pigsty.yml` 中进行。
 

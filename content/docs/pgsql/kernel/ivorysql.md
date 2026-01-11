@@ -175,5 +175,6 @@ IvorySQL 等效于 PostgreSQL 16，任何兼容 PostgreSQL 线缆协议的客户
 | plpython3u           | 1.0     | PL/Python3U untrusted procedural language                              |
 | pltcl                | 1.0     | PL/Tcl procedural language                                             |
 | pltclu               | 1.0     | PL/TclU untrusted procedural language                                  |
+{.full-width}
 
 请注意，Pigsty 不对使用 IvorySQL 内核承担任何质保责任，使用此内核遇到的任何问题与需求请联系原厂解决。

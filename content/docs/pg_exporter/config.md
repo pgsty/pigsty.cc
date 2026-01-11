@@ -124,6 +124,7 @@ query: |
 | `COUNTER` | 只增不减的累计值         | 总事务数  |
 | `LABEL`   | 用作 Prometheus 标签 | 数据库名称 |
 | `DISCARD` | 忽略此列             | 内部值   |
+{.full-width}
 
 ### 缓存控制（TTL）
 
@@ -183,6 +184,7 @@ max_version: 140000  # 低于 PostgreSQL 14.0
 | `primary` / `master` | 仅在主服务器上执行 |
 | `standby` / `replica` | 仅在从服务器上执行 |
 | `pgbouncer` | 仅用于 pgBouncer 连接 |
+{.full-width}
 
 ### 前缀标签
 
@@ -193,6 +195,7 @@ max_version: 140000  # 低于 PostgreSQL 14.0
 | `extension:` | `extension:pg_stat_statements` | 仅当扩展已安装时执行 |
 | `schema:` | `schema:public` | 仅当模式存在时执行 |
 | `not:` | `not:slow` | 当导出器没有该标签时执行 |
+{.full-width}
 
 ### 自定义标签
 
@@ -274,6 +277,7 @@ PG Exporter 自带预先组织好的采集器：
 | 8xx | 可选 | 昂贵/可选指标 |
 | 9xx | pgBouncer | 连接池指标 |
 | 10xx+ | 扩展 | 扩展特定指标 |
+{.full-width}
 
 
 --------
@@ -495,6 +499,7 @@ pg_exporter --explain
 | 抓取缓慢 | 增加 TTL、添加超时、禁用昂贵查询 |
 | 内存使用高 | 减少结果集大小，使用 LIMIT |
 | 权限错误 | 验证监控用户的查询权限 |
+{.full-width}
 
 ### 调试日志
 

@@ -77,6 +77,7 @@ Percona 提供了 80 个可用的扩展，包括 `pg_tde`, `pgvector`, `postgis`
 | hstore | 1.8 | 用于存储(键,值)对集合的数据类型 |
 | ltree | 1.3 | 用于层次树状结构的数据类型 |
 | pg_trgm | 1.6 | 基于三元组的文本相似度测量和索引搜索 |
+{.full-width}
 
 完整的 80 个扩展列表请参考 [Percona Postgres 官方文档](https://docs.percona.com/postgresql/18/extensions.html)。
 

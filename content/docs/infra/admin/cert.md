@@ -52,6 +52,7 @@ files/pki/
 | `ca_create`      | `true`       | 如果不存在则创建 CA，否则中止 |
 | `ca_cn`          | `pigsty-ca`  | CA 证书通用名称               |
 | `cert_validity`  | `7300d`      | 签发证书的默认有效期          |
+{.full-width}
 
 ### 证书有效期
 
@@ -60,6 +61,7 @@ files/pki/
 | CA 证书        | 100 年    | 硬编码（36500 天）            |
 | 服务器/客户端  | 20 年     | `cert_validity`（7300d）      |
 | Nginx HTTPS    | ~1 年     | `nginx_cert_validity`（397d） |
+{.full-width}
 
 > **注意**：浏览器厂商限制超过 398 天的证书信任。Nginx 使用较短有效期以保证浏览器兼容性。
 
@@ -122,6 +124,7 @@ tar -czvf pigsty-ca-$(date +%Y%m%d).tar.gz files/pki/ca/
 | `expire`  | `7300d`                    | 证书有效期（20 年）       |
 | `key`     | `files/pki/misc/<cn>.key`  | 私钥输出路径              |
 | `crt`     | `files/pki/misc/<cn>.crt`  | 证书输出路径              |
+{.full-width}
 
 ### 高级示例
 
@@ -308,6 +311,7 @@ systemctl enable certbot.timer
 | `certbot renew --cert-name domain.com`           | 续期指定证书 |
 | `certbot delete --cert-name domain.com`          | 删除证书     |
 | `certbot revoke --cert-path /path/to/cert.pem`   | 吊销证书     |
+{.full-width}
 
 ### OpenSSL 命令
 
@@ -338,6 +342,7 @@ openssl s_client -connect 10.10.10.10:5432 -starttls postgres </dev/null
 | 端口 80 被阻止 | 确保 Let's Encrypt 验证时端口 80 开放      |
 | 请求频率限制    | 避免短时间内多次申请 Let's Encrypt 证书       |
 | 权限被拒绝     | 检查文件权限（密钥：0600，证书：0644）           |
+{.full-width}
 
 
 ----------------

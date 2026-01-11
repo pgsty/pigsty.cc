@@ -139,6 +139,7 @@ synchronous_standby_names: ''         # 同步从库列表（动态管理）
 | `retry_timeout` | 10s | DCS 与 PostgreSQL 操作重试超时 |
 | `primary_start_timeout` | 10s | 主库启动超时时间 |
 | `primary_stop_timeout` | 30s | 主库优雅停止超时（同步模式下生效） |
+{.full-width}
 
 这些参数由 [`pg_rto`](/docs/pgsql/param#pg_rto) 统一计算派生，默认 30s 的 RTO 对应：
 
@@ -162,6 +163,7 @@ primary_start_timeout: 10             # 主库启动超时 = RTO/3
 | `/leader` | 领导者检查 | 持有领导者锁 |
 | `/async` | 异步从库 | 异步复制从库 |
 | `/sync` | 同步从库 | 同步复制从库 |
+{.full-width}
 
 -----------------
 
@@ -226,6 +228,7 @@ auto_compaction_retention: 24h        # 保留 24 小时历史
 | replica | 5434 | pgbouncer | `/read-only` | 只读服务，优先路由到从库 |
 | default | 5436 | postgres | `/primary` | 直连主库（绕过连接池） |
 | offline | 5438 | postgres | `/replica` | 离线从库（ETL/备份） |
+{.full-width}
 
 **健康检查配置**：
 
@@ -253,6 +256,7 @@ listen pg-test-primary
 | `downinter` | 5s | 节点宕机后的检查间隔 |
 | `rise` | 3 | 节点恢复需要连续成功次数 |
 | `fall` | 3 | 节点宕机需要连续失败次数 |
+{.full-width}
 
 **流量切换时序**（主库故障）：
 - 故障检测：`fall × inter` = 3 × 3s = 9s
@@ -623,6 +627,7 @@ flowchart TB
 | DC-A 整体故障 | 切换到 DC-B | 自动（需仲裁节点） |
 | DC-B 整体故障 | 无影响 | 自动 |
 | 仲裁节点故障 | 降级为 4 节点 | 可容忍 1 节点故障 |
+{.full-width}
 
 -----------------
 
@@ -1097,6 +1102,7 @@ pg_rpo: 0
 | 快速切换 | 15s | 1MB | 10-20s | < 1MB | 低延迟要求 |
 | 零丢失 (CRIT) | 30s | 0 | 20-40s | 0 | 金融核心系统 |
 | 保守模式 | 60s | 1MB | 40-80s | < 1MB | 不稳定网络 |
+{.full-width}
 
 **配置示例**：
 
@@ -1131,6 +1137,7 @@ pg_conf: oltp.yml
 | 吞吐量 | 高 | 较低 |
 | 从库故障影响 | 无 | 可能阻塞写入 |
 | RPO | < 1MB | = 0 |
+{.full-width}
 
 ### RTO 权衡
 
@@ -1253,6 +1260,7 @@ Patroni 配置模板，默认为 `oltp.yml`。可选值：
 | `olap.yml` | OLAP 负载 | 否 | 分析型应用 |
 | `crit.yml` | 关键系统 | 是 | 金融核心系统 |
 | `tiny.yml` | 微型实例 | 否 | 开发测试环境 |
+{.full-width}
 
 ### [**`patroni_watchdog_mode`**](/docs/pgsql/param#patroni_watchdog_mode)
 

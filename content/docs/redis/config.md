@@ -30,6 +30,7 @@ Redis [**身份参数**](param#redis_id) 是定义Redis集群时必须提供的�
 |   [`redis_cluster`](param#redis_cluster)   | **必选**，集群级别 | 集群名  |       `redis-test`        |
 |      [`redis_node`](param#redis_node)      | **必选**，节点级别 | 节点号  |          `1`,`2`          |
 | [`redis_instances`](param#redis_instances) | **必选**，节点级别 | 实例定义 | `{ 6001 : {} ,6002 : {}}` |
+{.full-width}
 
 - [`redis_cluster`](param#redis_cluster)：Redis集群名称，作为集群资源的顶层命名空间。
 - [`redis_node`](param#redis_node)：Redis节点标号，整数，在集群内唯一，用于区分不同节点。

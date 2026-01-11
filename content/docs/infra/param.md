@@ -24,6 +24,7 @@ INFRA 模块负责配置 Pigsty 的基础设施组件：本地软件源、Nginx�
 | [`VICTORIA`](#victoria)           | VictoriaMetrics/Logs/Traces 可观测性套件 |
 | [`PROMETHEUS`](#prometheus)       | Alertmanager 与 Blackbox Exporter   |
 | [`GRAFANA`](#grafana)             | Grafana 可视化平台配置                    |
+{.full-width}
 
 
 ----------------
@@ -39,6 +40,7 @@ INFRA 模块负责配置 Pigsty 的基础设施组件：本地软件源、Nginx�
 | [`region`](#region)             |    `enum`    | `G`  | 上游镜像区域：default,china,europe |
 | [`language`](#language)         |    `enum`    | `G`  | 默认语言，en 或 zh                |
 | [`proxy_env`](#proxy_env)       |    `dict`    | `G`  | 下载包时使用的全局代理环境变量             |
+{.full-width}
 
 [`CA`](#ca) 参数组用于配置 Pigsty 自签名 CA 证书管理，包括是否创建 CA、CA 名称以及证书有效期。
 
@@ -47,6 +49,7 @@ INFRA 模块负责配置 Pigsty 的基础设施组件：本地软件源、Nginx�
 | [`ca_create`](#ca_create)           |   `bool`    | `G`  | 不存在时是否创建 CA？默认为 true   |
 | [`ca_cn`](#ca_cn)                   |  `string`   | `G`  | CA CN名称，固定为 pigsty-ca  |
 | [`cert_validity`](#cert_validity)   | `interval`  | `G`  | 证书有效期，默认为 20 年         |
+{.full-width}
 
 [`INFRA_ID`](#infra_id) 参数组用于定义基础设施节点的身份标识，包括节点序号、服务门户配置以及数据目录。
 
@@ -55,6 +58,7 @@ INFRA 模块负责配置 Pigsty 的基础设施组件：本地软件源、Nginx�
 | [`infra_seq`](#infra_seq)         |  `int`   | `I`  | 基础设施节点序号，必选身份参数          |
 | [`infra_portal`](#infra_portal)   |  `dict`  | `G`  | 通过 Nginx 门户暴露的基础设施服务列表   |
 | [`infra_data`](#infra_data)       |  `path`  | `G`  | 基础设施数据目录，默认为 /data/infra |
+{.full-width}
 
 [`REPO`](#repo) 参数组用于配置本地软件仓库，包括仓库启用开关、目录路径、上游源定义以及要下载的软件包列表。
 
@@ -70,6 +74,7 @@ INFRA 模块负责配置 Pigsty 的基础设施组件：本地软件源、Nginx�
 | [`repo_packages`](#repo_packages)             |  `string[]`   |  `G`    | 从上游仓库下载哪些软件包？         |
 | [`repo_extra_packages`](#repo_extra_packages) |  `string[]`   | `G/C/I` | 从上游仓库下载哪些额外的软件包？      |
 | [`repo_url_packages`](#repo_url_packages)     |  `string[]`   |  `G`    | 使用URL下载的额外软件包列表       |
+{.full-width}
 
 [`INFRA_PACKAGE`](#infra_package) 参数组用于定义在基础设施节点上安装的软件包，包括 RPM/DEB 包和 PIP 包。
 
@@ -77,6 +82,7 @@ INFRA 模块负责配置 Pigsty 的基础设施组件：本地软件源、Nginx�
 |:--------------------------------------------|:-----------:|:----:|:----------------------|
 | [`infra_packages`](#infra_packages)         | `string[]`  | `G`  | 在基础设施节点上要安装的软件包       |
 | [`infra_packages_pip`](#infra_packages_pip) |  `string`   | `G`  | 在基础设施节点上使用 pip 安装的包   |
+{.full-width}
 
 [`NGINX`](#nginx) 参数组用于配置 Nginx Web 服务器与反向代理，包括启用开关、端口、SSL 模式、证书以及基础认证。
 
@@ -96,6 +102,7 @@ INFRA 模块负责配置 Pigsty 的基础设施组件：本地软件源、Nginx�
 | [`certbot_sign`](#certbot_sign)                 |   `bool`   | `G/A`  | 是否使用 certbot 签署证书？            |
 | [`certbot_email`](#certbot_email)               |  `string`  | `G/A`  | certbot 通知邮箱地址                |
 | [`certbot_options`](#certbot_options)           |  `string`  | `G/A`  | certbot 额外的命令行参数              |
+{.full-width}
 
 [`DNS`](#dns) 参数组用于配置 DNSMasq 域名解析服务，包括启用开关、监听端口以及动态 DNS 记录。
 
@@ -104,6 +111,7 @@ INFRA 模块负责配置 Pigsty 的基础设施组件：本地软件源、Nginx�
 | [`dns_enabled`](#dns_enabled) |   `bool`    | `G/I`  | 在此基础设施节点上设置dnsmasq？    |
 | [`dns_port`](#dns_port)       |   `port`    |  `G`   | DNS 服务器监听端口，默认为 53     |
 | [`dns_records`](#dns_records) | `string[]`  |  `G`   | 由 dnsmasq 解析的动态 DNS 记录 |
+{.full-width}
 
 [`VICTORIA`](#victoria) 参数组用于配置 VictoriaMetrics/Logs/Traces 可观测性套件，包括启用开关、端口、数据保留策略等。
 
@@ -126,6 +134,7 @@ INFRA 模块负责配置 Pigsty 的基础设施组件：本地软件源、Nginx�
 | [`vmalert_enabled`](#vmalert_enabled)                   |   `bool`   | `G/I`  | 在此基础设施节点上启用 VMAlert？        |
 | [`vmalert_port`](#vmalert_port)                         |   `port`   |  `G`   | VMAlert 监听端口，默认为 8880       |
 | [`vmalert_options`](#vmalert_options)                   |   `arg`    |  `G`   | VMAlert 额外命令行参数             |
+{.full-width}
 
 [`PROMETHEUS`](#prometheus) 参数组用于配置 Alertmanager 与 Blackbox Exporter，提供告警管理和网络探测功能。
 
@@ -138,6 +147,7 @@ INFRA 模块负责配置 Pigsty 的基础设施组件：本地软件源、Nginx�
 | [`alertmanager_port`](#alertmanager_port)       |  `port`  |  `G`   | AlertManager 监听端口，默认为 9059  |
 | [`alertmanager_options`](#alertmanager_options) |  `arg`   |  `G`   | alertmanager 额外的命令行参数选项     |
 | [`exporter_metrics_path`](#exporter_metrics_path) |  `path`  |  `G`   | exporter 指标路径，默认为 /metrics  |
+{.full-width}
 
 [`GRAFANA`](#grafana) 参数组用于配置 Grafana 可视化平台，包括启用开关、端口、管理员凭据以及数据源配置。
 
@@ -151,6 +161,7 @@ INFRA 模块负责配置 Pigsty 的基础设施组件：本地软件源、Nginx�
 | [`grafana_auth_proxy`](#grafana_auth_proxy)     |   `bool`   |  `G`   | 启用 Grafana 身份代理？           |
 | [`grafana_pgurl`](#grafana_pgurl)               |   `url`    |  `G`   | 外部 PostgreSQL 数据库 URL（用于Grafana持久化） |
 | [`grafana_view_password`](#grafana_view_password) | `password` |  `G`   | Grafana 元数据库 PG 数据源密码      |
+{.full-width}
 
 
 ------------------------------

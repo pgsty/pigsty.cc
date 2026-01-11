@@ -15,6 +15,7 @@ Pigsty 扩展仓库旨在与 [PGDG](https://www.postgresql.org/download/linux/) 
 | **INFRA** 仓库 |  [Pigsty 基础设施仓库](/docs/repo/infra/)，监控/工具软件   | [infra.md](/docs/repo/infra/) |
 | **PGDG** 仓库  |     [PGDG 官方仓库镜像](/docs/repo/pgdg/)，PG 内核     |  [pgdg.md](/docs/repo/pgdg/)  |
 |  **GPG** 密钥  |        [GPG 公钥](/docs/repo/gpg/)，签名验证         |   [gpg.md](/docs/repo/gpg/)   |
+{.full-width}
 
 
 ---------
@@ -30,6 +31,7 @@ Pigsty 扩展仓库旨在与 [PGDG](https://www.postgresql.org/download/linux/) 
 |  Debian 13   | d13  | **18** **17** **16** **15** **14** **13** | **18** **17** **16** **15** **14** **13** |
 | Ubuntu 22.04 | u22  | **18** **17** **16** **15** **14** **13** | **18** **17** **16** **15** **14** **13** |
 | Ubuntu 24.04 | u24  | **18** **17** **16** **15** **14** **13** | **18** **17** **16** **15** **14** **13** |
+{.full-width}
 
 
 ---------
@@ -127,6 +129,7 @@ Pigsty 仓库由两个主要部分组成：[**INFRA**](/docs/repo/infra/) 和 [*
 |:------:|:-----:|:------:|:-------:|
 |   EL   | `rpm` |   ✓    |    ✓    |
 | Debian | `deb` |   ✓    |    ✓    |
+{.full-width}
 
 [**PGSQL**](/docs/repo/pgsql/) 仓库中的软件包通常特定于 Linux 大版本（例如 el9, d12），也通常与 PostgreSQL 大版本相关（例如 pg17，pg16 ）。
 这个仓库中包含了 PostgreSQL 内核分支、扩展插件与工具，通常由类 C 语言编写。
@@ -157,6 +160,7 @@ Pigsty 仓库由两个主要部分组成：[**INFRA**](/docs/repo/infra/) 和 [*
 |    `u22.aarch64`     | Ubuntu | 22  | 22.04.5 | Ubuntu 22.04 ARM  | **18** **17** **16** **15** **14** **13** |   OK   |
 |    `u24.x86_64`      | Ubuntu | 24  | 24.04.3 | Ubuntu 24.04 x86  | **18** **17** **16** **15** **14** **13** |   OK   |
 |    `u24.aarch64`     | Ubuntu | 24  | 24.04.3 | Ubuntu 24.04 ARM  | **18** **17** **16** **15** **14** **13** |   OK   |
+{.full-width}
 
 
 ---------

@@ -23,6 +23,7 @@ DOCKER 模块提供了 8 个配置参数。
 | [`docker_exporter_port`](#docker_exporter_port)       |   `port`   |   `G`    | Docker 监控指标导出端口，默认为 `9323`                 |
 | [`docker_image`](#docker_image)                       | `string[]` | `G/C/I`  | Docker 待拉取的镜像列表，默认为空列表                     |
 | [`docker_image_cache`](#docker_image_cache)           |   `path`   | `G/C/I`  | Docker 待导入的镜像压缩包路径，默认为 `/tmp/docker/*.tgz` |
+{.full-width}
 
 
 您可以使用 [`docker.yml`](https://github.com/pgsty/pigsty/blob/main/docker.yml) 剧本，在节点上安装并启用 Docker。

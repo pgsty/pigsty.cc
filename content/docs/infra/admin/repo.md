@@ -40,6 +40,7 @@ Pigsty 预定义了常用的软件包组合，方便批量安装：
 | `pgsql-utility`  | Patroni、pgBouncer、pgBackRest、PG 工具 |
 | `pgsql`          | 完整 PostgreSQL（服务端、客户端、扩展）          |
 | `pgsql-mini`     | 最小化 PostgreSQL 安装                  |
+{.full-width}
 
 ### Debian/Ubuntu 系统
 
@@ -49,6 +50,7 @@ Pigsty 预定义了常用的软件包组合，方便批量安装：
 | `infra-package`  | 基础设施组件（使用 Debian 命名规范） |
 | `pgsql-client`   | PostgreSQL 客户端         |
 | `pgsql-server`   | PostgreSQL 服务端及相关包     |
+{.full-width}
 
 
 
@@ -67,6 +69,7 @@ Pigsty 预定义了常用的软件包组合，方便批量安装：
 | `repo_pkg`      | 下载软件包及依赖           |
 | `repo_create`   | 创建/更新 YUM 或 APT 仓库 |
 | `repo_nginx`    | 启动 Nginx 文件服务器     |
+{.full-width}
 
 ### 完整任务列表
 

@@ -134,3 +134,4 @@ categories: [参考]
 | swarm_store_write_tx_latency_seconds_count                   | Unknown | `ip`, `cls`, `ins`, `job`, `instance`                                                                                                           | N/A                                                                  |
 | swarm_store_write_tx_latency_seconds_sum                     | Unknown | `ip`, `cls`, `ins`, `job`, `instance`                                                                                                           | N/A                                                                  |
 | up                                                           | Unknown | `ip`, `cls`, `ins`, `job`, `instance`                                                                                                           | N/A                                                                  |
+{.full-width}

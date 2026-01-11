@@ -60,6 +60,7 @@ Pigsty 默认从互联网上游 [**安装**](/docs/setup/install/) 所需软件�
 | Ubuntu 24.04 aarch64  | `u24.aarch64`  | `24.04.2` | [**`pigsty-pkg-v4.0.0.u24.aarch64.tgz`**](https://github.com/pgsty/pigsty/releases/download/v4.0.0/pigsty-pkg-v4.0.0.u24.aarch64.tgz)   |
 | Ubuntu 22.04 x86_64   | `u22.x86_64`   | `22.04.5` | [**`pigsty-pkg-v4.0.0.u22.x86_64.tgz`**](https://github.com/pgsty/pigsty/releases/download/v4.0.0/pigsty-pkg-v4.0.0.u22.x86_64.tgz)     |
 | Ubuntu 22.04 aarch64  | `u22.aarch64`  | `22.04.5` | [**`pigsty-pkg-v4.0.0.u22.aarch64.tgz`**](https://github.com/pgsty/pigsty/releases/download/v4.0.0/pigsty-pkg-v4.0.0.u22.aarch64.tgz)   |
+{.full-width}
 
 如果您使用的是上述列表中给出的操作系统（精确匹配的小版本），那么建议使用离线软件包。
 Pigsty 为这些系统提供了开箱即用的预制离线软件包，在 GitHub 上提供免费下载。

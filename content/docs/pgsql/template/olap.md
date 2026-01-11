@@ -88,6 +88,7 @@ OLAP 模板的内存分配策略更为激进：
 | `maintenance_work_mem` | shared_buffers × **50%** | 加速索引创建和 VACUUM |
 | `work_mem` | 64MB - **8GB** | 更大的排序/哈希内存 |
 | `effective_cache_size` | 总内存 - shared_buffers | 可用于缓存的预估内存 |
+{.full-width}
 
 **work_mem 计算逻辑**（与 OLTP 不同）：
 ```
@@ -221,6 +222,7 @@ idle_in_transaction_session_timeout: 0   # OLTP: 10min，禁用
 | log_min_duration_statement | 1000ms | 100ms | 放宽慢查询阈值 |
 | default_statistics_target | 1000 | 400 | 更精确统计 |
 | idle_in_transaction_session_timeout | 禁用 | 10min | 允许长事务 |
+{.full-width}
 
 
 ----------------

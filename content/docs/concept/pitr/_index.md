@@ -32,6 +32,7 @@ Pigsty 为您提供了基础备份与 WAL 归档的默认配置，您可以使�
 | <i class="fa-solid fa-music text-danger"></i> 什么也不做                                                                   | 宕机 | <i class="fas fa-circle-xmark text-danger"></i> **永久丢失**                        | <i class="fas fa-circle-xmark text-danger"></i> **全部丢失**                             |
 | <i class="fa-solid fa-copy text-secondary"></i> 基础备份                                                                  | 宕机 | <i class="fa-solid fa-triangle-exclamation text-secondary"></i> 取决于备份大小与带宽（几小时） | <i class="fa-solid fa-triangle-exclamation text-secondary"></i> 丢失上一次备份后的数据（几个小时到几天） |
 | <i class="fa-solid fa-copy text-primary"></i> 基础备份 + <i class="fa-solid fa-clock-rotate-left text-primary"></i> WAL归档 | 宕机 | <i class="fa-solid fa-triangle-exclamation text-primary"></i> 取决于备份大小与带宽（几小时）   | <i class="fa-solid fa-triangle-exclamation text-primary"></i> 丢失最后尚未归档的数据（几十MB）      |
+{.full-width}
 
 
 **时间点恢复有什么代价？**

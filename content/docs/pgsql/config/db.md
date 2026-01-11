@@ -121,6 +121,7 @@ pg-meta:
 | `pool_connlimit`      | 连接池 | `int`        | 可变   | 最大数据库连接数，默认 `100`                      |
 | `pool_auth_user`      | 连接池 | `string`     | 可变   | 认证查询用户                                      |
 | `register_datasource` | 监控   | `bool`       | 可变   | 是否注册到 Grafana 数据源，默认 `true`            |
+{.full-width}
 
 
 ### 可变性说明
@@ -133,6 +134,7 @@ pg-meta:
 | 可变   | 可通过重新执行剧本修改                        |
 | 一次性 | 仅在首次创建时执行，已存在的数据库不会重复执行|
 | 增量   | 只会添加新内容，不会删除已有内容              |
+{.full-width}
 
 
 ----------------
@@ -166,6 +168,7 @@ pg-meta:
 | `create`   | 创建数据库（默认），已存在则跳过               |
 | `absent`   | 删除数据库，使用 `DROP DATABASE WITH (FORCE)`  |
 | `recreate` | 先删除再创建，用于重置数据库                   |
+{.full-width}
 
 ```yaml
 - name: myapp                # state 默认为 create
@@ -217,6 +220,7 @@ GRANT ALL PRIVILEGES ON DATABASE "myapp" TO "new_owner";
 | `template1` | 默认模板，包含 Pigsty 预配置的扩展和权限          |
 | `template0` | 干净模板，用于指定不同编码或本地化设置时必须使用  |
 | 自定义数据库 | 可以使用已有数据库作为模板克隆                   |
+{.full-width}
 
 **重要**：使用 `icu` 或 `builtin` 本地化提供者时，必须指定 `template: template0`。
 
@@ -239,6 +243,7 @@ GRANT ALL PRIVILEGES ON DATABASE "myapp" TO "new_owner";
 |-------------|--------------------------------|-----------------------|
 | `FILE_COPY` | 直接复制数据文件（PG15+ 默认） | 大模板，通用场景      |
 | `WAL_LOG`   | 通过 WAL 日志复制              | 小模板，不阻塞连接    |
+{.full-width}
 
 在 PostgreSQL 14 及更早版本中，此参数会被忽略。
 
@@ -293,6 +298,7 @@ GRANT ALL PRIVILEGES ON DATABASE "myapp" TO "new_owner";
 | `libc`    | -      | 使用操作系统 C 库，传统默认方式             |
 | `icu`     | PG15+  | 使用 ICU 库，跨平台一致                     |
 | `builtin` | PG17+  | PostgreSQL 内置实现，最高效的 C/C.UTF-8     |
+{.full-width}
 
 **注意**：使用 `icu` 或 `builtin` 时，必须指定 `template: template0`。
 
@@ -313,6 +319,7 @@ GRANT ALL PRIVILEGES ON DATABASE "myapp" TO "new_owner";
 | `zh-Hant`  | 繁体中文       |
 | `ja-JP`    | 日语           |
 | `ko-KR`    | 韩语           |
+{.full-width}
 
 ```yaml
 - name: chinese_db
@@ -612,6 +619,7 @@ ALTER DATABASE "myapp" SET "statement_timeout" = '30s';
 | `transaction` | 事务结束后归还连接       | 大多数 OLTP 应用        |
 | `session`     | 会话结束后归还连接       | 需要会话状态的应用      |
 | `statement`   | 语句结束后归还连接       | 简单无状态查询          |
+{.full-width}
 
 ### `pool_size`
 
@@ -677,6 +685,7 @@ ALTER DATABASE "myapp" SET "statement_timeout" = '30s';
 | [`pg_locale`](/docs/pgsql/param#pg_locale)            | `C`      | 集群默认本地化    |
 | [`pg_lc_collate`](/docs/pgsql/param#pg_lc_collate)    | `C`      | 集群默认排序规则  |
 | [`pg_lc_ctype`](/docs/pgsql/param#pg_lc_ctype)        | `C`      | 集群默认字符分类  |
+{.full-width}
 
 新创建的数据库默认会从 `template1` 数据库 Fork 出来，这个模版数据库会在 [`PG_PROVISION`](/docs/pgsql/param#pg_provision) 阶段进行定制修改：
 配置好扩展、模式以及默认权限，因此新创建的数据库也会继承这些配置，除非您显式使用一个其他的数据库作为模板。

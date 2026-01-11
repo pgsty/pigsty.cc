@@ -121,6 +121,7 @@ CREATE EXTENSION postgis_topology CASCADE;
 | `wal2json` | 逻辑解码插件，直接在复制槽中使用 |
 | `decoderbufs` | 逻辑解码插件 |
 | `decoder_raw` | 逻辑解码插件 |
+{.full-width}
 
 这些扩展安装后即可使用，例如：
 

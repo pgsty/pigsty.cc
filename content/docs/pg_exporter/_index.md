@@ -25,6 +25,7 @@ description: 高级 PostgreSQL 与 PgBouncer 监控指标导出器
 | **健康检查**  | 提供全面的 HTTP 端点用于服务健康检查和流量路由，支持主从检测                            |
 | **智能缓存**  | 内置缓存机制，可配置 TTL，减少数据库负载并提升性能                                  |
 | **扩展感知**  | 原生支持 pg_stat_statements、pg_wait_sampling, citus, timesacledb |
+{.full-width}
 
 
 --------
@@ -108,6 +109,7 @@ curl http://localhost:9630/metrics
 | [**API 参考**](api) | HTTP API 端点参考 |
 | [**部署指南**](deploy) | 生产部署最佳实践 |
 | [**发布说明**](release) | 版本发布历史 |
+{.full-width}
 
 
 --------

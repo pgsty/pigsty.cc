@@ -30,6 +30,7 @@ categories: [参考]
 | [Chronyd](#chronyd)           | `123`    | NTP 时间服务器                         |
 | [PostgreSQL](#postgresql)     | `5432`   | CMDB 与默认数据库                       |
 | [Ansible](#ansible)           | -        | 运行剧本、编排所有基础设施                     |
+{.full-width}
 
 
 

@@ -28,6 +28,7 @@ categories: [参考]
 | [`HAPROXY`](#haproxy)             | HAPROXY 相关参数       |
 | [`NODE_EXPORTER`](#node_exporter) | NODE_EXPORTER 相关参数 |
 | [`VECTOR`](#vector)               | VECTOR 日志收集相关参数    |
+{.full-width}
 
 
 ----------------
@@ -43,6 +44,7 @@ categories: [参考]
 | [`nodename_overwrite`](#nodename_overwrite)     |   `bool`    |   `C`   | 用 nodename 覆盖节点的主机名吗？         |
 | [`nodename_exchange`](#nodename_exchange)       |   `bool`    |   `C`   | 在剧本主机之间交换 nodename 吗？         |
 | [`node_id_from_pg`](#node_id_from_pg)           |   `bool`    |   `C`   | 如果可行，是否借用 postgres 身份作为节点身份？  |
+{.full-width}
 
 [`NODE_DNS`](#node_dns) 参数组用于配置节点的 DNS 解析，包括静态 hosts 记录与动态 DNS 服务器。
 
@@ -54,6 +56,7 @@ categories: [参考]
 | [`node_dns_method`](#node_dns_method)               |   `enum`    |   `C`    | 如何处理现有DNS服务器：add,none,overwrite |
 | [`node_dns_servers`](#node_dns_servers)             | `string[]`  |   `C`    | /etc/resolv.conf 中的动态域名服务器列表    |
 | [`node_dns_options`](#node_dns_options)             | `string[]`  |   `C`    | /etc/resolv.conf 中的DNS解析选项      |
+{.full-width}
 
 [`NODE_PACKAGE`](#node_package) 参数组用于配置节点的软件源与软件包安装。
 
@@ -63,6 +66,7 @@ categories: [参考]
 | [`node_repo_remove`](#node_repo_remove)           |   `bool`   | `C` | 配置节点软件仓库时，删除节点上现有的仓库吗？  |
 | [`node_packages`](#node_packages)                 | `string[]` | `C` | 要在当前节点上安装的软件包列表         |
 | [`node_default_packages`](#node_default_packages) | `string[]` | `G` | 默认在所有节点上安装的软件包列表        |
+{.full-width}
 
 [`NODE_TUNE`](#node_tune) 参数组用于配置节点的内核参数、特性开关与性能调优模板。
 
@@ -78,6 +82,7 @@ categories: [参考]
 | [`node_overcommit_ratio`](#node_overcommit_ratio) |  `float`   | `C` | 节点内存允许的 OverCommit 超额比率 (50-100)，0 默认禁用 |
 | [`node_tune`](#node_tune)                         |   `enum`   | `C` | 节点调优配置文件：无，oltp,olap,crit,tiny          |
 | [`node_sysctl_params`](#node_sysctl_params)       |   `dict`   | `C` | 额外的 sysctl 配置参数，k:v 格式                  |
+{.full-width}
 
 [`NODE_SEC`](#node_sec) 参数组用于配置节点的安全相关选项，包括 SELinux、防火墙等。
 
@@ -87,6 +92,7 @@ categories: [参考]
 | [`node_firewall_mode`](#node_firewall_mode)               |   `enum`    |   `C`   | 防火墙模式：off, none, zone                      |
 | [`node_firewall_intranet`](#node_firewall_intranet)       |  `cidr[]`   |   `C`   | 内网 CIDR 列表，用于配置防火墙规则                       |
 | [`node_firewall_public_port`](#node_firewall_public_port) |  `port[]`   |   `C`   | 公网开放端口列表，默认为 [22, 80, 443, 5432]           |
+{.full-width}
 
 [`NODE_ADMIN`](#node_admin) 参数组用于配置节点的管理员用户、数据目录与命令别名。
 
@@ -101,6 +107,7 @@ categories: [参考]
 | [`node_admin_pk_current`](#node_admin_pk_current)     |   `bool`   | `C` | 将当前用户的 ssh 公钥添加到管理员的 authorized_keys 中吗？  |
 | [`node_admin_pk_list`](#node_admin_pk_list)           | `string[]` | `C` | 要添加到管理员用户的 ssh 公钥                         |
 | [`node_aliases`](#node_aliases)                       |   `dict`   | `C` | 配置主机上的 Shell Alias 命令，KV字典                |
+{.full-width}
 
 [`NODE_TIME`](#node_time) 参数组用于配置节点的时区、NTP 时间同步与定时任务。
 
@@ -111,6 +118,7 @@ categories: [参考]
 | [`node_ntp_servers`](#node_ntp_servers)             | `string[]`  |   `C`   | /etc/chrony.conf 中的 ntp 服务器列表 |
 | [`node_crontab_overwrite`](#node_crontab_overwrite) |   `bool`    |   `C`   | 写入 /etc/crontab 时，追加写入还是全部覆盖？ |
 | [`node_crontab`](#node_crontab)                     | `string[]`  |   `C`   | 在 /etc/crontab 中的 crontab 条目  |
+{.full-width}
 
 [`NODE_VIP`](#node_vip) 参数组用于配置节点集群的 L2 VIP，由 keepalived 实现。
 
@@ -125,6 +133,7 @@ categories: [参考]
 | [`vip_dns_suffix`](#vip_dns_suffix)       |  `string`  |  `C`  | 节点 vip DNS 名称后缀，默认为空字符串             |
 | [`vip_auth_pass`](#vip_auth_pass)         | `password` |  `C`  | VRRP 认证密码，空则使用 `<cls>-<vrid>` 作为默认值 |
 | [`vip_exporter_port`](#vip_exporter_port) |   `port`   |  `C`  | keepalived exporter 监听端口，默认为 9650   |
+{.full-width}
 
 [`HAPROXY`](#haproxy) 参数组用于配置节点上的 HAProxy 负载均衡器与服务暴露。
 
@@ -140,6 +149,7 @@ categories: [参考]
 | [`haproxy_client_timeout`](#haproxy_client_timeout) | `interval`  |   `C`   | haproxy 客户端连接超时，默认为 24h       |
 | [`haproxy_server_timeout`](#haproxy_server_timeout) | `interval`  |   `C`   | haproxy 服务器端连接超时，默认为 24h      |
 | [`haproxy_services`](#haproxy_services)             | `service[]` |   `C`   | 要在节点上对外暴露的 haproxy 服务列表       |
+{.full-width}
 
 [`NODE_EXPORTER`](#node_exporter) 参数组用于配置节点监控 Exporter。
 
@@ -148,6 +158,7 @@ categories: [参考]
 | [`node_exporter_enabled`](#node_exporter_enabled) | `bool` | `C` | 在此节点上配置 node_exporter 吗？    |
 | [`node_exporter_port`](#node_exporter_port)       | `port` | `C` | node exporter 监听端口，默认为 9100 |
 | [`node_exporter_options`](#node_exporter_options) | `arg`  | `C` | node_exporter 的额外服务器选项      |
+{.full-width}
 
 [`VECTOR`](#vector) 参数组用于配置 Vector 日志收集器。
 
@@ -159,6 +170,7 @@ categories: [参考]
 | [`vector_port`](#vector_port)                 |   `port`   |  `C`  | vector 指标监听端口，默认为 9598       |
 | [`vector_read_from`](#vector_read_from)       |   `enum`   |  `C`  | vector 从头还是从尾开始读取日志          |
 | [`vector_log_endpoint`](#vector_log_endpoint) | `string[]` |  `C`  | 日志发送目标端点，默认发送至 infra 组       |
+{.full-width}
 
 
 ------------------------------
@@ -198,6 +210,7 @@ node_load1{cls="pg-test", ins="pg-test-3", ip="10.10.10.13", job="nodes"}
 |      `inventory_hostname`       |   `ip`   | **-** | **必选** | **节点IP地址** |
 |     [`nodename`](#nodename)     | `string` | **I** | 可选     | **节点名称**   |
 | [`node_cluster`](#node_cluster) | `string` | **C** | 可选     | **节点集群名称** |
+{.full-width}
 
 
 ```yaml

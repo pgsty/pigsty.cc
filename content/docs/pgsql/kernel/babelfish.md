@@ -251,6 +251,7 @@ sqlcmd -S 10.10.10.11,5434 -U dbuser_mssql -P DBUser.MSSQL
 | babelfishpg_tds    | 1.0.0 | TDS protocol extension                                                            |
 | pg_hint_plan       | 1.5.1 |                                                                                   |
 | babelfishpg_tsql   | 3.3.1 | Transact SQL compatibility                                                        |
+{.full-width}
 
 
 - Pigsty 专业版提供离线安装 MSSQL 兼容模块的能力

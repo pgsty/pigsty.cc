@@ -50,6 +50,7 @@ infra_portal:
 | `path`     | 静态内容的本地目录                |
 | `scheme`   | 协议类型（http/https），默认 http |
 | `domains`  | 额外的域名列表（别名）              |
+{.full-width}
 
 ### SSL/TLS 选项
 
@@ -59,6 +60,7 @@ infra_portal:
 | `cert`          | 自定义证书文件路径                    |
 | `key`           | 自定义私钥文件路径                    |
 | `enforce_https` | 强制跳转 HTTPS（301 重定向）          |
+{.full-width}
 
 ### 高级设置
 
@@ -70,6 +72,7 @@ infra_portal:
 | `websocket` | 启用 WebSocket 支持  |
 | `auth`      | 启用 Basic Auth 认证 |
 | `realm`     | Basic Auth 认证提示语 |
+{.full-width}
 
 
 ----------------
@@ -179,6 +182,7 @@ Pigsty 内置了 dnsmasq 服务，可以通过 [`dns_records`](/docs/infra/param
 | `disable` | 仅监听 HTTP（`nginx_port`）                 |
 | `enable`  | 同时监听 HTTPS（`nginx_ssl_port`），默认签发自签名证书 |
 | `enforce` | 强制跳转到 HTTPS，所有 80 端口请求都会 301 重定向       |
+{.full-width}
 
 对于自签名证书，有以下几种访问方式：
 
@@ -239,6 +243,7 @@ Pigsty 的默认首页 `home` 服务器提供以下内置路由：
 | `/blackbox/`          | Blackbox Exporter        |
 | `/pev`                | PostgreSQL Explain 可视化工具 |
 | `/haproxy/<cluster>/` | HAProxy 管理界面（如有）         |
+{.full-width}
 
 这些路由允许通过单一入口访问所有监控组件，无需配置多个域名。
 

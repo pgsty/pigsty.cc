@@ -40,6 +40,7 @@ Pigsty 收录的扩展中，以下是最具代表性的：
 | [**ParadeDB**](https://www.paradedb.com/) | ElasticSearch 级别的全文搜索能力 |
 | [**Apache AGE**](https://age.apache.org/) | 图数据库，支持 OpenCypher 查询语言 |
 | [**pg_graphql**](https://github.com/supabase/pg_graphql) | 原生 GraphQL 查询支持 |
+{.full-width}
 
 绝大多数扩展可以并存甚至组合使用，产生 1+1 远大于 2 的协同效应。
 
@@ -68,6 +69,7 @@ Pigsty 将扩展划分为 16 个类别：
 | 外联 | `fdw` | 外部数据访问 | postgres_fdw, mysql_fdw, oracle_fdw |
 | 兼容 | `sim` | 数据库兼容 | orafce, babelfish |
 | 同步 | `etl` | 数据同步 | pglogical, wal2json, decoderbufs |
+{.full-width}
 
 使用类别别名可以批量安装整个类别的扩展，例如 `pg_extensions: [ pgsql-gis, pgsql-rag ]`。
 
@@ -87,6 +89,7 @@ Pigsty 提供了若干预定义的扩展集（Stack），方便按场景选用�
 | `feat-stack` | age, hll, rum, pg_graphql, pg_jsonschema, jsquery |
 | `stat-stack` | pg_show_plans, pg_stat_kcache, pg_qualstats, pg_wait_sampling |
 | `supa-stack` | pg_graphql, pg_jsonschema, wrappers, pgvector, pgsodium, vault |
+{.full-width}
 
 在 `pg_extensions` 中直接使用这些名称即可安装整套扩展。
 

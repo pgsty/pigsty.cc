@@ -23,6 +23,7 @@ categories: [任务]
 | 启用 | [`pg_databases.extensions`](/docs/pgsql/config/db) | `psql -c 'CREATE EXTENSION <name>;'` |
 | 更新 | - | `ALTER EXTENSION <name> UPDATE;` |
 | 移除 | - | `DROP EXTENSION <name>;` |
+{.full-width}
 
 > 详细说明请参阅 [**扩展插件**](/docs/pgsql/ext/) 章节。
 
@@ -160,6 +161,7 @@ pg_extensions:
 | `pg_cron` | 定时任务调度 |
 | `pg_stat_statements` | SQL 语句统计（默认启用） |
 | `auto_explain` | 慢查询执行计划（默认启用） |
+{.full-width}
 
 ### 集群初始化时配置
 

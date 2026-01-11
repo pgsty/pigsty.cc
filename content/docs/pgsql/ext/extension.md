@@ -20,6 +20,7 @@ Pigsty 在初始化 PostgreSQL 集群时，会默认安装和启用一些核心�
 |:-----|:-----|
 | `pg_repack` | 在线处理表膨胀，重要的维护工具 |
 | `wal2json` | 逻辑解码输出 JSON 格式变更，CDC 场景常用 |
+{.full-width}
 
 通过 [`pg_extensions`](/docs/pgsql/param#pg_extensions) 可选安装的扩展（默认注释）：
 
@@ -28,6 +29,7 @@ Pigsty 在初始化 PostgreSQL 集群时，会默认安装和启用一些核心�
 | `postgis` | 地理空间数据库扩展 |
 | `timescaledb` | 时序数据库扩展 |
 | `pgvector` | 向量数据类型与索引 |
+{.full-width}
 
 
 --------
@@ -53,6 +55,7 @@ Pigsty 在初始化 PostgreSQL 集群时，会默认安装和启用一些核心�
 | `intagg` | public | 整数聚合器 |
 | `intarray` | public | 整数数组函数 |
 | `pg_repack` | - | 在线重组表 |
+{.full-width}
 
 这些扩展提供基础的监控、运维和功能增强能力。
 
@@ -67,6 +70,7 @@ Pigsty 在初始化 PostgreSQL 集群时，会默认安装和启用一些核心�
 |:-----|:-----|
 | `pg_stat_statements` | 跟踪所有 SQL 语句的执行统计 |
 | `auto_explain` | 自动记录慢查询的执行计划 |
+{.full-width}
 
 这两个扩展提供基本的可观测性，强烈建议保留。
 

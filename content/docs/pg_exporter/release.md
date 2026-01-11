@@ -35,6 +35,7 @@ description: PG Exporter 版本发布历史
 | [v0.0.3](#v003) | 2019-12-14 | 生产环境测试 | [v0.0.3](https://github.com/pgsty/pg_exporter/releases/tag/v0.0.3) |
 | [v0.0.2](#v002) | 2019-12-09 | 早期测试版本 | [v0.0.2](https://github.com/pgsty/pg_exporter/releases/tag/v0.0.2) |
 | [v0.0.1](#v001) | 2019-12-06 | 初始版本，支持 PgBouncer 模式 | [v0.0.1](https://github.com/pgsty/pg_exporter/releases/tag/v0.0.1) |
+{.full-width}
 
 
 --------

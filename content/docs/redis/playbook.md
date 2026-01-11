@@ -48,6 +48,7 @@ redis_join        : 组建redis原生集群（仅cluster模式）
 | **集群** | `-l <cluster>` | 部署整个 Redis 集群的所有节点和实例 |
 | **节点** | `-l <ip>` | 部署指定节点上的所有 Redis 实例 |
 | **实例** | `-l <ip> -e redis_port=<port>` | 仅部署指定节点上的单个实例 |
+{.full-width}
 
 
 ### 集群级别操作
@@ -173,6 +174,7 @@ redis_pkg        : 卸载软件包（当 redis_rm_pkg=true）
 | **集群** | `-l <cluster>` | 移除整个 Redis 集群的所有节点和实例 |
 | **节点** | `-l <ip>` | 移除指定节点上的所有 Redis 实例 |
 | **实例** | `-l <ip> -e redis_port=<port>` | 仅移除指定节点上的单个实例 |
+{.full-width}
 
 
 ### 集群级别移除
@@ -241,6 +243,7 @@ redis_pkg        : 卸载软件包（当 redis_rm_pkg=true）
 | 数据目录 | 删除 `/data/redis/` 整个目录 | 仅删除 `/data/redis/<cluster>-<node>-<port>/` |
 | Vector 配置 | 删除 `/etc/vector/redis.yaml` | **不操作**（其他实例还需要） |
 | 软件包 | 可选卸载 | **不操作** |
+{.full-width}
 
 
 ### 控制参数
@@ -252,6 +255,7 @@ redis_pkg        : 卸载软件包（当 redis_rm_pkg=true）
 | `redis_safeguard` | `false` | 安全保险，设为 `true` 时拒绝执行移除操作 |
 | `redis_rm_data` | `true` | 是否删除数据目录（RDB/AOF 文件） |
 | `redis_rm_pkg` | `false` | 是否卸载 Redis 软件包 |
+{.full-width}
 
 使用示例：
 

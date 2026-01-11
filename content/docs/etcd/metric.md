@@ -188,3 +188,4 @@ categories: [参考]
 | scrape_samples_scraped                                                  | Unknown | `cls`, `ins`, `instance`, `job`, `ip`                                                          | N/A                                                                                                  |
 | scrape_series_added                                                     | Unknown | `cls`, `ins`, `instance`, `job`, `ip`                                                          | N/A                                                                                                  |
 | up                                                                      | Unknown | `cls`, `ins`, `instance`, `job`, `ip`                                                          | N/A                                                                                                  |
+{.full-width}

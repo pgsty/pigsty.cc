@@ -18,6 +18,7 @@ categories: [参考]
 | `sty deploy` | 运行部署 playbook | |
 | `sty list` | 列出可用 Pigsty 版本 | |
 | `sty get` | 下载 Pigsty 源码压缩包 | |
+{.full-width}
 
 
 ## 快速入门

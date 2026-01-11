@@ -277,6 +277,7 @@ pg13-core:    "postgresql13 postgresql13-server postgresql13-libs postgresql13-c
 | `pgsql-server` | `pg18-server` | `pg17-server` | `pg16-server` | `pg15-server` | `pg14-server` | `pg13-server` |
 | `pgsql-devel`  | `pg18-devel`  | `pg17-devel`  | `pg16-devel`  | `pg15-devel`  | `pg14-devel`  | `pg13-devel`  |
 | `pgsql-basic`  | `pg18-basic`  | `pg17-basic`  | `pg16-basic`  | `pg15-basic`  | `pg14-basic`  | `pg13-basic`  |
+{.full-width}
 
 </details>
 

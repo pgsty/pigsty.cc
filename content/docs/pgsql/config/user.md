@@ -104,6 +104,7 @@ pg-meta:
 | `pgbouncer`     | 连接池 | `bool`     | 可变   | 是否加入连接池，默认 `false`                      |
 | `pool_mode`     | 连接池 | `enum`     | 可变   | 池化模式：`transaction`（默认）                   |
 | `pool_connlimit`| 连接池 | `int`      | 可变   | 连接池用户最大连接数                              |
+{.full-width}
 
 
 ### 可变性说明
@@ -114,6 +115,7 @@ pg-meta:
 | 可选   | 可选字段，有默认值                            |
 | 可变   | 可通过重新执行剧本修改                        |
 | 增量   | 只会添加新内容，不会删除已有内容              |
+{.full-width}
 
 
 ----------------
@@ -149,6 +151,7 @@ pg-meta:
 |----------|-------------------------------------|
 | `create` | 创建用户（默认），已存在则更新属性  |
 | `absent` | 删除用户，使用 `DROP ROLE`          |
+{.full-width}
 
 ```yaml
 - name: dbuser_app             # state 默认为 create
@@ -390,6 +393,7 @@ GRANT "pg_read_all_data" TO "dbuser_app";
 | `admin`   | bool   | `true`: WITH ADMIN OPTION / `false`: REVOKE ADMIN |
 | `set`     | bool   | PG16+: `true`: WITH SET TRUE / `false`: REVOKE SET |
 | `inherit` | bool   | PG16+: `true`: WITH INHERIT TRUE / `false`: REVOKE INHERIT |
+{.full-width}
 
 #### PostgreSQL 16+ 新特性
 
@@ -479,6 +483,7 @@ ALTER USER "dbuser_app" SET "statement_timeout" = '30s';
 | `search_path` | Schema 搜索路径 | `'app,public'` |
 | `log_statement` | 日志记录级别 | `'ddl'` |
 | `temp_file_limit` | 临时文件大小限制 | `'10GB'` |
+{.full-width}
 
 
 ----------------
@@ -526,6 +531,7 @@ ALTER USER "dbuser_app" SET "statement_timeout" = '30s';
 | `transaction` | 事务结束后归还连接（默认） | 大多数 OLTP 应用        |
 | `session`     | 会话结束后归还连接       | 需要会话状态的应用      |
 | `statement`   | 语句结束后归还连接       | 简单无状态查询          |
+{.full-width}
 
 ```yaml
 # DBA 用户使用 session 模式（可能需要 SET 命令等会话状态）

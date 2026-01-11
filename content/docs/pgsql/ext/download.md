@@ -75,6 +75,7 @@ all:
 |:-----|:-----|
 | **PGDG** | PostgreSQL 官方仓库，提供核心扩展 |
 | **Pigsty** | Pigsty 补充仓库，提供额外扩展 |
+{.full-width}
 
 Pigsty 仓库只收录 PGDG 仓库中不存在的扩展。一旦某扩展进入 PGDG 仓库，Pigsty 仓库会移除或与其保持一致。
 

@@ -63,6 +63,7 @@ Pigsty 提供了 [**`configure`**](https://github.com/pgsty/pigsty/blob/main/con
 | [**`meta.yml`**](/docs/conf/meta/) | **默认模板**，单节点 PostgreSQL 在线安装  |
 | [**`rich.yml`**](/docs/conf/rich/) | 富功能模板，包含本地软件源、MinIO 及更多示例     |
 | [**`slim.yml`**](/docs/conf/slim/) | 精简模板，仅安装 PostgreSQL，不含监控与基础设施 |
+{.full-width}
 
 ### 数据库内核模板
 
@@ -79,6 +80,7 @@ Pigsty 提供了 [**`configure`**](https://github.com/pgsty/pigsty/blob/main/con
 | [**`pgtde.yml`**](/docs/conf/pgtde/)       | Percona PostgreSQL Server 透明加密 (17) |
 | [**`oriole.yml`**](/docs/conf/oriole/)     | OrioleDB 内核，OLTP 增强 (17，Debian 包暂缺) |
 | [**`supabase.yml`**](/docs/conf/supabase/) | Supabase 自托管配置 (15~17)              |
+{.full-width}
 
 您可以后续添加更多节点，或使用 [高可用模板](#高可用模板) 在一开始就规划好集群。
 
@@ -96,6 +98,7 @@ Pigsty 提供了 [**`configure`**](https://github.com/pgsty/pigsty/blob/main/con
 | [**`full.yml`**](/docs/conf/full/) | 4 节点标准部署         |
 | [**`safe.yml`**](/docs/conf/safe/) | 4 节点安全增强部署，含延迟从库 |
 | [**`simu.yml`**](/docs/conf/simu/) | 20 节点生产环境模拟      |
+{.full-width}
 
 
 ------
@@ -110,6 +113,7 @@ Pigsty 提供了 [**`configure`**](https://github.com/pgsty/pigsty/blob/main/con
 | [**`odoo.yml`**](/docs/conf/odoo/) | 启动 Odoo ERP 系统 |
 | [**`dify.yml`**](/docs/conf/dify/) | 启动 Dify AI 工作流系统 |
 | [**`electric.yml`**](/docs/conf/electric/) | 启动 Electric 同步引擎 |
+{.full-width}
 
 
 ------
@@ -126,6 +130,7 @@ Pigsty 提供了 [**`configure`**](https://github.com/pgsty/pigsty/blob/main/con
 | **`redis.yml`** | Redis 集群示例配置 |
 | [**`minio.yml`**](/docs/conf/minio/) | 3 节点 MinIO 集群示例配置 |
 | [**`demo.yml`**](/docs/conf/demo/) | Pigsty [公开演示站](https://demo.pigsty.cc) 的配置文件 |
+{.full-width}
 
 
 ------
@@ -137,4 +142,5 @@ Pigsty 提供了 [**`configure`**](https://github.com/pgsty/pigsty/blob/main/con
 | 模板 | 说明 |
 |------|------|
 | **`build.yml`** | EL 9/10、Debian 12/13、Ubuntu 22.04/24.04 开源构建配置 |
+{.full-width}
 

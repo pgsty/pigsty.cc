@@ -123,4 +123,5 @@ PGDG YUM 仓库使用 `https://ftp.postgresql.org/pub/repos/yum/keys/` 中的一
 | u22.aarch64  | Ubuntu | 22  | **18** **17** **16** **15** **14** **13** |   OK   |
 | u24.x86_64   | Ubuntu | 24  | **18** **17** **16** **15** **14** **13** |   OK   |
 | u24.aarch64  | Ubuntu | 24  | **18** **17** **16** **15** **14** **13** |   OK   |
+{.full-width}
 

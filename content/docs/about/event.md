@@ -131,6 +131,7 @@ categories: [参考]
 | v0.0.3                              | 2020-06-22 | 接口设计改进                                                     | [v0.0.3](https://github.com/Vonng/pigsty/commit/4c5c68ccd57bc32a9e9c98aa3f264aa19f45c7ee) |
 | v0.0.2                              | 2020-04-30 | 首次提交                                                       | [v0.0.2](https://github.com/Vonng/pigsty/commit/dd646775624ddb33aef7884f4f030682bdc371f8) |
 | v0.0.1                              | 2019-05-15 | 概念原型                                                       | [v0.0.1](https://github.com/Vonng/pg/commit/fa2ade31f8e81093eeba9d966c20120054f0646b)     |
+{.full-width}
 
 
 ----------
@@ -176,4 +177,5 @@ categories: [参考]
 | 2022-06-28 | 公开直播 | 贝斯的圆桌趴 ｜DBA 福音 -       | SQL 审核最佳实践                                            |
 | 2022-06-12 | 公开路演 | 奇绩创坛 S22 路演日           | 好用省钱的数据库发行版 Pigsty                                    |
 | 2022-06-05 | 视频直播 | PG中文社区直播分享             | Pigstyv1.5快速上手新特性介绍与生产集群搭建                            |
+{.full-width}
 

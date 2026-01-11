@@ -649,5 +649,6 @@ categories: [参考]
 | scrape_samples_scraped                         | Unknown | `job`, `ins`, `ip`, `instance`, `cls`                                                                                                                                                        | N/A                                                                                                                                      |
 | scrape_series_added                            | Unknown | `job`, `ins`, `ip`, `instance`, `cls`                                                                                                                                                        | N/A                                                                                                                                      |
 | up                                             | Unknown | `job`, `ins`, `ip`, `instance`, `cls`                                                                                                                                                        | N/A                                                                                                                                      |
+{.full-width}
 
 

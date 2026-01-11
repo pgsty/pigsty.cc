@@ -84,6 +84,7 @@ OLTP 模板的内存分配策略：
 | `maintenance_work_mem` | shared_buffers × 25% | 用于 VACUUM、CREATE INDEX |
 | `work_mem` | 64MB - 1GB | 根据 shared_buffers/max_connections 计算 |
 | `effective_cache_size` | 总内存 - shared_buffers | 可用于缓存的预估内存 |
+{.full-width}
 
 **work_mem 计算逻辑**：
 ```
@@ -208,6 +209,7 @@ pg_stat_statements.track_planning: off
 | vacuum 激进度 | 保守 | 激进 | 保守 |
 | 事务超时 | 10min | 禁用 | 1min |
 | 慢查询阈值 | 100ms | 1000ms | 100ms |
+{.full-width}
 
 ### 为什么选择 OLTP 而非 OLAP？
 

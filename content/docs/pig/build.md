@@ -21,6 +21,7 @@ categories: [参考]
 | `build dep` | 安装扩展构建依赖 | 需要 sudo 或 root 权限 |
 | `build ext` | 构建扩展包 | 需要 sudo 或 root 权限 |
 | `build pkg` | 完整构建流程：get、dep、ext | 需要 sudo 或 root 权限 |
+{.full-width}
 
 
 ## 快速入门
@@ -318,4 +319,5 @@ cargo pgrx init
 | pgvector | C | 快速 | 简单 | 无 |
 | plpython3 | C | 中等 | 中等 | Python 开发 |
 | pgrx 扩展 | Rust | 慢 | 复杂 | Rust、PGRX |
+{.full-width}
 

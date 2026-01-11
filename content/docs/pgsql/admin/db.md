@@ -153,6 +153,7 @@ bin/pgsql-db <cls> <dbname>    # 幂等操作，可重复执行
 | `extensions` | 添加/删除扩展（增量操作） | 见[管理扩展](#管理扩展) |
 | `pgbouncer` | 是否加入连接池 | `pgbouncer: false` |
 | `pool_*` | 连接池参数 | 见[连接池配置](#连接池配置) |
+{.full-width}
 
 ### 不可修改属性
 
@@ -289,6 +290,7 @@ ALTER DATABASE "myapp" SET "statement_timeout" = DEFAULT;
 | `default_tablespace` | 默认表空间 | `'fast_ssd'` |
 | `temp_tablespaces` | 临时表空间 | `'temp_ssd'` |
 | `log_statement` | 日志记录级别 | `'ddl'` |
+{.full-width}
 
 
 ----------------
@@ -603,6 +605,7 @@ myapp                       = host=/var/run/postgresql pool_mode=transaction poo
 | `transaction` | 事务结束后归还连接（默认） | 大多数 OLTP 应用 |
 | `session` | 会话结束后归还连接 | 需要会话状态的应用 |
 | `statement` | 语句结束后归还连接 | 无状态查询 |
+{.full-width}
 
 
 ----------------
@@ -648,6 +651,7 @@ PostgreSQL 15+ 引入了 `locale_provider` 参数，支持不同的本地化实�
 | `libc` | - | 传统方式，依赖操作系统 |
 | `icu` | PG15+ | 跨平台一致，功能丰富 |
 | `builtin` | PG17+ | 最高效的 C/C.UTF-8 排序 |
+{.full-width}
 
 
 ----------------
@@ -664,6 +668,7 @@ PostgreSQL 15+ 引入了 `locale_provider` 参数，支持不同的本地化实�
 | 重建数据库 | 设置 `state: recreate` 后执行 `bin/pgsql-db <cls> <dbname>` |
 | 查看数据库列表 | `psql -c '\l'` |
 | 查看连接池数据库 | `cat /etc/pgbouncer/database.txt` |
+{.full-width}
 
 ### 常见操作示例
 

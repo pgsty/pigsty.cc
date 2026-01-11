@@ -103,6 +103,7 @@ node_firewall_public_port:     # 公网开放端口
 | `off` | 不配置防火墙（默认） | 开发环境、已有安全组 |
 | `none` | 禁用 firewalld | 使用外部防火墙 |
 | `zone` | 区域模式：内网信任，公网受限 | 生产环境推荐 |
+{.full-width}
 
 ### SSL/TLS 加密
 
@@ -116,6 +117,7 @@ Pigsty 在多个层次提供 SSL/TLS 加密：
 | Nginx | `nginx_sslmode` | `enable` | 可选 `enforce`（强制 HTTPS） |
 | MinIO | 默认启用 | 启用 | 使用本地 CA 证书 |
 | etcd | 默认启用 | 启用 | TLS 加密通信 |
+{.full-width}
 
 **安全加固配置**：
 
@@ -198,6 +200,7 @@ node_selinux_mode: permissive  # disabled | permissive | enforcing
 | `disabled` | 完全禁用 | 开发环境 |
 | `permissive` | 宽容模式（记录但不阻止） | 生产环境推荐 |
 | `enforcing` | 强制模式 | 高安全要求环境 |
+{.full-width}
 
 ### 操作系统加固
 
@@ -238,6 +241,7 @@ pg_pwd_enc: scram-sha-256  # 最安全的密码哈希算法
 |:----------------|:----|:---------------|:---------|
 | `scram-sha-256` | ⭐⭐⭐ | PostgreSQL 10+ | 推荐，默认值   |
 | `md5`           | ⭐   | 所有版本           | 仅用于老旧客户端 |
+{.full-width}
 
 #### 密码强度检查
 
@@ -286,6 +290,7 @@ pg_default_hba_rules:
 | `ssl` | 强制 SSL + 密码 | ⭐⭐⭐ |
 | `cert` | 客户端证书认证 | ⭐⭐⭐⭐ 最高 |
 | `deny` | 拒绝访问 | - |
+{.full-width}
 
 ### 监听地址
 
@@ -410,6 +415,7 @@ pg_users:
 | `dbuser_dba` | `DBUser.DBA` | 管理员用户 | **必须修改** |
 | `dbuser_monitor` | `DBUser.Monitor` | 监控用户 | **必须修改** |
 | `replicator` | `DBUser.Replicator` | 复制用户 | **必须修改** |
+{.full-width}
 
 **自动生成强密码**：
 
@@ -471,6 +477,7 @@ patroni_watchdog_mode: required  # off | automatic | required
 | 审计日志 | ✅ | ✅ | `pgaudit` + 连接日志 |
 | 数据完整性 | ✅ | ✅ | `pg_checksum: true` |
 | 备份恢复 | ✅ | ✅ | pgBackRest + PITR |
+{.full-width}
 
 ### SOC 2 Type II
 
@@ -481,6 +488,7 @@ patroni_watchdog_mode: required  # off | automatic | required
 | CC7.2 系统监控 | ✅ | Prometheus + Grafana |
 | CC9.1 业务连续性 | ✅ | 高可用 + PITR |
 | A1.2 数据恢复 | ✅ | pgBackRest 备份 |
+{.full-width}
 
 **图例**：✅ 默认满足 · ⚠️ 需要额外配置
 

@@ -120,6 +120,7 @@ cd ~/pigsty
 | `-n, --non-interactive` | 非交互模式，不询问任何问题（需配合 `-i` 指定 IP）                                     |
 | `-p, --port`            | 指定 SSH 端口（非默认 22 端口时使用）                                           |
 | `-g, --generate`        | **为配置文件中的密码生成随机值，提高安全性（强烈推荐）**                                    |
+{.full-width}
 
 
 
@@ -289,6 +290,7 @@ $ ./configure -g
 | `fat` | 完整版：rich 基础上安装更多扩展 |
 | `pgsql` | 纯 PostgreSQL 模板 |
 | `infra` | 纯基础设施模板 |
+{.full-width}
 
 ### 高可用模板 (`ha/`)
 
@@ -299,6 +301,7 @@ $ ./configure -g
 | `ha/full` | 4 节点完整沙箱环境 |
 | `ha/safe` | 安全加固版高可用配置 |
 | `ha/simu` | 42 节点大规模仿真环境 |
+{.full-width}
 
 ### 应用模板 (`app/`)
 
@@ -309,6 +312,7 @@ $ ./configure -g
 | `app/odoo` | Odoo ERP 配置 |
 | `app/teable` | Teable 表格数据库配置 |
 | `app/registry` | Docker Registry 配置 |
+{.full-width}
 
 ### 特殊内核模板
 
@@ -319,6 +323,7 @@ $ ./configure -g
 | `polar` | PolarDB：阿里云开源分布式 PostgreSQL |
 | `citus` | Citus：分布式 PostgreSQL |
 | `oriole` | OrioleDB：新一代存储引擎 |
+{.full-width}
 
 ### 演示模板 (`demo/`)
 
@@ -372,6 +377,7 @@ proceed with ./deploy.yml
 | `HTTPS_PROXY` | HTTPS 代理 | - |
 | `ALL_PROXY` | 通用代理 | - |
 | `NO_PROXY` | 代理白名单 | 内置默认值 |
+{.full-width}
 
 
 -----------------

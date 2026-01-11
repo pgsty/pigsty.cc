@@ -35,6 +35,7 @@ categories: [参考]
 | `pg_stat_kcache` | 内核统计信息 |
 | `pg_squeeze` | 在线表空间回收 |
 | `pgml` | PostgresML 机器学习 |
+{.full-width}
 
 完整列表请参阅 [扩展目录](https://pgext.cloud/zh/list)（带 `LOAD` 标记）。
 

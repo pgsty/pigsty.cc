@@ -109,6 +109,7 @@ ISD提供了四个数据集：亚小时级原始观测数据，每日统计摘�
 | ISD Daily   | 每日统计摘要                      |
 | ISD Monthly | 没有用到，因为可以从 `isd.daily` 计算生成 |
 | ISD Yearly  | 没有用到，因为可以从 `isd.daily` 计算生成 |
+{.full-width}
 
 
 **每日摘要数据集**

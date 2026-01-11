@@ -34,6 +34,7 @@ ETCD 模块的参数列表，共有 **13** 个参数，分为两个部分：
 | [`etcd_election_timeout`](#etcd_election_timeout)     |   `int`    | `C`  | etcd 选举超时，默认为 1000ms       |
 | [`etcd_heartbeat_interval`](#etcd_heartbeat_interval) |   `int`    | `C`  | etcd 心跳间隔，默认为 100ms        |
 | [`etcd_root_password`](#etcd_root_password)           | `password` | `G`  | etcd root 用户密码，用于 RBAC 认证  |
+{.full-width}
 
 [`ETCD_REMOVE`](#etcd_remove) 参数组控制 etcd 集群的移除行为，包括防误删保险、数据清理以及软件包卸载。
 
@@ -42,6 +43,7 @@ ETCD 模块的参数列表，共有 **13** 个参数，分为两个部分：
 | [`etcd_safeguard`](#etcd_safeguard) | `bool` | `G/C/A` | etcd 防误删保险，阻止清除正在运行的 etcd 实例？ |
 | [`etcd_rm_data`](#etcd_rm_data)     | `bool` | `G/C/A` | 移除时是否删除 etcd 数据？默认为 true      |
 | [`etcd_rm_pkg`](#etcd_rm_pkg)       | `bool` | `G/C/A` | 移除时是否卸载 etcd 软件包？默认为 false    |
+{.full-width}
 
 
 
@@ -172,6 +174,7 @@ etcd 初始集群状态，可以是 `new` 或 `existing`，默认值：`new`。
 |:-----------|:-------------|:-----------|
 | `new`      | 创建新的 etcd 集群 | 首次部署、集群重建  |
 | `existing` | 加入现有 etcd 集群 | 集群扩容、添加新成员 |
+{.full-width}
 
 **重要说明**：
 
@@ -283,6 +286,7 @@ etcd_rm_pkg: false                # 移除时是否卸载 etcd 软件包？
 |:------|:--------|:------------|
 | 开发/测试 | `false` | 方便快速重建和测试   |
 | 生产环境  | `true`  | 防止误操作导致服务中断 |
+{.full-width}
 
 紧急情况下，可以使用命令行参数覆盖配置：
 
@@ -314,6 +318,7 @@ etcd_rm_pkg: false                # 移除时是否卸载 etcd 软件包？
 |:----|:------|:-----|
 | 彻底移除 | `true`（默认） | 完全清理，释放磁盘空间 |
 | 仅停止服务 | `false` | 保留数据，便于故障排查或恢复 |
+{.full-width}
 
 ```bash
 # 仅停止服务，保留数据
@@ -337,6 +342,7 @@ etcd_rm_pkg: false                # 移除时是否卸载 etcd 软件包？
 |:-----|:------------|:-------------|
 | 常规移除 | `false`（默认） | 保留软件包，便于快速重建 |
 | 彻底清理 | `true`      | 完全卸载，节省磁盘空间  |
+{.full-width}
 
 ```bash
 # 移除时同时卸载软件包

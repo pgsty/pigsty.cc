@@ -39,6 +39,7 @@ categories: [参考]
 | 日志采集   | <i class="fas fa-circle-check text-success"></i> VictoriaLogs / Vector      | <i class="fas fa-circle-check text-success"></i>  基础支持                     | <i class="fas fa-circle-check text-success"></i> 基础支持                            |
 | 可视化系统  | <i class="fas fa-circle-check text-success"></i> Grafana / Echarts          | <i class="fas fa-circle-check text-secondary"></i> 提供基本监控                  | <i class="fas fa-circle-check text-secondary"></i> 提供基本监控                        |
 | 告警聚合通知 | <i class="fas fa-circle-check text-success"></i> AlterManager               | <i class="fas fa-circle-check text-success"></i> 基础支持                      | <i class="fas fa-circle-check text-success"></i> 基础支持                            |
+{.full-width}
 
 
 ----------
@@ -70,6 +71,7 @@ categories: [参考]
 | 模糊分词     | <i class="fas fa-circle-check text-success"></i> zhparser 1.1 / pg_bigm 1.2     |  <i class="fas fa-circle-check text-success"></i> zhparser 1.0 / pg_jieba  |   <i class="fas fa-circle-check text-success"></i> pg_bigm 1.2   |
 | CDC抽取    | <i class="fas fa-circle-check text-success"></i> wal2json 2.5.3                 |              <i class="fas fa-circle-xmark text-danger"></i>               |  <i class="fas fa-circle-check text-success"></i> wal2json 2.5   |
 | 膨胀治理     | <i class="fas fa-circle-check text-success"></i> pg_repack 1.5.0                |      <i class="fas fa-circle-check text-success"></i> pg_repack 1.4.8      | <i class="fas fa-circle-check text-success"></i> pg_repack 1.5.0 |
+{.full-width}
 
 <details><summary>AWS RDS PG 可用扩展</summary>
 
@@ -189,6 +191,7 @@ AWS RDS for PostgreSQL 16 可用扩展（已刨除PG自带扩展）
 | 存储规格：最高档延迟   | 4K随机读：75µs，随机写 15µs                                                                          | 4K随机读：200µs                                                                                             | 500µs / 推断为16K随机IO                                                                                                                                                  |
 | 存储规格：最高档可靠性  | UBER < 1e-18，折合18个9 MTBF: 200万小时 5DWPD，持续三年                                                  | 可靠性 9个9， 合 UBER 1e-9 [存储与数据可靠性](https://help.aliyun.com/document_detail/476273.html)                    | **持久性**：99.999%，5个9 （0.001% 年故障率） [io2 说明](https://aws.amazon.com/cn/blogs/storage/achieve-higher-database-performance-using-amazon-ebs-io2-block-express-volumes/) |
 | 存储规格：最高档成本   | 31.5 ¥/TB·月 ( 5年质保均摊 / 3.2T / 企业级 / MLC )                                                    | 3200¥/TB·月 （原价 6400¥，包月4000¥） 3年预付整体打5折才有此价格                                                            | 1900 ¥/TB·月 使用最大规格 65536GB / 256K IOPS 最大优惠                                                                                                                         |
+{.full-width}
 
 -----------
 
@@ -230,6 +233,7 @@ Pigsty 提供了 638 与 PostgreSQL 有关的监控指标，而 AWS RDS 只有 9
 | 服务与支持         | 提供商业订阅支持兜底                              | 提供售后工单支持                                                                                                              | 提供售后工单支持      |
 | 无互联网部署        | 可离线安装部署                                 | N/A                                                                                                                   | N/A           |
 | 数据库迁移         | 提供从现有v10+ PG实例基于逻辑复制不停机迁移至Pigsty托管实例的剧本 | 提供上云辅助迁移 [Aliyun RDS 数据同步](https://help.aliyun.com/document_detail/322179.html?spm=a2c4g.11186623.0.0.5fb374c9OOi4Dm) |               |
+{.full-width}
 
 -----------
 
@@ -241,6 +245,7 @@ Pigsty 提供了 638 与 PostgreSQL 有关的监控指标，而 AWS RDS 只有 9
 |----|-----------|----------------------|-----------------|------------------|
 | 成本 | 软件授权/服务费用 | 免费，硬件约 20 - 40 ¥/核·月 | 200 ～ 400 ¥/核·月 | 400 ~ 1300 ¥/核·月 |
 |    | 服务支持费用    | 服务约 100 ¥/ 核·月       | 包含在 RDS 成本中     |                  |
+{.full-width}
 
 ------------------
 

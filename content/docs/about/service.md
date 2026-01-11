@@ -148,6 +148,7 @@ Pigsty 开源版使用 [**AGPLv3**](/docs/about/license) 许可证， 提供了�
 | **EL9** | RHEL 9 / Rocky9 / Alma9 | `el9.x86_64` |  | <i class="fas fa-circle-check text-primary"></i> | <i class="fas fa-check text-primary"></i> | <i class="fas fa-check text-primary"></i> | <i class="fas fa-check text-primary"></i> | <i class="fas fa-check text-primary"></i> |
 | **U22** | Ubuntu 22.04 (`jammy`)  | `u22.x86_64` |  | <i class="fas fa-circle-check text-primary"></i> | <i class="fas fa-check text-primary"></i> | <i class="fas fa-check text-primary"></i> | <i class="fas fa-check text-primary"></i> | <i class="fas fa-check text-primary"></i> |
 | **D12** | Debian 12 (`bookworm`)  | `d12.x86_64` | `d12.aarch64` | <i class="fas fa-circle-check text-primary"></i> | <i class="fas fa-check text-primary"></i> | <i class="fas fa-check text-primary"></i> | <i class="fas fa-check text-primary"></i> | <i class="fas fa-check text-primary"></i> |
+{.full-width}
 
 > <i class="fas fa-circle-check text-primary"></i> = 首要支持，<i class="fas fa-check text-primary"></i> = 选配支持
 
@@ -180,6 +181,7 @@ Pigsty 专业版的起售价格 **¥150,000 / 年**，相当于 **9** vCPU 的 A
 | **U24** | Ubuntu 24.04 (`noble`)            | `u24.x86_64` | `u24.aarch64` | <i class="fas fa-circle-check text-primary"></i> | <i class="fas fa-circle-check text-primary"></i> | <i class="fas fa-check text-primary"></i> | <i class="fas fa-check text-primary"></i> | <i class="fas fa-check text-primary"></i> |
 | **U22** | Ubuntu 22.04 (`jammy`)            | `u22.x86_64` | `u22.aarch64` | <i class="fas fa-circle-check text-primary"></i> | <i class="fas fa-circle-check text-primary"></i> | <i class="fas fa-check text-primary"></i> | <i class="fas fa-check text-primary"></i> | <i class="fas fa-check text-primary"></i> |
 | **D12** | Debian 12 (`bookworm`)            | `d12.x86_64` | `d12.aarch64` | <i class="fas fa-circle-check text-primary"></i> | <i class="fas fa-circle-check text-primary"></i> | <i class="fas fa-check text-primary"></i> | <i class="fas fa-check text-primary"></i> | <i class="fas fa-check text-primary"></i> |
+{.full-width}
 
 
 ----------------
@@ -212,6 +214,7 @@ Pigsty 企业版的起步价格为 **¥400,000 / 年**，相当于 **24** vCPU �
 | **D11** | Debian 11 (`bullseye`)            | `d12.x86_64` |    <i class="fas fa-check text-primary"></i>     |    <i class="fas fa-check text-primary"></i>     |    <i class="fas fa-check text-primary"></i>     |    <i class="fas fa-check text-primary"></i>     |    <i class="fas fa-check text-primary"></i>     | <i class="fas fa-check text-primary"></i> | `d11.arm64` |                                                  |                                                  |                                                  |                                                  |                                                  |                                           |
 | **U20** | Ubuntu 20.04 (`focal`)            | `d12.x86_64` |    <i class="fas fa-check text-primary"></i>     |    <i class="fas fa-check text-primary"></i>     |    <i class="fas fa-check text-primary"></i>     |    <i class="fas fa-check text-primary"></i>     |    <i class="fas fa-check text-primary"></i>     | <i class="fas fa-check text-primary"></i> | `u20.arm64` |                                                  |                                                  |                                                  |                                                  |                                                  |                                           |
 | **EL7** | RHEL7 / CentOS7 / UOS ...         | `d12.x86_64` |                                                  |                                                  |    <i class="fas fa-check text-primary"></i>     |    <i class="fas fa-check text-primary"></i>     |    <i class="fas fa-check text-primary"></i>     | <i class="fas fa-check text-primary"></i> | `el7.arm64` |                                                  |                                                  |                                                  |                                                  |                                                  |                                           |
+{.full-width}
 
 
 

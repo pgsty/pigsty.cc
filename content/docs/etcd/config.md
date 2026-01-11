@@ -21,6 +21,7 @@ categories: [参考]
 | 3 节点 | 2   | 1     | 中小规模生产环境 |
 | 5 节点 | 3   | 2     | 大规模生产环境  |
 | 7 节点 | 4   | 3     | 特殊高可用需求  |
+{.full-width}
 
 
 --------
@@ -91,6 +92,7 @@ etcd:
 |:----|:----|:--------|
 | **Patroni** | PostgreSQL 高可用，存储集群状态和配置 | `/pg/bin/patroni.yml` |
 | **VIP-Manager** | 在 PostgreSQL 集群上绑定 L2 VIP | `/etc/default/vip-manager` |
+{.full-width}
 
 当 etcd 集群的成员信息发生永久性变更时，您应当 [重载相关服务的配置](admin#重载配置)，以确保服务能够正确访问 Etcd 集群。
 
@@ -120,6 +122,7 @@ Pigsty v4.0 默认启用 etcd 的 RBAC 认证机制。相关配置参数：
 |:----|:----|:------|
 | [`etcd_root_password`](param#etcd_root_password) | etcd root 用户密码 | `Etcd.Root` |
 | [`pg_etcd_password`](/docs/pgsql/param#pg_etcd_password) | Patroni 连接 etcd 的密码 | 空（使用集群名） |
+{.full-width}
 
 **生产环境建议**：
 
@@ -158,5 +161,6 @@ etcd 模块在目标主机上创建以下目录和文件：
 | `/data/etcd/`                      | 主数据目录（可配置） | 0700, etcd:etcd |
 | `/etc/profile.d/etcdctl.sh`        | 客户端环境变量    | 0755, root:root |
 | `/etc/systemd/system/etcd.service` | Systemd 服务 | 0644, root:root |
+{.full-width}
 
 

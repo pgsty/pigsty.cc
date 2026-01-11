@@ -20,6 +20,7 @@ Pigsty 使用操作系统的包管理器（yum/apt）安装扩展软件包。
 |:-----|:-----|:---------|
 | [`pg_packages`](/docs/pgsql/param#pg_packages) | 全局通用软件包 | 确保存在（不升级） |
 | [`pg_extensions`](/docs/pgsql/param#pg_extensions) | 集群特定扩展 | 安装最新版本 |
+{.full-width}
 
 `pg_packages` 通常用于指定所有集群都需要的基础组件（PostgreSQL 内核、Patroni、pgBouncer 等）和必选扩展。
 

@@ -211,3 +211,4 @@ PolarDB for Oracle 内核目前仅在 EL 系统中可用。
 | ganos_vomesh                   | 6.0             | Ganos volumn mesh extension for POLARDB                                                                                    |
 | postgis_tiger_geocoder         | 3.3.2           | Ganos PostGIS tiger geocoder                                                                                               |
 | postgis_topology               | 3.3.2           | Ganos PostGIS topology                                                                                                     |
+{.full-width}

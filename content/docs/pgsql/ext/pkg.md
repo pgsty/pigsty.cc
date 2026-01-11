@@ -22,6 +22,7 @@ Pigsty 使用**包别名**机制简化扩展的安装与管理。
 | 包别名 | `pgvector` | `postgis` |
 | RPM 包名 | `pgvector_18` | `postgis36_18*` |
 | DEB 包名 | `postgresql-18-pgvector` | `postgresql-18-postgis-3*` |
+{.full-width}
 
 Pigsty 提供**包别名**抽象层，让用户无需关心具体的 RPM/DEB 包名：
 
@@ -73,6 +74,7 @@ pg_extensions: [ pg18-gis, pg18-rag, pg18-fts ]
 | `fdw` | 外部类 | postgres_fdw, mysql_fdw, oracle_fdw |
 | `sim` | 兼容类 | orafce, babelfishpg_tds |
 | `etl` | 数据类 | pglogical, wal2json, decoderbufs |
+{.full-width}
 
 
 --------

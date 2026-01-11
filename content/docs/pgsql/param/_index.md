@@ -33,6 +33,7 @@ categories: [参考]
 | [`PG_ACCESS`](#pg_access)       | 服务暴露、连接池、VIP、DNS 等客户端访问配置      |
 | [`PG_MONITOR`](#pg_monitor)     | PostgreSQL 监控 Exporter 配置      |
 | [`PG_REMOVE`](#pg_remove)       | PostgreSQL 实例清理与卸载配置           |
+{.full-width}
 
 
 ----------------
@@ -56,6 +57,7 @@ categories: [参考]
 | [`gp_role`](#gp_role)                   |  `enum`  | `C` | 这个集群的 greenplum 角色，可以是 master 或 segment                      |
 | [`pg_exporters`](#pg_exporters)         |  `dict`  | `C` | 在该节点上设置额外的 pg_exporters 用于监控远程 postgres 实例                   |
 | [`pg_offline_query`](#pg_offline_query) |  `bool`  | `I` | 设置为 true 将此只读实例标记为特殊的离线从库，承载 Offline 服务，允许离线查询               |
+{.full-width}
 
 --------
 
@@ -75,6 +77,7 @@ categories: [参考]
 | [`pg_monitor_username`](#pg_monitor_username)         |  `username`   |  `G`   | postgres 监控用户名，默认为 `dbuser_monitor`        |
 | [`pg_monitor_password`](#pg_monitor_password)         |  `password`   |  `G`   | postgres 监控密码，默认为 `DBUser.Monitor`         |
 | [`pg_dbsu_password`](#pg_dbsu_password)               |  `password`   | `G/C`  | dbsu 密码，默认为空字符串意味着不设置 dbsu 密码，最好不要设置。      |
+{.full-width}
 
 --------
 
@@ -92,6 +95,7 @@ categories: [参考]
 | [`pg_log_dir`](#pg_log_dir)                     |    `path`     |  `C`   | postgres 日志目录，默认为 `/pg/log/postgres`          |
 | [`pg_packages`](#pg_packages)                   |  `string[]`   |  `C`   | 要安装的 pg 包，`${pg_version}` 将被替换为实际主版本号         |
 | [`pg_extensions`](#pg_extensions)               |  `string[]`   |  `C`   | 要安装的 pg 扩展，`${pg_version}` 将被替换为实际主版本号        |
+{.full-width}
 
 --------
 
@@ -136,6 +140,7 @@ categories: [参考]
 | [`pg_etcd_password`](#pg_etcd_password)             | `password` |  `C`  | 此 PostgreSQL 集群在 etcd 中使用的密码，默认使用集群名                  |
 | [`pgsodium_key`](#pgsodium_key)                     |  `string`  |  `C`  | pgsodium 加密主密钥，64 位十六进制数字，默认使用 sha256(pg_cluster)     |
 | [`pgsodium_getkey_script`](#pgsodium_getkey_script) |   `path`   |  `C`  | pgsodium 获取密钥脚本路径，默认使用模板中的 pgsodium_getkey            |
+{.full-width}
 
 --------
 
@@ -152,6 +157,7 @@ categories: [参考]
 | [`pg_reload`](#pg_reload)                         |    `bool`     |  `A`  | 更改HBA后，是否立即重载 postgres 配置         |
 | [`pg_default_hba_rules`](#pg_default_hba_rules)   |    `hba[]`    | `G/C` | postgres 基于主机的认证规则，全局PG默认HBA      |
 | [`pgb_default_hba_rules`](#pgb_default_hba_rules) |    `hba[]`    | `G/C` | pgbouncer 默认的基于主机的认证规则，全局PGB默认HBA |
+{.full-width}
 
 --------
 
@@ -165,6 +171,7 @@ categories: [参考]
 | [`pgbackrest_method`](#pgbackrest_method)           | `enum` |  `C`  | pgbackrest 使用的仓库：local,minio,等...        |
 | [`pgbackrest_init_backup`](#pgbackrest_init_backup) | `bool` |  `C`  | pgbackrest 初始化完成后是否立即执行全量备份？默认为 `true`   |
 | [`pgbackrest_repo`](#pgbackrest_repo)               | `dict` | `G/C` | pgbackrest 仓库定义                          |
+{.full-width}
 
 --------
 
@@ -188,6 +195,7 @@ categories: [参考]
 | [`pg_vip_interface`](#pg_vip_interface)               |  `string`   | `C/I` | 监听的 vip 网络接口，默认为 eth0                               |
 | [`pg_dns_suffix`](#pg_dns_suffix)                     |  `string`   |  `C`  | pgsql dns 后缀，默认为空                                   |
 | [`pg_dns_target`](#pg_dns_target)                     |   `enum`    |  `C`  | PG DNS 解析到哪里？auto、primary、vip、none 或者特定的 IP 地址      |
+{.full-width}
 
 --------
 
@@ -213,6 +221,7 @@ categories: [参考]
 | [`pgbackrest_exporter_enabled`](#pgbackrest_exporter_enabled)   |  `bool`  | `C` | 在 pgsql 主机上启用 pgbackrest_exporter 吗？     |
 | [`pgbackrest_exporter_port`](#pgbackrest_exporter_port)         |  `port`  | `C` | pgbackrest_exporter 监听端口，默认为 9854        |
 | [`pgbackrest_exporter_options`](#pgbackrest_exporter_options)   |  `arg`   | `C` | pgbackrest_exporter 的额外命令行参数选项           |
+{.full-width}
 
 
 --------
@@ -225,6 +234,7 @@ categories: [参考]
 | [`pg_rm_backup`](#pg_rm_backup) |    `bool`     | `G/C/A`  | 删除主库时是否一并清理 pgbackrest 备份？       |
 | [`pg_rm_pkg`](#pg_rm_pkg)       |    `bool`     | `G/C/A`  | 删除 pgsql 实例时是否卸载相关软件包？           |
 | [`pg_safeguard`](#pg_safeguard) |    `bool`     | `G/C/A`  | 防误删保险，阻止误执行 pgsql 清理操作？默认为 false |
+{.full-width}
 
 
 ------------------------------
@@ -255,6 +265,7 @@ pg_offline_query: false #INSTANCE # 设置为 true 以在此实例上启用离�
 |    [`pg_role`](#pg_role)    |  `enum`  | **I** | **PG 数据库实例角色**  |
 |   [`pg_shard`](#pg_shard)   | `string` | **C** | **数据库分片名称**     |
 |   [`pg_group`](#pg_group)   | `number` | **C** | **数据库分片序号**     |
+{.full-width}
 
 - [`pg_cluster`](#pg_cluster): 它标识集群的名称，该名称在集群级别配置。
 - [`pg_role`](#pg_role): 在实例级别配置，标识 ins 的角色。只有 `primary` 角色会特别处理。如果不填写，默认为 `replica` 角色和特殊的 `delayed` 和 `offline` 角色。

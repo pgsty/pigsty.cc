@@ -57,6 +57,7 @@ Pigsty 预定义了以下默认域名：
 | `p.pigsty` | VictoriaMetrics | 8428    | VMUI/PromQL 入口  |
 | `a.pigsty` | AlertManager    | 9059    | 告警路由            |
 | `m.pigsty` | MinIO           | 9001    | 对象存储控制台         |
+{.full-width}
 
 
 ----------------
@@ -120,6 +121,7 @@ Pigsty 在 INFRA 节点上运行 dnsmasq 作为 DNS 服务器。
 | [`dns_enabled`](/docs/infra/param#dns_enabled)         | `true`          | 是否启用 DNS 服务  |
 | [`dns_port`](/docs/infra/param#dns_port)               | `53`            | DNS 监听端口     |
 | [`dns_records`](/docs/infra/param#dns_records)         | 见下文             | 默认 DNS 记录列表  |
+{.full-width}
 
 默认的 DNS 记录：
 
@@ -145,6 +147,7 @@ Pigsty 会自动为 PostgreSQL 集群和实例注册 DNS 记录：
 | `vip`     | 始终指向 VIP（需启用 VIP）    |
 | `none`    | 不注册集群 DNS            |
 | `<ip>`    | 指定固定 IP 地址          |
+{.full-width}
 
 通过 [`pg_dns_suffix`](/docs/pgsql/param#pg_dns_suffix) 可为集群 DNS 添加后缀。
 
@@ -172,6 +175,7 @@ node_etc_hosts:
 | [`node_dns_method`](/docs/node/param#node_dns_method)       | `add`              | DNS 配置方式          |
 | [`node_dns_servers`](/docs/node/param#node_dns_servers)     | `['${admin_ip}']`  | DNS 服务器列表         |
 | [`node_dns_options`](/docs/node/param#node_dns_options)     | 见下文                | resolv.conf 选项    |
+{.full-width}
 
 `node_dns_method` 可选值：
 
@@ -180,6 +184,7 @@ node_etc_hosts:
 | `add`       | 添加到现有 DNS 服务器列表前面  |
 | `overwrite` | 完全覆盖 DNS 服务器配置     |
 | `none`      | 不修改 DNS 配置         |
+{.full-width}
 
 默认的 DNS 选项：
 
@@ -222,6 +227,7 @@ Pigsty 扩展预留了以下域名用于各种应用服务：
 | `dify.pigsty` | Dify AI     |
 | `odoo.pigsty` | Odoo ERP    |
 | `mm.pigsty`   | Mattermost  |
+{.full-width}
 
 使用这些域名需要在 [`infra_portal`](/docs/infra/param#infra_portal) 中配置相应的服务。
 

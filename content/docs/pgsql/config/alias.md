@@ -119,12 +119,14 @@ Pigsty 的别名系统使用 `$v` 作为 PostgreSQL 版本号的占位符。当�
 | `postgresql$v*`       | `postgresql17*`       |
 | `pgvector_$v*`        | `pgvector_17*`        |
 | `timescaledb-tsl_$v*` | `timescaledb-tsl_17*` |
+{.full-width}
 
 | 别名定义 (Debian/Ubuntu)            | 展开结果                            |
 |---------------------------------|---------------------------------|
 | `postgresql-$v`                 | `postgresql-17`                 |
 | `postgresql-$v-pgvector`        | `postgresql-17-pgvector`        |
 | `postgresql-$v-timescaledb-tsl` | `postgresql-17-timescaledb-tsl` |
+{.full-width}
 
 
 ### 通配符匹配

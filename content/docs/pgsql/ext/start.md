@@ -71,6 +71,7 @@ pig extension create vector  # 在数据库中启用
 | 安装 | [`pg_extensions`](/docs/pgsql/param#pg_extensions) | 指定集群要安装的扩展包 |
 | 配置 | [`pg_libs`](/docs/pgsql/param#pg_libs) | 预加载扩展到 `shared_preload_libraries` |
 | 启用 | [`pg_databases.extensions`](/docs/pgsql/config/db) | 在数据库中自动执行 `CREATE EXTENSION` |
+{.full-width}
 
 > 详细说明请参阅各子章节：[下载](download)、[安装](install)、[配置](config)、[启用](create)
 

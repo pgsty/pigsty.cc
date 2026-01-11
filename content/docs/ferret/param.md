@@ -22,6 +22,7 @@ linkTitle: 参数列表
 | [`mongo_ssl_port`](#mongo_ssl_port)           |  `port`  |  `C`  | TLS 监听端口，默认使用 `27018`    |
 | [`mongo_exporter_port`](#mongo_exporter_port) |  `port`  |  `C`  | Exporter 端口，默认使用 `9216`  |
 | [`mongo_extra_vars`](#mongo_extra_vars)       | `string` |  `C`  | 额外环境变量，默认为空白字符串          |
+{.full-width}
 
 
 ----------------

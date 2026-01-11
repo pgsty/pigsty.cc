@@ -43,6 +43,7 @@ FerretDB 通过内置的 Exporter 在 [`mongo_exporter_port`](/docs/ferret/param
 | `ferretdb_postgresql_*` | PostgreSQL 后端状态 |
 | `go_*`                  | Go 运行时指标        |
 | `process_*`             | 进程级别指标          |
+{.full-width}
 
 完整的指标列表请参阅 [指标列表](/docs/ferret/metric)。
 

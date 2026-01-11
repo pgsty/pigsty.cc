@@ -28,6 +28,7 @@ Pigsty 默认的角色系统包含四个[默认角色](#默认角色)和四个[�
 | `replicator`       | `REPLICATION` | pg_monitor,dbrole_readonly  | 系统复制用户      |
 | `dbuser_dba`       | `SUPERUSER`   | dbrole_admin                | pgsql 管理用户  |
 | `dbuser_monitor`   |               | pg_monitor                  | pgsql 监控用户  |
+{.full-width}
 
 这些[角色与用户](/docs/pgsql/config/user#定义用户)的详细定义如下所示：
 
@@ -172,6 +173,7 @@ Pigsty 拥有一套开箱即用的权限模型，该模型与[默认角色](#def
 |     | dbrole_offline=r     |
 |     | dbrole_readwrite=awd |
 |     | dbrole_admin=arwdDxt |
+{.full-width}
 
 
 
