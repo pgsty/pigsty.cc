@@ -9,7 +9,7 @@ categories: [概念]
 
 [OrioleDB](https://orioledb.com/) 是一个 PostgreSQL 存储引擎扩展，声称能够提供 4 倍 OLTP 性能，没有 xid 环绕和表膨胀问题，并具有"云原生"（数据存储在 S3）能力。
 
-OrioleDB 的最新版本基于 [补丁版 PostgreSQL 17.0](https://github.com/orioledb/postgres) 和一个额外的[扩展](https://github.com/orioledb/orioledb)
+OrioleDB 的最新版本基于 [补丁版 PostgreSQL 17.0](https://github.com/orioledb/postgres) 和一个额外的 [扩展](https://github.com/orioledb/orioledb)
 
 您可以使用 Pigsty 将 OrioleDB 作为 RDS 运行，它与 PG 17 兼容，在所有支持的 Linux 平台上都可用。
 最新版本为 beta12，基于 PG 17_11 补丁。

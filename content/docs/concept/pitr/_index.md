@@ -87,7 +87,7 @@ pgBackRest 会⾃动管理所需的 WAL ⽂件，并根据备份的保留策略�
 
 ## 实现
 
-默认情况下，Pigsty提供了两种预置[备份策略](/docs/pgsql/backup/policy)：默认使用本地文件系统备份仓库，在这种情况下每天进行一次全量备份，确保用户任何时候都能回滚至一天内的任意时间点。备选策略使用专用的 MinIO 集群或S3存储备份，每周一全备，每天一增备，默认保留两周的备份与WAL归档。
+默认情况下，Pigsty提供了两种预置 [备份策略](/docs/pgsql/backup/policy)：默认使用本地文件系统备份仓库，在这种情况下每天进行一次全量备份，确保用户任何时候都能回滚至一天内的任意时间点。备选策略使用专用的 MinIO 集群或S3存储备份，每周一全备，每天一增备，默认保留两周的备份与WAL归档。
 
 Pigsty 使用 pgBackRest 管理备份，接收 WAL 归档，执行 PITR。备份仓库可以进行灵活配置（[`pgbackrest_repo`](/docs/pgsql/param#pgbackrest_repo)）：默认使用主库本地文件系统（`local`），但也可以使用其他磁盘路径，或使用自带的可选 [MinIO](/docs/minio) 服务（`minio`）与云上 S3 服务。
 

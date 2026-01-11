@@ -155,8 +155,8 @@ bin/pgsql-user <cls> <username>    # 幂等操作，可重复执行
 | `expire_in` | 过期天数 | `expire_in: 30` |
 | `expire_at` | 过期日期 | `expire_at: '2024-12-31'` |
 | `comment` | 备注信息 | `comment: 新的备注` |
-| `roles` | 角色成员（增量操作） | 见[管理角色成员](#管理角色成员) |
-| `parameters` | 角色级参数 | 见[管理用户参数](#管理用户参数) |
+| `roles` | 角色成员（增量操作） | 见 [管理角色成员](#管理角色成员) |
+| `parameters` | 角色级参数 | 见 [管理用户参数](#管理用户参数) |
 | `pgbouncer` | 是否加入连接池 | `pgbouncer: true` |
 | `pool_mode` | 连接池模式 | `pool_mode: session` |
 | `pool_connlimit` | 连接池连接限制 | `pool_connlimit: 50` |

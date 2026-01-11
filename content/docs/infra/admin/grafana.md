@@ -13,13 +13,13 @@ categories: [任务]
 
 这是了解Pigsty部署系统使用方式的好机会，完成此教程，您会了解：
 
-* 如何[创建新数据库集群](#创建数据库集群)
-* 如何在已有数据库集群中[创建新业务用户](#创建grafana业务用户)
-* 如何在已有数据库集群中[创建新业务数据库](#创建grafana业务数据库)
-* 如何[访问Pigsty所创建的数据库](#使用grafana业务数据库)
-* 如何[管理Grafana中的监控面板](#管理grafana监控面板)
-* 如何管理Grafana中的[PostgreSQL数据源](#管理postgres数据源)
-* 如何一步到位完成[Grafana数据库升级](#一步到位更新grafana)
+* 如何 [创建新数据库集群](#创建数据库集群)
+* 如何在已有数据库集群中 [创建新业务用户](#创建grafana业务用户)
+* 如何在已有数据库集群中 [创建新业务数据库](#创建grafana业务数据库)
+* 如何 [访问Pigsty所创建的数据库](#使用grafana业务数据库)
+* 如何 [管理Grafana中的监控面板](#管理grafana监控面板)
+* 如何管理Grafana中的 [PostgreSQL数据源](#管理postgres数据源)
+* 如何一步到位完成 [Grafana数据库升级](#一步到位更新grafana)
 
 
 
@@ -107,7 +107,7 @@ postgres://dbuser_grafana:DBUser.Grafana@10.10.10.12:5433/grafana # 连接串读
 
 ### 定义用户
 
-要在`pg-meta`集群上创建用户`dbuser_grafana`，首先将以下用户定义添加至`pg-meta`的[集群定义](#定义集群)中：
+要在`pg-meta`集群上创建用户`dbuser_grafana`，首先将以下用户定义添加至`pg-meta`的 [集群定义](#定义集群) 中：
 
 添加位置：`all.children.pg-meta.vars.pg_users`
 
@@ -146,7 +146,7 @@ bin/pgsql-user pg-meta dbuser_grafana # 在pg-meta集群上创建`dbuser_grafana
 
 ### 定义数据库
 
-创建业务数据库的方式与业务用户一致，首先在`pg-meta`的集群定义中添加新数据库`grafana`的[定义](#定义集群)。
+创建业务数据库的方式与业务用户一致，首先在`pg-meta`的集群定义中添加新数据库`grafana`的 [定义](#定义集群)。
 
 添加位置：`all.children.pg-meta.vars.pg_databases`
 
@@ -185,7 +185,7 @@ postgres://dbuser_grafana:DBUser.Grafana@meta:5436/grafana # default服务
 postgres://dbuser_grafana:DBUser.Grafana@meta:5433/grafana # primary服务
 ```
 
-这里，我们将使用通过负载均衡器直接访问主库的 [Default服务](/docs/concept/svc#default服务)访问数据库。
+这里，我们将使用通过负载均衡器直接访问主库的 [Default服务](/docs/concept/svc#default服务) 访问数据库。
 
 首先检查连接串是否可达，以及是否有权限执行DDL命令。
 
@@ -224,7 +224,7 @@ systemctl restart grafana-server
 ```
 
 从监控系统中看到新增的 [`grafana`](http://g.pigsty.cc/d/pgsql-database/pgsql-database?var-cls=pg-meta&var-ins=pg-meta-1&var-datname=grafana&orgId=1) 数据库已经开始有活动，则说明Grafana已经开始使用Postgres作为首要后端数据库了。
-但一个新的问题是，Grafana中原有的Dashboards与Datasources都消失了！这里需要重新导入[监控面板](#管理grafana监控面板)与[Postgres数据源](#管理ostgres数据源)
+但一个新的问题是，Grafana中原有的Dashboards与Datasources都消失了！这里需要重新导入 [监控面板](#管理grafana监控面板) 与 [Postgres数据源](#管理ostgres数据源)
 
 
 

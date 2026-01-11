@@ -224,7 +224,7 @@ sudo -u postgres pg-drop-role dbuser_old --force
 bin/pgsql-db <cls> <dbname>       # ./pgsql-db.yml -l <cls> -e dbname=<dbname>
 ```
 
-注意：如果数据库指定了一个非默认的属主，该属主用户应当已存在，否则您必须先[创建用户](#创建用户)。
+注意：如果数据库指定了一个非默认的属主，该属主用户应当已存在，否则您必须先 [创建用户](#创建用户)。
 
 <details><summary>示例：创建业务数据库</summary>
 
@@ -240,7 +240,7 @@ bin/pgsql-db <cls> <dbname>       # ./pgsql-db.yml -l <cls> -e dbname=<dbname>
 
 [服务](/docs/pgsql/service/)是 PostgreSQL 对外提供能力的访问点（PGURL可达），由主机节点上的 HAProxy 对外暴露。
 
-当集群成员发生变化时使用此任务，例如：[添加](#添加实例)／[移除](#移除实例)副本，[主从切换](#主动切换)／故障转移 / 暴露新服务，或更新现有服务的配置（例如，LB权重）
+当集群成员发生变化时使用此任务，例如：[添加](#添加实例)／[移除](#移除实例) 副本，[主从切换](#主动切换)／故障转移 / 暴露新服务，或更新现有服务的配置（例如，LB权重）
 
 要在整个代理集群，或特定实例上创建新服务或重新加载现有服务：
 
@@ -345,7 +345,7 @@ bin/pgsql-add <cls> <ip>          # 初始化 <ip> ，作为集群 <cls> 的新�
 
 这将会把节点 `<ip>` 添加到 pigsty 并将其初始化为集群 `<cls>` 的一个副本。
 
-集群服务将会[重新加载](#重载服务)以接纳新成员。
+集群服务将会 [重新加载](#重载服务) 以接纳新成员。
 
 <details><summary>示例：为 pg-test 添加从库</summary>
 
@@ -396,7 +396,7 @@ bin/pgsql-add pg-test 10.10.10.13   # 在 10.10.10.13 上为集群 pg-test 初�
 bin/pgsql-rm <cls> <ip...>        # ./pgsql-rm.yml -l <ip>
 ```
 
-这将从集群 `<cls>` 中移除实例 `<ip>`。 集群服务将会[重新加载](#重载服务)以从负载均衡器中踢除已移除的实例。
+这将从集群 `<cls>` 中移除实例 `<ip>`。 集群服务将会 [重新加载](#重载服务) 以从负载均衡器中踢除已移除的实例。
 
 <details><summary>示例：从 pg-test 移除从库</summary>
 
@@ -428,7 +428,7 @@ pg-test:
   vars: { pg_cluster: pg-test }
 ```
 
-最后，您可以[重载PG服务](#重载服务)并从负载均衡器中踢除已移除的实例：
+最后，您可以 [重载PG服务](#重载服务) 并从负载均衡器中踢除已移除的实例：
 
 ```bash
 bin/pgsql-svc pg-test             # 重载 pg-test 上的服务
@@ -456,7 +456,7 @@ bin/pgsql-rm <cls>                # ./pgsql-rm.yml -l <cls>
 
 <details><summary>示例：强制移除集群</summary>
 
-注意：如果为这个集群配置了[`pg_safeguard`](/docs/pgsql/param#pg_safeguard)（或全局设置为 `true`），`pgsql-rm.yml` 将中止，以避免意外移除集群。
+注意：如果为这个集群配置了 [`pg_safeguard`](/docs/pgsql/param#pg_safeguard)（或全局设置为 `true`），`pgsql-rm.yml` 将中止，以避免意外移除集群。
 
 您可以使用 playbook 命令行参数明确地覆盖它，以强制执行清除：
 
@@ -563,7 +563,7 @@ pg-backup incr  # 执行增量备份
 pb info         # 打印备份信息 （pgbackrest info）
 ```
 
-参阅[备份恢复](/docs/pgsql/backup/pitr#备份)获取更多信息。
+参阅 [备份恢复](/docs/pgsql/backup/pitr#备份) 获取更多信息。
 
 
 <details><summary>示例：创建备份</summary>
@@ -677,7 +677,7 @@ ansible pg-test -b -m package -a "name=postgresql15* state=latest"
 ./pgsql.yml -t pg_extension     # 安装扩展
 ``` 
 
-一部分扩展需要在 `shared_preload_libraries` 中加载后才能生效。你可以将它们加入到 [`pg_libs`](/docs/pgsql/param#pg_libs) 中，或者[配置](#配置集群)一个已有的集群。
+一部分扩展需要在 `shared_preload_libraries` 中加载后才能生效。你可以将它们加入到 [`pg_libs`](/docs/pgsql/param#pg_libs) 中，或者 [配置](#配置集群) 一个已有的集群。
 
 最后，在集群的主库上执行 `CREATE EXTENSION <extname>;` 来完成扩展的安装。
 
@@ -693,7 +693,7 @@ psql -h pg-test -d postgres -c 'CREATE EXTENSION pg_cron;'  # 在主库上安装
 
 </details>
 
-更多细节，请参考[PGSQL扩展安装](/docs/ref/extension#扩展安装)。
+更多细节，请参考 [PGSQL扩展安装](/docs/ref/extension#扩展安装)。
 
 
 
@@ -701,9 +701,9 @@ psql -h pg-test -d postgres -c 'CREATE EXTENSION pg_cron;'  # 在主库上安装
 
 ## 小版本升级
 
-要执行小版本的服务器升级/降级，您首先需要在本地软件仓库中[添加软件](#添加软件)：最新的PG小版本 RPM/DEB。
+要执行小版本的服务器升级/降级，您首先需要在本地软件仓库中 [添加软件](#添加软件)：最新的PG小版本 RPM/DEB。
 
-首先对所有从库执行滚动升级/降级，然后执行集群[主从切换](#主动切换)以升级/降级主库。
+首先对所有从库执行滚动升级/降级，然后执行集群 [主从切换](#主动切换) 以升级/降级主库。
 
 ```bash
 ansible <cls> -b -a "yum upgrade/downgrade -y <pkg>"    # 升级/降级软件包
@@ -757,11 +757,11 @@ pg restart --role primary --force pg-test               # 重启主库
 
 ## 大版本升级
 
-实现大版本升级的最简单办法是：创建一个使用新版本的新集群，然后通过逻辑复制，蓝绿部署，并进行[在线迁移](/docs/pgsql/migration)。
+实现大版本升级的最简单办法是：创建一个使用新版本的新集群，然后通过逻辑复制，蓝绿部署，并进行 [在线迁移](/docs/pgsql/migration)。
 
 您也可以进行原地大版本升级，当您只使用数据库内核本身时，这并不复杂，使用 PostgreSQL 自带的 `pg_upgrade` 即可：
 
-假设您想将 PostgreSQL 大版本从 14 升级到 15，您首先需要在仓库中[添加软件](#添加软件)，并确保两个大版本两侧安装的核心扩展插件也具有相同的版本号。
+假设您想将 PostgreSQL 大版本从 14 升级到 15，您首先需要在仓库中 [添加软件](#添加软件)，并确保两个大版本两侧安装的核心扩展插件也具有相同的版本号。
 
 ```bash
 ./pgsql.yml -t pg_pkg -e pg_version=15                         # 安装pg 15的包

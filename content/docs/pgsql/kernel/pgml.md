@@ -163,7 +163,7 @@ sudo python3 -m pip install xgboost lightgbm scikit-learn
 
 在所有集群节点上安装 `pgml` 扩展和 Python 依赖后，就可以在 PostgreSQL 集群上启用 `pgml` 了。
 
-使用 `patronictl` 命令[配置集群](https://pigsty.io/docs/pgsql/admin/#config-cluster)，将 `pgml` 添加到 `shared_preload_libraries`，并在 `pgml.venv` 中指定您的虚拟环境目录：
+使用 `patronictl` 命令 [配置集群](https://pigsty.io/docs/pgsql/admin/#config-cluster)，将 `pgml` 添加到 `shared_preload_libraries`，并在 `pgml.venv` 中指定您的虚拟环境目录：
 
 ```yaml
 shared_preload_libraries: pgml, timescaledb, pg_stat_statements, auto_explain

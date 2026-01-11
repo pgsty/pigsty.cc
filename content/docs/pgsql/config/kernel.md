@@ -17,7 +17,7 @@ Pigsty 从 PostgreSQL 10 起提供支持，当前版本默认打包了 13 - 18 �
 ## 大版本与软件包
 
 - `pg_version`：指定 PostgreSQL 主版本（默认 18）。Pigsty 会根据版本自动映射到正确的包名前缀。
-- `pg_packages`：定义需要安装的核心包集合，支持使用[包别名](/docs/pgsql/config/alias)（默认 `pgsql-main pgsql-common`，包含内核 + patroni/pgbouncer/pgbackrest 等常用工具）。
+- `pg_packages`：定义需要安装的核心包集合，支持使用 [包别名](/docs/pgsql/config/alias)（默认 `pgsql-main pgsql-common`，包含内核 + patroni/pgbouncer/pgbackrest 等常用工具）。
 - `pg_extensions`：额外需要安装的扩展包列表，同样支持别名；缺省为空表示只装核心依赖。
 
 ```yaml

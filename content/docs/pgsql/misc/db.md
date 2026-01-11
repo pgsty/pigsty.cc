@@ -10,7 +10,7 @@ categories: [参考]
 
 > 在这里的上下文中，数据库指的是使用 SQL 命令 `CREATE DATABASE` 创建的，数据库集簇内的逻辑对象。
 
-一组 PostgreSQL 服务器可以同时服务于多个 **数据库** （Database）。在 Pigsty 中，你可以在集群配置中[定义](#定义数据库)好所需的数据库。
+一组 PostgreSQL 服务器可以同时服务于多个 **数据库** （Database）。在 Pigsty 中，你可以在集群配置中 [定义](#定义数据库) 好所需的数据库。
 
 Pigsty会对默认模板数据库`template1`进行修改与定制，创建默认模式，安装默认扩展，配置默认权限，新创建的数据库默认会从`template1`继承这些设置。
 
@@ -106,8 +106,8 @@ pg-meta:
 
 ## 创建数据库
 
-在 [`pg_databases`](/docs/pgsql/param#pg_databases) 中[定义](#定义数据库)的数据库将在集群初始化时自动创建。
-如果您希望在现有集群上[创建数据库](/docs/pgsql/admin#创建数据库)，可以使用 `bin/pgsql-db` 包装脚本。
+在 [`pg_databases`](/docs/pgsql/param#pg_databases) 中 [定义](#定义数据库) 的数据库将在集群初始化时自动创建。
+如果您希望在现有集群上 [创建数据库](/docs/pgsql/admin#创建数据库)，可以使用 `bin/pgsql-db` 包装脚本。
 将新的数据库定义添加到 `all.children.<cls>.pg_databases` 中，并使用以下命令创建该数据库：
 
 ```bash
@@ -122,7 +122,7 @@ bin/pgsql-db <cls> <dbname>    # pgsql-db.yml -l <cls> -e dbname=<dbname>
 使用 `pgsql-db` 工具或 `pgsql-db.yml` 剧本创建新数据库时，会将此数据库一并添加到 [Pgbouncer 数据库](#pgbouncer数据库) 列表中。
 
 如果您的数据库定义有一个非常规 `owner`（默认为 dbsu `postgres`），那么请确保在创建该数据库前，属主用户已经存在。
-最佳实践永远是在创建数据库之前[创建](/docs/pgsql/admin#创建用户) [用户](/docs/pgsql/config/user)。
+最佳实践永远是在创建数据库之前 [创建](/docs/pgsql/admin#创建用户) [用户](/docs/pgsql/config/user)。
 
 
 
@@ -135,7 +135,7 @@ Pigsty 会默认为 PostgreSQL 实例 1:1 配置启用一个 Pgbouncer 连接池
 连接池可以优化短连接性能，降低并发征用，以避免过高的连接数冲垮数据库，并在数据库迁移时提供额外的灵活处理空间。
 
 Pigsty 默认将 [`pg_databases`](/docs/pgsql/param#pg_databases) 中的所有数据库都添加到 pgbouncer 的数据库列表中。
-您可以通过在数据库[定义](#定义数据库)中显式设置 `pgbouncer: false` 来禁用特定数据库的 pgbouncer 连接池支持。
+您可以通过在数据库 [定义](#定义数据库) 中显式设置 `pgbouncer: false` 来禁用特定数据库的 pgbouncer 连接池支持。
 
 Pgbouncer数据库列表在 `/etc/pgbouncer/database.txt` 中定义，数据库定义中关于连接池的参数会体现在这里：
 
@@ -150,7 +150,7 @@ noco                        = host=/var/run/postgresql
 mongo                       = host=/var/run/postgresql
 ```
 
-当您[创建数据库](#创建数据库)时，Pgbouncer 的数据库列表定义文件将会被刷新，并通过在线重载配置的方式生效，正常不会影响现有的连接。
+当您 [创建数据库](#创建数据库) 时，Pgbouncer 的数据库列表定义文件将会被刷新，并通过在线重载配置的方式生效，正常不会影响现有的连接。
 
 Pgbouncer 使用和 PostgreSQL 同样的 `dbsu` 运行，默认为 `postgres` 操作系统用户，您可以使用 `pgb` 别名，使用 dbsu 访问 pgbouncer 管理功能。
 

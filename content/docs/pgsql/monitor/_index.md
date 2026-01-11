@@ -8,7 +8,7 @@ categories: [参考]
 ---
 
 
-本文介绍了 Pigsty 的监控系统架构，包括监控指标，日志，与目标管理的方式。以及如何[监控现有PG集群](#监控现有集群)与远程 [RDS服务](#监控rds)。
+本文介绍了 Pigsty 的监控系统架构，包括监控指标，日志，与目标管理的方式。以及如何 [监控现有PG集群](#监控现有集群) 与远程 [RDS服务](#监控rds)。
 
 
 ----------------
@@ -59,7 +59,7 @@ Prometheus的监控目标在 `/etc/prometheus/targets/pgsql/` 下的静态文件
     - 10.10.10.10:8008    # <--- patroni指标（未启用 API SSL 时）
 ```
 
-当全局标志 [`patroni_ssl_enabled`](/docs/pgsql/param#patroni_ssl_enabled) 被设置时，patroni目标将被移动到单独的文件 `/etc/prometheus/targets/patroni/<ins>.yml`。 因为此时使用的是 https 抓取端点。当您[监控RDS](#监控rds)实例时，监控目标会被单独放置于： `/etc/prometheus/targets/pgrds/` 目录下，并以**集群**为单位进行管理。
+当全局标志 [`patroni_ssl_enabled`](/docs/pgsql/param#patroni_ssl_enabled) 被设置时，patroni目标将被移动到单独的文件 `/etc/prometheus/targets/patroni/<ins>.yml`。 因为此时使用的是 https 抓取端点。当您 [监控RDS](#监控rds) 实例时，监控目标会被单独放置于： `/etc/prometheus/targets/pgrds/` 目录下，并以**集群**为单位进行管理。
 
 当使用 `bin/pgsql-rm` 或 `pgsql-rm.yml` 移除集群时，Prometheus监控目标将被移除。您也可以手动移除它，或使用剧本里的子任务：
 
@@ -119,7 +119,7 @@ Pigsty 提供三种监控模式，以适应不同的监控需求。
 ./pgsql.yml -l <cls> -t pg_exporter,pg_register      # 配置 PostgreSQL 监控，并注册至 Victoria/Grafana
 ```
 
-因为目标数据库集群已存在，所以您需要手工在目标数据库集群上[创建监控用户、模式与扩展](#监控对象配置)。
+因为目标数据库集群已存在，所以您需要手工在目标数据库集群上 [创建监控用户、模式与扩展](#监控对象配置)。
 
 
 
@@ -146,7 +146,7 @@ Pigsty 提供三种监控模式，以适应不同的监控需求。
 -------------------            ^------------------^
 ```
 
-在这种模式下，监控系统不会有主机，连接池，负载均衡器，高可用组件的相关指标，但数据库本身，以及数据目录（Catalog）中的实时状态信息仍然可用。Pigsty提供了两个专用的监控面板，专注于 PostgreSQL 本身的监控指标： [PGRDS Cluster](https://demo.pigsty.cc/d/pgrds-cluster) 与 [PGRDS Instance](https://demo.pigsty.cc/d/pgrds-instance)，总览与数据库内监控则复用现有监控面板。因为Pigsty不能管理您的RDS，所以用户需要在目标数据库上提前[配置好监控对象](#监控对象配置)。
+在这种模式下，监控系统不会有主机，连接池，负载均衡器，高可用组件的相关指标，但数据库本身，以及数据目录（Catalog）中的实时状态信息仍然可用。Pigsty提供了两个专用的监控面板，专注于 PostgreSQL 本身的监控指标： [PGRDS Cluster](https://demo.pigsty.cc/d/pgrds-cluster) 与 [PGRDS Instance](https://demo.pigsty.cc/d/pgrds-instance)，总览与数据库内监控则复用现有监控面板。因为Pigsty不能管理您的RDS，所以用户需要在目标数据库上提前 [配置好监控对象](#监控对象配置)。
 
 
 
@@ -162,7 +162,7 @@ Pigsty 提供三种监控模式，以适应不同的监控需求。
 
 下面我们使用沙箱环境作为示例：现在我们假设 `pg-meta` 集群是一个有待监控的 RDS 实例 `pg-foo-1`，而 `pg-test` 集群则是一个有待监控的RDS集群 `pg-bar`：
 
-1. 在目标上创建监控模式、用户和权限。详情请参考[监控对象配置](#监控对象配置)
+1. 在目标上创建监控模式、用户和权限。详情请参考 [监控对象配置](#监控对象配置)
 2. 在配置清单中声明集群。例如，假设我们想要监控“远端”的 `pg-meta` & `pg-test` 集群：
 
     ```yaml

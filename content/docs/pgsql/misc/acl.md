@@ -7,7 +7,7 @@ module: [PGSQL]
 categories: [参考]
 ---
 
-> Pigsty 提供了一套开箱即用的，基于[角色系统](#角色系统)和[权限系统](#权限系统)的访问控制模型。
+> Pigsty 提供了一套开箱即用的，基于 [角色系统](#角色系统) 和 [权限系统](#权限系统) 的访问控制模型。
 
 权限控制很重要，但很多用户做不好。因此 Pigsty 提供了一套开箱即用的精简访问控制模型，为您的集群安全性提供一个兜底。
 
@@ -16,7 +16,7 @@ categories: [参考]
 
 ## 角色系统
 
-Pigsty 默认的角色系统包含四个[默认角色](#默认角色)和四个[默认用户](#默认用户)：
+Pigsty 默认的角色系统包含四个 [默认角色](#默认角色) 和四个 [默认用户](#默认用户)：
 
 | 角色名称               | 属性            | 所属                          | 描述          |
 |--------------------|---------------|-----------------------------|-------------|
@@ -30,7 +30,7 @@ Pigsty 默认的角色系统包含四个[默认角色](#默认角色)和四个[�
 | `dbuser_monitor`   |               | pg_monitor                  | pgsql 监控用户  |
 {.full-width}
 
-这些[角色与用户](/docs/pgsql/config/user#定义用户)的详细定义如下所示：
+这些 [角色与用户](/docs/pgsql/config/user#定义用户) 的详细定义如下所示：
 
 ```yaml
 pg_default_roles:                 # 全局默认的角色与系统用户
@@ -101,7 +101,7 @@ pg_admin_username: dbuser_dba                 # 系统管理用户名
 pg_admin_password: DBUser.DBA                 # 系统管理密码，请务必修改此密码！
 ```
 
-如果您修改默认用户的参数，在 [`pg_default_roles`](/docs/pgsql/param#pg_default_roles) 中修改相应的角色[定义](/docs/pgsql/config/user#定义用户)即可：
+如果您修改默认用户的参数，在 [`pg_default_roles`](/docs/pgsql/param#pg_default_roles) 中修改相应的角色 [定义](/docs/pgsql/config/user#定义用户) 即可：
 
 ```yaml
 - { name: postgres     ,superuser: true                                          ,comment: system superuser }
@@ -116,16 +116,16 @@ pg_admin_password: DBUser.DBA                 # 系统管理密码，请务必�
 
 ## 权限系统
 
-Pigsty 拥有一套开箱即用的权限模型，该模型与[默认角色](#default-roles)一起配合工作。
+Pigsty 拥有一套开箱即用的权限模型，该模型与 [默认角色](#default-roles) 一起配合工作。
 
 - 所有用户都可以访问所有模式。
 - 只读用户（`dbrole_readonly`）可以从所有表中读取数据。（SELECT，EXECUTE）
 - 读写用户（`dbrole_readwrite`）可以向所有表中写入数据并运行 DML。（INSERT，UPDATE，DELETE）。
 - 管理员用户（`dbrole_admin`）可以创建对象并运行 DDL（CREATE，USAGE，TRUNCATE，REFERENCES，TRIGGER）。
-- 离线用户（`dbrole_offline`）类似只读用户，但访问受到限制，只允许访问[离线实例](/docs/pgsql/config#离线从库)（`pg_role = 'offline'` 或 `pg_offline_query = true`）
+- 离线用户（`dbrole_offline`）类似只读用户，但访问受到限制，只允许访问 [离线实例](/docs/pgsql/config#离线从库)（`pg_role = 'offline'` 或 `pg_offline_query = true`）
 - 由管理员用户创建的对象将具有正确的权限。
 - 所有数据库上都配置了默认权限，包括模板数据库。
-- 数据库连接权限由数据库[定义](/docs/pgsql/config/db#定义数据库)管理。
+- 数据库连接权限由数据库 [定义](/docs/pgsql/config/db#定义数据库) 管理。
 - 默认撤销`PUBLIC`在数据库和`public`模式下的`CREATE`权限。
 
 ---------------------
@@ -223,7 +223,7 @@ ALTER DEFAULT PRIVILEGES FOR ROLE "dbrole_admin" {{ priv }};
 
 ## 数据库权限
 
-在 Pigsty 中，数据库（Database）层面的权限在[数据库定义](#定义数据库)中被涵盖。
+在 Pigsty 中，数据库（Database）层面的权限在 [数据库定义](#定义数据库) 中被涵盖。
 
 数据库有三个级别的权限：`CONNECT`、`CREATE`、`TEMP`，以及一个特殊的'权限'：`OWNERSHIP`。
 

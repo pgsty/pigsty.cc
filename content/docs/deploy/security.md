@@ -9,7 +9,7 @@ categories: [教程]
 
 Pigsty 的默认配置已经足以覆盖绝大多数场景对于安全的需求。
 
-Pigsty 已经提供了开箱即用的[认证](/docs/pgsql/config/hba)与[访问控制](/docs/concept/sec/ac/)模型，对于绝大多数场景已经足够安全。
+Pigsty 已经提供了开箱即用的 [认证](/docs/pgsql/config/hba) 与 [访问控制](/docs/concept/sec/ac/) 模型，对于绝大多数场景已经足够安全。
 
 [![pigsty-acl.jpg](/img/pigsty/acl.jpg)](/docs/concept/sec/ac/)
 
@@ -66,7 +66,7 @@ Pigsty 已经提供了开箱即用的[认证](/docs/pgsql/config/hba)与[访问�
 - 在 [**`pgbackrest_repo`**](/docs/pgsql/param#pgbackrest_repo) 的备份仓库定义中使用 `repo_cipher_type` 启用加密
 
 **为业务用户配置密码自动过期实践**
-- 你应当为每个[业务用户](/docs/pgsql/config/user#定义用户)设置一个密码自动过期时间，以满足合规要求。
+- 你应当为每个 [业务用户](/docs/pgsql/config/user#定义用户) 设置一个密码自动过期时间，以满足合规要求。
 - 配置自动过期后，请不要忘记在巡检时定期更新这些密码。
 
   ```yaml
@@ -145,7 +145,7 @@ Pigsty 已经提供了开箱即用的[认证](/docs/pgsql/config/hba)与[访问�
 
 **记录建立/切断连接的日志**
 - 该配置默认关闭，但在 `crit.yml` 配置模板中是默认启用的。
-- 可以手工[配置集群](/docs/pgsql/admin#配置集群)，启用 `log_connections` 和 `log_disconnections` 功能参数。
+- 可以手工 [配置集群](/docs/pgsql/admin#配置集群)，启用 `log_connections` 和 `log_disconnections` 功能参数。
 
 **如果您希望彻底杜绝PG集群在故障转移时脑裂的可能性，请启用watchdog**
 - 如果你的流量走默认推荐的 HAProxy 分发，那么即使你不启用 watchdog，你也不会遇到脑裂的问题。
@@ -167,7 +167,7 @@ Pigsty 已经提供了开箱即用的[认证](/docs/pgsql/config/hba)与[访问�
 - [**`pg_rto`**](/docs/pgsql/param#pg_rto) : **故障概率与影响之间的权衡**
 
 **不要直接通过固定的 IP 地址访问数据库；请使用 VIP、DNS、HAProxy 或它们的排列组合**
-- 使用 HAProxy 进行服务[接入](/docs/pgsql/service/#接入服务)
+- 使用 HAProxy 进行服务 [接入](/docs/pgsql/service/#接入服务)
 - 在故障切换/主备切换的情况下，Haproxy 将处理客户端的流量切换。
 
 **在重要的生产部署中使用多个基础设施节点（例如，1~3）**

@@ -141,7 +141,7 @@ Pigsty 将从上游仓库重新下载所需的 **增量**。
 如果您选择的操作系统不在默认列表中，您可以使用内置的 [**`cache.yml`**](https://github.com/pgsty/pigsty/blob/main/cache.yml) 剧本制作自己的离线软件包：
 
 1. 找到一台运行完全相同操作系统版本，且可以访问互联网的节点
-2. 使用 [**`rich`**](/docs/conf/rich) 配置模板执行[**在线安装**](/docs/setup/install/)（`configure -c rich`）
+2. 使用 [**`rich`**](/docs/conf/rich) 配置模板执行 [**在线安装**](/docs/setup/install/)（`configure -c rich`）
 3. `cd ~/pigsty; ./cache.yml`：制作并获取离线软件包到 `~/pigsty/dist/${version}/`
 4. 将离线软件包复制到没有互联网访问的环境中（ftp、scp、usb 等），通过 `bootstrap` 解包使用
 

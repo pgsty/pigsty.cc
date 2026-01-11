@@ -9,7 +9,7 @@ categories: [参考]
 
 > Pigsty 中基于主机的身份认证 HBA（Host-Based Authentication）详解。
 
-认证是 [访问控制](/docs/concept/sec/ac/) 与 [权限系统](/docs/concept/sec/ac/#权限系统) 的基石，PostgreSQL拥有多种[认证](https://www.postgresql.org/docs/current/client-authentication.html)方法。
+认证是 [访问控制](/docs/concept/sec/ac/) 与 [权限系统](/docs/concept/sec/ac/#权限系统) 的基石，PostgreSQL 拥有多种 [认证](https://www.postgresql.org/docs/current/client-authentication.html) 方法。
 
 这里主要介绍 HBA：Host Based Authentication，HBA规则定义了哪些用户能够通过哪些方式从哪些地方访问哪些数据库。
 
@@ -20,7 +20,7 @@ categories: [参考]
 
 要连接到PostgreSQL数据库，用户必须先经过认证（默认使用密码）。
 
-您可以在连接字符串中提供密码（不安全）或使用`PGPASSWORD`环境变量或`.pgpass`文件传递密码。参考[`psql`](https://www.postgresql.org/docs/current/app-psql.html#usage)文档和[PostgreSQL连接字符串](https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-CONNSTRING)以获取更多详细信息。
+您可以在连接字符串中提供密码（不安全）或使用`PGPASSWORD`环境变量或`.pgpass`文件传递密码。参考 [`psql`](https://www.postgresql.org/docs/current/app-psql.html#usage) 文档和 [PostgreSQL连接字符串](https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-CONNSTRING) 以获取更多详细信息。
 
 ```bash
 psql 'host=<host> port=<port> dbname=<dbname> user=<username> password=<password>'
@@ -42,7 +42,7 @@ PGPASSWORD=DBUser.DBA; psql -U dbuser_dba -h 10.10.10.10 -p 5432 -d meta
 psql 'postgres://dbuser_dba:DBUser.DBA@10.10.10.10:5432/meta?sslkey=/path/to/dbuser_dba.key&sslcert=/path/to/dbuser_dba.crt'
 ```
 
-客户端证书（`CN` = 用户名）可以使用本地CA与[`cert.yml`](https://github.com/Vonng/pigsty/blob/main/cert.yml)剧本签发。
+客户端证书（`CN` = 用户名）可以使用本地CA与 [`cert.yml`](https://github.com/Vonng/pigsty/blob/main/cert.yml) 剧本签发。
 
 
 
@@ -76,11 +76,11 @@ psql 'postgres://dbuser_dba:DBUser.DBA@10.10.10.10:5432/meta?sslkey=/path/to/dbu
 
 在这种形式中，`rules` 字段是字符串数组，每一行都是条原始形式的 [HBA规则](https://www.postgresql.org/docs/current/auth-pg-hba-conf.html)。`title` 字段会被渲染为一条注释，解释下面规则的作用。
 
-`role` 字段用于说明该规则适用于哪些实例角色，当实例的[`pg_role`](/docs/pgsql/param#pg_role)与`role`相同时，HBA规则将被添加到这台实例的 HBA 中。
+`role` 字段用于说明该规则适用于哪些实例角色，当实例的 [`pg_role`](/docs/pgsql/param#pg_role) 与`role`相同时，HBA规则将被添加到这台实例的 HBA 中。
 - `role: common`的HBA规则将被添加到所有实例上。
 - `role: primary` 的 HBA 规则只会添加到主库实例上。
 - `role: replica` 的 HBA 规则只会添加到从库实例上。
-- `role: offline`的HBA规则将被添加到离线实例上（ [`pg_role`](/docs/pgsql/param#pg_role) = `offline`或[`pg_offline_query`](/docs/pgsql/param#pg_offline_query) = `true`）
+- `role: offline`的HBA规则将被添加到离线实例上（ [`pg_role`](/docs/pgsql/param#pg_role) = `offline`或 [`pg_offline_query`](/docs/pgsql/param#pg_offline_query) = `true`）
 
 
 
@@ -166,7 +166,7 @@ pg-meta:
 
 HBA 是一个静态的规则配置文件，修改后需要重载才能生效。默认的 HBA 规则集合因为不涉及 Role 与集群成员，所以通常不需要重载。
 
-如果您设计的 HBA 使用了特定的实例角色限制，或者集群成员限制，那么当集群实例成员发生变化（新增/下线/主从切换），一部分HBA规则的生效条件/涉及范围发生变化，通常也需要[重载HBA](/docs/pgsql/admin#重载hba)以反映最新变化。
+如果您设计的 HBA 使用了特定的实例角色限制，或者集群成员限制，那么当集群实例成员发生变化（新增/下线/主从切换），一部分HBA规则的生效条件/涉及范围发生变化，通常也需要 [重载HBA](/docs/pgsql/admin#重载hba) 以反映最新变化。
 
 要重新加载 postgres/pgbouncer 的 hba 规则：
 
@@ -396,5 +396,5 @@ pgb_default_hba_rules:            # pgbouncer host-based authentication rules, o
   - {user: 'all'        ,db: all         ,addr: intra     ,auth: ssl   ,title: 'allow all user intra access with pwd' ,order: 400}
 ```
 
-更多信息，请参考[安全加固](/docs/setup/security)一节。
+更多信息，请参考 [安全加固](/docs/setup/security) 一节。
 

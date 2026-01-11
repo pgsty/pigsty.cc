@@ -96,8 +96,8 @@ Pigsty 具有一套内置的，开箱即用的访问控制 / [ACL](/docs/concept
 
 ## 创建用户
 
-在 [`pg_default_roles`](/docs/pgsql/param#pg_default_roles) 和 [`pg_users`](/docs/pgsql/param#pg_users) 中[定义](#定义用户)的用户和角色，将在集群初始化的 PROVISION 阶段中自动逐一创建。
-如果您希望在现有的集群上[创建用户](/docs/pgsql/admin#创建用户)，可以使用 `bin/pgsql-user` 工具。
+在 [`pg_default_roles`](/docs/pgsql/param#pg_default_roles) 和 [`pg_users`](/docs/pgsql/param#pg_users) 中 [定义](#定义用户) 的用户和角色，将在集群初始化的 PROVISION 阶段中自动逐一创建。
+如果您希望在现有的集群上 [创建用户](/docs/pgsql/admin#创建用户)，可以使用 `bin/pgsql-user` 工具。
 将新用户/角色定义添加到 `all.children.<cls>.pg_users`，并使用以下方法创建该数据库：
 
 ```bash
@@ -162,13 +162,13 @@ dbuser_dba                  = pool_mode=session max_user_connections=16
 dbuser_monitor              = pool_mode=session max_user_connections=8
 ```
 
-当您[创建数据库](#创建数据库)时，Pgbouncer 的数据库列表定义文件将会被刷新，并通过在线重载配置的方式生效，不会影响现有的连接。
+当您 [创建数据库](#创建数据库) 时，Pgbouncer 的数据库列表定义文件将会被刷新，并通过在线重载配置的方式生效，不会影响现有的连接。
 
 Pgbouncer 使用和 PostgreSQL 同样的 `dbsu` 运行，默认为 `postgres` 操作系统用户，您可以使用 `pgb` 别名，使用 dbsu 访问 pgbouncer 管理功能。
 
 Pigsty 还提供了一个实用函数 `pgb-route` ，可以将 pgbouncer 数据库流量快速切换至集群中的其他节点，用于零停机迁移：
 
-连接池用户配置文件 `userlist.txt` 与 `useropts.txt` 会在您[创建用户](#创建用户)时自动刷新，并通过在线重载配置的方式生效，正常不会影响现有的连接。
+连接池用户配置文件 `userlist.txt` 与 `useropts.txt` 会在您 [创建用户](#创建用户) 时自动刷新，并通过在线重载配置的方式生效，正常不会影响现有的连接。
 
 请注意，[`pgbouncer_auth_query`](/docs/pgsql/param#pgbouncer_auth_query) 参数允许你使用动态查询来完成连接池用户认证，当您懒得管理连接池中的用户时，这是一种折中的方案。
 

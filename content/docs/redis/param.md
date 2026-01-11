@@ -286,7 +286,7 @@ Redis 内存回收策略，默认值：`allkeys-lru`，
 - `volatile-random`：随机删除带有过期字段的键
 - `volatile-ttl`：删除带有真实过期字段和最短剩余生存时间（TTL）值的键。
 
-详情请参阅[Redis内存回收策略](https://redis.io/docs/ref/eviction/)。
+详情请参阅 [Redis内存回收策略](https://redis.io/docs/ref/eviction/)。
 
 
 

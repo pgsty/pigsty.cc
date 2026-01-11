@@ -99,7 +99,7 @@ etcd 故障期间，PostgreSQL 高可用将无法实现自动故障转移，您�
 
 Pigsty v2.6+ 默认启用了 etcd 自动压实（Auto Compact）和 16GB 的后端存储配额，通常无需担心写满 etcd 的问题。
 
-etcd 的[数据模型](https://etcd.io/docs/v3.5/learning/data_model/) 使得每一次写入都会产生一个新的版本。
+etcd 的 [数据模型](https://etcd.io/docs/v3.5/learning/data_model/) 使得每一次写入都会产生一个新的版本。
 因此如果您的 etcd 集群频繁写入，即使只有极个别的 Key，etcd 数据库的大小也可能会不断增长。
 当达到容量上限时，etcd 将会拒绝写入请求，这可能导致依赖 etcd 的 PostgreSQL 高可用机制无法正常工作。
 
@@ -197,7 +197,7 @@ pg-meta-1
 
 ## 如何向现有etcd集群添加新的成员？
 
-> 详细过程，请参考[向 etcd 集群添加成员](admin#添加成员)
+> 详细过程，请参考 [向 etcd 集群添加成员](admin#添加成员)
 
 **推荐方式：使用便捷脚本**
 
@@ -223,7 +223,7 @@ etcdctl member promote <new_ins_server_id>                                      
 
 ## 如何从现有etcd集群中移除成员？
 
-> 详细过程，请参考[从 etcd 集群中移除成员](admin#移除成员)
+> 详细过程，请参考 [从 etcd 集群中移除成员](admin#移除成员)
 
 **推荐方式：使用便捷脚本**
 

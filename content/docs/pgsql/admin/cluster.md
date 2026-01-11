@@ -56,7 +56,7 @@ bin/pgsql-user <cls> <username>   # ./pgsql-user.yml -l <cls> -e username=<usern
 bin/pgsql-db <cls> <dbname>       # ./pgsql-db.yml -l <cls> -e dbname=<dbname>
 ```
 
-注意：如果数据库指定了一个非默认的属主，该属主用户应当已存在，否则您必须先[创建用户](#创建用户)。
+注意：如果数据库指定了一个非默认的属主，该属主用户应当已存在，否则您必须先 [创建用户](#创建用户)。
 
 <details><summary>示例：创建业务数据库</summary>
 
@@ -177,7 +177,7 @@ bin/pgsql-add <cls> <ip>          # 初始化 <ip> ，作为集群 <cls> 的新�
 
 这将会把节点 `<ip>` 添加到 pigsty 并将其初始化为集群 `<cls>` 的一个副本。
 
-集群服务将会[重新加载](#重载服务)以接纳新成员。
+集群服务将会 [重新加载](#重载服务) 以接纳新成员。
 
 <details><summary>示例：为 pg-test 添加从库</summary>
 
@@ -228,7 +228,7 @@ bin/pgsql-add pg-test 10.10.10.13   # 在 10.10.10.13 上为集群 pg-test 初�
 bin/pgsql-rm <cls> <ip...>        # ./pgsql-rm.yml -l <ip>
 ```
 
-这将从集群 `<cls>` 中移除实例 `<ip>`。 集群服务将会[重新加载](#重载服务)以从负载均衡器中踢除已移除的实例。
+这将从集群 `<cls>` 中移除实例 `<ip>`。 集群服务将会 [重新加载](#重载服务) 以从负载均衡器中踢除已移除的实例。
 
 <details><summary>示例：从 pg-test 移除从库</summary>
 
@@ -260,7 +260,7 @@ pg-test:
   vars: { pg_cluster: pg-test }
 ```
 
-最后，您可以[重载PG服务](#重载服务)并从负载均衡器中踢除已移除的实例：
+最后，您可以 [重载PG服务](#重载服务) 并从负载均衡器中踢除已移除的实例：
 
 ```bash
 bin/pgsql-svc pg-test             # 重载 pg-test 上的服务
@@ -288,7 +288,7 @@ bin/pgsql-rm <cls>                # ./pgsql-rm.yml -l <cls>
 
 <details><summary>示例：强制移除集群</summary>
 
-注意：如果为这个集群配置了[`pg_safeguard`](/docs/pgsql/param#pg_safeguard)（或全局设置为 `true`），`pgsql-rm.yml` 将中止，以避免意外移除集群。
+注意：如果为这个集群配置了 [`pg_safeguard`](/docs/pgsql/param#pg_safeguard)（或全局设置为 `true`），`pgsql-rm.yml` 将中止，以避免意外移除集群。
 
 您可以使用 playbook 命令行参数明确地覆盖它，以强制执行清除：
 

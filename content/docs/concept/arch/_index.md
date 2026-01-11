@@ -28,7 +28,7 @@ Pigsty 采用模块化设计，有六个主要的默认模块：[`PGSQL`](/docs/
 * [**`REDIS`**](/docs/redis)：Redis 服务器，支持独立主从、哨兵、集群模式，并带有完整的监控支持。
 * [**`MINIO`**](/docs/minio)：与 S3 兼容的简单对象存储服务器，可作为 PG数据库备份的可选目的地。
 
-你可以声明式地自由组合它们。如果你想要主机监控，在基础设施节点上安装[`INFRA`](/docs/infra)模块，并在纳管节点上安装 [`NODE`](/docs/node) 模块就足够了。
+你可以声明式地自由组合它们。如果你想要主机监控，在基础设施节点上安装 [`INFRA`](/docs/infra) 模块，并在纳管节点上安装 [`NODE`](/docs/node) 模块就足够了。
 [`ETCD`](/docs/etcd) 和 [`PGSQL`](/docs/pgsql) 模块用于搭建高可用 PG 集群，将模块安装在多个节点上，可以自动形成一个高可用的数据库集群。
 您可以复用 Pigsty 基础架构并开发您自己的模块，[`REDIS`](/docs/redis) 和 [`MINIO`](/docs/minio) 可以作为一个样例。后续还会有更多的模块加入，例如对 Mongo 与 MySQL 的初步支持已经提上了日程。
 

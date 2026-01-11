@@ -46,7 +46,7 @@ ansible all -b -a 'chronyc -a makestep'     # 同步时间
 ## 远程节点无法通过SSH访问怎么办？
 
 如果目标机器隐藏在SSH跳板机后面， 或者进行了一些无法直接使用`ssh ip`访问的自定义操作， 可以使用诸如 `ansible_port`
-或 `ansible_host` 这一类[Ansible连接参数](https://docs.ansible.com/ansible/latest/inventory_guide/connection_details.html)来指定各种 SSH 连接信息，如下所示：
+或 `ansible_host` 这一类 [Ansible连接参数](https://docs.ansible.com/ansible/latest/inventory_guide/connection_details.html) 来指定各种 SSH 连接信息，如下所示：
 
 ```bash
 pg-test:
@@ -76,7 +76,7 @@ pg-test:
 
 ## 如何使用现有管理员创建专用管理员用户？
 
-使用以下命令，使用该节点上现有的管理员用户，创建由[`node_admin_username`](/docs/node/param#node_admin_username)
+使用以下命令，使用该节点上现有的管理员用户，创建由 [`node_admin_username`](/docs/node/param#node_admin_username)
 定义的新的标准的管理员用户。
 
 ```bash
@@ -87,7 +87,7 @@ pg-test:
 
 ## 如何使用节点上的HAProxy对外暴露服务？
 
-您可以在配置中中使用[`haproxy_services`](/docs/node/param#haproxy_services)
+您可以在配置中中使用 [`haproxy_services`](/docs/node/param#haproxy_services)
 来暴露服务，并使用 `node.yml -t haproxy_config,haproxy_reload` 来更新配置。
 
 以下是使用它暴露MinIO服务的示例：[暴露MinIO服务](/docs/minio#暴露服务)

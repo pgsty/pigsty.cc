@@ -594,7 +594,7 @@ node_kernel_modules: [ softdog, ip_vs, ip_vs_rr, ip_vs_wrr, ip_vs_sh ]
 
 如果设定了一个非零值，它将被写入 `/etc/sysctl.d/hugepage.conf` 中应用生效；负值将不起作用，高于 90% 节点内存的数字将被限制为节点内存的 90%
 
-如果不为零，它应该略大于[`pg_shared_buffer_ratio`](#pg_shared_buffer_ratio) 的对应值，这样才能让 PostgreSQL 用上大页。
+如果不为零，它应该略大于 [`pg_shared_buffer_ratio`](#pg_shared_buffer_ratio) 的对应值，这样才能让 PostgreSQL 用上大页。
 
 
 
@@ -610,7 +610,7 @@ node_kernel_modules: [ softdog, ip_vs, ip_vs_rr, ip_vs_wrr, ip_vs_sh ]
 
 默认值：`0`，这将设置 `vm.nr_hugepages=0` 并完全不使用大页。
 
-本参数应该等于或略大于[`pg_shared_buffer_ratio`](#pg_shared_buffer_ratio)，如果不为零。
+本参数应该等于或略大于 [`pg_shared_buffer_ratio`](#pg_shared_buffer_ratio)，如果不为零。
 
 例如，如果您为Postgres共享缓冲区默认分配了25%的内存，您可以将此值设置为 0.27 ~ 0.30，并在初始化后使用 `/pg/bin/pg-tune-hugepage` 精准回收浪费的大页。
 
@@ -1174,7 +1174,7 @@ keepalived exporter 监听端口号，默认为：`9650`。
 
 HAProxy 默认在所有节点上安装启用，并以类似于 Kubernetes NodePort 的方式对外暴露服务。
 
-[`PGSQL`](/docs/pgsql) 模块对外[服务](pgsql-service)使用到了 Haproxy。
+[`PGSQL`](/docs/pgsql) 模块对外 [服务](pgsql-service) 使用到了 Haproxy。
 
 
 ```yaml

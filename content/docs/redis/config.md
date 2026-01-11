@@ -12,9 +12,9 @@ categories: [参考]
 
 ## 概念
 
-Redis的实体概念模型与[PostgreSQL](/docs/concept/model/pgsql#实体概念图)几乎相同，同样包括 **集群（Cluster）** 与 **实例（Instance）** 的概念。注意这里的Cluster指的不是Redis原生集群方案中的集群。
+Redis的实体概念模型与 [PostgreSQL](/docs/concept/model/pgsql#实体概念图)几乎相同，同样包括 **集群（Cluster）** 与 **实例（Instance）** 的概念。注意这里的Cluster指的不是Redis原生集群方案中的集群。
 
-REDIS模块与PGSQL模块核心的区别在于，Redis通常采用 **单机多实例** 部署，而不是 PostgreSQL 的 1:1 部署：一个物理/虚拟机节点上通常会部署 **多个** Redis实例，以充分利用多核CPU。因此[配置](#配置)和[管理](#管理)Redis实例的方式与PGSQL稍有不同。
+REDIS模块与PGSQL模块核心的区别在于，Redis通常采用 **单机多实例** 部署，而不是 PostgreSQL 的 1:1 部署：一个物理/虚拟机节点上通常会部署 **多个** Redis实例，以充分利用多核CPU。因此 [配置](#配置) 和 [管理](#管理) Redis实例的方式与PGSQL稍有不同。
 
 在Pigsty管理的Redis中，节点完全隶属于集群，即目前尚不允许在一个节点上部署两个不同集群的Redis实例，但这并不影响您在在一个节点上部署多个独立 Redis 主从实例。当然这样也会有一些局限性，例如在这种情况下您就无法为同一个节点上的不同实例指定不同的密码了。
 
@@ -84,7 +84,7 @@ redis-test: # redis 原生集群： 3主 x 3从
 * 在每个 Redis 节点上，您需要为 Redis实例 分配唯一的端口号，避免端口冲突。
 * 通常同一个 Reids 集群会使用同一个密码，但一个 Redis节点上的多个 Redis 实例无法设置不同的密码（因为 redis_exporter 只允许使用一个密码）
 * Redis Cluster自带高可用，而Redis主从的高可用需要在 Sentinel 中额外进行手工配置：因为我们不知道您是否会部署 Sentinel。
-* 好在配置 Redis 主从实例的高可用非常简单，可以通过Sentinel进行配置，详情请参考[管理-设置Redis主从高可用](admin#设置redis主从高可用)
+* 好在配置 Redis 主从实例的高可用非常简单，可以通过Sentinel进行配置，详情请参考 [管理-设置Redis主从高可用](admin#设置redis主从高可用)
 
 
 --------

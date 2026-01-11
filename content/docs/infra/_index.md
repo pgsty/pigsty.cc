@@ -307,7 +307,7 @@ INFRA模块剧本 [`infra.yml`](https://github.com/pgsty/pigsty/blob/main/infra.
 **该剧本默认在 [**INFRA节点**](/docs/concept/arch/node#infra节点) 上执行**
 
 * Pigsty默认将使用**当前执行此剧本的节点**作为Pigsty的 [**Infra节点**](/docs/concept/arch/node#infra节点) 与 [**ADMIN节点**](/docs/concept/arch/node#admin节点)。
-* Pigsty在[配置过程](/docs/setup/install#configure)中默认会将当前节点标记为Infra/Admin节点，并使用**当前节点首要IP地址**替换配置模板中的占位IP地址`10.10.10.10`。
+* Pigsty在 [配置过程](/docs/setup/install#configure) 中默认会将当前节点标记为Infra/Admin节点，并使用**当前节点首要IP地址**替换配置模板中的占位IP地址`10.10.10.10`。
 * 该节点除了可以发起管理，部署有基础设施，与一个部署普通托管节点并无区别。
 * 单机安装时，ETCD 也会安装在此节点上，提供 DCS 服务
 

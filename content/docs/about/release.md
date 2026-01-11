@@ -1833,7 +1833,7 @@ c5b2b1a4867eee624e57aed58ac65a80  pigsty-pkg-v2.5.0.ubuntu22.x86_64.tgz
 - 异步HTTP客户端扩展： [`pg_net`](https://github.com/supabase/pg_net) 允许您使用 SQL 发起非阻塞的 HTTP/HTTPS 请求
 - JWT支持扩展：[`pgjwt`](https://github.com/michelp/pgjwt) 允许您使用 SQL 验证签发 JWT (JSON Web Tokens)
 - 密钥存储扩展: [`vault`](https://github.com/supabase/vault) 可以在保险柜里存储加密密钥
-- 将[FerretDB](https://github.com/FerretDB/FerretDB) 版本升级至 v1.10
+- 将 [FerretDB](https://github.com/FerretDB/FerretDB) 版本升级至 v1.10
 - 新增组件：[`pg_filedump`](https://github.com/df7cb/pg_filedump)：可用于快速从PostgreSQL二进制文件中恢复数据
 - 减少 EL9 离线软件包的大小，移除非必须依赖项 `proj-data*`
 - 修复了 Patroni 3.1.1 的错误
@@ -3496,7 +3496,7 @@ v0.6 对数据库供给方案进行了修改与调整，根据用户的反馈添
 * 改造Prometheus与监控供给方式
     * 允许在无基础设施的情况下对已有PG集群进行监控部署，便于监控系统与其他供给方案集成。[#11](https://github.com/Vonng/pigsty/issues/11)
     * 基于Inventory渲染所有监控对象的静态列表，用于静态服务发现。[#11](https://github.com/Vonng/pigsty/issues/11)
-    * Prometheus添加了静态对象模式，用于替代动态服务发现，集中进行身份管理[#11](https://github.com/Vonng/pigsty/issues/11)
+    * Prometheus添加了静态对象模式，用于替代动态服务发现，集中进行身份管理 [#11](https://github.com/Vonng/pigsty/issues/11)
     * 监控Exporter现在添加了`service_registry`选项，Consul服务注册变为可选项 [#13](https://github.com/Vonng/pigsty/issues/13)
     * Exporter现在可以通过拷贝二进制的方式直接安装：`exporter_binary_install`，[#14](https://github.com/Vonng/pigsty/issues)
     * Exporter现在具有`xxx_enabled`选项，控制是否启用该组件。
@@ -3558,9 +3558,9 @@ Pigsty 现在有了官方网站啦：[pigsty.cc](https://pigsty.cc/) 🎉 !
 
 **亮点特性**
 
-* Pigsty官方[文档站](http://pigsty.cc/)正式上线！
+* Pigsty官方 [文档站](http://pigsty.cc/) 正式上线！
 * 添加了数据库模板的定制支持，用户可以通过配置文件定制所需的数据库内部对象。
-* 对默认[访问控制](/docs/concept/sec/ac/)模型进行了改进
+* 对默认 [访问控制](/docs/concept/sec/ac/) 模型进行了改进
 * 重构了HBA管理的逻辑，现在将由Pigsty替代Patroni直接负责生成HBA
 * 将Grafana监控系统的供给方案从sqlite改为JSON文件静态Provision
 * 将`pg-cluster-replication`面板加入Pigsty开源免费套餐。

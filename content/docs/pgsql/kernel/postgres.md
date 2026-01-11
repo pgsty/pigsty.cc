@@ -23,7 +23,7 @@ Pigsty 支持 PostgreSQL 13 ~ 18，并提供 440 个 PG 扩展。
 ./deploy.yml             # 使用 pigsty 设置一切
 ```
 
-大多数[配置模板](/docs/conf/)默认使用 PostgreSQL 内核，例如：
+大多数 [配置模板](/docs/conf/) 默认使用 PostgreSQL 内核，例如：
 
 - [`meta`](https://github.com/pgsty/pigsty/blob/main/conf/meta.yml) : **默认**，带有核心扩展（vector、postgis、timescale）的 postgres
 - [`rich`](https://github.com/pgsty/pigsty/blob/main/conf/rich.yml) : 安装了所有扩展的 postgres

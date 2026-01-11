@@ -11,7 +11,7 @@ categories: [参考]
 
 [服务](#服务概述)是一种抽象：它是数据库集群对外提供能力的形式，并封装了底层集群的细节。
 
-服务对于生产环境中的[稳定接入](#接入服务)至关重要，在[高可用](/docs/concept/ha)集群自动故障时方显其价值，[单机用户](#单机用户)通常不需要操心这个概念。
+服务对于生产环境中的 [稳定接入](#接入服务) 至关重要，在 [高可用](/docs/concept/ha) 集群自动故障时方显其价值，[单机用户](#单机用户) 通常不需要操心这个概念。
 
 
 ---------------
@@ -54,8 +54,8 @@ psql postgres://dbuser_view:DBUser.View@pg-meta/meta       # 用默认的只读�
 
 - **默认直连服务（default）** ：允许（管理）用户，绕过连接池直接访问数据库的服务
 - **离线从库服务（offline）** ：不承接线上只读流量的专用从库，用于ETL与分析查询
-- **同步从库服务（standby）** ：没有复制延迟的只读服务，由[同步备库](/docs/pgsql/config#同步备库)/主库处理只读查询
-- **延迟从库服务（delayed）** ：访问同一个集群在一段时间之前的旧数据，由[延迟从库](/docs/pgsql/config#延迟集群)来处理
+- **同步从库服务（standby）** ：没有复制延迟的只读服务，由 [同步备库](/docs/pgsql/config#同步备库)/主库处理只读查询
+- **延迟从库服务（delayed）** ：访问同一个集群在一段时间之前的旧数据，由 [延迟从库](/docs/pgsql/config#延迟集群) 来处理
 
 
 
@@ -86,7 +86,7 @@ psql postgres://dbuser_stats:DBUser.Stats@pg-meta:5438/meta # pg-meta-offline : 
 
 [![pigsty-ha.png](/img/pigsty/ha.png)](/docs/concept/ha)
 
-注意在这里`pg-meta` 域名指向了集群的 L2 VIP，进而指向集群主库上的 haproxy 负载均衡器，它负责将流量路由到不同的实例上，详见[服务接入](#接入服务)
+注意在这里`pg-meta` 域名指向了集群的 L2 VIP，进而指向集群主库上的 haproxy 负载均衡器，它负责将流量路由到不同的实例上，详见 [服务接入](#接入服务)
 
 
 
@@ -94,7 +94,7 @@ psql postgres://dbuser_stats:DBUser.Stats@pg-meta:5438/meta # pg-meta-offline : 
 
 ## 服务实现
 
-在 Pigsty 中，服务使用[节点](/docs/node)上的 [haproxy](/docs/node/param#haproxy) 来实现，通过主机节点上的不同端口进行区分。
+在 Pigsty 中，服务使用 [节点](/docs/node) 上的 [haproxy](/docs/node/param#haproxy) 来实现，通过主机节点上的不同端口进行区分。
 
 Pigsty 所纳管的每个节点上都默认启用了 Haproxy 以对外暴露服务，而数据库节点也不例外。
 集群中的节点尽管从数据库的视角来看有主从之分，但从服务的视角来看，每个节点都是相同的：
@@ -107,7 +107,7 @@ Pigsty 所纳管的每个节点上都默认启用了 Haproxy 以对外暴露服�
 1. 通过 NodePort 暴露的访问端点（端口号，从哪访问？）
 2. 通过 Selectors 选择的目标实例（实例列表，谁来承载？）
 
-Pigsty的服务交付边界止步于集群的HAProxy，用户可以用各种手段访问这些负载均衡器，请参考[接入服务](#接入服务)。
+Pigsty的服务交付边界止步于集群的HAProxy，用户可以用各种手段访问这些负载均衡器，请参考 [接入服务](#接入服务)。
 
 所有的服务都通过配置文件进行声明，例如，PostgreSQL 默认服务就是由 [`pg_default_services`](/docs/pgsql/param#pg_default_services) 参数所定义的：
 
@@ -173,7 +173,7 @@ listen pg-test-standby
     server pg-test-2 10.10.10.12:6432 check port 8008 weight 100         #        
 ```
 
-在这里，`pg-test` 集群全部三个实例都被 `selector: "[]"` 给圈中了，渲染进入 `pg-test-replica` 服务的后端服务器列表中。但是因为还有 `/sync` 健康检查，Patroni Rest API只有在主库和[同步备库](/docs/pgsql/config#同步备库)上才会返回代表健康的 HTTP 200 状态码，因此只有主库和同步备库才能真正承载请求。
+在这里，`pg-test` 集群全部三个实例都被 `selector: "[]"` 给圈中了，渲染进入 `pg-test-replica` 服务的后端服务器列表中。但是因为还有 `/sync` 健康检查，Patroni Rest API只有在主库和 [同步备库](/docs/pgsql/config#同步备库) 上才会返回代表健康的 HTTP 200 状态码，因此只有主库和同步备库才能真正承载请求。
 此外，主库因为满足条件 `pg_role == primary`， 被 backup selector 选中，被标记为了备份服务器，只有当没有其他实例（也就是同步备库）可以满足需求时，才会顶上。
 
 
@@ -216,7 +216,7 @@ listen pg-test-primary
 
 </details>
 
-Patroni 的[高可用](/docs/concept/ha)机制确保任何时候最多只会有一个实例的 `/primary` 健康检查为真，因此Primary服务将始终将流量路由到主实例。
+Patroni 的 [高可用](/docs/concept/ha) 机制确保任何时候最多只会有一个实例的 `/primary` 健康检查为真，因此Primary服务将始终将流量路由到主实例。
 
 使用 Primary 服务而不是直连数据库的一个好处是，如果集群因为某种情况出现了双主（比如在没有watchdog的情况下kill -9杀死主库 Patroni），Haproxy在这种情况下仍然可以避免脑裂，因为它只会在 Patroni 存活且返回主库状态时才会分发流量。
 
@@ -235,8 +235,8 @@ Replica服务在生产环境中的重要性仅次于Primary服务，它在 5434 
 
 - 选择器参数 `selector: "[]"` 意味着所有集群成员都将被包括在Replica服务中
 - 所有实例都能够通过健康检查（`check: /read-only`），承载Replica服务的流量。
-- 备份选择器：`[? pg_role == 'primary' || pg_role == 'offline' ]` 将主库和[离线从库](/docs/pgsql/config#离线从库)标注为备份服务器。
-- 只有当所有[普通从库](/docs/pgsql/config#只读从库)都宕机后，Replica服务才会由主库或离线从库来承载。
+- 备份选择器：`[? pg_role == 'primary' || pg_role == 'offline' ]` 将主库和 [离线从库](/docs/pgsql/config#离线从库) 标注为备份服务器。
+- 只有当所有 [普通从库](/docs/pgsql/config#只读从库) 都宕机后，Replica服务才会由主库或离线从库来承载。
 - 目的地参数 `dest: default` 意味着Replica服务的目的地也受到 [`pg_default_service_dest`](/docs/pgsql/param#pg_default_service_dest) 参数的影响
 - `dest` 默认值 `default` 会被替换为 `pg_default_service_dest` 的值，默认为 `pgbouncer`，这一点和 [Primary服务](#primary服务) 相同
 - 默认情况下 Replica 服务的目的地默认是从库上的连接池，也就是由 [`pgbouncer_port`](/docs/pgsql/param#pgbouncer_port) 指定的端口，默认为 6432
@@ -316,9 +316,9 @@ Default服务在 5438 端口上提供服务，它也绕开连接池直接访问 
 - { name: offline ,port: 5438 ,dest: postgres ,check: /replica   ,selector: "[? pg_role == `offline` || pg_offline_query ]" , backup: "[? pg_role == `replica` && !pg_offline_query]"}
 ```
 
-Offline服务将流量直接路由到专用的[离线从库](/docs/pgsql/config#离线从库)上，或者带有 [`pg_offline_query`](/docs/pgsql/param#pg_offline_query) 标记的普通[只读实例](/docs/pgsql/config#只读从库)。
+Offline服务将流量直接路由到专用的 [离线从库](/docs/pgsql/config#离线从库) 上，或者带有 [`pg_offline_query`](/docs/pgsql/param#pg_offline_query) 标记的普通 [只读实例](/docs/pgsql/config#只读从库)。
 
-- 选择器参数从集群中筛选出了两种实例：[`pg_role`](/docs/pgsql/param#pg_role) = `offline` 的离线从库，或是带有 [`pg_offline_query`](/docs/pgsql/param#pg_offline_query) = `true` 标记的普通[只读实例](/docs/pgsql/config#只读从库)
+- 选择器参数从集群中筛选出了两种实例：[`pg_role`](/docs/pgsql/param#pg_role) = `offline` 的离线从库，或是带有 [`pg_offline_query`](/docs/pgsql/param#pg_offline_query) = `true` 标记的普通 [只读实例](/docs/pgsql/config#只读从库)
 - 专用离线从库和打标记的普通从库主要的区别在于：前者默认不承载 [Replica服务](#replica服务) 的请求，避免快慢请求混在一起，而后者默认会承载。
 - 备份选择器参数从集群中筛选出了一种实例：不带 offline 标记的普通从库，这意味着如果离线实例或者带Offline标记的普通从库挂了之后，其他普通的从库可以用来承载Offline服务。
 - 健康检查 `/replica` 只会针对从库返回 200， 主库会返回错误，因此 Offline服务 永远不会将流量分发到主库实例上去，哪怕集群中只剩这一台主库。
@@ -347,7 +347,7 @@ listen pg-test-offline
 Offline服务提供受限的只读服务，通常用于两类查询：交互式查询（个人用户），慢查询长事务（分析/ETL）。
 
 Offline 服务需要额外的维护照顾：当集群发生主从切换或故障自动切换时，集群的实例角色会发生变化，而 Haproxy 的配置却不会自动发生变化。对于有多个从库的集群来说，这通常并不是一个问题。
-然而对于一主一从，从库跑Offline查询的精简小集群而言，主从切换意味着从库变成了主库（健康检查失效），原来的主库变成了从库（不在 Offline 后端列表中），于是没有实例可以承载 Offline 服务了，因此需要手动[重载服务](/docs/pgsql/admin#重载服务)以使变更生效。
+然而对于一主一从，从库跑Offline查询的精简小集群而言，主从切换意味着从库变成了主库（健康检查失效），原来的主库变成了从库（不在 Offline 后端列表中），于是没有实例可以承载 Offline 服务了，因此需要手动 [重载服务](/docs/pgsql/admin#重载服务) 以使变更生效。
 
 如果您的业务模型较为简单，您可以考虑剔除 Default 服务与 Offline 服务，使用 Primary 服务与 Replica 服务直连数据库。
 
@@ -454,7 +454,7 @@ postgres://test@10.10.10.11:6432,10.10.10.12:6432,10.10.10.13:6432/test?target_s
 
 如果您已经将 [Primary服务](#primary服务) 指向了 PostgreSQL，那么 [default服务](#default服务) 就会比较多余，可以考虑移除。
 
-如果您不需要区分个人交互式查询，分析/ETL慢查询，可以考虑从默认服务列表 [`pg_default_services`](/docs/pgsql/param#pg_default_services) 中移除[Offline服务](#offline服务)。
+如果您不需要区分个人交互式查询，分析/ETL慢查询，可以考虑从默认服务列表 [`pg_default_services`](/docs/pgsql/param#pg_default_services) 中移除 [Offline服务](#offline服务)。
 
 如果您不需要只读从库来分担在线只读流量，也可以从默认服务列表中移除 [Replica服务](#replica服务)。
 
@@ -463,7 +463,7 @@ postgres://test@10.10.10.11:6432,10.10.10.12:6432,10.10.10.13:6432/test?target_s
 
 ## 委托服务
 
-Pigsty 通过节点上的 haproxy 暴露 PostgreSQL 服务。整个集群中的所有 haproxy 实例都使用相同的[服务定义](#定义服务)进行配置。
+Pigsty 通过节点上的 haproxy 暴露 PostgreSQL 服务。整个集群中的所有 haproxy 实例都使用相同的 [服务定义](#定义服务) 进行配置。
 
 但是，你可以将 pg 服务委托给特定的节点分组（例如，专门的 haproxy 负载均衡器集群），而不是 PostgreSQL 集群成员上的 haproxy。
 

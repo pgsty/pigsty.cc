@@ -85,7 +85,7 @@ sudo usermod -aG admin <username>
 
 ## 如何确保故障转移中数据不丢失？
 
-> 使用 `crit.yml` 参数模板，设置 `pg_rpo` 为 `0`，或[配置集群](/docs/pgsql/admin#配置集群)为同步提交模式。
+> 使用 `crit.yml` 参数模板，设置 `pg_rpo` 为 `0`，或 [配置集群](/docs/pgsql/admin#配置集群) 为同步提交模式。
 
 考虑使用 [**同步备库**](/docs/pgsql/config#同步备库) 和 [**法定多数提交**](/docs/pgsql/config#法定人数提交) 来确保故障转移过程中的零数据丢失。
 

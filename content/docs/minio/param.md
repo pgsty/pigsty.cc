@@ -184,7 +184,7 @@ MinIO 服务将以此用户身份运行，该用户的家目录（默认为 `/ho
 
 参数名称： `minio_node`， 类型： `string`， 层次：`C`
 
-MinIO 节点名称模式，用于[多节点](/docs/minio/config#多机多盘)部署。
+MinIO 节点名称模式，用于 [多节点](/docs/minio/config#多机多盘) 部署。
 
 默认值为：`${minio_cluster}-${minio_seq}.pigsty`，即以实例名 + `.pigsty` 后缀作为默认的节点名。
 
@@ -200,7 +200,7 @@ MinIO 节点名称模式，用于[多节点](/docs/minio/config#多机多盘)部
 
 参数名称： `minio_data`， 类型： `path`， 层次：`C`
 
-MinIO 数据目录（们），默认值：`/data/minio`，这是[单节点](/docs/minio/config#单机单盘)部署的常见目录。
+MinIO 数据目录（们），默认值：`/data/minio`，这是 [单节点](/docs/minio/config#单机单盘) 部署的常见目录。
 
 对于 [多机多盘](/docs/minio/config#多机多盘) 与 [**单机多盘**](/docs/minio/config#单机多盘) 部署，您可以使用 `{x...y}` 的记法来指定多个磁盘。
 

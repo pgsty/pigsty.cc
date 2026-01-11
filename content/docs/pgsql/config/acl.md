@@ -75,7 +75,7 @@ pg_default_roles:
 
 ## 业务角色与授权（pg_users）
 
-业务用户通过 `pg_users` 声明（详细字段见[用户配置](/docs/pgsql/config/user)），其中 `roles` 字段控制授予的业务角色。
+业务用户通过 `pg_users` 声明（详细字段见 [用户配置](/docs/pgsql/config/user)），其中 `roles` 字段控制授予的业务角色。
 
 示例：创建只读/读写用户各一名：
 

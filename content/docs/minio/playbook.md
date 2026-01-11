@@ -67,7 +67,7 @@ MinIO 模块提供了两个内置剧本用于集群管理：
 - 移除前会暂停 3 秒，给用户提供中止操作的机会
 {{% /alert %}}
 
-移除剧本使用 **minio_remove** 角色，支持以下[可配置参数](/docs/minio/param)：
+移除剧本使用 **minio_remove** 角色，支持以下 [可配置参数](/docs/minio/param)：
 
 - [`minio_safeguard`](/docs/minio/param#minio_safeguard)：设置为 `true` 时阻止意外删除
 - [`minio_rm_data`](/docs/minio/param#minio_rm_data)：控制是否删除 MinIO 数据（默认 `true`）

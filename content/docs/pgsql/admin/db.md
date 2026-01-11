@@ -149,10 +149,10 @@ bin/pgsql-db <cls> <dbname>    # 幂等操作，可重复执行
 | `revokeconn` | 是否回收 PUBLIC 的 CONNECT 权限 | `revokeconn: true` |
 | `comment` | 备注信息 | `comment: 新的备注` |
 | `parameters` | 数据库级参数 | 见下方示例 |
-| `schemas` | 添加/删除模式（增量操作） | 见[管理模式](#管理模式) |
-| `extensions` | 添加/删除扩展（增量操作） | 见[管理扩展](#管理扩展) |
+| `schemas` | 添加/删除模式（增量操作） | 见 [管理模式](#管理模式) |
+| `extensions` | 添加/删除扩展（增量操作） | 见 [管理扩展](#管理扩展) |
 | `pgbouncer` | 是否加入连接池 | `pgbouncer: false` |
-| `pool_*` | 连接池参数 | 见[连接池配置](#连接池配置) |
+| `pool_*` | 连接池参数 | 见 [连接池配置](#连接池配置) |
 {.full-width}
 
 ### 不可修改属性

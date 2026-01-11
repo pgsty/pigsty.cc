@@ -603,7 +603,7 @@ dbuser_dba                  = pool_mode=session max_user_connections=16
 dbuser_monitor              = pool_mode=session max_user_connections=8
 ```
 
-当您[创建用户](/docs/pgsql/admin/user#创建用户)时，Pgbouncer 的用户列表定义文件将会被刷新，并通过在线重载配置的方式生效，不会影响现有的连接。
+当您 [创建用户](/docs/pgsql/admin/user#创建用户) 时，Pgbouncer 的用户列表定义文件将会被刷新，并通过在线重载配置的方式生效，不会影响现有的连接。
 
 Pgbouncer 使用和 PostgreSQL 同样的 `dbsu` 运行，默认为 `postgres` 操作系统用户，您可以使用 `pgb` 别名，使用 dbsu 访问 pgbouncer 管理功能。
 

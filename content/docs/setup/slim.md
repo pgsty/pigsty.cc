@@ -62,7 +62,7 @@ curl https://repo.pigsty.cc/get | bash
 
 你可以通过进一步的配置，关闭所有可选组件，只保留必需组件 `patroni` 和 `etcd`。
 
-因为缺少 Infra 模块的 Nginx 提供本地仓库服务，只有单机安装的时候可以进行[**离线安装**](/docs/setup/offline/)。
+因为缺少 Infra 模块的 Nginx 提供本地仓库服务，只有单机安装的时候可以进行 [**离线安装**](/docs/setup/offline/)。
 
 
 --------

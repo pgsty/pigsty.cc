@@ -16,11 +16,11 @@ categories: [参考]
 
 ## 价值主张
 
-- [**可扩展性**](/img/pigsty/ecosystem.png)： 强力[**扩展**](/docs/ref/extension)开箱即用：深度整合 **PostGIS**, **TimescaleDB**, **Citus**, **PGVector** 等 [**440**](https://pgext.cloud/zh/list) 插件与 Oracle / SQL Server 的 [**兼容内核**](/docs/pgsql/kernel)。
-- [**可靠性**](/img/pigsty/arch.png)：快速创建[**高可用**](/docs/concept/ha/)、故障自愈的 [**PostgreSQL**](/docs/pgsql) 集群，自动预置的[**时间点恢复**](/docs/concept/pitr/)、[**访问控制**](/docs/concept/sec/ac/)、自签名 [**CA**](/docs/concept/sec/ca) 与 [**SSL**](/docs/setup/security/)，确保数据坚如磐石。
+- [**可扩展性**](/img/pigsty/ecosystem.png)： 强力 [**扩展**](/docs/ref/extension) 开箱即用：深度整合 **PostGIS**, **TimescaleDB**, **Citus**, **PGVector** 等 [**440**](https://pgext.cloud/zh/list) 插件与 Oracle / SQL Server 的 [**兼容内核**](/docs/pgsql/kernel)。
+- [**可靠性**](/img/pigsty/arch.png)：快速创建 [**高可用**](/docs/concept/ha/)、故障自愈的 [**PostgreSQL**](/docs/pgsql) 集群，自动预置的 [**时间点恢复**](/docs/concept/pitr/)、[**访问控制**](/docs/concept/sec/ac/)、自签名 [**CA**](/docs/concept/sec/ca) 与 [**SSL**](/docs/setup/security/)，确保数据坚如磐石。
 - [**可观测性**](/img/pigsty/dashboard.jpg)： 基于 [**Prometheus**](/docs/infra#prometheus) & [**Grafana**](/docs/infra#grafana) 现代可观测性技术栈，提供惊艳的监控最佳实践。模块化设计，可独立使用：[**画廊**](https://github.com/pgsty/pigsty/wiki/Gallery) & [**Demo**](https://demo.pigsty.cc)。
-- [**可用性**](/img/pigsty/ha.png)：交付稳定可靠，自动路由，事务池化、读写分离的高性能数据库[**服务**](/docs/pgsql/service/#默认服务)，通过 HAProxy，Pgbouncer，VIP 提供灵活的[**接入**](/docs/pgsql/service/#接入服务)模式。
-- [**可维护性**](/img/pigsty/iac.jpg)：[**简单易用**](/docs/setup/install)，[**基础设施即代码**](/docs/pgsql/config)，[**管理SOP预案**](/docs/pgsql/admin/)，自动调参，本地软件仓库，[**Vagrant**](/docs/deploy/vagrant) [**沙箱**](/docs/deploy/sandbox) 与 [**Terraform**](/docs/deploy/terraform) 模板，不停机[**迁移**](/docs/pgsql/migration)方案。
+- [**可用性**](/img/pigsty/ha.png)：交付稳定可靠，自动路由，事务池化、读写分离的高性能数据库 [**服务**](/docs/pgsql/service/#默认服务)，通过 HAProxy，Pgbouncer，VIP 提供灵活的 [**接入**](/docs/pgsql/service/#接入服务) 模式。
+- [**可维护性**](/img/pigsty/iac.jpg)：[**简单易用**](/docs/setup/install)，[**基础设施即代码**](/docs/pgsql/config)，[**管理SOP预案**](/docs/pgsql/admin/)，自动调参，本地软件仓库，[**Vagrant**](/docs/deploy/vagrant) [**沙箱**](/docs/deploy/sandbox) 与 [**Terraform**](/docs/deploy/terraform) 模板，不停机 [**迁移**](/docs/pgsql/migration) 方案。
 - [**可组合性**](/img/pigsty/sandbox.png)：[**模块化**](/docs/concept/arch#模块)架构设计，可复用的 [**Infra**](/docs/infra)，多样的可选 [**模块**](/docs/ref/module/)：[**Redis**](/docs/redis), [**MinIO**](/docs/minio), [**ETCD**](/docs/etcd), [**FerretDB**](/docs/ferret), [**DuckDB**](https://github.com/pgsty/pigsty/tree/master/app/duckdb), [**Docker**](/docs/app/), [**Supabase**](https://github.com/pgsty/pigsty/tree/master/app/supabase)。
 
 ![](/img/pigsty/banner.png)
@@ -44,9 +44,9 @@ Pigsty 是一个更好的本地开源 RDS for PostgreSQL 替代：
 
 PostgreSQL 整合了生态中的工具与最佳实践：
 
-- 开箱即用的 [PostgreSQL](https://www.postgresql.org/) 发行版，深度整合地理、时序、分布式、图、向量、搜索、AI等 440 余个[扩展插件](/docs/ref/extension)！
+- 开箱即用的 [PostgreSQL](https://www.postgresql.org/) 发行版，深度整合地理、时序、分布式、图、向量、搜索、AI等 440 余个 [扩展插件](/docs/ref/extension)！
 - 运行于裸操作系统之上，无需容器支持，支持主流操作系统： EL 8/9/10, Ubuntu 22.04/24.04 以及 Debian 12/13。
-- 基于 [patroni](https://patroni.readthedocs.io/en/latest/), [haproxy](http://www.haproxy.org/), 与[etcd](https://etcd.io/)，打造故障自愈的高可用架构：硬件故障自动切换，流量无缝衔接。
+- 基于 [patroni](https://patroni.readthedocs.io/en/latest/), [haproxy](http://www.haproxy.org/), 与 [etcd](https://etcd.io/)，打造故障自愈的高可用架构：硬件故障自动切换，流量无缝衔接。
 - 基于 [pgBackRest](https://pgbackrest.org/) 与可选的 [MinIO](https://min.io/) 集群提供开箱即用的 PITR 时间点恢复，为软件缺陷与人为删库兜底。
 - 基于 [Ansible](https://www.ansible.com/) 提供声明式的 API 对复杂度进行抽象，以 **Database-as-Code** 的方式极大简化了日常运维管理操作。
 - Pigsty用途广泛，可用作完整应用运行时，开发演示数据/可视化应用，大量使用 PG 的软件可用 [Docker](https://www.docker.com/) 模板一键拉起。
@@ -82,7 +82,7 @@ Pigsty 可以一键从裸机开始拉起整套环境，触达软件交付的最�
 
 PostgreSQL 的灵魂在于其丰富的 [**扩展生态**](/blog/pg/pg-eat-db-world)，而 Pigsty 独一无二地深度整合了 PostgreSQL 生态中的 [**440+ 扩展**](https://pgext.cloud/zh/list)，为您提供开箱即用的超融合多模态数据库！
 
-插件间可以产生[**协同效应**](https://pigsty.cc/zh/blog/pg/pg-eat-db-world#极致可扩展性的魔法)，产生 1+1 远大于 2 的效果。
+插件间可以产生 [**协同效应**](https://pigsty.cc/zh/blog/pg/pg-eat-db-world#极致可扩展性的魔法)，产生 1+1 远大于 2 的效果。
 您可以使用 [**PostGIS**](https://postgis.net/) 处理地理空间数据，使用 [**TimescaleDB**](https://www.timescale.com/) 分析时序/事件流数据，并使用 [**Citus**](https://www.citusdata.com/) 将其原地升级为分布式地理时空数据库；
 您可以用 [**PGVector**](https://github.com/pgvector/pgvector) 存储并搜索AI嵌入，用 [**ParadeDB**](https://www.paradedb.com/) 实现 ES级全文检索，并同时使用精准的 SQL，全文检索，与模糊向量进行混合检索。
 您还可以通过 [**Hydra**](https://www.hydra.so/)、 [**duckdb_fdw**](https://github.com/alitrack/duckdb_fdw)、[**pg_analytics**](https://blog.paradedb.com/pages/introducing_analytics)、[**pg_duckdb**](https://github.com/duckdb/pg_duckdb) 等分析扩展，实现专用 OLAP 数据库/数据湖仓的分析表现。
@@ -232,6 +232,6 @@ Pigsty 紧跟 PostgreSQL 上游主干，不会有供应商锁定，不会有恼�
 
 Pigsty 本身旨在用数据库自动驾驶软件，替代大量无趣的人肉数据库运维工作，但再好的软件也没法解决所有的问题。
 总会有一些的冷门低频疑难杂症需要专家介入处理。这也是为什么我们也提供专业的 [**订阅服务**](/docs/about/service/)，来为有需要的企业级用户使用 PostgreSQL 提供兜底。
-几万块的订阅咨询费不到顶尖 DBA 每年工资的几十分之一，让您彻底免除后顾之忧，把成本真正花在刀刃上。对于社区用户，我们亦[**用爱发电**](/docs/about/sponsor/)，提供免费的支持与日常答疑。
+几万块的订阅咨询费不到顶尖 DBA 每年工资的几十分之一，让您彻底免除后顾之忧，把成本真正花在刀刃上。对于社区用户，我们亦 [**用爱发电**](/docs/about/sponsor/)，提供免费的支持与日常答疑。
 
 [![pigsty-price.jpg](/img/pigsty/price.jpg)](/docs/about/cost/)

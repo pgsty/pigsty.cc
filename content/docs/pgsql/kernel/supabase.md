@@ -39,7 +39,7 @@ Pigsty 默认提供的 [`supa.yml`](https://github.com/Vonng/pigsty/blob/main/co
 ./deploy.yml         # 安装 Pigsty，拉起 PGSQL 与 MINIO！
 ```
 
-请在部署 Supabase 前，根据您的实际情况，修改 `pigsty.yml` 配置文件中[关于 Supabase 的参数](#配置细节)（主要是密码！）
+请在部署 Supabase 前，根据您的实际情况，修改 `pigsty.yml` 配置文件中 [关于 Supabase 的参数](#配置细节)（主要是密码！）
 
 然后，运行 [`supabase.yml`](https://github.com/Vonng/pigsty/blob/main/supabase.yml) 完成剩余的工作，拉起 Supabase 容器
 

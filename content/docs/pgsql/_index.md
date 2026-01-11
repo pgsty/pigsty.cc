@@ -80,7 +80,7 @@ sidebar_root_for: self
 
 ## 剧本
 
-> 使用幂等的[剧本](/docs/pgsql/playbook)，将您的描述变为现实。
+> 使用幂等的 [剧本](/docs/pgsql/playbook)，将您的描述变为现实。
 
 - [`pgsql.yml`](/docs/pgsql/playbook#pgsqlyml) ：初始化PostgreSQL集群或添加新的从库。
 - [`pgsql-rm.yml`](/docs/pgsql/playbook#pgsql-rmyml) ：移除PostgreSQL集群，或移除某个实例

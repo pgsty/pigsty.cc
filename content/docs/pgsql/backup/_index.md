@@ -22,7 +22,7 @@ Pigsty 使用 [pgBackRest](https://pgbackrest.org/) 管理 PostgreSQL 备份，�
 
 {{% alert color="warning" title="免责声明" %}}
 
-> Pigsty 尽最大努力提供可靠的 PITR 解决方案，但我们不对 PITR 操作导致的数据丢失承担任何责任，使用需自担风险。如需专业支持，请考虑我们的[专业服务](/docs/about/service)。
+> Pigsty 尽最大努力提供可靠的 PITR 解决方案，但我们不对 PITR 操作导致的数据丢失承担任何责任，使用需自担风险。如需专业支持，请考虑我们的 [专业服务](/docs/about/service)。
 
 {{% /alert %}}
 

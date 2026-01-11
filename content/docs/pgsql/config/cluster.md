@@ -45,7 +45,7 @@ pg-test:
 bin/pgsql-add pg-test
 ```
 
-Demo展示，开发测试，承载临时需求，进行无关紧要的计算分析任务时，使用单一数据库实例可能并没有太大问题。但这样的单机集群没有[高可用](/docs/concept/ha)，当出现硬件故障时，您需要使用 [PITR](/docs/concept/pitr) 或其他恢复手段来确保集群的 RTO / RPO。为此，您可以考虑为集群添加若干个[只读从库](#只读从库)
+Demo展示，开发测试，承载临时需求，进行无关紧要的计算分析任务时，使用单一数据库实例可能并没有太大问题。但这样的单机集群没有 [高可用](/docs/concept/ha)，当出现硬件故障时，您需要使用 [PITR](/docs/concept/pitr) 或其他恢复手段来确保集群的 RTO / RPO。为此，您可以考虑为集群添加若干个 [只读从库](#只读从库)
 
 
 ----------------
@@ -63,7 +63,7 @@ pg-test:
     pg_cluster: pg-test
 ```
 
-如果整个集群不存在，您可以直接[创建](/docs/pgsql/admin#创建集群)这个完整的集群。 如果集群主库已经初始化好了，那么您可以向现有集群[添加](/docs/pgsql/admin#添加实例)一个从库：
+如果整个集群不存在，您可以直接 [创建](/docs/pgsql/admin#创建集群) 这个完整的集群。 如果集群主库已经初始化好了，那么您可以向现有集群 [添加](/docs/pgsql/admin#添加实例) 一个从库：
 
 ```bash
 bin/pgsql-add pg-test               # 一次性初始化整个集群
@@ -80,7 +80,7 @@ bin/pgsql-add pg-test 10.10.10.12   # 添加从库到现有的集群
 
 离线实例（Offline）是专门用于服务慢查询、ETL、OLAP流量和交互式查询等的专用只读从库。慢查询/长事务对在线业务的性能与稳定性有不利影响，因此最好将它们与在线业务隔离开来。
 
-要添加离线实例，请为其分配一个新实例，并将[`pg_role`](/docs/pgsql/param#pg_role)设置为`offline`。
+要添加离线实例，请为其分配一个新实例，并将 [`pg_role`](/docs/pgsql/param#pg_role) 设置为`offline`。
 
 ```yaml
 pg-test:
@@ -94,7 +94,7 @@ pg-test:
 
 专用离线实例的工作方式与常见的从库实例类似，但它在 `pg-test-replica` 服务中用作备份服务器。 也就是说，只有当所有`replica`实例都宕机时，离线和主实例才会提供此项只读服务。
 
-许多情况下，数据库资源有限，单独使用一台服务器作为离线实例是不经济的做法。作为折中，您可以选择一台现有的从库实例，打上 [`pg_offline_query`](/docs/pgsql/param#pg_offline_query) 标记，将其标记为一台可以承载“离线查询”的实例。在这种情况下，这台只读从库会同时承担在线只读请求与离线类查询。您可以使用 [`pg_default_hba_rules`](/docs/pgsql/param#pg_default_hba_rules)和[`pg_hba_rules`](/docs/pgsql/param#pg_hba_rules) 对离线实例进行额外的访问控制。
+许多情况下，数据库资源有限，单独使用一台服务器作为离线实例是不经济的做法。作为折中，您可以选择一台现有的从库实例，打上 [`pg_offline_query`](/docs/pgsql/param#pg_offline_query) 标记，将其标记为一台可以承载"离线查询"的实例。在这种情况下，这台只读从库会同时承担在线只读请求与离线类查询。您可以使用 [`pg_default_hba_rules`](/docs/pgsql/param#pg_default_hba_rules) 和 [`pg_hba_rules`](/docs/pgsql/param#pg_hba_rules) 对离线实例进行额外的访问控制。
 
 
 
@@ -105,9 +105,9 @@ pg-test:
 
 当启用同步备库（Sync Standby）时，PostgreSQL 将选择一个从库作为**同步备库**，其他所有从库作为**候选者**。 主数据库会等待备库实例刷新到磁盘，然后才确认提交，备库实例始终拥有最新的数据，没有复制延迟，主从切换至同步备库不会有数据丢失。
 
-PostgreSQL 默认使用异步流复制，这可能会有小的复制延迟（10KB / 10ms 数量级）。当主库失败时，可能会有一个小的数据丢失窗口（可以使用[`pg_rpo`](/docs/pgsql/param#pg_rpo)来控制），但对于大多数场景来说，这是可以接受的。
+PostgreSQL 默认使用异步流复制，这可能会有小的复制延迟（10KB / 10ms 数量级）。当主库失败时，可能会有一个小的数据丢失窗口（可以使用 [`pg_rpo`](/docs/pgsql/param#pg_rpo) 来控制），但对于大多数场景来说，这是可以接受的。
 
-但在某些关键场景中（例如，金融交易），数据丢失是完全不可接受的，或者，读取复制延迟是不可接受的。在这种情况下，您可以使用同步提交来解决这个问题。 要启用同步备库模式，您可以简单地使用[`pg_conf`](/docs/pgsql/param#pg_conf)中的`crit.yml`模板。
+但在某些关键场景中（例如，金融交易），数据丢失是完全不可接受的，或者，读取复制延迟是不可接受的。在这种情况下，您可以使用同步提交来解决这个问题。 要启用同步备库模式，您可以简单地使用 [`pg_conf`](/docs/pgsql/param#pg_conf) 中的`crit.yml`模板。
 
 ```yaml
 pg-test:
@@ -120,7 +120,7 @@ pg-test:
     pg_conf: crit.yml   # <--- 使用 crit 模板
 ```
 
-要在现有集群上启用同步备库，请[配置集群](/docs/pgsql/admin#配置集群)并启用 `synchronous_mode`：
+要在现有集群上启用同步备库，请 [配置集群](/docs/pgsql/admin#配置集群) 并启用 `synchronous_mode`：
 
 ```bash
 $ pg edit-config pg-test    # 在管理员节点以管理员用户身份运行
@@ -238,7 +238,7 @@ pg-test2:
 
 而 `pg-test2` 集群的主节点 `pg-test2-1` 将是 `pg-test` 的下游从库，并在`pg-test2`集群中充当备份集群领导者（**Standby Leader**）。
 
-只需确保备份集群的主节点上配置了[`pg_upstream`](/docs/pgsql/param#pg_upstream)参数，以便自动从原始上游拉取备份。
+只需确保备份集群的主节点上配置了 [`pg_upstream`](/docs/pgsql/param#pg_upstream) 参数，以便自动从原始上游拉取备份。
 
 ```bash
 bin/pgsql-add pg-test     # 创建原始集群
@@ -247,7 +247,7 @@ bin/pgsql-add pg-test2    # 创建备份集群
 
 <details><summary>示例：更改复制上游</summary>
 
-如有必要（例如，上游发生主从切换/故障转移），您可以通过[配置集群](/docs/pgsql/admin#配置集群)更改备份集群的复制上游。
+如有必要（例如，上游发生主从切换/故障转移），您可以通过 [配置集群](/docs/pgsql/admin#配置集群) 更改备份集群的复制上游。
 
 要这样做，只需将`standby_cluster.host`更改为新的上游IP地址并应用。
 
@@ -272,7 +272,7 @@ $ pg edit-config pg-test2
 
 你可以随时将备份集群提升为独立集群，这样该集群就可以独立承载写入请求，并与原集群分叉。
 
-为此，你必须[配置](/docs/pgsql/admin#配置集群)该集群并完全擦除`standby_cluster`部分，然后应用。
+为此，你必须 [配置](/docs/pgsql/admin#配置集群) 该集群并完全擦除`standby_cluster`部分，然后应用。
 
 ```bash
 $ pg edit-config pg-test2
@@ -317,7 +317,7 @@ pg-test:
 
 ## 延迟集群
 
-延迟集群（Delayed Cluster）是一种特殊类型的[备份集群](#备份集群)，用于尽快恢复“意外删除”的数据。
+延迟集群（Delayed Cluster）是一种特殊类型的 [备份集群](#备份集群)，用于尽快恢复"意外删除"的数据。
 
 例如，如果你希望有一个名为 `pg-testdelay` 的集群，其数据内容与一小时前的 `pg-test` 集群相同：
 
@@ -336,7 +336,7 @@ pg-testdelay:
   vars: { pg_cluster: pg-testdelay }
 ```
 
-你还可以在现有的[备份集群](#备份集群)上[配置](/docs/pgsql/admin#配置集群)一个“复制延迟”。
+你还可以在现有的 [备份集群](#备份集群) 上 [配置](/docs/pgsql/admin#配置集群) 一个"复制延迟"。
 
 ```bash
 $ pg edit-config pg-testdelay

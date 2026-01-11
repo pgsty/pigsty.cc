@@ -58,7 +58,7 @@ pg-backup full    # 执行新的全量备份
 - [`xid`](https://www.postgresql.org/docs/current/runtime-config-wal.html#RECOVERY-TARGET-XID)：恢复到特定的事务 ID（TXID/XID）
 - [`lsn`](https://www.postgresql.org/docs/current/runtime-config-wal.html#RECOVERY-TARGET-LSN)：恢复到特定的 LSN（日志序列号）点
 
-如果指定了上述任何参数，恢复[`类型`](https://www.postgresql.org/docs/current/runtime-config-wal.html#RECOVERY-TARGET-TYPE)会相应设置，
+如果指定了上述任何参数，恢复 [`类型`](https://www.postgresql.org/docs/current/runtime-config-wal.html#RECOVERY-TARGET-TYPE) 会相应设置，
 否则将设置为 `latest`（WAL 归档流的末尾）。
 特殊的 `immediate` 类型可用于指示 pgbackrest 通过在第一个一致点停止来最小化恢复时间。
 

@@ -59,7 +59,7 @@ make reload-daily     # 下载本年度最新的 isd.daily 数据并导入数据
 
 **加载解析好的 CSV 数据集**
 
-ISD Daily 数据集有一些脏数据与[重复数据](https://github.com/Vonng/isd/blob/master/doc/isd-daily-caveat.md)，如果你不想手工解析处理清洗，这里也提供了一份解析好的稳定CSV数据集。
+ISD Daily 数据集有一些脏数据与 [重复数据](https://github.com/Vonng/isd/blob/master/doc/isd-daily-caveat.md)，如果你不想手工解析处理清洗，这里也提供了一份解析好的稳定CSV数据集。
 
 该数据集包含了截止到 2023-06-24 的 `isd.daily` 数据，你可以直接下载并导入 PostgreSQL 中，不需要 Parser，
 

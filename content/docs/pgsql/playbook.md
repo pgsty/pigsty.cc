@@ -189,7 +189,7 @@ bin/pgsql-hba pg-test             # 重载 pg-test 的 pg/pgb HBA 规则
 **注意事项**
 
 * 单独针对某一集群从库执行此剧本时，用户应当确保 **集群主库已经完成初始化！**
-* 扩容完成后，您需要[重载服务](/docs/pgsql/admin#重载服务)与[重载HBA](/docs/pgsql/admin#重载hba)，包装脚本 `bin/pgsql-add` 会自动完成这些任务。
+* 扩容完成后，您需要 [重载服务](/docs/pgsql/admin#重载服务) 与 [重载HBA](/docs/pgsql/admin#重载hba)，包装脚本 `bin/pgsql-add` 会自动完成这些任务。
 
 集群扩容时，如果 Patroni 拉起从库的时间过长，Ansible 剧本可能会因为超时而中止：
 * 典型错误信息为：`wait for postgres/patroni replica` 任务执行很长时间后中止
