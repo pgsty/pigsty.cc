@@ -136,3 +136,28 @@ Nginx 相关的管理任务：
 ./infra.yml -t vlogs_config,vlogs_launch          # 更新 VictoriaLogs 配置
 ./infra.yml -t grafana_plugin                     # 下载 Grafana 插件
 ```
+
+
+----------------
+
+## 管理 Grafana 密码
+
+Grafana 有两个密码参数：[**`grafana_admin_password`**](/docs/infra/param#grafana_admin_password)（默认 `pigsty`）和 [**`grafana_view_password`**](/docs/infra/param#grafana_view_password)（默认 `DBUser.Viewer`）：
+
+| 参数                       | 渲染到的配置文件                                           |
+|:-------------------------|:---------------------------------------------------|
+| `grafana_admin_password` | `/etc/grafana/grafana.ini`，`/infra/env/pigsty`     |
+| `grafana_view_password`  | `/etc/grafana/provisioning/datasources/pigsty.yml` |
+{.full-width}
+
+这两个密码一旦初始化之后，就只能通过 grafana 界面进行修改。
+
+Pigsty 会在初始化 Grafana 监控面板，注册 Grafana 数据源的时候，使用 [**`grafana_admin_password`**](/docs/infra/param#grafana_admin_password) 。
+所以如果你通过 Grafana GUI 修改了这个密码，请相应调整配置文件里面的配置。另外，您可以使用以下命令渲染新的密码到环境变量中。
+
+```bash
+./infra.yml -t env_var            # 重新渲染环境变量
+```
+
+[**`grafana_view_password`**](/docs/infra/param#grafana_view_password) 是 Grafana 中默认的 Meta PostgreSQL 数据源用户 `dbuser_view` 的密码。
+如果你修改了这个密码，请在 Grafana 数据源管理界面中同步修改密码。

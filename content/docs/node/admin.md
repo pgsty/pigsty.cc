@@ -34,6 +34,11 @@ bin/node-add node-test                # 初始化节点集群 'node-test'
 bin/node-add 10.10.10.10              # 初始化节点 '10.10.10.10'
 ```
 
+**示例：将 PG 集群 `pg-test` 的三个节点纳入 Pigsty 管理**
+
+{{< asciinema file="demo/node-add.cast" markers="4:执行" speed="1.2" autoplay="true" loop="true" >}}
+
+
 
 ----------------
 
@@ -49,6 +54,10 @@ bin/node-rm 10.10.10.10              # 移除节点 '10.10.10.10'
 ```
 
 您也可以选择一次性移除一个集群，或使用通配符匹配配置清单中要从 Pigsty 移除的节点。
+
+{{< asciinema file="demo/node-rm.cast" speed="1.2" autoplay="true" loop="true" >}}
+
+
 
 
 ----------------
@@ -135,4 +144,17 @@ proxy:
 ./node.yml -t node_ntp       # 配置节点 NTP 服务器/客户端
 ./node.yml -t node_crontab   # 添加/覆盖 crontab 定时任务
 ./node.yml -t node_vip       # 为节点集群设置可选的 L2 VIP
+```
+
+
+----------------
+
+## 管理 HAProxy 密码
+
+[`haproxy_admin_password`](param/#haproxy_admin_password)（默认 `pigsty`）用于 HAProxy 管理界面认证，渲染到 `/etc/haproxy/haproxy.cfg` 中。
+
+修改密码后，使用以下命令刷新配置（热重载，不中断连接）：
+
+```bash
+./node.yml -l <目标节点> -t haproxy_config,haproxy_reload
 ```

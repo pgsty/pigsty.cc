@@ -277,3 +277,31 @@ mount -a
 # 5. 指示 MinIO 执行恢复动作
 mc admin heal
 ```
+
+
+--------
+
+## 管理 MinIO 密码
+
+[**`minio_secret_key`**](/docs/minio/param#minio_secret_key)（默认 `S3User.MinIO`）是 MinIO root 用户密码，渲染到 `/etc/default/minio` 中。
+
+修改密码后，使用以下命令刷新配置并重启服务（需同时重启整个集群）：
+
+```bash
+./minio.yml -l minio -t minio_config,minio_launch,minio_alias -f 30  # 重新渲染配置文件，写入 Alias
+```
+
+如果要修改 MinIO 普通用户的密码，例如 `pgbackrest` 用户的密码，请在可以访问 MinIO 的节点上（比如管理节点的管理用户）：
+
+```bash
+set +o history
+mc admin user passwd sss pgbackrest <YOUR_NEW_PASSWORD>
+set -o history
+```
+
+然后，你还需要修改引用该用户密码的所有配置，例如，当你的 pgBackRest 使用 MinIO 作为备份仓库时（[**`pgbackrest_method`**](/docs/pgsql/param#pgbackrest_method) 设置为 `minio`），需要更新 pgBackRest 的 MinIO 访问密钥密码：
+
+```bash
+./pgsql.yml -t pgbackrest_config
+```
+

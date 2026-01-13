@@ -22,17 +22,17 @@ categories: [教程]
 
 Pigsty 是一个开源项目，**默认密码众所周知**。如果您的部署面向互联网或者办公网开放，请务必修改所有默认密码！
 
-|             模块             | 参数                                                                     | 默认值                 |
-|:--------------------------:|------------------------------------------------------------------------|---------------------|
-| [**`INFRA`**](/docs/infra) | [`grafana_admin_password`](/docs/infra/param#grafana_admin_password)   | `pigsty`            |
-| [**`INFRA`**](/docs/infra) | [`grafana_view_password`](/docs/infra/param#grafana_view_password)     | `DBUser.Viewer`     |
-| [**`PGSQL`**](/docs/pgsql) | [`pg_admin_password`](/docs/pgsql/param#pg_admin_password)             | `DBUser.DBA`        |
-| [**`PGSQL`**](/docs/pgsql) | [`pg_monitor_password`](/docs/pgsql/param#pg_monitor_password)         | `DBUser.Monitor`    |
-| [**`PGSQL`**](/docs/pgsql) | [`pg_replication_password`](/docs/pgsql/param#pg_replication_password) | `DBUser.Replicator` |
-| [**`PGSQL`**](/docs/pgsql) | [`patroni_password`](/docs/pgsql/param#patroni_password)               | `Patroni.API`       |
-|  [**`NODE`**](/docs/node)  | [`haproxy_admin_password`](/docs/node/param#haproxy_admin_password)    | `pigsty`            |
-| [**`MINIO`**](/docs/minio) | [`minio_secret_key`](/docs/minio/param#minio_secret_key)               | `S3User.MinIO`      |
-|  [**`ETCD`**](/docs/etcd)  | [`etcd_root_password`](/docs/etcd/param#etcd_root_password)            | `Etcd.Root`         |
+|             模块             | 参数                                                                         | 默认值                 |
+|:--------------------------:|----------------------------------------------------------------------------|---------------------|
+| [**`INFRA`**](/docs/infra) | [**`grafana_admin_password`**](/docs/infra/param#grafana_admin_password)   | `pigsty`            |
+| [**`INFRA`**](/docs/infra) | [**`grafana_view_password`**](/docs/infra/param#grafana_view_password)     | `DBUser.Viewer`     |
+| [**`PGSQL`**](/docs/pgsql) | [**`pg_admin_password`**](/docs/pgsql/param#pg_admin_password)             | `DBUser.DBA`        |
+| [**`PGSQL`**](/docs/pgsql) | [**`pg_monitor_password`**](/docs/pgsql/param#pg_monitor_password)         | `DBUser.Monitor`    |
+| [**`PGSQL`**](/docs/pgsql) | [**`pg_replication_password`**](/docs/pgsql/param#pg_replication_password) | `DBUser.Replicator` |
+| [**`PGSQL`**](/docs/pgsql) | [**`patroni_password`**](/docs/pgsql/param#patroni_password)               | `Patroni.API`       |
+|  [**`NODE`**](/docs/node)  | [**`haproxy_admin_password`**](/docs/node/param#haproxy_admin_password)    | `pigsty`            |
+| [**`MINIO`**](/docs/minio) | [**`minio_secret_key`**](/docs/minio/param#minio_secret_key)               | `S3User.MinIO`      |
+|  [**`ETCD`**](/docs/etcd)  | [**`etcd_root_password`**](/docs/etcd/param#etcd_root_password)            | `Etcd.Root`         |
 {.full-width}
 
 为了避免手动修改密码的繁琐，Pigsty 的 **配置向导** 提供了自动生成随机强密码的功能，使用 `configure` 的 `-g` 参数即可。
@@ -68,6 +68,13 @@ configure pigsty v4.0.0 begin
 proceed with ./deploy.yml
 ```
 
+我们建议在规划部署之前，就修改所有默认密码，确保部署完成后系统即处于安全状态。事后修改密码是一个繁琐的工作：
+
+- [**管理 PostgreSQL 默认用户密码**](/docs/pgsql/admin/user/#管理默认用户密码)
+- [**管理 Grafana 密码**](/docs/infra/admin/sop#管理-grafana-密码)
+- [**管理 Haproxy 密码**](/docs/node/admin#管理-haproxy-密码)
+- [**管理 Etcd 密码**](/docs/etcd/admin#管理-etcd-密码)
+- [**管理 MinIO 密码**](/docs/minio/admin#管理-minio-密码)
 
 ----------------
 

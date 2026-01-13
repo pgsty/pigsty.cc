@@ -119,7 +119,7 @@ e endpoint status                # 查看端点状态
 
 Pigsty v4.0 默认启用 etcd 的 RBAC（基于角色的访问控制）认证机制。在集群初始化时，`etcd_auth` 任务会自动创建 root 用户并启用认证。
 
-**root 用户密码**由 [`etcd_root_password`](param#etcd_root_password) 参数指定，默认值为 `Etcd.Root`。密码存储在 `/etc/etcd/etcd.pass` 文件中，权限为 `0640`（root 所有，etcd 组可读）。
+**root 用户密码**由 [`etcd_root_password`](/docs/etcd/param#etcd_root_password) 参数指定，默认值为 `Etcd.Root`。密码存储在 `/etc/etcd/etcd.pass` 文件中，权限为 `0640`（root 所有，etcd 组可读）。
 
 **在生产环境中，强烈建议修改默认密码**：
 
@@ -143,11 +143,6 @@ export ETCDCTL_USER="root:$(cat /etc/etcd/etcd.pass)"
 # 方式二：在命令行中指定
 etcdctl --user root:YourSecurePassword member list
 ```
-
-**Patroni 与 etcd 认证**：
-
-PostgreSQL 高可用组件 Patroni 通过 [`pg_etcd_password`](/docs/pgsql/param#pg_etcd_password) 参数配置连接 etcd 的密码。如果该参数为空，Patroni 会使用集群名称作为密码（不推荐）。建议在生产环境中为每个 PG 集群配置独立的 etcd 密码。
-
 
 
 
@@ -439,3 +434,22 @@ bin/etcd-rm                   # 移除整个 etcd 集群
 - 优雅地从集群中移除成员
 - 清理数据和配置文件
 
+
+--------
+
+## 管理 Etcd 密码
+
+[**`etcd_root_password`**](/docs/etcd/param#etcd_root_password) 参数定义了 etcd 集群的 root 用户密码。
+
+要修改此密码，你需要访问到 etcd 端点，例如在 [**INFRA节点**](/docs/infra/node#infra节点) 与 [**ETCD节点**](/docs/infra/node#etcd节点) 上使用 [**管理用户**](/docs/deploy/admin) 执行：
+
+```bash
+e user passwd root  # 修改 etcd root 用户密码
+```
+
+然后你应该刷新所有对 etcd root 密码的引用，包括 INFRA 节点上的 Patroni 客户端配置与 etcdctl 客户端环境变量：
+
+```bash
+./infra.yml -t env_patroni    # 刷新 /infra/conf/patronictl.yml 对 etcd root 密码的引用
+./etcd.y -t etcd_config       # 刷新 /etc/etcd/etcd.pass
+```
