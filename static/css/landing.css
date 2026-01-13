@@ -2502,11 +2502,12 @@ body.landing-page {
 /* ============================================
    Dashboard Gallery Section
    Slow-scrolling showcase with lazy loading
+   Images are 1920x2112 (ratio ~10:11, portrait)
    ============================================ */
 
 .dashboard-gallery-section {
   padding: 48px 0;
-  background: linear-gradient(180deg, var(--pigsty-darker) 0%, var(--pigsty-dark) 100%);
+  background: var(--pigsty-darker);
   overflow: hidden;
 }
 
@@ -2516,14 +2517,14 @@ body.landing-page {
   overflow: hidden;
 }
 
-/* Fade edges */
+/* Fade edges - consistent with extensions-marquee and logos-marquee */
 .dashboard-gallery-marquee::before,
 .dashboard-gallery-marquee::after {
   content: '';
   position: absolute;
   top: 0;
   bottom: 0;
-  width: 120px;
+  width: 100px;
   z-index: 10;
   pointer-events: none;
 }
@@ -2535,15 +2536,15 @@ body.landing-page {
 
 .dashboard-gallery-marquee::after {
   right: 0;
-  background: linear-gradient(90deg, transparent 0%, var(--pigsty-dark) 100%);
+  background: linear-gradient(90deg, transparent 0%, var(--pigsty-darker) 100%);
 }
 
 .dashboard-gallery-track {
   display: flex;
-  gap: 24px;
+  gap: 20px;
   width: max-content;
   will-change: transform;
-  animation: dashboard-scroll 120s linear infinite;
+  animation: dashboard-scroll 180s linear infinite;
 }
 
 .dashboard-gallery-track:hover {
@@ -2561,12 +2562,11 @@ body.landing-page {
 
 .dashboard-gallery-slide {
   flex-shrink: 0;
-  width: 560px;
-  height: 350px;
-  border-radius: 16px;
+  /* Height 600px, width calculated by aspect ratio 1920:2112 */
+  height: 600px;
+  aspect-ratio: 1920 / 2112;
+  border-radius: 12px;
   overflow: hidden;
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(255, 255, 255, 0.06);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
   transition: all 0.4s ease;
   position: relative;
@@ -2598,14 +2598,13 @@ body.landing-page {
 
 .dashboard-gallery-slide:hover {
   transform: scale(1.02) translateY(-4px);
-  border-color: rgba(59, 130, 246, 0.3);
   box-shadow: 0 16px 48px rgba(0, 0, 0, 0.4), 0 0 32px rgba(59, 130, 246, 0.1);
 }
 
 .dashboard-gallery-slide img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: fill;
   opacity: 0;
   transition: opacity 0.5s ease;
 }
@@ -2621,17 +2620,17 @@ body.landing-page {
   }
 
   .dashboard-gallery-slide {
-    width: 480px;
-    height: 300px;
+    height: 480px;
   }
 
   .dashboard-gallery-track {
-    gap: 20px;
+    gap: 16px;
+    animation-duration: 150s;
   }
 
   .dashboard-gallery-marquee::before,
   .dashboard-gallery-marquee::after {
-    width: 80px;
+    width: 60px;
   }
 }
 
@@ -2641,14 +2640,13 @@ body.landing-page {
   }
 
   .dashboard-gallery-slide {
-    width: 320px;
-    height: 200px;
-    border-radius: 12px;
+    height: 360px;
+    border-radius: 10px;
   }
 
   .dashboard-gallery-track {
-    gap: 16px;
-    animation-duration: 80s;
+    gap: 12px;
+    animation-duration: 120s;
   }
 
   .dashboard-gallery-marquee::before,

@@ -40,7 +40,7 @@ curl https://repo.pigsty.cc/get | bash
 ./slim.yml
 ```
 
-{{< asciinema file="demo/install-slim.cast" markers="3:安装,13:配置,22:部署" theme="solarized-light" speed="1.3" autoplay="true" loop="true" >}}
+{{< asciinema file="demo/install-slim.cast" markers="3:安装,13:配置,22:部署" speed="1.3" autoplay="true" loop="true" >}}
 
 
 --------

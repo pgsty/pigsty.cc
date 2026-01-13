@@ -35,7 +35,7 @@ vi pigsty.yml              # 编辑域名、密码、密钥...
 ![](https://doc.pgsty.com/img/docs/supabase-login.png)
 
 
-{{< asciinema file="demo/supabase.cast" markers="0:检查环境,11:安装,43:配置,307:Docker,321:域名,340:App,350:检查" theme="solarized-light" speed="1.3" autoplay="true" loop="true" >}}
+{{< asciinema file="demo/supabase.cast" markers="0:检查环境,11:安装,43:配置,307:Docker,321:域名,340:App,350:检查" speed="1.3" autoplay="true" loop="true" >}}
 
 
 ------

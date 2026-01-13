@@ -40,31 +40,43 @@
 {{- $height := .Get "height" | default "auto" -}}
 {{- $id := printf "infographic-%s" (md5 .Inner) -}}
 
-{{- /* Load Infographic JS only once per page */ -}}
-{{- if not (.Page.Scratch.Get "infographic-loaded") -}}
-  {{- .Page.Scratch.Set "infographic-loaded" true -}}
-<script src="/js/infographic.min.js"></script>
-{{- end -}}
-
 <div id="{{ $id }}" class="infographic-container" style="width: {{ $width }}; height: {{ $height }}; margin: 1em 0;"></div>
 
 <script>
 (function() {
-  var dom = document.getElementById('{{ $id }}');
-  if (!dom) return;
+  var containerId = '{{ $id }}';
+  var syntax = {{ .Inner | strings.TrimSpace | safeJS | printf "`%s`" }};
 
-  var syntax = {{ .Inner | safeJS | printf "`%s`" }};
+  function renderInfographic() {
+    var dom = document.getElementById(containerId);
+    if (!dom) { console.error('Infographic: container not found:', containerId); return; }
+    try {
+      var ig = new AntVInfographic.Infographic({
+        container: '#' + containerId,
+        width: '{{ $width }}',
+        height: '{{ $height }}',
+      });
+      ig.render(syntax);
+    } catch (e) {
+      console.error('Infographic render error:', e);
+      dom.innerHTML = '<pre style="color: red;">Infographic Error: ' + e.message + '</pre>';
+    }
+  }
 
-  try {
-    var ig = new AntVInfographic.Infographic({
-      container: dom,
-      width: '{{ $width }}',
-      height: '{{ $height }}',
-    });
-    ig.render(syntax);
-  } catch (e) {
-    console.error('Infographic render error:', e);
-    dom.innerHTML = '<pre style="color: red;">Infographic Error: ' + e.message + '</pre>';
+  // Load library dynamically if not already loaded
+  if (typeof AntVInfographic !== 'undefined') {
+    renderInfographic();
+  } else if (!window._infographicLoading) {
+    window._infographicLoading = true;
+    window._infographicCallbacks = [renderInfographic];
+    var script = document.createElement('script');
+    script.src = '/js/infographic.min.js';
+    script.onload = function() {
+      window._infographicCallbacks.forEach(function(cb) { cb(); });
+    };
+    document.head.appendChild(script);
+  } else {
+    window._infographicCallbacks.push(renderInfographic);
   }
 })();
 </script>

@@ -49,7 +49,7 @@ cd ~/pigsty      # 进入 Pigsty 目录
 
 **视频样例：在线单机安装（Debian 13, x86_64）**
 
-{{< asciinema file="demo/install-hero.cast" markers="4.5:安装,20.0:配置,24:部署,170:完成" theme="solarized-light" speed="1.3" autoplay="true" loop="true" >}}
+{{< asciinema file="demo/install-hero.cast" markers="4.5:安装,20.0:配置,24:部署,170:完成" speed="1.3" autoplay="true" loop="true" >}}
 
 
 ----------------

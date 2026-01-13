@@ -227,7 +227,7 @@ Pigsty 提供了约 **380+** 个配置参数，分布在 8 个默认模块中，
 | [`pg_conf`](/docs/pgsql/param#pg_conf)                               |   `enum`   | 配置模板：oltp,olap,crit,tiny，默认为 `oltp.yml`               |
 | [`pg_max_conn`](/docs/pgsql/param#pg_max_conn)                       |   `int`    | postgres 最大连接数，`auto` 将使用推荐值                          |
 | [`pg_shared_buffer_ratio`](/docs/pgsql/param#pg_shared_buffer_ratio) |  `float`   | postgres 共享缓冲区内存比率，默认为 0.25，范围 0.1~0.4                |
-| [`pg_rto`](/docs/pgsql/param#pg_rto)                                 |   `int`    | 恢复时间目标（秒），默认为 `30s`                                   |
+| [`pg_rto`](/docs/pgsql/param#pg_rto)                                 |   `enum`   | RTO 模式：`fast`,`norm`,`safe`,`wide`，默认 `norm`          |
 | [`pg_rpo`](/docs/pgsql/param#pg_rpo)                                 |   `int`    | 恢复点目标（字节），默认为 `1MiB`                                  |
 | [`pg_libs`](/docs/pgsql/param#pg_libs)                               |  `string`  | 预加载的库，默认为 `pg_stat_statements,auto_explain`           |
 | [`pg_delay`](/docs/pgsql/param#pg_delay)                             | `interval` | 备份集群主库的WAL重放应用延迟，用于制备延迟从库                             |

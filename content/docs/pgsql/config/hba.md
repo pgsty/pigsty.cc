@@ -7,33 +7,28 @@ module: [PGSQL]
 categories: [配置]
 ---
 
-> HBA（Host-Based Authentication）控制"谁可以从哪里、以什么方式连接到数据库"。
-> Pigsty 通过 `pg_default_hba_rules` 与 `pg_hba_rules` 让 HBA 规则也能以声明式配置形式管理。
-
-
-----------------
-
 ## 概述
+
+HBA（Host-Based Authentication）控制"谁可以从哪里、以什么方式连接到数据库"。
+Pigsty 通过 [**`pg_default_hba_rules`**](#pg_default_hba_rules) 与 [**`pg_hba_rules`**](#pg_hba_rules) 让 HBA 规则也能以声明式配置形式管理。
 
 Pigsty 在集群初始化或 HBA 刷新时渲染以下配置文件：
 
-| 配置文件 | 路径 | 说明 |
-|---------|------|------|
-| PostgreSQL HBA | `/pg/data/pg_hba.conf` | PostgreSQL 服务器的 HBA 规则 |
-| Pgbouncer HBA | `/etc/pgbouncer/pgb_hba.conf` | 连接池 Pgbouncer 的 HBA 规则 |
-{.full-width}
+| 配置文件           | 路径                            | 说明                     |
+|:---------------|:------------------------------|:-----------------------|
+| PostgreSQL HBA | `/pg/data/pg_hba.conf`        | PostgreSQL 服务器的 HBA 规则 |
+| Pgbouncer HBA  | `/etc/pgbouncer/pgb_hba.conf` | 连接池 Pgbouncer 的 HBA 规则 |
 
 HBA 规则由以下参数控制：
 
-| 参数 | 层级 | 说明 |
-|------|------|------|
-| [`pg_default_hba_rules`](#pg_default_hba_rules) | G | PostgreSQL 全局默认 HBA 规则 |
-| [`pg_hba_rules`](#pg_hba_rules) | G/C/I | PostgreSQL 集群/实例级追加规则 |
-| [`pgb_default_hba_rules`](#pgb_default_hba_rules) | G | Pgbouncer 全局默认 HBA 规则 |
-| [`pgb_hba_rules`](#pgb_hba_rules) | G/C/I | Pgbouncer 集群/实例级追加规则 |
-{.full-width}
+| 参数                                                | 层级    | 说明                     |
+|:--------------------------------------------------|:------|:-----------------------|
+| [`pg_default_hba_rules`](#pg_default_hba_rules)   | G     | PostgreSQL 全局默认 HBA 规则 |
+| [`pg_hba_rules`](#pg_hba_rules)                   | G/C/I | PostgreSQL 集群/实例级追加规则  |
+| [`pgb_default_hba_rules`](#pgb_default_hba_rules) | G     | Pgbouncer 全局默认 HBA 规则  |
+| [`pgb_hba_rules`](#pgb_hba_rules)                 | G/C/I | Pgbouncer 集群/实例级追加规则   |
 
-规则特性：
+规则支持以下特性：
 
 - **按角色过滤**：规则支持 `role` 字段，根据实例的 `pg_role` 自动筛选生效
 - **按顺序排序**：规则支持 `order` 字段，控制规则在最终配置文件中的位置
@@ -42,16 +37,40 @@ HBA 规则由以下参数控制：
 
 ----------------
 
+## 刷新 HBA
+
+修改配置后，需要重新渲染配置文件并让服务重载：
+
+```bash
+bin/pgsql-hba <cls>                   # 刷新整个集群的 HBA 规则（推荐）
+bin/pgsql-hba <cls> <ip>...           # 刷新集群中指定实例的 HBA 规则
+```
+
+脚本内部执行以下剧本命令：
+
+```bash
+./pgsql.yml -l <cls> -t pg_hba,pg_reload,pgbouncer_hba,pgbouncer_reload -e pg_reload=true
+```
+
+**仅刷新 PostgreSQL**：`./pgsql.yml -l <cls> -t pg_hba,pg_reload -e pg_reload=true`
+
+**仅刷新 Pgbouncer**：`./pgsql.yml -l <cls> -t pgbouncer_hba,pgbouncer_reload`
+
+{{% alert title="不要直接编辑配置文件" color="warning" %}}
+不要直接编辑 `/pg/data/pg_hba.conf` 或 `/etc/pgbouncer/pgb_hba.conf`，下次执行 playbook 时会被覆盖。
+所有变更应在 `pigsty.yml` 中进行，然后执行 `bin/pgsql-hba` 刷新。
+{{% /alert %}}
+
+
+----------------
+
 ## 参数详解
 
-
-### `pg_default_hba_rules`
+**`pg_default_hba_rules`**
 
 PostgreSQL 全局默认 HBA 规则列表，通常定义在 `all.vars` 中，为所有 PostgreSQL 集群提供基础访问控制。
 
-- 类型：`rule[]`
-- 层级：全局 (G)
-- 默认值：见下文
+- 类型：`rule[]`，层级：全局 (G)
 
 ```yaml
 pg_default_hba_rules:
@@ -69,28 +88,22 @@ pg_default_hba_rules:
   - {user: '+dbrole_offline' ,db: all    ,addr: intra     ,auth: pwd   ,title: 'allow etl offline tasks from intranet',order: 650}
 ```
 
-
-### `pg_hba_rules`
+**`pg_hba_rules`**
 
 PostgreSQL 集群/实例级 HBA 追加规则，可在集群或实例级别覆盖，与默认规则合并后按 `order` 排序。
 
-- 类型：`rule[]`
-- 层级：全局/集群/实例 (G/C/I)
-- 默认值：`[]`
+- 类型：`rule[]`，层级：全局/集群/实例 (G/C/I)，默认值：`[]`
 
 ```yaml
 pg_hba_rules:
   - {user: app_user, db: app_db, addr: intra, auth: pwd, title: 'app user access'}
 ```
 
-
-### `pgb_default_hba_rules`
+**`pgb_default_hba_rules`**
 
 Pgbouncer 全局默认 HBA 规则列表，通常定义在 `all.vars` 中。
 
-- 类型：`rule[]`
-- 层级：全局 (G)
-- 默认值：见下文
+- 类型：`rule[]`，层级：全局 (G)
 
 ```yaml
 pgb_default_hba_rules:
@@ -103,14 +116,11 @@ pgb_default_hba_rules:
   - {user: 'all'        ,db: all         ,addr: intra     ,auth: pwd   ,title: 'allow all user intra access with pwd' ,order: 400}
 ```
 
-
-### `pgb_hba_rules`
+**`pgb_hba_rules`**
 
 Pgbouncer 集群/实例级 HBA 追加规则。
 
-- 类型：`rule[]`
-- 层级：全局/集群/实例 (G/C/I)
-- 默认值：`[]`
+- 类型：`rule[]`，层级：全局/集群/实例 (G/C/I)，默认值：`[]`
 
 > **注意**：Pgbouncer HBA 不支持 `db: replication`。
 
@@ -122,16 +132,15 @@ Pgbouncer 集群/实例级 HBA 追加规则。
 每条 HBA 规则是一个 YAML 字典，支持以下字段：
 
 | 字段 | 类型 | 必需 | 默认值 | 说明 |
-|------|------|------|--------|------|
+|:-----|:-----|:-----|:-------|:-----|
 | `user` | string | 否 | `all` | 用户名，支持 `all`、变量占位符、`+rolename` 等 |
 | `db` | string | 否 | `all` | 数据库名，支持 `all`、`replication`、具体库名 |
-| `addr` | string | 是* | - | 地址别名或 CIDR，见 [地址别名](#地址别名) |
-| `auth` | string | 否 | `pwd` | 认证方式别名，见 [认证方式](#认证方式) |
+| `addr` | string | 是* | - | 地址别名或 CIDR，见 [**地址别名**](#地址别名) |
+| `auth` | string | 否 | `pwd` | 认证方式别名，见 [**认证方式**](#认证方式) |
 | `title` | string | 否 | - | 规则说明/注释，会渲染为配置文件中的注释 |
-| `role` | string | 否 | `common` | 实例角色过滤，见 [角色过滤](#角色过滤) |
-| `order` | int | 否 | `1000` | 排序权重，数字小的排前面，见 [排序机制](#排序机制) |
+| `role` | string | 否 | `common` | 实例角色过滤，见 [**角色过滤**](#角色过滤) |
+| `order` | int | 否 | `1000` | 排序权重，数字小的排前面，见 [**排序机制**](#排序机制) |
 | `rules` | list | 是* | - | 原始 HBA 文本行列表，与 `addr` 二选一 |
-{.full-width}
 
 > `addr` 和 `rules` 必须指定其一。使用 `rules` 时可以直接写原始 HBA 格式。
 
@@ -143,7 +152,7 @@ Pgbouncer 集群/实例级 HBA 追加规则。
 Pigsty 提供地址别名，简化 HBA 规则编写：
 
 | 别名 | 展开为 | 说明 |
-|------|--------|------|
+|:-----|:-------|:-----|
 | `local` | Unix socket | 本地 Unix 套接字连接 |
 | `localhost` | Unix socket + `127.0.0.1/32` + `::1/128` | 本地回环地址 |
 | `admin` | `${admin_ip}/32` | 管理员 IP 地址 |
@@ -152,7 +161,6 @@ Pigsty 提供地址别名，简化 HBA 规则编写：
 | `intra` / `intranet` | `10.0.0.0/8`, `172.16.0.0/12`, `192.168.0.0/16` | 内网 CIDR 网段 |
 | `world` / `all` | `0.0.0.0/0` + `::/0` | 任意地址（IPv4 + IPv6） |
 | `<CIDR>` | 直接使用 | 如 `192.168.1.0/24`、`10.1.1.100/32` |
-{.full-width}
 
 内网 CIDR 可通过 `node_firewall_intranet` 参数自定义：
 
@@ -171,7 +179,7 @@ node_firewall_intranet:
 Pigsty 提供认证方式别名，简化配置：
 
 | 别名 | 实际方式 | 连接类型 | 说明 |
-|------|----------|----------|------|
+|:-----|:---------|:---------|:-----|
 | `pwd` | `scram-sha-256` 或 `md5` | `host` | 根据 `pg_pwd_enc` 自动选择 |
 | `ssl` | `scram-sha-256` 或 `md5` | `hostssl` | 强制 SSL + 密码 |
 | `ssl-sha` | `scram-sha-256` | `hostssl` | 强制 SSL + SCRAM-SHA-256 |
@@ -181,7 +189,6 @@ Pigsty 提供认证方式别名，简化配置：
 | `deny` / `reject` | `reject` | `host` | 拒绝连接 |
 | `ident` | `ident` | `host` | OS 用户映射（PostgreSQL） |
 | `peer` | `peer` | `local` | OS 用户映射（Pgbouncer/本地） |
-{.full-width}
 
 > `pg_pwd_enc` 默认为 `scram-sha-256`，可设为 `md5` 以兼容老客户端。
 
@@ -192,22 +199,12 @@ Pigsty 提供认证方式别名，简化配置：
 
 HBA 规则支持以下用户占位符，渲染时自动替换为实际用户名：
 
-| 占位符 | 默认值 | 说明 |
-|--------|--------|------|
-| `${dbsu}` | `postgres` | 数据库超级用户 |
-| `${repl}` | `replicator` | 复制用户 |
-| `${monitor}` | `dbuser_monitor` | 监控用户 |
-| `${admin}` | `dbuser_dba` | 管理员用户 |
-{.full-width}
-
-这些变量的实际值由对应参数控制：
-
-```yaml
-pg_dbsu: postgres
-pg_replication_username: replicator
-pg_monitor_username: dbuser_monitor
-pg_admin_username: dbuser_dba
-```
+| 占位符 | 默认值 | 对应参数 |
+|:-------|:-------|:---------|
+| `${dbsu}` | `postgres` | `pg_dbsu` |
+| `${repl}` | `replicator` | `pg_replication_username` |
+| `${monitor}` | `dbuser_monitor` | `pg_monitor_username` |
+| `${admin}` | `dbuser_dba` | `pg_admin_username` |
 
 
 ----------------
@@ -217,23 +214,22 @@ pg_admin_username: dbuser_dba
 HBA 规则的 `role` 字段控制规则在哪些实例上生效：
 
 | 角色 | 说明 |
-|------|------|
+|:-----|:-----|
 | `common` | 默认值，所有实例都生效 |
 | `primary` | 仅主库实例生效 |
 | `replica` | 仅从库实例生效 |
 | `offline` | 仅离线实例生效（`pg_role: offline` 或 `pg_offline_query: true`） |
 | `standby` | 备库实例 |
 | `delayed` | 延迟从库实例 |
-{.full-width}
 
-角色过滤基于实例的 `pg_role` 变量进行匹配。不匹配的规则会被注释掉（以 `#` 开头）。
+角色过滤基于实例的 `pg_role` 变量进行匹配，不匹配的规则会被注释掉（以 `#` 开头）。
 
 ```yaml
 pg_hba_rules:
-  # 仅在主库生效
+  # 仅在主库生效：写入用户只能连主库
   - {user: writer, db: all, addr: intra, auth: pwd, role: primary, title: 'writer only on primary'}
 
-  # 仅在离线实例生效
+  # 仅在离线实例生效：ETL 任务专用网络
   - {user: '+dbrole_offline', db: all, addr: '172.20.0.0/16', auth: ssl, role: offline, title: 'offline dedicated'}
 ```
 
@@ -242,23 +238,20 @@ pg_hba_rules:
 
 ## 排序机制
 
-PostgreSQL HBA 是**首条匹配生效**，规则顺序至关重要。Pigsty 通过 `order` 字段控制规则渲染顺序。
+PostgreSQL HBA 是 **首条匹配生效**，规则顺序至关重要。Pigsty 通过 `order` 字段控制规则渲染顺序。
 
-### Order 区间约定
+**Order 区间约定**
 
 | 区间 | 用途 |
-|------|------|
+|:-----|:-----|
 | `0 - 99` | 用户高优先规则（在所有默认规则之前） |
 | `100 - 650` | 默认规则区（间隔 50，便于插入） |
 | `1000+` | 用户规则默认值（不填 `order` 时追加到最后） |
-{.full-width}
 
-### 默认规则 Order 分配
-
-**PostgreSQL 默认规则**：
+**PostgreSQL 默认规则 Order 分配**
 
 | Order | 规则说明 |
-|-------|----------|
+|:------|:---------|
 | 100 | dbsu local ident |
 | 150 | dbsu replication local |
 | 200 | replicator localhost |
@@ -271,12 +264,11 @@ PostgreSQL HBA 是**首条匹配生效**，规则顺序至关重要。Pigsty 通
 | 550 | dbrole_readonly localhost |
 | 600 | dbrole_readonly intra |
 | 650 | dbrole_offline intra |
-{.full-width}
 
-**Pgbouncer 默认规则**：
+**Pgbouncer 默认规则 Order 分配**
 
 | Order | 规则说明 |
-|-------|----------|
+|:------|:---------|
 | 100 | dbsu local peer |
 | 150 | all localhost pwd |
 | 200 | monitor pgbouncer intra |
@@ -284,33 +276,13 @@ PostgreSQL HBA 是**首条匹配生效**，规则顺序至关重要。Pigsty 通
 | 300 | admin intra pwd |
 | 350 | admin world deny |
 | 400 | all intra pwd |
-{.full-width}
-
-### 排序示例
-
-```yaml
-pg_hba_rules:
-  # order: 0，在所有默认规则之前（黑名单）
-  - {user: all, db: all, addr: '10.1.1.100/32', auth: deny, order: 0, title: 'blacklist bad ip'}
-
-  # order: 120，在 dbsu(100) 和 replicator(200) 之间
-  - {user: auditor, db: all, addr: local, auth: ident, order: 120, title: 'auditor access'}
-
-  # order: 420，在 monitor(400) 和 admin(450) 之间
-  - {user: exporter, db: all, addr: infra, auth: pwd, order: 420, title: 'prometheus exporter'}
-
-  # 不填 order，默认 1000，追加到所有默认规则之后
-  - {user: app_user, db: app_db, addr: intra, auth: pwd, title: 'app user access'}
-```
 
 
 ----------------
 
 ## 写法示例
 
-### 别名形式
-
-使用 Pigsty 提供的简化语法：
+**别名形式**：使用 Pigsty 提供的简化语法
 
 ```yaml
 pg_hba_rules:
@@ -324,14 +296,12 @@ pg_hba_rules:
 
 渲染结果：
 
-```
+```ini
 # allow grafana view access [primary]
 hostssl  meta               dbuser_view        10.10.10.10/32     scram-sha-256
 ```
 
-### 原始形式
-
-直接使用 PostgreSQL HBA 语法：
+**原始形式**：直接使用 PostgreSQL HBA 语法
 
 ```yaml
 pg_hba_rules:
@@ -345,7 +315,7 @@ pg_hba_rules:
 
 渲染结果：
 
-```
+```ini
 # allow intranet password access [common]
 host all all 10.0.0.0/8 scram-sha-256
 host all all 172.16.0.0/12 scram-sha-256
@@ -355,142 +325,55 @@ host all all 192.168.0.0/16 scram-sha-256
 
 ----------------
 
-## 常见配置示例
+## 常见配置场景
 
-### 1. 内网密码访问业务库
-
-```yaml
-pg_hba_rules:
-  - title: 'intra readwrite access'
-    role: common
-    user: '+dbrole_readwrite'
-    db: all
-    addr: intra
-    auth: pwd
-```
-
-> 效果：所有业务读写角色可以从内网网段使用密码访问任意数据库。
-
-
-### 2. 离线实例专用网络
+**黑名单 IP**：使用 `order: 0` 确保最先匹配
 
 ```yaml
 pg_hba_rules:
-  - title: 'offline replica dedicated network'
-    role: offline
-    user: '+dbrole_offline'
-    db: all
-    addr: 172.20.0.0/16
-    auth: ssl-sha
+  - {user: all, db: all, addr: '10.1.1.100/32', auth: deny, order: 0, title: 'block bad ip'}
 ```
 
-> 效果：仅 `pg_role: offline` 或 `pg_offline_query: true` 的实例启用该规则。
-
-
-### 3. 黑名单 IP
+**白名单应用服务器**：高优先级允许特定 IP
 
 ```yaml
 pg_hba_rules:
-  - user: all
-    db: all
-    addr: '10.1.1.100/32'
-    auth: deny
-    order: 0
-    title: 'block compromised host'
+  - {user: app_user, db: app_db, addr: '192.168.1.10/32', auth: ssl, order: 50, title: 'app server'}
 ```
 
-> 效果：`order: 0` 排在所有默认规则（100+）之前，优先匹配并拒绝。
-
-
-### 4. 白名单特定应用
+**管理员强制证书**：覆盖默认的 SSL 密码认证
 
 ```yaml
 pg_hba_rules:
-  - title: 'allow app server access'
-    user: app_user
-    db: app_db
-    addr: '192.168.1.10/32'
-    auth: ssl
-    order: 50
+  - {user: '${admin}', db: all, addr: world, auth: cert, order: 10, title: 'admin cert only'}
 ```
 
-> 效果：特定应用服务器使用 SSL 连接，高优先级（50）确保在默认规则之前匹配。
-
-
-### 5. 管理员强制证书认证
+**离线实例专用网络**：仅在 offline 实例生效
 
 ```yaml
 pg_hba_rules:
-  - title: 'admin cert access'
-    role: common
-    user: '${admin}'
-    db: all
-    addr: world
-    auth: cert
-    order: 10
+  - {user: '+dbrole_offline', db: all, addr: '172.20.0.0/16', auth: ssl-sha, role: offline, title: 'etl network'}
 ```
 
-> 效果：管理员必须携带客户端证书才能连接，`order: 10` 优先于默认的 ssl 规则（450/500）。
-
-
-### 6. 允许外网只读访问
+**按数据库限制访问**：敏感库仅允许特定网段
 
 ```yaml
 pg_hba_rules:
-  - title: 'readonly from internet'
-    role: replica
-    user: '+dbrole_readonly'
-    db: all
-    addr: world
-    auth: ssl
+  - {user: fin_user, db: finance_db, addr: '10.20.0.0/16', auth: ssl, title: 'finance only'}
+  - {user: hr_user, db: hr_db, addr: '10.30.0.0/16', auth: ssl, title: 'hr only'}
 ```
 
-> 效果：只读用户可从外网通过 SSL 连接从库。
-
-
-### 7. Pgbouncer 专用规则
+**Pgbouncer 专用规则**：注意不支持 `db: replication`
 
 ```yaml
 pgb_hba_rules:
-  - title: 'app via pgbouncer'
-    role: common
-    user: '+dbrole_readwrite'
-    db: all
-    addr: world
-    auth: ssl
-```
-
-> 注意：Pgbouncer HBA 不支持 `db: replication`。
-
-
-### 8. 多条件组合
-
-```yaml
-pg_hba_rules:
-  # 开发环境：信任本地连接
-  - {user: all, db: all, addr: local, auth: trust, title: 'dev trust local'}
-
-  # 生产环境：严格 SSL
-  - {user: '+dbrole_readwrite', db: all, addr: intra, auth: ssl-sha, title: 'prod ssl only'}
-
-  # 监控专用：从 Prometheus 节点
-  - {user: '${monitor}', db: all, addr: infra, auth: pwd, order: 380, title: 'prometheus access'}
+  - {user: '+dbrole_readwrite', db: all, addr: world, auth: ssl, title: 'app via pgbouncer'}
 ```
 
 
-### 9. 按数据库限制访问
+----------------
 
-```yaml
-pg_hba_rules:
-  # 财务系统：仅允许特定网段
-  - {user: fin_user, db: finance_db, addr: '10.20.0.0/16', auth: ssl, title: 'finance restricted'}
-
-  # HR 系统：仅允许 HR 网段
-  - {user: hr_user, db: hr_db, addr: '10.30.0.0/16', auth: ssl, title: 'hr restricted'}
-```
-
-
-### 10. 完整集群配置示例
+## 完整集群示例
 
 ```yaml
 pg-prod:
@@ -502,16 +385,16 @@ pg-prod:
     pg_cluster: pg-prod
 
     pg_hba_rules:
-      # 黑名单：已知恶意 IP
+      # 黑名单：已知恶意 IP（最高优先级）
       - {user: all, db: all, addr: '10.1.1.100/32', auth: deny, order: 0, title: 'blacklist'}
 
-      # 应用服务器白名单
+      # 应用服务器白名单（高优先级）
       - {user: app_user, db: app_db, addr: '192.168.1.0/24', auth: ssl, order: 50, title: 'app servers'}
 
       # ETL 任务：仅离线实例
       - {user: etl_user, db: all, addr: '172.20.0.0/16', auth: pwd, role: offline, title: 'etl tasks'}
 
-      # 监控增强
+      # 集群内监控访问
       - {user: '${monitor}', db: all, addr: cluster, auth: pwd, order: 380, title: 'cluster monitor'}
 
     pgb_hba_rules:
@@ -522,100 +405,50 @@ pg-prod:
 
 ----------------
 
-## 渲染原理
+## 验证与排查
 
-Pigsty 使用 Jinja2 模板渲染 HBA 配置文件：
+**查看当前 HBA 规则**
 
-1. **合并规则**：`pg_default_hba_rules` + `pg_hba_rules`
-2. **排序规则**：按 `order` 字段升序排列（无 `order` 的规则追加到最后）
-3. **角色过滤**：根据实例 `pg_role` 筛选，不匹配的规则被注释
-4. **变量替换**：`${dbsu}` 等占位符替换为实际用户名
-5. **地址展开**：`intra`、`infra` 等别名展开为实际 IP/CIDR
-6. **认证映射**：`pwd`、`ssl` 等别名映射为实际认证方式
+```bash
+psql -c "TABLE pg_hba_file_rules"         # 通过 SQL 查看（推荐）
+cat /pg/data/pg_hba.conf                  # 查看 PostgreSQL HBA 文件
+cat /etc/pgbouncer/pgb_hba.conf           # 查看 Pgbouncer HBA 文件
+grep '^#' /pg/data/pg_hba.conf | head -20 # 查看规则标题（验证 order）
+```
 
-模板位置：
-- PostgreSQL：`roles/pgsql/templates/pg_hba.conf`
-- Pgbouncer：`roles/pgsql/templates/pgbouncer.hba`
+**测试连接认证**
+
+```bash
+psql -h <host> -p 5432 -U <user> -d <db> -c "SELECT 1"
+```
+
+**常见问题排查**
+
+| 错误信息 | 可能原因 | 解决方案 |
+|:---------|:---------|:---------|
+| `no pg_hba.conf entry for host...` | 没有匹配的 HBA 规则 | 添加对应规则并刷新 |
+| `password authentication failed` | 密码错误或加密方式不兼容 | 检查密码和 `pg_pwd_enc` |
+| 规则不生效 | 未刷新或 order 被覆盖 | 执行 `bin/pgsql-hba` 并检查顺序 |
 
 
 ----------------
 
 ## 注意事项
 
-1. **顺序敏感**：PostgreSQL HBA 首条匹配生效，规则顺序很重要
+1. **顺序敏感**：PostgreSQL HBA 首条匹配生效，善用 `order` 字段
 2. **角色匹配**：确保 `role` 字段与目标实例的 `pg_role` 一致
-3. **地址验证**：CIDR 格式必须正确，如 `10.0.0.0/8` 而非 `10.0.0.0/255.0.0.0`
+3. **地址格式**：CIDR 必须正确，如 `10.0.0.0/8` 而非 `10.0.0.0/255.0.0.0`
 4. **Pgbouncer 限制**：不支持 `db: replication`
-5. **变量作用域**：用户变量仅限预定义的四个（`${dbsu}`, `${repl}`, `${monitor}`, `${admin}`）
-6. **SSL 配置**：使用 `ssl`、`cert` 认证方式前确保 SSL 已正确配置
-7. **测试优先**：修改 HBA 前建议先在测试环境验证
-
-
-----------------
-
-## 测试与验证
-
-Pigsty 提供了 HBA order 排序功能的测试工具，可在部署前验证配置正确性：
-
-### 运行排序逻辑测试
-
-```bash
-# 在 pigsty 目录下运行排序逻辑测试
-./files/test-hba-order.yml
-```
-
-该测试验证：
-- 规则按 `order` 字段正确排序
-- 无 `order` 字段的规则追加到末尾
-- 相同 `order` 值的规则保持原始顺序（稳定排序）
-- 向后兼容性（旧配置无需修改）
-
-### 运行模板渲染测试
-
-```bash
-# 在目标服务器上测试 HBA 模板渲染
-./files/test-hba-render.yml -l 10.10.10.10
-```
-
-该测试在目标服务器上渲染 HBA 模板，验证：
-- 模板语法正确
-- 规则顺序符合预期
-- 高优先级规则出现在前面
-
-### 验证渲染结果
-
-```bash
-# 查看渲染后的 PostgreSQL HBA
-cat /pg/data/pg_hba.conf
-
-# 查看规则标题顺序（验证 order 生效）
-grep '^#' /pg/data/pg_hba.conf | grep -v '^#=' | head -20
-
-# 验证首条规则是否为预期的高优先级规则
-head -30 /pg/data/pg_hba.conf
-```
-
-
-----------------
-
-## 相关参数
-
-| 参数                        | 说明                                |
-|---------------------------|-----------------------------------|
-| `pg_pwd_enc`              | 密码加密方式：`scram-sha-256`（默认）或 `md5` |
-| `pg_dbsu`                 | 数据库超级用户名                          |
-| `pg_replication_username` | 复制用户名                             |
-| `pg_monitor_username`     | 监控用户名                             |
-| `pg_admin_username`       | 管理员用户名                            |
-| `node_firewall_intranet`  | 内网 CIDR 定义                        |
-{.full-width}
+5. **SSL 前提**：使用 `ssl`、`cert` 认证前确保 SSL 已正确配置
+6. **测试优先**：修改 HBA 前建议先在测试环境验证
+7. **扩缩容刷新**：使用 `addr: cluster` 的规则在集群成员变化后需要刷新
 
 
 ----------------
 
 ## 相关文档
 
-- [**HBA 管理**](/docs/pgsql/admin/hba/)：HBA 规则的日常管理操作
+- [**HBA 管理**](/docs/pgsql/admin/hba/)：HBA 规则的日常管理操作与故障排查
 - [**用户配置**](/docs/pgsql/config/user/)：用户与角色配置
 - [**访问控制**](/docs/pgsql/config/acl/)：角色体系与权限模型
 - [**安全与合规**](/docs/concept/sec/)：PostgreSQL 集群的安全特性

@@ -540,47 +540,73 @@
   <section class="dashboard-gallery-section">
     <div class="dashboard-gallery-marquee">
       <div class="dashboard-gallery-track">
-        <div class="dashboard-gallery-slide" data-src="/img/dashboard/pigsty.jpg" data-alt="Pigsty Overview"></div>
-        <div class="dashboard-gallery-slide" data-src="/img/dashboard/pgsql-overview.jpg" data-alt="PGSQL Overview"></div>
-        <div class="dashboard-gallery-slide" data-src="/img/dashboard/pgsql-cluster.jpg" data-alt="PGSQL Cluster"></div>
-        <div class="dashboard-gallery-slide" data-src="/img/dashboard/pgsql-instance.jpg" data-alt="PGSQL Instance"></div>
-        <div class="dashboard-gallery-slide" data-src="/img/dashboard/pgsql-database.jpg" data-alt="PGSQL Database"></div>
-        <div class="dashboard-gallery-slide" data-src="/img/dashboard/pgsql-query.jpg" data-alt="PGSQL Query"></div>
-        <div class="dashboard-gallery-slide" data-src="/img/dashboard/pgsql-session.jpg" data-alt="PGSQL Session"></div>
-        <div class="dashboard-gallery-slide" data-src="/img/dashboard/pgsql-replication.jpg" data-alt="PGSQL Replication"></div>
-        <div class="dashboard-gallery-slide" data-src="/img/dashboard/pgsql-persist.jpg" data-alt="PGSQL Persist"></div>
-        <div class="dashboard-gallery-slide" data-src="/img/dashboard/pgsql-proxy.jpg" data-alt="PGSQL Proxy"></div>
-        <div class="dashboard-gallery-slide" data-src="/img/dashboard/pgsql-pgbouncer.jpg" data-alt="PGSQL PgBouncer"></div>
-        <div class="dashboard-gallery-slide" data-src="/img/dashboard/pgsql-xacts.jpg" data-alt="PGSQL Transactions"></div>
-        <div class="dashboard-gallery-slide" data-src="/img/dashboard/pgcat-table.jpg" data-alt="PGCat Table"></div>
-        <div class="dashboard-gallery-slide" data-src="/img/dashboard/pgcat-query.jpg" data-alt="PGCat Query"></div>
-        <div class="dashboard-gallery-slide" data-src="/img/dashboard/node-overview.jpg" data-alt="Node Overview"></div>
-        <div class="dashboard-gallery-slide" data-src="/img/dashboard/node-instance.jpg" data-alt="Node Instance"></div>
-        <div class="dashboard-gallery-slide" data-src="/img/dashboard/infra-overview.jpg" data-alt="Infra Overview"></div>
-        <div class="dashboard-gallery-slide" data-src="/img/dashboard/etcd-overview.jpg" data-alt="ETCD Overview"></div>
-        <div class="dashboard-gallery-slide" data-src="/img/dashboard/redis-overview.jpg" data-alt="Redis Overview"></div>
-        <div class="dashboard-gallery-slide" data-src="/img/dashboard/minio-overview.jpg" data-alt="MinIO Overview"></div>
+        <div class="dashboard-gallery-slide" data-src="/img/panel/pigsty.webp" data-alt="Pigsty Overview"></div>
+        <div class="dashboard-gallery-slide" data-src="/img/panel/pgsql-overview.webp" data-alt="PGSQL Overview"></div>
+        <div class="dashboard-gallery-slide" data-src="/img/panel/pgsql-cluster.webp" data-alt="PGSQL Cluster"></div>
+        <div class="dashboard-gallery-slide" data-src="/img/panel/pgsql-instance.webp" data-alt="PGSQL Instance"></div>
+        <div class="dashboard-gallery-slide" data-src="/img/panel/pgsql-database.webp" data-alt="PGSQL Database"></div>
+        <div class="dashboard-gallery-slide" data-src="/img/panel/pgsql-query.webp" data-alt="PGSQL Query"></div>
+        <div class="dashboard-gallery-slide" data-src="/img/panel/pgsql-session.webp" data-alt="PGSQL Session"></div>
+        <div class="dashboard-gallery-slide" data-src="/img/panel/pgsql-replication.webp" data-alt="PGSQL Replication"></div>
+        <div class="dashboard-gallery-slide" data-src="/img/panel/pgsql-persist.webp" data-alt="PGSQL Persist"></div>
+        <div class="dashboard-gallery-slide" data-src="/img/panel/pgsql-proxy.webp" data-alt="PGSQL Proxy"></div>
+        <div class="dashboard-gallery-slide" data-src="/img/panel/pgsql-pgbouncer.webp" data-alt="PGSQL PgBouncer"></div>
+        <div class="dashboard-gallery-slide" data-src="/img/panel/pgsql-xacts.webp" data-alt="PGSQL Transactions"></div>
+        <div class="dashboard-gallery-slide" data-src="/img/panel/pgsql-activity.webp" data-alt="PGSQL Activity"></div>
+        <div class="dashboard-gallery-slide" data-src="/img/panel/pgsql-table.webp" data-alt="PGSQL Table"></div>
+        <div class="dashboard-gallery-slide" data-src="/img/panel/pgsql-tables.webp" data-alt="PGSQL Tables"></div>
+        <div class="dashboard-gallery-slide" data-src="/img/panel/pgsql-patroni.webp" data-alt="PGSQL Patroni"></div>
+        <div class="dashboard-gallery-slide" data-src="/img/panel/pgsql-service.webp" data-alt="PGSQL Service"></div>
+        <div class="dashboard-gallery-slide" data-src="/img/panel/pgsql-pitr.webp" data-alt="PGSQL PITR"></div>
+        <div class="dashboard-gallery-slide" data-src="/img/panel/pgcat-table.webp" data-alt="PGCat Table"></div>
+        <div class="dashboard-gallery-slide" data-src="/img/panel/pgcat-query.webp" data-alt="PGCat Query"></div>
+        <div class="dashboard-gallery-slide" data-src="/img/panel/pgcat-database.webp" data-alt="PGCat Database"></div>
+        <div class="dashboard-gallery-slide" data-src="/img/panel/pgcat-instance.webp" data-alt="PGCat Instance"></div>
+        <div class="dashboard-gallery-slide" data-src="/img/panel/pgcat-schema.webp" data-alt="PGCat Schema"></div>
+        <div class="dashboard-gallery-slide" data-src="/img/panel/pgcat-locks.webp" data-alt="PGCat Locks"></div>
+        <div class="dashboard-gallery-slide" data-src="/img/panel/node-overview.webp" data-alt="Node Overview"></div>
+        <div class="dashboard-gallery-slide" data-src="/img/panel/node-instance.webp" data-alt="Node Instance"></div>
+        <div class="dashboard-gallery-slide" data-src="/img/panel/node-cluster.webp" data-alt="Node Cluster"></div>
+        <div class="dashboard-gallery-slide" data-src="/img/panel/node-haproxy.webp" data-alt="Node HAProxy"></div>
+        <div class="dashboard-gallery-slide" data-src="/img/panel/infra-overview.webp" data-alt="Infra Overview"></div>
+        <div class="dashboard-gallery-slide" data-src="/img/panel/etcd-overview.webp" data-alt="ETCD Overview"></div>
+        <div class="dashboard-gallery-slide" data-src="/img/panel/minio-overview.webp" data-alt="MinIO Overview"></div>
+        <div class="dashboard-gallery-slide" data-src="/img/panel/redis-cluster.webp" data-alt="Redis Cluster"></div>
+        <div class="dashboard-gallery-slide" data-src="/img/panel/redis-instance.webp" data-alt="Redis Instance"></div>
         <!-- Duplicate for seamless loop -->
-        <div class="dashboard-gallery-slide" data-src="/img/dashboard/pigsty.jpg" data-alt="Pigsty Overview"></div>
-        <div class="dashboard-gallery-slide" data-src="/img/dashboard/pgsql-overview.jpg" data-alt="PGSQL Overview"></div>
-        <div class="dashboard-gallery-slide" data-src="/img/dashboard/pgsql-cluster.jpg" data-alt="PGSQL Cluster"></div>
-        <div class="dashboard-gallery-slide" data-src="/img/dashboard/pgsql-instance.jpg" data-alt="PGSQL Instance"></div>
-        <div class="dashboard-gallery-slide" data-src="/img/dashboard/pgsql-database.jpg" data-alt="PGSQL Database"></div>
-        <div class="dashboard-gallery-slide" data-src="/img/dashboard/pgsql-query.jpg" data-alt="PGSQL Query"></div>
-        <div class="dashboard-gallery-slide" data-src="/img/dashboard/pgsql-session.jpg" data-alt="PGSQL Session"></div>
-        <div class="dashboard-gallery-slide" data-src="/img/dashboard/pgsql-replication.jpg" data-alt="PGSQL Replication"></div>
-        <div class="dashboard-gallery-slide" data-src="/img/dashboard/pgsql-persist.jpg" data-alt="PGSQL Persist"></div>
-        <div class="dashboard-gallery-slide" data-src="/img/dashboard/pgsql-proxy.jpg" data-alt="PGSQL Proxy"></div>
-        <div class="dashboard-gallery-slide" data-src="/img/dashboard/pgsql-pgbouncer.jpg" data-alt="PGSQL PgBouncer"></div>
-        <div class="dashboard-gallery-slide" data-src="/img/dashboard/pgsql-xacts.jpg" data-alt="PGSQL Transactions"></div>
-        <div class="dashboard-gallery-slide" data-src="/img/dashboard/pgcat-table.jpg" data-alt="PGCat Table"></div>
-        <div class="dashboard-gallery-slide" data-src="/img/dashboard/pgcat-query.jpg" data-alt="PGCat Query"></div>
-        <div class="dashboard-gallery-slide" data-src="/img/dashboard/node-overview.jpg" data-alt="Node Overview"></div>
-        <div class="dashboard-gallery-slide" data-src="/img/dashboard/node-instance.jpg" data-alt="Node Instance"></div>
-        <div class="dashboard-gallery-slide" data-src="/img/dashboard/infra-overview.jpg" data-alt="Infra Overview"></div>
-        <div class="dashboard-gallery-slide" data-src="/img/dashboard/etcd-overview.jpg" data-alt="ETCD Overview"></div>
-        <div class="dashboard-gallery-slide" data-src="/img/dashboard/redis-overview.jpg" data-alt="Redis Overview"></div>
-        <div class="dashboard-gallery-slide" data-src="/img/dashboard/minio-overview.jpg" data-alt="MinIO Overview"></div>
+        <div class="dashboard-gallery-slide" data-src="/img/panel/pigsty.webp" data-alt="Pigsty Overview"></div>
+        <div class="dashboard-gallery-slide" data-src="/img/panel/pgsql-overview.webp" data-alt="PGSQL Overview"></div>
+        <div class="dashboard-gallery-slide" data-src="/img/panel/pgsql-cluster.webp" data-alt="PGSQL Cluster"></div>
+        <div class="dashboard-gallery-slide" data-src="/img/panel/pgsql-instance.webp" data-alt="PGSQL Instance"></div>
+        <div class="dashboard-gallery-slide" data-src="/img/panel/pgsql-database.webp" data-alt="PGSQL Database"></div>
+        <div class="dashboard-gallery-slide" data-src="/img/panel/pgsql-query.webp" data-alt="PGSQL Query"></div>
+        <div class="dashboard-gallery-slide" data-src="/img/panel/pgsql-session.webp" data-alt="PGSQL Session"></div>
+        <div class="dashboard-gallery-slide" data-src="/img/panel/pgsql-replication.webp" data-alt="PGSQL Replication"></div>
+        <div class="dashboard-gallery-slide" data-src="/img/panel/pgsql-persist.webp" data-alt="PGSQL Persist"></div>
+        <div class="dashboard-gallery-slide" data-src="/img/panel/pgsql-proxy.webp" data-alt="PGSQL Proxy"></div>
+        <div class="dashboard-gallery-slide" data-src="/img/panel/pgsql-pgbouncer.webp" data-alt="PGSQL PgBouncer"></div>
+        <div class="dashboard-gallery-slide" data-src="/img/panel/pgsql-xacts.webp" data-alt="PGSQL Transactions"></div>
+        <div class="dashboard-gallery-slide" data-src="/img/panel/pgsql-activity.webp" data-alt="PGSQL Activity"></div>
+        <div class="dashboard-gallery-slide" data-src="/img/panel/pgsql-table.webp" data-alt="PGSQL Table"></div>
+        <div class="dashboard-gallery-slide" data-src="/img/panel/pgsql-tables.webp" data-alt="PGSQL Tables"></div>
+        <div class="dashboard-gallery-slide" data-src="/img/panel/pgsql-patroni.webp" data-alt="PGSQL Patroni"></div>
+        <div class="dashboard-gallery-slide" data-src="/img/panel/pgsql-service.webp" data-alt="PGSQL Service"></div>
+        <div class="dashboard-gallery-slide" data-src="/img/panel/pgsql-pitr.webp" data-alt="PGSQL PITR"></div>
+        <div class="dashboard-gallery-slide" data-src="/img/panel/pgcat-table.webp" data-alt="PGCat Table"></div>
+        <div class="dashboard-gallery-slide" data-src="/img/panel/pgcat-query.webp" data-alt="PGCat Query"></div>
+        <div class="dashboard-gallery-slide" data-src="/img/panel/pgcat-database.webp" data-alt="PGCat Database"></div>
+        <div class="dashboard-gallery-slide" data-src="/img/panel/pgcat-instance.webp" data-alt="PGCat Instance"></div>
+        <div class="dashboard-gallery-slide" data-src="/img/panel/pgcat-schema.webp" data-alt="PGCat Schema"></div>
+        <div class="dashboard-gallery-slide" data-src="/img/panel/pgcat-locks.webp" data-alt="PGCat Locks"></div>
+        <div class="dashboard-gallery-slide" data-src="/img/panel/node-overview.webp" data-alt="Node Overview"></div>
+        <div class="dashboard-gallery-slide" data-src="/img/panel/node-instance.webp" data-alt="Node Instance"></div>
+        <div class="dashboard-gallery-slide" data-src="/img/panel/node-cluster.webp" data-alt="Node Cluster"></div>
+        <div class="dashboard-gallery-slide" data-src="/img/panel/node-haproxy.webp" data-alt="Node HAProxy"></div>
+        <div class="dashboard-gallery-slide" data-src="/img/panel/infra-overview.webp" data-alt="Infra Overview"></div>
+        <div class="dashboard-gallery-slide" data-src="/img/panel/etcd-overview.webp" data-alt="ETCD Overview"></div>
+        <div class="dashboard-gallery-slide" data-src="/img/panel/minio-overview.webp" data-alt="MinIO Overview"></div>
+        <div class="dashboard-gallery-slide" data-src="/img/panel/redis-cluster.webp" data-alt="Redis Cluster"></div>
+        <div class="dashboard-gallery-slide" data-src="/img/panel/redis-instance.webp" data-alt="Redis Instance"></div>
       </div>
     </div>
   </section>
@@ -1173,7 +1199,7 @@
             <a href="/docs/setup/install/#部署" class="step-title-new">一键部署</a>
           </div>
           <div class="step-cmd">
-            <code class="step-cmd-text">./install.yml</code>
+            <code class="step-cmd-text">./deploy.yml</code>
             <button class="step-cmd-copy" title="复制命令"><i class="fas fa-copy"></i></button>
           </div>
         </div>

@@ -26,7 +26,7 @@ cd ~/pigsty
 
 该命令会以选定的模板为基础，检测当前节点的 IP 地址与区域，并生成适合当前环境的 `pigsty.yml` 配置文件。
 
-{{< asciinema file="demo/configure.cast" markers="3:默认配置,7:指定IP,14:随机密码,17:rich模板,20:app/odoo模板,26:china区域,33:ha/full模板" theme="solarized-light" speed="1.3" autoplay="true" loop="true" >}}
+{{< asciinema file="demo/configure.cast" markers="3:默认配置,7:指定IP,14:随机密码,17:rich模板,20:app/odoo模板,26:china区域,33:ha/full模板" speed="1.3" autoplay="true" loop="true" >}}
 
 
 ## 功能说明

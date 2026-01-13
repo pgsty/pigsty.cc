@@ -56,5 +56,5 @@ Pigsty 默认通过管理节点/INFRA节点上的 Nginx 对外暴露 Web 服务�
 
 > 默认用户名与密码：supabase / pigsty
 
-{{< asciinema file="demo/supabase.cast" markers="0:检查环境,11:安装,43:配置,307:Docker,321:域名,340:App,350:检查" theme="solarized-light" speed="1.3" autoplay="true" loop="true" >}}
+{{< asciinema file="demo/supabase.cast" markers="0:检查环境,11:安装,43:配置,307:Docker,321:域名,340:App,350:检查" speed="1.3" autoplay="true" loop="true" >}}
 

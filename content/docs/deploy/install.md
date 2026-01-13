@@ -47,7 +47,7 @@ cd ~/pigsty      # 进入 Pigsty 目录
 
 **视频样例：20 节点生产仿真环境（Ubuntu 24.04 x86_64）**
 
-{{< asciinema file="demo/install-simu.cast" markers="0:置备服务器,36.0:部署,360:完成" theme="solarized-light" speed="1.3" autoplay="true" loop="true" >}}
+{{< asciinema file="demo/install-simu.cast" markers="0:置备服务器,36.0:部署,360:完成" speed="1.3" autoplay="true" loop="true" >}}
 
 
 

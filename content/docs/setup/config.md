@@ -127,6 +127,9 @@ all:  # 只是简单的改了个分组名 nodes -> infra，并添加新的实例
 ./infra.yml   # 在 infra 分组上安装 INFRA 模块（连带安装 NODE 模块）
 ```
 
+{{< asciinema file="demo/infra.cast" markers="4:执行" speed="1.3" autoplay="true" loop="true" >}}
+
+
 > 只要 IP 地址存在，NODE 模块会隐含定义。NODE 模块也是幂等的，即使重复执行一次，也没有什么副作用。
 
 安装完成后，您将拥有一套完整的可观测性基础设施，以及节点监控功能，但 PostgreSQL 数据库服务尚未部署。
@@ -286,6 +289,10 @@ bin/node-add 10.10.10.12
 bin/node-add 10.10.10.13
 ```
 
+{{< asciinema file="demo/node.cast" markers="4:执行" speed="1.3" autoplay="true" loop="true" >}}
+
+
+
 
 --------
 
@@ -306,6 +313,10 @@ all:
         10.10.10.13: { pg_seq: 3, pg_role: replica  }
       vars: { pg_cluster: pg-test }
 ```
+
+{{< asciinema file="demo/pgsql.cast" markers="4:执行" speed="1.3" autoplay="true" loop="true" >}}
+
+
 
 
 --------

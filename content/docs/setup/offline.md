@@ -108,7 +108,7 @@ a4fb30148a2d363bbfd3bec0daa14ab6  pigsty-pkg-v4.0.0.u24.aarch64.tgz
 4. **`./configure -g -c rich`**，您可以直接使用配置好离线安装的模板 [**`rich`**](/docs/conf/rich)，或者自行配置
 5. 照常运行 **`./deploy.yml`**，它将从本地仓库安装所有内容
 
-{{< asciinema file="demo/install-offline.cast" markers="0:上传软件包,55:解压与使用,66:配置,80:部署" theme="solarized-light" speed="1.3" autoplay="true" loop="true" >}}
+{{< asciinema file="demo/install-offline.cast" markers="0:上传软件包,55:解压与使用,66:配置,80:部署" speed="1.3" autoplay="true" loop="true" >}}
 
 
 如果您想要在自己的配置中，使用已经解包配置好的离线软件包，请修改并确保以下配置项：

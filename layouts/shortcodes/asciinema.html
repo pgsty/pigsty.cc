@@ -8,7 +8,8 @@
 
   Parameters:
     file           - Path to .cast file (required). Supports assets/, static/, or remote URLs
-    theme          - Player theme: asciinema, tango, solarized-dark, solarized-light, monokai, dracula
+    theme          - Player theme: auto (default, follows system/Docsy theme), asciinema, tango,
+                     solarized-dark, solarized-light, monokai, dracula
     speed          - Playback speed multiplier (default: 1)
     autoplay       - Auto-start playback (default: false)
     loop           - Loop playback (default: false)
@@ -24,7 +25,7 @@
 */ -}}
 
 {{- $file := .Get "file" | default (.Get 0) -}}
-{{- $theme := .Get "theme" | default "asciinema" -}}
+{{- $theme := .Get "theme" | default "auto" -}}
 {{- $speed := .Get "speed" | default 1 -}}
 {{- $autoplay := .Get "autoplay" -}}
 {{- $loop := .Get "loop" -}}
@@ -64,54 +65,111 @@
 
 <script>
 (function() {
-  var opts = {
-    theme: "{{ $theme }}",
-    speed: {{ $speed }},
-    startAt: {{ $startAt }},
-    fit: "{{ $fit }}"
-  };
+  var containerId = "{{ $id }}";
+  var castURL = "{{ $castURL }}";
+  var configuredTheme = "{{ $theme }}";
+  var player = null;
 
-  {{- if eq $autoplay "true" }}
-  opts.autoPlay = true;
-  {{- end }}
-  {{- if eq $loop "true" }}
-  opts.loop = true;
-  {{- end }}
-  {{- if eq $preload "true" }}
-  opts.preload = true;
-  {{- end }}
-  {{- if $poster }}
-  opts.poster = "{{ $poster }}";
-  {{- end }}
-  {{- if $cols }}
-  opts.cols = {{ $cols }};
-  {{- end }}
-  {{- if $rows }}
-  opts.rows = {{ $rows }};
-  {{- end }}
-  {{- if $idleTimeLimit }}
-  opts.idleTimeLimit = {{ $idleTimeLimit }};
-  {{- end }}
-  {{- if eq $pauseOnMarkers "true" }}
-  opts.pauseOnMarkers = true;
-  {{- end }}
+  // Detect current theme from Docsy (data-bs-theme) or system preference
+  function detectTheme() {
+    var htmlTheme = document.documentElement.getAttribute("data-bs-theme");
+    if (htmlTheme === "dark") return "solarized-dark";
+    if (htmlTheme === "light") return "solarized-light";
+    // Auto: follow system preference
+    if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      return "solarized-dark";
+    }
+    return "solarized-light";
+  }
 
-  {{- /* Parse markers: "1.5:Label1,3.2:Label2" -> [[1.5, "Label1"], [3.2, "Label2"]] */ -}}
-  {{- if $markers }}
-  opts.markers = [
-    {{- $markerList := split $markers "," -}}
-    {{- range $i, $m := $markerList -}}
-      {{- $parts := split $m ":" -}}
-      {{- $time := float (index $parts 0) -}}
-      {{- $label := "" -}}
-      {{- if gt (len $parts) 1 -}}
-        {{- $label = index $parts 1 -}}
+  function getTheme() {
+    if (configuredTheme === "auto") {
+      return detectTheme();
+    }
+    return configuredTheme;
+  }
+
+  function createPlayer() {
+    var container = document.getElementById(containerId);
+    // Clear existing player if any
+    container.innerHTML = "";
+
+    var opts = {
+      theme: getTheme(),
+      speed: {{ $speed }},
+      startAt: {{ $startAt }},
+      fit: "{{ $fit }}"
+    };
+
+    {{- if eq $autoplay "true" }}
+    opts.autoPlay = true;
+    {{- end }}
+    {{- if eq $loop "true" }}
+    opts.loop = true;
+    {{- end }}
+    {{- if eq $preload "true" }}
+    opts.preload = true;
+    {{- end }}
+    {{- if $poster }}
+    opts.poster = "{{ $poster }}";
+    {{- end }}
+    {{- if $cols }}
+    opts.cols = {{ $cols }};
+    {{- end }}
+    {{- if $rows }}
+    opts.rows = {{ $rows }};
+    {{- end }}
+    {{- if $idleTimeLimit }}
+    opts.idleTimeLimit = {{ $idleTimeLimit }};
+    {{- end }}
+    {{- if eq $pauseOnMarkers "true" }}
+    opts.pauseOnMarkers = true;
+    {{- end }}
+
+    {{- /* Parse markers: "1.5:Label1,3.2:Label2" -> [[1.5, "Label1"], [3.2, "Label2"]] */ -}}
+    {{- if $markers }}
+    opts.markers = [
+      {{- $markerList := split $markers "," -}}
+      {{- range $i, $m := $markerList -}}
+        {{- $parts := split $m ":" -}}
+        {{- $time := float (index $parts 0) -}}
+        {{- $label := "" -}}
+        {{- if gt (len $parts) 1 -}}
+          {{- $label = index $parts 1 -}}
+        {{- end -}}
+        {{- if $i }},{{ end }}[{{ $time }}, "{{ $label }}"]
       {{- end -}}
-      {{- if $i }},{{ end }}[{{ $time }}, "{{ $label }}"]
-    {{- end -}}
-  ];
-  {{- end }}
+    ];
+    {{- end }}
 
-  AsciinemaPlayer.create("{{ $castURL }}", document.getElementById("{{ $id }}"), opts);
+    player = AsciinemaPlayer.create(castURL, container, opts);
+  }
+
+  // Create initial player
+  createPlayer();
+
+  // Watch for theme changes if using auto theme
+  if (configuredTheme === "auto") {
+    // Watch for Docsy theme toggle (data-bs-theme attribute changes)
+    var observer = new MutationObserver(function(mutations) {
+      mutations.forEach(function(mutation) {
+        if (mutation.attributeName === "data-bs-theme") {
+          createPlayer();
+        }
+      });
+    });
+    observer.observe(document.documentElement, { attributes: true });
+
+    // Also watch for system theme changes
+    if (window.matchMedia) {
+      window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", function() {
+        // Only recreate if Docsy is in auto mode (no explicit data-bs-theme or set to auto)
+        var htmlTheme = document.documentElement.getAttribute("data-bs-theme");
+        if (!htmlTheme || htmlTheme === "auto") {
+          createPlayer();
+        }
+      });
+    }
+  }
 })();
 </script>

@@ -126,7 +126,7 @@ categories: [参考]
 | [`pg_conf`](#pg_conf)                               |   `enum`   |  `C`  | 配置模板：oltp,olap,crit,tiny，默认为 `oltp.yml`               |
 | [`pg_max_conn`](#pg_max_conn)                       |   `int`    |  `C`  | postgres 最大连接数，`auto` 将使用推荐值                          |
 | [`pg_shared_buffer_ratio`](#pg_shared_buffer_ratio) |  `float`   |  `C`  | postgres 共享缓冲区内存比率，默认为 0.25，范围 0.1~0.4                |
-| [`pg_rto`](#pg_rto)                                 |   `int`    |  `C`  | 恢复时间目标（秒），默认为 `30s`                                   |
+| [`pg_rto`](#pg_rto)                                 |   `enum`   |  `C`  | RTO 模式：`fast`,`norm`,`safe`,`wide`，默认 `norm`          |
 | [`pg_rpo`](#pg_rpo)                                 |   `int`    |  `C`  | 恢复点目标（字节），默认为 `1MiB`                                  |
 | [`pg_libs`](#pg_libs)                               |  `string`  |  `C`  | 预加载的库，默认为 `pg_stat_statements,auto_explain`           |
 | [`pg_delay`](#pg_delay)                             | `interval` |  `I`  | 备份集群主库的WAL重放应用延迟，用于制备延迟从库                             |
@@ -1006,7 +1006,7 @@ pg_conf: oltp.yml                 # config template: oltp,olap,crit,tiny. `oltp.
 pg_max_conn: auto                 # postgres max connections, `auto` will use recommended value
 pg_shared_buffer_ratio: 0.25      # postgres shared buffers ratio, 0.25 by default, 0.1~0.4
 pg_io_method: worker              # io method for postgres, auto,fsync,worker,io_uring, worker by default
-pg_rto: 30                        # recovery time objective in seconds,  `30s` by default
+pg_rto: norm                      # shared rto mode: fast,norm,safe,wide (or seconds for compatibility)
 pg_rpo: 1048576                   # recovery point objective in bytes, `1MiB` at most by default
 pg_libs: 'pg_stat_statements, auto_explain'  # preloaded libraries, `pg_stat_statements,auto_explain` by default
 pg_delay: 0                       # replication apply delay for standby cluster leader
@@ -1389,28 +1389,28 @@ Postgres 共享缓冲区内存比例，默认为 `0.25`，正常范围在 `0.1`~
 
 ### `pg_rto`
 
-参数名称： `pg_rto`， 类型： `int`， 层次：`C`
+参数名称： `pg_rto`， 类型： `enum`， 层次：`C`
 
-以秒为单位的恢复时间目标（RTO）。这将用于计算 Patroni 的 TTL 值，默认为 `30` 秒。
+恢复时间目标（RTO）模式，用于控制 Patroni 与 HAProxy 的超时参数，默认为 `norm`。
 
-如果主实例在这么长时间内失踪，将触发新的领导者选举，此值并非越低越好，它涉及到利弊权衡：
+Pigsty 提供四种预设的 RTO 模式，分别针对不同的网络条件与部署场景进行了优化：
 
-减小这个值可以减少集群故障转移期间的不可用时间（无法写入）， 但会使集群对短期网络抖动更加敏感，从而增加误报触发故障转移的几率。
+| 模式     | 适用场景     | 网络条件          | 平均 RTO  | 最坏 RTO   | 误切风险 |
+|:-------|:---------|:--------------|:--------|:---------|:-----|
+| `fast` | 同机柜/同交换机 | < 1ms，极稳定     | **14s** | **29s**  | 较高   |
+| `norm` | 同机房（默认）  | 1-5ms，正常      | **21s** | **43s**  | 中等   |
+| `safe` | 同省跨机房    | 10-50ms，跨机房   | **43s** | **91s**  | 较低   |
+| `wide` | 跨地域/跨洲   | 100-200ms，公网  | **92s** | **207s** | 极低   |
 
-您需要根据网络状况和业务约束来配置这个值，在故障几率和故障影响之间做出**权衡**， 默认值是 `30s`，它将影响以下的 Patroni 参数：
+减小 RTO 可以加快故障恢复速度，但会增加误切风险（网络抖动被误判为故障）。您需要根据实际网络条件选择合适的模式。
+更多详情请参阅 [**RTO 利弊权衡**](/docs/concept/ha/rto/) 文档。
+
+为了向后兼容，也支持直接指定秒数，系统会自动映射到最接近的模式：`< 30` → `fast`，`30-44` → `norm`，`45-89` → `safe`，`≥ 90` → `wide`。
 
 ```yaml
-# 获取领导者租约的 TTL（以秒为单位）。将其视为启动自动故障转移过程之前的时间长度。默认值：30
-ttl: {{ pg_rto }}
-
-# 循环将休眠的秒数。默认值：10，这是 patroni 检查循环间隔
-loop_wait: {{ (pg_rto / 3)|round(0, 'ceil')|int }}
-
-# DCS 和 PostgreSQL 操作重试的超时时间（以秒为单位）。比这短的 DCS 或网络问题不会导致 Patroni 降级领导。默认值：10
-retry_timeout: {{ (pg_rto / 3)|round(0, 'ceil')|int }}
-
-# 主实例在触发故障转移之前允许从故障中恢复的时间（以秒为单位），最大 RTO：2 倍循环等待 + primary_start_timeout
-primary_start_timeout: {{ (pg_rto / 3)|round(0, 'ceil')|int }}
+pg_rto: norm   # 默认模式，适合同机房部署
+pg_rto: safe   # 跨机房部署推荐
+pg_rto: 30     # 兼容旧版写法，等效于 norm
 ```
 
 
