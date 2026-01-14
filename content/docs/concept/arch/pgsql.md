@@ -99,7 +99,7 @@ PGSQL 模块在生产环境中以 **集群** 的形式组织，这些 **集群**
 [**高可用**](/docs/concept/ha) 子系统由 [**Patroni**](#patroni) 与 [**etcd**](#etcd) 组成，负责 PostgreSQL 集群的故障检测、自动切换与配置管理。
 
 **工作原理**：[Patroni](#patroni) 在每个节点上运行，托管本地 [PostgreSQL](#postgresql) 进程，并将集群状态（领导者、成员、配置）写入 [etcd](#etcd)。
-当主库故障时，[Patroni](#patroni) 通过 [etcd](#etcd) 协调选举，选出最健康的从库提升为新主库，整个过程自动完成，RTO 通常在 30 秒内。
+当主库故障时，[Patroni](#patroni) 通过 [etcd](#etcd) 协调选举，选出最健康的从库提升为新主库，整个过程自动完成，RTO 通常在 45 秒内。
 
 **关键交互**：
 - **[PostgreSQL](#postgresql)**：作为父进程启动、停止、重载 PG，控制其生命周期

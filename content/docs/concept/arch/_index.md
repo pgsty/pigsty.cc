@@ -92,7 +92,7 @@ $ bin/pgsql-add pg-test  # 初始化集群 'pg-test'
 
 [![pigsty-ha.png](/img/pigsty/ha.png)](/docs/concept/ha)
 
-硬件故障由 patroni、etcd 和 haproxy 提供的自愈高可用架构来兜底，在主库故障的情况下，默认会在 30 秒内执行自动故障转移（Failover）。
+硬件故障由 patroni、etcd 和 haproxy 提供的自愈高可用架构来兜底，在主库故障的情况下，默认会在 45 秒内执行自动故障转移（Failover）。
 客户端无需修改配置重启应用：Haproxy 利用 patroni 健康检查进行流量分发，读写请求会自动分发到新的集群主库中，并避免脑裂的问题。
 这一过程十分丝滑，例如在从库故障，或主动切换（switchover）的情况下，客户端只有一瞬间的当前查询闪断，
 

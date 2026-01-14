@@ -14,32 +14,59 @@ categories: [概念]
 
 ## 概览
 
-```mermaid
-flowchart TB
-    subgraph L1["🏢 第 1 层：物理安全"]
-        L1A["数据校验和 · PGTDE 透明加密"]
-    end
-    subgraph L2["🌐 第 2 层：网络安全"]
-        L2A["防火墙 · SSL/TLS 加密 · 本地 CA"]
-    end
-    subgraph L3["🛡️ 第 3 层：边界安全"]
-        L3A["HAProxy 代理 · Nginx 网关"]
-    end
-    subgraph L4["💻 第 4 层：主机安全"]
-        L4A["SELinux · 最小权限 · 系统加固"]
-    end
-    subgraph L5["🐘 第 5 层：应用安全"]
-        L5A["HBA 规则 · 密码策略 · 连接池"]
-    end
-    subgraph L6["🔒 第 6 层：数据安全"]
-        L6A["备份加密 · 审计日志 · PITR"]
-    end
-    subgraph L7["👤 第 7 层：用户安全"]
-        L7A["四角色模型 · RBAC · 证书认证"]
-    end
-
-    L1 --> L2 --> L3 --> L4 --> L5 --> L6 --> L7
+{{< infographic >}}
 ```
+infographic sequence-pyramid-simple
+data
+  title 七层安全模型
+  desc Pigsty 纵深防御体系：从物理安全到用户安全的多层保护
+  items
+    - label 物理安全
+      value 100
+      desc 数据校验和 · PGTDE 透明加密
+      time L1
+      icon mingcute/building-4-fill
+      illus server-cluster
+    - label 网络安全
+      value 95
+      desc 防火墙 · SSL/TLS 加密 · 本地 CA
+      time L2
+      icon mingcute/earth-2-fill
+      illus secure-server
+    - label 边界安全
+      value 90
+      desc HAProxy 代理 · Nginx 网关
+      time L3
+      icon mingcute/shield-fill
+      illus firewall-protection
+    - label 主机安全
+      value 85
+      desc SELinux · 最小权限 · 系统加固
+      time L4
+      icon mingcute/computer-fill
+      illus server-status
+    - label 应用安全
+      value 80
+      desc HBA 规则 · 密码策略 · 连接池
+      time L5
+      icon mingcute/safe-box-fill
+      illus database-security
+    - label 数据安全
+      value 75
+      desc 备份加密 · 审计日志 · PITR
+      time L6
+      icon mingcute/lock-fill
+      illus data-encryption
+    - label 用户安全
+      value 70
+      desc 四角色模型 · RBAC · 证书认证
+      time L7
+      icon mingcute/user-security-fill
+      illus user-flow
+theme light
+  palette pigsty
+```
+{{< /infographic >}}
 
 
 --------

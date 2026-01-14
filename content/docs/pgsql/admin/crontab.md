@@ -1,14 +1,114 @@
 ---
-title: 维护 PostgreSQL 集群性能
-linktitle: 维护保养
+title: 管理 PostgreSQL 定时任务
+linktitle: 定时任务
 weight: 80
-description: 维护保养：处理表膨胀、定期 VACUUM、自动化维护任务配置
-icon: fa-solid fa-spray-can-sparkles
+description: 配置 Crontab 定期调度 PostgreSQL 备份任务，执行 Vacuum Freeze / Analyze 任务，以及处理表膨胀
+icon: fa-solid fa-clock
 module: [PGSQL]
 categories: [任务]
 ---
 
+Pigsty 使用 crontab 来管理定时任务，用于执行例行备份，冻结老化事务，重整膨胀表索引等维护工作。
+
+--------
+
 ## 快速上手
+
+下面是两个使用 [**`pg_crontab`**](/docs/pgsql/param/#pg_crontab) 参数配置定时任务的示例，如果您不熟悉 Crontab 的语法，可以参考 [Crontab Guru](https://crontab.guru/) 的解释。
+
+`pg-meta` 集群配置了每天凌晨1点进行全量备份的定时任务，`pg-test` 配置了每周一全量备份，其余日期增量备份的定时任务。
+
+```yaml
+    pg-meta:
+      hosts: { 10.10.10.10: { pg_seq: 1, pg_role: primary } }
+      vars:
+        pg_cluster: pg-meta
+        pg_crontab:
+          - '00 01 * * * /pg/bin/pg-backup'
+    pg-test:
+      hosts:
+        10.10.10.11: { pg_seq: 1, pg_role: primary }
+        10.10.10.12: { pg_seq: 2, pg_role: replica }
+      vars:
+        pg_cluster: pg-test           # define pgsql cluster name
+        pg_crontab:
+          - '00 01 * * 1            /pg/bin/pg-backup full'
+          - '00 01 * * 2,3,4,5,6,7  /pg/bin/pg-backup'
+```
+
+这些定时任务会在 [**`pgsql.yml`**](/docs/pgsql/playbook/pgsqlyml) 剧本执行时（`pg_crontab` 任务）自动添加到对应操作系统发行版的默认位置：
+
+- EL：`/var/spool/cron/postgres`
+- Debian/Ubuntu：`/var/spool/cron/crontabs/postgres`
+
+
+
+---------
+
+## 修改定时任务
+
+要修改这些定时任务，可以直接编辑集群配置中的 `pg_crontab` 参数，然后重新执行剧本应用变更。
+
+```bash
+./pgsql.yml -t pg_crontab -l <cluster>
+```
+
+每次执行剧本都会 **全量覆盖刷新** 定时任务
+
+
+
+---------
+
+## 查阅定时任务
+
+要查看当前配置的定时任务，可以使用 [**`pg_dbsu`**](/docs/pgsql/param#pg_dbsu) 操作系统用户执行以下命令：
+
+```bash
+crontab -l
+
+# Pigsty Managed Crontab for postgres
+SHELL=/bin/bash
+PATH=/usr/pgsql/bin:/pg/bin:/usr/local/bin:/usr/bin:/usr/sbin:/bin:/sbin
+MAILTO=""
+00 01 * * * /pg/bin/pg-backup
+```
+
+
+
+
+--------
+
+## 常用任务
+
+Pigsty 提供了一些常用的例行任务脚本，
+
+- **物理备份**：使用 `pg-backup` 脚本执行备份 
+- **事务冻结**：使用 `pg-vacuum` 脚本冻结老化事务并进行 ANALYZE
+- **膨胀治理**：使用 `pg-repack` 脚本重整膨胀表与索引
+
+上面这三个脚本，都可以在全体集群实例上配置，但只会在主库上进行，这确保了当集群发生主从切换时，新的主库也会继续执行维护任务。
+
+唯一 **默认** 设置的定时任务是 “备份任务”，这确保了每天默认会有一个 “全量备份”。
+您可以在 [**配置清单**](/docs/concept/iac/inventory) 中在全局层面或者集群层面进行覆盖。
+
+crontab -l
+
+---------
+
+## pg-backup
+
+
+---------
+
+## pg-vacuum
+
+---------
+
+## pg-repack
+
+
+
+
 
 要确保 PostgreSQL 集群健康稳定运行，需要进行例行维护保养工作。Pigsty 提供了开箱即用的维护脚本。
 
