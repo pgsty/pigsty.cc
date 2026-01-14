@@ -14,7 +14,7 @@ Pigsty 提供了约 **380+** 个配置参数，分布在 8 个默认模块中，
 
 | 模块                               | 参数组 | 参数总数 | 说明                                |
 |:---------------------------------|:---:|:----:|:----------------------------------|
-| [**PGSQL**](/docs/pgsql/param)   |  9  | 123  | PostgreSQL 数据库集群的核心配置             |
+| [**PGSQL**](/docs/pgsql/param)   |  9  | 125  | PostgreSQL 数据库集群的核心配置             |
 | [**INFRA**](/docs/infra/param)   | 10  |  82  | 基础设施组件：软件源、Nginx、DNS、监控、Grafana 等 |
 | [**NODE**](/docs/node/param)     | 11  |  83  | 主机节点调优：身份、DNS、包、调优、安全、管理员、时间、VIP等 |
 | [**ETCD**](/docs/etcd/param)     |  2  |  13  | 分布式配置存储与服务发现                      |
@@ -28,14 +28,14 @@ Pigsty 提供了约 **380+** 个配置参数，分布在 8 个默认模块中，
 
 ## PGSQL
 
-[`PGSQL`](/docs/pgsql) 模块提供了 **9 组共 123 个** PostgreSQL 相关配置参数。
+[`PGSQL`](/docs/pgsql) 模块提供了 **9 组共 125 个** PostgreSQL 相关配置参数。
 
 | 参数组                                              | 参数数 | 说明                             |
 |:-------------------------------------------------|:---:|:-------------------------------|
 | [`PG_ID`](/docs/pgsql/param#pg_id)               | 11  | PostgreSQL 集群与实例的身份标识参数        |
-| [`PG_BUSINESS`](/docs/pgsql/param#pg_business)   | 12  | 业务用户、数据库、服务与访问控制规则定义           |
+| [`PG_BUSINESS`](/docs/pgsql/param#pg_business)   | 13  | 业务用户、数据库、服务与访问控制规则定义           |
 | [`PG_INSTALL`](/docs/pgsql/param#pg_install)     | 10  | PostgreSQL 安装相关：版本、路径、软件包      |
-| [`PG_BOOTSTRAP`](/docs/pgsql/param#pg_bootstrap) | 38  | PostgreSQL 集群初始化引导：Patroni 高可用 |
+| [`PG_BOOTSTRAP`](/docs/pgsql/param#pg_bootstrap) | 39  | PostgreSQL 集群初始化引导：Patroni 高可用 |
 | [`PG_PROVISION`](/docs/pgsql/param#pg_provision) |  8  | PostgreSQL 集群模板置备：角色、权限、扩展     |
 | [`PG_BACKUP`](/docs/pgsql/param#pg_backup)       |  6  | pgBackRest 备份与恢复配置             |
 | [`PG_ACCESS`](/docs/pgsql/param#pg_access)       | 17  | 服务暴露、连接池、VIP、DNS 等客户端访问配置      |
@@ -175,6 +175,7 @@ Pigsty 提供了约 **380+** 个配置参数，分布在 8 个默认模块中，
 | [`pg_services`](/docs/pgsql/param#pg_services)                         | `service[]`  | postgres 业务服务                         |
 | [`pg_hba_rules`](/docs/pgsql/param#pg_hba_rules)                       |   `hba[]`    | postgres 的业务 hba 规则                   |
 | [`pgb_hba_rules`](/docs/pgsql/param#pgb_hba_rules)                     |   `hba[]`    | pgbouncer 的业务 hba 规则                  |
+| [`pg_crontab`](/docs/pgsql/param#pg_crontab)                           | `string[]`   | postgres dbsu 的定时任务                   |
 | [`pg_replication_username`](/docs/pgsql/param#pg_replication_username) |  `username`  | postgres 复制用户名，默认为 `replicator`       |
 | [`pg_replication_password`](/docs/pgsql/param#pg_replication_password) |  `password`  | postgres 复制密码，默认为 `DBUser.Replicator` |
 | [`pg_admin_username`](/docs/pgsql/param#pg_admin_username)             |  `username`  | postgres 管理员用户名，默认为 `dbuser_dba`      |
@@ -228,6 +229,7 @@ Pigsty 提供了约 **380+** 个配置参数，分布在 8 个默认模块中，
 | [`pg_max_conn`](/docs/pgsql/param#pg_max_conn)                       |   `int`    | postgres 最大连接数，`auto` 将使用推荐值                          |
 | [`pg_shared_buffer_ratio`](/docs/pgsql/param#pg_shared_buffer_ratio) |  `float`   | postgres 共享缓冲区内存比率，默认为 0.25，范围 0.1~0.4                |
 | [`pg_rto`](/docs/pgsql/param#pg_rto)                                 |   `enum`   | RTO 模式：`fast`,`norm`,`safe`,`wide`，默认 `norm`          |
+| [`pg_rto_plan`](/docs/pgsql/param#pg_rto_plan)                       |   `dict`   | RTO 预设配置，定义 Patroni HA 与 HAProxy 健康检查的超时参数            |
 | [`pg_rpo`](/docs/pgsql/param#pg_rpo)                                 |   `int`    | 恢复点目标（字节），默认为 `1MiB`                                  |
 | [`pg_libs`](/docs/pgsql/param#pg_libs)                               |  `string`  | 预加载的库，默认为 `pg_stat_statements,auto_explain`           |
 | [`pg_delay`](/docs/pgsql/param#pg_delay)                             | `interval` | 备份集群主库的WAL重放应用延迟，用于制备延迟从库                             |

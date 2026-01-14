@@ -128,6 +128,7 @@ categories: [参考]
 | [`pg_max_conn`](#pg_max_conn)                       |   `int`    |  `C`  | postgres 最大连接数，`auto` 将使用推荐值                          |
 | [`pg_shared_buffer_ratio`](#pg_shared_buffer_ratio) |  `float`   |  `C`  | postgres 共享缓冲区内存比率，默认为 0.25，范围 0.1~0.4                |
 | [`pg_rto`](#pg_rto)                                 |   `enum`   |  `C`  | RTO 模式：`fast`,`norm`,`safe`,`wide`，默认 `norm`          |
+| [`pg_rto_plan`](#pg_rto_plan)                       |   `dict`   |  `G`  | RTO 预设配置，定义 Patroni HA 与 HAProxy 健康检查的超时参数            |
 | [`pg_rpo`](#pg_rpo)                                 |   `int`    |  `C`  | 恢复点目标（字节），默认为 `1MiB`                                  |
 | [`pg_libs`](#pg_libs)                               |  `string`  |  `C`  | 预加载的库，默认为 `pg_stat_statements,auto_explain`           |
 | [`pg_delay`](#pg_delay)                             | `interval` |  `I`  | 备份集群主库的WAL重放应用延迟，用于制备延迟从库                             |
@@ -484,11 +485,12 @@ pg_exporters: # list all remote instances here, alloc a unique unused local port
 
 用户需**重点关注**此部分参数，因为这里是业务声明自己所需数据库对象的地方。
 
-* 业务用户定义： [`pg_users`](#pg_users)
-* 业务数据库定义： [`pg_databases`](#pg_databases)
-* 集群专有服务定义： [`pg_services`](#pg_services) （全局定义：[`pg_default_services`](#pg_default_services)）
-* PostgreSQL集群/实例特定的HBA规则： [`pg_default_services`](#pg_default_services)
-* Pgbouncer连接池特定HBA规则： [`pgb_hba_rules`](#pgb_hba_rules)
+* 业务用户定义： [**`pg_users`**](#pg_users)
+* 业务数据库定义： [**`pg_databases`**](#pg_databases)
+* 集群专有服务定义： [**`pg_services`**](#pg_services) （全局定义：[**`pg_default_services`**](#pg_default_services)）
+* PostgreSQL集群/实例特定的HBA规则： [**`pg_hba_rules`**](#pg_hba_rules)
+* Pgbouncer连接池特定HBA规则： [**`pgb_hba_rules`**](#pgb_hba_rules)
+* 定时任务（crontab）定义： [**`pg_crontab`**](#pg_crontab)
 
 [默认](/docs/concept/sec/ac/#默认用户) 的数据库用户及其凭据，强烈建议在生产环境中修改这些用户的密码。
 
@@ -523,28 +525,29 @@ pg_monitor_password: DBUser.Monitor
 
 PostgreSQL 业务用户列表，需要在 PG 集群层面进行定义。默认值为：`[]` 空列表。
 
-每一个数组元素都是一个 [用户/角色](/docs/pgsql/config/user) 定义，例如：
+每一个数组元素都是一个 [**用户/角色**](/docs/pgsql/config/user) 定义，例如：
 
 ```yaml
-- name: dbuser_meta               # 必需，`name` 是用户定义的唯一必选字段
+- name: dbuser_meta               # 必选，`name` 是用户定义的唯一必选字段
+  state: create                   # 可选，用户状态：create（创建，默认）、absent（删除）
   password: DBUser.Meta           # 可选，密码，可以是 scram-sha-256 哈希字符串或明文
-  login: true                     # 可选，默认情况下可以登录
-  superuser: false                # 可选，默认为 false，是超级用户吗？
-  createdb: false                 # 可选，默认为 false，可以创建数据库吗？
-  createrole: false               # 可选，默认为 false，可以创建角色吗？
-  inherit: true                   # 可选，默认情况下，此角色可以使用继承的权限吗？
-  replication: false              # 可选，默认为 false，此角色可以进行复制吗？
-  bypassrls: false                # 可选，默认为 false，此角色可以绕过行级安全吗？
-  pgbouncer: true                 # 可选，默认为 false，将此用户添加到 pgbouncer 用户列表吗？（使用连接池的生产用户应该显式定义为 true）
-  connlimit: -1                   # 可选，用户连接限制，默认 -1 禁用限制
-  expire_in: 3650                 # 可选，此角色过期时间：从创建时 + n天计算（优先级比 expire_at 更高）
-  expire_at: '2030-12-31'         # 可选，此角色过期的时间点，使用 YYYY-MM-DD 格式的字符串指定一个特定日期（优先级没 expire_in 高）
-  comment: pigsty admin user      # 可选，此用户/角色的说明与备注字符串
-  roles: [dbrole_admin]           # 可选，默认角色为：dbrole_{admin,readonly,readwrite,offline}
-  parameters: {}                  # 可选，使用 `ALTER ROLE SET` 针对这个角色，配置角色级的数据库参数
-  pool_mode: transaction          # 可选，默认为 transaction 的 pgbouncer 池模式，用户级别
-  pool_connlimit: -1              # 可选，用户级别的最大数据库连接数，默认 -1 禁用限制
-  search_path: public             # 可选，根据 postgresql 文档的键值配置参数（例如：使用 pigsty 作为默认 search_path）
+  login: true                     # 可选，默认为 true，是否可以登录
+  superuser: false                # 可选，默认为 false，是否是超级用户
+  createdb: false                 # 可选，默认为 false，是否可以创建数据库
+  createrole: false               # 可选，默认为 false，是否可以创建角色
+  inherit: true                   # 可选，默认为 true，是否自动继承所属角色权限
+  replication: false              # 可选，默认为 false，是否可以发起流复制连接
+  bypassrls: false                # 可选，默认为 false，是否可以绕过行级安全
+  connlimit: -1                   # 可选，用户连接数限制，默认 -1 不限制
+  expire_in: 3650                 # 可选，从创建时起 N 天后过期（优先级比 expire_at 高）
+  expire_at: '2030-12-31'         # 可选，过期日期，使用 YYYY-MM-DD 格式（优先级没 expire_in 高）
+  comment: pigsty admin user      # 可选，用户备注信息
+  roles: [dbrole_admin]           # 可选，所属角色数组
+  parameters:                     # 可选，角色级配置参数
+    search_path: public
+  pgbouncer: true                 # 可选，是否加入连接池用户列表，默认 false
+  pool_mode: transaction          # 可选，用户级别的池化模式，默认 transaction
+  pool_connlimit: -1              # 可选，用户级别的连接池最大连接数，默认 -1 不限制
 ```
 
 
@@ -557,34 +560,44 @@ PostgreSQL 业务用户列表，需要在 PG 集群层面进行定义。默认�
 
 PostgreSQL 业务数据库列表，需要在 PG 集群层面进行定义。默认值为：`[]` 空列表。
 
-每一个数组元素都是一个 [业务数据库](/docs/pgsql/config/db) 定义，例如：
+每一个数组元素都是一个 [**业务数据库**](/docs/pgsql/config/db) 定义，例如：
 
 ```yaml
 - name: meta                      # 必选，`name` 是数据库定义的唯一必选字段
+  state: create                   # 可选，数据库状态：create（创建，默认）、absent（删除）、recreate（重建）
   baseline: cmdb.sql              # 可选，数据库 sql 的基线定义文件路径（ansible 搜索路径中的相对路径，如 files/）
   pgbouncer: true                 # 可选，是否将此数据库添加到 pgbouncer 数据库列表？默认为 true
   schemas: [pigsty]               # 可选，要创建的附加模式，由模式名称字符串组成的数组
-  extensions:                     # 可选，要安装的附加扩展： 扩展对象的数组
+  extensions:                     # 可选，要安装的附加扩展：扩展对象的数组
     - { name: postgis , schema: public }  # 可以指定将扩展安装到某个模式中，也可以不指定（不指定则安装到 search_path 首位模式中）
     - { name: timescaledb }               # 例如有的扩展会创建并使用固定的模式，就不需要指定模式。
   comment: pigsty meta database   # 可选，数据库的说明与备注信息
-  owner: postgres                 # 可选，数据库所有者，默认为 postgres
+  owner: postgres                 # 可选，数据库所有者，不指定则为当前用户
   template: template1             # 可选，要使用的模板，默认为 template1，目标必须是一个模板数据库
-  encoding: UTF8                  # 可选，数据库编码，默认为 UTF8（必须与模板数据库相同）
-  locale: C                       # 可选，数据库地区设置，默认为 C（必须与模板数据库相同）
-  lc_collate: C                   # 可选，数据库 collate 排序规则，默认为 C（必须与模板数据库相同），没有理由不建议更改。
-  lc_ctype: C                     # 可选，数据库 ctype 字符集，默认为 C（必须与模板数据库相同）
+  strategy: FILE_COPY             # 可选，克隆策略：FILE_COPY 或 WAL_LOG（PG15+），不指定使用 PG 默认
+  encoding: UTF8                  # 可选，不指定则继承模板/集群配置（UTF8）
+  locale: C                       # 可选，不指定则继承模板/集群配置（C）
+  lc_collate: C                   # 可选，不指定则继承模板/集群配置（C）
+  lc_ctype: C                     # 可选，不指定则继承模板/集群配置（C）
+  locale_provider: libc           # 可选，本地化提供者：libc、icu、builtin（PG15+）
+  icu_locale: en-US               # 可选，ICU 本地化规则（PG15+）
+  icu_rules: ''                   # 可选，ICU 排序规则（PG16+）
+  builtin_locale: C.UTF-8         # 可选，内置本地化提供者规则（PG17+）
   tablespace: pg_default          # 可选，默认表空间，默认为 'pg_default'
+  is_template: false              # 可选，是否标记为模板数据库，允许任何有 CREATEDB 权限的用户克隆
   allowconn: true                 # 可选，是否允许连接，默认为 true。显式设置 false 将完全禁止连接到此数据库
   revokeconn: false               # 可选，撤销公共连接权限。默认为 false，设置为 true 时，属主和管理员之外用户的 CONNECT 权限会被回收
   register_datasource: true       # 可选，是否将此数据库注册到 grafana 数据源？默认为 true，显式设置为 false 会跳过注册
-  connlimit: -1                   # 可选，数据库连接限制，默认为 -1 ，不限制，设置为正整数则会限制连接数。
+  connlimit: -1                   # 可选，数据库连接限制，默认为 -1 ，不限制，设置为正整数则会限制连接数
+  parameters:                     # 可选，数据库级参数，通过 ALTER DATABASE SET 设置
+    work_mem: '64MB'
+    statement_timeout: '30s'
   pool_auth_user: dbuser_meta     # 可选，连接到此 pgbouncer 数据库的所有连接都将使用此用户进行验证（启用 pgbouncer_auth_query 才有用）
   pool_mode: transaction          # 可选，数据库级别的 pgbouncer 池化模式，默认为 transaction
   pool_size: 64                   # 可选，数据库级别的 pgbouncer 默认池子大小，默认为 64
-  pool_size_reserve: 32           # 可选，数据库级别的 pgbouncer 池子保留空间，默认为 32，当默认池子不够用时，最多再申请这么多条突发连接。
+  pool_reserve: 32                # 可选，数据库级别的 pgbouncer 池子保留空间，默认为 32，当默认池子不够用时，最多再申请这么多条突发连接
   pool_size_min: 0                # 可选，数据库级别的 pgbouncer 池的最小大小，默认为 0
-  pool_max_db_conn: 100           # 可选，数据库级别的最大数据库连接数，默认为 100
+  pool_connlimit: 100             # 可选，数据库级别的最大数据库连接数，默认为 100
 ```
 
 在每个数据库定义对象中，只有 `name` 是必选字段，其他的字段都是可选项。
@@ -601,7 +614,7 @@ PostgreSQL 业务数据库列表，需要在 PG 集群层面进行定义。默�
 
 PostgreSQL 服务列表，需要在 PG 集群层面进行定义。默认值为：`[]` ，空列表。
 
-用于在数据库集群层面定义额外的服务，数组中的每一个对象定义了一个 [服务](/docs/pgsql/service/#定义服务)，一个完整的服务定义样例如下：
+用于在数据库集群层面定义额外的服务，数组中的每一个对象定义了一个 [**服务**](/docs/pgsql/service/#定义服务)，一个完整的服务定义样例如下：
 
 
 ```yaml
@@ -611,10 +624,12 @@ PostgreSQL 服务列表，需要在 PG 集群层面进行定义。默认值为�
   selector: "[]"                  # 必选，服务成员选择器，使用 JMESPath 来筛选配置清单
   backup: "[? pg_role == `primary`]"  # 可选，服务成员选择器（备份），也就是当默认选择器选中的实例都宕机后，服务才会由这里选中的实例成员来承载
   dest: default                   # 可选，目标端口，default|postgres|pgbouncer|<port_number>，默认为 'default'，Default的意思就是使用 pg_default_service_dest 的取值来最终决定
-  check: /sync                    # 可选，健康检查 URL 路径，默认为 /，这里使用 Patroni API：/sync ，只有同步备库和主库才会返回 200 健康状态码 
+  check: /sync                    # 可选，健康检查 URL 路径，默认为 /，这里使用 Patroni API：/sync ，只有同步备库和主库才会返回 200 健康状态码
   maxconn: 5000                   # 可选，允许的前端连接最大数，默认为5000
   balance: roundrobin             # 可选，haproxy 负载均衡算法（默认为 roundrobin，其他选项：leastconn）
-  options: 'inter 3s fastinter 1s downinter 5s rise 3 fall 3 on-marked-down shutdown-sessions slowstart 30s maxconn 3000 maxqueue 128 weight 100'
+  #options: 'inter 3s fastinter 1s downinter 5s rise 3 fall 3 on-marked-down shutdown-sessions slowstart 30s maxconn 3000 maxqueue 128 weight 100'
+  # 注意：健康检查相关参数（inter, fastinter, downinter, rise, fall）现在由 pg_rto_plan 统一控制
+  # 默认 norm 模式参数：inter 2s fastinter 1s downinter 2s rise 3 fall 3
 ```
 
 请注意，本参数用于在集群层面添加额外的服务。如果您想在全局定义所有 PostgreSQL 数据库都要提供的服务，可以使用 [`pg_default_services`](#pg_default_services) 参数。
@@ -1228,13 +1243,15 @@ patroni 日志目录，默认为 `/pg/log/patroni`，由 Vector 日志代理收�
 
 patroni看门狗模式：`automatic`，`required`，`off`，默认值为 `off`。
 
-在主库故障的情况下，Patroni 可以使用 [看门狗](https://patroni.readthedocs.io/en/latest/watchdog.html) 来强制关机旧主库节点以避免脑裂。
+在主库故障的情况下，Patroni 可以使用 [**看门狗**](https://patroni.readthedocs.io/en/latest/watchdog.html) 来强制关机旧主库节点以避免脑裂。
 
 - `off`：不使用`看门狗`。完全不进行 Fencing （默认行为）
 - `automatic`：如果内核启用了`softdog`模块并且看门狗属于dbsu，则启用 `watchdog`。
 - `required`：强制启用 `watchdog`，如果`softdog`不可用则拒绝启动 Patroni/PostgreSQL。
 
 默认值为`off`，您不应该在 Infra节点 启用看门狗，数据一致性优先于可用性的关键系统，特别是与钱有关的业务集群可以考虑打开此选项。
+
+> **注意**：当使用 [`pg_conf`](#pg_conf) = `crit` 配置模板时，`off` 会被自动提升为 `automatic`，以确保关键业务系统的数据一致性。
 
 请注意，如果您的所有访问流量都使用 HAproxy 健康检查 [**服务接入**](/docs/pgsql/service/#接入服务)，正常是不存在脑裂风险的。
 
@@ -1438,6 +1455,47 @@ pg_rto: norm   # 默认模式，适合同机房部署
 pg_rto: safe   # 跨机房部署推荐
 pg_rto: 30     # 兼容旧版写法，等效于 norm
 ```
+
+
+
+
+### `pg_rto_plan`
+
+参数名称： `pg_rto_plan`， 类型： `dict`， 层次：`G`
+
+RTO 预设配置字典，定义了 Patroni 高可用与 HAProxy 健康检查的具体超时参数，默认值包含四种预设模式：
+
+```yaml
+pg_rto_plan:  # [ttl, loop, retry, start, margin, inter, fastinter, downinter, rise, fall]
+  fast: [ 20  ,5  ,5  ,15 ,5  ,'1s' ,'0.5s' ,'1s' ,3 ,3 ]  # rto < 30s
+  norm: [ 30  ,5  ,10 ,25 ,5  ,'2s' ,'1s'   ,'2s' ,3 ,3 ]  # rto < 45s
+  safe: [ 60  ,10 ,20 ,45 ,10 ,'3s' ,'1.5s' ,'3s' ,3 ,3 ]  # rto < 90s
+  wide: [ 120 ,20 ,30 ,95 ,15 ,'4s' ,'2s'   ,'4s' ,3 ,3 ]  # rto < 150s
+```
+
+每个模式是一个包含 10 个参数的数组，用于同时控制 Patroni 和 HAProxy 的超时行为：
+
+| 索引 | 参数名                     | 组件      | 说明                     |
+|:--:|:------------------------|:--------|:-----------------------|
+| 0  | `ttl`                   | Patroni | 主库锁 TTL（秒）             |
+| 1  | `loop_wait`             | Patroni | 主循环休眠间隔（秒）             |
+| 2  | `retry_timeout`         | Patroni | DCS/PostgreSQL 重试超时    |
+| 3  | `primary_start_timeout` | Patroni | 主库恢复等待时间               |
+| 4  | `safety_margin`         | Patroni | Watchdog 安全边界          |
+| 5  | `inter`                 | HAProxy | 健康检查间隔                 |
+| 6  | `fastinter`             | HAProxy | 状态变化时的快速检查间隔           |
+| 7  | `downinter`             | HAProxy | 服务器宕机时的检查间隔            |
+| 8  | `rise`                  | HAProxy | 标记为 UP 所需的连续成功检查次数     |
+| 9  | `fall`                  | HAProxy | 标记为 DOWN 所需的连续失败检查次数   |
+
+此参数允许用户通过覆盖默认值来自定义 RTO 行为，或添加新的 RTO 模式。例如，如果您需要一个更激进的 RTO 配置：
+
+```yaml
+pg_rto_plan:
+  ultra: [ 10, 2, 3, 8, 2, '0.5s', '0.25s', '0.5s', 2, 2 ]  # 极速模式，仅限低延迟环境
+```
+
+> **注意**：修改此参数需要谨慎，不恰当的超时配置可能导致集群不稳定或频繁误切换。
 
 
 

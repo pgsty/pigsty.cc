@@ -1,5 +1,5 @@
 ---
-title: Patroni 高可用管理
+title: 管理 Patroni 高可用
 linkTitle: 高可用管理
 weight: 15
 description: 使用 Patroni 管理 PG 集群高可用，包括，修改参数，查看状态，主从切换，重启，重做从库等操作。

@@ -1,0 +1,13 @@
+{{/* KaTeX - 使用本地文件替代 CDN */ -}}
+{{ $min := cond hugo.IsProduction ".min" "" -}}
+<link rel="stylesheet" href="{{ printf "vendor/katex/katex%s.css" $min | absURL }}">
+<script defer src="{{ printf "vendor/katex/katex%s.js" $min | absURL }}"></script>
+<script defer src="{{ printf "vendor/katex/contrib/auto-render%s.js" $min | absURL }}" onload="renderMathInElement(document.body, {
+  delimiters: [
+    {left: '$$', right: '$$', display: true},
+    {left: '$', right: '$', display: false},
+    {left: '\\[', right: '\\]', display: true},
+    {left: '\\(', right: '\\)', display: false}
+  ],
+  throwOnError: false
+});"></script>

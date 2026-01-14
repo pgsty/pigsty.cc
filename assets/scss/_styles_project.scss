@@ -187,3 +187,17 @@
     width: auto;
   }
 }
+
+// Infographic 容器样式
+// 默认与正文内容宽度对齐（大屏幕 90%），可通过 full="true" 参数填满容器
+.infographic-container {
+  width: 100%;
+  margin: 1.5rem 0;
+}
+
+// ECharts 容器样式
+// 默认与正文内容宽度对齐（大屏幕 90%），可通过 full="true" 参数填满容器
+.echarts-container {
+  width: 100%;
+  margin: 1.5rem 0;
+}

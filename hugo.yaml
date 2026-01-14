@@ -70,6 +70,12 @@ markup:
         block: true
     renderer:
       unsafe: true
+    extensions:
+      passthrough:
+        enable: true
+        delimiters:
+          block: [['\[', '\]'], ['$$', '$$']]
+          inline: [['\(', '\)']]
   highlight:
     style: tango
     codeFences: true

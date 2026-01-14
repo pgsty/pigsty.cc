@@ -12,7 +12,7 @@
           desc In Progress
     {{< /infographic >}}
 
-    {{< infographic width="100%" height="600px" >}}
+    {{< infographic height="600px" full="true" >}}
     infographic compare-vs-horizontal
     data
       title PostgreSQL vs MySQL
@@ -26,8 +26,9 @@
     {{< /infographic >}}
 
   Parameters:
-    width   - Container width (default: 100%)
     height  - Container height (default: auto)
+    full    - If true, fills entire container width; if false (default),
+              aligns with content max-width (90% on large screens)
 
   Notes:
     - Uses AntV Infographic DSL syntax (similar to Mermaid)
@@ -36,11 +37,15 @@
     - See: https://infographic.antv.vision/
 */ -}}
 
-{{- $width := .Get "width" | default "100%" -}}
 {{- $height := .Get "height" | default "auto" -}}
+{{- $full := .Get "full" | default false -}}
 {{- $id := printf "infographic-%s" (md5 .Inner) -}}
+{{- $containerClass := "infographic-container" -}}
+{{- if not $full -}}
+  {{- $containerClass = "infographic-container td-max-width-on-larger-screens" -}}
+{{- end -}}
 
-<div id="{{ $id }}" class="infographic-container" style="width: {{ $width }}; height: {{ $height }}; margin: 1em 0;"></div>
+<div id="{{ $id }}" class="{{ $containerClass }}"{{ with $height | ne "auto" }} style="height: {{ $height }};"{{ end }}></div>
 
 <script>
 (function() {
@@ -53,7 +58,7 @@
     try {
       var ig = new AntVInfographic.Infographic({
         container: '#' + containerId,
-        width: '{{ $width }}',
+        width: dom.offsetWidth || '100%',
         height: '{{ $height }}',
       });
       ig.render(syntax);

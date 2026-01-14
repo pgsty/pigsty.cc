@@ -1,40 +1,83 @@
 {{- /*
   ECharts Shortcode for Hugo/Docsy
 
-  Usage:
+  Usage (simple - bare YAML/JSON):
     {{< echarts >}}
-    { "xAxis": { "type": "category", "data": ["A", "B", "C"] }, "yAxis": { "type": "value" }, "series": [{ "data": [10, 20, 30], "type": "bar" }] }
+    xAxis: { type: category, data: ["A", "B", "C"] }
+    yAxis: { type: value }
+    series: [{ data: [10, 20, 30], type: bar }]
     {{< /echarts >}}
 
-    {{< echarts width="100%" height="500px" >}}
-    xAxis:
-      type: category
-      data: ["Mon", "Tue", "Wed", "Thu", "Fri"]
-    yAxis:
-      type: value
+  Usage (with code blocks - recommended for complex charts):
+    {{< echarts height="500px" >}}
+    ```js
+    var myFormatter = function(params) { return params[0].name; };
+    ```
+    ```yaml
+    tooltip:
+      formatter: $fn:myFormatter
     series:
       - data: [150, 230, 224, 218, 135]
         type: line
+    ```
+    {{< /echarts >}}
+
+  Usage (legacy - JS block + bare config):
+    {{< echarts >}}
+    ```js
+    var myFormatter = function(params) { return params[0].name; };
+    ```
+    tooltip:
+      formatter: $fn:myFormatter
     {{< /echarts >}}
 
   Parameters:
-    width   - Chart width (default: 100%)
     height  - Chart height (default: 400px)
     theme   - ECharts theme: light, dark (default: auto based on page theme)
+    full    - If true, fills entire container width; if false (default),
+              aligns with content max-width (90% on large screens)
 
   Notes:
     - Supports both JSON and YAML format for chart options
+    - Config can be bare text or wrapped in ```yaml/```json/``` code block
+    - Supports JavaScript functions via ```js blocks with $fn:name references
     - Automatically resizes on window resize
     - Responds to light/dark theme switching
 */ -}}
 
-{{- $width := .Get "width" | default "100%" -}}
 {{- $height := .Get "height" | default "400px" -}}
 {{- $theme := .Get "theme" -}}
+{{- $full := .Get "full" | default false -}}
 {{- $id := printf "echarts-%s" (md5 .Inner) -}}
+{{- $containerClass := "echarts-container" -}}
+{{- if not $full -}}
+  {{- $containerClass = "echarts-container td-max-width-on-larger-screens" -}}
+{{- end -}}
+
+{{- /* Extract JavaScript code blocks and config */ -}}
+{{- $content := .Inner -}}
+{{- $jsCode := "" -}}
+{{- $configContent := "" -}}
+
+{{- /* 1. Extract ```js code blocks */ -}}
+{{- if findRE "```js[\\s\\S]*?```" $content -}}
+  {{- range findRE "```js([\\s\\S]*?)```" $content -}}
+    {{- $jsCode = printf "%s\n%s" $jsCode (replaceRE "```js([\\s\\S]*?)```" "$1" .) -}}
+  {{- end -}}
+  {{- $content = replaceRE "```js[\\s\\S]*?```" "" $content -}}
+{{- end -}}
+
+{{- /* 2. Extract config: check for ```yaml/```json/``` code block, or use bare content */ -}}
+{{- if findRE "```(?:yaml|json)?\\s*\\n[\\s\\S]*?```" $content -}}
+  {{- /* Config is wrapped in code block - extract content */ -}}
+  {{- $configContent = replaceRE "```(?:yaml|json)?\\s*\\n([\\s\\S]*?)```" "$1" $content -}}
+{{- else -}}
+  {{- /* Legacy format: bare YAML/JSON */ -}}
+  {{- $configContent = $content -}}
+{{- end -}}
 
 {{- /* Parse JSON or YAML options */ -}}
-{{- $options := .Inner | transform.Unmarshal -}}
+{{- $options := $configContent | transform.Unmarshal -}}
 
 {{- /* Load ECharts JS only once per page */ -}}
 {{- if not (.Page.Scratch.Get "echarts-loaded") -}}
@@ -42,12 +85,15 @@
 <script src="/js/echarts.min.js"></script>
 {{- end -}}
 
-<div id="{{ $id }}" class="echarts-container" style="width: {{ $width }}; height: {{ $height }}; margin: 1em 0;"></div>
+<div id="{{ $id }}" class="{{ $containerClass }}" style="height: {{ $height }};"></div>
 
 <script>
 (function() {
   var dom = document.getElementById('{{ $id }}');
   if (!dom) return;
+
+  {{- /* Output JavaScript function definitions */ -}}
+  {{ $jsCode | safeJS }}
 
   {{- /* Determine theme */ -}}
   {{- if $theme }}
@@ -57,7 +103,28 @@
   {{- end }}
 
   var chart = echarts.init(dom, theme);
-  var options = {{ $options | jsonify | safeJS }};
+  var optionsJson = {{ $options | jsonify | safeJS }};
+
+  // Replace $fn:xxx references with actual functions
+  function replaceFnRefs(obj) {
+    if (typeof obj === 'string' && obj.startsWith('$fn:')) {
+      var fnName = obj.substring(4);
+      return eval(fnName);
+    }
+    if (Array.isArray(obj)) {
+      return obj.map(replaceFnRefs);
+    }
+    if (obj && typeof obj === 'object') {
+      var result = {};
+      for (var key in obj) {
+        result[key] = replaceFnRefs(obj[key]);
+      }
+      return result;
+    }
+    return obj;
+  }
+
+  var options = replaceFnRefs(optionsJson);
   chart.setOption(options);
 
   // Handle window resize
