@@ -1021,14 +1021,18 @@ node_ntp_servers: [ 'pool ${admin_ip} iburst' ]
 
 定义在节点 `/etc/crontab` 中的定时任务：默认值为：`[]` 空数组。
 
-每一个数组数组元素都是一个字符串，代表一行定时任务。使用标准的 cron 格式定义。
-
-例如，以下配置会以  postgres 用户在每天凌晨1点执行全量备份任务。
+每一个数组元素都是一个字符串，代表一行定时任务。使用标准的系统 crontab 格式：`分 时 日 月 周 用户 命令`。
 
 ```yaml
-node_crontab: 
-  - '00 01 * * * postgres /pg/bin/pg-backup full' ] # make a full backup every 1am
+node_crontab:
+  - '00 03 * * * root /usr/bin/some-system-task'
 ```
+
+> **注意**：对于 PostgreSQL 备份等 postgres 用户的定时任务，请使用 [`pg_crontab`](/docs/pgsql/param#pg_crontab) 参数，
+> 而非 `node_crontab`。因为 `node_crontab` 在 NODE 初始化阶段写入 `/etc/crontab`，此时 `postgres` 用户可能尚未创建，
+> 会导致 cron 报错 `bad username` 并忽略整个 crontab 文件。
+
+当 [`node_crontab_overwrite`](#node_crontab_overwrite) 为 `true`（默认）时，移除节点时会恢复默认的 `/etc/crontab`。
 
 
 

@@ -151,6 +151,8 @@ bin/pgsql-hba pg-test             # 重载 pg-test 的 pg/pgb HBA 规则
 #     - pgbackrest_init   : 初始化 pgbackrest 仓库
 #     - pgbackrest_backup : 引导后进行初始备份
 #
+# pg_crontab              : 配置 postgres dbsu 定时任务
+#
 # pg_access               : 初始化 postgres 服务访问层
 #   - pgbouncer           : 部署 pgbouncer 连接池
 #     - pgbouncer_dir     : 创建 pgbouncer 目录
@@ -255,6 +257,8 @@ bin/pgsql-rm pg-test 10.10.10.13   # 从集群 pg-test 移除实例 10.10.10.13
 #   - vip                : 移除 vip-manager
 #   - pg_service         : 从 haproxy 移除 pg 服务
 #   - pgbouncer          : 移除 pgbouncer 连接中间件
+#
+# pg_crontab             : 移除 postgres dbsu 定时任务
 #
 # postgres               : 移除 postgres 实例
 #   - pg_replica         : 移除所有从库

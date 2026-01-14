@@ -7,6 +7,41 @@ module: [PGSQL]
 categories: [概念]
 ---
 
+被动故障检测，整个节点/Patroni 停止
+
+
+
+{{< infographic >}}
+```
+infographic list-row-simple-horizontal-arrow
+data
+  title 被动故障检测流程
+  desc 节点宕机/网络分区场景下的 RTO 时序
+  items
+    - label 节点宕机
+      desc Patroni + PG 同时失效
+      icon mingcute/close-circle-fill
+    - label TTL 等待
+      desc 等待 Leader 锁过期
+      icon mingcute/time-fill
+    - label 从库检测
+      desc 检测到锁过期
+      icon mingcute/search-fill
+    - label 竞争锁
+      desc DCS 原子操作
+      icon mingcute/key-2-fill
+    - label Promote
+      desc pg_ctl promote
+      icon mingcute/arrow-up-circle-fill
+    - label HAProxy UP
+      desc 检测新主上线
+      icon mingcute/check-circle-fill
+theme light
+  palette antv
+```
+{{< /infographic >}}
+
+
 Pigsty 提供了四种 RTO 配置策略，下面是对三类故障场景下，不同 RTO 模式的最差，最优，平均 RTO 的计算逻辑与结果分析。
 
 
@@ -169,35 +204,6 @@ series:
 
 ### 故障路径
 
-{{< infographic >}}
-```
-infographic list-row-simple-horizontal-arrow
-data
-  title 被动故障检测流程
-  desc 节点宕机/网络分区场景下的 RTO 时序
-  items
-    - label 节点宕机
-      desc Patroni + PG 同时失效
-      icon mingcute/close-circle-fill
-    - label TTL 等待
-      desc 等待 Leader 锁过期
-      icon mingcute/time-fill
-    - label 从库检测
-      desc 检测到锁过期
-      icon mingcute/search-fill
-    - label 竞争锁
-      desc DCS 原子操作
-      icon mingcute/key-2-fill
-    - label Promote
-      desc pg_ctl promote
-      icon mingcute/arrow-up-circle-fill
-    - label HAProxy UP
-      desc 检测新主上线
-      icon mingcute/check-circle-fill
-theme light
-  palette antv
-```
-{{< /infographic >}}
 
 **RTO 计算公式**：
 

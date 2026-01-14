@@ -70,6 +70,7 @@ categories: [参考]
 | [`pg_services`](#pg_services)                         |  `service[]`  |  `C`   | postgres 业务服务                              |
 | [`pg_hba_rules`](#pg_hba_rules)                       |    `hba[]`    |  `C`   | postgres 的业务 hba 规则                        |
 | [`pgb_hba_rules`](#pgb_hba_rules)                     |    `hba[]`    |  `C`   | pgbouncer 的业务 hba 规则                       |
+| [`pg_crontab`](#pg_crontab)                           |  `string[]`   |  `C`   | postgres dbsu 的定时任务                        |
 | [`pg_replication_username`](#pg_replication_username) |  `username`   |  `G`   | postgres 复制用户名，默认为 `replicator`            |
 | [`pg_replication_password`](#pg_replication_password) |  `password`   |  `G`   | postgres 复制密码，默认为 `DBUser.Replicator`      |
 | [`pg_admin_username`](#pg_admin_username)             |  `username`   |  `G`   | postgres 管理员用户名，默认为 `dbuser_dba`           |
@@ -502,6 +503,7 @@ pg_databases: []                  # postgres business databases
 pg_services: []                   # postgres business services
 pg_hba_rules: []                  # business hba rules for postgres
 pgb_hba_rules: []                 # business hba rules for pgbouncer
+pg_crontab: []                    # crontab entries for postgres dbsu
 # global credentials, overwrite in global vars
 pg_dbsu_password: ''              # dbsu password, empty string means no dbsu password by default
 pg_replication_username: replicator
@@ -675,6 +677,30 @@ Pgbouncer 业务HBA规则，默认值为： `[]`， 空数组。
 [`pgb_default_hba_rules`](#pgb_default_hba_rules) 与本参数基本类似，但它是用于定义全局连接池 HBA 规则，而本参数通常用于定制某个连接池集群/实例的 HBA 规则。
 
 
+
+
+### `pg_crontab`
+
+参数名称： `pg_crontab`， 类型： `string[]`， 层次：`C`
+
+PostgreSQL 数据库超级用户（dbsu，默认 `postgres`）的定时任务列表，默认值为：`[]` 空数组。
+
+每个数组元素是一行 crontab 条目，使用标准的用户 crontab 格式：`分 时 日 月 周 命令`（**无需指定用户名**）。
+
+```yaml
+pg_crontab:
+  - '00 01 * * * /pg/bin/pg-backup full'      # 每天凌晨 1 点全量备份
+  - '00 13 * * * /pg/bin/pg-backup'           # 每天下午 1 点增量备份
+```
+
+此参数会将定时任务写入 postgres 用户的个人 crontab 文件：
+- EL 系统：`/var/spool/cron/postgres`
+- Debian 系统：`/var/spool/cron/crontabs/postgres`
+
+> **注意**：此参数用于取代在 [`node_crontab`](/docs/node/param#node_crontab) 中配置 postgres 用户任务的旧做法。
+> 因为 `node_crontab` 在 NODE 初始化阶段写入 `/etc/crontab`，此时 `postgres` 用户可能尚未创建，会导致 cron 报错。
+
+移除集群时，此 crontab 文件会被一并删除。
 
 
 

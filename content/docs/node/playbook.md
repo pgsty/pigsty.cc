@@ -62,6 +62,7 @@ haproxy        : 移除 haproxy 负载均衡器
 node_exporter  : 移除节点监控：Node Exporter
 vip_exporter   : 移除 keepalived_exporter （如果启用 VIP）
 vector         : 移除日志收集代理 vector
+node_crontab   : 恢复默认 /etc/crontab（当 node_crontab_overwrite=true 时）
 profile        : 移除 /etc/profile.d/node.sh 环境配置文件
 ```
 
