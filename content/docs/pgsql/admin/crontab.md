@@ -1,9 +1,9 @@
 ---
 title: 管理 PostgreSQL 定时任务
-linktitle: 定时任务
+linktitle: 任务管理
 weight: 80
-description: 配置 Crontab 定期调度 PostgreSQL 备份任务，执行 Vacuum Freeze / Analyze 任务，以及处理表膨胀
-icon: fa-solid fa-clock
+description: 配置 Crontab 定期调度 PostgreSQL 备份任务，执行备份 / Vacuum Freeze / Analyze 任务，以及处理表膨胀
+icon: fa-solid fa-clock-rotate-left
 module: [PGSQL]
 categories: [任务]
 ---
@@ -30,8 +30,6 @@ Pigsty 使用 crontab 来管理定时任务，用于执行例行备份，冻结�
 ## 配置定时任务
 
 使用 [**`pg_crontab`**](/docs/pgsql/param/#pg_crontab) 参数配置 PostgreSQL 数据库超级用户（[**`pg_dbsu`**](/docs/pgsql/param#pg_dbsu)，默认 `postgres`）的定时任务。
-
-**示例配置**
 
 下面 `pg-meta` 集群配置了每天凌晨1点进行全量备份的定时任务，`pg-test` 配置了每周一全量备份，其余日期增量备份的定时任务。
 
@@ -70,7 +68,9 @@ pg_crontab:
 {.full-width}
 
 {{% alert title="仅在主库执行" color="secondary" %}}
-`pg-backup`、`pg-vacuum`、`pg-repack` 脚本会自动检测当前节点角色，只有主库才会实际执行，从库会直接退出。因此可以安全地在所有节点配置相同的定时任务，故障切换后新主库会自动继续执行维护任务。
+`pg-backup`、`pg-vacuum`、`pg-repack` 脚本会自动检测当前节点角色，只有主库才会实际执行，从库会直接退出。
+
+因此可以安全地在所有节点配置相同的定时任务，故障切换后新主库会自动继续执行维护任务。
 {{% /alert %}}
 
 
@@ -195,7 +195,6 @@ pg_crontab:
 ```bash
 pg-vacuum                    # 冻结所有数据库中的老化表
 pg-vacuum mydb               # 仅处理指定数据库
-pg-vacuum mydb1 mydb2        # 处理多个数据库
 ```
 {{% /tab %}}
 {{% tab header="选项" %}}
@@ -218,12 +217,12 @@ VACUUM FREEZE schema.table_name;
 
 **命令选项**
 
-| 选项              | 说明                 | 默认值         |
-|:----------------|:-------------------|:------------|
-| `-h, --help`    | 显示帮助信息             | -           |
-| `-n, --dry-run` | 空跑模式，只显示不执行        | false       |
-| `-a, --age`     | 年龄阈值，超过此值的表需要冻结    | 100000000   |
-| `-r, --ratio`   | 老化比例阈值，超过则全库冻结（%） | 40          |
+| 选项              | 说明                | 默认值       |
+|:----------------|:------------------|:----------|
+| `-h, --help`    | 显示帮助信息            | -         |
+| `-n, --dry-run` | 空跑模式，只显示不执行       | false     |
+| `-a, --age`     | 年龄阈值，超过此值的表需要冻结   | 100000000 |
+| `-r, --ratio`   | 老化比例阈值，超过则全库冻结（%） | 40        |
 {.full-width}
 
 **工作逻辑**
@@ -237,11 +236,13 @@ VACUUM FREEZE schema.table_name;
 
 **执行条件**
 
-- 脚本必须在 **主库** 上以 **postgres** 用户身份运行
+- 脚本必须在 **主库** 上以 [**`pg_dbsu`**](/docs/pgsql/param#pg_dbsu) **postgres** 用户身份运行
 - 使用文件锁 `/tmp/pg-vacuum.lock` 防止并发执行
 - 自动跳过 `template0`、`template1`、`postgres` 系统数据库
 
 **常用定时任务配置**
+
+建议将 vacuum 任务与备份/Repack 任务分开执行，避免冲突。
 
 ```yaml
 pg_crontab:

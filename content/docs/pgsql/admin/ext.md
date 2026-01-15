@@ -1,7 +1,7 @@
 ---
 title: 管理 PostgreSQL 扩展插件
 linktitle: 扩展管理
-weight: 40
+weight: 90
 description: 扩展管理：下载、安装、配置、启用、更新、卸载扩展
 icon: fas fa-puzzle-piece
 module: [PGSQL]

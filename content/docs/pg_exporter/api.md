@@ -58,7 +58,7 @@ pg_in_recovery 0
 
 # HELP pg_exporter_build_info PG Exporter build information
 # TYPE pg_exporter_build_info gauge
-pg_exporter_build_info{version="1.1.1",branch="main",revision="abc123"} 1
+pg_exporter_build_info{version="1.1.2",branch="main",revision="abc123"} 1
 
 # ... 更多指标
 ```

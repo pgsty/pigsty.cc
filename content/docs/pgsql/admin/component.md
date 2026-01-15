@@ -386,26 +386,26 @@ journalctl -u <service> --since "5 min ago"  # 查看最近 5 分钟日志
 
 **Patroni 无法启动**
 
-| 现象 | 可能原因 | 解决方案 |
-|:-----|:---------|:---------|
-| 无法连接 etcd | etcd 集群不可用 | 检查 etcd 服务状态 |
-| 数据目录权限错误 | 文件所有权不是 postgres | `chown -R postgres:postgres /pg/data` |
-| 端口被占用 | PostgreSQL 残留进程 | `pg_ctl stop -D /pg/data` 或 `kill` |
+| 现象        | 可能原因             | 解决方案                                  |
+|:----------|:-----------------|:--------------------------------------|
+| 无法连接 etcd | etcd 集群不可用       | 检查 etcd 服务状态                          |
+| 数据目录权限错误  | 文件所有权不是 postgres | `chown -R postgres:postgres /pg/data` |
+| 端口被占用     | PostgreSQL 残留进程  | `pg_ctl stop -D /pg/data` 或 `kill`    |
 
 **Pgbouncer 无法启动**
 
-| 现象 | 可能原因 | 解决方案 |
-|:-----|:---------|:---------|
-| 配置文件语法错误 | INI 格式错误 | 检查 `/etc/pgbouncer/pgbouncer.ini` |
-| 端口被占用 | 6432 端口已被使用 | `lsof -i :6432` |
-| userlist.txt 权限 | 文件权限不正确 | `chmod 600 /etc/pgbouncer/userlist.txt` |
+| 现象              | 可能原因        | 解决方案                                    |
+|:----------------|:------------|:----------------------------------------|
+| 配置文件语法错误        | INI 格式错误    | 检查 `/etc/pgbouncer/pgbouncer.ini`       |
+| 端口被占用           | 6432 端口已被使用 | `lsof -i :6432`                         |
+| userlist.txt 权限 | 文件权限不正确     | `chmod 600 /etc/pgbouncer/userlist.txt` |
 
 **HAProxy 无法启动**
 
-| 现象 | 可能原因 | 解决方案 |
-|:-----|:---------|:---------|
+| 现象       | 可能原因             | 解决方案                                     |
+|:---------|:-----------------|:-----------------------------------------|
 | 配置文件语法错误 | haproxy.cfg 格式错误 | `haproxy -c -f /etc/haproxy/haproxy.cfg` |
-| 端口被占用 | 服务端口冲突 | `lsof -i :5433` |
+| 端口被占用    | 服务端口冲突           | `lsof -i :5433`                          |
 
 
 ----------------

@@ -1,7 +1,7 @@
 ---
 title: Pgbouncer 连接池管理
 linkTitle: 连接池管理
-weight: 35
+weight: 50
 description: 使用 Pgbouncer 管理连接池，包括暂停、恢复、禁用、启用、重连、终止、重载等操作。
 icon: fa-solid fa-filter
 module: [PGSQL]

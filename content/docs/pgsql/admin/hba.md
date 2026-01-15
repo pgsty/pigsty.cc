@@ -2,6 +2,7 @@
 title: 管理 PostgreSQL HBA 认证规则
 linkTitle: HBA 管理
 weight: 50
+draft: true
 description: HBA 管理：刷新规则、验证配置、故障排查、Pgbouncer HBA
 icon: fa-solid fa-key
 module: [PGSQL]
