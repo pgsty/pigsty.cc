@@ -58,11 +58,17 @@
 {{- $content := .Inner -}}
 {{- $jsCode := "" -}}
 {{- $configContent := "" -}}
+{{- $fnNames := slice -}}
 
-{{- /* 1. Extract ```js code blocks */ -}}
+{{- /* 1. Extract ```js code blocks and function names */ -}}
 {{- if findRE "```js[\\s\\S]*?```" $content -}}
   {{- range findRE "```js([\\s\\S]*?)```" $content -}}
-    {{- $jsCode = printf "%s\n%s" $jsCode (replaceRE "```js([\\s\\S]*?)```" "$1" .) -}}
+    {{- $block := replaceRE "```js([\\s\\S]*?)```" "$1" . -}}
+    {{- $jsCode = printf "%s\n%s" $jsCode $block -}}
+    {{- /* Extract function names like "var fmt = function" or "function fmt" */ -}}
+    {{- range findRE "(?:var|let|const)\\s+(\\w+)\\s*=" $block -}}
+      {{- $fnNames = $fnNames | append (replaceRE "(?:var|let|const)\\s+(\\w+)\\s*=.*" "$1" .) -}}
+    {{- end -}}
   {{- end -}}
   {{- $content = replaceRE "```js[\\s\\S]*?```" "" $content -}}
 {{- end -}}
@@ -92,8 +98,14 @@
   var dom = document.getElementById('{{ $id }}');
   if (!dom) return;
 
-  {{- /* Output JavaScript function definitions */ -}}
+  // Global function registry (survives minification)
+  window._echartsFns = window._echartsFns || {};
+
+  {{- /* Output JavaScript function definitions and register them globally */ -}}
   {{ $jsCode | safeJS }}
+  {{- range $fnNames }}
+  window._echartsFns['{{ . }}'] = {{ . | safeJS }};
+  {{- end }}
 
   {{- /* Determine theme */ -}}
   {{- if $theme }}
@@ -105,11 +117,11 @@
   var chart = echarts.init(dom, theme);
   var optionsJson = {{ $options | jsonify | safeJS }};
 
-  // Replace $fn:xxx references with actual functions
+  // Replace $fn:xxx references with actual functions from global registry
   function replaceFnRefs(obj) {
     if (typeof obj === 'string' && obj.startsWith('$fn:')) {
       var fnName = obj.substring(4);
-      return eval(fnName);
+      return window._echartsFns[fnName];
     }
     if (Array.isArray(obj)) {
       return obj.map(replaceFnRefs);
