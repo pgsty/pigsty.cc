@@ -6,6 +6,26 @@ icon: fa-brands fa-ubuntu
 categories: [参考]
 ---
 
+------
+
+## 2026-01-16
+
+| 名称            | 旧版本    | 新版本    | 备注            |
+|---------------|--------|--------|---------------|
+| pg_search     | 0.20.5 | 0.21.2 | +pg18         |
+| pg_clickhouse | 0.1.0  | 0.1.2  |               |
+| pg_timeseries | 0.1.8  | 0.2.0  |               |
+| biscuit       | 2.0.1  | 2.2.2  |               |
+| documentdb    | 0.107  | 0.109  | +pg18, 使用微软版本 |
+| pg_bulkload   | 3.1.22 | 3.1.23 | +pg18         |
+| pgsentinel    | 1.2.0  | 1.3.1  | 使用 PGDG       |
+| age           | -      | 1.6.0  | 使用 PGDG       |
+| pljs          | -      | 1.0.4  | 使用 PGDG       |
+| pg_partman    | 5.3.0  | 5.4.0  | 使用 PGDG       |
+| pgfincore     | -      | 1.3.1  | 使用 PGDG       |
+
+
+------
 
 ## 2025-12-25
 
