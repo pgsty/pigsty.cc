@@ -44,18 +44,18 @@ root@pg-meta-1:~# curl -fsSL https://repo.pigsty.cc/pig | bash
 [INFO] kernel = Linux
 [INFO] machine = x86_64
 [INFO] package = deb
-[INFO] pkg_url = https://repo.pigsty.cc/pkg/pig/v0.9.0/pig_0.9.0-1_amd64.deb
-[INFO] download = /tmp/pig_0.9.0-1_amd64.deb
-[INFO] downloading pig v0.9.0
-curl -fSL https://repo.pigsty.cc/pkg/pig/v0.9.0/pig_0.9.0-1_amd64.deb -o /tmp/pig_0.9.0-1_amd64.deb
+[INFO] pkg_url = https://repo.pigsty.cc/pkg/pig/v1.0.0/pig_1.0.0-1_amd64.deb
+[INFO] download = /tmp/pig_1.0.0-1_amd64.deb
+[INFO] downloading pig v1.0.0
+curl -fSL https://repo.pigsty.cc/pkg/pig/v1.0.0/pig_1.0.0-1_amd64.deb -o /tmp/pig_1.0.0-1_amd64.deb
 ######################################################################## 100.0%
 [INFO] md5sum = 274546a010d39f1ce0aed72cf7e17e52
-[INFO] installing: dpkg -i /tmp/pig_0.9.0-1_amd64.deb
+[INFO] installing: dpkg -i /tmp/pig_1.0.0-1_amd64.deb
 (Reading database ... 166001 files and directories currently installed.)
-Preparing to unpack /tmp/pig_0.9.0-1_amd64.deb ...
-Unpacking pig (0.9.0-1) over (0.8.0-1) ...
-Setting up pig (0.9.0-1) ...
-[INFO] pig v0.9.0 installed successfully
+Preparing to unpack /tmp/pig_1.0.0-1_amd64.deb ...
+Unpacking pig (1.0.0-1) over (0.8.0-1) ...
+Setting up pig (1.0.0-1) ...
+[INFO] pig v1.0.0 installed successfully
 check https://pgext.cloud for details
 ```
 
@@ -67,7 +67,7 @@ PIG 是一个由 Go 编写的二进制程序，默认安装路径为 `/usr/bin/p
 
 ```bash
 root@pg-meta-1:~#  pig version
-pig version 0.9.0 linux/amd64
+pig version 1.0.0 linux/amd64
 build: HEAD 80c89c6 2025-12-28T08:05:39Z
 ```
 
@@ -77,7 +77,7 @@ build: HEAD 80c89c6 2025-12-28T08:05:39Z
 root@pg-meta-1:~# pig status
 
 # [Configuration] ================================
-Pig Version      : 0.9.0
+Pig Version      : 1.0.0
 Pig Config       : /root/.pig/config.yml
 Log Level        : info
 Log Path         : stderr
@@ -139,7 +139,7 @@ test_decoding                   avail  -           ETL    --s--x  PostgreSQL    
 pgoutput                        avail  -           ETL    --s---  PostgreSQL    CONTRIB  13-18  postgresql-18                         Logical Replication output plugin
 
 
-(440 Rows) (State: added|avail|n/a, Flags: b = HasBin, d = HasDDL, s = HasLib, l = NeedLoad, t = Trusted, r = Relocatable, x = Unknown)
+(444 Rows) (Status: installed, available, not avail | Flags: b = HasBin, d = HasDDL, s = HasLib, l = NeedLoad, t = Trusted, r = Relocatable, x = Unknown)
 ```
 
 所有的扩展元数据都在一份名为 [`extension.csv`](https://github.com/pgsty/pig/blob/main/cli/ext/assets/extension.csv) 的数据文件中定义，
@@ -219,23 +219,23 @@ PostgreSQL 内核与扩展对应着一系列的 RPM/DEB 包，记住这些包是
 ```yaml
 pgsql:        "postgresql$v postgresql$v-server postgresql$v-libs postgresql$v-contrib postgresql$v-plperl postgresql$v-plpython3 postgresql$v-pltcl"
 pg18:         "postgresql18 postgresql18-server postgresql18-libs postgresql18-contrib postgresql18-plperl postgresql18-plpython3 postgresql18-pltcl"
-pg17-client:  "postgresql17"
-pg17-server:  "postgresql17-server postgresql17-libs postgresql17-contrib"
-pg17-devel:   "postgresql17-devel"
-pg17-basic:   "pg_repack_17* wal2json_17* pgvector_17*"
-pg16-mini:    "postgresql16 postgresql16-server postgresql16-libs postgresql16-contrib"
-pg15-full:    "postgresql15 postgresql15-server postgresql15-libs postgresql15-contrib postgresql15-plperl postgresql15-plpython3 postgresql15-pltcl postgresql14-llvmjit postgresql15-test postgresql15-devel"
-pg14-main:    "postgresql14 postgresql14-server postgresql14-libs postgresql14-contrib postgresql14-plperl postgresql14-plpython3 postgresql14-pltcl pg_repack_14* wal2json_14* pgvector_14*"
-pg13-core:    "postgresql13 postgresql13-server postgresql13-libs postgresql13-contrib postgresql13-plperl postgresql13-plpython3 postgresql13-pltcl"
+pg18-client:  "postgresql18"
+pg18-server:  "postgresql18-server postgresql18-libs postgresql18-contrib"
+pg18-devel:   "postgresql18-devel"
+pg18-basic:   "pg_repack_18 wal2json_18 pgvector_18"
+pg17-mini:    "postgresql17 postgresql17-server postgresql17-libs postgresql17-contrib"
+pg16-full:    "postgresql16 postgresql16-server postgresql16-libs postgresql16-contrib postgresql16-plperl postgresql16-plpython3 postgresql16-pltcl postgresql16-llvmjit postgresql16-test postgresql16-devel"
+pg15-main:    "postgresql15 postgresql15-server postgresql15-libs postgresql15-contrib postgresql15-plperl postgresql15-plpython3 postgresql15-pltcl pg_repack_15 wal2json_15 pgvector_15"
+pg14-core:    "postgresql14 postgresql14-server postgresql14-libs postgresql14-contrib postgresql14-plperl postgresql14-plpython3 postgresql14-pltcl"
 ```
 
 注意这里的 `$v` 占位符会被替换为 PG 大版本号，因此当您使用 `pgsql` 别名时，`$v` 会被实际替代为 18，17 这样的大版本号。
-因此，当您安装 `pg17-server` 别名时，EL 上实际安装的是 `postgresql17-server`, `postgresql17-libs`, `postgresql17-contrib`，在 Debian / Ubuntu 上安装的是 `postgresql-17` ，pig 会处理好所有细节。
+因此，当您安装 `pg18-server` 别名时，EL 上实际安装的是 `postgresql18-server`, `postgresql18-libs`, `postgresql18-contrib`，在 Debian / Ubuntu 上安装的是 `postgresql-18` ，pig 会处理好所有细节。
 
 <details>
 <summary>常用 PostgreSQL 别名</summary>
 
-[EL 使用的别名翻译列表](https://github.com/pgsty/pig/blob/main/cli/ext/catalog.go#L154)
+[EL 使用的别名翻译列表](https://github.com/pgsty/pig/blob/main/cli/ext/catalog.go#L206)
 
 ```bash
 "pgsql":        "postgresql$v postgresql$v-server postgresql$v-libs postgresql$v-contrib postgresql$v-plperl postgresql$v-plpython3 postgresql$v-pltcl",
@@ -249,7 +249,7 @@ pg13-core:    "postgresql13 postgresql13-server postgresql13-libs postgresql13-c
 "pgsql-basic":  "pg_repack_$v wal2json_$v pgvector_$v",
 ```
 
-[Debian / Ubuntu 系统使用的别名翻译](https://github.com/pgsty/pig/blob/main/cli/ext/catalog.go#L260)
+[Debian / Ubuntu 系统使用的别名翻译](https://github.com/pgsty/pig/blob/main/cli/ext/catalog.go#L270)
 
 ```bash
 "pgsql":        "postgresql-$v postgresql-client-$v postgresql-plpython3-$v postgresql-plperl-$v postgresql-pltcl-$v",
@@ -297,7 +297,7 @@ dnf install pg_smtp_client_18       # 最直接……，但并非所有扩展都
 提示：如需将特定大版本的 PostgreSQL 内核二进制加入 `PATH`，可用 `pig ext link` 命令：
 
 ```bash
-pig ext link pg17             # 创建 /usr/pgsql 软链接，并写入 /etc/profile.d/pgsql.sh
+pig ext link pg18             # 创建 /usr/pgsql 软链接，并写入 /etc/profile.d/pgsql.sh
 . /etc/profile.d/pgsql.sh     # 立即生效，更新 PATH 环境变量
 ```
 

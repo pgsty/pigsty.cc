@@ -101,7 +101,7 @@ Pigsty 提供了三个与 INFRA 模块相关的剧本：
 #
 # infra: setup infra components
 #   - infra_env      : env_dir, env_pg, env_pgadmin, env_var
-#   - infra_pkg      : infra_pkg_yum, infra_pkg_pip
+#   - infra_pkg      : install infra packages
 #   - infra_user     : setup infra os user group
 #   - infra_cert     : issue cert for infra components
 #   - dns            : dns_config, dns_record, dns_launch

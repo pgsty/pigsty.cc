@@ -283,10 +283,10 @@ sudo apt install <package>  # Debian
 
 ```bash
 # 安装 PostgreSQL 开发包
-sudo pig ext install pg17-devel
+sudo pig ext install pg18-devel
 
 # 或指定 pg_config 路径
-export PG_CONFIG=/usr/pgsql-17/bin/pg_config
+export PG_CONFIG=/usr/pgsql-18/bin/pg_config
 ```
 
 ### Rust/PGRX 问题

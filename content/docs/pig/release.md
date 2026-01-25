@@ -7,10 +7,11 @@ module: [PIG]
 categories: [参考]
 ---
 
-最新稳定版本是 [v0.9.0](https://github.com/pgsty/pig/releases/tag/v0.9.0)。
+最新稳定版本是 [v1.0.0](https://github.com/pgsty/pig/releases/tag/v1.0.0)。
 
 |       版本        |     日期     | 摘要                                |                                                     GitHub |
 |:---------------:|:----------:|-----------------------------------|-----------------------------------------------------------:|
+| [v1.0.0](#v100) | 2026-01-18 | 444 扩展，新增 pig ext avail，Status 列  | [v1.0.0](https://github.com/pgsty/pig/releases/tag/v1.0.0) |
 | [v0.9.0](#v090) | 2025-12-28 | 调整 pig sty 命令选项，修复 pgsql alias    | [v0.9.0](https://github.com/pgsty/pig/releases/tag/v0.9.0) |
 | [v0.8.0](#v080) | 2025-12-26 | 440 extensions，移除 sysupdate 仓库    | [v0.8.0](https://github.com/pgsty/pig/releases/tag/v0.8.0) |
 | [v0.7.5](#v075) | 2025-12-12 | 常规扩展更新，使用修复后的阿里云镜像                | [v0.7.5](https://github.com/pgsty/pig/releases/tag/v0.7.5) |
@@ -41,6 +42,23 @@ categories: [参考]
 | [v0.0.1](#v001) | 2024-12-23 | 创世发布                              | [v0.0.1](https://github.com/pgsty/pig/releases/tag/v0.0.1) |
 {.full-width}
 
+
+
+--------
+
+## v1.0.0
+
+- 扩展总数达到 444 个，新增 etcd_fdw、pg_ttl_index、documentdb_extended_rum、mobilitydb_datagen
+- citus、age、pg_search、pg_bulkload、documentdb 现已支持 PG 18
+- 新增 `pig ext avail` 子命令，支持 `--pkg` 选项显示扩展包可用性矩阵
+- 调整 `pig ext ls` 状态字段，使用可用性矩阵显示包状态（installed/available/not avail）
+- 允许 `pig ext ls` 使用 `--pkg` 选项输出包名而非扩展名
+- 修复 `pig ext scan` 重复扩展问题
+- 修复 `pg_weighted_statistics` 扩展名，现在 `ext` 名称为 `weighted_statistics`
+- EL 系统默认别名移除 llvmjit（仅 pgsql-full 保留）
+- EL 系统扩展包名移除通配符
+
+发布：https://github.com/pgsty/pig/releases/tag/v1.0.0
 
 
 --------

@@ -67,7 +67,7 @@ yum install -y mongodb-mongosh
 FerretDB 的身份验证完全基于底层的 PostgreSQL。由于 Pigsty 管理的 PostgreSQL 集群默认使用 `scram-sha-256` 认证，您必须在连接字符串中指定 `PLAIN` 认证机制：
 
 ```bash
-mongosh 'mongodb://user:password@host:27017?authMechanism=PLAIN'
+mongosh 'mongodb://user:password@host:27017'
 ```
 
 如果忘记添加 `authMechanism=PLAIN` 参数，连接将会失败并报认证错误。

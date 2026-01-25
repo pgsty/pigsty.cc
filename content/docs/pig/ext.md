@@ -13,6 +13,7 @@ categories: [参考]
 |:---|:---|:---|
 | `ext list` | 搜索扩展 | |
 | `ext info` | 显示扩展详细信息 | |
+| `ext avail` | 显示扩展可用性矩阵 | |
 | `ext status` | 显示已安装的扩展 | |
 | `ext scan` | 扫描已安装的扩展 | |
 | `ext add` | 安装扩展 | 需要 sudo 或 root 权限 |
@@ -63,7 +64,7 @@ pig ext install pg_stat_kcache
 Pigsty 假定你已安装官方 PGDG 内核包，如未安装，可用如下命令：
 
 ```bash
-pig ext install pg17          # 安装 PostgreSQL 17 内核（除 devel 包）
+pig ext install pg18          # 安装 PostgreSQL 18 内核（除 devel 包）
 ```
 
 
@@ -85,6 +86,13 @@ pig ext ls gis -v 16             # 列出 PG 16 的 GIS 类扩展
 
 - `-c|--category`：按分类筛选（TIME, GIS, RAG, FTS, OLAP, FEAT, LANG, TYPE, UTIL, FUNC, ADMIN, STAT, SEC, FDW, SIM, ETL）
 - `-v|--version`：按 PG 版本筛选
+- `--pkg`：显示包名而非扩展名，仅列出主导扩展
+
+**Status 列说明：**
+
+- `installed`：扩展已安装（绿色）
+- `available`：扩展可用但未安装（黄色）
+- `not avail`：扩展在当前系统不可用（红色）
 
 默认扩展目录定义在 [**`cli/ext/assets/extension.csv`**](https://github.com/pgsty/pig/blob/main/cli/ext/assets/extension.csv)
 
@@ -100,6 +108,21 @@ pig ext info postgis        # 显示 PostGIS 详细信息
 pig ext info timescaledb    # 显示 TimescaleDB 信息
 pig ext info vector postgis # 显示多个扩展信息
 ```
+
+
+## ext avail
+
+显示扩展的可用性矩阵，展示扩展在不同操作系统、架构和 PostgreSQL 版本上的可用情况。
+
+```bash
+pig ext avail                     # 显示当前系统上所有包的可用性
+pig ext avail timescaledb         # 显示 timescaledb 的可用性矩阵
+pig ext avail postgis pg_duckdb   # 显示多个扩展的可用性
+pig ext av pgvector               # 显示 pgvector 的可用性
+pig ext matrix citus              # avail 命令的别名
+```
+
+可用性矩阵会显示扩展在各个操作系统（EL8/9/10, Debian 12/13, Ubuntu 22/24）、架构（x86_64/aarch64）和 PostgreSQL 版本（13-18）上的可用情况。
 
 
 ## ext status
@@ -203,8 +226,8 @@ pig ext import -d /www/pigsty postgis # 指定路径导入
 将指定 PG 版本链接到系统 PATH。
 
 ```bash
-pig ext link 17                  # 链接 PG 17 到 PATH
-pig ext link 16                  # 链接 PG 16 到 /usr/pgsql
+pig ext link 18                  # 链接 PG 18 到 PATH
+pig ext link 17                  # 链接 PG 17 到 /usr/pgsql
 pig ext link /usr/pgsql-16       # 从指定路径链接到 /usr/pgsql
 pig ext link null                # 取消当前 PostgreSQL 链接
 ```

@@ -1,6 +1,6 @@
 ---
 title: 模块：DuckDB
-weight: 5060
+weight: 5050
 description: 使用 Pigsty 安装 DuckDB，一个高性能，嵌入式的分析数据库组件。
 icon: fas fa-crow
 module: [PILOT]

@@ -116,11 +116,13 @@ Pigsty 提供三种保护模式，以帮助用户在不同的 RPO 要求下进�
 
 通常情况下，您只需要将 [**`pg_rpo`**](/docs/pgsql/param#pg_rpo) 参数设置为 `0`，即可打开 `synchronous_mode` 开关，启用 **最大可用性模式**。
 如果您使用 [**`pg_conf`**](/docs/pgsql/param#pg_conf) = [**`crit.yml`**](/docs/pgsql/template/crit) 模板，则会同时额外打开 `synchronous_mode_strict` 严格模式开关，启用 **最大保护模式**。
+此外，您可以启用 [**watchdog**](/docs/pgsql/param#patroni_watchdog_mode)，在节点/Patroni 假死场景下直接 Fencing 主库而不是降级，实现与 Oracle 最大保护模式相同的行为表现
 
 当然，您可以直接按需 [**配置**](/docs/pgsql/admin/patroni#修改配置) 这些 Patroni 参数，您还可以参阅 Patroni 与 PostgreSQL 文档，通过配置实现更强的数据保护，例如：
 
 - 可以指定指定 [**同步从库列表**](/docs/pgsql/config/cluster#法定人数提交)，配置更多同步从库以提高容灾能力，使用法定人数同步，甚至要求所有从库都执行同步提交。
 - 您可以 [**配置**](/docs/pgsql/admin/patroni#修改配置) [**`synchronous_commit`**](https://www.postgresql.org/docs/current/runtime-config-wal.html#GUC-SYNCHRONOUS-COMMIT): `'remote_apply'`，严格确保主从读写一致性。（Oracle 最大保护模式相当于 `remote_write`）
+
 
 ------
 

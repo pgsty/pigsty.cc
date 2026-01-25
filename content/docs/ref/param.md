@@ -514,7 +514,7 @@ Pigsty 提供了约 **380+** 个配置参数，分布在 8 个默认模块中，
 | 参数                                                        |     类型      | 说明                                         |
 |:----------------------------------------------------------|:-----------:|:-------------------------------------------|
 | [`node_selinux_mode`](/docs/node/param#node_selinux_mode)                 |   `enum`    | SELinux 模式：disabled, permissive, enforcing |
-| [`node_firewall_mode`](/docs/node/param#node_firewall_mode)               |   `enum`    | 防火墙模式：off, none, zone                      |
+| [`node_firewall_mode`](/docs/node/param#node_firewall_mode)               |   `enum`    | 防火墙模式：none, off, zone                      |
 | [`node_firewall_intranet`](/docs/node/param#node_firewall_intranet)       |  `cidr[]`   | 内网 CIDR 列表，用于配置防火墙规则                       |
 | [`node_firewall_public_port`](/docs/node/param#node_firewall_public_port) |  `port[]`   | 公网开放端口列表，默认为 [22, 80, 443, 5432]           |
 

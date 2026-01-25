@@ -30,6 +30,7 @@ node_firewall ：设置防火墙 & selinux
 node_ca       ：添加并信任CA证书
 node_repo     ：添加上游软件仓库
 node_pkg      ：安装 rpm/deb 软件包
+node_uv       ：配置 uv Python 虚拟环境
 node_feature  ：配置 numa、grub、静态网络等特性
 node_kernel   ：配置操作系统内核模块
 node_tune     ：配置 tuned 调优模板
@@ -107,6 +108,7 @@ bin/node-rm 10.10.10.10                # 移除节点 '10.10.10.10'
 ./node.yml -t node_ca                  # 配置节点的CA证书
 ./node.yml -t node_repo                # 配置节点上游软件仓库
 ./node.yml -t node_pkg                 # 在节点上安装 yum 软件包
+./node.yml -t node_uv                  # 配置 uv Python 虚拟环境
 ./node.yml -t node_feature             # 配置 numa、grub、静态网络等特性
 ./node.yml -t node_kernel              # 配置操作系统内核模块
 ./node.yml -t node_tune                # 配置 tuned 调优模板

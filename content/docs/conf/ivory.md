@@ -57,8 +57,8 @@ categories: [参考]
 - 评估 IvorySQL 特性的测试环境
 
 **注意事项**：
-- IvorySQL 4 基于 PostgreSQL 18
+- IvorySQL 5 基于 PostgreSQL 18
 - 使用 `liboracle_parser` 需要加载到 `shared_preload_libraries`
 - `pgbackrest` 在 Oracle 兼容模式下可能存在校验问题，PITR 能力受限
-- 仅支持 EL8/EL9 系统，不支持 Debian/Ubuntu
+- 主要支持 EL8/EL9 系统，其他系统支持程度请参考官方文档
 

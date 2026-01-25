@@ -1,6 +1,6 @@
 ---
 title: 模块：MySQL
-weight: 5020
+weight: 5030
 description: 使用 Pigsty 拉起过气的 MySQL 集群，用于测试，迁移，性能评估等目的。
 icon: fas fa-fish
 module: [MYSQL]

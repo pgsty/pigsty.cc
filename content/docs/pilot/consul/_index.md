@@ -1,6 +1,6 @@
 ---
 title: 模块：Consul
-weight: 5120
+weight: 5080
 description: 使用 Pigsty 安装部署 Consul —— Etcd 的替代品。
 icon: fas fa-c
 module: [PILOT]

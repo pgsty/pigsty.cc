@@ -19,7 +19,7 @@ linkTitle: 使用方法
 使用 `pig` 命令添加 MongoDB 仓库，然后使用 `yum` 或 `apt` 安装 `mongosh`：
 
 ```bash
-pig repo add mongo -u   # 添加 MongoDB 官方仓库
+pig repo add mongo -u         # 添加 MongoDB 官方仓库
 yum install mongodb-mongosh   # RHEL/CentOS/Rocky/Alma
 apt install mongodb-mongosh   # Debian/Ubuntu
 ```
@@ -34,29 +34,27 @@ apt install mongodb-mongosh   # Debian/Ubuntu
 您可以使用任何语言的 MongoDB 驱动程序通过 MongoDB 连接字符串访问 FerretDB。以下是使用 `mongosh` CLI 工具的示例：
 
 ```bash
-$ mongosh
-Current Mongosh Log ID:	67ba8c1fe551f042bf51e943
-Connecting to:		mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.4.0
+$ mongosh 'mongodb://postgres:DBUser.Postgres@10.10.10.10:27017'
+Current Mongosh Log ID:	696b5bb93441875f86284d0b
+Connecting to:		mongodb://<credentials>@10.10.10.10:27017/?directConnection=true&appName=mongosh+2.6.0
 Using MongoDB:		7.0.77
-Using Mongosh:		2.4.0
-
-For mongosh info see: https://www.mongodb.com/docs/mongodb-shell/
+Using Mongosh:		2.6.0
 
 test>
 ```
 
 ### 使用连接字符串
 
-FerretDB 的身份验证完全基于 PostgreSQL。由于 Pigsty 管理的 PostgreSQL 集群默认使用 `scram-sha-256` 认证方式，您必须在连接字符串中指定 `PLAIN` 认证机制：
+FerretDB 的身份验证完全基于 PostgreSQL，你可以直接使用 PostgreSQL 的用户名与密码。
 
 ```bash
-mongosh 'mongodb://dbuser_meta:DBUser.Meta@10.10.10.10:27017?authMechanism=PLAIN'
+mongosh 'mongodb://postgres:DBUser.Postgres@10.10.10.10:27017'
 ```
 
 连接字符串格式：
 
-```
-mongodb://<username>:<password>@<host>:<port>/<database>?authMechanism=PLAIN
+```bash
+mongodb://<username>:<password>@<host>:<port>/<database>
 ```
 
 ### 使用不同的用户
@@ -64,14 +62,14 @@ mongodb://<username>:<password>@<host>:<port>/<database>?authMechanism=PLAIN
 您可以使用任何已在 PostgreSQL 中创建的用户连接到 FerretDB：
 
 ```bash
-# 使用 dbuser_dba 用户
-mongosh 'mongodb://dbuser_dba:DBUser.DBA@10.10.10.10:27017?authMechanism=PLAIN'
+# 使用超级管理员用户
+mongosh 'mongodb://dbuser_dba:DBUser.DBA@10.10.10.10:27017'
 
-# 使用 mongod 超级用户
-mongosh 'mongodb://mongod:DBUser.Mongo@10.10.10.10:27017?authMechanism=PLAIN'
+# 使用普通管理员用户
+mongosh 'mongodb://dbuser_meta:DBUser.Meta@10.10.10.10:27017'
 
-# 连接到特定数据库
-mongosh 'mongodb://test:test@10.10.10.11:27017/test?authMechanism=PLAIN'
+# 使用普通只读用户
+mongosh 'mongodb://dbuser_view:DBUser.Viewer@10.10.10.10:27017'
 ```
 
 
@@ -83,28 +81,25 @@ mongosh 'mongodb://test:test@10.10.10.11:27017/test?authMechanism=PLAIN'
 
 ### 数据库操作
 
-```javascript
-// 切换/创建数据库
-use mydb
-
+```js
 // 显示所有数据库
 show dbs
 
+// 显示所有集合
+show collections
+
+// 切换/创建数据库
+use mydb
+
 // 删除当前数据库
-db.dropDatabase()
+db.dropDatabase();
 ```
 
 ### 集合操作
 
 ```javascript
-// 创建集合
-db.createCollection('users')
-
-// 显示所有集合
-show collections
-
-// 删除集合
-db.users.drop()
+db.createCollection('users');     // 创建集合
+db.users.drop();                  // 删除集合
 ```
 
 ### 文档操作
@@ -112,45 +107,42 @@ db.users.drop()
 ```javascript
 // 插入单个文档
 db.users.insertOne({
-    name: 'Alice',
-    age: 30,
-    email: 'alice@example.com'
-})
+    name: 'Alice', age: 30, email: 'alice@example.com'
+});
 
 // 插入多个文档
 db.users.insertMany([
     { name: 'Bob', age: 25 },
     { name: 'Charlie', age: 35 }
-])
+]);
 
 // 查询文档
-db.users.find()
-db.users.find({ age: { $gt: 25 } })
-db.users.findOne({ name: 'Alice' })
+db.users.find();
+db.users.find({ age: { $gt: 25 } });
+db.users.findOne({ name: 'Alice' });
 
 // 更新文档
 db.users.updateOne(
     { name: 'Alice' },
     { $set: { age: 31 } }
-)
+);
 
 // 删除文档
-db.users.deleteOne({ name: 'Bob' })
-db.users.deleteMany({ age: { $lt: 30 } })
+db.users.deleteOne({ name: 'Bob' });
+db.users.deleteMany({ age: { $lt: 30 } });
 ```
 
 ### 索引操作
 
 ```javascript
 // 创建索引
-db.users.createIndex({ name: 1 })
-db.users.createIndex({ age: -1 })
+db.users.createIndex({ age: -1 });
 
 // 查看索引
-db.users.getIndexes()
+db.users.getIndexes();
 
 // 删除索引
-db.users.dropIndex('name_1')
+db.users.dropIndex('name_1');
 ```
 
 
@@ -182,7 +174,7 @@ FerretDB 实现了 MongoDB 的线协议，但底层使用 PostgreSQL 存储数�
 ```python
 from pymongo import MongoClient
 
-client = MongoClient('mongodb://dbuser_meta:DBUser.Meta@10.10.10.10:27017/?authMechanism=PLAIN')
+client = MongoClient('mongodb://dbuser_dba:DBUser.DBA@10.10.10.10:27017')
 db = client.test
 collection = db.users
 collection.insert_one({'name': 'Alice', 'age': 30})
@@ -193,7 +185,7 @@ collection.insert_one({'name': 'Alice', 'age': 30})
 ```javascript
 const { MongoClient } = require('mongodb');
 
-const uri = 'mongodb://dbuser_meta:DBUser.Meta@10.10.10.10:27017/?authMechanism=PLAIN';
+const uri = 'mongodb://dbuser_meta:DBUser.Meta@10.10.10.10:27017';
 const client = new MongoClient(uri);
 
 async function run() {
@@ -212,8 +204,7 @@ import (
     "go.mongodb.org/mongo-driver/mongo/options"
 )
 
-uri := "mongodb://dbuser_meta:DBUser.Meta@10.10.10.10:27017/?authMechanism=PLAIN"
+uri := "mongodb://dbuser_meta:DBUser.Meta@10.10.10.10:27017"
 client, err := mongo.Connect(context.TODO(), options.Client().ApplyURI(uri))
 ```
 
-关键点：所有驱动程序都需要在连接字符串中指定 `authMechanism=PLAIN` 参数。

@@ -114,12 +114,10 @@ all:
             #pool_max_db_conn: 100          # optional, max database connections at database level, default 100
           #- {name: bytebase ,owner: dbuser_bytebase ,revokeconn: true ,comment: bytebase primary database }
 
-        # define HBA rules : https://pigsty.io/docs/pgsql/config/hba
-        pg_hba_rules:
-          - { user: dbuser_view , db: all ,addr: infra ,auth: pwd ,title: 'allow grafana dashboard access cmdb from infra nodes' }
-
-        # define backup policies: https://pigsty.io/docs/pgsql/backup
-        node_crontab: [ '00 01 * * * postgres /pg/bin/pg-backup full' ] # make a full backup every day 1am
+        pg_hba_rules:   # https://pigsty.io/docs/pgsql/config/hba
+          - { user: all ,db: all ,addr: intra ,auth: pwd ,title: 'everyone intranet access with password' ,order: 800 }
+        pg_crontab:     # https://pigsty.io/docs/pgsql/admin/crontab
+          - '00 01 * * * /pg/bin/pg-backup full'
 
         # define (OPTIONAL) L2 VIP that bind to primary
         #pg_vip_enabled: true
@@ -154,9 +152,9 @@ all:
     #    pg_vip_enabled: true
     #    pg_vip_address: 10.10.10.3/24
     #    pg_vip_interface: eth1
-    #    node_crontab:  # make a full backup on monday 1am, and an incremental backup during weekdays
-    #      - '00 01 * * 1 postgres /pg/bin/pg-backup full'
-    #      - '00 01 * * 2,3,4,5,6,7 postgres /pg/bin/pg-backup'
+    #    pg_crontab:  # make a full backup on monday 1am, and an incremental backup during weekdays
+    #      - '00 01 * * 1 /pg/bin/pg-backup full'
+    #      - '00 01 * * 2,3,4,5,6,7 /pg/bin/pg-backup'
 
     #----------------------------------------------#
     # INFRA : https://pigsty.io/docs/infra

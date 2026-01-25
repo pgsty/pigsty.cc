@@ -1,7 +1,7 @@
 ---
 title: 参数列表
 weight: 3230
-description: NODE 模块提供了 11 组共 83 个配置参数
+description: NODE 模块提供了 11 组共 85 个配置参数
 icon: fa-solid fa-sliders
 modules: [NODE]
 categories: [参考]
@@ -58,14 +58,16 @@ categories: [参考]
 | [`node_dns_options`](#node_dns_options)             | `string[]`  |   `C`    | /etc/resolv.conf 中的DNS解析选项      |
 {.full-width}
 
-[`NODE_PACKAGE`](#node_package) 参数组用于配置节点的软件源与软件包安装。
+[`NODE_PACKAGE`](#node_package) 参数组用于配置节点的软件源与软件包安装，以及 uv Python 虚拟环境。
 
-| 参数                                                |     类型     | 级别  | 说明                      |
-|:--------------------------------------------------|:----------:|:---:|:------------------------|
-| [`node_repo_modules`](#node_repo_modules)         |   `enum`   | `C` | 在节点上启用哪些软件源模块？默认为 local |
-| [`node_repo_remove`](#node_repo_remove)           |   `bool`   | `C` | 配置节点软件仓库时，删除节点上现有的仓库吗？  |
-| [`node_packages`](#node_packages)                 | `string[]` | `C` | 要在当前节点上安装的软件包列表         |
-| [`node_default_packages`](#node_default_packages) | `string[]` | `G` | 默认在所有节点上安装的软件包列表        |
+| 参数                                                |     类型     | 级别  | 说明                          |
+|:--------------------------------------------------|:----------:|:---:|:----------------------------|
+| [`node_repo_modules`](#node_repo_modules)         |   `enum`   | `C` | 在节点上启用哪些软件源模块？默认为 local     |
+| [`node_repo_remove`](#node_repo_remove)           |   `bool`   | `C` | 配置节点软件仓库时，删除节点上现有的仓库吗？      |
+| [`node_packages`](#node_packages)                 | `string[]` | `C` | 要在当前节点上安装的软件包列表             |
+| [`node_default_packages`](#node_default_packages) | `string[]` | `G` | 默认在所有节点上安装的软件包列表            |
+| [`node_uv_env`](#node_uv_env)                     |   `path`   | `C` | uv venv 路径，默认 /data/venv，空则跳过 |
+| [`node_pip_packages`](#node_pip_packages)         |  `string`  | `C` | 在 uv venv 中安装的 pip 包        |
 {.full-width}
 
 [`NODE_TUNE`](#node_tune) 参数组用于配置节点的内核参数、特性开关与性能调优模板。
@@ -89,7 +91,7 @@ categories: [参考]
 | 参数                                                        |     类型      |   级别    | 说明                                         |
 |:----------------------------------------------------------|:-----------:|:-------:|:-------------------------------------------|
 | [`node_selinux_mode`](#node_selinux_mode)                 |   `enum`    |   `C`   | SELinux 模式：disabled, permissive, enforcing |
-| [`node_firewall_mode`](#node_firewall_mode)               |   `enum`    |   `C`   | 防火墙模式：off, none, zone                      |
+| [`node_firewall_mode`](#node_firewall_mode)               |   `enum`    |   `C`   | 防火墙模式：none, off, zone                      |
 | [`node_firewall_intranet`](#node_firewall_intranet)       |  `cidr[]`   |   `C`   | 内网 CIDR 列表，用于配置防火墙规则                       |
 | [`node_firewall_public_port`](#node_firewall_public_port) |  `port[]`   |   `C`   | 公网开放端口列表，默认为 [22, 80, 443, 5432]           |
 {.full-width}
@@ -401,13 +403,15 @@ node_dns_options:                 # dns resolv options in `/etc/resolv.conf`
 
 ## `NODE_PACKAGE`
 
-Pigsty会为纳入管理的节点配置Yum源，并安装软件包。
+Pigsty会为纳入管理的节点配置Yum源，并安装软件包，以及配置 uv Python 虚拟环境。
 
 ```yaml
 node_repo_modules: local          # upstream repo to be added on node, local by default.
 node_repo_remove: true            # remove existing repo on node?
 node_packages: [openssh-server]   # packages to be installed current nodes with latest version
 #node_default_packages:           # default packages to be installed on all nodes
+node_uv_env: /data/venv           # uv venv path, /data/venv by default, empty to skip
+node_pip_packages: ''             # pip packages to be installed in uv venv
 ```  
 
 
@@ -486,6 +490,30 @@ node_packages: [openssh-server]   # packages to be installed current nodes with 
 本参数形式上与 [`node_packages`](#node_packages) 相同，但本参数通常用于全局层面指定所有节点都必须安装的默认软件包
 
 
+
+
+### `node_uv_env`
+
+参数名称： `node_uv_env`， 类型： `path`， 层次：`C`
+
+uv 虚拟环境路径，默认值为：`/data/venv`。设置为空字符串 `''` 则跳过 uv 虚拟环境的配置。
+
+当此参数非空时，Pigsty 会在节点上使用 `uv venv` 命令创建 Python 虚拟环境，并根据 [`node_pip_packages`](#node_pip_packages) 安装指定的 pip 包。
+
+在中国区域（`region: china`）时，会自动配置 `/etc/uv/uv.toml` 使用阿里云 PyPI 镜像加速下载。
+
+
+
+
+### `node_pip_packages`
+
+参数名称： `node_pip_packages`， 类型： `string`， 层次：`C`
+
+在 uv 虚拟环境中安装的 pip 包列表，默认值为：空字符串 `''`。
+
+使用空格分隔多个包名，例如：`'ansible pgcli requests pandas'`。
+
+仅当 [`node_uv_env`](#node_uv_env) 非空时此参数才会生效。
 
 
 
@@ -673,7 +701,7 @@ node_kernel_modules: [ softdog, ip_vs, ip_vs_rr, ip_vs_wrr, ip_vs_sh ]
 
 ```yaml
 node_selinux_mode: permissive             # selinux mode: disabled, permissive, enforcing
-node_firewall_mode: zone                  # firewall mode: disabled, zone, rules
+node_firewall_mode: none                  # firewall mode: none (skip), off (disable), zone (enable & config)
 node_firewall_intranet:           # which intranet cidr considered as internal network
   - 10.0.0.0/8
   - 192.168.0.0/16
@@ -713,21 +741,19 @@ SELinux 运行模式，默认值为：`permissive`（宽容模式）。
 
 参数名称： `node_firewall_mode`， 类型： `enum`， 层次：`C`
 
-防火墙运行模式，默认值为：`zone`（区域模式）。
+防火墙运行模式，默认值为：`none`（不干预）。
 
 可选值：
 
+* `none`：什么也不管，维持现有防火墙规则不变（默认值）。
 * `off`：关闭并禁用防火墙（等同于旧版本的 `node_disable_firewall: true`）
-* `none`：什么也不管，维持现有防火墙规则不变。
-* `zone`：使用 firewalld / ufw 配置防火墙规则：内网信任，公网只开放指定端口。
+* `zone`：启用防火墙并配置规则：内网信任，公网只开放指定端口。
 
 在 EL 系统上使用 `firewalld` 服务，在 Debian/Ubuntu 系统上使用 `ufw` 服务。
 
-如果您在完全受信任的内网环境中部署，或者通过云厂商安全组等方式进行访问控制，您可以选择 `none` 模式以保留现有防火墙配置，或者设置为 `off` 完全禁用防火墙。
+如果您在完全受信任的内网环境中部署，或者通过云厂商安全组等方式进行访问控制，您可以使用默认的 `none` 模式以保留现有防火墙配置，或者设置为 `off` 显式禁用防火墙。
 
-生产环境建议使用 `zone` 模式，配合 [`node_firewall_intranet`](#node_firewall_intranet) 和 [`node_firewall_public_port`](#node_firewall_public_port) 进行精细化访问控制。
-
-请注意，`zone` 模式不会自动替你启用防火墙。
+需要公网暴露的生产环境建议使用 `zone` 模式，配合 [`node_firewall_intranet`](#node_firewall_intranet) 和 [`node_firewall_public_port`](#node_firewall_public_port) 进行精细化访问控制。`zone` 模式会在防火墙未运行时自动启用防火墙。
 
 
 

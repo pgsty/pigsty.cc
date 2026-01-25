@@ -1,6 +1,6 @@
 ---
 title: 模块：Victoria
-weight: 5140
+weight: 5090
 description: 使用 Pigsty 拉起 VictoriaMetrics 与 VictoriaLogs，Prometheus 与 Loki 的原位上位替代组件。
 icon: fas fa-layer-group
 module: [PILOT]

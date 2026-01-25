@@ -51,8 +51,8 @@ FerretDB 服务配置了失败自动重启（`Restart=on-failure`），为这个
 您可以使用 MongoDB 连接串，用任何语言的 MongoDB 驱动访问 FerretDB。以下是使用 [`mongosh`](/docs/ferret/usage#安装客户端工具) 命令行工具的示例：
 
 ```bash
-mongosh 'mongodb://dbuser_meta:DBUser.Meta@10.10.10.10:27017?authMechanism=PLAIN'
-mongosh 'mongodb://test:test@10.10.10.11:27017/test?authMechanism=PLAIN'
+mongosh 'mongodb://dbuser_meta:DBUser.Meta@10.10.10.10:27017'
+mongosh 'mongodb://test:test@10.10.10.11:27017/test'
 ```
 
 Pigsty 管理的 PostgreSQL 集群默认使用 `scram-sha-256` 作为默认的认证方式，因此，您必须使用 `PLAIN` 认证方式连接至 FerretDB。参阅 [FerretDB：认证](https://docs.ferretdb.io/security/authentication/) 获取详细信息。
@@ -60,7 +60,7 @@ Pigsty 管理的 PostgreSQL 集群默认使用 `scram-sha-256` 作为默认的�
 您也可以使用其他 PostgreSQL 用户来访问 FerretDB，只要在连接串中指定即可：
 
 ```bash
-mongosh 'mongodb://dbuser_dba:DBUser.DBA@10.10.10.10:27017?authMechanism=PLAIN'
+mongosh 'mongodb://dbuser_dba:DBUser.DBA@10.10.10.10:27017'
 ```
 
 
@@ -71,7 +71,7 @@ mongosh 'mongodb://dbuser_dba:DBUser.DBA@10.10.10.10:27017?authMechanism=PLAIN'
 连接到 FerretDB 后，您可以像使用 MongoDB 一样进行操作：
 
 ```bash
-$ mongosh 'mongodb://dbuser_meta:DBUser.Meta@10.10.10.10:27017?authMechanism=PLAIN'
+$ mongosh 'mongodb://dbuser_meta:DBUser.Meta@10.10.10.10:27017'
 ```
 
 MongoDB 的命令会被翻译为 SQL 命令，在底层的 PostgreSQL 中执行：
@@ -123,7 +123,7 @@ for (let i = 0; i < numDocs; i++) {  // delete
 }
 EOF
 
-mongosh 'mongodb://dbuser_meta:DBUser.Meta@10.10.10.10:27017?authMechanism=PLAIN' benchmark.js
+mongosh 'mongodb://dbuser_meta:DBUser.Meta@10.10.10.10:27017' benchmark.js
 ```
 
 您可以查阅 FerretDB 支持的 [MongoDB 命令](https://docs.ferretdb.io/reference/supported-commands/)，同时还有一些 [已知的区别](https://docs.ferretdb.io/diff/)。对于基本的使用来说，这些差异通常不是什么大问题。

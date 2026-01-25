@@ -93,7 +93,7 @@ curl -fsSL https://repo.pigsty.io/get | bash -s v4.0.0  # 安装特定版本
 
 ```bash
 git clone https://github.com/pgsty/pigsty; cd pigsty;
-git checkout v4.0.0-b4;  # 使用 git 安装时，请务必检出特定版本
+git checkout v4.0.0-c2;  # 使用 git 安装时，请务必检出特定版本
 ```
 
 手工下载克隆安装时，请额外执行 [**`boostrap`**](/docs/setup/offline#bootstrap) 脚本以手动安装 Ansible 等部署依赖，您也可以 [**自行安装**](/docs/setup/playbook#安装-ansible)。
