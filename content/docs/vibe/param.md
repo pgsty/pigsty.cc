@@ -7,7 +7,7 @@ module: [VIBE]
 categories: [参数]
 ---
 
-VIBE 模块共有 **13** 个配置参数，分为三组：通用参数、Code-Server 参数、JupyterLab 参数和 Claude Code 参数。
+VIBE 模块共有 **15** 个配置参数，分为五组：通用参数、Code-Server 参数、JupyterLab 参数、Claude Code 参数和 Node.js 参数。
 
 
 --------
@@ -29,6 +29,8 @@ VIBE 模块共有 **13** 个配置参数，分为三组：通用参数、Code-Se
 | [`jupyter_venv`](#jupyter_venv) | path | H/I | `/data/venv` | Python 虚拟环境路径 |
 | [`claude_enabled`](#claude_enabled) | bool | H/I | `true` | 是否启用 Claude Code |
 | [`claude_env`](#claude_env) | dict | H/I | `{}` | Claude Code 额外环境变量 |
+| [`nodejs_enabled`](#nodejs_enabled) | bool | H/I | `true` | 是否启用 Node.js |
+| [`nodejs_registry`](#nodejs_registry) | url | H/I | `''` | npm 镜像地址，留空则自动配置 |
 {.full-width}
 
 
@@ -293,6 +295,44 @@ claude_env:
 
 --------
 
+## Node.js 参数
+
+### `nodejs_enabled`
+
+是否在该节点启用 Node.js 运行时。
+
+- **类型**：`bool`
+- **级别**：H/I
+- **默认值**：`true`
+
+```yaml
+nodejs_enabled: true   # 启用（默认）
+nodejs_enabled: false  # 禁用
+```
+
+### `nodejs_registry`
+
+npm 软件包镜像地址。
+
+- **类型**：`url`
+- **级别**：H/I
+- **默认值**：`''`（空字符串）
+
+当此参数留空时：
+- 如果 `region=china`，自动使用淘宝 npm 镜像 `https://registry.npmmirror.com`
+- 否则使用 npm 官方默认源
+
+显式填写时，使用指定的镜像地址（适用于内网环境）。
+
+```yaml
+nodejs_registry: ''                                # 自动配置（默认）
+nodejs_registry: 'https://registry.npmmirror.com'  # 手动指定淘宝镜像
+nodejs_registry: 'http://npm.internal.example.com' # 内网镜像
+```
+
+
+--------
+
 ## 参数级别说明
 
 | 级别 | 说明                       |
@@ -344,6 +384,10 @@ jupyter_venv: /data/venv
 # Claude Code 参数
 claude_enabled: true
 claude_env: {}
+
+# Node.js 参数
+nodejs_enabled: true
+nodejs_registry: ''
 ```
 
 

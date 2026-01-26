@@ -7,7 +7,7 @@ module: [VIBE]
 categories: [剧本]
 ---
 
-VIBE 模块提供了一个主剧本 `vibe.yml`，用于部署和管理 Code-Server、JupyterLab 和 Claude Code。
+VIBE 模块提供了一个主剧本 `vibe.yml`，用于部署和管理 Code-Server、JupyterLab、Claude Code 和 Node.js。
 
 
 --------
@@ -53,10 +53,14 @@ VIBE 模块提供了一个主剧本 `vibe.yml`，用于部署和管理 Code-Serv
 # 仅部署 Claude Code
 ./vibe.yml -l <host> -t claude
 
+# 仅部署 Node.js
+./vibe.yml -l <host> -t nodejs
+
 # 禁用特定组件
 ./vibe.yml -l <host> -e code_enabled=false
 ./vibe.yml -l <host> -e jupyter_enabled=false
 ./vibe.yml -l <host> -e claude_enabled=false
+./vibe.yml -l <host> -e nodejs_enabled=false
 
 # 配置 Claude API Key
 ./vibe.yml -l <host> -e claude_env.ANTHROPIC_API_KEY=sk-ant-xxx
@@ -80,11 +84,14 @@ vibe
 │   ├── code_dir          # 创建数据目录
 │   ├── code_config       # 渲染配置文件和 systemd 服务单元
 │   └── code_launch       # 启动 code-server 服务
-└── jupyter           # 部署 JupyterLab
-    ├── jupyter_install   # 安装 JupyterLab 到 venv
-    ├── jupyter_dir       # 创建数据目录
-    ├── jupyter_config    # 渲染配置文件和 systemd 服务单元
-    └── jupyter_launch    # 启动 JupyterLab 服务
+├── jupyter           # 部署 JupyterLab
+│   ├── jupyter_install   # 安装 JupyterLab 到 venv
+│   ├── jupyter_dir       # 创建数据目录
+│   ├── jupyter_config    # 渲染配置文件和 systemd 服务单元
+│   └── jupyter_launch    # 启动 JupyterLab 服务
+└── nodejs            # 安装 Node.js 运行时
+    ├── nodejs_install    # 安装 nodejs 软件包
+    └── nodejs_config     # 配置 npm 镜像
 ```
 
 
@@ -171,6 +178,25 @@ vibe
 - `/etc/default/jupyter`
 - `{{ jupyter_data }}/jupyter_config.py`
 
+### `nodejs`
+
+安装 Node.js 运行时。
+
+```bash
+./vibe.yml -l <host> -t nodejs
+```
+
+子任务：
+
+| 标签              | 说明                                  |
+|:----------------|:------------------------------------|
+| `nodejs_install`| 安装 nodejs 软件包                      |
+| `nodejs_config` | 配置 npm 镜像（中国区自动使用 npmmirror） |
+{.full-width}
+
+生成的文件：
+- `/usr/local/node/etc/npmrc`（仅当配置镜像时）
+
 
 --------
 
@@ -200,6 +226,9 @@ vibe
 
 # 仅部署 Claude Code
 ./vibe.yml -l <host> -t claude
+
+# 仅部署 Node.js
+./vibe.yml -l <host> -t nodejs
 ```
 
 ### 配置更新
@@ -236,6 +265,10 @@ vibe
 ./vibe.yml -l <host> -e code_enabled=false
 ./vibe.yml -l <host> -e jupyter_enabled=false
 ./vibe.yml -l <host> -e claude_enabled=false
+./vibe.yml -l <host> -e nodejs_enabled=false
+
+# 配置 npm 镜像
+./vibe.yml -l <host> -e nodejs_registry='https://registry.npmmirror.com'
 
 # 配置 Claude API Key
 ./vibe.yml -l <host> -e "claude_env={ANTHROPIC_API_KEY: 'sk-ant-xxx'}"
