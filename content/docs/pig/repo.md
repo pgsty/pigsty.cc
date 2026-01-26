@@ -1,7 +1,7 @@
 ---
 title: "pig repo"
 description: "使用 pig repo 子命令管理软件仓库"
-weight: 5280
+weight: 110
 icon: fas fa-warehouse
 module: [PIG]
 categories: [参考]
@@ -21,6 +21,7 @@ categories: [参考]
 | `repo create` | 创建本地 YUM/APT 仓库 | 需要 sudo 或 root 权限 |
 | `repo cache`  | 从本地仓库创建离线包      | 需要 sudo 或 root 权限 |
 | `repo boot`   | 从离线包引导仓库        | 需要 sudo 或 root 权限 |
+| `repo reload` | 刷新仓库目录          |                   |
 {.full-width}
 
 
@@ -227,4 +228,15 @@ pig repo boot -d /srv           # 自定义目标目录
 **选项：**
 - `-p, --path`：包路径（默认：`/tmp/pkg.tgz`）
 - `-d, --dir`：目标目录（默认：`/www/`）
+
+
+## repo reload
+
+从 GitHub 刷新仓库元数据到最新版本。
+
+```bash
+pig repo reload                  # 刷新仓库目录
+```
+
+更新后的文件会放置于 `~/.pig/repo.yml` 中。
 

@@ -1,7 +1,7 @@
 ---
 title: "pig build"
 description: "使用 pig build 子命令从源码构建扩展"
-weight: 5300
+weight: 130
 icon: fas fa-hammer
 module: [PIG]
 categories: [参考]

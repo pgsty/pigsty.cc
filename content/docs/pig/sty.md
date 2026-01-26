@@ -1,7 +1,7 @@
 ---
 title: "pig sty"
 description: "使用 pig sty 子命令管理 Pigsty 安装"
-weight: 5290
+weight: 150
 icon: fas fa-server
 module: [PIG]
 categories: [参考]
@@ -111,14 +111,14 @@ pig sty conf -c full -g -o ha.yml  # 完整 HA 模板，随机密码输出到 ha
 使用 deploy.yml 剧本部署 Pigsty。
 
 ```bash
-pig sty deploy       # 执行 deploy.yml（如果找不到则使用 deploy.yml）
+pig sty deploy       # 执行 deploy.yml（如果找不到则使用 install.yml）
 pig sty install      # 与 deploy 相同（向后兼容）
 pig sty d            # 短别名
 pig sty de           # 短别名
 pig sty ins          # 短别名
 ```
 
-此命令从您的 Pigsty 安装目录执行 deploy.yml 剧本。为保持向后兼容性，如果 deploy.yml 不存在但 deploy.yml 存在，将使用 deploy.yml 代替。
+此命令从您的 Pigsty 安装目录执行 deploy.yml 剧本。为保持向后兼容性，如果 deploy.yml 不存在但 install.yml 存在，将使用 install.yml 代替。
 
 > **警告**：此操作会修改您的系统。请谨慎使用！
 

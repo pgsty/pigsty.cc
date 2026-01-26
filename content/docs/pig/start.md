@@ -2,7 +2,7 @@
 title: "上手"
 linkTitle: "上手"
 description: "快速上手 pig，PostgreSQL 包管理器"
-weight: 5210
+weight: 10
 icon: fas fa-rocket
 module: [PIG]
 categories: [教程]

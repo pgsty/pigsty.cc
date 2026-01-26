@@ -1,7 +1,7 @@
 ---
 title: "pig"
 description: "pig CLI 命令参考概览"
-weight: 5260
+weight: 100
 icon: fas fa-terminal
 module: [PIG]
 categories: [参考]
@@ -13,6 +13,9 @@ categories: [参考]
 - [**pig ext**](/docs/pig/ext/)：管理 PostgreSQL 扩展
 - [**pig build**](/docs/pig/build/)：从源码构建扩展
 - [**pig sty**](/docs/pig/sty/)：管理 Pigsty 安装
+- [**pig pg**](/docs/pig/pg/)：管理本地 PostgreSQL 服务器
+- [**pig pt**](/docs/pig/pt/)：管理 Patroni HA 集群
+- [**pig pb**](/docs/pig/pb/)：管理 pgBackRest 备份与恢复
 
 ## 概览
 
@@ -132,3 +135,45 @@ pig sty deploy                   # 运行部署 playbook
 ```
 
 
+## pig pg
+
+管理本地 PostgreSQL 服务器，详情请参考 [`pig pg`](/docs/pig/pg/)
+
+```bash
+pig pg init                      # 初始化数据目录
+pig pg start                     # 启动 PostgreSQL
+pig pg stop                      # 停止 PostgreSQL
+pig pg status                    # 查看状态
+pig pg psql mydb                 # 连接数据库
+pig pg ps                        # 查看当前连接
+pig pg vacuum mydb               # 清理数据库
+pig pg log tail                  # 实时查看日志
+```
+
+
+## pig pt
+
+管理 Patroni HA 集群，详情请参考 [`pig pt`](/docs/pig/pt/)
+
+```bash
+pig pt list                      # 列出集群成员
+pig pt config                    # 显示集群配置
+pig pt config ttl=60             # 修改集群配置
+pig pt status                    # 查看服务状态
+pig pt log -f                    # 实时查看日志
+```
+
+
+## pig pb
+
+管理 pgBackRest 备份与恢复，详情请参考 [`pig pb`](/docs/pig/pb/)
+
+```bash
+pig pb info                      # 显示备份信息
+pig pb ls                        # 列出所有备份
+pig pb backup                    # 创建备份
+pig pb backup full               # 全量备份
+pig pb restore                   # 恢复到最新
+pig pb restore -t "2025-01-01"   # 恢复到指定时间
+pig pb log tail                  # 实时查看日志
+```

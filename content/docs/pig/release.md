@@ -1,6 +1,6 @@
 ---
 title: 版本
-weight: 5240
+weight: 40
 description: pig —— PostgreSQL 包管理器的发布说明
 icon: fa-solid fa-clipboard-list
 module: [PIG]
@@ -11,8 +11,7 @@ categories: [参考]
 
 |       版本        |     日期     | 摘要                                |                                                     GitHub |
 |:---------------:|:----------:|-----------------------------------|-----------------------------------------------------------:|
-| [v1.0.0](#v100) | 2026-01-18 | 444 扩展，新增 pig ext avail，Status 列  | [v1.0.0](https://github.com/pgsty/pig/releases/tag/v1.0.0) |
-| [v0.9.0](#v090) | 2025-12-28 | 调整 pig sty 命令选项，修复 pgsql alias    | [v0.9.0](https://github.com/pgsty/pig/releases/tag/v0.9.0) |
+| [v1.0.0](#v100) | 2026-01-26 | 444, 新增 pg/pt/pb/pitr 子命令，可用性矩阵   | [v1.0.0](https://github.com/pgsty/pig/releases/tag/v1.0.0) |
 | [v0.8.0](#v080) | 2025-12-26 | 440 extensions，移除 sysupdate 仓库    | [v0.8.0](https://github.com/pgsty/pig/releases/tag/v0.8.0) |
 | [v0.7.5](#v075) | 2025-12-12 | 常规扩展更新，使用修复后的阿里云镜像                | [v0.7.5](https://github.com/pgsty/pig/releases/tag/v0.7.5) |
 | [v0.7.4](#v074) | 2025-12-01 | 更新 ivory/pgtde 内核与 pgdg extras 仓库 | [v0.7.4](https://github.com/pgsty/pig/releases/tag/v0.7.4) |
@@ -48,42 +47,63 @@ categories: [参考]
 
 ## v1.0.0
 
-- 扩展总数达到 444 个，新增 etcd_fdw、pg_ttl_index、documentdb_extended_rum、mobilitydb_datagen
-- citus、age、pg_search、pg_bulkload、documentdb 现已支持 PG 18
-- 新增 `pig ext avail` 子命令，支持 `--pkg` 选项显示扩展包可用性矩阵
-- 调整 `pig ext ls` 状态字段，使用可用性矩阵显示包状态（installed/available/not avail）
-- 允许 `pig ext ls` 使用 `--pkg` 选项输出包名而非扩展名
-- 修复 `pig ext scan` 重复扩展问题
-- 修复 `pg_weighted_statistics` 扩展名，现在 `ext` 名称为 `weighted_statistics`
-- EL 系统默认别名移除 llvmjit（仅 pgsql-full 保留）
-- EL 系统扩展包名移除通配符
+本版本引入三组主要的新子命令（`pig pg`、`pig pt`、`pig pb`），用于管理 PostgreSQL、Patroni 和 pgBackRest，同时新增编排式 PITR 命令，并增强扩展可用性显示。
 
-发布：https://github.com/pgsty/pig/releases/tag/v1.0.0
+**新增命令**
 
+- `pig pg` - PostgreSQL 实例管理
+  - `pg start/stop/restart/reload` - 控制 PostgreSQL 服务
+  - `pg status/log/ps/conf/hba` - 查看实例状态与配置
+  - `pg psql` - 启动 psql 控制台
+  - `pg role` - 检测实例角色（主库/从库）
+  - `pg promote/checkpoint/vacuumdb` - 维护操作
 
---------
+- `pig pt` - Patroni 集群管理
+  - `pt list/config` - 查看集群状态与配置
+  - `pt restart/reload/reinit` - 管理集群成员
+  - `pt switchover/failover` - 集群切换操作
+  - `pt pause/resume` - 控制自动故障切换
+  - `pt start/stop/status/log` - Patroni 服务管理
 
-## v0.9.0
+- `pig pb` - pgBackRest 备份管理
+  - `pb info/ls` - 查看备份信息
+  - `pb backup/restore/expire` - 备份操作
+  - `pb create/upgrade/delete` - Stanza 管理
+  - `pb check/start/stop/log` - 控制操作
 
-- 将命令 `pig sty install` 重构为 `pig sty deploy`
-- 为命令 `pig sty conf` 添加新参数，与 `configure` 脚本对齐。
-- 将 llvmjit 包添加至 pgsql-full 别名中
+- `pig pitr` - 编排式时间点恢复
+  - 自动协调 Patroni/PostgreSQL
+  - 多种恢复目标：时间、LSN、XID、还原点
+  - 支持 dry-run 模式与恢复后指引
+
+**新功能**
+
+- 为 `pig ext avail` 和 `pig ext ls` 添加可用性矩阵
+
+**改进**
+
+- 统一 pg/pt/pb 命令别名风格
+- 规范化错误消息格式
+- 代码重构与清理
+
+**Bug 修复**
+
+- 修复 UTIL 扩展分类缺失问题
 
 **校验和**
 
 ```bash
-ea0c098d0829720b6e364d2f2a91328876962c7f0ae94eee7bdcde0bd43313fa  pig-0.9.0-1.aarch64.rpm
-707f4e1fde76d3faa05165ac11e97969c22a8740c97ef84da52727d0328990cc  pig-0.9.0-1.x86_64.rpm
-56aeb61674ddfb64368e6f5535e06a38b76f62e3d6c9536a63be7df6babed93e  pig-v0.9.0.darwin-amd64.tar.gz
-a213d16817d6124ffa83d93ad880a040598b6ed3fe23a74d43420c095ed43de4  pig-v0.9.0.darwin-arm64.tar.gz
-6a1a1836217fa723ca42bc2276ecf1453cd2ee0acacddfc313164701b24a452f  pig-v0.9.0.linux-amd64.tar.gz
-5e5728aa5922138c61c900a731f97cdc1b9653c14d7fe804b6753fb6f222b8b0  pig-v0.9.0.linux-arm64.tar.gz
-e80d2cb3ceb5fd58fc0262ab4b39b44e8dcccb7712151c73a41ba50cb510353b  pig_0.9.0-1_amd64.deb
-ecb504efffde8d696b765579332fc0b3304751fa8077c4c0394e7f3c44aa0fe2  pig_0.9.0-1_arm64.deb
+e457832fb290e2f9975bf719966dc36e650bdcbf8505d319c9e0431f4c03bc9e  pig-0.8.0-1.aarch64.rpm
+c97b1bfdd7541f0f464cab0ecc273e65535c8dd2603c38d5cf8dccbf7e95b523  pig-0.8.0-1.x86_64.rpm
+d892f06d3d3b440671529f40e6cc7949686e0167e2a4758adc666b8a3d75254d  pig-v0.8.0.darwin-amd64.tar.gz
+222413bafdf5a62dc682dac32ea1118cbc34ec3544e2a1b85076ec450b9cc7ae  pig-v0.8.0.darwin-arm64.tar.gz
+d50aa9806bbab8fee5ad9228e104fc9e7ead48729228116b5bf889000791fedc  pig-v0.8.0.linux-amd64.tar.gz
+d2f410f7b243a8323c8d479f462a0267ac72d217aa4a506c80b5a9927d12dff8  pig-v0.8.0.linux-arm64.tar.gz
+4ccd330a995911d4f732e8c9d62aa0db479c21c9596f64c4bc129ec43f156abe  pig_0.8.0-1_amd64.deb
+5cb9eccce659110f3ba58e502575564bd6befffd51992a43d84df5a17f8eb8a0  pig_0.8.0-1_arm64.deb
 ```
 
-发布：https://github.com/pgsty/pig/releases/tag/v0.9.0
-
+发布：https://github.com/pgsty/pig/releases/tag/v1.0.0
 
 
 --------

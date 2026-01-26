@@ -2,7 +2,7 @@
 title: "简介"
 linkTitle: "简介"
 description: "为什么我们还需要一个新的包管理器？尤其是针对 Postgres 扩展？"
-weight: 5220
+weight: 20
 icon: fas fa-lightbulb
 module: [PIG]
 categories: [概念]

@@ -2,7 +2,7 @@
 title: "安装"
 linkTitle: "安装"
 description: "如何下载与安装 pig 包管理器"
-weight: 5230
+weight: 30
 icon: fas fa-download
 module: [PIG]
 categories: [任务]

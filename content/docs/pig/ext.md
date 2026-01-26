@@ -1,7 +1,7 @@
 ---
 title: "pig ext"
 description: "使用 pig ext 子命令管理 PostgreSQL 扩展"
-weight: 5270
+weight: 120
 icon: fas fa-puzzle-piece
 module: [PIG]
 categories: [参考]
@@ -76,15 +76,16 @@ pig ext install pg18          # 安装 PostgreSQL 18 内核（除 devel 包）
 pig ext list                     # 列出所有扩展
 pig ext list duck                # 搜索包含 "duck" 的扩展
 pig ext list vector ai           # 搜索多个关键词
-pig ext list -c RAG              # 按分类筛选
 pig ext list -v 17               # 按 PG 版本筛选
 pig ext ls olap                  # 列出 olap 类别扩展
 pig ext ls gis -v 16             # 列出 PG 16 的 GIS 类扩展
+pig ext ls rag                   # 列出 RAG 类别扩展
 ```
+
+分类筛选通过查询参数直接指定分类名实现，支持的分类包括：`time`, `gis`, `rag`, `fts`, `olap`, `feat`, `lang`, `type`, `func`, `util`, `admin`, `stat`, `sec`, `fdw`, `sim`, `etl`。
 
 **选项：**
 
-- `-c|--category`：按分类筛选（TIME, GIS, RAG, FTS, OLAP, FEAT, LANG, TYPE, UTIL, FUNC, ADMIN, STAT, SEC, FDW, SIM, ETL）
 - `-v|--version`：按 PG 版本筛选
 - `--pkg`：显示包名而非扩展名，仅列出主导扩展
 
