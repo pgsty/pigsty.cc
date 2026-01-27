@@ -15,7 +15,7 @@ Pigsty 旨在运行于原生 Linux 系统上，但也可以在带有 systemd 的
 
 ----------------
 
-## 摘要
+## 快速开始
 
 进入 Pigsty 源码包的 [**`docker/`**](https://github.com/pgsty/pigsty/tree/main/docker) 目录，使用以下一键命令启动 Pigsty：
 
@@ -32,7 +32,6 @@ make launch          # 启动容器 + 生成配置 + 执行部署
 | Web 界面     | http://localhost:8080                                            | -                  |
 | Grafana    | http://localhost:8080/ui                                         | `admin` / `pigsty` |
 | PostgreSQL | `psql postgres://dbuser_dba:DBUser.DBA@localhost:5432/postgres`  | `DBUser.DBA`       |
-{.full-width}
 
 {{% alert title="Web 界面与 PostgreSQL 服务" color="info" %}}
 Web 界面与 PostgreSQL 服务仅在完成 **部署**（`./deploy.yml`）后才可用。
@@ -45,12 +44,12 @@ Web 界面与 PostgreSQL 服务仅在完成 **部署**（`./deploy.yml`）后才
 
 使用 Docker 部署 Pigsty 需要满足以下条件：
 
-|         项目          | 要求                                 |          项目          | 要求                      |
-|:-------------------:|:-----------------------------------|:--------------------:|:------------------------|
-| **Docker**          | Docker 20.10+（Docker Desktop 或 CE） | **CPU**              | 至少 1 核                  |
-| **内存**              | 至少 2GB                             | **磁盘**               | 至少 20GB 可用空间            |
-{.full-width}
+|       项目       | 要求                                 |      项目      | 要求           |
+|:--------------:|:-----------------------------------|:------------:|:-------------|
+| **Docker**     | Docker 20.10+（Docker Desktop 或 CE） | **CPU**      | 至少 1 核       |
+| **内存**         | 至少 2GB                             | **磁盘**       | 至少 20GB 可用空间 |
 
+请确保默认宿主机端口（2222/8080/8443/5432）可用，否则请先修改 [**`.env`**](#配置) 文件。
 
 {{% alert title="Docker 部署适用场景" color="success" %}}
 - 在 macOS / Windows 等非 Linux 环境下快速体验 Pigsty
@@ -63,6 +62,23 @@ Web 界面与 PostgreSQL 服务仅在完成 **部署**（`./deploy.yml`）后才
 - **高可用集群**：Docker 单机模式无法实现多节点高可用
 - **大规模部署**：建议使用原生 Linux 虚拟机或物理机
 {{% /alert %}}
+
+
+----------------
+
+## 镜像
+
+Pigsty 提供开箱即用的 Docker 镜像，发布在 [**Docker Hub**](https://hub.docker.com/r/pgsty/pigsty)。
+
+| 镜像             | 拉取大小   | 解压大小   | 内容                                 |
+|:---------------|:-------|:-------|:-----------------------------------|
+| `pgsty/pigsty` | ~500MB | 1.3GB  | Debian 13 + systemd + SSH + pig + Ansible |
+
+- 同时支持 **amd64**（x86_64）和 **arm64**（Apple Silicon、AWS Graviton）架构
+- 镜像标签与 Pigsty 版本一致：`v4.0.0`、`latest` 等
+- 镜像内已预生成 docker 配置模板，可直接执行 `./deploy.yml` 部署
+
+镜像基于 **Debian 13 (Trixie)** 构建，预装了 [**`pig`**](/docs/pig/) CLI 工具和 Ansible，并已初始化好 Pigsty 源码。
 
 
 ----------------
@@ -84,7 +100,7 @@ make launch          # 一键启动：up + config + deploy
 cd ~/pigsty/docker
 make up              # 启动容器
 make exec            # 进入容器
-./configure -c docker -g --ip 127.0.0.1  # 生成配置
+./configure -c docker -g --ip 127.0.0.1  # 生成配置（可选，镜像已预配置）
 ./deploy.yml         # 执行部署
 ```
 
@@ -104,11 +120,7 @@ make launch          # 启动容器 + 生成配置 + 执行部署
 您可以通过修改 [**`.env`**](https://github.com/pgsty/pigsty/blob/main/docker/.env) 文件来自定义镜像版本和端口映射：
 
 ```bash
-# 镜像配置
-PIGSTY_IMAGE=pgsty/pigsty     # 镜像名称，可选：pgsty/linux, pgsty/admin, pgsty/infra, pgsty/pgsql, pgsty/pigsty
 PIGSTY_VERSION=v4.0.0         # 镜像版本，与 Pigsty 版本号一致
-
-# 端口映射（宿主机端口）
 PIGSTY_SSH_PORT=2222          # SSH 端口
 PIGSTY_HTTP_PORT=8080         # Nginx HTTP 端口
 PIGSTY_HTTPS_PORT=8443        # Nginx HTTPS 端口
@@ -117,50 +129,18 @@ PIGSTY_PG_PORT=5432           # PostgreSQL 端口
 
 **端口映射说明**：
 
-| 环境变量                | 默认值    | 容器端口 | 说明              |
-|:--------------------|:-------|:-----|:----------------|
-| `PIGSTY_SSH_PORT`   | `2222` | 22   | SSH 访问端口        |
-| `PIGSTY_HTTP_PORT`  | `8080` | 80   | Nginx HTTP 端口   |
-| `PIGSTY_HTTPS_PORT` | `8443` | 443  | Nginx HTTPS 端口  |
-| `PIGSTY_PG_PORT`    | `5432` | 5432 | PostgreSQL 端口   |
-{.full-width}
+| 环境变量                | 默认值      | 容器端口 | 说明             |
+|:--------------------|:---------|:-----|:---------------|
+| `PIGSTY_VERSION`    | `v4.0.0` | -    | 镜像版本标签         |
+| `PIGSTY_SSH_PORT`   | `2222`   | 22   | SSH 访问端口       |
+| `PIGSTY_HTTP_PORT`  | `8080`   | 80   | Nginx HTTP 端口  |
+| `PIGSTY_HTTPS_PORT` | `8443`   | 443  | Nginx HTTPS 端口 |
+| `PIGSTY_PG_PORT`    | `5432`   | 5432 | PostgreSQL 端口  |
 
 如果默认端口已被占用，可以通过环境变量临时覆盖：
 
 ```bash
 PIGSTY_HTTP_PORT=8888 docker compose up -d
-```
-
-
-----------------
-
-## 镜像
-
-Pigsty 提供了 5 个层次递进的 Docker 镜像，每个镜像都基于上一层构建，您可以根据需求选择合适的镜像：
-
-| 镜像             | 拉取大小   | 解压大小   | 内容                            | 用途           |
-|:---------------|:-------|:-------|:------------------------------|:-------------|
-| `pgsty/linux`  | ~150MB | 400MB  | Debian 13 + systemd + SSH     | 基础容器         |
-| `pgsty/admin`  | ~500MB | 1.3GB  | + pig + Ansible + node 软件包    | **管控节点**     |
-| `pgsty/infra`  | ~1.0GB | 2.7GB  | + 监控基础设施                      | 基础设施节点       |
-| `pgsty/pgsql`  | ~1.2GB | 3.1GB  | + PostgreSQL 18 核心            | PostgreSQL 节点 |
-| `pgsty/pigsty` | ~1.6GB | 4.3GB  | + 全部 340+ 扩展                  | **完整部署**     |
-{.full-width}
-
-- **拉取大小**：从 Docker Hub 拉取时的压缩传输大小
-- **解压大小**：拉取后的实际磁盘占用
-- 所有镜像都支持 **amd64**（x86_64）和 **arm64**（Apple Silicon、AWS Graviton）架构
-- 镜像标签与 Pigsty 版本一致：`v4.0.0`、`latest` 等
-
-**镜像层次结构**：
-
-```
-debian:trixie
-    └── pgsty/linux   (基础镜像 + systemd + ssh)
-        └── pgsty/admin   (+ pig + ansible + node 软件包)
-            └── pgsty/infra   (+ 监控组件)
-                └── pgsty/pgsql   (+ postgresql 核心)
-                    └── pgsty/pigsty (+ 全部扩展)
 ```
 
 
@@ -201,20 +181,9 @@ make pass         # 查看配置中的密码
 ### 镜像构建命令
 
 ```bash
-make linux        # 构建 pgsty/linux 基础镜像
-make admin        # 构建 pgsty/admin 管控节点镜像
-make infra        # 构建 pgsty/infra 基础设施镜像
-make pgsql        # 构建 pgsty/pgsql PostgreSQL 镜像
-make pigsty       # 构建 pgsty/pigsty 完整镜像
-make build        # 构建全部 5 个镜像（等同于 make images）
-make images       # 构建全部 5 个镜像
-```
-
-### 镜像推送命令
-
-```bash
-make pigsty-push  # 推送 pgsty/pigsty 镜像（多架构）
-make images-push  # 推送全部镜像
+make build        # 本地构建镜像
+make buildnc      # 不使用缓存构建镜像
+make push         # 构建并推送多架构镜像
 ```
 
 ### 镜像管理命令
@@ -223,7 +192,6 @@ make images-push  # 推送全部镜像
 make save         # 导出镜像到 pigsty-<version>-<arch>.tgz
 make load         # 从 tgz 文件导入镜像
 make rmi          # 删除当前版本的 pigsty 镜像
-make rmi-all      # 删除当前版本的所有镜像
 ```
 
 ### 容器清理命令
@@ -241,14 +209,14 @@ make purge        # 删除容器并清空数据（会提示确认）
 如果您不想使用 Docker Compose，也可以直接使用 `docker run` 命令：
 
 ```bash
-mkdir -p /data/pigsty    # 创建数据目录
+mkdir -p ./data
 docker run -d --privileged --name pigsty \
   -p 2222:22 -p 8080:80 -p 5432:5432 \
-  -v /data/pigsty:/data \
+  -v ./data:/data \
   pgsty/pigsty:v4.0.0
-docker exec -it pigsty /bin/bash
-./configure -c docker -g --ip 127.0.0.1
-./deploy.yml
+
+docker exec -it pigsty ./configure -c docker -g --ip 127.0.0.1
+docker exec -it pigsty ./deploy.yml
 ```
 
 或者使用 Makefile 提供的 `make run` 命令：
@@ -274,7 +242,21 @@ Pigsty Docker 镜像基于 **Debian 13 (Trixie)**，启用了 **systemd** 作为
 - **SSH 访问**：预配置了 SSH 服务，root 密码为 `pigsty`
 - **特权模式**：需要 `--privileged` 参数以支持 systemd
 - **数据持久化**：通过 `/data` 卷挂载实现数据持久化
-- **预装软件**：完整镜像预装了 PostgreSQL 18 及 340+ 扩展
+- **预装软件**：预装 pig CLI 和 Ansible，已完成 Pigsty 源码初始化
+
+镜像构建时会执行以下初始化步骤：
+
+```dockerfile
+# 安装 pig CLI
+RUN echo "deb [trusted=yes] https://repo.pigsty.cc/apt/infra/ generic main" \
+    > /etc/apt/sources.list.d/pigsty.list \
+    && apt-get update && apt-get install -y pig
+
+# 初始化 Pigsty 源码并安装 Ansible
+RUN pig sty init -v ${PIGSTY_VERSION} \
+    && pig sty boot \
+    && pig sty conf -c docker --ip 127.0.0.1
+```
 
 在容器内执行 `./configure` 时，使用 `-c docker` 参数会应用专门针对 Docker 环境优化的 [**配置模板**](/docs/concept/iac/template/)：
 
@@ -289,7 +271,7 @@ Pigsty Docker 镜像基于 **Debian 13 (Trixie)**，启用了 **systemd** 作为
 ### 容器无法启动
 
 确保 Docker 已正确安装且有足够的资源分配。在 Docker Desktop 中，建议分配至少 2GB 内存。
-检查是否有端口冲突，特别是 22、80、443、5432 端口。
+检查是否有端口冲突，特别是 2222、8080、8443、5432 端口。
 
 ### 服务访问失败
 
@@ -327,4 +309,3 @@ make purge        # 删除容器并清空数据（会提示确认）
 - **快速上手**：[**原生 Linux 安装**](/docs/setup/install/)
 - **离线安装**：[**离线安装**](/docs/setup/offline/)
 - **生产部署**：[**部署指南**](/docs/deploy/)
-

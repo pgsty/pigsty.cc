@@ -10,7 +10,7 @@ Pigsty 当前的最新稳定版本为 [**v4.0.0**](#v400)。
 
 |       版本        |    发布日期    | 摘要                                                      |                                           发布页面                                            |
 |:---------------:|:----------:|---------------------------------------------------------|:-----------------------------------------------------------------------------------------:|
-| [v4.0.0](#v400) | 2026-01-25 | Victoria 可观测性，安全加固，JUICE/VIBE 模块，Apache-2.0             |               [v4.0.0](https://github.com/pgsty/pigsty/releases/tag/v4.0.0)               |
+| [v4.0.0](#v400) | 2026-01-28 | Victoria 可观测性，安全加固，JUICE/VIBE 模块，容器支持，Apache-2.0        |               [v4.0.0](https://github.com/pgsty/pigsty/releases/tag/v4.0.0)               |
 | [v3.7.0](#v370) | 2025-12-02 | PG18 成为默认，437 个扩展，EL10 与 Debian13 支持，PGEXT.CLOUD        |               [v3.7.0](https://github.com/pgsty/pigsty/releases/tag/v3.7.0)               |
 | [v3.6.1](#v361) | 2025-08-15 | 例行 PG 小版本更新，PGDG 中国区域镜像，EL9，D13 存根                      |               [v3.6.0](https://github.com/pgsty/pigsty/releases/tag/v3.6.0)               |
 | [v3.6.0](#v360) | 2025-07-30 | pgactive，MinIO / ETCD 改进，安装简化，配置梳理                      |               [v3.6.0](https://github.com/pgsty/pigsty/releases/tag/v3.6.0)               |
@@ -72,14 +72,15 @@ Pigsty 当前的最新稳定版本为 [**v4.0.0**](#v400)。
 curl https://pigsty.cc/get | bash -s v4.0.0
 ```
 
-**299 个提交**，595 文件变更，+117,624 / -327,455 行，发布页面: https://github.com/pgsty/pigsty/releases/tag/v4.0.0
+**318 个提交**，604 文件变更，+118,655 / -327,552 行，发布页面: https://github.com/pgsty/pigsty/releases/tag/v4.0.0
 
 **亮点特性**
 
 - **可观测性革命**: Prometheus → VictoriaMetrics（10x 性能提升），Loki + Promtail → VictoriaLogs + Vector
 - **安全加固**: 自动生成强密码、etcd RBAC、防火墙/SELinux 模式、权限收紧、Nginx Basic Auth
-- **新增模块**：Juice，提供将 PG 挂载为文件系统并进行 PITR 的能力
-- **新增模块**：VIBE，提供 Claude Code，Jupyter，VS Code Server 的配置与可观测性
+- **容器支持**：支持在 Docker 容器中运行 Pigsty 本身
+- **新增模块**：JUICE，提供将 PG 挂载为文件系统并进行 PITR 的能力
+- **新增模块**：VIBE，提供 Claude Code、JupyterLab、VS Code Server、Node.js 的配置与可观测性
 - **数据库管理**: `pg_databases` state（create/absent/recreate）、`strategy` 瞬间克隆数据库
 - **PITR 与分叉**: `/pg/bin/pg-fork` CoW 瞬间克隆、`pg-pitr` 增强支持 PITR 前备份
 - **高可用增强**: `pg_rto_plan` 提供四档 RTO 预置参数（fast/norm/safe/wide），`pg_crontab` 定时任务
@@ -90,33 +91,37 @@ curl https://pigsty.cc/get | bash -s v4.0.0
 
 MinIO 开始使用 [pgsty/minio](https://github.com/pgsty/minio) fork RPM/DEB
 
-| 软件包                 | 版本      | 软件包           | 版本       |
-|---------------------|---------|---------------|----------|
-| victoria-metrics    | 1.134.0 | victoria-logs | 1.43.1   |
-| vector              | 0.52.0  | grafana       | 12.3.1   |
-| alertmanager        | 0.30.1  | etcd          | 3.6.7    |
-| duckdb              | 1.4.3   | pg_exporter   | 1.1.2    |
-| pgbackrest_exporter | 0.22.0  | minio         | 20251203 |
-| pig                 | 1.0.0   | claude        | 2.1.19   |
-| opencode            | 1.1.34  | juicefs       | 1.4.0    |
-| code-server         | 4.100.2 | caddy         | 2.10.2   |
-| hugo                | 0.154.5 | cloudflared   | 2026.1.1 |
-| headscale           | 0.27.1  |               |          |
+| 软件包                 | 版本      | 软件包               | 版本       |
+|---------------------|---------|-------------------|----------|
+| victoria-metrics    | 1.134.0 | victoria-logs     | 1.43.1   |
+| vector              | 0.52.0  | grafana           | 12.3.1   |
+| alertmanager        | 0.30.1  | etcd              | 3.6.7    |
+| duckdb              | 1.4.4   | pg_exporter       | 1.1.2    |
+| pgbackrest_exporter | 0.22.0  | blackbox_exporter | 0.28.0   |
+| node_exporter       | 1.10.2  | minio             | 20251203 |
+| pig                 | 1.0.0   | claude            | 2.1.19   |
+| opencode            | 1.1.34  | uv                | 0.9.26   |
+| asciinema           | 3.1.0   | prometheus        | 3.9.1    |
+| pushgateway         | 1.11.2  | juicefs           | 1.4.0    |
+| code-server         | 4.100.2 | caddy             | 2.10.2   |
+| hugo                | 0.154.5 | cloudflared       | 2026.1.1 |
+| headscale           | 0.27.1  |                   |          |
 {.full-width}
 
 **新增模块**
 
 - **JUICE 模块**：JuiceFS 分布式文件系统，使用 PostgreSQL 作为元数据引擎，支持利用 PITR 恢复文件系统
-- **VIBE 模块**：AI 辅助编程沙箱环境（整合了 Code-Server、JupyterLab 与 Claude Code）
+- **VIBE 模块**：AI 辅助编程沙箱环境（整合了 Code-Server、JupyterLab、Node.js 与 Claude Code）
   - Code-Server：浏览器中的 VS Code
   - JupyterLab：交互式计算环境
+  - Node.js：JavaScript 运行时环境
   - Claude Code：AI 编程助手 CLI 配置，内置 OpenTelemetry 可观测性
 
 **PostgreSQL 扩展**
 
-**新扩展**: [pg_textsearch](https://github.com/timescale/pg_textsearch) 0.4.0, [pg_clickhouse](https://github.com/clickhouse/pg_clickhouse/) 0.1.3, [pg_ai_query](https://github.com/benodiwal/pg_ai_query) 0.1.1, [etcd_fdw](https://github.com/pgsty/etcd_fdw), [pg_ttl_index](https://github.com/pg-ttl-index), [pljs](https://github.com/plv8/pljs) 1.0.4, [pg_retry](https://github.com/pg-retry/pg_retry), [pg_weighted_statistics](https://github.com/pgsty/pg_weighted_statistics), [pg_enigma](https://github.com/pgsty/pg_enigma), [pglinter](https://github.com/pgsty/pglinter)
+**新扩展**: [pg_textsearch](https://github.com/timescale/pg_textsearch) 0.4.0, [pg_clickhouse](https://github.com/clickhouse/pg_clickhouse/) 0.1.3, [pg_ai_query](https://github.com/benodiwal/pg_ai_query) 0.1.1, [etcd_fdw](https://github.com/pgsty/etcd_fdw), [pg_ttl_index](https://github.com/pg-ttl-index) 0.1.0, [pljs](https://github.com/plv8/pljs) 1.0.4, [pg_retry](https://github.com/pg-retry/pg_retry) 1.0.0, [pg_weighted_statistics](https://github.com/pgsty/pg_weighted_statistics) 1.0.0, [pg_enigma](https://github.com/pgsty/pg_enigma) 0.5.0, [pglinter](https://github.com/pgsty/pglinter) 1.0.1, [documentdb_extended_rum](https://github.com/microsoft/documentdb) 0.109, [mobilitydb_datagen](https://github.com/MobilityDB) 1.3.0
 
-**重要更新**: timescaledb 2.24.0, pg_search 0.21.4, citus 14.0.0, documentdb 0.109, age 1.7.0, pg_duckdb 1.1.1, vchord 1.0.0, vchord_bm25 0.3.0, pg_anon 2.5.1, pg_session_jwt 0.4.0, pg_partman 5.4.0, pgmq 1.9.0, pgBackRest 2.58
+**重要更新**: timescaledb 2.24.0, pg_search 0.21.4, citus 14.0.0, documentdb 0.109, age 1.7.0, pg_duckdb 1.1.1, vchord 1.0.0, vchord_bm25 0.3.0, pg_biscuit 2.2.2, pg_anon 2.5.1, wrappers 0.5.7, pg_vectorize 0.26.0, pg_session_jwt 0.4.0, pg_partman 5.4.0, pgmq 1.9.0, pg_bulkload 3.1.23, pg_timeseries 0.2.0, pg_convert 0.1.0, pgBackRest 2.58
 
 **破坏性变更**
 
@@ -300,15 +305,17 @@ MinIO 开始使用 [pgsty/minio](https://github.com/pgsty/minio) fork RPM/DEB
 | `code_enabled`           | bool   | true          | 是否启用 Code-Server                 |
 | `code_port`              | port   | 8443          | Code-Server 监听端口                 |
 | `code_data`              | path   | /data/code    | Code-Server 数据目录                 |
-| `code_password`          | string | Code.Server   | Code-Server 登录密码                 |
+| `code_password`          | string | Vibe.Coding   | Code-Server 登录密码                 |
 | `code_gallery`           | enum   | openvsx       | 扩展市场：openvsx/microsoft           |
 | `jupyter_enabled`        | bool   | true          | 是否启用 JupyterLab                  |
 | `jupyter_port`           | port   | 8888          | JupyterLab 监听端口                  |
 | `jupyter_data`           | path   | /data/jupyter | JupyterLab 数据目录                  |
-| `jupyter_password`       | string | Jupyter.Lab   | JupyterLab 登录 Token              |
+| `jupyter_password`       | string | Vibe.Coding   | JupyterLab 登录 Token              |
 | `jupyter_venv`           | path   | /data/venv    | Python 虚拟环境路径                    |
 | `claude_enabled`         | bool   | true          | 是否启用 Claude Code 配置              |
 | `claude_env`             | dict   | {}            | Claude Code 额外环境变量               |
+| `nodejs_enabled`         | bool   | true          | 是否启用 Node.js 安装                  |
+| `nodejs_registry`        | string | ''            | npm registry，自动配置中国镜像            |
 | `node_uv_env`            | path   | /data/venv    | 节点 UV 虚拟环境路径，空则跳过                |
 | `node_pip_packages`      | string | ''            | UV 虚拟环境中安装的 pip 包                |
 {.full-width}
@@ -327,7 +334,21 @@ MinIO 开始使用 [pgsty/minio](https://github.com/pgsty/minio) fork RPM/DEB
 **校验和**
 
 ```bash
-# v4.0.0 离线安装包校验和 (待补充)
+bca8a819ed83e5fc228af9e991de1f17  pigsty-v4.0.0.tgz
+db9797c3c8ae21320b76a442c1135c7b  pigsty-pkg-v4.0.0.d12.aarch64.tgz
+1eed26eee42066ca71b9aecbf2ca1237  pigsty-pkg-v4.0.0.d12.x86_64.tgz
+03540e41f575d6c3a7c63d1d30276d49  pigsty-pkg-v4.0.0.d13.aarch64.tgz
+36a6ee284c0dd6d9f7d823c44280b88f  pigsty-pkg-v4.0.0.d13.x86_64.tgz
+f2b6ec49d02916944b74014505d05258  pigsty-pkg-v4.0.0.el10.aarch64.tgz
+73f64c349366fe23c022f81fe305d6da  pigsty-pkg-v4.0.0.el10.x86_64.tgz
+287f767fbb66a9aaca9f0f22e4f20491  pigsty-pkg-v4.0.0.el8.aarch64.tgz
+c0886aab454bd86245f3869ef2ab4451  pigsty-pkg-v4.0.0.el8.x86_64.tgz
+094ab31bcf4a3cedbd8091bc0f3ba44c  pigsty-pkg-v4.0.0.el9.aarch64.tgz
+235ccba44891b6474a76a81750712544  pigsty-pkg-v4.0.0.el9.x86_64.tgz
+f2791c96db4cc17a8a4008fc8d9ad310  pigsty-pkg-v4.0.0.u22.aarch64.tgz
+3099c4453eef03b766d68e04b8d5e483  pigsty-pkg-v4.0.0.u22.x86_64.tgz
+49a93c2158434f1adf0d9f5bcbbb1ca5  pigsty-pkg-v4.0.0.u24.aarch64.tgz
+4acaa5aeb39c6e4e23d781d37318d49b  pigsty-pkg-v4.0.0.u24.x86_64.tgz
 ```
 
 
