@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>模块：VIBE on PIGSTY</title><link>https://pigsty.cc/docs/vibe/</link><description>Recent content in 模块：VIBE on PIGSTY</description><generator>Hugo</generator><language>zh-CN</language><atom:link href="https://pigsty.cc/docs/vibe/index.xml" rel="self" type="application/rss+xml"/><item><title>配置 VIBE</title><link>https://pigsty.cc/docs/vibe/config/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/vibe/config/</guid><description>&lt;p&gt;VIBE 模块提供了灵活的配置选项，可以根据需求启用或禁用各个组件，并自定义其行为。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="配置概览"&gt;配置概览&lt;/h2&gt;
+&lt;p&gt;VIBE 模块包含三个可独立配置的组件：&lt;/p&gt;
+&lt;table class="full-width"&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th style="text-align: left"&gt;组件&lt;/th&gt;
+ &lt;th style="text-align: left"&gt;启用参数&lt;/th&gt;
+ &lt;th style="text-align: left"&gt;默认状态&lt;/th&gt;
+ &lt;th style="text-align: left"&gt;说明&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;Code-Server&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;code_enabled&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;启用&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;浏览器中的 VS Code&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;JupyterLab&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;jupyter_enabled&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;启用&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;交互式计算环境&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;Claude Code&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;claude_enabled&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;启用&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;AI 编程助手 CLI&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;配置位于 Pigsty 配置文件的主机变量或组变量中：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-yaml" data-lang="yaml"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;all&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;children&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;infra&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;hosts&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;10.10.10.10&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# VIBE 配置&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;vibe_data&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;/fs&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;code_enabled&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;true&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;jupyter_enabled&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;true&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;claude_enabled&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;true&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id="code-server-配置"&gt;Code-Server 配置&lt;/h2&gt;
+&lt;h3 id="基本配置"&gt;基本配置&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-yaml" data-lang="yaml"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;code_enabled&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;true&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 启用 Code-Server&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;code_port&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#0000cf;font-weight:bold"&gt;8443&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 监听端口（仅 localhost）&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;code_data&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;/data/code &lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 用户数据目录&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;code_password&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#4e9a06"&gt;&amp;#39;Code.Server&amp;#39;&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 登录密码&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;code_gallery&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;openvsx &lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 扩展市场&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="扩展市场选项"&gt;扩展市场选项&lt;/h3&gt;
+&lt;p&gt;Code-Server 支持多种扩展市场：&lt;/p&gt;</description></item><item><title>VIBE 参数</title><link>https://pigsty.cc/docs/vibe/param/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/vibe/param/</guid><description>&lt;p&gt;VIBE 模块共有 &lt;strong&gt;15&lt;/strong&gt; 个配置参数，分为五组：通用参数、Code-Server 参数、JupyterLab 参数、Claude Code 参数和 Node.js 参数。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="参数概览"&gt;参数概览&lt;/h2&gt;
+&lt;table class="full-width"&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th style="text-align: left"&gt;参数&lt;/th&gt;
+ &lt;th style="text-align: left"&gt;类型&lt;/th&gt;
+ &lt;th style="text-align: left"&gt;级别&lt;/th&gt;
+ &lt;th style="text-align: left"&gt;默认值&lt;/th&gt;
+ &lt;th style="text-align: left"&gt;说明&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;&lt;a href="#vibe_data"&gt;&lt;code&gt;vibe_data&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;path&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;H/I&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;/fs&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;VIBE 工作目录&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;&lt;a href="#code_enabled"&gt;&lt;code&gt;code_enabled&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;bool&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;H/I&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;true&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;是否启用 Code-Server&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;&lt;a href="#code_port"&gt;&lt;code&gt;code_port&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;port&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;H/I&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;8443&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;Code-Server 监听端口&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;&lt;a href="#code_data"&gt;&lt;code&gt;code_data&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;path&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;H/I&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;/data/code&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;Code-Server 数据目录&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;&lt;a href="#code_password"&gt;&lt;code&gt;code_password&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;string&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;H/I&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;Code.Server&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;Code-Server 登录密码&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;&lt;a href="#code_gallery"&gt;&lt;code&gt;code_gallery&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;enum&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;H/I&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;openvsx&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;扩展市场类型&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;&lt;a href="#jupyter_enabled"&gt;&lt;code&gt;jupyter_enabled&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;bool&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;H/I&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;true&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;是否启用 JupyterLab&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;&lt;a href="#jupyter_port"&gt;&lt;code&gt;jupyter_port&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;port&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;H/I&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;8888&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;JupyterLab 监听端口&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;&lt;a href="#jupyter_data"&gt;&lt;code&gt;jupyter_data&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;path&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;H/I&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;/data/jupyter&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;JupyterLab 数据目录&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;&lt;a href="#jupyter_password"&gt;&lt;code&gt;jupyter_password&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;string&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;H/I&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;Jupyter.Lab&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;JupyterLab 登录 Token&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;&lt;a href="#jupyter_venv"&gt;&lt;code&gt;jupyter_venv&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;path&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;H/I&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;/data/venv&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;Python 虚拟环境路径&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;&lt;a href="#claude_enabled"&gt;&lt;code&gt;claude_enabled&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;bool&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;H/I&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;true&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;是否启用 Claude Code&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;&lt;a href="#claude_env"&gt;&lt;code&gt;claude_env&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;dict&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;H/I&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;{}&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;Claude Code 额外环境变量&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;&lt;a href="#nodejs_enabled"&gt;&lt;code&gt;nodejs_enabled&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;bool&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;H/I&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;true&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;是否启用 Node.js&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;&lt;a href="#nodejs_registry"&gt;&lt;code&gt;nodejs_registry&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;url&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;H/I&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;''&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;npm 镜像地址，留空则自动配置&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 id="通用参数"&gt;通用参数&lt;/h2&gt;
+&lt;h3 id="vibe_data"&gt;&lt;code&gt;vibe_data&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;VIBE 模块的工作目录，所有组件的默认工作路径。&lt;/p&gt;</description></item><item><title>VIBE 剧本</title><link>https://pigsty.cc/docs/vibe/playbook/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/vibe/playbook/</guid><description>&lt;p&gt;VIBE 模块提供了一个主剧本 &lt;code&gt;vibe.yml&lt;/code&gt;，用于部署和管理 Code-Server、JupyterLab、Claude Code 和 Node.js。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="剧本概览"&gt;剧本概览&lt;/h2&gt;
+&lt;table class="full-width"&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th style="text-align: left"&gt;剧本&lt;/th&gt;
+ &lt;th style="text-align: left"&gt;说明&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;vibe.yml&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;在目标节点上部署 VIBE 开发环境（Code、Jupyter、Claude）&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 id="vibeyml"&gt;&lt;code&gt;vibe.yml&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://github.com/Vonng/pigsty/blob/main/vibe.yml"&gt;&lt;code&gt;vibe.yml&lt;/code&gt;&lt;/a&gt; 剧本用于在已纳管的节点上部署 VIBE 模块。&lt;/p&gt;
+&lt;h3 id="剧本内容"&gt;剧本内容&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-yaml" data-lang="yaml"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;- &lt;span style="color:#204a87;font-weight:bold"&gt;name&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;Deploy VIBE development environment&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;hosts&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;all&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;become&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;yes&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;gather_facts&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;no&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;roles&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;- {&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;role: node_id, tags&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;id }&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;- {&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;role: vibe, tags&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;vibe }&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="使用方法"&gt;使用方法&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 完整部署（所有组件）&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;./vibe.yml -l &amp;lt;host&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 仅部署 Code-Server&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;./vibe.yml -l &amp;lt;host&amp;gt; -t code
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 仅部署 JupyterLab&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;./vibe.yml -l &amp;lt;host&amp;gt; -t jupyter
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 仅部署 Claude Code&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;./vibe.yml -l &amp;lt;host&amp;gt; -t claude
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 仅部署 Node.js&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;./vibe.yml -l &amp;lt;host&amp;gt; -t nodejs
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 禁用特定组件&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;./vibe.yml -l &amp;lt;host&amp;gt; -e &lt;span style="color:#000"&gt;code_enabled&lt;/span&gt;&lt;span style="color:#ce5c00;font-weight:bold"&gt;=&lt;/span&gt;&lt;span style="color:#204a87"&gt;false&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;./vibe.yml -l &amp;lt;host&amp;gt; -e &lt;span style="color:#000"&gt;jupyter_enabled&lt;/span&gt;&lt;span style="color:#ce5c00;font-weight:bold"&gt;=&lt;/span&gt;&lt;span style="color:#204a87"&gt;false&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;./vibe.yml -l &amp;lt;host&amp;gt; -e &lt;span style="color:#000"&gt;claude_enabled&lt;/span&gt;&lt;span style="color:#ce5c00;font-weight:bold"&gt;=&lt;/span&gt;&lt;span style="color:#204a87"&gt;false&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;./vibe.yml -l &amp;lt;host&amp;gt; -e &lt;span style="color:#000"&gt;nodejs_enabled&lt;/span&gt;&lt;span style="color:#ce5c00;font-weight:bold"&gt;=&lt;/span&gt;&lt;span style="color:#204a87"&gt;false&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 配置 Claude API Key&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;./vibe.yml -l &amp;lt;host&amp;gt; -e claude_env.ANTHROPIC_API_KEY&lt;span style="color:#ce5c00;font-weight:bold"&gt;=&lt;/span&gt;sk-ant-xxx
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id="任务结构"&gt;任务结构&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;vibe.yml&lt;/code&gt; 剧本包含以下任务层级：&lt;/p&gt;</description></item><item><title>VIBE 管理</title><link>https://pigsty.cc/docs/vibe/admin/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/vibe/admin/</guid><description>&lt;p&gt;本文档介绍 VIBE 模块的日常管理操作，包括服务管理、配置修改、扩展安装等常用 SOP。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="服务管理"&gt;服务管理&lt;/h2&gt;
+&lt;h3 id="code-server-服务"&gt;Code-Server 服务&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 查看服务状态&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sudo systemctl status code-server
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 启动服务&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sudo systemctl start code-server
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 停止服务&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sudo systemctl stop code-server
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 重启服务&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sudo systemctl restart code-server
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 开机自启&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sudo systemctl &lt;span style="color:#204a87"&gt;enable&lt;/span&gt; code-server
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 禁用自启&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sudo systemctl disable code-server
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="jupyterlab-服务"&gt;JupyterLab 服务&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 查看服务状态&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sudo systemctl status jupyter
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 启动服务&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sudo systemctl start jupyter
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 停止服务&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sudo systemctl stop jupyter
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 重启服务&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sudo systemctl restart jupyter
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 开机自启&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sudo systemctl &lt;span style="color:#204a87"&gt;enable&lt;/span&gt; jupyter
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 禁用自启&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sudo systemctl disable jupyter
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="查看服务日志"&gt;查看服务日志&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# Code-Server 日志&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;journalctl -u code-server -f
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# JupyterLab 日志&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;journalctl -u jupyter -f
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 查看最近 100 行日志&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;journalctl -u code-server -n &lt;span style="color:#0000cf;font-weight:bold"&gt;100&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;journalctl -u jupyter -n &lt;span style="color:#0000cf;font-weight:bold"&gt;100&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id="密码管理"&gt;密码管理&lt;/h2&gt;
+&lt;h3 id="修改-code-server-密码"&gt;修改 Code-Server 密码&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;方法一：修改配置文件&lt;/strong&gt;&lt;/p&gt;</description></item><item><title>VIBE 监控</title><link>https://pigsty.cc/docs/vibe/monitor/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/vibe/monitor/</guid><description>&lt;p&gt;VIBE 模块提供了完整的可观测性支持，特别是 Claude Code 的 OpenTelemetry 集成，可以通过 Grafana Dashboard 监控 AI 编程助手的使用情况。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="监控架构"&gt;监控架构&lt;/h2&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;Claude Code CLI
+ │
+ ├── OpenTelemetry Metrics ──► VictoriaMetrics (8428)
+ └── OpenTelemetry Logs ──► VictoriaLogs (9428)
+ │
+ ▼
+ Grafana Dashboard
+ (Claude Code Dashboard)
+&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
+&lt;h2 id="claude-code-可观测性"&gt;Claude Code 可观测性&lt;/h2&gt;
+&lt;h3 id="opentelemetry-配置"&gt;OpenTelemetry 配置&lt;/h3&gt;
+&lt;p&gt;Claude Code 默认集成了 OpenTelemetry，自动将指标和日志推送到本地的 VictoriaMetrics/VictoriaLogs：&lt;/p&gt;
+&lt;p&gt;配置文件 &lt;code&gt;~/.claude/settings.json&lt;/code&gt;：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-json" data-lang="json"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#000;font-weight:bold"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#204a87;font-weight:bold"&gt;&amp;#34;otelEndpointMetrics&amp;#34;&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt; &lt;span style="color:#4e9a06"&gt;&amp;#34;http://127.0.0.1:8428/opentelemetry/v1/metrics&amp;#34;&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#204a87;font-weight:bold"&gt;&amp;#34;otelEndpointLogs&amp;#34;&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt; &lt;span style="color:#4e9a06"&gt;&amp;#34;http://127.0.0.1:9428/insert/opentelemetry/v1/logs&amp;#34;&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#204a87;font-weight:bold"&gt;&amp;#34;otelResourceAttributes&amp;#34;&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt; &lt;span style="color:#000;font-weight:bold"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#204a87;font-weight:bold"&gt;&amp;#34;ip&amp;#34;&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt; &lt;span style="color:#4e9a06"&gt;&amp;#34;10.10.10.10&amp;#34;&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#204a87;font-weight:bold"&gt;&amp;#34;job&amp;#34;&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt; &lt;span style="color:#4e9a06"&gt;&amp;#34;claude&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#000;font-weight:bold"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#000;font-weight:bold"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="监控指标"&gt;监控指标&lt;/h3&gt;
+&lt;p&gt;Claude Code 上报的主要指标包括：&lt;/p&gt;
+&lt;table class="full-width"&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th style="text-align: left"&gt;指标类型&lt;/th&gt;
+ &lt;th style="text-align: left"&gt;说明&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;会话指标&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;会话数量、持续时间&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;Token 指标&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;输入/输出 Token 数量、成本统计&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;API 调用&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;API 请求次数、延迟、错误率&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;工具使用&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;各类工具（Read、Write、Bash 等）调用次数&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id="日志数据"&gt;日志数据&lt;/h3&gt;
+&lt;p&gt;Claude Code 的日志包含：&lt;/p&gt;</description></item><item><title>VIBE FAQ</title><link>https://pigsty.cc/docs/vibe/faq/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/vibe/faq/</guid><description>&lt;p&gt;本文档汇总了 VIBE 模块使用过程中的常见问题和解决方案。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="部署问题"&gt;部署问题&lt;/h2&gt;
+&lt;h3 id="如何使用-vibe-配置模板"&gt;如何使用 VIBE 配置模板？&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 下载 Pigsty&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;curl https://repo.pigsty.io/get &lt;span style="color:#000;font-weight:bold"&gt;|&lt;/span&gt; bash
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 使用 vibe 配置模板&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;./configure -c vibe
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 修改密码后部署&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;vi pigsty.yml
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;./deploy.yml
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;./juice.yml &lt;span style="color:#8f5902;font-style:italic"&gt;# 可选&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;./vibe.yml
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="部署时报错-code-server-package-not-found"&gt;部署时报错 &amp;ldquo;code-server package not found&amp;rdquo;&lt;/h3&gt;
+&lt;p&gt;确保已正确配置软件仓库：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 检查仓库是否可用&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;yum repolist &lt;span style="color:#8f5902;font-style:italic"&gt;# EL 系统&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;apt update &lt;span style="color:#8f5902;font-style:italic"&gt;# Debian/Ubuntu&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 重新刷新仓库缓存&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;./infra.yml -t repo
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="jupyterlab-安装失败"&gt;JupyterLab 安装失败&lt;/h3&gt;
+&lt;p&gt;检查 Python 虚拟环境是否存在：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 检查 venv&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;ls -la /data/venv/bin/python
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 如不存在，手动创建&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;python3 -m venv /data/venv
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 重新执行剧本&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;./vibe.yml -l &amp;lt;host&amp;gt; -t jupyter
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id="访问问题"&gt;访问问题&lt;/h2&gt;
+&lt;h3 id="无法访问-code-server"&gt;无法访问 Code-Server&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;检查服务状态&lt;/strong&gt;&lt;/p&gt;</description></item></channel></rss>

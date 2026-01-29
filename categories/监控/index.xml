@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>监控 on PIGSTY</title><link>https://pigsty.cc/categories/%E7%9B%91%E6%8E%A7/</link><description>Recent content in 监控 on PIGSTY</description><generator>Hugo</generator><language>zh-CN</language><atom:link href="https://pigsty.cc/categories/%E7%9B%91%E6%8E%A7/index.xml" rel="self" type="application/rss+xml"/><item><title>VIBE 监控</title><link>https://pigsty.cc/docs/vibe/monitor/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/vibe/monitor/</guid><description>&lt;p&gt;VIBE 模块提供了完整的可观测性支持，特别是 Claude Code 的 OpenTelemetry 集成，可以通过 Grafana Dashboard 监控 AI 编程助手的使用情况。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="监控架构"&gt;监控架构&lt;/h2&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;Claude Code CLI
+ │
+ ├── OpenTelemetry Metrics ──► VictoriaMetrics (8428)
+ └── OpenTelemetry Logs ──► VictoriaLogs (9428)
+ │
+ ▼
+ Grafana Dashboard
+ (Claude Code Dashboard)
+&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
+&lt;h2 id="claude-code-可观测性"&gt;Claude Code 可观测性&lt;/h2&gt;
+&lt;h3 id="opentelemetry-配置"&gt;OpenTelemetry 配置&lt;/h3&gt;
+&lt;p&gt;Claude Code 默认集成了 OpenTelemetry，自动将指标和日志推送到本地的 VictoriaMetrics/VictoriaLogs：&lt;/p&gt;
+&lt;p&gt;配置文件 &lt;code&gt;~/.claude/settings.json&lt;/code&gt;：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-json" data-lang="json"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#000;font-weight:bold"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#204a87;font-weight:bold"&gt;&amp;#34;otelEndpointMetrics&amp;#34;&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt; &lt;span style="color:#4e9a06"&gt;&amp;#34;http://127.0.0.1:8428/opentelemetry/v1/metrics&amp;#34;&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#204a87;font-weight:bold"&gt;&amp;#34;otelEndpointLogs&amp;#34;&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt; &lt;span style="color:#4e9a06"&gt;&amp;#34;http://127.0.0.1:9428/insert/opentelemetry/v1/logs&amp;#34;&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#204a87;font-weight:bold"&gt;&amp;#34;otelResourceAttributes&amp;#34;&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt; &lt;span style="color:#000;font-weight:bold"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#204a87;font-weight:bold"&gt;&amp;#34;ip&amp;#34;&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt; &lt;span style="color:#4e9a06"&gt;&amp;#34;10.10.10.10&amp;#34;&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#204a87;font-weight:bold"&gt;&amp;#34;job&amp;#34;&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt; &lt;span style="color:#4e9a06"&gt;&amp;#34;claude&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#000;font-weight:bold"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#000;font-weight:bold"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="监控指标"&gt;监控指标&lt;/h3&gt;
+&lt;p&gt;Claude Code 上报的主要指标包括：&lt;/p&gt;
+&lt;table class="full-width"&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th style="text-align: left"&gt;指标类型&lt;/th&gt;
+ &lt;th style="text-align: left"&gt;说明&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;会话指标&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;会话数量、持续时间&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;Token 指标&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;输入/输出 Token 数量、成本统计&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;API 调用&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;API 请求次数、延迟、错误率&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;工具使用&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;各类工具（Read、Write、Bash 等）调用次数&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id="日志数据"&gt;日志数据&lt;/h3&gt;
+&lt;p&gt;Claude Code 的日志包含：&lt;/p&gt;</description></item></channel></rss>

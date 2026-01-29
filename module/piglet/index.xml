@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>PIGLET on PIGSTY</title><link>https://pigsty.cc/module/piglet/</link><description>Recent content in PIGLET on PIGSTY</description><generator>Hugo</generator><language>zh-CN</language><atom:link href="https://pigsty.cc/module/piglet/index.xml" rel="self" type="application/rss+xml"/><item><title>PIGLET.RUN</title><link>https://pigsty.cc/docs/piglet/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/piglet/</guid><description>&lt;p&gt;—— &lt;strong&gt;Pigsty Lightweight Runtime，动嘴出活的 AI 编码沙箱&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;PIGLET 是基于 Pigsty 的轻量运行时环境，专为 &lt;strong&gt;AI Web Coding&lt;/strong&gt; 打造的云端编码沙箱。
+它将 PostgreSQL 数据库、JuiceFS 分布式存储、VS Code、JupyterLab 等工具整合为一体，
+让你从 &lt;strong&gt;&amp;ldquo;出嘴编码&amp;rdquo;&lt;/strong&gt; 到 &lt;strong&gt;&amp;ldquo;部署上线&amp;rdquo;&lt;/strong&gt; 实现零阻力。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="核心特性"&gt;核心特性&lt;/h2&gt;
+&lt;table class="full-width"&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th style="text-align: center"&gt;特性&lt;/th&gt;
+ &lt;th style="text-align: left"&gt;说明&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;🤖 AI 编码&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;预装 &lt;strong&gt;Claude Code&lt;/strong&gt;、OpenCode、VS Code、Jupyter 全家桶，Python/Go/Node.js 开发环境开箱即用&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;🐘 数据全能&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;PostgreSQL 18 + &lt;a href="https://pgext.cloud/zh/list"&gt;&lt;strong&gt;400+&lt;/strong&gt;&lt;/a&gt; 扩展，向量/时序/地理/图/分析一网打尽，可加装 Supabase，复杂应用不求人&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;💾 共享存储&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;a href="https://pigsty.cc/docs/juice"&gt;&lt;strong&gt;JuiceFS&lt;/strong&gt;&lt;/a&gt; 将工作目录存入数据库，多 Agent / 多用户同时协作，文件永不丢失，还能回滚至任意时间点&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;⏱️ 时光机器&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;数据库 &lt;strong&gt;PITR&lt;/strong&gt; + 文件系统快照联动，搞砸了？一键回到任意时间点，文件系统与数据库保持一致与同步！&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;🔀 瞬间克隆&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;strong&gt;CoW&lt;/strong&gt; 百毫秒级 &lt;a href="https://pigsty.cc/docs/pgsql/admin/db#%E5%85%8B%E9%9A%86%E6%95%B0%E6%8D%AE%E5%BA%93"&gt;&lt;strong&gt;Fork 巨型数据库&lt;/strong&gt;&lt;/a&gt;，Fork 现有实例与集群，不占额外存储空间，随时快速重建，放心折腾！&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;🌐 一键上线&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;内置 &lt;strong&gt;Nginx&lt;/strong&gt; 搞定域名、证书、代理，静态网页，动态网站，从出嘴到上线交付一步到位，省略中间步骤！&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;📊 全栈监控&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;strong&gt;VictoriaMetrics&lt;/strong&gt; + &lt;strong&gt;Grafana&lt;/strong&gt; 全景大盘，特供 Claude Code 可观测性，一切细节尽在掌控！&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;🇨🇳 国内畅通&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;全球 CDN + 国内镜像双通道，免翻墙，一行配置 CC + &lt;strong&gt;GLM-4.7&lt;/strong&gt; 国产模型，无需魔法，合法合规！&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 id="快速上手"&gt;快速上手&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://pigsty.cc/docs/deploy/prepare"&gt;&lt;strong&gt;准备&lt;/strong&gt;&lt;/a&gt; 一台具有 &lt;a href="https://pigsty.cc/docs/deploy/admin#ssh"&gt;&lt;strong&gt;SSH 权限&lt;/strong&gt;&lt;/a&gt; 的 &lt;a href="https://pigsty.cc/docs/deploy/prepare#%E8%8A%82%E7%82%B9"&gt;&lt;strong&gt;节点&lt;/strong&gt;&lt;/a&gt;，
+安装有 &lt;a href="https://pigsty.cc/docs/ref/linux/"&gt;&lt;strong&gt;兼容的 Linux 系统&lt;/strong&gt;&lt;/a&gt;，使用具有免密 &lt;a href="https://pigsty.cc/docs/deploy/admin#ssh"&gt;&lt;strong&gt;&lt;code&gt;ssh&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt; 和 &lt;a href="https://pigsty.cc/docs/deploy/admin#sudo"&gt;&lt;strong&gt;&lt;code&gt;sudo&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt; 权限的 &lt;a href="https://pigsty.cc/docs/deploy/admin"&gt;&lt;strong&gt;管理用户&lt;/strong&gt;&lt;/a&gt; 执行：&lt;/p&gt;</description></item></channel></rss>

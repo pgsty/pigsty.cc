@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>安全合规 on PIGSTY</title><link>https://pigsty.cc/docs/concept/sec/</link><description>Recent content in 安全合规 on PIGSTY</description><generator>Hugo</generator><language>zh-CN</language><atom:link href="https://pigsty.cc/docs/concept/sec/index.xml" rel="self" type="application/rss+xml"/><item><title>本地 CA</title><link>https://pigsty.cc/docs/concept/sec/ca/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/concept/sec/ca/</guid><description>&lt;p&gt;Pigsty 部署默认启用了一些安全最佳实践：使用 SSL 加密网络流量，使用 HTTPS 加密 Web 界面。&lt;/p&gt;
+&lt;p&gt;为了实现这一功能，Pigsty 内置了本地自签名的 CA ，用于签发 SSL 证书，加密网络通信流量。&lt;/p&gt;
+&lt;p&gt;在默认情况下，SSL 与 HTTPS 是启用，但不强制使用的。对于有着较高安全要求的环境，您可以强制使用 SSL 与 HTTPS。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="本地ca"&gt;本地CA&lt;/h2&gt;
+&lt;p&gt;Pigsty 默认会在初始化时，在 &lt;a href="https://pigsty.cc/docs/concept/arch/node#admin%E8%8A%82%E7%82%B9"&gt;&lt;strong&gt;ADMIN节点&lt;/strong&gt;&lt;/a&gt; 本机 Pigsty 源码目录（&lt;code&gt;~/pigsty&lt;/code&gt;）中生成一个自签名的 CA。
+当您需要使用 SSL，HTTPS，数字签名，签发数据库客户端证书，高级安全特性时，可以使用此 CA。&lt;/p&gt;
+&lt;p&gt;每一套 Pigsty 部署使用的 CA 都是唯一的，不同的 Pigsty 部署之间的 CA 是不相互信任的。&lt;/p&gt;
+&lt;p&gt;本地 CA 由两个文件组成，默认放置于 &lt;strong&gt;&lt;code&gt;files/pki/ca&lt;/code&gt;&lt;/strong&gt; 目录中：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;ca.crt&lt;/code&gt;&lt;/strong&gt;：自签名的 CA 根证书，应当分发安装至到所有纳管节点，用于证书验证。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;ca.key&lt;/code&gt;&lt;/strong&gt;：CA 私钥，用于签发证书，验证 CA 身份，应当妥善保管，避免泄漏！&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="alert alert-warning" role="alert"&gt;&lt;div class="h4 alert-heading" role="heading"&gt;请保护好CA私钥文件&lt;/div&gt;
+&lt;p&gt;请妥善保管 CA 私钥文件，不要遗失，不要泄漏。我们建议您在完成 Pigsty 安装后及时备份此文件。&lt;/p&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;h2 id="使用现有ca"&gt;使用现有CA&lt;/h2&gt;
+&lt;p&gt;如果您本身已经有 CA 公私钥基础设施，Pigsty 也可以配置为使用现有 CA 。&lt;/p&gt;
+&lt;p&gt;在执行部署前，将您的 CA 公钥与私钥文件放置于 &lt;strong&gt;&lt;code&gt;files/pki/ca&lt;/code&gt;&lt;/strong&gt; 目录中即可，并使用以下名称。&lt;/p&gt;</description></item><item><title>七层安全模型</title><link>https://pigsty.cc/docs/concept/sec/level/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/concept/sec/level/</guid><description>&lt;p&gt;安全不是一道墙，而是一座城。Pigsty 采用 &lt;strong&gt;纵深防御&lt;/strong&gt; 策略，在七个层次上构建多重保护，即使某一层被突破，仍有其他层提供保护。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="概览"&gt;概览&lt;/h2&gt;
+&lt;div id="infographic-781d54396cede5aaee7cac2dce95bdc7" class="infographic-container td-max-width-on-larger-screens"&gt;&lt;/div&gt;
+
+&lt;script&gt;
+(function() {
+ var containerId = 'infographic-781d54396cede5aaee7cac2dce95bdc7';
+ var syntax = "````\ninfographic sequence-pyramid-simple\ndata\n title 七层安全模型\n desc Pigsty 纵深防御体系：从物理安全到用户安全的多层保护\n items\n - label 物理安全\n value 100\n desc 数据校验和 · PGTDE 透明加密\n time L1\n icon mingcute/building-4-fill\n illus server-cluster\n - label 网络安全\n value 95\n desc 防火墙 · SSL/TLS 加密 · 本地 CA\n time L2\n icon mingcute/earth-2-fill\n illus secure-server\n - label 边界安全\n value 90\n desc HAProxy 代理 · Nginx 网关\n time L3\n icon mingcute/shield-fill\n illus firewall-protection\n - label 主机安全\n value 85\n desc SELinux · 最小权限 · 系统加固\n time L4\n icon mingcute/computer-fill\n illus server-status\n - label 应用安全\n value 80\n desc HBA 规则 · 密码策略 · 连接池\n time L5\n icon mingcute/safe-box-fill\n illus database-security\n - label 数据安全\n value 75\n desc 备份加密 · 审计日志 · PITR\n time L6\n icon mingcute/lock-fill\n illus data-encryption\n - label 用户安全\n value 70\n desc 四角色模型 · RBAC · 证书认证\n time L7\n icon mingcute/user-security-fill\n illus user-flow\ntheme light\n palette pigsty\n````";
+
+ function renderInfographic() {
+ var dom = document.getElementById(containerId);
+ if (!dom) { console.error('Infographic: container not found:', containerId); return; }
+ try {
+ var ig = new AntVInfographic.Infographic({
+ container: '#' + containerId,
+ width: dom.offsetWidth || '100%',
+ height: 'auto',
+ });
+ ig.render(syntax);
+ } catch (e) {
+ console.error('Infographic render error:', e);
+ dom.innerHTML = '&lt;pre style="color: red;"&gt;Infographic Error: ' + e.message + '&lt;/pre&gt;';
+ }
+ }
+
+ 
+ if (typeof AntVInfographic !== 'undefined') {
+ renderInfographic();
+ } else if (!window._infographicLoading) {
+ window._infographicLoading = true;
+ window._infographicCallbacks = [renderInfographic];
+ var script = document.createElement('script');
+ script.src = '/js/infographic.min.js';
+ script.onload = function() {
+ window._infographicCallbacks.forEach(function(cb) { cb(); });
+ };
+ document.head.appendChild(script);
+ } else {
+ window._infographicCallbacks.push(renderInfographic);
+ }
+})();
+&lt;/script&gt;
+
+&lt;hr&gt;
+&lt;h2 id="物理安全"&gt;物理安全&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;物理访问失守，则其他层形同虚设。&lt;/p&gt;</description></item><item><title>访问控制</title><link>https://pigsty.cc/docs/concept/sec/ac/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/concept/sec/ac/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;Pigsty 提供了一套开箱即用的，基于 &lt;a href="#%E8%A7%92%E8%89%B2%E7%B3%BB%E7%BB%9F"&gt;角色系统&lt;/a&gt; 和 &lt;a href="#%E6%9D%83%E9%99%90%E7%B3%BB%E7%BB%9F"&gt;权限系统&lt;/a&gt; 的访问控制模型。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;权限控制很重要，但很多用户做不好。因此 Pigsty 提供了一套开箱即用的精简访问控制模型，为您的集群安全性提供一个兜底。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="角色系统"&gt;角色系统&lt;/h2&gt;
+&lt;p&gt;Pigsty 默认的角色系统包含四个 &lt;a href="#%E9%BB%98%E8%AE%A4%E8%A7%92%E8%89%B2"&gt;默认角色&lt;/a&gt; 和四个 &lt;a href="#%E9%BB%98%E8%AE%A4%E7%94%A8%E6%88%B7"&gt;默认用户&lt;/a&gt;：&lt;/p&gt;
+&lt;table class="full-width"&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;角色名称&lt;/th&gt;
+ &lt;th&gt;属性&lt;/th&gt;
+ &lt;th&gt;所属&lt;/th&gt;
+ &lt;th&gt;描述&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;code&gt;dbrole_readonly&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;NOLOGIN&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;td&gt;角色：全局只读访问&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;code&gt;dbrole_readwrite&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;NOLOGIN&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;dbrole_readonly&lt;/td&gt;
+ &lt;td&gt;角色：全局读写访问&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;code&gt;dbrole_admin&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;NOLOGIN&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;pg_monitor,dbrole_readwrite&lt;/td&gt;
+ &lt;td&gt;角色：管理员/对象创建&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;code&gt;dbrole_offline&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;NOLOGIN&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;td&gt;角色：受限的只读访问&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;code&gt;postgres&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;SUPERUSER&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;td&gt;系统超级用户&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;code&gt;replicator&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;REPLICATION&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;pg_monitor,dbrole_readonly&lt;/td&gt;
+ &lt;td&gt;系统复制用户&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;code&gt;dbuser_dba&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;SUPERUSER&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;dbrole_admin&lt;/td&gt;
+ &lt;td&gt;pgsql 管理用户&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;code&gt;dbuser_monitor&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;td&gt;pg_monitor&lt;/td&gt;
+ &lt;td&gt;pgsql 监控用户&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;这些 &lt;a href="https://pigsty.cc/docs/pgsql/config/user#%E5%AE%9A%E4%B9%89%E7%94%A8%E6%88%B7"&gt;角色与用户&lt;/a&gt; 的详细定义如下所示：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-yaml" data-lang="yaml"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;pg_default_roles&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 全局默认的角色与系统用户&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;- {&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;name: dbrole_readonly ,login: false ,comment&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;role for global read-only access }&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;- {&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;name: dbrole_offline ,login: false ,comment&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;role for restricted read-only access }&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;- {&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;name: dbrole_readwrite ,login: false ,roles: [dbrole_readonly] ,comment&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;role for global read-write access }&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;- {&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;name: dbrole_admin ,login: false ,roles: [pg_monitor, dbrole_readwrite] ,comment&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;role for object creation }&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;- {&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;name: postgres ,superuser: true ,comment&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;system superuser }&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;- {&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;name: replicator ,replication: true ,roles: [pg_monitor, dbrole_readonly] ,comment&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;system replicator }&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;- {&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;name: dbuser_dba ,superuser: true ,roles: [dbrole_admin] ,pgbouncer: true ,pool_mode: session, pool_connlimit: 16 ,comment&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;pgsql admin user }&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;- {&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;name: dbuser_monitor ,roles: [pg_monitor] ,pgbouncer: true ,parameters&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;{&lt;span style="color:#204a87;font-weight:bold"&gt;log_min_duration_statement: 1000 } ,pool_mode: session ,pool_connlimit: 8 ,comment&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;pgsql monitor user }&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id="默认角色"&gt;默认角色&lt;/h2&gt;
+&lt;p&gt;Pigsty 中有四个默认角色：&lt;/p&gt;</description></item></channel></rss>

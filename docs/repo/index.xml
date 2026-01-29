@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Linux 软件源 on PIGSTY</title><link>https://pigsty.cc/docs/repo/</link><description>Recent content in Linux 软件源 on PIGSTY</description><generator>Hugo</generator><language>zh-CN</language><atom:link href="https://pigsty.cc/docs/repo/index.xml" rel="self" type="application/rss+xml"/><item><title>PGDG 仓库</title><link>https://pigsty.cc/docs/repo/pgdg/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/repo/pgdg/</guid><description>&lt;p&gt;Pigsty PGSQL 仓库旨在与 PostgreSQL &lt;a href="https://www.postgresql.org/download/linux/"&gt;PGDG 官方仓库&lt;/a&gt; 配合使用。&lt;/p&gt;
+&lt;p&gt;Pigsty 依赖 PGDG 仓库中原生的 PostgreSQL 内核软件包，在此基础上提供了额外的 340+ 扩展插件。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;PGDG Pigsty 镜像仓库最后同步于：2025-12-29 12:00:00&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id="快速上手"&gt;快速上手&lt;/h2&gt;
+&lt;p&gt;您可以安装 &lt;a href="https://pigsty.cc/docs/pig/"&gt;&lt;strong&gt;&lt;code&gt;pig&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt; CLI 工具，并使用它添加 pgdg / pigsty 仓库（推荐）：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;pig repo add pgdg &lt;span style="color:#8f5902;font-style:italic"&gt;# 添加 PGDG 仓库&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;pig repo add pgdg -u &lt;span style="color:#8f5902;font-style:italic"&gt;# 添加 PGDG 仓库，并更新本地缓存&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;pig repo add pgdg -u --region&lt;span style="color:#ce5c00;font-weight:bold"&gt;=&lt;/span&gt;default &lt;span style="color:#8f5902;font-style:italic"&gt;# 强制使用全球默认区域的仓库（postgresql.org）&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;pig repo add pgdg -u --region&lt;span style="color:#ce5c00;font-weight:bold"&gt;=&lt;/span&gt;china &lt;span style="color:#8f5902;font-style:italic"&gt;# 使用中国镜像仓库 (repo.pigsty.cc)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;pig repo add pgsql -u &lt;span style="color:#8f5902;font-style:italic"&gt;# pgsql = pgdg + pigsty-pgsql (同时添加 Pigsty 与 PGDG 官方仓库)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;pig repo add -u &lt;span style="color:#8f5902;font-style:italic"&gt;# all = node + pgsql (pgdg + pigsty) + infra，一次性添加所有仓库&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id="镜像"&gt;镜像&lt;/h2&gt;
+&lt;p&gt;2025年5月中旬，PGDG 关闭了 rsync/ftp 同步渠道，导致全球几乎所有 PGDG 镜像站失去同步。根据观察，目前只有 YANDEX，XTOM，PIGSTY 提供定期同步。&lt;/p&gt;</description></item><item><title>GPG 密钥</title><link>https://pigsty.cc/docs/repo/gpg/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/repo/gpg/</guid><description>&lt;p&gt;你可以通过检查 GPG 签名来验证从 Pigsty 仓库下载的软件包的完整性，本文会介绍如何导入用于签名软件包的 GPG 密钥。
+你也可以生成自己的 GPG 密钥，构建自己的仓库，并用它来签发你自己的软件包。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="摘要"&gt;摘要&lt;/h2&gt;
+&lt;p&gt;Pigsty 仓库中所有的 RPM / DEB 软件包都使用 GPG 密钥（指纹：&lt;code&gt;B9BD8B20&lt;/code&gt;）进行签名，以确保软件包的完整性和来源的可信度。&lt;/p&gt;
+&lt;p&gt;完整摘要： &lt;code&gt;9592A7BC7A682E7333376E09E7935D8DB9BD8B20&lt;/code&gt; Ruohang Feng (Pigsty) &lt;a href="mailto:rh@vonng.com"&gt;rh@vonng.com&lt;/a&gt;&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;pub rsa4096 2024-07-16 [SC]
+ 9592A7BC7A682E7333376E09E7935D8DB9BD8B20
+uid [ultimate] Ruohang Feng (Pigsty) &amp;lt;rh@vonng.com&amp;gt;
+sub rsa4096 2024-07-16 [E]
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;你可以在这里找到 Pigsty 使用的 GPG 公钥：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;默认地址：https://repo.pigsty.io/key&lt;/li&gt;
+&lt;li&gt;中国镜像：https://repo.pigsty.cc/key&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="导入"&gt;导入&lt;/h2&gt;
+&lt;p&gt;在 RHEL 兼容的 Linux 发行版上，你可以使用以下命令导入此密钥：&lt;/p&gt;
+
+
+
+&lt;ul class="nav nav-tabs" id="tabs-0" role="tablist"&gt;
+ &lt;li class="nav-item"&gt;
+ &lt;button class="nav-link active"
+ id="tabs-00-00-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-00" role="tab"
+ data-td-tp-persist="默认" aria-controls="tabs-00-00" aria-selected="true"&gt;
+ 默认
+ &lt;/button&gt;
+ &lt;/li&gt;&lt;li class="nav-item"&gt;
+ &lt;button class="nav-link"
+ id="tabs-00-01-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-01" role="tab"
+ data-td-tp-persist="镜像" aria-controls="tabs-00-01" aria-selected="false"&gt;
+ 镜像
+ &lt;/button&gt;
+ &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class="tab-content" id="tabs-0-content"&gt;
+ &lt;div class="tab-body tab-pane fade show active"
+ id="tabs-00-00" role="tabpanel" aria-labelled-by="tabs-00-00-tab" tabindex="0"&gt;
+ &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;curl -fsSL https://repo.pigsty.io/key &lt;span style="color:#000;font-weight:bold"&gt;|&lt;/span&gt; sudo tee /etc/pki/rpm-gpg/RPM-GPG-KEY-pigsty &amp;gt;/dev/null
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+ &lt;/div&gt;
+ &lt;div class="tab-body tab-pane fade"
+ id="tabs-00-01" role="tabpanel" aria-labelled-by="tabs-00-01-tab" tabindex="0"&gt;
+ &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;curl -fsSL https://repo.pigsty.cc/key &lt;span style="color:#000;font-weight:bold"&gt;|&lt;/span&gt; sudo tee /etc/pki/rpm-gpg/RPM-GPG-KEY-pigsty &amp;gt;/dev/null
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+ &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;在 Debian / Ubuntu 兼容的 Linux 发行版上，你可以使用以下命令导入此密钥：&lt;/p&gt;</description></item></channel></rss>
