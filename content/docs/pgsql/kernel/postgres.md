@@ -1,7 +1,7 @@
 ---
 title: PostgreSQL
 weight: 2101
-description: 带有 440 扩展的原版 PostgreSQL 内核
+description: 带有 444 扩展的原版 PostgreSQL 内核
 icon: fa-solid fa-database
 module: [PGSQL]
 categories: [概念]
@@ -9,7 +9,7 @@ categories: [概念]
 
 [PostgreSQL](https://www.postgresql.org/) 是世界上最先进和最受欢迎的开源数据库。
 
-Pigsty 支持 PostgreSQL 13 ~ 18，并提供 440 个 PG 扩展。
+Pigsty 支持 PostgreSQL 13 ~ 18，并提供 444 个 PG 扩展。
 
 
 ------

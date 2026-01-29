@@ -8,7 +8,7 @@ categories: [参考]
 hide: True
 ---
 
-Pigsty 中总共有 [**440**](https://pgext.cloud/zh/list) 个可用扩展，详情请参考 [**PGEXT.CLOUD**](https://pgext.cloud/zh/) 专门站，这是由 PIGSTY 维护的扩展仓库。 
+Pigsty 中总共有 [**444**](https://pgext.cloud/zh/list) 个可用扩展，详情请参考 [**PGEXT.CLOUD**](https://pgext.cloud/zh/) 专门站，这是由 PIGSTY 维护的扩展仓库。 
 
 | **分类**     | **All** | **PGDG** | **PIGSTY** | **CONTRIB** | **MISS** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** | **PG13** |
 |:-----------|--------:|---------:|-----------:|------------:|---------:|---------:|---------:|---------:|---------:|---------:|---------:|

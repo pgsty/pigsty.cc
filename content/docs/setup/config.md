@@ -233,7 +233,7 @@ bin/pgsql-db   pg-meta meta             # 确保 pg-meta 集群中有数据库 m
 
 ## 配置 PG 版本与扩展
 
-您可以安装 [**不同大版本**](/docs/pgsql/config/kernel) 的 PostgreSQL，以及多达 [**440**](https://pgext.cloud/list) 种 [**扩展插件**](/docs/pgsql/ext)。让我们卸载当前默认的 PG 18，并安装 PG 17：
+您可以安装 [**不同大版本**](/docs/pgsql/config/kernel) 的 PostgreSQL，以及多达 [**444**](https://pgext.cloud/list) 种 [**扩展插件**](/docs/pgsql/ext)。让我们卸载当前默认的 PG 18，并安装 PG 17：
 
 ```bash
 ./pgsql-rm.yml -l pg-meta   # 移除旧的 pg-meta 集群（因为它是 PG 18）

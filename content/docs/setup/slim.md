@@ -16,7 +16,7 @@ categories: [教程]
 - 只需要 PostgreSQL 数据库本身，不需要可观测性基础设施。
 - 资源极度受限的环境，不愿意承担基础设施开销（单机约 0.2 vCPU / 500MB 开销）
 - 已有外部监控系统，希望统一使用自己的监控管理体系。
-- 不希望引入 AGPLv3 许可证的 Grafana 可视化看板组件。
+- 不需要 Grafana 可视化看板组件。
   {{% /alert %}}
 
 {{% alert title="精简安装的局限性" color="warning" %}}

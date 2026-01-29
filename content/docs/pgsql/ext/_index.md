@@ -7,7 +7,7 @@ module: [PGSQL]
 categories: [参考]
 ---
 
-Pigsty 提供 [**440+** 扩展](https://pgext.cloud/zh/list)，覆盖时序、地理、向量、全文检索、分析、特性增强等 16 大类别，开箱即用。
+Pigsty 提供 [**444** 扩展](https://pgext.cloud/zh/list)，覆盖时序、地理、向量、全文检索、分析、特性增强等 16 大类别，开箱即用。
 
 在 Pigsty 中使用扩展涉及四个核心步骤：[**下载**](download)、[**安装**](install)、[**配置/加载**](config) 与 [**启用**](create)。
 

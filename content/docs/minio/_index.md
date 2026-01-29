@@ -8,7 +8,7 @@ categories: [参考]
 ---
 
 
-[MinIO](https://min.io/) 是一个兼容 AWS S3 的多云对象存储软件，使用 AGPLv3 协议开源。
+[MinIO](https://min.io/) 是一个兼容 AWS S3 的多云对象存储软件。
 
 MinIO 可以用来存储文档、图片、视频和备份。Pigsty 原生支持部署各种 MinIO 集群，具备原生多节点多磁盘高可用支持，易于扩展、安全且开箱即用，
 并且有过 10PB+ 级别的大规模生产环境部署用例。

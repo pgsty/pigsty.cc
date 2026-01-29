@@ -60,7 +60,7 @@ Pigsty 是我们做给自己使用的软件，我们自己作为甲方用户，�
 作为一个开源项目，Pigsty 的发展相当不赖，在全职创业这两年里，Pigsty 在 Github 上的 Star 数从的 几百翻了几番到了 3700；上了 HN 头条推荐，增长开始滚起雪球；
 在 [**OSSRank**](https://ossrank.com/cat/368-postgresql-extension?page=2) 开源榜单 中，Pigsty 在 PostgreSQL 生态项目中排名第 22 名，在中国人主导的项目里是最靠前的。
 
-从前 Pigsty 只能跑在 CentOS 7 上，现今已经基本覆盖了所有主流 Linux 发行版 （EL, Debian, Ubuntu）。支持的 PG 大版本覆盖 13 - 18，维护，收录整合了PG生态中的 440 扩展插件。
+从前 Pigsty 只能跑在 CentOS 7 上，现今已经基本覆盖了所有主流 Linux 发行版 （EL, Debian, Ubuntu）。支持的 PG 大版本覆盖 13 - 18，维护，收录整合了PG生态中的 444 扩展插件。
 其中，我本人维护了这里超过一半的扩展插件，并提供开箱即用的 RPM/DEB 包，算上 Pigsty 本身，“基于开源，回馈开源”，算是为 PG 生态做一些贡献。
 
 Pigsty 的定位，也在不断发展的过程中，从一个 PostgreSQL 数据库发行版，进一步扩展到了 **开源云数据库替代**。它真正对标的是云厂商的整个云数据库品牌。

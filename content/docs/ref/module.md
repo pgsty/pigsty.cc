@@ -15,7 +15,7 @@ categories: [参考]
 
 Pigsty 提供了四个 <span class="text-primary"><b>基础</b></span> 功能模块，对于提供完整高可用的 PostgreSQL 服务必不可少：
 
-- [**`PGSQL`**](/docs/pgsql)：带有高可用，时间点恢复，IaC，SOP，监控系统，以及 [**440**](https://pgext.cloud/zh/list) 个扩展插件的自治的 PostgreSQL 集群。
+- [**`PGSQL`**](/docs/pgsql)：带有高可用，时间点恢复，IaC，SOP，监控系统，以及 [**444**](https://pgext.cloud/zh/list) 个扩展插件的自治的 PostgreSQL 集群。
 - [**`INFRA`**](/docs/infra)：本地软件仓库、Prometheus、Grafana、Loki、AlertManager、PushGateway、Blackbox Exporter...
 - [**`NODE`**](/docs/node)：调整节点到所需状态、名称、时区、NTP、ssh、sudo、haproxy、docker、vector、keepalived
 - [**`ETCD`**](/docs/etcd)：分布式键值存储，用作高可用 Postgres 集群的 DCS：共识选主/配置管理/服务发现。

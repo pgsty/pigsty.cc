@@ -16,7 +16,7 @@ categories: [参考]
 
 ## 价值主张
 
-- [**可扩展性**](/img/pigsty/ecosystem.png)： 强力 [**扩展**](/docs/ref/extension) 开箱即用：深度整合 **PostGIS**, **TimescaleDB**, **Citus**, **PGVector** 等 [**440**](https://pgext.cloud/zh/list) 插件与 Oracle / SQL Server 的 [**兼容内核**](/docs/pgsql/kernel)。
+- [**可扩展性**](/img/pigsty/ecosystem.png)： 强力 [**扩展**](/docs/ref/extension) 开箱即用：深度整合 **PostGIS**, **TimescaleDB**, **Citus**, **PGVector** 等 [**444**](https://pgext.cloud/zh/list) 插件与 Oracle / SQL Server 的 [**兼容内核**](/docs/pgsql/kernel)。
 - [**可靠性**](/img/pigsty/arch.png)：快速创建 [**高可用**](/docs/concept/ha/)、故障自愈的 [**PostgreSQL**](/docs/pgsql) 集群，自动预置的 [**时间点恢复**](/docs/concept/pitr/)、[**访问控制**](/docs/concept/sec/ac/)、自签名 [**CA**](/docs/concept/sec/ca) 与 [**SSL**](/docs/setup/security/)，确保数据坚如磐石。
 - [**可观测性**](/img/pigsty/dashboard.jpg)： 基于 [**Prometheus**](/docs/infra#prometheus) & [**Grafana**](/docs/infra#grafana) 现代可观测性技术栈，提供惊艳的监控最佳实践。模块化设计，可独立使用：[**画廊**](https://github.com/pgsty/pigsty/wiki/Gallery) & [**Demo**](https://demo.pigsty.cc)。
 - [**可用性**](/img/pigsty/ha.png)：交付稳定可靠，自动路由，事务池化、读写分离的高性能数据库 [**服务**](/docs/pgsql/service/#默认服务)，通过 HAProxy，Pgbouncer，VIP 提供灵活的 [**接入**](/docs/pgsql/service/#接入服务) 模式。
@@ -33,7 +33,7 @@ categories: [参考]
 Pigsty 是一个更好的本地开源 RDS for PostgreSQL 替代：
 
 - [开箱即用的RDS](#开箱即用的rds)：从内核到RDS发行版，在 EL/Debian/Ubuntu 下提供 13-18 版本的生产级 PG 数据库服务。
-- [丰富的扩展插件](#丰富的扩展插件)：提供无可比拟的 440+ 扩展，提供开箱即用的分布式的时序地理空间图文向量多模态数据库能力。
+- [丰富的扩展插件](#丰富的扩展插件)：提供无可比拟的 444 扩展，提供开箱即用的分布式的时序地理空间图文向量多模态数据库能力。
 - [灵活的模块架构](#灵活的模块架构)：灵活组合，自由扩展：Redis/Etcd/MinIO/Mongo；可独立使用，监控现有RDS/主机/数据库。
 - [惊艳的观测能力](#惊艳的观测能力)：基于现代可观测性技术栈 Prometheus/Grafana，提供令人惊艳，无可比拟的数据库观测能力。
 - [验证过的可靠性](#验证过的可靠性)：故障自愈的高可用架构：硬件故障自动切换，流量无缝衔接。并提供自动配置的 PITR 兜底删库！
@@ -44,7 +44,7 @@ Pigsty 是一个更好的本地开源 RDS for PostgreSQL 替代：
 
 PostgreSQL 整合了生态中的工具与最佳实践：
 
-- 开箱即用的 [PostgreSQL](https://www.postgresql.org/) 发行版，深度整合地理、时序、分布式、图、向量、搜索、AI等 440 余个 [扩展插件](/docs/ref/extension)！
+- 开箱即用的 [PostgreSQL](https://www.postgresql.org/) 发行版，深度整合地理、时序、分布式、图、向量、搜索、AI等 444 余个 [扩展插件](/docs/ref/extension)！
 - 运行于裸操作系统之上，无需容器支持，支持主流操作系统： EL 8/9/10, Ubuntu 22.04/24.04 以及 Debian 12/13。
 - 基于 [patroni](https://patroni.readthedocs.io/en/latest/), [haproxy](http://www.haproxy.org/), 与 [etcd](https://etcd.io/)，打造故障自愈的高可用架构：硬件故障自动切换，流量无缝衔接。
 - 基于 [pgBackRest](https://pgbackrest.org/) 与可选的 [MinIO](https://min.io/) 集群提供开箱即用的 PITR 时间点恢复，为软件缺陷与人为删库兜底。
@@ -80,7 +80,7 @@ Pigsty 可以一键从裸机开始拉起整套环境，触达软件交付的最�
 
 **超融合多模态，一切皆用 PostgreSQL，一个PG替换所有数据库！**
 
-PostgreSQL 的灵魂在于其丰富的 [**扩展生态**](/blog/pg/pg-eat-db-world)，而 Pigsty 独一无二地深度整合了 PostgreSQL 生态中的 [**440+ 扩展**](https://pgext.cloud/zh/list)，为您提供开箱即用的超融合多模态数据库！
+PostgreSQL 的灵魂在于其丰富的 [**扩展生态**](/blog/pg/pg-eat-db-world)，而 Pigsty 独一无二地深度整合了 PostgreSQL 生态中的 [**444 扩展**](https://pgext.cloud/zh/list)，为您提供开箱即用的超融合多模态数据库！
 
 插件间可以产生 [**协同效应**](https://pigsty.cc/zh/blog/pg/pg-eat-db-world#极致可扩展性的魔法)，产生 1+1 远大于 2 的效果。
 您可以使用 [**PostGIS**](https://postgis.net/) 处理地理空间数据，使用 [**TimescaleDB**](https://www.timescale.com/) 分析时序/事件流数据，并使用 [**Citus**](https://www.citusdata.com/) 将其原地升级为分布式地理时空数据库；

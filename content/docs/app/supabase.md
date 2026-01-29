@@ -1,7 +1,7 @@
 ---
 title: Supabase 企业级自建
 weight: 555
-description: 使用 Pigsty 自托管企业级 supabase，带有监控，高可用，PITR，IaC 以及 440+ PG扩展。
+description: 使用 Pigsty 自托管企业级 supabase，带有监控，高可用，PITR，IaC 以及 444 PG扩展。
 module: [SOFTWARE]
 categories: [参考]
 ---
@@ -90,7 +90,7 @@ Supabase 还为小微创业者提供了"慷慨"的免费云服务额度 —— �
 
 另一个重要的原因是 **功能**， Supabase 云服务的功能受限 —— 很多强力PG扩展因为多租户安全挑战与许可证的原因无法以云服务的形式。
 故而尽管 [扩展是 PostgreSQL 的核心特色](https://vonng.com/pg/pg-eat-db-world)，在 Supabase 云服务上也依然只有 **64** 个扩展可用。
-而通过 Pigsty 自建的 Supabase 则提供了多达 [**440**](https://pgext.cloud/list) 个开箱即用的 PG 扩展。
+而通过 Pigsty 自建的 Supabase 则提供了多达 [**444**](https://pgext.cloud/list) 个开箱即用的 PG 扩展。
 
 此外，自主可控与规避供应商锁定也是自建的重要原因 —— 尽管 Supabase 虽然旨在提供一个无供应商锁定的 Google Firebase 开源替代，但实际上自建高标准企业级的 Supabase 门槛并不低。
 Supabase 内置了一系列由他们自己开发维护的 PG 扩展插件，并计划将原生的 PostgreSQL 内核替换为收购的 [**OrioleDB**](/docs/pgsql/kernel/orioledb)，而这些内核与扩展在 PGDG 官方仓库中并没有提供。

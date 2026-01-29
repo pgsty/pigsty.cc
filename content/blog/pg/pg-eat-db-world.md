@@ -101,7 +101,7 @@ PostgreSQL 允许用户开发功能模块，复用数据库公共基础设施，
 
 [![extensions](/img/pigsty/ecosystem.png)](https://pgext.cloud/zh/list)
 
-> Pigsty 中提供了 [**440**](https://pgext.cloud/zh/list) 个可用扩展插件，在生态中还有 1000+ 扩展
+> Pigsty 中提供了 [**444**](https://pgext.cloud/zh/list) 个可用扩展插件，在生态中还有 1000+ 扩展
 
 ------
 
@@ -250,7 +250,7 @@ Pigsty 六点价值主张的首字母合起来，则为 Pigsty 提供了另外�
 - [**FerretDB**](https://github.com/Vonng/pigsty/tree/master/app/ferretdb)：基于 PostgreSQL 的开源 MongoDB 替代，兼容 MongoDB API / 驱动协议。
 - [**PostgresML**](https://github.com/Vonng/pigsty/tree/master/app/pgml)：使用SQL完成经典机器学习算法，调用、部署、训练 AI 模型。
 
-> Pigsty 支持的 440+ [**扩展列表**](/docs/ref/extension//)
+> Pigsty 支持的 444 [**扩展列表**](/docs/ref/extension//)
 
 ![](https://pigsty.io/img/desc.png)
 

@@ -25,8 +25,7 @@ Pigsty 旨在聚集PG生态的合力，并用自动驾驶的数据库管控软�
 - 希望支持国产信创操作系统/国产信创 ARM 芯片架构，提供中文/本地化界面支持。
 - 下云并寻求 RDS for PostgreSQL 的开源替代 —— 云中立，无供应商锁定的解决方案。
 - 希望获取关于 Redis / ETCD / MinIO，以及 TimescaleDB / Citus 等扩展的专业支持。
-- 希望规避 AGPL v3 协议对衍生作品强制使用同协议开源的限制，进行二次开发与 OEM 贴牌。
-- 希望将 Pigsty 作为 SaaS / PaaS / DBaaS 对外销售，或基于此发行版提供技术服务/咨询/云服务。
+- 希望将 Pigsty 作为 SaaS / PaaS / DBaaS 对外销售，或基于此发行版提供技术服务/云服务。
 
 
 --------
@@ -39,7 +38,7 @@ Pigsty 旨在聚集PG生态的合力，并用自动驾驶的数据库管控软�
 
 {{< card header="**Pigsty 开源版（OSS）**" title="开源免费" subtitle="无规模限制，无质保承诺" footer="自给自足的开源老司机">}}
 
-<p><b>许可协议：<a href="/docs/about/license">AGPLv3</a></b></p>
+<p><b>许可协议：<a href="/docs/about/license">Apache-2.0</a></b></p>
 <p><b>PG支持：18</b></p>
 <p><b>架构支持：x86_64</b></p>
 <p><b>OS支持：三系最新小版本</b><p>
@@ -135,18 +134,16 @@ Pigsty 旨在聚集PG生态的合力，并用自动驾驶的数据库管控软�
 
 ## Pigsty开源版
 
-Pigsty 开源版使用 [**AGPLv3**](/docs/about/license) 许可证， 提供了完整核心功能，无需任何费用，但也不承诺任何质保服务。如果您发现了 Pigsty 的缺陷，我们非常欢迎您在 Github 上提出 [Issue](https://github.com/pgsty/pigsty/issues/)。
+Pigsty 开源版使用 [**Apache-2.0**](/docs/about/license) 许可证， 提供了完整核心功能，无需任何费用，但也不承诺任何质保服务。如果您发现了 Pigsty 的缺陷，我们非常欢迎您在 Github 上提出 [Issue](https://github.com/pgsty/pigsty/issues/)。
 
-如果您属于普通终端用户（即：公有云厂商，数据库厂商除外的用户），我们实际上执行更宽松的 Apache 2.0 许可证 —— 即使您对 Pigsty 进行二次开发，我们也不会对此进行追索。
-
-针对开源版本，我们提供 PostgreSQL 18 在 EL 9.4，Debian 12.7，Ubuntu 22.04.5 三个精准操作系统发行版最新小版本上的预制标准离线软件包（作为对开源的支持，同时提供 Debian 12 的 Arm64 离线软件包）。
+针对开源版本，我们提供 PostgreSQL 18 在 EL 9.6，Debian 12.11，Ubuntu 22.04.5 三个精准操作系统发行版最新小版本上的预制标准离线软件包（作为对开源的支持，同时提供 Debian 12 的 Arm64 离线软件包）。
 
 使用 Pigsty 开源版本，可以让初级研发工程师 / 运维工程师拥有专业 DBA **70%+** 的能力，在缺少数据库专家的情况下，也能够轻松搭建一个高可用，高性能，易维护，安全可靠的 PostgreSQL 数据库集群。
 
-|   代号    | 操作系统发行版版本               |   `x86_64`      |   `Arm64`   |                       PG17                       |                   PG16                    |                   PG15                    |                   PG14                    |                   PG13                    |
-|:-------:|-------------------------|:------------:|:------------:|:------------------------------------------------:|:-----------------------------------------:|:-----------------------------------------:|:-----------------------------------------:|:-----------------------------------------:|
-| **EL9** | RHEL 9 / Rocky9 / Alma9 | `el9.x86_64` |  | <i class="fas fa-circle-check text-primary"></i> | <i class="fas fa-check text-primary"></i> | <i class="fas fa-check text-primary"></i> | <i class="fas fa-check text-primary"></i> | <i class="fas fa-check text-primary"></i> |
-| **U22** | Ubuntu 22.04 (`jammy`)  | `u22.x86_64` |  | <i class="fas fa-circle-check text-primary"></i> | <i class="fas fa-check text-primary"></i> | <i class="fas fa-check text-primary"></i> | <i class="fas fa-check text-primary"></i> | <i class="fas fa-check text-primary"></i> |
+|   代号    | 操作系统发行版版本               |   `x86_64`   |    `Arm64`    |                       PG17                       |                   PG16                    |                   PG15                    |                   PG14                    |                   PG13                    |
+|:-------:|-------------------------|:------------:|:-------------:|:------------------------------------------------:|:-----------------------------------------:|:-----------------------------------------:|:-----------------------------------------:|:-----------------------------------------:|
+| **EL9** | RHEL 9 / Rocky9 / Alma9 | `el9.x86_64` |               | <i class="fas fa-circle-check text-primary"></i> | <i class="fas fa-check text-primary"></i> | <i class="fas fa-check text-primary"></i> | <i class="fas fa-check text-primary"></i> | <i class="fas fa-check text-primary"></i> |
+| **U22** | Ubuntu 22.04 (`jammy`)  | `u22.x86_64` |               | <i class="fas fa-circle-check text-primary"></i> | <i class="fas fa-check text-primary"></i> | <i class="fas fa-check text-primary"></i> | <i class="fas fa-check text-primary"></i> | <i class="fas fa-check text-primary"></i> |
 | **D12** | Debian 12 (`bookworm`)  | `d12.x86_64` | `d12.aarch64` | <i class="fas fa-circle-check text-primary"></i> | <i class="fas fa-check text-primary"></i> | <i class="fas fa-check text-primary"></i> | <i class="fas fa-check text-primary"></i> | <i class="fas fa-check text-primary"></i> |
 {.full-width}
 
@@ -170,12 +167,12 @@ Pigsty 专业版订阅允许您使用中国大陆镜像站点软件仓库，无�
 
 Pigsty 专业版订阅提供了标准的专家咨询服务，包括疑难杂症分析，DBA 答疑解惑，备份合规建议等，我们承诺在工作日（5x8）时效内响应您的问题，并且每年提供 **1** 人天支持，以及可选的人天加购选项。
 
-Pigsty 专业版使用商业许可证，并提供书面合同承诺的 AGPLv3 开源义务豁免，即使您对 Pigsty 进行二次开发，并违反了 AGPLv3 协议没有开源，我们亦不会对此进行追索。
+Pigsty 专业版使用商业许可证，提供额外的功能模块、技术支持与质保服务。
 
 Pigsty 专业版的起售价格 **¥150,000 / 年**，相当于 **9** vCPU 的 AWS 高可用 RDS PG 年费， 或月薪 **一万元** 的初级运维工程师。
 
-|   代号    | 操作系统发行版版本                         |   `x86_64`   |   `Arm64`   |                       PG17                       |                       PG16                       |                   PG15                    |                   PG14                    |                   PG13                    |
-|:-------:|-----------------------------------|:------------:|:------------:|:------------------------------------------------:|:------------------------------------------------:|:-----------------------------------------:|:-----------------------------------------:|:-----------------------------------------:|
+|   代号    | 操作系统发行版版本                         |   `x86_64`   |    `Arm64`    |                       PG17                       |                       PG16                       |                   PG15                    |                   PG14                    |                   PG13                    |
+|:-------:|-----------------------------------|:------------:|:-------------:|:------------------------------------------------:|:------------------------------------------------:|:-----------------------------------------:|:-----------------------------------------:|:-----------------------------------------:|
 | **EL9** | RHEL 9 / Rocky9 / Alma9           | `el9.x86_64` | `el9.aarch64` | <i class="fas fa-circle-check text-primary"></i> | <i class="fas fa-circle-check text-primary"></i> | <i class="fas fa-check text-primary"></i> | <i class="fas fa-check text-primary"></i> | <i class="fas fa-check text-primary"></i> |
 | **EL8** | RHEL 8 / Rocky8 / Alma8 / Anolis8 | `el8.x86_64` | `el8.aarch64` | <i class="fas fa-circle-check text-primary"></i> | <i class="fas fa-circle-check text-primary"></i> | <i class="fas fa-check text-primary"></i> | <i class="fas fa-check text-primary"></i> | <i class="fas fa-check text-primary"></i> |
 | **U24** | Ubuntu 24.04 (`noble`)            | `u24.x86_64` | `u24.aarch64` | <i class="fas fa-circle-check text-primary"></i> | <i class="fas fa-circle-check text-primary"></i> | <i class="fas fa-check text-primary"></i> | <i class="fas fa-check text-primary"></i> | <i class="fas fa-check text-primary"></i> |
@@ -236,7 +233,7 @@ Pigsty 专业版/企业版相比开源版本，包含以下额外功能：
     - [**IvorySQL**](/docs/pgsql/kernel/ivorysql)：基于 PG 提供 Oracle 语法/类型/存储过程兼容能力
     - [**PolarDB PG**](/docs/pgsql/kernel/polardb)：提供基于开源的 PolarDB for PostgreSQL 内核支持
     - [**PolarDB O**](/docs/pgsql/kernel/polardb-o)：信创数据库，满足国产化合规要求的 Oracle 兼容内核（**仅限企业版订阅**）
-- **扩展支持能力**：针对 440 个可用 PG Extension，提供 PG 13-18 在主流操作系统上开箱即用的安装能力。
+- **扩展支持能力**：针对 444 个可用 PG Extension，提供 PG 13-18 在主流操作系统上开箱即用的安装能力。
 - **完整功能模块**：提供所有功能模块：
     - [**Supabase**](/docs/pgsql/kernel/supabase)：可靠地自建生产级开源 Firebase
     - [**MinIO**](/docs/minio)：企业PB级对象存储规划与自建
@@ -313,9 +310,16 @@ Pigsty 的定价策略确保用户物有所值 —— 您可以立即获得顶�
 
 
 
---------
+### 服务主体
 
-## 联系方式
+Pigsty 目前由作者 **冯若航** 独资运营维护，商业主体为：
 
-请发送邮件至 [**rh@vonng.com**](mailto:rh@vonng.com) 。中国大陆地区用户欢迎添加微信号 `RuohangFeng`。
+- 海南诸夏云数据有限公司 / 91460000MAE6L87B94
+- 海口龙华辟技数据中心 / 92460000MAG0XJ569B
+- 海口龙华越航科技中心 / 92460000MACCYGBQ1N
 
+PIGSTY® 与 PGSTY® 为海口龙华越航科技中心的注册商标。 
+
+商务咨询请发送邮件至 [**rh@vonng.com**](mailto:rh@vonng.com) 。中国大陆地区用户欢迎添加微信号 `RuohangFeng`。
+
+> Pigsty 是奇绩创坛 S22 被投项目，原主体 **磐吉云数（北京）科技有限责任公司** 已经清算剥离 Pigsty 业务，与 Pigsty 无关。

@@ -27,7 +27,7 @@ Pigsty 为您提供：
 
 - **开箱即用的 PostgreSQL 发行版**
 
-  Pigsty 深度整合了 PostgreSQL 生态中的 [**440+ 扩展插件**](https://pgext.cloud/zh/list)，为您提供开箱即用的分布式、时序、地理、空间、图、向量、搜索等多模态数据库能力。从内核到 RDS 发行版，在 EL/Debian/Ubuntu 下提供 13-18 版本的生产级数据库服务。
+  Pigsty 深度整合了 PostgreSQL 生态中的 [**444 扩展插件**](https://pgext.cloud/zh/list)，为您提供开箱即用的分布式、时序、地理、空间、图、向量、搜索等多模态数据库能力。从内核到 RDS 发行版，在 EL/Debian/Ubuntu 下提供 13-18 版本的生产级数据库服务。
 
 - **故障自愈的高可用架构**
 

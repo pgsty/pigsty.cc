@@ -17,7 +17,7 @@ Pigsty 提供了开箱即用的 [**Vagrant**](/docs/deploy/vagrant/) 模板与 [
 
 [![pigsty-arch](/img/pigsty/arch.png)](/docs/concept/arch)
 
-单机版本的 Pigsty 包含了所有核心功能，**440+** 个 [**PG 扩展**](/docs/pgsql/ext)，自包含的 Grafana / Victoria 监控，[**IaC**](/docs/concept/iac) 置备能力。
+单机版本的 Pigsty 包含了所有核心功能，**444** 个 [**PG 扩展**](/docs/pgsql/ext)，自包含的 Grafana / Victoria 监控，[**IaC**](/docs/concept/iac) 置备能力。
 以及本地 [**PITR**](/docs/concept/pitr) 时间点恢复。如果您配备了外部的对象存储（用于 PostgreSQL PITR 备份），那么对于 Demo，个人网站，小型服务等场景，
 即使是单机环境，也可以提供一定程度的 [**数据持久性**](/docs/concept/pitr) 保证。
 不过，单机无法实现 [**高可用**](/docs/concept/ha) —— 故障自动切换至少需要 3 个节点。

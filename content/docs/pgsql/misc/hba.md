@@ -228,7 +228,7 @@ pgb_default_hba_rules:            # pgbouncer 全局默认的HBA规则，按 ord
 # Path      :   /pg/data/pg_hba.conf
 # Note      :   ANSIBLE MANAGED, DO NOT CHANGE!
 # Author    :   Ruohang Feng (rh@vonng.com)
-# License   :   AGPLv3
+# License   :   Apache-2.0
 #==============================================================#
 
 # addr alias
@@ -312,7 +312,7 @@ host     all                +dbrole_offline    192.168.0.0/16     scram-sha-256
 # Path      :   /etc/pgbouncer/pgb_hba.conf
 # Note      :   ANSIBLE MANAGED, DO NOT CHANGE!
 # Author    :   Ruohang Feng (rh@vonng.com)
-# License   :   AGPLv3
+# License   :   Apache-2.0
 #==============================================================#
 
 # PGBOUNCER HBA RULES FOR pg-meta-1 @ 10.10.10.10:6432

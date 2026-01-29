@@ -205,7 +205,7 @@ Pigsty 提供了许多 PostgreSQL [**监控面板**](/docs/pgsql/monitor/dashboa
 
 PostgreSQL 最强大的特性之一是其 [**扩展生态系统**](/docs/pgsql/ext)。扩展可以为数据库添加新的数据类型、函数、索引方法等能力。
 
-Pigsty 提供了 PG 生态中独一无二的 [**440+ 扩展**](https://pgext.cloud/zh/list)，涵盖时序、地理、向量、全文检索等 16 大类别，一键安装即可使用。
+Pigsty 提供了 PG 生态中独一无二的 [**444 扩展**](https://pgext.cloud/zh/list)，涵盖时序、地理、向量、全文检索等 16 大类别，一键安装即可使用。
 你可以先从三个最强大常用的功能扩展开始，这三个扩展是 Pigsty [**默认配置模板**](/docs/conf/meta) 中自动安装的，你还可以继续 [**加装**](/docs/pgsql/ext/install) 更多需要的扩展。
 
 - [**`postgis`**](https://pgext.cloud/e/postgis) ：地理信息系统，处理地图、位置数据

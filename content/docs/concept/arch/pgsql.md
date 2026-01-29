@@ -192,7 +192,7 @@ PGSQL 模块在生产环境中以 **集群** 的形式组织，这些 **集群**
 
 Pigsty 目前支持 PostgreSQL 14 - 18（生命周期内的大版本），使用 [**PGDG 官方仓库**](/docs/repo/pgdg/) 提供的二进制包安装。
 Pigsty 还允许您使用其他的 [**PG 内核分支**](/docs/pgsql/kernel) 替换默认的 PostgreSQL 内核，
-并在 PG 内核上加装多达 [**440**](/docs/pgsql/ext) 个扩展插件。
+并在 PG 内核上加装多达 [**444**](/docs/pgsql/ext) 个扩展插件。
 
 **PostgreSQL** 进程默认由 [**高可用**](/docs/concept/ha) Agent —— [**Patroni**](#patroni) 托管拉起。
 当一个集群中只有一个节点时，该实例即为主库；当集群包含多个节点时，其余实例会自动作为从库加入：

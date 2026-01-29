@@ -94,8 +94,7 @@ categories: [概念]
 如果你部署多个 INFRA 节点，每个 Infra 节点上的服务是相互独立的。
 但你确实可以从任意一个 Infra 节点上的 Grafana 访问所有的监控数据源。
 
-请注意，[**INFRA**](/docs/infra) 模块受到 Grafana 传染，使用 [**AGPLv3**](/docs/about/license#pigsty-特殊模块) 许可证开源。
-但作为例外，如果你只使用 Nginx / Victoria 全家桶等组件，而不使用 Grafana，实际上使用的是 [**Apache-2.0**](/docs/about/license#pigsty-许可证) 许可证。
+Pigsty 使用 [**Apache-2.0**](/docs/about/license) 许可证开源，但请注意其中的 Grafana 组件使用 AGPLv3 许可证。
 
 
 ----------------
