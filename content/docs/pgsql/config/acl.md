@@ -1,6 +1,6 @@
 ---
 title: 访问控制
-weight: 1207
+weight: 70
 description: Pigsty 提供的默认角色系统与权限模型
 icon: fa-solid fa-lock
 module: [PGSQL]

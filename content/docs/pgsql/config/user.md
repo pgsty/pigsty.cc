@@ -1,6 +1,6 @@
 ---
 title: 用户/角色
-weight: 1204
+weight: 40
 description: 如何通过配置来定制所需 PostgreSQL 用户与角色？
 icon: fa-solid fa-users
 module: [PGSQL]

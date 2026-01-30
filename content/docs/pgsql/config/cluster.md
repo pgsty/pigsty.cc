@@ -1,6 +1,6 @@
 ---
 title: 集群实例
-weight: 1201
+weight: 10
 description: 根据需求场景选择合适的实例与集群类型，配置出满足需求的 PostgreSQL 数据库集群。
 icon: fa-solid fa-code
 module: [PGSQL]

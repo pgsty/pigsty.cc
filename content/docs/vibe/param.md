@@ -7,7 +7,7 @@ module: [VIBE]
 categories: [参数]
 ---
 
-VIBE 模块共有 **15** 个配置参数，分为五组：通用参数、Code-Server 参数、JupyterLab 参数、Claude Code 参数和 Node.js 参数。
+VIBE 模块共有 **16** 个配置参数，分为五组：通用参数、Code-Server 参数、JupyterLab 参数、Claude Code 参数和 Node.js 参数。
 
 
 --------
@@ -31,6 +31,7 @@ VIBE 模块共有 **15** 个配置参数，分为五组：通用参数、Code-Se
 | [`claude_env`](#claude_env) | dict | H/I | `{}` | Claude Code 额外环境变量 |
 | [`nodejs_enabled`](#nodejs_enabled) | bool | H/I | `true` | 是否启用 Node.js |
 | [`nodejs_registry`](#nodejs_registry) | url | H/I | `''` | npm 镜像地址，留空则自动配置 |
+| [`npm_packages`](#npm_packages) | string[] | H/I | `[]` | 全局安装的 npm 包列表 |
 {.full-width}
 
 
@@ -330,6 +331,24 @@ nodejs_registry: 'https://registry.npmmirror.com'  # 手动指定淘宝镜像
 nodejs_registry: 'http://npm.internal.example.com' # 内网镜像
 ```
 
+### `npm_packages`
+
+需要全局安装的 npm 包列表，通过 `npm install -g` 安装。
+
+- **类型**：`string[]`
+- **级别**：H/I
+- **默认值**：`[]`（空列表）
+
+用于安装 Claude Code、TypeScript、pnpm 等命令行工具。
+
+```yaml
+npm_packages: []                                   # 不安装任何包（默认）
+npm_packages:
+  - '@anthropic-ai/claude-code'                    # Claude Code CLI
+  - typescript                                      # TypeScript 编译器
+  - pnpm                                            # 高性能包管理器
+```
+
 
 --------
 
@@ -388,6 +407,7 @@ claude_env: {}
 # Node.js 参数
 nodejs_enabled: true
 nodejs_registry: ''
+npm_packages: []
 ```
 
 

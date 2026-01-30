@@ -1,6 +1,6 @@
 ---
 title: 数据库
-weight: 1205
+weight: 50
 description: 如何通过配置来定制所需 PostgreSQL 数据库？
 icon: fa-solid fa-coins
 module: [PGSQL]

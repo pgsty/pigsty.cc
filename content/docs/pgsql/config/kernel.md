@@ -1,6 +1,6 @@
 ---
 title: 内核版本
-weight: 1202
+weight: 20
 description: 如何选择合适的 PostgreSQL 内核与大版本。
 icon: fa-solid fa-microchip
 module: [PGSQL]
@@ -23,12 +23,12 @@ Pigsty 从 PostgreSQL 10 起提供支持，当前版本默认打包了 13 - 18 �
 ```yaml
 all:
   vars:
-    pg_version: 17
+    pg_version: 18
     pg_packages: [ pgsql-main pgsql-common ]
     pg_extensions: [ postgis, timescaledb, pgvector, pgml ]
 ```
 
-> 效果：Ansible 在安装阶段会拉取与 `pg_version=17` 对应的包，将扩展预装到系统中，随后数据库初始化脚本即可直接 `CREATE EXTENSION`。
+> 效果：Ansible 在安装阶段会拉取与 `pg_version=18` 对应的包，将扩展预装到系统中，随后数据库初始化脚本即可直接 `CREATE EXTENSION`。
 
 Pigsty 的离线仓库中不同版本的扩展支持范围不同：12/13 只提供核心与一级扩展，15/17/18 则涵盖全部扩展。若某扩展未预打包，可通过 `repo_packages_extra` 追加。
 

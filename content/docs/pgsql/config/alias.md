@@ -1,6 +1,6 @@
 ---
 title: 别名翻译
-weight: 1203
+weight: 30
 description: Pigsty 提供软件包别名翻译机制，可以屏蔽底层操作系统的二进制包细节差异，让安装更简易。
 icon: fa-solid fa-square-binary
 module: [PGSQL]
