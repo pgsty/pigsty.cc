@@ -12,7 +12,7 @@ sidebar_root_for: self
 
 > **世界上最先进的开源关系型数据库！**
 >
-> 而 Pigsty 帮它进入全盛状态：开箱即用、可靠、可观测、可维护、可伸缩！ [配置](/docs/pgsql/config) | [管理](/docs/pgsql/admin) | [剧本](/docs/pgsql/playbook) | [监控](/docs/pgsql/monitor/dashboard) | [参数](#参数)
+> 而 Pigsty 帮它进入全盛状态：开箱即用、可靠、可观测、可维护、可伸缩！ [配置](/docs/pgsql/config) | [管理](/docs/pgsql/admin) | [剧本](/docs/pgsql/playbook) | [监控](/docs/pgsql/monitor) | [参数](#参数)
 
 
 ----------------
@@ -33,7 +33,7 @@ sidebar_root_for: self
 - [备份恢复](/docs/pgsql/tutorial/pitr)
 - [监控接入](/docs/pgsql/monitor)
 - [集群迁移](/docs/pgsql/migration)
-- [仪表盘](/docs/pgsql/monitor/dashboard)
+- [仪表盘](/docs/pgsql/monitor)
 
 
 ----------------
@@ -93,7 +93,7 @@ sidebar_root_for: self
 
 ## 监控
 
->  在 Grafana [仪表盘](/docs/pgsql/monitor/dashboard) 中查阅 PostgreSQL 的详情状态。
+>  在 Grafana [仪表盘](/docs/pgsql/monitor) 中查阅 PostgreSQL 的详情状态。
 
 在 Pigsty 中共有 26 个与 PostgreSQL 相关的监控面板：
 

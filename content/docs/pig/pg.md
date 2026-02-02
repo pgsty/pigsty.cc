@@ -9,6 +9,41 @@ categories: [参考]
 
 `pig pg` 命令（别名 `pig postgres`）用于管理本地 PostgreSQL 服务器和数据库。它封装了 `pg_ctl`、`psql`、`vacuumdb` 等原生工具，提供简化的服务器管理体验。
 
+```bash
+pig pg - Manage local PostgreSQL server and databases.
+
+Server Control (via pg_ctl):
+  pig pg init     [-v ver] [-D datadir]     initialize data directory
+  pig pg start    [-D datadir]              start PostgreSQL server
+  pig pg stop     [-D datadir] [-m fast]    stop PostgreSQL server
+  pig pg restart  [-D datadir] [-m fast]    restart PostgreSQL server
+  pig pg reload   [-D datadir]              reload configuration
+  pig pg status   [-D datadir]              show server status
+  pig pg promote  [-D datadir]              promote standby to primary
+  pig pg role     [-D datadir] [-V]         detect instance role (primary/replica)
+
+Service Management (via systemctl):
+  pig pg svc start                          start postgres systemd service
+  pig pg svc stop                           stop postgres systemd service
+  pig pg svc restart                        restart postgres systemd service
+  pig pg svc reload                         reload postgres systemd service
+  pig pg svc status                         show postgres service status
+
+Connection & Query:
+  pig pg psql     [db] [-c cmd]             connect to database via psql
+  pig pg ps       [-a] [-u user]            show current connections
+  pig pg kill     [-x] [-u user]            terminate connections (dry-run by default)
+
+Database Maintenance:
+  pig pg vacuum   [db] [-a] [-t table]      vacuum tables
+  pig pg analyze  [db] [-a] [-t table]      analyze tables
+  pig pg freeze   [db] [-a] [-t table]      vacuum freeze tables
+  pig pg repack   [db] [-a] [-t table]      repack tables (online rebuild)
+
+Utilities:
+  pig pg log <list|tail|cat|less|grep>      view PostgreSQL logs
+```
+
 ## 命令概览
 
 **服务控制**（pg_ctl 封装）：
@@ -40,6 +75,7 @@ categories: [参考]
 |:----|:----|:----|:----|
 | `pg vacuum` | `vac, vc` | 清理表 | 封装 vacuumdb |
 | `pg analyze` | `ana, az` | 分析表 | 封装 vacuumdb --analyze-only |
+| `pg freeze` | `frz` | 冻结清理表 | 封装 vacuumdb --freeze |
 | `pg repack` | `rp` | 在线重整表 | 需要 pg_repack 扩展 |
 {.full-width}
 
@@ -416,6 +452,20 @@ pig pg ana                        # 别名
 pig pg analyze mydb               # 分析指定数据库
 pig pg analyze -a                 # 分析所有数据库
 pig pg analyze mydb -t mytable    # 分析指定表
+```
+
+**选项：** 与 `pg vacuum` 相同（不含 `--full`）。
+
+
+### pg freeze
+
+对数据库表执行冻结清理（vacuum freeze），防止事务 ID 回卷。
+
+```bash
+pig pg freeze                     # 冻结清理当前数据库
+pig pg freeze mydb                # 冻结清理指定数据库
+pig pg freeze -a                  # 冻结清理所有数据库
+pig pg freeze mydb -t mytable     # 冻结清理指定表
 ```
 
 **选项：** 与 `pg vacuum` 相同（不含 `--full`）。

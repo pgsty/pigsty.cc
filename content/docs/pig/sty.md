@@ -10,6 +10,23 @@ categories: [参考]
 **pig** 也可作为 Pigsty 的命令行工具使用 —— 这是一款开箱即用的免费 PostgreSQL RDS 解决方案。
 它为你的 PostgreSQL 集群带来高可用（HA）、PITR、监控、基础设施即代码（IaC）以及丰富的扩展支持。
 
+```bash
+pig sty - Init (Download), Bootstrap, Configure, and Deploy Pigsty
+
+  pig sty init    [-pfvd]         # install pigsty (~/pigsty by default)
+  pig sty boot    [-rpk]          # install ansible and prepare offline pkg
+  pig sty conf    [-cvrsoxnpg]    # configure pigsty and generate config
+  pig sty deploy                  # use pigsty to deploy everything (CAUTION!)
+  pig sty get                     # download pigsty source tarball
+  pig sty list                    # list available pigsty versions
+
+Examples:
+  pig sty init                 # extract and init ~/pigsty
+  pig sty boot                 # install ansible & other deps
+  pig sty conf                 # generate pigsty.yml config file
+  pig sty deploy               # run the deploy.yml playbook
+```
+
 | 命令 | 描述 | 备注 |
 |:---|:---|:---|
 | `sty init` | 安装 Pigsty | |

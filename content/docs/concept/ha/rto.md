@@ -95,7 +95,7 @@ Pigsty 提供四种 RTO 模式，以帮助用户在不同的网络条件下进�
 
 ## RTO时序图
 
-Patroni / PG HA 有两条关键故障路径，详细的 RTO 时序分析请参阅：[**主动故障检测**](/docs/concept/ha/timing/crash) 与 [**被动租约过期**](/docs/concept/ha/timing/expire)。
+Patroni / PG HA 有两条关键故障路径：**主动故障检测**（PG崩溃后 Patroni 检测到并尝试重启）与 **被动租约过期**（节点宕机后等待 TTL 过期触发选举）。
 
 {{< echarts height="820px" >}}
 ```js

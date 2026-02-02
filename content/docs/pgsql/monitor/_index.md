@@ -20,7 +20,7 @@ Pigsty使用现代的可观测技术栈对 PostgreSQL 进行监控：
 - 使用 Grafana 进行指标可视化和 PostgreSQL 数据源。
 - 使用 VictoriaMetrics 来采集 PostgreSQL / Pgbouncer / Patroni / HAProxy / Node 的指标
 - 使用 VictoriaLogs 来记录 PostgreSQL / Pgbouncer / Patroni / pgBackRest 以及主机组件的日志
-- Pigsty 提供了开箱即用的 Grafana [仪表盘](/docs/pgsql/monitor/dashboard)，展示与 PostgreSQL 有关的方方面面。
+- Pigsty 提供了开箱即用的 Grafana 仪表盘，展示与 PostgreSQL 有关的方方面面。
 
 **监控指标**
 

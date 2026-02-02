@@ -24,10 +24,10 @@ categories: [教程]
 PostgreSQL 监听在 `5432` 端口，集群中带有一个预置的数据库 `meta` 可供使用。
 
 您可以在安装完毕后退出当前管理用户 ssh 会话，并重新登陆刷新环境变量后，
-通过简单地敲一个 `p` 回车，通过命令行工具 `psql` 访问该数据库集群：
+通过简单地敲一个 `pp` 回车，通过命令行工具 `psql` 访问该数据库集群：
 
 ```bash
-vagrant@pg-meta-1:~$ p
+vagrant@pg-meta-1:~$ pp
 psql (18.1 (Ubuntu 18.1-1.pgdg24.04+2))
 Type "help" for help.
 
@@ -193,7 +193,7 @@ Pigsty 在 [**软件模板：pgAdmin**](/docs/app/pgadmin) 中提供了使用 Do
 
 ## 查阅监控大盘
 
-Pigsty 提供了许多 PostgreSQL [**监控面板**](/docs/pgsql/monitor/dashboard)，覆盖从集群总览到单表分析的各个层面：
+Pigsty 提供了许多 PostgreSQL [**监控面板**](/docs/pgsql/monitor)，覆盖从集群总览到单表分析的各个层面：
 
 推荐先从 **PGSQL Overview** 开始浏览，面板中的许多元素都可以点击，您可以逐层深入，查阅每个集群、实例、数据库甚至是表，索引，函数等数据库内对象的详情信息。
 

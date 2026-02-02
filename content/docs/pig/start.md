@@ -40,7 +40,7 @@ curl -fsSL https://repo.pigsty.io/pig | bash
 PIG 二进制包大约 4 MB，在 Linux 上会自动使用 `rpm` 或 `dpkg` 安装最新可用版本：
 
 ```bash
-root@pg-meta-1:~# curl -fsSL https://repo.pigsty.cc/pig | bash
+$ curl -fsSL https://repo.pigsty.cc/pig | bash
 [INFO] kernel = Linux
 [INFO] machine = x86_64
 [INFO] package = deb
@@ -49,11 +49,11 @@ root@pg-meta-1:~# curl -fsSL https://repo.pigsty.cc/pig | bash
 [INFO] downloading pig v1.0.0
 curl -fSL https://repo.pigsty.cc/pkg/pig/v1.0.0/pig_1.0.0-1_amd64.deb -o /tmp/pig_1.0.0-1_amd64.deb
 ######################################################################## 100.0%
-[INFO] md5sum = 274546a010d39f1ce0aed72cf7e17e52
+[INFO] md5sum = a543882aa905713a0c50088d4e848951b6957a37a1594d7e9f3fe46453d5ce66
 [INFO] installing: dpkg -i /tmp/pig_1.0.0-1_amd64.deb
 (Reading database ... 166001 files and directories currently installed.)
 Preparing to unpack /tmp/pig_1.0.0-1_amd64.deb ...
-Unpacking pig (1.0.0-1) over (0.8.0-1) ...
+Unpacking pig (1.0.0-1) ...
 Setting up pig (1.0.0-1) ...
 [INFO] pig v1.0.0 installed successfully
 check https://pgext.cloud for details
@@ -66,25 +66,25 @@ check https://pgext.cloud for details
 PIG 是一个由 Go 编写的二进制程序，默认安装路径为 `/usr/bin/pig`，`pig version` 会打印版本信息：
 
 ```bash
-root@pg-meta-1:~#  pig version
+$ pig version
 pig version 1.0.0 linux/amd64
-build: HEAD 80c89c6 2025-12-28T08:05:39Z
+build: HEAD dc8f343 2026-01-26T15:52:04Z
 ```
 
 使用 `pig status` 命令，会打印当前环境的状态，操作系统代码，PG的安装情况，仓库的可访问性与延迟。
 
 ```bash
-root@pg-meta-1:~# pig status
+$ pig status
 
 # [Configuration] ================================
 Pig Version      : 1.0.0
-Pig Config       : /root/.pig/config.yml
+Pig Config       : /home/vagrant/.pig/config.yml
 Log Level        : info
 Log Path         : stderr
 
 # [OS Environment] ===============================
 OS Distro Code   : u24
-OS OSArch        : amd64
+OS OSArch        : arm64
 OS Package Type  : deb
 OS Vendor ID     : ubuntu
 OS Version       : 24
@@ -93,27 +93,25 @@ OS Version Code  : noble
 
 # [PG Environment] ===============================
 Installed:
-* PostgreSQL 18.1 (Ubuntu 18.1-1.pgdg24.04+2)  81  Extensions
-- PostgreSQL 17.7 (Ubuntu 17.7-3.pgdg24.04+1)  147 Extensions
+- PostgreSQL 18.1 (Ubuntu 18.1-1.pgdg24.04+2)  398 Extensions
 
 Active:
 PG Version      :  PostgreSQL 18.1 (Ubuntu 18.1-1.pgdg24.04+2)
-Config Path     :  /usr/lib/postgresql/18/bin/pg_config
+Config Path     :  /usr/bin/pg_config
 Binary Path     :  /usr/lib/postgresql/18/bin
 Library Path    :  /usr/lib/postgresql/18/lib
 Extension Path  :  /usr/share/postgresql/18/extension
 
 # [Pigsty Environment] ===========================
-Inventory Path   : /root/pigsty/pigsty.yml
-Pigsty Home      : /root/pigsty
+Inventory Path   : Not Found
+Pigsty Home      : Not Found
 
 # [Network Conditions] ===========================
-google.com ping ok: 156 ms
-pigsty.io  ping ok: 250 ms
-pigsty.cc  ping ok: 626 ms
+pigsty.cc  ping ok: 802 ms
+pigsty.io  ping ok: 1410 ms
 Internet Access   :  true
 Pigsty Repo       :  pigsty.io
-Inferred Region   :  default
+Inferred Region   :  china
 Latest Pigsty Ver :  v4.0.0
 ```
 
@@ -123,20 +121,20 @@ Latest Pigsty Ver :  v4.0.0
 使用 `pig ext list` 命令，可以打印内置的 PG 扩展数据目录。
 
 ```bash
-[root@pg-meta ~]# pig ext list
+$ pig ext list
 
-Name                            Version     Cate   Flags   License       RPM      DEB      PG Ver  Description
-----                            -------     ----   ------  -------       ------   ------   ------  ---------------------
-timescaledb                     added  2.24.0      TIME   -dsl--  Timescale     PIGSTY   14-18  postgresql-18-timescaledb-tsl         Enables scalable inserts and complex queries for time-series dat
-timescaledb_toolkit             avail  1.22.0      TIME   -ds-t-  Timescale     PIGSTY   15-18  postgresql-18-timescaledb-toolkit     Library of analytical hyperfunctions, time-series pipelining, an
-timeseries                      avail  0.1.8       TIME   -d----  PostgreSQL    PIGSTY   13-18  postgresql-18-pg-timeseries           Convenience API for time series stack
-periods                         avail  1.2.3       TIME   -ds---  PostgreSQL    PGDG     13-18  postgresql-18-periods                 Provide Standard SQL functionality for PERIODs and SYSTEM VERSIO
-temporal_tables                 avail  1.2.2       TIME   -ds--r  BSD 2-Clause  PIGSTY   13-18  postgresql-18-temporal-tables         temporal tables
+Name                            Status              Version     Cate   Flags   License       Repo     PGVer  Package                               Description
+----                            ------              -------     ----   ------  -------       ------   -----  ------------                          ---------------------
+timescaledb                     installed  2.24.0      TIME   -dsl--  Timescale     PIGSTY   15-18  postgresql-18-timescaledb-tsl         Enables scalable inserts and complex queries for time-series dat
+timescaledb_toolkit             installed  1.22.0      TIME   -ds-t-  Timescale     PIGSTY   15-18  postgresql-18-timescaledb-toolkit     Library of analytical hyperfunctions, time-series pipelining, an
+timeseries                      installed  0.2.0       TIME   -d----  PostgreSQL    PIGSTY   13-18  postgresql-18-pg-timeseries           Convenience API for time series stack
+periods                         installed  1.2.3       TIME   -ds---  PostgreSQL    PGDG     13-18  postgresql-18-periods                 Provide Standard SQL functionality for PERIODs and SYSTEM VERSIO
+temporal_tables                 installed  1.2.2       TIME   -ds--r  BSD 2-Clause  PIGSTY   13-18  postgresql-18-temporal-tables         temporal tables
 .........
-pg_fact_loader                  n/a    2.0.1       ETL    -ds--x  MIT           PGDG     13-17  postgresql-18-pg-fact-loader          build fact tables with Postgres
-pg_bulkload                     n/a    3.1.22      ETL    bds---  BSD 3-Clause  PIGSTY   13-17  postgresql-18-pg-bulkload             pg_bulkload is a high speed data loading utility for PostgreSQL
-test_decoding                   avail  -           ETL    --s--x  PostgreSQL    CONTRIB  13-18  postgresql-18                         SQL-based test/example module for WAL logical decoding
-pgoutput                        avail  -           ETL    --s---  PostgreSQL    CONTRIB  13-18  postgresql-18                         Logical Replication output plugin
+pg_fact_loader                  not avail  2.0.1       ETL    -ds--x  MIT           PGDG     13-17  postgresql-18-pg-fact-loader          build fact tables with Postgres
+pg_bulkload                     installed  3.1.23      ETL    bds---  BSD 3-Clause  PIGSTY   13-18  postgresql-18-pg-bulkload             pg_bulkload is a high speed data loading utility for PostgreSQL
+test_decoding                   available  -           ETL    --s--x  PostgreSQL    CONTRIB  13-18  postgresql-18                         SQL-based test/example module for WAL logical decoding
+pgoutput                        available  -           ETL    --s---  PostgreSQL    CONTRIB  13-18  postgresql-18                         Logical Replication output plugin
 
 
 (444 Rows) (Status: installed, available, not avail | Flags: b = HasBin, d = HasDDL, s = HasLib, l = NeedLoad, t = Trusted, r = Relocatable, x = Unknown)
@@ -318,33 +316,31 @@ pig ext add pg16=16.5            # install PostgreSQL 16 with a specific minor v
 [`pig ext status`](/docs/pig/ext/#ext-status) 命令可以用于显示当前安装的扩展。
 
 ```bash
-$ pig ext status -v 18
+$ pig ext status
 
 Installed:
-- PostgreSQL 18.0  80  Extensions
+- PostgreSQL 18.1 (Ubuntu 18.1-1.pgdg24.04+2)  398 Extensions
 
-No active PostgreSQL found in PATH:
-- /root/.local/bin
-- /root/bin
-- /usr/local/sbin
-- /usr/local/bin
-- /usr/sbin
-- /usr/bin
-Extension Stat  :  11 Installed (PIGSTY 3, PGDG 8) + 69 CONTRIB = 80 Total
+Active:
+PG Version      :  PostgreSQL 18.1 (Ubuntu 18.1-1.pgdg24.04+2)
+Config Path     :  /usr/bin/pg_config
+Binary Path     :  /usr/lib/postgresql/18/bin
+Library Path    :  /usr/lib/postgresql/18/lib
+Extension Path  :  /usr/share/postgresql/18/extension
+Extension Stat  :  329 Installed (PIGSTY 234, PGDG 95) + 69 CONTRIB = 398 Total
 
-Name                          Version  Cate  Flags   License     Repo    Package              Description
-----                          -------  ----  ------  -------     ------  ------------         ---------------------
-timescaledb                   2.23.0   TIME  -dsl--  Timescale   PIGSTY  timescaledb-tsl_18*  Enables scalable inserts and complex queries for time-series dat
-postgis                       3.6.0    GIS   -ds---  GPL-2.0     PGDG    postgis36_18*        PostGIS geometry and geography spatial types and functions
-postgis_topology              3.6.0    GIS   -ds---  GPL-2.0     PGDG    postgis36_18*        PostGIS topology spatial types and functions
-postgis_raster                3.6.0    GIS   -ds---  GPL-2.0     PGDG    postgis36_18*        PostGIS raster types and functions
-postgis_sfcgal                3.6.0    GIS   -ds--r  GPL-2.0     PGDG    postgis36_18*        PostGIS SFCGAL functions
-postgis_tiger_geocoder        3.6.0    GIS   -ds-t-  GPL-2.0     PGDG    postgis36_18*        PostGIS tiger geocoder and reverse geocoder
-address_standardizer          3.6.0    GIS   -ds--r  GPL-2.0     PGDG    postgis36_18*        Used to parse an address into constituent elements. Generally us
-address_standardizer_data_us  3.6.0    GIS   -ds--r  GPL-2.0     PGDG    postgis36_18*        Address Standardizer US dataset example
-vector                        0.8.1    RAG   -ds--r  PostgreSQL  PGDG    pgvector_18*         vector data type and ivfflat and hnsw access methods
-pg_duckdb                     1.1.0    OLAP  -dsl--  MIT         PIGSTY  pg_duckdb_18*        DuckDB Embedded in Postgres
-pg_mooncake                   0.2.0    OLAP  -d----  MIT         PIGSTY  pg_mooncake_18*      Columnstore Table in Postgres
+Name                          Version  Cate  Flags   License     Repo    Package                               Description
+----                          -------  ----  ------  -------     ------  ------------                          ---------------------
+timescaledb                   2.24.0   TIME  -dsl--  Timescale   PIGSTY  postgresql-18-timescaledb-tsl         Enables scalable inserts and complex queries for time-series dat
+timescaledb_toolkit           1.22.0   TIME  -ds-t-  Timescale   PIGSTY  postgresql-18-timescaledb-toolkit     Library of analytical hyperfunctions, time-series pipelining, an
+timeseries                    0.2.0    TIME  -d----  PostgreSQL  PIGSTY  postgresql-18-pg-timeseries           Convenience API for time series stack
+periods                       1.2.3    TIME  -ds---  PostgreSQL  PGDG    postgresql-18-periods                 Provide Standard SQL functionality for PERIODs and SYSTEM VERSIO
+temporal_tables               1.2.2    TIME  -ds--r  BSD 2-Clause PIGSTY postgresql-18-temporal-tables         temporal tables
+postgis                       3.6.1    GIS   -ds---  GPL-2.0     PGDG    postgresql-18-postgis-3               PostGIS geometry and geography spatial types and functions
+postgis_topology              3.6.1    GIS   -ds---  GPL-2.0     PGDG    postgresql-18-postgis-3               PostGIS topology spatial types and functions
+postgis_raster                3.6.1    GIS   -ds---  GPL-2.0     PGDG    postgresql-18-postgis-3               PostGIS raster types and functions
+vector                        0.8.1    RAG   -ds--r  PostgreSQL  PGDG    postgresql-18-pgvector                vector data type and ivfflat and hnsw access methods
+pg_duckdb                     1.1.0    OLAP  -dsl--  MIT         PIGSTY  postgresql-18-pg-duckdb               DuckDB Embedded in Postgres
 ```
 
 如果您的当前系统路径中找不到 PostgreSQL（以 `PATH` 中的 `pg_config` 为准），那么请务必通过 `-v|-p` 指定 PG 大版本号或 `pg_config` 路径。
@@ -356,32 +352,28 @@ pg_mooncake                   0.2.0    OLAP  -d----  MIT         PIGSTY  pg_moon
 [`pig ext scan`](/docs/pig/ext/#ext-scan) 提供更底层的扩展扫描功能，将扫描指定 PostgreSQL 目录下的共享库，从而发现安装了哪些扩展：
 
 ```bash
-root@s37451:~# pig ext scan
+$ pig ext scan
+
 Installed:
-* PostgreSQL 17.6 (Debian 17.6-2.pgdg13+1)    70  Extensions
-- PostgreSQL 15.14 (Debian 15.14-1.pgdg13+1)  69  Extensions
-- PostgreSQL 14.19 (Debian 14.19-1.pgdg13+1)  66  Extensions
-- PostgreSQL 13.22 (Debian 13.22-1.pgdg13+1)  64  Extensions
-- PostgreSQL 18.0 (Debian 18.0-1.pgdg13+3)    70  Extensions
-- PostgreSQL 16.10 (Debian 16.10-1.pgdg13+1)  70  Extensions
+- PostgreSQL 18.1 (Ubuntu 18.1-1.pgdg24.04+2)  398 Extensions
 
 Active:
-PG Version      :  PostgreSQL 17.6 (Debian 17.6-2.pgdg13+1)
-Config Path     :  /usr/lib/postgresql/17/bin/pg_config
-Binary Path     :  /usr/lib/postgresql/17/bin
-Library Path    :  /usr/lib/postgresql/17/lib
-Extension Path  :  /usr/share/postgresql/17/extension
-Name                 Version  SharedLibs                                       Description            Meta
-----                 -------  ----------                                       ---------------------  ------
-amcheck              1.4      functions for verifying relation integrity       relocatable=true module_pathname=$libdir/amcheck lib=amcheck.so
+PG Version      :  PostgreSQL 18.1 (Ubuntu 18.1-1.pgdg24.04+2)
+Config Path     :  /usr/bin/pg_config
+Binary Path     :  /usr/lib/postgresql/18/bin
+Library Path    :  /usr/lib/postgresql/18/lib
+Extension Path  :  /usr/share/postgresql/18/extension
+
+Name                 Version  SharedLibs                                       Description                       Meta
+----                 -------  ----------                                       ---------------------             ------
+timescaledb          2.24.0   Enables scalable inserts and complex queries...  module_pathname=$libdir/timescaledb-2.24.0 relocatable=false trusted=true lib=...
+timescaledb_toolkit  1.22.0   Library of analytical hyperfunctions...          relocatable=false superuser=false module_pathname=$libdir/timescaledb_toolkit lib=...
+periods              1.2      Provide Standard SQL functionality for PERIODs   module_pathname=$libdir/periods relocatable=false requires=btree_gist lib=periods.so
+pg_cron              1.6      Job scheduler for PostgreSQL                     relocatable=false schema=pg_catalog module_pathname=$libdir/pg_cron lib=pg_cron.so
+postgis              3.6.1    PostGIS geometry and geography spatial types...  module_pathname=$libdir/postgis-3 relocatable=false lib=postgis-3.so
+vector               0.8.1    vector data type and ivfflat and hnsw access...  relocatable=true lib=vector.so
+pg_duckdb            1.1.0    DuckDB Embedded in Postgres                      module_pathname=$libdir/pg_duckdb relocatable=false schema=public lib=...
 ...
-pg_duckdb            1.1.0    DuckDB Embedded in Postgres                      module_pathname=$libdir/pg_duckdb relocatable=false schema=public lib=libduckdb.so, pg_duckdb.so
-pg_mooncake          0.2.0    Real-time analytics on Postgres tables           module_pathname=pg_mooncake relocatable=false requires=pg_duckdb superuser=true lib=pg_mooncake.so
-pg_prewarm           1.2      prewarm relation data                            module_pathname=$libdir/pg_prewarm relocatable=true lib=pg_prewarm.so
-pg_smtp_client       0.2.1    PostgreSQL extension to send email using SMTP    relocatable=false superuser=false schema=smtp_client module_pathname=$libdir/pg_smtp_client lib=pg_smtp_client.so
-...
-Encoding Libs: cyrillic_and_mic, euc2004_sjis2004, euc_cn_and_mic, euc_jp_and_sjis, euc_kr_and_mic, euc_tw_and_big5, latin2_and_win1250, latin_and_mic, utf8_and_big5, utf8_and_cyrillic, utf8_and_euc2004, utf8_and_euc_cn, utf8_and_euc_jp, utf8_and_euc_kr, utf8_and_euc_tw, utf8_and_gb18030, utf8_and_gbk, utf8_and_iso8859, utf8_and_iso8859_1, utf8_and_johab, utf8_and_sjis, utf8_and_sjis2004, utf8_and_uhc, utf8_and_win
-Built-in Libs: dict_snowball, libpqwalreceiver, llvmjit
 ```
 
 

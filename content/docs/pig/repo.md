@@ -9,6 +9,31 @@ categories: [参考]
 
 `pig repo` 命令是一个综合性的软件包仓库管理工具。它提供了添加、移除、创建和管理软件仓库的功能，支持 RPM 系统（RHEL/CentOS/Rocky/Alma）和 Debian 系统（Debian/Ubuntu）。
 
+```bash
+pig repo - Manage Linux APT/YUM Repo
+
+  pig repo list                    # available repo list             (info)
+  pig repo info   [repo|module...] # show repo info                  (info)
+  pig repo status                  # show current repo status        (info)
+  pig repo add    [repo|module...] # add repo and modules            (root)
+  pig repo rm     [repo|module...] # remove repo & modules           (root)
+  pig repo update                  # update repo pkg cache           (root)
+  pig repo create                  # create repo on current system   (root)
+  pig repo boot                    # boot repo from offline package  (root)
+  pig repo cache                   # cache repo as offline package   (root)
+
+Examples:
+  pig repo add -ru                 # add all repo and update cache (brute but effective)
+  pig repo add pigsty -u           # gentle version, only add pigsty repo and update cache
+  pig repo add node pgdg pigsty    # essential repo to install postgres packages
+  pig repo add all                 # all = node + pgdg + pigsty
+  pig repo add all extra           # extra module has non-free and some 3rd repo for certain extensions
+  pig repo update                  # update repo cache
+  pig repo create                  # update local repo /www/pigsty meta
+  pig repo boot                    # extract /tmp/pkg.tgz to /www/pigsty
+  pig repo cache                   # cache /www/pigsty into /tmp/pkg.tgz
+```
+
 | 命令            | 描述              | 备注                |
 |:--------------|:----------------|:------------------|
 | `repo list`   | 打印可用仓库与模块列表     |                   |
@@ -55,13 +80,22 @@ pig repo update                       # 更新系统包缓存
 | `pgsql` | PGDG + Pigsty PG 扩展 | `pigsty-pgsql` + `pgdg` |
 | `pigsty` | Pigsty Infra + PGSQL 仓库 | pigsty-infra, pigsty-pgsql |
 | `pgdg` | PGDG 官方仓库 | pgdg-common, pgdg13-18 |
-| `node` | Linux 系统仓库 | base, updates, extras, epel... |
+| `node` | Linux 系统仓库 | base, updates, extras, epel, baseos, appstream... |
 | `infra` | 基础设施组件仓库 | pigsty-infra, nginx, docker-ce |
-| `beta` | PostgreSQL Beta 版本 | pgdg19-beta, pgdg-beta |
+| `beta` | PostgreSQL 19 Beta 版本 | pgdg19-beta, pgdg-beta |
 | `extra` | PGDG Non-Free 与三方扩展 | pgdg-extras, timescaledb, citus |
 | `groonga` | PGroonga 仓库 | groonga |
 | `mssql` | WiltonDB 仓库 | wiltondb |
 | `percona` | Percona PG + PG_TDE | percona |
+| `llvm` | LLVM 工具链仓库 | llvm |
+| `kube` | Kubernetes 仓库 | kubernetes |
+| `grafana` | Grafana 仓库 | grafana |
+| `haproxy` | HAProxy 仓库 | haproxyd, haproxyu |
+| `redis` | Redis 仓库 | redis |
+| `mongo` | MongoDB 仓库 | mongo |
+| `mysql` | MySQL 仓库 | mysql |
+| `click` | ClickHouse 仓库 | clickhouse |
+| `gitlab` | GitLab 仓库 | gitlab-ce, gitlab-ee |
 {.full-width}
 
 除此之外，pig 还自带了一些其他数据库的 APT/DNF 仓库：`redis`, `kubernetes`, `grafana`, `clickhouse`, `gitlab`, `haproxy`, `mongodb`, `mysql`，在此不再展开。

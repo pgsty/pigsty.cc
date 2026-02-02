@@ -50,10 +50,19 @@ $ pig install -y vector               # 您可以使用扩展名称（vector）�
 
 你可以执行 `pig help <command>` 获取子命令的详细帮助。
 
-- [**pig repo**](/docs/pig/repo/)：管理软件仓库
-- [**pig ext**](/docs/pig/ext/)：管理 PG 扩展
-- [**pig build**](/docs/pig/build/)：设置构建环境
-- [**pig sty**](/docs/pig/sty/)：管理 Pigsty
+**扩展管理**：
+
+- [**pig repo**](/docs/pig/repo/)：管理 APT/YUM 软件仓库
+- [**pig ext**](/docs/pig/ext/)：管理 PostgreSQL 扩展
+- [**pig build**](/docs/pig/build/)：从源码构建扩展
+
+**Pigsty 管理**：
+
+- [**pig sty**](/docs/pig/sty/)：管理 Pigsty 安装
+- [**pig postgres**](/docs/pig/pg/)：管理本地 PostgreSQL 服务
+- [**pig patroni**](/docs/pig/pt/)：管理 Patroni HA 集群
+- [**pig pgbackrest**](/docs/pig/pb/)：管理 pgBackRest 备份
+- [**pig pitr**](/docs/pig/pitr/)：编排式时间点恢复
 
 
 ## 关于

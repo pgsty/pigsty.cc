@@ -32,15 +32,20 @@ Examples:
   pig install pg_duckdb       # 安装指定的 PostgreSQL 扩展
   pig install pgactive -v 18  # 为特定 PG 版本安装扩展
 
-  访问 https://pig.pgsty.com 获取详情
+  访问 https://pgext.cloud 获取详情
 
 PostgreSQL Extension Manager
+  build       构建 Postgres 扩展
   ext         管理 PostgreSQL 扩展 (pgext)
   repo        管理 Linux 软件仓库 (apt/dnf)
-  build       构建 Postgres 扩展
 
 Pigsty Management Commands
   do          运行管理任务
+  patroni     使用 patronictl 管理 Patroni 集群
+  pg_exporter 管理 pg_exporter 与监控指标
+  pgbackrest  管理 pgBackRest 备份与恢复
+  pitr        编排式时间点恢复
+  postgres    管理本地 PostgreSQL 服务器与数据库
   sty         管理 Pigsty 安装
 
 Additional Commands:
@@ -176,4 +181,17 @@ pig pb backup full               # 全量备份
 pig pb restore                   # 恢复到最新
 pig pb restore -t "2025-01-01"   # 恢复到指定时间
 pig pb log tail                  # 实时查看日志
+```
+
+
+## pig pitr
+
+执行编排式时间点恢复（PITR），详情请参考 [`pig pitr`](/docs/pig/pitr/)
+
+```bash
+pig pitr -d                      # 恢复到最新数据
+pig pitr -t "2025-01-01 12:00"   # 恢复到指定时间
+pig pitr -I                      # 恢复到备份一致性点
+pig pitr -d --dry-run            # 显示执行计划
+pig pitr -d -y                   # 跳过确认（自动化）
 ```

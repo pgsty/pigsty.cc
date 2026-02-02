@@ -9,6 +9,28 @@ categories: [参考]
 
 `pig build` 命令是一个强大的工具，简化了从源码构建 PostgreSQL 扩展的整个工作流程。它提供了完整的构建基础设施设置、依赖管理，以及标准和自定义 PostgreSQL 扩展在不同操作系统上的编译环境。
 
+```bash
+pig build - Build Postgres Extension
+
+Environment Setup:
+  pig build spec                   # init build spec and directory (~ext)
+  pig build repo                   # init build repo (=repo set -ru)
+  pig build tool  [mini|full|...]  # init build toolset
+  pig build rust  [-y]             # install Rust toolchain
+  pig build pgrx  [-v <ver>]       # install & init pgrx (0.16.1)
+  pig build proxy [id@host:port ]  # init build proxy (optional)
+
+Package Building:
+  pig build pkg   [ext|pkg...]     # complete pipeline: get + dep + ext
+  pig build get   [ext|pkg...]     # download extension source tarball
+  pig build dep   [ext|pkg...]     # install extension build dependencies
+  pig build ext   [ext|pkg...]     # build extension package
+
+Quick Start:
+  pig build spec                   # setup build spec and directory
+  pig build pkg citus              # build citus extension
+```
+
 | 命令 | 描述 | 备注 |
 |:---|:---|:---|
 | `build spec` | 初始化构建规范仓库 | |
