@@ -60,3 +60,7 @@ bin/*.py
 CLAUDE.md
 AGENTS.md
 prompt.md
+
+
+_bmad-output
+_bmad

@@ -2,182 +2,147 @@
 title: 时间点恢复的实现架构
 linkTitle: 架构
 weight: 212
-description: Pigsty PITR 的实现架构：pgBackRest 工具、备份仓库与执行机制
+description: Pigsty PITR 的实现架构：pgBackRest、备份仓库与执行机制
 icon: fa-solid fa-sitemap
 module: [PGSQL]
 categories: [概念]
 ---
 
-Pigsty 使用 [**pgBackRest**](https://pgbackrest.org/) 作为备份工具，实现 PostgreSQL 的时间点恢复能力。
+Pigsty 使用 [**pgBackRest**](https://pgbackrest.org/) 作为 PostgreSQL 备份与恢复引擎，提供开箱即用的时间点恢复（PITR）能力。
 
-本文介绍 PITR 的实现架构，帮助您理解备份系统的工作方式。
-
-
---------
-
-## pgBackRest 简介
-
-[**pgBackRest**](https://pgbackrest.org/) 是 PostgreSQL 生态中最成熟、功能最强大的备份恢复工具。Pigsty 选择它作为默认备份方案，主要基于以下优势：
-
-### 为什么选择 pgBackRest
-
-| 特性         | pgBackRest              | pg_basebackup | Barman     |
-|:-------------|:------------------------|:--------------|:-----------|
-| 增量备份     | ✅ 原生支持             | ❌ 不支持     | ✅ 支持    |
-| 并行备份恢复 | ✅ 多进程并行           | ❌ 单进程     | ✅ 支持    |
-| 压缩         | ✅ 多种算法             | ✅ gzip/lz4   | ✅ 支持    |
-| 加密         | ✅ AES-256              | ❌ 不支持     | ❌ 不支持  |
-| 多仓库       | ✅ 同时备份到多个仓库   | ❌ 不支持     | ❌ 不支持  |
-| 对象存储     | ✅ S3/MinIO/Azure/GCS   | ❌ 不支持     | ✅ S3      |
-| 块级增量     | ✅ 支持                 | ❌ 不支持     | ❌ 不支持  |
-
-### 核心能力
-
-- **增量备份**：仅备份变更的数据块，大幅减少备份时间与存储空间
-- **并行处理**：多进程并行备份和恢复，充分利用系统资源
-- **透明加密**：AES-256-CBC 加密，保护备份数据安全
-- **多仓库支持**：同时备份到本地和远程，实现多级容灾
-- **自动 WAL 管理**：自动归档和清理 WAL 文件，无需人工干预
-
-### 在 Pigsty 中的集成
-
-Pigsty 对 pgBackRest 进行了开箱即用的集成：
-
-- **默认启用**：所有 PostgreSQL 集群自动配置备份
-- **自动配置**：根据集群名称自动生成 stanza 和仓库配置
-- **封装脚本**：提供 `pg-backup`、`pg-pitr` 等便捷命令
-- **监控集成**：pgbackrest_exporter 导出备份指标到 Prometheus
+本文从架构层面说明：**备份由谁执行、数据流向哪里、仓库如何组织、故障切换后如何保持连续性**。
 
 
 --------
 
-## 核心概念
+## 概览
 
-理解 pgBackRest 的两个核心概念，是掌握备份架构的关键。
+PITR 架构由三条主线构成：**备份执行链路**、**WAL 归档链路**、**恢复执行链路**。
 
-### Stanza（数据库集群标识）
+| 链路       | 入口                                 | 引擎                              | 终点                              |
+|:-----------|:--------------------------------------|:----------------------------------|:----------------------------------|
+| 备份       | `pg-backup` + `pg_crontab`            | `pgbackrest backup`               | 备份仓库 `backup/`                |
+| WAL 归档   | PostgreSQL `archive_command`          | `pgbackrest archive-push`         | 备份仓库 `archive/`               |
+| 恢复       | `pg_pitr` / `pg-pitr` / `pgsql-pitr.yml` | `pgbackrest restore`              | 目标数据目录                      |
+{.full-width}
 
-**Stanza** 是 pgBackRest 中用于标识一个 PostgreSQL 集群的名称。在 Pigsty 中：
-
-- 每个 PostgreSQL 集群对应一个 stanza
-- Stanza 名称 = 集群名称（[`pg_cluster`](/docs/pgsql/param#pg_cluster)）
-- 例如：集群 `pg-meta` 的 stanza 就是 `pg-meta`
-
-Stanza 的作用是在备份仓库中隔离不同集群的数据。一个仓库可以存储多个集群的备份，通过 stanza 加以区分。
-
-```
-备份仓库
-├── pg-meta/          # pg-meta 集群的 stanza
-│   ├── backup/       # 基础备份
-│   └── archive/      # WAL 归档
-├── pg-test/          # pg-test 集群的 stanza
-│   ├── backup/
-│   └── archive/
-└── pg-prod/          # pg-prod 集群的 stanza
-    ├── backup/
-    └── archive/
-```
-
-### Repository（备份仓库）
-
-**Repository** 是存储备份数据和 WAL 归档的位置。Pigsty 支持多种仓库类型：
-
-| 类型       | 说明               | 典型用途               |
-|:-----------|:-------------------|:-----------------------|
-| **local**  | 本地文件系统       | 开发环境、单机部署     |
-| **minio**  | MinIO 对象存储     | 生产环境、多集群共享   |
-| **s3**     | AWS S3 及兼容存储  | 云上部署、异地容灾     |
-
-一个集群可以同时配置多个仓库，实现多级备份策略。
+更多执行细节见 [**备份机制**](/docs/pgsql/backup/mechanism/) 与 [**恢复操作**](/docs/pgsql/backup/restore/)。
 
 
 --------
 
-## 备份架构
+## 组件与职责
 
-### 部署模式
+| 组件                     | 角色       | 描述                                                                 |
+|:-------------------------|:-----------|:---------------------------------------------------------------------|
+| **PostgreSQL**           | 数据源     | 产生数据文件与 WAL 归档流                                             |
+| **pgBackRest**           | 备份引擎   | 执行备份、接收/拉取 WAL、执行恢复                                     |
+| **pg-backup**            | 备份入口   | Pigsty 封装脚本，执行 `pgbackrest backup`                              |
+| **pg_pitr / pg-pitr**    | 恢复入口   | Pigsty 封装参数/脚本，执行 `pgbackrest restore`                        |
+| **备份仓库**             | 存储后端   | 保存 `backup/` 与 `archive/`，支持 `local` / `minio` / `s3` 等仓库      |
+| **pgbackrest_exporter**  | 监控输出   | 导出备份状态指标，默认监听 `9854` 端口                                |
+{.full-width}
 
-pgBackRest 部署在**所有** PostgreSQL 节点上，但实际的备份操作仅在**主库**执行：
+
+--------
+
+## 数据流
 
 ```mermaid
 flowchart TB
     subgraph cluster["PostgreSQL 集群"]
-        direction LR
-        subgraph primary["主库 Primary"]
-            p1["pgBackRest ✓"]
-            p2["执行备份 ✓"]
-            p3["WAL 归档 ✓"]
-        end
-        subgraph replica1["从库 1"]
-            r1["pgBackRest ✓"]
-            r2["不执行备份"]
-            r3["不归档"]
-        end
-        subgraph replica2["从库 2"]
-            s1["pgBackRest ✓"]
-            s2["不执行备份"]
-            s3["不归档"]
-        end
+        direction TB
+        primary["Primary<br/>PostgreSQL"]
+        pb["pgBackRest"]
+        cron["pg-backup / pg_crontab"]
     end
-    subgraph repo["备份仓库"]
-        storage["本地文件系统 / MinIO / S3"]
-    end
-    primary -->|备份 & WAL| repo
+    repo["备份仓库<br/>local / minio / s3"]
+    restore["恢复目标数据目录"]
+
+    cron --> pb
+    primary -->|base backup| pb
+    primary -->|WAL archive| pb
+    pb -->|backup/archive| repo
+    repo -->|restore/archive-get| pb
+    pb -->|restore| restore
 ```
 
-### 故障切换后的备份
+要点：
 
-定时备份任务（crontab）在所有节点上配置，但只有主库才会实际执行备份：
-
-- 备份脚本会检查当前节点角色
-- 仅主库节点执行备份操作
-- 从库节点的备份任务静默跳过
-
-**故障切换后**：
-
-1. 新主库（原从库）自动开始执行备份
-2. 新主库自动接管 WAL 归档
-3. 备份连续性不受影响
-
-这种设计确保了高可用环境下备份的无缝切换。
+- **备份** 由 `pg-backup` 触发，执行 `pgbackrest backup` 将基础备份写入仓库。
+- **归档** 由 PostgreSQL 的 `archive_command` 触发，持续将 WAL 段写入仓库。
+- **恢复** 从仓库读取备份与 WAL，通过 `pgbackrest restore` 重建数据目录。
 
 
 --------
 
-## 仓库类型
+## 部署与角色
 
-### 本地文件系统（local）
+pgBackRest 安装在 **所有 PostgreSQL 节点** 上，但只有 **主库** 实际执行备份：
 
-**默认选项**，将备份存储在主库本地磁盘：
+- `pg-backup` 会自动检测节点角色，从库执行时直接退出。
+- 发生 **故障切换** 后，新主库自动接管备份与归档，备份连续性不受影响。
 
-| 优势                       | 劣势                             |
-|:---------------------------|:---------------------------------|
-| 配置简单，开箱即用         | 无异地容灾能力                   |
-| 恢复速度快（本地 I/O）     | 受限于本地磁盘空间               |
-| 无网络依赖                 | 主机故障时备份可能一起丢失       |
+这使得备份链路与高可用拓扑解耦，避免因主从切换导致备份中断。
 
-**适用场景**：开发测试环境、单机部署、对容灾要求不高的场景。
 
-### 对象存储（MinIO/S3）
+--------
 
-将备份存储在远程对象存储服务：
+## 仓库与隔离
 
-| 优势                         | 劣势                       |
-|:-----------------------------|:---------------------------|
-| 异地容灾，独立于数据库主机   | 恢复速度较慢（网络传输）   |
-| 几乎无限的存储容量           | 需要额外基础设施           |
-| 多集群共享同一仓库           | 依赖网络可用性             |
-| 支持加密和版本控制           | 配置相对复杂               |
+### Stanza（集群标识）
 
-**适用场景**：生产环境、关键业务、需要异地容灾的场景。
+pgBackRest 使用 **stanza** 隔离不同集群的备份，Pigsty 将其映射为 `pg_cluster`：
 
-### 如何选择
+```
+备份仓库
+├── pg-meta/
+│   ├── backup/
+│   └── archive/
+└── pg-test/
+    ├── backup/
+    └── archive/
+```
 
-| 场景               | 推荐仓库                 |
-|:-------------------|:-------------------------|
-| 单机开发环境       | local                    |
-| 生产集群（单机房） | local + minio            |
-| 生产集群（多机房） | minio / s3               |
-| 关键业务           | local + minio（双仓库）  |
+### 仓库类型
 
-详细的仓库配置请参阅 [**备份仓库**](/docs/pgsql/backup/repository/)。
+Pigsty 通过 [`pgbackrest_method`](/docs/pgsql/param#pgbackrest_method) 选择仓库，通过
+[`pgbackrest_repo`](/docs/pgsql/param#pgbackrest_repo) 定义仓库参数：
+
+| 类型        | 特点                       | 适用场景                   |
+|:------------|:---------------------------|:---------------------------|
+| **local**   | 本地磁盘，恢复最快           | 开发/测试、单机部署         |
+| **minio**   | 对象存储，集中式备份         | 生产环境、异地容灾          |
+| **s3**      | 云对象存储                  | 云上部署、跨区域容灾        |
+{.full-width}
+
+生产环境建议使用远程仓库（MinIO/S3），以避免主机故障导致 **数据与备份同时丢失**。
+详见 [**备份仓库**](/docs/pgsql/backup/repository/)。
+
+
+--------
+
+## 配置映射
+
+Pigsty 会将 `pgbackrest_repo` 定义渲染为 `/etc/pgbackrest/pgbackrest.conf`。
+备份日志位于 `/pg/log/pgbackrest/`，恢复过程生成临时配置并记录恢复日志。
+
+更多细节请参阅 [**备份机制**](/docs/pgsql/backup/mechanism/)。
+
+
+--------
+
+## 可观测性
+
+`pgbackrest_exporter` 会导出备份状态指标（最近备份时间、类型、大小等），默认启用，监听端口 `9854`。
+您可以通过 [`pgbackrest_exporter_enabled`](/docs/pgsql/param#pgbackrest_exporter_enabled) 控制该组件。
+
+
+--------
+
+## 相关文档
+
+- [**备份机制**](/docs/pgsql/backup/mechanism/)
+- [**备份策略**](/docs/pgsql/backup/policy/)
+- [**备份仓库**](/docs/pgsql/backup/repository/)
+- [**恢复操作**](/docs/pgsql/backup/restore/)
