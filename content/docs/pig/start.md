@@ -115,6 +115,19 @@ Inferred Region   :  china
 Latest Pigsty Ver :  v4.0.0
 ```
 
+## Agentic / 自动化输出
+
+全局 `-o|--output` 可切换结构化输出，适合脚本与 AI 代理：
+
+```bash
+pig --help -o yaml           # 能力地图（Capability Map）
+pig ext --help -o json       # 命令 Schema
+pig repo list -o yaml        # 结构化结果
+pig pitr -d --plan -o json   # 结构化执行计划
+```
+
+`-o json-pretty` 会输出带缩进的 JSON；未覆盖结构化输出的命令仍保持文本输出。
+
 
 ## 列出扩展
 
@@ -399,4 +412,3 @@ pig repo set --region=china    # 添加中国区域的仓库
 pig install -y pg18            # 安装 PGDG 18 内核包
 pig install -y postgis timescaledb pgvector pg_duckdb
 ```
-

@@ -12,6 +12,14 @@ PIG 包管理器是一个专门用于安装、管理、构建 PostgreSQL 及其�
 PIG 包管理器并非重新发明的土鳖轮子，而是 **依托** （PiggyBack）现有 Linux 发行版包管理器 （`apt`/`dnf`）的一个高级抽象层。
 它屏蔽了不同操作系统，不同芯片架构，以及不同 PG 大版本的管理差异，让您用简单的几行命令，就可以完成 PG 内核与 444+ 扩展的安装与管理。
 
+PIG 同时也是一套 **Agentic Native CLI**：支持全局 `-o|--output` 结构化输出（`yaml` / `json` / `json-pretty`），
+并提供可供 AI/自动化发现能力的 **能力地图** 与 **命令 Schema**。例如：
+
+```bash
+pig --help -o yaml        # 输出能力地图（Capability Map）
+pig ext --help -o json    # 输出命令 Schema（参数/flags/风险/并行/确认等级等）
+```
+
 请注意：对于扩展安装来说，**pig 并非必须组件**，您依然可以使用 apt / dnf 等包管理器直接访问 [**Pigsty PGSQL**](/docs/repo/pgsql/) 仓库。
 
 - [**简介**](/docs/pig/intro/)：为什么需要专用的 PG 包管理器？
@@ -74,4 +82,3 @@ $ pig install -y vector               # 您可以使用扩展名称（vector）�
 - [**PGEXT**](https://github.com/pgsty/pgext)：扩展数据与管理工具
 - [**PIG**](https://github.com/pgsty/pig)：PostgreSQL 包管理器
 - [**PIGSTY**](https://github.com/pgsty/pigsty)：开箱即用的 PostgreSQL 发行版
-

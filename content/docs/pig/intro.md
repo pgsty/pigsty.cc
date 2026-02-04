@@ -23,6 +23,17 @@ Pig 并非重复造轮子，而是充分利用系统原生包管理器（APT、Y
 让你的本地 Postgres 数据库一键进化为全能的多模态数据中台。
 如果说 [Postgres 的未来是无可匹敌的可扩展性](https://medium.com/@fengruohang/postgres-is-eating-the-database-world-157c204dcfc4)，那么 Pig 就是帮你解锁它的神灯。毕竟，从没有人抱怨 "扩展太多"。
 
+## Agentic Native CLI
+
+PIG 从设计上面向 AI 代理与自动化：全局 `-o|--output` 可切换文本与结构化输出（`yaml` / `json` / `json-pretty`），
+并提供命令能力发现所需的 **能力地图** 与 **命令 Schema**。
+
+```bash
+pig --help -o yaml        # 输出能力地图（Capability Map）
+pig ext --help -o json    # 输出命令 Schema
+pig repo list -o yaml     # 结构化结果：success / code / message / data
+```
+
 
 > 《[ANNOUNCE pig: The Postgres Extension Wizard](https://www.postgresql.org/about/news/announce-pig-the-postgres-extension-wizard-2988/)》
 
@@ -62,4 +73,3 @@ PIG 与 Pigsty 扩展仓库支持以下 Linux 发行版和 PostgreSQL 版本组�
 - **EOL** 表示该操作系统已经或即将停止支持，建议升级到更新版本
 - **✅** 表示完整支持，推荐使用
 - PG 版本 13-18 表示支持 PostgreSQL 13、14、15、16、17、18 六个大版本
-

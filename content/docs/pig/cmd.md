@@ -61,11 +61,24 @@ Flags:
   -h, --help               获取帮助信息
   -H, --home string        Pigsty 主目录路径
   -i, --inventory string   配置清单路径
+  -o, --output string      输出格式：text、yaml、json、json-pretty
       --log-level string   日志级别: debug, info, warn, error, fatal, panic (默认 "info")
       --log-path string    日志文件路径，默认为终端输出
 
 使用 "pig [command] --help" 获取命令的详细信息。
 ```
+
+## Agentic Native CLI
+
+`pig` 支持面向 AI/自动化的结构化输出与能力发现：
+
+```bash
+pig --help -o yaml         # 输出能力地图（Capability Map）
+pig ext --help -o json     # 输出命令 Schema（参数/flags/元数据）
+pig ext list -o json       # 结构化结果：success / code / message / data
+```
+
+补充说明：`-o json-pretty` 会输出带缩进的 JSON；当前主要覆盖 `ext` / `repo` / `pitr` 与 `help` 输出，其它命令保持文本输出。
 
 
 
@@ -192,6 +205,7 @@ pig pb log tail                  # 实时查看日志
 pig pitr -d                      # 恢复到最新数据
 pig pitr -t "2025-01-01 12:00"   # 恢复到指定时间
 pig pitr -I                      # 恢复到备份一致性点
-pig pitr -d --dry-run            # 显示执行计划
+pig pitr -d --plan               # 显示执行计划
+pig pitr -d --dry-run            # alias for --plan
 pig pitr -d -y                   # 跳过确认（自动化）
 ```
