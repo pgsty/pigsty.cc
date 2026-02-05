@@ -1,6 +1,6 @@
 ---
 title: 发展规划
-weight: 110
+weight: 121
 description: 未来功能的规划，新功能的发布节奏，待办事项列表。
 icon: fas fa-map
 module: [PIGSTY]

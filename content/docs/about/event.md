@@ -1,6 +1,6 @@
 ---
 title: 活动新闻
-weight: 120
+weight: 102
 description: 与 Pigsty 和 PostgreSQL 相关的活动事件与新闻，以及最新活动预告！
 icon: fa-regular fa-newspaper
 module: [PIGSTY]
@@ -12,68 +12,78 @@ categories: [参考]
 
 ## 最近新闻
 
+- **2026-02-04**: Extension for Everyone 主题入选 PGCon.Dev 2026 演讲！
+  - [**中国厂商首次站上 PGConf.dev 主题演讲台**](https://mp.weixin.qq.com/s/rThnqXp2JXVV9UQncNV3kg) 
+
+- **2026-02-03**: **Pigsty v4.0 正式发布！** 迈入 Agent 时代！
+  - PostgreSQL 官方网站新闻：《[Pigsty v4.0 Released: Ready for the Agent Era](https://www.postgresql.org/about/news/pigsty-v40-released-ready-for-the-agent-era-3228/)》
+  - Victoria 可观测性革命，安全加固，JUICE/VIBE 新模块，容器支持，许可证变更为 Apache-2.0
+  - 发布说明：[v4.0.0](/docs/about/release#v400)
+  - 发布博客：[Pigsty v4.0：进入 AI 时代](https://vonng.com/pigsty/v4.0)
+
+- **2026-01-30**: **PIG v1.0 正式发布！** 与 PGEXT.CLOUD 扩展目录同步上线
+  - PostgreSQL 官方网站新闻：《[PIG v1.0 Released with PGEXT.CLOUD: 444 PG extensions on 14 Linux](https://www.postgresql.org/about/news/pig-v10-released-with-pgextcloud-444-pg-extensions-on-14-linux-3214/)》
+  - PostgreSQL 扩展包管理器 pig v1.0 正式 GA，配合 PGEXT.CLOUD 开放扩展基础设施，提供 444 个扩展
+
+- **2025-12-02**: **Pigsty v3.7.0 发布！** PG18 成为默认版本，437 扩展，EL10/Debian13 支持
+  - 发布说明：[v3.7.0](/docs/about/release#v370)
+
 - **2025-11-29**: Pigsty 荣获 **PostgreSQL Magneto Award**！
   - 第八届 PostgreSQL 生态大会（杭州）
   - 演讲主题："A World-Grade Postgres Meta Distribution"、AI 数据库考量、PostgreSQL 交付最佳实践
 
-- **Pigsty v3.4.1 发布！** OpenHalo 与 OrioleDB 支持，MySQL 兼容性增强，pgAdmin 改进
-  - 发布说明：[v3.4.1](/docs/about/release#v341)
+- **2025-08-15**: **Pigsty v3.6.1 发布！** 例行 PG 小版本更新，PGDG 中国区域镜像
+  - 发布说明：[v3.6.1](/docs/about/release#v361)
 
-- **Pigsty v3.4.0 发布！** 备份增强，自动 Certbot 证书，Ivory 跨平台支持，AGE 扩展，APP 改进
-  - 发布说明：[v3.4.0](/docs/about/release#v340)
+- **2025-08-04**: **Pigsty v3.6.0 发布！** PostgreSQL 元发行版
+  - PostgreSQL 官方网站新闻：《[Pigsty 3.6, the meta-distribution for PostgreSQL](https://www.postgresql.org/about/news/pigsty-36-the-meta-distribution-for-postgresql-3111/)》
+  - pgactive 多主复制，MinIO/ETCD 改进，安装简化，配置梳理
+  - 发布说明：[v3.6.0](/docs/about/release#v360)
 
-- **Pigsty v3.3.0 发布！** 404 扩展，Odoo/Dify/Supabase 应用模板，DocumentDB 支持
+- **2025-06-16**: **Pigsty v3.5.0 发布！** PG18 Beta 支持，421 扩展，监控升级，代码重构
+  - 发布说明：[v3.5.0](/docs/about/release#v350)
+
+- **2025-04-21**: **Pigsty v3.4 发布！** MySQL 兼容性
+  - PostgreSQL 官方网站新闻：《[Pigsty v3.4 Released, PG RDS with MySQL Compatibility](https://www.postgresql.org/about/news/pigsty-v34-released-pg-rds-with-mysql-compatibility-3052/)》
+  - OpenHalo/OrioleDB 支持，备份增强，自动 Certbot 证书，AGE 扩展
+  - 发布说明：[v3.4.1](/docs/about/release#v341) / [v3.4.0](/docs/about/release#v340)
+
+- **2025-03-07**: **Pigsty v3.3.0 发布！** 404 扩展
+  - PostgreSQL 官方网站新闻：《[Pigsty v3.3 Release: with 404 PostgreSQL Extensions](https://www.postgresql.org/about/news/pigsty-v33-release-with-404-postgresql-extensions-3023/)》
+  - Odoo/Dify/Supabase 应用模板，DocumentDB 支持
   - 发布说明：[v3.3.0](/docs/about/release#v330)
 
-- Pigsty 3.2.2 发布！
-- Pigsty 3.2.1 发布！
-- Pigsty 3.2.0 发布！
+- **2025-01**: Pigsty v3.2.x 发布系列（v3.2.0 ~ v3.2.2）
+  - 390 扩展，Omnigres，Mooncake，Citus13/PG17，扩展管理 CLI，Grafana 强化，ARM64 扩展补完
+  - 发布说明：[v3.2.2](/docs/about/release#v322) / [v3.2.1](/docs/about/release#v321) / [v3.2.0](/docs/about/release#v320)
 
 - PostgreSQL 包管理器 pig 发布！
   - [ANNOUNCE pig: The Postgres Extension Wizard](https://www.postgresql.org/about/news/announce-pig-the-postgres-extension-wizard-2988/)
   - [PIG: A New Package Manager for PostgreSQL Extensions](https://postgresweekly.com/issues/583)
 
-- Pigsty 3.1.0 发布，提供完整的 PostgreSQL 17.2 扩展支持
-  - 介绍文章：《[Pigsty v3.1：Supabase自建，PG17上位，MinIO改进，ARM/Ubuntu24支持](/blog/pigsty/v3.1)》
+- **2024-11**: **Pigsty v3.1.0 发布！** PG 17 上位，Supabase 自建，ARM/Ubuntu24 支持
   - PostgreSQL 官方网站新闻：《[Pigsty v3.1 Release: PG17, Duck Extensions, Self-hosting Supabase, ARM & Ubuntu24](https://www.postgresql.org/about/news/pigsty-v31-release-pg17-duck-extensions-self-hosting-supabase-arm-ubuntu24-2967/)》
-  - 发布说明：[v3.1.0](/docs/about/release#v310) 
-  - Postgres Weekly 579 期：https://postgresweekly.com/issues/579
+  - 介绍文章：《[Pigsty v3.1：Supabase自建，PG17上位，MinIO改进，ARM/Ubuntu24支持](/blog/pigsty/v3.1)》
+  - 发布说明：[v3.1.0](/docs/about/release#v310)
 
-- Pigsty 3.0.4 发布! 提供扩展目录与仓库，编译 PG17扩展，自建Supabase流程优化
-  - 发布说明：[v3.0.4](/docs/about/release#v304)
-
-- Pigsty 3.0.3 发布! 提供正式的 PostgreSQL 17 支持，优化 Etcd 运维与监控
-  - 发布说明：[v3.0.3](/docs/about/release#v303)
-
-- Pigsty 3.0.2 发布! 精简安装模式，PolarDB 15 支持，例行问题修复（2024-09-07）
-  - 发布说明：[v3.0.2](/docs/about/release#v302)
-
-- Pigsty 3.0.1 发布！Oracle 兼容性，Patroni 4 支持，例行问题修复 (2024-08-31)
-  - 发布说明：[v3.0.1](/docs/about/release#v301)
-
-- Pigsty 3.0.0 发布！333 个扩展，可替换内核，完整RDS服务！
-  - 发布说明：[v3.0.0](/docs/about/release#v300)
+- **2024-08 ~ 2024-10**: Pigsty v3.0.x 发布系列（v3.0.0 ~ v3.0.4）
+  - PostgreSQL 官方网站新闻：《[Pigsty v3: 336 extensions and MSSQL/Oracle flavor PG kernels!](https://www.postgresql.org/about/news/pigsty-v3-336-extensions-and-mssqloracle-flavor-pg-kernels-2921/)》
+  - 333 个扩展，可替换内核，MSSQL/Oracle/PolarDB 兼容性，PG17 扩展
+  - 发布说明：[v3.0.0](/docs/about/release#v300) ~ [v3.0.4](/docs/about/release#v304)
   - 特性介绍：[Pigsty v3.0.0](/blog/pigsty/v3.0)
 
-- 新闻：Pigsty提供的Yum/APT补充软件仓库，提供254个额外的开箱即用的二进制RPM/DEB扩展！
-  - PostgreSQL 官方网站： [Pigsty Supplementary APT/YUM Repository with 254 additional PostgreSQL Extensions!](https://www.postgresql.org/about/news/pigsty-supplementary-aptyum-repository-with-254-additional-postgresql-extensions-2913/)
+- **2024-08**: Pigsty 补充软件仓库，提供 254 个额外的开箱即用的二进制 RPM/DEB 扩展！
+  - PostgreSQL 官方网站新闻：《[Pigsty Supplementary APT/YUM Repository with 254 additional PostgreSQL Extensions!](https://www.postgresql.org/about/news/pigsty-supplementary-aptyum-repository-with-254-additional-postgresql-extensions-2913/)》
 
-- [PGCon.Dev 2024 参会记！](/blog/pg/pgcondev-2024) 
+- [PGCon.Dev 2024 参会记！](/blog/pg/pgcondev-2024)
 
-- Pigsty v2.7 发布！
-  - PostgreSQL 官方网站： [Pigsty v2.7 Released, free RDS PG with 255 extensions available](https://www.postgresql.org/about/news/pigsty-v27-released-free-rds-pg-with-255-extensions-available-2863/)
-  - Postgres Weekly： [https://postgresweekly.com/issues/556)
+- **2024-05**: **Pigsty v2.7 发布！**
+  - PostgreSQL 官方网站新闻：《[Pigsty v2.7 Released, free RDS PG with 255 extensions available](https://www.postgresql.org/about/news/pigsty-v27-released-free-rds-pg-with-255-extensions-available-2863/)》
   - Pigsty 博客：[Pigsty v2.7：集异璧之大成](/blog/pigsty/v2.7)
 
-- Pigsty v2.6 发布！
-  - PostgreSQL 官方网站：[Pigsty, Battery-included PostgreSQL Distro & Free RDS Alternative, v2.6 released!](https://www.postgresql.org/about/news/pigsty-battery-included-postgresql-distro-free-rds-alternative-v26-released-2816/)
-  - Postgres 星球（X）： [https://twitter.com/PostgreSQL/status/1765323952669290515](https://twitter.com/PostgreSQL/status/1765323952669290515)
-  - Postgres Weekly： [https://postgresweekly.com/issues/545](https://postgresweekly.com/issues/545)
+- **2024-02**: **Pigsty v2.6 发布！**
+  - PostgreSQL 官方网站新闻：《[Pigsty, Battery-included PostgreSQL Distro & Free RDS Alternative, v2.6 released!](https://www.postgresql.org/about/news/pigsty-battery-included-postgresql-distro-free-rds-alternative-v26-released-2816/)》
   - Pigsty 博客：[Pigsty v2.6：PG 踢馆 OLAP](/blog/pigsty/v2.6)
-
-> The name of this project always makes me grin: PIGSTY is actually an acronym, standing for Postgres In Great STYle! It’s a Postgres distribution that includes lots of components and tools out of the box in areas like availability, deployment, and observability. The latest release pushes everything up to Postgres 16.2 standards and introduces new ParadeDB and DuckDB FDW extensions.
-
-> 这个项目的名字总能让我笑开花：PIGSTY 实际上是一个首字母缩略词，代表 Postgres In Great STYle！它是一个 Postgres 发行版，包括了大量的组件和工具，涵盖了可用性、部署和可观测性等领域。最新版本将所有内容推进到了 Postgres 16.2，并引入了新的 ParadeDB 和 DuckDB FDW 扩展。
 
 
 ----------
@@ -84,6 +94,11 @@ categories: [参考]
 
 | 版本                                  |    发布时间    | 摘要                                                         | 地址                                                                                        |
 |:------------------------------------|:----------:|------------------------------------------------------------|-------------------------------------------------------------------------------------------|
+| [v4.0.0](/docs/about/release#v400) | 2026-01-28 | Victoria 可观测性，安全加固，JUICE/VIBE 模块，Apache-2.0   | [v4.0.0](https://github.com/pgsty/pigsty/releases/tag/v4.0.0)                             |
+| [v3.7.0](/docs/about/release#v370) | 2025-12-02 | PG18 成为默认，437 扩展，EL10/Debian13，PGEXT.CLOUD     | [v3.7.0](https://github.com/pgsty/pigsty/releases/tag/v3.7.0)                             |
+| [v3.6.1](/docs/about/release#v361) | 2025-08-15 | 例行 PG 小版本更新，PGDG 中国区域镜像                        | [v3.6.1](https://github.com/pgsty/pigsty/releases/tag/v3.6.1)                             |
+| [v3.6.0](/docs/about/release#v360) | 2025-07-30 | pgactive，MinIO/ETCD 改进，安装简化，配置梳理               | [v3.6.0](https://github.com/pgsty/pigsty/releases/tag/v3.6.0)                             |
+| [v3.5.0](/docs/about/release#v350) | 2025-06-16 | PG18 Beta，421 扩展，监控升级，代码重构                     | [v3.5.0](https://github.com/pgsty/pigsty/releases/tag/v3.5.0)                             |
 | [v3.4.1](/docs/about/release#v341) | 2025-04-05 | OpenHalo，OrioleDB，MySQL兼容性，pgAdmin改进             | [v3.4.1](https://github.com/pgsty/pigsty/releases/tag/v3.4.1)                             |
 | [v3.4.0](/docs/about/release#v340) | 2025-03-30 | 备份增强，自动Certbot证书，Ivory跨平台，AGE扩展            | [v3.4.0](https://github.com/pgsty/pigsty/releases/tag/v3.4.0)                             |
 | [v3.3.0](/docs/about/release#v330) | 2025-02-24 | 404扩展，Odoo/Dify/Supabase应用模板，DocumentDB支持      | [v3.3.0](https://github.com/pgsty/pigsty/releases/tag/v3.3.0)                             |

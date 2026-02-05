@@ -1,6 +1,6 @@
 ---
 title: 亮点特性
-weight: 105
+weight: 101
 description: Pigsty 的价值主张与亮点功能特性。
 icon: fa-solid fa-wand-magic-sparkles
 module: [PIGSTY]
@@ -85,7 +85,7 @@ PostgreSQL 的灵魂在于其丰富的 [**扩展生态**](/blog/pg/pg-eat-db-wor
 插件间可以产生 [**协同效应**](https://pigsty.cc/zh/blog/pg/pg-eat-db-world#极致可扩展性的魔法)，产生 1+1 远大于 2 的效果。
 您可以使用 [**PostGIS**](https://postgis.net/) 处理地理空间数据，使用 [**TimescaleDB**](https://www.timescale.com/) 分析时序/事件流数据，并使用 [**Citus**](https://www.citusdata.com/) 将其原地升级为分布式地理时空数据库；
 您可以用 [**PGVector**](https://github.com/pgvector/pgvector) 存储并搜索AI嵌入，用 [**ParadeDB**](https://www.paradedb.com/) 实现 ES级全文检索，并同时使用精准的 SQL，全文检索，与模糊向量进行混合检索。
-您还可以通过 [**Hydra**](https://www.hydra.so/)、 [**duckdb_fdw**](https://github.com/alitrack/duckdb_fdw)、[**pg_analytics**](https://blog.paradedb.com/pages/introducing_analytics)、[**pg_duckdb**](https://github.com/duckdb/pg_duckdb) 等分析扩展，实现专用 OLAP 数据库/数据湖仓的分析表现。
+您还可以通过 [**pg_duckdb**](https://github.com/duckdb/pg_duckdb)，[**pg_mooncake**](https://github.com/duckdb/pg_mooncake) 等分析扩展，实现专用 OLAP 数据库/数据湖仓的分析表现。
 
 使用 PostgreSQL 单一组件替代 MySQL，Kafka，ElasticSearch，MongoDB，以及大数据分析技术栈已经成为一种最佳实践 —— 单一数据库选型能够显著降低系统复杂度，极大提高研发效能与敏捷性，实现程度惊人的软硬件，研发/运维人力降本增效。
 
@@ -191,7 +191,7 @@ Pigsty 默认启用数据库校验和避免静默数据腐坏，通过从库副�
 Pigsty 正确配置 SELinux 与防火墙配置，并遵循最小权限原则设计操作系统用户组与文件权限，确保系统安全基线符合合规要求。
 而且在 Etcd，MinIO 等附属可选组件上的安全上也毫不妥协，etcd 与 minio 均使用 RBAC 模型与 TLS 加密通信，确保系统整体安全性。
 
-合理配置的系统通过等保三级毫无问题，只要您遵循安全性最佳实践，内网部署并合理配置安全组与防火墙，数据库安全性将不再是您的痛点。
+合理配置的系统通过等保三级/SOC2毫无问题，只要您遵循安全性最佳实践，内网部署并合理配置安全组与防火墙，数据库安全性将不再是您的痛点。
 
 [![pigsty-acl.jpg](/img/pigsty/acl.jpg)](/docs/setup/security)
 
