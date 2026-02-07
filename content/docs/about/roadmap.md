@@ -31,17 +31,9 @@ Pigsty 使用 **main** 主干分支进行开发，请始终使用带有版本号
 
 ## 列入考虑的新特性
 
-- [x] 一个足够好用的命令行管理工具
-- [x] 基础设施组件的 ARM 架构支持
-- [x] 为 PostgreSQL 添加更多的扩展
-- [x] 更多预置的场景化配置模板
-- [x] 将软件仓库与安装下载源完全迁移至 Cloudflare
-- [x] 使用 SealOS 部署并监控高可用 Kubernetes 集群！
-- [x] 使用 VictoriaMetrics 替换 Prometheus 存储时序数据
-- [ ] 监控部署 MySQL 数据库
-- [ ] 监控 Kubernetes 中的数据库
-- [ ] 提供更丰富的 Docker 应用模板
-- [ ] [PGLite](https://github.com/electric-sql/pglite) 浏览器端支持
+- [ ] Agent Native CLI - PIG
+- [ ] DBA Agent - 基本集成
+- [ ] Grafana Dashboard 改进
 
 这里是我们的 [**活跃议题**](https://github.com/pgsty/pigsty/issues) 与 [**路线图**](https://github.com/users/Vonng/projects/2/views/3)。
 
@@ -56,7 +48,8 @@ Pigsty 使用 **main** 主干分支进行开发，请始终使用带有版本号
 
 ### 考虑纳入
 
-- walminer
+- PDU : https://github.com/wublabdubdub/PDU-PostgreSQLDataUnloader
+- walminer https://gitee.com/movead/XLogMiner
 - is_jsonb_valid https://github.com/furstenheim/is_jsonb_valid
 - pg_kafka https://github.com/xstevens/pg_kafka
 - pg_jieba https://github.com/jaiminpan/pg_jieba

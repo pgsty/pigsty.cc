@@ -1,6 +1,6 @@
 ---
 title: 活动新闻
-weight: 102
+weight: 30
 description: 与 Pigsty 和 PostgreSQL 相关的活动事件与新闻，以及最新活动预告！
 icon: fa-regular fa-newspaper
 module: [PIGSTY]

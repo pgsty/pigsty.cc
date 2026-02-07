@@ -1,6 +1,6 @@
 ---
 title: 亮点特性
-weight: 101
+weight: 10
 description: Pigsty 的价值主张与亮点功能特性。
 icon: fa-solid fa-wand-magic-sparkles
 module: [PIGSTY]
@@ -205,10 +205,11 @@ Pigsty 正确配置 SELinux 与防火墙配置，并遵循最小权限原则设�
 
 在各类数据密集型应用中，数据库往往是最为棘手的部分。例如 Gitlab 企业版与社区版的核心区别就是底层 PostgreSQL 数据库的监控与高可用，如果您已经有了足够好的本地 PG RDS，完全可以拒绝为软件自带的土法手造数据库组件买单。
 
-Pigsty 提供了 Docker 模块与大量开箱即用的 Compose 模板。您可以使用 Pigsty 管理的高可用 PostgreSQL （以及 Redis 与 MinIO ）作为后端存储，以无状态的模式一键拉起这些软件：
-Gitlab、Gitea、Wiki.js、NocoDB、Odoo、Jira、Confluence、Habour、Mastodon、Discourse、KeyCloak 等等。如果您的应用需要一个靠谱的 PostgreSQL 数据库， Pigsty 也许是最简单的获取方案。
+Pigsty 提供了 [**Docker 模块**](/docs/docker) 与大量开箱即用的 [**Compose 模板**](/docs/app)。您可以使用 Pigsty 管理的高可用 PostgreSQL （以及 Redis 与 MinIO ）作为后端存储，以无状态的模式一键拉起这些软件：
+Gitlab、Gitea、Wiki.js、NocoDB、Odoo、Jira、Confluence、Habour、Mastodon、Discourse、KeyCloak、MatterMost 等等。
+如果您的应用需要一个靠谱的 PostgreSQL 数据库， Pigsty 也许是最简单的获取方案。
 
-Pigsty 也提供了与 PostgreSQL 紧密联系的应用开发工具集：PGAdmin4、PGWeb、ByteBase、PostgREST、Kong、以及 EdgeDB、FerretDB、Supabase 这些使用 PostgreSQL 作为存储的"上层数据库"。
+Pigsty 也提供了与 PostgreSQL 紧密联系的应用开发工具集：PGAdmin4、PGWeb、ByteBase、PostgREST、Kong、以及 EdgeDB、FerretDB、[**Supabase**](/docs/app/supabase) 这些使用 PostgreSQL 作为存储的"上层数据库"。
 更奇妙的是，您完全可以基于 Pigsty 内置了的 Grafana 与 Postgres ，以低代码的方式快速搭建起一个交互式的数据应用来，甚至还可以使用 Pigsty 内置的 ECharts 面板创造更有表现力的交互可视化作品。
 
 Pigsty 为您的 AI 应用提供了一个功能强大的运行时，您的 Agent 可以在这个环境中利用 PostgreSQL 与可观测性世界的强大能力，快速构建起一个数据驱动的智能体。
@@ -234,4 +235,42 @@ Pigsty 本身旨在用数据库自动驾驶软件，替代大量无趣的人肉�
 总会有一些的冷门低频疑难杂症需要专家介入处理。这也是为什么我们也提供专业的 [**订阅服务**](/docs/about/service/)，来为有需要的企业级用户使用 PostgreSQL 提供兜底。
 几万块的订阅咨询费不到顶尖 DBA 每年工资的几十分之一，让您彻底免除后顾之忧，把成本真正花在刀刃上。对于社区用户，我们亦 [**用爱发电**](/docs/about/sponsor/)，提供免费的支持与日常答疑。
 
-[![pigsty-price.jpg](/img/pigsty/price.jpg)](/docs/about/cost/)
+[![pigsty-price.jpg](/img/pigsty/price.jpg)](/docs/about/compare/cost/)
+
+{{< echarts height="560px" >}}
+```js
+var fmtn = function(n) { return Number(n || 0).toLocaleString("zh-CN"); };
+var yfmt = function(v) { return fmtn(v); };
+var ttfmt = function(params) {
+  if (!params || !params.length) return '';
+  return ['<b>CPU: ' + params[0].axisValue + '</b>']
+    .concat(params.map(function(p) { return p.marker + ' ' + p.seriesName + ': ' + fmtn(p.value); }))
+    .join('<br/>');
+};
+```
+```yaml
+tooltip: { trigger: axis, formatter: $fn:ttfmt }
+legend: { top: 4, itemGap: 16, data: [Oracle, 开源PG, 云数据库, Pigsty 云服务器, Pigsty 本地部署] }
+grid: { left: 96, right: 36, bottom: 70, top: 50 }
+xAxis:
+  type: category
+  name: CPU 核心数
+  nameLocation: middle
+  nameGap: 36
+  boundaryGap: false
+  data: [2, 4, 8, 12, 16, 24, 32, 52, 64, 104, 128, 196, 256, 384, 512]
+yAxis:
+  type: log
+  logBase: 10
+  min: 10
+  name: 月成本（元）
+  axisLabel: { formatter: $fn:yfmt }
+  splitLine: { show: true, lineStyle: { type: dashed, opacity: 0.5 } }
+series:
+  - { name: Oracle, type: line, symbolSize: 7, lineStyle: { width: 3 }, itemStyle: { color: "#d62728" }, data: [45000, 65000, 105000, 145000, 185000, 265000, 345000, 545000, 665000, 1065000, 1305000, 1985000, 2585000, 3865000, 5145000] }
+  - { name: 云数据库, type: line, symbolSize: 6, lineStyle: { width: 2 }, itemStyle: { color: "#ff7f0e" }, data: [800, 1600, 3200, 4800, 6400, 9600, 12800, 20800, 25600, 41600, 51200, 78400, 102400, 153600, 204800] }
+  - { name: Pigsty 云服务器, type: line, symbolSize: 6, lineStyle: { width: 2 }, itemStyle: { color: "#2ca02c" }, data: [360, 720, 1440, 2160, 2880, 4320, 5760, 9360, 11520, 18720, 23040, 35280, 46080, 69120, 92160] }
+  - { name: Pigsty 本地部署, type: line, symbolSize: 6, lineStyle: { width: 2 }, itemStyle: { color: "#9467bd" }, data: [38, 76, 152, 228, 304, 456, 608, 988, 1216, 1976, 2432, 3724, 4864, 7296, 9728] }
+```
+{{< /echarts >}}
+

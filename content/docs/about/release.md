@@ -64,6 +64,96 @@ Pigsty 当前的最新稳定版本为 [**v4.0.0**](#v400)。
 |     v0.0.1      | 2019-05-15 | 概念原型                                                    |   [v0.0.1](https://github.com/Vonng/pg/commit/fa2ade31f8e81093eeba9d966c20120054f0646b)   |
 {.full-width}
 
+
+------
+
+## v4.0.1 (beta)
+
+**亮点特性**
+
+- EL 默认小版本更新至 EL 9.7 / EL 10.1
+- 集中修复 PGSQL / PGCAT Grafana 看板可用性问题：动态数据源 $dsn、schema 级跳转、数据库 Age 指标等。
+- 新增 Mattermost 一键应用模板，支持数据库、目录、门户与可选 PGFS/JuiceFS 方案。
+- 重构 infra-rm 卸载逻辑，新增 deregister 分段清理能力，可回收 Victoria targets、Grafana datasource、Vector 日志配置。
+- 优化 PostgreSQL 默认 autovacuum 阈值，减少小表高频 vacuum/analyze。
+- 修复 FD 上限链路，新增 fs.nr_open=8M 并统一服务 LimitNOFILE=8M，避免 systemd/setrlimit 导致启动失败。
+- 调整 Vibe 默认体验：Jupyter 默认关闭，Claude Code 改由 npm 包统一安装管理。
+
+**版本更新**
+
+- pig v1.1.0 : Agentic CLI
+- timescaledb 2.25.0
+- pg_search 0.20.10
+- pgmq 1.1.0
+- pg_track_optimizaer 0.9.1
+- pljs 1.0.5
+- pg_textsearch 0.5.0
+
+**API变化**
+
+- io_method / io_workers 的模板生效条件从 pg_version >= 17 更正为 pg_version >= 18。
+- autovacuum_vacuum_threshold 在 oltp/crit/tiny 从 50 提升到 500，在 olap 提升到 1000。
+- autovacuum_analyze_threshold 在 oltp/crit/tiny 从 50 提升到 250，在 olap 提升到 500。
+- Node tuned 模板新增 fs.nr_open=8388608，并统一 fs.file-max / fs.nr_open / LimitNOFILE 层级关系。
+- postgres、patroni、minio 的 systemd LimitNOFILE 从 16777216 调整为 8388608。
+- bin/validate 新增 `pg_databases[*].parameters` 与 `pg_hba_rules[*].order` 校验支持。
+- `infra-rm.yml` 新增 deregister、config、env 等分段标签。
+- Vibe 默认 jupyter_enabled=false，npm_packages 默认加入 @anthropic-ai/claude-code、happy-coder。
+- Vibe 默认环境新增 CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1。
+
+**兼容性修复**
+
+- 修复 Redis replicaof 判空逻辑与 systemd 停止行为。
+- 修复 pg_migration 脚本 schema/table/sequence 全限定与标识符 quoting 问题。
+- 修复 pgsql 角色 handler 重启对象与变量使用错误。
+- 修复 blackbox 配置文件名清理项与 pgAdmin pgpass 文件格式。
+- pg_exporter 启动改为非阻断，避免 exporter 启动失败拖慢主流程。
+- VIP 地址解析逻辑简化，未显式 CIDR 时默认掩码 24。
+- MinIO 健康检查重试从 3 提升到 5。
+- 节点主机名设置改用 hostname 模块，替代 shell 调用。
+- 修复 app/electric 与 app/pg_exporter 的 .env 格式为标准 KEY=VALUE。
+- 修复 `pigsty.yml` 的 pg_crontab 语法错误。
+- 更新 ETCD 文档，明确默认 TLS 与可选 mTLS 的语义差异。
+
+**提交清单（v4.0.0..HEAD，共 21，2026-02-02 ~ 2026-02-07）**
+
+```
+c402f0e6d fix: correct io_method/io_workers version guard from PG17 to PG18
+3bf676546 vibe: disable jupyter by default and install claude-code via npm_packages
+613c4efa9 fix: set fs.nr_open in tuned profiles and reduce LimitNOFILE to 8M
+07e499d4d new app conf template matter most
+4cc68ed61 Refine infra removal playbook
+7cfb98f69 fix: app docker .env file format
+9b36b1875 Fix config templates and validation
+318d85e6e Simplify VIP parsing and make pg_exporter non-blocking
+571cd9e70 Use hostname module for nodename
+de98f073c Fix blackbox config filename and pgpass format
+4bff01100 Fix redis replicaof guard and systemd stop
+38445b68d minio: increase health check retries
+c99854969 docs(etcd): clarify TLS vs mTLS
+41229124a fix pgsql roles typo
+e575d17c6 fix pg_migration scripts to use fully qualified identifiers
+ec4207202 fix pgsql-schema broken links
+a237e6c99 tune autovacuum threshold to reduce small table vacuum frequency
+e80754760 fix pgcat-database links to pgcat-table
+0060f5346 fix pgsql-database / pgsql-databases age metric
+43cdf72bc fix pigsty.yml typo
+0d9db7b08 fix: update datasource to $dsn 
+```
+
+**致谢**
+
+- 感谢 [@l2dy](https://github.com/l2dy) 为本项目提出了诸多改进意见与 Issue
+
+**校验和**
+
+```
+本次为 v4.0.0 之后提交汇总（HEAD: c402f0e6d），尚无新的发布归档与校验和。 
+```
+
+
+
+
 ------
 
 ## v4.0.0

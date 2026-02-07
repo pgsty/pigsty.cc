@@ -19,6 +19,7 @@ categories: [参考]
 | [**`DOCKER`**](/docs/docker) |           **`docker`**           | `9323`  | [**`docker_exporter_port`**](/docs/docker/param#docker_exporter_port)        | ⚠️ 按需启用 |
 |  [**`INFRA`**](/docs/infra)  |           **`nginx`**            |  `80`   | [**`nginx_port`**](/docs/infra/param#nginx_port)                             | ✅ 默认启用  |
 |  [**`INFRA`**](/docs/infra)  |           **`nginx`**            |  `443`  | [**`nginx_ssl_port`**](/docs/infra/param#nginx_ssl_port)                     | ✅ 默认启用  |
+|  [**`INFRA`**](/docs/infra)  |      **`nginx_exporter`**        | `9113`  | [**`nginx_exporter_port`**](/docs/infra/param#nginx_exporter_port)           | ✅ 默认启用  |
 |  [**`INFRA`**](/docs/infra)  |          **`grafana`**           | `3000`  | [**`grafana_port`**](/docs/infra/param#grafana_port)                         | ✅ 默认启用  |
 |  [**`INFRA`**](/docs/infra)  |      **`victoriaMetrics`**       | `8428`  | [**`vmetrics_port`**](/docs/infra/param#vmetrics_port)                       | ✅ 默认启用  |
 |  [**`INFRA`**](/docs/infra)  |        **`victoriaLogs`**        | `9428`  | [**`vlogs_port`**](/docs/infra/param#vlogs_port)                             | ✅ 默认启用  |
@@ -34,7 +35,10 @@ categories: [参考]
 |  [**`REDIS`**](/docs/redis)  |           **`redis`**            | `6379`  | [**`redis_port`**](/docs/redis/param#redis_port)                             | ⚠️ 按需启用 |
 |  [**`REDIS`**](/docs/redis)  |       **`redis_exporter`**       | `9121`  | [**`redis_exporter_port`**](/docs/redis/param#redis_exporter_port)           | ⚠️ 按需启用 |
 | [**`FERRET`**](/docs/ferret) |          **`ferretdb`**          | `27017` | [**`mongo_port`**](/docs/ferret/param#mongo_port)                            | ⚠️ 按需启用 |
+| [**`FERRET`**](/docs/ferret) |      **`ferretdb (TLS)`**        | `27018` | [**`mongo_ssl_port`**](/docs/ferret/param#mongo_ssl_port)                    | ⚠️ 按需启用 |
 | [**`FERRET`**](/docs/ferret) |       **`mongo_exporter`**       | `9216`  | [**`mongo_exporter_port`**](/docs/ferret/param#mongo_exporter_port)          | ✅ 默认启用  |
+|   [**`VIBE`**](/docs/vibe)   |         **`code-server`**        | `8443`  | [**`code_port`**](/docs/vibe/param#code_port)                                | ⚠️ 按需启用 |
+|   [**`VIBE`**](/docs/vibe)   |          **`jupyterlab`**        | `8888`  | [**`jupyter_port`**](/docs/vibe/param#jupyter_port)                          | ⚠️ 按需启用 |
 |  [**`PGSQL`**](/docs/pgsql)  |          **`postgres`**          | `5432`  | [**`pg_port`**](/docs/pgsql/param#pg_port)                                   | ✅ 默认启用  |
 |  [**`PGSQL`**](/docs/pgsql)  |         **`pgbouncer`**          | `6432`  | [**`pgbouncer_port`**](/docs/pgsql/param#pgbouncer_port)                     | ✅ 默认启用  |
 |  [**`PGSQL`**](/docs/pgsql)  |          **`patroni`**           | `8008`  | [**`patroni_port`**](/docs/pgsql/param#patroni_port)                         | ✅ 默认启用  |
@@ -49,3 +53,16 @@ categories: [参考]
 {.full-width}
 
 
+## 公网开放端口建议
+
+如果您使用防火墙 [**`zone`**](/docs/node/param#node_firewall_mode) 模式，建议通过 [**`node_firewall_public_port`**](/docs/node/param#node_firewall_public_port) 仅开放最小必要端口：
+
+- 最小管理面：`22, 80, 443`（推荐）
+- 需要公网直连数据库：额外开放 `5432`
+
+不建议直接对公网开放：`etcd`（`2379/2380`）、`patroni`（`8008`）、各类 exporter（`9xxx`）、`minio`（`9000/9001`）、`redis`（`6379`）、`ferretdb`（`27017/27018`）等内部组件端口。
+
+```yaml
+node_firewall_mode: zone
+node_firewall_public_port: [22, 80, 443, 5432]
+```

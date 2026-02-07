@@ -1,6 +1,6 @@
 ---
 title: 历史沿革
-weight: 103
+weight: 20
 description: Pigsty 项目的由来与动机，过去发展的历史，未来的目标与愿景。
 icon: fa-solid fa-clock-rotate-left
 module: [PIGSTY]

@@ -1,59 +1,72 @@
 ---
 title: 剧本列表
 weight: 480
-description: Pigsty 提供了一系列 Ansible 剧本用于自动化部署与管理各个模块，本页面提供了所有剧本的导航与汇总。
+description: Pigsty v4.0 预置 Ansible 剧本导航与执行要点
 icon: fa-solid fa-scroll
 categories: [参考]
 ---
 
-## 模块导航
+本文汇总 Pigsty v4.0 各模块剧本入口与执行要点，详细任务标签请进入对应模块 `playbook` 文档。
 
-每个模块均包含若干预置剧本，以下表格列出了各模块及其包含的剧本数量与说明：
+## 模块剧本导航
 
-|                  模块                   | 数量 | 说明                |
-|:-------------------------------------:|:--:|-------------------|
-|  [**`INFRA`**](/docs/infra/playbook)  | 5  | 基础设施模块剧本          |
-|   [**`NODE`**](/docs/node/playbook)   | 2  | 节点管理模块剧本          |
-|   [**`ETCD`**](/docs/etcd/playbook)   | 2  | ETCD 集群管理剧本       |
-|  [**`PGSQL`**](/docs/pgsql/playbook)  | 7  | PostgreSQL 集群管理剧本 |
-|  [**`REDIS`**](/docs/redis/playbook)  | 2  | Redis 集群管理剧本      |
-|  [**`MINIO`**](/docs/minio/playbook)  | 2  | MinIO 对象存储管理剧本    |
-| [**`FERRET`**](/docs/ferret/playbook) | 1  | FerretDB 管理剧本     |
-| [**`DOCKER`**](/docs/docker/playbook) | 2  | Docker 与应用管理剧本    |
-{.stretch-last}
+| 模块                                    | 数量 | 剧本                                                                                                                              |
+|:--------------------------------------|:--:|:--------------------------------------------------------------------------------------------------------------------------------|
+| [**`INFRA`**](/docs/infra/playbook)   | 3  | `deploy.yml` `infra.yml` `infra-rm.yml`                                                                                         |
+| [**`NODE`**](/docs/node/playbook)     | 2  | `node.yml` `node-rm.yml`                                                                                                        |
+| [**`ETCD`**](/docs/etcd/playbook)     | 2  | `etcd.yml` `etcd-rm.yml`                                                                                                        |
+| [**`PGSQL`**](/docs/pgsql/playbook)   | 7  | `pgsql.yml` `pgsql-rm.yml` <br> `pgsql-user.yml` `pgsql-db.yml` <br> `pgsql-monitor.yml` `pgsql-migration.yml` `pgsql-pitr.yml` |
+| [**`REDIS`**](/docs/redis/playbook)   | 2  | `redis.yml` `redis-rm.yml`                                                                                                      |
+| [**`MINIO`**](/docs/minio/playbook)   | 2  | `minio.yml` `minio-rm.yml`                                                                                                      |
+| [**`FERRET`**](/docs/ferret/playbook) | 1  | `mongo.yml`                                                                                                                     |
+| [**`DOCKER`**](/docs/docker/playbook) | 1  | `docker.yml`                                                                                                                    |
+| [**`JUICE`**](/docs/juice/playbook)   | 1  | `juice.yml`                                                                                                                     |
+| [**`VIBE`**](/docs/vibe/playbook)     | 1  | `vibe.yml`                                                                                                                      |
+{.full-width}
 
-----------------
+--------
 
-## 剧本汇总
+## 剧本总表
 
-以下表格列出了 Pigsty 中所有可用的预置剧本:
+| 剧本                                                                   |    模块    | 主要用途                                         |
+|:---------------------------------------------------------------------|:--------:|:---------------------------------------------|
+| [**`deploy.yml`**](/docs/infra/playbook#deployyml)                   | `INFRA`  | 一次性部署核心链路（Infra/Node/Etcd/PGSQL，按配置启用 MinIO） |
+| [**`infra.yml`**](/docs/infra/playbook#infrayml)                     | `INFRA`  | 初始化基础设施节点                                    |
+| [**`infra-rm.yml`**](/docs/infra/playbook#infra-rmyml)               | `INFRA`  | 移除基础设施组件                                     |
+| [**`node.yml`**](/docs/node/playbook#nodeyml)                        |  `NODE`  | 节点纳管与基线配置                                    |
+| [**`node-rm.yml`**](/docs/node/playbook#node-rmyml)                  |  `NODE`  | 节点去纳管                                        |
+| [**`etcd.yml`**](/docs/etcd/playbook#etcdyml)                        |  `ETCD`  | ETCD 安装/扩容                                   |
+| [**`etcd-rm.yml`**](/docs/etcd/playbook#etcd-rmyml)                  |  `ETCD`  | ETCD 移除/缩容                                   |
+| [**`pgsql.yml`**](/docs/pgsql/playbook#pgsqlyml)                     | `PGSQL`  | 初始化 PostgreSQL 集群或新增实例                       |
+| [**`pgsql-rm.yml`**](/docs/pgsql/playbook#pgsql-rmyml)               | `PGSQL`  | 移除 PostgreSQL 集群/实例                          |
+| [**`pgsql-user.yml`**](/docs/pgsql/playbook#pgsql-useryml)           | `PGSQL`  | 增加业务用户                                       |
+| [**`pgsql-db.yml`**](/docs/pgsql/playbook#pgsql-dbyml)               | `PGSQL`  | 增加业务数据库                                      |
+| [**`pgsql-monitor.yml`**](/docs/pgsql/playbook#pgsql-monitoryml)     | `PGSQL`  | 纳管远程 PostgreSQL 监控                           |
+| [**`pgsql-migration.yml`**](/docs/pgsql/playbook#pgsql-migrationyml) | `PGSQL`  | 生成迁移手册与脚本                                    |
+| [**`pgsql-pitr.yml`**](/docs/pgsql/playbook#pgsql-pitryml)           | `PGSQL`  | 时间点恢复（PITR）                                  |
+| [**`redis.yml`**](/docs/redis/playbook#redisyml)                     | `REDIS`  | Redis 部署                                     |
+| [**`redis-rm.yml`**](/docs/redis/playbook#redis-rmyml)               | `REDIS`  | Redis 移除                                     |
+| [**`minio.yml`**](/docs/minio/playbook#minioyml)                     | `MINIO`  | MinIO 部署                                     |
+| [**`minio-rm.yml`**](/docs/minio/playbook#minio-rmyml)               | `MINIO`  | MinIO 移除                                     |
+| [**`mongo.yml`**](/docs/ferret/playbook#mongoyml)                    | `FERRET` | FerretDB（Mongo API）部署                        |
+| [**`docker.yml`**](/docs/docker/playbook#dockeryml)                  | `DOCKER` | Docker 引擎部署                                  |
+| [**`juice.yml`**](/docs/juice/playbook#juiceyml)                     | `JUICE`  | JuiceFS 实例部署/移除                              |
+| [**`vibe.yml`**](/docs/vibe/playbook#vibeyml)                        |  `VIBE`  | VIBE 开发环境部署                                  |
+{.full-width}
 
-| 剧本                                                                   | 模块                           | 功能                                |
-|----------------------------------------------------------------------|------------------------------|-----------------------------------|
-| [**`deploy.yml`**](/docs/infra/playbook#deployyml)                   | [**`INFRA`**](/docs/infra)   | 在所有节点上一次性完整部署所有组件                 |
-| [**`infra.yml`**](/docs/infra/playbook#infrayml)                     | [**`INFRA`**](/docs/infra)   | 在 infra 节点上初始化 pigsty 基础设施        |
-| [**`infra-rm.yml`**](/docs/infra/playbook#infra-rmyml)               | [**`INFRA`**](/docs/infra)   | 从 infra 节点移除基础设施组件                |
-| [**`cache.yml`**](/docs/infra/playbook#cacheyml)                     | [**`INFRA`**](/docs/infra)   | 从现有仓库创建离线安装包缓存                    |
-| [**`cert.yml`**](/docs/infra/playbook#certyml)                       | [**`INFRA`**](/docs/infra)   | 使用 Pigsty 自签名 CA 签发证书             |
-| [**`node.yml`**](/docs/node/playbook#nodeyml)                        | [**`NODE`**](/docs/node)     | 纳管节点，调整节点到期望状态                    |
-| [**`node-rm.yml`**](/docs/node/playbook#node-rmyml)                  | [**`NODE`**](/docs/node)     | 从 Pigsty 中移除纳管节点                  |
-| [**`etcd.yml`**](/docs/etcd/playbook#etcdyml)                        | [**`ETCD`**](/docs/etcd)     | 安装与配置 Etcd 集群                     |
-| [**`etcd-rm.yml`**](/docs/etcd/playbook#etcd-rmyml)                  | [**`ETCD`**](/docs/etcd)     | 移除 Etcd 集群或成员                     |
-| [**`pgsql.yml`**](/docs/pgsql/playbook#pgsqlyml)                     | [**`PGSQL`**](/docs/pgsql)   | 初始化 PostgreSQL 集群或添加新的从库          |
-| [**`pgsql-rm.yml`**](/docs/pgsql/playbook#pgsql-rmyml)               | [**`PGSQL`**](/docs/pgsql)   | 移除 PostgreSQL 集群，或移除某个实例          |
-| [**`pgsql-user.yml`**](/docs/pgsql/playbook#pgsql-useryml)           | [**`PGSQL`**](/docs/pgsql)   | 在现有的 PostgreSQL 集群中添加新的业务用户       |
-| [**`pgsql-db.yml`**](/docs/pgsql/playbook#pgsql-dbyml)               | [**`PGSQL`**](/docs/pgsql)   | 在现有的 PostgreSQL 集群中添加新的业务数据库      |
-| [**`pgsql-monitor.yml`**](/docs/pgsql/playbook#pgsql-monitoryml)     | [**`PGSQL`**](/docs/pgsql)   | 将远程 PostgreSQL 实例纳入监控中            |
-| [**`pgsql-migration.yml`**](/docs/pgsql/playbook#pgsql-migrationyml) | [**`PGSQL`**](/docs/pgsql)   | 为现有的 PostgreSQL 集群生成迁移手册和脚本       |
-| [**`pgsql-pitr.yml`**](/docs/pgsql/playbook#pgsql-pitryml)           | [**`PGSQL`**](/docs/pgsql)   | 执行 PostgreSQL 时间点恢复 (PITR)        |
-| [**`minio.yml`**](/docs/minio/playbook#minioyml)                     | [**`MINIO`**](/docs/minio)   | 安装 MinIO 集群                       |
-| [**`minio-rm.yml`**](/docs/minio/playbook#minio-rmyml)               | [**`MINIO`**](/docs/minio)   | 移除 MinIO 集群                       |
-| [**`redis.yml`**](/docs/redis/playbook#redisyml)                     | [**`REDIS`**](/docs/redis)   | 初始化 Redis 集群/节点/实例                |
-| [**`redis-rm.yml`**](/docs/redis/playbook#redis-rmyml)               | [**`REDIS`**](/docs/redis)   | 移除 Redis 集群/节点/实例                 |
-| [**`docker.yml`**](/docs/docker/playbook#dockeryml)                  | [**`DOCKER`**](/docs/docker) | 安装 Docker Daemon 与 Docker Compose |
-| [**`app.yml`**](/docs/docker/playbook#appyml)                        | [**`DOCKER`**](/docs/docker) | 部署 Docker Compose 应用模板            |
-| [**`mongo.yml`**](/docs/ferret/playbook#mongoyml)                    | [**`FERRET`**](/docs/ferret) | 在节点上安装 FerretDB                   |
-{.stretch-last}
+--------
+
+## 辅助剧本
+
+以下剧本不归属于特定模块，提供一些辅助功能。
+
+| 剧本                                                                     | 说明                       |
+|:-----------------------------------------------------------------------|:-------------------------|
+| [**`cache.yml`**](https://github.com/pgsty/pigsty/blob/main/cache.yml) | 构建离线安装包缓存                |
+| [**`cert.yml`**](https://github.com/pgsty/pigsty/blob/main/cert.yml)   | 使用 Pigsty CA 签发证书        |
+| [**`app.yml`**](https://github.com/pgsty/pigsty/blob/main/app.yml)     | 使用 Docker Compose 安装应用模板 |
+| [**`slim.yml`**](https://github.com/pgsty/pigsty/blob/main/slim.yml)   | 最小化组件安装场景                |
+
 
 ----------------
 
@@ -73,8 +86,8 @@ categories: [参考]
 
 ```bash
 ./pgsql-rm.yml -l pg-test -e pg_safeguard=false
-./etcd-rm.yml -e etcd_safeguard=false
-./minio-rm.yml -l minio -e minio_safeguard=false
+./etcd-rm.yml  -l etcd    -e etcd_safeguard=false
+./minio-rm.yml -l minio   -e minio_safeguard=false
 ```
 
 
@@ -87,6 +100,9 @@ categories: [参考]
 ./node.yml -l 10.10.10.10         # 限制在特定节点上执行
 ./redis.yml -l redis-test         # 限制在 redis-test 集群上执行
 ```
+
+在大规模部署上批量执行时，建议先在单集群灰度验证，再分批执行到全局。
+
 
 
 ### 幂等性
