@@ -137,7 +137,7 @@ Pigsty 默认使用一个本地静态域名 `i.pigsty` 来访问 WebUI，这是�
 
 Pigsty 运行在 **Linux** 操作系统上，它支持 **14** 种主流 Linux 发行版：[**兼容操作系统列表**](/docs/ref/linux/)
 
-我们推荐使用 **RockyLinux 10.0**、**Debian 13.2** 或 **Ubuntu 24.04.2** 作为默认操作系统选项。
+我们推荐使用 **RockyLinux 10.1**、**Debian 13.2** 或 **Ubuntu 24.04.2** 作为默认操作系统选项。
 
 在 MacOS 和 Windows 上，您可以用各种虚拟机软件或者 Docker systemd 镜像来安装 Pigsty。
 
@@ -246,5 +246,4 @@ cd pigsty; git checkout v4.0.0
 wget https://repo.pigsty.cc/src/pigsty-v4.0.0.tgz
 wget https://repo.pigsty.io/src/pigsty-v4.0.0.tgz
 ```
-
 

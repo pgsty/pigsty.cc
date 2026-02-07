@@ -13,7 +13,7 @@ Pigsty 不使用任何虚拟化容器化技术，直接运行于裸操作系统�
 
 ## 概述
 
-Pigsty 推荐使用的操作系统版本：RockyLinux 10.0、Ubuntu 24.04、Debian 13.1。
+Pigsty 推荐使用的操作系统版本：RockyLinux 10.1、Ubuntu 24.04、Debian 13.1。
 
 | 发行版                    |                 架构                 |                                              系统代码                                               |                       PG18                       |                       PG17                       |                       PG16                       |                       PG15                       |                       PG14                       |                       PG13                       |
 |:-----------------------|:----------------------------------:|:-----------------------------------------------------------------------------------------------:|:------------------------------------------------:|:------------------------------------------------:|:------------------------------------------------:|:------------------------------------------------:|:------------------------------------------------:|:------------------------------------------------:|
@@ -44,9 +44,9 @@ Pigsty 支持 RHEL / Rocky / Alma / Anolis / CentOS 8、9、10 版本。
 | RHEL7 / CentOS7           | <b class="text-danger">aarch64</b> |                                                -                                                |                                                    |                                                    |                                                    |                                                         |                                                         |                                                         |
 {.full-width}
 
-{{% alert title="推荐使用 RockyLinux 10.0 与 9.6" color="success" %}}
+{{% alert title="推荐使用 RockyLinux 10.1 与 9.7" color="success" %}}
 请注意，[PGDG Yum 仓库](https://www.postgresql.org/about/news/postgresql-rpm-repository-now-supports-multiple-rhel-minor-versions-3202/) 从 EL9 / EL10 开始，针对 **EL 小版本** 进行构建，目前支持的小版本为：9.6, 9.7, 10.0, 10.1。
-Pigsty 当前离线安装包基于 RockyLinux 9.6 与 RockyLinux 10.0 构建，不适用于 9.7 / 10.1 系统（OpenSSL 3.2 -> 3.5 跳变）
+建议离线安装包/自建离线仓库与系统 **EL 小版本**（例如 RockyLinux 9.7 / 10.1）保持一致，跨小版本可能因 OpenSSL 等依赖版本跳变导致不可用。
 {{% /alert %}}
 
 {{% alert title="EL8 即将不再支持" color="warning" %}}
@@ -118,7 +118,7 @@ Debian 11 已经于 2024-07 进入 EOL。如需在老旧操作系统上获得扩
 | **系统**         | 镜像                                                                                             |
 |:---------------|:-----------------------------------------------------------------------------------------------|
 | Rocky 8.10     | [`generic/rocky8`](https://portal.cloud.hashicorp.com/vagrant/discover/rocky8)                 |
-| Rocky 9.6      | [`generic/rocky9`](https://portal.cloud.hashicorp.com/vagrant/discover/rocky9)                 |
+| Rocky 9.7      | [`generic/rocky9`](https://portal.cloud.hashicorp.com/vagrant/discover/rocky9)                 |
 | Debian 12.11   | [`generic/debian12`](https://portal.cloud.hashicorp.com/vagrant/discover/debian12)             |
 | Debian 13      | [`generic/debian13`](https://portal.cloud.hashicorp.com/vagrant/discover/debian13)             |
 | Ubuntu 22.04   | [`generic/ubuntu2204`](https://portal.cloud.hashicorp.com/vagrant/discover/ubuntu2204)         |
@@ -135,8 +135,8 @@ Debian 11 已经于 2024-07 进入 EOL。如需在老旧操作系统上获得扩
 | **x86_64**   | 镜像                                             |
 |:-------------|:-----------------------------------------------|
 | Rocky 8.10   | `rockylinux_8_10_x64_20G_alibase_20240923.vhd` |
-| Rocky 9.6    | `rockylinux_9_6_x64_20G_alibase_20250101.vhd`  |
-| Rocky 10.0   | `rockylinux_10_0_x64_20G_alibase_20251120.vhd` |
+| Rocky 9.7    | `rockylinux_9_7_x64_20G_alibase_20260119.vhd`  |
+| Rocky 10.1   | `rockylinux_10_1_x64_20G_alibase_20260119.vhd` |
 | Ubuntu 22.04 | `ubuntu_22_04_x64_20G_alibase_20240926.vhd`    |
 | Ubuntu 24.04 | `ubuntu_24_04_x64_20G_alibase_20240923.vhd`    |
 | Debian 12.11 | `debian_12_11_x64_20G_alibase_20241201.vhd`    |
@@ -147,8 +147,8 @@ Debian 11 已经于 2024-07 进入 EOL。如需在老旧操作系统上获得扩
 | **aarch64**  | 镜像                                               |
 |:-------------|:-------------------------------------------------|
 | Rocky 8.10   | `rockylinux_8_10_arm64_20G_alibase_20251120.vhd` |
-| Rocky 9.6    | `rockylinux_9_6_arm64_20G_alibase_20251120.vhd`  |
-| Rocky 10.0   | `rockylinux_10_0_arm64_20G_alibase_20251120.vhd` |
+| Rocky 9.7    | `rockylinux_9_7_arm64_20G_alibase_20260119.vhd`  |
+| Rocky 10.1   | `rockylinux_10_1_arm64_20G_alibase_20260119.vhd` |
 | Ubuntu 22.04 | `ubuntu_22_04_arm64_20G_alibase_20251126.vhd`    |
 | Ubuntu 24.04 | `ubuntu_24_04_arm64_20G_alibase_20251126.vhd`    |
 | Debian 12.11 | `debian_12_11_arm64_20G_alibase_20250825.vhd`    |

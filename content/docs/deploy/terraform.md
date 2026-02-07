@@ -165,8 +165,8 @@ export ALICLOUD_REGION="cn-shanghai"
 |--------|------|----------------|-----------------|
 | CentOS 7.9 | `el7` | `centos_7_9_x64` | - |
 | Rocky 8.10 | `el8` | `rockylinux_8_10_x64` | `rockylinux_8_10_arm64` |
-| Rocky 9.6 | `el9` | `rockylinux_9_6_x64` | `rockylinux_9_6_arm64` |
-| Rocky 10.0 | `el10` | `rockylinux_10_0_x64` | `rockylinux_10_0_arm64` |
+| Rocky 9.7 | `el9` | `rockylinux_9_7_x64` | `rockylinux_9_7_arm64` |
+| Rocky 10.1 | `el10` | `rockylinux_10_1_x64` | `rockylinux_10_1_arm64` |
 | Debian 11.11 | `d11` | `debian_11_11_x64` | - |
 | Debian 12.11 | `d12` | `debian_12_11_x64` | `debian_12_11_arm64` |
 | Debian 13.2 | `d13` | `debian_13_2_x64` | `debian_13_2_arm64` |
@@ -283,4 +283,3 @@ ssh root@<public_ip>
 
 您也可以使用 `./ssh` 或 `make ssh` 将 SSH 别名写入配置文件，然后使用 `ssh pg-meta` 登录。
 {{% /alert %}}
-
