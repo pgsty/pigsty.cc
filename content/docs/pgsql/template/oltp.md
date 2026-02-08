@@ -36,7 +36,7 @@ OLTP 模板适用于以下场景：
 
 ## 使用方法
 
-[**`oltp.yml`**](oltp) 是默认模板，无需显式指定：
+[**`oltp.yml`**](/docs/pgsql/template/oltp/) 是默认模板，无需显式指定：
 
 ```yaml
 pg-oltp:
@@ -109,8 +109,8 @@ max_parallel_maintenance_workers: 33% × cpu (最小2)
 ```yaml
 parallel_setup_cost: 2000      # 默认值 1000 的两倍
 parallel_tuple_cost: 0.2       # 默认值 0.1 的两倍
-min_parallel_table_scan_size: 16MB   # 默认值 8MB 的两倍
-min_parallel_index_scan_size: 1024   # 默认值 512 的两倍
+min_parallel_table_scan_size: 32MB   # 默认值 8MB 的四倍，倾向于不使用并行扫描
+min_parallel_index_scan_size: 2MB    # 默认值 512kB 的四倍，倾向于不使用并行扫描
 ```
 
 ### WAL 配置
@@ -201,7 +201,7 @@ pg_stat_statements.track_planning: off
 
 ## 与其他模板的对比
 
-| 特性 | [**OLTP**](oltp) | [**OLAP**](olap) | [**CRIT**](crit) |
+| 特性 | [**OLTP**](/docs/pgsql/template/oltp/) | [**OLAP**](/docs/pgsql/template/olap/) | [**CRIT**](/docs/pgsql/template/crit/) |
 |:-----|:-----|:-----|:-----|
 | max_connections | 500-1000 | 500 | 500-1000 |
 | work_mem | 64MB-1GB | 64MB-8GB | 64MB-1GB |
@@ -269,9 +269,9 @@ pg-oltp:
 
 - [**`pg_conf`**](/docs/pgsql/param#pg_conf)：PostgreSQL 配置模板选择参数
 - [**`node_tune`**](/docs/node/param#node_tune)：操作系统调优模板，应与 `pg_conf` 配套
-- [**OLAP 模板**](olap)：分析处理模板对比
-- [**CRIT 模板**](crit)：关键业务模板对比
-- [**TINY 模板**](tiny)：微型实例模板对比
+- [**OLAP 模板**](/docs/pgsql/template/olap/)：分析处理模板对比
+- [**CRIT 模板**](/docs/pgsql/template/crit/)：关键业务模板对比
+- [**TINY 模板**](/docs/pgsql/template/tiny/)：微型实例模板对比
 - [集群配置](/docs/pgsql/config/cluster)：PostgreSQL 集群类型配置
 - [高可用](/docs/concept/ha)：高可用架构设计
 

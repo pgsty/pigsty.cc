@@ -101,8 +101,8 @@ OLTP 和 CRIT 模板都额外设置了以下参数，将并行查询的 Cost x 2
 ```yaml
 parallel_setup_cost: 2000           # double from 100 to increase parallel cost
 parallel_tuple_cost: 0.2            # double from 0.1 to increase parallel cost
-min_parallel_table_scan_size: 16MB  # double from 8MB to increase parallel cost
-min_parallel_index_scan_size: 1024  # double from 512 to increase parallel cost
+min_parallel_table_scan_size: 32MB  # 4x default 8MB, prefer non-parallel scan
+min_parallel_index_scan_size: 2MB   # 4x default 512kB, prefer non-parallel scan
 ```
 
 请注意  `max_worker_processes` 参数的调整必须在重启后才能生效。此外，当从库的本参数配置值高于主库时，从库将无法启动。

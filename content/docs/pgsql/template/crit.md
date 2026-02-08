@@ -93,8 +93,8 @@ max_parallel_workers_per_gather: 0   # 禁用并行查询
 ```yaml
 parallel_setup_cost: 2000
 parallel_tuple_cost: 0.2
-min_parallel_table_scan_size: 16MB
-min_parallel_index_scan_size: 1024
+min_parallel_table_scan_size: 32MB
+min_parallel_index_scan_size: 2MB
 ```
 
 **原因**：并行查询可能导致查询延迟不稳定，对于延迟敏感的金融交易场景，稳定可预测的性能更为重要。
@@ -202,7 +202,7 @@ shared_preload_libraries: '$libdir/passwordcheck, pg_stat_statements, auto_expla
 
 ## 与 OLTP 模板的主要差异
 
-| 参数 | [**CRIT**](crit) | [**OLTP**](oltp) | 差异原因 |
+| 参数 | [**CRIT**](/docs/pgsql/template/crit/) | [**OLTP**](/docs/pgsql/template/oltp/) | 差异原因 |
 |:-----|:-----|:-----|:---------|
 | synchronous_mode | **强制 true** | 取决于 pg_rpo | 零数据丢失 |
 | data-checksums | **强制启用** | 可选 | 数据完整性 |
@@ -342,9 +342,9 @@ pg_parameters:
 - [**`pg_conf`**](/docs/pgsql/param#pg_conf)：PostgreSQL 配置模板选择参数
 - [**`node_tune`**](/docs/node/param#node_tune)：操作系统调优模板，应与 `pg_conf` 配套
 - [**`pg_rpo`**](/docs/pgsql/param#pg_rpo)：恢复点目标参数
-- [**OLTP 模板**](oltp)：事务处理模板对比
-- [**OLAP 模板**](olap)：分析处理模板对比
-- [**TINY 模板**](tiny)：微型实例模板对比
+- [**OLTP 模板**](/docs/pgsql/template/oltp/)：事务处理模板对比
+- [**OLAP 模板**](/docs/pgsql/template/olap/)：分析处理模板对比
+- [**TINY 模板**](/docs/pgsql/template/tiny/)：微型实例模板对比
 - [同步备库](/docs/pgsql/config/cluster#同步备库)：同步复制配置
 - [法定人数提交](/docs/pgsql/config/cluster#法定人数提交)：更高一致性级别
 
