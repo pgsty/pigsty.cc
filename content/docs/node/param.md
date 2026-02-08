@@ -205,7 +205,7 @@ node_load1{cls="pg-test", ins="pg-test-2", ip="10.10.10.12", job="nodes"}
 node_load1{cls="pg-test", ins="pg-test-3", ip="10.10.10.13", job="nodes"}
 ```
 
-在执行默认的PostgreSQL部署时，因为Pigsty默认采用节点独占1:1部署，因此可以通过 [`node_id_from_pg`](#node_id_from_pg) 参数，将数据库实例的身份参数（ [`pg_cluster`](#pg_cluster) 借用至节点的`ins`与`cls`标签上。
+在执行默认的PostgreSQL部署时，因为Pigsty默认采用节点独占1:1部署，因此可以通过 [`node_id_from_pg`](#node_id_from_pg) 参数，将数据库实例的身份参数（ [`pg_cluster`](/docs/pgsql/param#pg_cluster) 借用至节点的`ins`与`cls`标签上。
 
 |               名称                |    类型    |  层级   | 必要性    | 说明         |
 |:-------------------------------:|:--------:|:-----:|--------|------------|
@@ -421,9 +421,9 @@ node_pip_packages: ''             # pip packages to be installed in uv venv
 
 参数名称： `node_repo_modules`， 类型： `string`， 层次：`C/A`
 
-需要在节点上添加的软件源模块列表，形式同 [`repo_modules`](#repo_modules)。默认值为 `local`，即使用 [`repo_upstream`](#repo_upstream) 中 `local` 所指定的本地软件源。
+需要在节点上添加的软件源模块列表，形式同 [`repo_modules`](/docs/infra/param#repo_modules)。默认值为 `local`，即使用 [`repo_upstream`](/docs/infra/param#repo_upstream) 中 `local` 所指定的本地软件源。
 
-当 Pigsty 纳管节点时，会根据此参数的值来过滤 [`repo_upstream`](#repo_upstream) 中的条目，只有 `module` 字段与此参数值匹配的条目才会被添加到节点的软件源中。
+当 Pigsty 纳管节点时，会根据此参数的值来过滤 [`repo_upstream`](/docs/infra/param#repo_upstream) 中的条目，只有 `module` 字段与此参数值匹配的条目才会被添加到节点的软件源中。
 
 
 
@@ -622,7 +622,7 @@ node_kernel_modules: [ softdog, ip_vs, ip_vs_rr, ip_vs_wrr, ip_vs_sh ]
 
 如果设定了一个非零值，它将被写入 `/etc/sysctl.d/hugepage.conf` 中应用生效；负值将不起作用，高于 90% 节点内存的数字将被限制为节点内存的 90%
 
-如果不为零，它应该略大于 [`pg_shared_buffer_ratio`](#pg_shared_buffer_ratio) 的对应值，这样才能让 PostgreSQL 用上大页。
+如果不为零，它应该略大于 [`pg_shared_buffer_ratio`](/docs/pgsql/param#pg_shared_buffer_ratio) 的对应值，这样才能让 PostgreSQL 用上大页。
 
 
 
@@ -638,7 +638,7 @@ node_kernel_modules: [ softdog, ip_vs, ip_vs_rr, ip_vs_wrr, ip_vs_sh ]
 
 默认值：`0`，这将设置 `vm.nr_hugepages=0` 并完全不使用大页。
 
-本参数应该等于或略大于 [`pg_shared_buffer_ratio`](#pg_shared_buffer_ratio)，如果不为零。
+本参数应该等于或略大于 [`pg_shared_buffer_ratio`](/docs/pgsql/param#pg_shared_buffer_ratio)，如果不为零。
 
 例如，如果您为Postgres共享缓冲区默认分配了25%的内存，您可以将此值设置为 0.27 ~ 0.30，并在初始化后使用 `/pg/bin/pg-tune-hugepage` 精准回收浪费的大页。
 
@@ -1204,7 +1204,7 @@ keepalived exporter 监听端口号，默认为：`9650`。
 
 HAProxy 默认在所有节点上安装启用，并以类似于 Kubernetes NodePort 的方式对外暴露服务。
 
-[`PGSQL`](/docs/pgsql) 模块对外 [服务](pgsql-service) 使用到了 Haproxy。
+[`PGSQL`](/docs/pgsql) 模块对外 [服务](/docs/pgsql/service/) 使用到了 Haproxy。
 
 
 ```yaml

@@ -150,6 +150,6 @@ pgb_default_hba_rules: [...] # 独立规则
 
 ## 接下来
 
-- 👤 [**访问控制**](../ac/)：角色与权限模型
-- 🔐 [**加密通信**](../ca/)：TLS 与证书管理
-- ✅ [**合规清单**](../compliance/)：等保与 SOC2 对照
+- 👤 [**访问控制**](/docs/concept/sec/ac)：角色与权限模型
+- 🔐 [**加密通信**](/docs/concept/sec/ca)：TLS 与证书管理
+- ✅ [**合规清单**](/docs/concept/sec/compliance)：等保与 SOC2 对照

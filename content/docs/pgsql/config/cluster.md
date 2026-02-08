@@ -37,7 +37,7 @@ pg-test:
     pg_cluster: pg-test
 ```
 
-这段配置言简意赅，自我描述，仅由 [**身份参数**](/docs/model/pgsql#身份参数) 构成，请注意 Ansible Group 分组名应当与 [`pg_cluster`](/docs/pgsql/param#pg_cluster) 保持一致。
+这段配置言简意赅，自我描述，仅由 [**身份参数**](/docs/concept/model/pgsql#身份参数) 构成，请注意 Ansible Group 分组名应当与 [`pg_cluster`](/docs/pgsql/param#pg_cluster) 保持一致。
 
 使用以下命令创建该集群：
 
@@ -63,7 +63,7 @@ pg-test:
     pg_cluster: pg-test
 ```
 
-如果整个集群不存在，您可以直接 [创建](/docs/pgsql/admin#创建集群) 这个完整的集群。 如果集群主库已经初始化好了，那么您可以向现有集群 [添加](/docs/pgsql/admin#添加实例) 一个从库：
+如果整个集群不存在，您可以直接 [创建](/docs/pgsql/admin/cluster#创建集群) 这个完整的集群。 如果集群主库已经初始化好了，那么您可以向现有集群 [添加](/docs/pgsql/admin/cluster#扩容集群) 一个从库：
 
 ```bash
 bin/pgsql-add pg-test               # 一次性初始化整个集群
@@ -120,7 +120,7 @@ pg-test:
     pg_conf: crit.yml   # <--- 使用 crit 模板
 ```
 
-要在现有集群上启用同步备库，请 [配置集群](/docs/pgsql/admin#配置集群) 并启用 `synchronous_mode`：
+要在现有集群上启用同步备库，请 [配置集群](/docs/pgsql/admin/cluster#配置集群) 并启用 `synchronous_mode`：
 
 ```bash
 $ pg edit-config pg-test    # 在管理员节点以管理员用户身份运行
@@ -143,7 +143,7 @@ $ pg edit-config pg-test    # 在管理员节点以管理员用户身份运行
 
 法定人数提交（Quorum Commit）提供了比同步备库更强大的控制能力：特别是当您有多个从库时，您可以设定提交成功的标准，实现更高/更低的一致性级别（以及可用性之间的权衡）。
 
-如果想要**最少两个从**库来确认提交，可以通过 Patroni [配置集群](/docs/pgsql/admin#配置集群)，调整参数 [`synchronous_node_count`](https://patroni.readthedocs.io/en/latest/replication_modes.html#synchronous-replication-factor) 并应用生效
+如果想要**最少两个从**库来确认提交，可以通过 Patroni [配置集群](/docs/pgsql/admin/cluster#配置集群)，调整参数 [`synchronous_node_count`](https://patroni.readthedocs.io/en/latest/replication_modes.html#synchronous-replication-factor) 并应用生效
 
 ```yaml
 synchronous_mode: true          # 确保同步提交已经启用
@@ -247,7 +247,7 @@ bin/pgsql-add pg-test2    # 创建备份集群
 
 <details><summary>示例：更改复制上游</summary>
 
-如有必要（例如，上游发生主从切换/故障转移），您可以通过 [配置集群](/docs/pgsql/admin#配置集群) 更改备份集群的复制上游。
+如有必要（例如，上游发生主从切换/故障转移），您可以通过 [配置集群](/docs/pgsql/admin/cluster#配置集群) 更改备份集群的复制上游。
 
 要这样做，只需将`standby_cluster.host`更改为新的上游IP地址并应用。
 
@@ -272,7 +272,7 @@ $ pg edit-config pg-test2
 
 你可以随时将备份集群提升为独立集群，这样该集群就可以独立承载写入请求，并与原集群分叉。
 
-为此，你必须 [配置](/docs/pgsql/admin#配置集群) 该集群并完全擦除`standby_cluster`部分，然后应用。
+为此，你必须 [配置](/docs/pgsql/admin/cluster#配置集群) 该集群并完全擦除`standby_cluster`部分，然后应用。
 
 ```bash
 $ pg edit-config pg-test2
@@ -336,7 +336,7 @@ pg-testdelay:
   vars: { pg_cluster: pg-testdelay }
 ```
 
-你还可以在现有的 [备份集群](#备份集群) 上 [配置](/docs/pgsql/admin#配置集群) 一个"复制延迟"。
+你还可以在现有的 [备份集群](#备份集群) 上 [配置](/docs/pgsql/admin/cluster#配置集群) 一个"复制延迟"。
 
 ```bash
 $ pg edit-config pg-testdelay

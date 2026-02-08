@@ -287,7 +287,7 @@ GRANT SELECT ON ALL TABLES IN SCHEMA pg_catalog TO pg_monitor;
 
 ## 下一步
 
-- [**安装指南**](install)：各平台的详细安装说明
-- [**配置参考**](config)：完整的配置文档
-- [**部署指南**](deploy)：生产部署最佳实践
-- [**API 参考**](api)：完整的 API 端点文档
+- [**安装指南**](/docs/pg_exporter/install/)：各平台的详细安装说明
+- [**配置参考**](/docs/pg_exporter/config/)：完整的配置文档
+- [**部署指南**](/docs/pg_exporter/deploy/)：生产部署最佳实践
+- [**API 参考**](/docs/pg_exporter/api/)：完整的 API 端点文档

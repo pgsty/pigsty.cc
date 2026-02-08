@@ -12,13 +12,13 @@ categories: [任务]
 
 ## 创建集群
 
-要创建一个集群，在配置清单中定义好后，执行 [`minio.yml`](playbook#minioyml) 剧本即可。
+要创建一个集群，在配置清单中定义好后，执行 [`minio.yml`](/docs/minio/playbook#minioyml) 剧本即可。
 
 ```yaml
 minio: { hosts: { 10.10.10.10: { minio_seq: 1 } }, vars: { minio_cluster: minio } }
 ```
 
-例如，上面的配置定义了一个 SNSD [单机单盘](config#单机单盘) MinIO 集群，使用以下命令即可创建该 MinIO 集群：
+例如，上面的配置定义了一个 SNSD [单机单盘](/docs/minio/config#单机单盘) MinIO 集群，使用以下命令即可创建该 MinIO 集群：
 
 ```bash
 ./minio.yml -l minio  # 在 minio 分组上安装 MinIO 模块 
@@ -29,7 +29,7 @@ minio: { hosts: { 10.10.10.10: { minio_seq: 1 } }, vars: { minio_cluster: minio 
 
 ## 销毁集群
 
-要销毁一个集群，执行专用的 [`minio-rm.yml`](playbook#minio-rmyml) 剧本即可：
+要销毁一个集群，执行专用的 [`minio-rm.yml`](/docs/minio/playbook#minio-rmyml) 剧本即可：
 
 ```bash
 ./minio-rm.yml -l minio                   # 移除 MinIO 集群
@@ -58,7 +58,7 @@ minio: { hosts: { 10.10.10.10: { minio_seq: 1 } }, vars: { minio_cluster: minio 
 
 MinIO 无法在节点/磁盘级别上扩容，但可以在存储池（多个节点）层次上进行扩容。
 
-现在假设您有 [这样一个](config#多盘部署) 四节点的 MinIO 集群，希望扩容一倍，新增一个四节点的存储池。
+现在假设您有 [这样一个](/docs/minio/config#多机多盘) 四节点的 MinIO 集群，希望扩容一倍，新增一个四节点的存储池。
 
 ```yaml
 minio:
@@ -100,7 +100,7 @@ minio:
 ```
 
 首先，修改 MinIO 集群定义，新增四台节点，按顺序分配序列号 5 到 8。
-这里的关键一步是修改 [`minio_volumes`](param#minio_volumes) 参数，将新的四个节点指定为一个新的 **存储池**。
+这里的关键一步是修改 [`minio_volumes`](/docs/minio/param#minio_volumes) 参数，将新的四个节点指定为一个新的 **存储池**。
 
 ```yaml
 minio:
@@ -128,13 +128,13 @@ minio:
 ./node.yml -l 10.10.10.14,10.10.10.15,10.10.10.16,10.10.10.17
 ```
 
-第三步，在新节点上，使用 Ansible [剧本](playbook) 安装并准备 MinIO 软件：
+第三步，在新节点上，使用 Ansible [剧本](/docs/minio/playbook/) 安装并准备 MinIO 软件：
 
 ```bash
 ./minio.yml -l 10.10.10.14,10.10.10.15,10.10.10.16,10.10.10.17 -t minio_install
 ```
 
-第四步，在 **整个集群** 上，使用 Ansible [剧本](playbook) 重新配置 MinIO 集群：
+第四步，在 **整个集群** 上，使用 Ansible [剧本](/docs/minio/playbook/) 重新配置 MinIO 集群：
 
 ```bash
 ./minio.yml -l minio -t minio_config

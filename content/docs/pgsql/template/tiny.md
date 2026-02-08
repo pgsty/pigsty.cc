@@ -175,7 +175,7 @@ pg_stat_statements.track_planning: off
 
 ## 与 OLTP 模板的主要差异
 
-| 参数 | [**TINY**](tiny) | [**OLTP**](oltp) | 差异原因 |
+| 参数 | [**TINY**](/docs/pgsql/template/tiny/) | [**OLTP**](/docs/pgsql/template/oltp/) | 差异原因 |
 |:-----|:-----|:-----|:---------|
 | max_connections | **250** | 500-1000 | 减少连接开销 |
 | work_mem 上限 | **256MB** | 1GB | 避免内存溢出 |
@@ -329,7 +329,7 @@ pg-docker:
 
 ## 升级到 OLTP
 
-当您的应用增长，需要更多资源时，可以轻松升级到 [**OLTP 模板**](oltp)：
+当您的应用增长，需要更多资源时，可以轻松升级到 [**OLTP 模板**](/docs/pgsql/template/oltp/)：
 
 1. 升级虚拟机规格（4核 8GB 以上）
 2. 修改集群配置：
@@ -341,7 +341,7 @@ pg-growing:
     node_tune: oltp      # 从 tiny 改为 oltp
 ```
 
-3. [重新配置集群](/docs/pgsql/admin#配置集群) 或重新部署
+3. [重新配置集群](/docs/pgsql/admin/cluster#配置集群) 或重新部署
 
 
 ----------------
@@ -350,8 +350,8 @@ pg-growing:
 
 - [**`pg_conf`**](/docs/pgsql/param#pg_conf)：PostgreSQL 配置模板选择参数
 - [**`node_tune`**](/docs/node/param#node_tune)：操作系统调优模板，应与 `pg_conf` 配套
-- [**OLTP 模板**](oltp)：事务处理模板，4核8GB 以上可升级使用
-- [**OLAP 模板**](olap)：分析处理模板
-- [**CRIT 模板**](crit)：关键业务模板
-- [单机部署](/docs/setup/install#单机部署)：Pigsty 单机安装指南
+- [**OLTP 模板**](/docs/pgsql/template/oltp/)：事务处理模板，4核8GB 以上可升级使用
+- [**OLAP 模板**](/docs/pgsql/template/olap/)：分析处理模板
+- [**CRIT 模板**](/docs/pgsql/template/crit/)：关键业务模板
+- [单机部署](/docs/setup/install#部署)：Pigsty 单机安装指南
 

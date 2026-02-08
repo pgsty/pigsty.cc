@@ -91,7 +91,7 @@ pg-meta:
 
 如果未预加载就尝试创建，会收到错误信息。
 
-需要预加载的常见扩展：`timescaledb`, `citus`, `pg_cron`, `pg_net`, `pgaudit` 等。详见 [配置扩展](config)。
+需要预加载的常见扩展：`timescaledb`, `citus`, `pg_cron`, `pg_net`, `pgaudit` 等。详见 [配置扩展](/docs/pgsql/ext/config/)。
 
 
 --------

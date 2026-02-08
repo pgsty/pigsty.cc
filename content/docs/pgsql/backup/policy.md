@@ -23,7 +23,7 @@ categories: [任务]
 ### 每日全量备份
 
 对于生产数据库，建议从最简单的每日全量备份策略开始。
-这也是 Pigsty 的默认备份策略，通过 [crontab](mechanism#定时备份) 实现。
+这也是 Pigsty 的默认备份策略，通过 [crontab](/docs/pgsql/backup/mechanism#定时备份) 实现。
 
 ```yaml title="每天凌晨1点全量备份"
 node_crontab: [ '00 01 * * * postgres /pg/bin/pg-backup full' ]

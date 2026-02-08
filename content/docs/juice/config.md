@@ -38,8 +38,8 @@ JUICE 模块仅有两个参数：
 
 | 参数 | 类型 | 级别 | 说明 |
 |:-----|:----:|:----:|:-----|
-| [`juice_cache`](param#juice_cache) | `path` | `C` | JuiceFS 共享缓存目录 |
-| [`juice_instances`](param#juice_instances) | `dict` | `I` | JuiceFS 实例字典（必选） |
+| [`juice_cache`](/docs/juice/param#juice_cache) | `path` | `C` | JuiceFS 共享缓存目录 |
+| [`juice_instances`](/docs/juice/param#juice_instances) | `dict` | `I` | JuiceFS 实例字典（必选） |
 {.full-width}
 
 - `juice_cache`：所有实例共享的本地缓存目录，默认 `/data/juice`

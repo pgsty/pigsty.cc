@@ -221,8 +221,8 @@ Pigsty 提供安全增强模板：`conf/ha/safe.yml`。它将常见加固项集�
 
 ## 接下来
 
-- 🔑 [**身份认证**](../auth/)：HBA 规则与密码策略
-- 👤 [**访问控制**](../ac/)：角色系统与权限模型
-- 🔐 [**加密通信**](../ca/)：TLS 与证书管理
-- 🔒 [**数据安全**](../data/)：备份与加密
-- ✅ [**合规清单**](../compliance/)：等保与 SOC2 对照
+- 🔑 [**身份认证**](/docs/concept/sec/auth)：HBA 规则与密码策略
+- 👤 [**访问控制**](/docs/concept/sec/ac)：角色系统与权限模型
+- 🔐 [**加密通信**](/docs/concept/sec/ca)：TLS 与证书管理
+- 🔒 [**数据安全**](/docs/concept/sec/data)：备份与加密
+- ✅ [**合规清单**](/docs/concept/sec/compliance)：等保与 SOC2 对照

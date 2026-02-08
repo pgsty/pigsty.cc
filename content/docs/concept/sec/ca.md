@@ -123,6 +123,6 @@ files/pki/misc/<cn>.crt
 
 ## 接下来
 
-- 🔑 [**身份认证**](../auth/)：HBA 与证书认证
-- 👤 [**访问控制**](../ac/)：角色与权限模型
-- ✅ [**合规清单**](../compliance/)：合规要求与证据准备
+- 🔑 [**身份认证**](/docs/concept/sec/auth)：HBA 与证书认证
+- 👤 [**访问控制**](/docs/concept/sec/ac)：角色与权限模型
+- ✅ [**合规清单**](/docs/concept/sec/compliance)：合规要求与证据准备

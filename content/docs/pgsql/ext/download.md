@@ -85,5 +85,5 @@ Pigsty 仓库只收录 PGDG 仓库中不存在的扩展。一旦某扩展进入 
 - Pigsty YUM: https://repo.pigsty.io/yum/
 - Pigsty APT: https://repo.pigsty.io/apt/
 
-详细的仓库配置请参阅 [扩展仓库](repo)。
+详细的仓库配置请参阅 [扩展仓库](/docs/pgsql/ext/repo/)。
 

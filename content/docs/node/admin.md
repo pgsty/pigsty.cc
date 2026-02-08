@@ -16,7 +16,7 @@ categories: [任务]
 - [添加节点监控](#添加节点监控)
 - [其他常见任务](#其他常见任务)
 
-更多问题请参考 [FAQ：NODE](faq/)
+更多问题请参考 [FAQ：NODE](/docs/node/faq/)
 
 
 ----------------
@@ -75,7 +75,7 @@ node.yml -t node_admin -k -K -e ansible_user=<另一个管理员>   # 为另一�
 
 ## 绑定VIP
 
-您可以在节点集群上绑定一个可选的 L2 VIP，使用 [`vip_enabled`](param/#vip_enabled) 参数。
+您可以在节点集群上绑定一个可选的 L2 VIP，使用 [`vip_enabled`](/docs/node/param#vip_enabled) 参数。
 
 ```yaml
 proxy:
@@ -151,7 +151,7 @@ proxy:
 
 ## 管理 HAProxy 密码
 
-[`haproxy_admin_password`](param/#haproxy_admin_password)（默认 `pigsty`）用于 HAProxy 管理界面认证，渲染到 `/etc/haproxy/haproxy.cfg` 中。
+[`haproxy_admin_password`](/docs/node/param#haproxy_admin_password)（默认 `pigsty`）用于 HAProxy 管理界面认证，渲染到 `/etc/haproxy/haproxy.cfg` 中。
 
 修改密码后，使用以下命令刷新配置（热重载，不中断连接）：
 
@@ -164,7 +164,7 @@ proxy:
 
 ## 防火墙管理
 
-Pigsty 使用 [`node_firewall_mode`](param/#node_firewall_mode) 控制防火墙行为。
+Pigsty 使用 [`node_firewall_mode`](/docs/node/param#node_firewall_mode) 控制防火墙行为。
 在 RHEL/Rocky 系统上使用 **firewalld**，在 Debian/Ubuntu 系统上使用 **ufw**。
 
 默认情况下，这个参数是 `none`，也就是不修改现有的防火墙配置，交给用户自己处理。

@@ -18,7 +18,7 @@ categories: [参考]
 
 - [**可扩展性**](/img/pigsty/ecosystem.png)： 强力 [**扩展**](/docs/ref/extension) 开箱即用：深度整合 **PostGIS**, **TimescaleDB**, **Citus**, **PGVector** 等 [**444**](https://pgext.cloud/zh/list) 插件与 Oracle / SQL Server 的 [**兼容内核**](/docs/pgsql/kernel)。
 - [**可靠性**](/img/pigsty/arch.png)：快速创建 [**高可用**](/docs/concept/ha/)、故障自愈的 [**PostgreSQL**](/docs/pgsql) 集群，自动预置的 [**时间点恢复**](/docs/concept/pitr/)、[**访问控制**](/docs/concept/sec/ac/)、自签名 [**CA**](/docs/concept/sec/ca) 与 [**SSL**](/docs/setup/security/)，确保数据坚如磐石。
-- [**可观测性**](/img/pigsty/dashboard.jpg)： 基于 [**Prometheus**](/docs/infra#prometheus) & [**Grafana**](/docs/infra#grafana) 现代可观测性技术栈，提供惊艳的监控最佳实践。模块化设计，可独立使用：[**画廊**](https://github.com/pgsty/pigsty/wiki/Gallery) & [**Demo**](https://demo.pigsty.cc)。
+- [**可观测性**](/img/pigsty/dashboard.jpg)： 基于 [**Prometheus**](/docs/infra#victoria-可观测性套件) & [**Grafana**](/docs/infra#grafana) 现代可观测性技术栈，提供惊艳的监控最佳实践。模块化设计，可独立使用：[**画廊**](https://github.com/pgsty/pigsty/wiki/Gallery) & [**Demo**](https://demo.pigsty.cc)。
 - [**可用性**](/img/pigsty/ha.png)：交付稳定可靠，自动路由，事务池化、读写分离的高性能数据库 [**服务**](/docs/pgsql/service/#默认服务)，通过 HAProxy，Pgbouncer，VIP 提供灵活的 [**接入**](/docs/pgsql/service/#接入服务) 模式。
 - [**可维护性**](/img/pigsty/iac.jpg)：[**简单易用**](/docs/setup/install)，[**基础设施即代码**](/docs/pgsql/config)，[**管理SOP预案**](/docs/pgsql/admin/)，自动调参，本地软件仓库，[**Vagrant**](/docs/deploy/vagrant) [**沙箱**](/docs/deploy/sandbox) 与 [**Terraform**](/docs/deploy/terraform) 模板，不停机 [**迁移**](/docs/pgsql/migration) 方案。
 - [**可组合性**](/img/pigsty/sandbox.png)：[**模块化**](/docs/concept/arch#模块) 架构设计，可复用的 [**Infra**](/docs/infra)，多样的可选 [**模块**](/docs/ref/module/)：[**Redis**](/docs/redis), [**MinIO**](/docs/minio), [**ETCD**](/docs/etcd), [**FerretDB**](/docs/ferret), [**DuckDB**](https://github.com/pgsty/pigsty/tree/master/app/duckdb), [**Docker**](/docs/app/), [**Supabase**](https://github.com/pgsty/pigsty/tree/master/app/supabase)。
@@ -36,7 +36,7 @@ Pigsty 是一个更好的本地开源 RDS for PostgreSQL 替代：
 - [丰富的扩展插件](#丰富的扩展插件)：提供无可比拟的 444 扩展，提供开箱即用的分布式的时序地理空间图文向量多模态数据库能力。
 - [灵活的模块架构](#灵活的模块架构)：灵活组合，自由扩展：Redis/Etcd/MinIO/Mongo；可独立使用，监控现有RDS/主机/数据库。
 - [惊艳的观测能力](#惊艳的观测能力)：基于现代可观测性技术栈 Prometheus/Grafana，提供令人惊艳，无可比拟的数据库观测能力。
-- [验证过的可靠性](#验证过的可靠性)：故障自愈的高可用架构：硬件故障自动切换，流量无缝衔接。并提供自动配置的 PITR 兜底删库！
+- [验证过的可靠性](#久经考验的可靠性)：故障自愈的高可用架构：硬件故障自动切换，流量无缝衔接。并提供自动配置的 PITR 兜底删库！
 - [简单易用可维护](#简单易用可维护)：声明式API，GitOps就位，傻瓜式操作，Database/Infra-as-Code 以及管理SOP封装管理复杂度！
 - [扎实的安全实践](#扎实的安全实践)：加密备份一应俱全，自带基础ACL最佳实践。只要硬件与密钥安全，您无需操心数据库的安全性！
 - [广泛的应用场景](#广泛的应用场景)：低代码数据应用开发，或使用预置的 Docker Compose 模板，一键拉起使用PostgreSQL的海量软件！
@@ -102,14 +102,14 @@ PostgreSQL 的灵魂在于其丰富的 [**扩展生态**](/blog/pg/pg-eat-db-wor
 Pigsty 中的组件被抽象可独立部署的 [**模块**](/docs/ref/module/)，并可自由组合以应对多变的需求场景。[**`INFRA`**](/docs/infra) 模块带有完整的现代监控技术栈，而 [**`NODE`**](/docs/node) 模块则将节点调谐至指定状态并纳管。
 在多个节点上安装 [**`PGSQL`**](/docs/pgsql) 模块会自动组建出基于主从复制的高可用数据库集群，而同样的 [**`ETCD`**](/docs/etcd) 模块则为数据库高可用提供共识与元数据存储。
 
-除了上述四个 [核心模块](/docs/about/module#核心模块) 之外，Pigsty 还提供一系列选装功能模块：[**`MINIO`**](/docs/minio) 模块可以提供本地对象存储能力，并作为集中式数据库备份仓库。
+除了上述四个 [核心模块](/docs/ref/module#核心模块) 之外，Pigsty 还提供一系列选装功能模块：[**`MINIO`**](/docs/minio) 模块可以提供本地对象存储能力，并作为集中式数据库备份仓库。
 [**`REDIS`**](/docs/redis/) 模块能以独立主从，哨兵，原生集群的方式为数据库提供辅助。[**`DOCKER`**](/docs/docker) 模块可用于拉起无状态的应用软件。
 
 此外，Pigsty 还提供 PG 兼容 / 衍生内核的支持，您可以使用 [**`Babelfish`**](/docs/pgsql/kernel/babelfish) 提供 MS SQL Server 兼容性，使用 [**`IvorySQL`**](/docs/pgsql/kernel/ivorysql) 提供 Oracle 兼容性，
 使用 [**`OpenHaloDB`**](/docs/pgsql/kernel/openhalo) 提供 MySQL 兼容性，使用 [**`OrioleDB`**](/docs/pgsql/kernel/orioledb) 提供极致的 OLTP 性能。
 
 不仅如此，你还可以使用 [**`FerretDB`**](/docs/ferret/) 提供 MongoDB 兼容性，使用 [**`Supabase`**](/docs/pgsql/kernel/supabase) 提供 Firebase 兼容，并使用 [**`PolarDB`**](/docs/pgsql/kernel/polardb) 满足国产化合规要求。
-更多专业版/试点模块将不断引入 Pigsty，如 [**`GPSQL`**](/docs/pgsql/kernel/greenplum)，[KAFKA](/docs/pilot/kafka/)，[DUCKDB](/docs/pilot/duckdb/)，[VICTORIA](/docs/pilot/victoria/)，[TIGERBEETLE](/docs/pilot/tigerbeetle/)，[KUBERNETES](/docs/pilot/kube/)，[CONSUL](/docs/pilot/consul/)，[JUPYTER](/docs/pilot/jupyter/)，[GREENPLUM](/docs/pgsql/kernel/greenplum/)，[CLOUDBERRY](/docs/pgsql/kernel/cloudberry/)，[MYSQL](/docs/pilot/mysql/), …
+更多专业版/试点模块将不断引入 Pigsty，如 [**`GPSQL`**](/docs/pgsql/kernel/greenplum)，[KAFKA](/docs/pilot/kafka/)，[DUCKDB](/docs/pilot/duckdb/)，[VICTORIA](/blog/db/victoria-stack/)，[TIGERBEETLE](/docs/pilot/tigerbeetle/)，[KUBERNETES](/docs/pilot/kube/)，[CONSUL](/docs/pilot/consul/)，[JUPYTER](/docs/app/jupyter/)，[GREENPLUM](/docs/pgsql/kernel/greenplum/)，[CLOUDBERRY](/docs/pgsql/kernel/cloudberry/)，[MYSQL](/docs/pilot/mysql/), …
 
 [![pigsty-sandbox](/img/pigsty/sandbox.png)](/docs/ref/module/)
 

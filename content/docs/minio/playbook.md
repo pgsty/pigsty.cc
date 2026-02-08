@@ -36,7 +36,7 @@ MinIO 模块提供了两个内置剧本用于集群管理：
   - `minio_bucket`  : 创建 minio 存储桶
   - `minio_user`    : 创建 minio 业务用户
 
-在执行剧本前，请先在 [配置清单](/docs/setup/config) 中，完成 MinIO 集群的 [配置](config)。
+在执行剧本前，请先在 [配置清单](/docs/setup/config) 中，完成 MinIO 集群的 [配置](/docs/minio/config/)。
 
 {{% alert title="执行条件" color="primary" %}}
 剧本会自动跳过未定义 [`minio_seq`](/docs/minio/param#minio_seq) 的主机。这意味着您可以安全地在混合主机组上执行剧本，只有真正的 MinIO 节点才会被处理。

@@ -90,6 +90,6 @@ categories: [概念]
 
 ## 接下来
 
-- 🔐 [**加密通信**](../ca/)：证书管理与 TLS
-- ✅ [**合规清单**](../compliance/)：审计与合规要求
+- 🔐 [**加密通信**](/docs/concept/sec/ca)：证书管理与 TLS
+- ✅ [**合规清单**](/docs/concept/sec/compliance)：审计与合规要求
 - ⏰ [**备份恢复**](/docs/concept/pitr/)：PITR 机制与实践

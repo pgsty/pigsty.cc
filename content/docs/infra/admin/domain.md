@@ -204,7 +204,7 @@ Pigsty 默认使用自签名证书。可选方案包括：
 - 信任自签名 CA 证书（下载地址 `http://<ip>/ca.crt`）
 - 使用真实 CA 或通过 Certbot 获取免费公网域名证书
 
-详见 [CA 与证书](./cert/) 文档。
+详见 [CA 与证书](/docs/infra/admin/cert/) 文档。
 
 
 ----------------

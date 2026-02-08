@@ -89,6 +89,18 @@ Pigsty 当前的最新稳定版本为 [**v4.0.0**](#v400)。
 - pljs 1.0.5
 - pg_textsearch 0.5.0
 
+| 软件包                 | 版本      | 软件包               | 版本       |
+|---------------------|---------|-------------------|----------|
+| victoria-metrics    | 1.135.0 | victoria-logs     | 1.45.0   |
+| vector              | 0.53.0  | grafana           | 12.3.2   |
+| alertmanager        | 0.31.0  | etcd              | 3.6.7    |
+| duckdb              | 1.4.4   | pg_exporter       | 1.2.0    |
+| pig                 | 1.1.0   | claude            | 2.1.37   |
+| opencode            | 1.1.53  | uv                | 0.10.0   |
+| code-server         | 4.108.2 | caddy             | 2.10.2   |
+| hugo                | 0.155.2 | cloudflared       | 2026.1.1 |
+| headscale           | 0.28.0  |                   |          |
+
 **API变化**
 
 - io_method / io_workers 的模板生效条件从 pg_version >= 17 更正为 pg_version >= 18。

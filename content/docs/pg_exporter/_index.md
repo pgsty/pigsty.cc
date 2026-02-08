@@ -7,7 +7,7 @@ description: 高级 PostgreSQL 与 PgBouncer 监控指标导出器
 
 为 Prometheus / Victoria 打造的极致 PostgreSQL 监控体验：超过 **600+** 监控指标、**声明式配置** 与 **动态规划** 能力。
 
-[**快速上手**](start) | [**GitHub**](https://github.com/pgsty/pg_exporter) | [**在线演示**](https://g.pgsty.com)
+[**快速上手**](/docs/pg_exporter/start) | [**GitHub**](https://github.com/pgsty/pg_exporter) | [**在线演示**](https://g.pgsty.com)
 
 
 --------
@@ -86,7 +86,7 @@ make build
 
 ## 快速开始
 
-几分钟内即可启动 PG Exporter，参见 [快速上手](start)：
+几分钟内即可启动 PG Exporter，参见 [快速上手](/docs/pg_exporter/start)：
 
 ```bash
 # 使用 PostgreSQL 连接 URL 运行
@@ -103,12 +103,12 @@ curl http://localhost:9630/metrics
 
 | 文档 | 描述 |
 |------|------|
-| [**快速上手**](start) | 快速开始指南与基础概念 |
-| [**安装指南**](install) | 各平台的安装说明 |
-| [**配置参考**](config) | 配置参考与采集器定义 |
-| [**API 参考**](api) | HTTP API 端点参考 |
-| [**部署指南**](deploy) | 生产部署最佳实践 |
-| [**发布说明**](release) | 版本发布历史 |
+| [**快速上手**](/docs/pg_exporter/start) | 快速开始指南与基础概念 |
+| [**安装指南**](/docs/pg_exporter/install) | 各平台的安装说明 |
+| [**配置参考**](/docs/pg_exporter/config) | 配置参考与采集器定义 |
+| [**API 参考**](/docs/pg_exporter/api) | HTTP API 端点参考 |
+| [**部署指南**](/docs/pg_exporter/deploy) | 生产部署最佳实践 |
+| [**发布说明**](/docs/pg_exporter/release) | 版本发布历史 |
 {.full-width}
 
 

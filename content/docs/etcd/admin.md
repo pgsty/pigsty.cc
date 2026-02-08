@@ -19,14 +19,14 @@ categories: [任务]
 - [移除成员](#移除成员)：如何从 etcd 集群移除老成员？
 - [便捷脚本](#便捷脚本)：使用 `bin/etcd-add` 和 `bin/etcd-rm` 简化操作
 
-更多问题请参考 [FAQ：ETCD](faq)。
+更多问题请参考 [FAQ：ETCD](/docs/etcd/faq/)。
 
 
 ------
 
 ## 创建集群
 
-要创建一个集群，首先需要在 [**配置清单**](/docs/setup/config#配置清单) 中定义 `etcd` 集群：
+要创建一个集群，首先需要在 [**配置清单**](/docs/setup/config/) 中定义 `etcd` 集群：
 
 ```yaml
 etcd:
@@ -37,7 +37,7 @@ etcd:
   vars: { etcd_cluster: etcd }
 ```
 
-执行 [`etcd.yml`](playbook#etcdyml) 剧本即可。
+执行 [`etcd.yml`](/docs/etcd/playbook#etcdyml) 剧本即可。
 
 ```bash
 ./etcd.yml  # 初始化 etcd 集群
@@ -47,7 +47,7 @@ etcd:
 自 Pigsty v3.6 起，`etcd.yml` 剧本专注于集群安装和成员添加，不再包含移除功能。所有移除操作请使用独立的 `etcd-rm.yml` 剧本。
 {{% /alert %}}
 
-对于已初始化的生产环境 etcd 集群，可以打开防误删保护 [`etcd_safeguard`](param#etcd_safeguard)，避免误删现有的 etcd 实例。
+对于已初始化的生产环境 etcd 集群，可以打开防误删保护 [`etcd_safeguard`](/docs/etcd/param#etcd_safeguard)，避免误删现有的 etcd 实例。
 
 
 
@@ -57,7 +57,7 @@ etcd:
 
 ## 销毁集群
 
-要销毁一个 etcd 集群，请使用独立的 [`etcd-rm.yml`](playbook#etcd-rmyml) 剧本。执行此命令前请务必三思！
+要销毁一个 etcd 集群，请使用独立的 [`etcd-rm.yml`](/docs/etcd/playbook#etcd-rmyml) 剧本。执行此命令前请务必三思！
 
 ```bash
 ./etcd-rm.yml                         # 移除整个 etcd 集群
@@ -70,7 +70,7 @@ etcd:
 bin/etcd-rm                           # 移除整个 etcd 集群
 ```
 
-移除剧本会尊重 [`etcd_safeguard`](param#etcd_safeguard) 防误删保险的配置。如果该参数设置为 `true`，剧本将中止执行以防止误删。
+移除剧本会尊重 [`etcd_safeguard`](/docs/etcd/param#etcd_safeguard) 防误删保险的配置。如果该参数设置为 `true`，剧本将中止执行以防止误删。
 
 {{% alert title="注意" color="warning" %}}
 在移除 etcd 集群之前，请确保没有 PostgreSQL 集群正在使用该 etcd 作为 DCS 服务。否则会导致 PostgreSQL 高可用功能失效。
@@ -441,7 +441,7 @@ bin/etcd-rm                   # 移除整个 etcd 集群
 
 [**`etcd_root_password`**](/docs/etcd/param#etcd_root_password) 参数定义了 etcd 集群的 root 用户密码。
 
-要修改此密码，你需要访问到 etcd 端点，例如在 [**INFRA节点**](/docs/infra/node#infra节点) 与 [**ETCD节点**](/docs/infra/node#etcd节点) 上使用 [**管理用户**](/docs/deploy/admin) 执行：
+要修改此密码，你需要访问到 etcd 端点，例如在 [**INFRA节点**](/docs/concept/arch/node#infra节点) 与 [**ETCD节点**](/docs/concept/arch/node#etcd节点) 上使用 [**管理用户**](/docs/deploy/admin) 执行：
 
 ```bash
 e user passwd root  # 修改 etcd root 用户密码

@@ -197,7 +197,7 @@ pg-meta-1
 
 ## 如何向现有etcd集群添加新的成员？
 
-> 详细过程，请参考 [向 etcd 集群添加成员](admin#添加成员)
+> 详细过程，请参考 [向 etcd 集群添加成员](/docs/etcd/admin#添加成员)
 
 **推荐方式：使用便捷脚本**
 
@@ -223,7 +223,7 @@ etcdctl member promote <new_ins_server_id>                                      
 
 ## 如何从现有etcd集群中移除成员？
 
-> 详细过程，请参考 [从 etcd 集群中移除成员](admin#移除成员)
+> 详细过程，请参考 [从 etcd 集群中移除成员](/docs/etcd/admin#移除成员)
 
 **推荐方式：使用便捷脚本**
 
@@ -246,7 +246,7 @@ etcdctl member remove <etcd_server_id>       # 从集群中踢出成员
 
 ## 如何配置 etcd RBAC 认证？
 
-Pigsty v4.0 默认启用 etcd 的 RBAC 认证。root 用户密码由 [`etcd_root_password`](param#etcd_root_password) 参数控制，默认值为 `Etcd.Root`。
+Pigsty v4.0 默认启用 etcd 的 RBAC 认证。root 用户密码由 [`etcd_root_password`](/docs/etcd/param#etcd_root_password) 参数控制，默认值为 `Etcd.Root`。
 
 **在生产环境中，强烈建议修改默认密码**：
 
@@ -270,5 +270,5 @@ export ETCDCTL_CERT=/etc/etcd/server.crt
 export ETCDCTL_KEY=/etc/etcd/server.key
 ```
 
-更多详情请参考 [RBAC 认证](admin#rbac-认证)。
+更多详情请参考 [RBAC 认证](/docs/etcd/admin#rbac-认证)。
 

@@ -64,5 +64,5 @@ Pigsty 提供了六个 <span class="text-secondary"><b>扩展</b></span> 功能�
 - [**`SUPABASE`**](/docs/pgsql/kernel/supabase)、[**`DUCKDB`**](/docs/pilot/duckdb)：外围生态整合能力。
 - [**`MSSQL`**](/docs/pgsql/kernel/babelfish)、[**`IVORY`**](/docs/pgsql/kernel/ivorysql)、[**`POLAR`**](/docs/pgsql/kernel/polardb)、[**`CITUS`**](/docs/pgsql/kernel/citus)：内核替代/分布式形态。
 - [**`GREENPLUM`**](/docs/pgsql/kernel/greenplum)、[**`CLOUDBERRY`**](/docs/pgsql/kernel/cloudberry)、[**`NEON`**](/docs/pgsql/kernel/neon)：保留历史文档，不再作为默认开放能力。
-- [**`KAFKA`**](/docs/pilot/kafka)、[**`MYSQL`**](/docs/pilot/mysql)、[**`KUBE`**](/docs/pilot/kube/)、[**`VICTORIA`**](/docs/pilot/victoria)、[**`JUPYTER`**](/docs/pilot/jupyter)：试点模块，当前不对外开放使用。
+- [**`KAFKA`**](/docs/pilot/kafka)、[**`MYSQL`**](/docs/pilot/mysql)、[**`KUBE`**](/docs/pilot/kube/)、[**`VICTORIA`**](/blog/db/victoria-stack/)、[**`JUPYTER`**](/docs/app/jupyter/)：试点模块，当前不对外开放使用。
 

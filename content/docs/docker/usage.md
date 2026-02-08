@@ -27,7 +27,7 @@ repo_packages:
   - node-bootstrap, infra-package, infra-addons, node-package1, node-package2, pgsql-common, docker   # <--- 下载 Docker
 ```
 
-Docker 下载完之后，您需要在待安装 Docker 的节点上配置 [**`docker_enabled`**](param#docker_enabled): `true` 标记，并按需配置 [**其他参数**](param)。
+Docker 下载完之后，您需要在待安装 Docker 的节点上配置 [**`docker_enabled`**](/docs/docker/param#docker_enabled): `true` 标记，并按需配置 [**其他参数**](/docs/docker/param/)。
 
 ```yaml
 infra:
@@ -38,7 +38,7 @@ infra:
     docker_enabled: true  # 在这个分组上安装 Docker ！
 ```
 
-最后，使用 您可以使用 [`docker.yml`](playbook#dockeryml) 剧本将其安装到节点上：
+最后，使用 您可以使用 [`docker.yml`](/docs/docker/playbook#dockeryml) 剧本将其安装到节点上：
 
 ```bash
 ./docker.yml -l infra    # 在 infra 分组上安装 Docker
@@ -86,7 +86,7 @@ ansible minio -m package -b -a 'name=docker-ce state=absent'  # 卸载 docker
 
 ## 下载
 
-想要在 Pigsty 安装过程中下载 Docker，在 [**配置清单**](/docs/setup/config#配置清单) 中修改参数 [`repo_modules`](/docs/infra/param#repo_modules) 启用 Docker 软件仓库，
+想要在 Pigsty 安装过程中下载 Docker，在 [**配置清单**](/docs/setup/config/) 中修改参数 [`repo_modules`](/docs/infra/param#repo_modules) 启用 Docker 软件仓库，
 然后在 [`repo_packages`](/docs/infra/param#repo_packages) 或 [`repo_extra_packages`](/docs/infra/param#repo_extra_packages) 参数中指定下载 Docker 软件包。
 
 ```yaml
@@ -153,7 +153,7 @@ proxy_env:
 
 ## 镜像站
 
-您可以通过参数 [`docker_registry_mirrors`](param#docker_registry_mirrors) 指定 Docker 的 Registry Mirrors 参数，使用未被墙掉的镜像站点：
+您可以通过参数 [`docker_registry_mirrors`](/docs/docker/param#docker_registry_mirrors) 指定 Docker 的 Registry Mirrors 参数，使用未被墙掉的镜像站点：
 
 普通墙外用户，除了官方默认的 DockerHub 站点外，还可以考虑使用 `quay.io` 镜像站点。如果您的内网环境已经有了成熟的镜像基础设施，您可以使用内网的 Docker 镜像站点，避免受到外网镜像站点的影响，提高下载速度。
 
@@ -179,7 +179,7 @@ proxy_env:
 
 ## 拉取镜像
 
-参数 [`docker_image`](param#docker_image) 与 [`docker_image_cache`](param#docker_image_cache) 可用于直接指定在 Docker 安装时，需要拉取的镜像列表。
+参数 [`docker_image`](/docs/docker/param#docker_image) 与 [`docker_image_cache`](/docs/docker/param#docker_image_cache) 可用于直接指定在 Docker 安装时，需要拉取的镜像列表。
 
 使用这一功能，可以让 Docker 装好之后就带有指定的镜像（前提是可以成功拉取，此任务失败会自动忽略跳过）
 
@@ -196,9 +196,9 @@ infra:
 ```
 
 另一种预先加载镜像的方式是使用本地 `save` 的 `tgz` 压缩包：如果您预先使用 `docker save xxx | gzip -c > /tmp/docker/xxx.tgz` 将 Docker 镜像导出保存在本地。
-那么这些导出的镜像文件可以通过参数 [`docker_image_cache`](param#docker_image_cache) 指定的 glob 被自动加载。默认的位置是： `/tmp/docker/*.tgz`。
+那么这些导出的镜像文件可以通过参数 [`docker_image_cache`](/docs/docker/param#docker_image_cache) 指定的 glob 被自动加载。默认的位置是： `/tmp/docker/*.tgz`。
 
-这意味着你可以事先把镜像放在 `/tmp/docker` 目录中，然后执行 [`docker.yml`](playbook#dockeryml) 安装 docker 后会自动加载这些镜像包。
+这意味着你可以事先把镜像放在 `/tmp/docker` 目录中，然后执行 [`docker.yml`](/docs/docker/playbook#dockeryml) 安装 docker 后会自动加载这些镜像包。
 
 例如，在 [supabase自建教程](/blog/db/supabase) 中就使用了这种技术，在拉起 Supabase，安装 Docker 之前，把本地 `/tmp/supabase` 目录的 `*.tgz` 镜像压缩包都拷贝到了目标节点的 `/tmp/docker` 目录下。
 

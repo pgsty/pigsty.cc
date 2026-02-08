@@ -148,6 +148,6 @@ node_selinux_mode: enforcing
 
 ## 接下来
 
-- 🔑 [**身份认证**](../auth/)：HBA 与密码策略
-- 🔒 [**数据安全**](../data/)：备份与加密
+- 🔑 [**身份认证**](/docs/concept/sec/auth)：HBA 与密码策略
+- 🔒 [**数据安全**](/docs/concept/sec/data)：备份与加密
 - ♾️ [**高可用**](/docs/concept/ha/)：业务连续性

@@ -140,7 +140,7 @@ bin/pgsql-add pg-test 10.10.10.13   # 示例，为 pg-test 集群扩容 IP 为 1
 {{% /tab %}}
 {{< /tabpane >}}
 
-扩容完成后，您应当 [**刷新服务**](/docs/pgsql/admin/service#重载服务) 以将新成员添加至负载均衡器中以实际承载流量。
+扩容完成后，您应当 [**刷新服务**](/docs/pgsql/admin/cluster#刷新服务) 以将新成员添加至负载均衡器中以实际承载流量。
 
 **示例：为两节点集群 `pg-test` 扩容一个新从库 `10.10.10.13`**
 
@@ -197,7 +197,7 @@ bin/node-rm 10.10.10.13   # 例子，从 Pigsty 管理中移除 10.10.10.13 节�
 {{% /tab %}}
 {{< /tabpane >}}
 
-缩容完成后，您应当从 [**配置清单**](/docs/concept/iac/inventory) 中移除该实例的定义，然后 [**刷新服务**](/docs/pgsql/admin/service#重载服务) 以将已它从负载均衡器中踢除。
+缩容完成后，您应当从 [**配置清单**](/docs/concept/iac/inventory) 中移除该实例的定义，然后 [**刷新服务**](/docs/pgsql/admin/cluster#刷新服务) 以将已它从负载均衡器中踢除。
 
 ```yaml
 pg-test:
@@ -490,7 +490,7 @@ Apply these changes? [y/N]: y
 [**时间点恢复**](/docs/pgsql/backup/restore)（PITR）允许您将集群恢复到备份保留期内的任意时间点。
 此方式依赖集中式的 [**备份仓库**](/docs/pgsql/backup/repository)（如 MinIO/S3），但功能更加强大。
 
-要使用 PITR 克隆集群，在配置中添加 [**`pg_pitr`**](/docs/pgsql/param#pg_pitr) 参数指定恢复目标：
+要使用 PITR 克隆集群，在配置中添加 [**`pg_pitr`**](/docs/pgsql/backup/restore#pitr-参数定义) 参数指定恢复目标：
 
 ```yaml
 # 从 pg-meta 集群的备份克隆一个新集群 pg-meta2

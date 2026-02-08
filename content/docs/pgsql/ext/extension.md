@@ -104,9 +104,9 @@ all:
 
 详细的扩展使用方法请参阅：
 
-- [快速开始](start)：使用扩展的流程速览
-- [扩展简介](intro)：扩展的核心概念
-- [安装扩展](install)：如何安装扩展
-- [配置扩展](config)：预加载与参数配置
-- [启用扩展](create)：在数据库中创建扩展
+- [快速开始](/docs/pgsql/ext/start/)：使用扩展的流程速览
+- [扩展简介](/docs/pgsql/ext/intro/)：扩展的核心概念
+- [安装扩展](/docs/pgsql/ext/install/)：如何安装扩展
+- [配置扩展](/docs/pgsql/ext/config/)：预加载与参数配置
+- [启用扩展](/docs/pgsql/ext/create/)：在数据库中创建扩展
 

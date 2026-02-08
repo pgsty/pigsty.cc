@@ -56,9 +56,9 @@ Etcd 模块提供了两个核心剧本：[`etcd.yml`](#etcdyml) 用于安装与�
 
 移除剧本使用 [`etcd_remove`](https://github.com/pgsty/pigsty/blob/main/roles/etcd_remove) 角色，支持以下可配置参数：
 
-- [`etcd_safeguard`](param#etcd_safeguard)：设置为 `true` 时阻止意外移除
-- [`etcd_rm_data`](param#etcd_rm_data)：控制是否删除 ETCD 数据（默认：`true`）
-- [`etcd_rm_pkg`](param#etcd_rm_pkg)：控制是否卸载 ETCD 软件包（默认：`false`）
+- [`etcd_safeguard`](/docs/etcd/param#etcd_safeguard)：设置为 `true` 时阻止意外移除
+- [`etcd_rm_data`](/docs/etcd/param#etcd_rm_data)：控制是否删除 ETCD 数据（默认：`true`）
+- [`etcd_rm_pkg`](/docs/etcd/param#etcd_rm_pkg)：控制是否卸载 ETCD 软件包（默认：`false`）
 
 
 
@@ -108,7 +108,7 @@ bin/etcd-rm                                     # 移除整个 etcd 集群
 
 ## 保护机制
 
-出于防止误删的目的，Pigsty 的 ETCD 模块提供了防误删保险，由 [`etcd_safeguard`](param#etcd_safeguard) 参数控制，默认为 `false`，即默认不打开防误删保护。
+出于防止误删的目的，Pigsty 的 ETCD 模块提供了防误删保险，由 [`etcd_safeguard`](/docs/etcd/param#etcd_safeguard) 参数控制，默认为 `false`，即默认不打开防误删保护。
 
 对于生产环境已经初始化好的 etcd 集群，建议打开防误删保护，避免误删现有的 etcd 实例：
 

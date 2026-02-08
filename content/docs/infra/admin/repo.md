@@ -15,8 +15,8 @@ Pigsty 支持创建和管理本地 APT/YUM 软件仓库，用于在离线环境�
 
 向本地仓库添加软件包：
 
-1. 将软件包添加到 [`repo_packages`](../param/#repo_packages)（默认软件包）
-2. 将软件包添加到 [`repo_extra_packages`](../param/#repo_extra_packages)（额外软件包）
+1. 将软件包添加到 [`repo_packages`](/docs/infra/param#repo_packages)（默认软件包）
+2. 将软件包添加到 [`repo_extra_packages`](/docs/infra/param#repo_extra_packages)（额外软件包）
 3. 执行构建命令：
 
 ```bash

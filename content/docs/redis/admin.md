@@ -20,7 +20,7 @@ categories: [任务]
 **高可用管理**
 - [手工设置Redis从库](#手工设置redis从库)
 - [设置Redis主从高可用](#设置redis主从高可用)
-- [初始化Redis原生集群](#初始化redis原生集群)
+- [初始化Redis原生集群](#初始化-redis-原生集群)
 
 **扩缩容与迁移**
 - [扩容Redis节点](#扩容redis节点)
@@ -31,14 +31,14 @@ categories: [任务]
 - [常见问题诊断](#常见问题诊断)
 - [性能调优](#性能调优)
 
-更多问题请参考 [FAQ：REDIS](faq)。
+更多问题请参考 [FAQ：REDIS](/docs/redis/faq/)。
 
 
 -------------
 
 ### 初始化Redis
 
-您可以使用 [`redis.yml`](#redisyml) 剧本来初始化 Redis 集群、节点、或实例：
+您可以使用 [`redis.yml`](/docs/redis/playbook#redisyml) 剧本来初始化 Redis 集群、节点、或实例：
 
 ```bash
 # 初始化集群内所有 Redis 实例
@@ -63,7 +63,7 @@ bin/redis-add 10.10.10.10 6379  # 初始化 redis 实例 '10.10.10.10:6379'
 
 ### 下线Redis
 
-您可以使用 [`redis-rm.yml`](#redis-rmyml) 剧本来下线 Redis 集群、节点、或实例：
+您可以使用 [`redis-rm.yml`](/docs/redis/playbook#redis-rmyml) 剧本来下线 Redis 集群、节点、或实例：
 
 ```bash
 # 下线 Redis 集群 `redis-test`
@@ -91,7 +91,7 @@ bin/redis-rm 10.10.10.10 6379  # 下线 redis 实例 '10.10.10.10:6379'
 
 ### 重新配置Redis
 
-您可以部分执行 [`redis.yml`](#redisyml) 剧本来重新配置 Redis 集群、节点、或实例：
+您可以部分执行 [`redis.yml`](/docs/redis/playbook#redisyml) 剧本来重新配置 Redis 集群、节点、或实例：
 
 ```bash
 ./redis.yml -l <cluster> -t redis_config,redis_launch

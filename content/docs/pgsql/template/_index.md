@@ -12,13 +12,13 @@ Pigsty 提供四种预置的 Patroni/PostgreSQL 配置模板，针对不同的�
 
 | 模板                     | CPU核心  | 适用场景      | 特点            |
 |:-----------------------|:-------|:----------|:--------------|
-| [**`oltp.yml`**](oltp) | 4-128C | OLTP 事务处理 | 高并发、低延迟、高吞吐   |
-| [**`olap.yml`**](olap) | 4-128C | OLAP 分析处理 | 大查询、高并行、长事务   |
-| [**`crit.yml`**](crit) | 4-128C | 核心/金融业务   | 数据安全、审计合规、零丢失 |
-| [**`tiny.yml`**](tiny) | 1-3C   | 微型实例      | 资源受限、低配环境     |
+| [**`/docs/pgsql/template/oltp.yml`**](/docs/pgsql/template/oltp) | 4-128C | OLTP 事务处理 | 高并发、低延迟、高吞吐   |
+| [**`/docs/pgsql/template/olap.yml`**](/docs/pgsql/template/olap) | 4-128C | OLAP 分析处理 | 大查询、高并行、长事务   |
+| [**`/docs/pgsql/template/crit.yml`**](/docs/pgsql/template/crit) | 4-128C | 核心/金融业务   | 数据安全、审计合规、零丢失 |
+| [**`/docs/pgsql/template/tiny.yml`**](/docs/pgsql/template/tiny) | 1-3C   | 微型实例      | 资源受限、低配环境     |
 {.full-width}
 
-您可以通过 [**`pg_conf`**](/docs/pgsql/param#pg_conf) 参数来选择使用哪个配置模板，默认为 [**`oltp.yml`**](oltp)。
+您可以通过 [**`pg_conf`**](/docs/pgsql/param#pg_conf) 参数来选择使用哪个配置模板，默认为 [**`/docs/pgsql/template/oltp.yml`**](/docs/pgsql/template/oltp)。
 
 > 通常，数据库调优模板 [**`pg_conf`**](/docs/pgsql/param#pg_conf) 应当与机器调优模板 [**`node_tune`**](/docs/node/param#node_tune) 配套使用。
 
@@ -41,7 +41,7 @@ pg-test:
     node_tune: oltp      # 操作系统调优模板（默认值）
 ```
 
-对于核心金融业务场景，您可以使用 [**`crit.yml`**](crit) 模板：
+对于核心金融业务场景，您可以使用 [**`/docs/pgsql/template/crit.yml`**](/docs/pgsql/template/crit) 模板：
 
 ```yaml
 pg-finance:
@@ -55,7 +55,7 @@ pg-finance:
     node_tune: crit      # 操作系统关键业务调优
 ```
 
-对于低配虚拟机或开发环境，可以使用 [**`tiny.yml`**](tiny) 模板：
+对于低配虚拟机或开发环境，可以使用 [**`/docs/pgsql/template/tiny.yml`**](/docs/pgsql/template/tiny) 模板：
 
 ```yaml
 pg-dev:
@@ -137,13 +137,13 @@ pg-dev:
 
 ## 选择建议
 
-- [**OLTP 模板**](oltp)：适用于大多数在线事务处理场景，是默认选择。适合电商、社交、游戏等高并发低延迟应用。
+- [**OLTP 模板**](/docs/pgsql/template/oltp)：适用于大多数在线事务处理场景，是默认选择。适合电商、社交、游戏等高并发低延迟应用。
 
-- [**OLAP 模板**](olap)：适用于数据仓库、BI 报表、ETL 等分析型负载。特点是允许大查询、高并行度、宽松的超时设置。
+- [**OLAP 模板**](/docs/pgsql/template/olap)：适用于数据仓库、BI 报表、ETL 等分析型负载。特点是允许大查询、高并行度、宽松的超时设置。
 
-- [**CRIT 模板**](crit)：适用于金融交易、核心账务等对数据一致性和安全性有极高要求的场景。强制同步复制、数据校验和、完整审计日志。
+- [**CRIT 模板**](/docs/pgsql/template/crit)：适用于金融交易、核心账务等对数据一致性和安全性有极高要求的场景。强制同步复制、数据校验和、完整审计日志。
 
-- [**TINY 模板**](tiny)：适用于开发测试环境、资源受限的虚拟机、树莓派等场景。最小化资源占用，禁用并行查询。
+- [**TINY 模板**](/docs/pgsql/template/tiny)：适用于开发测试环境、资源受限的虚拟机、树莓派等场景。最小化资源占用，禁用并行查询。
 
 
 ----------------
@@ -189,7 +189,7 @@ pg-myapp:
 
 ## 参数优化策略
 
-了解更多关于模板参数优化的技术细节，请参阅 [**参数优化策略**](tune)，其中详细介绍了：
+了解更多关于模板参数优化的技术细节，请参阅 [**参数优化策略**](/docs/pgsql/template/tune)，其中详细介绍了：
 
 - 内存参数调整（共享缓冲区、工作内存、最大连接数）
 - CPU 参数调整（并行查询工作进程配置）
@@ -208,4 +208,3 @@ pg-myapp:
 - [**`pg_max_conn`**](/docs/pgsql/param#pg_max_conn)：覆盖模板的最大连接数
 - [**`pg_shared_buffer_ratio`**](/docs/pgsql/param#pg_shared_buffer_ratio)：共享缓冲区占内存比例
 - [**`pg_storage_type`**](/docs/pgsql/param#pg_storage_type)：存储类型，影响 IO 相关参数
-

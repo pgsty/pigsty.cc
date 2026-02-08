@@ -73,5 +73,5 @@ pig extension create vector  # 在数据库中启用
 | 启用 | [`pg_databases.extensions`](/docs/pgsql/config/db) | 在数据库中自动执行 `CREATE EXTENSION` |
 {.full-width}
 
-> 详细说明请参阅各子章节：[下载](download)、[安装](install)、[配置](config)、[启用](create)
+> 详细说明请参阅各子章节：[下载](/docs/pgsql/ext/download/)、[安装](/docs/pgsql/ext/install/)、[配置](/docs/pgsql/ext/config/)、[启用](/docs/pgsql/ext/create/)
 

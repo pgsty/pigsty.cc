@@ -14,8 +14,8 @@ Pigsty 使用 Patroni 管理 PostgreSQL 集群，它可以用来修改集群配�
 
 要使用 Patroni 进行管理，您需要有以下两种身份之一：
 
-- 从 [**INFRA 节点**](/docs/concept/node#管理节点) 上使用 [**管理员用户**](/docs/deploy/admin) ，可以管理环境中的所有集群。
-- 从 [**PGSQL节点**](/docs/concept/node#pgsql节点) 上使用 [**`pg_dbsu`**](/docs/pgsql/param#pg_dbsu) （默认为 `postgres`），可以管理当前集群。
+- 从 [**INFRA 节点**](/docs/concept/arch/node#infra节点) 上使用 [**管理员用户**](/docs/deploy/admin) ，可以管理环境中的所有集群。
+- 从 [**PGSQL节点**](/docs/concept/arch/node#pgsql节点) 上使用 [**`pg_dbsu`**](/docs/pgsql/param#pg_dbsu) （默认为 `postgres`），可以管理当前集群。
 
 Patroni 提供了 [**`patronictl`**](https://patroni.readthedocs.io/en/latest/patronictl.html) 命令行工具用于管理，Pigsty 提供了封装的快捷命令 `pg` 来简化其操作。
 

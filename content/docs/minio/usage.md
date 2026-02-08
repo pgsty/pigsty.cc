@@ -7,7 +7,7 @@ module: [MINIO]
 categories: [参考]
 ---
 
-当您 [配置](config) 并执行 [剧本](playbook) 部署 MinIO 集群后，可以参考这里的说明开始使用与接入 MinIO 集群。
+当您 [配置](/docs/minio/config/) 并执行 [剧本](/docs/minio/playbook/) 部署 MinIO 集群后，可以参考这里的说明开始使用与接入 MinIO 集群。
 
 
 
@@ -15,21 +15,21 @@ categories: [参考]
 
 ## 部署集群
 
-在 Pigsty 中部署一个开箱即用的 单机单盘 MinIO 实例非常简单：首先在 [配置清单](/docs/setup/config#配置清单) 中定义一套 MinIO 集群：
+在 Pigsty 中部署一个开箱即用的 单机单盘 MinIO 实例非常简单：首先在 [配置清单](/docs/setup/config/) 中定义一套 MinIO 集群：
 
 ```yaml
 minio: { hosts: { 10.10.10.10: { minio_seq: 1 } }, vars: { minio_cluster: minio } }
 ```
 
-然后，针对定义的分组（这里为 `minio` ）执行 Pigsty 提供的 [`minio.yml`](playbook) 剧本即可：
+然后，针对定义的分组（这里为 `minio` ）执行 Pigsty 提供的 [`minio.yml`](/docs/minio/playbook/) 剧本即可：
 
 ```bash
 ./minio.yml -l minio
 ```
 
-请注意在 [`deploy.yml`](/docs/setup/playbook#deployyml) 中，事先定义好的 MinIO 集群将自动创建，无需手动再次执行 `minio.yml` 剧本。
+请注意在 [`deploy.yml`](/docs/setup/playbook#部署剧本) 中，事先定义好的 MinIO 集群将自动创建，无需手动再次执行 `minio.yml` 剧本。
 
-如果您计划部署一个生产等级的大规模多节点 MinIO 集群，我们强烈建议您通读 Pigsty MinIO [配置文档](config) 与 MinIO [官方文档](https://min.io/docs/minio/linux/operations/concepts.html) 后再进行。
+如果您计划部署一个生产等级的大规模多节点 MinIO 集群，我们强烈建议您通读 Pigsty MinIO [配置文档](/docs/minio/config/) 与 MinIO [官方文档](https://min.io/docs/minio/linux/operations/concepts.html) 后再进行。
 
 
 

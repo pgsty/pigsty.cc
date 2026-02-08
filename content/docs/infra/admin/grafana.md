@@ -74,7 +74,7 @@ pg-grafana:
 
 ### 创建集群
 
-使用以下命令完成数据库集群`pg-grafana`的创建：[`pgsql.yml`](p-pgsql.yml)。
+使用以下命令完成数据库集群`pg-grafana`的创建：[`pgsql.yml`](/docs/pgsql/playbook#pgsqlyml)。
 
 ```bash
 ./pgsql.yml -l pg-grafana    # 初始化pg-grafana集群
@@ -82,7 +82,7 @@ pg-grafana:
 
 该命令是 Ansible Playbook [`pgsql.yml`](/docs/pgsql/playbook#pgsqlyml)，用于创建数据库集群。
 
-定义在 [`pg_users`](/docs/pgsql/config#pg_users) 与 [`pg_databases`](/docs/pgsql/config#pg_databases) 中的业务用户与业务数据库会在集群初始化时自动创建，因此使用该配置时，集群创建完毕后，（在没有DNS支持的情况下）您可以使用以下连接串 [访问](/docs/concept/sec/ac) 数据库（任一即可）：
+定义在 [`pg_users`](/docs/pgsql/param#pg_users) 与 [`pg_databases`](/docs/pgsql/param#pg_databases) 中的业务用户与业务数据库会在集群初始化时自动创建，因此使用该配置时，集群创建完毕后，（在没有DNS支持的情况下）您可以使用以下连接串 [访问](/docs/concept/sec/ac) 数据库（任一即可）：
 
 ```bash
 postgres://dbuser_grafana:DBUser.Grafana@10.10.10.11:5432/grafana # 主库直连
@@ -185,7 +185,7 @@ postgres://dbuser_grafana:DBUser.Grafana@meta:5436/grafana # default服务
 postgres://dbuser_grafana:DBUser.Grafana@meta:5433/grafana # primary服务
 ```
 
-这里，我们将使用通过负载均衡器直接访问主库的 [Default服务](/docs/concept/svc#default服务) 访问数据库。
+这里，我们将使用通过负载均衡器直接访问主库的 [Default服务](/docs/pgsql/service#default服务) 访问数据库。
 
 首先检查连接串是否可达，以及是否有权限执行DDL命令。
 
@@ -224,7 +224,7 @@ systemctl restart grafana-server
 ```
 
 从监控系统中看到新增的 [`grafana`](http://g.pigsty.cc/d/pgsql-database/pgsql-database?var-cls=pg-meta&var-ins=pg-meta-1&var-datname=grafana&orgId=1) 数据库已经开始有活动，则说明Grafana已经开始使用Postgres作为首要后端数据库了。
-但一个新的问题是，Grafana中原有的Dashboards与Datasources都消失了！这里需要重新导入 [监控面板](#管理grafana监控面板) 与 [Postgres数据源](#管理ostgres数据源)
+但一个新的问题是，Grafana中原有的Dashboards与Datasources都消失了！这里需要重新导入 [监控面板](#管理grafana监控面板) 与 [Postgres数据源](#管理postgres数据源)
 
 
 

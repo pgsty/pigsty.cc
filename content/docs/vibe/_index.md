@@ -62,9 +62,9 @@ VIBE 依赖 [`NODE`](/docs/node) 与 [`INFRA`](/docs/infra)：
 
 ## 文档目录
 
-- [**配置说明**](config)：组件配置与工作目录设置
-- [**参数详解**](param)：VIBE 参数列表与默认值
-- [**剧本说明**](playbook)：`vibe.yml` 使用与标签
-- [**管理手册**](admin)：运维、密码与扩展管理
-- [**监控集成**](monitor)：Claude Code 监控与日志
-- [**常见问题**](faq)：FAQ
+- [**配置说明**](/docs/vibe/config)：组件配置与工作目录设置
+- [**参数详解**](/docs/vibe/param)：VIBE 参数列表与默认值
+- [**剧本说明**](/docs/vibe/playbook)：`vibe.yml` 使用与标签
+- [**管理手册**](/docs/vibe/admin)：运维、密码与扩展管理
+- [**监控集成**](/docs/vibe/monitor)：Claude Code 监控与日志
+- [**常见问题**](/docs/vibe/faq)：FAQ

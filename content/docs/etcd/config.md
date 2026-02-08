@@ -36,7 +36,7 @@ etcd: { hosts: { 10.10.10.10: { etcd_seq: 1 } }, vars: { etcd_cluster: etcd } }
 
 在 Pigsty 提供的所有单机配置模板中，都有这样一项，其中的占位 IP 地址：`10.10.10.10` 默认会被替换为当前管理节点的 IP。 
 
-除了 IP 地址外，这里唯一必要的参数是 [`etcd_seq`](param#etcd_seq) 和 [`etcd_cluster`](param#etcd_cluster)，它们会唯一标识每一个 Etcd 实例。
+除了 IP 地址外，这里唯一必要的参数是 [`etcd_seq`](/docs/etcd/param#etcd_seq) 和 [`etcd_cluster`](/docs/etcd/param#etcd_cluster)，它们会唯一标识每一个 Etcd 实例。
 
 
 
@@ -94,7 +94,7 @@ etcd:
 | **VIP-Manager** | 在 PostgreSQL 集群上绑定 L2 VIP | `/etc/default/vip-manager` |
 {.full-width}
 
-当 etcd 集群的成员信息发生永久性变更时，您应当 [重载相关服务的配置](admin#重载配置)，以确保服务能够正确访问 Etcd 集群。
+当 etcd 集群的成员信息发生永久性变更时，您应当 [重载相关服务的配置](/docs/etcd/admin#重载配置)，以确保服务能够正确访问 Etcd 集群。
 
 **更新 Patroni 的 etcd 端点引用**：
 
@@ -120,7 +120,7 @@ Pigsty v4.0 默认启用 etcd 的 RBAC 认证机制。相关配置参数：
 
 | 参数 | 说明 | 默认值 |
 |:----|:----|:------|
-| [`etcd_root_password`](param#etcd_root_password) | etcd root 用户密码 | `Etcd.Root` |
+| [`etcd_root_password`](/docs/etcd/param#etcd_root_password) | etcd root 用户密码 | `Etcd.Root` |
 | [`pg_etcd_password`](/docs/pgsql/param#pg_etcd_password) | Patroni 连接 etcd 的密码 | 空（使用集群名） |
 {.full-width}
 

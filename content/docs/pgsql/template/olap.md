@@ -50,7 +50,7 @@ pg-olap:
     node_tune: olap      # 操作系统分析处理调优
 ```
 
-也可以将 [**`olap.yml`**](olap) 模板用于专用的离线从库：
+也可以将 [**`olap.yml`**](/docs/pgsql/template/olap/) 模板用于专用的离线从库：
 
 ```yaml
 pg-mixed:
@@ -203,7 +203,7 @@ idle_in_transaction_session_timeout: 0   # OLTP: 10min，禁用
 
 ## 与 OLTP 模板的主要差异
 
-| 参数 | [**OLAP**](olap) | [**OLTP**](oltp) | 差异原因 |
+| 参数 | [**OLAP**](/docs/pgsql/template/olap/) | [**OLTP**](/docs/pgsql/template/oltp/) | 差异原因 |
 |:-----|:-----|:-----|:---------|
 | max_connections | 500 | 500-1000 | 分析负载连接数少 |
 | work_mem 上限 | 8GB | 1GB | 支持更大的内存排序 |
@@ -293,8 +293,8 @@ pg-mixed:
 
 - [**`pg_conf`**](/docs/pgsql/param#pg_conf)：PostgreSQL 配置模板选择参数
 - [**`node_tune`**](/docs/node/param#node_tune)：操作系统调优模板，应与 `pg_conf` 配套
-- [**OLTP 模板**](oltp)：事务处理模板对比
-- [**CRIT 模板**](crit)：关键业务模板对比
-- [**TINY 模板**](tiny)：微型实例模板对比
+- [**OLTP 模板**](/docs/pgsql/template/oltp/)：事务处理模板对比
+- [**CRIT 模板**](/docs/pgsql/template/crit/)：关键业务模板对比
+- [**TINY 模板**](/docs/pgsql/template/tiny/)：微型实例模板对比
 - [离线从库](/docs/pgsql/config/cluster#离线从库)：专用分析实例
 

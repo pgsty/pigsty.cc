@@ -157,6 +157,6 @@ REVOKE CREATE ON SCHEMA public FROM PUBLIC;
 
 ## 接下来
 
-- 🔑 [**身份认证**](../auth/)：HBA 规则与密码策略
-- 🔐 [**加密通信**](../ca/)：TLS 与证书管理
-- ✅ [**合规清单**](../compliance/)：等保与 SOC2 对照
+- 🔑 [**身份认证**](/docs/concept/sec/auth)：HBA 规则与密码策略
+- 🔐 [**加密通信**](/docs/concept/sec/ca)：TLS 与证书管理
+- ✅ [**合规清单**](/docs/concept/sec/compliance)：等保与 SOC2 对照
