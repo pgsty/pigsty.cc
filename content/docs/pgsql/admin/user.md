@@ -39,7 +39,7 @@ bin/pgsql-user pg-meta dbuser_app    # 在 pg-meta 集群上创建/修改 dbuser
 {{% /tab %}}
 {{< /tabpane >}}
 
-关于用户定义参数的完整参考，请查阅 [**用户配置**](/docs/pgsql/config/user)。关于用户的访问权限，请参考 [**ACL：角色权限**](/docs/concept/sec/ac/#默认角色)。
+关于用户定义参数的完整参考，请查阅 [**用户配置**](/docs/pgsql/config/user)。关于用户的访问权限，请参考 [**ACL：角色权限**](/docs/concept/sec/ac/#默认角色与系统用户)。
 
 请注意，用户的 `name` 字段在创建后无法修改。如需更改用户名，请先删除原用户，再创建新用户。
 

@@ -9,7 +9,7 @@ categories: [参考]
 
 > Pigsty 中基于主机的身份认证 HBA（Host-Based Authentication）详解。
 
-认证是 [访问控制](/docs/concept/sec/ac/) 与 [权限系统](/docs/concept/sec/ac/#权限系统) 的基石，PostgreSQL 拥有多种 [认证](https://www.postgresql.org/docs/current/client-authentication.html) 方法。
+认证是 [访问控制](/docs/concept/sec/ac/) 与 [权限系统](/docs/concept/sec/ac/#默认权限策略) 的基石，PostgreSQL 拥有多种 [认证](https://www.postgresql.org/docs/current/client-authentication.html) 方法。
 
 这里主要介绍 HBA：Host Based Authentication，HBA规则定义了哪些用户能够通过哪些方式从哪些地方访问哪些数据库。
 
@@ -166,7 +166,7 @@ pg-meta:
 
 HBA 是一个静态的规则配置文件，修改后需要重载才能生效。默认的 HBA 规则集合因为不涉及 Role 与集群成员，所以通常不需要重载。
 
-如果您设计的 HBA 使用了特定的实例角色限制，或者集群成员限制，那么当集群实例成员发生变化（新增/下线/主从切换），一部分HBA规则的生效条件/涉及范围发生变化，通常也需要 [重载HBA](/docs/pgsql/admin#重载hba) 以反映最新变化。
+如果您设计的 HBA 使用了特定的实例角色限制，或者集群成员限制，那么当集群实例成员发生变化（新增/下线/主从切换），一部分HBA规则的生效条件/涉及范围发生变化，通常也需要 [重载HBA](/docs/pgsql/admin/cluster#刷新hba) 以反映最新变化。
 
 要重新加载 postgres/pgbouncer 的 hba 规则：
 
@@ -397,4 +397,3 @@ pgb_default_hba_rules:            # pgbouncer host-based authentication rules, o
 ```
 
 更多信息，请参考 [安全加固](/docs/setup/security) 一节。
-

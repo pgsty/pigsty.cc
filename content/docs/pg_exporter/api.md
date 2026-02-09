@@ -15,7 +15,7 @@ PG Exporter 提供全面的 REST API，用于指标采集、健康检查、流�
 
 | 端点                     | 方法  | 描述              |
 |------------------------|-----|-----------------|
-| [`/metrics`](#metrics) | GET | Prometheus 指标端点 |
+| [`/metrics`](#get-metrics) | GET | Prometheus 指标端点 |
 | [`/up`](#健康检查)         | GET | 基本存活检查          |
 | [`/health`](#健康检查)     | GET | 详细健康状态          |
 | [`/primary`](#流量路由)    | GET | 主库服务器检查         |

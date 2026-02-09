@@ -20,12 +20,12 @@ categories: [参考]
 |:------------------------------|:---------|-----------------------------------|
 | [Nginx](#nginx)               | `80/443` | Web 服务门户、本地软件仓库与统一入口              |
 | [Grafana](#grafana)           | `3000`   | 可视化平台，提供监控大屏、巡检与数据应用              |
-| [VictoriaMetrics](#victoria)  | `8428`   | 时序数据库与 VMUI，可兼容 Prometheus API    |
-| [VictoriaLogs](#victoria)     | `9428`   | 集中式日志数据库，接收 Vector 推送的结构化日志       |
-| [VictoriaTraces](#victoria)   | `10428`  | 链路追踪与事件存储，可用于慢 SQL / 请求追踪         |
-| [VMAlert](#victoria)          | `8880`   | 告警规则评估器，基于 VictoriaMetrics 指标触发告警 |
-| [AlertManager](#victoria)     | `9059`   | 告警聚合与分发，接收 VMAlert 发送的通知          |
-| [BlackboxExporter](#victoria) | `9115`   | ICMP/TCP/HTTP 黑盒探测                |
+| [VictoriaMetrics](#victoria-可观测性套件)  | `8428`   | 时序数据库与 VMUI，可兼容 Prometheus API    |
+| [VictoriaLogs](#victoria-可观测性套件)     | `9428`   | 集中式日志数据库，接收 Vector 推送的结构化日志       |
+| [VictoriaTraces](#victoria-可观测性套件)   | `10428`  | 链路追踪与事件存储，可用于慢 SQL / 请求追踪         |
+| [VMAlert](#victoria-可观测性套件)          | `8880`   | 告警规则评估器，基于 VictoriaMetrics 指标触发告警 |
+| [AlertManager](#victoria-可观测性套件)     | `9059`   | 告警聚合与分发，接收 VMAlert 发送的通知          |
+| [BlackboxExporter](#victoria-可观测性套件) | `9115`   | ICMP/TCP/HTTP 黑盒探测                |
 | [DNSMASQ](#dnsmasq)           | `53`     | DNS 服务器，提供内部域名解析                  |
 | [Chronyd](#chronyd)           | `123`    | NTP 时间服务器                         |
 | [PostgreSQL](#postgresql)     | `5432`   | CMDB 与默认数据库                       |
@@ -172,6 +172,13 @@ NTP服务用于同步环境内所有节点的时间（可选）
 
 NTP相关配置参数位于：[配置：NODES - NTP](/docs/node/param#node_time)
 
+----------------
+
+### PostgreSQL
+
+Pigsty 的元数据库（CMDB）通常使用 PostgreSQL，默认监听 `5432` 端口，用于存储 Pigsty 元数据并支撑部分内置应用。
+更多信息请参阅：[PGSQL](/docs/pgsql) 模块与 [配置：INFRA - META](/docs/infra/param#meta)。
+
 
 
 
@@ -307,7 +314,7 @@ INFRA模块剧本 [`infra.yml`](https://github.com/pgsty/pigsty/blob/main/infra.
 **该剧本默认在 [**INFRA节点**](/docs/concept/arch/node#infra节点) 上执行**
 
 * Pigsty默认将使用**当前执行此剧本的节点**作为Pigsty的 [**Infra节点**](/docs/concept/arch/node#infra节点) 与 [**ADMIN节点**](/docs/concept/arch/node#admin节点)。
-* Pigsty在 [配置过程](/docs/setup/install#configure) 中默认会将当前节点标记为Infra/Admin节点，并使用**当前节点首要IP地址**替换配置模板中的占位IP地址`10.10.10.10`。
+* Pigsty在 [配置过程](/docs/setup/install#配置) 中默认会将当前节点标记为Infra/Admin节点，并使用**当前节点首要IP地址**替换配置模板中的占位IP地址`10.10.10.10`。
 * 该节点除了可以发起管理，部署有基础设施，与一个部署普通托管节点并无区别。
 * 单机安装时，ETCD 也会安装在此节点上，提供 DCS 服务
 
@@ -433,7 +440,7 @@ INFRA模块剧本 [`deploy.yml`](https://github.com/pgsty/pigsty/blob/main/deplo
 
 ## 参数
 
-[`INFRA`](/docs/infra/param#infra) 模块有下列10个参数组。
+[`INFRA`](/docs/infra/param) 模块有下列10个参数组。
 
 - [`META`](/docs/infra/param#meta)：Pigsty元数据
 - [`CA`](/docs/infra/param#ca)：自签名公私钥基础设施/CA

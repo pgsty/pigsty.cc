@@ -66,7 +66,7 @@ bin/pgsql-hba <cls> <ip>...           # 刷新集群中指定实例的 HBA 规�
 
 ## 参数详解
 
-**`pg_default_hba_rules`**
+### `pg_default_hba_rules`
 
 PostgreSQL 全局默认 HBA 规则列表，通常定义在 `all.vars` 中，为所有 PostgreSQL 集群提供基础访问控制。
 
@@ -88,7 +88,7 @@ pg_default_hba_rules:
   - {user: '+dbrole_offline' ,db: all    ,addr: intra     ,auth: pwd   ,title: 'allow etl offline tasks from intranet',order: 650}
 ```
 
-**`pg_hba_rules`**
+### `pg_hba_rules`
 
 PostgreSQL 集群/实例级 HBA 追加规则，可在集群或实例级别覆盖，与默认规则合并后按 `order` 排序。
 
@@ -99,7 +99,7 @@ pg_hba_rules:
   - {user: app_user, db: app_db, addr: intra, auth: pwd, title: 'app user access'}
 ```
 
-**`pgb_default_hba_rules`**
+### `pgb_default_hba_rules`
 
 Pgbouncer 全局默认 HBA 规则列表，通常定义在 `all.vars` 中。
 
@@ -116,7 +116,7 @@ pgb_default_hba_rules:
   - {user: 'all'        ,db: all         ,addr: intra     ,auth: pwd   ,title: 'allow all user intra access with pwd' ,order: 400}
 ```
 
-**`pgb_hba_rules`**
+### `pgb_hba_rules`
 
 Pgbouncer 集群/实例级 HBA 追加规则。
 

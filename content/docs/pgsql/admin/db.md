@@ -39,7 +39,7 @@ bin/pgsql-db pg-meta some_db    # 在 pg-meta 集群上创建/修改 some_db 数
 {{% /tab %}}
 {{< /tabpane >}}
 
-关于数据库定义参数的完整参考，请查阅 [**数据库配置**](/docs/pgsql/config/db)。关于数据库的访问权限，请参考 [**ACL：数据库权限**](/docs/concept/sec/ac/#数据库权限)。
+关于数据库定义参数的完整参考，请查阅 [**数据库配置**](/docs/pgsql/config/db)。关于数据库的访问权限，请参考 [**ACL：数据库权限**](/docs/concept/sec/ac/#数据库隔离)。
 
 请注意，部分数据库参数仅能在 **创建时** 指定。修改这些参数需要先删除再创建数据库（使用 `state: recreate` 重建数据库）。
 

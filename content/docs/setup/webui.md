@@ -53,7 +53,7 @@ Pigsty [**单机安装**](/docs/setup/install) 完成后，您在当前节点上
 | 端点           | 组件                                         | 原生端口     | 备注                 | 公开演示                                                           |
 |:-------------|:-------------------------------------------|:---------|:-------------------|----------------------------------------------------------------|
 | `/`          | [**Nginx**](/docs/infra/)                  | `80/443` | 首页、本地仓库、文件服务       | [`demo.pigsty.cc`](https://demo.pigsty.cc)                     |
-| `/ui/`       | [**Grafana**](#grafana)                    | `3000`   | Grafana 仪表盘入口      | [`demo.pigsty.cc/ui/`](https://demo.pigsty.cc/ui/)             |
+| `/ui/`       | [**Grafana**](#监控)                       | `3000`   | Grafana 仪表盘入口      | [`demo.pigsty.cc/ui/`](https://demo.pigsty.cc/ui/)             |
 | `/vmetrics/` | [**VictoriaMetrics**](/docs/infra/)        | `8428`   | 时序数据库 Web UI       | [`demo.pigsty.cc/vmetrics/`](https://demo.pigsty.cc/vmetrics/) |
 | `/vlogs/`    | [**VictoriaLogs**](/docs/infra/)           | `9428`   | 日志数据库 Web UI       | [`demo.pigsty.cc/vlogs/`](https://demo.pigsty.cc/vlogs/)       |
 | `/vtraces/`  | [**VictoriaTraces**](/docs/infra/)         | `10428`  | 链路追踪 Web UI        | [`demo.pigsty.cc/vtraces/`](https://demo.pigsty.cc/vtraces/)   |

@@ -9,12 +9,12 @@ categories: [参考]
 
 [`PGSQL`](/docs/pgsql) 模块需要在 Pigsty 管理的节点上安装（即节点已经配置了 [`NODE`](/docs/node) 模块），同时还要求您的部署中有一套可用的 [`ETCD`](/docs/etcd) 集群来存储集群元数据。
 
-在单个节点上安装 `PGSQL` 模块将创建一个独立的 PGSQL 服务器/实例，即 [主实例](/docs/pgsql/config#读写主库)。
-在额外节点上安装将创建 [只读副本](/docs/pgsql/config#只读从库)，可以作为备用实例，并用于承载分担只读请求。
-您还可以创建用于 ETL/OLAP/交互式查询的 [离线](/docs/pgsql/config#离线从库) 实例， 使用 [同步备库](/docs/pgsql/config#同步备库) 和 [法定人数提交](/docs/pgsql/config#法定人数提交) 来提高数据一致性，
-甚至搭建 [备份集群](/docs/pgsql/config#备份集群) 和 [延迟集群](/docs/pgsql/config#延迟集群) 以快速应对人为失误与软件缺陷导致的数据损失。
+在单个节点上安装 `PGSQL` 模块将创建一个独立的 PGSQL 服务器/实例，即 [主实例](/docs/pgsql/config/cluster#读写主库)。
+在额外节点上安装将创建 [只读副本](/docs/pgsql/config/cluster#只读从库)，可以作为备用实例，并用于承载分担只读请求。
+您还可以创建用于 ETL/OLAP/交互式查询的 [离线](/docs/pgsql/config/cluster#离线从库) 实例， 使用 [同步备库](/docs/pgsql/config/cluster#同步备库) 和 [法定人数提交](/docs/pgsql/config/cluster#法定人数提交) 来提高数据一致性，
+甚至搭建 [备份集群](/docs/pgsql/config/cluster#备份集群) 和 [延迟集群](/docs/pgsql/config/cluster#延迟集群) 以快速应对人为失误与软件缺陷导致的数据损失。
 
-您可以定义多个 PGSQL 集群并进一步组建一个水平分片集群： Pigsty 支持原生的 [citus 集群组](/docs/pgsql/config#citus集群)，可以将您的标准 PGSQL 集群原地升级为一个分布式的数据库集群。
+您可以定义多个 PGSQL 集群并进一步组建一个水平分片集群： Pigsty 支持原生的 [citus 集群组](/docs/pgsql/config/cluster#citus集群)，可以将您的标准 PGSQL 集群原地升级为一个分布式的数据库集群。
 
 > Pigsty v4.0 默认使用 PostgreSQL 18，并新增了 `pg_io_method`、`pgbackrest_exporter` 等参数。
 
@@ -372,9 +372,9 @@ PGSQL 实例的角色，可以是：`primary`、`replica`、`standby` 或 `offli
 
 参数名称： `pg_upstream`， 类型： `ip`， 层次：`I`
 
-[备份集群](/docs/pgsql/config#备份集群) 或级联从库的上游实例 IP 地址。
+[备份集群](/docs/pgsql/config/cluster#备份集群) 或级联从库的上游实例 IP 地址。
 
-在集群的 `primary` 实例上设置 `pg_upstream` ，表示此集群是一个 [备份集群](/docs/pgsql/config#备份集群)，该实例将作为 `standby leader`，从上游集群接收并应用更改。
+在集群的 `primary` 实例上设置 `pg_upstream` ，表示此集群是一个 [备份集群](/docs/pgsql/config/cluster#备份集群)，该实例将作为 `standby leader`，从上游集群接收并应用更改。
 
 对非 `primary` 实例设置 `pg_upstream` 参数将指定一个具体实例作为物理复制的上游，如果与主实例 ip 地址不同，此实例将成为 **级联副本** 。确保上游 IP 地址是同一集群中的另一个实例是用户的责任。
 
@@ -492,7 +492,7 @@ pg_exporters: # list all remote instances here, alloc a unique unused local port
 * Pgbouncer连接池特定HBA规则： [**`pgb_hba_rules`**](#pgb_hba_rules)
 * 定时任务（crontab）定义： [**`pg_crontab`**](#pg_crontab)
 
-[默认](/docs/concept/sec/ac/#默认用户) 的数据库用户及其凭据，强烈建议在生产环境中修改这些用户的密码。
+[默认](/docs/concept/sec/ac/#默认角色与系统用户) 的数据库用户及其凭据，强烈建议在生产环境中修改这些用户的密码。
 
 * PG管理员用户：[`pg_admin_username`](#pg_admin_username) / [`pg_admin_password`](#pg_admin_password)
 * PG复制用户： [`pg_replication_username`](#pg_replication_username) / [`pg_replication_password`](#pg_replication_password)
@@ -644,7 +644,7 @@ PostgreSQL 服务列表，需要在 PG 集群层面进行定义。默认值为�
 
 数据库集群/实例的客户端IP黑白名单规则。默认为：`[]` 空列表。
 
-对象数组，每一个对象都代表一条规则， [hba](/docs/pgsql/config/hba#定义hba) 规则对象的定义形式如下：
+对象数组，每一个对象都代表一条规则， [hba](/docs/pgsql/config/hba#规则字段) 规则对象的定义形式如下：
 
 ```yaml
 - title: allow intranet password access
@@ -687,7 +687,7 @@ PostgreSQL 服务列表，需要在 PG 集群层面进行定义。默认值为�
 
 Pgbouncer 业务HBA规则，默认值为： `[]`， 空数组。
 
-此参数与 [`pg_hba_rules`](#pg_hba_rules) 基本类似，都是 [hba](/docs/pgsql/config/hba#define-hba) 规则对象的数组，区别在于本参数是为 Pgbouncer 准备的。
+此参数与 [`pg_hba_rules`](#pg_hba_rules) 基本类似，都是 [hba](/docs/pgsql/config/hba#规则字段) 规则对象的数组，区别在于本参数是为 Pgbouncer 准备的。
 
 [`pgb_default_hba_rules`](#pgb_default_hba_rules) 与本参数基本类似，但它是用于定义全局连接池 HBA 规则，而本参数通常用于定制某个连接池集群/实例的 HBA 规则。
 
@@ -1163,7 +1163,7 @@ PostgreSQL 服务器监听的端口，默认为 `5432`。
 
 本地主机连接 PostgreSQL 使用的 Unix套接字目录，默认值为`/var/run/postgresql`。
 
-PostgreSQL 和 Pgbouncer 本地连接的Unix套接字目录，[`pg_exporter`](#pg_exporter) 和 patroni 都会优先使用 Unix 套接字访问 PostgreSQL。
+PostgreSQL 和 Pgbouncer 本地连接的Unix套接字目录，[`pg_exporter`](/docs/concept/arch/pgsql#pg_exporter) 和 patroni 都会优先使用 Unix 套接字访问 PostgreSQL。
 
 
 
@@ -1172,7 +1172,7 @@ PostgreSQL 和 Pgbouncer 本地连接的Unix套接字目录，[`pg_exporter`](#p
 
 参数名称： `pg_namespace`， 类型： `path`， 层次：`C`
 
-在 [etcd](#etcd) 中使用的顶级命名空间，由 patroni 和 vip-manager 使用，默认值是：`/pg`，不建议更改。
+在 [etcd](/docs/concept/arch/pgsql#etcd) 中使用的顶级命名空间，由 patroni 和 vip-manager 使用，默认值是：`/pg`，不建议更改。
 
 
 
@@ -1265,7 +1265,7 @@ patroni看门狗模式：`automatic`，`required`，`off`，默认值为 `off`�
 
 Patroni REST API 用户名，默认为 `postgres`，与 [`patroni_password`](#patroni_password) 配对使用。
 
-Patroni的危险 REST API （比如重启集群）由额外的用户名/密码保护，查看 [配置集群](/docs/pgsql/admin#配置集群) 和 [Patroni RESTAPI](https://patroni.readthedocs.io/en/latest/rest_api.html) 以获取详细信息。
+Patroni的危险 REST API （比如重启集群）由额外的用户名/密码保护，查看 [配置集群](/docs/pgsql/admin/cluster#配置集群) 和 [Patroni RESTAPI](https://patroni.readthedocs.io/en/latest/rest_api.html) 以获取详细信息。
 
 
 
@@ -1420,7 +1420,7 @@ Pgbouncer 的事务池可以缓解过多的 OLTP 连接问题，因此默认情�
 
 Postgres 共享缓冲区内存比例，默认为 `0.25`，正常范围在 `0.1`~`0.4` 之间。
 
-默认值：`0.25`，意味着节点内存的 25% 将被用作 PostgreSQL 的分片缓冲区。如果您想为 PostgreSQL 启用大页，那么此参数值应当适当小于 [`node_hugepage_ratio`](#node_hugepage_ratio)。
+默认值：`0.25`，意味着节点内存的 25% 将被用作 PostgreSQL 的分片缓冲区。如果您想为 PostgreSQL 启用大页，那么此参数值应当适当小于 [`node_hugepage_ratio`](/docs/node/param#node_hugepage_ratio)。
 
 将此值设定为大于 0.4（40%）通常不是好主意，但在极端情况下可能有用。
 
@@ -1525,7 +1525,7 @@ pg_rto_plan:
 
 预加载的动态共享库，默认为 `pg_stat_statements,auto_explain`，这是两个 PostgreSQL 自带的扩展，强烈建议启用。
 
-对于现有集群，您可以直接 [配置集群](/docs/pgsql/admin#配置集群) 的 `shared_preload_libraries` 参数并应用生效。
+对于现有集群，您可以直接 [配置集群](/docs/pgsql/admin/cluster#配置集群) 的 `shared_preload_libraries` 参数并应用生效。
 
 如果您想使用 TimescaleDB 或 Citus 扩展，您需要将 `timescaledb` 或 `citus` 添加到此列表中。`timescaledb` 和 `citus` 应当放在这个列表的最前面，例如：
 
@@ -1548,7 +1548,7 @@ citus,timescaledb,pg_stat_statements,auto_explain
 
 如果此值被设置为一个正值，备用集群主库在应用 WAL 变更之前将被延迟这个时间。设置为 `1h` 意味着该集群中的数据将始终滞后原集群一个小时。
 
-查看 [延迟备用集群](/docs/pgsql/config#延迟集群) 以获取详细信息。
+查看 [延迟备用集群](/docs/pgsql/config/cluster#延迟集群) 以获取详细信息。
 
 
 
@@ -1698,10 +1698,10 @@ pgsodium 获取密钥脚本的路径，默认使用 Pigsty 模板中的 `pgsodiu
 
 如果说 [`PG_BOOTSTRAP`](#pg_bootstrap) 是创建一个新的集群，那么 PG_PROVISION 就是在集群中创建默认的对象，包括：
 
-* [默认角色](/docs/concept/sec/ac/#默认角色)
-* [默认用户](/docs/concept/sec/ac/#默认用户)
-* [默认权限](/docs/concept/sec/ac/#默认权限)
-* [默认HBA规则](/docs/pgsql/config/hba#默认hba)
+* [默认角色](/docs/concept/sec/ac/#默认角色与系统用户)
+* [默认用户](/docs/concept/sec/ac/#默认角色与系统用户)
+* [默认权限](/docs/concept/sec/ac/#默认权限策略)
+* [默认HBA规则](/docs/pgsql/config/hba#pg_default_hba_rules)
 * 默认模式
 * 默认扩展
 
@@ -1813,7 +1813,7 @@ pgb_default_hba_rules:            # pgbouncer 默认 HBA 规则集，按 order �
 
 Postgres 集群中的默认角色和用户。
 
-Pigsty有一个内置的角色系统，请查看 [PGSQL访问控制：角色系统](/docs/concept/sec/ac/#角色系统) 了解详情。
+Pigsty有一个内置的角色系统，请查看 [PGSQL访问控制：角色系统](/docs/concept/sec/ac/#四层角色模型) 了解详情。
 
 ```yaml
 pg_default_roles:                 # postgres集群中的默认角色和用户
@@ -1857,7 +1857,7 @@ pg_default_privileges:            # 管理员用户创建时的默认权限
   - GRANT CREATE     ON SCHEMAS   TO dbrole_admin
 ```
 
-Pigsty 基于默认角色系统提供了相应的默认权限设置，请查看 [PGSQL访问控制：权限](/docs/concept/sec/ac/#默认权限) 了解详情。
+Pigsty 基于默认角色系统提供了相应的默认权限设置，请查看 [PGSQL访问控制：权限](/docs/concept/sec/ac/#默认权限策略) 了解详情。
 
 
 
@@ -1945,7 +1945,7 @@ pg_default_hba_rules:             # postgres default host-based authentication r
 
 默认值为常见场景提供了足够的安全级别，请查看 [PGSQL身份验证](/docs/pgsql/config/hba) 了解详情。
 
-本参数为 [HBA](/docs/pgsql/config/hba#define-hba) 规则对象组成的数组，在形式上与 [`pg_hba_rules`](#pg_hba_rules) 完全一致。
+本参数为 [HBA](/docs/pgsql/config/hba#规则字段) 规则对象组成的数组，在形式上与 [`pg_hba_rules`](#pg_hba_rules) 完全一致。
 建议在全局配置统一的 [`pg_default_hba_rules`](#pg_default_hba_rules)，针对特定集群使用 [`pg_hba_rules`](#pg_hba_rules) 进行额外定制。两个参数中的规则都会依次应用，后者优先级更高。
 
 
@@ -1955,7 +1955,7 @@ pg_default_hba_rules:             # postgres default host-based authentication r
 
 参数名称： `pgb_default_hba_rules`， 类型： `hba[]`， 层次：`G/C`
 
-pgbouncer default host-based authentication rules, array or [hba](/docs/pgsql/config/hba#define-hba) rule object.
+pgbouncer default host-based authentication rules, array or [hba](/docs/pgsql/config/hba#规则字段) rule object.
 
 default value provides a fair enough security level for common scenarios, check [PGSQL Authentication](/docs/pgsql/config/hba) for details.
 
@@ -2271,7 +2271,7 @@ PgBouncer 忽略的启动参数列表，默认值为：
 
 服务中的相对负载均衡权重，默认为100，范围0-255。
 
-默认值： `100`。您必须在实例变量中定义它，并 [重载服务](/docs/pgsql/admin#重载服务) 以生效。
+默认值： `100`。您必须在实例变量中定义它，并 [重载服务](/docs/pgsql/admin/cluster#刷新服务) 以生效。
 
 
 
@@ -2303,7 +2303,7 @@ pg_default_services:             # alloc port 10001 and 10002 for pg-test primar
 
 参数名称： `pg_default_service_dest`， 类型： `enum`， 层次：`G/C`
 
-当定义一个 [服务](/docs/pgsql/service/#define-service) 时，如果 `svc.dest='default'`，此参数将用作默认值。
+当定义一个 [服务](/docs/pgsql/service#定义服务) 时，如果 `svc.dest='default'`，此参数将用作默认值。
 
 默认值： `pgbouncer`，意味着5433主服务和5434副本服务将默认将流量路由到 pgbouncer。
 
@@ -2509,7 +2509,7 @@ ttl_slow: "{{ pg_exporter_cache_ttls.split(',')[2]|int }}"         # slow querie
 ttl_slowest: "{{ pg_exporter_cache_ttls.split(',')[3]|int }}"      # ver slow queries (e.g bloat)
 ```
 
-例如，在默认配置下，存活类指标默认最多缓存 `1s`，大部分普通指标会缓存 `10s`（应当与监控抓取间隔 [`victoria_scrape_interval`](/docs/infra/param#victoria_scrape_interval) 相同）。
+例如，在默认配置下，存活类指标默认最多缓存 `1s`，大部分普通指标会缓存 `10s`（应当与监控抓取间隔 [`vmetrics_scrape_interval`](/docs/infra/param#vmetrics_scrape_interval) 相同）。
 少量变化缓慢的查询会有 `60s` 的TTL，极个别大开销监控查询会有 `300s` 的TTL。
 
 

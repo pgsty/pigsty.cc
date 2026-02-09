@@ -99,7 +99,7 @@ pg-meta:
 新创建的数据库默认会从 `template1` 数据库 Fork 出来，这个模版数据库会在 [`PG_PROVISION`](/docs/pgsql/param#pg_provision) 阶段进行定制修改：
 配置好扩展，模式以及默认权限，因此新创建的数据库也会继承这些配置，除非您显式使用一个其他的数据库作为模板。
 
-关于数据库的访问权限，请参考 [ACL：数据库权限](/docs/concept/sec/ac/#数据库权限) 一节。
+关于数据库的访问权限，请参考 [ACL：数据库权限](/docs/concept/sec/ac/#数据库隔离) 一节。
 
 
 ----------------
@@ -107,7 +107,7 @@ pg-meta:
 ## 创建数据库
 
 在 [`pg_databases`](/docs/pgsql/param#pg_databases) 中 [定义](#定义数据库) 的数据库将在集群初始化时自动创建。
-如果您希望在现有集群上 [创建数据库](/docs/pgsql/admin#创建数据库)，可以使用 `bin/pgsql-db` 包装脚本。
+如果您希望在现有集群上 [创建数据库](/docs/pgsql/admin/db#创建数据库)，可以使用 `bin/pgsql-db` 包装脚本。
 将新的数据库定义添加到 `all.children.<cls>.pg_databases` 中，并使用以下命令创建该数据库：
 
 ```bash
@@ -122,7 +122,7 @@ bin/pgsql-db <cls> <dbname>    # pgsql-db.yml -l <cls> -e dbname=<dbname>
 使用 `pgsql-db` 工具或 `pgsql-db.yml` 剧本创建新数据库时，会将此数据库一并添加到 [Pgbouncer 数据库](#pgbouncer数据库) 列表中。
 
 如果您的数据库定义有一个非常规 `owner`（默认为 dbsu `postgres`），那么请确保在创建该数据库前，属主用户已经存在。
-最佳实践永远是在创建数据库之前 [创建](/docs/pgsql/admin#创建用户) [用户](/docs/pgsql/config/user)。
+最佳实践永远是在创建数据库之前 [创建](/docs/pgsql/admin/user#创建用户) [用户](/docs/pgsql/config/user)。
 
 
 

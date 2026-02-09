@@ -569,7 +569,7 @@ dbuser_monitor  = pool_mode=session max_user_connections=8
 
 ## ACL 系统
 
-Pigsty 提供了一套内置的、开箱即用的访问控制 / [**ACL**](/docs/concept/sec/ac/#默认角色) 系统，您只需将以下四个默认角色分配给业务用户即可轻松使用：
+Pigsty 提供了一套内置的、开箱即用的访问控制 / [**ACL**](/docs/concept/sec/ac/#默认角色与系统用户) 系统，您只需将以下四个默认角色分配给业务用户即可轻松使用：
 
 | 角色                | 权限说明             | 典型使用场景              |
 |-------------------|---------------------|---------------------|
@@ -646,4 +646,4 @@ Pgbouncer 使用和 PostgreSQL 相同的 `dbsu` 运行，默认为 `postgres` �
 
 关于用户管理操作，请参考 [**用户管理**](/docs/pgsql/admin/user) 一节。
 
-关于用户的访问权限，请参考 [**ACL：角色权限**](/docs/concept/sec/ac/#默认角色) 一节。
+关于用户的访问权限，请参考 [**ACL：角色权限**](/docs/concept/sec/ac/#默认角色与系统用户) 一节。
