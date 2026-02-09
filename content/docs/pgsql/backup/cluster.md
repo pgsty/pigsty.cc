@@ -81,7 +81,7 @@ WAL 日志归档被 pgBackrest 关闭了，因此也不会有 WAL 归档。
 
 例如，假设您有一个集群 `pg-meta`，现在你想要从 `pg-meta` 克隆一个 `pg-meta2` 的新集群。
 
-您可以考虑使用 [**备份集群**](/docs/pgsql/config/cluster#standby_cluster) 的方式创建一个新的集群 `pg-meta2`。
+您可以考虑使用 [**备份集群**](/docs/pgsql/config/cluster#备份集群) 的方式创建一个新的集群 `pg-meta2`。
 
 pgBackrest 支持增量备份/还原，因此如果您已经通过物理复制拉取了 `pg-meta` 的数据，通常增量 PITR 还原会非常快。
 
@@ -113,7 +113,6 @@ pb stanza-create
 
 
 使用这种技术，您不仅可以克隆 `pg-meta` 集群的最新状态，还可以克隆到任意时间点，例如：
-
 
 
 

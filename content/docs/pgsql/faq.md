@@ -85,11 +85,11 @@ sudo usermod -aG admin <username>
 
 ## 如何确保故障转移中数据不丢失？
 
-> 使用 `crit.yml` 参数模板，设置 `pg_rpo` 为 `0`，或 [配置集群](/docs/pgsql/admin#配置集群) 为同步提交模式。
+> 使用 `crit.yml` 参数模板，设置 `pg_rpo` 为 `0`，或 [配置集群](/docs/pgsql/admin/cluster#配置集群) 为同步提交模式。
 
-考虑使用 [**同步备库**](/docs/pgsql/config#同步备库) 和 [**法定多数提交**](/docs/pgsql/config#法定人数提交) 来确保故障转移过程中的零数据丢失。
+考虑使用 [**同步备库**](/docs/pgsql/config/cluster#同步备库) 和 [**法定多数提交**](/docs/pgsql/config/cluster#法定人数提交) 来确保故障转移过程中的零数据丢失。
 
-更多细节，可以参考 [安全考量 - 可用性](/docs/setup/security#可用性) 的相关介绍。
+更多细节，可以参考 [安全考量 - 可用性](/docs/deploy/security#可用性) 的相关介绍。
 
 
 
@@ -171,6 +171,5 @@ $ systemctl reload patroni    # 重新加载 Patroni 配置
 ```bash
 bin/pgmon-rm <ins>     # 用于从 Victoria 中移除单个实例 'ins' 的监控对象，特别适合移除添加的外部实例
 ```
-
 
 

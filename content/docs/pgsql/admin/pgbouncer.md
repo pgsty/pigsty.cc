@@ -23,7 +23,7 @@ Pigsty 使用 [**Pgbouncer**](https://www.pgbouncer.org/) 作为 PostgreSQL 的�
 
 Pgbouncer 的中用户和数据库由 Pigsty 自动管理，并在 [**创建数据库**](/docs/pgsql/admin/db) 与 [**创建用户**](/docs/pgsql/admin/user) 时自动应用 [**数据库配置**](/docs/pgsql/config/db) 与 [**用户配置**](/docs/pgsql/config/user)。
 
-**数据库管理**：在 [**`pg_databases`**](/docs/pgsql/param#pg_databases) 中定义的数据库，默认会自动添加到 Pgbouncer。设置 [**`pgbouncer: false`**](/docs/pgsql/admin/db#pgbouncer) 可以排除特定数据库。
+**数据库管理**：在 [**`pg_databases`**](/docs/pgsql/param#pg_databases) 中定义的数据库，默认会自动添加到 Pgbouncer。设置 [**`pgbouncer: false`**](/docs/pgsql/admin/db#连接池管理) 可以排除特定数据库。
 
 ```yaml
 pg_databases:
@@ -34,7 +34,7 @@ pg_databases:
     pgbouncer: false          # 不加入连接池
 ```
 
-**用户管理**：在 [**`pg_users`**](/docs/pgsql/param#pg_users) 中定义的用户，需要显式设置 [**`pgbouncer: true`**](/docs/pgsql/admin/user#pgbouncer)  才会加入连接池用户列表。
+**用户管理**：在 [**`pg_users`**](/docs/pgsql/param#pg_users) 中定义的用户，需要显式设置 [**`pgbouncer: true`**](/docs/pgsql/admin/user#连接池管理)  才会加入连接池用户列表。
 
 ```yaml
 pg_users:
@@ -49,7 +49,7 @@ pg_users:
 
 ## 服务管理
 
-在 Pigsty 中，PostgreSQL 集群的 [**Primary 服务**](/docs/concept/ha/svc#primary服务) 与 Replica 服务默认指向 Pgbouncer 6432 端口，
+在 Pigsty 中，PostgreSQL 集群的 [**Primary 服务**](/docs/pgsql/service#primary服务) 与 Replica 服务默认指向 Pgbouncer 6432 端口，
 如果您想要让这两个服务绕过连接池直接访问 PostgreSQL 实例，可以定制 [**`pg_services`**](/docs/pgsql/param#pg_services)，或将将 [**`pg_default_service_dest`**](/docs/pgsql/param#pg_default_service_dest) 设置为 `postgres`。
 
 

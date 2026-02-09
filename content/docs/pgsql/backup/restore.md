@@ -9,8 +9,8 @@ categories: [任务]
 
 您可以使用预配置的 pgbackrest 在 Pigsty 中执行时间点恢复（PITR）。
 
-- [**剧本方式**](#剧本方式)：使用 `pgsql-pitr.yml` 剧本自动执行 PITR
-- [**手动方式**](#手动方式)：使用 `pg-pitr` 脚本手动执行 PITR
+- [**剧本方式**](#快速上手)：使用 `pgsql-pitr.yml` 剧本自动执行 PITR
+- [**手动方式**](/docs/pgsql/tutorial/pg-fork#pg-pitr)：使用 `pg-pitr` 脚本手动执行 PITR
 
 --------
 

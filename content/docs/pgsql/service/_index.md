@@ -33,8 +33,8 @@ psql postgres://dbuser_view:DBUser.View@pg-meta/meta       # 用默认的只读�
 
 ## 服务概述
 
-在真实世界生产环境中，我们会使用基于复制的主从数据库集群。集群中有且仅有一个实例作为领导者（[主库](/docs/pgsql/config#读写主库)）可以接受写入。
-而其他实例（[从库](/docs/pgsql/config#只读从库)）则会从持续从集群领导者获取变更日志，与领导者保持一致。同时，从库还可以承载只读请求，在读多写少的场景下可以显著分担主库的负担，
+在真实世界生产环境中，我们会使用基于复制的主从数据库集群。集群中有且仅有一个实例作为领导者（[主库](/docs/pgsql/config/cluster#读写主库)）可以接受写入。
+而其他实例（[从库](/docs/pgsql/config/cluster#只读从库)）则会从持续从集群领导者获取变更日志，与领导者保持一致。同时，从库还可以承载只读请求，在读多写少的场景下可以显著分担主库的负担，
 因此对集群的写入请求与只读请求进行区分，是一种十分常见的实践。
 
 此外对于高频短连接的生产环境，我们还会通过连接池中间件（Pgbouncer）对请求进行池化，减少连接与后端进程的创建开销。但对于ETL与变更执行等场景，我们又需要绕过连接池，直接访问数据库。
@@ -54,8 +54,8 @@ psql postgres://dbuser_view:DBUser.View@pg-meta/meta       # 用默认的只读�
 
 - **默认直连服务（default）** ：允许（管理）用户，绕过连接池直接访问数据库的服务
 - **离线从库服务（offline）** ：不承接线上只读流量的专用从库，用于ETL与分析查询
-- **同步从库服务（standby）** ：没有复制延迟的只读服务，由 [同步备库](/docs/pgsql/config#同步备库)/主库处理只读查询
-- **延迟从库服务（delayed）** ：访问同一个集群在一段时间之前的旧数据，由 [延迟从库](/docs/pgsql/config#延迟集群) 来处理
+- **同步从库服务（standby）** ：没有复制延迟的只读服务，由 [同步备库](/docs/pgsql/config/cluster#同步备库)/主库处理只读查询
+- **延迟从库服务（delayed）** ：访问同一个集群在一段时间之前的旧数据，由 [延迟从库](/docs/pgsql/config/cluster#延迟集群) 来处理
 
 
 
@@ -173,7 +173,7 @@ listen pg-test-standby
     server pg-test-2 10.10.10.12:6432 check port 8008 weight 100         #        
 ```
 
-在这里，`pg-test` 集群全部三个实例都被 `selector: "[]"` 给圈中了，渲染进入 `pg-test-replica` 服务的后端服务器列表中。但是因为还有 `/sync` 健康检查，Patroni Rest API只有在主库和 [同步备库](/docs/pgsql/config#同步备库) 上才会返回代表健康的 HTTP 200 状态码，因此只有主库和同步备库才能真正承载请求。
+在这里，`pg-test` 集群全部三个实例都被 `selector: "[]"` 给圈中了，渲染进入 `pg-test-replica` 服务的后端服务器列表中。但是因为还有 `/sync` 健康检查，Patroni Rest API只有在主库和 [同步备库](/docs/pgsql/config/cluster#同步备库) 上才会返回代表健康的 HTTP 200 状态码，因此只有主库和同步备库才能真正承载请求。
 此外，主库因为满足条件 `pg_role == primary`， 被 backup selector 选中，被标记为了备份服务器，只有当没有其他实例（也就是同步备库）可以满足需求时，才会顶上。
 
 
@@ -235,8 +235,8 @@ Replica服务在生产环境中的重要性仅次于Primary服务，它在 5434 
 
 - 选择器参数 `selector: "[]"` 意味着所有集群成员都将被包括在Replica服务中
 - 所有实例都能够通过健康检查（`check: /read-only`），承载Replica服务的流量。
-- 备份选择器：`[? pg_role == 'primary' || pg_role == 'offline' ]` 将主库和 [离线从库](/docs/pgsql/config#离线从库) 标注为备份服务器。
-- 只有当所有 [普通从库](/docs/pgsql/config#只读从库) 都宕机后，Replica服务才会由主库或离线从库来承载。
+- 备份选择器：`[? pg_role == 'primary' || pg_role == 'offline' ]` 将主库和 [离线从库](/docs/pgsql/config/cluster#离线从库) 标注为备份服务器。
+- 只有当所有 [普通从库](/docs/pgsql/config/cluster#只读从库) 都宕机后，Replica服务才会由主库或离线从库来承载。
 - 目的地参数 `dest: default` 意味着Replica服务的目的地也受到 [`pg_default_service_dest`](/docs/pgsql/param#pg_default_service_dest) 参数的影响
 - `dest` 默认值 `default` 会被替换为 `pg_default_service_dest` 的值，默认为 `pgbouncer`，这一点和 [Primary服务](#primary服务) 相同
 - 默认情况下 Replica 服务的目的地默认是从库上的连接池，也就是由 [`pgbouncer_port`](/docs/pgsql/param#pgbouncer_port) 指定的端口，默认为 6432
@@ -316,9 +316,9 @@ Default服务在 5438 端口上提供服务，它也绕开连接池直接访问 
 - { name: offline ,port: 5438 ,dest: postgres ,check: /replica   ,selector: "[? pg_role == `offline` || pg_offline_query ]" , backup: "[? pg_role == `replica` && !pg_offline_query]"}
 ```
 
-Offline服务将流量直接路由到专用的 [离线从库](/docs/pgsql/config#离线从库) 上，或者带有 [`pg_offline_query`](/docs/pgsql/param#pg_offline_query) 标记的普通 [只读实例](/docs/pgsql/config#只读从库)。
+Offline服务将流量直接路由到专用的 [离线从库](/docs/pgsql/config/cluster#离线从库) 上，或者带有 [`pg_offline_query`](/docs/pgsql/param#pg_offline_query) 标记的普通 [只读实例](/docs/pgsql/config/cluster#只读从库)。
 
-- 选择器参数从集群中筛选出了两种实例：[`pg_role`](/docs/pgsql/param#pg_role) = `offline` 的离线从库，或是带有 [`pg_offline_query`](/docs/pgsql/param#pg_offline_query) = `true` 标记的普通 [只读实例](/docs/pgsql/config#只读从库)
+- 选择器参数从集群中筛选出了两种实例：[`pg_role`](/docs/pgsql/param#pg_role) = `offline` 的离线从库，或是带有 [`pg_offline_query`](/docs/pgsql/param#pg_offline_query) = `true` 标记的普通 [只读实例](/docs/pgsql/config/cluster#只读从库)
 - 专用离线从库和打标记的普通从库主要的区别在于：前者默认不承载 [Replica服务](#replica服务) 的请求，避免快慢请求混在一起，而后者默认会承载。
 - 备份选择器参数从集群中筛选出了一种实例：不带 offline 标记的普通从库，这意味着如果离线实例或者带Offline标记的普通从库挂了之后，其他普通的从库可以用来承载Offline服务。
 - 健康检查 `/replica` 只会针对从库返回 200， 主库会返回错误，因此 Offline服务 永远不会将流量分发到主库实例上去，哪怕集群中只剩这一台主库。
@@ -347,7 +347,7 @@ listen pg-test-offline
 Offline服务提供受限的只读服务，通常用于两类查询：交互式查询（个人用户），慢查询长事务（分析/ETL）。
 
 Offline 服务需要额外的维护照顾：当集群发生主从切换或故障自动切换时，集群的实例角色会发生变化，而 Haproxy 的配置却不会自动发生变化。对于有多个从库的集群来说，这通常并不是一个问题。
-然而对于一主一从，从库跑Offline查询的精简小集群而言，主从切换意味着从库变成了主库（健康检查失效），原来的主库变成了从库（不在 Offline 后端列表中），于是没有实例可以承载 Offline 服务了，因此需要手动 [重载服务](/docs/pgsql/admin#重载服务) 以使变更生效。
+然而对于一主一从，从库跑Offline查询的精简小集群而言，主从切换意味着从库变成了主库（健康检查失效），原来的主库变成了从库（不在 Offline 后端列表中），于是没有实例可以承载 Offline 服务了，因此需要手动 [重载服务](/docs/pgsql/admin/cluster#刷新服务) 以使变更生效。
 
 如果您的业务模型较为简单，您可以考虑剔除 Default 服务与 Offline 服务，使用 Primary 服务与 Replica 服务直连数据库。
 
@@ -357,7 +357,7 @@ Offline 服务需要额外的维护照顾：当集群发生主从切换或故障
 
 ## 重载服务
 
-当集群成员发生变化，如添加/删除副本、主备切换或调整相对权重时， 你需要 [重载服务](/docs/pgsql/admin#重载服务) 以使更改生效。
+当集群成员发生变化，如添加/删除副本、主备切换或调整相对权重时， 你需要 [重载服务](/docs/pgsql/admin/cluster#刷新服务) 以使更改生效。
 
 ```bash
 bin/pgsql-svc <cls> [ip...]         # 为 lb 集群或 lb 实例重载服务

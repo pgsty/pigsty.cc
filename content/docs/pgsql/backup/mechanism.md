@@ -9,7 +9,7 @@ categories: [任务, 概念]
 
 备份可以通过内置 [脚本](#脚本) 调用，使用节点 [crontab](#定时备份) 定时执行，
 由 [pgbackrest](https://pgbackrest.org/) 管理，存储在备份仓库中，
-仓库可以是本地磁盘文件系统或 MinIO / S3，并支持不同的 [保留](#保留策略) 策略。
+仓库可以是本地磁盘文件系统或 MinIO / S3，并支持不同的 [保留](/docs/pgsql/backup/repository#仓库保留策略) 策略。
 
 
 --------

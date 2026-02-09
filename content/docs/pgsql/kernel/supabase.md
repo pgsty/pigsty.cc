@@ -58,3 +58,11 @@ Pigsty 默认通过管理节点/INFRA节点上的 Nginx 对外暴露 Web 服务�
 
 {{< asciinema file="demo/supabase.cast" markers="0:检查环境,11:安装,43:配置,307:Docker,321:域名,340:App,350:检查" speed="1.3" autoplay="true" loop="true" >}}
 
+
+-------
+
+## 配置细节
+
+`./configure -c supa` 会生成 `~/pigsty/pigsty.yml`。在执行 `./deploy.yml` 之前，请至少检查并修改其中的密码、密钥、域名等敏感配置。
+
+更完整的配置说明请参阅：《[Supabase自建手册](/docs/app/supabase)》。

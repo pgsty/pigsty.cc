@@ -13,7 +13,7 @@ categories: [参考]
 一组 PostgreSQL 服务器可以同时服务于多个 **数据库** （Database）。在 Pigsty 中，你可以在集群配置中 [**定义**](#定义数据库) 好所需的数据库。
 
 Pigsty会对默认模板数据库`template1`进行修改与定制，创建默认模式，安装默认扩展，配置默认权限，新创建的数据库默认会从`template1`继承这些设置。
-您也可以通过 [**`template`**](#template) 参数指定其他模板数据库，实现瞬间 [**数据库克隆**](/docs/pgsql/admin/db#数据库克隆)。
+您也可以通过 [**`template`**](#template) 参数指定其他模板数据库，实现瞬间 [**数据库克隆**](/docs/pgsql/admin/db#克隆数据库)。
 
 默认情况下，所有业务数据库都会被 1:1 添加到 [**Pgbouncer**](/docs/concept/arch/pgsql#pgbouncer) [**连接池**](#连接池) 中；[**`pg_exporter`**](/docs/concept/arch/pgsql#pg_exporter) 默认会通过 **自动发现** 机制查找所有业务数据库并进行库内对象监控。
 所有数据库也会添加到所有 [**INFRA节点**](/docs/concept/arch/node#infra节点) 上的 [**Grafana**](/docs/concept/arch/infra#grafana) 中，
@@ -742,4 +742,3 @@ mongo                       = host=/var/run/postgresql
 ```
 
 当您 [**创建数据库**](/docs/pgsql/admin/db#创建数据库)时，Pgbouncer 的数据库列表定义文件将会被刷新，并通过在线重载配置的方式生效，正常不会影响现有的连接。
-

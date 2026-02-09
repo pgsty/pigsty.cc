@@ -183,15 +183,15 @@ bin/pgsql-hba pg-test             # 重载 pg-test 的 pg/pgb HBA 规则
 
 **以下管理任务使用到了此剧本**
 
-- [创建集群](/docs/pgsql/admin#创建集群)
-- [添加实例](/docs/pgsql/admin#添加实例)
-- [重载服务](/docs/pgsql/admin#重载服务)
-- [重载HBA](/docs/pgsql/admin#重载hba)
+- [创建集群](/docs/pgsql/admin/cluster#创建集群)
+- [添加实例](/docs/pgsql/admin/cluster#扩容集群)
+- [重载服务](/docs/pgsql/admin/cluster#刷新服务)
+- [重载HBA](/docs/pgsql/admin/cluster#刷新hba)
 
 **注意事项**
 
 * 单独针对某一集群从库执行此剧本时，用户应当确保 **集群主库已经完成初始化！**
-* 扩容完成后，您需要 [重载服务](/docs/pgsql/admin#重载服务) 与 [重载HBA](/docs/pgsql/admin#重载hba)，包装脚本 `bin/pgsql-add` 会自动完成这些任务。
+* 扩容完成后，您需要 [重载服务](/docs/pgsql/admin/cluster#刷新服务) 与 [重载HBA](/docs/pgsql/admin/cluster#刷新hba)，包装脚本 `bin/pgsql-add` 会自动完成这些任务。
 
 集群扩容时，如果 Patroni 拉起从库的时间过长，Ansible 剧本可能会因为超时而中止：
 * 典型错误信息为：`wait for postgres/patroni replica` 任务执行很长时间后中止
@@ -273,13 +273,13 @@ bin/pgsql-rm pg-test 10.10.10.13   # 从集群 pg-test 移除实例 10.10.10.13
 
 **以下管理任务使用到了此剧本**
 
-- [移除实例](/docs/pgsql/admin#移除实例)
-- [下线集群](/docs/pgsql/admin#下线集群)
+- [移除实例](/docs/pgsql/admin/cluster#缩容集群)
+- [下线集群](/docs/pgsql/admin/cluster#销毁集群)
 
 **注意事项**
 
 * **请不要直接对还有从库的集群主库单独执行此剧本**，否则抹除主库后，其余从库会自动触发高可用自动故障切换。总是先下线所有从库后，再下线主库，当一次性下线整个集群时不需要操心此问题。
-* **实例下线后请刷新集群服务**，当您从集群中下线掉某一个从库实例时，它仍然存留于在负载均衡器的配置文件中。因为健康检查无法通过，所以下线后的实例不会对集群产生影响。但您应当在恰当的时间点 [重载服务](/docs/pgsql/admin#重载服务)，确保生产环境与配置清单的一致性。
+* **实例下线后请刷新集群服务**，当您从集群中下线掉某一个从库实例时，它仍然存留于在负载均衡器的配置文件中。因为健康检查无法通过，所以下线后的实例不会对集群产生影响。但您应当在恰当的时间点 [重载服务](/docs/pgsql/admin/cluster#刷新服务)，确保生产环境与配置清单的一致性。
 
 
 
@@ -336,7 +336,7 @@ pg_users:
     pool_connlimit: -1              # 可选，用户级最大连接数
 ```
 
-详情请参考：[管理SOP：创建用户](/docs/pgsql/admin#创建用户)
+详情请参考：[管理SOP：创建用户](/docs/pgsql/admin/user#创建用户)
 
 
 ----------------
@@ -394,7 +394,7 @@ pg_databases:
     pool_size_reserve: 32           # 可选，pgbouncer 保留连接池大小
 ```
 
-详情请参考：[管理SOP：创建数据库](/docs/pgsql/admin#创建数据库)
+详情请参考：[管理SOP：创建数据库](/docs/pgsql/admin/db#创建数据库)
 
 
 ----------------

@@ -67,7 +67,7 @@ Prometheus的监控目标在 `/etc/prometheus/targets/pgsql/` 下的静态文件
 bin/pgmon-rm <cls|ins>    # 从所有infra节点中移除 prometheus 监控目标
 ```
 
-远程 RDS 监控目标会被放置于 `/etc/prometheus/targets/pgrds/<cls>.yml`，它们是由 [`pgsql-monitor.yml`](/docs/pgsql/playbook#pgsql-monitor) 剧本或 `bin/pgmon-add` 脚本所创建的。
+远程 RDS 监控目标会被放置于 `/etc/prometheus/targets/pgrds/<cls>.yml`，它们是由 [`pgsql-monitor.yml`](/docs/pgsql/playbook#pgsql-monitoryml) 剧本或 `bin/pgmon-add` 脚本所创建的。
 
 
 

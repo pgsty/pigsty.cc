@@ -43,15 +43,15 @@ sidebar_root_for: self
 > [描述](/docs/pgsql/config) 你想要的 PostgreSQL 集群
 
 - [身份参数](/docs/concept/model/pgsql#身份参数)：定义PostgreSQL集群的身份参数
-- [读写主库](/docs/pgsql/config#读写主库)：创建由单一主库构成的单实例“集群“
-- [只读从库](/docs/pgsql/config#只读从库)：创建一主一从的两节点基础高可用集群
-- [离线从库](/docs/pgsql/config#离线从库)：创建专用于OLAP/ETL/交互式查询的特殊只读实例
-- [同步备库](/docs/pgsql/config#同步备库)：启用同步提交，以确保没有数据丢失
-- [法定人数](/docs/pgsql/config#法定人数提交)：使用法定人数同步提交以获得更高的一致性级别
-- [备份集群](/docs/pgsql/config#备份集群)：克隆现有集群，并保持同步（异地灾备集群）
-- [延迟集群](/docs/pgsql/config#延迟集群)：克隆现有集群，并延迟重放，用于紧急数据恢复
-- [Citus集群](/docs/pgsql/config#citus集群)：定义并创建 Citus 水平分布式数据库集群
-- [大版本切换](/docs/pgsql/config#大版本切换)：使用不同的PostgreSQL大版本部署集群
+- [读写主库](/docs/pgsql/config/cluster#读写主库)：创建由单一主库构成的单实例“集群“
+- [只读从库](/docs/pgsql/config/cluster#只读从库)：创建一主一从的两节点基础高可用集群
+- [离线从库](/docs/pgsql/config/cluster#离线从库)：创建专用于OLAP/ETL/交互式查询的特殊只读实例
+- [同步备库](/docs/pgsql/config/cluster#同步备库)：启用同步提交，以确保没有数据丢失
+- [法定人数](/docs/pgsql/config/cluster#法定人数提交)：使用法定人数同步提交以获得更高的一致性级别
+- [备份集群](/docs/pgsql/config/cluster#备份集群)：克隆现有集群，并保持同步（异地灾备集群）
+- [延迟集群](/docs/pgsql/config/cluster#延迟集群)：克隆现有集群，并延迟重放，用于紧急数据恢复
+- [Citus集群](/docs/pgsql/config/cluster#citus集群)：定义并创建 Citus 水平分布式数据库集群
+- [大版本切换](/docs/pgsql/config/kernel#大版本与软件包)：使用不同的 PostgreSQL 大版本部署集群
 
 
 ----------------
@@ -60,19 +60,19 @@ sidebar_root_for: self
 
 > [管理](/docs/pgsql/admin) 您所创建的 PostgreSQL 集群。
 
-- [命令速查](/docs/pgsql/admin#命令速查)
-- [创建集群](/docs/pgsql/admin#创建集群)
-- [创建用户](/docs/pgsql/admin#创建用户)
-- [创建数据库](/docs/pgsql/admin#创建数据库)
-- [重载服务](/docs/pgsql/admin#重载服务)
-- [重载HBA](/docs/pgsql/admin#重载hba)
-- [配置集群](/docs/pgsql/admin#配置集群)
-- [添加实例](/docs/pgsql/admin#添加实例)
-- [移除实例](/docs/pgsql/admin#移除实例)
-- [下线集群](/docs/pgsql/admin#下线集群)
-- [主动切换](/docs/pgsql/admin#主动切换)
-- [备份集群](/docs/pgsql/admin#备份集群)
-- [恢复集群](/docs/pgsql/admin#恢复集群)
+- [命令速查](/docs/pgsql/admin/component#命令速查)
+- [创建集群](/docs/pgsql/admin/cluster#创建集群)
+- [创建用户](/docs/pgsql/admin/user#创建用户)
+- [创建数据库](/docs/pgsql/admin/db#创建数据库)
+- [重载服务](/docs/pgsql/admin/cluster#刷新服务)
+- [重载HBA](/docs/pgsql/admin/cluster#刷新hba)
+- [配置集群](/docs/pgsql/admin/cluster#配置集群)
+- [添加实例](/docs/pgsql/admin/cluster#扩容集群)
+- [移除实例](/docs/pgsql/admin/cluster#缩容集群)
+- [下线集群](/docs/pgsql/admin/cluster#销毁集群)
+- [主动切换](/docs/pgsql/admin/patroni#主动切换)
+- [备份集群](/docs/pgsql/admin/cluster#克隆集群)
+- [恢复集群](/docs/pgsql/backup/restore)
 - [疑难杂症](/docs/pgsql/faq/)
 
 
@@ -114,7 +114,7 @@ sidebar_root_for: self
 
 ## 参数
 
-> [PGSQL](/docs/pgsql/param#pgsql) 模块的配置参数列表
+> [PGSQL](/docs/pgsql/param) 模块的配置参数列表
 
 - [`PG_ID`](/docs/pgsql/param#pg_id) : 计算和校验 PostgreSQL 实例身份
 - [`PG_BUSINESS`](/docs/pgsql/param#pg_business) : PostgreSQL业务对象定义
