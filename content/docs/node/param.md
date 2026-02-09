@@ -535,7 +535,8 @@ node_hugepage_count: 0            # number of 2MB hugepage, take precedence over
 node_hugepage_ratio: 0            # node mem hugepage ratio, 0 disable it by default
 node_overcommit_ratio: 0          # node mem overcommit ratio, 0 disable it by default
 node_tune: oltp                   # node tuned profile: none,oltp,olap,crit,tiny
-node_sysctl_params: { }           # sysctl parameters in k:v format in addition to tuned
+node_sysctl_params:               # sysctl parameters in k:v format in addition to tuned
+  fs.nr_open: 8388608
 ```
 
 
@@ -683,7 +684,16 @@ node_kernel_modules: [ softdog, ip_vs, ip_vs_rr, ip_vs_wrr, ip_vs_sh ]
 
 参数名称： `node_sysctl_params`， 类型： `dict`， 层次：`C`
 
-使用 K:V 形式的 sysctl 内核参数，会添加到 `tuned` profile 中，默认值为： `{}` 空对象。
+使用 K:V 形式的 sysctl 内核参数（通过 Ansible `sysctl` 模块写入并立即生效），作为 `tuned` profile 的补充。
+
+默认值为：
+
+```yaml
+node_sysctl_params:
+  fs.nr_open: 8388608
+```
+
+默认设置 `fs.nr_open=8388608` 用于确保内核每进程 FD 上限不小于 Pigsty systemd unit 中的 `LimitNOFILE=8388608`，避免在部分发行版 / systemd 组合上服务启动时 `setrlimit` 失败。
 
 这是一个 KV 结构的字典参数，Key 是内核 `sysctl` 参数名，Value 是参数值。你也可以考虑直接在 `roles/node/templates` 中的 tuned 模板中直接定义额外的 sysctl 参数。
 
@@ -1512,6 +1522,4 @@ Vector 日志读取起始位置，默认值为：`beginning`。
 日志发送目标端点列表，默认值为：`[ infra ]`。
 
 指定将日志发送至哪个节点组的 VictoriaLogs 服务。默认发送至 `infra` 组的节点。
-
-
 
