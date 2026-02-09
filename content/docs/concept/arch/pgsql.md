@@ -85,7 +85,7 @@ PGSQL 模块在生产环境中以 **集群** 的形式组织，这些 **集群**
 - [**pg_exporter**](#pg_exporter) 在 9630 端口对外暴露 [postgres](#postgresql) 监控指标
 - [**pgbouncer_exporter**](#pgbouncer_exporter) 在端口 9631 暴露 [pgbouncer](#pgbouncer) 指标
 - [**pgBackRest**](#pgbackrest) 默认使用本地备份仓库 （`pgbackrest_method` = `local`）
-    - 如果使用 `local`（默认）作为备份仓库，[pgBackRest](#pgbackrest) 将在主库节点的 [`pg_fs_bkup`](/docs/pgsql/param#pg_fs_bkup) 下创建本地仓库
+    - 如果使用 `local`（默认）作为备份仓库，[pgBackRest](#pgbackrest) 将在主库节点的 [`pg_fs_backup`](/docs/pgsql/param#pg_fs_backup) 下创建本地仓库
     - 如果使用 `minio` 作为备份仓库，[pgBackRest](#pgbackrest) 将在专用的 MinIO 集群上创建备份仓库
 - [**Vector**](#vector) 负责收集 Postgres 相关日志（postgres, pgbouncer, patroni, pgbackrest）
     - [vector](#vector) 监听 9598 端口，也对 infra 节点上的 VictoriaMetrics 暴露自身的监控指标
@@ -151,7 +151,7 @@ PGSQL 模块在生产环境中以 **集群** 的形式组织，这些 **集群**
 - **WAL 归档**：持续归档事务日志，支持任意时间点恢复
 
 **存储后端**：
-- `local`（默认）：本地磁盘，备份存储在 [`pg_fs_bkup`](/docs/pgsql/param#pg_fs_bkup) 挂载点
+- `local`（默认）：本地磁盘，备份存储在 [`pg_fs_backup`](/docs/pgsql/param#pg_fs_backup) 挂载点
 - `minio`：S3 兼容对象存储，支持集中化备份管理与异地容灾
 
 **关键交互**：

@@ -85,7 +85,7 @@ Pigsty 使用 [**`PG_ID`**](/docs/pgsql/param#pg_id) 参数组为 PGSQL 模块�
 {.full-width}
 
 因为 Pigsty 采用节点与 PG 实例 1:1 的独占部署模型，因此默认情况下，主机节点的标识符会直接借用 PG 实例的标识符（[**`node_id_from_pg`**](/docs/node/param#node_id_from_pg) ）。
-当然您也可以显式指定 [**`nodename`**](/docs/node/param#nodename) 进行覆盖，或者关闭 [**`nodename_overwrite`**](/docs/node/param#nodename_overview)，直接使用当前默认值。
+当然您也可以显式指定 [**`nodename`**](/docs/node/param#nodename) 进行覆盖，或者关闭 [**`nodename_overwrite`**](/docs/node/param#nodename_overwrite)，直接使用当前默认值。
 
 
 --------
@@ -94,7 +94,7 @@ Pigsty 使用 [**`PG_ID`**](/docs/pgsql/param#pg_id) 参数组为 PGSQL 模块�
 
 当你使用多套 PostgreSQL （**分片** / Sharding）集群服务同一业务时，还会使用到另外两个身份参数：[**`pg_shard`**](/docs/pgsql/param#pg_shard) 与 [**`pg_group`**](/docs/pgsql/param#pg_group)。
 
-在这种情况下，这一组 PostgreSQL 集群将拥有相同的 `pg_shard` 名称，以及各自的 `pg_group` 编号，例如下面的 [**Citus 集群**](/docs/pgsql/config/#citus集群)：
+在这种情况下，这一组 PostgreSQL 集群将拥有相同的 `pg_shard` 名称，以及各自的 `pg_group` 编号，例如下面的 [**Citus 集群**](/docs/pgsql/config/cluster#citus集群)：
 
 在这种情况下，`pg_cluster` 集群名通常由：`{{ pg_shard }}{{ pg_group }}` 组合而成，例如 `pg-citus0`、`pg-citus1` 等。
 
@@ -150,5 +150,4 @@ pg_up{cls="pg-test", ins="pg-test-3", ip="10.10.10.13", job="pgsql"}
 - `funcname`： 函数名，如果一个监控指标属于某个具体的函数，则会带上这个标签。
 - `seqname`： 序列名，如果一个监控指标属于某个具体的序列，则会带上这个标签。
 - `query`： 查询指纹，如果一个监控指标属于某个具体的查询，则会带上这个标签。
-
 

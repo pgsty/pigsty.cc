@@ -893,7 +893,7 @@ nginx_users:
 
 Nginx 默认监听的端口（提供 HTTP 服务），默认为 `80` 端口，最好不要修改这个参数。
 
-当您的服务器 80 端口被占用时，可以考虑修改此参数，但是需要同时修改 [`repo_endpoint`](#repo_endpoint) ，以及 [`node_repo_local_urls`](/docs/node/param#node_repo_local_urls) 所使用的端口并与这里保持一致。
+当您的服务器 80 端口被占用时，可以考虑修改此参数，但需要同时修改 [`repo_endpoint`](#repo_endpoint) 并确保相关节点能够通过新的端口访问本地软件仓库。
 
 
 
@@ -1431,5 +1431,4 @@ Grafana 管理员密码，默认为 `pigsty`。
 Grafana 元数据库 PG 数据源使用的只读用户密码，默认为 `DBUser.Viewer`。
 
 此密码用于 Grafana 连接 PostgreSQL CMDB 数据源，以只读方式查询元数据。
-
 

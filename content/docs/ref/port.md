@@ -32,7 +32,7 @@ categories: [参考]
 |   [**`ETCD`**](/docs/etcd)   |            **`etcd`**            | `2380`  | [**`etcd_peer_port`**](/docs/etcd/param#etcd_peer_port)                      | ✅ 默认启用  |
 |  [**`MINIO`**](/docs/minio)  |           **`minio`**            | `9000`  | [**`minio_port`**](/docs/minio/param#minio_port)                             | ✅ 默认启用  |
 |  [**`MINIO`**](/docs/minio)  |           **`minio`**            | `9001`  | [**`minio_admin_port`**](/docs/minio/param#minio_admin_port)                 | ✅ 默认启用  |
-|  [**`REDIS`**](/docs/redis)  |           **`redis`**            | `6379`  | [**`redis_port`**](/docs/redis/param#redis_port)                             | ⚠️ 按需启用 |
+|  [**`REDIS`**](/docs/redis)  |           **`redis`**            | `6379`  | [**`redis_instances`**](/docs/redis/param#redis_instances)                   | ⚠️ 按需启用 |
 |  [**`REDIS`**](/docs/redis)  |       **`redis_exporter`**       | `9121`  | [**`redis_exporter_port`**](/docs/redis/param#redis_exporter_port)           | ⚠️ 按需启用 |
 | [**`FERRET`**](/docs/ferret) |          **`ferretdb`**          | `27017` | [**`mongo_port`**](/docs/ferret/param#mongo_port)                            | ⚠️ 按需启用 |
 | [**`FERRET`**](/docs/ferret) |      **`ferretdb (TLS)`**        | `27018` | [**`mongo_ssl_port`**](/docs/ferret/param#mongo_ssl_port)                    | ⚠️ 按需启用 |

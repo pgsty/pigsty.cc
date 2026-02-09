@@ -65,8 +65,7 @@ pg-test:
 
 **执行部署和更改时**，使用的管理员用户**必须**对所有节点拥有`ssh`和`sudo`权限。无需密码免密登录。
 
-您可以在执行剧本时通过`-k|-K`
-参数传入ssh和sudo密码，甚至可以通过`-e`[`ansible_host`](/docs/node/param#connect)`=<another_user>`使用另一个用户来运行剧本。
+您可以在执行剧本时通过 `-k|-K` 参数传入 ssh 和 sudo 密码，甚至可以通过 `-e ansible_user=<another_user>` 使用另一个用户来运行剧本。
 
 但是，Pigsty强烈建议为管理员用户配置SSH**无密码登录**以及无密码的`sudo`。
 
@@ -90,7 +89,7 @@ pg-test:
 您可以在配置中中使用 [`haproxy_services`](/docs/node/param#haproxy_services)
 来暴露服务，并使用 `node.yml -t haproxy_config,haproxy_reload` 来更新配置。
 
-以下是使用它暴露MinIO服务的示例：[暴露MinIO服务](/docs/minio#暴露服务)
+以下是使用它暴露MinIO服务的示例：[暴露MinIO服务](/docs/minio/config#服务接入)
 
 
 
