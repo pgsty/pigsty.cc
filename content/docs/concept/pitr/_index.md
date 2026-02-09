@@ -54,7 +54,7 @@ Pigsty 为您提供了基础备份与 WAL 归档的默认配置，您可以使�
 * **RTO**：如果只有单机 + PITR，恢复时长取决于备份大小与网络/磁盘带宽，从十几分钟到几小时，几天不等。
 * **RPO**：如果只有单机 + PITR，宕机时可能丢失少量数据，一个或几个 WAL 日志段文件可能尚未归档，损失 16 MB 到⼏⼗ MB 不等的数据。
 
-除了 [**PITR**](/docs/concept/pitr) 之外，您还可以在 Pigsty 中使用 [**延迟集群**](/docs/pgsql/config#延迟集群) 来解决人为失误或软件缺陷导致的数据误删误改问题。
+除了 [**PITR**](/docs/concept/pitr) 之外，您还可以在 Pigsty 中使用 [**延迟集群**](/docs/pgsql/config/cluster#延迟集群) 来解决人为失误或软件缺陷导致的数据误删误改问题。
 
 
 
@@ -84,7 +84,7 @@ Pigsty 默认在集群主库上启⽤了 WAL 归档，并使⽤ `pgbackrest` 命
 
 pgBackRest 会⾃动管理所需的 WAL ⽂件，并根据备份的保留策略及时清理过期的备份，与其对应的 WAL 归档⽂件。
 
-如果您不需要 PITR 功能，可以通过 [**配置集群**](/docs/pgsql/admin#配置集群)： `archive_mode: off` 来关闭 WAL 归档，移除 [`node_crontab`](/docs/node/param#node_crontab) 来停止定期备份任务。
+如果您不需要 PITR 功能，可以通过 [**配置集群**](/docs/pgsql/admin/cluster#配置集群)： `archive_mode: off` 来关闭 WAL 归档，移除 [`node_crontab`](/docs/node/param#node_crontab) 来停止定期备份任务。
 
 
 

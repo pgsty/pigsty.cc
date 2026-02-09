@@ -60,7 +60,7 @@ cd ~/pigsty      # 进入 Pigsty 目录
 
 |                    项目                     | 要求                           |                   项目                    | 要求                                               |
 |:-----------------------------------------:|:-----------------------------|:---------------------------------------:|:-------------------------------------------------|
-|     [**节点**](/docs/deploy/prepare#节点)     | 至少 `1C2G`，上不封顶               |    [**规格**](/docs/deploy/prepare#规格)    | 多个同质节点，2 / 3 / 4 / 或更多                           |
+|     [**节点**](/docs/deploy/prepare#节点)     | 至少 `1C2G`，上不封顶               |    [**规格**](/docs/deploy/planning#常见方案)    | 多个同质节点，2 / 3 / 4 / 或更多                           |
 |     [**磁盘**](/docs/deploy/prepare#磁盘)     | `/data` 作为默认主挂载点             |   [**FS**](/docs/deploy/prepare#文件系统)   | 推荐使用 `xfs`，按需使用 `ext4` / `zfs`                   |
 |    [**VIP**](/docs/deploy/prepare#vip)    | L2 VIP，可选 （云环境不可用）           |    [**网络**](/docs/deploy/prepare#网络)    | 静态 IPv4 地址，单节点无固定 IP 可使用 `127.0.0.1`             |
 |     [**CA**](/docs/deploy/prepare#ca)     | 可以使用自签名 CA 或指定已有证书           |    [**域名**](/docs/deploy/prepare#域名)    | 本地 / 公网域名，可选，默认 `i.pigsty` 自签名域名                 |
@@ -272,5 +272,4 @@ bin/redis-add  redis-ms     # 初始化 Redis 集群： redis-ms
 
 [**`PGSQL`**](/docs/pgsql/)、[**`INFRA`**](/docs/infra/)、[**`NODE`**](/docs/node/)、[**`ETCD`**](/docs/etcd/)、
 [**`MINIO`**](/docs/minio/)、[**`REDIS`**](/docs/redis/)、[**`FERRET`**](/docs/ferret/)、[**`DOCKER`**](/docs/docker/)……
-
 

@@ -9,7 +9,7 @@ categories: [概念]
 ---
 
 
-Pigsty 遵循 IaC 与 GitOPS 的理念：使用声明式的 [**配置清单**](/docs/setup/config#配置清单) 描述整个环境，并通过 [**幂等剧本**](/docs/setup/playbook) 来实现。
+Pigsty 遵循 IaC 与 GitOPS 的理念：使用声明式的 [**配置清单**](/docs/concept/iac/inventory) 描述整个环境，并通过 [**幂等剧本**](/docs/setup/playbook) 来实现。
 
 用户用声明的方式通过 [**参数**](/docs/ref/param) 来描述自己期望的状态，而剧本则以幂等的方式调整目标节点以达到这个状态。
 这类似于 Kubernetes 的 CRD & Operator，然而 Pigsty 在裸机和虚拟机上，通过 Ansible 实现了这样的功能。
@@ -86,8 +86,8 @@ bin/pgsql-add pg-test   # 创建 pg-test 集群
 
 ![pigsty-iac.jpg](/img/pigsty/iac.jpg)
 
-你可以使用不同的实例角色，例如 [**主库**](/docs/pgsql/config#读写主库)（primary），[**从库**](/docs/pgsql/config#只读从库)（replica），[**离线从库**](/docs/pgsql/config#读写主库)（offline），[**延迟从库**](/docs/pgsql/config#延迟集群)（delayed），[**同步备库**](/docs/pgsql/config#同步备库)（sync standby）；
-以及不同的集群：例如 [**备份集群**](/docs/pgsql/config#备份集群)（Standby Cluster），[**Citus 集群**](/docs/pgsql/config#citus集群)，甚至是 [**Redis**](/docs/redis) / [**MinIO**](/docs/minio) / [**Etcd**](/docs/etcd) 集群
+你可以使用不同的实例角色，例如 [**主库**](/docs/pgsql/config/cluster#读写主库)（primary），[**从库**](/docs/pgsql/config/cluster#只读从库)（replica），[**离线从库**](/docs/pgsql/config/cluster#离线从库)（offline），[**延迟从库**](/docs/pgsql/config/cluster#延迟集群)（delayed），[**同步备库**](/docs/pgsql/config/cluster#同步备库)（sync standby）；
+以及不同的集群：例如 [**备份集群**](/docs/pgsql/config/cluster#备份集群)（Standby Cluster），[**Citus 集群**](/docs/pgsql/config/cluster#citus集群)，甚至是 [**Redis**](/docs/redis) / [**MinIO**](/docs/minio) / [**Etcd**](/docs/etcd) 集群
 
 
 -----------------
@@ -375,6 +375,5 @@ minio:
           - { name: minio-2 ,ip: 10.10.10.11 , port: 9000 , options: 'check-ssl ca-file /etc/pki/ca.crt check port 9000' }
           - { name: minio-3 ,ip: 10.10.10.12 , port: 9000 , options: 'check-ssl ca-file /etc/pki/ca.crt check port 9000' }
 ```
-
 
 

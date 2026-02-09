@@ -274,7 +274,7 @@ b6faad9f92b926546a10f590274f2cb2afff21b9cea878094cfc5caf09e67d2c  pig_0.7.2-1_am
 - 新增环境变量 `PIG_NO_SUDO`，强制不使用 sudo 执行命令
 - [RPM 变更日志](/docs/repo/pgsql/rpm#2025-11-10)：为几乎所有扩展新增 PG 18 支持
 - [DEB 变更日志](/docs/repo/pgsql/deb#2025-11-10)：为几乎所有扩展新增 PG 18 支持
-- [Infra 变更日志](/docs/repo/infra/#2025-11-08)：例行更新至最新版本
+- [Infra 变更日志](/docs/repo/infra/log/)：例行更新至最新版本
 
 **校验和**
 
@@ -574,6 +574,14 @@ v0.1.3，常规更新，现在可用 390 个扩展！
 [**351**](https://pgext.cloud/list) 个 PostgreSQL 扩展，包括强大的 [postgresql-anonymizer 2.0](https://postgresql-anonymizer.readthedocs.io/en/stable/)
 
 发布：https://github.com/pgsty/pig/releases/tag/v0.1.2
+
+------
+
+## v0.1.1
+
+更新扩展列表。
+
+发布：https://github.com/pgsty/pig/releases/tag/v0.1.1
 
 ------
 

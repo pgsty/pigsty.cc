@@ -63,7 +63,7 @@ Pigsty 的监控系统可以独立使用，如果你想安装 Prometheus / Grafa
 它为 [主机节点](https://demo.pigsty.cc/d/node-overview) 和 [PostgreSQL数据库](https://demo.pigsty.cc/d/pgsql-overview) 提供了丰富的仪表盘。
 无论这些节点或 PostgreSQL 服务器是否由 Pigsty 管理，只需简单的配置，你就可以立即拥有生产级的监控和告警系统，并将现有的主机与PostgreSQL纳入监管。
 
-[![pigsty-dashboard.jpg](/img/pigsty/dashboard.jpg)](/docs/pgsql/monitor/dashboard)
+[![pigsty-dashboard.jpg](/img/pigsty/dashboard.jpg)](/docs/pgsql/dashboard/)
 
 
 
@@ -97,4 +97,3 @@ $ bin/pgsql-add pg-test  # 初始化集群 'pg-test'
 这一过程十分丝滑，例如在从库故障，或主动切换（switchover）的情况下，客户端只有一瞬间的当前查询闪断，
 
 软件故障、人为错误和 数据中心级灾难由 pgbackrest 和可选的 [MinIO](/docs/minio) 集群来兜底。这为您提供了本地/云端的 PITR 能力，并在数据中心失效的情况下提供了跨地理区域复制，与异地容灾功能。
-

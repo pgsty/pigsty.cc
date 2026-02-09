@@ -164,7 +164,7 @@ localectl set-locale LANG=en_US.UTF-8
 
 对于 PostgreSQL 来说，我们强烈建议您默认使用 PG 17+ 内置的 `C.UTF-8` 作为默认排序规则。
 
-在 [**配置向导**](/docs/setup/playbook#配置向导) 中如果检测到 PG 版本满足或者操作系统支持，就默认配置 `C.UTF-8` 作为排序规则。
+在 [**配置向导**](/docs/concept/iac/configure) 中如果检测到 PG 版本满足或者操作系统支持，就默认配置 `C.UTF-8` 作为排序规则。
 
 
 
@@ -246,4 +246,3 @@ cd pigsty; git checkout v4.0.0
 wget https://repo.pigsty.cc/src/pigsty-v4.0.0.tgz
 wget https://repo.pigsty.io/src/pigsty-v4.0.0.tgz
 ```
-

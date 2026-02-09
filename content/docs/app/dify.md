@@ -201,7 +201,7 @@ all:
 以下是您需要关注的配置项检查清单：
 
 - 硬件/软件：[准备所需的机器资源](/docs/deploy/prepare)：Linux `x86_64/arm64` 服务器，[主流 Linux 操作系统](/docs/deploy/prepare) 的全新安装
-- 网络/权限：[SSH](/docs/deploy/prepare#ssh) 免密登录访问权限，用户具有 [免密 sudo 权限](/docs/deploy/prepare#user)
+- 网络/权限：[SSH](/docs/deploy/admin#ssh) 免密登录访问权限，用户具有 [免密 sudo 权限](/docs/deploy/admin#sudo)
 - 确保机器在内网中有静态 IPv4 网络地址且可访问互联网
 - 如果通过公网访问，确保您有可用的域名指向当前节点的 **公网 IP 地址**
 - 确保使用 `app/dify` 配置模板并根据需要修改参数

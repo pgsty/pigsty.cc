@@ -134,7 +134,7 @@ auto-compaction-retention: "24h"
 quota-backend-bytes: 17179869184
 ```
 
-然后将所有相关 PostgreSQL 集群设置为 [**维护模式**](/docs/pgsql/admin#) 后，重新使用 `./etcd.yml` 覆盖部署 etcd 集群即可。
+然后将所有相关 PostgreSQL 集群设置为 [**维护模式**](/docs/pgsql/admin/patroni#暂停自动切换) 后，重新使用 `./etcd.yml` 覆盖部署 etcd 集群即可。
 
 该配置会将 etcd 默认的容量配额从 2 GiB 提高到 16 GiB，并确保只保留最近一天的写入历史版本，从而避免了 etcd 数据库大小的无限增长。
 
@@ -271,4 +271,3 @@ export ETCDCTL_KEY=/etc/etcd/server.key
 ```
 
 更多详情请参考 [RBAC 认证](/docs/etcd/admin#rbac-认证)。
-

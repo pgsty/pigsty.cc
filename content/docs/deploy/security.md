@@ -145,7 +145,7 @@ Pigsty 已经提供了开箱即用的 [认证](/docs/pgsql/config/hba) 与 [访�
 
 **记录建立/切断连接的日志**
 - 该配置默认关闭，但在 `crit.yml` 配置模板中是默认启用的。
-- 可以手工 [配置集群](/docs/pgsql/admin#配置集群)，启用 `log_connections` 和 `log_disconnections` 功能参数。
+- 可以手工 [配置集群](/docs/pgsql/admin/cluster#配置集群)，启用 `log_connections` 和 `log_disconnections` 功能参数。
 
 **如果您希望彻底杜绝PG集群在故障转移时脑裂的可能性，请启用watchdog**
 - 如果你的流量走默认推荐的 HAProxy 分发，那么即使你不启用 watchdog，你也不会遇到脑裂的问题。
@@ -175,4 +175,4 @@ Pigsty 已经提供了开箱即用的 [认证](/docs/pgsql/config/hba) 与 [访�
 - 大型生产部署建议设置至少两个基础设施节点互为备份。
 
 **使用足够数量的 etcd 服务器实例，并使用奇数个实例（1,3,5,7）**
-- 查看 [ETCD 管理](/docs/etcd#管理) 了解详细信息。
+- 查看 [ETCD 管理](/docs/etcd/admin) 了解详细信息。

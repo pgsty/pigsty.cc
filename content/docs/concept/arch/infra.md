@@ -249,7 +249,7 @@ Pigsty 预置了 PGSQL、NODE、REDIS 等模块的告警规则，覆盖常见故
 
 [![blackbox](/img/pigsty/blackbox.webp)](https://demo.pigsty.cc/blackbox/)
 
-更多信息请参阅：[**配置：INFRA - BLACKBOX**](/docs/infra/param/#blackbox_exporter)
+更多信息请参阅：[**配置：INFRA - BLACKBOX**](/docs/infra/param#blackbox_enabled)
 
 
 --------
@@ -321,7 +321,7 @@ Chronyd 本质上归属 [**Node 模块**](/docs/node) 管理，但在网络隔�
 
 ### 节点与基础设施是如何耦合的？
 
-普通节点会通过 [**`admin_ip`**](/docs/infra/param/#admin_ip) 参数来引用某个 [**INFRA节点**](#infra节点) 作为它们的基础设施提供者。
+普通节点会通过 [**`admin_ip`**](/docs/infra/param/#admin_ip) 参数来引用某个 [**INFRA节点**](/docs/concept/arch/node#infra节点) 作为它们的基础设施提供者。
 
 例如，当你配置了全局的 `admin_ip = 10.10.10.10`，那么通常意味着所有节点都会使用这个 IP 上的基础设施服务。
 

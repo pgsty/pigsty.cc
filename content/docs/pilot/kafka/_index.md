@@ -132,8 +132,8 @@ kafka-console-consumer.sh --topic test --from-beginning --bootstrap-server local
 
 Pigsty 提供了两个与 KAFKA 模块相关的剧本，分别用于纳管与移除节点。
 
-* [`node.yml`](#nodeyml)：纳管节点，并调整节点到期望的状态
-* [`node-rm.yml`](#node-rmyml)：从 pigsty 中移除纳管节点
+* [`node.yml`](/docs/node/playbook#nodeyml)：纳管节点，并调整节点到期望的状态
+* [`node-rm.yml`](/docs/node/playbook#node-rmyml)：从 pigsty 中移除纳管节点
 
 此外， Pigsty 还提供了两个包装命令工具：`node-add` 与 `node-rm`，用于快速调用剧本。
 
@@ -229,5 +229,4 @@ Pigsty 为 PostgreSQL 提供了一些 Kafka 相关的扩展插件：
 - [**`wal2mongo`**](/docs/pgsql/ext/)，用于从 PostgreSQL 中逻辑解码 WAL 日志，生成 BSON 格式的变更数据
 - [**`decoder_raw`**](/docs/pgsql/ext/)，用于从 PostgreSQL 中逻辑解码 WAL 日志，生成 SQL 格式的变更数据
 - [**`test_decoding`**](/docs/pgsql/ext/)，用于从 PostgreSQL 中逻辑解码 WAL 日志，生成 RAW 格式的变更数据
-
 
