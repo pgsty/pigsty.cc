@@ -33,7 +33,7 @@ menu:
     - identifier: ext
       name: 扩展
       weight: 20
-      url: /ext/
+      url: https://pgext.cloud
       pre: <i class='fa-solid fa-puzzle-piece'></i>
 
 #=======================================#
