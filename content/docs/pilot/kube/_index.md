@@ -9,7 +9,7 @@ categories: [参考]
 
 [Kubernetes](https://kubernetes.io/) 是生产级无状态容器调度编排私有云平台。
 
-Pigsty 提供了原生的 [**`ETCD`**] 集群支持，可以供 Kubernetes 使用，因此也在专业版中提供了 **`KUBE`** 模块，用于部署生产级 Kubernetes 集群。 
+Pigsty 提供了原生的 [**`ETCD`**](/docs/etcd/) 集群支持，可以供 Kubernetes 使用，因此也在专业版中提供了 **`KUBE`** 模块，用于部署生产级 Kubernetes 集群。 
 
 Kubernetes 模块目前仅在 Pigsty Pro 专业版本中提供 Beta 预览，在开源版本中不可用。
 
@@ -39,7 +39,7 @@ Pigsty 在 Infra 仓库中提供了 SealOS 5.0 的 RPM 与 DEB 安装包，可�
 ./node.yml -t node_install -e '{"node_repo_modules":"kube","node_packages":["kubeadm,kubelet,kubectl"]}'
 ```
 
-Kubernetes 支持多种容器运行时，要是用 Containerd 容器运行时，请确保节点上已经安装了 Containerd 软件包。
+Kubernetes 支持多种容器运行时，要使用 Containerd 容器运行时，请确保节点上已经安装了 Containerd 软件包。
 
 ```bash
 ./node.yml -t node_install -e '{"node_repo_modules":"node,docker","node_packages":["containerd.io"]}'
@@ -63,7 +63,13 @@ Kubernetes 支持多种容器运行时，要是用 Containerd 容器运行时，
 
 ## 监控
 
-TBD
+Kubernetes 集群监控通常由集群内的可观测组件（如 kube-prometheus-stack）负责。
+
+Pigsty 侧建议重点监控 Kubernetes 依赖的基础能力：
+
+- [**ETCD 监控告警**](/docs/etcd/monitor/)：控制面元数据一致性与可用性
+- [**NODE 监控告警**](/docs/node/monitor/)：宿主机资源、内核与网络状态
+- [**INFRA 监控告警**](/docs/infra/monitor/)：监控后端、告警链路与观测平台健康度
 
 -------
 
@@ -80,4 +86,3 @@ kube_pod_cidr: "10.11.0.0/16"                                      # kubernetes 
 kube_service_cidr: "10.12.0.0/16"                                  # kubernetes service network cidr
 kube_dashboard_admin_user: dashboard-admin-sa                      # kubernetes dashboard admin user name
 ```
-

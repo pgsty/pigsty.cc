@@ -145,7 +145,7 @@ vi pigsty.yml              # 编辑域名、密码、密钥...
 如果配置无误，大约十分钟后，就可以在本地网络通过 `http://<your_ip_address>:8000` 访问到 Supabase Studio 图形管理界面了。
 默认的用户名与密码分别是： `supabase` 与 `pigsty`。
 
-![](/img/docs/supabase-home.png)
+![](/img/pigsty/supabase.webp)
 
 **注意事项：**
 

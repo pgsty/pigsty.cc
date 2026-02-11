@@ -51,7 +51,7 @@ curl -fsSL https://repo.pigsty.io/get | bash; cd ~/pigsty
 | VSCODE Server | [`http://10.10.10.10/code`](http://10.10.10.10/code)                      |
 | Jupyter Lab   | [`http://10.10.10.10/jupyter`](http://10.10.10.10/jupyter)                |
 | Grafana 大盘    | [`http://10.10.10.10/ui`](http://10.10.10.10/ui)                          |
-| Claude 监控     | [`http://10.10.10.10/ui/d/claude-code`](http://10.10.10.10/d/claude-code) |
+| Claude 监控     | [`http://10.10.10.10/ui/d/claude-code`](http://10.10.10.10/ui/d/claude-code) |
 {.full-width}
 
 > 提示，如果你在公网云服务器上部署，最好看一眼 [**安全建议**](/docs/setup/security)，把密码改了（`configure -g` 即可），[**防火墙打开**](/docs/node/param#node_firewall_mode)。
@@ -111,4 +111,3 @@ export OTEL_EXPORTER_OTLP_METRICS_ENDPOINT=http://10.10.10.10:8428/opentelemetry
 export OTEL_EXPORTER_OTLP_LOGS_ENDPOINT=http://10.10.10.10:9428/insert/opentelemetry/v1/logs    # 日志端点，打入 VictoriaLogs
 export OTEL_EXPORTER_OTLP_METRICS_TEMPORALITY_PREFERENCE=cumulative
 ```
-

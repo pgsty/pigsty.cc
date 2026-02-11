@@ -448,7 +448,7 @@ psql -h <host> -p 5432 -U <user> -d <db> -c "SELECT 1"
 
 ## 相关文档
 
-- [**HBA 管理**](/docs/pgsql/admin/hba/)：HBA 规则的日常管理操作与故障排查
+- [**HBA 管理**](/docs/pgsql/misc/hba/)：HBA 规则的日常管理操作与故障排查
 - [**用户配置**](/docs/pgsql/config/user/)：用户与角色配置
 - [**访问控制**](/docs/pgsql/config/acl/)：角色体系与权限模型
 - [**安全与合规**](/docs/concept/sec/)：PostgreSQL 集群的安全特性
