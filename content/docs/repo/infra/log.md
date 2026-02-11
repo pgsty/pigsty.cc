@@ -45,7 +45,7 @@ categories: [参考]
 | `pg_exporter`                | 1.1.2          | 1.2.0          |    |
 | `grafana`                    | 12.3.1         | 12.3.2         |    |
 | `pig`                        | 1.0.0          | 1.1.0          |    |
-| `cloudflared`                | 2026.1.1       | 2026.2.1       |    |
+| `cloudflared`                | 2026.1.1       | 2026.2.0       |    |
 {.stretch-last}
 
 -------
