@@ -201,3 +201,520 @@
   width: 100%;
   margin: 1.5rem 0;
 }
+
+// =============================================================================
+// Extensions (content/ext) - Reusable styles
+//
+// Goal:
+// - Keep markdown/HTML clean (no inline styles)
+// - Provide semantic classes for: category, license, language, repo, flags, etc.
+// - Aesthetic close to Tailwind / Mintlify (subtle, pastel, not "rainbow blobs")
+// - Work in both light/dark (Docsy uses Bootstrap 5 `data-bs-theme`)
+// =============================================================================
+
+.td-content {
+  // ---- Design tokens (scoped to content) -----------------------------------
+  --ext-radius: 0.75rem;
+  --ext-radius-sm: 0.55rem;
+  --ext-border: color-mix(in srgb, var(--bs-body-color) 12%, transparent);
+  --ext-surface: color-mix(in srgb, var(--bs-body-bg) 94%, var(--bs-body-color) 3%);
+  --ext-surface-2: color-mix(in srgb, var(--bs-body-bg) 90%, var(--bs-body-color) 4%);
+  --ext-muted: color-mix(in srgb, var(--bs-body-color) 58%, transparent);
+
+  --ext-shadow: 0 1px 0 rgba(0, 0, 0, 0.04), 0 12px 30px rgba(0, 0, 0, 0.08);
+  --ext-shadow-hover: 0 1px 0 rgba(0, 0, 0, 0.04), 0 18px 45px rgba(0, 0, 0, 0.12);
+
+  // ---- Badge ----------------------------------------------------------------
+  .ext-badge {
+    --ext-accent: var(--bs-body-color);
+    --ext-badge-bg: color-mix(in srgb, var(--ext-accent) 12%, var(--bs-body-bg));
+    --ext-badge-fg: color-mix(in srgb, var(--ext-accent) 82%, var(--bs-body-color));
+    --ext-badge-border: color-mix(in srgb, var(--ext-accent) 26%, transparent);
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.22em 0.55em;
+    font-size: 0.78em;
+    font-weight: 650;
+    line-height: 1.15;
+    border-radius: var(--ext-radius-sm);
+    white-space: nowrap;
+
+    color: var(--ext-badge-fg);
+    background: var(--ext-badge-bg);
+    border: 1px solid var(--ext-badge-border);
+    text-decoration: none;
+    vertical-align: baseline;
+
+    transition: transform 120ms ease, box-shadow 120ms ease, background-color 120ms ease, border-color 120ms ease;
+  }
+
+  a.ext-badge:hover {
+    color: var(--ext-badge-fg);
+    text-decoration: none;
+    transform: translateY(-1px);
+    box-shadow: var(--ext-shadow);
+    background: color-mix(in srgb, var(--ext-accent) 16%, var(--bs-body-bg));
+    border-color: color-mix(in srgb, var(--ext-accent) 30%, transparent);
+  }
+
+  .ext-badge--mono { font-variant-numeric: tabular-nums; }
+
+  // ---- Chip (dependency links etc.) ----------------------------------------
+  .ext-chip {
+    --ext-chip-bg: var(--ext-surface);
+    --ext-chip-fg: var(--bs-body-color);
+    --ext-chip-border: var(--ext-border);
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.18em 0.45em;
+    font-size: 0.82em;
+    line-height: 1.2;
+    border-radius: 0.45rem;
+    white-space: nowrap;
+    margin: 0.12em 0.15em;
+
+    color: var(--ext-chip-fg);
+    background: var(--ext-chip-bg);
+    border: 1px solid var(--ext-chip-border);
+    text-decoration: none;
+
+    transition: transform 120ms ease, background-color 120ms ease, border-color 120ms ease, box-shadow 120ms ease;
+  }
+
+  a.ext-chip:hover {
+    color: var(--ext-chip-fg);
+    text-decoration: none;
+    transform: translateY(-1px);
+    background: var(--ext-surface-2);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  }
+
+  // ---- Flags (Yes/No/Maybe) -------------------------------------------------
+  .ext-flag {
+    @extend .ext-badge;
+    font-size: 0.78em;
+    padding: 0.22em 0.55em;
+  }
+  .ext-flag--yes { --ext-accent: #16a34a; }
+  .ext-flag--no { --ext-accent: #64748b; }
+  .ext-flag--warn { --ext-accent: #d97706; }
+  .ext-flag--na { --ext-accent: #94a3b8; }
+
+  // ---- PG Version pills (compatibility list) --------------------------------
+  .ext-pgver {
+    --ext-accent: #64748b;
+    --ext-pgver-bg: color-mix(in srgb, var(--ext-accent) 10%, var(--bs-body-bg));
+    --ext-pgver-fg: color-mix(in srgb, var(--ext-accent) 82%, var(--bs-body-color));
+    --ext-pgver-border: color-mix(in srgb, var(--ext-accent) 26%, transparent);
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 1.9em;
+    padding: 0.12em 0.35em;
+    font-size: 0.75em;
+    font-weight: 750;
+    line-height: 1.15;
+    border-radius: 0.4rem;
+    white-space: nowrap;
+    margin: 0 2px;
+
+    color: var(--ext-pgver-fg);
+    background: var(--ext-pgver-bg);
+    border: 1px solid var(--ext-pgver-border);
+  }
+  .ext-pgver--ok { --ext-accent: #16a34a; }
+  .ext-pgver--na {
+    --ext-accent: #94a3b8;
+    border-style: dashed;
+    opacity: 0.9;
+  }
+
+  // ---- Cards (Repo / Source) ------------------------------------------------
+  .ext-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 0.9rem;
+    margin: 1rem 0 1.5rem;
+  }
+
+  .ext-card {
+    --ext-accent: var(--bs-link-color);
+
+    position: relative;
+    display: block;
+    padding: 0.95rem 1rem 0.95rem 1.1rem;
+    border-radius: var(--ext-radius);
+    border: 1px solid var(--ext-border);
+    background: var(--bs-body-bg);
+    text-decoration: none;
+    color: var(--bs-body-color);
+    overflow: hidden;
+
+    transition: transform 150ms ease, box-shadow 150ms ease, border-color 150ms ease, background-color 150ms ease;
+  }
+
+  .ext-card::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: color-mix(in srgb, var(--ext-accent) 45%, transparent);
+    pointer-events: none;
+  }
+
+  .ext-card::before {
+    content: "";
+    position: absolute;
+    top: -65px;
+    right: -85px;
+    width: 220px;
+    height: 220px;
+    background: radial-gradient(circle, color-mix(in srgb, var(--ext-accent) 18%, transparent) 0%, transparent 62%);
+    pointer-events: none;
+  }
+
+  .ext-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--ext-shadow-hover);
+    border-color: color-mix(in srgb, var(--ext-accent) 30%, var(--ext-border));
+  }
+
+  .ext-card__kicker {
+    font-size: 0.78em;
+    font-weight: 750;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ext-muted);
+  }
+
+  .ext-card__title {
+    margin-top: 0.35rem;
+    font-weight: 750;
+    line-height: 1.2;
+  }
+
+  .ext-card__desc {
+    margin-top: 0.35rem;
+    font-size: 0.92em;
+    color: var(--ext-muted);
+    word-break: break-word;
+    font-family: var(--bs-font-monospace);
+  }
+
+  .ext-card--repo { --ext-accent: #64748b; }
+  .ext-card--source { --ext-accent: #2563eb; }
+
+  // ---- Top cards (Docsy card shortcode) ------------------------------------
+  // Prefer Docsy's built-in `card`/`cardpane` shortcode, but keep a cohesive
+  // "ext" look by scoping light restyling under `.ext-topcards`.
+  .ext-topcards {
+    margin: 1rem 0 1.25rem;
+  }
+
+  .ext-topcards .td-card-group {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 0.9rem;
+    margin: 0;
+    margin-bottom: 0 !important; // override Bootstrap `mb-4` class on the shortcode wrapper
+  }
+
+  .ext-topcards .td-card {
+    margin: 0 !important; // override `me-4` from shortcode
+    border-radius: var(--ext-radius);
+    border-color: var(--ext-border) !important;
+    overflow: hidden;
+
+    transition: transform 150ms ease, box-shadow 150ms ease, border-color 150ms ease, background-color 150ms ease;
+  }
+
+  .ext-topcards .td-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--ext-shadow-hover);
+    border-color: color-mix(in srgb, var(--bs-link-color) 24%, var(--ext-border)) !important;
+  }
+
+  .ext-topcards .td-card .card-header {
+    background: var(--ext-surface);
+    border-bottom: 1px solid var(--ext-border);
+    font-weight: 750;
+    letter-spacing: 0.02em;
+  }
+
+  .ext-topcards .td-card .card-title a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .ext-topcards .td-card .card-text {
+    margin-bottom: 0;
+  }
+
+  .ext-topcards .ext-cardlink {
+    text-decoration: none;
+  }
+
+  .ext-topcards .ext-cardlink code {
+    display: inline-block;
+    font-family: var(--bs-font-monospace);
+    word-break: break-word;
+    color: var(--ext-muted);
+  }
+
+  // ---- OS/Arch pill ---------------------------------------------------------
+  .ext-os {
+    --ext-os-bg: var(--ext-surface);
+    --ext-os-fg: var(--bs-body-color);
+    --ext-os-border: var(--ext-border);
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.18em 0.45em;
+    font-size: 0.82em;
+    line-height: 1.2;
+    border-radius: 0.45rem;
+    white-space: nowrap;
+    font-family: var(--bs-font-monospace);
+
+    color: var(--ext-os-fg);
+    background: var(--ext-os-bg);
+    border: 1px solid var(--ext-os-border);
+    text-decoration: none;
+
+    transition: transform 120ms ease, background-color 120ms ease, border-color 120ms ease, box-shadow 120ms ease;
+  }
+
+  a.ext-os:hover {
+    color: var(--ext-os-fg);
+    text-decoration: none;
+    transform: translateY(-1px);
+    background: var(--ext-surface-2);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  }
+
+  // ---- Availability cell ----------------------------------------------------
+  .ext-avail__pkg {
+    --ext-accent: var(--bs-link-color);
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.18em 0.45em;
+    font-size: 0.84em;
+    font-weight: 750;
+    line-height: 1.2;
+    border-radius: 0.55rem;
+    white-space: nowrap;
+    font-family: var(--bs-font-monospace);
+
+    color: color-mix(in srgb, var(--ext-accent) 92%, var(--bs-body-color));
+    background: color-mix(in srgb, var(--ext-accent) 12%, var(--bs-body-bg));
+    border: 1px solid color-mix(in srgb, var(--ext-accent) 24%, transparent);
+    text-decoration: none;
+
+    transition: transform 120ms ease, box-shadow 120ms ease, background-color 120ms ease, border-color 120ms ease;
+  }
+
+  a.ext-avail__pkg:hover {
+    color: color-mix(in srgb, var(--bs-link-color) 92%, var(--bs-body-color));
+    text-decoration: none;
+    transform: translateY(-1px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    background: color-mix(in srgb, var(--bs-link-color) 16%, var(--bs-body-bg));
+    border-color: color-mix(in srgb, var(--bs-link-color) 30%, transparent);
+  }
+
+  .ext-avail__meta {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    margin-top: 0.35rem;
+  }
+
+  .ext-avail__ver {
+    font-size: 0.88em;
+    font-family: var(--bs-font-monospace);
+    font-variant-numeric: tabular-nums;
+    color: var(--ext-muted);
+  }
+
+  .ext-avail__na {
+    display: inline-block;
+    padding: 0.18em 0.45em;
+    font-size: 0.84em;
+    border-radius: 0.55rem;
+    border: 1px dashed var(--ext-border);
+    color: var(--ext-muted);
+    font-family: var(--bs-font-monospace);
+  }
+
+  // ---- Tabs (Bootstrap tabpane, restyled) -----------------------------------
+  .ext-tabs {
+    margin: 1rem 0 1.25rem;
+  }
+
+  .ext-tabs .nav-tabs {
+    border-bottom: 1px solid var(--ext-border);
+    gap: 0.25rem;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .ext-tabs .nav-tabs .nav-link {
+    border: 0;
+    border-bottom: 2px solid transparent;
+    background: transparent;
+    color: var(--ext-muted);
+    font-weight: 700;
+    padding: 0.55rem 0.75rem;
+    border-radius: 0.7rem 0.7rem 0 0;
+    white-space: nowrap;
+
+    transition: color 120ms ease, background-color 120ms ease, border-color 120ms ease;
+  }
+
+  .ext-tabs .nav-tabs .nav-link:hover:not(.disabled) {
+    color: var(--bs-body-color);
+    background: var(--ext-surface);
+  }
+
+  .ext-tabs .nav-tabs .nav-link.active {
+    color: color-mix(in srgb, var(--bs-link-color) 90%, var(--bs-body-color));
+    background: var(--bs-body-bg);
+    border-bottom-color: var(--bs-link-color);
+  }
+
+  .ext-tabs .tab-content { padding-top: 0.85rem; }
+
+  // ---- Meta tables (optional, add {.ext-table}) ------------------------------
+  table.ext-table {
+    width: 100% !important;
+    max-width: 100% !important;
+    display: table;
+    border-collapse: separate;
+    border-spacing: 0;
+    overflow: hidden;
+    border-radius: var(--ext-radius);
+    background: var(--bs-body-bg);
+    border: 1px solid var(--ext-border);
+    margin: 0.9rem 0 1.25rem;
+
+    thead th {
+      background: var(--ext-surface);
+      font-weight: 700;
+      font-size: 0.92em;
+    }
+
+    th,
+    td {
+      vertical-align: middle;
+      border-bottom: 1px solid var(--ext-border);
+    }
+
+    tbody tr:last-child td { border-bottom: 0; }
+
+    td,
+    th {
+      padding: 0.65rem 0.75rem;
+    }
+
+    tbody tr:hover td {
+      background: color-mix(in srgb, var(--bs-body-bg) 92%, var(--bs-body-color) 2%);
+    }
+  }
+
+  table.ext-table.ext-table--rel {
+    table-layout: fixed;
+
+    th:first-child,
+    td:first-child {
+      width: 9.5rem;
+      white-space: nowrap;
+    }
+  }
+
+  table.ext-table.ext-table--matrix {
+    td,
+    th { padding: 0.55rem 0.6rem; }
+  }
+
+  table.ext-table.ext-table--avail {
+    td { vertical-align: top; }
+
+    th:first-child,
+    td:first-child,
+    th:nth-child(2),
+    td:nth-child(2) {
+      width: 1%;
+      white-space: nowrap;
+    }
+  }
+
+  table.ext-table.ext-table--download {
+    td,
+    th { padding: 0.55rem 0.65rem; }
+  }
+
+  // ---- Semantic accents ------------------------------------------------------
+  .ext-badge--cate { letter-spacing: 0.02em; }
+  .ext-badge--repo { letter-spacing: 0.02em; }
+  .ext-badge--license { font-variant-numeric: tabular-nums; }
+  .ext-badge--lang { letter-spacing: 0.01em; }
+  .ext-badge--avail { --ext-accent: #2563eb; }
+
+  // Category (function group): TIME / GIS / RAG / ...
+  .ext-cate--time,  .ext-badge--cate.time  { --ext-accent: #0ea5e9; }
+  .ext-cate--gis,   .ext-badge--cate.gis   { --ext-accent: #16a34a; }
+  .ext-cate--rag,   .ext-badge--cate.rag   { --ext-accent: #7c3aed; }
+  .ext-cate--fts,   .ext-badge--cate.fts   { --ext-accent: #e11d48; }
+  .ext-cate--olap,  .ext-badge--cate.olap  { --ext-accent: #f97316; }
+  .ext-cate--feat,  .ext-badge--cate.feat  { --ext-accent: #0f766e; }
+  .ext-cate--lang,  .ext-badge--cate.lang  { --ext-accent: #6366f1; }
+  .ext-cate--type,  .ext-badge--cate.type  { --ext-accent: #0891b2; }
+  .ext-cate--util,  .ext-badge--cate.util  { --ext-accent: #475569; }
+  .ext-cate--func,  .ext-badge--cate.func  { --ext-accent: #2563eb; }
+  .ext-cate--admin, .ext-badge--cate.admin { --ext-accent: #dc2626; }
+  .ext-cate--stat,  .ext-badge--cate.stat  { --ext-accent: #7c3aed; }
+  .ext-cate--sec,   .ext-badge--cate.sec   { --ext-accent: #ea580c; }
+  .ext-cate--fdw,   .ext-badge--cate.fdw   { --ext-accent: #334155; }
+  .ext-cate--sim,   .ext-badge--cate.sim   { --ext-accent: #d97706; }
+  .ext-cate--etl,   .ext-badge--cate.etl   { --ext-accent: #52525b; }
+
+  // Repo/Channel (PGDG / Pigsty / Contrib / Timescale / ...)
+  .ext-repo--pgdg,      .ext-badge--repo.pgdg      { --ext-accent: #336791; }
+  .ext-repo--pigsty,    .ext-badge--repo.pigsty    { --ext-accent: #0f766e; }
+  .ext-repo--contrib,   .ext-badge--repo.contrib   { --ext-accent: #64748b; }
+  .ext-repo--timescale, .ext-badge--repo.timescale { --ext-accent: #f97316; }
+
+  // License (Apache/MIT/PostgreSQL/GPL/Timescale/...)
+  .ext-license--apache20,  .ext-badge--license.apache20  { --ext-accent: #dc2626; }
+  .ext-license--mit,       .ext-badge--license.mit       { --ext-accent: #16a34a; }
+  .ext-license--postgres,  .ext-badge--license.postgres  { --ext-accent: #336791; }
+  .ext-license--bsd,       .ext-badge--license.bsd       { --ext-accent: #64748b; }
+  .ext-license--gpl20,     .ext-badge--license.gpl20     { --ext-accent: #7c3aed; }
+  .ext-license--gpl30,     .ext-badge--license.gpl30     { --ext-accent: #6d28d9; }
+  .ext-license--agpl30,    .ext-badge--license.agpl30    { --ext-accent: #9333ea; }
+  .ext-license--timescale, .ext-badge--license.timescale { --ext-accent: #f97316; }
+
+  // Language (C / SQL / Rust / ...)
+  .ext-lang--c,    .ext-badge--lang.c    { --ext-accent: #334155; }
+  .ext-lang--sql,  .ext-badge--lang.sql  { --ext-accent: #0ea5e9; }
+  .ext-lang--rust, .ext-badge--lang.rust { --ext-accent: #b45309; }
+  .ext-lang--py,   .ext-badge--lang.py   { --ext-accent: #2563eb; }
+}
+
+[data-bs-theme="dark"] .td-content {
+  --ext-shadow: 0 1px 0 rgba(0, 0, 0, 0.25), 0 14px 32px rgba(0, 0, 0, 0.35);
+  --ext-shadow-hover: 0 1px 0 rgba(0, 0, 0, 0.25), 0 20px 52px rgba(0, 0, 0, 0.55);
+}

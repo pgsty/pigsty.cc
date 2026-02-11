@@ -30,6 +30,11 @@ menu:
       weight: 10
       url: /docs/
       pre: <i class='fa-solid fa-book'></i>
+    - identifier: ext
+      name: 扩展
+      weight: 20
+      url: /ext/
+      pre: <i class='fa-solid fa-puzzle-piece'></i>
 
 #=======================================#
 # Taxonomies Support

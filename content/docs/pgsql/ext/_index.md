@@ -2,6 +2,8 @@
 title: 扩展插件
 weight: 2100
 description: 利用 PostgreSQL 扩展的协同超能力
+aliases:
+  - /ext/
 icon: fas fa-puzzle-piece
 module: [PGSQL]
 categories: [参考]
@@ -23,5 +25,4 @@ pg-meta:
     pg_extensions: [ postgis, timescaledb, pgvector ]  # 安装：安装扩展软件包
 ```
 
-![](/img/pigsty/ecosystem.gif)
-
+![](/img/pigsty/ecosystem.png)

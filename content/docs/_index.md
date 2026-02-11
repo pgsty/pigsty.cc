@@ -18,7 +18,7 @@ linkTitle: 文档
 
 [**关于**](/docs/about/)：[功能特性](/docs/about/feature) | [历史沿革](/docs/about/history) | [活动新闻](/docs/about/event) | [加入社区](/docs/about/community) | [隐私政策](/docs/about/privacy) | [开源协议](/docs/about/license) | [赞助我们](/docs/about/sponsor) | [服务订阅](/docs/about/service)
 
-[**概念**](/docs/concept/)：[系统架构](/docs/concept/arch) | [集群模型](/docs/concept/model) | [监控系统](/docs/concept/monitor)  | [监控系统](/docs/concept/monitor) | [IaC](/docs/concept/iac) | [HA](/docs/concept/ha) | [PITR](/docs/concept/pitr) | [服务接入](/docs/pgsql/misc/svc) | [安全加固](/docs/concept/sec)
+[**概念**](/docs/concept/)：[系统架构](/docs/concept/arch) | [集群模型](/docs/concept/model) | [监控系统](/docs/concept/monitor) | [IaC](/docs/concept/iac) | [HA](/docs/concept/ha) | [PITR](/docs/concept/pitr) | [服务接入](/docs/pgsql/misc/svc) | [安全加固](/docs/concept/sec)
 
 [**上手**](/docs/setup/)：[单机安装](/docs/setup/install) | [离线安装](/docs/setup/offline) | [资源准备](/docs/deploy/prepare) | [声明配置](/docs/setup/config) | [执行剧本](/docs/setup/playbook) | [安全考量](/docs/setup/security) | [常见问题](/docs/pgsql/faq)
 
@@ -27,4 +27,3 @@ linkTitle: 文档
 [**参考**](/docs/ref/)：[操作系统](/docs/ref/linux) | [扩展列表](https://pgext.cloud/zh/list) | [文件结构](/docs/ref/fhs) | [同类产品](/docs/about/compare) | [成本参考](/docs/about/compare/cost) | [应用模板](/docs/app/) | [配置模板](/docs/conf/)
 
 [**模块**](/docs/ref/module)：[PGSQL](/docs/pgsql) | [INFRA](/docs/infra) | [NODE](/docs/node) | [ETCD](/docs/etcd) | [MINIO](/docs/minio) | [REDIS](/docs/redis) | [FERRET](/docs/ferret) | [DOCKER](/docs/docker) | [PILOT](/docs/pilot)
-
