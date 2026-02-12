@@ -47,7 +47,7 @@ curl -fsSL https://repo.pigsty.cc/pig | bash -s 1.0.0
 
 ## 发布页下载
 
-你也可以直接从 Pigsty 仓库下载 `pig` 安装包（`RPM`/`DEB`/ 压缩包）：[GitHub 最新版本发布页](https://github.com/pgsty/pig/releases/latest)
+你也可以直接从 Pigsty 仓库下载 `pig` 安装包（`RPM`/`DEB`/ 压缩包）：[GitHub v1.0.0 稳定版发布页](https://github.com/pgsty/pig/releases/tag/v1.0.0)
 
 ```
 latest
@@ -135,4 +135,3 @@ go get -u; go build
 ```
 
 所有 RPM / DEB 包都通过 GitHub CI/CD 流程使用 goreleaser 自动化构建。
-

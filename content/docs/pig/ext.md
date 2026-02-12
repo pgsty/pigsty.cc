@@ -52,7 +52,7 @@ Examples:
 
 ```bash
 pig repo add pgdg pigsty -u    # 温和方式添加 pgdg 和 pigsty 仓库
-pig repo set -u                # 粗暴方式移除并添加所有所需仓库
+pig repo set                   # 粗暴方式移除并添加所有所需仓库
 ```
 
 然后你可以搜索并安装 PostgreSQL 扩展：
@@ -96,7 +96,6 @@ pig ext install pg18          # 安装 PostgreSQL 18 内核（除 devel 包）
 ```bash
 pig ext list                     # 列出所有扩展
 pig ext list duck                # 搜索包含 "duck" 的扩展
-pig ext list vector ai           # 搜索多个关键词
 pig ext list -v 17               # 按 PG 版本筛选
 pig ext ls olap                  # 列出 olap 类别扩展
 pig ext ls gis -v 16             # 列出 PG 16 的 GIS 类扩展
@@ -199,18 +198,16 @@ pig ext install pg14-main -y     # 安装 pg 14 + 常用扩展（vector, repack,
 
 - `-v|--version`：指定 PG 大版本
 - `-y|--yes`：自动确认安装
-- `-n|--no-translation`：禁用别名翻译
 
 
 ## ext rm
 
-移除一个或多个 PostgreSQL 扩展。也可以使用别名 `pig remove`。
+移除一个或多个 PostgreSQL 扩展。
 
 ```bash
 pig ext rm pg_duckdb             # 移除 pg_duckdb
 pig ext rm pg_duckdb -v 17       # 移除 PG 17 版本
 pig ext rm pgvector -y           # 自动确认移除
-pig remove pg_duckdb             # 使用别名
 ```
 
 
@@ -266,4 +263,3 @@ pig ext reload                   # 刷新扩展目录
 ```
 
 更新后的文件会放置于 `~/.pig/extension.csv` 中。
-

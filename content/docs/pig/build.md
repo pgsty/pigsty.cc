@@ -14,7 +14,7 @@ pig build - Build Postgres Extension
 
 Environment Setup:
   pig build spec                   # init build spec and directory (~ext)
-  pig build repo                   # init build repo (=repo set -ru)
+  pig build repo                   # init build repo (=repo set, with remove+update)
   pig build tool  [mini|full|...]  # init build toolset
   pig build rust  [-y]             # install Rust toolchain
   pig build pgrx  [-v <ver>]       # install & init pgrx (0.16.1)
@@ -123,7 +123,7 @@ pig build spec                   # 在默认位置初始化 ~/ext
 初始化构建扩展所需的包仓库。
 
 ```bash
-pig build repo                   # 等同于：pig repo set -ru
+pig build repo                   # 等同于：pig repo set（内部执行 remove+update）
 ```
 
 **功能：** 移除现有仓库、添加所有必需仓库（pgdg、pigsty、node）、更新包缓存。
@@ -153,7 +153,7 @@ pig build tool rust              # 添加 Rust 开发工具
 
 ```bash
 pig build rust                   # 带确认安装
-pig build rust -y                # 自动确认安装
+pig build rust -y                # 强制重新安装 Rust 工具链
 ```
 
 **安装内容：** Rust 编译器（rustc）、Cargo 包管理器、Rust 标准库、开发工具。
@@ -253,7 +253,7 @@ sudo dpkg -i ~/pg_partman*.deb                         # Debian
 # 1. 设置 Rust 环境
 pig build spec
 pig build tool
-pig build rust -y
+pig build rust                   # 如需强制重装可追加 -y
 pig build pgrx
 
 # 2. 构建 Rust 扩展
@@ -342,4 +342,3 @@ cargo pgrx init
 | plpython3 | C | 中等 | 中等 | Python 开发 |
 | pgrx 扩展 | Rust | 慢 | 复杂 | Rust、PGRX |
 {.full-width}
-

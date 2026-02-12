@@ -77,7 +77,6 @@ pig sty init 3                 # 获取并安装指定主版本 v3 最新
 
 ```bash
 pig sty boot                     # 安装 Ansible
-pig sty boot -y                  # 自动确认
 pig sty boot -r china            # 使用中国区域镜像
 pig sty boot -k                  # 保留已有仓库
 pig sty boot -p /path/to/pkg     # 指定离线包路径
@@ -157,4 +156,3 @@ pig sty list                     # 列出可用版本
 pig sty get                      # 下载最新版本
 pig sty get v3.4.0               # 下载指定版本
 ```
-

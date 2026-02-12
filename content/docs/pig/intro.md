@@ -19,20 +19,13 @@ Pig 并非重复造轮子，而是充分利用系统原生包管理器（APT、Y
 你无需在"标准做法"与"快捷方式"之间权衡；Pig 尊重现有仓库，遵循操作系统最佳实践，与现有仓库和软件包和谐共存。
 如果你的 Linux 系统和 PostgreSQL 大版本不在 [支持的列表](#linux-兼容性) 中，你还可以使用 [`pig build`](/docs/pig/build/) 直接针对特定组合编译扩展。
 
-想让你的 Postgres 如虎添翼、远离繁琐？欢迎访问 [PIG 官方文档](https://pig.pgsty.com) 获取文档、指南，并查阅庞大的 [扩展列表](https://pgext.cloud/zh/list)，
+想让你的 Postgres 如虎添翼、远离繁琐？欢迎访问 [PIG 官方文档](https://pigsty.cc/docs/pig) 获取文档、指南，并查阅庞大的 [扩展列表](https://pgext.cloud/zh/list)，
 让你的本地 Postgres 数据库一键进化为全能的多模态数据中台。
 如果说 [Postgres 的未来是无可匹敌的可扩展性](https://medium.com/@fengruohang/postgres-is-eating-the-database-world-157c204dcfc4)，那么 Pig 就是帮你解锁它的神灯。毕竟，从没有人抱怨 "扩展太多"。
 
-## Agentic Native CLI
+## 自动化友好
 
-PIG 从设计上面向 AI 代理与自动化：全局 `-o|--output` 可切换文本与结构化输出（`yaml` / `json` / `json-pretty`），
-并提供命令能力发现所需的 **能力地图** 与 **命令 Schema**。
-
-```bash
-pig --help -o yaml        # 输出能力地图（Capability Map）
-pig ext --help -o json    # 输出命令 Schema
-pig repo list -o yaml     # 结构化结果：success / code / message / data
-```
+PIG 的命令体系可直接用于自动化脚本：参数风格统一、输出稳定，并在高风险操作中提供 `--dry-run` 或确认步骤，减少误操作风险。
 
 
 > 《[ANNOUNCE pig: The Postgres Extension Wizard](https://www.postgresql.org/about/news/announce-pig-the-postgres-extension-wizard-2988/)》

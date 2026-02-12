@@ -41,7 +41,7 @@ Database Maintenance:
   pig pg repack   [db] [-a] [-t table]      repack tables (online rebuild)
 
 Utilities:
-  pig pg log <list|tail|cat|less|grep>      view PostgreSQL logs
+  pig pg log <list|tail|cat|less>           view PostgreSQL logs
 ```
 
 ## 命令概览
@@ -88,8 +88,9 @@ Utilities:
 | `pg log tail` | `t, f` | 实时查看日志 | tail -f |
 | `pg log cat` | `c` | 输出日志内容 | |
 | `pg log less` | `vi, v` | 用 less 查看 | |
-| `pg log grep` | `g, search` | 搜索日志 | |
 {.full-width}
+
+> `v1.0.0` 已知问题：`pig pg log grep` 存在参数冲突导致不可用。可使用 `pig pg log cat | grep PATTERN` 作为替代。
 
 **服务子命令**（`pg svc`）：
 
@@ -127,8 +128,8 @@ pig pg repack mydb                # 在线重整数据库
 
 # 日志查看
 pig pg log tail                   # 实时查看最新日志
-pig pg log grep ERROR             # 搜索错误日志
 pig pg log list --log-dir /var/log/pg  # 使用自定义日志目录
+pig pg log cat | grep ERROR       # 在 shell 中过滤日志
 ```
 
 
@@ -573,28 +574,6 @@ pig pg log vi                     # 别名
 pig pg log v                      # 别名
 pig pg log less postgresql.csv    # 打开指定日志文件
 ```
-
-
-### pg log grep
-
-搜索日志文件。
-
-```bash
-pig pg log grep ERROR             # 搜索包含 ERROR 的行
-pig pg log g ERROR                # 别名
-pig pg log search ERROR           # 别名
-pig pg log grep -i error          # 忽略大小写
-pig pg log grep -C 3 ERROR        # 显示前后 3 行上下文
-pig pg log grep ERROR pg.csv      # 搜索指定日志文件
-```
-
-**选项：**
-
-| 参数 | 简写 | 说明 |
-|:----|:----|:----|
-| `--ignore-case` | `-i` | 忽略大小写 |
-| `--context` | `-C` | 显示 N 行上下文 |
-{.full-width}
 
 
 ## pg svc 子命令

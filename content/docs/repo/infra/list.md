@@ -15,7 +15,7 @@ weight: 5441
 | [`grafana`](https://github.com/grafana/grafana/)                                         | `12.3.2` | [AGPLv3](https://github.com/grafana/grafana/blob/main/LICENSE)                         | 开源可观测性与数据可视化平台       |
 | [`loki`](https://github.com/grafana/loki)                                                | `3.6.5`  | [AGPLv3](https://github.com/grafana/loki/blob/main/LICENSE)                            | 日志聚合系统（已弃用）          |
 | [`promtail`](https://github.com/grafana/loki/releases/tag/v3.6.5)                        | `3.6.5`  | [AGPLv3](https://github.com/grafana/loki/blob/main/LICENSE)                            | Loki 日志采集代理（已弃用）     |
-| [`grafana-infinity-ds`](https://github.com/grafana/grafana-infinity-datasource/)         | `3.7.0`  | [Apache-2.0](https://github.com/grafana/grafana-infinity-datasource/blob/main/LICENSE) | 支持 JSON/CSV/XML 等数据源 |
+| [`grafana-infinity-ds`](https://github.com/grafana/grafana-infinity-datasource/)         | `3.7.1`  | [Apache-2.0](https://github.com/grafana/grafana-infinity-datasource/blob/main/LICENSE) | 支持 JSON/CSV/XML 等数据源 |
 | [`grafana-plugins`](https://github.com/pgsty/infra-pkg/tree/main/noarch/grafana-plugins) | `12.3.0` | [Apache-2.0](https://github.com/pgsty/infra-pkg/blob/main/LICENSE)                     | Pigsty 打包的额外面板插件     |
 {.stretch-last}
 
@@ -56,7 +56,7 @@ allow_loading_unsigned_plugins = victoriametrics-logs-datasource,victoriametrics
 |------------------------------------------------------------------------|----------|-----------------------------------------------------------------------------------|---------------|
 | [`prometheus`](https://github.com/prometheus/prometheus)               | `3.9.1`  | [Apache-2.0](https://github.com/prometheus/prometheus/blob/main/LICENSE)          | 云原生监控系统与时序数据库 |
 | [`pushgateway`](https://github.com/prometheus/pushgateway)             | `1.11.2` | [Apache-2.0](https://github.com/prometheus/pushgateway/blob/master/LICENSE)       | 短生命周期任务指标推送网关 |
-| [`alertmanager`](https://github.com/prometheus/alertmanager)           | `0.31.0` | [Apache-2.0](https://github.com/prometheus/alertmanager/blob/main/LICENSE)        | 告警管理与通知分发     |
+| [`alertmanager`](https://github.com/prometheus/alertmanager)           | `0.31.1` | [Apache-2.0](https://github.com/prometheus/alertmanager/blob/main/LICENSE)        | 告警管理与通知分发     |
 | [`blackbox_exporter`](https://github.com/prometheus/blackbox_exporter) | `0.27.0` | [Apache-2.0](https://github.com/prometheus/blackbox_exporter/blob/master/LICENSE) | 黑盒探测，监控端点可用性  |
 {.stretch-last}
 
@@ -111,7 +111,7 @@ PostgreSQL 相关工具、数据库管理系统和其他实用程序
 | [`kafka`](https://github.com/apache/kafka)                  | `4.1.1`   | [Apache-2.0](https://github.com/apache/kafka/blob/trunk/LICENSE)                     | 消息队列                           |
 | [`duckdb`](https://github.com/duckdb/duckdb)                | `1.4.4`   | [MIT](https://github.com/duckdb/duckdb/blob/main/LICENSE)                            | 嵌入式 OLAP                       |
 | [`ferretdb`](https://github.com/FerretDB/FerretDB)          | `2.7.0`   | [Apache-2.0](https://github.com/FerretDB/FerretDB/blob/main/LICENSE)                 | 基于 PG 的 MongoDB                |
-| [`tigerbeetle`](https://github.com/tigerbeetle/tigerbeetle) | `0.16.70` | [Apache-2.0](https://github.com/tigerbeetle/tigerbeetle/blob/main/LICENSE)           | 金融 OLTP                        |
+| [`tigerbeetle`](https://github.com/tigerbeetle/tigerbeetle) | `0.16.72` | [Apache-2.0](https://github.com/tigerbeetle/tigerbeetle/blob/main/LICENSE)           | 金融 OLTP                        |
 | [`IvorySQL`](https://github.com/IvorySQL/IvorySQL)          | `5.1`     | [Apache-2.0](https://github.com/IvorySQL/IvorySQL/blob/IVORY_REL_5_STABLE/LICENSE)   | Oracle 兼容的 PG 18.1             |
 {.stretch-last}
 
@@ -154,14 +154,13 @@ AI Agent，MCP 工具箱，编码 IDE，Python/Go/Node 工具……
 | 名称                                                             | 版本        | 许可证                                                                         | 备注                             |
 |----------------------------------------------------------------|-----------|-----------------------------------------------------------------------------|--------------------------------|
 | [`claude`](https://github.com/anthropics/claude-code)          | `2.1.37`  | [Proprietary](https://www.anthropic.com/legal/terms)                        | Claude Code - Anthropic 代理编程工具 |
-| [`opencode`](https://github.com/opencode-ai/opencode)          | `1.1.53`  | [MIT](https://github.com/opencode-ai/opencode/blob/main/LICENSE)            | 终端 AI 编程助手                     |
+| [`opencode`](https://github.com/opencode-ai/opencode)          | `1.1.59`  | [MIT](https://github.com/opencode-ai/opencode/blob/main/LICENSE)            | 终端 AI 编程助手                     |
 | [`code-server`](https://github.com/coder/code-server)          | `4.108.2` | [MIT](https://github.com/coder/code-server/blob/main/LICENSE)               | 浏览器中的 VS Code                  |
 | [`genai-toolbox`](https://github.com/googleapis/genai-toolbox) | `0.25.0`  | [Apache-2.0](https://github.com/googleapis/genai-toolbox/blob/main/LICENSE) | Google 数据库 MCP 服务器             |
 | [`uv`](https://github.com/astral-sh/uv)                        | `0.10.0`  | [MIT](https://github.com/astral-sh/uv/blob/main/LICENSE-MIT)                | 新一代 Python 包管理器                |
-| [`golang`](https://golang.org/)                                | `1.25.7`  | [BSD-3](https://github.com/golang/go/blob/master/LICENSE)                   | Go 编译器                         |
-| [`nodejs`](https://nodejs.org/)                                | `24.13.0` | [MIT/Mixed](https://github.com/nodejs/node/blob/main/LICENSE)               | 在服务端运行 Javascript              |
+| [`golang`](https://golang.org/)                                | `1.26.0`  | [BSD-3](https://github.com/golang/go/blob/master/LICENSE)                   | Go 编译器                         |
+| [`nodejs`](https://nodejs.org/)                                | `24.13.1` | [MIT/Mixed](https://github.com/nodejs/node/blob/main/LICENSE)               | 在服务端运行 Javascript              |
 {.stretch-last}
-
 
 
 

@@ -239,14 +239,12 @@ pig repo create /srv/repo        # 在自定义位置创建
 
 ```bash
 pig repo cache                   # 默认：/www 到 /tmp/pkg.tgz
-pig repo cache -f                # 强制覆盖现有文件
 pig repo cache -d /srv           # 自定义源目录
 ```
 
 **选项：**
 - `-d, --dir`：源目录（默认：`/www/`）
 - `-p, --path`：输出路径（默认：`/tmp/pkg.tgz`）
-- `-f`：强制覆盖现有包
 
 
 ## repo boot
@@ -273,4 +271,3 @@ pig repo reload                  # 刷新仓库目录
 ```
 
 更新后的文件会放置于 `~/.pig/repo.yml` 中。
-

@@ -36,8 +36,7 @@ Examples:
   pig pitr -d                      # Recover to latest (most common)
   pig pitr -t "2025-01-01 12:00"   # Recover to specific time
   pig pitr -I                      # Recover to backup consistency point
-  pig pitr -d --plan               # Show execution plan without running
-  pig pitr -d --dry-run            # alias for --plan
+  pig pitr -d --dry-run            # Show execution plan without running
   pig pitr -d -y                   # Skip confirmation (for automation)
   pig pitr -d --skip-patroni       # Skip Patroni management
   pig pitr -d --no-restart         # Don't auto-start PostgreSQL after restore
@@ -78,8 +77,7 @@ pig pitr -t "2025-01-01 12:00:00+08"
 pig pitr -I
 
 # 查看执行计划（不实际执行）
-pig pitr -d --plan
-pig pitr -d --plan -o yaml         # 结构化执行计划（YAML）
+pig pitr -d --dry-run
 
 # 跳过确认（用于自动化）
 pig pitr -d -y
@@ -122,18 +120,9 @@ pig pitr -d --no-restart
 |:----|:----|:----|
 | `--skip-patroni` | `-S` | 跳过 Patroni 停止操作 |
 | `--no-restart` | `-N` | 恢复后不自动启动 PostgreSQL |
-| `--plan` | | 仅显示执行计划，不实际执行 |
-| `--dry-run` | | `--plan` 的别名 |
+| `--dry-run` | | 仅显示执行计划，不实际执行 |
 | `--yes` | `-y` | 跳过确认倒计时 |
 {.full-width}
-
-### 结构化执行计划
-
-当使用 `--plan` / `--dry-run` 时，可配合 `-o yaml|json` 输出结构化执行计划，适合自动化审阅与编排。
-
-```bash
-pig pitr -d --plan -o json
-```
 
 ### 恢复选项
 
@@ -276,7 +265,7 @@ pig pg start
 
 ## 执行计划示例
 
-执行 `pig pitr -d --plan`（或 `--dry-run`）会显示类似以下的执行计划：
+执行 `pig pitr -d --dry-run` 会显示类似以下的执行计划：
 
 ```
 ══════════════════════════════════════════════════════════════════

@@ -6,6 +6,14 @@ icon: fas fa-infinity
 module: [PIG]
 categories: [参考]
 ---
+---
+title: "pig patroni"
+description: "使用 pig patroni 子命令管理 Patroni 服务与集群"
+weight: 170
+icon: fas fa-infinity
+module: [PIG]
+categories: [参考]
+---
 
 `pig patroni` 命令（别名 `pig pt`）用于管理 Patroni 服务和 PostgreSQL HA 集群。它封装了常用的 `patronictl` 和 `systemctl` 操作，提供简化的集群管理体验。
 
@@ -154,7 +162,7 @@ pig pt restart --pending         # 重启待重启的成员
 | 参数 | 简写 | 说明 |
 |:----|:----|:----|
 | `--force` | `-f` | 跳过确认 |
-| `--role` | | 按角色筛选（primary/replica） |
+| `--role` | | 按角色筛选（leader/replica/any） |
 | `--pending` | | 仅重启待重启的成员 |
 {.full-width}
 

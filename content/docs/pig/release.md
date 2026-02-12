@@ -12,6 +12,7 @@ categories: [参考]
 |       版本        |     日期     | 摘要                                |                                                     GitHub |
 |:---------------:|:----------:|-----------------------------------|-----------------------------------------------------------:|
 | [v1.0.0](#v100) | 2026-01-26 | 444, 新增 pg/pt/pb/pitr 子命令，可用性矩阵   | [v1.0.0](https://github.com/pgsty/pig/releases/tag/v1.0.0) |
+| [v1.1.0](#v110) | 未发布        | 计划中：Agent-Native CLI 框架             | - |
 | [v0.8.0](#v080) | 2025-12-26 | 440 extensions，移除 sysupdate 仓库    | [v0.8.0](https://github.com/pgsty/pig/releases/tag/v0.8.0) |
 | [v0.7.5](#v075) | 2025-12-12 | 常规扩展更新，使用修复后的阿里云镜像                | [v0.7.5](https://github.com/pgsty/pig/releases/tag/v0.7.5) |
 | [v0.7.4](#v074) | 2025-12-01 | 更新 ivory/pgtde 内核与 pgdg extras 仓库 | [v0.7.4](https://github.com/pgsty/pig/releases/tag/v0.7.4) |
@@ -45,6 +46,43 @@ categories: [参考]
 
 --------
 
+# v1.1.0
+
+> 状态：开发中，未发布
+
+该版本是从 `v1.0.0` 到 `v1.1.0` 的一次规划中架构级升级（79 commits，193 files 变更），
+核心目标是把 pig 从“人类可用 CLI”推进到“Agent-native 可编排 CLI”。
+
+新增七个扩展，总可用扩展数量达到 451 个。
+
+**新功能**
+
+- Agent-native 统一输出框架落地：引入全局 `--output`（`text/yaml/json/json-pretty`），为 `ext/repo/pg/pt/pb/pitr/status/version/context` 等命令提供统一 `Result` 结构、稳定状态码与可机器解析输出。
+- 引入 ANCS（Agent Native Command Schema）元数据体系：为命令补齐 `type/volatility/parallel/risk/confirm/os_user/cost` 等语义字段，`help` 在结构化模式下可直接输出命令能力树，便于 Agent 自动发现能力与风险边界。
+- 新增 `pig context`（`pig ctx`）环境快照命令：一次调用聚合主机、PostgreSQL、Patroni、pgBackRest、扩展信息，专门面向 Agent 工作流做上下文注入。
+- Plan 能力从 PITR 扩展到更多高风险动作：新增 `pig ext add/rm --plan`、`pig pg stop/restart --plan`、`pig pt switchover/failover --plan`，并与 `pig pitr --plan/--dry-run` 统一为可审阅执行计划（动作、影响面、风险、预期结果）。
+- 结构化结果覆盖进一步完善：`pgbackrest info` 可嵌入原生 JSON 信息，Patroni/PostgreSQL/PITR/Repo/Ext 子系统的结构化返回与辅助 DTO 统一，兼容自动化消费。
+- 兼容层增强：对 `pg_exporter/pg_probe/do/sty` 等存量命令引入 legacy structured wrapper，在保留旧交互行为的同时提供结构化执行结果与输出捕获。
+- Pigsty 版本更新至 v4.1.0
+
+**Bug 修复**
+
+- 安全修复：修复 `pig build proxy` 在异常地址输入下的解析 panic 问题。
+- 安全修复：修复 `pig pg log` 文件名路径穿越风险，阻止通过 `../../` 访问日志目录外文件。
+- 安全加固：加强 installer/repo 路径处理与引号处理，降低路径注入与异常路径误用风险。
+- 构建链路可靠性修复：`pig build get/pkg/ext` 在下载或构建失败时正确传递错误并返回非零退出码；修复 DEB 构建中 `pg_ver` 不匹配导致的误报失败。
+- 仓库与目录刷新修复：`ext/repo reload` 支持静默镜像回退；`repo add/set/rm` 在缓存更新失败时正确返回错误状态。
+- 扩展管理修复：`ext update` 调整为显式目标更新并修复状态漂移问题；`ext import` 将请求的 DEB 资源下载到指定 repo 目录。
+- 输出与可观察性修复：修复结构化输出 exit code 与文本渲染一致性问题；修复 `pg status` 权限处理与解析稳定性问题。
+
+**校验和**
+
+```bash
+
+```
+
+--------
+
 ## v1.0.0
 
 本版本引入三组主要的新子命令（`pig pg`、`pig pt`、`pig pb`），用于管理 PostgreSQL、Patroni 和 pgBackRest，同时新增编排式 PITR 命令，并增强扩展可用性显示。
@@ -52,11 +90,11 @@ categories: [参考]
 **新增命令**
 
 - `pig pg` - PostgreSQL 实例管理
-  - `pg start/stop/restart/reload` - 控制 PostgreSQL 服务
-  - `pg status/log/ps/conf/hba` - 查看实例状态与配置
-  - `pg psql` - 启动 psql 控制台
-  - `pg role` - 检测实例角色（主库/从库）
-  - `pg promote/checkpoint/vacuumdb` - 维护操作
+  - `pg init/start/stop/restart/reload/status` - 控制与管理 PostgreSQL 实例
+  - `pg role/promote` - 检测和切换实例角色（主库/从库）
+  - `pg psql/ps/kill` - 连接与会话管理
+  - `pg vacuum/analyze/freeze/repack` - 数据库维护操作
+  - `pg log` - 日志查看（list/tail/cat/less）
 
 - `pig pt` - Patroni 集群管理
   - `pt list/config` - 查看集群状态与配置

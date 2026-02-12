@@ -40,7 +40,7 @@ Examples:
   pig pb info                      # show all backup info
   pig pb backup                    # auto: full if none, else incr
   pig pb backup full               # full backup
-  pig pb restore                   # restore to latest (default)
+  pig pb restore -d                # restore to latest (end of WAL)
   pig pb restore -t "2025-01-01 12:00:00+08"  # restore to time
   pig pb create                    # initialize stanza
   pig pb expire                    # cleanup per retention policy
@@ -92,7 +92,7 @@ Examples:
 ```bash
 # 查看备份信息
 pig pb info                          # 显示所有备份信息
-pig pb info -o json                  # JSON 格式输出
+pig pb info --raw -o json            # 原始 JSON 输出
 pig pb ls                            # 列出所有备份
 pig pb ls repo                       # 列出配置的仓库
 pig pb ls stanza                     # 列出所有 stanza
@@ -103,8 +103,8 @@ pig pb backup full                   # 全量备份
 pig pb backup diff                   # 差异备份
 pig pb backup incr                   # 增量备份
 
-# 恢复（PITR）
-pig pb restore                       # 恢复到最新（WAL 流末尾）
+# 恢复（PITR，至少指定一个恢复目标）
+pig pb restore -d                    # 恢复到最新（WAL 流末尾）
 pig pb restore -I                    # 恢复到备份一致性点
 pig pb restore -t "2025-01-01 12:00:00+08"  # 恢复到指定时间
 pig pb restore -n savepoint          # 恢复到命名还原点
@@ -161,7 +161,7 @@ pig pb info -r 2                     # 查看 repo2 的备份信息
 
 ```bash
 pig pb info                          # 显示所有备份信息
-pig pb info -o json                  # JSON 格式输出
+pig pb info --raw -o json            # 原始 JSON 输出
 pig pb info --set 20250101-120000F   # 显示特定备份集详情
 ```
 
@@ -169,7 +169,8 @@ pig pb info --set 20250101-120000F   # 显示特定备份集详情
 
 | 参数       | 简写   | 说明             |
 |:---------|:-----|:---------------|
-| `--output` | `-o` | 输出格式：text、json |
+| `--raw`    | `-R` | 原始输出模式（透传 pgBackRest 输出） |
+| `--output` | `-o` | 输出格式：text、json（仅 `--raw` 模式） |
 | `--set`    |      | 显示特定备份集详情      |
 {.full-width}
 
@@ -267,10 +268,10 @@ repo1-retention-archive=2            # WAL 归档保留策略
 ### pb restore
 
 从备份恢复，支持时间点恢复（PITR）。
+必须显式指定一个恢复目标（`-d/-I/-t/-n/-l/-x`）；不带参数仅显示帮助信息。
 
 ```bash
 # 恢复目标（互斥选项）
-pig pb restore                       # 恢复到最新（默认）
 pig pb restore -d                    # 恢复到最新（显式）
 pig pb restore -I                    # 恢复到备份一致性点
 pig pb restore -t "2025-01-01 12:00:00+08"  # 恢复到指定时间

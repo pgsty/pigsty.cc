@@ -115,18 +115,14 @@ Inferred Region   :  china
 Latest Pigsty Ver :  v4.0.0
 ```
 
-## Agentic / 自动化输出
+## 自动化建议
 
-全局 `-o|--output` 可切换结构化输出，适合脚本与 AI 代理：
+对于生产环境恢复任务，建议先使用 `--dry-run` 预览 PITR 执行计划，再决定是否实际执行：
 
 ```bash
-pig --help -o yaml           # 能力地图（Capability Map）
-pig ext --help -o json       # 命令 Schema
-pig repo list -o yaml        # 结构化结果
-pig pitr -d --plan -o json   # 结构化执行计划
+pig pitr -d --dry-run         # 仅预览恢复步骤，不执行
+pig pitr -d -y                # 跳过确认（自动化场景）
 ```
-
-`-o json-pretty` 会输出带缩进的 JSON；未覆盖结构化输出的命令仍保持文本输出。
 
 
 ## 列出扩展
@@ -356,7 +352,7 @@ vector                        0.8.1    RAG   -ds--r  PostgreSQL  PGDG    postgre
 pg_duckdb                     1.1.0    OLAP  -dsl--  MIT         PIGSTY  postgresql-18-pg-duckdb               DuckDB Embedded in Postgres
 ```
 
-如果您的当前系统路径中找不到 PostgreSQL（以 `PATH` 中的 `pg_config` 为准），那么请务必通过 `-v|-p` 指定 PG 大版本号或 `pg_config` 路径。
+如果您的当前系统路径中找不到 PostgreSQL（以 `PATH` 中的 `pg_config` 为准），建议显式通过 `-v|-p` 指定 PG 大版本号或 `pg_config` 路径，以避免版本探测歧义。
 
 
 
