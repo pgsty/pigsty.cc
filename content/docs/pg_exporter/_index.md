@@ -14,25 +14,51 @@ description: 高级 PostgreSQL 与 PgBouncer 监控指标导出器
 
 ## 功能特性
 
-| 特性        | 描述                                                           |
-|-----------|--------------------------------------------------------------|
-| **全指标覆盖** | 监控 PostgreSQL（10-18+）与 pgBouncer（1.8-1.24+），全指标覆盖            |
-| **声明式配置** | 通过 YAML 配置文件定义自定义指标，精细控制超时、缓存和跳过条件                           |
-| **采集器定制** | 使用声明式 YAML 配置定义自己的指标，支持动态查询规划                                |
-| **自动发现**  | 自动发现并监控 PostgreSQL 实例中的多个数据库                                 |
-| **动态规划**  | 根据 PostgreSQL 版本、扩展和服务器特性自动调整指标采集策略                          |
-| **生产就绪**  | 在真实环境中经过 6 年以上、12K+ 核心的实战检验，具备企业级可靠性                         |
-| **健康检查**  | 提供全面的 HTTP 端点用于服务健康检查和流量路由，支持主从检测                            |
-| **智能缓存**  | 内置缓存机制，可配置 TTL，减少数据库负载并提升性能                                  |
-| **扩展感知**  | 原生支持 pg_stat_statements、pg_wait_sampling, citus, timesacledb |
+| 特性        | 描述                                                         |
+|-----------|------------------------------------------------------------|
+| **全指标覆盖** | 监控 PostgreSQL（10-18+）与 pgBouncer（1.8-1.25+），全指标覆盖          |
+| **声明式配置** | 通过 YAML 配置文件定义自定义指标，精细控制超时、缓存和跳过条件                         |
+| **采集器定制** | 使用声明式 YAML 配置定义自己的指标，支持动态查询规划                              |
+| **自动发现**  | 自动发现并监控 PostgreSQL 实例中的多个数据库                               |
+| **动态规划**  | 根据 PostgreSQL 版本、扩展和服务器特性自动调整指标采集策略                        |
+| **生产就绪**  | 在真实环境中经过 6 年以上、12K+ 核心的实战检验，具备企业级可靠性                       |
+| **健康检查**  | 提供全面的 HTTP 端点用于服务健康检查和流量路由，支持主从检测                          |
+| **智能缓存**  | 内置缓存机制，可配置 TTL，减少数据库负载并提升性能                                |
+| **扩展感知**  | 原生支持 pg_stat_statements、pg_wait_sampling、citus、timescaledb |
 {.full-width}
+
+
+--------
+
+## 版本信息
+
+- 当前稳定版本：[`v1.2.0`](https://github.com/pgsty/pg_exporter/releases/tag/v1.2.0)
+- 默认配置支持：PostgreSQL **10-18+**
+- Legacy 配置支持：PostgreSQL **9.1-9.6**（使用 `legacy/` 配置包）
+- PgBouncer 支持：**1.8-1.25+**
+
+完整版本历史见 [发布注记](/docs/pg_exporter/release)。
+
+
+--------
+
+## 设计逻辑
+
+`pg_exporter` 的核心设计取向是「本地优先 + 可声明 + 可演进」：
+
+- 本地优先连接：未显式指定 URL 时默认使用 `postgresql:///?sslmode=disable`，适配同机部署场景
+- 声明式采集：指标由 YAML 采集器定义驱动，行为可通过 `ttl`、`timeout`、`tags`、`fatal` 精细控制
+- 动态规划：运行时依据版本、角色、扩展与标签自动选择采集器分支
+- 可持续运行：默认非阻塞启动，目标不可达时也可先启动 HTTP 端点，待数据库恢复后自动恢复采集
+- 热重载能力：支持 `POST/GET /reload` 与 `SIGHUP` 信号重载（非 Windows 额外支持 `SIGUSR1`）
+- 健康探针分离：健康端点基于后台探测缓存，避免每次探针请求都阻塞数据库
 
 
 --------
 
 ## 快速安装
 
-PG Exporter 提供多种 [**安装方式**](/docs/pig/install)，适配各种基础设施：
+PG Exporter 提供多种 [**安装方式**](/docs/pg_exporter/install)，适配各种基础设施：
 
 {{< tabpane persist="disabled" >}}
 {{% tab header="安装" disabled=true /%}}
@@ -66,10 +92,10 @@ sudo apt install -y pg-exporter
 {{< /tab >}}
 
 {{< tab header="二进制" lang="bash" >}}
-wget https://github.com/pgsty/pg_exporter/releases/download/v1.1.2/pg_exporter-1.1.2.linux-amd64.tar.gz
-tar -xf pg_exporter-1.1.2.linux-amd64.tar.gz
-sudo install pg_exporter-1.1.2.linux-amd64/pg_exporter /usr/bin/
-sudo install pg_exporter-1.1.2.linux-amd64/pg_exporter.yml /etc/pg_exporter.yml
+wget https://github.com/pgsty/pg_exporter/releases/download/v1.2.0/pg_exporter-1.2.0.linux-amd64.tar.gz
+tar -xf pg_exporter-1.2.0.linux-amd64.tar.gz
+sudo install pg_exporter-1.2.0.linux-amd64/pg_exporter /usr/bin/
+sudo install pg_exporter-1.2.0.linux-amd64/pg_exporter.yml /etc/pg_exporter.yml
 {{< /tab >}}
 
 {{< tab header="源码" lang="bash" >}}
@@ -89,27 +115,18 @@ make build
 几分钟内即可启动 PG Exporter，参见 [快速上手](/docs/pg_exporter/start)：
 
 ```bash
-# 使用 PostgreSQL 连接 URL 运行
+# 最小可用启动（本地优先默认 URL）
+pg_exporter
+
+# 或显式指定目标
 PG_EXPORTER_URL='postgres://user:pass@localhost:5432/postgres' pg_exporter
 
 # 访问指标
 curl http://localhost:9630/metrics
+
+# 在线重载配置（推荐 POST）
+curl -X POST http://localhost:9630/reload
 ```
-
-
---------
-
-## 文档目录
-
-| 文档 | 描述 |
-|------|------|
-| [**快速上手**](/docs/pg_exporter/start) | 快速开始指南与基础概念 |
-| [**安装指南**](/docs/pg_exporter/install) | 各平台的安装说明 |
-| [**配置参考**](/docs/pg_exporter/config) | 配置参考与采集器定义 |
-| [**API 参考**](/docs/pg_exporter/api) | HTTP API 端点参考 |
-| [**部署指南**](/docs/pg_exporter/deploy) | 生产部署最佳实践 |
-| [**发布说明**](/docs/pg_exporter/release) | 版本发布历史 |
-{.full-width}
 
 
 --------
@@ -123,7 +140,7 @@ curl http://localhost:9630/metrics
 - 使用 Grafana 的实时指标可视化
 - 多个 PostgreSQL 版本和配置
 - 扩展特定的指标和监控
-- 由 [Pigsty](https://pgsty.com) 驱动的完整可观测性堆栈
+- 由 [Pigsty](https://pigsty.cc) 驱动的完整可观测性堆栈
 
 
 --------
@@ -132,7 +149,7 @@ curl http://localhost:9630/metrics
 
 - [**GitHub**](https://github.com/pgsty/pg_exporter)：源代码、问题反馈与贡献
 - [**讨论区**](https://github.com/pgsty/pg_exporter/discussions)：提问与分享经验
-- [**Pigsty**](https://pgsty.com)：包含 PG Exporter 的完整 PostgreSQL 发行版
+- [**Pigsty**](https://pigsty.cc)：包含 PG Exporter 的完整 PostgreSQL 发行版
 
 
 --------
@@ -141,4 +158,4 @@ curl http://localhost:9630/metrics
 
 PG Exporter 是基于 [Apache License 2.0](https://github.com/pgsty/pg_exporter/blob/main/LICENSE) 许可的开源软件。
 
-Copyright 2018-2025 © [冯若航](https://vonng.com/en) / [rh@vonng.com](mailto:rh@vonng.com)
+Copyright 2018-2026 © [冯若航](https://vonng.com/en) / [rh@vonng.com](mailto:rh@vonng.com)

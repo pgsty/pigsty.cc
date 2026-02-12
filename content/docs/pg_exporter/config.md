@@ -39,6 +39,12 @@ PG Exporter 按以下顺序搜索配置：
 4. 系统配置文件：`/etc/pg_exporter.yml`
 5. 系统配置目录：`/etc/pg_exporter/`
 
+目录模式说明：
+
+- 仅加载该目录下的 `.yml` / `.yaml` 文件（非递归）
+- 按文件名字典序合并；同名采集器以后加载者覆盖先前定义
+- 如果目录中有 YAML 文件但全部解析失败，导出器会直接返回错误而不是静默忽略
+
 
 --------
 
@@ -82,6 +88,13 @@ collector_branch_name:           # 此采集器的唯一标识符
         default: 0               # NULL 时的默认值
         scale: 1000              # 值的缩放因子
 ```
+
+配置校验约束（`v1.2.0`）：
+
+- 每个 `metrics` 列表项必须且只能定义一个列映射
+- 每个采集器至少要有一个 `GAUGE` 或 `COUNTER` 列
+- `usage` 仅支持 `GAUGE` / `COUNTER` / `LABEL` / `DISCARD`
+- 指标名、标签名会在加载阶段进行 Prometheus 规则校验，非法配置会直接报错
 
 
 --------
@@ -164,10 +177,12 @@ min_version: 100000  # PostgreSQL 10.0+
 max_version: 140000  # 低于 PostgreSQL 14.0
 ```
 
-版本格式：`MMMMMMPP00`，其中：
-- `MMMMMM` = 主版本（6 位数字）
-- `PP` = 次版本（2 位数字）
-- 示例：`100000` = 10.0，`130200` = 13.2，`160100` = 16.1
+版本号使用 PostgreSQL 内部 `server_version_num` 规则：
+
+- `100000` 表示 10.0
+- `130200` 表示 13.2
+- `160100` 表示 16.1
+- `90600` 表示 9.6（Legacy 配置场景）
 
 
 --------
@@ -178,12 +193,12 @@ max_version: 140000  # 低于 PostgreSQL 14.0
 
 ### 内置标签
 
-| 标签 | 描述 |
-|------|------|
-| `cluster` | 每个 PostgreSQL 集群执行一次 |
-| `primary` / `master` | 仅在主服务器上执行 |
-| `standby` / `replica` | 仅在从服务器上执行 |
-| `pgbouncer` | 仅用于 pgBouncer 连接 |
+| 标签                    | 描述                   |
+|-----------------------|----------------------|
+| `cluster`             | 每个 PostgreSQL 集群执行一次 |
+| `primary` / `master`  | 仅在主服务器上执行            |
+| `standby` / `replica` | 仅在从服务器上执行            |
+| `pgbouncer`           | 仅用于 pgBouncer 连接     |
 {.full-width}
 
 ### 前缀标签

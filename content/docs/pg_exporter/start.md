@@ -23,16 +23,41 @@ PG Exporter 是一款先进的 PostgreSQL 与 pgBouncer 指标导出器，专为
 
 --------
 
+## 版本信息
+
+- 当前稳定版本：[`v1.2.0`](https://github.com/pgsty/pg_exporter/releases/tag/v1.2.0)
+- 默认配置支持 PostgreSQL 10-18+；PostgreSQL 9.1-9.6 需使用 `legacy/` 配置包
+- 支持 pgBouncer 1.8-1.25+
+
+
+--------
+
+## 设计逻辑
+
+`pg_exporter` 的运行逻辑可以概括为三点：
+
+- 本地优先连接：当没有传入 `--url` / `PG_EXPORTER_URL` 时，默认回退到 `postgresql:///?sslmode=disable`
+- 声明式采集：所有业务指标来自 YAML 采集器，运行时按版本/角色/标签动态选择分支
+- 可持续运行：默认非阻塞启动，目标库暂时不可达时也先启动 HTTP 端点，并在后台持续恢复健康状态
+
+
+--------
+
 ## 快速开始
 
 最快速地启动 PG Exporter：
 
 ```bash
-# 下载并安装最新版本
-curl -L https://github.com/pgsty/pg_exporter/releases/latest/download/pg_exporter-$(uname -s)-$(uname -m).tar.gz | tar xz
-sudo install pg_exporter /usr/bin/
+# 示例：Linux amd64 安装（其他平台请替换对应发布文件）
+wget https://github.com/pgsty/pg_exporter/releases/download/v1.2.0/pg_exporter-1.2.0.linux-amd64.tar.gz
+tar -xf pg_exporter-1.2.0.linux-amd64.tar.gz
+sudo install pg_exporter-1.2.0.linux-amd64/pg_exporter /usr/bin/
+sudo install pg_exporter-1.2.0.linux-amd64/pg_exporter.yml /etc/pg_exporter.yml
 
-# 使用 PostgreSQL 连接 URL 运行
+# 使用默认 URL（本地优先）运行
+pg_exporter
+
+# 或显式指定 PostgreSQL / PgBouncer URL
 PG_EXPORTER_URL='postgres://user:pass@localhost:5432/postgres' pg_exporter
 
 # 验证指标是否可用
@@ -53,14 +78,22 @@ postgres://[user][:password]@[host][:port]/[database][?param=value]
 ```
 
 示例：
+- 默认回退 URL（未显式指定时）：`postgresql:///?sslmode=disable`
 - 本地 PostgreSQL：`postgres:///postgres`
 - 带认证的远程连接：`postgres://monitor:password@db.example.com:5432/postgres`
 - 使用 SSL：`postgres://user:pass@host/db?sslmode=require`
 - pgBouncer：`postgres://pgbouncer:password@localhost:6432/pgbouncer`
 
+URL 来源优先级（高到低）：
+1. `--url` 命令行参数
+2. `PG_EXPORTER_URL` 环境变量
+3. `PGURL` 环境变量
+4. `PG_EXPORTER_URL_FILE` 指向文件的内容
+5. 默认 `postgresql:///?sslmode=disable`
+
 ### 内置指标
 
-PG Exporter 开箱即用提供 4 个核心内置指标：
+PG Exporter 开箱即用提供以下核心内置指标：
 
 | 指标 | 类型 | 描述 |
 |------|------|------|
@@ -70,6 +103,8 @@ PG Exporter 开箱即用提供 4 个核心内置指标：
 | `pg_exporter_build_info` | Gauge | 导出器版本和构建信息 |
 {.full-width}
 
+此外还会暴露 `pg_exporter_*` 自监控指标（可通过 `--disable-intro` 关闭）。
+
 ### 配置文件
 
 所有其他指标（600+）都在 `pg_exporter.yml` 配置文件中定义。默认情况下，PG Exporter 会按以下顺序查找此文件：
@@ -77,7 +112,8 @@ PG Exporter 开箱即用提供 4 个核心内置指标：
 1. 通过 `--config` 标志指定的路径
 2. `PG_EXPORTER_CONFIG` 环境变量中的路径
 3. 当前目录（`./pg_exporter.yml`）
-4. 系统配置（`/etc/pg_exporter.yml` 或 `/etc/pg_exporter/`）
+4. 系统配置文件（`/etc/pg_exporter.yml`）
+5. 系统配置目录（`/etc/pg_exporter/`）
 
 
 --------
@@ -89,14 +125,14 @@ PG Exporter 开箱即用提供 4 个核心内置指标：
 创建一个专用的 PostgreSQL 用户用于监控：
 
 ```sql
--- 创建监控用户
-CREATE USER pg_monitor WITH PASSWORD 'secure_password';
+-- 创建登录用户（示例名：monitor）
+CREATE USER monitor WITH PASSWORD 'secure_password';
 
 -- 授予必要权限
-GRANT pg_monitor TO pg_monitor;
-GRANT CONNECT ON DATABASE postgres TO pg_monitor;
+GRANT pg_monitor TO monitor;
+GRANT CONNECT ON DATABASE postgres TO monitor;
 
--- 对于 PostgreSQL 10+，pg_monitor 角色提供对监控视图的读取权限
+-- 对于 PostgreSQL 10+，内置 pg_monitor 角色提供监控视图读取权限
 -- 对于更早版本，您可能需要额外的授权
 ```
 
@@ -106,7 +142,7 @@ GRANT CONNECT ON DATABASE postgres TO pg_monitor;
 
 ```bash
 # 设置连接 URL
-export PG_EXPORTER_URL='postgres://pg_monitor:secure_password@localhost:5432/postgres'
+export PG_EXPORTER_URL='postgres://monitor:secure_password@localhost:5432/postgres'
 
 # 以干运行模式运行以测试配置
 pg_exporter --dry-run
@@ -122,7 +158,7 @@ pg_exporter
 
 # 或使用自定义标志
 pg_exporter \
-  --url='postgres://pg_monitor:secure_password@localhost:5432/postgres' \
+  --url='postgres://monitor:secure_password@localhost:5432/postgres' \
   --web.listen-address=':9630' \
   --log.level=info
 ```
@@ -234,7 +270,7 @@ PG Exporter 为负载均衡器和编排器提供健康检查端点：
 ```bash
 # 基本健康检查
 curl http://localhost:9630/up
-# 返回：连接正常返回 200，否则返回 503
+# 返回：连接正常返回 200，否则返回 503（响应体通常为 primary/replica/starting/down）
 
 # 主库检测
 curl http://localhost:9630/primary
@@ -243,6 +279,26 @@ curl http://localhost:9630/primary
 # 从库检测
 curl http://localhost:9630/replica
 # 返回：从库返回 200，主库返回 404，未知返回 503
+```
+
+
+--------
+
+## 热重载
+
+`pg_exporter` 支持在线重载采集器配置，无需重启进程：
+
+```bash
+# 推荐：POST
+curl -X POST http://localhost:9630/reload
+
+# 兼容：GET
+curl http://localhost:9630/reload
+
+# 或使用信号触发（Unix）
+pkill -HUP pg_exporter
+# 非 Windows 还可以使用
+pkill -USR1 pg_exporter
 ```
 
 
@@ -266,11 +322,11 @@ pg_exporter --explain
 
 ```sql
 -- 检查当前权限
-SELECT * FROM pg_roles WHERE rolname = 'pg_monitor';
+SELECT * FROM pg_roles WHERE rolname = 'monitor';
 
 -- 如需要，授予额外权限
-GRANT USAGE ON SCHEMA pg_catalog TO pg_monitor;
-GRANT SELECT ON ALL TABLES IN SCHEMA pg_catalog TO pg_monitor;
+GRANT USAGE ON SCHEMA pg_catalog TO monitor;
+GRANT SELECT ON ALL TABLES IN SCHEMA pg_catalog TO monitor;
 ```
 
 ### 抓取缓慢

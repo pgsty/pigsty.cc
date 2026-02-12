@@ -23,6 +23,19 @@ pg_exporter 本身可以通过以下方式配置：
 
 --------
 
+## 部署设计逻辑
+
+`pg_exporter` 在生产环境中的关键设计取舍如下：
+
+- 本地优先：默认 URL 为 `postgresql:///?sslmode=disable`，适配同机部署
+- 先可观测后可连接：默认非阻塞启动，目标库暂时不可达时也先暴露 HTTP 端点
+- 可控失败策略：设置 `--fail-fast` 后，启动阶段目标不可达会直接失败退出
+- 在线变更：支持 `POST/GET /reload` 与 `SIGHUP` 触发热重载（非 Windows 额外支持 `SIGUSR1`）
+- 健康探针解耦：`/up` 等端点基于后台探测缓存，避免探针风暴影响数据库
+
+
+--------
+
 ## 命令行参数
 
 所有配置选项都可以通过命令行标志指定：
@@ -51,7 +64,7 @@ Flags:
   -l, --label=""                 常量标签：逗号分隔的 label=value 对列表 ($PG_EXPORTER_LABEL)
   -t, --tag=""                   标签，逗号分隔的服务器标签列表 ($PG_EXPORTER_TAG)
   -C, --[no-]disable-cache       强制不使用缓存 ($PG_EXPORTER_DISABLE_CACHE)
-  -m, --[no-]disable-intro       禁用采集器级别的内省指标 ($PG_EXPORTER_DISABLE_INTRO)
+  -m, --[no-]disable-intro       禁用导出器内置/自监控指标，仅保留查询指标 ($PG_EXPORTER_DISABLE_INTRO)
   -a, --[no-]auto-discovery      自动抓取给定服务器的所有数据库 ($PG_EXPORTER_AUTO_DISCOVERY)
   -x, --exclude-database="template0,template1,postgres"
                                  启用自动发现时排除的数据库 ($PG_EXPORTER_EXCLUDE_DATABASE)
@@ -76,7 +89,7 @@ Flags:
 所有命令行参数都有对应的环境变量：
 
 ```bash
-PG_EXPORTER_URL='postgres://:5432/?sslmode=disable'
+PG_EXPORTER_URL='postgresql:///?sslmode=disable'
 PG_EXPORTER_CONFIG=/etc/pg_exporter.yml
 PG_EXPORTER_LABEL=""
 PG_EXPORTER_TAG=""
@@ -92,6 +105,11 @@ PG_EXPORTER_OPTS='--log.level=info'
 
 pg_exporter
 ```
+
+除 `PG_EXPORTER_URL` 外，还支持：
+
+- `PGURL`：作为连接 URL 的兼容环境变量
+- `PG_EXPORTER_URL_FILE`：从文件中读取连接 URL（适合容器 Secret）
 
 
 --------
@@ -131,19 +149,19 @@ pg_exporter
 
 ```sql
 -- 创建监控角色
-CREATE ROLE pg_monitor WITH LOGIN PASSWORD 'strong_password' CONNECTION LIMIT 5;
+CREATE ROLE monitor WITH LOGIN PASSWORD 'strong_password' CONNECTION LIMIT 5;
 
 -- 授予必要权限
-GRANT pg_monitor TO pg_monitor;  -- PostgreSQL 10+ 内置角色
-GRANT CONNECT ON DATABASE postgres TO pg_monitor;
+GRANT pg_monitor TO monitor;  -- PostgreSQL 10+ 内置角色
+GRANT CONNECT ON DATABASE postgres TO monitor;
 
 -- 对于特定数据库
-GRANT CONNECT ON DATABASE app_db TO pg_monitor;
-GRANT USAGE ON SCHEMA public TO pg_monitor;
+GRANT CONNECT ON DATABASE app_db TO monitor;
+GRANT USAGE ON SCHEMA public TO monitor;
 
 -- 扩展监控的额外权限
-GRANT SELECT ON ALL TABLES IN SCHEMA pg_catalog TO pg_monitor;
-GRANT SELECT ON ALL SEQUENCES IN SCHEMA pg_catalog TO pg_monitor;
+GRANT SELECT ON ALL TABLES IN SCHEMA pg_catalog TO monitor;
+GRANT SELECT ON ALL SEQUENCES IN SCHEMA pg_catalog TO monitor;
 ```
 
 
@@ -155,18 +173,18 @@ GRANT SELECT ON ALL SEQUENCES IN SCHEMA pg_catalog TO pg_monitor;
 
 ```bash
 # 带 SSL 的连接字符串
-PG_EXPORTER_URL='postgres://pg_monitor:password@db.example.com:5432/postgres?sslmode=require&sslcert=/path/to/client.crt&sslkey=/path/to/client.key&sslrootcert=/path/to/ca.crt'
+PG_EXPORTER_URL='postgres://monitor:password@db.example.com:5432/postgres?sslmode=require&sslcert=/path/to/client.crt&sslkey=/path/to/client.key&sslrootcert=/path/to/ca.crt'
 ```
 
 #### 使用 .pgpass 文件
 
 ```bash
 # 创建 .pgpass 文件
-echo "db.example.com:5432:*:pg_monitor:password" > ~/.pgpass
+echo "db.example.com:5432:*:monitor:password" > ~/.pgpass
 chmod 600 ~/.pgpass
 
 # 在 URL 中不使用密码
-PG_EXPORTER_URL='postgres://pg_monitor@db.example.com:5432/postgres'
+PG_EXPORTER_URL='postgres://monitor@db.example.com:5432/postgres'
 ```
 
 
@@ -195,7 +213,7 @@ WantedBy=multi-user.target
 环境文件 `/etc/default/pg_exporter`：
 
 ```bash
-PG_EXPORTER_URL='postgres://:5432/?sslmode=disable'
+PG_EXPORTER_URL='postgresql:///?sslmode=disable'
 PG_EXPORTER_CONFIG=/etc/pg_exporter.yml
 PG_EXPORTER_LABEL=""
 PG_EXPORTER_TAG=""
@@ -276,7 +294,7 @@ services:
     ports:
       - "9630:9630"
     environment:
-      - PG_EXPORTER_URL=postgres://pg_monitor:password@postgres:5432/postgres
+      - PG_EXPORTER_URL=postgres://monitor:password@postgres:5432/postgres
       - PG_EXPORTER_AUTO_DISCOVERY=true
       - PG_EXPORTER_EXCLUDE_DATABASE=template0,template1
     volumes:
@@ -430,7 +448,7 @@ groups:
 
       # 抓取时间过长告警
       - alert: PgExporterSlowScrape
-        expr: pg_exporter_last_scrape_duration_seconds > 30
+        expr: pg_exporter_scrape_duration > 30
         for: 5m
         labels:
           severity: warning
