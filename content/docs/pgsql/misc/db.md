@@ -66,9 +66,9 @@ pg-meta:
   pool_auth_user: dbuser_meta     # 可选，连接到此 pgbouncer 数据库的所有连接都将使用此用户进行验证（启用 pgbouncer_auth_query 才有用）
   pool_mode: transaction          # 可选，数据库级别的 pgbouncer 池化模式，默认为 transaction
   pool_size: 64                   # 可选，数据库级别的 pgbouncer 默认池子大小，默认为 64
-  pool_size_reserve: 32           # 可选，数据库级别的 pgbouncer 池子保留空间，默认为 32，当默认池子不够用时，最多再申请这么多条突发连接。
+  pool_reserve: 32           # 可选，数据库级别的 pgbouncer 池子保留空间，默认为 32，当默认池子不够用时，最多再申请这么多条突发连接。
   pool_size_min: 0                # 可选，数据库级别的 pgbouncer 池的最小大小，默认为 0
-  pool_max_db_conn: 100           # 可选，数据库级别的最大数据库连接数，默认为 100
+  pool_connlimit: 100           # 可选，数据库级别的最大数据库连接数，默认为 100
 ```
 
 唯一必选的字段是 `name`，它应该是当前 PostgreSQL 集群中有效且唯一的数据库名称，其他参数都有合理的默认值。
@@ -92,9 +92,9 @@ pg-meta:
 - `pool_auth_user`：启用 [`pgbouncer_auth_query`](/docs/pgsql/param#pgbouncer_auth_query) 时，连接到此 pgbouncer 数据库的所有连接都将使用这里指定的用户执行认证查询。你需要使用一个具有访问 `pg_shadow` 表权限的用户。
 - `pool_mode`：数据库级别的 pgbouncer 池化模式，默认为 transaction，即事物池化。如果留空，会使用 [`pgbouncer_poolmode`](/docs/pgsql/param#pgbouncer_poolmode) 参数作为默认值。
 - `pool_size`：数据库级别的 pgbouncer 默认池子大小，默认为 64
-- `pool_size_reserve`：数据库级别的 pgbouncer 池子保留空间，默认为 32，当默认池子不够用时，最多再申请这么多条突发连接。
+- `pool_reserve`：数据库级别的 pgbouncer 池子保留空间，默认为 32，当默认池子不够用时，最多再申请这么多条突发连接。
 - `pool_size_min`： 数据库级别的 pgbouncer 池的最小大小，默认为 0
-- `pool_max_db_conn`： 数据库级别的 pgbouncer 连接池最大数据库连接数，默认为 100
+- `pool_connlimit`： 数据库级别的 pgbouncer 连接池最大数据库连接数，默认为 100
 
 新创建的数据库默认会从 `template1` 数据库 Fork 出来，这个模版数据库会在 [`PG_PROVISION`](/docs/pgsql/param#pg_provision) 阶段进行定制修改：
 配置好扩展，模式以及默认权限，因此新创建的数据库也会继承这些配置，除非您显式使用一个其他的数据库作为模板。

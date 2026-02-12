@@ -391,7 +391,7 @@ pg_databases:
     connlimit: -1                   # 可选，连接数限制
     pool_mode: transaction          # 可选，pgbouncer 连接池模式
     pool_size: 64                   # 可选，pgbouncer 连接池大小
-    pool_size_reserve: 32           # 可选，pgbouncer 保留连接池大小
+    pool_reserve: 32           # 可选，pgbouncer 保留连接池大小
 ```
 
 详情请参考：[管理SOP：创建数据库](/docs/pgsql/admin/db#创建数据库)
