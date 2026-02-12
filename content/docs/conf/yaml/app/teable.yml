@@ -4,7 +4,7 @@
 # Desc      :   pigsty config for running 1-node teable app
 # Ctime     :   2025-02-24
 # Mtime     :   2025-12-12
-# Docs      :   https://pigsty.io/docs/app/odoo
+# Docs      :   https://pigsty.io/docs/app/teable
 # License   :   Apache-2.0 @ https://pigsty.io/docs/about/license/
 # Copyright :   2018-2026  Ruohang Feng / Vonng (rh@vonng.com)
 #==============================================================#
@@ -72,7 +72,7 @@ all:
     minio: { hosts: { 10.10.10.10: { minio_seq: 1 } }, vars: { minio_cluster: minio } }
 
   vars:                               # global variables
-    version: v4.0.0                   # pigsty version string
+    version: v4.1.0                   # pigsty version string
     admin_ip: 10.10.10.10             # admin node ip address
     region: default                   # upstream mirror region: default|china|europe
     node_tune: oltp                   # node tuning specs: oltp,olap,tiny,crit

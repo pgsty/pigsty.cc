@@ -85,9 +85,9 @@ all:
             #pool_auth_user: dbuser_meta    # optional, all connection to this pgbouncer database will be authenticated by this user
             #pool_mode: transaction         # optional, pgbouncer pool mode at database level, default transaction
             #pool_size: 64                  # optional, pgbouncer pool size at database level, default 64
-            #pool_size_reserve: 32          # optional, pgbouncer pool size reserve at database level, default 32
+            #pool_reserve: 32               # optional, pgbouncer pool size reserve at database level, default 32
             #pool_size_min: 0               # optional, pgbouncer pool size min at database level, default 0
-            #pool_max_db_conn: 100          # optional, max database connections at database level, default 100
+            #pool_connlimit: 100            # optional, max database connections at database level, default 100
           #- { name: grafana  ,owner: dbuser_grafana  ,revokeconn: true ,comment: grafana primary database }
           #- { name: bytebase ,owner: dbuser_bytebase ,revokeconn: true ,comment: bytebase primary database }
           #- { name: kong     ,owner: dbuser_kong     ,revokeconn: true ,comment: kong the api gateway database }
@@ -208,7 +208,7 @@ all:
     #-----------------------------------------------------------------
     # META
     #-----------------------------------------------------------------
-    version: v4.0.0                   # pigsty version string
+    version: v4.1.0                   # pigsty version string
     admin_ip: 10.10.10.10             # admin node ip address
     region: default                   # upstream mirror region: default,china,europe
     language: en                      # default language: en, zh
@@ -442,7 +442,7 @@ all:
     node_hugepage_ratio: 0            # node mem hugepage ratio, 0 disable it by default
     node_overcommit_ratio: 0          # node mem overcommit ratio, 0 disable it by default
     node_tune: oltp                   # node tuned profile: none,oltp,olap,crit,tiny
-    node_sysctl_params:               # sysctl parameters in k:v format in addition to tuned
+    node_sysctl_params:              # sysctl parameters in k:v format in addition to tuned
       fs.nr_open: 8388608
 
     #-----------------------------------------------------------------
@@ -530,7 +530,6 @@ all:
     #etcd_seq: 1                      # etcd instance identifier, explicitly required
     etcd_cluster: etcd                # etcd cluster & group name, etcd by default
     etcd_safeguard: false             # prevent purging running etcd instance?
-    etcd_clean: true                  # purging existing etcd during initialization?
     etcd_data: /data/etcd             # etcd data directory, /data/etcd by default
     etcd_port: 2379                   # etcd client port, 2379 by default
     etcd_peer_port: 2380              # etcd peer port, 2380 by default
@@ -545,7 +544,6 @@ all:
     #================================================================#
     #minio_seq: 1                     # minio instance identifier, REQUIRED
     minio_cluster: minio              # minio cluster identifier, REQUIRED
-    minio_clean: false                # cleanup minio during init?, false by default
     minio_user: minio                 # minio os user, `minio` by default
     minio_https: true                 # use https for minio, true by default
     minio_node: '${minio_cluster}-${minio_seq}.pigsty' # minio node name pattern
@@ -637,7 +635,7 @@ all:
     pg_dbsu_sudo: limit               # dbsu sudo privilege, none,limit,all,nopass. limit by default
     pg_dbsu_home: /var/lib/pgsql      # postgresql home directory, `/var/lib/pgsql` by default
     pg_dbsu_ssh_exchange: true        # exchange postgres dbsu ssh key among same pgsql cluster
-    pg_version: 18                    # postgres major version to be installed, 17 by default
+    pg_version: 18                    # postgres major version to be installed, 18 by default
     pg_bin_dir: /usr/pgsql/bin        # postgres binary dir, `/usr/pgsql/bin` by default
     pg_log_dir: /pg/log/postgres      # postgres log dir, `/pg/log/postgres` by default
     pg_packages:                      # pg packages to be installed, alias can be used

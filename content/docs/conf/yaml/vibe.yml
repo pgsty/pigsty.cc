@@ -3,7 +3,7 @@
 # File      :   vibe.yml
 # Desc      :   Pigsty ai vibe coding sandbox
 # Ctime     :   2026-01-19
-# Mtime     :   2026-01-24
+# Mtime     :   2026-01-30
 # Docs      :   https://pigsty.io/docs/conf/vibe
 # License   :   Apache-2.0 @ https://pigsty.io/docs/about/license/
 # Copyright :   2018-2026  Ruohang Feng / Vonng (rh@vonng.com)
@@ -36,15 +36,14 @@ all:
     #----------------------------------------------#
     # INFRA: https://pigsty.io/docs/infra
     #----------------------------------------------#
-    version: v4.0.0                     # pigsty version string
+    version: v4.1.0                     # pigsty version string
     admin_ip: 10.10.10.10               # admin node ip address
     region: default                     # upstream mirror region: default,china,europe
     infra_portal:                       # infra services exposed via portal
       home : { domain: i.pigsty }       # default domain name
-    dns_enabled: false                # disable dns service
-    vtrace_enabled: false               # enable vtrace extension
-    #blackbox_enabled: false             # disable blackbox exporter
-    #alertmanager_enabled: false         # disable alertmanager
+    dns_enabled: false                  # disable dns service
+    #blackbox_enabled: false            # disable blackbox exporter
+    #alertmanager_enabled: false        # disable alertmanager
     infra_extra_services:               # home page navigation entries
       - { name: Code Server  ,url: '/code'             ,desc: 'VS Code Server'       ,icon: 'code'     }
       - { name: Jupyter      ,url: '/jupyter'          ,desc: 'Jupyter Notebook'     ,icon: 'jupyter'  }
@@ -57,8 +56,10 @@ all:
     node_tune: oltp                     # node tuning specs: oltp,olap,tiny,crit
     node_dns_method: none               # do not setup dns
     node_repo_modules: node,infra,pgsql # add these repos directly to the singleton node
-    node_packages: [ openssh-server, juicefs, restic, rclone, uv, opencode, claude, code-server, golang, nodejs, asciinema, genai-toolbox, postgrest ]
+    node_packages: [ openssh-server, juicefs, restic, rclone, uv, opencode, golang, asciinema, tmux ]
     docker_enabled: true                # enable docker service
+    node_firewall_mode: none            # change to 'zone' to enable firewall
+    node_firewall_public_port: [22, 80, 443, 5432]    # add custom public ports
     #docker_registry_mirrors: ["https://docker.1panel.live","https://docker.1ms.run","https://docker.xuanyuan.me","https://registry-1.docker.io"]
 
     #----------------------------------------------#
@@ -67,12 +68,7 @@ all:
     pg_version: 18                      # Default PostgreSQL Major Version is 18
     pg_conf: oltp.yml                   # pgsql tuning specs: {oltp,olap,tiny,crit}.yml
     pg_packages: [ pgsql-main, patroni, pgbackrest, pg_exporter, pgbackrest_exporter ]
-    pg_extensions:
-      - postgis timescaledb pg_cron pgvector vchord pgvectorscale pg_search pg_textsearch vchord_bm25
-      - pg_duckdb pg_mooncake pg_clickhouse pg_parquet pg_tle pljs plprql pg_stat_monitor pg_wait_sampling
-      - pg_ddlx pglinter pg_permissions safeupdate pg_dirtyread
-      - pg_anon pgsmcrypto credcheck pg_vault pgsodium pg_session_jwt documentdb
-      - pgsql-feat pgsql-type pgsql-util pgsql-func pgsql-fdw
+    pg_extensions: [ pg18-main ,pg18-time ,pg18-gis ,pg18-rag ,pg18-fts ,pg18-olap ,pg18-feat ,pg18-lang ,pg18-type ,pg18-util ,pg18-func ,pg18-admin ,pg18-stat ,pg18-sec ,pg18-fdw ,pg18-sim ,pg18-etl]
     pg_users:
       - { name: dbuser_meta ,password: DBUser.Meta   ,pgbouncer: true ,roles: [dbrole_admin   ] ,comment: pigsty admin user }
       - { name: dbuser_view ,password: DBUser.Viewer ,pgbouncer: true ,roles: [dbrole_readonly] ,comment: read-only viewer  }
@@ -81,6 +77,7 @@ all:
     pg_libs: 'timescaledb, pg_stat_statements, auto_explain, pg_wait_sampling'
     pg_hba_rules:
       - { user: all ,db: all ,addr: intra ,auth: pwd ,title: 'everyone intranet access with password' ,order: 800 }
+      # WARNING: devbox only. Remove world access in production.
       - { user: all ,db: all ,addr: world ,auth: pwd ,title: 'everyone world access with password'    ,order: 900 }
     pg_crontab: [ '00 01 * * * /pg/bin/pg-backup full' ] # make a full backup every 1am
     patroni_mode: remove                # remove patroni after deployment
@@ -89,29 +86,6 @@ all:
     pgbackrest_exporter_enabled: false  # disable pgbackrest_exporter
     pg_default_services: []             # do not provision pg services
     #pg_reload: false                   # do not reload patroni/service
-
-    #----------------------------------------------#
-    # JUICE : https://pigsty.io/docs/juice
-    #----------------------------------------------#
-    juice_instances:  # dict of juicefs filesystems to deploy
-      jfs:
-        path  : /fs
-        meta  : postgres://dbuser_meta:DBUser.Meta@10.10.10.10:5432/meta
-        data  : --storage postgres --bucket 10.10.10.10:5432/meta --access-key dbuser_meta --secret-key DBUser.Meta
-        port  : 9567
-
-    #----------------------------------------------#
-    # VIBE : https://pigsty.io/docs/vibe
-    #----------------------------------------------#
-    # CHANAGE PASSWORD！
-    code_password: Code.Server
-    jupyter_password: Jupyter.Lab
-    #claude_env:   # you can use other models here!
-    #  ANTHROPIC_BASE_URL: https://open.bigmodel.cn/api/anthropic
-    #  ANTHROPIC_API_URL: https://open.bigmodel.cn/api/anthropic
-    #  ANTHROPIC_AUTH_TOKEN: your_api_service_token
-    #  ANTHROPIC_MODEL: glm-4.7
-    #  ANTHROPIC_SMALL_FAST_MODEL: glm-4.5-air
 
     #----------------------------------------------#
     # PASSWORD : https://pigsty.io/docs/setup/security/
@@ -123,4 +97,27 @@ all:
     pg_replication_password: DBUser.Replicator
     patroni_password: Patroni.API
     haproxy_admin_password: pigsty
+
+    #----------------------------------------------#
+    # OPTIONAL VIBE COMPONENTS
+    #----------------------------------------------#
+    code_enabled: true                # install & enable code-server via vibe role
+    code_password: DBUser.Meta
+    jupyter_enabled: true             # enable jupyter (disabled by default, enable for vibe sandbox)
+    jupyter_password: DBUser.Meta
+    juice_instances:
+      jfs:
+        path  : /fs
+        meta  : postgres://dbuser_meta:DBUser.Meta@10.10.10.10:5432/meta
+        data  : --storage postgres --bucket 10.10.10.10:5432/meta --access-key dbuser_meta --secret-key DBUser.Meta
+        port  : 9567
+
+    #npm_packages: [ '@anthropic-ai/claude-code', 'happy-coder' ]
+    #claude_env:
+    #  ANTHROPIC_BASE_URL: https://open.bigmodel.cn/api/anthropic
+    #  ANTHROPIC_API_URL: https://open.bigmodel.cn/api/anthropic
+    #  ANTHROPIC_AUTH_TOKEN: your_api_service_token
+    #  ANTHROPIC_MODEL: glm-4.7
+    #  ANTHROPIC_SMALL_FAST_MODEL: glm-4.5-air
+
 ...

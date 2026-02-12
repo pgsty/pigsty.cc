@@ -53,6 +53,7 @@ all:
           - { name: postgres, extensions: [ documentdb, postgis, vector, pg_cron, rum ]}  # run on the postgres database
         pg_hba_rules:
           - { user: dbuser_view , db: all ,addr: infra ,auth: pwd ,title: 'allow grafana dashboard access cmdb from infra nodes' }
+          # WARNING: demo/dev only. Avoid world access for dbsu in production.
           - { user: postgres    , db: all ,addr: world ,auth: pwd ,title: 'dbsu password access everywhere' }
           - { user: all ,db: all ,addr: localhost ,order: 1  ,auth: trust ,title: 'documentdb localhost trust access' }
           - { user: all ,db: all ,addr: local     ,order: 1  ,auth: trust ,title: 'documentdb local     trust access' }
@@ -67,7 +68,7 @@ all:
     #----------------------------------------------#
     # INFRA : https://pigsty.io/docs/infra/param
     #----------------------------------------------#
-    version: v4.0.0                   # pigsty version string
+    version: v4.1.0                   # pigsty version string
     admin_ip: 10.10.10.10             # admin node ip address
     region: default                   # upstream mirror region: default,china,europe
     infra_portal:                     # infra services exposed via portal

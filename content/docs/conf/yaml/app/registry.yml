@@ -27,7 +27,7 @@
 #==============================================================#
 #
 # 1. Deploy the registry:
-#    ./configure -c conf/app/registry.yml && ./deploy.yml && ./docker.yml && ./app.yml
+#    ./configure -c app/registry && ./deploy.yml && ./docker.yml && ./app.yml
 #
 # 2. Configure Docker clients to use the mirror:
 #    Edit /etc/docker/daemon.json:
@@ -81,7 +81,7 @@ all:
     #----------------------------------------------#
     # INFRA : https://pigsty.io/docs/infra/param
     #----------------------------------------------#
-    version: v4.0.0                      # pigsty version string
+    version: v4.1.0                      # pigsty version string
     admin_ip: 10.10.10.10                # admin node ip address
     region: default                      # upstream mirror region: default,china,europe
     infra_portal:                        # infra services exposed via portal
