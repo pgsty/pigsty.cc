@@ -206,12 +206,8 @@ MinIO 无法在节点/磁盘级别上缩容，但可以在存储池（多个节�
 
 首先，将新版本的 MinIO 软件包下载至 INFRA 节点的本地软件仓库，然后重建软件仓库索引：
 
-- [minio](https://github.com/minio/minio):
-    - amd64: https://dl.min.io/server/minio/release/linux-amd64/
-    - arm64: https://dl.min.io/server/minio/release/linux-arm64/
-- [mcli](https://github.com/minio/mc): 
-    - amd64: https://dl.min.io/client/mc/release/linux-amd64/
-    - arm64: https://dl.min.io/client/mc/release/linux-arm64/
+从 Pigsty v4.1 开始，建议优先使用 Pigsty Infra 软件源中的 `minio` / `mcli` 包（由 Pigsty 维护构建），
+同步到本地仓库后重建索引：
 
 ```bash
 ./infra.yml -t repo_create
@@ -224,10 +220,10 @@ ansible minio -m package -b -a 'name=minio state=latest'  # 升级 MinIO 服务�
 ansible minio -m package -b -a 'name=mcli state=latest'   # 升级 MinIO 客户端软件版本
 ```
 
-最后，使用 mc 命令行工具通知 MinIO 集群重启：
+最后，使用 mcli 命令行工具通知 MinIO 集群重启：
 
 ```bash
-mc admin service restart sss
+mcli admin service restart sss
 ```
 
 
@@ -249,7 +245,7 @@ bin/node-add <your_new_node_ip>
 ./minio.yml -l <your_new_node_ip>
 
 # 4. 指示 MinIO 执行恢复动作
-mc admin heal
+mcli admin heal
 ```
 
 
@@ -275,7 +271,7 @@ vi /etc/fstab
 mount -a
 
 # 5. 指示 MinIO 执行恢复动作
-mc admin heal
+mcli admin heal
 ```
 
 
@@ -295,7 +291,7 @@ mc admin heal
 
 ```bash
 set +o history
-mc admin user passwd sss pgbackrest <YOUR_NEW_PASSWORD>
+mcli admin user passwd sss pgbackrest <YOUR_NEW_PASSWORD>
 set -o history
 ```
 
@@ -304,4 +300,3 @@ set -o history
 ```bash
 ./pgsql.yml -t pgbackrest_config
 ```
-

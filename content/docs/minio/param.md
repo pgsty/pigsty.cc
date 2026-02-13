@@ -217,7 +217,7 @@ MinIO 数据目录（们），默认值：`/data/minio`，这是 [单节点](/do
 MinIO 核心参数，默认不指定留空，留空情况下，该参数会自动使用以下规则拼接生成：
 
 ```yaml
-minio_volumes: "{% if minio_cluster_size|int > 1 %}https://{{ minio_node|replace('${minio_cluster}', minio_cluster)|replace('${minio_seq}',minio_seq_range) }}:{{ minio_port|default(9000) }}{% endif %}{{ minio_data }}"
+minio_volumes: "{% if minio_cluster_size|int > 1 %}{% if minio_https|bool %}https{% else %}http{% endif %}://{{ minio_node|replace('${minio_cluster}', minio_cluster)|replace('${minio_seq}',minio_seq_range) }}:{{ minio_port|default(9000) }}{% endif %}{{ minio_data }}"
 ```
 
 - 在单机部署（无论是单盘还是多盘）模式下，`minio_volumes` 直接使用 [`minio_data`](#minio_data) 的值，进行单机部署。
@@ -379,7 +379,7 @@ minio_extra_vars: |
 部署的客户端别名对应的端点，如果指定，这里的 `minio_endpoint` （例如： `https://sss.pigsty:9002`）将会替代默认值，作为写入管理节点 MinIO Alias 的目标端点。
 
 ```bash
-mcli alias set {{ minio_alias }} {% if minio_endpoint is defined and minio_endpoint != '' %}{{ minio_endpoint }}{% else %}https://{{ minio_domain }}:{{ minio_port }}{% endif %} {{ minio_access_key }} {{ minio_secret_key }}
+mcli alias set {{ minio_alias }} {% if minio_endpoint is defined and minio_endpoint != '' %}{{ minio_endpoint }}{% else %}{% if minio_https|bool %}https{% else %}http{% endif %}://{{ minio_domain }}:{{ minio_port }}{% endif %} {{ minio_access_key }} {{ minio_secret_key }}
 ```
 
 以上 MinIO Alias 会在管理节点上以默认管理用户执行。
@@ -496,5 +496,4 @@ minio_safeguard: true   # 启用后，minio-rm.yml 将拒绝执行
 移除时是否卸载 MinIO 软件包？默认值为 `false`。
 
 当启用时，[`minio-rm.yml`](/docs/minio/playbook/#minio-rmyml) 剧本将在集群移除过程中卸载 MinIO 软件包。默认禁用此选项，以便保留 MinIO 安装供将来可能的使用。
-
 

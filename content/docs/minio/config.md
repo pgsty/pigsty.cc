@@ -92,10 +92,10 @@ minio:
 例如 Vagrant MinIO [沙箱](https://github.com/pgsty/pigsty/blob/main/vagrant/spec/minio.rb) 定义了一个带有4块磁盘的单节点 MinIO 集群：`/data1`、`/data2`、`/data3` 和 `/data4`。启动 MinIO 之前，你需要正确地挂载它们（请务必使用 `xfs` 格式化磁盘）：
 
 ```bash
-mkfs.xfs /dev/vdb; mkdir /data1; mount -t xfs /dev/sdb /data1;   # 挂载第1块盘……
-mkfs.xfs /dev/vdc; mkdir /data2; mount -t xfs /dev/sdb /data2;   # 挂载第2块盘……
-mkfs.xfs /dev/vdd; mkdir /data3; mount -t xfs /dev/sdb /data3;   # 挂载第3块盘……
-mkfs.xfs /dev/vde; mkdir /data4; mount -t xfs /dev/sdb /data4;   # 挂载第4块盘……
+mkfs.xfs /dev/vdb; mkdir /data1; mount -t xfs /dev/vdb /data1;   # 挂载第1块盘……
+mkfs.xfs /dev/vdc; mkdir /data2; mount -t xfs /dev/vdc /data2;   # 挂载第2块盘……
+mkfs.xfs /dev/vdd; mkdir /data3; mount -t xfs /dev/vdd /data3;   # 挂载第3块盘……
+mkfs.xfs /dev/vde; mkdir /data4; mount -t xfs /dev/vde /data4;   # 挂载第4块盘……
 ```
 
 挂载磁盘属于服务器置备的部分，超出 Pigsty 的处理范畴。挂载的磁盘应该同时写入 `/etc/fstab` 以便在服务器重启后可以自动挂载。
@@ -142,7 +142,7 @@ minio:
 默认情况下，节点名称是 `${minio_cluster}-${minio_seq}.pigsty`，其中 `${minio_cluster}` 是集群名称，`${minio_seq}` 是节点序号。
 MinIO 实例的名称非常重要，会自动写入到 MinIO 节点的 `/etc/hosts` 中进行静态解析。MinIO 依靠这些名称来识别并访问集群中的其他节点。
 
-在这种情况下，`MINIO_VOLUMES` 将被设置为 `https://minio-{1...4}.pigsty/data{1...4}` ，以标识四个节点上的四块盘。
+在这种情况下，`MINIO_VOLUMES` 将被设置为 `https://minio-{1...4}.pigsty:9000/data{1...4}` ，以标识四个节点上的四块盘。
 您可以直接在 MinIO 集群中指定 [`minio_volumes`](/docs/minio/param#minio_volumes) 参数，来覆盖自动根据规则生成的值。
 但通常不需要这样做，因为 Pigsty 会自动根据配置清单生成它。
 
@@ -197,7 +197,7 @@ minio1:
     10.10.10.12: { minio_seq: 3 }
     10.10.10.13: { minio_seq: 4 }
   vars:
-    minio_cluster: minio2
+    minio_cluster: minio1
     minio_data: "/data{1...4}"
 
 minio2:
@@ -211,7 +211,7 @@ minio2:
     minio_data: "/data{1...4}"
     minio_alias: sss2
     minio_domain: sss2.pigsty
-    minio_endpoint: sss2.pigsty:9000
+    minio_endpoint: https://sss2.pigsty:9000
 ```
 
 请注意，Pigsty 默认一套部署中只有一个 MinIO 集群，如果您需要部署多个 MinIO 集群，那么一些带有默认值的参数需要显式设置，无法省略，否则会出现命名冲突，如上所示。
@@ -297,9 +297,9 @@ proxy:
     vip_address: 10.10.10.20
     vip_vrid: 20
     
-    haproxy_services:      # expose minio service : sss.pigsty:9000
+    haproxy_services:      # expose minio service : sss.pigsty:9002
       - name: minio        # [REQUIRED] service name, unique
-        port: 9000         # [REQUIRED] service port, unique
+        port: 9002         # [REQUIRED] service port, unique
         balance: leastconn # Use leastconn algorithm and minio health check
         options: [ "option httpchk", "option http-keep-alive", "http-check send meth OPTIONS uri /minio/health/live", "http-check expect status 200" ]
         servers:           # reload service with ./node.yml -t haproxy_config,haproxy_reload

@@ -64,7 +64,7 @@ Pigsty 针对 MinIO 提供了以下三条告警规则，分别是：
     summary: "CRIT MinioServerDown {{ $labels.ins }}@{{ $labels.instance }}"
     description: |
       minio_up[ins={{ $labels.ins }}, instance={{ $labels.instance }}] = {{ $value }} < 1
-      http://g.pigsty/d/minio-overview
+      /ui/d/minio-overview
 
 #==============================================================#
 #                         Error                                #
@@ -78,7 +78,7 @@ Pigsty 针对 MinIO 提供了以下三条告警规则，分别是：
     summary: "WARN MinioNodeOffline: {{ $labels.cls }} {{ $value }}"
     description: |
       minio_cluster_nodes_offline_total[cls={{ $labels.cls }}] = {{ $value }} > 0
-      http://g.pigsty/d/minio-overview?from=now-5m&to=now&var-cls={{$labels.cls}}
+      /ui/d/minio-overview?from=now-5m&to=now&var-cls={{$labels.cls}}
 
 # MinIO disk offline triggers a p1 alert
 - alert: MinioDiskOffline
@@ -89,5 +89,5 @@ Pigsty 针对 MinIO 提供了以下三条告警规则，分别是：
     summary: "WARN MinioDiskOffline: {{ $labels.cls }} {{ $value }}"
     description: |
       minio_cluster_disk_offline_total[cls={{ $labels.cls }}] = {{ $value }} > 0
-      http://g.pigsty/d/minio-overview?from=now-5m&to=now&var-cls={{$labels.cls}}
+      /ui/d/minio-overview?from=now-5m&to=now&var-cls={{$labels.cls}}
 ```

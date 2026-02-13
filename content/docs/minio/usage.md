@@ -37,7 +37,9 @@ minio: { hosts: { 10.10.10.10: { minio_seq: 1 } }, vars: { minio_cluster: minio 
 
 ## 接入集群
 
-请注意：MinIO 服务必须通过域名与 HTTPS 访问，所以请务必确保： MinIO 服务域名（默认为 `sss.pigsty`） 正确指向 MinIO 服务器节点
+请注意：生产环境建议通过域名与 HTTPS 访问 MinIO（默认配置也是 HTTPS）。
+如果您显式设置 [`minio_https`](/docs/minio/param#minio_https) 为 `false`，也可以使用 HTTP 访问。
+无论哪种方式，都请确保 MinIO 服务域名（默认为 `sss.pigsty`）正确指向 MinIO 服务器节点。
 
 1. 您可以在 [`node_etc_hosts`](/docs/node/param#node_etc_hosts) 中添加静态解析记录，或者手工修改 `/etc/hosts` 文件
 2. 您可以在内网的 DNS 服务器上添加一条记录，如果已经有了现成的 DNS 服务
@@ -174,7 +176,7 @@ pgbackrest_repo:                  # pgbackrest repo: https://pgbackrest.org/conf
     s3_uri_style: path            # use path style uri for minio rather than host style
     path: /pgbackrest             # minio backup path, default is `/pgbackrest`
     storage_port: 9000            # minio port, 9000 by default
-    storage_ca_file: /pg/cert/ca.crt  # minio ca file path, `/pg/cert/ca.crt` by default
+    storage_ca_file: /etc/pki/ca.crt  # minio ca file path, `/etc/pki/ca.crt` by default
     bundle: y                     # bundle small files into a single file
     cipher_type: aes-256-cbc      # enable AES encryption for remote backup repo
     cipher_pass: pgBackRest       # AES encryption password, default is 'pgBackRest'
