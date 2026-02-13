@@ -387,13 +387,13 @@ pig pt svc status                # 显示服务状态
 
 **别名对照：**
 
-| 命令 | 别名 |
-|:----|:----|
-| `pt svc start` | `boot, up` |
-| `pt svc stop` | `halt, dn, down` |
-| `pt svc restart` | `reboot, rt` |
-| `pt svc reload` | `rl, hup` |
-| `pt svc status` | `st, stat` |
+| 命令               | 别名               |
+|:-----------------|:-----------------|
+| `pt svc start`   | `boot, up`       |
+| `pt svc stop`    | `halt, dn, down` |
+| `pt svc restart` | `reboot, rt`     |
+| `pt svc reload`  | `rl, hup`        |
+| `pt svc status`  | `st, stat`       |
 {.full-width}
 
 

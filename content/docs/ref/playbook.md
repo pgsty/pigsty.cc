@@ -1,12 +1,12 @@
 ---
 title: 剧本列表
 weight: 480
-description: Pigsty v4.0 预置 Ansible 剧本导航与执行要点
+description: Pigsty v4.x 预置 Ansible 剧本导航与执行要点
 icon: fa-solid fa-scroll
 categories: [参考]
 ---
 
-本文汇总 Pigsty v4.0 各模块剧本入口与执行要点，详细任务标签请进入对应模块 `playbook` 文档。
+本文汇总 Pigsty v4.x 各模块剧本入口与执行要点，详细任务标签请进入对应模块 `playbook` 文档。
 
 ## 模块剧本导航
 

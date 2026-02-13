@@ -1,12 +1,12 @@
 ---
 title: 参数列表
 weight: 475
-description: Pigsty v4.0 配置参数总览与模块参数导航
+description: Pigsty v4.x 配置参数总览与模块参数导航
 icon: fa-solid fa-sliders
 categories: [参考]
 ---
 
-本文是 Pigsty v4.0 的参数导航页，不重复展开每个参数的详细解释。
+本文是 Pigsty v4.x 的参数导航页，不重复展开每个参数的详细解释。
 参数细节请进入各模块的 `param` 页面查看。
 
 按照当前文档口径，正式模块合计约 **360** 个参数，分布在 **10** 个模块中。

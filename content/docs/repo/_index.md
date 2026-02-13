@@ -7,7 +7,7 @@ weight: 5400
 
 Pigsty 为主流 [Linux 发行版](/docs/ref/linux/) 提供了 PostgreSQL 扩展仓库，其中包含 340+ 额外的 PostgreSQL 扩展。
 
-Pigsty 扩展仓库旨在与 [PGDG](https://www.postgresql.org/download/linux/) 官方仓库配合使用，共同使用时可以安装多达 [400+ PostgreSQL 扩展](https://ext.pigsty.io) 。
+Pigsty 扩展仓库旨在与 [PGDG](https://www.postgresql.org/download/linux/) 官方仓库配合使用，共同使用时可以安装多达 [450+ PostgreSQL 扩展](https://ext.pigsty.io) 。
 
 |   PGSQL 仓库   |                      描述                       |              链接               |
 |:------------:|:---------------------------------------------:|:-----------------------------:|
@@ -144,16 +144,16 @@ Pigsty 仓库由两个主要部分组成：[**INFRA**](/docs/repo/infra/) 和 [*
 |    `el7.x86_64`      | EL     |  7  |   7.9   | CentOS 7 x86      |    15 14 13                       |  EOL   |
 |    `el8.x86_64`      | EL     |  8  |  8.10   | RockyLinux 8 x86  | **18** **17** **16** **15** **14** **13** | 即将 EOL |
 |    `el8.aarch64`     | EL     |  8  |  8.10   | RockyLinux 8 ARM  | **18** **17** **16** **15** **14** **13** | 即将 EOL |
-|    `el9.x86_64`      | EL     |  9  |   9.6   | RockyLinux 9 x86  | **18** **17** **16** **15** **14** **13** |   OK   |
-|    `el9.aarch64`     | EL     |  9  |   9.6   | RockyLinux 9 ARM  | **18** **17** **16** **15** **14** **13** |   OK   |
-|    `el10.x86_64`     | EL     | 10  |  10.0   | RockyLinux 10 x86 | **18** **17** **16** **15** **14** **13** |   OK   |
-|    `el10.aarch64`    | EL     | 10  |  10.0   | RockyLinux 10 ARM | **18** **17** **16** **15** **14** **13** |   OK   |
+|    `el9.x86_64`      | EL     |  9  |   9.7   | RockyLinux 9 x86  | **18** **17** **16** **15** **14** **13** |   OK   |
+|    `el9.aarch64`     | EL     |  9  |   9.7   | RockyLinux 9 ARM  | **18** **17** **16** **15** **14** **13** |   OK   |
+|    `el10.x86_64`     | EL     | 10  |  10.1   | RockyLinux 10 x86 | **18** **17** **16** **15** **14** **13** |   OK   |
+|    `el10.aarch64`    | EL     | 10  |  10.1   | RockyLinux 10 ARM | **18** **17** **16** **15** **14** **13** |   OK   |
 |    `d11.x86_64`      | Debian | 11  |  11.11  | Debian 11 x86     |    17 16 15 14 13                 |  EOL   |
 |    `d11.aarch64`     | Debian | 11  |  11.11  | Debian 11 ARM     |    17 16 15 14 13                 |  EOL   |
-|    `d12.x86_64`      | Debian | 12  |  12.12  | Debian 12 x86     | **18** **17** **16** **15** **14** **13** |   OK   |
-|    `d12.aarch64`     | Debian | 12  |  12.12  | Debian 12 ARM     | **18** **17** **16** **15** **14** **13** |   OK   |
-|    `d13.x86_64`      | Debian | 13  |  13.1   | Debian 13 x86     | **18** **17** **16** **15** **14** **13** |   OK   |
-|    `d13.aarch64`     | Debian | 13  |  13.1   | Debian 13 ARM     | **18** **17** **16** **15** **14** **13** |   OK   |
+|    `d12.x86_64`      | Debian | 12  |  12.13  | Debian 12 x86     | **18** **17** **16** **15** **14** **13** |   OK   |
+|    `d12.aarch64`     | Debian | 12  |  12.13  | Debian 12 ARM     | **18** **17** **16** **15** **14** **13** |   OK   |
+|    `d13.x86_64`      | Debian | 13  |  13.3   | Debian 13 x86     | **18** **17** **16** **15** **14** **13** |   OK   |
+|    `d13.aarch64`     | Debian | 13  |  13.3   | Debian 13 ARM     | **18** **17** **16** **15** **14** **13** |   OK   |
 |    `u20.x86_64`      | Ubuntu | 20  | 20.04.6 | Ubuntu 20.04 x86  |    17 16 15 14 13                 |  EOL   |
 |    `u20.aarch64`     | Ubuntu | 20  | 20.04.6 | Ubuntu 20.04 ARM  |    17 16 15 14 13                 |  EOL   |
 |    `u22.x86_64`      | Ubuntu | 22  | 22.04.5 | Ubuntu 22.04 x86  | **18** **17** **16** **15** **14** **13** |   OK   |
@@ -172,4 +172,3 @@ Pigsty 仓库由两个主要部分组成：[**INFRA**](/docs/repo/infra/) 和 [*
 - https://github.com/pgsty/rpm
 - https://github.com/pgsty/deb
 - https://github.com/pgsty/infra-pkg
-
