@@ -64,5 +64,6 @@ categories: [参考]
 
 ```yaml
 node_firewall_mode: zone
-node_firewall_public_port: [22, 80, 443, 5432]
+node_firewall_public_port: [22, 80, 443]
+# node_firewall_public_port: [22, 80, 443, 5432]  # only if public DB access is required
 ```

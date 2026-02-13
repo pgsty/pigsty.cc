@@ -10,7 +10,7 @@ Pigsty 当前的最新稳定版本为 [**v4.1.0**](#v410)。
 
 |       版本        |    发布日期    | 摘要                                                      |                                           发布页面                                            |
 |:---------------:|:----------:|---------------------------------------------------------|:-----------------------------------------------------------------------------------------:|
-| [v4.1.0](#v410) | 2026-02-12 | 操作系统与数据库小版本更新，Agent Native CLI，批量 Bug 修复                |               [v4.1.0](https://github.com/pgsty/pigsty/releases/tag/v4.1.0)               |
+| [v4.1.0](#v410) | 2026-02-12 | 大小版本更新支持，Agent-Native CLI，默认防火墙安全策略收紧                   |               [v4.1.0](https://github.com/pgsty/pigsty/releases/tag/v4.1.0)               |
 | [v4.0.0](#v400) | 2026-01-28 | Victoria 可观测性，安全加固，JUICE/VIBE 模块，容器支持，Apache-2.0        |               [v4.0.0](https://github.com/pgsty/pigsty/releases/tag/v4.0.0)               |
 | [v3.7.0](#v370) | 2025-12-02 | PG18 成为默认，437 个扩展，EL10 与 Debian13 支持，PGEXT.CLOUD        |               [v3.7.0](https://github.com/pgsty/pigsty/releases/tag/v3.7.0)               |
 | [v3.6.1](#v361) | 2025-08-15 | 例行 PG 小版本更新，PGDG 中国区域镜像，EL9，D13 存根                      |               [v3.6.1](https://github.com/pgsty/pigsty/releases/tag/v3.6.1)               |
@@ -74,18 +74,20 @@ Pigsty 当前的最新稳定版本为 [**v4.1.0**](#v410)。
 curl https://pigsty.cc/get | bash -s v4.1.0
 ```
 
-**70 个提交**，249 文件变更，+5,684 / -4,953 行（`v4.0.0..HEAD`，2026-02-02 ~ 2026-02-13）
+**72 个提交**，252 文件变更，+5,744 / -5,015 行（`v4.0.0..v4.1.0`，2026-02-02 ~ 2026-02-13）
 
 **亮点特性**
 
-- 新增 7 个扩展，共计约 450 个扩展支持。
-- pig 命令行工具现在提供 Agent-Native 接口，主动暴露上下文，提供 json/yaml 格式输出。
+- 新增 7 个扩展，总计 **451** 个扩展支持。
+- `pig` 从传统脚本接口升级为 **Agent-Native CLI**（`1.0.0 -> 1.1.0`），支持主动暴露上下文并提供 JSON/YAML 输出。
+- `pig` 新增 PostgreSQL / OS **大小版本更新**统一能力（覆盖 major/minor 升级流程）。
+- `pg_exporter` 升级到 **v1.2.0**（`1.1.2 -> 1.2.0`），并修复 PG17/18 指标链路与单位换算。
+- 防火墙默认安全策略更新：`node_firewall_mode` 默认改为 `zone`，`node_firewall_public_port` 默认从 `[22,80,443,5432]` 收敛为 `[22,80,443]`。
 - PostgreSQL 小版本更新：18.2、17.8、16.12、15.16、14.21。
 - EL 默认小版本更新到 `EL 9.7 / EL 10.1`，Debian 默认小版本更新到 `12.13 / 13.3`。
 - 集中修复 PGSQL / PGCAT Grafana 看板可用性：`$dsn` 动态数据源、schema 级跳转、Age 指标、链接映射与语义一致性。
 - 新增 Mattermost 一键应用模板，支持数据库、目录、门户与可选 PGFS/JuiceFS 方案。
 - 重构 `infra-rm` 卸载逻辑，新增 `deregister` 分段清理能力，可回收 Victoria target、Grafana datasource、Vector 日志配置。
-- 修复 PG17/18 checkpoint 指标链路：切换到 `pg_checkpointer_*` 并提供 `pg_bgwriter_*` fallback，避免多版本场景下图表失真。
 - 优化 PostgreSQL 默认 autovacuum 阈值，减少小表高频 vacuum/analyze。
 - 修复 FD 上限链路：新增 `fs.nr_open=8M` 并统一 `LimitNOFILE=8M`，避免 systemd/setrlimit 导致服务启动失败。
 - 调整 Vibe 默认体验：Jupyter 默认关闭，Claude Code 改由 npm 包统一安装管理。
@@ -93,6 +95,8 @@ curl https://pigsty.cc/get | bash -s v4.1.0
 **版本更新**
 
 - Pigsty 版本：`v4.0.0 -> v4.1.0`
+- `pig` CLI：`1.0.0 -> 1.1.0`（Agent-Native + 大小版本更新支持）
+- `pg_exporter`：`1.1.2 -> 1.2.0`
 - 默认 EL 小版本：`9.6/10.0 -> 9.7/10.1`
 - 默认 Debian 小版本：`12.12/13.1 -> 12.13/13.3`
 
@@ -109,6 +113,8 @@ curl https://pigsty.cc/get | bash -s v4.1.0
 - pg_utl_smtp `1.0.0`（新增）
 - pg_strict `1.0.2`（新增）
 - pgmb `1.0.0`（新增）
+- pg_pwhash（新增支持）
+- informix_fdw（新增支持）
 
 **INFRA 组件版本**
 
@@ -137,13 +143,16 @@ curl https://pigsty.cc/get | bash -s v4.1.0
 - Node tuned 模板新增 `fs.nr_open=8388608`，并统一 `fs.file-max / fs.nr_open / LimitNOFILE` 层级关系。
 - postgres、patroni、minio 的 systemd `LimitNOFILE` 从 `16777216` 调整为 `8388608`。
 - `node_sysctl_params` 默认加入 `fs.nr_open: 8388608`。
+- `node_firewall_mode` 默认值从 `none` 调整为 `zone`：默认启用防火墙，内网信任，公网仅开放 `node_firewall_public_port`；如需完全自管防火墙请设为 `none`。
+- `node_firewall_public_port` 默认值从 `[22,80,443,5432]` 调整为 `[22,80,443]`，数据库端口 `5432` 需要按需显式添加。注意防火墙规则为“只增不删”，存量节点若已放行 `5432` 需手工移除；单机体验模板（如 `meta` / `vibe`）会显式覆盖并保留 `5432` 以便远程使用。
 - `bin/validate` 新增 `pg_databases[*].parameters` 与 `pg_hba_rules[*].order` 校验支持，并修复 HBA 错误未正确返回失败的问题。
 - `infra-rm.yml` 新增 `deregister`、`config`、`env` 等分段标签。
 - Vibe 默认 `jupyter_enabled=false`，`npm_packages` 默认加入 `@anthropic-ai/claude-code`、`happy-coder`，并新增 `CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1`。
 - PgBouncer 参数别名收敛：`pool_size_reserve -> pool_reserve`，`pool_max_db_conn -> pool_connlimit`。
 
-**兼容性修复**
+**兼容性修复（去重归并）**
 
+- 注：同一问题的重复回补（反复引入后再次修复）仅计一次，以下按问题域归并。
 - 修复 Redis `replicaof` 判空逻辑与 systemd 停止行为。
 - 修复 `pg_migration` 脚本 schema/table/sequence 全限定、标识符 quoting 与日志格式字符串安全问题。
 - 修复 pgsql role handler 重启对象与变量使用错误。
@@ -161,9 +170,11 @@ curl https://pigsty.cc/get | bash -s v4.1.0
 - 修复 `pg_monitor` 注册 Victoria target 的 gate 条件。
 - `pg_remove` 备份清理改为集群级目录，避免误删其他集群备份。
 
-**提交清单（v4.0.0..HEAD，共 70，2026-02-02 ~ 2026-02-13）**
+**提交清单（v4.0.0..v4.1.0，共 72，2026-02-02 ~ 2026-02-13）**
 
 ```
+7410de401 v4.1.0 release
+fa31213ce conf(node): default firewall to zone with single-node 5432 override
 bb8382c58 update default extension list to 451
 770d01959 hide user credential in pgsql-user playbook
 7219a896c pg_monitor: fix victoria registration gate conditions
@@ -244,7 +255,21 @@ e80754760 fix pgcat-database links to pgcat-table https://github.com/pgsty/pigst
 **校验和**
 
 ```bash
-# v4.1.0 软件包校验和将在发布资产补齐后更新
+8bc75e8df0e3830931f2ddab71b89630  pigsty-v4.1.0.tgz
+da10de99d819421630f430d01bc9de62  pigsty-pkg-v4.1.0.d12.aarch64.tgz
+e1f2ed2da0d6b8c360f9fa2faaa7e175  pigsty-pkg-v4.1.0.d12.x86_64.tgz
+382bb38a81c138b1b3e7c194211c2138  pigsty-pkg-v4.1.0.d13.aarch64.tgz
+13ceaa728901cc4202687f03d25f1479  pigsty-pkg-v4.1.0.d13.x86_64.tgz
+92d061de4d495d05d42f91e4283e7502  pigsty-pkg-v4.1.0.el10.aarch64.tgz
+be629ea91adf86bbd7e1c59b659d0069  pigsty-pkg-v4.1.0.el10.x86_64.tgz
+c14be706119ba33dd06c71dda6c02298  pigsty-pkg-v4.1.0.el8.aarch64.tgz
+0c8b6952ffc00e3b169896129ea39184  pigsty-pkg-v4.1.0.el8.x86_64.tgz
+cfcc63b9ecc525165674f58f9365aa19  pigsty-pkg-v4.1.0.el9.aarch64.tgz
+34f733080bfa9c8515d1573c35f3e870  pigsty-pkg-v4.1.0.el9.x86_64.tgz
+ad52ce9bf25e4d834e55873b3f9ada51  pigsty-pkg-v4.1.0.u22.aarch64.tgz
+300b2185c61a03ea7733248e526f3342  pigsty-pkg-v4.1.0.u22.x86_64.tgz
+2e561e6ae9abb14796872059d2f694a8  pigsty-pkg-v4.1.0.u24.aarch64.tgz
+c462bb4cb2359e771ffcad006888fbd4  pigsty-pkg-v4.1.0.u24.x86_64.tgz
 ```
 
 
@@ -474,7 +499,7 @@ MinIO 开始使用 [pgsty/minio](https://github.com/pgsty/minio) fork RPM/DEB
 
 | 参数                       | 类型     | 默认值           | 说明                               |
 |--------------------------|--------|---------------|----------------------------------|
-| `node_firewall_mode`     | enum   | none          | 防火墙模式：off/none/zone              |
+| `node_firewall_mode`     | enum   | none (v4.0)   | 防火墙模式：off/none/zone（v4.1 起默认 zone） |
 | `node_selinux_mode`      | enum   | permissive    | SELinux 模式                       |
 | `node_firewall_intranet` | string | -             | HBA 信任的内网网段                      |
 | `node_admin_sudo`        | enum   | nopass        | 管理员 sudo 权限级别                    |

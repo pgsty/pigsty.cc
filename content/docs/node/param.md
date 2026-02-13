@@ -91,9 +91,9 @@ categories: [参考]
 | 参数                                                        |     类型      |   级别    | 说明                                         |
 |:----------------------------------------------------------|:-----------:|:-------:|:-------------------------------------------|
 | [`node_selinux_mode`](#node_selinux_mode)                 |   `enum`    |   `C`   | SELinux 模式：disabled, permissive, enforcing |
-| [`node_firewall_mode`](#node_firewall_mode)               |   `enum`    |   `C`   | 防火墙模式：none, off, zone                      |
+| [`node_firewall_mode`](#node_firewall_mode)               |   `enum`    |   `C`   | 防火墙模式：zone（默认）, off, none（自管）          |
 | [`node_firewall_intranet`](#node_firewall_intranet)       |  `cidr[]`   |   `C`   | 内网 CIDR 列表，用于配置防火墙规则                       |
-| [`node_firewall_public_port`](#node_firewall_public_port) |  `port[]`   |   `C`   | 公网开放端口列表，默认为 [22, 80, 443, 5432]           |
+| [`node_firewall_public_port`](#node_firewall_public_port) |  `port[]`   |   `C`   | 公网开放端口列表，默认为 [22, 80, 443]                 |
 {.full-width}
 
 [`NODE_ADMIN`](#node_admin) 参数组用于配置节点的管理员用户、数据目录与命令别名。
@@ -711,7 +711,7 @@ node_sysctl_params:
 
 ```yaml
 node_selinux_mode: permissive             # selinux mode: disabled, permissive, enforcing
-node_firewall_mode: none                  # firewall mode: none (skip), off (disable), zone (enable & config)
+node_firewall_mode: zone                  # firewall mode: zone (default), off (disable), none (skip & self-managed)
 node_firewall_intranet:           # which intranet cidr considered as internal network
   - 10.0.0.0/8
   - 192.168.0.0/16
@@ -720,7 +720,6 @@ node_firewall_public_port:        # expose these ports to public network in (zon
   - 22                            # enable ssh access
   - 80                            # enable http access
   - 443                           # enable https access
-  - 5432                          # enable postgresql access (think twice before exposing it!)
 ```
 
 
@@ -751,17 +750,17 @@ SELinux 运行模式，默认值为：`permissive`（宽容模式）。
 
 参数名称： `node_firewall_mode`， 类型： `enum`， 层次：`C`
 
-防火墙运行模式，默认值为：`none`（不干预）。
+防火墙运行模式，默认值为：`zone`（启用防火墙并按分区规则管理）。
 
 可选值：
 
-* `none`：什么也不管，维持现有防火墙规则不变（默认值）。
-* `off`：关闭并禁用防火墙（等同于旧版本的 `node_disable_firewall: true`）
-* `zone`：启用防火墙并配置规则：内网信任，公网只开放指定端口。
+* `zone`：启用防火墙并配置规则：内网信任，公网只开放指定端口（默认值）。
+* `off`：关闭并禁用防火墙（等同于旧版本的 `node_disable_firewall: true`）。
+* `none`：不修改防火墙状态与规则，由用户完全自管。
 
-在 EL 系统上使用 `firewalld` 服务，在 Debian/Ubuntu 系统上使用 `ufw` 服务。
+在 EL 系统上使用 `firewalld` 服务，在 Debian/Ubuntu 系统上使用 `ufw` 服务。为保证跨发行版行为一致，Pigsty 默认采用 `zone` 模式：自动启用系统防火墙，内网全通，公网仅开放 [`node_firewall_public_port`](#node_firewall_public_port)。
 
-如果您在完全受信任的内网环境中部署，或者通过云厂商安全组等方式进行访问控制，您可以使用默认的 `none` 模式以保留现有防火墙配置，或者设置为 `off` 显式禁用防火墙。
+如果您需要完全自行维护防火墙规则（例如仅依赖云安全组，或已有企业级防火墙策略），可以设置为 `none` 跳过 Pigsty 的防火墙管理；若要显式关闭系统防火墙，请使用 `off`。
 
 需要公网暴露的生产环境建议使用 `zone` 模式，配合 [`node_firewall_intranet`](#node_firewall_intranet) 和 [`node_firewall_public_port`](#node_firewall_public_port) 进行精细化访问控制。`zone` 模式会在防火墙未运行时自动启用防火墙。
 
@@ -793,26 +792,25 @@ node_firewall_intranet:
 
 参数名称： `node_firewall_public_port`， 类型： `port[]`， 层次：`C`
 
-公网开放端口列表，默认值为：`[22, 80, 443, 5432]`。
+公网开放端口列表，默认值为：`[22, 80, 443]`。
 
 此参数定义了对公网（非内网 CIDR）开放的端口列表。默认开放的端口包括：
 
 * `22`：SSH 服务端口
 * `80`：HTTP 服务端口
 * `443`：HTTPS 服务端口
-* `5432`：PostgreSQL 数据库端口
 
-您可以根据实际需求调整此列表。例如，如果不需要对外暴露数据库端口，可以移除 `5432`：
+您可以根据实际需求调整此列表。例如，如果您需要对外暴露 PostgreSQL，可以显式添加 `5432`：
 
 ```yaml
-node_firewall_public_port: [22, 80, 443]
+node_firewall_public_port: [22, 80, 443, 5432]
 ```
 
 Pigsty 中 PostgreSQL 默认安全策略仅允许管理员通过公网访问数据库端口。
 如果您想要让其他用户也能通过公网访问数据库，请确保在 PG/PGB HBA 规则中正确配置相应的访问权限。
 
-如果你想要将其他服务端口对公网开放，也可以将它们添加到此列表中，
-如果您想要收紧防火墙规则，可以移除 5432 数据库端口，确保只开放真正需要的服务端口。
+如果你想要将其他服务端口对公网开放，也可以将它们添加到此列表中。
+建议始终保持最小暴露原则，只开放真正需要的服务端口。
 
 请注意，只有当 [`node_firewall_mode`](#node_firewall_mode) 设置为 `zone` 时，此参数才会生效。
 
@@ -1522,4 +1520,3 @@ Vector 日志读取起始位置，默认值为：`beginning`。
 日志发送目标端点列表，默认值为：`[ infra ]`。
 
 指定将日志发送至哪个节点组的 VictoriaLogs 服务。默认发送至 `infra` 组的节点。
-
