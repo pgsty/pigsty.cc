@@ -14,7 +14,7 @@ categories: [参考]
 ## 配置概览
 
 - 配置名称： `ha/simu`
-- 节点数量： 20 节点，[`pigsty/vagrant/spec/simu.rb`](https://github.com/Vonng/pigsty/blob/main/vagrant/spec/simu.rb)
+- 节点数量： 20 节点，[`pigsty/vagrant/spec/simu.rb`](https://github.com/pgsty/pigsty/blob/main/vagrant/spec/simu.rb)
 - 配置说明：20 节点的生产环境仿真配置，需要强大的宿主机方可运行。
 - 适用系统：`el8`, `el9`, `el10`, `d12`, `d13`, `u22`, `u24`
 - 适用架构：`x86_64`, `aarch64`
@@ -30,7 +30,7 @@ categories: [参考]
 
 ## 配置内容
 
-源文件地址：[`pigsty/conf/ha/simu.yml`](https://github.com/Vonng/pigsty/blob/main/conf/ha/simu.yml)
+源文件地址：[`pigsty/conf/ha/simu.yml`](https://github.com/pgsty/pigsty/blob/main/conf/ha/simu.yml)
 
 {{< readfile file="yaml/ha/simu.yml" code="true" lang="yaml" >}}
 

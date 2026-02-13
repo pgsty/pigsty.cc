@@ -33,7 +33,7 @@ categories: [参考]
 
 ## 配置内容
 
-源文件地址：[`pigsty/conf/polar.yml`](https://github.com/Vonng/pigsty/blob/main/conf/polar.yml)
+源文件地址：[`pigsty/conf/polar.yml`](https://github.com/pgsty/pigsty/blob/main/conf/polar.yml)
 
 {{< readfile file="yaml/polar.yml" code="true" lang="yaml" >}}
 

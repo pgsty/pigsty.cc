@@ -7,7 +7,7 @@ categories: [参考]
 ---
 
 
-配置模板 [`rich`](https://github.com/Vonng/pigsty/blob/main/conf/rich.yml) 是 [`meta`](/docs/conf/meta/) 的增强版本，专为需要完整功能体验的用户设计。
+配置模板 [`rich`](https://github.com/pgsty/pigsty/blob/main/conf/rich.yml) 是 [`meta`](/docs/conf/meta/) 的增强版本，专为需要完整功能体验的用户设计。
 
 如果您希望构建本地软件源、使用 MinIO 存储备份、运行 Docker 应用，或需要预置业务数据库，可以使用此模板。
 
@@ -43,7 +43,7 @@ categories: [参考]
 
 ## 配置内容
 
-源文件地址：[`pigsty/conf/rich.yml`](https://github.com/Vonng/pigsty/blob/main/conf/rich.yml)
+源文件地址：[`pigsty/conf/rich.yml`](https://github.com/pgsty/pigsty/blob/main/conf/rich.yml)
 
 {{< readfile file="yaml/rich.yml" code="true" lang="yaml" >}}
 

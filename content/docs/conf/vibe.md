@@ -85,7 +85,7 @@ pg_tle, pljs, plprql, documentdb, pglinter
 
 ## VIBE 模块组件
 
-VIBE 模块是 v4.0.0 新增的 AI 编程沙箱模块，包含三个核心组件：
+VIBE 模块是 v4.1.0 的 AI 编程沙箱模块，包含三个核心组件：
 
 **Code-Server**：浏览器中的 VS Code
 
@@ -212,4 +212,3 @@ psql postgres://dbuser_meta:DBUser.Meta@<ip>:5432/meta
 - **资源需求**：建议至少 2 核 4GB 内存，SSD 磁盘
 - **精简架构**：此模板禁用了 Patroni、PgBouncer 等高可用组件，适合单节点开发环境
 - **Claude API**：使用 Claude Code 需要配置 `claude_env` 中的 API 密钥
-

@@ -31,7 +31,7 @@ categories: [参考]
 
 ## 配置内容
 
-源文件地址：[`pigsty/conf/mysql.yml`](https://github.com/Vonng/pigsty/blob/main/conf/mysql.yml)
+源文件地址：[`pigsty/conf/mysql.yml`](https://github.com/pgsty/pigsty/blob/main/conf/mysql.yml)
 
 {{< readfile file="yaml/mysql.yml" code="true" lang="yaml" >}}
 

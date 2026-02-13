@@ -33,7 +33,7 @@ categories: [参考]
 
 ## 配置内容
 
-源文件地址：[`pigsty/conf/mssql.yml`](https://github.com/Vonng/pigsty/blob/main/conf/mssql.yml)
+源文件地址：[`pigsty/conf/mssql.yml`](https://github.com/pgsty/pigsty/blob/main/conf/mssql.yml)
 
 {{< readfile file="yaml/mssql.yml" code="true" lang="yaml" >}}
 

@@ -34,7 +34,7 @@ cp conf/build/pro.yml pigsty.yml
 
 ## 配置内容
 
-源文件地址：[`pigsty/conf/build/pro.yml`](https://github.com/Vonng/pigsty/blob/main/conf/build/pro.yml)
+源文件地址：[`pigsty/conf/build/pro.yml`](https://github.com/pgsty/pigsty/blob/main/conf/build/pro.yml)
 
 {{< readfile file="yaml/build/pro.yml" code="true" lang="yaml" >}}
 

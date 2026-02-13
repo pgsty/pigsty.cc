@@ -31,7 +31,7 @@ categories: [参考]
 
 ## 配置内容
 
-源文件地址：[`pigsty/conf/demo/debian.yml`](https://github.com/Vonng/pigsty/blob/main/conf/demo/debian.yml)
+源文件地址：[`pigsty/conf/demo/debian.yml`](https://github.com/pgsty/pigsty/blob/main/conf/demo/debian.yml)
 
 {{< readfile file="yaml/demo/debian.yml" code="true" lang="yaml" >}}
 

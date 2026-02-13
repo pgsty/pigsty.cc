@@ -31,7 +31,7 @@ categories: [参考]
 
 ## 配置内容
 
-源文件地址：[`pigsty/conf/app/electric.yml`](https://github.com/Vonng/pigsty/blob/main/conf/app/electric.yml)
+源文件地址：[`pigsty/conf/app/electric.yml`](https://github.com/pgsty/pigsty/blob/main/conf/app/electric.yml)
 
 {{< readfile file="yaml/app/electric.yml" code="true" lang="yaml" >}}
 

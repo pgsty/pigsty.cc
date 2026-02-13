@@ -34,7 +34,7 @@ categories: [参考]
 
 ## 配置内容
 
-源文件地址：[`pigsty/conf/slim.yml`](https://github.com/Vonng/pigsty/blob/main/conf/slim.yml)
+源文件地址：[`pigsty/conf/slim.yml`](https://github.com/pgsty/pigsty/blob/main/conf/slim.yml)
 
 {{< readfile file="yaml/slim.yml" code="true" lang="yaml" >}}
 

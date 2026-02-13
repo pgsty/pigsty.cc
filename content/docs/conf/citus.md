@@ -33,7 +33,7 @@ categories: [参考]
 
 ## 配置内容
 
-源文件地址：[`pigsty/conf/ha/citus.yml`](https://github.com/Vonng/pigsty/blob/main/conf/ha/citus.yml)
+源文件地址：[`pigsty/conf/ha/citus.yml`](https://github.com/pgsty/pigsty/blob/main/conf/ha/citus.yml)
 
 {{< readfile file="yaml/ha/citus.yml" code="true" lang="yaml" >}}
 
