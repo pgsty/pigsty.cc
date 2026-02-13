@@ -12,6 +12,10 @@ categories: [参考]
 
 ## 最近新闻
 
+- **2026-02-12**: **Pigsty v4.1 发布活动占位**（待补充）
+  - 发布说明：[v4.1.0](/docs/about/release#v410)
+  - 活动详情与图文记录：待补充
+
 - **2026-02-04**: Extension for Everyone 主题入选 PGCon.Dev 2026 演讲！
   - [**中国厂商首次站上 PGConf.dev 主题演讲台**](https://mp.weixin.qq.com/s/rThnqXp2JXVV9UQncNV3kg) 
 
@@ -94,6 +98,7 @@ categories: [参考]
 
 | 版本                                  |    发布时间    | 摘要                                                         | 地址                                                                                        |
 |:------------------------------------|:----------:|------------------------------------------------------------|-------------------------------------------------------------------------------------------|
+| [v4.1.0](/docs/about/release#v410) | 2026-02-12 | 操作系统与数据库小版本更新，Agent Native CLI，批量 Bug 修复 | [v4.1.0](https://github.com/pgsty/pigsty/releases/tag/v4.1.0)                             |
 | [v4.0.0](/docs/about/release#v400) | 2026-01-28 | Victoria 可观测性，安全加固，JUICE/VIBE 模块，Apache-2.0   | [v4.0.0](https://github.com/pgsty/pigsty/releases/tag/v4.0.0)                             |
 | [v3.7.0](/docs/about/release#v370) | 2025-12-02 | PG18 成为默认，437 扩展，EL10/Debian13，PGEXT.CLOUD     | [v3.7.0](https://github.com/pgsty/pigsty/releases/tag/v3.7.0)                             |
 | [v3.6.1](/docs/about/release#v361) | 2025-08-15 | 例行 PG 小版本更新，PGDG 中国区域镜像                        | [v3.6.1](https://github.com/pgsty/pigsty/releases/tag/v3.6.1)                             |
@@ -193,4 +198,3 @@ categories: [参考]
 | 2022-06-12 | 公开路演 | 奇绩创坛 S22 路演日           | 好用省钱的数据库发行版 Pigsty                                    |
 | 2022-06-05 | 视频直播 | PG中文社区直播分享             | Pigstyv1.5快速上手新特性介绍与生产集群搭建                            |
 {.full-width}
-
