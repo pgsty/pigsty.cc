@@ -85,7 +85,7 @@ redis_join        : 组建redis原生集群（仅cluster模式）
 - 重新部署某个节点上的所有实例
 - 节点故障恢复后重新初始化
 
-> **注意**：节点级别操作不会执行 `redis-ha` 和 `redis-join` 阶段，如果需要将新节点加入原生集群，需要手动执行 `redis-cli --cluster add-node`
+> **注意**：节点级别命令仍会进入 `redis-ha` / `redis-join` 的模式判断：在 `sentinel` 模式下会刷新哨兵纳管目标，在 `cluster` 模式下可能再次触发 `--cluster create`（该步骤 `ignore_errors: true`，但并非幂等）。扩容原生集群时仍建议手工执行 `redis-cli --cluster add-node` 与 `reshard`。
 
 
 ### 实例级别操作
@@ -108,8 +108,9 @@ redis_join        : 组建redis原生集群（仅cluster模式）
 当指定 `redis_port` 时：
 - 仅渲染该端口对应的配置文件
 - 仅启动/重启该端口对应的 systemd 服务
-- 仅注册该实例到监控系统
-- **不会**影响同节点上的其他实例
+- 会重写该节点的监控注册文件（内容来自 `redis_instances` 全量定义）
+- **不会**启停 `redis_exporter` 或重载 Vector 日志配置
+- **不会**影响同节点上的其他 Redis 实例进程
 
 
 ### 常用标签
@@ -136,12 +137,11 @@ redis_join        : 组建redis原生集群（仅cluster模式）
 
 ### 幂等性说明
 
-`redis.yml` 是**幂等**的，可以安全地重复执行：
+`redis.yml` 的大部分任务可安全重复执行，但 `redis-join` 例外：
 
-- 重复执行会**覆盖**现有配置文件
-- 重复执行会**重启** Redis 实例
-- 不会检查实例是否已存在，直接渲染配置并重启
-- 适用于配置变更后的批量更新
+- `redis_node` / `redis_exporter` / `redis_instance` / `redis_register` 重复执行会覆盖配置并重启实例
+- `redis-ha` 重复执行会按 `redis_sentinel_monitor` 重新下发 `SENTINEL REMOVE/MONITOR`
+- `redis-join` 使用 `redis-cli --cluster create`，不是幂等操作；重复执行在已建集群上通常会报错（剧本当前为 `ignore_errors: true`）
 
 > **提示**：如果只想更新配置而不想重启所有实例，可以使用 `-t redis_config` 仅渲染配置，然后手动重启需要的实例。
 
@@ -305,7 +305,7 @@ fatal: [10.10.10.10]: FAILED! => {"msg": "Abort due to redis_safeguard..."}
 # 部署整个集群
 ./redis.yml -l <cluster>
 
-# 扩容：部署新节点
+# 扩容：部署新节点（cluster 模式下随后手工 add-node）
 ./redis.yml -l <new-node-ip>
 
 # 扩容：在现有节点上添加新实例（先在配置中添加定义）
@@ -361,4 +361,3 @@ bin/redis-rm <ip> <port>          # 移除实例
 使用 Redis 剧本初始化 Redis 集群：
 
 [![asciicast](https://asciinema.org/a/568808.svg)](https://asciinema.org/a/568808)
-

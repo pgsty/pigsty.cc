@@ -33,7 +33,7 @@ REDIS 模块的参数列表，共有 **21** 个参数，分为两个部分：
 | [`redis_exporter_options`](#redis_exporter_options) |  `string`  |  `C/I`  | Redis Exporter命令参数                    |
 | [`redis_mode`](#redis_mode)                         |   `enum`   |   `C`   | Redis集群模式：sentinel，cluster，standalone |
 | [`redis_conf`](#redis_conf)                         |  `string`  |   `C`   | Redis配置文件模板，sentinel 除外               |
-| [`redis_bind_address`](#redis_bind_address)         |    `ip`    |   `C`   | Redis监听地址，默认留空则会绑定主机IP                |
+| [`redis_bind_address`](#redis_bind_address)         |    `ip`    |   `C`   | Redis监听地址，默认值 `0.0.0.0`，留空则绑定主机IP       |
 | [`redis_max_memory`](#redis_max_memory)             |   `size`   |  `C/I`  | Redis可用的最大内存                          |
 | [`redis_mem_policy`](#redis_mem_policy)             |   `enum`   |   `C`   | Redis内存逐出策略                           |
 | [`redis_password`](#redis_password)                 | `password` |   `C`   | Redis密码，默认留空则禁用密码                     |
@@ -66,15 +66,15 @@ REDIS 模块的参数列表，共有 **21** 个参数，分为两个部分：
 # REDIS
 #-----------------------------------------------------------------
 #redis_cluster:             <集群> # Redis数据库集群名称，必选身份参数
-#redis_node: 1              <节点> # Redis节点上的实例定义
-#redis_instances: {}        <节点> # Redis节点编号，正整数，集群内唯一，必选身份参数
+#redis_node: 1              <节点> # Redis节点编号，正整数，集群内唯一，必选身份参数
+#redis_instances: {}        <节点> # Redis节点上的实例定义
 redis_fs_main: /data              # Redis主数据目录，默认为 `/data`
 redis_exporter_enabled: true      # Redis Exporter 是否启用？
 redis_exporter_port: 9121         # Redis Exporter监听端口
 redis_exporter_options: ''        # Redis Exporter命令参数
 redis_mode: standalone            # Redis集群模式：sentinel，cluster，standalone
 redis_conf: redis.conf            # Redis配置文件模板，sentinel 除外
-redis_bind_address: '0.0.0.0'     # Redis监听地址，默认留空则会绑定主机IP
+redis_bind_address: '0.0.0.0'     # Redis监听地址，默认 `0.0.0.0`，留空则会绑定主机IP
 redis_max_memory: 1GB             # Redis可用的最大内存
 redis_mem_policy: allkeys-lru     # Redis内存逐出策略
 redis_password: ''                # Redis密码，默认留空则禁用密码

@@ -87,7 +87,7 @@ Pigsty 针对 redis 提供了以下六条预置告警规则，定义于 [`files/
     summary: "CRIT RedisDown: {{ $labels.ins }} {{ $labels.instance }} {{ $value }}"
     description: |
       redis_up[ins={{ $labels.ins }}, instance={{ $labels.instance }}] = {{ $value }} == 0
-      http://g.pigsty/d/redis-instance?from=now-5m&to=now&var-ins={{$labels.ins}}
+      /ui/d/redis-instance?from=now-5m&to=now&var-ins={{$labels.ins}}
 
 # redis reject connection in last 5m
 - alert: RedisRejectConn
@@ -97,7 +97,7 @@ Pigsty 针对 redis 提供了以下六条预置告警规则，定义于 [`files/
     summary: "CRIT RedisRejectConn: {{ $labels.ins }} {{ $labels.instance }} {{ $value }}"
     description: |
       redis:ins:conn_reject[cls={{ $labels.cls }}, ins={{ $labels.ins }}][5m] = {{ $value }} > 0
-      http://g.pigsty/d/redis-instance?from=now-10m&to=now&viewPanel=88&fullscreen&var-ins={{ $labels.ins }}
+      /ui/d/redis-instance?from=now-10m&to=now&viewPanel=88&fullscreen&var-ins={{ $labels.ins }}
 
 
 
@@ -113,7 +113,7 @@ Pigsty 针对 redis 提供了以下六条预置告警规则，定义于 [`files/
     summary: "WARN RedisRTHigh: {{ $labels.cls }} {{ $labels.ins }}"
     description: |
       pg:ins:query_rt[cls={{ $labels.cls }}, ins={{ $labels.ins }}] = {{ $value }} > 160µs
-      http://g.pigsty/d/redis-instance?from=now-10m&to=now&viewPanel=97&fullscreen&var-ins={{ $labels.ins }}
+      /ui/d/redis-instance?from=now-10m&to=now&viewPanel=97&fullscreen&var-ins={{ $labels.ins }}
 
 
 
@@ -129,7 +129,7 @@ Pigsty 针对 redis 提供了以下六条预置告警规则，定义于 [`files/
     summary: "WARN RedisCPUHigh: {{ $labels.cls }} {{ $labels.ins }}"
     description: |
       redis:ins:cpu_all[cls={{ $labels.cls }}, ins={{ $labels.ins }}] = {{ $value }} > 60%
-      http://g.pigsty/d/redis-instance?from=now-10m&to=now&viewPanel=43&fullscreen&var-ins={{ $labels.ins }}
+      /ui/d/redis-instance?from=now-10m&to=now&viewPanel=43&fullscreen&var-ins={{ $labels.ins }}
 
 # redis mem usage more than 70% for 1m
 - alert: RedisMemHigh
@@ -140,7 +140,7 @@ Pigsty 针对 redis 提供了以下六条预置告警规则，定义于 [`files/
     summary: "WARN RedisMemHigh: {{ $labels.cls }} {{ $labels.ins }}"
     description: |
       redis:ins:mem_usage[cls={{ $labels.cls }}, ins={{ $labels.ins }}] = {{ $value }} > 80%
-      http://g.pigsty/d/redis-instance?from=now-10m&to=now&viewPanel=7&fullscreen&var-ins={{ $labels.ins }}
+      /ui/d/redis-instance?from=now-10m&to=now&viewPanel=7&fullscreen&var-ins={{ $labels.ins }}
 
 #==============================================================#
 #                         Traffic                              #
@@ -154,6 +154,6 @@ Pigsty 针对 redis 提供了以下六条预置告警规则，定义于 [`files/
     summary: "INFO RedisQPSHigh: {{ $labels.cls }} {{ $labels.ins }}"
     description: |
       redis:ins:qps[cls={{ $labels.cls }}, ins={{ $labels.ins }}] = {{ $value }} > 16000
-      http://g.pigsty/d/redis-instance?from=now-10m&to=now&viewPanel=96&fullscreen&var-ins={{ $labels.ins }}
+      /ui/d/redis-instance?from=now-10m&to=now&viewPanel=96&fullscreen&var-ins={{ $labels.ins }}
 
 ```

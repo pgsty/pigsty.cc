@@ -134,7 +134,7 @@ https://redis.io/commands/replicaof/
 "OK"
 
 # 将一个 Redis 实例设置为另一个实例的从库
-> REPLICAOF 127.0.0.1 6799
+> REPLICAOF 127.0.0.1 6379
 "OK"
 ```
 
@@ -224,11 +224,14 @@ redis-cli --cluster reshard 10.10.10.12:6379
 
 #### 扩容哨兵集群
 
-向 Sentinel 集群添加新实例：
+向 Sentinel 集群添加新实例后，需要同时完成实例部署与纳管目标刷新：
 
 ```bash
-# 在配置清单中添加新的哨兵实例，然后执行：
+# 1. 在配置清单中添加新的哨兵实例，部署实例
 ./redis.yml -l <sentinel-cluster> -t redis_instance
+
+# 2. 重新下发 redis_sentinel_monitor 到所有哨兵
+./redis.yml -l <sentinel-cluster> -t redis-ha
 ```
 
 
