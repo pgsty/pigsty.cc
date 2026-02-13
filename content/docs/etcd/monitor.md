@@ -32,7 +32,7 @@ ETCD 模块提供了一个监控面板：Etcd Overview。
 
 ## 告警规则
 
-Pigsty 针对 Etcd 提供了以下五条预置告警规则，定义于 [`files/prometheus/rules/etcd.yml`](https://github.com/pgsty/pigsty/blob/main/files/prometheus/rules/etcd.yml)
+Pigsty 针对 Etcd 提供了以下五条预置告警规则，定义于 [`files/victoria/rules/etcd.yml`](https://github.com/pgsty/pigsty/blob/main/files/victoria/rules/etcd.yml)
 
 - `EtcdServerDown`：Etcd 节点宕机，严重警报
 - `EtcdNoLeader`：Etcd 集群没有领导者，严重警报
@@ -54,7 +54,7 @@ Pigsty 针对 Etcd 提供了以下五条预置告警规则，定义于 [`files/p
     summary: "CRIT EtcdServerDown {{ $labels.ins }}@{{ $labels.instance }}"
     description: |
       etcd_up[ins={{ $labels.ins }}, instance={{ $labels.instance }}] = {{ $value }} < 1
-      http://g.pigsty/d/etcd-overview
+      /ui/d/etcd-overview
 
 #==============================================================#
 #                         Error                                #
@@ -69,7 +69,7 @@ Pigsty 针对 Etcd 提供了以下五条预置告警规则，定义于 [`files/p
     summary: "CRIT EtcdNoLeader: {{ $labels.cls }} {{ $value }}"
     description: |
       etcd_server_has_leader[cls={{ $labels.cls }}] = {{ $value }} < 1
-      http://g.pigsty/d/etcd-overview?from=now-5m&to=now&var-cls={{$labels.cls}}
+      /ui/d/etcd-overview?from=now-5m&to=now&var-cls={{$labels.cls}}
 
 #==============================================================#
 #                        Saturation                            #
@@ -95,7 +95,7 @@ Pigsty 针对 Etcd 提供了以下五条预置告警规则，定义于 [`files/p
     summary: "INFO EtcdNetworkPeerRTSlow: {{ $labels.cls }} {{ $labels.ins }}"
     description: |
       etcd:ins:network_peer_rt_p95_5m[cls={{ $labels.cls }}, ins={{ $labels.ins }}] = {{ $value }} > 200ms
-      http://g.pigsty/d/etcd-instance?from=now-10m&to=now&var-cls={{ $labels.cls }}
+      /ui/d/etcd-instance?from=now-10m&to=now&var-cls={{ $labels.cls }}
 
 # Etcd wal fsync rt p95 > 50ms
 - alert: EtcdWalFsyncSlow
@@ -106,5 +106,5 @@ Pigsty 针对 Etcd 提供了以下五条预置告警规则，定义于 [`files/p
     summary: "INFO EtcdWalFsyncSlow: {{ $labels.cls }} {{ $labels.ins }}"
     description: |
       etcd:ins:wal_fsync_rt_p95_5m[cls={{ $labels.cls }}, ins={{ $labels.ins }}] = {{ $value }} > 50ms
-      http://g.pigsty/d/etcd-instance?from=now-10m&to=now&var-cls={{ $labels.cls }}
+      /ui/d/etcd-instance?from=now-10m&to=now&var-cls={{ $labels.cls }}
 ```

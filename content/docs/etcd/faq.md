@@ -80,10 +80,11 @@ etcd 故障期间，PostgreSQL 高可用将无法实现自动故障转移，您�
 ./etcd.yml -t etcd_launch
 ```
 
-要 **重置** etcd 集群，您可以直接执行以下剧本，实现覆盖抹除式重装：
+要 **重置/重建** etcd 集群，建议先清理再重建：
 
 ```bash
-./etcd.yml
+./etcd-rm.yml  # 清理 etcd 集群（默认删除数据）
+./etcd.yml     # 按清单重新部署 etcd 集群
 ```
 
 如果您自行使用 etcd 存储了其他数据，那么通常需要备份 etcd 数据，并在 etcd 集群恢复后进行数据恢复。
@@ -126,7 +127,7 @@ quota-backend-bytes: 17179869184    # 16 GiB 配额
 
 如果您使用的早先版本的 Pigsty （v2.0 - v2.5），我们强烈建议您通过以下步骤，在生产环境中启用 etcd 的自动压实功能，从而避免 etcd 容量配额写满导致的 etcd 不可用故障。
 
-在 Pigsty 源码目录中，编辑 etcd 配置文件模板：[`roles/etcd/templates/etcd.conf.j2`](https://github.com/pgsty/pigsty/blob/main/roles/etcd/templates/etcd.conf.j2#L30)，添加以下三条配置项：
+在 Pigsty 源码目录中，编辑 etcd 配置文件模板：[`roles/etcd/templates/etcd.conf`](https://github.com/pgsty/pigsty/blob/main/roles/etcd/templates/etcd.conf#L29)，添加以下三条配置项：
 
 ```yaml
 auto-compaction-mode: periodic

@@ -57,7 +57,6 @@ etcd:
   vars: # 集群层面的参数
     etcd_cluster: etcd    # 默认情况下，etcd 集群名就叫 etcd， 除非您想要部署多套 etcd 集群，否则不要改这个名字
     etcd_safeguard: false # 是否打开 etcd 的防误删安全保险？ 在生产环境初始化完成后，可以考虑打开这个选项，避免误删。
-    etcd_clean: true      # 在初始化过程中，是否强制移除现有的 etcd 实例？测试的时候可以打开，这样剧本就是真正幂等的。
 ```
 
 
@@ -88,10 +87,10 @@ etcd:
 
 目前 Pigsty 中使用 etcd 的服务有：
 
-| 服务 | 用途 | 配置文件 |
-|:----|:----|:--------|
-| **Patroni** | PostgreSQL 高可用，存储集群状态和配置 | `/pg/bin/patroni.yml` |
-| **VIP-Manager** | 在 PostgreSQL 集群上绑定 L2 VIP | `/etc/default/vip-manager` |
+| 服务              | 用途                        | 配置文件                           |
+|:----------------|:--------------------------|:-------------------------------|
+| **Patroni**     | PostgreSQL 高可用，存储集群状态和配置  | `/etc/patroni/patroni.yml`     |
+| **VIP-Manager** | 在 PostgreSQL 集群上绑定 L2 VIP | `/etc/default/vip-manager.yml` |
 {.full-width}
 
 当 etcd 集群的成员信息发生永久性变更时，您应当 [重载相关服务的配置](/docs/etcd/admin#重载配置)，以确保服务能够正确访问 Etcd 集群。
@@ -149,18 +148,16 @@ etcd:
 
 etcd 模块在目标主机上创建以下目录和文件：
 
-| 路径                                 | 用途         | 权限              |
-|:-----------------------------------|:-----------|:----------------|
-| `/etc/etcd/`                       | 配置目录       | 0750, etcd:etcd |
-| `/etc/etcd/etcd.conf`              | 主配置文件      | 0644, etcd:etcd |
-| `/etc/etcd/etcd.pass`              | root 密码文件  | 0640, root:etcd |
-| `/etc/etcd/ca.crt`                 | CA 证书      | 0644, etcd:etcd |
-| `/etc/etcd/server.crt`             | 服务器证书      | 0644, etcd:etcd |
-| `/etc/etcd/server.key`             | 服务器私钥      | 0600, etcd:etcd |
-| `/var/lib/etcd/`                   | 备用数据目录     | 0770, etcd:etcd |
-| `/data/etcd/`                      | 主数据目录（可配置） | 0700, etcd:etcd |
-| `/etc/profile.d/etcdctl.sh`        | 客户端环境变量    | 0755, root:root |
-| `/etc/systemd/system/etcd.service` | Systemd 服务 | 0644, root:root |
+| 路径                                                                          | 用途         | 权限              |
+|:----------------------------------------------------------------------------|:-----------|:----------------|
+| `/etc/etcd/`                                                                | 配置目录       | 0750, etcd:etcd |
+| `/etc/etcd/etcd.conf`                                                       | 主配置文件      | 0644, etcd:etcd |
+| `/etc/etcd/etcd.pass`                                                       | root 密码文件  | 0640, root:etcd |
+| `/etc/etcd/ca.crt`                                                          | CA 证书      | 0644, etcd:etcd |
+| `/etc/etcd/server.crt`                                                      | 服务器证书      | 0644, etcd:etcd |
+| `/etc/etcd/server.key`                                                      | 服务器私钥      | 0600, etcd:etcd |
+| `/var/lib/etcd/`                                                            | 备用数据目录     | 0770, etcd:etcd |
+| `/data/etcd/`                                                               | 主数据目录（可配置） | 0700, etcd:etcd |
+| `/etc/profile.d/etcdctl.sh`                                                 | 客户端环境变量    | 0755, root:root |
+| `/usr/lib/systemd/system/etcd.service` 或 `/lib/systemd/system/etcd.service` | Systemd 服务 | 0644, root:root |
 {.full-width}
-
-

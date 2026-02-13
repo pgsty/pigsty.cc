@@ -156,8 +156,8 @@ etcdctl --user root:YourSecurePassword member list
 |:--------|:--------|:--------|
 | etcd 成员配置 | `/etc/etcd/etcd.conf` | `./etcd.yml -t etcd_conf` |
 | etcdctl 环境变量 | `/etc/profile.d/etcdctl.sh` | `./etcd.yml -t etcd_config` |
-| Patroni DCS 配置 | `/pg/bin/patroni.yml` | `./pgsql.yml -t pg_conf` |
-| VIP-Manager 配置 | `/etc/default/vip-manager` | `./pgsql.yml -t pg_vip_config` |
+| Patroni DCS 配置 | `/etc/patroni/patroni.yml` | `./pgsql.yml -t pg_conf` |
+| VIP-Manager 配置 | `/etc/default/vip-manager.yml` | `./pgsql.yml -t pg_vip_config` |
 {.full-width}
 
 **刷新 etcd 成员配置文件**：
@@ -413,7 +413,7 @@ bin/etcd-add <ip1> <ip2> ...   # 添加多个新成员
 ```
 
 脚本功能：
-- 验证 IP 地址是否在配置清单中定义
+- 验证 IP 地址格式
 - 自动设置 `etcd_init=existing` 参数
 - 执行 `etcd.yml` 剧本完成成员添加
 - 操作完成后提示配置刷新命令
@@ -451,5 +451,5 @@ e user passwd root  # 修改 etcd root 用户密码
 
 ```bash
 ./infra.yml -t env_patroni    # 刷新 /infra/conf/patronictl.yml 对 etcd root 密码的引用
-./etcd.y -t etcd_config       # 刷新 /etc/etcd/etcd.pass
+./etcd.yml  -t etcd_conf      # 刷新 /etc/etcd/etcd.pass 与 /etc/profile.d/etcdctl.sh
 ```

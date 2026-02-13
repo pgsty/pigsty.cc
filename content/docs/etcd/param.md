@@ -278,7 +278,7 @@ etcd_rm_pkg: false                # 移除时是否卸载 etcd 软件包？
 
 防误删保险参数，防止清除正在运行的 etcd 实例？默认值为 `false`。
 
-如果启用安全保险，[`etcd-rm.yml`](/docs/etcd/playbook#etcd-rmyml) 剧本在检测到正在运行的 etcd 实例时会主动中止，从而避免意外删除正在使用的 etcd 集群。
+如果启用安全保险，[`etcd-rm.yml`](/docs/etcd/playbook#etcd-rmyml) 剧本会在执行开始时直接中止，从而避免意外删除正在使用的 etcd 集群。需要显式使用命令行参数 `-e etcd_safeguard=false` 才能覆盖。
 
 **使用建议**：
 
@@ -352,5 +352,4 @@ etcd_rm_pkg: false                # 移除时是否卸载 etcd 软件包？
 {{% alert title="提示" color="info" %}}
 通常不需要卸载 etcd 软件包。保留软件包可以加快后续的重新部署速度，因为不需要重新下载和安装。
 {{% /alert %}}
-
 
