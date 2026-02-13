@@ -168,11 +168,11 @@ export ALICLOUD_REGION="cn-shanghai"
 | Rocky 9.7 | `el9` | `rockylinux_9_7_x64` | `rockylinux_9_7_arm64` |
 | Rocky 10.1 | `el10` | `rockylinux_10_1_x64` | `rockylinux_10_1_arm64` |
 | Debian 11.11 | `d11` | `debian_11_11_x64` | - |
-| Debian 12.11 | `d12` | `debian_12_11_x64` | `debian_12_11_arm64` |
-| Debian 13.2 | `d13` | `debian_13_2_x64` | `debian_13_2_arm64` |
+| Debian 12.13 | `d12` | `debian_12_13_x64` | `debian_12_13_arm64` |
+| Debian 13.3 | `d13` | `debian_13_3_x64` | `debian_13_3_arm64` |
 | Ubuntu 20.04 | `u20` | `ubuntu_20_04_x64` | - |
-| Ubuntu 22.04 | `u22` | `ubuntu_22_04_x64` | `ubuntu_22_04_arm64` |
-| Ubuntu 24.04 | `u24` | `ubuntu_24_04_x64` | `ubuntu_24_04_arm64` |
+| Ubuntu 22.04 | `u22` | `ubuntu_22_04_x64_20G` | `ubuntu_22_04_arm64_20G` |
+| Ubuntu 24.04 | `u24` | `ubuntu_24_04_x64_20G` | `ubuntu_24_04_arm64_20G` |
 | Anolis 8.9 | `an8` | `anolisos_8_9_x64` | - |
 | Alibaba Cloud Linux 3 | `al3` | `aliyun_3_0_x64` | - |
 {.full-width}

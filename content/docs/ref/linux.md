@@ -13,7 +13,7 @@ Pigsty 不使用任何虚拟化容器化技术，直接运行于裸操作系统�
 
 ## 概述
 
-Pigsty 推荐使用的操作系统版本：RockyLinux 10.1、Ubuntu 24.04、Debian 13.1。
+Pigsty 推荐使用的操作系统版本：RockyLinux 10.1、Ubuntu 24.04.3、Debian 13.3。
 
 | 发行版                    |                 架构                 |                                              系统代码                                               |                       PG18                       |                       PG17                       |                       PG16                       |                       PG15                       |                       PG14                       |                       PG13                       |
 |:-----------------------|:----------------------------------:|:-----------------------------------------------------------------------------------------------:|:------------------------------------------------:|:------------------------------------------------:|:------------------------------------------------:|:------------------------------------------------:|:------------------------------------------------:|:------------------------------------------------:|
@@ -89,7 +89,7 @@ Ubuntu 20.04 已于 2025年4月进入 EOL。
 
 ## Debian
 
-Pigsty 支持 Debian 12 / 13，推荐使用最新的 Debian 13.1
+Pigsty 支持 Debian 12 / 13，推荐使用最新的 Debian 13.3
 
 | Debian 发行版             |                 架构                 |                                             系统代码                                              |                       PG18                       |                       PG17                       |                          PG16                           |                          PG15                           |                          PG14                           |                          PG13                           |
 |:-----------------------|:----------------------------------:|:---------------------------------------------------------------------------------------------:|:------------------------------------------------:|:------------------------------------------------:|:-------------------------------------------------------:|:-------------------------------------------------------:|:-------------------------------------------------------:|:-------------------------------------------------------:|
@@ -101,7 +101,7 @@ Pigsty 支持 Debian 12 / 13，推荐使用最新的 Debian 13.1
 | Debian 11 (`bullseye`) | <b class="text-danger">aarch64</b> |                                               -                                               |                                                  |                                                  |                                                         |                                                         |                                                         |                                                         |
 {.full-width}
 
-{{% alert title="推荐使用 Debian 12.11 / 13.1" color="success" %}}
+{{% alert title="推荐使用 Debian 12.13 / 13.3" color="success" %}}
 {{% /alert %}}
 
 {{% alert title="Debian 11 EOL @ 2024-07" color="danger" %}}
@@ -117,12 +117,13 @@ Debian 11 已经于 2024-07 进入 EOL。如需在老旧操作系统上获得扩
 
 | **系统**         | 镜像                                                                                             |
 |:---------------|:-----------------------------------------------------------------------------------------------|
-| Rocky 8.10     | [`generic/rocky8`](https://portal.cloud.hashicorp.com/vagrant/discover/rocky8)                 |
-| Rocky 9.7      | [`generic/rocky9`](https://portal.cloud.hashicorp.com/vagrant/discover/rocky9)                 |
-| Debian 12.11   | [`generic/debian12`](https://portal.cloud.hashicorp.com/vagrant/discover/debian12)             |
-| Debian 13      | [`generic/debian13`](https://portal.cloud.hashicorp.com/vagrant/discover/debian13)             |
-| Ubuntu 22.04   | [`generic/ubuntu2204`](https://portal.cloud.hashicorp.com/vagrant/discover/ubuntu2204)         |
-| Ubuntu 24.04.2 | [`bento/ubuntu-24.04`](https://portal.cloud.hashicorp.com/vagrant/discover/bento/ubuntu-24.04) |
+| AlmaLinux 8.10 | [`cloud-image/almalinux-8`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/almalinux-8) |
+| Rocky 9.7      | [`bento/rockylinux-9`](https://portal.cloud.hashicorp.com/vagrant/discover/bento/rockylinux-9) |
+| AlmaLinux 10.1 | [`cloud-image/almalinux-10`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/almalinux-10) |
+| Debian 12.13   | [`cloud-image/debian-12`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/debian-12) |
+| Debian 13.3    | [`cloud-image/debian-13`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/debian-13) |
+| Ubuntu 22.04   | [`cloud-image/ubuntu-22.04`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/ubuntu-22.04) |
+| Ubuntu 24.04   | [`bento/ubuntu-24.04`](https://portal.cloud.hashicorp.com/vagrant/discover/bento/ubuntu-24.04) |
 {.full-width}
 
 
@@ -139,8 +140,8 @@ Debian 11 已经于 2024-07 进入 EOL。如需在老旧操作系统上获得扩
 | Rocky 10.1   | `rockylinux_10_1_x64_20G_alibase_20260119.vhd` |
 | Ubuntu 22.04 | `ubuntu_22_04_x64_20G_alibase_20240926.vhd`    |
 | Ubuntu 24.04 | `ubuntu_24_04_x64_20G_alibase_20240923.vhd`    |
-| Debian 12.11 | `debian_12_11_x64_20G_alibase_20241201.vhd`    |
-| Debian 13.2  | `debian_13_x64_20G_alibase_20250101.vhd`       |
+| Debian 12.13 | `debian_12_13_x64_20G_alibase_20241201.vhd`    |
+| Debian 13.3  | `debian_13_3_x64_20G_alibase_20250101.vhd`     |
 {.full-width}
 
 
@@ -151,6 +152,6 @@ Debian 11 已经于 2024-07 进入 EOL。如需在老旧操作系统上获得扩
 | Rocky 10.1   | `rockylinux_10_1_arm64_20G_alibase_20260119.vhd` |
 | Ubuntu 22.04 | `ubuntu_22_04_arm64_20G_alibase_20251126.vhd`    |
 | Ubuntu 24.04 | `ubuntu_24_04_arm64_20G_alibase_20251126.vhd`    |
-| Debian 12.11 | `debian_12_11_arm64_20G_alibase_20250825.vhd`    |
-| Debian 13.2  | `debian_13_2_arm64_20G_alibase_20251121.vhd`     |
+| Debian 12.13 | `debian_12_13_arm64_20G_alibase_20250825.vhd`    |
+| Debian 13.3  | `debian_13_3_arm64_20G_alibase_20251121.vhd`     |
 {.full-width}

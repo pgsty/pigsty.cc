@@ -75,7 +75,7 @@ Pigsty 提供开箱即用的 Docker 镜像，发布在 [**Docker Hub**](https://
 | `pgsty/pigsty` | ~500MB | 1.3GB  | Debian 13 + systemd + SSH + pig + Ansible |
 
 - 同时支持 **amd64**（x86_64）和 **arm64**（Apple Silicon、AWS Graviton）架构
-- 镜像标签与 Pigsty 版本一致：`v4.0.0`、`latest` 等
+- 镜像标签与 Pigsty 版本一致：`v4.1.0`、`latest` 等
 - 镜像内已预生成 docker 配置模板，可直接执行 `./deploy.yml` 部署
 
 镜像基于 **Debian 13 (Trixie)** 构建，预装了 [**`pig`**](/docs/pig/) CLI 工具和 Ansible，并已初始化好 Pigsty 源码。
@@ -120,7 +120,7 @@ make launch          # 启动容器 + 生成配置 + 执行部署
 您可以通过修改 [**`.env`**](https://github.com/pgsty/pigsty/blob/main/docker/.env) 文件来自定义镜像版本和端口映射：
 
 ```bash
-PIGSTY_VERSION=v4.0.0         # 镜像版本，与 Pigsty 版本号一致
+PIGSTY_VERSION=v4.1.0         # 镜像版本，与 Pigsty 版本号一致
 PIGSTY_SSH_PORT=2222          # SSH 端口
 PIGSTY_HTTP_PORT=8080         # Nginx HTTP 端口
 PIGSTY_HTTPS_PORT=8443        # Nginx HTTPS 端口
@@ -131,7 +131,7 @@ PIGSTY_PG_PORT=5432           # PostgreSQL 端口
 
 | 环境变量                | 默认值      | 容器端口 | 说明             |
 |:--------------------|:---------|:-----|:---------------|
-| `PIGSTY_VERSION`    | `v4.0.0` | -    | 镜像版本标签         |
+| `PIGSTY_VERSION`    | `v4.1.0` | -    | 镜像版本标签         |
 | `PIGSTY_SSH_PORT`   | `2222`   | 22   | SSH 访问端口       |
 | `PIGSTY_HTTP_PORT`  | `8080`   | 80   | Nginx HTTP 端口  |
 | `PIGSTY_HTTPS_PORT` | `8443`   | 443  | Nginx HTTPS 端口 |
@@ -213,7 +213,7 @@ mkdir -p ./data
 docker run -d --privileged --name pigsty \
   -p 2222:22 -p 8080:80 -p 5432:5432 \
   -v ./data:/data \
-  pgsty/pigsty:v4.0.0
+  pgsty/pigsty:v4.1.0
 
 docker exec -it pigsty ./configure -c docker -g --ip 127.0.0.1
 docker exec -it pigsty ./deploy.yml

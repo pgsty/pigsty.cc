@@ -58,12 +58,12 @@ make deci       # 10 节点环境
 您可以使用变体别名指定不同的操作系统镜像：
 
 ```bash
-make meta9      # 使用 RockyLinux 9 创建单节点
-make full12     # 使用 Debian 12 创建 4 节点沙箱
+make meta9      # 使用 RockyLinux 9.7 创建单节点
+make full12     # 使用 Debian 12.13 创建 4 节点沙箱
 make simu24     # 使用 Ubuntu 24.04 创建 20 节点仿真环境
 ```
 
-可用的操作系统后缀：`7`（EL7）、`8`（EL8）、`9`（EL9）、`10`（EL10）、`11`（Debian 11）、`12`（Debian 12）、`13`（Debian 13）、`20`（Ubuntu 20.04）、`22`（Ubuntu 22.04）、`24`（Ubuntu 24.04）
+可用的操作系统后缀：`8`（EL8）、`9`（EL9）、`10`（EL10）、`12`（Debian 12）、`13`（Debian 13）、`22`（Ubuntu 22.04）、`24`（Ubuntu 24.04）
 
 ### 构建环境
 
@@ -72,8 +72,8 @@ make simu24     # 使用 Ubuntu 24.04 创建 20 节点仿真环境
 ```bash
 make oss        # 3 节点 OSS 构建环境
 make pro        # 5 节点 PRO 构建环境
-make rpm        # 3 节点 EL7/8/9 构建环境
-make deb        # 5 节点 Debian11/12 Ubuntu20/22/24 构建环境
+make rpm        # 3 节点 EL8/9/10 构建环境
+make deb        # 4 节点 Debian12/13 Ubuntu22/24 构建环境
 make all        # 7 节点全量构建环境
 ```
 
@@ -96,7 +96,7 @@ Pigsty 在 [`vagrant/spec/`](https://github.com/pgsty/pigsty/tree/main/vagrant/s
 | [oss.rb](https://github.com/pgsty/pigsty/blob/main/vagrant/spec/oss.rb) | 3 节点  |    1c2g x 3     | 3 节点 OSS 构建环境  |       |
 | [pro.rb](https://github.com/pgsty/pigsty/blob/main/vagrant/spec/pro.rb) | 5 节点  |    1c2g x 5     | 5 节点 PRO 构建环境  |       |
 | [rpm.rb](https://github.com/pgsty/pigsty/blob/main/vagrant/spec/rpm.rb) | 3 节点  |    1c2g x 3     | 3 节点 EL 构建环境   |       |
-| [deb.rb](https://github.com/pgsty/pigsty/blob/main/vagrant/spec/deb.rb) | 5 节点  |    1c2g x 5     | 5 节点 Deb 构建环境  |       |
+| [deb.rb](https://github.com/pgsty/pigsty/blob/main/vagrant/spec/deb.rb) | 4 节点  |    1c2g x 4     | 4 节点 Deb 构建环境  |       |
 | [all.rb](https://github.com/pgsty/pigsty/blob/main/vagrant/spec/all.rb) | 7 节点  |    1c2g x 7     | 7 节点全量构建环境    |       |
 {.full-width}
 
@@ -135,9 +135,9 @@ cd ~/pigsty
 vagrant/config [spec] [image] [scale] [provider]
 
 # 示例
-vagrant/config meta                # 使用 1 节点规格，默认 EL9 镜像
+vagrant/config meta                # 使用 1 节点规格，默认 RockyLinux 9.7（EL9）镜像
 vagrant/config dual el9            # 使用 2 节点规格，EL9 镜像
-vagrant/config trio d12 2          # 使用 3 节点规格，Debian 12 镜像，双倍资源
+vagrant/config trio d12 2          # 使用 3 节点规格，Debian 12.13 镜像，双倍资源
 vagrant/config full u22 4          # 使用 4 节点规格，Ubuntu 22 镜像，4 倍资源
 vagrant/config simu u24 1 libvirt  # 使用 20 节点规格，Ubuntu 24 镜像，libvirt 提供商
 ```
@@ -148,16 +148,13 @@ config 脚本支持多种镜像别名：
 
 | 发行版 | 别名 | Vagrant Box |
 |--------|------|-------------|
-| CentOS 7 | `el7`, `7`, `centos` | `generic/centos7` |
-| Rocky 8 | `el8`, `8`, `rocky8` | `bento/rockylinux-9` |
-| Rocky 9 | `el9`, `9`, `rocky9`, `el` | `bento/rockylinux-9` |
-| Rocky 10 | `el10`, `rocky10` | `rockylinux/10` |
-| Debian 11 | `d11`, `11`, `debian11` | `generic/debian11` |
-| Debian 12 | `d12`, `12`, `debian12` | `generic/debian12` |
-| Debian 13 | `d13`, `13`, `debian13` | `cloud-image/debian-13` |
-| Ubuntu 20.04 | `u20`, `20`, `ubuntu20` | `generic/ubuntu2004` |
-| Ubuntu 22.04 | `u22`, `22`, `ubuntu22`, `ubuntu` | `generic/ubuntu2204` |
-| Ubuntu 24.04 | `u24`, `24`, `ubuntu24` | `bento/ubuntu-24.04` |
+| AlmaLinux 8 | `el8`, `rocky8` | `cloud-image/almalinux-8` |
+| Rocky 9 | `el9`, `rocky9`, `el` | `bento/rockylinux-9` |
+| AlmaLinux 10 | `el10`, `rocky10` | `cloud-image/almalinux-10` |
+| Debian 12 | `d12`, `debian12` | `cloud-image/debian-12` |
+| Debian 13 | `d13`, `debian13` | `cloud-image/debian-13` |
+| Ubuntu 22.04 | `u22`, `ubuntu22`, `ubuntu` | `cloud-image/ubuntu-22.04` |
+| Ubuntu 24.04 | `u24`, `ubuntu24` | `bento/ubuntu-24.04` |
 
 ### 资源缩放
 
@@ -224,28 +221,31 @@ Pigsty 目前使用以下 Vagrant Box 进行测试：
 
 ```bash
 # x86_64 / amd64
-el8 :  bento/rockylinux-8     (libvirt, 202502.21.0, (amd64))
-el9 :  bento/rockylinux-9     (libvirt, 202502.21.0, (amd64))
-el10:  rockylinux/10          (libvirt)
+el8 :  cloud-image/almalinux-8   (EL 8.10)
+el9 :  bento/rockylinux-9        (RockyLinux 9.7)
+el10:  cloud-image/almalinux-10  (RockyLinux 10.1)
 
-d11 :  generic/debian11       (libvirt, 4.3.12, (amd64))
-d12 :  generic/debian12       (libvirt, 4.3.12, (amd64))
-d13 :  cloud-image/debian-13  (libvirt)
+d12 :  cloud-image/debian-12     (Debian 12.13)
+d13 :  cloud-image/debian-13     (Debian 13.3)
 
-u20 :  generic/ubuntu2004     (libvirt, 4.3.12, (amd64))
-u22 :  generic/ubuntu2204     (libvirt, 4.3.12, (amd64))
-u24 :  bento/ubuntu-24.04     (libvirt, 20250316.0.0, (amd64))
+u22 :  cloud-image/ubuntu-22.04
+u24 :  bento/ubuntu-24.04
 ```
 
-对于 Apple Silicon (aarch64) 架构，可用的镜像较少：
+对于 Apple Silicon (aarch64) 架构：
 
 ```bash
 # aarch64 / arm64
-bento/rockylinux-9 (virtualbox, 202502.21.0, (arm64))
-bento/ubuntu-24.04 (virtualbox, 202502.21.0, (arm64))
+el8 :  cloud-image/almalinux-8
+el9 :  bento/rockylinux-9
+el10:  cloud-image/almalinux-10
+d12 :  cloud-image/debian-12
+d13 :  cloud-image/debian-13
+u22 :  cloud-image/ubuntu-22.04
+u24 :  bento/ubuntu-24.04
 ```
 
-您可以在 [**Vagrant Cloud**](https://app.vagrantup.com/bento/boxes) 上找到更多可用的 Box 镜像。
+您可以在 [**Vagrant Cloud**](https://app.vagrantup.com/boxes/search) 上查找对应 provider / 架构可用的 Box 镜像。
 
 
 ----------------
@@ -282,4 +282,3 @@ echo "* 10.0.0.0/8" | sudo tee -a /etc/vbox/networks.conf
 {{% alert title="libvirt 提供商" color="info" %}}
 如果您使用 libvirt 作为提供商，可以使用 `make info` 查看虚拟机、网络和存储卷信息，使用 `make nuke` 强制销毁所有相关资源。
 {{% /alert %}}
-

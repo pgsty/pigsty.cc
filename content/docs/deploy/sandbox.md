@@ -47,7 +47,7 @@ all:
       vars: { pg_cluster: pg-test }
 
   vars:
-    version: v4.0.0
+    version: v4.1.0
     admin_ip: 10.10.10.10
     region: default
     pg_version: 18
@@ -180,4 +180,3 @@ make simu       # 创建 20 节点生产仿真环境
 - 4 个 MinIO 节点
 - 5 个 ETCD 节点
 - 6 个 PostgreSQL 节点（2 个集群，每个 3 节点）
-

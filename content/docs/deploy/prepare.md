@@ -137,7 +137,7 @@ Pigsty 默认使用一个本地静态域名 `i.pigsty` 来访问 WebUI，这是�
 
 Pigsty 运行在 **Linux** 操作系统上，它支持 **14** 种主流 Linux 发行版：[**兼容操作系统列表**](/docs/ref/linux/)
 
-我们推荐使用 **RockyLinux 10.1**、**Debian 13.2** 或 **Ubuntu 24.04.2** 作为默认操作系统选项。
+我们推荐使用 **RockyLinux 10.1**、**Debian 13.3** 或 **Ubuntu 24.04.3** 作为默认操作系统选项。
 
 在 MacOS 和 Windows 上，您可以用各种虚拟机软件或者 Docker systemd 镜像来安装 Pigsty。
 
@@ -207,12 +207,12 @@ curl -fsSL https://repo.pigsty.io/get | bash;
 {{< tabpane text=true persist=header >}}
 {{% tab header="pigsty.cc（中国）" %}}
 ```bash
-curl -fsSL https://repo.pigsty.cc/get | bash -s v4.0.0
+curl -fsSL https://repo.pigsty.cc/get | bash -s v4.1.0
 ```
 {{% /tab %}}
 {{% tab header="pigsty.io（全球）" %}}
 ```bash
-curl -fsSL https://repo.pigsty.io/get | bash -s v4.0.0
+curl -fsSL https://repo.pigsty.io/get | bash -s v4.1.0
 ```
 {{% /tab %}}
 {{< /tabpane >}}
@@ -237,12 +237,12 @@ curl -fsSL https://repo.pigsty.io/beta | bash;
 
 ```bash
 git clone https://github.com/pgsty/pigsty.git;
-cd pigsty; git checkout v4.0.0
+cd pigsty; git checkout v4.1.0
 ```
 
 如果您的环境没有互联网访问，也可以直接从 [**GitHub Release**](https://github.com/pgsty/pigsty/releases/) 页面，或者 Pigsty 仓库下载源码包：
 
 ```bash
-wget https://repo.pigsty.cc/src/pigsty-v4.0.0.tgz
-wget https://repo.pigsty.io/src/pigsty-v4.0.0.tgz
+wget https://repo.pigsty.cc/src/pigsty-v4.1.0.tgz
+wget https://repo.pigsty.io/src/pigsty-v4.1.0.tgz
 ```

@@ -28,7 +28,7 @@ PostgreSQL 监听在 `5432` 端口，集群中带有一个预置的数据库 `me
 
 ```bash
 vagrant@pg-meta-1:~$ pp
-psql (18.1 (Ubuntu 18.1-1.pgdg24.04+2))
+psql (18.2 (Ubuntu 18.2-1.pgdg24.04+2))
 Type "help" for help.
 
 postgres=#
@@ -116,7 +116,7 @@ psql -h 10.10.10.10 -p 5432 -U dbuser_dba -d meta
 成功连接后，你会看到类似这样的提示符：
 
 ```bash
-psql (18.1)
+psql (18.2)
 Type "help" for help.
 
 meta=#

@@ -9,7 +9,7 @@ categories: [参考]
 
 INFRA 模块负责配置 Pigsty 的基础设施组件：本地软件源、Nginx、DNSMasq、VictoriaMetrics、VictoriaLogs、Grafana、Alertmanager、Blackbox Exporter 等监控告警基础设施。
 
-> Pigsty v4.0 使用 VictoriaMetrics 替代 Prometheus，使用 VictoriaLogs 替代 Loki，实现了更优秀的可观测性方案。
+> Pigsty v4.x 使用 VictoriaMetrics 替代 Prometheus，使用 VictoriaLogs 替代 Loki，实现了更优秀的可观测性方案。
 
 
 | 参数组                               | 功能说明                               |
@@ -171,7 +171,7 @@ INFRA 模块负责配置 Pigsty 的基础设施组件：本地软件源、Nginx�
 这一小节指定了一套 Pigsty 部署的元数据：包括版本号，管理员节点 IP 地址，软件源镜像上游 [`区域`](#region)，默认语言，以及下载软件包时使用的 http(s) 代理。
 
 ```yaml
-version: v4.0.0                   # pigsty 版本号
+version: v4.1.0                   # pigsty 版本号
 admin_ip: 10.10.10.10             # 管理节点IP地址
 region: default                   # 上游镜像区域：default,china,europe
 language: en                      # 默认语言: en 或 zh
@@ -189,11 +189,11 @@ proxy_env:                        # 全局HTTPS代理，用于下载、安装软
 
 参数名称： `version`， 类型： `string`， 层次：`G`
 
-Pigsty 版本号字符串，默认值为当前版本：`v4.0.0`。
+Pigsty 版本号字符串，默认值为当前版本：`v4.1.0`。
 
 Pigsty 内部会使用版本号进行功能控制与内容渲染，请勿随意修改此参数。
 
-Pigsty 使用语义化版本号，版本号字符串通常以字符 `v` 开头，例如 `v4.0.0`。
+Pigsty 使用语义化版本号，版本号字符串通常以字符 `v` 开头，例如 `v4.1.0`。
 
 
 
@@ -308,7 +308,7 @@ Pigsty 将会使用现有的 CA 公私钥对，而不是新建一个。如果 CA
 
 **请务必保留并备份好部署过程中新生成的 CA 私钥文件，这对于后续签发新证书至关重要。**
 
-> 注意：Pigsty v3.x 使用的是 `ca_method` 参数（取值为 `create`/`recreate`/`copy`），v4.0 简化为布尔类型的 `ca_create`。
+> 注意：Pigsty v3.x 使用的是 `ca_method` 参数（取值为 `create`/`recreate`/`copy`），v4.x 简化为布尔类型的 `ca_create`。
 
 
 
@@ -390,7 +390,7 @@ infra:
 
 参数名称： `infra_portal`， 类型： `dict`， 层次：`G`
 
-通过 Nginx 门户暴露的基础设施服务列表。v4.0 的默认值非常简洁：
+通过 Nginx 门户暴露的基础设施服务列表。v4.x 的默认值非常简洁：
 
 ```yaml
 infra_portal:
@@ -699,7 +699,7 @@ postgresql$v postgresql$v-server postgresql$v-libs postgresql$v-contrib postgres
 
 本参数没有默认值，即默认值为未定义状态。如果用户不在配置文件中显式指定本参数，则 Pigsty 会从根据当前节点的操作系统族，从定义于 [`roles/node_id/vars`](https://github.com/pgsty/pigsty/blob/main/roles/node_id/vars/) 中的 `infra_packages_default` 变量中加载获取默认值。
 
-v4.0 默认值（EL系操作系统）：
+v4.x 默认值（EL系操作系统）：
 
 ```yaml
 infra_packages_default:
@@ -715,7 +715,7 @@ infra_packages_default:
   - node-exporter,blackbox-exporter,nginx-exporter,pg-exporter,pev2,nginx,dnsmasq,ansible,etcd,python3-requests,redis,mcli,restic,certbot,python3-certbot-nginx
 ```
 
-> 注意：v4.0 使用 VictoriaMetrics 套件替代了 Prometheus 和 Loki，因此软件包列表与 v3.x 有显著差异。
+> 注意：v4.x 使用 VictoriaMetrics 套件替代了 Prometheus 和 Loki，因此软件包列表与 v3.x 有显著差异。
 
 
 
@@ -998,7 +998,7 @@ DNSMASQ 的默认监听端口，默认是 `53`，不建议修改 DNS 服务默�
 
 由 dnsmasq 负责解析的动态 DNS 记录，一般用于将一些辅助域名解析到管理节点。这些记录会被写入到基础设施节点的 `/etc/hosts.d/default` 文件中。
 
-v4.0 默认值：
+v4.x 默认值：
 
 ```yaml
 dns_records:
@@ -1022,7 +1022,7 @@ dns_records:
 
 ## `VICTORIA`
 
-Pigsty v4.0 使用 VictoriaMetrics 套件替代 Prometheus 和 Loki，提供更优秀的可观测性解决方案：
+Pigsty v4.x 使用 VictoriaMetrics 套件替代 Prometheus 和 Loki，提供更优秀的可观测性解决方案：
 
 - **VictoriaMetrics**：替代 Prometheus，作为时序数据库存储监控指标
 - **VictoriaLogs**：替代 Loki，作为日志聚合存储
@@ -1064,7 +1064,7 @@ vmalert_options: ''               # 额外命令行参数
 
 是否在当前 Infra 节点上启用 VictoriaMetrics？默认值为 `true`。
 
-VictoriaMetrics 是 Pigsty v4.0 的核心监控组件，替代 Prometheus 作为时序数据库，负责：
+VictoriaMetrics 是 Pigsty v4.x 的核心监控组件，替代 Prometheus 作为时序数据库，负责：
 
 - 从各个 Exporter 抓取监控指标
 - 存储时序数据
@@ -1250,7 +1250,7 @@ VMAlert 的额外命令行参数，默认值为空字符串。
 
 此部分现在主要包含 Blackbox Exporter 和 Alertmanager 的配置。
 
-> 注意：Pigsty v4.0 使用 VictoriaMetrics 替代 Prometheus，原有的 `prometheus_*` 和 `pushgateway_*` 参数已移至 [`VICTORIA`](#victoria) 部分。
+> 注意：Pigsty v4.x 使用 VictoriaMetrics 替代 Prometheus，原有的 `prometheus_*` 和 `pushgateway_*` 参数已移至 [`VICTORIA`](#victoria) 部分。
 
 ```yaml
 blackbox_enabled: true            # 启用 blackbox_exporter？
@@ -1431,4 +1431,3 @@ Grafana 管理员密码，默认为 `pigsty`。
 Grafana 元数据库 PG 数据源使用的只读用户密码，默认为 `DBUser.Viewer`。
 
 此密码用于 Grafana 连接 PostgreSQL CMDB 数据源，以只读方式查询元数据。
-

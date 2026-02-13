@@ -92,7 +92,7 @@ all:
     #minio: { hosts: { 10.10.10.10: { minio_seq: 1 } }, vars: { minio_cluster: minio } }
 
   vars:                               # 全局变量
-    version: v4.0.0                   # pigsty 版本字符串
+    version: v4.1.0                   # pigsty 版本字符串
     admin_ip: 10.10.10.10             # 管理节点 ip 地址
     region: default                   # 上游镜像区域：default|china|europe
     node_tune: oltp                   # 节点调优规格：oltp,olap,tiny,crit
@@ -243,4 +243,3 @@ volumes:
 查看公共演示：[http://odoo.pigsty.io](http://odoo.pigsty.io/)，用户名：`test@pigsty.io`，密码：`pigsty`
 
 如果您想通过 SSL 访问 odoo，您必须在浏览器中信任 `files/pki/ca/ca.crt`（或在 chrome 中使用肮脏的黑客 `thisisunsafe`）
-
