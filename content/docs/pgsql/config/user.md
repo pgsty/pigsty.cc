@@ -71,6 +71,8 @@ pg-meta:
   pool_connlimit: -1              # 可选，用户级别的连接池最大连接数，默认 -1 不限制
 ```
 
+> 用户级连接池限额字段统一使用 `pool_connlimit`（对应 Pgbouncer `max_user_connections`）。
+
 
 ----------------
 

@@ -21,15 +21,19 @@ Pigsty 使用 [**Pgbouncer**](https://www.pgbouncer.org/) 作为 PostgreSQL 的�
 
 ## 用户与数据库管理
 
-Pgbouncer 的中用户和数据库由 Pigsty 自动管理，并在 [**创建数据库**](/docs/pgsql/admin/db) 与 [**创建用户**](/docs/pgsql/admin/user) 时自动应用 [**数据库配置**](/docs/pgsql/config/db) 与 [**用户配置**](/docs/pgsql/config/user)。
+Pgbouncer 中的用户和数据库由 Pigsty 自动管理，并在 [**创建数据库**](/docs/pgsql/admin/db) 与 [**创建用户**](/docs/pgsql/admin/user) 时自动应用 [**数据库配置**](/docs/pgsql/config/db) 与 [**用户配置**](/docs/pgsql/config/user)。
 
 **数据库管理**：在 [**`pg_databases`**](/docs/pgsql/param#pg_databases) 中定义的数据库，默认会自动添加到 Pgbouncer。设置 [**`pgbouncer: false`**](/docs/pgsql/admin/db#连接池管理) 可以排除特定数据库。
 
 ```yaml
 pg_databases:
   - name: mydb                # 默认加入连接池
+    pool_auth_user: dbuser_meta # 可选，认证查询用户（配合 pgbouncer_auth_query）
     pool_mode: transaction    # 数据库级池化模式
     pool_size: 64             # 默认池大小
+    pool_reserve: 32          # 保留池大小
+    pool_size_min: 0          # 最小池大小
+    pool_connlimit: 100       # 最大数据库连接数
   - name: internal
     pgbouncer: false          # 不加入连接池
 ```
@@ -42,7 +46,10 @@ pg_users:
     password: DBUser.App
     pgbouncer: true           # 加入连接池用户列表
     pool_mode: transaction    # 用户级池化模式
+    pool_connlimit: 50        # 用户级最大连接数
 ```
+
+> 自 Pigsty `v4.1.0` 起，数据库连接池参数统一使用 `pool_reserve` 与 `pool_connlimit`，旧别名 `pool_size_reserve` / `pool_max_db_conn` 已收敛。
 
 
 ----------------

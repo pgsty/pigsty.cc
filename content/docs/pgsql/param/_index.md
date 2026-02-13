@@ -550,6 +550,8 @@ PostgreSQL 业务用户列表，需要在 PG 集群层面进行定义。默认�
   pool_connlimit: -1              # 可选，用户级别的连接池最大连接数，默认 -1 不限制
 ```
 
+> 用户级连接池限额字段统一使用 `pool_connlimit`（对应 Pgbouncer `max_user_connections`）。
+
 
 
 
@@ -599,6 +601,8 @@ PostgreSQL 业务数据库列表，需要在 PG 集群层面进行定义。默�
   pool_size_min: 0                # 可选，数据库级别的 pgbouncer 池的最小大小，默认为 0
   pool_connlimit: 100             # 可选，数据库级别的最大数据库连接数，默认为 100
 ```
+
+> 自 Pigsty `v4.1.0` 起，数据库连接池参数统一使用 `pool_reserve` 与 `pool_connlimit`，旧别名 `pool_size_reserve` / `pool_max_db_conn` 已收敛。
 
 在每个数据库定义对象中，只有 `name` 是必选字段，其他的字段都是可选项。
 

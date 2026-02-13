@@ -194,15 +194,20 @@ bin/pgsql-db pg-meta myapp    # 修改 myapp 数据库的属性使其符合配�
 删除模式或卸载扩展使用 `CASCADE` 选项，会同时删除依赖该模式/扩展的所有对象。请确保理解影响范围后再执行删除操作。
 {{% /alert %}}
 
-**连接池配置**：默认情况下所有业务数据库都会添加到 Pgbouncer 连接池。可配置 `pgbouncer`（是否加入连接池）、`pool_mode`（池化模式）、`pool_size`（默认池大小）、`pool_reserve`（保留连接数）、`pool_connlimit`（最大数据库连接）等参数。
+**连接池配置**：默认情况下所有业务数据库都会添加到 Pgbouncer 连接池。可配置 `pgbouncer`（是否加入连接池）、`pool_mode`（池化模式）、`pool_size`（默认池大小）、`pool_reserve`（保留连接数）、`pool_size_min`（最小池大小）、`pool_connlimit`（最大数据库连接）、`pool_auth_user`（认证查询用户）等参数。
 
 ```yaml
 - name: myapp
   pgbouncer: true              # 是否加入连接池（默认 true）
   pool_mode: transaction       # 池化模式：transaction/session/statement
   pool_size: 64                # 默认池大小
+  pool_reserve: 32             # 保留池大小
+  pool_size_min: 0             # 最小池大小
   pool_connlimit: 100          # 最大数据库连接
+  pool_auth_user: dbuser_meta  # 认证查询使用用户（配合 pgbouncer_auth_query）
 ```
+
+> 自 Pigsty `v4.1.0` 起，数据库连接池参数统一使用 `pool_reserve` 与 `pool_connlimit`，旧别名 `pool_size_reserve` / `pool_max_db_conn` 已收敛。
 
 
 ----------------
@@ -339,6 +344,6 @@ CREATE DATABASE meta_dev TEMPLATE meta STRATEGY FILE_COPY;
 
 在数据库定义中配置的 [**连接池参数**](/docs/pgsql/config/db#连接池) 会在创建/修改数据库时应用到 Pgbouncer 连接池中。
 
-默认情况下所有业务数据库都会添加到 Pgbouncer 连接池（`pgbouncer: true`）。数据库会被添加到 `/etc/pgbouncer/database.txt` 文件中，数据库级别的连接池参数（`pool_mode`、`pool_size` 等）通过此文件配置。
+默认情况下所有业务数据库都会添加到 Pgbouncer 连接池（`pgbouncer: true`）。数据库会被添加到 `/etc/pgbouncer/database.txt` 文件中，数据库级别的连接池参数（`pool_auth_user`、`pool_mode`、`pool_size`、`pool_reserve`、`pool_size_min`、`pool_connlimit`）通过此文件配置。
 
 您可以使用 `postgres` 操作系统用户，使用 `pgb` 别名访问 Pgbouncer 管理数据库。更多连接池管理操作，请参考 [**Pgbouncer 管理**](/docs/pgsql/admin/pgbouncer)。

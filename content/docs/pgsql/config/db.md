@@ -83,6 +83,8 @@ pg-meta:
   pool_connlimit: 100             # 可选，数据库级别的最大数据库连接数，默认为 100
 ```
 
+> 自 Pigsty `v4.1.0` 起，数据库连接池参数统一使用 `pool_reserve` 与 `pool_connlimit`，旧别名 `pool_size_reserve` / `pool_max_db_conn` 已收敛。
+
 
 
 

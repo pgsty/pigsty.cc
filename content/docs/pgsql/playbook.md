@@ -309,7 +309,7 @@ bin/pgsql-user pg-meta dbuser_meta  # 在集群 pg-meta 上创建用户 dbuser_m
 剧本会：
 1. 在 `/pg/tmp/pg-user-{{ user.name }}.sql` 生成用户创建 SQL
 2. 在集群主库上执行用户创建/更新 SQL
-3. 更新 `/etc/pgbouncer/userlist.txt` 与 `useropts.txt`
+3. 若启用 `pgbouncer_enabled: true`，更新 `/etc/pgbouncer/userlist.txt` 与 `useropts.txt`
 4. 重载 pgbouncer 使配置生效
 
 **用户定义示例**
@@ -333,7 +333,7 @@ pg_users:
     roles: [dbrole_admin]           # 可选，所属角色
     parameters: {}                  # 可选，角色级参数
     pool_mode: transaction          # 可选，pgbouncer 用户级连接池模式
-    pool_connlimit: -1              # 可选，用户级最大连接数
+    pool_connlimit: -1              # 可选，用户级最大连接数（映射为 max_user_connections）
 ```
 
 详情请参考：[管理SOP：创建用户](/docs/pgsql/admin/user#创建用户)
@@ -389,9 +389,12 @@ pg_databases:
     revokeconn: false               # 可选，是否回收 public 连接权限
     register_datasource: true       # 可选，是否注册到 grafana 数据源
     connlimit: -1                   # 可选，连接数限制
+    pool_auth_user: dbuser_meta     # 可选，认证查询使用的用户（配合 pgbouncer_auth_query）
     pool_mode: transaction          # 可选，pgbouncer 连接池模式
-    pool_size: 64                   # 可选，pgbouncer 连接池大小
-    pool_reserve: 32           # 可选，pgbouncer 保留连接池大小
+    pool_size: 64                   # 可选，pgbouncer 默认池大小
+    pool_reserve: 32                # 可选，pgbouncer 保留池大小
+    pool_size_min: 0                # 可选，pgbouncer 最小池大小
+    pool_connlimit: 100             # 可选，pgbouncer 最大数据库连接数
 ```
 
 详情请参考：[管理SOP：创建数据库](/docs/pgsql/admin/db#创建数据库)
@@ -617,4 +620,3 @@ pg_pitr:                           # 定义 PITR 任务
 | `immediate` | 恢复到一致性状态后立即停止 | `{"pg_pitr": {"type": "immediate"}}` |
 
 详情请参考：[备份恢复教程](/docs/pgsql/backup/restore/)
-
