@@ -65,12 +65,12 @@ Nginx会根据 [`infra_portal`](/docs/infra/param#infra_portal) 的内容，通�
 infra_portal:  # domain names and upstream servers
   home         : { domain: i.pigsty }
   grafana      : { domain: g.pigsty ,endpoint: "${admin_ip}:3000" , websocket: true }
-  prometheus   : { domain: p.pigsty ,endpoint: "${admin_ip}:8428" }   # VMUI
+  vmetrics     : { domain: p.pigsty ,endpoint: "${admin_ip}:8428" }   # VMUI
   alertmanager : { domain: a.pigsty ,endpoint: "${admin_ip}:9059" }
   blackbox     : { endpoint: "${admin_ip}:9115" }
   vmalert      : { endpoint: "${admin_ip}:8880" }
   #logs         : { domain: logs.pigsty ,endpoint: "${admin_ip}:9428" }
-  #minio        : { domain: sss.pigsty  ,endpoint: "${admin_ip}:9001" ,scheme: https ,websocket: true }
+  #minio        : { domain: m.pigsty    ,endpoint: "${admin_ip}:9001" ,scheme: https ,websocket: true }
 ```
 
 Pigsty强烈建议使用域名访问Pigsty UI系统，而不是直接通过IP+端口的方式访问，基于以下几个理由：
@@ -117,7 +117,7 @@ gpgcheck=0
 
 ### Victoria 可观测性套件
 
-Pigsty v4.0 使用 VictoriaMetrics 家族替代 Prometheus/Loki，提供统一的监控、日志与链路追踪能力：
+Pigsty v4.1 使用 VictoriaMetrics 家族提供统一的监控、日志与链路追踪能力：
 
 * **VictoriaMetrics** 默认监听 `8428` 端口，可通过 `http://p.pigsty` 或 `https://i.pigsty/vmetrics/` 访问 VMUI，兼容 Prometheus API。
 * **VMAlert** 负责评估 `/infra/rules/*.yml` 中的告警规则，监听 `8880` 端口，并将告警事件发送到 Alertmanager。
@@ -263,16 +263,16 @@ infra:
 
 ```bash
 ./infra.yml -t infra           # 配置基础设施
-./infra.yml -t infra_env       # 配置管理节点上的环境变量：env_dir, env_pg, env_var
-./infra.yml -t infra_pkg       # 安装INFRA所需的软件包：infra_pkg_yum, infra_pkg_pip
+./infra.yml -t infra_env       # 配置管理节点上的环境变量：env_patroni, env_pg, env_pgadmin, env_var
+./infra.yml -t infra_pkg       # 安装 INFRA 所需的软件包：infra_packages
 ./infra.yml -t infra_user      # 设置 infra 操作系统用户组
 ./infra.yml -t infra_cert      # 为 infra 组件颁发证书
 ./infra.yml -t dns             # 配置 DNSMasq：dns_config, dns_record, dns_launch
-./infra.yml -t nginx           # 配置 Nginx：nginx_config, nginx_cert, nginx_static, nginx_launch, nginx_exporter
+./infra.yml -t nginx           # 配置 Nginx：nginx_config, nginx_cert, nginx_static, nginx_launch, nginx_certbot, nginx_reload, nginx_exporter
 ./infra.yml -t victoria        # 配置 VictoriaMetrics/Logs/Traces：vmetrics|vlogs|vtraces|vmalert
 ./infra.yml -t alertmanager    # 配置 AlertManager：alertmanager_config, alertmanager_launch
-./infra.yml -t blackbox        # 配置 Blackbox Exporter： blackbox_launch
-./infra.yml -t grafana         # 配置 Grafana：grafana_clean, grafana_config, grafana_plugin, grafana_launch, grafana_provision
+./infra.yml -t blackbox        # 配置 Blackbox Exporter：blackbox_config, blackbox_launch
+./infra.yml -t grafana         # 配置 Grafana：grafana_clean, grafana_config, grafana_launch, grafana_provision
 ./infra.yml -t infra_register  # 将 infra 组件注册到 VictoriaMetrics / Grafana
 ```
 
@@ -284,7 +284,7 @@ infra:
 ./infra.yml -t vmetrics_config,vmetrics_launch    # 重新生成 VictoriaMetrics 主配置文件，并重启服务
 ./infra.yml -t vlogs_config,vlogs_launch          # 重新渲染 VictoriaLogs 配置
 ./infra.yml -t vmetrics_clean                     # 清理 VictoriaMetrics 存储数据目录
-./infra.yml -t grafana_plugin                     # 从互联网上下载 Grafana 插件，通常需要科学上网
+./infra.yml -t grafana_provision                  # 重新加载 Grafana 仪表盘与数据源定义
 ```
 
 
@@ -320,8 +320,9 @@ INFRA模块剧本 [`infra.yml`](https://github.com/pgsty/pigsty/blob/main/infra.
 
 **本剧本的一些注意事项**
 
-* 本剧本为幂等剧本，重复执行会抹除元节点上的基础设施组件。
+* 本剧本为幂等剧本，重复执行默认不会清理历史数据与 Grafana 数据。
 * 如需保留历史监控数据，请先将 `vmetrics_clean`、`vlogs_clean`、`vtraces_clean` 设置为 `false`。
+* 如果将 `vmetrics_clean`、`vlogs_clean`、`vtraces_clean`、`grafana_clean` 设为 `true`，对应组件数据会在执行时被清理。
 * 当离线软件源 `/www/pigsty/repo_complete` 存在时，本剧本会跳过从互联网下载软件的任务。完整执行该剧本耗时约5-8分钟，视机器配置而异。
 * 不使用离线软件包而直接从互联网原始上游下载软件时，可能耗时10-20分钟，根据您的网络条件而异。
 

@@ -61,7 +61,7 @@ VictoriaMetrics 通过 `/infra/targets/<job>/*.yml` 目录进行静态服务发�
 
 ```bash
 # 将所有（在 pg_databases 中定义的） pgsql 数据库注册为 grafana 数据源
-./pgsql.yml -t register_grafana
+./pgsql.yml -t add_ds
 ```
 
 
@@ -111,12 +111,12 @@ PGSQL 集群/实例域名默认注册到 infra 节点的 `/etc/hosts.d/<name>`�
 infra_portal:
   home         : { domain: home.pigsty.cc }
   grafana      : { domain: demo.pigsty.cc ,endpoint: "${admin_ip}:3000" ,websocket: true }
-  prometheus   : { domain: p.pigsty.cc ,endpoint: "${admin_ip}:8428" }
+  vmetrics     : { domain: p.pigsty.cc ,endpoint: "${admin_ip}:8428" }
   alertmanager : { domain: a.pigsty.cc ,endpoint: "${admin_ip}:9059" }
   blackbox     : { endpoint: "${admin_ip}:9115" }
   vmalert      : { endpoint: "${admin_ip}:8880" }
   # 新增的 Web 门户
-  minio        : { domain: sss.pigsty  ,endpoint: "${admin_ip}:9001" ,scheme: https ,websocket: true }
+  minio        : { domain: m.pigsty.cc ,endpoint: "${admin_ip}:9001" ,scheme: https ,websocket: true }
   postgrest    : { domain: api.pigsty.cc  ,endpoint: "127.0.0.1:8884"   }
   pgadmin      : { domain: adm.pigsty.cc  ,endpoint: "127.0.0.1:8885"   }
   pgweb        : { domain: cli.pigsty.cc  ,endpoint: "127.0.0.1:8886"   }

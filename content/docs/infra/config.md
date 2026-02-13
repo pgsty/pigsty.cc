@@ -95,7 +95,7 @@ infra:
     infra_portal:
       home         : { domain: i.pigsty }
       grafana      : { domain: g.pigsty ,endpoint: "10.10.10.8:3000" , websocket: true }
-      prometheus   : { domain: p.pigsty ,endpoint: "10.10.10.8:8428" }
+      vmetrics     : { domain: p.pigsty ,endpoint: "10.10.10.8:8428" }
       alertmanager : { domain: a.pigsty ,endpoint: "10.10.10.8:9059" }
       blackbox     : { endpoint: "10.10.10.8:9115" }
       vmalert      : { endpoint: "10.10.10.8:8880" }

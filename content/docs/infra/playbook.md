@@ -58,9 +58,9 @@ Pigsty 提供了三个与 INFRA 模块相关的剧本：
 
 **剧本注意事项**：
 
-- 本剧本为幂等剧本，重复执行会抹除 Infra 节点上的基础设施组件
+- 本剧本为幂等剧本，重复执行默认不会清理历史数据与 Grafana 数据
 - 如需保留历史监控数据，请先将 `vmetrics_clean`、`vlogs_clean`、`vtraces_clean` 设置为 `false`
-- 除非设置 `grafana_clean` 为 `false`，否则 Grafana 监控面板与配置修改会丢失
+- 如果设置 `grafana_clean` 为 `true`，Grafana 数据库会被清理，原有仪表盘与配置会丢失
 - 当本地软件仓库 `/www/pigsty/repo_complete` 存在时，本剧本会跳过从互联网下载软件的任务
 - 完整执行该剧本耗时约1～3分钟，视机器配置与网络条件而异
 
@@ -100,7 +100,7 @@ Pigsty 提供了三个与 INFRA 模块相关的剧本：
 #   - haproxy_register, node_exporter, node_register, vector
 #
 # infra: setup infra components
-#   - infra_env      : env_dir, env_pg, env_pgadmin, env_var
+#   - infra_env      : env_patroni, env_pg, env_pgadmin, env_var
 #   - infra_pkg      : install infra packages
 #   - infra_user     : setup infra os user group
 #   - infra_cert     : issue cert for infra components
@@ -128,4 +128,3 @@ Pigsty 提供了三个与 INFRA 模块相关的剧本：
 ./infra-rm.yml -t data       # 移除 INFRA 上的存留数据
 ./infra-rm.yml -t package    # 卸载 INFRA 上安装的软件包
 ```
-

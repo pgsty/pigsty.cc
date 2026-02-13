@@ -275,19 +275,12 @@ init dashboard: pglog / pglog-analysis.json
 init dashboard: pglog / pglog-session.json
 ```
 
-该脚本会侦测当前的环境（安装时定义于`~/pigsty`），获取Grafana的访问信息，并将监控面板中的URL连接占位符域名（`*.pigsty`）替换为真实使用的域名。
+该脚本会通过 Grafana API 导入仪表盘。你可以使用环境变量显式指定 Grafana 访问参数：
 
 ```bash
 export GRAFANA_ENDPOINT=http://10.10.10.10:3000
 export GRAFANA_USERNAME=admin
 export GRAFANA_PASSWORD=pigsty
-
-export NGINX_UPSTREAM_YUMREPO=yum.pigsty
-export NGINX_UPSTREAM_CONSUL=c.pigsty
-export NGINX_UPSTREAM_PROMETHEUS=p.pigsty
-export NGINX_UPSTREAM_ALERTMANAGER=a.pigsty
-export NGINX_UPSTREAM_GRAFANA=g.pigsty
-export NGINX_UPSTREAM_HAPROXY=h.pigsty
 ```
 
 题外话，使用`grafana.py clean`会清空目标监控面板，使用`grafana.py load`会加载当前目录下所有监控面板，当Pigsty的监控面板发生变更，可以使用这两个命令升级所有的监控面板。
@@ -296,11 +289,11 @@ export NGINX_UPSTREAM_HAPROXY=h.pigsty
 
 当使用 [`pgsql.yml`](/docs/pgsql/playbook#pgsqlyml) 创建新 PostgreSQL 集群，或使用 [`pgsql-db.yml`](/docs/pgsql/playbook#pgsql-dbyml) 创建新业务数据库时，Pigsty会在Grafana中注册新的PostgreSQL数据源，您可以使用默认的监控用户通过Grafana直接访问目标数据库实例。应用`pgcat`的绝大部分功能有赖于此。
 
-要注册 Postgres 数据库，可以使用 [`pgsql.yml`](/docs/pgsql/playbook#pgsqlyml) 中的 `register_grafana` 任务：
+要注册 Postgres 数据库数据源，可以使用 [`pgsql.yml`](/docs/pgsql/playbook#pgsqlyml) 中的 `add_ds` 任务（或使用更全面的 `pg_register`）：
 
 ```bash
-./pgsql.yml -t register_grafana             # 重新注册当前环境中所有Postgres数据源
-./pgsql.yml -t register_grafana -l pg-test  # 重新注册 pg-test 集群中所有的数据库
+./pgsql.yml -t add_ds             # 重新注册当前环境中所有 PostgreSQL 数据源
+./pgsql.yml -t add_ds -l pg-test  # 仅重新注册 pg-test 集群的数据源
 ```
 
 
@@ -322,4 +315,3 @@ grafana_pgurl: postgres://dbuser_grafana:DBUser.Grafana@meta:5436/grafana
 ```bash
 ./infra.yml -t grafana
 ```
-

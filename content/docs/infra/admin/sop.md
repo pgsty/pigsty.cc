@@ -134,7 +134,7 @@ Nginx 相关的管理任务：
 ./infra.yml -t nginx_config,nginx_reload          # 重新配置并重载
 ./infra.yml -t vmetrics_config,vmetrics_launch    # 重新生成 VictoriaMetrics 配置并重启
 ./infra.yml -t vlogs_config,vlogs_launch          # 更新 VictoriaLogs 配置
-./infra.yml -t grafana_plugin                     # 下载 Grafana 插件
+./infra.yml -t grafana_provision                  # 重新加载 Grafana 仪表盘与数据源定义
 ```
 
 

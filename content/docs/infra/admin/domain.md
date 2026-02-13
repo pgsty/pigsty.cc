@@ -96,7 +96,7 @@ node_dns_method: add                # 将其添加到现有 DNS 服务器列表
 ```yaml
 dns_records:
   - "${admin_ip} i.pigsty"
-  - "${admin_ip} m.pigsty sss.pigsty api.pigsty adm.pigsty cli.pigsty ddl.pigsty"
+  - "${admin_ip} m.pigsty supa.pigsty api.pigsty adm.pigsty cli.pigsty ddl.pigsty"
 ```
 
 ### 公网域名
@@ -128,7 +128,7 @@ Pigsty 在 INFRA 节点上运行 dnsmasq 作为 DNS 服务器。
 ```yaml
 dns_records:
   - "${admin_ip} i.pigsty"
-  - "${admin_ip} m.pigsty sss.pigsty api.pigsty adm.pigsty cli.pigsty ddl.pigsty"
+  - "${admin_ip} m.pigsty supa.pigsty api.pigsty adm.pigsty cli.pigsty ddl.pigsty"
 ```
 
 ### 动态 DNS 注册
@@ -164,7 +164,8 @@ Pigsty 管理被纳管节点的 DNS 配置。
 
 ```yaml
 node_etc_hosts:
-  - "${admin_ip} i.pigsty sss.pigsty"
+  - "${admin_ip} i.pigsty"
+  - "${admin_ip} sss.pigsty"      # 可选：MinIO S3 接入域名
   - "10.10.10.20 db.example.com"
 ```
 
@@ -249,5 +250,4 @@ Pigsty 扩展预留了以下域名用于各种应用服务：
 ./pgsql.yml -t pg_dns_ins     # 仅注册实例级 DNS
 ./pgsql.yml -t pg_dns_cls     # 仅注册集群级 DNS
 ```
-
 

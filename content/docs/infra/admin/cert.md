@@ -238,7 +238,7 @@ curl -o ca.crt http://10.10.10.10/ca.crt
 infra_portal:
   home: { domain: pigsty.cc }
   grafana: { domain: g.pigsty.cc, endpoint: "${admin_ip}:3000", websocket: true }
-  prometheus: { domain: p.pigsty.cc, endpoint: "${admin_ip}:8428" }
+  vmetrics: { domain: p.pigsty.cc, endpoint: "${admin_ip}:8428" }
   alertmanager: { domain: a.pigsty.cc, endpoint: "${admin_ip}:9059" }
 ```
 
@@ -271,7 +271,7 @@ certbot --nginx --agree-tos --email admin@pigsty.cc -n \
 
 ### 第四步：Nginx 配置
 
-在 portal 条目中添加 `certbot: true` 参数，然后重新生成配置：
+在 portal 条目中添加 `certbot: <证书名称>` 参数（例如 `certbot: pigsty-prod`），然后重新生成配置：
 
 ```bash
 ./infra.yml -t nginx_config,nginx_launch
