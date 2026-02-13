@@ -120,7 +120,7 @@ proxy:
 ./node.yml -t node_vip                        # 为没启用过 VIP 的集群安装、配置、启用 L2 VIP
 ./node.yml -t vip_config,vip_reload           # 刷新节点 L2 VIP 配置
 ./node.yml -t haproxy_config,haproxy_reload   # 刷新节点上的服务定义
-./node.yml -t register_prometheus             # 重新将节点注册到 Prometheus 中
+./node.yml -t node_register                   # 重新将节点注册到 VictoriaMetrics 中
 ./node.yml -t register_nginx                  # 重新将节点 haproxy 管控界面注册到 Nginx 中
 
 # Task
@@ -167,7 +167,7 @@ proxy:
 Pigsty 使用 [`node_firewall_mode`](/docs/node/param#node_firewall_mode) 控制防火墙行为。
 在 RHEL/Rocky 系统上使用 **firewalld**，在 Debian/Ubuntu 系统上使用 **ufw**。
 
-默认情况下，这个参数是 `zone`：Pigsty 会在各发行版上统一启用系统防火墙，并应用“内网信任、公网最小暴露”的规则。
+自 v4.1 起，默认情况下这个参数是 `zone`：Pigsty 会在各发行版上统一启用系统防火墙，并应用“内网信任、公网最小暴露”的规则。
 在 `zone` 模式下，内网流量不受防火墙限制，但非内网网段只能访问特定端口。
 如果你希望完全自行维护防火墙，请将该参数设置为 `none`（Pigsty 不再管理防火墙状态与规则）。
 如果您在云服务器上部署并对互联网开放，这一点尤为重要。

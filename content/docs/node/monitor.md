@@ -7,14 +7,14 @@ modules: [NODE]
 categories: [参考]
 ---
 
-Pigsty 中的 NODE 模块提供了 6 个监控面板和完善的告警规则。
+Pigsty 中的 NODE 模块提供了 8 个监控面板和完善的告警规则。
 
 
 ----------------
 
 ## 监控面板
 
-NODE 模块提供 6 个监控仪表板：
+NODE 模块提供 8 个监控仪表板：
 
 ### NODE Overview
 
@@ -56,6 +56,20 @@ NODE 模块提供 6 个监控仪表板：
 追踪 HAProxy 负载均衡器的运行情况。
 
 [![node-haproxy.jpg](/img/dashboard/node-haproxy.jpg)](https://demo.pigsty.cc/d/node-haproxy)
+
+
+### Node Disk
+
+聚焦单盘 I/O 延迟、吞吐与队列深度等存储指标。
+
+[![node-disk.webp](/img/panel/node-disk.webp)](https://demo.pigsty.cc/d/node-disk)
+
+
+### Node Vector
+
+查看 Vector 采集与转发状态，以及日志管道健康度。
+
+[![node-vector.webp](/img/dashboard/node-vector.webp)](https://demo.pigsty.cc/d/node-vector)
 
 
 ----------------
@@ -110,7 +124,7 @@ Pigsty 针对 NODE 实现了以下告警规则：
 
 | 规则 | 级别 | 说明 |
 |---|:---:|---|
-| `NodeDiskSlow` | WARN | 读写延迟超过 32ms |
+| `NodeDiskSlow` | INFO | 读写延迟超过 32ms |
 {.full-width}
 
 ### 网络协议告警
@@ -118,7 +132,7 @@ Pigsty 针对 NODE 实现了以下告警规则：
 | 规则 | 级别 | 说明 |
 |---|:---:|---|
 | `NodeTcpErrHigh` | WARN | TCP 错误率超过 1/分钟 |
-| `NodeTcpRetransHigh` | WARN | TCP 重传率超过 1% |
+| `NodeTcpRetransHigh` | INFO | TCP 重传率超过 1% |
 {.full-width}
 
 ### 时间同步告警

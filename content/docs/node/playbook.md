@@ -55,9 +55,12 @@ monitor       ：配置节点监控：node_exporter & vector
 从 Pigsty 中移除节点的剧本 [`node-rm.yml`](https://github.com/pgsty/pigsty/blob/main/node-rm.yml) 包含以下子任务：
 
 ```
-register       : 从 prometheus & nginx 中移除节点注册信息
-  - prometheus : 移除已注册的 prometheus 监控目标
-  - nginx      : 移除用于 haproxy 管理界面的 nginx 代理记录
+node_deregister   : 移除节点注册信息（VictoriaMetrics / Vector / DNS）
+  - rm_metrics    : 移除已注册的 VictoriaMetrics 监控目标
+  - rm_logs       : 移除已注册的 Vector 日志采集配置
+  - rm_dns        : 移除已注册的 Node VIP DNS 解析记录
+haproxy_deregister: 移除用于 haproxy 管理界面的 nginx 代理记录
+  - rm_proxy      : 移除 nginx upstream/location 记录
 vip            : 移除节点的 keepalived 与 L2 VIP（如果启用 VIP）
 haproxy        : 移除 haproxy 负载均衡器
 node_exporter  : 移除节点监控：Node Exporter
@@ -96,7 +99,7 @@ bin/node-rm 10.10.10.10                # 移除节点 '10.10.10.10'
 ./node.yml -t haproxy_config,haproxy_reload   # 刷新节点上的服务定义
 
 # 注册管理
-./node.yml -t register_prometheus      # 重新将节点注册到 Prometheus 中
+./node.yml -t node_register            # 重新将节点注册到 VictoriaMetrics 中
 ./node.yml -t register_nginx           # 重新将节点 haproxy 管控界面注册到 Nginx 中
 
 # 具体任务

@@ -60,14 +60,14 @@ categories: [参考]
 
 [`NODE_PACKAGE`](#node_package) 参数组用于配置节点的软件源与软件包安装，以及 uv Python 虚拟环境。
 
-| 参数                                                |     类型     | 级别  | 说明                          |
-|:--------------------------------------------------|:----------:|:---:|:----------------------------|
-| [`node_repo_modules`](#node_repo_modules)         |   `enum`   | `C` | 在节点上启用哪些软件源模块？默认为 local     |
-| [`node_repo_remove`](#node_repo_remove)           |   `bool`   | `C` | 配置节点软件仓库时，删除节点上现有的仓库吗？      |
-| [`node_packages`](#node_packages)                 | `string[]` | `C` | 要在当前节点上安装的软件包列表             |
-| [`node_default_packages`](#node_default_packages) | `string[]` | `G` | 默认在所有节点上安装的软件包列表            |
+| 参数                                                |     类型     | 级别  | 说明                            |
+|:--------------------------------------------------|:----------:|:---:|:------------------------------|
+| [`node_repo_modules`](#node_repo_modules)         |   `enum`   | `C` | 在节点上启用哪些软件源模块？默认为 local       |
+| [`node_repo_remove`](#node_repo_remove)           |   `bool`   | `C` | 配置节点软件仓库时，删除节点上现有的仓库吗？        |
+| [`node_packages`](#node_packages)                 | `string[]` | `C` | 要在当前节点上安装的软件包列表               |
+| [`node_default_packages`](#node_default_packages) | `string[]` | `G` | 默认在所有节点上安装的软件包列表              |
 | [`node_uv_env`](#node_uv_env)                     |   `path`   | `C` | uv venv 路径，默认 /data/venv，空则跳过 |
-| [`node_pip_packages`](#node_pip_packages)         |  `string`  | `C` | 在 uv venv 中安装的 pip 包        |
+| [`node_pip_packages`](#node_pip_packages)         |  `string`  | `C` | 在 uv venv 中安装的 pip 包          |
 {.full-width}
 
 [`NODE_TUNE`](#node_tune) 参数组用于配置节点的内核参数、特性开关与性能调优模板。
@@ -88,27 +88,27 @@ categories: [参考]
 
 [`NODE_SEC`](#node_sec) 参数组用于配置节点的安全相关选项，包括 SELinux、防火墙等。
 
-| 参数                                                        |     类型      |   级别    | 说明                                         |
-|:----------------------------------------------------------|:-----------:|:-------:|:-------------------------------------------|
-| [`node_selinux_mode`](#node_selinux_mode)                 |   `enum`    |   `C`   | SELinux 模式：disabled, permissive, enforcing |
-| [`node_firewall_mode`](#node_firewall_mode)               |   `enum`    |   `C`   | 防火墙模式：zone（默认）, off, none（自管）          |
-| [`node_firewall_intranet`](#node_firewall_intranet)       |  `cidr[]`   |   `C`   | 内网 CIDR 列表，用于配置防火墙规则                       |
-| [`node_firewall_public_port`](#node_firewall_public_port) |  `port[]`   |   `C`   | 公网开放端口列表，默认为 [22, 80, 443]                 |
+| 参数                                                        |    类型    | 级别  | 说明                                         |
+|:----------------------------------------------------------|:--------:|:---:|:-------------------------------------------|
+| [`node_selinux_mode`](#node_selinux_mode)                 |  `enum`  | `C` | SELinux 模式：disabled, permissive, enforcing |
+| [`node_firewall_mode`](#node_firewall_mode)               |  `enum`  | `C` | 防火墙模式：zone（默认启用）, off（关闭）, none（自管）        |
+| [`node_firewall_intranet`](#node_firewall_intranet)       | `cidr[]` | `C` | 内网 CIDR 列表，用于配置防火墙规则                       |
+| [`node_firewall_public_port`](#node_firewall_public_port) | `port[]` | `C` | 公网开放端口列表，默认为 [22, 80, 443]                 |
 {.full-width}
 
 [`NODE_ADMIN`](#node_admin) 参数组用于配置节点的管理员用户、数据目录与命令别名。
 
-| 参数                                                    |     类型     | 级别  | 说明                                        |
-|:------------------------------------------------------|:----------:|:---:|:------------------------------------------|
-| [`node_data`](#node_data)                             |   `path`   | `C` | 节点主数据目录，默认为 `/data`                       |
-| [`node_admin_enabled`](#node_admin_enabled)           |   `bool`   | `C` | 在目标节点上创建管理员用户吗？                           |
-| [`node_admin_uid`](#node_admin_uid)                   |   `int`    | `C` | 节点管理员用户的 uid 和 gid                        |
-| [`node_admin_username`](#node_admin_username)         | `username` | `C` | 节点管理员用户的名称，默认为 `dba`                      |
-| [`node_admin_sudo`](#node_admin_sudo)                 |   `enum`   | `C` | 管理员用户的 sudo 权限：limited, nopass, all, none |
-| [`node_admin_ssh_exchange`](#node_admin_ssh_exchange) |   `bool`   | `C` | 是否在节点集群之间交换管理员 ssh 密钥                     |
-| [`node_admin_pk_current`](#node_admin_pk_current)     |   `bool`   | `C` | 将当前用户的 ssh 公钥添加到管理员的 authorized_keys 中吗？  |
-| [`node_admin_pk_list`](#node_admin_pk_list)           | `string[]` | `C` | 要添加到管理员用户的 ssh 公钥                         |
-| [`node_aliases`](#node_aliases)                       |   `dict`   | `C` | 配置主机上的 Shell Alias 命令，KV字典                |
+| 参数                                                    |     类型     | 级别  | 说明                                       |
+|:------------------------------------------------------|:----------:|:---:|:-----------------------------------------|
+| [`node_data`](#node_data)                             |   `path`   | `C` | 节点主数据目录，默认为 `/data`                      |
+| [`node_admin_enabled`](#node_admin_enabled)           |   `bool`   | `C` | 在目标节点上创建管理员用户吗？                          |
+| [`node_admin_uid`](#node_admin_uid)                   |   `int`    | `C` | 节点管理员用户的 uid 和 gid                       |
+| [`node_admin_username`](#node_admin_username)         | `username` | `C` | 节点管理员用户的名称，默认为 `dba`                     |
+| [`node_admin_sudo`](#node_admin_sudo)                 |   `enum`   | `C` | 管理员用户的 sudo 权限：nopass, all, limit        |
+| [`node_admin_ssh_exchange`](#node_admin_ssh_exchange) |   `bool`   | `C` | 是否在节点集群之间交换管理员 ssh 密钥                    |
+| [`node_admin_pk_current`](#node_admin_pk_current)     |   `bool`   | `C` | 将当前用户的 ssh 公钥添加到管理员的 authorized_keys 中吗？ |
+| [`node_admin_pk_list`](#node_admin_pk_list)           | `string[]` | `C` | 要添加到管理员用户的 ssh 公钥                        |
+| [`node_aliases`](#node_aliases)                       |   `dict`   | `C` | 配置主机上的 Shell Alias 命令，KV字典               |
 {.full-width}
 
 [`NODE_TIME`](#node_time) 参数组用于配置节点的时区、NTP 时间同步与定时任务。
@@ -244,7 +244,7 @@ node_id_from_pg: true             # 如果可行，是否借用 postgres 身份�
 
 该选项可为节点显式指定一个集群名称，通常在节点集群层次定义才有意义。使用默认空值将直接使用固定值`nodes`作为节点集群标识。
 
-如果启用了 [`node_id_from_pg`](#node_id_from_pg) 选项（默认启用），且 `node_cluster` 没有被显式指定，那么 [`node_cluster`](#node_cluster) 会尝试使用 `${pg_cluster}-${pg_seq}` 作为集群身份参数，如果集群没有定义 PGSQL 模块，那么会回归到默认值 `nodes`。
+如果启用了 [`node_id_from_pg`](#node_id_from_pg) 选项（默认启用），且 `node_cluster` 没有被显式指定，那么 [`node_cluster`](#node_cluster) 会尝试使用 `${pg_cluster}` 作为集群身份参数，如果集群没有定义 PGSQL 模块，那么会回归到默认值 `nodes`。
 
 
 
@@ -463,9 +463,9 @@ node_pip_packages: ''             # pip packages to be installed in uv venv
 
 参数名称： `node_default_packages`， 类型： `string[]`， 层次：`G`
 
-默认在所有节点上安装的软件包，默认值是 EL 7/8/9 通用的 RPM 软件包列表，数组，每个元素为逗号分隔的包名：
+默认在所有节点上安装的软件包，默认值为一组按操作系统族区分的软件包列表（字符串数组，每个元素为逗号分隔的包名）：
 
-字符串数组类型，每一行都是 **由空格分隔** 的软件包列表字符串，指定默认在所有节点上安装的软件包列表。
+字符串数组类型，每一行都是 **由逗号分隔** 的软件包列表字符串，指定默认在所有节点上安装的软件包列表。
 
 在此变量中指定的软件包，只要求 **存在**，而不要求 **最新**。如果您需要安装最新版本的软件包，请使用 [`node_packages`](#node_packages) 参数。
 
@@ -474,16 +474,16 @@ node_pip_packages: ''             # pip packages to be installed in uv venv
 默认值（EL系操作系统）：
 
 ```yaml
-- lz4,unzip,bzip2,pv,jq,git,ncdu,make,patch,bash,lsof,wget,uuid,tuned,nvme-cli,numactl,sysstat,iotop,htop,rsync,tcpdump
-- python3,python3-pip,socat,lrzsz,net-tools,ipvsadm,telnet,ca-certificates,openssl,keepalived,etcd,haproxy,chrony,pig
+- lz4,unzip,bzip2,pv,jq,git,ncdu,make,patch,bash,lsof,wget,tuned,nvme-cli,numactl,sysstat,iotop,htop,rsync,tcpdump
+- python3,socat,net-tools,ipvsadm,telnet,ca-certificates,openssl,keepalived,etcd,haproxy,chrony,cronie,pig,uv
 - zlib,yum,audit,bind-utils,readline,vim-minimal,node_exporter,grubby,openssh-server,openssh-clients,chkconfig,vector
 ```
 
 默认值（Debian/Ubuntu）：
 
 ```yaml
-- lz4,unzip,bzip2,pv,jq,git,ncdu,make,patch,bash,lsof,wget,uuid,tuned,nvme-cli,numactl,sysstat,iotop,htop,rsync
-- python3,python3-pip,socat,lrzsz,net-tools,ipvsadm,telnet,ca-certificates,openssl,keepalived,etcd,haproxy,chrony,pig
+- lz4,unzip,bzip2,pv,jq,git,ncdu,make,patch,bash,lsof,wget,tuned,nvme-cli,numactl,sysstat,iotop,htop,rsync,tcpdump
+- python3,socat,net-tools,ipvsadm,telnet,ca-certificates,openssl,keepalived,etcd,haproxy,chrony,cron,pig,uv
 - zlib1g,acl,dnsutils,libreadline-dev,vim-tiny,node-exporter,openssh-server,openssh-client,vector
 ```
 
@@ -711,12 +711,12 @@ node_sysctl_params:
 
 ```yaml
 node_selinux_mode: permissive             # selinux mode: disabled, permissive, enforcing
-node_firewall_mode: zone                  # firewall mode: zone (default), off (disable), none (skip & self-managed)
+node_firewall_mode: zone                  # firewall mode: zone (default, enabled), off (disable), none (skip & self-managed)
 node_firewall_intranet:           # which intranet cidr considered as internal network
   - 10.0.0.0/8
   - 192.168.0.0/16
   - 172.16.0.0/12
-node_firewall_public_port:        # expose these ports to public network in (zone, strict) mode
+node_firewall_public_port:        # expose these ports to public network in zone mode
   - 22                            # enable ssh access
   - 80                            # enable http access
   - 443                           # enable https access
@@ -751,6 +751,7 @@ SELinux 运行模式，默认值为：`permissive`（宽容模式）。
 参数名称： `node_firewall_mode`， 类型： `enum`， 层次：`C`
 
 防火墙运行模式，默认值为：`zone`（启用防火墙并按分区规则管理）。
+自 v4.1 起，默认值从 `none` 调整为 `zone`，即默认启用防火墙。
 
 可选值：
 
@@ -771,7 +772,7 @@ SELinux 运行模式，默认值为：`permissive`（宽容模式）。
 
 参数名称： `node_firewall_intranet`， 类型： `cidr[]`， 层次：`C`
 
-内网 CIDR 地址列表，空数组，自 v4.0 版本引入，默认值为：
+内网 CIDR 地址列表（自 v4.0 版本引入），默认值为：
 
 ```yaml
 node_firewall_intranet:
@@ -783,6 +784,7 @@ node_firewall_intranet:
 此参数定义了被视为"内部网络"的 IP 地址范围。来自这些网络的流量将被允许访问所有服务端口，而无需单独配置开放规则。
 
 这些 CIDR 范围内的主机将被视为可信内网主机，享有更宽松的防火墙规则。同时，在 PG/PGB HBA 规则中，这里定义的内网范围也会被视作 “内网” 对待。
+由于默认防火墙模式为 `zone`，该列表在默认配置下即生效。
 
 
 
@@ -812,7 +814,7 @@ Pigsty 中 PostgreSQL 默认安全策略仅允许管理员通过公网访问数�
 如果你想要将其他服务端口对公网开放，也可以将它们添加到此列表中。
 建议始终保持最小暴露原则，只开放真正需要的服务端口。
 
-请注意，只有当 [`node_firewall_mode`](#node_firewall_mode) 设置为 `zone` 时，此参数才会生效。
+请注意，只有当 [`node_firewall_mode`](#node_firewall_mode) 设置为 `zone` 时，此参数才会生效；若设置为 `none` 或 `off` 则不会应用此端口策略。
 
 
 
@@ -830,11 +832,11 @@ node_data: /data                  # node main data directory, `/data` by default
 node_admin_enabled: true          # create a admin user on target node?
 node_admin_uid: 88                # uid and gid for node admin user
 node_admin_username: dba          # name of node admin user, `dba` by default
-node_admin_sudo: nopass           # admin user's sudo privilege: limited, nopass, all, none
+node_admin_sudo: nopass           # admin user's sudo privilege: nopass, all, limit
 node_admin_ssh_exchange: true     # exchange admin ssh key among node cluster
 node_admin_pk_current: true       # add current user's ssh pk to admin authorized_keys
 node_admin_pk_list: []            # ssh public keys to be added to admin user
-node_aliases: {}                  # alias name -> IP address dict for `/etc/hosts`
+node_aliases: {}                  # shell aliases to write into `/etc/profile.d/node.alias.sh`
 ```
 
 
@@ -847,7 +849,7 @@ node_aliases: {}                  # alias name -> IP address dict for `/etc/host
 
 节点的主数据目录，默认为 `/data`。
 
-如果该目录不存在，则该目录会被创建。该目录应当由 `root` 拥有，并拥有 `777` 权限。
+如果该目录不存在，则该目录会被创建。该目录由 `root:root` 拥有，权限为 `0755`。
 
 
 
@@ -898,14 +900,13 @@ Pigsty默认会在每个节点上创建一个管理员用户（拥有免密sudo�
 
 可选值：
 
-* `none`：不授予 sudo 权限
-* `limited`：授予有限的 sudo 权限（仅允许执行特定命令）
 * `nopass`：授予免密 sudo 权限（默认，允许执行所有命令但无需密码）
 * `all`：授予完整 sudo 权限（需要密码）
+* `limit`：授予有限的 sudo 权限（仅允许执行特定命令）
 
 Pigsty 默认使用 `nopass` 模式，管理员用户可以无需密码执行任意 sudo 命令，这对于自动化运维非常方便。
 
-在安全要求较高的生产环境中，您可能需要将此参数调整为 `limited` 或 `all`，以限制管理员的权限范围。
+在安全要求较高的生产环境中，您可能需要将此参数调整为 `limit` 或 `all`，以限制管理员的权限范围。
 
 
 
@@ -1429,10 +1430,8 @@ Vector 是 Pigsty v4.0 使用的日志收集组件，会收集各个模块产生
     * `nginx-error`: `/var/log/nginx/error.log`
     * `grafana`: `/var/log/grafana/grafana.log`
 
-* `NODES`：主机相关的日志，所有节点上都会启用收集。
-    * `syslog`: `/var/log/messages` （Debian上为 `/var/log/syslog`）
-    * `dmesg`: `/var/log/dmesg`
-    * `cron`: `/var/log/cron`
+* `NODES`：主机相关日志，所有节点上都会启用收集。
+    * 通过 `journald` 统一采集系统服务日志（`job=syslog`），不依赖固定的 `/var/log/*` 文件路径。
 
 * `PGSQL`：PostgreSQL 相关的日志，只有节点配置了 [PGSQL](/docs/pgsql) 模块才会启用收集。
     * `postgres`: `/pg/log/postgres/*`
