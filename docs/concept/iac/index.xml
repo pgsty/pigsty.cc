@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>声明式配置 —— 基础设施即代码（IaC） on PIGSTY</title><link>https://pigsty.cc/docs/concept/iac/</link><description>Recent content in 声明式配置 —— 基础设施即代码（IaC） on PIGSTY</description><generator>Hugo</generator><language>zh-CN</language><atom:link href="https://pigsty.cc/docs/concept/iac/index.xml" rel="self" type="application/rss+xml"/><item><title>配置清单</title><link>https://pigsty.cc/docs/concept/iac/inventory/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/concept/iac/inventory/</guid><description>&lt;p&gt;每一套 Pigsty 部署都对应着一份 &lt;strong&gt;配置清单&lt;/strong&gt; （Inventory），描述了基础设施与数据库集群的关键属性。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="配置文件"&gt;配置文件&lt;/h2&gt;
+&lt;p&gt;Pigsty 默认使用 &lt;a href="https://docs.ansible.com/projects/ansible/latest/inventory_guide/intro_inventory.html"&gt;&lt;strong&gt;Ansible YAML 配置格式&lt;/strong&gt;&lt;/a&gt;，
+使用一个单一 YAML 配置文件 &lt;a href="https://github.com/pgsty/pigsty/blob/main/pigsty.yml"&gt;&lt;strong&gt;&lt;code&gt;pigsty.yml&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt; 作为配置清单。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;~/pigsty
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; ^---- pigsty.yml &lt;span style="color:#8f5902;font-style:italic"&gt;# &amp;lt;---- 默认配置文件&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;您可以直接修改该配置文件来定制您的部署，或者使用 Pigsty 提供的 &lt;a href="https://pigsty.cc/docs/concept/iac/configure"&gt;&lt;strong&gt;配置向导&lt;/strong&gt;&lt;/a&gt; &lt;strong&gt;&lt;code&gt;configure&lt;/code&gt;&lt;/strong&gt; 脚本自动生成合适的配置文件。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="配置结构"&gt;配置结构&lt;/h2&gt;
+&lt;p&gt;配置清单使用标准的 &lt;a href="https://docs.ansible.com/projects/ansible/latest/inventory_guide/intro_inventory.html"&gt;&lt;strong&gt;Ansible YAML 配置格式&lt;/strong&gt;&lt;/a&gt;，由两部分组成：&lt;strong&gt;全局参数&lt;/strong&gt; （&lt;code&gt;all.vars&lt;/code&gt;）和多个 &lt;strong&gt;组&lt;/strong&gt;（&lt;code&gt;all.children&lt;/code&gt;）。&lt;/p&gt;
+&lt;p&gt;您可以在 &lt;code&gt;all.children&lt;/code&gt; 中定义新集群，并使用全局变量描述基础设施：&lt;code&gt;all.vars&lt;/code&gt;，它看起来像这样：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-yaml" data-lang="yaml"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;all&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 顶级对象：all&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;vars&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;{&lt;span style="color:#000"&gt;...} &lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 全局参数&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;children&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 组定义&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;infra&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 组定义：&amp;#39;infra&amp;#39;&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;hosts&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;{&lt;span style="color:#000"&gt;...} &lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 组成员：&amp;#39;infra&amp;#39;&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;vars&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;{&lt;span style="color:#000"&gt;...} &lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 组参数：&amp;#39;infra&amp;#39;&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;etcd&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;{&lt;span style="color:#000"&gt;...} &lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 组定义：&amp;#39;etcd&amp;#39;&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;pg-meta&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;{&lt;span style="color:#000"&gt;...} &lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 组定义：&amp;#39;pg-meta&amp;#39;&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;pg-test&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;{&lt;span style="color:#000"&gt;...} &lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 组定义：&amp;#39;pg-test&amp;#39;&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;redis-test&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;{&lt;span style="color:#000"&gt;...}&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 组定义：&amp;#39;redis-test&amp;#39;&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# ...&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id="集群定义"&gt;集群定义&lt;/h2&gt;
+&lt;p&gt;每个 Ansible 组可能代表一个集群，可以是节点集群、PostgreSQL 集群、Redis 集群、Etcd 集群或 MinIO 集群等…&lt;/p&gt;</description></item><item><title>配置向导</title><link>https://pigsty.cc/docs/concept/iac/configure/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/concept/iac/configure/</guid><description>&lt;p&gt;Pigsty 提供了一个 &lt;strong&gt;&lt;code&gt;configure&lt;/code&gt;&lt;/strong&gt; 脚本作为 &lt;strong&gt;配置向导&lt;/strong&gt;，它能根据当前环境，自动生成合适的 &lt;code&gt;pigsty.yml&lt;/code&gt; 配置文件。&lt;/p&gt;
+&lt;p&gt;这是一个 &lt;strong&gt;可选&lt;/strong&gt; 的脚本：如果您已经了解了如何配置 Pigsty，大可以直接编辑 &lt;code&gt;pigsty.yml&lt;/code&gt; 配置文件，跳过向导。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="快速开始"&gt;快速开始&lt;/h2&gt;
+&lt;p&gt;进入 pigsty 源码家目录中，执行 &lt;code&gt;./configure&lt;/code&gt; 即可自动运行配置向导。不带任何参数时，默认使用 &lt;a href="https://pigsty.cc/docs/conf/meta"&gt;&lt;strong&gt;&lt;code&gt;meta&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt; 单节点配置模板：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#204a87"&gt;cd&lt;/span&gt; ~/pigsty
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;./configure &lt;span style="color:#8f5902;font-style:italic"&gt;# 交互式配置向导，自动检测环境并生成配置&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;该命令会以选定的模板为基础，检测当前节点的 IP 地址与区域，并生成适合当前环境的 &lt;code&gt;pigsty.yml&lt;/code&gt; 配置文件。&lt;/p&gt;
+&lt;div id="asciinema-faf4cf8e717f5b9f582b3cede024d31c" class="asciinema-container td-max-width-on-larger-screens" style="margin: 1em 0;"&gt;&lt;/div&gt;
+
+&lt;script&gt;
+(function() {
+ var containerId = "asciinema-faf4cf8e717f5b9f582b3cede024d31c";
+ var castURL = "\/demo\/configure.cast";
+ var configuredTheme = "auto";
+ var player = null;
+
+ 
+ function detectTheme() {
+ var htmlTheme = document.documentElement.getAttribute("data-bs-theme");
+ if (htmlTheme === "dark") return "solarized-dark";
+ if (htmlTheme === "light") return "solarized-light";
+ 
+ if (window.matchMedia &amp;&amp; window.matchMedia("(prefers-color-scheme: dark)").matches) {
+ return "solarized-dark";
+ }
+ return "solarized-light";
+ }
+
+ function getTheme() {
+ if (configuredTheme === "auto") {
+ return detectTheme();
+ }
+ return configuredTheme;
+ }
+
+ function createPlayer() {
+ var container = document.getElementById(containerId);
+ 
+ container.innerHTML = "";
+
+ var opts = {
+ theme: getTheme(),
+ speed: "1.3",
+ startAt: 0 ,
+ fit: "width"
+ };
+ opts.autoPlay = true;
+ opts.loop = true;
+ opts.markers = [[ 3 , "默认配置"],[ 7 , "指定IP"],[ 14 , "随机密码"],[ 17 , "rich模板"],[ 20 , "app\/odoo模板"],[ 26 , "china区域"],[ 33 , "ha\/full模板"]];
+
+ player = AsciinemaPlayer.create(castURL, container, opts);
+ }
+
+ 
+ createPlayer();
+
+ 
+ if (configuredTheme === "auto") {
+ 
+ var observer = new MutationObserver(function(mutations) {
+ mutations.forEach(function(mutation) {
+ if (mutation.attributeName === "data-bs-theme") {
+ createPlayer();
+ }
+ });
+ });
+ observer.observe(document.documentElement, { attributes: true });
+
+ 
+ if (window.matchMedia) {
+ window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", function() {
+ 
+ var htmlTheme = document.documentElement.getAttribute("data-bs-theme");
+ if (!htmlTheme || htmlTheme === "auto") {
+ createPlayer();
+ }
+ });
+ }
+ }
+})();
+&lt;/script&gt;
+
+&lt;h2 id="功能说明"&gt;功能说明&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;configure&lt;/code&gt;&lt;/strong&gt; 脚本会根据环境与输入执行以下调整，并在当前目录下生成 &lt;code&gt;pigsty.yml&lt;/code&gt; 配置文件。&lt;/p&gt;</description></item><item><title>配置参数</title><link>https://pigsty.cc/docs/concept/iac/parameter/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/concept/iac/parameter/</guid><description>&lt;p&gt;在 &lt;strong&gt;配置清单&lt;/strong&gt; 中，您可以使用各种参数对 Pigsty 进行精细化定制。这些参数涵盖了从基础设施设置到数据库配置的各个方面。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="参数列表"&gt;参数列表&lt;/h2&gt;
+&lt;p&gt;Pigsty 提供了约 &lt;strong&gt;380+&lt;/strong&gt; 个配置参数，分布在 8 个默认模块中，用于精细控制系统的各个方面，完整列表见 &lt;a href="https://pigsty.cc/docs/ref/param"&gt;&lt;strong&gt;参考-参数列表&lt;/strong&gt;&lt;/a&gt; 。&lt;/p&gt;
+&lt;table class="stretch-last"&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th style="text-align: left"&gt;模块&lt;/th&gt;
+ &lt;th style="text-align: center"&gt;参数组&lt;/th&gt;
+ &lt;th style="text-align: center"&gt;参数数&lt;/th&gt;
+ &lt;th style="text-align: left"&gt;说明&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;&lt;a href="https://pigsty.cc/docs/pgsql/param"&gt;&lt;strong&gt;PGSQL&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;9&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;123&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;PostgreSQL 数据库集群的核心配置&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;&lt;a href="https://pigsty.cc/docs/infra/param"&gt;&lt;strong&gt;INFRA&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;10&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;82&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;基础设施组件：软件源、Nginx、DNS、监控、Grafana 等&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;&lt;a href="https://pigsty.cc/docs/node/param"&gt;&lt;strong&gt;NODE&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;11&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;83&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;主机节点调优：身份、DNS、包、调优、安全、管理员、时间、VIP等&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;&lt;a href="https://pigsty.cc/docs/etcd/param"&gt;&lt;strong&gt;ETCD&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;2&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;13&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;分布式配置存储与服务发现&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;&lt;a href="https://pigsty.cc/docs/redis/param"&gt;&lt;strong&gt;REDIS&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;1&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;21&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;Redis 缓存与数据结构服务器&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;&lt;a href="https://pigsty.cc/docs/minio/param"&gt;&lt;strong&gt;MINIO&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;2&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;21&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;S3 兼容对象存储服务&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;&lt;a href="https://pigsty.cc/docs/ferret/param"&gt;&lt;strong&gt;FERRET&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;1&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;9&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;MongoDB 兼容数据库 FerretDB&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;&lt;a href="https://pigsty.cc/docs/docker/param"&gt;&lt;strong&gt;DOCKER&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;1&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;8&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;Docker 容器引擎&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 id="参数形式"&gt;参数形式&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;参数&lt;/strong&gt; 是用于描述实体的 &lt;strong&gt;键值对&lt;/strong&gt;。&lt;strong&gt;键&lt;/strong&gt;（Key）是字符串，&lt;strong&gt;值&lt;/strong&gt;（Value）可以是五种类型之一：布尔值、字符串、数字、数组或对象。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-yaml" data-lang="yaml"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;all&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# &amp;lt;------- 顶级对象：all&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;vars&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;admin_ip&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#0000cf;font-weight:bold"&gt;10.10.10.10&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# &amp;lt;------- 全局配置参数&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;children&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;pg-meta&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# &amp;lt;------- pg-meta 分组&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;vars&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;pg_cluster&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;pg-meta &lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# &amp;lt;------- 集群级别参数&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;hosts&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;10.10.10.10&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# &amp;lt;------- 主机节点 IP&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;pg_seq&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#0000cf;font-weight:bold"&gt;1&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;pg_role&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;primary &lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# &amp;lt;------- 实例级别参数&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id="参数优先级"&gt;参数优先级&lt;/h2&gt;
+&lt;p&gt;参数可以在不同级别设置，具有以下优先级：&lt;/p&gt;</description></item><item><title>配置模板</title><link>https://pigsty.cc/docs/concept/iac/template/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/concept/iac/template/</guid><description>&lt;p&gt;在 Pigsty 中，部署的蓝图细节由 &lt;a href="https://pigsty.cc/docs/setup/config/"&gt;&lt;strong&gt;配置清单&lt;/strong&gt;&lt;/a&gt; 所定义，也就是 &lt;a href="https://github.com/pgsty/pigsty/blob/main/pigsty.yml"&gt;&lt;strong&gt;&lt;code&gt;pigsty.yml&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt; 配置文件，您可以通过声明式配置进行定制。&lt;/p&gt;
+&lt;p&gt;然而，直接编写配置文件可能会让新用户望而生畏。为此，我们提供了一些开箱即用的配置模板，涵盖了常见的使用场景。&lt;/p&gt;
+&lt;p&gt;每一个模板都是一个预定义的 &lt;code&gt;pigsty.yml&lt;/code&gt; 配置文件，包含了适用于特定场景的合理默认值。&lt;/p&gt;
+&lt;p&gt;您可以根据自己的需要，选择一个模板作为定制起点，然后根据需要进行修改，以满足您的具体需求。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="使用模板"&gt;使用模板&lt;/h2&gt;
+&lt;p&gt;Pigsty 提供了 &lt;a href="https://github.com/pgsty/pigsty/blob/main/configure"&gt;&lt;strong&gt;&lt;code&gt;configure&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt; 脚本作为可选的配置向导，它将根据您的环境和输入，生成具有良好默认值的 &lt;a href="https://pigsty.cc/docs/setup/config/"&gt;&lt;strong&gt;配置清单&lt;/strong&gt;&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;使用 &lt;code&gt;./configure -c &amp;lt;conf&amp;gt;&lt;/code&gt; 指定配置模板，其中 &lt;code&gt;&amp;lt;conf&amp;gt;&lt;/code&gt; 是相对于 &lt;code&gt;conf&lt;/code&gt; 目录的路径（可省略 &lt;code&gt;.yml&lt;/code&gt; 后缀）。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;./configure &lt;span style="color:#8f5902;font-style:italic"&gt;# 默认使用 meta.yml 配置模板&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;./configure -c meta &lt;span style="color:#8f5902;font-style:italic"&gt;# 显式指定使用 meta.yml 单节点模板&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;./configure -c rich &lt;span style="color:#8f5902;font-style:italic"&gt;# 使用包含全部扩展与 MinIO 的富功能模板&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;./configure -c slim &lt;span style="color:#8f5902;font-style:italic"&gt;# 使用最小化的单节点模板&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 使用不同的数据库内核&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;./configure -c pgsql &lt;span style="color:#8f5902;font-style:italic"&gt;# 原生 PostgreSQL 内核，基础功能 (13~18)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;./configure -c citus &lt;span style="color:#8f5902;font-style:italic"&gt;# Citus 分布式高可用 PostgreSQL (14~17)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;./configure -c mssql &lt;span style="color:#8f5902;font-style:italic"&gt;# Babelfish 内核，兼容 SQL Server 协议 (15)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;./configure -c polar &lt;span style="color:#8f5902;font-style:italic"&gt;# PolarDB PG 内核，Aurora/RAC 风格 (15)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;./configure -c ivory &lt;span style="color:#8f5902;font-style:italic"&gt;# IvorySQL 内核，兼容 Oracle 语法 (18)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;./configure -c mysql &lt;span style="color:#8f5902;font-style:italic"&gt;# OpenHalo 内核，兼容 MySQL (14)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;./configure -c pgtde &lt;span style="color:#8f5902;font-style:italic"&gt;# Percona PostgreSQL Server 透明加密 (18)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;./configure -c oriole &lt;span style="color:#8f5902;font-style:italic"&gt;# OrioleDB 内核，OLTP 增强 (17)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;./configure -c supabase &lt;span style="color:#8f5902;font-style:italic"&gt;# Supabase 自托管配置 (15~18)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 使用多节点高可用模板&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;./configure -c ha/dual &lt;span style="color:#8f5902;font-style:italic"&gt;# 使用 2 节点高可用模板&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;./configure -c ha/trio &lt;span style="color:#8f5902;font-style:italic"&gt;# 使用 3 节点高可用模板&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;./configure -c ha/full &lt;span style="color:#8f5902;font-style:italic"&gt;# 使用 4 节点高可用模板&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;如果不指定模板，Pigsty 默认使用 &lt;code&gt;meta.yml&lt;/code&gt; 单节点配置模板。&lt;/p&gt;</description></item><item><title>元数据库</title><link>https://pigsty.cc/docs/concept/iac/cmdb/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/concept/iac/cmdb/</guid><description>&lt;p&gt;Pigsty 允许您使用 PostgreSQL &lt;strong&gt;元数据库&lt;/strong&gt; 作为动态配置源，取代静态的 YAML 配置文件，实现更强大的配置管理能力。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="概览"&gt;概览&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;CMDB&lt;/strong&gt;（Configuration Management Database，配置管理数据库）是一种将配置信息存储在数据库中进行管理的方式。&lt;/p&gt;
+&lt;p&gt;在 Pigsty 中，默认的配置源是一个静态 YAML 文件 &lt;code&gt;pigsty.yml&lt;/code&gt;，
+它作为 Ansible 的 &lt;a href="https://pigsty.cc/docs/concept/iac/inventory/"&gt;&lt;strong&gt;配置清单&lt;/strong&gt;&lt;/a&gt; 使用。&lt;/p&gt;
+&lt;p&gt;这种方式简单直接，但当基础设施规模扩大、需要复杂精细的管理与外部集成时，单一的静态文件难以满足需求。&lt;/p&gt;
+&lt;table class="full-width"&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th style="text-align: center"&gt;特性&lt;/th&gt;
+ &lt;th style="text-align: left"&gt;静态 YAML 文件&lt;/th&gt;
+ &lt;th style="text-align: left"&gt;CMDB 元数据库&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;&lt;strong&gt;查询能力&lt;/strong&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;手工搜索/grep&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;SQL 任意条件查询，聚合分析&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;&lt;strong&gt;版本控制&lt;/strong&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;依赖 Git 或手工备份&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;数据库事务，审计日志，时间旅行快照&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;&lt;strong&gt;权限控制&lt;/strong&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;文件系统权限，粗粒度&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;PostgreSQL 数据库精细访问控制&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;&lt;strong&gt;并发编辑&lt;/strong&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;需要锁文件或合并冲突&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;数据库事务天然支持并发&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;&lt;strong&gt;外部集成&lt;/strong&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;需要解析 YAML&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;标准 SQL 接口，任意语言轻松对接&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;&lt;strong&gt;规模扩展&lt;/strong&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;文件过大时难以维护&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;管理规模伸缩至物理极限&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;&lt;strong&gt;动态生成&lt;/strong&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;静态文件，修改后需手动应用&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;即时生效，实时反映配置变更&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Pigsty 在样板数据库 &lt;a href="https://github.com/pgsty/pigsty/blob/main/conf/meta.yml#L52"&gt;&lt;strong&gt;&lt;code&gt;pg-meta.meta&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt; 的模式基线定义中，提供了 Pigsty CMDB 的数据库模式。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="工作原理"&gt;工作原理&lt;/h2&gt;
+&lt;p&gt;CMDB 的核心思想是用一个 &lt;strong&gt;动态脚本&lt;/strong&gt; 替换静态配置文件。
+Ansible 支持使用可执行脚本作为配置清单，只要脚本输出符合 JSON 格式的清单数据即可。
+当您启用 CMDB 后，Pigsty 会创建一个名为 &lt;code&gt;inventory.sh&lt;/code&gt; 的动态清单脚本：&lt;/p&gt;</description></item></channel></rss>

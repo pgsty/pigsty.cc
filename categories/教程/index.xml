@@ -1,0 +1,1403 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>教程 on PIGSTY</title><link>https://pigsty.cc/categories/%E6%95%99%E7%A8%8B/</link><description>Recent content in 教程 on PIGSTY</description><generator>Hugo</generator><language>zh-CN</language><lastBuildDate>Sat, 14 Feb 2026 08:23:51 +0800</lastBuildDate><atom:link href="https://pigsty.cc/categories/%E6%95%99%E7%A8%8B/index.xml" rel="self" type="application/rss+xml"/><item><title>上手</title><link>https://pigsty.cc/docs/pig/start/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/pig/start/</guid><description>&lt;p&gt;下面是一个简单的上手教程，带您体验 PIG 包管理器的核心能力。&lt;/p&gt;
+&lt;h2 id="简短版本"&gt;简短版本&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;curl -fsSL https://repo.pigsty.io/pig &lt;span style="color:#000;font-weight:bold"&gt;|&lt;/span&gt; bash &lt;span style="color:#8f5902;font-style:italic"&gt;# 从 Cloudflare 安装 PIG&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;pig repo &lt;span style="color:#204a87"&gt;set&lt;/span&gt; &lt;span style="color:#8f5902;font-style:italic"&gt;# 一次性设置好 Linux, Pigsty + PGDG 仓库（覆盖式！）&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;pig install -v &lt;span style="color:#0000cf;font-weight:bold"&gt;18&lt;/span&gt; -y pg18 pg_duckdb vector &lt;span style="color:#8f5902;font-style:italic"&gt;# 安装 PG 18 内核，pg_duckdb, pgvector 扩展……&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="安装"&gt;安装&lt;/h2&gt;
+&lt;p&gt;您可以使用以下命令 &lt;a href="https://pigsty.cc/docs/pig/install/"&gt;&lt;strong&gt;一键安装&lt;/strong&gt;&lt;/a&gt; &lt;code&gt;pig&lt;/code&gt;：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;中国大陆&lt;/strong&gt;：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;curl -fsSL https://repo.pigsty.cc/pig &lt;span style="color:#000;font-weight:bold"&gt;|&lt;/span&gt; bash
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;全球网站&lt;/strong&gt;（Cloudflare CDN）：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;curl -fsSL https://repo.pigsty.io/pig &lt;span style="color:#000;font-weight:bold"&gt;|&lt;/span&gt; bash
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;PIG 二进制包大约 4 MB，在 Linux 上会自动使用 &lt;code&gt;rpm&lt;/code&gt; 或 &lt;code&gt;dpkg&lt;/code&gt; 安装最新可用版本：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;$ curl -fsSL https://repo.pigsty.cc/pig &lt;span style="color:#000;font-weight:bold"&gt;|&lt;/span&gt; bash
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ce5c00;font-weight:bold"&gt;[&lt;/span&gt;INFO&lt;span style="color:#ce5c00;font-weight:bold"&gt;]&lt;/span&gt; &lt;span style="color:#000"&gt;kernel&lt;/span&gt; &lt;span style="color:#ce5c00;font-weight:bold"&gt;=&lt;/span&gt; Linux
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ce5c00;font-weight:bold"&gt;[&lt;/span&gt;INFO&lt;span style="color:#ce5c00;font-weight:bold"&gt;]&lt;/span&gt; &lt;span style="color:#000"&gt;machine&lt;/span&gt; &lt;span style="color:#ce5c00;font-weight:bold"&gt;=&lt;/span&gt; x86_64
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ce5c00;font-weight:bold"&gt;[&lt;/span&gt;INFO&lt;span style="color:#ce5c00;font-weight:bold"&gt;]&lt;/span&gt; &lt;span style="color:#000"&gt;package&lt;/span&gt; &lt;span style="color:#ce5c00;font-weight:bold"&gt;=&lt;/span&gt; deb
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ce5c00;font-weight:bold"&gt;[&lt;/span&gt;INFO&lt;span style="color:#ce5c00;font-weight:bold"&gt;]&lt;/span&gt; &lt;span style="color:#000"&gt;pkg_url&lt;/span&gt; &lt;span style="color:#ce5c00;font-weight:bold"&gt;=&lt;/span&gt; https://repo.pigsty.cc/pkg/pig/v1.0.0/pig_1.0.0-1_amd64.deb
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ce5c00;font-weight:bold"&gt;[&lt;/span&gt;INFO&lt;span style="color:#ce5c00;font-weight:bold"&gt;]&lt;/span&gt; &lt;span style="color:#000"&gt;download&lt;/span&gt; &lt;span style="color:#ce5c00;font-weight:bold"&gt;=&lt;/span&gt; /tmp/pig_1.0.0-1_amd64.deb
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ce5c00;font-weight:bold"&gt;[&lt;/span&gt;INFO&lt;span style="color:#ce5c00;font-weight:bold"&gt;]&lt;/span&gt; downloading pig v1.0.0
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;curl -fSL https://repo.pigsty.cc/pkg/pig/v1.0.0/pig_1.0.0-1_amd64.deb -o /tmp/pig_1.0.0-1_amd64.deb
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;######################################################################## 100.0%&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ce5c00;font-weight:bold"&gt;[&lt;/span&gt;INFO&lt;span style="color:#ce5c00;font-weight:bold"&gt;]&lt;/span&gt; &lt;span style="color:#000"&gt;md5sum&lt;/span&gt; &lt;span style="color:#ce5c00;font-weight:bold"&gt;=&lt;/span&gt; a543882aa905713a0c50088d4e848951b6957a37a1594d7e9f3fe46453d5ce66
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ce5c00;font-weight:bold"&gt;[&lt;/span&gt;INFO&lt;span style="color:#ce5c00;font-weight:bold"&gt;]&lt;/span&gt; installing: dpkg -i /tmp/pig_1.0.0-1_amd64.deb
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ce5c00;font-weight:bold"&gt;(&lt;/span&gt;Reading database ... &lt;span style="color:#0000cf;font-weight:bold"&gt;166001&lt;/span&gt; files and directories currently installed.&lt;span style="color:#ce5c00;font-weight:bold"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Preparing to unpack /tmp/pig_1.0.0-1_amd64.deb ...
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Unpacking pig &lt;span style="color:#ce5c00;font-weight:bold"&gt;(&lt;/span&gt;1.0.0-1&lt;span style="color:#ce5c00;font-weight:bold"&gt;)&lt;/span&gt; ...
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Setting up pig &lt;span style="color:#ce5c00;font-weight:bold"&gt;(&lt;/span&gt;1.0.0-1&lt;span style="color:#ce5c00;font-weight:bold"&gt;)&lt;/span&gt; ...
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ce5c00;font-weight:bold"&gt;[&lt;/span&gt;INFO&lt;span style="color:#ce5c00;font-weight:bold"&gt;]&lt;/span&gt; pig v1.0.0 installed successfully
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;check https://pgext.cloud &lt;span style="color:#204a87;font-weight:bold"&gt;for&lt;/span&gt; details
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="检查环境"&gt;检查环境&lt;/h2&gt;
+&lt;p&gt;PIG 是一个由 Go 编写的二进制程序，默认安装路径为 &lt;code&gt;/usr/bin/pig&lt;/code&gt;，&lt;code&gt;pig version&lt;/code&gt; 会打印版本信息：&lt;/p&gt;</description></item><item><title>关于</title><link>https://pigsty.cc/docs/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/about/</guid><description/></item><item><title>配置清单</title><link>https://pigsty.cc/docs/concept/iac/inventory/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/concept/iac/inventory/</guid><description>&lt;p&gt;每一套 Pigsty 部署都对应着一份 &lt;strong&gt;配置清单&lt;/strong&gt; （Inventory），描述了基础设施与数据库集群的关键属性。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="配置文件"&gt;配置文件&lt;/h2&gt;
+&lt;p&gt;Pigsty 默认使用 &lt;a href="https://docs.ansible.com/projects/ansible/latest/inventory_guide/intro_inventory.html"&gt;&lt;strong&gt;Ansible YAML 配置格式&lt;/strong&gt;&lt;/a&gt;，
+使用一个单一 YAML 配置文件 &lt;a href="https://github.com/pgsty/pigsty/blob/main/pigsty.yml"&gt;&lt;strong&gt;&lt;code&gt;pigsty.yml&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt; 作为配置清单。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;~/pigsty
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; ^---- pigsty.yml &lt;span style="color:#8f5902;font-style:italic"&gt;# &amp;lt;---- 默认配置文件&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;您可以直接修改该配置文件来定制您的部署，或者使用 Pigsty 提供的 &lt;a href="https://pigsty.cc/docs/concept/iac/configure"&gt;&lt;strong&gt;配置向导&lt;/strong&gt;&lt;/a&gt; &lt;strong&gt;&lt;code&gt;configure&lt;/code&gt;&lt;/strong&gt; 脚本自动生成合适的配置文件。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="配置结构"&gt;配置结构&lt;/h2&gt;
+&lt;p&gt;配置清单使用标准的 &lt;a href="https://docs.ansible.com/projects/ansible/latest/inventory_guide/intro_inventory.html"&gt;&lt;strong&gt;Ansible YAML 配置格式&lt;/strong&gt;&lt;/a&gt;，由两部分组成：&lt;strong&gt;全局参数&lt;/strong&gt; （&lt;code&gt;all.vars&lt;/code&gt;）和多个 &lt;strong&gt;组&lt;/strong&gt;（&lt;code&gt;all.children&lt;/code&gt;）。&lt;/p&gt;
+&lt;p&gt;您可以在 &lt;code&gt;all.children&lt;/code&gt; 中定义新集群，并使用全局变量描述基础设施：&lt;code&gt;all.vars&lt;/code&gt;，它看起来像这样：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-yaml" data-lang="yaml"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;all&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 顶级对象：all&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;vars&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;{&lt;span style="color:#000"&gt;...} &lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 全局参数&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;children&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 组定义&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;infra&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 组定义：&amp;#39;infra&amp;#39;&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;hosts&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;{&lt;span style="color:#000"&gt;...} &lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 组成员：&amp;#39;infra&amp;#39;&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;vars&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;{&lt;span style="color:#000"&gt;...} &lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 组参数：&amp;#39;infra&amp;#39;&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;etcd&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;{&lt;span style="color:#000"&gt;...} &lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 组定义：&amp;#39;etcd&amp;#39;&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;pg-meta&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;{&lt;span style="color:#000"&gt;...} &lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 组定义：&amp;#39;pg-meta&amp;#39;&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;pg-test&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;{&lt;span style="color:#000"&gt;...} &lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 组定义：&amp;#39;pg-test&amp;#39;&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;redis-test&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;{&lt;span style="color:#000"&gt;...}&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 组定义：&amp;#39;redis-test&amp;#39;&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# ...&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id="集群定义"&gt;集群定义&lt;/h2&gt;
+&lt;p&gt;每个 Ansible 组可能代表一个集群，可以是节点集群、PostgreSQL 集群、Redis 集群、Etcd 集群或 MinIO 集群等…&lt;/p&gt;</description></item><item><title>上手</title><link>https://pigsty.cc/docs/setup/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/setup/</guid><description>&lt;p&gt;Pigsty 采用可伸缩的架构设计，既可用于 &lt;a href="https://pigsty.cc/docs/deploy"&gt;&lt;strong&gt;超大规模生产环境&lt;/strong&gt;&lt;/a&gt;，也可用于 &lt;a href="https://pigsty.cc/docs/setup/install"&gt;&lt;strong&gt;单机开发演示环境&lt;/strong&gt;&lt;/a&gt;，本文关注后者。&lt;/p&gt;
+&lt;p&gt;如果您打算学习了解 Pigsty，可以从 &lt;a href="https://pigsty.cc/docs/setup/install/"&gt;&lt;strong&gt;快速上手&lt;/strong&gt;&lt;/a&gt; 单机部署开始。一台 1C/2G 的 Linux 虚拟机即可运行 Pigsty。&lt;/p&gt;
+&lt;p&gt;您可以利用一台 Linux MiniPC，云厂商提供的免费/优惠虚拟机，Windows 的 WSL，或者在自己的笔记本上创建虚拟机用于 Pigsty 部署。
+Pigsty 提供了开箱即用的 &lt;a href="https://pigsty.cc/docs/deploy/vagrant/"&gt;&lt;strong&gt;Vagrant&lt;/strong&gt;&lt;/a&gt; 模板与 &lt;a href="https://pigsty.cc/docs/deploy/terraform/"&gt;&lt;strong&gt;Terraform&lt;/strong&gt;&lt;/a&gt; 模版，可以帮助您一键在本地或云端置备 Linux 虚拟机。&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://pigsty.cc/docs/concept/arch"&gt;&lt;img src="https://pigsty.cc/img/pigsty/arch.png" alt="pigsty-arch"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;单机版本的 Pigsty 包含了所有核心功能，&lt;strong&gt;444&lt;/strong&gt; 个 &lt;a href="https://pigsty.cc/docs/pgsql/ext"&gt;&lt;strong&gt;PG 扩展&lt;/strong&gt;&lt;/a&gt;，自包含的 Grafana / Victoria 监控，&lt;a href="https://pigsty.cc/docs/concept/iac"&gt;&lt;strong&gt;IaC&lt;/strong&gt;&lt;/a&gt; 置备能力。
+以及本地 &lt;a href="https://pigsty.cc/docs/concept/pitr"&gt;&lt;strong&gt;PITR&lt;/strong&gt;&lt;/a&gt; 时间点恢复。如果您配备了外部的对象存储（用于 PostgreSQL PITR 备份），那么对于 Demo，个人网站，小型服务等场景，
+即使是单机环境，也可以提供一定程度的 &lt;a href="https://pigsty.cc/docs/concept/pitr"&gt;&lt;strong&gt;数据持久性&lt;/strong&gt;&lt;/a&gt; 保证。
+不过，单机无法实现 &lt;a href="https://pigsty.cc/docs/concept/ha"&gt;&lt;strong&gt;高可用&lt;/strong&gt;&lt;/a&gt; —— 故障自动切换至少需要 3 个节点。&lt;/p&gt;
+&lt;p&gt;如果您想要在没有互联网连接的环境中安装 Pigsty，请参考 &lt;a href="https://pigsty.cc/docs/setup/offline/"&gt;&lt;strong&gt;离线安装&lt;/strong&gt;&lt;/a&gt; 模式。
+如果您只需要 PostgreSQL 数据库本身，请参考 &lt;a href="https://pigsty.cc/docs/setup/slim/"&gt;&lt;strong&gt;精简安装&lt;/strong&gt;&lt;/a&gt; 模式。
+如果您准备开始进行严肃的多节点生产部署，请参考 &lt;a href="https://pigsty.cc/docs/deploy/"&gt;&lt;strong&gt;部署指南&lt;/strong&gt;&lt;/a&gt;。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="快速开始"&gt;快速开始&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://pigsty.cc/docs/deploy/prepare"&gt;&lt;strong&gt;准备&lt;/strong&gt;&lt;/a&gt; 一台具有 &lt;a href="https://pigsty.cc/docs/deploy/admin#ssh"&gt;&lt;strong&gt;SSH 权限&lt;/strong&gt;&lt;/a&gt; 的 &lt;a href="https://pigsty.cc/docs/deploy/prepare#%E8%8A%82%E7%82%B9"&gt;&lt;strong&gt;节点&lt;/strong&gt;&lt;/a&gt;，
+安装 &lt;a href="https://pigsty.cc/docs/ref/linux/"&gt;&lt;strong&gt;兼容的 Linux 系统&lt;/strong&gt;&lt;/a&gt;，使用具有免密 &lt;a href="https://pigsty.cc/docs/deploy/admin#ssh"&gt;&lt;strong&gt;&lt;code&gt;ssh&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt; 和 &lt;a href="https://pigsty.cc/docs/deploy/admin#sudo"&gt;&lt;strong&gt;&lt;code&gt;sudo&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt; 权限的 &lt;a href="https://pigsty.cc/docs/deploy/admin"&gt;&lt;strong&gt;管理用户&lt;/strong&gt;&lt;/a&gt; 执行：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;curl -fsSL https://repo.pigsty.cc/get &lt;span style="color:#000;font-weight:bold"&gt;|&lt;/span&gt; bash &lt;span style="color:#8f5902;font-style:italic"&gt;# 安装 Pigsty 与依赖&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#204a87"&gt;cd&lt;/span&gt; ~/pigsty&lt;span style="color:#000;font-weight:bold"&gt;;&lt;/span&gt; ./configure -g &lt;span style="color:#8f5902;font-style:italic"&gt;# 生成配置（使用默认单机配置模板，-g 参数会生成随机密码）&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;./deploy.yml &lt;span style="color:#8f5902;font-style:italic"&gt;# 执行部署剧本，完成部署&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;是的，就是这么简单。您完全可以在不了解任何细节的情况下，使用 &lt;a href="https://pigsty.cc/docs/concept/iac/template"&gt;&lt;strong&gt;预制配置模板&lt;/strong&gt;&lt;/a&gt; 一键拉起 Pigsty。&lt;/p&gt;</description></item><item><title>快速上手 Pigsty 单机部署</title><link>https://pigsty.cc/docs/setup/install/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/setup/install/</guid><description>&lt;p&gt;本文是 Pigsty 单节点安装指南，生产环境的多节点高可用部署请参考 &lt;a href="https://pigsty.cc/docs/deploy/"&gt;&lt;strong&gt;部署&lt;/strong&gt;&lt;/a&gt; 文档。&lt;/p&gt;
+&lt;p&gt;Pigsty 单机安装分为三步走：&lt;a href="#%E5%AE%89%E8%A3%85"&gt;&lt;strong&gt;安装&lt;/strong&gt;&lt;/a&gt;，&lt;a href="#%E9%85%8D%E7%BD%AE"&gt;&lt;strong&gt;配置&lt;/strong&gt;&lt;/a&gt; 与 &lt;a href="#%E9%83%A8%E7%BD%B2"&gt;&lt;strong&gt;部署&lt;/strong&gt;&lt;/a&gt;。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="摘要"&gt;摘要&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://pigsty.cc/docs/deploy/prepare"&gt;&lt;strong&gt;准备&lt;/strong&gt;&lt;/a&gt; 一台具有 &lt;a href="https://pigsty.cc/docs/deploy/admin#ssh"&gt;&lt;strong&gt;SSH 权限&lt;/strong&gt;&lt;/a&gt; 的 &lt;a href="https://pigsty.cc/docs/deploy/prepare#%E8%8A%82%E7%82%B9"&gt;&lt;strong&gt;节点&lt;/strong&gt;&lt;/a&gt;，
+安装 &lt;a href="https://pigsty.cc/docs/ref/linux/"&gt;&lt;strong&gt;兼容的 Linux 系统&lt;/strong&gt;&lt;/a&gt;，使用具有免密 &lt;a href="https://pigsty.cc/docs/deploy/admin#ssh"&gt;&lt;strong&gt;&lt;code&gt;ssh&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt; 和 &lt;a href="https://pigsty.cc/docs/deploy/admin#sudo"&gt;&lt;strong&gt;&lt;code&gt;sudo&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt; 权限的 &lt;a href="https://pigsty.cc/docs/deploy/admin"&gt;&lt;strong&gt;管理用户&lt;/strong&gt;&lt;/a&gt; 执行：&lt;/p&gt;
+
+
+
+&lt;ul class="nav nav-tabs" id="tabs-0" role="tablist"&gt;
+ &lt;li class="nav-item"&gt;
+ &lt;button class="nav-link active"
+ id="tabs-00-00-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-00" role="tab"
+ data-td-tp-persist="pigsty.cc（中国）" aria-controls="tabs-00-00" aria-selected="true"&gt;
+ pigsty.cc（中国）
+ &lt;/button&gt;
+ &lt;/li&gt;&lt;li class="nav-item"&gt;
+ &lt;button class="nav-link"
+ id="tabs-00-01-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-01" role="tab"
+ data-td-tp-persist="pigsty.io（全球）" aria-controls="tabs-00-01" aria-selected="false"&gt;
+ pigsty.io（全球）
+ &lt;/button&gt;
+ &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class="tab-content" id="tabs-0-content"&gt;
+ &lt;div class="tab-body tab-pane fade show active"
+ id="tabs-00-00" role="tabpanel" aria-labelled-by="tabs-00-00-tab" tabindex="0"&gt;
+ &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;curl -fsSL https://repo.pigsty.cc/get &lt;span style="color:#000;font-weight:bold"&gt;|&lt;/span&gt; bash&lt;span style="color:#000;font-weight:bold"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+ &lt;/div&gt;
+ &lt;div class="tab-body tab-pane fade"
+ id="tabs-00-01" role="tabpanel" aria-labelled-by="tabs-00-01-tab" tabindex="0"&gt;
+ &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;curl -fsSL https://repo.pigsty.io/get &lt;span style="color:#000;font-weight:bold"&gt;|&lt;/span&gt; bash&lt;span style="color:#000;font-weight:bold"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+ &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;该命令会执行 &lt;a href="#%E5%AE%89%E8%A3%85"&gt;&lt;strong&gt;安装&lt;/strong&gt;&lt;/a&gt; 脚本，下载并提取 Pigsty 源码至家目录并安装依赖，接下来依次完成 &lt;a href="#%E9%85%8D%E7%BD%AE"&gt;&lt;strong&gt;配置&lt;/strong&gt;&lt;/a&gt; 与 &lt;a href="#%E9%83%A8%E7%BD%B2"&gt;&lt;strong&gt;部署&lt;/strong&gt;&lt;/a&gt; 即可完成交付。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#204a87"&gt;cd&lt;/span&gt; ~/pigsty &lt;span style="color:#8f5902;font-style:italic"&gt;# 进入 Pigsty 目录&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;./configure -g &lt;span style="color:#8f5902;font-style:italic"&gt;# 生成配置文件（可选，如果知道如何配置可以跳过）&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;./deploy.yml &lt;span style="color:#8f5902;font-style:italic"&gt;# 执行部署剧本，根据生成的配置文件开始安装&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;安装完成后，您可以通过 IP / 域名 + &lt;code&gt;80/443&lt;/code&gt; 端口访问 &lt;a href="https://pigsty.cc/docs/setup/webui/"&gt;&lt;strong&gt;Web 用户界面&lt;/strong&gt;&lt;/a&gt;，
+并通过 &lt;code&gt;5432&lt;/code&gt; 端口访问 &lt;a href="https://pigsty.cc/docs/setup/pgsql/"&gt;&lt;strong&gt;PostgreSQL 服务&lt;/strong&gt;&lt;/a&gt;。&lt;/p&gt;</description></item><item><title>Docker 部署</title><link>https://pigsty.cc/docs/setup/docker/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/setup/docker/</guid><description>&lt;p&gt;Pigsty 旨在运行于原生 Linux 系统上，但也可以在带有 systemd 的 Linux 容器环境中运行。
+如果您没有原生 Linux 环境（例如 &lt;strong&gt;macOS&lt;/strong&gt; 或 &lt;strong&gt;Windows&lt;/strong&gt; 用户），可以使用 Docker 快速拉起一个本地单机 Pigsty 环境进行测试与体验。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="快速开始"&gt;快速开始&lt;/h2&gt;
+&lt;p&gt;进入 Pigsty 源码包的 &lt;a href="https://github.com/pgsty/pigsty/tree/main/docker"&gt;&lt;strong&gt;&lt;code&gt;docker/&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt; 目录，使用以下一键命令启动 Pigsty：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#204a87"&gt;cd&lt;/span&gt; ~/pigsty/docker
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;make launch &lt;span style="color:#8f5902;font-style:italic"&gt;# 启动容器 + 生成配置 + 执行部署&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;部署完成后，您可以通过以下方式访问服务：&lt;/p&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th style="text-align: left"&gt;服务&lt;/th&gt;
+ &lt;th style="text-align: left"&gt;地址&lt;/th&gt;
+ &lt;th style="text-align: left"&gt;凭据&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;SSH&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;ssh root@localhost -p 2222&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;密码：&lt;code&gt;pigsty&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;Web 界面&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;http://localhost:8080&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;-&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;Grafana&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;http://localhost:8080/ui&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;admin&lt;/code&gt; / &lt;code&gt;pigsty&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;PostgreSQL&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;psql postgres://dbuser_dba:DBUser.DBA@localhost:5432/postgres&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;DBUser.DBA&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;div class="alert alert-info" role="alert"&gt;&lt;div class="h4 alert-heading" role="heading"&gt;Web 界面与 PostgreSQL 服务&lt;/div&gt;
+&lt;p&gt;Web 界面与 PostgreSQL 服务仅在完成 &lt;strong&gt;部署&lt;/strong&gt;（&lt;code&gt;./deploy.yml&lt;/code&gt;）后才可用。&lt;/p&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;h2 id="准备"&gt;准备&lt;/h2&gt;
+&lt;p&gt;使用 Docker 部署 Pigsty 需要满足以下条件：&lt;/p&gt;</description></item><item><title>从浏览器访问图形用户界面</title><link>https://pigsty.cc/docs/setup/webui/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/setup/webui/</guid><description>&lt;p&gt;Pigsty &lt;a href="https://pigsty.cc/docs/setup/install"&gt;&lt;strong&gt;单机安装&lt;/strong&gt;&lt;/a&gt; 完成后，您在当前节点上将安装有 &lt;a href="https://pigsty.cc/docs/infra/"&gt;&lt;strong&gt;&lt;code&gt;INFRA&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt; 模块，它带有一套开箱即用的 Nginx Web 服务器。&lt;/p&gt;
+&lt;p&gt;其中的默认服务器配置提供了一个 WebUI 图形界面，用于展示监控仪表盘，并统一代理访问其他组件的 Web 界面。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="访问"&gt;访问&lt;/h2&gt;
+&lt;p&gt;您可以通过在浏览器中键入部署节点 IP 地址来访问这个图形界面。在默认配置下，Nginx 将通过 &lt;code&gt;80/443&lt;/code&gt; 标准端口对外提供服务。&lt;/p&gt;
+&lt;table class="full-width"&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th style="text-align: center"&gt;IP 直接访问&lt;/th&gt;
+ &lt;th style="text-align: center"&gt;域名（HTTP）&lt;/th&gt;
+ &lt;th style="text-align: center"&gt;域名（HTTPS）&lt;/th&gt;
+ &lt;th style="text-align: center"&gt;Demo&lt;/th&gt;
+ &lt;th&gt;&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="http://10.10.10.10"&gt;&lt;strong&gt;&lt;code&gt;http://10.10.10.10&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="http://i.pigsty"&gt;&lt;strong&gt;&lt;code&gt;http://i.pigsty&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://i.pigsty"&gt;&lt;strong&gt;&lt;code&gt;https://i.pigsty&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://demo.pigsty.cc/zh"&gt;&lt;strong&gt;&lt;code&gt;https://demo.pigsty.cc&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;a href="https://demo.pigsty.cc/zh"&gt;&lt;img src="https://pigsty.cc/img/pigsty/home.png" alt=""&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="监控"&gt;监控&lt;/h2&gt;
+&lt;p&gt;要访问 Pigsty 的监控系统大盘（Grafana），您可以访问服务器的 &lt;code&gt;/ui&lt;/code&gt; 端点。&lt;/p&gt;
+&lt;table class="full-width"&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th style="text-align: center"&gt;IP 直接访问&lt;/th&gt;
+ &lt;th style="text-align: center"&gt;域名（HTTP）&lt;/th&gt;
+ &lt;th style="text-align: center"&gt;域名（HTTPS）&lt;/th&gt;
+ &lt;th style="text-align: center"&gt;Demo&lt;/th&gt;
+ &lt;th&gt;&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="http://10.10.10.10/ui"&gt;&lt;strong&gt;&lt;code&gt;http://10.10.10.10/ui&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="http://i.pigsty/ui"&gt;&lt;strong&gt;&lt;code&gt;http://i.pigsty/ui&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://i.pigsty/ui"&gt;&lt;strong&gt;&lt;code&gt;https://i.pigsty/ui&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://demo.pigsty.cc/ui"&gt;&lt;strong&gt;&lt;code&gt;https://demo.pigsty.cc/ui&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;如果您的服务对互联网与办公网开放，我们建议您通过 &lt;a href="https://pigsty.cc/docs/infra/admin/domain/"&gt;&lt;strong&gt;域名&lt;/strong&gt;&lt;/a&gt; 访问，并启用 &lt;a href="https://pigsty.cc/docs/infra/admin/cert"&gt;&lt;strong&gt;HTTPS&lt;/strong&gt;&lt;/a&gt; 加密，只需要少量配置工作即可实现。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="端点"&gt;端点&lt;/h2&gt;
+&lt;p&gt;在默认配置下，Nginx 会在 &lt;code&gt;80/443&lt;/code&gt; 端口的默认服务器上，通过不同的路径暴露以下端点：&lt;/p&gt;
+&lt;table class="full-width"&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th style="text-align: left"&gt;端点&lt;/th&gt;
+ &lt;th style="text-align: left"&gt;组件&lt;/th&gt;
+ &lt;th style="text-align: left"&gt;原生端口&lt;/th&gt;
+ &lt;th style="text-align: left"&gt;备注&lt;/th&gt;
+ &lt;th&gt;公开演示&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;/&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;a href="https://pigsty.cc/docs/infra/"&gt;&lt;strong&gt;Nginx&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;80/443&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;首页、本地仓库、文件服务&lt;/td&gt;
+ &lt;td&gt;&lt;a href="https://demo.pigsty.cc"&gt;&lt;code&gt;demo.pigsty.cc&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;/ui/&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;a href="#%E7%9B%91%E6%8E%A7"&gt;&lt;strong&gt;Grafana&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;3000&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;Grafana 仪表盘入口&lt;/td&gt;
+ &lt;td&gt;&lt;a href="https://demo.pigsty.cc/ui/"&gt;&lt;code&gt;demo.pigsty.cc/ui/&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;/vmetrics/&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;a href="https://pigsty.cc/docs/infra/"&gt;&lt;strong&gt;VictoriaMetrics&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;8428&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;时序数据库 Web UI&lt;/td&gt;
+ &lt;td&gt;&lt;a href="https://demo.pigsty.cc/vmetrics/"&gt;&lt;code&gt;demo.pigsty.cc/vmetrics/&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;/vlogs/&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;a href="https://pigsty.cc/docs/infra/"&gt;&lt;strong&gt;VictoriaLogs&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;9428&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;日志数据库 Web UI&lt;/td&gt;
+ &lt;td&gt;&lt;a href="https://demo.pigsty.cc/vlogs/"&gt;&lt;code&gt;demo.pigsty.cc/vlogs/&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;/vtraces/&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;a href="https://pigsty.cc/docs/infra/"&gt;&lt;strong&gt;VictoriaTraces&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;10428&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;链路追踪 Web UI&lt;/td&gt;
+ &lt;td&gt;&lt;a href="https://demo.pigsty.cc/vtraces/"&gt;&lt;code&gt;demo.pigsty.cc/vtraces/&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;/vmalert/&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;a href="https://pigsty.cc/docs/infra/"&gt;&lt;strong&gt;VMAlert&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;8880&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;告警规则管理&lt;/td&gt;
+ &lt;td&gt;&lt;a href="https://demo.pigsty.cc/vmalert/"&gt;&lt;code&gt;demo.pigsty.cc/vmalert/&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;/alertmgr/&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;a href="https://pigsty.cc/docs/infra/"&gt;&lt;strong&gt;AlertManager&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;9059&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;告警管理 Web UI&lt;/td&gt;
+ &lt;td&gt;&lt;a href="https://demo.pigsty.cc/alertmgr/"&gt;&lt;code&gt;demo.pigsty.cc/alertmgr/&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;/blackbox/&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;a href="https://pigsty.cc/docs/infra/"&gt;&lt;strong&gt;Blackbox&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;9115&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;黑盒探测器&lt;/td&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;/haproxy/*&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;a href="https://pigsty.cc/docs/node/"&gt;&lt;strong&gt;HAProxy&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;9101&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;负载均衡管理 Web UI&lt;/td&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;/pev&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;a href="https://github.com/dalibo/pev2"&gt;&lt;strong&gt;PEV2&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;80&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;PostgreSQL 执行计划可视化&lt;/td&gt;
+ &lt;td&gt;&lt;a href="https://demo.pigsty.cc/pev"&gt;&lt;code&gt;demo.pigsty.cc/pev&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;/nginx&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;a href="https://pigsty.cc/docs/infra/"&gt;&lt;strong&gt;Nginx&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;80&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;Nginx 状态页（指标采集用）&lt;/td&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 id="域名访问"&gt;域名访问&lt;/h2&gt;
+&lt;p&gt;如果您有自己的域名，可以将其解析到 Pigsty 服务器的 IP 地址，从而通过域名访问 Pigsty 提供的各项服务。&lt;/p&gt;</description></item><item><title>快速上手 PostgreSQL</title><link>https://pigsty.cc/docs/setup/pgsql/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/setup/pgsql/</guid><description>&lt;p&gt;&lt;a href="https://www.postgresql.org/"&gt;&lt;strong&gt;PostgreSQL&lt;/strong&gt;&lt;/a&gt;（简称 PG）是世界上最先进、最流行的开源关系型数据库，你可以用它来存储和检索多模态数据。&lt;/p&gt;
+&lt;p&gt;本指南面向有基础 Linux 基本命令行操作经验、但对 PostgreSQL 不太熟悉的开发者，带你快速上手 Pigsty 中的 PG。&lt;/p&gt;
+&lt;p&gt;我们假设您是个人用户，使用默认单机模式进行部署。关于生产环境多节点高可用集群的使用，请参考 &lt;a href="https://pigsty.cc/docs/pgsql/service/"&gt;&lt;strong&gt;生产服务接入&lt;/strong&gt;&lt;/a&gt;。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="基本知识"&gt;基本知识&lt;/h2&gt;
+&lt;p&gt;默认 &lt;a href="https://pigsty.cc/docs/setup/install"&gt;&lt;strong&gt;单机安装&lt;/strong&gt;&lt;/a&gt; 模板下，您将在当前节点上创建一个名为 &lt;code&gt;pg-meta&lt;/code&gt; 的 PostgreSQL 数据库集群，只有一个主库实例。&lt;/p&gt;
+&lt;p&gt;PostgreSQL 监听在 &lt;code&gt;5432&lt;/code&gt; 端口，集群中带有一个预置的数据库 &lt;code&gt;meta&lt;/code&gt; 可供使用。&lt;/p&gt;
+&lt;p&gt;您可以在安装完毕后退出当前管理用户 ssh 会话，并重新登陆刷新环境变量后，
+通过简单地敲一个 &lt;code&gt;pp&lt;/code&gt; 回车，通过命令行工具 &lt;code&gt;psql&lt;/code&gt; 访问该数据库集群：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;vagrant@pg-meta-1:~$ pp
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;psql &lt;span style="color:#ce5c00;font-weight:bold"&gt;(&lt;/span&gt;18.2 &lt;span style="color:#ce5c00;font-weight:bold"&gt;(&lt;/span&gt;Ubuntu 18.2-1.pgdg24.04+2&lt;span style="color:#ce5c00;font-weight:bold"&gt;))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Type &lt;span style="color:#4e9a06"&gt;&amp;#34;help&amp;#34;&lt;/span&gt; &lt;span style="color:#204a87;font-weight:bold"&gt;for&lt;/span&gt; help.
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#000"&gt;postgres&lt;/span&gt;&lt;span style="color:#ce5c00;font-weight:bold"&gt;=&lt;/span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;#&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;您也可以切换为操作系统的 &lt;code&gt;postgres&lt;/code&gt; 用户，直接执行 &lt;code&gt;psql&lt;/code&gt; 命令，即可连接到默认的 &lt;code&gt;postgres&lt;/code&gt; 管理数据库上。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="连接数据库"&gt;连接数据库&lt;/h2&gt;
+&lt;p&gt;想要访问 PostgreSQL 数据库，您需要使用 命令行工具 或者 图形化客户端 工具，填入 PostgreSQL 的 &lt;strong&gt;连接字符串&lt;/strong&gt;：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;postgres://username:password@host:port/dbname
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;一些驱动和工具也可能会要求你分别填写这些参数，通常以下五项为必选项：&lt;/p&gt;
+&lt;table class="full-width"&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;参数&lt;/th&gt;
+ &lt;th&gt;说明&lt;/th&gt;
+ &lt;th&gt;示例值&lt;/th&gt;
+ &lt;th&gt;备注&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;code&gt;host&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;数据库服务器地址&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;10.10.10.10&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;换为你的节点 IP 地址或域名，本机可以省略&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;code&gt;port&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;端口号&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;5432&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;PG 默认端口，可以省略&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;code&gt;username&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;用户名&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;dbuser_dba&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;Pigsty 默认的数据库管理员&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;code&gt;password&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;密码&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;DBUser.DBA&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;Pigsty 默认的管理员密码，（&lt;strong&gt;请修改密码&lt;/strong&gt;）&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;code&gt;dbname&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;数据库名&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;meta&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;默认模板的数据库名称&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;个人使用时可以直接使用 Pigsty 默认的数据库超级用户 &lt;code&gt;dbuser_dba&lt;/code&gt; 进行连接和管理，数据库管理用户 &lt;code&gt;dbuser_dba&lt;/code&gt; 拥有数据库的全部权限。
+默认情况下，如果您在配置 Pigsty 时指定了 &lt;code&gt;configure -g&lt;/code&gt; 参数，密码会随机生成，并保存在 &lt;code&gt;~/pigsty/pigsty.yml&lt;/code&gt; 文件中，可以通过以下命令查看：&lt;/p&gt;</description></item><item><title>通过配置清单定制 Pigsty 部署</title><link>https://pigsty.cc/docs/setup/config/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/setup/config/</guid><description>&lt;p&gt;除了使用 &lt;a href="https://pigsty.cc/docs/concept/iac/configure"&gt;&lt;strong&gt;配置向导&lt;/strong&gt;&lt;/a&gt; 自动生成配置，您也可以从零开始手工编写 Pigsty 配置文件。
+本教程将指导您从头开始，逐步构建一个复杂的 &lt;a href="https://pigsty.cc/docs/concept/iac/inventory"&gt;&lt;strong&gt;配置清单&lt;/strong&gt;&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;如果您事先就在 &lt;a href="https://pigsty.cc/docs/concept/iac/inventory"&gt;&lt;strong&gt;配置清单&lt;/strong&gt;&lt;/a&gt; 中定义好了一切，那么只要 &lt;code&gt;deploy.yml&lt;/code&gt; 剧本一把梭，即可完成所有部署工作，但它隐藏了所有细节。&lt;/p&gt;
+&lt;p&gt;所以本文档会把所有模块与剧本拆解开来，介绍如何从一个简单的配置，通过增量添加的方式，形成一套复杂完备的部署。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="最小配置"&gt;最小配置&lt;/h2&gt;
+&lt;p&gt;最简单的有效配置文件可能如下所示，唯一的内容是定义 &lt;a href="https://pigsty.cc/docs/infra/param#admin_ip"&gt;&lt;strong&gt;&lt;code&gt;admin_ip&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt; 变量，这是当前安装 Pigsty 节点的 IP 地址（&lt;strong&gt;管理节点&lt;/strong&gt;）&lt;/p&gt;
+
+
+
+&lt;ul class="nav nav-tabs" id="tabs-0" role="tablist"&gt;
+ &lt;li class="nav-item"&gt;
+ &lt;button class="nav-link active"
+ id="tabs-00-00-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-00" role="tab"
+ data-td-tp-persist="最简配置" aria-controls="tabs-00-00" aria-selected="true"&gt;
+ 最简配置
+ &lt;/button&gt;
+ &lt;/li&gt;&lt;li class="nav-item"&gt;
+ &lt;button class="nav-link"
+ id="tabs-00-01-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-01" role="tab"
+ data-td-tp-persist="中国特色" aria-controls="tabs-00-01" aria-selected="false"&gt;
+ 中国特色
+ &lt;/button&gt;
+ &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class="tab-content" id="tabs-0-content"&gt;
+ &lt;div class="tab-body tab-pane fade show active"
+ id="tabs-00-00" role="tabpanel" aria-labelled-by="tabs-00-00-tab" tabindex="0"&gt;
+ &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-yaml" data-lang="yaml"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;all&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;{&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;vars&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;{&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;admin_ip&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#0000cf;font-weight:bold"&gt;10.10.10.10&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;}&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;}&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+ &lt;/div&gt;
+ &lt;div class="tab-body tab-pane fade"
+ id="tabs-00-01" role="tabpanel" aria-labelled-by="tabs-00-01-tab" tabindex="0"&gt;
+ &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-yaml" data-lang="yaml"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 天朝自有国情在此，额外配置 region: chian 以使用国内的镜像源加速下载&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;all&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;{&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;vars&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;{&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;admin_ip: 10.10.10.10, region&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;china } }&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+ &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;这个配置不会部署任何东西，但是执行 &lt;code&gt;./deploy.yml&lt;/code&gt; 剧本时，会在 &lt;code&gt;files/pki/ca&lt;/code&gt; 生成一套自签名的 &lt;strong&gt;CA&lt;/strong&gt;，用于签发证书。&lt;/p&gt;</description></item><item><title>使用 Ansible 剧本完成部署</title><link>https://pigsty.cc/docs/setup/playbook/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/setup/playbook/</guid><description>&lt;p&gt;Pigsty 使用 &lt;a href="https://docs.ansible.com/"&gt;&lt;strong&gt;Ansible&lt;/strong&gt;&lt;/a&gt; 对集群进行管理，这是在 SRE 群体中非常流行的大规模/批量化/自动化运维工具。&lt;/p&gt;
+&lt;p&gt;Ansible 可以使用 &lt;strong&gt;声明式&lt;/strong&gt; 的方式对服务器进行配置管理，所有模块的部署都是通过一系列幂等的 &lt;a href="https://pigsty.cc/docs/ref/playbook"&gt;&lt;strong&gt;Ansible 剧本&lt;/strong&gt;&lt;/a&gt; 实现的。&lt;/p&gt;
+&lt;p&gt;例如，在单机部署时，您会用到 &lt;a href="#%E9%83%A8%E7%BD%B2%E5%89%A7%E6%9C%AC"&gt;&lt;strong&gt;&lt;code&gt;deploy.yml&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt; 剧本。Pigsty 还有更多 &lt;a href="https://pigsty.cc/docs/ref/playbook"&gt;&lt;strong&gt;内置剧本&lt;/strong&gt;&lt;/a&gt;，您可以根据需要选择使用。&lt;/p&gt;
+&lt;p&gt;了解 Ansible 基础知识有助于更好的使用 Pigsty，但这 &lt;strong&gt;并非必须&lt;/strong&gt;，特别是在单机部署时。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="部署剧本"&gt;部署剧本&lt;/h2&gt;
+&lt;p&gt;Pigsty 提供了一个 “一条龙” 部署剧本 &lt;strong&gt;&lt;code&gt;deploy.yml&lt;/code&gt;&lt;/strong&gt;，一次性在当前环境上安装所有模块（如果在配置中定义）：&lt;/p&gt;
+&lt;table class="full-width"&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;Playbook&lt;/th&gt;
+ &lt;th&gt;命令&lt;/th&gt;
+ &lt;th&gt;分组&lt;/th&gt;
+ &lt;th style="text-align: center"&gt;&lt;code&gt;infra&lt;/code&gt;&lt;/th&gt;
+ &lt;th style="text-align: center"&gt;&lt;code&gt;[nodes]&lt;/code&gt;&lt;/th&gt;
+ &lt;th style="text-align: center"&gt;&lt;code&gt;etcd&lt;/code&gt;&lt;/th&gt;
+ &lt;th style="text-align: center"&gt;&lt;code&gt;minio&lt;/code&gt;&lt;/th&gt;
+ &lt;th style="text-align: center"&gt;&lt;code&gt;[pgsql]&lt;/code&gt;&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;code&gt;infra.yml&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;./infra.yml&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;-l infra&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;✓&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;✓&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;code&gt;node.yml&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;./node.yml&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;✓&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;code&gt;etcd.yml&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;./etcd.yml&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;-l etcd&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;✓&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;code&gt;minio.yml&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;./minio.yml&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;-l minio&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;✓&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;code&gt;pgsql.yml&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;./pgsql.yml&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;✓&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;这是最简单的部署方式，您也可以参考 &lt;a href="https://pigsty.cc/docs/setup/config/"&gt;&lt;strong&gt;定制指南&lt;/strong&gt;&lt;/a&gt; 里的说明，一步一步来增量式地完成所有模块与节点的部署。&lt;/p&gt;</description></item><item><title>离线安装</title><link>https://pigsty.cc/docs/setup/offline/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/setup/offline/</guid><description>&lt;p&gt;Pigsty 默认从互联网上游 &lt;a href="https://pigsty.cc/docs/setup/install/"&gt;&lt;strong&gt;安装&lt;/strong&gt;&lt;/a&gt; 所需软件包，但有些环境与互联网隔离。
+为了解决这个问题，Pigsty 支持使用 &lt;a href="#%E7%A6%BB%E7%BA%BF%E8%BD%AF%E4%BB%B6%E5%8C%85"&gt;&lt;strong&gt;离线软件包&lt;/strong&gt;&lt;/a&gt; 进行离线安装。
+您可以将其视作 Linux-原生版本的 Docker 镜像。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="概览"&gt;概览&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;离线软件包&lt;/strong&gt; 打包了所有需要的 RPM/DEB 软件包及其依赖；它是常规 &lt;a href="https://pigsty.cc/docs/setup/install/"&gt;&lt;strong&gt;安装&lt;/strong&gt;&lt;/a&gt; 后的本地 APT / YUM 仓库的快照。&lt;/p&gt;
+&lt;p&gt;在 &lt;a href="https://pigsty.cc/docs/deploy"&gt;&lt;strong&gt;严肃的生产环境部署&lt;/strong&gt;&lt;/a&gt; 中，我们 &lt;strong&gt;强烈推荐&lt;/strong&gt; 您使用离线安装包进行安装。
+它可以确保后续所有新节点的软件版本与现有环境保持一致，
+并且可以避免上游变动导致的在线安装失败（相当常见！）
+确保您能独立自主运行它至地老天荒。&lt;/p&gt;
+&lt;div class="alert alert-success" role="alert"&gt;&lt;div class="h4 alert-heading" role="heading"&gt;使用离线软件包的优点&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;可以简单方便的在互联网隔离的环境中交付实施。&lt;/li&gt;
+&lt;li&gt;一次性预下载所有软件包，可以有效加速安装过程。&lt;/li&gt;
+&lt;li&gt;无需担心上游依赖项的变动导致依赖错漏/安装失败。&lt;/li&gt;
+&lt;li&gt;如果有多个节点，那么所有软件包只需要下载一次，节省带宽资源。&lt;/li&gt;
+&lt;li&gt;可以通过本地仓库确保所有节点的软件版本一致，实行统一版本管理
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="alert alert-warning" role="alert"&gt;&lt;div class="h4 alert-heading" role="heading"&gt;使用离线软件包的缺点&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;离线安装包针对 &lt;strong&gt;特定的操作系统小版本制作&lt;/strong&gt;，通常不能跨版本使用&lt;/li&gt;
+&lt;li&gt;仅为制作时刻的快照，可能不包含最新的更新和操作系统安全补丁。&lt;/li&gt;
+&lt;li&gt;离线安装包通常约 1GB 左右，而在线安装则是按需下载，更节省空间。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;h2 id="离线软件包"&gt;离线软件包&lt;/h2&gt;
+&lt;p&gt;我们通常为以下 &lt;a href="https://pigsty.cc/docs/ref/linux/"&gt;&lt;strong&gt;Linux 发行版&lt;/strong&gt;&lt;/a&gt; 发布离线软件包，使用较新的操作系统次要版本。&lt;/p&gt;
+&lt;table class="full-width"&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th style="text-align: left"&gt;Linux 发行版&lt;/th&gt;
+ &lt;th style="text-align: left"&gt;系统代码&lt;/th&gt;
+ &lt;th style="text-align: left"&gt;小版本&lt;/th&gt;
+ &lt;th style="text-align: left"&gt;软件包&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;RockyLinux 8 x86_64&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;el8.x86_64&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;8.10&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;a href="https://github.com/pgsty/pigsty/releases/download/v4.1.0/pigsty-pkg-v4.1.0.el8.x86_64.tgz"&gt;&lt;strong&gt;&lt;code&gt;pigsty-pkg-v4.1.0.el8.x86_64.tgz&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;RockyLinux 8 aarch64&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;el8.aarch64&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;8.10&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;a href="https://github.com/pgsty/pigsty/releases/download/v4.1.0/pigsty-pkg-v4.1.0.el8.aarch64.tgz"&gt;&lt;strong&gt;&lt;code&gt;pigsty-pkg-v4.1.0.el8.aarch64.tgz&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;RockyLinux 9 x86_64&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;el9.x86_64&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;9.7&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;a href="https://github.com/pgsty/pigsty/releases/download/v4.1.0/pigsty-pkg-v4.1.0.el9.x86_64.tgz"&gt;&lt;strong&gt;&lt;code&gt;pigsty-pkg-v4.1.0.el9.x86_64.tgz&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;RockyLinux 9 aarch64&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;el9.aarch64&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;9.7&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;a href="https://github.com/pgsty/pigsty/releases/download/v4.1.0/pigsty-pkg-v4.1.0.el9.aarch64.tgz"&gt;&lt;strong&gt;&lt;code&gt;pigsty-pkg-v4.1.0.el9.aarch64.tgz&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;RockyLinux 10 x86_64&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;el10.x86_64&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;10.1&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;a href="https://github.com/pgsty/pigsty/releases/download/v4.1.0/pigsty-pkg-v4.1.0.el10.x86_64.tgz"&gt;&lt;strong&gt;&lt;code&gt;pigsty-pkg-v4.1.0.el10.x86_64.tgz&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;RockyLinux 10 aarch64&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;el10.aarch64&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;10.1&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;a href="https://github.com/pgsty/pigsty/releases/download/v4.1.0/pigsty-pkg-v4.1.0.el10.aarch64.tgz"&gt;&lt;strong&gt;&lt;code&gt;pigsty-pkg-v4.1.0.el10.aarch64.tgz&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;Debian 12 x86_64&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;d12.x86_64&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;12.13&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;a href="https://github.com/pgsty/pigsty/releases/download/v4.1.0/pigsty-pkg-v4.1.0.d12.x86_64.tgz"&gt;&lt;strong&gt;&lt;code&gt;pigsty-pkg-v4.1.0.d12.x86_64.tgz&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;Debian 12 aarch64&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;d12.aarch64&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;12.13&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;a href="https://github.com/pgsty/pigsty/releases/download/v4.1.0/pigsty-pkg-v4.1.0.d12.aarch64.tgz"&gt;&lt;strong&gt;&lt;code&gt;pigsty-pkg-v4.1.0.d12.aarch64.tgz&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;Debian 13 x86_64&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;d13.x86_64&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;13.3&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;a href="https://github.com/pgsty/pigsty/releases/download/v4.1.0/pigsty-pkg-v4.1.0.d13.x86_64.tgz"&gt;&lt;strong&gt;&lt;code&gt;pigsty-pkg-v4.1.0.d13.x86_64.tgz&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;Debian 13 aarch64&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;d13.aarch64&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;13.3&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;a href="https://github.com/pgsty/pigsty/releases/download/v4.1.0/pigsty-pkg-v4.1.0.d13.aarch64.tgz"&gt;&lt;strong&gt;&lt;code&gt;pigsty-pkg-v4.1.0.d13.aarch64.tgz&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;Ubuntu 24.04 x86_64&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;u24.x86_64&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;24.04.2&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;a href="https://github.com/pgsty/pigsty/releases/download/v4.1.0/pigsty-pkg-v4.1.0.u24.x86_64.tgz"&gt;&lt;strong&gt;&lt;code&gt;pigsty-pkg-v4.1.0.u24.x86_64.tgz&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;Ubuntu 24.04 aarch64&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;u24.aarch64&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;24.04.2&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;a href="https://github.com/pgsty/pigsty/releases/download/v4.1.0/pigsty-pkg-v4.1.0.u24.aarch64.tgz"&gt;&lt;strong&gt;&lt;code&gt;pigsty-pkg-v4.1.0.u24.aarch64.tgz&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;Ubuntu 22.04 x86_64&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;u22.x86_64&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;22.04.5&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;a href="https://github.com/pgsty/pigsty/releases/download/v4.1.0/pigsty-pkg-v4.1.0.u22.x86_64.tgz"&gt;&lt;strong&gt;&lt;code&gt;pigsty-pkg-v4.1.0.u22.x86_64.tgz&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;Ubuntu 22.04 aarch64&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;u22.aarch64&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;22.04.5&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;a href="https://github.com/pgsty/pigsty/releases/download/v4.1.0/pigsty-pkg-v4.1.0.u22.aarch64.tgz"&gt;&lt;strong&gt;&lt;code&gt;pigsty-pkg-v4.1.0.u22.aarch64.tgz&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;如果您使用的是上述列表中给出的操作系统（精确匹配的小版本），那么建议使用离线软件包。
+Pigsty 为这些系统提供了开箱即用的预制离线软件包，在 GitHub 上提供免费下载。&lt;/p&gt;</description></item><item><title>精简安装</title><link>https://pigsty.cc/docs/setup/slim/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/setup/slim/</guid><description>&lt;p&gt;如果您只想要高可用 PostgreSQL 数据库集群本身，而不需要监控、基础设施等功能，请考虑 &lt;strong&gt;精简安装&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;精简安装没有 &lt;a href="https://pigsty.cc/docs/infra/"&gt;&lt;strong&gt;&lt;code&gt;INFRA&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt; 模块，没有监控，没有 &lt;a href="https://pigsty.cc/docs/setup/offline/"&gt;&lt;strong&gt;本地仓库&lt;/strong&gt;&lt;/a&gt;，只有 &lt;a href="https://pigsty.cc/docs/etcd/"&gt;&lt;strong&gt;&lt;code&gt;ETCD&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt; 和 &lt;a href="https://pigsty.cc/docs/pgsql/"&gt;&lt;strong&gt;&lt;code&gt;PGSQL&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt; 以及部分 &lt;a href="https://pigsty.cc/docs/node/"&gt;&lt;strong&gt;&lt;code&gt;NODE&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt; 功能。&lt;/p&gt;
+&lt;div class="alert alert-success" role="alert"&gt;&lt;div class="h4 alert-heading" role="heading"&gt;精简安装适合以下场景&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;只需要 PostgreSQL 数据库本身，不需要可观测性基础设施。&lt;/li&gt;
+&lt;li&gt;资源极度受限的环境，不愿意承担基础设施开销（单机约 0.2 vCPU / 500MB 开销）&lt;/li&gt;
+&lt;li&gt;已有外部监控系统，希望统一使用自己的监控管理体系。&lt;/li&gt;
+&lt;li&gt;不需要 Grafana 可视化看板组件。
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="alert alert-warning" role="alert"&gt;&lt;div class="h4 alert-heading" role="heading"&gt;精简安装的局限性&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;没有 &lt;a href="https://pigsty.cc/docs/infra"&gt;&lt;strong&gt;基础设施模块&lt;/strong&gt;&lt;/a&gt;，无法使用 WebUI 和本地软件仓库功能。&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://pigsty.cc/docs/setup/offline"&gt;&lt;strong&gt;离线安装&lt;/strong&gt;&lt;/a&gt; 仅限单机模式使用，多节点精简安装只能在线安装。
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="概览"&gt;概览&lt;/h2&gt;
+&lt;p&gt;使用精简安装，您需要：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;使用 &lt;a href="https://pigsty.cc/docs/conf/slim"&gt;&lt;strong&gt;&lt;code&gt;slim.yml&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt; 精简安装配置模板（&lt;code&gt;configure -c slim&lt;/code&gt;）&lt;/li&gt;
+&lt;li&gt;执行 &lt;code&gt;slim.yml&lt;/code&gt; 剧本进行部署，而不是默认的 &lt;code&gt;deploy.yml&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;curl https://repo.pigsty.cc/get &lt;span style="color:#000;font-weight:bold"&gt;|&lt;/span&gt; bash
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;./configure -g -c slim
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;./slim.yml
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div id="asciinema-652aef58304c00ff1cb585f667a5397b" class="asciinema-container td-max-width-on-larger-screens" style="margin: 1em 0;"&gt;&lt;/div&gt;
+
+&lt;script&gt;
+(function() {
+ var containerId = "asciinema-652aef58304c00ff1cb585f667a5397b";
+ var castURL = "\/demo\/install-slim.cast";
+ var configuredTheme = "auto";
+ var player = null;
+
+ 
+ function detectTheme() {
+ var htmlTheme = document.documentElement.getAttribute("data-bs-theme");
+ if (htmlTheme === "dark") return "solarized-dark";
+ if (htmlTheme === "light") return "solarized-light";
+ 
+ if (window.matchMedia &amp;&amp; window.matchMedia("(prefers-color-scheme: dark)").matches) {
+ return "solarized-dark";
+ }
+ return "solarized-light";
+ }
+
+ function getTheme() {
+ if (configuredTheme === "auto") {
+ return detectTheme();
+ }
+ return configuredTheme;
+ }
+
+ function createPlayer() {
+ var container = document.getElementById(containerId);
+ 
+ container.innerHTML = "";
+
+ var opts = {
+ theme: getTheme(),
+ speed: "1.3",
+ startAt: 0 ,
+ fit: "width"
+ };
+ opts.autoPlay = true;
+ opts.loop = true;
+ opts.markers = [[ 3 , "安装"],[ 13 , "配置"],[ 22 , "部署"]];
+
+ player = AsciinemaPlayer.create(castURL, container, opts);
+ }
+
+ 
+ createPlayer();
+
+ 
+ if (configuredTheme === "auto") {
+ 
+ var observer = new MutationObserver(function(mutations) {
+ mutations.forEach(function(mutation) {
+ if (mutation.attributeName === "data-bs-theme") {
+ createPlayer();
+ }
+ });
+ });
+ observer.observe(document.documentElement, { attributes: true });
+
+ 
+ if (window.matchMedia) {
+ window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", function() {
+ 
+ var htmlTheme = document.documentElement.getAttribute("data-bs-theme");
+ if (!htmlTheme || htmlTheme === "auto") {
+ createPlayer();
+ }
+ });
+ }
+ }
+})();
+&lt;/script&gt;
+
+&lt;hr&gt;
+&lt;h2 id="说明"&gt;说明&lt;/h2&gt;
+&lt;p&gt;精简安装只安装/配置以下组件：&lt;/p&gt;</description></item><item><title>安全建议</title><link>https://pigsty.cc/docs/setup/security/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/setup/security/</guid><description>&lt;p&gt;对于单机部署的 Demo/Dev 场景，只要您 &lt;a href="#%E5%AF%86%E7%A0%81"&gt;&lt;strong&gt;修改了默认密码&lt;/strong&gt;&lt;/a&gt;，Pigsty 的默认配置已经足够安全。&lt;/p&gt;
+&lt;p&gt;如果您的部署对互联网开放，可以考虑添加 &lt;a href="#%E9%98%B2%E7%81%AB%E5%A2%99"&gt;&lt;strong&gt;防火墙&lt;/strong&gt;&lt;/a&gt; 规则，限制端口访问与来源IP，进一步加固安全性。&lt;/p&gt;
+&lt;p&gt;除此之外，我们建议您保护好 Pigsty 的 &lt;a href="#%E6%96%87%E4%BB%B6"&gt;&lt;strong&gt;关键文件&lt;/strong&gt;&lt;/a&gt;（配置文件与 CA 私钥）防止未授权访问并定期备份。&lt;/p&gt;
+&lt;p&gt;对于有着严格安全要求的企业级生产环境，请参考 &lt;a href="https://pigsty.cc/docs/deploy/security/"&gt;&lt;strong&gt;部署-安全加固&lt;/strong&gt;&lt;/a&gt; 文档进行进阶配置。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="密码"&gt;密码&lt;/h2&gt;
+&lt;p&gt;Pigsty 是一个开源项目，&lt;strong&gt;默认密码众所周知&lt;/strong&gt;。如果您的部署面向互联网或者办公网开放，请务必修改所有默认密码！&lt;/p&gt;
+&lt;table class="full-width"&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th style="text-align: center"&gt;模块&lt;/th&gt;
+ &lt;th&gt;参数&lt;/th&gt;
+ &lt;th&gt;默认值&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://pigsty.cc/docs/infra"&gt;&lt;strong&gt;&lt;code&gt;INFRA&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;a href="https://pigsty.cc/docs/infra/param#grafana_admin_password"&gt;&lt;strong&gt;&lt;code&gt;grafana_admin_password&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;pigsty&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://pigsty.cc/docs/infra"&gt;&lt;strong&gt;&lt;code&gt;INFRA&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;a href="https://pigsty.cc/docs/infra/param#grafana_view_password"&gt;&lt;strong&gt;&lt;code&gt;grafana_view_password&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;DBUser.Viewer&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://pigsty.cc/docs/pgsql"&gt;&lt;strong&gt;&lt;code&gt;PGSQL&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;a href="https://pigsty.cc/docs/pgsql/param#pg_admin_password"&gt;&lt;strong&gt;&lt;code&gt;pg_admin_password&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;DBUser.DBA&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://pigsty.cc/docs/pgsql"&gt;&lt;strong&gt;&lt;code&gt;PGSQL&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;a href="https://pigsty.cc/docs/pgsql/param#pg_monitor_password"&gt;&lt;strong&gt;&lt;code&gt;pg_monitor_password&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;DBUser.Monitor&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://pigsty.cc/docs/pgsql"&gt;&lt;strong&gt;&lt;code&gt;PGSQL&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;a href="https://pigsty.cc/docs/pgsql/param#pg_replication_password"&gt;&lt;strong&gt;&lt;code&gt;pg_replication_password&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;DBUser.Replicator&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://pigsty.cc/docs/pgsql"&gt;&lt;strong&gt;&lt;code&gt;PGSQL&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;a href="https://pigsty.cc/docs/pgsql/param#patroni_password"&gt;&lt;strong&gt;&lt;code&gt;patroni_password&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;Patroni.API&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://pigsty.cc/docs/node"&gt;&lt;strong&gt;&lt;code&gt;NODE&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;a href="https://pigsty.cc/docs/node/param#haproxy_admin_password"&gt;&lt;strong&gt;&lt;code&gt;haproxy_admin_password&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;pigsty&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://pigsty.cc/docs/minio"&gt;&lt;strong&gt;&lt;code&gt;MINIO&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;a href="https://pigsty.cc/docs/minio/param#minio_secret_key"&gt;&lt;strong&gt;&lt;code&gt;minio_secret_key&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;S3User.MinIO&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="https://pigsty.cc/docs/etcd"&gt;&lt;strong&gt;&lt;code&gt;ETCD&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;a href="https://pigsty.cc/docs/etcd/param#etcd_root_password"&gt;&lt;strong&gt;&lt;code&gt;etcd_root_password&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;Etcd.Root&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;为了避免手动修改密码的繁琐，Pigsty 的 &lt;strong&gt;配置向导&lt;/strong&gt; 提供了自动生成随机强密码的功能，使用 &lt;code&gt;configure&lt;/code&gt; 的 &lt;code&gt;-g&lt;/code&gt; 参数即可。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;$ ./configure -g
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;configure pigsty v4.1.0 begin
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ce5c00;font-weight:bold"&gt;[&lt;/span&gt; OK &lt;span style="color:#ce5c00;font-weight:bold"&gt;]&lt;/span&gt; &lt;span style="color:#000"&gt;region&lt;/span&gt; &lt;span style="color:#ce5c00;font-weight:bold"&gt;=&lt;/span&gt; china
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ce5c00;font-weight:bold"&gt;[&lt;/span&gt;WARN&lt;span style="color:#ce5c00;font-weight:bold"&gt;]&lt;/span&gt; &lt;span style="color:#000"&gt;kernel&lt;/span&gt; &lt;span style="color:#ce5c00;font-weight:bold"&gt;=&lt;/span&gt; Darwin, can be used as admin node only
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ce5c00;font-weight:bold"&gt;[&lt;/span&gt; OK &lt;span style="color:#ce5c00;font-weight:bold"&gt;]&lt;/span&gt; &lt;span style="color:#000"&gt;machine&lt;/span&gt; &lt;span style="color:#ce5c00;font-weight:bold"&gt;=&lt;/span&gt; arm64
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ce5c00;font-weight:bold"&gt;[&lt;/span&gt; OK &lt;span style="color:#ce5c00;font-weight:bold"&gt;]&lt;/span&gt; &lt;span style="color:#000"&gt;package&lt;/span&gt; &lt;span style="color:#ce5c00;font-weight:bold"&gt;=&lt;/span&gt; brew &lt;span style="color:#ce5c00;font-weight:bold"&gt;(&lt;/span&gt;macOS&lt;span style="color:#ce5c00;font-weight:bold"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ce5c00;font-weight:bold"&gt;[&lt;/span&gt;WARN&lt;span style="color:#ce5c00;font-weight:bold"&gt;]&lt;/span&gt; &lt;span style="color:#000"&gt;primary_ip&lt;/span&gt; &lt;span style="color:#ce5c00;font-weight:bold"&gt;=&lt;/span&gt; default placeholder 10.10.10.10 &lt;span style="color:#ce5c00;font-weight:bold"&gt;(&lt;/span&gt;macOS&lt;span style="color:#ce5c00;font-weight:bold"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ce5c00;font-weight:bold"&gt;[&lt;/span&gt; OK &lt;span style="color:#ce5c00;font-weight:bold"&gt;]&lt;/span&gt; &lt;span style="color:#000"&gt;mode&lt;/span&gt; &lt;span style="color:#ce5c00;font-weight:bold"&gt;=&lt;/span&gt; meta &lt;span style="color:#ce5c00;font-weight:bold"&gt;(&lt;/span&gt;unknown distro&lt;span style="color:#ce5c00;font-weight:bold"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ce5c00;font-weight:bold"&gt;[&lt;/span&gt; OK &lt;span style="color:#ce5c00;font-weight:bold"&gt;]&lt;/span&gt; &lt;span style="color:#000"&gt;locale&lt;/span&gt; &lt;span style="color:#ce5c00;font-weight:bold"&gt;=&lt;/span&gt; C.UTF-8
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ce5c00;font-weight:bold"&gt;[&lt;/span&gt; OK &lt;span style="color:#ce5c00;font-weight:bold"&gt;]&lt;/span&gt; generating random passwords...
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; grafana_admin_password : CdG0bDcfm3HFT9H2cvFuv9w7
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; pg_admin_password : 86WqSGdokjol7WAU9fUxY8IG
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; pg_monitor_password : 0X7PtgMmLxuCd2FveaaqBuX9
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; pg_replication_password : 4iAjjXgEY32hbRGVUMeFH460
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; patroni_password : DsD38QLTSq36xejzEbKwEqBK
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; haproxy_admin_password : uhdWhepXrQBrFeAhK9sCSUDo
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; minio_secret_key : z6zrYUN1SbdApQTmfRZlyWMT
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; etcd_root_password : Bmny8op1li1wKlzcaAmvPiWc
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; DBUser.Meta : U5v3CmeXICcMdhMNzP9JN3KY
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; DBUser.Viewer : 9cGQF1QMNCtV3KlDn44AEzpw
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; S3User.Backup : 2gjgSCFYNmDs5tOAiviCqM2X
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; S3User.Meta : XfqkAKY6lBtuDMJ2GZezA15T
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; S3User.Data : OygorcpCbV7DpDmqKe3G6UOj
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ce5c00;font-weight:bold"&gt;[&lt;/span&gt; OK &lt;span style="color:#ce5c00;font-weight:bold"&gt;]&lt;/span&gt; random passwords generated, check and save them
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ce5c00;font-weight:bold"&gt;[&lt;/span&gt; OK &lt;span style="color:#ce5c00;font-weight:bold"&gt;]&lt;/span&gt; &lt;span style="color:#000"&gt;ansible&lt;/span&gt; &lt;span style="color:#ce5c00;font-weight:bold"&gt;=&lt;/span&gt; ready
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ce5c00;font-weight:bold"&gt;[&lt;/span&gt; OK &lt;span style="color:#ce5c00;font-weight:bold"&gt;]&lt;/span&gt; pigsty configured
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ce5c00;font-weight:bold"&gt;[&lt;/span&gt;WARN&lt;span style="color:#ce5c00;font-weight:bold"&gt;]&lt;/span&gt; don&lt;span style="color:#a40000"&gt;&amp;#39;&lt;/span&gt;t forget to check it and change passwords!
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;proceed with ./deploy.yml
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;我们建议在规划部署之前，就修改所有默认密码，确保部署完成后系统即处于安全状态。事后修改密码是一个繁琐的工作：&lt;/p&gt;</description></item><item><title>部署</title><link>https://pigsty.cc/docs/deploy/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/deploy/</guid><description>&lt;p&gt;与 &lt;a href="https://pigsty.cc/docs/setup/"&gt;&lt;strong&gt;快速上手&lt;/strong&gt;&lt;/a&gt; 不同，严肃企业生产环境 Pigsty 部署需要更多 &lt;a href="https://pigsty.cc/docs/deploy/planning"&gt;&lt;strong&gt;架构规划&lt;/strong&gt;&lt;/a&gt; 与 &lt;a href="https://pigsty.cc/docs/deploy/prepare"&gt;&lt;strong&gt;准备工作&lt;/strong&gt;&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;本章将帮助您理解 Pigsty 的完整部署流程，并提供生产环境部署的最佳实践建议。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;我们建议您在真实的生产环境部署之前，使用 Pigsty 提供的 &lt;a href="https://pigsty.cc/docs/deploy/sandbox"&gt;&lt;strong&gt;沙箱环境&lt;/strong&gt;&lt;/a&gt; 进行测试与演练，确保对部署流程有充分的了解。
+您可以使用 &lt;a href="https://pigsty.cc/docs/deploy/vagrant/"&gt;&lt;strong&gt;Vagrant&lt;/strong&gt;&lt;/a&gt; 在本地快速创建一个四节点的 Pigsty 沙箱环境用于测试，或者利用 &lt;a href="https://pigsty.cc/docs/deploy/terraform/"&gt;&lt;strong&gt;Terraform&lt;/strong&gt;&lt;/a&gt; 在云端置备一个更大规模的仿真环境。&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://pigsty.cc/docs/concept/arch"&gt;&lt;img src="https://pigsty.cc/img/pigsty/sandbox.png" alt="pigsty-sandbox"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;对于生产环境部署，您通常需要准备至少三个 &lt;a href="https://pigsty.cc/docs/deploy/prepare"&gt;&lt;strong&gt;节点&lt;/strong&gt;&lt;/a&gt; 以实现高可用。您需要进一步了解 Pigsty 的 &lt;a href="https://pigsty.cc/docs/concept"&gt;&lt;strong&gt;相关概念&lt;/strong&gt;&lt;/a&gt; 以及常见操作的管理 SOP。
+包括如何通过 &lt;a href="https://pigsty.cc/docs/setup/config"&gt;&lt;strong&gt;参数配置&lt;/strong&gt;&lt;/a&gt; 进行定制，如何执行 &lt;a href="https://pigsty.cc/docs/setup/playbook"&gt;&lt;strong&gt;Ansible 剧本&lt;/strong&gt;&lt;/a&gt; 进行部署。以及如何加固部署的 &lt;a href="https://pigsty.cc/docs/deploy/security"&gt;&lt;strong&gt;安全性&lt;/strong&gt;&lt;/a&gt; 以满足企业合规要求。&lt;/p&gt;</description></item><item><title>生产部署</title><link>https://pigsty.cc/docs/deploy/install/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/deploy/install/</guid><description>&lt;p&gt;本文是 Pigsty 生产环境多节点部署指南，部署单机版本 Demo/Dev 环境可以参考 &lt;a href="https://pigsty.cc/docs/setup/"&gt;&lt;strong&gt;快速上手&lt;/strong&gt;&lt;/a&gt; 文档。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="摘要"&gt;摘要&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://pigsty.cc/docs/deploy/prepare"&gt;&lt;strong&gt;准备&lt;/strong&gt;&lt;/a&gt; &lt;a href="https://pigsty.cc/docs/deploy/planning"&gt;&lt;strong&gt;几台&lt;/strong&gt;&lt;/a&gt; 具有 &lt;a href="https://pigsty.cc/docs/deploy/admin#ssh"&gt;&lt;strong&gt;SSH 权限&lt;/strong&gt;&lt;/a&gt; 的 &lt;a href="https://pigsty.cc/docs/deploy/prepare#%E8%8A%82%E7%82%B9"&gt;&lt;strong&gt;节点&lt;/strong&gt;&lt;/a&gt;，
+安装 &lt;a href="https://pigsty.cc/docs/ref/linux/"&gt;&lt;strong&gt;兼容的 Linux 系统&lt;/strong&gt;&lt;/a&gt;，使用具有免密 &lt;a href="https://pigsty.cc/docs/deploy/admin#ssh"&gt;&lt;strong&gt;&lt;code&gt;ssh&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt; 和 &lt;a href="https://pigsty.cc/docs/deploy/admin#sudo"&gt;&lt;strong&gt;&lt;code&gt;sudo&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt; 权限的 &lt;a href="https://pigsty.cc/docs/deploy/admin"&gt;&lt;strong&gt;管理用户&lt;/strong&gt;&lt;/a&gt; 执行：&lt;/p&gt;
+
+
+
+&lt;ul class="nav nav-tabs" id="tabs-0" role="tablist"&gt;
+ &lt;li class="nav-item"&gt;
+ &lt;button class="nav-link active"
+ id="tabs-00-00-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-00" role="tab"
+ data-td-tp-persist="pigsty.cc（中国）" aria-controls="tabs-00-00" aria-selected="true"&gt;
+ pigsty.cc（中国）
+ &lt;/button&gt;
+ &lt;/li&gt;&lt;li class="nav-item"&gt;
+ &lt;button class="nav-link"
+ id="tabs-00-01-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-01" role="tab"
+ data-td-tp-persist="pigsty.io（全球）" aria-controls="tabs-00-01" aria-selected="false"&gt;
+ pigsty.io（全球）
+ &lt;/button&gt;
+ &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class="tab-content" id="tabs-0-content"&gt;
+ &lt;div class="tab-body tab-pane fade show active"
+ id="tabs-00-00" role="tabpanel" aria-labelled-by="tabs-00-00-tab" tabindex="0"&gt;
+ &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;curl -fsSL https://repo.pigsty.cc/get &lt;span style="color:#000;font-weight:bold"&gt;|&lt;/span&gt; bash&lt;span style="color:#000;font-weight:bold"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+ &lt;/div&gt;
+ &lt;div class="tab-body tab-pane fade"
+ id="tabs-00-01" role="tabpanel" aria-labelled-by="tabs-00-01-tab" tabindex="0"&gt;
+ &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;curl -fsSL https://repo.pigsty.io/get &lt;span style="color:#000;font-weight:bold"&gt;|&lt;/span&gt; bash&lt;span style="color:#000;font-weight:bold"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+ &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;该命令会执行 &lt;a href="#%E5%AE%89%E8%A3%85"&gt;&lt;strong&gt;安装&lt;/strong&gt;&lt;/a&gt; 脚本，下载并提取 Pigsty 源码至家目录并安装依赖，接下来依次完成 &lt;a href="#%E9%85%8D%E7%BD%AE"&gt;&lt;strong&gt;配置&lt;/strong&gt;&lt;/a&gt; 与 &lt;a href="#%E9%83%A8%E7%BD%B2"&gt;&lt;strong&gt;部署&lt;/strong&gt;&lt;/a&gt; 即可完成交付。&lt;/p&gt;
+&lt;p&gt;在执行 &lt;a href="https://pigsty.cc/docs/setup/playbook"&gt;&lt;strong&gt;&lt;code&gt;deploy.yml&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt; 进行部署前，您可能需要进一步审视与编辑 &lt;a href="https://pigsty.cc/docs/concept/iac/inventory"&gt;&lt;strong&gt;配置清单&lt;/strong&gt;&lt;/a&gt;：&lt;strong&gt;&lt;code&gt;pigsty.yml&lt;/code&gt;&lt;/strong&gt; 文件，确认部署细节。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#204a87"&gt;cd&lt;/span&gt; ~/pigsty &lt;span style="color:#8f5902;font-style:italic"&gt;# 进入 Pigsty 目录&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;./configure -g &lt;span style="color:#8f5902;font-style:italic"&gt;# 生成配置文件（可选，如果知道如何配置可以跳过）&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;./deploy.yml &lt;span style="color:#8f5902;font-style:italic"&gt;# 执行部署剧本，根据生成的配置文件开始安装&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;安装完成后，您可以通过 IP / 域名 + &lt;code&gt;80/443&lt;/code&gt; 端口访问 &lt;a href="https://pigsty.cc/docs/setup/webui/"&gt;&lt;strong&gt;Web 用户界面&lt;/strong&gt;&lt;/a&gt;，
+并通过 &lt;code&gt;5432&lt;/code&gt; 端口访问 &lt;a href="https://pigsty.cc/docs/setup/pgsql/"&gt;&lt;strong&gt;PostgreSQL 服务&lt;/strong&gt;&lt;/a&gt;。&lt;/p&gt;</description></item><item><title>资源准备</title><link>https://pigsty.cc/docs/deploy/prepare/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/deploy/prepare/</guid><description>&lt;p&gt;Pigsty 运行在节点（物理机或虚拟机）之上，本文档介绍硬件相关的规划与准备。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="节点"&gt;节点&lt;/h2&gt;
+&lt;p&gt;Pigsty 目前运行在 &lt;code&gt;Linux&lt;/code&gt; 内核和 &lt;code&gt;x86_64&lt;/code&gt; / &lt;code&gt;aarch64&lt;/code&gt; 架构的节点上。
+&lt;a href="https://pigsty.cc/docs/concept/arch/node"&gt;&amp;quot;&lt;strong&gt;节点&lt;/strong&gt;&amp;quot;&lt;/a&gt; 指的是 SSH &lt;a href="https://pigsty.cc/docs/deploy/admin#%E9%AA%8C%E8%AF%81%E5%8F%AF%E8%BE%BE%E6%80%A7"&gt;&lt;strong&gt;可访问&lt;/strong&gt;&lt;/a&gt; 且提供裸 Linux 操作系统环境的资源。
+它可以是物理机、虚拟机或配备 &lt;code&gt;systemd&lt;/code&gt;、&lt;code&gt;sudo&lt;/code&gt; 和 &lt;code&gt;sshd&lt;/code&gt; 的类似操作系统的容器。&lt;/p&gt;
+&lt;p&gt;部署 Pigsty 至少需要 &lt;strong&gt;1&lt;/strong&gt; 个节点，您可以准备更多，并在 &lt;a href="https://pigsty.cc/docs/setup/playbook#%E9%83%A8%E7%BD%B2%E5%89%A7%E6%9C%AC"&gt;&lt;strong&gt;执行部署剧本&lt;/strong&gt;&lt;/a&gt; 中一次性部署所有节点，或稍后添加并单独部署。
+最小节点规格要求是 &lt;code&gt;1C1G&lt;/code&gt;，建议至少使用 &lt;code&gt;1C2G&lt;/code&gt;。越高越好，没有上限。&lt;strong&gt;系统参数将根据可用资源自动调优&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;所需节点的数量，取决于您的需求，更多详情请参考 &lt;a href="https://pigsty.cc/docs/deploy/planning"&gt;&lt;strong&gt;架构规划&lt;/strong&gt;&lt;/a&gt;。
+尽管带有 &lt;a href="https://pigsty.cc/docs/pgsql/backup/repository"&gt;&lt;strong&gt;外部备份&lt;/strong&gt;&lt;/a&gt; 的 &lt;a href="https://pigsty.cc/docs/setup/install"&gt;&lt;strong&gt;单机部署&lt;/strong&gt;&lt;/a&gt; 也提供一定程度上的兜底，
+但我们建议在生产部署中使用复数个节点，起作用的 &lt;a href="https://pigsty.cc/docs/deploy/planning#%E4%B8%89%E8%8A%82%E7%82%B9%E9%85%8D%E7%BD%AE"&gt;&lt;strong&gt;高可用配置&lt;/strong&gt;&lt;/a&gt; 至少需要 &lt;strong&gt;3&lt;/strong&gt; 个节点才能工作，&lt;strong&gt;2&lt;/strong&gt; 个节点则提供 &lt;a href="https://pigsty.cc/docs/deploy/planning#%E5%8F%8C%E8%8A%82%E7%82%B9%E9%85%8D%E7%BD%AE"&gt;&lt;strong&gt;半高可用&lt;/strong&gt;&lt;/a&gt;。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="磁盘"&gt;磁盘&lt;/h2&gt;
+&lt;p&gt;Pigsty 将使用 &lt;strong&gt;&lt;code&gt;/data&lt;/code&gt;&lt;/strong&gt; 作为默认数据目录，如果您有专用的主数据磁盘，建议将其挂载到那里，并为额外的磁盘驱动器使用 &lt;code&gt;/data1&lt;/code&gt;、&lt;code&gt;/data2&lt;/code&gt;、&lt;code&gt;/dataN&lt;/code&gt;。
+如果你想使用其他的数据目录，可以通过以下参数进行配置：&lt;/p&gt;
+&lt;table class="full-width"&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;名称&lt;/th&gt;
+ &lt;th&gt;描述&lt;/th&gt;
+ &lt;th style="text-align: left"&gt;默认值&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://pigsty.cc/docs/node/param#node_data"&gt;&lt;strong&gt;&lt;code&gt;node_data&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;td&gt;节点主数据目录&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;/data&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://pigsty.cc/docs/pgsql/param#pg_fs_main"&gt;&lt;strong&gt;&lt;code&gt;pg_fs_main&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;td&gt;PG 主数据目录&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;/data/postgres&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://pigsty.cc/docs/pgsql/param#pg_fs_backup"&gt;&lt;strong&gt;&lt;code&gt;pg_fs_backup&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;td&gt;PG 备份数据目录&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;/data/backups&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://pigsty.cc/docs/etcd/param#etcd_data"&gt;&lt;strong&gt;&lt;code&gt;etcd_data&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;td&gt;ETCD 数据目录&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;/data/etcd&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://pigsty.cc/docs/infra/param#infra_data"&gt;&lt;strong&gt;&lt;code&gt;infra_data&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;td&gt;Infra 数据目录&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;/data/infra&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://pigsty.cc/docs/infra/param#nginx_data"&gt;&lt;strong&gt;&lt;code&gt;nginx_data&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;td&gt;Nginx 数据目录&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;/data/nginx&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://pigsty.cc/docs/minio/param#minio_data"&gt;&lt;strong&gt;&lt;code&gt;minio_data&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;td&gt;MinIO 数据目录&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;/data/minio&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="https://pigsty.cc/docs/redis/param#redis_fs_main"&gt;&lt;strong&gt;&lt;code&gt;redis_fs_main&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;td&gt;Redis 数据目录&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;/data/redis&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 id="文件系统"&gt;文件系统&lt;/h2&gt;
+&lt;p&gt;您可以使用任何支持的 Linux 文件系统来格式化数据磁盘，但对于生产环境部署，我们建议使用 &lt;strong&gt;&lt;code&gt;xfs&lt;/code&gt;&lt;/strong&gt;。&lt;/p&gt;</description></item><item><title>架构规划</title><link>https://pigsty.cc/docs/deploy/planning/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/deploy/planning/</guid><description>&lt;p&gt;Pigsty 采用 &lt;a href="https://pigsty.cc/docs/concept/arch"&gt;&lt;strong&gt;模块化架构&lt;/strong&gt;&lt;/a&gt;，您可以像搭积木一样组合出自己想要的部署方案，并用简单的 &lt;a href="https://pigsty.cc/docs/concept/iac"&gt;&lt;strong&gt;声明式配置&lt;/strong&gt;&lt;/a&gt; 表达您的意图。&lt;/p&gt;
+&lt;h2 id="常见方案"&gt;常见方案&lt;/h2&gt;
+&lt;p&gt;这里有一些常见的组合模式供您参考，您可以根据自己的需求进行进一步的定制与调整：&lt;/p&gt;
+&lt;table class="full-width"&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th style="text-align: center"&gt;方案&lt;/th&gt;
+ &lt;th style="text-align: center"&gt;&lt;a href="https://pigsty.cc/docs/infra/"&gt;&lt;strong&gt;INFRA&lt;/strong&gt;&lt;/a&gt;&lt;/th&gt;
+ &lt;th style="text-align: center"&gt;&lt;a href="https://pigsty.cc/docs/etcd/"&gt;&lt;strong&gt;ETCD&lt;/strong&gt;&lt;/a&gt;&lt;/th&gt;
+ &lt;th style="text-align: center"&gt;&lt;a href="https://pigsty.cc/docs/pgsql/"&gt;&lt;strong&gt;PGSQL&lt;/strong&gt;&lt;/a&gt;&lt;/th&gt;
+ &lt;th style="text-align: center"&gt;&lt;a href="https://pigsty.cc/docs/minio"&gt;&lt;strong&gt;MINIO&lt;/strong&gt;&lt;/a&gt;&lt;/th&gt;
+ &lt;th&gt;说明&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;单机部署（&lt;a href="https://pigsty.cc/docs/conf/meta"&gt;&lt;strong&gt;&lt;code&gt;meta&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt;）&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;1&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;1&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;1&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;a href="https://pigsty.cc/docs/setup/install"&gt;&lt;strong&gt;单机部署&lt;/strong&gt;&lt;/a&gt; 默认配置，经典方案&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;单机部署（&lt;a href="https://pigsty.cc/docs/conf/slim"&gt;&lt;strong&gt;&lt;code&gt;slim&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt;）&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;1&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;1&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;/td&gt;
+ &lt;td&gt;不要监控设施，只要数据库&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;基础设施（&lt;a href="https://pigsty.cc/docs/conf/infra"&gt;&lt;strong&gt;&lt;code&gt;infra&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt;）&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;1&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;/td&gt;
+ &lt;td&gt;只要监控基础设施&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;单机部署（&lt;a href="https://pigsty.cc/docs/conf/rich"&gt;&lt;strong&gt;&lt;code&gt;rich&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt;）&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;1&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;1&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;1&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;1&lt;/td&gt;
+ &lt;td&gt;单机 + 对象存储 + 本地仓库/扩展&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table class="full-width"&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th style="text-align: center"&gt;多节点方案&lt;/th&gt;
+ &lt;th style="text-align: center"&gt;&lt;a href="https://pigsty.cc/docs/infra/"&gt;&lt;strong&gt;INFRA&lt;/strong&gt;&lt;/a&gt;&lt;/th&gt;
+ &lt;th style="text-align: center"&gt;&lt;a href="https://pigsty.cc/docs/etcd/"&gt;&lt;strong&gt;ETCD&lt;/strong&gt;&lt;/a&gt;&lt;/th&gt;
+ &lt;th style="text-align: center"&gt;&lt;a href="https://pigsty.cc/docs/pgsql/"&gt;&lt;strong&gt;PGSQL&lt;/strong&gt;&lt;/a&gt;&lt;/th&gt;
+ &lt;th style="text-align: center"&gt;&lt;a href="https://pigsty.cc/docs/minio"&gt;&lt;strong&gt;MINIO&lt;/strong&gt;&lt;/a&gt;&lt;/th&gt;
+ &lt;th&gt;说明&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;双节点（&lt;a href="https://pigsty.cc/docs/conf/dual"&gt;&lt;strong&gt;&lt;code&gt;dual&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt;）&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;1&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;1&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;2&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;/td&gt;
+ &lt;td&gt;2节点半HA，可容忍坏特定一个&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;三节点（&lt;a href="https://pigsty.cc/docs/conf/trio"&gt;&lt;strong&gt;&lt;code&gt;trio&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt;）&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;3&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;3&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;3&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;/td&gt;
+ &lt;td&gt;标准3节点HA，可容忍坏一个&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;四节点（&lt;a href="https://pigsty.cc/docs/conf/full"&gt;&lt;strong&gt;&lt;code&gt;full&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt;）&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;1&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;1&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;1+3&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;/td&gt;
+ &lt;td&gt;演示专用，1 INFRA/ETCD&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;生产部署（&lt;a href="https://pigsty.cc/docs/conf/simu"&gt;&lt;strong&gt;&lt;code&gt;simu&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt;）&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;2&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;3&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;n&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;n&lt;/td&gt;
+ &lt;td&gt;2个INFRA，3个ETCD&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;大规模生产（自定义）&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;3&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;5&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;n&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;n&lt;/td&gt;
+ &lt;td&gt;3个INFRA，5个 ETCD&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;使用什么样的架构规划方案，取决于您对数据库可靠性的要求，以及手头可用的资源。
+通常来说，严肃的生产环境部署至少需要 &lt;strong&gt;3&lt;/strong&gt; 个节点以实现 &lt;a href="#%E4%B8%89%E8%8A%82%E7%82%B9%E9%85%8D%E7%BD%AE"&gt;&lt;strong&gt;高可用配置&lt;/strong&gt;&lt;/a&gt;。
+如果您只有 &lt;strong&gt;2&lt;/strong&gt; 个节点，则可以使用 &lt;a href="#%E5%8F%8C%E8%8A%82%E7%82%B9%E9%85%8D%E7%BD%AE"&gt;&lt;strong&gt;半高可用配置&lt;/strong&gt;&lt;/a&gt;。&lt;/p&gt;</description></item><item><title>管理机制</title><link>https://pigsty.cc/docs/deploy/admin/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/deploy/admin/</guid><description>&lt;p&gt;Pigsty 需要一个在所有被管理节点上具有免密 &lt;a href="#ssh"&gt;&lt;strong&gt;SSH&lt;/strong&gt;&lt;/a&gt; 和 &lt;a href="#sudo"&gt;&lt;strong&gt;Sudo&lt;/strong&gt;&lt;/a&gt; 权限的操作系统 &lt;strong&gt;管理用户&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;这个用户需要能够通过 ssh 访问到所有被管理节点，并且能够在这些节点上执行 sudo 命令。&lt;/p&gt;
+&lt;p&gt;要想将节点纳入 Pigsty 中管理，&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="用户"&gt;用户&lt;/h2&gt;
+&lt;p&gt;通常我们会选择 &lt;code&gt;dba&lt;/code&gt; 或 &lt;code&gt;admin&lt;/code&gt; 这样的用户名称，并避免使用 &lt;code&gt;root&lt;/code&gt; 与 &lt;code&gt;postgres&lt;/code&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;使用 &lt;code&gt;root&lt;/code&gt; 进行部署是可行的，但不符合生产最佳实践。&lt;/li&gt;
+&lt;li&gt;使用 &lt;code&gt;postgres&lt;/code&gt; （&lt;a href="https://pigsty.cc/docs/pgsql/param#pg_dbsu"&gt;&lt;strong&gt;&lt;code&gt;pg_dbsu&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt;）作为管理员用户是严格禁止的。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="免密码"&gt;免密码&lt;/h2&gt;
+&lt;p&gt;如果您可以接受为每个 &lt;code&gt;ssh&lt;/code&gt; 和 &lt;code&gt;sudo&lt;/code&gt; 命令输入密码，则免密码要求是可选的。&lt;/p&gt;
+&lt;p&gt;您可以在 &lt;a href="https://pigsty.cc/docs/setup/playbook/"&gt;&lt;strong&gt;执行剧本&lt;/strong&gt;&lt;/a&gt; 时使用 &lt;code&gt;-k|--ask-pass&lt;/code&gt; 来提示输入 &lt;strong&gt;SSH&lt;/strong&gt; 密码，
+以及 &lt;code&gt;-K|--ask-become-pass&lt;/code&gt; 来提示输入 &lt;strong&gt;sudo&lt;/strong&gt; 密码。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;./deploy.yml -k -K
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;一些企业的安全策略可能不允许免密 &lt;code&gt;ssh&lt;/code&gt; 或 &lt;code&gt;sudo&lt;/code&gt;，在这种情况下，您可以使用上述选项。&lt;/p&gt;
+&lt;p&gt;或者考虑配置一个 sudo 密码缓存时间较长的 sudoers 规则，以减少密码提示的频率。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="创建管理员用户"&gt;创建管理员用户&lt;/h2&gt;
+&lt;p&gt;通常，您的服务器/虚拟机供应商会为您创建一个初始管理员用户。&lt;/p&gt;
+&lt;p&gt;如果你对这个用户不满意，Pigsty 的部署剧本可以为你创建一个 &lt;a href="#%E5%88%9B%E5%BB%BA%E7%AE%A1%E7%90%86%E5%91%98%E7%94%A8%E6%88%B7"&gt;&lt;strong&gt;新的管理员用户&lt;/strong&gt;&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;假设您在节点上有 root 权限，或有一个现有的管理员用户，您可以使用 Pigsty 本身创建管理员用户：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;./node.yml -k -K -t node_admin -e &lt;span style="color:#000"&gt;ansible_user&lt;/span&gt;&lt;span style="color:#ce5c00;font-weight:bold"&gt;=[&lt;/span&gt;你准备使用的管理员名称&lt;span style="color:#ce5c00;font-weight:bold"&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;它将利用现有的管理员创建新的管理员，创建由以下参数描述的专用 &lt;code&gt;dba&lt;/code&gt;（uid=88）用户，并正确配置 sudo / ssh。&lt;/p&gt;</description></item><item><title>沙箱环境</title><link>https://pigsty.cc/docs/deploy/sandbox/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/deploy/sandbox/</guid><description>&lt;p&gt;Pigsty 提供了一个标准的四节点 &lt;strong&gt;沙箱环境&lt;/strong&gt;，用于学习、测试与功能演示。&lt;/p&gt;
+&lt;p&gt;沙箱使用固定的 IP 地址和预定义的身份标识符，便于复现各种演示用例。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="环境描述"&gt;环境描述&lt;/h2&gt;
+&lt;p&gt;默认的沙箱环境由 4 个节点组成，默认使用配置文件 &lt;a href="https://github.com/pgsty/pigsty/blob/main/conf/ha/full.yml"&gt;&lt;code&gt;ha/full.yml&lt;/code&gt;&lt;/a&gt;。&lt;/p&gt;
+&lt;table class="full-width"&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th style="text-align: center"&gt;ID&lt;/th&gt;
+ &lt;th style="text-align: center"&gt;IP 地址&lt;/th&gt;
+ &lt;th style="text-align: center"&gt;节点名&lt;/th&gt;
+ &lt;th style="text-align: center"&gt;PostgreSQL&lt;/th&gt;
+ &lt;th style="text-align: center"&gt;INFRA&lt;/th&gt;
+ &lt;th style="text-align: center"&gt;ETCD&lt;/th&gt;
+ &lt;th style="text-align: center"&gt;MINIO&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;1&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;code&gt;10.10.10.10&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;code&gt;meta&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;code&gt;pg-meta-1&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;code&gt;infra-1&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;code&gt;etcd-1&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;code&gt;minio-1&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;2&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;code&gt;10.10.10.11&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;code&gt;node-1&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;code&gt;pg-test-1&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;3&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;code&gt;10.10.10.12&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;code&gt;node-2&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;code&gt;pg-test-2&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;4&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;code&gt;10.10.10.13&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;code&gt;node-3&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;code&gt;pg-test-3&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;沙箱的配置可以概括表示为以下配置文件：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-yaml" data-lang="yaml"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;all&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;children&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;infra&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;{&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;hosts&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;{&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;10.10.10.10&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;{&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;infra_seq&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#0000cf;font-weight:bold"&gt;1&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;}&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;}&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;}&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;etcd&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;{&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;hosts&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;{&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;10.10.10.10&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;{&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;etcd_seq: 1 } }, vars&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;{&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;etcd_cluster&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;etcd } }&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;minio&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;{&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;hosts&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;{&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;10.10.10.10&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;{&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;minio_seq: 1 } }, vars&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;{&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;minio_cluster&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;minio } }&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;pg-meta&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;hosts&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;{&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;10.10.10.10&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;{&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;pg_seq: 1, pg_role&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;primary } }&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;vars&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;{&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;pg_cluster&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;pg-meta }&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;pg-test&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;hosts&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;10.10.10.11&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;{&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;pg_seq: 1, pg_role&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;primary }&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;10.10.10.12&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;{&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;pg_seq: 2, pg_role&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;replica }&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;10.10.10.13&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;{&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;pg_seq: 3, pg_role&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;replica }&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;vars&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;{&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;pg_cluster&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;pg-test }&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;vars&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;version&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;v4.1.0&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;admin_ip&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#0000cf;font-weight:bold"&gt;10.10.10.10&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;region&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;default&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;pg_version&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#0000cf;font-weight:bold"&gt;18&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src="https://pigsty.cc/img/pigsty/sandbox.png" alt="pigsty-sandbox"&gt;&lt;/p&gt;</description></item><item><title>Vagrant</title><link>https://pigsty.cc/docs/deploy/vagrant/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/deploy/vagrant/</guid><description>&lt;p&gt;&lt;a href="https://www.vagrantup.com/"&gt;&lt;strong&gt;Vagrant&lt;/strong&gt;&lt;/a&gt; 是一个流行的本地虚拟化工具，可以按照声明式的方式创建本地虚拟机。&lt;/p&gt;
+&lt;p&gt;Pigsty 需要 Linux 环境运行，您可以使用 Vagrant 轻松在本地创建 Linux 虚拟机进行测试。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="安装依赖"&gt;安装依赖&lt;/h2&gt;
+&lt;p&gt;首先，确保您的系统中已经安装了 &lt;a href="https://www.vagrantup.com/"&gt;&lt;strong&gt;Vagrant&lt;/strong&gt;&lt;/a&gt; 和虚拟机软件（&lt;a href="https://www.virtualbox.org/"&gt;&lt;strong&gt;VirtualBox&lt;/strong&gt;&lt;/a&gt;， &lt;a href="https://libvirt.org/"&gt;&lt;strong&gt;libvirt&lt;/strong&gt;&lt;/a&gt;，Hyper-V，Parallel，……）。&lt;/p&gt;
+&lt;p&gt;在 MacOS 上，您可以使用 &lt;a href="https://brew.sh/"&gt;&lt;strong&gt;Homebrew&lt;/strong&gt;&lt;/a&gt; 一键安装 vagrant 与 virtualbox；
+在 Linux 上，您可以使用 VirtualBox 或 &lt;a href="https://vagrant-libvirt.github.io/vagrant-libvirt/"&gt;&lt;strong&gt;vagrant-libvirt&lt;/strong&gt;&lt;/a&gt; 作为虚拟机管理软件；
+在 Windows 专业版上，可以使用 Virtualbox 与 Hyper-V 作为提供商。&lt;/p&gt;
+
+
+
+
+
+&lt;ul class="nav nav-tabs" id="tabs-0" role="tablist"&gt;
+ &lt;li class="nav-item"&gt;
+ &lt;button class="nav-link active"
+ id="tabs-00-00-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-00" role="tab"
+ aria-controls="tabs-00-00" aria-selected="true"&gt;
+ macOS
+ &lt;/button&gt;
+ &lt;/li&gt;&lt;li class="nav-item"&gt;
+ &lt;button class="nav-link"
+ id="tabs-00-01-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-01" role="tab"
+ aria-controls="tabs-00-01" aria-selected="false"&gt;
+ 安装 Homebrew
+ &lt;/button&gt;
+ &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class="tab-content" id="tabs-0-content"&gt;
+ &lt;div class="tab-pane fade show active"
+ id="tabs-00-00" role="tabpanel" aria-labelled-by="tabs-00-00-tab" tabindex="0"&gt;
+ &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-Bash" data-lang="Bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;brew install vagrant virtualbox ansible
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 安装 VirtualBox 后需要重启系统，并在系统偏好设置中允许其内核扩展。&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+ &lt;/div&gt;
+ &lt;div class="tab-pane fade"
+ id="tabs-00-01" role="tabpanel" aria-labelled-by="tabs-00-01-tab" tabindex="0"&gt;
+ &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-Bash" data-lang="Bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;/bin/bash -c &lt;span style="color:#4e9a06"&gt;&amp;#34;&lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;$(&lt;/span&gt;curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh&lt;span style="color:#204a87;font-weight:bold"&gt;)&lt;/span&gt;&lt;span style="color:#4e9a06"&gt;&amp;#34;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+ &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h3 id="创建虚拟机"&gt;创建虚拟机&lt;/h3&gt;
+&lt;p&gt;使用 Pigsty 提供的 &lt;code&gt;make&lt;/code&gt; 快捷方式创建虚拟机：&lt;/p&gt;</description></item><item><title>Terraform</title><link>https://pigsty.cc/docs/deploy/terraform/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/deploy/terraform/</guid><description>&lt;p&gt;&lt;a href="https://www.terraform.io/"&gt;&lt;strong&gt;Terraform&lt;/strong&gt;&lt;/a&gt; 是一个流行的&amp;quot;基础设施即代码&amp;quot;工具，您可以使用它在公有云上一键创建虚拟机。&lt;/p&gt;
+&lt;p&gt;Pigsty 提供了阿里云、AWS、腾讯云的 Terraform 模板作为示例。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="快速开始"&gt;快速开始&lt;/h2&gt;
+&lt;h3 id="安装-terraform"&gt;安装 Terraform&lt;/h3&gt;
+&lt;p&gt;在 macOS 上，您可以使用 &lt;a href="https://brew.sh/"&gt;&lt;strong&gt;Homebrew&lt;/strong&gt;&lt;/a&gt; 安装 Terraform：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;brew install terraform
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;其他平台请参考 &lt;a href="https://developer.hashicorp.com/terraform/install"&gt;&lt;strong&gt;Terraform 官方安装指南&lt;/strong&gt;&lt;/a&gt;。&lt;/p&gt;
+&lt;h3 id="初始化与应用"&gt;初始化与应用&lt;/h3&gt;
+&lt;p&gt;进入 Terraform 目录，选择模板，初始化提供商插件，然后应用配置：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#204a87"&gt;cd&lt;/span&gt; ~/pigsty/terraform
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;cp spec/aliyun-meta.tf terraform.tf &lt;span style="color:#8f5902;font-style:italic"&gt;# 选择模板&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;terraform init &lt;span style="color:#8f5902;font-style:italic"&gt;# 安装云提供商插件（首次使用时）&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;terraform apply &lt;span style="color:#8f5902;font-style:italic"&gt;# 生成执行计划并创建资源&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;运行 &lt;code&gt;apply&lt;/code&gt; 命令后，按提示输入 &lt;code&gt;yes&lt;/code&gt; 确认，Terraform 将为您创建虚拟机及相关云资源。&lt;/p&gt;
+&lt;h3 id="获取-ip-地址"&gt;获取 IP 地址&lt;/h3&gt;
+&lt;p&gt;创建完成后，打印管理节点的公网 IP 地址：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;terraform output &lt;span style="color:#000;font-weight:bold"&gt;|&lt;/span&gt; grep -Eo &lt;span style="color:#4e9a06"&gt;&amp;#39;[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="配置-ssh-访问"&gt;配置 SSH 访问&lt;/h3&gt;
+&lt;p&gt;使用 &lt;code&gt;ssh&lt;/code&gt; 脚本自动配置 SSH 别名并分发密钥：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;./ssh &lt;span style="color:#8f5902;font-style:italic"&gt;# 写入 SSH 配置到 ~/.ssh/pigsty_config 并复制密钥&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;此脚本会将 Terraform 输出的 IP 地址写入 &lt;code&gt;~/.ssh/pigsty_config&lt;/code&gt;，并使用默认密码 &lt;code&gt;PigstyDemo4&lt;/code&gt; 自动分发 SSH 密钥。&lt;/p&gt;</description></item><item><title>安全考量</title><link>https://pigsty.cc/docs/deploy/security/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/deploy/security/</guid><description>&lt;p&gt;Pigsty 的默认配置已经足以覆盖绝大多数场景对于安全的需求。&lt;/p&gt;
+&lt;p&gt;Pigsty 已经提供了开箱即用的 &lt;a href="https://pigsty.cc/docs/pgsql/config/hba"&gt;认证&lt;/a&gt; 与 &lt;a href="https://pigsty.cc/docs/concept/sec/ac/"&gt;访问控制&lt;/a&gt; 模型，对于绝大多数场景已经足够安全。&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://pigsty.cc/docs/concept/sec/ac/"&gt;&lt;img src="https://pigsty.cc/img/pigsty/acl.jpg" alt="pigsty-acl.jpg"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;如果您希望进一步加固系统的安全性，那么以下建议供您参考：&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="机密性"&gt;机密性&lt;/h2&gt;
+&lt;h3 id="重要文件"&gt;重要文件&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;保护你的 pigsty.yml 配置文件或CMDB&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;pigsty.yml&lt;/code&gt; 配置文件通常包含了高度敏感的机密信息，您应当确保它的安全。&lt;/li&gt;
+&lt;li&gt;严格控制管理节点的访问权限，仅限 DBA 或者 Infra 管理员访问。&lt;/li&gt;
+&lt;li&gt;严格控制 pigsty.yml 配置文件仓库的访问权限（如果您使用 git 进行管理）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;保护你的 CA 私钥和其他证书，这些文件非常重要。&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;相关文件默认会在管理节点Pigsty源码目录的 &lt;code&gt;files/pki&lt;/code&gt; 内生成。&lt;/li&gt;
+&lt;li&gt;你应该定期将它们备份到一个安全的地方存储。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;br&gt;
+&lt;hr&gt;
+&lt;h3 id="密码"&gt;密码&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;在生产环境部署时，必须更改这些密码，不要使用默认值！&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://pigsty.cc/docs/infra/param#grafana_admin_password"&gt;&lt;strong&gt;&lt;code&gt;grafana_admin_password&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt; : &lt;code&gt;pigsty&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://pigsty.cc/docs/pgsql/param#pg_admin_password"&gt;&lt;strong&gt;&lt;code&gt;pg_admin_password&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt; : &lt;code&gt;DBUser.DBA&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://pigsty.cc/docs/pgsql/param#pg_monitor_password"&gt;&lt;strong&gt;&lt;code&gt;pg_monitor_password&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt; : &lt;code&gt;DBUser.Monitor&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://pigsty.cc/docs/pgsql/param#pg_replication_password"&gt;&lt;strong&gt;&lt;code&gt;pg_replication_password&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt; : &lt;code&gt;DBUser.Replicator&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://pigsty.cc/docs/pgsql/param#patroni_password"&gt;&lt;strong&gt;&lt;code&gt;patroni_password&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt; : &lt;code&gt;Patroni.API&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://pigsty.cc/docs/node/param#haproxy_admin_password"&gt;&lt;strong&gt;&lt;code&gt;haproxy_admin_password&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt; : &lt;code&gt;pigsty&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://pigsty.cc/docs/minio/param#minio_access_key"&gt;&lt;strong&gt;&lt;code&gt;minio_access_key&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt; : &lt;code&gt;minioadmin&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://pigsty.cc/docs/minio/param#minio_secret_key"&gt;&lt;strong&gt;&lt;code&gt;minio_secret_key&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt; : &lt;code&gt;minioadmin&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;如果您使用MinIO，请修改MinIO的默认用户密码，与pgbackrest中的引用&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;请修改 MinIO 普通用户的密码：&lt;a href="https://pigsty.cc/docs/minio/param#minio_users"&gt;&lt;strong&gt;&lt;code&gt;minio_users&lt;/code&gt;&lt;/strong&gt;&lt;code&gt;.&lt;/code&gt;[pgbacrest]&lt;code&gt;.&lt;/code&gt;secret_key`&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;请修改 pgbackrest 中对 MinIO 使用的备份用户密码：&lt;a href="https://pigsty.cc/docs/pgsql/param#pgbackrest_repo"&gt;&lt;strong&gt;&lt;code&gt;pgbackrest_repo&lt;/code&gt;&lt;/strong&gt;&lt;code&gt;.&lt;/code&gt;minio&lt;code&gt;.&lt;/code&gt;s3_key_secret`&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;如果您使用远程备份仓库，请务必启用备份加密，并设置加解密密码&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;设置 [&lt;strong&gt;&lt;code&gt;pgbackrest_repo&lt;/code&gt;&lt;/strong&gt;&lt;code&gt;.&lt;/code&gt;*&lt;code&gt;.&lt;/code&gt;cipher_type&lt;code&gt;](/docs/pgsql/param#pgbackrest_repo) 为 &lt;/code&gt;aes-256-cbc`&lt;/li&gt;
+&lt;li&gt;设置密码时可以使用 &lt;code&gt;${pg_cluster}&lt;/code&gt; 作为密码的一部分，避免所有集群使用同一个密码&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;为 PostgreSQL 使用安全可靠的密码加密算法&lt;/strong&gt;&lt;/p&gt;</description></item><item><title>配置指南</title><link>https://pigsty.cc/docs/pgsql/_div_concept/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/pgsql/_div_concept/</guid><description/></item><item><title>Citus 集群部署</title><link>https://pigsty.cc/docs/pgsql/tutorial/citus/</link><pubDate>Sat, 11 Jan 2025 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/pgsql/tutorial/citus/</guid><description>&lt;p&gt;Citus 是一个 PostgreSQL 扩展，可以将 PostgreSQL 原地转换为一个分布式数据库，并实现在多个节点上水平扩展，以处理大量数据和大量查询。&lt;/p&gt;
+&lt;p&gt;Patroni 在 v3.0 后，提供了对 Citus 原生高可用的支持，简化了 Citus 集群的搭建，Pigsty 也对此提供了原生支持。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://docs.citusdata.com/en/stable/get_started/what_is_citus.html"&gt;Citus 是什么&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://patroni.readthedocs.io/en/latest/citus.html"&gt;Patroni Citus 支持&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;注意：Citus 13.x 支持 PostgreSQL 18、17、16、15、14 五个大版本。Pigsty 扩展仓库提供了 Citus ARM64 软件包。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id="citus集群"&gt;Citus集群&lt;/h2&gt;
+&lt;p&gt;Pigsty 原生支持 Citus。可以参考 &lt;a href="https://github.com/pgsty/pigsty/blob/main/conf/citus.yml"&gt;&lt;code&gt;conf/citus.yml&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;这里使用 Pigsty 四节点沙箱，定义了一个 Citus 集群 &lt;code&gt;pg-citus&lt;/code&gt;，其中包括一个两节点的协调者集群 &lt;code&gt;pg-citus0&lt;/code&gt;，
+以及两个 Worker 集群 &lt;code&gt;pg-citus1&lt;/code&gt;，&lt;code&gt;pg-citus2&lt;/code&gt;。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-yaml" data-lang="yaml"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;pg-citus&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;hosts&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;10.10.10.10&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;{&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;pg_group: 0, pg_cluster: pg-citus0 ,pg_vip_address: 10.10.10.2/24 ,pg_seq: 1, pg_role&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;primary }&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;10.10.10.11&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;{&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;pg_group: 0, pg_cluster: pg-citus0 ,pg_vip_address: 10.10.10.2/24 ,pg_seq: 2, pg_role&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;replica }&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;10.10.10.12&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;{&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;pg_group: 1, pg_cluster: pg-citus1 ,pg_vip_address: 10.10.10.3/24 ,pg_seq: 1, pg_role&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;primary }&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;10.10.10.13&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;{&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;pg_group: 2, pg_cluster: pg-citus2 ,pg_vip_address: 10.10.10.4/24 ,pg_seq: 1, pg_role&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;primary }&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;vars&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;pg_mode: citus # pgsql cluster mode&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;citus&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;pg_version&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#0000cf;font-weight:bold"&gt;17&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# citus 13.x supports PG 14-18&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;pg_shard: pg-citus # citus shard name&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;pg-citus&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;pg_primary_db&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;citus &lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# primary database used by citus&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;pg_vip_enabled&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;true&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# enable vip for citus cluster&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;pg_vip_interface&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;eth1 &lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# vip interface for all members&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;pg_dbsu_password&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;DBUser.Postgres &lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# all dbsu password access for citus cluster&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;pg_extensions&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;[&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;citus, postgis, pgvector, topn, pg_cron, hll ] &lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# install these extensions&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;pg_libs&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#4e9a06"&gt;&amp;#39;citus, pg_cron, pg_stat_statements&amp;#39;&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# citus will be added by patroni automatically&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;pg_users&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;[&lt;/span&gt;{&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;name: dbuser_citus ,password: DBUser.Citus ,pgbouncer: true ,roles&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;[&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;dbrole_admin ] }]&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;pg_databases&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;[&lt;/span&gt;{&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;name: citus ,owner: dbuser_citus ,extensions&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;[&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;citus, vector, topn, pg_cron, hll ] }]&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;pg_parameters&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;cron.database_name&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;citus&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;citus.node_conninfo&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#4e9a06"&gt;&amp;#39;sslmode=require sslrootcert=/pg/cert/ca.crt sslmode=verify-full&amp;#39;&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;pg_hba_rules&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;- {&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;user: &amp;#39;all&amp;#39; ,db: all ,addr: 127.0.0.1/32 ,auth: ssl ,title&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#4e9a06"&gt;&amp;#39;all user ssl access from localhost&amp;#39;&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;}&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;- {&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;user: &amp;#39;all&amp;#39; ,db: all ,addr: intra ,auth: ssl ,title&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#4e9a06"&gt;&amp;#39;all user ssl access from intranet&amp;#39;&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;}&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;相比标准 PostgreSQL 集群，Citus 集群的配置有一些特殊之处，首先，你需要确保 Citus 扩展被下载，安装，加载并启用，这涉及到以下四个参数&lt;/p&gt;</description></item><item><title>快速开始</title><link>https://pigsty.cc/docs/pgsql/ext/start/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/pgsql/ext/start/</guid><description>&lt;p&gt;在 Pigsty 中使用扩展需要四个步骤：&lt;strong&gt;下载&lt;/strong&gt;、&lt;strong&gt;安装&lt;/strong&gt;、&lt;strong&gt;配置&lt;/strong&gt;、&lt;strong&gt;启用&lt;/strong&gt;。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;下载&lt;/strong&gt;：将扩展软件包下载到本地仓库（Pigsty 默认已下载主流扩展）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;安装&lt;/strong&gt;：在集群节点上安装扩展软件包&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;配置&lt;/strong&gt;：部分扩展需要预加载或配置参数&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;启用&lt;/strong&gt;：在数据库中执行 &lt;code&gt;CREATE EXTENSION&lt;/code&gt; 创建扩展&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h2 id="声明式配置"&gt;声明式配置&lt;/h2&gt;
+&lt;p&gt;在 Pigsty 配置清单中声明扩展，集群初始化时自动完成安装与启用：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-yaml" data-lang="yaml"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;pg-meta&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;hosts&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;{&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;10.10.10.10&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;{&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;pg_seq: 1, pg_role&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;primary } }&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;vars&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;pg_cluster&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;pg-meta&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;pg_databases&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;- &lt;span style="color:#204a87;font-weight:bold"&gt;name&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;meta&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;extensions&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;[&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;postgis, timescaledb, vector ] &lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 在数据库中启用扩展&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;pg_libs&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#4e9a06"&gt;&amp;#39;timescaledb, pg_stat_statements, auto_explain&amp;#39;&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 预加载扩展库&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;pg_extensions&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;[&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;postgis, timescaledb, pgvector ] &lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 安装扩展软件包&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;执行 &lt;code&gt;./pgsql.yml&lt;/code&gt; 初始化集群后，&lt;code&gt;postgis&lt;/code&gt;、&lt;code&gt;timescaledb&lt;/code&gt;、&lt;code&gt;vector&lt;/code&gt; 三个扩展即在 &lt;code&gt;meta&lt;/code&gt; 数据库中可用。&lt;/p&gt;</description></item><item><title>安装扩展</title><link>https://pigsty.cc/docs/pgsql/ext/install/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/pgsql/ext/install/</guid><description>&lt;p&gt;Pigsty 使用操作系统的包管理器（yum/apt）安装扩展软件包。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="相关参数"&gt;相关参数&lt;/h2&gt;
+&lt;p&gt;两个参数用于指定要安装的扩展：&lt;/p&gt;
+&lt;table class="full-width"&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th style="text-align: left"&gt;参数&lt;/th&gt;
+ &lt;th style="text-align: left"&gt;用途&lt;/th&gt;
+ &lt;th style="text-align: left"&gt;默认行为&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;&lt;a href="https://pigsty.cc/docs/pgsql/param#pg_packages"&gt;&lt;code&gt;pg_packages&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;全局通用软件包&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;确保存在（不升级）&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;&lt;a href="https://pigsty.cc/docs/pgsql/param#pg_extensions"&gt;&lt;code&gt;pg_extensions&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;集群特定扩展&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;安装最新版本&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;code&gt;pg_packages&lt;/code&gt; 通常用于指定所有集群都需要的基础组件（PostgreSQL 内核、Patroni、pgBouncer 等）和必选扩展。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;pg_extensions&lt;/code&gt; 用于指定特定集群需要的扩展。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-yaml" data-lang="yaml"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;pg_packages&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 全局基础包&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;- &lt;span style="color:#000"&gt;pgsql-main pgsql-common&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;pg_extensions&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 集群扩展&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;- &lt;span style="color:#000"&gt;postgis timescaledb pgvector&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id="集群初始化时安装"&gt;集群初始化时安装&lt;/h2&gt;
+&lt;p&gt;在集群配置中声明扩展，初始化时自动安装：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-yaml" data-lang="yaml"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;pg-meta&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;hosts&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;{&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;10.10.10.10&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;{&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;pg_seq: 1, pg_role&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;primary } }&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;vars&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;pg_cluster&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;pg-meta&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;pg_extensions&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;[&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;postgis, timescaledb, pgvector, pg_duckdb ]&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;执行 &lt;code&gt;./pgsql.yml&lt;/code&gt; 初始化集群时，扩展会自动安装。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="已有集群安装扩展"&gt;已有集群安装扩展&lt;/h2&gt;
+&lt;p&gt;对于已初始化的集群，有多种方式安装扩展：&lt;/p&gt;
+&lt;h3 id="使用-pigsty-剧本"&gt;使用 Pigsty 剧本&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 修改配置后使用剧本安装&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;./pgsql.yml -l pg-meta -t pg_extension
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 或直接在命令行指定扩展&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;./pgsql.yml -l pg-meta -t pg_extension -e &lt;span style="color:#4e9a06"&gt;&amp;#39;{&amp;#34;pg_extensions&amp;#34;:[&amp;#34;pg_duckdb&amp;#34;]}&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="使用-pig-包管理器"&gt;使用 pig 包管理器&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 使用 pig 安装扩展&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;pig install pg_duckdb
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 批量安装&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;ansible pg-meta -b -a &lt;span style="color:#4e9a06"&gt;&amp;#39;pig install pg_duckdb pgvector&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="直接使用包管理器"&gt;直接使用包管理器&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# EL 系统&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sudo yum install -y pg_duckdb_18*
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# Debian/Ubuntu 系统&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sudo apt install -y postgresql-18-pg-duckdb
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id="使用包别名"&gt;使用包别名&lt;/h2&gt;
+&lt;p&gt;Pigsty 支持使用标准化的包别名，自动翻译为对应 PG 版本的包名：&lt;/p&gt;</description></item><item><title>快速上手</title><link>https://pigsty.cc/docs/pg_exporter/start/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/pg_exporter/start/</guid><description>&lt;p&gt;PG Exporter 是一款先进的 PostgreSQL 与 pgBouncer 指标导出器，专为 Prometheus 设计。本指南将帮助您快速启动并运行。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="前置条件"&gt;前置条件&lt;/h2&gt;
+&lt;p&gt;在开始之前，请确保您具备：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;PostgreSQL 10+ 或 pgBouncer 1.8+ 实例用于监控&lt;/li&gt;
+&lt;li&gt;具有适当监控权限的用户账户&lt;/li&gt;
+&lt;li&gt;Prometheus 兼容系统（用于指标抓取）&lt;/li&gt;
+&lt;li&gt;对 PostgreSQL 连接字符串的基本了解&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="版本信息"&gt;版本信息&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;当前稳定版本：&lt;a href="https://github.com/pgsty/pg_exporter/releases/tag/v1.2.0"&gt;&lt;code&gt;v1.2.0&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;默认配置支持 PostgreSQL 10-18+；PostgreSQL 9.1-9.6 需使用 &lt;code&gt;legacy/&lt;/code&gt; 配置包&lt;/li&gt;
+&lt;li&gt;支持 pgBouncer 1.8-1.25+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="设计逻辑"&gt;设计逻辑&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;pg_exporter&lt;/code&gt; 的运行逻辑可以概括为三点：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;本地优先连接：当没有传入 &lt;code&gt;--url&lt;/code&gt; / &lt;code&gt;PG_EXPORTER_URL&lt;/code&gt; 时，默认回退到 &lt;code&gt;postgresql:///?sslmode=disable&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;声明式采集：所有业务指标来自 YAML 采集器，运行时按版本/角色/标签动态选择分支&lt;/li&gt;
+&lt;li&gt;可持续运行：默认非阻塞启动，目标库暂时不可达时也先启动 HTTP 端点，并在后台持续恢复健康状态&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="快速开始"&gt;快速开始&lt;/h2&gt;
+&lt;p&gt;最快速地启动 PG Exporter：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 示例：Linux amd64 安装（其他平台请替换对应发布文件）&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;wget https://github.com/pgsty/pg_exporter/releases/download/v1.2.0/pg_exporter-1.2.0.linux-amd64.tar.gz
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;tar -xf pg_exporter-1.2.0.linux-amd64.tar.gz
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sudo install pg_exporter-1.2.0.linux-amd64/pg_exporter /usr/bin/
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sudo install pg_exporter-1.2.0.linux-amd64/pg_exporter.yml /etc/pg_exporter.yml
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 使用默认 URL（本地优先）运行&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;pg_exporter
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 或显式指定 PostgreSQL / PgBouncer URL&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#000"&gt;PG_EXPORTER_URL&lt;/span&gt;&lt;span style="color:#ce5c00;font-weight:bold"&gt;=&lt;/span&gt;&lt;span style="color:#4e9a06"&gt;&amp;#39;postgres://user:pass@localhost:5432/postgres&amp;#39;&lt;/span&gt; pg_exporter
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 验证指标是否可用&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;curl http://localhost:9630/metrics
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id="基本概念"&gt;基本概念&lt;/h2&gt;
+&lt;h3 id="连接字符串"&gt;连接字符串&lt;/h3&gt;
+&lt;p&gt;PG Exporter 使用标准的 PostgreSQL 连接 URL：&lt;/p&gt;</description></item></channel></rss>

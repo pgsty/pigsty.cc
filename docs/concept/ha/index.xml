@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>PG 高可用 on PIGSTY</title><link>https://pigsty.cc/docs/concept/ha/</link><description>Recent content in PG 高可用 on PIGSTY</description><generator>Hugo</generator><language>zh-CN</language><atom:link href="https://pigsty.cc/docs/concept/ha/index.xml" rel="self" type="application/rss+xml"/><item><title>RPO 利弊权衡</title><link>https://pigsty.cc/docs/concept/ha/rpo/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/concept/ha/rpo/</guid><description>&lt;p&gt;&lt;strong&gt;RPO&lt;/strong&gt;（Recovery Point Objective，恢复点目标）定义了在主库发生故障时，&lt;strong&gt;允许丢失的最大数据量&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;对于金融交易这类数据完整性至关重要的场景，通常要求 RPO = 0，即不允许任何数据丢失；&lt;/p&gt;
+&lt;p&gt;然而更为严格的 RPO 指标是有代价的，它会引入更高的写入延迟，降低系统吞吐量，并且存在从库故障导致主库不可用的风险。
+因此对于常规场景，通常可以接受一定量的数据丢失（例如允许丢失不超过 1MB 的数据），以换取更高的可用性与性能。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="利弊权衡"&gt;利弊权衡&lt;/h2&gt;
+&lt;p&gt;通常在异步复制场景下，从库和主库之间会存在一定的复制延迟（取决于网络和吞吐量，正常在 10KB-100KB / 100µs-10ms 的数量级），
+这意味着当主库发生故障时，从库可能还没有完全同步主库的最新数据。这时候如果出现故障切换，新的主库可能会丢失一些尚未复制的数据。&lt;/p&gt;
+&lt;p&gt;潜在数据丢失量的上限由 &lt;a href="https://pigsty.cc/docs/pgsql/param#pg_rpo"&gt;&lt;strong&gt;&lt;code&gt;pg_rpo&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt; 参数控制，默认为 &lt;code&gt;1048576&lt;/code&gt; （&lt;code&gt;1MB&lt;/code&gt;），这意味着在故障转移期间最多可以容忍 1MiB 的数据丢失。&lt;/p&gt;
+&lt;p&gt;当集群主库宕机时，如果有任何一个从库的复制延迟在这个值以内，Pigsty 将自动提升该从库为新的主库。
+然而当所有从库副本的复制延迟都超出这个阈值时，Pigsty 将拒绝进行 [&lt;strong&gt;自动故障切换&lt;/strong&gt;] 以避免数据丢失。
+此时需要人工介入进行决策 —— 等待主库恢复（可能永远也不会恢复），还是接受数据损失并强制提升一个从库为新的主库。&lt;/p&gt;
+&lt;p&gt;您需要根据业务的需求偏好配置这个值，在 &lt;strong&gt;可用性&lt;/strong&gt; 和 &lt;strong&gt;一致性&lt;/strong&gt; 之间进行 &lt;strong&gt;利弊权衡&lt;/strong&gt;。
+增大这个值可以提高自动故障切换的成功率，但也会增加潜在的数据丢失量上限。&lt;/p&gt;
+&lt;p&gt;当您指定 &lt;a href="https://pigsty.cc/docs/pgsql/param#pg_rpo"&gt;&lt;strong&gt;&lt;code&gt;pg_rpo&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt; = 0 时，Pigsty 将启用 &lt;strong&gt;同步复制&lt;/strong&gt;，确保主库在确认至少一个从库持久化数据后才返回写入成功。
+这种配置能确保没有复制延迟，但会带来显著的写入延迟，并降低整体的吞吐量。&lt;/p&gt;
+&lt;pre class="mermaid"&gt;flowchart LR
+ A([主库故障]) --&amp;gt; B{同步复制?}
+
+ B --&amp;gt;|否| C{延迟 &amp;lt; RPO?}
+ B --&amp;gt;|是| D{同步从库&amp;lt;br/&amp;gt;可用?}
+
+ C --&amp;gt;|是| E[有损自动故障切换&amp;lt;br/&amp;gt;RPO &amp;lt; 1MB]
+ C --&amp;gt;|否| F[拒绝自动切换&amp;lt;br/&amp;gt;等待主库恢复&amp;lt;br/&amp;gt;或人工介入决策]
+
+ D --&amp;gt;|是| G[无损自动故障切换&amp;lt;br/&amp;gt;RPO = 0]
+ D --&amp;gt;|否| H{严格模式?}
+
+ H --&amp;gt;|否| C
+ H --&amp;gt;|是| F
+
+ style A fill:#dc3545,stroke:#b02a37,color:#fff
+ style E fill:#F0AD4E,stroke:#146c43,color:#fff
+ style G fill:#198754,stroke:#146c43,color:#fff
+ style F fill:#BE002F,stroke:#565e64,color:#fff&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h2 id="保护模式"&gt;保护模式&lt;/h2&gt;
+&lt;p&gt;Pigsty 提供三种保护模式，以帮助用户在不同的 RPO 要求下进行利弊权衡，类似于 &lt;a href="https://docs.oracle.com/en/database/oracle/oracle-database/21/sbydb/oracle-data-guard-protection-modes.html"&gt;&lt;strong&gt;Oracle Data Guard&lt;/strong&gt;&lt;/a&gt; 的数据保护模式。&lt;/p&gt;</description></item><item><title>RTO 利弊权衡</title><link>https://pigsty.cc/docs/concept/ha/rto/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/concept/ha/rto/</guid><description>&lt;p&gt;&lt;strong&gt;RTO&lt;/strong&gt;（Recovery Time Objective，恢复时间目标）定义了在主库发生故障时，&lt;strong&gt;系统恢复写入能力所需的最长时间&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;对于核心交易系统这类可用性至关重要的场景，通常要求 RTO 尽可能短，例如一分钟内。&lt;/p&gt;
+&lt;p&gt;然而更短的 RTO 指标是有代价的，它会增加误切风险：网络抖动可能被误判为故障，导致不必要的故障切换。
+因此对于跨机房/跨地域部署的场景，通常需要放宽 RTO 要求（例如 1-2 分钟），以降低误切风险。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="利弊权衡"&gt;利弊权衡&lt;/h2&gt;
+&lt;p&gt;故障切换时的不可用时长上限由 &lt;a href="https://pigsty.cc/docs/pgsql/param#pg_rto"&gt;&lt;strong&gt;&lt;code&gt;pg_rto&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt; 参数控制。Pigsty 提供了四种预设的 RTO 模式：
+&lt;code&gt;fast&lt;/code&gt;、&lt;code&gt;norm&lt;/code&gt;、&lt;code&gt;safe&lt;/code&gt;、&lt;code&gt;wide&lt;/code&gt;，分别针对不同的网络条件与部署场景进行了优化，默认使用 &lt;code&gt;norm&lt;/code&gt; 模式（约 45 秒）。
+您也可以使用秒数直接指定 RTO 上限，系统会自动映射到最接近的模式。&lt;/p&gt;
+&lt;p&gt;当主库发生故障时，整个恢复流程涉及多个阶段：Patroni 检测故障、DCS 锁过期、新主选举、执行 promote、HAProxy 感知新主。
+减小 RTO 意味着缩短各阶段的超时时间，这会使集群对网络抖动更加敏感，从而增加误切风险。&lt;/p&gt;
+&lt;p&gt;您需要根据实际网络条件选择合适的模式，在 &lt;strong&gt;恢复速度&lt;/strong&gt; 与 &lt;strong&gt;误切风险&lt;/strong&gt; 之间取得平衡。
+网络质量越差，越应该选择保守的模式；网络质量越好，越可以选择激进的模式。&lt;/p&gt;
+&lt;pre class="mermaid"&gt;flowchart LR
+ A([主库故障]) --&amp;gt; B{Patroni&amp;lt;br/&amp;gt;检测到?}
+
+ B --&amp;gt;|PG崩溃| C[尝试本地重启]
+ B --&amp;gt;|节点宕机| D[等待 TTL 过期]
+
+ C --&amp;gt;|成功| E([本地恢复])
+ C --&amp;gt;|失败/超时| F[释放 Leader 锁]
+
+ D --&amp;gt; F
+ F --&amp;gt; G[从库竞选]
+ G --&amp;gt; H[执行 Promote]
+ H --&amp;gt; I[HAProxy 感知]
+ I --&amp;gt; J([服务恢复])
+
+ style A fill:#dc3545,stroke:#b02a37,color:#fff
+ style E fill:#198754,stroke:#146c43,color:#fff
+ style J fill:#198754,stroke:#146c43,color:#fff&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h2 id="四种模式"&gt;四种模式&lt;/h2&gt;
+&lt;p&gt;Pigsty 提供四种 RTO 模式，以帮助用户在不同的网络条件下进行利弊权衡。&lt;/p&gt;</description></item><item><title>服务接入</title><link>https://pigsty.cc/docs/concept/ha/svc/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/concept/ha/svc/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;分离读写操作，正确路由流量，稳定可靠地交付 PostgreSQL 集群提供的能力。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;a href="#%E6%9C%8D%E5%8A%A1%E6%A6%82%E8%BF%B0"&gt;服务&lt;/a&gt; 是一种抽象：它是数据库集群对外提供能力的形式，并封装了底层集群的细节。&lt;/p&gt;
+&lt;p&gt;服务对于生产环境中的 &lt;a href="#%E6%8E%A5%E5%85%A5%E6%9C%8D%E5%8A%A1"&gt;稳定接入&lt;/a&gt; 至关重要，在 &lt;a href="https://pigsty.cc/docs/concept/ha"&gt;高可用&lt;/a&gt; 集群自动故障时方显其价值，&lt;a href="#%E5%8D%95%E6%9C%BA%E7%94%A8%E6%88%B7"&gt;单机用户&lt;/a&gt; 通常不需要操心这个概念。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="单机用户"&gt;单机用户&lt;/h2&gt;
+&lt;p&gt;“服务” 的概念是给生产环境用的，个人用户/单机集群可以不折腾，直接拿实例名/IP地址访问数据库。&lt;/p&gt;
+&lt;p&gt;例如，Pigsty 默认的单节点 &lt;code&gt;pg-meta&lt;/code&gt;.&lt;code&gt;meta&lt;/code&gt; 数据库，就可以直接用下面三个不同的用户连接上去。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;psql postgres://dbuser_dba:DBUser.DBA@10.10.10.10/meta &lt;span style="color:#8f5902;font-style:italic"&gt;# 直接用 DBA 超级用户连上去&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;psql postgres://dbuser_meta:DBUser.Meta@10.10.10.10/meta &lt;span style="color:#8f5902;font-style:italic"&gt;# 用默认的业务管理员用户连上去&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;psql postgres://dbuser_view:DBUser.View@pg-meta/meta &lt;span style="color:#8f5902;font-style:italic"&gt;# 用默认的只读用户走实例域名连上去&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id="服务概述"&gt;服务概述&lt;/h2&gt;
+&lt;p&gt;在真实世界生产环境中，我们会使用基于复制的主从数据库集群。集群中有且仅有一个实例作为领导者（&lt;a href="https://pigsty.cc/docs/pgsql/config/cluster#%E8%AF%BB%E5%86%99%E4%B8%BB%E5%BA%93"&gt;主库&lt;/a&gt;）可以接受写入。
+而其他实例（&lt;a href="https://pigsty.cc/docs/pgsql/config/cluster#%E5%8F%AA%E8%AF%BB%E4%BB%8E%E5%BA%93"&gt;从库&lt;/a&gt;）则会从持续从集群领导者获取变更日志，与领导者保持一致。同时，从库还可以承载只读请求，在读多写少的场景下可以显著分担主库的负担，
+因此对集群的写入请求与只读请求进行区分，是一种十分常见的实践。&lt;/p&gt;
+&lt;p&gt;此外对于高频短连接的生产环境，我们还会通过连接池中间件（Pgbouncer）对请求进行池化，减少连接与后端进程的创建开销。但对于ETL与变更执行等场景，我们又需要绕过连接池，直接访问数据库。
+同时，高可用集群在故障时会出现故障切换（Failover），故障切换会导致集群的领导者出现变更。因此高可用的数据库方案要求写入流量可以自动适配集群的领导者变化。
+这些不同的访问需求（读写分离，池化与直连，故障切换自动适配）最终抽象出 &lt;strong&gt;服务&lt;/strong&gt; （Service）的概念。&lt;/p&gt;
+&lt;p&gt;通常来说，数据库集群都必须提供这种最基础的服务：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;读写服务（primary）&lt;/strong&gt; ：可以读写数据库&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;对于生产数据库集群，至少应当提供这两种服务：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;读写服务（primary）&lt;/strong&gt; ：写入数据：只能由主库所承载。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;只读服务（replica）&lt;/strong&gt; ：读取数据：可以由从库承载，没有从库时也可由主库承载&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;此外，根据具体的业务场景，可能还会有其他的服务，例如：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;默认直连服务（default）&lt;/strong&gt; ：允许（管理）用户，绕过连接池直接访问数据库的服务&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;离线从库服务（offline）&lt;/strong&gt; ：不承接线上只读流量的专用从库，用于ETL与分析查询&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;同步从库服务（standby）&lt;/strong&gt; ：没有复制延迟的只读服务，由 &lt;a href="https://pigsty.cc/docs/pgsql/config/cluster#%E5%90%8C%E6%AD%A5%E5%A4%87%E5%BA%93"&gt;同步备库&lt;/a&gt; /主库处理只读查询&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;延迟从库服务（delayed）&lt;/strong&gt; ：访问同一个集群在一段时间之前的旧数据，由 &lt;a href="https://pigsty.cc/docs/pgsql/config/cluster#%E5%BB%B6%E8%BF%9F%E9%9B%86%E7%BE%A4"&gt;延迟从库&lt;/a&gt; 来处理&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="接入服务"&gt;接入服务&lt;/h2&gt;
+&lt;p&gt;Pigsty的服务交付边界止步于集群的HAProxy，用户可以用各种手段访问这些负载均衡器。&lt;/p&gt;
+&lt;p&gt;典型的做法是使用 DNS 或 VIP 接入，将其绑定在集群所有或任意数量的负载均衡器上。&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://pigsty.cc/img/pigsty/access.jpg" alt="pigsty-access.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;你可以使用不同的 主机 &amp;amp; 端口 组合，它们以不同的方式提供 PostgreSQL 服务。&lt;/p&gt;</description></item></channel></rss>

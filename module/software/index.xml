@@ -1,0 +1,597 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>SOFTWARE on PIGSTY</title><link>https://pigsty.cc/module/software/</link><description>Recent content in SOFTWARE on PIGSTY</description><generator>Hugo</generator><language>zh-CN</language><lastBuildDate>Sat, 14 Feb 2026 08:23:51 +0800</lastBuildDate><atom:link href="https://pigsty.cc/module/software/index.xml" rel="self" type="application/rss+xml"/><item><title>Supabase 企业级自建</title><link>https://pigsty.cc/docs/app/supabase/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/app/supabase/</guid><description>&lt;p&gt;Supabase 很好，拥有属于你自己的 supabase 则好上加好。
+Pigsty 可以帮助您在自己的服务器上（物理机/虚拟机/云服务器），一键自建企业级 supabase
+—— 更多扩展，更好性能，更深入的控制，更合算的成本。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Pigsty 是 Supabase 官网文档上列举的三种自建部署之一：&lt;a href="https://supabase.com/docs/guides/self-hosting#third-party-guides"&gt;Self-hosting: Third-Party Guides&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;本教程需要您有 Linux 基础知识，否则建议直接使用 Supabase 云服务或 “Docker Compose” 自建。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="简短版本"&gt;简短版本&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://pigsty.cc/docs/deploy/prepare"&gt;准备&lt;/a&gt; &lt;a href="https://pigsty.cc/docs/deploy/prepare"&gt;&lt;strong&gt;Linux 系统&lt;/strong&gt;&lt;/a&gt;，执行 Pigsty &lt;a href="https://pigsty.cc/docs/setup/install"&gt;&lt;strong&gt;标准单机安装&lt;/strong&gt;&lt;/a&gt; 流程，选择 &lt;code&gt;supabase&lt;/code&gt; 配置模板，依次执行：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;curl -fsSL https://repo.pigsty.cc/get &lt;span style="color:#000;font-weight:bold"&gt;|&lt;/span&gt; bash&lt;span style="color:#000;font-weight:bold"&gt;;&lt;/span&gt; &lt;span style="color:#204a87"&gt;cd&lt;/span&gt; ~/pigsty
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;./configure -c supabase &lt;span style="color:#8f5902;font-style:italic"&gt;# 使用 supabase 配置（请在 pigsty.yml 中更改凭据）&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;vi pigsty.yml &lt;span style="color:#8f5902;font-style:italic"&gt;# 编辑域名、密码、密钥...&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;./deploy.yml &lt;span style="color:#8f5902;font-style:italic"&gt;# 标准单机部署 pigsty&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;./docker.yml &lt;span style="color:#8f5902;font-style:italic"&gt;# 安装 docker 模块&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;./app.yml &lt;span style="color:#8f5902;font-style:italic"&gt;# 使用 docker 启动 supabase 无状态部分（可能较慢）&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;安装完毕后，使用浏览器访问 &lt;code&gt;8000&lt;/code&gt; 端口造访 Supa Studio，用户名 &lt;code&gt;supabase&lt;/code&gt;，密码 &lt;code&gt;pigsty&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://pigsty.cc/img/pigsty/supabase.webp" alt=""&gt;&lt;/p&gt;
+&lt;div id="asciinema-913fe6b5e34ef94a5d10a82176a4fd69" class="asciinema-container td-max-width-on-larger-screens" style="margin: 1em 0;"&gt;&lt;/div&gt;
+
+&lt;script&gt;
+(function() {
+ var containerId = "asciinema-913fe6b5e34ef94a5d10a82176a4fd69";
+ var castURL = "\/demo\/supabase.cast";
+ var configuredTheme = "auto";
+ var player = null;
+
+ 
+ function detectTheme() {
+ var htmlTheme = document.documentElement.getAttribute("data-bs-theme");
+ if (htmlTheme === "dark") return "solarized-dark";
+ if (htmlTheme === "light") return "solarized-light";
+ 
+ if (window.matchMedia &amp;&amp; window.matchMedia("(prefers-color-scheme: dark)").matches) {
+ return "solarized-dark";
+ }
+ return "solarized-light";
+ }
+
+ function getTheme() {
+ if (configuredTheme === "auto") {
+ return detectTheme();
+ }
+ return configuredTheme;
+ }
+
+ function createPlayer() {
+ var container = document.getElementById(containerId);
+ 
+ container.innerHTML = "";
+
+ var opts = {
+ theme: getTheme(),
+ speed: "1.3",
+ startAt: 0 ,
+ fit: "width"
+ };
+ opts.autoPlay = true;
+ opts.loop = true;
+ opts.markers = [[ 0 , "检查环境"],[ 11 , "安装"],[ 43 , "配置"],[ 307 , "Docker"],[ 321 , "域名"],[ 340 , "App"],[ 350 , "检查"]];
+
+ player = AsciinemaPlayer.create(castURL, container, opts);
+ }
+
+ 
+ createPlayer();
+
+ 
+ if (configuredTheme === "auto") {
+ 
+ var observer = new MutationObserver(function(mutations) {
+ mutations.forEach(function(mutation) {
+ if (mutation.attributeName === "data-bs-theme") {
+ createPlayer();
+ }
+ });
+ });
+ observer.observe(document.documentElement, { attributes: true });
+
+ 
+ if (window.matchMedia) {
+ window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", function() {
+ 
+ var htmlTheme = document.documentElement.getAttribute("data-bs-theme");
+ if (!htmlTheme || htmlTheme === "auto") {
+ createPlayer();
+ }
+ });
+ }
+ }
+})();
+&lt;/script&gt;
+
+&lt;hr&gt;
+&lt;h2 id="检查清单"&gt;检查清单&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input disabled="" type="checkbox"&gt; 至少一台 1C2G 的服务器&lt;/li&gt;
+&lt;li&gt;&lt;input disabled="" type="checkbox"&gt; 带有静态内网 IPv4 地址&lt;/li&gt;
+&lt;li&gt;&lt;input disabled="" type="checkbox"&gt; 安装支持的 &lt;a href="https://pigsty.cc/docs/ref/linux"&gt;&lt;strong&gt;Linux 发行版&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;input disabled="" type="checkbox"&gt; &lt;a href="https://pigsty.cc/docs/setup/install"&gt;&lt;strong&gt;标准安装&lt;/strong&gt;&lt;/a&gt; Pigsty&lt;/li&gt;
+&lt;li&gt;&lt;input disabled="" type="checkbox"&gt; 修改配置文件，域名，密码，IP 地址&lt;/li&gt;
+&lt;li&gt;&lt;input disabled="" type="checkbox"&gt; &lt;a href="https://pigsty.cc/docs/docker"&gt;&lt;strong&gt;安装 Docker 模块&lt;/strong&gt;&lt;/a&gt;，确保代理/镜像站可用&lt;/li&gt;
+&lt;li&gt;&lt;input disabled="" type="checkbox"&gt; 使用 Pigsty 提供的 &lt;a href="https://pigsty.cc/docs/docker/playbook"&gt;&lt;code&gt;app.yml&lt;/code&gt;&lt;/a&gt; 拉起 Supabase&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="目录"&gt;目录&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#supabase%E6%98%AF%E4%BB%80%E4%B9%88"&gt;Supabase是什么？&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E8%87%AA%E5%BB%BA"&gt;为什么要自建它？&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#%E5%8D%95%E8%8A%82%E7%82%B9%E8%87%AA%E5%BB%BA%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B"&gt;单机自建快速上手&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#%E8%BF%9B%E9%98%B6%E4%B8%BB%E9%A2%98%E5%AE%89%E5%85%A8%E5%8A%A0%E5%9B%BA"&gt;进阶主题：安全加固&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#%E8%BF%9B%E9%98%B6%E4%B8%BB%E9%A2%98%E5%9F%9F%E5%90%8D%E6%8E%A5%E5%85%A5"&gt;进阶主题：域名接入&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#%E8%BF%9B%E9%98%B6%E4%B8%BB%E9%A2%98%E5%A4%96%E9%83%A8%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8"&gt;进阶主题：外部对象存储&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#%E8%BF%9B%E9%98%B6%E4%B8%BB%E9%A2%98%E4%BD%BF%E7%94%A8smtp"&gt;进阶主题：使用SMTP&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#%E8%BF%9B%E9%98%B6%E4%B8%BB%E9%A2%98%E7%9C%9F%E9%AB%98%E5%8F%AF%E7%94%A8"&gt;进阶主题：真·高可用&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="supabase是什么"&gt;Supabase是什么？&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://supabase.com/"&gt;Supabase&lt;/a&gt; 是一个 BaaS （Backend as Service），开源的 Firebase，是 AI Agent 时代最火爆的数据库 + 后端解决方案。
+Supabase 对 PostgreSQL 进行了封装，并提供了身份认证，消息传递，边缘函数，对象存储，并基于 PG 数据库模式自动生成 REST API 与 GraphQL API。&lt;/p&gt;</description></item><item><title>Odoo：自建开源 ERP</title><link>https://pigsty.cc/docs/app/odoo/</link><pubDate>Sun, 23 Jun 2024 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/app/odoo/</guid><description>&lt;p&gt;&lt;a href="https://www.odoo.com/"&gt;Odoo&lt;/a&gt; 是一个开源企业资源规划 (ERP) 软件，提供一整套业务应用程序，包括 CRM、销售、采购、库存、生产、会计和其他管理功能。Odoo 是一个典型的 Web 应用程序，使用 PostgreSQL 作为底层数据库。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;您的所有业务，都在一个平台上，简单、高效且实惠&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;公开演示（不一定开放）：http://odoo.pigsty.io, 用户名: &lt;code&gt;test@pigsty.io&lt;/code&gt;, 密码: &lt;code&gt;pigsty&lt;/code&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="快速开始"&gt;快速开始&lt;/h2&gt;
+&lt;p&gt;在运行兼容操作系统的全新 Linux x86 / ARM 服务器上执行：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;curl -fsSL https://repo.pigsty.io/get &lt;span style="color:#000;font-weight:bold"&gt;|&lt;/span&gt; bash&lt;span style="color:#000;font-weight:bold"&gt;;&lt;/span&gt; &lt;span style="color:#204a87"&gt;cd&lt;/span&gt; ~/pigsty
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;./bootstrap &lt;span style="color:#8f5902;font-style:italic"&gt;# 安装 ansible&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;./configure -c app/odoo &lt;span style="color:#8f5902;font-style:italic"&gt;# 使用 odoo 配置（请在 pigsty.yml 中更改凭据）&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;./deploy.yml &lt;span style="color:#8f5902;font-style:italic"&gt;# 安装 pigsty&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;./docker.yml &lt;span style="color:#8f5902;font-style:italic"&gt;# 安装 docker compose&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;./app.yml &lt;span style="color:#8f5902;font-style:italic"&gt;# 使用 docker 启动 odoo 无状态部分&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Odoo 默认监听在 8069 端口，您可以通过浏览器访问 &lt;code&gt;http://&amp;lt;ip&amp;gt;:8069&lt;/code&gt;。默认的用户名和密码都是 &lt;code&gt;admin&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;您可以在浏览器所在主机（&lt;code&gt;/etc/hosts&lt;/code&gt;）添加一条解析记录 &lt;code&gt;odoo.pigsty&lt;/code&gt; 指向您的服务器，这样您就可以通过 &lt;code&gt;http://odoo.pigsty&lt;/code&gt; 访问 Odoo 网络界面了。&lt;/p&gt;
+&lt;p&gt;如果您想要通过 SSL/HTTPS 访问 Odoo，您需要使用真正的 SSL 证书，或者信任 Pigsty 自动生成的自签名 CA 证书。（当然，在 Chrome 浏览器中，您也可以使用敲击键入 &lt;code&gt;thisisunsafe&lt;/code&gt; 来绕过证书验证）&lt;/p&gt;</description></item><item><title>Dify：AI 工作流平台</title><link>https://pigsty.cc/docs/app/dify/</link><pubDate>Sun, 23 Jun 2024 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/app/dify/</guid><description>&lt;p&gt;&lt;a href="https://dify.ai/zh"&gt;&lt;strong&gt;Dify&lt;/strong&gt;&lt;/a&gt; 是一个生成式 AI 应用创新引擎和开源 LLM 应用开发平台。它提供从 Agent 构建到 AI 工作流编排、RAG 检索和模型管理的能力，帮助用户轻松构建和运营生成式 AI 原生应用程序。&lt;/p&gt;
+&lt;p&gt;Pigsty 提供对自托管 Dify 的支持，允许您使用单个命令部署 Dify，同时将关键状态存储在外部管理的 PostgreSQL 中。您可以在同一个 PostgreSQL 实例中使用 pgvector 作为向量数据库，进一步简化部署。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#%E5%BF%AB%E9%80%9F%E5%BC%80%E5%A7%8B"&gt;快速开始&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E8%87%AA%E6%89%98%E7%AE%A1"&gt;为什么要自托管&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#%E5%AE%89%E8%A3%85"&gt;安装&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#%E9%85%8D%E7%BD%AE"&gt;配置&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#%E6%A3%80%E6%9F%A5%E6%B8%85%E5%8D%95"&gt;检查清单&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#%E5%9F%9F%E5%90%8D%E5%92%8C-ssl"&gt;域名和 SSL&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#%E6%96%87%E4%BB%B6%E5%A4%87%E4%BB%BD"&gt;文件备份&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;当前 Pigsty v4.1 支持 Dify 版本：v1.8.1&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id="快速开始"&gt;快速开始&lt;/h2&gt;
+&lt;p&gt;在运行 &lt;a href="https://pigsty.cc/docs/deploy/prepare"&gt;&lt;strong&gt;兼容操作系统&lt;/strong&gt;&lt;/a&gt; 的全新 Linux x86 / ARM 服务器上执行：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;curl -fsSL https://repo.pigsty.cc/get &lt;span style="color:#000;font-weight:bold"&gt;|&lt;/span&gt; bash&lt;span style="color:#000;font-weight:bold"&gt;;&lt;/span&gt; &lt;span style="color:#204a87"&gt;cd&lt;/span&gt; ~/pigsty
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;./bootstrap &lt;span style="color:#8f5902;font-style:italic"&gt;# 安装 Pigsty 依赖&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;./configure -c app/dify &lt;span style="color:#8f5902;font-style:italic"&gt;# 使用 Dify 配置模板&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;vi pigsty.yml &lt;span style="color:#8f5902;font-style:italic"&gt;# 编辑密码、域名、密钥等&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;./deploy.yml &lt;span style="color:#8f5902;font-style:italic"&gt;# 安装 Pigsty&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;./docker.yml &lt;span style="color:#8f5902;font-style:italic"&gt;# 安装 Docker 和 Compose&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;./app.yml &lt;span style="color:#8f5902;font-style:italic"&gt;# 安装 Dify&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Dify 默认监听端口 &lt;code&gt;5001&lt;/code&gt;。您可以通过浏览器访问 &lt;code&gt;http://&amp;lt;ip&amp;gt;:5001&lt;/code&gt; 并设置您的初始用户凭据来登录。&lt;/p&gt;</description></item><item><title>NocoDB：开源 Airtable</title><link>https://pigsty.cc/docs/app/nocodb/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/app/nocodb/</guid><description>&lt;p&gt;&lt;a href="https://nocodb.com/"&gt;&lt;strong&gt;NocoDB&lt;/strong&gt;&lt;/a&gt; 是一个开源的 Airtable 替代方案，可以将任何数据库转变为智能电子表格。&lt;/p&gt;
+&lt;p&gt;它提供了丰富的用户界面，让您无需编写代码即可创建强大的数据库应用。NocoDB 支持 PostgreSQL、MySQL、SQL Server 等多种数据库，是构建内部工具和数据管理系统的理想选择。&lt;/p&gt;
+&lt;h2 id="快速开始"&gt;快速开始&lt;/h2&gt;
+&lt;p&gt;在 Pigsty 软件模板目录中提供了 NocoDB 的 Docker Compose 配置文件：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#204a87"&gt;cd&lt;/span&gt; ~/pigsty/app/nocodb
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;检查并修改 &lt;code&gt;.env&lt;/code&gt; 配置文件（根据需要调整数据库连接等配置）。&lt;/p&gt;
+&lt;p&gt;启动服务：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;make up &lt;span style="color:#8f5902;font-style:italic"&gt;# 使用 Docker Compose 启动 NocoDB&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;访问 NocoDB：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;默认地址： &lt;a href="http://nocodb.pigsty"&gt;http://nocodb.pigsty&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;备用地址： http://10.10.10.10:8080&lt;/li&gt;
+&lt;li&gt;首次访问需要创建管理员账户&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="管理命令"&gt;管理命令&lt;/h2&gt;
+&lt;p&gt;Pigsty 提供了便捷的 Makefile 命令来管理 NocoDB 服务：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;make up &lt;span style="color:#8f5902;font-style:italic"&gt;# 启动 NocoDB 服务&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;make run &lt;span style="color:#8f5902;font-style:italic"&gt;# 使用 Docker 启动（连接外部 PostgreSQL）&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;make view &lt;span style="color:#8f5902;font-style:italic"&gt;# 显示 NocoDB 访问地址&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;make log &lt;span style="color:#8f5902;font-style:italic"&gt;# 查看容器日志&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;make info &lt;span style="color:#8f5902;font-style:italic"&gt;# 查看服务详细信息&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;make stop &lt;span style="color:#8f5902;font-style:italic"&gt;# 停止服务&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;make clean &lt;span style="color:#8f5902;font-style:italic"&gt;# 停止并移除容器&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;make pull &lt;span style="color:#8f5902;font-style:italic"&gt;# 拉取最新镜像&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;make rmi &lt;span style="color:#8f5902;font-style:italic"&gt;# 移除 NocoDB 镜像&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;make save &lt;span style="color:#8f5902;font-style:italic"&gt;# 保存镜像到 /tmp/nocodb.tgz&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;make load &lt;span style="color:#8f5902;font-style:italic"&gt;# 从 /tmp/nocodb.tgz 加载镜像&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="连接-postgresql"&gt;连接 PostgreSQL&lt;/h2&gt;
+&lt;p&gt;NocoDB 可以连接到 Pigsty 管理的 PostgreSQL 数据库。&lt;/p&gt;</description></item><item><title>Teable：AI 无代码数据库</title><link>https://pigsty.cc/docs/app/teable/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/app/teable/</guid><description>&lt;p&gt;&lt;a href="https://teable.io/"&gt;&lt;strong&gt;Teable&lt;/strong&gt;&lt;/a&gt; 是一个 AI 驱动的无代码数据库平台，专为团队协作和自动化而设计。&lt;/p&gt;
+&lt;p&gt;Teable 将数据库的强大功能与电子表格的易用性完美结合，并集成 AI 能力，帮助团队高效地生成、自动化和协作处理数据。&lt;/p&gt;
+&lt;h2 id="快速开始"&gt;快速开始&lt;/h2&gt;
+&lt;p&gt;Teable 需要完整的 Pigsty 环境支持（包括 PostgreSQL、Redis、MinIO）。&lt;/p&gt;
+&lt;h3 id="准备环境"&gt;准备环境&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#204a87"&gt;cd&lt;/span&gt; ~/pigsty
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;./bootstrap &lt;span style="color:#8f5902;font-style:italic"&gt;# 准备本地源与 Ansible&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;./configure -c app/teable &lt;span style="color:#8f5902;font-style:italic"&gt;# 重要：修改默认凭据！&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;./deploy.yml &lt;span style="color:#8f5902;font-style:italic"&gt;# 安装 Pigsty、PostgreSQL、MinIO&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;./redis.yml &lt;span style="color:#8f5902;font-style:italic"&gt;# 安装 Redis 实例&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;./docker.yml &lt;span style="color:#8f5902;font-style:italic"&gt;# 安装 Docker 与 Docker Compose&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;./app.yml &lt;span style="color:#8f5902;font-style:italic"&gt;# 使用 Docker Compose 安装 Teable&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="访问服务"&gt;访问服务&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;默认地址： &lt;a href="http://teable.pigsty"&gt;http://teable.pigsty&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;备用地址： http://10.10.10.10:3000&lt;/li&gt;
+&lt;li&gt;首次访问需要注册管理员账户&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="管理命令"&gt;管理命令&lt;/h2&gt;
+&lt;p&gt;在 Pigsty 软件模板目录中管理 Teable：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#204a87"&gt;cd&lt;/span&gt; ~/pigsty/app/teable
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;make up &lt;span style="color:#8f5902;font-style:italic"&gt;# 启动 Teable 服务&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;make down &lt;span style="color:#8f5902;font-style:italic"&gt;# 停止 Teable 服务&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;make log &lt;span style="color:#8f5902;font-style:italic"&gt;# 查看容器日志&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;make clean &lt;span style="color:#8f5902;font-style:italic"&gt;# 清理容器和数据&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="架构说明"&gt;架构说明&lt;/h2&gt;
+&lt;p&gt;Teable 依赖以下组件：&lt;/p&gt;</description></item><item><title>Gitea：自建简易代码托管平台</title><link>https://pigsty.cc/docs/app/gitea/</link><pubDate>Wed, 25 May 2022 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/app/gitea/</guid><description>&lt;p&gt;公开Demo地址：&lt;a href="http://git.pigsty.cc"&gt;http://git.pigsty.cc&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://pigsty.cc/img/docs/app/gitea.jpeg" alt=""&gt;&lt;/p&gt;
+&lt;h2 id="太长不看"&gt;太长；不看&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#204a87"&gt;cd&lt;/span&gt; ~/pigsty/app/gitea&lt;span style="color:#000;font-weight:bold"&gt;;&lt;/span&gt; make up
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;在本例中，Gitea 默认使用 8889 端口，您可以访问以下位置：&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://git.pigsty"&gt;http://git.pigsty&lt;/a&gt; 或 http://10.10.10.10:8889&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;make up &lt;span style="color:#8f5902;font-style:italic"&gt;# pull up gitea with docker-compose in minimal mode&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;make run &lt;span style="color:#8f5902;font-style:italic"&gt;# launch gitea with docker , local data dir and external PostgreSQL&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;make view &lt;span style="color:#8f5902;font-style:italic"&gt;# print gitea access point&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;make log &lt;span style="color:#8f5902;font-style:italic"&gt;# tail -f gitea logs&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;make info &lt;span style="color:#8f5902;font-style:italic"&gt;# introspect gitea with jq&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;make stop &lt;span style="color:#8f5902;font-style:italic"&gt;# stop gitea container&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;make clean &lt;span style="color:#8f5902;font-style:italic"&gt;# remove gitea container&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;make pull &lt;span style="color:#8f5902;font-style:italic"&gt;# pull latest gitea image&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;make rmi &lt;span style="color:#8f5902;font-style:italic"&gt;# remove gitea image&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;make save &lt;span style="color:#8f5902;font-style:italic"&gt;# save gitea image to /tmp/gitea.tgz&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;make load &lt;span style="color:#8f5902;font-style:italic"&gt;# load gitea image from /tmp&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="使用外部的postgresql"&gt;使用外部的PostgreSQL&lt;/h2&gt;
+&lt;p&gt;Pigsty默认使用容器内的 Sqlite 作为元数据存储，您可以让 Gitea 通过连接串环境变量使用外部的PostgreSQL&lt;/p&gt;</description></item><item><title>Wiki.js：维基百科站</title><link>https://pigsty.cc/docs/app/wiki/</link><pubDate>Wed, 25 May 2022 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/app/wiki/</guid><description>&lt;p&gt;公开Demo地址：&lt;a href="http://wiki.pigsty.cc"&gt;http://wiki.pigsty.cc&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://pigsty.cc/img/docs/app/wiki.jpg" alt=""&gt;&lt;/p&gt;
+&lt;h2 id="太长不看"&gt;太长;不看&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#204a87"&gt;cd&lt;/span&gt; app/wiki &lt;span style="color:#000;font-weight:bold"&gt;;&lt;/span&gt; docker-compose up -d
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="准备数据库"&gt;准备数据库&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-yaml" data-lang="yaml"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# postgres://dbuser_wiki:DBUser.Wiki@10.10.10.10:5432/wiki&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;- {&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;name: wiki, owner: dbuser_wiki, revokeconn: true , comment&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;wiki the api gateway database }&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;- {&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;name: dbuser_wiki, password: DBUser.Wiki , pgbouncer: true , roles&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;[&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;dbrole_admin ] }&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;bin/createuser pg-meta dbuser_wiki
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;bin/createdb pg-meta wiki
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="容器配置"&gt;容器配置&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-yaml" data-lang="yaml"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;version&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#4e9a06"&gt;&amp;#34;3&amp;#34;&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;services&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;wiki&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;container_name&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;wiki&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;image&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;requarks/wiki:2&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;environment&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;DB_TYPE&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;postgres&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;DB_HOST&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#0000cf;font-weight:bold"&gt;10.10.10.10&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;DB_PORT&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#0000cf;font-weight:bold"&gt;5432&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;DB_USER&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;dbuser_wiki&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;DB_PASS&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;DBUser.Wiki&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;DB_NAME&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;wiki&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;restart&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;unless-stopped&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;ports&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;- &lt;span style="color:#4e9a06"&gt;&amp;#34;9002:3000&amp;#34;&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="access"&gt;Access&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Default Port for wiki: 9002&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-yaml" data-lang="yaml"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# add to nginx_upstream&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;- {&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;name: wiki , domain: wiki.pigsty.cc , endpoint&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#4e9a06"&gt;&amp;#34;127.0.0.1:9002&amp;#34;&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;}&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;./infra.yml -t nginx_config
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;ansible all -b -a &lt;span style="color:#4e9a06"&gt;&amp;#39;nginx -s reload&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>Mattermost：开源 IM</title><link>https://pigsty.cc/docs/app/mattermost/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/app/mattermost/</guid><description>&lt;p&gt;&lt;a href="https://mattermost.com/"&gt;&lt;strong&gt;Mattermost&lt;/strong&gt;&lt;/a&gt; 是一个开源的团队协作和消息平台。&lt;/p&gt;
+&lt;p&gt;Mattermost 提供即时消息、文件共享、音视频通话等功能，是 Slack 和 Microsoft Teams 的开源替代方案，特别适合需要私有化部署的企业。&lt;/p&gt;
+&lt;h2 id="快速开始"&gt;快速开始&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#204a87"&gt;cd&lt;/span&gt; ~/pigsty/app/mattermost
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;make up &lt;span style="color:#8f5902;font-style:italic"&gt;# 使用 Docker Compose 启动 Mattermost&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;访问地址： &lt;a href="http://mattermost.pigsty"&gt;http://mattermost.pigsty&lt;/a&gt; 或 http://10.10.10.10:8065&lt;/p&gt;
+&lt;p&gt;首次访问需要创建管理员账户。&lt;/p&gt;
+&lt;h2 id="功能特性"&gt;功能特性&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;即时消息&lt;/strong&gt;：个人和群组聊天&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;频道管理&lt;/strong&gt;：公开和私有频道&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;文件共享&lt;/strong&gt;：安全的文件存储和共享&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;音视频通话&lt;/strong&gt;：内置通话功能&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;集成能力&lt;/strong&gt;：支持 Webhook、Bot、插件&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;移动应用&lt;/strong&gt;：iOS 和 Android 客户端&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;企业级&lt;/strong&gt;：SSO、LDAP、合规性功能&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="连接-postgresql"&gt;连接 PostgreSQL&lt;/h2&gt;
+&lt;p&gt;Mattermost 使用 PostgreSQL 存储数据，在配置中指定连接信息：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#000"&gt;MM_SQLSETTINGS_DRIVERNAME&lt;/span&gt;&lt;span style="color:#ce5c00;font-weight:bold"&gt;=&lt;/span&gt;postgres
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#000"&gt;MM_SQLSETTINGS_DATASOURCE&lt;/span&gt;&lt;span style="color:#ce5c00;font-weight:bold"&gt;=&lt;/span&gt;postgres://dbuser_mm:DBUser.MM@10.10.10.10:5432/mattermost
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="相关链接"&gt;相关链接&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Mattermost 官网： &lt;a href="https://mattermost.com/"&gt;https://mattermost.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;官方文档： &lt;a href="https://docs.mattermost.com/"&gt;https://docs.mattermost.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;GitHub 仓库： &lt;a href="https://github.com/mattermost/mattermost"&gt;https://github.com/mattermost/mattermost&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>Maybe：个人财务管理</title><link>https://pigsty.cc/docs/app/maybe/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/app/maybe/</guid><description>&lt;p&gt;&lt;a href="https://github.com/maybe-finance/maybe"&gt;&lt;strong&gt;Maybe&lt;/strong&gt;&lt;/a&gt; 是一个开源的个人财务管理应用。&lt;/p&gt;
+&lt;p&gt;Maybe 提供财务跟踪、预算管理、投资分析等功能，是 Mint 和 Personal Capital 的开源替代方案，让您完全掌控自己的财务数据。&lt;/p&gt;
+&lt;h2 id="快速开始"&gt;快速开始&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#204a87"&gt;cd&lt;/span&gt; ~/pigsty/app/maybe
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;cp .env.example .env
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;vim .env &lt;span style="color:#8f5902;font-style:italic"&gt;# 必须修改 SECRET_KEY_BASE&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;make up &lt;span style="color:#8f5902;font-style:italic"&gt;# 启动 Maybe 服务&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;访问地址： &lt;a href="http://maybe.pigsty"&gt;http://maybe.pigsty&lt;/a&gt; 或 http://10.10.10.10:5002&lt;/p&gt;
+&lt;h2 id="配置说明"&gt;配置说明&lt;/h2&gt;
+&lt;p&gt;在 &lt;code&gt;.env&lt;/code&gt; 文件中配置：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#000"&gt;SECRET_KEY_BASE&lt;/span&gt;&lt;span style="color:#ce5c00;font-weight:bold"&gt;=&lt;/span&gt;your-secret-key-here &lt;span style="color:#8f5902;font-style:italic"&gt;# 必须修改！&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#000"&gt;DATABASE_URL&lt;/span&gt;&lt;span style="color:#ce5c00;font-weight:bold"&gt;=&lt;/span&gt;postgresql://...
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;重要&lt;/strong&gt;：首次部署前必须修改 &lt;code&gt;SECRET_KEY_BASE&lt;/code&gt;！&lt;/p&gt;
+&lt;h2 id="功能特性"&gt;功能特性&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;账户管理&lt;/strong&gt;：追踪多个银行账户和信用卡&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;预算规划&lt;/strong&gt;：设置和跟踪预算&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;投资分析&lt;/strong&gt;：监控投资组合表现&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;账单提醒&lt;/strong&gt;：自动提醒即将到期的账单&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;隐私优先&lt;/strong&gt;：数据完全在您的控制之下&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="相关链接"&gt;相关链接&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;GitHub 仓库： &lt;a href="https://github.com/maybe-finance/maybe"&gt;https://github.com/maybe-finance/maybe&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>Metabase：BI 分析工具</title><link>https://pigsty.cc/docs/app/metabase/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/app/metabase/</guid><description>&lt;p&gt;&lt;a href="https://metabase.com/"&gt;&lt;strong&gt;Metabase&lt;/strong&gt;&lt;/a&gt; 是一个快速、易用的开源商业智能工具，让您的团队无需 SQL 知识即可探索和可视化数据。&lt;/p&gt;
+&lt;p&gt;Metabase 提供友好的用户界面和丰富的图表类型，支持连接多种数据库，是企业数据分析的理想选择。&lt;/p&gt;
+&lt;h2 id="快速开始"&gt;快速开始&lt;/h2&gt;
+&lt;p&gt;在 Pigsty 软件模板目录中提供了 Metabase 的 Docker Compose 配置文件：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#204a87"&gt;cd&lt;/span&gt; ~/pigsty/app/metabase
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;检查并修改 &lt;code&gt;.env&lt;/code&gt; 配置文件：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;vim .env &lt;span style="color:#8f5902;font-style:italic"&gt;# 检查配置，建议修改默认凭据&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;启动服务：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;make up &lt;span style="color:#8f5902;font-style:italic"&gt;# 使用 Docker Compose 启动 Metabase&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;访问 Metabase：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;默认地址： &lt;a href="http://metabase.pigsty"&gt;http://metabase.pigsty&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;备用地址： http://10.10.10.10:3001&lt;/li&gt;
+&lt;li&gt;首次访问需要完成初始化设置&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="管理命令"&gt;管理命令&lt;/h2&gt;
+&lt;p&gt;Pigsty 提供了便捷的 Makefile 命令来管理 Metabase 服务：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;make up &lt;span style="color:#8f5902;font-style:italic"&gt;# 启动 Metabase 服务&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;make run &lt;span style="color:#8f5902;font-style:italic"&gt;# 使用 Docker 启动（连接外部 PostgreSQL）&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;make view &lt;span style="color:#8f5902;font-style:italic"&gt;# 显示 Metabase 访问地址&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;make log &lt;span style="color:#8f5902;font-style:italic"&gt;# 查看容器日志&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;make info &lt;span style="color:#8f5902;font-style:italic"&gt;# 查看服务详细信息&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;make stop &lt;span style="color:#8f5902;font-style:italic"&gt;# 停止服务&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;make clean &lt;span style="color:#8f5902;font-style:italic"&gt;# 停止并移除容器&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;make pull &lt;span style="color:#8f5902;font-style:italic"&gt;# 拉取最新镜像&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;make rmi &lt;span style="color:#8f5902;font-style:italic"&gt;# 移除 Metabase 镜像&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;make save &lt;span style="color:#8f5902;font-style:italic"&gt;# 保存镜像到文件&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;make load &lt;span style="color:#8f5902;font-style:italic"&gt;# 从文件加载镜像&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="连接-postgresql"&gt;连接 PostgreSQL&lt;/h2&gt;
+&lt;p&gt;Metabase 可以连接到 Pigsty 管理的 PostgreSQL 数据库。&lt;/p&gt;</description></item><item><title>Kong：API 网关</title><link>https://pigsty.cc/docs/app/kong/</link><pubDate>Sat, 21 May 2022 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/app/kong/</guid><description>&lt;p&gt;&lt;img src="https://pigsty.cc/img/docs/app/kong.jpeg" alt=""&gt;&lt;/p&gt;
+&lt;h2 id="tldr"&gt;TL;DR&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#204a87"&gt;cd&lt;/span&gt; app/kong &lt;span style="color:#000;font-weight:bold"&gt;;&lt;/span&gt; docker-compose up -d
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;make up &lt;span style="color:#8f5902;font-style:italic"&gt;# pull up kong with docker-compose&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;make ui &lt;span style="color:#8f5902;font-style:italic"&gt;# run swagger ui container&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;make log &lt;span style="color:#8f5902;font-style:italic"&gt;# tail -f kong logs&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;make info &lt;span style="color:#8f5902;font-style:italic"&gt;# introspect kong with jq&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;make stop &lt;span style="color:#8f5902;font-style:italic"&gt;# stop kong container&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;make clean &lt;span style="color:#8f5902;font-style:italic"&gt;# remove kong container&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;make rmui &lt;span style="color:#8f5902;font-style:italic"&gt;# remove swagger ui container&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;make pull &lt;span style="color:#8f5902;font-style:italic"&gt;# pull latest kong image&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;make rmi &lt;span style="color:#8f5902;font-style:italic"&gt;# remove kong image&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;make save &lt;span style="color:#8f5902;font-style:italic"&gt;# save kong image to /tmp/kong.tgz&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;make load &lt;span style="color:#8f5902;font-style:italic"&gt;# load kong image from /tmp&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="scripts"&gt;Scripts&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Default Port: 8000&lt;/li&gt;
+&lt;li&gt;Default SSL Port: 8443&lt;/li&gt;
+&lt;li&gt;Default Admin Port: 8001&lt;/li&gt;
+&lt;li&gt;Default Postgres Database: &lt;code&gt;postgres://dbuser_kong:DBUser.Kong@10.10.10.10:5432/kong&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-yaml" data-lang="yaml"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# postgres://dbuser_kong:DBUser.Kong@10.10.10.10:5432/kong&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;- {&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;name: kong, owner: dbuser_kong, revokeconn: true , comment&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;kong the api gateway database }&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;- {&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;name: dbuser_kong, password: DBUser.Kong , pgbouncer: true , roles&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;[&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;dbrole_admin ] }&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>Registry：容器镜像仓库</title><link>https://pigsty.cc/docs/app/registry/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/app/registry/</guid><description>&lt;p&gt;&lt;a href="https://docs.docker.com/registry/"&gt;&lt;strong&gt;Docker Registry&lt;/strong&gt;&lt;/a&gt; 镜像服务用于缓存 Docker Hub 和其他镜像仓库的镜像。&lt;/p&gt;
+&lt;p&gt;特别适合中国用户或访问 Docker Hub 速度较慢的地区，显著减少镜像拉取时间。&lt;/p&gt;
+&lt;h2 id="快速开始"&gt;快速开始&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#204a87"&gt;cd&lt;/span&gt; ~/pigsty/app/registry
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;make up &lt;span style="color:#8f5902;font-style:italic"&gt;# 启动 Registry 镜像服务&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;访问地址： &lt;a href="http://registry.pigsty"&gt;http://registry.pigsty&lt;/a&gt; 或 http://10.10.10.10:5000&lt;/p&gt;
+&lt;h2 id="功能特性"&gt;功能特性&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;镜像缓存&lt;/strong&gt;：缓存 Docker Hub 和其他仓库的镜像&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Web 界面&lt;/strong&gt;：可选的镜像管理界面&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;高性能&lt;/strong&gt;：本地缓存大幅提升拉取速度&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;存储管理&lt;/strong&gt;：可配置的清理和管理策略&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;健康检查&lt;/strong&gt;：内置健康检查端点&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="配置-docker"&gt;配置 Docker&lt;/h2&gt;
+&lt;p&gt;配置 Docker 使用本地镜像：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 编辑 /etc/docker/daemon.json&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ce5c00;font-weight:bold"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#4e9a06"&gt;&amp;#34;registry-mirrors&amp;#34;&lt;/span&gt;: &lt;span style="color:#ce5c00;font-weight:bold"&gt;[&lt;/span&gt;&lt;span style="color:#4e9a06"&gt;&amp;#34;http://10.10.10.10:5000&amp;#34;&lt;/span&gt;&lt;span style="color:#ce5c00;font-weight:bold"&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ce5c00;font-weight:bold"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 重启 Docker&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;systemctl restart docker
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="存储管理"&gt;存储管理&lt;/h2&gt;
+&lt;p&gt;镜像数据存储在 &lt;code&gt;/data/registry&lt;/code&gt; 目录，建议预留至少 100GB 空间。&lt;/p&gt;
+&lt;h2 id="相关链接"&gt;相关链接&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Docker Registry 文档： &lt;a href="https://docs.docker.com/registry/"&gt;https://docs.docker.com/registry/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;GitHub 仓库： &lt;a href="https://github.com/distribution/distribution"&gt;https://github.com/distribution/distribution&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>ByteBase：模式迁移</title><link>https://pigsty.cc/docs/app/bytebase/</link><pubDate>Fri, 20 May 2022 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/app/bytebase/</guid><description>&lt;h2 id="bytebase"&gt;ByteBase&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://bytebase.com/"&gt;ByteBase&lt;/a&gt; 是一个进行数据库模式变更的工具，以下命令将在元节点 8887 端口启动一个ByteBase。&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;mkdir -p /data/bytebase/data;
+docker run --init --name bytebase --restart always --detach --publish 8887:8887 --volume /data/bytebase/data:/var/opt/bytebase \
+ bytebase/bytebase:1.0.4 --data /var/opt/bytebase --host http://ddl.pigsty --port 8887
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;访问 http://10.10.10.10:8887/ 或 &lt;a href="http://ddl.pigsty/"&gt;http://ddl.pigsty&lt;/a&gt; 即可使用 ByteBase，您需要依次创建项目、环境、实例、数据库，即可开始进行模式变更。 公开Demo地址： &lt;a href="http://ddl.pigsty.cc"&gt;http://ddl.pigsty.cc&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;公开Demo地址：&lt;a href="http://ddl.pigsty.cc"&gt;http://ddl.pigsty.cc&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;默认用户名与密码： &lt;code&gt;admin&lt;/code&gt; / &lt;code&gt;pigsty&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://pigsty.cc/img/docs/app/bytebase.jpeg" alt=""&gt;&lt;/p&gt;
+&lt;h2 id="bytebase概览"&gt;Bytebase概览&lt;/h2&gt;
+&lt;p&gt;Schema Migrator for PostgreSQL&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#204a87"&gt;cd&lt;/span&gt; app/bytebase&lt;span style="color:#000;font-weight:bold"&gt;;&lt;/span&gt; make up
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Visit &lt;a href="http://ddl.pigsty"&gt;http://ddl.pigsty&lt;/a&gt; or http://10.10.10.10:8887&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;make up &lt;span style="color:#8f5902;font-style:italic"&gt;# pull up bytebase with docker-compose in minimal mode&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;make run &lt;span style="color:#8f5902;font-style:italic"&gt;# launch bytebase with docker , local data dir and external PostgreSQL&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;make view &lt;span style="color:#8f5902;font-style:italic"&gt;# print bytebase access point&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;make log &lt;span style="color:#8f5902;font-style:italic"&gt;# tail -f bytebase logs&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;make info &lt;span style="color:#8f5902;font-style:italic"&gt;# introspect bytebase with jq&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;make stop &lt;span style="color:#8f5902;font-style:italic"&gt;# stop bytebase container&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;make clean &lt;span style="color:#8f5902;font-style:italic"&gt;# remove bytebase container&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;make pull &lt;span style="color:#8f5902;font-style:italic"&gt;# pull latest bytebase image&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;make rmi &lt;span style="color:#8f5902;font-style:italic"&gt;# remove bytebase image&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;make save &lt;span style="color:#8f5902;font-style:italic"&gt;# save bytebase image to /tmp/bytebase.tgz&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;make load &lt;span style="color:#8f5902;font-style:italic"&gt;# load bytebase image from /tmp&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="使用外部的postgresql"&gt;使用外部的PostgreSQL&lt;/h2&gt;
+&lt;p&gt;Bytebase use its internal PostgreSQL database by default, You can use external PostgreSQL for higher durability.&lt;/p&gt;</description></item><item><title>PGAdmin：GUI 工具</title><link>https://pigsty.cc/docs/app/pgadmin/</link><pubDate>Mon, 25 Apr 2022 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/app/pgadmin/</guid><description>&lt;p&gt;&lt;a href="https://www.pgadmin.org/"&gt;pgAdmin&lt;/a&gt; 是最受欢迎且功能丰富的 PostgreSQL 开源管理和开发平台，PostgreSQL 是世界上最先进的开源数据库。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="快速开始"&gt;快速开始&lt;/h2&gt;
+&lt;p&gt;Pigsty 内置（但可选）支持 pgAdmin，它使用 &lt;a href="https://pigsty.cc/docs/docker"&gt;Docker&lt;/a&gt; Compose 启动 pgadmin：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;./docker.yml
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;./app.yml -e &lt;span style="color:#000"&gt;app&lt;/span&gt;&lt;span style="color:#ce5c00;font-weight:bold"&gt;=&lt;/span&gt;pgadmin
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;pgadmin 的默认端口是 &lt;code&gt;8885&lt;/code&gt;，您可以通过 IP:端口访问它：&lt;code&gt;http://10.10.10.10:8885&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;默认凭据在 &lt;a href="https://github.com/pgsty/pigsty/blob/main/app/pgadmin/.env"&gt;&lt;code&gt;.env&lt;/code&gt;&lt;/a&gt; 中定义，用户名：&lt;code&gt;admin@pigsty.cc&lt;/code&gt;，密码：&lt;code&gt;pigsty&lt;/code&gt;。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="自定义"&gt;自定义&lt;/h2&gt;
+&lt;p&gt;在 &lt;code&gt;/opt/pgadmin/.env&lt;/code&gt; 中自定义 pgadmin 配置并使用 &lt;code&gt;docker compose&lt;/code&gt; 管理它。&lt;/p&gt;
+&lt;p&gt;您还可以自定义 &lt;code&gt;apps&lt;/code&gt; 参数并使用以下方式覆盖默认 &lt;code&gt;.env&lt;/code&gt; 配置：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-yaml" data-lang="yaml"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;all&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;children&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;infra&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;hosts&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;10.10.10.10&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;{&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;infra_seq&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#0000cf;font-weight:bold"&gt;1&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;}&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;vars&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;docker_enabled&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;true&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;app&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;pgadmin &lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 指定要安装的应用程序名称（pgadmin）（在 apps 中）&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;apps&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 定义所有应用程序&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;pgadmin&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# pgadmin 应用程序的定义&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;conf&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 覆盖 /opt/pgadmin/.env&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;PGADMIN_DEFAULT_EMAIL&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;your@email.com&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;PGADMIN_DEFAULT_PASSWORD&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;yourPassword&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;PGADMIN_LISTEN_ADDRESS&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#0000cf;font-weight:bold"&gt;0.0.0.0&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;PGADMIN_PORT&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#0000cf;font-weight:bold"&gt;8885&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;PGADMIN_SERVER_JSON_FILE&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;/pgadmin4/servers.json&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;PGADMIN_REPLACE_SERVERS_ON_STARTUP&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;true&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;要启动应用程序，运行：&lt;/p&gt;</description></item><item><title>PGWeb：网页客户端</title><link>https://pigsty.cc/docs/app/pgweb/</link><pubDate>Fri, 18 Mar 2022 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/app/pgweb/</guid><description>&lt;h2 id="pgweb客户端工具"&gt;PGWeb客户端工具&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://github.com/sosedoff/pgweb"&gt;PGWeb&lt;/a&gt; 是一款基于浏览器的PG客户端工具，使用以下命令，在元节点上拉起PGWEB服务，默认为主机&lt;code&gt;8886&lt;/code&gt;端口。可使用域名： &lt;a href="http://cli.pigsty"&gt;http://cli.pigsty&lt;/a&gt; 访问，公开Demo：http://cli.pigsty.cc。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# docker stop pgweb; docker rm pgweb&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;docker run --init --name pgweb --restart always --detach --publish 8886:8081 sosedoff/pgweb
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;用户需要自行填写数据库连接串，例如默认CMDB的连接串：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;postgres://dbuser_dba:DBUser.DBA@10.10.10.10:5432/meta?sslmode=disable&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;公开Demo地址：&lt;a href="http://cli.pigsty.cc"&gt;http://cli.pigsty.cc&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://pigsty.cc/img/docs/app/pgweb.jpeg" alt=""&gt;&lt;/p&gt;
+&lt;p&gt;使用Docker Compose拉起PGWEB容器：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#204a87"&gt;cd&lt;/span&gt; ~/pigsty/app/pgweb &lt;span style="color:#000;font-weight:bold"&gt;;&lt;/span&gt; docker-compose up -d
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;接下来，访问您本机的 8886 端口，即可看到 PGWEB 的UI界面： http://10.10.10.10:8886&lt;/p&gt;
+&lt;p&gt;您可以尝试使用下面的URL连接串，通过 PGWEB 连接至数据库实例并进行探索。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;postgres://dbuser_meta:DBUser.Meta@10.10.10.10:5432/meta?sslmode&lt;span style="color:#ce5c00;font-weight:bold"&gt;=&lt;/span&gt;disable
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;postgres://test:test@10.10.10.11:5432/test?sslmode&lt;span style="color:#ce5c00;font-weight:bold"&gt;=&lt;/span&gt;disable
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="快捷方式"&gt;快捷方式&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;make up &lt;span style="color:#8f5902;font-style:italic"&gt;# pull up pgweb with docker-compose&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;make run &lt;span style="color:#8f5902;font-style:italic"&gt;# launch pgweb with docker&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;make view &lt;span style="color:#8f5902;font-style:italic"&gt;# print pgweb access point&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;make log &lt;span style="color:#8f5902;font-style:italic"&gt;# tail -f pgweb logs&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;make info &lt;span style="color:#8f5902;font-style:italic"&gt;# introspect pgweb with jq&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;make stop &lt;span style="color:#8f5902;font-style:italic"&gt;# stop pgweb container&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;make clean &lt;span style="color:#8f5902;font-style:italic"&gt;# remove pgweb container&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;make pull &lt;span style="color:#8f5902;font-style:italic"&gt;# pull latest pgweb image&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;make rmi &lt;span style="color:#8f5902;font-style:italic"&gt;# remove pgweb image&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;make save &lt;span style="color:#8f5902;font-style:italic"&gt;# save pgweb image to /tmp/pgweb.tgz&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;make load &lt;span style="color:#8f5902;font-style:italic"&gt;# load pgweb image from /tmp&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>PostgREST：自动 API</title><link>https://pigsty.cc/docs/app/postgrest/</link><pubDate>Sat, 21 May 2022 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/app/postgrest/</guid><description>&lt;h2 id="postgrest"&gt;PostgREST&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://postgrest.org/en/stable/index.html"&gt;PostgREST&lt;/a&gt; 是一个自动根据 PostgreSQL 数据库模式生成 REST API的二进制组件。&lt;/p&gt;
+&lt;p&gt;例如，以下命令将使用docker拉起 postgrest （本地 8884 端口，使用默认管理员用户，暴露Pigsty CMDB模式）&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;docker run --init --name postgrest --restart always --detach --publish 8884:8081 postgrest/postgrest
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;访问 &lt;a href="http://10.10.10.10:8884/"&gt;http://10.10.10.10:8884&lt;/a&gt; 会展示所有自动生成API的定义，并自动使用 &lt;a href="http://home.pigsty.cc:8883"&gt;Swagger Editor&lt;/a&gt; 暴露API文档。&lt;/p&gt;
+&lt;p&gt;如果您想要进行增删改查，设计更精细的权限控制，请参考 &lt;a href="https://postgrest.org/en/stable/tutorials/tut1.html"&gt;Tutorial 1 - The Golden Key&lt;/a&gt;，生成一个签名JWT。&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://pigsty.cc/img/docs/app/postgrest.jpeg" alt=""&gt;&lt;/p&gt;
+&lt;p&gt;This is an example of creating pigsty cmdb API with PostgREST&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#204a87"&gt;cd&lt;/span&gt; ~/pigsty/app/postgrest &lt;span style="color:#000;font-weight:bold"&gt;;&lt;/span&gt; docker-compose up -d
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;http://10.10.10.10:8884 is the default endpoint for PostgREST&lt;/p&gt;
+&lt;p&gt;http://10.10.10.10:8883 is the default api docs for PostgREST&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;make up &lt;span style="color:#8f5902;font-style:italic"&gt;# pull up postgrest with docker-compose&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;make run &lt;span style="color:#8f5902;font-style:italic"&gt;# launch postgrest with docker&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;make ui &lt;span style="color:#8f5902;font-style:italic"&gt;# run swagger ui container&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;make view &lt;span style="color:#8f5902;font-style:italic"&gt;# print postgrest access point&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;make log &lt;span style="color:#8f5902;font-style:italic"&gt;# tail -f postgrest logs&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;make info &lt;span style="color:#8f5902;font-style:italic"&gt;# introspect postgrest with jq&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;make stop &lt;span style="color:#8f5902;font-style:italic"&gt;# stop postgrest container&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;make clean &lt;span style="color:#8f5902;font-style:italic"&gt;# remove postgrest container&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;make rmui &lt;span style="color:#8f5902;font-style:italic"&gt;# remove swagger ui container&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;make pull &lt;span style="color:#8f5902;font-style:italic"&gt;# pull latest postgrest image&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;make rmi &lt;span style="color:#8f5902;font-style:italic"&gt;# remove postgrest image&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;make save &lt;span style="color:#8f5902;font-style:italic"&gt;# save postgrest image to /tmp/postgrest.tgz&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;make load &lt;span style="color:#8f5902;font-style:italic"&gt;# load postgrest image from /tmp&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="swagger-ui"&gt;Swagger UI&lt;/h2&gt;
+&lt;p&gt;Launch a swagger OpenAPI UI and visualize PostgREST API on 8883 with:&lt;/p&gt;</description></item><item><title>Electric：PGLite 同步引擎</title><link>https://pigsty.cc/docs/app/electric/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/app/electric/</guid><description>&lt;p&gt;&lt;a href="https://electric-sql.com/"&gt;&lt;strong&gt;Electric&lt;/strong&gt;&lt;/a&gt; 是一个 PostgreSQL 同步引擎，解决了数据同步的复杂问题。&lt;/p&gt;
+&lt;p&gt;Electric 支持部分复制、扇出传输和高效的数据交付，是构建实时应用和离线优先应用的理想选择。&lt;/p&gt;
+&lt;h2 id="快速开始"&gt;快速开始&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#204a87"&gt;cd&lt;/span&gt; ~/pigsty/app/electric
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;make up &lt;span style="color:#8f5902;font-style:italic"&gt;# 启动 Electric 服务&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;访问地址： &lt;a href="http://electric.pigsty"&gt;http://electric.pigsty&lt;/a&gt; 或 http://10.10.10.10:3000&lt;/p&gt;
+&lt;h2 id="功能特性"&gt;功能特性&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;部分复制&lt;/strong&gt;：只同步需要的数据&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;实时同步&lt;/strong&gt;：毫秒级数据更新&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;离线优先&lt;/strong&gt;：支持离线工作，自动同步&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;冲突解决&lt;/strong&gt;：自动处理数据冲突&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;类型安全&lt;/strong&gt;：TypeScript 支持&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="相关链接"&gt;相关链接&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Electric 官网： &lt;a href="https://electric-sql.com/"&gt;https://electric-sql.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;官方文档： &lt;a href="https://electric-sql.com/docs"&gt;https://electric-sql.com/docs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;GitHub 仓库： &lt;a href="https://github.com/electric-sql/electric"&gt;https://github.com/electric-sql/electric&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>Jupyter：笔记本 AI IDE</title><link>https://pigsty.cc/docs/app/jupyter/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/app/jupyter/</guid><description>&lt;p&gt;Jupyter Lab 是基于 IPython Notebook 的完整数据科学研发环境，可用于数据分析与可视化。&lt;/p&gt;
+&lt;p&gt;Pigsty 提供了 Docker Compose 模板，可以一键在容器中启动 Jupyter Lab 服务，并方便地访问 PostgreSQL 数据库。&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://pigsty.cc/img/docs/app/jupyter.jpeg" alt=""&gt;&lt;/p&gt;
+&lt;h2 id="快速开始"&gt;快速开始&lt;/h2&gt;
+&lt;p&gt;在 Pigsty 软件模板目录中提供了 Jupyter 的 Docker Compose 配置文件：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#204a87"&gt;cd&lt;/span&gt; ~/pigsty/app/jupyter
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;修改默认密码，编辑 &lt;code&gt;.env&lt;/code&gt; 文件中的 &lt;code&gt;JUPYTER_TOKEN&lt;/code&gt; 参数（默认值为 &lt;code&gt;pigsty&lt;/code&gt;）。&lt;/p&gt;
+&lt;p&gt;创建数据目录并启动服务：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;make dir &lt;span style="color:#8f5902;font-style:italic"&gt;# 创建 /data/jupyter 目录并设置权限&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;make up &lt;span style="color:#8f5902;font-style:italic"&gt;# 使用 Docker Compose 启动服务&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;访问 Jupyter Lab：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;默认地址： &lt;a href="http://lab.pigsty"&gt;http://lab.pigsty&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;备用地址： http://10.10.10.10:8888&lt;/li&gt;
+&lt;li&gt;默认 Token：&lt;code&gt;pigsty&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="管理命令"&gt;管理命令&lt;/h2&gt;
+&lt;p&gt;Pigsty 提供了便捷的 Makefile 命令来管理 Jupyter 服务：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;make up &lt;span style="color:#8f5902;font-style:italic"&gt;# 启动 Jupyter Lab 服务&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;make dir &lt;span style="color:#8f5902;font-style:italic"&gt;# 创建 /data/jupyter 数据目录&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;make log &lt;span style="color:#8f5902;font-style:italic"&gt;# 查看容器日志&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;make info &lt;span style="color:#8f5902;font-style:italic"&gt;# 显示服务信息&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;make stop &lt;span style="color:#8f5902;font-style:italic"&gt;# 停止服务&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;make clean &lt;span style="color:#8f5902;font-style:italic"&gt;# 停止并移除容器&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;make pull &lt;span style="color:#8f5902;font-style:italic"&gt;# 拉取最新镜像&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;make save &lt;span style="color:#8f5902;font-style:italic"&gt;# 保存 Docker 镜像到文件&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;make load &lt;span style="color:#8f5902;font-style:italic"&gt;# 从文件加载 Docker 镜像&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="访问-postgresql-数据库"&gt;访问 PostgreSQL 数据库&lt;/h2&gt;
+&lt;p&gt;在 Jupyter Lab 中访问 PostgreSQL 数据库需要先安装驱动。&lt;/p&gt;</description></item><item><title>Supabase</title><link>https://pigsty.cc/docs/pgsql/kernel/supabase/</link><pubDate>Sun, 23 Jun 2024 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/pgsql/kernel/supabase/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;&lt;a href="https://supabase.com/"&gt;Supabase&lt;/a&gt; —— Build in a weekend, Scale to millions&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Supabase 是一个开源的 Firebase 替代，对 PostgreSQL 进行了封装，并提供了认证，开箱即用的 API，边缘函数，实时订阅，对象存储，向量嵌入能力。
+这是一个低代码的一站式后端平台，能让你几乎告别大部分后端开发的工作，只需要懂数据库设计与前端即可快速出活！&lt;/p&gt;
+&lt;p&gt;Supabase 的口号是：“&lt;strong&gt;花个周末写写，随便扩容至百万&lt;/strong&gt;”。诚然，在小微规模（4c8g）内的 Supabase &lt;a href="https://supabase.com/pricing"&gt;极有性价比&lt;/a&gt;，堪称赛博菩萨。
+—— 但当你真的增长到百万用户时 —— 确实应该认真考虑托管自建 Supabase 了 —— 无论是出于功能，性能，还是成本上的考虑。&lt;/p&gt;
+&lt;p&gt;Pigsty 为您提供完整的 Supabase 一键自建方案。自建的 Supabase 可以享受完整的 PostgreSQL 监控，IaC，PITR 与高可用，
+而且相比 Supabase 云服务，提供了多达 &lt;a href="https://pgext.cloud"&gt;&lt;strong&gt;451&lt;/strong&gt;&lt;/a&gt; 个开箱即用的 PostgreSQL 扩展，并能够更充分地利用现代硬件的性能与成本优势。&lt;/p&gt;
+&lt;p&gt;完整自建教程，请参考：《&lt;a href="https://pigsty.cc/docs/app/supabase"&gt;&lt;strong&gt;Supabase自建手册&lt;/strong&gt;&lt;/a&gt;》&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://pigsty.cc/img/pigsty/supabase.webp" alt=""&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="快速上手"&gt;快速上手&lt;/h2&gt;
+&lt;p&gt;Pigsty 默认提供的 &lt;a href="https://github.com/Vonng/pigsty/blob/main/conf/supa.yml"&gt;&lt;code&gt;supa.yml&lt;/code&gt;&lt;/a&gt; 配置模板定义了一套单节点 Supabase。&lt;/p&gt;
+&lt;p&gt;首先，使用 Pigsty &lt;a href="https://pigsty.cc/docs/setup/install"&gt;标准安装流程&lt;/a&gt; 安装 Supabase 所需的 MinIO 与 PostgreSQL 实例：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; curl -fsSL https://repo.pigsty.io/get &lt;span style="color:#000;font-weight:bold"&gt;|&lt;/span&gt; bash
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;./bootstrap &lt;span style="color:#8f5902;font-style:italic"&gt;# 环境检查，安装依赖&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;./configure -c supa &lt;span style="color:#8f5902;font-style:italic"&gt;# 重要：请在配置文件中修改密码等关键信息！&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;./deploy.yml &lt;span style="color:#8f5902;font-style:italic"&gt;# 安装 Pigsty，拉起 PGSQL 与 MINIO！&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;请在部署 Supabase 前，根据您的实际情况，修改 &lt;code&gt;pigsty.yml&lt;/code&gt; 配置文件中 &lt;a href="#%E9%85%8D%E7%BD%AE%E7%BB%86%E8%8A%82"&gt;关于 Supabase 的参数&lt;/a&gt;（主要是密码！）&lt;/p&gt;</description></item><item><title>PostgresML</title><link>https://pigsty.cc/docs/pgsql/kernel/pgml/</link><pubDate>Sun, 23 Jun 2024 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/pgsql/kernel/pgml/</guid><description>&lt;p&gt;&lt;a href="https://postgresml.org/"&gt;PostgresML&lt;/a&gt; 是一个 PostgreSQL 扩展，支持最新的大语言模型（LLM）、向量操作、经典机器学习以及传统的 Postgres 应用负载。&lt;/p&gt;
+&lt;p&gt;PostgresML (pgml) 是一个用 Rust 编写的 PostgreSQL 扩展。您可以运行独立的 Docker 镜像，但本文档不是 docker-compose 模板介绍，仅供参考。&lt;/p&gt;
+&lt;p&gt;PostgresML 官方支持 Ubuntu 22.04，但我们也为 EL 8/9 维护了 RPM 版本，如果您不需要 CUDA 和 NVIDIA 相关功能的话。&lt;/p&gt;
+&lt;p&gt;您需要在数据库节点上能够访问互联网，以便从 PyPI 下载 Python 依赖，并从 HuggingFace 下载模型。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="配置"&gt;配置&lt;/h2&gt;
+&lt;p&gt;PostgresML 是一个用 Rust 编写的扩展，官方支持 Ubuntu。Pigsty 在 EL8 和 EL9 上维护了 PostgresML 的 RPM 版本。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;创建新集群&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;PostgresML 2.7.9 可用于 PostgreSQL 15，支持 Ubuntu 22.04（官方）、Debian 12 和 EL 8/9（Pigsty 维护）。要启用 &lt;code&gt;pgml&lt;/code&gt;，首先需要安装扩展：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-yaml" data-lang="yaml"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;pg-meta&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;hosts&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;{&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;10.10.10.10&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;{&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;pg_seq: 1, pg_role&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;primary } }&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;vars&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;pg_cluster&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;pg-meta&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;pg_users&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;- {&lt;span style="color:#204a87;font-weight:bold"&gt;name: dbuser_meta ,password: DBUser.Meta ,pgbouncer: true ,roles: [dbrole_admin] ,comment&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;pigsty admin user }&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;- {&lt;span style="color:#204a87;font-weight:bold"&gt;name: dbuser_view ,password: DBUser.Viewer ,pgbouncer: true ,roles: [dbrole_readonly] ,comment&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;read-only viewer for meta database }&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;pg_databases&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;- {&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;name: meta ,baseline: cmdb.sql ,comment: pigsty meta database ,schemas: [pigsty] ,extensions&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;[&lt;/span&gt;{&lt;span style="color:#204a87;font-weight:bold"&gt;name: postgis, schema&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;public}, {name: timescaledb}]}&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;pg_hba_rules&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;- {&lt;span style="color:#204a87;font-weight:bold"&gt;user: dbuser_view , db: all ,addr: infra ,auth: pwd ,title&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#4e9a06"&gt;&amp;#39;allow grafana dashboard access cmdb from infra nodes&amp;#39;&lt;/span&gt;}&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;pg_libs&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#4e9a06"&gt;&amp;#39;pgml, pg_stat_statements, auto_explain&amp;#39;&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;pg_extensions&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;[&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#4e9a06"&gt;&amp;#39;pgml_15 pgvector_15 wal2json_15 repack_15&amp;#39;&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;]&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# ubuntu&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;#pg_extensions: [ &amp;#39;postgresql-pgml-15 postgresql-15-pgvector postgresql-15-wal2json postgresql-15-repack&amp;#39; ] # ubuntu&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;在 EL 8/9 中，扩展名为 &lt;code&gt;pgml_15&lt;/code&gt;，对应的 Ubuntu/Debian 名称为 &lt;code&gt;postgresql-pgml-15&lt;/code&gt;。同时需要将 &lt;code&gt;pgml&lt;/code&gt; 添加到 &lt;code&gt;pg_libs&lt;/code&gt; 中。&lt;/p&gt;</description></item></channel></rss>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>FAQ on PIGSTY</title><link>https://pigsty.cc/categories/faq/</link><description>Recent content in FAQ on PIGSTY</description><generator>Hugo</generator><language>zh-CN</language><atom:link href="https://pigsty.cc/categories/faq/index.xml" rel="self" type="application/rss+xml"/><item><title>常见问题</title><link>https://pigsty.cc/docs/vibe/faq/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/vibe/faq/</guid><description>&lt;hr&gt;
+&lt;h2 id="部署问题"&gt;部署问题&lt;/h2&gt;
+&lt;h3 id="code-server-软件包找不到"&gt;code-server 软件包找不到&lt;/h3&gt;
+&lt;p&gt;确认已部署 &lt;a href="https://pigsty.cc/docs/node"&gt;&lt;code&gt;NODE&lt;/code&gt;&lt;/a&gt; 与仓库配置：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;yum repolist &lt;span style="color:#8f5902;font-style:italic"&gt;# EL&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;apt update &lt;span style="color:#8f5902;font-style:italic"&gt;# Debian/Ubuntu&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;./infra.yml -t repo
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="jupyterlab-安装失败"&gt;JupyterLab 安装失败&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;jupyter_venv&lt;/code&gt; 必须存在：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;uv venv /data/venv
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;./vibe.yml -l &amp;lt;host&amp;gt; -t jupyter
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id="访问问题"&gt;访问问题&lt;/h2&gt;
+&lt;h3 id="无法访问-code-或-jupyter"&gt;无法访问 &lt;code&gt;/code/&lt;/code&gt; 或 &lt;code&gt;/jupyter/&lt;/code&gt;&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;检查服务状态&lt;/li&gt;
+&lt;li&gt;检查端口监听&lt;/li&gt;
+&lt;li&gt;检查 Nginx 配置&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;systemctl status code-server
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;systemctl status jupyter
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;ss -tlnp &lt;span style="color:#000;font-weight:bold"&gt;|&lt;/span&gt; grep &lt;span style="color:#0000cf;font-weight:bold"&gt;8443&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;ss -tlnp &lt;span style="color:#000;font-weight:bold"&gt;|&lt;/span&gt; grep &lt;span style="color:#0000cf;font-weight:bold"&gt;8888&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;nginx -t
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="websocket-连接失败"&gt;WebSocket 连接失败&lt;/h3&gt;
+&lt;p&gt;确保 Nginx 配置启用 WebSocket（默认已配置）。
+若使用自定义 &lt;code&gt;infra_portal&lt;/code&gt;，需配置 &lt;code&gt;websocket: true&lt;/code&gt;。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="密码与-token"&gt;密码与 Token&lt;/h2&gt;
+&lt;h3 id="修改-code-server-密码"&gt;修改 Code-Server 密码&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;./vibe.yml -l &amp;lt;host&amp;gt; -e &lt;span style="color:#000"&gt;code_password&lt;/span&gt;&lt;span style="color:#ce5c00;font-weight:bold"&gt;=&lt;/span&gt;&lt;span style="color:#4e9a06"&gt;&amp;#39;NewPass&amp;#39;&lt;/span&gt; -t code_config,code_launch
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="修改-jupyterlab-token"&gt;修改 JupyterLab Token&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;./vibe.yml -l &amp;lt;host&amp;gt; -e &lt;span style="color:#000"&gt;jupyter_password&lt;/span&gt;&lt;span style="color:#ce5c00;font-weight:bold"&gt;=&lt;/span&gt;&lt;span style="color:#4e9a06"&gt;&amp;#39;NewToken&amp;#39;&lt;/span&gt; -t jupyter_config,jupyter_launch
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id="claude-code"&gt;Claude Code&lt;/h2&gt;
+&lt;h3 id="cli-找不到命令"&gt;CLI 找不到命令&lt;/h3&gt;
+&lt;p&gt;先检查 &lt;code&gt;nodejs_pkg&lt;/code&gt; 是否完成（默认会安装 &lt;code&gt;@anthropic-ai/claude-code&lt;/code&gt;）：&lt;/p&gt;</description></item></channel></rss>

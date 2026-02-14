@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>KAFKA on PIGSTY</title><link>https://pigsty.cc/module/kafka/</link><description>Recent content in KAFKA on PIGSTY</description><generator>Hugo</generator><language>zh-CN</language><atom:link href="https://pigsty.cc/module/kafka/index.xml" rel="self" type="application/rss+xml"/><item><title>模块：Kafka</title><link>https://pigsty.cc/docs/pilot/kafka/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/pilot/kafka/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;&lt;a href="https://kafka.apache.org/"&gt;Kafka&lt;/a&gt; 是一个开源的分布式流处理平台：&lt;a href="#%E5%AE%89%E8%A3%85"&gt;安装&lt;/a&gt; | &lt;a href="#%E9%85%8D%E7%BD%AE"&gt;配置&lt;/a&gt; | &lt;a href="#%E7%AE%A1%E7%90%86"&gt;管理&lt;/a&gt; | &lt;a href="#%E5%89%A7%E6%9C%AC"&gt;剧本&lt;/a&gt; | &lt;a href="#%E7%9B%91%E6%8E%A7"&gt;监控&lt;/a&gt; | &lt;a href="#%E5%8F%82%E6%95%B0"&gt;参数&lt;/a&gt; | &lt;a href="#%E8%B5%84%E6%BA%90"&gt;资源&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id="概览"&gt;概览&lt;/h2&gt;
+&lt;p&gt;Kafka 模块本身目前仅在 Pigsty 专业版中提供 Beta 试用预览。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="安装"&gt;安装&lt;/h2&gt;
+&lt;p&gt;如果您使用开源版 Pigsty，可以使用以下命令，在指定节点上安装 Kafka 及其 Java 依赖。&lt;/p&gt;
+&lt;p&gt;Pigsty 在官方 Infra 仓库中提供了 Kafka 3.8.0 的 RPM 与 DEB 安装包，如果需要使用，可以直接下载安装。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;./node.yml -t node_install -e &lt;span style="color:#4e9a06"&gt;&amp;#39;{&amp;#34;node_repo_modules&amp;#34;:&amp;#34;infra&amp;#34;,&amp;#34;node_packages&amp;#34;:[&amp;#34;kafka&amp;#34;]}&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Kafka 依赖 Java 运行环境，因此在安装 Kafka 时，需要安装可用的 JDK （默认使用 OpenJDK 17，但其他 JDK 与版本，例如 8，11 都可以使用）&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# EL7 (没有 JDK 17 支持)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;./node.yml -t node_install -e &lt;span style="color:#4e9a06"&gt;&amp;#39;{&amp;#34;node_repo_modules&amp;#34;:&amp;#34;node&amp;#34;,&amp;#34;node_packages&amp;#34;:[&amp;#34;java-11-openjdk-headless&amp;#34;]}&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# EL8 / EL9 (使用 OpenJDK 17 )&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;./node.yml -t node_install -e &lt;span style="color:#4e9a06"&gt;&amp;#39;{&amp;#34;node_repo_modules&amp;#34;:&amp;#34;node&amp;#34;,&amp;#34;node_packages&amp;#34;:[&amp;#34;java-17-openjdk-headless&amp;#34;]}&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# Debian / Ubuntu (使用 OpenJDK 17)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;./node.yml -t node_install -e &lt;span style="color:#4e9a06"&gt;&amp;#39;{&amp;#34;node_repo_modules&amp;#34;:&amp;#34;node&amp;#34;,&amp;#34;node_packages&amp;#34;:[&amp;#34;openjdk-17-jdk&amp;#34;]}&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id="配置"&gt;配置&lt;/h2&gt;
+&lt;p&gt;单节点 Kafka 配置样例，请注意，在 Pigsty 单机部署模式下，管理节点上的 9093 端口默认已经被 AlertManager 占用。&lt;/p&gt;</description></item></channel></rss>

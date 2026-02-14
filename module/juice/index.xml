@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>JUICE on PIGSTY</title><link>https://pigsty.cc/module/juice/</link><description>Recent content in JUICE on PIGSTY</description><generator>Hugo</generator><language>zh-CN</language><atom:link href="https://pigsty.cc/module/juice/index.xml" rel="self" type="application/rss+xml"/><item><title>模块：JUICE</title><link>https://pigsty.cc/docs/juice/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/juice/</guid><description>&lt;p&gt;&lt;a href="https://juicefs.com/"&gt;JuiceFS&lt;/a&gt; 是一款高性能、POSIX 兼容的分布式文件系统，可以将对象存储/数据库挂载为本地文件系统。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;JUICE&lt;/code&gt; 模块依赖 &lt;a href="https://pigsty.cc/docs/node"&gt;&lt;code&gt;NODE&lt;/code&gt;&lt;/a&gt; 的基础设施与软件仓库，通常使用 &lt;a href="https://pigsty.cc/docs/pgsql"&gt;&lt;code&gt;PGSQL&lt;/code&gt;&lt;/a&gt; 作为元数据引擎。
+数据存储可以使用 PostgreSQL，或 &lt;a href="https://pigsty.cc/docs/minio"&gt;&lt;code&gt;MINIO&lt;/code&gt;&lt;/a&gt; / S3 等对象存储。监控集成依赖 &lt;a href="https://pigsty.cc/docs/infra"&gt;&lt;code&gt;INFRA&lt;/code&gt;&lt;/a&gt; 的 VictoriaMetrics。&lt;/p&gt;
+&lt;pre class="mermaid"&gt;flowchart LR
+ subgraph Client[&amp;#34;应用/用户&amp;#34;]
+ app[&amp;#34;POSIX 访问&amp;#34;]
+ end
+
+ subgraph JUICE[&amp;#34;JUICE&amp;#34;]
+ jfs[&amp;#34;JuiceFS Mount&amp;#34;]
+ end
+
+ subgraph PGSQL[&amp;#34;PGSQL&amp;#34;]
+ meta[&amp;#34;Metadata DB&amp;#34;]
+ end
+
+ subgraph Object[&amp;#34;对象存储（可选）&amp;#34;]
+ s3[&amp;#34;S3 / MinIO&amp;#34;]
+ end
+
+ subgraph INFRA[&amp;#34;INFRA（可选）&amp;#34;]
+ vm[&amp;#34;VictoriaMetrics&amp;#34;]
+ end
+
+ app --&amp;gt; jfs
+ jfs --&amp;gt; meta
+ jfs -.-&amp;gt; s3
+ jfs --&amp;gt;|/metrics| vm
+
+ style JUICE fill:#5B9CD5,stroke:#4178a8,color:#fff
+ style PGSQL fill:#3E668F,stroke:#2d4a66,color:#fff
+ style Object fill:#FCDB72,stroke:#d4b85e,color:#333
+ style INFRA fill:#999,stroke:#666,color:#fff&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h2 id="模块特点"&gt;模块特点&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;PostgreSQL 元数据&lt;/strong&gt;：元数据存储于 PostgreSQL，便于管理与备份&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;多实例&lt;/strong&gt;：单节点可挂载多个独立文件系统实例&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;多种数据后端&lt;/strong&gt;：支持 PostgreSQL、MinIO、S3 等&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;监控集成&lt;/strong&gt;每实例暴露 Prometheus / Victoria 指标端口&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;配置简洁&lt;/strong&gt;：以 &lt;a href="https://pigsty.cc/docs/juice/param#juice_instances"&gt;&lt;strong&gt;&lt;code&gt;juice_instances&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt; 字典描述实例&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="快速开始"&gt;快速开始&lt;/h2&gt;
+&lt;p&gt;最小配置示例（单实例）：&lt;/p&gt;</description></item><item><title>集群配置</title><link>https://pigsty.cc/docs/juice/config/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/juice/config/</guid><description>&lt;hr&gt;
+&lt;h2 id="概念与实现"&gt;概念与实现&lt;/h2&gt;
+&lt;p&gt;JuiceFS 由 &lt;strong&gt;元数据引擎&lt;/strong&gt; 与 &lt;strong&gt;数据存储&lt;/strong&gt; 两部分组成。
+在 Pigsty v4.1 中，&lt;code&gt;meta&lt;/code&gt; 会原样透传给 &lt;code&gt;juicefs&lt;/code&gt; 作为元数据引擎 URL，生产场景通常使用 PostgreSQL。
+数据存储通过 &lt;code&gt;data&lt;/code&gt; 参数传入 &lt;code&gt;juicefs format&lt;/code&gt; 选项决定。&lt;/p&gt;
+&lt;p&gt;JUICE 模块执行逻辑与关键命令：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 格式化（仅首次创建有效）&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;juicefs format --no-update &amp;lt;data&amp;gt; &lt;span style="color:#4e9a06"&gt;&amp;#34;&amp;lt;meta&amp;gt;&amp;#34;&lt;/span&gt; &lt;span style="color:#4e9a06"&gt;&amp;#34;&amp;lt;name&amp;gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 挂载&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;juicefs mount &amp;lt;mount&amp;gt; --cache-dir &amp;lt;juice_cache&amp;gt; --metrics 0.0.0.0:&amp;lt;port&amp;gt; &amp;lt;meta&amp;gt; &amp;lt;path&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;说明：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;--no-update&lt;/code&gt; 确保已存在的文件系统不会被覆盖。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;data&lt;/code&gt; 仅用于 &lt;strong&gt;首次格式化&lt;/strong&gt;，文件系统已存在时不会生效。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;mount&lt;/code&gt; 仅用于挂载阶段，可按需传入缓存与并发参数。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="模块参数"&gt;模块参数&lt;/h2&gt;
+&lt;p&gt;JUICE 模块仅有两个参数：&lt;/p&gt;
+&lt;table class="full-width"&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th style="text-align: left"&gt;参数&lt;/th&gt;
+ &lt;th style="text-align: center"&gt;类型&lt;/th&gt;
+ &lt;th style="text-align: center"&gt;级别&lt;/th&gt;
+ &lt;th style="text-align: left"&gt;说明&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;&lt;a href="https://pigsty.cc/docs/juice/param#juice_cache"&gt;&lt;code&gt;juice_cache&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;code&gt;path&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;code&gt;C&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;JuiceFS 共享缓存目录&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;&lt;a href="https://pigsty.cc/docs/juice/param#juice_instances"&gt;&lt;code&gt;juice_instances&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;code&gt;dict&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;code&gt;I&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;JuiceFS 实例字典（可为空）&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;juice_cache&lt;/code&gt;：所有实例共享的本地缓存目录，默认 &lt;code&gt;/data/juice&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;juice_instances&lt;/code&gt;：在&lt;strong&gt;实例级别&lt;/strong&gt;定义的实例字典，Key 为文件系统名称；空字典表示不管理实例&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="实例配置"&gt;实例配置&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;juice_instances&lt;/code&gt; 的每个条目代表一个 JuiceFS 实例：&lt;/p&gt;</description></item><item><title>参数列表</title><link>https://pigsty.cc/docs/juice/param/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/juice/param/</guid><description>&lt;p&gt;JUICE 模块参数共 &lt;strong&gt;2&lt;/strong&gt; 项：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#juice_cache"&gt;&lt;code&gt;juice_cache&lt;/code&gt;&lt;/a&gt;：共享缓存目录&lt;/li&gt;
+&lt;li&gt;&lt;a href="#juice_instances"&gt;&lt;code&gt;juice_instances&lt;/code&gt;&lt;/a&gt;：实例定义字典&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="参数概览"&gt;参数概览&lt;/h2&gt;
+&lt;table class="full-width"&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th style="text-align: left"&gt;参数&lt;/th&gt;
+ &lt;th style="text-align: center"&gt;类型&lt;/th&gt;
+ &lt;th style="text-align: center"&gt;级别&lt;/th&gt;
+ &lt;th style="text-align: left"&gt;说明&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;&lt;a href="#juice_cache"&gt;&lt;code&gt;juice_cache&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;code&gt;path&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;code&gt;C&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;JuiceFS 共享缓存目录&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;&lt;a href="#juice_instances"&gt;&lt;code&gt;juice_instances&lt;/code&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;code&gt;dict&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;code&gt;I&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;JuiceFS 实例定义字典（可为空）&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;级别说明&lt;/strong&gt;：&lt;code&gt;C&lt;/code&gt; 为集群级别，&lt;code&gt;I&lt;/code&gt; 为实例级别。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id="默认参数"&gt;默认参数&lt;/h2&gt;
+&lt;p&gt;参数定义于 &lt;a href="https://github.com/pgsty/pigsty/blob/v4.1.0/roles/juice/defaults/main.yml"&gt;&lt;code&gt;roles/juice/defaults/main.yml&lt;/code&gt;&lt;/a&gt;：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-yaml" data-lang="yaml"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;#-----------------------------------------------------------------&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# JUICE&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;#-----------------------------------------------------------------&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;juice_cache&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;/data/juice&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;juice_instances&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;{}&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id="juice_cache"&gt;&lt;code&gt;juice_cache&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;参数名称：&lt;code&gt;juice_cache&lt;/code&gt;，类型：&lt;code&gt;path&lt;/code&gt;，级别：&lt;code&gt;C&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;所有 JuiceFS 实例共享的本地缓存目录，默认 &lt;code&gt;/data/juice&lt;/code&gt;。
+JuiceFS 会在此目录下按文件系统 UUID 进行隔离。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-yaml" data-lang="yaml"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;juice_cache&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;/data/juice&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id="juice_instances"&gt;&lt;code&gt;juice_instances&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;参数名称：&lt;code&gt;juice_instances&lt;/code&gt;，类型：&lt;code&gt;dict&lt;/code&gt;，级别：&lt;code&gt;I&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;JuiceFS 实例定义字典，通常在实例级别定义。
+默认值为空字典（表示不部署实例）；Key 为文件系统名称，Value 为实例配置对象。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-yaml" data-lang="yaml"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;juice_instances&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;jfs&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;path&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;/fs&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;meta&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;postgres://u:p@h:5432/db&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;data&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;--&lt;span style="color:#000"&gt;storage postgres --bucket ...&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;port&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#0000cf;font-weight:bold"&gt;9567&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;实例字段说明：&lt;/p&gt;</description></item><item><title>预置剧本</title><link>https://pigsty.cc/docs/juice/playbook/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/juice/playbook/</guid><description>&lt;p&gt;JUICE 模块提供 &lt;code&gt;juice.yml&lt;/code&gt; 剧本，用于部署与移除 JuiceFS 实例。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="juiceyml"&gt;&lt;code&gt;juice.yml&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://github.com/pgsty/pigsty/blob/v4.1.0/juice.yml"&gt;&lt;code&gt;juice.yml&lt;/code&gt;&lt;/a&gt; 的任务结构如下：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;juice_id : 校验配置、检查端口冲突
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;juice_install : 安装 juicefs 软件包
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;juice_cache : 创建共享缓存目录
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;juice_clean : 移除实例（state&lt;span style="color:#ce5c00;font-weight:bold"&gt;=&lt;/span&gt;absent）
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;juice_instance : 创建实例（state&lt;span style="color:#ce5c00;font-weight:bold"&gt;=&lt;/span&gt;create）
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; - juice_init : 格式化文件系统（--no-update）
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; - juice_dir : 创建挂载点目录
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; - juice_config: 渲染环境文件与 systemd 服务单元
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; - juice_launch: 启动服务并等待指标端口就绪
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;juice_register : 注册到 VictoriaMetrics 目标文件
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id="运行粒度"&gt;运行粒度&lt;/h2&gt;
+&lt;table class="full-width"&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th style="text-align: left"&gt;粒度&lt;/th&gt;
+ &lt;th style="text-align: left"&gt;限制参数&lt;/th&gt;
+ &lt;th style="text-align: left"&gt;说明&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;节点&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;-l &amp;lt;host&amp;gt;&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;部署该节点所有实例&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;实例&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;-l &amp;lt;host&amp;gt; -e fsname=&amp;lt;name&amp;gt;&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;只处理指定实例&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;示例：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;./juice.yml -l 10.10.10.10 &lt;span style="color:#8f5902;font-style:italic"&gt;# 部署该节点所有实例&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;./juice.yml -l 10.10.10.10 -e &lt;span style="color:#000"&gt;fsname&lt;/span&gt;&lt;span style="color:#ce5c00;font-weight:bold"&gt;=&lt;/span&gt;jfs &lt;span style="color:#8f5902;font-style:italic"&gt;# 仅部署 jfs 实例&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id="常用标签"&gt;常用标签&lt;/h2&gt;
+&lt;table class="full-width"&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th style="text-align: left"&gt;标签&lt;/th&gt;
+ &lt;th style="text-align: left"&gt;说明&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;juice_id&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;校验 &lt;code&gt;juice_instances&lt;/code&gt; 与端口冲突&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;juice_install&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;安装 &lt;code&gt;juicefs&lt;/code&gt; 软件包&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;juice_cache&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;创建共享缓存目录&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;juice_clean&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;移除实例（state=absent）&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;juice_instance&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;创建实例（伞形标签）&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;juice_init&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;格式化文件系统&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;juice_dir&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;创建挂载点目录&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;juice_config&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;渲染配置文件&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;juice_launch&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;启动服务&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;juice_register&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;写入 VictoriaMetrics 目标文件&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 id="配置更新"&gt;配置更新&lt;/h2&gt;
+&lt;p&gt;仅更新配置文件（不重启服务）：&lt;/p&gt;</description></item><item><title>管理预案</title><link>https://pigsty.cc/docs/juice/admin/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/juice/admin/</guid><description>&lt;p&gt;常见运维场景如下：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#%E5%88%9D%E5%A7%8B%E5%8C%96%E5%AE%9E%E4%BE%8B"&gt;初始化实例&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#%E9%87%8D%E6%96%B0%E9%85%8D%E7%BD%AE"&gt;重新配置&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#%E7%A7%BB%E9%99%A4%E5%AE%9E%E4%BE%8B"&gt;移除实例&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#%E6%B7%BB%E5%8A%A0%E6%96%B0%E5%AE%9E%E4%BE%8B"&gt;添加新实例&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#%E5%A4%9A%E8%8A%82%E7%82%B9%E5%85%B1%E4%BA%AB%E6%8C%82%E8%BD%BD"&gt;多节点共享挂载&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#pitr-%E6%81%A2%E5%A4%8D"&gt;PITR 恢复&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5"&gt;故障排查&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#%E6%80%A7%E8%83%BD%E8%B0%83%E4%BC%98"&gt;性能调优&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;更多问题参见 &lt;a href="https://pigsty.cc/docs/juice/faq/"&gt;FAQ&lt;/a&gt;。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="初始化实例"&gt;初始化实例&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;./juice.yml -l &amp;lt;host&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;./juice.yml -l &amp;lt;host&amp;gt; -e &lt;span style="color:#000"&gt;fsname&lt;/span&gt;&lt;span style="color:#ce5c00;font-weight:bold"&gt;=&lt;/span&gt;&amp;lt;name&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;初始化流程：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;安装 &lt;code&gt;juicefs&lt;/code&gt; 软件包&lt;/li&gt;
+&lt;li&gt;创建共享缓存目录（默认 &lt;code&gt;/data/juice&lt;/code&gt;）&lt;/li&gt;
+&lt;li&gt;执行 &lt;code&gt;juicefs format --no-update&lt;/code&gt;（仅首次创建有效）&lt;/li&gt;
+&lt;li&gt;创建挂载点目录并设置权限&lt;/li&gt;
+&lt;li&gt;渲染 systemd 单元与环境文件&lt;/li&gt;
+&lt;li&gt;启动服务并等待指标端口就绪&lt;/li&gt;
+&lt;li&gt;注册到 VictoriaMetrics（若存在 infra 节点）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="重新配置"&gt;重新配置&lt;/h2&gt;
+&lt;p&gt;修改配置后，建议执行以下命令（更新配置并确保服务在线）：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;./juice.yml -l &amp;lt;host&amp;gt; -t juice_config,juice_launch
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;仅渲染配置文件而不触碰服务状态：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;./juice.yml -l &amp;lt;host&amp;gt; -t juice_config
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;说明：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;juice_config,juice_launch&lt;/code&gt; 会确保服务处于 &lt;code&gt;started&lt;/code&gt;，但不会强制重启已运行实例&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;data&lt;/code&gt; 仅在首次 &lt;code&gt;format&lt;/code&gt; 时生效&lt;/li&gt;
+&lt;li&gt;变更 &lt;code&gt;mount&lt;/code&gt; 参数后，请手动重启对应服务（&lt;code&gt;systemctl restart juicefs-&amp;lt;name&amp;gt;&lt;/code&gt;）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="移除实例"&gt;移除实例&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;将实例 &lt;code&gt;state&lt;/code&gt; 设为 &lt;code&gt;absent&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;执行 &lt;code&gt;juice_clean&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-yaml" data-lang="yaml"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;juice_instances&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;jfs&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;path&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;/fs&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;meta&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;postgres://...&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;state&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;absent&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;./juice.yml -l &amp;lt;host&amp;gt; -t juice_clean
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;./juice.yml -l &amp;lt;host&amp;gt; -e &lt;span style="color:#000"&gt;fsname&lt;/span&gt;&lt;span style="color:#ce5c00;font-weight:bold"&gt;=&lt;/span&gt;jfs -t juice_clean
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;移除动作：&lt;/p&gt;</description></item><item><title>监控告警</title><link>https://pigsty.cc/docs/juice/monitor/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/juice/monitor/</guid><description>&lt;p&gt;JuiceFS 实例通过 &lt;code&gt;juicefs mount --metrics&lt;/code&gt; 暴露 Prometheus 指标。
+在 JUICE 模块中，指标监听地址为 &lt;code&gt;0.0.0.0:&amp;lt;port&amp;gt;&lt;/code&gt;，默认端口 &lt;code&gt;9567&lt;/code&gt;。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="监控架构"&gt;监控架构&lt;/h2&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;JuiceFS Mount (metrics: 0.0.0.0:&amp;lt;port&amp;gt;)
+ ↓
+VictoriaMetrics (scrape)
+ ↓
+Grafana Dashboard
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;若已部署 &lt;a href="https://pigsty.cc/docs/infra"&gt;&lt;code&gt;INFRA&lt;/code&gt;&lt;/a&gt;，&lt;code&gt;juice_register&lt;/code&gt; 会自动写入抓取目标：&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;/infra/targets/juice/&amp;lt;hostname&amp;gt;.yml
+&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
+&lt;h2 id="目标文件示例"&gt;目标文件示例&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-yaml" data-lang="yaml"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;- &lt;span style="color:#204a87;font-weight:bold"&gt;labels&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;{&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;ip: 10.10.10.10, ins&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#4e9a06"&gt;&amp;#34;node-jfs&amp;#34;&lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;, cls&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#4e9a06"&gt;&amp;#34;jfs&amp;#34;&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;}&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;targets&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;[&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#0000cf;font-weight:bold"&gt;10.10.10.10&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#0000cf;font-weight:bold"&gt;9567&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;]&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;如需手动注册：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;./juice.yml -l &amp;lt;host&amp;gt; -t juice_register
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id="关键指标"&gt;关键指标&lt;/h2&gt;
+&lt;h3 id="对象存储"&gt;对象存储&lt;/h3&gt;
+&lt;table class="full-width"&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th style="text-align: left"&gt;指标&lt;/th&gt;
+ &lt;th style="text-align: center"&gt;类型&lt;/th&gt;
+ &lt;th style="text-align: left"&gt;说明&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;juicefs_object_request_durations_histogram_seconds&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;histogram&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;对象存储请求延迟&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;juicefs_object_request_errors&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;counter&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;对象存储错误数&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id="缓存"&gt;缓存&lt;/h3&gt;
+&lt;table class="full-width"&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th style="text-align: left"&gt;指标&lt;/th&gt;
+ &lt;th style="text-align: center"&gt;类型&lt;/th&gt;
+ &lt;th style="text-align: left"&gt;说明&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;juicefs_blockcache_hits&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;counter&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;缓存命中次数&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;juicefs_blockcache_miss&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;counter&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;缓存未命中次数&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id="元数据事务"&gt;元数据事务&lt;/h3&gt;
+&lt;table class="full-width"&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th style="text-align: left"&gt;指标&lt;/th&gt;
+ &lt;th style="text-align: center"&gt;类型&lt;/th&gt;
+ &lt;th style="text-align: left"&gt;说明&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;juicefs_transaction_durations_histogram_seconds&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;histogram&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;元数据事务延迟（直方图）&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;juicefs_transaction_durations_histogram_seconds_count&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;counter&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;元数据事务请求计数&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 id="常用-promql"&gt;常用 PromQL&lt;/h2&gt;
+&lt;p&gt;缓存命中率：&lt;/p&gt;</description></item><item><title>常见问题</title><link>https://pigsty.cc/docs/juice/faq/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/juice/faq/</guid><description>&lt;hr&gt;
+&lt;h2 id="端口冲突怎么办"&gt;端口冲突怎么办？&lt;/h2&gt;
+&lt;p&gt;同一节点上的多个实例必须使用不同的 &lt;code&gt;port&lt;/code&gt;。示例：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-yaml" data-lang="yaml"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;juice_instances&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;fs1&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;path&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;/fs1&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;meta&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;postgres://...&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;port&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#0000cf;font-weight:bold"&gt;9567&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;fs2&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;path&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;/fs2&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;meta&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;postgres://...&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;port&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#0000cf;font-weight:bold"&gt;9568&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id="为什么-data-变更不生效"&gt;为什么 &lt;code&gt;data&lt;/code&gt; 变更不生效？&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;data&lt;/code&gt; 仅用于 &lt;code&gt;juicefs format --no-update&lt;/code&gt;，文件系统创建后不会再更新。
+如需切换后端，请手动迁移与重新格式化。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="如何添加新实例"&gt;如何添加新实例？&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;在配置中新增实例定义&lt;/li&gt;
+&lt;li&gt;执行：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;./juice.yml -l &amp;lt;host&amp;gt; -e &lt;span style="color:#000"&gt;fsname&lt;/span&gt;&lt;span style="color:#ce5c00;font-weight:bold"&gt;=&lt;/span&gt;&amp;lt;name&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id="如何移除实例"&gt;如何移除实例？&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;将实例 &lt;code&gt;state&lt;/code&gt; 设为 &lt;code&gt;absent&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;执行：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;./juice.yml -l &amp;lt;host&amp;gt; -t juice_clean
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;移除不会删除 PostgreSQL 元数据或对象存储数据。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="文件数据存储在哪里"&gt;文件数据存储在哪里？&lt;/h2&gt;
+&lt;p&gt;取决于 &lt;code&gt;data&lt;/code&gt; 参数：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;--storage postgres&lt;/code&gt;：数据存于 PostgreSQL &lt;code&gt;pg_largeobject&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--storage minio/s3&lt;/code&gt;：数据存于对象存储 bucket&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;元数据存储在 &lt;code&gt;meta&lt;/code&gt; 指定的元数据引擎中（Pigsty 生产场景通常使用 PostgreSQL）。&lt;/p&gt;</description></item></channel></rss>

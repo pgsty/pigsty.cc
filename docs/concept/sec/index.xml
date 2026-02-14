@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>安全合规 on PIGSTY</title><link>https://pigsty.cc/docs/concept/sec/</link><description>Recent content in 安全合规 on PIGSTY</description><generator>Hugo</generator><language>zh-CN</language><atom:link href="https://pigsty.cc/docs/concept/sec/index.xml" rel="self" type="application/rss+xml"/><item><title>七层安全模型</title><link>https://pigsty.cc/docs/concept/sec/level/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/concept/sec/level/</guid><description>&lt;p&gt;安全不是一道墙，而是一座城。Pigsty 采用&lt;strong&gt;纵深防御&lt;/strong&gt;策略，在七个层次上构建多重保护，即使某一层被突破，仍有其他层提供保护。&lt;/p&gt;
+&lt;p&gt;这种分层思路解决三类核心风险：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;边界被突破&lt;/strong&gt;：降低“单点失守导致全盘失守”的概率。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;内部滥用&lt;/strong&gt;：即使内部账号被盗，也能通过最小权限限制破坏范围。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;不可预期故障&lt;/strong&gt;：硬件、软件、人为错误都能被“多层兜底”。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="概览"&gt;概览&lt;/h2&gt;
+&lt;div id="infographic-296a28376e55bf0bd7d2bce937b065d7" class="infographic-container td-max-width-on-larger-screens"&gt;&lt;/div&gt;
+
+&lt;script&gt;
+(function() {
+ var containerId = 'infographic-296a28376e55bf0bd7d2bce937b065d7';
+ var syntax = "````\ninfographic sequence-pyramid-simple\ndata\n title 七层安全模型\n desc Pigsty 纵深防御体系：从物理到用户的多层保护\n items\n - label 物理与介质\n value 100\n desc 数据校验和 · 介质盗取防护\n time L1\n icon mingcute/building-4-fill\n illus server-cluster\n - label 网络安全\n value 95\n desc 防火墙 · 监听收敛 · TLS\n time L2\n icon mingcute/earth-2-fill\n illus secure-server\n - label 边界安全\n value 90\n desc HAProxy · Nginx · 统一入口\n time L3\n icon mingcute/shield-fill\n illus firewall-protection\n - label 主机安全\n value 85\n desc SELinux · 最小权限 · 系统加固\n time L4\n icon mingcute/computer-fill\n illus server-status\n - label 应用安全\n value 80\n desc HBA · SCRAM · 密码策略\n time L5\n icon mingcute/safe-box-fill\n illus database-security\n - label 数据安全\n value 75\n desc 备份加密 · PITR · 审计\n time L6\n icon mingcute/lock-fill\n illus data-encryption\n - label 用户安全\n value 70\n desc RBAC · 默认权限 · 隔离\n time L7\n icon mingcute/user-security-fill\n illus user-flow\ntheme light\n palette pigsty\n````";
+
+ function renderInfographic() {
+ var dom = document.getElementById(containerId);
+ if (!dom) { console.error('Infographic: container not found:', containerId); return; }
+ try {
+ var ig = new AntVInfographic.Infographic({
+ container: '#' + containerId,
+ width: dom.offsetWidth || '100%',
+ height: 'auto',
+ });
+ ig.render(syntax);
+ } catch (e) {
+ console.error('Infographic render error:', e);
+ dom.innerHTML = '&lt;pre style="color: red;"&gt;Infographic Error: ' + e.message + '&lt;/pre&gt;';
+ }
+ }
+
+ 
+ if (typeof AntVInfographic !== 'undefined') {
+ renderInfographic();
+ } else if (!window._infographicLoading) {
+ window._infographicLoading = true;
+ window._infographicCallbacks = [renderInfographic];
+ var script = document.createElement('script');
+ script.src = '/js/infographic.min.js';
+ script.onload = function() {
+ window._infographicCallbacks.forEach(function(cb) { cb(); });
+ };
+ document.head.appendChild(script);
+ } else {
+ window._infographicCallbacks.push(renderInfographic);
+ }
+})();
+&lt;/script&gt;
+
+&lt;hr&gt;
+&lt;h2 id="l1-物理与介质安全"&gt;L1 物理与介质安全&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;物理层失守时，唯一的对抗手段是数据本身的自我保护。&lt;/p&gt;</description></item><item><title>身份认证</title><link>https://pigsty.cc/docs/concept/sec/auth/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/concept/sec/auth/</guid><description>&lt;p&gt;身份认证解决三个核心问题：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;你是谁&lt;/strong&gt;：身份是否唯一可识别？&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;你怎么证明&lt;/strong&gt;：密码/证书是否足够安全？&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;你从哪里来&lt;/strong&gt;：来源是否受控？&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Pigsty 使用 &lt;strong&gt;HBA 规则 + 密码/证书&lt;/strong&gt; 完成身份认证，并以 SCRAM 为默认密码哈希方案。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="认证链路"&gt;认证链路&lt;/h2&gt;
+&lt;pre class="mermaid"&gt;flowchart LR
+ C[客户端] --&amp;gt; HBA[HBA 规则]
+ HBA --&amp;gt; A1[密码 SCRAM]
+ HBA --&amp;gt; A2[证书认证]
+ HBA --&amp;gt; A3[本地 ident/peer]
+ A1 --&amp;gt; RBAC[角色与权限]
+ A2 --&amp;gt; RBAC
+ A3 --&amp;gt; RBAC&lt;/pre&gt;
+&lt;p&gt;HBA 决定“&lt;strong&gt;谁能从哪里来&lt;/strong&gt;”，认证方式决定“&lt;strong&gt;如何证明身份&lt;/strong&gt;”。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="hba-分层模型"&gt;HBA 分层模型&lt;/h2&gt;
+&lt;p&gt;Pigsty 默认 HBA 规则已经分层：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;本地&lt;/strong&gt;使用 &lt;code&gt;ident/peer&lt;/code&gt;，最安全。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;内网&lt;/strong&gt;使用 &lt;code&gt;scram&lt;/code&gt; 密码认证。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;外网管理员&lt;/strong&gt;必须走 &lt;code&gt;ssl&lt;/code&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这解决了“&lt;strong&gt;同一个用户在不同来源使用不同认证强度&lt;/strong&gt;”的问题。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;HBA 规则的关键能力&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;顺序优先&lt;/strong&gt;：支持 &lt;code&gt;order&lt;/code&gt; 排序，数值越小优先级越高。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;地址别名&lt;/strong&gt;：&lt;code&gt;local&lt;/code&gt; / &lt;code&gt;localhost&lt;/code&gt; / &lt;code&gt;intra&lt;/code&gt; / &lt;code&gt;world&lt;/code&gt; 等。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;角色条件&lt;/strong&gt;：&lt;code&gt;primary/replica/offline&lt;/code&gt; 可精细化控制。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="密码认证"&gt;密码认证&lt;/h2&gt;
+&lt;p&gt;默认密码哈希算法：&lt;/p&gt;</description></item><item><title>访问控制</title><link>https://pigsty.cc/docs/concept/sec/ac/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/concept/sec/ac/</guid><description>&lt;p&gt;访问控制解决两个核心问题：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;你能做什么&lt;/strong&gt;：读/写/DDL 的权限边界&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;你能访问哪些数据&lt;/strong&gt;：跨库、跨模式的隔离边界&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Pigsty 通过 &lt;strong&gt;RBAC 角色体系 + 默认权限策略&lt;/strong&gt; 将“最小权限”落实为默认行为。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="四层角色模型"&gt;四层角色模型&lt;/h2&gt;
+&lt;pre class="mermaid"&gt;flowchart TB
+ subgraph Admin[&amp;#34;dbrole_admin（管理员）&amp;#34;]
+ A1[&amp;#34;可执行 DDL / CREATE / ALTER&amp;#34;]
+ A2[&amp;#34;继承 dbrole_readwrite&amp;#34;]
+ end
+ subgraph RW[&amp;#34;dbrole_readwrite（读写）&amp;#34;]
+ RW1[&amp;#34;可 INSERT/UPDATE/DELETE&amp;#34;]
+ RW2[&amp;#34;继承 dbrole_readonly&amp;#34;]
+ end
+ subgraph RO[&amp;#34;dbrole_readonly（只读）&amp;#34;]
+ RO1[&amp;#34;可 SELECT 所有表&amp;#34;]
+ end
+ subgraph Offline[&amp;#34;dbrole_offline（离线）&amp;#34;]
+ OFF1[&amp;#34;仅离线实例可用&amp;#34;]
+ end
+
+ Admin --&amp;gt; RW --&amp;gt; RO&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;解决的问题&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;生产账号天然拥有过高权限&lt;/li&gt;
+&lt;li&gt;DDL 与 DML 不分离导致误操作风险&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="默认角色与系统用户"&gt;默认角色与系统用户&lt;/h2&gt;
+&lt;p&gt;Pigsty 默认提供四个角色与四个系统用户（来自源码默认值）：&lt;/p&gt;
+&lt;table class="full-width"&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;角色/用户&lt;/th&gt;
+ &lt;th&gt;属性&lt;/th&gt;
+ &lt;th&gt;继承/角色&lt;/th&gt;
+ &lt;th&gt;描述&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;code&gt;dbrole_readonly&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;NOLOGIN&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;-&lt;/td&gt;
+ &lt;td&gt;全局只读访问&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;code&gt;dbrole_offline&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;NOLOGIN&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;-&lt;/td&gt;
+ &lt;td&gt;受限只读（离线实例）&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;code&gt;dbrole_readwrite&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;NOLOGIN&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;dbrole_readonly&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;全局读写访问&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;code&gt;dbrole_admin&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;NOLOGIN&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;pg_monitor, dbrole_readwrite&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;管理员 / 对象创建&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;code&gt;postgres&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;SUPERUSER&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;-&lt;/td&gt;
+ &lt;td&gt;系统超级用户&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;code&gt;replicator&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;REPLICATION&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;pg_monitor, dbrole_readonly&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;复制用户&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;code&gt;dbuser_dba&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;SUPERUSER&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;dbrole_admin&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;管理员用户&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;code&gt;dbuser_monitor&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;-&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;pg_monitor, dbrole_readonly&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;监控用户&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;这套默认角色可以覆盖绝大多数业务场景。&lt;/p&gt;</description></item><item><title>加密通信与本地 CA</title><link>https://pigsty.cc/docs/concept/sec/ca/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/concept/sec/ca/</guid><description>&lt;p&gt;加密通信解决三个问题：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;窃听&lt;/strong&gt;：防止明文流量被监听&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;篡改&lt;/strong&gt;：防止中间人修改数据&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;冒充&lt;/strong&gt;：防止服务端/客户端被伪造&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Pigsty 通过 &lt;strong&gt;本地 CA + TLS&lt;/strong&gt; 为数据库与基础设施组件提供统一的信任根。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="本地-ca-的作用"&gt;本地 CA 的作用&lt;/h2&gt;
+&lt;p&gt;Pigsty 默认会在管理节点生成自签 CA：&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;files/pki/ca/ca.key # CA 私钥（必须严格保护）
+files/pki/ca/ca.crt # CA 根证书（可分发）
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;源码默认值：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;ca_create: true&lt;/code&gt;：找不到 CA 时自动生成。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ca_cn: pigsty-ca&lt;/code&gt;：CA 证书 CN 固定为 &lt;code&gt;pigsty-ca&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;根证书有效期约 100 年（自签）。&lt;/li&gt;
+&lt;li&gt;由 CA 签发的服务器/客户端证书有效期 &lt;code&gt;cert_validity: 7300d&lt;/code&gt;（20 年）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="证书覆盖范围"&gt;证书覆盖范围&lt;/h2&gt;
+&lt;p&gt;本地 CA 会签发多种组件证书，统一信任链：&lt;/p&gt;
+&lt;table class="full-width"&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;组件&lt;/th&gt;
+ &lt;th&gt;目的&lt;/th&gt;
+ &lt;th&gt;典型路径&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;PostgreSQL / PgBouncer&lt;/td&gt;
+ &lt;td&gt;连接加密&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;/pg/cert/&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Patroni&lt;/td&gt;
+ &lt;td&gt;API 通信&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;/pg/cert/&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;etcd&lt;/td&gt;
+ &lt;td&gt;DCS 加密&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;/etc/etcd/&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;MinIO&lt;/td&gt;
+ &lt;td&gt;对象存储 HTTPS&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;~minio/.minio/certs/&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Nginx&lt;/td&gt;
+ &lt;td&gt;Web 入口 HTTPS&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;/etc/nginx/conf.d/cert/&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;解决的问题&lt;/strong&gt;：不同组件自建证书会产生信任碎片，统一 CA 可以一次分发，多处复用。&lt;/p&gt;</description></item><item><title>数据安全</title><link>https://pigsty.cc/docs/concept/sec/data/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/concept/sec/data/</guid><description>&lt;p&gt;数据安全关注三件事：&lt;strong&gt;完整性、可恢复性、保密性&lt;/strong&gt;。Pigsty 在默认配置中已启用关键能力，并支持按需加固。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="数据完整性"&gt;数据完整性&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;解决的问题&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;磁盘坏块、内存错误导致的静默损坏&lt;/li&gt;
+&lt;li&gt;意外写入导致的数据污染&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Pigsty 支持&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;数据校验和&lt;/strong&gt;：默认 &lt;code&gt;pg_checksum: true&lt;/code&gt;，初始化时启用 &lt;code&gt;data-checksums&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;副本兜底&lt;/strong&gt;：主库坏块可从从库恢复（与 HA 配合使用）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="可恢复性备份与-pitr"&gt;可恢复性（备份与 PITR）&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;解决的问题&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;误删误改&lt;/li&gt;
+&lt;li&gt;灾难性故障导致数据丢失&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Pigsty 支持&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;pgBackRest 默认启用&lt;/strong&gt;：&lt;code&gt;pgbackrest_enabled: true&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;本地仓库&lt;/strong&gt;：默认保留 2 份完整备份。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;远程仓库&lt;/strong&gt;：可接入 MinIO，支持对象存储与多副本。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;PITR&lt;/strong&gt;：结合 WAL 归档进行任意时间点恢复。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="数据保密性"&gt;数据保密性&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;解决的问题&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;备份被窃导致数据外泄&lt;/li&gt;
+&lt;li&gt;介质被盗导致明文数据泄露&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Pigsty 支持&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;备份加密&lt;/strong&gt;：MinIO 仓库支持 AES-256-CBC（&lt;code&gt;cipher_type&lt;/code&gt;）。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;透明加密（可选）&lt;/strong&gt;：通过 &lt;code&gt;pg_tde&lt;/code&gt; 等扩展实现数据静态加密。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;密钥隔离&lt;/strong&gt;：建议将 &lt;code&gt;cipher_pass&lt;/code&gt; 与 CA 私钥分离管理。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="审计与可追溯"&gt;审计与可追溯&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;解决的问题&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;无法追责与还原操作&lt;/li&gt;
+&lt;li&gt;合规审计缺少证据&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Pigsty 支持&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;日志收集&lt;/strong&gt;：模板默认启用 &lt;code&gt;logging_collector&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;DDL 审计&lt;/strong&gt;：&lt;code&gt;log_statement: ddl&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;慢查询&lt;/strong&gt;：&lt;code&gt;log_min_duration_statement&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;连接日志&lt;/strong&gt;：&lt;code&gt;log_connections&lt;/code&gt;（PG18+）。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;审计扩展&lt;/strong&gt;：&lt;code&gt;pgaudit&lt;/code&gt;、&lt;code&gt;pgauditlogtofile&lt;/code&gt; 可选。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="加固建议"&gt;加固建议&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;对远程备份强制加密与专用密钥。&lt;/li&gt;
+&lt;li&gt;定期演练 PITR，验证恢复链路。&lt;/li&gt;
+&lt;li&gt;对关键业务启用 &lt;code&gt;pgaudit&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;结合 &lt;a href="https://pigsty.cc/docs/concept/ha/"&gt;高可用&lt;/a&gt; 形成“备份 + 副本”双层兜底。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="接下来"&gt;接下来&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;🔐 &lt;a href="https://pigsty.cc/docs/concept/sec/ca"&gt;&lt;strong&gt;加密通信&lt;/strong&gt;&lt;/a&gt;：证书管理与 TLS&lt;/li&gt;
+&lt;li&gt;✅ &lt;a href="https://pigsty.cc/docs/concept/sec/compliance"&gt;&lt;strong&gt;合规清单&lt;/strong&gt;&lt;/a&gt;：审计与合规要求&lt;/li&gt;
+&lt;li&gt;⏰ &lt;a href="https://pigsty.cc/docs/concept/pitr/"&gt;&lt;strong&gt;备份恢复&lt;/strong&gt;&lt;/a&gt;：PITR 机制与实践&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>合规清单</title><link>https://pigsty.cc/docs/concept/sec/compliance/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/concept/sec/compliance/</guid><description>&lt;p&gt;合规不是“开关”，而是 &lt;strong&gt;配置 + 流程 + 证据&lt;/strong&gt; 的组合：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;配置&lt;/strong&gt;：安全能力是否启用（HBA/TLS/审计/备份）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;流程&lt;/strong&gt;：是否有权限管理、变更、备份演练等制度&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;证据&lt;/strong&gt;：日志、配置快照、备份报告、监控告警&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;本页以 SOC2 与等保三级为切入点，说明 Pigsty 的安全能力与合规映射。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="默认凭证清单必须修改"&gt;默认凭证清单（必须修改）&lt;/h2&gt;
+&lt;p&gt;来自源码默认值：&lt;/p&gt;
+&lt;table class="full-width"&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;组件&lt;/th&gt;
+ &lt;th&gt;默认用户名&lt;/th&gt;
+ &lt;th&gt;默认密码&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;PostgreSQL 管理员&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;dbuser_dba&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;DBUser.DBA&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;PostgreSQL 监控&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;dbuser_monitor&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;DBUser.Monitor&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;PostgreSQL 复制&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;replicator&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;DBUser.Replicator&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Patroni API&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;postgres&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;Patroni.API&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;HAProxy 管理&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;admin&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;pigsty&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Grafana 管理&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;admin&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;pigsty&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;MinIO Root&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;minioadmin&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;S3User.MinIO&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;etcd Root&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;root&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;Etcd.Root&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;生产环境必须修改。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="证据准备建议"&gt;证据准备（建议）&lt;/h2&gt;
+&lt;table class="full-width"&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;证据类型&lt;/th&gt;
+ &lt;th&gt;说明&lt;/th&gt;
+ &lt;th&gt;Pigsty 支持&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;配置快照&lt;/td&gt;
+ &lt;td&gt;HBA、角色、TLS、备份策略&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;pigsty.yml&lt;/code&gt; / inventory 配置&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;访问控制&lt;/td&gt;
+ &lt;td&gt;角色与权限&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;pg_default_roles&lt;/code&gt; / &lt;code&gt;pg_default_privileges&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;连接审计&lt;/td&gt;
+ &lt;td&gt;连接、断开、DDL&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;log_connections&lt;/code&gt; / &lt;code&gt;log_statement&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;备份报告&lt;/td&gt;
+ &lt;td&gt;完整备份与恢复记录&lt;/td&gt;
+ &lt;td&gt;pgBackRest 日志与任务&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;监控告警&lt;/td&gt;
+ &lt;td&gt;异常事件记录&lt;/td&gt;
+ &lt;td&gt;Prometheus + Grafana&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;证书管理&lt;/td&gt;
+ &lt;td&gt;CA/证书分发记录&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;files/pki/&lt;/code&gt; / &lt;code&gt;/etc/pki/ca.crt&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 id="soc2-视角示例映射"&gt;SOC2 视角（示例映射）&lt;/h2&gt;
+&lt;p&gt;SOC2 的核心是 &lt;strong&gt;安全、可用性、机密性&lt;/strong&gt;。以下为常见控制点的概念映射：&lt;/p&gt;</description></item></channel></rss>

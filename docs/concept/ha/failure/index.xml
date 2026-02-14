@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>故障切换模型 on PIGSTY</title><link>https://pigsty.cc/docs/concept/ha/failure/</link><description>Recent content in 故障切换模型 on PIGSTY</description><generator>Hugo</generator><language>zh-CN</language><atom:link href="https://pigsty.cc/docs/concept/ha/failure/index.xml" rel="self" type="application/rss+xml"/><item><title>被动故障切换</title><link>https://pigsty.cc/docs/concept/ha/failure/passive/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/concept/ha/failure/passive/</guid><description>&lt;div id="infographic-537dd2226714fc6c5830057e9f044ea1" class="infographic-container td-max-width-on-larger-screens"&gt;&lt;/div&gt;
+
+&lt;script&gt;
+(function() {
+ var containerId = 'infographic-537dd2226714fc6c5830057e9f044ea1';
+ var syntax = "````\ninfographic list-row-simple-horizontal-arrow\ndata\n title 租约过期故障切换流程\n desc 当整个节点宕机，Patroni 无法主动释放租约，只能等待 TTL 过期\n items\n - label 租约过期\n desc Patroni 失联，被动等待主库租约 TTL 过期\n icon mingcute/close-circle-fill\n - label 从库检测\n desc 从库从循环中醒来后发现租约过期，开始竞选\n icon mingcute/key-2-fill\n - label 抢锁提拔\n desc 从库相互比较并抢锁，胜利者提升自己的PG\n icon mingcute/radar-fill\n - label 健康检查\n desc HAPROXY 健康检查发现新主上线，分配流量\n icon mingcute/arrow-up-circle-fill\ntheme light\n palette antv\n````";
+
+ function renderInfographic() {
+ var dom = document.getElementById(containerId);
+ if (!dom) { console.error('Infographic: container not found:', containerId); return; }
+ try {
+ var ig = new AntVInfographic.Infographic({
+ container: '#' + containerId,
+ width: dom.offsetWidth || '100%',
+ height: 'auto',
+ });
+ ig.render(syntax);
+ } catch (e) {
+ console.error('Infographic render error:', e);
+ dom.innerHTML = '&lt;pre style="color: red;"&gt;Infographic Error: ' + e.message + '&lt;/pre&gt;';
+ }
+ }
+
+ 
+ if (typeof AntVInfographic !== 'undefined') {
+ renderInfographic();
+ } else if (!window._infographicLoading) {
+ window._infographicLoading = true;
+ window._infographicCallbacks = [renderInfographic];
+ var script = document.createElement('script');
+ script.src = '/js/infographic.min.js';
+ script.onload = function() {
+ window._infographicCallbacks.forEach(function(cb) { cb(); });
+ };
+ document.head.appendChild(script);
+ } else {
+ window._infographicCallbacks.push(renderInfographic);
+ }
+})();
+&lt;/script&gt;
+
+&lt;hr&gt;
+&lt;h2 id="rto-时序图"&gt;RTO 时序图&lt;/h2&gt;
+&lt;div id="echarts-44d24210b099c2088232bbd8c2371226" class="echarts-container td-max-width-on-larger-screens" style="height: 520px;"&gt;&lt;/div&gt;
+
+&lt;script&gt;
+(function() {
+ var dom = document.getElementById('echarts-44d24210b099c2088232bbd8c2371226');
+ if (!dom) return;
+
+ 
+ window._echartsFns = window._echartsFns || {};
+
+var fmt = function(params) { if (!params || !params.length || params[0].name === '') return ''; return '&lt;b&gt;' + params[0].name + '&lt;/b&gt;&lt;br/&gt;' + params.filter(p =&gt; p.value !== '-' &amp;&amp; p.value != null).map(p =&gt; p.marker + ' ' + p.seriesName + ': ' + p.value + 's').join('&lt;br/&gt;'); };
+
+ window._echartsFns['fmt'] = fmt;
+ var theme = document.documentElement.getAttribute('data-bs-theme') === 'dark' ? 'dark' : null;
+
+ var chart = echarts.init(dom, theme);
+ var optionsJson = {"grid":{"bottom":32,"left":64,"right":24,"top":40},"legend":{"data":["租约过期","从库检测","抢锁提拔","健康检查"],"itemGap":12,"top":0},"series":[{"barWidth":20,"data":[120,110,100,"-",60,55,50,"-",30,27,25,"-",20,17,15],"emphasis":{"focus":"series"},"itemStyle":{"color":"#e15759"},"name":"租约过期","stack":"main","type":"bar","z":2},{"data":[20,10,0,"-",10,5,0,"-",5,3,0,"-",5,3,0],"emphasis":{"focus":"series"},"itemStyle":{"color":"#edc949"},"name":"从库检测","stack":"main","type":"bar","z":2},{"data":[2,1,0,"-",2,1,0,"-",2,1,0,"-",2,1,0],"emphasis":{"focus":"series"},"itemStyle":{"color":"#59a14f"},"name":"抢锁提拔","stack":"main","type":"bar","z":2},{"data":[8,6,4,"-",6,5,3,"-",4,3,2,"-",2,2,1],"emphasis":{"focus":"series"},"itemStyle":{"color":"#4e79a7"},"name":"健康检查","stack":"main","type":"bar","z":2},{"barGap":"-100%","barWidth":20,"data":[150,127,104,"-",78,66,53,"-",41,34,27,"-",29,23,16],"emphasis":{"itemStyle":{"opacity":0}},"itemStyle":{"color":"#888","opacity":0},"name":"RTO总计","type":"bar","z":1},{"barGap":"-100%","barWidth":20,"data":[150,150,150,"-",90,90,90,"-",45,45,45,"-",30,30,30],"emphasis":{"itemStyle":{"color":"rgba(0,0,0,0.12)"}},"itemStyle":{"color":"rgba(0,0,0,0.08)"},"name":"RTO预算","type":"bar","z":0}],"tooltip":{"axisPointer":{"type":"shadow"},"formatter":"$fn:fmt","trigger":"axis"},"xAxis":{"axisLine":{"show":true},"axisTick":{"show":true},"max":160,"minorSplitLine":{"lineStyle":{"opacity":0.2,"type":"dotted"},"show":true},"minorTick":{"show":true,"splitNumber":5},"name":"秒","nameLocation":"end","splitLine":{"lineStyle":{"opacity":0.5,"type":"dashed"},"show":true},"type":"value"},"yAxis":{"axisLabel":{"fontFamily":"monospace","fontSize":10},"axisLine":{"show":true},"axisTick":{"show":true},"data":["wide-max","wide-avg","wide-min","","safe-max","safe-avg","safe-min","","norm-max","norm-avg","norm-min","","fast-max","fast-avg","fast-min"],"splitLine":{"show":false},"type":"category"}};
+
+ 
+ function replaceFnRefs(obj) {
+ if (typeof obj === 'string' &amp;&amp; obj.startsWith('$fn:')) {
+ var fnName = obj.substring(4);
+ return window._echartsFns[fnName];
+ }
+ if (Array.isArray(obj)) {
+ return obj.map(replaceFnRefs);
+ }
+ if (obj &amp;&amp; typeof obj === 'object') {
+ var result = {};
+ for (var key in obj) {
+ result[key] = replaceFnRefs(obj[key]);
+ }
+ return result;
+ }
+ return obj;
+ }
+
+ var options = replaceFnRefs(optionsJson);
+ chart.setOption(options);
+
+ 
+ window.addEventListener('resize', function() {
+ chart.resize();
+ });
+ var observer = new MutationObserver(function(mutations) {
+ mutations.forEach(function(mutation) {
+ if (mutation.attributeName === 'data-bs-theme') {
+ var newTheme = document.documentElement.getAttribute('data-bs-theme') === 'dark' ? 'dark' : null;
+ chart.dispose();
+ chart = echarts.init(dom, newTheme);
+ chart.setOption(options);
+ }
+ });
+ });
+ observer.observe(document.documentElement, { attributes: true, attributeFilter: ['data-bs-theme'] });
+})();
+&lt;/script&gt;
+
+&lt;hr&gt;
+&lt;h2 id="故障模型"&gt;故障模型&lt;/h2&gt;
+&lt;table class="full-width"&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th style="text-align: center"&gt;项目&lt;/th&gt;
+ &lt;th style="text-align: center"&gt;最好&lt;/th&gt;
+ &lt;th style="text-align: center"&gt;最坏&lt;/th&gt;
+ &lt;th style="text-align: center"&gt;平均&lt;/th&gt;
+ &lt;th style="text-align: left"&gt;说明&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;&lt;strong&gt;租约过期&lt;/strong&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;code&gt;ttl - loop&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;code&gt;ttl&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;code&gt;ttl - loop/2&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;最好：即将刷新时宕机&lt;br/&gt;最坏：刚刷新完就宕机&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;&lt;strong&gt;从库检测&lt;/strong&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;code&gt;0&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;code&gt;loop&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;code&gt;loop / 2&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;最好：恰好在检测点&lt;br/&gt;最坏：刚错过检测点&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;&lt;strong&gt;抢锁提拔&lt;/strong&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;code&gt;0&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;code&gt;2&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;code&gt;1&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;最好：直接抢锁提升&lt;br/&gt;最坏：API超时+Promote&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;&lt;strong&gt;健康检查&lt;/strong&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;code&gt;(rise-1) × fastinter&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;code&gt;(rise-1) × fastinter + inter&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;code&gt;(rise-1) × fastinter + inter/2&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;最好：检查前状态变化&lt;br/&gt;最坏：检查后瞬间状态变化&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;被动故障与主动故障的核心区别&lt;/strong&gt;：&lt;/p&gt;</description></item><item><title>主动故障检测</title><link>https://pigsty.cc/docs/concept/ha/failure/active/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/concept/ha/failure/active/</guid><description>&lt;div id="infographic-5a27087cd19651a30e413fd22489ae1b" class="infographic-container td-max-width-on-larger-screens"&gt;&lt;/div&gt;
+
+&lt;script&gt;
+(function() {
+ var containerId = 'infographic-5a27087cd19651a30e413fd22489ae1b';
+ var syntax = "````\ninfographic list-row-simple-horizontal-arrow\ndata\n title 崩溃故障切换流程\n desc 当 Patroni 健康，但 PostgreSQL 因故崩溃时的故障切换流程\n items\n - label 故障检测\n desc Patroni 在循环中检测到 PG 崩溃\n icon mingcute/close-circle-fill\n - label 重启超时\n desc Patroni 尝试重启 PG，超时后释放租约\n icon mingcute/refresh-2-fill\n - label 从库检测\n desc 从库从循环中醒来发现租约释放，开始竞选\n icon mingcute/key-2-fill\n - label 抢锁提拔\n desc 从库相互比较并抢锁，胜利者提升自己的 PG\n icon mingcute/radar-fill\n - label 健康检查\n desc HAProxy 健康检查发现新主上线，分配流量\n icon mingcute/arrow-up-circle-fill\ntheme light\n palette antv\n````";
+
+ function renderInfographic() {
+ var dom = document.getElementById(containerId);
+ if (!dom) { console.error('Infographic: container not found:', containerId); return; }
+ try {
+ var ig = new AntVInfographic.Infographic({
+ container: '#' + containerId,
+ width: dom.offsetWidth || '100%',
+ height: 'auto',
+ });
+ ig.render(syntax);
+ } catch (e) {
+ console.error('Infographic render error:', e);
+ dom.innerHTML = '&lt;pre style="color: red;"&gt;Infographic Error: ' + e.message + '&lt;/pre&gt;';
+ }
+ }
+
+ 
+ if (typeof AntVInfographic !== 'undefined') {
+ renderInfographic();
+ } else if (!window._infographicLoading) {
+ window._infographicLoading = true;
+ window._infographicCallbacks = [renderInfographic];
+ var script = document.createElement('script');
+ script.src = '/js/infographic.min.js';
+ script.onload = function() {
+ window._infographicCallbacks.forEach(function(cb) { cb(); });
+ };
+ document.head.appendChild(script);
+ } else {
+ window._infographicCallbacks.push(renderInfographic);
+ }
+})();
+&lt;/script&gt;
+
+&lt;hr&gt;
+&lt;h2 id="rto-时序图"&gt;RTO 时序图&lt;/h2&gt;
+&lt;div id="echarts-7566178edd3ee3c0901186f67235867f" class="echarts-container td-max-width-on-larger-screens" style="height: 520px;"&gt;&lt;/div&gt;
+
+&lt;script&gt;
+(function() {
+ var dom = document.getElementById('echarts-7566178edd3ee3c0901186f67235867f');
+ if (!dom) return;
+
+ 
+ window._echartsFns = window._echartsFns || {};
+
+var fmt = function(params) { if (!params || !params.length || params[0].name === '') return ''; return '&lt;b&gt;' + params[0].name + '&lt;/b&gt;&lt;br/&gt;' + params.filter(p =&gt; p.value !== '-' &amp;&amp; p.value != null).map(p =&gt; p.marker + ' ' + p.seriesName + ': ' + p.value + 's').join('&lt;br/&gt;'); };
+
+ window._echartsFns['fmt'] = fmt;
+ var theme = document.documentElement.getAttribute('data-bs-theme') === 'dark' ? 'dark' : null;
+
+ var chart = echarts.init(dom, theme);
+ var optionsJson = {"grid":{"bottom":32,"left":64,"right":24,"top":40},"legend":{"data":["故障检测","重启超时","从库检测","抢锁提拔","健康检查"],"itemGap":12,"top":0},"series":[{"barWidth":20,"data":[20,10,0,"-",10,5,0,"-",5,3,0,"-",5,3,0],"emphasis":{"focus":"series"},"itemStyle":{"color":"#b07aa1"},"name":"故障检测","stack":"main","type":"bar","z":2},{"data":[95,95,0,"-",45,45,0,"-",25,25,0,"-",15,15,0],"emphasis":{"focus":"series"},"itemStyle":{"color":"#f28e2c"},"name":"重启超时","stack":"main","type":"bar","z":2},{"data":[20,10,0,"-",10,5,0,"-",5,3,0,"-",5,3,0],"emphasis":{"focus":"series"},"itemStyle":{"color":"#edc949"},"name":"从库检测","stack":"main","type":"bar","z":2},{"data":[2,1,0,"-",2,1,0,"-",2,1,0,"-",2,1,0],"emphasis":{"focus":"series"},"itemStyle":{"color":"#59a14f"},"name":"抢锁提拔","stack":"main","type":"bar","z":2},{"data":[8,6,4,"-",6,5,3,"-",4,3,2,"-",2,2,1],"emphasis":{"focus":"series"},"itemStyle":{"color":"#4e79a7"},"name":"健康检查","stack":"main","type":"bar","z":2},{"barGap":"-100%","barWidth":20,"data":[145,122,4,"-",73,61,3,"-",41,35,2,"-",29,24,1],"emphasis":{"itemStyle":{"opacity":0}},"itemStyle":{"color":"#888","opacity":0},"name":"RTO总计","type":"bar","z":1},{"barGap":"-100%","barWidth":20,"data":[150,150,150,"-",90,90,90,"-",45,45,45,"-",30,30,30],"emphasis":{"itemStyle":{"color":"rgba(0,0,0,0.12)"}},"itemStyle":{"color":"rgba(0,0,0,0.08)"},"name":"RTO预算","type":"bar","z":0}],"tooltip":{"axisPointer":{"type":"shadow"},"formatter":"$fn:fmt","trigger":"axis"},"xAxis":{"axisLine":{"show":true},"axisTick":{"show":true},"max":160,"minorSplitLine":{"lineStyle":{"opacity":0.2,"type":"dotted"},"show":true},"minorTick":{"show":true,"splitNumber":5},"name":"秒","nameLocation":"end","splitLine":{"lineStyle":{"opacity":0.5,"type":"dashed"},"show":true},"type":"value"},"yAxis":{"axisLabel":{"fontFamily":"monospace","fontSize":10},"axisLine":{"show":true},"axisTick":{"show":true},"data":["wide-max","wide-avg","wide-min","","safe-max","safe-avg","safe-min","","norm-max","norm-avg","norm-min","","fast-max","fast-avg","fast-min"],"splitLine":{"show":false},"type":"category"}};
+
+ 
+ function replaceFnRefs(obj) {
+ if (typeof obj === 'string' &amp;&amp; obj.startsWith('$fn:')) {
+ var fnName = obj.substring(4);
+ return window._echartsFns[fnName];
+ }
+ if (Array.isArray(obj)) {
+ return obj.map(replaceFnRefs);
+ }
+ if (obj &amp;&amp; typeof obj === 'object') {
+ var result = {};
+ for (var key in obj) {
+ result[key] = replaceFnRefs(obj[key]);
+ }
+ return result;
+ }
+ return obj;
+ }
+
+ var options = replaceFnRefs(optionsJson);
+ chart.setOption(options);
+
+ 
+ window.addEventListener('resize', function() {
+ chart.resize();
+ });
+ var observer = new MutationObserver(function(mutations) {
+ mutations.forEach(function(mutation) {
+ if (mutation.attributeName === 'data-bs-theme') {
+ var newTheme = document.documentElement.getAttribute('data-bs-theme') === 'dark' ? 'dark' : null;
+ chart.dispose();
+ chart = echarts.init(dom, newTheme);
+ chart.setOption(options);
+ }
+ });
+ });
+ observer.observe(document.documentElement, { attributes: true, attributeFilter: ['data-bs-theme'] });
+})();
+&lt;/script&gt;
+
+&lt;hr&gt;
+&lt;h2 id="故障模型"&gt;故障模型&lt;/h2&gt;
+&lt;table class="full-width"&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th style="text-align: center"&gt;项目&lt;/th&gt;
+ &lt;th style="text-align: center"&gt;最好&lt;/th&gt;
+ &lt;th style="text-align: center"&gt;最坏&lt;/th&gt;
+ &lt;th style="text-align: center"&gt;平均&lt;/th&gt;
+ &lt;th style="text-align: left"&gt;说明&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;&lt;strong&gt;故障检测&lt;/strong&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;code&gt;0&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;code&gt;loop&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;code&gt;loop/2&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;最好：PG 恰好在检测前崩溃&lt;br/&gt;最坏：PG 刚检测完就崩溃&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;&lt;strong&gt;重启超时&lt;/strong&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;code&gt;0&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;code&gt;start&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;code&gt;start&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;最好：PG 瞬间自愈&lt;br/&gt;最坏：等满 start 超时才释放租约&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;&lt;strong&gt;从库检测&lt;/strong&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;code&gt;0&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;code&gt;loop&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;code&gt;loop/2&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;最好：恰好在检测点&lt;br/&gt;最坏：刚错过检测点&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;&lt;strong&gt;抢锁提拔&lt;/strong&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;code&gt;0&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;code&gt;2&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;code&gt;1&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;最好：直接抢锁提升&lt;br/&gt;最坏：API 超时 + Promote&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;&lt;strong&gt;健康检查&lt;/strong&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;code&gt;(rise-1) × fastinter&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;code&gt;(rise-1) × fastinter + inter&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;&lt;code&gt;(rise-1) × fastinter + inter/2&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;最好：检查前状态变化&lt;br/&gt;最坏：检查后瞬间状态变化&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;主动故障与被动故障的核心区别&lt;/strong&gt;：&lt;/p&gt;</description></item></channel></rss>

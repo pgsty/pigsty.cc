@@ -1,0 +1,588 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>日常管理 on PIGSTY</title><link>https://pigsty.cc/docs/pgsql/admin/</link><description>Recent content in 日常管理 on PIGSTY</description><generator>Hugo</generator><language>zh-CN</language><atom:link href="https://pigsty.cc/docs/pgsql/admin/index.xml" rel="self" type="application/rss+xml"/><item><title>管理 PostgreSQL 数据库集群</title><link>https://pigsty.cc/docs/pgsql/admin/cluster/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/pgsql/admin/cluster/</guid><description>&lt;h2 id="速查手册"&gt;速查手册&lt;/h2&gt;
+&lt;table class="full-width"&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th style="text-align: left"&gt;操作&lt;/th&gt;
+ &lt;th style="text-align: left"&gt;快捷命令&lt;/th&gt;
+ &lt;th style="text-align: left"&gt;说明&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;&lt;a href="#%E5%88%9B%E5%BB%BA%E9%9B%86%E7%BE%A4"&gt;&lt;strong&gt;创建集群&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;bin/pgsql-add &amp;lt;cls&amp;gt;&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;创建新的 PostgreSQL 集群&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;&lt;a href="#%E6%89%A9%E5%AE%B9%E9%9B%86%E7%BE%A4"&gt;&lt;strong&gt;扩容集群&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;bin/pgsql-add &amp;lt;cls&amp;gt; &amp;lt;ip...&amp;gt;&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;为现有集群添加从库副本&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;&lt;a href="#%E7%BC%A9%E5%AE%B9%E9%9B%86%E7%BE%A4"&gt;&lt;strong&gt;缩容集群&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;bin/pgsql-rm &amp;lt;cls&amp;gt; &amp;lt;ip...&amp;gt;&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;从集群中移除指定实例&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;&lt;a href="#%E9%94%80%E6%AF%81%E9%9B%86%E7%BE%A4"&gt;&lt;strong&gt;销毁集群&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;bin/pgsql-rm &amp;lt;cls&amp;gt;&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;销毁整个 PostgreSQL 集群&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;&lt;a href="#%E5%88%B7%E6%96%B0%E6%9C%8D%E5%8A%A1"&gt;&lt;strong&gt;刷新服务&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;bin/pgsql-svc &amp;lt;cls&amp;gt; [ip...]&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;重载集群的负载均衡配置&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;&lt;a href="#%E5%88%B7%E6%96%B0hba"&gt;&lt;strong&gt;刷新HBA&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;bin/pgsql-hba &amp;lt;cls&amp;gt; [ip...]&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;重载集群的 HBA 访问规则&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;&lt;a href="#%E5%85%8B%E9%9A%86%E9%9B%86%E7%BE%A4"&gt;&lt;strong&gt;克隆集群&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;-&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;通过备份集群或 PITR 克隆&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;其他管理任务，请参考：&lt;a href="https://pigsty.cc/docs/pgsql/admin/patroni"&gt;&lt;strong&gt;高可用管理&lt;/strong&gt;&lt;/a&gt;，&lt;a href="https://pigsty.cc/docs/pgsql/admin/user/"&gt;&lt;strong&gt;管理用户&lt;/strong&gt;&lt;/a&gt;，&lt;a href="https://pigsty.cc/docs/pgsql/admin/db/"&gt;&lt;strong&gt;管理数据库&lt;/strong&gt;&lt;/a&gt;。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="创建集群"&gt;创建集群&lt;/h2&gt;
+&lt;p&gt;要创建一个新的 PostgreSQL 集群，请首先在 &lt;a href="https://pigsty.cc/docs/concept/iac/inventory"&gt;&lt;strong&gt;配置清单&lt;/strong&gt;&lt;/a&gt; 中 &lt;a href="https://pigsty.cc/docs/pgsql/config/cluster"&gt;&lt;strong&gt;定义集群&lt;/strong&gt;&lt;/a&gt;，然后 &lt;a href="https://pigsty.cc/docs/node/admin#%E6%B7%BB%E5%8A%A0%E8%8A%82%E7%82%B9"&gt;&lt;strong&gt;纳管节点&lt;/strong&gt;&lt;/a&gt;并进行初始化：&lt;/p&gt;
+
+
+
+
+&lt;ul class="nav nav-tabs" id="tabs-0" role="tablist"&gt;
+ &lt;li class="nav-item"&gt;
+ &lt;button class="nav-link active"
+ id="tabs-00-00-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-00" role="tab"
+ data-td-tp-persist="脚本" aria-controls="tabs-00-00" aria-selected="true"&gt;
+ 脚本
+ &lt;/button&gt;
+ &lt;/li&gt;&lt;li class="nav-item"&gt;
+ &lt;button class="nav-link"
+ id="tabs-00-01-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-01" role="tab"
+ data-td-tp-persist="剧本" aria-controls="tabs-00-01" aria-selected="false"&gt;
+ 剧本
+ &lt;/button&gt;
+ &lt;/li&gt;&lt;li class="nav-item"&gt;
+ &lt;button class="nav-link"
+ id="tabs-00-02-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-02" role="tab"
+ data-td-tp-persist="示例" aria-controls="tabs-00-02" aria-selected="false"&gt;
+ 示例
+ &lt;/button&gt;
+ &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class="tab-content" id="tabs-0-content"&gt;
+ &lt;div class="tab-body tab-pane fade show active"
+ id="tabs-00-00" role="tabpanel" aria-labelled-by="tabs-00-00-tab" tabindex="0"&gt;
+ &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;bin/node-add &amp;lt;cls&amp;gt; &lt;span style="color:#8f5902;font-style:italic"&gt;# 添加分组 &amp;lt;cls&amp;gt; 下的节点&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+ &lt;/div&gt;
+ &lt;div class="tab-body tab-pane fade"
+ id="tabs-00-01" role="tabpanel" aria-labelled-by="tabs-00-01-tab" tabindex="0"&gt;
+ &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;./node.yml -l &amp;lt;cls&amp;gt; &lt;span style="color:#8f5902;font-style:italic"&gt;# 直接使用 Ansible 剧本添加分组 &amp;lt;cls&amp;gt; 下的节点&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+ &lt;/div&gt;
+ &lt;div class="tab-body tab-pane fade"
+ id="tabs-00-02" role="tabpanel" aria-labelled-by="tabs-00-02-tab" tabindex="0"&gt;
+ &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;bin/pgsql-add pg-test &lt;span style="color:#8f5902;font-style:italic"&gt;# 例子，添加 pg-test 分组下的节点，实际执行 ./node.yml -l pg-test&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+ &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;在被纳管的节点上，可以使用以下命令创建集群：（针对 &lt;strong&gt;&lt;code&gt;&amp;lt;cls&amp;gt;&lt;/code&gt;&lt;/strong&gt; 分组执行 &lt;a href="https://pigsty.cc/docs/pgsql/playbook#pgsqlyml"&gt;&lt;strong&gt;&lt;code&gt;pgsql.yml&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt; 剧本）&lt;/p&gt;</description></item><item><title>管理 PostgreSQL 业务用户</title><link>https://pigsty.cc/docs/pgsql/admin/user/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/pgsql/admin/user/</guid><description>&lt;h2 id="快速上手"&gt;快速上手&lt;/h2&gt;
+&lt;p&gt;Pigsty 使用声明式管理方式，首先在 &lt;a href="https://pigsty.cc/docs/concept/iac/inventory"&gt;&lt;strong&gt;配置清单&lt;/strong&gt;&lt;/a&gt; 中 &lt;a href="https://pigsty.cc/docs/pgsql/config/user"&gt;&lt;strong&gt;定义用户&lt;/strong&gt;&lt;/a&gt;，然后使用 &lt;code&gt;bin/pgsql-user &amp;lt;cls&amp;gt; &amp;lt;username&amp;gt;&lt;/code&gt; 创建或修改用户。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-yaml" data-lang="yaml"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;pg-meta&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;hosts&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;{&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;10.10.10.10&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;{&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;pg_seq: 1, pg_role&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;primary } }&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;vars&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;pg_cluster&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;pg-meta&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;pg_users&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;[&lt;/span&gt;{&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;name: dbuser_app, password: &amp;#39;DBUser.App&amp;#39;, pgbouncer&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;true&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;}&lt;span style="color:#000;font-weight:bold"&gt;]&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# &amp;lt;--- 在这里定义用户列表！&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+
+&lt;ul class="nav nav-tabs" id="tabs-0" role="tablist"&gt;
+ &lt;li class="nav-item"&gt;
+ &lt;button class="nav-link active"
+ id="tabs-00-00-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-00" role="tab"
+ data-td-tp-persist="脚本" aria-controls="tabs-00-00" aria-selected="true"&gt;
+ 脚本
+ &lt;/button&gt;
+ &lt;/li&gt;&lt;li class="nav-item"&gt;
+ &lt;button class="nav-link"
+ id="tabs-00-01-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-01" role="tab"
+ data-td-tp-persist="剧本" aria-controls="tabs-00-01" aria-selected="false"&gt;
+ 剧本
+ &lt;/button&gt;
+ &lt;/li&gt;&lt;li class="nav-item"&gt;
+ &lt;button class="nav-link"
+ id="tabs-00-02-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-02" role="tab"
+ data-td-tp-persist="示例" aria-controls="tabs-00-02" aria-selected="false"&gt;
+ 示例
+ &lt;/button&gt;
+ &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class="tab-content" id="tabs-0-content"&gt;
+ &lt;div class="tab-body tab-pane fade show active"
+ id="tabs-00-00" role="tabpanel" aria-labelled-by="tabs-00-00-tab" tabindex="0"&gt;
+ &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;bin/pgsql-user &amp;lt;cls&amp;gt; &amp;lt;username&amp;gt; &lt;span style="color:#8f5902;font-style:italic"&gt;# 在 &amp;lt;cls&amp;gt; 集群上创建/修改 &amp;lt;username&amp;gt; 用户&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+ &lt;/div&gt;
+ &lt;div class="tab-body tab-pane fade"
+ id="tabs-00-01" role="tabpanel" aria-labelled-by="tabs-00-01-tab" tabindex="0"&gt;
+ &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;./pgsql-user.yml -l pg-meta -e &lt;span style="color:#000"&gt;username&lt;/span&gt;&lt;span style="color:#ce5c00;font-weight:bold"&gt;=&lt;/span&gt;dbuser_app &lt;span style="color:#8f5902;font-style:italic"&gt;# 直接使用剧本在 &amp;lt;cls&amp;gt; 集群上创建/修改 &amp;lt;username&amp;gt; 用户&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+ &lt;/div&gt;
+ &lt;div class="tab-body tab-pane fade"
+ id="tabs-00-02" role="tabpanel" aria-labelled-by="tabs-00-02-tab" tabindex="0"&gt;
+ &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;bin/pgsql-user pg-meta dbuser_app &lt;span style="color:#8f5902;font-style:italic"&gt;# 在 pg-meta 集群上创建/修改 dbuser_app 用户&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+ &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;关于用户定义参数的完整参考，请查阅 &lt;a href="https://pigsty.cc/docs/pgsql/config/user"&gt;&lt;strong&gt;用户配置&lt;/strong&gt;&lt;/a&gt;。关于用户的访问权限，请参考 &lt;a href="https://pigsty.cc/docs/concept/sec/ac/#%E9%BB%98%E8%AE%A4%E8%A7%92%E8%89%B2%E4%B8%8E%E7%B3%BB%E7%BB%9F%E7%94%A8%E6%88%B7"&gt;&lt;strong&gt;ACL：角色权限&lt;/strong&gt;&lt;/a&gt;。&lt;/p&gt;</description></item><item><title>管理 PostgreSQL 业务数据库</title><link>https://pigsty.cc/docs/pgsql/admin/db/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/pgsql/admin/db/</guid><description>&lt;h2 id="快速上手"&gt;快速上手&lt;/h2&gt;
+&lt;p&gt;Pigsty 使用声明式管理方式，首先在 &lt;a href="https://pigsty.cc/docs/concept/iac/inventory"&gt;&lt;strong&gt;配置清单&lt;/strong&gt;&lt;/a&gt; 中 &lt;a href="https://pigsty.cc/docs/pgsql/config/db"&gt;&lt;strong&gt;定义数据库&lt;/strong&gt;&lt;/a&gt;，然后使用 &lt;code&gt;bin/pgsql-db &amp;lt;cls&amp;gt; &amp;lt;dbname&amp;gt;&lt;/code&gt; 创建或修改数据库。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-yaml" data-lang="yaml"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;pg-meta&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;hosts&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;{&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;10.10.10.10&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;{&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;pg_seq: 1, pg_role&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;primary } }&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;vars&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;pg_cluster&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;pg-meta&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;pg_databases&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;[&lt;/span&gt;{&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;name&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;some_db }] &lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# &amp;lt;--- 在这里定义数据库列表！&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+
+&lt;ul class="nav nav-tabs" id="tabs-0" role="tablist"&gt;
+ &lt;li class="nav-item"&gt;
+ &lt;button class="nav-link active"
+ id="tabs-00-00-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-00" role="tab"
+ data-td-tp-persist="脚本" aria-controls="tabs-00-00" aria-selected="true"&gt;
+ 脚本
+ &lt;/button&gt;
+ &lt;/li&gt;&lt;li class="nav-item"&gt;
+ &lt;button class="nav-link"
+ id="tabs-00-01-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-01" role="tab"
+ data-td-tp-persist="剧本" aria-controls="tabs-00-01" aria-selected="false"&gt;
+ 剧本
+ &lt;/button&gt;
+ &lt;/li&gt;&lt;li class="nav-item"&gt;
+ &lt;button class="nav-link"
+ id="tabs-00-02-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-02" role="tab"
+ data-td-tp-persist="示例" aria-controls="tabs-00-02" aria-selected="false"&gt;
+ 示例
+ &lt;/button&gt;
+ &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class="tab-content" id="tabs-0-content"&gt;
+ &lt;div class="tab-body tab-pane fade show active"
+ id="tabs-00-00" role="tabpanel" aria-labelled-by="tabs-00-00-tab" tabindex="0"&gt;
+ &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;bin/pgsql-db &amp;lt;cls&amp;gt; &amp;lt;dbname&amp;gt; &lt;span style="color:#8f5902;font-style:italic"&gt;# 在 &amp;lt;cls&amp;gt; 集群上创建/修改 &amp;lt;dbname&amp;gt; 数据库&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+ &lt;/div&gt;
+ &lt;div class="tab-body tab-pane fade"
+ id="tabs-00-01" role="tabpanel" aria-labelled-by="tabs-00-01-tab" tabindex="0"&gt;
+ &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;./pgsql-db.yml -l pg-meta -e &lt;span style="color:#000"&gt;dbname&lt;/span&gt;&lt;span style="color:#ce5c00;font-weight:bold"&gt;=&lt;/span&gt;some_db &lt;span style="color:#8f5902;font-style:italic"&gt;# 直接使用剧本在 &amp;lt;cls&amp;gt; 集群上创建/修改 &amp;lt;dbname&amp;gt; 数据库&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+ &lt;/div&gt;
+ &lt;div class="tab-body tab-pane fade"
+ id="tabs-00-02" role="tabpanel" aria-labelled-by="tabs-00-02-tab" tabindex="0"&gt;
+ &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;bin/pgsql-db pg-meta some_db &lt;span style="color:#8f5902;font-style:italic"&gt;# 在 pg-meta 集群上创建/修改 some_db 数据库&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+ &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;关于数据库定义参数的完整参考，请查阅 &lt;a href="https://pigsty.cc/docs/pgsql/config/db"&gt;&lt;strong&gt;数据库配置&lt;/strong&gt;&lt;/a&gt;。关于数据库的访问权限，请参考 &lt;a href="https://pigsty.cc/docs/concept/sec/ac/#%E6%95%B0%E6%8D%AE%E5%BA%93%E9%9A%94%E7%A6%BB"&gt;&lt;strong&gt;ACL：数据库权限&lt;/strong&gt;&lt;/a&gt;。&lt;/p&gt;</description></item><item><title>管理 Patroni 高可用</title><link>https://pigsty.cc/docs/pgsql/admin/patroni/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/pgsql/admin/patroni/</guid><description>&lt;h2 id="概览"&gt;概览&lt;/h2&gt;
+&lt;p&gt;Pigsty 使用 Patroni 管理 PostgreSQL 集群，它可以用来修改集群配置，查看集群状态，执行主从切换，重启集群，重做从库等操作。&lt;/p&gt;
+&lt;p&gt;要使用 Patroni 进行管理，您需要有以下两种身份之一：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;从 &lt;a href="https://pigsty.cc/docs/concept/arch/node#infra%E8%8A%82%E7%82%B9"&gt;&lt;strong&gt;INFRA 节点&lt;/strong&gt;&lt;/a&gt; 上使用 &lt;a href="https://pigsty.cc/docs/deploy/admin"&gt;&lt;strong&gt;管理员用户&lt;/strong&gt;&lt;/a&gt; ，可以管理环境中的所有集群。&lt;/li&gt;
+&lt;li&gt;从 &lt;a href="https://pigsty.cc/docs/concept/arch/node#pgsql%E8%8A%82%E7%82%B9"&gt;&lt;strong&gt;PGSQL节点&lt;/strong&gt;&lt;/a&gt; 上使用 &lt;a href="https://pigsty.cc/docs/pgsql/param#pg_dbsu"&gt;&lt;strong&gt;&lt;code&gt;pg_dbsu&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt; （默认为 &lt;code&gt;postgres&lt;/code&gt;），可以管理当前集群。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Patroni 提供了 &lt;a href="https://patroni.readthedocs.io/en/latest/patronictl.html"&gt;&lt;strong&gt;&lt;code&gt;patronictl&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt; 命令行工具用于管理，Pigsty 提供了封装的快捷命令 &lt;code&gt;pg&lt;/code&gt; 来简化其操作。&lt;/p&gt;
+&lt;details&gt;&lt;summary&gt;通过 pg 别名使用 patronictl&lt;/summary&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;pg &lt;span style="color:#ce5c00;font-weight:bold"&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ce5c00;font-weight:bold"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#204a87"&gt;local&lt;/span&gt; &lt;span style="color:#000"&gt;patroni_conf&lt;/span&gt;&lt;span style="color:#ce5c00;font-weight:bold"&gt;=&lt;/span&gt;&lt;span style="color:#4e9a06"&gt;&amp;#34;/infra/conf/patronictl.yml&amp;#34;&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#204a87;font-weight:bold"&gt;if&lt;/span&gt; &lt;span style="color:#ce5c00;font-weight:bold"&gt;[&lt;/span&gt; ! -r &lt;span style="color:#4e9a06"&gt;${&lt;/span&gt;&lt;span style="color:#000"&gt;patroni_conf&lt;/span&gt;&lt;span style="color:#4e9a06"&gt;}&lt;/span&gt; &lt;span style="color:#ce5c00;font-weight:bold"&gt;]&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;;&lt;/span&gt; &lt;span style="color:#204a87;font-weight:bold"&gt;then&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#000"&gt;patroni_conf&lt;/span&gt;&lt;span style="color:#ce5c00;font-weight:bold"&gt;=&lt;/span&gt;&lt;span style="color:#4e9a06"&gt;&amp;#34;/etc/patroni/patroni.yml&amp;#34;&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#204a87;font-weight:bold"&gt;if&lt;/span&gt; &lt;span style="color:#ce5c00;font-weight:bold"&gt;[&lt;/span&gt; ! -r &lt;span style="color:#4e9a06"&gt;${&lt;/span&gt;&lt;span style="color:#000"&gt;patroni_conf&lt;/span&gt;&lt;span style="color:#4e9a06"&gt;}&lt;/span&gt; &lt;span style="color:#ce5c00;font-weight:bold"&gt;]&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;;&lt;/span&gt; &lt;span style="color:#204a87;font-weight:bold"&gt;then&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#204a87"&gt;echo&lt;/span&gt; &lt;span style="color:#4e9a06"&gt;&amp;#34;error: patronictl config not found&amp;#34;&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#204a87;font-weight:bold"&gt;return&lt;/span&gt; 1&lt;span style="color:#000;font-weight:bold"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#204a87;font-weight:bold"&gt;fi&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#204a87;font-weight:bold"&gt;fi&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; patronictl -c &lt;span style="color:#4e9a06"&gt;${&lt;/span&gt;&lt;span style="color:#000"&gt;patroni_conf&lt;/span&gt;&lt;span style="color:#4e9a06"&gt;}&lt;/span&gt; &lt;span style="color:#4e9a06"&gt;&amp;#34;&lt;/span&gt;&lt;span style="color:#000"&gt;$@&lt;/span&gt;&lt;span style="color:#4e9a06"&gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ce5c00;font-weight:bold"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/details&gt;
+&lt;hr&gt;
+&lt;h2 id="可用命令"&gt;可用命令&lt;/h2&gt;
+&lt;table class="full-width"&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;命令&lt;/th&gt;
+ &lt;th&gt;功能&lt;/th&gt;
+ &lt;th&gt;说明&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="#%E4%BF%AE%E6%94%B9%E9%85%8D%E7%BD%AE"&gt;&lt;strong&gt;&lt;code&gt;edit-config&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;td&gt;修改配置&lt;/td&gt;
+ &lt;td&gt;交互式修改集群的 Patroni/PostgreSQL 配置&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="#%E6%9F%A5%E7%9C%8B%E7%8A%B6%E6%80%81"&gt;&lt;strong&gt;&lt;code&gt;list&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;td&gt;查看状态&lt;/td&gt;
+ &lt;td&gt;列出集群成员及其状态&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="#%E4%B8%BB%E5%8A%A8%E5%88%87%E6%8D%A2"&gt;&lt;strong&gt;&lt;code&gt;switchover&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;td&gt;主动切换&lt;/td&gt;
+ &lt;td&gt;将主库角色切换到指定从库（计划内维护）&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="#%E6%95%85%E9%9A%9C%E5%88%87%E6%8D%A2"&gt;&lt;strong&gt;&lt;code&gt;failover&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;td&gt;故障切换&lt;/td&gt;
+ &lt;td&gt;强制故障转移到指定从库（紧急情况）&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="#%E9%87%8D%E5%90%AF%E5%AE%9E%E4%BE%8B"&gt;&lt;strong&gt;&lt;code&gt;restart&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;td&gt;重启实例&lt;/td&gt;
+ &lt;td&gt;重启 PostgreSQL 实例以应用需要重启的参数&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="#%E9%87%8D%E8%BD%BD%E9%85%8D%E7%BD%AE"&gt;&lt;strong&gt;&lt;code&gt;reload&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;td&gt;重载配置&lt;/td&gt;
+ &lt;td&gt;重载 Patroni 配置（无需重启）&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="#%E9%87%8D%E5%81%9A%E4%BB%8E%E5%BA%93"&gt;&lt;strong&gt;&lt;code&gt;reinit&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;td&gt;重做从库&lt;/td&gt;
+ &lt;td&gt;重新初始化从库（擦除数据并重新复制）&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="#%E6%9A%82%E5%81%9C%E8%87%AA%E5%8A%A8%E5%88%87%E6%8D%A2"&gt;&lt;strong&gt;&lt;code&gt;pause&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;td&gt;暂停自动切换&lt;/td&gt;
+ &lt;td&gt;暂停 Patroni 的自动故障转移功能&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="#%E6%81%A2%E5%A4%8D%E8%87%AA%E5%8A%A8%E5%88%87%E6%8D%A2"&gt;&lt;strong&gt;&lt;code&gt;resume&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;td&gt;恢复自动切换&lt;/td&gt;
+ &lt;td&gt;恢复 Patroni 的自动故障转移功能&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="#%E6%9F%A5%E7%9C%8B%E5%8E%86%E5%8F%B2"&gt;&lt;strong&gt;&lt;code&gt;history&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;td&gt;查看历史&lt;/td&gt;
+ &lt;td&gt;显示集群的故障转移历史记录&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="#%E6%98%BE%E7%A4%BA%E9%85%8D%E7%BD%AE"&gt;&lt;strong&gt;&lt;code&gt;show-config&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;td&gt;显示配置&lt;/td&gt;
+ &lt;td&gt;显示集群当前的配置（只读）&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="#%E6%89%A7%E8%A1%8C%E6%9F%A5%E8%AF%A2"&gt;&lt;strong&gt;&lt;code&gt;query&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;td&gt;执行查询&lt;/td&gt;
+ &lt;td&gt;在集群成员上执行 SQL 查询&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="#%E6%9F%A5%E7%9C%8B%E6%8B%93%E6%89%91"&gt;&lt;strong&gt;&lt;code&gt;topology&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;td&gt;查看拓扑&lt;/td&gt;
+ &lt;td&gt;显示集群的复制拓扑结构&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="#%E6%9F%A5%E7%9C%8B%E7%89%88%E6%9C%AC"&gt;&lt;strong&gt;&lt;code&gt;version&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;td&gt;查看版本&lt;/td&gt;
+ &lt;td&gt;显示 Patroni 版本信息&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;a href="#%E7%A7%BB%E9%99%A4%E6%88%90%E5%91%98"&gt;&lt;strong&gt;&lt;code&gt;remove&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;td&gt;移除成员&lt;/td&gt;
+ &lt;td&gt;从 DCS 中移除集群成员（危险操作）&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 id="修改配置"&gt;修改配置&lt;/h2&gt;
+&lt;p&gt;使用 &lt;a href="https://patroni.readthedocs.io/en/latest/patronictl.html#patronictl-edit-config"&gt;&lt;strong&gt;&lt;code&gt;edit-config&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt; 子命令可以交互式修改集群的 Patroni 与 PostgreSQL 配置。该命令会打开一个编辑器，让您修改存储在 DCS（分布式配置存储）中的集群配置，修改后会自动应用到所有集群成员。您可以更改 Patroni 本身的参数（如 &lt;code&gt;ttl&lt;/code&gt;、&lt;code&gt;loop_wait&lt;/code&gt;、&lt;code&gt;synchronous_mode&lt;/code&gt; 等），以及 &lt;code&gt;postgresql.parameters&lt;/code&gt; 中的 PostgreSQL 参数。&lt;/p&gt;</description></item><item><title>Pgbouncer 连接池管理</title><link>https://pigsty.cc/docs/pgsql/admin/pgbouncer/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/pgsql/admin/pgbouncer/</guid><description>&lt;h2 id="概览"&gt;概览&lt;/h2&gt;
+&lt;p&gt;Pigsty 使用 &lt;a href="https://www.pgbouncer.org/"&gt;&lt;strong&gt;Pgbouncer&lt;/strong&gt;&lt;/a&gt; 作为 PostgreSQL 的连接池中间件，默认监听 &lt;code&gt;6432&lt;/code&gt; 端口，代理访问本机 &lt;code&gt;5432&lt;/code&gt; 端口上的 PostgreSQL 实例。&lt;/p&gt;
+&lt;p&gt;这是一个 &lt;strong&gt;可选组件&lt;/strong&gt;，如果您并没有海量链接，也不需要事务池化与查询监控指标，可以关闭连接池，直连数据库，或者保留但不使用。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="用户与数据库管理"&gt;用户与数据库管理&lt;/h2&gt;
+&lt;p&gt;Pgbouncer 中的用户和数据库由 Pigsty 自动管理，并在 &lt;a href="https://pigsty.cc/docs/pgsql/admin/db"&gt;&lt;strong&gt;创建数据库&lt;/strong&gt;&lt;/a&gt; 与 &lt;a href="https://pigsty.cc/docs/pgsql/admin/user"&gt;&lt;strong&gt;创建用户&lt;/strong&gt;&lt;/a&gt; 时自动应用 &lt;a href="https://pigsty.cc/docs/pgsql/config/db"&gt;&lt;strong&gt;数据库配置&lt;/strong&gt;&lt;/a&gt; 与 &lt;a href="https://pigsty.cc/docs/pgsql/config/user"&gt;&lt;strong&gt;用户配置&lt;/strong&gt;&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;数据库管理&lt;/strong&gt;：在 &lt;a href="https://pigsty.cc/docs/pgsql/param#pg_databases"&gt;&lt;strong&gt;&lt;code&gt;pg_databases&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt; 中定义的数据库，默认会自动添加到 Pgbouncer。设置 &lt;a href="https://pigsty.cc/docs/pgsql/admin/db#%E8%BF%9E%E6%8E%A5%E6%B1%A0%E7%AE%A1%E7%90%86"&gt;&lt;strong&gt;&lt;code&gt;pgbouncer: false&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt; 可以排除特定数据库。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-yaml" data-lang="yaml"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;pg_databases&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;- &lt;span style="color:#204a87;font-weight:bold"&gt;name&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;mydb &lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 默认加入连接池&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;pool_auth_user&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;dbuser_meta&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 可选，认证查询用户（配合 pgbouncer_auth_query）&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;pool_mode&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;transaction &lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 数据库级池化模式&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;pool_size&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#0000cf;font-weight:bold"&gt;64&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 默认池大小&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;pool_reserve&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#0000cf;font-weight:bold"&gt;32&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 保留池大小&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;pool_size_min&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#0000cf;font-weight:bold"&gt;0&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 最小池大小&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;pool_connlimit&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#0000cf;font-weight:bold"&gt;100&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 最大数据库连接数&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;- &lt;span style="color:#204a87;font-weight:bold"&gt;name&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;internal&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;pgbouncer&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;false&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 不加入连接池&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;用户管理&lt;/strong&gt;：在 &lt;a href="https://pigsty.cc/docs/pgsql/param#pg_users"&gt;&lt;strong&gt;&lt;code&gt;pg_users&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt; 中定义的用户，需要显式设置 &lt;a href="https://pigsty.cc/docs/pgsql/admin/user#%E8%BF%9E%E6%8E%A5%E6%B1%A0%E7%AE%A1%E7%90%86"&gt;&lt;strong&gt;&lt;code&gt;pgbouncer: true&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt; 才会加入连接池用户列表。&lt;/p&gt;</description></item><item><title>管理 PostgreSQL 组件服务</title><link>https://pigsty.cc/docs/pgsql/admin/component/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/pgsql/admin/component/</guid><description>&lt;h2 id="概述"&gt;概述&lt;/h2&gt;
+&lt;p&gt;Pigsty 的 PGSQL 模块由多个组件构成，每个组件都以 systemd 服务的形式运行在节点上。（ &lt;a href="https://pigsty.cc/docs/concept/arch/pgsql#pgbackrest"&gt;&lt;strong&gt;pgbackrest&lt;/strong&gt;&lt;/a&gt; 除外）&lt;/p&gt;
+&lt;p&gt;了解这些组件及其管理方式，对于维护生产环境中的 PostgreSQL 集群非常重要。&lt;/p&gt;
+&lt;table class="full-width"&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th style="text-align: left"&gt;组件&lt;/th&gt;
+ &lt;th style="text-align: left"&gt;端口&lt;/th&gt;
+ &lt;th style="text-align: left"&gt;服务名&lt;/th&gt;
+ &lt;th style="text-align: left"&gt;说明&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;Patroni&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;strong&gt;&lt;code&gt;8008&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;patroni&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;高可用管理器，负责 PostgreSQL 的生命周期管理&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;PostgreSQL&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;strong&gt;&lt;code&gt;5432&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;postgres&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;占位服务，默认不使用，应急使用&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;Pgbouncer&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;strong&gt;&lt;code&gt;6432&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;pgbouncer&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;连接池中间件，业务流量入口&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;PgBackRest&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;-&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;-&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;pgBackRest 没有守护服务&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;HAProxy&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;strong&gt;&lt;code&gt;543x&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;haproxy&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;负载均衡器，暴露数据库服务&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;pg_exporter&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;strong&gt;&lt;code&gt;9630&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;pg_exporter&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;PostgreSQL 监控指标导出器&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;pgbouncer_exporter&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;strong&gt;&lt;code&gt;9631&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;pgbouncer_exporter&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;Pgbouncer 监控指标导出器&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;vip-manager&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;-&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;vip-manager&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;可选，管理 L2 VIP 地址漂移&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;div class="alert alert-warning" role="alert"&gt;&lt;div class="h4 alert-heading" role="heading"&gt;重要提示&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;不要直接使用 systemctl 管理 PostgreSQL 服务&lt;/strong&gt;。PostgreSQL 由 Patroni 托管，应通过 &lt;a href="https://pigsty.cc/docs/pgsql/admin/patroni"&gt;&lt;strong&gt;&lt;code&gt;patronictl&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt; 命令进行管理。
+直接操作 PostgreSQL 可能导致 Patroni 状态不一致，触发意外的故障转移。&lt;code&gt;postgres&lt;/code&gt; 服务是 Patroni 服务失效时的应急逃生窗口。&lt;/p&gt;</description></item><item><title>管理 PostgreSQL 定时任务</title><link>https://pigsty.cc/docs/pgsql/admin/crontab/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/pgsql/admin/crontab/</guid><description>&lt;p&gt;Pigsty 使用 crontab 来管理定时任务，用于执行例行备份，冻结老化事务，重整膨胀表索引等维护工作。&lt;/p&gt;
+&lt;h2 id="速查手册"&gt;速查手册&lt;/h2&gt;
+&lt;table class="full-width"&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th style="text-align: left"&gt;操作&lt;/th&gt;
+ &lt;th style="text-align: left"&gt;快捷命令&lt;/th&gt;
+ &lt;th style="text-align: left"&gt;说明&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;&lt;a href="#%E9%85%8D%E7%BD%AE%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1"&gt;&lt;strong&gt;配置定时任务&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;./pgsql.yml -t pg_crontab -l &amp;lt;cls&amp;gt;&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;应用 pg_crontab 配置&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;&lt;a href="#%E6%9F%A5%E7%9C%8B%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1"&gt;&lt;strong&gt;查看定时任务&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;crontab -l&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;以 postgres 用户查看&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;&lt;a href="#pg-backup"&gt;&lt;strong&gt;物理备份&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;pg-backup [full|diff|incr]&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;使用 pgBackRest 执行备份&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;&lt;a href="#pg-vacuum"&gt;&lt;strong&gt;事务冻结&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;pg-vacuum [database...]&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;冻结老化事务，预防 XID 回卷&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;&lt;a href="#pg-repack"&gt;&lt;strong&gt;膨胀治理&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;pg-repack [database...]&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;在线重整膨胀的表与索引&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;其他管理任务，请参考：&lt;a href="https://pigsty.cc/docs/pgsql/backup/"&gt;&lt;strong&gt;备份管理&lt;/strong&gt;&lt;/a&gt;，&lt;a href="https://pigsty.cc/docs/pgsql/monitor/"&gt;&lt;strong&gt;监控系统&lt;/strong&gt;&lt;/a&gt;，&lt;a href="https://pigsty.cc/docs/pgsql/admin/patroni"&gt;&lt;strong&gt;高可用管理&lt;/strong&gt;&lt;/a&gt;。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="配置定时任务"&gt;配置定时任务&lt;/h2&gt;
+&lt;p&gt;使用 &lt;a href="https://pigsty.cc/docs/pgsql/param/#pg_crontab"&gt;&lt;strong&gt;&lt;code&gt;pg_crontab&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt; 参数配置 PostgreSQL 数据库超级用户（&lt;a href="https://pigsty.cc/docs/pgsql/param#pg_dbsu"&gt;&lt;strong&gt;&lt;code&gt;pg_dbsu&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt;，默认 &lt;code&gt;postgres&lt;/code&gt;）的定时任务。&lt;/p&gt;
+&lt;p&gt;下面 &lt;code&gt;pg-meta&lt;/code&gt; 集群配置了每天凌晨1点进行全量备份的定时任务，&lt;code&gt;pg-test&lt;/code&gt; 配置了每周一全量备份，其余日期增量备份的定时任务。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-yaml" data-lang="yaml"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;pg-meta&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;hosts&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;{&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;10.10.10.10&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;{&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;pg_seq: 1, pg_role&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;primary } }&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;vars&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;pg_cluster&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;pg-meta&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;pg_crontab&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;- &lt;span style="color:#4e9a06"&gt;&amp;#39;00 01 * * * /pg/bin/pg-backup&amp;#39;&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;pg-test&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;hosts&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;10.10.10.11&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;{&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;pg_seq: 1, pg_role&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;primary }&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;10.10.10.12&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;{&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;pg_seq: 2, pg_role&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;replica }&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;vars&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;pg_cluster&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;pg-test&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;pg_crontab&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;- &lt;span style="color:#4e9a06"&gt;&amp;#39;00 01 * * 1 /pg/bin/pg-backup full&amp;#39;&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;- &lt;span style="color:#4e9a06"&gt;&amp;#39;00 01 * * 2,3,4,5,6,7 /pg/bin/pg-backup&amp;#39;&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;推荐的维护计划&lt;/strong&gt;&lt;/p&gt;</description></item><item><title>升级 PostgreSQL 大小版本</title><link>https://pigsty.cc/docs/pgsql/admin/upgrade/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/pgsql/admin/upgrade/</guid><description>&lt;h2 id="快速上手"&gt;快速上手&lt;/h2&gt;
+&lt;p&gt;PostgreSQL 版本升级分为两种类型：&lt;strong&gt;小版本升级&lt;/strong&gt; 和 &lt;strong&gt;大版本升级&lt;/strong&gt;，两者的风险和复杂度差异很大。&lt;/p&gt;
+&lt;table class="full-width"&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th style="text-align: left"&gt;类型&lt;/th&gt;
+ &lt;th style="text-align: left"&gt;示例&lt;/th&gt;
+ &lt;th style="text-align: left"&gt;停机时间&lt;/th&gt;
+ &lt;th style="text-align: left"&gt;数据兼容性&lt;/th&gt;
+ &lt;th style="text-align: left"&gt;风险等级&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;小版本升级&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;17.2 → 17.3&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;秒级（滚动重启）&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;完全兼容&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;低&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;大版本升级&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;17 → 18&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;分钟级&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;需要升级数据目录&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;中&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+
+
+
+
+&lt;ul class="nav nav-tabs" id="tabs-0" role="tablist"&gt;
+ &lt;li class="nav-item"&gt;
+ &lt;button class="nav-link active"
+ id="tabs-00-00-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-00" role="tab"
+ data-td-tp-persist="小版本" aria-controls="tabs-00-00" aria-selected="true"&gt;
+ 小版本
+ &lt;/button&gt;
+ &lt;/li&gt;&lt;li class="nav-item"&gt;
+ &lt;button class="nav-link"
+ id="tabs-00-01-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-01" role="tab"
+ data-td-tp-persist="大版本" aria-controls="tabs-00-01" aria-selected="false"&gt;
+ 大版本
+ &lt;/button&gt;
+ &lt;/li&gt;&lt;li class="nav-item"&gt;
+ &lt;button class="nav-link"
+ id="tabs-00-02-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-02" role="tab"
+ data-td-tp-persist="扩展" aria-controls="tabs-00-02" aria-selected="false"&gt;
+ 扩展
+ &lt;/button&gt;
+ &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class="tab-content" id="tabs-0-content"&gt;
+ &lt;div class="tab-body tab-pane fade show active"
+ id="tabs-00-00" role="tabpanel" aria-labelled-by="tabs-00-00-tab" tabindex="0"&gt;
+ &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 滚动升级：先从库后主库&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;ansible &amp;lt;cls&amp;gt; -b -a &lt;span style="color:#4e9a06"&gt;&amp;#39;yum upgrade -y postgresql17*&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;pg restart --role replica --force &amp;lt;cls&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;pg switchover &amp;lt;cls&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;pg restart &amp;lt;cls&amp;gt; &amp;lt;old-primary&amp;gt; --force
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+ &lt;/div&gt;
+ &lt;div class="tab-body tab-pane fade"
+ id="tabs-00-01" role="tabpanel" aria-labelled-by="tabs-00-01-tab" tabindex="0"&gt;
+ &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 推荐：逻辑复制迁移&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;bin/pgsql-add pg-new &lt;span style="color:#8f5902;font-style:italic"&gt;# 创建新版本集群&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 配置逻辑复制同步数据...&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 切换流量到新集群&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+ &lt;/div&gt;
+ &lt;div class="tab-body tab-pane fade"
+ id="tabs-00-02" role="tabpanel" aria-labelled-by="tabs-00-02-tab" tabindex="0"&gt;
+ &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;ansible &amp;lt;cls&amp;gt; -b -a &lt;span style="color:#4e9a06"&gt;&amp;#39;yum upgrade -y postgis36_17*&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;psql -c &lt;span style="color:#4e9a06"&gt;&amp;#39;ALTER EXTENSION postgis UPDATE;&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+ &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;关于在线迁移的详细流程，请参考 &lt;a href="https://pigsty.cc/docs/pgsql/migration"&gt;&lt;strong&gt;在线迁移&lt;/strong&gt;&lt;/a&gt; 文档。&lt;/p&gt;</description></item><item><title>管理 PostgreSQL 扩展插件</title><link>https://pigsty.cc/docs/pgsql/admin/ext/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/pgsql/admin/ext/</guid><description>&lt;h2 id="快速上手"&gt;快速上手&lt;/h2&gt;
+&lt;p&gt;Pigsty 提供 &lt;a href="https://pgext.cloud/zh/list"&gt;&lt;strong&gt;451 扩展&lt;/strong&gt;&lt;/a&gt;，使用扩展涉及四个步骤：&lt;strong&gt;下载&lt;/strong&gt;、&lt;strong&gt;安装&lt;/strong&gt;、&lt;strong&gt;配置&lt;/strong&gt;、&lt;strong&gt;启用&lt;/strong&gt;。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-yaml" data-lang="yaml"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;pg-meta&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;hosts&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;{&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;10.10.10.10&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;{&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;pg_seq: 1, pg_role&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;primary } }&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;vars&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;pg_cluster&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;pg-meta&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;pg_extensions&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;[&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;postgis, timescaledb, pgvector ] &lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# &amp;lt;--- 安装扩展软件包&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;pg_libs&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#4e9a06"&gt;&amp;#39;timescaledb, pg_stat_statements, auto_explain&amp;#39;&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# &amp;lt;--- 配置预加载扩展&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;pg_databases&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;- &lt;span style="color:#204a87;font-weight:bold"&gt;name&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;meta&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;extensions&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;[&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;postgis, timescaledb, vector ] &lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# &amp;lt;--- 在数据库中启用&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+
+&lt;ul class="nav nav-tabs" id="tabs-0" role="tablist"&gt;
+ &lt;li class="nav-item"&gt;
+ &lt;button class="nav-link active"
+ id="tabs-00-00-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-00" role="tab"
+ data-td-tp-persist="脚本" aria-controls="tabs-00-00" aria-selected="true"&gt;
+ 脚本
+ &lt;/button&gt;
+ &lt;/li&gt;&lt;li class="nav-item"&gt;
+ &lt;button class="nav-link"
+ id="tabs-00-01-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-01" role="tab"
+ data-td-tp-persist="剧本" aria-controls="tabs-00-01" aria-selected="false"&gt;
+ 剧本
+ &lt;/button&gt;
+ &lt;/li&gt;&lt;li class="nav-item"&gt;
+ &lt;button class="nav-link"
+ id="tabs-00-02-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-02" role="tab"
+ data-td-tp-persist="示例" aria-controls="tabs-00-02" aria-selected="false"&gt;
+ 示例
+ &lt;/button&gt;
+ &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class="tab-content" id="tabs-0-content"&gt;
+ &lt;div class="tab-body tab-pane fade show active"
+ id="tabs-00-00" role="tabpanel" aria-labelled-by="tabs-00-00-tab" tabindex="0"&gt;
+ &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;bin/pgsql-ext &amp;lt;cls&amp;gt; &lt;span style="color:#8f5902;font-style:italic"&gt;# 在 &amp;lt;cls&amp;gt; 集群上安装配置中定义的扩展&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;bin/pgsql-ext &amp;lt;cls&amp;gt; &lt;span style="color:#ce5c00;font-weight:bold"&gt;[&lt;/span&gt;ext...&lt;span style="color:#ce5c00;font-weight:bold"&gt;]&lt;/span&gt; &lt;span style="color:#8f5902;font-style:italic"&gt;# 在 &amp;lt;cls&amp;gt; 集群上安装命令行参数给出的扩展&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+ &lt;/div&gt;
+ &lt;div class="tab-body tab-pane fade"
+ id="tabs-00-01" role="tabpanel" aria-labelled-by="tabs-00-01-tab" tabindex="0"&gt;
+ &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;./pgsql.yml -l pg-meta -t pg_ext &lt;span style="color:#8f5902;font-style:italic"&gt;# 使用剧本安装扩展&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+ &lt;/div&gt;
+ &lt;div class="tab-body tab-pane fade"
+ id="tabs-00-02" role="tabpanel" aria-labelled-by="tabs-00-02-tab" tabindex="0"&gt;
+ &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;bin/pgsql-ext pg-meta &lt;span style="color:#8f5902;font-style:italic"&gt;# 在 pg-meta 集群上安装定义的扩展&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;bin/pgsql-ext pg-meta pg_duckdb pg_mooncake &lt;span style="color:#8f5902;font-style:italic"&gt;# 安装指定扩展&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+ &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;关于扩展的完整参考，请查阅 &lt;a href="https://pigsty.cc/docs/pgsql/ext/"&gt;&lt;strong&gt;扩展插件&lt;/strong&gt;&lt;/a&gt; 章节。关于可用扩展列表，请参考 &lt;a href="https://pgext.cloud/zh/list"&gt;&lt;strong&gt;扩展目录&lt;/strong&gt;&lt;/a&gt;。&lt;/p&gt;</description></item></channel></rss>

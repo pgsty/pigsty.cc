@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>任务教程 on PIGSTY</title><link>https://pigsty.cc/docs/pgsql/tutorial/</link><description>Recent content in 任务教程 on PIGSTY</description><generator>Hugo</generator><language>zh-CN</language><atom:link href="https://pigsty.cc/docs/pgsql/tutorial/index.xml" rel="self" type="application/rss+xml"/><item><title>故障排查</title><link>https://pigsty.cc/docs/pgsql/tutorial/failure/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/pgsql/tutorial/failure/</guid><description>&lt;p&gt;本文档列举了 PostgreSQL 和 Pigsty 中可能出现的故障，以及定位、处理、分析问题的 SOP。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="磁盘空间写满"&gt;磁盘空间写满&lt;/h2&gt;
+&lt;p&gt;磁盘空间写满是最常见的故障类型。&lt;/p&gt;
+&lt;h3 id="现象"&gt;现象&lt;/h3&gt;
+&lt;p&gt;当数据库所在磁盘空间耗尽时，PostgreSQL 将无法正常工作，可能出现以下现象：数据库日志反复报错&amp;quot;no space left on device&amp;quot;（磁盘空间不足），
+新数据无法写入，甚至 PostgreSQL 可能触发 PANIC 强制关闭。&lt;/p&gt;
+&lt;p&gt;Pigsty 带有 NodeFsSpaceFull 告警规则，当文件系统可用空间不足 10% 时触发告警。
+使用监控系统 NODE Instance 面板查阅 FS 指标面板定位问题。&lt;/p&gt;
+&lt;h3 id="诊断"&gt;诊断&lt;/h3&gt;
+&lt;p&gt;您也可以登录数据库节点，使用 &lt;code&gt;df -h&lt;/code&gt; 查看各挂载盘符使用率，确定哪个分区被写满。
+对于数据库节点，重点检查以下目录及其大小，以判断是哪个类别的文件占满了空间：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;数据目录&lt;/strong&gt;（&lt;code&gt;/pg/data/base&lt;/code&gt;）：存放表和索引的数据文件，大量写入与临时文件需要关注&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;WAL目录&lt;/strong&gt;（如 &lt;code&gt;pg/data/pg_wal&lt;/code&gt;）：存放 PG WAL，WAL 堆积/复制槽保留是常见的磁盘写满原因。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;数据库日志目录&lt;/strong&gt;（如 &lt;code&gt;pg/log&lt;/code&gt;）：如果 PG 日志未及时轮转写大量报错写入，也可能占用大量空间。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;本地备份目录&lt;/strong&gt;（如 &lt;code&gt;data/backups&lt;/code&gt;）：使用 pgBackRest 等在本机保存备份时，也有可能撑满磁盘。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;如果问题出在 Pigsty 管理节点或监控节点，还需考虑：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;监控数据&lt;/strong&gt;：VictoriaMetrics 的时序指标和 VictoriaLogs 日志存储都会占用磁盘，可检查保留策略。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;对象存储数据&lt;/strong&gt;：Pigsty 集成的 MinIO 对象存储可能会被用于 PG 备份保存。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;明确占用空间最大的目录后，可进一步使用 &lt;code&gt;du -sh &amp;lt;目录&amp;gt;&lt;/code&gt; 深入查找特定大型文件或子目录。&lt;/p&gt;</description></item><item><title>误删处理</title><link>https://pigsty.cc/docs/pgsql/tutorial/drop/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/pgsql/tutorial/drop/</guid><description>&lt;h2 id="误删数据"&gt;误删数据&lt;/h2&gt;
+&lt;p&gt;如果是小批量 &lt;code&gt;DELETE&lt;/code&gt; 误操作，可以考虑使用 &lt;a href="https://pgext.cloud/e/pg_surgery"&gt;&lt;code&gt;pg_surgery&lt;/code&gt;&lt;/a&gt; 或者 &lt;a href="https://pgext.cloud/e/pg_dirtyread"&gt;&lt;code&gt;pg_dirtyread&lt;/code&gt;&lt;/a&gt; 扩展进行原地手术恢复。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-sql" data-lang="sql"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;-- 立即关闭此表上的 Auto Vacuum 并中止 Auto Vacuum 本表的 worker 进程
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;ALTER&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;TABLE&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;public&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;.&lt;/span&gt;&lt;span style="color:#000"&gt;some_table&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;SET&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;(&lt;/span&gt;&lt;span style="color:#000"&gt;autovacuum_enabled&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#ce5c00;font-weight:bold"&gt;=&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;off&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;,&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;toast&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;.&lt;/span&gt;&lt;span style="color:#000"&gt;autovacuum_enabled&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#ce5c00;font-weight:bold"&gt;=&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;off&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;);&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;CREATE&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;EXTENSION&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;pg_dirtyread&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;;&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;SELECT&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#ce5c00;font-weight:bold"&gt;*&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;FROM&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;pg_dirtyread&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;(&lt;/span&gt;&lt;span style="color:#4e9a06"&gt;&amp;#39;tablename&amp;#39;&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;)&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;AS&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;t&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;(&lt;/span&gt;&lt;span style="color:#000"&gt;col1&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;type1&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;,&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;col2&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;type2&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;,&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;...);&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;如果被删除的数据已经被 VACUUM 回收，那么使用通用的误删处理流程。&lt;/p&gt;
+&lt;h2 id="误删对象"&gt;误删对象&lt;/h2&gt;
+&lt;p&gt;当出现 &lt;code&gt;DROP/DELETE&lt;/code&gt; 类误操作，通常按照以下流程决定恢复方案。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;确认此数据是否可以通过业务系统或其他数据系统找回，如果可以，直接从业务侧修复。&lt;/li&gt;
+&lt;li&gt;确认是否有延迟从库，如果有，推进延迟从库至误删时间点，查询出来恢复。&lt;/li&gt;
+&lt;li&gt;如果数据已经确认删除，确认备份信息，恢复范围是否覆盖误删时间点，如果覆盖，开始 PITR&lt;/li&gt;
+&lt;li&gt;确认是整集群原地 &lt;a href="https://pigsty.cc/docs/pgsql/backup/restore"&gt;PITR 回滚&lt;/a&gt;，还是新开服务器重放，还是用从库来重放，并执行恢复策略&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="误删集群"&gt;误删集群&lt;/h2&gt;
+&lt;p&gt;如果出现整个数据库集群通过 Pigsty 管理命令被误删的情况，例如错误的执行 &lt;a href="https://pigsty.cc/docs/pgsql/playbook#pgsql-rmyml"&gt;&lt;code&gt;pgsql-rm.yml&lt;/code&gt;&lt;/a&gt; 剧本或 &lt;code&gt;bin/pgsql-rm&lt;/code&gt; 命令。
+除非您指定了 &lt;a href="https://pigsty.cc/docs/pgsql/param#pg_rm_backup"&gt;&lt;code&gt;pg_rm_backup&lt;/code&gt;&lt;/a&gt; 参数为 &lt;code&gt;false&lt;/code&gt;，否则备份会与数据库集群一起被删除。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;警告&lt;/strong&gt;：在这种情况，您的数据将无法找回！&lt;strong&gt;请务必三思而后行！&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;建议：对于生产环境，您可以在配置清单中全局配置此参数为 &lt;code&gt;false&lt;/code&gt;，在移除集群时保留备份。&lt;/p&gt;</description></item><item><title>手工恢复</title><link>https://pigsty.cc/docs/pgsql/tutorial/pitr/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/pgsql/tutorial/pitr/</guid><description>&lt;p&gt;您可以使用 &lt;code&gt;pgsql-pitr.yml&lt;/code&gt; 剧本执行 PITR，但在某些情况下，您可能希望手动执行 PITR，直接使用 pgbackrest 原语实现精细的控制。
+我们将使用带有 MinIO 备份仓库的 &lt;a href="https://pigsty.cc/docs/deploy/sandbox"&gt;&lt;strong&gt;四节点沙箱&lt;/strong&gt;&lt;/a&gt; 集群来演示该过程。&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://pigsty.cc/img/pigsty/sandbox.png" alt="pigsty-sandbox"&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="初始化沙箱"&gt;初始化沙箱&lt;/h2&gt;
+&lt;p&gt;使用 &lt;a href="https://pigsty.cc/docs/deploy/vagrant"&gt;&lt;strong&gt;vagrant&lt;/strong&gt;&lt;/a&gt; 或 &lt;a href="https://pigsty.cc/docs/deploy/terraform"&gt;&lt;strong&gt;terraform&lt;/strong&gt;&lt;/a&gt; 准备四节点沙箱环境，然后：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;curl https://repo.pigsty.io/get &lt;span style="color:#000;font-weight:bold"&gt;|&lt;/span&gt; bash&lt;span style="color:#000;font-weight:bold"&gt;;&lt;/span&gt; &lt;span style="color:#204a87"&gt;cd&lt;/span&gt; ~/pigsty/
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;./configure -c full
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;./install
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;现在以管理节点上的管理员用户（或 dbsu）身份操作。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="检查备份"&gt;检查备份&lt;/h2&gt;
+&lt;p&gt;要检查备份状态，您需要切换到 &lt;code&gt;postgres&lt;/code&gt; 用户并使用 &lt;code&gt;pb&lt;/code&gt; 命令：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sudo su - postgres &lt;span style="color:#8f5902;font-style:italic"&gt;# 切换到 dbsu: postgres 用户&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;pb info &lt;span style="color:#8f5902;font-style:italic"&gt;# 打印 pgbackrest 备份信息&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;pb&lt;/code&gt; 是 &lt;code&gt;pgbackrest&lt;/code&gt; 的别名，会自动从 pgbackrest 配置中获取 &lt;code&gt;stanza&lt;/code&gt; 名称。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;function&lt;/span&gt; pb&lt;span style="color:#ce5c00;font-weight:bold"&gt;()&lt;/span&gt; &lt;span style="color:#ce5c00;font-weight:bold"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#204a87"&gt;local&lt;/span&gt; &lt;span style="color:#000"&gt;stanza&lt;/span&gt;&lt;span style="color:#ce5c00;font-weight:bold"&gt;=&lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;$(&lt;/span&gt;grep -o &lt;span style="color:#4e9a06"&gt;&amp;#39;\[[^][]*]&amp;#39;&lt;/span&gt; /etc/pgbackrest/pgbackrest.conf &lt;span style="color:#000;font-weight:bold"&gt;|&lt;/span&gt; head -n1 &lt;span style="color:#000;font-weight:bold"&gt;|&lt;/span&gt; sed &lt;span style="color:#4e9a06"&gt;&amp;#39;s/.*\[\([^]]*\)].*/\1/&amp;#39;&lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; pgbackrest --stanza&lt;span style="color:#ce5c00;font-weight:bold"&gt;=&lt;/span&gt;&lt;span style="color:#000"&gt;$stanza&lt;/span&gt; &lt;span style="color:#000"&gt;$@&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ce5c00;font-weight:bold"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;您可以看到初始备份信息，这是一个全量备份：&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;root@pg-meta-1:~# pb info
+stanza: pg-meta
+ status: ok
+ cipher: aes-256-cbc
+
+ db (current)
+ wal archive min/max (17): 000000010000000000000001/000000010000000000000007
+
+ full backup: 20250713-022731F
+ timestamp start/stop: 2025-07-13 02:27:31+00 / 2025-07-13 02:27:33+00
+ wal start/stop: 000000010000000000000004 / 000000010000000000000004
+ database size: 44MB, database backup size: 44MB
+ repo1: backup size: 8.4MB
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;备份完成于 &lt;code&gt;2025-07-13 02:27:33+00&lt;/code&gt;，这是您可以恢复到的最早时间。
+由于 WAL 归档处于活动状态，您可以恢复到备份之后的任何时间点，直到 WAL 结束（即现在）。&lt;/p&gt;</description></item><item><title>利用 xfs 实现实例 Fork</title><link>https://pigsty.cc/docs/pgsql/tutorial/pg-fork/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/pgsql/tutorial/pg-fork/</guid><description>&lt;p&gt;Pigsty 提供了两个实用脚本，用于在同一台机器上快速克隆实例并执行时间点恢复：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#pg-fork"&gt;&lt;code&gt;pg-fork&lt;/code&gt;&lt;/a&gt;：在同一台机器上快速克隆一个新的 PostgreSQL 实例&lt;/li&gt;
+&lt;li&gt;&lt;a href="#pg-pitr"&gt;&lt;code&gt;pg-pitr&lt;/code&gt;&lt;/a&gt;：使用 pgbackrest 手动执行时间点恢复&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这两个脚本可以配合使用：先用 &lt;code&gt;pg-fork&lt;/code&gt; 克隆实例，再用 &lt;code&gt;pg-pitr&lt;/code&gt; 将克隆实例恢复到指定时间点。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="pg-fork"&gt;pg-fork&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://github.com/pgsty/pigsty/blob/main/files/postgres/pg-fork"&gt;&lt;code&gt;pg-fork&lt;/code&gt;&lt;/a&gt; 可以在同一台机器上快速克隆一个新的 PostgreSQL 实例。&lt;/p&gt;
+&lt;h3 id="快速上手"&gt;快速上手&lt;/h3&gt;
+&lt;p&gt;使用 &lt;code&gt;postgres&lt;/code&gt; 用户（dbsu）执行以下命令，即可创建一个新的实例：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;pg-fork &lt;span style="color:#0000cf;font-weight:bold"&gt;1&lt;/span&gt; &lt;span style="color:#8f5902;font-style:italic"&gt;# 从 /pg/data 克隆到 /pg/data1，端口 15432&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;pg-fork &lt;span style="color:#0000cf;font-weight:bold"&gt;2&lt;/span&gt; -d /pg/data1 &lt;span style="color:#8f5902;font-style:italic"&gt;# 从 /pg/data1 克隆到 /pg/data2，端口 25432&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;pg-fork &lt;span style="color:#0000cf;font-weight:bold"&gt;3&lt;/span&gt; -D /tmp/test -P &lt;span style="color:#0000cf;font-weight:bold"&gt;5555&lt;/span&gt; &lt;span style="color:#8f5902;font-style:italic"&gt;# 克隆到自定义目录和端口&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;克隆完成后，可以启动并访问新实例：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;pg_ctl -D /pg/data1 start &lt;span style="color:#8f5902;font-style:italic"&gt;# 启动克隆实例&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;psql -p &lt;span style="color:#0000cf;font-weight:bold"&gt;15432&lt;/span&gt; &lt;span style="color:#8f5902;font-style:italic"&gt;# 连接克隆实例&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="命令语法"&gt;命令语法&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;pg-fork &amp;lt;FORK_ID&amp;gt; &lt;span style="color:#ce5c00;font-weight:bold"&gt;[&lt;/span&gt;options&lt;span style="color:#ce5c00;font-weight:bold"&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;必填参数：&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;参数&lt;/th&gt;
+ &lt;th&gt;说明&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;code&gt;&amp;lt;FORK_ID&amp;gt;&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;克隆实例编号（1-9），决定默认端口和数据目录&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;可选参数：&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;参数&lt;/th&gt;
+ &lt;th&gt;说明&lt;/th&gt;
+ &lt;th&gt;默认值&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;code&gt;-d, --data &amp;lt;datadir&amp;gt;&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;源实例数据目录&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;/pg/data&lt;/code&gt; 或 &lt;code&gt;$PG_DATA&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;code&gt;-D, --dst &amp;lt;dst_dir&amp;gt;&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;目标数据目录&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;/pg/data&amp;lt;FORK_ID&amp;gt;&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;code&gt;-p, --port &amp;lt;port&amp;gt;&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;源实例端口&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;5432&lt;/code&gt; 或 &lt;code&gt;$PG_PORT&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;code&gt;-P, --dst-port &amp;lt;port&amp;gt;&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;目标实例端口&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;&amp;lt;FORK_ID&amp;gt;5432&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;code&gt;-s, --skip&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;跳过备份 API，使用冷拷贝模式&lt;/td&gt;
+ &lt;td&gt;-&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;code&gt;-y, --yes&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;跳过确认提示&lt;/td&gt;
+ &lt;td&gt;-&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;code&gt;-h, --help&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;显示帮助信息&lt;/td&gt;
+ &lt;td&gt;-&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id="使用示例"&gt;使用示例&lt;/h3&gt;
+
+
+
+
+
+
+
+&lt;ul class="nav nav-tabs" id="tabs-0" role="tablist"&gt;
+ &lt;li class="nav-item"&gt;
+ &lt;button class="nav-link disabled"
+ id="tabs-00-00-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-00" role="tab"
+ aria-controls="tabs-00-00" aria-selected="false"&gt;
+ pg-fork 示例
+ &lt;/button&gt;
+ &lt;/li&gt;&lt;li class="nav-item"&gt;
+ &lt;button class="nav-link active"
+ id="tabs-00-01-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-01" role="tab"
+ aria-controls="tabs-00-01" aria-selected="true"&gt;
+ 基础克隆
+ &lt;/button&gt;
+ &lt;/li&gt;&lt;li class="nav-item"&gt;
+ &lt;button class="nav-link"
+ id="tabs-00-02-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-02" role="tab"
+ aria-controls="tabs-00-02" aria-selected="false"&gt;
+ 指定源端口
+ &lt;/button&gt;
+ &lt;/li&gt;&lt;li class="nav-item"&gt;
+ &lt;button class="nav-link"
+ id="tabs-00-03-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-03" role="tab"
+ aria-controls="tabs-00-03" aria-selected="false"&gt;
+ 链式克隆
+ &lt;/button&gt;
+ &lt;/li&gt;&lt;li class="nav-item"&gt;
+ &lt;button class="nav-link"
+ id="tabs-00-04-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-04" role="tab"
+ aria-controls="tabs-00-04" aria-selected="false"&gt;
+ 自定义位置
+ &lt;/button&gt;
+ &lt;/li&gt;&lt;li class="nav-item"&gt;
+ &lt;button class="nav-link"
+ id="tabs-00-05-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-05" role="tab"
+ aria-controls="tabs-00-05" aria-selected="false"&gt;
+ 冷拷贝模式
+ &lt;/button&gt;
+ &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class="tab-content" id="tabs-0-content"&gt;
+ &lt;div class="tab-pane fade"
+ id="tabs-00-00" role="tabpanel" aria-labelled-by="tabs-00-00-tab" tabindex="0"&gt;
+ &lt;pre tabindex="0"&gt;&lt;code&gt;&lt;/code&gt;&lt;/pre&gt;
+ &lt;/div&gt;
+ &lt;div class="tab-pane fade show active"
+ id="tabs-00-01" role="tabpanel" aria-labelled-by="tabs-00-01-tab" tabindex="0"&gt;
+ &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 从默认实例克隆到 /pg/data1，端口 15432&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;pg-fork &lt;span style="color:#0000cf;font-weight:bold"&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 从默认实例克隆到 /pg/data2，端口 25432&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;pg-fork &lt;span style="color:#0000cf;font-weight:bold"&gt;2&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+ &lt;/div&gt;
+ &lt;div class="tab-pane fade"
+ id="tabs-00-02" role="tabpanel" aria-labelled-by="tabs-00-02-tab" tabindex="0"&gt;
+ &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 从端口 5433 的实例克隆&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;pg-fork &lt;span style="color:#0000cf;font-weight:bold"&gt;1&lt;/span&gt; -p &lt;span style="color:#0000cf;font-weight:bold"&gt;5433&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 使用环境变量指定源端口&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#000"&gt;PG_PORT&lt;/span&gt;&lt;span style="color:#ce5c00;font-weight:bold"&gt;=&lt;/span&gt;&lt;span style="color:#0000cf;font-weight:bold"&gt;5433&lt;/span&gt; pg-fork &lt;span style="color:#0000cf;font-weight:bold"&gt;1&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+ &lt;/div&gt;
+ &lt;div class="tab-pane fade"
+ id="tabs-00-03" role="tabpanel" aria-labelled-by="tabs-00-03-tab" tabindex="0"&gt;
+ &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 从 /pg/data1 克隆到 /pg/data2&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;pg-fork &lt;span style="color:#0000cf;font-weight:bold"&gt;2&lt;/span&gt; -d /pg/data1
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 从 /pg/data2 克隆到 /pg/data3&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;pg-fork &lt;span style="color:#0000cf;font-weight:bold"&gt;3&lt;/span&gt; -d /pg/data2&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+ &lt;/div&gt;
+ &lt;div class="tab-pane fade"
+ id="tabs-00-04" role="tabpanel" aria-labelled-by="tabs-00-04-tab" tabindex="0"&gt;
+ &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 克隆到自定义目录和端口&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;pg-fork &lt;span style="color:#0000cf;font-weight:bold"&gt;1&lt;/span&gt; -D /tmp/pgtest -P &lt;span style="color:#0000cf;font-weight:bold"&gt;5555&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 完全自定义&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;pg-fork &lt;span style="color:#0000cf;font-weight:bold"&gt;1&lt;/span&gt; -d /pg/data -D /mnt/backup/pgclone -P &lt;span style="color:#0000cf;font-weight:bold"&gt;6543&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+ &lt;/div&gt;
+ &lt;div class="tab-pane fade"
+ id="tabs-00-05" role="tabpanel" aria-labelled-by="tabs-00-05-tab" tabindex="0"&gt;
+ &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 源实例已停止时使用冷拷贝&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;pg-fork &lt;span style="color:#0000cf;font-weight:bold"&gt;1&lt;/span&gt; -s
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 跳过确认直接执行&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;pg-fork &lt;span style="color:#0000cf;font-weight:bold"&gt;1&lt;/span&gt; -s -y&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+ &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h3 id="工作原理"&gt;工作原理&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;pg-fork&lt;/code&gt; 支持两种工作模式：&lt;/p&gt;</description></item><item><title>为 PostgreSQL 集群启用 HugePage</title><link>https://pigsty.cc/docs/pgsql/tutorial/hugepage/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/pgsql/tutorial/hugepage/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;使用 &lt;code&gt;node_hugepage_count&lt;/code&gt; 和 &lt;code&gt;node_hugepage_ratio&lt;/code&gt; 或 &lt;code&gt;/pg/bin/pg-tune-hugepage&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;如果你计划启用大页（HugePage），请考虑使用 &lt;a href="https://pigsty.cc/docs/node/param#node_hugepage_count"&gt;&lt;code&gt;node_hugepage_count&lt;/code&gt;&lt;/a&gt; 和 &lt;a href="https://pigsty.cc/docs/node/param#node_hugepage_ratio"&gt;&lt;code&gt;node_hugepage_ratio&lt;/code&gt;&lt;/a&gt;，并配合 &lt;code&gt;./node.yml -t node_tune&lt;/code&gt; 进行应用。&lt;/p&gt;
+&lt;p&gt;大页对于数据库来说有利有弊，利是内存是专门管理的，不用担心被挪用，降低数据库 OOM 风险。缺点是某些场景下可能对性能由负面影响。&lt;/p&gt;
+&lt;p&gt;在 PostgreSQL 启动前，您需要分配 &lt;strong&gt;足够多的&lt;/strong&gt; 大页，浪费的部分可以使用 &lt;code&gt;pg-tune-hugepage&lt;/code&gt; 脚本对其进行回收，不过此脚本仅 PostgreSQL 15+ 可用。&lt;/p&gt;
+&lt;p&gt;如果你的 PostgreSQL 已经在运行，你可以使用下面的办法启动大页（仅 PG15+ 可用）：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sync&lt;span style="color:#000;font-weight:bold"&gt;;&lt;/span&gt; &lt;span style="color:#204a87"&gt;echo&lt;/span&gt; &lt;span style="color:#0000cf;font-weight:bold"&gt;3&lt;/span&gt; &amp;gt; /proc/sys/vm/drop_caches &lt;span style="color:#8f5902;font-style:italic"&gt;# 刷盘，释放系统缓存（请做好数据库性能受到冲击的准备）&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;sudo /pg/bin/pg-tune-hugepage &lt;span style="color:#8f5902;font-style:italic"&gt;# 将 nr_hugepages 写入 /etc/sysctl.d/hugepage.conf&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;pg restart &amp;lt;cls&amp;gt; &lt;span style="color:#8f5902;font-style:italic"&gt;# 重启 postgres 以使用 hugepage&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>3坏2应急处理</title><link>https://pigsty.cc/docs/pgsql/tutorial/drill/</link><pubDate>Sat, 11 Jan 2025 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/pgsql/tutorial/drill/</guid><description>&lt;p&gt;如果经典3节点高可用部署同时出现两台（多数主体）故障，系统通常无法自动完成故障切换，需要人工介入：&lt;/p&gt;
+&lt;p&gt;首先判断另外两台服务器的情况，如果短时间内可以拉起，优先选择拉起另外两台服务。否则进入 &lt;strong&gt;紧急止血流程&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;紧急止血流程假设您的管理节点故障&lt;/strong&gt;，只有单台普通数据库节点存活，在这种情况下，最快的恢复操作流程为：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;调整 HAProxy 配置，将流量指向主库。&lt;/li&gt;
+&lt;li&gt;关闭 Patroni，手动提升 PostgreSQL 从库为主库。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="调整haproxy配置"&gt;调整HAProxy配置&lt;/h2&gt;
+&lt;p&gt;如果你通过其他方式绕开 HAProxy 访问集群，那么可以跳过这一步。
+如果你通过 HAProxy 方式访问数据库集群，那么你需要调整负载均衡配置，将读写流量手工指向主库。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;编辑 &lt;code&gt;/etc/haproxy/&amp;lt;pg_cluster&amp;gt;-primary.cfg&lt;/code&gt; 配置文件，其中 &lt;code&gt;&amp;lt;pg_cluster&amp;gt;&lt;/code&gt; 为你的 PostgreSQL 集群名称，例如 &lt;code&gt;pg-meta&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;将健康检查配置选项注释，停止进行健康鉴擦好&lt;/li&gt;
+&lt;li&gt;将服务器列表中，其他两台故障的机器注释掉，只保留当前主库服务器。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-ini" data-lang="ini"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#c4a000"&gt;listen pg-meta-primary&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#c4a000"&gt;bind *:5433&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#c4a000"&gt;mode tcp&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#c4a000"&gt;maxconn 5000&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#c4a000"&gt;balance roundrobin&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#8f5902;font-style:italic"&gt;# 注释掉以下四行健康检查配置&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#8f5902;font-style:italic"&gt;#option httpchk # &amp;lt;---- remove this&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#8f5902;font-style:italic"&gt;#option http-keep-alive # &amp;lt;---- remove this&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#8f5902;font-style:italic"&gt;#http-check send meth OPTIONS uri /primary # &amp;lt;---- remove this&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#8f5902;font-style:italic"&gt;#http-check expect status 200 # &amp;lt;---- remove this&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#c4a000"&gt;default-server inter 3s fastinter 1s downinter 5s rise 3 fall 3 on-marked-down shutdown-sessions slowstart 30s maxconn 3000 maxqueue 128 weight 100&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#c4a000"&gt;server pg-meta-1 10.10.10.10:6432 check port 8008 weight 100&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#8f5902;font-style:italic"&gt;# 注释掉其他两台故障的机器&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#8f5902;font-style:italic"&gt;#server pg-meta-2 10.10.10.11:6432 check port 8008 weight 100 &amp;lt;---- comment this&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#8f5902;font-style:italic"&gt;#server pg-meta-3 10.10.10.12:6432 check port 8008 weight 100 &amp;lt;---- comment this&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;配置调整完成后，先不着急执行 &lt;code&gt;systemctl reload haproxy&lt;/code&gt; 重载生效，等待后续主库提升后一起执行。
+以上配置的效果是，HAProxy 将不再进行主库健康检查（默认使用 Patroni），而是直接将写入流量指向当前主库&lt;/p&gt;</description></item><item><title>使用 VIP-Manager 为 PostgreSQL 集群配置二层 VIP</title><link>https://pigsty.cc/docs/pgsql/tutorial/pg-vip/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/pgsql/tutorial/pg-vip/</guid><description>&lt;p&gt;您可以在 PostgreSQL 集群上绑定一个可选的 L2 VIP —— 前提条件是：集群中的所有节点都在一个二层网络中。&lt;/p&gt;
+&lt;p&gt;这个 L2 VIP 强制使用 Master - Backup 模式，Master 始终指向在数据库集群主库实例所在的节点。&lt;/p&gt;
+&lt;p&gt;这个 VIP 由 &lt;a href="https://github.com/cybertec-postgresql/vip-manager"&gt;VIP-Manager&lt;/a&gt; 组件管理，它会从 DCS （etcd） 中直接读取由 Patroni 写入的 Leader Key，从而判断自己是否是 Master。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="启用vip"&gt;启用VIP&lt;/h2&gt;
+&lt;p&gt;在 PostgreSQL 集群上定义 &lt;a href="https://pigsty.cc/docs/pgsql/param#pg_vip_enabled"&gt;&lt;code&gt;pg_vip_enabled&lt;/code&gt;&lt;/a&gt; 参数为 &lt;code&gt;true&lt;/code&gt;，即可在集群上启用 VIP 组件。当然您也可以在全局配置中启用此配置项。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# pgsql 3 node ha cluster: pg-test&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;pg-test:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; hosts:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; 10.10.10.11: &lt;span style="color:#ce5c00;font-weight:bold"&gt;{&lt;/span&gt; pg_seq: 1, pg_role: primary &lt;span style="color:#ce5c00;font-weight:bold"&gt;}&lt;/span&gt; &lt;span style="color:#8f5902;font-style:italic"&gt;# primary instance, leader of cluster&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; 10.10.10.12: &lt;span style="color:#ce5c00;font-weight:bold"&gt;{&lt;/span&gt; pg_seq: 2, pg_role: replica &lt;span style="color:#ce5c00;font-weight:bold"&gt;}&lt;/span&gt; &lt;span style="color:#8f5902;font-style:italic"&gt;# replica instance, follower of leader&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; 10.10.10.13: &lt;span style="color:#ce5c00;font-weight:bold"&gt;{&lt;/span&gt; pg_seq: 3, pg_role: replica, pg_offline_query: &lt;span style="color:#204a87"&gt;true&lt;/span&gt; &lt;span style="color:#ce5c00;font-weight:bold"&gt;}&lt;/span&gt; &lt;span style="color:#8f5902;font-style:italic"&gt;# replica with offline access&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; vars:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; pg_cluster: pg-test &lt;span style="color:#8f5902;font-style:italic"&gt;# define pgsql cluster name&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; pg_users: &lt;span style="color:#ce5c00;font-weight:bold"&gt;[{&lt;/span&gt; name: &lt;span style="color:#204a87"&gt;test&lt;/span&gt; , password: &lt;span style="color:#204a87"&gt;test&lt;/span&gt; , pgbouncer: &lt;span style="color:#204a87"&gt;true&lt;/span&gt; , roles: &lt;span style="color:#ce5c00;font-weight:bold"&gt;[&lt;/span&gt; dbrole_admin &lt;span style="color:#ce5c00;font-weight:bold"&gt;]&lt;/span&gt; &lt;span style="color:#ce5c00;font-weight:bold"&gt;}]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; pg_databases: &lt;span style="color:#ce5c00;font-weight:bold"&gt;[{&lt;/span&gt; name: &lt;span style="color:#204a87"&gt;test&lt;/span&gt; &lt;span style="color:#ce5c00;font-weight:bold"&gt;}]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#8f5902;font-style:italic"&gt;# 启用 L2 VIP&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; pg_vip_enabled: &lt;span style="color:#204a87"&gt;true&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; pg_vip_address: 10.10.10.3/24
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; pg_vip_interface: eth1
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;请注意，&lt;a href="https://pigsty.cc/docs/pgsql/param#pg_vip_address"&gt;&lt;code&gt;pg_vip_address&lt;/code&gt;&lt;/a&gt; 必须是一个合法的 IP 地址，带有网段，且在当前二层网络中可用。&lt;/p&gt;</description></item><item><title>Citus 集群部署</title><link>https://pigsty.cc/docs/pgsql/tutorial/citus/</link><pubDate>Sat, 11 Jan 2025 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/pgsql/tutorial/citus/</guid><description>&lt;p&gt;Citus 是一个 PostgreSQL 扩展，可以将 PostgreSQL 原地转换为一个分布式数据库，并实现在多个节点上水平扩展，以处理大量数据和大量查询。&lt;/p&gt;
+&lt;p&gt;Patroni 在 v3.0 后，提供了对 Citus 原生高可用的支持，简化了 Citus 集群的搭建，Pigsty 也对此提供了原生支持。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://docs.citusdata.com/en/stable/get_started/what_is_citus.html"&gt;Citus 是什么&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://patroni.readthedocs.io/en/latest/citus.html"&gt;Patroni Citus 支持&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;注意：Citus 13.x 支持 PostgreSQL 18、17、16、15、14 五个大版本。Pigsty 扩展仓库提供了 Citus ARM64 软件包。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id="citus集群"&gt;Citus集群&lt;/h2&gt;
+&lt;p&gt;Pigsty 原生支持 Citus。可以参考 &lt;a href="https://github.com/pgsty/pigsty/blob/main/conf/citus.yml"&gt;&lt;code&gt;conf/citus.yml&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;这里使用 Pigsty 四节点沙箱，定义了一个 Citus 集群 &lt;code&gt;pg-citus&lt;/code&gt;，其中包括一个两节点的协调者集群 &lt;code&gt;pg-citus0&lt;/code&gt;，
+以及两个 Worker 集群 &lt;code&gt;pg-citus1&lt;/code&gt;，&lt;code&gt;pg-citus2&lt;/code&gt;。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-yaml" data-lang="yaml"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;pg-citus&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;hosts&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;10.10.10.10&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;{&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;pg_group: 0, pg_cluster: pg-citus0 ,pg_vip_address: 10.10.10.2/24 ,pg_seq: 1, pg_role&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;primary }&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;10.10.10.11&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;{&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;pg_group: 0, pg_cluster: pg-citus0 ,pg_vip_address: 10.10.10.2/24 ,pg_seq: 2, pg_role&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;replica }&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;10.10.10.12&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;{&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;pg_group: 1, pg_cluster: pg-citus1 ,pg_vip_address: 10.10.10.3/24 ,pg_seq: 1, pg_role&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;primary }&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;10.10.10.13&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;{&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;pg_group: 2, pg_cluster: pg-citus2 ,pg_vip_address: 10.10.10.4/24 ,pg_seq: 1, pg_role&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;primary }&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;vars&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;pg_mode: citus # pgsql cluster mode&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;citus&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;pg_version&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#0000cf;font-weight:bold"&gt;17&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# citus 13.x supports PG 14-18&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;pg_shard: pg-citus # citus shard name&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;pg-citus&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;pg_primary_db&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;citus &lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# primary database used by citus&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;pg_vip_enabled&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;true&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# enable vip for citus cluster&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;pg_vip_interface&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;eth1 &lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# vip interface for all members&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;pg_dbsu_password&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;DBUser.Postgres &lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# all dbsu password access for citus cluster&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;pg_extensions&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;[&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;citus, postgis, pgvector, topn, pg_cron, hll ] &lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# install these extensions&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;pg_libs&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#4e9a06"&gt;&amp;#39;citus, pg_cron, pg_stat_statements&amp;#39;&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# citus will be added by patroni automatically&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;pg_users&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;[&lt;/span&gt;{&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;name: dbuser_citus ,password: DBUser.Citus ,pgbouncer: true ,roles&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;[&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;dbrole_admin ] }]&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;pg_databases&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;[&lt;/span&gt;{&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;name: citus ,owner: dbuser_citus ,extensions&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;[&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;citus, vector, topn, pg_cron, hll ] }]&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;pg_parameters&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;cron.database_name&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;citus&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;citus.node_conninfo&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#4e9a06"&gt;&amp;#39;sslmode=require sslrootcert=/pg/cert/ca.crt sslmode=verify-full&amp;#39;&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;pg_hba_rules&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;- {&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;user: &amp;#39;all&amp;#39; ,db: all ,addr: 127.0.0.1/32 ,auth: ssl ,title&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#4e9a06"&gt;&amp;#39;all user ssl access from localhost&amp;#39;&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;}&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;- {&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;user: &amp;#39;all&amp;#39; ,db: all ,addr: intra ,auth: ssl ,title&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#4e9a06"&gt;&amp;#39;all user ssl access from intranet&amp;#39;&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;}&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;相比标准 PostgreSQL 集群，Citus 集群的配置有一些特殊之处，首先，你需要确保 Citus 扩展被下载，安装，加载并启用，这涉及到以下四个参数&lt;/p&gt;</description></item></channel></rss>

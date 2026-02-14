@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>备份恢复 on PIGSTY</title><link>https://pigsty.cc/docs/pgsql/backup/</link><description>Recent content in 备份恢复 on PIGSTY</description><generator>Hugo</generator><language>zh-CN</language><atom:link href="https://pigsty.cc/docs/pgsql/backup/index.xml" rel="self" type="application/rss+xml"/><item><title>备份策略</title><link>https://pigsty.cc/docs/pgsql/backup/policy/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/pgsql/backup/policy/</guid><description>&lt;p&gt;下图将“恢复窗口”与“存储空间占用”合并到同一时间轴（&lt;code&gt;0~108h&lt;/code&gt;）中，便于一起观察。&lt;/p&gt;
+&lt;p&gt;在相同假设（数据库 &lt;code&gt;100GB&lt;/code&gt;、日写入 &lt;code&gt;10GB&lt;/code&gt;）下，下图展示“每 7 天全量 + 每日增量、全量保留 14 天”时，30 天内恢复窗口与存储占用变化。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;何时&lt;/strong&gt;：备份策略&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;何处&lt;/strong&gt;：备份仓库&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;如何&lt;/strong&gt;：备份方法&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="何时备份"&gt;何时备份&lt;/h2&gt;
+&lt;p&gt;第一个问题是&lt;strong&gt;何时&lt;/strong&gt;备份您的数据库——这是备份频率和恢复时间之间的权衡。
+由于您需要从上一次备份开始重放 WAL 日志到恢复目标点，备份越频繁，需要重放的 WAL 日志就越少，恢复速度就越快。&lt;/p&gt;
+&lt;h3 id="每日全量备份"&gt;每日全量备份&lt;/h3&gt;
+&lt;p&gt;对于生产数据库，建议从最简单的每日全量备份策略开始。
+这也是 Pigsty 的默认备份策略，通过 &lt;a href="https://pigsty.cc/docs/pgsql/backup/mechanism#%E5%AE%9A%E6%97%B6%E5%A4%87%E4%BB%BD"&gt;crontab&lt;/a&gt; 实现。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-yaml" data-lang="yaml"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;pg_crontab&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;[&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#4e9a06"&gt;&amp;#39;00 01 * * * /pg/bin/pg-backup full&amp;#39;&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;]&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;pgbackrest_method&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;local &lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 选择备份仓库方法：`local`、`minio` 或其他自定义仓库&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;pgbackrest_repo: # pgbackrest 仓库配置&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;https://pgbackrest.org/configuration.html#section-repository&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;local&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 使用本地 POSIX 文件系统的默认 pgbackrest 仓库&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;path&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;/pg/backup &lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 本地备份目录，默认为 `/pg/backup`&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;retention_full_type&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;count &lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 按数量保留全量备份&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;retention_full&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#0000cf;font-weight:bold"&gt;2&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 使用本地文件系统仓库时，保留2个，最多3个全量备份&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;假设您的数据库大小为 100GB，每天更新写入 10GB 数据，备份耗时1小时，那么在每日全量备份，使用本地仓库的策略下，恢复窗口与备份空间随时间的变化如下图所示：&lt;/p&gt;</description></item><item><title>备份机制</title><link>https://pigsty.cc/docs/pgsql/backup/mechanism/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/pgsql/backup/mechanism/</guid><description>&lt;p&gt;备份可以通过内置 &lt;a href="#%E8%84%9A%E6%9C%AC"&gt;脚本&lt;/a&gt; 调用，使用节点 &lt;a href="#%E5%AE%9A%E6%97%B6%E5%A4%87%E4%BB%BD"&gt;crontab&lt;/a&gt; 定时执行，
+由 &lt;a href="https://pgbackrest.org/"&gt;pgbackrest&lt;/a&gt; 管理，存储在备份仓库中，
+仓库可以是本地磁盘文件系统或 MinIO / S3，并支持不同的 &lt;a href="https://pigsty.cc/docs/pgsql/backup/repository#%E4%BB%93%E5%BA%93%E4%BF%9D%E7%95%99%E7%AD%96%E7%95%A5"&gt;保留&lt;/a&gt; 策略。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="脚本"&gt;脚本&lt;/h2&gt;
+&lt;p&gt;您可以使用 &lt;a href="https://pigsty.cc/docs/pgsql/param#pg_dbsu"&gt;&lt;code&gt;pg_dbsu&lt;/code&gt;&lt;/a&gt; 用户（默认为 &lt;code&gt;postgres&lt;/code&gt;）执行 &lt;code&gt;pgbackrest&lt;/code&gt; 命令创建备份：&lt;/p&gt;
+
+
+
+
+
+
+
+&lt;ul class="nav nav-tabs" id="tabs-0" role="tablist"&gt;
+ &lt;li class="nav-item"&gt;
+ &lt;button class="nav-link disabled"
+ id="tabs-00-00-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-00" role="tab"
+ aria-controls="tabs-00-00" aria-selected="false"&gt;
+ 备份命令
+ &lt;/button&gt;
+ &lt;/li&gt;&lt;li class="nav-item"&gt;
+ &lt;button class="nav-link active"
+ id="tabs-00-01-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-01" role="tab"
+ aria-controls="tabs-00-01" aria-selected="true"&gt;
+ backup
+ &lt;/button&gt;
+ &lt;/li&gt;&lt;li class="nav-item"&gt;
+ &lt;button class="nav-link"
+ id="tabs-00-02-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-02" role="tab"
+ aria-controls="tabs-00-02" aria-selected="false"&gt;
+ full
+ &lt;/button&gt;
+ &lt;/li&gt;&lt;li class="nav-item"&gt;
+ &lt;button class="nav-link"
+ id="tabs-00-03-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-03" role="tab"
+ aria-controls="tabs-00-03" aria-selected="false"&gt;
+ diff
+ &lt;/button&gt;
+ &lt;/li&gt;&lt;li class="nav-item"&gt;
+ &lt;button class="nav-link"
+ id="tabs-00-04-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-04" role="tab"
+ aria-controls="tabs-00-04" aria-selected="false"&gt;
+ incr
+ &lt;/button&gt;
+ &lt;/li&gt;&lt;li class="nav-item"&gt;
+ &lt;button class="nav-link"
+ id="tabs-00-05-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-05" role="tab"
+ aria-controls="tabs-00-05" aria-selected="false"&gt;
+ info
+ &lt;/button&gt;
+ &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class="tab-content" id="tabs-0-content"&gt;
+ &lt;div class="tab-pane fade"
+ id="tabs-00-00" role="tabpanel" aria-labelled-by="tabs-00-00-tab" tabindex="0"&gt;
+ &lt;pre tabindex="0"&gt;&lt;code&gt;&lt;/code&gt;&lt;/pre&gt;
+ &lt;/div&gt;
+ &lt;div class="tab-pane fade show active"
+ id="tabs-00-01" role="tabpanel" aria-labelled-by="tabs-00-01-tab" tabindex="0"&gt;
+ &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;pgbackrest --stanza&lt;span style="color:#ce5c00;font-weight:bold"&gt;=&lt;/span&gt;pg-meta --type&lt;span style="color:#ce5c00;font-weight:bold"&gt;=&lt;/span&gt;full backup &lt;span style="color:#8f5902;font-style:italic"&gt;# 为集群 pg-meta 创建全量备份&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+ &lt;/div&gt;
+ &lt;div class="tab-pane fade"
+ id="tabs-00-02" role="tabpanel" aria-labelled-by="tabs-00-02-tab" tabindex="0"&gt;
+ &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;$ pgbackrest --stanza&lt;span style="color:#ce5c00;font-weight:bold"&gt;=&lt;/span&gt;pg-meta --type&lt;span style="color:#ce5c00;font-weight:bold"&gt;=&lt;/span&gt;full backup
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;2025-07-15 01:36:57.007 P00 INFO: backup &lt;span style="color:#204a87"&gt;command&lt;/span&gt; begin 2.54.2: --annotation&lt;span style="color:#ce5c00;font-weight:bold"&gt;=&lt;/span&gt;&lt;span style="color:#000"&gt;pg_cluster&lt;/span&gt;&lt;span style="color:#ce5c00;font-weight:bold"&gt;=&lt;/span&gt;pg-meta ...
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;2025-07-15 01:36:57.030 P00 INFO: execute non-exclusive backup start: backup begins after the requested immediate checkpoint completes
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;2025-07-15 01:36:57.105 P00 INFO: backup start &lt;span style="color:#000"&gt;archive&lt;/span&gt; &lt;span style="color:#ce5c00;font-weight:bold"&gt;=&lt;/span&gt; 000000010000000000000006, &lt;span style="color:#000"&gt;lsn&lt;/span&gt; &lt;span style="color:#ce5c00;font-weight:bold"&gt;=&lt;/span&gt; 0/6000028
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;2025-07-15 01:36:58.540 P00 INFO: new backup &lt;span style="color:#000"&gt;label&lt;/span&gt; &lt;span style="color:#ce5c00;font-weight:bold"&gt;=&lt;/span&gt; 20250715-013657F
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;2025-07-15 01:36:58.588 P00 INFO: full backup &lt;span style="color:#000"&gt;size&lt;/span&gt; &lt;span style="color:#ce5c00;font-weight:bold"&gt;=&lt;/span&gt; 44.5MB, file &lt;span style="color:#000"&gt;total&lt;/span&gt; &lt;span style="color:#ce5c00;font-weight:bold"&gt;=&lt;/span&gt; &lt;span style="color:#0000cf;font-weight:bold"&gt;1437&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;2025-07-15 01:36:58.589 P00 INFO: backup &lt;span style="color:#204a87"&gt;command&lt;/span&gt; end: completed successfully &lt;span style="color:#ce5c00;font-weight:bold"&gt;(&lt;/span&gt;1584ms&lt;span style="color:#ce5c00;font-weight:bold"&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+ &lt;/div&gt;
+ &lt;div class="tab-pane fade"
+ id="tabs-00-03" role="tabpanel" aria-labelled-by="tabs-00-03-tab" tabindex="0"&gt;
+ &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;$ pgbackrest --stanza&lt;span style="color:#ce5c00;font-weight:bold"&gt;=&lt;/span&gt;pg-meta --type&lt;span style="color:#ce5c00;font-weight:bold"&gt;=&lt;/span&gt;diff backup
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;2025-07-15 01:37:24.952 P00 INFO: backup &lt;span style="color:#204a87"&gt;command&lt;/span&gt; begin 2.54.2: ...
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;2025-07-15 01:37:24.985 P00 INFO: last backup &lt;span style="color:#000"&gt;label&lt;/span&gt; &lt;span style="color:#ce5c00;font-weight:bold"&gt;=&lt;/span&gt; 20250715-013657F, &lt;span style="color:#000"&gt;version&lt;/span&gt; &lt;span style="color:#ce5c00;font-weight:bold"&gt;=&lt;/span&gt; 2.54.2
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;2025-07-15 01:37:26.337 P00 INFO: new backup &lt;span style="color:#000"&gt;label&lt;/span&gt; &lt;span style="color:#ce5c00;font-weight:bold"&gt;=&lt;/span&gt; 20250715-013657F_20250715-013724D
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;2025-07-15 01:37:26.381 P00 INFO: diff backup &lt;span style="color:#000"&gt;size&lt;/span&gt; &lt;span style="color:#ce5c00;font-weight:bold"&gt;=&lt;/span&gt; 424.3KB, file &lt;span style="color:#000"&gt;total&lt;/span&gt; &lt;span style="color:#ce5c00;font-weight:bold"&gt;=&lt;/span&gt; &lt;span style="color:#0000cf;font-weight:bold"&gt;1437&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;2025-07-15 01:37:26.381 P00 INFO: backup &lt;span style="color:#204a87"&gt;command&lt;/span&gt; end: completed successfully &lt;span style="color:#ce5c00;font-weight:bold"&gt;(&lt;/span&gt;1431ms&lt;span style="color:#ce5c00;font-weight:bold"&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+ &lt;/div&gt;
+ &lt;div class="tab-pane fade"
+ id="tabs-00-04" role="tabpanel" aria-labelled-by="tabs-00-04-tab" tabindex="0"&gt;
+ &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;$ pgbackrest --stanza&lt;span style="color:#ce5c00;font-weight:bold"&gt;=&lt;/span&gt;pg-meta --type&lt;span style="color:#ce5c00;font-weight:bold"&gt;=&lt;/span&gt;incr backup
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;2025-07-15 01:37:30.305 P00 INFO: backup &lt;span style="color:#204a87"&gt;command&lt;/span&gt; begin 2.54.2: ...
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;2025-07-15 01:37:30.337 P00 INFO: last backup &lt;span style="color:#000"&gt;label&lt;/span&gt; &lt;span style="color:#ce5c00;font-weight:bold"&gt;=&lt;/span&gt; 20250715-013657F_20250715-013724D, &lt;span style="color:#000"&gt;version&lt;/span&gt; &lt;span style="color:#ce5c00;font-weight:bold"&gt;=&lt;/span&gt; 2.54.2
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;2025-07-15 01:37:31.356 P00 INFO: new backup &lt;span style="color:#000"&gt;label&lt;/span&gt; &lt;span style="color:#ce5c00;font-weight:bold"&gt;=&lt;/span&gt; 20250715-013657F_20250715-013730I
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;2025-07-15 01:37:31.403 P00 INFO: incr backup &lt;span style="color:#000"&gt;size&lt;/span&gt; &lt;span style="color:#ce5c00;font-weight:bold"&gt;=&lt;/span&gt; 8.3KB, file &lt;span style="color:#000"&gt;total&lt;/span&gt; &lt;span style="color:#ce5c00;font-weight:bold"&gt;=&lt;/span&gt; &lt;span style="color:#0000cf;font-weight:bold"&gt;1437&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;2025-07-15 01:37:31.403 P00 INFO: backup &lt;span style="color:#204a87"&gt;command&lt;/span&gt; end: completed successfully &lt;span style="color:#ce5c00;font-weight:bold"&gt;(&lt;/span&gt;1099ms&lt;span style="color:#ce5c00;font-weight:bold"&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+ &lt;/div&gt;
+ &lt;div class="tab-pane fade"
+ id="tabs-00-05" role="tabpanel" aria-labelled-by="tabs-00-05-tab" tabindex="0"&gt;
+ &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;$ pgbackrest --stanza&lt;span style="color:#ce5c00;font-weight:bold"&gt;=&lt;/span&gt;pg-meta info
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;stanza: pg-meta
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; status: ok
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; cipher: aes-256-cbc
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; db &lt;span style="color:#ce5c00;font-weight:bold"&gt;(&lt;/span&gt;current&lt;span style="color:#ce5c00;font-weight:bold"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; wal archive min/max &lt;span style="color:#ce5c00;font-weight:bold"&gt;(&lt;/span&gt;17&lt;span style="color:#ce5c00;font-weight:bold"&gt;)&lt;/span&gt;: 000000010000000000000001/00000001000000000000000A
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; full backup: 20250715-013657F
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; timestamp start/stop: 2025-07-15 01:36:57+00 / 2025-07-15 01:36:58+00
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; wal start/stop: &lt;span style="color:#0000cf;font-weight:bold"&gt;000000010000000000000006&lt;/span&gt; / &lt;span style="color:#0000cf;font-weight:bold"&gt;000000010000000000000006&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; database size: 44.5MB, database backup size: 44.5MB
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; repo1: backup size: 8.7MB
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; diff backup: 20250715-013657F_20250715-013724D
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; timestamp start/stop: 2025-07-15 01:37:24+00 / 2025-07-15 01:37:26+00
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; database size: 44.5MB, database backup size: 424.3KB
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; repo1: backup size: 94KB
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; backup reference total: &lt;span style="color:#0000cf;font-weight:bold"&gt;1&lt;/span&gt; full
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; incr backup: 20250715-013657F_20250715-013730I
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; timestamp start/stop: 2025-07-15 01:37:30+00 / 2025-07-15 01:37:31+00
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; database size: 44.5MB, database backup size: 8.3KB
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; repo1: backup size: 504B
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; backup reference total: &lt;span style="color:#0000cf;font-weight:bold"&gt;1&lt;/span&gt; full, &lt;span style="color:#0000cf;font-weight:bold"&gt;1&lt;/span&gt; diff&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+ &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;这里的 &lt;code&gt;stanza&lt;/code&gt; 是数据库集群名称：&lt;a href="https://pigsty.cc/docs/pgsql/param#pg_cluster"&gt;&lt;code&gt;pg_cluster&lt;/code&gt;&lt;/a&gt;，在默认配置中为 &lt;code&gt;pg-meta&lt;/code&gt;。&lt;/p&gt;</description></item><item><title>备份仓库</title><link>https://pigsty.cc/docs/pgsql/backup/repository/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/pgsql/backup/repository/</guid><description>&lt;p&gt;您可以通过指定 &lt;a href="https://pigsty.cc/docs/pgsql/param/#pgbackrest_repo"&gt;&lt;code&gt;pgbackrest_repo&lt;/code&gt;&lt;/a&gt; 参数来配置备份&lt;strong&gt;存储位置&lt;/strong&gt;。
+您可以在此定义多个仓库，Pigsty 会根据 &lt;a href="https://pigsty.cc/docs/pgsql/param/#pgbackrest_method"&gt;&lt;code&gt;pgbackrest_method&lt;/code&gt;&lt;/a&gt; 的值选择使用哪个。&lt;/p&gt;
+&lt;h2 id="默认仓库"&gt;默认仓库&lt;/h2&gt;
+&lt;p&gt;默认情况下，Pigsty 提供两个默认备份仓库定义：&lt;code&gt;local&lt;/code&gt; 和 &lt;code&gt;minio&lt;/code&gt; 备份仓库。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;local&lt;/code&gt;：&lt;strong&gt;默认选项&lt;/strong&gt;，使用本地 &lt;code&gt;/pg/backup&lt;/code&gt; 目录（软链接指向 &lt;a href="https://pigsty.cc/docs/pgsql/param/#pg_fs_backup"&gt;&lt;code&gt;pg_fs_backup&lt;/code&gt;&lt;/a&gt;：&lt;code&gt;/data/backups&lt;/code&gt;）&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;minio&lt;/code&gt;：使用 SNSD 单节点 MinIO 集群（Pigsty 支持，但默认不启用）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-yaml" data-lang="yaml"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;pgbackrest_method&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;local &lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 选择备份仓库方法：`local`、`minio` 或其他自定义仓库&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;pgbackrest_repo: # pgbackrest 仓库配置&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;https://pgbackrest.org/configuration.html#section-repository&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;local&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 使用本地 POSIX 文件系统的默认 pgbackrest 仓库&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;path&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;/pg/backup &lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 本地备份目录，默认为 `/pg/backup`&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;retention_full_type&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;count &lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 按数量保留全量备份&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;retention_full&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#0000cf;font-weight:bold"&gt;2&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 使用本地文件系统仓库时，保留2个，最多3个全量备份&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;minio&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 可选的 minio 仓库&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;type&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;s3 &lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# minio 兼容 S3 协议&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;s3_endpoint&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;sss.pigsty &lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# minio 端点域名，默认为 `sss.pigsty`&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;s3_region&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;us-east-1 &lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# minio 区域，默认 us-east-1，对 minio 无实际意义&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;s3_bucket&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;pgsql &lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# minio 桶名，默认为 `pgsql`&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;s3_key&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;pgbackrest &lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# pgbackrest 的 minio 用户访问密钥&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;s3_key_secret&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;S3User.Backup &lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# pgbackrest 的 minio 用户密钥&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;s3_uri_style&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;path &lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# minio 使用路径风格 URI 而非主机风格&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;path&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;/pgbackrest &lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# minio 备份路径，默认为 `/pgbackrest`&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;storage_port&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#0000cf;font-weight:bold"&gt;9000&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# minio 端口，默认 9000&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;storage_ca_file&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;/etc/pki/ca.crt &lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# minio CA 证书路径，默认 `/etc/pki/ca.crt`&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;block&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;y&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 启用块级增量备份&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;bundle&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;y&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 将小文件打包成单个文件&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;bundle_limit&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;20MiB &lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 文件包大小限制，对象存储建议 20MiB&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;bundle_size&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;128MiB &lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 文件包目标大小，对象存储建议 128MiB&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;cipher_type&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;aes-256-cbc &lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 为远程备份仓库启用 AES 加密&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;cipher_pass&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;pgBackRest &lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# AES 加密密码，默认为 &amp;#39;pgBackRest&amp;#39;&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;retention_full_type&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;time &lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 按时间保留全量备份&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;retention_full&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#0000cf;font-weight:bold"&gt;14&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 保留最近 14 天的全量备份&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id="仓库保留策略"&gt;仓库保留策略&lt;/h2&gt;
+&lt;p&gt;如果每天备份但不删除旧备份，备份仓库会不断增长并耗尽磁盘空间。
+您需要定义保留策略，只保留有限数量的备份。&lt;/p&gt;</description></item><item><title>管理命令</title><link>https://pigsty.cc/docs/pgsql/backup/admin/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/pgsql/backup/admin/</guid><description>&lt;h2 id="启用备份"&gt;启用备份&lt;/h2&gt;
+&lt;p&gt;如果数据库集群创建时 &lt;a href="https://pigsty.cc/docs/pgsql/param/#pgbackrest_enabled"&gt;&lt;code&gt;pgbackrest_enabled&lt;/code&gt;&lt;/a&gt; 设置为 &lt;code&gt;true&lt;/code&gt;，备份将自动启用。&lt;/p&gt;
+&lt;p&gt;如果创建时该值为 &lt;code&gt;false&lt;/code&gt;，您可以使用以下命令启用 pgbackrest 组件：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;./pgsql.yml -t pg_backup &lt;span style="color:#8f5902;font-style:italic"&gt;# 运行 pgbackrest 子任务&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id="删除备份"&gt;删除备份&lt;/h2&gt;
+&lt;p&gt;当移除主实例（&lt;a href="https://pigsty.cc/docs/pgsql/param/#pg_role"&gt;&lt;code&gt;pg_role&lt;/code&gt;&lt;/a&gt; = &lt;code&gt;primary&lt;/code&gt;）时，Pigsty 会删除 pgbackrest 备份 stanza。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;./pgsql-rm.yml
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;./pgsql-rm.yml -e &lt;span style="color:#000"&gt;pg_rm_backup&lt;/span&gt;&lt;span style="color:#ce5c00;font-weight:bold"&gt;=&lt;/span&gt;&lt;span style="color:#204a87"&gt;false&lt;/span&gt; &lt;span style="color:#8f5902;font-style:italic"&gt;# 保留备份&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;./pgsql-rm.yml -t pg_backup &lt;span style="color:#8f5902;font-style:italic"&gt;# 仅删除备份&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;使用 &lt;code&gt;pg_backup&lt;/code&gt; 子任务仅删除备份，使用 &lt;a href="https://pigsty.cc/docs/pgsql/param/#pg_rm_backup"&gt;&lt;code&gt;pg_rm_backup&lt;/code&gt;&lt;/a&gt; 参数（设为 &lt;code&gt;false&lt;/code&gt;）保留备份。&lt;/p&gt;
+&lt;p&gt;如果您的备份仓库被&lt;strong&gt;锁定&lt;/strong&gt;（例如 S3 / MinIO 有锁定选项），此操作将失败。&lt;/p&gt;
+&lt;div class="alert alert-warning" role="alert"&gt;&lt;div class="h4 alert-heading" role="heading"&gt;备份删除&lt;/div&gt;
+&lt;p&gt;删除备份可能导致永久性数据丢失，这是一个危险操作，请务必谨慎。&lt;/p&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;h2 id="列出备份"&gt;列出备份&lt;/h2&gt;
+&lt;p&gt;此命令将列出 pgbackrest 仓库中的所有备份（所有集群共享）&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;pgbackrest info
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id="手动备份"&gt;手动备份&lt;/h2&gt;
+&lt;p&gt;Pigsty 提供了内置脚本 &lt;code&gt;/pg/bin/pg-backup&lt;/code&gt;，封装了 &lt;code&gt;pgbackrest&lt;/code&gt; 备份命令。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;pg-backup &lt;span style="color:#8f5902;font-style:italic"&gt;# 执行增量备份&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;pg-backup full &lt;span style="color:#8f5902;font-style:italic"&gt;# 执行全量备份&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;pg-backup incr &lt;span style="color:#8f5902;font-style:italic"&gt;# 执行增量备份&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;pg-backup diff &lt;span style="color:#8f5902;font-style:italic"&gt;# 执行差异备份&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id="基础备份"&gt;基础备份&lt;/h2&gt;
+&lt;p&gt;Pigsty 提供了一个替代备份脚本 &lt;code&gt;/pg/bin/pg-basebackup&lt;/code&gt;，它不依赖 &lt;code&gt;pgbackrest&lt;/code&gt;，直接提供数据库集群的物理副本。
+默认备份目录为 &lt;code&gt;/pg/backup&lt;/code&gt;。&lt;/p&gt;</description></item><item><title>恢复操作</title><link>https://pigsty.cc/docs/pgsql/backup/restore/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/pgsql/backup/restore/</guid><description>&lt;p&gt;您可以使用预配置的 pgbackrest 在 Pigsty 中执行时间点恢复（PITR）。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B"&gt;&lt;strong&gt;剧本方式&lt;/strong&gt;&lt;/a&gt;：使用 &lt;code&gt;pgsql-pitr.yml&lt;/code&gt; 剧本自动执行 PITR&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://pigsty.cc/docs/pgsql/tutorial/pg-fork#pg-pitr"&gt;&lt;strong&gt;手动方式&lt;/strong&gt;&lt;/a&gt;：使用 &lt;code&gt;pg-pitr&lt;/code&gt; 脚本手动执行 PITR&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="快速上手"&gt;快速上手&lt;/h2&gt;
+&lt;p&gt;如果您想将 &lt;code&gt;pg-meta&lt;/code&gt; 集群回滚到之前的时间点，添加 &lt;code&gt;pg_pitr&lt;/code&gt; 参数：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-yaml" data-lang="yaml"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;pg-meta&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;hosts&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;{&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;10.10.10.10&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;{&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;pg_seq: 1, pg_role&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;primary } }&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;vars&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;pg_cluster&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#000"&gt;pg-meta2&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;pg_pitr&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;{&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#204a87;font-weight:bold"&gt;time&lt;/span&gt;&lt;span style="color:#000;font-weight:bold"&gt;:&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#4e9a06"&gt;&amp;#39;2025-07-13 10:00:00+00&amp;#39;&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;}&lt;span style="color:#f8f8f8"&gt; &lt;/span&gt;&lt;span style="color:#8f5902;font-style:italic"&gt;# 从最新备份恢复&lt;/span&gt;&lt;span style="color:#f8f8f8"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;然后运行 &lt;code&gt;pgsql-pitr.yml&lt;/code&gt; 剧本，它将把 &lt;code&gt;pg-meta&lt;/code&gt; 集群回滚到指定时间点。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;./pgsql-pitr.yml -l pg-meta
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id="恢复后处理"&gt;恢复后处理&lt;/h2&gt;
+&lt;p&gt;恢复后的集群会&lt;strong&gt;禁用&lt;/strong&gt; &lt;code&gt;archive_mode&lt;/code&gt;，以防止意外的 WAL 写入。
+如果恢复后的数据库状态正常，您可以启用 &lt;code&gt;archive_mode&lt;/code&gt; 并执行全量备份。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;psql -c &lt;span style="color:#4e9a06"&gt;&amp;#39;ALTER SYSTEM RESET archive_mode; SELECT pg_reload_conf();&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;pg-backup full &lt;span style="color:#8f5902;font-style:italic"&gt;# 执行新的全量备份&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id="恢复目标"&gt;恢复目标&lt;/h2&gt;
+&lt;p&gt;您可以在 &lt;code&gt;pg_pitr&lt;/code&gt; 中指定不同类型的恢复目标，但它们是互斥的：&lt;/p&gt;</description></item><item><title>克隆数据库集群</title><link>https://pigsty.cc/docs/pgsql/backup/cluster/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/pgsql/backup/cluster/</guid><description>&lt;h2 id="快速上手"&gt;快速上手&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;利用 Standby Cluster 创建现有集群的在线副本&lt;/li&gt;
+&lt;li&gt;利用 PITR 创建现有集群的时间点快照&lt;/li&gt;
+&lt;li&gt;在 PITR 完成后进行善后，确保新集群的备份流程正常运行&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;您可以使用 PG PITR 机制克隆整个数据库集群。&lt;/p&gt;
+&lt;h2 id="重置一个集群的状态"&gt;重置一个集群的状态&lt;/h2&gt;
+&lt;p&gt;您也可以考虑创建一个全新的空集群，然后利用 PITR，将其重置为 &lt;code&gt;pg-meta&lt;/code&gt; 集群的特定状态。&lt;/p&gt;
+&lt;p&gt;利用这种技术，您可以将现有集群 &lt;code&gt;pg-meta&lt;/code&gt; 的任意时间点（备份保留期内）状态克隆到一个新的集群中。&lt;/p&gt;
+&lt;p&gt;我们依然以 Pigsty 4 节点沙箱环境为例，使用以下命令将 &lt;code&gt;pg-test&lt;/code&gt; 集群重置为 &lt;code&gt;pg-meta&lt;/code&gt; 集群的最新状态：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;./pgsql-pitr.yml -l pg-test -e &lt;span style="color:#4e9a06"&gt;&amp;#39;{&amp;#34;pg_pitr&amp;#34;: { &amp;#34;cluster&amp;#34;: &amp;#34;pg-meta&amp;#34; }}&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="pitr-善后工作"&gt;PITR 善后工作&lt;/h2&gt;
+&lt;p&gt;当你使用 PITR 恢复一个集群后，这个新集群本身的 PITR 功能是被禁用的。
+因为如果它也尝试去生成备份，归档 WAL，有可能会写脏数据之前集群的备份仓库。&lt;/p&gt;
+&lt;p&gt;因此，当你确认这个 PITR 恢复出来的新集群状态符合预期后，你需要执行以下善后工作。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;升级备份仓库 Stanza，允许它接纳来自不同集群的新备份（仅当从别的集群恢复时）。&lt;/li&gt;
+&lt;li&gt;启用 &lt;code&gt;archive_mode&lt;/code&gt;，允许新集群归档 WAL 日志（需要重启集群）&lt;/li&gt;
+&lt;li&gt;执行一个新的全量备份，确保新集群的数据被纳入（可选，也可以等 crontab 定时执行）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;pb stanza-upgrade
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;psql -c &lt;span style="color:#4e9a06"&gt;&amp;#39;ALTER SYSTEM RESET archive_mode;&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;pg-backup full
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;通过这些操作，你的新集群将从第一次全量备份开始时，拥有自己的备份历史。
+如果你跳过这些步骤，新集群本身的备份将无法进行，WAL 归档也不会生效。
+意味着你将无法对新集群执行任何备份或 PITR 操作。&lt;/p&gt;</description></item></channel></rss>
