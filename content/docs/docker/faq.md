@@ -3,7 +3,7 @@ title: 常见问题
 weight: 4250
 description: Pigsty Docker 模块常见问题答疑
 icon: fa-solid fa-circle-question
-module: [Docker]
+module: [DOCKER]
 categories: [参考]
 ---
 
@@ -39,13 +39,15 @@ Docker 在从上游 Registry 拉取镜像时，会使用此代理服务器。
 
 ## 使用镜像站点
 
-如果您在中国大陆受到功夫网影响，可以考虑使用墙内可用的 Docker 镜像站点，例如 quay.io：
+如果您在中国大陆网络环境下访问 DockerHub 较慢，可以优先考虑：
+
+- 使用 [`docker_registry_mirrors`](/docs/docker/param#docker_registry_mirrors) 配置可用镜像站点
+- 或配置 [`proxy_env`](/docs/infra/param#proxy_env) 通过代理拉取镜像
+- 也可直接使用其他公开 Registry（例如 `quay.io`）
 
 ```bash
 docker login quay.io    # 输入用户名密码，完成登陆
 ```
-
-2024-06 更新，国内所有可用 Docker 镜像站点均已被墙，请使用代理服务器访问并拉取。
 
 
 
@@ -53,12 +55,10 @@ docker login quay.io    # 输入用户名密码，完成登陆
 
 ## 将Docker纳入监控
 
-在 Docker 模块安装过程中
-
-针对节点单独执行监控目标注册子任务 `docker_register` 或 `register_prometheus` 即可：
+在 Docker 模块安装过程中，针对节点单独执行监控目标注册子任务 `docker_register`（或别名标签 `add_metrics`）即可：
 
 ```bash
-./docker.yml -l <your-node-selector> -t register_prometheus
+./docker.yml -l <your-node-selector> -t docker_register
 ```
 
 
