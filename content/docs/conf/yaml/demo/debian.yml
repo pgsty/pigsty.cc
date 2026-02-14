@@ -417,7 +417,7 @@ all:
       - 10.0.0.0/8
       - 192.168.0.0/16
       - 172.16.0.0/12
-    node_firewall_public_port:        # expose these ports to public network in (zone, strict) mode
+    node_firewall_public_port:        # expose these ports to public network in zone mode
       - 22                            # enable ssh access
       - 80                            # enable http access
       - 443                           # enable https access
