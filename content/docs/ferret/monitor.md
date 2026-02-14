@@ -52,7 +52,7 @@ FerretDB 通过内置的 Exporter 在 [`mongo_exporter_port`](/docs/ferret/param
 
 ## 告警规则
 
-FerretDB 模块目前使用基本的实例存活告警：
+Pigsty v4.1 默认规则集中未内置专门的 FerretDB 告警规则（`files/victoria/rules/*.yml`）。您可以基于 `ferretdb_up` 指标按需添加自定义告警，例如：
 
 ```yaml
 - alert: FerretDBDown
@@ -65,4 +65,4 @@ FerretDB 模块目前使用基本的实例存活告警：
     description: "FerretDB instance {{ $labels.ins }} on {{ $labels.ip }} has been down for more than 1 minute."
 ```
 
-由于 FerretDB 是无状态的代理层，主要的监控和告警应该集中在底层的 PostgreSQL 集群上。
+由于 FerretDB 是无状态的代理层，主要的监控和告警应集中在底层 PostgreSQL 集群。

@@ -55,12 +55,13 @@ mongosh 'mongodb://dbuser_meta:DBUser.Meta@10.10.10.10:27017'
 mongosh 'mongodb://test:test@10.10.10.11:27017/test'
 ```
 
-Pigsty 管理的 PostgreSQL 集群默认使用 `scram-sha-256` 作为默认的认证方式，因此，您必须使用 `PLAIN` 认证方式连接至 FerretDB。参阅 [FerretDB：认证](https://docs.ferretdb.io/security/authentication/) 获取详细信息。
+Pigsty 管理的 PostgreSQL 集群默认使用 `scram-sha-256`。FerretDB 2.x 对应使用 `SCRAM-SHA-256` 认证，绝大多数客户端会自动协商；如果遇到协商失败，可在连接串中显式追加 `authMechanism=SCRAM-SHA-256`。参阅 [FerretDB：认证](https://docs.ferretdb.io/security/authentication/) 获取详细信息。
 
 您也可以使用其他 PostgreSQL 用户来访问 FerretDB，只要在连接串中指定即可：
 
 ```bash
 mongosh 'mongodb://dbuser_dba:DBUser.DBA@10.10.10.10:27017'
+mongosh 'mongodb://dbuser_dba:DBUser.DBA@10.10.10.10:27017/?authMechanism=SCRAM-SHA-256'
 ```
 
 

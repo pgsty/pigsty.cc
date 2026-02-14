@@ -27,7 +27,7 @@ Pigsty 从 1.x 开始就提供了基于 Docker 的 FerretDB 模板，在 v2.3 �
 它作为一个选装项，对丰富 PostgreSQL 生态大有裨益。Pigsty 社区已经与 FerretDB 社区成为了合作伙伴，后续将进行深度的合作与适配支持。
 
 **FERRET** 是 Pigsty 中的一个 **可选** 模块。自 v2.0 以来，它需要 [`documentdb`](https://pgext.cloud/e/documentdb) 扩展才能工作。
-Pigsty 已经打包了这个扩展，并提供了一个 [`mongo.yml`](https://github.com/pgsty/pigsty/blob/main/conf/mongo.yml) 模板，帮助您轻松部署 FerretDB 集群。
+Pigsty 已经打包了这个扩展，并提供了一个 [`mongo.yml`](https://github.com/pgsty/pigsty/blob/v4.1.0/conf/mongo.yml) 模板，帮助您轻松部署 FerretDB 集群。
 
 
 ----------------
@@ -64,13 +64,12 @@ yum install -y mongodb-mongosh
 
 ## 认证方式
 
-FerretDB 的身份验证完全基于底层的 PostgreSQL。由于 Pigsty 管理的 PostgreSQL 集群默认使用 `scram-sha-256` 认证，您必须在连接字符串中指定 `PLAIN` 认证机制：
+FerretDB 的身份验证完全基于底层 PostgreSQL。Pigsty 管理的 PostgreSQL 集群默认使用 `scram-sha-256`，FerretDB 2.x 对应使用 `SCRAM-SHA-256`。通常客户端会自动协商，如遇认证协商失败可显式指定机制：
 
 ```bash
 mongosh 'mongodb://user:password@host:27017'
+mongosh 'mongodb://user:password@host:27017/?authMechanism=SCRAM-SHA-256'
 ```
-
-如果忘记添加 `authMechanism=PLAIN` 参数，连接将会失败并报认证错误。
 
 
 ----------------

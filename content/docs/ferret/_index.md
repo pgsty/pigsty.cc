@@ -11,5 +11,5 @@ linkTitle: 模块：FERRET
 这是一个构建在 PostgreSQL 内核与 [DocumentDB](https://pgext.cloud/e/documentdb) 扩展之上的协议转换中间件。
 能够对接使用 MongoDB 驱动的应用程序，并将这些请求转换为对 PostgreSQL 的操作。
 
-Pigsty 是 FerretDB 社区的合作伙伴，我们制作了 [**FerretDB**](https://github.com/FerretDB/FerretDB) 与 [**DocumentDB**](https://github.com/FerretDB/documentdb) (ferretdb 专用分支) 的二进制包，
-并提供了开箱即用的配置模板 [`mongo.yml`](https://github.com/pgsty/pigsty/blob/main/conf/mongo.yml)，帮助您轻松部署企业级质量的 FerretDB 集群。
+Pigsty 是 FerretDB 社区的合作伙伴，我们提供 [**FerretDB**](https://github.com/FerretDB/FerretDB) 与 [**DocumentDB**](https://pgext.cloud/e/documentdb)（微软维护版本）的二进制包，
+并提供了开箱即用的配置模板 [`mongo.yml`](https://github.com/pgsty/pigsty/blob/v4.1.0/conf/mongo.yml)，帮助您轻松部署企业级质量的 FerretDB 集群。

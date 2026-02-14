@@ -29,7 +29,7 @@ linkTitle: 参数列表
 
 ## 默认值
 
-默认参数定义在 [`roles/ferret/defaults/main.yml`](https://github.com/pgsty/pigsty/blob/main/roles/ferret/defaults/main.yml) 中：
+默认参数定义在 [`roles/ferret/defaults/main.yml`](https://github.com/pgsty/pigsty/blob/v4.1.0/roles/ferret/defaults/main.yml) 中：
 
 ```yaml
 # mongo_cluster:        #CLUSTER  # mongo 集群名称，必选身份参数

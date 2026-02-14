@@ -45,16 +45,18 @@ test>
 
 ### 使用连接字符串
 
-FerretDB 的身份验证完全基于 PostgreSQL，你可以直接使用 PostgreSQL 的用户名与密码。
+FerretDB 的身份验证完全基于 PostgreSQL。Pigsty 默认使用 `scram-sha-256`，在 FerretDB 2.x 中对应 `SCRAM-SHA-256` 认证。通常客户端会自动协商，你可以直接使用 PostgreSQL 用户名与密码。
 
 ```bash
 mongosh 'mongodb://postgres:DBUser.Postgres@10.10.10.10:27017'
+# 若客户端认证协商失败，可显式指定：
+mongosh 'mongodb://postgres:DBUser.Postgres@10.10.10.10:27017/?authMechanism=SCRAM-SHA-256'
 ```
 
 连接字符串格式：
 
 ```bash
-mongodb://<username>:<password>@<host>:<port>/<database>
+mongodb://<username>:<password>@<host>:<port>/<database>[?authMechanism=SCRAM-SHA-256]
 ```
 
 ### 使用不同的用户
@@ -207,4 +209,3 @@ import (
 uri := "mongodb://dbuser_meta:DBUser.Meta@10.10.10.10:27017"
 client, err := mongo.Connect(context.TODO(), options.Client().ApplyURI(uri))
 ```
-

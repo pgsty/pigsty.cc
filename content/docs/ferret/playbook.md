@@ -7,7 +7,7 @@ categories: [任务]
 linkTitle: 管理剧本
 ---
 
-Pigsty 提供了一个内置剧本 [`mongo.yml`](https://github.com/pgsty/pigsty/blob/main/mongo.yml) 用于在节点上安装 FerretDB。
+Pigsty 提供了一个内置剧本 [`mongo.yml`](https://github.com/pgsty/pigsty/blob/v4.1.0/mongo.yml) 用于在节点上安装 FerretDB。
 
 **重要说明**：此剧本仅在定义了 [`mongo_seq`](/docs/ferret/param#mongo_seq) 参数的主机上执行。
 对于未定义 `mongo_seq` 的主机，剧本会安全跳过所有任务，因此可以安全地在混合主机组上运行。
@@ -17,7 +17,7 @@ Pigsty 提供了一个内置剧本 [`mongo.yml`](https://github.com/pgsty/pigsty
 
 ## `mongo.yml`
 
-剧本地址：[`mongo.yml`](https://github.com/pgsty/pigsty/blob/main/mongo.yml)
+剧本地址：[`mongo.yml`](https://github.com/pgsty/pigsty/blob/v4.1.0/mongo.yml)
 
 功能说明：在定义了 `mongo_seq` 的目标主机上安装 MongoDB/FerretDB。
 
