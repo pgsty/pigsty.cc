@@ -117,7 +117,7 @@ sudo usermod -aG admin <username>
 
 ## 当集群数据已经损坏时如何创建副本？
 
-Pigsty 在所有实例的 patroni 配置中设置了 `cloneform: true` 标签，标记该实例可用于创建副本。
+Pigsty 在所有实例的 patroni 配置中设置了 `clonefrom: true` 标签，标记该实例可用于创建副本。
 
 如果某个实例有损坏的数据文件，导致创建新副本的时候出错中断，那么你可以设置 `clonefrom: false` 来避免从损坏的实例中拉取数据。具体操作如下
 
@@ -171,5 +171,4 @@ $ systemctl reload patroni    # 重新加载 Patroni 配置
 ```bash
 bin/pgmon-rm <ins>     # 用于从 Victoria 中移除单个实例 'ins' 的监控对象，特别适合移除添加的外部实例
 ```
-
 

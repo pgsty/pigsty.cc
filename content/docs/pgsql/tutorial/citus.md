@@ -15,7 +15,7 @@ Patroni 在 v3.0 后，提供了对 Citus 原生高可用的支持，简化了 C
 - [Citus 是什么](https://docs.citusdata.com/en/stable/get_started/what_is_citus.html)
 - [Patroni Citus 支持](https://patroni.readthedocs.io/en/latest/citus.html)
 
-> 注意：Citus 当前最新版本（13.0）支持 PostgreSQL 17、16、15、14 四个大版本。Pigsty 扩展仓库提供了 Citus ARM64 软件包。
+> 注意：Citus 13.x 支持 PostgreSQL 18、17、16、15、14 五个大版本。Pigsty 扩展仓库提供了 Citus ARM64 软件包。
 
 
 --------
@@ -36,7 +36,7 @@ pg-citus:
     10.10.10.13: { pg_group: 2, pg_cluster: pg-citus2 ,pg_vip_address: 10.10.10.4/24 ,pg_seq: 1, pg_role: primary }
   vars:
     pg_mode: citus                            # pgsql cluster mode: citus
-    pg_version: 17                            # citus 13.0 supports PG 14-17
+    pg_version: 17                            # citus 13.x supports PG 14-18
     pg_shard: pg-citus                        # citus shard name: pg-citus
     pg_primary_db: citus                      # primary database used by citus
     pg_vip_enabled: true                      # enable vip for citus cluster
@@ -212,7 +212,7 @@ pg-citus: # citus group
     10.10.10.59: { pg_group: 4, pg_cluster: pg-citus4 ,pg_vip_address: 10.10.10.64/24 ,pg_seq: 1, pg_role: replica }
   vars:
     pg_mode: citus                            # pgsql cluster mode: citus
-    pg_version: 17                            # citus 13.0 supports PG 14-17
+    pg_version: 17                            # citus 13.x supports PG 14-18
     pg_shard: pg-citus                        # citus shard name: pg-citus
     pg_primary_db: citus                      # primary database used by citus
     pg_vip_enabled: true                      # enable vip for citus cluster

@@ -13,7 +13,7 @@ Pigsty 支持各种 PostgreSQL 内核和兼容分支，使您能够模拟不同�
 
 | 内核                                              | 关键特性              | 描述                                 |
 |:------------------------------------------------|:------------------|:-----------------------------------|
-| [**PostgreSQL**](/docs/pgsql)                   | **444扩展**        | 原版 PostgreSQL，配备 444 扩展            |
+| [**PostgreSQL**](/docs/pgsql)                   | **451扩展**        | 原版 PostgreSQL，配备 451 扩展            |
 | [**Citus**](/docs/pgsql/kernel/citus)           | **水平扩展**          | 通过原生扩展实现分布式 PostgreSQL             |
 | [**WiltonDB**](/docs/pgsql/kernel/babelfish)    | **SQL Server 兼容** | SQL Server 线协议兼容                   |
 | [**IvorySQL**](/docs/pgsql/kernel/ivorysql)     | **Oracle 兼容**     | Oracle 语法和 PL/SQL 兼容               |

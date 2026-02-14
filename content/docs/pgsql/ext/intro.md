@@ -7,7 +7,7 @@ module: [PGSQL]
 categories: [参考]
 ---
 
-扩展是 PostgreSQL 的灵魂所在。Pigsty 收录了 444 个预编译、开箱即用的扩展插件，充分释放 PostgreSQL 的潜能。
+扩展是 PostgreSQL 的灵魂所在。Pigsty 收录了 451 个预编译、开箱即用的扩展插件，充分释放 PostgreSQL 的潜能。
 
 
 --------
@@ -102,4 +102,3 @@ Pigsty 提供了若干预定义的扩展集（Stack），方便按场景选用�
 - [**扩展仓库**](https://pgext.cloud/zh/repo/)：Pigsty 扩展软件仓库
 - [**pig 包管理器**](https://pgext.cloud/pig)：命令行扩展管理工具
 - [**GitHub Pigsty**](https://github.com/pgsty/pigsty)：Pigsty 源代码仓库
-

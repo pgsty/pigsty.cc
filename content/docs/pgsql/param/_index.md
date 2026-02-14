@@ -16,7 +16,7 @@ categories: [参考]
 
 您可以定义多个 PGSQL 集群并进一步组建一个水平分片集群： Pigsty 支持原生的 [citus 集群组](/docs/pgsql/config/cluster#citus集群)，可以将您的标准 PGSQL 集群原地升级为一个分布式的数据库集群。
 
-> Pigsty v4.0 默认使用 PostgreSQL 18，并新增了 `pg_io_method`、`pgbackrest_exporter` 等参数。
+> Pigsty v4.1 默认使用 PostgreSQL 18，并提供 `pg_io_method`、`pgbackrest_exporter`、`pgbouncer_exporter` 等相关参数。
 
 
 ------------------------------
@@ -168,7 +168,6 @@ categories: [参考]
 | 参数                                                  |   类型   |  级别   | 说明                                       |
 |:----------------------------------------------------|:------:|:-----:|:-----------------------------------------|
 | [`pgbackrest_enabled`](#pgbackrest_enabled)         | `bool` |  `C`  | 在 pgsql 主机上启用 pgbackrest？                |
-| [`pgbackrest_clean`](#pgbackrest_clean)             | `bool` |  `C`  | 在初始化时删除以前的 pg 备份数据？                      |
 | [`pgbackrest_log_dir`](#pgbackrest_log_dir)         | `path` |  `C`  | pgbackrest 日志目录，默认为 `/pg/log/pgbackrest` |
 | [`pgbackrest_method`](#pgbackrest_method)           | `enum` |  `C`  | pgbackrest 使用的仓库：local,minio,等...        |
 | [`pgbackrest_init_backup`](#pgbackrest_init_backup) | `bool` |  `C`  | pgbackrest 初始化完成后是否立即执行全量备份？默认为 `true`   |
@@ -1050,7 +1049,7 @@ pg_files: []                      # extra files to be copied to postgres data di
 pg_conf: oltp.yml                 # config template: oltp,olap,crit,tiny. `oltp.yml` by default
 pg_max_conn: auto                 # postgres max connections, `auto` will use recommended value
 pg_shared_buffer_ratio: 0.25      # postgres shared buffers ratio, 0.25 by default, 0.1~0.4
-pg_io_method: worker              # io method for postgres, auto,fsync,worker,io_uring, worker by default
+pg_io_method: worker              # io method for postgres, auto,sync,worker,io_uring, worker by default
 pg_rto: norm                      # shared rto mode: fast,norm,safe,wide (or seconds for compatibility)
 pg_rpo: 1048576                   # recovery point objective in bytes, `1MiB` at most by default
 pg_libs: 'pg_stat_statements, auto_explain'  # preloaded libraries, `pg_stat_statements,auto_explain` by default
@@ -1999,7 +1998,6 @@ pgb_default_hba_rules:            # pgbouncer default host-based authentication 
 
 ```yaml
 pgbackrest_enabled: true          # 在 pgsql 主机上启用 pgBackRest 吗？
-pgbackrest_clean: true            # 初始化时删除 pg 备份数据？
 pgbackrest_log_dir: /pg/log/pgbackrest # pgbackrest 日志目录，默认为 `/pg/log/pgbackrest`
 pgbackrest_method: local          # pgbackrest 仓库方法：local, minio, [用户定义...]
 pgbackrest_init_backup: true      # pgbackrest 初始化完成后是否立即执行全量备份？
@@ -2039,15 +2037,6 @@ pgbackrest_repo:                  # pgbackrest 仓库：https://pgbackrest.org/c
 
 在使用本地文件系统备份仓库（`local`）时，只有集群主库才会真正启用 `pgbackrest`。其他实例只会初始化一个空仓库。
 
-
-
-
-
-### `pgbackrest_clean`
-
-参数名称： `pgbackrest_clean`， 类型： `bool`， 层次：`C`
-
-初始化时删除 PostgreSQL 备份数据吗？默认值为 `true`。
 
 
 

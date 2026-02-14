@@ -17,7 +17,7 @@ Supabase 的口号是：“**花个周末写写，随便扩容至百万**”。�
 —— 但当你真的增长到百万用户时 —— 确实应该认真考虑托管自建 Supabase 了 —— 无论是出于功能，性能，还是成本上的考虑。
 
 Pigsty 为您提供完整的 Supabase 一键自建方案。自建的 Supabase 可以享受完整的 PostgreSQL 监控，IaC，PITR 与高可用，
-而且相比 Supabase 云服务，提供了多达 [**444**](https://pgext.cloud) 个开箱即用的 PostgreSQL 扩展，并能够更充分地利用现代硬件的性能与成本优势。
+而且相比 Supabase 云服务，提供了多达 [**451**](https://pgext.cloud) 个开箱即用的 PostgreSQL 扩展，并能够更充分地利用现代硬件的性能与成本优势。
 
 完整自建教程，请参考：《[**Supabase自建手册**](/docs/app/supabase)》
 

@@ -48,7 +48,7 @@ categories: [任务]
 | [`pg_safeguard`](/docs/pgsql/param#pg_safeguard) | `false` | 防误删保险，设为 `true` 时剧本会中止执行 |
 | `pg_rm_data` | `true` | 是否移除 PostgreSQL 数据目录 |
 | `pg_rm_backup` | `true` | 是否移除 pgBackRest 备份数据（仅主库移除时生效） |
-| `pg_rm_pkg` | `false` | 是否卸载 PostgreSQL 软件包 |
+| `pg_rm_pkg` | `true` | 是否卸载 PostgreSQL 软件包 |
 
 这些参数允许你根据实际需求精确控制移除行为：
 
@@ -226,7 +226,7 @@ bin/pgsql-hba pg-test             # 重载 pg-test 的 pg/pgb HBA 规则
     -e pg_safeguard=false          # 防误删保险，默认关闭，开启时需强制覆盖
     -e pg_rm_data=true             # 是否一并移除 PostgreSQL 数据目录，默认移除
     -e pg_rm_backup=true           # 是否一并移除 pgBackRest 备份（仅主库），默认移除
-    -e pg_rm_pkg=false             # 是否卸载 PostgreSQL 软件包，默认不卸载
+    -e pg_rm_pkg=true              # 是否卸载 PostgreSQL 软件包，默认卸载
 ```
 
 **包装脚本**
