@@ -12,9 +12,10 @@ categories: [参考]
 
 ## 最近新闻
 
-- **2026-02-12**: **Pigsty v4.1 发布活动占位**（待补充）
+- **2026-02-12**: **Pigsty v4.1 正式发布！第一批支持 PostgreSQL 18.2 的发行版**
+  - 发布博客：[Pigsty v4.1 发布文章](/blog/pigsty/v4.1)
   - 发布说明：[v4.1.0](/docs/about/release#v410)
-  - 活动详情与图文记录：待补充
+  - Pigsty 已支持 PostgreSQL 小版本发布：18.2...
 
 - **2026-02-04**: Extension for Everyone 主题入选 PGCon.Dev 2026 演讲！
   - [**中国厂商首次站上 PGConf.dev 主题演讲台**](https://mp.weixin.qq.com/s/rThnqXp2JXVV9UQncNV3kg) 
@@ -96,19 +97,19 @@ categories: [参考]
 
 [Pigsty 发布注记](/docs/about/release)
 
-| 版本                                  |    发布时间    | 摘要                                                         | 地址                                                                                        |
-|:------------------------------------|:----------:|------------------------------------------------------------|-------------------------------------------------------------------------------------------|
-| [v4.1.0](/docs/about/release#v410) | 2026-02-12 | 操作系统与数据库小版本更新，Agent Native CLI，批量 Bug 修复 | [v4.1.0](https://github.com/pgsty/pigsty/releases/tag/v4.1.0)                             |
-| [v4.0.0](/docs/about/release#v400) | 2026-01-28 | Victoria 可观测性，安全加固，JUICE/VIBE 模块，Apache-2.0   | [v4.0.0](https://github.com/pgsty/pigsty/releases/tag/v4.0.0)                             |
-| [v3.7.0](/docs/about/release#v370) | 2025-12-02 | PG18 成为默认，437 扩展，EL10/Debian13，PGEXT.CLOUD     | [v3.7.0](https://github.com/pgsty/pigsty/releases/tag/v3.7.0)                             |
-| [v3.6.1](/docs/about/release#v361) | 2025-08-15 | 例行 PG 小版本更新，PGDG 中国区域镜像                        | [v3.6.1](https://github.com/pgsty/pigsty/releases/tag/v3.6.1)                             |
-| [v3.6.0](/docs/about/release#v360) | 2025-07-30 | pgactive，MinIO/ETCD 改进，安装简化，配置梳理               | [v3.6.0](https://github.com/pgsty/pigsty/releases/tag/v3.6.0)                             |
-| [v3.5.0](/docs/about/release#v350) | 2025-06-16 | PG18 Beta，421 扩展，监控升级，代码重构                     | [v3.5.0](https://github.com/pgsty/pigsty/releases/tag/v3.5.0)                             |
-| [v3.4.1](/docs/about/release#v341) | 2025-04-05 | OpenHalo，OrioleDB，MySQL兼容性，pgAdmin改进             | [v3.4.1](https://github.com/pgsty/pigsty/releases/tag/v3.4.1)                             |
-| [v3.4.0](/docs/about/release#v340) | 2025-03-30 | 备份增强，自动Certbot证书，Ivory跨平台，AGE扩展            | [v3.4.0](https://github.com/pgsty/pigsty/releases/tag/v3.4.0)                             |
-| [v3.3.0](/docs/about/release#v330) | 2025-02-24 | 404扩展，Odoo/Dify/Supabase应用模板，DocumentDB支持      | [v3.3.0](https://github.com/pgsty/pigsty/releases/tag/v3.3.0)                             |
-| [v3.2.2](/docs/about/release#v322) | 2025-01-23 | 390扩展，Omnigres支持，Mooncake，Citus13与PG17支持       | [v3.2.2](https://github.com/pgsty/pigsty/releases/tag/v3.2.2)                             |
-| [v3.2.1](/docs/about/release#v321) | 2025-01-12 | 350扩展，Ivory4，Citus强化，Odoo模板                            | [v3.2.1](https://github.com/pgsty/pigsty/releases/tag/v3.2.1)                             |
+| 版本                                 |    发布时间    | 摘要                                                         | 地址                                                                                        |
+|:-----------------------------------|:----------:|------------------------------------------------------------|-------------------------------------------------------------------------------------------|
+| [v4.1.0](/docs/about/release#v410) | 2026-02-12 | 操作系统与数据库小版本更新，Agent Native CLI，批量 Bug 修复                   | [v4.1.0](https://github.com/pgsty/pigsty/releases/tag/v4.1.0)                             |
+| [v4.0.0](/docs/about/release#v400) | 2026-01-28 | Victoria 可观测性，安全加固，JUICE/VIBE 模块，Apache-2.0                | [v4.0.0](https://github.com/pgsty/pigsty/releases/tag/v4.0.0)                             |
+| [v3.7.0](/docs/about/release#v370) | 2025-12-02 | PG18 成为默认，437 扩展，EL10/Debian13，PGEXT.CLOUD                 | [v3.7.0](https://github.com/pgsty/pigsty/releases/tag/v3.7.0)                             |
+| [v3.6.1](/docs/about/release#v361) | 2025-08-15 | 例行 PG 小版本更新，PGDG 中国区域镜像                                    | [v3.6.1](https://github.com/pgsty/pigsty/releases/tag/v3.6.1)                             |
+| [v3.6.0](/docs/about/release#v360) | 2025-07-30 | pgactive，MinIO/ETCD 改进，安装简化，配置梳理                           | [v3.6.0](https://github.com/pgsty/pigsty/releases/tag/v3.6.0)                             |
+| [v3.5.0](/docs/about/release#v350) | 2025-06-16 | PG18 Beta，421 扩展，监控升级，代码重构                                 | [v3.5.0](https://github.com/pgsty/pigsty/releases/tag/v3.5.0)                             |
+| [v3.4.1](/docs/about/release#v341) | 2025-04-05 | OpenHalo，OrioleDB，MySQL兼容性，pgAdmin改进                       | [v3.4.1](https://github.com/pgsty/pigsty/releases/tag/v3.4.1)                             |
+| [v3.4.0](/docs/about/release#v340) | 2025-03-30 | 备份增强，自动Certbot证书，Ivory跨平台，AGE扩展                            | [v3.4.0](https://github.com/pgsty/pigsty/releases/tag/v3.4.0)                             |
+| [v3.3.0](/docs/about/release#v330) | 2025-02-24 | 404扩展，Odoo/Dify/Supabase应用模板，DocumentDB支持                  | [v3.3.0](https://github.com/pgsty/pigsty/releases/tag/v3.3.0)                             |
+| [v3.2.2](/docs/about/release#v322) | 2025-01-23 | 390扩展，Omnigres支持，Mooncake，Citus13与PG17支持                   | [v3.2.2](https://github.com/pgsty/pigsty/releases/tag/v3.2.2)                             |
+| [v3.2.1](/docs/about/release#v321) | 2025-01-12 | 350扩展，Ivory4，Citus强化，Odoo模板                                | [v3.2.1](https://github.com/pgsty/pigsty/releases/tag/v3.2.1)                             |
 | [v3.2.0](/docs/about/release#v320) | 2024-12-24 | 扩展管理 CLI ，Grafana 强化，ARM64 扩展补完                            | [v3.2.0](https://github.com/pgsty/pigsty/releases/tag/v3.2.0)                             |
 | [v3.1.0](/docs/about/release#v310) | 2024-11-22 | PG 17 作为默认大版本，配置简化，Ubuntu 24 与 ARM 支持，MinIO 改进             | [v3.1.0](https://github.com/pgsty/pigsty/releases/tag/v3.1.0)                             |
 | [v3.0.4](/docs/about/release#v304) | 2024-10-30 | PG 17 扩展，OLAP 全家桶，pg_duckdb                                | [v3.0.4](https://github.com/pgsty/pigsty/releases/tag/v3.0.4)                             |
@@ -144,13 +145,13 @@ categories: [参考]
 | [v0.5.0](/docs/about/release#v050) | 2021-01-07 | 支持在配置中定义业务数据库/用户                                           | [v0.5.0](https://github.com/pgsty/pigsty/releases/tag/v0.5.0)                             |
 | [v0.4.0](/docs/about/release#v040) | 2020-12-14 | 支持 PostgreSQL 13，添加官方文档                                    | [v0.4.0](https://github.com/pgsty/pigsty/releases/tag/v0.4.0)                             |
 | [v0.3.0](/docs/about/release#v030) | 2020-10-22 | 虚拟机置备方案正式定稿                                                | [v0.3.0](https://github.com/pgsty/pigsty/releases/tag/v0.3.0)                             |
-| v0.2.0                              | 2020-07-10 | PG监控系统第六版正式发布                                              | [v0.2.0](https://github.com/pgsty/pigsty/commit/385e33a62a19817e8ba19997260e6b77d99fe2ba) |
-| v0.1.0                              | 2020-06-20 | 在生产仿真测试环境中验证通过                                             | [v0.1.0](https://github.com/Vonng/pigsty/commit/1cf2ea5ee91db071de00ec805032928ff582453b) |
-| v0.0.5                              | 2020-08-19 | 离线安装模式：无需互联网访问即可交付                                         | [v0.0.5](https://github.com/Vonng/pigsty/commit/0fe9e829b298fe5e56307de3f78c95071de28245) |
-| v0.0.4                              | 2020-07-27 | 将 Ansible 剧本重构为 Role Refactor playbooks into ansible roles | [v0.0.4](https://github.com/Vonng/pigsty/commit/90b44259818d2c71e37df5250fe8ed1078a883d0) |
-| v0.0.3                              | 2020-06-22 | 接口设计改进                                                     | [v0.0.3](https://github.com/Vonng/pigsty/commit/4c5c68ccd57bc32a9e9c98aa3f264aa19f45c7ee) |
-| v0.0.2                              | 2020-04-30 | 首次提交                                                       | [v0.0.2](https://github.com/Vonng/pigsty/commit/dd646775624ddb33aef7884f4f030682bdc371f8) |
-| v0.0.1                              | 2019-05-15 | 概念原型                                                       | [v0.0.1](https://github.com/Vonng/pg/commit/fa2ade31f8e81093eeba9d966c20120054f0646b)     |
+| v0.2.0                             | 2020-07-10 | PG监控系统第六版正式发布                                              | [v0.2.0](https://github.com/pgsty/pigsty/commit/385e33a62a19817e8ba19997260e6b77d99fe2ba) |
+| v0.1.0                             | 2020-06-20 | 在生产仿真测试环境中验证通过                                             | [v0.1.0](https://github.com/Vonng/pigsty/commit/1cf2ea5ee91db071de00ec805032928ff582453b) |
+| v0.0.5                             | 2020-08-19 | 离线安装模式：无需互联网访问即可交付                                         | [v0.0.5](https://github.com/Vonng/pigsty/commit/0fe9e829b298fe5e56307de3f78c95071de28245) |
+| v0.0.4                             | 2020-07-27 | 将 Ansible 剧本重构为 Role Refactor playbooks into ansible roles | [v0.0.4](https://github.com/Vonng/pigsty/commit/90b44259818d2c71e37df5250fe8ed1078a883d0) |
+| v0.0.3                             | 2020-06-22 | 接口设计改进                                                     | [v0.0.3](https://github.com/Vonng/pigsty/commit/4c5c68ccd57bc32a9e9c98aa3f264aa19f45c7ee) |
+| v0.0.2                             | 2020-04-30 | 首次提交                                                       | [v0.0.2](https://github.com/Vonng/pigsty/commit/dd646775624ddb33aef7884f4f030682bdc371f8) |
+| v0.0.1                             | 2019-05-15 | 概念原型                                                       | [v0.0.1](https://github.com/Vonng/pg/commit/fa2ade31f8e81093eeba9d966c20120054f0646b)     |
 {.full-width}
 
 
@@ -158,43 +159,43 @@ categories: [参考]
 
 ## 会议与演讲
 
-| 日期         | 类型   | 活动                                   | 主题                                                             |
-|------------|------|--------------------------------------|----------------------------------------------------------------|
-| 2025-11-29 | 获奖&演讲 | 第八届 PostgreSQL 生态大会（杭州）              | PostgreSQL Magneto Award，世界级 Postgres 元发行版                     |
-| 2025-05-16 | 闪电演讲 | PGConf.Dev 2025（蒙特利尔）               | Extension Delivery: 让您的 PGEXT 触达用户                            |
-| 2025-05-12 | 主题演讲 | PGEXT.DAY, PGCon.Dev 2025            | PostgreSQL 生态中缺失的包管理器与扩展仓库                                    |
-| 2025-04-19 | 实战工坊 | PostgreSQL 数据库技术峰会                  | 使用 Pigsty 部署 PG 生态伙伴：Dify, Odoo, Supabase                      |
-| 2025-04-11 | 直播主持 | OSCHINA 数智Talk                       | 刷屏的 MCP 是炒作还是革命？                                              |
-| 2025-01-15 | 直播分享 | 开源老将与新秀第四期                           | PostgreSQL 扩展吞噬数据库世界？PG包管理器 pig 与自建 RDS Pigsty                 |
-| 2025-01-09 | 颁奖典礼 | OSCHINA 2024 年度杰出贡献专家               | 年度杰出贡献专家                                                       |
-| 2025-01-06 | 圆桌论坛 | 中国 PostgreSQL 数据库生态大会               | PostgreSQL 扩展正在吞噬数据库世界                                         |
-| 2024-11-23 | 播客   | 技术乱炖 Podcast                         | 来自 Linux 基金会：为什么最近都在关注"卡脖子"？                                  |
-| 2024-08-21 | 媒体专访 | 蓝色科技浪潮                               | Pigsty 作者冯若航专访：简化PG管理，推动中国开源社区                                |
-| 2024-08-15 | 技术大会 | GOTC 全球开源技术峰会                        | PostgreSQL AI/ML/RAG 扩展生态与最佳实践                                 |
-| 2024-07-12 | 主题演讲 | 第十三届 PG 中国技术大会                       | 数据库世界的未来：扩展，服务，与 Postgres                                     |
-| 2024-05-31 | 非正式会议 | PGCon.Dev 2024 全球 PG 开发者大会 Unconference | 内置 Prometheus 指标导出器                                            |
-| 2024-05-28 | 专题研讨 | PGCon.Dev 2024 全球 PG 开发者大会 扩展峰会      | Extension in Core & Binary Packing                              |
-| 2024-05-10 | 直播辩论 | 三人行·云计算泥石流系列 第三期                     | 公有云是骗局吗？                                                       |
-| 2024-04-17 | 直播辩论 | 三人行·云计算泥石流系列 第二期                     | 云数据库是智商税吗？                                                     |
-| 2024-04-16 | 圆桌论坛 | Cloudflare Immerse 深圳                | 赛博菩萨圆桌论坛                                                       |
-| 2024-04-12 | 技术大会 | 2024 数据技术嘉年华                         | Pigsty：解决 PostgreSQL 运维难题                                      |
-| 2024-03-31 | 直播辩论 | 三人行·云计算泥石流系列 第一期                     | 罗永浩卖云，我们却在下云？                                                  |
-| 2024-01-24 | 直播主持 | OSCHINA 开源漫谈 第九期                     | DBA 会被云干掉吗？                                                    |
-| 2023-12-20 | 直播辩论 | 开源漫谈第七期                              | 上云 or 下云，割韭菜还是降本增效？                                            |
-| 2023-11-24 | 技术大会 | 大模型时代的向量数据库            | 圆桌讨论：大模型时代向量数据库新未来                                    |
-| 2023-09-08 | 人物专访 | 墨天轮风云人物访谈              | 冯若航：不想当段子手的技术狂，不是一位好的开源创始人                            |
-| 2023-08-16 | 技术大会 | DTCC 2023              | DBA之夜：PostgreSQL vs MySQL的开源协议问题                      |
-| 2023-08-09 | 直播辩论 | 开源漫谈第一期                | MySQL vs PostgreSQL，谁是世界第一？                           |
-| 2023-07-01 | 技术大会 | SACC 2023              | 专题研讨会8：FinOps实践：云成本管理与优化                              |
-| 2023-05-12 | 线下活动 | PostgreSQL中国社区 温州站线下沙龙 | PG With DB4AI: 向量数据库 PGVECTOR & AI4DB: 数据库自动驾驶 Pigsty |
-| 2023-04-08 | 技术大会 | 数据库嘉年华 2023            | 更好的开源RDS替代：Pigsty                                     |
-| 2023-04-01 | 技术大会 | PostgreSQL中国社区 西安站线下沙龙 | PG高可用与容灾最佳实践                                          |
-| 2023-03-23 | 公开直播 | Bytebase x Pigsty      | 管理 PostgreSQL 的最佳实践: Bytebase x Pigsty                |
-| 2023-03-04 | 技术大会 | PostgreSQL中国技术大会       | 炮打 RDS，Pigsty v2.0 发布                                 |
-| 2023-02-01 | 技术大会 | DTCC 2022              | 开源 RDS 替代：开箱即用、自动驾驶的数据库发行版 Pigsty                     |
-| 2022-07-21 | 直播辩论 | 云吞噬开源，那开源有机会反击吗？       | 云吞噬开源，那开源有机会反击吗？                                      |
-| 2022-07-04 | 人物专访 | 专题采访：创造者说              | 90 后，辞职创业，说要卷死云数据库                                    |
-| 2022-06-28 | 公开直播 | 贝斯的圆桌趴 ｜DBA 福音 -       | SQL 审核最佳实践                                            |
-| 2022-06-12 | 公开路演 | 奇绩创坛 S22 路演日           | 好用省钱的数据库发行版 Pigsty                                    |
-| 2022-06-05 | 视频直播 | PG中文社区直播分享             | Pigstyv1.5快速上手新特性介绍与生产集群搭建                            |
+| 日期         | 类型    | 活动                                      | 主题                                                    |
+|------------|-------|-----------------------------------------|-------------------------------------------------------|
+| 2025-11-29 | 获奖&演讲 | 第八届 PostgreSQL 生态大会（杭州）                 | PostgreSQL Magneto Award，世界级 Postgres 元发行版            |
+| 2025-05-16 | 闪电演讲  | PGConf.Dev 2025（蒙特利尔）                   | Extension Delivery: 让您的 PGEXT 触达用户                    |
+| 2025-05-12 | 主题演讲  | PGEXT.DAY, PGCon.Dev 2025               | PostgreSQL 生态中缺失的包管理器与扩展仓库                            |
+| 2025-04-19 | 实战工坊  | PostgreSQL 数据库技术峰会                      | 使用 Pigsty 部署 PG 生态伙伴：Dify, Odoo, Supabase             |
+| 2025-04-11 | 直播主持  | OSCHINA 数智Talk                          | 刷屏的 MCP 是炒作还是革命？                                      |
+| 2025-01-15 | 直播分享  | 开源老将与新秀第四期                              | PostgreSQL 扩展吞噬数据库世界？PG包管理器 pig 与自建 RDS Pigsty        |
+| 2025-01-09 | 颁奖典礼  | OSCHINA 2024 年度杰出贡献专家                   | 年度杰出贡献专家                                              |
+| 2025-01-06 | 圆桌论坛  | 中国 PostgreSQL 数据库生态大会                   | PostgreSQL 扩展正在吞噬数据库世界                                |
+| 2024-11-23 | 播客    | 技术乱炖 Podcast                            | 来自 Linux 基金会：为什么最近都在关注"卡脖子"？                          |
+| 2024-08-21 | 媒体专访  | 蓝色科技浪潮                                  | Pigsty 作者冯若航专访：简化PG管理，推动中国开源社区                        |
+| 2024-08-15 | 技术大会  | GOTC 全球开源技术峰会                           | PostgreSQL AI/ML/RAG 扩展生态与最佳实践                        |
+| 2024-07-12 | 主题演讲  | 第十三届 PG 中国技术大会                          | 数据库世界的未来：扩展，服务，与 Postgres                             |
+| 2024-05-31 | 非正式会议 | PGCon.Dev 2024 全球 PG 开发者大会 Unconference | 内置 Prometheus 指标导出器                                   |
+| 2024-05-28 | 专题研讨  | PGCon.Dev 2024 全球 PG 开发者大会 扩展峰会         | Extension in Core & Binary Packing                    |
+| 2024-05-10 | 直播辩论  | 三人行·云计算泥石流系列 第三期                        | 公有云是骗局吗？                                              |
+| 2024-04-17 | 直播辩论  | 三人行·云计算泥石流系列 第二期                        | 云数据库是智商税吗？                                            |
+| 2024-04-16 | 圆桌论坛  | Cloudflare Immerse 深圳                   | 赛博菩萨圆桌论坛                                              |
+| 2024-04-12 | 技术大会  | 2024 数据技术嘉年华                            | Pigsty：解决 PostgreSQL 运维难题                             |
+| 2024-03-31 | 直播辩论  | 三人行·云计算泥石流系列 第一期                        | 罗永浩卖云，我们却在下云？                                         |
+| 2024-01-24 | 直播主持  | OSCHINA 开源漫谈 第九期                        | DBA 会被云干掉吗？                                           |
+| 2023-12-20 | 直播辩论  | 开源漫谈第七期                                 | 上云 or 下云，割韭菜还是降本增效？                                   |
+| 2023-11-24 | 技术大会  | 大模型时代的向量数据库                             | 圆桌讨论：大模型时代向量数据库新未来                                    |
+| 2023-09-08 | 人物专访  | 墨天轮风云人物访谈                               | 冯若航：不想当段子手的技术狂，不是一位好的开源创始人                            |
+| 2023-08-16 | 技术大会  | DTCC 2023                               | DBA之夜：PostgreSQL vs MySQL的开源协议问题                      |
+| 2023-08-09 | 直播辩论  | 开源漫谈第一期                                 | MySQL vs PostgreSQL，谁是世界第一？                           |
+| 2023-07-01 | 技术大会  | SACC 2023                               | 专题研讨会8：FinOps实践：云成本管理与优化                              |
+| 2023-05-12 | 线下活动  | PostgreSQL中国社区 温州站线下沙龙                  | PG With DB4AI: 向量数据库 PGVECTOR & AI4DB: 数据库自动驾驶 Pigsty |
+| 2023-04-08 | 技术大会  | 数据库嘉年华 2023                             | 更好的开源RDS替代：Pigsty                                     |
+| 2023-04-01 | 技术大会  | PostgreSQL中国社区 西安站线下沙龙                  | PG高可用与容灾最佳实践                                          |
+| 2023-03-23 | 公开直播  | Bytebase x Pigsty                       | 管理 PostgreSQL 的最佳实践: Bytebase x Pigsty                |
+| 2023-03-04 | 技术大会  | PostgreSQL中国技术大会                        | 炮打 RDS，Pigsty v2.0 发布                                 |
+| 2023-02-01 | 技术大会  | DTCC 2022                               | 开源 RDS 替代：开箱即用、自动驾驶的数据库发行版 Pigsty                     |
+| 2022-07-21 | 直播辩论  | 云吞噬开源，那开源有机会反击吗？                        | 云吞噬开源，那开源有机会反击吗？                                      |
+| 2022-07-04 | 人物专访  | 专题采访：创造者说                               | 90 后，辞职创业，说要卷死云数据库                                    |
+| 2022-06-28 | 公开直播  | 贝斯的圆桌趴 ｜DBA 福音 -                        | SQL 审核最佳实践                                            |
+| 2022-06-12 | 公开路演  | 奇绩创坛 S22 路演日                            | 好用省钱的数据库发行版 Pigsty                                    |
+| 2022-06-05 | 视频直播  | PG中文社区直播分享                              | Pigstyv1.5快速上手新特性介绍与生产集群搭建                            |
 {.full-width}
