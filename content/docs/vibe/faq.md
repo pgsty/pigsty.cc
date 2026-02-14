@@ -75,7 +75,15 @@ nginx -t
 
 ### CLI 找不到命令
 
-VIBE 仅写配置，不安装 CLI：
+先检查 `nodejs_pkg` 是否完成（默认会安装 `@anthropic-ai/claude-code`）：
+
+```bash
+which claude
+npm list -g --depth=0 | grep '@anthropic-ai/claude-code'
+./vibe.yml -l <host> -t nodejs_pkg
+```
+
+如果你禁用了 `nodejs_enabled` 或覆盖了 `npm_packages`，可手工安装：
 
 ```bash
 npm install -g @anthropic-ai/claude-code
@@ -120,4 +128,3 @@ source /data/venv/bin/activate
 pip install jupyterlab-git
 systemctl restart jupyter
 ```
-

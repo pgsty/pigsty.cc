@@ -56,7 +56,8 @@ vibe
 说明：
 
 - `jupyter_install` 使用 `uv pip`，不会创建 venv
-- `claude_config` 仅写入 `~/.claude` 配置，不安装 CLI
+- `claude_config` 仅写入 `~/.claude` 配置
+- Claude CLI 默认由 `nodejs_pkg` 按 `npm_packages` 安装（默认包含 `@anthropic-ai/claude-code`）
 
 --------
 

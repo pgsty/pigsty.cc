@@ -16,12 +16,14 @@ VIBE 模块支持按需启用组件，并通过统一的工作目录和 Nginx �
 | 组件 | 启用参数 | 默认状态 | 说明 |
 |:-----|:---------|:--------:|:-----|
 | Code-Server | `code_enabled` | 启用 | 浏览器 VS Code |
-| JupyterLab | `jupyter_enabled` | 启用 | Notebook/终端/编辑器 |
+| JupyterLab | `jupyter_enabled` | 禁用 | Notebook/终端/编辑器 |
 | Node.js | `nodejs_enabled` | 启用 | Node.js 运行时与 npm |
 | Claude Code | `claude_enabled` | 启用 | CLI 配置与可观测性 |
 {.full-width}
 
-配置通常位于实例级别：
+说明：模块默认 `jupyter_enabled: false`，但 `conf/vibe.yml` 预置模板会显式设置为 `true`。
+
+配置通常位于集群 `vars`，也可以在实例级别覆盖：
 
 ```yaml
 all:
@@ -109,25 +111,29 @@ nodejs_enabled: true
 nodejs_registry: ''
 npm_packages:
   - '@anthropic-ai/claude-code'
-  - pnpm
+  - happy-coder
 ```
 
 说明：
 
 - `nodejs_registry` 为空时，`region=china` 会自动使用 `https://registry.npmmirror.com`
 - `npm_packages` 通过 `npm install -g` 安装，全局可用
+- 默认会安装 `@anthropic-ai/claude-code`，因此通常无需手工安装 Claude CLI
 
 --------
 
 ## Claude Code 配置
 
-Claude Code 仅进行**配置**，CLI 需要通过 `npm_packages` 或手动安装。
+`claude` 子任务仅进行**配置写入**（`claude_config`）。
+Claude CLI 在默认情况下由 `nodejs` 子任务通过 `npm_packages` 安装（包含 `@anthropic-ai/claude-code`）。
 
 ```yaml
 claude_enabled: true
 claude_env:
   ANTHROPIC_API_KEY: sk-ant-xxx
 ```
+
+如果你禁用了 `nodejs_enabled` 或清空了 `npm_packages`，则需要手工安装 Claude CLI。
 
 生成的文件：
 

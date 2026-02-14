@@ -122,10 +122,12 @@ systemctl restart jupyter
 
 ## Claude Code
 
-VIBE 仅写入配置，不安装 CLI。推荐：
+`claude_config` 子任务仅写入配置文件。
+Claude CLI 默认由 `nodejs_pkg` 根据 `npm_packages` 全局安装（默认包含 `@anthropic-ai/claude-code`）。
 
 ```bash
-npm install -g @anthropic-ai/claude-code
+which claude
+claude --version
 ```
 
 配置文件：
@@ -137,6 +139,14 @@ npm install -g @anthropic-ai/claude-code
 
 ```bash
 ./vibe.yml -l <host> -t claude_config
+```
+
+重装/补装 Claude CLI：
+
+```bash
+./vibe.yml -l <host> -t nodejs_pkg
+# 或手工安装
+npm install -g @anthropic-ai/claude-code
 ```
 
 如果需要配置到其他用户，请使用对应的远程登录用户执行或手动拷贝配置文件。

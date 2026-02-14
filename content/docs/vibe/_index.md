@@ -31,6 +31,7 @@ VIBE 依赖 [`NODE`](/docs/node) 与 [`INFRA`](/docs/infra)：
 
 - Code-Server 仅监听 `127.0.0.1:8443`，通过 Nginx 暴露
 - JupyterLab 监听 `0.0.0.0:8888`，默认基路径为 `/jupyter/`
+- 模块默认 `jupyter_enabled: false`，而 `conf/vibe.yml` 模板会显式开启 Jupyter
 
 --------
 

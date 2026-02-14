@@ -21,22 +21,22 @@ VIBE 模块共有 **16** 个参数，分为：
 
 | 参数 | 类型 | 级别 | 默认值 | 说明 |
 |:-----|:----:|:----:|:------|:-----|
-| [`vibe_data`](#vibe_data) | `path` | `I` | `/fs` | 工作目录 |
-| [`code_enabled`](#code_enabled) | `bool` | `I` | `true` | 启用 Code-Server |
-| [`code_port`](#code_port) | `port` | `I` | `8443` | Code-Server 端口 |
-| [`code_data`](#code_data) | `path` | `I` | `/data/code` | Code-Server 数据目录 |
-| [`code_password`](#code_password) | `string` | `I` | `Vibe.Coding` | Code-Server 密码 |
-| [`code_gallery`](#code_gallery) | `enum` | `I` | `openvsx` | 扩展市场 |
-| [`jupyter_enabled`](#jupyter_enabled) | `bool` | `I` | `true` | 启用 JupyterLab |
-| [`jupyter_port`](#jupyter_port) | `port` | `I` | `8888` | JupyterLab 端口 |
-| [`jupyter_data`](#jupyter_data) | `path` | `I` | `/data/jupyter` | JupyterLab 数据目录 |
-| [`jupyter_password`](#jupyter_password) | `string` | `I` | `Vibe.Coding` | JupyterLab Token |
-| [`jupyter_venv`](#jupyter_venv) | `path` | `I` | `/data/venv` | Python venv 路径 |
-| [`nodejs_enabled`](#nodejs_enabled) | `bool` | `I` | `true` | 启用 Node.js |
-| [`nodejs_registry`](#nodejs_registry) | `url` | `I` | `''` | npm 镜像地址 |
-| [`npm_packages`](#npm_packages) | `string[]` | `I` | `[]` | 全局 npm 包 |
-| [`claude_enabled`](#claude_enabled) | `bool` | `I` | `true` | 启用 Claude 配置 |
-| [`claude_env`](#claude_env) | `dict` | `I` | `{}` | Claude 环境变量 |
+| [`vibe_data`](#vibe_data) | `path` | `C` | `/fs` | 工作目录 |
+| [`code_enabled`](#code_enabled) | `bool` | `C` | `true` | 启用 Code-Server |
+| [`code_port`](#code_port) | `port` | `C` | `8443` | Code-Server 端口 |
+| [`code_data`](#code_data) | `path` | `C` | `/data/code` | Code-Server 数据目录 |
+| [`code_password`](#code_password) | `string` | `C` | `Vibe.Coding` | Code-Server 密码 |
+| [`code_gallery`](#code_gallery) | `enum` | `C` | `openvsx` | 扩展市场 |
+| [`jupyter_enabled`](#jupyter_enabled) | `bool` | `C` | `false` | 启用 JupyterLab |
+| [`jupyter_port`](#jupyter_port) | `port` | `C` | `8888` | JupyterLab 端口 |
+| [`jupyter_data`](#jupyter_data) | `path` | `C` | `/data/jupyter` | JupyterLab 数据目录 |
+| [`jupyter_password`](#jupyter_password) | `string` | `C` | `Vibe.Coding` | JupyterLab Token |
+| [`jupyter_venv`](#jupyter_venv) | `path` | `C` | `/data/venv` | Python venv 路径 |
+| [`nodejs_enabled`](#nodejs_enabled) | `bool` | `C` | `true` | 启用 Node.js |
+| [`nodejs_registry`](#nodejs_registry) | `url` | `C` | `''` | npm 镜像地址 |
+| [`npm_packages`](#npm_packages) | `string[]` | `C` | `['@anthropic-ai/claude-code','happy-coder']` | 全局 npm 包 |
+| [`claude_enabled`](#claude_enabled) | `bool` | `C` | `true` | 启用 Claude 配置 |
+| [`claude_env`](#claude_env) | `dict` | `C` | `{}` | Claude 环境变量 |
 {.full-width}
 
 --------
@@ -54,7 +54,7 @@ code_data: /data/code
 code_password: Vibe.Coding
 code_gallery: 'openvsx'
 
-jupyter_enabled: true
+jupyter_enabled: false
 jupyter_port: 8888
 jupyter_data: /data/jupyter
 jupyter_password: Vibe.Coding
@@ -62,7 +62,7 @@ jupyter_venv: /data/venv
 
 nodejs_enabled: true
 nodejs_registry: ''
-npm_packages: []
+npm_packages: [ '@anthropic-ai/claude-code' , 'happy-coder' ]
 
 claude_enabled: true
 claude_env: {}
@@ -108,6 +108,7 @@ claude_env: {}
 ### `jupyter_enabled`
 
 是否启用 JupyterLab。
+模块默认值为 `false`，`conf/vibe.yml` 中会显式改为 `true` 以启用完整沙箱。
 
 ### `jupyter_port`
 
@@ -140,6 +141,7 @@ npm 镜像地址，`region=china` 且为空时自动使用 `https://registry.npm
 ### `npm_packages`
 
 全局安装的 npm 包列表，对应标签 `nodejs_pkg`。
+默认包含 `@anthropic-ai/claude-code` 与 `happy-coder`。
 
 --------
 
@@ -147,7 +149,8 @@ npm 镜像地址，`region=china` 且为空时自动使用 `https://registry.npm
 
 ### `claude_enabled`
 
-启用 Claude Code 配置任务（仅生成配置，不安装 CLI）。
+启用 Claude Code 配置任务（`claude_config`）。
+Claude CLI 默认由 `nodejs_pkg` 根据 `npm_packages` 安装。
 
 ### `claude_env`
 
@@ -156,8 +159,8 @@ npm 镜像地址，`region=china` 且为空时自动使用 `https://registry.npm
 默认环境变量包括：
 
 - `CLAUDE_CODE_ENABLE_TELEMETRY=1`
+- `CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1`
 - `OTEL_METRICS_EXPORTER=otlp`
 - `OTEL_LOGS_EXPORTER=otlp`
 - `OTEL_EXPORTER_OTLP_METRICS_ENDPOINT=http://127.0.0.1:8428/opentelemetry/v1/metrics`
 - `OTEL_EXPORTER_OTLP_LOGS_ENDPOINT=http://127.0.0.1:9428/insert/opentelemetry/v1/logs`
-
