@@ -19,7 +19,7 @@ JUICE 模块参数共 **2** 项：
 | 参数 | 类型 | 级别 | 说明 |
 |:-----|:----:|:----:|:-----|
 | [`juice_cache`](#juice_cache) | `path` | `C` | JuiceFS 共享缓存目录 |
-| [`juice_instances`](#juice_instances) | `dict` | `I` | JuiceFS 实例定义字典（必选） |
+| [`juice_instances`](#juice_instances) | `dict` | `I` | JuiceFS 实例定义字典（可为空） |
 {.full-width}
 
 > **级别说明**：`C` 为集群级别，`I` 为实例级别。
@@ -28,7 +28,7 @@ JUICE 模块参数共 **2** 项：
 
 ## 默认参数
 
-参数定义于 [`roles/juice/defaults/main.yml`](https://github.com/pgsty/pigsty/blob/main/roles/juice/defaults/main.yml)：
+参数定义于 [`roles/juice/defaults/main.yml`](https://github.com/pgsty/pigsty/blob/v4.1.0/roles/juice/defaults/main.yml)：
 
 ```yaml
 #-----------------------------------------------------------------
@@ -57,8 +57,8 @@ juice_cache: /data/juice
 
 参数名称：`juice_instances`，类型：`dict`，级别：`I`
 
-JuiceFS 实例定义字典，**必须在实例级别定义**。
-Key 为文件系统名称，Value 为实例配置对象。
+JuiceFS 实例定义字典，通常在实例级别定义。
+默认值为空字典（表示不部署实例）；Key 为文件系统名称，Value 为实例配置对象。
 
 ```yaml
 juice_instances:
@@ -74,7 +74,7 @@ juice_instances:
 | 字段 | 必选 | 默认值 | 说明 |
 |:-----|:---:|:------|:-----|
 | `path`  | 是 | - | 挂载点路径 |
-| `meta`  | 是 | - | 元数据引擎 URL（PostgreSQL） |
+| `meta`  | 是 | - | 元数据引擎 URL（建议 PostgreSQL） |
 | `data`  | 否 | `''` | `juicefs format` 选项（仅首次创建生效） |
 | `unit`  | 否 | `juicefs-<name>` | systemd 服务名 |
 | `mount` | 否 | `''` | `juicefs mount` 额外参数 |

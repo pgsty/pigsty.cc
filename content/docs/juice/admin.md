@@ -43,13 +43,13 @@ categories: [任务]
 
 ## 重新配置
 
-修改配置后，建议执行以下命令：
+修改配置后，建议执行以下命令（更新配置并确保服务在线）：
 
 ```bash
 ./juice.yml -l <host> -t juice_config,juice_launch
 ```
 
-仅渲染配置文件而不重启：
+仅渲染配置文件而不触碰服务状态：
 
 ```bash
 ./juice.yml -l <host> -t juice_config
@@ -57,8 +57,9 @@ categories: [任务]
 
 说明：
 
+- `juice_config,juice_launch` 会确保服务处于 `started`，但不会强制重启已运行实例
 - `data` 仅在首次 `format` 时生效
-- 变更 `mount` 参数需重启服务后生效
+- 变更 `mount` 参数后，请手动重启对应服务（`systemctl restart juicefs-<name>`）
 
 -------------
 
@@ -188,6 +189,6 @@ juice_instances:
 
 常用关注指标：
 
-- `juicefs_blockcache_hits/misses`：缓存命中率
+- `juicefs_blockcache_hits/juicefs_blockcache_miss`：缓存命中率
 - `juicefs_object_request_durations_histogram_seconds`：对象存储延迟
-- `juicefs_meta_ops_durations_histogram_seconds`：元数据操作延迟
+- `juicefs_transaction_durations_histogram_seconds`：元数据事务延迟

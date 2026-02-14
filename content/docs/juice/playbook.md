@@ -13,7 +13,7 @@ JUICE 模块提供 `juice.yml` 剧本，用于部署与移除 JuiceFS 实例。
 
 ## `juice.yml`
 
-[`juice.yml`](https://github.com/pgsty/pigsty/blob/main/juice.yml) 的任务结构如下：
+[`juice.yml`](https://github.com/pgsty/pigsty/blob/v4.1.0/juice.yml) 的任务结构如下：
 
 ```bash
 juice_id        : 校验配置、检查端口冲突
@@ -73,10 +73,16 @@ juice_register  : 注册到 VictoriaMetrics 目标文件
 ./juice.yml -l <host> -t juice_config
 ```
 
-更新配置并重启服务：
+更新配置并确保服务在线（不强制重启）：
 
 ```bash
 ./juice.yml -l <host> -t juice_config,juice_launch
+```
+
+如需让新的挂载参数立即生效，请手动重启对应实例服务：
+
+```bash
+systemctl restart juicefs-<name>
 ```
 
 --------
@@ -119,4 +125,3 @@ juice_instances:
 ```bash
 ./juice.yml -l <host> -t juice_register
 ```
-

@@ -60,15 +60,15 @@ Grafana Dashboard
 | 指标 | 类型 | 说明 |
 |:-----|:----:|:-----|
 | `juicefs_blockcache_hits` | counter | 缓存命中次数 |
-| `juicefs_blockcache_misses` | counter | 缓存未命中次数 |
+| `juicefs_blockcache_miss` | counter | 缓存未命中次数 |
 {.full-width}
 
-### 元数据
+### 元数据事务
 
 | 指标 | 类型 | 说明 |
 |:-----|:----:|:-----|
-| `juicefs_meta_ops_durations_histogram_seconds` | histogram | 元数据操作延迟 |
-| `juicefs_transaction_restart` | counter | 事务重试次数 |
+| `juicefs_transaction_durations_histogram_seconds` | histogram | 元数据事务延迟（直方图） |
+| `juicefs_transaction_durations_histogram_seconds_count` | counter | 元数据事务请求计数 |
 {.full-width}
 
 --------
@@ -79,7 +79,7 @@ Grafana Dashboard
 
 ```promql
 rate(juicefs_blockcache_hits[5m]) /
-(rate(juicefs_blockcache_hits[5m]) + rate(juicefs_blockcache_misses[5m]))
+(rate(juicefs_blockcache_hits[5m]) + rate(juicefs_blockcache_miss[5m]))
 ```
 
 对象存储 P99 延迟：
@@ -87,4 +87,3 @@ rate(juicefs_blockcache_hits[5m]) /
 ```promql
 histogram_quantile(0.99, rate(juicefs_object_request_durations_histogram_seconds_bucket[5m]))
 ```
-

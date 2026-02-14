@@ -65,7 +65,7 @@ juice_instances:
 - `--storage postgres`：数据存于 PostgreSQL `pg_largeobject`
 - `--storage minio/s3`：数据存于对象存储 bucket
 
-元数据始终存储在 `meta` 指定的 PostgreSQL 中。
+元数据存储在 `meta` 指定的元数据引擎中（Pigsty 生产场景通常使用 PostgreSQL）。
 
 --------
 
@@ -90,9 +90,9 @@ juice_instances:
 
 ## 如何修改挂载参数？
 
-在实例中调整 `mount`，然后重启服务：
+在实例中调整 `mount` 后，先刷新配置，再手动重启服务：
 
 ```bash
 ./juice.yml -l <host> -t juice_config,juice_launch
+systemctl restart juicefs-<name>
 ```
-
