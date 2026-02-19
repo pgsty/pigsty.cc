@@ -311,7 +311,7 @@ pig ext link pg18             # 创建 /usr/pgsql 软链接，并写入 /etc/pro
 如果你想要安装特定版本的软件，可以使用 `name=ver` 的语法：
 
 ```bash
-pig ext add -v 17 pgvector=0.7.2 # install pgvector 0.7.2 for PG 17
+pig ext add -v 18 pgvector=0.7.2 # install pgvector 0.7.2 for PG 18
 pig ext add pg16=16.5            # install PostgreSQL 16 with a specific minor version
 ```
 

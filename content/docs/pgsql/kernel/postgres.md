@@ -65,6 +65,7 @@ pg-meta:
 
 ```bash
 ./configure -c pgsql            # 默认就是 postgresql 18，无需显式指定
+./configure -c pgsql -v 18      # 显式指定 postgresql 18
 ./configure -c pgsql -v 17      # 使用 postgresql 17
 ./configure -c pgsql -v 16      # 使用 postgresql 16
 ./configure -c pgsql -v 15      # 使用 postgresql 15

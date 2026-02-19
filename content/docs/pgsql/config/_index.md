@@ -61,14 +61,14 @@ all:
         pg_users:
           - { name: dbuser_bi, password: DBUser.BI, roles: [dbrole_admin], pgbouncer: true }
   vars:
-    pg_version: 17
+    pg_version: 18
     pg_packages: [ pgsql-main pgsql-common ]
     pg_hba_rules:
       - { user: dbuser_bi, db: bi, addr: intra, auth: ssl, title: 'BI 只允许内网 SSL 访问' }
 ```
 
 - `pg-analytics` 集群包含一个主库和一个离线副本。
-- 全局指定 `pg_version: 17` 与一套扩展示例，并加载 `olap.yml` 调优。
+- 全局指定 `pg_version: 18` 与一套扩展示例，并加载 `olap.yml` 调优。
 - 在 `pg_databases` 与 `pg_users` 中声明业务对象，自动生成 schema/extension 与连接池条目。
 - 附加的 `pg_hba_rules` 限制了访问来源与认证方式。
 

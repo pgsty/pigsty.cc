@@ -30,7 +30,7 @@ all: { vars: { admin_ip: 10.10.10.10 } }
 {{% /tab %}}
 {{% tab header="中国特色" %}}
 ```yaml
-# 天朝自有国情在此，额外配置 region: chian 以使用国内的镜像源加速下载
+# 天朝自有国情在此，额外配置 region: china 以使用国内的镜像源加速下载
 all: { vars: { admin_ip: 10.10.10.10, region: china } }
 ```
 {{% /tab %}}
@@ -187,7 +187,7 @@ all:
 
 | ID | [NODE](/docs/node/) | [INFRA](/docs/infra/) | [**ETCD**](/docs/etcd/) | [PGSQL](/docs/pgsql/) | 说明                      |
 |:--:|:-------------------:|:---------------------:|:-----------------------:|:---------------------:|:------------------------|
-| 1  |    `10.10.10.10`    |       `infra-1`       |        `etcd-1`         |       `etcd-1`        | 添加 etcd 与 PostgreSQL 集群 |
+| 1  |    `10.10.10.10`    |       `infra-1`       |        `etcd-1`         |      `pg-meta-1`      | 添加 etcd 与 PostgreSQL 集群 |
 {.full-width}
 
 至此，我们用 [**`node.yml`**](/docs/node/playbook#nodeyml), [**`infra.yml`**](/docs/infra/playbook#infrayml), [**`etcd.yml`**](/docs/etcd/playbook#etcdyml) 和 [**`pgsql.yml`**](/docs/pgsql/playbook#pgsqlyml) 四个 [**剧本**](/docs/setup/playbook)，
@@ -233,7 +233,7 @@ bin/pgsql-db   pg-meta meta             # 确保 pg-meta 集群中有数据库 m
 
 ## 配置 PG 版本与扩展
 
-您可以安装 [**不同大版本**](/docs/pgsql/config/kernel) 的 PostgreSQL，以及多达 [**444**](https://pgext.cloud/list) 种 [**扩展插件**](/docs/pgsql/ext)。让我们卸载当前默认的 PG 18，并安装 PG 17：
+您可以安装 [**不同大版本**](/docs/pgsql/config/kernel) 的 PostgreSQL，以及多达 [**451**](https://pgext.cloud/list) 种 [**扩展插件**](/docs/pgsql/ext)。让我们卸载当前默认的 PG 18，并安装 PG 16：
 
 ```bash
 ./pgsql-rm.yml -l pg-meta   # 移除旧的 pg-meta 集群（因为它是 PG 18）
@@ -254,11 +254,13 @@ all:
       hosts: { 10.10.10.10: { pg_seq: 1, pg_role: primary } }
       vars:
         pg_cluster: pg-meta
-        pg_version: 17   # 指定 PG 版本为 17
+        pg_version: 16   # 指定 PG 版本为 16
         pg_extensions: [ timescaledb, postgis, pgvector ]      # 安装这些扩展
-        pg_lib: 'timescaledb,pg_stat_statements,auto_explain'  # 预加载这些扩展动态库
-        pg_databases: { { name: meta ,baseline: cmdb.sql ,comment: pigsty meta database ,schemas: [pigsty] ,extensions: [vector, postgis, timescaledb ] } }
-        pg_users: { { name: dbuser_meta ,password: DBUser.Meta ,pgbouncer: true ,roles: [dbrole_admin] ,comment: admin user } }
+        pg_libs: 'timescaledb, pg_stat_statements, auto_explain'  # 预加载这些扩展动态库
+        pg_databases:
+          - { name: meta ,baseline: cmdb.sql ,comment: pigsty meta database ,schemas: [pigsty] ,extensions: [vector, postgis, timescaledb ] }
+        pg_users:
+          - { name: dbuser_meta ,password: DBUser.Meta ,pgbouncer: true ,roles: [dbrole_admin] ,comment: admin user }
         
   vars:
     admin_ip: 10.10.10.10
@@ -269,7 +271,7 @@ all:
 
 
 ```bash
-./pgsql.yml -l pg-meta   # 安装 PG17 和扩展重新创建 pg-meta 集群
+./pgsql.yml -l pg-meta   # 安装 PG16 和扩展重新创建 pg-meta 集群
 ```
 
 
@@ -364,4 +366,3 @@ Pigsty 提供了可选的开源对象存储，S3 替代 —— [**MinIO**](/docs
 ```
 
 甚至，您还可以用 Pigsty 自建 **企业级质量的** [**Supabase**](/docs/app/supabase/)，使用外面的高可用 PostgreSQL 集群作为底座，将无状态的部分运行在容器之中。
-

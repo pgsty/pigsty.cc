@@ -1,51 +1,65 @@
 ---
-title: Registry：容器镜像仓库
+title: Registry：容器镜像缓存
 weight: 615
-description: 部署 Docker Registry 镜像服务，加速 Docker 镜像拉取，特别适合中国用户。
+description: 使用 Pigsty v4.1 部署 Docker Registry Pull-Through Cache 与可选 Web UI。
 module: [SOFTWARE]
 categories: [参考]
 ---
 
-[**Docker Registry**](https://docs.docker.com/registry/) 镜像服务用于缓存 Docker Hub 和其他镜像仓库的镜像。
+Pigsty v4.1 提供 `app/registry` 配置模板（`conf/app/registry.yml`），用于部署：
 
-特别适合中国用户或访问 Docker Hub 速度较慢的地区，显著减少镜像拉取时间。
+- Docker Registry 缓存服务（默认 `5000`）
+- 可选管理 UI（默认 `5080`）
 
 ## 快速开始
 
 ```bash
-cd ~/pigsty/app/registry
-make up     # 启动 Registry 镜像服务
+curl -fsSL https://repo.pigsty.cc/get | bash; cd ~/pigsty
+./bootstrap
+./configure -c app/registry
+vi pigsty.yml                 # 修改域名、证书与端口（如需）
+./deploy.yml
+./docker.yml
+./app.yml
 ```
 
-访问地址： http://registry.pigsty 或 http://10.10.10.10:5000
+默认入口：
 
-## 功能特性
+- Registry API：`http://<IP>:5000` 或 `http://d.pigsty`
+- Registry UI：`http://<IP>:5080` 或 `http://dui.pigsty`
 
-- **镜像缓存**：缓存 Docker Hub 和其他仓库的镜像
-- **Web 界面**：可选的镜像管理界面
-- **高性能**：本地缓存大幅提升拉取速度
-- **存储管理**：可配置的清理和管理策略
-- **健康检查**：内置健康检查端点
+镜像数据目录默认为 `/data/registry`。
 
-## 配置 Docker
+## Docker 客户端配置
 
-配置 Docker 使用本地镜像：
+如果你使用 HTTP（无 TLS），Docker 需要显式信任该仓库：
+
+```json
+{
+  "registry-mirrors": ["http://d.pigsty"],
+  "insecure-registries": ["d.pigsty:5000"]
+}
+```
+
+修改 `/etc/docker/daemon.json` 后重启 Docker：
 
 ```bash
-# 编辑 /etc/docker/daemon.json
-{
-  "registry-mirrors": ["http://10.10.10.10:5000"]
-}
-
-# 重启 Docker
 systemctl restart docker
 ```
 
-## 存储管理
+## 运维命令
 
-镜像数据存储在 `/data/registry` 目录，建议预留至少 100GB 空间。
+`app/registry/Makefile` 默认在 `/opt/registry` 工作：
 
-## 相关链接
+```bash
+cd /opt/registry
+make up
+make status
+make health
+make log
+```
+
+## 参考
 
 - Docker Registry 文档： https://docs.docker.com/registry/
-- GitHub 仓库： https://github.com/distribution/distribution
+- Pigsty 模板： https://github.com/pgsty/pigsty/blob/main/conf/app/registry.yml

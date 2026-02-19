@@ -31,7 +31,7 @@ categories: [参考]
 如需指定特定 PostgreSQL 版本：
 
 ```bash
-./configure -c fat -v 17   # 使用 PostgreSQL 17
+./configure -c fat -v 16   # 使用 PostgreSQL 16
 ```
 
 
@@ -81,4 +81,3 @@ categories: [参考]
 - 构建本地软件源需要较长时间
 - 部分扩展在 ARM64 架构不可用
 - 默认密码为示例密码，生产环境务必修改
-

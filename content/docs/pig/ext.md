@@ -13,9 +13,9 @@ categories: [参考]
 pig ext - Manage PostgreSQL Extensions
 
   pig repo add -ru             # add all repo and update cache (brute but effective)
-  pig ext add pg17             # install optional postgresql 17 package
+  pig ext add pg18             # install optional postgresql 18 package
   pig ext list duck            # search extension in catalog
-  pig ext scan -v 17           # scan installed extension for pg 17
+  pig ext scan -v 18           # scan installed extension for pg 18
   pig ext add pg_duckdb        # install certain postgresql extension
 
 Examples:
@@ -96,7 +96,7 @@ pig ext install pg18          # 安装 PostgreSQL 18 内核（除 devel 包）
 ```bash
 pig ext list                     # 列出所有扩展
 pig ext list duck                # 搜索包含 "duck" 的扩展
-pig ext list -v 17               # 按 PG 版本筛选
+pig ext list -v 18               # 按 PG 版本筛选
 pig ext ls olap                  # 列出 olap 类别扩展
 pig ext ls gis -v 16             # 列出 PG 16 的 GIS 类扩展
 pig ext ls rag                   # 列出 RAG 类别扩展
@@ -178,17 +178,17 @@ pig ext scan [-v version]
 
 ```bash
 pig ext add pg_duckdb            # 安装 pg_duckdb
-pig ext add pg_duckdb -v 17      # 为 PG 17 安装
+pig ext add pg_duckdb -v 18      # 为 PG 18 安装
 pig ext add pg_duckdb -y         # 自动确认安装
 pig ext add vector postgis       # 安装多个扩展
 
 # 使用别名
 pig install pg_duckdb
-pig install pg_duckdb -v 17 -y
+pig install pg_duckdb -v 18 -y
 
 # 安装 PostgreSQL 内核
 pig ext install pgsql            # 安装最新版 postgresql 内核
-pig ext a pg17                   # 安装 postgresql 17 内核包
+pig ext a pg18                   # 安装 postgresql 18 内核包
 pig ext ins pg16                 # 安装 postgresql 16 内核包
 pig ext install pg15-core        # 安装 postgresql 15 核心包
 pig ext install pg14-main -y     # 安装 pg 14 + 常用扩展（vector, repack, wal2json）
@@ -206,7 +206,7 @@ pig ext install pg14-main -y     # 安装 pg 14 + 常用扩展（vector, repack,
 
 ```bash
 pig ext rm pg_duckdb             # 移除 pg_duckdb
-pig ext rm pg_duckdb -v 17       # 移除 PG 17 版本
+pig ext rm pg_duckdb -v 18       # 移除 PG 18 版本
 pig ext rm pgvector -y           # 自动确认移除
 ```
 
@@ -246,7 +246,7 @@ pig ext import -d /www/pigsty postgis # 指定路径导入
 
 ```bash
 pig ext link 18                  # 链接 PG 18 到 PATH
-pig ext link 17                  # 链接 PG 17 到 /usr/pgsql
+pig ext link 16                  # 链接 PG 16 到 /usr/pgsql
 pig ext link /usr/pgsql-16       # 从指定路径链接到 /usr/pgsql
 pig ext link null                # 取消当前 PostgreSQL 链接
 ```

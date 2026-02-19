@@ -1,55 +1,52 @@
 ---
-title: Mattermost：开源 IM
+title: Mattermost：开源团队协作
 weight: 595
-description: 使用 Mattermost 构建私有化的团队协作平台，开源的 Slack 替代方案。
+description: 使用 Pigsty v4.1 部署 Mattermost，并将状态托管到外部 PostgreSQL。
 module: [SOFTWARE]
 categories: [参考]
 ---
 
-[**Mattermost**](https://mattermost.com/) 是一个开源的团队协作和消息平台。
+[**Mattermost**](https://mattermost.com/) 是开源团队协作平台，可作为 Slack 的私有化替代方案。
 
-Mattermost 提供即时消息、文件共享、音视频通话等功能，是 Slack 和 Microsoft Teams 的开源替代方案，特别适合需要私有化部署的企业。
-
-
+Pigsty v4.1 提供 `app/mattermost` 配置模板（`conf/app/mattermost.yml`），默认将应用状态存放到外部 PostgreSQL，并将文件目录持久化到主机路径。
 
 ## 快速开始
 
 ```bash
-cd ~/pigsty/app/mattermost
-make up     # 使用 Docker Compose 启动 Mattermost
+curl -fsSL https://repo.pigsty.cc/get | bash; cd ~/pigsty
+./bootstrap
+./configure -c app/mattermost
+vi pigsty.yml                 # 修改密码、域名
+./deploy.yml
+./docker.yml
+./app.yml
 ```
 
-访问地址： http://mattermost.pigsty 或 http://10.10.10.10:8065
+默认访问地址：
 
-首次访问需要创建管理员账户。
+- `http://<IP>:8065`
+- `http://mm.pigsty`
 
+首次访问需要在 Web 页面初始化管理员账号。
 
+## 默认存储与连接
 
-## 功能特性
+模板默认配置：
 
-- **即时消息**：个人和群组聊天
-- **频道管理**：公开和私有频道
-- **文件共享**：安全的文件存储和共享
-- **音视频通话**：内置通话功能
-- **集成能力**：支持 Webhook、Bot、插件
-- **移动应用**：iOS 和 Android 客户端
-- **企业级**：SSO、LDAP、合规性功能
+- PostgreSQL 连接：`POSTGRES_URL=postgres://dbuser_mattermost:DBUser.Mattermost@<IP>:5432/mattermost?...`
+- 持久化目录：`/data/mattermost/{config,data,logs,plugins,client/plugins,bleve-indexes}`
 
-
-
-## 连接 PostgreSQL
-
-Mattermost 使用 PostgreSQL 存储数据，在配置中指定连接信息：
+## 运维命令
 
 ```bash
-MM_SQLSETTINGS_DRIVERNAME=postgres
-MM_SQLSETTINGS_DATASOURCE=postgres://dbuser_mm:DBUser.MM@10.10.10.10:5432/mattermost
+cd /opt/mattermost
+make up
+make restart
+make log
+make stop
 ```
 
+## 参考
 
-
-## 相关链接
-
-- Mattermost 官网： https://mattermost.com/
-- 官方文档： https://docs.mattermost.com/
-- GitHub 仓库： https://github.com/mattermost/mattermost
+- Mattermost 文档： https://docs.mattermost.com/
+- Pigsty 模板： https://github.com/pgsty/pigsty/blob/main/conf/app/mattermost.yml

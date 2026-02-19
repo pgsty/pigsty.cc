@@ -159,8 +159,8 @@ pig pg log cat | grep ERROR       # 在 shell 中过滤日志
 
 ```bash
 pig pg init                       # 使用默认设置初始化
-pig pg init -v 17                 # 指定 PostgreSQL 17
-pig pg init -D /data/pg17         # 指定数据目录
+pig pg init -v 18                 # 指定 PostgreSQL 18
+pig pg init -D /data/pg18         # 指定数据目录
 pig pg init -k                    # 启用数据校验和
 pig pg init -f                    # 强制初始化（删除已有数据）
 pig pg init -- --waldir=/wal      # 传递额外参数给 initdb
@@ -187,7 +187,7 @@ pig pg init -- --waldir=/wal      # 传递额外参数给 initdb
 pig pg start                      # 使用默认设置启动
 pig pg up                         # 别名
 pig pg boot                       # 别名
-pig pg start -D /data/pg17        # 指定数据目录
+pig pg start -D /data/pg18        # 指定数据目录
 pig pg start -l /pg/log/pg.log    # 重定向输出到日志文件
 pig pg start -o "-p 5433"         # 传递参数给 postgres
 pig pg start -y                   # 强制启动（跳过运行检查）
@@ -257,7 +257,7 @@ pig pg restart -o "-p 5433"       # 使用新选项重启
 ```bash
 pig pg reload                     # 重载配置
 pig pg hup                        # 别名
-pig pg reload -D /data/pg17       # 指定数据目录
+pig pg reload -D /data/pg18       # 指定数据目录
 ```
 
 
@@ -268,7 +268,7 @@ pig pg reload -D /data/pg17       # 指定数据目录
 ```bash
 pig pg status                     # 查看服务状态
 pig pg st                         # 别名
-pig pg status -D /data/pg17       # 指定数据目录
+pig pg status -D /data/pg18       # 指定数据目录
 ```
 
 **输出内容：**
@@ -291,7 +291,7 @@ pig pg status -D /data/pg17       # 指定数据目录
 ```bash
 pig pg promote                    # 提升备库
 pig pg pro                        # 别名
-pig pg promote -D /data/pg17      # 指定数据目录
+pig pg promote -D /data/pg18      # 指定数据目录
 ```
 
 **选项：**
@@ -310,7 +310,7 @@ pig pg promote -D /data/pg17      # 指定数据目录
 ```bash
 pig pg role                       # 输出：primary、replica 或 unknown
 pig pg role -V                    # 详细输出，显示检测过程
-pig pg role -D /data/pg17         # 指定数据目录
+pig pg role -D /data/pg18         # 指定数据目录
 ```
 
 **选项：**

@@ -128,7 +128,7 @@ Pigsty 提供了 [**`configure`**](https://github.com/pgsty/pigsty/blob/main/con
 ```bash
 ./configure -c ha/full -g       # 使用四节点沙箱环境模板
 ./configure -c ha/trio -g       # 使用三节点最小 HA 模板
-./configure -c ha/dual -g -v 17 # 使用两节点半高可用模板，使用 PG 17
+./configure -c ha/dual -g -v 18 # 使用两节点半高可用模板，使用 PG 18
 ./configure -c ha/simu -s       # 使用二十节点生产仿真模板，不检查 IP，不生成随机强密码
 ```
 

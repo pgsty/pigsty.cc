@@ -264,4 +264,3 @@ bin/redis-add  redis-ms     # 初始化 Redis 集群： redis-ms
 
 [**`PGSQL`**](/docs/pgsql/)、[**`INFRA`**](/docs/infra/)、[**`NODE`**](/docs/node/)、[**`ETCD`**](/docs/etcd/)、
 [**`MINIO`**](/docs/minio/)、[**`REDIS`**](/docs/redis/)、[**`FERRET`**](/docs/ferret/)、[**`DOCKER`**](/docs/docker/)……
-

@@ -2,44 +2,52 @@
 title: Kong：API 网关
 weight: 610
 date: 2022-05-21
-description: 拉起基于 Nginx 与 OpenResty 的强力开源 API 网关，并使用 PostgreSQL 与 Redis 作为其后端状态存储
+description: 使用 Pigsty Compose 模板部署 Kong（PostgreSQL 后端）。
 module: [SOFTWARE]
 categories: [参考]
 ---
 
+[Kong](https://konghq.com/) 是开源 API Gateway。
 
-![](/img/docs/app/kong.jpeg)
+Pigsty 的 `app/kong` 模板使用 PostgreSQL 作为配置存储，并自动执行一次迁移任务（`kong-migration`）。
 
-## TL;DR
-
-```bash
-cd app/kong ; docker-compose up -d
-```
+## 快速开始
 
 ```bash
-make up         # pull up kong with docker-compose
-make ui         # run swagger ui container
-make log        # tail -f kong logs
-make info       # introspect kong with jq
-make stop       # stop kong container
-make clean      # remove kong container
-make rmui       # remove swagger ui container
-make pull       # pull latest kong image
-make rmi        # remove kong image
-make save       # save kong image to /tmp/kong.tgz
-make load       # load kong image from /tmp
+cd ~/pigsty/app/kong
+vi .env         # 检查 KONG_PG_* 与端口配置
+make
 ```
 
+默认端口：
 
-## Scripts
+- Proxy HTTP：`8000`
+- Proxy HTTPS：`8443`
+- Admin API：`8001`
 
-* Default Port: 8000
-* Default SSL Port: 8443
-* Default Admin Port: 8001
-* Default Postgres Database: `postgres://dbuser_kong:DBUser.Kong@10.10.10.10:5432/kong`
+## 数据库准备
 
-```yaml
-# postgres://dbuser_kong:DBUser.Kong@10.10.10.10:5432/kong
-- { name: kong, owner: dbuser_kong, revokeconn: true , comment: kong the api gateway database }
-- { name: dbuser_kong, password: DBUser.Kong , pgbouncer: true , roles: [ dbrole_admin ] }
+```bash
+bin/pgsql-user pg-meta dbuser_kong
+bin/pgsql-db   pg-meta kong
 ```
+
+连接串示例：
+
+```bash
+postgres://dbuser_kong:DBUser.Kong@10.10.10.10:5432/kong
+```
+
+## 常用命令
+
+```bash
+make log
+make stop
+make clean
+make pull
+```
+
+## 参考
+
+- Kong 文档： https://docs.konghq.com/
+- Pigsty 模板： https://github.com/pgsty/pigsty/tree/main/app/kong

@@ -1,37 +1,65 @@
 ---
 title: 应用
 weight: 550
-description: 使用 Docker 拉起应用软件模板，使用 Pigsty Grafana & Echarts 工具箱进行数据分析与可视化
+description: 基于 Pigsty v4.1 的应用模板与数据应用说明：使用 Docker Compose 拉起无状态应用，并将状态托管到外部 PostgreSQL / MinIO。
 icon: fa-solid fa-chart-line
 module: [APP]
 categories: [参考]
 ---
 
-## Applet的结构
+Pigsty v4.1 的“应用”分为两类：
 
-Applet，是一种自包含的，运行于Pigsty基础设施中的数据小应用。
+- **软件模板（Software Templates）**：`~/pigsty/app/<name>` 下的 Docker Compose 模板，用于拉起无状态业务组件。
+- **数据应用（Applets）**：基于 PostgreSQL + Grafana 的分析样例，偏教学/演示属性。
 
-一个Pigsty应用通常包括以下内容中的至少一样或全部：
+## v4.1 应用模型
 
-* 图形界面（Grafana Dashboard定义） 放置于`ui`目录
-* 数据定义（PostgreSQL DDL File），放置于 `sql` 目录
-* 数据文件（各类资源，需要下载的文件），放置于`data`目录
-* 逻辑脚本（执行各类逻辑），放置于`bin`目录
+在 v4.1 中，推荐使用以下流程部署应用：
 
-Pigsty默认提供了几个样例应用：
+```bash
+curl -fsSL https://repo.pigsty.cc/get | bash; cd ~/pigsty
+./bootstrap
+./configure -c <template>     # 例如 app/dify、app/odoo、app/registry、supabase
+vi pigsty.yml                 # 修改密码、域名、IP、密钥
+./deploy.yml                  # 部署基础设施与数据库
+./docker.yml                  # 安装 Docker
+./app.yml                     # 拉起应用
+```
 
-* [`pglog`](/docs/app/pglog)， 分析PostgreSQL CSV日志样本。
-* [`covid`](/docs/app/covid)， 可视化WHO COVID-19数据，查阅各国疫情数据。
-* [`isd`](/docs/app/isd)， NOAA ISD，可以查询全球30000个地表气象站从1901年来的气象观测记录。
+`app.yml` 会将 `app/<name>` 模板复制到 `/opt/<name>`，并按 `apps.<name>.conf` 覆盖 `.env`，最后执行 `docker compose up -d`。
 
+## 维护中的配置模板
 
----------
+当前 v4.1 在源码中提供了以下应用配置模板（`conf/app/*.yml` 与 `conf/supabase.yml`）：
 
-## 应用的结构
+- `app/dify`
+- `app/odoo`
+- `app/teable`
+- `app/mattermost`
+- `app/electric`
+- `app/maybe`
+- `app/registry`
+- `supabase`
 
-一个Pigsty应用会在应用根目录提供一个安装脚本：`install`或相关快捷方式。您需要使用管理用户在 [**管理节点**](/docs/concept/arch/node#admin节点) 执行安装。安装脚本会检测当前的环境（获取 `METADB_URL`， `PIGSTY_HOME`，`GRAFANA_ENDPOINT`等信息以执行安装）
+这些模板开箱即用，且与 `./configure -c ...`、`./app.yml` 工作流保持一致。
 
-通常，带有`APP`标签的面板会被列入Pigsty Grafana首页导航中App下拉菜单中，带有`APP`和`Overview`标签的面板则会列入首页面板导航中。
+## 轻量 Compose 应用
 
-您可以从 https://github.com/Vonng/pigsty/releases/download/v1.5.1/app.tgz 下载带有基础数据的应用进行安装。
+对于 `gitea`、`postgrest`、`pgweb`、`wiki`、`kong`、`bytebase` 等应用，也可直接使用对应目录下的 Compose 模板：
 
+```bash
+cd ~/pigsty/app/<name>
+make up
+```
+
+如果你希望统一纳入 Pigsty IaC，可使用：
+
+```bash
+./app.yml -e app=<name>
+```
+
+## 关于历史 Applet
+
+`pglog`、`covid`、`db-engine`、`sf-survey`、`cloud`、`isd` 等数据应用保留为参考示例，适合学习数据建模与可视化思路。
+
+它们不再是 v4.1 的主线“应用交付”方式；请优先使用上面的软件模板工作流。

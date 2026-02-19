@@ -3,47 +3,51 @@ title: Gitea：自建简易代码托管平台
 linkTitle: Gitea：简易代码托管
 weight: 585
 date: 2022-05-25
-description: 使用Docker拉起Gitea，并使用Pigsty的PG作为外部的元数据库
+description: 使用 Pigsty 的 Compose 模板部署 Gitea，并接入外部 PostgreSQL。
 module: [SOFTWARE]
 categories: [参考]
 ---
 
-公开Demo地址：[http://git.pigsty.cc](http://git.pigsty.cc)
+[Gitea](https://gitea.io/) 是轻量级开源 Git 托管平台。
 
-![](/img/docs/app/gitea.jpeg)
+Pigsty 的 `app/gitea` 模板默认就是 **PostgreSQL 外部数据库模式**，通过 `.env` 中 `GITEA_DB_*` 参数连接数据库。
 
-
-## 太长；不看
-
-```bash
-cd ~/pigsty/app/gitea; make up
-```
-
-在本例中，Gitea 默认使用 8889 端口，您可以访问以下位置：
-
-[http://git.pigsty](http://git.pigsty) 或 http://10.10.10.10:8889
+## 快速开始
 
 ```bash
-make up      # pull up gitea with docker-compose in minimal mode
-make run     # launch gitea with docker , local data dir and external PostgreSQL
-make view    # print gitea access point
-make log     # tail -f gitea logs
-make info    # introspect gitea with jq
-make stop    # stop gitea container
-make clean   # remove gitea container
-make pull    # pull latest gitea image
-make rmi     # remove gitea image
-make save    # save gitea image to /tmp/gitea.tgz
-make load    # load gitea image from /tmp
+cd ~/pigsty/app/gitea
+vi .env         # 检查域名、端口、数据库连接
+make up
 ```
 
-## 使用外部的PostgreSQL
+默认入口：
 
-Pigsty默认使用容器内的 Sqlite 作为元数据存储，您可以让 Gitea 通过连接串环境变量使用外部的PostgreSQL
+- Web：`http://git.pigsty` 或 `http://<IP>:8889`
+- SSH：`<IP>:2222`
 
-```yaml
-# postgres://dbuser_gitea:DBUser.gitea@10.10.10.10:5432/gitea
-db:   { name: gitea, owner: dbuser_gitea, comment: gitea primary database }
-user: { name: dbuser_gitea , password: DBUser.gitea, roles: [ dbrole_admin ] }
+## 数据库准备
+
+```bash
+bin/pgsql-user pg-meta dbuser_gitea
+bin/pgsql-db   pg-meta gitea
 ```
 
+连接串示例：
+
+```bash
+postgres://dbuser_gitea:DBUser.Gitea@10.10.10.10:5432/gitea
+```
+
+## 常用命令
+
+```bash
+make up
+make log
+make stop
+make clean
+```
+
+## 参考
+
+- Gitea 文档： https://docs.gitea.com/
+- Pigsty 模板： https://github.com/pgsty/pigsty/tree/main/app/gitea

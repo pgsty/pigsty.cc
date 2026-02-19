@@ -63,9 +63,9 @@ cd ~/pigsty
 ./configure -c app/supa           # 使用 Supabase 自托管模板
 
 # 指定 PostgreSQL 版本
-./configure -v 17                 # 使用 PostgreSQL 17
+./configure -v 18                 # 使用 PostgreSQL 18（默认）
 ./configure -v 16                 # 使用 PostgreSQL 16
-./configure -c rich -v 16         # rich 模板 + PG 16
+./configure -c rich -v 15         # rich 模板 + PG 15
 
 # 区域与代理
 ./configure -r china              # 使用中国镜像源

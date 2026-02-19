@@ -28,10 +28,10 @@ categories: [参考]
 ./configure [-i <primary_ip>]
 ```
 
-例如，如果您想要安装 PG 17，而非默认的 PostgreSQL 18，可以在 `configure` 中使用 `-v` 参数：
+例如，如果您想要安装 PG 16，而非默认的 PostgreSQL 18，可以在 `configure` 中使用 `-v` 参数：
 
 ```bash
-./configure -v 17   # or 16,15,14,13....
+./configure -v 16   # or 17,15,14,13....
 ```
 
 
@@ -67,4 +67,3 @@ categories: [参考]
 - 默认密码为示例密码，生产环境 **务必修改**
 - 单节点模式的 etcd 无高可用保障，适合开发测试
 - 如需构建本地软件源，请使用 [`rich`](/docs/conf/rich/) 模板
-

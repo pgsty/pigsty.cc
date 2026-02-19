@@ -2,81 +2,56 @@
 title: ByteBase：模式迁移
 weight: 625
 date: 2022-05-20
-description: 使用Docker拉起Bytebase，对PG的模式进行版本化管理
+description: 使用 Pigsty 提供的 Docker Compose 模板部署 Bytebase，并接入外部 PostgreSQL。
 module: [SOFTWARE]
 categories: [任务]
 ---
 
+[Bytebase](https://bytebase.com/) 是数据库 Schema 变更与版本管理工具。
 
-## ByteBase
+Pigsty 在 `app/bytebase` 中提供了可直接使用的 Compose 模板，默认监听 `8887`，并通过 `BB_PGURL` 连接外部 PostgreSQL。
 
-[ByteBase](https://bytebase.com/) 是一个进行数据库模式变更的工具，以下命令将在元节点 8887 端口启动一个ByteBase。
-
-```
-mkdir -p /data/bytebase/data;
-docker run --init --name bytebase --restart always --detach --publish 8887:8887 --volume /data/bytebase/data:/var/opt/bytebase \
-    bytebase/bytebase:1.0.4 --data /var/opt/bytebase --host http://ddl.pigsty --port 8887
-```
-
-访问 http://10.10.10.10:8887/ 或 [http://ddl.pigsty](http://ddl.pigsty/) 即可使用 ByteBase，您需要依次创建项目、环境、实例、数据库，即可开始进行模式变更。 公开Demo地址： http://ddl.pigsty.cc
-
-
-
-
-
-公开Demo地址：[http://ddl.pigsty.cc](http://ddl.pigsty.cc)
-
-默认用户名与密码： `admin` / `pigsty` 
-
-![](/img/docs/app/bytebase.jpeg)
-
-
-## Bytebase概览
-
-Schema Migrator for PostgreSQL
+## 快速开始
 
 ```bash
-cd app/bytebase; make up
+cd ~/pigsty/app/bytebase
+vi .env         # 检查 BB_PORT / BB_DOMAIN / BB_PGURL
+make up
 ```
 
-Visit [http://ddl.pigsty](http://ddl.pigsty) or http://10.10.10.10:8887
+访问：
 
+- `http://ddl.pigsty`
+- `http://<IP>:8887`
+
+首次启动后，请按 Bytebase 向导初始化管理员账号。
+
+## 外部 PostgreSQL
+
+默认连接串示例：
 
 ```bash
-make up         # pull up bytebase with docker-compose in minimal mode
-make run        # launch bytebase with docker , local data dir and external PostgreSQL
-make view       # print bytebase access point
-make log        # tail -f bytebase logs
-make info       # introspect bytebase with jq
-make stop       # stop bytebase container
-make clean      # remove bytebase container
-make pull       # pull latest bytebase image
-make rmi        # remove bytebase image
-make save       # save bytebase image to /tmp/bytebase.tgz
-make load       # load bytebase image from /tmp
+postgresql://dbuser_bytebase:DBUser.Bytebase@10.10.10.10:5432/bytebase?sslmode=prefer
 ```
 
-
-
-## 使用外部的PostgreSQL
-
-Bytebase use its internal PostgreSQL database by default, You can use external PostgreSQL for higher durability.
-
-```yaml
-# postgres://dbuser_bytebase:DBUser.Bytebase@10.10.10.10:5432/bytebase
-db:   { name: bytebase, owner: dbuser_bytebase, comment: bytebase primary database }
-user: { name: dbuser_bytebase , password: DBUser.Bytebase, roles: [ dbrole_admin ] }
-```
-
-if you wish to user an external PostgreSQL, drop monitor extensions and views & pg_repack
+可先在 Pigsty 中创建业务用户与数据库：
 
 ```bash
-DROP SCHEMA monitor CASCADE;
-DROP EXTENSION pg_repack;
+bin/pgsql-user pg-meta dbuser_bytebase
+bin/pgsql-db   pg-meta bytebase
 ```
 
-After bytebase initialized, you can create them back with `/pg/tmp/pg-init-template.sql`
+## 常用命令
 
 ```bash
-psql bytebase < /pg/tmp/pg-init-template.sql
+make up
+make log
+make info
+make stop
+make clean
 ```
+
+## 参考
+
+- Bytebase 文档： https://www.bytebase.com/docs/
+- Pigsty 模板： https://github.com/pgsty/pigsty/tree/main/app/bytebase

@@ -55,7 +55,9 @@ Pigsty 需要一个在所有被管理节点上具有免密 [**SSH**](#ssh) 和 [
 假设您在节点上有 root 权限，或有一个现有的管理员用户，您可以使用 Pigsty 本身创建管理员用户：
 
 ```bash
-./node.yml -k -K -t node_admin -e ansible_user=[你准备使用的管理员名称]
+./node.yml -k -K -t node_admin \
+  -e ansible_user=[当前可登录的管理员名称] \
+  -e node_admin_username=[你准备创建的管理员名称]
 ```
 
 它将利用现有的管理员创建新的管理员，创建由以下参数描述的专用 `dba`（uid=88）用户，并正确配置 sudo / ssh。
@@ -196,6 +198,5 @@ Pigsty 组件使用的端口列表，请参考：[**使用的端口**](/docs/nod
 - `5434`: PG 副本服务
 - `5436`: PG 默认服务
 - `5438`: PG 离线服务
-
 
 

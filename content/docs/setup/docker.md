@@ -30,8 +30,15 @@ make launch          # 启动容器 + 生成配置 + 执行部署
 |:-----------|:-----------------------------------------------------------------|:-------------------|
 | SSH        | `ssh root@localhost -p 2222`                                     | 密码：`pigsty`        |
 | Web 界面     | http://localhost:8080                                            | -                  |
-| Grafana    | http://localhost:8080/ui                                         | `admin` / `pigsty` |
-| PostgreSQL | `psql postgres://dbuser_dba:DBUser.DBA@localhost:5432/postgres`  | `DBUser.DBA`       |
+| Grafana    | http://localhost:8080/ui                                         | `admin` / `grafana_admin_password` |
+| PostgreSQL | `psql 'postgres://dbuser_dba:<pg_admin_password>@localhost:5432/postgres'` | `pg_admin_password` |
+
+`make launch` 内部会执行 `./configure -g` 生成随机密码，可通过以下命令查看：
+
+```bash
+cd ~/pigsty/docker
+make pass | grep -E 'grafana_admin_password|pg_admin_password'
+```
 
 {{% alert title="Web 界面与 PostgreSQL 服务" color="info" %}}
 Web 界面与 PostgreSQL 服务仅在完成 **部署**（`./deploy.yml`）后才可用。

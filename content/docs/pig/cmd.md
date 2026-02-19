@@ -28,7 +28,7 @@ Usage:
 Examples:
 
   pig repo add -ru            # 覆盖现有仓库并更新缓存
-  pig install pg17            # 安装 PostgreSQL 17 PGDG 软件包
+  pig install pg18            # 安装 PostgreSQL 18 PGDG 软件包
   pig install pg_duckdb       # 安装指定的 PostgreSQL 扩展
   pig install pgactive -v 18  # 为特定 PG 版本安装扩展
 

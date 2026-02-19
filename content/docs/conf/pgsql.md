@@ -26,10 +26,10 @@ categories: [参考]
 ./configure -c pgsql [-i <primary_ip>]
 ```
 
-如需指定特定 PostgreSQL 版本（如 17）：
+如需指定非默认 PostgreSQL 版本（如 16）：
 
 ```bash
-./configure -c pgsql -v 17
+./configure -c pgsql -v 16
 ```
 
 
@@ -61,4 +61,3 @@ categories: [参考]
 **与 meta 的区别**：
 - `pgsql` 模板显式声明使用原生 PostgreSQL 内核
 - 适合需要明确区分不同内核类型的场景
-

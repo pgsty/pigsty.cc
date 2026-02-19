@@ -53,8 +53,9 @@ sudo apt install -y ansible python3-jmespath
 {{% /tab %}}
 {{% tab header="EL" %}}
 ```bash
-sudo dnf install -y ansible python-jmespath         # EL 10
-sudo dnf install -y ansible python3.12-jmespath     # EL 9/8
+sudo dnf install -y ansible python3.12-jmespath python3-cryptography  # EL 8
+sudo dnf install -y ansible python3-jmespath                           # EL 9
+sudo dnf install -y ansible                                            # EL 10
 ```
 {{% /tab %}}
 {{% tab header="MacOS" %}}
@@ -252,5 +253,4 @@ bin/redis-rm   <cls>            # 移除 Redis 集群：./redis-rm.yml -l <cls>
 | [**DOCKER**](/docs/docker/playbook/) | [**`app.yml`**](https://github.com/pgsty/pigsty/blob/main/app.yml)                         | 使用 Docker Compose 安装应用程序      |
 | [**FERRET**](/docs/ferret/playbook)  | [**`mongo.yml`**](https://github.com/pgsty/pigsty/blob/main/mongo.yml)                     | 在节点上安装 Mongo/FerretDB         |
 {.full-width}
-
 

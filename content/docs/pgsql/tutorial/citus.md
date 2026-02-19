@@ -36,7 +36,7 @@ pg-citus:
     10.10.10.13: { pg_group: 2, pg_cluster: pg-citus2 ,pg_vip_address: 10.10.10.4/24 ,pg_seq: 1, pg_role: primary }
   vars:
     pg_mode: citus                            # pgsql cluster mode: citus
-    pg_version: 17                            # citus 13.x supports PG 14-18
+    pg_version: 18                            # citus 13.x supports PG 14-18
     pg_shard: pg-citus                        # citus shard name: pg-citus
     pg_primary_db: citus                      # primary database used by citus
     pg_vip_enabled: true                      # enable vip for citus cluster
@@ -212,7 +212,7 @@ pg-citus: # citus group
     10.10.10.59: { pg_group: 4, pg_cluster: pg-citus4 ,pg_vip_address: 10.10.10.64/24 ,pg_seq: 1, pg_role: replica }
   vars:
     pg_mode: citus                            # pgsql cluster mode: citus
-    pg_version: 17                            # citus 13.x supports PG 14-18
+    pg_version: 18                            # citus 13.x supports PG 14-18
     pg_shard: pg-citus                        # citus shard name: pg-citus
     pg_primary_db: citus                      # primary database used by citus
     pg_vip_enabled: true                      # enable vip for citus cluster
