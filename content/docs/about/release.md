@@ -66,15 +66,59 @@ Pigsty 当前的最新稳定版本为 [**v4.1.0**](#v410)。
 {.full-width}
 
 
-## v4.1.1 (WIP)
+## v4.2.0 (WIP)
 
-用于跟进 PG 小版本更新的例行修复
+> 计划于 2026-02-27 与 PostgreSQL 18.3 系列小版本一同发布
 
 - 号外 PG 小版本 PG 18.3, ...
 - PolarDB-15.16.5.0
 - OrioleDB 1.6 beta14
+- Babelfish 17.8-5.5.0 新增
+- Cloudberry 2.0.0
 - pig 1.1.2
 
+PG 扩展包更新
+
+| 包名                  | 旧版本            | 新版本    | 备注                    |
+|:--------------------|:---------------|:-------|:----------------------|
+| `timescaledb`       | 2.25.0         | 2.25.1 |                       |
+| `citus`             | 14.0.0-2PIGSTY | 14.0.0 | 使用最新官方版本重新构建          |
+| `age`               | 1.7.0          | 1.7.0  | 新增 PG 17 的 1.7.0 版本支持 |
+| `pg_background`     | -              | 1.8    | 仅构建 DEB 包，RPM 来自 PGDG |
+| `pgmq`              | 1.10.0         | 1.10.1 | 当前没有该扩展包              |
+| `pg_search`         | 0.21.6         | 0.21.8 | 直接下载使用                |
+| `oriolepg`          | 17.11          | 17.16  | OriolePG 内核更新         |
+| `orioledb`          | beta12         | beta14 | 配套 OriolePG 17.16     |
+| `cloudberry`        | -              | 2.0.0  | 新增包                   |
+| `babelfishpg`       | -              | 5.5.0  | 新增 BabelfishPG 包组     |
+| `babelfish`         | -              | 5.5.0  | 新增 Babelfish 兼容包      |
+| `antlr4-runtime413` | -              | 4.13   | 新增 Babelfish 依赖运行时    |
+
+基础设施软件包更新:
+
+| 名称                           | 旧版本            | 新版本            | 备注 |
+|:-----------------------------|:---------------|:---------------|:---|
+| `grafana`                    | 12.3.2         | 12.3.3         |    |
+| `grafana-victorialogs-ds`    | 0.24.1         | 0.25.0         |    |
+| `grafana-victoriametrics-ds` | 0.21.0         | 0.22.0         |    |
+| `grafana-infinity-ds`        | 3.7.0          | 3.7.1          |    |
+| `redis_exporter`             | 1.80.2         | 1.81.0         |    |
+| `etcd`                       | 3.6.7          | 3.6.8          |    |
+| `dblab`                      | 0.34.2         | 0.34.3         |    |
+| `tigerbeetle`                | 0.16.72        | 0.16.73        |    |
+| `seaweedfs`                  | 4.09           | 4.13           |    |
+| `rustfs`                     | 1.0.0-alpha.82 | 1.0.0-alpha.83 |    |
+| `uv`                         | 0.10.0         | 0.10.4         |    |
+| `kafka`                      | 4.1.1          | 4.2.0          |    |
+| `npgsqlrest`                 | 3.7.0          | 3.8.0          |    |
+| `postgrest`                  | 14.4           | 14.5           |    |
+| `opencode`                   | 1.1.59         | 1.2.6          |    |
+| `genai-toolbox`              | 0.25.0         | 0.27.0         |    |
+| `claude`                     | 2.1.37         | 2.1.45         |    |
+| `rclone`                     | 1.73.0         | 1.73.1         |    |
+| `code-server`                | 4.108.2        | 4.109.2        |    |
+| `code`                       | 1.109.2        | 1.109.4        |    |
+| `pig`                        | 1.1.1          | 1.1.2          |    |
 
 
 ------
@@ -508,38 +552,38 @@ MinIO 开始使用 [pgsty/minio](https://github.com/pgsty/minio) fork RPM/DEB
 
 **新增参数**
 
-| 参数                       | 类型     | 默认值           | 说明                               |
-|--------------------------|--------|---------------|----------------------------------|
+| 参数                       | 类型     | 默认值           | 说明                                 |
+|--------------------------|--------|---------------|------------------------------------|
 | `node_firewall_mode`     | enum   | none (v4.0)   | 防火墙模式：off/none/zone（v4.1 起默认 zone） |
-| `node_selinux_mode`      | enum   | permissive    | SELinux 模式                       |
-| `node_firewall_intranet` | string | -             | HBA 信任的内网网段                      |
-| `node_admin_sudo`        | enum   | nopass        | 管理员 sudo 权限级别                    |
-| `pg_io_method`           | enum   | worker        | I/O 方法：auto/sync/worker/io_uring |
-| `pg_rto_plan`            | dict   | -             | RTO 预设：fast/norm/safe/wide       |
-| `pg_crontab`             | list   | []            | postgres dbsu 定时任务               |
-| `vip_auth_pass`          | string | -             | VRRP 认证密码                        |
-| `grafana_pgurl`          | string | -             | Grafana PG 后端连接字符串               |
-| `grafana_view_password`  | string | DBUser.Viewer | Grafana Meta 数据源密码               |
-| `infra_extra_services`   | list   | []            | 首页额外服务入口                         |
-| `juice_cache`            | path   | /data/juice   | JuiceFS 共享缓存目录                   |
-| `juice_instances`        | dict   | {}            | JuiceFS 实例定义                     |
-| `vibe_data`              | path   | /fs           | VIBE 工作空间目录                      |
-| `code_enabled`           | bool   | true          | 是否启用 Code-Server                 |
-| `code_port`              | port   | 8443          | Code-Server 监听端口                 |
-| `code_data`              | path   | /data/code    | Code-Server 数据目录                 |
-| `code_password`          | string | Vibe.Coding   | Code-Server 登录密码                 |
-| `code_gallery`           | enum   | openvsx       | 扩展市场：openvsx/microsoft           |
-| `jupyter_enabled`        | bool   | true          | 是否启用 JupyterLab                  |
-| `jupyter_port`           | port   | 8888          | JupyterLab 监听端口                  |
-| `jupyter_data`           | path   | /data/jupyter | JupyterLab 数据目录                  |
-| `jupyter_password`       | string | Vibe.Coding   | JupyterLab 登录 Token              |
-| `jupyter_venv`           | path   | /data/venv    | Python 虚拟环境路径                    |
-| `claude_enabled`         | bool   | true          | 是否启用 Claude Code 配置              |
-| `claude_env`             | dict   | {}            | Claude Code 额外环境变量               |
-| `nodejs_enabled`         | bool   | true          | 是否启用 Node.js 安装                  |
-| `nodejs_registry`        | string | ''            | npm registry，自动配置中国镜像            |
-| `node_uv_env`            | path   | /data/venv    | 节点 UV 虚拟环境路径，空则跳过                |
-| `node_pip_packages`      | string | ''            | UV 虚拟环境中安装的 pip 包                |
+| `node_selinux_mode`      | enum   | permissive    | SELinux 模式                         |
+| `node_firewall_intranet` | string | -             | HBA 信任的内网网段                        |
+| `node_admin_sudo`        | enum   | nopass        | 管理员 sudo 权限级别                      |
+| `pg_io_method`           | enum   | worker        | I/O 方法：auto/sync/worker/io_uring   |
+| `pg_rto_plan`            | dict   | -             | RTO 预设：fast/norm/safe/wide         |
+| `pg_crontab`             | list   | []            | postgres dbsu 定时任务                 |
+| `vip_auth_pass`          | string | -             | VRRP 认证密码                          |
+| `grafana_pgurl`          | string | -             | Grafana PG 后端连接字符串                 |
+| `grafana_view_password`  | string | DBUser.Viewer | Grafana Meta 数据源密码                 |
+| `infra_extra_services`   | list   | []            | 首页额外服务入口                           |
+| `juice_cache`            | path   | /data/juice   | JuiceFS 共享缓存目录                     |
+| `juice_instances`        | dict   | {}            | JuiceFS 实例定义                       |
+| `vibe_data`              | path   | /fs           | VIBE 工作空间目录                        |
+| `code_enabled`           | bool   | true          | 是否启用 Code-Server                   |
+| `code_port`              | port   | 8443          | Code-Server 监听端口                   |
+| `code_data`              | path   | /data/code    | Code-Server 数据目录                   |
+| `code_password`          | string | Vibe.Coding   | Code-Server 登录密码                   |
+| `code_gallery`           | enum   | openvsx       | 扩展市场：openvsx/microsoft             |
+| `jupyter_enabled`        | bool   | true          | 是否启用 JupyterLab                    |
+| `jupyter_port`           | port   | 8888          | JupyterLab 监听端口                    |
+| `jupyter_data`           | path   | /data/jupyter | JupyterLab 数据目录                    |
+| `jupyter_password`       | string | Vibe.Coding   | JupyterLab 登录 Token                |
+| `jupyter_venv`           | path   | /data/venv    | Python 虚拟环境路径                      |
+| `claude_enabled`         | bool   | true          | 是否启用 Claude Code 配置                |
+| `claude_env`             | dict   | {}            | Claude Code 额外环境变量                 |
+| `nodejs_enabled`         | bool   | true          | 是否启用 Node.js 安装                    |
+| `nodejs_registry`        | string | ''            | npm registry，自动配置中国镜像              |
+| `node_uv_env`            | path   | /data/venv    | 节点 UV 虚拟环境路径，空则跳过                  |
+| `node_pip_packages`      | string | ''            | UV 虚拟环境中安装的 pip 包                  |
 {.full-width}
 
 **兼容性**
