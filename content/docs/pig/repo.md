@@ -62,8 +62,8 @@ pig repo set                          # = pig repo add all --remove --update
 # 方法 2：温和方式 - 仅添加所需仓库，保留你目前的仓库配置
 pig repo add pgsql                    # 添加 PGDG 和 Pigsty 仓库并更新缓存
 pig repo add pigsty --region=china    # 添加 Pigsty 仓库，指定使用中国区域
-pig repo add pgdg   --region=default  # 添加 PGDG ，指定使用默认区域
-pig repo add infra  --region=europe   # 添加 INFRA 仓库 ，指定使用欧洲区域
+pig repo add pgdg   --region=europe   # 添加 PGDG 仓库，指定使用欧洲区域
+pig repo add infra  --region=default  # 添加 INFRA 仓库 ，指定使用默认区域
 
 # 如果上面没有-u|--update 选项一步到位，请额外执行此命令
 pig repo update                       # 更新系统包缓存
@@ -74,28 +74,29 @@ pig repo update                       # 更新系统包缓存
 
 在 pig 中，APT/YUM 仓库被组织为 **模块** —— 服务于特定目的的一组仓库。
 
-| 模块 | 说明 | 仓库列表 |
-|:---:|:---|:---|
-| `all` | 安装 PG 所需的全部核心模块 | `node` + `infra` + `pgsql` |
-| `pgsql` | PGDG + Pigsty PG 扩展 | `pigsty-pgsql` + `pgdg` |
-| `pigsty` | Pigsty Infra + PGSQL 仓库 | pigsty-infra, pigsty-pgsql |
-| `pgdg` | PGDG 官方仓库 | pgdg-common, pgdg13-18 |
-| `node` | Linux 系统仓库 | base, updates, extras, epel, baseos, appstream... |
-| `infra` | 基础设施组件仓库 | pigsty-infra, nginx, docker-ce |
-| `beta` | PostgreSQL 19 Beta 版本 | pgdg19-beta, pgdg-beta |
-| `extra` | PGDG Non-Free 与三方扩展 | pgdg-extras, timescaledb, citus |
-| `groonga` | PGroonga 仓库 | groonga |
-| `mssql` | WiltonDB 仓库 | wiltondb |
-| `percona` | Percona PG + PG_TDE | percona |
-| `llvm` | LLVM 工具链仓库 | llvm |
-| `kube` | Kubernetes 仓库 | kubernetes |
-| `grafana` | Grafana 仓库 | grafana |
-| `haproxy` | HAProxy 仓库 | haproxyd, haproxyu |
-| `redis` | Redis 仓库 | redis |
-| `mongo` | MongoDB 仓库 | mongo |
-| `mysql` | MySQL 仓库 | mysql |
-| `click` | ClickHouse 仓库 | clickhouse |
-| `gitlab` | GitLab 仓库 | gitlab-ce, gitlab-ee |
+|    模块     | 说明                      | 仓库列表                                              |
+|:---------:|:------------------------|:--------------------------------------------------|
+|   `all`   | 安装 PG 所需的全部核心模块         | `node` + `infra` + `pgsql`                        |
+|  `pgsql`  | PGDG + Pigsty PG 扩展     | `pigsty-pgsql` + `pgdg`                           |
+| `pigsty`  | Pigsty Infra + PGSQL 仓库 | pigsty-infra, pigsty-pgsql                        |
+|  `pgdg`   | PGDG 官方仓库               | pgdg-common, pgdg13-18                            |
+|  `node`   | Linux 系统仓库              | base, updates, extras, epel, baseos, appstream... |
+|  `infra`  | 基础设施组件仓库                | pigsty-infra, nginx, docker-ce                    |
+| `docker`  | Docker 仓库               | docker-ce                                         |
+|  `beta`   | PostgreSQL 19 Beta 版本   | pgdg19-beta, pgdg-beta                            |
+|  `extra`  | PGDG Non-Free 与三方扩展     | pgdg-extras, timescaledb, citus                   |
+| `groonga` | PGroonga 仓库             | groonga                                           |
+|  `mssql`  | WiltonDB 仓库             | wiltondb                                          |
+| `percona` | Percona PG + PG_TDE     | percona                                           |
+|  `llvm`   | LLVM 工具链仓库              | llvm                                              |
+|  `kube`   | Kubernetes 仓库           | kubernetes                                        |
+| `grafana` | Grafana 仓库              | grafana                                           |
+| `haproxy` | HAProxy 仓库              | haproxyd, haproxyu                                |
+|  `redis`  | Redis 仓库                | redis                                             |
+|  `mongo`  | MongoDB 仓库              | mongo                                             |
+|  `mysql`  | MySQL 仓库                | mysql                                             |
+|  `click`  | ClickHouse 仓库           | clickhouse                                        |
+| `gitlab`  | GitLab 仓库               | gitlab-ce, gitlab-ee                              |
 {.full-width}
 
 除此之外，pig 还自带了一些其他数据库的 APT/DNF 仓库：`redis`, `kubernetes`, `grafana`, `clickhouse`, `gitlab`, `haproxy`, `mongodb`, `mysql`，在此不再展开。
@@ -195,9 +196,9 @@ pig repo rm pgdg                 # 移除特定仓库
 pig repo rm pgdg pigsty -u       # 移除并更新缓存
 ```
 
-| 平台 | 备份位置 |
-|:---:|:---|
-| EL | `/etc/yum.repos.d/backup/` |
+|   平台   | 备份位置                              |
+|:------:|:----------------------------------|
+|   EL   | `/etc/yum.repos.d/backup/`        |
 | Debian | `/etc/apt/sources.list.d/backup/` |
 {.full-width}
 
@@ -210,10 +211,10 @@ pig repo rm pgdg pigsty -u       # 移除并更新缓存
 pig repo update                  # 更新包缓存
 ```
 
-| 平台 | 等效命令 |
-|:---:|:---|
-| EL | `dnf makecache` |
-| Debian | `apt update` |
+|   平台   | 等效命令            |
+|:------:|:----------------|
+|   EL   | `dnf makecache` |
+| Debian | `apt update`    |
 {.full-width}
 
 
@@ -226,10 +227,10 @@ pig repo create                  # 在默认位置创建 (/www/pigsty)
 pig repo create /srv/repo        # 在自定义位置创建
 ```
 
-| 平台 | 依赖软件 |
-|:---:|:---|
-| EL | `createrepo_c` |
-| Debian | `dpkg-dev` |
+|   平台   | 依赖软件           |
+|:------:|:---------------|
+|   EL   | `createrepo_c` |
+| Debian | `dpkg-dev`     |
 {.full-width}
 
 

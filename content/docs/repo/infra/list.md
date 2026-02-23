@@ -13,8 +13,9 @@ weight: 5441
 | 名称                                                                                       | 版本       | 许可证                                                                                    | 备注                   |
 |------------------------------------------------------------------------------------------|----------|----------------------------------------------------------------------------------------|----------------------|
 | [`grafana`](https://github.com/grafana/grafana/)                                         | `12.3.3` | [AGPLv3](https://github.com/grafana/grafana/blob/main/LICENSE)                         | 开源可观测性与数据可视化平台       |
-| [`loki`](https://github.com/grafana/loki)                                                | `3.6.5`  | [AGPLv3](https://github.com/grafana/loki/blob/main/LICENSE)                            | 日志聚合系统（已弃用）          |
-| [`promtail`](https://github.com/grafana/loki/releases/tag/v3.6.5)                        | `3.6.5`  | [AGPLv3](https://github.com/grafana/loki/blob/main/LICENSE)                            | Loki 日志采集代理（已弃用）     |
+| [`loki`](https://github.com/grafana/loki)                                                | `3.6.6`  | [AGPLv3](https://github.com/grafana/loki/blob/main/LICENSE)                            | 日志聚合系统（已弃用）          |
+| [`promtail`](https://github.com/grafana/loki/releases/tag/v3.6.6)                        | `3.6.6`  | [AGPLv3](https://github.com/grafana/loki/blob/main/LICENSE)                            | Loki 日志采集代理（已弃用）     |
+| [`logcli`](https://github.com/grafana/loki/releases/tag/v3.6.6)                          | `3.6.6`  | [AGPLv3](https://github.com/grafana/loki/blob/main/LICENSE)                            | Loki 日志查询命令行客户端（已弃用） |
 | [`grafana-infinity-ds`](https://github.com/grafana/grafana-infinity-datasource/)         | `3.7.1`  | [Apache-2.0](https://github.com/grafana/grafana-infinity-datasource/blob/main/LICENSE) | 支持 JSON/CSV/XML 等数据源 |
 | [`grafana-plugins`](https://github.com/pgsty/infra-pkg/tree/main/noarch/grafana-plugins) | `12.3.0` | [Apache-2.0](https://github.com/pgsty/infra-pkg/blob/main/LICENSE)                     | Pigsty 打包的额外面板插件     |
 {.stretch-last}
@@ -26,11 +27,11 @@ weight: 5441
 
 | 名称                                                                                                      | 版本        | 许可证                                                                                           | 备注                          |
 |---------------------------------------------------------------------------------------------------------|-----------|-----------------------------------------------------------------------------------------------|-----------------------------|
-| [`victoria-metrics`](https://github.com/VictoriaMetrics/VictoriaMetrics)                                | `1.135.0` | [Apache-2.0](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/master/LICENSE)          | 高性能时序数据库，替代 Prometheus      |
+| [`victoria-metrics`](https://github.com/VictoriaMetrics/VictoriaMetrics)                                | `1.136.0` | [Apache-2.0](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/master/LICENSE)          | 高性能时序数据库，替代 Prometheus      |
 | [`victoria-logs`](https://github.com/VictoriaMetrics/VictoriaMetrics)                                   | `1.45.0`  | [Apache-2.0](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/master/LICENSE)          | 高性能日志存储与查询引擎                |
 | [`victoria-traces`](https://github.com/VictoriaMetrics/VictoriaMetrics)                                 | `0.7.1`   | [Apache-2.0](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/master/LICENSE)          | 分布式链路追踪后端                   |
-| [`victoria-metrics-cluster`](https://github.com/VictoriaMetrics/VictoriaMetrics)                        | `1.135.0` | [Apache-2.0](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/master/LICENSE)          | VictoriaMetrics 分布式集群版      |
-| [`vmutils`](https://github.com/VictoriaMetrics/VictoriaMetrics)                                         | `1.135.0` | [Apache-2.0](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/master/LICENSE)          | VictoriaMetrics 配套命令行工具     |
+| [`victoria-metrics-cluster`](https://github.com/VictoriaMetrics/VictoriaMetrics)                        | `1.136.0` | [Apache-2.0](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/master/LICENSE)          | VictoriaMetrics 分布式集群版      |
+| [`vmutils`](https://github.com/VictoriaMetrics/VictoriaMetrics)                                         | `1.136.0` | [Apache-2.0](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/master/LICENSE)          | VictoriaMetrics 配套命令行工具     |
 | [`vlogscli`](https://github.com/VictoriaMetrics/VictoriaMetrics)                                        | `1.45.0`  | [Apache-2.0](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/master/LICENSE)          | VictoriaLogs 交互式查询客户端       |
 | [`vlagent`](https://github.com/VictoriaMetrics/VictoriaMetrics)                                         | `1.45.0`  | [Apache-2.0](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/master/LICENSE)          | VictoriaLogs 日志采集代理         |
 | [`grafana-victorialogs-ds`](https://github.com/VictoriaMetrics/victorialogs-datasource/releases/)       | `0.25.0`  | [Apache-2.0](https://github.com/VictoriaMetrics/victorialogs-datasource/blob/main/LICENSE)    | VictoriaLogs Grafana 数据源    |
@@ -98,6 +99,12 @@ allow_loading_unsigned_plugins = victoriametrics-logs-datasource,victoriametrics
 | [`juicefs`](https://github.com/juicedata/juicefs)       |     `1.3.1`      |      [Apache-2.0](https://github.com/juicedata/juicefs/blob/main/LICENSE)       | S3 上的文件系统                |
 {.stretch-last}
 
+{{% alert title="minio 现在由 pgsty 维护分支" color="info" %}}
+[`minio/minio`](https://github.com/minio/minio) 已经不再维护，Pigsty 目前维护了自己的 MinIO 分支 —— [`pgsty/minio`](https://github.com/pgsty/minio)。
+`mcli` 依然使用 MinIO 官方最后提供的可用版本。
+
+{{% /alert %}}
+
 
 --------
 
@@ -124,7 +131,7 @@ Pig 包管理器、PostgreSQL 工具和其他数据库相关实用程序
 
 | 名称                                                                                      | 版本         | 许可证                                                                                     | 备注                           |
 |-----------------------------------------------------------------------------------------|------------|-----------------------------------------------------------------------------------------|------------------------------|
-| [`pig`](https://github.com/pgsty/pig)                                                   | `1.1.2`    | [Apache-2.0](https://github.com/pgsty/pig/blob/main/LICENSE)                            | PG 包管理器                      |
+| [`pig`](https://github.com/pgsty/pig)                                                   | `1.2.0`    | [Apache-2.0](https://github.com/pgsty/pig/blob/main/LICENSE)                            | PG 包管理器                      |
 | [`vip-manager`](https://github.com/cybertec-postgresql/vip-manager)                     | `4.0.0`    | [BSD-2](https://github.com/cybertec-postgresql/vip-manager/blob/master/LICENSE)         | 将 L2 VIP 绑定到 PG 主节点          |
 | [`pgflo`](https://github.com/pgflo/pg_flo)                                              | `0.0.15`   | [Apache-2.0](https://github.com/pgflo/pg_flo/blob/main/LICENSE)                         | 实时流式传输、转换和路由 PG 数据           |
 | [`pgschema`](https://github.com/schemagood/pgschema)                                    | `1.4.2`    | [Apache-2.0](https://github.com/schemagood/pgschema/blob/main/LICENSE)                  | 执行 PG 模式迁移                   |
@@ -142,6 +149,8 @@ Pig 包管理器、PostgreSQL 工具和其他数据库相关实用程序
 | [`hugo`](https://github.com/gohugoio/hugo)                                              | `0.155.2`  | [Apache-2.0](https://github.com/gohugoio/hugo/blob/master/LICENSE)                      | 快速静态网站生成器                    |
 | [`cloudflared`](https://github.com/cloudflare/cloudflared)                              | `2026.2.0` | [Apache-2.0](https://github.com/cloudflare/cloudflared/blob/master/LICENSE)             | Cloudflare 隧道客户端             |
 | [`headscale`](https://github.com/juanfont/headscale)                                    | `0.28.0`   | [BSD-3](https://github.com/juanfont/headscale/blob/main/LICENSE)                        | 自托管 Tailscale 控制服务器          |
+| [`stalwart`](https://github.com/stalwartlabs/stalwart)                                  | `0.15.5`   | [AGPLv3](https://github.com/stalwartlabs/stalwart/blob/main/LICENSE)                    | 新一代全功能邮件服务器                  |
+| [`maddy`](https://github.com/foxcpp/maddy)                                              | `0.8.2`    | [GPL-3.0](https://github.com/foxcpp/maddy/blob/master/LICENSE)                          | 轻量化邮件服务器                     |
 {.stretch-last}
 
 
@@ -154,12 +163,11 @@ AI Agent，MCP 工具箱，编码 IDE，Python/Go/Node 工具……
 | 名称                                                             | 版本        | 许可证                                                                         | 备注                             |
 |----------------------------------------------------------------|-----------|-----------------------------------------------------------------------------|--------------------------------|
 | [`claude`](https://github.com/anthropics/claude-code)          | `2.1.45`  | [Proprietary](https://www.anthropic.com/legal/terms)                        | Claude Code - Anthropic 代理编程工具 |
-| [`opencode`](https://github.com/opencode-ai/opencode)          | `1.2.6`   | [MIT](https://github.com/opencode-ai/opencode/blob/main/LICENSE)            | 终端 AI 编程助手                     |
-| [`code`](https://code.visualstudio.com/)                       | `1.109.4` | [MIT](https://github.com/microsoft/vscode/blob/main/LICENSE.txt)            | Visual Studio Code 编辑器             |
+| [`opencode`](https://github.com/opencode-ai/opencode)          | `1.2.10`  | [MIT](https://github.com/opencode-ai/opencode/blob/main/LICENSE)            | 终端 AI 编程助手                     |
+| [`code`](https://code.visualstudio.com/)                       | `1.109.4` | [MIT](https://github.com/microsoft/vscode/blob/main/LICENSE.txt)            | Visual Studio Code 编辑器         |
 | [`code-server`](https://github.com/coder/code-server)          | `4.109.2` | [MIT](https://github.com/coder/code-server/blob/main/LICENSE)               | 浏览器中的 VS Code                  |
 | [`genai-toolbox`](https://github.com/googleapis/genai-toolbox) | `0.27.0`  | [Apache-2.0](https://github.com/googleapis/genai-toolbox/blob/main/LICENSE) | Google 数据库 MCP 服务器             |
 | [`uv`](https://github.com/astral-sh/uv)                        | `0.10.4`  | [MIT](https://github.com/astral-sh/uv/blob/main/LICENSE-MIT)                | 新一代 Python 包管理器                |
 | [`golang`](https://golang.org/)                                | `1.26.0`  | [BSD-3](https://github.com/golang/go/blob/master/LICENSE)                   | Go 编译器                         |
 | [`nodejs`](https://nodejs.org/)                                | `24.13.1` | [MIT/Mixed](https://github.com/nodejs/node/blob/main/LICENSE)               | 在服务端运行 Javascript              |
 {.stretch-last}
-

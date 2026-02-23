@@ -66,59 +66,102 @@ Pigsty 当前的最新稳定版本为 [**v4.1.0**](#v410)。
 {.full-width}
 
 
-## v4.2.0 (WIP)
+## v4.2.0 (Beta)
 
-> 计划于 2026-02-27 与 PostgreSQL 18.3 系列小版本一同发布
+> 计划于 2026-02-27 发布（与 PostgreSQL 18.3 系列号外小版本同步）
+>
+> 截至 2026-02-23：`v4.1.0..HEAD` 共 **12 个提交**，**98 文件变更**，**+663 / -563** 行
 
-- 号外 PG 小版本 PG 18.3, ...
-- PolarDB-15.16.5.0
-- OrioleDB 1.6 beta14
-- Babelfish 17.8-5.5.0 新增
-- Cloudberry 2.0.0
-- pig 1.1.2
+**版本定位**
 
-PG 扩展包更新
+- `4.2.0` 仍处于 WIP 阶段，定位为例行小版本更新，重点是上游小版本追平、包重编译与安装链路修复。
+- 本轮核心变化是 `Babelfish` 与 `Cloudberry` 重编译与整合：修正包别名、安装路径与模板默认值，纳入标准交付链路。
+- 因 PostgreSQL 官方 2026-02-26 计划内号外修复，建议与 PG `18.3/17.9/16.13/15.17/14.22` 一并升级。
 
-| 包名                  | 旧版本            | 新版本    | 备注                    |
-|:--------------------|:---------------|:-------|:----------------------|
-| `timescaledb`       | 2.25.0         | 2.25.1 |                       |
-| `citus`             | 14.0.0-2PIGSTY | 14.0.0 | 使用最新官方版本重新构建          |
-| `age`               | 1.7.0          | 1.7.0  | 新增 PG 17 的 1.7.0 版本支持 |
-| `pg_background`     | -              | 1.8    | 仅构建 DEB 包，RPM 来自 PGDG |
-| `pgmq`              | 1.10.0         | 1.10.1 | 当前没有该扩展包              |
-| `pg_search`         | 0.21.6         | 0.21.8 | 直接下载使用                |
-| `oriolepg`          | 17.11          | 17.16  | OriolePG 内核更新         |
-| `orioledb`          | beta12         | beta14 | 配套 OriolePG 17.16     |
-| `cloudberry`        | -              | 2.0.0  | 新增包                   |
-| `babelfishpg`       | -              | 5.5.0  | 新增 BabelfishPG 包组     |
-| `babelfish`         | -              | 5.5.0  | 新增 Babelfish 兼容包      |
-| `antlr4-runtime413` | -              | 4.13   | 新增 Babelfish 依赖运行时    |
+**亮点变化**
 
-基础设施软件包更新:
+- `mssql` 模板切换到 Babelfish PG17 默认：`pg_version: 17`，`pg_packages: [babelfish, pgsql-common, sqlcmd]`，并移除额外 `mssql` repo 依赖。
+- `pg_home_map` 调整：`mssql` 指向 `/usr/babelfish-$v/`，`gpsql` 指向 `/usr/local/cloudberry`，统一内核路径语义。
+- `package_map` 新增 `cloudberry` 独立映射，并修复 `babelfish*` 组件别名到版本化包名（RPM/DEB）。
+- Redis 默认主目录从 `/data` 调整为 `/data/redis`；部署阶段阻止旧默认值继续使用，`redis_remove` 增加旧路径兼容清理。
+- `configure` 支持 `-o` 绝对路径输出并自动建目录；区域探测改为三态（境内/境外/离线回退），修复 `behind_gfw()` 卡住问题。
+- 修复 Debian/Ubuntu 默认仓库 URL（`updates/backports/security` 对应关系）与中国区镜像组件字段，避免节点初始化拉包失败。
+- Supabase 应用栈例行升级（含 PostgREST `14.5`、Vector `0.53.0` 等）并补齐 S3 协议访问密钥变量。
+- Rich/Sample 模板显式补全 `dbuser_meta` 默认值；`node.sh` 中 systemd 自动补全逻辑简化。
 
-| 名称                           | 旧版本            | 新版本            | 备注 |
-|:-----------------------------|:---------------|:---------------|:---|
-| `grafana`                    | 12.3.2         | 12.3.3         |    |
-| `grafana-victorialogs-ds`    | 0.24.1         | 0.25.0         |    |
-| `grafana-victoriametrics-ds` | 0.21.0         | 0.22.0         |    |
-| `grafana-infinity-ds`        | 3.7.0          | 3.7.1          |    |
-| `redis_exporter`             | 1.80.2         | 1.81.0         |    |
-| `etcd`                       | 3.6.7          | 3.6.8          |    |
-| `dblab`                      | 0.34.2         | 0.34.3         |    |
-| `tigerbeetle`                | 0.16.72        | 0.16.73        |    |
-| `seaweedfs`                  | 4.09           | 4.13           |    |
-| `rustfs`                     | 1.0.0-alpha.82 | 1.0.0-alpha.83 |    |
-| `uv`                         | 0.10.0         | 0.10.4         |    |
-| `kafka`                      | 4.1.1          | 4.2.0          |    |
-| `npgsqlrest`                 | 3.7.0          | 3.8.0          |    |
-| `postgrest`                  | 14.4           | 14.5           |    |
-| `opencode`                   | 1.1.59         | 1.2.6          |    |
-| `genai-toolbox`              | 0.25.0         | 0.27.0         |    |
-| `claude`                     | 2.1.37         | 2.1.45         |    |
-| `rclone`                     | 1.73.0         | 1.73.1         |    |
-| `code-server`                | 4.108.2        | 4.109.2        |    |
-| `code`                       | 1.109.2        | 1.109.4        |    |
-| `pig`                        | 1.1.1          | 1.1.2          |    |
+**PG 扩展包更新**
+
+> 依据 [APT Changelog 2026-02-20](/docs/repo/pgsql/deb/#2026-02-20) 与 [DNF Changelog 2026-02-20](/docs/repo/pgsql/rpm/#2026-02-20) 汇总。
+>
+> 注：以下版本对比为 WIP 阶段统计，最终以正式发布包索引为准。
+
+| 包名                  | 旧版本             | 新版本      | 备注                    |
+|:--------------------|:----------------|:---------|:----------------------|
+| `timescaledb`       | 2.25.0          | 2.25.1   |                       |
+| `citus`             | 14.0.0-3        | 14.0.0-4 | 使用最新官方版本重新构建（DEB/RPM） |
+| `age`               | 1.7.0           | 1.7.0    | 新增 PG 17 的 1.7.0 版本支持 |
+| `pg_background`     | -               | 1.8      | 仅构建 DEB 包，RPM 来自 PGDG |
+| `pgmq`              | 1.10.0          | 1.10.1   | 当前没有该扩展包              |
+| `pg_search`         | 0.21.6 / 0.21.7 | 0.21.8   | 直接下载使用（DEB/RPM 旧版本不同） |
+| `oriolepg`          | 17.11           | 17.16    | OriolePG 内核更新         |
+| `orioledb`          | beta12          | beta14   | 配套 OriolePG 17.16     |
+| `cloudberry`        | -               | 2.0.0    | 新增包                   |
+| `babelfishpg`       | -               | 5.5.0    | 新增 BabelfishPG 包组     |
+| `babelfish`         | -               | 5.5.0    | 新增 Babelfish 兼容包      |
+| `antlr4-runtime413` | -               | 4.13     | 新增 Babelfish 依赖运行时    |
+
+**基础设施软件包更新**
+
+> 依据 [Infra Changelog 2026-02-18](/docs/repo/infra/log/#2026-02-18) 与 [Infra Changelog 2026-02-22](/docs/repo/infra/log/#2026-02-22) 汇总。
+
+| 名称                           | 旧版本            | 新版本            | 备注        |
+|:-----------------------------|:---------------|:---------------|:----------|
+| `grafana`                    | 12.3.2         | 12.3.3         |           |
+| `grafana-victorialogs-ds`    | 0.24.1         | 0.25.0         |           |
+| `grafana-victoriametrics-ds` | 0.21.0         | 0.22.0         |           |
+| `grafana-infinity-ds`        | 3.7.0          | 3.7.1          |           |
+| `victoria-metrics`           | 1.135.0        | 1.136.0        |           |
+| `victoria-metrics-cluster`   | 1.135.0        | 1.136.0        |           |
+| `vmutils`                    | 1.135.0        | 1.136.0        |           |
+| `loki`                       | 3.6.5          | 3.6.6          |           |
+| `promtail`                   | 3.6.5          | 3.6.6          |           |
+| `logcli`                     | 3.6.5          | 3.6.6          |           |
+| `redis_exporter`             | 1.80.2         | 1.81.0         |           |
+| `etcd`                       | 3.6.7          | 3.6.8          |           |
+| `dblab`                      | 0.34.2         | 0.34.3         |           |
+| `tigerbeetle`                | 0.16.72        | 0.16.73        |           |
+| `seaweedfs`                  | 4.09           | 4.13           |           |
+| `rustfs`                     | 1.0.0-alpha.82 | 1.0.0-alpha.83 |           |
+| `uv`                         | 0.10.0         | 0.10.4         |           |
+| `kafka`                      | 4.1.1          | 4.2.0          |           |
+| `npgsqlrest`                 | 3.7.0          | 3.8.0          |           |
+| `postgrest`                  | 14.4           | 14.5           |           |
+| `opencode`                   | 1.1.59         | 1.2.10         | 2/22 再次更新 |
+| `genai-toolbox`              | 0.25.0         | 0.27.0         |           |
+| `claude`                     | 2.1.37         | 2.1.45         |           |
+| `rclone`                     | 1.73.0         | 1.73.1         |           |
+| `code-server`                | 4.108.2        | 4.109.2        |           |
+| `code`                       | 1.109.2        | 1.109.4        |           |
+| `pig`                        | 1.1.1          | 1.2.0          | 2/22 再次更新 |
+| `stalwart`                   | -              | 0.15.5         | 新增        |
+| `maddy`                      | -              | 0.8.2          | 新增        |
+
+**提交清单（`v4.1.0..HEAD`，共 12，2026-02-15 ~ 2026-02-23）**
+
+```text
+6791d6a31 fix behind_gfw() hang due to --connect-timeout not covering transfer phase
+b8efed293 conf: make dbuser_meta defaults explicit in sample templates
+e13a56d98 conf: make dbuser_meta defaults explicit in rich template
+4218d8664 optimize systemd auto completion
+f5f25983c fix(redis): change redis_fs_main default from /data to /data/redis
+097a7d8d7 update babelfish and cloudberry packages
+b2f9d354d update the mssql config template
+9428dcfeb bump supabase to the latest version
+61fbe7b78 add cloudberry and fix babelfish alias
+af197e2d5 fix configure: handle -o absolute path and improve region detection
+603421956 fix the default debian/ubuntu node repo url issue
+f2111eddb chore: bump version to v4.2.0
+```
 
 
 ------

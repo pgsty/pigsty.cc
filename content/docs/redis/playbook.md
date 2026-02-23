@@ -240,7 +240,7 @@ redis_pkg        : 卸载软件包（当 redis_rm_pkg=true）
 | 监控注册 | 删除整个节点的注册文件 | 仅从注册文件中移除该实例 |
 | redis_exporter | 停止并禁用 | **不操作**（其他实例还需要） |
 | Redis 实例 | 停止所有实例 | 仅停止指定端口的实例 |
-| 数据目录 | 删除 `/data/redis/` 整个目录 | 仅删除 `/data/redis/<cluster>-<node>-<port>/` |
+| 数据目录 | 删除 `redis_fs_main`（默认 `/data/redis/`）整个目录 | 仅删除 `redis_fs_main/<cluster>-<node>-<port>/`（`redis_fs_main=/data` 时按 `/data/redis` 兼容处理） |
 | Vector 配置 | 删除 `/etc/vector/redis.yaml` | **不操作**（其他实例还需要） |
 | 软件包 | 可选卸载 | **不操作** |
 {.full-width}

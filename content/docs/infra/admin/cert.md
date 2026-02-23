@@ -47,20 +47,20 @@ files/pki/
 
 ### CA 变量
 
-| 变量             | 默认值       | 说明                         |
-|------------------|--------------|------------------------------|
-| `ca_create`      | `true`       | 如果不存在则创建 CA，否则中止 |
-| `ca_cn`          | `pigsty-ca`  | CA 证书通用名称               |
-| `cert_validity`  | `7300d`      | 签发证书的默认有效期          |
+| 变量              | 默认值         | 说明               |
+|-----------------|-------------|------------------|
+| `ca_create`     | `true`      | 如果不存在则创建 CA，否则中止 |
+| `ca_cn`         | `pigsty-ca` | CA 证书通用名称        |
+| `cert_validity` | `7300d`     | 签发证书的默认有效期       |
 {.full-width}
 
 ### 证书有效期
 
-| 证书类型       | 有效期    | 控制参数                      |
-|----------------|-----------|-------------------------------|
-| CA 证书        | 100 年    | 硬编码（36500 天）            |
-| 服务器/客户端  | 20 年     | `cert_validity`（7300d）      |
-| Nginx HTTPS    | ~1 年     | `nginx_cert_validity`（397d） |
+| 证书类型        | 有效期   | 控制参数                        |
+|-------------|-------|-----------------------------|
+| CA 证书       | 100 年 | 硬编码（36500 天）                |
+| 服务器/客户端     | 20 年  | `cert_validity`（7300d）      |
+| Nginx HTTPS | ~1 年  | `nginx_cert_validity`（397d） |
 {.full-width}
 
 > **注意**：浏览器厂商限制超过 398 天的证书信任。Nginx 使用较短有效期以保证浏览器兼容性。
@@ -115,15 +115,15 @@ tar -czvf pigsty-ca-$(date +%Y%m%d).tar.gz files/pki/ca/
 
 ### 参数说明
 
-| 参数      | 默认值                      | 说明                     |
-|-----------|----------------------------|--------------------------|
-| `cn`      | `pigsty`                   | 通用名称（必填）          |
-| `san`     | `[DNS:localhost, IP:127.0.0.1]` | 主题备用名称        |
-| `org`     | `pigsty`                   | 组织名称                  |
-| `unit`    | `pigsty`                   | 组织单位名称              |
-| `expire`  | `7300d`                    | 证书有效期（20 年）       |
-| `key`     | `files/pki/misc/<cn>.key`  | 私钥输出路径              |
-| `crt`     | `files/pki/misc/<cn>.crt`  | 证书输出路径              |
+| 参数       | 默认值                             | 说明          |
+|----------|---------------------------------|-------------|
+| `cn`     | `pigsty`                        | 通用名称（必填）    |
+| `san`    | `[DNS:localhost, IP:127.0.0.1]` | 主题备用名称      |
+| `org`    | `pigsty`                        | 组织名称        |
+| `unit`   | `pigsty`                        | 组织单位名称      |
+| `expire` | `7300d`                         | 证书有效期（20 年） |
+| `key`    | `files/pki/misc/<cn>.key`       | 私钥输出路径      |
+| `crt`    | `files/pki/misc/<cn>.crt`       | 证书输出路径      |
 {.full-width}
 
 ### 高级示例
@@ -305,12 +305,12 @@ systemctl enable certbot.timer
 
 ### Certbot 命令
 
-| 命令                                             | 说明         |
-|--------------------------------------------------|--------------|
-| `certbot certificates`                           | 列出所有证书 |
-| `certbot renew --cert-name domain.com`           | 续期指定证书 |
-| `certbot delete --cert-name domain.com`          | 删除证书     |
-| `certbot revoke --cert-path /path/to/cert.pem`   | 吊销证书     |
+| 命令                                             | 说明     |
+|------------------------------------------------|--------|
+| `certbot certificates`                         | 列出所有证书 |
+| `certbot renew --cert-name domain.com`         | 续期指定证书 |
+| `certbot delete --cert-name domain.com`        | 删除证书   |
+| `certbot revoke --cert-path /path/to/cert.pem` | 吊销证书   |
 {.full-width}
 
 ### OpenSSL 命令
