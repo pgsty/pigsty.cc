@@ -101,7 +101,7 @@ PostgreSQL 允许用户开发功能模块，复用数据库公共基础设施，
 
 [![extensions](/img/pigsty/ecosystem.png)](https://pgext.cloud/zh/list)
 
-> Pigsty 中提供了 [**444**](https://pgext.cloud/zh/list) 个可用扩展插件，在生态中还有 1000+ 扩展
+> Pigsty 中提供了 [**451**](https://pgext.cloud/zh/list) 个可用扩展插件，在生态中还有 1000+ 扩展
 
 ------
 
