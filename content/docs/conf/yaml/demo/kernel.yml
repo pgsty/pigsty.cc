@@ -49,8 +49,7 @@ all:
         pg_mode: mssql
         pg_cluster: pg-mssql
         pg_version: 15
-        node_repo_modules: local,mssql                  # extra repo from internet
-        pg_packages: [ wiltondb, pgsql-common, sqlcmd ] # wiltondb is conflict with pgsql-main
+        pg_packages: [ babelfish, pgsql-common, sqlcmd ]
         pg_users: [{name: dbuser_mssql ,password: DBUser.MSSQL ,superuser: true, pgbouncer: true ,roles: [dbrole_admin], comment: superuser & owner for babelfish }]
         pg_databases:
           - name: mssql
@@ -96,7 +95,7 @@ all:
           - { name: dbuser_monitor ,roles: [pg_monitor] ,pgbouncer: true ,parameters: {log_min_duration_statement: 1000 } ,pool_mode: session ,pool_connlimit: 8 ,comment: pgsql monitor user }
 
   vars:
-    version: v4.1.0                   # pigsty version string
+    version: v4.2.0                   # pigsty version string
     admin_ip: 10.10.10.10             # admin node ip address
     region: default                   # upstream mirror region: default|china|europe
     node_tune: oltp                   # node tuning specs: oltp,olap,tiny,crit

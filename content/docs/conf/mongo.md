@@ -44,15 +44,15 @@ categories: [参考]
 
 `mongo` 模板包含两个核心分组：
 
-- `pg-meta`：PostgreSQL 主库，承载 `documentdb`、`pg_cron`、`rum` 等扩展。
-- `ferret`：Mongo 协议兼容服务层，使用 `mongo_pgurl` 连接 PostgreSQL。
+- `pg-meta`：PostgreSQL 主库，默认安装 `documentdb`、`postgis`、`pgvector`、`pg_cron`、`rum`。
+- `ferret`：Mongo 协议兼容服务层，使用 `mongo_pgurl`（默认连接 `postgres` 库）访问 PostgreSQL。
 
 关键特征：
 
 - 默认使用 PostgreSQL 18（可改为 16/17/18）。
 - 在 `postgres` 数据库直接启用 `documentdb` 相关能力，便于快速验证。
+- 预加载库包含 `pg_documentdb`、`pg_documentdb_core`、`pg_documentdb_extended_rum`、`pg_cron`。
 - 默认 HBA 规则包含本地 trust 与内网密码访问，便于开发测试。
-- `version` 已对齐 `v4.1.0`，并与主仓库配置保持一致。
 
 注意事项：
 

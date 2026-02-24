@@ -98,6 +98,9 @@ all:
         pg_users:                           # define business users/roles on this cluster, array of user definition
           - name: dbuser_meta               # REQUIRED, `name` is the only mandatory field of a user definition
             password: DBUser.Meta           # optional, password, can be a scram-sha-256 hash string or plain text
+            pgbouncer: true                 # optional, add this user to pgbouncer user-list? false by default (production user should be true explicitly)
+            comment: pigsty admin user      # optional, comment string for this user/role
+            roles: [ dbrole_admin ]         # optional, belonged roles. default roles are: dbrole_{admin,readonly,readwrite,offline}
             #login: true                     # optional, can log in, true by default  (new biz ROLE should be false)
             #superuser: false                # optional, is superuser? false by default
             #createdb: false                 # optional, can create database? false by default
@@ -105,12 +108,9 @@ all:
             #inherit: true                   # optional, can this role use inherited privileges? true by default
             #replication: false              # optional, can this role do replication? false by default
             #bypassrls: false                # optional, can this role bypass row level security? false by default
-            #pgbouncer: true                 # optional, add this user to pgbouncer user-list? false by default (production user should be true explicitly)
             #connlimit: -1                   # optional, user connection limit, default -1 disable limit
             #expire_in: 3650                 # optional, now + n days when this role is expired (OVERWRITE expire_at)
             #expire_at: '2030-12-31'         # optional, YYYY-MM-DD 'timestamp' when this role is expired  (OVERWRITTEN by expire_in)
-            #comment: pigsty admin user      # optional, comment string for this user/role
-            #roles: [dbrole_admin]           # optional, belonged roles. default roles are: dbrole_{admin,readonly,readwrite,offline}
             #parameters: {}                  # optional, role level parameters with `ALTER ROLE SET`
             #pool_mode: transaction          # optional, pgbouncer pool mode at user level, transaction by default
             #pool_connlimit: -1              # optional, max database connections at user level, default -1 disable limit
@@ -208,7 +208,7 @@ all:
     #-----------------------------------------------------------------
     # META
     #-----------------------------------------------------------------
-    version: v4.1.0                   # pigsty version string
+    version: v4.2.0                   # pigsty version string
     admin_ip: 10.10.10.10             # admin node ip address
     region: default                   # upstream mirror region: default,china,europe
     language: en                      # default language: en, zh
@@ -275,7 +275,7 @@ all:
       - { name: pgdg18-nonfree ,description: 'PostgreSQL 18+'     ,module: extra   ,releases: [8,9,10] ,arch: [x86_64         ] ,baseurl: { default: 'https://download.postgresql.org/pub/repos/yum/non-free/18/redhat/rhel-$releasever-$basearch' ,china: 'https://mirrors.aliyun.com/postgresql/repos/yum/non-free/18/redhat/rhel-$releasever-$basearch' ,europe: 'https://mirrors.xtom.de/postgresql/repos/yum/non-free/18/redhat/rhel-$releasever-$basearch' }}
       - { name: timescaledb    ,description: 'TimescaleDB'        ,module: extra   ,releases: [8,9   ] ,arch: [x86_64, aarch64] ,baseurl: { default: 'https://packagecloud.io/timescale/timescaledb/el/$releasever/$basearch'  }}
       - { name: percona        ,description: 'Percona TDE'        ,module: percona ,releases: [8,9,10] ,arch: [x86_64, aarch64] ,baseurl: { default: 'https://repo.pigsty.io/yum/percona/el$releasever.$basearch' ,china: 'https://repo.pigsty.cc/yum/percona/el$releasever.$basearch' ,origin: 'http://repo.percona.com/ppg-18.1/yum/release/$releasever/RPMS/$basearch'  }}
-      - { name: wiltondb       ,description: 'WiltonDB'           ,module: mssql   ,releases: [8,9   ] ,arch: [x86_64, aarch64] ,baseurl: { default: 'https://repo.pigsty.io/yum/mssql/el$releasever.$basearch', china: 'https://repo.pigsty.cc/yum/mssql/el$releasever.$basearch' , origin: 'https://download.copr.fedorainfracloud.org/results/wiltondb/wiltondb/epel-$releasever-$basearch/' }}
+      - { name: babelfish      ,description: 'Babelfish'          ,module: mssql   ,releases: [8,9   ] ,arch: [x86_64, aarch64] ,baseurl: { default: 'https://repo.pigsty.io/yum/mssql/el$releasever.$basearch', china: 'https://repo.pigsty.cc/yum/mssql/el$releasever.$basearch' , origin: 'https://repo.pigsty.io/yum/mssql/el$releasever.$basearch' }}
       - { name: groonga        ,description: 'Groonga'            ,module: groonga ,releases: [8,9,10] ,arch: [x86_64, aarch64] ,baseurl: { default: 'https://packages.groonga.org/almalinux/$releasever/$basearch/' }}
       - { name: mysql          ,description: 'MySQL'              ,module: mysql   ,releases: [8,9   ] ,arch: [x86_64, aarch64] ,baseurl: { default: 'https://repo.mysql.com/yum/mysql-8.4-community/el/$releasever/$basearch/' }}
       - { name: mongo          ,description: 'MongoDB'            ,module: mongo   ,releases: [8,9   ] ,arch: [x86_64, aarch64] ,baseurl: { default: 'https://repo.mongodb.org/yum/redhat/$releasever/mongodb-org/8.0/$basearch/' ,china: 'https://mirrors.aliyun.com/mongodb/yum/redhat/$releasever/mongodb-org/8.0/$basearch/' }}
@@ -424,7 +424,7 @@ all:
       - 10.0.0.0/8
       - 192.168.0.0/16
       - 172.16.0.0/12
-    node_firewall_public_port:        # expose these ports to public network in zone mode
+    node_firewall_public_port:        # expose these ports to public network in (zone, strict) mode
       - 22                            # enable ssh access
       - 80                            # enable http access
       - 443                           # enable https access

@@ -98,6 +98,9 @@ all:
         pg_users:                           # define business users/roles on this cluster, array of user definition
           - name: dbuser_meta               # REQUIRED, `name` is the only mandatory field of a user definition
             password: DBUser.Meta           # optional, password, can be a scram-sha-256 hash string or plain text
+            pgbouncer: true                 # optional, add this user to pgbouncer user-list? false by default (production user should be true explicitly)
+            comment: pigsty admin user      # optional, comment string for this user/role
+            roles: [ dbrole_admin ]         # optional, belonged roles. default roles are: dbrole_{admin,readonly,readwrite,offline}
             #login: true                     # optional, can log in, true by default  (new biz ROLE should be false)
             #superuser: false                # optional, is superuser? false by default
             #createdb: false                 # optional, can create database? false by default
@@ -105,12 +108,9 @@ all:
             #inherit: true                   # optional, can this role use inherited privileges? true by default
             #replication: false              # optional, can this role do replication? false by default
             #bypassrls: false                # optional, can this role bypass row level security? false by default
-            #pgbouncer: true                 # optional, add this user to pgbouncer user-list? false by default (production user should be true explicitly)
             #connlimit: -1                   # optional, user connection limit, default -1 disable limit
             #expire_in: 3650                 # optional, now + n days when this role is expired (OVERWRITE expire_at)
             #expire_at: '2030-12-31'         # optional, YYYY-MM-DD 'timestamp' when this role is expired  (OVERWRITTEN by expire_in)
-            #comment: pigsty admin user      # optional, comment string for this user/role
-            #roles: [dbrole_admin]           # optional, belonged roles. default roles are: dbrole_{admin,readonly,readwrite,offline}
             #parameters: {}                  # optional, role level parameters with `ALTER ROLE SET`
             #pool_mode: transaction          # optional, pgbouncer pool mode at user level, transaction by default
             #pool_connlimit: -1              # optional, max database connections at user level, default -1 disable limit
@@ -208,7 +208,7 @@ all:
     #-----------------------------------------------------------------
     # META
     #-----------------------------------------------------------------
-    version: v4.1.0                   # pigsty version string
+    version: v4.2.0                   # pigsty version string
     admin_ip: 10.10.10.10             # admin node ip address
     region: default                   # upstream mirror region: default,china,europe
     language: en                      # default language: en, zh
@@ -264,7 +264,7 @@ all:
       - { name: timescaledb    ,description: 'TimescaleDB'        ,module: extra   ,releases: [11,12,13,20,22,24] ,arch: [x86_64, aarch64] ,baseurl: { default: 'https://packagecloud.io/timescale/timescaledb/${distro_name}/ ${distro_codename} main' }}
       - { name: citus          ,description: 'Citus'              ,module: extra   ,releases: [11,12,   20,22   ] ,arch: [x86_64, aarch64] ,baseurl: { default: 'https://packagecloud.io/citusdata/community/${distro_name}/ ${distro_codename} main' } }
       - { name: percona        ,description: 'Percona TDE'        ,module: percona ,releases: [11,12,13,20,22,24] ,arch: [x86_64, aarch64] ,baseurl: { default: 'https://repo.pigsty.io/apt/percona ${distro_codename} main' ,china: 'https://repo.pigsty.cc/apt/percona ${distro_codename} main' ,origin: 'http://repo.percona.com/ppg-18.1/apt ${distro_codename} main' }}
-      - { name: wiltondb       ,description: 'WiltonDB'           ,module: mssql   ,releases: [         20,22,24] ,arch: [x86_64, aarch64] ,baseurl: { default: 'https://repo.pigsty.io/apt/mssql/ ${distro_codename} main'  ,china: 'https://repo.pigsty.cc/apt/mssql/ ${distro_codename} main'  ,origin: 'https://ppa.launchpadcontent.net/wiltondb/wiltondb/ubuntu/ ${distro_codename} main'  }}
+      - { name: babelfish      ,description: 'Babelfish'          ,module: mssql   ,releases: [         20,22,24] ,arch: [x86_64, aarch64] ,baseurl: { default: 'https://repo.pigsty.io/apt/mssql/ ${distro_codename} main'  ,china: 'https://repo.pigsty.cc/apt/mssql/ ${distro_codename} main'  ,origin: 'https://repo.pigsty.io/apt/mssql/ ${distro_codename} main'  }}
       - { name: groonga        ,description: 'Groonga Debian'     ,module: groonga ,releases: [11,12,13         ] ,arch: [x86_64, aarch64] ,baseurl: { default: 'https://packages.groonga.org/debian/ ${distro_codename} main' }}
       - { name: groonga        ,description: 'Groonga Ubuntu'     ,module: groonga ,releases: [         20,22,24] ,arch: [x86_64, aarch64] ,baseurl: { default: 'https://ppa.launchpadcontent.net/groonga/ppa/ubuntu/ ${distro_codename} main' }}
       - { name: mysql          ,description: 'MySQL'              ,module: mysql   ,releases: [11,12,   20,22,24] ,arch: [x86_64, aarch64] ,baseurl: { default: 'https://repo.mysql.com/apt/${distro_name} ${distro_codename} mysql-8.0 mysql-tools', china: 'https://mirrors.tuna.tsinghua.edu.cn/mysql/apt/${distro_name} ${distro_codename} mysql-8.0 mysql-tools' }}
@@ -417,7 +417,7 @@ all:
       - 10.0.0.0/8
       - 192.168.0.0/16
       - 172.16.0.0/12
-    node_firewall_public_port:        # expose these ports to public network in zone mode
+    node_firewall_public_port:        # expose these ports to public network in (zone, strict) mode
       - 22                            # enable ssh access
       - 80                            # enable http access
       - 443                           # enable https access

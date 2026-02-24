@@ -6,7 +6,7 @@ icon: fa-solid fa-laptop-code
 categories: [参考]
 ---
 
-`vibe` 配置模板提供了一个开箱即用的 **AI 编程沙箱**，集成了 Code-Server（Web VS Code）、JupyterLab、Claude Code CLI，以及 JuiceFS 分布式文件系统和功能丰富的 PostgreSQL 数据库。
+`vibe` 配置模板提供了一个开箱即用的 **AI 编程沙箱**，集成了 Code-Server（Web VS Code）、JupyterLab、Claude Code 可观测能力、JuiceFS 分布式文件系统，以及功能丰富的 PostgreSQL 数据库。
 
 
 --------
@@ -48,65 +48,56 @@ categories: [参考]
 |------|------|---------|
 | **Code-Server** | VS Code 的 Web 版本，功能完整的代码编辑器 | `http://<ip>/code` |
 | **JupyterLab** | 交互式数据科学笔记本，支持 Python/SQL | `http://<ip>/jupyter` |
-| **Claude Code** | AI 编程助手 CLI，内置 OpenTelemetry 可观测性 | 终端使用 `claude` 命令 |
+| **Claude Code** | AI 编程助手运行环境与可观测性入口（可通过 `claude_env` 定制） | 终端 / 仪表盘 |
 | **JuiceFS** | 基于 PostgreSQL 的分布式文件系统 | 挂载点 `/fs` |
-| **PostgreSQL 18** | 功能丰富的数据库，预装向量/时序/全文搜索扩展 | `5432` 端口 |
+| **PostgreSQL 18** | 功能丰富的数据库，安装 `pg18-main` + 全类别扩展包组 | `5432` 端口 |
 
-**预装开发工具**：
+**模板显式安装的节点工具**（`node_packages`）：
 
-- **AI 助手**：`claude`（Claude Code CLI）、`opencode`（命令行 AI 编程工具）
-- **语言运行时**：`golang`、`nodejs`、`uv`（Python 包管理器）
-- **数据工具**：`postgrest`（自动 REST API）、`genai-toolbox`
-- **实用工具**：`restic`、`rclone`（备份同步）、`asciinema`（终端录制）
+- `openssh-server`, `juicefs`, `restic`, `rclone`
+- `uv`, `opencode`, `golang`
+- `asciinema`, `tmux`
 
 **PostgreSQL 扩展**：
 
-此模板预装了丰富的 PostgreSQL 扩展，覆盖 AI/向量、时序、全文搜索、分析等场景：
+此模板通过分类包组安装 PostgreSQL 18 的完整扩展集合：
 
 ```
-# 向量与 AI
-pgvector, vchord, pgvectorscale, pg_search, pg_textsearch, vchord_bm25
-
-# 时序与地理
-timescaledb, postgis, pg_cron
-
-# 分析与湖仓
-pg_duckdb, pg_mooncake, pg_clickhouse, pg_parquet
-
-# 安全与审计
-pg_anon, pgsmcrypto, credcheck, pg_vault, pgsodium, pg_session_jwt
-
-# 开发辅助
-pg_tle, pljs, plprql, documentdb, pglinter
+pg18-main, pg18-time, pg18-gis, pg18-rag, pg18-fts, pg18-olap,
+pg18-feat, pg18-lang, pg18-type, pg18-util, pg18-func, pg18-admin,
+pg18-stat, pg18-sec, pg18-fdw, pg18-sim, pg18-etl
 ```
+
+`meta` 业务库默认创建扩展为 `postgis`、`timescaledb`、`vector`，其余扩展可按需启用。
 
 
 --------
 
 ## VIBE 模块组件
 
-VIBE 模块是 v4.1.0 的 AI 编程沙箱模块，包含三个核心组件：
+VIBE 模块在 v4.2 系列中提供 AI 编程沙箱能力；`vibe.yml` 显式开启 Code-Server 与 Jupyter，并预留 Claude 自定义入口。
 
 **Code-Server**：浏览器中的 VS Code
 
 - 完整的 VS Code 功能，支持扩展安装
 - 通过 Nginx 反向代理提供 HTTPS 访问
 - 支持 Open VSX 和 Microsoft 扩展商店
-- 相关参数：`code_enabled`, `code_port`, `code_data`, `code_password`, `code_gallery`
+- 模板显式参数：`code_enabled`, `code_password`
+- 其余可选参数：`code_port`, `code_data`, `code_gallery`
 
 **JupyterLab**：交互式计算环境
 
 - 支持 Python/SQL/Markdown 笔记本
 - 预配置 Python venv 数据科学库
 - 通过 Nginx 反向代理提供 HTTPS 访问
-- 相关参数：`jupyter_enabled`, `jupyter_port`, `jupyter_data`, `jupyter_password`, `jupyter_venv`
+- 模板显式参数：`jupyter_enabled`, `jupyter_password`
+- 其余可选参数：`jupyter_port`, `jupyter_data`, `jupyter_venv`
 
 **Claude Code**：AI 编程助手
 
-- 配置 Claude Code CLI，跳过初始引导
-- 内置 OpenTelemetry 配置，将指标/日志发送到 Victoria 堆栈
+- 使用模块默认行为完成 Claude 运行环境配置
+- 可通过 `claude_env` 覆盖模型端点与 API 密钥
 - 提供 `claude-code` 仪表盘监控使用情况
-- 相关参数：`claude_enabled`, `claude_env`
 
 
 --------
@@ -119,7 +110,7 @@ VIBE 模块是 v4.1.0 的 AI 编程沙箱模块，包含三个核心组件：
 
 - **元数据引擎**：使用 PostgreSQL 存储文件系统元数据
 - **数据存储**：使用 PostgreSQL 大对象（Large Object）存储文件数据
-- **挂载点**：默认挂载到 `/fs` 目录（由 `vibe_data` 参数控制）
+- **挂载点**：默认挂载到 `/fs` 目录（由 `juice_instances.jfs.path` 控制）
 - **监控端口**：`9567` 提供 Prometheus 指标
 
 **使用场景**：
@@ -176,14 +167,14 @@ vi pigsty.yml
 ```bash
 # Code-Server (VS Code Web)
 http://<ip>/code
-# 密码：Code.Server（请修改）
+# 密码：DBUser.Meta（请修改）
 
 # JupyterLab
 http://<ip>/jupyter
-# 密码：Jupyter.Lab（请修改）
+# 密码：DBUser.Meta（请修改）
 
 # Claude Code 仪表盘
-http://<ip>:3000/d/claude-code
+http://<ip>/ui/d/claude-code
 # Grafana 默认用户名：admin，密码：pigsty
 
 # PostgreSQL
@@ -208,7 +199,7 @@ psql postgres://dbuser_meta:DBUser.Meta@<ip>:5432/meta
 ## 注意事项
 
 - **必须修改密码**：`code_password` 和 `jupyter_password` 默认值仅供测试
-- **网络安全**：此模板开放了全网访问（`addr: world`），生产环境请配置防火墙或 VPN
+- **网络安全**：此模板默认开放 `5432`（`node_firewall_public_port`）且包含 `addr: world` HBA 规则，生产环境请收紧
 - **资源需求**：建议至少 2 核 4GB 内存，SSD 磁盘
 - **精简架构**：此模板禁用了 Patroni、PgBouncer 等高可用组件，适合单节点开发环境
 - **Claude API**：使用 Claude Code 需要配置 `claude_env` 中的 API 密钥
