@@ -1,12 +1,12 @@
 ---
 title: Registry：容器镜像缓存
 weight: 615
-description: 使用 Pigsty v4.1 部署 Docker Registry Pull-Through Cache 与可选 Web UI。
+description: 使用 Pigsty v4.2 部署 Docker Registry Pull-Through Cache 与可选 Web UI。
 module: [SOFTWARE]
 categories: [参考]
 ---
 
-Pigsty v4.1 提供 `app/registry` 配置模板（`conf/app/registry.yml`），用于部署：
+Pigsty v4.2 提供 `app/registry` 配置模板（`conf/app/registry.yml`），用于部署：
 
 - Docker Registry 缓存服务（默认 `5000`）
 - 可选管理 UI（默认 `5080`）

@@ -92,7 +92,7 @@ all:
     #minio: { hosts: { 10.10.10.10: { minio_seq: 1 } }, vars: { minio_cluster: minio } }
 
   vars:                               # 全局变量
-    version: v4.1.0                   # pigsty 版本字符串
+    version: v4.2.0                   # pigsty 版本字符串
     admin_ip: 10.10.10.10             # 管理节点 ip 地址
     region: default                   # 上游镜像区域：default|china|europe
     node_tune: oltp                   # 节点调优规格：oltp,olap,tiny,crit

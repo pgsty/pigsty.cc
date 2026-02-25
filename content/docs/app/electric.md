@@ -1,14 +1,14 @@
 ---
 title: Electric：PostgreSQL 同步引擎
 weight: 645
-description: 使用 Pigsty v4.1 自建 Electric，同步 PostgreSQL 数据到前端应用，支持部分复制与实时分发。
+description: 使用 Pigsty v4.2 自建 Electric，同步 PostgreSQL 数据到前端应用，支持部分复制与实时分发。
 module: [SOFTWARE]
 categories: [参考]
 ---
 
 [**Electric**](https://electric-sql.com/) 是 PostgreSQL 同步引擎，专注于将数据库变更高效分发到前端/边缘应用。
 
-Pigsty 在 v4.1 提供了 `app/electric` 配置模板（`conf/app/electric.yml`），可一键完成数据库、容器与入口配置。
+Pigsty 在 v4.2 提供了 `app/electric` 配置模板（`conf/app/electric.yml`），可一键完成数据库、容器与入口配置。
 
 ## 快速开始
 
