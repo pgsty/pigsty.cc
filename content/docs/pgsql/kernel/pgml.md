@@ -4,8 +4,7 @@ weight: 2109
 date: 2024-06-23
 description: 如何使用 Pigsty 部署 PostgresML，在数据库内进行机器学习、模型训练、推理、Embedding 与 RAG。
 icon: fas fa-bolt
-module: [SOFTWARE]
-categories: [概念]
+toc_hide: true
 ---
 
 

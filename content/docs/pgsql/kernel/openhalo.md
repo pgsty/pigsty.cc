@@ -1,5 +1,5 @@
 ---
-title: OpenHalo
+title: openHalo
 weight: 2110
 description: MySQL 兼容的 Postgres 14 分支
 icon: fa-solid fa-sync
@@ -9,16 +9,19 @@ categories: [概念]
 
 [OpenHalo](https://www.openhalo.org/) 是一个开源的 PostgreSQL 内核，提供 MySQL 线协议兼容性。
 
-OpenHalo 基于 PostgreSQL 14.10 内核版本，提供与 MySQL 5.7.32-log / 8.0 版本的线协议兼容性。
+openHalo 基于 PostgreSQL 14.18 内核版本，提供与 MySQL 5.7.32-log / 8.0 版本的线协议兼容性。
 
 Pigsty 在所有支持的 Linux 平台上为 OpenHalo 提供部署支持。
+
+- RPM 构建 SPEC: [github.com/pgsty/rpm/rpmbuild/specs/openhalodb.spec](https://github.com/pgsty/rpm/blob/main/rpmbuild/SPECS/openhalodb.spec)
+- DEB 构建 SPEC: [github.com/pgsty/deb/debbuild/openhalodb](https://github.com/pgsty/deb/tree/main/debbuild/openhalodb)
 
 
 ------
 
 ## 快速开始
 
-使用 Pigsty 的 [**标准安装流程**](/docs/setup/install) 和 [`mysql`](https://github.com/pgsty/pigsty/blob/main/conf/mysql.yml) 配置模板。
+使用 Pigsty 的 [**标准安装流程**](/docs/setup/install) 和 [`mysql`](/docs/conf/mysql) 配置模板。
 
 ```bash
 curl -fsSL https://repo.pigsty.io/get | bash; cd ~/pigsty;
@@ -43,7 +46,7 @@ pg-meta:
       - {name: dbuser_meta ,password: DBUser.Meta   ,pgbouncer: true ,roles: [dbrole_admin]    ,comment: pigsty admin user }
       - {name: dbuser_view ,password: DBUser.Viewer ,pgbouncer: true ,roles: [dbrole_readonly] ,comment: read-only viewer for meta database }
     pg_databases:
-      - {name: postgres, extensions: [aux_mysql]} # mysql 兼容数据库
+      - {name: postgres, extensions: [ aux_mysql ]} # mysql 兼容数据库
       - {name: meta ,baseline: cmdb.sql ,comment: pigsty meta database ,schemas: [pigsty]}
     pg_hba_rules:
       - {user: dbuser_view , db: all ,addr: infra ,auth: pwd ,title: 'allow grafana dashboard access cmdb from infra nodes'}
@@ -55,12 +58,16 @@ pg-meta:
     pg_packages: [ openhalodb, pgsql-common ]  # 安装 openhalodb 而不是 postgresql 内核
 ```
 
+OpenHalo 提供了一个独有的扩展 `aux_mysql`，它包含了 MySQL 兼容性所需的函数和类型。请确保在 `pg_databases` 配置中为 `postgres` 数据库启用此扩展，以获得完整的 MySQL 兼容功能。
+
+
 
 ------
 
 ## 使用
 
-访问 MySQL 时，实际连接使用的是 `postgres` 数据库。请注意，MySQL 中的"数据库"概念实际上对应于 PostgreSQL 中的"Schema"。因此，`use mysql` 实际上使用的是 `postgres` 数据库内的 `mysql` Schema。
+访问 MySQL 时，实际连接使用的是 `postgres` 数据库。请注意，MySQL 中的"数据库"概念实际上对应于 PostgreSQL 中的"Schema"。
+因此，`use mysql` 实际上使用的是 `postgres` 数据库内的 `mysql` Schema。
 
 用于 MySQL 的用户名和密码与 PostgreSQL 中的相同。您可以使用标准的 PostgreSQL 方法管理用户和权限。
 
@@ -79,6 +86,22 @@ mysql -h 127.0.0.1 -u dbuser_dba
 目前，OpenHalo 官方确保 Navicat 可以正常访问此 MySQL 端口，但 Intellij IDEA 的 DataGrip 访问会导致错误。
 
 
+--------
+
+## 配置
+
+Pigsty 默认配置了 `database_compat_mode` 值为 `mysql`，启用 MySQL 兼容性模式。您可以进一步调整以下参数来调整 MySQL 兼容性设置：
+
+```ini
+mysql.listener_on = true	                    # (enable MySQL listener; change requires restart)
+mysql.port = 3306                              # (second_port is for MySQL mode; change requires restart)
+mysql.halo_mysql_version = '5.7.32-log'        # (change requires restart)
+mysql.ci_collation = true                      # (change requires restart)
+mysql.explicit_defaults_for_timestamp = false  # (change requires restart)
+mysql.auto_rollback_tx_on_error = false        # (change requires restart)
+```
+
+
 ------
 
 ## 修改说明
@@ -86,10 +109,10 @@ mysql -h 127.0.0.1 -u dbuser_dba
 Pigsty 安装的 [OpenHalo](https://github.com/pgsty/openHalo) 内核基于 [HaloTech-Co-Ltd/openHalo](https://github.com/HaloTech-Co-Ltd/openHalo) 内核进行了少量修改：
 
 - 将默认数据库名称从 `halo0root` 改回 `postgres`
-- 从默认版本号中删除 `1.0.` 前缀，恢复为 `14.10`
+- 从默认版本号中删除 `1.0.` 前缀，恢复为 `14.18`（否则 Patroni 会报错）
 - 修改默认配置文件以启用 MySQL 兼容性并默认监听端口 `3306`
 
 请注意，Pigsty 不为使用 OpenHalo 内核提供任何保证。使用此内核时遇到的任何问题或需求应与原始供应商联系。
 
-> **警告**：目前处于实验阶段 - 在生产使用前请彻底评估。
+> **警告**：目前该内核处于 beta1 阶段 - 在生产使用前请自行评估风险。
 

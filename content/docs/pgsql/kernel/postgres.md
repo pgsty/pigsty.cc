@@ -9,7 +9,7 @@ categories: [概念]
 
 [PostgreSQL](https://www.postgresql.org/) 是世界上最先进和最受欢迎的开源数据库。
 
-Pigsty 支持 PostgreSQL 13 ~ 18，并提供 451 个 PG 扩展。
+Pigsty 支持 PostgreSQL 13 ~ 18，并提供 461 个 PG 扩展。
 
 
 ------

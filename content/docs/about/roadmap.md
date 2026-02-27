@@ -31,7 +31,7 @@ Pigsty 使用 **main** 主干分支进行开发，请始终使用带有版本号
 
 ## 列入考虑的新特性
 
-- [ ] Agent Native CLI - PIG
+- [x] Agent Native CLI - PIG
 - [ ] DBA Agent - 基本集成
 - [ ] Grafana Dashboard 改进
 - [ ] Boar 管理平台
