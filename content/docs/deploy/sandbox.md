@@ -47,7 +47,7 @@ all:
       vars: { pg_cluster: pg-test }
 
   vars:
-    version: v4.1.0
+    version: v4.2.0
     admin_ip: 10.10.10.10
     region: default
     pg_version: 18
