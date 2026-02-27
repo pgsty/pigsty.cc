@@ -12,13 +12,13 @@
 # Author    :   Ruohang Feng (rh@vonng.com)
 # License   :   Apache-2.0
 #==============================================================#
-DEFAULT_VERSION=v4.1.0
+DEFAULT_VERSION=v4.2.0
 
-# To install the latest version of pigsty (v4.1.0):
+# To install the latest version of pigsty (v4.2.0):
 # curl -fsSL https://repo.pigsty.cc/pkg | bash
 
-# To install a specific version of pigsty (e.g. v4.1.0)
-# curl -fsSL https://repo.pigsty.cc/pkg | bash -s v4.1.0
+# To install a specific version of pigsty (e.g. v4.2.0)
+# curl -fsSL https://repo.pigsty.cc/pkg | bash -s v4.2.0
 
 
 #--------------------------------------------------------------#
@@ -161,4 +161,3 @@ log_line "TodoList"
 log_hint "cd ${INSTALL_TO}"
 log_hint './configure      # [OPTIONAL] preflight-check and config generation'
 log_hint './deploy.yml     # deployment everything described by your config'
-
