@@ -1,21 +1,21 @@
 ---
 #==============================================================#
-# File      :   mysql.yml
-# Desc      :   1-node OpenHaloDB (MySQL Compatible) template
-# Ctime     :   2025-04-03
+# File      :   agens.yml
+# Desc      :   1-node AgensGraph (Graph DB) template
+# Ctime     :   2026-02-26
 # Mtime     :   2026-02-26
-# Docs      :   https://pigsty.io/docs/conf/mysql
+# Docs      :   https://pigsty.io/docs/conf/agens
 # License   :   Apache-2.0 @ https://pigsty.io/docs/about/license/
 # Copyright :   2018-2026  Ruohang Feng / Vonng (rh@vonng.com)
 #==============================================================#
 
-# This is the config template for OpenHalo PG Kernel,
-# Which is a PostgreSQL 14 fork with MySQL Wire Compatibility
-# tutorial: https://pigsty.io/docs/pgsql/kernel/openhalo
+# This is the config template for AgensGraph Kernel,
+# Which is a PostgreSQL 16 fork with graph capabilities.
+# tutorial: https://pigsty.io/docs/pgsql/kernel/agensgraph
 #
 # Usage:
 #   curl https://repo.pigsty.io/get | bash
-#   ./configure -c mysql
+#   ./configure -c agens
 #   ./deploy.yml
 
 all:
@@ -25,9 +25,8 @@ all:
     #minio: { hosts: { 10.10.10.10: { minio_seq: 1 }} ,vars: { minio_cluster: minio }}
 
     #----------------------------------------------#
-    # OpenHalo Database Cluster
+    # AgensGraph Database Cluster
     #----------------------------------------------#
-    # connect with mysql client: mysql -h 10.10.10.10 -u dbuser_meta -D mysql (the actual database is 'postgres', and 'mysql' is a schema)
     pg-meta:
       hosts:
         10.10.10.10: { pg_seq: 1, pg_role: primary }
@@ -37,17 +36,15 @@ all:
           - {name: dbuser_meta ,password: DBUser.Meta   ,pgbouncer: true ,roles: [dbrole_admin]    ,comment: pigsty admin user }
           - {name: dbuser_view ,password: DBUser.Viewer ,pgbouncer: true ,roles: [dbrole_readonly] ,comment: read-only viewer for meta database }
         pg_databases:
-          - {name: postgres, extensions: [aux_mysql]} # the mysql compatible database
           - {name: meta ,baseline: cmdb.sql ,comment: pigsty meta database ,schemas: [pigsty]}
         pg_hba_rules:   # https://pigsty.io/docs/pgsql/config/hba
           - { user: all ,db: all ,addr: intra ,auth: pwd ,title: 'everyone intranet access with password' ,order: 800 }
         pg_crontab:     # https://pigsty.io/docs/pgsql/admin/crontab
           - '00 01 * * * /pg/bin/pg-backup full'
 
-        # OpenHalo Ad Hoc Setting
-        pg_mode: mysql                    # MySQL Compatible Mode by HaloDB
-        pg_version: 14                    # The current HaloDB is compatible with PG Major Version 14
-        pg_packages: [ openhalo, pgsql-common ]  # install openhalodb instead of postgresql kernel
+        # AgensGraph Ad Hoc Settings
+        pg_mode: agens                                   # AgensGraph compatible mode
+        pg_packages: [ agensgraph, pgsql-common ]        # install AgensGraph kernel package + common utils
 
   vars:
     #----------------------------------------------#
@@ -69,7 +66,7 @@ all:
     #----------------------------------------------#
     # PGSQL : https://pigsty.io/docs/pgsql/param
     #----------------------------------------------#
-    pg_version: 14                      # OpenHalo is compatible with PG 14
+    pg_version: 16                      # AgensGraph kernel is compatible with postgres 16
     pg_conf: oltp.yml                   # pgsql tuning specs: {oltp,olap,tiny,crit}.yml
 
     #----------------------------------------------#

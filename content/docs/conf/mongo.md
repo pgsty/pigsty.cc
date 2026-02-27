@@ -8,6 +8,8 @@ categories: [参考]
 
 `mongo` 配置模板用于部署 FerretDB 与 DocumentDB 兼容栈，在 PostgreSQL 之上提供 Mongo Wire 协议兼容能力。
 
+完整教程请参考：**[FerretDB / Mongo 兼容层使用说明](/docs/ferret/)**
+
 
 --------
 
