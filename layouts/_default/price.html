@@ -12,6 +12,10 @@
   <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
   <link rel="apple-touch-icon" href="/img/logo/logo.png">
 
+  <!-- Safari/iOS theme color - default light theme -->
+  <meta name="theme-color" content="#edf3fb">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
   <!-- Open Graph -->
   <meta property="og:title" content="{{ .Title }}">
   <meta property="og:description" content="{{ .Description | default .Site.Params.description }}">
@@ -27,13 +31,14 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700;800;900&family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <!-- Landing Page CSS -->
   <link rel="stylesheet" href="/css/landing.css">
+  <link rel="stylesheet" href="/css/landing-v2.css">
   <link rel="stylesheet" href="/css/price.css">
 
   <!-- Analytics -->
@@ -47,12 +52,12 @@
   </script>
   {{ end }}
 </head>
-<body class="landing-page price-page">
+<body class="landing-page price-page landing-theme-light" data-theme="light">
 
   <!-- ============================================
        Navigation Header
        ============================================ -->
-  <header class="landing-header scrolled">
+  <header class="landing-header">
     <div class="landing-container">
       <nav class="landing-nav">
         <a href="/" class="nav-brand">
@@ -65,6 +70,12 @@
           <a href="https://pgext.cloud" class="nav-link" target="_blank">扩展</a>
           <a href="/blog/" class="nav-link">博客</a>
           <a href="/price/" class="nav-link nav-link--active">服务</a>
+          <button type="button" class="nav-theme-toggle nav-util-icon" data-theme-toggle title="切换亮暗模式" aria-label="切换亮暗模式">
+            <i class="fas fa-sun"></i>
+          </button>
+          <a href="https://pigsty.io/price" class="nav-lang-switch nav-util-icon" title="切换到英文站" aria-label="切换到英文站">
+            <i class="fas fa-language"></i>
+          </a>
           <a href="https://github.com/Vonng/pigsty" class="nav-link nav-link--icon" target="_blank" title="GitHub">
             <i class="fab fa-github"></i>
           </a>
@@ -84,7 +95,11 @@
     <a href="/docs/" class="mobile-menu-link">文档</a>
     <a href="https://pgext.cloud/zh" class="mobile-menu-link" target="_blank">扩展</a>
     <a href="/blog/" class="mobile-menu-link">博客</a>
-    <a href="/price/" class="mobile-menu-link">服务</a>
+    <a href="/price/" class="mobile-menu-link mobile-menu-link--active">服务</a>
+    <a href="https://pigsty.io/price" class="mobile-menu-link"><i class="fas fa-language"></i> English</a>
+    <button type="button" class="mobile-menu-link mobile-menu-link--btn nav-theme-toggle" data-theme-toggle title="切换亮暗模式" aria-label="切换亮暗模式">
+      <i class="fas fa-sun"></i> 亮暗切换
+    </button>
     <a href="https://github.com/Vonng/pigsty" class="mobile-menu-link" target="_blank">
       <i class="fab fa-github"></i> GitHub
     </a>
@@ -101,8 +116,9 @@
     </div>
     <div class="landing-container">
       <div class="price-hero-content">
-        <h1 class="price-hero-title">简单透明的价格方案</h1>
-        <p class="price-hero-subtitle">Pigsty 提供多种服务档次，从免费开源到企业级支持</p>
+        <p class="price-hero-kicker animate-fade-in-up">Pigsty 服务定价</p>
+        <h1 class="price-hero-title animate-fade-in-up animate-delay-100">简单透明的价格方案</h1>
+        <p class="price-hero-subtitle animate-fade-in-up animate-delay-200">Pigsty 提供多种服务档次，从免费开源到企业级支持</p>
       </div>
     </div>
   </section>
@@ -116,7 +132,7 @@
       <div class="pricing-grid">
 
         <!-- OSS Plan -->
-        <div class="pricing-card pricing-card--oss">
+        <div class="pricing-card pricing-card--oss" data-reveal>
           <div class="pricing-card-header">
             <div class="pricing-tier">开源版</div>
             <div class="pricing-name">OSS</div>
@@ -139,7 +155,7 @@
         </div>
 
         <!-- Standard Plan -->
-        <div class="pricing-card pricing-card--standard">
+        <div class="pricing-card pricing-card--standard" data-reveal>
           <div class="pricing-card-header">
             <div class="pricing-tier">标准版</div>
             <div class="pricing-name">Standard</div>
@@ -164,7 +180,7 @@
         </div>
 
         <!-- Professional Plan -->
-        <div class="pricing-card pricing-card--pro pricing-card--featured">
+        <div class="pricing-card pricing-card--pro pricing-card--featured" data-reveal>
           <div class="pricing-badge">推荐</div>
           <div class="pricing-card-header">
             <div class="pricing-tier">专业版</div>
@@ -191,7 +207,7 @@
         </div>
 
         <!-- Enterprise Plan -->
-        <div class="pricing-card pricing-card--enterprise">
+        <div class="pricing-card pricing-card--enterprise" data-reveal>
           <div class="pricing-card-header">
             <div class="pricing-tier">企业版</div>
             <div class="pricing-name">Enterprise</div>
@@ -227,12 +243,12 @@
        ============================================ -->
   <section class="comparison-section">
     <div class="landing-container">
-      <div class="section-header">
+      <div class="section-header" data-reveal>
         <h2 class="section-title">功能对比</h2>
         <p class="section-subtitle">详细了解各方案的功能差异</p>
       </div>
 
-      <div class="comparison-table-wrapper">
+      <div class="comparison-table-wrapper" data-reveal>
         <table class="comparison-table">
           <thead>
             <tr>
@@ -370,13 +386,13 @@
        ============================================ -->
   <section class="services-section">
     <div class="landing-container">
-      <div class="section-header">
+      <div class="section-header" data-reveal>
         <h2 class="section-title">增值服务</h2>
         <p class="section-subtitle">按需付费的专业服务</p>
       </div>
 
       <div class="services-grid">
-        <div class="service-card">
+        <div class="service-card" data-reveal>
           <div class="service-icon">
             <i class="fas fa-graduation-cap"></i>
           </div>
@@ -385,7 +401,7 @@
           <div class="service-price">¥ 200 / 问题</div>
         </div>
 
-        <div class="service-card">
+        <div class="service-card" data-reveal>
           <div class="service-icon">
             <i class="fas fa-tools"></i>
           </div>
@@ -394,7 +410,7 @@
           <div class="service-price">¥ 3,000 / 实例</div>
         </div>
 
-        <div class="service-card">
+        <div class="service-card" data-reveal>
           <div class="service-icon">
             <i class="fas fa-ambulance"></i>
           </div>
@@ -403,7 +419,7 @@
           <div class="service-price">¥ 30,000 / 人·天</div>
         </div>
 
-        <div class="service-card">
+        <div class="service-card" data-reveal>
           <div class="service-icon">
             <i class="fas fa-code-branch"></i>
           </div>
@@ -421,37 +437,37 @@
        ============================================ -->
   <section class="faq-section">
     <div class="landing-container">
-      <div class="section-header">
+      <div class="section-header" data-reveal>
         <h2 class="section-title">常见问题</h2>
       </div>
 
       <div class="faq-grid">
-        <div class="faq-item">
+        <div class="faq-item" data-reveal>
           <h3 class="faq-question">商业版提供哪些服务？</h3>
           <p class="faq-answer">商业版提供商业授权许可证、专用 DBA Agent、定制离线软件包、业界顶尖专家的专属技术支持与疑难杂症兜底、质量保证、技术支持，响应时间 SLA 承诺，以及更宽广的 Linux 与 PostgreSQL 版本支持范围。</p>
         </div>
 
-        <div class="faq-item">
+        <div class="faq-item" data-reveal>
           <h3 class="faq-question">节点数量是如何计算的？</h3>
           <p class="faq-answer">节点数量指 Pigsty 纳入管理的独立 IP 地址数量。</p>
         </div>
 
-        <div class="faq-item">
+        <div class="faq-item" data-reveal>
           <h3 class="faq-question">可以先试用再购买吗？</h3>
           <p class="faq-answer">当然可以！商业版核心功能与开源版完全一致，您可以充分评估后再决定。我们也提供 30 天试用期供企业评估。</p>
         </div>
 
-        <div class="faq-item">
+        <div class="faq-item" data-reveal>
           <h3 class="faq-question">如何获取发票和合同？</h3>
           <p class="faq-answer">我们提供普通发票/增值税发票和标准商务合同。请联系 rh@vonng.com 咨询商务细节。</p>
         </div>
 
-        <div class="faq-item">
+        <div class="faq-item" data-reveal>
           <h3 class="faq-question">支持哪些支付方式？</h3>
           <p class="faq-answer">订阅服务对公转账。专家号与咨询支持支付宝、微信等多种支付方式。</p>
         </div>
 
-        <div class="faq-item">
+        <div class="faq-item" data-reveal>
           <h3 class="faq-question">需要更多节点怎么办？</h3>
           <p class="faq-answer">超出方案节点数量可按需加购。企业版还支持根据实际需求定制方案，详情请联系商务。</p>
         </div>
@@ -465,7 +481,7 @@
        ============================================ -->
   <section class="price-cta">
     <div class="landing-container">
-      <div class="price-cta-content">
+      <div class="price-cta-content" data-reveal>
         <h2 class="price-cta-title">还有疑问？欢迎咨询</h2>
         <p class="price-cta-desc">我们的专家团队随时为您解答疑问，帮助您选择最适合的方案</p>
         <div class="price-cta-buttons">
@@ -527,7 +543,7 @@
         <div class="footer-column">
           <h4 class="footer-column-title">社区</h4>
           <ul class="footer-links">
-            <li><a href="https://github.com/Vonng/pigsty" target="_blank">GitHub</a></li>
+            <li><a href="https://github.com/orgs/pgsty/discussions" target="_blank">GitHub</a></li>
             <li><a href="https://discord.gg/wDzt5VyWEz" target="_blank">Discord</a></li>
             <li><a href="https://t.me/joinchat/gV9zfZraNPM3YjFh" target="_blank">Telegram</a></li>
             <li><a href="/img/pigsty/pigsty-cc.jpg">微信群组</a></li>
@@ -546,7 +562,10 @@
       </div>
 
       <div class="footer-bottom">
-        <div>© 2018-2025 Ruohang Feng (Vonng)</div>
+        <div class="footer-copyright">© 2018-2026 <a href="https://vonng.com" target="_blank">冯若航</a> (<a href="https://github.com/Vonng" target="_blank">Vonng</a>)</div>
+        <div class="footer-icp">
+          <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener">浙ICP备15016890号-2</a>
+        </div>
         <div class="footer-lang-switch">
           <a href="https://pigsty.io/price" target="_blank">English</a>
           <a href="/price/">中文</a>
@@ -555,13 +574,7 @@
     </div>
   </footer>
 
-<script>
-// Mobile menu toggle
-document.querySelector('.mobile-menu-toggle')?.addEventListener('click', function() {
-  this.classList.toggle('active');
-  document.querySelector('.mobile-menu')?.classList.toggle('active');
-});
-</script>
+<script src="/js/landing.js"></script>
 
 </body>
 </html>

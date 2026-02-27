@@ -6,6 +6,9 @@
 (function() {
   'use strict';
 
+  const DARK_THEME_COLOR = '#0f1419';
+  const LIGHT_THEME_COLOR = '#edf3fb';
+
   // ============================================
   // Copy Command to Clipboard
   // ============================================
@@ -214,6 +217,88 @@
   }
 
   // ============================================
+  // Theme Toggle (Dark / Light)
+  // ============================================
+  function getStoredTheme() {
+    try {
+      const value = window.localStorage.getItem('pigsty-landing-theme');
+      return value === 'light' || value === 'dark' ? value : null;
+    } catch (err) {
+      return null;
+    }
+  }
+
+  function setStoredTheme(theme) {
+    try {
+      window.localStorage.setItem('pigsty-landing-theme', theme);
+    } catch (err) {
+      // Ignore write failures for private mode / blocked storage
+    }
+  }
+
+  function detectPreferredTheme() {
+    const storedTheme = getStoredTheme();
+    if (storedTheme) return storedTheme;
+
+    // Default to light theme when there is no explicit user preference.
+    return 'light';
+  }
+
+  function applyTheme(theme) {
+    const body = document.body;
+    if (!body) return;
+
+    const isLight = theme === 'light';
+    body.classList.toggle('landing-theme-light', isLight);
+    body.dataset.theme = isLight ? 'light' : 'dark';
+
+    const toggleButtons = document.querySelectorAll('[data-theme-toggle]');
+    toggleButtons.forEach(button => {
+      const icon = button.querySelector('i');
+      if (icon) {
+        icon.classList.toggle('fa-sun', !isLight);
+        icon.classList.toggle('fa-moon', isLight);
+      }
+
+      const nextLabel = isLight ? '切换暗色模式' : '切换亮色模式';
+      button.setAttribute('title', nextLabel);
+      button.setAttribute('aria-label', nextLabel);
+    });
+
+    const themeColorMeta = document.querySelector('meta[name="theme-color"]');
+    if (themeColorMeta) {
+      themeColorMeta.setAttribute('content', isLight ? LIGHT_THEME_COLOR : DARK_THEME_COLOR);
+    }
+
+    try {
+      window.dispatchEvent(new CustomEvent('pigsty-theme-change', {
+        detail: { theme: isLight ? 'light' : 'dark' }
+      }));
+    } catch (err) {
+      const fallbackEvent = document.createEvent('Event');
+      fallbackEvent.initEvent('pigsty-theme-change', true, true);
+      fallbackEvent.theme = isLight ? 'light' : 'dark';
+      window.dispatchEvent(fallbackEvent);
+    }
+  }
+
+  function initThemeToggle() {
+    const toggleButtons = document.querySelectorAll('[data-theme-toggle]');
+    if (!toggleButtons.length) return;
+
+    let currentTheme = detectPreferredTheme();
+    applyTheme(currentTheme);
+
+    toggleButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        currentTheme = currentTheme === 'light' ? 'dark' : 'light';
+        applyTheme(currentTheme);
+        setStoredTheme(currentTheme);
+      });
+    });
+  }
+
+  // ============================================
   // Typing Animation for Command
   // ============================================
   function initTypingEffect() {
@@ -247,9 +332,22 @@
   // ============================================
   // Asciinema Player Initialization
   // ============================================
-  function initAsciinemaPlayer() {
-    const playerContainer = document.getElementById('asciinema-player');
-    if (!playerContainer || typeof AsciinemaPlayer === 'undefined') return;
+  function getCurrentTheme() {
+    const body = document.body;
+    return body && body.dataset && body.dataset.theme === 'light' ? 'light' : 'dark';
+  }
+
+  function getAsciinemaTheme(theme) {
+    return theme === 'light' ? 'solarized-light' : 'dracula';
+  }
+
+  function renderAsciinemaPlayer(playerContainer, theme) {
+    const playerTheme = getAsciinemaTheme(theme);
+    const currentTheme = playerContainer.dataset.playerTheme;
+    if (currentTheme === playerTheme && playerContainer.childElementCount > 0) return;
+
+    playerContainer.innerHTML = '';
+    playerContainer.dataset.playerTheme = playerTheme;
 
     AsciinemaPlayer.create('/demo/install-hero.cast', playerContainer, {
       cols: 120,
@@ -260,9 +358,27 @@
       preload: true,
       poster: 'npt:0:03',
       idleTimeLimit: 0.5,
-      theme: 'dracula',
+      theme: playerTheme,
       fit: 'width'
     });
+  }
+
+  function initAsciinemaPlayer() {
+    const playerContainer = document.getElementById('asciinema-player');
+    if (!playerContainer || typeof AsciinemaPlayer === 'undefined') return;
+
+    renderAsciinemaPlayer(playerContainer, getCurrentTheme());
+
+    if (playerContainer.dataset.themeListenerBound === '1') return;
+
+    window.addEventListener('pigsty-theme-change', (event) => {
+      const detailTheme = event && event.detail ? event.detail.theme : null;
+      const fallbackTheme = event && event.theme ? event.theme : null;
+      const nextTheme = detailTheme || fallbackTheme || getCurrentTheme();
+      renderAsciinemaPlayer(playerContainer, nextTheme);
+    });
+
+    playerContainer.dataset.themeListenerBound = '1';
   }
 
   // ============================================
@@ -320,6 +436,7 @@
     initCounterAnimation();
     initHeaderScroll();
     initMobileMenu();
+    initThemeToggle();
     initAsciinemaPlayer();
     initDashboardGallery();
     // initTypingEffect(); // Optional: enable if needed

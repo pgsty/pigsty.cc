@@ -12,8 +12,8 @@
   <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
   <link rel="apple-touch-icon" href="/img/logo/logo.png">
 
-  <!-- Safari/iOS theme color - matches hero background -->
-  <meta name="theme-color" content="#0f1419">
+  <!-- Safari/iOS theme color - default light theme -->
+  <meta name="theme-color" content="#edf3fb">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
   <!-- Open Graph -->
@@ -31,13 +31,14 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700;800;900&family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <!-- Landing Page CSS -->
   <link rel="stylesheet" href="/css/landing.css">
+  <link rel="stylesheet" href="/css/landing-v2.css">
 
   <!-- Analytics -->
   {{ with .Site.Config.Services.GoogleAnalytics.ID }}
@@ -50,7 +51,7 @@
   </script>
   {{ end }}
 </head>
-<body class="landing-page">
+<body class="landing-page landing-theme-light" data-theme="light">
 
   <!-- ============================================
        Navigation Header
@@ -68,7 +69,12 @@
           <a href="https://pgext.cloud" class="nav-link" target="_blank">扩展</a>
           <a href="/blog/" class="nav-link">博客</a>
           <a href="/price/" class="nav-link">服务</a>
-          <a href="/home/" class="nav-link">新版</a>
+          <button type="button" class="nav-theme-toggle nav-util-icon" data-theme-toggle title="切换亮暗模式" aria-label="切换亮暗模式">
+            <i class="fas fa-sun"></i>
+          </button>
+          <a href="https://pigsty.io" class="nav-lang-switch nav-util-icon" title="切换到英文站" aria-label="切换到英文站">
+            <i class="fas fa-language"></i>
+          </a>
           <a href="https://github.com/Vonng/pigsty" class="nav-link nav-link--icon" target="_blank" title="GitHub">
             <i class="fab fa-github"></i>
           </a>
@@ -89,7 +95,10 @@
     <a href="https://pgext.cloud/zh" class="mobile-menu-link" target="_blank">扩展</a>
     <a href="/blog/" class="mobile-menu-link">博客</a>
     <a href="/price" class="mobile-menu-link">服务</a>
-    <a href="/home/" class="mobile-menu-link">新版</a>
+    <a href="https://pigsty.io" class="mobile-menu-link"><i class="fas fa-language"></i> English</a>
+    <button type="button" class="mobile-menu-link mobile-menu-link--btn nav-theme-toggle" data-theme-toggle title="切换亮暗模式" aria-label="切换亮暗模式">
+      <i class="fas fa-sun"></i> 亮暗切换
+    </button>
     <a href="https://github.com/Vonng/pigsty" class="mobile-menu-link" target="_blank">
       <i class="fab fa-github"></i> GitHub
     </a>
@@ -100,81 +109,99 @@
        Section 1: Hero (Cinematic Layout)
        ============================================ -->
   <section class="hero" id="hero">
-    <div class="hero-container">
-      <!-- Left: Text Content -->
-      <div class="hero-left">
-        <h1 class="hero-title animate-fade-in-up">
-          <span class="hero-title-main">PostgreSQL in Great</span>
-          <span class="hero-title-accent">STYle</span>
-        </h1>
-
-        <p class="hero-subtitle animate-fade-in-up animate-delay-100">
-          开箱即用的 PostgreSQL 发行版，本地优先的 FLOSS RDS
-        </p>
-
-        <div class="command-box animate-fade-in-up animate-delay-200">
-          <span class="command-prompt">$</span>
-          <code class="command-text">curl -fsSL https://repo.pigsty.cc/get | bash</code>
-          <button class="command-copy" title="复制命令">
-            <i class="fas fa-copy"></i>
-          </button>
+    <div class="hero-container hero-container--split">
+      <div class="hero-content">
+        <div class="hero-head">
+          <h1 class="hero-title animate-fade-in-up">
+            <span class="hero-title-line hero-title-line--top">
+              <span class="hero-initial hero-initial--p">P</span>ostgreSQL
+            </span>
+            <span class="hero-title-line hero-title-line--bottom">
+              <span class="hero-initial hero-initial--i">I</span>n
+              <span class="hero-initial hero-initial--g">G</span>reat
+              <span class="hero-initial hero-initial--s">S</span><span class="hero-initial hero-initial--t">T</span><span class="hero-initial hero-initial--y">Y</span>le
+            </span>
+          </h1>
         </div>
 
-        <div class="hero-buttons animate-fade-in-up animate-delay-300">
-          <a href="/docs/setup/install/" class="btn btn-primary">
-            <i class="fas fa-rocket"></i> 立即安装
-          </a>
-          <a href="https://demo.pigsty.cc" class="btn btn-secondary" target="_blank">
-            <i class="fas fa-play"></i> 在线演示
-          </a>
+        <div class="hero-body">
+          <p class="hero-description animate-fade-in-up animate-delay-200">
+            <span class="hero-description-line">开箱即用的企业级开源 PostgreSQL 数据库发行版</span>
+            <span class="hero-description-line">自带高可用，PITR，IaC，监控，及 450+ PG 扩展</span>
+          </p>
+
+          <div class="hero-buttons animate-fade-in-up animate-delay-300">
+            <a href="/docs/setup/install/" class="btn btn-primary">
+              <i class="fas fa-rocket"></i> 立即安装
+            </a>
+            <a href="https://demo.pigsty.cc" class="btn btn-secondary" target="_blank">
+              <i class="fas fa-play"></i> 在线演示
+            </a>
+          </div>
+
+          <div class="command-box animate-fade-in-up animate-delay-400">
+            <span class="command-prompt">$</span>
+            <code class="command-text">curl -fsSL https://repo.pigsty.cc/get | bash</code>
+            <button class="command-copy" title="复制命令">
+              <i class="fas fa-copy"></i>
+            </button>
+          </div>
         </div>
       </div>
 
-      <!-- Right: Hero Image -->
-      <div class="hero-right animate-fade-in-up animate-delay-100">
-        <img src="/img/pigsty/motherboard.gif" alt="Pigsty Architecture" class="hero-image">
+      <div class="hero-media-wrap animate-fade-in-up animate-delay-500">
+        <div class="hero-media">
+          <img src="/img/pigsty/motherboard.gif" alt="Pigsty Architecture" class="hero-image">
+        </div>
       </div>
     </div>
   </section>
 
 
   <!-- ============================================
-       Section 3: Core Features (Zigzag)
+       Section 2: Core Features (Zigzag)
        ============================================ -->
   <section class="landing-section features-zigzag" id="features">
     <div class="landing-container">
-      <div class="section-header" data-reveal>
-        <h2 class="section-title">一套 Pigsty，所有问题迎刃而解</h2>
-        <p class="section-subtitle">四大核心能力，让你像专家一样管理 PostgreSQL</p>
+      <div class="section-header section-header--feature" data-reveal>
+        <h2 class="section-title">像专家一样自建 PostgreSQL</h2>
+        <p class="section-subtitle">Pigsty 为您提供企业级 PostgreSQL 服务所需的全套工具与方案，开源免费</p>
       </div>
 
       <!-- Feature 1: High Availability -->
       <div class="feature-row" data-reveal>
         <div class="feature-content">
-          <h4 class="feature-label"><span class="feature-emoji">🛡️</span> 高可用标杆架构</h4>
-          <h3 class="feature-title">故障自愈，高枕无忧</h3>
+          <h3 class="feature-title">
+            <a href="/docs/concept/ha/" class="feature-title-link">
+              高可用标杆架构
+            </a>
+          </h3>
+          <p class="feature-subtitle"><span class="feature-sub-icon"><i class="fas fa-shield-halved"></i></span>故障自愈，高枕无忧</p>
           <ul class="feature-list">
             <li>基于 <strong>Patroni + Etcd</strong> 自动故障切换，HAProxy 流量自动均衡</li>
             <li>预置 <strong>pgBackRest PITR</strong> 时间点恢复，删库跑路也能找回数据</li>
             <li>内置 <strong>SSL/TLS</strong> 加密与访问控制模型，SELinux 防火墙全搞定</li>
           </ul>
           <div class="feature-cta">
-            <span class="feature-value">告别半夜故障值班 OnCall，睡醒起来慢慢弄</span>
-            <a href="/docs/concept/ha/" class="feature-link">
-              了解架构详情 <i class="fas fa-arrow-right"></i>
-            </a>
+            <span class="feature-value">告别半夜故障值班 OnCall，硬件故障睡醒起来再修复</span>
           </div>
         </div>
         <div class="feature-visual">
-          <img src="/img/pigsty/ha.png" alt="Pigsty HA Architecture" class="feature-image">
+          <a href="/docs/concept/ha/" class="feature-image-link">
+            <img src="/img/pigsty/ha.png" alt="Pigsty HA Architecture" class="feature-image">
+          </a>
         </div>
       </div>
 
       <!-- Feature 2: Infrastructure as Code -->
       <div class="feature-row feature-row--reverse" data-reveal>
         <div class="feature-content">
-          <h4 class="feature-label"><span class="feature-emoji">⚙️</span> 基础设施即代码</h4>
-          <h3 class="feature-title">言出法随，一键部署</h3>
+          <h3 class="feature-title">
+            <a href="/docs/concept/iac" class="feature-title-link">
+              基础设施即代码
+            </a>
+          </h3>
+          <p class="feature-subtitle"><span class="feature-sub-icon"><i class="fas fa-code-branch"></i></span>言出法随，一键部署</p>
           <ul class="feature-list">
             <li>用配置声明你想要的状态，Pigsty 帮你实现，无需操心复杂细节</li>
             <li>海量可选定制选项，生产开发测试共享一套架构，仅有配置不同</li>
@@ -182,13 +209,11 @@
           </ul>
           <div class="feature-cta">
             <span class="feature-value">一键复刻完整生产环境，单枪匹马管理海量集群</span>
-            <a href="/docs/concept/iac" class="feature-link">
-              参阅配置示例 <i class="fas fa-arrow-right"></i>
-            </a>
           </div>
         </div>
         <div class="feature-visual">
-          <pre class="feature-code"><span class="comment"># pigsty.yml - 定义一个3节点HA集群</span>
+          <a href="/docs/concept/iac" class="feature-image-link">
+            <pre class="feature-code"><span class="comment"># pigsty.yml - 定义一个3节点HA集群</span>
 <span class="key">pg-test</span>:
   <span class="key">hosts</span>:
     <span class="value">10.10.10.11</span>: { <span class="key">pg_role</span>: <span class="string">primary</span> }
@@ -201,50 +226,57 @@
       - { <span class="key">name</span>: <span class="string">dbuser_app</span>, <span class="key">password</span>: <span class="string">DBUser.App</span> }
     <span class="key">pg_databases</span>:
       - { <span class="key">name</span>: <span class="string">app</span>, <span class="key">extensions</span>: [ <span class="string">vector</span> ]}</pre>
+          </a>
         </div>
       </div>
 
       <!-- Feature 3: Observability -->
       <div class="feature-row" data-reveal>
         <div class="feature-content">
-          <h4 class="feature-label"><span class="feature-emoji">📊</span> 可观测性全家桶</h4>
-          <h3 class="feature-title">洞若观火，尽在掌握</h3>
+          <h3 class="feature-title">
+            <a href="https://demo.pigsty.cc" class="feature-title-link" target="_blank">
+              可观测性技术栈
+            </a>
+          </h3>
+          <p class="feature-subtitle"><span class="feature-sub-icon"><i class="fas fa-chart-line"></i></span>洞若观火，尽在掌握</p>
           <ul class="feature-list">
             <li>基于 <strong>Grafana + Victoria </strong> 的 SOTA 可观测性技术栈</li>
-            <li><strong>3000+</strong> 监控指标，<strong>40+</strong> 精调仪表盘，无需配置，开箱即用</li>
+            <li><strong>3000+</strong> 监控指标，<strong>40+</strong> 精调仪表盘，免配置开箱即用</li>
             <li>可独立部署使用，监控现有 RDS / PostgreSQL 实例</li>
           </ul>
           <div class="feature-cta">
             <span class="feature-value">快速定位问题，数据驱动决策，告别空对空无效扯皮</span>
-            <a href="https://demo.pigsty.cc/ui/d/pigsty" class="feature-link" target="_blank">
-              体验在线演示 <i class="fas fa-arrow-right"></i>
-            </a>
           </div>
         </div>
         <div class="feature-visual">
-          <img src="/img/pigsty/dashboard.jpg" alt="Pigsty Monitoring Dashboard" class="feature-image">
+          <a href="https://demo.pigsty.cc/ui/d/pigsty" class="feature-image-link" target="_blank">
+            <img src="/img/pigsty/dashboards.webp" alt="Pigsty Monitoring Dashboard" class="feature-image">
+          </a>
         </div>
       </div>
 
       <!-- Feature 4: Extensions -->
       <div class="feature-row feature-row--reverse" data-reveal>
         <div class="feature-content">
-          <h4 class="feature-label"><span class="feature-emoji">🧩</span> 数据库扩展生态</h4>
-          <h3 class="feature-title">海纳百川，开箱即用</h3>
+          <h3 class="feature-title">
+            <a href="https://pgext.cloud/zh/list" class="feature-title-link">
+              数据库扩展生态
+            </a>
+          </h3>
+          <p class="feature-subtitle"><span class="feature-sub-icon"><i class="fas fa-cubes"></i></span>海纳百川，开箱即用</p>
           <ul class="feature-list">
             <li><strong>451</strong> PostgreSQL 扩展，覆盖 <strong>14</strong> 大 Linux 发行版，即装即用</li>
-            <li><strong>10 种 PG 内核</strong>：兼容 Oracle、MySQL、SQL Server、MongoDB … </li>
-            <li>功能模块：MinIO、Redis、Ferret、Docker、Supabase 自建支持</li>
+            <li><strong>12 种 PG 内核</strong>：兼容 Oracle、MySQL、SQL Server、Mongo… </li>
+            <li>功能模块：MinIO、Redis、Ferret、Docker、Supabase 自建</li>
           </ul>
           <div class="feature-cta">
-            <span class="feature-value">灵活组合搭配，想要什么就装什么，完全自由，自主可控</span>
-            <a href="https://pgext.cloud/zh/list" class="feature-link">
-              浏览扩展目录 <i class="fas fa-arrow-right"></i>
-            </a>
+            <span class="feature-value">灵活组合搭配，自由按需拼接，完全自主可控</span>
           </div>
         </div>
         <div class="feature-visual">
-          <img src="/img/pigsty/ecosystem.jpg" alt="PostgreSQL Extension Ecosystem" class="feature-image">
+          <a href="https://pgext.cloud/zh/list" class="feature-image-link">
+            <img src="/img/pigsty/hero-ecosystem.webp" alt="PostgreSQL Extension Ecosystem" class="feature-image">
+          </a>
         </div>
       </div>
 
@@ -253,19 +285,81 @@
 
 
   <!-- ============================================
-       Section 4: Extensions & Kernels Combined
+       Section 3: Extensions & Kernels Combined
        ============================================ -->
   <section class="landing-section ecosystem-section" id="ecosystem">
     <div class="landing-container">
       <div class="section-header" data-reveal>
-        <h2 class="section-title">451 扩展插件，十大内核分支</h2>
-        <p class="section-subtitle">
-          Pigsty 为您解锁 PostgreSQL RDS 的无限可能
-          <span class="section-links">
-            <a href="https://pgext.cloud" target="_blank">扩展目录 <i class="fas fa-external-link-alt"></i></a>
-            <a href="/docs/pgsql/kernel/">内核分支 <i class="fas fa-arrow-right"></i></a>
-          </span>
-        </p>
+        <h2 class="section-title">12+ 内核分支，450+ 扩展插件</h2>
+        <p class="section-subtitle">Pigsty 为您解锁 PostgreSQL RDS 的无限可能</p>
+        <div class="section-links">
+          <a href="/docs/pgsql/kernel/"><i class="fas fa-microchip"></i> 内核分支 <i class="fas fa-arrow-right"></i></a>
+          <a href="https://pgext.cloud" target="_blank"><i class="fas fa-puzzle-piece"></i> 扩展目录 <i class="fas fa-external-link-alt"></i></a>
+        </div>
+      </div>
+
+      <!-- Kernels Grid -->
+      <div class="kernels-grid-new" data-reveal>
+        <a href="/docs/pgsql/kernel/supabase/" class="kernel-card-new">
+          <span class="kernel-icon-new"><img src="/img/icon/supabase.svg" alt="Supabase"></span>
+          <span class="kernel-name-new">Supabase</span>
+          <span class="kernel-desc-new">后端即服务</span>
+        </a>
+        <a href="/docs/pgsql/kernel/citus/" class="kernel-card-new">
+          <span class="kernel-icon-new"><img src="/img/icon/citus.svg" alt="Citus"></span>
+          <span class="kernel-name-new">Citus</span>
+          <span class="kernel-desc-new">水平分布式</span>
+        </a>
+        <a href="/docs/pgsql/kernel/babelfish/" class="kernel-card-new">
+          <span class="kernel-icon-new"><img src="/img/icon/babelfish.svg" alt="Babelfish"></span>
+          <span class="kernel-name-new">Babelfish</span>
+          <span class="kernel-desc-new">SQL Server 兼容</span>
+        </a>
+        <a href="/docs/pgsql/kernel/ivorysql/" class="kernel-card-new">
+          <span class="kernel-icon-new"><img src="/img/icon/ivorysql.svg" alt="IvorySQL"></span>
+          <span class="kernel-name-new">IvorySQL</span>
+          <span class="kernel-desc-new">Oracle 兼容</span>
+        </a>
+        <a href="/docs/pgsql/kernel/openhalo/" class="kernel-card-new">
+          <span class="kernel-icon-new"><img src="/img/icon/halo.png" alt="OpenHalo"></span>
+          <span class="kernel-name-new">OpenHalo</span>
+          <span class="kernel-desc-new">MySQL 兼容</span>
+        </a>
+        <a href="/docs/pgsql/kernel/percona/" class="kernel-card-new">
+          <span class="kernel-icon-new"><img src="/img/icon/percona.svg" alt="Percona"></span>
+          <span class="kernel-name-new">Percona</span>
+          <span class="kernel-desc-new">透明数据加密</span>
+        </a>
+        <a href="/docs/ferret/" class="kernel-card-new">
+          <span class="kernel-icon-new"><img src="/img/icon/ferretdb.svg" alt="FerretDB"></span>
+          <span class="kernel-name-new">FerretDB</span>
+          <span class="kernel-desc-new">MongoDB 兼容</span>
+        </a>
+        <a href="/docs/pgsql/kernel/orioledb/" class="kernel-card-new">
+          <span class="kernel-icon-new"><img src="/img/icon/oriole.png" alt="OrioleDB"></span>
+          <span class="kernel-name-new">OrioleDB</span>
+          <span class="kernel-desc-new">OLTP 优化</span>
+        </a>
+        <a href="/docs/pgsql/kernel/polardb/" class="kernel-card-new">
+          <span class="kernel-icon-new"><img src="/img/icon/polardb.svg" alt="PolarDB"></span>
+          <span class="kernel-name-new">PolarDB PG</span>
+          <span class="kernel-desc-new">云原生 RAC</span>
+        </a>
+        <a href="/docs/pgsql/kernel/cloudberry/" class="kernel-card-new">
+          <span class="kernel-icon-new"><img src="/img/icon/cloudberry.svg" alt="Cloudberry"></span>
+          <span class="kernel-name-new">Cloudberry</span>
+          <span class="kernel-desc-new">PG MPP 数仓</span>
+        </a>
+        <a href="/docs/pgsql/kernel/agensgraph/" class="kernel-card-new">
+          <span class="kernel-icon-new"><img src="/img/icon/agensgraph.svg" alt="AgensGraph"></span>
+          <span class="kernel-name-new">AgensGraph</span>
+          <span class="kernel-desc-new">图数据库内核</span>
+        </a>
+        <a href="/docs/pgsql/kernel/pgedge/" class="kernel-card-new">
+          <span class="kernel-icon-new"><img src="/img/icon/pgedge.svg" alt="pgEdge"></span>
+          <span class="kernel-name-new">pgEdge</span>
+          <span class="kernel-desc-new">分布式边缘内核</span>
+        </a>
       </div>
 
       <!-- Scrolling Extensions Marquee -->
@@ -437,60 +531,6 @@
         </div>
       </div>
 
-      <!-- Kernels Grid: 2 rows x 5 columns -->
-      <div class="kernels-grid-new" data-reveal>
-        <a href="/docs/pgsql/kernel/supabase/" class="kernel-card-new">
-          <span class="kernel-icon-new"><img src="/img/icon/supabase.svg" alt="Supabase"></span>
-          <span class="kernel-name-new">Supabase</span>
-          <span class="kernel-desc-new">后端即服务</span>
-        </a>
-        <a href="/docs/pgsql/kernel/citus/" class="kernel-card-new">
-          <span class="kernel-icon-new"><img src="/img/icon/citus.svg" alt="Citus"></span>
-          <span class="kernel-name-new">Citus</span>
-          <span class="kernel-desc-new">水平分布式</span>
-        </a>
-        <a href="/docs/pgsql/kernel/babelfish/" class="kernel-card-new">
-          <span class="kernel-icon-new"><img src="/img/icon/babelfish.svg" alt="Babelfish"></span>
-          <span class="kernel-name-new">Babelfish</span>
-          <span class="kernel-desc-new">SQL Server 兼容</span>
-        </a>
-        <a href="/docs/pgsql/kernel/ivorysql/" class="kernel-card-new">
-          <span class="kernel-icon-new"><img src="/img/icon/ivorysql.svg" alt="IvorySQL"></span>
-          <span class="kernel-name-new">IvorySQL</span>
-          <span class="kernel-desc-new">Oracle 兼容</span>
-        </a>
-        <a href="/docs/pgsql/kernel/openhalo/" class="kernel-card-new">
-          <span class="kernel-icon-new"><img src="/img/icon/halo.png" alt="OpenHalo"></span>
-          <span class="kernel-name-new">OpenHalo</span>
-          <span class="kernel-desc-new">MySQL 兼容</span>
-        </a>
-        <a href="/docs/pgsql/kernel/percona/" class="kernel-card-new">
-          <span class="kernel-icon-new"><img src="/img/icon/pgsql.svg" alt="Percona"></span>
-          <span class="kernel-name-new">Percona</span>
-          <span class="kernel-desc-new">透明数据加密</span>
-        </a>
-        <a href="/docs/ferret/" class="kernel-card-new">
-          <span class="kernel-icon-new"><img src="/img/icon/ferretdb.svg" alt="FerretDB"></span>
-          <span class="kernel-name-new">FerretDB</span>
-          <span class="kernel-desc-new">MongoDB 兼容</span>
-        </a>
-        <a href="/docs/pgsql/kernel/orioledb/" class="kernel-card-new">
-          <span class="kernel-icon-new"><img src="/img/icon/oriole.png" alt="OrioleDB"></span>
-          <span class="kernel-name-new">OrioleDB</span>
-          <span class="kernel-desc-new">OLTP 优化</span>
-        </a>
-        <a href="/docs/pgsql/kernel/polardb/" class="kernel-card-new">
-          <span class="kernel-icon-new"><img src="/img/icon/polardb.svg" alt="PolarDB"></span>
-          <span class="kernel-name-new">PolarDB PG</span>
-          <span class="kernel-desc-new">云原生 RAC</span>
-        </a>
-        <a href="/docs/pgsql/kernel/polardb/" class="kernel-card-new">
-          <span class="kernel-icon-new"><img src="/img/icon/polardb.svg" alt="PolarDB-O"></span>
-          <span class="kernel-name-new">PolarDB-O</span>
-          <span class="kernel-desc-new">国产信创内核</span>
-        </a>
-      </div>
-
     </div>
   </section>
 
@@ -580,7 +620,7 @@
   <section class="landing-section social-proof" id="users">
     <div class="landing-container">
       <div class="section-header" data-reveal>
-        <h2 class="section-title">Pigsty 被各行各业的公司所信任</h2>
+        <h2 class="section-title">为各行各业所信赖</h2>
       </div>
 
       <!-- Logo Marquee -->
@@ -629,8 +669,8 @@
           <div class="stat-label">GitHub Stars</div>
         </a>
         <div class="stat-item">
-          <div class="stat-value">2.5M+</div>
-          <div class="stat-label">QPS 验证</div>
+          <div class="stat-value">100+ 集群</div>
+          <div class="stat-label">生产规模验证</div>
         </div>
         <a href="/docs/about/release/" class="stat-item" style="text-decoration: none; color: inherit;">
           <div class="stat-value">6+</div>
@@ -660,7 +700,10 @@
         <a href="/img/pigsty/pigsty-cc.jpg" class="community-btn" target="_blank">
           <i class="fab fa-weixin"></i> 微信群组
         </a>
-        <a href="https://github.com/pgsty/pigsty" class="community-btn" target="_blank">
+        <a href="/img/pigsty/pigsty-qq.jpg" class="community-btn" target="_blank">
+          <i class="fab fa-qq"></i> QQ 群组
+        </a>
+        <a href="https://github.com/orgs/pgsty/discussions" class="community-btn" target="_blank">
           <i class="fab fa-github"></i> GitHub
         </a>
         <a href="https://discord.gg/wDzt5VyWEz" class="community-btn" target="_blank">
@@ -1127,6 +1170,20 @@
         <h2 class="section-title"><i class="fas fa-bolt"></i> 轻松交付，立等可取</h2>
       </div>
 
+      <div class="quickstart-actions" id="cta" data-reveal>
+        <div class="final-cta-buttons">
+          <a href="/docs/setup/install/" class="btn btn-primary">
+            <i class="fas fa-rocket"></i> 立即安装
+          </a>
+          <a href="https://demo.pigsty.cc" class="btn btn-secondary" target="_blank">
+            <i class="fas fa-play"></i> 在线演示
+          </a>
+          <a href="/price/" class="btn btn-outline">
+            <i class="fas fa-headset"></i> 商业服务
+          </a>
+        </div>
+      </div>
+
       <!-- Three Steps -->
       <div class="steps-grid-new" data-reveal>
         <!-- Step 1: Download -->
@@ -1203,44 +1260,13 @@
         <strong>支持系统：</strong>
         Linux x86_64 / Arm64 · EL 8 / 9 / 10 · Ubuntu 22 / 24 · Debian 12 / 13
       </div>
+
     </div>
   </section>
 
   <!-- Asciinema Player (v3.13.5 local) -->
   <link rel="stylesheet" type="text/css" href="/css/asciinema-player.css" />
   <script src="/js/asciinema-player.min.js"></script>
-
-
-  <!-- ============================================
-       Section 8: Final CTA
-       ============================================ -->
-  <section class="final-cta" id="cta">
-    <div class="final-cta-content" data-reveal>
-      <h2 class="final-cta-title">准备好掌控你的数据库了吗？</h2>
-
-      <div class="command-box">
-        <span class="command-prompt">$</span>
-        <code class="command-text">curl -fsSL https://repo.pigsty.cc/get | bash</code>
-        <button class="command-copy" title="复制命令">
-          <i class="fas fa-copy"></i>
-        </button>
-      </div>
-
-      <div class="final-cta-buttons">
-        <a href="/docs/setup/install/" class="btn btn-primary">
-          <i class="fas fa-rocket"></i> 立即安装
-        </a>
-        <a href="https://demo.pigsty.cc" class="btn btn-secondary" target="_blank">
-          <i class="fas fa-play"></i> 在线演示
-        </a>
-        <a href="/price/" class="btn btn-outline">
-          <i class="fas fa-headset"></i> 商业服务
-        </a>
-      </div>
-
-    </div>
-  </section>
-
 
   <!-- ============================================
        Section 9: Footer
@@ -1285,7 +1311,7 @@
         <div class="footer-column">
           <h4 class="footer-column-title">社区</h4>
           <ul class="footer-links">
-            <li><a href="https://github.com/Vonng/pigsty" target="_blank">GitHub</a></li>
+            <li><a href="https://github.com/orgs/pgsty/discussions" target="_blank">GitHub</a></li>
             <li><a href="https://discord.gg/wDzt5VyWEz" target="_blank">Discord</a></li>
             <li><a href="https://t.me/joinchat/gV9zfZraNPM3YjFh" target="_blank">Telegram</a></li>
             <li><a href="/img/pigsty/pigsty-cc.jpg">微信群组</a></li>
