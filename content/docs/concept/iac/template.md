@@ -33,7 +33,7 @@ Pigsty 提供了 [**`configure`**](https://github.com/pgsty/pigsty/blob/main/con
 # 使用不同的数据库内核
 ./configure -c pgsql            # 原生 PostgreSQL 内核，基础功能 (13~18)
 ./configure -c citus            # Citus 分布式高可用 PostgreSQL (14~17)
-./configure -c mssql            # Babelfish 内核，兼容 SQL Server 协议 (15)
+./configure -c mssql            # Babelfish 内核，兼容 SQL Server 协议 (17)
 ./configure -c polar            # PolarDB PG 内核，Aurora/RAC 风格 (15)
 ./configure -c ivory            # IvorySQL 内核，兼容 Oracle 语法 (18)
 ./configure -c mysql            # OpenHalo 内核，兼容 MySQL (14)
@@ -69,17 +69,17 @@ Pigsty 提供了 [**`configure`**](https://github.com/pgsty/pigsty/blob/main/con
 
 适用于各类数据库管理系统与内核的模板：
 
-| 模板                                         | 说明                                  |
-|--------------------------------------------|-------------------------------------|
-| [**`pgsql.yml`**](/docs/conf/pgsql/)       | 原生 PostgreSQL 内核，基础功能 (13~18)       |
-| [**`citus.yml`**](/docs/conf/citus/)       | Citus 分布式高可用 PostgreSQL (14~17)     |
-| [**`mssql.yml`**](/docs/conf/mssql/)       | Babelfish 内核，兼容 SQL Server 协议 (15)  |
-| [**`polar.yml`**](/docs/conf/polar/)       | PolarDB PG 内核，Aurora/RAC 风格 (15)    |
-| [**`ivory.yml`**](/docs/conf/ivory/)       | IvorySQL 内核，兼容 Oracle 语法 (17)       |
-| [**`mysql.yml`**](/docs/conf/mysql/)       | OpenHalo 内核，兼容 MySQL (14)           |
-| [**`pgtde.yml`**](/docs/conf/pgtde/)       | Percona PostgreSQL Server 透明加密 (17) |
-| [**`oriole.yml`**](/docs/conf/oriole/)     | OrioleDB 内核，OLTP 增强 (17，Debian 包暂缺) |
-| [**`supabase.yml`**](/docs/conf/supabase/) | Supabase 自托管配置 (15~17)              |
+| 模板                                         | 说明                                        |
+|--------------------------------------------|-------------------------------------------|
+| [**`pgsql.yml`**](/docs/conf/pgsql/)       | 原生 PostgreSQL 内核，基础功能 (13~18)             |
+| [**`citus.yml`**](/docs/conf/citus/)       | Citus 分布式高可用 PostgreSQL (14~17)           |
+| [**`mssql.yml`**](/docs/conf/mssql/)       | Babelfish 内核，兼容 SQL Server 协议 (17)        |
+| [**`polar.yml`**](/docs/conf/polar/)       | PolarDB PG 内核，Aurora/RAC 风格 (15)          |
+| [**`ivory.yml`**](/docs/conf/ivory/)       | IvorySQL 内核，兼容 Oracle 语法 (17)             |
+| [**`mysql.yml`**](/docs/conf/mysql/)       | OpenHalo 内核，兼容 MySQL (14)                 |
+| [**`pgtde.yml`**](/docs/conf/pgtde/)       | Percona PostgreSQL Server 透明加密 (17)       |
+| [**`oriole.yml`**](/docs/conf/oriole/)     | OrioleDB 内核，OLTP 增强 (17，Debian 包暂缺)       |
+| [**`supabase.yml`**](/docs/conf/supabase/) | Supabase 自托管配置 (15~17)                    |
 {.full-width}
 
 您可以后续添加更多节点，或使用 [高可用模板](#高可用模板) 在一开始就规划好集群。
@@ -107,11 +107,11 @@ Pigsty 提供了 [**`configure`**](https://github.com/pgsty/pigsty/blob/main/con
 
 您可以使用以下模板运行 Docker 应用/软件：
 
-| 模板 | 说明 |
-|------|------|
-| [**`supa.yml`**](/docs/conf/supabase/) | 启动单节点 Supabase |
-| [**`odoo.yml`**](/docs/conf/odoo/) | 启动 Odoo ERP 系统 |
-| [**`dify.yml`**](/docs/conf/dify/) | 启动 Dify AI 工作流系统 |
+| 模板                                         | 说明               |
+|--------------------------------------------|------------------|
+| [**`supa.yml`**](/docs/conf/supabase/)     | 启动单节点 Supabase   |
+| [**`odoo.yml`**](/docs/conf/odoo/)         | 启动 Odoo ERP 系统   |
+| [**`dify.yml`**](/docs/conf/dify/)         | 启动 Dify AI 工作流系统 |
 | [**`electric.yml`**](/docs/conf/electric/) | 启动 Electric 同步引擎 |
 {.full-width}
 
@@ -122,14 +122,14 @@ Pigsty 提供了 [**`configure`**](https://github.com/pgsty/pigsty/blob/main/con
 
 除主要模板外，Pigsty 还提供了一组面向不同场景的演示模板：
 
-| 模板 | 说明 |
-|------|------|
-| [**`el.yml`**](/docs/conf/el/) | EL 8/9 系统的全参数配置文件 |
-| [**`debian.yml`**](/docs/conf/debian/) | Debian/Ubuntu 系统的全参数配置文件 |
-| **`remote.yml`** | 监控远程 PostgreSQL 集群或 RDS 的示例配置 |
-| **`redis.yml`** | Redis 集群示例配置 |
-| [**`minio.yml`**](/docs/conf/minio/) | 3 节点 MinIO 集群示例配置 |
-| [**`demo.yml`**](/docs/conf/demo/) | Pigsty [公开演示站](https://demo.pigsty.cc) 的配置文件 |
+| 模板                                     | 说明                                           |
+|----------------------------------------|----------------------------------------------|
+| [**`el.yml`**](/docs/conf/el/)         | EL 8/9 系统的全参数配置文件                            |
+| [**`debian.yml`**](/docs/conf/debian/) | Debian/Ubuntu 系统的全参数配置文件                     |
+| **`remote.yml`**                       | 监控远程 PostgreSQL 集群或 RDS 的示例配置                |
+| **`redis.yml`**                        | Redis 集群示例配置                                 |
+| [**`minio.yml`**](/docs/conf/minio/)   | 3 节点 MinIO 集群示例配置                            |
+| [**`demo.yml`**](/docs/conf/demo/)     | Pigsty [公开演示站](https://demo.pigsty.cc) 的配置文件 |
 {.full-width}
 
 
@@ -139,8 +139,7 @@ Pigsty 提供了 [**`configure`**](https://github.com/pgsty/pigsty/blob/main/con
 
 以下配置模板用于开发和测试目的：
 
-| 模板 | 说明 |
-|------|------|
+| 模板              | 说明                                             |
+|-----------------|------------------------------------------------|
 | **`build.yml`** | EL 9/10、Debian 12/13、Ubuntu 22.04/24.04 开源构建配置 |
 {.full-width}
-

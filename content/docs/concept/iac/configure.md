@@ -245,16 +245,16 @@ pg_lc_ctype: C.UTF-8
 
 使用 `-g` 参数时，脚本会为以下密码生成 24 位随机字符串：
 
-| 密码参数 | 说明 |
-|:---:|:---|
-| `grafana_admin_password` | Grafana 管理员密码 |
-| `pg_admin_password` | PostgreSQL 管理员密码 |
-| `pg_monitor_password` | PostgreSQL 监控用户密码 |
+|           密码参数            | 说明                |
+|:-------------------------:|:------------------|
+| `grafana_admin_password`  | Grafana 管理员密码     |
+|    `pg_admin_password`    | PostgreSQL 管理员密码  |
+|   `pg_monitor_password`   | PostgreSQL 监控用户密码 |
 | `pg_replication_password` | PostgreSQL 复制用户密码 |
-| `patroni_password` | Patroni API 密码 |
-| `haproxy_admin_password` | HAProxy 管理密码 |
-| `minio_secret_key` | MinIO Secret Key |
-| `etcd_root_password` | ETCD Root 密码 |
+|    `patroni_password`     | Patroni API 密码    |
+| `haproxy_admin_password`  | HAProxy 管理密码      |
+|    `minio_secret_key`     | MinIO Secret Key  |
+|   `etcd_root_password`    | ETCD Root 密码      |
 
 同时还会替换以下占位符密码：
 
@@ -294,42 +294,42 @@ $ ./configure -g
 
 ### 高可用模板 (`ha/`)
 
-| 模板 | 说明 |
-|:---:|:---|
-| `ha/dual` | 2 节点高可用集群 |
-| `ha/trio` | 3 节点高可用集群 |
-| `ha/full` | 4 节点完整沙箱环境 |
-| `ha/safe` | 安全加固版高可用配置 |
+|    模板     | 说明           |
+|:---------:|:-------------|
+| `ha/dual` | 2 节点高可用集群    |
+| `ha/trio` | 3 节点高可用集群    |
+| `ha/full` | 4 节点完整沙箱环境   |
+| `ha/safe` | 安全加固版高可用配置   |
 | `ha/simu` | 42 节点大规模仿真环境 |
 {.full-width}
 
 ### 应用模板 (`app/`)
 
-| 模板 | 说明 |
-|:---:|:---|
-| `supabase` | Supabase 自托管配置 |
-| `app/dify` | Dify AI 平台配置 |
-| `app/odoo` | Odoo ERP 配置 |
-| `app/teable` | Teable 表格数据库配置 |
+|       模板       | 说明                 |
+|:--------------:|:-------------------|
+|   `supabase`   | Supabase 自托管配置     |
+|   `app/dify`   | Dify AI 平台配置       |
+|   `app/odoo`   | Odoo ERP 配置        |
+|  `app/teable`  | Teable 表格数据库配置     |
 | `app/registry` | Docker Registry 配置 |
 {.full-width}
 
-### 特殊内核模板
+### 特殊内核模板/模式
 
-| 模板 | 说明 |
-|:---:|:---|
-| `ivory` | IvorySQL：Oracle 兼容 PostgreSQL |
-| `mssql` | Babelfish：SQL Server 兼容 PostgreSQL |
-| `polar` | PolarDB：阿里云开源分布式 PostgreSQL |
-| `citus` | Citus：分布式 PostgreSQL |
-| `oriole` | OrioleDB：新一代存储引擎 |
+|    模板    | 说明                                 |
+|:--------:|:-----------------------------------|
+| `ivory`  | IvorySQL：Oracle 兼容 PostgreSQL      |
+| `mssql`  | Babelfish：SQL Server 兼容 PostgreSQL |
+| `polar`  | PolarDB：阿里云开源分布式 PostgreSQL        |
+| `citus`  | Citus：分布式 PostgreSQL               |
+| `oriole` | OrioleDB：新一代存储引擎                   |
 {.full-width}
 
 ### 演示模板 (`demo/`)
 
-| 模板 | 说明 |
-|:---:|:---|
-| `demo/demo` | 演示环境配置 |
+|      模板      | 说明         |
+|:------------:|:-----------|
+| `demo/demo`  | 演示环境配置     |
 | `demo/redis` | Redis 集群演示 |
 | `demo/minio` | MinIO 集群演示 |
 
@@ -369,14 +369,14 @@ proceed with ./deploy.yml
 
 脚本支持以下环境变量：
 
-| 环境变量 | 说明 | 默认值 |
-|:---:|:---|:---:|
-| `PIGSTY_HOME` | Pigsty 安装目录 | `~/pigsty` |
-| `METADB_URL` | 元数据库连接 URL | `service=meta` |
-| `HTTP_PROXY` | HTTP 代理 | - |
-| `HTTPS_PROXY` | HTTPS 代理 | - |
-| `ALL_PROXY` | 通用代理 | - |
-| `NO_PROXY` | 代理白名单 | 内置默认值 |
+|     环境变量      | 说明          |      默认值       |
+|:-------------:|:------------|:--------------:|
+| `PIGSTY_HOME` | Pigsty 安装目录 |   `~/pigsty`   |
+| `METADB_URL`  | 元数据库连接 URL  | `service=meta` |
+| `HTTP_PROXY`  | HTTP 代理     |       -        |
+| `HTTPS_PROXY` | HTTPS 代理    |       -        |
+|  `ALL_PROXY`  | 通用代理        |       -        |
+|  `NO_PROXY`   | 代理白名单       |     内置默认值      |
 {.full-width}
 
 
