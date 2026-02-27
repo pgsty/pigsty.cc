@@ -86,7 +86,7 @@ pig repo update                       # 更新系统包缓存
 |  `beta`   | PostgreSQL 19 Beta 版本   | pgdg19-beta, pgdg-beta                            |
 |  `extra`  | PGDG Non-Free 与三方扩展     | pgdg-extras, timescaledb, citus                   |
 | `groonga` | PGroonga 仓库             | groonga                                           |
-|  `mssql`  | WiltonDB 仓库             | wiltondb                                          |
+|  `mssql`  | Wiltondb 仓库（已弃用）        | babelfish                                         |
 | `percona` | Percona PG + PG_TDE     | percona                                           |
 |  `llvm`   | LLVM 工具链仓库              | llvm                                              |
 |  `kube`   | Kubernetes 仓库           | kubernetes                                        |
