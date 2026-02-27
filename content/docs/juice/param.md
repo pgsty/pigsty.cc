@@ -16,9 +16,9 @@ JUICE 模块参数共 **2** 项：
 
 ## 参数概览
 
-| 参数 | 类型 | 级别 | 说明 |
-|:-----|:----:|:----:|:-----|
-| [`juice_cache`](#juice_cache) | `path` | `C` | JuiceFS 共享缓存目录 |
+| 参数                                    |   类型   | 级别  | 说明                  |
+|:--------------------------------------|:------:|:---:|:--------------------|
+| [`juice_cache`](#juice_cache)         | `path` | `C` | JuiceFS 共享缓存目录      |
 | [`juice_instances`](#juice_instances) | `dict` | `I` | JuiceFS 实例定义字典（可为空） |
 {.full-width}
 
@@ -28,7 +28,7 @@ JUICE 模块参数共 **2** 项：
 
 ## 默认参数
 
-参数定义于 [`roles/juice/defaults/main.yml`](https://github.com/pgsty/pigsty/blob/v4.1.0/roles/juice/defaults/main.yml)：
+参数定义于 [`roles/juice/defaults/main.yml`](https://github.com/pgsty/pigsty/blob/main/roles/juice/defaults/main.yml)：
 
 ```yaml
 #-----------------------------------------------------------------
@@ -71,18 +71,18 @@ juice_instances:
 
 实例字段说明：
 
-| 字段 | 必选 | 默认值 | 说明 |
-|:-----|:---:|:------|:-----|
-| `path`  | 是 | - | 挂载点路径 |
-| `meta`  | 是 | - | 元数据引擎 URL（建议 PostgreSQL） |
-| `data`  | 否 | `''` | `juicefs format` 选项（仅首次创建生效） |
-| `unit`  | 否 | `juicefs-<name>` | systemd 服务名 |
-| `mount` | 否 | `''` | `juicefs mount` 额外参数 |
-| `port`  | 否 | `9567` | 指标端口（同节点需唯一） |
-| `owner` | 否 | `root` | 挂载点属主 |
-| `group` | 否 | `root` | 挂载点属组 |
-| `mode`  | 否 | `0755` | 挂载点权限 |
-| `state` | 否 | `create` | `create` / `absent` |
+| 字段      | 必选 | 默认值              | 说明                           |
+|:--------|:--:|:-----------------|:-----------------------------|
+| `path`  | 是  | -                | 挂载点路径                        |
+| `meta`  | 是  | -                | 元数据引擎 URL（建议 PostgreSQL）     |
+| `data`  | 否  | `''`             | `juicefs format` 选项（仅首次创建生效） |
+| `unit`  | 否  | `juicefs-<name>` | systemd 服务名                  |
+| `mount` | 否  | `''`             | `juicefs mount` 额外参数         |
+| `port`  | 否  | `9567`           | 指标端口（同节点需唯一）                 |
+| `owner` | 否  | `root`           | 挂载点属主                        |
+| `group` | 否  | `root`           | 挂载点属组                        |
+| `mode`  | 否  | `0755`           | 挂载点权限                        |
+| `state` | 否  | `create`         | `create` / `absent`          |
 {.full-width}
 
 {{% alert title="注意" color="warning" %}}

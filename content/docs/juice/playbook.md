@@ -13,7 +13,7 @@ JUICE 模块提供 `juice.yml` 剧本，用于部署与移除 JuiceFS 实例。
 
 ## `juice.yml`
 
-[`juice.yml`](https://github.com/pgsty/pigsty/blob/v4.1.0/juice.yml) 的任务结构如下：
+[`juice.yml`](https://github.com/pgsty/pigsty/blob/main/juice.yml) 的任务结构如下：
 
 ```bash
 juice_id        : 校验配置、检查端口冲突
@@ -32,10 +32,10 @@ juice_register  : 注册到 VictoriaMetrics 目标文件
 
 ## 运行粒度
 
-| 粒度 | 限制参数 | 说明 |
-|:-----|:--------|:-----|
-| 节点 | `-l <host>` | 部署该节点所有实例 |
-| 实例 | `-l <host> -e fsname=<name>` | 只处理指定实例 |
+| 粒度 | 限制参数                         | 说明        |
+|:---|:-----------------------------|:----------|
+| 节点 | `-l <host>`                  | 部署该节点所有实例 |
+| 实例 | `-l <host> -e fsname=<name>` | 只处理指定实例   |
 {.full-width}
 
 示例：
@@ -49,18 +49,18 @@ juice_register  : 注册到 VictoriaMetrics 目标文件
 
 ## 常用标签
 
-| 标签 | 说明 |
-|:-----|:-----|
-| `juice_id` | 校验 `juice_instances` 与端口冲突 |
-| `juice_install` | 安装 `juicefs` 软件包 |
-| `juice_cache` | 创建共享缓存目录 |
-| `juice_clean` | 移除实例（state=absent） |
-| `juice_instance` | 创建实例（伞形标签） |
-| `juice_init` | 格式化文件系统 |
-| `juice_dir` | 创建挂载点目录 |
-| `juice_config` | 渲染配置文件 |
-| `juice_launch` | 启动服务 |
-| `juice_register` | 写入 VictoriaMetrics 目标文件 |
+| 标签               | 说明                         |
+|:-----------------|:---------------------------|
+| `juice_id`       | 校验 `juice_instances` 与端口冲突 |
+| `juice_install`  | 安装 `juicefs` 软件包           |
+| `juice_cache`    | 创建共享缓存目录                   |
+| `juice_clean`    | 移除实例（state=absent）         |
+| `juice_instance` | 创建实例（伞形标签）                 |
+| `juice_init`     | 格式化文件系统                    |
+| `juice_dir`      | 创建挂载点目录                    |
+| `juice_config`   | 渲染配置文件                     |
+| `juice_launch`   | 启动服务                       |
+| `juice_register` | 写入 VictoriaMetrics 目标文件    |
 {.full-width}
 
 --------
