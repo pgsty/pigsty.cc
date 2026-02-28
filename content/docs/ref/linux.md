@@ -75,7 +75,7 @@ Pigsty 支持 Ubuntu 24.04 / 22.04：
 | Ubuntu 20.04 (`focal`) | <b class="text-danger">aarch64</b> |                                               -                                               |                                                  |                                                  |                                                         |                                                         |                                                         |                                                         |
 {.full-width}
 
-{{% alert title="推荐使用 Ubuntu 22.04 / 24.04 LTS" color="success" %}}
+{{% alert title="推荐使用 Ubuntu 22.04.5 / 24.04.3 LTS" color="success" %}}
 Ubuntu 24.04 在系统可靠性/稳定性与软件版本的新颖性/齐全性上取得了良好的平衡，推荐使用此系统。
 {{% /alert %}}
 
@@ -115,15 +115,15 @@ Debian 11 已经于 2024-07 进入 EOL。如需在老旧操作系统上获得扩
 
 当您使用本地虚拟机部署 Pigsty 时，可以考虑使用以下 Vagrant 操作系统镜像，这也是 Pigsty 开发测试使用的镜像。
 
-| **系统**         | 镜像                                                                                             |
-|:---------------|:-----------------------------------------------------------------------------------------------|
-| AlmaLinux 8.10 | [`cloud-image/almalinux-8`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/almalinux-8) |
-| Rocky 9.7      | [`bento/rockylinux-9`](https://portal.cloud.hashicorp.com/vagrant/discover/bento/rockylinux-9) |
+| **系统**         | 镜像                                                                                                         |
+|:---------------|:-----------------------------------------------------------------------------------------------------------|
+| AlmaLinux 8.10 | [`cloud-image/almalinux-8`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/almalinux-8)   |
+| Rocky 9.7      | [`bento/rockylinux-9`](https://portal.cloud.hashicorp.com/vagrant/discover/bento/rockylinux-9)             |
 | AlmaLinux 10.1 | [`cloud-image/almalinux-10`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/almalinux-10) |
-| Debian 12.13   | [`cloud-image/debian-12`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/debian-12) |
-| Debian 13.3    | [`cloud-image/debian-13`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/debian-13) |
-| Ubuntu 22.04   | [`cloud-image/ubuntu-22.04`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/ubuntu-22.04) |
-| Ubuntu 24.04   | [`bento/ubuntu-24.04`](https://portal.cloud.hashicorp.com/vagrant/discover/bento/ubuntu-24.04) |
+| Debian 12.13   | [`cloud-image/debian-12`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/debian-12)       |
+| Debian 13.3    | [`cloud-image/debian-13`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/debian-13)       |
+| Ubuntu 22.04.5 | [`cloud-image/ubuntu-22.04`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/ubuntu-22.04) |
+| Ubuntu 24.04.3 | [`bento/ubuntu-24.04`](https://portal.cloud.hashicorp.com/vagrant/discover/bento/ubuntu-24.04)             |
 {.full-width}
 
 
@@ -133,25 +133,25 @@ Debian 11 已经于 2024-07 进入 EOL。如需在老旧操作系统上获得扩
 
 当您使用云服务器部署 Pigsty 时，可以考虑在 Terraform 中使用以下操作系统基础镜像，以 [**阿里云**](https://help.aliyun.com/zh/ecs/release-notes-2/) 为例：
 
-| **x86_64**   | 镜像                                             |
-|:-------------|:-----------------------------------------------|
-| Rocky 8.10   | `rockylinux_8_10_x64_20G_alibase_20240923.vhd` |
-| Rocky 9.7    | `rockylinux_9_7_x64_20G_alibase_20260119.vhd`  |
-| Rocky 10.1   | `rockylinux_10_1_x64_20G_alibase_20260119.vhd` |
-| Ubuntu 22.04 | `ubuntu_22_04_x64_20G_alibase_20240926.vhd`    |
-| Ubuntu 24.04 | `ubuntu_24_04_x64_20G_alibase_20240923.vhd`    |
-| Debian 12.13 | `debian_12_13_x64_20G_alibase_20241201.vhd`    |
-| Debian 13.3  | `debian_13_3_x64_20G_alibase_20250101.vhd`     |
+| **x86_64**     | 镜像                                             |
+|:---------------|:-----------------------------------------------|
+| Rocky 8.10     | `rockylinux_8_10_x64_20G_alibase_20240923.vhd` |
+| Rocky 9.7      | `rockylinux_9_7_x64_20G_alibase_20260119.vhd`  |
+| Rocky 10.1     | `rockylinux_10_1_x64_20G_alibase_20260119.vhd` |
+| Ubuntu 22.04.5 | `ubuntu_22_04_x64_20G_alibase_20240926.vhd`    |
+| Ubuntu 24.04.4 | `ubuntu_24_04_x64_20G_alibase_20240923.vhd`    |
+| Debian 12.13   | `debian_12_13_x64_20G_alibase_20241201.vhd`    |
+| Debian 13.3    | `debian_13_3_x64_20G_alibase_20250101.vhd`     |
 {.full-width}
 
 
-| **aarch64**  | 镜像                                               |
-|:-------------|:-------------------------------------------------|
-| Rocky 8.10   | `rockylinux_8_10_arm64_20G_alibase_20251120.vhd` |
-| Rocky 9.7    | `rockylinux_9_7_arm64_20G_alibase_20260119.vhd`  |
-| Rocky 10.1   | `rockylinux_10_1_arm64_20G_alibase_20260119.vhd` |
-| Ubuntu 22.04 | `ubuntu_22_04_arm64_20G_alibase_20251126.vhd`    |
-| Ubuntu 24.04 | `ubuntu_24_04_arm64_20G_alibase_20251126.vhd`    |
-| Debian 12.13 | `debian_12_13_arm64_20G_alibase_20250825.vhd`    |
-| Debian 13.3  | `debian_13_3_arm64_20G_alibase_20251121.vhd`     |
+| **aarch64**    | 镜像                                               |
+|:---------------|:-------------------------------------------------|
+| Rocky 8.10     | `rockylinux_8_10_arm64_20G_alibase_20251120.vhd` |
+| Rocky 9.7      | `rockylinux_9_7_arm64_20G_alibase_20260119.vhd`  |
+| Rocky 10.1     | `rockylinux_10_1_arm64_20G_alibase_20260119.vhd` |
+| Ubuntu 22.04.5 | `ubuntu_22_04_arm64_20G_alibase_20251126.vhd`    |
+| Ubuntu 24.04.3 | `ubuntu_24_04_arm64_20G_alibase_20251126.vhd`    |
+| Debian 12.13   | `debian_12_13_arm64_20G_alibase_20250825.vhd`    |
+| Debian 13.3    | `debian_13_3_arm64_20G_alibase_20251121.vhd`     |
 {.full-width}

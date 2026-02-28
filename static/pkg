@@ -4,7 +4,7 @@
 # File      :   pkg
 # Desc      :   download & install pigsty src & offline package
 # Ctime     :   2025-07-25
-# Mtime     :   2026-02-14
+# Mtime     :   2026-02-28
 # Path      :   https://repo.pigsty.cc/pkg (global, default)
 # Usage     :   curl -fsSL https://repo.pigsty.cc/pkg | bash
 # Docs      :   https://pgsty.com/docs/install/offline

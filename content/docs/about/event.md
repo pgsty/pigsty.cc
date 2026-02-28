@@ -12,6 +12,10 @@ categories: [参考]
 
 ## 最近新闻
 
+- **2026-02-28**: **Pigsty v4.2 正式发布！七款内核批量更新**
+  - 发布博客：[Pigsty v4.2 发布文章](/blog/pigsty/v4.2)
+  - 发布说明：[v4.2.0](/docs/about/release#v420)
+
 - **2026-02-12**: **Pigsty v4.1 正式发布！第一批支持 PostgreSQL 18.2 的发行版**
   - 发布博客：[Pigsty v4.1 发布文章](/blog/pigsty/v4.1)
   - 发布说明：[v4.1.0](/docs/about/release#v410)
@@ -99,6 +103,7 @@ categories: [参考]
 
 | 版本                                 |    发布时间    | 摘要                                                         | 地址                                                                                        |
 |:-----------------------------------|:----------:|------------------------------------------------------------|-------------------------------------------------------------------------------------------|
+| [v4.2.0](/docs/about/release#v420) | 2026-02-28 | 例行小版本更新，六大 PG 内核集中更新                                       | [v4.2.0](https://github.com/pgsty/pigsty/releases/tag/v4.2.0)                             |
 | [v4.1.0](/docs/about/release#v410) | 2026-02-12 | 操作系统与数据库小版本更新，Agent Native CLI，批量 Bug 修复                   | [v4.1.0](https://github.com/pgsty/pigsty/releases/tag/v4.1.0)                             |
 | [v4.0.0](/docs/about/release#v400) | 2026-01-28 | Victoria 可观测性，安全加固，JUICE/VIBE 模块，Apache-2.0                | [v4.0.0](https://github.com/pgsty/pigsty/releases/tag/v4.0.0)                             |
 | [v3.7.0](/docs/about/release#v370) | 2025-12-02 | PG18 成为默认，437 扩展，EL10/Debian13，PGEXT.CLOUD                 | [v3.7.0](https://github.com/pgsty/pigsty/releases/tag/v3.7.0)                             |

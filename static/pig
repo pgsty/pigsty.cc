@@ -3,7 +3,7 @@ set -euo pipefail
 #==============================================================#
 # File      :   pig
 # Desc      :   download & install pig cli
-# Mtime     :   2026-02-14
+# Mtime     :   2026-02-28
 # Path      :   https://repo.pigsty.cc/pig (china region)
 # Usage     :   curl -fsSL https://repo.pigsty.cc/pig | bash
 # Deps      :   curl

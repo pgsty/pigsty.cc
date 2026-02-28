@@ -4,7 +4,7 @@
 # File      :   get
 # Desc      :   download & install pigsty src
 # Ctime     :   2022-10-30
-# Mtime     :   2026-02-14
+# Mtime     :   2026-02-28
 # Path      :   https://pigsty.cc/get (global, default)
 # Usage     :   curl -fsSL https://pigsty.cc/get | bash
 # Docs      :   https://pgsty.com/docs/install/start
