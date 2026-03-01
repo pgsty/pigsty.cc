@@ -1,6 +1,6 @@
 ---
 title: app/teable
-weight: 890
+weight: 850
 description: 使用 Pigsty 托管的 PostgreSQL 部署 Teable 开源 Airtable 替代品
 icon: fa-solid fa-table-cells
 categories: [参考]

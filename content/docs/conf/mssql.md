@@ -1,6 +1,6 @@
 ---
 title: mssql
-weight: 800
+weight: 420
 description: Babelfish（PG17）内核模板，提供 Microsoft SQL Server 协议与 T-SQL 兼容能力
 icon: fa-brands fa-windows
 categories: [参考]

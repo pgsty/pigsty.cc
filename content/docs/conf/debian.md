@@ -1,6 +1,6 @@
 ---
 title: demo/debian
-weight: 910
+weight: 1020
 description: Debian/Ubuntu 专用配置模板
 icon: fa-brands fa-debian
 categories: [参考]

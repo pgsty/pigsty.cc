@@ -1,6 +1,6 @@
 ---
 title: pgsql
-weight: 790
+weight: 410
 description: 原生 PostgreSQL 内核，支持 PostgreSQL 13 到 18 的多版本部署
 icon: fa-brands fa-linux
 categories: [参考]

@@ -1,6 +1,6 @@
 ---
 title: docker
-weight: 935
+weight: 270
 description: Pigsty Docker 容器化单机模板，适用于在容器内快速启动与体验 Pigsty。
 icon: fa-brands fa-docker
 categories: [参考]

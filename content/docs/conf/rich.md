@@ -1,6 +1,6 @@
 ---
 title: rich
-weight: 765
+weight: 220
 description: 功能丰富的单节点配置，构建本地软件源，下载所有扩展，启用 MinIO 备份，预置完整示例
 icon: fa-solid fa-gem
 categories: [参考]

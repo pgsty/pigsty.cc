@@ -1,6 +1,6 @@
 ---
 title: app/registry
-weight: 895
+weight: 870
 description: 使用 Pigsty 部署 Docker Registry 镜像代理和私有仓库
 icon: fa-brands fa-docker
 categories: [参考]

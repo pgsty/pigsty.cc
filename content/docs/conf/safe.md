@@ -1,6 +1,6 @@
 ---
 title: ha/safe
-weight: 850
+weight: 630
 description: 安全加固的高可用配置模板，采用高标准的安全最佳实践
 icon: fa-solid fa-shield-halved
 categories: [参考]

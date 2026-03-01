@@ -1,6 +1,6 @@
 ---
 title: supabase
-weight: 830
+weight: 510
 description: 使用 Pigsty 托管的 PostgreSQL 自建 Supabase 开源 Firebase 替代方案
 icon: fa-solid fa-bolt
 categories: [参考]

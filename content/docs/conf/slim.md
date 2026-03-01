@@ -1,6 +1,6 @@
 ---
 title: slim
-weight: 770
+weight: 230
 description: 精简安装配置模板，不部署监控基础设施，直接从互联网安装 PostgreSQL
 icon: fa-solid fa-feather
 categories: [参考]

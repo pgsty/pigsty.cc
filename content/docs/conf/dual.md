@@ -1,6 +1,6 @@
 ---
 title: ha/dual
-weight: 860
+weight: 650
 description: 双节点配置模板，有限高可用部署，允许宕机特定一台服务器。
 icon: fa-solid fa-dice-two
 categories: [参考]

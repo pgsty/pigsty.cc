@@ -1,6 +1,6 @@
 ---
 title: app/maybe
-weight: 885
+weight: 840
 description: 使用 Pigsty 托管的 PostgreSQL 部署 Maybe 个人财务管理系统
 icon: fa-solid fa-wallet
 categories: [参考]

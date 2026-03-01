@@ -1,6 +1,6 @@
 ---
 title: polar
-weight: 805
+weight: 430
 description: PolarDB for PostgreSQL 内核，提供 Aurora 风格的存算分离能力
 icon: fa-solid fa-snowflake
 categories: [参考]

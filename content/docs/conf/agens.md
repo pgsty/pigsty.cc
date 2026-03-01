@@ -1,6 +1,6 @@
 ---
 title: agens
-weight: 811
+weight: 450
 description: AgensGraph 内核模板，提供属性图模型与 Cypher 查询能力
 icon: fa-solid fa-project-diagram
 categories: [参考]

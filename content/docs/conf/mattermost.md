@@ -1,6 +1,6 @@
 ---
 title: app/mattermost
-weight: 892
+weight: 860
 description: Mattermost 应用模板，使用 Pigsty 托管 PostgreSQL + Docker 一键部署团队协作系统。
 icon: fa-solid fa-comments
 categories: [参考]

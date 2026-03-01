@@ -1,6 +1,6 @@
 ---
 title: ha/simu
-weight: 840
+weight: 610
 description: 20 节点生产环境仿真配置，用于大规模部署测试
 icon: fa-solid fa-server
 categories: [参考]

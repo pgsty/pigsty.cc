@@ -1,6 +1,6 @@
 ---
 title: pgtde
-weight: 820
+weight: 480
 description: Percona PostgreSQL 内核，提供透明数据加密 (pg_tde) 能力
 icon: fa-solid fa-lock
 categories: [参考]

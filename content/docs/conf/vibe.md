@@ -1,6 +1,6 @@
 ---
 title: vibe
-weight: 795
+weight: 260
 description: VIBE AI 编程沙箱配置模板，集成 Code-Server、JupyterLab、Claude Code 与 JuiceFS 的 Web 开发环境
 icon: fa-solid fa-laptop-code
 categories: [参考]

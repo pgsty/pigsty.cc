@@ -1,6 +1,6 @@
 ---
 title: app/odoo
-weight: 870
+weight: 810
 description: 使用 Pigsty 托管的 PostgreSQL 部署 Odoo 开源 ERP 系统
 icon: fa-solid fa-building
 categories: [参考]

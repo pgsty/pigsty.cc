@@ -1,6 +1,6 @@
 ---
 title: mongo
-weight: 940
+weight: 500
 description: DocumentDB + FerretDB（Mongo Wire 协议兼容）配置模板，基于 PostgreSQL 提供 Mongo 风格服务。
 icon: fa-solid fa-database
 categories: [参考]

@@ -1,6 +1,6 @@
 ---
 title: build/pro
-weight: 930
+weight: 1060
 description: Pigsty 专业版离线软件包构建环境配置（多版本）
 icon: fa-solid fa-crown
 categories: [参考]

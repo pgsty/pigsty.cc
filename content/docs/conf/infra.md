@@ -1,6 +1,6 @@
 ---
 title: infra
-weight: 780
+weight: 250
 description: 仅安装可观测性基础设施，不包含 PostgreSQL 与 etcd 的专用配置模板
 icon: fa-solid fa-tower-observation
 categories: [参考]

@@ -1,6 +1,6 @@
 ---
 title: ha/full
-weight: 845
+weight: 620
 description: 四节点完整功能演示环境，带有两套 PostgreSQL 集群、MinIO、Redis 等组件示例
 icon: fa-solid fa-dice-four
 categories: [参考]

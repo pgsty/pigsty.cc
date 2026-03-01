@@ -1,6 +1,6 @@
 ---
 title: mysql
-weight: 815
+weight: 470
 description: OpenHalo 内核，提供 MySQL 协议与语法兼容能力
 icon: fa-solid fa-database
 categories: [参考]

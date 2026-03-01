@@ -1,6 +1,6 @@
 ---
 title: ha/trio
-weight: 855
+weight: 640
 description: 三节点标准高可用配置模板，允许任意一台服务器宕机。
 icon: fa-solid fa-dice-three
 categories: [参考]

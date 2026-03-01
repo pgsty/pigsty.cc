@@ -1,6 +1,6 @@
 ---
 title: build/oss
-weight: 925
+weight: 1050
 description: Pigsty 开源版离线软件包构建环境配置
 icon: fa-solid fa-hammer
 categories: [参考]

@@ -1,6 +1,6 @@
 ---
 title: ivory
-weight: 810
+weight: 440
 description: IvorySQL 内核，提供 Oracle 语法与 PL/SQL 兼容能力
 icon: fa-solid fa-gem
 categories: [参考]

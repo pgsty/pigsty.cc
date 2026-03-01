@@ -1,6 +1,6 @@
 ---
 title: ha/citus
-weight: 835
+weight: 520
 description: 13 节点 Citus 分布式 PostgreSQL 集群，1 协调组 + 5 工作组高可用配置，提供水平扩展与分片能力
 icon: fa-solid fa-cubes
 categories: [参考]

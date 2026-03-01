@@ -1,6 +1,6 @@
 ---
 title: pgedge
-weight: 814
+weight: 460
 description: pgEdge 内核模板，提供面向边缘场景的多主分布式 PostgreSQL 能力
 icon: fa-solid fa-network-wired
 categories: [参考]

@@ -1,6 +1,6 @@
 ---
 title: demo/el
-weight: 905
+weight: 1010
 description: Enterprise Linux (RHEL/Rocky/Alma) 专用配置模板
 icon: fa-brands fa-redhat
 categories: [参考]

@@ -1,6 +1,6 @@
 ---
 title: oriole
-weight: 825
+weight: 490
 description: OrioleDB 内核，提供无膨胀的 OLTP 增强存储引擎
 icon: fa-solid fa-feather
 categories: [参考]

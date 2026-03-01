@@ -1,6 +1,6 @@
 ---
 title: app/dify
-weight: 875
+weight: 820
 description: 使用 Pigsty 托管的 PostgreSQL 部署 Dify AI 应用开发平台
 icon: fa-solid fa-brain
 categories: [参考]

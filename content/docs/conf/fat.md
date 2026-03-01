@@ -1,6 +1,6 @@
 ---
 title: fat
-weight: 775
+weight: 240
 description: 功能全测试模板，单节点安装所有扩展，构建包含 PG 13-18 全版本的本地软件源。
 icon: fa-solid fa-database
 categories: [参考]

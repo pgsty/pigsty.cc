@@ -1,6 +1,6 @@
 ---
 title: meta
-weight: 760
+weight: 210
 description: Pigsty 默认使用的配置模板，单节点，覆盖核心功能，标准单机配置，在线安装，本地备份仓库。
 icon: fa-solid fa-cube
 categories: [参考]

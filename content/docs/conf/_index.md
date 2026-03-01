@@ -1,6 +1,6 @@
 ---
 title: 模板
-weight: 750
+weight: 100
 description: 开箱即用的配置模板，针对具体场景的配置示例，以及配置文件的详细解释。
 icon: fa-solid fa-sliders
 module: [PIGSTY]

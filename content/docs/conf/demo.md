@@ -1,6 +1,6 @@
 ---
 title: demo/demo
-weight: 915
+weight: 1030
 description: Pigsty 公开演示站点配置，展示如何配置 SSL 证书、暴露域名、安装全部扩展
 icon: fa-solid fa-globe
 categories: [参考]

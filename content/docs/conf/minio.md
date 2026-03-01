@@ -1,6 +1,6 @@
 ---
 title: demo/minio
-weight: 920
+weight: 1040
 description: 四节点 x 四盘位的高可用多节点多盘 MinIO 集群演示
 icon: fa-solid fa-box-archive
 categories: [参考]

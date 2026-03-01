@@ -1,6 +1,6 @@
 ---
 title: app/electric
-weight: 880
+weight: 830
 description: 使用 Pigsty 托管的 PostgreSQL 部署 Electric 实时同步服务
 icon: fa-solid fa-bolt-lightning
 categories: [参考]
