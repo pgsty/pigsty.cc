@@ -26,7 +26,7 @@ category: [Reference]
 
 ## 日志
 
-- **type**：设置日志格式，可选 **plain** 或 **json**。使用 **json** 格式时，必须安装 [jsonlogger](/docs/patroni/installation#extras)。默认值为 **plain**。
+- **type**：设置日志格式，可选 **plain** 或 **json**。使用 **json** 格式时，必须安装 [`jsonlogger`](/docs/patroni/installation#extras)。默认值为 **plain**。
 - **level**：设置通用日志级别，默认值为 **INFO**（参见 [Python logging 文档](https://docs.python.org/3.6/library/logging.html#levels)）。
 - **traceback_level**：设置显示调用栈跟踪的日志级别，默认值为 **ERROR**。若希望仅在 **log.level=DEBUG** 时才输出调用栈，可将其设为 **DEBUG**。
 - **format**：设置日志格式化字符串。若日志类型为 **plain**，格式应为字符串，可用属性参见 [LogRecord 属性](https://docs.python.org/3.6/library/logging.html#logrecord-attributes)。若日志类型为 **json**，格式可以是字符串，也可以是列表——列表中每项对应一个 LogRecord 属性名，只需填写字段名，无需加 **%(** 和 **)**。若希望以不同键名输出某个日志字段，可使用字典：键为日志字段名，值为期望在日志中显示的名称。默认值为 **%(asctime)s %(levelname)s: %(message)s**。
@@ -66,14 +66,14 @@ log:
 ## 引导配置
 
 > [!NOTE]
-> 一旦 Patroni 完成集群的首次初始化并将配置写入 DCS，此后对 YAML 配置文件中 `bootstrap.dcs` 节所做的任何修改将不再生效！如需更改，请使用 [patronictl_edit_config](/docs/patroni/patronictl#patronictl_edit_config) 或 Patroni [REST API](/docs/patroni/rest_api#rest_api)。
+> 一旦 Patroni 完成集群的首次初始化并将配置写入 DCS，此后对 YAML 配置文件中 `bootstrap.dcs` 节所做的任何修改将不再生效！如需更改，请使用 [`patronictl edit-config`](/docs/patroni/patronictl#patronictl_edit_config) 或 Patroni [**REST API**](/docs/patroni/rest_api#rest_api)。
 
 - **bootstrap**：
-  - **dcs**：本节内容将在新集群初始化完成后写入配置存储的 <span class="title-ref">/\<namespace\>/\<scope\>/config</span>，作为集群的全局动态配置。可将 [动态配置参数](/docs/patroni/config/dynamic#dynamic) 中描述的任意参数放在 `bootstrap.dcs` 下，Patroni 完成集群引导后会将本节写入该路径。
+  - **dcs**：本节内容将在新集群初始化完成后写入配置存储的 <span class="title-ref">/\<namespace\>/\<scope\>/config</span>，作为集群的全局动态配置。可将 [**动态配置参数**](/docs/patroni/config/dynamic#dynamic) 中描述的任意参数放在 `bootstrap.dcs` 下，Patroni 完成集群引导后会将本节写入该路径。
 
   - **method**：用于引导本集群的自定义脚本。
 
-    详见 [自定义引导方法文档](/docs/patroni/replica_bootstrap#custom_bootstrap)。指定 `initdb` 时将回退到默认的 `initdb` 命令；配置文件中不存在 `method` 参数时同样触发 `initdb`。
+    详见 [**自定义引导方法文档**](/docs/patroni/replica_bootstrap#custom_bootstrap)。指定 `initdb` 时将回退到默认的 `initdb` 命令；配置文件中不存在 `method` 参数时同样触发 `initdb`。
 
   - **initdb**：（可选）传递给 initdb 的选项列表。
 
@@ -89,10 +89,10 @@ log:
 
 ## Citus
 
-启用 Patroni 与 [Citus](https://docs.citusdata.com) 的集成。配置后，Patroni 将负责在协调节点上注册 Citus 工作节点。关于 Citus 支持的更多信息，参见 [此处](/docs/patroni/citus#citus)。
+启用 Patroni 与 [Citus](https://docs.citusdata.com) 的集成。配置后，Patroni 将负责在协调节点上注册 Citus 工作节点。关于 Citus 支持的更多信息，参见 [**此处**](/docs/patroni/citus#citus)。
 
 - **group**：Citus 组 ID，整数类型。协调节点使用 `0`，工作节点使用 `1`、`2` 等。
-- **database**：应创建 [citus](/docs/patroni/citus#citus) 扩展的数据库，协调节点和所有工作节点必须相同，目前仅支持一个数据库。
+- **database**：应创建 [`citus`](/docs/patroni/citus#citus) 扩展的数据库，协调节点和所有工作节点必须相同，目前仅支持一个数据库。
 
 <a id="consul_settings"></a>
 
@@ -191,7 +191,7 @@ log:
 
 ## Kubernetes
 
-- **bypass_api_service**：（可选）与 Kubernetes API 通信时，Patroni 通常依赖 [kubernetes](/docs/patroni/kubernetes#kubernetes) 服务——该服务地址通过 `KUBERNETES_SERVICE_HOST` 环境变量暴露给 Pod。若将 `bypass_api_service` 设为 `true`，Patroni 将解析该服务背后的 API 节点列表并直接连接。
+- **bypass_api_service**：（可选）与 Kubernetes API 通信时，Patroni 通常依赖 [`kubernetes`](/docs/patroni/kubernetes#kubernetes) 服务——该服务地址通过 `KUBERNETES_SERVICE_HOST` 环境变量暴露给 Pod。若将 `bypass_api_service` 设为 `true`，Patroni 将解析该服务背后的 API 节点列表并直接连接。
 - **namespace**：（可选）Patroni Pod 运行所在的 Kubernetes namespace，默认值为 `default`。
 - **labels**：格式为 `{label1: value1, label2: value2}` 的标签，用于查找与当前集群关联的已有对象（Pod 及 Endpoints 或 ConfigMaps），Patroni 也会将这些标签设置到其创建的每个对象（Endpoint 或 ConfigMap）上。
 - **scope_label**：（可选）包含集群名称的标签名，默认值为 `cluster-name`。
@@ -306,9 +306,9 @@ log:
 
   - **proxy_address**：与 PostgreSQL 并行运行的连接池（如 pgbouncer）的可访问 IP 地址和端口，该值以 `proxy_url` 的形式写入 DCS 成员键，可用于服务发现。
 
-  - **create_replica_methods**：创建新从库所用方法的有序列表，`basebackup` 为默认方法，其余方法视为脚本，每个脚本需作为独立配置节进行配置。详见 [自定义从库创建方法文档](/docs/patroni/replica_bootstrap#custom_replica_creation)。
+  - **create_replica_methods**：创建新从库所用方法的有序列表，`basebackup` 为默认方法，其余方法视为脚本，每个脚本需作为独立配置节进行配置。详见 [**自定义从库创建方法文档**](/docs/patroni/replica_bootstrap#custom_replica_creation)。
 
-  - **data_dir**：Postgres 数据目录的位置，可以是 [已有目录](/docs/patroni/existing_data#existing_data) 或由 Patroni 初始化的目录。
+  - **data_dir**：Postgres 数据目录的位置，可以是 [**已有目录**](/docs/patroni/existing_data#existing_data) 或由 Patroni 初始化的目录。
 
   - **config_dir**：Postgres 配置目录的位置，默认为数据目录，必须对 Patroni 可写。
 
@@ -334,16 +334,16 @@ log:
 
   - **recovery_conf**：配置从库时写入 recovery.conf 的附加配置项。
 
-  - **custom_conf**：可选的自定义 `postgresql.conf` 文件路径，将代替 `postgresql.base.conf` 使用。该文件必须存在于所有集群节点上且对 PostgreSQL 可读，实际的 `postgresql.conf` 将从其所在位置包含该文件。注意 Patroni 不会监控此文件的变更，也不会备份它，但其中的设置仍可被 Patroni 自身的配置机制覆盖，详见 [动态配置](/docs/patroni/config#config)。
+  - **custom_conf**：可选的自定义 `postgresql.conf` 文件路径，将代替 `postgresql.base.conf` 使用。该文件必须存在于所有集群节点上且对 PostgreSQL 可读，实际的 `postgresql.conf` 将从其所在位置包含该文件。注意 Patroni 不会监控此文件的变更，也不会备份它，但其中的设置仍可被 Patroni 自身的配置机制覆盖，详见 [**动态配置**](/docs/patroni/config#config)。
 
   - **parameters**：Postgres 的配置参数（GUC），格式为 `{ssl: "on", ssl_cert_file: "cert_file"}`。
 
-  - **pg_hba**：Patroni 用于生成 `pg_hba.conf` 的行列表。若 PostgreSQL 的 `hba_file` 参数设为非默认值，Patroni 将忽略此参数。与 [动态配置](/docs/patroni/config/dynamic#dynamic) 配合使用，可简化 `pg_hba.conf` 的管理。
+  - **pg_hba**：Patroni 用于生成 `pg_hba.conf` 的行列表。若 PostgreSQL 的 `hba_file` 参数设为非默认值，Patroni 将忽略此参数。与 [**动态配置**](/docs/patroni/config/dynamic#dynamic) 配合使用，可简化 `pg_hba.conf` 的管理。
 
     - **- host all all 0.0.0.0/0 md5**
     - **- host replication replicator 127.0.0.1/32 md5**：复制所需的规则行。
 
-  - **pg_ident**：Patroni 用于生成 `pg_ident.conf` 的行列表。若 PostgreSQL 的 `ident_file` 参数设为非默认值，Patroni 将忽略此参数。与 [动态配置](/docs/patroni/config/dynamic#dynamic) 配合使用，可简化 `pg_ident.conf` 的管理。
+  - **pg_ident**：Patroni 用于生成 `pg_ident.conf` 的行列表。若 PostgreSQL 的 `ident_file` 参数设为非默认值，Patroni 将忽略此参数。与 [**动态配置**](/docs/patroni/config/dynamic#dynamic) 配合使用，可简化 `pg_ident.conf` 的管理。
 
     - **- mapname1 systemname1 pguser1**
     - **- mapname1 systemname2 pguser2**
@@ -379,7 +379,7 @@ log:
 ## REST API
 
 - **restapi**：
-  - **connect_address**：访问 Patroni [REST API](/docs/patroni/rest_api#rest_api) 所用的 IP 地址（或主机名）和端口。集群中所有成员必须能够访问此地址，因此除非 Patroni 仅用于本地演示，否则不能使用回环地址（如 "localhost" 或 "127.0.0.1"）。该地址可作为 HTTP 健康检查端点（详见下文 REST API 的 "listen" 参数），也用于用户查询（直接访问或通过 REST API）以及集群成员在主库选举期间的健康检查（例如，判断当前主库是否仍在运行，或是否存在 WAL 位置超前于查询节点的节点）。`connect_address` 写入 DCS 的成员键，从而可通过成员名称解析出其 REST API 连接地址。
+  - **connect_address**：访问 Patroni [**REST API**](/docs/patroni/rest_api#rest_api) 所用的 IP 地址（或主机名）和端口。集群中所有成员必须能够访问此地址，因此除非 Patroni 仅用于本地演示，否则不能使用回环地址（如 "localhost" 或 "127.0.0.1"）。该地址可作为 HTTP 健康检查端点（详见下文 REST API 的 "listen" 参数），也用于用户查询（直接访问或通过 REST API）以及集群成员在主库选举期间的健康检查（例如，判断当前主库是否仍在运行，或是否存在 WAL 位置超前于查询节点的节点）。`connect_address` 写入 DCS 的成员键，从而可通过成员名称解析出其 REST API 连接地址。
   - **listen**：Patroni 监听 REST API 请求的 IP 地址（或主机名）和端口，同样提供上述健康检查与集群节点间通信功能，也可为 HAProxy 等支持 HTTP `OPTIONS` 或 `GET` 检查的负载均衡器提供健康检查端点。
   - **authentication**：（可选）
     - **username**：用于保护不安全 REST API 端点的 Basic-auth 用户名。
@@ -441,10 +441,10 @@ Warning
 
 - **ctl**：（可选）
   - **authentication**：
-    - **username**：访问受保护 REST API 端点的 Basic-auth 用户名。若未提供，[patronictl](/docs/patroni/patronictl#patronictl) 将使用 REST API 的 "username" 参数值。
-    - **password**：访问受保护 REST API 端点的 Basic-auth 密码。若未提供，[patronictl](/docs/patroni/patronictl#patronictl) 将使用 REST API 的 "password" 参数值。
+    - **username**：访问受保护 REST API 端点的 Basic-auth 用户名。若未提供，[`patronictl`](/docs/patroni/patronictl#patronictl) 将使用 REST API 的 "username" 参数值。
+    - **password**：访问受保护 REST API 端点的 Basic-auth 密码。若未提供，[`patronictl`](/docs/patroni/patronictl#patronictl) 将使用 REST API 的 "password" 参数值。
   - **insecure**：允许在不验证 SSL 证书的情况下连接 REST API。
-  - **cacert**：用于验证 REST API SSL 证书的 CA_BUNDLE 文件或受信任 CA 证书目录，若未提供，[patronictl](/docs/patroni/patronictl#patronictl) 将使用 REST API 的 "cafile" 参数值。
+  - **cacert**：用于验证 REST API SSL 证书的 CA_BUNDLE 文件或受信任 CA 证书目录，若未提供，[`patronictl`](/docs/patroni/patronictl#patronictl) 将使用 REST API 的 "cafile" 参数值。
   - **certfile**：PEM 格式的客户端证书文件。
   - **keyfile**：PEM 格式的客户端私钥文件。
   - **keyfile_password**：用于解密客户端 keyfile 的密码。
@@ -467,10 +467,10 @@ Warning
 - **noloadbalance**：`true` 或 `false`。若设为 `true`，该节点在 `GET /replica` REST API 健康检查时将返回 HTTP 503，从而被排除在负载均衡之外，默认为 `false`。
 - **replicatefrom**：另一个从库的名称，用于支持级联复制。
 - **nosync**：`true` 或 `false`。若设为 `true`，该节点永远不会被选为同步从库。
-- **sync_priority**：整数，控制 [synchronous_mode](/docs/patroni/replication_modes#synchronous_mode) 设为 `on` 时此节点在同步从库选择中的优先级，数值越高越优先。若 `sync_priority` 为 0 或负数，该节点不会被写入 `synchronous_standby_names` 参数（效果类似于 `nosync: true`）。注意此参数的含义与 `pg_stat_replication` 视图中报告的 `sync_priority` 值相反。
+- **sync_priority**：整数，控制 [`synchronous_mode`](/docs/patroni/replication_modes#synchronous_mode) 设为 `on` 时此节点在同步从库选择中的优先级，数值越高越优先。若 `sync_priority` 为 0 或负数，该节点不会被写入 `synchronous_standby_names` 参数（效果类似于 `nosync: true`）。注意此参数的含义与 `pg_stat_replication` 视图中报告的 `sync_priority` 值相反。
 - **nofailover**：`true` 或 `false`，控制此节点是否允许参与主库竞选，默认为 `false`，即此节点 <span id="can">可以</span> 参与主库竞选。
-- **failover_priority**：整数，控制此节点在故障转移时的优先级。在接收/回放相同 WAL 量的前提下，优先级高的节点优先被选为新主库；但无论优先级高低，接收/回放 LSN 更大的节点始终优先。若 `failover_priority` 为 0 或负数，该节点不允许参与主库竞选（效果类似于 `nofailover: true`）。已知限制：`failover_priority` 目前不支持 [基于法定人数的同步复制](/docs/patroni/replication_modes#quorum_mode)。
-- **nostream**：`true` 或 `false`。若设为 `true`，该节点将不使用复制协议流式传输 WAL，而依赖归档恢复（需配置 `restore_command`）和 `pg_wal`/`pg_xlog` 轮询。同时将禁用该节点本身及其所有级联从库上永久逻辑复制槽的复制与同步，在主库节点上设置此标签无效。
+- **failover_priority**：整数，控制此节点在故障转移时的优先级。在接收/回放相同 WAL 量的前提下，优先级高的节点优先被选为新主库；但无论优先级高低，接收/回放 LSN 更大的节点始终优先。若 `failover_priority` 为 0 或负数，该节点不允许参与主库竞选（效果类似于 `nofailover: true`）。已知限制：`failover_priority` 目前不支持 [**基于法定人数的同步复制**](/docs/patroni/replication_modes#quorum_mode)。
+- **nostream**：`true` 或 `false`。若设为 `true`，该节点将不使用复制协议流式传输 WAL，而依赖归档恢复（需配置 `restore_command`）和 `pg_wal`/`pg_xlog` 轮询。同时将禁用该节点本身及其所有级联从库上永久逻辑复制槽的复制与同步，在主库上设置此标签无效。
 
 > [!WARNING]
 > `nofailover` 和 `failover_priority` 只能提供其中一个。`nofailover: true` 等同于 `failover_priority: 0`，而 `nofailover: false` 将给予节点优先级 1。
@@ -482,4 +482,4 @@ Warning
 - **key3**：`1.4`
 - **key4**：`"RandomString"`
 
-标签在 [REST API](/docs/patroni/rest_api#rest_api) 和 [patronictl_list](/docs/patroni/patronictl#patronictl_list) 中均可查看。也可通过这些标签检查实例的健康状态——若某个实例未定义该标签，或对应值与查询值不匹配，将返回 HTTP 503。
+标签在 [**REST API**](/docs/patroni/rest_api#rest_api) 和 [`patronictl list`](/docs/patroni/patronictl#patronictl_list) 中均可查看。也可通过这些标签检查实例的健康状态——若某个实例未定义该标签，或对应值与查询值不匹配，将返回 HTTP 503。

@@ -1,6 +1,6 @@
 ---
 title: "命令参考"
-linkTitle: "Commands"
+linkTitle: "命令参考"
 weight: 40
 description: "pgBackRest 命令参考手册，包含备份、恢复、归档及管理操作的全部选项。"
 icon: fa-solid fa-terminal

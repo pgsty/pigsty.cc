@@ -1,6 +1,6 @@
 ---
 title: "Patroni 4.1 中文文档"
-linkTitle: Patroni 文档
+linkTitle: patroni 文档
 weight: 8050
 icon: fas fa-yin-yang
 description: "Patroni PostgreSQL 高可用模板，v4.1 中文文档"

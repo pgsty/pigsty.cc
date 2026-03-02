@@ -733,6 +733,6 @@ Successfully failed over to "postgresql1"
 
 若 Patroni 正处于循环尝试恢复失败 PostgreSQL 的过程中，此调用可能失败。解决方法是在请求体中指定 `{"force":true}`。
 
-也可在请求体中指定 `{"from-leader":true}`，直接从领导者节点获取基础备份，在所有从库节点均已失败的情况下执行重新初始化时尤为有用。
+也可在请求体中指定 `{"from-leader":true}`，直接从领导者节点获取基础备份，在所有从库均已失败的情况下执行重新初始化时尤为有用。
 
 重新初始化端点由 [patronictl_reinit](/docs/patroni/patronictl#patronictl_reinit) 使用。

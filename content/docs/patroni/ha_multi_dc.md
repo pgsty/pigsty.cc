@@ -31,7 +31,7 @@ category: [Concept]
 
 PostgreSQL 方面，至少需要在不同数据中心部署 2 个节点，然后在全局 [**动态配置**](/docs/patroni/config/dynamic#dynamic) 中设置 `synchronous_mode: true`。
 
-这将启用同步复制，主节点会从其他节点中选择一个作为同步备库。
+这将启用同步复制，主库会从其他节点中选择一个作为同步备库。
 
 --------
 

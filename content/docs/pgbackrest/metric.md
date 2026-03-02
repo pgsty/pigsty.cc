@@ -1,6 +1,6 @@
 ---
 title: "项目指标"
-linkTitle: "Metrics"
+linkTitle: "项目指标"
 weight: 80
 description: "pgBackRest 项目代码覆盖率指标与质量统计。"
 icon: fa-solid fa-list-check
@@ -8,6 +8,7 @@ module: [PGBACKREST]
 category: [Concept]
 ---
 
+> 原始页面： <https://pgbackrest.org/metric.html>
 
 --------
 

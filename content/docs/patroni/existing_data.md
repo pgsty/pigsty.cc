@@ -41,17 +41,17 @@ category: [Task]
     GRANT EXECUTE ON function pg_catalog.pg_read_binary_file(text, bigint, bigint, boolean) TO PATRONI_REWIND_USERNAME;
     ```
 
-2.  在所有 PostgreSQL 节点上依次执行以下操作。请逐节点完成所有步骤后再处理下一个节点，先从主节点开始，然后依次处理各从库节点：
+2.  在所有 PostgreSQL 节点上依次执行以下操作。请逐节点完成所有步骤后再处理下一个节点，先从主库开始，然后依次处理各从库节点：
 
     1.  如果 PostgreSQL 通过 systemd 管理，请先禁用 PostgreSQL 的 systemd 服务单元——因为 PostgreSQL 的启停将改由 Patroni 负责管理。
     2.  为 Patroni 创建 YAML 配置文件。可使用 [**Patroni 配置生成与校验工具**](/docs/patroni/config#validate_generate_config) 完成此操作。
-        - **注意（仅适用于主节点）：** 如果现有集群成员之间使用复制槽进行复制，建议启用 `use_slots` 并通过 `slots` 配置项将现有复制槽设为永久槽。请注意，当 `use_slots` 启用时，Patroni 会自动为成员间复制创建复制槽，并删除它无法识别的复制槽。此处使用永久槽的目的是在迁移至 Patroni 的过程中保留现有复制槽。详情请参阅 [**动态配置项**](/docs/patroni/config/dynamic#dynamic)。
+        - **注意（仅适用于主库）：** 如果现有集群成员之间使用复制槽进行复制，建议启用 `use_slots` 并通过 `slots` 配置项将现有复制槽设为永久槽。请注意，当 `use_slots` 启用时，Patroni 会自动为成员间复制创建复制槽，并删除它无法识别的复制槽。此处使用永久槽的目的是在迁移至 Patroni 的过程中保留现有复制槽。详情请参阅 [**动态配置项**](/docs/patroni/config/dynamic#dynamic)。
     3.  通过 `patroni` systemd 服务单元启动 Patroni。Patroni 将自动检测到 PostgreSQL 已在运行，并开始监控该实例。
 
 3.  将 PostgreSQL 的"启动控制权"移交给 Patroni。为此，需要通过 [`patronictl restart cluster-name member-name`](/docs/patroni/patronictl#patronictl_restart_parameters) 命令重启各集群成员。为最大限度减少停机时间，建议将此步骤拆分为：
 
     1.  立即重启从库节点。
-    2.  在维护窗口内计划性地重启主节点。
+    2.  在维护窗口内计划性地重启主库。
 
 4.  如果您在第 2.2 步中配置了永久槽，应在 Patroni 创建的复制槽的 `restart_lsn` 追上对应成员原始槽的 `restart_lsn` 之后，通过 [`patronictl edit-config cluster-name`](/docs/patroni/patronictl#patronictl_edit_config_parameters) 命令将其从 `slots` 配置中移除。移除后，Patroni 将在这些原始槽不再被需要时自动将其删除。以下是用于比较两个槽 `restart_lsn` 的示例查询：
 
@@ -74,11 +74,11 @@ category: [Task]
 目前，进行大版本升级的唯一可行方式是：
 
 1.  停止 Patroni。
-2.  升级 PostgreSQL 二进制文件，并在主节点上执行 [pg_upgrade](https://www.postgresql.org/docs/current/pgupgrade.html)。
+2.  升级 PostgreSQL 二进制文件，并在主库上执行 [pg_upgrade](https://www.postgresql.org/docs/current/pgupgrade.html)。
 3.  更新 `patroni.yml`。
 4.  从 DCS 中删除 `initialize` 键，或清除 DCS 中的完整集群状态。后者可通过执行 [`patronictl remove cluster-name`](/docs/patroni/patronictl#patronictl_remove_parameters) 命令完成。这是必要的，因为 `pg_upgrade` 会运行 `initdb`，从而创建一个具有新 PostgreSQL 系统标识符的新数据库。
 5.  如果您在上一步中清除了集群状态，建议将旧数据目录中的 `patroni.dynamic.json` 复制到新数据目录，以保留之前设置的 PostgreSQL 参数。
-6.  在主节点上启动 Patroni。
+6.  在主库上启动 Patroni。
 7.  在从库节点上升级 PostgreSQL 二进制文件，更新 `patroni.yml`，并清空 `data_dir`。
 8.  在从库节点上启动 Patroni，等待复制完成。
 

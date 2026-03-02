@@ -1,12 +1,14 @@
 ---
 title: "配置参考"
-linkTitle: "Configuration"
+linkTitle: "配置参考"
 weight: 50
 description: "pgBackRest 完整配置参考，涵盖归档、备份、仓库、云存储等所有配置项。"
 icon: fa-solid fa-code
 module: [PGBACKREST]
 category: [Reference]
 ---
+
+> 原始页面： <https://pgbackrest.org/configuration.html>
 
 --------
 

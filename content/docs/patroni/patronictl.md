@@ -110,7 +110,7 @@ dsn
 
 `patronictl dsn` 获取 Patroni 集群指定成员的连接字符串。
 
-若多个成员符合条件，将优先返回主库节点的连接字符串。
+若多个成员符合条件，将优先返回主库的连接字符串。
 
 <a id="patronictl_dsn_parameters"></a>
 #### 参数
@@ -145,7 +145,7 @@ Patroni 集群名称。
 <a id="patronictl_dsn_examples"></a>
 #### 示例
 
-获取主库节点的 DSN：
+获取主库的 DSN：
 
 ``` bash
 $ patronictl -c postgres0.yml dsn batman -r primary
@@ -440,7 +440,7 @@ $ patronictl -c postgres0.yml flush batman switchover --force
 Success: scheduled switchover deleted
 ```
 
-取消所有备库节点的已调度重启：
+取消所有备库的已调度重启：
 
 ``` bash
 $ patronictl -c postgres0.yml flush batman restart -r replica --force
@@ -1033,7 +1033,7 @@ Patroni 集群名称。
 `CITUS_GROUP` 为 Citus 组 ID。
 
 `--wait`
-等待备库节点重新初始化完成后再返回。
+等待备库重新初始化完成后再返回。
 
 `--force`
 跳过确认提示，适合在脚本中使用。

@@ -1,5 +1,5 @@
 ---
-title: "pgBackRest 2.58 文档"
+title: "pgBackRest 2.58 中文文档"
 linkTitle: "pgbackrest 文档"
 weight: 8200
 icon: fas fa-couch
@@ -9,7 +9,7 @@ module: [PGBACKREST]
 category: [Concept]
 ---
 
-> snapshot of pgBackrest 2.58 documentation: <https://pgbackrest.org/>
+> 原始页面： <https://pgbackrest.org/>
 
 
 --------
