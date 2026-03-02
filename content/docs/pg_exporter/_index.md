@@ -1,7 +1,9 @@
 ---
-title: PG Exporter
-weight: 5600
+title: "PG Exporter 1.2 中文文档"
+linktitle: "pg_exporter 文档"
+weight: 8400
 icon: fas fa-chart-line
+module: [PG_EXPORTER]
 description: 高级 PostgreSQL 与 PgBouncer 监控指标导出器
 ---
 

@@ -47,11 +47,6 @@
         </li>
         {{ end -}}
       {{ end -}}
-      {{ if .Site.Params.versions -}}
-      <li class="nav-item dropdown d-none d-lg-block td-navbar__version-menu">
-        {{ partial "navbar-version-selector.html" . -}}
-      </li>
-      {{ end -}}
       {{/* 外部链接（如 GitHub）移到右侧 */}}
       {{ range .Site.Menus.main -}}
         {{ $isExternal := ne $baseURL.Host (urls.Parse .URL).Host -}}
