@@ -137,7 +137,7 @@ default: /tmp/pgbackrest
 example: --lock-path=/backup/db/lock
 ```
 
-### 中性 Umask 选项（`--neutral-umask`）
+### 中性 umask 选项（`--neutral-umask`）
 
 使用中性 umask。
 

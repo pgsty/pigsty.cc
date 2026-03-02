@@ -22,7 +22,7 @@ category: [Reference]
 
 备份按从旧到新的顺序列出。最旧的备份*始终*是全量备份（标签末尾以 `F` 标识），最新的备份可以是全量备份、差异备份（末尾以 `D` 标识）或增量备份（末尾以 `I` 标识）。
 
-`timestamp start/stop` 定义了备份运行的时间段。`timestamp stop` 可用于确定时间点恢复（PITR）所需的目标备份。更多关于时间点恢复的信息，请参见 [**时间点恢复**](/docs/pgbackrest/user-guide/#point-in-time-recovery) 章节。
+`timestamp start/stop` 定义了备份运行的时间段。`timestamp stop` 可用于确定时间点恢复（PITR）所需的目标备份。更多关于时间点恢复的信息，请参见 [**时间点恢复**](/docs/pgbackrest/user-guide/#时间点恢复) 章节。
 
 `wal start/stop` 定义了恢复时将数据库恢复到一致状态所需的 WAL 范围。`backup` 命令完成前会确保该 WAL 范围已存在于归档中。
 
@@ -72,7 +72,7 @@ example: --output=json
 example: --set=20150131-153358F_20150131-153401I
 ```
 
-### 类型过滤选项（`--type`）
+### 类型选项（`--type`）
 
 按备份类型过滤。
 
@@ -527,7 +527,7 @@ example: --repo1-host=repo1.domain.com
 
 已弃用名称：backup-host
 
-### 仓库主机 CA 证书文件选项（`--repo-host-ca-file`）
+### 仓库主机证书颁发机构文件选项（`--repo-host-ca-file`）
 
 仓库主机证书颁发机构文件。
 
@@ -537,7 +537,7 @@ example: --repo1-host=repo1.domain.com
 example: --repo1-host-ca-file=/etc/pki/tls/certs/ca-bundle.crt
 ```
 
-### 仓库主机 CA 证书路径选项（`--repo-host-ca-path`）
+### 仓库主机证书颁发机构路径选项（`--repo-host-ca-path`）
 
 仓库主机证书颁发机构路径。
 

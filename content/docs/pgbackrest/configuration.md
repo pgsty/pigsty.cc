@@ -114,7 +114,7 @@ allowed: [0B, 4PiB]
 example: archive-push-queue-max=1TiB
 ```
 
-Deprecated Name: archive-queue-max
+已弃用名称：`archive-queue-max`
 
 ### 归档超时选项（`--archive-timeout`）
 
@@ -998,7 +998,7 @@ default: n
 example: repo1-hardlink=y
 ```
 
-Deprecated Name: hardlink
+已弃用名称：`hardlink`
 
 ### 仓库主机选项（`--repo-host`）
 
@@ -1010,7 +1010,7 @@ Deprecated Name: hardlink
 example: repo1-host=repo1.domain.com
 ```
 
-Deprecated Name: backup-host
+已弃用名称：`backup-host`
 
 ### 仓库主机证书颁发机构文件选项（`--repo-host-ca-file`）
 
@@ -1053,7 +1053,7 @@ default: [path of executed pgbackrest binary]
 example: repo1-host-cmd=/usr/lib/backrest/bin/pgbackrest
 ```
 
-Deprecated Name: backup-cmd
+已弃用名称：`backup-cmd`
 
 ### 仓库主机配置选项（`--repo-host-config`）
 
@@ -1066,7 +1066,7 @@ default: CFGOPTDEF_CONFIG_PATH "/" PROJECT_CONFIG_FILE
 example: repo1-host-config=/conf/pgbackrest/pgbackrest.conf
 ```
 
-Deprecated Name: backup-config
+已弃用名称：`backup-config`
 
 ### 仓库主机配置包含路径选项（`--repo-host-config-include-path`）
 
@@ -1118,7 +1118,7 @@ allowed: [0, 65535]
 example: repo1-host-port=25
 ```
 
-Deprecated Name: backup-ssh-port
+已弃用名称：`backup-ssh-port`
 
 ### 仓库主机协议类型选项（`--repo-host-type`）
 
@@ -1145,7 +1145,7 @@ default: pgbackrest
 example: repo1-host-user=repo-user
 ```
 
-Deprecated Name: backup-user
+已弃用名称：`backup-user`
 
 ### 仓库路径选项（`--repo-path`）
 
@@ -1177,7 +1177,7 @@ allowed: [1, 9999999]
 example: repo1-retention-archive=2
 ```
 
-Deprecated Name: retention-archive
+已弃用名称：`retention-archive`
 
 ### 归档保留类型选项（`--repo-retention-archive-type`）
 
@@ -1190,7 +1190,7 @@ default: full
 example: repo1-retention-archive-type=diff
 ```
 
-Deprecated Name: retention-archive-type
+已弃用名称：`retention-archive-type`
 
 ### 差异备份保留选项（`--repo-retention-diff`）
 
@@ -1205,7 +1205,7 @@ allowed: [1, 9999999]
 example: repo1-retention-diff=3
 ```
 
-Deprecated Name: retention-diff
+已弃用名称：`retention-diff`
 
 ### 全量备份保留选项（`--repo-retention-full`）
 
@@ -1218,7 +1218,7 @@ allowed: [1, 9999999]
 example: repo1-retention-full=2
 ```
 
-Deprecated Name: retention-full
+已弃用名称：`retention-full`
 
 ### 全量备份保留类型选项（`--repo-retention-full-type`）
 
@@ -1502,7 +1502,7 @@ example: repo1-sftp-public-key-file=~/.ssh/id_ed25519.pub
 example: repo1-storage-ca-file=/etc/pki/tls/certs/ca-bundle.crt
 ```
 
-Deprecated Names: repo-azure-ca-file, repo-s3-ca-file
+已弃用名称：`repo-azure-ca-file`、`repo-s3-ca-file`
 
 ### 仓库存储 TLS CA 路径选项（`--repo-storage-ca-path`）
 
@@ -1514,7 +1514,7 @@ Deprecated Names: repo-azure-ca-file, repo-s3-ca-file
 example: repo1-storage-ca-path=/etc/pki/tls/certs
 ```
 
-Deprecated Names: repo-azure-ca-path, repo-s3-ca-path
+已弃用名称：`repo-azure-ca-path`、`repo-s3-ca-path`
 
 ### 仓库存储主机选项（`--repo-storage-host`）
 
@@ -1526,7 +1526,7 @@ Deprecated Names: repo-azure-ca-path, repo-s3-ca-path
 example: repo1-storage-host=127.0.0.1
 ```
 
-Deprecated Names: repo-azure-host, repo-s3-host
+已弃用名称：`repo-azure-host`、`repo-s3-host`
 
 ### 仓库存储端口选项（`--repo-storage-port`）
 
@@ -1540,7 +1540,7 @@ allowed: [1, 65535]
 example: repo1-storage-port=9000
 ```
 
-Deprecated Names: repo-azure-port, repo-s3-port
+已弃用名称：`repo-azure-port`、`repo-s3-port`
 
 ### 仓库存储标签选项（`--repo-storage-tag`）
 
@@ -1591,7 +1591,7 @@ default: y
 example: repo1-storage-verify-tls=n
 ```
 
-Deprecated Names: repo-azure-verify-tls, repo-s3-verify-ssl, repo-s3-verify-tls
+已弃用名称：`repo-azure-verify-tls`、`repo-s3-verify-ssl`、`repo-s3-verify-tls`
 
 ### 仓库符号链接选项（`--repo-symlink`）
 
@@ -1635,7 +1635,7 @@ example: repo-target-time=2024-08-08 12:12:12+00
 - `s3` - AWS 简单存储服务（Simple Storage Service）
 - `sftp` - 安全文件传输协议（SFTP）
 
-当使用 NFS 挂载作为 `posix` 仓库时，适用于 pgBackRest 的规则与 PostgreSQL 文档中描述的相同，请参阅： [Creating a Database Cluster - File Systems](https://www.postgresql.org/docs/current/creating-cluster.html#CREATING-CLUSTER-FILESYSTEM)。
+当使用 NFS 挂载作为 `posix` 仓库时，适用于 pgBackRest 的规则与 PostgreSQL 文档中描述的相同，请参阅 [**Creating a Database Cluster - File Systems**](https://www.postgresql.org/docs/current/creating-cluster.html#CREATING-CLUSTER-FILESYSTEM)。
 
 ```
 default: posix
@@ -1741,7 +1741,7 @@ example: recovery-option=primary_conninfo=db.mydomain.com
 
 在恢复期间将表空间移动到新位置。当副本或升级后的系统挂载点不同时，此功能很有用。
 
-表空间位置不存储在 `pg_tablespace` 中，因此可以随意移动表空间。但不建议将表空间移动到 `data_directory`，这可能会导致问题。有关移动表空间的更多信息，http://www.databasesoup.com/2013/11/moving-tablespaces.html 是一个很好的参考资源。
+表空间位置不存储在 `pg_tablespace` 中，因此可以随意移动表空间。但不建议将表空间移动到 `data_directory`，这可能会导致问题。有关移动表空间的更多信息，[**Moving Tablespaces**](http://www.databasesoup.com/2013/11/moving-tablespaces.html) 是一个很好的参考资源。
 
 ```
 example: tablespace-map=ts_01=/db/ts_01
@@ -1865,7 +1865,7 @@ example: pg1-database=backupdb
 example: pg1-host=db.domain.com
 ```
 
-Deprecated Name: db-host
+已弃用名称：`db-host`
 
 ### PostgreSQL 主机证书颁发机构文件选项（`--pg-host-ca-file`）
 
@@ -1908,7 +1908,7 @@ default: [path of executed pgbackrest binary]
 example: pg1-host-cmd=/usr/lib/backrest/bin/pgbackrest
 ```
 
-Deprecated Name: db-cmd
+已弃用名称：`db-cmd`
 
 ### PostgreSQL 主机配置选项（`--pg-host-config`）
 
@@ -1921,7 +1921,7 @@ default: CFGOPTDEF_CONFIG_PATH "/" PROJECT_CONFIG_FILE
 example: pg1-host-config=/conf/pgbackrest/pgbackrest.conf
 ```
 
-Deprecated Name: db-config
+已弃用名称：`db-config`
 
 ### PostgreSQL 主机配置包含路径选项（`--pg-host-config-include-path`）
 
@@ -1973,7 +1973,7 @@ allowed: [0, 65535]
 example: pg1-host-port=25
 ```
 
-Deprecated Name: db-ssh-port
+已弃用名称：`db-ssh-port`
 
 ### PostgreSQL 主机协议类型选项（`--pg-host-type`）
 
@@ -2000,7 +2000,7 @@ default: postgres
 example: pg1-host-user=db_owner
 ```
 
-Deprecated Name: db-user
+已弃用名称：`db-user`
 
 ### PostgreSQL 路径选项（`--pg-path`）
 
@@ -2014,7 +2014,7 @@ PostgreSQL 数据目录。
 example: pg1-path=/data/db
 ```
 
-Deprecated Name: db-path
+已弃用名称：`db-path`
 
 ### PostgreSQL 端口选项（`--pg-port`）
 
@@ -2028,7 +2028,7 @@ allowed: [0, 65535]
 example: pg1-port=6543
 ```
 
-Deprecated Name: db-port
+已弃用名称：`db-port`
 
 ### PostgreSQL Unix 套接字路径选项（`--pg-socket-path`）
 
@@ -2040,7 +2040,7 @@ PostgreSQL Unix 套接字目录路径。
 example: pg1-socket-path=/var/run/postgresql
 ```
 
-Deprecated Name: db-socket-path
+已弃用名称：`db-socket-path`
 
 ### PostgreSQL 数据库用户选项（`--pg-user`）
 

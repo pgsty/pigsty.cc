@@ -221,12 +221,9 @@ pgBackRest 的版本号由主版本号和次版本号两部分组成。主版本
 - 移除恢复过程中并行读取文件的数量限制。（*由 David Christensen 审核。*）
 - 改进 SFTP 错误信息。（*由 Reid Thompson 贡献，David Steele 审核。*）
 
-**文档新功能：**
-
-- 在用户指南中添加性能调优章节。（*由 Stefan Fercot 审核。*）
-
 **文档改进：**
 
+- 在用户指南中添加性能调优章节。（*由 Stefan Fercot 审核。*）
 - 阐明 `data_directory` 的来源。（*由 Stefan Fercot 贡献，David Steele 审核，Matthias 建议。*）
 - 优化摘要（summary）是否使用小写的判断逻辑。（*由 Daniel Westermann 建议。*）
 
@@ -375,7 +372,7 @@ pgBackRest 的版本号由主版本号和次版本号两部分组成。主版本
 
 - 移除对 PostgreSQL `9.3` 的支持。（*由 Stephen Frost 审核。*）
 
-**文档新功能：**
+**文档改进：**
 
 - 记录维护者选项。（*由 Stefan Fercot 审核。*）
 - 更新 PostgreSQL >= 13 的时间点恢复（PITR）文档。
@@ -412,7 +409,7 @@ pgBackRest 的版本号由主版本号和次版本号两部分组成。主版本
 - 支持 SFTP 公钥/私钥路径中的前导波浪号（`~`）。（*由 Reid Thompson 贡献，David Steele 审核。*）
 - 在续期认证令牌前重新加载 GCS 凭证。（*由 Stephen Frost 审核，Daniel Farina 建议。*）
 
-**文档漏洞修复：**
+**文档改进：**
 
 - 修复配置参考中 `--tls-server-address` 选项的示例。（*由 Hartmut Goebel 修复，David Steele 审核。*）
 - 修复命令参考中 `filter` 选项的示例。
@@ -547,9 +544,6 @@ pgBackRest 的版本号由主版本号和次版本号两部分组成。主版本
 
 - 使用 bundling 时，不为零长度文件存储引用。（*由 Stefan Fercot 审核。*）
 - 对 `pg_start_backup()`/`pg_stop_backup()` 使用更通用的描述文字。（*由 Greg Sabino Mullane、David Christensen 审核，Greg Sabino Mullane 建议。*）
-
-**测试套件改进：**
-
 - 更新 `test.pl` 的 `--psql-bin` 选项以匹配命令行帮助。（*由 Koshi Shibagaki 贡献，David Steele 审核。*）
 
 
@@ -572,7 +566,7 @@ pgBackRest 的版本号由主版本号和次版本号两部分组成。主版本
 
 - 在 `info` 命令的 JSON 输出中支持 `--set` 参数。（*由 Stefan Fercot 贡献，David Steele 审核，Anton Kurochkin 建议。*）
 - 允许为对象存储配置上传分块大小。（*由 Stefan Fercot 审核，Anton Glushakov 建议。*）
-- 备份成功后更新 archive.info 的时间戳。（*由 Stefan Fercot 审核，Alex Richman 建议。*）
+- 备份成功后更新 `archive.info` 的时间戳。（*由 Stefan Fercot 审核，Alex Richman 建议。*）
 - 将备库时间线检查移至检查点之后执行。（*由 Stefan Fercot、Keith Fiske 审核，Keith Fiske 建议。*）
 - 改进备份恢复 resume 时的警告信息。（*由 Cynthia Shang 建议。*）
 
@@ -589,6 +583,10 @@ pgBackRest 的版本号由主版本号和次版本号两部分组成。主版本
 
 **打包者注意**：已添加实验性的 meson 构建，但在可预见的未来，打包者应继续使用 autoconf/make 构建。
 
+**漏洞修复：**
+
+- 在配置参考中跳过内部选项。（*由 Francisco Miguel Biete Banon 报告。*）
+
 **改进：**
 
 - 支持 OpenSSL 3。（*由 Stephen Frost 审核。*）
@@ -598,20 +596,13 @@ pgBackRest 的版本号由主版本号和次版本号两部分组成。主版本
 - 当 `resume=n` 时，禁用增量 manifest 文件保存。（*由 Reid Thompson 贡献，David Steele 审核。*）
 - 在复制开始前将备份完成百分比置为零。（*由 Reid Thompson 贡献，David Steele 审核。*）
 - 使用 S3 的 `IsTruncated` 标志判断列表是否需要继续。（*由 John Morris、Soulou 审核，Christian Montagne 建议。*）
-
-**文档漏洞修复：**
-
-- 在配置参考中跳过内部选项。（*由 Francisco Miguel Biete Banon 报告。*）
+- 添加实验性 Meson 构建。（*由 Eli Schwartz、Sam Bassaly 审核。*）
+- 允许向 `--test-path` 选项传递任意路径。（*由 Andrey Sokolov 贡献，David Steele 审核。*）
+- 修复在定义 `DEBUG_EXEC_TIME` 但未定义 `DEBUG` 时的编译错误。（*由 Andrey Sokolov 贡献，David Steele 审核。*）
 
 **文档改进：**
 
 - 在仓库主机章节中添加 PostgreSQL 配置的链接。（*由 Stefan Fercot 审核，Julien Cigar 建议。*）
-
-**测试套件改进：**
-
-- 添加实验性 Meson 构建。（*由 Eli Schwartz、Sam Bassaly 审核。*）
-- 允许向 `--test-path` 选项传递任意路径。（*由 Andrey Sokolov 贡献，David Steele 审核。*）
-- 修复在定义 `DEBUG_EXEC_TIME` 但未定义 `DEBUG` 时的编译错误。（*由 Andrey Sokolov 贡献，David Steele 审核。*）
 
 
 ### v2.39 版本说明
@@ -624,6 +615,9 @@ pgBackRest 的版本号由主版本号和次版本号两部分组成。主版本
 
 - 修复 `FINALLY()` 中抛出的错误导致无限循环的问题。（*由 Stephen Frost 审核。*）
 - 除其他进程持有锁之外，对所有锁定失败情况报错。（*由 Reid Thompson、Geir Råness 审核，Geir Råness 报告。*）
+- 修复用户指南中对 `stanza-update` 的错误引用。（*由 Abubakar Mohammed 修复，David Steele 审核。*）
+- 修复配置参考中 `repo-gcs-key-type` 选项的示例。（*由 Reid Thompson 审核。*）
+- 修复 `tls-server-auth` 示例并添加说明。（*由 Reid Thompson 审核。*）
 
 **新功能：**
 
@@ -637,7 +631,7 @@ pgBackRest 的版本号由主版本号和次版本号两部分组成。主版本
 
 **改进：**
 
-- 允许在 full backup 后更改 `repo-hardlink` 选项。（*由 Reid Thompson 审核。*）
+- 允许在全量备份（full backup）后更改 `repo-hardlink` 选项。（*由 Reid Thompson 审核。*）
 - 提高 `backup` 和 `restore` 完成百分比日志的精度。（*由 Reid Thompson 贡献，David Steele 审核。*）
 - 改进 `repo-*` 命令的路径验证。（*由 Reid Thompson 贡献，David Steele 审核。*）
 - 改进 `stop` 命令以遵循 `stanza` 选项。（*由 Reid Thompson 贡献，David Steele 审核，ragaoua 建议。*）
@@ -645,13 +639,7 @@ pgBackRest 的版本号由主版本号和次版本号两部分组成。主版本
 - 在 `archive-get`/`archive-push` 异步出错时，添加检查日志的提示信息。（*由 Reid Thompson 审核。*）
 - 新增 `ClockError`，用于处理意外的时钟偏差和时区变更。（*由 Greg Sabino Mullane、Stefan Fercot 审核，Greg Sabino Mullane 建议。*）
 - 在错误信息中显示历史 manifest 文件前，去除其扩展名。（*由 Stefan Fercot 审核。*）
-- 在锁权限错误信息中添加用户:组信息。（*由 Reid Thompson 审核。*）
-
-**文档漏洞修复：**
-
-- 修复用户指南中对 `stanza-update` 的错误引用。（*由 Abubakar Mohammed 修复，David Steele 审核。*）
-- 修复配置参考中 `repo-gcs-key-type` 选项的示例。（*由 Reid Thompson 审核。*）
-- 修复 `tls-server-auth` 示例并添加说明。（*由 Reid Thompson 审核。*）
+- 在锁权限错误信息中添加用户：组信息。（*由 Reid Thompson 审核。*）
 
 **文档改进：**
 
@@ -673,6 +661,9 @@ pgBackRest 的版本号由主版本号和次版本号两部分组成。主版本
 
 - 对 S3 批量文件删除中的错误进行重试。（*由 Reid Thompson 审核，Alex Richman 报告。*）
 - 允许对 HTTP `connection` 头部值进行大小写不敏感的匹配。（*由 Reid Thompson 审核，Rémi Vidier 报告。*）
+- 将 TLS 文档中的 `repo` 选项移至 `global` 部分。（*由 Anton Kurochkin 报告。*）
+- 从 stanza 命令中移除未使用的 `backup-standby` 选项。（*由 Stefan Fercot 报告。*）
+- 修复帮助文档和版本说明中的错别字。（*由 Daniel Gustafsson 修复，David Steele 审核。*）
 
 **新功能：**
 
@@ -689,12 +680,6 @@ pgBackRest 的版本号由主版本号和次版本号两部分组成。主版本
 - 不重试致命错误。（*由 Reid Thompson 审核。*）
 - 移除对 PostgreSQL `8.3`/`8.4` 的支持。（*由 Reid Thompson、Stefan Fercot 审核。*）
 - 移除尝试检测额外文件系统压缩的逻辑。（*由 Reid Thompson、Stefan Fercot 审核。*）
-
-**文档漏洞修复：**
-
-- 将 TLS 文档中的 `repo` 选项移至 `global` 部分。（*由 Anton Kurochkin 报告。*）
-- 从 stanza 命令中移除未使用的 `backup-standby` 选项。（*由 Stefan Fercot 报告。*）
-- 修复帮助文档和版本说明中的错别字。（*由 Daniel Gustafsson 修复，David Steele 审核。*）
 
 **文档改进：**
 
@@ -728,7 +713,7 @@ pgBackRest 的版本号由主版本号和次版本号两部分组成。主版本
 - 在备份期间检查集群是否存活且配置正确。（*由 Stefan Fercot 审核。*）
 - 当 `restore` 无法找到匹配时间目标的备份时，报错退出。（*由 Reid Thompson、Douglas J Hunley 审核，Douglas J Hunley 建议。*）
 - 解析 S3/Azure 端点中的协议/端口。（*由 Reid Thompson 贡献，David Steele 审核。*）
-- 当 checkpoint_timeout 超过 `db-timeout` 时，添加警告信息。（*由 Stefan Fercot 贡献，David Steele 审核。*）
+- 当 `checkpoint_timeout` 超过 `db-timeout` 时，添加警告信息。（*由 Stefan Fercot 贡献，David Steele 审核。*）
 - 在 HTTP 错误输出中添加请求方法（verb）。（*由 Christoph Berg 贡献，David Steele 审核。*）
 - 允许布尔命令行选项使用 y/n 作为参数。（*由 Reid Thompson 贡献，David Steele 审核。*）
 - 使备份大小日志与 `info` 命令输出完全一致。（*由 Reid Thompson 贡献，David Steele 审核，Mahomed Hussein 建议。*）
@@ -748,7 +733,7 @@ pgBackRest 的版本号由主版本号和次版本号两部分组成。主版本
 
 **漏洞修复：**
 
-- 允许将 "global" 用作 stanza 名称前缀。（*由 Stefan Fercot 审核，Younes Alhroub 报告。*）
+- 允许将 `global` 用作 stanza 名称前缀。（*由 Stefan Fercot 审核，Younes Alhroub 报告。*）
 - 修复 GCS 密钥文件无效时的段错误。（*由 Stephen Frost 审核，Henrik Feldt 报告。*）
 
 **改进：**
@@ -759,7 +744,7 @@ pgBackRest 的版本号由主版本号和次版本号两部分组成。主版本
 - 在 `backup.info` 中报告备份文件验证错误。（*由 Stefan Fercot 贡献，David Steele 审核。*）
 - 在在线备份恢复日志中添加恢复开始时间。（*由 Tom Swartz、Stefan Fercot 审核，Tom Swartz 建议。*）
 - 本地任务失败时，同时报告原始错误和重试信息。（*由 Stefan Fercot 审核。*）
-- 在 info 文本输出中，将页面校验和错误重命名为错误列表。（*由 Stefan Fercot 审核。*）
+- 在 `info` 文本输出中，将页面校验和错误重命名为错误列表。（*由 Stefan Fercot 审核。*）
 - 在备库重放超时信息中添加提示。（*由 Cynthia Shang、Stefan Fercot 审核，Leigh Downs 建议。*）
 
 
@@ -776,19 +761,19 @@ pgBackRest 的版本号由主版本号和次版本号两部分组成。主版本
 - 检测 S3 多部分上传完成阶段的错误。（*由 Cynthia Shang、Marco Montagna 审核，Marco Montagna、Lev Kokotov、Anderson A. Mallmann 报告。*）
 - 修复循环符号链接的检测问题。（*由 Stefan Fercot 审核，Rohit Raveendran 报告。*）
 - 仅将选定的 `repo` 选项传递给远端。（*由 David Christensen、Cynthia Shang 审核，Greg Sabino Mullane、David Christensen 报告。*）
+- 修复用户指南中错误的主机名。（*由 Stefan Fercot 审核，Greg Sabino Mullane 报告。*）
 
 **改进：**
 
 - 新增二进制协议。（*由 Cynthia Shang 审核。*）
 - 在 `restore` 时自动创建数据目录。（*由 Stefan Fercot 贡献，David Steele 审核，Chris Bandy 建议。*）
 - 允许 `restore` 使用 `--type=lsn`。（*由 Stefan Fercot 贡献，Cynthia Shang 审核，James Coleman 建议。*）
-- 将 `backup`/`restore` 已复制文件的日志级别更改为 detail。（*由 Stefan Fercot 审核，Jens Wilke 建议。*）
+- 将 `backup`/`restore` 已复制文件的日志级别更改为 `detail`。（*由 Stefan Fercot 审核，Jens Wilke 建议。*）
 - 等待检查点 LSN 赶上重放 LSN 时改为循环等待。（*由 Stefan Fercot 贡献，David Steele 审核，Fatih Mencutekin 建议。*）
 - 记录 `backup` 文件总数与 `restore` 大小/文件总数。（*由 Cynthia Shang 审核。*）
-
-**文档漏洞修复：**
-
-- 修复用户指南中错误的主机名。（*由 Stefan Fercot 审核，Greg Sabino Mullane 报告。*）
+- 添加测试路径在仓库路径内的检查。（*由 Greg Sabino Mullane 审核，Greg Sabino Mullane 建议。*）
+- 添加 CodeQL 静态代码分析。（*由 Cynthia Shang 审核。*）
+- 更新测试以使用标准模式。（*由 Cynthia Shang 贡献，David Steele 审核。*）
 
 **文档改进：**
 
@@ -796,12 +781,6 @@ pgBackRest 的版本号由主版本号和次版本号两部分组成。主版本
 - 在用户指南中重新整理备份文档。（*由 Cynthia Shang 审核。*）
 - 在命令参考中阐明 `restore` 的 `--type` 行为。（*由 Cynthia Shang 贡献，David Steele 审核。*）
 - 修复文档和注释中的错别字。（*由 Eric Radman 贡献，David Steele 审核。*）
-
-**测试套件改进：**
-
-- 添加测试路径在仓库路径内的检查。（*由 Greg Sabino Mullane 审核，Greg Sabino Mullane 建议。*）
-- 添加 CodeQL 静态代码分析。（*由 Cynthia Shang 审核。*）
-- 更新测试以使用标准模式。（*由 Cynthia Shang 贡献，David Steele 审核。*）
 
 
 ### v2.34 版本说明
@@ -826,7 +805,7 @@ pgBackRest 的版本号由主版本号和次版本号两部分组成。主版本
 
 **改进：**
 
-- 将归档过期日志从 detail 级别提升至 info 级别。（*由 Cynthia Shang 贡献，David Steele 审核。*）
+- 将归档过期日志从 `detail` 级别提升至 `info` 级别。（*由 Cynthia Shang 贡献，David Steele 审核。*）
 - 在 `restore` 时删除 stanza 归档缓冲（spool）路径。（*由 Cynthia Shang、Stefan Fercot 审核。*）
 - 在 `backup` 复制期间，不以原子方式写入文件，也不同步路径。（*由 Stephen Frost、Stefan Fercot、Cynthia Shang 审核。*）
 
@@ -933,24 +912,24 @@ pgBackRest 的版本号由主版本号和次版本号两部分组成。主版本
 
 **漏洞修复：**
 
-- 当备份用户无法读取 `pg_settings` 时，输出带有提示信息的错误报告。（*审阅：Stefan Fercot、Cynthia Shang。报告：Mohamed Insaf K。*）
+- 当备份用户无法读取 `pg_settings` 时，输出带有提示信息的错误报告。（*由 Stefan Fercot、Cynthia Shang 审核，Mohamed Insaf K 报告。*）
 
 **新功能：**
 
-- 支持 PostgreSQL 13。（*审阅：Cynthia Shang。*）
+- 支持 PostgreSQL 13。（*由 Cynthia Shang 审核。*）
 
 **改进：**
 
-- 改进 PostgreSQL 版本识别机制。（*审阅：Cynthia Shang、Stephen Frost。*）
-- 改进工作目录相关的错误提示信息。（*审阅：Stefan Fercot。*）
-- 当找不到 WAL 段时，添加启动 stanza 的提示信息。（*贡献：David Christensen。审阅：David Steele。*）
-- 新增协议版本不匹配时的提示信息。（*审阅：Cynthia Shang。建议：loop-evgeny。*）
+- 改进 PostgreSQL 版本识别机制。（*由 Cynthia Shang、Stephen Frost 审核。*）
+- 改进工作目录相关的错误提示信息。（*由 Stefan Fercot 审核。*）
+- 当找不到 WAL 段时，添加启动 stanza 的提示信息。（*由 David Christensen 贡献，David Steele 审核。*）
+- 新增协议版本不匹配时的提示信息。（*由 Cynthia Shang 审核，loop-evgeny 建议。*）
 
 **文档改进：**
 
-- 添加远程运行时 pgBackRest 版本必须一致的说明。（*审阅：Cynthia Shang。建议：loop-evgeny。*）
-- 将 `info` 命令的文本内容移至参考手册，并在用户指南中添加对应链接。（*审阅：Cynthia Shang。建议：Christophe Courtois。*）
-- 更新用户指南中 CentOS/RHEL 的 yum 仓库路径。（*贡献：Heath Lord。审阅：David Steele。*）
+- 添加远程运行时 pgBackRest 版本必须一致的说明。（*由 Cynthia Shang 审核，loop-evgeny 建议。*）
+- 将 `info` 命令的文本内容移至参考手册，并在用户指南中添加对应链接。（*由 Cynthia Shang 审核，Christophe Courtois 建议。*）
+- 更新用户指南中 CentOS/RHEL 的 yum 仓库路径。（*由 Heath Lord 贡献，David Steele 审核。*）
 
 
 ### v2.29 发布说明
@@ -961,33 +940,33 @@ pgBackRest 的版本号由主版本号和次版本号两部分组成。主版本
 
 **漏洞修复：**
 
-- 抑制关闭 `local`/`remote` 进程时的错误输出。命令已执行完毕，此时抛出错误适得其反；但仍会以 **warn** 级别记录警告，以说明发生了异常情况。（*审阅：Cynthia Shang。报告：argdenis。*）
-- 修复文件名或数据库名中包含 `=` 字符时的处理问题。（*审阅：Bastian Wegge、Cynthia Shang。报告：Brad Nicholson、Bastian Wegge。*）
+- 抑制关闭 `local`/`remote` 进程时的错误输出。命令已执行完毕，此时抛出错误适得其反；但仍会以 **warn** 级别记录警告，以说明发生了异常情况。（*由 Cynthia Shang 审核，argdenis 报告。*）
+- 修复文件名或数据库名中包含 `=` 字符时的处理问题。（*由 Bastian Wegge、Cynthia Shang 审核，Brad Nicholson、Bastian Wegge 报告。*）
 
 **新功能：**
 
-- 在 AWS 实例上自动获取临时 S3 凭证。（*贡献：David Steele、Stephen Frost。审阅：Cynthia Shang、David Youatt、Aleš Zelený、Jeanette Bromage。*）
-- 新增 `archive-mode` 选项，用于在 `restore` 时禁用归档。（*审阅：Stephen Frost。建议：Stephen Frost。*）
+- 在 AWS 实例上自动获取临时 S3 凭证。（*由 David Steele、Stephen Frost 贡献，Cynthia Shang、David Youatt、Aleš Zelený、Jeanette Bromage 审核。*）
+- 新增 `archive-mode` 选项，用于在 `restore` 时禁用归档。（*由 Stephen Frost 审核，Stephen Frost 建议。*）
 
 **改进：**
 
 - 支持 PostgreSQL 13 beta3。后续 beta 版本中控制/目录/WAL 版本如有变更可能导致兼容性问题，pgBackRest 将随每个版本发布同步更新。
-- S3/Azure 存储的异步 `list`/`remove` 操作。（*审阅：Cynthia Shang、Stephen Frost。*）
-- 优化 manifest 构建过程中未记录关系检测的内存使用效率。（*审阅：Cynthia Shang、Stephen Frost、Brad Nicholson、Oscar。建议：Oscar、Brad Nicholson。*）
-- 派生异步进程后主动关闭文件描述符。（*审阅：Stephen Frost、Cynthia Shang。*）
-- 将备份远程连接的关闭延迟至归档检查完成之后。（*贡献：Floris van Nee。审阅：David Steele。*）
-- 改进详细错误输出。（*审阅：Cynthia Shang。*）
-- 改进 TLS 错误报告。（*审阅：Cynthia Shang、Stephen Frost。*）
+- S3/Azure 存储的异步 `list`/`remove` 操作。（*由 Cynthia Shang、Stephen Frost 审核。*）
+- 优化 manifest 构建过程中未记录关系检测的内存使用效率。（*由 Cynthia Shang、Stephen Frost、Brad Nicholson、Oscar 审核，Oscar、Brad Nicholson 建议。*）
+- 派生异步进程后主动关闭文件描述符。（*由 Stephen Frost、Cynthia Shang 审核。*）
+- 将备份远程连接的关闭延迟至归档检查完成之后。（*由 Floris van Nee 贡献，David Steele 审核。*）
+- 改进详细错误输出。（*由 Cynthia Shang 审核。*）
+- 改进 TLS 错误报告。（*由 Cynthia Shang、Stephen Frost 审核。*）
 
 **文档漏洞修复：**
 
-- 在 `compress-type` 选项参考中补充 `none` 并修正示例。（*报告：Ugo Bellavance、Don Seiler。*）
-- 在 `repo-type` 选项参考中补充缺失的 `azure` 类型。（*修复：Don Seiler。审阅：David Steele。*）
-- 修正 `repo-cipher-type` 选项参考中的拼写错误。（*修复：Don Seiler。审阅：David Steele。*）
+- 在 `compress-type` 选项参考中补充 `none` 并修正示例。（*Ugo Bellavance、Don Seiler 报告。*）
+- 在 `repo-type` 选项参考中补充缺失的 `azure` 类型。（*由 Don Seiler 修复，David Steele 审核。*）
+- 修正 `repo-cipher-type` 选项参考中的拼写错误。（*由 Don Seiler 修复，David Steele 审核。*）
 
 **文档改进：**
 
-- 明确说明当 `expire-auto` 禁用时，必须定期手动运行 `expire`。（*审阅：Douglas J Hunley。建议：Douglas J Hunley。*）
+- 明确说明当 `expire-auto` 禁用时，必须定期手动运行 `expire`。（*由 Douglas J Hunley 审核，Douglas J Hunley 建议。*）
 
 
 ### v2.28 发布说明
@@ -998,34 +977,34 @@ pgBackRest 的版本号由主版本号和次版本号两部分组成。主版本
 
 **漏洞修复：**
 
-- 修复 `restore --force` 行为等同于 `--force --delta` 的问题。该问题导致 `restore` 根据时间戳和文件大小判断是否替换文件，而非直接覆盖，造成部分应被更新的文件保持不变。普通 `restore` 和 `restore --delta` 不受此问题影响。（*审阅：Cynthia Shang。*）
+- 修复 `restore --force` 行为等同于 `--force --delta` 的问题。该问题导致 `restore` 根据时间戳和文件大小判断是否替换文件，而非直接覆盖，造成部分应被更新的文件保持不变。普通 `restore` 和 `restore --delta` 不受此问题影响。（*由 Cynthia Shang 审核。*）
 
 **新功能：**
 
-- 支持 Azure 作为仓库存储后端。（*审阅：Cynthia Shang、Don Seiler。*）
-- 新增 `expire-auto` 选项，用于禁止在成功备份后自动执行过期清理。（*贡献：Stefan Fercot。审阅：Cynthia Shang、David Steele。*）
+- 支持 Azure 作为仓库存储后端。（*由 Cynthia Shang、Don Seiler 审核。*）
+- 新增 `expire-auto` 选项，用于禁止在成功备份后自动执行过期清理。（*由 Stefan Fercot 贡献，Cynthia Shang、David Steele 审核。*）
 
 **改进：**
 
-- 支持 S3 分片上传的异步处理。（*审阅：Stephen Frost。*）
-- 为 `backup`、`restore`、`archive-get` 和 `archive-push` 添加自动重试机制。（*审阅：Cynthia Shang。*）
-- 在用于备份控制的 PostgreSQL 会话中禁用查询并行化。（*审阅：Stefan Fercot。*）
+- 支持 S3 分片上传的异步处理。（*由 Stephen Frost 审核。*）
+- 为 `backup`、`restore`、`archive-get` 和 `archive-push` 添加自动重试机制。（*由 Cynthia Shang 审核。*）
+- 在用于备份控制的 PostgreSQL 会话中禁用查询并行化。（*由 Stefan Fercot 审核。*）
 - 支持 PostgreSQL 13 beta2。后续 beta 版本中控制/目录/WAL 版本如有变更可能导致兼容性问题，pgBackRest 将随每个版本发布同步更新。
-- 改进对无效 HTTP 响应状态码的处理。（*审阅：Cynthia Shang。*）
-- 改进 `archive-get` 命令缺少 `pg1-path` 选项时的错误提示。（*审阅：Cynthia Shang。*）
-- 在时间线切换后启用校验和 delta 时，添加相应提示信息。（*审阅：Matt Bunter、Cynthia Shang。*）
-- 在适当场合以 PostgreSQL 替代 `postmaster`。（*审阅：Cynthia Shang。*）
+- 改进对无效 HTTP 响应状态码的处理。（*由 Cynthia Shang 审核。*）
+- 改进 `archive-get` 命令缺少 `pg1-path` 选项时的错误提示。（*由 Cynthia Shang 审核。*）
+- 在时间线切换后启用校验和 delta 时，添加相应提示信息。（*由 Matt Bunter、Cynthia Shang 审核。*）
+- 在适当场合以 PostgreSQL 替代 `postmaster`。（*由 Cynthia Shang 审核。*）
 
 **文档漏洞修复：**
 
-- 修正 `repo-retention-full-type` 选项的错误示例。（*报告：Höseyin Sönmez。*）
-- 从 HTML 和 man 页面的命令参考中移除内部命令。（*报告：Cynthia Shang。*）
+- 修正 `repo-retention-full-type` 选项的错误示例。（*Höseyin Sönmez 报告。*）
+- 从 HTML 和 man 页面的命令参考中移除内部命令。（*Cynthia Shang 报告。*）
 
 **文档改进：**
 
-- 更新用户指南使用的 PostgreSQL 版本，并添加版本范围说明，以表明用户指南适用于一定范围内的 PostgreSQL 版本，即使其针对特定版本构建。（*审阅：Stephen Frost。*）
-- 更新关于过期特定备份集的 FAQ。（*贡献：Cynthia Shang。审阅：David Steele。*）
-- 更新 FAQ 以明确默认 PITR 行为。（*贡献：Cynthia Shang。审阅：David Steele。*）
+- 更新用户指南使用的 PostgreSQL 版本，并添加版本范围说明，以表明用户指南适用于一定范围内的 PostgreSQL 版本，即使其针对特定版本构建。（*由 Stephen Frost 审核。*）
+- 更新关于过期特定备份集的 FAQ。（*由 Cynthia Shang 贡献，David Steele 审核。*）
+- 更新 FAQ 以明确默认 PITR 行为。（*由 Cynthia Shang 贡献，David Steele 审核。*）
 
 
 ### v2.27 发布说明
@@ -1036,29 +1015,29 @@ pgBackRest 的版本号由主版本号和次版本号两部分组成。主版本
 
 **漏洞修复：**
 
-- 修复检测文件链接是否包含在路径链接中的逻辑问题。（*审阅：Cynthia Shang。报告：Christophe Cavallié。*）
-- 允许 `pg-path1` 在同步 `archive-push` 中为可选项。（*审阅：Cynthia Shang。报告：Jerome Peng。*）
-- `expire` 命令现在会检查停止文件是否存在。（*修复：Cynthia Shang。审阅：David Steele。*）
-- 处理 HTTP 响应中缺少原因短语的情况。（*审阅：Cynthia Shang。报告：Tenuun。*）
-- 增大 lz4 压缩刷新的缓冲区大小。（*审阅：Cynthia Shang。报告：Eric Radman。*）
-- 在 `remote` 命令中忽略 `pg-host*` 和 `repo-host*` 选项。（*审阅：Cynthia Shang。报告：Pavel Suderevsky。*）
-- 修复 `remote` 命令中可能缺少 `pg1-*` 选项的问题。（*审阅：Cynthia Shang。报告：Andrew L'Ecuyer。*）
+- 修复检测文件链接是否包含在路径链接中的逻辑问题。（*由 Cynthia Shang 审核，Christophe Cavallié 报告。*）
+- 允许 `pg-path1` 在同步 `archive-push` 中为可选项。（*由 Cynthia Shang 审核，Jerome Peng 报告。*）
+- `expire` 命令现在会检查停止文件是否存在。（*由 Cynthia Shang 修复，David Steele 审核。*）
+- 处理 HTTP 响应中缺少原因短语的情况。（*由 Cynthia Shang 审核，Tenuun 报告。*）
+- 增大 lz4 压缩刷新的缓冲区大小。（*由 Cynthia Shang 审核，Eric Radman 报告。*）
+- 在 `remote` 命令中忽略 `pg-host*` 和 `repo-host*` 选项。（*由 Cynthia Shang 审核，Pavel Suderevsky 报告。*）
+- 修复 `remote` 命令中可能缺少 `pg1-*` 选项的问题。（*由 Cynthia Shang 审核，Andrew L'Ecuyer 报告。*）
 
 **新功能：**
 
-- 全量备份的基于时间的保留策略。`--repo-retention-full-type` 选项支持按天数指定全量备份的保留周期。（*贡献：Cynthia Shang、Pierre Ducroquet。审阅：David Steele。*）
-- 临时备份过期清理。允许用户无视保留策略设置，直接删除指定备份。（*贡献：Cynthia Shang。审阅：David Steele。*）
-- 支持 Zstandard 压缩。注意：设置 `compress-type=zst` 将使新备份和归档与旧版本的 pgBackRest 不兼容（无法恢复）。（*审阅：Cynthia Shang。*）
-- 支持 bzip2 压缩。注意：设置 `compress-type=bz2` 将使新备份和归档与旧版本的 pgBackRest 不兼容（无法恢复）。（*贡献：Stephen Frost。审阅：David Steele、Cynthia Shang。*）
-- 在 `info` 命令中显示 `backup`/`expire` 的运行状态。（*贡献：Stefan Fercot。审阅：David Steele。*）
+- 全量备份的基于时间的保留策略。`--repo-retention-full-type` 选项支持按天数指定全量备份的保留周期。（*由 Cynthia Shang、Pierre Ducroquet 贡献，David Steele 审核。*）
+- 临时备份过期清理。允许用户无视保留策略设置，直接删除指定备份。（*由 Cynthia Shang 贡献，David Steele 审核。*）
+- 支持 Zstandard 压缩。注意：设置 `compress-type=zst` 将使新备份和归档与旧版本的 pgBackRest 不兼容（无法恢复）。（*由 Cynthia Shang 审核。*）
+- 支持 bzip2 压缩。注意：设置 `compress-type=bz2` 将使新备份和归档与旧版本的 pgBackRest 不兼容（无法恢复）。（*由 Stephen Frost 贡献，David Steele、Cynthia Shang 审核。*）
+- 在 `info` 命令中显示 `backup`/`expire` 的运行状态。（*由 Stefan Fercot 贡献，David Steele 审核。*）
 
 **改进：**
 
-- 仅当满足 `repo-retention-archive` 阈值时才过期 WAL 归档。此前，首次全量备份之前的 WAL 会在第一次全量备份后被清理；现在将按保留策略进行保留。（*贡献：Cynthia Shang。审阅：David Steele。*）
-- 添加本地 MD5 实现，使 S3 在启用 FIPS 时仍可正常工作。（*审阅：Cynthia Shang、Stephen Frost。建议：Brian Almeida、John Kelly。*）
-- 支持 PostgreSQL 13 beta1。后续 beta 版本中控制/目录/WAL 版本如有变更可能导致兼容性问题，pgBackRest 将随每个版本发布同步更新。（*审阅：Cynthia Shang。*）
-- 将 `buffer-size` 默认值降低至 `1MiB`。（*审阅：Stephen Frost。*）
-- 若 `expire` 未在仓库主机上运行，则输出用户友好的错误信息。（*贡献：Cynthia Shang。审阅：David Steele。*）
+- 仅当满足 `repo-retention-archive` 阈值时才过期 WAL 归档。此前，首次全量备份之前的 WAL 会在第一次全量备份后被清理；现在将按保留策略进行保留。（*由 Cynthia Shang 贡献，David Steele 审核。*）
+- 添加本地 MD5 实现，使 S3 在启用 FIPS 时仍可正常工作。（*由 Cynthia Shang、Stephen Frost 审核，Brian Almeida、John Kelly 建议。*）
+- 支持 PostgreSQL 13 beta1。后续 beta 版本中控制/目录/WAL 版本如有变更可能导致兼容性问题，pgBackRest 将随每个版本发布同步更新。（*由 Cynthia Shang 审核。*）
+- 将 `buffer-size` 默认值降低至 `1MiB`。（*由 Stephen Frost 审核。*）
+- 若 `expire` 未在仓库主机上运行，则输出用户友好的错误信息。（*由 Cynthia Shang 贡献，David Steele 审核。*）
 
 
 ### v2.26 发布说明
@@ -1069,14 +1048,14 @@ pgBackRest 的版本号由主版本号和次版本号两部分组成。主版本
 
 **漏洞修复：**
 
-- 从 manifest 正则表达式中移除空子表达式。MacOS 对此不兼容，其他平台似乎可以正常运行。（*修复：David Raftis。审阅：David Steele。*）
+- 从 manifest 正则表达式中移除空子表达式。MacOS 对此不兼容，其他平台似乎可以正常运行。（*由 David Raftis 修复，David Steele 审核。*）
 
 **改进：**
 
-- 实现非阻塞 TLS。（*审阅：Slava Moudry、Cynthia Shang、Stephen Frost。*）
-- 仅对 WAL 记录的文件限制备份复制大小。此前的行为可能导致 `postgresql.conf` 或 `postgresql.auto.conf` 在备份中被截断。（*审阅：Cynthia Shang。*）
-- TCP keep-alive 选项现在支持配置。（*建议：Marc Cousin。*）
-- 新增 `io-timeout` 选项。（*审阅：Cynthia Shang。*）
+- 实现非阻塞 TLS。（*由 Slava Moudry、Cynthia Shang、Stephen Frost 审核。*）
+- 仅对 WAL 记录的文件限制备份复制大小。此前的行为可能导致 `postgresql.conf` 或 `postgresql.auto.conf` 在备份中被截断。（*由 Cynthia Shang 审核。*）
+- TCP keep-alive 选项现在支持配置。（*Marc Cousin 建议。*）
+- 新增 `io-timeout` 选项。（*由 Cynthia Shang 审核。*）
 
 
 ### v2.25 发布说明
@@ -1087,16 +1066,16 @@ pgBackRest 的版本号由主版本号和次版本号两部分组成。主版本
 
 **新功能：**
 
-- 新增 lz4 压缩支持。注意：设置 `compress-type=lz4` 将使新备份和归档与旧版本的 pgBackRest 不兼容（无法恢复）。（*审阅：Cynthia Shang。*）
-- 为 `expire` 命令新增 `--dry-run` 选项。使用 dry-run 可以预览 `expire` 命令将删除哪些备份/归档，而不会实际执行删除操作。（*贡献：Cynthia Shang、Luca Ferrari。审阅：David Steele。建议：Marc Cousin。*）
+- 新增 lz4 压缩支持。注意：设置 `compress-type=lz4` 将使新备份和归档与旧版本的 pgBackRest 不兼容（无法恢复）。（*由 Cynthia Shang 审核。*）
+- 为 `expire` 命令新增 `--dry-run` 选项。使用 dry-run 可以预览 `expire` 命令将删除哪些备份/归档，而不会实际执行删除操作。（*由 Cynthia Shang、Luca Ferrari 贡献，David Steele 审核，Marc Cousin 建议。*）
 
 **改进：**
 
-- 提升远程 manifest 构建的性能。（*建议：Jens Wilke。*）
-- 修复 Linux 上 keepalive 选项的检测问题。（*贡献：Marc Cousin。审阅：David Steele。*）
-- 添加 configure 主机检测，以正确设置标准编译标志。（*贡献：Marc Cousin。审阅：David Steele。*）
-- 从不使用压缩选项的命令中移除 `compress`/`compress-level` 选项。这些命令（如 `restore`、`archive-get`）从未使用过压缩选项，但此前允许在命令行中传入；现在若传入这些选项将报错。如果遇到此类错误，请移除无效选项。（*审阅：Cynthia Shang。*）
-- 将备份文件复制大小限制为备份开始时报告的大小。若文件在备份过程中增大，恢复期间会通过 WAL 回放重建，无需复制额外数据。（*审阅：Cynthia Shang。*）
+- 提升远程 manifest 构建的性能。（*Jens Wilke 建议。*）
+- 修复 Linux 上 keepalive 选项的检测问题。（*由 Marc Cousin 贡献，David Steele 审核。*）
+- 添加 configure 主机检测，以正确设置标准编译标志。（*由 Marc Cousin 贡献，David Steele 审核。*）
+- 从不使用压缩选项的命令中移除 `compress`/`compress-level` 选项。这些命令（如 `restore`、`archive-get`）从未使用过压缩选项，但此前允许在命令行中传入；现在若传入这些选项将报错。如果遇到此类错误，请移除无效选项。（*由 Cynthia Shang 审核。*）
+- 将备份文件复制大小限制为备份开始时报告的大小。若文件在备份过程中增大，恢复期间会通过 WAL 回放重建，无需复制额外数据。（*由 Cynthia Shang 审核。*）
 
 
 ### v2.24 发布说明
@@ -1107,23 +1086,23 @@ pgBackRest 的版本号由主版本号和次版本号两部分组成。主版本
 
 **漏洞修复：**
 
-- 修复异步归档命令产生僵尸进程的问题。（*审阅：Stephen Frost。报告：Adam Brusselback、ejberdecia。*）
-- 当 `archive-get`/`archive-push`/`restore` 未在 PostgreSQL 主机上运行时报错。（*审阅：Stephen Frost。报告：Jesper St John。*）
-- 当未指定大小/编码时，读取 HTTP 内容直至 EOF。（*审阅：Cynthia Shang。报告：Christian ROUX。*）
-- 修复由 Perl 创建的可续传备份在恢复时的处理问题。此情况下应忽略该可续传备份，但 C 代码无法加载 Perl 写入的部分 manifest（格式略有差异）。已添加相关校验以正常处理此情况。（*报告：Kacey Holston。*）
+- 修复异步归档命令产生僵尸进程的问题。（*由 Stephen Frost 审核，Adam Brusselback、ejberdecia 报告。*）
+- 当 `archive-get`/`archive-push`/`restore` 未在 PostgreSQL 主机上运行时报错。（*由 Stephen Frost 审核，Jesper St John 报告。*）
+- 当未指定大小/编码时，读取 HTTP 内容直至 EOF。（*由 Cynthia Shang 审核，Christian ROUX 报告。*）
+- 修复由 Perl 创建的可续传备份在恢复时的处理问题。此情况下应忽略该可续传备份，但 C 代码无法加载 Perl 写入的部分 manifest（格式略有差异）。已添加相关校验以正常处理此情况。（*Kacey Holston 报告。*）
 
 **新功能：**
 
-- 指定时间目标时自动选择备份集进行恢复。仅在未指定 `--set` 时执行自动选择；若找不到适合目标时间的备份集，则使用最新（默认）备份集。（*贡献：Cynthia Shang。审阅：David Steele。*）
+- 指定时间目标时自动选择备份集进行恢复。仅在未指定 `--set` 时执行自动选择；若找不到适合目标时间的备份集，则使用最新（默认）备份集。（*由 Cynthia Shang 贡献，David Steele 审核。*）
 
 **改进：**
 
-- 备份期间跳过 `pg_internal.init` 临时文件。（*审阅：Cynthia Shang。建议：Michael Paquier。*）
-- `backup` 时对 manifest 添加更多校验。（*审阅：Cynthia Shang。*）
+- 备份期间跳过 `pg_internal.init` 临时文件。（*由 Cynthia Shang 审核，Michael Paquier 建议。*）
+- `backup` 时对 manifest 添加更多校验。（*由 Cynthia Shang 审核。*）
 
 **文档改进：**
 
-- 阻止 lock-bot 向已锁定的 issue 添加评论。（*建议：Christoph Berg。*）
+- 阻止 lock-bot 向已锁定的 issue 添加评论。（*Christoph Berg 建议。*）
 
 
 ### v2.23 发布说明
@@ -1134,12 +1113,12 @@ pgBackRest 的版本号由主版本号和次版本号两部分组成。主版本
 
 **漏洞修复：**
 
-- 修复文件缺失导致 manifest 损坏的问题。若 PostgreSQL 在备份过程中删除了某个文件（或该文件在备库上缺失），则下一个文件可能不会被复制并更新到 manifest 中；发生此情况时，恢复该备份将报错。（*审阅：Cynthia Shang。报告：Vitaliy Kukharik。*）
+- 修复文件缺失导致 manifest 损坏的问题。若 PostgreSQL 在备份过程中删除了某个文件（或该文件在备库上缺失），则下一个文件可能不会被复制并更新到 manifest 中；发生此情况时，恢复该备份将报错。（*由 Cynthia Shang 审核，Vitaliy Kukharik 报告。*）
 
 **改进：**
 
-- 使用 `pkg-config` 替代 `xml2-config` 获取 libxml2 构建选项。（*贡献：David Steele、Adrian Vondendriesch。*）
-- 在 `backup`/`restore` 时校验 manifest 中的校验和是否已设置。（*审阅：Cynthia Shang。*）
+- 使用 `pkg-config` 替代 `xml2-config` 获取 libxml2 构建选项。（*由 David Steele、Adrian Vondendriesch 贡献。*）
+- 在 `backup`/`restore` 时校验 manifest 中的校验和是否已设置。（*由 Cynthia Shang 审核。*）
 
 
 ### v2.22 发布说明
@@ -1150,7 +1129,7 @@ pgBackRest 的版本号由主版本号和次版本号两部分组成。主版本
 
 **漏洞修复：**
 
-- 修复时间线转换中的错误。时间线用于备份后验证归档中的 WAL 段。转换使用了十进制（base `10`）而非十六进制（base `16`），导致时间线 ≥ `0xA` 时出现错误。（*报告：Lukas Ertl、Eric Veldhuyzen。*）
+- 修复时间线转换中的错误。时间线用于备份后验证归档中的 WAL 段。转换使用了十进制（base `10`）而非十六进制（base `16`），导致时间线 ≥ `0xA` 时出现错误。（*Lukas Ertl、Eric Veldhuyzen 报告。*）
 
 
 ### v2.21 发布说明
@@ -1161,18 +1140,18 @@ pgBackRest 的版本号由主版本号和次版本号两部分组成。主版本
 
 **漏洞修复：**
 
-- 修复异步命令忽略选项的问题。异步 `archive-get`/`archive-push` 进程未加载命令配置节（如 `[global:archive-get]`）中配置的选项。（*审阅：Cynthia Shang。报告：Urs Kramer。*）
+- 修复异步命令忽略选项的问题。异步 `archive-get`/`archive-push` 进程未加载命令配置节（如 `[global:archive-get]`）中配置的选项。（*由 Cynthia Shang 审核，Urs Kramer 报告。*）
 - 修复文件名中包含 `\` 的处理问题。计算 manifest 校验和时 `\` 未被正确转义，导致 manifest 无法加载。由于集群文件名中出现 `\` 的情况极为罕见，此问题在实际使用中影响应该不大。
 
 **新功能：**
 
 - pgBackRest 现已完全用 C 语言实现。
-- 新增 `pg-user` 选项，用于指定连接 PostgreSQL 时使用的数据库用户名。若未指定，pgBackRest 将使用本地操作系统用户或 `PGUSER`，与先前行为一致。（*贡献：Mike Palmiotto。审阅：David Steele。*）
+- 新增 `pg-user` 选项，用于指定连接 PostgreSQL 时使用的数据库用户名。若未指定，pgBackRest 将使用本地操作系统用户或 `PGUSER`，与先前行为一致。（*由 Mike Palmiotto 贡献，David Steele 审核。*）
 - 允许在 S3 驱动中使用路径风格的 URI。
 
 **改进：**
 
-- `backup` 命令已完全用 C 实现。（*审阅：Cynthia Shang。*）
+- `backup` 命令已完全用 C 实现。（*由 Cynthia Shang 审核。*）
 
 
 ### v2.20 发布说明
@@ -1183,9 +1162,9 @@ pgBackRest 的版本号由主版本号和次版本号两部分组成。主版本
 
 **漏洞修复：**
 
-- 修复 `PGDATA` 为符号链接时 `archive-push`/`archive-get` 失败的问题。这些命令尝试使用 `cwd()` 作为 `PGDATA`，但若 `PGDATA` 是符号链接，其结果与 pgBackRest 配置的路径可能不一致。修复方案：若 `cwd()` 与 pgBackRest 路径不匹配，则 `chdir()` 到该路径，并确保后续 `cwd()` 的结果与首次调用一致。（*报告：Stephen Frost、Milosz Suchy。*）
+- 修复 `PGDATA` 为符号链接时 `archive-push`/`archive-get` 失败的问题。这些命令尝试使用 `cwd()` 作为 `PGDATA`，但若 `PGDATA` 是符号链接，其结果与 pgBackRest 配置的路径可能不一致。修复方案：若 `cwd()` 与 pgBackRest 路径不匹配，则 `chdir()` 到该路径，并确保后续 `cwd()` 的结果与首次调用一致。（*Stephen Frost、Milosz Suchy 报告。*）
 - 修复 `expire` 命令重建 `backup.info` 时的引用列表问题。由于 `backup` 命令仍使用 Perl 版本的重建逻辑，此问题仅在以下两个条件同时满足时才会触发：**1)** `backup.info` 中存在缺失的备份；**2)** 直接运行 `expire` 命令而非在 `backup` 后自动运行。两个条件同时成立的概率极低，在实际使用中应该不是问题。
-- 修复 gzip 解压时意外遇到 EOF 导致的段错误。（*报告：Stephen Frost。*）
+- 修复 gzip 解压时意外遇到 EOF 导致的段错误。（*Stephen Frost 报告。*）
 
 
 ### v2.19 发布说明
@@ -1196,24 +1175,24 @@ pgBackRest 的版本号由主版本号和次版本号两部分组成。主版本
 
 **漏洞修复：**
 
-- 修复 delta restore 中的远程超时问题。对基本未变化的集群执行 delta restore 时，若在 `protocol-timeout` 时间内未从仓库获取任何文件，远程端可能超时。已添加 keep-alive 机制以防止远程超时。（*报告：James Sewell、Jens Wilke。*）
-- 修复重复 HTTP 响应头的处理问题。HTTP 响应头重复出现时，应视为等同于单个逗号分隔的响应头，而非报错（此前的行为）。（*报告：donicrosby。*）
+- 修复 delta restore 中的远程超时问题。对基本未变化的集群执行 delta restore 时，若在 `protocol-timeout` 时间内未从仓库获取任何文件，远程端可能超时。已添加 keep-alive 机制以防止远程超时。（*James Sewell、Jens Wilke 报告。*）
+- 修复重复 HTTP 响应头的处理问题。HTTP 响应头重复出现时，应视为等同于单个逗号分隔的响应头，而非报错（此前的行为）。（*donicrosby 报告。*）
 
 **改进：**
 
-- `info` 命令的 JSON 输出不再格式化（pretty-print）。不含换行符的 JSON 更便于监控系统解析；如需格式化输出，可使用 `jq` 等外部工具。（*贡献：Cynthia Shang。审阅：David Steele。*）
-- `check` 命令已完全用 C 实现。（*贡献：Cynthia Shang。审阅：David Steele。*）
+- `info` 命令的 JSON 输出不再格式化（pretty-print）。不含换行符的 JSON 更便于监控系统解析；如需格式化输出，可使用 `jq` 等外部工具。（*由 Cynthia Shang 贡献，David Steele 审核。*）
+- `check` 命令已完全用 C 实现。（*由 Cynthia Shang 贡献，David Steele 审核。*）
 
 **文档改进：**
 
-- 说明如何为 pgBackRest 做出贡献。（*贡献：Cynthia Shang、David Steele。*）
-- 说明 `auto-stop` 选项的最大支持版本。（*贡献：Brad Nicholson。审阅：David Steele。*）
+- 说明如何为 pgBackRest 做出贡献。（*由 Cynthia Shang、David Steele 贡献。*）
+- 说明 `auto-stop` 选项的最大支持版本。（*由 Brad Nicholson 贡献，David Steele 审核。*）
 
 **测试套件改进：**
 
-- 修复使用 `--vm=none` 时容器测试路径的问题。（*建议：Stephen Frost。*）
-- 修复期望测试中时区不匹配的问题。（*建议：Stephen Frost。*）
-- 默认不自动生成嵌入式 libc 代码。（*建议：Stephen Frost。*）
+- 修复使用 `--vm=none` 时容器测试路径的问题。（*Stephen Frost 建议。*）
+- 修复期望测试中时区不匹配的问题。（*Stephen Frost 建议。*）
+- 默认不自动生成嵌入式 libc 代码。（*Stephen Frost 建议。*）
 
 
 ### v2.18 发布说明
@@ -1225,18 +1204,18 @@ pgBackRest 的版本号由主版本号和次版本号两部分组成。主版本
 **新功能：**
 
 - 支持 PostgreSQL 12。
-- 为 `info` 命令新增 `set` 选项以显示详细文本输出。额外信息包括：可用于选择性恢复的数据库列表，以及表空间、符号链接及其默认目标的列表。（*贡献：Cynthia Shang。审阅：David Steele。建议：Stephen Frost、ejberdecia。*）
-- 新增 `standby` 恢复类型。在 PostgreSQL < 12 时自动向 `recovery.conf` 添加 `standby_mode=on`，在 PostgreSQL ≥ 12 时创建 `standby.signal`，为不同 PostgreSQL 版本提供统一接口。（*审阅：Cynthia Shang。*）
+- 为 `info` 命令新增 `set` 选项以显示详细文本输出。额外信息包括：可用于选择性恢复的数据库列表，以及表空间、符号链接及其默认目标的列表。（*由 Cynthia Shang 贡献，David Steele 审核，Stephen Frost、ejberdecia 建议。*）
+- 新增 `standby` 恢复类型。在 PostgreSQL < 12 时自动向 `recovery.conf` 添加 `standby_mode=on`，在 PostgreSQL ≥ 12 时创建 `standby.signal`，为不同 PostgreSQL 版本提供统一接口。（*由 Cynthia Shang 审核。*）
 
 **改进：**
 
-- `restore` 命令已完全用 C 实现。（*审阅：Cynthia Shang。*）
+- `restore` 命令已完全用 C 实现。（*由 Cynthia Shang 审核。*）
 
 **文档改进：**
 
-- 说明 `db-timeout` 与 `protocol-timeout` 之间的关系。（*贡献：Cynthia Shang。审阅：David Steele。建议：James Chanco Jr。*）
-- 添加关于备库仓库的文档说明。（*贡献：Cynthia Shang。审阅：David Steele。*）
-- 添加基于时间的 PITR FAQ。（*贡献：Cynthia Shang。审阅：David Steele。*）
+- 说明 `db-timeout` 与 `protocol-timeout` 之间的关系。（*由 Cynthia Shang 贡献，David Steele 审核，James Chanco Jr 建议。*）
+- 添加关于备库仓库的文档说明。（*由 Cynthia Shang 贡献，David Steele 审核。*）
+- 添加基于时间的 PITR FAQ。（*由 Cynthia Shang 贡献，David Steele 审核。*）
 
 
 ### v2.17 发布说明
@@ -1247,22 +1226,22 @@ pgBackRest 的版本号由主版本号和次版本号两部分组成。主版本
 
 **漏洞修复：**
 
-- 改进超大量表/段文件时 manifest 构建速度过慢的问题。（*报告：Jens Wilke。*）
-- 修复特殊文件的排除处理问题。（*报告：CluelessTechnologist、Janis Puris、Rachid Broum。*）
+- 改进超大量表/段文件时 manifest 构建速度过慢的问题。（*Jens Wilke 报告。*）
+- 修复特殊文件的排除处理问题。（*CluelessTechnologist、Janis Puris、Rachid Broum 报告。*）
 
 **改进：**
 
-- `stanza-create`/`stanza-update`/`stanza-delete` 命令已完全用 C 实现。（*贡献：Cynthia Shang。审阅：David Steele。*）
-- `start`/`stop` 命令已完全用 C 实现。（*贡献：Cynthia Shang。审阅：David Steele。*）
-- 以 `0750`/`0640` 模式创建日志目录/文件。（*建议：Damiano Albani。*）
+- `stanza-create`/`stanza-update`/`stanza-delete` 命令已完全用 C 实现。（*由 Cynthia Shang 贡献，David Steele 审核。*）
+- `start`/`stop` 命令已完全用 C 实现。（*由 Cynthia Shang 贡献，David Steele 审核。*）
+- 以 `0750`/`0640` 模式创建日志目录/文件。（*Damiano Albani 建议。*）
 
 **文档漏洞修复：**
 
-- 修复指定自定义包时仍安装 `yum.p.o` 包的问题。（*报告：Joe Ayers、John Harvey。*）
+- 修复指定自定义包时仍安装 `yum.p.o` 包的问题。（*Joe Ayers、John Harvey 报告。*）
 
 **文档改进：**
 
-- 说明以非特权用户构建 pgBackRest 的方式。（*建议：Laurenz Albe。*）
+- 说明以非特权用户构建 pgBackRest 的方式。（*Laurenz Albe 建议。*）
 
 
 ### v2.16 发布说明
@@ -1273,9 +1252,9 @@ pgBackRest 的版本号由主版本号和次版本号两部分组成。主版本
 
 **漏洞修复：**
 
-- 对 S3 `RequestTimeTooSkewed` 错误执行重试而非立即终止。（*报告：sean0101n、Tim Garton、Jesper St John、Aleš Zelený。*）
-- 修复对 `HEAD` 请求响应中 `transfer-encoding` 的错误处理。（*报告：Pavel Suderevsky。*）
-- 修复 gcc 9 优化暴露的作用域违规问题。（*报告：Christian Lange、Ned T. Crigler。*）
+- 对 S3 `RequestTimeTooSkewed` 错误执行重试而非立即终止。（*sean0101n、Tim Garton、Jesper St John、Aleš Zelený 报告。*）
+- 修复对 `HEAD` 请求响应中 `transfer-encoding` 的错误处理。（*Pavel Suderevsky 报告。*）
+- 修复 gcc 9 优化暴露的作用域违规问题。（*Christian Lange、Ned T. Crigler 报告。*）
 
 **新功能：**
 
@@ -1283,8 +1262,8 @@ pgBackRest 的版本号由主版本号和次版本号两部分组成。主版本
 
 **改进：**
 
-- `backup` 的 `local` 命令已完全用 C 实现。（*贡献：David Steele、Cynthia Shang。*）
-- `check` 命令已部分用 C 实现。（*审阅：Cynthia Shang。*）
+- `backup` 的 `local` 命令已完全用 C 实现。（*由 David Steele、Cynthia Shang 贡献。*）
+- `check` 命令已部分用 C 实现。（*由 Cynthia Shang 审核。*）
 
 
 ### v2.15 发布说明
@@ -1295,20 +1274,20 @@ pgBackRest 的版本号由主版本号和次版本号两部分组成。主版本
 
 **漏洞修复：**
 
-- 修复归档保留过期清理过于激进的问题。（*修复：Cynthia Shang。审阅：David Steele。报告：Mohamad El-Rifai。*）
+- 修复归档保留过期清理过于激进的问题。（*由 Cynthia Shang 修复，David Steele 审核，Mohamad El-Rifai 报告。*）
 
 **改进：**
 
-- `expire` 命令已完全用 C 实现。（*贡献：Cynthia Shang。审阅：David Steele。*）
+- `expire` 命令已完全用 C 实现。（*由 Cynthia Shang 贡献，David Steele 审核。*）
 - `restore` 的 `local` 命令已完全用 C 实现。
-- 移除硬编码的 PostgreSQL 用户，使 `$PGUSER` 生效。（*建议：Julian Zhang、Janis Puris。*）
-- 支持 `configure` 的 `--prefix` 选项。（*建议：Daniel Westermann。*）
+- 移除硬编码的 PostgreSQL 用户，使 `$PGUSER` 生效。（*Julian Zhang、Janis Puris 建议。*）
+- 支持 `configure` 的 `--prefix` 选项。（*Daniel Westermann 建议。*）
 - 将 `repo-s3-verify-ssl` 选项重命名为 `repo-s3-verify-tls`。新名称更为准确，因为 pgBackRest 不支持任何 SSL 协议版本（均视为不安全）。旧选项名称仍可继续使用。
 
 **文档改进：**
 
-- 在文档中添加 FAQ。（*贡献：Cynthia Shang。审阅：David Steele。*）
-- 在 PostgreSQL ≥ 9.6 的文档中使用 `wal_level=replica`。（*建议：Patrick McLaughlin。*）
+- 在文档中添加 FAQ。（*由 Cynthia Shang 贡献，David Steele 审核。*）
+- 在 PostgreSQL ≥ 9.6 的文档中使用 `wal_level=replica`。（*Patrick McLaughlin 建议。*）
 
 
 ### v2.14 发布说明
@@ -1319,11 +1298,11 @@ pgBackRest 的版本号由主版本号和次版本号两部分组成。主版本
 
 **漏洞修复：**
 
-- 修复当 `process-max` > 8 时 `archive-push`/`archive-get` 发生段错误的问题。（*报告：Jens Wilke。*）
+- 修复当 `process-max` > 8 时 `archive-push`/`archive-get` 发生段错误的问题。（*Jens Wilke 报告。*）
 
 **改进：**
 
-- 使用 `force` 执行 `stanza-delete` 时绕过数据库检查。（*贡献：Cynthia Shang。审阅：David Steele。建议：hatifnatt。*）
+- 使用 `force` 执行 `stanza-delete` 时绕过数据库检查。（*由 Cynthia Shang 贡献，David Steele 审核，hatifnatt 建议。*）
 - 添加 `configure` 脚本以改善多平台支持。
 
 **文档新功能：**
@@ -1339,7 +1318,7 @@ pgBackRest 的版本号由主版本号和次版本号两部分组成。主版本
 
 **漏洞修复：**
 
-- 修复零长度读取导致不期望接收零长度数据的 IO 过滤器出现异常的问题。（*报告：brunre01、Jens Wilke、Tomasz Kontusz、guruguruguru。*）
+- 修复零长度读取导致不期望接收零长度数据的 IO 过滤器出现异常的问题。（*brunre01、Jens Wilke、Tomasz Kontusz、guruguruguru 报告。*）
 - 修复 `local`/`remote` 进程错误报告的可靠性问题。
 - 修复 Posix/CIFS 在写入/同步/关闭时报告错误文件名的问题。
 
@@ -1354,20 +1333,20 @@ pgBackRest 的版本号由主版本号和次版本号两部分组成。主版本
 
 **漏洞修复：**
 
-- 修复路径选项以 `/` 结尾时的处理问题。（*报告：Marc Cousin。*）
-- 修复 `archive-get` 命令中设置 `log-level-file=off` 时的问题。（*报告：Brad Nicholson。*）
-- 修复 C 代码无法识别 `host:port` 选项格式（Perl 可以识别）的问题。（*报告：Kyle Nevins。*）
+- 修复路径选项以 `/` 结尾时的处理问题。（*Marc Cousin 报告。*）
+- 修复 `archive-get` 命令中设置 `log-level-file=off` 时的问题。（*Brad Nicholson 报告。*）
+- 修复 C 代码无法识别 `host:port` 选项格式（Perl 可以识别）的问题。（*Kyle Nevins 报告。*）
 - 修复 `remote`/`local` 命令日志选项的问题。
 
 **改进：**
 
 - `archive-push` 命令已完全用 C 实现。
-- 将 `process-max` 上限提升至 `999`。（*建议：Rakshitha-BR。*）
+- 将 `process-max` 上限提升至 `999`。（*Rakshitha-BR 建议。*）
 - 改进 S3 存储桶名称包含点号时的错误提示信息。
 
 **文档改进：**
 
-- 明确说明支持兼容 S3 协议的对象存储。（*建议：Magnus Hagander。*）
+- 明确说明支持兼容 S3 协议的对象存储。（*Magnus Hagander 建议。*）
 
 
 ### v2.11 发布说明
@@ -1378,18 +1357,18 @@ pgBackRest 的版本号由主版本号和次版本号两部分组成。主版本
 
 **漏洞修复：**
 
-- 修复写入过程中出错可能导致 WAL 段被截断的问题。（*报告：blogh。*）
-- 修复 `info` 命令在指定 stanza 时缺少 WAL 最小/最大值的问题。（*修复：Stefan Fercot。审阅：David Steele。*）
-- 修复从 C 传递给 Perl 的选项中不符合规范的 JSON 格式。（*报告：Leo Khomenko。*）
+- 修复写入过程中出错可能导致 WAL 段被截断的问题。（*blogh 报告。*）
+- 修复 `info` 命令在指定 stanza 时缺少 WAL 最小/最大值的问题。（*由 Stefan Fercot 修复，David Steele 审核。*）
+- 修复从 C 传递给 Perl 的选项中不符合规范的 JSON 格式。（*Leo Khomenko 报告。*）
 
 **改进：**
 
 - `archive-get` 命令已完全用 C 实现。
-- 在较旧的 Perl 版本上启用 socket keep-alive。（*贡献：Marc Cousin。审阅：David Steele。*）
-- 当参数传递给不接受参数的命令时报错。（*建议：Jason O'Donnell。*）
-- 在归档中找不到 WAL 段时添加提示信息。（*建议：Hans-Jürgen Schönig。*）
-- 改进证书中找不到主机名时的错误提示。（*建议：James Badger。*）
-- 为 `backup.manifest` 添加额外的调试选项。（*贡献：blogh。审阅：David Steele。*）
+- 在较旧的 Perl 版本上启用 socket keep-alive。（*由 Marc Cousin 贡献，David Steele 审核。*）
+- 当参数传递给不接受参数的命令时报错。（*Jason O'Donnell 建议。*）
+- 在归档中找不到 WAL 段时添加提示信息。（*Hans-Jürgen Schönig 建议。*）
+- 改进证书中找不到主机名时的错误提示。（*James Badger 建议。*）
+- 为 `backup.manifest` 添加额外的调试选项。（*由 blogh 贡献，David Steele 审核。*）
 
 **文档改进：**
 
@@ -1404,9 +1383,9 @@ pgBackRest 的版本号由主版本号和次版本号两部分组成。主版本
 
 **漏洞修复：**
 
-- 补充 `archive-get` 所需但尚未实现的 S3 驱动方法。（*报告：mibiio。*）
-- 修复对 `pg-path` 配置错误的检查逻辑。（*报告：James Chanco Jr。*）
-### v2.09 发布说明
+- 补充 `archive-get` 所需但尚未实现的 S3 驱动方法。（*mibiio 报告。*）
+- 修复对 `pg-path` 配置错误的检查逻辑。（*James Chanco Jr 报告。*）
+### v2.09 版本说明
 
 *小型改进与缺陷修复*
 
@@ -1416,28 +1395,23 @@ pgBackRest 的版本号由主版本号和次版本号两部分组成。主版本
 
 - 修复多个异步状态文件引发硬错误的问题。（*报告：Vidhya Gurumoorthi、Joe Ayers、Douglas J Hunley。*）
 
-**新功能：**
-
 **改进：**
 
-- `info` 命令已完全用 C 重新实现。（*贡献：Cynthia Shang。审阅：David Steele。*）
+- `info` 命令已完全用 C 重新实现。（*由 Cynthia Shang 贡献，David Steele 审核。*）
 - 简化 `info` 命令在无 stanza 时的文本提示，将仓库路径替换为"the repository"。
-- 为 macOS 构建在 Makefile 中添加 `_DARWIN_C_SOURCE` 标志。（*贡献：Douglas J Hunley。审阅：David Steele。*）
+- 为 macOS 构建在 Makefile 中添加 `_DARWIN_C_SOURCE` 标志。（*由 Douglas J Hunley 贡献，David Steele 审核。*）
 - 将 C TLS 客户端的地址查找更新为使用现代接口。（*建议：Bruno Friedmann。*）
 - 包含符合 POSIX 规范的 `strcasecmp()` 和 `fd_set` 头文件。（*建议：ucando。*）
 
-**文档漏洞修复：**
-
-- 修复硬编码的仓库路径。（*报告：Heath Lord。*）
-
 **文档改进：**
 
+- 修复硬编码的仓库路径。（*报告：Heath Lord。*）
 - 明确说明加密始终在客户端执行。（*建议：Bruce Burdick。*）
 - 添加构建文档主机的示例。
 - 在 manifest 变量、列表及列表项中允许使用 `if`。
 
 
-### v2.08 发布说明
+### v2.08 版本说明
 
 *小型改进与缺陷修复*
 
@@ -1453,7 +1427,7 @@ pgBackRest 的版本号由主版本号和次版本号两部分组成。主版本
 **改进：**
 
 - 在 S3 连接上启用 TCP keepalive。（*建议：Ronan Dunklau。*）
-- 调整 `info` 命令文本输出顺序，使最新备份排在最后。（*贡献：Cynthia Shang。审阅：David Steele。建议：Ryan Lambert。*）
+- 调整 `info` 命令文本输出顺序，使最新备份排在最后。（*由 Cynthia Shang 贡献，David Steele 审核，Ryan Lambert 建议。*）
 - 仅在必要时变更文件所有权。
 - 在抛出 S3 错误时对 `authentication` 头进行脱敏处理。（*建议：Brad Nicholson。*）
 
@@ -1464,7 +1438,7 @@ pgBackRest 的版本号由主版本号和次版本号两部分组成。主版本
 - 添加构建文档的说明。
 
 
-### v2.07 发布说明
+### v2.07 版本说明
 
 *备份校验和 Delta 自动启用*
 
@@ -1478,14 +1452,14 @@ pgBackRest 的版本号由主版本号和次版本号两部分组成。主版本
 
 **新功能：**
 
-- 检测到异常情况（如时间线切换）时自动启用备份校验和 delta。（*贡献：Cynthia Shang。审阅：David Steele。*）
+- 检测到异常情况（如时间线切换）时自动启用备份校验和 delta。（*由 Cynthia Shang 贡献，David Steele 审核。*）
 
 **改进：**
 
 - 对所有 S3 `5xx` 错误执行重试，而非仅对 `500` 内部错误重试。（*建议：Craig A. James。*）
 
 
-### v2.06 发布说明
+### v2.06 版本说明
 
 *校验和 Delta 备份与 PostgreSQL 11 支持*
 
@@ -1499,23 +1473,23 @@ pgBackRest 的版本号由主版本号和次版本号两部分组成。主版本
 
 **新功能：**
 
-- 为增量备份添加校验和 delta 支持。校验和 delta 备份使用文件校验和而非时间戳来判断文件是否发生变更。（*贡献：Cynthia Shang。审阅：David Steele。*）
+- 为增量备份添加校验和 delta 支持。校验和 delta 备份使用文件校验和而非时间戳来判断文件是否发生变更。（*由 Cynthia Shang 贡献，David Steele 审核。*）
 - 支持 PostgreSQL 11，包括可配置的 WAL 段大小。
 
 **改进：**
 
 - 忽略链接表空间目录中当前 PostgreSQL 版本子目录以外的所有文件。此前若表空间目录中存在非 PostgreSQL 用户所有的其他文件，会产生报错。
-- 改进 `info` 命令，使其显示 stanza 的加密类型。（*贡献：Cynthia Shang。审阅：David Steele。建议：Douglas J Hunley。*）
+- 改进 `info` 命令，使其显示 stanza 的加密类型。（*由 Cynthia Shang 贡献，David Steele 审核，Douglas J Hunley 建议。*）
 - 改进对文件名中特殊字符的支持。
-- 允许在 pgBackRest 配置文件中指定 `delta` 选项。（*贡献：Cynthia Shang。审阅：David Steele。*）
+- 允许在 pgBackRest 配置文件中指定 `delta` 选项。（*由 Cynthia Shang 贡献，David Steele 审核。*）
 
 **文档改进：**
 
 - 在 `authorized_hosts` 中使用 `command` 以提升 SSH 安全性。（*建议：Stephen Frost、Magnus Hagander。*）
-- 在配置参考中列出 `buffer-size` 选项的允许值。（*贡献：Cynthia Shang。审阅：David Steele。建议：Stéphane Schildknecht。*）
+- 在配置参考中列出 `buffer-size` 选项的允许值。（*由 Cynthia Shang 贡献，David Steele 审核，Stéphane Schildknecht 建议。*）
 
 
-### v2.05 发布说明
+### v2.05 版本说明
 
 *环境变量选项与临时/未记录关系的排除*
 
@@ -1531,23 +1505,20 @@ pgBackRest 的版本号由主版本号和次版本号两部分组成。主版本
 **新功能：**
 
 - 允许通过环境变量设置任意选项，包括之前只能在命令行指定的选项（如 `stanza`），以及不能在命令行指定的加密选项（如 `repo1-s3-key-secret`）。
-- 从备份中排除临时和未记录的关系（表/索引）文件。实现逻辑与 PostgreSQL 中引入此功能的补丁一致，参见 [8694cc96](https://git.postgresql.org/pg/commitdiff/8694cc96b52a967a49725f32be7aa77fd3b6ac25) 和 [920a5e50](https://git.postgresql.org/pg/commitdiff/920a5e500a119b03356fb1fb64a677eb1aa5fc6f)。临时关系排除在 PostgreSQL ≥ `9.0` 时启用，未记录关系排除在 PostgreSQL ≥ `9.1`（该功能引入版本）时启用。（*贡献：Cynthia Shang。审阅：David Steele。*）
-- 允许从备份中排除任意目录和/或文件。滥用此功能可能导致备份不一致，使用前请仔细阅读 `--exclude` 文档。（*审阅：Cynthia Shang。*）
+- 从备份中排除临时和未记录的关系（表/索引）文件。实现逻辑与 PostgreSQL 中引入此功能的补丁一致，参见 [8694cc96](https://git.postgresql.org/pg/commitdiff/8694cc96b52a967a49725f32be7aa77fd3b6ac25) 和 [920a5e50](https://git.postgresql.org/pg/commitdiff/920a5e500a119b03356fb1fb64a677eb1aa5fc6f)。临时关系排除在 PostgreSQL ≥ `9.0` 时启用，未记录关系排除在 PostgreSQL ≥ `9.1`（该功能引入版本）时启用。（*由 Cynthia Shang 贡献，David Steele 审核。*）
+- 允许从备份中排除任意目录和/或文件。滥用此功能可能导致备份不一致，使用前请仔细阅读 `--exclude` 文档。（*由 Cynthia Shang 审核。*）
 - 添加 `log-subprocess` 选项，允许为 `local` 和 `remote` 子进程启用文件日志。
 - 支持 PostgreSQL 11 Beta 3。
 
 **改进：**
 
-- 允许备份 manifest 中零大小文件引用之前的 manifest，不受时间戳 delta 的限制。（*贡献：Cynthia Shang。审阅：David Steele。*）
-- 通过直接检查状态文件改善异步 `archive-get`/`archive-push` 性能。（*贡献：Stephen Frost。审阅：David Steele。*）
+- 允许备份 manifest 中零大小文件引用之前的 manifest，不受时间戳 delta 的限制。（*由 Cynthia Shang 贡献，David Steele 审核。*）
+- 通过直接检查状态文件改善异步 `archive-get`/`archive-push` 性能。（*由 Stephen Frost 贡献，David Steele 审核。*）
 - 改进命令缺少 `stanza` 选项时的错误提示。（*建议：Sarah Conway。*）
-
-**文档漏洞修复：**
-
-- 修复 `log-path` 选项参考中无效的日志级别。（*报告：Camilo Aguilar。*）
 
 **文档改进：**
 
+- 修复 `log-path` 选项参考中无效的日志级别。（*报告：Camilo Aguilar。*）
 - 停止尝试在 `release.xml` 中按姓/名排列贡献者。贡献者名称始终按原样呈现在发布说明中，但我们曾尝试基于姓/名分配内部 ID，这既难以判断又毫无意义。受 Christophe 在 PostgresOpen 2017 演讲"Human Beings Do Not Have a Primary Key"的启发。（*建议：Christophe Pettus。*）
 
 **测试套件改进：**
@@ -1555,7 +1526,7 @@ pgBackRest 的版本号由主版本号和次版本号两部分组成。主版本
 - 若在测试环境之外执行 LibC 构建则报错。LibC 不再是生产构建所必需的。
 
 
-### v2.04 发布说明
+### v2.04 版本说明
 
 *备份恢复关键缺陷修复*
 
@@ -1566,8 +1537,8 @@ pgBackRest 的版本号由主版本号和次版本号两部分组成。主版本
 **漏洞修复：**
 
 - 修复 resume 中导致备份不一致的关键缺陷。`v0.82` 中的一次回归移除了在决定恢复哪些已中止备份文件时的时间戳比较逻辑，详情参见上方说明。（*报告：David Youatt、Yogesh Sharma、Stephen Frost。*）
-- 修复集群中只存在一个用户数据库时选择性恢复报错的问题。（*修复：Cynthia Shang。审阅：David Steele。报告：Nj Baliyan。*）
-- 修复 S3 授权头中不符合 ISO-8601 规范的时间戳格式。AWS 和部分网关对空格与零填充小时均可容忍，但其他实现则不然。（*修复：Andrew Schwartz。审阅：David Steele。*）
+- 修复集群中只存在一个用户数据库时选择性恢复报错的问题。（*由 Cynthia Shang 修复，David Steele 审核，Nj Baliyan 报告。*）
+- 修复 S3 授权头中不符合 ISO-8601 规范的时间戳格式。AWS 和部分网关对空格与零填充小时均可容忍，但其他实现则不然。（*由 Andrew Schwartz 修复，David Steele 审核。*）
 
 **新功能：**
 
@@ -1584,7 +1555,7 @@ pgBackRest 的版本号由主版本号和次版本号两部分组成。主版本
 - 添加 S3 策略示例以限制存储桶权限。（*建议：Douglas J Hunley、Jason O'Donnell。*）
 
 
-### v2.03 发布说明
+### v2.03 版本说明
 
 *单一可执行文件部署*
 
@@ -1602,7 +1573,7 @@ pgBackRest 的版本号由主版本号和次版本号两部分组成。主版本
 - 在命令结束时以毫秒为单位打印总运行时长。
 
 
-### v2.02 发布说明
+### v2.02 版本说明
 
 *并行异步 archive-get 与配置文件包含*
 
@@ -1619,22 +1590,19 @@ pgBackRest 的版本号由主版本号和次版本号两部分组成。主版本
 **新功能：**
 
 - 添加异步并行 `archive-get`。该特性维护一个 WAL 段预取队列，在 PostgreSQL 通过 `restore_command` 请求 WAL 段时降低等待延迟。
-- 支持附加的 pgBackRest 配置文件。配置文件目录由 `--config-include-path` 选项指定；新增 `--config-path` 选项用于覆盖 `--config` 和 `--config-include-path` 的默认基础路径。（*贡献：Cynthia Shang。审阅：David Steele。*）
-- 添加 `repo-s3-token` 选项，支持配置临时凭证令牌。pgBackRest 目前不具备主动刷新凭证的能力，因此整个命令（如 `backup`、`restore`）必须在凭证过期前完成。（*贡献：Yogesh Sharma。审阅：David Steele。*）
+- 支持附加的 pgBackRest 配置文件。配置文件目录由 `--config-include-path` 选项指定；新增 `--config-path` 选项用于覆盖 `--config` 和 `--config-include-path` 的默认基础路径。（*由 Cynthia Shang 贡献，David Steele 审核。*）
+- 添加 `repo-s3-token` 选项，支持配置临时凭证令牌。pgBackRest 目前不具备主动刷新凭证的能力，因此整个命令（如 `backup`、`restore`）必须在凭证过期前完成。（*由 Yogesh Sharma 贡献，David Steele 审核。*）
 
 **改进：**
 
-- 更新 `archive-push-queue-max`、`manifest-save-threshold` 和 `buffer-size` 选项，支持接受 `KB`、`MB`、`GB`、`TB` 或 `PB` 为单位的值（乘数以 1024 的幂计算）。（*贡献：Cynthia Shang。审阅：David Steele。*）
+- 更新 `archive-push-queue-max`、`manifest-save-threshold` 和 `buffer-size` 选项，支持接受 `KB`、`MB`、`GB`、`TB` 或 `PB` 为单位的值（乘数以 1024 的幂计算）。（*由 Cynthia Shang 贡献，David Steele 审核。*）
 - 提升备份/恢复路径同步效率。扫描整个目录在小表数量众多时代价高昂；备份 manifest 中已包含路径列表，现改为使用该列表执行同步，而非扫描备份/恢复路径。
 - 在初始 info 日志消息中同时显示命令参数和选项。
 - 将 `archive-queue-max` 选项重命名为 `archive-push-queue-max`，与新增的 `archive-get-queue-max` 选项保持命名一致。旧选项名称仍可继续使用。
 
-**文档漏洞修复：**
-
-- 更新文档，添加 32 位支持说明及注意事项。32 位支持已于 v1.26 添加。（*报告：Viorel Tabara。*）
-
 **文档改进：**
 
+- 更新文档，添加 32 位支持说明及注意事项。32 位支持已于 v1.26 添加。（*报告：Viorel Tabara。*）
 - 添加使用 PostgreSQL 和 jq 的监控示例。（*建议：Stephen Frost、Brian Faherty。*）
 - 添加归档配置中命令节使用示例。（*建议：Christophe Courtois。*）
 - 移除将 `info --output=json` 描述为实验性功能的说明。
@@ -1645,7 +1613,7 @@ pgBackRest 的版本号由主版本号和次版本号两部分组成。主版本
 - 使用 lcov 进行 C 单元测试覆盖率报告，从 Devel::Cover 切换，原因是后者无法报告从 gcov 转换的报告中的分支覆盖率。模块的不完整分支覆盖率现在会产生错误。单元测试覆盖率仅在语句或分支覆盖不完整时才会出现在报告中。
 
 
-### v2.01 发布说明
+### v2.01 版本说明
 
 *小型缺陷修复与改进*
 
@@ -1657,12 +1625,12 @@ pgBackRest 的版本号由主版本号和次版本号两部分组成。主版本
 - 在命令行传入加密选项（如 `repo1-s3-key`）时立即报错。由于 pgBackRest 不会将加密选项传递给子进程，之前会抛出晦涩的错误；新错误更加清晰并提示了解决方法。同时更新命令文档，省略不能在命令行指定的加密选项。（*报告：Brad Nicholson。*）
 - 修复向嵌入式 Perl 传递 `--no-config` 时的问题。（*报告：Ibrahim Edib Kokdemir。*）
 - 修复将 `log-level-stderr` 设置高于 `warn` 时 `local`/`remote` 进程因 stderr 出现意外输出而报错退出的问题。`local`/`remote` 进程的日志级别上限现调整为 `error`，因为这些进程本不应输出警告。（*报告：Clinton Adams。*）
-- 修复存在表空间时 `check` 命令中 manifest 测试的问题。（*修复：Cynthia Shang。审阅：David Steele。报告：Thomas Flatley。*）
+- 修复存在表空间时 `check` 命令中 manifest 测试的问题。（*由 Cynthia Shang 修复，David Steele 审核，Thomas Flatley 报告。*）
 
 **改进：**
 
-- 在配置文件中为不接受多个参数的选项设置多个值时报错。（*贡献：Cynthia Shang。审阅：David Steele。*）
-- 从 `src/Makefile` 中移除多余的 sudo 命令。（*贡献：Adrian Vondendriesch。审阅：David Steele。*）
+- 在配置文件中为不接受多个参数的选项设置多个值时报错。（*由 Cynthia Shang 贡献，David Steele 审核。*）
+- 从 `src/Makefile` 中移除多余的 sudo 命令。（*由 Adrian Vondendriesch 贡献，David Steele 审核。*）
 
 **文档改进：**
 
@@ -1676,7 +1644,7 @@ pgBackRest 的版本号由主版本号和次版本号两部分组成。主版本
 - 使用 clang 进行静态代码分析。初始分析未发现问题，仅发现部分函数应标记为 `__noreturn__`。
 
 
-### v2.00 发布说明
+### v2.00 版本说明
 
 *archive-push 性能改进*
 
@@ -1684,11 +1652,11 @@ pgBackRest 的版本号由主版本号和次版本号两部分组成。主版本
 
 **新功能：**
 
-- `archive-push` 命令现已部分用 C 实现，使 PostgreSQL 的 `archive_command` 在处理来自异步归档进程的状态消息时运行速度显著提升。（*审阅：Cynthia Shang。*）
+- `archive-push` 命令现已部分用 C 实现，使 PostgreSQL 的 `archive_command` 在处理来自异步归档进程的状态消息时运行速度显著提升。（*由 Cynthia Shang 审核。*）
 
 **改进：**
 
-- 改进 `check` 命令，增加对备份 manifest 是否可构建的验证。（*贡献：Cynthia Shang。审阅：David Steele。*）
+- 改进 `check` 命令，增加对备份 manifest 是否可构建的验证。（*由 Cynthia Shang 贡献，David Steele 审核。*）
 - 提升 HTTPS 客户端性能。缓冲现在会在 socket 上有 `pending` 字节时将其计入，而非完全依赖 `select()`。在某些情况下，最后几个字节直到连接关闭才会被刷出。
 - 提升 S3 删除性能。常量 `S3_BATCH_MAX` 曾被替换为硬编码值 2（可能是测试时遗留）。
 - 允许在命令行将任意非命令行选项重置为默认值，从而无需为特定需求另写配置文件即可覆盖 `pgbackrest.conf` 中的设置。
@@ -1703,7 +1671,7 @@ pgBackRest 的版本号由主版本号和次版本号两部分组成。主版本
 - 明确说明 S3 存储桶必须由用户自行创建。（*建议：David Youatt。*）
 
 
-### v1.29 发布说明
+### v1.29 版本说明
 
 *备份恢复关键缺陷修复*
 
@@ -1714,13 +1682,13 @@ pgBackRest 的版本号由主版本号和次版本号两部分组成。主版本
 **漏洞修复：**
 
 - 修复 resume 中导致备份不一致的关键缺陷。`v0.82` 中的一次回归移除了在决定恢复哪些已中止备份文件时的时间戳比较逻辑，详情参见上方说明。（*报告：David Youatt、Yogesh Sharma、Stephen Frost。*）
-- 修复 S3 授权头中不符合 ISO-8601 规范的时间戳格式。AWS 和部分网关对空格与零填充小时均可容忍，但其他实现则不然。（*修复：Andrew Schwartz。审阅：David Steele。*）
+- 修复 S3 授权头中不符合 ISO-8601 规范的时间戳格式。AWS 和部分网关对空格与零填充小时均可容忍，但其他实现则不然。（*由 Andrew Schwartz 修复，David Steele 审核。*）
 - 修复目录同步在仅应同步指定目录时递归执行的问题。（*报告：Craig A. James。*）
 - 修复使用 `--type=immediate` 恢复时 `--target-action` 和 `--recovery-option` 选项被报告为无效的问题。（*报告：Brad Nicholson。*）
 - 修复增量/差异备份中 `archive-copy` 抛出"path not found"错误的问题。（*报告：yummyliu、Vitaliy Kukharik。*）
 - 修复 `PGDATA` 中两个或多个文件链接到同一目录时 manifest 构建失败的问题。（*报告：Vitaliy Kukharik。*）
 - 修复链接文件缺失时 delta restore 失败的问题。
-- 修复集群中只存在一个用户数据库时选择性恢复报错的问题。（*修复：Cynthia Shang。审阅：David Steele。报告：Nj Baliyan。*）
+- 修复集群中只存在一个用户数据库时选择性恢复报错的问题。（*由 Cynthia Shang 修复，David Steele 审核，Nj Baliyan 报告。*）
 
 **改进：**
 
@@ -1729,17 +1697,14 @@ pgBackRest 的版本号由主版本号和次版本号两部分组成。主版本
 - 提升 S3 删除性能。常量 `S3_BATCH_MAX` 曾被替换为硬编码值 2（可能是测试时遗留）。
 - 提升备份/恢复路径同步效率。扫描整个目录在小表数量众多时代价高昂；备份 manifest 中已包含路径列表，现改为使用该列表执行同步，并移除不再使用的递归路径同步功能。
 
-**文档漏洞修复：**
-
-- 更新文档，添加 32 位支持说明及注意事项。32 位支持已于 v1.26 添加。（*报告：Viorel Tabara。*）
-
 **文档改进：**
 
+- 更新文档，添加 32 位支持说明及注意事项。32 位支持已于 v1.26 添加。（*报告：Viorel Tabara。*）
 - 明确说明 S3 存储桶必须由用户自行创建。（*建议：David Youatt。*）
 - 更新 `spool-path` 选项的过时描述。
 
 
-### v1.28 发布说明
+### v1.28 版本说明
 
 *Stanza 删除*
 
@@ -1747,24 +1712,24 @@ pgBackRest 的版本号由主版本号和次版本号两部分组成。主版本
 
 **漏洞修复：**
 
-- 修复使用 `--db-include` 恢复表空间中单个数据库时失败的问题。（*修复：Cynthia Shang。审阅：David Steele。报告：Chiranjeevi Ravilla。*）
-- 确保在将 `archive.info` 匹配到 `backup.info` 时选择最新的 `db-id`。在存在 `system-id` 和 `db-version` 重复项时（例如回滚 `pg_upgrade` 后），此改动可提供正确匹配。（*修复：Cynthia Shang。审阅：David Steele。报告：Adam K. Sumner。*）
+- 修复使用 `--db-include` 恢复表空间中单个数据库时失败的问题。（*由 Cynthia Shang 修复，David Steele 审核，Chiranjeevi Ravilla 报告。*）
+- 确保在将 `archive.info` 匹配到 `backup.info` 时选择最新的 `db-id`。在存在 `system-id` 和 `db-version` 重复项时（例如回滚 `pg_upgrade` 后），此改动可提供正确匹配。（*由 Cynthia Shang 修复，David Steele 审核，Adam K. Sumner 报告。*）
 - 修复报告无效命令时过于冗长的错误消息。（*报告：Jason O'Donnell。*）
 
 **新功能：**
 
-- 添加 `stanza-delete` 命令，用于清理不再使用的 stanza。（*贡献：Cynthia Shang。审阅：David Steele。建议：Magnus Hagander。*）
+- 添加 `stanza-delete` 命令，用于清理不再使用的 stanza。（*由 Cynthia Shang 贡献，David Steele 审核，Magnus Hagander 建议。*）
 
 **改进：**
 
-- 改进 `stanza-create` 命令，使其在 stanza 已存在时不再报错。（*贡献：Cynthia Shang。审阅：David Steele。*）
+- 改进 `stanza-create` 命令，使其在 stanza 已存在时不再报错。（*由 Cynthia Shang 贡献，David Steele 审核。*）
 
 **文档改进：**
 
 - 更新 `stanza-create --force` 文档，提示使用时需谨慎。（*建议：Jason O'Donnell。*）
 
 
-### v1.27 发布说明
+### v1.27 版本说明
 
 *缺陷修复与文档*
 
@@ -1775,7 +1740,7 @@ pgBackRest 的版本号由主版本号和次版本号两部分组成。主版本
 - 修复 `backup` 和 `restore` 的本地性检查错误被抑制的问题。存在备份主机时，备份应仅允许在备份主机上执行，恢复应仅允许在数据库主机上执行，除非创建了忽略远程主机的备用配置。（*报告：Lardière Sébastien。*）
 - 修复 PostgreSQL 10 上 WAL 未过期的问题。原因是正则表达式存在缺陷，期望所有 PostgreSQL 主版本号均为 X.X 格式。（*报告：Adam Brusselback。*）
 - 修复 `--no-config` 选项未传递给子进程的问题。这会导致子进程仍读取本地配置文件，可能引发意外行为。
-- 修复 `info` 命令在先前版本集群没有备份或归档时仍显示 `"db (prior)"` 输出的问题。（*修复：Cynthia Shang。审阅：David Steele。报告：Stephen Frost。*）
+- 修复 `info` 命令在先前版本集群没有备份或归档时仍显示 `"db (prior)"` 输出的问题。（*由 Cynthia Shang 修复，David Steele 审核，Stephen Frost 报告。*）
 
 **文档改进：**
 
@@ -1783,7 +1748,7 @@ pgBackRest 的版本号由主版本号和次版本号两部分组成。主版本
 - 改进 `archive-copy` 参考文档。
 
 
-### v1.26 发布说明
+### v1.26 版本说明
 
 *仓库加密*
 
@@ -1792,14 +1757,14 @@ pgBackRest 的版本号由主版本号和次版本号两部分组成。主版本
 **漏洞修复：**
 
 - 修复恢复时复制大型 manifest 可能失败的问题。（*报告：Craig A. James。*）
-- 修复 32 位架构下不正确的 WAL 偏移量。（*修复：Javier Wilson。审阅：David Steele。*）
-- 修复获取旧数据库版本 WAL 时的问题。执行 `stanza-upgrade` 后，应仍能恢复之前版本的备份并通过 `archive-get` 进行恢复。但 `archive-get` 仅检查最新的 db 版本/id 而失败。同时清理了同一 db 版本/id 多次出现时的相关问题。（*修复：Cynthia Shang。审阅：David Steele。报告：Clinton Adams。*）
+- 修复 32 位架构下不正确的 WAL 偏移量。（*由 Javier Wilson 修复，David Steele 审核。*）
+- 修复获取旧数据库版本 WAL 时的问题。执行 `stanza-upgrade` 后，应仍能恢复之前版本的备份并通过 `archive-get` 进行恢复。但 `archive-get` 仅检查最新的 db 版本/id 而失败。同时清理了同一 db 版本/id 多次出现时的相关问题。（*由 Cynthia Shang 修复，David Steele 审核，Clinton Adams 报告。*）
 - 修复恢复时无效备份组未被正确设置的问题。若备份无法将某个组映射到名称，则将该组以 `false` 存入 manifest，恢复时使用 `$PGDATA` 所有者或当前用户的组来设置。该逻辑存在缺陷，导致所选的组覆盖了用户，组未定义而用户被错误设置为组。（*报告：Jeff McCormick。*）
 - 修复向远程传递参数时的问题。指定多个 db 时，无论实际处理的是哪个 db，都会传递 db1 的路径、端口和 socket 路径。（*报告：uspen。*）
 
 **新功能：**
 
-- 支持仓库加密。（*贡献：Cynthia Shang、David Steele。*）
+- 支持仓库加密。（*由 Cynthia Shang、David Steele 贡献。*）
 
 **改进：**
 
@@ -1808,15 +1773,15 @@ pgBackRest 的版本号由主版本号和次版本号两部分组成。主版本
 
 **文档改进：**
 
-- 添加用于改善 issue 提交时初始信息收集的模板。（*贡献：Cynthia Shang。审阅：David Steele。*）
-- 明确说明 `archive-timeout` 选项的用法及其与 PostgreSQL `archive_timeout` 设置的区别。（*贡献：Cynthia Shang。审阅：David Steele。建议：Keith Fiske。*）
+- 添加用于改善 issue 提交时初始信息收集的模板。（*由 Cynthia Shang 贡献，David Steele 审核。*）
+- 明确说明 `archive-timeout` 选项的用法及其与 PostgreSQL `archive_timeout` 设置的区别。（*由 Cynthia Shang 贡献，David Steele 审核，Keith Fiske 建议。*）
 
 **测试套件改进：**
 
 - 支持 32 位 i386/i686 架构的自动化测试。
 
 
-### v1.25 发布说明
+### v1.25 版本说明
 
 *S3 性能改进*
 
@@ -1826,7 +1791,7 @@ pgBackRest 的版本号由主版本号和次版本号两部分组成。主版本
 
 - 修复 `compress-level` 选项自定义设置被忽略的问题。（*报告：Jens Wilke。*）
 - 移除检测到重叠时间线时的报错。重叠时间线在许多时间点恢复（PITR）场景中是有效的。（*报告：blogh。*）
-- 修复 JSON info 输出中 `database-id` 未渲染为整数的问题。（*修复：Cynthia Shang。审阅：David Steele。报告：Jason O'Donnell。*）
+- 修复 JSON info 输出中 `database-id` 未渲染为整数的问题。（*由 Cynthia Shang 修复，David Steele 审核，Jason O'Donnell 报告。*）
 
 **新功能：**
 
@@ -1837,7 +1802,7 @@ pgBackRest 的版本号由主版本号和次版本号两部分组成。主版本
 - 添加 I/O 性能测试。
 
 
-### v1.24 发布说明
+### v1.24 版本说明
 
 *新增备份排除项*
 
@@ -1863,7 +1828,7 @@ pgBackRest 的版本号由主版本号和次版本号两部分组成。主版本
 - 在文档中将 master 重命名为 primary，与 PostgreSQL 惯例保持一致。
 
 
-### v1.23 发布说明
+### v1.23 版本说明
 
 *多备库与 PostgreSQL 10 支持*
 
@@ -1876,7 +1841,7 @@ pgBackRest 的版本号由主版本号和次版本号两部分组成。主版本
 
 **新功能：**
 
-- 支持配置最多七个备库用于从备库备份。（*贡献：Cynthia Shang。审阅：David Steele。*）
+- 支持配置最多七个备库用于从备库备份。（*由 Cynthia Shang 贡献，David Steele 审核。*）
 - 支持 PostgreSQL 10。
 - 在读取 XML 数据时允许使用 `content-length`（除分块编码外），以提升与第三方 S3 网关的兼容性。（*建议：Victor Gdalevich。*）
 
@@ -1885,11 +1850,11 @@ pgBackRest 的版本号由主版本号和次版本号两部分组成。主版本
 - 增加 S3 的 HTTP 超时时间。
 - 添加 HTTP 重试，增强对 S3 瞬时网络错误的容错能力。
 
-**文档漏洞修复：**
+**文档改进：**
 
-- 修复文档生成，在配置页面中包含章节摘要。（*修复：Cynthia Shang。审阅：David Steele。*）
+- 修复文档生成，在配置页面中包含章节摘要。（*由 Cynthia Shang 修复，David Steele 审核。*）
 
-### v1.22 发布说明
+### v1.22 版本说明
 
 *修复 S3 重试*
 
@@ -1937,7 +1902,7 @@ pgBackRest 的版本号由主版本号和次版本号两部分组成。主版本
 
 *发布于 2017 年 6 月 27 日*
 
-**重要说明**：使用了表空间的 PostgreSQL 8.3 和 8.4 环境，应立即从任意 v1 版本升级并执行一次 full backup。本版本修复了一个仅影响上述两个版本的漏洞——该漏洞会导致表空间无法被备份。PostgreSQL >= 9.0 不受影响。
+**重要说明**：使用了表空间的 PostgreSQL 8.3 和 8.4 环境，应立即从任意 v1 版本升级并执行一次全量备份。本版本修复了一个仅影响上述两个版本的漏洞——该漏洞会导致表空间无法被备份。PostgreSQL >= 9.0 不受影响。
 
 **漏洞修复：**
 
@@ -2427,7 +2392,7 @@ pgBackRest 的版本号由主版本号和次版本号两部分组成。主版本
 
 *发布于 2016 年 3 月 22 日*
 
-**表空间重要漏洞修复**：v0.90 意外引入了仓库格式变更，导致包含表空间的备份在磁盘上不再是有效的 PostgreSQL 集群。此问题仅影响直接复制备份来恢复 PostgreSQL 集群（而非使用 `restore` 命令）的用户。无论采用哪种恢复方式，此修复与包含表空间的旧备份均不兼容（pgBackRest 将抛出错误并拒绝恢复）。对于包含表空间的集群，安装 v0.91 后应立即执行新的 full backup。如需恢复旧备份，请使用与备份版本匹配的 pgBackRest 版本。
+**表空间重要漏洞修复**：v0.90 意外引入了仓库格式变更，导致包含表空间的备份在磁盘上不再是有效的 PostgreSQL 集群。此问题仅影响直接复制备份来恢复 PostgreSQL 集群（而非使用 `restore` 命令）的用户。无论采用哪种恢复方式，此修复与包含表空间的旧备份均不兼容（pgBackRest 将抛出错误并拒绝恢复）。对于包含表空间的集群，安装 v0.91 后应立即执行新的全量备份。如需恢复旧备份，请使用与备份版本匹配的 pgBackRest 版本。
 
 **漏洞修复：**
 
@@ -2441,7 +2406,7 @@ pgBackRest 的版本号由主版本号和次版本号两部分组成。主版本
 
 **测试套件新功能：**
 
-- 使用 Perl-Critic 进行静态源码分析，目前在 gentle 级别通过。
+- 使用 Perl-Critic 进行静态源码分析，目前在 `gentle`（宽松）级别通过。
 
 
 ### v0.90 版本说明
@@ -2499,7 +2464,7 @@ pgBackRest 的版本号由主版本号和次版本号两部分组成。主版本
 
 - 备份仓库目录中不再创建符号链接。这些符号链接可能指向任意位置，存在安全风险。恢复时仍会重新创建符号链接。（*建议者：Stephen Frost。*）
 - 改进了备份过期的消息输出。全量和差异备份的过期信息现在合并为一行记录，并附带所有关联备份的列表。
-- 如果归档保留策略未显式配置，则自动设置为与 full backup 保留策略一致。
+- 如果归档保留策略未显式配置，则自动设置为与全量备份保留策略一致。
 
 **文档新功能：**
 
@@ -2547,7 +2512,7 @@ pgBackRest 的版本号由主版本号和次版本号两部分组成。主版本
 **漏洞修复：**
 
 - 修复了续传的压缩备份未保留已有文件的问题。
-- 修复了续传与 incremental/differential backup 未检验前序备份是否具有相同压缩和硬链接设置的问题。
+- 修复了续传与增量/差异备份未检验前序备份是否具有相同压缩和硬链接设置的问题。
 - 修复了未指定 `--force` 时，使用 `--no-start-stop` 的冷备份可能在运行中的 PostgreSQL 集群上启动的问题。
 - 修复了即使未请求线程也可能启动一个线程的问题。
 - 修复了升级/降级后 `backup.info` 和 `archive.info` 中 pgBackRest 版本号未被更新的问题。
@@ -2653,7 +2618,7 @@ pgBackRest 的版本号由主版本号和次版本号两部分组成。主版本
 
 **漏洞修复：**
 
-- 修复了 `hardlink=n` 时 `archive-copy` 在 incremental/differential backup 中失败的问题。此情况下 `pg_xlog` 路径不存在，必须先创建。（*报告者：Michael Renner。*）
+- 修复了 `hardlink=n` 时 `archive-copy` 在增量/差异备份中失败的问题。此情况下 `pg_xlog` 路径不存在，必须先创建。（*报告者：Michael Renner。*）
 - 修复了异步归档中 `archive-max-mb` 达到上限时 `archive-push` 未正确返回 0 的问题；同时将异步检查移到传输之后，以避免重复删除停止文件。新增了此情况的单元测试，并改进了错误消息，使用户更清楚地了解出错原因。（*报告者：Michael Renner。*）
 - 修复了一个锁定问题，该问题可能允许对同一 stanza 同时执行多个相同类型的操作。此问题在数据完整性方面似乎无害，但在归档时会引起虚假错误，并可能导致备份/恢复出错。（*报告者：Michael Renner。*）
 
@@ -2840,7 +2805,7 @@ pgBackRest 的版本号由主版本号和次版本号两部分组成。主版本
 - 暂无恢复功能，但备份目录是一致的 PostgreSQL 数据目录。需要手动解压文件，或在备份时关闭压缩。在 ZFS（或类似）文件系统上使用非压缩备份是一个好选择，可以通过快照在本地恢复备份，用于创建逻辑备份或进行点数据恢复。
 - 归档为单线程。在多太字节数据库（高写入量）上，这并未造成问题。建议使用较大的 WAL 卷，或配合大容量卷使用异步选项。
 - 备份为多线程，但 `Net::OpenSSH` 库似乎并非 100% 线程安全，偶尔会在某个线程上发生死锁。现有一个整体进程超时机制，通过终止进程来解决此问题——是的，这很粗糙。
-- 任何续传备份都会丢失校验和。多次续传时只有最终备份会记录校验和。之前备份的校验和可以正确记录，full backup 将重置所有内容。
+- 任何续传备份都会丢失校验和。多次续传时只有最终备份会记录校验和。之前备份的校验和可以正确记录，全量备份将重置所有内容。
 - `backup.manifest` 正在以 `Storable` 格式写入，因为 `Config::IniFile` 似乎不能很好地处理大文件。理想情况下希望将这些文件保存为人类可读的文本格式。
 
 **文档新功能：**

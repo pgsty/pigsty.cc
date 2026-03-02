@@ -10,26 +10,26 @@ category: [Reference]
 
 > 原始页面： [pgBackRest Command Docs: server](https://pgbackrest.org/command.html#command-server)
 
-pgBackRest 服务端允许在不使用 SSH 协议的情况下访问远程主机。
+pgBackRest 服务器允许在不使用 SSH 协议的情况下访问远程主机。
 
 ## 命令选项
 
-### TLS 服务端地址选项（`--tls-server-address`）
+### TLS 服务器地址选项（`--tls-server-address`）
 
-TLS 服务端地址。
+TLS 服务器地址。
 
-服务端监听客户端请求的 IP 地址。
+服务器监听客户端请求的 IP 地址。
 
 ```yaml
 default: localhost
 example: --tls-server-address=*
 ```
 
-### TLS 服务端授权客户端选项（`--tls-server-auth`）
+### TLS 服务器授权客户端选项（`--tls-server-auth`）
 
-TLS 服务端授权客户端。
+TLS 服务器授权客户端。
 
-服务端通过验证客户端证书，并将其证书 CN（Common Name，通用名称）与 `tls-server-auth` 选项所配置的列表进行比对，来完成对客户端的授权。
+服务器通过验证客户端证书，并将其证书 CN（Common Name，通用名称）与 `tls-server-auth` 选项所配置的列表进行比对，来完成对客户端的授权。
 
 可通过向 `tls-server-auth` 选项传入逗号分隔的列表，授权某个客户端 CN 访问多个 stanza（stanza 是 pgBackRest 中用于标识一个 PostgreSQL 集群备份配置的逻辑名称）；也可通过指定 `tls-server-auth=client-cn=*` 授权其访问所有 stanza。客户端 CN 不支持通配符。
 
@@ -37,9 +37,9 @@ TLS 服务端授权客户端。
 example: --tls-server-auth=client-cn=stanza1,stanza2
 ```
 
-### TLS 服务端证书颁发机构选项（`--tls-server-ca-file`）
+### TLS 服务器证书颁发机构选项（`--tls-server-ca-file`）
 
-TLS 服务端证书颁发机构。
+TLS 服务器证书颁发机构。
 
 用于验证客户端证书是否由受信任的证书颁发机构签发。
 
@@ -47,31 +47,31 @@ TLS 服务端证书颁发机构。
 example: --tls-server-ca-file=/path/to/server.ca
 ```
 
-### TLS 服务端证书选项（`--tls-server-cert-file`）
+### TLS 服务器证书选项（`--tls-server-cert-file`）
 
-TLS 服务端证书文件。
+TLS 服务器证书文件。
 
-发送给客户端以证明服务端身份的证书。
+发送给客户端以证明服务器身份的证书。
 
 ```yaml
 example: --tls-server-cert-file=/path/to/server.crt
 ```
 
-### TLS 服务端密钥选项（`--tls-server-key-file`）
+### TLS 服务器密钥选项（`--tls-server-key-file`）
 
-TLS 服务端密钥文件。
+TLS 服务器密钥文件。
 
-用于证明服务端证书归属的私钥。
+用于证明服务器证书归属的私钥。
 
 ```yaml
 example: --tls-server-key-file=/path/to/server.key
 ```
 
-### TLS 服务端端口选项（`--tls-server-port`）
+### TLS 服务器端口选项（`--tls-server-port`）
 
-TLS 服务端端口。
+TLS 服务器端口。
 
-服务端监听客户端请求的端口。
+服务器监听客户端请求的端口。
 
 ```yaml
 default: 8432
@@ -116,7 +116,7 @@ default: CFGOPTDEF_CONFIG_PATH "/" PROJECT_CONFIG_INCLUDE_PATH
 example: --config-include-path=/conf/pgbackrest/conf.d
 ```
 
-### 配置路径选项（`--config-path`）
+### 配置基础路径选项（`--config-path`）
 
 pgBackRest 配置文件的基础路径。
 
@@ -143,7 +143,7 @@ allowed: [100ms, 1h]
 example: --io-timeout=120
 ```
 
-### 进程优先级设置选项（`--priority`）
+### 进程优先级选项（`--priority`）
 
 设置进程优先级。
 
@@ -179,7 +179,7 @@ default: y
 example: --no-sck-keep-alive
 ```
 
-### 保活计数选项（`--tcp-keep-alive-count`）
+### TCP 保活计数选项（`--tcp-keep-alive-count`）
 
 保活计数。
 
@@ -192,7 +192,7 @@ allowed: [1, 32]
 example: --tcp-keep-alive-count=3
 ```
 
-### 保活空闲时间选项（`--tcp-keep-alive-idle`）
+### TCP 保活空闲时间选项（`--tcp-keep-alive-idle`）
 
 保活空闲时间。
 
@@ -205,7 +205,7 @@ allowed: [1, 3600]
 example: --tcp-keep-alive-idle=60
 ```
 
-### 保活间隔选项（`--tcp-keep-alive-interval`）
+### TCP 保活间隔选项（`--tcp-keep-alive-interval`）
 
 保活间隔时间。
 
@@ -222,7 +222,7 @@ example: --tcp-keep-alive-interval=30
 
 允许使用的 TLSv1.2 加密套件。
 
-pgBackRest 客户端与服务端之间的所有 TLS 连接均经过加密，连接到对象存储（如 S3）时默认也会加密。
+pgBackRest 客户端与服务器之间的所有 TLS 连接均经过加密，连接到对象存储（如 S3）时默认也会加密。
 
 > **注意：** 任何传输连接的最低安全级别为 TLSv1.2。
 
@@ -236,7 +236,7 @@ example: --tls-cipher-12=HIGH:MEDIUM:+3DES:!aNULL
 
 允许使用的 TLSv1.3 加密套件。
 
-pgBackRest 客户端与服务端之间的所有 TLS 连接均经过加密，连接到对象存储（如 S3）时默认也会加密。
+pgBackRest 客户端与服务器之间的所有 TLS 连接均经过加密，连接到对象存储（如 S3）时默认也会加密。
 
 > **注意：** 任何传输连接的最低安全级别为 TLSv1.2。
 

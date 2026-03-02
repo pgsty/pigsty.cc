@@ -174,7 +174,7 @@ allowed: [1B, 1TiB]
 example: --manifest-save-threshold=8GiB
 ```
 
-### 在线备份选项（`--online`）
+### 在线选项（`--online`）
 
 执行在线备份。
 
@@ -489,7 +489,7 @@ example: --no-sck-keep-alive
 example: --stanza=main
 ```
 
-### 保活计数选项（`--tcp-keep-alive-count`）
+### TCP 保活计数选项（`--tcp-keep-alive-count`）
 
 保活计数。
 
@@ -502,7 +502,7 @@ allowed: [1, 32]
 example: --tcp-keep-alive-count=3
 ```
 
-### 保活空闲时间选项（`--tcp-keep-alive-idle`）
+### TCP 保活空闲时间选项（`--tcp-keep-alive-idle`）
 
 保活空闲时间。
 
@@ -515,7 +515,7 @@ allowed: [1, 3600]
 example: --tcp-keep-alive-idle=60
 ```
 
-### 保活间隔选项（`--tcp-keep-alive-interval`）
+### TCP 保活间隔选项（`--tcp-keep-alive-interval`）
 
 保活重传间隔时间。
 
@@ -528,29 +528,29 @@ allowed: [1, 900]
 example: --tcp-keep-alive-interval=30
 ```
 
-### TLSv1.2 密码套件选项（`--tls-cipher-12`）
+### TLSv1.2 加密套件选项（`--tls-cipher-12`）
 
-允许的 TLSv1.2 密码套件。
+允许的 TLSv1.2 加密套件。
 
 pgBackRest 客户端与服务器之间的所有 TLS 连接均已加密。默认情况下，到对象存储（如 S3）的连接也经过加密。
 
 > **注意：** 任何传输连接的最低安全级别为 TLSv1.2。
 
-如有需要，可调整可接受的密码套件。示例值是合理的选择，除非有特定安全需求。若未设置（默认），则使用底层 OpenSSL 库的默认值。
+如有需要，可调整可接受的加密套件。示例值是合理的选择，除非有特定安全需求。若未设置（默认），则使用底层 OpenSSL 库的默认值。
 
 ```yaml
 example: --tls-cipher-12=HIGH:MEDIUM:+3DES:!aNULL
 ```
 
-### TLSv1.3 密码套件选项（`--tls-cipher-13`）
+### TLSv1.3 加密套件选项（`--tls-cipher-13`）
 
-允许的 TLSv1.3 密码套件。
+允许的 TLSv1.3 加密套件。
 
 pgBackRest 客户端与服务器之间的所有 TLS 连接均已加密。默认情况下，到对象存储（如 S3）的连接也经过加密。
 
 > **注意：** 任何传输连接的最低安全级别为 TLSv1.2。
 
-如有需要，可调整可接受的密码套件。若未设置（默认），则使用底层 OpenSSL 库的默认值。
+如有需要，可调整可接受的加密套件。若未设置（默认），则使用底层 OpenSSL 库的默认值。
 
 ```yaml
 example: --tls-cipher-13=TLS_AES_256_GCM_SHA384:TLS_CHACHA20_POLY1305_SHA256
@@ -681,7 +681,7 @@ example: --pg-version-force=15
 
 ## 仓库选项
 
-### 设置仓库选项（`--repo`）
+### 指定仓库选项（`--repo`）
 
 指定操作仓库。
 
@@ -1604,7 +1604,7 @@ example: --pg1-host-user=db_owner
 
 已弃用名称：db-user
 
-### PostgreSQL 数据目录选项（`--pg-path`）
+### PostgreSQL 路径选项（`--pg-path`）
 
 PostgreSQL 数据目录。
 

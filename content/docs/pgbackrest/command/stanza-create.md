@@ -16,7 +16,7 @@ category: [Reference]
 
 ## 命令选项
 
-### 在线模式选项（`--online`）
+### 在线选项（`--online`）
 
 在在线集群上创建 stanza。
 
@@ -152,7 +152,7 @@ default: y
 example: --no-neutral-umask
 ```
 
-### 设置进程优先级选项（`--priority`）
+### 进程优先级选项（`--priority`）
 
 设置进程优先级。
 
@@ -177,11 +177,11 @@ allowed: [100ms, 7d]
 example: --protocol-timeout=630
 ```
 
-### 连接保活选项（`--sck-keep-alive`）
+### 保活选项（`--sck-keep-alive`）
 
-启用连接保活。
+启用 keep-alive。
 
-在套接字连接上启用保活消息。
+在套接字连接上启用 keep-alive 消息。
 
 ```yaml
 default: y
@@ -363,7 +363,7 @@ example: --no-log-timestamp
 
 ## 维护者选项
 
-### 强制 PostgreSQL 版本选项（`--pg-version-force`）
+### 强制指定 PostgreSQL 版本选项（`--pg-version-force`）
 
 强制指定 PostgreSQL 版本。
 
@@ -1143,7 +1143,7 @@ example: --pg1-port=6543
 
 已弃用名称：db-port
 
-### PostgreSQL 套接字路径选项（`--pg-socket-path`）
+### PostgreSQL Socket 路径选项（`--pg-socket-path`）
 
 PostgreSQL Unix 套接字路径。
 

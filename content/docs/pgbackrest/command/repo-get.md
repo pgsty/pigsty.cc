@@ -483,7 +483,7 @@ example: --repo1-host=repo1.domain.com
 
 已弃用名称：backup-host
 
-### 仓库主机 CA 证书文件选项（`--repo-host-ca-file`）
+### 仓库主机证书颁发机构文件选项（`--repo-host-ca-file`）
 
 仓库主机证书颁发机构文件。
 
@@ -493,7 +493,7 @@ example: --repo1-host=repo1.domain.com
 example: --repo1-host-ca-file=/etc/pki/tls/certs/ca-bundle.crt
 ```
 
-### 仓库主机 CA 证书路径选项（`--repo-host-ca-path`）
+### 仓库主机证书颁发机构路径选项（`--repo-host-ca-path`）
 
 仓库主机证书颁发机构路径。
 

@@ -99,7 +99,7 @@ allowed: [-20, 19]
 example: --priority=19
 ```
 
-### stanza 选项（`--stanza`）
+### Stanza 选项（`--stanza`）
 
 定义 stanza。
 

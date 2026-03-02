@@ -13,7 +13,7 @@ category: [Reference]
 
 ## 简介
 
-常见问题解答旨在针对一些具体问题提供详细说明，这些问题可能未在用户指南、配置参考或命令参考中涵盖。如果在此处找不到您的问题，pgBackRest 在 GitHub 上的 [Issues List](https://github.com/pgbackrest/pgbackrest/issues) 也是一个宝贵的资源。
+常见问题解答旨在针对一些具体问题提供详细说明，这些问题可能未在用户指南、配置参考或命令参考中涵盖。如果在此处找不到您的问题，pgBackRest 在 GitHub 上的 [**Issues List**](https://github.com/pgbackrest/pgbackrest/issues) 也是一个宝贵的资源。
 
 
 --------
@@ -46,7 +46,7 @@ category: [Reference]
 
 ## 如何为每个命令独立配置选项？
 
-pgBackRest 支持在配置文件中为每个命令单独设置选项。 [**配置集群 Stanza**](/docs/pgbackrest/user-guide/#配置集群-stanza) 章节详细介绍了此功能及选项优先级规则。
+pgBackRest 支持在配置文件中为每个命令单独设置选项。 [**配置集群 stanza**](/docs/pgbackrest/user-guide/#配置集群-stanza) 章节详细介绍了此功能及选项优先级规则。
 
 例如，可以针对每个命令分别优化 `process-max` 选项：
 
@@ -84,7 +84,7 @@ process-max=1
 
 ## 在哪里可以找到旧版本 pgBackRest 的软件包？
 
-[apt.postgresql.org](https://apt.postgresql.org) 仓库维护了一个 [旧版本归档](https://apt-archive.postgresql.org)。Debian 也维护了所有测试构建版本的 [快照](https://snapshot.debian.org/binary/pgbackrest/)。
+[**apt.postgresql.org**](https://apt.postgresql.org) 仓库维护了一个 [**旧版本归档**](https://apt-archive.postgresql.org)。Debian 也维护了所有测试构建版本的 [**快照**](https://snapshot.debian.org/binary/pgbackrest/)。
 
 
 --------

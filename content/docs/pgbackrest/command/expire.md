@@ -111,7 +111,7 @@ default: CFGOPTDEF_CONFIG_PATH "/" PROJECT_CONFIG_INCLUDE_PATH
 example: --config-include-path=/conf/pgbackrest/conf.d
 ```
 
-### 配置路径选项（`--config-path`）
+### 配置基础路径选项（`--config-path`）
 
 pgBackRest 配置文件的基础路径。
 
@@ -173,7 +173,7 @@ default: y
 example: --no-neutral-umask
 ```
 
-### 设置进程优先级选项（`--priority`）
+### 进程优先级选项（`--priority`）
 
 设置进程优先级。
 
@@ -384,7 +384,7 @@ example: --no-log-timestamp
 
 ## 仓库选项
 
-### 设置仓库选项（`--repo`）
+### 指定仓库选项（`--repo`）
 
 指定操作仓库。
 
@@ -629,7 +629,7 @@ example: --repo1-host-port=25
 支持以下协议类型：
 
 - `ssh` - 安全外壳协议（Secure Shell）。
-- `tls` - pgBackRest TLS 服务端。
+- `tls` - pgBackRest TLS 服务器。
 
 ```yaml
 default: ssh
@@ -1009,9 +1009,9 @@ pgBackRest 不提供修改这些标签的功能，因此请在运行 `stanza-cre
 example: --repo1-storage-tag=key1=value1
 ```
 
-### 仓库存储上传块大小选项（`--repo-storage-upload-chunk-size`）
+### 仓库存储上传分块大小选项（`--repo-storage-upload-chunk-size`）
 
-仓库存储上传块大小。
+仓库存储上传分块大小。
 
 S3 等对象存储支持在文件过大无法全部载入内存时分块上传。即使文件能全部载入内存，限制上传所用内存量也更为高效。
 

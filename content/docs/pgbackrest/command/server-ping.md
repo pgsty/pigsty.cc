@@ -114,9 +114,9 @@ allowed: [-20, 19]
 example: --priority=19
 ```
 
-### 保持连接选项（`--sck-keep-alive`）
+### 保活选项（`--sck-keep-alive`）
 
-启用保持连接（keep-alive）。
+启用 keep-alive。
 
 在 socket 连接上启用 keep-alive 消息。
 
@@ -125,7 +125,7 @@ default: y
 example: --no-sck-keep-alive
 ```
 
-### TCP 保持连接计数选项（`--tcp-keep-alive-count`）
+### TCP 保活计数选项（`--tcp-keep-alive-count`）
 
 keep-alive 探测次数。
 
@@ -138,7 +138,7 @@ allowed: [1, 32]
 example: --tcp-keep-alive-count=3
 ```
 
-### TCP 保持连接空闲时间选项（`--tcp-keep-alive-idle`）
+### TCP 保活空闲时间选项（`--tcp-keep-alive-idle`）
 
 keep-alive 空闲时间。
 
@@ -151,7 +151,7 @@ allowed: [1, 3600]
 example: --tcp-keep-alive-idle=60
 ```
 
-### TCP 保持连接间隔选项（`--tcp-keep-alive-interval`）
+### TCP 保活间隔选项（`--tcp-keep-alive-interval`）
 
 keep-alive 重传间隔时间。
 

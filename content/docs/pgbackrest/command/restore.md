@@ -10,9 +10,9 @@ category: [Reference]
 
 > 原始页面： [pgBackRest Command Docs: restore](https://pgbackrest.org/command.html#command-restore)
 
-`restore` 命令默认从第一个存有备份的仓库中自动选取最新备份（参见 [**快速入门 - 恢复备份**](/docs/pgbackrest/user-guide/#restore-a-backup)）。仓库的检查顺序由 `pgbackrest.conf` 决定（例如先检查 repo1，再检查 repo2）。若要从特定仓库恢复，可使用 `--repo` 选项（例如 `--repo=1`）。若需恢复非最新的备份，可传入 `--set` 选项。
+`restore` 命令默认从第一个存有备份的仓库中自动选取最新备份（参见 [**快速开始 - 恢复备份**](/docs/pgbackrest/user-guide/#恢复备份)）。仓库的检查顺序由 `pgbackrest.conf` 决定（例如先检查 repo1，再检查 repo2）。若要从特定仓库恢复，可使用 `--repo` 选项（例如 `--repo=1`）。若需恢复非最新的备份，可传入 `--set` 选项。
 
-使用 `--type=time` 或 `--type=lsn` 进行 PITR（时间点恢复）时，必须通过 `--target` 选项指定目标时间或目标 LSN。若未通过 `--set` 选项指定备份集，系统将依次检查各仓库，查找包含所请求时间或 LSN 的备份。若未找到匹配备份，`--type=time` 将使用第一个存有备份的仓库中的最新备份，而 `--type=lsn` 则不会选择任何备份。对于其他类型的 PITR（如 `xid`），若目标早于最新备份，则必须通过 `--set` 选项明确指定备份集。详情及示例请参见 [**时间点恢复**](/docs/pgbackrest/user-guide/#point-in-time-recovery)。
+使用 `--type=time` 或 `--type=lsn` 进行 PITR（时间点恢复）时，必须通过 `--target` 选项指定目标时间或目标 LSN。若未通过 `--set` 选项指定备份集，系统将依次检查各仓库，查找包含所请求时间或 LSN 的备份。若未找到匹配备份，`--type=time` 将使用第一个存有备份的仓库中的最新备份，而 `--type=lsn` 则不会选择任何备份。对于其他类型的 PITR（如 `xid`），若目标早于最新备份，则必须通过 `--set` 选项明确指定备份集。详情及示例请参见 [**时间点恢复**](/docs/pgbackrest/user-guide/#时间点恢复)。
 
 按照 PostgreSQL 的建议，复制槽不包含在恢复中。更多信息请参阅 PostgreSQL 文档中的 [Backing Up The Data Directory](https://www.postgresql.org/docs/current/continuous-archiving.html#BACKUP-LOWLEVEL-BASE-BACKUP-DATA)。
 
@@ -58,7 +58,7 @@ example: --db-exclude=db_main
 
 可多次传入 `--db-include` 选项以包含多个数据库。
 
-更多信息及注意事项请参见 [**恢复指定数据库**](/docs/pgbackrest/user-guide/#restore-selected-databases)。
+更多信息及注意事项请参见 [**选择性数据库恢复**](/docs/pgbackrest/user-guide/#选择性数据库恢复)。
 
 ```yaml
 example: --db-include=db_main
@@ -292,7 +292,7 @@ default: CFGOPTDEF_CONFIG_PATH "/" PROJECT_CONFIG_FILE
 example: --config=/conf/pgbackrest/pgbackrest.conf
 ```
 
-### 配置文件包含路径选项（`--config-include-path`）
+### 配置包含路径选项（`--config-include-path`）
 
 附加 pgBackRest 配置文件的路径。
 
@@ -303,7 +303,7 @@ default: CFGOPTDEF_CONFIG_PATH "/" PROJECT_CONFIG_INCLUDE_PATH
 example: --config-include-path=/conf/pgbackrest/conf.d
 ```
 
-### 配置路径选项（`--config-path`）
+### 配置基础路径选项（`--config-path`）
 
 pgBackRest 配置文件的基础路径。
 
@@ -316,7 +316,7 @@ default: CFGOPTDEF_CONFIG_PATH
 example: --config-path=/conf/pgbackrest
 ```
 
-### 差量选项（`--delta`）
+### Delta 选项（`--delta`）
 
 使用校验和进行恢复或备份。
 
@@ -466,29 +466,29 @@ allowed: [1, 900]
 example: --tcp-keep-alive-interval=30
 ```
 
-### TLSv1.2 密码套件选项（`--tls-cipher-12`）
+### TLSv1.2 加密套件选项（`--tls-cipher-12`）
 
-允许的 TLSv1.2 密码套件。
+允许的 TLSv1.2 加密套件。
 
 pgBackRest 客户端与服务器之间的所有 TLS 连接均已加密。默认情况下，与对象存储（如 S3）的连接也会加密。
 
 > **注意：** 任何传输连接的最低安全级别为 TLSv1.2。
 
-如有需要，可调整接受的密码套件。示例中的配置是合理的选择，除非有特定安全要求。若未设置（默认），则使用底层 OpenSSL 库的默认值。
+如有需要，可调整接受的加密套件。示例中的配置是合理的选择，除非有特定安全要求。若未设置（默认），则使用底层 OpenSSL 库的默认值。
 
 ```yaml
 example: --tls-cipher-12=HIGH:MEDIUM:+3DES:!aNULL
 ```
 
-### TLSv1.3 密码套件选项（`--tls-cipher-13`）
+### TLSv1.3 加密套件选项（`--tls-cipher-13`）
 
-允许的 TLSv1.3 密码套件。
+允许的 TLSv1.3 加密套件。
 
 pgBackRest 客户端与服务器之间的所有 TLS 连接均已加密。默认情况下，与对象存储（如 S3）的连接也会加密。
 
 > **注意：** 任何传输连接的最低安全级别为 TLSv1.2。
 
-如有需要，可调整接受的密码套件。若未设置（默认），则使用底层 OpenSSL 库的默认值。
+如有需要，可调整接受的加密套件。若未设置（默认），则使用底层 OpenSSL 库的默认值。
 
 ```yaml
 example: --tls-cipher-13=TLS_AES_256_GCM_SHA384:TLS_CHACHA20_POLY1305_SHA256
@@ -590,7 +590,7 @@ example: --no-log-timestamp
 
 ## 维护者选项
 
-### 强制 PostgreSQL 版本选项（`--pg-version-force`）
+### 强制指定 PostgreSQL 版本选项（`--pg-version-force`）
 
 强制指定 PostgreSQL 版本。
 
@@ -606,7 +606,7 @@ example: --pg-version-force=15
 
 ## 仓库选项
 
-### 设置仓库选项（`--repo`）
+### 指定仓库选项（`--repo`）
 
 设置仓库。
 
@@ -1136,9 +1136,9 @@ pgBackRest 不提供修改这些标签的功能，因此请在运行 `stanza-cre
 example: --repo1-storage-tag=key1=value1
 ```
 
-### 仓库存储上传块大小选项（`--repo-storage-upload-chunk-size`）
+### 仓库存储上传分块大小选项（`--repo-storage-upload-chunk-size`）
 
-仓库存储上传块大小。
+仓库存储上传分块大小。
 
 对象存储（如 S3）允许在文件过大无法存入内存时分块上传。即使文件可以存入内存，限制单次上传占用的内存量也更为高效。
 
