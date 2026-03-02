@@ -11,13 +11,13 @@ category: [Task]
 > 原始页面： https://patroni.readthedocs.io/en/latest/kubernetes.html
 
 <a id="kubernetes"></a>
-Patroni 可以利用 Kubernetes 对象来存储集群状态并管理领导者键，从而无需任何额外的一致性存储即可在 Kubernetes 环境中运行 PostgreSQL——也就是说，不需要单独部署 Etcd。Patroni 支持两种不同类型的 Kubernetes 对象来存储领导者键和配置键，通过 `kubernetes.use_endpoints` 配置项或 `PATRONI_KUBERNETES_USE_ENDPOINTS` 环境变量进行选择。
+Patroni 可以利用 Kubernetes 对象来存储集群状态并管理领导者键，从而无需任何额外的一致性存储即可在 Kubernetes 环境中运行 PostgreSQL——也就是说，不需要单独部署 Etcd。Patroni 支持两种不同类型的 Kubernetes 对象来存储领导者键和配置键，通过 **`kubernetes.use_endpoints`** 配置项或 **`PATRONI_KUBERNETES_USE_ENDPOINTS`** 环境变量进行选择。
 
 --------
 
 ## 使用 Endpoints
 
-尽管这是推荐模式，但出于兼容性考虑，默认情况下该模式是关闭的。启用后，Patroni 会将集群配置和领导者键存储在其创建的 `Endpoints` 对象的 `metadata: annotations` 字段中。与使用 `ConfigMaps` 相比，这种方式的领导者切换更为安全——包含领导者信息的注解与指向当前领导者 Pod 的实际地址，会在同一次操作中被原子更新。
+尽管这是推荐模式，但出于兼容性考虑，默认情况下该模式是关闭的。启用后，Patroni 会将集群配置和领导者键存储在其创建的 **`Endpoints`** 对象的 **`metadata: annotations`** 字段中。与使用 **`ConfigMaps`** 相比，这种方式的领导者切换更为安全——包含领导者信息的注解与指向当前领导者 Pod 的实际地址，会在同一次操作中被原子更新。
 
 --------
 
@@ -25,7 +25,7 @@ Patroni 可以利用 Kubernetes 对象来存储集群状态并管理领导者键
 
 在此模式下，Patroni 将创建 ConfigMaps 而非 Endpoints，并将键值存储在 ConfigMaps 的元数据中。领导者切换至少需要两次更新操作：一次更新领导者 ConfigMap，另一次更新对应的 Endpoint。
 
-若要将流量引导至 PostgreSQL 主库，您需要将 Kubernetes PostgreSQL Service 配置为使用带有 `role_label`（在 Patroni 配置中设定）的标签选择器。
+若要将流量引导至 PostgreSQL 主库，您需要将 Kubernetes PostgreSQL Service 配置为使用带有 **`role_label`**（在 Patroni 配置中设定）的标签选择器。
 
 请注意，在某些场景下（例如在 OpenShift 上运行时）只能使用 ConfigMaps 模式。
 
@@ -38,11 +38,11 @@ Patroni 的 Kubernetes [**配置项**](/docs/patroni/config/yaml#kubernetes_sett
 <a id="kubernetes_role_values"></a>
 ### 自定义角色标签
 
-默认情况下，Patroni 会根据节点角色在其所在 Pod 上设置对应标签，例如 `role=primary`。标签的键名和值可通过 `kubernetes.role_label`、`kubernetes.leader_label_value`、`kubernetes.follower_label_value` 和 `kubernetes.standby_leader_label_value` 进行自定义。
+默认情况下，Patroni 会根据节点角色在其所在 Pod 上设置对应标签，例如 **`role=primary`**。标签的键名和值可通过 **`kubernetes.role_label`**、**`kubernetes.leader_label_value`**、**`kubernetes.follower_label_value`** 和 **`kubernetes.standby_leader_label_value`** 进行自定义。
 
 如需从默认角色标签迁移到自定义标签，可按照以下步骤操作以减少停机时间：
 
-1.  使用 `kubernetes.tmp_role_label`（如 `tmp_role`）为 Pod 添加一个使用原始角色值的临时标签。所有 Pod 重启后，Patroni 将为其设置以下标签：
+1.  使用 **`kubernetes.tmp_role_label`**（如 **`tmp_role`**）为 Pod 添加一个使用原始角色值的临时标签。所有 Pod 重启后，Patroni 将为其设置以下标签：
 
 > ```yaml
 > labels:
@@ -59,7 +59,7 @@ Patroni 的 Kubernetes [**配置项**](/docs/patroni/config/yaml#kubernetes_sett
 >   tmp_role: primary
 > ```
 
-3.  添加自定义角色标签（例如，设置 `kubernetes.leader_label_value=primary`）。所有 Pod 重启后，Patroni 将为其设置以下新标签：
+3.  添加自定义角色标签（例如，设置 **`kubernetes.leader_label_value=primary`**）。所有 Pod 重启后，Patroni 将为其设置以下新标签：
 
 > ```yaml
 > labels:

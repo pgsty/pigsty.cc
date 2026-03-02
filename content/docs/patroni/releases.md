@@ -1,13 +1,13 @@
 ---
-title: "Release notes"
+title: "版本历史"
 weight: 190
 icon: fa-solid fa-scroll
-description: "Chronological Patroni release notes and change history."
+description: "Patroni 各版本发布说明与变更历史。"
 module: [PATRONI]
-category: [Reference]
+category: [参考]
 ---
 
-> 原始页面： https://patroni.readthedocs.io/en/latest/releases.html
+> 原始页面：https://patroni.readthedocs.io/en/latest/releases.html
 
 <a id="releases"></a>
 
@@ -15,2027 +15,2019 @@ category: [Reference]
 
 ## Version 4.1.0
 
-Released 2025-09-23
+发布于 2025-09-23
 
-**New features**
+**新特性**
 
-- Add support for systemd "notify" unit type (Ronan Dunklau)
+- 添加对 systemd "notify" 单元类型的支持（Ronan Dunklau）
 
-  Without a notify unit type, it is possible to start Patroni and immediately send it a SIGHUP signal using systemd, effectively killing it before it had time to set up its signal handlers.
+  如果没有 notify 单元类型，在使用 systemd 时，有可能在 Patroni 启动后立即向其发送 SIGHUP 信号，从而在其设置信号处理程序之前将其终止。
 
-- Provide receive and replay LSN/lag information in API and ctl (Polina Bungina)
+- 在 API 和 ctl 中提供接收和重放 LSN/延迟信息（Polina Bungina）
 
-  Patroni REST API `/cluster` endpoint and `patronictl list` command now provide receive LSN, replay LSN, receive lag, and replay lag information for each replica member.
+  Patroni REST API 的 **`/cluster`** 端点和 **`patronictl list`** 命令现在为每个副本成员提供接收 LSN、重放 LSN、接收延迟和重放延迟信息。
 
-- Ensure clean demotion to standby cluster (Polina Bungina)
+- 确保干净地降级为备用集群（Polina Bungina）
 
-  Make sure the introduction of the [standby_cluster](/docs/patroni/standby_cluster#standby_cluster) section in the dynamic configuration leads to a clean cluster demotion.
+  确保在动态配置中引入 [`standby_cluster`](/docs/patroni/standby_cluster#standby_cluster) 部分能够实现干净的集群降级。
 
-- Implement `patronictl demote-cluster` and `promote-cluster` commands (Polina Bungina)
+- 实现 **`patronictl demote-cluster`** 和 **`promote-cluster`** 命令（Polina Bungina）
 
-  New commands for cluster demotion and promotion handle both the dynamic configuration editing and checking the result status.
+  用于集群降级和提升的新命令，可同时处理动态配置编辑和结果状态检查。
 
-- Implement `sync_priority` tag (Polina Bungina)
+- 实现 **`sync_priority`** 标签（Polina Bungina）
 
-  This parameter controls the priority a member should have during synchronous replica selection when [synchronous_mode](/docs/patroni/replication_modes#synchronous_mode) is set to `on`.
+  此参数控制当 [`synchronous_mode`](/docs/patroni/replication_modes#synchronous_mode) 设置为 **`on`** 时，成员在同步副本选择过程中应具有的优先级。
 
-- Implement `--print` option for `--validate-config` (Polina Bungina)
+- 实现 **`--validate-config`** 的 **`--print`** 选项（Polina Bungina）
 
-  Print out local configuration (including environment configuration overrides) after it has been successfully validated.
+  在本地配置（包括环境配置覆盖）成功验证后将其打印输出。
 
-- Implement `kubernetes.bootstrap_labels` (Polina Bungina)
+- 实现 **`kubernetes.bootstrap_labels`**（Polina Bungina）
 
-  This feature allows you to define labels that will be assigned to a member pod when in `initializing new cluster`, `running custom bootstrap script`, `starting after custom bootstrap`, or `creating replica` state.
+  此功能允许您定义标签，这些标签将在成员 Pod 处于 **`initializing new cluster`**、**`running custom bootstrap script`**、**`starting after custom bootstrap`** 或 **`creating replica`** 状态时被分配给该 Pod。
 
-- Add configuration option to suppress duplicate heartbeat logs (Michael Morris)
+- 添加抑制重复心跳日志的配置选项（Michael Morris）
 
-  If set to `true`, successive heartbeat logs that are identical shall not be output.
+  如果设置为 **`true`**，连续相同的心跳日志将不会被重复输出。
 
-- Add optional `cluster_type` attribute to permanent replication slots (Michael Banck)
+- 为永久复制槽添加可选的 **`cluster_type`** 属性（Michael Banck）
 
-  This allows you to set whether a particular permanent replication slot should always be created, or just on a primary or standby cluster.
+  这允许您设置特定的永久复制槽是应该始终创建，还是仅在主集群或备用集群上创建。
 
-- Make HTTP Server header configurable (David Grierson)
+- 使 HTTP Server 头可配置（David Grierson）
 
-  Introduce the `restapi.server_tokens` configuration parameter that allows you to restrict information disclosed in the HTTP Server header.
+  引入 **`restapi.server_tokens`** 配置参数，允许您限制 HTTP Server 头中公开的信息。
 
-- Implement readiness API checks for replication on replica members (Ants Aasma)
+- 为副本成员实现复制就绪 API 检查（Ants Aasma）
 
-  The previous implementation considered replicas ready as soon as PostgreSQL was started. With this change, a replica pod is only considered ready when PostgreSQL is replicating and is not too far behind the leader.
+  之前的实现在 PostgreSQL 启动后就认为副本已就绪。此更改后，只有当 PostgreSQL 正在进行复制且落后主节点不太远时，副本 Pod 才被视为就绪。
 
-**Improvements**
+**改进**
 
-- Reduce log level of watchdog configuration failure (Ants Aasma)
+- 降低 watchdog 配置失败的日志级别（Ants Aasma）
 
-  Show the `Could not activate Linux watchdog device` log line on debug logging level, unless the watchdog is configured with `required` mode. It was previously shown on info level.
+  将 **`Could not activate Linux watchdog device`** 日志行在 debug 日志级别显示，除非 watchdog 配置为 **`required`** 模式。此前该日志在 info 级别显示。
 
-- Take advantage of `written_lsn` and `latest_end_lsn` from `pg_stat_wal_receiver` (Alexander Kukushkin)
+- 利用 **`pg_stat_wal_receiver`** 中的 **`written_lsn`** 和 **`latest_end_lsn`**（Alexander Kukushkin）
 
-  `written_lsn`, the actual write LSN, is now preferred over the one returned by `pg_last_wal_receive_lsn()`, which is in fact the flush LSN. `latest_end_lsn` points to WAL flush on the source host. In case of a primary, it allows better calculation of the replay lag, because values stored in DCS are updated only every `loop_wait` seconds.
+  **`written_lsn`**（实际写入 LSN）现在优先于 **`pg_last_wal_receive_lsn()`** 返回的值使用，后者实际上是刷新 LSN。**`latest_end_lsn`** 指向源主机上的 WAL 刷新位置。对于主节点，这允许更好地计算重放延迟，因为存储在 DCS 中的值仅每 **`loop_wait`** 秒更新一次。
 
-- Avoid interactions with slots created with the `failover=true` option (Alexander Kukushkin)
+- 避免与使用 **`failover=true`** 选项创建的槽交互（Alexander Kukushkin）
 
-  This change is required to make the logical failover slots feature fully functional.
+  此更改是使逻辑故障转移槽功能完全正常运行所必需的。
 
-- Add PostgreSQL state to `/metrics` REST API endpoint (Ivan Filianin)
+- 在 **`/metrics`** REST API 端点中添加 PostgreSQL 状态（Ivan Filianin）
 
-  PostgreSQL instance state information is now available in the Prometheus format output of the `/metrics` REST API endpoint.
+  PostgreSQL 实例状态信息现在可通过 **`/metrics`** REST API 端点的 Prometheus 格式输出获取。
 
 --------
 
 ## Version 4.0.7
 
-Released 2025-09-22
+发布于 2025-09-22
 
-**New features**
+**新特性**
 
-- Add support for PostgreSQL 18 RC1 (Alexander Kukushkin)
+- 添加对 PostgreSQL 18 RC1 的支持（Alexander Kukushkin）
 
-  GUC's validator rules were extended. Patroni now properly handles the new background I/O worker.
+  GUC 验证规则已扩展。Patroni 现在可以正确处理新的后台 I/O 工作进程。
 
-**Bugfixes**
+**错误修复**
 
-- Fix potential issue around resolving localhost to IPv6 on Windows (András Váczi)
+- 修复 Windows 上 localhost 解析为 IPv6 的潜在问题（András Váczi）
 
-  When configuring `listen_addresses` in PostgreSQL, using `0.0.0.0` or `127.0.0.1` will restrict listening to IPv4 only, excluding IPv6. On typical Windows systems, however, `localhost` often resolves to the IPv6 address `::1` by default. To ensure compatibility, Patroni now configures PostgreSQL to listen on `127.0.0.1`, instead of `localhost`, on Windows systems.
+  在 PostgreSQL 中配置 **`listen_addresses`** 时，使用 **`0.0.0.0`** 或 **`127.0.0.1`** 将限制仅监听 IPv4，排除 IPv6。然而在典型的 Windows 系统上，**`localhost`** 通常默认解析为 IPv6 地址 **`::1`**。为确保兼容性，Patroni 现在在 Windows 系统上将 PostgreSQL 配置为监听 **`127.0.0.1`** 而非 **`localhost`**。
 
-- Return global config only when `/config` key exists in DCS (Alexander Kukushkin)
+- 仅当 DCS 中存在 **`/config`** 键时才返回全局配置（Alexander Kukushkin）
 
-  Patroni REST API was returning an empty configuration instead of raising an error if the `/config` key was missing in DCS.
+  此前，当 DCS 中缺少 **`/config`** 键时，Patroni REST API 返回的是空配置而不是抛出错误。
 
-- Fix the issue of failsafe mode not being triggered in case of Etcd unavailability (Alexander Kukushkin)
+- 修复 Etcd 不可用时故障安全模式未被触发的问题（Alexander Kukushkin）
 
-  Patroni was not always properly handling `etcd3` exceptions, which resulted in failsafe mode not being triggered.
+  Patroni 并非总能正确处理 **`etcd3`** 异常，导致故障安全模式未被触发。
 
-- Fix signal handler reentrancy deadlock (Waynerv)
+- 修复信号处理程序重入死锁（Waynerv）
 
-  Patroni running in a Docker container with `PID=1` in some special cases was experiencing deadlock after receiving `SIGCHLD`.
+  在 Docker 容器中以 **`PID=1`** 运行的 Patroni 在某些特殊情况下，收到 **`SIGCHLD`** 后会发生死锁。
 
-- Recreate (permanent) physical slot when it doesn't reserve WAL (Israel Barth Rubio)
+- 当（永久）物理槽未保留 WAL 时重新创建（Israel Barth Rubio）
 
-  Permanent physical replication slots created outside of Patroni scope without reserving WALs were causing a `replication slot cannot be advanced` error. To avoid this, Patroni now recreates such slots.
+  在 Patroni 作用域之外创建的、未保留 WAL 的永久物理复制槽会导致 **`replication slot cannot be advanced`** 错误。为避免此问题，Patroni 现在会重新创建这些槽。
 
-- Handle watch cancelation messages in `etcd3` properly (Alexander Kukushkin)
+- 正确处理 **`etcd3`** 中的 watch 取消消息（Alexander Kukushkin）
 
-  When `etcd3` sends a cancelation message to the watch channel, it doesn't close the connection. This results in Patroni using stale data. Patroni now solves it by breaking a loop of reading chunked response and closing the connection on the Patroni side.
+  当 **`etcd3`** 向 watch 通道发送取消消息时，它不会关闭连接。这导致 Patroni 使用过期的数据。Patroni 现在通过中断分块响应的读取循环并在 Patroni 端关闭连接来解决此问题。
 
-- Handle case when `HTTPConnection` socket is wrapped with `pyopenssl` (Alexander Kukushkin)
+- 处理 **`HTTPConnection`** 套接字被 **`pyopenssl`** 包装的情况（Alexander Kukushkin）
 
-  Patroni was not correctly using `pyopenssl` interfaces, enforced in `python-etcd`.
+  Patroni 未正确使用 **`python-etcd`** 中强制使用的 **`pyopenssl`** 接口。
 
-**Documentation improvements**
+**文档改进**
 
-- Improve 2-node cluster guidance (Nikolay Samokhvalov)
+- 改进双节点集群指南（Nikolay Samokhvalov）
 
-  Clarify behaviour during failover and DCS requirements.
+  澄清故障转移期间的行为和 DCS 要求。
 
 --------
 
 ## Version 4.0.6
 
-Released 2025-06-06
+发布于 2025-06-06
 
-**Bugfixes**
+**错误修复**
 
-- Fix bug in failover from a leader with a higher priority (Alexander Kukushkin)
+- 修复从具有更高优先级的主节点故障转移的错误（Alexander Kukushkin）
 
-  Make sure Patroni ignores the former leader with higher priority when it reports the same `LSN` as the current node.
+  确保 Patroni 在具有更高优先级的旧主节点报告与当前节点相同的 **`LSN`** 时忽略该旧主节点。
 
-- Fix permissions for the `postgresql.conf` file created outside of `PGDATA` (Michael Banck)
+- 修复在 **`PGDATA`** 外创建的 **`postgresql.conf`** 文件的权限问题（Michael Banck）
 
-  Respect the system-wide umask value when creating the `postgresql.conf` file outside of the `PGDATA` directory.
+  在 **`PGDATA`** 目录外创建 **`postgresql.conf`** 文件时尊重系统级 umask 值。
 
-- Fix bug with switchover in `synchronous_mode=quorum` (Alexander Kukushkin)
+- 修复 **`synchronous_mode=quorum`** 下切换的错误（Alexander Kukushkin）
 
-  Do not check quorum requirements when a candidate is specified.
+  当指定了候选节点时，不检查 quorum 要求。
 
-- Ignore stale Etcd nodes by comparing cluster term (Alexander Kukushkin)
+- 通过比较集群 term 来忽略过期的 Etcd 节点（Alexander Kukushkin）
 
-  Memorize the last known "raft_term" of the Etcd cluster, and when executing client requests, compare it with the "raft_term" reported by an Etcd node.
+  记录 Etcd 集群最后已知的 "raft_term"，并在执行客户端请求时将其与 Etcd 节点报告的 "raft_term" 进行比较。
 
-- Update PostgreSQL configuration files on `SIGHUP` (Alexander Kukushkin)
+- 在 **`SIGHUP`** 时更新 PostgreSQL 配置文件（Alexander Kukushkin）
 
-  Previously, Patroni was only replacing PostgreSQL configuration files if a change in global or local configuration was detected.
+  此前，Patroni 仅在检测到全局或本地配置发生更改时才替换 PostgreSQL 配置文件。
 
-- Properly handle `Unavailable` exception raised by `etcd3` (Alexander Kukushkin)
+- 正确处理 **`etcd3`** 抛出的 **`Unavailable`** 异常（Alexander Kukushkin）
 
-  Patroni used to retry such requests on the same `etcd3` node, while switching to another node is a better strategy.
+  Patroni 过去会在同一个 **`etcd3`** 节点上重试此类请求，而切换到另一个节点是更好的策略。
 
-- Improve `etcd3` lease handling (Alexander Kukushkin)
+- 改进 **`etcd3`** 租约处理（Alexander Kukushkin）
 
-  Make sure Patroni refreshes the `etcd3` lease at least once per HA loop.
+  确保 Patroni 每个 HA 循环至少刷新一次 **`etcd3`** 租约。
 
-- Recheck annotations on 409 status code when attempting to acquire leader lock (Alexander Kukushkin)
+- 尝试获取主节点锁时在 409 状态码下重新检查注解（Alexander Kukushkin）
 
-  Implement the same behavior as was done for the leader object read in Patroni version 4.0.3.
+  实现与 Patroni 4.0.3 版本中对主节点对象读取所做的相同行为。
 
-- Consider `replay_lsn` when advancing slots (Polina Bungina)
+- 在推进槽时考虑 **`replay_lsn`**（Polina Bungina）
 
-  Do not try to advance slots on replicas past the `replay_lsn`. Additionally, advance the slot to the `replay_lsn` position if it is already past the `confirmed_flush_lsn` of this slot on the replica but the replica has still not replayed the actual `LSN` at which this slot is on the primary.
+  不要尝试在副本上将槽推进到超过 **`replay_lsn`** 的位置。此外，如果槽已经超过了该副本上此槽的 **`confirmed_flush_lsn`**，但副本尚未重放该槽在主节点上的实际 **`LSN`**，则将槽推进到 **`replay_lsn`** 位置。
 
-- Make sure `CHECKPOINT` is executed after promote (Alexander Kukushkin)
+- 确保在提升后执行 **`CHECKPOINT`**（Alexander Kukushkin）
 
-  It was possible that checkpoint task wasn't reset on demote because `CHECKPOINT` wasn't yet finished. This resulted in using a stale `result` when the next promote is triggered.
+  由于 **`CHECKPOINT`** 尚未完成，检查点任务有可能在降级时未被重置。这导致在下一次提升触发时使用了过期的 **`result`**。
 
-- Avoid running "offline" demotion concurrently (Alexander Kukushkin)
+- 避免并发运行"离线"降级（Alexander Kukushkin）
 
-  In case of a slow shutdown, it might happen that the next heartbeat loop hits the DCS error handling method again, resulting in `AsyncExecutor is busy, demoting from the main thread` warning and starting offline demotion again.
+  在缓慢关闭的情况下，可能会出现下一个心跳循环再次触发 DCS 错误处理方法的情况，导致 **`AsyncExecutor is busy, demoting from the main thread`** 警告并再次启动离线降级。
 
-- Normalize the `data_dir` value before renaming the data directory on initialization failure (Waynerv)
+- 在初始化失败时重命名数据目录前规范化 **`data_dir`** 值（Waynerv）
 
-  Prevent a trailing slash in the `data_dir` parameter value from breaking the renaming process after an initialization failure.
+  防止 **`data_dir`** 参数值中的尾部斜杠破坏初始化失败后的重命名过程。
 
-- Check that `synchronous_standby_names` contains the expected value (Alexander Kukushkin)
+- 检查 **`synchronous_standby_names`** 是否包含预期值（Alexander Kukushkin）
 
-  Previously, the mechanism implementing the state machine for non-quorum synchronous replication didn't check the actual value of `synchronous_standby_names`, what resulted in a stale value of `synchronous_standby_names` being used when `pg_stat_replication` is a subset of `synchronous_standby_names`.
+  此前，实现非 quorum 同步复制的状态机机制未检查 **`synchronous_standby_names`** 的实际值，导致当 **`pg_stat_replication`** 是 **`synchronous_standby_names`** 的子集时使用了过期的 **`synchronous_standby_names`** 值。
 
 --------
 
 ## Version 4.0.5
 
-Released 2025-02-20
+发布于 2025-02-20
 
-**Stability improvements**
+**稳定性改进**
 
-- Compatibility with `python-json-logger>=3.1` (Alexander Kukushkin)
+- 兼容 **`python-json-logger>=3.1`**（Alexander Kukushkin）
 
-  Get rid of the warnings produced by the old API usage.
+  消除旧 API 用法产生的警告。
 
-- Compatibility with Python 3.13 (Alexander Kukushkin)
+- 兼容 Python 3.13（Alexander Kukushkin）
 
-  Run tests against Python 3.13.
+  在 Python 3.13 上运行测试。
 
-- Compatibility with `pyinstaller>=4.4` (Joe Jensen)
+- 兼容 **`pyinstaller>=4.4`**（Joe Jensen）
 
-  Fall back to the default `iter_modules` if `pyinstaller` `toc` attribute is not present.
+  当 **`pyinstaller`** 的 **`toc`** 属性不存在时，回退到默认的 **`iter_modules`**。
 
-- Fix issues with PostgreSQL 9.5 support (Alexander Kukushkin)
+- 修复 PostgreSQL 9.5 支持的问题（Alexander Kukushkin）
 
-  - Properly handle `pg_rewind` output format.
-  - Consider `synchronous_standby_names` format not supporting "num" specification.
+  - 正确处理 **`pg_rewind`** 输出格式。
+  - 考虑 **`synchronous_standby_names`** 格式不支持 "num" 规范。
 
-- Compatibility with the latest changes in `urlparse` (Alexander Kukushkin)
+- 兼容 **`urlparse`** 的最新变更（Alexander Kukushkin）
 
-  `urlparse` doesn't accept multiple hosts with `[]` character in URL anymore. To mitigate the problem, switch to the native wrappers of `PQconninfoParse()` from `libpq`, when it is possible, and use our implementation only for older `psycopg2` versions that are linked with an outdated version of `libpq`.
+  **`urlparse`** 不再接受 URL 中包含 **`[]`** 字符的多主机地址。为解决此问题，尽可能切换到 **`libpq`** 的 **`PQconninfoParse()`** 原生包装器，仅对链接了旧版 **`libpq`** 的较旧 **`psycopg2`** 版本使用我们自己的实现。
 
-**Bugfixes**
+**错误修复**
 
-- Show only the members to be restarted upon restart confirmation (András Váczi)
+- 仅显示待重启的成员以进行重启确认（András Váczi）
 
-  Previously, when doing `patronictl restart <clustername> --pending`, the confirmation listed all members, regardless of whether their restart is pending.
+  此前，执行 **`patronictl restart <clustername> --pending`** 时，确认列表会列出所有成员，而不管其是否有待处理的重启。
 
-- Cancel long-running jobs on Patroni stop and remove data directory on replica bootstrap failure (Alexander Kukushkin)
+- 在 Patroni 停止时取消长时间运行的任务，并在副本引导失败时删除数据目录（Alexander Kukushkin）
 
-  Previously, Patroni could be doing replica bootstrap, while `pg_basebackup` / `wal-g` / `pgBackRest` / `barman` or similar keep running.
+  此前，Patroni 可能在进行副本引导时停止，而 **`pg_basebackup`** / **`wal-g`** / **`pgBackRest`** / **`barman`** 或类似工具仍在继续运行。
 
-- Properly handle cluster names with a slash in `patronictl edit-config` (Antoni Mur)
+- 正确处理 **`patronictl edit-config`** 中包含斜杠的集群名称（Antoni Mur）
 
-  Replace a forward slash in `cluster_name` with an underscore.
+  将 **`cluster_name`** 中的正斜杠替换为下划线。
 
-- Avoid dropping physical slots too early (Alexander Kukushkin)
+- 避免过早删除物理槽（Alexander Kukushkin）
 
-  Postpone removal of physical replication slots containing `xmin` after a failover: on the new primary -- until this member is promoted, on replicas -- until there is a leader in the cluster.
+  在故障转移后推迟删除包含 **`xmin`** 的物理复制槽：在新主节点上——直到该成员被提升，在副本上——直到集群中有主节点。
 
-- Handle all exceptions raised by subprocess in `controldata()` (Alexander Kukushkin)
+- 处理 **`controldata()`** 中 subprocess 抛出的所有异常（Alexander Kukushkin）
 
-  Patroni was not properly handling all exceptions possibly raised when calling `pg_controldata` utility.
+  Patroni 未正确处理调用 **`pg_controldata`** 工具时可能抛出的所有异常。
 
-- Fix bug with a slot for a former leader not retained on failover (Alexander Kukushkin)
+- 修复故障转移时旧主节点的槽未被保留的错误（Alexander Kukushkin）
 
-  Avoid falsely relying on members being present in DCS, while on failover `/member` key for the former leader is expiring exactly at the same time.
+  避免错误地依赖 DCS 中存在的成员信息，因为在故障转移时旧主节点的 **`/member`** 键可能恰好同时过期。
 
-- Fix a couple of bugs in the quorum state machine (Alexander Kukushkin)
+- 修复 quorum 状态机中的几个错误（Alexander Kukushkin）
 
-  - When evaluating whether there are healthy nodes for a leader race, before demoting we need to take into account quorum requirements. Without it, the former leader may end up in recovery surrounded by asynchronous nodes.
-  - `QuorumStateResolver` wasn't correctly handling the case when a replica node quickly joined and disconnected.
+  - 在评估是否有健康节点可用于主节点选举时，降级前需要考虑 quorum 要求。否则，旧主节点可能最终在异步节点包围下处于恢复状态。
+  - **`QuorumStateResolver`** 未正确处理副本节点快速加入又断开连接的情况。
 
-**Improvements**
+**改进**
 
-- Improve error on am empty or non-dictionary configuration file (Julian)
+- 改进空配置文件或非字典配置文件的错误提示（Julian）
 
-  Throw a more explicit exception when validating if Patroni configuration file contains a valid `Mapping` object.
+  在验证 Patroni 配置文件是否包含有效的 **`Mapping`** 对象时，抛出更明确的异常。
 
 --------
 
 ## Version 4.0.4
 
-Released 2024-11-22
+发布于 2024-11-22
 
-**Stability improvements**
+**稳定性改进**
 
-- Add compatibility with the `py-consul` module (Alexander Kukushkin)
+- 添加对 **`py-consul`** 模块的兼容性（Alexander Kukushkin）
 
-  `python-consul` module is unmaintained for a long time, while `py-consul` is the official replacement. Backward compatibility with python-consul is retained.
+  **`python-consul`** 模块已长期未维护，而 **`py-consul`** 是其官方替代品。保留了对 python-consul 的向后兼容性。
 
-- Add compatibility with the `prettytable>=3.12.0` module (Alexander Kukushkin)
+- 添加对 **`prettytable>=3.12.0`** 模块的兼容性（Alexander Kukushkin）
 
-  Address deprecation warnings.
+  处理弃用警告。
 
-- Compatibility with the `ydiff==1.4.2` module (Alexander Kukushkin)
+- 兼容 **`ydiff==1.4.2`** 模块（Alexander Kukushkin）
 
-  Fix compatibility issues for the latest version, constrain version in `requirements.txt`, and introduce latest version compatibility test.
+  修复最新版本的兼容性问题，在 **`requirements.txt`** 中约束版本，并引入最新版本兼容性测试。
 
-**Bugfixes**
+**错误修复**
 
-- Run `on_role_change` callback after a failed primary recovery (Polina Bungina, Alexander Kukushkin)
+- 在主节点恢复失败后运行 **`on_role_change`** 回调（Polina Bungina、Alexander Kukushkin）
 
-  Additionally run `on_role_change` callback for a primary that failed to start after a crash to increase chances the callback is executed, even if the further start as a replica fails.
+  额外为崩溃后启动失败的主节点运行 **`on_role_change`** 回调，以增加回调被执行的机会，即使后续以副本身份启动也失败。
 
-- Fix a thread leak in `patronictl list -W` (Alexander Kukushkin)
+- 修复 **`patronictl list -W`** 中的线程泄漏（Alexander Kukushkin）
 
-  Cache DCS instance object to avoid thread leak.
+  缓存 DCS 实例对象以避免线程泄漏。
 
-- Ensure only supported parameters are written to the connection string (Alexander Kukushkin)
+- 确保只有受支持的参数写入连接字符串（Alexander Kukushkin）
 
-  Patroni used to pass parameters introduced in newer versions to the connection string, which had been leading to connection errors.
+  Patroni 过去会将新版本中引入的参数传递到连接字符串中，导致连接错误。
 
 --------
-
 ## Version 4.0.3
 
-Released 2024-10-18
+发布于 2024-10-18
 
-**Bugfixes**
+**错误修复**
 
-- Disable `pgaudit` when creating users not to expose password (kviset)
+- 创建用户时禁用 **`pgaudit`** 以避免暴露密码（kviset）
 
-  Patroni was logging `superuser`, `replication`, and `rewind` passwords on their creation when `pgaudit` extension was enabled.
+  当启用 **`pgaudit`** 扩展时，Patroni 会在创建 **`superuser`**、**`replication`** 和 **`rewind`** 用户时记录其密码。
 
-- Fix issue with mixed setups: primary on pre-Patroni v4 and replicas on v4+ (Alexander Kukushkin)
+- 修复混合部署的问题：主节点运行 Patroni v4 之前版本而副本运行 v4+ 版本（Alexander Kukushkin）
 
-  Use `xlog_location` extracted from `/members` key instead of trying to get a member's slot position from `/status` key if Patroni version running on the leader is pre-4.0.0. Not doing so has been causing WALs accumulation on replicas.
+  如果主节点运行的 Patroni 版本低于 4.0.0，则使用从 **`/members`** 键中提取的 **`xlog_location`**，而不是尝试从 **`/status`** 键获取成员的槽位置。不这样做会导致副本上 WAL 的累积。
 
-- Do not ignore valid PostgreSQL GUCs that don't have Patroni validator (Polina Bungina)
+- 不要忽略没有 Patroni 验证器但有效的 PostgreSQL GUC（Polina Bungina）
 
-  Still check against `postgres --describe-config` if a GUC does not have a Patroni validator but is, in fact, a valid GUC.
+  即使 GUC 没有 Patroni 验证器，仍然通过 **`postgres --describe-config`** 进行检查，前提是它实际上是一个有效的 GUC。
 
-**Improvements**
+**改进**
 
-- Recheck annotations on 409 status code when reading leader object in K8s (Alexander Kukushkin)
+- 在 K8s 中读取 leader 对象时，遇到 409 状态码时重新检查注解（Alexander Kukushkin）
 
-  Avoid an additional update if `PATCH` request was canceled by Patroni, while the request successfully updated the target.
+  避免在 **`PATCH`** 请求被 Patroni 取消但请求实际上已成功更新目标时执行额外的更新。
 
-- Add support of `sslnegotiation` client-side connection option (Alexander Kukushkin)
+- 添加对 **`sslnegotiation`** 客户端连接选项的支持（Alexander Kukushkin）
 
-  `sslnegotiation` was added to the final PostgreSQL 17 release.
+  **`sslnegotiation`** 已添加到 PostgreSQL 17 正式版中。
 
 --------
 
 ## Version 4.0.2
 
-Released 2024-09-17
+发布于 2024-09-17
 
-**Bugfixes**
+**错误修复**
 
-- Handle exceptions while discovering configuration validation files (Alexander Kukushkin)
+- 处理发现配置验证文件时的异常（Alexander Kukushkin）
 
-  Skip directories for which Patroni does not have sufficient permissions to perform list operations.
+  跳过 Patroni 没有足够权限执行列表操作的目录。
 
-- Make sure inactive hot physical replication slots don't hold `xmin` (Alexander Kukushkin, Polina Bungina)
+- 确保不活跃的热物理复制槽不持有 **`xmin`**（Alexander Kukushkin、Polina Bungina）
 
-  Since version 3.2.0 Patroni creates physical replication slots for all members on replicas and periodically moves them forward using `pg_replication_slot_advance()` function. However if for any reason `hot_standby_feedback` is enabled and the primary is demoted to replica, the now inactive slots have `NOT NULL` `xmin` value propagated back to the new primary. This results in `xmin` horizon not being moved forward and vacuum not being able to clean up dead tuples. With this fix, Patroni recreates the physical replication slots that are supposed to be inactive but have `NOT NULL` `xmin` value.
+  自 3.2.0 版本以来，Patroni 在副本上为所有成员创建物理复制槽，并使用 **`pg_replication_slot_advance()`** 函数定期推进这些槽。但如果由于某种原因启用了 **`hot_standby_feedback`** 并且主节点被降级为副本，那么现在不活跃的槽会将非空的 **`xmin`** 值传播回新的主节点。这导致 **`xmin`** 水位无法前移，vacuum 无法清理死元组。通过此修复，Patroni 会重新创建那些应该不活跃但具有非空 **`xmin`** 值的物理复制槽。
 
-- Fix unhandled `DCSError` during the startup phase (Waynerv)
+- 修复启动阶段未处理的 **`DCSError`**（Waynerv）
 
-  Ensure DCS connectivity before trying to check the uniqueness of the node name.
+  在尝试检查节点名称唯一性之前，确保 DCS 连接可用。
 
-- Explicitly include `CMDLINE_OPTIONS` GUCs when querying `pg_settings` (Alexander Kukushkin)
+- 查询 **`pg_settings`** 时显式包含 **`CMDLINE_OPTIONS`** GUC（Alexander Kukushkin）
 
-  Make sure all GUCs that are passed to postmaster as command line parameters are restored when Patroni is joining a running standby. This is a follow-up for the bug fixed in Patroni 3.2.2.
+  确保当 Patroni 加入正在运行的备用节点时，所有作为命令行参数传递给 postmaster 的 GUC 都被恢复。这是 Patroni 3.2.2 中修复的错误的后续处理。
 
-- Fix bug in `synchronous_standby_names` quotting logic (Alexander Kukushkin)
+- 修复 **`synchronous_standby_names`** 引号逻辑中的错误（Alexander Kukushkin）
 
-  According to PostgreSQL documentation, `ANY` and `FIRST` keywords are supposed to be double-quoted, which Patroni did not do before.
+  根据 PostgreSQL 文档，**`ANY`** 和 **`FIRST`** 关键字应该使用双引号括起来，而 Patroni 此前未这样做。
 
-- Fix keepalive connection out-of-range issue (hadizamani021)
+- 修复 keepalive 连接值超出范围的问题（hadizamani021）
 
-  Ensure that `keepalive` option value calculated based on the `ttl` set does not exceed the maximum allowed value for the current platform.
+  确保基于 **`ttl`** 设置计算的 **`keepalive`** 选项值不超过当前平台允许的最大值。
 
 --------
 
 ## Version 4.0.1
 
-Released 2024-08-30
+发布于 2024-08-30
 
-**Bugfix**
+**错误修复**
 
-- Patroni was creating unnecessary replication slots for itself (Alexander Kukushkin)
+- Patroni 为自身创建了不必要的复制槽（Alexander Kukushkin）
 
-  It was happening if `name` contains upper-case or special characters.
+  当 **`name`** 包含大写字母或特殊字符时会发生此问题。
 
 --------
 
 ## Version 4.0.0
 
-Released 2024-08-29
+发布于 2024-08-29
 
 > [!WARNING]
-> - This version completes work on getting rid of the "master" term, in favor of "primary". This means a couple of breaking changes, please read the release notes carefully. Upgrading to the Patroni 4+ will work reliably only if you run Patroni 3.1.0 or newer. Upgrading from an older version directly to 4+ is possible but may lead to unexpected behavior if the primary fails while the rest of the nodes are running on other Patroni versions.
+> - 此版本完成了将 "master" 术语替换为 "primary" 的工作。这意味着有一些破坏性变更，请仔细阅读发行说明。升级到 Patroni 4+ 仅在运行 Patroni 3.1.0 或更新版本时才能可靠工作。从更旧的版本直接升级到 4+ 是可能的，但如果在其余节点运行其他 Patroni 版本时主节点发生故障，可能会导致意外行为。
 
-**Breaking changes**
+**破坏性变更**
 
-- The following breaking changes were introduced when getting rid of the non-inclusive "master" term in the Patroni code:
-  - On Kubernetes, Patroni by default will set `role` label to `primary`. In case if you want to keep the old behavior and avoid downtime or lengthy complex migrations, you can configure parameters `kubernetes.leader_label_value` and `kubernetes.standby_leader_label_value` to `master`. Read more [here](/docs/patroni/kubernetes#kubernetes_role_values).
-  - Patroni role is written to DCS as `primary` instead of `master`.
-  - Patroni role returned by Patroni REST API has been changed from `master` to `primary`.
-  - Patroni REST API no longer accepts `role=master` in requests to `/switchover`, `/failover`, `/restart` endpoints.
-  - `/metrics` REST API endpoint will no longer report `patroni_master` metric.
-  - [patronictl](/docs/patroni/patronictl#patronictl) no longer accepts `--master` option for any command. `--leader` or `--primary` options should be used instead.
-  - `no_master` option in the declarative configuration of custom replica creation methods is no longer treated as a special option, please use `no_leader` instead.
-  - `patroni_wale_restore` script doesn't accept `--no_master` option anymore.
-  - `patroni_barman` script doesn't accept `--role=master` option anymore.
-  - All callback scripts are executed with `role=primary` option passed instead of `role=master`.
-- `patronictl failover` does not accept `--leader` option that was deprecated since Patroni 3.2.0.
-- User creation functionality (`bootstrap.users` configuration section) deprecated since Patroni 3.2.0 has been removed.
+- 在消除非包容性 "master" 术语的过程中引入了以下破坏性变更：
+  - 在 Kubernetes 上，Patroni 默认将 **`role`** 标签设置为 **`primary`**。如果您希望保持旧行为以避免停机或冗长复杂的迁移，可以将 **`kubernetes.leader_label_value`** 和 **`kubernetes.standby_leader_label_value`** 参数配置为 **`master`**。更多信息请参阅 [**此处**](/docs/patroni/kubernetes#kubernetes_role_values)。
+  - Patroni 角色在 DCS 中写入为 **`primary`** 而非 **`master`**。
+  - Patroni REST API 返回的角色已从 **`master`** 更改为 **`primary`**。
+  - Patroni REST API 不再接受 **`/switchover`**、**`/failover`**、**`/restart`** 端点请求中的 **`role=master`**。
+  - **`/metrics`** REST API 端点将不再报告 **`patroni_master`** 指标。
+  - [`patronictl`](/docs/patroni/patronictl#patronictl) 不再接受任何命令的 **`--master`** 选项。应使用 **`--leader`** 或 **`--primary`** 选项替代。
+  - 自定义副本创建方法声明式配置中的 **`no_master`** 选项不再作为特殊选项处理，请使用 **`no_leader`** 替代。
+  - **`patroni_wale_restore`** 脚本不再接受 **`--no_master`** 选项。
+  - **`patroni_barman`** 脚本不再接受 **`--role=master`** 选项。
+  - 所有回调脚本现在传递 **`role=primary`** 选项而非 **`role=master`**。
+- **`patronictl failover`** 不再接受自 Patroni 3.2.0 起已弃用的 **`--leader`** 选项。
+- 自 Patroni 3.2.0 起已弃用的用户创建功能（**`bootstrap.users`** 配置部分）已被移除。
 
-**New features**
+**新特性**
 
-- Quorum-based failover (Ants Aasma, Alexander Kukushkin)
+- 基于 quorum 的故障转移（Ants Aasma、Alexander Kukushkin）
 
-  The feature implements quorum-based synchronous replication (available from PostgreSQL v10) which helps to reduce worst-case latencies, even during normal operation, as a higher latency of replicating to one standby can be compensated by other standbys. Patroni implements additional safeguards to prevent any user-visible data loss by choosing a failover candidate based on the latest transaction received.
+  此功能实现了基于 quorum 的同步复制（从 PostgreSQL v10 开始可用），有助于降低最坏情况下的延迟，即使在正常运行期间也是如此，因为复制到某个备用节点的较高延迟可以由其他备用节点补偿。Patroni 实现了额外的安全保障，通过根据接收到的最新事务选择故障转移候选节点来防止任何用户可见的数据丢失。
 
-- Register Citus secondaries in `pg_dist_node` (Alexander Kukushkin)
+- 在 **`pg_dist_node`** 中注册 Citus 从节点（Alexander Kukushkin）
 
-  Patroni now maintains the list of nodes with `role==replica`, `state==running` and without `noloadbalance` [tag](/docs/patroni/config/yaml#tags_settings) in `pg_dist_node`.
+  Patroni 现在在 **`pg_dist_node`** 中维护具有 **`role==replica`**、**`state==running`** 且没有 **`noloadbalance`** [标签](/docs/patroni/config/yaml#tags_settings) 的节点列表。
 
-- Configurable retention of members' replication slots (Alexander Kukushkin)
+- 可配置的成员复制槽保留时间（Alexander Kukushkin）
 
-  Implements support of `member_slots_ttl` global configuration parameter that controls for how long member replication slots should be kept around when the member key is absent.
+  实现了 **`member_slots_ttl`** 全局配置参数的支持，用于控制当成员键不存在时，成员复制槽应保留多长时间。
 
-- Make permissions of log files created by Patroni configurable (Alexander Kukushkin)
+- 使 Patroni 创建的日志文件权限可配置（Alexander Kukushkin）
 
-  Allows to set specific permissions for log files created by Patroni. If not specified, permissions are set based on the current `umask` value.
+  允许为 Patroni 创建的日志文件设置特定权限。如果未指定，权限将根据当前 **`umask`** 值设置。
 
-- Compatibility with PostgreSQL 17 beta3 (Alexander Kukushkin)
+- 兼容 PostgreSQL 17 beta3（Alexander Kukushkin）
 
-  GUC's validator rules were extended. Patroni handles all the new auxiliary backends during shutdown and sets `dbname` in `primary_conninfo`, as it is required for logical replication slots synchronization.
+  GUC 验证规则已扩展。Patroni 在关闭期间处理所有新的辅助后端进程，并在 **`primary_conninfo`** 中设置 **`dbname`**，因为这是逻辑复制槽同步所必需的。
 
-- Implement `--ignore-listen-port` option for Patroni config validation (Sahil Naphade)
+- 为 Patroni 配置验证实现 **`--ignore-listen-port`** 选项（Sahil Naphade）
 
-  Make it possible to ignore already bound ports when running `patroni --validate-config`.
+  使在运行 **`patroni --validate-config`** 时可以忽略已绑定的端口。
 
-**Improvements**
+**改进**
 
-- Make `wal_log_hints` configurable (Paul_Kim)
+- 使 **`wal_log_hints`** 可配置（Paul_Kim）
 
-  Allows to avoid the overhead of `wal_log_hints` configuration being enabled in case `use_pg_rewind` is set to `off`.
+  允许在 **`use_pg_rewind`** 设置为 **`off`** 的情况下避免启用 **`wal_log_hints`** 配置的开销。
 
-- Log `pg_basebackup` command in `DEBUG` level (Waynerv)
+- 在 **`DEBUG`** 级别记录 **`pg_basebackup`** 命令（Waynerv）
 
-  Facilitates failed initialization debugging.
+  便于调试失败的初始化。
 
-**Bugfixes**
+**错误修复**
 
-- Advance permanent slots for cascading nodes while in failsafe (Alexander Kukushkin)
+- 在故障安全模式下推进级联节点的永久槽（Alexander Kukushkin）
 
-  Ensure that slots for cascading replicas are properly advanced on the primary when failsafe mode is activated. It is done by extending replicas response on `POST /failsafe` REST API request with their `xlog_location`.
+  确保在激活故障安全模式时，级联副本的槽在主节点上被正确推进。通过在 **`POST /failsafe`** REST API 请求的副本响应中扩展其 **`xlog_location`** 来实现。
 
-- Don't let the current node be chosen as synchronous (Alexander Kukushkin)
+- 不要让当前节点被选为同步节点（Alexander Kukushkin）
 
-  There may be "something" streaming from the current primary node with `application_name` that matches the name of the current primary. Patroni was not properly handling this situation, which could end up in the primary being declared as a synchronous node and consequently was blocking switchovers.
+  可能存在某些进程从当前主节点进行流复制，其 **`application_name`** 与当前主节点的名称匹配。Patroni 此前未正确处理此情况，可能导致主节点被声明为同步节点，从而阻塞切换操作。
 
-- Ignore `restapi.allowlist_include_members` for POST /failsafe (Alexander Kukushkin)
+- 对 POST /failsafe 忽略 **`restapi.allowlist_include_members`**（Alexander Kukushkin）
 
-- Improve GUCs validation (Polina Bungina)
+- 改进 GUC 验证（Polina Bungina）
 
-  Due to additional validation through running `postgres --describe-config` command, it was previously not possible to set GUCs not listed there through Patroni configuration. This limitation is now removed.
+  由于通过运行 **`postgres --describe-config`** 命令进行额外验证，此前无法通过 Patroni 配置设置未在其中列出的 GUC。此限制现已移除。
 
-- Add line with `localhost` to `.pgpass` file when unix sockets are detected (Alexander Kukushkin)
+- 当检测到 Unix 套接字时，在 **`.pgpass`** 文件中添加包含 **`localhost`** 的行（Alexander Kukushkin）
 
-  Patroni will add an additional line to `.pgpass` file if `host` parameter specified starts with `/` character. This allows to cover a corner case when `host` matches the default socket directory path.
+  如果指定的 **`host`** 参数以 **`/`** 字符开头，Patroni 将在 **`.pgpass`** 文件中添加一行额外记录。这可以覆盖 **`host`** 与默认套接字目录路径匹配的边界情况。
 
-- Fix logging issues (Waynerv)
+- 修复日志问题（Waynerv）
 
-  Defined proper request URL in failsafe handling logs and fixed the order of timestamps in postmaster check log.
+  在故障安全处理日志中定义了正确的请求 URL，并修复了 postmaster 检查日志中时间戳的顺序。
 
 --------
-
 ## Version 3.3.2
 
-Released 2024-07-11
+发布于 2024-07-11
 
-**Bugfixes**
+**错误修复**
 
-- Fix plain Postgres synchronous replication mode (Israel Barth Rubio)
+- 修复原生 Postgres 同步复制模式（Israel Barth Rubio）
 
-  Since [synchronous_mode](/docs/patroni/replication_modes#synchronous_mode) was introduced to Patroni, the plain Postgres synchronous replication was not working. With this bugfix, Patroni sets the value of `synchronous_standby_names` as configured by the user, if that is the case, when [synchronous_mode](/docs/patroni/replication_modes#synchronous_mode) is disabled.
+  自从 Patroni 引入 [`synchronous_mode`](/docs/patroni/replication_modes#synchronous_mode) 以来，原生 Postgres 同步复制一直无法正常工作。通过此修复，当 [`synchronous_mode`](/docs/patroni/replication_modes#synchronous_mode) 被禁用时，如果用户已配置 **`synchronous_standby_names`**，Patroni 会按照用户配置的值进行设置。
 
-- Handle logical slots invalidation on a standby (Polina Bungina)
+- 处理备用节点上逻辑槽的失效（Polina Bungina）
 
-  Since PG16 logical replication slots on a standby can be invalidated due to horizon: from now on, Patroni forces copy (i.e., recreation) of invalidated slots.
+  自 PG16 起，备用节点上的逻辑复制槽可能因为水位原因而失效：从现在起，Patroni 会强制复制（即重新创建）失效的槽。
 
-- Fix race condition with logical slot advance and copy (Alexander Kukushkin)
+- 修复逻辑槽推进和复制之间的竞态条件（Alexander Kukushkin）
 
-  Due to this bug, it was a possible situation when an invalidated logical replication slot was copied with PostgreSQL restart more than once.
+  由于此错误，可能出现失效的逻辑复制槽在 PostgreSQL 重启时被多次复制的情况。
 
 --------
 
 ## Version 3.3.1
 
-Released 2024-06-17
+发布于 2024-06-17
 
-**Stability improvements**
+**稳定性改进**
 
-- Compatibility with Python 3.12 (Alexander Kukushkin)
+- 兼容 Python 3.12（Alexander Kukushkin）
 
-  Handle a new attribute added to `logging.LogRecord`.
+  处理 **`logging.LogRecord`** 中新增的属性。
 
-**Bugfixes**
+**错误修复**
 
-- Fix infinite recursion in `replicatefrom` tags handling (Alexander Kukushkin)
+- 修复 **`replicatefrom`** 标签处理中的无限递归（Alexander Kukushkin）
 
-  As a part of this fix, also improve `is_physical_slot()` check and adjust documentation.
+  作为此修复的一部分，还改进了 **`is_physical_slot()`** 检查并调整了文档。
 
-- Fix wrong role reporting in standby clusters (Alexander Kukushkin)
+- 修复备用集群中错误的角色报告（Alexander Kukushkin）
 
-  `synchronous_standby_names` and synchronous replication only work on a real primary node and in the case of cascading replication are simply ignored by Postgres. Before this fix, `patronictl list` and `GET /cluster` were falsely reporting some nodes as synchronous.
+  **`synchronous_standby_names`** 和同步复制仅在真正的主节点上工作，在级联复制的情况下会被 Postgres 直接忽略。在此修复之前，**`patronictl list`** 和 **`GET /cluster`** 错误地将某些节点报告为同步节点。
 
-- Fix availability of the `allow_in_place_tablespaces` GUC (Polina Bungina)
+- 修复 **`allow_in_place_tablespaces`** GUC 的可用性问题（Polina Bungina）
 
-  `allow_in_place_tablespaces` was not only added to PostgreSQL 15 but also backpatched to PostgreSQL 10-14.
+  **`allow_in_place_tablespaces`** 不仅添加到了 PostgreSQL 15 中，还被回移到了 PostgreSQL 10-14。
 
 --------
 
 ## Version 3.3.0
 
-Released 2024-04-04
+发布于 2024-04-04
 
 > [!WARNING]
-> All older Partoni versions are not compatible with `ydiff>=1.3`.
+> 所有较旧的 Patroni 版本与 **`ydiff>=1.3`** 不兼容。
 >
-> There are the following options available to "fix" the problem:
+> 有以下可用选项来"修复"此问题：
 >
-> 1.  upgrade Patroni to the latest version
-> 2.  install `ydiff<1.3` after installing Patroni
-> 3.  install `cdiff` module
+> 1.  将 Patroni 升级到最新版本
+> 2.  在安装 Patroni 后安装 **`ydiff<1.3`**
+> 3.  安装 **`cdiff`** 模块
 
-**New features**
+**新特性**
 
-- Add ability to pass `auth_data` to Zookeeper client (Aras Mumcuyan)
+- 添加向 Zookeeper 客户端传递 **`auth_data`** 的能力（Aras Mumcuyan）
 
-  It allows to specify the authentication credentials to use for the connection.
+  允许指定用于连接的认证凭据。
 
-- Add a contrib script for `Barman` integration (Israel Barth Rubio)
+- 添加用于 **`Barman`** 集成的 contrib 脚本（Israel Barth Rubio）
 
-  Provide an application `patroni_barman` that allows to perform `Barman` operations remotely and can be used as a custom bootstrap/custom replica method or as an `on_role_change` callback. Please check [here](/docs/patroni/tools_integration#tools_integration) for more information.
+  提供一个 **`patroni_barman`** 应用程序，允许远程执行 **`Barman`** 操作，可用作自定义引导/自定义副本方法或 **`on_role_change`** 回调。更多信息请参阅 [**此处**](/docs/patroni/tools_integration#tools_integration)。
 
-- Support `JSON` log format (alisalemmi)
+- 支持 **`JSON`** 日志格式（alisalemmi）
 
-  Apart from `plain` (default), Patroni now also supports `json` log format. Requires `python-json-logger>=2.0.2` library to be installed.
+  除了 **`plain`**（默认）外，Patroni 现在还支持 **`json`** 日志格式。需要安装 **`python-json-logger>=2.0.2`** 库。
 
-- Show `pending_restart_reason` information (Polina Bungina)
+- 显示 **`pending_restart_reason`** 信息（Polina Bungina）
 
-  Provide extended information about the PostgreSQL parameters that caused `pending_restart` flag to be set. Both `patronictl list` and `/patroni` REST API endpoint now show the parameters names and their "diff" as `pending_restart_reason`.
+  提供关于导致 **`pending_restart`** 标志被设置的 PostgreSQL 参数的扩展信息。**`patronictl list`** 和 **`/patroni`** REST API 端点现在都显示参数名称及其差异（"diff"）作为 **`pending_restart_reason`**。
 
-- Implement `nostream` tag (Grigory Smolkin)
+- 实现 **`nostream`** 标签（Grigory Smolkin）
 
-  If `nostream` tag is set to `true`, the node will not use replication protocol to stream WAL but instead rely on archive recovery (if `restore_command` is configured). It also disables copying and synchronization of permanent logical replication slots on the node itself and all its cascading replicas.
+  如果 **`nostream`** 标签设置为 **`true`**，该节点将不使用复制协议来流式传输 WAL，而是依赖归档恢复（如果配置了 **`restore_command`**）。它还会禁用该节点本身及其所有级联副本上永久逻辑复制槽的复制和同步。
 
-**Improvements**
+**改进**
 
-- Implement validation of the `log` section (Alexander Kukushkin)
+- 实现 **`log`** 部分的验证（Alexander Kukushkin）
 
-  Until now validator was not checking the correctness of the logging configuration provided.
+  此前验证器未检查所提供的日志配置的正确性。
 
-- Improve logging for PostgreSQL parameters change (Polina Bungina)
+- 改进 PostgreSQL 参数变更的日志记录（Polina Bungina）
 
-  Convert old values to a human-readable format and log information about the `pg_controldata` vs Patroni global configuration mismatch.
+  将旧值转换为人类可读的格式，并记录 **`pg_controldata`** 与 Patroni 全局配置不匹配的信息。
 
-**Bugfixes**
+**错误修复**
 
-- Properly filter out not allowed `pg_basebackup` options (Israel Barth Rubio)
+- 正确过滤不允许的 **`pg_basebackup`** 选项（Israel Barth Rubio）
 
-  Due to a bug, Patroni was not properly filtering out the not allowed options configured for the `basebackup` replica bootstrap method, when provided in the `- setting: value` format.
+  由于错误，当以 **`- setting: value`** 格式提供时，Patroni 未正确过滤为 **`basebackup`** 副本引导方法配置的不允许的选项。
 
-- Fix `etcd3` authentication error handling (Alexander Kukushkin)
+- 修复 **`etcd3`** 认证错误处理（Alexander Kukushkin）
 
-  Always retry one time on `etcd3` authentication error if authentication was not done right before executing the request. Also, do not restart watchers on reauthentication.
+  如果在执行请求之前未进行认证，则始终在 **`etcd3`** 认证错误时重试一次。此外，在重新认证时不重启 watcher。
 
-- Improve logic of the validator files discovery (Waynerv)
+- 改进验证器文件发现逻辑（Waynerv）
 
-  Use `importlib` library to discover the files with available configuration parameters when possible (for Python 3.9+). This implementation is more stable and doesn't break the Patroni distributions based on `zip` archives.
+  尽可能使用 **`importlib`** 库（适用于 Python 3.9+）来发现包含可用配置参数的文件。此实现更加稳定，不会破坏基于 **`zip`** 归档的 Patroni 发行版。
 
-- Use `target_session_attrs` only when multiple hosts are specified in the [standby_cluster](/docs/patroni/standby_cluster#standby_cluster) section (Alexander Kukushkin)
+- 仅当 [`standby_cluster`](/docs/patroni/standby_cluster#standby_cluster) 部分中指定了多个主机时才使用 **`target_session_attrs`**（Alexander Kukushkin）
 
-  `target_session_attrs=read-write` is now added to the `primary_conninfo` on the standby leader node only when `standby_cluster.host` section contains multiple hosts separated by commas.
+  **`target_session_attrs=read-write`** 现在仅在 **`standby_cluster.host`** 部分包含以逗号分隔的多个主机时，才添加到备用主节点的 **`primary_conninfo`** 中。
 
-- Add compatibility code for `ydiff` library version 1.3+ (Alexander Kukushkin)
+- 添加 **`ydiff`** 库 1.3+ 版本的兼容代码（Alexander Kukushkin）
 
-  Patroni is relying on some API from `ydiff` that is not public because it is supposed to be just a terminal tool rather than a python module. Unfortunately, the API change in 1.3 broke old Patroni versions.
+  Patroni 依赖 **`ydiff`** 的一些非公开 API，因为它本应只是一个终端工具而非 Python 模块。不幸的是，1.3 版本的 API 变更破坏了旧版 Patroni。
 
 --------
 
 ## Version 3.2.2
 
-Released 2024-01-17
+发布于 2024-01-17
 
-**Bugfixes**
+**错误修复**
 
-- Don't let replica restore initialize key when DCS was wiped (Alexander Kukushkin)
+- 当 DCS 被清除时，不允许副本恢复初始化键（Alexander Kukushkin）
 
-  It was happening in the method where Patroni was supposed to take over a standalone PG cluster.
+  这发生在 Patroni 原本应该接管独立 PG 集群的方法中。
 
-- Use consistent read when fetching just updated sync key from Consul (Alexander Kukushkin)
+- 从 Consul 获取刚更新的 sync 键时使用一致性读取（Alexander Kukushkin）
 
-  Consul doesn't provide any interface to immediately get `ModifyIndex` for the key that we just updated, therefore we have to perform an explicit read operation. Since stale reads are allowed by default, we sometimes used to get an outdated version of the key.
+  Consul 不提供任何接口来立即获取刚更新的键的 **`ModifyIndex`**，因此我们必须执行显式读取操作。由于默认允许过期读取，我们有时会获取到键的过期版本。
 
-- Reload Postgres config if a parameter that requires restart was reset to the original value (Polina Bungina)
+- 如果需要重启的参数被重置为原始值，则重新加载 Postgres 配置（Polina Bungina）
 
-  Previously Patroni wasn't updating the config, but only resetting the `pending_restart`.
+  此前 Patroni 只重置了 **`pending_restart`**，而没有更新配置。
 
-- Fix erroneous inverted logic of the confirmation prompt message when doing a failover to an async candidate in synchronous mode (Polina Bungina)
+- 修复在同步模式下故障转移到异步候选节点时确认提示消息的逻辑反转错误（Polina Bungina）
 
-  The problem existed only in [patronictl](/docs/patroni/patronictl#patronictl).
+  此问题仅存在于 [`patronictl`](/docs/patroni/patronictl#patronictl) 中。
 
-- Exclude leader from failover candidates in [patronictl](/docs/patroni/patronictl#patronictl) (Polina Bungina)
+- 在 [`patronictl`](/docs/patroni/patronictl#patronictl) 中将主节点从故障转移候选中排除（Polina Bungina）
 
-  If the cluster is healthy, failing over to an existing leader is no-op.
+  如果集群健康，故障转移到现有主节点是无操作的。
 
-- Create Citus database and extension idempotently (Alexander Kukushkin, Zhao Junwang)
+- 以幂等方式创建 Citus 数据库和扩展（Alexander Kukushkin、Zhao Junwang）
 
-  It will allow to create them in the `post_bootstrap` script in case if there is a need to add some more dependencies to the Citus database.
+  如果需要向 Citus 数据库添加更多依赖项，这将允许在 **`post_bootstrap`** 脚本中创建它们。
 
-- Don't filter our contradictory `nofailover` tag (Polina Bungina)
+- 不要过滤掉矛盾的 **`nofailover`** 标签（Polina Bungina）
 
-  The configuration `{nofailover: false, failover_priority: 0}` set on a node didn't allow it to participate in the race, while it should, because `nofailover` tag should take precedence.
+  在节点上设置的配置 **`{nofailover: false, failover_priority: 0}`** 不允许其参与选举，但实际上应该允许，因为 **`nofailover`** 标签应该具有更高的优先级。
 
-- Fixed PyInstaller frozen issue (Sophia Ruan)
+- 修复 PyInstaller 冻结问题（Sophia Ruan）
 
-  The `freeze_support()` was called after `argparse` and as a result, Patroni wasn't able to start Postgres.
+  **`freeze_support()`** 在 **`argparse`** 之后被调用，导致 Patroni 无法启动 Postgres。
 
-- Fixed bug in the config generator for [patronictl](/docs/patroni/patronictl#patronictl) and [Citus](/docs/patroni/citus#citus) configuration (Israel Barth Rubio)
+- 修复 [`patronictl`](/docs/patroni/patronictl#patronictl) 和 [Citus](/docs/patroni/citus#citus) 配置的配置生成器中的错误（Israel Barth Rubio）
 
-  It prevented [patronictl](/docs/patroni/patronictl#patronictl) and [Citus](/docs/patroni/citus#citus) configuration parameters set via environment variables from being written into the generated config.
+  该错误阻止了通过环境变量设置的 [`patronictl`](/docs/patroni/patronictl#patronictl) 和 [Citus](/docs/patroni/citus#citus) 配置参数被写入生成的配置中。
 
-- Restore recovery GUCs and some Patroni-managed parameters when joining a running standby (Alexander Kukushkin)
+- 在加入运行中的备用节点时恢复恢复 GUC 和一些 Patroni 管理的参数（Alexander Kukushkin）
 
-  Patroni was failing to restart Postgres v12 onwards with an error about missing `port` in one of the internal structures.
+  Patroni 在 Postgres v12 及以上版本中无法重启，报告内部结构中缺少 **`port`** 的错误。
 
-- Fixes around `pending_restart` flag (Polina Bungina)
+- 围绕 **`pending_restart`** 标志的修复（Polina Bungina）
 
-  Don't expose `pending_restart` when in custom bootstrap with `recovery_target_action = promote` or when someone changed `hot_standby` or `wal_log_hints` using for example `ALTER SYSTEM`.
+  在使用 **`recovery_target_action = promote`** 进行自定义引导时，或当某人使用例如 **`ALTER SYSTEM`** 更改了 **`hot_standby`** 或 **`wal_log_hints`** 时，不要暴露 **`pending_restart`**。
 
 --------
 
 ## Version 3.2.1
 
-Released 2023-11-30
+发布于 2023-11-30
 
-**Bugfixes**
+**错误修复**
 
-- Limit accepted values for `--format` argument in [patronictl](/docs/patroni/patronictl#patronictl) (Alexander Kukushkin)
+- 限制 [`patronictl`](/docs/patroni/patronictl#patronictl) 中 **`--format`** 参数的可接受值（Alexander Kukushkin）
 
-  It used to accept any arbitrary string and produce no output if the value wasn't recognized.
+  此前它接受任意字符串，当值未被识别时不产生任何输出。
 
-- Verify that replica nodes received checkpoint LSN on shutdown before releasing the leader key (Alexander Kukushkin)
+- 在关闭时释放主节点键之前，验证副本节点已接收到检查点 LSN（Alexander Kukushkin）
 
-  Previously in some cases, we were using LSN of the SWITCH record that is followed by CHECKPOINT (if archiving mode is enabled). As a result the former primary sometimes had to do `pg_rewind`, but there would be no data loss involved.
+  此前在某些情况下，我们使用的是 SWITCH 记录的 LSN，该记录后面跟着 CHECKPOINT（如果启用了归档模式）。因此，旧主节点有时不得不执行 **`pg_rewind`**，但不会涉及数据丢失。
 
-- Do a real HTTP request when performing node name uniqueness check (Alexander Kukushkin)
+- 执行节点名称唯一性检查时进行真正的 HTTP 请求（Alexander Kukushkin）
 
-  When running Patroni in containers it is possible that the traffic is routed using `docker-proxy`, which listens on the port and accepts incoming connections. It was causing false positives.
+  在容器中运行 Patroni 时，流量可能通过 **`docker-proxy`** 路由，后者监听端口并接受传入连接。这会导致误报。
 
-- Fixed Citus support with Etcd v2 (Alexander Kukushkin)
+- 修复 Etcd v2 下的 Citus 支持（Alexander Kukushkin）
 
-  Patroni was failing to deploy a new Citus cluster with Etcd v2.
+  Patroni 在使用 Etcd v2 部署新的 Citus 集群时会失败。
 
-- Fixed `pg_rewind` behavior with Postgres v16+ (Alexander Kukushkin)
+- 修复 Postgres v16+ 下的 **`pg_rewind`** 行为（Alexander Kukushkin）
 
-  The error message format of `pg_waldump` changed in v16 which caused `pg_rewind` to be called by Patroni even when it was not necessary.
+  **`pg_waldump`** 的错误消息格式在 v16 中发生了变化，导致 Patroni 在不必要时也调用 **`pg_rewind`**。
 
-- Fixed bug with custom bootstrap (Alexander Kukushkin)
+- 修复自定义引导的错误（Alexander Kukushkin）
 
-  Patroni was falsely applying `--command` argument, which is a bootstrap command itself.
+  Patroni 错误地应用了 **`--command`** 参数，该参数本身就是引导命令。
 
-- Fixed the issue with REST API health check endpoints (Sophia Ruan)
+- 修复 REST API 健康检查端点的问题（Sophia Ruan）
 
-  There were chances that after Postgres restart it could return `unknown` state for Postgres because connections were not properly closed.
+  Postgres 重启后，由于连接未正确关闭，有可能返回 Postgres 的 **`unknown`** 状态。
 
-- Cache `postgres --describe-config` output results (Waynerv)
+- 缓存 **`postgres --describe-config`** 输出结果（Waynerv）
 
-  They are used to figure out which GUCs are available to validate PostgreSQL configuration and we don't expect this list to change while Patroni is running.
+  这些结果用于确定哪些 GUC 可用于验证 PostgreSQL 配置，我们不期望在 Patroni 运行期间此列表会发生变化。
 
 --------
-
 ## Version 3.2.0
 
-Released 2023-10-25
+发布于 2023-10-25
 
-**Deprecation notice**
+**废弃通知**
 
-- The `bootstrap.users` support will be removed in version 4.0.0. If you need to create users after deploying a new cluster please use the `bootstrap.post_bootstrap` hook for that.
+- **`bootstrap.users`** 支持将在 4.0.0 版本中移除。如果你需要在部署新集群后创建用户，请使用 **`bootstrap.post_bootstrap`** 钩子来完成。
 
-**Breaking changes**
+**破坏性变更**
 
-- Enforce `loop_wait + 2*retry_timeout <= ttl` rule and hard-code minimal possible values (Alexander Kukushkin)
+- 强制执行 **`loop_wait + 2*retry_timeout <= ttl`** 规则并硬编码最小可能值（Alexander Kukushkin）
 
-  Minimal values: `loop_wait=2`, `retry_timeout=3`, `ttl=20`. In case values are smaller or violate the rule they are adjusted and a warning is written to Patroni logs.
+  最小值：**`loop_wait=2`**，**`retry_timeout=3`**，**`ttl=20`**。如果值更小或违反规则，它们将被调整，并在Patroni日志中写入警告。
 
-**New features**
+**新特性**
 
-- Failover priority (Mark Pekala)
+- 故障转移优先级（Mark Pekala）
 
-  With the help of `tags.failover_priority` it's now possible to make a node more preferred during the leader race. More details in the documentation (ref tags).
+  借助 **`tags.failover_priority`**，现在可以使某个节点在领导者竞选中更受青睐。更多详情请参阅文档（ref tags）。
 
-- Implemented `patroni --generate-config [--dsn DSN]` and `patroni --generate-sample-config` (Polina Bungina)
+- 实现了 **`patroni --generate-config [--dsn DSN]`** 和 **`patroni --generate-sample-config`**（Polina Bungina）
 
-  It allows to generate a config file for the running PostgreSQL cluster or a sample config file for the new Patroni cluster.
+  允许为正在运行的PostgreSQL集群生成配置文件，或为新的Patroni集群生成示例配置文件。
 
-- Use a dedicated connection to Postgres for Patroni REST API (Alexander Kukushkin)
+- 为Patroni REST API使用专用的Postgres连接（Alexander Kukushkin）
 
-  It helps to avoid blocking the main heartbeat loop if the system is under stress.
+  这有助于在系统压力较大时避免阻塞主心跳循环。
 
-- Enrich some endpoints with the `name` of the node (sskserk)
+- 在部分端点中丰富节点的 **`name`** 信息（sskserk）
 
-  For the monitoring endpoint `name` is added next to the `scope` and for metrics endpoint the `name` is added to tags.
+  对于监控端点，**`name`** 被添加到 **`scope`** 旁边；对于指标端点，**`name`** 被添加到标签中。
 
-- Ensure strict failover/switchover difference (Polina Bungina)
+- 确保严格区分故障转移/切换（Polina Bungina）
 
-  Be more precise in log messages and allow failing over to an asynchronous node in a healthy synchronous cluster.
+  在日志消息中更加精确，并允许在健康的同步集群中故障转移到异步节点。
 
-- Make permanent physical replication slots behave similarly to permanent logical slots (Alexander Kukushkin)
+- 使永久物理复制槽的行为类似于永久逻辑槽（Alexander Kukushkin）
 
-  Create permanent physical replication slots on all nodes that are allowed to become the leader and use `pg_replication_slot_advance()` function to advance `restart_lsn` for slots on standby nodes.
+  在所有允许成为领导者的节点上创建永久物理复制槽，并使用 **`pg_replication_slot_advance()`** 函数来推进备用节点上槽的 **`restart_lsn`**。
 
-- Add capability of specifying namespace through `--dcs` argument in [patronictl](/docs/patroni/patronictl#patronictl) (Israel Barth Rubio)
+- 在 [patronictl](/docs/patroni/patronictl#patronictl) 中添加通过 **`--dcs`** 参数指定命名空间的功能（Israel Barth Rubio）
 
-  It could be handy if [patronictl](/docs/patroni/patronictl#patronictl) is used without a configuration file.
+  当 [patronictl](/docs/patroni/patronictl#patronictl) 在没有配置文件的情况下使用时，这会很方便。
 
-- Add support for additional parameters in custom bootstrap configuration (Israel Barth Rubio)
+- 在自定义引导配置中添加对额外参数的支持（Israel Barth Rubio）
 
-  Previously it was only possible to add custom arguments to the `command` and now one could list them as a mapping.
+  之前只能向 **`command`** 添加自定义参数，现在可以将它们作为映射列出。
 
-**Improvements**
+**改进**
 
-- Set `citus.local_hostname` GUC to the same value which is used by Patroni to connect to the Postgres (Alexander Kukushkin)
+- 将 **`citus.local_hostname`** GUC设置为与Patroni连接Postgres时使用的相同值（Alexander Kukushkin）
 
-  There are cases when Citus wants to have a connection to the local Postgres. By default it uses `localhost`, which is not always available.
+  有些情况下Citus需要连接到本地Postgres。默认情况下它使用 **`localhost`**，但这并不总是可用的。
 
-**Bugfixes**
+**错误修复**
 
-- Ignore [synchronous_mode](/docs/patroni/replication_modes#synchronous_mode) setting in a standby cluster (Polina Bungina)
+- 在备用集群中忽略 [synchronous_mode](/docs/patroni/replication_modes#synchronous_mode) 设置（Polina Bungina）
 
-  Postgres doesn't support cascading synchronous replication and not ignoring [synchronous_mode](/docs/patroni/replication_modes#synchronous_mode) was breaking a switchover in a standby cluster.
+  Postgres不支持级联同步复制，不忽略 [synchronous_mode](/docs/patroni/replication_modes#synchronous_mode) 会导致备用集群中的切换失败。
 
-- Handle SIGCHLD for `on_reload` callback (Alexander Kukushkin)
+- 处理 **`on_reload`** 回调的SIGCHLD信号（Alexander Kukushkin）
 
-  Not doing so results in a zombie process, which is reaped only when the next `on_reload` is executed.
+  不这样做会导致僵尸进程，只有在下一次 **`on_reload`** 执行时才会被回收。
 
-- Handle `AuthOldRevision` error when working with Etcd v3 (Alexander Kukushkin, Kenny Do)
+- 处理使用Etcd v3时的 **`AuthOldRevision`** 错误（Alexander Kukushkin，Kenny Do）
 
-  The error is raised if Etcd is configured to use JWT and when the user database in Etcd is updated.
+  当Etcd配置为使用JWT且Etcd中的用户数据库被更新时，会引发此错误。
 
 --------
 
 ## Version 3.1.2
 
-Released 2023-09-26
+发布于 2023-09-26
 
-**Bugfixes**
+**错误修复**
 
-- Fixed bug with `wal_keep_size` checks (Alexander Kukushkin)
+- 修复了 **`wal_keep_size`** 检查的错误（Alexander Kukushkin）
 
-  The `wal_keep_size` is a GUC that normally has a unit and Patroni was failing to cast its value to `int`. As a result the value of `bootstrap.dcs` was not written to the `/config` key afterwards.
+  **`wal_keep_size`** 是一个通常带有单位的GUC，Patroni无法将其值转换为 **`int`**。因此，**`bootstrap.dcs`** 的值随后不会被写入 **`/config`** 键。
 
-- Detect and resolve inconsistencies between `/sync` key and `synchronous_standby_names` (Alexander Kukushkin)
+- 检测并解决 **`/sync`** 键与 **`synchronous_standby_names`** 之间的不一致（Alexander Kukushkin）
 
-  Normally, Patroni updates `/sync` and `synchronous_standby_names` in a very specific order, but in case of a bug or when someone manually reset `synchronous_standby_names`, Patroni was getting into an inconsistent state. As a result it was possible that the failover happens to an asynchronous node.
+  通常，Patroni以非常特定的顺序更新 **`/sync`** 和 **`synchronous_standby_names`**，但在出现错误或有人手动重置 **`synchronous_standby_names`** 的情况下，Patroni会进入不一致状态。结果可能导致故障转移到异步节点。
 
-- Read GUC's values when joining running Postgres (Alexander Kukushkin)
+- 加入运行中的Postgres时读取GUC的值（Alexander Kukushkin）
 
-  When restarted in [pause](/docs/patroni/pause#pause), Patroni was discarding the `synchronous_standby_names` GUC from the `postgresql.conf`. To solve it and avoid similar issues, Patroni will read GUC's value if it is joining an already running Postgres.
+  在 [暂停](/docs/patroni/pause#pause) 模式中重启时，Patroni会丢弃 **`postgresql.conf`** 中的 **`synchronous_standby_names`** GUC。为了解决这个问题并避免类似问题，Patroni在加入已运行的Postgres时会读取GUC的值。
 
-- Silenced annoying warnings when checking for node uniqueness (Alexander Kukushkin)
+- 消除检查节点唯一性时的烦人警告（Alexander Kukushkin）
 
-  `WARNING` messages are produced by `urllib3` if Patroni is quickly restarted.
+  如果Patroni快速重启，**`urllib3`** 会产生 **`WARNING`** 消息。
 
 --------
 
 ## Version 3.1.1
 
-Released 2023-09-20
+发布于 2023-09-20
 
-**Bugfixes**
+**错误修复**
 
-- Reset failsafe state on promote (ChenChangAo)
+- 在提升时重置故障安全状态（ChenChangAo）
 
-  If switchover/failover happened shortly after failsafe mode had been activated, the newly promoted primary was demoting itself after failsafe becomes inactive.
+  如果切换/故障转移发生在故障安全模式激活后不久，新提升的主节点会在故障安全变为非活动状态后降级自己。
 
-- Silence useless warnings in [patronictl](/docs/patroni/patronictl#patronictl) (Alexander Kukushkin)
+- 消除 [patronictl](/docs/patroni/patronictl#patronictl) 中无用的警告（Alexander Kukushkin）
 
-  If [patronictl](/docs/patroni/patronictl#patronictl) uses the same patroni.yaml file as Patroni and can access `PGDATA` directory it might have been showing annoying warnings about incorrect values in the global configuration.
+  如果 [patronictl](/docs/patroni/patronictl#patronictl) 使用与Patroni相同的patroni.yaml文件并可以访问 **`PGDATA`** 目录，它可能会显示关于全局配置中值不正确的烦人警告。
 
-- Explicitly enable synchronous mode for a corner case (Alexander Kukushkin)
+- 针对边界情况显式启用同步模式（Alexander Kukushkin）
 
-  Synchronous mode effectively was never activated if there are no replicas streaming from the primary.
+  如果没有副本从主节点进行流复制，同步模式实际上从未被激活。
 
-- Fixed bug with `0` integer values validation (Israel Barth Rubio)
+- 修复了 **`0`** 整数值验证的错误（Israel Barth Rubio）
 
-  In most cases, it didn't cause any issues, just warnings.
+  在大多数情况下，这不会导致任何问题，只是产生警告。
 
-- Don't return logical slots for standby cluster (Alexander Kukushkin)
+- 不为备用集群返回逻辑槽（Alexander Kukushkin）
 
-  Patroni can't create logical replication slots in the standby cluster, thus they should be ignored if they are defined in the global configuration.
+  Patroni无法在备用集群中创建逻辑复制槽，因此如果在全局配置中定义了逻辑槽，应忽略它们。
 
-- Avoid showing docstring in `patronictl --help` output (Israel Barth Rubio)
+- 避免在 **`patronictl --help`** 输出中显示文档字符串（Israel Barth Rubio）
 
-  The `click` module needs to get a special hint for that.
+  **`click`** 模块需要获得特殊提示才能实现。
 
-- Fixed bug with `kubernetes.standby_leader_label_value` (Alexander Kukushkin)
+- 修复了 **`kubernetes.standby_leader_label_value`** 的错误（Alexander Kukushkin）
 
-  This feature effectively never worked.
+  此功能实际上从未工作过。
 
-- Returned cluster system identifier to the `patronictl list` output (Polina Bungina)
+- 将集群系统标识符恢复到 **`patronictl list`** 输出中（Polina Bungina）
 
-  The problem was introduced while implementing the support for Citus, where we need to hide the identifier because it is different for coordinator and all workers.
+  此问题是在实现Citus支持时引入的，当时我们需要隐藏标识符，因为协调器和所有工作节点的标识符不同。
 
-- Override `write_leader_optime` method in Kubernetes implementation (Alexander Kukushkin)
+- 在Kubernetes实现中覆盖 **`write_leader_optime`** 方法（Alexander Kukushkin）
 
-  The method is supposed to write shutdown LSN to the leader Endpoint/ConfigMap when there are no healthy replicas available to become the new primary.
+  该方法应在没有健康副本可用于成为新主节点时，将关闭LSN写入领导者的Endpoint/ConfigMap。
 
-- Don't start stopped postgres in pause (Alexander Kukushkin)
+- 在暂停模式下不启动已停止的postgres（Alexander Kukushkin）
 
-  Due to a race condition, Patroni was falsely assuming that the standby should be restarted because some recovery parameters (`primary_conninfo` or similar) were changed.
+  由于竞争条件，Patroni错误地认为备用节点应该重启，因为某些恢复参数（**`primary_conninfo`** 或类似参数）已更改。
 
-- Fixed bug in `patronictl query` command (Israel Barth Rubio)
+- 修复了 **`patronictl query`** 命令的错误（Israel Barth Rubio）
 
-  It didn't work when only `-m` argument was provided or when none of `-r` or `-m` were provided.
+  当只提供 **`-m`** 参数或未提供 **`-r`** 和 **`-m`** 参数时，该命令无法工作。
 
-- Properly treat integer parameters that are used in the command line to start postgres (Polina Bungina)
+- 正确处理用于启动postgres命令行中的整数参数（Polina Bungina）
 
-  If values are supplied as strings and not casted to integer it was resulting in an incorrect calculation of `max_prepared_transactions` based on `max_connections` for Citus clusters.
+  如果值以字符串形式提供而未转换为整数，会导致Citus集群中基于 **`max_connections`** 的 **`max_prepared_transactions`** 计算不正确。
 
-- Don't rely on `pg_stat_wal_receiver` when deciding on `pg_rewind` (Alexander Kukushkin)
+- 在决定 **`pg_rewind`** 时不依赖 **`pg_stat_wal_receiver`**（Alexander Kukushkin）
 
-  It could happen that `received_tli` reported by `pg_stat_wal_receiver` is ahead of the actual replayed timeline, while the timeline reported by `DENTIFY_SYSTEM` via replication connection is always correct.
+  **`pg_stat_wal_receiver`** 报告的 **`received_tli`** 可能领先于实际重放的时间线，而通过复制连接由 **`IDENTIFY_SYSTEM`** 报告的时间线始终是正确的。
 
 --------
 
 ## Version 3.1.0
 
-Released 2023-08-03
+发布于 2023-08-03
 
-**Breaking changes**
+**破坏性变更**
 
-- Changed semantic of `restapi.keyfile` and `restapi.certfile` (Alexander Kukushkin)
+- 更改了 **`restapi.keyfile`** 和 **`restapi.certfile`** 的语义（Alexander Kukushkin）
 
-  Previously Patroni was using `restapi.keyfile` and `restapi.certfile` as client certificates as a fallback if there were no respective configuration parameters in the `ctl` section.
+  之前，如果 **`ctl`** 部分中没有相应的配置参数，Patroni会使用 **`restapi.keyfile`** 和 **`restapi.certfile`** 作为客户端证书的后备。
 
 > [!WARNING]
-> If you enabled client certificates validation (`restapi.verify_client` is set to `required`), you also **must** provide **valid client certificates** in the `ctl.certfile`, `ctl.keyfile`, `ctl.keyfile_password`. If not provided, Patroni will not work correctly.
+> 如果你启用了客户端证书验证（**`restapi.verify_client`** 设置为 **`required`**），你还**必须**在 **`ctl.certfile`**、**`ctl.keyfile`**、**`ctl.keyfile_password`** 中提供**有效的客户端证书**。如果未提供，Patroni将无法正常工作。
 
-**New features**
+**新特性**
 
-- Make Pod role label configurable (Waynerv)
+- 使Pod角色标签可配置（Waynerv）
 
-  Values could be customized using `kubernetes.leader_label_value`, `kubernetes.follower_label_value` and `kubernetes.standby_leader_label_value` parameters. This feature will be very useful when we change the `master` role to the `primary`. You can read more about the feature and migration steps [here](/docs/patroni/kubernetes#kubernetes_role_values).
+  可以使用 **`kubernetes.leader_label_value`**、**`kubernetes.follower_label_value`** 和 **`kubernetes.standby_leader_label_value`** 参数自定义值。当我们将 **`master`** 角色更改为 **`primary`** 时，此功能将非常有用。你可以在 [此处](/docs/patroni/kubernetes#kubernetes_role_values) 阅读更多关于此功能和迁移步骤的信息。
 
-**Improvements**
+**改进**
 
-- Various improvements of `patroni --validate-config` (Alexander Kukushkin)
+- **`patroni --validate-config`** 的各种改进（Alexander Kukushkin）
 
-  Improved parameter validation for different DCS, `bootstrap.dcs` , `ctl`, `restapi`, and [watchdog](/docs/patroni/watchdog#watchdog) sections.
+  改进了不同DCS、**`bootstrap.dcs`**、**`ctl`**、**`restapi`** 和 [watchdog](/docs/patroni/watchdog#watchdog) 部分的参数验证。
 
-- Start Postgres not in recovery if it crashed during recovery while Patroni is running (Alexander Kukushkin)
+- 如果Postgres在Patroni运行期间于恢复过程中崩溃，则不以恢复模式启动Postgres（Alexander Kukushkin）
 
-  It may reduce recovery time and will help to prevent unnecessary timeline increments.
+  这可以减少恢复时间，并有助于防止不必要的时间线递增。
 
-- Avoid unnecessary updates of `/status` key (Alexander Kukushkin)
+- 避免不必要地更新 **`/status`** 键（Alexander Kukushkin）
 
-  When there are no permanent logical slots Patroni was updating the `/status` on every heartbeat loop even when LSN on the primary didn't move forward.
+  当没有永久逻辑槽时，即使主节点上的LSN没有向前移动，Patroni也会在每次心跳循环中更新 **`/status`**。
 
-- Don't allow stale primary to win the leader race (Alexander Kukushkin)
+- 不允许过期的主节点赢得领导者竞选（Alexander Kukushkin）
 
-  If Patroni was hanging during a significant time due to lack of resources it will additionally check that no other nodes promoted Postgres before acquiring the leader lock.
+  如果Patroni由于资源不足而挂起了很长时间，它会在获取领导者锁之前额外检查是否有其他节点已经提升了Postgres。
 
-- Implemented visibility of certain PostgreSQL parameters validation (Alexander Kukushkin, Feike Steenbergen)
+- 实现了某些PostgreSQL参数验证的可见性（Alexander Kukushkin，Feike Steenbergen）
 
-  If validation of `max_connections`, `max_wal_senders`, `max_prepared_transactions`, `max_locks_per_transaction`, `max_replication_slots`, or `max_worker_processes` failed Patroni was using some sane default value. Now in addition to that it will also show a warning.
+  如果 **`max_connections`**、**`max_wal_senders`**、**`max_prepared_transactions`**、**`max_locks_per_transaction`**、**`max_replication_slots`** 或 **`max_worker_processes`** 的验证失败，Patroni之前会使用某个合理的默认值。现在除此之外，它还会显示警告。
 
-- Set permissions for files and directories created in `PGDATA` (Alexander Kukushkin)
+- 为 **`PGDATA`** 中创建的文件和目录设置权限（Alexander Kukushkin）
 
-  All files created by Patroni had only owner read/write permissions. This behaviour was breaking backup tools that run under a different user and relying on group read permissions. Now Patroni honors permissions on `PGDATA` and correctly sets permissions on all directories and files it creates inside `PGDATA`.
+  Patroni创建的所有文件之前只有所有者读/写权限。此行为会破坏在不同用户下运行并依赖组读权限的备份工具。现在Patroni会遵循 **`PGDATA`** 上的权限，并正确设置其在 **`PGDATA`** 内创建的所有目录和文件的权限。
 
-**Bugfixes**
+**错误修复**
 
-- Run `archive_command` through shell (Waynerv)
+- 通过shell运行 **`archive_command`**（Waynerv）
 
-  Patroni might archive some WAL segments before doing crash recovery in a single-user mode or before `pg_rewind`. If the archive_command contains some shell operators, like `&&` it didn't work with Patroni.
+  Patroni可能会在单用户模式下进行崩溃恢复之前或 **`pg_rewind`** 之前归档一些WAL段。如果archive_command包含某些shell运算符（如 **`&&`**），它在Patroni中无法工作。
 
-- Fixed "on switchover" shutdown checks (Polina Bungina)
+- 修复了"切换时"关闭检查（Polina Bungina）
 
-  It was possible that specified candidate is still streaming and didn't received shut down checking but the leader key was removed because some other nodes were healthy.
+  可能出现指定的候选节点仍在流复制且未收到关闭检查的情况，但由于其他一些节点是健康的，领导者键被移除了。
 
-- Fixed "is primary" check (Alexander Kukushkin)
+- 修复了"是否为主节点"检查（Alexander Kukushkin）
 
-  During the leader race replicas were not able to recognize that Postgres on the old leader is still running as a primary.
+  在领导者竞选期间，副本无法识别旧领导者上的Postgres仍在作为主节点运行。
 
-- Fixed `patronictl list` (Alexander Kukushkin)
+- 修复了 **`patronictl list`**（Alexander Kukushkin）
 
-  The Cluster name field was missing in `tsv`, `json`, and `yaml` output formats.
+  在 **`tsv`**、**`json`** 和 **`yaml`** 输出格式中缺少集群名称字段。
 
-- Fixed `pg_rewind` behaviour after pause (Alexander Kukushkin)
+- 修复了暂停后的 **`pg_rewind`** 行为（Alexander Kukushkin）
 
-  Under certain conditions, Patroni wasn't able to join the false primary back to the cluster with `pg_rewind` after coming out of maintenance mode.
+  在某些条件下，从维护模式退出后，Patroni无法使用 **`pg_rewind`** 将误判的主节点重新加入集群。
 
-- Fixed bug in Etcd v3 implementation (Alexander Kukushkin)
+- 修复了Etcd v3实现中的错误（Alexander Kukushkin）
 
-  Invalidate internal KV cache if key update performed using `create_revision`/`mod_revision` field due to revision mismatch.
+  如果使用 **`create_revision`**/**`mod_revision`** 字段执行键更新时由于版本不匹配，则使内部KV缓存无效。
 
-- Fixed behaviour of replicas in standby cluster in pause (Alexander Kukushkin)
+- 修复了暂停模式下备用集群中副本的行为（Alexander Kukushkin）
 
-  When the leader key expires replicas in standby cluster will not follow the remote node but keep `primary_conninfo` as it is.
+  当领导者键过期时，备用集群中的副本不会跟随远程节点，而是保持 **`primary_conninfo`** 不变。
 
 --------
-
 ## Version 3.0.4
 
-Released 2023-07-13
+发布于 2023-07-13
 
-**New features**
+**新特性**
 
-- Make the replication status of standby nodes visible (Alexander Kukushkin)
+- 使备用节点的复制状态可见（Alexander Kukushkin）
 
-  For PostgreSQL 9.6+ Patroni will report the replication state as `streaming` when the standby is streaming from the other node or `in archive recovery` when there is no replication connection and `restore_command` is set. The state is visible in `member` keys in DCS, in the REST API, and in `patronictl list` output.
+  对于PostgreSQL 9.6+，Patroni将在备用节点从其他节点流复制时报告复制状态为 **`streaming`**，或在没有复制连接且设置了 **`restore_command`** 时报告为 **`in archive recovery`**。该状态在DCS中的 **`member`** 键、REST API以及 **`patronictl list`** 输出中可见。
 
-**Improvements**
+**改进**
 
-- Improved error messages with Etcd v3 (Alexander Kukushkin)
+- 改进了Etcd v3的错误消息（Alexander Kukushkin）
 
-  When Etcd v3 cluster isn't accessible Patroni was reporting that it can't access `/v2` endpoints.
+  当Etcd v3集群不可访问时，Patroni之前报告无法访问 **`/v2`** 端点。
 
-- Use quorum read in [patronictl](/docs/patroni/patronictl#patronictl) if it is possible (Alexander Kukushkin)
+- 如果可能，在 [patronictl](/docs/patroni/patronictl#patronictl) 中使用仲裁读取（Alexander Kukushkin）
 
-  Etcd or Consul clusters could be degraded to read-only, but from the [patronictl](/docs/patroni/patronictl#patronictl) view everything was fine. Now it will fail with the error.
+  Etcd或Consul集群可能降级为只读状态，但从 [patronictl](/docs/patroni/patronictl#patronictl) 的视角来看一切正常。现在它将报错失败。
 
-- Prevent splitbrain from duplicate names in configuration (Mark Pekala)
+- 防止配置中的重复名称导致脑裂（Mark Pekala）
 
-  When starting Patroni will check if node with the same name is registered in DCS, and try to query its REST API. If REST API is accessible Patroni exits with an error. It will help to protect from the human error.
+  启动Patroni时将检查DCS中是否已注册同名节点，并尝试查询其REST API。如果REST API可访问，Patroni将报错退出。这有助于防止人为错误。
 
-- Start Postgres not in recovery if it crashed while Patroni is running (Alexander Kukushkin)
+- 如果Postgres在Patroni运行期间崩溃，则不以恢复模式启动Postgres（Alexander Kukushkin）
 
-  It may reduce recovery time and will help from unnecessary timeline increments.
+  这可以减少恢复时间，并有助于防止不必要的时间线递增。
 
-**Bugfixes**
+**错误修复**
 
-- REST API SSL certificate were not reloaded upon receiving a SIGHUP (Israel Barth Rubio)
+- REST API SSL证书在收到SIGHUP后未重新加载（Israel Barth Rubio）
 
-  Regression was introduced in 3.0.3.
+  此回退在3.0.3中引入。
 
-- Fixed integer GUCs validation for parameters like `max_connections` (Feike Steenbergen)
+- 修复了 **`max_connections`** 等参数的整数GUC验证（Feike Steenbergen）
 
-  Patroni didn't like quoted numeric values. Regression was introduced in 3.0.3.
+  Patroni不接受带引号的数值。此回退在3.0.3中引入。
 
-- Fix issue with [synchronous_mode](/docs/patroni/replication_modes#synchronous_mode) (Alexander Kukushkin)
+- 修复了 [synchronous_mode](/docs/patroni/replication_modes#synchronous_mode) 的问题（Alexander Kukushkin）
 
-  Execute `txid_current()` with `synchronous_commit=off` so it doesn't accidentally wait for absent synchronous standbys when `synchronous_mode_strict` is enabled.
+  使用 **`synchronous_commit=off`** 执行 **`txid_current()`**，以避免在启用 **`synchronous_mode_strict`** 时意外等待不存在的同步备用节点。
 
 --------
 
 ## Version 3.0.3
 
-Released 2023-06-22
+发布于 2023-06-22
 
-**New features**
+**新特性**
 
-- Compatibility with PostgreSQL 16 beta1 (Alexander Kukushkin)
+- 兼容PostgreSQL 16 beta1（Alexander Kukushkin）
 
-  Extended GUC's validator rules.
+  扩展了GUC验证器规则。
 
-- Make PostgreSQL GUC's validator extensible (Israel Barth Rubio)
+- 使PostgreSQL GUC验证器可扩展（Israel Barth Rubio）
 
-  Validator rules are loaded from YAML files located in `patroni/postgresql/available_parameters/` directory. Files are ordered in alphabetical order and applied one after another. It makes possible to have custom validators for non-standard Postgres distributions.
+  验证器规则从位于 **`patroni/postgresql/available_parameters/`** 目录中的YAML文件加载。文件按字母顺序排列并依次应用。这使得为非标准Postgres发行版提供自定义验证器成为可能。
 
-- Added `restapi.request_queue_size` option (Andrey Zhidenkov, Aleksei Sukhov)
+- 添加了 **`restapi.request_queue_size`** 选项（Andrey Zhidenkov，Aleksei Sukhov）
 
-  Sets request queue size for TCP socket used by Patroni REST API. Once the queue is full, further requests get a "Connection denied" error. The default value is 5.
+  设置Patroni REST API所用TCP套接字的请求队列大小。一旦队列已满，后续请求将收到"连接被拒绝"错误。默认值为5。
 
-- Call `initdb` directly when initializing a new cluster (Matt Baker)
+- 初始化新集群时直接调用 **`initdb`**（Matt Baker）
 
-  Previously it was called via `pg_ctl`, what required a special quoting of parameters passed to `initdb`.
+  之前是通过 **`pg_ctl`** 调用的，这需要对传递给 **`initdb`** 的参数进行特殊引用。
 
-- Added before stop hook (Le Duane)
+- 添加了停止前钩子（Le Duane）
 
-  The hook could be configured via `postgresql.before_stop` and is executed right before `pg_ctl stop`. The exit code doesn't impact shutdown process.
+  该钩子可通过 **`postgresql.before_stop`** 配置，在 **`pg_ctl stop`** 之前执行。退出代码不影响关闭过程。
 
-- Added support for custom Postgres binary names (Israel Barth Rubio, Polina Bungina)
+- 添加了对自定义Postgres二进制文件名的支持（Israel Barth Rubio，Polina Bungina）
 
-  When using a custom Postgres distribution it may be the case that the Postgres binaries are compiled with different names other than the ones used by the community Postgres distribution. Custom binary names could be configured using `postgresql.bin_name.*` and `PATRONI_POSTGRESQL_BIN_*` environment variables.
+  当使用自定义Postgres发行版时，Postgres二进制文件可能使用与社区Postgres发行版不同的名称编译。自定义二进制文件名可通过 **`postgresql.bin_name.*`** 和 **`PATRONI_POSTGRESQL_BIN_*`** 环境变量配置。
 
-**Improvements**
+**改进**
 
-- Various improvements of `patroni --validate-config` (Polina Bungina)
+- **`patroni --validate-config`** 的各种改进（Polina Bungina）
 
-  - Make `bootstrap.initdb` optional. It is only required for new clusters, but `patroni --validate-config` was complaining if it was missing in the config.
-  - Don't error out when `postgresql.bin_dir` is empty or not set. Try to first find Postgres binaries in the default PATH instead.
-  - Make `postgresql.authentication.rewind` section optional. If it is missing, Patroni is using the superuser.
+  - 使 **`bootstrap.initdb`** 可选。它仅在新集群中需要，但 **`patroni --validate-config`** 之前在配置中缺少它时会报错。
+  - 当 **`postgresql.bin_dir`** 为空或未设置时不报错。改为尝试先在默认PATH中查找Postgres二进制文件。
+  - 使 **`postgresql.authentication.rewind`** 部分可选。如果缺少，Patroni将使用超级用户。
 
-- Improved error reporting in [patronictl](/docs/patroni/patronictl#patronictl) (Israel Barth Rubio)
+- 改进了 [patronictl](/docs/patroni/patronictl#patronictl) 中的错误报告（Israel Barth Rubio）
 
-  The `\n` symbol was rendered as it is, instead of the actual newline symbol.
+  **`\n`** 符号被原样渲染，而不是实际的换行符。
 
-**Bugfixes**
+**错误修复**
 
-- Fixed issue in Citus support (Alexander Kukushkin)
+- 修复了Citus支持中的问题（Alexander Kukushkin）
 
-  If the REST API call from the promoted worker to the coordinator failed during switchover it was leaving the given Citus group blocked during indefinite time.
+  如果在切换期间从已提升的工作节点到协调器的REST API调用失败，它会导致给定的Citus组在无限期内被阻塞。
 
-- Allow `etcd3` URL in `--dcs-url` option of [patronictl](/docs/patroni/patronictl#patronictl) (Israel Barth Rubio)
+- 允许在 [patronictl](/docs/patroni/patronictl#patronictl) 的 **`--dcs-url`** 选项中使用 **`etcd3`** URL（Israel Barth Rubio）
 
-  If users attempted to pass a `etcd3` URL through `--dcs-url` option of [patronictl](/docs/patroni/patronictl#patronictl) they would face an exception.
+  如果用户尝试通过 [patronictl](/docs/patroni/patronictl#patronictl) 的 **`--dcs-url`** 选项传递 **`etcd3`** URL，将会遇到异常。
 
 --------
 
 ## Version 3.0.2
 
-Released 2023-03-24
+发布于 2023-03-24
 
 > [!WARNING]
-> Version 3.0.2 dropped support of Python older than 3.6.
+> 3.0.2版本放弃了对Python 3.6以下版本的支持。
 
-**New features**
+**新特性**
 
-- Added sync standby replica status to `/metrics` endpoint (Thomas von Dein, Alexander Kukushkin)
+- 在 **`/metrics`** 端点中添加了同步备用副本状态（Thomas von Dein，Alexander Kukushkin）
 
-  Before were only reporting `primary`/`standby_leader`/`replica`.
+  之前只报告 **`primary`**/**`standby_leader`**/**`replica`**。
 
-- User-friendly handling of `PAGER` in [patronictl](/docs/patroni/patronictl#patronictl) (Israel Barth Rubio)
+- 在 [patronictl](/docs/patroni/patronictl#patronictl) 中用户友好地处理 **`PAGER`**（Israel Barth Rubio）
 
-  It makes pager configurable via `PAGER` environment variable, which overrides default `less` and `more`.
+  使分页器可通过 **`PAGER`** 环境变量配置，覆盖默认的 **`less`** 和 **`more`**。
 
-- Make K8s retriable HTTP status code configurable (Alexander Kukushkin)
+- 使K8s可重试的HTTP状态码可配置（Alexander Kukushkin）
 
-  On some managed platforms it is possible to get status code `401 Unauthorized`, which sometimes gets resolved after a few retries.
+  在某些托管平台上，可能会收到 **`401 Unauthorized`** 状态码，有时在几次重试后可以解决。
 
-**Improvements**
+**改进**
 
-- Set `hot_standby` to `off` during custom bootstrap only if `recovery_target_action` is set to `promote` (Alexander Kukushkin)
+- 仅在 **`recovery_target_action`** 设置为 **`promote`** 时，在自定义引导期间将 **`hot_standby`** 设置为 **`off`**（Alexander Kukushkin）
 
-  It was necessary to make `recovery_target_action=pause` work correctly.
+  这对于使 **`recovery_target_action=pause`** 正确工作是必要的。
 
-- Don't allow `on_reload` callback to kill other callbacks (Alexander Kukushkin)
+- 不允许 **`on_reload`** 回调终止其他回调（Alexander Kukushkin）
 
-  `on_start`/`on_stop`/`on_role_change` are usually used to add/remove Virtual IP and `on_reload` should not interfere with them.
+  **`on_start`**/**`on_stop`**/**`on_role_change`** 通常用于添加/移除虚拟IP，**`on_reload`** 不应干扰它们。
 
-- Switched to `IMDSFetcher` in aws callback example script (Polina Bungina)
+- 在aws回调示例脚本中切换到 **`IMDSFetcher`**（Polina Bungina）
 
-  The `IMDSv2` requires a token to work with and the `IMDSFetcher` handles it transparently.
+  **`IMDSv2`** 需要令牌才能工作，**`IMDSFetcher`** 可以透明地处理它。
 
-**Bugfixes**
+**错误修复**
 
-- Fixed `patronictl switchover` on Citus cluster running on Kubernetes (Lukáš Lalinský)
+- 修复了在Kubernetes上运行的Citus集群的 **`patronictl switchover`**（Lukáš Lalinský）
 
-  It didn't work for namespaces different from `default`.
+  对于 **`default`** 以外的命名空间无法工作。
 
-- Don't write to `PGDATA` if major version is not known (Alexander Kukushkin)
+- 如果主版本未知，则不写入 **`PGDATA`**（Alexander Kukushkin）
 
-  If right after the start `PGDATA` was empty (maybe wasn't yet mounted), Patroni was making a false assumption about PostgreSQL version and falsely creating `recovery.conf` file even if the actual major version is v10+.
+  如果启动后 **`PGDATA`** 为空（可能尚未挂载），Patroni会错误地假设PostgreSQL版本，并在实际主版本为v10+时错误地创建 **`recovery.conf`** 文件。
 
-- Fixed bug with Citus metadata after coordinator failover (Alexander Kukushkin)
+- 修复了协调器故障转移后的Citus元数据错误（Alexander Kukushkin）
 
-  The `citus_set_coordinator_host()` call doesn't cause metadata sync and the change was invisible on worker nodes. The issue is solved by switching to `citus_update_node()`.
+  **`citus_set_coordinator_host()`** 调用不会导致元数据同步，更改在工作节点上不可见。该问题通过切换到 **`citus_update_node()`** 来解决。
 
-- Use etcd hosts listed in the config file as a fallback when all etcd nodes "failed" (Alexander Kukushkin)
+- 当所有etcd节点"失败"时，使用配置文件中列出的etcd主机作为后备（Alexander Kukushkin）
 
-  The etcd cluster may change topology over time and Patroni tries to follow it. If at some point all nodes became unreachable Patroni will use a combination of nodes from the config plus the last known topology when trying to reconnect.
+  etcd集群可能随时间改变拓扑，Patroni会尝试跟踪它。如果在某个时刻所有节点都不可达，Patroni将在尝试重新连接时使用配置中的节点与最后已知拓扑的组合。
 
 --------
 
 ## Version 3.0.1
 
-Released 2023-02-16
+发布于 2023-02-16
 
-**Bugfixes**
+**错误修复**
 
-- Pass proper role name to an `on_role_change` callback script'. (Alexander Kukushkin, Polina Bungina)
+- 向 **`on_role_change`** 回调脚本传递正确的角色名称（Alexander Kukushkin，Polina Bungina）
 
-  Patroni used to erroneously pass `promoted` role to an `on_role_change` callback script on promotion. The passed role name changed back to `master`. This regression was introduced in 3.0.0.
+  Patroni之前在提升时错误地向 **`on_role_change`** 回调脚本传递了 **`promoted`** 角色。传递的角色名称已恢复为 **`master`**。此回退在3.0.0中引入。
 
 --------
-
 ## Version 3.0.0
 
-Released 2023-01-30
+发布于 2023-01-30
 
-This version adds integration with [Citus](https://www.citusdata.com) and makes it possible to survive temporary DCS outages without demoting primary.
+此版本添加了与 [Citus](https://www.citusdata.com) 的集成，使得在临时DCS中断期间无需降级主节点即可存活。
 
 > [!WARNING]
-> - Version 3.0.0 is the last release supporting Python 2.7. Upcoming release will drop support of Python versions older than 3.7.
+> - 3.0.0版本是支持Python 2.7的最后一个版本。即将发布的版本将放弃对Python 3.7以下版本的支持。
 >
-> - The RAFT support is deprecated. We will do our best to maintain it, but take neither guarantee nor responsibility for possible issues.
-> - This version is the first step in getting rid of the "master", in favor of "primary". Upgrading to the next major release will work reliably only if you run at least 3.0.0.
+> - RAFT支持已废弃。我们将尽力维护它，但不保证也不对可能出现的问题负责。
+> - 此版本是逐步淘汰"master"、改用"primary"的第一步。只有运行了至少3.0.0版本，升级到下一个主版本才能可靠地工作。
 
-**New features**
+**新特性**
 
-- DCS failsafe mode (Alexander Kukushkin, Polina Bungina)
+- DCS故障安全模式（Alexander Kukushkin，Polina Bungina）
 
-  If the feature is enabled it will allow Patroni cluster to survive temporary DCS outages. You can find more details in the [documentation](/docs/patroni/dcs_failsafe_mode#dcs_failsafe_mode).
+  如果启用此功能，它将允许Patroni集群在临时DCS中断期间存活。你可以在 [文档](/docs/patroni/dcs_failsafe_mode#dcs_failsafe_mode) 中找到更多详情。
 
-- Citus support (Alexander Kukushkin, Polina Bungina, Jelte Fennema)
+- Citus支持（Alexander Kukushkin，Polina Bungina，Jelte Fennema）
 
-  Patroni enables easy deployment and management of [Citus](https://www.citusdata.com) clusters with HA. Please check [here](/docs/patroni/citus#citus) page for more information.
+  Patroni使 [Citus](https://www.citusdata.com) 集群的高可用部署和管理变得简单。请查看 [此处](/docs/patroni/citus#citus) 获取更多信息。
 
-**Improvements**
+**改进**
 
-- Suppress recurring errors when dropping unknown but active replication slots (Michael Banck)
+- 在删除未知但活跃的复制槽时抑制重复错误（Michael Banck）
 
-  Patroni will still write these logs, but only in DEBUG.
+  Patroni仍会写入这些日志，但仅在DEBUG级别。
 
-- Run only one monitoring query per HA loop (Alexander Kukushkin)
+- 每个HA循环只运行一个监控查询（Alexander Kukushkin）
 
-  It wasn't the case if synchronous replication is enabled.
+  在启用同步复制的情况下之前不是这样。
 
-- Keep only latest failed data directory (William Albertus Dembo)
+- 仅保留最新的失败数据目录（William Albertus Dembo）
 
-  If bootstrap failed Patroni used to rename \$PGDATA folder with timestamp suffix. From now on the suffix will be `.failed` and if such folder exists it is removed before renaming.
+  如果引导失败，Patroni过去会将$PGDATA文件夹重命名并添加时间戳后缀。从现在起，后缀将为 **`.failed`**，如果此类文件夹已存在，则在重命名前将其删除。
 
-- Improved check of synchronous replication connections (Alexander Kukushkin)
+- 改进了同步复制连接的检查（Alexander Kukushkin）
 
-  When the new host is added to the `synchronous_standby_names` it will be set as synchronous in DCS only when it managed to catch up with the primary in addition to `pg_stat_replication.sync_state = 'sync'`.
+  当新主机被添加到 **`synchronous_standby_names`** 时，只有在它成功追上主节点且 **`pg_stat_replication.sync_state = 'sync'`** 的情况下，才会在DCS中设置为同步。
 
-**Removed functionality**
+**移除的功能**
 
-- Remove `patronictl scaffold` (Alexander Kukushkin)
+- 移除 **`patronictl scaffold`**（Alexander Kukushkin）
 
-  The only reason for having it was a hacky way of running standby clusters.
+  保留它的唯一原因是作为运行备用集群的一种临时方案。
 
 --------
 
 ## Version 2.1.7
 
-Released 2023-01-04
+发布于 2023-01-04
 
-**Bugfixes**
+**错误修复**
 
-- Fixed little incompatibilities with legacy python modules (Alexander Kukushkin)
+- 修复了与旧版Python模块的一些小不兼容问题（Alexander Kukushkin）
 
-  They prevented from building/running Patroni on Debian buster/Ubuntu bionic.
+  它们导致无法在Debian buster/Ubuntu bionic上构建/运行Patroni。
 
 --------
 
 ## Version 2.1.6
 
-Released 2022-12-30
+发布于 2022-12-30
 
-**Improvements**
+**改进**
 
-- Fix annoying exceptions on ssl socket shutdown (Alexander Kukushkin)
+- 修复了SSL套接字关闭时的烦人异常（Alexander Kukushkin）
 
-  The HAProxy is closing connections as soon as it got the HTTP Status code leaving no time for Patroni to properly shutdown SSL connection.
+  HAProxy在获得HTTP状态码后立即关闭连接，没有给Patroni留出正确关闭SSL连接的时间。
 
-- Adjust example Dockerfile for arm64 (Polina Bungina)
+- 调整arm64的示例Dockerfile（Polina Bungina）
 
-  Remove explicit `amd64` and `x86_64`, don't remove `libnss_files.so.*`.
+  移除显式的 **`amd64`** 和 **`x86_64`**，不删除 **`libnss_files.so.*`**。
 
-**Security improvements**
+**安全改进**
 
-- Enforce `search_path=pg_catalog` for non-replication connections (Alexander Kukushkin)
+- 为非复制连接强制设置 **`search_path=pg_catalog`**（Alexander Kukushkin）
 
-  Since Patroni is heavily relying on superuser connections, we want to protect it from the possible attacks carried out using user-defined functions and/or operators in `public` schema with the same name and signature as the corresponding objects in `pg_catalog`. For that, `search_path=pg_catalog` is enforced for all connections created by Patroni (except replication connections).
+  由于Patroni严重依赖超级用户连接，我们希望保护它免受使用 **`public`** 模式中与 **`pg_catalog`** 中相应对象具有相同名称和签名的用户定义函数和/或运算符进行的潜在攻击。为此，Patroni创建的所有连接（复制连接除外）均强制设置 **`search_path=pg_catalog`**。
 
-- Prevent passwords from being recorded in `pg_stat_statements` (Feike Steenbergen)
+- 防止密码被记录在 **`pg_stat_statements`** 中（Feike Steenbergen）
 
-  It is achieved by setting `pg_stat_statements.track_utility=off` when creating users.
+  通过在创建用户时设置 **`pg_stat_statements.track_utility=off`** 来实现。
 
-**Bugfixes**
+**错误修复**
 
-- Declare `proxy_address` as optional (Denis Laxalde)
+- 将 **`proxy_address`** 声明为可选项（Denis Laxalde）
 
-  As it is effectively a non-required option.
+  因为它实际上是一个非必需选项。
 
-- Improve behaviour of the insecure option (Alexander Kukushkin)
+- 改进insecure选项的行为（Alexander Kukushkin）
 
-  Ctl's `insecure` option didn't work properly when client certificates were used for REST API requests.
+  当使用客户端证书进行REST API请求时，Ctl的 **`insecure`** 选项无法正常工作。
 
-- Take watchdog configuration from `bootstrap.dcs` when the new cluster is bootstrapped (Matt Baker)
+- 引导新集群时从 **`bootstrap.dcs`** 获取watchdog配置（Matt Baker）
 
-  Patroni used to initially configure watchdog with defaults when bootstrapping a new cluster rather than taking configuration used to bootstrap the DCS.
+  Patroni过去在引导新集群时使用默认值初始化watchdog配置，而不是使用用于引导DCS的配置。
 
-- Fix the way file extensions are treated while finding executables in WIN32 (Martín Marqués)
+- 修复了WIN32中查找可执行文件时处理文件扩展名的方式（Martín Marqués）
 
-  Only add `.exe` to a file name if it has no extension yet.
+  仅在文件名没有扩展名时才添加 **`.exe`**。
 
-- Fix Consul TTL setup (Alexander Kukushkin)
+- 修复了Consul TTL设置（Alexander Kukushkin）
 
-  We used `ttl/2.0` when setting the value on the HTTPClient, but forgot to multiply the current value by 2 in the class' property. It was resulting in Consul TTL off by twice.
+  在HTTPClient上设置值时我们使用了 **`ttl/2.0`**，但忘记在类的属性中将当前值乘以2。这导致Consul TTL偏差了两倍。
 
-**Removed functionality**
+**移除的功能**
 
-- Remove `patronictl configure` (Polina Bungina)
+- 移除 **`patronictl configure`**（Polina Bungina）
 
-  There is no more need for a separate [patronictl](/docs/patroni/patronictl#patronictl) config creation.
+  不再需要单独创建 [patronictl](/docs/patroni/patronictl#patronictl) 配置。
 
 --------
 
 ## Version 2.1.5
 
-Released 2022-11-28
+发布于 2022-11-28
 
-This version enhances compatibility with PostgreSQL 15 and declares Etcd v3 support as production ready. The Patroni on Raft remains in Beta.
+此版本增强了与PostgreSQL 15的兼容性，并宣布Etcd v3支持已达到生产就绪状态。Patroni on Raft仍处于Beta阶段。
 
-**New features**
+**新特性**
 
-- Improve `patroni --validate-config` (Denis Laxalde)
+- 改进 **`patroni --validate-config`**（Denis Laxalde）
 
-  Exit with code 1 if config is invalid and print errors to stderr.
+  如果配置无效则以代码1退出，并将错误打印到stderr。
 
-- Don't drop replication slots in pause (Alexander Kukushkin)
+- 在暂停模式下不删除复制槽（Alexander Kukushkin）
 
-  Patroni is automatically creating/removing physical replication slots when members are joining/leaving the cluster. In pause slots will no longer be removed.
+  Patroni会在成员加入/离开集群时自动创建/移除物理复制槽。在暂停模式下将不再移除槽。
 
-- Support the `HEAD` request method for monitoring endpoints (Robert Cutajar)
+- 支持监控端点的 **`HEAD`** 请求方法（Robert Cutajar）
 
-  If used instead of `GET` Patroni will return only the HTTP Status Code.
+  如果用 **`HEAD`** 代替 **`GET`**，Patroni将仅返回HTTP状态码。
 
-- Support behave tests on Windows (Alexander Kukushkin)
+- 支持在Windows上运行behave测试（Alexander Kukushkin）
 
-  Emulate graceful Patroni shutdown (`SIGTERM`) on Windows by introduce the new REST API endpoint `POST /sigterm`.
+  通过引入新的REST API端点 **`POST /sigterm`** 在Windows上模拟Patroni的优雅关闭（**`SIGTERM`**）。
 
-- Introduce `postgresql.proxy_address` (Alexander Kukushkin)
+- 引入 **`postgresql.proxy_address`**（Alexander Kukushkin）
 
-  It will be written to the member key in DCS as the `proxy_url` and could be used/useful for service discovery.
+  它将作为 **`proxy_url`** 写入DCS中的成员键，可用于服务发现。
 
-**Stability improvements**
+**稳定性改进**
 
-- Call `pg_replication_slot_advance()` from a thread (Alexander Kukushkin)
+- 从线程中调用 **`pg_replication_slot_advance()`**（Alexander Kukushkin）
 
-  On busy clusters with many logical replication slots the `pg_replication_slot_advance()` call was affecting the main HA loop and could result in the member key expiration.
+  在具有许多逻辑复制槽的繁忙集群上，**`pg_replication_slot_advance()`** 调用会影响主HA循环，可能导致成员键过期。
 
-- Archive possibly missing WALs before calling `pg_rewind` on the old primary (Polina Bungina)
+- 在旧主节点上调用 **`pg_rewind`** 之前归档可能缺失的WAL（Polina Bungina）
 
-  If the primary crashed and was down during considerable time, some WAL files could be missing from archive and from the new primary. There is a chance that `pg_rewind` could remove these WAL files from the old primary making it impossible to start it as a standby. By archiving `ready` WAL files we not only mitigate this problem but in general improving continues archiving experience.
+  如果主节点崩溃并停机了相当长时间，归档和新主节点中可能缺少一些WAL文件。**`pg_rewind`** 可能会从旧主节点上删除这些WAL文件，使其无法作为备用节点启动。通过归档 **`ready`** 状态的WAL文件，我们不仅缓解了这个问题，而且总体上改善了持续归档体验。
 
-- Ignore `403` errors when trying to create Kubernetes Service (Nick Hudson, Polina Bungina)
+- 在尝试创建Kubernetes Service时忽略 **`403`** 错误（Nick Hudson，Polina Bungina）
 
-  Patroni was spamming logs by unsuccessful attempts to create the service, which in fact could already exist.
+  Patroni之前会因为尝试创建可能已存在的服务而频繁输出失败日志。
 
-- Improve liveness probe (Alexander Kukushkin)
+- 改进存活探针（Alexander Kukushkin）
 
-  The liveness problem will start failing if the heartbeat loop is running longer than `ttl` on the primary or `2\*ttl` on the replica. That will allow us to use it as an alternative for [watchdog](/docs/patroni/watchdog#watchdog) on Kubernetes.
+  如果心跳循环在主节点上运行时间超过 **`ttl`** 或在副本上超过 **`2*ttl`**，存活探针将开始失败。这将使我们能够在Kubernetes上将其作为 [watchdog](/docs/patroni/watchdog#watchdog) 的替代方案使用。
 
-- Make sure only sync node tries to grab the lock when switchover (Alexander Kukushkin, Polina Bungina)
+- 确保切换时只有同步节点尝试获取锁（Alexander Kukushkin，Polina Bungina）
 
-  Previously there was a slim chance that up-to-date async member could become the leader if the manual switchover was performed without specifying the target.
+  之前在不指定目标的情况下执行手动切换时，有很小的概率异步但数据最新的成员可能成为领导者。
 
-- Avoid cloning while bootstrap is running (Ants Aasma)
+- 避免在引导运行时进行克隆（Ants Aasma）
 
-  Do not allow a create replica method that does not require a leader to be triggered while the cluster bootstrap is running.
+  不允许在集群引导运行时触发不需要领导者的创建副本方法。
 
-- Compatibility with kazoo-2.9.0 (Alexander Kukushkin)
+- 与kazoo-2.9.0的兼容性（Alexander Kukushkin）
 
-  Depending on python version the `SequentialThreadingHandler.select()` method may raise `TypeError` and `IOError` exceptions if `select()` is called on the closed socket.
+  根据Python版本，如果在已关闭的套接字上调用 **`select()`**，**`SequentialThreadingHandler.select()`** 方法可能会引发 **`TypeError`** 和 **`IOError`** 异常。
 
-- Explicitly shut down SSL connection before socket shutdown (Alexander Kukushkin)
+- 在套接字关闭前显式关闭SSL连接（Alexander Kukushkin）
 
-  Not doing it resulted in `unexpected eof while reading` errors with OpenSSL 3.0.
+  不这样做会导致OpenSSL 3.0出现 **`unexpected eof while reading`** 错误。
 
-- Compatibility with `prettytable\>=2.2.0` (Alexander Kukushkin)
+- 与 **`prettytable>=2.2.0`** 的兼容性（Alexander Kukushkin）
 
-  Due to the internal API changes the cluster name header was shown on the incorrect line.
+  由于内部API更改，集群名称标题显示在了不正确的行上。
 
-**Bugfixes**
+**错误修复**
 
-- Handle expired token for Etcd lease_grant (monsterxx03)
+- 处理Etcd lease_grant的过期令牌（monsterxx03）
 
-  In case of error get the new token and retry request.
+  在出错时获取新令牌并重试请求。
 
-- Fix bug in the `GET /read-only-sync` endpoint (Alexander Kukushkin)
+- 修复了 **`GET /read-only-sync`** 端点的错误（Alexander Kukushkin）
 
-  It was introduced in previous release and effectively never worked.
+  它在上一个版本中引入，实际上从未工作过。
 
-- Handle the case when data dir storage disappeared (Alexander Kukushkin)
+- 处理数据目录存储消失的情况（Alexander Kukushkin）
 
-  Patroni is periodically checking that the PGDATA is there and not empty, but in case of issues with storage the `os.listdir()` is raising the `OSError` exception, breaking the heart-beat loop.
+  Patroni会定期检查PGDATA是否存在且非空，但在存储出现问题时，**`os.listdir()`** 会引发 **`OSError`** 异常，从而中断心跳循环。
 
-- Apply `master_stop_timeout` when waiting for user backends to close (Alexander Kukushkin)
+- 在等待用户后端关闭时应用 **`master_stop_timeout`**（Alexander Kukushkin）
 
-  Something that looks like user backend could be in fact a background worker (e.g., Citus Maintenance Daemon) that is failing to stop.
+  看起来像用户后端的东西实际上可能是无法停止的后台工作进程（例如Citus Maintenance Daemon）。
 
-- Accept `*:<port>` for `postgresql.listen` (Denis Laxalde)
+- 为 **`postgresql.listen`** 接受 **`*:<port>`** 格式（Denis Laxalde）
 
-  The `patroni --validate-config` was complaining about it being invalid.
+  **`patroni --validate-config`** 之前会报告其无效。
 
-- Timeouts fixes in Raft (Alexander Kukushkin)
+- Raft中的超时修复（Alexander Kukushkin）
 
-  When Patroni or patronictl are starting they try to get Raft cluster topology from known members. These calls were made without proper timeouts.
+  当Patroni或patronictl启动时，它们会尝试从已知成员获取Raft集群拓扑。这些调用之前没有设置适当的超时。
 
-- Forcefully update consul service if token was changed (John A. Lotoski)
+- 在令牌更改时强制更新consul服务（John A. Lotoski）
 
-  Not doing so results in errors "rpc error making call: rpc error making call: ACL not found".
+  不这样做会导致"rpc error making call: rpc error making call: ACL not found"错误。
 
 --------
-
 ## Version 2.1.4
 
-Released 2022-06-01
+发布于 2022-06-01
 
-**New features**
+**新特性**
 
-- Improve `pg_rewind` behavior on typical Debian/Ubuntu systems (Gunnar "Nick" Bluth)
+- 改进 **`pg_rewind`** 在典型Debian/Ubuntu系统上的行为（Gunnar "Nick" Bluth）
 
-  On Postgres setups that keep `postgresql.conf` outside of the data directory (e.g. Ubuntu/Debian packages), `pg_rewind --restore-target-wal` fails to figure out the value of the `restore_command`.
+  在将 **`postgresql.conf`** 保存在数据目录之外的Postgres安装方式中（例如Ubuntu/Debian软件包），**`pg_rewind --restore-target-wal`** 无法正确获取 **`restore_command`** 的值。
 
-- Allow setting `TLSServerName` on Consul service checks (Michael Gmelin)
+- 允许在Consul服务检查中设置 **`TLSServerName`**（Michael Gmelin）
 
-  Useful when checks are performed by IP and the Consul `node_name` is not a FQDN.
+  当检查通过IP进行且Consul的 **`node_name`** 不是FQDN时非常有用。
 
-- Added `ppc64le` support in watchdog (Jean-Michel Scheiwiler)
+- 在watchdog中添加 **`ppc64le`** 支持（Jean-Michel Scheiwiler）
 
-  And fixed watchdog support on some non-x86 platforms.
+  同时修复了某些非x86平台上的watchdog支持。
 
-- Switched aws.py callback from `boto` to `boto3` (Alexander Kukushkin)
+- 将aws.py回调从 **`boto`** 切换到 **`boto3`**（Alexander Kukushkin）
 
-> `boto` 2.x is abandoned since 2018 and fails with python 3.9.
+> **`boto`** 2.x自2018年起已被弃用，且在Python 3.9上运行失败。
 
-- Periodically refresh service account token on K8s (Haitao Li)
+- 定期刷新K8s上的服务账户令牌（Haitao Li）
 
-  Since Kubernetes v1.21 service account tokens expire in 1 hour.
+  自Kubernetes v1.21起，服务账户令牌会在1小时后过期。
 
-- Added `/read-only-sync` monitoring endpoint (Dennis4b)
+- 添加 **`/read-only-sync`** 监控端点（Dennis4b）
 
-  It is similar to the `/read-only` but includes only synchronous replicas.
+  类似于 **`/read-only`**，但仅包含同步副本。
 
-**Stability improvements**
+**稳定性改进**
 
-- Don't copy the logical replication slot to a replica if there is a configuration mismatch in the logical decoding setup with the primary (Alexander Kukushkin)
+- 当逻辑解码配置与主库不匹配时，不再将逻辑复制槽复制到副本（Alexander Kukushkin）
 
-  A replica won't copy a logical replication slot from the primary anymore if the slot doesn't match the `plugin` or `database` configuration options. Previously, the check for whether the slot matches those configuration options was not performed until after the replica copied the slot and started with it, resulting in unnecessary and repeated restarts.
+  如果槽的 **`plugin`** 或 **`database`** 配置选项不匹配，副本将不再从主库复制逻辑复制槽。此前，在副本复制槽并启动之后才会检查槽是否匹配这些配置选项，导致不必要的重复重启。
 
-- Special handling of recovery configuration parameters for PostgreSQL v12+ (Alexander Kukushkin)
+- 对PostgreSQL v12+的恢复配置参数进行特殊处理（Alexander Kukushkin）
 
-  While starting as replica Patroni should be able to update `postgresql.conf` and restart/reload if the leader address has changed by caching current parameters values instead of querying them from `pg_settings`.
+  作为副本启动时，Patroni应该能够在领导者地址发生变化时更新 **`postgresql.conf`** 并重启/重新加载，方法是缓存当前参数值，而不是从 **`pg_settings`** 中查询。
 
-- Better handling of IPv6 addresses in the `postgresql.listen` parameters (Alexander Kukushkin)
+- 改进 **`postgresql.listen`** 参数中IPv6地址的处理（Alexander Kukushkin）
 
-  Since the `listen` parameter has a port, people try to put IPv6 addresses into square brackets, which were not correctly stripped when there is more than one IP in the list.
+  由于 **`listen`** 参数包含端口，用户会尝试将IPv6地址放在方括号中，但当列表中有多个IP时，方括号无法被正确剥离。
 
-- Use `replication` credentials when performing divergence check only on PostgreSQL v10 and older (Alexander Kukushkin)
+- 仅在PostgreSQL v10及更早版本上执行分歧检查时使用 **`replication`** 凭据（Alexander Kukushkin）
 
-  If `rewind` is enabled, Patroni will again use either `superuser` or `rewind` credentials on newer Postgres versions.
+  如果启用了 **`rewind`**，Patroni将在较新的Postgres版本上重新使用 **`superuser`** 或 **`rewind`** 凭据。
 
-**Bugfixes**
+**错误修复**
 
-- Fixed missing import of `dateutil.parser` (Wesley Mendes)
+- 修复 **`dateutil.parser`** 缺失导入的问题（Wesley Mendes）
 
-  Tests weren't failing only because it was also imported from other modules.
+  测试之前没有失败，只是因为其他模块也导入了该模块。
 
-- Ensure that `optime` annotation is a string (Sebastian Hasler)
+- 确保 **`optime`** 注解为字符串类型（Sebastian Hasler）
 
-  In certain cases Patroni was trying to pass it as numeric.
+  在某些情况下，Patroni会尝试将其作为数值传递。
 
-- Better handling of failed `pg_rewind` attempt (Alexander Kukushkin)
+- 改进 **`pg_rewind`** 失败时的处理（Alexander Kukushkin）
 
-  If the primary becomes unavailable during `pg_rewind`, `$PGDATA` will be left in a broken state. Following that, Patroni will remove the data directory even if this is not allowed by the configuration.
+  如果主库在 **`pg_rewind`** 期间变得不可用，**`$PGDATA`** 将处于损坏状态。随后，即使配置不允许，Patroni也会删除数据目录。
 
-- Don't remove `slots` annotations from the leader `ConfigMap`/`Endpoint` when PostgreSQL isn't ready (Alexander Kukushkin)
+- 当PostgreSQL未就绪时，不要从领导者 **`ConfigMap`**/**`Endpoint`** 中移除 **`slots`** 注解（Alexander Kukushkin）
 
-  If `slots` value isn't passed the annotation will keep the current value.
+  如果未传递 **`slots`** 值，注解将保持当前值。
 
-- Handle concurrency problem with K8s API watchers (Alexander Kukushkin)
+- 处理K8s API watcher的并发问题（Alexander Kukushkin）
 
-  Under certain (unknown) conditions watchers might become stale; as a result, `attempt_to_acquire_leader()` method could fail due to the HTTP status code 409. In that case we reset watchers connections and restart from scratch.
+  在某些（未知的）条件下，watcher可能会变得过时；因此，**`attempt_to_acquire_leader()`** 方法可能由于HTTP状态码409而失败。在这种情况下，我们会重置watcher连接并从头开始。
 
 --------
 
 ## Version 2.1.3
 
-Released 2022-02-18
+发布于 2022-02-18
 
-**New features**
+**新特性**
 
-- Added support for encrypted TLS keys for [patronictl](/docs/patroni/patronictl#patronictl) (Alexander Kukushkin)
+- 为 [patronictl](/docs/patroni/patronictl#patronictl) 添加加密TLS密钥支持（Alexander Kukushkin）
 
-  It could be configured via `ctl.keyfile_password` or the `PATRONI_CTL_KEYFILE_PASSWORD` environment variable.
+  可通过 **`ctl.keyfile_password`** 或 **`PATRONI_CTL_KEYFILE_PASSWORD`** 环境变量进行配置。
 
-- Added more metrics to the /metrics endpoint (Alexandre Pereira)
+- 向/metrics端点添加更多指标（Alexandre Pereira）
 
-  Specifically, `patroni_pending_restart` and `patroni_is_paused`.
+  具体包括 **`patroni_pending_restart`** 和 **`patroni_is_paused`**。
 
-- Make it possible to specify multiple hosts in the standby cluster configuration (Michael Banck)
+- 支持在备用集群配置中指定多个主机（Michael Banck）
 
-  If the standby cluster is replicating from the Patroni cluster it might be nice to rely on client-side failover which is available in `libpq` since PostgreSQL v10. That is, the `primary_conninfo` on the standby leader and `pg_rewind` setting `target_session_attrs=read-write` in the connection string. The `pgpass` file will be generated with multiple lines (one line per host), and instead of calling `CHECKPOINT` on the primary cluster nodes the standby cluster will wait for `pg_control` to be updated.
+  如果备用集群从Patroni集群进行复制，利用自PostgreSQL v10起 **`libpq`** 中可用的客户端故障转移功能会很方便。即在备用领导者的 **`primary_conninfo`** 和 **`pg_rewind`** 设置中的连接字符串里设置 **`target_session_attrs=read-write`**。**`pgpass`** 文件将生成多行内容（每个主机一行），备用集群不会在主集群节点上调用 **`CHECKPOINT`**，而是等待 **`pg_control`** 更新。
 
-**Stability improvements**
+**稳定性改进**
 
-- Compatibility with legacy `psycopg2` (Alexander Kukushkin)
+- 兼容旧版 **`psycopg2`**（Alexander Kukushkin）
 
-  For example, the `psycopg2` installed from Ubuntu 18.04 packages doesn't have the `UndefinedFile` exception yet.
+  例如，从Ubuntu 18.04软件包安装的 **`psycopg2`** 还没有 **`UndefinedFile`** 异常。
 
-- Restart `etcd3` watcher if all Etcd nodes don't respond (Alexander Kukushkin)
+- 当所有Etcd节点无响应时重启 **`etcd3`** watcher（Alexander Kukushkin）
 
-  If the watcher is alive the `get_cluster()` method continues returning stale information even if all Etcd nodes are failing.
+  如果watcher仍然存活，即使所有Etcd节点都出现故障，**`get_cluster()`** 方法仍会继续返回过时的信息。
 
-- Don't remove the leader lock in the standby cluster while paused (Alexander Kukushkin)
+- 暂停状态下不要移除备用集群的领导者锁（Alexander Kukushkin）
 
-  Previously the lock was maintained only by the node that was running as a primary and not a standby leader.
+  此前，锁仅由作为主库运行的节点维护，而非备用领导者。
 
-**Bugfixes**
+**错误修复**
 
-- Fixed bug in the standby-leader bootstrap (Alexander Kukushkin)
+- 修复备用领导者引导中的错误（Alexander Kukushkin）
 
-  Patroni was considering bootstrap as failed if Postgres didn't start accepting connections after 60 seconds. The bug was introduced in the 2.1.2 release.
+  如果Postgres在60秒后未开始接受连接，Patroni会认为引导失败。此错误在2.1.2版本中引入。
 
-- Fixed bug with failover to a cascading standby (Alexander Kukushkin)
+- 修复故障转移到级联备库时的错误（Alexander Kukushkin）
 
-  When figuring out which slots should be created on cascading standby we forgot to take into account that the leader might be absent.
+  在确定应在级联备库上创建哪些槽时，我们忘记考虑领导者可能不存在的情况。
 
-- Fixed small issues in Postgres config validator (Alexander Kukushkin)
+- 修复Postgres配置验证器中的小问题（Alexander Kukushkin）
 
-  Integer parameters introduced in PostgreSQL v14 were failing to validate because min and max values were quoted in the validator.py
+  PostgreSQL v14中引入的整数参数验证失败，因为validator.py中的最小值和最大值被加了引号。
 
-- Use replication credentials when checking leader status (Alexander Kukushkin)
+- 检查领导者状态时使用复制凭据（Alexander Kukushkin）
 
-  It could be that the `remove_data_directory_on_diverged_timelines` is set, but there is no `rewind_credentials` defined and superuser access between nodes is not allowed.
+  可能存在设置了 **`remove_data_directory_on_diverged_timelines`** 但未定义 **`rewind_credentials`** 且不允许节点间超级用户访问的情况。
 
-- Fixed "port in use" error on REST API certificate replacement (Ants Aasma)
+- 修复REST API证书替换时的"端口被占用"错误（Ants Aasma）
 
-  When switching certificates there was a race condition with a concurrent API request. If there is one active during the replacement period then the replacement will error out with a port in use error and Patroni gets stuck in a state without an active API server.
+  切换证书时，与并发API请求之间存在竞态条件。如果在替换期间有一个活跃的请求，替换将因端口被占用错误而失败，导致Patroni陷入没有活跃API服务器的状态。
 
-- Fixed a bug in cluster bootstrap if passwords contain `%` characters (Bastien Wirtz)
+- 修复密码包含 **`%`** 字符时集群引导的错误（Bastien Wirtz）
 
-  The bootstrap method executes the `DO` block, with all parameters properly quoted, but the `cursor.execute()` method didn't like an empty list with parameters passed.
+  引导方法执行 **`DO`** 代码块时所有参数都已正确引用，但 **`cursor.execute()`** 方法不接受传递空参数列表。
 
-- Fixed the "AttributeError: no attribute 'leader'" exception (Hrvoje Milković)
+- 修复"AttributeError: no attribute 'leader'"异常（Hrvoje Milković）
 
-  It could happen if the synchronous mode is enabled and the DCS content was wiped out.
+  当启用同步模式且DCS内容被清除时可能发生此错误。
 
-- Fix bug in divergence timeline check (Alexander Kukushkin)
+- 修复分歧时间线检查中的错误（Alexander Kukushkin）
 
-  Patroni was falsely assuming that timelines have diverged. For pg_rewind it didn't create any problem, but if pg_rewind is not allowed and the `remove_data_directory_on_diverged_timelines` is set, it resulted in reinitializing the former leader.
+  Patroni错误地判断时间线已经分歧。对于pg_rewind来说这不会造成问题，但如果不允许pg_rewind且设置了 **`remove_data_directory_on_diverged_timelines`**，则会导致前领导者被重新初始化。
 
 --------
 
 ## Version 2.1.2
 
-Released 2021-12-03
+发布于 2021-12-03
 
-**New features**
+**新特性**
 
-- Compatibility with `psycopg>=3.0` (Alexander Kukushkin)
+- 兼容 **`psycopg>=3.0`**（Alexander Kukushkin）
 
-  By default `psycopg2` is preferred. `psycopg\>=3.0` will be used only if `psycopg2` is not available or its version is too old.
+  默认优先使用 **`psycopg2`**。仅当 **`psycopg2`** 不可用或版本过旧时才会使用 **`psycopg>=3.0`**。
 
-- Add `dcs_last_seen` field to the REST API (Michael Banck)
+- 向REST API添加 **`dcs_last_seen`** 字段（Michael Banck）
 
-  This field notes the last time (as unix epoch) a cluster member has successfully communicated with the DCS. This is useful to identify and/or analyze network partitions.
+  此字段记录集群成员最后一次成功与DCS通信的时间（Unix时间戳）。这对于识别和/或分析网络分区非常有用。
 
-- Release the leader lock when `pg_controldata` reports "shut down" (Alexander Kukushkin)
+- 当 **`pg_controldata`** 报告"shut down"时释放领导者锁（Alexander Kukushkin）
 
-  To solve the problem of slow switchover/shutdown in case `archive_command` is slow/failing, Patroni will remove the leader key immediately after `pg_controldata` started reporting PGDATA as `shut down` cleanly and it verified that there is at least one replica that received all changes. If there are no replicas that fulfill this condition the leader key is not removed and the old behavior is retained, i.e. Patroni will keep updating the lock.
+  为解决 **`archive_command`** 缓慢/失败时切换/关闭速度慢的问题，Patroni会在 **`pg_controldata`** 开始报告PGDATA已干净 **`shut down`** 且验证至少有一个副本接收了所有变更后，立即移除领导者键。如果没有满足此条件的副本，则不会移除领导者键，保持旧的行为，即Patroni将继续更新锁。
 
-- Add `sslcrldir` connection parameter support (Kostiantyn Nemchenko)
+- 添加 **`sslcrldir`** 连接参数支持（Kostiantyn Nemchenko）
 
-  The new connection parameter was introduced in the PostgreSQL v14.
+  该新连接参数在PostgreSQL v14中引入。
 
-- Allow setting ACLs for ZNodes in Zookeeper (Alwyn Davis)
+- 允许为Zookeeper中的ZNode设置ACL（Alwyn Davis）
 
-  Introduce a new configuration option `zookeeper.set_acls` so that Kazoo will apply a default ACL for each ZNode that it creates.
+  引入新配置选项 **`zookeeper.set_acls`**，使Kazoo为其创建的每个ZNode应用默认ACL。
 
-**Stability improvements**
+**稳定性改进**
 
-- Delay the next attempt of recovery till next HA loop (Alexander Kukushkin)
+- 将下一次恢复尝试延迟到下一个HA循环（Alexander Kukushkin）
 
-  If Postgres crashed due to out of disk space (for example) and fails to start because of that Patroni is too eagerly trying to recover it flooding logs.
+  如果Postgres因磁盘空间不足（例如）而崩溃并因此无法启动，Patroni会过于频繁地尝试恢复，导致日志泛滥。
 
-- Add log before demoting, which can take some time (Michael Banck)
+- 在降级之前添加日志，因为降级可能需要一些时间（Michael Banck）
 
-  It can take some time for the demote to finish and it might not be obvious from looking at the logs what exactly is going on.
+  降级完成可能需要一些时间，仅从日志中可能不太明显正在发生什么。
 
-- Improve "I am" status messages (Michael Banck)
+- 改进"I am"状态消息（Michael Banck）
 
-  `no action. I am a secondary ({0})` vs `no action. I am ({0}), a secondary`
+  **`no action. I am a secondary ({0})`** 对比 **`no action. I am ({0}), a secondary`**
 
-- Cast to int `wal_keep_segments` when converting to `wal_keep_size` (Jorge Solórzano)
+- 将 **`wal_keep_segments`** 转换为 **`wal_keep_size`** 时转换为整数（Jorge Solórzano）
 
-  It is possible to specify `wal_keep_segments` as a string in the global [dynamic configuration](/docs/patroni/config/dynamic#dynamic) and due to Python being a dynamically typed language the string was simply multiplied. Example: `wal_keep_segments: "100"` was converted to `100100100100100100100100100100100100100100100100MB`.
+  可以在全局 [动态配置](/docs/patroni/config/dynamic#dynamic) 中将 **`wal_keep_segments`** 指定为字符串，由于Python是动态类型语言，字符串会被简单地重复。例如：**`wal_keep_segments: "100"`** 会被转换为 **`100100100100100100100100100100100100100100100100MB`**。
 
-- Allow switchover only to sync nodes when synchronous replication is enabled (Alexander Kukushkin)
+- 启用同步复制时仅允许切换到同步节点（Alexander Kukushkin）
 
-  In addition to that do the leader race only against known synchronous nodes.
+  此外，领导者选举也仅在已知的同步节点之间进行。
 
-- Use cached role as a fallback when Postgres is slow (Alexander Kukushkin)
+- 当Postgres响应缓慢时使用缓存的角色作为回退（Alexander Kukushkin）
 
-  In some extreme cases Postgres could be so slow that the normal monitoring query does not finish in a few seconds. The `statement_timeout` exception not being properly handled could lead to the situation where Postgres was not demoted on time when the leader key expired or the update failed. In case of such exception Patroni will use the cached `role` to determine whether Postgres is running as a primary.
+  在某些极端情况下，Postgres可能非常慢，以至于正常的监控查询无法在几秒钟内完成。**`statement_timeout`** 异常未被正确处理可能导致当领导者键过期或更新失败时Postgres未能及时降级。在出现此类异常时，Patroni将使用缓存的 **`role`** 来确定Postgres是否以主库身份运行。
 
-- Avoid unnecessary updates of the member ZNode (Alexander Kukushkin)
+- 避免不必要的成员ZNode更新（Alexander Kukushkin）
 
-  If no values have changed in the members data, the update should not happen.
+  如果成员数据中没有值发生变化，则不应进行更新。
 
-- Optimize checkpoint after promote (Alexander Kukushkin)
+- 优化提升后的检查点（Alexander Kukushkin）
 
-  Avoid doing `CHECKPOINT` if the latest timeline is already stored in `pg_control`. It helps to avoid unnecessary `CHECKPOINT` right after initializing the new cluster with `initdb`.
+  如果最新时间线已存储在 **`pg_control`** 中，则避免执行 **`CHECKPOINT`**。这有助于避免在使用 **`initdb`** 初始化新集群后立即执行不必要的 **`CHECKPOINT`**。
 
-- Prefer members without `nofailover` when picking sync nodes (Alexander Kukushkin)
+- 选择同步节点时优先选择没有 **`nofailover`** 标签的成员（Alexander Kukushkin）
 
-  Previously sync nodes were selected only based on the replication lag, hence the node with `nofailover` tag had the same chances to become synchronous as any other node. That behavior was confusing and dangerous at the same time because in case of a failed primary the failover could not happen automatically.
+  此前，同步节点仅基于复制延迟进行选择，因此带有 **`nofailover`** 标签的节点与其他节点有相同的机会成为同步节点。这种行为既令人困惑又危险，因为在主库故障时无法自动进行故障转移。
 
-- Remove duplicate hosts from the etcd machine cache (Michael Banck)
+- 从etcd机器缓存中移除重复主机（Michael Banck）
 
-  Advertised client URLs in the etcd cluster could be misconfigured. Removing duplicates in Patroni in this case is a low-hanging fruit.
+  etcd集群中的已公布客户端URL可能配置错误。在Patroni中移除重复项是一个简单的改进。
 
-**Bugfixes**
+**错误修复**
 
-- Skip temporary replication slots while doing slot management (Alexander Kukushkin)
+- 在槽管理时跳过临时复制槽（Alexander Kukushkin）
 
-  Starting from v10 `pg_basebackup` creates a temporary replication slot for WAL streaming and Patroni was trying to drop it because the slot name looks unknown. In order to fix it, we skip all temporary slots when querying `pg_stat_replication_slots` view.
+  从v10开始，**`pg_basebackup`** 会为WAL流创建一个临时复制槽，而Patroni会因为槽名称未知而尝试删除它。为修复此问题，我们在查询 **`pg_stat_replication_slots`** 视图时跳过所有临时槽。
 
-- Ensure `pg_replication_slot_advance()` doesn't timeout (Alexander Kukushkin)
+- 确保 **`pg_replication_slot_advance()`** 不会超时（Alexander Kukushkin）
 
-  Patroni was using the default `statement_timeout` in this case and once the call failed there are very high chances that it will never recover, resulting in increased size of `pg_wal` and `pg_catalog` bloat.
+  Patroni在此情况下使用默认的 **`statement_timeout`**，一旦调用失败，很可能永远无法恢复，导致 **`pg_wal`** 体积增大和 **`pg_catalog`** 膨胀。
 
-- The `/status` wasn't updated on demote (Alexander Kukushkin)
+- **`/status`** 在降级时未更新（Alexander Kukushkin）
 
-  After demoting PostgreSQL the old leader updates the last LSN in DCS. Starting from `2.1.0` the new `/status` key was introduced, but the optime was still written to the `/optime/leader`.
+  降级PostgreSQL后，旧领导者会更新DCS中的最后LSN。从 **`2.1.0`** 开始引入了新的 **`/status`** 键，但optime仍然被写入 **`/optime/leader`**。
 
-- Handle DCS exceptions when demoting (Alexander Kukushkin)
+- 处理降级时的DCS异常（Alexander Kukushkin）
 
-  While demoting the master due to failure to update the leader lock it could happen that DCS goes completely down and the `get_cluster()` call raises an exception. Not being handled properly it results in Postgres remaining stopped until DCS recovers.
+  在由于更新领导者锁失败而降级主库时，可能发生DCS完全宕机的情况，导致 **`get_cluster()`** 调用抛出异常。未被正确处理会导致Postgres保持停止状态直到DCS恢复。
 
-- The `use_unix_socket_repl` didn't work is some cases (Alexander Kukushkin)
+- **`use_unix_socket_repl`** 在某些情况下不生效（Alexander Kukushkin）
 
-  Specifically, if `postgresql.unix_socket_directories` is not set. In this case Patroni is supposed to use the default value from `libpq`.
+  具体来说，当未设置 **`postgresql.unix_socket_directories`** 时。在这种情况下，Patroni应该使用 **`libpq`** 的默认值。
 
-- Fix a few issues with Patroni REST API (Alexander Kukushkin)
+- 修复Patroni REST API中的若干问题（Alexander Kukushkin）
 
-  The `clusters_unlocked` sometimes could be not defined, what resulted in exceptions in the `GET /metrics` endpoint. In addition to that the error handling method was assuming that the `connect_address` tuple always has two elements, while in fact there could be more in case of IPv6.
+  **`clusters_unlocked`** 有时可能未定义，导致 **`GET /metrics`** 端点出现异常。此外，错误处理方法假设 **`connect_address`** 元组总是包含两个元素，但实际上在IPv6的情况下可能有更多元素。
 
-- Wait for newly promoted node to finish recovery before deciding to rewind (Alexander Kukushkin)
+- 等待新提升的节点完成恢复后再决定是否进行rewind（Alexander Kukushkin）
 
-  It could take some time before the actual promote happens and the new timeline is created. Without waiting replicas could come to the conclusion that rewind isn't required.
+  实际提升发生和新时间线创建之前可能需要一些时间。如果不等待，副本可能会错误地判断不需要rewind。
 
-- Handle missing timelines in a history file when deciding to rewind (Alexander Kukushkin)
+- 处理决定是否进行rewind时历史文件中缺失时间线的情况（Alexander Kukushkin）
 
-  If the current replica timeline is missing in the history file on the primary the replica was falsely assuming that rewind isn't required.
+  如果主库上的历史文件中缺少当前副本的时间线，副本会错误地认为不需要rewind。
 
 --------
 
 ## Version 2.1.1
 
-Released 2021-08-19
+发布于 2021-08-19
 
-**New features**
+**新特性**
 
-- Support for ETCD SRV name suffix (David Pavlicek)
+- 支持ETCD SRV名称后缀（David Pavlicek）
 
-  Etcd allows to differentiate between multiple Etcd clusters under the same domain and from now on Patroni also supports it.
+  Etcd允许在同一域下区分多个Etcd集群，Patroni现在也支持此功能。
 
-- Enrich history with the new leader (huiyalin525)
+- 丰富历史记录，包含新领导者信息（huiyalin525）
 
-  It adds the new column to the `patronictl history` output.
+  为 **`patronictl history`** 输出添加了新列。
 
-- Make the CA bundle configurable for in-cluster Kubernetes config (Aron Parsons)
+- 使集群内Kubernetes配置的CA证书包可配置（Aron Parsons）
 
-  By default Patroni is using `/var/run/secrets/kubernetes.io/serviceaccount/ca.crt` and this new feature allows specifying the custom `kubernetes.cacert`.
+  默认情况下，Patroni使用 **`/var/run/secrets/kubernetes.io/serviceaccount/ca.crt`**，此新功能允许指定自定义的 **`kubernetes.cacert`**。
 
-- Support dynamically registering/deregistering as a Consul service and changing tags (Tommy Li)
+- 支持动态注册/注销Consul服务和更改标签（Tommy Li）
 
-  Previously it required Patroni restart.
+  此前需要重启Patroni。
 
-**Bugfixes**
+**错误修复**
 
-- Avoid unnecessary reload of REST API (Alexander Kukushkin)
+- 避免不必要的REST API重新加载（Alexander Kukushkin）
 
-  The previous release added a feature of reloading REST API certificates if changed on disk. Unfortunately, the reload was happening unconditionally right after the start.
+  前一版本添加了在磁盘上证书变更时重新加载REST API证书的功能。不幸的是，重新加载在启动后会无条件地发生。
 
-- Don't resolve cluster members when `etcd.use_proxies` is set (Alexander Kukushkin)
+- 设置 **`etcd.use_proxies`** 时不要解析集群成员（Alexander Kukushkin）
 
-  When starting up Patroni checks the healthiness of Etcd cluster by querying the list of members. In addition to that, it also tried to resolve their hostnames, which is not necessary when working with Etcd via proxy and was causing unnecessary warnings.
+  启动时Patroni通过查询成员列表来检查Etcd集群的健康状况。此外，它还尝试解析主机名，但在通过代理使用Etcd时这是不必要的，并会导致不必要的警告。
 
-- Skip rows with NULL values in the `pg_stat_replication` (Alexander Kukushkin)
+- 跳过 **`pg_stat_replication`** 中包含NULL值的行（Alexander Kukushkin）
 
-  It seems that the `pg_stat_replication` view could contain NULL values in the `replay_lsn`, `flush_lsn`, or `write_lsn` fields even when `state = 'streaming'`.
+  **`pg_stat_replication`** 视图似乎可能在 **`state = 'streaming'`** 时，**`replay_lsn`**、**`flush_lsn`** 或 **`write_lsn`** 字段中包含NULL值。
 
 --------
-
 ## Version 2.1.0
 
-Released 2021-07-06
+发布于 2021-07-06
 
-This version adds compatibility with PostgreSQL v14, makes logical replication slots to survive failover/switchover, implements support of allowlist for REST API, and also reducing the number of logs to one line per heart-beat.
+此版本添加了与PostgreSQL v14的兼容性，使逻辑复制槽在故障转移/切换中得以保留，实现了REST API的允许列表支持，并将日志减少到每次心跳一行。
 
-**New features**
+**新特性**
 
-- Compatibility with PostgreSQL v14 (Alexander Kukushkin)
+- 兼容PostgreSQL v14（Alexander Kukushkin）
 
-  Unpause WAL replay if Patroni is not in a "pause" mode itself. It could be "paused" due to the change of certain parameters like for example `max_connections` on the primary.
+  如果Patroni本身不处于"暂停"模式，则取消暂停WAL回放。WAL回放可能因为主库上某些参数（例如 **`max_connections`**）的更改而被"暂停"。
 
-- Failover logical slots (Alexander Kukushkin)
+- 逻辑槽故障转移（Alexander Kukushkin）
 
-  Make logical replication slots survive failover/switchover on PostgreSQL v11+. The replication slot if copied from the primary to the replica with restart and later the [pg_replication_slot_advance()](https://www.postgresql.org/docs/11/functions-admin.html#id-1.5.8.31.8.5.2.2.8.1.1) function is used to move it forward. As a result, the slot will already exist before the failover and no events should be lost, but, there is a chance that some events could be delivered more than once.
+  使逻辑复制槽在PostgreSQL v11+上的故障转移/切换中得以保留。复制槽在重启时从主库复制到副本，然后使用 [pg_replication_slot_advance()](https://www.postgresql.org/docs/11/functions-admin.html#id-1.5.8.31.8.5.2.2.8.1.1) 函数将其向前推进。因此，槽在故障转移之前就已存在，不会丢失任何事件，但有可能某些事件会被重复投递。
 
-- Implemented allowlist for Patroni REST API (Alexander Kukushkin)
+- 为Patroni REST API实现允许列表（Alexander Kukushkin）
 
-  If configured, only IP's that matching rules would be allowed to call unsafe endpoints. In addition to that, it is possible to automatically include IP's of members of the cluster to the list.
+  配置后，只有匹配规则的IP才被允许调用不安全的端点。此外，还可以自动将集群成员的IP添加到列表中。
 
-- Added support of replication connections via unix socket (Mohamad El-Rifai)
+- 添加通过Unix套接字进行复制连接的支持（Mohamad El-Rifai）
 
-  Previously Patroni was always using TCP for replication connection what could cause some issues with SSL verification. Using unix sockets allows exempt replication user from SSL verification.
+  此前，Patroni始终使用TCP进行复制连接，这可能导致SSL验证问题。使用Unix套接字可以使复制用户免于SSL验证。
 
-- Health check on user-defined tags (Arman Jafari Tehrani)
+- 基于用户定义标签的健康检查（Arman Jafari Tehrani）
 
-  Along with [predefined tags:](/docs/patroni/config/yaml#tags_settings) it is possible to specify any number of custom tags that become visible in the `patronictl list` output and in the REST API. From now on it is possible to use custom tags in health checks.
+  除 [预定义标签](/docs/patroni/config/yaml#tags_settings) 外，还可以指定任意数量的自定义标签，这些标签在 **`patronictl list`** 输出和REST API中可见。现在可以在健康检查中使用自定义标签。
 
-- Added Prometheus `/metrics` endpoint (Mark Mercado, Michael Banck)
+- 添加Prometheus **`/metrics`** 端点（Mark Mercado、Michael Banck）
 
-  The endpoint exposing the same metrics as `/patroni`.
+  该端点暴露与 **`/patroni`** 相同的指标。
 
-- Reduced chattiness of Patroni logs (Alexander Kukushkin)
+- 减少Patroni日志的冗余度（Alexander Kukushkin）
 
-  When everything goes normal, only one line will be written for every run of HA loop.
+  当一切正常时，每次HA循环运行只写入一行日志。
 
-**Breaking changes**
+**破坏性变更**
 
-- The old `permanent logical replication slots` feature will no longer work with PostgreSQL v10 and older (Alexander Kukushkin)
+- 旧的 **`permanent logical replication slots`** 功能将不再适用于PostgreSQL v10及更早版本（Alexander Kukushkin）
 
-  The strategy of creating the logical slots after performing a promotion can't guaranty that no logical events are lost and therefore disabled.
+  在提升后创建逻辑槽的策略无法保证不丢失逻辑事件，因此已被禁用。
 
-- The `/leader` endpoint always returns 200 if the node holds the lock (Alexander Kukushkin)
+- **`/leader`** 端点在节点持有锁时始终返回200（Alexander Kukushkin）
 
-  Promoting the standby cluster requires updating load-balancer health checks, which is not very convenient and easy to forget. To solve it, we change the behavior of the `/leader` health check endpoint. It will return 200 without taking into account whether the cluster is normal or the [standby_cluster](/docs/patroni/standby_cluster#standby_cluster).
+  提升备用集群需要更新负载均衡器健康检查，这不太方便且容易遗忘。为解决此问题，我们更改了 **`/leader`** 健康检查端点的行为。它将返回200，而不考虑集群是普通集群还是 [备用集群](/docs/patroni/standby_cluster#standby_cluster)。
 
-**Improvements in Raft support**
+**Raft支持改进**
 
-- Reliable support of Raft traffic encryption (Alexander Kukushkin)
+- 可靠的Raft流量加密支持（Alexander Kukushkin）
 
-  Due to the different issues in the `PySyncObj` the encryption support was very unstable
+  由于 **`PySyncObj`** 中的各种问题，加密支持非常不稳定。
 
-- Handle DNS issues in Raft implementation (Alexander Kukushkin)
+- 处理Raft实现中的DNS问题（Alexander Kukushkin）
 
-  If `self_addr` and/or `partner_addrs` are configured using the DNS name instead of IP's the `PySyncObj` was effectively doing resolve only once when the object is created. It was causing problems when the same node was coming back online with a different IP.
+  如果 **`self_addr`** 和/或 **`partner_addrs`** 使用DNS名称而非IP配置，**`PySyncObj`** 实际上只在对象创建时进行一次解析。当同一节点以不同IP重新上线时会导致问题。
 
-**Stability improvements**
+**稳定性改进**
 
-- Compatibility with `psycopg2-2.9+` (Alexander Kukushkin)
+- 兼容 **`psycopg2-2.9+`**（Alexander Kukushkin）
 
-  In `psycopg2` the `autocommit = True` is ignored in the `with connection` block, which breaks replication protocol connections.
+  在 **`psycopg2`** 中，**`autocommit = True`** 在 **`with connection`** 代码块中被忽略，这会破坏复制协议连接。
 
-- Fix excessive HA loop runs with Zookeeper (Alexander Kukushkin)
+- 修复Zookeeper下过多的HA循环运行（Alexander Kukushkin）
 
-  Update of member ZNodes was causing a chain reaction and resulted in running the HA loops multiple times in a row.
+  成员ZNode的更新会引发连锁反应，导致HA循环连续运行多次。
 
-- Reload if REST API certificate is changed on disk (Michael Todorovic)
+- 当磁盘上的REST API证书发生变更时进行重新加载（Michael Todorovic）
 
-  If the REST API certificate file was updated in place Patroni didn't perform a reload.
+  如果REST API证书文件被就地更新，Patroni不会执行重新加载。
 
-- Don't create pgpass dir if kerberos auth is used (Kostiantyn Nemchenko)
+- 使用Kerberos认证时不创建pgpass目录（Kostiantyn Nemchenko）
 
-  Kerberos and password authentication are mutually exclusive.
+  Kerberos和密码认证是互斥的。
 
-- Fixed little issues with custom bootstrap (Alexander Kukushkin)
+- 修复自定义引导中的小问题（Alexander Kukushkin）
 
-  Start Postgres with `hot_standby=off` only when we do a PITR and restart it after PITR is done.
+  仅在执行PITR时以 **`hot_standby=off`** 启动Postgres，并在PITR完成后重启。
 
-**Bugfixes**
+**错误修复**
 
-- Compatibility with `kazoo-2.7+` (Alexander Kukushkin)
+- 兼容 **`kazoo-2.7+`**（Alexander Kukushkin）
 
-  Since Patroni is handling retries on its own, it is relying on the old behavior of `kazoo` that requests to a Zookeeper cluster are immediately discarded when there are no connections available.
+  由于Patroni自行处理重试，它依赖于 **`kazoo`** 的旧行为，即在没有可用连接时立即丢弃对Zookeeper集群的请求。
 
-- Explicitly request the version of Etcd v3 cluster when it is known that we are connecting via proxy (Alexander Kukushkin)
+- 当已知通过代理连接时，显式请求Etcd v3集群的版本（Alexander Kukushkin）
 
-  Patroni is working with Etcd v3 cluster via gPRC-gateway and it depending on the cluster version different endpoints (`/v3`, `/v3beta`, or `/v3alpha`) must be used. The version was resolved only together with the cluster topology, but since the latter was never done when connecting via proxy.
+  Patroni通过gRPC-gateway与Etcd v3集群交互，根据集群版本需要使用不同的端点（**`/v3`**、**`/v3beta`** 或 **`/v3alpha`**）。版本仅在与集群拓扑一起解析时获取，但通过代理连接时从未进行过拓扑解析。
 
 --------
 
 ## Version 2.0.2
 
-Released 2021-02-22
+发布于 2021-02-22
 
-**New features**
+**新特性**
 
-- Ability to ignore externally managed replication slots (James Coleman)
+- 能够忽略外部管理的复制槽（James Coleman）
 
-  Patroni is trying to remove any replication slot which is unknown to it, but there are certainly cases when replication slots should be managed externally. From now on it is possible to configure slots that should not be removed.
+  Patroni会尝试移除任何它不认识的复制槽，但确实存在复制槽应由外部管理的情况。现在可以配置不应被移除的槽。
 
-- Added support for cipher suite limitation for REST API (Gunnar "Nick" Bluth)
+- 为REST API添加密码套件限制支持（Gunnar "Nick" Bluth）
 
-  It could be configured via `restapi.ciphers` or the `PATRONI_RESTAPI_CIPHERS` environment variable.
+  可通过 **`restapi.ciphers`** 或 **`PATRONI_RESTAPI_CIPHERS`** 环境变量进行配置。
 
-- Added support for encrypted TLS keys for REST API (Jonathan S. Katz)
+- 为REST API添加加密TLS密钥支持（Jonathan S. Katz）
 
-  It could be configured via `restapi.keyfile_password` or the `PATRONI_RESTAPI_KEYFILE_PASSWORD` environment variable.
+  可通过 **`restapi.keyfile_password`** 或 **`PATRONI_RESTAPI_KEYFILE_PASSWORD`** 环境变量进行配置。
 
-- Constant time comparison of REST API authentication credentials (Alex Brasetvik)
+- REST API认证凭据的常量时间比较（Alex Brasetvik）
 
-  Use `hmac.compare_digest()` instead of `==`, which is vulnerable to timing attack.
+  使用 **`hmac.compare_digest()`** 替代 **`==`**，后者容易受到时序攻击。
 
-- Choose synchronous nodes based on replication lag (Krishna Sarabu)
+- 基于复制延迟选择同步节点（Krishna Sarabu）
 
-  If the replication lag on the synchronous node starts exceeding the configured threshold it could be demoted to asynchronous and/or replaced by the other node. Behaviour is controlled with `maximum_lag_on_syncnode`.
+  如果同步节点上的复制延迟开始超过配置的阈值，它可能被降级为异步节点和/或被其他节点替换。行为通过 **`maximum_lag_on_syncnode`** 控制。
 
-**Stability improvements**
+**稳定性改进**
 
-- Start postgres with `hot_standby = off` when doing custom bootstrap (Igor Yanchenko)
+- 执行自定义引导时以 **`hot_standby = off`** 启动Postgres（Igor Yanchenko）
 
-  During custom bootstrap Patroni is restoring the basebackup, starting Postgres up, and waiting until recovery finishes. Some PostgreSQL parameters on the standby can't be smaller than on the primary and if the new value (restored from WAL) is higher than the configured one, Postgres panics and stops. In order to avoid such behavior we will do custom bootstrap without `hot_standby` mode.
+  在自定义引导期间，Patroni恢复基础备份、启动Postgres并等待恢复完成。备库上的某些PostgreSQL参数不能小于主库上的值，如果新值（从WAL恢复）高于配置值，Postgres会panic并停止。为避免此行为，我们将在没有 **`hot_standby`** 模式的情况下执行自定义引导。
 
-- Warn the user if the required watchdog is not healthy (Nicolas Thauvin)
+- 当所需的watchdog不健康时警告用户（Nicolas Thauvin）
 
-  When the watchdog device is not writable or missing in required mode, the member cannot be promoted. Added a warning to show the user where to search for this misconfiguration.
+  当watchdog设备在必需模式下不可写或缺失时，成员无法被提升。添加了警告以向用户展示在哪里查找此配置错误。
 
-- Better verbosity for single-user mode recovery (Alexander Kukushkin)
+- 改进单用户模式恢复的详细输出（Alexander Kukushkin）
 
-  If Patroni notices that PostgreSQL wasn't shutdown clearly, in certain cases the crash-recovery is executed by starting Postgres in single-user mode. It could happen that the recovery failed (for example due to the lack of space on disk) but errors were swallowed.
+  如果Patroni注意到PostgreSQL未正常关闭，在某些情况下会通过以单用户模式启动Postgres来执行崩溃恢复。恢复可能失败（例如由于磁盘空间不足），但错误被吞没了。
 
-- Added compatibility with `python-consul2` module (Alexander Kukushkin, Wilfried Roset)
+- 添加与 **`python-consul2`** 模块的兼容性（Alexander Kukushkin、Wilfried Roset）
 
-  The good old `python-consul` is not maintained since a few years, therefore someone created a fork with new features and bug-fixes.
+  老旧的 **`python-consul`** 已数年未维护，因此有人创建了一个包含新功能和错误修复的分支。
 
-- Don't use `bypass_api_service` when running [patronictl](/docs/patroni/patronictl#patronictl) (Alexander Kukushkin)
+- 运行 [patronictl](/docs/patroni/patronictl#patronictl) 时不使用 **`bypass_api_service`**（Alexander Kukushkin）
 
-  When a K8s pod is running in a non-`default` namespace it does not necessarily have enough permissions to query the [kubernetes](/docs/patroni/kubernetes#kubernetes) endpoint. In this case Patroni shows the warning and ignores the `bypass_api_service` setting. In case of [patronictl](/docs/patroni/patronictl#patronictl) the warning was a bit annoying.
+  当K8s Pod在非 **`default`** 命名空间中运行时，它不一定有足够的权限查询 [kubernetes](/docs/patroni/kubernetes#kubernetes) 端点。在这种情况下，Patroni会显示警告并忽略 **`bypass_api_service`** 设置。对于 [patronictl](/docs/patroni/patronictl#patronictl) 来说，这个警告有些烦人。
 
-- Create `raft.data_dir` if it doesn't exists or make sure that it is writable (Mark Mercado)
+- 如果 **`raft.data_dir`** 不存在则创建，或确保其可写（Mark Mercado）
 
-  Improves user-friendliness and usability.
+  改善用户友好性和可用性。
 
-**Bugfixes**
+**错误修复**
 
-- Don't interrupt restart or promote if lost leader lock in pause (Alexander Kukushkin)
+- 在暂停状态下丢失领导者锁时不中断重启或提升（Alexander Kukushkin）
 
-  In pause it is allowed to run postgres as primary without lock.
+  在暂停状态下，允许在没有锁的情况下以主库身份运行Postgres。
 
-- Fixed issue with `shutdown_request()` in the REST API (Nicolas Limage)
+- 修复REST API中 **`shutdown_request()`** 的问题（Nicolas Limage）
 
-  In order to improve handling of SSL connections and delay the handshake until thread is started Patroni overrides a few methods in the `HTTPServer`. The `shutdown_request()` method was forgotten.
+  为改善SSL连接处理并延迟握手直到线程启动，Patroni重写了 **`HTTPServer`** 中的几个方法。**`shutdown_request()`** 方法被遗漏了。
 
-- Fixed issue with sleep time when using Zookeeper (Alexander Kukushkin)
+- 修复使用Zookeeper时睡眠时间的问题（Alexander Kukushkin）
 
-  There were chances that Patroni was sleeping up to twice longer between running HA code.
+  Patroni有可能在HA代码运行之间睡眠长达两倍的时间。
 
-- Fixed invalid `os.symlink()` calls when moving data directory after failed bootstrap (Andrew L'Ecuyer)
+- 修复引导失败后移动数据目录时无效的 **`os.symlink()`** 调用（Andrew L'Ecuyer）
 
-  If the bootstrap failed Patroni is renaming data directory, pg_wal, and all tablespaces. After that it updates symlinks so filesystem remains consistent. The symlink creation was failing due to the `src` and `dst` arguments being swapped.
+  如果引导失败，Patroni会重命名数据目录、pg_wal和所有表空间。之后更新符号链接以保持文件系统一致。符号链接创建失败是因为 **`src`** 和 **`dst`** 参数被交换了。
 
-- Fixed bug in the post_bootstrap() method (Alexander Kukushkin)
+- 修复post_bootstrap()方法中的错误（Alexander Kukushkin）
 
-  If the superuser password wasn't configured Patroni was failing to call the `post_init` script and therefore the whole bootstrap was failing.
+  如果未配置超级用户密码，Patroni无法调用 **`post_init`** 脚本，因此整个引导过程失败。
 
-- Fixed an issues with pg_rewind in the standby cluster (Alexander Kukushkin)
+- 修复备用集群中pg_rewind的问题（Alexander Kukushkin）
 
-  If the superuser name is different from Postgres, the `pg_rewind` in the standby cluster was failing because the connection string didn't contain the database name.
+  如果超级用户名称与Postgres不同，备用集群中的 **`pg_rewind`** 会因为连接字符串中不包含数据库名称而失败。
 
-- Exit only if authentication with Etcd v3 explicitly failed (Alexander Kukushkin)
+- 仅在Etcd v3认证明确失败时才退出（Alexander Kukushkin）
 
-  On start Patroni performs discovery of Etcd cluster topology and authenticates if it is necessarily. It could happen that one of etcd servers is not accessible, Patroni was trying to perform authentication on this server and failing instead of retrying with the next node.
+  启动时Patroni执行Etcd集群拓扑发现并在必要时进行认证。可能其中一台etcd服务器不可访问，Patroni尝试在此服务器上进行认证并失败，而不是重试下一个节点。
 
-- Handle case with psutil cmdline() returning empty list (Alexander Kukushkin)
+- 处理psutil cmdline()返回空列表的情况（Alexander Kukushkin）
 
-  Zombie processes are still postmasters children, but they don't have cmdline()
+  僵尸进程仍然是postmaster的子进程，但它们没有cmdline()。
 
-- Treat `PATRONI_KUBERNETES_USE_ENDPOINTS` environment variable as boolean (Alexander Kukushkin)
+- 将 **`PATRONI_KUBERNETES_USE_ENDPOINTS`** 环境变量视为布尔值（Alexander Kukushkin）
 
-  Not doing so was making impossible disabling `kubernetes.use_endpoints` via environment.
+  不这样做会导致无法通过环境变量禁用 **`kubernetes.use_endpoints`**。
 
-- Improve handling of concurrent endpoint update errors (Alexander Kukushkin)
+- 改进并发端点更新错误的处理（Alexander Kukushkin）
 
-  Patroni will explicitly query the current endpoint object, verify that the current pod still holds the leader lock and repeat the update.
+  Patroni将显式查询当前端点对象，验证当前Pod仍持有领导者锁，然后重复更新。
 
 --------
 
 ## Version 2.0.1
 
-Released 2020-10-01
+发布于 2020-10-01
 
-**New features**
+**新特性**
 
-- Use `more` as pager in `patronictl edit-config` if `less` is not available (Pavel Golub)
+- 在 **`patronictl edit-config`** 中，如果 **`less`** 不可用，则使用 **`more`** 作为分页器（Pavel Golub）
 
-  On Windows it would be the `more.com`. In addition to that, `cdiff` was changed to `ydiff` in `requirements.txt`, but [patronictl](/docs/patroni/patronictl#patronictl) still supports both for compatibility.
+  在Windows上将使用 **`more.com`**。此外，**`requirements.txt`** 中的 **`cdiff`** 已更改为 **`ydiff`**，但 [patronictl](/docs/patroni/patronictl#patronictl) 仍然为兼容性同时支持两者。
 
-- Added support of `raft` `bind_addr` and `password` (Alexander Kukushkin)
+- 添加 **`raft`** 的 **`bind_addr`** 和 **`password`** 支持（Alexander Kukushkin）
 
-  `raft.bind_addr` might be useful when running behind NAT. `raft.password` enables traffic encryption (requires the `cryptography` module).
+  **`raft.bind_addr`** 在NAT后运行时可能很有用。**`raft.password`** 启用流量加密（需要 **`cryptography`** 模块）。
 
-- Added `sslpassword` connection parameter support (Kostiantyn Nemchenko)
+- 添加 **`sslpassword`** 连接参数支持（Kostiantyn Nemchenko）
 
-  The connection parameter was introduced in PostgreSQL 13.
+  该连接参数在PostgreSQL 13中引入。
 
-**Stability improvements**
+**稳定性改进**
 
-- Changed the behavior in pause (Alexander Kukushkin)
+- 更改暂停模式下的行为（Alexander Kukushkin）
 
-  1.  Patroni will not call the `bootstrap` method if the `PGDATA` directory is missing/empty.
-  2.  Patroni will not exit on sysid mismatch in pause, only log a warning.
-  3.  The node will not try to grab the leader key in pause mode if Postgres is running not in recovery (accepting writes) but the sysid doesn't match with the initialize key.
+  1. 如果 **`PGDATA`** 目录缺失/为空，Patroni将不会调用 **`bootstrap`** 方法。
+  2. Patroni在暂停模式下不会因sysid不匹配而退出，仅记录警告。
+  3. 如果Postgres未在恢复模式下运行（接受写入）但sysid与初始化键不匹配，节点将不会在暂停模式下尝试获取领导者键。
 
-- Apply `master_start_timeout` when executing crash recovery (Alexander Kukushkin)
+- 执行崩溃恢复时应用 **`master_start_timeout`**（Alexander Kukushkin）
 
-  If Postgres crashed on the leader node, Patroni does a crash-recovery by starting Postgres in single-user mode. During the crash-recovery the leader lock is being updated. If the crash-recovery didn't finish in `master_start_timeout` seconds, Patroni will stop it forcefully and release the leader lock.
+  如果Postgres在领导者节点上崩溃，Patroni通过以单用户模式启动Postgres来执行崩溃恢复。在崩溃恢复期间，领导者锁会持续更新。如果崩溃恢复未在 **`master_start_timeout`** 秒内完成，Patroni将强制停止并释放领导者锁。
 
-- Removed the `secure` extra from the `urllib3` requirements (Alexander Kukushkin)
+- 从 **`urllib3`** 依赖中移除 **`secure`** 额外项（Alexander Kukushkin）
 
-  The only reason for adding it there was the `ipaddress` dependency for python 2.7.
+  添加它的唯一原因是Python 2.7的 **`ipaddress`** 依赖。
 
-**Bugfixes**
+**错误修复**
 
-- Fixed a bug in the `Kubernetes.update_leader()` (Alexander Kukushkin)
+- 修复 **`Kubernetes.update_leader()`** 中的错误（Alexander Kukushkin）
 
-  An unhandled exception was preventing demoting the primary when the update of the leader object failed.
+  一个未处理的异常阻止了在更新领导者对象失败时降级主库。
 
-- Fixed hanging [patronictl](/docs/patroni/patronictl#patronictl) when RAFT is being used (Alexander Kukushkin)
+- 修复使用RAFT时 [patronictl](/docs/patroni/patronictl#patronictl) 挂起的问题（Alexander Kukushkin）
 
-  When using [patronictl](/docs/patroni/patronictl#patronictl) with Patroni config, `self_addr` should be added to the `partner_addrs`.
+  使用Patroni配置运行 [patronictl](/docs/patroni/patronictl#patronictl) 时，**`self_addr`** 应被添加到 **`partner_addrs`** 中。
 
-- Fixed bug in `get_guc_value()` (Alexander Kukushkin)
+- 修复 **`get_guc_value()`** 中的错误（Alexander Kukushkin）
 
-  Patroni was failing to get the value of `restore_command` on PostgreSQL 12, therefore fetching missing WALs for `pg_rewind` didn't work.
+  Patroni无法在PostgreSQL 12上获取 **`restore_command`** 的值，因此为 **`pg_rewind`** 获取缺失WAL的功能不起作用。
 
 --------
-
 ## Version 2.0.0
 
-Released 2020-09-02
+发布于 2020-09-02
 
-This version enhances compatibility with PostgreSQL 13, adds support of multiple synchronous standbys, has significant improvements in handling of `pg_rewind`, adds support of Etcd v3 and Patroni on pure RAFT (without Etcd, Consul, or Zookeeper), and makes it possible to optionally call the `pre_promote` (fencing) script.
+此版本增强了与 PostgreSQL 13 的兼容性，添加了对多个同步备用节点的支持，对 **`pg_rewind`** 的处理进行了重大改进，添加了对 Etcd v3 和纯 RAFT 模式下 Patroni（不依赖 Etcd、Consul 或 Zookeeper）的支持，并使得可选调用 **`pre_promote`**（隔离）脚本成为可能。
 
-**PostgreSQL 13 support**
+**PostgreSQL 13 支持**
 
-- Don't fire `on_reload` when promoting to `standby_leader` on PostgreSQL 13+ (Alexander Kukushkin)
+- 提升为 **`standby_leader`** 时不触发 **`on_reload`**，适用于 PostgreSQL 13+（Alexander Kukushkin）
 
-  When promoting to `standby_leader` we change `primary_conninfo`, update the role and reload Postgres. Since `on_role_change` and `on_reload` effectively duplicate each other, Patroni will call only `on_role_change`.
+  提升为 **`standby_leader`** 时我们会更改 **`primary_conninfo`**，更新角色并重新加载 Postgres。由于 **`on_role_change`** 和 **`on_reload`** 实际上是重复的，Patroni 将只调用 **`on_role_change`**。
 
-- Added support for `gssencmode` and `channel_binding` connection parameters (Alexander Kukushkin)
+- 添加对 **`gssencmode`** 和 **`channel_binding`** 连接参数的支持（Alexander Kukushkin）
 
-  PostgreSQL 12 introduced `gssencmode` and 13 `channel_binding` connection parameters and now they can be used if defined in the `postgresql.authentication` section.
+  PostgreSQL 12 引入了 **`gssencmode`**，13 引入了 **`channel_binding`** 连接参数，如果在 **`postgresql.authentication`** 部分中定义，现在可以使用它们。
 
-- Handle renaming of `wal_keep_segments` to `wal_keep_size` (Alexander Kukushkin)
+- 处理 **`wal_keep_segments`** 重命名为 **`wal_keep_size`** 的情况（Alexander Kukushkin）
 
-  In case of misconfiguration (`wal_keep_segments` on 13 and `wal_keep_size` on older versions) Patroni will automatically adjust the configuration.
+  在配置错误的情况下（在 13 上使用 **`wal_keep_segments`** 或在旧版本上使用 **`wal_keep_size`**），Patroni 将自动调整配置。
 
-- Use `pg_rewind` with `--restore-target-wal` on 13 if possible (Alexander Kukushkin)
+- 在 13 上尽可能使用带有 **`--restore-target-wal`** 选项的 **`pg_rewind`**（Alexander Kukushkin）
 
-  On PostgreSQL 13 Patroni checks if `restore_command` is configured and tells `pg_rewind` to use it.
+  在 PostgreSQL 13 上，Patroni 检查是否配置了 **`restore_command`** 并告知 **`pg_rewind`** 使用它。
 
-**New features**
+**新特性**
 
-- \[BETA\] Implemented support of Patroni on pure RAFT (Alexander Kukushkin)
+- \[BETA\] 实现纯 RAFT 模式下的 Patroni 支持（Alexander Kukushkin）
 
-  This makes it possible to run Patroni without 3rd party dependencies, like Etcd, Consul, or Zookeeper. For HA you will have to run either three Patroni nodes or two nodes with Patroni and one node with `patroni_raft_controller`. For more information please check the [documentation](/docs/patroni/config/yaml#raft_settings).
+  这使得可以在没有第三方依赖（如 Etcd、Consul 或 Zookeeper）的情况下运行 Patroni。为实现高可用，您需要运行三个 Patroni 节点，或者两个 Patroni 节点加一个运行 **`patroni_raft_controller`** 的节点。更多信息请参阅 [**文档**](/docs/patroni/config/yaml#raft_settings)。
 
-- \[BETA\] Implemented support for Etcd v3 protocol via gPRC-gateway (Alexander Kukushkin)
+- \[BETA\] 通过 gRPC-gateway 实现对 Etcd v3 协议的支持（Alexander Kukushkin）
 
-  Etcd 3.0 was released more than four years ago and Etcd 3.4 has v2 disabled by default. There are also chances that v2 will be completely removed from Etcd, therefore we implemented support of Etcd v3 in Patroni. In order to start using it you have to explicitly create the `etcd3` section is the Patroni configuration file.
+  Etcd 3.0 在四年多前发布，Etcd 3.4 默认禁用了 v2。v2 也有可能从 Etcd 中被完全移除，因此我们在 Patroni 中实现了对 Etcd v3 的支持。要开始使用它，您必须在 Patroni 配置文件中显式创建 **`etcd3`** 部分。
 
-- Supporting multiple synchronous standbys (Krishna Sarabu)
+- 支持多个同步备用节点（Krishna Sarabu）
 
-  It allows running a cluster with more than one synchronous replicas. The maximum number of synchronous replicas is controlled by the new parameter `synchronous_node_count`. It is set to 1 by default and has no effect when the [synchronous_mode](/docs/patroni/replication_modes#synchronous_mode) is set to `off`.
+  允许运行具有多个同步副本的集群。同步副本的最大数量由新参数 **`synchronous_node_count`** 控制。它默认设置为 1，当 [`synchronous_mode`](/docs/patroni/replication_modes#synchronous_mode) 设置为 **`off`** 时无效。
 
-- Added possibility to call the `pre_promote` script (Sergey Dudoladov)
+- 添加调用 **`pre_promote`** 脚本的可能性（Sergey Dudoladov）
 
-  Unlike callbacks, the `pre_promote` script is called synchronously after acquiring the leader lock, but before promoting Postgres. If the script fails or exits with a non-zero exitcode, the current node will release the leader lock.
+  与回调不同，**`pre_promote`** 脚本在获取主节点锁之后、提升 Postgres 之前同步调用。如果脚本失败或以非零退出码退出，当前节点将释放主节点锁。
 
-- Added support for configuration directories (Floris van Nee)
+- 添加对配置目录的支持（Floris van Nee）
 
-  YAML files in the directory loaded and applied in alphabetical order.
+  目录中的 YAML 文件按字母顺序加载和应用。
 
-- Advanced validation of PostgreSQL parameters (Alexander Kukushkin)
+- PostgreSQL 参数的高级验证（Alexander Kukushkin）
 
-  In case the specific parameter is not supported by the current PostgreSQL version or when its value is incorrect, Patroni will remove the parameter completely or try to fix the value.
+  如果特定参数不受当前 PostgreSQL 版本支持或其值不正确，Patroni 将完全移除该参数或尝试修复该值。
 
-- Wake up the main thread when the forced checkpoint after promote completed (Alexander Kukushkin)
+- 强制检查点完成后唤醒主线程（Alexander Kukushkin）
 
-  Replicas are waiting for checkpoint indication via member key of the leader in DCS. The key is normally updated only once per HA loop. Without waking the main thread up, replicas will have to wait up to `loop_wait` seconds longer than necessary.
+  副本通过 DCS 中主节点的成员键等待检查点指示。该键通常仅每个 HA 循环更新一次。不唤醒主线程的话，副本将不得不多等待最多 **`loop_wait`** 秒。
 
-- Use of `pg_stat_wal_receiver` view on 9.6+ (Alexander Kukushkin)
+- 在 9.6+ 上使用 **`pg_stat_wal_receiver`** 视图（Alexander Kukushkin）
 
-  The view contains up-to-date values of `primary_conninfo` and `primary_slot_name`, while the contents of `recovery.conf` could be stale.
+  该视图包含 **`primary_conninfo`** 和 **`primary_slot_name`** 的最新值，而 **`recovery.conf`** 的内容可能已过期。
 
-- Improved handing of IPv6 addresses in the Patroni config file (Mateusz Kowalski)
+- 改进 Patroni 配置文件中 IPv6 地址的处理（Mateusz Kowalski）
 
-  The IPv6 address is supposed to be enclosed into square brackets, but Patroni was expecting to get it plain. Now both formats are supported.
+  IPv6 地址应该用方括号括起来，但 Patroni 之前期望的是纯格式。现在两种格式都受支持。
 
-- Added Consul `service_tags` configuration parameter (Robert Edström)
+- 添加 Consul **`service_tags`** 配置参数（Robert Edström）
 
-  They are useful for dynamic service discovery, for example by load balancers.
+  它们对于动态服务发现很有用，例如供负载均衡器使用。
 
-- Implemented SSL support for Zookeeper (Kostiantyn Nemchenko)
+- 为 Zookeeper 实现 SSL 支持（Kostiantyn Nemchenko）
 
-  It requires `kazoo>=2.6.0`.
+  需要 **`kazoo>=2.6.0`**。
 
-- Implemented `no_params` option for custom bootstrap method (Kostiantyn Nemchenko)
+- 为自定义引导方法实现 **`no_params`** 选项（Kostiantyn Nemchenko）
 
-  It allows calling `wal-g`, `pgBackRest` and other backup tools without wrapping them into shell scripts.
+  允许直接调用 **`wal-g`**、**`pgBackRest`** 和其他备份工具，无需将它们包装在 shell 脚本中。
 
-- Move WAL and tablespaces after a failed init (Feike Steenbergen)
+- 初始化失败后移动 WAL 和表空间（Feike Steenbergen）
 
-  When doing `reinit`, Patroni was already removing not only `PGDATA` but also the symlinked WAL directory and tablespaces. Now the `move_data_directory()` method will do a similar job, i.e. rename WAL directory and tablespaces and update symlinks in PGDATA.
+  执行 **`reinit`** 时，Patroni 已经在移除 **`PGDATA`** 的同时移除符号链接的 WAL 目录和表空间。现在 **`move_data_directory()`** 方法将执行类似的工作，即重命名 WAL 目录和表空间并更新 PGDATA 中的符号链接。
 
-**Improved in pg_rewind support**
+**`改进 pg_rewind 支持`**
 
-- Improved timeline divergence check (Alexander Kukushkin)
+- 改进时间线分歧检查（Alexander Kukushkin）
 
-  We don't need to rewind when the replayed location on the replica is not ahead of the switchpoint or the end of the checkpoint record on the former primary is the same as the switchpoint. In order to get the end of the checkpoint record we use `pg_waldump` and parse its output.
+  当副本上的重放位置未超过切换点，或者旧主节点上检查点记录的结尾与切换点相同时，我们不需要执行 rewind。为了获取检查点记录的结尾，我们使用 **`pg_waldump`** 并解析其输出。
 
-- Try to fetch missing WAL if `pg_rewind` complains about it (Alexander Kukushkin)
+- 如果 **`pg_rewind`** 报告缺少 WAL，尝试获取缺失的 WAL（Alexander Kukushkin）
 
-  It could happen that the WAL segment required for `pg_rewind` doesn't exist in the `pg_wal` directory anymore and therefore `pg_rewind` can't find the checkpoint location before the divergence point. Starting from PostgreSQL 13 `pg_rewind` could use `restore_command` for fetching missing WALs. For older PostgreSQL versions Patroni parses the errors of a failed rewind attempt and tries to fetch the missing WAL by calling the `restore_command` on its own.
+  **`pg_rewind`** 所需的 WAL 段可能已不存在于 **`pg_wal`** 目录中，因此 **`pg_rewind`** 无法找到分歧点之前的检查点位置。从 PostgreSQL 13 开始，**`pg_rewind`** 可以使用 **`restore_command`** 来获取缺失的 WAL。对于较旧的 PostgreSQL 版本，Patroni 解析失败的 rewind 尝试的错误信息，并尝试通过自行调用 **`restore_command`** 来获取缺失的 WAL。
 
-- Detect a new timeline in the standby cluster and trigger rewind/reinitialize if necessary (Alexander Kukushkin)
+- 检测备用集群中的新时间线，并在必要时触发 rewind/重新初始化（Alexander Kukushkin）
 
-  The [standby_cluster](/docs/patroni/standby_cluster#standby_cluster) is decoupled from the primary cluster and therefore doesn't immediately know about leader elections and timeline switches. In order to detect the fact, the `standby_leader` periodically checks for new history files in `pg_wal`.
+  [`standby_cluster`](/docs/patroni/standby_cluster#standby_cluster) 与主集群解耦，因此不会立即知道主节点选举和时间线切换。为了检测这一事实，**`standby_leader`** 会定期检查 **`pg_wal`** 中的新历史文件。
 
-- Shorten and beautify history log output (Alexander Kukushkin)
+- 缩短和美化历史日志输出（Alexander Kukushkin）
 
-  When Patroni is trying to figure out the necessity of `pg_rewind`, it could write the content of the history file from the primary into the log. The history file is growing with every failover/switchover and eventually starts taking up too many lines, most of which are not so useful. Instead of showing the raw data, Patroni will show only 3 lines before the current replica timeline and 2 lines after.
+  当 Patroni 尝试确定是否需要 **`pg_rewind`** 时，它可能会将主节点的历史文件内容写入日志。历史文件随着每次故障转移/切换而增长，最终占据太多行，其中大部分并不是很有用。Patroni 现在不再显示原始数据，而是只显示当前副本时间线之前的 3 行和之后的 2 行。
 
-**Improvements on K8s**
+**K8s 改进**
 
-- Get rid of [kubernetes](/docs/patroni/kubernetes#kubernetes) python module (Alexander Kukushkin)
+- 去除 [kubernetes](/docs/patroni/kubernetes#kubernetes) Python 模块依赖（Alexander Kukushkin）
 
-  The official python kubernetes client contains a lot of auto-generated code and therefore very heavy. Patroni uses only a small fraction of K8s API endpoints and implementing support for them wasn't hard.
+  官方 Python kubernetes 客户端包含大量自动生成的代码，因此非常臃肿。Patroni 只使用 K8s API 端点的一小部分，实现对它们的支持并不困难。
 
-- Make it possible to bypass the [kubernetes](/docs/patroni/kubernetes#kubernetes) service (Alexander Kukushkin)
+- 使绕过 [kubernetes](/docs/patroni/kubernetes#kubernetes) 服务成为可能（Alexander Kukushkin）
 
-  When running on K8s, Patroni is usually communicating with the K8s API via the [kubernetes](/docs/patroni/kubernetes#kubernetes) service, the address of which is exposed in the `KUBERNETES_SERVICE_HOST` environment variable. Like any other service, the [kubernetes](/docs/patroni/kubernetes#kubernetes) service is handled by `kube-proxy`, which in turn, depending on the configuration, is either relying on a userspace program or `iptables` for traffic routing. Skipping the intermediate component and connecting directly to the K8s master nodes allows us to implement a better retry strategy and mitigate risks of demoting Postgres when K8s master nodes are upgraded.
+  在 K8s 上运行时，Patroni 通常通过 [kubernetes](/docs/patroni/kubernetes#kubernetes) 服务与 K8s API 通信，其地址通过 **`KUBERNETES_SERVICE_HOST`** 环境变量公开。与其他服务一样，[kubernetes](/docs/patroni/kubernetes#kubernetes) 服务由 **`kube-proxy`** 处理，后者根据配置依赖用户空间程序或 **`iptables`** 进行流量路由。跳过中间组件直接连接到 K8s 主节点，使我们能够实现更好的重试策略，并在 K8s 主节点升级时降低 Postgres 降级的风险。
 
-- Sync HA loops of all pods of a Patroni cluster (Alexander Kukushkin)
+- 同步 Patroni 集群所有 Pod 的 HA 循环（Alexander Kukushkin）
 
-  Not doing so was increasing failure detection time from `ttl` to `ttl + loop_wait`.
+  不这样做会将故障检测时间从 **`ttl`** 增加到 **`ttl + loop_wait`**。
 
-- Populate `references` and `nodename` in the subsets addresses on K8s (Alexander Kukushkin)
+- 在 K8s 上填充子集地址中的 **`references`** 和 **`nodename`**（Alexander Kukushkin）
 
-  Some load-balancers are relying on this information.
+  一些负载均衡器依赖此信息。
 
-- Fix possible race conditions in the `update_leader()` (Alexander Kukushkin)
+- 修复 **`update_leader()`** 中可能的竞态条件（Alexander Kukushkin）
 
-  The concurrent update of the leader configmap or endpoint happening outside of Patroni might cause the `update_leader()` call to fail. In this case Patroni rechecks that the current node is still owning the leader lock and repeats the update.
+  在 Patroni 外部发生的 leader configmap 或 endpoint 的并发更新可能导致 **`update_leader()`** 调用失败。在这种情况下，Patroni 会重新检查当前节点是否仍持有主节点锁并重复更新。
 
-- Explicitly disallow patching non-existent config (Alexander Kukushkin)
+- 显式禁止修补不存在的配置（Alexander Kukushkin）
 
-  For DCS other than [kubernetes](/docs/patroni/kubernetes#kubernetes) the PATCH call is failing with an exception due to `cluster.config` being `None`, but on Kubernetes it was happily creating the config annotation and preventing writing bootstrap configuration after the bootstrap finished.
+  对于 [kubernetes](/docs/patroni/kubernetes#kubernetes) 以外的 DCS，PATCH 调用会因为 **`cluster.config`** 为 **`None`** 而引发异常失败，但在 Kubernetes 上它会愉快地创建配置注解并阻止在引导完成后写入引导配置。
 
-- Fix bug in [pause](/docs/patroni/pause#pause) (Alexander Kukushkin)
+- 修复 [暂停](/docs/patroni/pause#pause) 中的错误（Alexander Kukushkin）
 
-  Replicas were removing `primary_conninfo` and restarting Postgres when the leader key was absent, but they should do nothing.
+  当主节点键不存在时，副本会删除 **`primary_conninfo`** 并重启 Postgres，但它们应该什么都不做。
 
-**Improvements in REST API**
+**REST API 改进**
 
-- Defer TLS handshake until worker thread has started (Alexander Kukushkin, Ben Harris)
+- 将 TLS 握手延迟到工作线程启动后（Alexander Kukushkin、Ben Harris）
 
-  If the TLS handshake was done in the API thread and the client-side didn't send any data, the API thread was blocked (risking DoS).
+  如果 TLS 握手在 API 线程中完成且客户端未发送任何数据，API 线程将被阻塞（存在 DoS 风险）。
 
-- Check `basic-auth` independently from client certificate in REST API (Alexander Kukushkin)
+- 在 REST API 中独立于客户端证书检查 **`basic-auth`**（Alexander Kukushkin）
 
-  Previously only the client certificate was validated. Doing two checks independently is an absolutely valid use-case.
+  此前只验证客户端证书。独立执行两项检查是完全有效的用例。
 
-- Write double `CRLF` after HTTP headers of the `OPTIONS` request (Sergey Burladyan)
+- 在 **`OPTIONS`** 请求的 HTTP 头后写入双 **`CRLF`**（Sergey Burladyan）
 
-  HAProxy was happy with a single `CRLF`, while Consul health-check complained about broken connection and unexpected EOF.
+  HAProxy 对单个 **`CRLF`** 没有问题，但 Consul 健康检查会抱怨连接断开和意外的 EOF。
 
-- `GET /cluster` was showing stale members info for Zookeeper (Alexander Kukushkin)
+- **`GET /cluster`** 对 Zookeeper 显示过期的成员信息（Alexander Kukushkin）
 
-  The endpoint was using the Patroni internal cluster view. For Patroni itself it didn't cause any issues, but when exposed to the outside world we need to show up-to-date information, especially replication lag.
+  该端点使用的是 Patroni 内部集群视图。对于 Patroni 本身不会造成任何问题，但当暴露给外部时，我们需要显示最新的信息，特别是复制延迟。
 
-- Fixed health-checks for standby cluster (Alexander Kukushkin)
+- 修复备用集群的健康检查（Alexander Kukushkin）
 
-  The `GET /standby-leader` for a master and `GET /master` for a `standby_leader` were incorrectly responding with 200.
+  对主节点的 **`GET /standby-leader`** 和对 **`standby_leader`** 的 **`GET /master`** 错误地响应 200。
 
-- Implemented `DELETE /switchover` (Alexander Kukushkin)
+- 实现 **`DELETE /switchover`**（Alexander Kukushkin）
 
-  The REST API call deletes the scheduled switchover.
+  此 REST API 调用删除已计划的切换。
 
-- Created `/readiness` and `/liveness` endpoints (Alexander Kukushkin)
+- 创建 **`/readiness`** 和 **`/liveness`** 端点（Alexander Kukushkin）
 
-  They could be useful to eliminate "unhealthy" pods from subsets addresses when the K8s service is used with label selectors.
+  当 K8s 服务使用标签选择器时，它们可用于从子集地址中排除"不健康"的 Pod。
 
-- Enhanced `GET /replica` and `GET /async` REST API health-checks (Krishna Sarabu, Alexander Kukushkin)
+- 增强 **`GET /replica`** 和 **`GET /async`** REST API 健康检查（Krishna Sarabu、Alexander Kukushkin）
 
-  Checks now support optional keyword `?lag=<max-lag>` and will respond with 200 only if the lag is smaller than the supplied value. If relying on this feature please keep in mind that information about WAL position on the leader is updated only every `loop_wait` seconds!
+  检查现在支持可选的关键字 **`?lag=<max-lag>`**，仅当延迟小于提供的值时才响应 200。如果依赖此功能，请注意关于主节点 WAL 位置的信息仅每 **`loop_wait`** 秒更新一次！
 
-- Added support for user defined HTTP headers in the REST API response (Yogesh Sharma)
+- 添加对 REST API 响应中用户自定义 HTTP 头的支持（Yogesh Sharma）
 
-  This feature might be useful if requests are made from a browser.
+  如果请求来自浏览器，此功能可能很有用。
 
-**Improvements in patronictl**
+**patronictl 改进**
 
-- Don't try to call non-existing leader in `patronictl pause` (Alexander Kukushkin)
+- 在 **`patronictl pause`** 中不要尝试调用不存在的 leader（Alexander Kukushkin）
 
-  While pausing a cluster without a leader on K8s, [patronictl](/docs/patroni/patronictl#patronictl) was showing warnings that member "None" could not be accessed.
+  在 K8s 上暂停没有 leader 的集群时，[`patronictl`](/docs/patroni/patronictl#patronictl) 会显示成员 "None" 无法访问的警告。
 
-- Handle the case when member `conn_url` is missing (Alexander Kukushkin)
+- 处理成员 **`conn_url`** 缺失的情况（Alexander Kukushkin）
 
-  On K8s it is possible that the pod doesn't have the necessary annotations because Patroni is not yet running. It was making [patronictl](/docs/patroni/patronictl#patronictl) to fail.
+  在 K8s 上，Pod 可能因为 Patroni 尚未运行而没有必要的注解。这会导致 [`patronictl`](/docs/patroni/patronictl#patronictl) 失败。
 
-- Added ability to print ASCII cluster topology (Maxim Fedotov, Alexander Kukushkin)
+- 添加打印 ASCII 集群拓扑的能力（Maxim Fedotov、Alexander Kukushkin）
 
-  It is very useful to get overview of the cluster with cascading replication.
+  对于查看具有级联复制的集群概览非常有用。
 
-- Implement `patronictl flush switchover` (Alexander Kukushkin)
+- 实现 **`patronictl flush switchover`**（Alexander Kukushkin）
 
-  Before that `patronictl flush` only supported cancelling scheduled restarts.
+  在此之前，**`patronictl flush`** 仅支持取消计划的重启。
 
-**Bugfixes**
+**错误修复**
 
-- Attribute error during bootstrap of the cluster with existing PGDATA (Krishna Sarabu)
+- 使用现有 PGDATA 引导集群时的属性错误（Krishna Sarabu）
 
-  When trying to create/update the `/history` key, Patroni was accessing the `ClusterConfig` object which wasn't created in DCS yet.
+  在尝试创建/更新 **`/history`** 键时，Patroni 访问了尚未在 DCS 中创建的 **`ClusterConfig`** 对象。
 
-- Improved exception handling in Consul (Alexander Kukushkin)
+- 改进 Consul 中的异常处理（Alexander Kukushkin）
 
-  Unhandled exception in the `touch_member()` method caused the whole Patroni process to crash.
+  **`touch_member()`** 方法中未处理的异常导致整个 Patroni 进程崩溃。
 
-- Enforce `synchronous_commit=local` for the `post_init` script (Alexander Kukushkin)
+- 对 **`post_init`** 脚本强制执行 **`synchronous_commit=local`**（Alexander Kukushkin）
 
-  Patroni was already doing that when creating users (`replication`, `rewind`), but missing it in the case of `post_init` was an oversight. As a result, if the script wasn't doing it internally on it's own the bootstrap in [synchronous_mode](/docs/patroni/replication_modes#synchronous_mode) wasn't able to finish.
+  Patroni 在创建用户（**`replication`**、**`rewind`**）时已经这样做了，但在 **`post_init`** 的情况下遗漏了。因此，如果脚本本身没有在内部执行此操作，[`synchronous_mode`](/docs/patroni/replication_modes#synchronous_mode) 下的引导将无法完成。
 
-- Increased `maxsize` in the Consul pool manager (ponvenkates)
+- 增加 Consul 连接池管理器中的 **`maxsize`**（ponvenkates）
 
-  With the default `size=1` some warnings were generated.
+  使用默认的 **`size=1`** 会生成一些警告。
 
-- Patroni was wrongly reporting Postgres as running (Alexander Kukushkin)
+- Patroni 错误地报告 Postgres 正在运行（Alexander Kukushkin）
 
-  The state wasn't updated when for example Postgres crashed due to an out-of-disk error.
+  例如当 Postgres 因磁盘空间不足错误而崩溃时，状态未被更新。
 
-- Put `*` into `pgpass` instead of missing or empty values (Alexander Kukushkin)
+- 在 **`pgpass`** 中用 **`*`** 替代缺失或空的值（Alexander Kukushkin）
 
-  If for example the `standby_cluster.port` is not specified, the `pgpass` file was incorrectly generated.
+  例如当未指定 **`standby_cluster.port`** 时，**`pgpass`** 文件生成不正确。
 
-- Skip physical replication slot creation on the leader node with special characters (Krishna Sarabu)
+- 跳过为名称包含特殊字符的主节点创建物理复制槽（Krishna Sarabu）
 
-  Patroni appeared to be creating a dormant slot (when `slots` defined) for the leader node when the name contained special chars such as '-' (for e.g. "abc-us-1").
+  当名称包含特殊字符（如 '-'，例如 "abc-us-1"）时，Patroni 似乎在为主节点创建休眠槽（当定义了 **`slots`** 时）。
 
-- Avoid removing non-existent `pg_hba.conf` in the custom bootstrap (Krishna Sarabu)
+- 避免在自定义引导中删除不存在的 **`pg_hba.conf`**（Krishna Sarabu）
 
-  Patroni was failing if `pg_hba.conf` happened to be located outside of the `pgdata` dir after custom bootstrap.
+  如果自定义引导后 **`pg_hba.conf`** 恰好位于 **`pgdata`** 目录之外，Patroni 会失败。
 
 --------
 
 ## Version 1.6.5
 
-Released 2020-08-23
+发布于 2020-08-23
 
-**New features**
+**新特性**
 
-- Master stop timeout (Krishna Sarabu)
+- 主节点停止超时（Krishna Sarabu）
 
-  The number of seconds Patroni is allowed to wait when stopping Postgres. Effective only when [synchronous_mode](/docs/patroni/replication_modes#synchronous_mode) is enabled. When set to value greater than 0 and the [synchronous_mode](/docs/patroni/replication_modes#synchronous_mode) is enabled, Patroni sends `SIGKILL` to the postmaster if the stop operation is running for more than the value set by `master_stop_timeout`. Set the value according to your durability/availability tradeoff. If the parameter is not set or set to non-positive value, `master_stop_timeout` does not have an effect.
+  Patroni 在停止 Postgres 时允许等待的秒数。仅在启用 [`synchronous_mode`](/docs/patroni/replication_modes#synchronous_mode) 时有效。当设置为大于 0 的值且 [`synchronous_mode`](/docs/patroni/replication_modes#synchronous_mode) 已启用时，如果停止操作运行时间超过 **`master_stop_timeout`** 设置的值，Patroni 将向 postmaster 发送 **`SIGKILL`**。请根据您的持久性/可用性权衡来设置该值。如果未设置此参数或设置为非正值，**`master_stop_timeout`** 不会生效。
 
-- Don't create permanent physical slot with name of the primary (Alexander Kukushkin)
+- 不为主节点名称创建永久物理槽（Alexander Kukushkin）
 
-  It is a common problem that the primary recycles WAL segments while the replica is down. Now we have a good solution for static clusters, with a fixed number of nodes and names that never change. You just need to list the names of all nodes in the `slots` so the primary will not remove the slot when the node is down (not registered in DCS).
+  一个常见问题是当副本宕机时主节点回收 WAL 段。现在我们为静态集群提供了一个好的解决方案，即节点数量固定且名称永不改变的集群。您只需在 **`slots`** 中列出所有节点的名称，这样当节点宕机（未在 DCS 中注册）时主节点就不会移除该槽。
 
-- First draft of Config Validator (Igor Yanchenko)
+- 配置验证器的初步版本（Igor Yanchenko）
 
-  Use `patroni --validate-config patroni.yaml` in order to validate Patroni configuration.
+  使用 **`patroni --validate-config patroni.yaml`** 来验证 Patroni 配置。
 
-- Possibility to configure max length of timelines history (Krishna Sarabu)
+- 可配置时间线历史最大长度的可能性（Krishna Sarabu）
 
-  Patroni writes the history of failovers/switchovers into the `/history` key in DCS. Over time the size of this key becomes big, but in most cases only the last few lines are interesting. The `max_timelines_history` parameter allows to specify the maximum number of timeline history items to be kept in DCS.
+  Patroni 将故障转移/切换的历史记录写入 DCS 中的 **`/history`** 键。随着时间推移，该键的大小会变大，但大多数情况下只有最后几行是有意义的。**`max_timelines_history`** 参数允许指定在 DCS 中保留的最大时间线历史条目数。
 
-- Kazoo 2.7.0 compatibility (Danyal Prout)
+- Kazoo 2.7.0 兼容性（Danyal Prout）
 
-  Some non-public methods in Kazoo changed their signatures, but Patroni was relying on them.
+  Kazoo 中一些非公开方法更改了签名，但 Patroni 依赖于它们。
 
-**Improvements in patronictl**
+**patronictl 改进**
 
-- Show member tags (Kostiantyn Nemchenko, Alexander Kukushkin)
+- 显示成员标签（Kostiantyn Nemchenko、Alexander Kukushkin）
 
-  Tags are configured individually for every node and there was no easy way to get an overview of them
+  标签是为每个节点单独配置的，此前没有简便方法来查看它们的概览。
 
-- Improve members output (Alexander Kukushkin)
+- 改进成员输出（Alexander Kukushkin）
 
-  The redundant cluster name won't be shown anymore on every line, only in the table header.
+  冗余的集群名称不再在每行显示，仅在表头中显示。
 
 ``` bash
 $ patronictl list
@@ -2050,1632 +2042,1628 @@ $ patronictl list
 +-------------+----------------+--------+---------+----+-----------+---------------------+
 ```
 
-- Fail if a config file is specified explicitly but not found (Kaarel Moppel)
+- 显式指定配置文件但未找到时报错（Kaarel Moppel）
 
-  Previously [patronictl](/docs/patroni/patronictl#patronictl) was only reporting a `DEBUG` message.
+  此前 [`patronictl`](/docs/patroni/patronictl#patronictl) 仅报告一条 **`DEBUG`** 消息。
 
-- Solved the problem of not initialized K8s pod breaking patronictl (Alexander Kukushkin)
+- 解决未初始化的 K8s Pod 导致 patronictl 崩溃的问题（Alexander Kukushkin）
 
-  Patroni is relying on certain pod annotations on K8s. When one of the Patroni pods is stopping or starting there is no valid annotation yet and [patronictl](/docs/patroni/patronictl#patronictl) was failing with an exception.
+  Patroni 依赖 K8s 上的某些 Pod 注解。当某个 Patroni Pod 正在停止或启动时，尚未有有效的注解，[`patronictl`](/docs/patroni/patronictl#patronictl) 会因异常而失败。
 
-**Stability improvements**
+**稳定性改进**
 
-- Apply 1 second backoff if LIST call to K8s API server failed (Alexander Kukushkin)
+- 如果对 K8s API 服务器的 LIST 调用失败，应用 1 秒退避（Alexander Kukushkin）
 
-  It is mostly necessary to avoid flooding logs, but also helps to prevent starvation of the main thread.
+  这主要是为了避免日志泛滥，同时也有助于防止主线程的饥饿。
 
-- Retry if the `retry-after` HTTP header is returned by K8s API (Alexander Kukushkin)
+- 如果 K8s API 返回 **`retry-after`** HTTP 头则重试（Alexander Kukushkin）
 
-  If the K8s API server is overwhelmed with requests it might ask to retry.
+  如果 K8s API 服务器被请求淹没，它可能会要求重试。
 
-- Scrub `KUBERNETES_` environment from the postmaster (Feike Steenbergen)
+- 从 postmaster 中清除 **`KUBERNETES_`** 环境变量（Feike Steenbergen）
 
-  The `KUBERNETES_` environment variables are not required for PostgreSQL, yet having them exposed to the postmaster will also expose them to backends and to regular database users (using pl/perl for example).
+  **`KUBERNETES_`** 环境变量对 PostgreSQL 不是必需的，但将它们暴露给 postmaster 也会将它们暴露给后端和普通数据库用户（例如使用 pl/perl）。
 
-- Clean up tablespaces on reinitialize (Krishna Sarabu)
+- 重新初始化时清理表空间（Krishna Sarabu）
 
-  During reinit, Patroni was removing only `PGDATA` and leaving user-defined tablespace directories. This is causing Patroni to loop in reinit. The previous workarond for the problem was implementing the [custom bootstrap](/docs/patroni/replica_bootstrap#custom_bootstrap) script.
+  在 reinit 期间，Patroni 仅删除 **`PGDATA`** 而保留用户定义的表空间目录。这导致 Patroni 在 reinit 中循环。之前的解决方法是实现 [自定义引导](/docs/patroni/replica_bootstrap#custom_bootstrap) 脚本。
 
-- Explicitly execute `CHECKPOINT` after promote happened (Alexander Kukushkin)
+- 提升后显式执行 **`CHECKPOINT`**（Alexander Kukushkin）
 
-  It helps to reduce the time before the new primary is usable for `pg_rewind`.
+  这有助于缩短新主节点可用于 **`pg_rewind`** 之前的时间。
 
-- Smart refresh of Etcd members (Alexander Kukushkin)
+- 智能刷新 Etcd 成员（Alexander Kukushkin）
 
-  In case Patroni failed to execute a request on all members of the Etcd cluster, Patroni will re-check `A` or `SRV` records for changes of IPs/hosts before retrying the next time.
+  如果 Patroni 未能在 Etcd 集群的所有成员上执行请求，Patroni 将在下次重试之前重新检查 **`A`** 或 **`SRV`** 记录以获取 IP/主机的变更。
 
-- Skip missing values from `pg_controldata` (Feike Steenbergen)
+- 跳过 **`pg_controldata`** 中缺失的值（Feike Steenbergen）
 
-  Values are missing when trying to use binaries of a version that doesn't match PGDATA. Patroni will try to start Postgres anyway, and Postgres will complain that the major version doesn't match and abort with an error.
+  当尝试使用与 PGDATA 版本不匹配的二进制文件时，值会缺失。Patroni 仍会尝试启动 Postgres，Postgres 会抱怨主版本不匹配并以错误中止。
 
-**Bugfixes**
+**错误修复**
 
-- Disable SSL verification for Consul when required (Julien Riou)
+- 在需要时为 Consul 禁用 SSL 验证（Julien Riou）
 
-  Starting from a certain version of `urllib3`, the `cert_reqs` must be explicitly set to `ssl.CERT_NONE` in order to effectively disable SSL verification.
+  从 **`urllib3`** 的某个版本开始，必须显式将 **`cert_reqs`** 设置为 **`ssl.CERT_NONE`** 才能有效禁用 SSL 验证。
 
-- Avoid opening replication connection on every cycle of HA loop (Alexander Kukushkin)
+- 避免在 HA 循环的每个周期都打开复制连接（Alexander Kukushkin）
 
-  Regression was introduced in 1.6.4.
+  回归问题在 1.6.4 中引入。
 
-- Call `on_role_change` callback on failed primary (Alexander Kukushkin)
+- 在失败的主节点上调用 **`on_role_change`** 回调（Alexander Kukushkin）
 
-  In certain cases it could lead to the virtual IP remaining attached to the old primary. Regression was introduced in 1.4.5.
+  在某些情况下，这可能导致虚拟 IP 仍然挂载在旧主节点上。回归问题在 1.4.5 中引入。
 
-- Reset rewind state if postgres started after successful pg_rewind (Alexander Kukushkin)
+- 如果 pg_rewind 成功后 postgres 已启动，则重置 rewind 状态（Alexander Kukushkin）
 
-  As a result of this bug Patroni was starting up manually shut down postgres in the pause mode.
+  由于此错误，Patroni 在暂停模式下会启动手动关闭的 postgres。
 
-- Convert `recovery_min_apply_delay` to `ms` when checking `recovery.conf`
+- 检查 **`recovery.conf`** 时将 **`recovery_min_apply_delay`** 转换为 **`ms`**
 
-  Patroni was indefinitely restarting replica if `recovery_min_apply_delay` was configured on PostgreSQL older than 12.
+  如果在 PostgreSQL 12 之前的版本上配置了 **`recovery_min_apply_delay`**，Patroni 会无限重启副本。
 
-- PyInstaller compatibility (Alexander Kukushkin)
+- PyInstaller 兼容性（Alexander Kukushkin）
 
-  PyInstaller freezes (packages) Python applications into stand-alone executables. The compatibility was broken when we switched to the `spawn` method instead of `fork` for `multiprocessing`.
+  PyInstaller 将 Python 应用程序冻结（打包）为独立可执行文件。当我们将 **`multiprocessing`** 的启动方法从 **`fork`** 切换为 **`spawn`** 时，兼容性被破坏。
 
 --------
 
 ## Version 1.6.4
 
-Released 2020-01-27
+发布于 2020-01-27
 
-**New features**
+**新特性**
 
-- Implemented `--wait` option for `patronictl reinit` (Igor Yanchenko)
+- 为 **`patronictl reinit`** 实现 **`--wait`** 选项（Igor Yanchenko）
 
-  Patronictl will wait for `reinit` to finish is the `--wait` option is used.
+  使用 **`--wait`** 选项时，patronictl 将等待 **`reinit`** 完成。
 
-- Further improvements of Windows support (Igor Yanchenko, Alexander Kukushkin)
+- 进一步改进 Windows 支持（Igor Yanchenko、Alexander Kukushkin）
 
-  1.  All shell scripts which are used for integration testing are rewritten in python
-  2.  The `pg_ctl kill` will be used to stop postgres on non posix systems
-  3.  Don't try to use unix-domain sockets
+  1.  所有用于集成测试的 shell 脚本均已用 Python 重写
+  2.  在非 POSIX 系统上将使用 **`pg_ctl kill`** 来停止 postgres
+  3.  不再尝试使用 Unix 域套接字
 
-**Stability improvements**
+**稳定性改进**
 
-- Make sure `unix_socket_directories` and `stats_temp_directory` exist (Igor Yanchenko)
+- 确保 **`unix_socket_directories`** 和 **`stats_temp_directory`** 存在（Igor Yanchenko）
 
-  Upon the start of Patroni and Postgres make sure that `unix_socket_directories` and `stats_temp_directory` exist or try to create them. Patroni will exit if failed to create them.
+  在 Patroni 和 Postgres 启动时，确保 **`unix_socket_directories`** 和 **`stats_temp_directory`** 存在或尝试创建它们。如果创建失败，Patroni 将退出。
 
-- Make sure `postgresql.pgpass` is located in the place where Patroni has write access (Igor Yanchenko)
+- 确保 **`postgresql.pgpass`** 位于 Patroni 有写入权限的位置（Igor Yanchenko）
 
-  In case if it doesn't have a write access Patroni will exit with exception.
+  如果没有写入权限，Patroni 将抛出异常并退出。
 
-- Disable Consul `serfHealth` check by default (Kostiantyn Nemchenko)
+- 默认禁用 Consul **`serfHealth`** 检查（Kostiantyn Nemchenko）
 
-  Even in case of little network problems the failing `serfHealth` leads to invalidation of all sessions associated with the node. Therefore, the leader key is lost much earlier than `ttl` which causes unwanted restarts of replicas and maybe demotion of the primary.
+  即使在轻微的网络问题情况下，失败的 **`serfHealth`** 也会导致与该节点关联的所有会话失效。因此，主节点键会比 **`ttl`** 更早丢失，导致副本不必要的重启，甚至可能导致主节点降级。
 
-- Configure tcp keepalives for connections to K8s API (Alexander Kukushkin)
+- 为到 K8s API 的连接配置 TCP keepalive（Alexander Kukushkin）
 
-  In case if we get nothing from the socket after TTL seconds it can be considered dead.
+  如果在 TTL 秒后从套接字未收到任何数据，可以认为它已死。
 
-- Avoid logging of passwords on user creation (Alexander Kukushkin)
+- 避免在创建用户时记录密码（Alexander Kukushkin）
 
-  If the password is rejected or logging is configured to verbose or not configured at all it might happen that the password is written into postgres logs. In order to avoid it Patroni will change `log_statement`, `log_min_duration_statement`, and `log_min_error_statement` to some safe values before doing the attempt to create/update user.
+  如果密码被拒绝或日志配置为 verbose 或完全未配置，密码可能会被写入 postgres 日志。为避免这种情况，Patroni 在尝试创建/更新用户之前会将 **`log_statement`**、**`log_min_duration_statement`** 和 **`log_min_error_statement`** 更改为安全值。
 
-**Bugfixes**
+**错误修复**
 
-- Use `restore_command` from the [standby_cluster](/docs/patroni/standby_cluster#standby_cluster) config on cascading replicas (Alexander Kukushkin)
+- 在级联副本上使用 [`standby_cluster`](/docs/patroni/standby_cluster#standby_cluster) 配置中的 **`restore_command`**（Alexander Kukushkin）
 
-  The `standby_leader` was already doing it from the beginning the feature existed. Not doing the same on replicas might prevent them from catching up with standby leader.
+  **`standby_leader`** 从该功能存在之初就已经这样做了。不在副本上做同样的事情可能会阻止它们跟上 standby leader。
 
-- Update timeline reported by the standby cluster (Alexander Kukushkin)
+- 更新备用集群报告的时间线（Alexander Kukushkin）
 
-  In case of timeline switch the standby cluster was correctly replicating from the primary but [patronictl](/docs/patroni/patronictl#patronictl) was reporting the old timeline.
+  在时间线切换的情况下，备用集群正确地从主节点复制，但 [`patronictl`](/docs/patroni/patronictl#patronictl) 报告的是旧时间线。
 
-- Allow certain recovery parameters be defined in the custom_conf (Alexander Kukushkin)
+- 允许在 custom_conf 中定义某些恢复参数（Alexander Kukushkin）
 
-  When doing validation of recovery parameters on replica Patroni will skip `archive_cleanup_command`, `promote_trigger_file`, `recovery_end_command`, `recovery_min_apply_delay`, and `restore_command` if they are not defined in the patroni config but in files other than `postgresql.auto.conf` or `postgresql.conf`.
+  在副本上验证恢复参数时，如果 **`archive_cleanup_command`**、**`promote_trigger_file`**、**`recovery_end_command`**、**`recovery_min_apply_delay`** 和 **`restore_command`** 未在 patroni 配置中定义但在 **`postgresql.auto.conf`** 或 **`postgresql.conf`** 以外的文件中定义，Patroni 将跳过它们。
 
-- Improve handling of postgresql parameters with period in its name (Alexander Kukushkin)
+- 改进对名称中包含句号的 PostgreSQL 参数的处理（Alexander Kukushkin）
 
-  Such parameters could be defined by extensions where the unit is not necessarily a string. Changing the value might require a restart (for example `pg_stat_statements.max`).
+  此类参数可以由扩展定义，其中单位不一定是字符串。更改值可能需要重启（例如 **`pg_stat_statements.max`**）。
 
-- Improve exception handling during shutdown (Alexander Kukushkin)
+- 改进关闭期间的异常处理（Alexander Kukushkin）
 
-  During shutdown Patroni is trying to update its status in the DCS. If the DCS is inaccessible an exception might be raised. Lack of exception handling was preventing logger thread from stopping.
+  在关闭期间，Patroni 会尝试更新其在 DCS 中的状态。如果 DCS 不可访问，可能会引发异常。缺少异常处理会阻止日志线程停止。
 
 --------
 
 ## Version 1.6.3
 
-Released 2019-12-05
+发布于 2019-12-05
 
-**Bugfixes**
+**错误修复**
 
-- Don't expose password when running `pg_rewind` (Alexander Kukushkin)
+- 运行 **`pg_rewind`** 时不暴露密码（Alexander Kukushkin）
 
-  Bug was introduced in the [\#1301](https://github.com/patroni/patroni/pull/1301)
+  此错误在 [#1301](https://github.com/patroni/patroni/pull/1301) 中引入。
 
-- Apply connection parameters specified in the `postgresql.authentication` to `pg_basebackup` and custom replica creation methods (Alexander Kukushkin)
+- 将 **`postgresql.authentication`** 中指定的连接参数应用到 **`pg_basebackup`** 和自定义副本创建方法（Alexander Kukushkin）
 
-  They were relying on url-like connection string and therefore parameters never applied.
+  它们依赖于类 URL 的连接字符串，因此参数从未被应用。
 
 --------
 
 ## Version 1.6.2
 
-Released 2019-12-05
+发布于 2019-12-05
 
-**New features**
+**新特性**
 
-- Implemented `patroni --version` (Igor Yanchenko)
+- 实现 **`patroni --version`**（Igor Yanchenko）
 
-  It prints the current version of Patroni and exits.
+  打印当前 Patroni 版本并退出。
 
-- Set the `user-agent` http header for all http requests (Alexander Kukushkin)
+- 为所有 HTTP 请求设置 **`user-agent`** HTTP 头（Alexander Kukushkin）
 
-  Patroni is communicating with Consul, Etcd, and Kubernetes API via the http protocol. Having a specifically crafted `user-agent` (example: `Patroni/1.6.2 Python/3.6.8 Linux`) might be useful for debugging and monitoring.
+  Patroni 通过 HTTP 协议与 Consul、Etcd 和 Kubernetes API 通信。拥有特别定制的 **`user-agent`**（例如：**`Patroni/1.6.2 Python/3.6.8 Linux`**）可能对调试和监控有用。
 
-- Make it possible to configure log level for exception tracebacks (Igor Yanchenko)
+- 使异常追踪的日志级别可配置（Igor Yanchenko）
 
-  If you set `log.traceback_level=DEBUG` the tracebacks will be visible only when `log.level=DEBUG`. The default behavior remains the same.
+  如果设置 **`log.traceback_level=DEBUG`**，追踪信息仅在 **`log.level=DEBUG`** 时可见。默认行为保持不变。
 
-**Stability improvements**
+**稳定性改进**
 
-- Avoid importing all DCS modules when searching for the module required by the config file (Alexander Kukushkin)
+- 搜索配置文件所需的模块时，避免导入所有 DCS 模块（Alexander Kukushkin）
 
-  There is no need to import modules for Etcd, Consul, and Kubernetes if we need only e.g. Zookeeper. It helps to reduce memory usage and solves the problem of having INFO messages `Failed to import smth`.
+  如果我们只需要例如 Zookeeper，则无需导入 Etcd、Consul 和 Kubernetes 的模块。这有助于减少内存使用并解决 **`Failed to import smth`** 的 INFO 消息问题。
 
-- Removed python `requests` module from explicit requirements (Alexander Kukushkin)
+- 从显式依赖中移除 Python **`requests`** 模块（Alexander Kukushkin）
 
-  It wasn't used for anything critical, but causing a lot of problems when the new version of `urllib3` is released.
+  它不用于任何关键功能，但在新版本的 **`urllib3`** 发布时会导致很多问题。
 
-- Improve handling of `etcd.hosts` written as a comma-separated string instead of YAML array (Igor Yanchenko)
+- 改进将 **`etcd.hosts`** 写为逗号分隔字符串而非 YAML 数组时的处理（Igor Yanchenko）
 
-  Previously it was failing when written in format `host1:port1, host2:port2` (the space character after the comma).
+  此前当以 **`host1:port1, host2:port2`** 格式（逗号后有空格）书写时会失败。
 
-**Usability improvements**
+**易用性改进**
 
-- Don't force users to choose members from an empty list in [patronictl](/docs/patroni/patronictl#patronictl) (Igor Yanchenko)
+- 在 [`patronictl`](/docs/patroni/patronictl#patronictl) 中不强迫用户从空列表中选择成员（Igor Yanchenko）
 
-  If the user provides a wrong cluster name, we will raise an exception rather than ask to choose a member from an empty list.
+  如果用户提供了错误的集群名称，我们将引发异常而不是要求从空列表中选择成员。
 
-- Make the error message more helpful if the REST API cannot bind (Igor Yanchenko)
+- 如果 REST API 无法绑定，使错误消息更有帮助（Igor Yanchenko）
 
-  For an inexperienced user it might be hard to figure out what is wrong from the Python stacktrace.
+  对于没有经验的用户来说，可能很难从 Python 堆栈跟踪中弄清楚出了什么问题。
 
-**Bugfixes**
+**错误修复**
 
-- Fix calculation of `wal_buffers` (Alexander Kukushkin)
+- 修复 **`wal_buffers`** 的计算（Alexander Kukushkin）
 
-  The base unit has been changed from 8 kB blocks to bytes in PostgreSQL 11.
+  基本单位在 PostgreSQL 11 中从 8 kB 块更改为字节。
 
-- Use `passfile` in `primary_conninfo` only on PostgreSQL 10+ (Alexander Kukushkin)
+- 仅在 PostgreSQL 10+ 上在 **`primary_conninfo`** 中使用 **`passfile`**（Alexander Kukushkin）
 
-  On older versions there is no guarantee that `passfile` will work, unless the latest version of `libpq` is installed.
+  在较旧版本上，除非安装了最新版本的 **`libpq`**，否则无法保证 **`passfile`** 能正常工作。
 
 --------
-
 ## Version 1.6.1
 
-Released 2019-11-15
+发布于 2019-11-15
 
-**New features**
+**新特性**
 
-- Added `PATRONICTL_CONFIG_FILE` environment variable (msvechla)
+- 新增 **`PATRONICTL_CONFIG_FILE`** 环境变量（msvechla）
 
-  It allows configuring the `--config-file` argument for [patronictl](/docs/patroni/patronictl#patronictl) from the environment.
+  它允许通过环境变量配置 [patronictl](/docs/patroni/patronictl#patronictl) 的 **`--config-file`** 参数。
 
-- Implement `patronictl history` (Alexander Kukushkin)
+- 实现 **`patronictl history`**（Alexander Kukushkin）
 
-  It shows the history of failovers/switchovers.
+  显示故障转移/切换的历史记录。
 
-- Pass `-c statement_timeout=0` in `PGOPTIONS` when doing `pg_rewind` (Alexander Kukushkin)
+- 执行 **`pg_rewind`** 时在 **`PGOPTIONS`** 中传入 **`-c statement_timeout=0`**（Alexander Kukushkin）
 
-  It protects from the case when `statement_timeout` on the server is set to some small value and one of the statements executed by pg_rewind is canceled.
+  这可以防止服务器上 **`statement_timeout`** 设置为较小值时，pg_rewind 执行的某些语句被取消的问题。
 
-- Allow lower values for PostgreSQL configuration (Soulou)
+- 允许 PostgreSQL 配置使用更小的值（Soulou）
 
-  Patroni didn't allow some of the PostgreSQL configuration parameters be set smaller than some hardcoded values. Now the minimal allowed values are smaller, default values have not been changed.
+  Patroni 之前不允许某些 PostgreSQL 配置参数设置为低于某些硬编码值。现在允许的最小值更小了，默认值保持不变。
 
-- Allow for certificate-based authentication (Jonathan S. Katz)
+- 允许基于证书的认证（Jonathan S. Katz）
 
-  This feature enables certificate-based authentication for superuser, replication, rewind accounts and allows the user to specify the `sslmode` they wish to connect with.
+  此功能为超级用户、复制、rewind 账户启用了基于证书的认证，并允许用户指定希望使用的 **`sslmode`**。
 
-- Use the `passfile` in the `primary_conninfo` instead of password (Alexander Kukushkin)
+- 在 **`primary_conninfo`** 中使用 **`passfile`** 代替密码（Alexander Kukushkin）
 
-  It allows to avoid setting `600` permissions on postgresql.conf
+  这避免了在 postgresql.conf 上设置 **`600`** 权限的需要。
 
-- Perform `pg_ctl reload` regardless of config changes (Alexander Kukushkin)
+- 无论配置是否变更都执行 **`pg_ctl reload`**（Alexander Kukushkin）
 
-  It is possible that some config files are not controlled by Patroni. When somebody is doing a reload via the REST API or by sending SIGHUP to the Patroni process, the usual expectation is that Postgres will also be reloaded. Previously it didn't happen when there were no changes in the `postgresql` section of Patroni config.
+  有些配置文件可能不受 Patroni 管控。当有人通过 REST API 或向 Patroni 进程发送 SIGHUP 进行 reload 时，通常期望 Postgres 也会被 reload。之前当 Patroni 配置的 **`postgresql`** 部分没有变更时，这不会发生。
 
-- Compare all recovery parameters, not only `primary_conninfo` (Alexander Kukushkin)
+- 比较所有恢复参数，而不仅仅是 **`primary_conninfo`**（Alexander Kukushkin）
 
-  Previously the `check_recovery_conf()` method was only checking whether `primary_conninfo` has changed, never taking into account all other recovery parameters.
+  之前 **`check_recovery_conf()`** 方法只检查 **`primary_conninfo`** 是否变更，从未考虑其他恢复参数。
 
-- Make it possible to apply some recovery parameters without restart (Alexander Kukushkin)
+- 支持不重启即可应用某些恢复参数（Alexander Kukushkin）
 
-  Starting from PostgreSQL 12 the following recovery parameters could be changed without restart: `archive_cleanup_command`, `promote_trigger_file`, `recovery_end_command`, and `recovery_min_apply_delay`. In future Postgres releases this list will be extended and Patroni will support it automatically.
+  从 PostgreSQL 12 开始，以下恢复参数可以不重启即可更改：**`archive_cleanup_command`**、**`promote_trigger_file`**、**`recovery_end_command`** 和 **`recovery_min_apply_delay`**。在未来的 Postgres 版本中此列表将会扩展，Patroni 将自动支持。
 
-- Make it possible to change `use_slots` online (Alexander Kukushkin)
+- 支持在线更改 **`use_slots`**（Alexander Kukushkin）
 
-  Previously it required restarting Patroni and removing slots manually.
+  之前需要重启 Patroni 并手动删除 slots。
 
-- Remove only `PATRONI_` prefixed environment variables when starting up Postgres (Cody Coons)
+- 启动 Postgres 时只移除 **`PATRONI_`** 前缀的环境变量（Cody Coons）
 
-  It will solve a lot of problems with running different Foreign Data Wrappers.
+  这将解决运行各种外部数据包装器时遇到的许多问题。
 
-**Stability improvements**
+**稳定性改进**
 
-- Use LIST + WATCH when working with K8s API (Alexander Kukushkin)
+- 与 K8s API 交互时使用 LIST + WATCH（Alexander Kukushkin）
 
-  It allows to efficiently receive object changes (pods, endpoints/configmaps) and makes less stress on K8s master nodes.
+  它可以高效地接收对象变更（pods、endpoints/configmaps），减轻 K8s 主节点的压力。
 
-- Improve the workflow when PGDATA is not empty during bootstrap (Alexander Kukushkin)
+- 改进 bootstrap 时 PGDATA 非空的处理流程（Alexander Kukushkin）
 
-  According to the `initdb` source code it might consider a PGDATA empty when there are only `lost+found` and `.dotfiles` in it. Now Patroni does the same. If `PGDATA` happens to be non-empty, and at the same time not valid from the `pg_controldata` point of view, Patroni will complain and exit.
+  根据 **`initdb`** 源代码，当 PGDATA 中只有 **`lost+found`** 和 **`.dotfiles`** 时会被视为空目录。现在 Patroni 做了相同的处理。如果 **`PGDATA`** 恰好非空，同时从 **`pg_controldata`** 的角度看又无效，Patroni 将报错并退出。
 
-- Avoid calling expensive `os.listdir()` on every HA loop (Alexander Kukushkin)
+- 避免在每次 HA 循环中调用开销较大的 **`os.listdir()`**（Alexander Kukushkin）
 
-  When the system is under IO stress, `os.listdir()` could take a few seconds (or even minutes) to execute, badly affecting the HA loop of Patroni. This could even cause the leader key to disappear from DCS due to the lack of updates. There is a better and less expensive way to check that the PGDATA is not empty. Now we check the presence of the `global/pg_control` file in the PGDATA.
+  当系统处于 IO 压力下时，**`os.listdir()`** 可能需要几秒（甚至几分钟）才能执行完毕，严重影响 Patroni 的 HA 循环。这甚至可能因缺少更新导致 leader 键从 DCS 中消失。现在有一种更好、开销更小的方式来检查 PGDATA 是否非空——检查 PGDATA 中 **`global/pg_control`** 文件是否存在。
 
-- Some improvements in logging infrastructure (Alexander Kukushkin)
+- 日志基础设施的一些改进（Alexander Kukushkin）
 
-  Previously there was a possibility to loose the last few log lines on shutdown because the logging thread was a `daemon` thread.
+  之前由于日志线程是 **`daemon`** 线程，在关闭时可能会丢失最后几行日志。
 
-- Use `spawn` multiprocessing start method on python 3.4+ (Maciej Kowalczyk)
+- 在 python 3.4+ 上使用 **`spawn`** 多进程启动方法（Maciej Kowalczyk）
 
-  It is a known [issue](https://bugs.python.org/issue6721) in Python that threading and multiprocessing do not mix well. Switching from the default method `fork` to the `spawn` is a recommended workaround. Not doing so might result in the Postmaster starting process hanging and Patroni indefinitely reporting `INFO: restarting after failure in progress`, while Postgres is actually up and running.
+  Python 中线程和多进程混合使用存在已知 [问题](https://bugs.python.org/issue6721)。从默认的 **`fork`** 方法切换到 **`spawn`** 是推荐的解决方案。不这样做可能导致 Postmaster 启动进程挂起，Patroni 无限报告 **`INFO: restarting after failure in progress`**，而实际上 Postgres 已经在正常运行。
 
-**Improvements in REST API**
+**REST API 改进**
 
-- Make it possible to check client certificates in the REST API (Alexander Kukushkin)
+- 支持在 REST API 中检查客户端证书（Alexander Kukushkin）
 
-  If the `verify_client` is set to `required`, Patroni will check client certificates for all REST API calls. When it is set to `optional`, client certificates are checked for all unsafe REST API endpoints.
+  如果 **`verify_client`** 设置为 **`required`**，Patroni 将对所有 REST API 调用检查客户端证书。设置为 **`optional`** 时，只对所有不安全的 REST API 端点检查客户端证书。
 
-- Return the response code 503 for the `GET /replica` health check request if Postgres is not running (Alexander Anikin)
+- 当 Postgres 未运行时，**`GET /replica`** 健康检查请求返回 503 响应码（Alexander Anikin）
 
-  Postgres might spend significant time in recovery before it starts accepting client connections.
+  Postgres 在开始接受客户端连接之前可能需要花费大量时间进行恢复。
 
-- Implement `/history` and `/cluster` endpoints (Alexander Kukushkin)
+- 实现 **`/history`** 和 **`/cluster`** 端点（Alexander Kukushkin）
 
-  The `/history` endpoint shows the content of the `history` key in DCS. The `/cluster` endpoint shows all cluster members and some service info like pending and scheduled restarts or switchovers.
+  **`/history`** 端点显示 DCS 中 **`history`** 键的内容。**`/cluster`** 端点显示所有集群成员以及一些服务信息，如待处理和已计划的重启或切换。
 
-**Improvements in Etcd support**
+**Etcd 支持改进**
 
-- Retry on Etcd RAFT internal error (Alexander Kukushkin)
+- 在 Etcd RAFT 内部错误时重试（Alexander Kukushkin）
 
-  When the Etcd node is being shut down, it sends `response code=300, data='etcdserver: server stopped'`, which was causing Patroni to demote the primary.
+  当 Etcd 节点正在关闭时，它会发送 **`response code=300, data='etcdserver: server stopped'`**，这之前会导致 Patroni 降级主节点。
 
-- Don't give up on Etcd request retry too early (Alexander Kukushkin)
+- 不要过早放弃 Etcd 请求重试（Alexander Kukushkin）
 
-  When there were some network problems, Patroni was quickly exhausting the list of Etcd nodes and giving up without using the whole `retry_timeout`, potentially resulting in demoting the primary.
+  当出现网络问题时，Patroni 之前会很快耗尽 Etcd 节点列表并放弃，而没有用完整个 **`retry_timeout`**，这可能导致主节点被降级。
 
-**Bugfixes**
+**错误修复**
 
-- Disable `synchronous_commit` when granting execute permissions to the `pg_rewind` user (kremius)
+- 在向 **`pg_rewind`** 用户授予执行权限时禁用 **`synchronous_commit`**（kremius）
 
-  If the bootstrap is done with `synchronous_mode_strict: true` the `GRANT EXECUTE` statement was waiting indefinitely due to the non-synchronous nodes being available.
+  如果 bootstrap 时使用了 **`synchronous_mode_strict: true`**，由于没有可用的同步节点，**`GRANT EXECUTE`** 语句会无限期等待。
 
-- Fix memory leak on python 3.7 (Alexander Kukushkin)
+- 修复 python 3.7 上的内存泄漏（Alexander Kukushkin）
 
-  Patroni is using `ThreadingMixIn` to process REST API requests and python 3.7 made threads spawn for every request non-daemon by default.
+  Patroni 使用 **`ThreadingMixIn`** 来处理 REST API 请求，而 python 3.7 默认将每个请求生成的线程设为非守护线程。
 
-- Fix race conditions in asynchronous actions (Alexander Kukushkin)
+- 修复异步操作中的竞争条件（Alexander Kukushkin）
 
-  There was a chance that `patronictl reinit --force` could be overwritten by the attempt to recover stopped Postgres. This ended up in a situation when Patroni was trying to start Postgres while basebackup was running.
+  **`patronictl reinit --force`** 有可能被恢复已停止的 Postgres 的尝试所覆盖。这最终会导致 Patroni 在 basebackup 运行时尝试启动 Postgres。
 
-- Fix race condition in `postmaster_start_time()` method (Alexander Kukushkin)
+- 修复 **`postmaster_start_time()`** 方法中的竞争条件（Alexander Kukushkin）
 
-  If the method is executed from the REST API thread, it requires a separate cursor object to be created.
+  如果该方法从 REST API 线程执行，则需要创建一个单独的游标对象。
 
-- Fix the problem of not promoting the sync standby that had a name containing upper case letters (Alexander Kukushkin)
+- 修复名称包含大写字母的同步备库无法被提升的问题（Alexander Kukushkin）
 
-  We converted the name to the lower case because Postgres was doing the same while comparing the `application_name` with the value in `synchronous_standby_names`.
+  我们将名称转换为小写，因为 Postgres 在将 **`application_name`** 与 **`synchronous_standby_names`** 中的值进行比较时也是这样做的。
 
-- Kill all children along with the callback process before starting the new one (Alexander Kukushkin)
+- 在启动新回调之前，连同回调进程一起终止所有子进程（Alexander Kukushkin）
 
-  Not doing so makes it hard to implement callbacks in bash and eventually can lead to the situation when two callbacks are running at the same time.
+  不这样做会使在 bash 中实现回调变得困难，最终可能导致两个回调同时运行的情况。
 
-- Fix 'start failed' issue (Alexander Kukushkin)
+- 修复"start failed"问题（Alexander Kukushkin）
 
-  Under certain conditions the Postgres state might be set to 'start failed' despite Postgres being up and running.
+  在某些条件下，尽管 Postgres 正在运行，其状态可能被设置为"start failed"。
 
 --------
 
 ## Version 1.6.0
 
-Released 2019-08-05
+发布于 2019-08-05
 
-This version adds compatibility with PostgreSQL 12, makes is possible to run pg_rewind without superuser on PostgreSQL 11 and newer, and enables IPv6 support.
+此版本增加了对 PostgreSQL 12 的兼容性，使得在 PostgreSQL 11 及更新版本上无需超级用户即可运行 pg_rewind，并启用了 IPv6 支持。
 
-**New features**
+**新特性**
 
-- Psycopg2 was removed from requirements and must be installed independently (Alexander Kukushkin)
+- 将 Psycopg2 从依赖项中移除，必须独立安装（Alexander Kukushkin）
 
-  Starting from 2.8.0 `psycopg2` was split into two different packages, `psycopg2`, and `psycopg2-binary`, which could be installed at the same time into the same place on the filesystem. In order to decrease dependency hell problem, we let a user choose how to install it. There are a few options available, please consult the [documentation](/docs/patroni/installation#psycopg2_install_options).
+  从 2.8.0 开始，**`psycopg2`** 被拆分为两个不同的包：**`psycopg2`** 和 **`psycopg2-binary`**，它们可以同时安装到文件系统的相同位置。为了减少依赖冲突问题，我们让用户自行选择安装方式。有几个可选方案，请参阅 [文档](/docs/patroni/installation#psycopg2_install_options)。
 
-- Compatibility with PostgreSQL 12 (Alexander Kukushkin)
+- 兼容 PostgreSQL 12（Alexander Kukushkin）
 
-  Starting from PostgreSQL 12 there is no `recovery.conf` anymore and all former recovery parameters are converted into [GUC](https://www.enterprisedb.com/blog/what-is-a-guc-variable). In order to protect from `ALTER SYSTEM SET primary_conninfo` or similar, Patroni will parse `postgresql.auto.conf` and remove all standby and recovery parameters from there. Patroni config remains backward compatible. For example despite `restore_command` being a GUC, one can still specify it in the `postgresql.recovery_conf.restore_command` section and Patroni will write it into `postgresql.conf` for PostgreSQL 12.
+  从 PostgreSQL 12 开始不再有 **`recovery.conf`**，所有原来的恢复参数都被转换为 [GUC](https://www.enterprisedb.com/blog/what-is-a-guc-variable)。为了防止 **`ALTER SYSTEM SET primary_conninfo`** 或类似操作，Patroni 将解析 **`postgresql.auto.conf`** 并从中删除所有备库和恢复参数。Patroni 配置保持向后兼容。例如，尽管 **`restore_command`** 是一个 GUC，仍然可以在 **`postgresql.recovery_conf.restore_command`** 部分中指定它，Patroni 会将其写入 PostgreSQL 12 的 **`postgresql.conf`** 中。
 
-- Make it possible to use `pg_rewind` without superuser on PostgreSQL 11 and newer (Alexander Kukushkin)
+- 支持在 PostgreSQL 11 及更新版本上无需超级用户使用 **`pg_rewind`**（Alexander Kukushkin）
 
-  If you want to use this feature please define `username` and `password` in the `postgresql.authentication.rewind` section of Patroni configuration file. For an already existing cluster you will have to create the user manually and `GRANT EXECUTE` permission on a few functions. You can find more details in the PostgreSQL [documentation](https://www.postgresql.org/docs/11/app-pgrewind.html#id-1.9.5.8.8).
+  如果要使用此功能，请在 Patroni 配置文件的 **`postgresql.authentication.rewind`** 部分定义 **`username`** 和 **`password`**。对于已存在的集群，需要手动创建用户并 **`GRANT EXECUTE`** 若干函数的权限。更多详情请参阅 PostgreSQL [文档](https://www.postgresql.org/docs/11/app-pgrewind.html#id-1.9.5.8.8)。
 
-- Do a smart comparison of actual and desired `primary_conninfo` values on replicas (Alexander Kukushkin)
+- 对副本上实际和期望的 **`primary_conninfo`** 值进行智能比较（Alexander Kukushkin）
 
-  It might help to avoid replica restart when you are converting an already existing primary-standby cluster to one managed by Patroni
+  这有助于在将已有的主备集群转换为 Patroni 管理时避免副本重启。
 
-- IPv6 support (Alexander Kukushkin)
+- IPv6 支持（Alexander Kukushkin）
 
-  There were two major issues. Patroni REST API service was listening only on `0.0.0.0` and IPv6 IP addresses used in the `api_url` and `conn_url` were not properly quoted.
+  有两个主要问题。Patroni REST API 服务之前只监听 **`0.0.0.0`**，且在 **`api_url`** 和 **`conn_url`** 中使用的 IPv6 IP 地址没有被正确引用。
 
-- Kerberos support (Ajith Vilas, Alexander Kukushkin)
+- Kerberos 支持（Ajith Vilas，Alexander Kukushkin）
 
-  It makes possible using Kerberos authentication between Postgres nodes instead of defining passwords in Patroni configuration file
+  使得可以在 Postgres 节点之间使用 Kerberos 认证，而无需在 Patroni 配置文件中定义密码。
 
-- Manage `pg_ident.conf` (Alexander Kukushkin)
+- 管理 **`pg_ident.conf`**（Alexander Kukushkin）
 
-  This functionality works similarly to `pg_hba.conf`: if the `postgresql.pg_ident` is defined in the config file or DCS, Patroni will write its value to `pg_ident.conf`, however, if `postgresql.parameters.ident_file` is defined, Patroni will assume that `pg_ident` is managed from outside and not update the file.
+  此功能的工作方式与 **`pg_hba.conf`** 类似：如果在配置文件或 DCS 中定义了 **`postgresql.pg_ident`**，Patroni 将把其值写入 **`pg_ident.conf`**；但如果定义了 **`postgresql.parameters.ident_file`**，Patroni 将认为 **`pg_ident`** 由外部管理，不会更新该文件。
 
-**Improvements in REST API**
+**REST API 改进**
 
-- Added `/health` endpoint (Wilfried Roset)
+- 新增 **`/health`** 端点（Wilfried Roset）
 
-  It will return an HTTP status code only if PostgreSQL is running
+  仅在 PostgreSQL 正在运行时返回 HTTP 状态码。
 
-- Added `/read-only` and `/read-write` endpoints (Julien Riou)
+- 新增 **`/read-only`** 和 **`/read-write`** 端点（Julien Riou）
 
-  The `/read-only` endpoint enables reads balanced across replicas and the primary. The `/read-write` endpoint is an alias for `/primary`, `/leader` and `/master`.
+  **`/read-only`** 端点实现跨副本和主节点的读取负载均衡。**`/read-write`** 端点是 **`/primary`**、**`/leader`** 和 **`/master`** 的别名。
 
-- Use `SSLContext` to wrap the REST API socket (Julien Riou)
+- 使用 **`SSLContext`** 包装 REST API 套接字（Julien Riou）
 
-  Usage of `ssl.wrap_socket()` is deprecated and was still allowing soon-to-be-deprecated protocols like TLS 1.1.
+  **`ssl.wrap_socket()`** 已被弃用，且仍然允许即将弃用的协议（如 TLS 1.1）。
 
-**Logging improvements**
+**日志改进**
 
-- Two-step logging (Alexander Kukushkin)
+- 两阶段日志记录（Alexander Kukushkin）
 
-  All log messages are first written into the in-memory queue and later they are asynchronously flushed into the stderr or file from a separate thread. The maximum queue size is limited (configurable). If the limit is reached, Patroni will start losing logs, which is still better than blocking the HA loop.
+  所有日志消息首先写入内存队列，然后由单独的线程异步刷新到 stderr 或文件中。最大队列大小有限制（可配置）。如果达到限制，Patroni 将开始丢失日志，但这仍然比阻塞 HA 循环要好。
 
-- Enable debug logging for GET/OPTIONS API calls together with latency (Jan Tomsa)
+- 为 GET/OPTIONS API 调用及其延迟启用调试日志（Jan Tomsa）
 
-  It will help with debugging of health-checks performed by HAProxy, Consul or other tooling that decides which node is the primary/replica.
+  这有助于调试 HAProxy、Consul 或其他用于判断哪个节点是主节点/副本的工具所执行的健康检查。
 
-- Log exceptions caught in Retry (Daniel Kucera)
+- 记录 Retry 中捕获的异常（Daniel Kucera）
 
-  Log the final exception when either the number of attempts or the timeout were reached. It will hopefully help to debug some issues when communication to DCS fails.
+  当达到尝试次数或超时时记录最终异常。这有望帮助调试与 DCS 通信失败时的一些问题。
 
-**Improvements in patronictl**
+**patronictl 改进**
 
-- Enhance dialogues for scheduled switchover and restart (Rafia Sabih)
+- 增强计划切换和重启的对话交互（Rafia Sabih）
 
-  Previously dialogues did not take into account scheduled actions and therefore were misleading.
+  之前的对话没有考虑到计划操作，因此具有误导性。
 
-- Check if config file exists (Wilfried Roset)
+- 检查配置文件是否存在（Wilfried Roset）
 
-  Be verbose about configuration file when the given filename does not exists, instead of ignoring silently (which can lead to misunderstanding).
+  当给定的文件名不存在时，明确提示配置文件信息，而不是静默忽略（这可能导致误解）。
 
-- Add fallback value for `EDITOR` (Wilfried Roset)
+- 为 **`EDITOR`** 添加回退值（Wilfried Roset）
 
-  When the `EDITOR` environment variable was not defined, `patronictl edit-config` was failing with `PatroniCtlException`. The new strategy is to try `editor` and than `vi`, which should be available on most systems.
+  当 **`EDITOR`** 环境变量未定义时，**`patronictl edit-config`** 会因 **`PatroniCtlException`** 而失败。新的策略是尝试 **`editor`** 然后 **`vi`**，这在大多数系统上应该都可用。
 
-**Improvements in Consul support**
+**Consul 支持改进**
 
-- Allow to specify Consul consistency mode (Jan Tomsa)
+- 允许指定 Consul 一致性模式（Jan Tomsa）
 
-  You can read more about consistency mode [here](https://www.consul.io/api/features/consistency.html).
+  您可以在 [这里](https://www.consul.io/api/features/consistency.html) 阅读更多关于一致性模式的信息。
 
-- Reload Consul config on SIGHUP (Cameron Daniel Kucera, Alexander Kukushkin)
+- 在 SIGHUP 时重新加载 Consul 配置（Cameron Daniel Kucera，Alexander Kukushkin）
 
-  It is especially useful when somebody is changing the value of `token`.
+  当有人更改 **`token`** 的值时特别有用。
 
-**Bugfixes**
+**错误修复**
 
-- Fix corner case in switchover/failover (Sharoon Thomas)
+- 修复切换/故障转移中的边界情况（Sharoon Thomas）
 
-  The variable `scheduled_at` may be undefined if REST API is not accessible and we are using DCS as a fallback.
+  如果 REST API 不可访问且我们使用 DCS 作为回退时，变量 **`scheduled_at`** 可能未定义。
 
-- Open trust to localhost in `pg_hba.conf` during custom bootstrap (Alexander Kukushkin)
+- 自定义 bootstrap 期间在 **`pg_hba.conf`** 中对 localhost 开放信任认证（Alexander Kukushkin）
 
-  Previously it was open only to unix_socket, which was causing a lot of errors: `FATAL:  no pg_hba.conf entry for replication connection from host "127.0.0.1", user "replicator"`
+  之前只对 unix_socket 开放，这导致了大量错误：**`FATAL:  no pg_hba.conf entry for replication connection from host "127.0.0.1", user "replicator"`**
 
-- Consider synchronous node as healthy even when the former leader is ahead (Alexander Kukushkin)
+- 即使前任 leader 领先也将同步节点视为健康（Alexander Kukushkin）
 
-  If the primary loses access to the DCS, it restarts Postgres in read-only, but it might happen that other nodes can still access the old primary via the REST API. Such a situation was causing the synchronous standby not to promote because the old primary was reporting WAL position ahead of the synchronous standby.
+  如果主节点失去对 DCS 的访问，它会以只读模式重启 Postgres，但其他节点可能仍然可以通过 REST API 访问旧主节点。这种情况导致同步备库无法提升，因为旧主节点报告的 WAL 位置领先于同步备库。
 
-- Standby cluster bugfixes (Alexander Kukushkin)
+- 备用集群错误修复（Alexander Kukushkin）
 
-  Make it possible to bootstrap a replica in a standby cluster when the standby_leader is not accessible and a few other minor fixes.
+  使得在 standby_leader 不可访问时可以在备用集群中引导副本，以及其他一些小修复。
 
 --------
 
 ## Version 1.5.6
 
-Released 2019-08-03
+发布于 2019-08-03
 
-**New features**
+**新特性**
 
-- Support work with etcd cluster via set of proxies (Alexander Kukushkin)
+- 支持通过一组代理与 etcd 集群通信（Alexander Kukushkin）
 
-  It might happen that etcd cluster is not accessible directly but via set of proxies. In this case Patroni will not perform etcd topology discovery but just round-robin via proxy hosts. Behavior is controlled by `etcd.use_proxies`.
+  可能存在 etcd 集群无法直接访问但可以通过一组代理访问的情况。在这种情况下，Patroni 不会执行 etcd 拓扑发现，而只是在代理主机之间轮询。此行为由 **`etcd.use_proxies`** 控制。
 
-- Changed callbacks behavior when role on the node is changed (Alexander Kukushkin)
+- 更改节点角色变化时的回调行为（Alexander Kukushkin）
 
-  If the role was changed from `master` or `standby_leader` to `replica` or from `replica` to `standby_leader`, `on_restart` callback will not be called anymore in favor of `on_role_change` callback.
+  如果角色从 **`master`** 或 **`standby_leader`** 变为 **`replica`**，或从 **`replica`** 变为 **`standby_leader`**，将不再调用 **`on_restart`** 回调，而是调用 **`on_role_change`** 回调。
 
-- Change the way how we start postgres (Alexander Kukushkin)
+- 更改 Postgres 的启动方式（Alexander Kukushkin）
 
-  Use `multiprocessing.Process` instead of executing itself and `multiprocessing.Pipe` to transmit the postmaster pid to the Patroni process. Before that we were using pipes, what was leaving postmaster process with stdin closed.
+  使用 **`multiprocessing.Process`** 替代执行自身，使用 **`multiprocessing.Pipe`** 将 postmaster pid 传输给 Patroni 进程。之前我们使用管道，这会导致 postmaster 进程的 stdin 被关闭。
 
-**Bug fixes**
+**错误修复**
 
-- Fix role returned by REST API for the standby leader (Alexander Kukushkin)
+- 修复 REST API 为 standby leader 返回的角色（Alexander Kukushkin）
 
-  It was incorrectly returning `replica` instead of `standby_leader`
+  之前错误地返回 **`replica`** 而不是 **`standby_leader`**。
 
-- Wait for callback end if it could not be killed (Julien Tachoires)
+- 如果回调无法被终止则等待其结束（Julien Tachoires）
 
-  Patroni doesn't have enough privileges to terminate the callback script running under `sudo` what was cancelling the new callback. If the running script could not be killed, Patroni will wait until it finishes and then run the next callback.
+  Patroni 没有足够的权限终止在 **`sudo`** 下运行的回调脚本，这会取消新的回调。如果运行中的脚本无法被终止，Patroni 将等待其完成然后运行下一个回调。
 
-- Reduce lock time taken by dcs.get_cluster method (Alexander Kukushkin)
+- 减少 dcs.get_cluster 方法的锁持有时间（Alexander Kukushkin）
 
-  Due to the lock being held DCS slowness was affecting the REST API health checks causing false positives.
+  由于锁被持有，DCS 的慢速会影响 REST API 的健康检查，导致误报。
 
-- Improve cleaning of PGDATA when `pg_wal`/\`pg_xlog\` is a symlink (Julien Tachoires)
+- 改进当 **`pg_wal`**/**`pg_xlog`** 是符号链接时清理 PGDATA 的行为（Julien Tachoires）
 
-  In this case Patroni will explicitly remove files from the target directory.
+  在这种情况下，Patroni 将显式删除目标目录中的文件。
 
-- Remove unnecessary usage of os.path.relpath (Ants Aasma)
+- 移除不必要的 os.path.relpath 使用（Ants Aasma）
 
-  It depends on being able to resolve the working directory, what will fail if Patroni is started in a directory that is later unlinked from the filesystem.
+  它依赖于能够解析工作目录，如果 Patroni 在一个后来从文件系统中取消链接的目录中启动，这将失败。
 
-- Do not enforce ssl version when communicating with Etcd (Alexander Kukushkin)
+- 与 Etcd 通信时不强制 ssl 版本（Alexander Kukushkin）
 
-  For some unknown reason python3-etcd on debian and ubuntu are not based on the latest version of the package and therefore it enforces TLSv1 which is not supported by Etcd v3. We solved this problem on Patroni side.
+  由于某些未知原因，debian 和 ubuntu 上的 python3-etcd 不是基于最新版本的包，因此它强制使用 Etcd v3 不支持的 TLSv1。我们在 Patroni 端解决了这个问题。
 
 --------
 
 ## Version 1.5.5
 
-Released 2019-02-15
+发布于 2019-02-15
 
-This version introduces the possibility of automatic reinit of the former master, improves patronictl list output and fixes a number of bugs.
+此版本引入了前主节点自动重新初始化的功能，改进了 patronictl list 的输出，并修复了若干错误。
 
-**New features**
+**新特性**
 
-- Add support of `PATRONI_ETCD_PROTOCOL`, `PATRONI_ETCD_USERNAME` and `PATRONI_ETCD_PASSWORD` environment variables (Étienne M)
+- 新增 **`PATRONI_ETCD_PROTOCOL`**、**`PATRONI_ETCD_USERNAME`** 和 **`PATRONI_ETCD_PASSWORD`** 环境变量支持（Étienne M）
 
-  Before it was possible to configure them only in the config file or as a part of `PATRONI_ETCD_URL`, which is not always convenient.
+  之前只能在配置文件中或作为 **`PATRONI_ETCD_URL`** 的一部分来配置它们，这并不总是方便的。
 
-- Make it possible to automatically reinit the former master (Alexander Kukushkin)
+- 支持自动重新初始化前主节点（Alexander Kukushkin）
 
-  If the pg_rewind is disabled or can't be used, the former master could fail to start as a new replica due to diverged timelines. In this case, the only way to fix it is wiping the data directory and reinitializing. This behavior could be changed by setting `postgresql.remove_data_directory_on_diverged_timelines`. When it is set, Patroni will wipe the data directory and reinitialize the former master automatically.
+  如果 pg_rewind 被禁用或无法使用，前主节点可能因时间线分叉而无法作为新副本启动。在这种情况下，唯一的修复方法是清除数据目录并重新初始化。此行为可以通过设置 **`postgresql.remove_data_directory_on_diverged_timelines`** 来更改。设置后，Patroni 将自动清除数据目录并重新初始化前主节点。
 
-- Show information about timelines in patronictl list (Alexander Kukushkin)
+- 在 patronictl list 中显示时间线信息（Alexander Kukushkin）
 
-  It helps to detect stale replicas. In addition to that, `Host` will include ':{port}' if the port value isn't default or there is more than one member running on the same host.
+  这有助于检测过时的副本。此外，如果端口值不是默认值或有多个成员运行在同一主机上，**`Host`** 将包含 ':{port}'。
 
-- Create a headless service associated with the \$SCOPE-config endpoint (Alexander Kukushkin)
+- 创建与 \$SCOPE-config 端点关联的 headless service（Alexander Kukushkin）
 
-  The "config" endpoint keeps information about the cluster-wide Patroni and Postgres configuration, history file, and last but the most important, it holds the `initialize` key. When the Kubernetes master node is restarted or upgraded, it removes endpoints without services. The headless service will prevent it from being removed.
+  "config" 端点保存集群范围的 Patroni 和 Postgres 配置、历史文件，以及最重要的 **`initialize`** 键。当 Kubernetes 主节点重启或升级时，它会删除没有 service 的 endpoints。headless service 将防止其被删除。
 
-**Bug fixes**
+**错误修复**
 
-- Adjust the read timeout for the leader watch blocking query (Alexander Kukushkin)
+- 调整 leader watch 阻塞查询的读取超时（Alexander Kukushkin）
 
-  According to the Consul documentation, the actual response timeout is increased by a small random amount of additional wait time added to the supplied maximum wait time to spread out the wake up time of any concurrent requests. It adds up to `wait / 16` additional time to the maximum duration. In our case we are adding `wait / 15` or 1 second depending on what is bigger.
+  根据 Consul 文档，实际响应超时会增加少量随机的额外等待时间，以分散并发请求的唤醒时间。它在最大持续时间上增加最多 **`wait / 16`** 的额外时间。在我们的情况下，我们添加 **`wait / 15`** 或 1 秒，取较大值。
 
-- Always use replication=1 when connecting via replication protocol to the postgres (Alexander Kukushkin)
+- 通过复制协议连接 postgres 时始终使用 replication=1（Alexander Kukushkin）
 
-  Starting from Postgres 10 the line in the pg_hba.conf with database=replication doesn't accept connections with the parameter replication=database.
+  从 Postgres 10 开始，pg_hba.conf 中 database=replication 的行不接受 replication=database 参数的连接。
 
-- Don't write primary_conninfo into recovery.conf for wal-only standby cluster (Alexander Kukushkin)
+- 不要为仅使用 WAL 的备用集群将 primary_conninfo 写入 recovery.conf（Alexander Kukushkin）
 
-  Despite not having neither `host` nor `port` defined in the [standby_cluster](/docs/patroni/standby_cluster#standby_cluster) config, Patroni was putting the `primary_conninfo` into the `recovery.conf`, which is useless and generating a lot of errors.
+  尽管在 [standby_cluster](/docs/patroni/standby_cluster#standby_cluster) 配置中既没有定义 **`host`** 也没有定义 **`port`**，Patroni 之前仍然将 **`primary_conninfo`** 写入 **`recovery.conf`**，这是无用的并且会产生大量错误。
 
 --------
 
 ## Version 1.5.4
 
-Released 2019-01-15
+发布于 2019-01-15
 
-This version implements flexible logging and fixes a number of bugs.
+此版本实现了灵活的日志记录功能并修复了若干错误。
 
-**New features**
+**新特性**
 
-- Improvements in logging infrastructure (Alexander Kukushkin, Lucas Capistrant, Alexander Anikin)
+- 日志基础设施改进（Alexander Kukushkin，Lucas Capistrant，Alexander Anikin）
 
-  Logging configuration could be configured not only from environment variables but also from Patroni config file. It makes it possible to change logging configuration in runtime by updating config and doing reload or sending SIGHUP to the Patroni process. By default Patroni writes logs to stderr, but now it becomes possible to write logs directly into the file and rotate when it reaches a certain size. In addition to that added support of custom dateformat and the possibility to fine-tune log level for each python module.
+  日志配置不仅可以通过环境变量，还可以从 Patroni 配置文件中进行配置。这使得可以通过更新配置并执行 reload 或向 Patroni 进程发送 SIGHUP 来在运行时更改日志配置。默认情况下 Patroni 将日志写入 stderr，但现在可以直接将日志写入文件并在达到一定大小时轮转。此外还增加了对自定义日期格式的支持以及对每个 Python 模块日志级别进行微调的功能。
 
-- Make it possible to take into account the current timeline during leader elections (Alexander Kukushkin)
+- 支持在 leader 选举时考虑当前时间线（Alexander Kukushkin）
 
-  It could happen that the node is considering itself as a healthiest one although it is currently not on the latest known timeline. In some cases we want to avoid promoting of such node, which could be achieved by setting `check_timeline` parameter to `true` (default behavior remains unchanged).
+  可能会出现节点认为自己是最健康的，但实际上不在最新已知时间线上的情况。在某些情况下我们希望避免提升此类节点，这可以通过将 **`check_timeline`** 参数设置为 **`true`** 来实现（默认行为保持不变）。
 
-- Relaxed requirements on superuser credentials
+- 放宽超级用户凭证要求
 
-  Libpq allows opening connections without explicitly specifying neither username nor password. Depending on situation it relies either on pgpass file or trust authentication method in pg_hba.conf. Since pg_rewind is also using libpq, it will work the same way.
+  Libpq 允许在不显式指定用户名或密码的情况下打开连接。根据情况，它依赖于 pgpass 文件或 pg_hba.conf 中的 trust 认证方法。由于 pg_rewind 也使用 libpq，它将以相同的方式工作。
 
-- Implemented possibility to configure Consul Service registration and check interval via environment variables (Alexander Kukushkin)
+- 实现通过环境变量配置 Consul Service 注册和检查间隔的功能（Alexander Kukushkin）
 
-  Registration of service in Consul was added in the 1.5.0, but so far it was only possible to turn it on via patroni.yaml.
+  Consul 中的服务注册在 1.5.0 中添加，但到目前为止只能通过 patroni.yaml 来启用。
 
-**Stability Improvements**
+**稳定性改进**
 
-- Set archive_mode to off during the custom bootstrap (Alexander Kukushkin)
+- 在自定义 bootstrap 期间将 archive_mode 设置为 off（Alexander Kukushkin）
 
-  We want to avoid archiving wals and history files until the cluster is fully functional. It really helps if the custom bootstrap involves pg_upgrade.
+  我们希望在集群完全运行之前避免归档 WAL 和历史文件。如果自定义 bootstrap 涉及 pg_upgrade，这确实很有帮助。
 
-- Apply five seconds backoff when loading global config on start (Alexander Kukushkin)
+- 启动时加载全局配置时应用五秒退避（Alexander Kukushkin）
 
-  It helps to avoid hammering DCS when Patroni just starting up.
+  这有助于避免在 Patroni 刚启动时频繁请求 DCS。
 
-- Reduce amount of error messages generated on shutdown (Alexander Kukushkin)
+- 减少关闭时产生的错误消息数量（Alexander Kukushkin）
 
-  They were harmless but rather annoying and sometimes scary.
+  这些消息是无害的，但相当烦人，有时还很吓人。
 
-- Explicitly secure rw perms for recovery.conf at creation time (Lucas Capistrant)
+- 在创建 recovery.conf 时显式设置 rw 权限（Lucas Capistrant）
 
-  We don't want anybody except patroni/postgres user reading this file, because it contains replication user and password.
+  我们不希望除 patroni/postgres 用户之外的任何人读取此文件，因为它包含复制用户和密码。
 
-- Redirect HTTPServer exceptions to logger (Julien Riou)
+- 将 HTTPServer 异常重定向到 logger（Julien Riou）
 
-  By default, such exceptions were logged on standard output messing with regular logs.
+  默认情况下，此类异常会记录到标准输出，干扰常规日志。
 
-**Bug fixes**
+**错误修复**
 
-- Removed stderr pipe to stdout on pg_ctl process (Cody Coons)
+- 移除 pg_ctl 进程中的 stderr 到 stdout 管道重定向（Cody Coons）
 
-  Inheriting stderr from the main Patroni process allows all Postgres logs to be seen along with all patroni logs. This is very useful in a container environment as Patroni and Postgres logs may be consumed using standard tools (docker logs, kubectl, etc). In addition to that, this change fixes a bug with Patroni not being able to catch postmaster pid when postgres writing some warnings into stderr.
+  从主 Patroni 进程继承 stderr 允许所有 Postgres 日志与所有 Patroni 日志一起查看。这在容器环境中非常有用，因为 Patroni 和 Postgres 日志可以使用标准工具（docker logs、kubectl 等）来查看。此外，此更改修复了当 Postgres 向 stderr 写入一些警告时 Patroni 无法捕获 postmaster pid 的错误。
 
-- Set Consul service check deregister timeout in Go time format (Pavel Kirillov)
+- 以 Go 时间格式设置 Consul service check 注销超时（Pavel Kirillov）
 
-  Without explicitly mentioned time unit registration was failing.
+  没有明确指定时间单位时注册会失败。
 
-- Relax checks of standby_cluster cluster configuration (Dmitry Dolgov, Alexander Kukushkin)
+- 放宽 standby_cluster 集群配置检查（Dmitry Dolgov，Alexander Kukushkin）
 
-  It was accepting only strings as valid values and therefore it was not possible to specify the port as integer and create_replica_methods as a list.
+  之前只接受字符串作为有效值，因此无法将端口指定为整数，也无法将 create_replica_methods 指定为列表。
 
 --------
 
 ## Version 1.5.3
 
-Released 2018-12-03
+发布于 2018-12-03
 
-Compatibility and bugfix release.
+兼容性和错误修复版本。
 
-- Improve stability when running with python3 against zookeeper (Alexander Kukushkin)
+- 改进在 python3 下与 zookeeper 运行时的稳定性（Alexander Kukushkin）
 
-  Change of `loop_wait` was causing Patroni to disconnect from zookeeper and never reconnect back.
+  更改 **`loop_wait`** 会导致 Patroni 断开与 zookeeper 的连接且再也无法重新连接。
 
-- Fix broken compatibility with postgres 9.3 (Alexander Kukushkin)
+- 修复与 postgres 9.3 的兼容性问题（Alexander Kukushkin）
 
-  When opening a replication connection we should specify replication=1, because 9.3 does not understand replication='database'
+  打开复制连接时应指定 replication=1，因为 9.3 不理解 replication='database'。
 
-- Make sure we refresh Consul session at least once per HA loop and improve handling of consul sessions exceptions (Alexander Kukushkin)
+- 确保每次 HA 循环至少刷新一次 Consul 会话，并改进 consul 会话异常处理（Alexander Kukushkin）
 
-  Restart of local consul agent invalidates all sessions related to the node. Not calling session refresh on time and not doing proper handling of session errors was causing demote of the primary.
+  重启本地 consul agent 会使与该节点相关的所有会话失效。未及时调用会话刷新以及未正确处理会话错误会导致主节点被降级。
 
 --------
 
 ## Version 1.5.2
 
-Released 2018-11-26
+发布于 2018-11-26
 
-Compatibility and bugfix release.
+兼容性和错误修复版本。
 
-- Compatibility with kazoo-2.6.0 (Alexander Kukushkin)
+- 兼容 kazoo-2.6.0（Alexander Kukushkin）
 
-  In order to make sure that requests are performed with an appropriate timeout, Patroni redefines create_connection method from python-kazoo module. The last release of kazoo slightly changed the way how create_connection method is called.
+  为了确保请求以适当的超时执行，Patroni 重新定义了 python-kazoo 模块中的 create_connection 方法。kazoo 的最新版本稍微改变了 create_connection 方法的调用方式。
 
-- Fix Patroni crash when Consul cluster loses the leader (Alexander Kukushkin)
+- 修复 Consul 集群失去 leader 时 Patroni 崩溃的问题（Alexander Kukushkin）
 
-  The crash was happening due to incorrect implementation of touch_member method, it should return boolean and not raise any exceptions.
+  崩溃是由于 touch_member 方法的不正确实现导致的，它应该返回布尔值而不是抛出任何异常。
 
 --------
 
 ## Version 1.5.1
 
-Released 2018-11-01
+发布于 2018-11-01
 
-This version implements support of permanent replication slots, adds support of pgBackRest and fixes number of bugs.
+此版本实现了对永久复制槽的支持，增加了对 pgBackRest 的支持，并修复了若干错误。
 
-**New features**
+**新特性**
 
-- Permanent replication slots (Alexander Kukushkin)
+- 永久复制槽（Alexander Kukushkin）
 
-  Permanent replication slots are preserved on failover/switchover, that is, Patroni on the new primary will create configured replication slots right after doing promote. Slots could be configured with the help of `patronictl edit-config`. The initial configuration could be also done in the [bootstrap.dcs](/docs/patroni/config/yaml#yaml).
+  永久复制槽在故障转移/切换时被保留，即新主节点上的 Patroni 在完成提升后会立即创建配置的复制槽。可以借助 **`patronictl edit-config`** 配置槽。初始配置也可以在 [bootstrap.dcs](/docs/patroni/config/yaml#yaml) 中完成。
 
-- Add pgbackrest support (Yogesh Sharma)
+- 新增 pgbackrest 支持（Yogesh Sharma）
 
-  pgBackrest can restore in existing \$PGDATA folder, this allows speedy restore as files which have not changed since last backup are skipped, to support this feature new parameter `keep_data` has been introduced. See [replica creation method](/docs/patroni/replica_bootstrap#custom_replica_creation) section for additional examples.
+  pgBackrest 可以在现有的 \$PGDATA 文件夹中恢复，这使得恢复速度更快，因为自上次备份以来未更改的文件会被跳过。为了支持此功能，引入了新参数 **`keep_data`**。更多示例请参阅 [副本创建方法](/docs/patroni/replica_bootstrap#custom_replica_creation) 部分。
 
-**Bug fixes**
+**错误修复**
 
-- A few bugfixes in the "standby cluster" workflow (Alexander Kukushkin)
+- "备用集群"工作流中的若干错误修复（Alexander Kukushkin）
 
-  Please see <https://github.com/patroni/patroni/pull/823> for more details.
+  更多详情请参阅 <https://github.com/patroni/patroni/pull/823>。
 
-- Fix REST API health check when cluster management is paused and DCS is not accessible (Alexander Kukushkin)
+- 修复集群管理暂停且 DCS 不可访问时 REST API 健康检查的问题（Alexander Kukushkin）
 
-  Regression was introduced in <https://github.com/patroni/patroni/commit/90cf930036a9d5249265af15d2b787ec7517cf57>
+  回归问题引入于 <https://github.com/patroni/patroni/commit/90cf930036a9d5249265af15d2b787ec7517cf57>。
 
 --------
 
 ## Version 1.5.0
 
-Released 2018-09-20
+发布于 2018-09-20
 
-This version enables Patroni HA cluster to operate in a standby mode, introduces experimental support for running on Windows, and provides a new configuration parameter to register PostgreSQL service in Consul.
+此版本使 Patroni HA 集群能够以备用模式运行，引入了对 Windows 运行的实验性支持，并提供了在 Consul 中注册 PostgreSQL 服务的新配置参数。
 
-**New features**
+**新特性**
 
-- Standby cluster (Dmitry Dolgov)
+- 备用集群（Dmitry Dolgov）
 
-  One or more Patroni nodes can form a standby cluster that runs alongside the primary one (i.e. in another datacenter) and consists of standby nodes that replicate from the master in the primary cluster. All PostgreSQL nodes in the standby cluster are replicas; one of those replicas elects itself to replicate directly from the remote master, while the others replicate from it in a cascading manner. More detailed description of this feature and some configuration examples can be found at [here](/docs/patroni/standby_cluster#standby_cluster).
+  一个或多个 Patroni 节点可以组成一个备用集群，与主集群并行运行（即在另一个数据中心），由从主集群中的 master 复制的备用节点组成。备用集群中的所有 PostgreSQL 节点都是副本；其中一个副本选举自己直接从远程 master 复制，而其他副本则以级联方式从它复制。此功能的更详细描述和一些配置示例可以在 [这里](/docs/patroni/standby_cluster#standby_cluster) 找到。
 
-- Register Services in Consul (Pavel Kirillov, Alexander Kukushkin)
+- 在 Consul 中注册服务（Pavel Kirillov，Alexander Kukushkin）
 
-  If `register_service` parameter in the consul [configuration](/docs/patroni/config/yaml#consul_settings) is enabled, the node will register a service with the name `scope` and the tag `master`, `replica` or `standby-leader`.
+  如果在 consul [配置](/docs/patroni/config/yaml#consul_settings) 中启用了 **`register_service`** 参数，节点将注册一个名为 **`scope`** 的服务，标签为 **`master`**、**`replica`** 或 **`standby-leader`**。
 
-- Experimental Windows support (Pavel Golub)
+- 实验性 Windows 支持（Pavel Golub）
 
-  From now on it is possible to run Patroni on Windows, although Windows support is brand-new and hasn't received as much real-world testing as its Linux counterpart. We welcome your feedback!
+  从现在起可以在 Windows 上运行 Patroni，尽管 Windows 支持是全新的，还没有像 Linux 版本那样经过大量实际测试。欢迎您的反馈！
 
-**Improvements in patronictl**
+**patronictl 改进**
 
-- Add patronictl -k/--insecure flag and support for restapi cert (Wilfried Roset)
+- 为 patronictl 添加 -k/--insecure 标志并支持 restapi 证书（Wilfried Roset）
 
-  In the past if the REST API was protected by the self-signed certificates [patronictl](/docs/patroni/patronictl#patronictl) would fail to verify them. There was no way to disable that verification. It is now possible to configure [patronictl](/docs/patroni/patronictl#patronictl) to skip the certificate verification altogether or provide CA and client certificates in the [ctl:](/docs/patroni/config/yaml#patronictl_settings) section of configuration.
+  过去如果 REST API 由自签名证书保护，[patronictl](/docs/patroni/patronictl#patronictl) 将无法验证它们。没有办法禁用该验证。现在可以配置 [patronictl](/docs/patroni/patronictl#patronictl) 完全跳过证书验证，或在配置的 [ctl:](/docs/patroni/config/yaml#patronictl_settings) 部分提供 CA 和客户端证书。
 
-- Exclude members with nofailover tag from patronictl switchover/failover output (Alexander Anikin)
+- 从 patronictl switchover/failover 输出中排除带有 nofailover 标签的成员（Alexander Anikin）
 
-  Previously, those members were incorrectly proposed as candidates when performing interactive switchover or failover via patronictl.
+  之前，通过 patronictl 执行交互式切换或故障转移时，这些成员被错误地建议为候选者。
 
-**Stability improvements**
+**稳定性改进**
 
-- Avoid parsing non-key-value output lines of pg_controldata (Alexander Anikin)
+- 避免解析 pg_controldata 的非键值对输出行（Alexander Anikin）
 
-  Under certain circuimstances pg_controldata outputs lines without a colon character. That would trigger an error in Patroni code that parsed pg_controldata output, hiding the actual problem; often such lines are emitted in a warning shown by pg_controldata before the regular output, i.e. when the binary major version does not match the one of the PostgreSQL data directory.
+  在某些情况下 pg_controldata 会输出没有冒号字符的行。这会在解析 pg_controldata 输出的 Patroni 代码中触发错误，隐藏了实际问题；通常这些行是 pg_controldata 在常规输出之前以警告形式发出的，即当二进制主版本与 PostgreSQL 数据目录的版本不匹配时。
 
-- Add member name to the error message during the leader election (Jan Mussler)
+- 在 leader 选举期间将成员名称添加到错误消息中（Jan Mussler）
 
-  During the leader election, Patroni connects to all known members of the cluster and requests their status. Such status is written to the Patroni log and includes the name of the member. Previously, if the member was not accessible, the error message did not indicate its name, containing only the URL.
+  在 leader 选举期间，Patroni 连接到集群的所有已知成员并请求其状态。该状态写入 Patroni 日志并包含成员名称。之前，如果成员不可访问，错误消息不会显示其名称，只包含 URL。
 
-- Immediately reserve the WAL position upon creation of the replication slot (Alexander Kukushkin)
+- 在创建复制槽时立即保留 WAL 位置（Alexander Kukushkin）
 
-  Starting from 9.6, `pg_create_physical_replication_slot` function provides an additional boolean parameter `immediately_reserve`. When it is set to `false`, which is also the default, the slot doesn't reserve the WAL position until it receives the first client connection, potentially losing some segments required by the client in a time window between the slot creation and the initial client connection.
+  从 9.6 开始，**`pg_create_physical_replication_slot`** 函数提供了一个额外的布尔参数 **`immediately_reserve`**。当它设置为 **`false`**（也是默认值）时，槽在收到第一个客户端连接之前不会保留 WAL 位置，在槽创建和初始客户端连接之间的时间窗口内可能会丢失客户端所需的一些段。
 
-- Fix bug in strict synchronous replication (Alexander Kukushkin)
+- 修复严格同步复制中的错误（Alexander Kukushkin）
 
-  When running with `synchronous_mode_strict: true`, in some cases Patroni puts `\*` into the `synchronous_standby_names`, changing the sync state for most of the replication connections to `potential`. Previously, Patroni couldn't pick a synchronous candidate under such curcuimstances, as it only considered those with the state `async`.
+  当以 **`synchronous_mode_strict: true`** 运行时，在某些情况下 Patroni 会将 **`\*`** 放入 **`synchronous_standby_names`** 中，将大多数复制连接的同步状态更改为 **`potential`**。之前，Patroni 无法在这种情况下选择同步候选者，因为它只考虑状态为 **`async`** 的候选者。
 
 --------
 
 ## Version 1.4.6
 
-Released 2018-08-14
+发布于 2018-08-14
 
-**Bug fixes and stability improvements**
+**错误修复和稳定性改进**
 
-This release fixes a critical issue with Patroni API /master endpoint returning 200 for the non-master node. This is a reporting issue, no actual split-brain, but under certain circumstances clients might be directed to the read-only node.
+此版本修复了 Patroni API /master 端点在非 master 节点上返回 200 的关键问题。这是一个报告问题，不是实际的脑裂，但在某些情况下客户端可能被定向到只读节点。
 
-- Reset is_leader status on demote (Alexander Kukushkin, Oleksii Kliukin)
+- 在降级时重置 is_leader 状态（Alexander Kukushkin，Oleksii Kliukin）
 
-  Make sure demoted cluster member stops responding with code 200 on the /master API call.
+  确保被降级的集群成员停止在 /master API 调用上以 200 状态码响应。
 
-- Add new "cluster_unlocked" field to the API output (Dmitry Dolgov)
+- 在 API 输出中添加新的 "cluster_unlocked" 字段（Dmitry Dolgov）
 
-  This field indicates whether the cluster has the master running. It can be used when it is not possible to query any other node but one of the replicas.
+  该字段指示集群是否有正在运行的 master。当无法查询除某个副本之外的任何其他节点时，它可以被使用。
 
 --------
 
 ## Version 1.4.5
 
-Released 2018-08-03
+发布于 2018-08-03
 
-**New features**
+**新特性**
 
-- Improve logging when applying new postgres configuration (Don Seiler)
+- 改进应用新 postgres 配置时的日志记录（Don Seiler）
 
-  Patroni logs changed parameter names and values.
+  Patroni 会记录已更改的参数名称和值。
 
-- Python 3.7 compatibility (Christoph Berg)
+- Python 3.7 兼容性（Christoph Berg）
 
-  async is a reserved keyword in python3.7
+  async 是 python3.7 中的保留关键字。
 
-- Set state to "stopped" in the DCS when a member is shut down (Tony Sorrentino)
+- 成员关闭时在 DCS 中将状态设置为 "stopped"（Tony Sorrentino）
 
-  This shows the member state as "stopped" in "patronictl list" command.
+  这会在 "patronictl list" 命令中将成员状态显示为 "stopped"。
 
-- Improve the message logged when stale postmaster.pid matches a running process (Ants Aasma)
+- 改进当过时的 postmaster.pid 匹配到运行中的进程时记录的消息（Ants Aasma）
 
-  The previous one was beyond confusing.
+  之前的消息非常令人困惑。
 
-- Implement patronictl reload functionality (Don Seiler)
+- 实现 patronictl reload 功能（Don Seiler）
 
-  Before that it was only possible to reload configuration by either calling REST API or by sending SIGHUP signal to the Patroni process.
+  之前只能通过调用 REST API 或向 Patroni 进程发送 SIGHUP 信号来重新加载配置。
 
-- Take and apply some parameters from controldata when starting as a replica (Alexander Kukushkin)
+- 作为副本启动时从 controldata 获取并应用某些参数（Alexander Kukushkin）
 
-  The value of `max_connections` and some other parameters set in the global configuration may be lower than the one actually used by the primary; when this happens, the replica cannot start and should be fixed manually. Patroni takes care of that now by reading and applying the value from `pg_controldata`, starting postgres and setting `pending_restart` flag.
+  在全局配置中设置的 **`max_connections`** 和其他一些参数的值可能低于主节点实际使用的值；当发生这种情况时，副本无法启动且需要手动修复。Patroni 现在通过从 **`pg_controldata`** 读取并应用值、启动 postgres 并设置 **`pending_restart`** 标志来处理这个问题。
 
-- If set, use LD_LIBRARY_PATH when starting postgres (Chris Fraser)
+- 如果设置了 LD_LIBRARY_PATH 则在启动 postgres 时使用它（Chris Fraser）
 
-  When starting up Postgres, Patroni was passing along PATH, LC_ALL and LANG env vars if they are set. Now it is doing the same with LD_LIBRARY_PATH. It should help if somebody installed PostgreSQL to non-standard place.
+  启动 Postgres 时，Patroni 之前会传递已设置的 PATH、LC_ALL 和 LANG 环境变量。现在对 LD_LIBRARY_PATH 也做了相同处理。如果有人将 PostgreSQL 安装到非标准位置，这应该会有所帮助。
 
-- Rename create_replica_method to create_replica_methods (Dmitry Dolgov)
+- 将 create_replica_method 重命名为 create_replica_methods（Dmitry Dolgov）
 
-  To make it clear that it's actually an array. The old name is still supported for backward compatibility.
+  为了明确它实际上是一个数组。旧名称仍然支持以保持向后兼容。
 
-**Bug fixes and stability improvements**
+**错误修复和稳定性改进**
 
-- Fix condition for the replica start due to pg_rewind in paused state (Oleksii Kliukin)
+- 修复暂停状态下因 pg_rewind 导致副本启动的条件（Oleksii Kliukin）
 
-  Avoid starting the replica that had already executed pg_rewind before.
+  避免启动之前已经执行过 pg_rewind 的副本。
 
-- Respond 200 to the master health-check only if update_lock has been successful (Alexander Kukushkin)
+- 仅在 update_lock 成功时才对 master 健康检查响应 200（Alexander Kukushkin）
 
-  Prevent Patroni from reporting itself a master on the former (demoted) master if DCS is partitioned.
+  防止在 DCS 分区时，Patroni 在前（已降级的）master 上将自己报告为 master。
 
-- Fix compatibility with the new consul module (Alexander Kukushkin)
+- 修复与新 consul 模块的兼容性（Alexander Kukushkin）
 
-  Starting from v1.1.0 python-consul changed internal API and started using `list` instead of `dict` to pass query parameters.
+  从 v1.1.0 开始，python-consul 更改了内部 API，开始使用 **`list`** 而不是 **`dict`** 来传递查询参数。
 
-- Catch exceptions from Patroni REST API thread during shutdown (Alexander Kukushkin)
+- 捕获关闭期间 Patroni REST API 线程的异常（Alexander Kukushkin）
 
-  Those uncaught exceptions kept PostgreSQL running at shutdown.
+  那些未捕获的异常会导致 PostgreSQL 在关闭时继续运行。
 
-- Do crash recovery only when Postgres runs as the master (Alexander Kukushkin)
+- 仅当 Postgres 作为 master 运行时才执行崩溃恢复（Alexander Kukushkin）
 
-  Require `pg_controldata` to report 'in production' or 'shutting down' or 'in crash recovery'. In all other cases no crash recovery is necessary.
+  要求 **`pg_controldata`** 报告 'in production' 或 'shutting down' 或 'in crash recovery'。在所有其他情况下不需要崩溃恢复。
 
-- Improve handling of configuration errors (Henning Jacobs, Alexander Kukushkin)
+- 改进配置错误处理（Henning Jacobs，Alexander Kukushkin）
 
-  It is possible to change a lot of parameters in runtime (including `restapi.listen`) by updating Patroni config file and sending SIGHUP to Patroni process. This fix eliminates obscure exceptions from the 'restapi' thread when some of the parameters receive invalid values.
+  可以通过更新 Patroni 配置文件并向 Patroni 进程发送 SIGHUP 来在运行时更改许多参数（包括 **`restapi.listen`**）。此修复消除了当某些参数收到无效值时 'restapi' 线程中的晦涩异常。
 
 --------
 
 ## Version 1.4.4
 
-Released 2018-05-22
+发布于 2018-05-22
 
-**Stability improvements**
+**稳定性改进**
 
-- Fix race condition in poll_failover_result (Alexander Kukushkin)
+- 修复 poll_failover_result 中的竞争条件（Alexander Kukushkin）
 
-  It didn't affect directly neither failover nor switchover, but in some rare cases it was reporting success too early, when the former leader released the lock, producing a 'Failed over to "None"' instead of 'Failed over to "desired-node"' message.
+  它没有直接影响故障转移或切换，但在某些罕见情况下，当前任 leader 释放锁时会过早地报告成功，产生 'Failed over to "None"' 而不是 'Failed over to "desired-node"' 的消息。
 
-- Treat Postgres parameter names as case insensitive (Alexander Kukushkin)
+- 将 Postgres 参数名称视为不区分大小写（Alexander Kukushkin）
 
-  Most of the Postgres parameters have snake_case names, but there are three exceptions from this rule: DateStyle, IntervalStyle and TimeZone. Postgres accepts those parameters when written in a different case (e.g. timezone = 'some/tzn'); however, Patroni was unable to find case-insensitive matches of those parameter names in pg_settings and ignored such parameters as a result.
+  大多数 Postgres 参数使用 snake_case 命名，但有三个例外：DateStyle、IntervalStyle 和 TimeZone。Postgres 接受以不同大小写编写的这些参数（例如 timezone = 'some/tzn'）；但是，Patroni 无法在 pg_settings 中找到这些参数名称的不区分大小写匹配，因此忽略了这些参数。
 
-- Abort start if attaching to running postgres and cluster not initialized (Alexander Kukushkin)
+- 如果附加到运行中的 postgres 但集群未初始化则中止启动（Alexander Kukushkin）
 
-  Patroni can attach itself to an already running Postgres instance. It is imperative to start running Patroni on the master node before getting to the replicas.
+  Patroni 可以附加到已经运行的 Postgres 实例。在处理副本之前，必须先在主节点上启动 Patroni。
 
-- Fix behavior of patronictl scaffold (Alexander Kukushkin)
+- 修复 patronictl scaffold 的行为（Alexander Kukushkin）
 
-  Pass dict object to touch_member instead of json encoded string, DCS implementation will take care of encoding it.
+  向 touch_member 传递 dict 对象而不是 json 编码的字符串，DCS 实现会负责编码。
 
-- Don't demote master if failed to update leader key in pause (Alexander Kukushkin)
+- 暂停状态下更新 leader 键失败时不降级 master（Alexander Kukushkin）
 
-  During maintenance a DCS may start failing write requests while continuing to responds to read ones. In that case, Patroni used to put the Postgres master node to a read-only mode after failing to update the leader lock in DCS.
+  在维护期间，DCS 可能开始拒绝写请求但继续响应读请求。在这种情况下，Patroni 之前会在 DCS 中更新 leader 锁失败后将 Postgres 主节点置为只读模式。
 
-- Sync replication slots when Patroni notices a new postmaster process (Alexander Kukushkin)
+- 当 Patroni 注意到新的 postmaster 进程时同步复制槽（Alexander Kukushkin）
 
-  If Postgres has been restarted, Patroni has to make sure that list of replication slots matches its expectations.
+  如果 Postgres 已重启，Patroni 必须确保复制槽列表符合其预期。
 
-- Verify sysid and sync replication slots after coming out of pause (Alexander Kukushkin)
+- 退出暂停后验证 sysid 并同步复制槽（Alexander Kukushkin）
 
-  During the `maintenance` mode it may happen that data directory was completely rewritten and therefore we have to make sure that `Database system identifier` still belongs to our cluster and replication slots are in sync with Patroni expectations.
+  在 **`maintenance`** 模式期间，数据目录可能被完全重写，因此我们必须确保 **`Database system identifier`** 仍然属于我们的集群，且复制槽与 Patroni 预期同步。
 
-- Fix a possible failure to start not running Postgres on a data directory with postmaster lock file present (Alexander Kukushkin)
+- 修复在存在 postmaster 锁文件的数据目录上无法启动未运行的 Postgres 的问题（Alexander Kukushkin）
 
-  Detect reuse of PID from the postmaster lock file. More likely to hit such problem if you run Patroni and Postgres in the docker container.
+  检测 postmaster 锁文件中 PID 的重用。如果在 docker 容器中运行 Patroni 和 Postgres，更容易遇到此问题。
 
-- Improve protection of DCS being accidentally wiped (Alexander Kukushkin)
+- 改进 DCS 被意外清除时的保护（Alexander Kukushkin）
 
-  Patroni has a lot of logic in place to prevent failover in such case; it can also restore all keys back; however, until this change an accidental removal of /config key was switching off pause mode for 1 cycle of HA loop.
+  Patroni 有大量逻辑来防止在这种情况下发生故障转移；它还可以恢复所有键；但是，在此更改之前，意外删除 /config 键会在 1 个 HA 循环周期内关闭暂停模式。
 
-- Do not exit when encountering invalid system ID (Oleksii Kliukin)
+- 遇到无效系统 ID 时不退出（Oleksii Kliukin）
 
-  Do not exit when the cluster system ID is empty or the one that doesn't pass the validation check. In that case, the cluster most likely needs a reinit; mention it in the result message. Avoid terminating Patroni, as otherwise reinit cannot happen.
+  当集群系统 ID 为空或未通过验证检查时不退出。在这种情况下，集群很可能需要重新初始化；在结果消息中提及这一点。避免终止 Patroni，否则无法进行重新初始化。
 
-**Compatibility with Kubernetes 1.10+**
+**兼容 Kubernetes 1.10+**
 
-- Added check for empty subsets (Cody Coons)
+- 添加空子集检查（Cody Coons）
 
-  Kubernetes 1.10.0+ started returning `Endpoints.subsets` set to `None` instead of `\[\]`.
+  Kubernetes 1.10.0+ 开始返回 **`Endpoints.subsets`** 为 **`None`** 而不是 **`\[\]`**。
 
-**Bootstrap improvements**
+**Bootstrap 改进**
 
-- Make deleting recovery.conf optional (Brad Nicholson)
+- 使删除 recovery.conf 变为可选（Brad Nicholson）
 
-  If <span class="title-ref">bootstrap.\<custom_bootstrap_method_name\>.keep_existing_recovery_conf</span> is defined and set to `True`, Patroni will not remove the existing `recovery.conf` file. This is useful when bootstrapping from a backup with tools like pgBackRest that generate the appropriate `recovery.conf` for you.
+  如果定义了 <span class="title-ref">bootstrap.\<custom_bootstrap_method_name\>.keep_existing_recovery_conf</span> 并设置为 **`True`**，Patroni 将不会删除现有的 **`recovery.conf`** 文件。当使用 pgBackRest 等工具从备份引导时，这很有用，因为这些工具会为您生成适当的 **`recovery.conf`**。
 
-- Allow options to the basebackup built-in method (Oleksii Kliukin)
+- 允许为内置 basebackup 方法提供选项（Oleksii Kliukin）
 
-  It is now possible to supply options to the built-in basebackup method by defining the `basebackup` section in the configuration, similar to how those are defined for custom replica creation methods. The difference is in the format accepted by the `basebackup` section: since pg_basebackup accepts both `--key=value` and `--key` options, the contents of the section could be either a dictionary of key-value pairs, or a list of either one-element dictionaries or just keys (for the options that don't accept values). See [replica creation method](/docs/patroni/replica_bootstrap#custom_replica_creation) section for additional examples.
+  现在可以通过在配置中定义 **`basebackup`** 部分来为内置 basebackup 方法提供选项，类似于为自定义副本创建方法定义选项的方式。不同之处在于 **`basebackup`** 部分接受的格式：由于 pg_basebackup 接受 **`--key=value`** 和 **`--key`** 两种选项，该部分的内容可以是键值对的字典，也可以是单元素字典或仅包含键的列表（对于不接受值的选项）。更多示例请参阅 [副本创建方法](/docs/patroni/replica_bootstrap#custom_replica_creation) 部分。
 
 --------
 
 ## Version 1.4.3
 
-Released 2018-03-05
+发布于 2018-03-05
 
-**Improvements in logging**
+**日志改进**
 
-- Make log level configurable from environment variables (Andy Newton, Keyvan Hedayati)
+- 允许从环境变量配置日志级别（Andy Newton，Keyvan Hedayati）
 
-  `PATRONI_LOGLEVEL` - sets the general logging level `PATRONI_REQUESTS_LOGLEVEL` - sets the logging level for all HTTP requests e.g. Kubernetes API calls See <span class="title-ref">the docs for Python logging \<https://docs.python.org/3.6/library/logging.html#levels\></span> to get the names of possible log levels
+  **`PATRONI_LOGLEVEL`** - 设置通用日志级别；**`PATRONI_REQUESTS_LOGLEVEL`** - 设置所有 HTTP 请求（例如 Kubernetes API 调用）的日志级别。有关可用日志级别名称，请参阅 <span class="title-ref">Python logging 文档 \<https://docs.python.org/3.6/library/logging.html#levels\></span>。
 
-**Stability improvements and bug fixes**
+**稳定性改进和错误修复**
 
-- Don't rediscover etcd cluster topology when watch timed out (Alexander Kukushkin)
+- 当 watch 超时时不重新发现 etcd 集群拓扑（Alexander Kukushkin）
 
-  If we have only one host in etcd configuration and exactly this host is not accessible, Patroni was starting discovery of cluster topology and never succeeding. Instead it should just switch to the next available node.
+  如果 etcd 配置中只有一个主机且正好这个主机不可访问，Patroni 之前会开始发现集群拓扑但永远不会成功。相反，它应该只是切换到下一个可用节点。
 
-- Write content of bootstrap.pg_hba into a pg_hba.conf after custom bootstrap (Alexander Kukushkin)
+- 自定义 bootstrap 后将 bootstrap.pg_hba 的内容写入 pg_hba.conf（Alexander Kukushkin）
 
-  Now it behaves similarly to the usual bootstrap with `initdb`
+  现在其行为与使用 **`initdb`** 进行常规 bootstrap 时类似。
 
-- Single user mode was waiting for user input and never finish (Alexander Kukushkin)
+- 单用户模式会等待用户输入而永不结束（Alexander Kukushkin）
 
-  Regression was introduced in <https://github.com/patroni/patroni/pull/576>
+  回归问题引入于 <https://github.com/patroni/patroni/pull/576>。
 
 --------
 
 ## Version 1.4.2
 
-Released 2018-01-30
+发布于 2018-01-30
 
-**Improvements in patronictl**
+**patronictl 改进**
 
-- Rename scheduled failover to scheduled switchover (Alexander Kukushkin)
+- 将 scheduled failover 重命名为 scheduled switchover（Alexander Kukushkin）
 
-  Failover and switchover functions were separated in version 1.4, but `patronictl list` was still reporting `Scheduled failover` instead of `Scheduled switchover`.
+  故障转移和切换功能在 1.4 版本中已分离，但 **`patronictl list`** 仍然报告 **`Scheduled failover`** 而不是 **`Scheduled switchover`**。
 
-- Show information about pending restarts (Alexander Kukushkin)
+- 显示待重启信息（Alexander Kukushkin）
 
-  In order to apply some configuration changes sometimes it is necessary to restart postgres. Patroni was already giving a hint about that in the REST API and when writing node status into DCS, but there were no easy way to display it.
+  为了应用某些配置更改，有时需要重启 postgres。Patroni 之前已经在 REST API 和写入 DCS 的节点状态中给出了提示，但没有简便的方式来显示它。
 
-- Make show-config to work with cluster_name from config file (Alexander Kukushkin)
+- 使 show-config 与配置文件中的 cluster_name 一起工作（Alexander Kukushkin）
 
-  It works similar to the `patronictl edit-config`
+  其工作方式类似于 **`patronictl edit-config`**。
 
-**Stability improvements**
+**稳定性改进**
 
-- Avoid calling pg_controldata during bootstrap (Alexander Kukushkin)
+- 避免在 bootstrap 期间调用 pg_controldata（Alexander Kukushkin）
 
-  During initdb or custom bootstrap there is a time window when pgdata is not empty but pg_controldata has not been written yet. In such case pg_controldata call was failing with error messages.
+  在 initdb 或自定义 bootstrap 期间，存在一个 pgdata 不为空但 pg_controldata 尚未写入的时间窗口。在这种情况下，pg_controldata 调用会因错误消息而失败。
 
-- Handle exceptions raised from psutil (Alexander Kukushkin)
+- 处理 psutil 抛出的异常（Alexander Kukushkin）
 
-  cmdline is read and parsed every time when `cmdline()` method is called. It could happen that the process being examined has already disappeared, in that case `NoSuchProcess` is raised.
+  每次调用 **`cmdline()`** 方法时都会读取和解析 cmdline。被检查的进程可能已经消失，在这种情况下会抛出 **`NoSuchProcess`**。
 
-**Kubernetes support improvements**
+**Kubernetes 支持改进**
 
-- Don't swallow errors from k8s API (Alexander Kukushkin)
+- 不要吞掉 k8s API 的错误（Alexander Kukushkin）
 
-  A call to Kubernetes API could fail for a different number of reasons. In some cases such call should be retried, in some other cases we should log the error message and the exception stack trace. The change here will help debug Kubernetes permission issues.
+  对 Kubernetes API 的调用可能因多种原因而失败。在某些情况下应重试此类调用，在其他情况下我们应记录错误消息和异常堆栈跟踪。此更改将有助于调试 Kubernetes 权限问题。
 
-- Update Kubernetes example Dockerfile to install Patroni from the master branch (Maciej Szulik)
+- 更新 Kubernetes 示例 Dockerfile 以从 master 分支安装 Patroni（Maciej Szulik）
 
-  Before that it was using `feature/k8s`, which became outdated.
+  之前使用的是 **`feature/k8s`**，该分支已经过时。
 
-- Add proper RBAC to run patroni on k8s (Maciej Szulik)
+- 添加适当的 RBAC 以在 k8s 上运行 patroni（Maciej Szulik）
 
-  Add the Service account that is assigned to the pods of the cluster, the role that holds only the necessary permissions, and the rolebinding that connects the Service account and the Role.
+  添加分配给集群 pod 的 Service account、仅包含必要权限的 role，以及连接 Service account 和 Role 的 rolebinding。
 
 --------
-
 ## Version 1.4.1
 
-Released 2018-01-17
+发布于 2018-01-17
 
-**Fixes in patronictl**
+**patronictl修复**
 
-- Don't show current leader in suggested list of members to failover to. (Alexander Kukushkin)
+- 不在建议的故障转移目标成员列表中显示当前领导者（Alexander Kukushkin）
 
-  patronictl failover could still work when there is leader in the cluster and it should be excluded from the list of member where it is possible to failover to.
+  当集群中存在领导者时，patronictl failover仍然可以工作，应将其从可以故障转移到的成员列表中排除。
 
-- Make patronictl switchover compatible with the old Patroni api (Alexander Kukushkin)
+- 使patronictl switchover与旧版Patroni API兼容（Alexander Kukushkin）
 
-  In case if POST /switchover REST API call has failed with status code 501 it will do it once again, but to /failover endpoint.
+  如果POST /switchover REST API调用以状态码501失败，它将再次请求，但调用/failover端点。
 
 --------
 
 ## Version 1.4
 
-Released 2018-01-10
+发布于 2018-01-10
 
-This version adds support for using Kubernetes as a DCS, allowing to run Patroni as a cloud-native agent in Kubernetes without any additional deployments of Etcd, Zookeeper or Consul.
+此版本添加了使用Kubernetes作为DCS的支持，允许Patroni作为云原生代理在Kubernetes中运行，无需额外部署Etcd、Zookeeper或Consul。
 
-**Upgrade notice**
+**升级须知**
 
-Installing Patroni via pip will no longer bring in dependencies for (such as libraries for Etcd, Zookeper, Consul or Kubernetes, or support for AWS). In order to enable them one need to list them in pip install command explicitly, for instance `pip install patroni\[etcd,kubernetes\]`.
+通过pip安装Patroni将不再自动引入依赖项（如Etcd、Zookeeper、Consul或Kubernetes的库，或AWS支持）。要启用它们，需要在pip install命令中显式列出，例如 **`pip install patroni[etcd,kubernetes]`**。
 
-**Kubernetes support**
+**Kubernetes支持**
 
-Implement Kubernetes-based DCS. The endpoints meta-data is used in order to store the configuration and the leader key. The meta-data field inside the pods definition is used to store the member-related data. In addition to using Endpoints, Patroni supports ConfigMaps. You can find more information about this feature in the [Kubernetes chapter of the documentation](/docs/patroni/kubernetes#kubernetes)
+实现了基于Kubernetes的DCS。使用Endpoints的元数据来存储配置和领导者键。Pod定义中的元数据字段用于存储成员相关数据。除了使用Endpoints，Patroni还支持ConfigMaps。你可以在 [文档的Kubernetes章节](/docs/patroni/kubernetes#kubernetes) 中找到关于此功能的更多信息。
 
-**Stability improvements**
+**稳定性改进**
 
-- Factor out postmaster process into a separate object (Ants Aasma)
+- 将postmaster进程分离为独立对象（Ants Aasma）
 
-  This object identifies a running postmaster process via pid and start time and simplifies detection (and resolution) of situations when the postmaster was restarted behind our back or when postgres directory disappeared from the file system.
+  该对象通过pid和启动时间标识正在运行的postmaster进程，简化了对postmaster在后台被重启或postgres目录从文件系统中消失的情况的检测（和解决）。
 
-- Minimize the amount of SELECT's issued by Patroni on every loop of HA cycle (Alexander Kukushkin)
+- 最小化Patroni在每次HA循环迭代中发出的SELECT数量（Alexander Kukushkin）
 
-  On every iteration of HA loop Patroni needs to know recovery status and absolute wal position. From now on Patroni will run only single SELECT to get this information instead of two on the replica and three on the master.
+  在HA循环的每次迭代中，Patroni需要知道恢复状态和绝对WAL位置。从现在起，Patroni将只运行单个SELECT来获取此信息，而不是在副本上运行两个、在主节点上运行三个。
 
-- Remove leader key on shutdown only when we have the lock (Ants Aasma)
+- 仅在持有锁时才在关闭时移除领导者键（Ants Aasma）
 
-  Unconditional removal was generating unnecessary and misleading exceptions.
+  无条件移除会产生不必要和误导性的异常。
 
-**Improvements in patronictl**
+**patronictl改进**
 
-- Add version command to patronictl (Ants Aasma)
+- 为patronictl添加version命令（Ants Aasma）
 
-  It will show the version of installed Patroni and versions of running Patroni instances (if the cluster name is specified).
+  它将显示已安装的Patroni版本和正在运行的Patroni实例的版本（如果指定了集群名称）。
 
-- Make optional specifying cluster_name argument for some of patronictl commands (Alexander Kukushkin, Ants Aasma)
+- 使某些patronictl命令的cluster_name参数可选（Alexander Kukushkin，Ants Aasma）
 
-  It will work if patronictl is using usual Patroni configuration file with the `scope` defined.
+  如果patronictl使用定义了 **`scope`** 的常规Patroni配置文件，则可以工作。
 
-- Show information about scheduled switchover and maintenance mode (Alexander Kukushkin)
+- 显示有关计划切换和维护模式的信息（Alexander Kukushkin）
 
-  Before that it was possible to get this information only from Patroni logs or directly from DCS.
+  在此之前，只能从Patroni日志或直接从DCS获取此信息。
 
-- Improve `patronictl reinit` (Alexander Kukushkin)
+- 改进 **`patronictl reinit`**（Alexander Kukushkin）
 
-  Sometimes `patronictl reinit` refused to proceed when Patroni was busy with other actions, namely trying to start postgres. [patronictl](/docs/patroni/patronictl#patronictl) didn't provide any commands to cancel such long running actions and the only (dangerous) workarond was removing a data directory manually. The new implementation of `reinit` forcefully cancels other long-running actions before proceeding with reinit.
+  有时 **`patronictl reinit`** 在Patroni忙于其他操作（即尝试启动postgres）时会拒绝继续。 [patronictl](/docs/patroni/patronictl#patronictl) 没有提供任何命令来取消此类长时间运行的操作，唯一（危险的）解决方法是手动删除数据目录。新的 **`reinit`** 实现会在继续reinit之前强制取消其他长时间运行的操作。
 
-- Implement `--wait` flag in `patronictl pause` and `patronictl resume` (Alexander Kukushkin)
+- 在 **`patronictl pause`** 和 **`patronictl resume`** 中实现 **`--wait`** 标志（Alexander Kukushkin）
 
-  It will make [patronictl](/docs/patroni/patronictl#patronictl) wait until the requested action is acknowledged by all nodes in the cluster. Such behaviour is achieved by exposing the [pause](/docs/patroni/pause#pause) flag for every node in DCS and via the REST API.
+  它将使 [patronictl](/docs/patroni/patronictl#patronictl) 等待直到集群中所有节点确认请求的操作。此行为通过在DCS和REST API中为每个节点公开 [暂停](/docs/patroni/pause#pause) 标志来实现。
 
-- Rename `patronictl failover` into `patronictl switchover` (Alexander Kukushkin)
+- 将 **`patronictl failover`** 重命名为 **`patronictl switchover`**（Alexander Kukushkin）
 
-  The previous `failover` was actually only capable of doing a switchover; it refused to proceed in a cluster without the leader.
+  之前的 **`failover`** 实际上只能执行切换；在没有领导者的集群中它会拒绝继续。
 
-- Alter the behavior of `patronictl failover` (Alexander Kukushkin)
+- 更改 **`patronictl failover`** 的行为（Alexander Kukushkin）
 
-  It will work even if there is no leader, but in that case you will have to explicitly specify a node which should become the new leader.
+  即使没有领导者它也能工作，但在这种情况下你必须显式指定一个应成为新领导者的节点。
 
-**Expose information about timeline and history**
+**公开时间线和历史信息**
 
-- Expose current timeline in DCS and via API (Alexander Kukushkin)
+- 在DCS和API中公开当前时间线（Alexander Kukushkin）
 
-  Store information about the current timeline for each member of the cluster. This information is accessible via the API and is stored in the DCS
+  为集群的每个成员存储当前时间线的信息。此信息可通过API访问并存储在DCS中。
 
-- Store promotion history in the /history key in DCS (Alexander Kukushkin)
+- 在DCS的/history键中存储提升历史（Alexander Kukushkin）
 
-  In addition, store the timeline history enriched with the timestamp of the corresponding promotion in the /history key in DCS and update it with each promote.
+  此外，在DCS的/history键中存储包含相应提升时间戳的时间线历史，并在每次提升时更新它。
 
-**Add endpoints for getting synchronous and asynchronous replicas**
+**添加获取同步和异步副本的端点**
 
-- Add new /sync and /async endpoints (Alexander Kukushkin, Oleksii Kliukin)
+- 添加新的/sync和/async端点（Alexander Kukushkin，Oleksii Kliukin）
 
-> Those endpoints (also accessible as /synchronous and /asynchronous) return 200 only for synchronous and asynchronous replicas correspondingly (excluding those marked as `noloadbalance`).
+> 这些端点（也可通过/synchronous和/asynchronous访问）分别仅对同步和异步副本返回200（不包括标记为 **`noloadbalance`** 的副本）。
 
-**Allow multiple hosts for Etcd**
+**允许Etcd配置多个主机**
 
-- Add a new `hosts` parameter to Etcd configuration (Alexander Kukushkin)
+- 为Etcd配置添加新的 **`hosts`** 参数（Alexander Kukushkin）
 
-  This parameter should contain the initial list of hosts that will be used to discover and populate the list of the running etcd cluster members. If for some reason during work this list of discovered hosts is exhausted (no available hosts from that list), Patroni will return to the initial list from the `hosts` parameter.
+  此参数应包含初始主机列表，用于发现和填充正在运行的etcd集群成员列表。如果在工作期间由于某种原因已发现的主机列表被耗尽（该列表中没有可用主机），Patroni将返回到 **`hosts`** 参数中的初始列表。
 
 --------
 
 ## Version 1.3.6
 
-Released 2017-11-10
+发布于 2017-11-10
 
-**Stability improvements**
+**稳定性改进**
 
-- Verify process start time when checking if postgres is running. (Ants Aasma)
+- 在检查postgres是否正在运行时验证进程启动时间（Ants Aasma）
 
-  After a crash that doesn't clean up postmaster.pid there could be a new process with the same pid, resulting in a false positive for is_running(), which will lead to all kinds of bad behavior.
+  在未清理postmaster.pid的崩溃后，可能存在具有相同pid的新进程，导致is_running()误报，从而引发各种异常行为。
 
-- Shutdown postgresql before bootstrap when we lost data directory (ainlolcat)
+- 当丢失数据目录时，在引导前关闭postgresql（ainlolcat）
 
-  When data directory on the master is forcefully removed, postgres process can still stay alive for some time and prevent the replica created in place of that former master from starting or replicating. The fix makes Patroni cache the postmaster pid and its start time and let it terminate the old postmaster in case it is still running after the corresponding data directory has been removed.
+  当主节点上的数据目录被强制删除时，postgres进程可能仍然存活一段时间，阻止在该前主节点位置创建的副本启动或复制。此修复使Patroni缓存postmaster的pid及其启动时间，并在相应数据目录被删除后终止仍在运行的旧postmaster。
 
-- Perform crash recovery in a single user mode if postgres master dies (Alexander Kukushkin)
+- 如果postgres主进程死亡，则在单用户模式下执行崩溃恢复（Alexander Kukushkin）
 
-  It is unsafe to start immediately as a standby and not possible to run `pg_rewind` if postgres hasn't been shut down cleanly. The single user crash recovery only kicks in if `pg_rewind` is enabled or there is no master at the moment.
+  如果postgres没有干净关闭，立即作为备用节点启动是不安全的，也无法运行 **`pg_rewind`**。单用户崩溃恢复仅在启用了 **`pg_rewind`** 或当前没有主节点时才会触发。
 
-**Consul improvements**
+**Consul改进**
 
-- Make it possible to provide datacenter configuration for Consul (Vilius Okockis, Alexander Kukushkin)
+- 使得为Consul提供数据中心配置成为可能（Vilius Okockis，Alexander Kukushkin）
 
-  Before that Patroni was always communicating with datacenter of the host it runs on.
+  在此之前，Patroni始终与其运行所在主机的数据中心通信。
 
-- Always send a token in X-Consul-Token http header (Alexander Kukushkin)
+- 始终在X-Consul-Token HTTP头中发送令牌（Alexander Kukushkin）
 
-  If `consul.token` is defined in Patroni configuration, we will always send it in the 'X-Consul-Token' http header. python-consul module tries to be "consistent" with Consul REST API, which doesn't accept token as a query parameter for [session API](https://www.consul.io/api/session.html), but it still works with 'X-Consul-Token' header.
+  如果在Patroni配置中定义了 **`consul.token`**，我们将始终在'X-Consul-Token' HTTP头中发送它。python-consul模块试图与Consul REST API保持"一致"，后者不接受令牌作为 [会话API](https://www.consul.io/api/session.html) 的查询参数，但它仍然可以使用'X-Consul-Token'头。
 
-- Adjust session TTL if supplied value is smaller than the minimum possible (Stas Fomin, Alexander Kukushkin)
+- 如果提供的值小于最小可能值，则调整会话TTL（Stas Fomin，Alexander Kukushkin）
 
-  It could happen that the TTL provided in the Patroni configuration is smaller than the minimum one supported by Consul. In that case, Consul agent fails to create a new session. Without a session Patroni cannot create member and leader keys in the Consul KV store, resulting in an unhealthy cluster.
+  Patroni配置中提供的TTL可能小于Consul支持的最小值。在这种情况下，Consul代理无法创建新会话。没有会话，Patroni就无法在Consul KV存储中创建成员和领导者键，导致集群不健康。
 
-**Other improvements**
+**其他改进**
 
-- Define custom log format via environment variable `PATRONI_LOGFORMAT` (Stas Fomin)
+- 通过环境变量 **`PATRONI_LOGFORMAT`** 定义自定义日志格式（Stas Fomin）
 
-  Allow disabling timestamps and other similar fields in Patroni logs if they are already added by the system logger (usually when Patroni runs as a service).
+  如果时间戳和其他类似字段已由系统日志记录器添加（通常在Patroni作为服务运行时），允许在Patroni日志中禁用它们。
 
 --------
 
 ## Version 1.3.5
 
-Released 2017-10-12
+发布于 2017-10-12
 
-**Bugfix**
+**错误修复**
 
-- Set role to 'uninitialized' if data directory was removed (Alexander Kukushkin)
+- 如果数据目录被删除，则将角色设置为'uninitialized'（Alexander Kukushkin）
 
-  If the node was running as a master it was preventing from failover.
+  如果节点作为主节点运行，这会阻止故障转移。
 
-**Stability improvement**
+**稳定性改进**
 
-- Try to run postmaster in a single-user mode if we tried and failed to start postgres (Alexander Kukushkin)
+- 如果尝试启动postgres失败，则尝试在单用户模式下运行postmaster（Alexander Kukushkin）
 
-  Usually such problem happens when node running as a master was terminated and timelines were diverged. If `recovery.conf` has `restore_command` defined, there are really high chances that postgres will abort startup and leave controldata unchanged. It makes impossible to use `pg_rewind`, which requires a clean shutdown.
+  通常这种问题发生在作为主节点运行的节点被终止且时间线出现分歧时。如果 **`recovery.conf`** 定义了 **`restore_command`**，postgres极有可能中止启动并保持controldata不变。这使得无法使用需要干净关闭的 **`pg_rewind`**。
 
-**Consul improvements**
+**Consul改进**
 
-- Make it possible to specify health checks when creating session (Alexander Kukushkin)
+- 使得在创建会话时指定健康检查成为可能（Alexander Kukushkin）
 
-  If not specified, Consul will use "serfHealth". From one side it allows fast detection of isolated master, but from another side it makes it impossible for Patroni to tolerate short network lags.
+  如果未指定，Consul将使用"serfHealth"。一方面它允许快速检测隔离的主节点，但另一方面它使Patroni无法容忍短暂的网络延迟。
 
-**Bugfix**
+**错误修复**
 
-- Fix watchdog on Python 3 (Ants Aasma)
+- 修复Python 3上的watchdog（Ants Aasma）
 
-  A misunderstanding of the ioctl() call interface. If mutable=False then fcntl.ioctl() actually returns the arg buffer back. This accidentally worked on Python2 because int and str comparison did not return an error. Error reporting is actually done by raising IOError on Python2 and OSError on Python3.
+  对ioctl()调用接口的误解。如果mutable=False，则fcntl.ioctl()实际上会返回arg缓冲区。这在Python2上意外地工作了，因为int和str的比较不会返回错误。错误报告在Python2上通过引发IOError完成，在Python3上通过引发OSError完成。
 
 --------
 
 ## Version 1.3.4
 
-Released 2017-09-08
+发布于 2017-09-08
 
-**Different Consul improvements**
+**各种Consul改进**
 
-- Pass the consul token as a header (Andrew Colin Kissa)
+- 将consul令牌作为头部传递（Andrew Colin Kissa）
 
-  Headers are now the preferred way to pass the token to the consul [API](https://www.consul.io/api/index.html#authentication).
+  头部现在是向consul [API](https://www.consul.io/api/index.html#authentication) 传递令牌的首选方式。
 
-- Advanced configuration for Consul (Alexander Kukushkin)
+- Consul的高级配置（Alexander Kukushkin）
 
-  possibility to specify `scheme`, `token`, client and ca certificates [details](/docs/patroni/config/yaml#consul_settings).
+  可以指定 **`scheme`**、**`token`**、客户端和CA证书的 [详细信息](/docs/patroni/config/yaml#consul_settings)。
 
-- compatibility with python-consul-0.7.1 and above (Alexander Kukushkin)
+- 与python-consul-0.7.1及以上版本的兼容性（Alexander Kukushkin）
 
-  new python-consul module has changed signature of some methods
+  新的python-consul模块更改了某些方法的签名。
 
-- "Could not take out TTL lock" message was never logged (Alexander Kukushkin)
+- "Could not take out TTL lock"消息从未被记录（Alexander Kukushkin）
 
-  Not a critical bug, but lack of proper logging complicates investigation in case of problems.
+  不是关键错误，但缺乏适当的日志记录会使出现问题时的调查变得复杂。
 
-**Quote synchronous_standby_names using quote_ident**
+**使用quote_ident引用synchronous_standby_names**
 
-- When writing `synchronous_standby_names` into the `postgresql.conf` its value must be quoted (Alexander Kukushkin)
+- 将 **`synchronous_standby_names`** 写入 **`postgresql.conf`** 时，其值必须被正确引用（Alexander Kukushkin）
 
-  If it is not quoted properly, PostgreSQL will effectively disable synchronous replication and continue to work.
+  如果未正确引用，PostgreSQL将实际上禁用同步复制并继续工作。
 
-**Different bugfixes around pause state, mostly related to watchdog** (Alexander Kukushkin)
+**围绕暂停状态的各种修复，主要与watchdog相关**（Alexander Kukushkin）
 
-- Do not send keepalives if watchdog is not active
-- Avoid activating watchdog in a pause mode
-- Set correct postgres state in pause mode
-- Do not try to run queries from API if postgres is stopped
+- 如果watchdog未激活，则不发送keepalive
+- 避免在暂停模式下激活watchdog
+- 在暂停模式下设置正确的postgres状态
+- 如果postgres已停止，则不要尝试从API运行查询
 
 --------
 
 ## Version 1.3.3
 
-Released 2017-08-04
+发布于 2017-08-04
 
-**Bugfixes**
+**错误修复**
 
-- synchronous replication was disabled shortly after promotion even when synchronous_mode_strict was turned on (Alexander Kukushkin)
-- create empty `pg_ident.conf` file if it is missing after restoring from the backup (Alexander Kukushkin)
-- open access in `pg_hba.conf` to all databases, not only postgres (Franco Bellagamba)
+- 即使开启了synchronous_mode_strict，同步复制也会在提升后不久被禁用（Alexander Kukushkin）
+- 如果从备份恢复后缺少 **`pg_ident.conf`** 文件，则创建空文件（Alexander Kukushkin）
+- 在 **`pg_hba.conf`** 中对所有数据库开放访问，而不仅仅是postgres（Franco Bellagamba）
 
 --------
 
 ## Version 1.3.2
 
-Released 2017-07-31
+发布于 2017-07-31
 
-**Bugfix**
+**错误修复**
 
-- patronictl edit-config didn't work with ZooKeeper (Alexander Kukushkin)
+- patronictl edit-config无法与ZooKeeper配合工作（Alexander Kukushkin）
 
 --------
 
 ## Version 1.3.1
 
-Released 2017-07-28
+发布于 2017-07-28
 
-**Bugfix**
+**错误修复**
 
-- failover via API was broken due to change in `_MemberStatus` (Alexander Kukushkin)
+- 由于 **`_MemberStatus`** 的更改，通过API进行的故障转移被破坏（Alexander Kukushkin）
 
 --------
-
 ## Version 1.3
 
-Released 2017-07-27
+发布于 2017-07-27
 
-Version 1.3 adds custom bootstrap possibility, significantly improves support for pg_rewind, enhances the synchronous mode support, adds configuration editing to patronictl and implements watchdog support on Linux. In addition, this is the first version to work correctly with PostgreSQL 10.
+Version 1.3增加了自定义引导功能，显著改进了对pg_rewind的支持，增强了同步模式支持，为patronictl添加了配置编辑功能，并在Linux上实现了watchdog支持。此外，这是第一个能正确支持PostgreSQL 10的版本。
 
-**Upgrade notice**
+**升级须知**
 
-There are no known compatibility issues with the new version of Patroni. Configuration from version 1.2 should work without any changes. It is possible to upgrade by installing new packages and either restarting Patroni (will cause PostgreSQL restart), or by putting Patroni into a [pause mode](/docs/patroni/pause#pause) first and then restarting Patroni on all nodes in the cluster (Patroni in a pause mode will not attempt to stop/start PostgreSQL), resuming from the pause mode at the end.
+目前没有已知的新版本兼容性问题。Version 1.2的配置应无需任何更改即可使用。升级方式为安装新软件包后重启Patroni（会导致PostgreSQL重启），或者先将Patroni置于 [**暂停模式**](/docs/patroni/pause#pause)，然后在集群所有节点上重启Patroni（暂停模式下的Patroni不会尝试停止/启动PostgreSQL），最后退出暂停模式。
 
-**Custom bootstrap**
+**自定义引导**
 
-- Make the process of bootstrapping the cluster configurable (Alexander Kukushkin)
+- 使集群引导过程可配置（Alexander Kukushkin）
 
-  Allow custom bootstrap scripts instead of `initdb` when initializing the very first node in the cluster. The bootstrap command receives the name of the cluster and the path to the data directory. The resulting cluster can be configured to perform recovery, making it possible to bootstrap from a backup and do point in time recovery. Refer to the [documentation page](/docs/patroni/replica_bootstrap#custom_bootstrap) for more detailed description of this feature.
+  允许在初始化集群的第一个节点时使用自定义引导脚本代替 `initdb`。引导命令接收集群名称和数据目录路径。生成的集群可配置为执行恢复，从而可以从备份引导并进行时间点恢复。更多详细说明请参阅 [**文档页面**](/docs/patroni/replica_bootstrap#custom_bootstrap)。
 
-**Smarter pg_rewind support**
+**`更智能的pg_rewind支持`**
 
-- Decide on whether to run pg_rewind by looking at the timeline differences from the current master (Alexander Kukushkin)
+- 通过查看与当前主节点的时间线差异来决定是否运行pg_rewind（Alexander Kukushkin）
 
-  Previously, Patroni had a fixed set of conditions to trigger pg_rewind, namely when starting a former master, when doing a switchover to the designated node for every other node in the cluster or when there is a replica with the nofailover tag. All those cases have in common a chance that some replica may be ahead of the new master. In some cases, pg_rewind did nothing, in some other ones it was not running when necessary. Instead of relying on this limited list of rules make Patroni compare the master and the replica WAL positions (using the streaming replication protocol) in order to reliably decide if rewind is necessary for the replica.
+  此前，Patroni有一组固定条件来触发pg_rewind，即在启动前主节点时、在对集群中每个其他节点进行切换到指定节点的操作时，或当存在带有nofailover标签的副本时。所有这些情况的共同点是某些副本可能领先于新主节点。在某些情况下pg_rewind没有执行任何操作，在另一些情况下它在需要时却未运行。Patroni不再依赖这个有限的规则列表，而是比较主节点和副本的WAL位置（使用流复制协议），以可靠地决定副本是否需要rewind。
 
-**Synchronous replication mode strict**
+**同步复制严格模式**
 
-- Enhance synchronous replication support by adding the strict mode (James Sewell, Alexander Kukushkin)
+- 通过添加严格模式增强同步复制支持（James Sewell，Alexander Kukushkin）
 
-  Normally, when [synchronous_mode](/docs/patroni/replication_modes#synchronous_mode) is enabled and there are no replicas attached to the master, Patroni will disable synchronous replication in order to keep the master available for writes. The `synchronous_mode_strict` option changes that, when it is set Patroni will not disable the synchronous replication in a lack of replicas, effectively blocking all clients writing data to the master. In addition to the synchronous mode guarantee of preventing any data loss due to automatic failover, the strict mode ensures that each write is either durably stored on two nodes or not happening altogether if there is only one node in the cluster.
+  通常，当启用 [`synchronous_mode`](/docs/patroni/replication_modes#synchronous_mode) 且没有副本连接到主节点时，Patroni会禁用同步复制以保持主节点可写。`synchronous_mode_strict` 选项改变了这一行为，设置后Patroni在缺少副本时不会禁用同步复制，实际上会阻止所有客户端向主节点写入数据。除了同步模式保证自动故障转移不丢失任何数据外，严格模式还确保每次写入要么持久存储在两个节点上，要么在集群只有一个节点时完全不发生。
 
-**Configuration editing with patronictl**
+**使用patronictl编辑配置**
 
-- Add configuration editing to patronictl (Ants Aasma, Alexander Kukushkin)
+- 为patronictl添加配置编辑功能（Ants Aasma，Alexander Kukushkin）
 
-  Add the ability to patronictl of editing dynamic cluster configuration stored in DCS. Support either specifying the parameter/values from the command-line, invoking the \$EDITOR, or applying configuration from the yaml file.
+  为patronictl添加编辑存储在DCS中的动态集群配置的能力。支持从命令行指定参数/值、调用$EDITOR，或从yaml文件应用配置。
 
-**Linux watchdog support**
+**Linux watchdog支持**
 
-- Implement watchdog support for Linux (Ants Aasma)
+- 为Linux实现watchdog支持（Ants Aasma）
 
-  Support Linux software watchdog in order to reboot the node where Patroni is not running or not responding (e.g because of the high load) The Linux software watchdog reboots the non-responsive node. It is possible to configure the watchdog device to use (`/dev/watchdog` by default) and the mode (on, automatic, off) from the watchdog section of the Patroni configuration. You can get more information from the [watchdog documentation](/docs/patroni/watchdog#watchdog).
+  支持Linux软件watchdog，以在Patroni未运行或无响应时（例如由于高负载）重启节点。Linux软件watchdog会重启无响应的节点。可以从Patroni配置的watchdog部分配置要使用的watchdog设备（默认为 `/dev/watchdog`）和模式（on、automatic、off）。更多信息请参阅 [**watchdog文档**](/docs/patroni/watchdog#watchdog)。
 
-**Add support for PostgreSQL 10**
+**`添加PostgreSQL 10支持`**
 
-- Patroni is compatible with all beta versions of PostgreSQL 10 released so far and we expect it to be compatible with the PostgreSQL 10 when it will be released.
+- Patroni兼容迄今为止发布的所有PostgreSQL 10 beta版本，我们预期在PostgreSQL 10正式发布时也将兼容。
 
-**PostgreSQL-related minor improvements**
+**`PostgreSQL相关的小改进`**
 
-- Define pg_hba.conf via the Patroni configuration file or the dynamic configuration in DCS (Alexander Kukushkin)
+- 通过Patroni配置文件或DCS中的动态配置定义pg_hba.conf（Alexander Kukushkin）
 
-  Allow to define the contents of `pg_hba.conf` in the `pg_hba` sub-section of the `postgresql` section of the configuration. This simplifies managing `pg_hba.conf` on multiple nodes, as one needs to define it only ones in DCS instead of logging to every node, changing it manually and reload the configuration.
+  允许在配置的 `postgresql` 部分的 `pg_hba` 子部分中定义 `pg_hba.conf` 的内容。这简化了在多个节点上管理 `pg_hba.conf` 的工作，因为只需在DCS中定义一次，而无需登录每个节点手动更改并重载配置。
 
-  When defined, the contents of this section will replace the current `pg_hba.conf` completely. Patroni ignores it if `hba_file` PostgreSQL parameter is set.
+  定义后，此部分的内容将完全替换当前的 `pg_hba.conf`。如果设置了 `hba_file` PostgreSQL参数，Patroni将忽略此配置。
 
-- Support connecting via a UNIX socket to the local PostgreSQL cluster (Alexander Kukushkin)
+- 支持通过UNIX套接字连接到本地PostgreSQL集群（Alexander Kukushkin）
 
-  Add the `use_unix_socket` option to the `postgresql` section of Patroni configuration. When set to true and the PostgreSQL `unix_socket_directories` option is not empty, enables Patroni to use the first value from it to connect to the local PostgreSQL cluster. If `unix_socket_directories` is not defined, Patroni will assume its default value and omit the `host` parameter in the PostgreSQL connection string altogether.
+  在Patroni配置的 `postgresql` 部分添加 `use_unix_socket` 选项。设置为true且PostgreSQL的 `unix_socket_directories` 选项不为空时，Patroni将使用其第一个值连接到本地PostgreSQL集群。如果未定义 `unix_socket_directories`，Patroni将假定其默认值，并在PostgreSQL连接字符串中完全省略 `host` 参数。
 
-- Support change of superuser and replication credentials on reload (Alexander Kukushkin)
+- 支持在重载时更改超级用户和复制凭据（Alexander Kukushkin）
 
-- Support storing of configuration files outside of PostgreSQL data directory (@jouir)
+- 支持将配置文件存储在PostgreSQL数据目录之外（@jouir）
 
-  Add the new configuration `postgresql` configuration directive `config_dir`. It defaults to the data directory and must be writable by Patroni.
+  添加新的 `postgresql` 配置指令 `config_dir`。默认为数据目录，必须可被Patroni写入。
 
-**Bug fixes and stability improvements**
+**错误修复和稳定性改进**
 
-- Handle EtcdEventIndexCleared and EtcdWatcherCleared exceptions (Alexander Kukushkin)
+- 处理EtcdEventIndexCleared和EtcdWatcherCleared异常（Alexander Kukushkin）
 
-  Faster recovery when the watch operation is ended by Etcd by avoiding useless retries.
+  通过避免无用的重试，在watch操作被Etcd终止时更快恢复。
 
-- Remove error spinning on Etcd failure and reduce log spam (Ants Aasma)
+- 消除Etcd故障时的错误自旋并减少日志垃圾（Ants Aasma）
 
-  Avoid immediate retrying and emitting stack traces in the log on the second and subsequent Etcd connection failures.
+  避免在第二次及后续Etcd连接失败时立即重试和在日志中输出堆栈跟踪。
 
-- Export locale variables when forking PostgreSQL processes (Oleksii Kliukin)
+- 在fork PostgreSQL进程时导出locale变量（Oleksii Kliukin）
 
-  Avoid the `postmaster became multithreaded during startup` fatal error on non-English locales for PostgreSQL built with NLS.
+  避免在使用NLS构建的PostgreSQL的非英语locale下出现 `postmaster became multithreaded during startup` 致命错误。
 
-- Extra checks when dropping the replication slot (Alexander Kukushkin)
+- 删除复制槽时的额外检查（Alexander Kukushkin）
 
-  In some cases Patroni is prevented from dropping the replication slot by the WAL sender.
+  在某些情况下，WAL发送者会阻止Patroni删除复制槽。
 
-- Truncate the replication slot name to 63 (NAMEDATALEN - 1) characters to comply with PostgreSQL naming rules (Nick Scott)
+- 将复制槽名称截断为63（NAMEDATALEN - 1）个字符以符合PostgreSQL命名规则（Nick Scott）
 
-- Fix a race condition resulting in extra connections being opened to the PostgreSQL cluster from Patroni (Alexander Kukushkin)
+- 修复导致Patroni向PostgreSQL集群打开额外连接的竞态条件（Alexander Kukushkin）
 
-- Release the leader key when the node restarts with an empty data directory (Alex Kerney)
+- 当节点以空数据目录重启时释放领导者键（Alex Kerney）
 
-- Set asynchronous executor busy when running bootstrap without a leader (Alexander Kukushkin)
+- 在没有领导者的情况下运行引导时将异步执行器设置为忙碌状态（Alexander Kukushkin）
 
-  Failure to do so could have resulted in errors stating the node belonged to a different cluster, as Patroni proceeded with the normal business while being bootstrapped by a bootstrap method that doesn't require a leader to be present in the cluster.
+  未能执行此操作可能导致错误，声明节点属于不同的集群，因为Patroni在通过不需要集群中存在领导者的引导方法引导时继续执行正常业务。
 
-- Improve WAL-E replica creation method (Joar Wandborg, Alexander Kukushkin).
+- 改进WAL-E副本创建方法（Joar Wandborg，Alexander Kukushkin）
 
-  - Use csv.DictReader when parsing WAL-E base backup, accepting ISO dates with space-delimited date and time.
-  - Support fetching current WAL position from the replica to estimate the amount of WAL to restore. Previously, the code used to call system information functions that were available only on the master node.
+  - 在解析WAL-E基础备份时使用csv.DictReader，接受以空格分隔日期和时间的ISO日期格式。
+  - 支持从副本获取当前WAL位置以估算需要恢复的WAL量。此前，代码使用的系统信息函数仅在主节点上可用。
 
 --------
 
 ## Version 1.2
 
-Released 2016-12-13
+发布于 2016-12-13
 
-This version introduces significant improvements over the handling of synchronous replication, makes the startup process and failover more reliable, adds PostgreSQL 9.6 support and fixes plenty of bugs. In addition, the documentation, including these release notes, has been moved to </docs/patroni>.
+此版本在同步复制处理方面引入了重大改进，使启动过程和故障转移更加可靠，添加了PostgreSQL 9.6支持并修复了大量错误。此外，包括这些发布说明在内的文档已迁移至 </docs/patroni>。
 
-**Synchronous replication**
+**同步复制**
 
-- Add synchronous replication support. (Ants Aasma)
+- 添加同步复制支持（Ants Aasma）
 
-  Adds a new configuration variable [synchronous_mode](/docs/patroni/replication_modes#synchronous_mode). When enabled, Patroni will manage `synchronous_standby_names` to enable synchronous replication whenever there are healthy standbys available. When synchronous mode is enabled, Patroni will automatically fail over only to a standby that was synchronously replicating at the time of the master failure. This effectively means that no user visible transaction gets lost in such a case. See the [feature documentation](/docs/patroni/replication_modes#synchronous_mode) for the detailed description and implementation details.
+  添加了新的配置变量 [`synchronous_mode`](/docs/patroni/replication_modes#synchronous_mode)。启用后，Patroni将在有健康的备用节点可用时管理 `synchronous_standby_names` 以启用同步复制。当启用同步模式时，Patroni仅会自动故障转移到在主节点故障时正在进行同步复制的备用节点。这实际上意味着在这种情况下不会丢失任何用户可见的事务。详细说明和实现细节请参阅 [**功能文档**](/docs/patroni/replication_modes#synchronous_mode)。
 
-**Reliability improvements**
+**可靠性改进**
 
-- Do not try to update the leader position stored in the `leader optime` key when PostgreSQL is not 100% healthy. Demote immediately when the update of the leader key failed. (Alexander Kukushkin)
+- 当PostgreSQL不是100%健康时，不尝试更新存储在 `leader optime` 键中的领导者位置。当领导者键更新失败时立即降级。（Alexander Kukushkin）
 
-- Exclude unhealthy nodes from the list of targets to clone the new replica from. (Alexander Kukushkin)
+- 将不健康的节点从克隆新副本的目标列表中排除。（Alexander Kukushkin）
 
-- Implement retry and timeout strategy for Consul similar to how it is done for Etcd. (Alexander Kukushkin)
+- 为Consul实现类似于Etcd的重试和超时策略。（Alexander Kukushkin）
 
-- Make `--dcs` and `--config-file` apply to all options in [patronictl](/docs/patroni/patronictl#patronictl). (Alexander Kukushkin)
+- 使 `--dcs` 和 `--config-file` 适用于 [patronictl](/docs/patroni/patronictl#patronictl) 中的所有选项。（Alexander Kukushkin）
 
-- Write all postgres parameters into postgresql.conf. (Alexander Kukushkin)
+- 将所有postgres参数写入postgresql.conf。（Alexander Kukushkin）
 
-  It allows starting PostgreSQL configured by Patroni with just `pg_ctl`.
+  这允许仅使用 `pg_ctl` 启动由Patroni配置的PostgreSQL。
 
-- Avoid exceptions when there are no users in the config. (Kirill Pushkin)
+- 避免在配置中没有用户时出现异常。（Kirill Pushkin）
 
-- Allow pausing an unhealthy cluster. Before this fix, [patronictl](/docs/patroni/patronictl#patronictl) would bail out if the node it tries to execute pause on is unhealthy. (Alexander Kukushkin)
+- 允许暂停不健康的集群。在此修复之前，如果尝试执行暂停操作的节点不健康，[patronictl](/docs/patroni/patronictl#patronictl) 会中止操作。（Alexander Kukushkin）
 
-- Improve the leader watch functionality. (Alexander Kukushkin)
+- 改进领导者监视功能。（Alexander Kukushkin）
 
-  Previously the replicas were always watching the leader key (sleeping until the timeout or the leader key changes). With this change, they only watch when the replica's PostgreSQL is in the `running` state and not when it is stopped/starting or restarting PostgreSQL.
+  此前，副本始终监视领导者键（休眠直到超时或领导者键变更）。此更改后，它们仅在副本的PostgreSQL处于 `running` 状态时监视，而不在PostgreSQL停止/启动或重启时监视。
 
-- Avoid running into race conditions when handling SIGCHILD as a PID 1. (Alexander Kukushkin)
+- 避免在作为PID 1处理SIGCHILD时遇到竞态条件。（Alexander Kukushkin）
 
-  Previously a race condition could occur when running inside the Docker containers, since the same process inside Patroni both spawned new processes and handled SIGCHILD from them. This change uses fork/execs for Patroni and leaves the original PID 1 process responsible for handling signals from children.
+  此前，在Docker容器内运行时可能出现竞态条件，因为Patroni内部的同一进程既生成新进程又处理来自它们的SIGCHILD信号。此更改对Patroni使用fork/exec，将原始PID 1进程保留为处理子进程信号的专用进程。
 
-- Fix WAL-E restore. (Oleksii Kliukin)
+- 修复WAL-E恢复。（Oleksii Kliukin）
 
-  Previously WAL-E restore used the `no_master` flag to avoid consulting with the master altogether, making Patroni always choose restoring from WAL over the `pg_basebackup`. This change reverts it to the original meaning of `no_master`, namely Patroni WAL-E restore may be selected as a replication method if the master is not running. The latter is checked by examining the connection string passed to the method. In addition, it makes the retry mechanism more robust and handles other minutia.
+  此前，WAL-E恢复使用 `no_master` 标志来完全避免与主节点协商，使Patroni总是选择从WAL恢复而非 `pg_basebackup`。此更改将其恢复为 `no_master` 的原始含义，即当主节点未运行时可以选择Patroni WAL-E恢复作为复制方法。后者通过检查传递给方法的连接字符串来判断。此外，使重试机制更加健壮并处理了其他细节问题。
 
-- Implement asynchronous DNS resolver cache. (Alexander Kukushkin)
+- 实现异步DNS解析器缓存。（Alexander Kukushkin）
 
-  Avoid failing when DNS is temporary unavailable (for instance, due to an excessive traffic received by the node).
+  避免在DNS暂时不可用时（例如，由于节点接收的流量过大）出现故障。
 
-- Implement starting state and master start timeout. (Ants Aasma, Alexander Kukushkin)
+- 实现启动状态和主节点启动超时。（Ants Aasma，Alexander Kukushkin）
 
-  Previously `pg_ctl` waited for a timeout and then happily trodded on considering PostgreSQL to be running. This caused PostgreSQL to show up in listings as running when it was actually not and caused a race condition that resulted in either a failover, or a crash recovery, or a crash recovery interrupted by failover and a missed rewind. This change adds a `master_start_timeout` parameter and introduces a new state for the main HA loop: `starting`. When `master_start_timeout` is 0 we will failover immediately when the master crashes as soon as there is a failover candidate. Otherwise, Patroni will wait after attempting to start PostgreSQL on the master for the duration of the timeout; when it expires, it will failover if possible. Manual failover requests will be honored during the crash of the master even before the timeout expiration.
+  此前，`pg_ctl` 等待超时后便认为PostgreSQL正在运行。这导致PostgreSQL在列表中显示为运行状态但实际并非如此，并引发竞态条件，结果要么是故障转移，要么是崩溃恢复，要么是被故障转移中断的崩溃恢复和错过的rewind。此更改添加了 `master_start_timeout` 参数，并为主HA循环引入了新状态：`starting`。当 `master_start_timeout` 为0时，只要有故障转移候选者，主节点崩溃后将立即进行故障转移。否则，Patroni将在尝试在主节点上启动PostgreSQL后等待超时时长；超时后如果可能则进行故障转移。即使在超时到期之前，主节点崩溃期间也会响应手动故障转移请求。
 
-  Introduce the `timeout` parameter to the `restart` API endpoint and [patronictl](/docs/patroni/patronictl#patronictl). When it is set and restart takes longer than the timeout, PostgreSQL is considered unhealthy and the other nodes becomes eligible to take the leader lock.
+  为 `restart` API端点和 [patronictl](/docs/patroni/patronictl#patronictl) 引入 `timeout` 参数。设置后，如果重启时间超过超时值，PostgreSQL将被视为不健康，其他节点将有资格获取领导者锁。
 
-- Fix `pg_rewind` behavior in a pause mode. (Ants Aasma)
+- 修复暂停模式下的 `pg_rewind` 行为。（Ants Aasma）
 
-  Avoid unnecessary restart in a pause mode when Patroni thinks it needs to rewind but rewind is not possible (i.e. `pg_rewind` is not present). Fallback to default `libpq` values for the `superuser` (default OS user) if `superuser` authentication is missing from the `pg_rewind` related Patroni configuration section.
+  避免在暂停模式下Patroni认为需要rewind但无法执行rewind时（即 `pg_rewind` 不存在）进行不必要的重启。如果 `pg_rewind` 相关的Patroni配置部分中缺少 `superuser` 认证信息，则回退到 `libpq` 的默认 `superuser`（默认操作系统用户）值。
 
-- Serialize callback execution. Kill the previous callback of the same type when the new one is about to run. Fix the issue of spawning zombie processes when running callbacks. (Alexander Kukushkin)
+- 序列化回调执行。当新的同类型回调即将运行时，终止之前的回调。修复运行回调时产生僵尸进程的问题。（Alexander Kukushkin）
 
-- Avoid promoting a former master when the leader key is set in DCS but update to this leader key fails. (Alexander Kukushkin)
+- 当领导者键已在DCS中设置但更新此领导者键失败时，避免提升前主节点。（Alexander Kukushkin）
 
-  This avoids the issue of a current master continuing to keep its role when it is partitioned together with the minority of nodes in Etcd and other DCSs that allow "inconsistent reads".
+  这避免了当前主节点与Etcd中少数节点一起被分区时继续保持其角色的问题，以及允许"不一致读取"的其他DCS中的类似问题。
 
-**Miscellaneous**
+**杂项**
 
-- Add `post_init` configuration option on bootstrap. (Alejandro Martínez)
+- 在引导时添加 `post_init` 配置选项。（Alejandro Martínez）
 
-  Patroni will call the script argument of this option right after running `initdb` and starting up PostgreSQL for a new cluster. The script receives a connection URL with `superuser` and sets `PGPASSFILE` to point to the `.pgpass` file containing the password. If the script fails, Patroni initialization fails as well. It is useful for adding new users or creating extensions in the new cluster.
+  Patroni将在对新集群运行 `initdb` 并启动PostgreSQL后，立即调用此选项的脚本参数。该脚本接收包含 `superuser` 的连接URL，并将 `PGPASSFILE` 设置为指向包含密码的 `.pgpass` 文件。如果脚本失败，Patroni初始化也将失败。这对于在新集群中添加新用户或创建扩展非常有用。
 
-- Implement PostgreSQL 9.6 support. (Alexander Kukushkin)
+- 实现PostgreSQL 9.6支持。（Alexander Kukushkin）
 
-  Use `wal_level = replica` as a synonym for `hot_standby`, avoiding pending_restart flag when it changes from one to another. (Alexander Kukushkin)
+  使用 `wal_level = replica` 作为 `hot_standby` 的同义词，避免在两者之间切换时出现pending_restart标志。（Alexander Kukushkin）
 
-**Documentation improvements**
+**文档改进**
 
-- Add a Patroni main [loop workflow diagram](https://raw.githubusercontent.com/patroni/patroni/master/docs/ha_loop_diagram.png). (Alejandro Martínez, Alexander Kukushkin)
+- 添加Patroni主 [循环工作流程图](https://raw.githubusercontent.com/patroni/patroni/master/docs/ha_loop_diagram.png)。（Alejandro Martínez，Alexander Kukushkin）
 
-- Improve README, adding the Helm chart and links to release notes. (Lauri Apple)
+- 改进README，添加Helm chart和发布说明链接。（Lauri Apple）
 
-- Move Patroni documentation to `Read the Docs`. The up-to-date documentation is available at </docs/patroni>. (Oleksii Kliukin)
+- 将Patroni文档迁移至 **`Read the Docs`**。最新文档可在 </docs/patroni> 查阅。（Oleksii Kliukin）
 
-  Makes the documentation easily viewable from different devices (including smartphones) and searchable.
+  使文档可在不同设备（包括智能手机）上轻松查看和搜索。
 
-- Move the package to the semantic versioning. (Oleksii Kliukin)
+- 将软件包迁移至语义版本控制。（Oleksii Kliukin）
 
-  Patroni will follow the major.minor.patch version schema to avoid releasing the new minor version on small but critical bugfixes. We will only publish the release notes for the minor version, which will include all patches.
+  Patroni将遵循major.minor.patch版本方案，以避免对小但关键的错误修复发布新的minor版本。我们将仅发布minor版本的发布说明，其中包含所有补丁。
 
 --------
 
 ## Version 1.1
 
-Released 2016-09-07
+发布于 2016-09-07
 
-This release improves management of Patroni cluster by bring in pause mode, improves maintenance with scheduled and conditional restarts, makes Patroni interaction with Etcd or Zookeeper more resilient and greatly enhances patronictl.
+此版本通过引入暂停模式改进了Patroni集群的管理，通过计划性和条件性重启改善了维护体验，使Patroni与Etcd或Zookeeper的交互更加健壮，并大幅增强了patronictl。
 
-**Upgrade notice**
+**升级须知**
 
-When upgrading from releases below 1.0 read about changing of credentials and configuration format at 1.0 release notes.
+从1.0以下版本升级时，请阅读1.0发布说明中关于凭据和配置格式变更的内容。
 
-**Pause mode**
+**暂停模式**
 
-- Introduce pause mode to temporary detach Patroni from managing PostgreSQL instance (Murat Kabilov, Alexander Kukushkin, Oleksii Kliukin).
+- 引入暂停模式，暂时使Patroni脱离对PostgreSQL实例的管理（Murat Kabilov，Alexander Kukushkin，Oleksii Kliukin）。
 
-  Previously, one had to send SIGKILL signal to Patroni to stop it without terminating PostgreSQL. The new pause mode detaches Patroni from PostgreSQL cluster-wide without terminating Patroni. It is similar to the maintenance mode in Pacemaker. Patroni is still responsible for updating member and leader keys in DCS, but it will not start, stop or restart PostgreSQL server in the process. There are a few exceptions, for instance, manual failovers, reinitializes and restarts are still allowed. You can read [a detailed description of this feature](/docs/patroni/pause#pause).
+  此前，必须向Patroni发送SIGKILL信号才能在不终止PostgreSQL的情况下停止它。新的暂停模式在集群范围内使Patroni脱离PostgreSQL管理，而不终止Patroni。这类似于Pacemaker中的维护模式。Patroni仍负责更新DCS中的成员和领导者键，但在此过程中不会启动、停止或重启PostgreSQL服务器。有一些例外情况，例如手动故障转移、重新初始化和重启仍然允许。详细说明请参阅 [**此功能的详细描述**](/docs/patroni/pause#pause)。
 
-In addition, patronictl supports new [pause](/docs/patroni/pause#pause) and `resume` commands to toggle the pause mode.
+此外，patronictl支持新的 [**pause**](/docs/patroni/pause#pause) 和 `resume` 命令来切换暂停模式。
 
-**Scheduled and conditional restarts**
+**计划性和条件性重启**
 
-- Add conditions to the restart API command (Oleksii Kliukin)
+- 为restart API命令添加条件（Oleksii Kliukin）
 
-  This change enhances Patroni restarts by adding a couple of conditions that can be verified in order to do the restart. Among the conditions are restarting when PostgreSQL role is either a master or a replica, checking the PostgreSQL version number or restarting only when restart is necessary in order to apply configuration changes.
+  此更改通过添加一些可验证的条件来增强Patroni重启功能。这些条件包括当PostgreSQL角色为主节点或副本时重启、检查PostgreSQL版本号，或仅在需要重启以应用配置更改时才重启。
 
-- Add scheduled restarts (Oleksii Kliukin)
+- 添加计划性重启（Oleksii Kliukin）
 
-  It is now possible to schedule a restart in the future. Only one scheduled restart per node is supported. It is possible to clear the scheduled restart if it is not needed anymore. A combination of scheduled and conditional restarts is supported, making it possible, for instance, to scheduled minor PostgreSQL upgrades in the night, restarting only the instances that are running the outdated minor version without adding postgres-specific logic to administration scripts.
+  现在可以安排在未来执行重启。每个节点仅支持一个计划性重启。如果不再需要，可以取消计划性重启。支持计划性和条件性重启的组合，例如可以安排在夜间进行PostgreSQL小版本升级，仅重启运行过时小版本的实例，而无需在管理脚本中添加PostgreSQL特定的逻辑。
 
-- Add support for conditional and scheduled restarts to patronictl (Murat Kabilov).
+- 为patronictl添加条件性和计划性重启支持（Murat Kabilov）。
 
-  patronictl restart supports several new options. There is also patronictl flush command to clean the scheduled actions.
+  patronictl restart支持多个新选项。还有patronictl flush命令用于清理计划的操作。
 
-**Robust DCS interaction**
+**健壮的DCS交互**
 
-- Set Kazoo timeouts depending on the loop_wait (Alexander Kukushkin)
+- 根据loop_wait设置Kazoo超时（Alexander Kukushkin）
 
-  Originally, ping_timeout and connect_timeout values were calculated from the negotiated session timeout. Patroni loop_wait was not taken into account. As a result, a single retry could take more time than the session timeout, forcing Patroni to release the lock and demote.
+  最初，ping_timeout和connect_timeout值是从协商的会话超时计算得出的。未考虑Patroni的loop_wait。因此，单次重试可能花费超过会话超时的时间，迫使Patroni释放锁并降级。
 
-  This change set ping and connect timeout to half of the value of loop_wait, speeding up detection of connection issues and leaving enough time to retry the connection attempt before losing the lock.
+  此更改将ping和connect超时设置为loop_wait值的一半，加快连接问题的检测速度，并留出足够时间在丢失锁之前重试连接。
 
-- Update Etcd topology only after original request succeed (Alexander Kukushkin)
+- 仅在原始请求成功后更新Etcd拓扑（Alexander Kukushkin）
 
-  Postpone updating the Etcd topology known to the client until after the original request. When retrieving the cluster topology, implement the retry timeouts depending on the known number of nodes in the Etcd cluster. This makes our client prefer to get the results of the request to having the up-to-date list of nodes.
+  将更新客户端已知的Etcd拓扑推迟到原始请求完成之后。在检索集群拓扑时，根据Etcd集群中已知的节点数量实现重试超时。这使我们的客户端优先获取请求结果，而非拥有最新的节点列表。
 
-  Both changes make Patroni connections to DCS more robust in the face of network issues.
+  这两项更改使Patroni在面对网络问题时与DCS的连接更加健壮。
 
-**Patronictl, monitoring and configuration**
+**`patronictl、监控和配置`**
 
-- Return information about streaming replicas via the API (Feike Steenbergen)
+- 通过API返回流复制副本的信息（Feike Steenbergen）
 
-Previously, there was no reliable way to query Patroni about PostgreSQL instances that fail to stream changes (for instance, due to connection issues). This change exposes the contents of pg_stat_replication via the /patroni endpoint.
+此前，没有可靠的方法查询Patroni关于无法流式传输变更的PostgreSQL实例（例如由于连接问题）。此更改通过/patroni端点公开pg_stat_replication的内容。
 
-- Add patronictl scaffold command (Oleksii Kliukin)
+- 添加patronictl scaffold命令（Oleksii Kliukin）
 
-  Add a command to create cluster structure in Etcd. The cluster is created with user-specified sysid and leader, and both leader and member keys are made persistent. This command is useful to create so-called master-less configurations, where Patroni cluster consisting of only replicas replicate from the external master node that is unaware of Patroni. Subsequently, one may remove the leader key, promoting one of the Patroni nodes and replacing the original master with the Patroni-based HA cluster.
+  添加在Etcd中创建集群结构的命令。使用用户指定的sysid和领导者创建集群，领导者键和成员键都设置为持久化。此命令对于创建所谓的无主配置非常有用，其中仅由副本组成的Patroni集群从不感知Patroni的外部主节点进行复制。随后，可以删除领导者键，提升其中一个Patroni节点，用基于Patroni的HA集群替换原始主节点。
 
-- Add configuration option `bin_dir` to locate PostgreSQL binaries (Ants Aasma)
+- 添加配置选项 `bin_dir` 以定位PostgreSQL二进制文件（Ants Aasma）
 
-  It is useful to be able to specify the location of PostgreSQL binaries explicitly when Linux distros that support installing multiple PostgreSQL versions at the same time.
+  当Linux发行版支持同时安装多个PostgreSQL版本时，能够显式指定PostgreSQL二进制文件的位置非常有用。
 
-- Allow configuration file path to be overridden using `custom_conf` of (Alejandro Martínez)
+- 允许使用 `custom_conf` 覆盖配置文件路径（Alejandro Martínez）
 
-  Allows for custom configuration file paths, which will be unmanaged by Patroni, [details](/docs/patroni/config/yaml#postgresql_settings).
+  允许自定义配置文件路径，该路径不受Patroni管理， [**详情**](/docs/patroni/config/yaml#postgresql_settings)。
 
-**Bug fixes and code improvements**
+**错误修复和代码改进**
 
-- Make Patroni compatible with new version schema in PostgreSQL 10 and above (Feike Steenbergen)
+- 使Patroni兼容PostgreSQL 10及更高版本中的新版本号格式（Feike Steenbergen）
 
-  Make sure that Patroni understand 2-digits version numbers when doing conditional restarts based on the PostgreSQL version.
+  确保Patroni在基于PostgreSQL版本执行条件性重启时能理解两位数版本号。
 
-- Use pkgutil to find DCS modules (Alexander Kukushkin)
+- 使用pkgutil查找DCS模块（Alexander Kukushkin）
 
-  Use the dedicated python module instead of traversing directories manually in order to find DCS modules.
+  使用专用的Python模块而非手动遍历目录来查找DCS模块。
 
-- Always call on_start callback when starting Patroni (Alexander Kukushkin)
+- 启动Patroni时始终调用on_start回调（Alexander Kukushkin）
 
-  Previously, Patroni did not call any callbacks when attaching to the already running node with the correct role. Since callbacks are often used to route client connections that could result in the failure to register the running node in the connection routing scheme. With this fix, Patroni calls on_start callback even when attaching to the already running node.
+  此前，当连接到已经以正确角色运行的节点时，Patroni不会调用任何回调。由于回调通常用于路由客户端连接，这可能导致无法在连接路由方案中注册正在运行的节点。此修复使Patroni即使在连接到已运行的节点时也会调用on_start回调。
 
-- Do not drop active replication slots (Murat Kabilov, Oleksii Kliukin)
+- 不删除活跃的复制槽（Murat Kabilov，Oleksii Kliukin）
 
-  Avoid dropping active physical replication slots on master. PostgreSQL cannot drop such slots anyway. This change makes possible to run non-Patroni managed replicas/consumers on the master.
+  避免在主节点上删除活跃的物理复制槽。PostgreSQL本身也无法删除此类槽。此更改使得可以在主节点上运行非Patroni管理的副本/消费者。
 
-- Close Patroni connections during start of the PostgreSQL instance (Alexander Kukushkin)
+- 在PostgreSQL实例启动期间关闭Patroni连接（Alexander Kukushkin）
 
-  Forces Patroni to close all former connections when PostgreSQL node is started. Avoids the trap of reusing former connections if postmaster was killed with SIGKILL.
+  强制Patroni在PostgreSQL节点启动时关闭所有先前的连接。避免在postmaster被SIGKILL终止后复用先前连接的陷阱。
 
-- Replace invalid characters when constructing slot names from member names (Ants Aasma)
+- 从成员名称构造槽名称时替换无效字符（Ants Aasma）
 
-  Make sure that standby names that do not comply with the slot naming rules don't cause the slot creation and standby startup to fail. Replace the dashes in the slot names with underscores and all other characters not allowed in slot names with their unicode codepoints.
+  确保不符合槽命名规则的备用名称不会导致槽创建和备用启动失败。将槽名称中的短横线替换为下划线，将槽名称中不允许的所有其他字符替换为其unicode码点。
 
 --------
-
 ## Version 1.0
 
-Released 2016-07-05
+发布于 2016-07-05
 
-This release introduces the global dynamic configuration that allows dynamic changes of the PostgreSQL and Patroni configuration parameters for the entire HA cluster. It also delivers numerous bugfixes.
+此版本引入了全局动态配置，允许对整个HA集群的PostgreSQL和Patroni配置参数进行动态更改。同时还修复了大量错误。
 
-**Upgrade notice**
+**升级须知**
 
-When upgrading from v0.90 or below, always upgrade all replicas before the master. Since we don't store replication credentials in DCS anymore, an old replica won't be able to connect to the new master.
+从v0.90或更低版本升级时，请始终先升级所有副本，再升级主节点。由于我们不再在DCS中存储复制凭据，旧版本的副本将无法连接到新版本的主节点。
 
-**Dynamic Configuration**
+**动态配置**
 
-- Implement the dynamic global configuration (Alexander Kukushkin)
+- 实现全局动态配置（Alexander Kukushkin）
 
-  Introduce new REST API endpoint /config to provide PostgreSQL and Patroni configuration parameters that should be set globally for the entire HA cluster (master and all the replicas). Those parameters are set in DCS and in many cases can be applied without disrupting PostgreSQL or Patroni. Patroni sets a special flag called "pending restart" visible via the API when some of the values require the PostgreSQL restart. In that case, restart should be issued manually via the API.
+  引入新的REST API端点/config，用于提供应在整个HA集群（主节点和所有副本）中全局设置的PostgreSQL和Patroni配置参数。这些参数设置在DCS中，在很多情况下可以在不中断PostgreSQL或Patroni的情况下应用。当某些值需要重启PostgreSQL时，Patroni会设置一个通过API可见的特殊标志"pending restart"。在这种情况下，需要通过API手动发起重启。
 
-  Patroni SIGHUP or POST to /reload will make it re-read the configuration file.
+  向Patroni发送SIGHUP或POST到/reload将使其重新读取配置文件。
 
-  See the [Patroni configuration](/docs/patroni/config#config) for the details on which parameters can be changed and the order of processing difference configuration sources.
+  关于哪些参数可以更改以及不同配置源的处理顺序，请参阅 [**Patroni配置**](/docs/patroni/config#config)。
 
-  The configuration file format *has changed* since the v0.90. Patroni is still compatible with the old configuration files, but in order to take advantage of the bootstrap parameters one needs to change it. Users are encourage to update them by referring to the [dynamic configuration documentation page](/docs/patroni/config/dynamic#dynamic).
+  自v0.90以来配置文件格式*已更改*。Patroni仍兼容旧的配置文件，但要利用引导参数需要进行更改。建议用户参考 [**动态配置文档页面**](/docs/patroni/config/dynamic#dynamic) 进行更新。
 
-**More flexible configuration**\*
+**更灵活的配置**\*
 
-- Make postgresql configuration and database name Patroni connects to configurable (Misja Hoebe)
+- 使PostgreSQL配置和Patroni连接的数据库名可配置（Misja Hoebe）
 
-  Introduce `database` and `config_base_name` configuration parameters. Among others, it makes possible to run Patroni with PipelineDB and other PostgreSQL forks.
+  引入 `database` 和 `config_base_name` 配置参数。除其他功能外，它使得可以在PipelineDB和其他PostgreSQL分支上运行Patroni。
 
-- Implement possibility to configure some Patroni configuration parameters via environment (Alexander Kukushkin)
+- 实现通过环境变量配置部分Patroni配置参数的功能（Alexander Kukushkin）
 
-  Those include the scope, the node name and the namespace, as well as the secrets and makes it easier to run Patroni in a dynamic environment, i.e. Kubernetes Please, refer to the [supported environment variables](/docs/patroni/config/env#env) for further details.
+  这些参数包括scope、节点名称和namespace，以及密钥信息，使得在动态环境（即Kubernetes）中运行Patroni更加容易。更多详情请参阅 [**支持的环境变量**](/docs/patroni/config/env#env)。
 
-- Update the built-in Patroni docker container to take advantage of environment-based configuration (Feike Steenbergen).
+- 更新内置的Patroni Docker容器以利用基于环境变量的配置（Feike Steenbergen）。
 
-- Add Zookeeper support to Patroni docker image (Alexander Kukushkin)
+- 为Patroni Docker镜像添加Zookeeper支持（Alexander Kukushkin）
 
-- Split the Zookeeper and Exhibitor configuration options (Alexander Kukushkin)
+- 拆分Zookeeper和Exhibitor配置选项（Alexander Kukushkin）
 
-- Make patronictl reuse the code from Patroni to read configuration (Alexander Kukushkin)
+- 使patronictl复用Patroni的代码来读取配置（Alexander Kukushkin）
 
-  This allows patronictl to take advantage of environment-based configuration.
+  这使patronictl能够利用基于环境变量的配置。
 
-- Set application name to node name in primary_conninfo (Alexander Kukushkin)
+- 在primary_conninfo中将应用名称设置为节点名称（Alexander Kukushkin）
 
-  This simplifies identification and configuration of synchronous replication for a given node.
+  这简化了给定节点同步复制的识别和配置。
 
-**Stability, security and usability improvements**
+**稳定性、安全性和可用性改进**
 
-- Reset sysid and do not call pg_controldata when restore of backup in progress (Alexander Kukushkin)
+- 在备份恢复进行中时重置sysid并且不调用pg_controldata（Alexander Kukushkin）
 
-  This change reduces the amount of noise generated by Patroni API health checks during the lengthy initialization of this node from the backup.
+  此更改减少了在从备份进行漫长初始化期间Patroni API健康检查产生的噪音。
 
-- Fix a bunch of pg_rewind corner-cases (Alexander Kukushkin)
+- 修复一系列pg_rewind边界情况（Alexander Kukushkin）
 
-  Avoid running pg_rewind if the source cluster is not the master.
+  避免在源集群不是主节点时运行pg_rewind。
 
-  In addition, avoid removing the data directory on an unsuccessful rewind, unless the new parameter *remove_data_directory_on_rewind_failure* is set to true. By default it is false.
+  此外，避免在rewind不成功时删除数据目录，除非新参数 *remove_data_directory_on_rewind_failure* 设置为true。默认为false。
 
-- Remove passwords from the replication connection string in DCS (Alexander Kukushkin)
+- 从DCS中的复制连接字符串中移除密码（Alexander Kukushkin）
 
-  Previously, Patroni always used the replication credentials from the Postgres URL in DCS. That is now changed to take the credentials from the patroni configuration. The secrets (replication username and password) and no longer exposed in DCS.
+  此前，Patroni始终使用DCS中PostgreSQL URL的复制凭据。现已更改为从Patroni配置中获取凭据。密钥信息（复制用户名和密码）不再在DCS中暴露。
 
-- Fix the asynchronous machinery around the demote call (Alexander Kukushkin)
+- 修复降级调用相关的异步机制（Alexander Kukushkin）
 
-  Demote now runs totally asynchronously without blocking the DCS interactions.
+  降级现在完全异步运行，不会阻塞DCS交互。
 
-- Make patronictl always send the authorization header if it is configured (Alexander Kukushkin)
+- 在配置了授权的情况下，使patronictl始终发送授权头（Alexander Kukushkin）
 
-  This allows patronictl to issue "protected" requests, i.e. restart or reinitialize, when Patroni is configured to require authorization on those.
+  这允许patronictl在Patroni配置为需要授权时发出"受保护的"请求，如重启或重新初始化。
 
-- Handle the SystemExit exception correctly (Alexander Kukushkin)
+- 正确处理SystemExit异常（Alexander Kukushkin）
 
-  Avoids the issues of Patroni not stopping properly when receiving the SIGTERM
+  避免Patroni在收到SIGTERM时无法正确停止的问题。
 
-- Sample haproxy templates for confd (Alexander Kukushkin)
+- 用于confd的haproxy模板示例（Alexander Kukushkin）
 
-  Generates and dynamically changes haproxy configuration from the patroni state in the DCS using confide
+  使用confd从DCS中的Patroni状态生成并动态更改haproxy配置。
 
-- Improve and restructure the documentation to make it more friendly to the new users (Lauri Apple)
+- 改进和重组文档使其对新用户更友好（Lauri Apple）
 
-- API must report role=master during pg_ctl stop (Alexander Kukushkin)
+- API必须在pg_ctl stop期间报告role=master（Alexander Kukushkin）
 
-  Makes the callback calls more reliable, particularly in the cluster stop case. In addition, introduce the `pg_ctl_timeout` option to set the timeout for the start, stop and restart calls via the `pg_ctl`.
+  使回调调用更加可靠，特别是在集群停止的情况下。此外，引入 `pg_ctl_timeout` 选项来设置通过 `pg_ctl` 进行启动、停止和重启调用的超时时间。
 
-- Fix the retry logic in etcd (Alexander Kukushkin)
+- 修复etcd中的重试逻辑（Alexander Kukushkin）
 
-  Make retries more predictable and robust.
+  使重试更可预测和健壮。
 
-- Make Zookeeper code more resilient against short network hiccups (Alexander Kukushkin)
+- 使Zookeeper代码对短暂网络故障更具弹性（Alexander Kukushkin）
 
-  Reduce the connection timeouts to make Zookeeper connection attempts more frequent.
+  减少连接超时以使Zookeeper连接尝试更频繁。
 
 --------
 
 ## Version 0.90
 
-Released 2016-04-27
+发布于 2016-04-27
 
-This releases adds support for Consul, includes a new *noloadbalance* tag, changes the behavior of the *clonefrom* tag, improves *pg_rewind* handling and improves *patronictl* control program.
+此版本添加了对Consul的支持，包含新的 *noloadbalance* 标签，更改了 *clonefrom* 标签的行为，改进了 *pg_rewind* 处理并改进了 *patronictl* 控制程序。
 
-**Consul support**
+**Consul支持**
 
-- Implement Consul support (Alexander Kukushkin)
+- 实现Consul支持（Alexander Kukushkin）
 
-  Patroni runs against Consul, in addition to Etcd and Zookeeper. the connection parameters can be configured in the YAML file.
+  Patroni除了支持Etcd和Zookeeper外，还可以对接Consul运行。连接参数可在YAML文件中配置。
 
-**New and improved tags**
+**新标签和改进的标签**
 
-- Implement *noloadbalance* tag (Alexander Kukushkin)
+- 实现 *noloadbalance* 标签（Alexander Kukushkin）
 
-  This tag makes Patroni always return that the replica is not available to the load balancer.
+  此标签使Patroni始终向负载均衡器返回该副本不可用。
 
-- Change the implementation of the *clonefrom* tag (Alexander Kukushkin)
+- 更改 *clonefrom* 标签的实现（Alexander Kukushkin）
 
-  Previously, a node name had to be supplied to the *clonefrom*, forcing a tagged replica to clone from the specific node. The new implementation makes *clonefrom* a boolean tag: if it is set to true, the replica becomes a candidate for other replicas to clone from it. When multiple candidates are present, the replicas picks one randomly.
+  此前，必须向 *clonefrom* 提供节点名称，强制带标签的副本从指定节点克隆。新实现将 *clonefrom* 改为布尔标签：如果设置为true，该副本将成为其他副本从其克隆的候选者。当存在多个候选者时，副本会随机选择一个。
 
-**Stability and security improvements**
+**稳定性和安全性改进**
 
-- Numerous reliability improvements (Alexander Kukushkin)
+- 大量可靠性改进（Alexander Kukushkin）
 
-  Removes some spurious error messages, improves the stability of the failover, addresses some corner cases with reading data from DCS, shutdown, demote and reattaching of the former leader.
+  移除一些虚假的错误消息，提高故障转移的稳定性，解决从DCS读取数据、关闭、降级和前领导者重新连接的一些边界情况。
 
-- Improve systems script to avoid killing Patroni children on stop (Jan Keirse, Alexander Kukushkin)
+- 改进系统脚本以避免在停止时终止Patroni子进程（Jan Keirse，Alexander Kukushkin）
 
-  Previously, when stopping Patroni, *systemd* also sent a signal to PostgreSQL. Since Patroni also tried to stop PostgreSQL by itself, it resulted in sending to different shutdown requests (the smart shutdown, followed by the fast shutdown). That resulted in replicas disconnecting too early and a former master not being able to rejoin after demote. Fix by Jan with prior research by Alexander.
+  此前，在停止Patroni时，*systemd* 也会向PostgreSQL发送信号。由于Patroni本身也尝试停止PostgreSQL，导致发送两个不同的关闭请求（smart关闭后跟fast关闭）。这导致副本过早断开连接，前主节点在降级后无法重新加入。由Jan修复，Alexander进行了前期研究。
 
-- Eliminate some cases where the former master was unable to call pg_rewind before rejoining as a replica (Oleksii Kliukin)
+- 消除前主节点在作为副本重新加入前无法调用pg_rewind的一些情况（Oleksii Kliukin）
 
-  Previously, we only called *pg_rewind* if the former master had crashed. Change this to always run pg_rewind for the former master as long as pg_rewind is present in the system. This fixes the case when the master is shut down before the replicas managed to get the latest changes (i.e. during the "smart" shutdown).
+  此前，我们仅在前主节点崩溃时才调用 *pg_rewind*。现更改为只要系统中存在pg_rewind就始终对前主节点运行pg_rewind。这修复了主节点在副本获取最新变更之前被关闭的情况（即在"smart"关闭期间）。
 
-- Numerous improvements to unit- and acceptance- tests, in particular, enable support for Zookeeper and Consul (Alexander Kukushkin).
+- 对单元测试和验收测试进行大量改进，特别是启用了对Zookeeper和Consul的支持（Alexander Kukushkin）。
 
-- Make Travis CI faster and implement support for running tests against Zookeeper (Exhibitor) and Consul (Alexander Kukushkin)
+- 加速Travis CI并实现对Zookeeper（Exhibitor）和Consul运行测试的支持（Alexander Kukushkin）
 
-  Both unit and acceptance tests run automatically against Etcd, Zookeeper and Consul on each commit or pull-request.
+  单元测试和验收测试在每次提交或拉取请求时自动对Etcd、Zookeeper和Consul运行。
 
-- Clear environment variables before calling PostgreSQL commands from Patroni (Feike Steenbergen)
+- 从Patroni调用PostgreSQL命令前清除环境变量（Feike Steenbergen）
 
-  This prevents a possibility of reading system environment variables by connecting to the PostgreSQL cluster managed by Patroni.
+  这防止了通过连接到Patroni管理的PostgreSQL集群来读取系统环境变量的可能性。
 
-**Configuration and control changes**
+**配置和控制变更**
 
-- Unify patronictl and Patroni configuration (Feike Steenbergen)
+- 统一patronictl和Patroni配置（Feike Steenbergen）
 
-  patronictl can use the same configuration file as Patroni itself.
+  patronictl可以使用与Patroni本身相同的配置文件。
 
-- Enable Patroni to read the configuration from the environment variables (Oleksii Kliukin)
+- 使Patroni能够从环境变量读取配置（Oleksii Kliukin）
 
-  This simplifies generating configuration for Patroni automatically, or merging a single configuration from different sources.
+  这简化了自动生成Patroni配置或从不同来源合并单一配置的工作。
 
-- Include database system identifier in the information returned by the API (Feike Steenbergen)
+- 在API返回的信息中包含数据库系统标识符（Feike Steenbergen）
 
-- Implement *delete_cluster* for all available DCSs (Alexander Kukushkin)
+- 为所有可用的DCS实现 *delete_cluster*（Alexander Kukushkin）
 
-  Enables support for DCSs other than Etcd in patronictl.
+  在patronictl中启用对Etcd以外的DCS的支持。
 
 --------
 
 ## Version 0.80
 
-Released 2016-03-14
+发布于 2016-03-14
 
-This release adds support for *cascading replication* and simplifies Patroni management by providing *scheduled failovers*. One may use older versions of Patroni (in particular, 0.78) combined with this one in order to migrate to the new release. Note that the scheduled failover and cascading replication related features will only work with Patroni 0.80 and above.
+此版本添加了对*级联复制*的支持，并通过提供*计划性故障转移*简化了Patroni管理。可以将旧版本的Patroni（特别是0.78）与此版本组合使用以迁移到新版本。请注意，计划性故障转移和级联复制相关功能仅适用于Patroni 0.80及以上版本。
 
-**Cascading replication**
+**级联复制**
 
-> - Add support for the *replicatefrom* and *clonefrom* tags for the patroni node (Oleksii Kliukin).
+> - 为Patroni节点添加 *replicatefrom* 和 *clonefrom* 标签支持（Oleksii Kliukin）。
 >
-> The tag *replicatefrom* allows a replica to use an arbitrary node a source, not necessary the master. The *clonefrom* does the same for the initial backup. Together, they enable Patroni to fully support cascading replication.
+> *replicatefrom* 标签允许副本使用任意节点作为源，不必是主节点。*clonefrom* 对初始备份做同样的事情。它们共同使Patroni完全支持级联复制。
 
-- Add support for running replication methods to initialize the replica even without a running replication connection (Oleksii Kliukin).
+- 添加运行复制方法来初始化副本的支持，即使没有运行中的复制连接也可以（Oleksii Kliukin）。
 
-> This is useful in order to create replicas from the snapshots stored on S3 or FTP. A replication method that does not require a running replication connection should supply *no_master: true* in the yaml configuration. Those scripts will still be called in order if the replication connection is present.
+> 这对于从S3或FTP上存储的快照创建副本非常有用。不需要运行中复制连接的复制方法应在yaml配置中提供 *no_master: true*。如果存在复制连接，这些脚本仍会按顺序调用。
 
-**Patronictl, API and DCS improvements**
+**patronictl、API和DCS改进**
 
-- Implement scheduled failovers (Feike Steenbergen).
+- 实现计划性故障转移（Feike Steenbergen）。
 
-  Failovers can be scheduled to happen at a certain time in the future, using either patronictl, or API calls.
+  故障转移可以安排在未来的特定时间发生，使用patronictl或API调用均可。
 
-- Add support for *dbuser* and *password* parameters in patronictl (Feike Steenbergen).
+- 为patronictl添加 *dbuser* 和 *password* 参数支持（Feike Steenbergen）。
 
-- Add PostgreSQL version to the health check output (Feike Steenbergen).
+- 在健康检查输出中添加PostgreSQL版本信息（Feike Steenbergen）。
 
-- Improve Zookeeper support in patronictl (Oleksandr Shulgin)
+- 改进patronictl中的Zookeeper支持（Oleksandr Shulgin）
 
-- Migrate to python-etcd 0.43 (Alexander Kukushkin)
+- 迁移到python-etcd 0.43（Alexander Kukushkin）
 
-**Configuration**
+**配置**
 
-- Add a sample systems configuration script for Patroni (Jan Keirse).
-- Fix the problem of Patroni ignoring the superuser name specified in the configuration file for DB connections (Alexander Kukushkin).
-- Fix the handling of CTRL-C by creating a separate session ID and process group for the postmaster launched by Patroni (Alexander Kukushkin).
+- 添加Patroni的系统配置脚本示例（Jan Keirse）。
+- 修复Patroni忽略配置文件中指定的超级用户名进行数据库连接的问题（Alexander Kukushkin）。
+- 修复CTRL-C的处理，为Patroni启动的postmaster创建单独的会话ID和进程组（Alexander Kukushkin）。
 
-**Tests**
+**测试**
 
-- Add acceptance tests with *behave* in order to check real-world scenarios of running Patroni (Alexander Kukushkin, Oleksii Kliukin).
+- 添加使用 *behave* 的验收测试，以检查运行Patroni的真实场景（Alexander Kukushkin，Oleksii Kliukin）。
 
-  The tests can be launched manually using the *behave* command. They are also launched automatically for pull requests and after commits.
+  测试可以使用 *behave* 命令手动启动。它们也会在拉取请求和提交后自动运行。
 
-  Release notes for some older versions can be found on [project's github page](https://github.com/patroni/patroni/releases).
+  一些旧版本的发布说明可以在 [**项目的GitHub页面**](https://github.com/patroni/patroni/releases) 上找到。

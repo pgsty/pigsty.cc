@@ -29,7 +29,7 @@ category: [Concept]
 
 需要跨不同数据中心部署一个 etcd、ZooKeeper 或 Consul 集群，至少包含 3 个节点，每个可用区各一个。
 
-PostgreSQL 方面，至少需要在不同数据中心部署 2 个节点，然后在全局 [**动态配置**](/docs/patroni/config/dynamic#dynamic) 中设置 `synchronous_mode: true`。
+PostgreSQL 方面，至少需要在不同数据中心部署 2 个节点，然后在全局 [**动态配置**](/docs/patroni/config/dynamic#dynamic) 中设置 **`synchronous_mode: true`**。
 
 这将启用同步复制，主库会从其他节点中选择一个作为同步备库。
 
@@ -45,14 +45,14 @@ PostgreSQL 方面，至少需要在不同数据中心部署 2 个节点，然后
 
 自动提升是不可能的，因为 DC2 永远无法确定 DC1 的真实状态。
 
-此场景下不应使用 `pg_ctl promote`，而需要通过从 [**动态配置**](/docs/patroni/config/dynamic#dynamic) 中移除 [`standby_cluster`](/docs/patroni/standby_cluster#standby_cluster) 配置节来"手动提升"健康集群。
+此场景下不应使用 **`pg_ctl promote`**，而需要通过从 [**动态配置**](/docs/patroni/config/dynamic#dynamic) 中移除 [`standby_cluster`](/docs/patroni/standby_cluster#standby_cluster) 配置节来"手动提升"健康集群。
 
 > [!WARNING]
 > 若源集群仍在运行，此时提升备用集群将造成脑裂。
 
 若需恢复到"初始"状态，只有以下两种方式：
 
-- 重新添加 `standby_cluster` 配置节，这将触发 `pg_rewind`。但要使 `pg_rewind` 正常工作，集群必须在初始化时启用了 `data page checksums`（即 `initdb` 的 `--data-checksums` 选项）和/或将 `wal_log_hints` 设置为 `on`，且仍存在 `pg_rewind` 因其他因素失败的可能性。
+- 重新添加 **`standby_cluster`** 配置节，这将触发 **`pg_rewind`**。但要使 **`pg_rewind`** 正常工作，集群必须在初始化时启用了 **`data page checksums`**（即 **`initdb`** 的 **`--data-checksums`** 选项）和/或将 **`wal_log_hints`** 设置为 **`on`**，且仍存在 **`pg_rewind`** 因其他因素失败的可能性。
 - 从头重建备用集群。
 
 在提升备用集群之前，必须人工确认源集群已停止（STONITH）。DC1 恢复后，该集群需要被转换为备用集群。

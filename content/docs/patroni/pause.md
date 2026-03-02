@@ -38,4 +38,4 @@ category: [Task]
 
 [**patronictl**](/docs/patroni/patronictl#patronictl) 支持 [`pause`](/docs/patroni/patronictl#patronictl_pause) 和 [`resume`](/docs/patroni/patronictl#patronictl_resume) 命令。
 
-也可以向 `{namespace}/{cluster}/config` 键发送携带 `{"pause": true/false/null}` 的 `PATCH` 请求来实现同等效果。
+也可以向 **`{namespace}/{cluster}/config`** 键发送携带 **`{"pause": true/false/null}`** 的 **`PATCH`** 请求来实现同等效果。

@@ -32,20 +32,20 @@ Patroni 高度依赖分布式配置存储（DCS）来完成领导者选举和检
 
 ## DCS 故障安全模式
 
-我们引入了一个新的特殊选项：`failsafe_mode`。该选项只能通过存储在 DCS `/config` 键中的全局 [**动态配置**](/docs/patroni/config/dynamic#dynamic) 来启用。启用故障安全模式后，若领导者锁更新失败的原因并非版本/值/索引不匹配，且主库能够通过 Patroni REST API 访问集群中所有已知成员，则 PostgreSQL 可以继续以主库身份运行。
+我们引入了一个新的特殊选项：**`failsafe_mode`**。该选项只能通过存储在 DCS **`/config`** 键中的全局 [**动态配置**](/docs/patroni/config/dynamic#dynamic) 来启用。启用故障安全模式后，若领导者锁更新失败的原因并非版本/值/索引不匹配，且主库能够通过 Patroni REST API 访问集群中所有已知成员，则 PostgreSQL 可以继续以主库身份运行。
 
 --------
 
 ## 底层实现细节
 
-- 在 DCS 中引入一个新的永久键 `/failsafe`。
-- `/failsafe` 键记录给定时刻该 Patroni 集群所有已知成员的信息。
-- 由当前领导者节点负责维护 `/failsafe` 键。
-- 只有出现在 `/failsafe` 键中的成员才有资格参与领导者竞选并成为新的领导者。
-- 若集群仅有单个节点，`/failsafe` 键将只包含该节点。
-- 当 DCS 发生"中断"时，现有主库通过 `POST /failsafe` REST API 联系 `/failsafe` 键中所有成员，若所有从库均确认其存活，则主库可以继续运行。
+- 在 DCS 中引入一个新的永久键 **`/failsafe`**。
+- **`/failsafe`** 键记录给定时刻该 Patroni 集群所有已知成员的信息。
+- 由当前领导者节点负责维护 **`/failsafe`** 键。
+- 只有出现在 **`/failsafe`** 键中的成员才有资格参与领导者竞选并成为新的领导者。
+- 若集群仅有单个节点，**`/failsafe`** 键将只包含该节点。
+- 当 DCS 发生"中断"时，现有主库通过 **`POST /failsafe`** REST API 联系 **`/failsafe`** 键中所有成员，若所有从库均确认其存活，则主库可以继续运行。
 - 若任何一个成员无响应，主库将被降级。
-- 从库将收到的 `POST /failsafe` REST API 请求作为主库仍然存活的信号，该信息将被缓存 `ttl` 秒。
+- 从库将收到的 **`POST /failsafe`** REST API 请求作为主库仍然存活的信号，该信息将被缓存 **`ttl`** 秒。
 
 --------
 
@@ -57,11 +57,11 @@ Patroni 高度依赖分布式配置存储（DCS）来完成领导者选举和检
 
 - **如果在 DCS 宕机期间某个节点/Pod 被终止，会发生什么？**
 
-  当 DCS 不可访问时，"所有其他集群成员是否均可访问？"的检查将在每次心跳循环（每 `loop_wait` 秒一次）中执行。若某个 Pod/节点被终止，该检查将失败，PostgreSQL 将被降级为只读，并在 DCS 恢复之前保持该状态。
+  当 DCS 不可访问时，"所有其他集群成员是否均可访问？"的检查将在每次心跳循环（每 **`loop_wait`** 秒一次）中执行。若某个 Pod/节点被终止，该检查将失败，PostgreSQL 将被降级为只读，并在 DCS 恢复之前保持该状态。
 
 - **如果在 DCS 宕机期间 Patroni 集群的所有成员全部丢失，会发生什么？**
 
-  Patroni 可以配置为在集群无领导者时从备份中创建新的从库。但如果新成员不在 `/failsafe` 键中，它将无法获取领导者锁并执行提升操作。
+  Patroni 可以配置为在集群无领导者时从备份中创建新的从库。但如果新成员不在 **`/failsafe`** 键中，它将无法获取领导者锁并执行提升操作。
 
 - **如果主库失去了对 DCS 的访问权限，而从库没有，会发生什么？**
 
@@ -69,4 +69,4 @@ Patroni 高度依赖分布式配置存储（DCS）来完成领导者选举和检
 
 - **如何启用故障安全模式？**
 
-  在启用 `failsafe_mode` 之前，请确保所有成员上的 Patroni 版本都是最新的。之后，可以使用 `PATCH /config` [**REST API**](/docs/patroni/rest_api#rest_api) 或执行 [`patronictl edit-config -s failsafe_mode=true`](/docs/patroni/patronictl#patronictl_edit_config_parameters) 命令来启用该功能。
+  在启用 **`failsafe_mode`** 之前，请确保所有成员上的 Patroni 版本都是最新的。之后，可以使用 **`PATCH /config`** [**REST API**](/docs/patroni/rest_api#rest_api) 或执行 [`patronictl edit-config -s failsafe_mode=true`](/docs/patroni/patronictl#patronictl_edit_config_parameters) 命令来启用该功能。

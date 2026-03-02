@@ -34,8 +34,8 @@ category: [Task]
 运行 behave 测试的前置条件：
 
 1.  需要安装包含 [contrib](https://www.postgresql.org/docs/current/contrib.html) 模块的 PostgreSQL 软件包。
-2.  PostgreSQL 二进制文件必须在 `PATH` 中可访问。您可能需要通过类似 `PATH=/usr/lib/postgresql/11/bin:\$PATH python -m behave` 的方式将其加入路径。
-3.  如需测试外部 DCS（如 Etcd、Consul、Zookeeper），需要提前安装相应软件包，并确保对应服务在本地默认端口上以无加密/无认证方式接受连接。对于 Etcd 或 Consul，若相应二进制文件在 `PATH` 中可用，behave 测试套件可以自动启动它们。
+2.  PostgreSQL 二进制文件必须在 **`PATH`** 中可访问。您可能需要通过类似 **`PATH=/usr/lib/postgresql/11/bin:\$PATH python -m behave`** 的方式将其加入路径。
+3.  如需测试外部 DCS（如 Etcd、Consul、Zookeeper），需要提前安装相应软件包，并确保对应服务在本地默认端口上以无加密/无认证方式接受连接。对于 Etcd 或 Consul，若相应二进制文件在 **`PATH`** 中可用，behave 测试套件可以自动启动它们。
 
 安装依赖：
 
@@ -78,20 +78,20 @@ DCS=raft python -m behave
 pip install tox>=4
 ```
 
-如需运行 `behave` 测试，还需要安装 Docker。
+如需运行 **`behave`** 测试，还需要安装 Docker。
 
-`tox.ini` 中的 tox 配置定义了以下"环境"以执行各类任务：
+**`tox.ini`** 中的 tox 配置定义了以下"环境"以执行各类任务：
 
-- `lint`：使用 `flake8` 对 Python 代码进行 lint 检查
-- `test`：使用 `pytest` 在所有可用 Python 解释器上运行单元测试，生成 XML 报告；若检测到 TTY 则生成 HTML 报告
-- `dep`：使用 `pipdeptree` 检测软件包依赖冲突
-- `type`：使用 `pyright` 进行静态类型检查
-- `black`：使用 `black` 进行代码格式化
-- `docker-build`：构建用于 `behave` 环境的 Docker 镜像
-- `docker-cmd`：使用上述镜像运行任意命令
-- `docker-behave-etcd`：使用上述镜像运行 tox behave 测试
-- `py*behave`：使用可用的 Python 解释器运行 behave（不使用 Docker，但这正是在 Docker 容器内部调用的方式）
-- `docs`：使用 `sphinx` 构建文档
+- **`lint`**：使用 **`flake8`** 对 Python 代码进行 lint 检查
+- **`test`**：使用 **`pytest`** 在所有可用 Python 解释器上运行单元测试，生成 XML 报告；若检测到 TTY 则生成 HTML 报告
+- **`dep`**：使用 **`pipdeptree`** 检测软件包依赖冲突
+- **`type`**：使用 **`pyright`** 进行静态类型检查
+- **`black`**：使用 **`black`** 进行代码格式化
+- **`docker-build`**：构建用于 **`behave`** 环境的 Docker 镜像
+- **`docker-cmd`**：使用上述镜像运行任意命令
+- **`docker-behave-etcd`**：使用上述镜像运行 tox behave 测试
+- **`py*behave`**：使用可用的 Python 解释器运行 behave（不使用 Docker，但这正是在 Docker 容器内部调用的方式）
+- **`docs`**：使用 **`sphinx`** 构建文档
 
 ### 运行 tox
 
@@ -101,19 +101,19 @@ pip install tox>=4
 tox
 ```
 
-可以使用 `test` 标签运行 `test` 环境：
+可以使用 **`test`** 标签运行 **`test`** 环境：
 
 ``` bash
 tox -m test
 ```
 
-可以使用 `behave` 标签运行 `behave` Docker 测试：
+可以使用 **`behave`** 标签运行 **`behave`** Docker 测试：
 
 ``` bash
 tox -m behave
 ```
 
-类似地，docs 使用 `docs` 标签。
+类似地，docs 使用 **`docs`** 标签。
 
 其他所有环境可通过对应的环境名称运行：
 
@@ -122,7 +122,7 @@ tox -e lint
 tox -e py39-test-lin
 ```
 
-也可以使用 `factors` 筛选部分环境列表。例如，若要运行所有 Python 3.10 相关环境：
+也可以使用 **`factors`** 筛选部分环境列表。例如，若要运行所有 Python 3.10 相关环境：
 
 ``` bash
 tox -f py310
@@ -149,7 +149,7 @@ py310-behave-etcd-mac
 tox l
 ```
 
-当 tox 在有活跃终端的情况下运行时，`test` 和 `docs` 环境在任务完成后会尝试自动打开 HTML 输出文件，方便本地开发人员查看。在 macOS 上会调用 `open` 命令，在 Linux 上会调用 `xdg-open`。如需使用其他命令，可将环境变量 `OPEN_CMD` 设置为该命令的名称或路径。即使此步骤失败，也不会影响整体构建结果。如需禁用此功能，可将 `OPEN_CMD` 设置为 `:` 空操作命令。
+当 tox 在有活跃终端的情况下运行时，**`test`** 和 **`docs`** 环境在任务完成后会尝试自动打开 HTML 输出文件，方便本地开发人员查看。在 macOS 上会调用 **`open`** 命令，在 Linux 上会调用 **`xdg-open`**。如需使用其他命令，可将环境变量 **`OPEN_CMD`** 设置为该命令的名称或路径。即使此步骤失败，也不会影响整体构建结果。如需禁用此功能，可将 **`OPEN_CMD`** 设置为 **`:`** 空操作命令。
 
 ``` bash
 OPEN_CMD=: tox -m docs
@@ -157,7 +157,7 @@ OPEN_CMD=: tox -m docs
 
 ### Behave 测试
 
-使用 `-m behave` 运行 behave 测试时，将基于 PG_MAJOR 版本 11 到 16 构建 Docker 镜像，然后运行所有 behave 测试。这可能需要相当长的时间，因此您可能希望将范围限制为特定的 PostgreSQL 版本或特定的功能集。
+使用 **`-m behave`** 运行 behave 测试时，将基于 PG_MAJOR 版本 11 到 16 构建 Docker 镜像，然后运行所有 behave 测试。这可能需要相当长的时间，因此您可能希望将范围限制为特定的 PostgreSQL 版本或特定的功能集。
 
 若要指定 PostgreSQL 版本，请同时指定所需的镜像构建环境和 behave 环境名称。例如，若要测试 PostgreSQL 14，请使用：
 
