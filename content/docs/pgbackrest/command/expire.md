@@ -664,7 +664,7 @@ example: --repo1-path=/backup/db/backrest
 
 ### 归档保留选项（`--repo-retention-archive`）
 
-保留连续 WAL 的备份数量。
+连续 WAL 保留的备份数量。
 
 > **注意：** 使备份保持一致所需的 WAL 段将始终保留，直到该备份过期，与此选项的配置无关。
 
@@ -713,7 +713,7 @@ example: --repo1-retention-diff=3
 
 ### 全量备份保留选项（`--repo-retention-full`）
 
-全量备份保留数量/时间。
+全量备份的保留数量/时间。
 
 全量备份过期时，与之关联的所有差异和增量备份也会一同过期。若未定义此选项，将发出警告。若希望无限期保留，请将此选项设为最大值。
 
@@ -742,7 +742,7 @@ example: --repo1-retention-full-type=time
 
 ### 备份历史保留选项（`--repo-retention-history`）
 
-保留备份历史清单的天数。
+备份历史清单文件的保留天数。
 
 备份完成时，清单文件（manifest）的副本会存储在 `backup.history` 路径下。默认情况下这些文件永不过期，因为它们对分析历史数据很有价值，例如用于统计备份和 WAL 随时间的增长趋势。
 
@@ -957,7 +957,7 @@ example: --repo1-sftp-public-key-file=~/.ssh/id_ed25519.pub
 example: --repo1-storage-ca-file=/etc/pki/tls/certs/ca-bundle.crt
 ```
 
-已弃用名称：repo-azure-ca-file, repo-s3-ca-file
+已弃用名称：repo-azure-ca-file、repo-s3-ca-file
 
 ### 仓库存储 TLS CA 路径选项（`--repo-storage-ca-path`）
 
@@ -969,7 +969,7 @@ example: --repo1-storage-ca-file=/etc/pki/tls/certs/ca-bundle.crt
 example: --repo1-storage-ca-path=/etc/pki/tls/certs
 ```
 
-已弃用名称：repo-azure-ca-path, repo-s3-ca-path
+已弃用名称：repo-azure-ca-path、repo-s3-ca-path
 
 ### 仓库存储主机选项（`--repo-storage-host`）
 
@@ -981,7 +981,7 @@ example: --repo1-storage-ca-path=/etc/pki/tls/certs
 example: --repo1-storage-host=127.0.0.1
 ```
 
-已弃用名称：repo-azure-host, repo-s3-host
+已弃用名称：repo-azure-host、repo-s3-host
 
 ### 仓库存储端口选项（`--repo-storage-port`）
 
@@ -995,7 +995,7 @@ allowed: [1, 65535]
 example: --repo1-storage-port=9000
 ```
 
-已弃用名称：repo-azure-port, repo-s3-port
+已弃用名称：repo-azure-port、repo-s3-port
 
 ### 仓库存储标签选项（`--repo-storage-tag`）
 
@@ -1046,7 +1046,7 @@ default: y
 example: --no-repo1-storage-verify-tls
 ```
 
-已弃用名称：repo-azure-verify-tls, repo-s3-verify-ssl, repo-s3-verify-tls
+已弃用名称：repo-azure-verify-tls、repo-s3-verify-ssl、repo-s3-verify-tls
 
 ### 仓库符号链接选项（`--repo-symlink`）
 

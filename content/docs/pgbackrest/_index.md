@@ -18,7 +18,7 @@ category: [Concept]
 
 pgBackRest 是一款可靠的 PostgreSQL 备份与恢复解决方案，可无缝扩展以应对超大规模数据库和高并发工作负载。
 
-pgBackRest [v2.58.0](https://github.com/pgbackrest/pgbackrest/releases/tag/release/2.58.0) 是当前稳定版本。发布说明请查阅 [**发布历史**](/docs/pgbackrest/release/) 页面。
+pgBackRest [`v2.58.0`](https://github.com/pgbackrest/pgbackrest/releases/tag/release/2.58.0) 是当前稳定版本。发布说明请查阅 [**发布历史**](/docs/pgbackrest/release/) 页面。
 
 如果您喜欢 pgBackRest，欢迎在 [**GitHub**](https://github.com/pgbackrest/pgbackrest) 上给我们点星！如果您在企业中使用 pgBackRest，请考虑 [**赞助**](https://github.com/sponsors/dwsteele) 项目。
 
@@ -129,7 +129,7 @@ pgBackRest 支持十个 PostgreSQL 版本，包括五个仍在官方支持期内
 pgBackRest 致力于提供简便的配置和操作体验：
 
 - 针对各种操作系统和 PostgreSQL 版本的 [**用户指南**](/docs/pgbackrest/user-guide/)。
-- 常用命令行操作参考：[**`backup`**](/docs/pgbackrest/command/backup/)、 [**`restore`**](/docs/pgbackrest/command/restore/)、 [**`check`**](/docs/pgbackrest/command/check/) 和 [**`info`**](/docs/pgbackrest/command/info/)。
+- 常用命令行操作参考： [**`backup`**](/docs/pgbackrest/command/backup/)、 [**`restore`**](/docs/pgbackrest/command/restore/)、 [**`check`**](/docs/pgbackrest/command/check/) 和 [**`info`**](/docs/pgbackrest/command/info/)。
 - 创建 pgBackRest 配置的 [**配置参考**](/docs/pgbackrest/configuration/)。
 
 v1 版本的文档可在 [**此处**](http://www.pgbackrest.org/1) 查阅。v1 不再计划发布新版本，v2 与 v1 的选项和仓库完全向后兼容。

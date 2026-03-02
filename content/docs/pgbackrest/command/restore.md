@@ -8,13 +8,13 @@ module: [PGBACKREST]
 category: [Reference]
 ---
 
-> 原始页面： [pgBackRest Command Docs: restore](https://pgbackrest.org/command.html#command-restore)
+> Source: [pgBackRest Command Docs: restore](https://pgbackrest.org/command.html#command-restore)
 
 `restore` 命令默认从第一个存有备份的仓库中自动选取最新备份（参见 [**快速开始 - 恢复备份**](/docs/pgbackrest/user-guide/#恢复备份)）。仓库的检查顺序由 `pgbackrest.conf` 决定（例如先检查 repo1，再检查 repo2）。若要从特定仓库恢复，可使用 `--repo` 选项（例如 `--repo=1`）。若需恢复非最新的备份，可传入 `--set` 选项。
 
 使用 `--type=time` 或 `--type=lsn` 进行 PITR（时间点恢复）时，必须通过 `--target` 选项指定目标时间或目标 LSN。若未通过 `--set` 选项指定备份集，系统将依次检查各仓库，查找包含所请求时间或 LSN 的备份。若未找到匹配备份，`--type=time` 将使用第一个存有备份的仓库中的最新备份，而 `--type=lsn` 则不会选择任何备份。对于其他类型的 PITR（如 `xid`），若目标早于最新备份，则必须通过 `--set` 选项明确指定备份集。详情及示例请参见 [**时间点恢复**](/docs/pgbackrest/user-guide/#时间点恢复)。
 
-按照 PostgreSQL 的建议，复制槽不包含在恢复中。更多信息请参阅 PostgreSQL 文档中的 [Backing Up The Data Directory](https://www.postgresql.org/docs/current/continuous-archiving.html#BACKUP-LOWLEVEL-BASE-BACKUP-DATA)。
+按照 PostgreSQL 的建议，复制槽不包含在恢复中。更多信息请参阅 PostgreSQL 文档中的 [**Backing Up The Data Directory**](https://www.postgresql.org/docs/current/continuous-archiving.html#BACKUP-LOWLEVEL-BASE-BACKUP-DATA)。
 
 ## 命令选项
 
@@ -29,7 +29,7 @@ category: [Reference]
 - `off` - 通过设置 `archive_mode=off` 禁用归档。
 - `preserve` - 保留当前的 `archive_mode` 设置。
 
-**注意**：此选项不适用于 PostgreSQL < 12。
+> **注意：** 此选项不适用于 PostgreSQL < 12。
 
 ```yaml
 default: preserve
@@ -100,7 +100,7 @@ example: --link-map=pg_xlog=/data/xlog
 
 在 `postgresql.auto.conf` 或 `recovery.conf` 中设置选项。
 
-各选项的详细说明请参阅 PostgreSQL 的 [服务器配置](https://www.postgresql.org/docs/current/runtime-config.html) 文档（请确保选择对应的 PostgreSQL 版本）。此选项可多次使用。
+各选项的详细说明请参阅 PostgreSQL 的 [**服务器配置**](https://www.postgresql.org/docs/current/runtime-config.html) 文档（请确保选择对应的 PostgreSQL 版本）。此选项可多次使用。
 
 对于 PostgreSQL >= 12，选项将写入 `postgresql.auto.conf`；对于旧版本，选项将写入 `recovery.conf`。
 
@@ -1204,7 +1204,7 @@ example: --repo-target-time=2024-08-08 12:12:12+00
 - `s3` - AWS 简单存储服务
 - `sftp` - 安全文件传输协议
 
-使用 NFS 挂载作为 `posix` 仓库时，适用规则与 PostgreSQL 文档中描述的相同：[创建数据库集群 - 文件系统](https://www.postgresql.org/docs/current/creating-cluster.html#CREATING-CLUSTER-FILESYSTEM)。
+使用 NFS 挂载作为 `posix` 仓库时，适用规则与 PostgreSQL 文档中描述的相同：[**创建数据库集群 - 文件系统**](https://www.postgresql.org/docs/current/creating-cluster.html#CREATING-CLUSTER-FILESYSTEM)。
 
 ```yaml
 default: posix

@@ -270,7 +270,7 @@ pgBackRest 配置文件支持多种加载方式：
 
 `--config`、`--config-include-path` 和 `--config-path` 仅为命令行选项。
 
-pgBackRest 也支持通过环境变量进行配置（见下方示例）；环境变量适用于 [**backup**](/docs/pgbackrest/command/backup/)、[**restore**](/docs/pgbackrest/command/restore/) 和 [**archive-push**](/docs/pgbackrest/command/archive-push/) 等命令。
+pgBackRest 也支持通过环境变量进行配置（见下方示例）；环境变量适用于 [`backup`](/docs/pgbackrest/command/backup/)、[`restore`](/docs/pgbackrest/command/restore/) 和 [`archive-push`](/docs/pgbackrest/command/archive-push/) 等命令。
 
 pg-primary **⇒** 使用环境变量配置 `log-path`
 
@@ -449,7 +449,7 @@ P00   INFO: check command end: completed successfully
 
 pgBackRest 提供了许多性能选项，为保持仓库的向后兼容性，这些选项默认未启用。但对于新建仓库，推荐开启以下选项。这些选项也可用于现有仓库，但请注意，开启后旧版本 pgBackRest 将无法读取该仓库，具体的兼容性边界取决于各功能的引入版本，详见下方列表。
 
-- `compress-type` — 控制 `backup` 和 `archive-push` 命令使用的压缩算法。默认为 `gz`（Gzip），推荐改用 `zst`（Zstandard），速度更快且压缩率与 `gz` 相当。`zst` 自 [v2.27](/docs/pgbackrest/release/#v227-release-notes) 起支持。详情请参阅 [**压缩类型**](/docs/pgbackrest/configuration/#compress-type-option---compress-type)。
+- `compress-type` — 控制 `backup` 和 `archive-push` 命令使用的压缩算法。默认为 `gz`（Gzip），推荐改用 `zst`（Zstandard），速度更快且压缩率与 `gz` 相当。`zst` 自 [v2.27](/docs/pgbackrest/release/#v227-release-notes) 起支持。详情请参阅 [**压缩类型**](/docs/pgbackrest/configuration/#压缩类型选项--compress-type)。
 - `repo-bundle` — 备份时将小文件合并打包，节省空间并提升 `backup` 和 `restore` 速度，在 S3 等对象存储上效果尤为明显。`repo-bundle` 选项在 [v2.39](/docs/pgbackrest/release/#v239-release-notes) 中引入。详情请参阅 [**文件打包**](#文件打包)。
 - `repo-block` — 执行 `diff`/`incr` 备份时，仅存储文件中发生变化的数据块，而非整个文件，从而节省空间并提升备份速度。`repo-block` 选项在 [v2.46](/docs/pgbackrest/release/#v246-release-notes) 中引入，建议至少使用 [v2.52.1](/docs/pgbackrest/release/#v2521-release-notes)。详情请参阅 [**块级增量备份**](#块级增量备份)。
 
@@ -1978,7 +1978,7 @@ P00   INFO: expire command end: completed successfully
 
 ## GCS 兼容对象存储支持
 
-pgBackRest 支持将仓库存储在 GCS 兼容的对象存储中。存储仓库的 Bucket 必须提前创建——pgBackRest 不会自动创建。仓库可以存放在 Bucket 根目录（`/`），但通常建议放在子路径下，以便对象存储日志或其他数据也能存储在同一 Bucket 中而不产生冲突。
+pgBackRest 支持将仓库存储在 GCS 兼容的对象存储中。存储仓库的存储桶必须提前创建——pgBackRest 不会自动创建。仓库可以存放在存储桶根目录（`/`），但通常建议放在子路径下，以便对象存储日志或其他数据也能存储在同一存储桶中而不产生冲突。
 
 pg-primary:`/etc/pgbackrest/pgbackrest.conf` **⇒** 配置 GCS
 
@@ -2072,7 +2072,7 @@ stanza: demo
 
 由于存储是版本化的，可以查看 stanza 被删除之前某个时间点的仓库状态。确定合适的目标时间可能并不容易，但在本例中，可以通过检查 `backup.info` 被删除的时间来确定。
 
-s3-server **⇒** 使用 `mc` 列出 Bucket 中 `backup.info` 的版本信息
+s3-server **⇒** 使用 `mc` 列出存储桶中 `backup.info` 的版本信息
 
 ```bash
 mc ls --versions s3/demo-bucket/demo-repo/backup/demo/backup.info
@@ -2200,7 +2200,7 @@ sudo chown pgbackrest:pgbackrest /var/lib/pgbackrest
 
 ### 配置免密 SSH
 
-pgBackRest 支持使用免密 SSH 实现主机间通信。也可以使用 TLS，请参见 [**配置 TLS**](/docs/pgbackrest/user-guide-rhel/#configuration)。
+pgBackRest 支持使用免密 SSH 实现主机间通信。也可以使用 TLS，请参见 [**配置 TLS**](/docs/pgbackrest/user-guide-rhel/#配置)。
 
 repository **⇒** 创建仓库主机密钥对
 
@@ -2542,7 +2542,7 @@ sudo chown postgres:postgres /etc/pgbackrest/pgbackrest.conf
 
 ### 配置免密 SSH
 
-pgBackRest 支持使用免密 SSH 实现主机间通信。也可以使用 TLS，请参见 [**配置 TLS**](/docs/pgbackrest/user-guide-rhel/#configuration)。
+pgBackRest 支持使用免密 SSH 实现主机间通信。也可以使用 TLS，请参见 [**配置 TLS**](/docs/pgbackrest/user-guide-rhel/#配置)。
 
 pg-standby **⇒** 创建 pg-standby 主机密钥对
 
@@ -2972,9 +2972,9 @@ sudo chown postgres:postgres /etc/pgbackrest/pgbackrest.conf
 ```
 
 
-### 设置免密 SSH
+### 配置免密 SSH
 
-pgBackRest 支持使用免密 SSH 实现主机间通信，也可以改用 TLS，详见 [**配置 TLS**](/docs/pgbackrest/user-guide-rhel/#configuration)。
+pgBackRest 支持使用免密 SSH 实现主机间通信，也可以改用 TLS，详见 [**配置 TLS**](/docs/pgbackrest/user-guide-rhel/#配置)。
 
 pg-alt **⇒** 创建 pg-alt 主机密钥对
 

@@ -928,7 +928,7 @@ stanza: demo
 
 pgBackRest 根据保留策略类型（数量或时间段）对全量备份进行轮转。指定数量时，过期逻辑只关注需保留多少个备份，与创建时间无关。差异备份也按数量管理，当其依赖的全量备份过期时，差异备份随之过期。增量备份不会被保留策略单独过期，始终随关联的全量备份或差异备份一起过期。详情与示例请参见 [**全量备份保留策略**](#全量备份保留策略) 和 [**差异备份保留策略**](#差异备份保留策略) 章节。
 
-归档 WAL 默认与未过期备份一起保留；如有特殊需求，可通过各仓库的 retention-archive 选项调整此策略（不推荐）。详情与示例请参见 [**归档保留策略**](#归档保留策略) 章节。
+归档 WAL 默认与未过期备份一起保留；如有特殊需求，可通过各仓库的 `retention-archive` 选项调整此策略（不推荐）。详情与示例请参见 [**归档保留策略**](#归档保留策略) 章节。
 
 `expire` 命令会在每次备份成功后自动运行，也可手动执行。手动运行时，会按各已配置仓库的保留策略执行过期操作。若指定了 `--repo` 选项，则仅对该仓库执行。还可以通过 `--set` 选项将过期操作限定到特定备份集；若未同时指定 `--repo`，则会搜索所有仓库并对符合条件的备份集执行过期。每次运行 `expire` 命令时都会检查并执行归档保留计划。
 
@@ -2138,7 +2138,7 @@ sudo chown pgbackrest:pgbackrest /var/lib/pgbackrest
 
 ### 配置
 
-pgBackRest 可以使用 TLS 客户端证书实现主机间通信，也可以使用 SSH，请参见 [**配置免密 SSH**](/docs/pgbackrest/user-guide/#setup-passwordless-ssh)。
+pgBackRest 可以使用 TLS 客户端证书实现主机间通信，也可以使用 SSH，请参见 [**配置免密 SSH**](/docs/pgbackrest/user-guide/#配置免密-ssh)。
 
 pgBackRest 期望客户端/服务器证书的生成方式与 PostgreSQL 相同。有关证书生成的详细说明，请参见 PostgreSQL 文档中的 [**使用 TLS 的安全 TCP/IP 连接**](https://www.postgresql.org/docs/current/ssl-tcp.html)。
 

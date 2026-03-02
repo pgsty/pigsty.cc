@@ -193,7 +193,7 @@ example: --protocol-timeout=630
 
 启用 keep-alive。
 
-在 socket 连接上启用 keep-alive 消息。
+在套接字连接上启用 keep-alive 消息。
 
 ```yaml
 default: y
@@ -218,7 +218,7 @@ Keep-alive 计数。
 
 指定在判定连接已断开之前，允许丢失的 TCP keep-alive 消息数量。
 
-此选项仅在系统支持 `TCP_KEEPCNT` socket 选项时可用。
+此选项仅在系统支持 `TCP_KEEPCNT` 套接字选项时可用。
 
 ```yaml
 allowed: [1, 32]
@@ -231,7 +231,7 @@ Keep-alive 空闲时间。
 
 指定在没有网络活动多少秒后，操作系统应发送 TCP keep-alive 消息。
 
-此选项仅在系统支持 `TCP_KEEPIDLE` socket 选项时可用。
+此选项仅在系统支持 `TCP_KEEPIDLE` 套接字选项时可用。
 
 ```yaml
 allowed: [1, 3600]
@@ -244,7 +244,7 @@ Keep-alive 间隔时间。
 
 指定未收到确认的 TCP keep-alive 消息在多少秒后重新发送。
 
-此选项仅在系统支持 `TCP_KEEPINTVL` socket 选项时可用。
+此选项仅在系统支持 `TCP_KEEPINTVL` 套接字选项时可用。
 
 ```yaml
 allowed: [1, 900]

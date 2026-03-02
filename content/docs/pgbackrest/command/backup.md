@@ -8,7 +8,7 @@ module: [PGBACKREST]
 category: [Reference]
 ---
 
-> 原始页面： [pgBackRest Command Docs: backup](https://pgbackrest.org/command.html#command-backup)
+> Source: [pgBackRest Command Docs: backup](https://pgbackrest.org/command.html#command-backup)
 
 配置多个仓库时，pgBackRest 默认备份到优先级最高的仓库（如 `repo1`），除非通过 `--repo` 选项明确指定目标仓库。
 
@@ -1437,7 +1437,7 @@ example: --no-repo1-symlink
 - `s3` — AWS 简单存储服务
 - `sftp` — 安全文件传输协议
 
-当 NFS 挂载作为 `posix` 类型仓库使用时，适用 PostgreSQL 文档中描述的相同规则：[创建数据库集群 - 文件系统](https://www.postgresql.org/docs/current/creating-cluster.html#CREATING-CLUSTER-FILESYSTEM)。
+当 NFS 挂载作为 `posix` 类型仓库使用时，适用 PostgreSQL 文档中描述的相同规则： [**创建数据库集群 - 文件系统**](https://www.postgresql.org/docs/current/creating-cluster.html#CREATING-CLUSTER-FILESYSTEM)。
 
 ```yaml
 default: posix

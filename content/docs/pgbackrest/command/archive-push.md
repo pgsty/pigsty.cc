@@ -239,7 +239,7 @@ I/O 超时时间。
 
 连接及读/写操作的超时时间（秒）。
 
-注意：整个读/写操作无需在此超时内全部完成，但*必须*有进展，哪怕只传输了一个字节。
+注意：整个读/写操作无需在此超时内全部完成，但**必须**有进展，哪怕只传输了一个字节。
 
 ```yaml
 default: 1m
@@ -327,7 +327,7 @@ example: --no-sck-keep-alive
 
 异步 `archive-push` 命令在成功将 WAL 存入归档后，会在缓冲区路径写入确认文件（失败时写入错误信息），供前台进程快速通知 PostgreSQL。确认文件非常小——成功时为零字节，失败时仅几百字节。
 
-异步 `archive-get` 命令会将 WAL 缓冲至此路径，以便在 PostgreSQL 请求时快速提供。若缓冲区路径与 `pg_xlog`/`pg_wal` 位于同一文件系统，文件移动效率最高。但不建议将缓冲区路径设置在 `pg_xlog`/`pg_wal` *目录内部*，否则可能导致 `pg_rewind` 等 PostgreSQL 工具出现问题。
+异步 `archive-get` 命令会将 WAL 缓冲至此路径，以便在 PostgreSQL 请求时快速提供。若缓冲区路径与 `pg_xlog`/`pg_wal` 位于同一文件系统，文件移动效率最高。但不建议将缓冲区路径设置在 `pg_xlog`/`pg_wal` **目录内部**，否则可能导致 `pg_rewind` 等 PostgreSQL 工具出现问题。
 
 缓冲区路径中的数据并非严格意义上的临时数据，重启后应当保留。不过，即使数据丢失也不成问题——pgBackRest 会重新检查每个 WAL 段以确认 `archive-push` 的归档安全性，并为 `archive-get` 重建队列。
 
@@ -534,7 +534,7 @@ example: --no-archive-header-check
 
 警告：
 
-使用此选项时需谨慎。`pg_control` 和 WAL 头部仍会按指定版本的预期格式（即 PostgreSQL 官方开源版本的格式）进行解析。若分支或开发版本修改了 pgBackRest 所依赖字段的格式，将导致不可预期的行为。通常只有当分支在标准 PostgreSQL 成员*之后*添加自定义结构体成员时，此选项才能正常工作。
+使用此选项时需谨慎。`pg_control` 和 WAL 头部仍会按指定版本的预期格式（即 PostgreSQL 官方开源版本的格式）进行解析。若分支或开发版本修改了 pgBackRest 所依赖字段的格式，将导致不可预期的行为。通常只有当分支在标准 PostgreSQL 成员**之后**添加自定义结构体成员时，此选项才能正常工作。
 
 ```yaml
 example: --pg-version-force=15

@@ -1,5 +1,5 @@
 ---
-title: "Annotate 命令（annotate）"
+title: "注解命令（annotate）"
 linkTitle: "annotate"
 weight: 10
 description: "pgBackRest `annotate` 命令的选项与行为参考。"
@@ -942,7 +942,7 @@ example: --no-repo1-storage-verify-tls
 - `s3` - AWS 简单存储服务
 - `sftp` - 安全文件传输协议
 
-当使用 NFS 挂载作为 `posix` 仓库时，适用于 pgBackRest 的规则与 PostgreSQL 文档中的描述相同： [创建数据库集群 - 文件系统](https://www.postgresql.org/docs/current/creating-cluster.html#CREATING-CLUSTER-FILESYSTEM)。
+当使用 NFS 挂载作为 `posix` 仓库时，适用于 pgBackRest 的规则与 PostgreSQL 文档中的描述相同，参见 [**创建数据库集群 - 文件系统**](https://www.postgresql.org/docs/current/creating-cluster.html#CREATING-CLUSTER-FILESYSTEM)。
 
 ```yaml
 default: posix

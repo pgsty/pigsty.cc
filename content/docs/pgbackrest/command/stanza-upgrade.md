@@ -946,7 +946,7 @@ example: --no-repo1-storage-verify-tls
 - `s3` - AWS 简单存储服务
 - `sftp` - 安全文件传输协议
 
-当使用 NFS 挂载作为 `posix` 类型仓库时，pgBackRest 适用与 PostgreSQL 文档中相同的规则：[创建数据库集群 - 文件系统](https://www.postgresql.org/docs/current/creating-cluster.html#CREATING-CLUSTER-FILESYSTEM)。
+当使用 NFS 挂载作为 `posix` 类型仓库时，pgBackRest 适用与 PostgreSQL 文档中相同的规则，详见 [Creating a Database Cluster - File Systems](https://www.postgresql.org/docs/current/creating-cluster.html#CREATING-CLUSTER-FILESYSTEM)。
 
 ```yaml
 default: posix

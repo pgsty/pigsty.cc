@@ -383,7 +383,7 @@ default: y
 example: --no-log-timestamp
 ```
 
-## 维护选项
+## 维护者选项
 
 ### 强制指定 PostgreSQL 版本选项（`--pg-version-force`）
 

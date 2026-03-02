@@ -865,7 +865,7 @@ example: --repo1-sftp-public-key-file=~/.ssh/id_ed25519.pub
 example: --repo1-storage-ca-file=/etc/pki/tls/certs/ca-bundle.crt
 ```
 
-已弃用名称：repo-azure-ca-file, repo-s3-ca-file
+已弃用名称：repo-azure-ca-file、repo-s3-ca-file
 
 ### 仓库存储 TLS CA 路径选项（`--repo-storage-ca-path`）
 
@@ -877,7 +877,7 @@ example: --repo1-storage-ca-file=/etc/pki/tls/certs/ca-bundle.crt
 example: --repo1-storage-ca-path=/etc/pki/tls/certs
 ```
 
-已弃用名称：repo-azure-ca-path, repo-s3-ca-path
+已弃用名称：repo-azure-ca-path、repo-s3-ca-path
 
 ### 仓库存储主机选项（`--repo-storage-host`）
 
@@ -889,7 +889,7 @@ example: --repo1-storage-ca-path=/etc/pki/tls/certs
 example: --repo1-storage-host=127.0.0.1
 ```
 
-已弃用名称：repo-azure-host, repo-s3-host
+已弃用名称：repo-azure-host、repo-s3-host
 
 ### 仓库存储端口选项（`--repo-storage-port`）
 
@@ -903,7 +903,7 @@ allowed: [1, 65535]
 example: --repo1-storage-port=9000
 ```
 
-已弃用名称：repo-azure-port, repo-s3-port
+已弃用名称：repo-azure-port、repo-s3-port
 
 ### 仓库存储标签选项（`--repo-storage-tag`）
 
@@ -954,7 +954,7 @@ default: y
 example: --no-repo1-storage-verify-tls
 ```
 
-已弃用名称：repo-azure-verify-tls, repo-s3-verify-ssl, repo-s3-verify-tls
+已弃用名称：repo-azure-verify-tls、repo-s3-verify-ssl、repo-s3-verify-tls
 
 ### 仓库目标时间选项（`--repo-target-time`）
 

@@ -1723,7 +1723,7 @@ example: link-map=pg_xlog=/data/xlog
 
 在 `postgresql.auto.conf` 或 `recovery.conf` 中设置选项。
 
-有关 `postgresql.auto.conf` 或 `recovery.conf` 选项的详情，请参阅 [Server Configuration](https://www.postgresql.org/docs/current/runtime-config.html)（请选择对应的 PostgreSQL 版本）。此选项可以多次使用。
+有关 `postgresql.auto.conf` 或 `recovery.conf` 选项的详情，请参阅 [**Server Configuration**](https://www.postgresql.org/docs/current/runtime-config.html)（请选择对应的 PostgreSQL 版本）。此选项可以多次使用。
 
 对于 PostgreSQL >= 12，选项将写入 `postgresql.auto.conf`。对于所有其他版本，选项将写入 `recovery.conf`。
 

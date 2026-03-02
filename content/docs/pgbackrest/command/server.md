@@ -1,5 +1,5 @@
 ---
-title: "Server 命令（server）"
+title: "服务器命令（server）"
 linkTitle: "server"
 weight: 120
 description: "pgBackRest `server` 命令的选项与行为参考。"
