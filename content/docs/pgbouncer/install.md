@@ -8,7 +8,7 @@ module: [PGBOUNCER]
 category: [教程]
 ---
 
-> Source: <https://www.pgbouncer.org/install.html>
+> 原始页面： <https://www.pgbouncer.org/install.html>
 
 --------
 

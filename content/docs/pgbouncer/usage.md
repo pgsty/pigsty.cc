@@ -8,7 +8,7 @@ module: [PGBOUNCER]
 category: [任务]
 ---
 
-> Source: <https://www.pgbouncer.org/usage.html>
+> 原始页面： <https://www.pgbouncer.org/usage.html>
 
 --------
 

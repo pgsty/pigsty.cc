@@ -10,7 +10,7 @@ module: [PGBOUNCER]
 category: [概念]
 ---
 
-> Source: <https://www.pgbouncer.org/>
+> 原始页面： <https://www.pgbouncer.org/>
 
 **pgbouncer** 是 PostgreSQL 的连接池。任何目标应用都可以像连接 PostgreSQL 服务器一样连接到 **pgbouncer**，**pgbouncer** 将负责创建到实际服务器的连接，或者复用已有的连接。
 

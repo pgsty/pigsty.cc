@@ -8,7 +8,7 @@ module: [PGBOUNCER]
 category: [参考]
 ---
 
-> Source: <https://www.pgbouncer.org/downloads/>
+> 原始页面： <https://www.pgbouncer.org/downloads/>
 
 --------
 

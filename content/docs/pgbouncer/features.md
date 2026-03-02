@@ -7,7 +7,7 @@ module: [PGBOUNCER]
 category: [概念]
 ---
 
-> Source: <https://www.pgbouncer.org/features.html>
+> 原始页面： <https://www.pgbouncer.org/features.html>
 
 - 连接轮换时，按激进程度分为以下几种策略：
 
