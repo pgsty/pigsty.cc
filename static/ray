@@ -9,7 +9,7 @@ set -o pipefail
 # Deps      :   curl
 # License   :   Apache-2.0
 #==============================================================#
-DEFAULT_VERSION=5.28.0
+DEFAULT_VERSION=5.44.1
 BASEURL="https://repo.pigsty.cc"
 
 #--------------------------------------------------------------#

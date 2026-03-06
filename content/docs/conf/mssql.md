@@ -8,7 +8,7 @@ categories: [参考]
 
 `mssql` 配置模板使用 **Babelfish（PG17）** 内核替代原生 PostgreSQL，提供 Microsoft SQL Server 线缆协议（TDS）与 T-SQL 语法兼容能力。
 
-在 Pigsty v4.2.0 中，Babelfish 包组已经完成全平台适配，可在主流发行版与 `x86_64` / `aarch64` 架构上统一使用。
+从 Pigsty v4.2 以来，Babelfish 由 Pigsty 直接构建，不再使用 WiltonDB 仓库，可在所有 [支持的 Linux 平台](/docs/ref/linux) 上使用。
 
 完整教程请参考：**[Babelfish (MSSQL) 内核使用说明](/docs/pgsql/kernel/babelfish/)**
 

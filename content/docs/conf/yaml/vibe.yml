@@ -3,7 +3,7 @@
 # File      :   vibe.yml
 # Desc      :   Pigsty ai vibe coding sandbox
 # Ctime     :   2026-01-19
-# Mtime     :   2026-01-30
+# Mtime     :   2026-02-28
 # Docs      :   https://pigsty.io/docs/conf/vibe
 # License   :   Apache-2.0 @ https://pigsty.io/docs/about/license/
 # Copyright :   2018-2026  Ruohang Feng / Vonng (rh@vonng.com)
@@ -36,7 +36,7 @@ all:
     #----------------------------------------------#
     # INFRA: https://pigsty.io/docs/infra
     #----------------------------------------------#
-    version: v4.2.0                     # pigsty version string
+    version: v4.2.1                     # pigsty version string
     admin_ip: 10.10.10.10               # admin node ip address
     region: default                     # upstream mirror region: default,china,europe
     infra_portal:                       # infra services exposed via portal
@@ -73,7 +73,7 @@ all:
       - { name: dbuser_meta ,password: DBUser.Meta   ,pgbouncer: true ,roles: [dbrole_admin   ] ,comment: pigsty admin user }
       - { name: dbuser_view ,password: DBUser.Viewer ,pgbouncer: true ,roles: [dbrole_readonly] ,comment: read-only viewer  }
     pg_databases:
-      - { name: meta, baseline: cmdb.sql ,comment: pigsty meta database ,schemas: [pigsty] ,extensions: [ postgis, timescaledb, vector ]}
+      - { name: meta, baseline: cmdb.sql ,comment: pigsty meta database ,schemas: [pigsty] ,extensions: [ postgis, timescaledb, vector, age ]}
     pg_libs: 'timescaledb, pg_stat_statements, auto_explain, pg_wait_sampling'
     pg_hba_rules:
       - { user: all ,db: all ,addr: intra ,auth: pwd ,title: 'everyone intranet access with password' ,order: 800 }
@@ -112,12 +112,20 @@ all:
         data  : --storage postgres --bucket 10.10.10.10:5432/meta --access-key dbuser_meta --secret-key DBUser.Meta
         port  : 9567
 
-    #npm_packages: [ '@anthropic-ai/claude-code', 'happy-coder' ]
+    # install npm packages : ./vibe.yml -t nodejs_pkg
+    npm_packages:
+      - '@anthropic-ai/claude-code'     # claude code
+      - '@openai/codex'                 # openai codex
+      - 'happy-coder'                   # remote control
+      #- 'openclaw@latest'               # in-case you need one
+
+    # setup claude code environment: ./vibe.yml -t claude
     #claude_env:
     #  ANTHROPIC_BASE_URL: https://open.bigmodel.cn/api/anthropic
     #  ANTHROPIC_API_URL: https://open.bigmodel.cn/api/anthropic
     #  ANTHROPIC_AUTH_TOKEN: your_api_service_token
-    #  ANTHROPIC_MODEL: glm-4.7
-    #  ANTHROPIC_SMALL_FAST_MODEL: glm-4.5-air
+    #  ANTHROPIC_DEFAULT_OPUS_MODEL: "glm-5"
+    #  ANTHROPIC_DEFAULT_SONNET_MODEL: "glm-5"
+    #  ANTHROPIC_DEFAULT_HAIKU_MODEL: "glm-4.7-flash"
 
 ...

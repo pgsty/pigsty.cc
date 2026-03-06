@@ -82,13 +82,13 @@ cd ~/pigsty      # 进入 Pigsty 目录
 {{% tab header="pigsty.cc（中国）" %}}
 ```bash
 curl -fsSL https://repo.pigsty.cc/get | bash            # 安装最新稳定版本
-curl -fsSL https://repo.pigsty.cc/get | bash -s v4.2.0  # 安装特定版本
+curl -fsSL https://repo.pigsty.cc/get | bash -s v4.2.1  # 安装特定版本
 ```
 {{% /tab %}}
 {{% tab header="pigsty.io（全球）" %}}
 ```bash
 curl -fsSL https://repo.pigsty.io/get | bash            # 安装最新稳定版本
-curl -fsSL https://repo.pigsty.io/get | bash -s v4.2.0  # 安装特定版本
+curl -fsSL https://repo.pigsty.io/get | bash -s v4.2.1  # 安装特定版本
 ```
 {{% /tab %}}
 {{< /tabpane >}}
@@ -97,7 +97,7 @@ curl -fsSL https://repo.pigsty.io/get | bash -s v4.2.0  # 安装特定版本
 
 ```bash
 git clone https://github.com/pgsty/pigsty; cd pigsty;
-git checkout v4.2.0;  # 使用 git 安装时，请务必检出特定版本
+git checkout v4.2.1;  # 使用 git 安装时，请务必检出特定版本
 ```
 
 手工下载克隆安装时，请额外执行 [**`bootstrap`**](/docs/setup/offline#bootstrap) 脚本以手动安装 Ansible 等部署依赖，您也可以 [**自行安装**](/docs/setup/playbook#安装-ansible)。
@@ -137,7 +137,7 @@ Pigsty 提供了 [**`configure`**](https://github.com/pgsty/pigsty/blob/main/con
 
 ```bash
 vagrant@meta:~/pigsty$ ./configure
-configure pigsty v4.2.0 begin
+configure pigsty v4.2.1 begin
 [ OK ] region = china
 [ OK ] kernel  = Linux
 [ OK ] machine = x86_64
