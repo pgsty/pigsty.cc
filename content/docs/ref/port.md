@@ -38,7 +38,7 @@ categories: [参考]
 | [**`FERRET`**](/docs/ferret) |      **`ferretdb (TLS)`**        | `27018` | [**`mongo_ssl_port`**](/docs/ferret/param#mongo_ssl_port)                    | ⚠️ 按需启用 |
 | [**`FERRET`**](/docs/ferret) |       **`mongo_exporter`**       | `9216`  | [**`mongo_exporter_port`**](/docs/ferret/param#mongo_exporter_port)          | ✅ 默认启用  |
 |   [**`VIBE`**](/docs/vibe)   |         **`code-server`**        | `8443`  | [**`code_port`**](/docs/vibe/param#code_port)                                | ⚠️ 按需启用 |
-|   [**`VIBE`**](/docs/vibe)   |          **`jupyterlab`**        | `8888`  | [**`jupyter_port`**](/docs/vibe/param#jupyter_port)                          | ⚠️ 按需启用 |
+|   [**`VIBE`**](/docs/vibe)   |         **`jupyterlab`**         | `8888`  | [**`jupyter_port`**](/docs/vibe/param#jupyter_port)                          | ⚠️ 按需启用 |
 |  [**`PGSQL`**](/docs/pgsql)  |          **`postgres`**          | `5432`  | [**`pg_port`**](/docs/pgsql/param#pg_port)                                   | ✅ 默认启用  |
 |  [**`PGSQL`**](/docs/pgsql)  |         **`pgbouncer`**          | `6432`  | [**`pgbouncer_port`**](/docs/pgsql/param#pgbouncer_port)                     | ✅ 默认启用  |
 |  [**`PGSQL`**](/docs/pgsql)  |          **`patroni`**           | `8008`  | [**`patroni_port`**](/docs/pgsql/param#patroni_port)                         | ✅ 默认启用  |
