@@ -2,7 +2,7 @@
 title: "开源协议"
 linkTitle: "开源协议"
 description: "按开源许可证分类的扩展列表"
-weight: 500
+weight: 230
 icon: fas fa-scale-balanced
 ---
 

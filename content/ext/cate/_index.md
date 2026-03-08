@@ -2,7 +2,7 @@
 title: "扩展分类"
 linkTitle: "扩展分类"
 description: "将 PostgreSQL 扩展按照功能分为 16 个大类别，方便用户按功能浏览扩展包索引。"
-weight: 810
+weight: 500
 icon: fa-solid fa-cubes
 sidebar_expanded: true
 ---

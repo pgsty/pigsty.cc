@@ -2,7 +2,7 @@
 title: "编程语言"
 linkTitle: "编程语言"
 description: "按编程语言分类的扩展列表"
-weight: 400
+weight: 220
 icon: fas fa-code
 ---
 

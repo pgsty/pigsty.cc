@@ -1,7 +1,7 @@
 ---
 title: "RPM 列表"
 description: "在 EL 系统上可用的 PostgreSQL 扩展 RPM 二进制包"
-weight: 210
+weight: 130
 icon: fa-brands fa-redhat
 ---
 

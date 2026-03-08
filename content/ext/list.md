@@ -1,7 +1,7 @@
 ---
 title: "扩展列表"
 description: "在 Pigsty 扩展目录中收录的的 PostgreSQL 扩展列表"
-weight: 100
+weight: 120
 icon: fas fa-puzzle-piece
 ---
 

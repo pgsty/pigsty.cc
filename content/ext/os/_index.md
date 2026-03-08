@@ -2,7 +2,7 @@
 title: "操作系统"
 linkTitle: "操作系统"
 description: "各操作系统的扩展可用性"
-weight: 600
+weight: 400
 icon: fa-brands fa-linux
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "扩展详情"
 description: "每个 PostgreSQL 扩展的详细信息，可用性情况，下载链接，使用说明"
-weight: 1001
+weight: 600
 icon: fas fa-circle-info
 no_list: true
 ---

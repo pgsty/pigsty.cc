@@ -2,7 +2,7 @@
 title: "归属仓库"
 linkTitle: "归属仓库"
 description: "按归属仓库分类的扩展列表"
-weight: 300
+weight: 210
 icon: fas fa-warehouse
 ---
 

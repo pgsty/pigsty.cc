@@ -1,7 +1,7 @@
 ---
 title: "DEB 列表"
 description: "在 Debian/Ubuntu 系统上可用的 PostgreSQL 扩展 DEB 二进制包"
-weight: 220
+weight: 140
 icon: fa-brands fa-debian
 ---
 
