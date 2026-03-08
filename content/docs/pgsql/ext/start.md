@@ -53,7 +53,7 @@ pg edit-config pg-meta --force -p shared_preload_libraries='timescaledb, pg_stat
 psql -d meta -c 'CREATE EXTENSION vector;'
 ```
 
-也可以使用 [pig](https://pgext.cloud/pig) 包管理器直接安装：
+也可以使用 [pig](/ext/pig/) 包管理器直接安装：
 
 ```bash
 pig install pgvector        # 安装扩展包

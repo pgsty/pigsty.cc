@@ -103,4 +103,4 @@ Pigsty 为 PostgreSQL 提供了丰富的扩展生态，包括：
 - **兼容类**：orafce, babelfishpg_tds
 - **数据类**：pglogical, wal2json, decoderbufs
 
-详情请参考 [扩展目录](https://pgext.cloud/zh/list)。
+详情请参考 [扩展目录](/ext/list/)。

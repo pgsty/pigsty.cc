@@ -23,7 +23,7 @@ sidebar_root_for: self
 
 - [系统架构](/docs/concept/arch/pgsql)
 - [集群配置](/docs/pgsql/config)
-- [扩展插件](/docs/ref/extension)
+- [扩展插件](/ext/list)
 - [用户/角色](/docs/pgsql/config/user)
 - [数据库](/docs/pgsql/config/db)
 - [服务/接入](/docs/pgsql/service/)

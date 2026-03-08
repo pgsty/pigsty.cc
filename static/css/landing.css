@@ -1246,12 +1246,12 @@ body.landing-page {
 
 /* Left scrolling animation */
 .marquee-row[data-direction="left"] .marquee-content {
-  animation: marquee-left 40s linear infinite;
+  animation: marquee-left 200s linear infinite;
 }
 
 /* Right scrolling animation - starts visible, moves right then resets */
 .marquee-row[data-direction="right"] .marquee-content {
-  animation: marquee-right 40s linear infinite;
+  animation: marquee-right 200s linear infinite;
 }
 
 @keyframes marquee-left {

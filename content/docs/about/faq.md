@@ -93,7 +93,7 @@ Pigsty 主体由冯若航一人开发，这是一位专注于 PostgreSQL 领域 
 Pigsty 全球 PostgreSQL 生态中最有影响力的中国开源项目，共有约十万用户，一半来自海外。
 Pigsty 也是 PostgreSQL 生态最活跃的开源项目之一，目前在扩展分发与监控系统上占据碾压性优势。
 
-[**PGEXT.Cloud**](https://pgext.cloud) 是由 Pigsty 维护的 PostgreSQL 扩展仓库，拥有全球最多的 PostgreSQL 扩展分发量。
+[**PGEXT.Cloud**](/ext/) 是由 Pigsty 维护的 PostgreSQL 扩展仓库，拥有全球最多的 PostgreSQL 扩展分发量。
 目前已经成为多家国际 PostgreSQL 厂商的软件供应链上游。
 
 Pigsty 目前是 PostgreSQL 生态的主要发行版之一，也是云厂商 RDS 的挑战者，目前已经广泛应用于军工，政企，医疗，互联网，金融，制造业等各个行业。

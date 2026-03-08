@@ -26,7 +26,7 @@ PostgreSQL 的 JSON 功能支持已经足够完善了：二进制存储 JSONB，
 Pigsty 从 1.x 开始就提供了基于 Docker 的 FerretDB 模板，在 v2.3 中提供了原生部署支持。
 它作为一个选装项，对丰富 PostgreSQL 生态大有裨益。Pigsty 社区已经与 FerretDB 社区成为了合作伙伴，后续将进行深度的合作与适配支持。
 
-**FERRET** 是 Pigsty 中的一个 **可选** 模块。自 v2.0 以来，它需要 [`documentdb`](https://pgext.cloud/e/documentdb) 扩展才能工作。
+**FERRET** 是 Pigsty 中的一个 **可选** 模块。自 v2.0 以来，它需要 [`documentdb`](/ext/e/documentdb) 扩展才能工作。
 Pigsty 已经打包了这个扩展，并提供了一个 [**`mongo.yml`**](/docs/conf/mongo) 模板，帮助您轻松部署 FerretDB 集群。
 
 

@@ -81,7 +81,7 @@ pg_extensions: [ pg18-gis, pg18-rag, pg18-fts ]
 
 ## 查阅扩展目录
 
-您可以在 [Pigsty 扩展目录](https://pgext.cloud/zh/list) 网站上查阅所有可用扩展的详细信息，包括：
+您可以在 [Pigsty 扩展目录](/ext/list/) 网站上查阅所有可用扩展的详细信息，包括：
 
 - 扩展名称、描述、版本
 - 支持的 PostgreSQL 版本

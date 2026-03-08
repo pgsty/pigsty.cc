@@ -527,7 +527,7 @@ b6faad9f92b926546a10f590274f2cb2afff21b9cea878094cfc5caf09e67d2c  pig_0.7.2-1_am
 
 ## v0.7.1
 
-- 全新的网站： https://pgext.cloud
+- 全新的网站： /ext/
 - 修复了不必要的 sudo 使用问题，现在可以方便的在容器中使用
 - 允许 pig ext link 命令使用形如 pg17 pg18 的参数形式
 - 新增环境变量 `PIG_NO_SUDO`，强制不使用 sudo 执行命令
@@ -613,7 +613,7 @@ ad4f02993c7d7d8eec142f0224551bb4  pig-v0.6.2.linux-amd64.tar.gz
 ## v0.6.1
 
 - 新增 el10 与 debian 13 trixie 的支持存根
-- 专门的新文档网站： https://pgext.cloud/pig
+- 专门的新文档网站： /ext/pig/
 - 使用 go 1.25 重新构建，新增 CI/CD 管道
 - 在中国大陆使用 PIGSTY PGDG 镜像
 - 移除空的 `pgdg-el10fix` 仓库
@@ -794,7 +794,7 @@ curl https://repo.pigsty.io/pig | bash -s 0.3.4
 
 ## v0.3.0
 
-[`pig`](/docs/pig/) 项目现在有了新的 [主页](https://pgext.cloud/pig)，以及 PostgreSQL 扩展 [目录](https://pgext.cloud/list)。
+[`pig`](/docs/pig/) 项目现在有了新的 [主页](/ext/pig/)，以及 PostgreSQL 扩展 [目录](/ext/list/)。
 
 发布：https://github.com/pgsty/pig/releases/tag/v0.3.0
 
@@ -830,7 +830,7 @@ v0.1.3，常规更新，现在可用 390 个扩展！
 
 ## v0.1.2
 
-[**351**](https://pgext.cloud/list) 个 PostgreSQL 扩展，包括强大的 [postgresql-anonymizer 2.0](https://postgresql-anonymizer.readthedocs.io/en/stable/)
+[**351**](/ext/list/) 个 PostgreSQL 扩展，包括强大的 [postgresql-anonymizer 2.0](https://postgresql-anonymizer.readthedocs.io/en/stable/)
 
 发布：https://github.com/pgsty/pig/releases/tag/v0.1.2
 

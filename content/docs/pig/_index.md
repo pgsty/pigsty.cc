@@ -37,7 +37,7 @@ curl -fsSL https://repo.pigsty.io/pig | bash
 curl -fsSL https://repo.pigsty.cc/pig | bash
 ```
 
-安装完成后，几行命令即可 [**快速开始**](/docs/pig/start/) 。例如，若需安装 PG 18 与相应的 [**`pg_duckdb`**](https://pgext.cloud/e/pg_duckdb) 扩展：
+安装完成后，几行命令即可 [**快速开始**](/docs/pig/start/) 。例如，若需安装 PG 18 与相应的 [**`pg_duckdb`**](/ext/e/pg_duckdb) 扩展：
 
 ```bash
 $ pig repo set                        # 一次性设置好 Linux, Pigsty + PGDG 仓库（覆盖式！）

@@ -48,7 +48,7 @@ categories: [参考]
 
 这里列出了一些重要扩展，对比基于最新的 PostgreSQL 16 主干版本进行，截止至 2024-02-28
 
-- [**Pigsty 扩展列表**](https://pgext.cloud/zh/list/)
+- [**Pigsty 扩展列表**](/ext/list/)
 - [**AWS RDS 扩展列表**](https://docs.aws.amazon.com/AmazonRDS/latest/PostgreSQLReleaseNotes/postgresql-extensions.html):
 - [**阿里云 RDS 扩展列表**](https://help.aliyun.com/zh/rds/apsaradb-rds-for-postgresql/extensions-supported-by-apsaradb-rds-for-postgresql)
 

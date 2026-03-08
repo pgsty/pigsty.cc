@@ -66,7 +66,7 @@ pig ext install pg_stat_statements
 pig ext install pg_stat_kcache
 ```
 
-可用扩展及其名称请查阅 [**扩展列表**](https://pgext.cloud/zh/list)。
+可用扩展及其名称请查阅 [**扩展列表**](/ext/list/)。
 
 **使用说明：**
 

@@ -37,7 +37,7 @@ categories: [参考]
 | `pgml` | PostgresML 机器学习 |
 {.full-width}
 
-完整列表请参阅 [扩展目录](https://pgext.cloud/zh/list)（带 `LOAD` 标记）。
+完整列表请参阅 [扩展目录](/ext/list/)（带 `LOAD` 标记）。
 
 ### 预加载顺序
 

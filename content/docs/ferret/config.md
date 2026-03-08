@@ -43,7 +43,7 @@ all:
 
 ## PostgreSQL 集群
 
-FerretDB 2.0+ 需要一个扩展：[DocumentDB](https://pgext.cloud/e/documentdb)，它依赖于几个其他扩展。以下是为 FerretDB 创建 PostgreSQL 集群的模板：
+FerretDB 2.0+ 需要一个扩展：[DocumentDB](/ext/e/documentdb)，它依赖于几个其他扩展。以下是为 FerretDB 创建 PostgreSQL 集群的模板：
 
 ```yaml
 all:

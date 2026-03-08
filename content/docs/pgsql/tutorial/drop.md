@@ -10,7 +10,7 @@ categories: [任务]
 
 ## 误删数据
 
-如果是小批量 `DELETE` 误操作，可以考虑使用 [`pg_surgery`](https://pgext.cloud/e/pg_surgery) 或者 [`pg_dirtyread`](https://pgext.cloud/e/pg_dirtyread) 扩展进行原地手术恢复。
+如果是小批量 `DELETE` 误操作，可以考虑使用 [`pg_surgery`](/ext/e/pg_surgery) 或者 [`pg_dirtyread`](/ext/e/pg_dirtyread) 扩展进行原地手术恢复。
 
 ```sql
 -- 立即关闭此表上的 Auto Vacuum 并中止 Auto Vacuum 本表的 worker 进程

@@ -24,6 +24,6 @@ linkTitle: 文档
 
 [**部署**](/docs/deploy/)：[架构规划](/docs/deploy/planning) | [资源准备](/docs/deploy/prepare) | [生产部署](/docs/deploy/install) | [沙箱环境](/docs/deploy/sandbox) | [Vagrant](/docs/deploy/vagrant) | [Terraform](/docs/deploy/terraform)
 
-[**参考**](/docs/ref/)：[操作系统](/docs/ref/linux) | [扩展列表](https://pgext.cloud/zh/list) | [文件结构](/docs/ref/fhs) | [同类产品](/docs/about/compare) | [成本参考](/docs/about/compare/cost) | [应用模板](/docs/app/) | [配置模板](/docs/conf/)
+[**参考**](/docs/ref/)：[操作系统](/docs/ref/linux) | [扩展列表](/ext/list/) | [文件结构](/docs/ref/fhs) | [同类产品](/docs/about/compare) | [成本参考](/docs/about/compare/cost) | [应用模板](/docs/app/) | [配置模板](/docs/conf/)
 
 [**模块**](/docs/ref/module)：[PGSQL](/docs/pgsql) | [INFRA](/docs/infra) | [NODE](/docs/node) | [ETCD](/docs/etcd) | [MINIO](/docs/minio) | [REDIS](/docs/redis) | [FERRET](/docs/ferret) | [DOCKER](/docs/docker) | [PILOT](/docs/pilot)

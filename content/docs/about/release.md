@@ -817,9 +817,9 @@ f2791c96db4cc17a8a4008fc8d9ad310  pigsty-pkg-v4.0.0.u22.aarch64.tgz
 
 更多软件版本更新信息，请参考：
 
-- [INFRA 变更日志](https://pgext.cloud/zh/release/infra/)
-- [RPM 变更日志](https://pgext.cloud/zh/release/rpm/)
-- [DEB 变更日志](https://pgext.cloud/zh/release/deb/)。
+- [INFRA 变更日志](/docs/repo/infra/)
+- [RPM 变更日志](/docs/repo/pgsql/rpm/)
+- [DEB 变更日志](/docs/repo/pgsql/deb/)。
 
 **API变化**
 
@@ -1424,17 +1424,17 @@ c927238f0343cde82a4a9ab230ecd2ac  pigsty-pkg-v3.4.0.u24.aarch64.tgz
 
 ## v3.2.2
 
-- 新增扩展包: [`Omnigres`](https://pgext.cloud/e/omni) 33个扩展，将postgres作为应用开发平台
-- 新增扩展: [`pg_mooncake`](https://pgext.cloud/e/pg_mooncake): postgres中的duckdb
-- 新增扩展: [`pg_xxhash`](https://pgext.cloud/e/xxhash)
-- 新增扩展: [`timescaledb_toolkit `](https://pgext.cloud/e/timescaledb_toolkit)
-- 新增扩展: [`pg_xenophile `](https://pgext.cloud/e/pg_xenophile)
-- 新增扩展: [`pg_drop_events `](https://pgext.cloud/e/pg_drop_events)
-- 新增扩展: [`pg_incremental `](https://pgext.cloud/e/pg_incremental)
+- 新增扩展包: [`Omnigres`](/ext/e/omni) 33个扩展，将postgres作为应用开发平台
+- 新增扩展: [`pg_mooncake`](/ext/e/pg_mooncake): postgres中的duckdb
+- 新增扩展: [`pg_xxhash`](/ext/e/xxhash)
+- 新增扩展: [`timescaledb_toolkit `](/ext/e/timescaledb_toolkit)
+- 新增扩展: [`pg_xenophile `](/ext/e/pg_xenophile)
+- 新增扩展: [`pg_drop_events `](/ext/e/pg_drop_events)
+- 新增扩展: [`pg_incremental `](/ext/e/pg_incremental)
 - 升级 [`citus`](https://github.com/citusdata/citus/tree/v13.0.0) 至13.0.0，支持PostgreSQL 17
 - 升级 [`pgml`](https://github.com/postgresml/postgresml/releases/tag/v2.10.0) 至2.10.0
-- 升级 [`pg_extra_time`](https://pgext.cloud/e/pg_extra_time) 至2.0.0
-- 升级 [`pg_vectorize`](https://pgext.cloud/e/pg_vectorize) 至0.20.0
+- 升级 [`pg_extra_time`](/ext/e/pg_extra_time) 至2.0.0
+- 升级 [`pg_vectorize`](/ext/e/pg_vectorize) 至0.20.0
 
 **变更内容**
 
@@ -1510,7 +1510,7 @@ c927238f0343cde82a4a9ab230ecd2ac  pigsty-pkg-v3.4.0.u24.aarch64.tgz
 **亮点特性**
 
 - Pigsty 命令行工具：[`pig`](https://github.com/pgsty/pig) 0.2.0，可用于管理扩展插件。
-- 提供五大发行版上 [390 个扩展](https://pgext.cloud/) 的 ARM64 扩展支持
+- 提供五大发行版上 [390 个扩展](/ext/) 的 ARM64 扩展支持
 - Supabase 发布周最新版本更新，全发行版均可自建。
 - Grafana 更新至 11.4 ，新增 infinity 数据源。
 
@@ -1520,7 +1520,7 @@ c927238f0343cde82a4a9ab230ecd2ac  pigsty-pkg-v3.4.0.u24.aarch64.tgz
 
     - 新增 timescaledb, timescaledb-loader timescaledb-toolkit timescaledb-tool to PIGSTY repo
     - 新增 [pg_timescaledb](https://github.com/timescale/timescaledb)，针对 EL 进行的编译重制版本
-    - 新增 [pgroonga](https://pgext.cloud/e/pgroonga)，针对 EL 全系进行编译重制
+    - 新增 [pgroonga](/ext/e/pgroonga)，针对 EL 全系进行编译重制
     - 新增 [vchord](https://github.com/tensorchord/VectorChord) 0.1.0
     - 新增 [pg_bestmatch.rs](https://github.com/tensorchord/pg_bestmatch.rs) 0.0.1
     - 新增 [pglite_fusion](https://github.com/frectonz/pglite-fusion) 0.0.3
@@ -1622,7 +1622,7 @@ ebb818f98f058f932b57d093d310f5c2  pigsty-pkg-v3.2.0.d12.x86_64.tgz
 **软件升级**
 
 - PostgreSQL 17.2, 16.6, 15.10, 14.15, 13.18, 12.22
-- PostgreSQL 扩展版本变动请参考：https://pgext.cloud
+- PostgreSQL 扩展版本变动请参考：/ext/
 - Patroni 4.0.4
 - MinIO 20241107 / MCLI 20241117
 - Rclone 1.68.2
@@ -1668,7 +1668,7 @@ e62f9ce9f89a58958609da7b234bf2f2  pigsty-v3.1.0.tgz
 
 **扩展**
 
-欢迎查阅我们最新的 PostgreSQL 扩展目录： https://pgext.cloud
+欢迎查阅我们最新的 PostgreSQL 扩展目录： /ext/
 
 |   统计项   | 总计  | PGDG | PIGSTY | MISC | MISS | PG17 | PG16 | PG15 | PG14 | PG13 | PG12 |
 |:-------:|:---:|:----:|:------:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|

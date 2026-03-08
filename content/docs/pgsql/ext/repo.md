@@ -109,7 +109,7 @@ Pigsty 仓库遵循以下原则：
 
 ## 相关资源
 
-- [Pigsty 扩展目录](https://pgext.cloud/zh/list)：查阅所有可用扩展
+- [Pigsty 扩展目录](/ext/list/)：查阅所有可用扩展
 - [PGDG YUM 仓库](https://download.postgresql.org/pub/repos/yum/)
 - [PGDG APT 仓库](https://apt.postgresql.org/pub/repos/apt/)
 
