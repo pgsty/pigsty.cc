@@ -3,7 +3,7 @@ title: "Piglet Runtime：AI 运行时沙箱"
 linkTitle: "piglet.run"
 weight: 8000
 description: "Pigsty 轻量运行时，AI Vibe Coding 沙箱，一键在云端拉起你的写意编程环境"
-icon: fas fa-piggy-bank fa-shake
+icon: fas fa-dharmachakra
 module: [PIGLET]
 ---
 

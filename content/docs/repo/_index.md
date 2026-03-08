@@ -1,8 +1,9 @@
 ---
-title: "Linux 软件源"
-icon: fas fa-warehouse
+title: "Linux 软件仓库"
+linkTitle: "仓库"
+icon: fas fa-house
 description: 用于交付 PostgreSQL 扩展的基础设施和软件包仓库
-weight: 5400
+weight: 610
 ---
 
 Pigsty 为主流 [Linux 发行版](/docs/ref/linux/) 提供了 PostgreSQL 扩展仓库，其中包含 340+ 额外的 PostgreSQL 扩展。

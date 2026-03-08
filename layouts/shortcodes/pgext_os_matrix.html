@@ -1,0 +1,61 @@
+{{- $lines := split .Inner "\n" -}}
+<table class="ext-table ext-table--os-matrix">
+<thead>
+{{ range $lines -}}
+  {{ $line := trim . " \r\t" -}}
+  {{ if and (hasPrefix $line "|") (findRE `\*\*` $line) (not (findRE `:--` $line)) -}}
+  <tr>
+    {{ range $ci, $rawCell := split $line "|" -}}
+      {{ $cell := trim $rawCell " " -}}
+      {{ if and (ne $ci 0) (ne $cell "") -}}
+        <th>{{ $cell | markdownify }}</th>
+      {{ end -}}
+    {{ end -}}
+  </tr>
+  {{ end -}}
+{{ end -}}
+</thead>
+<tbody>
+{{ range $lines -}}
+  {{ $line := trim . " \r\t" -}}
+  {{ if and (hasPrefix $line "|") (not (findRE `(\*\*|:--)` $line)) (gt (len $line) 3) -}}
+  <tr>
+    {{ $cells := split $line "|" -}}
+    {{ range $ci, $rawCell := $cells -}}
+      {{ $cell := trim $rawCell " " -}}
+      {{ if and (ne $ci 0) (ne $cell "") -}}
+        {{ if eq $ci 1 -}}
+          <td class="ext-os-matrix-pkg">{{ $cell | markdownify | replaceRE "</?p[^>]*>" "" | safeHTML }}</td>
+        {{ else -}}
+          {{ $parts := findRE `\S+` $cell -}}
+          {{ if ge (len $parts) 4 -}}
+            {{ $state := index $parts 0 -}}
+            {{ $repo  := index $parts 1 -}}
+            {{ $ver   := index $parts 2 -}}
+            {{ $cls := "ext-avail-cell--hide" -}}
+            {{ if eq $state "AVAIL" -}}
+              {{ if eq $repo "PGDG"    }}{{ $cls = "ext-avail-cell--pgdg"    }}{{ end -}}
+              {{ if eq $repo "PIGSTY"  }}{{ $cls = "ext-avail-cell--pigsty"  }}{{ end -}}
+              {{ if eq $repo "CONTRIB" }}{{ $cls = "ext-avail-cell--contrib" }}{{ end -}}
+            {{ else if eq $state "MISS"  }}{{ $cls = "ext-avail-cell--miss"  -}}
+            {{ else if eq $state "HIDE"  }}{{ $cls = "ext-avail-cell--hide"  -}}
+            {{ else if eq $state "THROW" }}{{ $cls = "ext-avail-cell--throw" -}}
+            {{ else if eq $state "BREAK" }}{{ $cls = "ext-avail-cell--break" -}}
+            {{ else if eq $state "FORK"  }}{{ $cls = "ext-avail-cell--fork"  -}}
+            {{ end -}}
+            {{ $verDisplay := $ver -}}
+            {{ if or (eq $ver "-") (eq $ver "") -}}
+              {{ $verDisplay = "MISS" -}}
+            {{ end -}}
+            <td><span class="ext-avail-cell {{ $cls }}">{{ $repo }}&nbsp;{{ $verDisplay }}</span></td>
+          {{ else -}}
+            <td>{{ $cell }}</td>
+          {{ end -}}
+        {{ end -}}
+      {{ end -}}
+    {{ end -}}
+  </tr>
+  {{ end -}}
+{{ end -}}
+</tbody>
+</table>

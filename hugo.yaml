@@ -33,7 +33,7 @@ menu:
     - identifier: ext
       name: 扩展
       weight: 20
-      url: https://pgext.cloud
+      url: /ext/
       pre: <i class='fa-solid fa-puzzle-piece'></i>
 
 #=======================================#
@@ -155,7 +155,7 @@ params:
     sidebar_menu_foldable: true
     sidebar_cache_limit: 1000
     sidebar_root_enabled: true
-    sidebar_menu_truncate: 0
+    sidebar_menu_truncate: 2000
     ul_show: 3
     showLightDarkModeMenu: true
 

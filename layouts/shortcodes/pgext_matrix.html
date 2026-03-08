@@ -1,0 +1,142 @@
+{{/*
+  pgext_matrix: Render an extension availability matrix with optional download popovers.
+
+  Table cell format:    STATE REPO VERSION COUNT
+  Download line format: @ OS PG PKG FILENAME REPO VERSION SIZE URL
+
+  Color mapping (state → badge color):
+    AVAIL + PGDG    → PG blue      AVAIL + PIGSTY  → green
+    AVAIL + CONTRIB → gray         MISS            → red (dashed)
+    HIDE            → gray (dim)   THROW           → purple
+    BREAK           → amber        FORK            → violet
+*/}}
+{{ $lines := split .Inner "\n" }}
+
+{{/* ── Phase 1: Extract PG versions from header ── */}}
+{{ $pgVersions := slice }}
+{{ range $lines -}}
+  {{ $line := trim . " \r\t" -}}
+  {{ if and (hasPrefix $line "|") (findRE `\*\*PG` $line) (not (findRE `:--` $line)) -}}
+    {{ range $ci, $rawCell := split $line "|" -}}
+      {{ $cell := trim $rawCell " " -}}
+      {{ if and (gt $ci 1) (ne $cell "") -}}
+        {{ $pg := replaceRE `.*PG(\d+).*` "$1" $cell -}}
+        {{ $pgVersions = $pgVersions | append $pg -}}
+      {{ end -}}
+    {{ end -}}
+  {{ end -}}
+{{ end -}}
+
+{{/* ── Phase 2: Build download lookup map keyed by "OS-PG" ── */}}
+{{ $dlMap := newScratch -}}
+{{ $hasDL := false -}}
+{{ range $lines -}}
+  {{ $line := trim . " \r\t" -}}
+  {{ if hasPrefix $line "@ " -}}
+    {{ $hasDL = true -}}
+    {{ $dp := findRE `\S+` $line -}}
+    {{ if ge (len $dp) 9 -}}
+      {{ $key := printf "%s-%s" (index $dp 1) (index $dp 2) -}}
+      {{ $dlMap.Add $key (slice $line) -}}
+    {{ end -}}
+  {{ end -}}
+{{ end -}}
+
+{{/* ── Phase 3: Render table ── */}}
+<table class="ext-table ext-table--matrix">
+<thead>
+{{ range $lines -}}
+  {{ $line := trim . " \r\t" -}}
+  {{ if and (hasPrefix $line "|") (findRE `\*\*` $line) (not (findRE `:--` $line)) -}}
+  <tr>
+    {{ range $ci, $rawCell := split $line "|" -}}
+      {{ $cell := trim $rawCell " " -}}
+      {{ if and (ne $ci 0) (ne $cell "") -}}
+        <th>{{ $cell | markdownify }}</th>
+      {{ end -}}
+    {{ end -}}
+  </tr>
+  {{ end -}}
+{{ end -}}
+</thead>
+<tbody>
+{{ range $lines -}}
+  {{ $line := trim . " \r\t" -}}
+  {{ if and (hasPrefix $line "|") (not (findRE `(\*\*|:--)` $line)) (gt (len $line) 3) -}}
+  <tr>
+    {{ $cells := split $line "|" -}}
+    {{ $os := "" -}}
+    {{ range $ci, $rawCell := $cells -}}
+      {{ $cell := trim $rawCell " " -}}
+      {{ if and (ne $ci 0) (ne $cell "") -}}
+        {{ if eq $ci 1 -}}
+          {{ $os = $cell -}}
+          <td class="ext-matrix-os"><a class="ext-os" href="/ext/os/{{ $cell }}">{{ $cell }}</a></td>
+        {{ else -}}
+          {{ $parts := findRE `\S+` $cell -}}
+          {{ if ge (len $parts) 4 -}}
+            {{ $state := index $parts 0 -}}
+            {{ $repo  := index $parts 1 -}}
+            {{ $ver   := index $parts 2 -}}
+            {{/* Determine badge CSS class */}}
+            {{ $cls := "ext-avail-cell--hide" -}}
+            {{ if eq $state "AVAIL" -}}
+              {{ if eq $repo "PGDG"    }}{{ $cls = "ext-avail-cell--pgdg"    }}{{ end -}}
+              {{ if eq $repo "PIGSTY"  }}{{ $cls = "ext-avail-cell--pigsty"  }}{{ end -}}
+              {{ if eq $repo "CONTRIB" }}{{ $cls = "ext-avail-cell--contrib" }}{{ end -}}
+            {{ else if eq $state "MISS"  }}{{ $cls = "ext-avail-cell--miss"  -}}
+            {{ else if eq $state "HIDE"  }}{{ $cls = "ext-avail-cell--hide"  -}}
+            {{ else if eq $state "THROW" }}{{ $cls = "ext-avail-cell--throw" -}}
+            {{ else if eq $state "BREAK" }}{{ $cls = "ext-avail-cell--break" -}}
+            {{ else if eq $state "FORK"  }}{{ $cls = "ext-avail-cell--fork"  -}}
+            {{ end -}}
+            {{/* Version display */}}
+            {{ $verDisplay := $ver -}}
+            {{ if or (eq $ver "-") (eq $ver "") -}}
+              {{ $verDisplay = "MISS" -}}
+            {{ end -}}
+            {{/* O(1) lookup for matching downloads */}}
+            {{ $cellDL := slice -}}
+            {{ if $hasDL -}}
+              {{ $pgIdx := sub $ci 2 -}}
+              {{ if and (ge $pgIdx 0) (lt $pgIdx (len $pgVersions)) -}}
+                {{ $pg := index $pgVersions $pgIdx -}}
+                {{ $key := printf "%s-%s" $os $pg -}}
+                {{ $found := $dlMap.Get $key -}}
+                {{ if $found }}{{ $cellDL = $found }}{{ end -}}
+              {{ end -}}
+            {{ end -}}
+            {{/* Render cell — with popover if downloads exist */}}
+            {{ if gt (len $cellDL) 0 -}}
+            <td><div class="ext-pop-wrap">
+              <span class="ext-avail-cell {{ $cls }}">{{ $repo }}&nbsp;{{ $verDisplay }}</span>
+              <div class="ext-pop">
+                {{ $firstDL := findRE `\S+` (index $cellDL 0) -}}
+                <div class="ext-pop__hd">{{ $os }}.pg{{ index $pgVersions (sub $ci 2) }} : {{ index $firstDL 3 }}</div>
+                {{ range $cellDL -}}
+                  {{ $dp := findRE `\S+` . -}}
+                  {{ $dRepo := index $dp 5 -}}
+                  {{ $repoCls := "ext-pop__repo" -}}
+                  {{ if eq $dRepo "pigsty" }}{{ $repoCls = "ext-pop__repo ext-pop__repo--pigsty" }}{{ end -}}
+                  {{ if eq $dRepo "pgdg" }}{{ $repoCls = "ext-pop__repo ext-pop__repo--pgdg" }}{{ end -}}
+                  <a class="ext-pop__row" href="{{ index $dp 8 }}">
+                    <span class="ext-pop__fn">{{ index $dp 4 }}</span>
+                    <span class="ext-pop__meta"><span class="{{ $repoCls }}">{{ upper $dRepo }}</span> · {{ index $dp 6 }} · {{ index $dp 7 }}</span>
+                  </a>
+                {{ end -}}
+              </div>
+            </div></td>
+            {{ else -}}
+            <td><span class="ext-avail-cell {{ $cls }}">{{ $repo }}&nbsp;{{ $verDisplay }}</span></td>
+            {{ end -}}
+          {{ else -}}
+            <td>{{ $cell }}</td>
+          {{ end -}}
+        {{ end -}}
+      {{ end -}}
+    {{ end -}}
+  </tr>
+  {{ end -}}
+{{ end -}}
+</tbody>
+</table>

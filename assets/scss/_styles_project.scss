@@ -328,10 +328,20 @@
     border: 1px solid var(--ext-pgver-border);
   }
   .ext-pgver--ok { --ext-accent: #16a34a; }
+  .ext-pgver--miss {
+    --ext-accent: #dc2626;
+    border-style: dashed;
+    opacity: 0.9;
+  }
   .ext-pgver--na {
     --ext-accent: #94a3b8;
     border-style: dashed;
     opacity: 0.9;
+  }
+  .ext-pgver-group {
+    display: inline-flex;
+    flex-wrap: nowrap;
+    white-space: nowrap;
   }
 
   // ---- Cards (Repo / Source) ------------------------------------------------
@@ -500,7 +510,162 @@
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
   }
 
-  // ---- Availability cell ----------------------------------------------------
+  // ---- Availability matrix (avail shortcode) ---------------------------------
+  .ext-avail-cell {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.22em 0.55em;
+    font-size: 0.78em;
+    font-weight: 650;
+    line-height: 1.15;
+    border-radius: var(--ext-radius-sm);
+    white-space: nowrap;
+    font-family: var(--bs-font-monospace);
+    font-variant-numeric: tabular-nums;
+    cursor: default;
+
+    color: var(--ext-avail-fg, color-mix(in srgb, var(--ext-avail-accent) 82%, var(--bs-body-color)));
+    background: color-mix(in srgb, var(--ext-avail-accent) 12%, var(--bs-body-bg));
+    border: 1px solid color-mix(in srgb, var(--ext-avail-accent) 26%, transparent);
+  }
+  .ext-avail-cell--pgdg    { --ext-avail-accent: #336791; }
+  .ext-avail-cell--pigsty  { --ext-avail-accent: #16a34a; }
+  .ext-avail-cell--contrib { --ext-avail-accent: #64748b; }
+  .ext-avail-cell--other   { --ext-avail-accent: #0ea5e9; }
+  .ext-avail-cell--miss    { --ext-avail-accent: #dc2626; border-style: dashed; opacity: 0.85; }
+  .ext-avail-cell--hide    { --ext-avail-accent: #94a3b8; border-style: dashed; opacity: 0.5; }
+  .ext-avail-cell--throw   { --ext-avail-accent: #7c3aed; }
+  .ext-avail-cell--break   { --ext-avail-accent: #d97706; }
+  .ext-avail-cell--fork    { --ext-avail-accent: #a855f7; }
+
+  .ext-matrix-os { white-space: nowrap; text-align: center; }
+
+  // ---- Matrix popover (hover download details) ------------------------------
+  // Wrapper: positioned relative so the popover anchors to it
+  .ext-pop-wrap {
+    position: relative;
+    display: inline-flex;
+    cursor: pointer;
+
+    // Invisible bridge between badge and popover so hover doesn't break
+    &::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      height: 8px;       // matches the gap
+    }
+  }
+  .ext-pop-wrap .ext-avail-cell { cursor: pointer; }
+
+  // The popover card — hidden by default, shown on hover
+  .ext-pop {
+    display: none;
+    position: absolute;
+    z-index: 200;
+    top: calc(100% + 6px);
+    left: 50%;
+    transform: translateX(-50%);
+    width: max-content;
+    max-width: 640px;
+    max-height: 420px;
+    overflow-y: auto;
+    padding: 0.5rem 0.6rem;
+    background: var(--bs-body-bg);
+    border: 1px solid var(--ext-border);
+    border-radius: var(--ext-radius);
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.18);
+    text-align: left;
+
+    // Small arrow pointing up
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      border: 6px solid transparent;
+      border-bottom-color: var(--ext-border);
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      border: 5px solid transparent;
+      border-bottom-color: var(--bs-body-bg);
+    }
+  }
+  .ext-pop-wrap:hover .ext-pop { display: block; }
+
+  // Ensure nothing clips the popover — all ancestors must allow overflow
+  table.ext-table--matrix,
+  table.ext-table--matrix thead,
+  table.ext-table--matrix tbody,
+  table.ext-table--matrix tr,
+  table.ext-table--matrix td,
+  table.ext-table--matrix th { overflow: visible !important; }
+
+  // Popover header — title line
+  .ext-pop__hd {
+    font-size: 0.78em;
+    font-weight: 700;
+    font-family: var(--bs-font-monospace);
+    color: var(--bs-body-color);
+    padding-bottom: 0.35rem;
+    margin-bottom: 0.3rem;
+    border-bottom: 1px solid var(--ext-border);
+    white-space: nowrap;
+  }
+
+  // Each download row — clickable block
+  .ext-pop__row {
+    display: flex;
+    align-items: baseline;
+    gap: 0.6rem;
+    padding: 0.25rem 0.35rem;
+    margin: 0 -0.35rem;
+    border-radius: var(--ext-radius-sm);
+    text-decoration: none;
+    color: inherit;
+    white-space: nowrap;
+    transition: background 100ms ease;
+
+    &:hover {
+      background: color-mix(in srgb, var(--bs-body-color) 6%, var(--bs-body-bg));
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+
+  // Filename
+  .ext-pop__fn {
+    font-size: 0.72em;
+    font-family: var(--bs-font-monospace);
+    font-weight: 600;
+    color: var(--bs-link-color);
+    white-space: nowrap;
+  }
+  .ext-pop__row:hover .ext-pop__fn { text-decoration: underline; }
+
+  // Metadata (repo · version · size)
+  .ext-pop__meta {
+    font-size: 0.68em;
+    color: var(--ext-muted);
+    white-space: nowrap;
+  }
+  // Repo label inside metadata — colored by source
+  .ext-pop__repo {
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  .ext-pop__repo--pigsty { color: #16a34a; }
+  .ext-pop__repo--pgdg   { color: #336791; }
+
+  // ---- Availability cell (legacy, for category/OS pages) --------------------
   .ext-avail__pkg {
     --ext-accent: var(--bs-link-color);
 
@@ -632,10 +797,16 @@
     tbody tr:hover td {
       background: color-mix(in srgb, var(--bs-body-bg) 92%, var(--bs-body-color) 2%);
     }
+
+    a { text-decoration: none; }
   }
 
   table.ext-table.ext-table--rel {
     table-layout: fixed;
+
+    thead th {
+      font-size: inherit;
+    }
 
     th:first-child,
     td:first-child {
@@ -645,8 +816,23 @@
   }
 
   table.ext-table.ext-table--matrix {
+    table-layout: fixed;
+    width: 100%;
+    max-width: 100%;
+
     td,
-    th { padding: 0.55rem 0.6rem; }
+    th {
+      padding: 0.4rem 0.25rem;
+      text-align: center;
+      vertical-align: middle;
+    }
+
+    // First column (OS) — fixed narrow width
+    th:first-child,
+    td:first-child {
+      width: 7.5rem;
+      white-space: nowrap;
+    }
   }
 
   table.ext-table.ext-table--avail {
@@ -672,6 +858,10 @@
   .ext-badge--license { font-variant-numeric: tabular-nums; }
   .ext-badge--lang { letter-spacing: 0.01em; }
   .ext-badge--avail { --ext-accent: #2563eb; }
+  .ext-badge--miss  { --ext-accent: #94a3b8; border-style: dashed; opacity: 0.7; }
+  .ext-badge--hide  { --ext-accent: #94a3b8; border-style: dashed; opacity: 0.5; }
+  .ext-badge--throw { --ext-accent: #7c3aed; }
+  .ext-badge--break { --ext-accent: #d97706; }
 
   // Category (function group): TIME / GIS / RAG / ...
   .ext-cate--time,  .ext-badge--cate.time  { --ext-accent: #0ea5e9; }
@@ -697,24 +887,116 @@
   .ext-repo--contrib,   .ext-badge--repo.contrib   { --ext-accent: #64748b; }
   .ext-repo--timescale, .ext-badge--repo.timescale { --ext-accent: #f97316; }
 
-  // License (Apache/MIT/PostgreSQL/GPL/Timescale/...)
-  .ext-license--apache20,  .ext-badge--license.apache20  { --ext-accent: #dc2626; }
-  .ext-license--mit,       .ext-badge--license.mit       { --ext-accent: #16a34a; }
-  .ext-license--postgres,  .ext-badge--license.postgres  { --ext-accent: #336791; }
-  .ext-license--bsd,       .ext-badge--license.bsd       { --ext-accent: #64748b; }
-  .ext-license--gpl20,     .ext-badge--license.gpl20     { --ext-accent: #7c3aed; }
-  .ext-license--gpl30,     .ext-badge--license.gpl30     { --ext-accent: #6d28d9; }
-  .ext-license--agpl30,    .ext-badge--license.agpl30    { --ext-accent: #9333ea; }
-  .ext-license--timescale, .ext-badge--license.timescale { --ext-accent: #f97316; }
+  // License — Blue: permissive, Green: copyleft-weak/GPL, Yellow: LGPL, Red: AGPL, Gray: proprietary
+  // Permissive (blue spectrum)
+  .ext-badge--license.mit          { --ext-accent: #3b82f6; }  // blue
+  .ext-badge--license.isc          { --ext-accent: #2563eb; }  // blue-600
+  .ext-badge--license.postgresql   { --ext-accent: #336791; }  // PG blue
+  .ext-badge--license.bsd          { --ext-accent: #0ea5e9; }  // sky (all BSD variants)
+  .ext-badge--license.artistic     { --ext-accent: #06b6d4; }  // cyan
+  // Copyleft-weak / Attribution (green spectrum)
+  .ext-badge--license.apache20     { --ext-accent: #22c55e; }  // green-500
+  .ext-badge--license.mpl20        { --ext-accent: #10b981; }  // emerald-500
+  // GPL (darker green)
+  .ext-badge--license.gpl20        { --ext-accent: #16a34a; }  // green-600
+  .ext-badge--license.gpl30        { --ext-accent: #15803d; }  // green-700
+  // LGPL (yellow/amber)
+  .ext-badge--license.lgpl21       { --ext-accent: #d97706; }  // amber-600
+  .ext-badge--license.lgpl30       { --ext-accent: #ca8a04; }  // yellow-600
+  // AGPL (red)
+  .ext-badge--license.agpl30       { --ext-accent: #dc2626; }  // red-600
+  // Proprietary / Custom (gray)
+  .ext-badge--license.timescale    { --ext-accent: #6b7280; }  // gray-500
 
-  // Language (C / SQL / Rust / ...)
+  // Language (C / C++ / SQL / Rust / ...)
   .ext-lang--c,    .ext-badge--lang.c    { --ext-accent: #334155; }
+  .ext-lang--cpp,  .ext-badge--lang.cpp  { --ext-accent: #005f9e; }
   .ext-lang--sql,  .ext-badge--lang.sql  { --ext-accent: #0ea5e9; }
   .ext-lang--rust, .ext-badge--lang.rust { --ext-accent: #b45309; }
   .ext-lang--py,   .ext-badge--lang.py   { --ext-accent: #2563eb; }
+
+  // ---- Category page: unified table (left metadata + right OS availability) --
+  table.ext-table.ext-table--cate {
+    table-layout: fixed;
+
+    td, th { padding: 0.55rem 0.65rem; }
+
+    // Col 1: 条目 label
+    td:nth-child(1), th:nth-child(1) {
+      width: 5.5rem;
+      text-align: center;
+      white-space: nowrap;
+    }
+    // Col 2: 属性 value
+    td:nth-child(2), th:nth-child(2) {
+      width: auto;
+    }
+    // Col 3: OS - divider from left
+    td:nth-child(3), th:nth-child(3) {
+      width: 4.5rem;
+      text-align: center;
+      white-space: nowrap;
+      border-left: 2px solid var(--ext-border);
+    }
+    // Col 4-5: x86_64 / aarch64
+    td:nth-child(4), th:nth-child(4),
+    td:nth-child(5), th:nth-child(5) {
+      width: 22%;
+      text-align: center;
+    }
+  }
+
+  // ---- OS page: availability matrix (pkg × PG versions) ----------------------
+  table.ext-table.ext-table--os-matrix {
+    table-layout: fixed;
+    width: 100%;
+    font-size: 0.88em;
+
+    th, td {
+      text-align: center;
+      padding: 0.4rem 0.3rem;
+    }
+
+    th:first-child {
+      width: 18%;
+      text-align: center;
+    }
+
+    .ext-os-matrix-pkg {
+      width: 18%;
+      text-align: left;
+      padding-left: 0.75rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      a { font-weight: 600; }
+      code {
+        font-size: 0.92em;
+        padding: 0.1em 0.3em;
+        background: color-mix(in srgb, var(--ext-surface) 60%, transparent);
+        border-radius: 3px;
+      }
+    }
+
+    // Make avail-cell badges fill the table cell
+    td .ext-avail-cell {
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
+    }
+  }
 }
 
 [data-bs-theme="dark"] .td-content {
   --ext-shadow: 0 1px 0 rgba(0, 0, 0, 0.25), 0 14px 32px rgba(0, 0, 0, 0.35);
   --ext-shadow-hover: 0 1px 0 rgba(0, 0, 0, 0.25), 0 20px 52px rgba(0, 0, 0, 0.55);
+}
+
+// 全局去除链接下划线
+a {
+  text-decoration: none !important;
+
+  &:hover {
+    text-decoration: none !important;
+  }
 }

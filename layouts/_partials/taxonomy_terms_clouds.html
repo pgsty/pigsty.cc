@@ -1,5 +1,5 @@
 {{ $context := . -}}
-{{ $isDocsPage := hasPrefix .RelPermalink "/docs/" -}}
+{{ $isDocsPage := or (hasPrefix .RelPermalink "/docs/") (hasPrefix .RelPermalink "/ext/") -}}
 {{ $isBlogPage := hasPrefix .RelPermalink "/blog/" -}}
 
 {{ if .Site.Params.taxonomy -}}

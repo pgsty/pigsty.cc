@@ -1,0 +1,17 @@
+{{- $mask := slice "18" "17" "16" "15" "14" -}}
+{{- $supported := dict -}}
+{{- range split (.Get 0) "," -}}
+  {{- $v := trim . " " -}}
+  {{- if ne $v "" -}}
+    {{- $supported = merge $supported (dict $v true) -}}
+  {{- end -}}
+{{- end -}}
+<span class="ext-pgver-group">
+  {{- range $mask -}}
+    {{- if index $supported . -}}
+      <span class="ext-pgver ext-pgver--ok">{{ . }}</span>
+    {{- else -}}
+      <span class="ext-pgver ext-pgver--miss">{{ . }}</span>
+    {{- end -}}
+  {{- end -}}
+</span>
