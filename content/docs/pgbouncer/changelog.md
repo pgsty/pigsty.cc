@@ -5,7 +5,7 @@ weight: 70
 description: "PgBouncer 版本历史与发布说明"
 icon: fa-solid fa-scroll
 module: [PGBOUNCER]
-category: [Reference]
+categories: [参考]
 ---
 
 > 来源： <https://www.pgbouncer.org/changelog.html>

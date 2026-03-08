@@ -4,7 +4,7 @@ weight: 70
 icon: fa-solid fa-share-nodes
 description: "Patroni 管理的异步与同步复制模式。"
 module: [PATRONI]
-category: [Concept]
+categories: [概念]
 ---
 
 > 原始页面： https://patroni.readthedocs.io/en/latest/replication_modes.html

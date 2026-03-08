@@ -4,7 +4,7 @@ weight: 20
 icon: fa-solid fa-cloud-arrow-down
 description: "在各支持平台上安装和升级 Patroni 的详细说明。"
 module: [PATRONI]
-category: [Tutorial]
+categories: [教程]
 ---
 
 > 原始页面： https://patroni.readthedocs.io/en/latest/installation.html

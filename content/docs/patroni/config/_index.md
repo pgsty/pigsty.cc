@@ -5,7 +5,7 @@ icon: fa-solid fa-code
 description: "Patroni 配置模型、优先级规则与验证工具。"
 sidebar_expanded: true
 module: [PATRONI]
-category: [Reference]
+categories: [参考]
 ---
 
 > 原始页面： https://patroni.readthedocs.io/en/latest/patroni_configuration.html

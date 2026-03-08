@@ -6,7 +6,7 @@ icon: fas fa-yin-yang
 description: "Patroni PostgreSQL 高可用模板，v4.1 中文文档"
 sidebar_root_for: self
 module: [PATRONI]
-category: [Concept]
+categories: [概念]
 ---
 
 > 原始页面： https://patroni.readthedocs.io/en/latest/index.html

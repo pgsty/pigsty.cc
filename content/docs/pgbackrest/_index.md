@@ -6,7 +6,7 @@ icon: fas fa-couch
 sidebar_root_for: self
 description: "可靠的 PostgreSQL 备份与恢复工具 —— pgBackRest 文档与参考手册。"
 module: [PGBACKREST]
-category: [Concept]
+categories: [概念]
 ---
 
 > 原始页面： <https://pgbackrest.org/>

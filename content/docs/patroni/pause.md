@@ -5,7 +5,7 @@ weight: 100
 icon: fa-solid fa-stopwatch
 description: "Patroni 集群管理中的暂停与恢复模式行为说明。"
 module: [PATRONI]
-category: [Task]
+categories: [任务]
 ---
 
 > 原始页面： https://patroni.readthedocs.io/en/latest/pause.html

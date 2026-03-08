@@ -5,7 +5,7 @@ weight: 60
 description: "pgBackRest `expire` 命令的选项与行为参考。"
 icon: fa-solid fa-hourglass-end
 module: [PGBACKREST]
-category: [Reference]
+categories: [参考]
 ---
 
 > 原始页面： [pgBackRest Command Docs: expire](https://pgbackrest.org/command.html#command-expire)

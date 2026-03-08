@@ -5,7 +5,7 @@ weight: 150
 icon: fas fa-puzzle-piece
 description: "Patroni 与外部备份及编排工具的集成方法。"
 module: [PATRONI]
-category: [Concept]
+categories: [概念]
 ---
 
 > 原始页面： https://patroni.readthedocs.io/en/latest/tools_integration.html

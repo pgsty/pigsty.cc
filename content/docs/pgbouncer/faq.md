@@ -5,7 +5,7 @@ weight: 90
 description: "PgBouncer 常见问题解答"
 icon: fa-solid fa-circle-question
 module: [PGBOUNCER]
-category: [参考]
+categories: [参考]
 ---
 
 > 原始页面： <https://www.pgbouncer.org/faq.html>

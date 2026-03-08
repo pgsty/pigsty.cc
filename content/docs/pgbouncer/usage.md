@@ -5,7 +5,7 @@ weight: 30
 description: "PgBouncer 命令行用法与管理控制台"
 icon: fa-solid fa-bell-concierge
 module: [PGBOUNCER]
-category: [任务]
+categories: [任务]
 ---
 
 > 原始页面： <https://www.pgbouncer.org/usage.html>

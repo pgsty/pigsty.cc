@@ -5,7 +5,7 @@ weight: 70
 description: "关于 pgBackRest 备份、恢复、配置与故障排查的常见问题解答。"
 icon: fa-solid fa-circle-question
 module: [PGBACKREST]
-category: [Reference]
+categories: [参考]
 ---
 
 > 原始页面： <https://pgbackrest.org/faq.html>

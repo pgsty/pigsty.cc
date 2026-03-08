@@ -4,7 +4,7 @@ weight: 10
 icon: fa-solid fa-circle-info
 description: "Patroni 简介、快速上手以及高可用核心概念。"
 module: [PATRONI]
-category: [Concept]
+categories: [概念]
 ---
 
 > 原始页面： https://patroni.readthedocs.io/en/latest/README.html

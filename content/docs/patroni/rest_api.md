@@ -4,7 +4,7 @@ weight: 40
 icon: fa-solid fa-book
 description: "Patroni REST API 端点与操作行为参考。"
 module: [PATRONI]
-category: [Reference]
+categories: [参考]
 ---
 
 > 原始页面： https://patroni.readthedocs.io/en/latest/rest_api.html

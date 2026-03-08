@@ -4,7 +4,7 @@ weight: 160
 icon: fa-solid fa-lock
 description: "DCS、REST API 及凭据处理的安全注意事项。"
 module: [PATRONI]
-category: [Concept]
+categories: [概念]
 ---
 
 > 原始页面： https://patroni.readthedocs.io/en/latest/security.html

@@ -4,7 +4,7 @@ weight: 180
 icon: fa-solid fa-circle-question
 description: "关于 Patroni 运维与故障排查的常见问题解答。"
 module: [PATRONI]
-category: [Reference]
+categories: [参考]
 ---
 
 > 原始页面： https://patroni.readthedocs.io/en/latest/faq.html

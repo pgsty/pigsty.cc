@@ -5,7 +5,7 @@ weight: 30
 icon: fa-solid fa-house-crack
 description: "用于覆盖 Patroni 配置文件参数的环境变量。"
 module: [PATRONI]
-category: [Reference]
+categories: [参考]
 ---
 
 > 原始页面： https://patroni.readthedocs.io/en/latest/ENVIRONMENT.html

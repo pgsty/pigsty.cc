@@ -5,7 +5,7 @@ weight: 10
 icon: fa-solid fa-gauge-high
 description: "存储在 DCS 中并应用于整个集群的动态配置参数。"
 module: [PATRONI]
-category: [Reference]
+categories: [参考]
 ---
 
 > 原始页面： https://patroni.readthedocs.io/en/latest/dynamic_configuration.html

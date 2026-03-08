@@ -5,7 +5,7 @@ weight: 180
 description: "pgBackRest `stop` 命令选项与行为参考。"
 icon: fa-solid fa-stop
 module: [PGBACKREST]
-category: [Reference]
+categories: [参考]
 ---
 
 > 原始页面： [pgBackRest Command Docs: stop](https://pgbackrest.org/command.html#command-stop)

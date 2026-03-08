@@ -4,7 +4,7 @@ weight: 90
 icon: fa-solid fa-dog
 description: "Patroni 集群的 watchdog 集成与隔离（fencing）注意事项。"
 module: [PATRONI]
-category: [Concept]
+categories: [概念]
 ---
 
 > 原始页面： https://patroni.readthedocs.io/en/latest/watchdog.html

@@ -5,7 +5,7 @@ weight: 60
 description: "pgBackRest 版本发布历史，包含每个版本的详细变更日志。"
 icon: fa-solid fa-scroll
 module: [PGBACKREST]
-category: [Reference]
+categories: [参考]
 ---
 
 > 原始页面： <https://pgbackrest.org/release.html>

@@ -4,7 +4,7 @@ weight: 10
 description: "PgBouncer 特性——池化模式与 SQL 兼容性"
 icon: fa-solid fa-wand-magic-sparkles
 module: [PGBOUNCER]
-category: [概念]
+categories: [概念]
 ---
 
 > 原始页面： <https://www.pgbouncer.org/features.html>

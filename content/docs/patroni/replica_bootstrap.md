@@ -5,7 +5,7 @@ weight: 60
 icon: fa-solid fa-boxes-stacked
 description: "从库镜像、引导及自定义从库创建工作流。"
 module: [PATRONI]
-category: [Task]
+categories: [任务]
 ---
 
 > 原始页面： https://patroni.readthedocs.io/en/latest/replica_bootstrap.html

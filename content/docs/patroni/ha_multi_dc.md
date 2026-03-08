@@ -4,7 +4,7 @@ weight: 170
 icon: fa-solid fa-globe
 description: "基于 Patroni 复制的多数据中心高可用架构模式。"
 module: [PATRONI]
-category: [Concept]
+categories: [概念]
 ---
 
 > 原始页面： https://patroni.readthedocs.io/en/latest/ha_multi_dc.html

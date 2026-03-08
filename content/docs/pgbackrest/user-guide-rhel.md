@@ -5,7 +5,7 @@ weight: 30
 description: "面向 RHEL、Rocky Linux 和 AlmaLinux 系统的 pgBackRest 安装配置与使用指南，按步骤逐一讲解。"
 icon: fa-brands fa-redhat
 module: [PGBACKREST]
-category: [Tutorial]
+categories: [教程]
 ---
 
 > 原始页面： <https://pgbackrest.org/user-guide-rhel.html>

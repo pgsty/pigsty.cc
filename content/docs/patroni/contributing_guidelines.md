@@ -5,7 +5,7 @@ weight: 200
 icon: fa-solid fa-users
 description: "贡献工作流程、支持渠道与开发指南。"
 module: [PATRONI]
-category: [Task]
+categories: [任务]
 ---
 
 > 原始页面： https://patroni.readthedocs.io/en/latest/contributing_guidelines.html

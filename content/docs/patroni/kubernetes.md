@@ -5,7 +5,7 @@ weight: 120
 icon: fas fa-dharmachakra
 description: "结合 Kubernetes 对象、标签和服务发现使用 Patroni。"
 module: [PATRONI]
-category: [Task]
+categories: [任务]
 ---
 
 > 原始页面： https://patroni.readthedocs.io/en/latest/kubernetes.html

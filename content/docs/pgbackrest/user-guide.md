@@ -5,7 +5,7 @@ weight: 20
 description: "面向 Debian 和 Ubuntu 系统的 pgBackRest 安装配置与使用指南，按步骤逐一讲解。"
 icon: fa-brands fa-ubuntu
 module: [PGBACKREST]
-category: [Tutorial]
+categories: [教程]
 ---
 
 > 原始页面： <https://pgbackrest.org/user-guide.html>

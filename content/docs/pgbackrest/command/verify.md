@@ -5,7 +5,7 @@ weight: 190
 description: "pgBackRest `verify` 命令的选项与行为参考。"
 icon: fa-solid fa-shield-halved
 module: [PGBACKREST]
-category: [Reference]
+categories: [参考]
 ---
 
 > 原始页面： [pgBackRest Command Docs: verify](https://pgbackrest.org/command.html#command-verify)

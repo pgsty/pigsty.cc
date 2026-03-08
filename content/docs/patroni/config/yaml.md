@@ -5,7 +5,7 @@ weight: 20
 icon: fa-solid fa-file-code
 description: "Patroni YAML 配置选项与各配置节的完整参考。"
 module: [PATRONI]
-category: [Reference]
+categories: [参考]
 ---
 
 > 原始页面： https://patroni.readthedocs.io/en/latest/yaml_configuration.html

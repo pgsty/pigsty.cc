@@ -7,7 +7,7 @@ description: >
 icon: fas fa-baseball
 sidebar_root_for: self
 module: [PGBOUNCER]
-category: [概念]
+categories: [概念]
 ---
 
 > 原始页面： <https://www.pgbouncer.org/>

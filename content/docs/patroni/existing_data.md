@@ -5,7 +5,7 @@ weight: 140
 icon: fa-solid fa-truck-moving
 description: "将现有 PostgreSQL 数据迁移并转换为 Patroni 集群的操作步骤。"
 module: [PATRONI]
-category: [Task]
+categories: [任务]
 ---
 
 > 原始页面： https://patroni.readthedocs.io/en/latest/existing_data.html

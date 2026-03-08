@@ -5,7 +5,7 @@ weight: 80
 description: "pgBackRest 项目代码覆盖率指标与质量统计。"
 icon: fa-solid fa-list-check
 module: [PGBACKREST]
-category: [Concept]
+categories: [概念]
 ---
 
 > 原始页面： <https://pgbackrest.org/metric.html>

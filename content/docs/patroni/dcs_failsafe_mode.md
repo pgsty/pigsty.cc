@@ -4,7 +4,7 @@ weight: 110
 icon: fa-solid fa-shield-halved
 description: "DCS 故障安全模式的行为机制、启用条件与操作注意事项。"
 module: [PATRONI]
-category: [Concept]
+categories: [概念]
 ---
 
 > 原始页面： https://patroni.readthedocs.io/en/latest/dcs_failsafe_mode.html

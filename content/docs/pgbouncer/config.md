@@ -5,7 +5,7 @@ weight: 20
 description: "PgBouncer 配置文件（pgbouncer.ini）完整参考"
 icon: fa-solid fa-code
 module: [PGBOUNCER]
-category: [参考]
+categories: [参考]
 ---
 
 > 原始页面： <https://www.pgbouncer.org/config.html>

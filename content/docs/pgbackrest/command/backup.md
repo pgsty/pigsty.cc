@@ -5,7 +5,7 @@ weight: 40
 description: "pgBackRest `backup` 命令的选项与行为参考。"
 icon: fa-solid fa-box-archive
 module: [PGBACKREST]
-category: [Reference]
+categories: [参考]
 ---
 
 > Source: [pgBackRest Command Docs: backup](https://pgbackrest.org/command.html#command-backup)

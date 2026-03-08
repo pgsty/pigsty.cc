@@ -4,7 +4,7 @@ weight: 50
 icon: fa-solid fa-terminal
 description: "patronictl 的配置说明、语法参考与子命令完整参考。"
 module: [PATRONI]
-category: [Reference]
+categories: [参考]
 ---
 
 > 原始页面： https://patroni.readthedocs.io/en/latest/patronictl.html

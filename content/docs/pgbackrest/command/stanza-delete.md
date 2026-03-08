@@ -5,7 +5,7 @@ weight: 150
 description: "pgBackRest `stanza-delete` 命令的选项与行为参考。"
 icon: fa-solid fa-trash
 module: [PGBACKREST]
-category: [Reference]
+categories: [参考]
 ---
 
 > 原始页面： [pgBackRest Command Docs: stanza-delete](https://pgbackrest.org/command.html#command-stanza-delete)

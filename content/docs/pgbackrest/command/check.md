@@ -5,7 +5,7 @@ weight: 50
 description: "pgBackRest `check` 命令的选项与行为参考。"
 icon: fa-solid fa-circle-check
 module: [PGBACKREST]
-category: [Reference]
+categories: [参考]
 ---
 
 > 原始页面： [pgBackRest Command Docs: check](https://pgbackrest.org/command.html#command-check)

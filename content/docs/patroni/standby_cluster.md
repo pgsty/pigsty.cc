@@ -4,7 +4,7 @@ weight: 80
 icon: fa-solid fa-clone
 description: "备用集群的搭建、行为及从远程主库复制的说明。"
 module: [PATRONI]
-category: [Task]
+categories: [任务]
 ---
 
 > 原始页面： https://patroni.readthedocs.io/en/latest/standby_cluster.html

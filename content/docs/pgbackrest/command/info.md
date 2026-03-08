@@ -5,7 +5,7 @@ weight: 80
 description: "pgBackRest `info` 命令选项与行为参考。"
 icon: fa-solid fa-circle-info
 module: [PGBACKREST]
-category: [Reference]
+categories: [参考]
 ---
 
 > 原始页面： [pgBackRest Command Docs: info](https://pgbackrest.org/command.html#command-info)

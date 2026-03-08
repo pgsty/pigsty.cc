@@ -5,7 +5,7 @@ weight: 170
 description: "pgBackRest `start` 命令选项与行为参考。"
 icon: fa-solid fa-play
 module: [PGBACKREST]
-category: [Reference]
+categories: [参考]
 ---
 
 > 原始页面： [pgBackRest Command Docs: start](https://pgbackrest.org/command.html#command-start)

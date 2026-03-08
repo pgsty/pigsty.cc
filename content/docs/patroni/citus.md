@@ -4,7 +4,7 @@ weight: 130
 icon: fas fa-lemon
 description: "Patroni 与 Citus 协调节点及工作节点组的集成详情。"
 module: [PATRONI]
-category: [Concept]
+categories: [概念]
 ---
 
 > 原始页面： https://patroni.readthedocs.io/en/latest/citus.html

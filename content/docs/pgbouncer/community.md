@@ -4,7 +4,7 @@ weight: 80
 description: "PgBouncer 社区资源、教程与支持"
 icon: fas fa-user-group
 module: [PGBOUNCER]
-category: [概念]
+categories: [概念]
 ---
 
 > 来源： <https://www.pgbouncer.org/community.html>

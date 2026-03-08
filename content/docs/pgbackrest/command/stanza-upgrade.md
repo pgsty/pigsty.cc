@@ -5,7 +5,7 @@ weight: 160
 description: "pgBackRest `stanza-upgrade` 命令的选项与行为参考。"
 icon: fa-solid fa-arrow-up-right-dots
 module: [PGBACKREST]
-category: [Reference]
+categories: [参考]
 ---
 
 > 原始页面： [pgBackRest Command Docs: stanza-upgrade](https://pgbackrest.org/command.html#command-stanza-upgrade)

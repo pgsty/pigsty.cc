@@ -5,7 +5,7 @@ weight: 40
 description: "PgBouncer 编译与安装说明"
 icon: fa-solid fa-cloud-arrow-down
 module: [PGBOUNCER]
-category: [教程]
+categories: [教程]
 ---
 
 > 原始页面： <https://www.pgbouncer.org/install.html>

@@ -5,7 +5,7 @@ weight: 50
 description: "PgBouncer 源码发布版与二进制软件包"
 icon: fas fa-download
 module: [PGBOUNCER]
-category: [参考]
+categories: [参考]
 ---
 
 > 原始页面： <https://www.pgbouncer.org/downloads/>
