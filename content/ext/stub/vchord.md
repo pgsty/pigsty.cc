@@ -151,7 +151,7 @@ table = 'public.centroids'
 $$);
 ```
 
-To simplify the workflow, we provide end-to-end scripts for external index pre-computation, see [scripts](./scripts/README.md#run-external-index-precomputation-toolkit).
+To simplify the workflow, we provide end-to-end scripts for external index pre-computation, see [scripts](https://github.com/tensorchord/VectorChord).
 
 
 
@@ -178,4 +178,3 @@ For example, install clang-18 on Ubuntu 22 / Debian 12 and set it as the default
 curl --proto '=https' --tlsv1.2 -sSf https://apt.llvm.org/llvm.sh | bash -s -- 18
 sudo update-alternatives --install /usr/bin/clang clang $(which clang-18) 255
 ```
-

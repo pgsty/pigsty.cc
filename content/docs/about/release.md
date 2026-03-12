@@ -1434,7 +1434,7 @@ c927238f0343cde82a4a9ab230ecd2ac  pigsty-pkg-v3.4.0.u24.aarch64.tgz
 - 升级 [`citus`](https://github.com/citusdata/citus/tree/v13.0.0) 至13.0.0，支持PostgreSQL 17
 - 升级 [`pgml`](https://github.com/postgresml/postgresml/releases/tag/v2.10.0) 至2.10.0
 - 升级 [`pg_extra_time`](/ext/e/pg_extra_time) 至2.0.0
-- 升级 [`pg_vectorize`](/ext/e/pg_vectorize) 至0.20.0
+- 升级 [`pg_vectorize`](/ext/e/vectorize) 至0.20.0
 
 **变更内容**
 

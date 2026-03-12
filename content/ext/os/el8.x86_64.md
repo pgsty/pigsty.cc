@@ -72,7 +72,7 @@ icon: fa-brands fa-redhat
 | [`duckdb_fdw`](/ext/e/duckdb_fdw) | MISS PIGSTY - 0 | AVAIL PIGSTY 1.1.2 1 | AVAIL PIGSTY 1.1.2 1 | AVAIL PIGSTY 1.1.2 1 | AVAIL PIGSTY 1.1.2 1 |
 | [`pg_parquet`](/ext/e/pg_parquet) | AVAIL PIGSTY 0.5.1 1 | AVAIL PIGSTY 0.5.1 1 | AVAIL PIGSTY 0.5.1 1 | AVAIL PIGSTY 0.5.1 1 | AVAIL PIGSTY 0.5.1 1 |
 | [`pg_fkpart`](/ext/e/pg_fkpart) | AVAIL PGDG 1.7.0 1 | AVAIL PGDG 1.7.0 2 | AVAIL PGDG 1.7.0 2 | AVAIL PGDG 1.7.0 2 | AVAIL PGDG 1.7.0 2 |
-| [`pg_partman`](/ext/e/pg_partman) | AVAIL PGDG 5.4.2 6 | AVAIL PGDG 5.4.2 11 | AVAIL PGDG 5.4.2 15 | AVAIL PGDG 5.4.2 19 | AVAIL PGDG 5.4.2 23 |
+| [`pg_partman`](/ext/e/pg_partman) | AVAIL PGDG 5.4.3 7 | AVAIL PGDG 5.4.3 12 | AVAIL PGDG 5.4.3 16 | AVAIL PGDG 5.4.3 20 | AVAIL PGDG 5.4.3 24 |
 | [`plproxy`](/ext/e/plproxy) | AVAIL PGDG 2.11.0 2 | AVAIL PGDG 2.11.0 2 | AVAIL PIGSTY 2.11.0 1 | AVAIL PIGSTY 2.11.0 3 | AVAIL PIGSTY 2.11.0 3 |
 | [`pg_strom`](/ext/e/pg_strom) | AVAIL PGDG 6.1 1 | AVAIL PGDG 6.1 3 | AVAIL PGDG 6.1 9 | AVAIL PGDG 6.1 11 | AVAIL PGDG 3.5 2 |
 | [`age`](/ext/e/age) | AVAIL PIGSTY 1.7.0 1 | AVAIL PIGSTY 1.7.0 1 | AVAIL PIGSTY 1.6.0 1 | AVAIL PIGSTY 1.6.0 1 | AVAIL PIGSTY 1.6.0 1 |

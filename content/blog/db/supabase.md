@@ -43,7 +43,7 @@ vi pigsty.yml              # 编辑域名、密码、密钥...
 ## 目录
 
 - [Supabase是什么？](#supabase是什么)
-- [为什么要自建它？](#为什么要自建supabase)
+- [为什么要自建它？](#为什么要自建)
 - [单机自建快速上手](#单节点自建快速上手)
 - [进阶主题：安全加固](#进阶主题安全加固)
 - [进阶主题：域名接入](#进阶主题域名接入)
@@ -126,7 +126,6 @@ vi pigsty.yml              # 编辑域名、密码、密钥...
 在部署 Supabase 前请根据实际情况修改自动生成的 `pigsty.yml` 配置文件中的参数（域名与密码）
 如果只是本地开发测试，可以先跳过，我们将在后面介绍如何通过修改配置文件来进一步定制。
 
-[]()
 
 如果配置无误，大约十分钟后，就可以在本地网络通过 `http://<your_ip_address>:8000` 访问到 Supabase Studio 图形管理界面了。
 默认的用户名与密码分别是： `supabase` 与 `pigsty`。
@@ -390,5 +389,4 @@ all:
 在这种情况下，您还需要修改 PostgreSQL 与 MinIO 的接入点，使用 DNS / L2 VIP / HAProxy 等 [高可用接入点](https://doc.pgsty.com/zh/pgsql/service#access)
 关于这些部分，您只需参考 Pigsty 中各个模块的文档进行配置部署即可。
 建议您参考 [`conf/ha/trio.yml`](https://github.com/pgsty/pigsty/blob/main/conf/ha/trio.yml) 与 [`conf/ha/safe.yml`](https://github.com/pgsty/pigsty/blob/main/conf/ha/safe.yml) 中的配置，将集群规模升级到三节点或以上。
-
 

@@ -430,9 +430,9 @@ P00   INFO: check command end: completed successfully
 
 pgBackRest 有许多性能选项，为保持仓库的向后兼容性，这些选项默认未启用。创建新仓库时，建议启用以下选项。这些选项也可用于现有仓库，但需注意较旧版本的 pgBackRest 将无法读取该仓库——具体兼容性取决于各功能的引入版本，详见下列说明。
 
-- `compress-type` — 决定 `backup` 和 `archive-push` 命令使用的压缩算法。默认为 `gz`（Gzip），但推荐使用 `zst`（Zstandard），后者速度更快，压缩率与 `gz` 相近。`zst` 自 [v2.27](/docs/pgbackrest/release/#v227-release-notes) 起受 `compress-type` 支持。详见 [**压缩类型**](/docs/pgbackrest/configuration/#compress-type-option---compress-type)。
-- `repo-bundle` — 备份时将小文件合并打包，节省空间并提升 `backup` 和 `restore` 的速度，在 S3 等对象存储上效果尤为明显。该选项在 [v2.39](/docs/pgbackrest/release/#v239-release-notes) 中引入。详见 [**文件打包**](#文件打包)。
-- `repo-block` — 执行 `diff`/`incr` 备份时，仅存储文件中发生变化的部分，而非整个文件，从而节省空间并提升备份速度。该选项在 [v2.46](/docs/pgbackrest/release/#v246-release-notes) 中引入，但建议至少使用 [v2.52.1](/docs/pgbackrest/release/#v2521-release-notes)。详见 [**块级增量备份**](#块级增量备份)。
+- `compress-type` — 决定 `backup` 和 `archive-push` 命令使用的压缩算法。默认为 `gz`（Gzip），但推荐使用 `zst`（Zstandard），后者速度更快，压缩率与 `gz` 相近。`zst` 自 [v2.27](/docs/pgbackrest/release/#v227-版本说明) 起受 `compress-type` 支持。详见 [**压缩类型**](/docs/pgbackrest/configuration/#压缩类型选项--compress-type)。
+- `repo-bundle` — 备份时将小文件合并打包，节省空间并提升 `backup` 和 `restore` 的速度，在 S3 等对象存储上效果尤为明显。该选项在 [v2.39](/docs/pgbackrest/release/#v239-版本说明) 中引入。详见 [**文件打包**](#文件打包)。
+- `repo-block` — 执行 `diff`/`incr` 备份时，仅存储文件中发生变化的部分，而非整个文件，从而节省空间并提升备份速度。该选项在 [v2.46](/docs/pgbackrest/release/#v246-版本说明) 中引入，但建议至少使用 [v2.52.1](/docs/pgbackrest/release/#v2521-版本说明)。详见 [**块级增量备份**](#块级增量备份)。
 
 还有一些性能选项默认未启用，原因是需要额外配置，或默认值虽安全但并非最优。这些选项在所有 v2 版本中均可用。
 

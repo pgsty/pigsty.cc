@@ -1692,7 +1692,7 @@ example: db-exclude=db_main
 
 此选项可以多次传入，以指定多个要包含的数据库。
 
-详细信息和注意事项请参阅 [**选择性数据库恢复**](/docs/pgbackrest/user-guide/#restore-selected-databases)。
+详细信息和注意事项请参阅 [**选择性数据库恢复**](/docs/pgbackrest/user-guide/#选择性数据库恢复)。
 
 ```
 example: db-include=db_main

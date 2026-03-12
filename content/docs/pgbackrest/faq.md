@@ -137,7 +137,7 @@ process-max=1
 
 pgBackRest 不仅使用仓库存储备份和 WAL 归档，还依赖仓库维护压缩、加密、文件捆绑等功能所需的关键元数据。因此，除非满足非常严格且特定的条件，否则单纯复制备份文件和部分 WAL 文件通常行不通。
 
-如果目的是创建一个可转移的自包含数据库副本（例如通过 USB 传输），可以采用如下变通方法：使用启用了 [`--archive-copy`](/docs/pgbackrest/command/backup/#归档复制选项archive-copy) 选项的 `backup` 命令，确保所需的 WAL 段随备份一同存储；然后使用 [`--type=none`](/docs/pgbackrest/command/restore/#类型选项type) 配合 `--pg1-path=/your/target/path` 执行恢复。这将生成一个已恢复的 PostgreSQL 数据目录，所有必要的 WAL 文件已就位于 `pg_wal` 中，效果类似于 `pg_basebackup` 的输出结果。
+如果目的是创建一个可转移的自包含数据库副本（例如通过 USB 传输），可以采用如下变通方法：使用启用了 [`--archive-copy`](/docs/pgbackrest/command/backup/#归档复制选项--archive-copy) 选项的 `backup` 命令，确保所需的 WAL 段随备份一同存储；然后使用 [`--type=none`](/docs/pgbackrest/command/restore/#类型选项--type) 配合 `--pg1-path=/your/target/path` 执行恢复。这将生成一个已恢复的 PostgreSQL 数据目录，所有必要的 WAL 文件已就位于 `pg_wal` 中，效果类似于 `pg_basebackup` 的输出结果。
 
 之后可将该目录复制到另一台系统，PostgreSQL 无需访问 pgBackRest 仓库即可从中启动。
 

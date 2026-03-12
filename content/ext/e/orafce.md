@@ -20,7 +20,7 @@ weight: 9100
 
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
-| [**`orafce`**](/ext/e/orafce) | `4.16.4` | <a class="ext-badge ext-badge--cate sim" href="/ext/cate/sim">SIM</a> | <a class="ext-badge ext-badge--license bsd 0clause" href="/ext/license#bsd0clause">BSD 0-Clause</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
+| [**`orafce`**](/ext/e/orafce) | `4.16.5` | <a class="ext-badge ext-badge--cate sim" href="/ext/cate/sim">SIM</a> | <a class="ext-badge ext-badge--license bsd 0clause" href="/ext/license#bsd0clause">BSD 0-Clause</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
 {.ext-table}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
@@ -40,9 +40,9 @@ weight: 9100
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#sim) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `4.16.4` | {{< pgvers "18,17,16,15,14" >}} | `orafce` | - |
+| [**EXT**](/ext/list#sim) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `4.16.5` | {{< pgvers "18,17,16,15,14" >}} | `orafce` | - |
 | [**RPM**](/ext/rpm#sim) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `4.16.2` | {{< pgvers "18,17,16,15,14" >}} | `orafce_$v` | - |
-| [**DEB**](/ext/deb#sim) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `4.16.4` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-orafce` | - |
+| [**DEB**](/ext/deb#sim) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `4.16.5` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-orafce` | - |
 {.ext-table}
 
 {{< pgext_matrix >}}
@@ -54,14 +54,14 @@ weight: 9100
 | el9.aarch64 | AVAIL PGDG 4.16.2 4 | AVAIL PGDG 4.16.2 12 | AVAIL PGDG 4.16.2 21 | AVAIL PGDG 4.16.2 21 | AVAIL PGDG 4.16.2 21 |
 | el10.x86_64 | AVAIL PGDG 4.16.2 4 | AVAIL PGDG 4.16.2 5 | AVAIL PGDG 4.16.2 5 | AVAIL PGDG 4.16.2 5 | AVAIL PGDG 4.16.2 5 |
 | el10.aarch64 | AVAIL PGDG 4.16.2 4 | AVAIL PGDG 4.16.2 5 | AVAIL PGDG 4.16.2 5 | AVAIL PGDG 4.16.2 5 | AVAIL PGDG 4.16.2 5 |
-| d12.x86_64 | AVAIL PGDG 4.16.4 2 | AVAIL PGDG 4.16.4 2 | AVAIL PGDG 4.16.4 2 | AVAIL PGDG 4.16.4 2 | AVAIL PGDG 4.16.4 2 |
-| d12.aarch64 | AVAIL PGDG 4.16.4 2 | AVAIL PGDG 4.16.4 2 | AVAIL PGDG 4.16.4 2 | AVAIL PGDG 4.16.4 2 | AVAIL PGDG 4.16.4 2 |
-| d13.x86_64 | AVAIL PGDG 4.16.4 2 | AVAIL PGDG 4.16.4 2 | AVAIL PGDG 4.16.4 2 | AVAIL PGDG 4.16.4 2 | AVAIL PGDG 4.16.4 2 |
-| d13.aarch64 | AVAIL PGDG 4.16.4 2 | AVAIL PGDG 4.16.4 2 | AVAIL PGDG 4.16.4 2 | AVAIL PGDG 4.16.4 2 | AVAIL PGDG 4.16.4 2 |
-| u22.x86_64 | AVAIL PGDG 4.16.4 2 | AVAIL PGDG 4.16.4 2 | AVAIL PGDG 4.16.4 2 | AVAIL PGDG 4.16.4 2 | AVAIL PGDG 4.16.4 2 |
-| u22.aarch64 | AVAIL PGDG 4.16.4 2 | AVAIL PGDG 4.16.4 2 | AVAIL PGDG 4.16.4 2 | AVAIL PGDG 4.16.4 2 | AVAIL PGDG 4.16.4 2 |
-| u24.x86_64 | AVAIL PGDG 4.16.4 2 | AVAIL PGDG 4.16.4 2 | AVAIL PGDG 4.16.4 2 | AVAIL PGDG 4.16.4 2 | AVAIL PGDG 4.16.4 2 |
-| u24.aarch64 | AVAIL PGDG 4.16.4 2 | AVAIL PGDG 4.16.4 2 | AVAIL PGDG 4.16.4 2 | AVAIL PGDG 4.16.4 2 | AVAIL PGDG 4.16.4 2 |
+| d12.x86_64 | AVAIL PGDG 4.16.5 3 | AVAIL PGDG 4.16.5 3 | AVAIL PGDG 4.16.5 3 | AVAIL PGDG 4.16.5 3 | AVAIL PGDG 4.16.5 3 |
+| d12.aarch64 | AVAIL PGDG 4.16.5 3 | AVAIL PGDG 4.16.5 3 | AVAIL PGDG 4.16.5 3 | AVAIL PGDG 4.16.5 3 | AVAIL PGDG 4.16.5 3 |
+| d13.x86_64 | AVAIL PGDG 4.16.5 3 | AVAIL PGDG 4.16.5 3 | AVAIL PGDG 4.16.5 3 | AVAIL PGDG 4.16.5 3 | AVAIL PGDG 4.16.5 3 |
+| d13.aarch64 | AVAIL PGDG 4.16.5 3 | AVAIL PGDG 4.16.5 3 | AVAIL PGDG 4.16.5 3 | AVAIL PGDG 4.16.5 3 | AVAIL PGDG 4.16.5 3 |
+| u22.x86_64 | AVAIL PGDG 4.16.5 3 | AVAIL PGDG 4.16.5 3 | AVAIL PGDG 4.16.5 3 | AVAIL PGDG 4.16.5 3 | AVAIL PGDG 4.16.5 3 |
+| u22.aarch64 | AVAIL PGDG 4.16.5 3 | AVAIL PGDG 4.16.5 3 | AVAIL PGDG 4.16.5 3 | AVAIL PGDG 4.16.5 3 | AVAIL PGDG 4.16.5 3 |
+| u24.x86_64 | AVAIL PGDG 4.16.5 3 | AVAIL PGDG 4.16.5 3 | AVAIL PGDG 4.16.5 3 | AVAIL PGDG 4.16.5 3 | AVAIL PGDG 4.16.5 3 |
+| u24.aarch64 | AVAIL PGDG 4.16.5 3 | AVAIL PGDG 4.16.5 3 | AVAIL PGDG 4.16.5 3 | AVAIL PGDG 4.16.5 3 | AVAIL PGDG 4.16.5 3 |
 @ el8.x86_64 18 orafce_18 orafce_18-4.16.2-2PGDG.rhel8.x86_64.rpm pgdg 4.16.2 152.6KiB https://download.postgresql.org/pub/repos/yum/18/redhat/rhel-8-x86_64/orafce_18-4.16.2-2PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 18 orafce_18 orafce_18-4.14.6-1PGDG.rhel8.x86_64.rpm pgdg 4.14.6 151.3KiB https://download.postgresql.org/pub/repos/yum/18/redhat/rhel-8-x86_64/orafce_18-4.14.6-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 18 orafce_18 orafce_18-4.14.5-1PGDG.rhel8.x86_64.rpm pgdg 4.14.5 151.3KiB https://download.postgresql.org/pub/repos/yum/18/redhat/rhel-8-x86_64/orafce_18-4.14.5-1PGDG.rhel8.x86_64.rpm
@@ -84,20 +84,28 @@ weight: 9100
 @ el10.aarch64 18 orafce_18 orafce_18-4.16.1-1PGDG.rhel10.aarch64.rpm pgdg 4.16.1 149.2KiB https://download.postgresql.org/pub/repos/yum/18/redhat/rhel-10-aarch64/orafce_18-4.16.1-1PGDG.rhel10.aarch64.rpm
 @ el10.aarch64 18 orafce_18 orafce_18-4.14.6-1PGDG.rhel10.aarch64.rpm pgdg 4.14.6 148.3KiB https://download.postgresql.org/pub/repos/yum/18/redhat/rhel-10-aarch64/orafce_18-4.14.6-1PGDG.rhel10.aarch64.rpm
 @ el10.aarch64 18 orafce_18 orafce_18-4.14.5-1PGDG.rhel10.aarch64.rpm pgdg 4.14.5 148.3KiB https://download.postgresql.org/pub/repos/yum/18/redhat/rhel-10-aarch64/orafce_18-4.14.5-1PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-orafce postgresql-18-orafce_4.16.5-1.pgdg12+1_amd64.deb pgdg 4.16.5 362.6KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-18-orafce_4.16.5-1.pgdg12+1_amd64.deb
 @ d12.x86_64 18 postgresql-18-orafce postgresql-18-orafce_4.16.4-1.pgdg12+1_amd64.deb pgdg 4.16.4 362.4KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-18-orafce_4.16.4-1.pgdg12+1_amd64.deb
 @ d12.x86_64 18 postgresql-18-orafce postgresql-18-orafce_4.16.3-1.pgdg12+1_amd64.deb pgdg 4.16.3 362.9KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-18-orafce_4.16.3-1.pgdg12+1_amd64.deb
+@ d12.aarch64 18 postgresql-18-orafce postgresql-18-orafce_4.16.5-1.pgdg12+1_arm64.deb pgdg 4.16.5 355.5KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-18-orafce_4.16.5-1.pgdg12+1_arm64.deb
 @ d12.aarch64 18 postgresql-18-orafce postgresql-18-orafce_4.16.4-1.pgdg12+1_arm64.deb pgdg 4.16.4 355.6KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-18-orafce_4.16.4-1.pgdg12+1_arm64.deb
 @ d12.aarch64 18 postgresql-18-orafce postgresql-18-orafce_4.16.3-1.pgdg12+1_arm64.deb pgdg 4.16.3 355.5KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-18-orafce_4.16.3-1.pgdg12+1_arm64.deb
+@ d13.x86_64 18 postgresql-18-orafce postgresql-18-orafce_4.16.5-1.pgdg13+1_amd64.deb pgdg 4.16.5 363.6KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-18-orafce_4.16.5-1.pgdg13+1_amd64.deb
 @ d13.x86_64 18 postgresql-18-orafce postgresql-18-orafce_4.16.4-1.pgdg13+1_amd64.deb pgdg 4.16.4 364.4KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-18-orafce_4.16.4-1.pgdg13+1_amd64.deb
 @ d13.x86_64 18 postgresql-18-orafce postgresql-18-orafce_4.16.3-1.pgdg13+1_amd64.deb pgdg 4.16.3 363.7KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-18-orafce_4.16.3-1.pgdg13+1_amd64.deb
+@ d13.aarch64 18 postgresql-18-orafce postgresql-18-orafce_4.16.5-1.pgdg13+1_arm64.deb pgdg 4.16.5 356.8KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-18-orafce_4.16.5-1.pgdg13+1_arm64.deb
 @ d13.aarch64 18 postgresql-18-orafce postgresql-18-orafce_4.16.4-1.pgdg13+1_arm64.deb pgdg 4.16.4 356.5KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-18-orafce_4.16.4-1.pgdg13+1_arm64.deb
 @ d13.aarch64 18 postgresql-18-orafce postgresql-18-orafce_4.16.3-1.pgdg13+1_arm64.deb pgdg 4.16.3 356.8KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-18-orafce_4.16.3-1.pgdg13+1_arm64.deb
+@ u22.x86_64 18 postgresql-18-orafce postgresql-18-orafce_4.16.5-1.pgdg22.04+1_amd64.deb pgdg 4.16.5 368.3KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-18-orafce_4.16.5-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 18 postgresql-18-orafce postgresql-18-orafce_4.16.4-1.pgdg22.04+1_amd64.deb pgdg 4.16.4 368.6KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-18-orafce_4.16.4-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 18 postgresql-18-orafce postgresql-18-orafce_4.16.3-1.pgdg22.04+1_amd64.deb pgdg 4.16.3 368.2KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-18-orafce_4.16.3-1.pgdg22.04+1_amd64.deb
+@ u22.aarch64 18 postgresql-18-orafce postgresql-18-orafce_4.16.5-1.pgdg22.04+1_arm64.deb pgdg 4.16.5 360.4KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-18-orafce_4.16.5-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 18 postgresql-18-orafce postgresql-18-orafce_4.16.4-1.pgdg22.04+1_arm64.deb pgdg 4.16.4 360.2KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-18-orafce_4.16.4-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 18 postgresql-18-orafce postgresql-18-orafce_4.16.3-1.pgdg22.04+1_arm64.deb pgdg 4.16.3 360.2KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-18-orafce_4.16.3-1.pgdg22.04+1_arm64.deb
+@ u24.x86_64 18 postgresql-18-orafce postgresql-18-orafce_4.16.5-1.pgdg24.04+1_amd64.deb pgdg 4.16.5 360.4KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-18-orafce_4.16.5-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 18 postgresql-18-orafce postgresql-18-orafce_4.16.4-1.pgdg24.04+1_amd64.deb pgdg 4.16.4 360.1KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-18-orafce_4.16.4-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 18 postgresql-18-orafce postgresql-18-orafce_4.16.3-1.pgdg24.04+1_amd64.deb pgdg 4.16.3 360.3KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-18-orafce_4.16.3-1.pgdg24.04+1_amd64.deb
+@ u24.aarch64 18 postgresql-18-orafce postgresql-18-orafce_4.16.5-1.pgdg24.04+1_arm64.deb pgdg 4.16.5 354.9KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-18-orafce_4.16.5-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 18 postgresql-18-orafce postgresql-18-orafce_4.16.4-1.pgdg24.04+1_arm64.deb pgdg 4.16.4 354.8KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-18-orafce_4.16.4-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 18 postgresql-18-orafce postgresql-18-orafce_4.16.3-1.pgdg24.04+1_arm64.deb pgdg 4.16.3 355.0KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-18-orafce_4.16.3-1.pgdg24.04+1_arm64.deb
 @ el8.x86_64 17 orafce_17 orafce_17-4.16.2-2PGDG.rhel8.x86_64.rpm pgdg 4.16.2 152.6KiB https://download.postgresql.org/pub/repos/yum/17/redhat/rhel-8-x86_64/orafce_17-4.16.2-2PGDG.rhel8.x86_64.rpm
@@ -156,20 +164,28 @@ weight: 9100
 @ el10.aarch64 17 orafce_17 orafce_17-4.14.6-1PGDG.rhel10.aarch64.rpm pgdg 4.14.6 148.3KiB https://download.postgresql.org/pub/repos/yum/17/redhat/rhel-10-aarch64/orafce_17-4.14.6-1PGDG.rhel10.aarch64.rpm
 @ el10.aarch64 17 orafce_17 orafce_17-4.14.4-1PGDG.rhel10.aarch64.rpm pgdg 4.14.4 148.1KiB https://download.postgresql.org/pub/repos/yum/17/redhat/rhel-10-aarch64/orafce_17-4.14.4-1PGDG.rhel10.aarch64.rpm
 @ el10.aarch64 17 orafce_17 orafce_17-4.14.3-2PGDG.rhel10.aarch64.rpm pgdg 4.14.3 148.1KiB https://download.postgresql.org/pub/repos/yum/17/redhat/rhel-10-aarch64/orafce_17-4.14.3-2PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-orafce postgresql-17-orafce_4.16.5-1.pgdg12+1_amd64.deb pgdg 4.16.5 362.2KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-17-orafce_4.16.5-1.pgdg12+1_amd64.deb
 @ d12.x86_64 17 postgresql-17-orafce postgresql-17-orafce_4.16.4-1.pgdg12+1_amd64.deb pgdg 4.16.4 362.2KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-17-orafce_4.16.4-1.pgdg12+1_amd64.deb
 @ d12.x86_64 17 postgresql-17-orafce postgresql-17-orafce_4.16.3-1.pgdg12+1_amd64.deb pgdg 4.16.3 362.9KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-17-orafce_4.16.3-1.pgdg12+1_amd64.deb
+@ d12.aarch64 17 postgresql-17-orafce postgresql-17-orafce_4.16.5-1.pgdg12+1_arm64.deb pgdg 4.16.5 355.0KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-17-orafce_4.16.5-1.pgdg12+1_arm64.deb
 @ d12.aarch64 17 postgresql-17-orafce postgresql-17-orafce_4.16.4-1.pgdg12+1_arm64.deb pgdg 4.16.4 354.7KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-17-orafce_4.16.4-1.pgdg12+1_arm64.deb
 @ d12.aarch64 17 postgresql-17-orafce postgresql-17-orafce_4.16.3-1.pgdg12+1_arm64.deb pgdg 4.16.3 355.3KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-17-orafce_4.16.3-1.pgdg12+1_arm64.deb
+@ d13.x86_64 17 postgresql-17-orafce postgresql-17-orafce_4.16.5-1.pgdg13+1_amd64.deb pgdg 4.16.5 363.1KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-17-orafce_4.16.5-1.pgdg13+1_amd64.deb
 @ d13.x86_64 17 postgresql-17-orafce postgresql-17-orafce_4.16.4-1.pgdg13+1_amd64.deb pgdg 4.16.4 363.0KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-17-orafce_4.16.4-1.pgdg13+1_amd64.deb
 @ d13.x86_64 17 postgresql-17-orafce postgresql-17-orafce_4.16.3-1.pgdg13+1_amd64.deb pgdg 4.16.3 364.0KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-17-orafce_4.16.3-1.pgdg13+1_amd64.deb
+@ d13.aarch64 17 postgresql-17-orafce postgresql-17-orafce_4.16.5-1.pgdg13+1_arm64.deb pgdg 4.16.5 356.1KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-17-orafce_4.16.5-1.pgdg13+1_arm64.deb
 @ d13.aarch64 17 postgresql-17-orafce postgresql-17-orafce_4.16.4-1.pgdg13+1_arm64.deb pgdg 4.16.4 356.3KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-17-orafce_4.16.4-1.pgdg13+1_arm64.deb
 @ d13.aarch64 17 postgresql-17-orafce postgresql-17-orafce_4.16.3-1.pgdg13+1_arm64.deb pgdg 4.16.3 356.6KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-17-orafce_4.16.3-1.pgdg13+1_arm64.deb
+@ u22.x86_64 17 postgresql-17-orafce postgresql-17-orafce_4.16.5-1.pgdg22.04+1_amd64.deb pgdg 4.16.5 398.2KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-17-orafce_4.16.5-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 17 postgresql-17-orafce postgresql-17-orafce_4.16.4-1.pgdg22.04+1_amd64.deb pgdg 4.16.4 398.2KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-17-orafce_4.16.4-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 17 postgresql-17-orafce postgresql-17-orafce_4.16.3-1.pgdg22.04+1_amd64.deb pgdg 4.16.3 398.3KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-17-orafce_4.16.3-1.pgdg22.04+1_amd64.deb
+@ u22.aarch64 17 postgresql-17-orafce postgresql-17-orafce_4.16.5-1.pgdg22.04+1_arm64.deb pgdg 4.16.5 390.0KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-17-orafce_4.16.5-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 17 postgresql-17-orafce postgresql-17-orafce_4.16.4-1.pgdg22.04+1_arm64.deb pgdg 4.16.4 389.9KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-17-orafce_4.16.4-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 17 postgresql-17-orafce postgresql-17-orafce_4.16.3-1.pgdg22.04+1_arm64.deb pgdg 4.16.3 390.2KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-17-orafce_4.16.3-1.pgdg22.04+1_arm64.deb
+@ u24.x86_64 17 postgresql-17-orafce postgresql-17-orafce_4.16.5-1.pgdg24.04+1_amd64.deb pgdg 4.16.5 359.8KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-17-orafce_4.16.5-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 17 postgresql-17-orafce postgresql-17-orafce_4.16.4-1.pgdg24.04+1_amd64.deb pgdg 4.16.4 359.7KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-17-orafce_4.16.4-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 17 postgresql-17-orafce postgresql-17-orafce_4.16.3-1.pgdg24.04+1_amd64.deb pgdg 4.16.3 360.5KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-17-orafce_4.16.3-1.pgdg24.04+1_amd64.deb
+@ u24.aarch64 17 postgresql-17-orafce postgresql-17-orafce_4.16.5-1.pgdg24.04+1_arm64.deb pgdg 4.16.5 354.4KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-17-orafce_4.16.5-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 17 postgresql-17-orafce postgresql-17-orafce_4.16.4-1.pgdg24.04+1_arm64.deb pgdg 4.16.4 354.4KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-17-orafce_4.16.4-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 17 postgresql-17-orafce postgresql-17-orafce_4.16.3-1.pgdg24.04+1_arm64.deb pgdg 4.16.3 355.0KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-17-orafce_4.16.3-1.pgdg24.04+1_arm64.deb
 @ el8.x86_64 16 orafce_16 orafce_16-4.16.2-2PGDG.rhel8.x86_64.rpm pgdg 4.16.2 152.6KiB https://download.postgresql.org/pub/repos/yum/16/redhat/rhel-8-x86_64/orafce_16-4.16.2-2PGDG.rhel8.x86_64.rpm
@@ -264,20 +280,28 @@ weight: 9100
 @ el10.aarch64 16 orafce_16 orafce_16-4.14.6-1PGDG.rhel10.aarch64.rpm pgdg 4.14.6 148.2KiB https://download.postgresql.org/pub/repos/yum/16/redhat/rhel-10-aarch64/orafce_16-4.14.6-1PGDG.rhel10.aarch64.rpm
 @ el10.aarch64 16 orafce_16 orafce_16-4.14.4-1PGDG.rhel10.aarch64.rpm pgdg 4.14.4 148.0KiB https://download.postgresql.org/pub/repos/yum/16/redhat/rhel-10-aarch64/orafce_16-4.14.4-1PGDG.rhel10.aarch64.rpm
 @ el10.aarch64 16 orafce_16 orafce_16-4.14.3-2PGDG.rhel10.aarch64.rpm pgdg 4.14.3 148.0KiB https://download.postgresql.org/pub/repos/yum/16/redhat/rhel-10-aarch64/orafce_16-4.14.3-2PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 16 postgresql-16-orafce postgresql-16-orafce_4.16.5-1.pgdg12+1_amd64.deb pgdg 4.16.5 362.2KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-16-orafce_4.16.5-1.pgdg12+1_amd64.deb
 @ d12.x86_64 16 postgresql-16-orafce postgresql-16-orafce_4.16.4-1.pgdg12+1_amd64.deb pgdg 4.16.4 362.2KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-16-orafce_4.16.4-1.pgdg12+1_amd64.deb
 @ d12.x86_64 16 postgresql-16-orafce postgresql-16-orafce_4.16.3-1.pgdg12+1_amd64.deb pgdg 4.16.3 362.7KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-16-orafce_4.16.3-1.pgdg12+1_amd64.deb
+@ d12.aarch64 16 postgresql-16-orafce postgresql-16-orafce_4.16.5-1.pgdg12+1_arm64.deb pgdg 4.16.5 354.5KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-16-orafce_4.16.5-1.pgdg12+1_arm64.deb
 @ d12.aarch64 16 postgresql-16-orafce postgresql-16-orafce_4.16.4-1.pgdg12+1_arm64.deb pgdg 4.16.4 354.5KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-16-orafce_4.16.4-1.pgdg12+1_arm64.deb
 @ d12.aarch64 16 postgresql-16-orafce postgresql-16-orafce_4.16.3-1.pgdg12+1_arm64.deb pgdg 4.16.3 355.3KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-16-orafce_4.16.3-1.pgdg12+1_arm64.deb
+@ d13.x86_64 16 postgresql-16-orafce postgresql-16-orafce_4.16.5-1.pgdg13+1_amd64.deb pgdg 4.16.5 362.9KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-16-orafce_4.16.5-1.pgdg13+1_amd64.deb
 @ d13.x86_64 16 postgresql-16-orafce postgresql-16-orafce_4.16.4-1.pgdg13+1_amd64.deb pgdg 4.16.4 363.0KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-16-orafce_4.16.4-1.pgdg13+1_amd64.deb
 @ d13.x86_64 16 postgresql-16-orafce postgresql-16-orafce_4.16.3-1.pgdg13+1_amd64.deb pgdg 4.16.3 363.6KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-16-orafce_4.16.3-1.pgdg13+1_amd64.deb
+@ d13.aarch64 16 postgresql-16-orafce postgresql-16-orafce_4.16.5-1.pgdg13+1_arm64.deb pgdg 4.16.5 356.3KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-16-orafce_4.16.5-1.pgdg13+1_arm64.deb
 @ d13.aarch64 16 postgresql-16-orafce postgresql-16-orafce_4.16.4-1.pgdg13+1_arm64.deb pgdg 4.16.4 355.9KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-16-orafce_4.16.4-1.pgdg13+1_arm64.deb
 @ d13.aarch64 16 postgresql-16-orafce postgresql-16-orafce_4.16.3-1.pgdg13+1_arm64.deb pgdg 4.16.3 356.5KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-16-orafce_4.16.3-1.pgdg13+1_arm64.deb
+@ u22.x86_64 16 postgresql-16-orafce postgresql-16-orafce_4.16.5-1.pgdg22.04+1_amd64.deb pgdg 4.16.5 397.4KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-16-orafce_4.16.5-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 16 postgresql-16-orafce postgresql-16-orafce_4.16.4-1.pgdg22.04+1_amd64.deb pgdg 4.16.4 397.2KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-16-orafce_4.16.4-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 16 postgresql-16-orafce postgresql-16-orafce_4.16.3-1.pgdg22.04+1_amd64.deb pgdg 4.16.3 397.0KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-16-orafce_4.16.3-1.pgdg22.04+1_amd64.deb
+@ u22.aarch64 16 postgresql-16-orafce postgresql-16-orafce_4.16.5-1.pgdg22.04+1_arm64.deb pgdg 4.16.5 389.1KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-16-orafce_4.16.5-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 16 postgresql-16-orafce postgresql-16-orafce_4.16.4-1.pgdg22.04+1_arm64.deb pgdg 4.16.4 389.3KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-16-orafce_4.16.4-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 16 postgresql-16-orafce postgresql-16-orafce_4.16.3-1.pgdg22.04+1_arm64.deb pgdg 4.16.3 389.4KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-16-orafce_4.16.3-1.pgdg22.04+1_arm64.deb
+@ u24.x86_64 16 postgresql-16-orafce postgresql-16-orafce_4.16.5-1.pgdg24.04+1_amd64.deb pgdg 4.16.5 360.0KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-16-orafce_4.16.5-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 16 postgresql-16-orafce postgresql-16-orafce_4.16.4-1.pgdg24.04+1_amd64.deb pgdg 4.16.4 359.9KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-16-orafce_4.16.4-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 16 postgresql-16-orafce postgresql-16-orafce_4.16.3-1.pgdg24.04+1_amd64.deb pgdg 4.16.3 360.8KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-16-orafce_4.16.3-1.pgdg24.04+1_amd64.deb
+@ u24.aarch64 16 postgresql-16-orafce postgresql-16-orafce_4.16.5-1.pgdg24.04+1_arm64.deb pgdg 4.16.5 354.4KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-16-orafce_4.16.5-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 16 postgresql-16-orafce postgresql-16-orafce_4.16.4-1.pgdg24.04+1_arm64.deb pgdg 4.16.4 354.5KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-16-orafce_4.16.4-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 16 postgresql-16-orafce postgresql-16-orafce_4.16.3-1.pgdg24.04+1_arm64.deb pgdg 4.16.3 354.9KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-16-orafce_4.16.3-1.pgdg24.04+1_arm64.deb
 @ el8.x86_64 15 orafce_15 orafce_15-4.16.2-2PGDG.rhel8.x86_64.rpm pgdg 4.16.2 152.7KiB https://download.postgresql.org/pub/repos/yum/15/redhat/rhel-8-x86_64/orafce_15-4.16.2-2PGDG.rhel8.x86_64.rpm
@@ -372,20 +396,28 @@ weight: 9100
 @ el10.aarch64 15 orafce_15 orafce_15-4.14.6-1PGDG.rhel10.aarch64.rpm pgdg 4.14.6 148.5KiB https://download.postgresql.org/pub/repos/yum/15/redhat/rhel-10-aarch64/orafce_15-4.14.6-1PGDG.rhel10.aarch64.rpm
 @ el10.aarch64 15 orafce_15 orafce_15-4.14.4-1PGDG.rhel10.aarch64.rpm pgdg 4.14.4 148.3KiB https://download.postgresql.org/pub/repos/yum/15/redhat/rhel-10-aarch64/orafce_15-4.14.4-1PGDG.rhel10.aarch64.rpm
 @ el10.aarch64 15 orafce_15 orafce_15-4.14.3-2PGDG.rhel10.aarch64.rpm pgdg 4.14.3 148.3KiB https://download.postgresql.org/pub/repos/yum/15/redhat/rhel-10-aarch64/orafce_15-4.14.3-2PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 15 postgresql-15-orafce postgresql-15-orafce_4.16.5-1.pgdg12+1_amd64.deb pgdg 4.16.5 364.7KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-15-orafce_4.16.5-1.pgdg12+1_amd64.deb
 @ d12.x86_64 15 postgresql-15-orafce postgresql-15-orafce_4.16.4-1.pgdg12+1_amd64.deb pgdg 4.16.4 364.4KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-15-orafce_4.16.4-1.pgdg12+1_amd64.deb
 @ d12.x86_64 15 postgresql-15-orafce postgresql-15-orafce_4.16.3-1.pgdg12+1_amd64.deb pgdg 4.16.3 364.9KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-15-orafce_4.16.3-1.pgdg12+1_amd64.deb
+@ d12.aarch64 15 postgresql-15-orafce postgresql-15-orafce_4.16.5-1.pgdg12+1_arm64.deb pgdg 4.16.5 357.2KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-15-orafce_4.16.5-1.pgdg12+1_arm64.deb
 @ d12.aarch64 15 postgresql-15-orafce postgresql-15-orafce_4.16.4-1.pgdg12+1_arm64.deb pgdg 4.16.4 357.1KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-15-orafce_4.16.4-1.pgdg12+1_arm64.deb
 @ d12.aarch64 15 postgresql-15-orafce postgresql-15-orafce_4.16.3-1.pgdg12+1_arm64.deb pgdg 4.16.3 357.6KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-15-orafce_4.16.3-1.pgdg12+1_arm64.deb
+@ d13.x86_64 15 postgresql-15-orafce postgresql-15-orafce_4.16.5-1.pgdg13+1_amd64.deb pgdg 4.16.5 365.7KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-15-orafce_4.16.5-1.pgdg13+1_amd64.deb
 @ d13.x86_64 15 postgresql-15-orafce postgresql-15-orafce_4.16.4-1.pgdg13+1_amd64.deb pgdg 4.16.4 366.1KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-15-orafce_4.16.4-1.pgdg13+1_amd64.deb
 @ d13.x86_64 15 postgresql-15-orafce postgresql-15-orafce_4.16.3-1.pgdg13+1_amd64.deb pgdg 4.16.3 366.1KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-15-orafce_4.16.3-1.pgdg13+1_amd64.deb
+@ d13.aarch64 15 postgresql-15-orafce postgresql-15-orafce_4.16.5-1.pgdg13+1_arm64.deb pgdg 4.16.5 358.8KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-15-orafce_4.16.5-1.pgdg13+1_arm64.deb
 @ d13.aarch64 15 postgresql-15-orafce postgresql-15-orafce_4.16.4-1.pgdg13+1_arm64.deb pgdg 4.16.4 358.6KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-15-orafce_4.16.4-1.pgdg13+1_arm64.deb
 @ d13.aarch64 15 postgresql-15-orafce postgresql-15-orafce_4.16.3-1.pgdg13+1_arm64.deb pgdg 4.16.3 358.9KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-15-orafce_4.16.3-1.pgdg13+1_arm64.deb
+@ u22.x86_64 15 postgresql-15-orafce postgresql-15-orafce_4.16.5-1.pgdg22.04+1_amd64.deb pgdg 4.16.5 404.0KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-15-orafce_4.16.5-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 15 postgresql-15-orafce postgresql-15-orafce_4.16.4-1.pgdg22.04+1_amd64.deb pgdg 4.16.4 404.1KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-15-orafce_4.16.4-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 15 postgresql-15-orafce postgresql-15-orafce_4.16.3-1.pgdg22.04+1_amd64.deb pgdg 4.16.3 403.9KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-15-orafce_4.16.3-1.pgdg22.04+1_amd64.deb
+@ u22.aarch64 15 postgresql-15-orafce postgresql-15-orafce_4.16.5-1.pgdg22.04+1_arm64.deb pgdg 4.16.5 395.6KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-15-orafce_4.16.5-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 15 postgresql-15-orafce postgresql-15-orafce_4.16.4-1.pgdg22.04+1_arm64.deb pgdg 4.16.4 395.3KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-15-orafce_4.16.4-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 15 postgresql-15-orafce postgresql-15-orafce_4.16.3-1.pgdg22.04+1_arm64.deb pgdg 4.16.3 395.5KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-15-orafce_4.16.3-1.pgdg22.04+1_arm64.deb
+@ u24.x86_64 15 postgresql-15-orafce postgresql-15-orafce_4.16.5-1.pgdg24.04+1_amd64.deb pgdg 4.16.5 364.4KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-15-orafce_4.16.5-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 15 postgresql-15-orafce postgresql-15-orafce_4.16.4-1.pgdg24.04+1_amd64.deb pgdg 4.16.4 364.1KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-15-orafce_4.16.4-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 15 postgresql-15-orafce postgresql-15-orafce_4.16.3-1.pgdg24.04+1_amd64.deb pgdg 4.16.3 364.6KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-15-orafce_4.16.3-1.pgdg24.04+1_amd64.deb
+@ u24.aarch64 15 postgresql-15-orafce postgresql-15-orafce_4.16.5-1.pgdg24.04+1_arm64.deb pgdg 4.16.5 358.5KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-15-orafce_4.16.5-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 15 postgresql-15-orafce postgresql-15-orafce_4.16.4-1.pgdg24.04+1_arm64.deb pgdg 4.16.4 358.2KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-15-orafce_4.16.4-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 15 postgresql-15-orafce postgresql-15-orafce_4.16.3-1.pgdg24.04+1_arm64.deb pgdg 4.16.3 358.5KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-15-orafce_4.16.3-1.pgdg24.04+1_arm64.deb
 @ el8.x86_64 14 orafce_14 orafce_14-4.16.2-2PGDG.rhel8.x86_64.rpm pgdg 4.16.2 153.8KiB https://download.postgresql.org/pub/repos/yum/14/redhat/rhel-8-x86_64/orafce_14-4.16.2-2PGDG.rhel8.x86_64.rpm
@@ -480,20 +512,28 @@ weight: 9100
 @ el10.aarch64 14 orafce_14 orafce_14-4.14.6-1PGDG.rhel10.aarch64.rpm pgdg 4.14.6 149.6KiB https://download.postgresql.org/pub/repos/yum/14/redhat/rhel-10-aarch64/orafce_14-4.14.6-1PGDG.rhel10.aarch64.rpm
 @ el10.aarch64 14 orafce_14 orafce_14-4.14.4-1PGDG.rhel10.aarch64.rpm pgdg 4.14.4 149.4KiB https://download.postgresql.org/pub/repos/yum/14/redhat/rhel-10-aarch64/orafce_14-4.14.4-1PGDG.rhel10.aarch64.rpm
 @ el10.aarch64 14 orafce_14 orafce_14-4.14.3-2PGDG.rhel10.aarch64.rpm pgdg 4.14.3 149.3KiB https://download.postgresql.org/pub/repos/yum/14/redhat/rhel-10-aarch64/orafce_14-4.14.3-2PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 14 postgresql-14-orafce postgresql-14-orafce_4.16.5-1.pgdg12+1_amd64.deb pgdg 4.16.5 367.7KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-14-orafce_4.16.5-1.pgdg12+1_amd64.deb
 @ d12.x86_64 14 postgresql-14-orafce postgresql-14-orafce_4.16.4-1.pgdg12+1_amd64.deb pgdg 4.16.4 368.0KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-14-orafce_4.16.4-1.pgdg12+1_amd64.deb
 @ d12.x86_64 14 postgresql-14-orafce postgresql-14-orafce_4.16.3-1.pgdg12+1_amd64.deb pgdg 4.16.3 367.9KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-14-orafce_4.16.3-1.pgdg12+1_amd64.deb
+@ d12.aarch64 14 postgresql-14-orafce postgresql-14-orafce_4.16.5-1.pgdg12+1_arm64.deb pgdg 4.16.5 360.3KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-14-orafce_4.16.5-1.pgdg12+1_arm64.deb
 @ d12.aarch64 14 postgresql-14-orafce postgresql-14-orafce_4.16.4-1.pgdg12+1_arm64.deb pgdg 4.16.4 360.1KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-14-orafce_4.16.4-1.pgdg12+1_arm64.deb
 @ d12.aarch64 14 postgresql-14-orafce postgresql-14-orafce_4.16.3-1.pgdg12+1_arm64.deb pgdg 4.16.3 360.8KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-14-orafce_4.16.3-1.pgdg12+1_arm64.deb
+@ d13.x86_64 14 postgresql-14-orafce postgresql-14-orafce_4.16.5-1.pgdg13+1_amd64.deb pgdg 4.16.5 368.8KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-14-orafce_4.16.5-1.pgdg13+1_amd64.deb
 @ d13.x86_64 14 postgresql-14-orafce postgresql-14-orafce_4.16.4-1.pgdg13+1_amd64.deb pgdg 4.16.4 369.7KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-14-orafce_4.16.4-1.pgdg13+1_amd64.deb
 @ d13.x86_64 14 postgresql-14-orafce postgresql-14-orafce_4.16.3-1.pgdg13+1_amd64.deb pgdg 4.16.3 369.0KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-14-orafce_4.16.3-1.pgdg13+1_amd64.deb
+@ d13.aarch64 14 postgresql-14-orafce postgresql-14-orafce_4.16.5-1.pgdg13+1_arm64.deb pgdg 4.16.5 361.6KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-14-orafce_4.16.5-1.pgdg13+1_arm64.deb
 @ d13.aarch64 14 postgresql-14-orafce postgresql-14-orafce_4.16.4-1.pgdg13+1_arm64.deb pgdg 4.16.4 361.5KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-14-orafce_4.16.4-1.pgdg13+1_arm64.deb
 @ d13.aarch64 14 postgresql-14-orafce postgresql-14-orafce_4.16.3-1.pgdg13+1_arm64.deb pgdg 4.16.3 362.1KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-14-orafce_4.16.3-1.pgdg13+1_arm64.deb
+@ u22.x86_64 14 postgresql-14-orafce postgresql-14-orafce_4.16.5-1.pgdg22.04+1_amd64.deb pgdg 4.16.5 404.0KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-14-orafce_4.16.5-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 14 postgresql-14-orafce postgresql-14-orafce_4.16.4-1.pgdg22.04+1_amd64.deb pgdg 4.16.4 404.1KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-14-orafce_4.16.4-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 14 postgresql-14-orafce postgresql-14-orafce_4.16.3-1.pgdg22.04+1_amd64.deb pgdg 4.16.3 404.0KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-14-orafce_4.16.3-1.pgdg22.04+1_amd64.deb
+@ u22.aarch64 14 postgresql-14-orafce postgresql-14-orafce_4.16.5-1.pgdg22.04+1_arm64.deb pgdg 4.16.5 395.3KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-14-orafce_4.16.5-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 14 postgresql-14-orafce postgresql-14-orafce_4.16.4-1.pgdg22.04+1_arm64.deb pgdg 4.16.4 394.9KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-14-orafce_4.16.4-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 14 postgresql-14-orafce postgresql-14-orafce_4.16.3-1.pgdg22.04+1_arm64.deb pgdg 4.16.3 395.5KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-14-orafce_4.16.3-1.pgdg22.04+1_arm64.deb
+@ u24.x86_64 14 postgresql-14-orafce postgresql-14-orafce_4.16.5-1.pgdg24.04+1_amd64.deb pgdg 4.16.5 367.3KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-14-orafce_4.16.5-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 14 postgresql-14-orafce postgresql-14-orafce_4.16.4-1.pgdg24.04+1_amd64.deb pgdg 4.16.4 367.2KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-14-orafce_4.16.4-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 14 postgresql-14-orafce postgresql-14-orafce_4.16.3-1.pgdg24.04+1_amd64.deb pgdg 4.16.3 368.0KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-14-orafce_4.16.3-1.pgdg24.04+1_amd64.deb
+@ u24.aarch64 14 postgresql-14-orafce postgresql-14-orafce_4.16.5-1.pgdg24.04+1_arm64.deb pgdg 4.16.5 361.0KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-14-orafce_4.16.5-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 14 postgresql-14-orafce postgresql-14-orafce_4.16.4-1.pgdg24.04+1_arm64.deb pgdg 4.16.4 361.3KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-14-orafce_4.16.4-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 14 postgresql-14-orafce postgresql-14-orafce_4.16.3-1.pgdg24.04+1_arm64.deb pgdg 4.16.3 361.4KiB https://apt.postgresql.org/pub/repos/apt/pool/main/o/orafce/postgresql-14-orafce_4.16.3-1.pgdg24.04+1_arm64.deb
 {{< /pgext_matrix >}}
@@ -550,3 +590,117 @@ apt install -y postgresql-14-orafce   # PG 14
 ```sql
 CREATE EXTENSION orafce;
 ```
+
+
+
+## 用法
+
+> [orafce: 模拟 Oracle RDBMS 部分函数和包的函数与操作符](https://github.com/orafce/orafce)
+
+### 日期函数
+
+```sql
+SELECT add_months(date '2005-05-31', 1);        -- 2005-06-30
+SELECT last_day(date '2005-05-24');              -- 2005-05-31
+SELECT next_day(date '2005-05-24', 'monday');    -- 2005-05-30
+SELECT months_between(date '1995-02-02', date '1995-01-01'); -- 1.032...
+SELECT trunc(date '2005-07-12', 'iw');           -- 2005-07-11
+SELECT round(date '2005-07-12', 'yyyy');         -- 2006-01-01
+```
+
+### Oracle DATE 数据类型
+
+```sql
+SET search_path TO oracle, "$user", public, pg_catalog;
+CREATE TABLE t (col1 date);
+INSERT INTO t VALUES('2014-06-24 12:12:11'::date);  -- 包含时间部分
+```
+
+### 字符串函数（NVL、DECODE 等）
+
+```sql
+SELECT nvl('A', 'B');            -- A
+SELECT nvl(NULL, 'B');           -- B
+SELECT decode(1, 1, 'one', 2, 'two', 'other');  -- one
+SELECT lnnvl(true);              -- false
+SELECT nanvl(0.0/0.0, 999);     -- 999
+```
+
+### DUAL 表
+
+```sql
+SELECT * FROM dual;
+```
+
+### DBMS_OUTPUT 包
+
+```sql
+SELECT dbms_output.enable();
+SELECT dbms_output.put_line('Hello');
+SELECT dbms_output.get_line(line, status);  -- 获取输出
+```
+
+### DBMS_PIPE 包
+
+```sql
+SELECT dbms_pipe.create_pipe('my_pipe');
+SELECT dbms_pipe.pack_message('message text');
+SELECT dbms_pipe.send_message('my_pipe');
+-- 在另一个会话中：
+SELECT dbms_pipe.receive_message('my_pipe');
+SELECT dbms_pipe.unpack_message_text();
+```
+
+### DBMS_ALERT 包
+
+```sql
+CALL dbms_alert.register('my_alert');
+-- 在另一个会话中：
+CALL dbms_alert.signal('my_alert', 'Alert message');
+-- 回到第一个会话：
+CALL dbms_alert.waitone('my_alert', name, message, status, 60);
+```
+
+### DBMS_UTILITY 包
+
+```sql
+SELECT dbms_utility.format_call_stack();
+```
+
+### UTL_FILE 包
+
+```sql
+CALL utl_file.fopen('/tmp', 'test.txt', 'w');
+CALL utl_file.put_line(f, 'Hello World');
+CALL utl_file.fclose(f);
+```
+
+### PLVstr / PLVchr 包
+
+```sql
+SELECT plvstr.left('Hello World', 5);     -- Hello
+SELECT plvstr.right('Hello World', 5);    -- World
+SELECT plvstr.rvrs('Hello');              -- olleH
+SELECT plvchr.nth('Hello', 3);            -- l
+SELECT plvchr.first('Hello');             -- H
+SELECT plvchr.last('Hello');              -- o
+```
+
+### PLVsubst 包
+
+```sql
+SELECT plvsubst.string('My name is %s %s.', ARRAY['Pavel','Stehule']);
+-- My name is Pavel Stehule.
+```
+
+### DBMS_ASSERT（SQL 注入防护）
+
+```sql
+SELECT dbms_assert.enquote_literal('some value');
+SELECT dbms_assert.schema_name('public');
+SELECT dbms_assert.object_name('my_table');
+```
+
+### VARCHAR2 和 NVARCHAR2 类型
+
+该扩展提供 Oracle 兼容的 `varchar2` 和 `nvarchar2` 数据类型，分别以字节（varchar2）或字符（nvarchar2）为单位强制执行声明的长度。
