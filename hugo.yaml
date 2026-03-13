@@ -100,6 +100,13 @@ outputs:
     - RSS
     - print
 
+# Disable RSS for ext section (465 extension pages make index.xml exceed 25MB)
+cascade:
+  - _target:
+      path: /ext/**
+    outputs:
+      - HTML
+
 #=======================================#
 # Site Params
 #=======================================#
