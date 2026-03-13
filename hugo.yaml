@@ -7,6 +7,7 @@ languageCode: zh-CN
 defaultContentLanguage: zh-cn
 enableRobotsTXT: true
 enableGitInfo: true
+rssLimit: 200
 
 #=======================================#
 # Hugo Module (replaces theme: docsy)

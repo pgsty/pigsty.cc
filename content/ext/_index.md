@@ -4,8 +4,14 @@ linkTitle: Pigsty 扩展目录
 description: >
   扩展是 PostgreSQL 的灵魂所在，Pigsty 制作、收录、整合了 464 个 PG 生态扩展，供用户开箱即用。
 weight: 20
+outputs:
+  - HTML
+  - print
 cascade:
   type: docs
+  outputs:
+    - HTML
+    - print
 ---
 
 Pigsty 提供了以下三样基础设施，帮助用户更好的利用 PostgreSQL 扩展生态系统的协同超能力：
