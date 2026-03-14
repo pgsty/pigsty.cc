@@ -1572,7 +1572,7 @@ c927238f0343cde82a4a9ab230ecd2ac  pigsty-pkg-v3.4.0.u24.aarch64.tgz
 
 **API变化**
 
-- [`repo_url_packages`](https://pigsty.cc/zh/docs/infra/param#repo_url_packages) 参数现在默认值为空数组，因为所有软件包现在都通过操作系统包管理器进行安装。
+- [`repo_url_packages`](/docs/infra/param#repo_url_packages) 参数现在默认值为空数组，因为所有软件包现在都通过操作系统包管理器进行安装。
 - `grafana_plugin_cache` 参数弃用，现在 Grafana 插件通过操作系统包管理器进行安装
 - `grafana_plugin_list` 参数弃用，现在 Grafana 插件通过操作系统包管理器进行安装
 - 原名为 `prod` 的 36 节点仿真模板现在重命名为 `simu`。
