@@ -11,7 +11,7 @@ weight: 3010
     <div class="ext-card__title">plv8/plv8</div>
     <div class="ext-card__desc">https://github.com/plv8/plv8</div>
   </a>
-  <a class="ext-card ext-card--source" href="plv8-3.2.4.tar.gz">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/plv8-3.2.4.tar.gz">
     <div class="ext-card__kicker">源码</div>
     <div class="ext-card__title">plv8-3.2.4.tar.gz</div>
     <div class="ext-card__desc">plv8-3.2.4.tar.gz</div>
@@ -64,66 +64,66 @@ weight: 3010
 | u22.aarch64 | AVAIL PIGSTY 3.2.4 1 | AVAIL PIGSTY 3.2.4 1 | AVAIL PIGSTY 3.2.4 1 | AVAIL PIGSTY 3.2.4 1 | AVAIL PIGSTY 3.2.4 1 |
 | u24.x86_64 | AVAIL PIGSTY 3.2.4 1 | AVAIL PIGSTY 3.2.4 1 | AVAIL PIGSTY 3.2.4 1 | AVAIL PIGSTY 3.2.4 1 | AVAIL PIGSTY 3.2.4 1 |
 | u24.aarch64 | AVAIL PIGSTY 3.2.4 1 | AVAIL PIGSTY 3.2.4 1 | AVAIL PIGSTY 3.2.4 1 | AVAIL PIGSTY 3.2.4 1 | AVAIL PIGSTY 3.2.4 1 |
-@ el8.x86_64 18 plv8_18 plv8_18-3.2.4-1PIGSTY.el8.x86_64.rpm pigsty 3.2.4 7.5MiB https://repo.pigsty.io/yum/pgsql/el8.x86_64/plv8_18-3.2.4-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 18 plv8_18 plv8_18-3.2.4-1PIGSTY.el8.aarch64.rpm pigsty 3.2.4 7.0MiB https://repo.pigsty.io/yum/pgsql/el8.aarch64/plv8_18-3.2.4-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 18 plv8_18 plv8_18-3.2.4-1PIGSTY.el9.x86_64.rpm pigsty 3.2.4 7.6MiB https://repo.pigsty.io/yum/pgsql/el9.x86_64/plv8_18-3.2.4-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 18 plv8_18 plv8_18-3.2.4-1PIGSTY.el9.aarch64.rpm pigsty 3.2.4 7.3MiB https://repo.pigsty.io/yum/pgsql/el9.aarch64/plv8_18-3.2.4-1PIGSTY.el9.aarch64.rpm
-@ d12.x86_64 18 postgresql-18-plv8 postgresql-18-plv8_3.2.4-1PIGSTY~bookworm_amd64.deb pigsty 3.2.4 6.2MiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/plv8/postgresql-18-plv8_3.2.4-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 18 postgresql-18-plv8 postgresql-18-plv8_3.2.4-1PIGSTY~bookworm_arm64.deb pigsty 3.2.4 5.6MiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/plv8/postgresql-18-plv8_3.2.4-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 18 postgresql-18-plv8 postgresql-18-plv8_3.2.4-1PIGSTY~trixie_amd64.deb pigsty 3.2.4 6.2MiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/plv8/postgresql-18-plv8_3.2.4-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 18 postgresql-18-plv8 postgresql-18-plv8_3.2.4-1PIGSTY~trixie_arm64.deb pigsty 3.2.4 5.6MiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/plv8/postgresql-18-plv8_3.2.4-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 18 postgresql-18-plv8 postgresql-18-plv8_3.2.4-1PIGSTY~jammy_amd64.deb pigsty 3.2.4 6.8MiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/plv8/postgresql-18-plv8_3.2.4-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 18 postgresql-18-plv8 postgresql-18-plv8_3.2.4-1PIGSTY~jammy_arm64.deb pigsty 3.2.4 6.6MiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/plv8/postgresql-18-plv8_3.2.4-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 18 postgresql-18-plv8 postgresql-18-plv8_3.2.4-1PIGSTY~noble_amd64.deb pigsty 3.2.4 6.7MiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/plv8/postgresql-18-plv8_3.2.4-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 18 postgresql-18-plv8 postgresql-18-plv8_3.2.4-1PIGSTY~noble_arm64.deb pigsty 3.2.4 6.6MiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/plv8/postgresql-18-plv8_3.2.4-1PIGSTY~noble_arm64.deb
-@ el8.x86_64 17 plv8_17 plv8_17-3.2.4-1PIGSTY.el8.x86_64.rpm pigsty 3.2.4 7.5MiB https://repo.pigsty.io/yum/pgsql/el8.x86_64/plv8_17-3.2.4-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 17 plv8_17 plv8_17-3.2.4-1PIGSTY.el8.aarch64.rpm pigsty 3.2.4 7.0MiB https://repo.pigsty.io/yum/pgsql/el8.aarch64/plv8_17-3.2.4-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 17 plv8_17 plv8_17-3.2.4-1PIGSTY.el9.x86_64.rpm pigsty 3.2.4 7.6MiB https://repo.pigsty.io/yum/pgsql/el9.x86_64/plv8_17-3.2.4-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 17 plv8_17 plv8_17-3.2.4-1PIGSTY.el9.aarch64.rpm pigsty 3.2.4 7.3MiB https://repo.pigsty.io/yum/pgsql/el9.aarch64/plv8_17-3.2.4-1PIGSTY.el9.aarch64.rpm
-@ d12.x86_64 17 postgresql-17-plv8 postgresql-17-plv8_3.2.4-1PIGSTY~bookworm_amd64.deb pigsty 3.2.4 6.2MiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/plv8/postgresql-17-plv8_3.2.4-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 17 postgresql-17-plv8 postgresql-17-plv8_3.2.4-1PIGSTY~bookworm_arm64.deb pigsty 3.2.4 5.6MiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/plv8/postgresql-17-plv8_3.2.4-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 17 postgresql-17-plv8 postgresql-17-plv8_3.2.4-1PIGSTY~trixie_amd64.deb pigsty 3.2.4 6.2MiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/plv8/postgresql-17-plv8_3.2.4-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 17 postgresql-17-plv8 postgresql-17-plv8_3.2.4-1PIGSTY~trixie_arm64.deb pigsty 3.2.4 5.6MiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/plv8/postgresql-17-plv8_3.2.4-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 17 postgresql-17-plv8 postgresql-17-plv8_3.2.4-1PIGSTY~jammy_amd64.deb pigsty 3.2.4 6.8MiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/plv8/postgresql-17-plv8_3.2.4-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 17 postgresql-17-plv8 postgresql-17-plv8_3.2.4-1PIGSTY~jammy_arm64.deb pigsty 3.2.4 6.6MiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/plv8/postgresql-17-plv8_3.2.4-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 17 postgresql-17-plv8 postgresql-17-plv8_3.2.4-1PIGSTY~noble_amd64.deb pigsty 3.2.4 6.7MiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/plv8/postgresql-17-plv8_3.2.4-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 17 postgresql-17-plv8 postgresql-17-plv8_3.2.4-1PIGSTY~noble_arm64.deb pigsty 3.2.4 6.6MiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/plv8/postgresql-17-plv8_3.2.4-1PIGSTY~noble_arm64.deb
-@ el8.x86_64 16 plv8_16 plv8_16-3.2.4-1PIGSTY.el8.x86_64.rpm pigsty 3.2.4 7.5MiB https://repo.pigsty.io/yum/pgsql/el8.x86_64/plv8_16-3.2.4-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 16 plv8_16 plv8_16-3.2.4-1PIGSTY.el8.aarch64.rpm pigsty 3.2.4 7.0MiB https://repo.pigsty.io/yum/pgsql/el8.aarch64/plv8_16-3.2.4-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 16 plv8_16 plv8_16-3.2.4-1PIGSTY.el9.x86_64.rpm pigsty 3.2.4 7.6MiB https://repo.pigsty.io/yum/pgsql/el9.x86_64/plv8_16-3.2.4-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 16 plv8_16 plv8_16-3.2.4-1PIGSTY.el9.aarch64.rpm pigsty 3.2.4 7.3MiB https://repo.pigsty.io/yum/pgsql/el9.aarch64/plv8_16-3.2.4-1PIGSTY.el9.aarch64.rpm
-@ d12.x86_64 16 postgresql-16-plv8 postgresql-16-plv8_3.2.4-1PIGSTY~bookworm_amd64.deb pigsty 3.2.4 6.2MiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/plv8/postgresql-16-plv8_3.2.4-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 16 postgresql-16-plv8 postgresql-16-plv8_3.2.4-1PIGSTY~bookworm_arm64.deb pigsty 3.2.4 5.6MiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/plv8/postgresql-16-plv8_3.2.4-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 16 postgresql-16-plv8 postgresql-16-plv8_3.2.4-1PIGSTY~trixie_amd64.deb pigsty 3.2.4 6.2MiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/plv8/postgresql-16-plv8_3.2.4-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 16 postgresql-16-plv8 postgresql-16-plv8_3.2.4-1PIGSTY~trixie_arm64.deb pigsty 3.2.4 5.6MiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/plv8/postgresql-16-plv8_3.2.4-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 16 postgresql-16-plv8 postgresql-16-plv8_3.2.4-1PIGSTY~jammy_amd64.deb pigsty 3.2.4 6.8MiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/plv8/postgresql-16-plv8_3.2.4-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 16 postgresql-16-plv8 postgresql-16-plv8_3.2.4-1PIGSTY~jammy_arm64.deb pigsty 3.2.4 6.7MiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/plv8/postgresql-16-plv8_3.2.4-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 16 postgresql-16-plv8 postgresql-16-plv8_3.2.4-1PIGSTY~noble_amd64.deb pigsty 3.2.4 6.7MiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/plv8/postgresql-16-plv8_3.2.4-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 16 postgresql-16-plv8 postgresql-16-plv8_3.2.4-1PIGSTY~noble_arm64.deb pigsty 3.2.4 6.6MiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/plv8/postgresql-16-plv8_3.2.4-1PIGSTY~noble_arm64.deb
-@ el8.x86_64 15 plv8_15 plv8_15-3.2.4-1PIGSTY.el8.x86_64.rpm pigsty 3.2.4 7.5MiB https://repo.pigsty.io/yum/pgsql/el8.x86_64/plv8_15-3.2.4-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 15 plv8_15 plv8_15-3.2.4-1PIGSTY.el8.aarch64.rpm pigsty 3.2.4 7.0MiB https://repo.pigsty.io/yum/pgsql/el8.aarch64/plv8_15-3.2.4-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 15 plv8_15 plv8_15-3.2.4-1PIGSTY.el9.x86_64.rpm pigsty 3.2.4 7.6MiB https://repo.pigsty.io/yum/pgsql/el9.x86_64/plv8_15-3.2.4-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 15 plv8_15 plv8_15-3.2.4-1PIGSTY.el9.aarch64.rpm pigsty 3.2.4 7.3MiB https://repo.pigsty.io/yum/pgsql/el9.aarch64/plv8_15-3.2.4-1PIGSTY.el9.aarch64.rpm
-@ d12.x86_64 15 postgresql-15-plv8 postgresql-15-plv8_3.2.4-1PIGSTY~bookworm_amd64.deb pigsty 3.2.4 6.2MiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/plv8/postgresql-15-plv8_3.2.4-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 15 postgresql-15-plv8 postgresql-15-plv8_3.2.4-1PIGSTY~bookworm_arm64.deb pigsty 3.2.4 5.6MiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/plv8/postgresql-15-plv8_3.2.4-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 15 postgresql-15-plv8 postgresql-15-plv8_3.2.4-1PIGSTY~trixie_amd64.deb pigsty 3.2.4 6.2MiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/plv8/postgresql-15-plv8_3.2.4-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 15 postgresql-15-plv8 postgresql-15-plv8_3.2.4-1PIGSTY~trixie_arm64.deb pigsty 3.2.4 5.6MiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/plv8/postgresql-15-plv8_3.2.4-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 15 postgresql-15-plv8 postgresql-15-plv8_3.2.4-1PIGSTY~jammy_amd64.deb pigsty 3.2.4 6.8MiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/plv8/postgresql-15-plv8_3.2.4-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 15 postgresql-15-plv8 postgresql-15-plv8_3.2.4-1PIGSTY~jammy_arm64.deb pigsty 3.2.4 6.7MiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/plv8/postgresql-15-plv8_3.2.4-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 15 postgresql-15-plv8 postgresql-15-plv8_3.2.4-1PIGSTY~noble_amd64.deb pigsty 3.2.4 6.7MiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/plv8/postgresql-15-plv8_3.2.4-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 15 postgresql-15-plv8 postgresql-15-plv8_3.2.4-1PIGSTY~noble_arm64.deb pigsty 3.2.4 6.6MiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/plv8/postgresql-15-plv8_3.2.4-1PIGSTY~noble_arm64.deb
-@ el8.x86_64 14 plv8_14 plv8_14-3.2.4-1PIGSTY.el8.x86_64.rpm pigsty 3.2.4 7.5MiB https://repo.pigsty.io/yum/pgsql/el8.x86_64/plv8_14-3.2.4-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 14 plv8_14 plv8_14-3.2.4-1PIGSTY.el8.aarch64.rpm pigsty 3.2.4 7.0MiB https://repo.pigsty.io/yum/pgsql/el8.aarch64/plv8_14-3.2.4-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 14 plv8_14 plv8_14-3.2.4-1PIGSTY.el9.x86_64.rpm pigsty 3.2.4 7.6MiB https://repo.pigsty.io/yum/pgsql/el9.x86_64/plv8_14-3.2.4-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 14 plv8_14 plv8_14-3.2.4-1PIGSTY.el9.aarch64.rpm pigsty 3.2.4 7.3MiB https://repo.pigsty.io/yum/pgsql/el9.aarch64/plv8_14-3.2.4-1PIGSTY.el9.aarch64.rpm
-@ d12.x86_64 14 postgresql-14-plv8 postgresql-14-plv8_3.2.4-1PIGSTY~bookworm_amd64.deb pigsty 3.2.4 6.2MiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/plv8/postgresql-14-plv8_3.2.4-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 14 postgresql-14-plv8 postgresql-14-plv8_3.2.4-1PIGSTY~bookworm_arm64.deb pigsty 3.2.4 5.6MiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/plv8/postgresql-14-plv8_3.2.4-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 14 postgresql-14-plv8 postgresql-14-plv8_3.2.4-1PIGSTY~trixie_amd64.deb pigsty 3.2.4 6.2MiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/plv8/postgresql-14-plv8_3.2.4-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 14 postgresql-14-plv8 postgresql-14-plv8_3.2.4-1PIGSTY~trixie_arm64.deb pigsty 3.2.4 5.6MiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/plv8/postgresql-14-plv8_3.2.4-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 14 postgresql-14-plv8 postgresql-14-plv8_3.2.4-1PIGSTY~jammy_amd64.deb pigsty 3.2.4 6.8MiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/plv8/postgresql-14-plv8_3.2.4-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 14 postgresql-14-plv8 postgresql-14-plv8_3.2.4-1PIGSTY~jammy_arm64.deb pigsty 3.2.4 6.6MiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/plv8/postgresql-14-plv8_3.2.4-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 14 postgresql-14-plv8 postgresql-14-plv8_3.2.4-1PIGSTY~noble_amd64.deb pigsty 3.2.4 6.7MiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/plv8/postgresql-14-plv8_3.2.4-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 14 postgresql-14-plv8 postgresql-14-plv8_3.2.4-1PIGSTY~noble_arm64.deb pigsty 3.2.4 6.6MiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/plv8/postgresql-14-plv8_3.2.4-1PIGSTY~noble_arm64.deb
+@ el8.x86_64 18 plv8_18 plv8_18-3.2.4-1PIGSTY.el8.x86_64.rpm pigsty 3.2.4 7.5MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/plv8_18-3.2.4-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 18 plv8_18 plv8_18-3.2.4-1PIGSTY.el8.aarch64.rpm pigsty 3.2.4 7.0MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/plv8_18-3.2.4-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 18 plv8_18 plv8_18-3.2.4-1PIGSTY.el9.x86_64.rpm pigsty 3.2.4 7.6MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/plv8_18-3.2.4-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 18 plv8_18 plv8_18-3.2.4-1PIGSTY.el9.aarch64.rpm pigsty 3.2.4 7.3MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/plv8_18-3.2.4-1PIGSTY.el9.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-plv8 postgresql-18-plv8_3.2.4-1PIGSTY~bookworm_amd64.deb pigsty 3.2.4 6.2MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/plv8/postgresql-18-plv8_3.2.4-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 18 postgresql-18-plv8 postgresql-18-plv8_3.2.4-1PIGSTY~bookworm_arm64.deb pigsty 3.2.4 5.6MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/plv8/postgresql-18-plv8_3.2.4-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 18 postgresql-18-plv8 postgresql-18-plv8_3.2.4-1PIGSTY~trixie_amd64.deb pigsty 3.2.4 6.2MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/plv8/postgresql-18-plv8_3.2.4-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 18 postgresql-18-plv8 postgresql-18-plv8_3.2.4-1PIGSTY~trixie_arm64.deb pigsty 3.2.4 5.6MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/plv8/postgresql-18-plv8_3.2.4-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 18 postgresql-18-plv8 postgresql-18-plv8_3.2.4-1PIGSTY~jammy_amd64.deb pigsty 3.2.4 6.8MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/plv8/postgresql-18-plv8_3.2.4-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 18 postgresql-18-plv8 postgresql-18-plv8_3.2.4-1PIGSTY~jammy_arm64.deb pigsty 3.2.4 6.6MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/plv8/postgresql-18-plv8_3.2.4-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 18 postgresql-18-plv8 postgresql-18-plv8_3.2.4-1PIGSTY~noble_amd64.deb pigsty 3.2.4 6.7MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/plv8/postgresql-18-plv8_3.2.4-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 18 postgresql-18-plv8 postgresql-18-plv8_3.2.4-1PIGSTY~noble_arm64.deb pigsty 3.2.4 6.6MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/plv8/postgresql-18-plv8_3.2.4-1PIGSTY~noble_arm64.deb
+@ el8.x86_64 17 plv8_17 plv8_17-3.2.4-1PIGSTY.el8.x86_64.rpm pigsty 3.2.4 7.5MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/plv8_17-3.2.4-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 17 plv8_17 plv8_17-3.2.4-1PIGSTY.el8.aarch64.rpm pigsty 3.2.4 7.0MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/plv8_17-3.2.4-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 17 plv8_17 plv8_17-3.2.4-1PIGSTY.el9.x86_64.rpm pigsty 3.2.4 7.6MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/plv8_17-3.2.4-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 17 plv8_17 plv8_17-3.2.4-1PIGSTY.el9.aarch64.rpm pigsty 3.2.4 7.3MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/plv8_17-3.2.4-1PIGSTY.el9.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-plv8 postgresql-17-plv8_3.2.4-1PIGSTY~bookworm_amd64.deb pigsty 3.2.4 6.2MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/plv8/postgresql-17-plv8_3.2.4-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 17 postgresql-17-plv8 postgresql-17-plv8_3.2.4-1PIGSTY~bookworm_arm64.deb pigsty 3.2.4 5.6MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/plv8/postgresql-17-plv8_3.2.4-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 17 postgresql-17-plv8 postgresql-17-plv8_3.2.4-1PIGSTY~trixie_amd64.deb pigsty 3.2.4 6.2MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/plv8/postgresql-17-plv8_3.2.4-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 17 postgresql-17-plv8 postgresql-17-plv8_3.2.4-1PIGSTY~trixie_arm64.deb pigsty 3.2.4 5.6MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/plv8/postgresql-17-plv8_3.2.4-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 17 postgresql-17-plv8 postgresql-17-plv8_3.2.4-1PIGSTY~jammy_amd64.deb pigsty 3.2.4 6.8MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/plv8/postgresql-17-plv8_3.2.4-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 17 postgresql-17-plv8 postgresql-17-plv8_3.2.4-1PIGSTY~jammy_arm64.deb pigsty 3.2.4 6.6MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/plv8/postgresql-17-plv8_3.2.4-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 17 postgresql-17-plv8 postgresql-17-plv8_3.2.4-1PIGSTY~noble_amd64.deb pigsty 3.2.4 6.7MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/plv8/postgresql-17-plv8_3.2.4-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 17 postgresql-17-plv8 postgresql-17-plv8_3.2.4-1PIGSTY~noble_arm64.deb pigsty 3.2.4 6.6MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/plv8/postgresql-17-plv8_3.2.4-1PIGSTY~noble_arm64.deb
+@ el8.x86_64 16 plv8_16 plv8_16-3.2.4-1PIGSTY.el8.x86_64.rpm pigsty 3.2.4 7.5MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/plv8_16-3.2.4-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 16 plv8_16 plv8_16-3.2.4-1PIGSTY.el8.aarch64.rpm pigsty 3.2.4 7.0MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/plv8_16-3.2.4-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 16 plv8_16 plv8_16-3.2.4-1PIGSTY.el9.x86_64.rpm pigsty 3.2.4 7.6MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/plv8_16-3.2.4-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 16 plv8_16 plv8_16-3.2.4-1PIGSTY.el9.aarch64.rpm pigsty 3.2.4 7.3MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/plv8_16-3.2.4-1PIGSTY.el9.aarch64.rpm
+@ d12.x86_64 16 postgresql-16-plv8 postgresql-16-plv8_3.2.4-1PIGSTY~bookworm_amd64.deb pigsty 3.2.4 6.2MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/plv8/postgresql-16-plv8_3.2.4-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 16 postgresql-16-plv8 postgresql-16-plv8_3.2.4-1PIGSTY~bookworm_arm64.deb pigsty 3.2.4 5.6MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/plv8/postgresql-16-plv8_3.2.4-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 16 postgresql-16-plv8 postgresql-16-plv8_3.2.4-1PIGSTY~trixie_amd64.deb pigsty 3.2.4 6.2MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/plv8/postgresql-16-plv8_3.2.4-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 16 postgresql-16-plv8 postgresql-16-plv8_3.2.4-1PIGSTY~trixie_arm64.deb pigsty 3.2.4 5.6MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/plv8/postgresql-16-plv8_3.2.4-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 16 postgresql-16-plv8 postgresql-16-plv8_3.2.4-1PIGSTY~jammy_amd64.deb pigsty 3.2.4 6.8MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/plv8/postgresql-16-plv8_3.2.4-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 16 postgresql-16-plv8 postgresql-16-plv8_3.2.4-1PIGSTY~jammy_arm64.deb pigsty 3.2.4 6.7MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/plv8/postgresql-16-plv8_3.2.4-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 16 postgresql-16-plv8 postgresql-16-plv8_3.2.4-1PIGSTY~noble_amd64.deb pigsty 3.2.4 6.7MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/plv8/postgresql-16-plv8_3.2.4-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 16 postgresql-16-plv8 postgresql-16-plv8_3.2.4-1PIGSTY~noble_arm64.deb pigsty 3.2.4 6.6MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/plv8/postgresql-16-plv8_3.2.4-1PIGSTY~noble_arm64.deb
+@ el8.x86_64 15 plv8_15 plv8_15-3.2.4-1PIGSTY.el8.x86_64.rpm pigsty 3.2.4 7.5MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/plv8_15-3.2.4-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 15 plv8_15 plv8_15-3.2.4-1PIGSTY.el8.aarch64.rpm pigsty 3.2.4 7.0MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/plv8_15-3.2.4-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 15 plv8_15 plv8_15-3.2.4-1PIGSTY.el9.x86_64.rpm pigsty 3.2.4 7.6MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/plv8_15-3.2.4-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 15 plv8_15 plv8_15-3.2.4-1PIGSTY.el9.aarch64.rpm pigsty 3.2.4 7.3MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/plv8_15-3.2.4-1PIGSTY.el9.aarch64.rpm
+@ d12.x86_64 15 postgresql-15-plv8 postgresql-15-plv8_3.2.4-1PIGSTY~bookworm_amd64.deb pigsty 3.2.4 6.2MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/plv8/postgresql-15-plv8_3.2.4-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 15 postgresql-15-plv8 postgresql-15-plv8_3.2.4-1PIGSTY~bookworm_arm64.deb pigsty 3.2.4 5.6MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/plv8/postgresql-15-plv8_3.2.4-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 15 postgresql-15-plv8 postgresql-15-plv8_3.2.4-1PIGSTY~trixie_amd64.deb pigsty 3.2.4 6.2MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/plv8/postgresql-15-plv8_3.2.4-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 15 postgresql-15-plv8 postgresql-15-plv8_3.2.4-1PIGSTY~trixie_arm64.deb pigsty 3.2.4 5.6MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/plv8/postgresql-15-plv8_3.2.4-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 15 postgresql-15-plv8 postgresql-15-plv8_3.2.4-1PIGSTY~jammy_amd64.deb pigsty 3.2.4 6.8MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/plv8/postgresql-15-plv8_3.2.4-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 15 postgresql-15-plv8 postgresql-15-plv8_3.2.4-1PIGSTY~jammy_arm64.deb pigsty 3.2.4 6.7MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/plv8/postgresql-15-plv8_3.2.4-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 15 postgresql-15-plv8 postgresql-15-plv8_3.2.4-1PIGSTY~noble_amd64.deb pigsty 3.2.4 6.7MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/plv8/postgresql-15-plv8_3.2.4-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 15 postgresql-15-plv8 postgresql-15-plv8_3.2.4-1PIGSTY~noble_arm64.deb pigsty 3.2.4 6.6MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/plv8/postgresql-15-plv8_3.2.4-1PIGSTY~noble_arm64.deb
+@ el8.x86_64 14 plv8_14 plv8_14-3.2.4-1PIGSTY.el8.x86_64.rpm pigsty 3.2.4 7.5MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/plv8_14-3.2.4-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 14 plv8_14 plv8_14-3.2.4-1PIGSTY.el8.aarch64.rpm pigsty 3.2.4 7.0MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/plv8_14-3.2.4-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 14 plv8_14 plv8_14-3.2.4-1PIGSTY.el9.x86_64.rpm pigsty 3.2.4 7.6MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/plv8_14-3.2.4-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 14 plv8_14 plv8_14-3.2.4-1PIGSTY.el9.aarch64.rpm pigsty 3.2.4 7.3MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/plv8_14-3.2.4-1PIGSTY.el9.aarch64.rpm
+@ d12.x86_64 14 postgresql-14-plv8 postgresql-14-plv8_3.2.4-1PIGSTY~bookworm_amd64.deb pigsty 3.2.4 6.2MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/plv8/postgresql-14-plv8_3.2.4-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 14 postgresql-14-plv8 postgresql-14-plv8_3.2.4-1PIGSTY~bookworm_arm64.deb pigsty 3.2.4 5.6MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/plv8/postgresql-14-plv8_3.2.4-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 14 postgresql-14-plv8 postgresql-14-plv8_3.2.4-1PIGSTY~trixie_amd64.deb pigsty 3.2.4 6.2MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/plv8/postgresql-14-plv8_3.2.4-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 14 postgresql-14-plv8 postgresql-14-plv8_3.2.4-1PIGSTY~trixie_arm64.deb pigsty 3.2.4 5.6MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/plv8/postgresql-14-plv8_3.2.4-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 14 postgresql-14-plv8 postgresql-14-plv8_3.2.4-1PIGSTY~jammy_amd64.deb pigsty 3.2.4 6.8MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/plv8/postgresql-14-plv8_3.2.4-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 14 postgresql-14-plv8 postgresql-14-plv8_3.2.4-1PIGSTY~jammy_arm64.deb pigsty 3.2.4 6.6MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/plv8/postgresql-14-plv8_3.2.4-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 14 postgresql-14-plv8 postgresql-14-plv8_3.2.4-1PIGSTY~noble_amd64.deb pigsty 3.2.4 6.7MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/plv8/postgresql-14-plv8_3.2.4-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 14 postgresql-14-plv8 postgresql-14-plv8_3.2.4-1PIGSTY~noble_arm64.deb pigsty 3.2.4 6.6MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/plv8/postgresql-14-plv8_3.2.4-1PIGSTY~noble_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建

@@ -11,7 +11,7 @@ weight: 2730
     <div class="ext-card__title">benodiwal/pg_ai_query</div>
     <div class="ext-card__desc">https://github.com/benodiwal/pg_ai_query</div>
   </a>
-  <a class="ext-card ext-card--source" href="pg_ai_query-0.1.1.tar.gz">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pg_ai_query-0.1.1.tar.gz">
     <div class="ext-card__kicker">源码</div>
     <div class="ext-card__title">pg_ai_query-0.1.1.tar.gz</div>
     <div class="ext-card__desc">pg_ai_query-0.1.1.tar.gz</div>
@@ -30,7 +30,7 @@ weight: 2730
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
 |:-----:|:-------------------------------------------------------------------------|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|:----------|
-| 2730  | [**`pg_ai_query`**](/ext/e/pg_ai_query) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | - |
+| 2730  | [**`pg_ai_query`**](/ext/e/pg_ai_query) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
 {.ext-table}
 
 | **相关扩展** | [`pgml`](/ext/e/pgml) [`pg4ml`](/ext/e/pg4ml) [`vectorize`](/ext/e/vectorize) [`pg_summarize`](/ext/e/pg_summarize) [`pg_tiktoken`](/ext/e/pg_tiktoken) |
@@ -64,46 +64,46 @@ weight: 2730
 | u22.aarch64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
 | u24.x86_64 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 |
 | u24.aarch64 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 |
-@ el9.x86_64 18 pg_ai_query_18 pg_ai_query_18-0.1.1-1PIGSTY.el9.x86_64.rpm pigsty 0.1.1 967.9KiB https://repo.pigsty.io/yum/pgsql/el9.x86_64/pg_ai_query_18-0.1.1-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 18 pg_ai_query_18 pg_ai_query_18-0.1.1-1PIGSTY.el9.aarch64.rpm pigsty 0.1.1 880.6KiB https://repo.pigsty.io/yum/pgsql/el9.aarch64/pg_ai_query_18-0.1.1-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 18 pg_ai_query_18 pg_ai_query_18-0.1.1-1PIGSTY.el10.x86_64.rpm pigsty 0.1.1 899.5KiB https://repo.pigsty.io/yum/pgsql/el10.x86_64/pg_ai_query_18-0.1.1-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 18 pg_ai_query_18 pg_ai_query_18-0.1.1-1PIGSTY.el10.aarch64.rpm pigsty 0.1.1 846.4KiB https://repo.pigsty.io/yum/pgsql/el10.aarch64/pg_ai_query_18-0.1.1-1PIGSTY.el10.aarch64.rpm
-@ d13.x86_64 18 postgresql-18-ai-query postgresql-18-ai-query_0.1.1-1PIGSTY~trixie_amd64.deb pigsty 0.1.1 842.3KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pg-ai-query/postgresql-18-ai-query_0.1.1-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 18 postgresql-18-ai-query postgresql-18-ai-query_0.1.1-1PIGSTY~trixie_arm64.deb pigsty 0.1.1 760.5KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pg-ai-query/postgresql-18-ai-query_0.1.1-1PIGSTY~trixie_arm64.deb
-@ u24.x86_64 18 postgresql-18-ai-query postgresql-18-ai-query_0.1.1-1PIGSTY~noble_amd64.deb pigsty 0.1.1 795.0KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pg-ai-query/postgresql-18-ai-query_0.1.1-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 18 postgresql-18-ai-query postgresql-18-ai-query_0.1.1-1PIGSTY~noble_arm64.deb pigsty 0.1.1 771.8KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pg-ai-query/postgresql-18-ai-query_0.1.1-1PIGSTY~noble_arm64.deb
-@ el9.x86_64 17 pg_ai_query_17 pg_ai_query_17-0.1.1-1PIGSTY.el9.x86_64.rpm pigsty 0.1.1 967.8KiB https://repo.pigsty.io/yum/pgsql/el9.x86_64/pg_ai_query_17-0.1.1-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 17 pg_ai_query_17 pg_ai_query_17-0.1.1-1PIGSTY.el9.aarch64.rpm pigsty 0.1.1 881.9KiB https://repo.pigsty.io/yum/pgsql/el9.aarch64/pg_ai_query_17-0.1.1-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 17 pg_ai_query_17 pg_ai_query_17-0.1.1-1PIGSTY.el10.x86_64.rpm pigsty 0.1.1 899.4KiB https://repo.pigsty.io/yum/pgsql/el10.x86_64/pg_ai_query_17-0.1.1-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 17 pg_ai_query_17 pg_ai_query_17-0.1.1-1PIGSTY.el10.aarch64.rpm pigsty 0.1.1 846.4KiB https://repo.pigsty.io/yum/pgsql/el10.aarch64/pg_ai_query_17-0.1.1-1PIGSTY.el10.aarch64.rpm
-@ d13.x86_64 17 postgresql-17-ai-query postgresql-17-ai-query_0.1.1-1PIGSTY~trixie_amd64.deb pigsty 0.1.1 845.8KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pg-ai-query/postgresql-17-ai-query_0.1.1-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 17 postgresql-17-ai-query postgresql-17-ai-query_0.1.1-1PIGSTY~trixie_arm64.deb pigsty 0.1.1 760.1KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pg-ai-query/postgresql-17-ai-query_0.1.1-1PIGSTY~trixie_arm64.deb
-@ u24.x86_64 17 postgresql-17-ai-query postgresql-17-ai-query_0.1.1-1PIGSTY~noble_amd64.deb pigsty 0.1.1 795.0KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pg-ai-query/postgresql-17-ai-query_0.1.1-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 17 postgresql-17-ai-query postgresql-17-ai-query_0.1.1-1PIGSTY~noble_arm64.deb pigsty 0.1.1 771.8KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pg-ai-query/postgresql-17-ai-query_0.1.1-1PIGSTY~noble_arm64.deb
-@ el9.x86_64 16 pg_ai_query_16 pg_ai_query_16-0.1.1-1PIGSTY.el9.x86_64.rpm pigsty 0.1.1 967.8KiB https://repo.pigsty.io/yum/pgsql/el9.x86_64/pg_ai_query_16-0.1.1-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 16 pg_ai_query_16 pg_ai_query_16-0.1.1-1PIGSTY.el9.aarch64.rpm pigsty 0.1.1 881.0KiB https://repo.pigsty.io/yum/pgsql/el9.aarch64/pg_ai_query_16-0.1.1-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 16 pg_ai_query_16 pg_ai_query_16-0.1.1-1PIGSTY.el10.x86_64.rpm pigsty 0.1.1 899.5KiB https://repo.pigsty.io/yum/pgsql/el10.x86_64/pg_ai_query_16-0.1.1-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 16 pg_ai_query_16 pg_ai_query_16-0.1.1-1PIGSTY.el10.aarch64.rpm pigsty 0.1.1 846.4KiB https://repo.pigsty.io/yum/pgsql/el10.aarch64/pg_ai_query_16-0.1.1-1PIGSTY.el10.aarch64.rpm
-@ d13.x86_64 16 postgresql-16-ai-query postgresql-16-ai-query_0.1.1-1PIGSTY~trixie_amd64.deb pigsty 0.1.1 841.1KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pg-ai-query/postgresql-16-ai-query_0.1.1-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 16 postgresql-16-ai-query postgresql-16-ai-query_0.1.1-1PIGSTY~trixie_arm64.deb pigsty 0.1.1 759.0KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pg-ai-query/postgresql-16-ai-query_0.1.1-1PIGSTY~trixie_arm64.deb
-@ u24.x86_64 16 postgresql-16-ai-query postgresql-16-ai-query_0.1.1-1PIGSTY~noble_amd64.deb pigsty 0.1.1 795.6KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pg-ai-query/postgresql-16-ai-query_0.1.1-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 16 postgresql-16-ai-query postgresql-16-ai-query_0.1.1-1PIGSTY~noble_arm64.deb pigsty 0.1.1 771.8KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pg-ai-query/postgresql-16-ai-query_0.1.1-1PIGSTY~noble_arm64.deb
-@ el9.x86_64 15 pg_ai_query_15 pg_ai_query_15-0.1.1-1PIGSTY.el9.x86_64.rpm pigsty 0.1.1 967.4KiB https://repo.pigsty.io/yum/pgsql/el9.x86_64/pg_ai_query_15-0.1.1-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 15 pg_ai_query_15 pg_ai_query_15-0.1.1-1PIGSTY.el9.aarch64.rpm pigsty 0.1.1 881.0KiB https://repo.pigsty.io/yum/pgsql/el9.aarch64/pg_ai_query_15-0.1.1-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 15 pg_ai_query_15 pg_ai_query_15-0.1.1-1PIGSTY.el10.x86_64.rpm pigsty 0.1.1 899.3KiB https://repo.pigsty.io/yum/pgsql/el10.x86_64/pg_ai_query_15-0.1.1-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 15 pg_ai_query_15 pg_ai_query_15-0.1.1-1PIGSTY.el10.aarch64.rpm pigsty 0.1.1 846.4KiB https://repo.pigsty.io/yum/pgsql/el10.aarch64/pg_ai_query_15-0.1.1-1PIGSTY.el10.aarch64.rpm
-@ d13.x86_64 15 postgresql-15-ai-query postgresql-15-ai-query_0.1.1-1PIGSTY~trixie_amd64.deb pigsty 0.1.1 841.4KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pg-ai-query/postgresql-15-ai-query_0.1.1-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 15 postgresql-15-ai-query postgresql-15-ai-query_0.1.1-1PIGSTY~trixie_arm64.deb pigsty 0.1.1 758.6KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pg-ai-query/postgresql-15-ai-query_0.1.1-1PIGSTY~trixie_arm64.deb
-@ u24.x86_64 15 postgresql-15-ai-query postgresql-15-ai-query_0.1.1-1PIGSTY~noble_amd64.deb pigsty 0.1.1 795.2KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pg-ai-query/postgresql-15-ai-query_0.1.1-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 15 postgresql-15-ai-query postgresql-15-ai-query_0.1.1-1PIGSTY~noble_arm64.deb pigsty 0.1.1 771.6KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pg-ai-query/postgresql-15-ai-query_0.1.1-1PIGSTY~noble_arm64.deb
-@ el9.x86_64 14 pg_ai_query_14 pg_ai_query_14-0.1.1-1PIGSTY.el9.x86_64.rpm pigsty 0.1.1 967.8KiB https://repo.pigsty.io/yum/pgsql/el9.x86_64/pg_ai_query_14-0.1.1-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 14 pg_ai_query_14 pg_ai_query_14-0.1.1-1PIGSTY.el9.aarch64.rpm pigsty 0.1.1 881.0KiB https://repo.pigsty.io/yum/pgsql/el9.aarch64/pg_ai_query_14-0.1.1-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 14 pg_ai_query_14 pg_ai_query_14-0.1.1-1PIGSTY.el10.x86_64.rpm pigsty 0.1.1 899.3KiB https://repo.pigsty.io/yum/pgsql/el10.x86_64/pg_ai_query_14-0.1.1-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 14 pg_ai_query_14 pg_ai_query_14-0.1.1-1PIGSTY.el10.aarch64.rpm pigsty 0.1.1 846.4KiB https://repo.pigsty.io/yum/pgsql/el10.aarch64/pg_ai_query_14-0.1.1-1PIGSTY.el10.aarch64.rpm
-@ d13.x86_64 14 postgresql-14-ai-query postgresql-14-ai-query_0.1.1-1PIGSTY~trixie_amd64.deb pigsty 0.1.1 841.6KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pg-ai-query/postgresql-14-ai-query_0.1.1-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 14 postgresql-14-ai-query postgresql-14-ai-query_0.1.1-1PIGSTY~trixie_arm64.deb pigsty 0.1.1 760.7KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pg-ai-query/postgresql-14-ai-query_0.1.1-1PIGSTY~trixie_arm64.deb
-@ u24.x86_64 14 postgresql-14-ai-query postgresql-14-ai-query_0.1.1-1PIGSTY~noble_amd64.deb pigsty 0.1.1 795.2KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pg-ai-query/postgresql-14-ai-query_0.1.1-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 14 postgresql-14-ai-query postgresql-14-ai-query_0.1.1-1PIGSTY~noble_arm64.deb pigsty 0.1.1 771.7KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pg-ai-query/postgresql-14-ai-query_0.1.1-1PIGSTY~noble_arm64.deb
+@ el9.x86_64 18 pg_ai_query_18 pg_ai_query_18-0.1.1-1PIGSTY.el9.x86_64.rpm pigsty 0.1.1 967.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_ai_query_18-0.1.1-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 18 pg_ai_query_18 pg_ai_query_18-0.1.1-1PIGSTY.el9.aarch64.rpm pigsty 0.1.1 880.6KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_ai_query_18-0.1.1-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 18 pg_ai_query_18 pg_ai_query_18-0.1.1-1PIGSTY.el10.x86_64.rpm pigsty 0.1.1 899.5KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_ai_query_18-0.1.1-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 18 pg_ai_query_18 pg_ai_query_18-0.1.1-1PIGSTY.el10.aarch64.rpm pigsty 0.1.1 846.4KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_ai_query_18-0.1.1-1PIGSTY.el10.aarch64.rpm
+@ d13.x86_64 18 postgresql-18-ai-query postgresql-18-ai-query_0.1.1-1PIGSTY~trixie_amd64.deb pigsty 0.1.1 842.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-ai-query/postgresql-18-ai-query_0.1.1-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 18 postgresql-18-ai-query postgresql-18-ai-query_0.1.1-1PIGSTY~trixie_arm64.deb pigsty 0.1.1 760.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-ai-query/postgresql-18-ai-query_0.1.1-1PIGSTY~trixie_arm64.deb
+@ u24.x86_64 18 postgresql-18-ai-query postgresql-18-ai-query_0.1.1-1PIGSTY~noble_amd64.deb pigsty 0.1.1 795.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-ai-query/postgresql-18-ai-query_0.1.1-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 18 postgresql-18-ai-query postgresql-18-ai-query_0.1.1-1PIGSTY~noble_arm64.deb pigsty 0.1.1 771.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-ai-query/postgresql-18-ai-query_0.1.1-1PIGSTY~noble_arm64.deb
+@ el9.x86_64 17 pg_ai_query_17 pg_ai_query_17-0.1.1-1PIGSTY.el9.x86_64.rpm pigsty 0.1.1 967.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_ai_query_17-0.1.1-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 17 pg_ai_query_17 pg_ai_query_17-0.1.1-1PIGSTY.el9.aarch64.rpm pigsty 0.1.1 881.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_ai_query_17-0.1.1-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 17 pg_ai_query_17 pg_ai_query_17-0.1.1-1PIGSTY.el10.x86_64.rpm pigsty 0.1.1 899.4KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_ai_query_17-0.1.1-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 17 pg_ai_query_17 pg_ai_query_17-0.1.1-1PIGSTY.el10.aarch64.rpm pigsty 0.1.1 846.4KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_ai_query_17-0.1.1-1PIGSTY.el10.aarch64.rpm
+@ d13.x86_64 17 postgresql-17-ai-query postgresql-17-ai-query_0.1.1-1PIGSTY~trixie_amd64.deb pigsty 0.1.1 845.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-ai-query/postgresql-17-ai-query_0.1.1-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 17 postgresql-17-ai-query postgresql-17-ai-query_0.1.1-1PIGSTY~trixie_arm64.deb pigsty 0.1.1 760.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-ai-query/postgresql-17-ai-query_0.1.1-1PIGSTY~trixie_arm64.deb
+@ u24.x86_64 17 postgresql-17-ai-query postgresql-17-ai-query_0.1.1-1PIGSTY~noble_amd64.deb pigsty 0.1.1 795.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-ai-query/postgresql-17-ai-query_0.1.1-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 17 postgresql-17-ai-query postgresql-17-ai-query_0.1.1-1PIGSTY~noble_arm64.deb pigsty 0.1.1 771.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-ai-query/postgresql-17-ai-query_0.1.1-1PIGSTY~noble_arm64.deb
+@ el9.x86_64 16 pg_ai_query_16 pg_ai_query_16-0.1.1-1PIGSTY.el9.x86_64.rpm pigsty 0.1.1 967.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_ai_query_16-0.1.1-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 16 pg_ai_query_16 pg_ai_query_16-0.1.1-1PIGSTY.el9.aarch64.rpm pigsty 0.1.1 881.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_ai_query_16-0.1.1-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 16 pg_ai_query_16 pg_ai_query_16-0.1.1-1PIGSTY.el10.x86_64.rpm pigsty 0.1.1 899.5KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_ai_query_16-0.1.1-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 16 pg_ai_query_16 pg_ai_query_16-0.1.1-1PIGSTY.el10.aarch64.rpm pigsty 0.1.1 846.4KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_ai_query_16-0.1.1-1PIGSTY.el10.aarch64.rpm
+@ d13.x86_64 16 postgresql-16-ai-query postgresql-16-ai-query_0.1.1-1PIGSTY~trixie_amd64.deb pigsty 0.1.1 841.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-ai-query/postgresql-16-ai-query_0.1.1-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 16 postgresql-16-ai-query postgresql-16-ai-query_0.1.1-1PIGSTY~trixie_arm64.deb pigsty 0.1.1 759.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-ai-query/postgresql-16-ai-query_0.1.1-1PIGSTY~trixie_arm64.deb
+@ u24.x86_64 16 postgresql-16-ai-query postgresql-16-ai-query_0.1.1-1PIGSTY~noble_amd64.deb pigsty 0.1.1 795.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-ai-query/postgresql-16-ai-query_0.1.1-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 16 postgresql-16-ai-query postgresql-16-ai-query_0.1.1-1PIGSTY~noble_arm64.deb pigsty 0.1.1 771.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-ai-query/postgresql-16-ai-query_0.1.1-1PIGSTY~noble_arm64.deb
+@ el9.x86_64 15 pg_ai_query_15 pg_ai_query_15-0.1.1-1PIGSTY.el9.x86_64.rpm pigsty 0.1.1 967.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_ai_query_15-0.1.1-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 15 pg_ai_query_15 pg_ai_query_15-0.1.1-1PIGSTY.el9.aarch64.rpm pigsty 0.1.1 881.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_ai_query_15-0.1.1-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 15 pg_ai_query_15 pg_ai_query_15-0.1.1-1PIGSTY.el10.x86_64.rpm pigsty 0.1.1 899.3KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_ai_query_15-0.1.1-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 15 pg_ai_query_15 pg_ai_query_15-0.1.1-1PIGSTY.el10.aarch64.rpm pigsty 0.1.1 846.4KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_ai_query_15-0.1.1-1PIGSTY.el10.aarch64.rpm
+@ d13.x86_64 15 postgresql-15-ai-query postgresql-15-ai-query_0.1.1-1PIGSTY~trixie_amd64.deb pigsty 0.1.1 841.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-ai-query/postgresql-15-ai-query_0.1.1-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 15 postgresql-15-ai-query postgresql-15-ai-query_0.1.1-1PIGSTY~trixie_arm64.deb pigsty 0.1.1 758.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-ai-query/postgresql-15-ai-query_0.1.1-1PIGSTY~trixie_arm64.deb
+@ u24.x86_64 15 postgresql-15-ai-query postgresql-15-ai-query_0.1.1-1PIGSTY~noble_amd64.deb pigsty 0.1.1 795.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-ai-query/postgresql-15-ai-query_0.1.1-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 15 postgresql-15-ai-query postgresql-15-ai-query_0.1.1-1PIGSTY~noble_arm64.deb pigsty 0.1.1 771.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-ai-query/postgresql-15-ai-query_0.1.1-1PIGSTY~noble_arm64.deb
+@ el9.x86_64 14 pg_ai_query_14 pg_ai_query_14-0.1.1-1PIGSTY.el9.x86_64.rpm pigsty 0.1.1 967.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_ai_query_14-0.1.1-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 14 pg_ai_query_14 pg_ai_query_14-0.1.1-1PIGSTY.el9.aarch64.rpm pigsty 0.1.1 881.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_ai_query_14-0.1.1-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 14 pg_ai_query_14 pg_ai_query_14-0.1.1-1PIGSTY.el10.x86_64.rpm pigsty 0.1.1 899.3KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_ai_query_14-0.1.1-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 14 pg_ai_query_14 pg_ai_query_14-0.1.1-1PIGSTY.el10.aarch64.rpm pigsty 0.1.1 846.4KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_ai_query_14-0.1.1-1PIGSTY.el10.aarch64.rpm
+@ d13.x86_64 14 postgresql-14-ai-query postgresql-14-ai-query_0.1.1-1PIGSTY~trixie_amd64.deb pigsty 0.1.1 841.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-ai-query/postgresql-14-ai-query_0.1.1-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 14 postgresql-14-ai-query postgresql-14-ai-query_0.1.1-1PIGSTY~trixie_arm64.deb pigsty 0.1.1 760.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-ai-query/postgresql-14-ai-query_0.1.1-1PIGSTY~trixie_arm64.deb
+@ u24.x86_64 14 postgresql-14-ai-query postgresql-14-ai-query_0.1.1-1PIGSTY~noble_amd64.deb pigsty 0.1.1 795.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-ai-query/postgresql-14-ai-query_0.1.1-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 14 postgresql-14-ai-query postgresql-14-ai-query_0.1.1-1PIGSTY~noble_arm64.deb pigsty 0.1.1 771.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-ai-query/postgresql-14-ai-query_0.1.1-1PIGSTY~noble_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建

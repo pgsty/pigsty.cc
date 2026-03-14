@@ -11,7 +11,7 @@ weight: 6860
     <div class="ext-card__title">hollobon/pagevis</div>
     <div class="ext-card__desc">https://github.com/hollobon/pagevis</div>
   </a>
-  <a class="ext-card ext-card--source" href="pagevis-0.1.tar.gz">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pagevis-0.1.tar.gz">
     <div class="ext-card__kicker">源码</div>
     <div class="ext-card__title">pagevis-0.1.tar.gz</div>
     <div class="ext-card__desc">pagevis-0.1.tar.gz</div>
@@ -64,76 +64,76 @@ weight: 6860
 | u22.aarch64 | AVAIL PIGSTY 0.1 1 | AVAIL PIGSTY 0.1 1 | AVAIL PIGSTY 0.1 1 | AVAIL PIGSTY 0.1 1 | AVAIL PIGSTY 0.1 1 |
 | u24.x86_64 | AVAIL PIGSTY 0.1 1 | AVAIL PIGSTY 0.1 1 | AVAIL PIGSTY 0.1 1 | AVAIL PIGSTY 0.1 1 | AVAIL PIGSTY 0.1 1 |
 | u24.aarch64 | AVAIL PIGSTY 0.1 1 | AVAIL PIGSTY 0.1 1 | AVAIL PIGSTY 0.1 1 | AVAIL PIGSTY 0.1 1 | AVAIL PIGSTY 0.1 1 |
-@ el8.x86_64 18 pagevis_18 pagevis_18-0.1-1PIGSTY.el8.x86_64.rpm pigsty 0.1 8.1KiB https://repo.pigsty.io/yum/pgsql/el8.x86_64/pagevis_18-0.1-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 18 pagevis_18 pagevis_18-0.1-1PIGSTY.el8.aarch64.rpm pigsty 0.1 8.1KiB https://repo.pigsty.io/yum/pgsql/el8.aarch64/pagevis_18-0.1-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 18 pagevis_18 pagevis_18-0.1-1PIGSTY.el9.x86_64.rpm pigsty 0.1 8.2KiB https://repo.pigsty.io/yum/pgsql/el9.x86_64/pagevis_18-0.1-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 18 pagevis_18 pagevis_18-0.1-1PIGSTY.el9.aarch64.rpm pigsty 0.1 8.1KiB https://repo.pigsty.io/yum/pgsql/el9.aarch64/pagevis_18-0.1-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 18 pagevis_18 pagevis_18-0.1-1PIGSTY.el10.x86_64.rpm pigsty 0.1 8.2KiB https://repo.pigsty.io/yum/pgsql/el10.x86_64/pagevis_18-0.1-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 18 pagevis_18 pagevis_18-0.1-1PIGSTY.el10.aarch64.rpm pigsty 0.1 8.2KiB https://repo.pigsty.io/yum/pgsql/el10.aarch64/pagevis_18-0.1-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 18 postgresql-18-pagevis postgresql-18-pagevis_0.1-1PIGSTY~bookworm_amd64.deb pigsty 0.1 5.2KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/pagevis/postgresql-18-pagevis_0.1-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 18 postgresql-18-pagevis postgresql-18-pagevis_0.1-1PIGSTY~bookworm_arm64.deb pigsty 0.1 5.2KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/pagevis/postgresql-18-pagevis_0.1-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 18 postgresql-18-pagevis postgresql-18-pagevis_0.1-1PIGSTY~trixie_amd64.deb pigsty 0.1 5.2KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pagevis/postgresql-18-pagevis_0.1-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 18 postgresql-18-pagevis postgresql-18-pagevis_0.1-1PIGSTY~trixie_arm64.deb pigsty 0.1 5.2KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pagevis/postgresql-18-pagevis_0.1-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 18 postgresql-18-pagevis postgresql-18-pagevis_0.1-1PIGSTY~jammy_amd64.deb pigsty 0.1 5.2KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/pagevis/postgresql-18-pagevis_0.1-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 18 postgresql-18-pagevis postgresql-18-pagevis_0.1-1PIGSTY~jammy_arm64.deb pigsty 0.1 5.2KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/pagevis/postgresql-18-pagevis_0.1-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 18 postgresql-18-pagevis postgresql-18-pagevis_0.1-1PIGSTY~noble_amd64.deb pigsty 0.1 5.2KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pagevis/postgresql-18-pagevis_0.1-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 18 postgresql-18-pagevis postgresql-18-pagevis_0.1-1PIGSTY~noble_arm64.deb pigsty 0.1 5.2KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pagevis/postgresql-18-pagevis_0.1-1PIGSTY~noble_arm64.deb
-@ el8.x86_64 17 pagevis_17 pagevis_17-0.1-1PIGSTY.el8.x86_64.rpm pigsty 0.1 8.1KiB https://repo.pigsty.io/yum/pgsql/el8.x86_64/pagevis_17-0.1-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 17 pagevis_17 pagevis_17-0.1-1PIGSTY.el8.aarch64.rpm pigsty 0.1 8.1KiB https://repo.pigsty.io/yum/pgsql/el8.aarch64/pagevis_17-0.1-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 17 pagevis_17 pagevis_17-0.1-1PIGSTY.el9.x86_64.rpm pigsty 0.1 8.2KiB https://repo.pigsty.io/yum/pgsql/el9.x86_64/pagevis_17-0.1-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 17 pagevis_17 pagevis_17-0.1-1PIGSTY.el9.aarch64.rpm pigsty 0.1 8.1KiB https://repo.pigsty.io/yum/pgsql/el9.aarch64/pagevis_17-0.1-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 17 pagevis_17 pagevis_17-0.1-1PIGSTY.el10.x86_64.rpm pigsty 0.1 8.2KiB https://repo.pigsty.io/yum/pgsql/el10.x86_64/pagevis_17-0.1-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 17 pagevis_17 pagevis_17-0.1-1PIGSTY.el10.aarch64.rpm pigsty 0.1 8.2KiB https://repo.pigsty.io/yum/pgsql/el10.aarch64/pagevis_17-0.1-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 17 postgresql-17-pagevis postgresql-17-pagevis_0.1-1PIGSTY~bookworm_amd64.deb pigsty 0.1 5.2KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/pagevis/postgresql-17-pagevis_0.1-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 17 postgresql-17-pagevis postgresql-17-pagevis_0.1-1PIGSTY~bookworm_arm64.deb pigsty 0.1 5.2KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/pagevis/postgresql-17-pagevis_0.1-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 17 postgresql-17-pagevis postgresql-17-pagevis_0.1-1PIGSTY~trixie_amd64.deb pigsty 0.1 5.2KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pagevis/postgresql-17-pagevis_0.1-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 17 postgresql-17-pagevis postgresql-17-pagevis_0.1-1PIGSTY~trixie_arm64.deb pigsty 0.1 5.2KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pagevis/postgresql-17-pagevis_0.1-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 17 postgresql-17-pagevis postgresql-17-pagevis_0.1-1PIGSTY~jammy_amd64.deb pigsty 0.1 5.2KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/pagevis/postgresql-17-pagevis_0.1-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 17 postgresql-17-pagevis postgresql-17-pagevis_0.1-1PIGSTY~jammy_arm64.deb pigsty 0.1 5.2KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/pagevis/postgresql-17-pagevis_0.1-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 17 postgresql-17-pagevis postgresql-17-pagevis_0.1-1PIGSTY~noble_amd64.deb pigsty 0.1 5.2KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pagevis/postgresql-17-pagevis_0.1-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 17 postgresql-17-pagevis postgresql-17-pagevis_0.1-1PIGSTY~noble_arm64.deb pigsty 0.1 5.2KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pagevis/postgresql-17-pagevis_0.1-1PIGSTY~noble_arm64.deb
-@ el8.x86_64 16 pagevis_16 pagevis_16-0.1-1PIGSTY.el8.x86_64.rpm pigsty 0.1 8.1KiB https://repo.pigsty.io/yum/pgsql/el8.x86_64/pagevis_16-0.1-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 16 pagevis_16 pagevis_16-0.1-1PIGSTY.el8.aarch64.rpm pigsty 0.1 8.1KiB https://repo.pigsty.io/yum/pgsql/el8.aarch64/pagevis_16-0.1-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 16 pagevis_16 pagevis_16-0.1-1PIGSTY.el9.x86_64.rpm pigsty 0.1 8.2KiB https://repo.pigsty.io/yum/pgsql/el9.x86_64/pagevis_16-0.1-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 16 pagevis_16 pagevis_16-0.1-1PIGSTY.el9.aarch64.rpm pigsty 0.1 8.1KiB https://repo.pigsty.io/yum/pgsql/el9.aarch64/pagevis_16-0.1-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 16 pagevis_16 pagevis_16-0.1-1PIGSTY.el10.x86_64.rpm pigsty 0.1 8.2KiB https://repo.pigsty.io/yum/pgsql/el10.x86_64/pagevis_16-0.1-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 16 pagevis_16 pagevis_16-0.1-1PIGSTY.el10.aarch64.rpm pigsty 0.1 8.2KiB https://repo.pigsty.io/yum/pgsql/el10.aarch64/pagevis_16-0.1-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 16 postgresql-16-pagevis postgresql-16-pagevis_0.1-1PIGSTY~bookworm_amd64.deb pigsty 0.1 5.2KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/pagevis/postgresql-16-pagevis_0.1-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 16 postgresql-16-pagevis postgresql-16-pagevis_0.1-1PIGSTY~bookworm_arm64.deb pigsty 0.1 5.2KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/pagevis/postgresql-16-pagevis_0.1-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 16 postgresql-16-pagevis postgresql-16-pagevis_0.1-1PIGSTY~trixie_amd64.deb pigsty 0.1 5.2KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pagevis/postgresql-16-pagevis_0.1-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 16 postgresql-16-pagevis postgresql-16-pagevis_0.1-1PIGSTY~trixie_arm64.deb pigsty 0.1 5.2KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pagevis/postgresql-16-pagevis_0.1-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 16 postgresql-16-pagevis postgresql-16-pagevis_0.1-1PIGSTY~jammy_amd64.deb pigsty 0.1 5.2KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/pagevis/postgresql-16-pagevis_0.1-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 16 postgresql-16-pagevis postgresql-16-pagevis_0.1-1PIGSTY~jammy_arm64.deb pigsty 0.1 5.2KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/pagevis/postgresql-16-pagevis_0.1-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 16 postgresql-16-pagevis postgresql-16-pagevis_0.1-1PIGSTY~noble_amd64.deb pigsty 0.1 5.2KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pagevis/postgresql-16-pagevis_0.1-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 16 postgresql-16-pagevis postgresql-16-pagevis_0.1-1PIGSTY~noble_arm64.deb pigsty 0.1 5.2KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pagevis/postgresql-16-pagevis_0.1-1PIGSTY~noble_arm64.deb
-@ el8.x86_64 15 pagevis_15 pagevis_15-0.1-1PIGSTY.el8.x86_64.rpm pigsty 0.1 8.1KiB https://repo.pigsty.io/yum/pgsql/el8.x86_64/pagevis_15-0.1-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 15 pagevis_15 pagevis_15-0.1-1PIGSTY.el8.aarch64.rpm pigsty 0.1 8.1KiB https://repo.pigsty.io/yum/pgsql/el8.aarch64/pagevis_15-0.1-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 15 pagevis_15 pagevis_15-0.1-1PIGSTY.el9.x86_64.rpm pigsty 0.1 8.2KiB https://repo.pigsty.io/yum/pgsql/el9.x86_64/pagevis_15-0.1-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 15 pagevis_15 pagevis_15-0.1-1PIGSTY.el9.aarch64.rpm pigsty 0.1 8.1KiB https://repo.pigsty.io/yum/pgsql/el9.aarch64/pagevis_15-0.1-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 15 pagevis_15 pagevis_15-0.1-1PIGSTY.el10.x86_64.rpm pigsty 0.1 8.2KiB https://repo.pigsty.io/yum/pgsql/el10.x86_64/pagevis_15-0.1-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 15 pagevis_15 pagevis_15-0.1-1PIGSTY.el10.aarch64.rpm pigsty 0.1 8.2KiB https://repo.pigsty.io/yum/pgsql/el10.aarch64/pagevis_15-0.1-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 15 postgresql-15-pagevis postgresql-15-pagevis_0.1-1PIGSTY~bookworm_amd64.deb pigsty 0.1 5.2KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/pagevis/postgresql-15-pagevis_0.1-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 15 postgresql-15-pagevis postgresql-15-pagevis_0.1-1PIGSTY~bookworm_arm64.deb pigsty 0.1 5.2KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/pagevis/postgresql-15-pagevis_0.1-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 15 postgresql-15-pagevis postgresql-15-pagevis_0.1-1PIGSTY~trixie_amd64.deb pigsty 0.1 5.2KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pagevis/postgresql-15-pagevis_0.1-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 15 postgresql-15-pagevis postgresql-15-pagevis_0.1-1PIGSTY~trixie_arm64.deb pigsty 0.1 5.2KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pagevis/postgresql-15-pagevis_0.1-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 15 postgresql-15-pagevis postgresql-15-pagevis_0.1-1PIGSTY~jammy_amd64.deb pigsty 0.1 5.2KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/pagevis/postgresql-15-pagevis_0.1-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 15 postgresql-15-pagevis postgresql-15-pagevis_0.1-1PIGSTY~jammy_arm64.deb pigsty 0.1 5.2KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/pagevis/postgresql-15-pagevis_0.1-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 15 postgresql-15-pagevis postgresql-15-pagevis_0.1-1PIGSTY~noble_amd64.deb pigsty 0.1 5.2KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pagevis/postgresql-15-pagevis_0.1-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 15 postgresql-15-pagevis postgresql-15-pagevis_0.1-1PIGSTY~noble_arm64.deb pigsty 0.1 5.2KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pagevis/postgresql-15-pagevis_0.1-1PIGSTY~noble_arm64.deb
-@ el8.x86_64 14 pagevis_14 pagevis_14-0.1-1PIGSTY.el8.x86_64.rpm pigsty 0.1 8.1KiB https://repo.pigsty.io/yum/pgsql/el8.x86_64/pagevis_14-0.1-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 14 pagevis_14 pagevis_14-0.1-1PIGSTY.el8.aarch64.rpm pigsty 0.1 8.1KiB https://repo.pigsty.io/yum/pgsql/el8.aarch64/pagevis_14-0.1-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 14 pagevis_14 pagevis_14-0.1-1PIGSTY.el9.x86_64.rpm pigsty 0.1 8.2KiB https://repo.pigsty.io/yum/pgsql/el9.x86_64/pagevis_14-0.1-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 14 pagevis_14 pagevis_14-0.1-1PIGSTY.el9.aarch64.rpm pigsty 0.1 8.1KiB https://repo.pigsty.io/yum/pgsql/el9.aarch64/pagevis_14-0.1-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 14 pagevis_14 pagevis_14-0.1-1PIGSTY.el10.x86_64.rpm pigsty 0.1 8.2KiB https://repo.pigsty.io/yum/pgsql/el10.x86_64/pagevis_14-0.1-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 14 pagevis_14 pagevis_14-0.1-1PIGSTY.el10.aarch64.rpm pigsty 0.1 8.2KiB https://repo.pigsty.io/yum/pgsql/el10.aarch64/pagevis_14-0.1-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 14 postgresql-14-pagevis postgresql-14-pagevis_0.1-1PIGSTY~bookworm_amd64.deb pigsty 0.1 5.2KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/pagevis/postgresql-14-pagevis_0.1-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 14 postgresql-14-pagevis postgresql-14-pagevis_0.1-1PIGSTY~bookworm_arm64.deb pigsty 0.1 5.2KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/pagevis/postgresql-14-pagevis_0.1-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 14 postgresql-14-pagevis postgresql-14-pagevis_0.1-1PIGSTY~trixie_amd64.deb pigsty 0.1 5.2KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pagevis/postgresql-14-pagevis_0.1-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 14 postgresql-14-pagevis postgresql-14-pagevis_0.1-1PIGSTY~trixie_arm64.deb pigsty 0.1 5.2KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pagevis/postgresql-14-pagevis_0.1-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 14 postgresql-14-pagevis postgresql-14-pagevis_0.1-1PIGSTY~jammy_amd64.deb pigsty 0.1 5.2KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/pagevis/postgresql-14-pagevis_0.1-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 14 postgresql-14-pagevis postgresql-14-pagevis_0.1-1PIGSTY~jammy_arm64.deb pigsty 0.1 5.2KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/pagevis/postgresql-14-pagevis_0.1-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 14 postgresql-14-pagevis postgresql-14-pagevis_0.1-1PIGSTY~noble_amd64.deb pigsty 0.1 5.2KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pagevis/postgresql-14-pagevis_0.1-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 14 postgresql-14-pagevis postgresql-14-pagevis_0.1-1PIGSTY~noble_arm64.deb pigsty 0.1 5.2KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pagevis/postgresql-14-pagevis_0.1-1PIGSTY~noble_arm64.deb
+@ el8.x86_64 18 pagevis_18 pagevis_18-0.1-1PIGSTY.el8.x86_64.rpm pigsty 0.1 8.1KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pagevis_18-0.1-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 18 pagevis_18 pagevis_18-0.1-1PIGSTY.el8.aarch64.rpm pigsty 0.1 8.1KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pagevis_18-0.1-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 18 pagevis_18 pagevis_18-0.1-1PIGSTY.el9.x86_64.rpm pigsty 0.1 8.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pagevis_18-0.1-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 18 pagevis_18 pagevis_18-0.1-1PIGSTY.el9.aarch64.rpm pigsty 0.1 8.1KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pagevis_18-0.1-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 18 pagevis_18 pagevis_18-0.1-1PIGSTY.el10.x86_64.rpm pigsty 0.1 8.2KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pagevis_18-0.1-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 18 pagevis_18 pagevis_18-0.1-1PIGSTY.el10.aarch64.rpm pigsty 0.1 8.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pagevis_18-0.1-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-pagevis postgresql-18-pagevis_0.1-1PIGSTY~bookworm_amd64.deb pigsty 0.1 5.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pagevis/postgresql-18-pagevis_0.1-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 18 postgresql-18-pagevis postgresql-18-pagevis_0.1-1PIGSTY~bookworm_arm64.deb pigsty 0.1 5.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pagevis/postgresql-18-pagevis_0.1-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 18 postgresql-18-pagevis postgresql-18-pagevis_0.1-1PIGSTY~trixie_amd64.deb pigsty 0.1 5.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pagevis/postgresql-18-pagevis_0.1-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 18 postgresql-18-pagevis postgresql-18-pagevis_0.1-1PIGSTY~trixie_arm64.deb pigsty 0.1 5.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pagevis/postgresql-18-pagevis_0.1-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 18 postgresql-18-pagevis postgresql-18-pagevis_0.1-1PIGSTY~jammy_amd64.deb pigsty 0.1 5.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pagevis/postgresql-18-pagevis_0.1-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 18 postgresql-18-pagevis postgresql-18-pagevis_0.1-1PIGSTY~jammy_arm64.deb pigsty 0.1 5.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pagevis/postgresql-18-pagevis_0.1-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 18 postgresql-18-pagevis postgresql-18-pagevis_0.1-1PIGSTY~noble_amd64.deb pigsty 0.1 5.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pagevis/postgresql-18-pagevis_0.1-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 18 postgresql-18-pagevis postgresql-18-pagevis_0.1-1PIGSTY~noble_arm64.deb pigsty 0.1 5.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pagevis/postgresql-18-pagevis_0.1-1PIGSTY~noble_arm64.deb
+@ el8.x86_64 17 pagevis_17 pagevis_17-0.1-1PIGSTY.el8.x86_64.rpm pigsty 0.1 8.1KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pagevis_17-0.1-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 17 pagevis_17 pagevis_17-0.1-1PIGSTY.el8.aarch64.rpm pigsty 0.1 8.1KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pagevis_17-0.1-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 17 pagevis_17 pagevis_17-0.1-1PIGSTY.el9.x86_64.rpm pigsty 0.1 8.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pagevis_17-0.1-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 17 pagevis_17 pagevis_17-0.1-1PIGSTY.el9.aarch64.rpm pigsty 0.1 8.1KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pagevis_17-0.1-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 17 pagevis_17 pagevis_17-0.1-1PIGSTY.el10.x86_64.rpm pigsty 0.1 8.2KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pagevis_17-0.1-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 17 pagevis_17 pagevis_17-0.1-1PIGSTY.el10.aarch64.rpm pigsty 0.1 8.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pagevis_17-0.1-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-pagevis postgresql-17-pagevis_0.1-1PIGSTY~bookworm_amd64.deb pigsty 0.1 5.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pagevis/postgresql-17-pagevis_0.1-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 17 postgresql-17-pagevis postgresql-17-pagevis_0.1-1PIGSTY~bookworm_arm64.deb pigsty 0.1 5.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pagevis/postgresql-17-pagevis_0.1-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 17 postgresql-17-pagevis postgresql-17-pagevis_0.1-1PIGSTY~trixie_amd64.deb pigsty 0.1 5.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pagevis/postgresql-17-pagevis_0.1-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 17 postgresql-17-pagevis postgresql-17-pagevis_0.1-1PIGSTY~trixie_arm64.deb pigsty 0.1 5.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pagevis/postgresql-17-pagevis_0.1-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 17 postgresql-17-pagevis postgresql-17-pagevis_0.1-1PIGSTY~jammy_amd64.deb pigsty 0.1 5.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pagevis/postgresql-17-pagevis_0.1-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 17 postgresql-17-pagevis postgresql-17-pagevis_0.1-1PIGSTY~jammy_arm64.deb pigsty 0.1 5.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pagevis/postgresql-17-pagevis_0.1-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 17 postgresql-17-pagevis postgresql-17-pagevis_0.1-1PIGSTY~noble_amd64.deb pigsty 0.1 5.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pagevis/postgresql-17-pagevis_0.1-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 17 postgresql-17-pagevis postgresql-17-pagevis_0.1-1PIGSTY~noble_arm64.deb pigsty 0.1 5.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pagevis/postgresql-17-pagevis_0.1-1PIGSTY~noble_arm64.deb
+@ el8.x86_64 16 pagevis_16 pagevis_16-0.1-1PIGSTY.el8.x86_64.rpm pigsty 0.1 8.1KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pagevis_16-0.1-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 16 pagevis_16 pagevis_16-0.1-1PIGSTY.el8.aarch64.rpm pigsty 0.1 8.1KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pagevis_16-0.1-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 16 pagevis_16 pagevis_16-0.1-1PIGSTY.el9.x86_64.rpm pigsty 0.1 8.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pagevis_16-0.1-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 16 pagevis_16 pagevis_16-0.1-1PIGSTY.el9.aarch64.rpm pigsty 0.1 8.1KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pagevis_16-0.1-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 16 pagevis_16 pagevis_16-0.1-1PIGSTY.el10.x86_64.rpm pigsty 0.1 8.2KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pagevis_16-0.1-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 16 pagevis_16 pagevis_16-0.1-1PIGSTY.el10.aarch64.rpm pigsty 0.1 8.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pagevis_16-0.1-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 16 postgresql-16-pagevis postgresql-16-pagevis_0.1-1PIGSTY~bookworm_amd64.deb pigsty 0.1 5.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pagevis/postgresql-16-pagevis_0.1-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 16 postgresql-16-pagevis postgresql-16-pagevis_0.1-1PIGSTY~bookworm_arm64.deb pigsty 0.1 5.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pagevis/postgresql-16-pagevis_0.1-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 16 postgresql-16-pagevis postgresql-16-pagevis_0.1-1PIGSTY~trixie_amd64.deb pigsty 0.1 5.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pagevis/postgresql-16-pagevis_0.1-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 16 postgresql-16-pagevis postgresql-16-pagevis_0.1-1PIGSTY~trixie_arm64.deb pigsty 0.1 5.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pagevis/postgresql-16-pagevis_0.1-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 16 postgresql-16-pagevis postgresql-16-pagevis_0.1-1PIGSTY~jammy_amd64.deb pigsty 0.1 5.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pagevis/postgresql-16-pagevis_0.1-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 16 postgresql-16-pagevis postgresql-16-pagevis_0.1-1PIGSTY~jammy_arm64.deb pigsty 0.1 5.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pagevis/postgresql-16-pagevis_0.1-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 16 postgresql-16-pagevis postgresql-16-pagevis_0.1-1PIGSTY~noble_amd64.deb pigsty 0.1 5.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pagevis/postgresql-16-pagevis_0.1-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 16 postgresql-16-pagevis postgresql-16-pagevis_0.1-1PIGSTY~noble_arm64.deb pigsty 0.1 5.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pagevis/postgresql-16-pagevis_0.1-1PIGSTY~noble_arm64.deb
+@ el8.x86_64 15 pagevis_15 pagevis_15-0.1-1PIGSTY.el8.x86_64.rpm pigsty 0.1 8.1KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pagevis_15-0.1-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 15 pagevis_15 pagevis_15-0.1-1PIGSTY.el8.aarch64.rpm pigsty 0.1 8.1KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pagevis_15-0.1-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 15 pagevis_15 pagevis_15-0.1-1PIGSTY.el9.x86_64.rpm pigsty 0.1 8.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pagevis_15-0.1-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 15 pagevis_15 pagevis_15-0.1-1PIGSTY.el9.aarch64.rpm pigsty 0.1 8.1KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pagevis_15-0.1-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 15 pagevis_15 pagevis_15-0.1-1PIGSTY.el10.x86_64.rpm pigsty 0.1 8.2KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pagevis_15-0.1-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 15 pagevis_15 pagevis_15-0.1-1PIGSTY.el10.aarch64.rpm pigsty 0.1 8.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pagevis_15-0.1-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 15 postgresql-15-pagevis postgresql-15-pagevis_0.1-1PIGSTY~bookworm_amd64.deb pigsty 0.1 5.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pagevis/postgresql-15-pagevis_0.1-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 15 postgresql-15-pagevis postgresql-15-pagevis_0.1-1PIGSTY~bookworm_arm64.deb pigsty 0.1 5.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pagevis/postgresql-15-pagevis_0.1-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 15 postgresql-15-pagevis postgresql-15-pagevis_0.1-1PIGSTY~trixie_amd64.deb pigsty 0.1 5.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pagevis/postgresql-15-pagevis_0.1-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 15 postgresql-15-pagevis postgresql-15-pagevis_0.1-1PIGSTY~trixie_arm64.deb pigsty 0.1 5.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pagevis/postgresql-15-pagevis_0.1-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 15 postgresql-15-pagevis postgresql-15-pagevis_0.1-1PIGSTY~jammy_amd64.deb pigsty 0.1 5.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pagevis/postgresql-15-pagevis_0.1-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 15 postgresql-15-pagevis postgresql-15-pagevis_0.1-1PIGSTY~jammy_arm64.deb pigsty 0.1 5.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pagevis/postgresql-15-pagevis_0.1-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 15 postgresql-15-pagevis postgresql-15-pagevis_0.1-1PIGSTY~noble_amd64.deb pigsty 0.1 5.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pagevis/postgresql-15-pagevis_0.1-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 15 postgresql-15-pagevis postgresql-15-pagevis_0.1-1PIGSTY~noble_arm64.deb pigsty 0.1 5.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pagevis/postgresql-15-pagevis_0.1-1PIGSTY~noble_arm64.deb
+@ el8.x86_64 14 pagevis_14 pagevis_14-0.1-1PIGSTY.el8.x86_64.rpm pigsty 0.1 8.1KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pagevis_14-0.1-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 14 pagevis_14 pagevis_14-0.1-1PIGSTY.el8.aarch64.rpm pigsty 0.1 8.1KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pagevis_14-0.1-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 14 pagevis_14 pagevis_14-0.1-1PIGSTY.el9.x86_64.rpm pigsty 0.1 8.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pagevis_14-0.1-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 14 pagevis_14 pagevis_14-0.1-1PIGSTY.el9.aarch64.rpm pigsty 0.1 8.1KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pagevis_14-0.1-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 14 pagevis_14 pagevis_14-0.1-1PIGSTY.el10.x86_64.rpm pigsty 0.1 8.2KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pagevis_14-0.1-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 14 pagevis_14 pagevis_14-0.1-1PIGSTY.el10.aarch64.rpm pigsty 0.1 8.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pagevis_14-0.1-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 14 postgresql-14-pagevis postgresql-14-pagevis_0.1-1PIGSTY~bookworm_amd64.deb pigsty 0.1 5.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pagevis/postgresql-14-pagevis_0.1-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 14 postgresql-14-pagevis postgresql-14-pagevis_0.1-1PIGSTY~bookworm_arm64.deb pigsty 0.1 5.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pagevis/postgresql-14-pagevis_0.1-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 14 postgresql-14-pagevis postgresql-14-pagevis_0.1-1PIGSTY~trixie_amd64.deb pigsty 0.1 5.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pagevis/postgresql-14-pagevis_0.1-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 14 postgresql-14-pagevis postgresql-14-pagevis_0.1-1PIGSTY~trixie_arm64.deb pigsty 0.1 5.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pagevis/postgresql-14-pagevis_0.1-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 14 postgresql-14-pagevis postgresql-14-pagevis_0.1-1PIGSTY~jammy_amd64.deb pigsty 0.1 5.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pagevis/postgresql-14-pagevis_0.1-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 14 postgresql-14-pagevis postgresql-14-pagevis_0.1-1PIGSTY~jammy_arm64.deb pigsty 0.1 5.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pagevis/postgresql-14-pagevis_0.1-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 14 postgresql-14-pagevis postgresql-14-pagevis_0.1-1PIGSTY~noble_amd64.deb pigsty 0.1 5.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pagevis/postgresql-14-pagevis_0.1-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 14 postgresql-14-pagevis postgresql-14-pagevis_0.1-1PIGSTY~noble_arm64.deb pigsty 0.1 5.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pagevis/postgresql-14-pagevis_0.1-1PIGSTY~noble_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建

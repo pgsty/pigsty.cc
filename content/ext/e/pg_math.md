@@ -11,7 +11,7 @@ weight: 4780
     <div class="ext-card__title">chanukyasds/pg_math</div>
     <div class="ext-card__desc">https://github.com/chanukyasds/pg_math</div>
   </a>
-  <a class="ext-card ext-card--source" href="pg_math-1.1.0.tar.gz">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pg_math-1.1.0.tar.gz">
     <div class="ext-card__kicker">源码</div>
     <div class="ext-card__title">pg_math-1.1.0.tar.gz</div>
     <div class="ext-card__desc">pg_math-1.1.0.tar.gz</div>
@@ -64,76 +64,76 @@ weight: 4780
 | u22.aarch64 | AVAIL PIGSTY 1.1.0 1 | AVAIL PIGSTY 1.1.0 1 | AVAIL PIGSTY 1.1.0 1 | AVAIL PIGSTY 1.1.0 1 | AVAIL PIGSTY 1.1.0 1 |
 | u24.x86_64 | AVAIL PIGSTY 1.1.0 1 | AVAIL PIGSTY 1.1.0 1 | AVAIL PIGSTY 1.1.0 1 | AVAIL PIGSTY 1.1.0 1 | AVAIL PIGSTY 1.1.0 1 |
 | u24.aarch64 | AVAIL PIGSTY 1.1.0 1 | AVAIL PIGSTY 1.1.0 1 | AVAIL PIGSTY 1.1.0 1 | AVAIL PIGSTY 1.1.0 1 | AVAIL PIGSTY 1.1.0 1 |
-@ el8.x86_64 18 pg_math_18 pg_math_18-1.1.0-1PIGSTY.el8.x86_64.rpm pigsty 1.1.0 33.2KiB https://repo.pigsty.io/yum/pgsql/el8.x86_64/pg_math_18-1.1.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 18 pg_math_18 pg_math_18-1.1.0-1PIGSTY.el8.aarch64.rpm pigsty 1.1.0 31.1KiB https://repo.pigsty.io/yum/pgsql/el8.aarch64/pg_math_18-1.1.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 18 pg_math_18 pg_math_18-1.1.0-1PIGSTY.el9.x86_64.rpm pigsty 1.1.0 31.0KiB https://repo.pigsty.io/yum/pgsql/el9.x86_64/pg_math_18-1.1.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 18 pg_math_18 pg_math_18-1.1.0-1PIGSTY.el9.aarch64.rpm pigsty 1.1.0 29.8KiB https://repo.pigsty.io/yum/pgsql/el9.aarch64/pg_math_18-1.1.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 18 pg_math_18 pg_math_18-1.1.0-1PIGSTY.el10.x86_64.rpm pigsty 1.1.0 31.3KiB https://repo.pigsty.io/yum/pgsql/el10.x86_64/pg_math_18-1.1.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 18 pg_math_18 pg_math_18-1.1.0-1PIGSTY.el10.aarch64.rpm pigsty 1.1.0 30.2KiB https://repo.pigsty.io/yum/pgsql/el10.aarch64/pg_math_18-1.1.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 18 postgresql-18-pg-math postgresql-18-pg-math_1.1.0-1PIGSTY~bookworm_amd64.deb pigsty 1.1.0 60.7KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/pg-math/postgresql-18-pg-math_1.1.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 18 postgresql-18-pg-math postgresql-18-pg-math_1.1.0-1PIGSTY~bookworm_arm64.deb pigsty 1.1.0 59.7KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/pg-math/postgresql-18-pg-math_1.1.0-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 18 postgresql-18-pg-math postgresql-18-pg-math_1.1.0-1PIGSTY~trixie_amd64.deb pigsty 1.1.0 60.7KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pg-math/postgresql-18-pg-math_1.1.0-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 18 postgresql-18-pg-math postgresql-18-pg-math_1.1.0-1PIGSTY~trixie_arm64.deb pigsty 1.1.0 60.1KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pg-math/postgresql-18-pg-math_1.1.0-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 18 postgresql-18-pg-math postgresql-18-pg-math_1.1.0-1PIGSTY~jammy_amd64.deb pigsty 1.1.0 68.1KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/pg-math/postgresql-18-pg-math_1.1.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 18 postgresql-18-pg-math postgresql-18-pg-math_1.1.0-1PIGSTY~jammy_arm64.deb pigsty 1.1.0 67.0KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/pg-math/postgresql-18-pg-math_1.1.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 18 postgresql-18-pg-math postgresql-18-pg-math_1.1.0-1PIGSTY~noble_amd64.deb pigsty 1.1.0 64.9KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pg-math/postgresql-18-pg-math_1.1.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 18 postgresql-18-pg-math postgresql-18-pg-math_1.1.0-1PIGSTY~noble_arm64.deb pigsty 1.1.0 63.8KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pg-math/postgresql-18-pg-math_1.1.0-1PIGSTY~noble_arm64.deb
-@ el8.x86_64 17 pg_math_17 pg_math_17-1.1.0-1PIGSTY.el8.x86_64.rpm pigsty 1.1.0 33.2KiB https://repo.pigsty.io/yum/pgsql/el8.x86_64/pg_math_17-1.1.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 17 pg_math_17 pg_math_17-1.1.0-1PIGSTY.el8.aarch64.rpm pigsty 1.1.0 31.2KiB https://repo.pigsty.io/yum/pgsql/el8.aarch64/pg_math_17-1.1.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 17 pg_math_17 pg_math_17-1.1.0-1PIGSTY.el9.x86_64.rpm pigsty 1.1.0 31.0KiB https://repo.pigsty.io/yum/pgsql/el9.x86_64/pg_math_17-1.1.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 17 pg_math_17 pg_math_17-1.1.0-1PIGSTY.el9.aarch64.rpm pigsty 1.1.0 29.8KiB https://repo.pigsty.io/yum/pgsql/el9.aarch64/pg_math_17-1.1.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 17 pg_math_17 pg_math_17-1.1.0-1PIGSTY.el10.x86_64.rpm pigsty 1.1.0 31.3KiB https://repo.pigsty.io/yum/pgsql/el10.x86_64/pg_math_17-1.1.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 17 pg_math_17 pg_math_17-1.1.0-1PIGSTY.el10.aarch64.rpm pigsty 1.1.0 30.1KiB https://repo.pigsty.io/yum/pgsql/el10.aarch64/pg_math_17-1.1.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 17 postgresql-17-pg-math postgresql-17-pg-math_1.1.0-1PIGSTY~bookworm_amd64.deb pigsty 1.1.0 60.9KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/pg-math/postgresql-17-pg-math_1.1.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 17 postgresql-17-pg-math postgresql-17-pg-math_1.1.0-1PIGSTY~bookworm_arm64.deb pigsty 1.1.0 59.8KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/pg-math/postgresql-17-pg-math_1.1.0-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 17 postgresql-17-pg-math postgresql-17-pg-math_1.1.0-1PIGSTY~trixie_amd64.deb pigsty 1.1.0 60.4KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pg-math/postgresql-17-pg-math_1.1.0-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 17 postgresql-17-pg-math postgresql-17-pg-math_1.1.0-1PIGSTY~trixie_arm64.deb pigsty 1.1.0 60.1KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pg-math/postgresql-17-pg-math_1.1.0-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 17 postgresql-17-pg-math postgresql-17-pg-math_1.1.0-1PIGSTY~jammy_amd64.deb pigsty 1.1.0 68.8KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/pg-math/postgresql-17-pg-math_1.1.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 17 postgresql-17-pg-math postgresql-17-pg-math_1.1.0-1PIGSTY~jammy_arm64.deb pigsty 1.1.0 67.8KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/pg-math/postgresql-17-pg-math_1.1.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 17 postgresql-17-pg-math postgresql-17-pg-math_1.1.0-1PIGSTY~noble_amd64.deb pigsty 1.1.0 64.8KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pg-math/postgresql-17-pg-math_1.1.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 17 postgresql-17-pg-math postgresql-17-pg-math_1.1.0-1PIGSTY~noble_arm64.deb pigsty 1.1.0 63.7KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pg-math/postgresql-17-pg-math_1.1.0-1PIGSTY~noble_arm64.deb
-@ el8.x86_64 16 pg_math_16 pg_math_16-1.1.0-1PIGSTY.el8.x86_64.rpm pigsty 1.1.0 33.2KiB https://repo.pigsty.io/yum/pgsql/el8.x86_64/pg_math_16-1.1.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 16 pg_math_16 pg_math_16-1.1.0-1PIGSTY.el8.aarch64.rpm pigsty 1.1.0 31.2KiB https://repo.pigsty.io/yum/pgsql/el8.aarch64/pg_math_16-1.1.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 16 pg_math_16 pg_math_16-1.1.0-1PIGSTY.el9.x86_64.rpm pigsty 1.1.0 31.3KiB https://repo.pigsty.io/yum/pgsql/el9.x86_64/pg_math_16-1.1.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 16 pg_math_16 pg_math_16-1.1.0-1PIGSTY.el9.aarch64.rpm pigsty 1.1.0 29.8KiB https://repo.pigsty.io/yum/pgsql/el9.aarch64/pg_math_16-1.1.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 16 pg_math_16 pg_math_16-1.1.0-1PIGSTY.el10.x86_64.rpm pigsty 1.1.0 31.3KiB https://repo.pigsty.io/yum/pgsql/el10.x86_64/pg_math_16-1.1.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 16 pg_math_16 pg_math_16-1.1.0-1PIGSTY.el10.aarch64.rpm pigsty 1.1.0 30.1KiB https://repo.pigsty.io/yum/pgsql/el10.aarch64/pg_math_16-1.1.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 16 postgresql-16-pg-math postgresql-16-pg-math_1.1.0-1PIGSTY~bookworm_amd64.deb pigsty 1.1.0 60.7KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/pg-math/postgresql-16-pg-math_1.1.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 16 postgresql-16-pg-math postgresql-16-pg-math_1.1.0-1PIGSTY~bookworm_arm64.deb pigsty 1.1.0 59.9KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/pg-math/postgresql-16-pg-math_1.1.0-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 16 postgresql-16-pg-math postgresql-16-pg-math_1.1.0-1PIGSTY~trixie_amd64.deb pigsty 1.1.0 60.7KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pg-math/postgresql-16-pg-math_1.1.0-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 16 postgresql-16-pg-math postgresql-16-pg-math_1.1.0-1PIGSTY~trixie_arm64.deb pigsty 1.1.0 60.0KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pg-math/postgresql-16-pg-math_1.1.0-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 16 postgresql-16-pg-math postgresql-16-pg-math_1.1.0-1PIGSTY~jammy_amd64.deb pigsty 1.1.0 68.8KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/pg-math/postgresql-16-pg-math_1.1.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 16 postgresql-16-pg-math postgresql-16-pg-math_1.1.0-1PIGSTY~jammy_arm64.deb pigsty 1.1.0 67.8KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/pg-math/postgresql-16-pg-math_1.1.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 16 postgresql-16-pg-math postgresql-16-pg-math_1.1.0-1PIGSTY~noble_amd64.deb pigsty 1.1.0 64.8KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pg-math/postgresql-16-pg-math_1.1.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 16 postgresql-16-pg-math postgresql-16-pg-math_1.1.0-1PIGSTY~noble_arm64.deb pigsty 1.1.0 63.7KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pg-math/postgresql-16-pg-math_1.1.0-1PIGSTY~noble_arm64.deb
-@ el8.x86_64 15 pg_math_15 pg_math_15-1.1.0-1PIGSTY.el8.x86_64.rpm pigsty 1.1.0 33.2KiB https://repo.pigsty.io/yum/pgsql/el8.x86_64/pg_math_15-1.1.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 15 pg_math_15 pg_math_15-1.1.0-1PIGSTY.el8.aarch64.rpm pigsty 1.1.0 31.2KiB https://repo.pigsty.io/yum/pgsql/el8.aarch64/pg_math_15-1.1.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 15 pg_math_15 pg_math_15-1.1.0-1PIGSTY.el9.x86_64.rpm pigsty 1.1.0 31.0KiB https://repo.pigsty.io/yum/pgsql/el9.x86_64/pg_math_15-1.1.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 15 pg_math_15 pg_math_15-1.1.0-1PIGSTY.el9.aarch64.rpm pigsty 1.1.0 29.8KiB https://repo.pigsty.io/yum/pgsql/el9.aarch64/pg_math_15-1.1.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 15 pg_math_15 pg_math_15-1.1.0-1PIGSTY.el10.x86_64.rpm pigsty 1.1.0 31.3KiB https://repo.pigsty.io/yum/pgsql/el10.x86_64/pg_math_15-1.1.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 15 pg_math_15 pg_math_15-1.1.0-1PIGSTY.el10.aarch64.rpm pigsty 1.1.0 30.0KiB https://repo.pigsty.io/yum/pgsql/el10.aarch64/pg_math_15-1.1.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 15 postgresql-15-pg-math postgresql-15-pg-math_1.1.0-1PIGSTY~bookworm_amd64.deb pigsty 1.1.0 60.9KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/pg-math/postgresql-15-pg-math_1.1.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 15 postgresql-15-pg-math postgresql-15-pg-math_1.1.0-1PIGSTY~bookworm_arm64.deb pigsty 1.1.0 59.9KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/pg-math/postgresql-15-pg-math_1.1.0-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 15 postgresql-15-pg-math postgresql-15-pg-math_1.1.0-1PIGSTY~trixie_amd64.deb pigsty 1.1.0 60.6KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pg-math/postgresql-15-pg-math_1.1.0-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 15 postgresql-15-pg-math postgresql-15-pg-math_1.1.0-1PIGSTY~trixie_arm64.deb pigsty 1.1.0 60.2KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pg-math/postgresql-15-pg-math_1.1.0-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 15 postgresql-15-pg-math postgresql-15-pg-math_1.1.0-1PIGSTY~jammy_amd64.deb pigsty 1.1.0 68.8KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/pg-math/postgresql-15-pg-math_1.1.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 15 postgresql-15-pg-math postgresql-15-pg-math_1.1.0-1PIGSTY~jammy_arm64.deb pigsty 1.1.0 67.8KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/pg-math/postgresql-15-pg-math_1.1.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 15 postgresql-15-pg-math postgresql-15-pg-math_1.1.0-1PIGSTY~noble_amd64.deb pigsty 1.1.0 64.8KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pg-math/postgresql-15-pg-math_1.1.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 15 postgresql-15-pg-math postgresql-15-pg-math_1.1.0-1PIGSTY~noble_arm64.deb pigsty 1.1.0 63.7KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pg-math/postgresql-15-pg-math_1.1.0-1PIGSTY~noble_arm64.deb
-@ el8.x86_64 14 pg_math_14 pg_math_14-1.1.0-1PIGSTY.el8.x86_64.rpm pigsty 1.1.0 33.2KiB https://repo.pigsty.io/yum/pgsql/el8.x86_64/pg_math_14-1.1.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 14 pg_math_14 pg_math_14-1.1.0-1PIGSTY.el8.aarch64.rpm pigsty 1.1.0 31.1KiB https://repo.pigsty.io/yum/pgsql/el8.aarch64/pg_math_14-1.1.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 14 pg_math_14 pg_math_14-1.1.0-1PIGSTY.el9.x86_64.rpm pigsty 1.1.0 31.3KiB https://repo.pigsty.io/yum/pgsql/el9.x86_64/pg_math_14-1.1.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 14 pg_math_14 pg_math_14-1.1.0-1PIGSTY.el9.aarch64.rpm pigsty 1.1.0 29.8KiB https://repo.pigsty.io/yum/pgsql/el9.aarch64/pg_math_14-1.1.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 14 pg_math_14 pg_math_14-1.1.0-1PIGSTY.el10.x86_64.rpm pigsty 1.1.0 31.3KiB https://repo.pigsty.io/yum/pgsql/el10.x86_64/pg_math_14-1.1.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 14 pg_math_14 pg_math_14-1.1.0-1PIGSTY.el10.aarch64.rpm pigsty 1.1.0 30.1KiB https://repo.pigsty.io/yum/pgsql/el10.aarch64/pg_math_14-1.1.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 14 postgresql-14-pg-math postgresql-14-pg-math_1.1.0-1PIGSTY~bookworm_amd64.deb pigsty 1.1.0 60.6KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/pg-math/postgresql-14-pg-math_1.1.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 14 postgresql-14-pg-math postgresql-14-pg-math_1.1.0-1PIGSTY~bookworm_arm64.deb pigsty 1.1.0 59.7KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/pg-math/postgresql-14-pg-math_1.1.0-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 14 postgresql-14-pg-math postgresql-14-pg-math_1.1.0-1PIGSTY~trixie_amd64.deb pigsty 1.1.0 60.5KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pg-math/postgresql-14-pg-math_1.1.0-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 14 postgresql-14-pg-math postgresql-14-pg-math_1.1.0-1PIGSTY~trixie_arm64.deb pigsty 1.1.0 60.0KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pg-math/postgresql-14-pg-math_1.1.0-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 14 postgresql-14-pg-math postgresql-14-pg-math_1.1.0-1PIGSTY~jammy_amd64.deb pigsty 1.1.0 68.7KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/pg-math/postgresql-14-pg-math_1.1.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 14 postgresql-14-pg-math postgresql-14-pg-math_1.1.0-1PIGSTY~jammy_arm64.deb pigsty 1.1.0 67.5KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/pg-math/postgresql-14-pg-math_1.1.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 14 postgresql-14-pg-math postgresql-14-pg-math_1.1.0-1PIGSTY~noble_amd64.deb pigsty 1.1.0 64.8KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pg-math/postgresql-14-pg-math_1.1.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 14 postgresql-14-pg-math postgresql-14-pg-math_1.1.0-1PIGSTY~noble_arm64.deb pigsty 1.1.0 63.7KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pg-math/postgresql-14-pg-math_1.1.0-1PIGSTY~noble_arm64.deb
+@ el8.x86_64 18 pg_math_18 pg_math_18-1.1.0-1PIGSTY.el8.x86_64.rpm pigsty 1.1.0 33.2KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_math_18-1.1.0-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 18 pg_math_18 pg_math_18-1.1.0-1PIGSTY.el8.aarch64.rpm pigsty 1.1.0 31.1KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_math_18-1.1.0-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 18 pg_math_18 pg_math_18-1.1.0-1PIGSTY.el9.x86_64.rpm pigsty 1.1.0 31.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_math_18-1.1.0-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 18 pg_math_18 pg_math_18-1.1.0-1PIGSTY.el9.aarch64.rpm pigsty 1.1.0 29.8KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_math_18-1.1.0-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 18 pg_math_18 pg_math_18-1.1.0-1PIGSTY.el10.x86_64.rpm pigsty 1.1.0 31.3KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_math_18-1.1.0-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 18 pg_math_18 pg_math_18-1.1.0-1PIGSTY.el10.aarch64.rpm pigsty 1.1.0 30.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_math_18-1.1.0-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-pg-math postgresql-18-pg-math_1.1.0-1PIGSTY~bookworm_amd64.deb pigsty 1.1.0 60.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-math/postgresql-18-pg-math_1.1.0-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 18 postgresql-18-pg-math postgresql-18-pg-math_1.1.0-1PIGSTY~bookworm_arm64.deb pigsty 1.1.0 59.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-math/postgresql-18-pg-math_1.1.0-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 18 postgresql-18-pg-math postgresql-18-pg-math_1.1.0-1PIGSTY~trixie_amd64.deb pigsty 1.1.0 60.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-math/postgresql-18-pg-math_1.1.0-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 18 postgresql-18-pg-math postgresql-18-pg-math_1.1.0-1PIGSTY~trixie_arm64.deb pigsty 1.1.0 60.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-math/postgresql-18-pg-math_1.1.0-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 18 postgresql-18-pg-math postgresql-18-pg-math_1.1.0-1PIGSTY~jammy_amd64.deb pigsty 1.1.0 68.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-math/postgresql-18-pg-math_1.1.0-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 18 postgresql-18-pg-math postgresql-18-pg-math_1.1.0-1PIGSTY~jammy_arm64.deb pigsty 1.1.0 67.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-math/postgresql-18-pg-math_1.1.0-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 18 postgresql-18-pg-math postgresql-18-pg-math_1.1.0-1PIGSTY~noble_amd64.deb pigsty 1.1.0 64.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-math/postgresql-18-pg-math_1.1.0-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 18 postgresql-18-pg-math postgresql-18-pg-math_1.1.0-1PIGSTY~noble_arm64.deb pigsty 1.1.0 63.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-math/postgresql-18-pg-math_1.1.0-1PIGSTY~noble_arm64.deb
+@ el8.x86_64 17 pg_math_17 pg_math_17-1.1.0-1PIGSTY.el8.x86_64.rpm pigsty 1.1.0 33.2KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_math_17-1.1.0-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 17 pg_math_17 pg_math_17-1.1.0-1PIGSTY.el8.aarch64.rpm pigsty 1.1.0 31.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_math_17-1.1.0-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 17 pg_math_17 pg_math_17-1.1.0-1PIGSTY.el9.x86_64.rpm pigsty 1.1.0 31.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_math_17-1.1.0-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 17 pg_math_17 pg_math_17-1.1.0-1PIGSTY.el9.aarch64.rpm pigsty 1.1.0 29.8KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_math_17-1.1.0-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 17 pg_math_17 pg_math_17-1.1.0-1PIGSTY.el10.x86_64.rpm pigsty 1.1.0 31.3KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_math_17-1.1.0-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 17 pg_math_17 pg_math_17-1.1.0-1PIGSTY.el10.aarch64.rpm pigsty 1.1.0 30.1KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_math_17-1.1.0-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-pg-math postgresql-17-pg-math_1.1.0-1PIGSTY~bookworm_amd64.deb pigsty 1.1.0 60.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-math/postgresql-17-pg-math_1.1.0-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 17 postgresql-17-pg-math postgresql-17-pg-math_1.1.0-1PIGSTY~bookworm_arm64.deb pigsty 1.1.0 59.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-math/postgresql-17-pg-math_1.1.0-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 17 postgresql-17-pg-math postgresql-17-pg-math_1.1.0-1PIGSTY~trixie_amd64.deb pigsty 1.1.0 60.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-math/postgresql-17-pg-math_1.1.0-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 17 postgresql-17-pg-math postgresql-17-pg-math_1.1.0-1PIGSTY~trixie_arm64.deb pigsty 1.1.0 60.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-math/postgresql-17-pg-math_1.1.0-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 17 postgresql-17-pg-math postgresql-17-pg-math_1.1.0-1PIGSTY~jammy_amd64.deb pigsty 1.1.0 68.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-math/postgresql-17-pg-math_1.1.0-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 17 postgresql-17-pg-math postgresql-17-pg-math_1.1.0-1PIGSTY~jammy_arm64.deb pigsty 1.1.0 67.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-math/postgresql-17-pg-math_1.1.0-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 17 postgresql-17-pg-math postgresql-17-pg-math_1.1.0-1PIGSTY~noble_amd64.deb pigsty 1.1.0 64.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-math/postgresql-17-pg-math_1.1.0-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 17 postgresql-17-pg-math postgresql-17-pg-math_1.1.0-1PIGSTY~noble_arm64.deb pigsty 1.1.0 63.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-math/postgresql-17-pg-math_1.1.0-1PIGSTY~noble_arm64.deb
+@ el8.x86_64 16 pg_math_16 pg_math_16-1.1.0-1PIGSTY.el8.x86_64.rpm pigsty 1.1.0 33.2KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_math_16-1.1.0-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 16 pg_math_16 pg_math_16-1.1.0-1PIGSTY.el8.aarch64.rpm pigsty 1.1.0 31.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_math_16-1.1.0-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 16 pg_math_16 pg_math_16-1.1.0-1PIGSTY.el9.x86_64.rpm pigsty 1.1.0 31.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_math_16-1.1.0-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 16 pg_math_16 pg_math_16-1.1.0-1PIGSTY.el9.aarch64.rpm pigsty 1.1.0 29.8KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_math_16-1.1.0-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 16 pg_math_16 pg_math_16-1.1.0-1PIGSTY.el10.x86_64.rpm pigsty 1.1.0 31.3KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_math_16-1.1.0-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 16 pg_math_16 pg_math_16-1.1.0-1PIGSTY.el10.aarch64.rpm pigsty 1.1.0 30.1KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_math_16-1.1.0-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 16 postgresql-16-pg-math postgresql-16-pg-math_1.1.0-1PIGSTY~bookworm_amd64.deb pigsty 1.1.0 60.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-math/postgresql-16-pg-math_1.1.0-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 16 postgresql-16-pg-math postgresql-16-pg-math_1.1.0-1PIGSTY~bookworm_arm64.deb pigsty 1.1.0 59.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-math/postgresql-16-pg-math_1.1.0-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 16 postgresql-16-pg-math postgresql-16-pg-math_1.1.0-1PIGSTY~trixie_amd64.deb pigsty 1.1.0 60.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-math/postgresql-16-pg-math_1.1.0-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 16 postgresql-16-pg-math postgresql-16-pg-math_1.1.0-1PIGSTY~trixie_arm64.deb pigsty 1.1.0 60.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-math/postgresql-16-pg-math_1.1.0-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 16 postgresql-16-pg-math postgresql-16-pg-math_1.1.0-1PIGSTY~jammy_amd64.deb pigsty 1.1.0 68.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-math/postgresql-16-pg-math_1.1.0-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 16 postgresql-16-pg-math postgresql-16-pg-math_1.1.0-1PIGSTY~jammy_arm64.deb pigsty 1.1.0 67.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-math/postgresql-16-pg-math_1.1.0-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 16 postgresql-16-pg-math postgresql-16-pg-math_1.1.0-1PIGSTY~noble_amd64.deb pigsty 1.1.0 64.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-math/postgresql-16-pg-math_1.1.0-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 16 postgresql-16-pg-math postgresql-16-pg-math_1.1.0-1PIGSTY~noble_arm64.deb pigsty 1.1.0 63.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-math/postgresql-16-pg-math_1.1.0-1PIGSTY~noble_arm64.deb
+@ el8.x86_64 15 pg_math_15 pg_math_15-1.1.0-1PIGSTY.el8.x86_64.rpm pigsty 1.1.0 33.2KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_math_15-1.1.0-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 15 pg_math_15 pg_math_15-1.1.0-1PIGSTY.el8.aarch64.rpm pigsty 1.1.0 31.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_math_15-1.1.0-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 15 pg_math_15 pg_math_15-1.1.0-1PIGSTY.el9.x86_64.rpm pigsty 1.1.0 31.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_math_15-1.1.0-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 15 pg_math_15 pg_math_15-1.1.0-1PIGSTY.el9.aarch64.rpm pigsty 1.1.0 29.8KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_math_15-1.1.0-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 15 pg_math_15 pg_math_15-1.1.0-1PIGSTY.el10.x86_64.rpm pigsty 1.1.0 31.3KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_math_15-1.1.0-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 15 pg_math_15 pg_math_15-1.1.0-1PIGSTY.el10.aarch64.rpm pigsty 1.1.0 30.0KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_math_15-1.1.0-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 15 postgresql-15-pg-math postgresql-15-pg-math_1.1.0-1PIGSTY~bookworm_amd64.deb pigsty 1.1.0 60.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-math/postgresql-15-pg-math_1.1.0-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 15 postgresql-15-pg-math postgresql-15-pg-math_1.1.0-1PIGSTY~bookworm_arm64.deb pigsty 1.1.0 59.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-math/postgresql-15-pg-math_1.1.0-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 15 postgresql-15-pg-math postgresql-15-pg-math_1.1.0-1PIGSTY~trixie_amd64.deb pigsty 1.1.0 60.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-math/postgresql-15-pg-math_1.1.0-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 15 postgresql-15-pg-math postgresql-15-pg-math_1.1.0-1PIGSTY~trixie_arm64.deb pigsty 1.1.0 60.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-math/postgresql-15-pg-math_1.1.0-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 15 postgresql-15-pg-math postgresql-15-pg-math_1.1.0-1PIGSTY~jammy_amd64.deb pigsty 1.1.0 68.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-math/postgresql-15-pg-math_1.1.0-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 15 postgresql-15-pg-math postgresql-15-pg-math_1.1.0-1PIGSTY~jammy_arm64.deb pigsty 1.1.0 67.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-math/postgresql-15-pg-math_1.1.0-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 15 postgresql-15-pg-math postgresql-15-pg-math_1.1.0-1PIGSTY~noble_amd64.deb pigsty 1.1.0 64.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-math/postgresql-15-pg-math_1.1.0-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 15 postgresql-15-pg-math postgresql-15-pg-math_1.1.0-1PIGSTY~noble_arm64.deb pigsty 1.1.0 63.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-math/postgresql-15-pg-math_1.1.0-1PIGSTY~noble_arm64.deb
+@ el8.x86_64 14 pg_math_14 pg_math_14-1.1.0-1PIGSTY.el8.x86_64.rpm pigsty 1.1.0 33.2KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_math_14-1.1.0-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 14 pg_math_14 pg_math_14-1.1.0-1PIGSTY.el8.aarch64.rpm pigsty 1.1.0 31.1KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_math_14-1.1.0-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 14 pg_math_14 pg_math_14-1.1.0-1PIGSTY.el9.x86_64.rpm pigsty 1.1.0 31.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_math_14-1.1.0-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 14 pg_math_14 pg_math_14-1.1.0-1PIGSTY.el9.aarch64.rpm pigsty 1.1.0 29.8KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_math_14-1.1.0-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 14 pg_math_14 pg_math_14-1.1.0-1PIGSTY.el10.x86_64.rpm pigsty 1.1.0 31.3KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_math_14-1.1.0-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 14 pg_math_14 pg_math_14-1.1.0-1PIGSTY.el10.aarch64.rpm pigsty 1.1.0 30.1KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_math_14-1.1.0-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 14 postgresql-14-pg-math postgresql-14-pg-math_1.1.0-1PIGSTY~bookworm_amd64.deb pigsty 1.1.0 60.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-math/postgresql-14-pg-math_1.1.0-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 14 postgresql-14-pg-math postgresql-14-pg-math_1.1.0-1PIGSTY~bookworm_arm64.deb pigsty 1.1.0 59.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-math/postgresql-14-pg-math_1.1.0-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 14 postgresql-14-pg-math postgresql-14-pg-math_1.1.0-1PIGSTY~trixie_amd64.deb pigsty 1.1.0 60.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-math/postgresql-14-pg-math_1.1.0-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 14 postgresql-14-pg-math postgresql-14-pg-math_1.1.0-1PIGSTY~trixie_arm64.deb pigsty 1.1.0 60.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-math/postgresql-14-pg-math_1.1.0-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 14 postgresql-14-pg-math postgresql-14-pg-math_1.1.0-1PIGSTY~jammy_amd64.deb pigsty 1.1.0 68.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-math/postgresql-14-pg-math_1.1.0-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 14 postgresql-14-pg-math postgresql-14-pg-math_1.1.0-1PIGSTY~jammy_arm64.deb pigsty 1.1.0 67.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-math/postgresql-14-pg-math_1.1.0-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 14 postgresql-14-pg-math postgresql-14-pg-math_1.1.0-1PIGSTY~noble_amd64.deb pigsty 1.1.0 64.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-math/postgresql-14-pg-math_1.1.0-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 14 postgresql-14-pg-math postgresql-14-pg-math_1.1.0-1PIGSTY~noble_arm64.deb pigsty 1.1.0 63.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-math/postgresql-14-pg-math_1.1.0-1PIGSTY~noble_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建

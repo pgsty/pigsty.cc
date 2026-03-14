@@ -25,7 +25,7 @@ weight: 9250
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
 |:-----:|:-------------------------------------------------------------------------|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|:----------|
-| 9250  | [**`pg_dbms_lock`**](/ext/e/pg_dbms_lock) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | - |
+| 9250  | [**`pg_dbms_lock`**](/ext/e/pg_dbms_lock) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `dbms_lock` |
 {.ext-table}
 
 | **相关扩展** | [`orafce`](/ext/e/orafce) [`session_variable`](/ext/e/session_variable) [`pg_dbms_metadata`](/ext/e/pg_dbms_metadata) [`pg_dbms_job`](/ext/e/pg_dbms_job) [`oracle_fdw`](/ext/e/oracle_fdw) [`pgtt`](/ext/e/pgtt) [`pg_statement_rollback`](/ext/e/pg_statement_rollback) [`mysql_fdw`](/ext/e/mysql_fdw) |
@@ -58,36 +58,36 @@ weight: 9250
 | u22.aarch64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
 | u24.x86_64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
 | u24.aarch64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
-@ el8.x86_64 18 pg_dbms_lock_18 pg_dbms_lock_18-1.0-3PGDG.rhel8.noarch.rpm pgdg 1.0 12.7KiB https://download.postgresql.org/pub/repos/yum/18/redhat/rhel-8-x86_64/pg_dbms_lock_18-1.0-3PGDG.rhel8.noarch.rpm
-@ el8.aarch64 18 pg_dbms_lock_18 pg_dbms_lock_18-1.0-3PGDG.rhel8.noarch.rpm pgdg 1.0 12.7KiB https://download.postgresql.org/pub/repos/yum/18/redhat/rhel-8-aarch64/pg_dbms_lock_18-1.0-3PGDG.rhel8.noarch.rpm
-@ el9.x86_64 18 pg_dbms_lock_18 pg_dbms_lock_18-1.0-3PGDG.rhel9.noarch.rpm pgdg 1.0 12.6KiB https://download.postgresql.org/pub/repos/yum/18/redhat/rhel-9-x86_64/pg_dbms_lock_18-1.0-3PGDG.rhel9.noarch.rpm
-@ el9.aarch64 18 pg_dbms_lock_18 pg_dbms_lock_18-1.0-3PGDG.rhel9.noarch.rpm pgdg 1.0 12.6KiB https://download.postgresql.org/pub/repos/yum/18/redhat/rhel-9-aarch64/pg_dbms_lock_18-1.0-3PGDG.rhel9.noarch.rpm
-@ el10.x86_64 18 pg_dbms_lock_18 pg_dbms_lock_18-1.0-3PGDG.rhel10.noarch.rpm pgdg 1.0 13.1KiB https://download.postgresql.org/pub/repos/yum/18/redhat/rhel-10-x86_64/pg_dbms_lock_18-1.0-3PGDG.rhel10.noarch.rpm
-@ el10.aarch64 18 pg_dbms_lock_18 pg_dbms_lock_18-1.0-3PGDG.rhel10.noarch.rpm pgdg 1.0 13.1KiB https://download.postgresql.org/pub/repos/yum/18/redhat/rhel-10-aarch64/pg_dbms_lock_18-1.0-3PGDG.rhel10.noarch.rpm
-@ el8.x86_64 17 pg_dbms_lock_17 pg_dbms_lock_17-1.0-1PGDG.rhel8.noarch.rpm pgdg 1.0 12.5KiB https://download.postgresql.org/pub/repos/yum/17/redhat/rhel-8-x86_64/pg_dbms_lock_17-1.0-1PGDG.rhel8.noarch.rpm
-@ el8.aarch64 17 pg_dbms_lock_17 pg_dbms_lock_17-1.0-1PGDG.rhel8.noarch.rpm pgdg 1.0 12.5KiB https://download.postgresql.org/pub/repos/yum/17/redhat/rhel-8-aarch64/pg_dbms_lock_17-1.0-1PGDG.rhel8.noarch.rpm
-@ el9.x86_64 17 pg_dbms_lock_17 pg_dbms_lock_17-1.0-1PGDG.rhel9.noarch.rpm pgdg 1.0 12.4KiB https://download.postgresql.org/pub/repos/yum/17/redhat/rhel-9-x86_64/pg_dbms_lock_17-1.0-1PGDG.rhel9.noarch.rpm
-@ el9.aarch64 17 pg_dbms_lock_17 pg_dbms_lock_17-1.0-1PGDG.rhel9.noarch.rpm pgdg 1.0 12.4KiB https://download.postgresql.org/pub/repos/yum/17/redhat/rhel-9-aarch64/pg_dbms_lock_17-1.0-1PGDG.rhel9.noarch.rpm
-@ el10.x86_64 17 pg_dbms_lock_17 pg_dbms_lock_17-1.0-2PGDG.rhel10.noarch.rpm pgdg 1.0 13.0KiB https://download.postgresql.org/pub/repos/yum/17/redhat/rhel-10-x86_64/pg_dbms_lock_17-1.0-2PGDG.rhel10.noarch.rpm
-@ el10.aarch64 17 pg_dbms_lock_17 pg_dbms_lock_17-1.0-2PGDG.rhel10.noarch.rpm pgdg 1.0 13.0KiB https://download.postgresql.org/pub/repos/yum/17/redhat/rhel-10-aarch64/pg_dbms_lock_17-1.0-2PGDG.rhel10.noarch.rpm
-@ el8.x86_64 16 pg_dbms_lock_16 pg_dbms_lock_16-1.0-1PGDG.rhel8.noarch.rpm pgdg 1.0 12.5KiB https://download.postgresql.org/pub/repos/yum/16/redhat/rhel-8-x86_64/pg_dbms_lock_16-1.0-1PGDG.rhel8.noarch.rpm
-@ el8.aarch64 16 pg_dbms_lock_16 pg_dbms_lock_16-1.0-1PGDG.rhel8.noarch.rpm pgdg 1.0 12.5KiB https://download.postgresql.org/pub/repos/yum/16/redhat/rhel-8-aarch64/pg_dbms_lock_16-1.0-1PGDG.rhel8.noarch.rpm
-@ el9.x86_64 16 pg_dbms_lock_16 pg_dbms_lock_16-1.0-1PGDG.rhel9.noarch.rpm pgdg 1.0 12.4KiB https://download.postgresql.org/pub/repos/yum/16/redhat/rhel-9-x86_64/pg_dbms_lock_16-1.0-1PGDG.rhel9.noarch.rpm
-@ el9.aarch64 16 pg_dbms_lock_16 pg_dbms_lock_16-1.0-1PGDG.rhel9.noarch.rpm pgdg 1.0 12.2KiB https://download.postgresql.org/pub/repos/yum/16/redhat/rhel-9-aarch64/pg_dbms_lock_16-1.0-1PGDG.rhel9.noarch.rpm
-@ el10.x86_64 16 pg_dbms_lock_16 pg_dbms_lock_16-1.0-2PGDG.rhel10.noarch.rpm pgdg 1.0 13.0KiB https://download.postgresql.org/pub/repos/yum/16/redhat/rhel-10-x86_64/pg_dbms_lock_16-1.0-2PGDG.rhel10.noarch.rpm
-@ el10.aarch64 16 pg_dbms_lock_16 pg_dbms_lock_16-1.0-2PGDG.rhel10.noarch.rpm pgdg 1.0 13.0KiB https://download.postgresql.org/pub/repos/yum/16/redhat/rhel-10-aarch64/pg_dbms_lock_16-1.0-2PGDG.rhel10.noarch.rpm
-@ el8.x86_64 15 pg_dbms_lock_15 pg_dbms_lock_15-1.0-1PGDG.rhel8.noarch.rpm pgdg 1.0 12.5KiB https://download.postgresql.org/pub/repos/yum/15/redhat/rhel-8-x86_64/pg_dbms_lock_15-1.0-1PGDG.rhel8.noarch.rpm
-@ el8.aarch64 15 pg_dbms_lock_15 pg_dbms_lock_15-1.0-1PGDG.rhel8.noarch.rpm pgdg 1.0 12.5KiB https://download.postgresql.org/pub/repos/yum/15/redhat/rhel-8-aarch64/pg_dbms_lock_15-1.0-1PGDG.rhel8.noarch.rpm
-@ el9.x86_64 15 pg_dbms_lock_15 pg_dbms_lock_15-1.0-1PGDG.rhel9.noarch.rpm pgdg 1.0 12.4KiB https://download.postgresql.org/pub/repos/yum/15/redhat/rhel-9-x86_64/pg_dbms_lock_15-1.0-1PGDG.rhel9.noarch.rpm
-@ el9.aarch64 15 pg_dbms_lock_15 pg_dbms_lock_15-1.0-1PGDG.rhel9.noarch.rpm pgdg 1.0 12.2KiB https://download.postgresql.org/pub/repos/yum/15/redhat/rhel-9-aarch64/pg_dbms_lock_15-1.0-1PGDG.rhel9.noarch.rpm
-@ el10.x86_64 15 pg_dbms_lock_15 pg_dbms_lock_15-1.0-2PGDG.rhel10.noarch.rpm pgdg 1.0 13.0KiB https://download.postgresql.org/pub/repos/yum/15/redhat/rhel-10-x86_64/pg_dbms_lock_15-1.0-2PGDG.rhel10.noarch.rpm
-@ el10.aarch64 15 pg_dbms_lock_15 pg_dbms_lock_15-1.0-2PGDG.rhel10.noarch.rpm pgdg 1.0 13.0KiB https://download.postgresql.org/pub/repos/yum/15/redhat/rhel-10-aarch64/pg_dbms_lock_15-1.0-2PGDG.rhel10.noarch.rpm
-@ el8.x86_64 14 pg_dbms_lock_14 pg_dbms_lock_14-1.0-1PGDG.rhel8.noarch.rpm pgdg 1.0 12.5KiB https://download.postgresql.org/pub/repos/yum/14/redhat/rhel-8-x86_64/pg_dbms_lock_14-1.0-1PGDG.rhel8.noarch.rpm
-@ el8.aarch64 14 pg_dbms_lock_14 pg_dbms_lock_14-1.0-1PGDG.rhel8.noarch.rpm pgdg 1.0 12.5KiB https://download.postgresql.org/pub/repos/yum/14/redhat/rhel-8-aarch64/pg_dbms_lock_14-1.0-1PGDG.rhel8.noarch.rpm
-@ el9.x86_64 14 pg_dbms_lock_14 pg_dbms_lock_14-1.0-1PGDG.rhel9.noarch.rpm pgdg 1.0 12.4KiB https://download.postgresql.org/pub/repos/yum/14/redhat/rhel-9-x86_64/pg_dbms_lock_14-1.0-1PGDG.rhel9.noarch.rpm
-@ el9.aarch64 14 pg_dbms_lock_14 pg_dbms_lock_14-1.0-1PGDG.rhel9.noarch.rpm pgdg 1.0 12.2KiB https://download.postgresql.org/pub/repos/yum/14/redhat/rhel-9-aarch64/pg_dbms_lock_14-1.0-1PGDG.rhel9.noarch.rpm
-@ el10.x86_64 14 pg_dbms_lock_14 pg_dbms_lock_14-1.0-2PGDG.rhel10.noarch.rpm pgdg 1.0 13.0KiB https://download.postgresql.org/pub/repos/yum/14/redhat/rhel-10-x86_64/pg_dbms_lock_14-1.0-2PGDG.rhel10.noarch.rpm
-@ el10.aarch64 14 pg_dbms_lock_14 pg_dbms_lock_14-1.0-2PGDG.rhel10.noarch.rpm pgdg 1.0 13.0KiB https://download.postgresql.org/pub/repos/yum/14/redhat/rhel-10-aarch64/pg_dbms_lock_14-1.0-2PGDG.rhel10.noarch.rpm
+@ el8.x86_64 18 pg_dbms_lock_18 pg_dbms_lock_18-1.0-3PGDG.rhel8.noarch.rpm pgdg 1.0 12.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pg_dbms_lock_18-1.0-3PGDG.rhel8.noarch.rpm
+@ el8.aarch64 18 pg_dbms_lock_18 pg_dbms_lock_18-1.0-3PGDG.rhel8.noarch.rpm pgdg 1.0 12.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pg_dbms_lock_18-1.0-3PGDG.rhel8.noarch.rpm
+@ el9.x86_64 18 pg_dbms_lock_18 pg_dbms_lock_18-1.0-3PGDG.rhel9.noarch.rpm pgdg 1.0 12.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pg_dbms_lock_18-1.0-3PGDG.rhel9.noarch.rpm
+@ el9.aarch64 18 pg_dbms_lock_18 pg_dbms_lock_18-1.0-3PGDG.rhel9.noarch.rpm pgdg 1.0 12.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pg_dbms_lock_18-1.0-3PGDG.rhel9.noarch.rpm
+@ el10.x86_64 18 pg_dbms_lock_18 pg_dbms_lock_18-1.0-3PGDG.rhel10.noarch.rpm pgdg 1.0 13.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pg_dbms_lock_18-1.0-3PGDG.rhel10.noarch.rpm
+@ el10.aarch64 18 pg_dbms_lock_18 pg_dbms_lock_18-1.0-3PGDG.rhel10.noarch.rpm pgdg 1.0 13.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_dbms_lock_18-1.0-3PGDG.rhel10.noarch.rpm
+@ el8.x86_64 17 pg_dbms_lock_17 pg_dbms_lock_17-1.0-1PGDG.rhel8.noarch.rpm pgdg 1.0 12.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pg_dbms_lock_17-1.0-1PGDG.rhel8.noarch.rpm
+@ el8.aarch64 17 pg_dbms_lock_17 pg_dbms_lock_17-1.0-1PGDG.rhel8.noarch.rpm pgdg 1.0 12.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pg_dbms_lock_17-1.0-1PGDG.rhel8.noarch.rpm
+@ el9.x86_64 17 pg_dbms_lock_17 pg_dbms_lock_17-1.0-1PGDG.rhel9.noarch.rpm pgdg 1.0 12.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_dbms_lock_17-1.0-1PGDG.rhel9.noarch.rpm
+@ el9.aarch64 17 pg_dbms_lock_17 pg_dbms_lock_17-1.0-1PGDG.rhel9.noarch.rpm pgdg 1.0 12.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_dbms_lock_17-1.0-1PGDG.rhel9.noarch.rpm
+@ el10.x86_64 17 pg_dbms_lock_17 pg_dbms_lock_17-1.0-2PGDG.rhel10.noarch.rpm pgdg 1.0 13.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_dbms_lock_17-1.0-2PGDG.rhel10.noarch.rpm
+@ el10.aarch64 17 pg_dbms_lock_17 pg_dbms_lock_17-1.0-2PGDG.rhel10.noarch.rpm pgdg 1.0 13.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_dbms_lock_17-1.0-2PGDG.rhel10.noarch.rpm
+@ el8.x86_64 16 pg_dbms_lock_16 pg_dbms_lock_16-1.0-1PGDG.rhel8.noarch.rpm pgdg 1.0 12.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_dbms_lock_16-1.0-1PGDG.rhel8.noarch.rpm
+@ el8.aarch64 16 pg_dbms_lock_16 pg_dbms_lock_16-1.0-1PGDG.rhel8.noarch.rpm pgdg 1.0 12.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pg_dbms_lock_16-1.0-1PGDG.rhel8.noarch.rpm
+@ el9.x86_64 16 pg_dbms_lock_16 pg_dbms_lock_16-1.0-1PGDG.rhel9.noarch.rpm pgdg 1.0 12.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_dbms_lock_16-1.0-1PGDG.rhel9.noarch.rpm
+@ el9.aarch64 16 pg_dbms_lock_16 pg_dbms_lock_16-1.0-1PGDG.rhel9.noarch.rpm pgdg 1.0 12.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_dbms_lock_16-1.0-1PGDG.rhel9.noarch.rpm
+@ el10.x86_64 16 pg_dbms_lock_16 pg_dbms_lock_16-1.0-2PGDG.rhel10.noarch.rpm pgdg 1.0 13.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_dbms_lock_16-1.0-2PGDG.rhel10.noarch.rpm
+@ el10.aarch64 16 pg_dbms_lock_16 pg_dbms_lock_16-1.0-2PGDG.rhel10.noarch.rpm pgdg 1.0 13.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_dbms_lock_16-1.0-2PGDG.rhel10.noarch.rpm
+@ el8.x86_64 15 pg_dbms_lock_15 pg_dbms_lock_15-1.0-1PGDG.rhel8.noarch.rpm pgdg 1.0 12.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_dbms_lock_15-1.0-1PGDG.rhel8.noarch.rpm
+@ el8.aarch64 15 pg_dbms_lock_15 pg_dbms_lock_15-1.0-1PGDG.rhel8.noarch.rpm pgdg 1.0 12.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pg_dbms_lock_15-1.0-1PGDG.rhel8.noarch.rpm
+@ el9.x86_64 15 pg_dbms_lock_15 pg_dbms_lock_15-1.0-1PGDG.rhel9.noarch.rpm pgdg 1.0 12.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_dbms_lock_15-1.0-1PGDG.rhel9.noarch.rpm
+@ el9.aarch64 15 pg_dbms_lock_15 pg_dbms_lock_15-1.0-1PGDG.rhel9.noarch.rpm pgdg 1.0 12.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_dbms_lock_15-1.0-1PGDG.rhel9.noarch.rpm
+@ el10.x86_64 15 pg_dbms_lock_15 pg_dbms_lock_15-1.0-2PGDG.rhel10.noarch.rpm pgdg 1.0 13.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_dbms_lock_15-1.0-2PGDG.rhel10.noarch.rpm
+@ el10.aarch64 15 pg_dbms_lock_15 pg_dbms_lock_15-1.0-2PGDG.rhel10.noarch.rpm pgdg 1.0 13.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_dbms_lock_15-1.0-2PGDG.rhel10.noarch.rpm
+@ el8.x86_64 14 pg_dbms_lock_14 pg_dbms_lock_14-1.0-1PGDG.rhel8.noarch.rpm pgdg 1.0 12.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_dbms_lock_14-1.0-1PGDG.rhel8.noarch.rpm
+@ el8.aarch64 14 pg_dbms_lock_14 pg_dbms_lock_14-1.0-1PGDG.rhel8.noarch.rpm pgdg 1.0 12.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pg_dbms_lock_14-1.0-1PGDG.rhel8.noarch.rpm
+@ el9.x86_64 14 pg_dbms_lock_14 pg_dbms_lock_14-1.0-1PGDG.rhel9.noarch.rpm pgdg 1.0 12.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_dbms_lock_14-1.0-1PGDG.rhel9.noarch.rpm
+@ el9.aarch64 14 pg_dbms_lock_14 pg_dbms_lock_14-1.0-1PGDG.rhel9.noarch.rpm pgdg 1.0 12.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_dbms_lock_14-1.0-1PGDG.rhel9.noarch.rpm
+@ el10.x86_64 14 pg_dbms_lock_14 pg_dbms_lock_14-1.0-2PGDG.rhel10.noarch.rpm pgdg 1.0 13.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_dbms_lock_14-1.0-2PGDG.rhel10.noarch.rpm
+@ el10.aarch64 14 pg_dbms_lock_14 pg_dbms_lock_14-1.0-2PGDG.rhel10.noarch.rpm pgdg 1.0 13.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_dbms_lock_14-1.0-2PGDG.rhel10.noarch.rpm
 {{< /pgext_matrix >}}
 
 

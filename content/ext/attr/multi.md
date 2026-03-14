@@ -137,8 +137,8 @@ weight: 40
 
 | **ID** | **扩展名** | **版本** | **属性** | **模式** | **描述** |
 |:------:|:-----------|:--------:|:--------:|:---------|:---------|
-| 3240 | [**`pltcl`**](/ext/e/pltcl) | `1.0` | `c-s-d--` | - | PL/TCL 存储过程语言 |
-| 3250 | [`pltclu`](/ext/e/pltclu) | `1.0` | `c---d--` | - | PL/TCL 存储过程语言（未受信/高权限） |
+| 3240 | [**`pltcl`**](/ext/e/pltcl) | `1.0` | `c-s-dt-` | `pg_catalog` | PL/TCL 存储过程语言 |
+| 3250 | [`pltclu`](/ext/e/pltclu) | `1.0` | `c---d--` | `pg_catalog` | PL/TCL 存储过程语言（未受信/高权限） |
 {.ext-table}
 
 ### plperl
@@ -147,10 +147,10 @@ weight: 40
 
 | **ID** | **扩展名** | **版本** | **属性** | **模式** | **描述** |
 |:------:|:-----------|:--------:|:--------:|:---------|:---------|
-| 3260 | [**`plperl`**](/ext/e/plperl) | `1.0` | `c-s-d--` | - | PL/Perl 存储过程语言 |
-| 3261 | [`bool_plperl`](/ext/e/bool_plperl) | `1.0` | `c-s-d--` | - | 在 bool 和 plperl 之间转换 |
+| 3260 | [**`plperl`**](/ext/e/plperl) | `1.0` | `c-s-dt-` | `pg_catalog` | PL/Perl 存储过程语言 |
+| 3261 | [`bool_plperl`](/ext/e/bool_plperl) | `1.0` | `c-s-dt-` | - | 在 bool 和 plperl 之间转换 |
 | 3262 | [`hstore_plperl`](/ext/e/hstore_plperl) | `1.0` | `c-s-d--` | - | 在 hstore 和 plperl 之间转换适配类型 |
-| 3263 | [`jsonb_plperl`](/ext/e/jsonb_plperl) | `1.0` | `c---d--` | - | 在 jsonb 和 plperl 之间转换 |
+| 3263 | [`jsonb_plperl`](/ext/e/jsonb_plperl) | `1.0` | `c---dt-` | - | 在 jsonb 和 plperl 之间转换 |
 {.ext-table}
 
 ### plperlu
@@ -159,7 +159,7 @@ weight: 40
 
 | **ID** | **扩展名** | **版本** | **属性** | **模式** | **描述** |
 |:------:|:-----------|:--------:|:--------:|:---------|:---------|
-| 3270 | [**`plperlu`**](/ext/e/plperlu) | `1.0` | `c-s-d--` | - | PL/PerlU 存储过程语言（未受信/高权限） |
+| 3270 | [**`plperlu`**](/ext/e/plperlu) | `1.0` | `c-s-d--` | `pg_catalog` | PL/PerlU 存储过程语言（未受信/高权限） |
 | 3271 | [`bool_plperlu`](/ext/e/bool_plperlu) | `1.0` | `c---d--` | - | 在 bool 和 plperlu 之间转换 |
 | 3272 | [`jsonb_plperlu`](/ext/e/jsonb_plperlu) | `1.0` | `c---d--` | - | 在 jsonb 和 plperlu 之间转换 |
 | 3273 | [`hstore_plperlu`](/ext/e/hstore_plperlu) | `1.0` | `c---d--` | - | 在 hstore 和 plperlu 之间转换适配类型 |
@@ -184,7 +184,7 @@ weight: 40
 | **ID** | **扩展名** | **版本** | **属性** | **模式** | **描述** |
 |:------:|:-----------|:--------:|:--------:|:---------|:---------|
 | 3610 | [**`pg_xenophile`**](/ext/e/pg_xenophile) | `0.8.3` | `----d--` | `xeno` | PostgreSQL i8n与l10n工具包 |
-| 3611 | [`l10n_table_dependent_extension`](/ext/e/l10n_table_dependent_extension) | `0.8.3` | `----dtr` | - | PostgreSQL l10n 工具包 |
+| 3611 | [`l10n_table_dependent_extension`](/ext/e/l10n_table_dependent_extension) | `0.8.3` | `----d-r` | - | PostgreSQL l10n 工具包 |
 {.ext-table}
 
 ### pg_readme
@@ -193,8 +193,8 @@ weight: 40
 
 | **ID** | **扩展名** | **版本** | **属性** | **模式** | **描述** |
 |:------:|:-----------|:--------:|:--------:|:---------|:---------|
-| 4300 | [**`pg_readme`**](/ext/e/pg_readme) | `0.7.0` | `----dtr` | - | 为模式与扩展生成Markdown文档 |
-| 4301 | [`pg_readme_test_extension`](/ext/e/pg_readme_test_extension) | `0.7.0` | `----dtr` | - | 为模式与扩展生成Markdown文档 |
+| 4300 | [**`pg_readme`**](/ext/e/pg_readme) | `0.7.0` | `----d-r` | - | 为模式与扩展生成Markdown文档 |
+| 4301 | [`pg_readme_test_extension`](/ext/e/pg_readme_test_extension) | `0.7.0` | `----d-r` | - | 为模式与扩展生成Markdown文档 |
 {.ext-table}
 
 ### pgpool
@@ -214,7 +214,7 @@ weight: 40
 
 | **ID** | **扩展名** | **版本** | **属性** | **模式** | **描述** |
 |:------:|:-----------|:--------:|:--------:|:---------|:---------|
-| 6440 | [**`pgnodemx`**](/ext/e/pgnodemx) | `1.7` | `--s-d-r` | - | 使用SQL查询获取操作系统指标 |
+| 6440 | [**`pgnodemx`**](/ext/e/pgnodemx) | `1.7` | `--sLd-r` | - | 使用SQL查询获取操作系统指标 |
 | 6450 | [`pg_proctab`](/ext/e/pg_proctab) | `1.7` | `--s-d-r` | - | 通过SQL接口访问操作系统进程表 |
 {.ext-table}
 

@@ -25,7 +25,7 @@ weight: 2420
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
 |:-----:|:-------------------------------------------------------------------------|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|:----------|
-| 2420  | [**`pg_analytics`**](/ext/e/pg_analytics) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | `paradedb` |
+| 2420  | [**`pg_analytics`**](/ext/e/pg_analytics) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `paradedb` |
 {.ext-table}
 
 | **相关扩展** | [`pg_duckdb`](/ext/e/pg_duckdb) [`pg_mooncake`](/ext/e/pg_mooncake) [`duckdb_fdw`](/ext/e/duckdb_fdw) [`pg_parquet`](/ext/e/pg_parquet) [`columnar`](/ext/e/columnar) [`citus_columnar`](/ext/e/citus_columnar) [`orioledb`](/ext/e/orioledb) [`citus`](/ext/e/citus) |
@@ -62,46 +62,46 @@ weight: 2420
 | u22.aarch64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.3.7 1 | AVAIL PIGSTY 0.3.7 1 | AVAIL PIGSTY 0.3.7 1 | AVAIL PIGSTY 0.3.7 1 |
 | u24.x86_64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.3.7 1 | AVAIL PIGSTY 0.3.7 1 | AVAIL PIGSTY 0.3.7 1 | AVAIL PIGSTY 0.3.7 1 |
 | u24.aarch64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.3.7 1 | AVAIL PIGSTY 0.3.7 1 | AVAIL PIGSTY 0.3.7 1 | AVAIL PIGSTY 0.3.7 1 |
-@ el8.x86_64 17 pg_analytics_17 pg_analytics_17-0.3.7-1PARADEDB.el8.x86_64.rpm pigsty 0.3.7 11.1MiB https://repo.pigsty.io/yum/pgsql/el8.x86_64/pg_analytics_17-0.3.7-1PARADEDB.el8.x86_64.rpm
-@ el8.aarch64 17 pg_analytics_17 pg_analytics_17-0.3.7-1PARADEDB.el8.aarch64.rpm pigsty 0.3.7 9.7MiB https://repo.pigsty.io/yum/pgsql/el8.aarch64/pg_analytics_17-0.3.7-1PARADEDB.el8.aarch64.rpm
-@ el9.x86_64 17 pg_analytics_17 pg_analytics_17-0.3.7-1PARADEDB.el9.x86_64.rpm pigsty 0.3.7 11.1MiB https://repo.pigsty.io/yum/pgsql/el9.x86_64/pg_analytics_17-0.3.7-1PARADEDB.el9.x86_64.rpm
-@ el9.aarch64 17 pg_analytics_17 pg_analytics_17-0.3.7-1PARADEDB.el9.aarch64.rpm pigsty 0.3.7 10.2MiB https://repo.pigsty.io/yum/pgsql/el9.aarch64/pg_analytics_17-0.3.7-1PARADEDB.el9.aarch64.rpm
-@ d12.x86_64 17 postgresql-17-pg-analytics postgresql-17-pg-analytics_0.3.7_amd64.deb pigsty 0.3.7 10.2MiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/postgresql-17-pg-analytics/postgresql-17-pg-analytics_0.3.7_amd64.deb
-@ d12.aarch64 17 postgresql-17-pg-analytics postgresql-17-pg-analytics_0.3.7_arm64.deb pigsty 0.3.7 8.8MiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/postgresql-17-pg-analytics/postgresql-17-pg-analytics_0.3.7_arm64.deb
-@ u22.x86_64 17 postgresql-17-pg-analytics postgresql-17-pg-analytics_0.3.7_amd64.deb pigsty 0.3.7 10.3MiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/postgresql-17-pg-analytics/postgresql-17-pg-analytics_0.3.7_amd64.deb
-@ u22.aarch64 17 postgresql-17-pg-analytics postgresql-17-pg-analytics_0.3.7_arm64.deb pigsty 0.3.7 9.0MiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/postgresql-17-pg-analytics/postgresql-17-pg-analytics_0.3.7_arm64.deb
-@ u24.x86_64 17 postgresql-17-pg-analytics postgresql-17-pg-analytics_0.3.7_amd64.deb pigsty 0.3.7 10.6MiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/postgresql-17-pg-analytics/postgresql-17-pg-analytics_0.3.7_amd64.deb
-@ u24.aarch64 17 postgresql-17-pg-analytics postgresql-17-pg-analytics_0.3.7_arm64.deb pigsty 0.3.7 9.2MiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/postgresql-17-pg-analytics/postgresql-17-pg-analytics_0.3.7_arm64.deb
-@ el8.x86_64 16 pg_analytics_16 pg_analytics_16-0.3.7-1PARADEDB.el8.x86_64.rpm pigsty 0.3.7 11.1MiB https://repo.pigsty.io/yum/pgsql/el8.x86_64/pg_analytics_16-0.3.7-1PARADEDB.el8.x86_64.rpm
-@ el8.aarch64 16 pg_analytics_16 pg_analytics_16-0.3.7-1PARADEDB.el8.aarch64.rpm pigsty 0.3.7 9.7MiB https://repo.pigsty.io/yum/pgsql/el8.aarch64/pg_analytics_16-0.3.7-1PARADEDB.el8.aarch64.rpm
-@ el9.x86_64 16 pg_analytics_16 pg_analytics_16-0.3.7-1PARADEDB.el9.x86_64.rpm pigsty 0.3.7 11.1MiB https://repo.pigsty.io/yum/pgsql/el9.x86_64/pg_analytics_16-0.3.7-1PARADEDB.el9.x86_64.rpm
-@ el9.aarch64 16 pg_analytics_16 pg_analytics_16-0.3.7-1PARADEDB.el9.aarch64.rpm pigsty 0.3.7 10.2MiB https://repo.pigsty.io/yum/pgsql/el9.aarch64/pg_analytics_16-0.3.7-1PARADEDB.el9.aarch64.rpm
-@ d12.x86_64 16 postgresql-16-pg-analytics postgresql-16-pg-analytics_0.3.7_amd64.deb pigsty 0.3.7 10.2MiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/postgresql-16-pg-analytics/postgresql-16-pg-analytics_0.3.7_amd64.deb
-@ d12.aarch64 16 postgresql-16-pg-analytics postgresql-16-pg-analytics_0.3.7_arm64.deb pigsty 0.3.7 8.8MiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/postgresql-16-pg-analytics/postgresql-16-pg-analytics_0.3.7_arm64.deb
-@ u22.x86_64 16 postgresql-16-pg-analytics postgresql-16-pg-analytics_0.3.7_amd64.deb pigsty 0.3.7 10.3MiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/postgresql-16-pg-analytics/postgresql-16-pg-analytics_0.3.7_amd64.deb
-@ u22.aarch64 16 postgresql-16-pg-analytics postgresql-16-pg-analytics_0.3.7_arm64.deb pigsty 0.3.7 9.0MiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/postgresql-16-pg-analytics/postgresql-16-pg-analytics_0.3.7_arm64.deb
-@ u24.x86_64 16 postgresql-16-pg-analytics postgresql-16-pg-analytics_0.3.7_amd64.deb pigsty 0.3.7 10.6MiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/postgresql-16-pg-analytics/postgresql-16-pg-analytics_0.3.7_amd64.deb
-@ u24.aarch64 16 postgresql-16-pg-analytics postgresql-16-pg-analytics_0.3.7_arm64.deb pigsty 0.3.7 9.2MiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/postgresql-16-pg-analytics/postgresql-16-pg-analytics_0.3.7_arm64.deb
-@ el8.x86_64 15 pg_analytics_15 pg_analytics_15-0.3.7-1PARADEDB.el8.x86_64.rpm pigsty 0.3.7 11.1MiB https://repo.pigsty.io/yum/pgsql/el8.x86_64/pg_analytics_15-0.3.7-1PARADEDB.el8.x86_64.rpm
-@ el8.aarch64 15 pg_analytics_15 pg_analytics_15-0.3.7-1PARADEDB.el8.aarch64.rpm pigsty 0.3.7 9.7MiB https://repo.pigsty.io/yum/pgsql/el8.aarch64/pg_analytics_15-0.3.7-1PARADEDB.el8.aarch64.rpm
-@ el9.x86_64 15 pg_analytics_15 pg_analytics_15-0.3.7-1PARADEDB.el9.x86_64.rpm pigsty 0.3.7 11.1MiB https://repo.pigsty.io/yum/pgsql/el9.x86_64/pg_analytics_15-0.3.7-1PARADEDB.el9.x86_64.rpm
-@ el9.aarch64 15 pg_analytics_15 pg_analytics_15-0.3.7-1PARADEDB.el9.aarch64.rpm pigsty 0.3.7 10.2MiB https://repo.pigsty.io/yum/pgsql/el9.aarch64/pg_analytics_15-0.3.7-1PARADEDB.el9.aarch64.rpm
-@ d12.x86_64 15 postgresql-15-pg-analytics postgresql-15-pg-analytics_0.3.7_amd64.deb pigsty 0.3.7 10.2MiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/postgresql-15-pg-analytics/postgresql-15-pg-analytics_0.3.7_amd64.deb
-@ d12.aarch64 15 postgresql-15-pg-analytics postgresql-15-pg-analytics_0.3.7_arm64.deb pigsty 0.3.7 8.8MiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/postgresql-15-pg-analytics/postgresql-15-pg-analytics_0.3.7_arm64.deb
-@ u22.x86_64 15 postgresql-15-pg-analytics postgresql-15-pg-analytics_0.3.7_amd64.deb pigsty 0.3.7 10.4MiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/postgresql-15-pg-analytics/postgresql-15-pg-analytics_0.3.7_amd64.deb
-@ u22.aarch64 15 postgresql-15-pg-analytics postgresql-15-pg-analytics_0.3.7_arm64.deb pigsty 0.3.7 9.0MiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/postgresql-15-pg-analytics/postgresql-15-pg-analytics_0.3.7_arm64.deb
-@ u24.x86_64 15 postgresql-15-pg-analytics postgresql-15-pg-analytics_0.3.7_amd64.deb pigsty 0.3.7 10.5MiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/postgresql-15-pg-analytics/postgresql-15-pg-analytics_0.3.7_amd64.deb
-@ u24.aarch64 15 postgresql-15-pg-analytics postgresql-15-pg-analytics_0.3.7_arm64.deb pigsty 0.3.7 9.2MiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/postgresql-15-pg-analytics/postgresql-15-pg-analytics_0.3.7_arm64.deb
-@ el8.x86_64 14 pg_analytics_14 pg_analytics_14-0.3.7-1PARADEDB.el8.x86_64.rpm pigsty 0.3.7 11.1MiB https://repo.pigsty.io/yum/pgsql/el8.x86_64/pg_analytics_14-0.3.7-1PARADEDB.el8.x86_64.rpm
-@ el8.aarch64 14 pg_analytics_14 pg_analytics_14-0.3.7-1PARADEDB.el8.aarch64.rpm pigsty 0.3.7 9.7MiB https://repo.pigsty.io/yum/pgsql/el8.aarch64/pg_analytics_14-0.3.7-1PARADEDB.el8.aarch64.rpm
-@ el9.x86_64 14 pg_analytics_14 pg_analytics_14-0.3.7-1PARADEDB.el9.x86_64.rpm pigsty 0.3.7 11.1MiB https://repo.pigsty.io/yum/pgsql/el9.x86_64/pg_analytics_14-0.3.7-1PARADEDB.el9.x86_64.rpm
-@ el9.aarch64 14 pg_analytics_14 pg_analytics_14-0.3.7-1PARADEDB.el9.aarch64.rpm pigsty 0.3.7 10.2MiB https://repo.pigsty.io/yum/pgsql/el9.aarch64/pg_analytics_14-0.3.7-1PARADEDB.el9.aarch64.rpm
-@ d12.x86_64 14 postgresql-14-pg-analytics postgresql-14-pg-analytics_0.3.7_amd64.deb pigsty 0.3.7 10.2MiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/postgresql-14-pg-analytics/postgresql-14-pg-analytics_0.3.7_amd64.deb
-@ d12.aarch64 14 postgresql-14-pg-analytics postgresql-14-pg-analytics_0.3.7_arm64.deb pigsty 0.3.7 8.8MiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/postgresql-14-pg-analytics/postgresql-14-pg-analytics_0.3.7_arm64.deb
-@ u22.x86_64 14 postgresql-14-pg-analytics postgresql-14-pg-analytics_0.3.7_amd64.deb pigsty 0.3.7 10.3MiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/postgresql-14-pg-analytics/postgresql-14-pg-analytics_0.3.7_amd64.deb
-@ u22.aarch64 14 postgresql-14-pg-analytics postgresql-14-pg-analytics_0.3.7_arm64.deb pigsty 0.3.7 9.0MiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/postgresql-14-pg-analytics/postgresql-14-pg-analytics_0.3.7_arm64.deb
-@ u24.x86_64 14 postgresql-14-pg-analytics postgresql-14-pg-analytics_0.3.7_amd64.deb pigsty 0.3.7 10.6MiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/postgresql-14-pg-analytics/postgresql-14-pg-analytics_0.3.7_amd64.deb
-@ u24.aarch64 14 postgresql-14-pg-analytics postgresql-14-pg-analytics_0.3.7_arm64.deb pigsty 0.3.7 9.1MiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/postgresql-14-pg-analytics/postgresql-14-pg-analytics_0.3.7_arm64.deb
+@ el8.x86_64 17 pg_analytics_17 pg_analytics_17-0.3.7-1PARADEDB.el8.x86_64.rpm pigsty 0.3.7 11.1MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_analytics_17-0.3.7-1PARADEDB.el8.x86_64.rpm
+@ el8.aarch64 17 pg_analytics_17 pg_analytics_17-0.3.7-1PARADEDB.el8.aarch64.rpm pigsty 0.3.7 9.7MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_analytics_17-0.3.7-1PARADEDB.el8.aarch64.rpm
+@ el9.x86_64 17 pg_analytics_17 pg_analytics_17-0.3.7-1PARADEDB.el9.x86_64.rpm pigsty 0.3.7 11.1MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_analytics_17-0.3.7-1PARADEDB.el9.x86_64.rpm
+@ el9.aarch64 17 pg_analytics_17 pg_analytics_17-0.3.7-1PARADEDB.el9.aarch64.rpm pigsty 0.3.7 10.2MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_analytics_17-0.3.7-1PARADEDB.el9.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-pg-analytics postgresql-17-pg-analytics_0.3.7_amd64.deb pigsty 0.3.7 10.2MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/postgresql-17-pg-analytics/postgresql-17-pg-analytics_0.3.7_amd64.deb
+@ d12.aarch64 17 postgresql-17-pg-analytics postgresql-17-pg-analytics_0.3.7_arm64.deb pigsty 0.3.7 8.8MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/postgresql-17-pg-analytics/postgresql-17-pg-analytics_0.3.7_arm64.deb
+@ u22.x86_64 17 postgresql-17-pg-analytics postgresql-17-pg-analytics_0.3.7_amd64.deb pigsty 0.3.7 10.3MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/postgresql-17-pg-analytics/postgresql-17-pg-analytics_0.3.7_amd64.deb
+@ u22.aarch64 17 postgresql-17-pg-analytics postgresql-17-pg-analytics_0.3.7_arm64.deb pigsty 0.3.7 9.0MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/postgresql-17-pg-analytics/postgresql-17-pg-analytics_0.3.7_arm64.deb
+@ u24.x86_64 17 postgresql-17-pg-analytics postgresql-17-pg-analytics_0.3.7_amd64.deb pigsty 0.3.7 10.6MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/postgresql-17-pg-analytics/postgresql-17-pg-analytics_0.3.7_amd64.deb
+@ u24.aarch64 17 postgresql-17-pg-analytics postgresql-17-pg-analytics_0.3.7_arm64.deb pigsty 0.3.7 9.2MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/postgresql-17-pg-analytics/postgresql-17-pg-analytics_0.3.7_arm64.deb
+@ el8.x86_64 16 pg_analytics_16 pg_analytics_16-0.3.7-1PARADEDB.el8.x86_64.rpm pigsty 0.3.7 11.1MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_analytics_16-0.3.7-1PARADEDB.el8.x86_64.rpm
+@ el8.aarch64 16 pg_analytics_16 pg_analytics_16-0.3.7-1PARADEDB.el8.aarch64.rpm pigsty 0.3.7 9.7MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_analytics_16-0.3.7-1PARADEDB.el8.aarch64.rpm
+@ el9.x86_64 16 pg_analytics_16 pg_analytics_16-0.3.7-1PARADEDB.el9.x86_64.rpm pigsty 0.3.7 11.1MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_analytics_16-0.3.7-1PARADEDB.el9.x86_64.rpm
+@ el9.aarch64 16 pg_analytics_16 pg_analytics_16-0.3.7-1PARADEDB.el9.aarch64.rpm pigsty 0.3.7 10.2MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_analytics_16-0.3.7-1PARADEDB.el9.aarch64.rpm
+@ d12.x86_64 16 postgresql-16-pg-analytics postgresql-16-pg-analytics_0.3.7_amd64.deb pigsty 0.3.7 10.2MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/postgresql-16-pg-analytics/postgresql-16-pg-analytics_0.3.7_amd64.deb
+@ d12.aarch64 16 postgresql-16-pg-analytics postgresql-16-pg-analytics_0.3.7_arm64.deb pigsty 0.3.7 8.8MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/postgresql-16-pg-analytics/postgresql-16-pg-analytics_0.3.7_arm64.deb
+@ u22.x86_64 16 postgresql-16-pg-analytics postgresql-16-pg-analytics_0.3.7_amd64.deb pigsty 0.3.7 10.3MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/postgresql-16-pg-analytics/postgresql-16-pg-analytics_0.3.7_amd64.deb
+@ u22.aarch64 16 postgresql-16-pg-analytics postgresql-16-pg-analytics_0.3.7_arm64.deb pigsty 0.3.7 9.0MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/postgresql-16-pg-analytics/postgresql-16-pg-analytics_0.3.7_arm64.deb
+@ u24.x86_64 16 postgresql-16-pg-analytics postgresql-16-pg-analytics_0.3.7_amd64.deb pigsty 0.3.7 10.6MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/postgresql-16-pg-analytics/postgresql-16-pg-analytics_0.3.7_amd64.deb
+@ u24.aarch64 16 postgresql-16-pg-analytics postgresql-16-pg-analytics_0.3.7_arm64.deb pigsty 0.3.7 9.2MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/postgresql-16-pg-analytics/postgresql-16-pg-analytics_0.3.7_arm64.deb
+@ el8.x86_64 15 pg_analytics_15 pg_analytics_15-0.3.7-1PARADEDB.el8.x86_64.rpm pigsty 0.3.7 11.1MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_analytics_15-0.3.7-1PARADEDB.el8.x86_64.rpm
+@ el8.aarch64 15 pg_analytics_15 pg_analytics_15-0.3.7-1PARADEDB.el8.aarch64.rpm pigsty 0.3.7 9.7MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_analytics_15-0.3.7-1PARADEDB.el8.aarch64.rpm
+@ el9.x86_64 15 pg_analytics_15 pg_analytics_15-0.3.7-1PARADEDB.el9.x86_64.rpm pigsty 0.3.7 11.1MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_analytics_15-0.3.7-1PARADEDB.el9.x86_64.rpm
+@ el9.aarch64 15 pg_analytics_15 pg_analytics_15-0.3.7-1PARADEDB.el9.aarch64.rpm pigsty 0.3.7 10.2MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_analytics_15-0.3.7-1PARADEDB.el9.aarch64.rpm
+@ d12.x86_64 15 postgresql-15-pg-analytics postgresql-15-pg-analytics_0.3.7_amd64.deb pigsty 0.3.7 10.2MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/postgresql-15-pg-analytics/postgresql-15-pg-analytics_0.3.7_amd64.deb
+@ d12.aarch64 15 postgresql-15-pg-analytics postgresql-15-pg-analytics_0.3.7_arm64.deb pigsty 0.3.7 8.8MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/postgresql-15-pg-analytics/postgresql-15-pg-analytics_0.3.7_arm64.deb
+@ u22.x86_64 15 postgresql-15-pg-analytics postgresql-15-pg-analytics_0.3.7_amd64.deb pigsty 0.3.7 10.4MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/postgresql-15-pg-analytics/postgresql-15-pg-analytics_0.3.7_amd64.deb
+@ u22.aarch64 15 postgresql-15-pg-analytics postgresql-15-pg-analytics_0.3.7_arm64.deb pigsty 0.3.7 9.0MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/postgresql-15-pg-analytics/postgresql-15-pg-analytics_0.3.7_arm64.deb
+@ u24.x86_64 15 postgresql-15-pg-analytics postgresql-15-pg-analytics_0.3.7_amd64.deb pigsty 0.3.7 10.5MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/postgresql-15-pg-analytics/postgresql-15-pg-analytics_0.3.7_amd64.deb
+@ u24.aarch64 15 postgresql-15-pg-analytics postgresql-15-pg-analytics_0.3.7_arm64.deb pigsty 0.3.7 9.2MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/postgresql-15-pg-analytics/postgresql-15-pg-analytics_0.3.7_arm64.deb
+@ el8.x86_64 14 pg_analytics_14 pg_analytics_14-0.3.7-1PARADEDB.el8.x86_64.rpm pigsty 0.3.7 11.1MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_analytics_14-0.3.7-1PARADEDB.el8.x86_64.rpm
+@ el8.aarch64 14 pg_analytics_14 pg_analytics_14-0.3.7-1PARADEDB.el8.aarch64.rpm pigsty 0.3.7 9.7MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_analytics_14-0.3.7-1PARADEDB.el8.aarch64.rpm
+@ el9.x86_64 14 pg_analytics_14 pg_analytics_14-0.3.7-1PARADEDB.el9.x86_64.rpm pigsty 0.3.7 11.1MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_analytics_14-0.3.7-1PARADEDB.el9.x86_64.rpm
+@ el9.aarch64 14 pg_analytics_14 pg_analytics_14-0.3.7-1PARADEDB.el9.aarch64.rpm pigsty 0.3.7 10.2MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_analytics_14-0.3.7-1PARADEDB.el9.aarch64.rpm
+@ d12.x86_64 14 postgresql-14-pg-analytics postgresql-14-pg-analytics_0.3.7_amd64.deb pigsty 0.3.7 10.2MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/postgresql-14-pg-analytics/postgresql-14-pg-analytics_0.3.7_amd64.deb
+@ d12.aarch64 14 postgresql-14-pg-analytics postgresql-14-pg-analytics_0.3.7_arm64.deb pigsty 0.3.7 8.8MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/postgresql-14-pg-analytics/postgresql-14-pg-analytics_0.3.7_arm64.deb
+@ u22.x86_64 14 postgresql-14-pg-analytics postgresql-14-pg-analytics_0.3.7_amd64.deb pigsty 0.3.7 10.3MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/postgresql-14-pg-analytics/postgresql-14-pg-analytics_0.3.7_amd64.deb
+@ u22.aarch64 14 postgresql-14-pg-analytics postgresql-14-pg-analytics_0.3.7_arm64.deb pigsty 0.3.7 9.0MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/postgresql-14-pg-analytics/postgresql-14-pg-analytics_0.3.7_arm64.deb
+@ u24.x86_64 14 postgresql-14-pg-analytics postgresql-14-pg-analytics_0.3.7_amd64.deb pigsty 0.3.7 10.6MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/postgresql-14-pg-analytics/postgresql-14-pg-analytics_0.3.7_amd64.deb
+@ u24.aarch64 14 postgresql-14-pg-analytics postgresql-14-pg-analytics_0.3.7_arm64.deb pigsty 0.3.7 9.1MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/postgresql-14-pg-analytics/postgresql-14-pg-analytics_0.3.7_arm64.deb
 {{< /pgext_matrix >}}
 
 
@@ -146,6 +146,13 @@ apt install -y postgresql-14-pg-analytics   # PG 14
 ```
 {{% /tab %}}
 {{< /tabpane >}}
+
+
+**预加载配置**：
+
+```bash
+shared_preload_libraries = 'pg_analytics';
+```
 
 
 **创建扩展**：

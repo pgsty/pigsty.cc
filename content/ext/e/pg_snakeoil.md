@@ -11,7 +11,7 @@ weight: 7380
     <div class="ext-card__title">credativ/pg_snakeoil</div>
     <div class="ext-card__desc">https://github.com/credativ/pg_snakeoil</div>
   </a>
-  <a class="ext-card ext-card--source" href="pg_snakeoil-1.4.tar.gz">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pg_snakeoil-1.4.tar.gz">
     <div class="ext-card__kicker">源码</div>
     <div class="ext-card__title">pg_snakeoil-1.4.tar.gz</div>
     <div class="ext-card__desc">pg_snakeoil-1.4.tar.gz</div>
@@ -30,7 +30,7 @@ weight: 7380
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
 |:-----:|:-------------------------------------------------------------------------|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|:----------|
-| 7380  | [**`pg_snakeoil`**](/ext/e/pg_snakeoil) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
+| 7380  | [**`pg_snakeoil`**](/ext/e/pg_snakeoil) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
 {.ext-table}
 
 | **相关扩展** | [`pg_crash`](/ext/e/pg_crash) [`pg_cheat_funcs`](/ext/e/pg_cheat_funcs) [`pg_dirtyread`](/ext/e/pg_dirtyread) [`pg_savior`](/ext/e/pg_savior) [`pg_surgery`](/ext/e/pg_surgery) [`pageinspect`](/ext/e/pageinspect) [`pg_catcheck`](/ext/e/pg_catcheck) [`amcheck`](/ext/e/amcheck) |
@@ -67,104 +67,104 @@ weight: 7380
 | u22.aarch64 | AVAIL PGDG 1.4 1 | AVAIL PGDG 1.4 1 | AVAIL PGDG 1.4 1 | AVAIL PGDG 1.4 1 | AVAIL PGDG 1.4 1 |
 | u24.x86_64 | AVAIL PGDG 1.4 1 | AVAIL PGDG 1.4 1 | AVAIL PGDG 1.4 1 | AVAIL PGDG 1.4 1 | AVAIL PGDG 1.4 1 |
 | u24.aarch64 | AVAIL PGDG 1.4 1 | AVAIL PGDG 1.4 1 | AVAIL PGDG 1.4 1 | AVAIL PGDG 1.4 1 | AVAIL PGDG 1.4 1 |
-@ el8.x86_64 18 pg_snakeoil_18 pg_snakeoil_18-1.4-1PIGSTY.el8.x86_64.rpm pigsty 1.4 16.1KiB https://repo.pigsty.io/yum/pgsql/el8.x86_64/pg_snakeoil_18-1.4-1PIGSTY.el8.x86_64.rpm
-@ el8.x86_64 18 pg_snakeoil_18 pg_snakeoil_18-1.4-1PGDG.rhel8.x86_64.rpm pgdg 1.4 15.3KiB https://download.postgresql.org/pub/repos/yum/18/redhat/rhel-8-x86_64/pg_snakeoil_18-1.4-1PGDG.rhel8.x86_64.rpm
-@ el8.aarch64 18 pg_snakeoil_18 pg_snakeoil_18-1.4-1PIGSTY.el8.aarch64.rpm pigsty 1.4 16.2KiB https://repo.pigsty.io/yum/pgsql/el8.aarch64/pg_snakeoil_18-1.4-1PIGSTY.el8.aarch64.rpm
-@ el8.aarch64 18 pg_snakeoil_18 pg_snakeoil_18-1.4-1PGDG.rhel8.aarch64.rpm pgdg 1.4 15.2KiB https://download.postgresql.org/pub/repos/yum/18/redhat/rhel-8-aarch64/pg_snakeoil_18-1.4-1PGDG.rhel8.aarch64.rpm
-@ el9.x86_64 18 pg_snakeoil_18 pg_snakeoil_18-1.4-1PIGSTY.el9.x86_64.rpm pigsty 1.4 16.1KiB https://repo.pigsty.io/yum/pgsql/el9.x86_64/pg_snakeoil_18-1.4-1PIGSTY.el9.x86_64.rpm
-@ el9.x86_64 18 pg_snakeoil_18 pg_snakeoil_18-1.4-1PGDG.rhel9.x86_64.rpm pgdg 1.4 15.5KiB https://download.postgresql.org/pub/repos/yum/18/redhat/rhel-9-x86_64/pg_snakeoil_18-1.4-1PGDG.rhel9.x86_64.rpm
-@ el9.aarch64 18 pg_snakeoil_18 pg_snakeoil_18-1.4-1PIGSTY.el9.aarch64.rpm pigsty 1.4 16.0KiB https://repo.pigsty.io/yum/pgsql/el9.aarch64/pg_snakeoil_18-1.4-1PIGSTY.el9.aarch64.rpm
-@ el9.aarch64 18 pg_snakeoil_18 pg_snakeoil_18-1.4-1PGDG.rhel9.aarch64.rpm pgdg 1.4 15.1KiB https://download.postgresql.org/pub/repos/yum/18/redhat/rhel-9-aarch64/pg_snakeoil_18-1.4-1PGDG.rhel9.aarch64.rpm
-@ el10.x86_64 18 pg_snakeoil_18 pg_snakeoil_18-1.4-1PIGSTY.el10.x86_64.rpm pigsty 1.4 16.1KiB https://repo.pigsty.io/yum/pgsql/el10.x86_64/pg_snakeoil_18-1.4-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 18 pg_snakeoil_18 pg_snakeoil_18-1.4-1PIGSTY.el10.aarch64.rpm pigsty 1.4 16.1KiB https://repo.pigsty.io/yum/pgsql/el10.aarch64/pg_snakeoil_18-1.4-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 18 postgresql-18-snakeoil postgresql-18-snakeoil_1.4-3.pgdg12+2_amd64.deb pgdg 1.4 16.9KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pg-snakeoil/postgresql-18-snakeoil_1.4-3.pgdg12+2_amd64.deb
-@ d12.aarch64 18 postgresql-18-snakeoil postgresql-18-snakeoil_1.4-3.pgdg12+2_arm64.deb pgdg 1.4 16.4KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pg-snakeoil/postgresql-18-snakeoil_1.4-3.pgdg12+2_arm64.deb
-@ d13.x86_64 18 postgresql-18-snakeoil postgresql-18-snakeoil_1.4-3.pgdg13+1_amd64.deb pgdg 1.4 16.8KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pg-snakeoil/postgresql-18-snakeoil_1.4-3.pgdg13+1_amd64.deb
-@ d13.aarch64 18 postgresql-18-snakeoil postgresql-18-snakeoil_1.4-3.pgdg13+1_arm64.deb pgdg 1.4 16.4KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pg-snakeoil/postgresql-18-snakeoil_1.4-3.pgdg13+1_arm64.deb
-@ u22.x86_64 18 postgresql-18-snakeoil postgresql-18-snakeoil_1.4-3.pgdg22.04+1_amd64.deb pgdg 1.4 16.6KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pg-snakeoil/postgresql-18-snakeoil_1.4-3.pgdg22.04+1_amd64.deb
-@ u22.aarch64 18 postgresql-18-snakeoil postgresql-18-snakeoil_1.4-3.pgdg22.04+1_arm64.deb pgdg 1.4 16.4KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pg-snakeoil/postgresql-18-snakeoil_1.4-3.pgdg22.04+1_arm64.deb
-@ u24.x86_64 18 postgresql-18-snakeoil postgresql-18-snakeoil_1.4-3.pgdg24.04+1_amd64.deb pgdg 1.4 16.9KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pg-snakeoil/postgresql-18-snakeoil_1.4-3.pgdg24.04+1_amd64.deb
-@ u24.aarch64 18 postgresql-18-snakeoil postgresql-18-snakeoil_1.4-3.pgdg24.04+1_arm64.deb pgdg 1.4 16.4KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pg-snakeoil/postgresql-18-snakeoil_1.4-3.pgdg24.04+1_arm64.deb
-@ el8.x86_64 17 pg_snakeoil_17 pg_snakeoil_17-1.4-1PIGSTY.el8.x86_64.rpm pigsty 1.4 16.1KiB https://repo.pigsty.io/yum/pgsql/el8.x86_64/pg_snakeoil_17-1.4-1PIGSTY.el8.x86_64.rpm
-@ el8.x86_64 17 pg_snakeoil_17 pg_snakeoil_17-1.4-1PGDG.rhel8.x86_64.rpm pgdg 1.4 15.4KiB https://download.postgresql.org/pub/repos/yum/17/redhat/rhel-8-x86_64/pg_snakeoil_17-1.4-1PGDG.rhel8.x86_64.rpm
-@ el8.aarch64 17 pg_snakeoil_17 pg_snakeoil_17-1.4-1PIGSTY.el8.aarch64.rpm pigsty 1.4 16.2KiB https://repo.pigsty.io/yum/pgsql/el8.aarch64/pg_snakeoil_17-1.4-1PIGSTY.el8.aarch64.rpm
-@ el8.aarch64 17 pg_snakeoil_17 pg_snakeoil_17-1.4-1PGDG.rhel8.aarch64.rpm pgdg 1.4 15.3KiB https://download.postgresql.org/pub/repos/yum/17/redhat/rhel-8-aarch64/pg_snakeoil_17-1.4-1PGDG.rhel8.aarch64.rpm
-@ el9.x86_64 17 pg_snakeoil_17 pg_snakeoil_17-1.4-1PIGSTY.el9.x86_64.rpm pigsty 1.4 16.2KiB https://repo.pigsty.io/yum/pgsql/el9.x86_64/pg_snakeoil_17-1.4-1PIGSTY.el9.x86_64.rpm
-@ el9.x86_64 17 pg_snakeoil_17 pg_snakeoil_17-1.4-1PGDG.rhel9.x86_64.rpm pgdg 1.4 15.6KiB https://download.postgresql.org/pub/repos/yum/17/redhat/rhel-9-x86_64/pg_snakeoil_17-1.4-1PGDG.rhel9.x86_64.rpm
-@ el9.aarch64 17 pg_snakeoil_17 pg_snakeoil_17-1.4-1PIGSTY.el9.aarch64.rpm pigsty 1.4 16.0KiB https://repo.pigsty.io/yum/pgsql/el9.aarch64/pg_snakeoil_17-1.4-1PIGSTY.el9.aarch64.rpm
-@ el9.aarch64 17 pg_snakeoil_17 pg_snakeoil_17-1.4-1PGDG.rhel9.aarch64.rpm pgdg 1.4 15.1KiB https://download.postgresql.org/pub/repos/yum/17/redhat/rhel-9-aarch64/pg_snakeoil_17-1.4-1PGDG.rhel9.aarch64.rpm
-@ el10.x86_64 17 pg_snakeoil_17 pg_snakeoil_17-1.4-1PIGSTY.el10.x86_64.rpm pigsty 1.4 16.1KiB https://repo.pigsty.io/yum/pgsql/el10.x86_64/pg_snakeoil_17-1.4-1PIGSTY.el10.x86_64.rpm
-@ el10.x86_64 17 pg_snakeoil_17 pg_snakeoil_17-1.4-1PGDG.rhel10.x86_64.rpm pgdg 1.4 15.9KiB https://download.postgresql.org/pub/repos/yum/17/redhat/rhel-10-x86_64/pg_snakeoil_17-1.4-1PGDG.rhel10.x86_64.rpm
-@ el10.aarch64 17 pg_snakeoil_17 pg_snakeoil_17-1.4-1PIGSTY.el10.aarch64.rpm pigsty 1.4 16.2KiB https://repo.pigsty.io/yum/pgsql/el10.aarch64/pg_snakeoil_17-1.4-1PIGSTY.el10.aarch64.rpm
-@ el10.aarch64 17 pg_snakeoil_17 pg_snakeoil_17-1.4-1PGDG.rhel10.aarch64.rpm pgdg 1.4 15.8KiB https://download.postgresql.org/pub/repos/yum/17/redhat/rhel-10-aarch64/pg_snakeoil_17-1.4-1PGDG.rhel10.aarch64.rpm
-@ d12.x86_64 17 postgresql-17-snakeoil postgresql-17-snakeoil_1.4-3.pgdg12+2_amd64.deb pgdg 1.4 16.9KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pg-snakeoil/postgresql-17-snakeoil_1.4-3.pgdg12+2_amd64.deb
-@ d12.aarch64 17 postgresql-17-snakeoil postgresql-17-snakeoil_1.4-3.pgdg12+2_arm64.deb pgdg 1.4 16.4KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pg-snakeoil/postgresql-17-snakeoil_1.4-3.pgdg12+2_arm64.deb
-@ d13.x86_64 17 postgresql-17-snakeoil postgresql-17-snakeoil_1.4-3.pgdg13+1_amd64.deb pgdg 1.4 16.8KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pg-snakeoil/postgresql-17-snakeoil_1.4-3.pgdg13+1_amd64.deb
-@ d13.aarch64 17 postgresql-17-snakeoil postgresql-17-snakeoil_1.4-3.pgdg13+1_arm64.deb pgdg 1.4 16.4KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pg-snakeoil/postgresql-17-snakeoil_1.4-3.pgdg13+1_arm64.deb
-@ u22.x86_64 17 postgresql-17-snakeoil postgresql-17-snakeoil_1.4-3.pgdg22.04+1_amd64.deb pgdg 1.4 17.1KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pg-snakeoil/postgresql-17-snakeoil_1.4-3.pgdg22.04+1_amd64.deb
-@ u22.aarch64 17 postgresql-17-snakeoil postgresql-17-snakeoil_1.4-3.pgdg22.04+1_arm64.deb pgdg 1.4 17.0KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pg-snakeoil/postgresql-17-snakeoil_1.4-3.pgdg22.04+1_arm64.deb
-@ u24.x86_64 17 postgresql-17-snakeoil postgresql-17-snakeoil_1.4-3.pgdg24.04+1_amd64.deb pgdg 1.4 16.9KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pg-snakeoil/postgresql-17-snakeoil_1.4-3.pgdg24.04+1_amd64.deb
-@ u24.aarch64 17 postgresql-17-snakeoil postgresql-17-snakeoil_1.4-3.pgdg24.04+1_arm64.deb pgdg 1.4 16.4KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pg-snakeoil/postgresql-17-snakeoil_1.4-3.pgdg24.04+1_arm64.deb
-@ el8.x86_64 16 pg_snakeoil_16 pg_snakeoil_16-1.4-1PIGSTY.el8.x86_64.rpm pigsty 1.4 16.1KiB https://repo.pigsty.io/yum/pgsql/el8.x86_64/pg_snakeoil_16-1.4-1PIGSTY.el8.x86_64.rpm
-@ el8.x86_64 16 pg_snakeoil_16 pg_snakeoil_16-1.4-1PGDG.rhel8.x86_64.rpm pgdg 1.4 15.4KiB https://download.postgresql.org/pub/repos/yum/16/redhat/rhel-8-x86_64/pg_snakeoil_16-1.4-1PGDG.rhel8.x86_64.rpm
-@ el8.aarch64 16 pg_snakeoil_16 pg_snakeoil_16-1.4-1PIGSTY.el8.aarch64.rpm pigsty 1.4 16.2KiB https://repo.pigsty.io/yum/pgsql/el8.aarch64/pg_snakeoil_16-1.4-1PIGSTY.el8.aarch64.rpm
-@ el8.aarch64 16 pg_snakeoil_16 pg_snakeoil_16-1.4-1PGDG.rhel8.aarch64.rpm pgdg 1.4 15.2KiB https://download.postgresql.org/pub/repos/yum/16/redhat/rhel-8-aarch64/pg_snakeoil_16-1.4-1PGDG.rhel8.aarch64.rpm
-@ el9.x86_64 16 pg_snakeoil_16 pg_snakeoil_16-1.4-1PIGSTY.el9.x86_64.rpm pigsty 1.4 16.2KiB https://repo.pigsty.io/yum/pgsql/el9.x86_64/pg_snakeoil_16-1.4-1PIGSTY.el9.x86_64.rpm
-@ el9.x86_64 16 pg_snakeoil_16 pg_snakeoil_16-1.4-1PGDG.rhel9.x86_64.rpm pgdg 1.4 15.6KiB https://download.postgresql.org/pub/repos/yum/16/redhat/rhel-9-x86_64/pg_snakeoil_16-1.4-1PGDG.rhel9.x86_64.rpm
-@ el9.aarch64 16 pg_snakeoil_16 pg_snakeoil_16-1.4-1PIGSTY.el9.aarch64.rpm pigsty 1.4 16.0KiB https://repo.pigsty.io/yum/pgsql/el9.aarch64/pg_snakeoil_16-1.4-1PIGSTY.el9.aarch64.rpm
-@ el9.aarch64 16 pg_snakeoil_16 pg_snakeoil_16-1.4-1PGDG.rhel9.aarch64.rpm pgdg 1.4 15.1KiB https://download.postgresql.org/pub/repos/yum/16/redhat/rhel-9-aarch64/pg_snakeoil_16-1.4-1PGDG.rhel9.aarch64.rpm
-@ el10.x86_64 16 pg_snakeoil_16 pg_snakeoil_16-1.4-1PIGSTY.el10.x86_64.rpm pigsty 1.4 16.1KiB https://repo.pigsty.io/yum/pgsql/el10.x86_64/pg_snakeoil_16-1.4-1PIGSTY.el10.x86_64.rpm
-@ el10.x86_64 16 pg_snakeoil_16 pg_snakeoil_16-1.4-1PGDG.rhel10.x86_64.rpm pgdg 1.4 15.9KiB https://download.postgresql.org/pub/repos/yum/16/redhat/rhel-10-x86_64/pg_snakeoil_16-1.4-1PGDG.rhel10.x86_64.rpm
-@ el10.aarch64 16 pg_snakeoil_16 pg_snakeoil_16-1.4-1PIGSTY.el10.aarch64.rpm pigsty 1.4 16.2KiB https://repo.pigsty.io/yum/pgsql/el10.aarch64/pg_snakeoil_16-1.4-1PIGSTY.el10.aarch64.rpm
-@ el10.aarch64 16 pg_snakeoil_16 pg_snakeoil_16-1.4-1PGDG.rhel10.aarch64.rpm pgdg 1.4 15.8KiB https://download.postgresql.org/pub/repos/yum/16/redhat/rhel-10-aarch64/pg_snakeoil_16-1.4-1PGDG.rhel10.aarch64.rpm
-@ d12.x86_64 16 postgresql-16-snakeoil postgresql-16-snakeoil_1.4-3.pgdg12+2_amd64.deb pgdg 1.4 16.9KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pg-snakeoil/postgresql-16-snakeoil_1.4-3.pgdg12+2_amd64.deb
-@ d12.aarch64 16 postgresql-16-snakeoil postgresql-16-snakeoil_1.4-3.pgdg12+2_arm64.deb pgdg 1.4 16.4KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pg-snakeoil/postgresql-16-snakeoil_1.4-3.pgdg12+2_arm64.deb
-@ d13.x86_64 16 postgresql-16-snakeoil postgresql-16-snakeoil_1.4-3.pgdg13+1_amd64.deb pgdg 1.4 16.8KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pg-snakeoil/postgresql-16-snakeoil_1.4-3.pgdg13+1_amd64.deb
-@ d13.aarch64 16 postgresql-16-snakeoil postgresql-16-snakeoil_1.4-3.pgdg13+1_arm64.deb pgdg 1.4 16.4KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pg-snakeoil/postgresql-16-snakeoil_1.4-3.pgdg13+1_arm64.deb
-@ u22.x86_64 16 postgresql-16-snakeoil postgresql-16-snakeoil_1.4-3.pgdg22.04+1_amd64.deb pgdg 1.4 17.1KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pg-snakeoil/postgresql-16-snakeoil_1.4-3.pgdg22.04+1_amd64.deb
-@ u22.aarch64 16 postgresql-16-snakeoil postgresql-16-snakeoil_1.4-3.pgdg22.04+1_arm64.deb pgdg 1.4 17.0KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pg-snakeoil/postgresql-16-snakeoil_1.4-3.pgdg22.04+1_arm64.deb
-@ u24.x86_64 16 postgresql-16-snakeoil postgresql-16-snakeoil_1.4-3.pgdg24.04+1_amd64.deb pgdg 1.4 16.9KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pg-snakeoil/postgresql-16-snakeoil_1.4-3.pgdg24.04+1_amd64.deb
-@ u24.aarch64 16 postgresql-16-snakeoil postgresql-16-snakeoil_1.4-3.pgdg24.04+1_arm64.deb pgdg 1.4 16.4KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pg-snakeoil/postgresql-16-snakeoil_1.4-3.pgdg24.04+1_arm64.deb
-@ el8.x86_64 15 pg_snakeoil_15 pg_snakeoil_15-1.4-1PIGSTY.el8.x86_64.rpm pigsty 1.4 16.3KiB https://repo.pigsty.io/yum/pgsql/el8.x86_64/pg_snakeoil_15-1.4-1PIGSTY.el8.x86_64.rpm
-@ el8.x86_64 15 pg_snakeoil_15 pg_snakeoil_15-1.4-1PGDG.rhel8.x86_64.rpm pgdg 1.4 15.5KiB https://download.postgresql.org/pub/repos/yum/15/redhat/rhel-8-x86_64/pg_snakeoil_15-1.4-1PGDG.rhel8.x86_64.rpm
-@ el8.aarch64 15 pg_snakeoil_15 pg_snakeoil_15-1.4-1PIGSTY.el8.aarch64.rpm pigsty 1.4 16.3KiB https://repo.pigsty.io/yum/pgsql/el8.aarch64/pg_snakeoil_15-1.4-1PIGSTY.el8.aarch64.rpm
-@ el8.aarch64 15 pg_snakeoil_15 pg_snakeoil_15-1.4-1PGDG.rhel8.aarch64.rpm pgdg 1.4 15.4KiB https://download.postgresql.org/pub/repos/yum/15/redhat/rhel-8-aarch64/pg_snakeoil_15-1.4-1PGDG.rhel8.aarch64.rpm
-@ el9.x86_64 15 pg_snakeoil_15 pg_snakeoil_15-1.4-1PIGSTY.el9.x86_64.rpm pigsty 1.4 16.3KiB https://repo.pigsty.io/yum/pgsql/el9.x86_64/pg_snakeoil_15-1.4-1PIGSTY.el9.x86_64.rpm
-@ el9.x86_64 15 pg_snakeoil_15 pg_snakeoil_15-1.4-1PGDG.rhel9.x86_64.rpm pgdg 1.4 15.8KiB https://download.postgresql.org/pub/repos/yum/15/redhat/rhel-9-x86_64/pg_snakeoil_15-1.4-1PGDG.rhel9.x86_64.rpm
-@ el9.aarch64 15 pg_snakeoil_15 pg_snakeoil_15-1.4-1PIGSTY.el9.aarch64.rpm pigsty 1.4 16.2KiB https://repo.pigsty.io/yum/pgsql/el9.aarch64/pg_snakeoil_15-1.4-1PIGSTY.el9.aarch64.rpm
-@ el9.aarch64 15 pg_snakeoil_15 pg_snakeoil_15-1.4-1PGDG.rhel9.aarch64.rpm pgdg 1.4 15.3KiB https://download.postgresql.org/pub/repos/yum/15/redhat/rhel-9-aarch64/pg_snakeoil_15-1.4-1PGDG.rhel9.aarch64.rpm
-@ el10.x86_64 15 pg_snakeoil_15 pg_snakeoil_15-1.4-1PIGSTY.el10.x86_64.rpm pigsty 1.4 16.3KiB https://repo.pigsty.io/yum/pgsql/el10.x86_64/pg_snakeoil_15-1.4-1PIGSTY.el10.x86_64.rpm
-@ el10.x86_64 15 pg_snakeoil_15 pg_snakeoil_15-1.4-1PGDG.rhel10.x86_64.rpm pgdg 1.4 16.1KiB https://download.postgresql.org/pub/repos/yum/15/redhat/rhel-10-x86_64/pg_snakeoil_15-1.4-1PGDG.rhel10.x86_64.rpm
-@ el10.aarch64 15 pg_snakeoil_15 pg_snakeoil_15-1.4-1PIGSTY.el10.aarch64.rpm pigsty 1.4 16.4KiB https://repo.pigsty.io/yum/pgsql/el10.aarch64/pg_snakeoil_15-1.4-1PIGSTY.el10.aarch64.rpm
-@ el10.aarch64 15 pg_snakeoil_15 pg_snakeoil_15-1.4-1PGDG.rhel10.aarch64.rpm pgdg 1.4 16.0KiB https://download.postgresql.org/pub/repos/yum/15/redhat/rhel-10-aarch64/pg_snakeoil_15-1.4-1PGDG.rhel10.aarch64.rpm
-@ d12.x86_64 15 postgresql-15-snakeoil postgresql-15-snakeoil_1.4-3.pgdg12+2_amd64.deb pgdg 1.4 17.0KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pg-snakeoil/postgresql-15-snakeoil_1.4-3.pgdg12+2_amd64.deb
-@ d12.aarch64 15 postgresql-15-snakeoil postgresql-15-snakeoil_1.4-3.pgdg12+2_arm64.deb pgdg 1.4 16.5KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pg-snakeoil/postgresql-15-snakeoil_1.4-3.pgdg12+2_arm64.deb
-@ d13.x86_64 15 postgresql-15-snakeoil postgresql-15-snakeoil_1.4-3.pgdg13+1_amd64.deb pgdg 1.4 17.0KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pg-snakeoil/postgresql-15-snakeoil_1.4-3.pgdg13+1_amd64.deb
-@ d13.aarch64 15 postgresql-15-snakeoil postgresql-15-snakeoil_1.4-3.pgdg13+1_arm64.deb pgdg 1.4 16.6KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pg-snakeoil/postgresql-15-snakeoil_1.4-3.pgdg13+1_arm64.deb
-@ u22.x86_64 15 postgresql-15-snakeoil postgresql-15-snakeoil_1.4-3.pgdg22.04+1_amd64.deb pgdg 1.4 17.2KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pg-snakeoil/postgresql-15-snakeoil_1.4-3.pgdg22.04+1_amd64.deb
-@ u22.aarch64 15 postgresql-15-snakeoil postgresql-15-snakeoil_1.4-3.pgdg22.04+1_arm64.deb pgdg 1.4 17.2KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pg-snakeoil/postgresql-15-snakeoil_1.4-3.pgdg22.04+1_arm64.deb
-@ u24.x86_64 15 postgresql-15-snakeoil postgresql-15-snakeoil_1.4-3.pgdg24.04+1_amd64.deb pgdg 1.4 17.0KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pg-snakeoil/postgresql-15-snakeoil_1.4-3.pgdg24.04+1_amd64.deb
-@ u24.aarch64 15 postgresql-15-snakeoil postgresql-15-snakeoil_1.4-3.pgdg24.04+1_arm64.deb pgdg 1.4 16.5KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pg-snakeoil/postgresql-15-snakeoil_1.4-3.pgdg24.04+1_arm64.deb
-@ el8.x86_64 14 pg_snakeoil_14 pg_snakeoil_14-1.4-1PIGSTY.el8.x86_64.rpm pigsty 1.4 16.3KiB https://repo.pigsty.io/yum/pgsql/el8.x86_64/pg_snakeoil_14-1.4-1PIGSTY.el8.x86_64.rpm
-@ el8.x86_64 14 pg_snakeoil_14 pg_snakeoil_14-1.4-1PGDG.rhel8.x86_64.rpm pgdg 1.4 15.5KiB https://download.postgresql.org/pub/repos/yum/14/redhat/rhel-8-x86_64/pg_snakeoil_14-1.4-1PGDG.rhel8.x86_64.rpm
-@ el8.aarch64 14 pg_snakeoil_14 pg_snakeoil_14-1.4-1PIGSTY.el8.aarch64.rpm pigsty 1.4 16.3KiB https://repo.pigsty.io/yum/pgsql/el8.aarch64/pg_snakeoil_14-1.4-1PIGSTY.el8.aarch64.rpm
-@ el8.aarch64 14 pg_snakeoil_14 pg_snakeoil_14-1.4-1PGDG.rhel8.aarch64.rpm pgdg 1.4 15.4KiB https://download.postgresql.org/pub/repos/yum/14/redhat/rhel-8-aarch64/pg_snakeoil_14-1.4-1PGDG.rhel8.aarch64.rpm
-@ el9.x86_64 14 pg_snakeoil_14 pg_snakeoil_14-1.4-1PIGSTY.el9.x86_64.rpm pigsty 1.4 16.3KiB https://repo.pigsty.io/yum/pgsql/el9.x86_64/pg_snakeoil_14-1.4-1PIGSTY.el9.x86_64.rpm
-@ el9.x86_64 14 pg_snakeoil_14 pg_snakeoil_14-1.4-1PGDG.rhel9.x86_64.rpm pgdg 1.4 15.8KiB https://download.postgresql.org/pub/repos/yum/14/redhat/rhel-9-x86_64/pg_snakeoil_14-1.4-1PGDG.rhel9.x86_64.rpm
-@ el9.aarch64 14 pg_snakeoil_14 pg_snakeoil_14-1.4-1PIGSTY.el9.aarch64.rpm pigsty 1.4 16.2KiB https://repo.pigsty.io/yum/pgsql/el9.aarch64/pg_snakeoil_14-1.4-1PIGSTY.el9.aarch64.rpm
-@ el9.aarch64 14 pg_snakeoil_14 pg_snakeoil_14-1.4-1PGDG.rhel9.aarch64.rpm pgdg 1.4 15.3KiB https://download.postgresql.org/pub/repos/yum/14/redhat/rhel-9-aarch64/pg_snakeoil_14-1.4-1PGDG.rhel9.aarch64.rpm
-@ el10.x86_64 14 pg_snakeoil_14 pg_snakeoil_14-1.4-1PIGSTY.el10.x86_64.rpm pigsty 1.4 16.3KiB https://repo.pigsty.io/yum/pgsql/el10.x86_64/pg_snakeoil_14-1.4-1PIGSTY.el10.x86_64.rpm
-@ el10.x86_64 14 pg_snakeoil_14 pg_snakeoil_14-1.4-1PGDG.rhel10.x86_64.rpm pgdg 1.4 16.1KiB https://download.postgresql.org/pub/repos/yum/14/redhat/rhel-10-x86_64/pg_snakeoil_14-1.4-1PGDG.rhel10.x86_64.rpm
-@ el10.aarch64 14 pg_snakeoil_14 pg_snakeoil_14-1.4-1PIGSTY.el10.aarch64.rpm pigsty 1.4 16.4KiB https://repo.pigsty.io/yum/pgsql/el10.aarch64/pg_snakeoil_14-1.4-1PIGSTY.el10.aarch64.rpm
-@ el10.aarch64 14 pg_snakeoil_14 pg_snakeoil_14-1.4-1PGDG.rhel10.aarch64.rpm pgdg 1.4 16.0KiB https://download.postgresql.org/pub/repos/yum/14/redhat/rhel-10-aarch64/pg_snakeoil_14-1.4-1PGDG.rhel10.aarch64.rpm
-@ d12.x86_64 14 postgresql-14-snakeoil postgresql-14-snakeoil_1.4-3.pgdg12+2_amd64.deb pgdg 1.4 17.0KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pg-snakeoil/postgresql-14-snakeoil_1.4-3.pgdg12+2_amd64.deb
-@ d12.aarch64 14 postgresql-14-snakeoil postgresql-14-snakeoil_1.4-3.pgdg12+2_arm64.deb pgdg 1.4 16.5KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pg-snakeoil/postgresql-14-snakeoil_1.4-3.pgdg12+2_arm64.deb
-@ d13.x86_64 14 postgresql-14-snakeoil postgresql-14-snakeoil_1.4-3.pgdg13+1_amd64.deb pgdg 1.4 17.0KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pg-snakeoil/postgresql-14-snakeoil_1.4-3.pgdg13+1_amd64.deb
-@ d13.aarch64 14 postgresql-14-snakeoil postgresql-14-snakeoil_1.4-3.pgdg13+1_arm64.deb pgdg 1.4 16.5KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pg-snakeoil/postgresql-14-snakeoil_1.4-3.pgdg13+1_arm64.deb
-@ u22.x86_64 14 postgresql-14-snakeoil postgresql-14-snakeoil_1.4-3.pgdg22.04+1_amd64.deb pgdg 1.4 17.2KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pg-snakeoil/postgresql-14-snakeoil_1.4-3.pgdg22.04+1_amd64.deb
-@ u22.aarch64 14 postgresql-14-snakeoil postgresql-14-snakeoil_1.4-3.pgdg22.04+1_arm64.deb pgdg 1.4 17.1KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pg-snakeoil/postgresql-14-snakeoil_1.4-3.pgdg22.04+1_arm64.deb
-@ u24.x86_64 14 postgresql-14-snakeoil postgresql-14-snakeoil_1.4-3.pgdg24.04+1_amd64.deb pgdg 1.4 17.0KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pg-snakeoil/postgresql-14-snakeoil_1.4-3.pgdg24.04+1_amd64.deb
-@ u24.aarch64 14 postgresql-14-snakeoil postgresql-14-snakeoil_1.4-3.pgdg24.04+1_arm64.deb pgdg 1.4 16.5KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pg-snakeoil/postgresql-14-snakeoil_1.4-3.pgdg24.04+1_arm64.deb
+@ el8.x86_64 18 pg_snakeoil_18 pg_snakeoil_18-1.4-1PIGSTY.el8.x86_64.rpm pigsty 1.4 16.1KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_snakeoil_18-1.4-1PIGSTY.el8.x86_64.rpm
+@ el8.x86_64 18 pg_snakeoil_18 pg_snakeoil_18-1.4-1PGDG.rhel8.x86_64.rpm pgdg 1.4 15.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pg_snakeoil_18-1.4-1PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 18 pg_snakeoil_18 pg_snakeoil_18-1.4-1PIGSTY.el8.aarch64.rpm pigsty 1.4 16.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_snakeoil_18-1.4-1PIGSTY.el8.aarch64.rpm
+@ el8.aarch64 18 pg_snakeoil_18 pg_snakeoil_18-1.4-1PGDG.rhel8.aarch64.rpm pgdg 1.4 15.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pg_snakeoil_18-1.4-1PGDG.rhel8.aarch64.rpm
+@ el9.x86_64 18 pg_snakeoil_18 pg_snakeoil_18-1.4-1PIGSTY.el9.x86_64.rpm pigsty 1.4 16.1KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_snakeoil_18-1.4-1PIGSTY.el9.x86_64.rpm
+@ el9.x86_64 18 pg_snakeoil_18 pg_snakeoil_18-1.4-1PGDG.rhel9.x86_64.rpm pgdg 1.4 15.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pg_snakeoil_18-1.4-1PGDG.rhel9.x86_64.rpm
+@ el9.aarch64 18 pg_snakeoil_18 pg_snakeoil_18-1.4-1PIGSTY.el9.aarch64.rpm pigsty 1.4 16.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_snakeoil_18-1.4-1PIGSTY.el9.aarch64.rpm
+@ el9.aarch64 18 pg_snakeoil_18 pg_snakeoil_18-1.4-1PGDG.rhel9.aarch64.rpm pgdg 1.4 15.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pg_snakeoil_18-1.4-1PGDG.rhel9.aarch64.rpm
+@ el10.x86_64 18 pg_snakeoil_18 pg_snakeoil_18-1.4-1PIGSTY.el10.x86_64.rpm pigsty 1.4 16.1KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_snakeoil_18-1.4-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 18 pg_snakeoil_18 pg_snakeoil_18-1.4-1PIGSTY.el10.aarch64.rpm pigsty 1.4 16.1KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_snakeoil_18-1.4-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-snakeoil postgresql-18-snakeoil_1.4-3.pgdg12+2_amd64.deb pgdg 1.4 16.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-snakeoil/postgresql-18-snakeoil_1.4-3.pgdg12+2_amd64.deb
+@ d12.aarch64 18 postgresql-18-snakeoil postgresql-18-snakeoil_1.4-3.pgdg12+2_arm64.deb pgdg 1.4 16.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-snakeoil/postgresql-18-snakeoil_1.4-3.pgdg12+2_arm64.deb
+@ d13.x86_64 18 postgresql-18-snakeoil postgresql-18-snakeoil_1.4-3.pgdg13+1_amd64.deb pgdg 1.4 16.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-snakeoil/postgresql-18-snakeoil_1.4-3.pgdg13+1_amd64.deb
+@ d13.aarch64 18 postgresql-18-snakeoil postgresql-18-snakeoil_1.4-3.pgdg13+1_arm64.deb pgdg 1.4 16.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-snakeoil/postgresql-18-snakeoil_1.4-3.pgdg13+1_arm64.deb
+@ u22.x86_64 18 postgresql-18-snakeoil postgresql-18-snakeoil_1.4-3.pgdg22.04+1_amd64.deb pgdg 1.4 16.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-snakeoil/postgresql-18-snakeoil_1.4-3.pgdg22.04+1_amd64.deb
+@ u22.aarch64 18 postgresql-18-snakeoil postgresql-18-snakeoil_1.4-3.pgdg22.04+1_arm64.deb pgdg 1.4 16.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-snakeoil/postgresql-18-snakeoil_1.4-3.pgdg22.04+1_arm64.deb
+@ u24.x86_64 18 postgresql-18-snakeoil postgresql-18-snakeoil_1.4-3.pgdg24.04+1_amd64.deb pgdg 1.4 16.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-snakeoil/postgresql-18-snakeoil_1.4-3.pgdg24.04+1_amd64.deb
+@ u24.aarch64 18 postgresql-18-snakeoil postgresql-18-snakeoil_1.4-3.pgdg24.04+1_arm64.deb pgdg 1.4 16.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-snakeoil/postgresql-18-snakeoil_1.4-3.pgdg24.04+1_arm64.deb
+@ el8.x86_64 17 pg_snakeoil_17 pg_snakeoil_17-1.4-1PIGSTY.el8.x86_64.rpm pigsty 1.4 16.1KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_snakeoil_17-1.4-1PIGSTY.el8.x86_64.rpm
+@ el8.x86_64 17 pg_snakeoil_17 pg_snakeoil_17-1.4-1PGDG.rhel8.x86_64.rpm pgdg 1.4 15.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pg_snakeoil_17-1.4-1PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 17 pg_snakeoil_17 pg_snakeoil_17-1.4-1PIGSTY.el8.aarch64.rpm pigsty 1.4 16.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_snakeoil_17-1.4-1PIGSTY.el8.aarch64.rpm
+@ el8.aarch64 17 pg_snakeoil_17 pg_snakeoil_17-1.4-1PGDG.rhel8.aarch64.rpm pgdg 1.4 15.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pg_snakeoil_17-1.4-1PGDG.rhel8.aarch64.rpm
+@ el9.x86_64 17 pg_snakeoil_17 pg_snakeoil_17-1.4-1PIGSTY.el9.x86_64.rpm pigsty 1.4 16.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_snakeoil_17-1.4-1PIGSTY.el9.x86_64.rpm
+@ el9.x86_64 17 pg_snakeoil_17 pg_snakeoil_17-1.4-1PGDG.rhel9.x86_64.rpm pgdg 1.4 15.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_snakeoil_17-1.4-1PGDG.rhel9.x86_64.rpm
+@ el9.aarch64 17 pg_snakeoil_17 pg_snakeoil_17-1.4-1PIGSTY.el9.aarch64.rpm pigsty 1.4 16.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_snakeoil_17-1.4-1PIGSTY.el9.aarch64.rpm
+@ el9.aarch64 17 pg_snakeoil_17 pg_snakeoil_17-1.4-1PGDG.rhel9.aarch64.rpm pgdg 1.4 15.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_snakeoil_17-1.4-1PGDG.rhel9.aarch64.rpm
+@ el10.x86_64 17 pg_snakeoil_17 pg_snakeoil_17-1.4-1PIGSTY.el10.x86_64.rpm pigsty 1.4 16.1KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_snakeoil_17-1.4-1PIGSTY.el10.x86_64.rpm
+@ el10.x86_64 17 pg_snakeoil_17 pg_snakeoil_17-1.4-1PGDG.rhel10.x86_64.rpm pgdg 1.4 15.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_snakeoil_17-1.4-1PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 17 pg_snakeoil_17 pg_snakeoil_17-1.4-1PIGSTY.el10.aarch64.rpm pigsty 1.4 16.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_snakeoil_17-1.4-1PIGSTY.el10.aarch64.rpm
+@ el10.aarch64 17 pg_snakeoil_17 pg_snakeoil_17-1.4-1PGDG.rhel10.aarch64.rpm pgdg 1.4 15.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_snakeoil_17-1.4-1PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-snakeoil postgresql-17-snakeoil_1.4-3.pgdg12+2_amd64.deb pgdg 1.4 16.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-snakeoil/postgresql-17-snakeoil_1.4-3.pgdg12+2_amd64.deb
+@ d12.aarch64 17 postgresql-17-snakeoil postgresql-17-snakeoil_1.4-3.pgdg12+2_arm64.deb pgdg 1.4 16.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-snakeoil/postgresql-17-snakeoil_1.4-3.pgdg12+2_arm64.deb
+@ d13.x86_64 17 postgresql-17-snakeoil postgresql-17-snakeoil_1.4-3.pgdg13+1_amd64.deb pgdg 1.4 16.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-snakeoil/postgresql-17-snakeoil_1.4-3.pgdg13+1_amd64.deb
+@ d13.aarch64 17 postgresql-17-snakeoil postgresql-17-snakeoil_1.4-3.pgdg13+1_arm64.deb pgdg 1.4 16.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-snakeoil/postgresql-17-snakeoil_1.4-3.pgdg13+1_arm64.deb
+@ u22.x86_64 17 postgresql-17-snakeoil postgresql-17-snakeoil_1.4-3.pgdg22.04+1_amd64.deb pgdg 1.4 17.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-snakeoil/postgresql-17-snakeoil_1.4-3.pgdg22.04+1_amd64.deb
+@ u22.aarch64 17 postgresql-17-snakeoil postgresql-17-snakeoil_1.4-3.pgdg22.04+1_arm64.deb pgdg 1.4 17.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-snakeoil/postgresql-17-snakeoil_1.4-3.pgdg22.04+1_arm64.deb
+@ u24.x86_64 17 postgresql-17-snakeoil postgresql-17-snakeoil_1.4-3.pgdg24.04+1_amd64.deb pgdg 1.4 16.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-snakeoil/postgresql-17-snakeoil_1.4-3.pgdg24.04+1_amd64.deb
+@ u24.aarch64 17 postgresql-17-snakeoil postgresql-17-snakeoil_1.4-3.pgdg24.04+1_arm64.deb pgdg 1.4 16.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-snakeoil/postgresql-17-snakeoil_1.4-3.pgdg24.04+1_arm64.deb
+@ el8.x86_64 16 pg_snakeoil_16 pg_snakeoil_16-1.4-1PIGSTY.el8.x86_64.rpm pigsty 1.4 16.1KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_snakeoil_16-1.4-1PIGSTY.el8.x86_64.rpm
+@ el8.x86_64 16 pg_snakeoil_16 pg_snakeoil_16-1.4-1PGDG.rhel8.x86_64.rpm pgdg 1.4 15.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_snakeoil_16-1.4-1PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 16 pg_snakeoil_16 pg_snakeoil_16-1.4-1PIGSTY.el8.aarch64.rpm pigsty 1.4 16.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_snakeoil_16-1.4-1PIGSTY.el8.aarch64.rpm
+@ el8.aarch64 16 pg_snakeoil_16 pg_snakeoil_16-1.4-1PGDG.rhel8.aarch64.rpm pgdg 1.4 15.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pg_snakeoil_16-1.4-1PGDG.rhel8.aarch64.rpm
+@ el9.x86_64 16 pg_snakeoil_16 pg_snakeoil_16-1.4-1PIGSTY.el9.x86_64.rpm pigsty 1.4 16.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_snakeoil_16-1.4-1PIGSTY.el9.x86_64.rpm
+@ el9.x86_64 16 pg_snakeoil_16 pg_snakeoil_16-1.4-1PGDG.rhel9.x86_64.rpm pgdg 1.4 15.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_snakeoil_16-1.4-1PGDG.rhel9.x86_64.rpm
+@ el9.aarch64 16 pg_snakeoil_16 pg_snakeoil_16-1.4-1PIGSTY.el9.aarch64.rpm pigsty 1.4 16.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_snakeoil_16-1.4-1PIGSTY.el9.aarch64.rpm
+@ el9.aarch64 16 pg_snakeoil_16 pg_snakeoil_16-1.4-1PGDG.rhel9.aarch64.rpm pgdg 1.4 15.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_snakeoil_16-1.4-1PGDG.rhel9.aarch64.rpm
+@ el10.x86_64 16 pg_snakeoil_16 pg_snakeoil_16-1.4-1PIGSTY.el10.x86_64.rpm pigsty 1.4 16.1KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_snakeoil_16-1.4-1PIGSTY.el10.x86_64.rpm
+@ el10.x86_64 16 pg_snakeoil_16 pg_snakeoil_16-1.4-1PGDG.rhel10.x86_64.rpm pgdg 1.4 15.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_snakeoil_16-1.4-1PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 16 pg_snakeoil_16 pg_snakeoil_16-1.4-1PIGSTY.el10.aarch64.rpm pigsty 1.4 16.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_snakeoil_16-1.4-1PIGSTY.el10.aarch64.rpm
+@ el10.aarch64 16 pg_snakeoil_16 pg_snakeoil_16-1.4-1PGDG.rhel10.aarch64.rpm pgdg 1.4 15.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_snakeoil_16-1.4-1PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 16 postgresql-16-snakeoil postgresql-16-snakeoil_1.4-3.pgdg12+2_amd64.deb pgdg 1.4 16.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-snakeoil/postgresql-16-snakeoil_1.4-3.pgdg12+2_amd64.deb
+@ d12.aarch64 16 postgresql-16-snakeoil postgresql-16-snakeoil_1.4-3.pgdg12+2_arm64.deb pgdg 1.4 16.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-snakeoil/postgresql-16-snakeoil_1.4-3.pgdg12+2_arm64.deb
+@ d13.x86_64 16 postgresql-16-snakeoil postgresql-16-snakeoil_1.4-3.pgdg13+1_amd64.deb pgdg 1.4 16.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-snakeoil/postgresql-16-snakeoil_1.4-3.pgdg13+1_amd64.deb
+@ d13.aarch64 16 postgresql-16-snakeoil postgresql-16-snakeoil_1.4-3.pgdg13+1_arm64.deb pgdg 1.4 16.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-snakeoil/postgresql-16-snakeoil_1.4-3.pgdg13+1_arm64.deb
+@ u22.x86_64 16 postgresql-16-snakeoil postgresql-16-snakeoil_1.4-3.pgdg22.04+1_amd64.deb pgdg 1.4 17.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-snakeoil/postgresql-16-snakeoil_1.4-3.pgdg22.04+1_amd64.deb
+@ u22.aarch64 16 postgresql-16-snakeoil postgresql-16-snakeoil_1.4-3.pgdg22.04+1_arm64.deb pgdg 1.4 17.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-snakeoil/postgresql-16-snakeoil_1.4-3.pgdg22.04+1_arm64.deb
+@ u24.x86_64 16 postgresql-16-snakeoil postgresql-16-snakeoil_1.4-3.pgdg24.04+1_amd64.deb pgdg 1.4 16.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-snakeoil/postgresql-16-snakeoil_1.4-3.pgdg24.04+1_amd64.deb
+@ u24.aarch64 16 postgresql-16-snakeoil postgresql-16-snakeoil_1.4-3.pgdg24.04+1_arm64.deb pgdg 1.4 16.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-snakeoil/postgresql-16-snakeoil_1.4-3.pgdg24.04+1_arm64.deb
+@ el8.x86_64 15 pg_snakeoil_15 pg_snakeoil_15-1.4-1PIGSTY.el8.x86_64.rpm pigsty 1.4 16.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_snakeoil_15-1.4-1PIGSTY.el8.x86_64.rpm
+@ el8.x86_64 15 pg_snakeoil_15 pg_snakeoil_15-1.4-1PGDG.rhel8.x86_64.rpm pgdg 1.4 15.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_snakeoil_15-1.4-1PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 15 pg_snakeoil_15 pg_snakeoil_15-1.4-1PIGSTY.el8.aarch64.rpm pigsty 1.4 16.3KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_snakeoil_15-1.4-1PIGSTY.el8.aarch64.rpm
+@ el8.aarch64 15 pg_snakeoil_15 pg_snakeoil_15-1.4-1PGDG.rhel8.aarch64.rpm pgdg 1.4 15.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pg_snakeoil_15-1.4-1PGDG.rhel8.aarch64.rpm
+@ el9.x86_64 15 pg_snakeoil_15 pg_snakeoil_15-1.4-1PIGSTY.el9.x86_64.rpm pigsty 1.4 16.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_snakeoil_15-1.4-1PIGSTY.el9.x86_64.rpm
+@ el9.x86_64 15 pg_snakeoil_15 pg_snakeoil_15-1.4-1PGDG.rhel9.x86_64.rpm pgdg 1.4 15.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_snakeoil_15-1.4-1PGDG.rhel9.x86_64.rpm
+@ el9.aarch64 15 pg_snakeoil_15 pg_snakeoil_15-1.4-1PIGSTY.el9.aarch64.rpm pigsty 1.4 16.2KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_snakeoil_15-1.4-1PIGSTY.el9.aarch64.rpm
+@ el9.aarch64 15 pg_snakeoil_15 pg_snakeoil_15-1.4-1PGDG.rhel9.aarch64.rpm pgdg 1.4 15.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_snakeoil_15-1.4-1PGDG.rhel9.aarch64.rpm
+@ el10.x86_64 15 pg_snakeoil_15 pg_snakeoil_15-1.4-1PIGSTY.el10.x86_64.rpm pigsty 1.4 16.3KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_snakeoil_15-1.4-1PIGSTY.el10.x86_64.rpm
+@ el10.x86_64 15 pg_snakeoil_15 pg_snakeoil_15-1.4-1PGDG.rhel10.x86_64.rpm pgdg 1.4 16.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_snakeoil_15-1.4-1PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 15 pg_snakeoil_15 pg_snakeoil_15-1.4-1PIGSTY.el10.aarch64.rpm pigsty 1.4 16.4KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_snakeoil_15-1.4-1PIGSTY.el10.aarch64.rpm
+@ el10.aarch64 15 pg_snakeoil_15 pg_snakeoil_15-1.4-1PGDG.rhel10.aarch64.rpm pgdg 1.4 16.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_snakeoil_15-1.4-1PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 15 postgresql-15-snakeoil postgresql-15-snakeoil_1.4-3.pgdg12+2_amd64.deb pgdg 1.4 17.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-snakeoil/postgresql-15-snakeoil_1.4-3.pgdg12+2_amd64.deb
+@ d12.aarch64 15 postgresql-15-snakeoil postgresql-15-snakeoil_1.4-3.pgdg12+2_arm64.deb pgdg 1.4 16.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-snakeoil/postgresql-15-snakeoil_1.4-3.pgdg12+2_arm64.deb
+@ d13.x86_64 15 postgresql-15-snakeoil postgresql-15-snakeoil_1.4-3.pgdg13+1_amd64.deb pgdg 1.4 17.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-snakeoil/postgresql-15-snakeoil_1.4-3.pgdg13+1_amd64.deb
+@ d13.aarch64 15 postgresql-15-snakeoil postgresql-15-snakeoil_1.4-3.pgdg13+1_arm64.deb pgdg 1.4 16.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-snakeoil/postgresql-15-snakeoil_1.4-3.pgdg13+1_arm64.deb
+@ u22.x86_64 15 postgresql-15-snakeoil postgresql-15-snakeoil_1.4-3.pgdg22.04+1_amd64.deb pgdg 1.4 17.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-snakeoil/postgresql-15-snakeoil_1.4-3.pgdg22.04+1_amd64.deb
+@ u22.aarch64 15 postgresql-15-snakeoil postgresql-15-snakeoil_1.4-3.pgdg22.04+1_arm64.deb pgdg 1.4 17.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-snakeoil/postgresql-15-snakeoil_1.4-3.pgdg22.04+1_arm64.deb
+@ u24.x86_64 15 postgresql-15-snakeoil postgresql-15-snakeoil_1.4-3.pgdg24.04+1_amd64.deb pgdg 1.4 17.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-snakeoil/postgresql-15-snakeoil_1.4-3.pgdg24.04+1_amd64.deb
+@ u24.aarch64 15 postgresql-15-snakeoil postgresql-15-snakeoil_1.4-3.pgdg24.04+1_arm64.deb pgdg 1.4 16.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-snakeoil/postgresql-15-snakeoil_1.4-3.pgdg24.04+1_arm64.deb
+@ el8.x86_64 14 pg_snakeoil_14 pg_snakeoil_14-1.4-1PIGSTY.el8.x86_64.rpm pigsty 1.4 16.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_snakeoil_14-1.4-1PIGSTY.el8.x86_64.rpm
+@ el8.x86_64 14 pg_snakeoil_14 pg_snakeoil_14-1.4-1PGDG.rhel8.x86_64.rpm pgdg 1.4 15.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_snakeoil_14-1.4-1PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 14 pg_snakeoil_14 pg_snakeoil_14-1.4-1PIGSTY.el8.aarch64.rpm pigsty 1.4 16.3KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_snakeoil_14-1.4-1PIGSTY.el8.aarch64.rpm
+@ el8.aarch64 14 pg_snakeoil_14 pg_snakeoil_14-1.4-1PGDG.rhel8.aarch64.rpm pgdg 1.4 15.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pg_snakeoil_14-1.4-1PGDG.rhel8.aarch64.rpm
+@ el9.x86_64 14 pg_snakeoil_14 pg_snakeoil_14-1.4-1PIGSTY.el9.x86_64.rpm pigsty 1.4 16.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_snakeoil_14-1.4-1PIGSTY.el9.x86_64.rpm
+@ el9.x86_64 14 pg_snakeoil_14 pg_snakeoil_14-1.4-1PGDG.rhel9.x86_64.rpm pgdg 1.4 15.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_snakeoil_14-1.4-1PGDG.rhel9.x86_64.rpm
+@ el9.aarch64 14 pg_snakeoil_14 pg_snakeoil_14-1.4-1PIGSTY.el9.aarch64.rpm pigsty 1.4 16.2KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_snakeoil_14-1.4-1PIGSTY.el9.aarch64.rpm
+@ el9.aarch64 14 pg_snakeoil_14 pg_snakeoil_14-1.4-1PGDG.rhel9.aarch64.rpm pgdg 1.4 15.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_snakeoil_14-1.4-1PGDG.rhel9.aarch64.rpm
+@ el10.x86_64 14 pg_snakeoil_14 pg_snakeoil_14-1.4-1PIGSTY.el10.x86_64.rpm pigsty 1.4 16.3KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_snakeoil_14-1.4-1PIGSTY.el10.x86_64.rpm
+@ el10.x86_64 14 pg_snakeoil_14 pg_snakeoil_14-1.4-1PGDG.rhel10.x86_64.rpm pgdg 1.4 16.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_snakeoil_14-1.4-1PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 14 pg_snakeoil_14 pg_snakeoil_14-1.4-1PIGSTY.el10.aarch64.rpm pigsty 1.4 16.4KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_snakeoil_14-1.4-1PIGSTY.el10.aarch64.rpm
+@ el10.aarch64 14 pg_snakeoil_14 pg_snakeoil_14-1.4-1PGDG.rhel10.aarch64.rpm pgdg 1.4 16.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_snakeoil_14-1.4-1PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 14 postgresql-14-snakeoil postgresql-14-snakeoil_1.4-3.pgdg12+2_amd64.deb pgdg 1.4 17.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-snakeoil/postgresql-14-snakeoil_1.4-3.pgdg12+2_amd64.deb
+@ d12.aarch64 14 postgresql-14-snakeoil postgresql-14-snakeoil_1.4-3.pgdg12+2_arm64.deb pgdg 1.4 16.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-snakeoil/postgresql-14-snakeoil_1.4-3.pgdg12+2_arm64.deb
+@ d13.x86_64 14 postgresql-14-snakeoil postgresql-14-snakeoil_1.4-3.pgdg13+1_amd64.deb pgdg 1.4 17.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-snakeoil/postgresql-14-snakeoil_1.4-3.pgdg13+1_amd64.deb
+@ d13.aarch64 14 postgresql-14-snakeoil postgresql-14-snakeoil_1.4-3.pgdg13+1_arm64.deb pgdg 1.4 16.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-snakeoil/postgresql-14-snakeoil_1.4-3.pgdg13+1_arm64.deb
+@ u22.x86_64 14 postgresql-14-snakeoil postgresql-14-snakeoil_1.4-3.pgdg22.04+1_amd64.deb pgdg 1.4 17.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-snakeoil/postgresql-14-snakeoil_1.4-3.pgdg22.04+1_amd64.deb
+@ u22.aarch64 14 postgresql-14-snakeoil postgresql-14-snakeoil_1.4-3.pgdg22.04+1_arm64.deb pgdg 1.4 17.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-snakeoil/postgresql-14-snakeoil_1.4-3.pgdg22.04+1_arm64.deb
+@ u24.x86_64 14 postgresql-14-snakeoil postgresql-14-snakeoil_1.4-3.pgdg24.04+1_amd64.deb pgdg 1.4 17.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-snakeoil/postgresql-14-snakeoil_1.4-3.pgdg24.04+1_amd64.deb
+@ u24.aarch64 14 postgresql-14-snakeoil postgresql-14-snakeoil_1.4-3.pgdg24.04+1_arm64.deb pgdg 1.4 16.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-snakeoil/postgresql-14-snakeoil_1.4-3.pgdg24.04+1_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建
@@ -228,6 +228,12 @@ apt install -y postgresql-14-snakeoil   # PG 14
 shared_preload_libraries = 'pg_snakeoil';
 ```
 
+
+**创建扩展**：
+
+```sql
+CREATE EXTENSION pg_snakeoil;
+```
 
 
 

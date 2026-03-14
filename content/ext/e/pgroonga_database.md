@@ -11,7 +11,7 @@ weight: 2111
     <div class="ext-card__title">pgroonga/pgroonga</div>
     <div class="ext-card__desc">https://github.com/pgroonga/pgroonga</div>
   </a>
-  <a class="ext-card ext-card--source" href="pgroonga-4.0.4.tar.gz">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pgroonga-4.0.4.tar.gz">
     <div class="ext-card__kicker">源码</div>
     <div class="ext-card__title">pgroonga-4.0.4.tar.gz</div>
     <div class="ext-card__desc">pgroonga-4.0.4.tar.gz</div>

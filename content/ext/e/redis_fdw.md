@@ -11,7 +11,7 @@ weight: 8710
     <div class="ext-card__title">pg-redis-fdw/redis_fdw</div>
     <div class="ext-card__desc">https://github.com/pg-redis-fdw/redis_fdw</div>
   </a>
-  <a class="ext-card ext-card--source" href="redis_fdw-1.0.tar.gz">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/redis_fdw-1.0.tar.gz">
     <div class="ext-card__kicker">源码</div>
     <div class="ext-card__title">redis_fdw-1.0.tar.gz</div>
     <div class="ext-card__desc">redis_fdw-1.0.tar.gz</div>
@@ -67,76 +67,76 @@ weight: 8710
 | u22.aarch64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 |
 | u24.x86_64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 |
 | u24.aarch64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 |
-@ el8.x86_64 18 redis_fdw_18 redis_fdw_18-1.0-2PIGSTY.el8.x86_64.rpm pigsty 1.0 29.6KiB https://repo.pigsty.io/yum/pgsql/el8.x86_64/redis_fdw_18-1.0-2PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 18 redis_fdw_18 redis_fdw_18-1.0-2PIGSTY.el8.aarch64.rpm pigsty 1.0 28.9KiB https://repo.pigsty.io/yum/pgsql/el8.aarch64/redis_fdw_18-1.0-2PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 18 redis_fdw_18 redis_fdw_18-1.0-2PIGSTY.el9.x86_64.rpm pigsty 1.0 29.4KiB https://repo.pigsty.io/yum/pgsql/el9.x86_64/redis_fdw_18-1.0-2PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 18 redis_fdw_18 redis_fdw_18-1.0-2PIGSTY.el9.aarch64.rpm pigsty 1.0 28.9KiB https://repo.pigsty.io/yum/pgsql/el9.aarch64/redis_fdw_18-1.0-2PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 18 redis_fdw_18 redis_fdw_18-1.0-2PIGSTY.el10.x86_64.rpm pigsty 1.0 29.7KiB https://repo.pigsty.io/yum/pgsql/el10.x86_64/redis_fdw_18-1.0-2PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 18 redis_fdw_18 redis_fdw_18-1.0-2PIGSTY.el10.aarch64.rpm pigsty 1.0 29.1KiB https://repo.pigsty.io/yum/pgsql/el10.aarch64/redis_fdw_18-1.0-2PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 18 postgresql-18-redis-fdw postgresql-18-redis-fdw_1.0-2PIGSTY~bookworm_amd64.deb pigsty 1.0 52.0KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/r/redis-fdw/postgresql-18-redis-fdw_1.0-2PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 18 postgresql-18-redis-fdw postgresql-18-redis-fdw_1.0-2PIGSTY~bookworm_arm64.deb pigsty 1.0 50.1KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/r/redis-fdw/postgresql-18-redis-fdw_1.0-2PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 18 postgresql-18-redis-fdw postgresql-18-redis-fdw_1.0-2PIGSTY~trixie_amd64.deb pigsty 1.0 51.9KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/r/redis-fdw/postgresql-18-redis-fdw_1.0-2PIGSTY~trixie_amd64.deb
-@ d13.aarch64 18 postgresql-18-redis-fdw postgresql-18-redis-fdw_1.0-2PIGSTY~trixie_arm64.deb pigsty 1.0 50.5KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/r/redis-fdw/postgresql-18-redis-fdw_1.0-2PIGSTY~trixie_arm64.deb
-@ u22.x86_64 18 postgresql-18-redis-fdw postgresql-18-redis-fdw_1.0-2PIGSTY~jammy_amd64.deb pigsty 1.0 55.7KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/r/redis-fdw/postgresql-18-redis-fdw_1.0-2PIGSTY~jammy_amd64.deb
-@ u22.aarch64 18 postgresql-18-redis-fdw postgresql-18-redis-fdw_1.0-2PIGSTY~jammy_arm64.deb pigsty 1.0 54.6KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/r/redis-fdw/postgresql-18-redis-fdw_1.0-2PIGSTY~jammy_arm64.deb
-@ u24.x86_64 18 postgresql-18-redis-fdw postgresql-18-redis-fdw_1.0-2PIGSTY~noble_amd64.deb pigsty 1.0 54.1KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/r/redis-fdw/postgresql-18-redis-fdw_1.0-2PIGSTY~noble_amd64.deb
-@ u24.aarch64 18 postgresql-18-redis-fdw postgresql-18-redis-fdw_1.0-2PIGSTY~noble_arm64.deb pigsty 1.0 53.0KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/r/redis-fdw/postgresql-18-redis-fdw_1.0-2PIGSTY~noble_arm64.deb
-@ el8.x86_64 17 redis_fdw_17 redis_fdw_17-1.0-2PIGSTY.el8.x86_64.rpm pigsty 1.0 27.3KiB https://repo.pigsty.io/yum/pgsql/el8.x86_64/redis_fdw_17-1.0-2PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 17 redis_fdw_17 redis_fdw_17-1.0-2PIGSTY.el8.aarch64.rpm pigsty 1.0 26.6KiB https://repo.pigsty.io/yum/pgsql/el8.aarch64/redis_fdw_17-1.0-2PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 17 redis_fdw_17 redis_fdw_17-1.0-2PIGSTY.el9.x86_64.rpm pigsty 1.0 27.4KiB https://repo.pigsty.io/yum/pgsql/el9.x86_64/redis_fdw_17-1.0-2PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 17 redis_fdw_17 redis_fdw_17-1.0-2PIGSTY.el9.aarch64.rpm pigsty 1.0 26.7KiB https://repo.pigsty.io/yum/pgsql/el9.aarch64/redis_fdw_17-1.0-2PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 17 redis_fdw_17 redis_fdw_17-1.0-2PIGSTY.el10.x86_64.rpm pigsty 1.0 27.7KiB https://repo.pigsty.io/yum/pgsql/el10.x86_64/redis_fdw_17-1.0-2PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 17 redis_fdw_17 redis_fdw_17-1.0-2PIGSTY.el10.aarch64.rpm pigsty 1.0 27.1KiB https://repo.pigsty.io/yum/pgsql/el10.aarch64/redis_fdw_17-1.0-2PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 17 postgresql-17-redis-fdw postgresql-17-redis-fdw_1.0-2PIGSTY~bookworm_amd64.deb pigsty 1.0 51.6KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/r/redis-fdw/postgresql-17-redis-fdw_1.0-2PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 17 postgresql-17-redis-fdw postgresql-17-redis-fdw_1.0-2PIGSTY~bookworm_arm64.deb pigsty 1.0 50.1KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/r/redis-fdw/postgresql-17-redis-fdw_1.0-2PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 17 postgresql-17-redis-fdw postgresql-17-redis-fdw_1.0-2PIGSTY~trixie_amd64.deb pigsty 1.0 52.2KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/r/redis-fdw/postgresql-17-redis-fdw_1.0-2PIGSTY~trixie_amd64.deb
-@ d13.aarch64 17 postgresql-17-redis-fdw postgresql-17-redis-fdw_1.0-2PIGSTY~trixie_arm64.deb pigsty 1.0 50.4KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/r/redis-fdw/postgresql-17-redis-fdw_1.0-2PIGSTY~trixie_arm64.deb
-@ u22.x86_64 17 postgresql-17-redis-fdw postgresql-17-redis-fdw_1.0-2PIGSTY~jammy_amd64.deb pigsty 1.0 62.2KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/r/redis-fdw/postgresql-17-redis-fdw_1.0-2PIGSTY~jammy_amd64.deb
-@ u22.aarch64 17 postgresql-17-redis-fdw postgresql-17-redis-fdw_1.0-2PIGSTY~jammy_arm64.deb pigsty 1.0 60.9KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/r/redis-fdw/postgresql-17-redis-fdw_1.0-2PIGSTY~jammy_arm64.deb
-@ u24.x86_64 17 postgresql-17-redis-fdw postgresql-17-redis-fdw_1.0-2PIGSTY~noble_amd64.deb pigsty 1.0 54.2KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/r/redis-fdw/postgresql-17-redis-fdw_1.0-2PIGSTY~noble_amd64.deb
-@ u24.aarch64 17 postgresql-17-redis-fdw postgresql-17-redis-fdw_1.0-2PIGSTY~noble_arm64.deb pigsty 1.0 53.1KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/r/redis-fdw/postgresql-17-redis-fdw_1.0-2PIGSTY~noble_arm64.deb
-@ el8.x86_64 16 redis_fdw_16 redis_fdw_16-1.0-2PIGSTY.el8.x86_64.rpm pigsty 1.0 27.3KiB https://repo.pigsty.io/yum/pgsql/el8.x86_64/redis_fdw_16-1.0-2PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 16 redis_fdw_16 redis_fdw_16-1.0-2PIGSTY.el8.aarch64.rpm pigsty 1.0 26.7KiB https://repo.pigsty.io/yum/pgsql/el8.aarch64/redis_fdw_16-1.0-2PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 16 redis_fdw_16 redis_fdw_16-1.0-2PIGSTY.el9.x86_64.rpm pigsty 1.0 27.4KiB https://repo.pigsty.io/yum/pgsql/el9.x86_64/redis_fdw_16-1.0-2PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 16 redis_fdw_16 redis_fdw_16-1.0-2PIGSTY.el9.aarch64.rpm pigsty 1.0 26.8KiB https://repo.pigsty.io/yum/pgsql/el9.aarch64/redis_fdw_16-1.0-2PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 16 redis_fdw_16 redis_fdw_16-1.0-2PIGSTY.el10.x86_64.rpm pigsty 1.0 27.7KiB https://repo.pigsty.io/yum/pgsql/el10.x86_64/redis_fdw_16-1.0-2PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 16 redis_fdw_16 redis_fdw_16-1.0-2PIGSTY.el10.aarch64.rpm pigsty 1.0 27.2KiB https://repo.pigsty.io/yum/pgsql/el10.aarch64/redis_fdw_16-1.0-2PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 16 postgresql-16-redis-fdw postgresql-16-redis-fdw_1.0-2PIGSTY~bookworm_amd64.deb pigsty 1.0 51.7KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/r/redis-fdw/postgresql-16-redis-fdw_1.0-2PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 16 postgresql-16-redis-fdw postgresql-16-redis-fdw_1.0-2PIGSTY~bookworm_arm64.deb pigsty 1.0 50.4KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/r/redis-fdw/postgresql-16-redis-fdw_1.0-2PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 16 postgresql-16-redis-fdw postgresql-16-redis-fdw_1.0-2PIGSTY~trixie_amd64.deb pigsty 1.0 52.1KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/r/redis-fdw/postgresql-16-redis-fdw_1.0-2PIGSTY~trixie_amd64.deb
-@ d13.aarch64 16 postgresql-16-redis-fdw postgresql-16-redis-fdw_1.0-2PIGSTY~trixie_arm64.deb pigsty 1.0 50.4KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/r/redis-fdw/postgresql-16-redis-fdw_1.0-2PIGSTY~trixie_arm64.deb
-@ u22.x86_64 16 postgresql-16-redis-fdw postgresql-16-redis-fdw_1.0-2PIGSTY~jammy_amd64.deb pigsty 1.0 61.9KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/r/redis-fdw/postgresql-16-redis-fdw_1.0-2PIGSTY~jammy_amd64.deb
-@ u22.aarch64 16 postgresql-16-redis-fdw postgresql-16-redis-fdw_1.0-2PIGSTY~jammy_arm64.deb pigsty 1.0 61.0KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/r/redis-fdw/postgresql-16-redis-fdw_1.0-2PIGSTY~jammy_arm64.deb
-@ u24.x86_64 16 postgresql-16-redis-fdw postgresql-16-redis-fdw_1.0-2PIGSTY~noble_amd64.deb pigsty 1.0 54.1KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/r/redis-fdw/postgresql-16-redis-fdw_1.0-2PIGSTY~noble_amd64.deb
-@ u24.aarch64 16 postgresql-16-redis-fdw postgresql-16-redis-fdw_1.0-2PIGSTY~noble_arm64.deb pigsty 1.0 53.2KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/r/redis-fdw/postgresql-16-redis-fdw_1.0-2PIGSTY~noble_arm64.deb
-@ el8.x86_64 15 redis_fdw_15 redis_fdw_15-1.0-2PIGSTY.el8.x86_64.rpm pigsty 1.0 27.3KiB https://repo.pigsty.io/yum/pgsql/el8.x86_64/redis_fdw_15-1.0-2PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 15 redis_fdw_15 redis_fdw_15-1.0-2PIGSTY.el8.aarch64.rpm pigsty 1.0 26.6KiB https://repo.pigsty.io/yum/pgsql/el8.aarch64/redis_fdw_15-1.0-2PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 15 redis_fdw_15 redis_fdw_15-1.0-2PIGSTY.el9.x86_64.rpm pigsty 1.0 27.4KiB https://repo.pigsty.io/yum/pgsql/el9.x86_64/redis_fdw_15-1.0-2PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 15 redis_fdw_15 redis_fdw_15-1.0-2PIGSTY.el9.aarch64.rpm pigsty 1.0 26.7KiB https://repo.pigsty.io/yum/pgsql/el9.aarch64/redis_fdw_15-1.0-2PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 15 redis_fdw_15 redis_fdw_15-1.0-2PIGSTY.el10.x86_64.rpm pigsty 1.0 27.7KiB https://repo.pigsty.io/yum/pgsql/el10.x86_64/redis_fdw_15-1.0-2PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 15 redis_fdw_15 redis_fdw_15-1.0-2PIGSTY.el10.aarch64.rpm pigsty 1.0 27.1KiB https://repo.pigsty.io/yum/pgsql/el10.aarch64/redis_fdw_15-1.0-2PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 15 postgresql-15-redis-fdw postgresql-15-redis-fdw_1.0-2PIGSTY~bookworm_amd64.deb pigsty 1.0 51.8KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/r/redis-fdw/postgresql-15-redis-fdw_1.0-2PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 15 postgresql-15-redis-fdw postgresql-15-redis-fdw_1.0-2PIGSTY~bookworm_arm64.deb pigsty 1.0 50.3KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/r/redis-fdw/postgresql-15-redis-fdw_1.0-2PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 15 postgresql-15-redis-fdw postgresql-15-redis-fdw_1.0-2PIGSTY~trixie_amd64.deb pigsty 1.0 51.9KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/r/redis-fdw/postgresql-15-redis-fdw_1.0-2PIGSTY~trixie_amd64.deb
-@ d13.aarch64 15 postgresql-15-redis-fdw postgresql-15-redis-fdw_1.0-2PIGSTY~trixie_arm64.deb pigsty 1.0 50.2KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/r/redis-fdw/postgresql-15-redis-fdw_1.0-2PIGSTY~trixie_arm64.deb
-@ u22.x86_64 15 postgresql-15-redis-fdw postgresql-15-redis-fdw_1.0-2PIGSTY~jammy_amd64.deb pigsty 1.0 61.7KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/r/redis-fdw/postgresql-15-redis-fdw_1.0-2PIGSTY~jammy_amd64.deb
-@ u22.aarch64 15 postgresql-15-redis-fdw postgresql-15-redis-fdw_1.0-2PIGSTY~jammy_arm64.deb pigsty 1.0 60.6KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/r/redis-fdw/postgresql-15-redis-fdw_1.0-2PIGSTY~jammy_arm64.deb
-@ u24.x86_64 15 postgresql-15-redis-fdw postgresql-15-redis-fdw_1.0-2PIGSTY~noble_amd64.deb pigsty 1.0 54.0KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/r/redis-fdw/postgresql-15-redis-fdw_1.0-2PIGSTY~noble_amd64.deb
-@ u24.aarch64 15 postgresql-15-redis-fdw postgresql-15-redis-fdw_1.0-2PIGSTY~noble_arm64.deb pigsty 1.0 53.0KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/r/redis-fdw/postgresql-15-redis-fdw_1.0-2PIGSTY~noble_arm64.deb
-@ el8.x86_64 14 redis_fdw_14 redis_fdw_14-1.0-2PIGSTY.el8.x86_64.rpm pigsty 1.0 27.3KiB https://repo.pigsty.io/yum/pgsql/el8.x86_64/redis_fdw_14-1.0-2PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 14 redis_fdw_14 redis_fdw_14-1.0-2PIGSTY.el8.aarch64.rpm pigsty 1.0 26.6KiB https://repo.pigsty.io/yum/pgsql/el8.aarch64/redis_fdw_14-1.0-2PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 14 redis_fdw_14 redis_fdw_14-1.0-2PIGSTY.el9.x86_64.rpm pigsty 1.0 27.4KiB https://repo.pigsty.io/yum/pgsql/el9.x86_64/redis_fdw_14-1.0-2PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 14 redis_fdw_14 redis_fdw_14-1.0-2PIGSTY.el9.aarch64.rpm pigsty 1.0 26.7KiB https://repo.pigsty.io/yum/pgsql/el9.aarch64/redis_fdw_14-1.0-2PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 14 redis_fdw_14 redis_fdw_14-1.0-2PIGSTY.el10.x86_64.rpm pigsty 1.0 27.6KiB https://repo.pigsty.io/yum/pgsql/el10.x86_64/redis_fdw_14-1.0-2PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 14 redis_fdw_14 redis_fdw_14-1.0-2PIGSTY.el10.aarch64.rpm pigsty 1.0 27.1KiB https://repo.pigsty.io/yum/pgsql/el10.aarch64/redis_fdw_14-1.0-2PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 14 postgresql-14-redis-fdw postgresql-14-redis-fdw_1.0-2PIGSTY~bookworm_amd64.deb pigsty 1.0 51.8KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/r/redis-fdw/postgresql-14-redis-fdw_1.0-2PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 14 postgresql-14-redis-fdw postgresql-14-redis-fdw_1.0-2PIGSTY~bookworm_arm64.deb pigsty 1.0 50.2KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/r/redis-fdw/postgresql-14-redis-fdw_1.0-2PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 14 postgresql-14-redis-fdw postgresql-14-redis-fdw_1.0-2PIGSTY~trixie_amd64.deb pigsty 1.0 52.0KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/r/redis-fdw/postgresql-14-redis-fdw_1.0-2PIGSTY~trixie_amd64.deb
-@ d13.aarch64 14 postgresql-14-redis-fdw postgresql-14-redis-fdw_1.0-2PIGSTY~trixie_arm64.deb pigsty 1.0 50.2KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/r/redis-fdw/postgresql-14-redis-fdw_1.0-2PIGSTY~trixie_arm64.deb
-@ u22.x86_64 14 postgresql-14-redis-fdw postgresql-14-redis-fdw_1.0-2PIGSTY~jammy_amd64.deb pigsty 1.0 61.7KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/r/redis-fdw/postgresql-14-redis-fdw_1.0-2PIGSTY~jammy_amd64.deb
-@ u22.aarch64 14 postgresql-14-redis-fdw postgresql-14-redis-fdw_1.0-2PIGSTY~jammy_arm64.deb pigsty 1.0 60.6KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/r/redis-fdw/postgresql-14-redis-fdw_1.0-2PIGSTY~jammy_arm64.deb
-@ u24.x86_64 14 postgresql-14-redis-fdw postgresql-14-redis-fdw_1.0-2PIGSTY~noble_amd64.deb pigsty 1.0 54.0KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/r/redis-fdw/postgresql-14-redis-fdw_1.0-2PIGSTY~noble_amd64.deb
-@ u24.aarch64 14 postgresql-14-redis-fdw postgresql-14-redis-fdw_1.0-2PIGSTY~noble_arm64.deb pigsty 1.0 53.0KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/r/redis-fdw/postgresql-14-redis-fdw_1.0-2PIGSTY~noble_arm64.deb
+@ el8.x86_64 18 redis_fdw_18 redis_fdw_18-1.0-2PIGSTY.el8.x86_64.rpm pigsty 1.0 29.6KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/redis_fdw_18-1.0-2PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 18 redis_fdw_18 redis_fdw_18-1.0-2PIGSTY.el8.aarch64.rpm pigsty 1.0 28.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/redis_fdw_18-1.0-2PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 18 redis_fdw_18 redis_fdw_18-1.0-2PIGSTY.el9.x86_64.rpm pigsty 1.0 29.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/redis_fdw_18-1.0-2PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 18 redis_fdw_18 redis_fdw_18-1.0-2PIGSTY.el9.aarch64.rpm pigsty 1.0 28.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/redis_fdw_18-1.0-2PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 18 redis_fdw_18 redis_fdw_18-1.0-2PIGSTY.el10.x86_64.rpm pigsty 1.0 29.7KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/redis_fdw_18-1.0-2PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 18 redis_fdw_18 redis_fdw_18-1.0-2PIGSTY.el10.aarch64.rpm pigsty 1.0 29.1KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/redis_fdw_18-1.0-2PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-redis-fdw postgresql-18-redis-fdw_1.0-2PIGSTY~bookworm_amd64.deb pigsty 1.0 52.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/r/redis-fdw/postgresql-18-redis-fdw_1.0-2PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 18 postgresql-18-redis-fdw postgresql-18-redis-fdw_1.0-2PIGSTY~bookworm_arm64.deb pigsty 1.0 50.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/r/redis-fdw/postgresql-18-redis-fdw_1.0-2PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 18 postgresql-18-redis-fdw postgresql-18-redis-fdw_1.0-2PIGSTY~trixie_amd64.deb pigsty 1.0 51.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/r/redis-fdw/postgresql-18-redis-fdw_1.0-2PIGSTY~trixie_amd64.deb
+@ d13.aarch64 18 postgresql-18-redis-fdw postgresql-18-redis-fdw_1.0-2PIGSTY~trixie_arm64.deb pigsty 1.0 50.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/r/redis-fdw/postgresql-18-redis-fdw_1.0-2PIGSTY~trixie_arm64.deb
+@ u22.x86_64 18 postgresql-18-redis-fdw postgresql-18-redis-fdw_1.0-2PIGSTY~jammy_amd64.deb pigsty 1.0 55.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/r/redis-fdw/postgresql-18-redis-fdw_1.0-2PIGSTY~jammy_amd64.deb
+@ u22.aarch64 18 postgresql-18-redis-fdw postgresql-18-redis-fdw_1.0-2PIGSTY~jammy_arm64.deb pigsty 1.0 54.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/r/redis-fdw/postgresql-18-redis-fdw_1.0-2PIGSTY~jammy_arm64.deb
+@ u24.x86_64 18 postgresql-18-redis-fdw postgresql-18-redis-fdw_1.0-2PIGSTY~noble_amd64.deb pigsty 1.0 54.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/r/redis-fdw/postgresql-18-redis-fdw_1.0-2PIGSTY~noble_amd64.deb
+@ u24.aarch64 18 postgresql-18-redis-fdw postgresql-18-redis-fdw_1.0-2PIGSTY~noble_arm64.deb pigsty 1.0 53.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/r/redis-fdw/postgresql-18-redis-fdw_1.0-2PIGSTY~noble_arm64.deb
+@ el8.x86_64 17 redis_fdw_17 redis_fdw_17-1.0-2PIGSTY.el8.x86_64.rpm pigsty 1.0 27.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/redis_fdw_17-1.0-2PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 17 redis_fdw_17 redis_fdw_17-1.0-2PIGSTY.el8.aarch64.rpm pigsty 1.0 26.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/redis_fdw_17-1.0-2PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 17 redis_fdw_17 redis_fdw_17-1.0-2PIGSTY.el9.x86_64.rpm pigsty 1.0 27.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/redis_fdw_17-1.0-2PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 17 redis_fdw_17 redis_fdw_17-1.0-2PIGSTY.el9.aarch64.rpm pigsty 1.0 26.7KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/redis_fdw_17-1.0-2PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 17 redis_fdw_17 redis_fdw_17-1.0-2PIGSTY.el10.x86_64.rpm pigsty 1.0 27.7KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/redis_fdw_17-1.0-2PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 17 redis_fdw_17 redis_fdw_17-1.0-2PIGSTY.el10.aarch64.rpm pigsty 1.0 27.1KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/redis_fdw_17-1.0-2PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-redis-fdw postgresql-17-redis-fdw_1.0-2PIGSTY~bookworm_amd64.deb pigsty 1.0 51.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/r/redis-fdw/postgresql-17-redis-fdw_1.0-2PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 17 postgresql-17-redis-fdw postgresql-17-redis-fdw_1.0-2PIGSTY~bookworm_arm64.deb pigsty 1.0 50.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/r/redis-fdw/postgresql-17-redis-fdw_1.0-2PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 17 postgresql-17-redis-fdw postgresql-17-redis-fdw_1.0-2PIGSTY~trixie_amd64.deb pigsty 1.0 52.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/r/redis-fdw/postgresql-17-redis-fdw_1.0-2PIGSTY~trixie_amd64.deb
+@ d13.aarch64 17 postgresql-17-redis-fdw postgresql-17-redis-fdw_1.0-2PIGSTY~trixie_arm64.deb pigsty 1.0 50.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/r/redis-fdw/postgresql-17-redis-fdw_1.0-2PIGSTY~trixie_arm64.deb
+@ u22.x86_64 17 postgresql-17-redis-fdw postgresql-17-redis-fdw_1.0-2PIGSTY~jammy_amd64.deb pigsty 1.0 62.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/r/redis-fdw/postgresql-17-redis-fdw_1.0-2PIGSTY~jammy_amd64.deb
+@ u22.aarch64 17 postgresql-17-redis-fdw postgresql-17-redis-fdw_1.0-2PIGSTY~jammy_arm64.deb pigsty 1.0 60.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/r/redis-fdw/postgresql-17-redis-fdw_1.0-2PIGSTY~jammy_arm64.deb
+@ u24.x86_64 17 postgresql-17-redis-fdw postgresql-17-redis-fdw_1.0-2PIGSTY~noble_amd64.deb pigsty 1.0 54.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/r/redis-fdw/postgresql-17-redis-fdw_1.0-2PIGSTY~noble_amd64.deb
+@ u24.aarch64 17 postgresql-17-redis-fdw postgresql-17-redis-fdw_1.0-2PIGSTY~noble_arm64.deb pigsty 1.0 53.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/r/redis-fdw/postgresql-17-redis-fdw_1.0-2PIGSTY~noble_arm64.deb
+@ el8.x86_64 16 redis_fdw_16 redis_fdw_16-1.0-2PIGSTY.el8.x86_64.rpm pigsty 1.0 27.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/redis_fdw_16-1.0-2PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 16 redis_fdw_16 redis_fdw_16-1.0-2PIGSTY.el8.aarch64.rpm pigsty 1.0 26.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/redis_fdw_16-1.0-2PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 16 redis_fdw_16 redis_fdw_16-1.0-2PIGSTY.el9.x86_64.rpm pigsty 1.0 27.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/redis_fdw_16-1.0-2PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 16 redis_fdw_16 redis_fdw_16-1.0-2PIGSTY.el9.aarch64.rpm pigsty 1.0 26.8KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/redis_fdw_16-1.0-2PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 16 redis_fdw_16 redis_fdw_16-1.0-2PIGSTY.el10.x86_64.rpm pigsty 1.0 27.7KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/redis_fdw_16-1.0-2PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 16 redis_fdw_16 redis_fdw_16-1.0-2PIGSTY.el10.aarch64.rpm pigsty 1.0 27.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/redis_fdw_16-1.0-2PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 16 postgresql-16-redis-fdw postgresql-16-redis-fdw_1.0-2PIGSTY~bookworm_amd64.deb pigsty 1.0 51.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/r/redis-fdw/postgresql-16-redis-fdw_1.0-2PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 16 postgresql-16-redis-fdw postgresql-16-redis-fdw_1.0-2PIGSTY~bookworm_arm64.deb pigsty 1.0 50.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/r/redis-fdw/postgresql-16-redis-fdw_1.0-2PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 16 postgresql-16-redis-fdw postgresql-16-redis-fdw_1.0-2PIGSTY~trixie_amd64.deb pigsty 1.0 52.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/r/redis-fdw/postgresql-16-redis-fdw_1.0-2PIGSTY~trixie_amd64.deb
+@ d13.aarch64 16 postgresql-16-redis-fdw postgresql-16-redis-fdw_1.0-2PIGSTY~trixie_arm64.deb pigsty 1.0 50.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/r/redis-fdw/postgresql-16-redis-fdw_1.0-2PIGSTY~trixie_arm64.deb
+@ u22.x86_64 16 postgresql-16-redis-fdw postgresql-16-redis-fdw_1.0-2PIGSTY~jammy_amd64.deb pigsty 1.0 61.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/r/redis-fdw/postgresql-16-redis-fdw_1.0-2PIGSTY~jammy_amd64.deb
+@ u22.aarch64 16 postgresql-16-redis-fdw postgresql-16-redis-fdw_1.0-2PIGSTY~jammy_arm64.deb pigsty 1.0 61.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/r/redis-fdw/postgresql-16-redis-fdw_1.0-2PIGSTY~jammy_arm64.deb
+@ u24.x86_64 16 postgresql-16-redis-fdw postgresql-16-redis-fdw_1.0-2PIGSTY~noble_amd64.deb pigsty 1.0 54.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/r/redis-fdw/postgresql-16-redis-fdw_1.0-2PIGSTY~noble_amd64.deb
+@ u24.aarch64 16 postgresql-16-redis-fdw postgresql-16-redis-fdw_1.0-2PIGSTY~noble_arm64.deb pigsty 1.0 53.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/r/redis-fdw/postgresql-16-redis-fdw_1.0-2PIGSTY~noble_arm64.deb
+@ el8.x86_64 15 redis_fdw_15 redis_fdw_15-1.0-2PIGSTY.el8.x86_64.rpm pigsty 1.0 27.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/redis_fdw_15-1.0-2PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 15 redis_fdw_15 redis_fdw_15-1.0-2PIGSTY.el8.aarch64.rpm pigsty 1.0 26.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/redis_fdw_15-1.0-2PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 15 redis_fdw_15 redis_fdw_15-1.0-2PIGSTY.el9.x86_64.rpm pigsty 1.0 27.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/redis_fdw_15-1.0-2PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 15 redis_fdw_15 redis_fdw_15-1.0-2PIGSTY.el9.aarch64.rpm pigsty 1.0 26.7KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/redis_fdw_15-1.0-2PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 15 redis_fdw_15 redis_fdw_15-1.0-2PIGSTY.el10.x86_64.rpm pigsty 1.0 27.7KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/redis_fdw_15-1.0-2PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 15 redis_fdw_15 redis_fdw_15-1.0-2PIGSTY.el10.aarch64.rpm pigsty 1.0 27.1KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/redis_fdw_15-1.0-2PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 15 postgresql-15-redis-fdw postgresql-15-redis-fdw_1.0-2PIGSTY~bookworm_amd64.deb pigsty 1.0 51.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/r/redis-fdw/postgresql-15-redis-fdw_1.0-2PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 15 postgresql-15-redis-fdw postgresql-15-redis-fdw_1.0-2PIGSTY~bookworm_arm64.deb pigsty 1.0 50.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/r/redis-fdw/postgresql-15-redis-fdw_1.0-2PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 15 postgresql-15-redis-fdw postgresql-15-redis-fdw_1.0-2PIGSTY~trixie_amd64.deb pigsty 1.0 51.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/r/redis-fdw/postgresql-15-redis-fdw_1.0-2PIGSTY~trixie_amd64.deb
+@ d13.aarch64 15 postgresql-15-redis-fdw postgresql-15-redis-fdw_1.0-2PIGSTY~trixie_arm64.deb pigsty 1.0 50.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/r/redis-fdw/postgresql-15-redis-fdw_1.0-2PIGSTY~trixie_arm64.deb
+@ u22.x86_64 15 postgresql-15-redis-fdw postgresql-15-redis-fdw_1.0-2PIGSTY~jammy_amd64.deb pigsty 1.0 61.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/r/redis-fdw/postgresql-15-redis-fdw_1.0-2PIGSTY~jammy_amd64.deb
+@ u22.aarch64 15 postgresql-15-redis-fdw postgresql-15-redis-fdw_1.0-2PIGSTY~jammy_arm64.deb pigsty 1.0 60.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/r/redis-fdw/postgresql-15-redis-fdw_1.0-2PIGSTY~jammy_arm64.deb
+@ u24.x86_64 15 postgresql-15-redis-fdw postgresql-15-redis-fdw_1.0-2PIGSTY~noble_amd64.deb pigsty 1.0 54.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/r/redis-fdw/postgresql-15-redis-fdw_1.0-2PIGSTY~noble_amd64.deb
+@ u24.aarch64 15 postgresql-15-redis-fdw postgresql-15-redis-fdw_1.0-2PIGSTY~noble_arm64.deb pigsty 1.0 53.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/r/redis-fdw/postgresql-15-redis-fdw_1.0-2PIGSTY~noble_arm64.deb
+@ el8.x86_64 14 redis_fdw_14 redis_fdw_14-1.0-2PIGSTY.el8.x86_64.rpm pigsty 1.0 27.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/redis_fdw_14-1.0-2PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 14 redis_fdw_14 redis_fdw_14-1.0-2PIGSTY.el8.aarch64.rpm pigsty 1.0 26.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/redis_fdw_14-1.0-2PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 14 redis_fdw_14 redis_fdw_14-1.0-2PIGSTY.el9.x86_64.rpm pigsty 1.0 27.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/redis_fdw_14-1.0-2PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 14 redis_fdw_14 redis_fdw_14-1.0-2PIGSTY.el9.aarch64.rpm pigsty 1.0 26.7KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/redis_fdw_14-1.0-2PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 14 redis_fdw_14 redis_fdw_14-1.0-2PIGSTY.el10.x86_64.rpm pigsty 1.0 27.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/redis_fdw_14-1.0-2PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 14 redis_fdw_14 redis_fdw_14-1.0-2PIGSTY.el10.aarch64.rpm pigsty 1.0 27.1KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/redis_fdw_14-1.0-2PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 14 postgresql-14-redis-fdw postgresql-14-redis-fdw_1.0-2PIGSTY~bookworm_amd64.deb pigsty 1.0 51.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/r/redis-fdw/postgresql-14-redis-fdw_1.0-2PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 14 postgresql-14-redis-fdw postgresql-14-redis-fdw_1.0-2PIGSTY~bookworm_arm64.deb pigsty 1.0 50.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/r/redis-fdw/postgresql-14-redis-fdw_1.0-2PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 14 postgresql-14-redis-fdw postgresql-14-redis-fdw_1.0-2PIGSTY~trixie_amd64.deb pigsty 1.0 52.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/r/redis-fdw/postgresql-14-redis-fdw_1.0-2PIGSTY~trixie_amd64.deb
+@ d13.aarch64 14 postgresql-14-redis-fdw postgresql-14-redis-fdw_1.0-2PIGSTY~trixie_arm64.deb pigsty 1.0 50.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/r/redis-fdw/postgresql-14-redis-fdw_1.0-2PIGSTY~trixie_arm64.deb
+@ u22.x86_64 14 postgresql-14-redis-fdw postgresql-14-redis-fdw_1.0-2PIGSTY~jammy_amd64.deb pigsty 1.0 61.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/r/redis-fdw/postgresql-14-redis-fdw_1.0-2PIGSTY~jammy_amd64.deb
+@ u22.aarch64 14 postgresql-14-redis-fdw postgresql-14-redis-fdw_1.0-2PIGSTY~jammy_arm64.deb pigsty 1.0 60.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/r/redis-fdw/postgresql-14-redis-fdw_1.0-2PIGSTY~jammy_arm64.deb
+@ u24.x86_64 14 postgresql-14-redis-fdw postgresql-14-redis-fdw_1.0-2PIGSTY~noble_amd64.deb pigsty 1.0 54.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/r/redis-fdw/postgresql-14-redis-fdw_1.0-2PIGSTY~noble_amd64.deb
+@ u24.aarch64 14 postgresql-14-redis-fdw postgresql-14-redis-fdw_1.0-2PIGSTY~noble_arm64.deb pigsty 1.0 53.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/r/redis-fdw/postgresql-14-redis-fdw_1.0-2PIGSTY~noble_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建

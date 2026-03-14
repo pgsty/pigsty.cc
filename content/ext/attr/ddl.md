@@ -6,7 +6,7 @@ weight: 20
 slug: ddl
 ---
 
-以下 **26** 个扩展不需要执行 `CREATE EXTENSION` 即可使用。
+以下 **25** 个扩展不需要执行 `CREATE EXTENSION` 即可使用。
 
 这些扩展通常以共享库（Hook）或独立工具的形式存在，安装后直接通过配置参数启用或自动生效，无需在数据库中显式创建扩展对象。
 
@@ -25,7 +25,6 @@ slug: ddl
 | [`auto_explain`](/ext/e/auto_explain) | [`auto_explain`](https://www.postgresql.org/docs/current/auto-explain.html) | `-` | `c-sL---` | 提供一种自动记录执行计划的手段 |
 | [`passwordcheck_cracklib`](/ext/e/passwordcheck_cracklib) | [`passwordcheck_cracklib`](https://github.com/devrimgunduz/passwordcheck_cracklib) | `3.1.0` | `--sL---` | 使用cracklib加固PG用户密码 |
 | [`supautils`](/ext/e/supautils) | [`supautils`](https://github.com/supabase/supautils) | `3.1.0` | `--sL---` | 用于在云环境中确保数据库集群的安全 |
-| [`pg_snakeoil`](/ext/e/pg_snakeoil) | [`pg_snakeoil`](https://github.com/credativ/pg_snakeoil) | `1.4` | `--sL--r` | PostgreSQL动态链接库反病毒功能 |
 | [`pgextwlist`](/ext/e/pgextwlist) | [`pgextwlist`](https://github.com/dimitri/pgextwlist) | `1.19` | `--sL---` | PostgreSQL扩展白名单功能 |
 | [`sepgsql`](/ext/e/sepgsql) | [`sepgsql`](https://www.postgresql.org/docs/current/sepgsql.html) | `-` | `c-sL---` | 基于SELinux标签的强制访问控制 |
 | [`auth_delay`](/ext/e/auth_delay) | [`auth_delay`](https://www.postgresql.org/docs/current/auth-delay.html) | `-` | `c-sL---` | 在返回认证失败前暂停一会，避免爆破 |
@@ -34,7 +33,7 @@ slug: ddl
 | [`pg_failover_slots`](/ext/e/pg_failover_slots) | [`pg_failover_slots`](https://github.com/EnterpriseDB/pg_failover_slots) | `1.2.0` | `--sL--r` | 在Failover过程中保留复制槽 |
 | [`wal2json`](/ext/e/wal2json) | [`wal2json`](https://github.com/eulerto/wal2json) | `2.6` | `--s----` | 用逻辑解码捕获 JSON 格式的 CDC 变更 |
 | [`wal2mongo`](/ext/e/wal2mongo) | [`wal2mongo`](https://github.com/HighgoSoftware/wal2mongo) | `1.0.7` | `--s----` | 使用逻辑解码捕获MongoDB JSON格式的CDC变更 |
-| [`decoderbufs`](/ext/e/decoderbufs) | [`decoderbufs`](https://github.com/debezium/postgres-decoderbufs) | `3.4.1` | `--s----` | 将WAL逻辑解码为ProtocolBuffer协议的消息 |
+| [`decoderbufs`](/ext/e/decoderbufs) | [`decoderbufs`](https://github.com/debezium/postgres-decoderbufs) | `3.4.1` | `--sL---` | 将WAL逻辑解码为ProtocolBuffer协议的消息 |
 | [`decoder_raw`](/ext/e/decoder_raw) | [`decoder_raw`](https://github.com/michaelpq/pg_plugins/blob/main/decoder_raw/) | `1.0` | `--s----` | 逻辑复制解码输出插件：RAW SQL格式 |
 | [`test_decoding`](/ext/e/test_decoding) | [`test_decoding`](https://www.postgresql.org/docs/current/test-decoding.html) | `-` | `c-s----` | 基于SQL的WAL逻辑解码样例 |
 | [`pgoutput`](/ext/e/pgoutput) | [`pgoutput`](https://www.postgresql.org/docs/current/protocol-logical-replication.html) | `-` | `c-s----` | PG内置的逻辑解码输出插件 |

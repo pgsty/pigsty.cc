@@ -11,7 +11,7 @@ weight: 2410
     <div class="ext-card__title">hydradatabase/hydra</div>
     <div class="ext-card__desc">https://github.com/hydradatabase/hydra</div>
   </a>
-  <a class="ext-card ext-card--source" href="hydra-1.1.2.tar.gz">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/hydra-1.1.2.tar.gz">
     <div class="ext-card__kicker">源码</div>
     <div class="ext-card__title">hydra-1.1.2.tar.gz</div>
     <div class="ext-card__desc">hydra-1.1.2.tar.gz</div>
@@ -67,48 +67,48 @@ weight: 2410
 | u22.aarch64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | AVAIL PIGSTY 1.1.2 1 | AVAIL PIGSTY 1.1.2 1 | AVAIL PIGSTY 1.1.2 1 |
 | u24.x86_64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | AVAIL PIGSTY 1.1.2 1 | AVAIL PIGSTY 1.1.2 1 | AVAIL PIGSTY 1.1.2 1 |
 | u24.aarch64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | AVAIL PIGSTY 1.1.2 1 | AVAIL PIGSTY 1.1.2 1 | AVAIL PIGSTY 1.1.2 1 |
-@ el8.x86_64 16 hydra_16 hydra_16-1.1.2-1PIGSTY.el8.x86_64.rpm pigsty 1.1.2 143.1KiB https://repo.pigsty.io/yum/pgsql/el8.x86_64/hydra_16-1.1.2-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 16 hydra_16 hydra_16-1.1.2-1PIGSTY.el8.aarch64.rpm pigsty 1.1.2 136.7KiB https://repo.pigsty.io/yum/pgsql/el8.aarch64/hydra_16-1.1.2-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 16 hydra_16 hydra_16-1.1.2-1PIGSTY.el9.x86_64.rpm pigsty 1.1.2 116.2KiB https://repo.pigsty.io/yum/pgsql/el9.x86_64/hydra_16-1.1.2-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 16 hydra_16 hydra_16-1.1.2-1PIGSTY.el9.aarch64.rpm pigsty 1.1.2 112.5KiB https://repo.pigsty.io/yum/pgsql/el9.aarch64/hydra_16-1.1.2-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 16 hydra_16 hydra_16-1.1.2-1PIGSTY.el10.x86_64.rpm pigsty 1.1.2 118.3KiB https://repo.pigsty.io/yum/pgsql/el10.x86_64/hydra_16-1.1.2-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 16 hydra_16 hydra_16-1.1.2-1PIGSTY.el10.aarch64.rpm pigsty 1.1.2 113.9KiB https://repo.pigsty.io/yum/pgsql/el10.aarch64/hydra_16-1.1.2-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 16 postgresql-16-hydra postgresql-16-hydra_1.1.2-1PIGSTY~bookworm_amd64.deb pigsty 1.1.2 354.6KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/h/hydra/postgresql-16-hydra_1.1.2-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 16 postgresql-16-hydra postgresql-16-hydra_1.1.2-1PIGSTY~bookworm_arm64.deb pigsty 1.1.2 409.0KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/h/hydra/postgresql-16-hydra_1.1.2-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 16 postgresql-16-hydra postgresql-16-hydra_1.1.2-1PIGSTY~trixie_amd64.deb pigsty 1.1.2 355.8KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/h/hydra/postgresql-16-hydra_1.1.2-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 16 postgresql-16-hydra postgresql-16-hydra_1.1.2-1PIGSTY~trixie_arm64.deb pigsty 1.1.2 347.6KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/h/hydra/postgresql-16-hydra_1.1.2-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 16 postgresql-16-hydra postgresql-16-hydra_1.1.2-1PIGSTY~jammy_amd64.deb pigsty 1.1.2 430.5KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/h/hydra/postgresql-16-hydra_1.1.2-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 16 postgresql-16-hydra postgresql-16-hydra_1.1.2-1PIGSTY~jammy_arm64.deb pigsty 1.1.2 425.2KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/h/hydra/postgresql-16-hydra_1.1.2-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 16 postgresql-16-hydra postgresql-16-hydra_1.1.2-1PIGSTY~noble_amd64.deb pigsty 1.1.2 359.9KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/h/hydra/postgresql-16-hydra_1.1.2-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 16 postgresql-16-hydra postgresql-16-hydra_1.1.2-1PIGSTY~noble_arm64.deb pigsty 1.1.2 363.6KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/h/hydra/postgresql-16-hydra_1.1.2-1PIGSTY~noble_arm64.deb
-@ el8.x86_64 15 hydra_15 hydra_15-1.1.2-1PIGSTY.el8.x86_64.rpm pigsty 1.1.2 146.7KiB https://repo.pigsty.io/yum/pgsql/el8.x86_64/hydra_15-1.1.2-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 15 hydra_15 hydra_15-1.1.2-1PIGSTY.el8.aarch64.rpm pigsty 1.1.2 140.2KiB https://repo.pigsty.io/yum/pgsql/el8.aarch64/hydra_15-1.1.2-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 15 hydra_15 hydra_15-1.1.2-1PIGSTY.el9.x86_64.rpm pigsty 1.1.2 136.8KiB https://repo.pigsty.io/yum/pgsql/el9.x86_64/hydra_15-1.1.2-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 15 hydra_15 hydra_15-1.1.2-1PIGSTY.el9.aarch64.rpm pigsty 1.1.2 131.2KiB https://repo.pigsty.io/yum/pgsql/el9.aarch64/hydra_15-1.1.2-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 15 hydra_15 hydra_15-1.1.2-1PIGSTY.el10.x86_64.rpm pigsty 1.1.2 138.1KiB https://repo.pigsty.io/yum/pgsql/el10.x86_64/hydra_15-1.1.2-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 15 hydra_15 hydra_15-1.1.2-1PIGSTY.el10.aarch64.rpm pigsty 1.1.2 132.3KiB https://repo.pigsty.io/yum/pgsql/el10.aarch64/hydra_15-1.1.2-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 15 postgresql-15-hydra postgresql-15-hydra_1.1.2-1PIGSTY~bookworm_amd64.deb pigsty 1.1.2 358.3KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/h/hydra/postgresql-15-hydra_1.1.2-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 15 postgresql-15-hydra postgresql-15-hydra_1.1.2-1PIGSTY~bookworm_arm64.deb pigsty 1.1.2 412.7KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/h/hydra/postgresql-15-hydra_1.1.2-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 15 postgresql-15-hydra postgresql-15-hydra_1.1.2-1PIGSTY~trixie_amd64.deb pigsty 1.1.2 359.5KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/h/hydra/postgresql-15-hydra_1.1.2-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 15 postgresql-15-hydra postgresql-15-hydra_1.1.2-1PIGSTY~trixie_arm64.deb pigsty 1.1.2 349.7KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/h/hydra/postgresql-15-hydra_1.1.2-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 15 postgresql-15-hydra postgresql-15-hydra_1.1.2-1PIGSTY~jammy_amd64.deb pigsty 1.1.2 449.6KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/h/hydra/postgresql-15-hydra_1.1.2-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 15 postgresql-15-hydra postgresql-15-hydra_1.1.2-1PIGSTY~jammy_arm64.deb pigsty 1.1.2 443.4KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/h/hydra/postgresql-15-hydra_1.1.2-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 15 postgresql-15-hydra postgresql-15-hydra_1.1.2-1PIGSTY~noble_amd64.deb pigsty 1.1.2 377.5KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/h/hydra/postgresql-15-hydra_1.1.2-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 15 postgresql-15-hydra postgresql-15-hydra_1.1.2-1PIGSTY~noble_arm64.deb pigsty 1.1.2 381.2KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/h/hydra/postgresql-15-hydra_1.1.2-1PIGSTY~noble_arm64.deb
-@ el8.x86_64 14 hydra_14 hydra_14-1.1.2-1PIGSTY.el8.x86_64.rpm pigsty 1.1.2 146.8KiB https://repo.pigsty.io/yum/pgsql/el8.x86_64/hydra_14-1.1.2-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 14 hydra_14 hydra_14-1.1.2-1PIGSTY.el8.aarch64.rpm pigsty 1.1.2 140.2KiB https://repo.pigsty.io/yum/pgsql/el8.aarch64/hydra_14-1.1.2-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 14 hydra_14 hydra_14-1.1.2-1PIGSTY.el9.x86_64.rpm pigsty 1.1.2 137.1KiB https://repo.pigsty.io/yum/pgsql/el9.x86_64/hydra_14-1.1.2-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 14 hydra_14 hydra_14-1.1.2-1PIGSTY.el9.aarch64.rpm pigsty 1.1.2 131.5KiB https://repo.pigsty.io/yum/pgsql/el9.aarch64/hydra_14-1.1.2-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 14 hydra_14 hydra_14-1.1.2-1PIGSTY.el10.x86_64.rpm pigsty 1.1.2 138.2KiB https://repo.pigsty.io/yum/pgsql/el10.x86_64/hydra_14-1.1.2-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 14 hydra_14 hydra_14-1.1.2-1PIGSTY.el10.aarch64.rpm pigsty 1.1.2 133.0KiB https://repo.pigsty.io/yum/pgsql/el10.aarch64/hydra_14-1.1.2-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 14 postgresql-14-hydra postgresql-14-hydra_1.1.2-1PIGSTY~bookworm_amd64.deb pigsty 1.1.2 359.9KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/h/hydra/postgresql-14-hydra_1.1.2-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 14 postgresql-14-hydra postgresql-14-hydra_1.1.2-1PIGSTY~bookworm_arm64.deb pigsty 1.1.2 414.1KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/h/hydra/postgresql-14-hydra_1.1.2-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 14 postgresql-14-hydra postgresql-14-hydra_1.1.2-1PIGSTY~trixie_amd64.deb pigsty 1.1.2 360.6KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/h/hydra/postgresql-14-hydra_1.1.2-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 14 postgresql-14-hydra postgresql-14-hydra_1.1.2-1PIGSTY~trixie_arm64.deb pigsty 1.1.2 350.6KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/h/hydra/postgresql-14-hydra_1.1.2-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 14 postgresql-14-hydra postgresql-14-hydra_1.1.2-1PIGSTY~jammy_amd64.deb pigsty 1.1.2 451.4KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/h/hydra/postgresql-14-hydra_1.1.2-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 14 postgresql-14-hydra postgresql-14-hydra_1.1.2-1PIGSTY~jammy_arm64.deb pigsty 1.1.2 444.9KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/h/hydra/postgresql-14-hydra_1.1.2-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 14 postgresql-14-hydra postgresql-14-hydra_1.1.2-1PIGSTY~noble_amd64.deb pigsty 1.1.2 378.5KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/h/hydra/postgresql-14-hydra_1.1.2-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 14 postgresql-14-hydra postgresql-14-hydra_1.1.2-1PIGSTY~noble_arm64.deb pigsty 1.1.2 382.5KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/h/hydra/postgresql-14-hydra_1.1.2-1PIGSTY~noble_arm64.deb
+@ el8.x86_64 16 hydra_16 hydra_16-1.1.2-1PIGSTY.el8.x86_64.rpm pigsty 1.1.2 143.1KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/hydra_16-1.1.2-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 16 hydra_16 hydra_16-1.1.2-1PIGSTY.el8.aarch64.rpm pigsty 1.1.2 136.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/hydra_16-1.1.2-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 16 hydra_16 hydra_16-1.1.2-1PIGSTY.el9.x86_64.rpm pigsty 1.1.2 116.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/hydra_16-1.1.2-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 16 hydra_16 hydra_16-1.1.2-1PIGSTY.el9.aarch64.rpm pigsty 1.1.2 112.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/hydra_16-1.1.2-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 16 hydra_16 hydra_16-1.1.2-1PIGSTY.el10.x86_64.rpm pigsty 1.1.2 118.3KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/hydra_16-1.1.2-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 16 hydra_16 hydra_16-1.1.2-1PIGSTY.el10.aarch64.rpm pigsty 1.1.2 113.9KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/hydra_16-1.1.2-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 16 postgresql-16-hydra postgresql-16-hydra_1.1.2-1PIGSTY~bookworm_amd64.deb pigsty 1.1.2 354.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/h/hydra/postgresql-16-hydra_1.1.2-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 16 postgresql-16-hydra postgresql-16-hydra_1.1.2-1PIGSTY~bookworm_arm64.deb pigsty 1.1.2 409.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/h/hydra/postgresql-16-hydra_1.1.2-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 16 postgresql-16-hydra postgresql-16-hydra_1.1.2-1PIGSTY~trixie_amd64.deb pigsty 1.1.2 355.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/h/hydra/postgresql-16-hydra_1.1.2-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 16 postgresql-16-hydra postgresql-16-hydra_1.1.2-1PIGSTY~trixie_arm64.deb pigsty 1.1.2 347.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/h/hydra/postgresql-16-hydra_1.1.2-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 16 postgresql-16-hydra postgresql-16-hydra_1.1.2-1PIGSTY~jammy_amd64.deb pigsty 1.1.2 430.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/h/hydra/postgresql-16-hydra_1.1.2-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 16 postgresql-16-hydra postgresql-16-hydra_1.1.2-1PIGSTY~jammy_arm64.deb pigsty 1.1.2 425.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/h/hydra/postgresql-16-hydra_1.1.2-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 16 postgresql-16-hydra postgresql-16-hydra_1.1.2-1PIGSTY~noble_amd64.deb pigsty 1.1.2 359.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/h/hydra/postgresql-16-hydra_1.1.2-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 16 postgresql-16-hydra postgresql-16-hydra_1.1.2-1PIGSTY~noble_arm64.deb pigsty 1.1.2 363.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/h/hydra/postgresql-16-hydra_1.1.2-1PIGSTY~noble_arm64.deb
+@ el8.x86_64 15 hydra_15 hydra_15-1.1.2-1PIGSTY.el8.x86_64.rpm pigsty 1.1.2 146.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/hydra_15-1.1.2-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 15 hydra_15 hydra_15-1.1.2-1PIGSTY.el8.aarch64.rpm pigsty 1.1.2 140.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/hydra_15-1.1.2-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 15 hydra_15 hydra_15-1.1.2-1PIGSTY.el9.x86_64.rpm pigsty 1.1.2 136.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/hydra_15-1.1.2-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 15 hydra_15 hydra_15-1.1.2-1PIGSTY.el9.aarch64.rpm pigsty 1.1.2 131.2KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/hydra_15-1.1.2-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 15 hydra_15 hydra_15-1.1.2-1PIGSTY.el10.x86_64.rpm pigsty 1.1.2 138.1KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/hydra_15-1.1.2-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 15 hydra_15 hydra_15-1.1.2-1PIGSTY.el10.aarch64.rpm pigsty 1.1.2 132.3KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/hydra_15-1.1.2-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 15 postgresql-15-hydra postgresql-15-hydra_1.1.2-1PIGSTY~bookworm_amd64.deb pigsty 1.1.2 358.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/h/hydra/postgresql-15-hydra_1.1.2-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 15 postgresql-15-hydra postgresql-15-hydra_1.1.2-1PIGSTY~bookworm_arm64.deb pigsty 1.1.2 412.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/h/hydra/postgresql-15-hydra_1.1.2-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 15 postgresql-15-hydra postgresql-15-hydra_1.1.2-1PIGSTY~trixie_amd64.deb pigsty 1.1.2 359.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/h/hydra/postgresql-15-hydra_1.1.2-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 15 postgresql-15-hydra postgresql-15-hydra_1.1.2-1PIGSTY~trixie_arm64.deb pigsty 1.1.2 349.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/h/hydra/postgresql-15-hydra_1.1.2-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 15 postgresql-15-hydra postgresql-15-hydra_1.1.2-1PIGSTY~jammy_amd64.deb pigsty 1.1.2 449.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/h/hydra/postgresql-15-hydra_1.1.2-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 15 postgresql-15-hydra postgresql-15-hydra_1.1.2-1PIGSTY~jammy_arm64.deb pigsty 1.1.2 443.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/h/hydra/postgresql-15-hydra_1.1.2-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 15 postgresql-15-hydra postgresql-15-hydra_1.1.2-1PIGSTY~noble_amd64.deb pigsty 1.1.2 377.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/h/hydra/postgresql-15-hydra_1.1.2-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 15 postgresql-15-hydra postgresql-15-hydra_1.1.2-1PIGSTY~noble_arm64.deb pigsty 1.1.2 381.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/h/hydra/postgresql-15-hydra_1.1.2-1PIGSTY~noble_arm64.deb
+@ el8.x86_64 14 hydra_14 hydra_14-1.1.2-1PIGSTY.el8.x86_64.rpm pigsty 1.1.2 146.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/hydra_14-1.1.2-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 14 hydra_14 hydra_14-1.1.2-1PIGSTY.el8.aarch64.rpm pigsty 1.1.2 140.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/hydra_14-1.1.2-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 14 hydra_14 hydra_14-1.1.2-1PIGSTY.el9.x86_64.rpm pigsty 1.1.2 137.1KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/hydra_14-1.1.2-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 14 hydra_14 hydra_14-1.1.2-1PIGSTY.el9.aarch64.rpm pigsty 1.1.2 131.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/hydra_14-1.1.2-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 14 hydra_14 hydra_14-1.1.2-1PIGSTY.el10.x86_64.rpm pigsty 1.1.2 138.2KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/hydra_14-1.1.2-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 14 hydra_14 hydra_14-1.1.2-1PIGSTY.el10.aarch64.rpm pigsty 1.1.2 133.0KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/hydra_14-1.1.2-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 14 postgresql-14-hydra postgresql-14-hydra_1.1.2-1PIGSTY~bookworm_amd64.deb pigsty 1.1.2 359.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/h/hydra/postgresql-14-hydra_1.1.2-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 14 postgresql-14-hydra postgresql-14-hydra_1.1.2-1PIGSTY~bookworm_arm64.deb pigsty 1.1.2 414.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/h/hydra/postgresql-14-hydra_1.1.2-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 14 postgresql-14-hydra postgresql-14-hydra_1.1.2-1PIGSTY~trixie_amd64.deb pigsty 1.1.2 360.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/h/hydra/postgresql-14-hydra_1.1.2-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 14 postgresql-14-hydra postgresql-14-hydra_1.1.2-1PIGSTY~trixie_arm64.deb pigsty 1.1.2 350.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/h/hydra/postgresql-14-hydra_1.1.2-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 14 postgresql-14-hydra postgresql-14-hydra_1.1.2-1PIGSTY~jammy_amd64.deb pigsty 1.1.2 451.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/h/hydra/postgresql-14-hydra_1.1.2-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 14 postgresql-14-hydra postgresql-14-hydra_1.1.2-1PIGSTY~jammy_arm64.deb pigsty 1.1.2 444.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/h/hydra/postgresql-14-hydra_1.1.2-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 14 postgresql-14-hydra postgresql-14-hydra_1.1.2-1PIGSTY~noble_amd64.deb pigsty 1.1.2 378.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/h/hydra/postgresql-14-hydra_1.1.2-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 14 postgresql-14-hydra postgresql-14-hydra_1.1.2-1PIGSTY~noble_arm64.deb pigsty 1.1.2 382.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/h/hydra/postgresql-14-hydra_1.1.2-1PIGSTY~noble_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建

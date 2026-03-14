@@ -11,7 +11,7 @@ weight: 2160
     <div class="ext-card__title">tensorchord/pg_tokenizer.rs</div>
     <div class="ext-card__desc">https://github.com/tensorchord/pg_tokenizer.rs</div>
   </a>
-  <a class="ext-card ext-card--source" href="pg_tokenizer.rs-0.1.1.tar.gz">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pg_tokenizer.rs-0.1.1.tar.gz">
     <div class="ext-card__kicker">源码</div>
     <div class="ext-card__title">pg_tokenizer.rs-0.1.1.tar.gz</div>
     <div class="ext-card__desc">pg_tokenizer.rs-0.1.1.tar.gz</div>
@@ -30,7 +30,7 @@ weight: 2160
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
 |:-----:|:-------------------------------------------------------------------------|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|:----------|
-| 2160  | [**`pg_tokenizer`**](/ext/e/pg_tokenizer) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | `tokenizer_catalog` |
+| 2160  | [**`pg_tokenizer`**](/ext/e/pg_tokenizer) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `tokenizer_catalog` |
 {.ext-table}
 
 | **相关扩展** | [`pg_search`](/ext/e/pg_search) [`pgroonga`](/ext/e/pgroonga) [`pg_bigm`](/ext/e/pg_bigm) [`zhparser`](/ext/e/zhparser) [`pgroonga_database`](/ext/e/pgroonga_database) [`pg_bestmatch`](/ext/e/pg_bestmatch) [`vchord_bm25`](/ext/e/vchord_bm25) [`pg_trgm`](/ext/e/pg_trgm) |
@@ -67,76 +67,76 @@ weight: 2160
 | u22.aarch64 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 |
 | u24.x86_64 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 |
 | u24.aarch64 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 |
-@ el8.x86_64 18 pg_tokenizer_18 pg_tokenizer_18-0.1.1-1PIGSTY.el8.x86_64.rpm pigsty 0.1.1 11.7MiB https://repo.pigsty.io/yum/pgsql/el8.x86_64/pg_tokenizer_18-0.1.1-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 18 pg_tokenizer_18 pg_tokenizer_18-0.1.1-1PIGSTY.el8.aarch64.rpm pigsty 0.1.1 11.5MiB https://repo.pigsty.io/yum/pgsql/el8.aarch64/pg_tokenizer_18-0.1.1-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 18 pg_tokenizer_18 pg_tokenizer_18-0.1.1-1PIGSTY.el9.x86_64.rpm pigsty 0.1.1 11.0MiB https://repo.pigsty.io/yum/pgsql/el9.x86_64/pg_tokenizer_18-0.1.1-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 18 pg_tokenizer_18 pg_tokenizer_18-0.1.1-1PIGSTY.el9.aarch64.rpm pigsty 0.1.1 10.9MiB https://repo.pigsty.io/yum/pgsql/el9.aarch64/pg_tokenizer_18-0.1.1-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 18 pg_tokenizer_18 pg_tokenizer_18-0.1.1-1PIGSTY.el10.x86_64.rpm pigsty 0.1.1 10.9MiB https://repo.pigsty.io/yum/pgsql/el10.x86_64/pg_tokenizer_18-0.1.1-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 18 pg_tokenizer_18 pg_tokenizer_18-0.1.1-1PIGSTY.el10.aarch64.rpm pigsty 0.1.1 11.0MiB https://repo.pigsty.io/yum/pgsql/el10.aarch64/pg_tokenizer_18-0.1.1-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 18 postgresql-18-pg-tokenizer postgresql-18-pg-tokenizer_0.1.1-1PIGSTY~bookworm_amd64.deb pigsty 0.1.1 9.9MiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/pg-tokenizer/postgresql-18-pg-tokenizer_0.1.1-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 18 postgresql-18-pg-tokenizer postgresql-18-pg-tokenizer_0.1.1-1PIGSTY~bookworm_arm64.deb pigsty 0.1.1 9.7MiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/pg-tokenizer/postgresql-18-pg-tokenizer_0.1.1-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 18 postgresql-18-pg-tokenizer postgresql-18-pg-tokenizer_0.1.1-1PIGSTY~trixie_amd64.deb pigsty 0.1.1 9.9MiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pg-tokenizer/postgresql-18-pg-tokenizer_0.1.1-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 18 postgresql-18-pg-tokenizer postgresql-18-pg-tokenizer_0.1.1-1PIGSTY~trixie_arm64.deb pigsty 0.1.1 9.7MiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pg-tokenizer/postgresql-18-pg-tokenizer_0.1.1-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 18 postgresql-18-pg-tokenizer postgresql-18-pg-tokenizer_0.1.1-1PIGSTY~jammy_amd64.deb pigsty 0.1.1 10.9MiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/pg-tokenizer/postgresql-18-pg-tokenizer_0.1.1-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 18 postgresql-18-pg-tokenizer postgresql-18-pg-tokenizer_0.1.1-1PIGSTY~jammy_arm64.deb pigsty 0.1.1 10.7MiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/pg-tokenizer/postgresql-18-pg-tokenizer_0.1.1-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 18 postgresql-18-pg-tokenizer postgresql-18-pg-tokenizer_0.1.1-1PIGSTY~noble_amd64.deb pigsty 0.1.1 10.8MiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pg-tokenizer/postgresql-18-pg-tokenizer_0.1.1-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 18 postgresql-18-pg-tokenizer postgresql-18-pg-tokenizer_0.1.1-1PIGSTY~noble_arm64.deb pigsty 0.1.1 10.6MiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pg-tokenizer/postgresql-18-pg-tokenizer_0.1.1-1PIGSTY~noble_arm64.deb
-@ el8.x86_64 17 pg_tokenizer_17 pg_tokenizer_17-0.1.1-1PIGSTY.el8.x86_64.rpm pigsty 0.1.1 11.7MiB https://repo.pigsty.io/yum/pgsql/el8.x86_64/pg_tokenizer_17-0.1.1-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 17 pg_tokenizer_17 pg_tokenizer_17-0.1.1-1PIGSTY.el8.aarch64.rpm pigsty 0.1.1 11.5MiB https://repo.pigsty.io/yum/pgsql/el8.aarch64/pg_tokenizer_17-0.1.1-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 17 pg_tokenizer_17 pg_tokenizer_17-0.1.1-1PIGSTY.el9.x86_64.rpm pigsty 0.1.1 11.0MiB https://repo.pigsty.io/yum/pgsql/el9.x86_64/pg_tokenizer_17-0.1.1-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 17 pg_tokenizer_17 pg_tokenizer_17-0.1.1-1PIGSTY.el9.aarch64.rpm pigsty 0.1.1 10.9MiB https://repo.pigsty.io/yum/pgsql/el9.aarch64/pg_tokenizer_17-0.1.1-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 17 pg_tokenizer_17 pg_tokenizer_17-0.1.1-1PIGSTY.el10.x86_64.rpm pigsty 0.1.1 10.9MiB https://repo.pigsty.io/yum/pgsql/el10.x86_64/pg_tokenizer_17-0.1.1-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 17 pg_tokenizer_17 pg_tokenizer_17-0.1.1-1PIGSTY.el10.aarch64.rpm pigsty 0.1.1 11.0MiB https://repo.pigsty.io/yum/pgsql/el10.aarch64/pg_tokenizer_17-0.1.1-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 17 postgresql-17-pg-tokenizer postgresql-17-pg-tokenizer_0.1.1-1PIGSTY~bookworm_amd64.deb pigsty 0.1.1 9.9MiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/pg-tokenizer/postgresql-17-pg-tokenizer_0.1.1-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 17 postgresql-17-pg-tokenizer postgresql-17-pg-tokenizer_0.1.1-1PIGSTY~bookworm_arm64.deb pigsty 0.1.1 9.7MiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/pg-tokenizer/postgresql-17-pg-tokenizer_0.1.1-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 17 postgresql-17-pg-tokenizer postgresql-17-pg-tokenizer_0.1.1-1PIGSTY~trixie_amd64.deb pigsty 0.1.1 9.9MiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pg-tokenizer/postgresql-17-pg-tokenizer_0.1.1-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 17 postgresql-17-pg-tokenizer postgresql-17-pg-tokenizer_0.1.1-1PIGSTY~trixie_arm64.deb pigsty 0.1.1 9.7MiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pg-tokenizer/postgresql-17-pg-tokenizer_0.1.1-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 17 postgresql-17-pg-tokenizer postgresql-17-pg-tokenizer_0.1.1-1PIGSTY~jammy_amd64.deb pigsty 0.1.1 10.9MiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/pg-tokenizer/postgresql-17-pg-tokenizer_0.1.1-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 17 postgresql-17-pg-tokenizer postgresql-17-pg-tokenizer_0.1.1-1PIGSTY~jammy_arm64.deb pigsty 0.1.1 10.7MiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/pg-tokenizer/postgresql-17-pg-tokenizer_0.1.1-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 17 postgresql-17-pg-tokenizer postgresql-17-pg-tokenizer_0.1.1-1PIGSTY~noble_amd64.deb pigsty 0.1.1 10.8MiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pg-tokenizer/postgresql-17-pg-tokenizer_0.1.1-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 17 postgresql-17-pg-tokenizer postgresql-17-pg-tokenizer_0.1.1-1PIGSTY~noble_arm64.deb pigsty 0.1.1 10.7MiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pg-tokenizer/postgresql-17-pg-tokenizer_0.1.1-1PIGSTY~noble_arm64.deb
-@ el8.x86_64 16 pg_tokenizer_16 pg_tokenizer_16-0.1.1-1PIGSTY.el8.x86_64.rpm pigsty 0.1.1 11.7MiB https://repo.pigsty.io/yum/pgsql/el8.x86_64/pg_tokenizer_16-0.1.1-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 16 pg_tokenizer_16 pg_tokenizer_16-0.1.1-1PIGSTY.el8.aarch64.rpm pigsty 0.1.1 11.5MiB https://repo.pigsty.io/yum/pgsql/el8.aarch64/pg_tokenizer_16-0.1.1-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 16 pg_tokenizer_16 pg_tokenizer_16-0.1.1-1PIGSTY.el9.x86_64.rpm pigsty 0.1.1 11.0MiB https://repo.pigsty.io/yum/pgsql/el9.x86_64/pg_tokenizer_16-0.1.1-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 16 pg_tokenizer_16 pg_tokenizer_16-0.1.1-1PIGSTY.el9.aarch64.rpm pigsty 0.1.1 10.9MiB https://repo.pigsty.io/yum/pgsql/el9.aarch64/pg_tokenizer_16-0.1.1-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 16 pg_tokenizer_16 pg_tokenizer_16-0.1.1-1PIGSTY.el10.x86_64.rpm pigsty 0.1.1 10.9MiB https://repo.pigsty.io/yum/pgsql/el10.x86_64/pg_tokenizer_16-0.1.1-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 16 pg_tokenizer_16 pg_tokenizer_16-0.1.1-1PIGSTY.el10.aarch64.rpm pigsty 0.1.1 11.0MiB https://repo.pigsty.io/yum/pgsql/el10.aarch64/pg_tokenizer_16-0.1.1-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 16 postgresql-16-pg-tokenizer postgresql-16-pg-tokenizer_0.1.1-1PIGSTY~bookworm_amd64.deb pigsty 0.1.1 9.9MiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/pg-tokenizer/postgresql-16-pg-tokenizer_0.1.1-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 16 postgresql-16-pg-tokenizer postgresql-16-pg-tokenizer_0.1.1-1PIGSTY~bookworm_arm64.deb pigsty 0.1.1 9.7MiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/pg-tokenizer/postgresql-16-pg-tokenizer_0.1.1-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 16 postgresql-16-pg-tokenizer postgresql-16-pg-tokenizer_0.1.1-1PIGSTY~trixie_amd64.deb pigsty 0.1.1 9.9MiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pg-tokenizer/postgresql-16-pg-tokenizer_0.1.1-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 16 postgresql-16-pg-tokenizer postgresql-16-pg-tokenizer_0.1.1-1PIGSTY~trixie_arm64.deb pigsty 0.1.1 9.7MiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pg-tokenizer/postgresql-16-pg-tokenizer_0.1.1-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 16 postgresql-16-pg-tokenizer postgresql-16-pg-tokenizer_0.1.1-1PIGSTY~jammy_amd64.deb pigsty 0.1.1 10.9MiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/pg-tokenizer/postgresql-16-pg-tokenizer_0.1.1-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 16 postgresql-16-pg-tokenizer postgresql-16-pg-tokenizer_0.1.1-1PIGSTY~jammy_arm64.deb pigsty 0.1.1 10.7MiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/pg-tokenizer/postgresql-16-pg-tokenizer_0.1.1-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 16 postgresql-16-pg-tokenizer postgresql-16-pg-tokenizer_0.1.1-1PIGSTY~noble_amd64.deb pigsty 0.1.1 10.8MiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pg-tokenizer/postgresql-16-pg-tokenizer_0.1.1-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 16 postgresql-16-pg-tokenizer postgresql-16-pg-tokenizer_0.1.1-1PIGSTY~noble_arm64.deb pigsty 0.1.1 10.7MiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pg-tokenizer/postgresql-16-pg-tokenizer_0.1.1-1PIGSTY~noble_arm64.deb
-@ el8.x86_64 15 pg_tokenizer_15 pg_tokenizer_15-0.1.1-1PIGSTY.el8.x86_64.rpm pigsty 0.1.1 11.7MiB https://repo.pigsty.io/yum/pgsql/el8.x86_64/pg_tokenizer_15-0.1.1-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 15 pg_tokenizer_15 pg_tokenizer_15-0.1.1-1PIGSTY.el8.aarch64.rpm pigsty 0.1.1 11.5MiB https://repo.pigsty.io/yum/pgsql/el8.aarch64/pg_tokenizer_15-0.1.1-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 15 pg_tokenizer_15 pg_tokenizer_15-0.1.1-1PIGSTY.el9.x86_64.rpm pigsty 0.1.1 11.0MiB https://repo.pigsty.io/yum/pgsql/el9.x86_64/pg_tokenizer_15-0.1.1-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 15 pg_tokenizer_15 pg_tokenizer_15-0.1.1-1PIGSTY.el9.aarch64.rpm pigsty 0.1.1 10.9MiB https://repo.pigsty.io/yum/pgsql/el9.aarch64/pg_tokenizer_15-0.1.1-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 15 pg_tokenizer_15 pg_tokenizer_15-0.1.1-1PIGSTY.el10.x86_64.rpm pigsty 0.1.1 10.9MiB https://repo.pigsty.io/yum/pgsql/el10.x86_64/pg_tokenizer_15-0.1.1-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 15 pg_tokenizer_15 pg_tokenizer_15-0.1.1-1PIGSTY.el10.aarch64.rpm pigsty 0.1.1 11.0MiB https://repo.pigsty.io/yum/pgsql/el10.aarch64/pg_tokenizer_15-0.1.1-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 15 postgresql-15-pg-tokenizer postgresql-15-pg-tokenizer_0.1.1-1PIGSTY~bookworm_amd64.deb pigsty 0.1.1 9.9MiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/pg-tokenizer/postgresql-15-pg-tokenizer_0.1.1-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 15 postgresql-15-pg-tokenizer postgresql-15-pg-tokenizer_0.1.1-1PIGSTY~bookworm_arm64.deb pigsty 0.1.1 9.7MiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/pg-tokenizer/postgresql-15-pg-tokenizer_0.1.1-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 15 postgresql-15-pg-tokenizer postgresql-15-pg-tokenizer_0.1.1-1PIGSTY~trixie_amd64.deb pigsty 0.1.1 9.9MiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pg-tokenizer/postgresql-15-pg-tokenizer_0.1.1-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 15 postgresql-15-pg-tokenizer postgresql-15-pg-tokenizer_0.1.1-1PIGSTY~trixie_arm64.deb pigsty 0.1.1 9.7MiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pg-tokenizer/postgresql-15-pg-tokenizer_0.1.1-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 15 postgresql-15-pg-tokenizer postgresql-15-pg-tokenizer_0.1.1-1PIGSTY~jammy_amd64.deb pigsty 0.1.1 10.9MiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/pg-tokenizer/postgresql-15-pg-tokenizer_0.1.1-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 15 postgresql-15-pg-tokenizer postgresql-15-pg-tokenizer_0.1.1-1PIGSTY~jammy_arm64.deb pigsty 0.1.1 10.7MiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/pg-tokenizer/postgresql-15-pg-tokenizer_0.1.1-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 15 postgresql-15-pg-tokenizer postgresql-15-pg-tokenizer_0.1.1-1PIGSTY~noble_amd64.deb pigsty 0.1.1 10.8MiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pg-tokenizer/postgresql-15-pg-tokenizer_0.1.1-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 15 postgresql-15-pg-tokenizer postgresql-15-pg-tokenizer_0.1.1-1PIGSTY~noble_arm64.deb pigsty 0.1.1 10.7MiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pg-tokenizer/postgresql-15-pg-tokenizer_0.1.1-1PIGSTY~noble_arm64.deb
-@ el8.x86_64 14 pg_tokenizer_14 pg_tokenizer_14-0.1.1-1PIGSTY.el8.x86_64.rpm pigsty 0.1.1 11.7MiB https://repo.pigsty.io/yum/pgsql/el8.x86_64/pg_tokenizer_14-0.1.1-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 14 pg_tokenizer_14 pg_tokenizer_14-0.1.1-1PIGSTY.el8.aarch64.rpm pigsty 0.1.1 11.5MiB https://repo.pigsty.io/yum/pgsql/el8.aarch64/pg_tokenizer_14-0.1.1-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 14 pg_tokenizer_14 pg_tokenizer_14-0.1.1-1PIGSTY.el9.x86_64.rpm pigsty 0.1.1 11.0MiB https://repo.pigsty.io/yum/pgsql/el9.x86_64/pg_tokenizer_14-0.1.1-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 14 pg_tokenizer_14 pg_tokenizer_14-0.1.1-1PIGSTY.el9.aarch64.rpm pigsty 0.1.1 10.9MiB https://repo.pigsty.io/yum/pgsql/el9.aarch64/pg_tokenizer_14-0.1.1-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 14 pg_tokenizer_14 pg_tokenizer_14-0.1.1-1PIGSTY.el10.x86_64.rpm pigsty 0.1.1 10.9MiB https://repo.pigsty.io/yum/pgsql/el10.x86_64/pg_tokenizer_14-0.1.1-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 14 pg_tokenizer_14 pg_tokenizer_14-0.1.1-1PIGSTY.el10.aarch64.rpm pigsty 0.1.1 11.0MiB https://repo.pigsty.io/yum/pgsql/el10.aarch64/pg_tokenizer_14-0.1.1-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 14 postgresql-14-pg-tokenizer postgresql-14-pg-tokenizer_0.1.1-1PIGSTY~bookworm_amd64.deb pigsty 0.1.1 9.9MiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/pg-tokenizer/postgresql-14-pg-tokenizer_0.1.1-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 14 postgresql-14-pg-tokenizer postgresql-14-pg-tokenizer_0.1.1-1PIGSTY~bookworm_arm64.deb pigsty 0.1.1 9.7MiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/pg-tokenizer/postgresql-14-pg-tokenizer_0.1.1-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 14 postgresql-14-pg-tokenizer postgresql-14-pg-tokenizer_0.1.1-1PIGSTY~trixie_amd64.deb pigsty 0.1.1 9.9MiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pg-tokenizer/postgresql-14-pg-tokenizer_0.1.1-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 14 postgresql-14-pg-tokenizer postgresql-14-pg-tokenizer_0.1.1-1PIGSTY~trixie_arm64.deb pigsty 0.1.1 9.7MiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pg-tokenizer/postgresql-14-pg-tokenizer_0.1.1-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 14 postgresql-14-pg-tokenizer postgresql-14-pg-tokenizer_0.1.1-1PIGSTY~jammy_amd64.deb pigsty 0.1.1 10.9MiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/pg-tokenizer/postgresql-14-pg-tokenizer_0.1.1-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 14 postgresql-14-pg-tokenizer postgresql-14-pg-tokenizer_0.1.1-1PIGSTY~jammy_arm64.deb pigsty 0.1.1 10.7MiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/pg-tokenizer/postgresql-14-pg-tokenizer_0.1.1-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 14 postgresql-14-pg-tokenizer postgresql-14-pg-tokenizer_0.1.1-1PIGSTY~noble_amd64.deb pigsty 0.1.1 10.8MiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pg-tokenizer/postgresql-14-pg-tokenizer_0.1.1-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 14 postgresql-14-pg-tokenizer postgresql-14-pg-tokenizer_0.1.1-1PIGSTY~noble_arm64.deb pigsty 0.1.1 10.7MiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pg-tokenizer/postgresql-14-pg-tokenizer_0.1.1-1PIGSTY~noble_arm64.deb
+@ el8.x86_64 18 pg_tokenizer_18 pg_tokenizer_18-0.1.1-1PIGSTY.el8.x86_64.rpm pigsty 0.1.1 11.7MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_tokenizer_18-0.1.1-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 18 pg_tokenizer_18 pg_tokenizer_18-0.1.1-1PIGSTY.el8.aarch64.rpm pigsty 0.1.1 11.5MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_tokenizer_18-0.1.1-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 18 pg_tokenizer_18 pg_tokenizer_18-0.1.1-1PIGSTY.el9.x86_64.rpm pigsty 0.1.1 11.0MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_tokenizer_18-0.1.1-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 18 pg_tokenizer_18 pg_tokenizer_18-0.1.1-1PIGSTY.el9.aarch64.rpm pigsty 0.1.1 10.9MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_tokenizer_18-0.1.1-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 18 pg_tokenizer_18 pg_tokenizer_18-0.1.1-1PIGSTY.el10.x86_64.rpm pigsty 0.1.1 10.9MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_tokenizer_18-0.1.1-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 18 pg_tokenizer_18 pg_tokenizer_18-0.1.1-1PIGSTY.el10.aarch64.rpm pigsty 0.1.1 11.0MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_tokenizer_18-0.1.1-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-pg-tokenizer postgresql-18-pg-tokenizer_0.1.1-1PIGSTY~bookworm_amd64.deb pigsty 0.1.1 9.9MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-tokenizer/postgresql-18-pg-tokenizer_0.1.1-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 18 postgresql-18-pg-tokenizer postgresql-18-pg-tokenizer_0.1.1-1PIGSTY~bookworm_arm64.deb pigsty 0.1.1 9.7MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-tokenizer/postgresql-18-pg-tokenizer_0.1.1-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 18 postgresql-18-pg-tokenizer postgresql-18-pg-tokenizer_0.1.1-1PIGSTY~trixie_amd64.deb pigsty 0.1.1 9.9MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-tokenizer/postgresql-18-pg-tokenizer_0.1.1-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 18 postgresql-18-pg-tokenizer postgresql-18-pg-tokenizer_0.1.1-1PIGSTY~trixie_arm64.deb pigsty 0.1.1 9.7MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-tokenizer/postgresql-18-pg-tokenizer_0.1.1-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 18 postgresql-18-pg-tokenizer postgresql-18-pg-tokenizer_0.1.1-1PIGSTY~jammy_amd64.deb pigsty 0.1.1 10.9MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-tokenizer/postgresql-18-pg-tokenizer_0.1.1-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 18 postgresql-18-pg-tokenizer postgresql-18-pg-tokenizer_0.1.1-1PIGSTY~jammy_arm64.deb pigsty 0.1.1 10.7MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-tokenizer/postgresql-18-pg-tokenizer_0.1.1-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 18 postgresql-18-pg-tokenizer postgresql-18-pg-tokenizer_0.1.1-1PIGSTY~noble_amd64.deb pigsty 0.1.1 10.8MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-tokenizer/postgresql-18-pg-tokenizer_0.1.1-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 18 postgresql-18-pg-tokenizer postgresql-18-pg-tokenizer_0.1.1-1PIGSTY~noble_arm64.deb pigsty 0.1.1 10.6MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-tokenizer/postgresql-18-pg-tokenizer_0.1.1-1PIGSTY~noble_arm64.deb
+@ el8.x86_64 17 pg_tokenizer_17 pg_tokenizer_17-0.1.1-1PIGSTY.el8.x86_64.rpm pigsty 0.1.1 11.7MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_tokenizer_17-0.1.1-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 17 pg_tokenizer_17 pg_tokenizer_17-0.1.1-1PIGSTY.el8.aarch64.rpm pigsty 0.1.1 11.5MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_tokenizer_17-0.1.1-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 17 pg_tokenizer_17 pg_tokenizer_17-0.1.1-1PIGSTY.el9.x86_64.rpm pigsty 0.1.1 11.0MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_tokenizer_17-0.1.1-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 17 pg_tokenizer_17 pg_tokenizer_17-0.1.1-1PIGSTY.el9.aarch64.rpm pigsty 0.1.1 10.9MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_tokenizer_17-0.1.1-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 17 pg_tokenizer_17 pg_tokenizer_17-0.1.1-1PIGSTY.el10.x86_64.rpm pigsty 0.1.1 10.9MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_tokenizer_17-0.1.1-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 17 pg_tokenizer_17 pg_tokenizer_17-0.1.1-1PIGSTY.el10.aarch64.rpm pigsty 0.1.1 11.0MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_tokenizer_17-0.1.1-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-pg-tokenizer postgresql-17-pg-tokenizer_0.1.1-1PIGSTY~bookworm_amd64.deb pigsty 0.1.1 9.9MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-tokenizer/postgresql-17-pg-tokenizer_0.1.1-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 17 postgresql-17-pg-tokenizer postgresql-17-pg-tokenizer_0.1.1-1PIGSTY~bookworm_arm64.deb pigsty 0.1.1 9.7MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-tokenizer/postgresql-17-pg-tokenizer_0.1.1-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 17 postgresql-17-pg-tokenizer postgresql-17-pg-tokenizer_0.1.1-1PIGSTY~trixie_amd64.deb pigsty 0.1.1 9.9MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-tokenizer/postgresql-17-pg-tokenizer_0.1.1-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 17 postgresql-17-pg-tokenizer postgresql-17-pg-tokenizer_0.1.1-1PIGSTY~trixie_arm64.deb pigsty 0.1.1 9.7MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-tokenizer/postgresql-17-pg-tokenizer_0.1.1-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 17 postgresql-17-pg-tokenizer postgresql-17-pg-tokenizer_0.1.1-1PIGSTY~jammy_amd64.deb pigsty 0.1.1 10.9MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-tokenizer/postgresql-17-pg-tokenizer_0.1.1-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 17 postgresql-17-pg-tokenizer postgresql-17-pg-tokenizer_0.1.1-1PIGSTY~jammy_arm64.deb pigsty 0.1.1 10.7MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-tokenizer/postgresql-17-pg-tokenizer_0.1.1-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 17 postgresql-17-pg-tokenizer postgresql-17-pg-tokenizer_0.1.1-1PIGSTY~noble_amd64.deb pigsty 0.1.1 10.8MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-tokenizer/postgresql-17-pg-tokenizer_0.1.1-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 17 postgresql-17-pg-tokenizer postgresql-17-pg-tokenizer_0.1.1-1PIGSTY~noble_arm64.deb pigsty 0.1.1 10.7MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-tokenizer/postgresql-17-pg-tokenizer_0.1.1-1PIGSTY~noble_arm64.deb
+@ el8.x86_64 16 pg_tokenizer_16 pg_tokenizer_16-0.1.1-1PIGSTY.el8.x86_64.rpm pigsty 0.1.1 11.7MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_tokenizer_16-0.1.1-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 16 pg_tokenizer_16 pg_tokenizer_16-0.1.1-1PIGSTY.el8.aarch64.rpm pigsty 0.1.1 11.5MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_tokenizer_16-0.1.1-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 16 pg_tokenizer_16 pg_tokenizer_16-0.1.1-1PIGSTY.el9.x86_64.rpm pigsty 0.1.1 11.0MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_tokenizer_16-0.1.1-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 16 pg_tokenizer_16 pg_tokenizer_16-0.1.1-1PIGSTY.el9.aarch64.rpm pigsty 0.1.1 10.9MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_tokenizer_16-0.1.1-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 16 pg_tokenizer_16 pg_tokenizer_16-0.1.1-1PIGSTY.el10.x86_64.rpm pigsty 0.1.1 10.9MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_tokenizer_16-0.1.1-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 16 pg_tokenizer_16 pg_tokenizer_16-0.1.1-1PIGSTY.el10.aarch64.rpm pigsty 0.1.1 11.0MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_tokenizer_16-0.1.1-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 16 postgresql-16-pg-tokenizer postgresql-16-pg-tokenizer_0.1.1-1PIGSTY~bookworm_amd64.deb pigsty 0.1.1 9.9MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-tokenizer/postgresql-16-pg-tokenizer_0.1.1-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 16 postgresql-16-pg-tokenizer postgresql-16-pg-tokenizer_0.1.1-1PIGSTY~bookworm_arm64.deb pigsty 0.1.1 9.7MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-tokenizer/postgresql-16-pg-tokenizer_0.1.1-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 16 postgresql-16-pg-tokenizer postgresql-16-pg-tokenizer_0.1.1-1PIGSTY~trixie_amd64.deb pigsty 0.1.1 9.9MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-tokenizer/postgresql-16-pg-tokenizer_0.1.1-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 16 postgresql-16-pg-tokenizer postgresql-16-pg-tokenizer_0.1.1-1PIGSTY~trixie_arm64.deb pigsty 0.1.1 9.7MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-tokenizer/postgresql-16-pg-tokenizer_0.1.1-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 16 postgresql-16-pg-tokenizer postgresql-16-pg-tokenizer_0.1.1-1PIGSTY~jammy_amd64.deb pigsty 0.1.1 10.9MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-tokenizer/postgresql-16-pg-tokenizer_0.1.1-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 16 postgresql-16-pg-tokenizer postgresql-16-pg-tokenizer_0.1.1-1PIGSTY~jammy_arm64.deb pigsty 0.1.1 10.7MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-tokenizer/postgresql-16-pg-tokenizer_0.1.1-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 16 postgresql-16-pg-tokenizer postgresql-16-pg-tokenizer_0.1.1-1PIGSTY~noble_amd64.deb pigsty 0.1.1 10.8MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-tokenizer/postgresql-16-pg-tokenizer_0.1.1-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 16 postgresql-16-pg-tokenizer postgresql-16-pg-tokenizer_0.1.1-1PIGSTY~noble_arm64.deb pigsty 0.1.1 10.7MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-tokenizer/postgresql-16-pg-tokenizer_0.1.1-1PIGSTY~noble_arm64.deb
+@ el8.x86_64 15 pg_tokenizer_15 pg_tokenizer_15-0.1.1-1PIGSTY.el8.x86_64.rpm pigsty 0.1.1 11.7MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_tokenizer_15-0.1.1-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 15 pg_tokenizer_15 pg_tokenizer_15-0.1.1-1PIGSTY.el8.aarch64.rpm pigsty 0.1.1 11.5MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_tokenizer_15-0.1.1-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 15 pg_tokenizer_15 pg_tokenizer_15-0.1.1-1PIGSTY.el9.x86_64.rpm pigsty 0.1.1 11.0MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_tokenizer_15-0.1.1-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 15 pg_tokenizer_15 pg_tokenizer_15-0.1.1-1PIGSTY.el9.aarch64.rpm pigsty 0.1.1 10.9MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_tokenizer_15-0.1.1-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 15 pg_tokenizer_15 pg_tokenizer_15-0.1.1-1PIGSTY.el10.x86_64.rpm pigsty 0.1.1 10.9MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_tokenizer_15-0.1.1-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 15 pg_tokenizer_15 pg_tokenizer_15-0.1.1-1PIGSTY.el10.aarch64.rpm pigsty 0.1.1 11.0MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_tokenizer_15-0.1.1-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 15 postgresql-15-pg-tokenizer postgresql-15-pg-tokenizer_0.1.1-1PIGSTY~bookworm_amd64.deb pigsty 0.1.1 9.9MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-tokenizer/postgresql-15-pg-tokenizer_0.1.1-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 15 postgresql-15-pg-tokenizer postgresql-15-pg-tokenizer_0.1.1-1PIGSTY~bookworm_arm64.deb pigsty 0.1.1 9.7MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-tokenizer/postgresql-15-pg-tokenizer_0.1.1-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 15 postgresql-15-pg-tokenizer postgresql-15-pg-tokenizer_0.1.1-1PIGSTY~trixie_amd64.deb pigsty 0.1.1 9.9MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-tokenizer/postgresql-15-pg-tokenizer_0.1.1-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 15 postgresql-15-pg-tokenizer postgresql-15-pg-tokenizer_0.1.1-1PIGSTY~trixie_arm64.deb pigsty 0.1.1 9.7MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-tokenizer/postgresql-15-pg-tokenizer_0.1.1-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 15 postgresql-15-pg-tokenizer postgresql-15-pg-tokenizer_0.1.1-1PIGSTY~jammy_amd64.deb pigsty 0.1.1 10.9MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-tokenizer/postgresql-15-pg-tokenizer_0.1.1-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 15 postgresql-15-pg-tokenizer postgresql-15-pg-tokenizer_0.1.1-1PIGSTY~jammy_arm64.deb pigsty 0.1.1 10.7MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-tokenizer/postgresql-15-pg-tokenizer_0.1.1-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 15 postgresql-15-pg-tokenizer postgresql-15-pg-tokenizer_0.1.1-1PIGSTY~noble_amd64.deb pigsty 0.1.1 10.8MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-tokenizer/postgresql-15-pg-tokenizer_0.1.1-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 15 postgresql-15-pg-tokenizer postgresql-15-pg-tokenizer_0.1.1-1PIGSTY~noble_arm64.deb pigsty 0.1.1 10.7MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-tokenizer/postgresql-15-pg-tokenizer_0.1.1-1PIGSTY~noble_arm64.deb
+@ el8.x86_64 14 pg_tokenizer_14 pg_tokenizer_14-0.1.1-1PIGSTY.el8.x86_64.rpm pigsty 0.1.1 11.7MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_tokenizer_14-0.1.1-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 14 pg_tokenizer_14 pg_tokenizer_14-0.1.1-1PIGSTY.el8.aarch64.rpm pigsty 0.1.1 11.5MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_tokenizer_14-0.1.1-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 14 pg_tokenizer_14 pg_tokenizer_14-0.1.1-1PIGSTY.el9.x86_64.rpm pigsty 0.1.1 11.0MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_tokenizer_14-0.1.1-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 14 pg_tokenizer_14 pg_tokenizer_14-0.1.1-1PIGSTY.el9.aarch64.rpm pigsty 0.1.1 10.9MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_tokenizer_14-0.1.1-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 14 pg_tokenizer_14 pg_tokenizer_14-0.1.1-1PIGSTY.el10.x86_64.rpm pigsty 0.1.1 10.9MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_tokenizer_14-0.1.1-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 14 pg_tokenizer_14 pg_tokenizer_14-0.1.1-1PIGSTY.el10.aarch64.rpm pigsty 0.1.1 11.0MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_tokenizer_14-0.1.1-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 14 postgresql-14-pg-tokenizer postgresql-14-pg-tokenizer_0.1.1-1PIGSTY~bookworm_amd64.deb pigsty 0.1.1 9.9MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-tokenizer/postgresql-14-pg-tokenizer_0.1.1-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 14 postgresql-14-pg-tokenizer postgresql-14-pg-tokenizer_0.1.1-1PIGSTY~bookworm_arm64.deb pigsty 0.1.1 9.7MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-tokenizer/postgresql-14-pg-tokenizer_0.1.1-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 14 postgresql-14-pg-tokenizer postgresql-14-pg-tokenizer_0.1.1-1PIGSTY~trixie_amd64.deb pigsty 0.1.1 9.9MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-tokenizer/postgresql-14-pg-tokenizer_0.1.1-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 14 postgresql-14-pg-tokenizer postgresql-14-pg-tokenizer_0.1.1-1PIGSTY~trixie_arm64.deb pigsty 0.1.1 9.7MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-tokenizer/postgresql-14-pg-tokenizer_0.1.1-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 14 postgresql-14-pg-tokenizer postgresql-14-pg-tokenizer_0.1.1-1PIGSTY~jammy_amd64.deb pigsty 0.1.1 10.9MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-tokenizer/postgresql-14-pg-tokenizer_0.1.1-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 14 postgresql-14-pg-tokenizer postgresql-14-pg-tokenizer_0.1.1-1PIGSTY~jammy_arm64.deb pigsty 0.1.1 10.7MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-tokenizer/postgresql-14-pg-tokenizer_0.1.1-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 14 postgresql-14-pg-tokenizer postgresql-14-pg-tokenizer_0.1.1-1PIGSTY~noble_amd64.deb pigsty 0.1.1 10.8MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-tokenizer/postgresql-14-pg-tokenizer_0.1.1-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 14 postgresql-14-pg-tokenizer postgresql-14-pg-tokenizer_0.1.1-1PIGSTY~noble_arm64.deb pigsty 0.1.1 10.7MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-tokenizer/postgresql-14-pg-tokenizer_0.1.1-1PIGSTY~noble_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建
@@ -192,6 +192,13 @@ apt install -y postgresql-14-pg-tokenizer   # PG 14
 ```
 {{% /tab %}}
 {{< /tabpane >}}
+
+
+**预加载配置**：
+
+```bash
+shared_preload_libraries = 'pg_tokenizer';
+```
 
 
 **创建扩展**：

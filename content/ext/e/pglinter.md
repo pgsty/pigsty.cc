@@ -11,7 +11,7 @@ weight: 5090
     <div class="ext-card__title">pmpetit/pglinter</div>
     <div class="ext-card__desc">https://github.com/pmpetit/pglinter</div>
   </a>
-  <a class="ext-card ext-card--source" href="pglinter-1.1.1.tar.gz">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pglinter-1.1.1.tar.gz">
     <div class="ext-card__kicker">源码</div>
     <div class="ext-card__title">pglinter-1.1.1.tar.gz</div>
     <div class="ext-card__desc">pglinter-1.1.1.tar.gz</div>
@@ -30,7 +30,7 @@ weight: 5090
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
 |:-----:|:-------------------------------------------------------------------------|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|:----------|
-| 5090  | [**`pglinter`**](/ext/e/pglinter) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | - |
+| 5090  | [**`pglinter`**](/ext/e/pglinter) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | - |
 {.ext-table}
 
 | **相关扩展** | [`amcheck`](/ext/e/amcheck) [`supautils`](/ext/e/supautils) |
@@ -64,76 +64,76 @@ weight: 5090
 | u22.aarch64 | AVAIL PIGSTY 1.1.1 1 | AVAIL PIGSTY 1.1.1 1 | AVAIL PIGSTY 1.1.1 1 | AVAIL PIGSTY 1.1.1 1 | AVAIL PIGSTY 1.1.1 1 |
 | u24.x86_64 | AVAIL PIGSTY 1.1.1 1 | AVAIL PIGSTY 1.1.1 1 | AVAIL PIGSTY 1.1.1 1 | AVAIL PIGSTY 1.1.1 1 | AVAIL PIGSTY 1.1.1 1 |
 | u24.aarch64 | AVAIL PIGSTY 1.1.1 1 | AVAIL PIGSTY 1.1.1 1 | AVAIL PIGSTY 1.1.1 1 | AVAIL PIGSTY 1.1.1 1 | AVAIL PIGSTY 1.1.1 1 |
-@ el8.x86_64 18 pglinter_18 pglinter_18-1.1.1-1PIGSTY.el8.x86_64.rpm pigsty 1.1.1 578.9KiB https://repo.pigsty.io/yum/pgsql/el8.x86_64/pglinter_18-1.1.1-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 18 pglinter_18 pglinter_18-1.1.1-1PIGSTY.el8.aarch64.rpm pigsty 1.1.1 441.1KiB https://repo.pigsty.io/yum/pgsql/el8.aarch64/pglinter_18-1.1.1-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 18 pglinter_18 pglinter_18-1.1.1-1PIGSTY.el9.x86_64.rpm pigsty 1.1.1 593.2KiB https://repo.pigsty.io/yum/pgsql/el9.x86_64/pglinter_18-1.1.1-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 18 pglinter_18 pglinter_18-1.1.1-1PIGSTY.el9.aarch64.rpm pigsty 1.1.1 469.4KiB https://repo.pigsty.io/yum/pgsql/el9.aarch64/pglinter_18-1.1.1-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 18 pglinter_18 pglinter_18-1.1.1-1PIGSTY.el10.x86_64.rpm pigsty 1.1.1 592.9KiB https://repo.pigsty.io/yum/pgsql/el10.x86_64/pglinter_18-1.1.1-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 18 pglinter_18 pglinter_18-1.1.1-1PIGSTY.el10.aarch64.rpm pigsty 1.1.1 469.6KiB https://repo.pigsty.io/yum/pgsql/el10.aarch64/pglinter_18-1.1.1-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 18 postgresql-18-pglinter postgresql-18-pglinter_1.1.1-1PIGSTY~bookworm_amd64.deb pigsty 1.1.1 487.8KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/pglinter/postgresql-18-pglinter_1.1.1-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 18 postgresql-18-pglinter postgresql-18-pglinter_1.1.1-1PIGSTY~bookworm_arm64.deb pigsty 1.1.1 357.8KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/pglinter/postgresql-18-pglinter_1.1.1-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 18 postgresql-18-pglinter postgresql-18-pglinter_1.1.1-1PIGSTY~trixie_amd64.deb pigsty 1.1.1 487.9KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pglinter/postgresql-18-pglinter_1.1.1-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 18 postgresql-18-pglinter postgresql-18-pglinter_1.1.1-1PIGSTY~trixie_arm64.deb pigsty 1.1.1 357.9KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pglinter/postgresql-18-pglinter_1.1.1-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 18 postgresql-18-pglinter postgresql-18-pglinter_1.1.1-1PIGSTY~jammy_amd64.deb pigsty 1.1.1 540.7KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/pglinter/postgresql-18-pglinter_1.1.1-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 18 postgresql-18-pglinter postgresql-18-pglinter_1.1.1-1PIGSTY~jammy_arm64.deb pigsty 1.1.1 416.9KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/pglinter/postgresql-18-pglinter_1.1.1-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 18 postgresql-18-pglinter postgresql-18-pglinter_1.1.1-1PIGSTY~noble_amd64.deb pigsty 1.1.1 535.9KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pglinter/postgresql-18-pglinter_1.1.1-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 18 postgresql-18-pglinter postgresql-18-pglinter_1.1.1-1PIGSTY~noble_arm64.deb pigsty 1.1.1 410.7KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pglinter/postgresql-18-pglinter_1.1.1-1PIGSTY~noble_arm64.deb
-@ el8.x86_64 17 pglinter_17 pglinter_17-1.1.1-1PIGSTY.el8.x86_64.rpm pigsty 1.1.1 578.6KiB https://repo.pigsty.io/yum/pgsql/el8.x86_64/pglinter_17-1.1.1-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 17 pglinter_17 pglinter_17-1.1.1-1PIGSTY.el8.aarch64.rpm pigsty 1.1.1 442.9KiB https://repo.pigsty.io/yum/pgsql/el8.aarch64/pglinter_17-1.1.1-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 17 pglinter_17 pglinter_17-1.1.1-1PIGSTY.el9.x86_64.rpm pigsty 1.1.1 592.8KiB https://repo.pigsty.io/yum/pgsql/el9.x86_64/pglinter_17-1.1.1-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 17 pglinter_17 pglinter_17-1.1.1-1PIGSTY.el9.aarch64.rpm pigsty 1.1.1 471.4KiB https://repo.pigsty.io/yum/pgsql/el9.aarch64/pglinter_17-1.1.1-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 17 pglinter_17 pglinter_17-1.1.1-1PIGSTY.el10.x86_64.rpm pigsty 1.1.1 592.6KiB https://repo.pigsty.io/yum/pgsql/el10.x86_64/pglinter_17-1.1.1-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 17 pglinter_17 pglinter_17-1.1.1-1PIGSTY.el10.aarch64.rpm pigsty 1.1.1 471.0KiB https://repo.pigsty.io/yum/pgsql/el10.aarch64/pglinter_17-1.1.1-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 17 postgresql-17-pglinter postgresql-17-pglinter_1.1.1-1PIGSTY~bookworm_amd64.deb pigsty 1.1.1 487.8KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/pglinter/postgresql-17-pglinter_1.1.1-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 17 postgresql-17-pglinter postgresql-17-pglinter_1.1.1-1PIGSTY~bookworm_arm64.deb pigsty 1.1.1 358.9KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/pglinter/postgresql-17-pglinter_1.1.1-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 17 postgresql-17-pglinter postgresql-17-pglinter_1.1.1-1PIGSTY~trixie_amd64.deb pigsty 1.1.1 487.6KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pglinter/postgresql-17-pglinter_1.1.1-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 17 postgresql-17-pglinter postgresql-17-pglinter_1.1.1-1PIGSTY~trixie_arm64.deb pigsty 1.1.1 358.8KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pglinter/postgresql-17-pglinter_1.1.1-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 17 postgresql-17-pglinter postgresql-17-pglinter_1.1.1-1PIGSTY~jammy_amd64.deb pigsty 1.1.1 540.7KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/pglinter/postgresql-17-pglinter_1.1.1-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 17 postgresql-17-pglinter postgresql-17-pglinter_1.1.1-1PIGSTY~jammy_arm64.deb pigsty 1.1.1 417.9KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/pglinter/postgresql-17-pglinter_1.1.1-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 17 postgresql-17-pglinter postgresql-17-pglinter_1.1.1-1PIGSTY~noble_amd64.deb pigsty 1.1.1 535.7KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pglinter/postgresql-17-pglinter_1.1.1-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 17 postgresql-17-pglinter postgresql-17-pglinter_1.1.1-1PIGSTY~noble_arm64.deb pigsty 1.1.1 412.4KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pglinter/postgresql-17-pglinter_1.1.1-1PIGSTY~noble_arm64.deb
-@ el8.x86_64 16 pglinter_16 pglinter_16-1.1.1-1PIGSTY.el8.x86_64.rpm pigsty 1.1.1 578.5KiB https://repo.pigsty.io/yum/pgsql/el8.x86_64/pglinter_16-1.1.1-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 16 pglinter_16 pglinter_16-1.1.1-1PIGSTY.el8.aarch64.rpm pigsty 1.1.1 441.3KiB https://repo.pigsty.io/yum/pgsql/el8.aarch64/pglinter_16-1.1.1-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 16 pglinter_16 pglinter_16-1.1.1-1PIGSTY.el9.x86_64.rpm pigsty 1.1.1 593.0KiB https://repo.pigsty.io/yum/pgsql/el9.x86_64/pglinter_16-1.1.1-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 16 pglinter_16 pglinter_16-1.1.1-1PIGSTY.el9.aarch64.rpm pigsty 1.1.1 469.3KiB https://repo.pigsty.io/yum/pgsql/el9.aarch64/pglinter_16-1.1.1-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 16 pglinter_16 pglinter_16-1.1.1-1PIGSTY.el10.x86_64.rpm pigsty 1.1.1 593.2KiB https://repo.pigsty.io/yum/pgsql/el10.x86_64/pglinter_16-1.1.1-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 16 pglinter_16 pglinter_16-1.1.1-1PIGSTY.el10.aarch64.rpm pigsty 1.1.1 469.8KiB https://repo.pigsty.io/yum/pgsql/el10.aarch64/pglinter_16-1.1.1-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 16 postgresql-16-pglinter postgresql-16-pglinter_1.1.1-1PIGSTY~bookworm_amd64.deb pigsty 1.1.1 487.7KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/pglinter/postgresql-16-pglinter_1.1.1-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 16 postgresql-16-pglinter postgresql-16-pglinter_1.1.1-1PIGSTY~bookworm_arm64.deb pigsty 1.1.1 357.8KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/pglinter/postgresql-16-pglinter_1.1.1-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 16 postgresql-16-pglinter postgresql-16-pglinter_1.1.1-1PIGSTY~trixie_amd64.deb pigsty 1.1.1 487.4KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pglinter/postgresql-16-pglinter_1.1.1-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 16 postgresql-16-pglinter postgresql-16-pglinter_1.1.1-1PIGSTY~trixie_arm64.deb pigsty 1.1.1 358.0KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pglinter/postgresql-16-pglinter_1.1.1-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 16 postgresql-16-pglinter postgresql-16-pglinter_1.1.1-1PIGSTY~jammy_amd64.deb pigsty 1.1.1 540.5KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/pglinter/postgresql-16-pglinter_1.1.1-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 16 postgresql-16-pglinter postgresql-16-pglinter_1.1.1-1PIGSTY~jammy_arm64.deb pigsty 1.1.1 416.6KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/pglinter/postgresql-16-pglinter_1.1.1-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 16 postgresql-16-pglinter postgresql-16-pglinter_1.1.1-1PIGSTY~noble_amd64.deb pigsty 1.1.1 535.6KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pglinter/postgresql-16-pglinter_1.1.1-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 16 postgresql-16-pglinter postgresql-16-pglinter_1.1.1-1PIGSTY~noble_arm64.deb pigsty 1.1.1 411.3KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pglinter/postgresql-16-pglinter_1.1.1-1PIGSTY~noble_arm64.deb
-@ el8.x86_64 15 pglinter_15 pglinter_15-1.1.1-1PIGSTY.el8.x86_64.rpm pigsty 1.1.1 578.7KiB https://repo.pigsty.io/yum/pgsql/el8.x86_64/pglinter_15-1.1.1-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 15 pglinter_15 pglinter_15-1.1.1-1PIGSTY.el8.aarch64.rpm pigsty 1.1.1 441.3KiB https://repo.pigsty.io/yum/pgsql/el8.aarch64/pglinter_15-1.1.1-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 15 pglinter_15 pglinter_15-1.1.1-1PIGSTY.el9.x86_64.rpm pigsty 1.1.1 592.6KiB https://repo.pigsty.io/yum/pgsql/el9.x86_64/pglinter_15-1.1.1-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 15 pglinter_15 pglinter_15-1.1.1-1PIGSTY.el9.aarch64.rpm pigsty 1.1.1 469.5KiB https://repo.pigsty.io/yum/pgsql/el9.aarch64/pglinter_15-1.1.1-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 15 pglinter_15 pglinter_15-1.1.1-1PIGSTY.el10.x86_64.rpm pigsty 1.1.1 592.3KiB https://repo.pigsty.io/yum/pgsql/el10.x86_64/pglinter_15-1.1.1-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 15 pglinter_15 pglinter_15-1.1.1-1PIGSTY.el10.aarch64.rpm pigsty 1.1.1 469.7KiB https://repo.pigsty.io/yum/pgsql/el10.aarch64/pglinter_15-1.1.1-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 15 postgresql-15-pglinter postgresql-15-pglinter_1.1.1-1PIGSTY~bookworm_amd64.deb pigsty 1.1.1 487.7KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/pglinter/postgresql-15-pglinter_1.1.1-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 15 postgresql-15-pglinter postgresql-15-pglinter_1.1.1-1PIGSTY~bookworm_arm64.deb pigsty 1.1.1 357.9KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/pglinter/postgresql-15-pglinter_1.1.1-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 15 postgresql-15-pglinter postgresql-15-pglinter_1.1.1-1PIGSTY~trixie_amd64.deb pigsty 1.1.1 487.3KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pglinter/postgresql-15-pglinter_1.1.1-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 15 postgresql-15-pglinter postgresql-15-pglinter_1.1.1-1PIGSTY~trixie_arm64.deb pigsty 1.1.1 357.6KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pglinter/postgresql-15-pglinter_1.1.1-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 15 postgresql-15-pglinter postgresql-15-pglinter_1.1.1-1PIGSTY~jammy_amd64.deb pigsty 1.1.1 540.6KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/pglinter/postgresql-15-pglinter_1.1.1-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 15 postgresql-15-pglinter postgresql-15-pglinter_1.1.1-1PIGSTY~jammy_arm64.deb pigsty 1.1.1 416.2KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/pglinter/postgresql-15-pglinter_1.1.1-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 15 postgresql-15-pglinter postgresql-15-pglinter_1.1.1-1PIGSTY~noble_amd64.deb pigsty 1.1.1 535.6KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pglinter/postgresql-15-pglinter_1.1.1-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 15 postgresql-15-pglinter postgresql-15-pglinter_1.1.1-1PIGSTY~noble_arm64.deb pigsty 1.1.1 410.9KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pglinter/postgresql-15-pglinter_1.1.1-1PIGSTY~noble_arm64.deb
-@ el8.x86_64 14 pglinter_14 pglinter_14-1.1.1-1PIGSTY.el8.x86_64.rpm pigsty 1.1.1 578.4KiB https://repo.pigsty.io/yum/pgsql/el8.x86_64/pglinter_14-1.1.1-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 14 pglinter_14 pglinter_14-1.1.1-1PIGSTY.el8.aarch64.rpm pigsty 1.1.1 441.6KiB https://repo.pigsty.io/yum/pgsql/el8.aarch64/pglinter_14-1.1.1-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 14 pglinter_14 pglinter_14-1.1.1-1PIGSTY.el9.x86_64.rpm pigsty 1.1.1 592.1KiB https://repo.pigsty.io/yum/pgsql/el9.x86_64/pglinter_14-1.1.1-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 14 pglinter_14 pglinter_14-1.1.1-1PIGSTY.el9.aarch64.rpm pigsty 1.1.1 469.5KiB https://repo.pigsty.io/yum/pgsql/el9.aarch64/pglinter_14-1.1.1-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 14 pglinter_14 pglinter_14-1.1.1-1PIGSTY.el10.x86_64.rpm pigsty 1.1.1 592.0KiB https://repo.pigsty.io/yum/pgsql/el10.x86_64/pglinter_14-1.1.1-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 14 pglinter_14 pglinter_14-1.1.1-1PIGSTY.el10.aarch64.rpm pigsty 1.1.1 469.7KiB https://repo.pigsty.io/yum/pgsql/el10.aarch64/pglinter_14-1.1.1-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 14 postgresql-14-pglinter postgresql-14-pglinter_1.1.1-1PIGSTY~bookworm_amd64.deb pigsty 1.1.1 488.2KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/pglinter/postgresql-14-pglinter_1.1.1-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 14 postgresql-14-pglinter postgresql-14-pglinter_1.1.1-1PIGSTY~bookworm_arm64.deb pigsty 1.1.1 358.0KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/pglinter/postgresql-14-pglinter_1.1.1-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 14 postgresql-14-pglinter postgresql-14-pglinter_1.1.1-1PIGSTY~trixie_amd64.deb pigsty 1.1.1 487.9KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pglinter/postgresql-14-pglinter_1.1.1-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 14 postgresql-14-pglinter postgresql-14-pglinter_1.1.1-1PIGSTY~trixie_arm64.deb pigsty 1.1.1 357.9KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pglinter/postgresql-14-pglinter_1.1.1-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 14 postgresql-14-pglinter postgresql-14-pglinter_1.1.1-1PIGSTY~jammy_amd64.deb pigsty 1.1.1 540.5KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/pglinter/postgresql-14-pglinter_1.1.1-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 14 postgresql-14-pglinter postgresql-14-pglinter_1.1.1-1PIGSTY~jammy_arm64.deb pigsty 1.1.1 416.2KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/pglinter/postgresql-14-pglinter_1.1.1-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 14 postgresql-14-pglinter postgresql-14-pglinter_1.1.1-1PIGSTY~noble_amd64.deb pigsty 1.1.1 535.5KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pglinter/postgresql-14-pglinter_1.1.1-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 14 postgresql-14-pglinter postgresql-14-pglinter_1.1.1-1PIGSTY~noble_arm64.deb pigsty 1.1.1 411.3KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pglinter/postgresql-14-pglinter_1.1.1-1PIGSTY~noble_arm64.deb
+@ el8.x86_64 18 pglinter_18 pglinter_18-1.1.1-1PIGSTY.el8.x86_64.rpm pigsty 1.1.1 578.9KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pglinter_18-1.1.1-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 18 pglinter_18 pglinter_18-1.1.1-1PIGSTY.el8.aarch64.rpm pigsty 1.1.1 441.1KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pglinter_18-1.1.1-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 18 pglinter_18 pglinter_18-1.1.1-1PIGSTY.el9.x86_64.rpm pigsty 1.1.1 593.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pglinter_18-1.1.1-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 18 pglinter_18 pglinter_18-1.1.1-1PIGSTY.el9.aarch64.rpm pigsty 1.1.1 469.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pglinter_18-1.1.1-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 18 pglinter_18 pglinter_18-1.1.1-1PIGSTY.el10.x86_64.rpm pigsty 1.1.1 592.9KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pglinter_18-1.1.1-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 18 pglinter_18 pglinter_18-1.1.1-1PIGSTY.el10.aarch64.rpm pigsty 1.1.1 469.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pglinter_18-1.1.1-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-pglinter postgresql-18-pglinter_1.1.1-1PIGSTY~bookworm_amd64.deb pigsty 1.1.1 487.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pglinter/postgresql-18-pglinter_1.1.1-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 18 postgresql-18-pglinter postgresql-18-pglinter_1.1.1-1PIGSTY~bookworm_arm64.deb pigsty 1.1.1 357.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pglinter/postgresql-18-pglinter_1.1.1-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 18 postgresql-18-pglinter postgresql-18-pglinter_1.1.1-1PIGSTY~trixie_amd64.deb pigsty 1.1.1 487.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pglinter/postgresql-18-pglinter_1.1.1-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 18 postgresql-18-pglinter postgresql-18-pglinter_1.1.1-1PIGSTY~trixie_arm64.deb pigsty 1.1.1 357.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pglinter/postgresql-18-pglinter_1.1.1-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 18 postgresql-18-pglinter postgresql-18-pglinter_1.1.1-1PIGSTY~jammy_amd64.deb pigsty 1.1.1 540.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pglinter/postgresql-18-pglinter_1.1.1-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 18 postgresql-18-pglinter postgresql-18-pglinter_1.1.1-1PIGSTY~jammy_arm64.deb pigsty 1.1.1 416.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pglinter/postgresql-18-pglinter_1.1.1-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 18 postgresql-18-pglinter postgresql-18-pglinter_1.1.1-1PIGSTY~noble_amd64.deb pigsty 1.1.1 535.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pglinter/postgresql-18-pglinter_1.1.1-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 18 postgresql-18-pglinter postgresql-18-pglinter_1.1.1-1PIGSTY~noble_arm64.deb pigsty 1.1.1 410.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pglinter/postgresql-18-pglinter_1.1.1-1PIGSTY~noble_arm64.deb
+@ el8.x86_64 17 pglinter_17 pglinter_17-1.1.1-1PIGSTY.el8.x86_64.rpm pigsty 1.1.1 578.6KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pglinter_17-1.1.1-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 17 pglinter_17 pglinter_17-1.1.1-1PIGSTY.el8.aarch64.rpm pigsty 1.1.1 442.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pglinter_17-1.1.1-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 17 pglinter_17 pglinter_17-1.1.1-1PIGSTY.el9.x86_64.rpm pigsty 1.1.1 592.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pglinter_17-1.1.1-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 17 pglinter_17 pglinter_17-1.1.1-1PIGSTY.el9.aarch64.rpm pigsty 1.1.1 471.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pglinter_17-1.1.1-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 17 pglinter_17 pglinter_17-1.1.1-1PIGSTY.el10.x86_64.rpm pigsty 1.1.1 592.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pglinter_17-1.1.1-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 17 pglinter_17 pglinter_17-1.1.1-1PIGSTY.el10.aarch64.rpm pigsty 1.1.1 471.0KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pglinter_17-1.1.1-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-pglinter postgresql-17-pglinter_1.1.1-1PIGSTY~bookworm_amd64.deb pigsty 1.1.1 487.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pglinter/postgresql-17-pglinter_1.1.1-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 17 postgresql-17-pglinter postgresql-17-pglinter_1.1.1-1PIGSTY~bookworm_arm64.deb pigsty 1.1.1 358.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pglinter/postgresql-17-pglinter_1.1.1-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 17 postgresql-17-pglinter postgresql-17-pglinter_1.1.1-1PIGSTY~trixie_amd64.deb pigsty 1.1.1 487.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pglinter/postgresql-17-pglinter_1.1.1-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 17 postgresql-17-pglinter postgresql-17-pglinter_1.1.1-1PIGSTY~trixie_arm64.deb pigsty 1.1.1 358.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pglinter/postgresql-17-pglinter_1.1.1-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 17 postgresql-17-pglinter postgresql-17-pglinter_1.1.1-1PIGSTY~jammy_amd64.deb pigsty 1.1.1 540.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pglinter/postgresql-17-pglinter_1.1.1-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 17 postgresql-17-pglinter postgresql-17-pglinter_1.1.1-1PIGSTY~jammy_arm64.deb pigsty 1.1.1 417.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pglinter/postgresql-17-pglinter_1.1.1-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 17 postgresql-17-pglinter postgresql-17-pglinter_1.1.1-1PIGSTY~noble_amd64.deb pigsty 1.1.1 535.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pglinter/postgresql-17-pglinter_1.1.1-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 17 postgresql-17-pglinter postgresql-17-pglinter_1.1.1-1PIGSTY~noble_arm64.deb pigsty 1.1.1 412.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pglinter/postgresql-17-pglinter_1.1.1-1PIGSTY~noble_arm64.deb
+@ el8.x86_64 16 pglinter_16 pglinter_16-1.1.1-1PIGSTY.el8.x86_64.rpm pigsty 1.1.1 578.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pglinter_16-1.1.1-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 16 pglinter_16 pglinter_16-1.1.1-1PIGSTY.el8.aarch64.rpm pigsty 1.1.1 441.3KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pglinter_16-1.1.1-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 16 pglinter_16 pglinter_16-1.1.1-1PIGSTY.el9.x86_64.rpm pigsty 1.1.1 593.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pglinter_16-1.1.1-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 16 pglinter_16 pglinter_16-1.1.1-1PIGSTY.el9.aarch64.rpm pigsty 1.1.1 469.3KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pglinter_16-1.1.1-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 16 pglinter_16 pglinter_16-1.1.1-1PIGSTY.el10.x86_64.rpm pigsty 1.1.1 593.2KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pglinter_16-1.1.1-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 16 pglinter_16 pglinter_16-1.1.1-1PIGSTY.el10.aarch64.rpm pigsty 1.1.1 469.8KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pglinter_16-1.1.1-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 16 postgresql-16-pglinter postgresql-16-pglinter_1.1.1-1PIGSTY~bookworm_amd64.deb pigsty 1.1.1 487.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pglinter/postgresql-16-pglinter_1.1.1-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 16 postgresql-16-pglinter postgresql-16-pglinter_1.1.1-1PIGSTY~bookworm_arm64.deb pigsty 1.1.1 357.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pglinter/postgresql-16-pglinter_1.1.1-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 16 postgresql-16-pglinter postgresql-16-pglinter_1.1.1-1PIGSTY~trixie_amd64.deb pigsty 1.1.1 487.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pglinter/postgresql-16-pglinter_1.1.1-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 16 postgresql-16-pglinter postgresql-16-pglinter_1.1.1-1PIGSTY~trixie_arm64.deb pigsty 1.1.1 358.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pglinter/postgresql-16-pglinter_1.1.1-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 16 postgresql-16-pglinter postgresql-16-pglinter_1.1.1-1PIGSTY~jammy_amd64.deb pigsty 1.1.1 540.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pglinter/postgresql-16-pglinter_1.1.1-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 16 postgresql-16-pglinter postgresql-16-pglinter_1.1.1-1PIGSTY~jammy_arm64.deb pigsty 1.1.1 416.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pglinter/postgresql-16-pglinter_1.1.1-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 16 postgresql-16-pglinter postgresql-16-pglinter_1.1.1-1PIGSTY~noble_amd64.deb pigsty 1.1.1 535.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pglinter/postgresql-16-pglinter_1.1.1-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 16 postgresql-16-pglinter postgresql-16-pglinter_1.1.1-1PIGSTY~noble_arm64.deb pigsty 1.1.1 411.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pglinter/postgresql-16-pglinter_1.1.1-1PIGSTY~noble_arm64.deb
+@ el8.x86_64 15 pglinter_15 pglinter_15-1.1.1-1PIGSTY.el8.x86_64.rpm pigsty 1.1.1 578.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pglinter_15-1.1.1-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 15 pglinter_15 pglinter_15-1.1.1-1PIGSTY.el8.aarch64.rpm pigsty 1.1.1 441.3KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pglinter_15-1.1.1-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 15 pglinter_15 pglinter_15-1.1.1-1PIGSTY.el9.x86_64.rpm pigsty 1.1.1 592.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pglinter_15-1.1.1-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 15 pglinter_15 pglinter_15-1.1.1-1PIGSTY.el9.aarch64.rpm pigsty 1.1.1 469.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pglinter_15-1.1.1-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 15 pglinter_15 pglinter_15-1.1.1-1PIGSTY.el10.x86_64.rpm pigsty 1.1.1 592.3KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pglinter_15-1.1.1-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 15 pglinter_15 pglinter_15-1.1.1-1PIGSTY.el10.aarch64.rpm pigsty 1.1.1 469.7KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pglinter_15-1.1.1-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 15 postgresql-15-pglinter postgresql-15-pglinter_1.1.1-1PIGSTY~bookworm_amd64.deb pigsty 1.1.1 487.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pglinter/postgresql-15-pglinter_1.1.1-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 15 postgresql-15-pglinter postgresql-15-pglinter_1.1.1-1PIGSTY~bookworm_arm64.deb pigsty 1.1.1 357.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pglinter/postgresql-15-pglinter_1.1.1-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 15 postgresql-15-pglinter postgresql-15-pglinter_1.1.1-1PIGSTY~trixie_amd64.deb pigsty 1.1.1 487.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pglinter/postgresql-15-pglinter_1.1.1-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 15 postgresql-15-pglinter postgresql-15-pglinter_1.1.1-1PIGSTY~trixie_arm64.deb pigsty 1.1.1 357.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pglinter/postgresql-15-pglinter_1.1.1-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 15 postgresql-15-pglinter postgresql-15-pglinter_1.1.1-1PIGSTY~jammy_amd64.deb pigsty 1.1.1 540.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pglinter/postgresql-15-pglinter_1.1.1-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 15 postgresql-15-pglinter postgresql-15-pglinter_1.1.1-1PIGSTY~jammy_arm64.deb pigsty 1.1.1 416.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pglinter/postgresql-15-pglinter_1.1.1-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 15 postgresql-15-pglinter postgresql-15-pglinter_1.1.1-1PIGSTY~noble_amd64.deb pigsty 1.1.1 535.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pglinter/postgresql-15-pglinter_1.1.1-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 15 postgresql-15-pglinter postgresql-15-pglinter_1.1.1-1PIGSTY~noble_arm64.deb pigsty 1.1.1 410.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pglinter/postgresql-15-pglinter_1.1.1-1PIGSTY~noble_arm64.deb
+@ el8.x86_64 14 pglinter_14 pglinter_14-1.1.1-1PIGSTY.el8.x86_64.rpm pigsty 1.1.1 578.4KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pglinter_14-1.1.1-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 14 pglinter_14 pglinter_14-1.1.1-1PIGSTY.el8.aarch64.rpm pigsty 1.1.1 441.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pglinter_14-1.1.1-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 14 pglinter_14 pglinter_14-1.1.1-1PIGSTY.el9.x86_64.rpm pigsty 1.1.1 592.1KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pglinter_14-1.1.1-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 14 pglinter_14 pglinter_14-1.1.1-1PIGSTY.el9.aarch64.rpm pigsty 1.1.1 469.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pglinter_14-1.1.1-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 14 pglinter_14 pglinter_14-1.1.1-1PIGSTY.el10.x86_64.rpm pigsty 1.1.1 592.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pglinter_14-1.1.1-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 14 pglinter_14 pglinter_14-1.1.1-1PIGSTY.el10.aarch64.rpm pigsty 1.1.1 469.7KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pglinter_14-1.1.1-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 14 postgresql-14-pglinter postgresql-14-pglinter_1.1.1-1PIGSTY~bookworm_amd64.deb pigsty 1.1.1 488.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pglinter/postgresql-14-pglinter_1.1.1-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 14 postgresql-14-pglinter postgresql-14-pglinter_1.1.1-1PIGSTY~bookworm_arm64.deb pigsty 1.1.1 358.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pglinter/postgresql-14-pglinter_1.1.1-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 14 postgresql-14-pglinter postgresql-14-pglinter_1.1.1-1PIGSTY~trixie_amd64.deb pigsty 1.1.1 487.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pglinter/postgresql-14-pglinter_1.1.1-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 14 postgresql-14-pglinter postgresql-14-pglinter_1.1.1-1PIGSTY~trixie_arm64.deb pigsty 1.1.1 357.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pglinter/postgresql-14-pglinter_1.1.1-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 14 postgresql-14-pglinter postgresql-14-pglinter_1.1.1-1PIGSTY~jammy_amd64.deb pigsty 1.1.1 540.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pglinter/postgresql-14-pglinter_1.1.1-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 14 postgresql-14-pglinter postgresql-14-pglinter_1.1.1-1PIGSTY~jammy_arm64.deb pigsty 1.1.1 416.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pglinter/postgresql-14-pglinter_1.1.1-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 14 postgresql-14-pglinter postgresql-14-pglinter_1.1.1-1PIGSTY~noble_amd64.deb pigsty 1.1.1 535.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pglinter/postgresql-14-pglinter_1.1.1-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 14 postgresql-14-pglinter postgresql-14-pglinter_1.1.1-1PIGSTY~noble_arm64.deb pigsty 1.1.1 411.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pglinter/postgresql-14-pglinter_1.1.1-1PIGSTY~noble_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建

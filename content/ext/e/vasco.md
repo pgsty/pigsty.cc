@@ -11,7 +11,7 @@ weight: 4660
     <div class="ext-card__title">Florents-Tselai/vasco</div>
     <div class="ext-card__desc">https://github.com/Florents-Tselai/vasco</div>
   </a>
-  <a class="ext-card ext-card--source" href="vasco-0.1.0.tar.gz">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/vasco-0.1.0.tar.gz">
     <div class="ext-card__kicker">源码</div>
     <div class="ext-card__title">vasco-0.1.0.tar.gz</div>
     <div class="ext-card__desc">vasco-0.1.0.tar.gz</div>
@@ -64,76 +64,76 @@ weight: 4660
 | u22.aarch64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 |
 | u24.x86_64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 |
 | u24.aarch64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 |
-@ el8.x86_64 18 vasco_18 vasco_18-0.1.0-1PIGSTY.el8.x86_64.rpm pigsty 0.1.0 40.6KiB https://repo.pigsty.io/yum/pgsql/el8.x86_64/vasco_18-0.1.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 18 vasco_18 vasco_18-0.1.0-1PIGSTY.el8.aarch64.rpm pigsty 0.1.0 39.4KiB https://repo.pigsty.io/yum/pgsql/el8.aarch64/vasco_18-0.1.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 18 vasco_18 vasco_18-0.1.0-1PIGSTY.el9.x86_64.rpm pigsty 0.1.0 37.9KiB https://repo.pigsty.io/yum/pgsql/el9.x86_64/vasco_18-0.1.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 18 vasco_18 vasco_18-0.1.0-1PIGSTY.el9.aarch64.rpm pigsty 0.1.0 37.0KiB https://repo.pigsty.io/yum/pgsql/el9.aarch64/vasco_18-0.1.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 18 vasco_18 vasco_18-0.1.0-1PIGSTY.el10.x86_64.rpm pigsty 0.1.0 38.1KiB https://repo.pigsty.io/yum/pgsql/el10.x86_64/vasco_18-0.1.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 18 vasco_18 vasco_18-0.1.0-1PIGSTY.el10.aarch64.rpm pigsty 0.1.0 37.1KiB https://repo.pigsty.io/yum/pgsql/el10.aarch64/vasco_18-0.1.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 18 postgresql-18-vasco postgresql-18-vasco_0.1.0-1PIGSTY~bookworm_amd64.deb pigsty 0.1.0 53.6KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/v/vasco/postgresql-18-vasco_0.1.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 18 postgresql-18-vasco postgresql-18-vasco_0.1.0-1PIGSTY~bookworm_arm64.deb pigsty 0.1.0 52.7KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/v/vasco/postgresql-18-vasco_0.1.0-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 18 postgresql-18-vasco postgresql-18-vasco_0.1.0-1PIGSTY~trixie_amd64.deb pigsty 0.1.0 53.7KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/v/vasco/postgresql-18-vasco_0.1.0-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 18 postgresql-18-vasco postgresql-18-vasco_0.1.0-1PIGSTY~trixie_arm64.deb pigsty 0.1.0 52.9KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/v/vasco/postgresql-18-vasco_0.1.0-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 18 postgresql-18-vasco postgresql-18-vasco_0.1.0-1PIGSTY~jammy_amd64.deb pigsty 0.1.0 55.5KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/v/vasco/postgresql-18-vasco_0.1.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 18 postgresql-18-vasco postgresql-18-vasco_0.1.0-1PIGSTY~jammy_arm64.deb pigsty 0.1.0 54.1KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/v/vasco/postgresql-18-vasco_0.1.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 18 postgresql-18-vasco postgresql-18-vasco_0.1.0-1PIGSTY~noble_amd64.deb pigsty 0.1.0 54.2KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/v/vasco/postgresql-18-vasco_0.1.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 18 postgresql-18-vasco postgresql-18-vasco_0.1.0-1PIGSTY~noble_arm64.deb pigsty 0.1.0 53.1KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/v/vasco/postgresql-18-vasco_0.1.0-1PIGSTY~noble_arm64.deb
-@ el8.x86_64 17 vasco_17 vasco_17-0.1.0-1PIGSTY.el8.x86_64.rpm pigsty 0.1.0 40.6KiB https://repo.pigsty.io/yum/pgsql/el8.x86_64/vasco_17-0.1.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 17 vasco_17 vasco_17-0.1.0-1PIGSTY.el8.aarch64.rpm pigsty 0.1.0 39.4KiB https://repo.pigsty.io/yum/pgsql/el8.aarch64/vasco_17-0.1.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 17 vasco_17 vasco_17-0.1.0-1PIGSTY.el9.x86_64.rpm pigsty 0.1.0 38.1KiB https://repo.pigsty.io/yum/pgsql/el9.x86_64/vasco_17-0.1.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 17 vasco_17 vasco_17-0.1.0-1PIGSTY.el9.aarch64.rpm pigsty 0.1.0 37.1KiB https://repo.pigsty.io/yum/pgsql/el9.aarch64/vasco_17-0.1.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 17 vasco_17 vasco_17-0.1.0-1PIGSTY.el10.x86_64.rpm pigsty 0.1.0 38.3KiB https://repo.pigsty.io/yum/pgsql/el10.x86_64/vasco_17-0.1.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 17 vasco_17 vasco_17-0.1.0-1PIGSTY.el10.aarch64.rpm pigsty 0.1.0 37.2KiB https://repo.pigsty.io/yum/pgsql/el10.aarch64/vasco_17-0.1.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 17 postgresql-17-vasco postgresql-17-vasco_0.1.0-1PIGSTY~bookworm_amd64.deb pigsty 0.1.0 53.6KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/v/vasco/postgresql-17-vasco_0.1.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 17 postgresql-17-vasco postgresql-17-vasco_0.1.0-1PIGSTY~bookworm_arm64.deb pigsty 0.1.0 52.7KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/v/vasco/postgresql-17-vasco_0.1.0-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 17 postgresql-17-vasco postgresql-17-vasco_0.1.0-1PIGSTY~trixie_amd64.deb pigsty 0.1.0 53.7KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/v/vasco/postgresql-17-vasco_0.1.0-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 17 postgresql-17-vasco postgresql-17-vasco_0.1.0-1PIGSTY~trixie_arm64.deb pigsty 0.1.0 52.9KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/v/vasco/postgresql-17-vasco_0.1.0-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 17 postgresql-17-vasco postgresql-17-vasco_0.1.0-1PIGSTY~jammy_amd64.deb pigsty 0.1.0 57.8KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/v/vasco/postgresql-17-vasco_0.1.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 17 postgresql-17-vasco postgresql-17-vasco_0.1.0-1PIGSTY~jammy_arm64.deb pigsty 0.1.0 56.3KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/v/vasco/postgresql-17-vasco_0.1.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 17 postgresql-17-vasco postgresql-17-vasco_0.1.0-1PIGSTY~noble_amd64.deb pigsty 0.1.0 54.3KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/v/vasco/postgresql-17-vasco_0.1.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 17 postgresql-17-vasco postgresql-17-vasco_0.1.0-1PIGSTY~noble_arm64.deb pigsty 0.1.0 53.0KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/v/vasco/postgresql-17-vasco_0.1.0-1PIGSTY~noble_arm64.deb
-@ el8.x86_64 16 vasco_16 vasco_16-0.1.0-1PIGSTY.el8.x86_64.rpm pigsty 0.1.0 40.6KiB https://repo.pigsty.io/yum/pgsql/el8.x86_64/vasco_16-0.1.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 16 vasco_16 vasco_16-0.1.0-1PIGSTY.el8.aarch64.rpm pigsty 0.1.0 39.4KiB https://repo.pigsty.io/yum/pgsql/el8.aarch64/vasco_16-0.1.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 16 vasco_16 vasco_16-0.1.0-1PIGSTY.el9.x86_64.rpm pigsty 0.1.0 38.1KiB https://repo.pigsty.io/yum/pgsql/el9.x86_64/vasco_16-0.1.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 16 vasco_16 vasco_16-0.1.0-1PIGSTY.el9.aarch64.rpm pigsty 0.1.0 37.1KiB https://repo.pigsty.io/yum/pgsql/el9.aarch64/vasco_16-0.1.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 16 vasco_16 vasco_16-0.1.0-1PIGSTY.el10.x86_64.rpm pigsty 0.1.0 38.3KiB https://repo.pigsty.io/yum/pgsql/el10.x86_64/vasco_16-0.1.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 16 vasco_16 vasco_16-0.1.0-1PIGSTY.el10.aarch64.rpm pigsty 0.1.0 37.2KiB https://repo.pigsty.io/yum/pgsql/el10.aarch64/vasco_16-0.1.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 16 postgresql-16-vasco postgresql-16-vasco_0.1.0-1PIGSTY~bookworm_amd64.deb pigsty 0.1.0 53.6KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/v/vasco/postgresql-16-vasco_0.1.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 16 postgresql-16-vasco postgresql-16-vasco_0.1.0-1PIGSTY~bookworm_arm64.deb pigsty 0.1.0 52.7KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/v/vasco/postgresql-16-vasco_0.1.0-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 16 postgresql-16-vasco postgresql-16-vasco_0.1.0-1PIGSTY~trixie_amd64.deb pigsty 0.1.0 53.7KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/v/vasco/postgresql-16-vasco_0.1.0-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 16 postgresql-16-vasco postgresql-16-vasco_0.1.0-1PIGSTY~trixie_arm64.deb pigsty 0.1.0 52.9KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/v/vasco/postgresql-16-vasco_0.1.0-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 16 postgresql-16-vasco postgresql-16-vasco_0.1.0-1PIGSTY~jammy_amd64.deb pigsty 0.1.0 57.8KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/v/vasco/postgresql-16-vasco_0.1.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 16 postgresql-16-vasco postgresql-16-vasco_0.1.0-1PIGSTY~jammy_arm64.deb pigsty 0.1.0 56.3KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/v/vasco/postgresql-16-vasco_0.1.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 16 postgresql-16-vasco postgresql-16-vasco_0.1.0-1PIGSTY~noble_amd64.deb pigsty 0.1.0 54.3KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/v/vasco/postgresql-16-vasco_0.1.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 16 postgresql-16-vasco postgresql-16-vasco_0.1.0-1PIGSTY~noble_arm64.deb pigsty 0.1.0 53.0KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/v/vasco/postgresql-16-vasco_0.1.0-1PIGSTY~noble_arm64.deb
-@ el8.x86_64 15 vasco_15 vasco_15-0.1.0-1PIGSTY.el8.x86_64.rpm pigsty 0.1.0 41.0KiB https://repo.pigsty.io/yum/pgsql/el8.x86_64/vasco_15-0.1.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 15 vasco_15 vasco_15-0.1.0-1PIGSTY.el8.aarch64.rpm pigsty 0.1.0 39.9KiB https://repo.pigsty.io/yum/pgsql/el8.aarch64/vasco_15-0.1.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 15 vasco_15 vasco_15-0.1.0-1PIGSTY.el9.x86_64.rpm pigsty 0.1.0 40.2KiB https://repo.pigsty.io/yum/pgsql/el9.x86_64/vasco_15-0.1.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 15 vasco_15 vasco_15-0.1.0-1PIGSTY.el9.aarch64.rpm pigsty 0.1.0 39.7KiB https://repo.pigsty.io/yum/pgsql/el9.aarch64/vasco_15-0.1.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 15 vasco_15 vasco_15-0.1.0-1PIGSTY.el10.x86_64.rpm pigsty 0.1.0 40.5KiB https://repo.pigsty.io/yum/pgsql/el10.x86_64/vasco_15-0.1.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 15 vasco_15 vasco_15-0.1.0-1PIGSTY.el10.aarch64.rpm pigsty 0.1.0 40.1KiB https://repo.pigsty.io/yum/pgsql/el10.aarch64/vasco_15-0.1.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 15 postgresql-15-vasco postgresql-15-vasco_0.1.0-1PIGSTY~bookworm_amd64.deb pigsty 0.1.0 54.2KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/v/vasco/postgresql-15-vasco_0.1.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 15 postgresql-15-vasco postgresql-15-vasco_0.1.0-1PIGSTY~bookworm_arm64.deb pigsty 0.1.0 53.4KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/v/vasco/postgresql-15-vasco_0.1.0-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 15 postgresql-15-vasco postgresql-15-vasco_0.1.0-1PIGSTY~trixie_amd64.deb pigsty 0.1.0 54.3KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/v/vasco/postgresql-15-vasco_0.1.0-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 15 postgresql-15-vasco postgresql-15-vasco_0.1.0-1PIGSTY~trixie_arm64.deb pigsty 0.1.0 53.6KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/v/vasco/postgresql-15-vasco_0.1.0-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 15 postgresql-15-vasco postgresql-15-vasco_0.1.0-1PIGSTY~jammy_amd64.deb pigsty 0.1.0 59.4KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/v/vasco/postgresql-15-vasco_0.1.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 15 postgresql-15-vasco postgresql-15-vasco_0.1.0-1PIGSTY~jammy_arm64.deb pigsty 0.1.0 58.5KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/v/vasco/postgresql-15-vasco_0.1.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 15 postgresql-15-vasco postgresql-15-vasco_0.1.0-1PIGSTY~noble_amd64.deb pigsty 0.1.0 56.0KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/v/vasco/postgresql-15-vasco_0.1.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 15 postgresql-15-vasco postgresql-15-vasco_0.1.0-1PIGSTY~noble_arm64.deb pigsty 0.1.0 55.7KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/v/vasco/postgresql-15-vasco_0.1.0-1PIGSTY~noble_arm64.deb
-@ el8.x86_64 14 vasco_14 vasco_14-0.1.0-1PIGSTY.el8.x86_64.rpm pigsty 0.1.0 41.0KiB https://repo.pigsty.io/yum/pgsql/el8.x86_64/vasco_14-0.1.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 14 vasco_14 vasco_14-0.1.0-1PIGSTY.el8.aarch64.rpm pigsty 0.1.0 39.9KiB https://repo.pigsty.io/yum/pgsql/el8.aarch64/vasco_14-0.1.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 14 vasco_14 vasco_14-0.1.0-1PIGSTY.el9.x86_64.rpm pigsty 0.1.0 40.1KiB https://repo.pigsty.io/yum/pgsql/el9.x86_64/vasco_14-0.1.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 14 vasco_14 vasco_14-0.1.0-1PIGSTY.el9.aarch64.rpm pigsty 0.1.0 39.7KiB https://repo.pigsty.io/yum/pgsql/el9.aarch64/vasco_14-0.1.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 14 vasco_14 vasco_14-0.1.0-1PIGSTY.el10.x86_64.rpm pigsty 0.1.0 40.5KiB https://repo.pigsty.io/yum/pgsql/el10.x86_64/vasco_14-0.1.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 14 vasco_14 vasco_14-0.1.0-1PIGSTY.el10.aarch64.rpm pigsty 0.1.0 40.1KiB https://repo.pigsty.io/yum/pgsql/el10.aarch64/vasco_14-0.1.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 14 postgresql-14-vasco postgresql-14-vasco_0.1.0-1PIGSTY~bookworm_amd64.deb pigsty 0.1.0 54.3KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/v/vasco/postgresql-14-vasco_0.1.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 14 postgresql-14-vasco postgresql-14-vasco_0.1.0-1PIGSTY~bookworm_arm64.deb pigsty 0.1.0 53.4KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/v/vasco/postgresql-14-vasco_0.1.0-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 14 postgresql-14-vasco postgresql-14-vasco_0.1.0-1PIGSTY~trixie_amd64.deb pigsty 0.1.0 54.4KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/v/vasco/postgresql-14-vasco_0.1.0-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 14 postgresql-14-vasco postgresql-14-vasco_0.1.0-1PIGSTY~trixie_arm64.deb pigsty 0.1.0 53.6KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/v/vasco/postgresql-14-vasco_0.1.0-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 14 postgresql-14-vasco postgresql-14-vasco_0.1.0-1PIGSTY~jammy_amd64.deb pigsty 0.1.0 59.4KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/v/vasco/postgresql-14-vasco_0.1.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 14 postgresql-14-vasco postgresql-14-vasco_0.1.0-1PIGSTY~jammy_arm64.deb pigsty 0.1.0 58.5KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/v/vasco/postgresql-14-vasco_0.1.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 14 postgresql-14-vasco postgresql-14-vasco_0.1.0-1PIGSTY~noble_amd64.deb pigsty 0.1.0 56.0KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/v/vasco/postgresql-14-vasco_0.1.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 14 postgresql-14-vasco postgresql-14-vasco_0.1.0-1PIGSTY~noble_arm64.deb pigsty 0.1.0 55.6KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/v/vasco/postgresql-14-vasco_0.1.0-1PIGSTY~noble_arm64.deb
+@ el8.x86_64 18 vasco_18 vasco_18-0.1.0-1PIGSTY.el8.x86_64.rpm pigsty 0.1.0 40.6KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/vasco_18-0.1.0-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 18 vasco_18 vasco_18-0.1.0-1PIGSTY.el8.aarch64.rpm pigsty 0.1.0 39.4KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/vasco_18-0.1.0-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 18 vasco_18 vasco_18-0.1.0-1PIGSTY.el9.x86_64.rpm pigsty 0.1.0 37.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/vasco_18-0.1.0-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 18 vasco_18 vasco_18-0.1.0-1PIGSTY.el9.aarch64.rpm pigsty 0.1.0 37.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/vasco_18-0.1.0-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 18 vasco_18 vasco_18-0.1.0-1PIGSTY.el10.x86_64.rpm pigsty 0.1.0 38.1KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/vasco_18-0.1.0-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 18 vasco_18 vasco_18-0.1.0-1PIGSTY.el10.aarch64.rpm pigsty 0.1.0 37.1KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/vasco_18-0.1.0-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-vasco postgresql-18-vasco_0.1.0-1PIGSTY~bookworm_amd64.deb pigsty 0.1.0 53.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/v/vasco/postgresql-18-vasco_0.1.0-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 18 postgresql-18-vasco postgresql-18-vasco_0.1.0-1PIGSTY~bookworm_arm64.deb pigsty 0.1.0 52.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/v/vasco/postgresql-18-vasco_0.1.0-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 18 postgresql-18-vasco postgresql-18-vasco_0.1.0-1PIGSTY~trixie_amd64.deb pigsty 0.1.0 53.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/v/vasco/postgresql-18-vasco_0.1.0-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 18 postgresql-18-vasco postgresql-18-vasco_0.1.0-1PIGSTY~trixie_arm64.deb pigsty 0.1.0 52.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/v/vasco/postgresql-18-vasco_0.1.0-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 18 postgresql-18-vasco postgresql-18-vasco_0.1.0-1PIGSTY~jammy_amd64.deb pigsty 0.1.0 55.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/v/vasco/postgresql-18-vasco_0.1.0-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 18 postgresql-18-vasco postgresql-18-vasco_0.1.0-1PIGSTY~jammy_arm64.deb pigsty 0.1.0 54.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/v/vasco/postgresql-18-vasco_0.1.0-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 18 postgresql-18-vasco postgresql-18-vasco_0.1.0-1PIGSTY~noble_amd64.deb pigsty 0.1.0 54.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/v/vasco/postgresql-18-vasco_0.1.0-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 18 postgresql-18-vasco postgresql-18-vasco_0.1.0-1PIGSTY~noble_arm64.deb pigsty 0.1.0 53.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/v/vasco/postgresql-18-vasco_0.1.0-1PIGSTY~noble_arm64.deb
+@ el8.x86_64 17 vasco_17 vasco_17-0.1.0-1PIGSTY.el8.x86_64.rpm pigsty 0.1.0 40.6KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/vasco_17-0.1.0-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 17 vasco_17 vasco_17-0.1.0-1PIGSTY.el8.aarch64.rpm pigsty 0.1.0 39.4KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/vasco_17-0.1.0-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 17 vasco_17 vasco_17-0.1.0-1PIGSTY.el9.x86_64.rpm pigsty 0.1.0 38.1KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/vasco_17-0.1.0-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 17 vasco_17 vasco_17-0.1.0-1PIGSTY.el9.aarch64.rpm pigsty 0.1.0 37.1KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/vasco_17-0.1.0-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 17 vasco_17 vasco_17-0.1.0-1PIGSTY.el10.x86_64.rpm pigsty 0.1.0 38.3KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/vasco_17-0.1.0-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 17 vasco_17 vasco_17-0.1.0-1PIGSTY.el10.aarch64.rpm pigsty 0.1.0 37.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/vasco_17-0.1.0-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-vasco postgresql-17-vasco_0.1.0-1PIGSTY~bookworm_amd64.deb pigsty 0.1.0 53.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/v/vasco/postgresql-17-vasco_0.1.0-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 17 postgresql-17-vasco postgresql-17-vasco_0.1.0-1PIGSTY~bookworm_arm64.deb pigsty 0.1.0 52.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/v/vasco/postgresql-17-vasco_0.1.0-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 17 postgresql-17-vasco postgresql-17-vasco_0.1.0-1PIGSTY~trixie_amd64.deb pigsty 0.1.0 53.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/v/vasco/postgresql-17-vasco_0.1.0-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 17 postgresql-17-vasco postgresql-17-vasco_0.1.0-1PIGSTY~trixie_arm64.deb pigsty 0.1.0 52.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/v/vasco/postgresql-17-vasco_0.1.0-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 17 postgresql-17-vasco postgresql-17-vasco_0.1.0-1PIGSTY~jammy_amd64.deb pigsty 0.1.0 57.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/v/vasco/postgresql-17-vasco_0.1.0-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 17 postgresql-17-vasco postgresql-17-vasco_0.1.0-1PIGSTY~jammy_arm64.deb pigsty 0.1.0 56.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/v/vasco/postgresql-17-vasco_0.1.0-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 17 postgresql-17-vasco postgresql-17-vasco_0.1.0-1PIGSTY~noble_amd64.deb pigsty 0.1.0 54.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/v/vasco/postgresql-17-vasco_0.1.0-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 17 postgresql-17-vasco postgresql-17-vasco_0.1.0-1PIGSTY~noble_arm64.deb pigsty 0.1.0 53.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/v/vasco/postgresql-17-vasco_0.1.0-1PIGSTY~noble_arm64.deb
+@ el8.x86_64 16 vasco_16 vasco_16-0.1.0-1PIGSTY.el8.x86_64.rpm pigsty 0.1.0 40.6KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/vasco_16-0.1.0-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 16 vasco_16 vasco_16-0.1.0-1PIGSTY.el8.aarch64.rpm pigsty 0.1.0 39.4KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/vasco_16-0.1.0-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 16 vasco_16 vasco_16-0.1.0-1PIGSTY.el9.x86_64.rpm pigsty 0.1.0 38.1KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/vasco_16-0.1.0-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 16 vasco_16 vasco_16-0.1.0-1PIGSTY.el9.aarch64.rpm pigsty 0.1.0 37.1KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/vasco_16-0.1.0-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 16 vasco_16 vasco_16-0.1.0-1PIGSTY.el10.x86_64.rpm pigsty 0.1.0 38.3KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/vasco_16-0.1.0-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 16 vasco_16 vasco_16-0.1.0-1PIGSTY.el10.aarch64.rpm pigsty 0.1.0 37.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/vasco_16-0.1.0-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 16 postgresql-16-vasco postgresql-16-vasco_0.1.0-1PIGSTY~bookworm_amd64.deb pigsty 0.1.0 53.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/v/vasco/postgresql-16-vasco_0.1.0-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 16 postgresql-16-vasco postgresql-16-vasco_0.1.0-1PIGSTY~bookworm_arm64.deb pigsty 0.1.0 52.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/v/vasco/postgresql-16-vasco_0.1.0-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 16 postgresql-16-vasco postgresql-16-vasco_0.1.0-1PIGSTY~trixie_amd64.deb pigsty 0.1.0 53.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/v/vasco/postgresql-16-vasco_0.1.0-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 16 postgresql-16-vasco postgresql-16-vasco_0.1.0-1PIGSTY~trixie_arm64.deb pigsty 0.1.0 52.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/v/vasco/postgresql-16-vasco_0.1.0-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 16 postgresql-16-vasco postgresql-16-vasco_0.1.0-1PIGSTY~jammy_amd64.deb pigsty 0.1.0 57.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/v/vasco/postgresql-16-vasco_0.1.0-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 16 postgresql-16-vasco postgresql-16-vasco_0.1.0-1PIGSTY~jammy_arm64.deb pigsty 0.1.0 56.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/v/vasco/postgresql-16-vasco_0.1.0-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 16 postgresql-16-vasco postgresql-16-vasco_0.1.0-1PIGSTY~noble_amd64.deb pigsty 0.1.0 54.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/v/vasco/postgresql-16-vasco_0.1.0-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 16 postgresql-16-vasco postgresql-16-vasco_0.1.0-1PIGSTY~noble_arm64.deb pigsty 0.1.0 53.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/v/vasco/postgresql-16-vasco_0.1.0-1PIGSTY~noble_arm64.deb
+@ el8.x86_64 15 vasco_15 vasco_15-0.1.0-1PIGSTY.el8.x86_64.rpm pigsty 0.1.0 41.0KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/vasco_15-0.1.0-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 15 vasco_15 vasco_15-0.1.0-1PIGSTY.el8.aarch64.rpm pigsty 0.1.0 39.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/vasco_15-0.1.0-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 15 vasco_15 vasco_15-0.1.0-1PIGSTY.el9.x86_64.rpm pigsty 0.1.0 40.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/vasco_15-0.1.0-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 15 vasco_15 vasco_15-0.1.0-1PIGSTY.el9.aarch64.rpm pigsty 0.1.0 39.7KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/vasco_15-0.1.0-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 15 vasco_15 vasco_15-0.1.0-1PIGSTY.el10.x86_64.rpm pigsty 0.1.0 40.5KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/vasco_15-0.1.0-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 15 vasco_15 vasco_15-0.1.0-1PIGSTY.el10.aarch64.rpm pigsty 0.1.0 40.1KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/vasco_15-0.1.0-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 15 postgresql-15-vasco postgresql-15-vasco_0.1.0-1PIGSTY~bookworm_amd64.deb pigsty 0.1.0 54.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/v/vasco/postgresql-15-vasco_0.1.0-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 15 postgresql-15-vasco postgresql-15-vasco_0.1.0-1PIGSTY~bookworm_arm64.deb pigsty 0.1.0 53.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/v/vasco/postgresql-15-vasco_0.1.0-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 15 postgresql-15-vasco postgresql-15-vasco_0.1.0-1PIGSTY~trixie_amd64.deb pigsty 0.1.0 54.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/v/vasco/postgresql-15-vasco_0.1.0-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 15 postgresql-15-vasco postgresql-15-vasco_0.1.0-1PIGSTY~trixie_arm64.deb pigsty 0.1.0 53.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/v/vasco/postgresql-15-vasco_0.1.0-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 15 postgresql-15-vasco postgresql-15-vasco_0.1.0-1PIGSTY~jammy_amd64.deb pigsty 0.1.0 59.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/v/vasco/postgresql-15-vasco_0.1.0-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 15 postgresql-15-vasco postgresql-15-vasco_0.1.0-1PIGSTY~jammy_arm64.deb pigsty 0.1.0 58.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/v/vasco/postgresql-15-vasco_0.1.0-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 15 postgresql-15-vasco postgresql-15-vasco_0.1.0-1PIGSTY~noble_amd64.deb pigsty 0.1.0 56.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/v/vasco/postgresql-15-vasco_0.1.0-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 15 postgresql-15-vasco postgresql-15-vasco_0.1.0-1PIGSTY~noble_arm64.deb pigsty 0.1.0 55.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/v/vasco/postgresql-15-vasco_0.1.0-1PIGSTY~noble_arm64.deb
+@ el8.x86_64 14 vasco_14 vasco_14-0.1.0-1PIGSTY.el8.x86_64.rpm pigsty 0.1.0 41.0KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/vasco_14-0.1.0-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 14 vasco_14 vasco_14-0.1.0-1PIGSTY.el8.aarch64.rpm pigsty 0.1.0 39.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/vasco_14-0.1.0-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 14 vasco_14 vasco_14-0.1.0-1PIGSTY.el9.x86_64.rpm pigsty 0.1.0 40.1KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/vasco_14-0.1.0-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 14 vasco_14 vasco_14-0.1.0-1PIGSTY.el9.aarch64.rpm pigsty 0.1.0 39.7KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/vasco_14-0.1.0-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 14 vasco_14 vasco_14-0.1.0-1PIGSTY.el10.x86_64.rpm pigsty 0.1.0 40.5KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/vasco_14-0.1.0-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 14 vasco_14 vasco_14-0.1.0-1PIGSTY.el10.aarch64.rpm pigsty 0.1.0 40.1KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/vasco_14-0.1.0-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 14 postgresql-14-vasco postgresql-14-vasco_0.1.0-1PIGSTY~bookworm_amd64.deb pigsty 0.1.0 54.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/v/vasco/postgresql-14-vasco_0.1.0-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 14 postgresql-14-vasco postgresql-14-vasco_0.1.0-1PIGSTY~bookworm_arm64.deb pigsty 0.1.0 53.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/v/vasco/postgresql-14-vasco_0.1.0-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 14 postgresql-14-vasco postgresql-14-vasco_0.1.0-1PIGSTY~trixie_amd64.deb pigsty 0.1.0 54.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/v/vasco/postgresql-14-vasco_0.1.0-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 14 postgresql-14-vasco postgresql-14-vasco_0.1.0-1PIGSTY~trixie_arm64.deb pigsty 0.1.0 53.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/v/vasco/postgresql-14-vasco_0.1.0-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 14 postgresql-14-vasco postgresql-14-vasco_0.1.0-1PIGSTY~jammy_amd64.deb pigsty 0.1.0 59.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/v/vasco/postgresql-14-vasco_0.1.0-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 14 postgresql-14-vasco postgresql-14-vasco_0.1.0-1PIGSTY~jammy_arm64.deb pigsty 0.1.0 58.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/v/vasco/postgresql-14-vasco_0.1.0-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 14 postgresql-14-vasco postgresql-14-vasco_0.1.0-1PIGSTY~noble_amd64.deb pigsty 0.1.0 56.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/v/vasco/postgresql-14-vasco_0.1.0-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 14 postgresql-14-vasco postgresql-14-vasco_0.1.0-1PIGSTY~noble_arm64.deb pigsty 0.1.0 55.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/v/vasco/postgresql-14-vasco_0.1.0-1PIGSTY~noble_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建

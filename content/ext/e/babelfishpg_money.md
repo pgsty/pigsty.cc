@@ -11,7 +11,7 @@ weight: 9330
     <div class="ext-card__title">https://babelfishpg.org/</div>
     <div class="ext-card__desc">https://babelfishpg.org/</div>
   </a>
-  <a class="ext-card ext-card--source" href="babelfishpg-17.8-5.5.0.tar.gz">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/babelfishpg-17.8-5.5.0.tar.gz">
     <div class="ext-card__kicker">源码</div>
     <div class="ext-card__title">babelfishpg-17.8-5.5.0.tar.gz</div>
     <div class="ext-card__desc">babelfishpg-17.8-5.5.0.tar.gz</div>

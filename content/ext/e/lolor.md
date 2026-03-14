@@ -11,7 +11,7 @@ weight: 9570
     <div class="ext-card__title">pgEdge/lolor</div>
     <div class="ext-card__desc">https://github.com/pgEdge/lolor</div>
   </a>
-  <a class="ext-card ext-card--source" href="lolor-1.2.2.tar.gz">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/lolor-1.2.2.tar.gz">
     <div class="ext-card__kicker">源码</div>
     <div class="ext-card__title">lolor-1.2.2.tar.gz</div>
     <div class="ext-card__desc">lolor-1.2.2.tar.gz</div>
@@ -67,20 +67,20 @@ weight: 9570
 | u22.aarch64 | MISS PIGSTY - 0 | FORK PIGSTY 1.2.2 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
 | u24.x86_64 | MISS PIGSTY - 0 | FORK PIGSTY 1.2.2 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
 | u24.aarch64 | MISS PIGSTY - 0 | FORK PIGSTY 1.2.2 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-@ el8.x86_64 17 lolor_17 lolor_17-1.2.2-1PIGSTY.el8.x86_64.rpm pigsty 1.2.2 29.4KiB https://repo.pigsty.io/yum/pgsql/el8.x86_64/lolor_17-1.2.2-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 17 lolor_17 lolor_17-1.2.2-1PIGSTY.el8.aarch64.rpm pigsty 1.2.2 28.5KiB https://repo.pigsty.io/yum/pgsql/el8.aarch64/lolor_17-1.2.2-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 17 lolor_17 lolor_17-1.2.2-1PIGSTY.el9.x86_64.rpm pigsty 1.2.2 28.6KiB https://repo.pigsty.io/yum/pgsql/el9.x86_64/lolor_17-1.2.2-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 17 lolor_17 lolor_17-1.2.2-1PIGSTY.el9.aarch64.rpm pigsty 1.2.2 27.8KiB https://repo.pigsty.io/yum/pgsql/el9.aarch64/lolor_17-1.2.2-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 17 lolor_17 lolor_17-1.2.2-1PIGSTY.el10.x86_64.rpm pigsty 1.2.2 28.8KiB https://repo.pigsty.io/yum/pgsql/el10.x86_64/lolor_17-1.2.2-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 17 lolor_17 lolor_17-1.2.2-1PIGSTY.el10.aarch64.rpm pigsty 1.2.2 28.0KiB https://repo.pigsty.io/yum/pgsql/el10.aarch64/lolor_17-1.2.2-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 17 pgedge-17-lolor pgedge-17-lolor_1.2.2-1PIGSTY~bookworm_amd64.deb pigsty 1.2.2 16.6KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/l/lolor/pgedge-17-lolor_1.2.2-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 17 pgedge-17-lolor pgedge-17-lolor_1.2.2-1PIGSTY~bookworm_arm64.deb pigsty 1.2.2 15.9KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/l/lolor/pgedge-17-lolor_1.2.2-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 17 pgedge-17-lolor pgedge-17-lolor_1.2.2-1PIGSTY~trixie_amd64.deb pigsty 1.2.2 16.7KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/l/lolor/pgedge-17-lolor_1.2.2-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 17 pgedge-17-lolor pgedge-17-lolor_1.2.2-1PIGSTY~trixie_arm64.deb pigsty 1.2.2 15.9KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/l/lolor/pgedge-17-lolor_1.2.2-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 17 pgedge-17-lolor pgedge-17-lolor_1.2.2-1PIGSTY~jammy_amd64.deb pigsty 1.2.2 18.1KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/l/lolor/pgedge-17-lolor_1.2.2-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 17 pgedge-17-lolor pgedge-17-lolor_1.2.2-1PIGSTY~jammy_arm64.deb pigsty 1.2.2 17.3KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/l/lolor/pgedge-17-lolor_1.2.2-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 17 pgedge-17-lolor pgedge-17-lolor_1.2.2-1PIGSTY~noble_amd64.deb pigsty 1.2.2 17.8KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/l/lolor/pgedge-17-lolor_1.2.2-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 17 pgedge-17-lolor pgedge-17-lolor_1.2.2-1PIGSTY~noble_arm64.deb pigsty 1.2.2 17.0KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/l/lolor/pgedge-17-lolor_1.2.2-1PIGSTY~noble_arm64.deb
+@ el8.x86_64 17 lolor_17 lolor_17-1.2.2-1PIGSTY.el8.x86_64.rpm pigsty 1.2.2 29.4KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/lolor_17-1.2.2-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 17 lolor_17 lolor_17-1.2.2-1PIGSTY.el8.aarch64.rpm pigsty 1.2.2 28.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/lolor_17-1.2.2-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 17 lolor_17 lolor_17-1.2.2-1PIGSTY.el9.x86_64.rpm pigsty 1.2.2 28.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/lolor_17-1.2.2-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 17 lolor_17 lolor_17-1.2.2-1PIGSTY.el9.aarch64.rpm pigsty 1.2.2 27.8KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/lolor_17-1.2.2-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 17 lolor_17 lolor_17-1.2.2-1PIGSTY.el10.x86_64.rpm pigsty 1.2.2 28.8KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/lolor_17-1.2.2-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 17 lolor_17 lolor_17-1.2.2-1PIGSTY.el10.aarch64.rpm pigsty 1.2.2 28.0KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/lolor_17-1.2.2-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 17 pgedge-17-lolor pgedge-17-lolor_1.2.2-1PIGSTY~bookworm_amd64.deb pigsty 1.2.2 16.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/l/lolor/pgedge-17-lolor_1.2.2-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 17 pgedge-17-lolor pgedge-17-lolor_1.2.2-1PIGSTY~bookworm_arm64.deb pigsty 1.2.2 15.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/l/lolor/pgedge-17-lolor_1.2.2-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 17 pgedge-17-lolor pgedge-17-lolor_1.2.2-1PIGSTY~trixie_amd64.deb pigsty 1.2.2 16.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/l/lolor/pgedge-17-lolor_1.2.2-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 17 pgedge-17-lolor pgedge-17-lolor_1.2.2-1PIGSTY~trixie_arm64.deb pigsty 1.2.2 15.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/l/lolor/pgedge-17-lolor_1.2.2-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 17 pgedge-17-lolor pgedge-17-lolor_1.2.2-1PIGSTY~jammy_amd64.deb pigsty 1.2.2 18.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/l/lolor/pgedge-17-lolor_1.2.2-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 17 pgedge-17-lolor pgedge-17-lolor_1.2.2-1PIGSTY~jammy_arm64.deb pigsty 1.2.2 17.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/l/lolor/pgedge-17-lolor_1.2.2-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 17 pgedge-17-lolor pgedge-17-lolor_1.2.2-1PIGSTY~noble_amd64.deb pigsty 1.2.2 17.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/l/lolor/pgedge-17-lolor_1.2.2-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 17 pgedge-17-lolor pgedge-17-lolor_1.2.2-1PIGSTY~noble_arm64.deb pigsty 1.2.2 17.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/l/lolor/pgedge-17-lolor_1.2.2-1PIGSTY~noble_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建

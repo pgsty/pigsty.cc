@@ -11,7 +11,7 @@ weight: 3880
     <div class="ext-card__title">petropavel13/pg_rrule</div>
     <div class="ext-card__desc">https://github.com/petropavel13/pg_rrule</div>
   </a>
-  <a class="ext-card ext-card--source" href="pg_rrule-0.3.0.tar.gz">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pg_rrule-0.3.0.tar.gz">
     <div class="ext-card__kicker">源码</div>
     <div class="ext-card__title">pg_rrule-0.3.0.tar.gz</div>
     <div class="ext-card__desc">pg_rrule-0.3.0.tar.gz</div>
@@ -67,76 +67,76 @@ weight: 3880
 | u22.aarch64 | AVAIL PGDG 0.3.0 1 | AVAIL PGDG 0.3.0 1 | AVAIL PGDG 0.3.0 1 | AVAIL PGDG 0.3.0 1 | AVAIL PGDG 0.3.0 1 |
 | u24.x86_64 | AVAIL PGDG 0.3.0 1 | AVAIL PGDG 0.3.0 1 | AVAIL PGDG 0.3.0 1 | AVAIL PGDG 0.3.0 1 | AVAIL PGDG 0.3.0 1 |
 | u24.aarch64 | AVAIL PGDG 0.3.0 1 | AVAIL PGDG 0.3.0 1 | AVAIL PGDG 0.3.0 1 | AVAIL PGDG 0.3.0 1 | AVAIL PGDG 0.3.0 1 |
-@ el8.x86_64 18 pg_rrule_18 pg_rrule_18-0.3.0-1PIGSTY.el8.x86_64.rpm pigsty 0.3.0 19.0KiB https://repo.pigsty.io/yum/pgsql/el8.x86_64/pg_rrule_18-0.3.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 18 pg_rrule_18 pg_rrule_18-0.3.0-1PIGSTY.el8.aarch64.rpm pigsty 0.3.0 18.9KiB https://repo.pigsty.io/yum/pgsql/el8.aarch64/pg_rrule_18-0.3.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 18 pg_rrule_18 pg_rrule_18-0.3.0-1PIGSTY.el9.x86_64.rpm pigsty 0.3.0 18.6KiB https://repo.pigsty.io/yum/pgsql/el9.x86_64/pg_rrule_18-0.3.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 18 pg_rrule_18 pg_rrule_18-0.3.0-1PIGSTY.el9.aarch64.rpm pigsty 0.3.0 18.1KiB https://repo.pigsty.io/yum/pgsql/el9.aarch64/pg_rrule_18-0.3.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 18 pg_rrule_18 pg_rrule_18-0.3.0-1PIGSTY.el10.x86_64.rpm pigsty 0.3.0 18.6KiB https://repo.pigsty.io/yum/pgsql/el10.x86_64/pg_rrule_18-0.3.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 18 pg_rrule_18 pg_rrule_18-0.3.0-1PIGSTY.el10.aarch64.rpm pigsty 0.3.0 18.5KiB https://repo.pigsty.io/yum/pgsql/el10.aarch64/pg_rrule_18-0.3.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 18 postgresql-18-pg-rrule postgresql-18-pg-rrule_0.3.0-1.pgdg12+1_amd64.deb pgdg 0.3.0 24.4KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pg-rrule/postgresql-18-pg-rrule_0.3.0-1.pgdg12+1_amd64.deb
-@ d12.aarch64 18 postgresql-18-pg-rrule postgresql-18-pg-rrule_0.3.0-1.pgdg12+1_arm64.deb pgdg 0.3.0 24.2KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pg-rrule/postgresql-18-pg-rrule_0.3.0-1.pgdg12+1_arm64.deb
-@ d13.x86_64 18 postgresql-18-pg-rrule postgresql-18-pg-rrule_0.3.0-1.pgdg13+1_amd64.deb pgdg 0.3.0 24.3KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pg-rrule/postgresql-18-pg-rrule_0.3.0-1.pgdg13+1_amd64.deb
-@ d13.aarch64 18 postgresql-18-pg-rrule postgresql-18-pg-rrule_0.3.0-1.pgdg13+1_arm64.deb pgdg 0.3.0 24.3KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pg-rrule/postgresql-18-pg-rrule_0.3.0-1.pgdg13+1_arm64.deb
-@ u22.x86_64 18 postgresql-18-pg-rrule postgresql-18-pg-rrule_0.3.0-1.pgdg22.04+1_amd64.deb pgdg 0.3.0 24.2KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pg-rrule/postgresql-18-pg-rrule_0.3.0-1.pgdg22.04+1_amd64.deb
-@ u22.aarch64 18 postgresql-18-pg-rrule postgresql-18-pg-rrule_0.3.0-1.pgdg22.04+1_arm64.deb pgdg 0.3.0 23.5KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pg-rrule/postgresql-18-pg-rrule_0.3.0-1.pgdg22.04+1_arm64.deb
-@ u24.x86_64 18 postgresql-18-pg-rrule postgresql-18-pg-rrule_0.3.0-1.pgdg24.04+1_amd64.deb pgdg 0.3.0 24.4KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pg-rrule/postgresql-18-pg-rrule_0.3.0-1.pgdg24.04+1_amd64.deb
-@ u24.aarch64 18 postgresql-18-pg-rrule postgresql-18-pg-rrule_0.3.0-1.pgdg24.04+1_arm64.deb pgdg 0.3.0 24.1KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pg-rrule/postgresql-18-pg-rrule_0.3.0-1.pgdg24.04+1_arm64.deb
-@ el8.x86_64 17 pg_rrule_17 pg_rrule_17-0.3.0-1PIGSTY.el8.x86_64.rpm pigsty 0.3.0 19.0KiB https://repo.pigsty.io/yum/pgsql/el8.x86_64/pg_rrule_17-0.3.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 17 pg_rrule_17 pg_rrule_17-0.3.0-1PIGSTY.el8.aarch64.rpm pigsty 0.3.0 18.9KiB https://repo.pigsty.io/yum/pgsql/el8.aarch64/pg_rrule_17-0.3.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 17 pg_rrule_17 pg_rrule_17-0.3.0-1PIGSTY.el9.x86_64.rpm pigsty 0.3.0 18.6KiB https://repo.pigsty.io/yum/pgsql/el9.x86_64/pg_rrule_17-0.3.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 17 pg_rrule_17 pg_rrule_17-0.3.0-1PIGSTY.el9.aarch64.rpm pigsty 0.3.0 18.1KiB https://repo.pigsty.io/yum/pgsql/el9.aarch64/pg_rrule_17-0.3.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 17 pg_rrule_17 pg_rrule_17-0.3.0-1PIGSTY.el10.x86_64.rpm pigsty 0.3.0 18.6KiB https://repo.pigsty.io/yum/pgsql/el10.x86_64/pg_rrule_17-0.3.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 17 pg_rrule_17 pg_rrule_17-0.3.0-1PIGSTY.el10.aarch64.rpm pigsty 0.3.0 18.5KiB https://repo.pigsty.io/yum/pgsql/el10.aarch64/pg_rrule_17-0.3.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 17 postgresql-17-pg-rrule postgresql-17-pg-rrule_0.3.0-1.pgdg12+1_amd64.deb pgdg 0.3.0 24.5KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pg-rrule/postgresql-17-pg-rrule_0.3.0-1.pgdg12+1_amd64.deb
-@ d12.aarch64 17 postgresql-17-pg-rrule postgresql-17-pg-rrule_0.3.0-1.pgdg12+1_arm64.deb pgdg 0.3.0 24.2KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pg-rrule/postgresql-17-pg-rrule_0.3.0-1.pgdg12+1_arm64.deb
-@ d13.x86_64 17 postgresql-17-pg-rrule postgresql-17-pg-rrule_0.3.0-1.pgdg13+1_amd64.deb pgdg 0.3.0 24.4KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pg-rrule/postgresql-17-pg-rrule_0.3.0-1.pgdg13+1_amd64.deb
-@ d13.aarch64 17 postgresql-17-pg-rrule postgresql-17-pg-rrule_0.3.0-1.pgdg13+1_arm64.deb pgdg 0.3.0 24.3KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pg-rrule/postgresql-17-pg-rrule_0.3.0-1.pgdg13+1_arm64.deb
-@ u22.x86_64 17 postgresql-17-pg-rrule postgresql-17-pg-rrule_0.3.0-1.pgdg22.04+1_amd64.deb pgdg 0.3.0 25.0KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pg-rrule/postgresql-17-pg-rrule_0.3.0-1.pgdg22.04+1_amd64.deb
-@ u22.aarch64 17 postgresql-17-pg-rrule postgresql-17-pg-rrule_0.3.0-1.pgdg22.04+1_arm64.deb pgdg 0.3.0 25.1KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pg-rrule/postgresql-17-pg-rrule_0.3.0-1.pgdg22.04+1_arm64.deb
-@ u24.x86_64 17 postgresql-17-pg-rrule postgresql-17-pg-rrule_0.3.0-1.pgdg24.04+1_amd64.deb pgdg 0.3.0 24.4KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pg-rrule/postgresql-17-pg-rrule_0.3.0-1.pgdg24.04+1_amd64.deb
-@ u24.aarch64 17 postgresql-17-pg-rrule postgresql-17-pg-rrule_0.3.0-1.pgdg24.04+1_arm64.deb pgdg 0.3.0 24.1KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pg-rrule/postgresql-17-pg-rrule_0.3.0-1.pgdg24.04+1_arm64.deb
-@ el8.x86_64 16 pg_rrule_16 pg_rrule_16-0.3.0-1PIGSTY.el8.x86_64.rpm pigsty 0.3.0 19.0KiB https://repo.pigsty.io/yum/pgsql/el8.x86_64/pg_rrule_16-0.3.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 16 pg_rrule_16 pg_rrule_16-0.3.0-1PIGSTY.el8.aarch64.rpm pigsty 0.3.0 18.9KiB https://repo.pigsty.io/yum/pgsql/el8.aarch64/pg_rrule_16-0.3.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 16 pg_rrule_16 pg_rrule_16-0.3.0-1PIGSTY.el9.x86_64.rpm pigsty 0.3.0 18.6KiB https://repo.pigsty.io/yum/pgsql/el9.x86_64/pg_rrule_16-0.3.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 16 pg_rrule_16 pg_rrule_16-0.3.0-1PIGSTY.el9.aarch64.rpm pigsty 0.3.0 18.1KiB https://repo.pigsty.io/yum/pgsql/el9.aarch64/pg_rrule_16-0.3.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 16 pg_rrule_16 pg_rrule_16-0.3.0-1PIGSTY.el10.x86_64.rpm pigsty 0.3.0 18.6KiB https://repo.pigsty.io/yum/pgsql/el10.x86_64/pg_rrule_16-0.3.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 16 pg_rrule_16 pg_rrule_16-0.3.0-1PIGSTY.el10.aarch64.rpm pigsty 0.3.0 18.5KiB https://repo.pigsty.io/yum/pgsql/el10.aarch64/pg_rrule_16-0.3.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 16 postgresql-16-pg-rrule postgresql-16-pg-rrule_0.3.0-1.pgdg12+1_amd64.deb pgdg 0.3.0 24.4KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pg-rrule/postgresql-16-pg-rrule_0.3.0-1.pgdg12+1_amd64.deb
-@ d12.aarch64 16 postgresql-16-pg-rrule postgresql-16-pg-rrule_0.3.0-1.pgdg12+1_arm64.deb pgdg 0.3.0 24.2KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pg-rrule/postgresql-16-pg-rrule_0.3.0-1.pgdg12+1_arm64.deb
-@ d13.x86_64 16 postgresql-16-pg-rrule postgresql-16-pg-rrule_0.3.0-1.pgdg13+1_amd64.deb pgdg 0.3.0 24.4KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pg-rrule/postgresql-16-pg-rrule_0.3.0-1.pgdg13+1_amd64.deb
-@ d13.aarch64 16 postgresql-16-pg-rrule postgresql-16-pg-rrule_0.3.0-1.pgdg13+1_arm64.deb pgdg 0.3.0 24.3KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pg-rrule/postgresql-16-pg-rrule_0.3.0-1.pgdg13+1_arm64.deb
-@ u22.x86_64 16 postgresql-16-pg-rrule postgresql-16-pg-rrule_0.3.0-1.pgdg22.04+1_amd64.deb pgdg 0.3.0 25.0KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pg-rrule/postgresql-16-pg-rrule_0.3.0-1.pgdg22.04+1_amd64.deb
-@ u22.aarch64 16 postgresql-16-pg-rrule postgresql-16-pg-rrule_0.3.0-1.pgdg22.04+1_arm64.deb pgdg 0.3.0 25.1KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pg-rrule/postgresql-16-pg-rrule_0.3.0-1.pgdg22.04+1_arm64.deb
-@ u24.x86_64 16 postgresql-16-pg-rrule postgresql-16-pg-rrule_0.3.0-1.pgdg24.04+1_amd64.deb pgdg 0.3.0 24.4KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pg-rrule/postgresql-16-pg-rrule_0.3.0-1.pgdg24.04+1_amd64.deb
-@ u24.aarch64 16 postgresql-16-pg-rrule postgresql-16-pg-rrule_0.3.0-1.pgdg24.04+1_arm64.deb pgdg 0.3.0 24.1KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pg-rrule/postgresql-16-pg-rrule_0.3.0-1.pgdg24.04+1_arm64.deb
-@ el8.x86_64 15 pg_rrule_15 pg_rrule_15-0.3.0-1PIGSTY.el8.x86_64.rpm pigsty 0.3.0 19.1KiB https://repo.pigsty.io/yum/pgsql/el8.x86_64/pg_rrule_15-0.3.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 15 pg_rrule_15 pg_rrule_15-0.3.0-1PIGSTY.el8.aarch64.rpm pigsty 0.3.0 19.0KiB https://repo.pigsty.io/yum/pgsql/el8.aarch64/pg_rrule_15-0.3.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 15 pg_rrule_15 pg_rrule_15-0.3.0-1PIGSTY.el9.x86_64.rpm pigsty 0.3.0 18.9KiB https://repo.pigsty.io/yum/pgsql/el9.x86_64/pg_rrule_15-0.3.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 15 pg_rrule_15 pg_rrule_15-0.3.0-1PIGSTY.el9.aarch64.rpm pigsty 0.3.0 18.3KiB https://repo.pigsty.io/yum/pgsql/el9.aarch64/pg_rrule_15-0.3.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 15 pg_rrule_15 pg_rrule_15-0.3.0-1PIGSTY.el10.x86_64.rpm pigsty 0.3.0 18.8KiB https://repo.pigsty.io/yum/pgsql/el10.x86_64/pg_rrule_15-0.3.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 15 pg_rrule_15 pg_rrule_15-0.3.0-1PIGSTY.el10.aarch64.rpm pigsty 0.3.0 18.7KiB https://repo.pigsty.io/yum/pgsql/el10.aarch64/pg_rrule_15-0.3.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 15 postgresql-15-pg-rrule postgresql-15-pg-rrule_0.3.0-1.pgdg12+1_amd64.deb pgdg 0.3.0 24.4KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pg-rrule/postgresql-15-pg-rrule_0.3.0-1.pgdg12+1_amd64.deb
-@ d12.aarch64 15 postgresql-15-pg-rrule postgresql-15-pg-rrule_0.3.0-1.pgdg12+1_arm64.deb pgdg 0.3.0 24.2KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pg-rrule/postgresql-15-pg-rrule_0.3.0-1.pgdg12+1_arm64.deb
-@ d13.x86_64 15 postgresql-15-pg-rrule postgresql-15-pg-rrule_0.3.0-1.pgdg13+1_amd64.deb pgdg 0.3.0 24.3KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pg-rrule/postgresql-15-pg-rrule_0.3.0-1.pgdg13+1_amd64.deb
-@ d13.aarch64 15 postgresql-15-pg-rrule postgresql-15-pg-rrule_0.3.0-1.pgdg13+1_arm64.deb pgdg 0.3.0 24.3KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pg-rrule/postgresql-15-pg-rrule_0.3.0-1.pgdg13+1_arm64.deb
-@ u22.x86_64 15 postgresql-15-pg-rrule postgresql-15-pg-rrule_0.3.0-1.pgdg22.04+1_amd64.deb pgdg 0.3.0 25.1KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pg-rrule/postgresql-15-pg-rrule_0.3.0-1.pgdg22.04+1_amd64.deb
-@ u22.aarch64 15 postgresql-15-pg-rrule postgresql-15-pg-rrule_0.3.0-1.pgdg22.04+1_arm64.deb pgdg 0.3.0 24.6KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pg-rrule/postgresql-15-pg-rrule_0.3.0-1.pgdg22.04+1_arm64.deb
-@ u24.x86_64 15 postgresql-15-pg-rrule postgresql-15-pg-rrule_0.3.0-1.pgdg24.04+1_amd64.deb pgdg 0.3.0 24.5KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pg-rrule/postgresql-15-pg-rrule_0.3.0-1.pgdg24.04+1_amd64.deb
-@ u24.aarch64 15 postgresql-15-pg-rrule postgresql-15-pg-rrule_0.3.0-1.pgdg24.04+1_arm64.deb pgdg 0.3.0 24.3KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pg-rrule/postgresql-15-pg-rrule_0.3.0-1.pgdg24.04+1_arm64.deb
-@ el8.x86_64 14 pg_rrule_14 pg_rrule_14-0.3.0-1PIGSTY.el8.x86_64.rpm pigsty 0.3.0 19.1KiB https://repo.pigsty.io/yum/pgsql/el8.x86_64/pg_rrule_14-0.3.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 14 pg_rrule_14 pg_rrule_14-0.3.0-1PIGSTY.el8.aarch64.rpm pigsty 0.3.0 19.0KiB https://repo.pigsty.io/yum/pgsql/el8.aarch64/pg_rrule_14-0.3.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 14 pg_rrule_14 pg_rrule_14-0.3.0-1PIGSTY.el9.x86_64.rpm pigsty 0.3.0 18.9KiB https://repo.pigsty.io/yum/pgsql/el9.x86_64/pg_rrule_14-0.3.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 14 pg_rrule_14 pg_rrule_14-0.3.0-1PIGSTY.el9.aarch64.rpm pigsty 0.3.0 18.3KiB https://repo.pigsty.io/yum/pgsql/el9.aarch64/pg_rrule_14-0.3.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 14 pg_rrule_14 pg_rrule_14-0.3.0-1PIGSTY.el10.x86_64.rpm pigsty 0.3.0 18.8KiB https://repo.pigsty.io/yum/pgsql/el10.x86_64/pg_rrule_14-0.3.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 14 pg_rrule_14 pg_rrule_14-0.3.0-1PIGSTY.el10.aarch64.rpm pigsty 0.3.0 18.7KiB https://repo.pigsty.io/yum/pgsql/el10.aarch64/pg_rrule_14-0.3.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 14 postgresql-14-pg-rrule postgresql-14-pg-rrule_0.3.0-1.pgdg12+1_amd64.deb pgdg 0.3.0 24.4KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pg-rrule/postgresql-14-pg-rrule_0.3.0-1.pgdg12+1_amd64.deb
-@ d12.aarch64 14 postgresql-14-pg-rrule postgresql-14-pg-rrule_0.3.0-1.pgdg12+1_arm64.deb pgdg 0.3.0 24.1KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pg-rrule/postgresql-14-pg-rrule_0.3.0-1.pgdg12+1_arm64.deb
-@ d13.x86_64 14 postgresql-14-pg-rrule postgresql-14-pg-rrule_0.3.0-1.pgdg13+1_amd64.deb pgdg 0.3.0 24.4KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pg-rrule/postgresql-14-pg-rrule_0.3.0-1.pgdg13+1_amd64.deb
-@ d13.aarch64 14 postgresql-14-pg-rrule postgresql-14-pg-rrule_0.3.0-1.pgdg13+1_arm64.deb pgdg 0.3.0 24.2KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pg-rrule/postgresql-14-pg-rrule_0.3.0-1.pgdg13+1_arm64.deb
-@ u22.x86_64 14 postgresql-14-pg-rrule postgresql-14-pg-rrule_0.3.0-1.pgdg22.04+1_amd64.deb pgdg 0.3.0 25.1KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pg-rrule/postgresql-14-pg-rrule_0.3.0-1.pgdg22.04+1_amd64.deb
-@ u22.aarch64 14 postgresql-14-pg-rrule postgresql-14-pg-rrule_0.3.0-1.pgdg22.04+1_arm64.deb pgdg 0.3.0 24.6KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pg-rrule/postgresql-14-pg-rrule_0.3.0-1.pgdg22.04+1_arm64.deb
-@ u24.x86_64 14 postgresql-14-pg-rrule postgresql-14-pg-rrule_0.3.0-1.pgdg24.04+1_amd64.deb pgdg 0.3.0 24.5KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pg-rrule/postgresql-14-pg-rrule_0.3.0-1.pgdg24.04+1_amd64.deb
-@ u24.aarch64 14 postgresql-14-pg-rrule postgresql-14-pg-rrule_0.3.0-1.pgdg24.04+1_arm64.deb pgdg 0.3.0 24.2KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pg-rrule/postgresql-14-pg-rrule_0.3.0-1.pgdg24.04+1_arm64.deb
+@ el8.x86_64 18 pg_rrule_18 pg_rrule_18-0.3.0-1PIGSTY.el8.x86_64.rpm pigsty 0.3.0 19.0KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_rrule_18-0.3.0-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 18 pg_rrule_18 pg_rrule_18-0.3.0-1PIGSTY.el8.aarch64.rpm pigsty 0.3.0 18.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_rrule_18-0.3.0-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 18 pg_rrule_18 pg_rrule_18-0.3.0-1PIGSTY.el9.x86_64.rpm pigsty 0.3.0 18.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_rrule_18-0.3.0-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 18 pg_rrule_18 pg_rrule_18-0.3.0-1PIGSTY.el9.aarch64.rpm pigsty 0.3.0 18.1KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_rrule_18-0.3.0-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 18 pg_rrule_18 pg_rrule_18-0.3.0-1PIGSTY.el10.x86_64.rpm pigsty 0.3.0 18.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_rrule_18-0.3.0-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 18 pg_rrule_18 pg_rrule_18-0.3.0-1PIGSTY.el10.aarch64.rpm pigsty 0.3.0 18.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_rrule_18-0.3.0-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-pg-rrule postgresql-18-pg-rrule_0.3.0-1.pgdg12+1_amd64.deb pgdg 0.3.0 24.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rrule/postgresql-18-pg-rrule_0.3.0-1.pgdg12+1_amd64.deb
+@ d12.aarch64 18 postgresql-18-pg-rrule postgresql-18-pg-rrule_0.3.0-1.pgdg12+1_arm64.deb pgdg 0.3.0 24.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rrule/postgresql-18-pg-rrule_0.3.0-1.pgdg12+1_arm64.deb
+@ d13.x86_64 18 postgresql-18-pg-rrule postgresql-18-pg-rrule_0.3.0-1.pgdg13+1_amd64.deb pgdg 0.3.0 24.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rrule/postgresql-18-pg-rrule_0.3.0-1.pgdg13+1_amd64.deb
+@ d13.aarch64 18 postgresql-18-pg-rrule postgresql-18-pg-rrule_0.3.0-1.pgdg13+1_arm64.deb pgdg 0.3.0 24.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rrule/postgresql-18-pg-rrule_0.3.0-1.pgdg13+1_arm64.deb
+@ u22.x86_64 18 postgresql-18-pg-rrule postgresql-18-pg-rrule_0.3.0-1.pgdg22.04+1_amd64.deb pgdg 0.3.0 24.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rrule/postgresql-18-pg-rrule_0.3.0-1.pgdg22.04+1_amd64.deb
+@ u22.aarch64 18 postgresql-18-pg-rrule postgresql-18-pg-rrule_0.3.0-1.pgdg22.04+1_arm64.deb pgdg 0.3.0 23.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rrule/postgresql-18-pg-rrule_0.3.0-1.pgdg22.04+1_arm64.deb
+@ u24.x86_64 18 postgresql-18-pg-rrule postgresql-18-pg-rrule_0.3.0-1.pgdg24.04+1_amd64.deb pgdg 0.3.0 24.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rrule/postgresql-18-pg-rrule_0.3.0-1.pgdg24.04+1_amd64.deb
+@ u24.aarch64 18 postgresql-18-pg-rrule postgresql-18-pg-rrule_0.3.0-1.pgdg24.04+1_arm64.deb pgdg 0.3.0 24.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rrule/postgresql-18-pg-rrule_0.3.0-1.pgdg24.04+1_arm64.deb
+@ el8.x86_64 17 pg_rrule_17 pg_rrule_17-0.3.0-1PIGSTY.el8.x86_64.rpm pigsty 0.3.0 19.0KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_rrule_17-0.3.0-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 17 pg_rrule_17 pg_rrule_17-0.3.0-1PIGSTY.el8.aarch64.rpm pigsty 0.3.0 18.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_rrule_17-0.3.0-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 17 pg_rrule_17 pg_rrule_17-0.3.0-1PIGSTY.el9.x86_64.rpm pigsty 0.3.0 18.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_rrule_17-0.3.0-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 17 pg_rrule_17 pg_rrule_17-0.3.0-1PIGSTY.el9.aarch64.rpm pigsty 0.3.0 18.1KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_rrule_17-0.3.0-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 17 pg_rrule_17 pg_rrule_17-0.3.0-1PIGSTY.el10.x86_64.rpm pigsty 0.3.0 18.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_rrule_17-0.3.0-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 17 pg_rrule_17 pg_rrule_17-0.3.0-1PIGSTY.el10.aarch64.rpm pigsty 0.3.0 18.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_rrule_17-0.3.0-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-pg-rrule postgresql-17-pg-rrule_0.3.0-1.pgdg12+1_amd64.deb pgdg 0.3.0 24.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rrule/postgresql-17-pg-rrule_0.3.0-1.pgdg12+1_amd64.deb
+@ d12.aarch64 17 postgresql-17-pg-rrule postgresql-17-pg-rrule_0.3.0-1.pgdg12+1_arm64.deb pgdg 0.3.0 24.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rrule/postgresql-17-pg-rrule_0.3.0-1.pgdg12+1_arm64.deb
+@ d13.x86_64 17 postgresql-17-pg-rrule postgresql-17-pg-rrule_0.3.0-1.pgdg13+1_amd64.deb pgdg 0.3.0 24.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rrule/postgresql-17-pg-rrule_0.3.0-1.pgdg13+1_amd64.deb
+@ d13.aarch64 17 postgresql-17-pg-rrule postgresql-17-pg-rrule_0.3.0-1.pgdg13+1_arm64.deb pgdg 0.3.0 24.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rrule/postgresql-17-pg-rrule_0.3.0-1.pgdg13+1_arm64.deb
+@ u22.x86_64 17 postgresql-17-pg-rrule postgresql-17-pg-rrule_0.3.0-1.pgdg22.04+1_amd64.deb pgdg 0.3.0 25.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rrule/postgresql-17-pg-rrule_0.3.0-1.pgdg22.04+1_amd64.deb
+@ u22.aarch64 17 postgresql-17-pg-rrule postgresql-17-pg-rrule_0.3.0-1.pgdg22.04+1_arm64.deb pgdg 0.3.0 25.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rrule/postgresql-17-pg-rrule_0.3.0-1.pgdg22.04+1_arm64.deb
+@ u24.x86_64 17 postgresql-17-pg-rrule postgresql-17-pg-rrule_0.3.0-1.pgdg24.04+1_amd64.deb pgdg 0.3.0 24.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rrule/postgresql-17-pg-rrule_0.3.0-1.pgdg24.04+1_amd64.deb
+@ u24.aarch64 17 postgresql-17-pg-rrule postgresql-17-pg-rrule_0.3.0-1.pgdg24.04+1_arm64.deb pgdg 0.3.0 24.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rrule/postgresql-17-pg-rrule_0.3.0-1.pgdg24.04+1_arm64.deb
+@ el8.x86_64 16 pg_rrule_16 pg_rrule_16-0.3.0-1PIGSTY.el8.x86_64.rpm pigsty 0.3.0 19.0KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_rrule_16-0.3.0-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 16 pg_rrule_16 pg_rrule_16-0.3.0-1PIGSTY.el8.aarch64.rpm pigsty 0.3.0 18.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_rrule_16-0.3.0-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 16 pg_rrule_16 pg_rrule_16-0.3.0-1PIGSTY.el9.x86_64.rpm pigsty 0.3.0 18.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_rrule_16-0.3.0-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 16 pg_rrule_16 pg_rrule_16-0.3.0-1PIGSTY.el9.aarch64.rpm pigsty 0.3.0 18.1KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_rrule_16-0.3.0-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 16 pg_rrule_16 pg_rrule_16-0.3.0-1PIGSTY.el10.x86_64.rpm pigsty 0.3.0 18.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_rrule_16-0.3.0-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 16 pg_rrule_16 pg_rrule_16-0.3.0-1PIGSTY.el10.aarch64.rpm pigsty 0.3.0 18.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_rrule_16-0.3.0-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 16 postgresql-16-pg-rrule postgresql-16-pg-rrule_0.3.0-1.pgdg12+1_amd64.deb pgdg 0.3.0 24.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rrule/postgresql-16-pg-rrule_0.3.0-1.pgdg12+1_amd64.deb
+@ d12.aarch64 16 postgresql-16-pg-rrule postgresql-16-pg-rrule_0.3.0-1.pgdg12+1_arm64.deb pgdg 0.3.0 24.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rrule/postgresql-16-pg-rrule_0.3.0-1.pgdg12+1_arm64.deb
+@ d13.x86_64 16 postgresql-16-pg-rrule postgresql-16-pg-rrule_0.3.0-1.pgdg13+1_amd64.deb pgdg 0.3.0 24.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rrule/postgresql-16-pg-rrule_0.3.0-1.pgdg13+1_amd64.deb
+@ d13.aarch64 16 postgresql-16-pg-rrule postgresql-16-pg-rrule_0.3.0-1.pgdg13+1_arm64.deb pgdg 0.3.0 24.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rrule/postgresql-16-pg-rrule_0.3.0-1.pgdg13+1_arm64.deb
+@ u22.x86_64 16 postgresql-16-pg-rrule postgresql-16-pg-rrule_0.3.0-1.pgdg22.04+1_amd64.deb pgdg 0.3.0 25.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rrule/postgresql-16-pg-rrule_0.3.0-1.pgdg22.04+1_amd64.deb
+@ u22.aarch64 16 postgresql-16-pg-rrule postgresql-16-pg-rrule_0.3.0-1.pgdg22.04+1_arm64.deb pgdg 0.3.0 25.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rrule/postgresql-16-pg-rrule_0.3.0-1.pgdg22.04+1_arm64.deb
+@ u24.x86_64 16 postgresql-16-pg-rrule postgresql-16-pg-rrule_0.3.0-1.pgdg24.04+1_amd64.deb pgdg 0.3.0 24.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rrule/postgresql-16-pg-rrule_0.3.0-1.pgdg24.04+1_amd64.deb
+@ u24.aarch64 16 postgresql-16-pg-rrule postgresql-16-pg-rrule_0.3.0-1.pgdg24.04+1_arm64.deb pgdg 0.3.0 24.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rrule/postgresql-16-pg-rrule_0.3.0-1.pgdg24.04+1_arm64.deb
+@ el8.x86_64 15 pg_rrule_15 pg_rrule_15-0.3.0-1PIGSTY.el8.x86_64.rpm pigsty 0.3.0 19.1KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_rrule_15-0.3.0-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 15 pg_rrule_15 pg_rrule_15-0.3.0-1PIGSTY.el8.aarch64.rpm pigsty 0.3.0 19.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_rrule_15-0.3.0-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 15 pg_rrule_15 pg_rrule_15-0.3.0-1PIGSTY.el9.x86_64.rpm pigsty 0.3.0 18.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_rrule_15-0.3.0-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 15 pg_rrule_15 pg_rrule_15-0.3.0-1PIGSTY.el9.aarch64.rpm pigsty 0.3.0 18.3KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_rrule_15-0.3.0-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 15 pg_rrule_15 pg_rrule_15-0.3.0-1PIGSTY.el10.x86_64.rpm pigsty 0.3.0 18.8KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_rrule_15-0.3.0-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 15 pg_rrule_15 pg_rrule_15-0.3.0-1PIGSTY.el10.aarch64.rpm pigsty 0.3.0 18.7KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_rrule_15-0.3.0-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 15 postgresql-15-pg-rrule postgresql-15-pg-rrule_0.3.0-1.pgdg12+1_amd64.deb pgdg 0.3.0 24.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rrule/postgresql-15-pg-rrule_0.3.0-1.pgdg12+1_amd64.deb
+@ d12.aarch64 15 postgresql-15-pg-rrule postgresql-15-pg-rrule_0.3.0-1.pgdg12+1_arm64.deb pgdg 0.3.0 24.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rrule/postgresql-15-pg-rrule_0.3.0-1.pgdg12+1_arm64.deb
+@ d13.x86_64 15 postgresql-15-pg-rrule postgresql-15-pg-rrule_0.3.0-1.pgdg13+1_amd64.deb pgdg 0.3.0 24.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rrule/postgresql-15-pg-rrule_0.3.0-1.pgdg13+1_amd64.deb
+@ d13.aarch64 15 postgresql-15-pg-rrule postgresql-15-pg-rrule_0.3.0-1.pgdg13+1_arm64.deb pgdg 0.3.0 24.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rrule/postgresql-15-pg-rrule_0.3.0-1.pgdg13+1_arm64.deb
+@ u22.x86_64 15 postgresql-15-pg-rrule postgresql-15-pg-rrule_0.3.0-1.pgdg22.04+1_amd64.deb pgdg 0.3.0 25.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rrule/postgresql-15-pg-rrule_0.3.0-1.pgdg22.04+1_amd64.deb
+@ u22.aarch64 15 postgresql-15-pg-rrule postgresql-15-pg-rrule_0.3.0-1.pgdg22.04+1_arm64.deb pgdg 0.3.0 24.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rrule/postgresql-15-pg-rrule_0.3.0-1.pgdg22.04+1_arm64.deb
+@ u24.x86_64 15 postgresql-15-pg-rrule postgresql-15-pg-rrule_0.3.0-1.pgdg24.04+1_amd64.deb pgdg 0.3.0 24.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rrule/postgresql-15-pg-rrule_0.3.0-1.pgdg24.04+1_amd64.deb
+@ u24.aarch64 15 postgresql-15-pg-rrule postgresql-15-pg-rrule_0.3.0-1.pgdg24.04+1_arm64.deb pgdg 0.3.0 24.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rrule/postgresql-15-pg-rrule_0.3.0-1.pgdg24.04+1_arm64.deb
+@ el8.x86_64 14 pg_rrule_14 pg_rrule_14-0.3.0-1PIGSTY.el8.x86_64.rpm pigsty 0.3.0 19.1KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_rrule_14-0.3.0-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 14 pg_rrule_14 pg_rrule_14-0.3.0-1PIGSTY.el8.aarch64.rpm pigsty 0.3.0 19.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_rrule_14-0.3.0-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 14 pg_rrule_14 pg_rrule_14-0.3.0-1PIGSTY.el9.x86_64.rpm pigsty 0.3.0 18.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_rrule_14-0.3.0-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 14 pg_rrule_14 pg_rrule_14-0.3.0-1PIGSTY.el9.aarch64.rpm pigsty 0.3.0 18.3KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_rrule_14-0.3.0-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 14 pg_rrule_14 pg_rrule_14-0.3.0-1PIGSTY.el10.x86_64.rpm pigsty 0.3.0 18.8KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_rrule_14-0.3.0-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 14 pg_rrule_14 pg_rrule_14-0.3.0-1PIGSTY.el10.aarch64.rpm pigsty 0.3.0 18.7KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_rrule_14-0.3.0-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 14 postgresql-14-pg-rrule postgresql-14-pg-rrule_0.3.0-1.pgdg12+1_amd64.deb pgdg 0.3.0 24.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rrule/postgresql-14-pg-rrule_0.3.0-1.pgdg12+1_amd64.deb
+@ d12.aarch64 14 postgresql-14-pg-rrule postgresql-14-pg-rrule_0.3.0-1.pgdg12+1_arm64.deb pgdg 0.3.0 24.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rrule/postgresql-14-pg-rrule_0.3.0-1.pgdg12+1_arm64.deb
+@ d13.x86_64 14 postgresql-14-pg-rrule postgresql-14-pg-rrule_0.3.0-1.pgdg13+1_amd64.deb pgdg 0.3.0 24.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rrule/postgresql-14-pg-rrule_0.3.0-1.pgdg13+1_amd64.deb
+@ d13.aarch64 14 postgresql-14-pg-rrule postgresql-14-pg-rrule_0.3.0-1.pgdg13+1_arm64.deb pgdg 0.3.0 24.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rrule/postgresql-14-pg-rrule_0.3.0-1.pgdg13+1_arm64.deb
+@ u22.x86_64 14 postgresql-14-pg-rrule postgresql-14-pg-rrule_0.3.0-1.pgdg22.04+1_amd64.deb pgdg 0.3.0 25.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rrule/postgresql-14-pg-rrule_0.3.0-1.pgdg22.04+1_amd64.deb
+@ u22.aarch64 14 postgresql-14-pg-rrule postgresql-14-pg-rrule_0.3.0-1.pgdg22.04+1_arm64.deb pgdg 0.3.0 24.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rrule/postgresql-14-pg-rrule_0.3.0-1.pgdg22.04+1_arm64.deb
+@ u24.x86_64 14 postgresql-14-pg-rrule postgresql-14-pg-rrule_0.3.0-1.pgdg24.04+1_amd64.deb pgdg 0.3.0 24.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rrule/postgresql-14-pg-rrule_0.3.0-1.pgdg24.04+1_amd64.deb
+@ u24.aarch64 14 postgresql-14-pg-rrule postgresql-14-pg-rrule_0.3.0-1.pgdg24.04+1_arm64.deb pgdg 0.3.0 24.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rrule/postgresql-14-pg-rrule_0.3.0-1.pgdg24.04+1_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建

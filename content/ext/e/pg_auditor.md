@@ -11,7 +11,7 @@ weight: 7130
     <div class="ext-card__title">kouber/pg_auditor</div>
     <div class="ext-card__desc">https://github.com/kouber/pg_auditor</div>
   </a>
-  <a class="ext-card ext-card--source" href="pg_auditor-0.2.tar.gz">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pg_auditor-0.2.tar.gz">
     <div class="ext-card__kicker">源码</div>
     <div class="ext-card__title">pg_auditor-0.2.tar.gz</div>
     <div class="ext-card__desc">pg_auditor-0.2.tar.gz</div>
@@ -30,10 +30,10 @@ weight: 7130
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
 |:-----:|:-------------------------------------------------------------------------|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|:----------|
-| 7130  | [**`pg_auditor`**](/ext/e/pg_auditor) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
+| 7130  | [**`pg_auditor`**](/ext/e/pg_auditor) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `auditor` |
 {.ext-table}
 
-| **相关扩展** | [`pg_drop_events`](/ext/e/pg_drop_events) [`table_log`](/ext/e/table_log) [`pgaudit`](/ext/e/pgaudit) [`temporal_tables`](/ext/e/temporal_tables) [`emaj`](/ext/e/emaj) [`pg_savior`](/ext/e/pg_savior) [`pg_upless`](/ext/e/pg_upless) [`pgauditlogtofile`](/ext/e/pgauditlogtofile) |
+| **相关扩展** | [`hstore`](/ext/e/hstore) [`pg_drop_events`](/ext/e/pg_drop_events) [`table_log`](/ext/e/table_log) [`pgaudit`](/ext/e/pgaudit) [`temporal_tables`](/ext/e/temporal_tables) [`emaj`](/ext/e/emaj) [`pg_savior`](/ext/e/pg_savior) [`pg_upless`](/ext/e/pg_upless) [`pgauditlogtofile`](/ext/e/pgauditlogtofile) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 
@@ -45,7 +45,7 @@ weight: 7130
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#sec) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.2` | {{< pgvers "18,17,16,15,14" >}} | `pg_auditor` | - |
+| [**EXT**](/ext/list#sec) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.2` | {{< pgvers "18,17,16,15,14" >}} | `pg_auditor` | `hstore` |
 | [**RPM**](/ext/rpm#sec) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.2` | {{< pgvers "18,17,16,15,14" >}} | `pg_auditor_$v` | - |
 | [**DEB**](/ext/deb#sec) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.2` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pg-auditor` | - |
 {.ext-table}
@@ -67,76 +67,76 @@ weight: 7130
 | u22.aarch64 | AVAIL PIGSTY 0.2 1 | AVAIL PIGSTY 0.2 1 | AVAIL PIGSTY 0.2 1 | AVAIL PIGSTY 0.2 1 | AVAIL PIGSTY 0.2 1 |
 | u24.x86_64 | AVAIL PIGSTY 0.2 1 | AVAIL PIGSTY 0.2 1 | AVAIL PIGSTY 0.2 1 | AVAIL PIGSTY 0.2 1 | AVAIL PIGSTY 0.2 1 |
 | u24.aarch64 | AVAIL PIGSTY 0.2 1 | AVAIL PIGSTY 0.2 1 | AVAIL PIGSTY 0.2 1 | AVAIL PIGSTY 0.2 1 | AVAIL PIGSTY 0.2 1 |
-@ el8.x86_64 18 pg_auditor_18 pg_auditor_18-0.2-1PIGSTY.el8.x86_64.rpm pigsty 0.2 11.0KiB https://repo.pigsty.io/yum/pgsql/el8.x86_64/pg_auditor_18-0.2-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 18 pg_auditor_18 pg_auditor_18-0.2-1PIGSTY.el8.aarch64.rpm pigsty 0.2 11.0KiB https://repo.pigsty.io/yum/pgsql/el8.aarch64/pg_auditor_18-0.2-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 18 pg_auditor_18 pg_auditor_18-0.2-1PIGSTY.el9.x86_64.rpm pigsty 0.2 10.9KiB https://repo.pigsty.io/yum/pgsql/el9.x86_64/pg_auditor_18-0.2-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 18 pg_auditor_18 pg_auditor_18-0.2-1PIGSTY.el9.aarch64.rpm pigsty 0.2 10.9KiB https://repo.pigsty.io/yum/pgsql/el9.aarch64/pg_auditor_18-0.2-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 18 pg_auditor_18 pg_auditor_18-0.2-1PIGSTY.el10.x86_64.rpm pigsty 0.2 11.0KiB https://repo.pigsty.io/yum/pgsql/el10.x86_64/pg_auditor_18-0.2-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 18 pg_auditor_18 pg_auditor_18-0.2-1PIGSTY.el10.aarch64.rpm pigsty 0.2 10.9KiB https://repo.pigsty.io/yum/pgsql/el10.aarch64/pg_auditor_18-0.2-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 18 postgresql-18-pg-auditor postgresql-18-pg-auditor_0.2-1PIGSTY~bookworm_amd64.deb pigsty 0.2 8.1KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/pg-auditor/postgresql-18-pg-auditor_0.2-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 18 postgresql-18-pg-auditor postgresql-18-pg-auditor_0.2-1PIGSTY~bookworm_arm64.deb pigsty 0.2 8.1KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/pg-auditor/postgresql-18-pg-auditor_0.2-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 18 postgresql-18-pg-auditor postgresql-18-pg-auditor_0.2-1PIGSTY~trixie_amd64.deb pigsty 0.2 8.1KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pg-auditor/postgresql-18-pg-auditor_0.2-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 18 postgresql-18-pg-auditor postgresql-18-pg-auditor_0.2-1PIGSTY~trixie_arm64.deb pigsty 0.2 8.1KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pg-auditor/postgresql-18-pg-auditor_0.2-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 18 postgresql-18-pg-auditor postgresql-18-pg-auditor_0.2-1PIGSTY~jammy_amd64.deb pigsty 0.2 8.0KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/pg-auditor/postgresql-18-pg-auditor_0.2-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 18 postgresql-18-pg-auditor postgresql-18-pg-auditor_0.2-1PIGSTY~jammy_arm64.deb pigsty 0.2 8.0KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/pg-auditor/postgresql-18-pg-auditor_0.2-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 18 postgresql-18-pg-auditor postgresql-18-pg-auditor_0.2-1PIGSTY~noble_amd64.deb pigsty 0.2 8.0KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pg-auditor/postgresql-18-pg-auditor_0.2-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 18 postgresql-18-pg-auditor postgresql-18-pg-auditor_0.2-1PIGSTY~noble_arm64.deb pigsty 0.2 8.0KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pg-auditor/postgresql-18-pg-auditor_0.2-1PIGSTY~noble_arm64.deb
-@ el8.x86_64 17 pg_auditor_17 pg_auditor_17-0.2-1PIGSTY.el8.x86_64.rpm pigsty 0.2 11.0KiB https://repo.pigsty.io/yum/pgsql/el8.x86_64/pg_auditor_17-0.2-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 17 pg_auditor_17 pg_auditor_17-0.2-1PIGSTY.el8.aarch64.rpm pigsty 0.2 11.0KiB https://repo.pigsty.io/yum/pgsql/el8.aarch64/pg_auditor_17-0.2-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 17 pg_auditor_17 pg_auditor_17-0.2-1PIGSTY.el9.x86_64.rpm pigsty 0.2 10.9KiB https://repo.pigsty.io/yum/pgsql/el9.x86_64/pg_auditor_17-0.2-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 17 pg_auditor_17 pg_auditor_17-0.2-1PIGSTY.el9.aarch64.rpm pigsty 0.2 10.9KiB https://repo.pigsty.io/yum/pgsql/el9.aarch64/pg_auditor_17-0.2-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 17 pg_auditor_17 pg_auditor_17-0.2-1PIGSTY.el10.x86_64.rpm pigsty 0.2 11.0KiB https://repo.pigsty.io/yum/pgsql/el10.x86_64/pg_auditor_17-0.2-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 17 pg_auditor_17 pg_auditor_17-0.2-1PIGSTY.el10.aarch64.rpm pigsty 0.2 10.9KiB https://repo.pigsty.io/yum/pgsql/el10.aarch64/pg_auditor_17-0.2-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 17 postgresql-17-pg-auditor postgresql-17-pg-auditor_0.2-1PIGSTY~bookworm_amd64.deb pigsty 0.2 8.1KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/pg-auditor/postgresql-17-pg-auditor_0.2-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 17 postgresql-17-pg-auditor postgresql-17-pg-auditor_0.2-1PIGSTY~bookworm_arm64.deb pigsty 0.2 8.1KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/pg-auditor/postgresql-17-pg-auditor_0.2-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 17 postgresql-17-pg-auditor postgresql-17-pg-auditor_0.2-1PIGSTY~trixie_amd64.deb pigsty 0.2 8.1KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pg-auditor/postgresql-17-pg-auditor_0.2-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 17 postgresql-17-pg-auditor postgresql-17-pg-auditor_0.2-1PIGSTY~trixie_arm64.deb pigsty 0.2 8.1KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pg-auditor/postgresql-17-pg-auditor_0.2-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 17 postgresql-17-pg-auditor postgresql-17-pg-auditor_0.2-1PIGSTY~jammy_amd64.deb pigsty 0.2 8.0KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/pg-auditor/postgresql-17-pg-auditor_0.2-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 17 postgresql-17-pg-auditor postgresql-17-pg-auditor_0.2-1PIGSTY~jammy_arm64.deb pigsty 0.2 8.0KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/pg-auditor/postgresql-17-pg-auditor_0.2-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 17 postgresql-17-pg-auditor postgresql-17-pg-auditor_0.2-1PIGSTY~noble_amd64.deb pigsty 0.2 8.0KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pg-auditor/postgresql-17-pg-auditor_0.2-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 17 postgresql-17-pg-auditor postgresql-17-pg-auditor_0.2-1PIGSTY~noble_arm64.deb pigsty 0.2 8.0KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pg-auditor/postgresql-17-pg-auditor_0.2-1PIGSTY~noble_arm64.deb
-@ el8.x86_64 16 pg_auditor_16 pg_auditor_16-0.2-1PIGSTY.el8.x86_64.rpm pigsty 0.2 11.0KiB https://repo.pigsty.io/yum/pgsql/el8.x86_64/pg_auditor_16-0.2-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 16 pg_auditor_16 pg_auditor_16-0.2-1PIGSTY.el8.aarch64.rpm pigsty 0.2 11.0KiB https://repo.pigsty.io/yum/pgsql/el8.aarch64/pg_auditor_16-0.2-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 16 pg_auditor_16 pg_auditor_16-0.2-1PIGSTY.el9.x86_64.rpm pigsty 0.2 10.9KiB https://repo.pigsty.io/yum/pgsql/el9.x86_64/pg_auditor_16-0.2-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 16 pg_auditor_16 pg_auditor_16-0.2-1PIGSTY.el9.aarch64.rpm pigsty 0.2 10.9KiB https://repo.pigsty.io/yum/pgsql/el9.aarch64/pg_auditor_16-0.2-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 16 pg_auditor_16 pg_auditor_16-0.2-1PIGSTY.el10.x86_64.rpm pigsty 0.2 11.0KiB https://repo.pigsty.io/yum/pgsql/el10.x86_64/pg_auditor_16-0.2-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 16 pg_auditor_16 pg_auditor_16-0.2-1PIGSTY.el10.aarch64.rpm pigsty 0.2 10.9KiB https://repo.pigsty.io/yum/pgsql/el10.aarch64/pg_auditor_16-0.2-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 16 postgresql-16-pg-auditor postgresql-16-pg-auditor_0.2-1PIGSTY~bookworm_amd64.deb pigsty 0.2 8.1KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/pg-auditor/postgresql-16-pg-auditor_0.2-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 16 postgresql-16-pg-auditor postgresql-16-pg-auditor_0.2-1PIGSTY~bookworm_arm64.deb pigsty 0.2 8.1KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/pg-auditor/postgresql-16-pg-auditor_0.2-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 16 postgresql-16-pg-auditor postgresql-16-pg-auditor_0.2-1PIGSTY~trixie_amd64.deb pigsty 0.2 8.1KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pg-auditor/postgresql-16-pg-auditor_0.2-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 16 postgresql-16-pg-auditor postgresql-16-pg-auditor_0.2-1PIGSTY~trixie_arm64.deb pigsty 0.2 8.1KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pg-auditor/postgresql-16-pg-auditor_0.2-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 16 postgresql-16-pg-auditor postgresql-16-pg-auditor_0.2-1PIGSTY~jammy_amd64.deb pigsty 0.2 8.0KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/pg-auditor/postgresql-16-pg-auditor_0.2-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 16 postgresql-16-pg-auditor postgresql-16-pg-auditor_0.2-1PIGSTY~jammy_arm64.deb pigsty 0.2 8.0KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/pg-auditor/postgresql-16-pg-auditor_0.2-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 16 postgresql-16-pg-auditor postgresql-16-pg-auditor_0.2-1PIGSTY~noble_amd64.deb pigsty 0.2 8.0KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pg-auditor/postgresql-16-pg-auditor_0.2-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 16 postgresql-16-pg-auditor postgresql-16-pg-auditor_0.2-1PIGSTY~noble_arm64.deb pigsty 0.2 8.0KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pg-auditor/postgresql-16-pg-auditor_0.2-1PIGSTY~noble_arm64.deb
-@ el8.x86_64 15 pg_auditor_15 pg_auditor_15-0.2-1PIGSTY.el8.x86_64.rpm pigsty 0.2 11.0KiB https://repo.pigsty.io/yum/pgsql/el8.x86_64/pg_auditor_15-0.2-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 15 pg_auditor_15 pg_auditor_15-0.2-1PIGSTY.el8.aarch64.rpm pigsty 0.2 11.0KiB https://repo.pigsty.io/yum/pgsql/el8.aarch64/pg_auditor_15-0.2-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 15 pg_auditor_15 pg_auditor_15-0.2-1PIGSTY.el9.x86_64.rpm pigsty 0.2 10.9KiB https://repo.pigsty.io/yum/pgsql/el9.x86_64/pg_auditor_15-0.2-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 15 pg_auditor_15 pg_auditor_15-0.2-1PIGSTY.el9.aarch64.rpm pigsty 0.2 10.9KiB https://repo.pigsty.io/yum/pgsql/el9.aarch64/pg_auditor_15-0.2-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 15 pg_auditor_15 pg_auditor_15-0.2-1PIGSTY.el10.x86_64.rpm pigsty 0.2 11.0KiB https://repo.pigsty.io/yum/pgsql/el10.x86_64/pg_auditor_15-0.2-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 15 pg_auditor_15 pg_auditor_15-0.2-1PIGSTY.el10.aarch64.rpm pigsty 0.2 10.9KiB https://repo.pigsty.io/yum/pgsql/el10.aarch64/pg_auditor_15-0.2-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 15 postgresql-15-pg-auditor postgresql-15-pg-auditor_0.2-1PIGSTY~bookworm_amd64.deb pigsty 0.2 8.1KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/pg-auditor/postgresql-15-pg-auditor_0.2-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 15 postgresql-15-pg-auditor postgresql-15-pg-auditor_0.2-1PIGSTY~bookworm_arm64.deb pigsty 0.2 8.1KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/pg-auditor/postgresql-15-pg-auditor_0.2-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 15 postgresql-15-pg-auditor postgresql-15-pg-auditor_0.2-1PIGSTY~trixie_amd64.deb pigsty 0.2 8.1KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pg-auditor/postgresql-15-pg-auditor_0.2-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 15 postgresql-15-pg-auditor postgresql-15-pg-auditor_0.2-1PIGSTY~trixie_arm64.deb pigsty 0.2 8.1KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pg-auditor/postgresql-15-pg-auditor_0.2-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 15 postgresql-15-pg-auditor postgresql-15-pg-auditor_0.2-1PIGSTY~jammy_amd64.deb pigsty 0.2 8.0KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/pg-auditor/postgresql-15-pg-auditor_0.2-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 15 postgresql-15-pg-auditor postgresql-15-pg-auditor_0.2-1PIGSTY~jammy_arm64.deb pigsty 0.2 8.0KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/pg-auditor/postgresql-15-pg-auditor_0.2-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 15 postgresql-15-pg-auditor postgresql-15-pg-auditor_0.2-1PIGSTY~noble_amd64.deb pigsty 0.2 8.0KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pg-auditor/postgresql-15-pg-auditor_0.2-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 15 postgresql-15-pg-auditor postgresql-15-pg-auditor_0.2-1PIGSTY~noble_arm64.deb pigsty 0.2 8.0KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pg-auditor/postgresql-15-pg-auditor_0.2-1PIGSTY~noble_arm64.deb
-@ el8.x86_64 14 pg_auditor_14 pg_auditor_14-0.2-1PIGSTY.el8.x86_64.rpm pigsty 0.2 11.0KiB https://repo.pigsty.io/yum/pgsql/el8.x86_64/pg_auditor_14-0.2-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 14 pg_auditor_14 pg_auditor_14-0.2-1PIGSTY.el8.aarch64.rpm pigsty 0.2 11.0KiB https://repo.pigsty.io/yum/pgsql/el8.aarch64/pg_auditor_14-0.2-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 14 pg_auditor_14 pg_auditor_14-0.2-1PIGSTY.el9.x86_64.rpm pigsty 0.2 10.9KiB https://repo.pigsty.io/yum/pgsql/el9.x86_64/pg_auditor_14-0.2-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 14 pg_auditor_14 pg_auditor_14-0.2-1PIGSTY.el9.aarch64.rpm pigsty 0.2 10.9KiB https://repo.pigsty.io/yum/pgsql/el9.aarch64/pg_auditor_14-0.2-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 14 pg_auditor_14 pg_auditor_14-0.2-1PIGSTY.el10.x86_64.rpm pigsty 0.2 11.0KiB https://repo.pigsty.io/yum/pgsql/el10.x86_64/pg_auditor_14-0.2-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 14 pg_auditor_14 pg_auditor_14-0.2-1PIGSTY.el10.aarch64.rpm pigsty 0.2 10.9KiB https://repo.pigsty.io/yum/pgsql/el10.aarch64/pg_auditor_14-0.2-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 14 postgresql-14-pg-auditor postgresql-14-pg-auditor_0.2-1PIGSTY~bookworm_amd64.deb pigsty 0.2 8.1KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/pg-auditor/postgresql-14-pg-auditor_0.2-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 14 postgresql-14-pg-auditor postgresql-14-pg-auditor_0.2-1PIGSTY~bookworm_arm64.deb pigsty 0.2 8.1KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/pg-auditor/postgresql-14-pg-auditor_0.2-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 14 postgresql-14-pg-auditor postgresql-14-pg-auditor_0.2-1PIGSTY~trixie_amd64.deb pigsty 0.2 8.1KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pg-auditor/postgresql-14-pg-auditor_0.2-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 14 postgresql-14-pg-auditor postgresql-14-pg-auditor_0.2-1PIGSTY~trixie_arm64.deb pigsty 0.2 8.1KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pg-auditor/postgresql-14-pg-auditor_0.2-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 14 postgresql-14-pg-auditor postgresql-14-pg-auditor_0.2-1PIGSTY~jammy_amd64.deb pigsty 0.2 8.0KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/pg-auditor/postgresql-14-pg-auditor_0.2-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 14 postgresql-14-pg-auditor postgresql-14-pg-auditor_0.2-1PIGSTY~jammy_arm64.deb pigsty 0.2 8.0KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/pg-auditor/postgresql-14-pg-auditor_0.2-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 14 postgresql-14-pg-auditor postgresql-14-pg-auditor_0.2-1PIGSTY~noble_amd64.deb pigsty 0.2 8.0KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pg-auditor/postgresql-14-pg-auditor_0.2-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 14 postgresql-14-pg-auditor postgresql-14-pg-auditor_0.2-1PIGSTY~noble_arm64.deb pigsty 0.2 8.0KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pg-auditor/postgresql-14-pg-auditor_0.2-1PIGSTY~noble_arm64.deb
+@ el8.x86_64 18 pg_auditor_18 pg_auditor_18-0.2-1PIGSTY.el8.x86_64.rpm pigsty 0.2 11.0KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_auditor_18-0.2-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 18 pg_auditor_18 pg_auditor_18-0.2-1PIGSTY.el8.aarch64.rpm pigsty 0.2 11.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_auditor_18-0.2-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 18 pg_auditor_18 pg_auditor_18-0.2-1PIGSTY.el9.x86_64.rpm pigsty 0.2 10.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_auditor_18-0.2-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 18 pg_auditor_18 pg_auditor_18-0.2-1PIGSTY.el9.aarch64.rpm pigsty 0.2 10.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_auditor_18-0.2-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 18 pg_auditor_18 pg_auditor_18-0.2-1PIGSTY.el10.x86_64.rpm pigsty 0.2 11.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_auditor_18-0.2-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 18 pg_auditor_18 pg_auditor_18-0.2-1PIGSTY.el10.aarch64.rpm pigsty 0.2 10.9KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_auditor_18-0.2-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-pg-auditor postgresql-18-pg-auditor_0.2-1PIGSTY~bookworm_amd64.deb pigsty 0.2 8.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-auditor/postgresql-18-pg-auditor_0.2-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 18 postgresql-18-pg-auditor postgresql-18-pg-auditor_0.2-1PIGSTY~bookworm_arm64.deb pigsty 0.2 8.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-auditor/postgresql-18-pg-auditor_0.2-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 18 postgresql-18-pg-auditor postgresql-18-pg-auditor_0.2-1PIGSTY~trixie_amd64.deb pigsty 0.2 8.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-auditor/postgresql-18-pg-auditor_0.2-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 18 postgresql-18-pg-auditor postgresql-18-pg-auditor_0.2-1PIGSTY~trixie_arm64.deb pigsty 0.2 8.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-auditor/postgresql-18-pg-auditor_0.2-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 18 postgresql-18-pg-auditor postgresql-18-pg-auditor_0.2-1PIGSTY~jammy_amd64.deb pigsty 0.2 8.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-auditor/postgresql-18-pg-auditor_0.2-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 18 postgresql-18-pg-auditor postgresql-18-pg-auditor_0.2-1PIGSTY~jammy_arm64.deb pigsty 0.2 8.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-auditor/postgresql-18-pg-auditor_0.2-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 18 postgresql-18-pg-auditor postgresql-18-pg-auditor_0.2-1PIGSTY~noble_amd64.deb pigsty 0.2 8.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-auditor/postgresql-18-pg-auditor_0.2-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 18 postgresql-18-pg-auditor postgresql-18-pg-auditor_0.2-1PIGSTY~noble_arm64.deb pigsty 0.2 8.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-auditor/postgresql-18-pg-auditor_0.2-1PIGSTY~noble_arm64.deb
+@ el8.x86_64 17 pg_auditor_17 pg_auditor_17-0.2-1PIGSTY.el8.x86_64.rpm pigsty 0.2 11.0KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_auditor_17-0.2-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 17 pg_auditor_17 pg_auditor_17-0.2-1PIGSTY.el8.aarch64.rpm pigsty 0.2 11.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_auditor_17-0.2-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 17 pg_auditor_17 pg_auditor_17-0.2-1PIGSTY.el9.x86_64.rpm pigsty 0.2 10.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_auditor_17-0.2-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 17 pg_auditor_17 pg_auditor_17-0.2-1PIGSTY.el9.aarch64.rpm pigsty 0.2 10.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_auditor_17-0.2-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 17 pg_auditor_17 pg_auditor_17-0.2-1PIGSTY.el10.x86_64.rpm pigsty 0.2 11.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_auditor_17-0.2-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 17 pg_auditor_17 pg_auditor_17-0.2-1PIGSTY.el10.aarch64.rpm pigsty 0.2 10.9KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_auditor_17-0.2-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-pg-auditor postgresql-17-pg-auditor_0.2-1PIGSTY~bookworm_amd64.deb pigsty 0.2 8.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-auditor/postgresql-17-pg-auditor_0.2-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 17 postgresql-17-pg-auditor postgresql-17-pg-auditor_0.2-1PIGSTY~bookworm_arm64.deb pigsty 0.2 8.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-auditor/postgresql-17-pg-auditor_0.2-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 17 postgresql-17-pg-auditor postgresql-17-pg-auditor_0.2-1PIGSTY~trixie_amd64.deb pigsty 0.2 8.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-auditor/postgresql-17-pg-auditor_0.2-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 17 postgresql-17-pg-auditor postgresql-17-pg-auditor_0.2-1PIGSTY~trixie_arm64.deb pigsty 0.2 8.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-auditor/postgresql-17-pg-auditor_0.2-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 17 postgresql-17-pg-auditor postgresql-17-pg-auditor_0.2-1PIGSTY~jammy_amd64.deb pigsty 0.2 8.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-auditor/postgresql-17-pg-auditor_0.2-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 17 postgresql-17-pg-auditor postgresql-17-pg-auditor_0.2-1PIGSTY~jammy_arm64.deb pigsty 0.2 8.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-auditor/postgresql-17-pg-auditor_0.2-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 17 postgresql-17-pg-auditor postgresql-17-pg-auditor_0.2-1PIGSTY~noble_amd64.deb pigsty 0.2 8.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-auditor/postgresql-17-pg-auditor_0.2-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 17 postgresql-17-pg-auditor postgresql-17-pg-auditor_0.2-1PIGSTY~noble_arm64.deb pigsty 0.2 8.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-auditor/postgresql-17-pg-auditor_0.2-1PIGSTY~noble_arm64.deb
+@ el8.x86_64 16 pg_auditor_16 pg_auditor_16-0.2-1PIGSTY.el8.x86_64.rpm pigsty 0.2 11.0KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_auditor_16-0.2-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 16 pg_auditor_16 pg_auditor_16-0.2-1PIGSTY.el8.aarch64.rpm pigsty 0.2 11.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_auditor_16-0.2-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 16 pg_auditor_16 pg_auditor_16-0.2-1PIGSTY.el9.x86_64.rpm pigsty 0.2 10.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_auditor_16-0.2-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 16 pg_auditor_16 pg_auditor_16-0.2-1PIGSTY.el9.aarch64.rpm pigsty 0.2 10.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_auditor_16-0.2-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 16 pg_auditor_16 pg_auditor_16-0.2-1PIGSTY.el10.x86_64.rpm pigsty 0.2 11.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_auditor_16-0.2-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 16 pg_auditor_16 pg_auditor_16-0.2-1PIGSTY.el10.aarch64.rpm pigsty 0.2 10.9KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_auditor_16-0.2-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 16 postgresql-16-pg-auditor postgresql-16-pg-auditor_0.2-1PIGSTY~bookworm_amd64.deb pigsty 0.2 8.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-auditor/postgresql-16-pg-auditor_0.2-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 16 postgresql-16-pg-auditor postgresql-16-pg-auditor_0.2-1PIGSTY~bookworm_arm64.deb pigsty 0.2 8.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-auditor/postgresql-16-pg-auditor_0.2-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 16 postgresql-16-pg-auditor postgresql-16-pg-auditor_0.2-1PIGSTY~trixie_amd64.deb pigsty 0.2 8.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-auditor/postgresql-16-pg-auditor_0.2-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 16 postgresql-16-pg-auditor postgresql-16-pg-auditor_0.2-1PIGSTY~trixie_arm64.deb pigsty 0.2 8.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-auditor/postgresql-16-pg-auditor_0.2-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 16 postgresql-16-pg-auditor postgresql-16-pg-auditor_0.2-1PIGSTY~jammy_amd64.deb pigsty 0.2 8.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-auditor/postgresql-16-pg-auditor_0.2-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 16 postgresql-16-pg-auditor postgresql-16-pg-auditor_0.2-1PIGSTY~jammy_arm64.deb pigsty 0.2 8.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-auditor/postgresql-16-pg-auditor_0.2-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 16 postgresql-16-pg-auditor postgresql-16-pg-auditor_0.2-1PIGSTY~noble_amd64.deb pigsty 0.2 8.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-auditor/postgresql-16-pg-auditor_0.2-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 16 postgresql-16-pg-auditor postgresql-16-pg-auditor_0.2-1PIGSTY~noble_arm64.deb pigsty 0.2 8.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-auditor/postgresql-16-pg-auditor_0.2-1PIGSTY~noble_arm64.deb
+@ el8.x86_64 15 pg_auditor_15 pg_auditor_15-0.2-1PIGSTY.el8.x86_64.rpm pigsty 0.2 11.0KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_auditor_15-0.2-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 15 pg_auditor_15 pg_auditor_15-0.2-1PIGSTY.el8.aarch64.rpm pigsty 0.2 11.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_auditor_15-0.2-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 15 pg_auditor_15 pg_auditor_15-0.2-1PIGSTY.el9.x86_64.rpm pigsty 0.2 10.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_auditor_15-0.2-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 15 pg_auditor_15 pg_auditor_15-0.2-1PIGSTY.el9.aarch64.rpm pigsty 0.2 10.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_auditor_15-0.2-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 15 pg_auditor_15 pg_auditor_15-0.2-1PIGSTY.el10.x86_64.rpm pigsty 0.2 11.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_auditor_15-0.2-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 15 pg_auditor_15 pg_auditor_15-0.2-1PIGSTY.el10.aarch64.rpm pigsty 0.2 10.9KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_auditor_15-0.2-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 15 postgresql-15-pg-auditor postgresql-15-pg-auditor_0.2-1PIGSTY~bookworm_amd64.deb pigsty 0.2 8.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-auditor/postgresql-15-pg-auditor_0.2-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 15 postgresql-15-pg-auditor postgresql-15-pg-auditor_0.2-1PIGSTY~bookworm_arm64.deb pigsty 0.2 8.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-auditor/postgresql-15-pg-auditor_0.2-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 15 postgresql-15-pg-auditor postgresql-15-pg-auditor_0.2-1PIGSTY~trixie_amd64.deb pigsty 0.2 8.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-auditor/postgresql-15-pg-auditor_0.2-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 15 postgresql-15-pg-auditor postgresql-15-pg-auditor_0.2-1PIGSTY~trixie_arm64.deb pigsty 0.2 8.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-auditor/postgresql-15-pg-auditor_0.2-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 15 postgresql-15-pg-auditor postgresql-15-pg-auditor_0.2-1PIGSTY~jammy_amd64.deb pigsty 0.2 8.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-auditor/postgresql-15-pg-auditor_0.2-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 15 postgresql-15-pg-auditor postgresql-15-pg-auditor_0.2-1PIGSTY~jammy_arm64.deb pigsty 0.2 8.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-auditor/postgresql-15-pg-auditor_0.2-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 15 postgresql-15-pg-auditor postgresql-15-pg-auditor_0.2-1PIGSTY~noble_amd64.deb pigsty 0.2 8.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-auditor/postgresql-15-pg-auditor_0.2-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 15 postgresql-15-pg-auditor postgresql-15-pg-auditor_0.2-1PIGSTY~noble_arm64.deb pigsty 0.2 8.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-auditor/postgresql-15-pg-auditor_0.2-1PIGSTY~noble_arm64.deb
+@ el8.x86_64 14 pg_auditor_14 pg_auditor_14-0.2-1PIGSTY.el8.x86_64.rpm pigsty 0.2 11.0KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_auditor_14-0.2-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 14 pg_auditor_14 pg_auditor_14-0.2-1PIGSTY.el8.aarch64.rpm pigsty 0.2 11.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_auditor_14-0.2-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 14 pg_auditor_14 pg_auditor_14-0.2-1PIGSTY.el9.x86_64.rpm pigsty 0.2 10.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_auditor_14-0.2-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 14 pg_auditor_14 pg_auditor_14-0.2-1PIGSTY.el9.aarch64.rpm pigsty 0.2 10.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_auditor_14-0.2-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 14 pg_auditor_14 pg_auditor_14-0.2-1PIGSTY.el10.x86_64.rpm pigsty 0.2 11.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_auditor_14-0.2-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 14 pg_auditor_14 pg_auditor_14-0.2-1PIGSTY.el10.aarch64.rpm pigsty 0.2 10.9KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_auditor_14-0.2-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 14 postgresql-14-pg-auditor postgresql-14-pg-auditor_0.2-1PIGSTY~bookworm_amd64.deb pigsty 0.2 8.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-auditor/postgresql-14-pg-auditor_0.2-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 14 postgresql-14-pg-auditor postgresql-14-pg-auditor_0.2-1PIGSTY~bookworm_arm64.deb pigsty 0.2 8.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-auditor/postgresql-14-pg-auditor_0.2-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 14 postgresql-14-pg-auditor postgresql-14-pg-auditor_0.2-1PIGSTY~trixie_amd64.deb pigsty 0.2 8.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-auditor/postgresql-14-pg-auditor_0.2-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 14 postgresql-14-pg-auditor postgresql-14-pg-auditor_0.2-1PIGSTY~trixie_arm64.deb pigsty 0.2 8.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-auditor/postgresql-14-pg-auditor_0.2-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 14 postgresql-14-pg-auditor postgresql-14-pg-auditor_0.2-1PIGSTY~jammy_amd64.deb pigsty 0.2 8.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-auditor/postgresql-14-pg-auditor_0.2-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 14 postgresql-14-pg-auditor postgresql-14-pg-auditor_0.2-1PIGSTY~jammy_arm64.deb pigsty 0.2 8.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-auditor/postgresql-14-pg-auditor_0.2-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 14 postgresql-14-pg-auditor postgresql-14-pg-auditor_0.2-1PIGSTY~noble_amd64.deb pigsty 0.2 8.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-auditor/postgresql-14-pg-auditor_0.2-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 14 postgresql-14-pg-auditor postgresql-14-pg-auditor_0.2-1PIGSTY~noble_arm64.deb pigsty 0.2 8.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-auditor/postgresql-14-pg-auditor_0.2-1PIGSTY~noble_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建
@@ -197,7 +197,7 @@ apt install -y postgresql-14-pg-auditor   # PG 14
 **创建扩展**：
 
 ```sql
-CREATE EXTENSION pg_auditor;
+CREATE EXTENSION pg_auditor CASCADE;  -- 依赖: hstore
 ```
 
 

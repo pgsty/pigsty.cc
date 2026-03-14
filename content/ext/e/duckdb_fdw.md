@@ -11,7 +11,7 @@ weight: 2470
     <div class="ext-card__title">alitrack/duckdb_fdw</div>
     <div class="ext-card__desc">https://github.com/alitrack/duckdb_fdw</div>
   </a>
-  <a class="ext-card ext-card--source" href="duckdb_fdw-1.1.3.tar.gz">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/duckdb_fdw-1.1.3.tar.gz">
     <div class="ext-card__kicker">源码</div>
     <div class="ext-card__title">duckdb_fdw-1.1.3.tar.gz</div>
     <div class="ext-card__desc">duckdb_fdw-1.1.3.tar.gz</div>
@@ -67,46 +67,46 @@ weight: 2470
 | u22.aarch64 | MISS PIGSTY - 0 | AVAIL PIGSTY 1.1.2 1 | AVAIL PIGSTY 1.1.2 1 | AVAIL PIGSTY 1.1.2 1 | AVAIL PIGSTY 1.1.2 1 |
 | u24.x86_64 | MISS PIGSTY - 0 | AVAIL PIGSTY 1.1.2 1 | AVAIL PIGSTY 1.1.2 1 | AVAIL PIGSTY 1.1.2 1 | AVAIL PIGSTY 1.1.2 1 |
 | u24.aarch64 | MISS PIGSTY - 0 | AVAIL PIGSTY 1.1.2 1 | AVAIL PIGSTY 1.1.2 1 | AVAIL PIGSTY 1.1.2 1 | AVAIL PIGSTY 1.1.2 1 |
-@ el8.x86_64 17 duckdb_fdw_17 duckdb_fdw_17-1.1.2-1PIGSTY.el8.x86_64.rpm pigsty 1.1.2 83.2KiB https://repo.pigsty.io/yum/pgsql/el8.x86_64/duckdb_fdw_17-1.1.2-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 17 duckdb_fdw_17 duckdb_fdw_17-1.1.2-1PIGSTY.el8.aarch64.rpm pigsty 1.1.2 76.0KiB https://repo.pigsty.io/yum/pgsql/el8.aarch64/duckdb_fdw_17-1.1.2-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 17 duckdb_fdw_17 duckdb_fdw_17-1.1.2-1PIGSTY.el9.x86_64.rpm pigsty 1.1.2 80.6KiB https://repo.pigsty.io/yum/pgsql/el9.x86_64/duckdb_fdw_17-1.1.2-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 17 duckdb_fdw_17 duckdb_fdw_17-1.1.2-1PIGSTY.el9.aarch64.rpm pigsty 1.1.2 78.2KiB https://repo.pigsty.io/yum/pgsql/el9.aarch64/duckdb_fdw_17-1.1.2-1PIGSTY.el9.aarch64.rpm
-@ d12.x86_64 17 postgresql-17-duckdb-fdw postgresql-17-duckdb-fdw_1.1.2-1PIGSTY~bookworm_amd64.deb pigsty 1.1.2 256.1KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/d/duckdb-fdw/postgresql-17-duckdb-fdw_1.1.2-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 17 postgresql-17-duckdb-fdw postgresql-17-duckdb-fdw_1.1.2-1PIGSTY~bookworm_arm64.deb pigsty 1.1.2 249.8KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/d/duckdb-fdw/postgresql-17-duckdb-fdw_1.1.2-1PIGSTY~bookworm_arm64.deb
-@ u22.x86_64 17 postgresql-17-duckdb-fdw postgresql-17-duckdb-fdw_1.1.2-1PIGSTY~jammy_amd64.deb pigsty 1.1.2 266.4KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/d/duckdb-fdw/postgresql-17-duckdb-fdw_1.1.2-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 17 postgresql-17-duckdb-fdw postgresql-17-duckdb-fdw_1.1.2-1PIGSTY~jammy_arm64.deb pigsty 1.1.2 262.6KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/d/duckdb-fdw/postgresql-17-duckdb-fdw_1.1.2-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 17 postgresql-17-duckdb-fdw postgresql-17-duckdb-fdw_1.1.2-1PIGSTY~noble_amd64.deb pigsty 1.1.2 217.8KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/d/duckdb-fdw/postgresql-17-duckdb-fdw_1.1.2-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 17 postgresql-17-duckdb-fdw postgresql-17-duckdb-fdw_1.1.2-1PIGSTY~noble_arm64.deb pigsty 1.1.2 214.9KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/d/duckdb-fdw/postgresql-17-duckdb-fdw_1.1.2-1PIGSTY~noble_arm64.deb
-@ el8.x86_64 16 duckdb_fdw_16 duckdb_fdw_16-1.1.2-1PIGSTY.el8.x86_64.rpm pigsty 1.1.2 83.2KiB https://repo.pigsty.io/yum/pgsql/el8.x86_64/duckdb_fdw_16-1.1.2-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 16 duckdb_fdw_16 duckdb_fdw_16-1.1.2-1PIGSTY.el8.aarch64.rpm pigsty 1.1.2 76.0KiB https://repo.pigsty.io/yum/pgsql/el8.aarch64/duckdb_fdw_16-1.1.2-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 16 duckdb_fdw_16 duckdb_fdw_16-1.1.2-1PIGSTY.el9.x86_64.rpm pigsty 1.1.2 80.6KiB https://repo.pigsty.io/yum/pgsql/el9.x86_64/duckdb_fdw_16-1.1.2-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 16 duckdb_fdw_16 duckdb_fdw_16-1.1.2-1PIGSTY.el9.aarch64.rpm pigsty 1.1.2 78.2KiB https://repo.pigsty.io/yum/pgsql/el9.aarch64/duckdb_fdw_16-1.1.2-1PIGSTY.el9.aarch64.rpm
-@ d12.x86_64 16 postgresql-16-duckdb-fdw postgresql-16-duckdb-fdw_1.1.2-1PIGSTY~bookworm_amd64.deb pigsty 1.1.2 255.1KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/d/duckdb-fdw/postgresql-16-duckdb-fdw_1.1.2-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 16 postgresql-16-duckdb-fdw postgresql-16-duckdb-fdw_1.1.2-1PIGSTY~bookworm_arm64.deb pigsty 1.1.2 248.8KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/d/duckdb-fdw/postgresql-16-duckdb-fdw_1.1.2-1PIGSTY~bookworm_arm64.deb
-@ u22.x86_64 16 postgresql-16-duckdb-fdw postgresql-16-duckdb-fdw_1.1.2-1PIGSTY~jammy_amd64.deb pigsty 1.1.2 265.6KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/d/duckdb-fdw/postgresql-16-duckdb-fdw_1.1.2-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 16 postgresql-16-duckdb-fdw postgresql-16-duckdb-fdw_1.1.2-1PIGSTY~jammy_arm64.deb pigsty 1.1.2 261.8KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/d/duckdb-fdw/postgresql-16-duckdb-fdw_1.1.2-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 16 postgresql-16-duckdb-fdw postgresql-16-duckdb-fdw_1.1.2-1PIGSTY~noble_amd64.deb pigsty 1.1.2 217.9KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/d/duckdb-fdw/postgresql-16-duckdb-fdw_1.1.2-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 16 postgresql-16-duckdb-fdw postgresql-16-duckdb-fdw_1.1.2-1PIGSTY~noble_arm64.deb pigsty 1.1.2 214.9KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/d/duckdb-fdw/postgresql-16-duckdb-fdw_1.1.2-1PIGSTY~noble_arm64.deb
-@ el8.x86_64 15 duckdb_fdw_15 duckdb_fdw_15-1.1.2-1PIGSTY.el8.x86_64.rpm pigsty 1.1.2 86.0KiB https://repo.pigsty.io/yum/pgsql/el8.x86_64/duckdb_fdw_15-1.1.2-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 15 duckdb_fdw_15 duckdb_fdw_15-1.1.2-1PIGSTY.el8.aarch64.rpm pigsty 1.1.2 78.6KiB https://repo.pigsty.io/yum/pgsql/el8.aarch64/duckdb_fdw_15-1.1.2-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 15 duckdb_fdw_15 duckdb_fdw_15-1.1.2-1PIGSTY.el9.x86_64.rpm pigsty 1.1.2 84.5KiB https://repo.pigsty.io/yum/pgsql/el9.x86_64/duckdb_fdw_15-1.1.2-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 15 duckdb_fdw_15 duckdb_fdw_15-1.1.2-1PIGSTY.el9.aarch64.rpm pigsty 1.1.2 82.4KiB https://repo.pigsty.io/yum/pgsql/el9.aarch64/duckdb_fdw_15-1.1.2-1PIGSTY.el9.aarch64.rpm
-@ d12.x86_64 15 postgresql-15-duckdb-fdw postgresql-15-duckdb-fdw_1.1.2-1PIGSTY~bookworm_amd64.deb pigsty 1.1.2 258.9KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/d/duckdb-fdw/postgresql-15-duckdb-fdw_1.1.2-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 15 postgresql-15-duckdb-fdw postgresql-15-duckdb-fdw_1.1.2-1PIGSTY~bookworm_arm64.deb pigsty 1.1.2 252.2KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/d/duckdb-fdw/postgresql-15-duckdb-fdw_1.1.2-1PIGSTY~bookworm_arm64.deb
-@ u22.x86_64 15 postgresql-15-duckdb-fdw postgresql-15-duckdb-fdw_1.1.2-1PIGSTY~jammy_amd64.deb pigsty 1.1.2 277.6KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/d/duckdb-fdw/postgresql-15-duckdb-fdw_1.1.2-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 15 postgresql-15-duckdb-fdw postgresql-15-duckdb-fdw_1.1.2-1PIGSTY~jammy_arm64.deb pigsty 1.1.2 273.5KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/d/duckdb-fdw/postgresql-15-duckdb-fdw_1.1.2-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 15 postgresql-15-duckdb-fdw postgresql-15-duckdb-fdw_1.1.2-1PIGSTY~noble_amd64.deb pigsty 1.1.2 229.1KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/d/duckdb-fdw/postgresql-15-duckdb-fdw_1.1.2-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 15 postgresql-15-duckdb-fdw postgresql-15-duckdb-fdw_1.1.2-1PIGSTY~noble_arm64.deb pigsty 1.1.2 227.3KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/d/duckdb-fdw/postgresql-15-duckdb-fdw_1.1.2-1PIGSTY~noble_arm64.deb
-@ el8.x86_64 14 duckdb_fdw_14 duckdb_fdw_14-1.1.2-1PIGSTY.el8.x86_64.rpm pigsty 1.1.2 86.0KiB https://repo.pigsty.io/yum/pgsql/el8.x86_64/duckdb_fdw_14-1.1.2-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 14 duckdb_fdw_14 duckdb_fdw_14-1.1.2-1PIGSTY.el8.aarch64.rpm pigsty 1.1.2 78.6KiB https://repo.pigsty.io/yum/pgsql/el8.aarch64/duckdb_fdw_14-1.1.2-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 14 duckdb_fdw_14 duckdb_fdw_14-1.1.2-1PIGSTY.el9.x86_64.rpm pigsty 1.1.2 84.5KiB https://repo.pigsty.io/yum/pgsql/el9.x86_64/duckdb_fdw_14-1.1.2-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 14 duckdb_fdw_14 duckdb_fdw_14-1.1.2-1PIGSTY.el9.aarch64.rpm pigsty 1.1.2 82.3KiB https://repo.pigsty.io/yum/pgsql/el9.aarch64/duckdb_fdw_14-1.1.2-1PIGSTY.el9.aarch64.rpm
-@ d12.x86_64 14 postgresql-14-duckdb-fdw postgresql-14-duckdb-fdw_1.1.2-1PIGSTY~bookworm_amd64.deb pigsty 1.1.2 258.9KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/d/duckdb-fdw/postgresql-14-duckdb-fdw_1.1.2-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 14 postgresql-14-duckdb-fdw postgresql-14-duckdb-fdw_1.1.2-1PIGSTY~bookworm_arm64.deb pigsty 1.1.2 252.2KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/d/duckdb-fdw/postgresql-14-duckdb-fdw_1.1.2-1PIGSTY~bookworm_arm64.deb
-@ u22.x86_64 14 postgresql-14-duckdb-fdw postgresql-14-duckdb-fdw_1.1.2-1PIGSTY~jammy_amd64.deb pigsty 1.1.2 277.5KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/d/duckdb-fdw/postgresql-14-duckdb-fdw_1.1.2-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 14 postgresql-14-duckdb-fdw postgresql-14-duckdb-fdw_1.1.2-1PIGSTY~jammy_arm64.deb pigsty 1.1.2 273.3KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/d/duckdb-fdw/postgresql-14-duckdb-fdw_1.1.2-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 14 postgresql-14-duckdb-fdw postgresql-14-duckdb-fdw_1.1.2-1PIGSTY~noble_amd64.deb pigsty 1.1.2 229.1KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/d/duckdb-fdw/postgresql-14-duckdb-fdw_1.1.2-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 14 postgresql-14-duckdb-fdw postgresql-14-duckdb-fdw_1.1.2-1PIGSTY~noble_arm64.deb pigsty 1.1.2 227.3KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/d/duckdb-fdw/postgresql-14-duckdb-fdw_1.1.2-1PIGSTY~noble_arm64.deb
+@ el8.x86_64 17 duckdb_fdw_17 duckdb_fdw_17-1.1.2-1PIGSTY.el8.x86_64.rpm pigsty 1.1.2 83.2KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/duckdb_fdw_17-1.1.2-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 17 duckdb_fdw_17 duckdb_fdw_17-1.1.2-1PIGSTY.el8.aarch64.rpm pigsty 1.1.2 76.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/duckdb_fdw_17-1.1.2-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 17 duckdb_fdw_17 duckdb_fdw_17-1.1.2-1PIGSTY.el9.x86_64.rpm pigsty 1.1.2 80.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/duckdb_fdw_17-1.1.2-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 17 duckdb_fdw_17 duckdb_fdw_17-1.1.2-1PIGSTY.el9.aarch64.rpm pigsty 1.1.2 78.2KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/duckdb_fdw_17-1.1.2-1PIGSTY.el9.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-duckdb-fdw postgresql-17-duckdb-fdw_1.1.2-1PIGSTY~bookworm_amd64.deb pigsty 1.1.2 256.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/d/duckdb-fdw/postgresql-17-duckdb-fdw_1.1.2-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 17 postgresql-17-duckdb-fdw postgresql-17-duckdb-fdw_1.1.2-1PIGSTY~bookworm_arm64.deb pigsty 1.1.2 249.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/d/duckdb-fdw/postgresql-17-duckdb-fdw_1.1.2-1PIGSTY~bookworm_arm64.deb
+@ u22.x86_64 17 postgresql-17-duckdb-fdw postgresql-17-duckdb-fdw_1.1.2-1PIGSTY~jammy_amd64.deb pigsty 1.1.2 266.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/d/duckdb-fdw/postgresql-17-duckdb-fdw_1.1.2-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 17 postgresql-17-duckdb-fdw postgresql-17-duckdb-fdw_1.1.2-1PIGSTY~jammy_arm64.deb pigsty 1.1.2 262.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/d/duckdb-fdw/postgresql-17-duckdb-fdw_1.1.2-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 17 postgresql-17-duckdb-fdw postgresql-17-duckdb-fdw_1.1.2-1PIGSTY~noble_amd64.deb pigsty 1.1.2 217.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/d/duckdb-fdw/postgresql-17-duckdb-fdw_1.1.2-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 17 postgresql-17-duckdb-fdw postgresql-17-duckdb-fdw_1.1.2-1PIGSTY~noble_arm64.deb pigsty 1.1.2 214.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/d/duckdb-fdw/postgresql-17-duckdb-fdw_1.1.2-1PIGSTY~noble_arm64.deb
+@ el8.x86_64 16 duckdb_fdw_16 duckdb_fdw_16-1.1.2-1PIGSTY.el8.x86_64.rpm pigsty 1.1.2 83.2KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/duckdb_fdw_16-1.1.2-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 16 duckdb_fdw_16 duckdb_fdw_16-1.1.2-1PIGSTY.el8.aarch64.rpm pigsty 1.1.2 76.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/duckdb_fdw_16-1.1.2-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 16 duckdb_fdw_16 duckdb_fdw_16-1.1.2-1PIGSTY.el9.x86_64.rpm pigsty 1.1.2 80.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/duckdb_fdw_16-1.1.2-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 16 duckdb_fdw_16 duckdb_fdw_16-1.1.2-1PIGSTY.el9.aarch64.rpm pigsty 1.1.2 78.2KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/duckdb_fdw_16-1.1.2-1PIGSTY.el9.aarch64.rpm
+@ d12.x86_64 16 postgresql-16-duckdb-fdw postgresql-16-duckdb-fdw_1.1.2-1PIGSTY~bookworm_amd64.deb pigsty 1.1.2 255.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/d/duckdb-fdw/postgresql-16-duckdb-fdw_1.1.2-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 16 postgresql-16-duckdb-fdw postgresql-16-duckdb-fdw_1.1.2-1PIGSTY~bookworm_arm64.deb pigsty 1.1.2 248.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/d/duckdb-fdw/postgresql-16-duckdb-fdw_1.1.2-1PIGSTY~bookworm_arm64.deb
+@ u22.x86_64 16 postgresql-16-duckdb-fdw postgresql-16-duckdb-fdw_1.1.2-1PIGSTY~jammy_amd64.deb pigsty 1.1.2 265.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/d/duckdb-fdw/postgresql-16-duckdb-fdw_1.1.2-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 16 postgresql-16-duckdb-fdw postgresql-16-duckdb-fdw_1.1.2-1PIGSTY~jammy_arm64.deb pigsty 1.1.2 261.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/d/duckdb-fdw/postgresql-16-duckdb-fdw_1.1.2-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 16 postgresql-16-duckdb-fdw postgresql-16-duckdb-fdw_1.1.2-1PIGSTY~noble_amd64.deb pigsty 1.1.2 217.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/d/duckdb-fdw/postgresql-16-duckdb-fdw_1.1.2-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 16 postgresql-16-duckdb-fdw postgresql-16-duckdb-fdw_1.1.2-1PIGSTY~noble_arm64.deb pigsty 1.1.2 214.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/d/duckdb-fdw/postgresql-16-duckdb-fdw_1.1.2-1PIGSTY~noble_arm64.deb
+@ el8.x86_64 15 duckdb_fdw_15 duckdb_fdw_15-1.1.2-1PIGSTY.el8.x86_64.rpm pigsty 1.1.2 86.0KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/duckdb_fdw_15-1.1.2-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 15 duckdb_fdw_15 duckdb_fdw_15-1.1.2-1PIGSTY.el8.aarch64.rpm pigsty 1.1.2 78.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/duckdb_fdw_15-1.1.2-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 15 duckdb_fdw_15 duckdb_fdw_15-1.1.2-1PIGSTY.el9.x86_64.rpm pigsty 1.1.2 84.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/duckdb_fdw_15-1.1.2-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 15 duckdb_fdw_15 duckdb_fdw_15-1.1.2-1PIGSTY.el9.aarch64.rpm pigsty 1.1.2 82.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/duckdb_fdw_15-1.1.2-1PIGSTY.el9.aarch64.rpm
+@ d12.x86_64 15 postgresql-15-duckdb-fdw postgresql-15-duckdb-fdw_1.1.2-1PIGSTY~bookworm_amd64.deb pigsty 1.1.2 258.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/d/duckdb-fdw/postgresql-15-duckdb-fdw_1.1.2-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 15 postgresql-15-duckdb-fdw postgresql-15-duckdb-fdw_1.1.2-1PIGSTY~bookworm_arm64.deb pigsty 1.1.2 252.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/d/duckdb-fdw/postgresql-15-duckdb-fdw_1.1.2-1PIGSTY~bookworm_arm64.deb
+@ u22.x86_64 15 postgresql-15-duckdb-fdw postgresql-15-duckdb-fdw_1.1.2-1PIGSTY~jammy_amd64.deb pigsty 1.1.2 277.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/d/duckdb-fdw/postgresql-15-duckdb-fdw_1.1.2-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 15 postgresql-15-duckdb-fdw postgresql-15-duckdb-fdw_1.1.2-1PIGSTY~jammy_arm64.deb pigsty 1.1.2 273.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/d/duckdb-fdw/postgresql-15-duckdb-fdw_1.1.2-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 15 postgresql-15-duckdb-fdw postgresql-15-duckdb-fdw_1.1.2-1PIGSTY~noble_amd64.deb pigsty 1.1.2 229.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/d/duckdb-fdw/postgresql-15-duckdb-fdw_1.1.2-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 15 postgresql-15-duckdb-fdw postgresql-15-duckdb-fdw_1.1.2-1PIGSTY~noble_arm64.deb pigsty 1.1.2 227.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/d/duckdb-fdw/postgresql-15-duckdb-fdw_1.1.2-1PIGSTY~noble_arm64.deb
+@ el8.x86_64 14 duckdb_fdw_14 duckdb_fdw_14-1.1.2-1PIGSTY.el8.x86_64.rpm pigsty 1.1.2 86.0KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/duckdb_fdw_14-1.1.2-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 14 duckdb_fdw_14 duckdb_fdw_14-1.1.2-1PIGSTY.el8.aarch64.rpm pigsty 1.1.2 78.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/duckdb_fdw_14-1.1.2-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 14 duckdb_fdw_14 duckdb_fdw_14-1.1.2-1PIGSTY.el9.x86_64.rpm pigsty 1.1.2 84.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/duckdb_fdw_14-1.1.2-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 14 duckdb_fdw_14 duckdb_fdw_14-1.1.2-1PIGSTY.el9.aarch64.rpm pigsty 1.1.2 82.3KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/duckdb_fdw_14-1.1.2-1PIGSTY.el9.aarch64.rpm
+@ d12.x86_64 14 postgresql-14-duckdb-fdw postgresql-14-duckdb-fdw_1.1.2-1PIGSTY~bookworm_amd64.deb pigsty 1.1.2 258.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/d/duckdb-fdw/postgresql-14-duckdb-fdw_1.1.2-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 14 postgresql-14-duckdb-fdw postgresql-14-duckdb-fdw_1.1.2-1PIGSTY~bookworm_arm64.deb pigsty 1.1.2 252.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/d/duckdb-fdw/postgresql-14-duckdb-fdw_1.1.2-1PIGSTY~bookworm_arm64.deb
+@ u22.x86_64 14 postgresql-14-duckdb-fdw postgresql-14-duckdb-fdw_1.1.2-1PIGSTY~jammy_amd64.deb pigsty 1.1.2 277.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/d/duckdb-fdw/postgresql-14-duckdb-fdw_1.1.2-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 14 postgresql-14-duckdb-fdw postgresql-14-duckdb-fdw_1.1.2-1PIGSTY~jammy_arm64.deb pigsty 1.1.2 273.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/d/duckdb-fdw/postgresql-14-duckdb-fdw_1.1.2-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 14 postgresql-14-duckdb-fdw postgresql-14-duckdb-fdw_1.1.2-1PIGSTY~noble_amd64.deb pigsty 1.1.2 229.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/d/duckdb-fdw/postgresql-14-duckdb-fdw_1.1.2-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 14 postgresql-14-duckdb-fdw postgresql-14-duckdb-fdw_1.1.2-1PIGSTY~noble_arm64.deb pigsty 1.1.2 227.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/d/duckdb-fdw/postgresql-14-duckdb-fdw_1.1.2-1PIGSTY~noble_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建

@@ -11,7 +11,7 @@ weight: 1590
     <div class="ext-card__title">jistok/pg_geohash</div>
     <div class="ext-card__desc">https://github.com/jistok/pg_geohash</div>
   </a>
-  <a class="ext-card ext-card--source" href="pg_geohash-1.0.tar.gz">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pg_geohash-1.0.tar.gz">
     <div class="ext-card__kicker">源码</div>
     <div class="ext-card__title">pg_geohash-1.0.tar.gz</div>
     <div class="ext-card__desc">pg_geohash-1.0.tar.gz</div>
@@ -64,76 +64,76 @@ weight: 1590
 | u22.aarch64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 |
 | u24.x86_64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 |
 | u24.aarch64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 |
-@ el8.x86_64 18 pg_geohash_18 pg_geohash_18-1.0-1PIGSTY.el8.x86_64.rpm pigsty 1.0 16.0KiB https://repo.pigsty.io/yum/pgsql/el8.x86_64/pg_geohash_18-1.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 18 pg_geohash_18 pg_geohash_18-1.0-1PIGSTY.el8.aarch64.rpm pigsty 1.0 15.9KiB https://repo.pigsty.io/yum/pgsql/el8.aarch64/pg_geohash_18-1.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 18 pg_geohash_18 pg_geohash_18-1.0-1PIGSTY.el9.x86_64.rpm pigsty 1.0 14.9KiB https://repo.pigsty.io/yum/pgsql/el9.x86_64/pg_geohash_18-1.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 18 pg_geohash_18 pg_geohash_18-1.0-1PIGSTY.el9.aarch64.rpm pigsty 1.0 14.7KiB https://repo.pigsty.io/yum/pgsql/el9.aarch64/pg_geohash_18-1.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 18 pg_geohash_18 pg_geohash_18-1.0-1PIGSTY.el10.x86_64.rpm pigsty 1.0 14.9KiB https://repo.pigsty.io/yum/pgsql/el10.x86_64/pg_geohash_18-1.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 18 pg_geohash_18 pg_geohash_18-1.0-1PIGSTY.el10.aarch64.rpm pigsty 1.0 14.9KiB https://repo.pigsty.io/yum/pgsql/el10.aarch64/pg_geohash_18-1.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 18 postgresql-18-pg-geohash postgresql-18-pg-geohash_1.0-1PIGSTY~bookworm_amd64.deb pigsty 1.0 16.4KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/pg-geohash/postgresql-18-pg-geohash_1.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 18 postgresql-18-pg-geohash postgresql-18-pg-geohash_1.0-1PIGSTY~bookworm_arm64.deb pigsty 1.0 16.3KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/pg-geohash/postgresql-18-pg-geohash_1.0-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 18 postgresql-18-pg-geohash postgresql-18-pg-geohash_1.0-1PIGSTY~trixie_amd64.deb pigsty 1.0 16.5KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pg-geohash/postgresql-18-pg-geohash_1.0-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 18 postgresql-18-pg-geohash postgresql-18-pg-geohash_1.0-1PIGSTY~trixie_arm64.deb pigsty 1.0 16.2KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pg-geohash/postgresql-18-pg-geohash_1.0-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 18 postgresql-18-pg-geohash postgresql-18-pg-geohash_1.0-1PIGSTY~jammy_amd64.deb pigsty 1.0 16.2KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/pg-geohash/postgresql-18-pg-geohash_1.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 18 postgresql-18-pg-geohash postgresql-18-pg-geohash_1.0-1PIGSTY~jammy_arm64.deb pigsty 1.0 15.8KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/pg-geohash/postgresql-18-pg-geohash_1.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 18 postgresql-18-pg-geohash postgresql-18-pg-geohash_1.0-1PIGSTY~noble_amd64.deb pigsty 1.0 16.3KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pg-geohash/postgresql-18-pg-geohash_1.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 18 postgresql-18-pg-geohash postgresql-18-pg-geohash_1.0-1PIGSTY~noble_arm64.deb pigsty 1.0 16.0KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pg-geohash/postgresql-18-pg-geohash_1.0-1PIGSTY~noble_arm64.deb
-@ el8.x86_64 17 pg_geohash_17 pg_geohash_17-1.0-1PIGSTY.el8.x86_64.rpm pigsty 1.0 16.0KiB https://repo.pigsty.io/yum/pgsql/el8.x86_64/pg_geohash_17-1.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 17 pg_geohash_17 pg_geohash_17-1.0-1PIGSTY.el8.aarch64.rpm pigsty 1.0 15.9KiB https://repo.pigsty.io/yum/pgsql/el8.aarch64/pg_geohash_17-1.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 17 pg_geohash_17 pg_geohash_17-1.0-1PIGSTY.el9.x86_64.rpm pigsty 1.0 14.9KiB https://repo.pigsty.io/yum/pgsql/el9.x86_64/pg_geohash_17-1.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 17 pg_geohash_17 pg_geohash_17-1.0-1PIGSTY.el9.aarch64.rpm pigsty 1.0 14.7KiB https://repo.pigsty.io/yum/pgsql/el9.aarch64/pg_geohash_17-1.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 17 pg_geohash_17 pg_geohash_17-1.0-1PIGSTY.el10.x86_64.rpm pigsty 1.0 14.9KiB https://repo.pigsty.io/yum/pgsql/el10.x86_64/pg_geohash_17-1.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 17 pg_geohash_17 pg_geohash_17-1.0-1PIGSTY.el10.aarch64.rpm pigsty 1.0 15.0KiB https://repo.pigsty.io/yum/pgsql/el10.aarch64/pg_geohash_17-1.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 17 postgresql-17-pg-geohash postgresql-17-pg-geohash_1.0-1PIGSTY~bookworm_amd64.deb pigsty 1.0 16.4KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/pg-geohash/postgresql-17-pg-geohash_1.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 17 postgresql-17-pg-geohash postgresql-17-pg-geohash_1.0-1PIGSTY~bookworm_arm64.deb pigsty 1.0 16.2KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/pg-geohash/postgresql-17-pg-geohash_1.0-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 17 postgresql-17-pg-geohash postgresql-17-pg-geohash_1.0-1PIGSTY~trixie_amd64.deb pigsty 1.0 16.5KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pg-geohash/postgresql-17-pg-geohash_1.0-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 17 postgresql-17-pg-geohash postgresql-17-pg-geohash_1.0-1PIGSTY~trixie_arm64.deb pigsty 1.0 16.2KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pg-geohash/postgresql-17-pg-geohash_1.0-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 17 postgresql-17-pg-geohash postgresql-17-pg-geohash_1.0-1PIGSTY~jammy_amd64.deb pigsty 1.0 16.2KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/pg-geohash/postgresql-17-pg-geohash_1.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 17 postgresql-17-pg-geohash postgresql-17-pg-geohash_1.0-1PIGSTY~jammy_arm64.deb pigsty 1.0 15.8KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/pg-geohash/postgresql-17-pg-geohash_1.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 17 postgresql-17-pg-geohash postgresql-17-pg-geohash_1.0-1PIGSTY~noble_amd64.deb pigsty 1.0 16.3KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pg-geohash/postgresql-17-pg-geohash_1.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 17 postgresql-17-pg-geohash postgresql-17-pg-geohash_1.0-1PIGSTY~noble_arm64.deb pigsty 1.0 16.0KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pg-geohash/postgresql-17-pg-geohash_1.0-1PIGSTY~noble_arm64.deb
-@ el8.x86_64 16 pg_geohash_16 pg_geohash_16-1.0-1PIGSTY.el8.x86_64.rpm pigsty 1.0 16.0KiB https://repo.pigsty.io/yum/pgsql/el8.x86_64/pg_geohash_16-1.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 16 pg_geohash_16 pg_geohash_16-1.0-1PIGSTY.el8.aarch64.rpm pigsty 1.0 15.9KiB https://repo.pigsty.io/yum/pgsql/el8.aarch64/pg_geohash_16-1.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 16 pg_geohash_16 pg_geohash_16-1.0-1PIGSTY.el9.x86_64.rpm pigsty 1.0 14.9KiB https://repo.pigsty.io/yum/pgsql/el9.x86_64/pg_geohash_16-1.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 16 pg_geohash_16 pg_geohash_16-1.0-1PIGSTY.el9.aarch64.rpm pigsty 1.0 14.7KiB https://repo.pigsty.io/yum/pgsql/el9.aarch64/pg_geohash_16-1.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 16 pg_geohash_16 pg_geohash_16-1.0-1PIGSTY.el10.x86_64.rpm pigsty 1.0 14.9KiB https://repo.pigsty.io/yum/pgsql/el10.x86_64/pg_geohash_16-1.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 16 pg_geohash_16 pg_geohash_16-1.0-1PIGSTY.el10.aarch64.rpm pigsty 1.0 14.9KiB https://repo.pigsty.io/yum/pgsql/el10.aarch64/pg_geohash_16-1.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 16 postgresql-16-pg-geohash postgresql-16-pg-geohash_1.0-1PIGSTY~bookworm_amd64.deb pigsty 1.0 16.4KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/pg-geohash/postgresql-16-pg-geohash_1.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 16 postgresql-16-pg-geohash postgresql-16-pg-geohash_1.0-1PIGSTY~bookworm_arm64.deb pigsty 1.0 16.3KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/pg-geohash/postgresql-16-pg-geohash_1.0-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 16 postgresql-16-pg-geohash postgresql-16-pg-geohash_1.0-1PIGSTY~trixie_amd64.deb pigsty 1.0 16.5KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pg-geohash/postgresql-16-pg-geohash_1.0-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 16 postgresql-16-pg-geohash postgresql-16-pg-geohash_1.0-1PIGSTY~trixie_arm64.deb pigsty 1.0 16.2KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pg-geohash/postgresql-16-pg-geohash_1.0-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 16 postgresql-16-pg-geohash postgresql-16-pg-geohash_1.0-1PIGSTY~jammy_amd64.deb pigsty 1.0 16.2KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/pg-geohash/postgresql-16-pg-geohash_1.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 16 postgresql-16-pg-geohash postgresql-16-pg-geohash_1.0-1PIGSTY~jammy_arm64.deb pigsty 1.0 15.8KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/pg-geohash/postgresql-16-pg-geohash_1.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 16 postgresql-16-pg-geohash postgresql-16-pg-geohash_1.0-1PIGSTY~noble_amd64.deb pigsty 1.0 16.3KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pg-geohash/postgresql-16-pg-geohash_1.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 16 postgresql-16-pg-geohash postgresql-16-pg-geohash_1.0-1PIGSTY~noble_arm64.deb pigsty 1.0 16.0KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pg-geohash/postgresql-16-pg-geohash_1.0-1PIGSTY~noble_arm64.deb
-@ el8.x86_64 15 pg_geohash_15 pg_geohash_15-1.0-1PIGSTY.el8.x86_64.rpm pigsty 1.0 16.2KiB https://repo.pigsty.io/yum/pgsql/el8.x86_64/pg_geohash_15-1.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 15 pg_geohash_15 pg_geohash_15-1.0-1PIGSTY.el8.aarch64.rpm pigsty 1.0 16.0KiB https://repo.pigsty.io/yum/pgsql/el8.aarch64/pg_geohash_15-1.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 15 pg_geohash_15 pg_geohash_15-1.0-1PIGSTY.el9.x86_64.rpm pigsty 1.0 16.1KiB https://repo.pigsty.io/yum/pgsql/el9.x86_64/pg_geohash_15-1.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 15 pg_geohash_15 pg_geohash_15-1.0-1PIGSTY.el9.aarch64.rpm pigsty 1.0 15.8KiB https://repo.pigsty.io/yum/pgsql/el9.aarch64/pg_geohash_15-1.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 15 pg_geohash_15 pg_geohash_15-1.0-1PIGSTY.el10.x86_64.rpm pigsty 1.0 16.1KiB https://repo.pigsty.io/yum/pgsql/el10.x86_64/pg_geohash_15-1.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 15 pg_geohash_15 pg_geohash_15-1.0-1PIGSTY.el10.aarch64.rpm pigsty 1.0 16.1KiB https://repo.pigsty.io/yum/pgsql/el10.aarch64/pg_geohash_15-1.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 15 postgresql-15-pg-geohash postgresql-15-pg-geohash_1.0-1PIGSTY~bookworm_amd64.deb pigsty 1.0 16.4KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/pg-geohash/postgresql-15-pg-geohash_1.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 15 postgresql-15-pg-geohash postgresql-15-pg-geohash_1.0-1PIGSTY~bookworm_arm64.deb pigsty 1.0 16.2KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/pg-geohash/postgresql-15-pg-geohash_1.0-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 15 postgresql-15-pg-geohash postgresql-15-pg-geohash_1.0-1PIGSTY~trixie_amd64.deb pigsty 1.0 16.5KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pg-geohash/postgresql-15-pg-geohash_1.0-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 15 postgresql-15-pg-geohash postgresql-15-pg-geohash_1.0-1PIGSTY~trixie_arm64.deb pigsty 1.0 16.2KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pg-geohash/postgresql-15-pg-geohash_1.0-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 15 postgresql-15-pg-geohash postgresql-15-pg-geohash_1.0-1PIGSTY~jammy_amd64.deb pigsty 1.0 16.2KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/pg-geohash/postgresql-15-pg-geohash_1.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 15 postgresql-15-pg-geohash postgresql-15-pg-geohash_1.0-1PIGSTY~jammy_arm64.deb pigsty 1.0 15.8KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/pg-geohash/postgresql-15-pg-geohash_1.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 15 postgresql-15-pg-geohash postgresql-15-pg-geohash_1.0-1PIGSTY~noble_amd64.deb pigsty 1.0 16.3KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pg-geohash/postgresql-15-pg-geohash_1.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 15 postgresql-15-pg-geohash postgresql-15-pg-geohash_1.0-1PIGSTY~noble_arm64.deb pigsty 1.0 16.0KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pg-geohash/postgresql-15-pg-geohash_1.0-1PIGSTY~noble_arm64.deb
-@ el8.x86_64 14 pg_geohash_14 pg_geohash_14-1.0-1PIGSTY.el8.x86_64.rpm pigsty 1.0 16.1KiB https://repo.pigsty.io/yum/pgsql/el8.x86_64/pg_geohash_14-1.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 14 pg_geohash_14 pg_geohash_14-1.0-1PIGSTY.el8.aarch64.rpm pigsty 1.0 16.0KiB https://repo.pigsty.io/yum/pgsql/el8.aarch64/pg_geohash_14-1.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 14 pg_geohash_14 pg_geohash_14-1.0-1PIGSTY.el9.x86_64.rpm pigsty 1.0 16.1KiB https://repo.pigsty.io/yum/pgsql/el9.x86_64/pg_geohash_14-1.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 14 pg_geohash_14 pg_geohash_14-1.0-1PIGSTY.el9.aarch64.rpm pigsty 1.0 15.8KiB https://repo.pigsty.io/yum/pgsql/el9.aarch64/pg_geohash_14-1.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 14 pg_geohash_14 pg_geohash_14-1.0-1PIGSTY.el10.x86_64.rpm pigsty 1.0 16.1KiB https://repo.pigsty.io/yum/pgsql/el10.x86_64/pg_geohash_14-1.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 14 pg_geohash_14 pg_geohash_14-1.0-1PIGSTY.el10.aarch64.rpm pigsty 1.0 16.1KiB https://repo.pigsty.io/yum/pgsql/el10.aarch64/pg_geohash_14-1.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 14 postgresql-14-pg-geohash postgresql-14-pg-geohash_1.0-1PIGSTY~bookworm_amd64.deb pigsty 1.0 16.4KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/pg-geohash/postgresql-14-pg-geohash_1.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 14 postgresql-14-pg-geohash postgresql-14-pg-geohash_1.0-1PIGSTY~bookworm_arm64.deb pigsty 1.0 16.2KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/pg-geohash/postgresql-14-pg-geohash_1.0-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 14 postgresql-14-pg-geohash postgresql-14-pg-geohash_1.0-1PIGSTY~trixie_amd64.deb pigsty 1.0 16.5KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pg-geohash/postgresql-14-pg-geohash_1.0-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 14 postgresql-14-pg-geohash postgresql-14-pg-geohash_1.0-1PIGSTY~trixie_arm64.deb pigsty 1.0 16.2KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pg-geohash/postgresql-14-pg-geohash_1.0-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 14 postgresql-14-pg-geohash postgresql-14-pg-geohash_1.0-1PIGSTY~jammy_amd64.deb pigsty 1.0 16.2KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/pg-geohash/postgresql-14-pg-geohash_1.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 14 postgresql-14-pg-geohash postgresql-14-pg-geohash_1.0-1PIGSTY~jammy_arm64.deb pigsty 1.0 15.8KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/pg-geohash/postgresql-14-pg-geohash_1.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 14 postgresql-14-pg-geohash postgresql-14-pg-geohash_1.0-1PIGSTY~noble_amd64.deb pigsty 1.0 16.3KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pg-geohash/postgresql-14-pg-geohash_1.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 14 postgresql-14-pg-geohash postgresql-14-pg-geohash_1.0-1PIGSTY~noble_arm64.deb pigsty 1.0 16.0KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pg-geohash/postgresql-14-pg-geohash_1.0-1PIGSTY~noble_arm64.deb
+@ el8.x86_64 18 pg_geohash_18 pg_geohash_18-1.0-1PIGSTY.el8.x86_64.rpm pigsty 1.0 16.0KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_geohash_18-1.0-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 18 pg_geohash_18 pg_geohash_18-1.0-1PIGSTY.el8.aarch64.rpm pigsty 1.0 15.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_geohash_18-1.0-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 18 pg_geohash_18 pg_geohash_18-1.0-1PIGSTY.el9.x86_64.rpm pigsty 1.0 14.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_geohash_18-1.0-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 18 pg_geohash_18 pg_geohash_18-1.0-1PIGSTY.el9.aarch64.rpm pigsty 1.0 14.7KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_geohash_18-1.0-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 18 pg_geohash_18 pg_geohash_18-1.0-1PIGSTY.el10.x86_64.rpm pigsty 1.0 14.9KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_geohash_18-1.0-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 18 pg_geohash_18 pg_geohash_18-1.0-1PIGSTY.el10.aarch64.rpm pigsty 1.0 14.9KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_geohash_18-1.0-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-pg-geohash postgresql-18-pg-geohash_1.0-1PIGSTY~bookworm_amd64.deb pigsty 1.0 16.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-geohash/postgresql-18-pg-geohash_1.0-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 18 postgresql-18-pg-geohash postgresql-18-pg-geohash_1.0-1PIGSTY~bookworm_arm64.deb pigsty 1.0 16.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-geohash/postgresql-18-pg-geohash_1.0-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 18 postgresql-18-pg-geohash postgresql-18-pg-geohash_1.0-1PIGSTY~trixie_amd64.deb pigsty 1.0 16.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-geohash/postgresql-18-pg-geohash_1.0-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 18 postgresql-18-pg-geohash postgresql-18-pg-geohash_1.0-1PIGSTY~trixie_arm64.deb pigsty 1.0 16.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-geohash/postgresql-18-pg-geohash_1.0-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 18 postgresql-18-pg-geohash postgresql-18-pg-geohash_1.0-1PIGSTY~jammy_amd64.deb pigsty 1.0 16.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-geohash/postgresql-18-pg-geohash_1.0-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 18 postgresql-18-pg-geohash postgresql-18-pg-geohash_1.0-1PIGSTY~jammy_arm64.deb pigsty 1.0 15.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-geohash/postgresql-18-pg-geohash_1.0-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 18 postgresql-18-pg-geohash postgresql-18-pg-geohash_1.0-1PIGSTY~noble_amd64.deb pigsty 1.0 16.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-geohash/postgresql-18-pg-geohash_1.0-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 18 postgresql-18-pg-geohash postgresql-18-pg-geohash_1.0-1PIGSTY~noble_arm64.deb pigsty 1.0 16.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-geohash/postgresql-18-pg-geohash_1.0-1PIGSTY~noble_arm64.deb
+@ el8.x86_64 17 pg_geohash_17 pg_geohash_17-1.0-1PIGSTY.el8.x86_64.rpm pigsty 1.0 16.0KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_geohash_17-1.0-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 17 pg_geohash_17 pg_geohash_17-1.0-1PIGSTY.el8.aarch64.rpm pigsty 1.0 15.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_geohash_17-1.0-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 17 pg_geohash_17 pg_geohash_17-1.0-1PIGSTY.el9.x86_64.rpm pigsty 1.0 14.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_geohash_17-1.0-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 17 pg_geohash_17 pg_geohash_17-1.0-1PIGSTY.el9.aarch64.rpm pigsty 1.0 14.7KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_geohash_17-1.0-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 17 pg_geohash_17 pg_geohash_17-1.0-1PIGSTY.el10.x86_64.rpm pigsty 1.0 14.9KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_geohash_17-1.0-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 17 pg_geohash_17 pg_geohash_17-1.0-1PIGSTY.el10.aarch64.rpm pigsty 1.0 15.0KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_geohash_17-1.0-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-pg-geohash postgresql-17-pg-geohash_1.0-1PIGSTY~bookworm_amd64.deb pigsty 1.0 16.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-geohash/postgresql-17-pg-geohash_1.0-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 17 postgresql-17-pg-geohash postgresql-17-pg-geohash_1.0-1PIGSTY~bookworm_arm64.deb pigsty 1.0 16.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-geohash/postgresql-17-pg-geohash_1.0-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 17 postgresql-17-pg-geohash postgresql-17-pg-geohash_1.0-1PIGSTY~trixie_amd64.deb pigsty 1.0 16.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-geohash/postgresql-17-pg-geohash_1.0-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 17 postgresql-17-pg-geohash postgresql-17-pg-geohash_1.0-1PIGSTY~trixie_arm64.deb pigsty 1.0 16.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-geohash/postgresql-17-pg-geohash_1.0-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 17 postgresql-17-pg-geohash postgresql-17-pg-geohash_1.0-1PIGSTY~jammy_amd64.deb pigsty 1.0 16.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-geohash/postgresql-17-pg-geohash_1.0-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 17 postgresql-17-pg-geohash postgresql-17-pg-geohash_1.0-1PIGSTY~jammy_arm64.deb pigsty 1.0 15.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-geohash/postgresql-17-pg-geohash_1.0-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 17 postgresql-17-pg-geohash postgresql-17-pg-geohash_1.0-1PIGSTY~noble_amd64.deb pigsty 1.0 16.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-geohash/postgresql-17-pg-geohash_1.0-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 17 postgresql-17-pg-geohash postgresql-17-pg-geohash_1.0-1PIGSTY~noble_arm64.deb pigsty 1.0 16.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-geohash/postgresql-17-pg-geohash_1.0-1PIGSTY~noble_arm64.deb
+@ el8.x86_64 16 pg_geohash_16 pg_geohash_16-1.0-1PIGSTY.el8.x86_64.rpm pigsty 1.0 16.0KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_geohash_16-1.0-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 16 pg_geohash_16 pg_geohash_16-1.0-1PIGSTY.el8.aarch64.rpm pigsty 1.0 15.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_geohash_16-1.0-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 16 pg_geohash_16 pg_geohash_16-1.0-1PIGSTY.el9.x86_64.rpm pigsty 1.0 14.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_geohash_16-1.0-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 16 pg_geohash_16 pg_geohash_16-1.0-1PIGSTY.el9.aarch64.rpm pigsty 1.0 14.7KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_geohash_16-1.0-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 16 pg_geohash_16 pg_geohash_16-1.0-1PIGSTY.el10.x86_64.rpm pigsty 1.0 14.9KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_geohash_16-1.0-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 16 pg_geohash_16 pg_geohash_16-1.0-1PIGSTY.el10.aarch64.rpm pigsty 1.0 14.9KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_geohash_16-1.0-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 16 postgresql-16-pg-geohash postgresql-16-pg-geohash_1.0-1PIGSTY~bookworm_amd64.deb pigsty 1.0 16.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-geohash/postgresql-16-pg-geohash_1.0-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 16 postgresql-16-pg-geohash postgresql-16-pg-geohash_1.0-1PIGSTY~bookworm_arm64.deb pigsty 1.0 16.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-geohash/postgresql-16-pg-geohash_1.0-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 16 postgresql-16-pg-geohash postgresql-16-pg-geohash_1.0-1PIGSTY~trixie_amd64.deb pigsty 1.0 16.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-geohash/postgresql-16-pg-geohash_1.0-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 16 postgresql-16-pg-geohash postgresql-16-pg-geohash_1.0-1PIGSTY~trixie_arm64.deb pigsty 1.0 16.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-geohash/postgresql-16-pg-geohash_1.0-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 16 postgresql-16-pg-geohash postgresql-16-pg-geohash_1.0-1PIGSTY~jammy_amd64.deb pigsty 1.0 16.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-geohash/postgresql-16-pg-geohash_1.0-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 16 postgresql-16-pg-geohash postgresql-16-pg-geohash_1.0-1PIGSTY~jammy_arm64.deb pigsty 1.0 15.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-geohash/postgresql-16-pg-geohash_1.0-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 16 postgresql-16-pg-geohash postgresql-16-pg-geohash_1.0-1PIGSTY~noble_amd64.deb pigsty 1.0 16.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-geohash/postgresql-16-pg-geohash_1.0-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 16 postgresql-16-pg-geohash postgresql-16-pg-geohash_1.0-1PIGSTY~noble_arm64.deb pigsty 1.0 16.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-geohash/postgresql-16-pg-geohash_1.0-1PIGSTY~noble_arm64.deb
+@ el8.x86_64 15 pg_geohash_15 pg_geohash_15-1.0-1PIGSTY.el8.x86_64.rpm pigsty 1.0 16.2KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_geohash_15-1.0-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 15 pg_geohash_15 pg_geohash_15-1.0-1PIGSTY.el8.aarch64.rpm pigsty 1.0 16.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_geohash_15-1.0-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 15 pg_geohash_15 pg_geohash_15-1.0-1PIGSTY.el9.x86_64.rpm pigsty 1.0 16.1KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_geohash_15-1.0-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 15 pg_geohash_15 pg_geohash_15-1.0-1PIGSTY.el9.aarch64.rpm pigsty 1.0 15.8KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_geohash_15-1.0-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 15 pg_geohash_15 pg_geohash_15-1.0-1PIGSTY.el10.x86_64.rpm pigsty 1.0 16.1KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_geohash_15-1.0-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 15 pg_geohash_15 pg_geohash_15-1.0-1PIGSTY.el10.aarch64.rpm pigsty 1.0 16.1KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_geohash_15-1.0-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 15 postgresql-15-pg-geohash postgresql-15-pg-geohash_1.0-1PIGSTY~bookworm_amd64.deb pigsty 1.0 16.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-geohash/postgresql-15-pg-geohash_1.0-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 15 postgresql-15-pg-geohash postgresql-15-pg-geohash_1.0-1PIGSTY~bookworm_arm64.deb pigsty 1.0 16.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-geohash/postgresql-15-pg-geohash_1.0-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 15 postgresql-15-pg-geohash postgresql-15-pg-geohash_1.0-1PIGSTY~trixie_amd64.deb pigsty 1.0 16.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-geohash/postgresql-15-pg-geohash_1.0-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 15 postgresql-15-pg-geohash postgresql-15-pg-geohash_1.0-1PIGSTY~trixie_arm64.deb pigsty 1.0 16.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-geohash/postgresql-15-pg-geohash_1.0-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 15 postgresql-15-pg-geohash postgresql-15-pg-geohash_1.0-1PIGSTY~jammy_amd64.deb pigsty 1.0 16.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-geohash/postgresql-15-pg-geohash_1.0-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 15 postgresql-15-pg-geohash postgresql-15-pg-geohash_1.0-1PIGSTY~jammy_arm64.deb pigsty 1.0 15.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-geohash/postgresql-15-pg-geohash_1.0-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 15 postgresql-15-pg-geohash postgresql-15-pg-geohash_1.0-1PIGSTY~noble_amd64.deb pigsty 1.0 16.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-geohash/postgresql-15-pg-geohash_1.0-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 15 postgresql-15-pg-geohash postgresql-15-pg-geohash_1.0-1PIGSTY~noble_arm64.deb pigsty 1.0 16.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-geohash/postgresql-15-pg-geohash_1.0-1PIGSTY~noble_arm64.deb
+@ el8.x86_64 14 pg_geohash_14 pg_geohash_14-1.0-1PIGSTY.el8.x86_64.rpm pigsty 1.0 16.1KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_geohash_14-1.0-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 14 pg_geohash_14 pg_geohash_14-1.0-1PIGSTY.el8.aarch64.rpm pigsty 1.0 16.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_geohash_14-1.0-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 14 pg_geohash_14 pg_geohash_14-1.0-1PIGSTY.el9.x86_64.rpm pigsty 1.0 16.1KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_geohash_14-1.0-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 14 pg_geohash_14 pg_geohash_14-1.0-1PIGSTY.el9.aarch64.rpm pigsty 1.0 15.8KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_geohash_14-1.0-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 14 pg_geohash_14 pg_geohash_14-1.0-1PIGSTY.el10.x86_64.rpm pigsty 1.0 16.1KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_geohash_14-1.0-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 14 pg_geohash_14 pg_geohash_14-1.0-1PIGSTY.el10.aarch64.rpm pigsty 1.0 16.1KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_geohash_14-1.0-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 14 postgresql-14-pg-geohash postgresql-14-pg-geohash_1.0-1PIGSTY~bookworm_amd64.deb pigsty 1.0 16.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-geohash/postgresql-14-pg-geohash_1.0-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 14 postgresql-14-pg-geohash postgresql-14-pg-geohash_1.0-1PIGSTY~bookworm_arm64.deb pigsty 1.0 16.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-geohash/postgresql-14-pg-geohash_1.0-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 14 postgresql-14-pg-geohash postgresql-14-pg-geohash_1.0-1PIGSTY~trixie_amd64.deb pigsty 1.0 16.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-geohash/postgresql-14-pg-geohash_1.0-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 14 postgresql-14-pg-geohash postgresql-14-pg-geohash_1.0-1PIGSTY~trixie_arm64.deb pigsty 1.0 16.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-geohash/postgresql-14-pg-geohash_1.0-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 14 postgresql-14-pg-geohash postgresql-14-pg-geohash_1.0-1PIGSTY~jammy_amd64.deb pigsty 1.0 16.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-geohash/postgresql-14-pg-geohash_1.0-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 14 postgresql-14-pg-geohash postgresql-14-pg-geohash_1.0-1PIGSTY~jammy_arm64.deb pigsty 1.0 15.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-geohash/postgresql-14-pg-geohash_1.0-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 14 postgresql-14-pg-geohash postgresql-14-pg-geohash_1.0-1PIGSTY~noble_amd64.deb pigsty 1.0 16.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-geohash/postgresql-14-pg-geohash_1.0-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 14 postgresql-14-pg-geohash postgresql-14-pg-geohash_1.0-1PIGSTY~noble_arm64.deb pigsty 1.0 16.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-geohash/postgresql-14-pg-geohash_1.0-1PIGSTY~noble_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建

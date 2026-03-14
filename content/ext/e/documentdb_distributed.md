@@ -11,7 +11,7 @@ weight: 9020
     <div class="ext-card__title">documentdb/documentdb</div>
     <div class="ext-card__desc">https://github.com/documentdb/documentdb</div>
   </a>
-  <a class="ext-card ext-card--source" href="documentdb-0.109-0.tar.gz">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/documentdb-0.109-0.tar.gz">
     <div class="ext-card__kicker">源码</div>
     <div class="ext-card__title">documentdb-0.109-0.tar.gz</div>
     <div class="ext-card__desc">documentdb-0.109-0.tar.gz</div>

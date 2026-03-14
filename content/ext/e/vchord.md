@@ -11,7 +11,7 @@ weight: 1810
     <div class="ext-card__title">tensorchord/VectorChord</div>
     <div class="ext-card__desc">https://github.com/tensorchord/VectorChord</div>
   </a>
-  <a class="ext-card ext-card--source" href="VectorChord-1.1.1.tar.gz">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/VectorChord-1.1.1.tar.gz">
     <div class="ext-card__kicker">源码</div>
     <div class="ext-card__title">VectorChord-1.1.1.tar.gz</div>
     <div class="ext-card__desc">VectorChord-1.1.1.tar.gz</div>
@@ -64,76 +64,76 @@ weight: 1810
 | u22.aarch64 | AVAIL PIGSTY 1.1.1 1 | AVAIL PIGSTY 1.1.1 1 | AVAIL PIGSTY 1.1.1 1 | AVAIL PIGSTY 1.1.1 1 | AVAIL PIGSTY 1.1.1 1 |
 | u24.x86_64 | AVAIL PIGSTY 1.1.1 1 | AVAIL PIGSTY 1.1.1 1 | AVAIL PIGSTY 1.1.1 1 | AVAIL PIGSTY 1.1.1 1 | AVAIL PIGSTY 1.1.1 1 |
 | u24.aarch64 | AVAIL PIGSTY 1.1.1 1 | AVAIL PIGSTY 1.1.1 1 | AVAIL PIGSTY 1.1.1 1 | AVAIL PIGSTY 1.1.1 1 | AVAIL PIGSTY 1.1.1 1 |
-@ el8.x86_64 18 vchord_18 vchord_18-1.1.1-1PIGSTY.el8.x86_64.rpm pigsty 1.1.1 2.3MiB https://repo.pigsty.io/yum/pgsql/el8.x86_64/vchord_18-1.1.1-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 18 vchord_18 vchord_18-1.1.1-1PIGSTY.el8.aarch64.rpm pigsty 1.1.1 1.9MiB https://repo.pigsty.io/yum/pgsql/el8.aarch64/vchord_18-1.1.1-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 18 vchord_18 vchord_18-1.1.1-1PIGSTY.el9.x86_64.rpm pigsty 1.1.1 2.3MiB https://repo.pigsty.io/yum/pgsql/el9.x86_64/vchord_18-1.1.1-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 18 vchord_18 vchord_18-1.1.1-1PIGSTY.el9.aarch64.rpm pigsty 1.1.1 2.0MiB https://repo.pigsty.io/yum/pgsql/el9.aarch64/vchord_18-1.1.1-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 18 vchord_18 vchord_18-1.1.1-1PIGSTY.el10.x86_64.rpm pigsty 1.1.1 2.2MiB https://repo.pigsty.io/yum/pgsql/el10.x86_64/vchord_18-1.1.1-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 18 vchord_18 vchord_18-1.1.1-1PIGSTY.el10.aarch64.rpm pigsty 1.1.1 1.9MiB https://repo.pigsty.io/yum/pgsql/el10.aarch64/vchord_18-1.1.1-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 18 postgresql-18-vchord postgresql-18-vchord_1.1.1-1PIGSTY~bookworm_amd64.deb pigsty 1.1.1 2.1MiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/v/vchord/postgresql-18-vchord_1.1.1-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 18 postgresql-18-vchord postgresql-18-vchord_1.1.1-1PIGSTY~bookworm_arm64.deb pigsty 1.1.1 1.7MiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/v/vchord/postgresql-18-vchord_1.1.1-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 18 postgresql-18-vchord postgresql-18-vchord_1.1.1-1PIGSTY~trixie_amd64.deb pigsty 1.1.1 2.1MiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/v/vchord/postgresql-18-vchord_1.1.1-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 18 postgresql-18-vchord postgresql-18-vchord_1.1.1-1PIGSTY~trixie_arm64.deb pigsty 1.1.1 1.7MiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/v/vchord/postgresql-18-vchord_1.1.1-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 18 postgresql-18-vchord postgresql-18-vchord_1.1.1-1PIGSTY~jammy_amd64.deb pigsty 1.1.1 2.3MiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/v/vchord/postgresql-18-vchord_1.1.1-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 18 postgresql-18-vchord postgresql-18-vchord_1.1.1-1PIGSTY~jammy_arm64.deb pigsty 1.1.1 2.0MiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/v/vchord/postgresql-18-vchord_1.1.1-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 18 postgresql-18-vchord postgresql-18-vchord_1.1.1-1PIGSTY~noble_amd64.deb pigsty 1.1.1 2.3MiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/v/vchord/postgresql-18-vchord_1.1.1-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 18 postgresql-18-vchord postgresql-18-vchord_1.1.1-1PIGSTY~noble_arm64.deb pigsty 1.1.1 2.0MiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/v/vchord/postgresql-18-vchord_1.1.1-1PIGSTY~noble_arm64.deb
-@ el8.x86_64 17 vchord_17 vchord_17-1.1.1-1PIGSTY.el8.x86_64.rpm pigsty 1.1.1 2.3MiB https://repo.pigsty.io/yum/pgsql/el8.x86_64/vchord_17-1.1.1-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 17 vchord_17 vchord_17-1.1.1-1PIGSTY.el8.aarch64.rpm pigsty 1.1.1 1.9MiB https://repo.pigsty.io/yum/pgsql/el8.aarch64/vchord_17-1.1.1-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 17 vchord_17 vchord_17-1.1.1-1PIGSTY.el9.x86_64.rpm pigsty 1.1.1 2.3MiB https://repo.pigsty.io/yum/pgsql/el9.x86_64/vchord_17-1.1.1-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 17 vchord_17 vchord_17-1.1.1-1PIGSTY.el9.aarch64.rpm pigsty 1.1.1 2.0MiB https://repo.pigsty.io/yum/pgsql/el9.aarch64/vchord_17-1.1.1-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 17 vchord_17 vchord_17-1.1.1-1PIGSTY.el10.x86_64.rpm pigsty 1.1.1 2.2MiB https://repo.pigsty.io/yum/pgsql/el10.x86_64/vchord_17-1.1.1-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 17 vchord_17 vchord_17-1.1.1-1PIGSTY.el10.aarch64.rpm pigsty 1.1.1 1.9MiB https://repo.pigsty.io/yum/pgsql/el10.aarch64/vchord_17-1.1.1-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 17 postgresql-17-vchord postgresql-17-vchord_1.1.1-1PIGSTY~bookworm_amd64.deb pigsty 1.1.1 2.1MiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/v/vchord/postgresql-17-vchord_1.1.1-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 17 postgresql-17-vchord postgresql-17-vchord_1.1.1-1PIGSTY~bookworm_arm64.deb pigsty 1.1.1 1.7MiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/v/vchord/postgresql-17-vchord_1.1.1-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 17 postgresql-17-vchord postgresql-17-vchord_1.1.1-1PIGSTY~trixie_amd64.deb pigsty 1.1.1 2.1MiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/v/vchord/postgresql-17-vchord_1.1.1-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 17 postgresql-17-vchord postgresql-17-vchord_1.1.1-1PIGSTY~trixie_arm64.deb pigsty 1.1.1 1.7MiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/v/vchord/postgresql-17-vchord_1.1.1-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 17 postgresql-17-vchord postgresql-17-vchord_1.1.1-1PIGSTY~jammy_amd64.deb pigsty 1.1.1 2.3MiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/v/vchord/postgresql-17-vchord_1.1.1-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 17 postgresql-17-vchord postgresql-17-vchord_1.1.1-1PIGSTY~jammy_arm64.deb pigsty 1.1.1 2.0MiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/v/vchord/postgresql-17-vchord_1.1.1-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 17 postgresql-17-vchord postgresql-17-vchord_1.1.1-1PIGSTY~noble_amd64.deb pigsty 1.1.1 2.3MiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/v/vchord/postgresql-17-vchord_1.1.1-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 17 postgresql-17-vchord postgresql-17-vchord_1.1.1-1PIGSTY~noble_arm64.deb pigsty 1.1.1 2.0MiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/v/vchord/postgresql-17-vchord_1.1.1-1PIGSTY~noble_arm64.deb
-@ el8.x86_64 16 vchord_16 vchord_16-1.1.1-1PIGSTY.el8.x86_64.rpm pigsty 1.1.1 2.3MiB https://repo.pigsty.io/yum/pgsql/el8.x86_64/vchord_16-1.1.1-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 16 vchord_16 vchord_16-1.1.1-1PIGSTY.el8.aarch64.rpm pigsty 1.1.1 1.8MiB https://repo.pigsty.io/yum/pgsql/el8.aarch64/vchord_16-1.1.1-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 16 vchord_16 vchord_16-1.1.1-1PIGSTY.el9.x86_64.rpm pigsty 1.1.1 2.3MiB https://repo.pigsty.io/yum/pgsql/el9.x86_64/vchord_16-1.1.1-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 16 vchord_16 vchord_16-1.1.1-1PIGSTY.el9.aarch64.rpm pigsty 1.1.1 2.0MiB https://repo.pigsty.io/yum/pgsql/el9.aarch64/vchord_16-1.1.1-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 16 vchord_16 vchord_16-1.1.1-1PIGSTY.el10.x86_64.rpm pigsty 1.1.1 2.2MiB https://repo.pigsty.io/yum/pgsql/el10.x86_64/vchord_16-1.1.1-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 16 vchord_16 vchord_16-1.1.1-1PIGSTY.el10.aarch64.rpm pigsty 1.1.1 1.9MiB https://repo.pigsty.io/yum/pgsql/el10.aarch64/vchord_16-1.1.1-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 16 postgresql-16-vchord postgresql-16-vchord_1.1.1-1PIGSTY~bookworm_amd64.deb pigsty 1.1.1 2.1MiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/v/vchord/postgresql-16-vchord_1.1.1-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 16 postgresql-16-vchord postgresql-16-vchord_1.1.1-1PIGSTY~bookworm_arm64.deb pigsty 1.1.1 1.7MiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/v/vchord/postgresql-16-vchord_1.1.1-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 16 postgresql-16-vchord postgresql-16-vchord_1.1.1-1PIGSTY~trixie_amd64.deb pigsty 1.1.1 2.1MiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/v/vchord/postgresql-16-vchord_1.1.1-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 16 postgresql-16-vchord postgresql-16-vchord_1.1.1-1PIGSTY~trixie_arm64.deb pigsty 1.1.1 1.7MiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/v/vchord/postgresql-16-vchord_1.1.1-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 16 postgresql-16-vchord postgresql-16-vchord_1.1.1-1PIGSTY~jammy_amd64.deb pigsty 1.1.1 2.3MiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/v/vchord/postgresql-16-vchord_1.1.1-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 16 postgresql-16-vchord postgresql-16-vchord_1.1.1-1PIGSTY~jammy_arm64.deb pigsty 1.1.1 2.0MiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/v/vchord/postgresql-16-vchord_1.1.1-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 16 postgresql-16-vchord postgresql-16-vchord_1.1.1-1PIGSTY~noble_amd64.deb pigsty 1.1.1 2.3MiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/v/vchord/postgresql-16-vchord_1.1.1-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 16 postgresql-16-vchord postgresql-16-vchord_1.1.1-1PIGSTY~noble_arm64.deb pigsty 1.1.1 2.0MiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/v/vchord/postgresql-16-vchord_1.1.1-1PIGSTY~noble_arm64.deb
-@ el8.x86_64 15 vchord_15 vchord_15-1.1.1-1PIGSTY.el8.x86_64.rpm pigsty 1.1.1 2.3MiB https://repo.pigsty.io/yum/pgsql/el8.x86_64/vchord_15-1.1.1-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 15 vchord_15 vchord_15-1.1.1-1PIGSTY.el8.aarch64.rpm pigsty 1.1.1 1.8MiB https://repo.pigsty.io/yum/pgsql/el8.aarch64/vchord_15-1.1.1-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 15 vchord_15 vchord_15-1.1.1-1PIGSTY.el9.x86_64.rpm pigsty 1.1.1 2.3MiB https://repo.pigsty.io/yum/pgsql/el9.x86_64/vchord_15-1.1.1-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 15 vchord_15 vchord_15-1.1.1-1PIGSTY.el9.aarch64.rpm pigsty 1.1.1 2.0MiB https://repo.pigsty.io/yum/pgsql/el9.aarch64/vchord_15-1.1.1-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 15 vchord_15 vchord_15-1.1.1-1PIGSTY.el10.x86_64.rpm pigsty 1.1.1 2.2MiB https://repo.pigsty.io/yum/pgsql/el10.x86_64/vchord_15-1.1.1-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 15 vchord_15 vchord_15-1.1.1-1PIGSTY.el10.aarch64.rpm pigsty 1.1.1 1.9MiB https://repo.pigsty.io/yum/pgsql/el10.aarch64/vchord_15-1.1.1-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 15 postgresql-15-vchord postgresql-15-vchord_1.1.1-1PIGSTY~bookworm_amd64.deb pigsty 1.1.1 2.1MiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/v/vchord/postgresql-15-vchord_1.1.1-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 15 postgresql-15-vchord postgresql-15-vchord_1.1.1-1PIGSTY~bookworm_arm64.deb pigsty 1.1.1 1.7MiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/v/vchord/postgresql-15-vchord_1.1.1-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 15 postgresql-15-vchord postgresql-15-vchord_1.1.1-1PIGSTY~trixie_amd64.deb pigsty 1.1.1 2.1MiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/v/vchord/postgresql-15-vchord_1.1.1-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 15 postgresql-15-vchord postgresql-15-vchord_1.1.1-1PIGSTY~trixie_arm64.deb pigsty 1.1.1 1.7MiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/v/vchord/postgresql-15-vchord_1.1.1-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 15 postgresql-15-vchord postgresql-15-vchord_1.1.1-1PIGSTY~jammy_amd64.deb pigsty 1.1.1 2.3MiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/v/vchord/postgresql-15-vchord_1.1.1-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 15 postgresql-15-vchord postgresql-15-vchord_1.1.1-1PIGSTY~jammy_arm64.deb pigsty 1.1.1 2.0MiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/v/vchord/postgresql-15-vchord_1.1.1-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 15 postgresql-15-vchord postgresql-15-vchord_1.1.1-1PIGSTY~noble_amd64.deb pigsty 1.1.1 2.3MiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/v/vchord/postgresql-15-vchord_1.1.1-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 15 postgresql-15-vchord postgresql-15-vchord_1.1.1-1PIGSTY~noble_arm64.deb pigsty 1.1.1 2.0MiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/v/vchord/postgresql-15-vchord_1.1.1-1PIGSTY~noble_arm64.deb
-@ el8.x86_64 14 vchord_14 vchord_14-1.1.1-1PIGSTY.el8.x86_64.rpm pigsty 1.1.1 2.3MiB https://repo.pigsty.io/yum/pgsql/el8.x86_64/vchord_14-1.1.1-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 14 vchord_14 vchord_14-1.1.1-1PIGSTY.el8.aarch64.rpm pigsty 1.1.1 1.8MiB https://repo.pigsty.io/yum/pgsql/el8.aarch64/vchord_14-1.1.1-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 14 vchord_14 vchord_14-1.1.1-1PIGSTY.el9.x86_64.rpm pigsty 1.1.1 2.3MiB https://repo.pigsty.io/yum/pgsql/el9.x86_64/vchord_14-1.1.1-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 14 vchord_14 vchord_14-1.1.1-1PIGSTY.el9.aarch64.rpm pigsty 1.1.1 2.0MiB https://repo.pigsty.io/yum/pgsql/el9.aarch64/vchord_14-1.1.1-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 14 vchord_14 vchord_14-1.1.1-1PIGSTY.el10.x86_64.rpm pigsty 1.1.1 2.2MiB https://repo.pigsty.io/yum/pgsql/el10.x86_64/vchord_14-1.1.1-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 14 vchord_14 vchord_14-1.1.1-1PIGSTY.el10.aarch64.rpm pigsty 1.1.1 1.9MiB https://repo.pigsty.io/yum/pgsql/el10.aarch64/vchord_14-1.1.1-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 14 postgresql-14-vchord postgresql-14-vchord_1.1.1-1PIGSTY~bookworm_amd64.deb pigsty 1.1.1 2.1MiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/v/vchord/postgresql-14-vchord_1.1.1-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 14 postgresql-14-vchord postgresql-14-vchord_1.1.1-1PIGSTY~bookworm_arm64.deb pigsty 1.1.1 1.7MiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/v/vchord/postgresql-14-vchord_1.1.1-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 14 postgresql-14-vchord postgresql-14-vchord_1.1.1-1PIGSTY~trixie_amd64.deb pigsty 1.1.1 2.1MiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/v/vchord/postgresql-14-vchord_1.1.1-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 14 postgresql-14-vchord postgresql-14-vchord_1.1.1-1PIGSTY~trixie_arm64.deb pigsty 1.1.1 1.7MiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/v/vchord/postgresql-14-vchord_1.1.1-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 14 postgresql-14-vchord postgresql-14-vchord_1.1.1-1PIGSTY~jammy_amd64.deb pigsty 1.1.1 2.3MiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/v/vchord/postgresql-14-vchord_1.1.1-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 14 postgresql-14-vchord postgresql-14-vchord_1.1.1-1PIGSTY~jammy_arm64.deb pigsty 1.1.1 2.0MiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/v/vchord/postgresql-14-vchord_1.1.1-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 14 postgresql-14-vchord postgresql-14-vchord_1.1.1-1PIGSTY~noble_amd64.deb pigsty 1.1.1 2.3MiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/v/vchord/postgresql-14-vchord_1.1.1-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 14 postgresql-14-vchord postgresql-14-vchord_1.1.1-1PIGSTY~noble_arm64.deb pigsty 1.1.1 2.0MiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/v/vchord/postgresql-14-vchord_1.1.1-1PIGSTY~noble_arm64.deb
+@ el8.x86_64 18 vchord_18 vchord_18-1.1.1-1PIGSTY.el8.x86_64.rpm pigsty 1.1.1 2.3MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/vchord_18-1.1.1-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 18 vchord_18 vchord_18-1.1.1-1PIGSTY.el8.aarch64.rpm pigsty 1.1.1 1.9MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/vchord_18-1.1.1-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 18 vchord_18 vchord_18-1.1.1-1PIGSTY.el9.x86_64.rpm pigsty 1.1.1 2.3MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/vchord_18-1.1.1-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 18 vchord_18 vchord_18-1.1.1-1PIGSTY.el9.aarch64.rpm pigsty 1.1.1 2.0MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/vchord_18-1.1.1-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 18 vchord_18 vchord_18-1.1.1-1PIGSTY.el10.x86_64.rpm pigsty 1.1.1 2.2MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/vchord_18-1.1.1-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 18 vchord_18 vchord_18-1.1.1-1PIGSTY.el10.aarch64.rpm pigsty 1.1.1 1.9MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/vchord_18-1.1.1-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-vchord postgresql-18-vchord_1.1.1-1PIGSTY~bookworm_amd64.deb pigsty 1.1.1 2.1MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/v/vchord/postgresql-18-vchord_1.1.1-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 18 postgresql-18-vchord postgresql-18-vchord_1.1.1-1PIGSTY~bookworm_arm64.deb pigsty 1.1.1 1.7MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/v/vchord/postgresql-18-vchord_1.1.1-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 18 postgresql-18-vchord postgresql-18-vchord_1.1.1-1PIGSTY~trixie_amd64.deb pigsty 1.1.1 2.1MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/v/vchord/postgresql-18-vchord_1.1.1-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 18 postgresql-18-vchord postgresql-18-vchord_1.1.1-1PIGSTY~trixie_arm64.deb pigsty 1.1.1 1.7MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/v/vchord/postgresql-18-vchord_1.1.1-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 18 postgresql-18-vchord postgresql-18-vchord_1.1.1-1PIGSTY~jammy_amd64.deb pigsty 1.1.1 2.3MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/v/vchord/postgresql-18-vchord_1.1.1-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 18 postgresql-18-vchord postgresql-18-vchord_1.1.1-1PIGSTY~jammy_arm64.deb pigsty 1.1.1 2.0MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/v/vchord/postgresql-18-vchord_1.1.1-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 18 postgresql-18-vchord postgresql-18-vchord_1.1.1-1PIGSTY~noble_amd64.deb pigsty 1.1.1 2.3MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/v/vchord/postgresql-18-vchord_1.1.1-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 18 postgresql-18-vchord postgresql-18-vchord_1.1.1-1PIGSTY~noble_arm64.deb pigsty 1.1.1 2.0MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/v/vchord/postgresql-18-vchord_1.1.1-1PIGSTY~noble_arm64.deb
+@ el8.x86_64 17 vchord_17 vchord_17-1.1.1-1PIGSTY.el8.x86_64.rpm pigsty 1.1.1 2.3MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/vchord_17-1.1.1-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 17 vchord_17 vchord_17-1.1.1-1PIGSTY.el8.aarch64.rpm pigsty 1.1.1 1.9MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/vchord_17-1.1.1-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 17 vchord_17 vchord_17-1.1.1-1PIGSTY.el9.x86_64.rpm pigsty 1.1.1 2.3MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/vchord_17-1.1.1-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 17 vchord_17 vchord_17-1.1.1-1PIGSTY.el9.aarch64.rpm pigsty 1.1.1 2.0MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/vchord_17-1.1.1-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 17 vchord_17 vchord_17-1.1.1-1PIGSTY.el10.x86_64.rpm pigsty 1.1.1 2.2MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/vchord_17-1.1.1-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 17 vchord_17 vchord_17-1.1.1-1PIGSTY.el10.aarch64.rpm pigsty 1.1.1 1.9MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/vchord_17-1.1.1-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-vchord postgresql-17-vchord_1.1.1-1PIGSTY~bookworm_amd64.deb pigsty 1.1.1 2.1MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/v/vchord/postgresql-17-vchord_1.1.1-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 17 postgresql-17-vchord postgresql-17-vchord_1.1.1-1PIGSTY~bookworm_arm64.deb pigsty 1.1.1 1.7MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/v/vchord/postgresql-17-vchord_1.1.1-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 17 postgresql-17-vchord postgresql-17-vchord_1.1.1-1PIGSTY~trixie_amd64.deb pigsty 1.1.1 2.1MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/v/vchord/postgresql-17-vchord_1.1.1-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 17 postgresql-17-vchord postgresql-17-vchord_1.1.1-1PIGSTY~trixie_arm64.deb pigsty 1.1.1 1.7MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/v/vchord/postgresql-17-vchord_1.1.1-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 17 postgresql-17-vchord postgresql-17-vchord_1.1.1-1PIGSTY~jammy_amd64.deb pigsty 1.1.1 2.3MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/v/vchord/postgresql-17-vchord_1.1.1-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 17 postgresql-17-vchord postgresql-17-vchord_1.1.1-1PIGSTY~jammy_arm64.deb pigsty 1.1.1 2.0MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/v/vchord/postgresql-17-vchord_1.1.1-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 17 postgresql-17-vchord postgresql-17-vchord_1.1.1-1PIGSTY~noble_amd64.deb pigsty 1.1.1 2.3MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/v/vchord/postgresql-17-vchord_1.1.1-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 17 postgresql-17-vchord postgresql-17-vchord_1.1.1-1PIGSTY~noble_arm64.deb pigsty 1.1.1 2.0MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/v/vchord/postgresql-17-vchord_1.1.1-1PIGSTY~noble_arm64.deb
+@ el8.x86_64 16 vchord_16 vchord_16-1.1.1-1PIGSTY.el8.x86_64.rpm pigsty 1.1.1 2.3MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/vchord_16-1.1.1-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 16 vchord_16 vchord_16-1.1.1-1PIGSTY.el8.aarch64.rpm pigsty 1.1.1 1.8MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/vchord_16-1.1.1-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 16 vchord_16 vchord_16-1.1.1-1PIGSTY.el9.x86_64.rpm pigsty 1.1.1 2.3MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/vchord_16-1.1.1-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 16 vchord_16 vchord_16-1.1.1-1PIGSTY.el9.aarch64.rpm pigsty 1.1.1 2.0MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/vchord_16-1.1.1-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 16 vchord_16 vchord_16-1.1.1-1PIGSTY.el10.x86_64.rpm pigsty 1.1.1 2.2MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/vchord_16-1.1.1-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 16 vchord_16 vchord_16-1.1.1-1PIGSTY.el10.aarch64.rpm pigsty 1.1.1 1.9MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/vchord_16-1.1.1-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 16 postgresql-16-vchord postgresql-16-vchord_1.1.1-1PIGSTY~bookworm_amd64.deb pigsty 1.1.1 2.1MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/v/vchord/postgresql-16-vchord_1.1.1-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 16 postgresql-16-vchord postgresql-16-vchord_1.1.1-1PIGSTY~bookworm_arm64.deb pigsty 1.1.1 1.7MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/v/vchord/postgresql-16-vchord_1.1.1-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 16 postgresql-16-vchord postgresql-16-vchord_1.1.1-1PIGSTY~trixie_amd64.deb pigsty 1.1.1 2.1MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/v/vchord/postgresql-16-vchord_1.1.1-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 16 postgresql-16-vchord postgresql-16-vchord_1.1.1-1PIGSTY~trixie_arm64.deb pigsty 1.1.1 1.7MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/v/vchord/postgresql-16-vchord_1.1.1-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 16 postgresql-16-vchord postgresql-16-vchord_1.1.1-1PIGSTY~jammy_amd64.deb pigsty 1.1.1 2.3MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/v/vchord/postgresql-16-vchord_1.1.1-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 16 postgresql-16-vchord postgresql-16-vchord_1.1.1-1PIGSTY~jammy_arm64.deb pigsty 1.1.1 2.0MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/v/vchord/postgresql-16-vchord_1.1.1-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 16 postgresql-16-vchord postgresql-16-vchord_1.1.1-1PIGSTY~noble_amd64.deb pigsty 1.1.1 2.3MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/v/vchord/postgresql-16-vchord_1.1.1-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 16 postgresql-16-vchord postgresql-16-vchord_1.1.1-1PIGSTY~noble_arm64.deb pigsty 1.1.1 2.0MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/v/vchord/postgresql-16-vchord_1.1.1-1PIGSTY~noble_arm64.deb
+@ el8.x86_64 15 vchord_15 vchord_15-1.1.1-1PIGSTY.el8.x86_64.rpm pigsty 1.1.1 2.3MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/vchord_15-1.1.1-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 15 vchord_15 vchord_15-1.1.1-1PIGSTY.el8.aarch64.rpm pigsty 1.1.1 1.8MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/vchord_15-1.1.1-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 15 vchord_15 vchord_15-1.1.1-1PIGSTY.el9.x86_64.rpm pigsty 1.1.1 2.3MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/vchord_15-1.1.1-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 15 vchord_15 vchord_15-1.1.1-1PIGSTY.el9.aarch64.rpm pigsty 1.1.1 2.0MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/vchord_15-1.1.1-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 15 vchord_15 vchord_15-1.1.1-1PIGSTY.el10.x86_64.rpm pigsty 1.1.1 2.2MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/vchord_15-1.1.1-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 15 vchord_15 vchord_15-1.1.1-1PIGSTY.el10.aarch64.rpm pigsty 1.1.1 1.9MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/vchord_15-1.1.1-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 15 postgresql-15-vchord postgresql-15-vchord_1.1.1-1PIGSTY~bookworm_amd64.deb pigsty 1.1.1 2.1MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/v/vchord/postgresql-15-vchord_1.1.1-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 15 postgresql-15-vchord postgresql-15-vchord_1.1.1-1PIGSTY~bookworm_arm64.deb pigsty 1.1.1 1.7MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/v/vchord/postgresql-15-vchord_1.1.1-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 15 postgresql-15-vchord postgresql-15-vchord_1.1.1-1PIGSTY~trixie_amd64.deb pigsty 1.1.1 2.1MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/v/vchord/postgresql-15-vchord_1.1.1-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 15 postgresql-15-vchord postgresql-15-vchord_1.1.1-1PIGSTY~trixie_arm64.deb pigsty 1.1.1 1.7MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/v/vchord/postgresql-15-vchord_1.1.1-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 15 postgresql-15-vchord postgresql-15-vchord_1.1.1-1PIGSTY~jammy_amd64.deb pigsty 1.1.1 2.3MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/v/vchord/postgresql-15-vchord_1.1.1-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 15 postgresql-15-vchord postgresql-15-vchord_1.1.1-1PIGSTY~jammy_arm64.deb pigsty 1.1.1 2.0MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/v/vchord/postgresql-15-vchord_1.1.1-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 15 postgresql-15-vchord postgresql-15-vchord_1.1.1-1PIGSTY~noble_amd64.deb pigsty 1.1.1 2.3MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/v/vchord/postgresql-15-vchord_1.1.1-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 15 postgresql-15-vchord postgresql-15-vchord_1.1.1-1PIGSTY~noble_arm64.deb pigsty 1.1.1 2.0MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/v/vchord/postgresql-15-vchord_1.1.1-1PIGSTY~noble_arm64.deb
+@ el8.x86_64 14 vchord_14 vchord_14-1.1.1-1PIGSTY.el8.x86_64.rpm pigsty 1.1.1 2.3MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/vchord_14-1.1.1-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 14 vchord_14 vchord_14-1.1.1-1PIGSTY.el8.aarch64.rpm pigsty 1.1.1 1.8MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/vchord_14-1.1.1-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 14 vchord_14 vchord_14-1.1.1-1PIGSTY.el9.x86_64.rpm pigsty 1.1.1 2.3MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/vchord_14-1.1.1-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 14 vchord_14 vchord_14-1.1.1-1PIGSTY.el9.aarch64.rpm pigsty 1.1.1 2.0MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/vchord_14-1.1.1-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 14 vchord_14 vchord_14-1.1.1-1PIGSTY.el10.x86_64.rpm pigsty 1.1.1 2.2MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/vchord_14-1.1.1-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 14 vchord_14 vchord_14-1.1.1-1PIGSTY.el10.aarch64.rpm pigsty 1.1.1 1.9MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/vchord_14-1.1.1-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 14 postgresql-14-vchord postgresql-14-vchord_1.1.1-1PIGSTY~bookworm_amd64.deb pigsty 1.1.1 2.1MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/v/vchord/postgresql-14-vchord_1.1.1-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 14 postgresql-14-vchord postgresql-14-vchord_1.1.1-1PIGSTY~bookworm_arm64.deb pigsty 1.1.1 1.7MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/v/vchord/postgresql-14-vchord_1.1.1-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 14 postgresql-14-vchord postgresql-14-vchord_1.1.1-1PIGSTY~trixie_amd64.deb pigsty 1.1.1 2.1MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/v/vchord/postgresql-14-vchord_1.1.1-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 14 postgresql-14-vchord postgresql-14-vchord_1.1.1-1PIGSTY~trixie_arm64.deb pigsty 1.1.1 1.7MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/v/vchord/postgresql-14-vchord_1.1.1-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 14 postgresql-14-vchord postgresql-14-vchord_1.1.1-1PIGSTY~jammy_amd64.deb pigsty 1.1.1 2.3MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/v/vchord/postgresql-14-vchord_1.1.1-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 14 postgresql-14-vchord postgresql-14-vchord_1.1.1-1PIGSTY~jammy_arm64.deb pigsty 1.1.1 2.0MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/v/vchord/postgresql-14-vchord_1.1.1-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 14 postgresql-14-vchord postgresql-14-vchord_1.1.1-1PIGSTY~noble_amd64.deb pigsty 1.1.1 2.3MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/v/vchord/postgresql-14-vchord_1.1.1-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 14 postgresql-14-vchord postgresql-14-vchord_1.1.1-1PIGSTY~noble_arm64.deb pigsty 1.1.1 2.0MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/v/vchord/postgresql-14-vchord_1.1.1-1PIGSTY~noble_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建

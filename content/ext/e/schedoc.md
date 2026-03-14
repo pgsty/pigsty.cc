@@ -11,7 +11,7 @@ weight: 4330
     <div class="ext-card__title">ZeroGachis/pg_schedoc</div>
     <div class="ext-card__desc">https://github.com/ZeroGachis/pg_schedoc</div>
   </a>
-  <a class="ext-card ext-card--source" href="pg_schedoc-0.0.1.tar.gz">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pg_schedoc-0.0.1.tar.gz">
     <div class="ext-card__kicker">源码</div>
     <div class="ext-card__title">pg_schedoc-0.0.1.tar.gz</div>
     <div class="ext-card__desc">pg_schedoc-0.0.1.tar.gz</div>
@@ -64,76 +64,76 @@ weight: 4330
 | u22.aarch64 | AVAIL PIGSTY 0.0.1 1 | AVAIL PIGSTY 0.0.1 1 | AVAIL PIGSTY 0.0.1 1 | AVAIL PIGSTY 0.0.1 1 | AVAIL PIGSTY 0.0.1 1 |
 | u24.x86_64 | AVAIL PIGSTY 0.0.1 1 | AVAIL PIGSTY 0.0.1 1 | AVAIL PIGSTY 0.0.1 1 | AVAIL PIGSTY 0.0.1 1 | AVAIL PIGSTY 0.0.1 1 |
 | u24.aarch64 | AVAIL PIGSTY 0.0.1 1 | AVAIL PIGSTY 0.0.1 1 | AVAIL PIGSTY 0.0.1 1 | AVAIL PIGSTY 0.0.1 1 | AVAIL PIGSTY 0.0.1 1 |
-@ el8.x86_64 18 pg_schedoc_18 pg_schedoc_18-0.0.1-1PIGSTY.el8.x86_64.rpm pigsty 0.0.1 22.9KiB https://repo.pigsty.io/yum/pgsql/el8.x86_64/pg_schedoc_18-0.0.1-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 18 pg_schedoc_18 pg_schedoc_18-0.0.1-1PIGSTY.el8.aarch64.rpm pigsty 0.0.1 22.9KiB https://repo.pigsty.io/yum/pgsql/el8.aarch64/pg_schedoc_18-0.0.1-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 18 pg_schedoc_18 pg_schedoc_18-0.0.1-1PIGSTY.el9.x86_64.rpm pigsty 0.0.1 22.5KiB https://repo.pigsty.io/yum/pgsql/el9.x86_64/pg_schedoc_18-0.0.1-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 18 pg_schedoc_18 pg_schedoc_18-0.0.1-1PIGSTY.el9.aarch64.rpm pigsty 0.0.1 22.5KiB https://repo.pigsty.io/yum/pgsql/el9.aarch64/pg_schedoc_18-0.0.1-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 18 pg_schedoc_18 pg_schedoc_18-0.0.1-1PIGSTY.el10.x86_64.rpm pigsty 0.0.1 22.6KiB https://repo.pigsty.io/yum/pgsql/el10.x86_64/pg_schedoc_18-0.0.1-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 18 pg_schedoc_18 pg_schedoc_18-0.0.1-1PIGSTY.el10.aarch64.rpm pigsty 0.0.1 22.6KiB https://repo.pigsty.io/yum/pgsql/el10.aarch64/pg_schedoc_18-0.0.1-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 18 postgresql-18-pg-schedoc postgresql-18-pg-schedoc_0.0.1-1PIGSTY~bookworm_amd64.deb pigsty 0.0.1 4.5KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/pg-schedoc/postgresql-18-pg-schedoc_0.0.1-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 18 postgresql-18-pg-schedoc postgresql-18-pg-schedoc_0.0.1-1PIGSTY~bookworm_arm64.deb pigsty 0.0.1 4.5KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/pg-schedoc/postgresql-18-pg-schedoc_0.0.1-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 18 postgresql-18-pg-schedoc postgresql-18-pg-schedoc_0.0.1-1PIGSTY~trixie_amd64.deb pigsty 0.0.1 4.5KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pg-schedoc/postgresql-18-pg-schedoc_0.0.1-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 18 postgresql-18-pg-schedoc postgresql-18-pg-schedoc_0.0.1-1PIGSTY~trixie_arm64.deb pigsty 0.0.1 4.5KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pg-schedoc/postgresql-18-pg-schedoc_0.0.1-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 18 postgresql-18-pg-schedoc postgresql-18-pg-schedoc_0.0.1-1PIGSTY~jammy_amd64.deb pigsty 0.0.1 4.4KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/pg-schedoc/postgresql-18-pg-schedoc_0.0.1-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 18 postgresql-18-pg-schedoc postgresql-18-pg-schedoc_0.0.1-1PIGSTY~jammy_arm64.deb pigsty 0.0.1 4.4KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/pg-schedoc/postgresql-18-pg-schedoc_0.0.1-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 18 postgresql-18-pg-schedoc postgresql-18-pg-schedoc_0.0.1-1PIGSTY~noble_amd64.deb pigsty 0.0.1 4.4KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pg-schedoc/postgresql-18-pg-schedoc_0.0.1-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 18 postgresql-18-pg-schedoc postgresql-18-pg-schedoc_0.0.1-1PIGSTY~noble_arm64.deb pigsty 0.0.1 4.4KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pg-schedoc/postgresql-18-pg-schedoc_0.0.1-1PIGSTY~noble_arm64.deb
-@ el8.x86_64 17 pg_schedoc_17 pg_schedoc_17-0.0.1-1PIGSTY.el8.x86_64.rpm pigsty 0.0.1 22.9KiB https://repo.pigsty.io/yum/pgsql/el8.x86_64/pg_schedoc_17-0.0.1-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 17 pg_schedoc_17 pg_schedoc_17-0.0.1-1PIGSTY.el8.aarch64.rpm pigsty 0.0.1 22.9KiB https://repo.pigsty.io/yum/pgsql/el8.aarch64/pg_schedoc_17-0.0.1-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 17 pg_schedoc_17 pg_schedoc_17-0.0.1-1PIGSTY.el9.x86_64.rpm pigsty 0.0.1 22.5KiB https://repo.pigsty.io/yum/pgsql/el9.x86_64/pg_schedoc_17-0.0.1-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 17 pg_schedoc_17 pg_schedoc_17-0.0.1-1PIGSTY.el9.aarch64.rpm pigsty 0.0.1 22.5KiB https://repo.pigsty.io/yum/pgsql/el9.aarch64/pg_schedoc_17-0.0.1-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 17 pg_schedoc_17 pg_schedoc_17-0.0.1-1PIGSTY.el10.x86_64.rpm pigsty 0.0.1 22.6KiB https://repo.pigsty.io/yum/pgsql/el10.x86_64/pg_schedoc_17-0.0.1-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 17 pg_schedoc_17 pg_schedoc_17-0.0.1-1PIGSTY.el10.aarch64.rpm pigsty 0.0.1 22.6KiB https://repo.pigsty.io/yum/pgsql/el10.aarch64/pg_schedoc_17-0.0.1-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 17 postgresql-17-pg-schedoc postgresql-17-pg-schedoc_0.0.1-1PIGSTY~bookworm_amd64.deb pigsty 0.0.1 4.5KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/pg-schedoc/postgresql-17-pg-schedoc_0.0.1-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 17 postgresql-17-pg-schedoc postgresql-17-pg-schedoc_0.0.1-1PIGSTY~bookworm_arm64.deb pigsty 0.0.1 4.5KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/pg-schedoc/postgresql-17-pg-schedoc_0.0.1-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 17 postgresql-17-pg-schedoc postgresql-17-pg-schedoc_0.0.1-1PIGSTY~trixie_amd64.deb pigsty 0.0.1 4.5KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pg-schedoc/postgresql-17-pg-schedoc_0.0.1-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 17 postgresql-17-pg-schedoc postgresql-17-pg-schedoc_0.0.1-1PIGSTY~trixie_arm64.deb pigsty 0.0.1 4.5KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pg-schedoc/postgresql-17-pg-schedoc_0.0.1-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 17 postgresql-17-pg-schedoc postgresql-17-pg-schedoc_0.0.1-1PIGSTY~jammy_amd64.deb pigsty 0.0.1 4.4KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/pg-schedoc/postgresql-17-pg-schedoc_0.0.1-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 17 postgresql-17-pg-schedoc postgresql-17-pg-schedoc_0.0.1-1PIGSTY~jammy_arm64.deb pigsty 0.0.1 4.4KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/pg-schedoc/postgresql-17-pg-schedoc_0.0.1-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 17 postgresql-17-pg-schedoc postgresql-17-pg-schedoc_0.0.1-1PIGSTY~noble_amd64.deb pigsty 0.0.1 4.4KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pg-schedoc/postgresql-17-pg-schedoc_0.0.1-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 17 postgresql-17-pg-schedoc postgresql-17-pg-schedoc_0.0.1-1PIGSTY~noble_arm64.deb pigsty 0.0.1 4.4KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pg-schedoc/postgresql-17-pg-schedoc_0.0.1-1PIGSTY~noble_arm64.deb
-@ el8.x86_64 16 pg_schedoc_16 pg_schedoc_16-0.0.1-1PIGSTY.el8.x86_64.rpm pigsty 0.0.1 22.9KiB https://repo.pigsty.io/yum/pgsql/el8.x86_64/pg_schedoc_16-0.0.1-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 16 pg_schedoc_16 pg_schedoc_16-0.0.1-1PIGSTY.el8.aarch64.rpm pigsty 0.0.1 22.9KiB https://repo.pigsty.io/yum/pgsql/el8.aarch64/pg_schedoc_16-0.0.1-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 16 pg_schedoc_16 pg_schedoc_16-0.0.1-1PIGSTY.el9.x86_64.rpm pigsty 0.0.1 22.5KiB https://repo.pigsty.io/yum/pgsql/el9.x86_64/pg_schedoc_16-0.0.1-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 16 pg_schedoc_16 pg_schedoc_16-0.0.1-1PIGSTY.el9.aarch64.rpm pigsty 0.0.1 22.5KiB https://repo.pigsty.io/yum/pgsql/el9.aarch64/pg_schedoc_16-0.0.1-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 16 pg_schedoc_16 pg_schedoc_16-0.0.1-1PIGSTY.el10.x86_64.rpm pigsty 0.0.1 22.6KiB https://repo.pigsty.io/yum/pgsql/el10.x86_64/pg_schedoc_16-0.0.1-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 16 pg_schedoc_16 pg_schedoc_16-0.0.1-1PIGSTY.el10.aarch64.rpm pigsty 0.0.1 22.6KiB https://repo.pigsty.io/yum/pgsql/el10.aarch64/pg_schedoc_16-0.0.1-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 16 postgresql-16-pg-schedoc postgresql-16-pg-schedoc_0.0.1-1PIGSTY~bookworm_amd64.deb pigsty 0.0.1 4.5KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/pg-schedoc/postgresql-16-pg-schedoc_0.0.1-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 16 postgresql-16-pg-schedoc postgresql-16-pg-schedoc_0.0.1-1PIGSTY~bookworm_arm64.deb pigsty 0.0.1 4.5KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/pg-schedoc/postgresql-16-pg-schedoc_0.0.1-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 16 postgresql-16-pg-schedoc postgresql-16-pg-schedoc_0.0.1-1PIGSTY~trixie_amd64.deb pigsty 0.0.1 4.5KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pg-schedoc/postgresql-16-pg-schedoc_0.0.1-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 16 postgresql-16-pg-schedoc postgresql-16-pg-schedoc_0.0.1-1PIGSTY~trixie_arm64.deb pigsty 0.0.1 4.5KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pg-schedoc/postgresql-16-pg-schedoc_0.0.1-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 16 postgresql-16-pg-schedoc postgresql-16-pg-schedoc_0.0.1-1PIGSTY~jammy_amd64.deb pigsty 0.0.1 4.4KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/pg-schedoc/postgresql-16-pg-schedoc_0.0.1-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 16 postgresql-16-pg-schedoc postgresql-16-pg-schedoc_0.0.1-1PIGSTY~jammy_arm64.deb pigsty 0.0.1 4.4KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/pg-schedoc/postgresql-16-pg-schedoc_0.0.1-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 16 postgresql-16-pg-schedoc postgresql-16-pg-schedoc_0.0.1-1PIGSTY~noble_amd64.deb pigsty 0.0.1 4.4KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pg-schedoc/postgresql-16-pg-schedoc_0.0.1-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 16 postgresql-16-pg-schedoc postgresql-16-pg-schedoc_0.0.1-1PIGSTY~noble_arm64.deb pigsty 0.0.1 4.4KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pg-schedoc/postgresql-16-pg-schedoc_0.0.1-1PIGSTY~noble_arm64.deb
-@ el8.x86_64 15 pg_schedoc_15 pg_schedoc_15-0.0.1-1PIGSTY.el8.x86_64.rpm pigsty 0.0.1 22.9KiB https://repo.pigsty.io/yum/pgsql/el8.x86_64/pg_schedoc_15-0.0.1-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 15 pg_schedoc_15 pg_schedoc_15-0.0.1-1PIGSTY.el8.aarch64.rpm pigsty 0.0.1 22.9KiB https://repo.pigsty.io/yum/pgsql/el8.aarch64/pg_schedoc_15-0.0.1-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 15 pg_schedoc_15 pg_schedoc_15-0.0.1-1PIGSTY.el9.x86_64.rpm pigsty 0.0.1 22.5KiB https://repo.pigsty.io/yum/pgsql/el9.x86_64/pg_schedoc_15-0.0.1-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 15 pg_schedoc_15 pg_schedoc_15-0.0.1-1PIGSTY.el9.aarch64.rpm pigsty 0.0.1 22.5KiB https://repo.pigsty.io/yum/pgsql/el9.aarch64/pg_schedoc_15-0.0.1-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 15 pg_schedoc_15 pg_schedoc_15-0.0.1-1PIGSTY.el10.x86_64.rpm pigsty 0.0.1 22.6KiB https://repo.pigsty.io/yum/pgsql/el10.x86_64/pg_schedoc_15-0.0.1-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 15 pg_schedoc_15 pg_schedoc_15-0.0.1-1PIGSTY.el10.aarch64.rpm pigsty 0.0.1 22.6KiB https://repo.pigsty.io/yum/pgsql/el10.aarch64/pg_schedoc_15-0.0.1-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 15 postgresql-15-pg-schedoc postgresql-15-pg-schedoc_0.0.1-1PIGSTY~bookworm_amd64.deb pigsty 0.0.1 4.5KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/pg-schedoc/postgresql-15-pg-schedoc_0.0.1-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 15 postgresql-15-pg-schedoc postgresql-15-pg-schedoc_0.0.1-1PIGSTY~bookworm_arm64.deb pigsty 0.0.1 4.5KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/pg-schedoc/postgresql-15-pg-schedoc_0.0.1-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 15 postgresql-15-pg-schedoc postgresql-15-pg-schedoc_0.0.1-1PIGSTY~trixie_amd64.deb pigsty 0.0.1 4.5KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pg-schedoc/postgresql-15-pg-schedoc_0.0.1-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 15 postgresql-15-pg-schedoc postgresql-15-pg-schedoc_0.0.1-1PIGSTY~trixie_arm64.deb pigsty 0.0.1 4.5KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pg-schedoc/postgresql-15-pg-schedoc_0.0.1-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 15 postgresql-15-pg-schedoc postgresql-15-pg-schedoc_0.0.1-1PIGSTY~jammy_amd64.deb pigsty 0.0.1 4.4KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/pg-schedoc/postgresql-15-pg-schedoc_0.0.1-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 15 postgresql-15-pg-schedoc postgresql-15-pg-schedoc_0.0.1-1PIGSTY~jammy_arm64.deb pigsty 0.0.1 4.4KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/pg-schedoc/postgresql-15-pg-schedoc_0.0.1-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 15 postgresql-15-pg-schedoc postgresql-15-pg-schedoc_0.0.1-1PIGSTY~noble_amd64.deb pigsty 0.0.1 4.4KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pg-schedoc/postgresql-15-pg-schedoc_0.0.1-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 15 postgresql-15-pg-schedoc postgresql-15-pg-schedoc_0.0.1-1PIGSTY~noble_arm64.deb pigsty 0.0.1 4.4KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pg-schedoc/postgresql-15-pg-schedoc_0.0.1-1PIGSTY~noble_arm64.deb
-@ el8.x86_64 14 pg_schedoc_14 pg_schedoc_14-0.0.1-1PIGSTY.el8.x86_64.rpm pigsty 0.0.1 22.9KiB https://repo.pigsty.io/yum/pgsql/el8.x86_64/pg_schedoc_14-0.0.1-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 14 pg_schedoc_14 pg_schedoc_14-0.0.1-1PIGSTY.el8.aarch64.rpm pigsty 0.0.1 22.9KiB https://repo.pigsty.io/yum/pgsql/el8.aarch64/pg_schedoc_14-0.0.1-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 14 pg_schedoc_14 pg_schedoc_14-0.0.1-1PIGSTY.el9.x86_64.rpm pigsty 0.0.1 22.5KiB https://repo.pigsty.io/yum/pgsql/el9.x86_64/pg_schedoc_14-0.0.1-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 14 pg_schedoc_14 pg_schedoc_14-0.0.1-1PIGSTY.el9.aarch64.rpm pigsty 0.0.1 22.5KiB https://repo.pigsty.io/yum/pgsql/el9.aarch64/pg_schedoc_14-0.0.1-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 14 pg_schedoc_14 pg_schedoc_14-0.0.1-1PIGSTY.el10.x86_64.rpm pigsty 0.0.1 22.6KiB https://repo.pigsty.io/yum/pgsql/el10.x86_64/pg_schedoc_14-0.0.1-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 14 pg_schedoc_14 pg_schedoc_14-0.0.1-1PIGSTY.el10.aarch64.rpm pigsty 0.0.1 22.6KiB https://repo.pigsty.io/yum/pgsql/el10.aarch64/pg_schedoc_14-0.0.1-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 14 postgresql-14-pg-schedoc postgresql-14-pg-schedoc_0.0.1-1PIGSTY~bookworm_amd64.deb pigsty 0.0.1 4.5KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/pg-schedoc/postgresql-14-pg-schedoc_0.0.1-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 14 postgresql-14-pg-schedoc postgresql-14-pg-schedoc_0.0.1-1PIGSTY~bookworm_arm64.deb pigsty 0.0.1 4.5KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/pg-schedoc/postgresql-14-pg-schedoc_0.0.1-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 14 postgresql-14-pg-schedoc postgresql-14-pg-schedoc_0.0.1-1PIGSTY~trixie_amd64.deb pigsty 0.0.1 4.5KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pg-schedoc/postgresql-14-pg-schedoc_0.0.1-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 14 postgresql-14-pg-schedoc postgresql-14-pg-schedoc_0.0.1-1PIGSTY~trixie_arm64.deb pigsty 0.0.1 4.5KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pg-schedoc/postgresql-14-pg-schedoc_0.0.1-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 14 postgresql-14-pg-schedoc postgresql-14-pg-schedoc_0.0.1-1PIGSTY~jammy_amd64.deb pigsty 0.0.1 4.4KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/pg-schedoc/postgresql-14-pg-schedoc_0.0.1-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 14 postgresql-14-pg-schedoc postgresql-14-pg-schedoc_0.0.1-1PIGSTY~jammy_arm64.deb pigsty 0.0.1 4.4KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/pg-schedoc/postgresql-14-pg-schedoc_0.0.1-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 14 postgresql-14-pg-schedoc postgresql-14-pg-schedoc_0.0.1-1PIGSTY~noble_amd64.deb pigsty 0.0.1 4.4KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pg-schedoc/postgresql-14-pg-schedoc_0.0.1-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 14 postgresql-14-pg-schedoc postgresql-14-pg-schedoc_0.0.1-1PIGSTY~noble_arm64.deb pigsty 0.0.1 4.4KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pg-schedoc/postgresql-14-pg-schedoc_0.0.1-1PIGSTY~noble_arm64.deb
+@ el8.x86_64 18 pg_schedoc_18 pg_schedoc_18-0.0.1-1PIGSTY.el8.x86_64.rpm pigsty 0.0.1 22.9KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_schedoc_18-0.0.1-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 18 pg_schedoc_18 pg_schedoc_18-0.0.1-1PIGSTY.el8.aarch64.rpm pigsty 0.0.1 22.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_schedoc_18-0.0.1-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 18 pg_schedoc_18 pg_schedoc_18-0.0.1-1PIGSTY.el9.x86_64.rpm pigsty 0.0.1 22.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_schedoc_18-0.0.1-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 18 pg_schedoc_18 pg_schedoc_18-0.0.1-1PIGSTY.el9.aarch64.rpm pigsty 0.0.1 22.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_schedoc_18-0.0.1-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 18 pg_schedoc_18 pg_schedoc_18-0.0.1-1PIGSTY.el10.x86_64.rpm pigsty 0.0.1 22.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_schedoc_18-0.0.1-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 18 pg_schedoc_18 pg_schedoc_18-0.0.1-1PIGSTY.el10.aarch64.rpm pigsty 0.0.1 22.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_schedoc_18-0.0.1-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-pg-schedoc postgresql-18-pg-schedoc_0.0.1-1PIGSTY~bookworm_amd64.deb pigsty 0.0.1 4.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-schedoc/postgresql-18-pg-schedoc_0.0.1-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 18 postgresql-18-pg-schedoc postgresql-18-pg-schedoc_0.0.1-1PIGSTY~bookworm_arm64.deb pigsty 0.0.1 4.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-schedoc/postgresql-18-pg-schedoc_0.0.1-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 18 postgresql-18-pg-schedoc postgresql-18-pg-schedoc_0.0.1-1PIGSTY~trixie_amd64.deb pigsty 0.0.1 4.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-schedoc/postgresql-18-pg-schedoc_0.0.1-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 18 postgresql-18-pg-schedoc postgresql-18-pg-schedoc_0.0.1-1PIGSTY~trixie_arm64.deb pigsty 0.0.1 4.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-schedoc/postgresql-18-pg-schedoc_0.0.1-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 18 postgresql-18-pg-schedoc postgresql-18-pg-schedoc_0.0.1-1PIGSTY~jammy_amd64.deb pigsty 0.0.1 4.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-schedoc/postgresql-18-pg-schedoc_0.0.1-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 18 postgresql-18-pg-schedoc postgresql-18-pg-schedoc_0.0.1-1PIGSTY~jammy_arm64.deb pigsty 0.0.1 4.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-schedoc/postgresql-18-pg-schedoc_0.0.1-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 18 postgresql-18-pg-schedoc postgresql-18-pg-schedoc_0.0.1-1PIGSTY~noble_amd64.deb pigsty 0.0.1 4.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-schedoc/postgresql-18-pg-schedoc_0.0.1-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 18 postgresql-18-pg-schedoc postgresql-18-pg-schedoc_0.0.1-1PIGSTY~noble_arm64.deb pigsty 0.0.1 4.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-schedoc/postgresql-18-pg-schedoc_0.0.1-1PIGSTY~noble_arm64.deb
+@ el8.x86_64 17 pg_schedoc_17 pg_schedoc_17-0.0.1-1PIGSTY.el8.x86_64.rpm pigsty 0.0.1 22.9KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_schedoc_17-0.0.1-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 17 pg_schedoc_17 pg_schedoc_17-0.0.1-1PIGSTY.el8.aarch64.rpm pigsty 0.0.1 22.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_schedoc_17-0.0.1-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 17 pg_schedoc_17 pg_schedoc_17-0.0.1-1PIGSTY.el9.x86_64.rpm pigsty 0.0.1 22.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_schedoc_17-0.0.1-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 17 pg_schedoc_17 pg_schedoc_17-0.0.1-1PIGSTY.el9.aarch64.rpm pigsty 0.0.1 22.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_schedoc_17-0.0.1-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 17 pg_schedoc_17 pg_schedoc_17-0.0.1-1PIGSTY.el10.x86_64.rpm pigsty 0.0.1 22.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_schedoc_17-0.0.1-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 17 pg_schedoc_17 pg_schedoc_17-0.0.1-1PIGSTY.el10.aarch64.rpm pigsty 0.0.1 22.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_schedoc_17-0.0.1-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-pg-schedoc postgresql-17-pg-schedoc_0.0.1-1PIGSTY~bookworm_amd64.deb pigsty 0.0.1 4.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-schedoc/postgresql-17-pg-schedoc_0.0.1-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 17 postgresql-17-pg-schedoc postgresql-17-pg-schedoc_0.0.1-1PIGSTY~bookworm_arm64.deb pigsty 0.0.1 4.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-schedoc/postgresql-17-pg-schedoc_0.0.1-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 17 postgresql-17-pg-schedoc postgresql-17-pg-schedoc_0.0.1-1PIGSTY~trixie_amd64.deb pigsty 0.0.1 4.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-schedoc/postgresql-17-pg-schedoc_0.0.1-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 17 postgresql-17-pg-schedoc postgresql-17-pg-schedoc_0.0.1-1PIGSTY~trixie_arm64.deb pigsty 0.0.1 4.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-schedoc/postgresql-17-pg-schedoc_0.0.1-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 17 postgresql-17-pg-schedoc postgresql-17-pg-schedoc_0.0.1-1PIGSTY~jammy_amd64.deb pigsty 0.0.1 4.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-schedoc/postgresql-17-pg-schedoc_0.0.1-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 17 postgresql-17-pg-schedoc postgresql-17-pg-schedoc_0.0.1-1PIGSTY~jammy_arm64.deb pigsty 0.0.1 4.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-schedoc/postgresql-17-pg-schedoc_0.0.1-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 17 postgresql-17-pg-schedoc postgresql-17-pg-schedoc_0.0.1-1PIGSTY~noble_amd64.deb pigsty 0.0.1 4.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-schedoc/postgresql-17-pg-schedoc_0.0.1-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 17 postgresql-17-pg-schedoc postgresql-17-pg-schedoc_0.0.1-1PIGSTY~noble_arm64.deb pigsty 0.0.1 4.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-schedoc/postgresql-17-pg-schedoc_0.0.1-1PIGSTY~noble_arm64.deb
+@ el8.x86_64 16 pg_schedoc_16 pg_schedoc_16-0.0.1-1PIGSTY.el8.x86_64.rpm pigsty 0.0.1 22.9KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_schedoc_16-0.0.1-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 16 pg_schedoc_16 pg_schedoc_16-0.0.1-1PIGSTY.el8.aarch64.rpm pigsty 0.0.1 22.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_schedoc_16-0.0.1-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 16 pg_schedoc_16 pg_schedoc_16-0.0.1-1PIGSTY.el9.x86_64.rpm pigsty 0.0.1 22.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_schedoc_16-0.0.1-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 16 pg_schedoc_16 pg_schedoc_16-0.0.1-1PIGSTY.el9.aarch64.rpm pigsty 0.0.1 22.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_schedoc_16-0.0.1-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 16 pg_schedoc_16 pg_schedoc_16-0.0.1-1PIGSTY.el10.x86_64.rpm pigsty 0.0.1 22.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_schedoc_16-0.0.1-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 16 pg_schedoc_16 pg_schedoc_16-0.0.1-1PIGSTY.el10.aarch64.rpm pigsty 0.0.1 22.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_schedoc_16-0.0.1-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 16 postgresql-16-pg-schedoc postgresql-16-pg-schedoc_0.0.1-1PIGSTY~bookworm_amd64.deb pigsty 0.0.1 4.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-schedoc/postgresql-16-pg-schedoc_0.0.1-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 16 postgresql-16-pg-schedoc postgresql-16-pg-schedoc_0.0.1-1PIGSTY~bookworm_arm64.deb pigsty 0.0.1 4.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-schedoc/postgresql-16-pg-schedoc_0.0.1-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 16 postgresql-16-pg-schedoc postgresql-16-pg-schedoc_0.0.1-1PIGSTY~trixie_amd64.deb pigsty 0.0.1 4.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-schedoc/postgresql-16-pg-schedoc_0.0.1-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 16 postgresql-16-pg-schedoc postgresql-16-pg-schedoc_0.0.1-1PIGSTY~trixie_arm64.deb pigsty 0.0.1 4.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-schedoc/postgresql-16-pg-schedoc_0.0.1-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 16 postgresql-16-pg-schedoc postgresql-16-pg-schedoc_0.0.1-1PIGSTY~jammy_amd64.deb pigsty 0.0.1 4.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-schedoc/postgresql-16-pg-schedoc_0.0.1-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 16 postgresql-16-pg-schedoc postgresql-16-pg-schedoc_0.0.1-1PIGSTY~jammy_arm64.deb pigsty 0.0.1 4.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-schedoc/postgresql-16-pg-schedoc_0.0.1-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 16 postgresql-16-pg-schedoc postgresql-16-pg-schedoc_0.0.1-1PIGSTY~noble_amd64.deb pigsty 0.0.1 4.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-schedoc/postgresql-16-pg-schedoc_0.0.1-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 16 postgresql-16-pg-schedoc postgresql-16-pg-schedoc_0.0.1-1PIGSTY~noble_arm64.deb pigsty 0.0.1 4.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-schedoc/postgresql-16-pg-schedoc_0.0.1-1PIGSTY~noble_arm64.deb
+@ el8.x86_64 15 pg_schedoc_15 pg_schedoc_15-0.0.1-1PIGSTY.el8.x86_64.rpm pigsty 0.0.1 22.9KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_schedoc_15-0.0.1-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 15 pg_schedoc_15 pg_schedoc_15-0.0.1-1PIGSTY.el8.aarch64.rpm pigsty 0.0.1 22.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_schedoc_15-0.0.1-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 15 pg_schedoc_15 pg_schedoc_15-0.0.1-1PIGSTY.el9.x86_64.rpm pigsty 0.0.1 22.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_schedoc_15-0.0.1-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 15 pg_schedoc_15 pg_schedoc_15-0.0.1-1PIGSTY.el9.aarch64.rpm pigsty 0.0.1 22.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_schedoc_15-0.0.1-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 15 pg_schedoc_15 pg_schedoc_15-0.0.1-1PIGSTY.el10.x86_64.rpm pigsty 0.0.1 22.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_schedoc_15-0.0.1-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 15 pg_schedoc_15 pg_schedoc_15-0.0.1-1PIGSTY.el10.aarch64.rpm pigsty 0.0.1 22.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_schedoc_15-0.0.1-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 15 postgresql-15-pg-schedoc postgresql-15-pg-schedoc_0.0.1-1PIGSTY~bookworm_amd64.deb pigsty 0.0.1 4.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-schedoc/postgresql-15-pg-schedoc_0.0.1-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 15 postgresql-15-pg-schedoc postgresql-15-pg-schedoc_0.0.1-1PIGSTY~bookworm_arm64.deb pigsty 0.0.1 4.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-schedoc/postgresql-15-pg-schedoc_0.0.1-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 15 postgresql-15-pg-schedoc postgresql-15-pg-schedoc_0.0.1-1PIGSTY~trixie_amd64.deb pigsty 0.0.1 4.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-schedoc/postgresql-15-pg-schedoc_0.0.1-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 15 postgresql-15-pg-schedoc postgresql-15-pg-schedoc_0.0.1-1PIGSTY~trixie_arm64.deb pigsty 0.0.1 4.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-schedoc/postgresql-15-pg-schedoc_0.0.1-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 15 postgresql-15-pg-schedoc postgresql-15-pg-schedoc_0.0.1-1PIGSTY~jammy_amd64.deb pigsty 0.0.1 4.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-schedoc/postgresql-15-pg-schedoc_0.0.1-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 15 postgresql-15-pg-schedoc postgresql-15-pg-schedoc_0.0.1-1PIGSTY~jammy_arm64.deb pigsty 0.0.1 4.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-schedoc/postgresql-15-pg-schedoc_0.0.1-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 15 postgresql-15-pg-schedoc postgresql-15-pg-schedoc_0.0.1-1PIGSTY~noble_amd64.deb pigsty 0.0.1 4.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-schedoc/postgresql-15-pg-schedoc_0.0.1-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 15 postgresql-15-pg-schedoc postgresql-15-pg-schedoc_0.0.1-1PIGSTY~noble_arm64.deb pigsty 0.0.1 4.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-schedoc/postgresql-15-pg-schedoc_0.0.1-1PIGSTY~noble_arm64.deb
+@ el8.x86_64 14 pg_schedoc_14 pg_schedoc_14-0.0.1-1PIGSTY.el8.x86_64.rpm pigsty 0.0.1 22.9KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_schedoc_14-0.0.1-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 14 pg_schedoc_14 pg_schedoc_14-0.0.1-1PIGSTY.el8.aarch64.rpm pigsty 0.0.1 22.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_schedoc_14-0.0.1-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 14 pg_schedoc_14 pg_schedoc_14-0.0.1-1PIGSTY.el9.x86_64.rpm pigsty 0.0.1 22.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_schedoc_14-0.0.1-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 14 pg_schedoc_14 pg_schedoc_14-0.0.1-1PIGSTY.el9.aarch64.rpm pigsty 0.0.1 22.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_schedoc_14-0.0.1-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 14 pg_schedoc_14 pg_schedoc_14-0.0.1-1PIGSTY.el10.x86_64.rpm pigsty 0.0.1 22.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_schedoc_14-0.0.1-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 14 pg_schedoc_14 pg_schedoc_14-0.0.1-1PIGSTY.el10.aarch64.rpm pigsty 0.0.1 22.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_schedoc_14-0.0.1-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 14 postgresql-14-pg-schedoc postgresql-14-pg-schedoc_0.0.1-1PIGSTY~bookworm_amd64.deb pigsty 0.0.1 4.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-schedoc/postgresql-14-pg-schedoc_0.0.1-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 14 postgresql-14-pg-schedoc postgresql-14-pg-schedoc_0.0.1-1PIGSTY~bookworm_arm64.deb pigsty 0.0.1 4.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-schedoc/postgresql-14-pg-schedoc_0.0.1-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 14 postgresql-14-pg-schedoc postgresql-14-pg-schedoc_0.0.1-1PIGSTY~trixie_amd64.deb pigsty 0.0.1 4.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-schedoc/postgresql-14-pg-schedoc_0.0.1-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 14 postgresql-14-pg-schedoc postgresql-14-pg-schedoc_0.0.1-1PIGSTY~trixie_arm64.deb pigsty 0.0.1 4.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-schedoc/postgresql-14-pg-schedoc_0.0.1-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 14 postgresql-14-pg-schedoc postgresql-14-pg-schedoc_0.0.1-1PIGSTY~jammy_amd64.deb pigsty 0.0.1 4.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-schedoc/postgresql-14-pg-schedoc_0.0.1-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 14 postgresql-14-pg-schedoc postgresql-14-pg-schedoc_0.0.1-1PIGSTY~jammy_arm64.deb pigsty 0.0.1 4.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-schedoc/postgresql-14-pg-schedoc_0.0.1-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 14 postgresql-14-pg-schedoc postgresql-14-pg-schedoc_0.0.1-1PIGSTY~noble_amd64.deb pigsty 0.0.1 4.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-schedoc/postgresql-14-pg-schedoc_0.0.1-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 14 postgresql-14-pg-schedoc postgresql-14-pg-schedoc_0.0.1-1PIGSTY~noble_arm64.deb pigsty 0.0.1 4.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-schedoc/postgresql-14-pg-schedoc_0.0.1-1PIGSTY~noble_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建

@@ -11,7 +11,7 @@ weight: 4500
     <div class="ext-card__title">VADOSWARE/pg_idkit</div>
     <div class="ext-card__desc">https://github.com/VADOSWARE/pg_idkit</div>
   </a>
-  <a class="ext-card ext-card--source" href="pg_idkit-0.4.0.tar.gz">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pg_idkit-0.4.0.tar.gz">
     <div class="ext-card__kicker">源码</div>
     <div class="ext-card__title">pg_idkit-0.4.0.tar.gz</div>
     <div class="ext-card__desc">pg_idkit-0.4.0.tar.gz</div>
@@ -64,76 +64,76 @@ weight: 4500
 | u22.aarch64 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 |
 | u24.x86_64 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 |
 | u24.aarch64 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 |
-@ el8.x86_64 18 pg_idkit_18 pg_idkit_18-0.4.0-1PIGSTY.el8.x86_64.rpm pigsty 0.4.0 459.4KiB https://repo.pigsty.io/yum/pgsql/el8.x86_64/pg_idkit_18-0.4.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 18 pg_idkit_18 pg_idkit_18-0.4.0-1PIGSTY.el8.aarch64.rpm pigsty 0.4.0 355.0KiB https://repo.pigsty.io/yum/pgsql/el8.aarch64/pg_idkit_18-0.4.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 18 pg_idkit_18 pg_idkit_18-0.4.0-1PIGSTY.el9.x86_64.rpm pigsty 0.4.0 475.0KiB https://repo.pigsty.io/yum/pgsql/el9.x86_64/pg_idkit_18-0.4.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 18 pg_idkit_18 pg_idkit_18-0.4.0-1PIGSTY.el9.aarch64.rpm pigsty 0.4.0 377.4KiB https://repo.pigsty.io/yum/pgsql/el9.aarch64/pg_idkit_18-0.4.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 18 pg_idkit_18 pg_idkit_18-0.4.0-1PIGSTY.el10.x86_64.rpm pigsty 0.4.0 474.5KiB https://repo.pigsty.io/yum/pgsql/el10.x86_64/pg_idkit_18-0.4.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 18 pg_idkit_18 pg_idkit_18-0.4.0-1PIGSTY.el10.aarch64.rpm pigsty 0.4.0 376.8KiB https://repo.pigsty.io/yum/pgsql/el10.aarch64/pg_idkit_18-0.4.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 18 postgresql-18-pg-idkit postgresql-18-pg-idkit_0.4.0-1PIGSTY~bookworm_amd64.deb pigsty 0.4.0 385.9KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/pg-idkit/postgresql-18-pg-idkit_0.4.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 18 postgresql-18-pg-idkit postgresql-18-pg-idkit_0.4.0-1PIGSTY~bookworm_arm64.deb pigsty 0.4.0 285.4KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/pg-idkit/postgresql-18-pg-idkit_0.4.0-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 18 postgresql-18-pg-idkit postgresql-18-pg-idkit_0.4.0-1PIGSTY~trixie_amd64.deb pigsty 0.4.0 386.1KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pg-idkit/postgresql-18-pg-idkit_0.4.0-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 18 postgresql-18-pg-idkit postgresql-18-pg-idkit_0.4.0-1PIGSTY~trixie_arm64.deb pigsty 0.4.0 285.3KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pg-idkit/postgresql-18-pg-idkit_0.4.0-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 18 postgresql-18-pg-idkit postgresql-18-pg-idkit_0.4.0-1PIGSTY~jammy_amd64.deb pigsty 0.4.0 428.7KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/pg-idkit/postgresql-18-pg-idkit_0.4.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 18 postgresql-18-pg-idkit postgresql-18-pg-idkit_0.4.0-1PIGSTY~jammy_arm64.deb pigsty 0.4.0 328.4KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/pg-idkit/postgresql-18-pg-idkit_0.4.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 18 postgresql-18-pg-idkit postgresql-18-pg-idkit_0.4.0-1PIGSTY~noble_amd64.deb pigsty 0.4.0 424.2KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pg-idkit/postgresql-18-pg-idkit_0.4.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 18 postgresql-18-pg-idkit postgresql-18-pg-idkit_0.4.0-1PIGSTY~noble_arm64.deb pigsty 0.4.0 324.3KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pg-idkit/postgresql-18-pg-idkit_0.4.0-1PIGSTY~noble_arm64.deb
-@ el8.x86_64 17 pg_idkit_17 pg_idkit_17-0.4.0-1PIGSTY.el8.x86_64.rpm pigsty 0.4.0 459.7KiB https://repo.pigsty.io/yum/pgsql/el8.x86_64/pg_idkit_17-0.4.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 17 pg_idkit_17 pg_idkit_17-0.4.0-1PIGSTY.el8.aarch64.rpm pigsty 0.4.0 355.0KiB https://repo.pigsty.io/yum/pgsql/el8.aarch64/pg_idkit_17-0.4.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 17 pg_idkit_17 pg_idkit_17-0.4.0-1PIGSTY.el9.x86_64.rpm pigsty 0.4.0 474.7KiB https://repo.pigsty.io/yum/pgsql/el9.x86_64/pg_idkit_17-0.4.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 17 pg_idkit_17 pg_idkit_17-0.4.0-1PIGSTY.el9.aarch64.rpm pigsty 0.4.0 377.0KiB https://repo.pigsty.io/yum/pgsql/el9.aarch64/pg_idkit_17-0.4.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 17 pg_idkit_17 pg_idkit_17-0.4.0-1PIGSTY.el10.x86_64.rpm pigsty 0.4.0 475.2KiB https://repo.pigsty.io/yum/pgsql/el10.x86_64/pg_idkit_17-0.4.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 17 pg_idkit_17 pg_idkit_17-0.4.0-1PIGSTY.el10.aarch64.rpm pigsty 0.4.0 376.6KiB https://repo.pigsty.io/yum/pgsql/el10.aarch64/pg_idkit_17-0.4.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 17 postgresql-17-pg-idkit postgresql-17-pg-idkit_0.4.0-1PIGSTY~bookworm_amd64.deb pigsty 0.4.0 385.6KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/pg-idkit/postgresql-17-pg-idkit_0.4.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 17 postgresql-17-pg-idkit postgresql-17-pg-idkit_0.4.0-1PIGSTY~bookworm_arm64.deb pigsty 0.4.0 285.2KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/pg-idkit/postgresql-17-pg-idkit_0.4.0-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 17 postgresql-17-pg-idkit postgresql-17-pg-idkit_0.4.0-1PIGSTY~trixie_amd64.deb pigsty 0.4.0 386.1KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pg-idkit/postgresql-17-pg-idkit_0.4.0-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 17 postgresql-17-pg-idkit postgresql-17-pg-idkit_0.4.0-1PIGSTY~trixie_arm64.deb pigsty 0.4.0 285.2KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pg-idkit/postgresql-17-pg-idkit_0.4.0-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 17 postgresql-17-pg-idkit postgresql-17-pg-idkit_0.4.0-1PIGSTY~jammy_amd64.deb pigsty 0.4.0 428.1KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/pg-idkit/postgresql-17-pg-idkit_0.4.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 17 postgresql-17-pg-idkit postgresql-17-pg-idkit_0.4.0-1PIGSTY~jammy_arm64.deb pigsty 0.4.0 328.2KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/pg-idkit/postgresql-17-pg-idkit_0.4.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 17 postgresql-17-pg-idkit postgresql-17-pg-idkit_0.4.0-1PIGSTY~noble_amd64.deb pigsty 0.4.0 423.7KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pg-idkit/postgresql-17-pg-idkit_0.4.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 17 postgresql-17-pg-idkit postgresql-17-pg-idkit_0.4.0-1PIGSTY~noble_arm64.deb pigsty 0.4.0 324.0KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pg-idkit/postgresql-17-pg-idkit_0.4.0-1PIGSTY~noble_arm64.deb
-@ el8.x86_64 16 pg_idkit_16 pg_idkit_16-0.4.0-1PIGSTY.el8.x86_64.rpm pigsty 0.4.0 459.2KiB https://repo.pigsty.io/yum/pgsql/el8.x86_64/pg_idkit_16-0.4.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 16 pg_idkit_16 pg_idkit_16-0.4.0-1PIGSTY.el8.aarch64.rpm pigsty 0.4.0 355.5KiB https://repo.pigsty.io/yum/pgsql/el8.aarch64/pg_idkit_16-0.4.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 16 pg_idkit_16 pg_idkit_16-0.4.0-1PIGSTY.el9.x86_64.rpm pigsty 0.4.0 474.8KiB https://repo.pigsty.io/yum/pgsql/el9.x86_64/pg_idkit_16-0.4.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 16 pg_idkit_16 pg_idkit_16-0.4.0-1PIGSTY.el9.aarch64.rpm pigsty 0.4.0 377.2KiB https://repo.pigsty.io/yum/pgsql/el9.aarch64/pg_idkit_16-0.4.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 16 pg_idkit_16 pg_idkit_16-0.4.0-1PIGSTY.el10.x86_64.rpm pigsty 0.4.0 474.7KiB https://repo.pigsty.io/yum/pgsql/el10.x86_64/pg_idkit_16-0.4.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 16 pg_idkit_16 pg_idkit_16-0.4.0-1PIGSTY.el10.aarch64.rpm pigsty 0.4.0 376.6KiB https://repo.pigsty.io/yum/pgsql/el10.aarch64/pg_idkit_16-0.4.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 16 postgresql-16-pg-idkit postgresql-16-pg-idkit_0.4.0-1PIGSTY~bookworm_amd64.deb pigsty 0.4.0 385.6KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/pg-idkit/postgresql-16-pg-idkit_0.4.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 16 postgresql-16-pg-idkit postgresql-16-pg-idkit_0.4.0-1PIGSTY~bookworm_arm64.deb pigsty 0.4.0 285.0KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/pg-idkit/postgresql-16-pg-idkit_0.4.0-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 16 postgresql-16-pg-idkit postgresql-16-pg-idkit_0.4.0-1PIGSTY~trixie_amd64.deb pigsty 0.4.0 386.1KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pg-idkit/postgresql-16-pg-idkit_0.4.0-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 16 postgresql-16-pg-idkit postgresql-16-pg-idkit_0.4.0-1PIGSTY~trixie_arm64.deb pigsty 0.4.0 285.3KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pg-idkit/postgresql-16-pg-idkit_0.4.0-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 16 postgresql-16-pg-idkit postgresql-16-pg-idkit_0.4.0-1PIGSTY~jammy_amd64.deb pigsty 0.4.0 428.6KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/pg-idkit/postgresql-16-pg-idkit_0.4.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 16 postgresql-16-pg-idkit postgresql-16-pg-idkit_0.4.0-1PIGSTY~jammy_arm64.deb pigsty 0.4.0 328.1KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/pg-idkit/postgresql-16-pg-idkit_0.4.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 16 postgresql-16-pg-idkit postgresql-16-pg-idkit_0.4.0-1PIGSTY~noble_amd64.deb pigsty 0.4.0 424.3KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pg-idkit/postgresql-16-pg-idkit_0.4.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 16 postgresql-16-pg-idkit postgresql-16-pg-idkit_0.4.0-1PIGSTY~noble_arm64.deb pigsty 0.4.0 323.6KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pg-idkit/postgresql-16-pg-idkit_0.4.0-1PIGSTY~noble_arm64.deb
-@ el8.x86_64 15 pg_idkit_15 pg_idkit_15-0.4.0-1PIGSTY.el8.x86_64.rpm pigsty 0.4.0 459.2KiB https://repo.pigsty.io/yum/pgsql/el8.x86_64/pg_idkit_15-0.4.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 15 pg_idkit_15 pg_idkit_15-0.4.0-1PIGSTY.el8.aarch64.rpm pigsty 0.4.0 355.2KiB https://repo.pigsty.io/yum/pgsql/el8.aarch64/pg_idkit_15-0.4.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 15 pg_idkit_15 pg_idkit_15-0.4.0-1PIGSTY.el9.x86_64.rpm pigsty 0.4.0 474.4KiB https://repo.pigsty.io/yum/pgsql/el9.x86_64/pg_idkit_15-0.4.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 15 pg_idkit_15 pg_idkit_15-0.4.0-1PIGSTY.el9.aarch64.rpm pigsty 0.4.0 377.1KiB https://repo.pigsty.io/yum/pgsql/el9.aarch64/pg_idkit_15-0.4.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 15 pg_idkit_15 pg_idkit_15-0.4.0-1PIGSTY.el10.x86_64.rpm pigsty 0.4.0 475.2KiB https://repo.pigsty.io/yum/pgsql/el10.x86_64/pg_idkit_15-0.4.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 15 pg_idkit_15 pg_idkit_15-0.4.0-1PIGSTY.el10.aarch64.rpm pigsty 0.4.0 376.7KiB https://repo.pigsty.io/yum/pgsql/el10.aarch64/pg_idkit_15-0.4.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 15 postgresql-15-pg-idkit postgresql-15-pg-idkit_0.4.0-1PIGSTY~bookworm_amd64.deb pigsty 0.4.0 385.4KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/pg-idkit/postgresql-15-pg-idkit_0.4.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 15 postgresql-15-pg-idkit postgresql-15-pg-idkit_0.4.0-1PIGSTY~bookworm_arm64.deb pigsty 0.4.0 285.1KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/pg-idkit/postgresql-15-pg-idkit_0.4.0-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 15 postgresql-15-pg-idkit postgresql-15-pg-idkit_0.4.0-1PIGSTY~trixie_amd64.deb pigsty 0.4.0 386.0KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pg-idkit/postgresql-15-pg-idkit_0.4.0-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 15 postgresql-15-pg-idkit postgresql-15-pg-idkit_0.4.0-1PIGSTY~trixie_arm64.deb pigsty 0.4.0 285.3KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pg-idkit/postgresql-15-pg-idkit_0.4.0-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 15 postgresql-15-pg-idkit postgresql-15-pg-idkit_0.4.0-1PIGSTY~jammy_amd64.deb pigsty 0.4.0 428.6KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/pg-idkit/postgresql-15-pg-idkit_0.4.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 15 postgresql-15-pg-idkit postgresql-15-pg-idkit_0.4.0-1PIGSTY~jammy_arm64.deb pigsty 0.4.0 328.5KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/pg-idkit/postgresql-15-pg-idkit_0.4.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 15 postgresql-15-pg-idkit postgresql-15-pg-idkit_0.4.0-1PIGSTY~noble_amd64.deb pigsty 0.4.0 424.3KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pg-idkit/postgresql-15-pg-idkit_0.4.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 15 postgresql-15-pg-idkit postgresql-15-pg-idkit_0.4.0-1PIGSTY~noble_arm64.deb pigsty 0.4.0 324.1KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pg-idkit/postgresql-15-pg-idkit_0.4.0-1PIGSTY~noble_arm64.deb
-@ el8.x86_64 14 pg_idkit_14 pg_idkit_14-0.4.0-1PIGSTY.el8.x86_64.rpm pigsty 0.4.0 458.8KiB https://repo.pigsty.io/yum/pgsql/el8.x86_64/pg_idkit_14-0.4.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 14 pg_idkit_14 pg_idkit_14-0.4.0-1PIGSTY.el8.aarch64.rpm pigsty 0.4.0 355.5KiB https://repo.pigsty.io/yum/pgsql/el8.aarch64/pg_idkit_14-0.4.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 14 pg_idkit_14 pg_idkit_14-0.4.0-1PIGSTY.el9.x86_64.rpm pigsty 0.4.0 474.5KiB https://repo.pigsty.io/yum/pgsql/el9.x86_64/pg_idkit_14-0.4.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 14 pg_idkit_14 pg_idkit_14-0.4.0-1PIGSTY.el9.aarch64.rpm pigsty 0.4.0 377.1KiB https://repo.pigsty.io/yum/pgsql/el9.aarch64/pg_idkit_14-0.4.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 14 pg_idkit_14 pg_idkit_14-0.4.0-1PIGSTY.el10.x86_64.rpm pigsty 0.4.0 474.8KiB https://repo.pigsty.io/yum/pgsql/el10.x86_64/pg_idkit_14-0.4.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 14 pg_idkit_14 pg_idkit_14-0.4.0-1PIGSTY.el10.aarch64.rpm pigsty 0.4.0 376.8KiB https://repo.pigsty.io/yum/pgsql/el10.aarch64/pg_idkit_14-0.4.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 14 postgresql-14-pg-idkit postgresql-14-pg-idkit_0.4.0-1PIGSTY~bookworm_amd64.deb pigsty 0.4.0 385.6KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/pg-idkit/postgresql-14-pg-idkit_0.4.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 14 postgresql-14-pg-idkit postgresql-14-pg-idkit_0.4.0-1PIGSTY~bookworm_arm64.deb pigsty 0.4.0 285.2KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/pg-idkit/postgresql-14-pg-idkit_0.4.0-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 14 postgresql-14-pg-idkit postgresql-14-pg-idkit_0.4.0-1PIGSTY~trixie_amd64.deb pigsty 0.4.0 385.7KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pg-idkit/postgresql-14-pg-idkit_0.4.0-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 14 postgresql-14-pg-idkit postgresql-14-pg-idkit_0.4.0-1PIGSTY~trixie_arm64.deb pigsty 0.4.0 285.3KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pg-idkit/postgresql-14-pg-idkit_0.4.0-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 14 postgresql-14-pg-idkit postgresql-14-pg-idkit_0.4.0-1PIGSTY~jammy_amd64.deb pigsty 0.4.0 428.9KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/pg-idkit/postgresql-14-pg-idkit_0.4.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 14 postgresql-14-pg-idkit postgresql-14-pg-idkit_0.4.0-1PIGSTY~jammy_arm64.deb pigsty 0.4.0 328.4KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/pg-idkit/postgresql-14-pg-idkit_0.4.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 14 postgresql-14-pg-idkit postgresql-14-pg-idkit_0.4.0-1PIGSTY~noble_amd64.deb pigsty 0.4.0 424.0KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pg-idkit/postgresql-14-pg-idkit_0.4.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 14 postgresql-14-pg-idkit postgresql-14-pg-idkit_0.4.0-1PIGSTY~noble_arm64.deb pigsty 0.4.0 324.1KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pg-idkit/postgresql-14-pg-idkit_0.4.0-1PIGSTY~noble_arm64.deb
+@ el8.x86_64 18 pg_idkit_18 pg_idkit_18-0.4.0-1PIGSTY.el8.x86_64.rpm pigsty 0.4.0 459.4KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_idkit_18-0.4.0-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 18 pg_idkit_18 pg_idkit_18-0.4.0-1PIGSTY.el8.aarch64.rpm pigsty 0.4.0 355.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_idkit_18-0.4.0-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 18 pg_idkit_18 pg_idkit_18-0.4.0-1PIGSTY.el9.x86_64.rpm pigsty 0.4.0 475.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_idkit_18-0.4.0-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 18 pg_idkit_18 pg_idkit_18-0.4.0-1PIGSTY.el9.aarch64.rpm pigsty 0.4.0 377.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_idkit_18-0.4.0-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 18 pg_idkit_18 pg_idkit_18-0.4.0-1PIGSTY.el10.x86_64.rpm pigsty 0.4.0 474.5KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_idkit_18-0.4.0-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 18 pg_idkit_18 pg_idkit_18-0.4.0-1PIGSTY.el10.aarch64.rpm pigsty 0.4.0 376.8KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_idkit_18-0.4.0-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-pg-idkit postgresql-18-pg-idkit_0.4.0-1PIGSTY~bookworm_amd64.deb pigsty 0.4.0 385.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-idkit/postgresql-18-pg-idkit_0.4.0-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 18 postgresql-18-pg-idkit postgresql-18-pg-idkit_0.4.0-1PIGSTY~bookworm_arm64.deb pigsty 0.4.0 285.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-idkit/postgresql-18-pg-idkit_0.4.0-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 18 postgresql-18-pg-idkit postgresql-18-pg-idkit_0.4.0-1PIGSTY~trixie_amd64.deb pigsty 0.4.0 386.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-idkit/postgresql-18-pg-idkit_0.4.0-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 18 postgresql-18-pg-idkit postgresql-18-pg-idkit_0.4.0-1PIGSTY~trixie_arm64.deb pigsty 0.4.0 285.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-idkit/postgresql-18-pg-idkit_0.4.0-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 18 postgresql-18-pg-idkit postgresql-18-pg-idkit_0.4.0-1PIGSTY~jammy_amd64.deb pigsty 0.4.0 428.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-idkit/postgresql-18-pg-idkit_0.4.0-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 18 postgresql-18-pg-idkit postgresql-18-pg-idkit_0.4.0-1PIGSTY~jammy_arm64.deb pigsty 0.4.0 328.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-idkit/postgresql-18-pg-idkit_0.4.0-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 18 postgresql-18-pg-idkit postgresql-18-pg-idkit_0.4.0-1PIGSTY~noble_amd64.deb pigsty 0.4.0 424.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-idkit/postgresql-18-pg-idkit_0.4.0-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 18 postgresql-18-pg-idkit postgresql-18-pg-idkit_0.4.0-1PIGSTY~noble_arm64.deb pigsty 0.4.0 324.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-idkit/postgresql-18-pg-idkit_0.4.0-1PIGSTY~noble_arm64.deb
+@ el8.x86_64 17 pg_idkit_17 pg_idkit_17-0.4.0-1PIGSTY.el8.x86_64.rpm pigsty 0.4.0 459.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_idkit_17-0.4.0-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 17 pg_idkit_17 pg_idkit_17-0.4.0-1PIGSTY.el8.aarch64.rpm pigsty 0.4.0 355.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_idkit_17-0.4.0-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 17 pg_idkit_17 pg_idkit_17-0.4.0-1PIGSTY.el9.x86_64.rpm pigsty 0.4.0 474.7KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_idkit_17-0.4.0-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 17 pg_idkit_17 pg_idkit_17-0.4.0-1PIGSTY.el9.aarch64.rpm pigsty 0.4.0 377.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_idkit_17-0.4.0-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 17 pg_idkit_17 pg_idkit_17-0.4.0-1PIGSTY.el10.x86_64.rpm pigsty 0.4.0 475.2KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_idkit_17-0.4.0-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 17 pg_idkit_17 pg_idkit_17-0.4.0-1PIGSTY.el10.aarch64.rpm pigsty 0.4.0 376.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_idkit_17-0.4.0-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-pg-idkit postgresql-17-pg-idkit_0.4.0-1PIGSTY~bookworm_amd64.deb pigsty 0.4.0 385.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-idkit/postgresql-17-pg-idkit_0.4.0-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 17 postgresql-17-pg-idkit postgresql-17-pg-idkit_0.4.0-1PIGSTY~bookworm_arm64.deb pigsty 0.4.0 285.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-idkit/postgresql-17-pg-idkit_0.4.0-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 17 postgresql-17-pg-idkit postgresql-17-pg-idkit_0.4.0-1PIGSTY~trixie_amd64.deb pigsty 0.4.0 386.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-idkit/postgresql-17-pg-idkit_0.4.0-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 17 postgresql-17-pg-idkit postgresql-17-pg-idkit_0.4.0-1PIGSTY~trixie_arm64.deb pigsty 0.4.0 285.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-idkit/postgresql-17-pg-idkit_0.4.0-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 17 postgresql-17-pg-idkit postgresql-17-pg-idkit_0.4.0-1PIGSTY~jammy_amd64.deb pigsty 0.4.0 428.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-idkit/postgresql-17-pg-idkit_0.4.0-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 17 postgresql-17-pg-idkit postgresql-17-pg-idkit_0.4.0-1PIGSTY~jammy_arm64.deb pigsty 0.4.0 328.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-idkit/postgresql-17-pg-idkit_0.4.0-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 17 postgresql-17-pg-idkit postgresql-17-pg-idkit_0.4.0-1PIGSTY~noble_amd64.deb pigsty 0.4.0 423.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-idkit/postgresql-17-pg-idkit_0.4.0-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 17 postgresql-17-pg-idkit postgresql-17-pg-idkit_0.4.0-1PIGSTY~noble_arm64.deb pigsty 0.4.0 324.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-idkit/postgresql-17-pg-idkit_0.4.0-1PIGSTY~noble_arm64.deb
+@ el8.x86_64 16 pg_idkit_16 pg_idkit_16-0.4.0-1PIGSTY.el8.x86_64.rpm pigsty 0.4.0 459.2KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_idkit_16-0.4.0-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 16 pg_idkit_16 pg_idkit_16-0.4.0-1PIGSTY.el8.aarch64.rpm pigsty 0.4.0 355.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_idkit_16-0.4.0-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 16 pg_idkit_16 pg_idkit_16-0.4.0-1PIGSTY.el9.x86_64.rpm pigsty 0.4.0 474.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_idkit_16-0.4.0-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 16 pg_idkit_16 pg_idkit_16-0.4.0-1PIGSTY.el9.aarch64.rpm pigsty 0.4.0 377.2KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_idkit_16-0.4.0-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 16 pg_idkit_16 pg_idkit_16-0.4.0-1PIGSTY.el10.x86_64.rpm pigsty 0.4.0 474.7KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_idkit_16-0.4.0-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 16 pg_idkit_16 pg_idkit_16-0.4.0-1PIGSTY.el10.aarch64.rpm pigsty 0.4.0 376.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_idkit_16-0.4.0-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 16 postgresql-16-pg-idkit postgresql-16-pg-idkit_0.4.0-1PIGSTY~bookworm_amd64.deb pigsty 0.4.0 385.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-idkit/postgresql-16-pg-idkit_0.4.0-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 16 postgresql-16-pg-idkit postgresql-16-pg-idkit_0.4.0-1PIGSTY~bookworm_arm64.deb pigsty 0.4.0 285.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-idkit/postgresql-16-pg-idkit_0.4.0-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 16 postgresql-16-pg-idkit postgresql-16-pg-idkit_0.4.0-1PIGSTY~trixie_amd64.deb pigsty 0.4.0 386.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-idkit/postgresql-16-pg-idkit_0.4.0-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 16 postgresql-16-pg-idkit postgresql-16-pg-idkit_0.4.0-1PIGSTY~trixie_arm64.deb pigsty 0.4.0 285.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-idkit/postgresql-16-pg-idkit_0.4.0-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 16 postgresql-16-pg-idkit postgresql-16-pg-idkit_0.4.0-1PIGSTY~jammy_amd64.deb pigsty 0.4.0 428.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-idkit/postgresql-16-pg-idkit_0.4.0-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 16 postgresql-16-pg-idkit postgresql-16-pg-idkit_0.4.0-1PIGSTY~jammy_arm64.deb pigsty 0.4.0 328.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-idkit/postgresql-16-pg-idkit_0.4.0-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 16 postgresql-16-pg-idkit postgresql-16-pg-idkit_0.4.0-1PIGSTY~noble_amd64.deb pigsty 0.4.0 424.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-idkit/postgresql-16-pg-idkit_0.4.0-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 16 postgresql-16-pg-idkit postgresql-16-pg-idkit_0.4.0-1PIGSTY~noble_arm64.deb pigsty 0.4.0 323.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-idkit/postgresql-16-pg-idkit_0.4.0-1PIGSTY~noble_arm64.deb
+@ el8.x86_64 15 pg_idkit_15 pg_idkit_15-0.4.0-1PIGSTY.el8.x86_64.rpm pigsty 0.4.0 459.2KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_idkit_15-0.4.0-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 15 pg_idkit_15 pg_idkit_15-0.4.0-1PIGSTY.el8.aarch64.rpm pigsty 0.4.0 355.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_idkit_15-0.4.0-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 15 pg_idkit_15 pg_idkit_15-0.4.0-1PIGSTY.el9.x86_64.rpm pigsty 0.4.0 474.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_idkit_15-0.4.0-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 15 pg_idkit_15 pg_idkit_15-0.4.0-1PIGSTY.el9.aarch64.rpm pigsty 0.4.0 377.1KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_idkit_15-0.4.0-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 15 pg_idkit_15 pg_idkit_15-0.4.0-1PIGSTY.el10.x86_64.rpm pigsty 0.4.0 475.2KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_idkit_15-0.4.0-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 15 pg_idkit_15 pg_idkit_15-0.4.0-1PIGSTY.el10.aarch64.rpm pigsty 0.4.0 376.7KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_idkit_15-0.4.0-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 15 postgresql-15-pg-idkit postgresql-15-pg-idkit_0.4.0-1PIGSTY~bookworm_amd64.deb pigsty 0.4.0 385.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-idkit/postgresql-15-pg-idkit_0.4.0-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 15 postgresql-15-pg-idkit postgresql-15-pg-idkit_0.4.0-1PIGSTY~bookworm_arm64.deb pigsty 0.4.0 285.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-idkit/postgresql-15-pg-idkit_0.4.0-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 15 postgresql-15-pg-idkit postgresql-15-pg-idkit_0.4.0-1PIGSTY~trixie_amd64.deb pigsty 0.4.0 386.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-idkit/postgresql-15-pg-idkit_0.4.0-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 15 postgresql-15-pg-idkit postgresql-15-pg-idkit_0.4.0-1PIGSTY~trixie_arm64.deb pigsty 0.4.0 285.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-idkit/postgresql-15-pg-idkit_0.4.0-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 15 postgresql-15-pg-idkit postgresql-15-pg-idkit_0.4.0-1PIGSTY~jammy_amd64.deb pigsty 0.4.0 428.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-idkit/postgresql-15-pg-idkit_0.4.0-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 15 postgresql-15-pg-idkit postgresql-15-pg-idkit_0.4.0-1PIGSTY~jammy_arm64.deb pigsty 0.4.0 328.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-idkit/postgresql-15-pg-idkit_0.4.0-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 15 postgresql-15-pg-idkit postgresql-15-pg-idkit_0.4.0-1PIGSTY~noble_amd64.deb pigsty 0.4.0 424.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-idkit/postgresql-15-pg-idkit_0.4.0-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 15 postgresql-15-pg-idkit postgresql-15-pg-idkit_0.4.0-1PIGSTY~noble_arm64.deb pigsty 0.4.0 324.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-idkit/postgresql-15-pg-idkit_0.4.0-1PIGSTY~noble_arm64.deb
+@ el8.x86_64 14 pg_idkit_14 pg_idkit_14-0.4.0-1PIGSTY.el8.x86_64.rpm pigsty 0.4.0 458.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_idkit_14-0.4.0-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 14 pg_idkit_14 pg_idkit_14-0.4.0-1PIGSTY.el8.aarch64.rpm pigsty 0.4.0 355.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_idkit_14-0.4.0-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 14 pg_idkit_14 pg_idkit_14-0.4.0-1PIGSTY.el9.x86_64.rpm pigsty 0.4.0 474.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_idkit_14-0.4.0-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 14 pg_idkit_14 pg_idkit_14-0.4.0-1PIGSTY.el9.aarch64.rpm pigsty 0.4.0 377.1KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_idkit_14-0.4.0-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 14 pg_idkit_14 pg_idkit_14-0.4.0-1PIGSTY.el10.x86_64.rpm pigsty 0.4.0 474.8KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_idkit_14-0.4.0-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 14 pg_idkit_14 pg_idkit_14-0.4.0-1PIGSTY.el10.aarch64.rpm pigsty 0.4.0 376.8KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_idkit_14-0.4.0-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 14 postgresql-14-pg-idkit postgresql-14-pg-idkit_0.4.0-1PIGSTY~bookworm_amd64.deb pigsty 0.4.0 385.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-idkit/postgresql-14-pg-idkit_0.4.0-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 14 postgresql-14-pg-idkit postgresql-14-pg-idkit_0.4.0-1PIGSTY~bookworm_arm64.deb pigsty 0.4.0 285.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-idkit/postgresql-14-pg-idkit_0.4.0-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 14 postgresql-14-pg-idkit postgresql-14-pg-idkit_0.4.0-1PIGSTY~trixie_amd64.deb pigsty 0.4.0 385.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-idkit/postgresql-14-pg-idkit_0.4.0-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 14 postgresql-14-pg-idkit postgresql-14-pg-idkit_0.4.0-1PIGSTY~trixie_arm64.deb pigsty 0.4.0 285.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-idkit/postgresql-14-pg-idkit_0.4.0-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 14 postgresql-14-pg-idkit postgresql-14-pg-idkit_0.4.0-1PIGSTY~jammy_amd64.deb pigsty 0.4.0 428.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-idkit/postgresql-14-pg-idkit_0.4.0-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 14 postgresql-14-pg-idkit postgresql-14-pg-idkit_0.4.0-1PIGSTY~jammy_arm64.deb pigsty 0.4.0 328.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-idkit/postgresql-14-pg-idkit_0.4.0-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 14 postgresql-14-pg-idkit postgresql-14-pg-idkit_0.4.0-1PIGSTY~noble_amd64.deb pigsty 0.4.0 424.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-idkit/postgresql-14-pg-idkit_0.4.0-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 14 postgresql-14-pg-idkit postgresql-14-pg-idkit_0.4.0-1PIGSTY~noble_arm64.deb pigsty 0.4.0 324.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-idkit/postgresql-14-pg-idkit_0.4.0-1PIGSTY~noble_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建

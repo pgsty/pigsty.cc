@@ -11,7 +11,7 @@ weight: 3560
     <div class="ext-card__title">df7cb/pgsql-asn1oid</div>
     <div class="ext-card__desc">https://github.com/df7cb/pgsql-asn1oid</div>
   </a>
-  <a class="ext-card ext-card--source" href="pgsql-asn1oid-1.6.tar.gz">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pgsql-asn1oid-1.6.tar.gz">
     <div class="ext-card__kicker">源码</div>
     <div class="ext-card__title">pgsql-asn1oid-1.6.tar.gz</div>
     <div class="ext-card__desc">pgsql-asn1oid-1.6.tar.gz</div>
@@ -64,76 +64,76 @@ weight: 3560
 | u22.aarch64 | AVAIL PGDG 1.6 1 | AVAIL PGDG 1.6 1 | AVAIL PGDG 1.6 1 | AVAIL PGDG 1.6 1 | AVAIL PGDG 1.6 1 |
 | u24.x86_64 | AVAIL PGDG 1.6 1 | AVAIL PGDG 1.6 1 | AVAIL PGDG 1.6 1 | AVAIL PGDG 1.6 1 | AVAIL PGDG 1.6 1 |
 | u24.aarch64 | AVAIL PGDG 1.6 1 | AVAIL PGDG 1.6 1 | AVAIL PGDG 1.6 1 | AVAIL PGDG 1.6 1 | AVAIL PGDG 1.6 1 |
-@ el8.x86_64 18 asn1oid_18 asn1oid_18-1.6-1PIGSTY.el8.x86_64.rpm pigsty 1.6 13.5KiB https://repo.pigsty.io/yum/pgsql/el8.x86_64/asn1oid_18-1.6-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 18 asn1oid_18 asn1oid_18-1.6-1PIGSTY.el8.aarch64.rpm pigsty 1.6 13.7KiB https://repo.pigsty.io/yum/pgsql/el8.aarch64/asn1oid_18-1.6-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 18 asn1oid_18 asn1oid_18-1.6-1PIGSTY.el9.x86_64.rpm pigsty 1.6 13.4KiB https://repo.pigsty.io/yum/pgsql/el9.x86_64/asn1oid_18-1.6-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 18 asn1oid_18 asn1oid_18-1.6-1PIGSTY.el9.aarch64.rpm pigsty 1.6 13.5KiB https://repo.pigsty.io/yum/pgsql/el9.aarch64/asn1oid_18-1.6-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 18 asn1oid_18 asn1oid_18-1.6-1PIGSTY.el10.x86_64.rpm pigsty 1.6 13.3KiB https://repo.pigsty.io/yum/pgsql/el10.x86_64/asn1oid_18-1.6-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 18 asn1oid_18 asn1oid_18-1.6-1PIGSTY.el10.aarch64.rpm pigsty 1.6 13.6KiB https://repo.pigsty.io/yum/pgsql/el10.aarch64/asn1oid_18-1.6-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 18 postgresql-18-asn1oid postgresql-18-asn1oid_1.6-3.pgdg12+1_amd64.deb pgdg 1.6 12.8KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pgsql-asn1oid/postgresql-18-asn1oid_1.6-3.pgdg12+1_amd64.deb
-@ d12.aarch64 18 postgresql-18-asn1oid postgresql-18-asn1oid_1.6-3.pgdg12+1_arm64.deb pgdg 1.6 12.9KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pgsql-asn1oid/postgresql-18-asn1oid_1.6-3.pgdg12+1_arm64.deb
-@ d13.x86_64 18 postgresql-18-asn1oid postgresql-18-asn1oid_1.6-3.pgdg13+1_amd64.deb pgdg 1.6 12.8KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pgsql-asn1oid/postgresql-18-asn1oid_1.6-3.pgdg13+1_amd64.deb
-@ d13.aarch64 18 postgresql-18-asn1oid postgresql-18-asn1oid_1.6-3.pgdg13+1_arm64.deb pgdg 1.6 13.0KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pgsql-asn1oid/postgresql-18-asn1oid_1.6-3.pgdg13+1_arm64.deb
-@ u22.x86_64 18 postgresql-18-asn1oid postgresql-18-asn1oid_1.6-3.pgdg22.04+1_amd64.deb pgdg 1.6 13.1KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pgsql-asn1oid/postgresql-18-asn1oid_1.6-3.pgdg22.04+1_amd64.deb
-@ u22.aarch64 18 postgresql-18-asn1oid postgresql-18-asn1oid_1.6-3.pgdg22.04+1_arm64.deb pgdg 1.6 13.0KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pgsql-asn1oid/postgresql-18-asn1oid_1.6-3.pgdg22.04+1_arm64.deb
-@ u24.x86_64 18 postgresql-18-asn1oid postgresql-18-asn1oid_1.6-3.pgdg24.04+1_amd64.deb pgdg 1.6 12.9KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pgsql-asn1oid/postgresql-18-asn1oid_1.6-3.pgdg24.04+1_amd64.deb
-@ u24.aarch64 18 postgresql-18-asn1oid postgresql-18-asn1oid_1.6-3.pgdg24.04+1_arm64.deb pgdg 1.6 13.1KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pgsql-asn1oid/postgresql-18-asn1oid_1.6-3.pgdg24.04+1_arm64.deb
-@ el8.x86_64 17 asn1oid_17 asn1oid_17-1.6-1PIGSTY.el8.x86_64.rpm pigsty 1.6 13.5KiB https://repo.pigsty.io/yum/pgsql/el8.x86_64/asn1oid_17-1.6-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 17 asn1oid_17 asn1oid_17-1.6-1PIGSTY.el8.aarch64.rpm pigsty 1.6 13.6KiB https://repo.pigsty.io/yum/pgsql/el8.aarch64/asn1oid_17-1.6-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 17 asn1oid_17 asn1oid_17-1.6-1PIGSTY.el9.x86_64.rpm pigsty 1.6 13.4KiB https://repo.pigsty.io/yum/pgsql/el9.x86_64/asn1oid_17-1.6-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 17 asn1oid_17 asn1oid_17-1.6-1PIGSTY.el9.aarch64.rpm pigsty 1.6 13.4KiB https://repo.pigsty.io/yum/pgsql/el9.aarch64/asn1oid_17-1.6-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 17 asn1oid_17 asn1oid_17-1.6-1PIGSTY.el10.x86_64.rpm pigsty 1.6 13.3KiB https://repo.pigsty.io/yum/pgsql/el10.x86_64/asn1oid_17-1.6-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 17 asn1oid_17 asn1oid_17-1.6-1PIGSTY.el10.aarch64.rpm pigsty 1.6 13.6KiB https://repo.pigsty.io/yum/pgsql/el10.aarch64/asn1oid_17-1.6-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 17 postgresql-17-asn1oid postgresql-17-asn1oid_1.6-3.pgdg12+1_amd64.deb pgdg 1.6 12.8KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pgsql-asn1oid/postgresql-17-asn1oid_1.6-3.pgdg12+1_amd64.deb
-@ d12.aarch64 17 postgresql-17-asn1oid postgresql-17-asn1oid_1.6-3.pgdg12+1_arm64.deb pgdg 1.6 12.8KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pgsql-asn1oid/postgresql-17-asn1oid_1.6-3.pgdg12+1_arm64.deb
-@ d13.x86_64 17 postgresql-17-asn1oid postgresql-17-asn1oid_1.6-3.pgdg13+1_amd64.deb pgdg 1.6 12.7KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pgsql-asn1oid/postgresql-17-asn1oid_1.6-3.pgdg13+1_amd64.deb
-@ d13.aarch64 17 postgresql-17-asn1oid postgresql-17-asn1oid_1.6-3.pgdg13+1_arm64.deb pgdg 1.6 12.9KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pgsql-asn1oid/postgresql-17-asn1oid_1.6-3.pgdg13+1_arm64.deb
-@ u22.x86_64 17 postgresql-17-asn1oid postgresql-17-asn1oid_1.6-3.pgdg22.04+1_amd64.deb pgdg 1.6 13.4KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pgsql-asn1oid/postgresql-17-asn1oid_1.6-3.pgdg22.04+1_amd64.deb
-@ u22.aarch64 17 postgresql-17-asn1oid postgresql-17-asn1oid_1.6-3.pgdg22.04+1_arm64.deb pgdg 1.6 13.3KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pgsql-asn1oid/postgresql-17-asn1oid_1.6-3.pgdg22.04+1_arm64.deb
-@ u24.x86_64 17 postgresql-17-asn1oid postgresql-17-asn1oid_1.6-3.pgdg24.04+1_amd64.deb pgdg 1.6 12.9KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pgsql-asn1oid/postgresql-17-asn1oid_1.6-3.pgdg24.04+1_amd64.deb
-@ u24.aarch64 17 postgresql-17-asn1oid postgresql-17-asn1oid_1.6-3.pgdg24.04+1_arm64.deb pgdg 1.6 13.0KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pgsql-asn1oid/postgresql-17-asn1oid_1.6-3.pgdg24.04+1_arm64.deb
-@ el8.x86_64 16 asn1oid_16 asn1oid_16-1.6-1PIGSTY.el8.x86_64.rpm pigsty 1.6 13.5KiB https://repo.pigsty.io/yum/pgsql/el8.x86_64/asn1oid_16-1.6-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 16 asn1oid_16 asn1oid_16-1.6-1PIGSTY.el8.aarch64.rpm pigsty 1.6 13.6KiB https://repo.pigsty.io/yum/pgsql/el8.aarch64/asn1oid_16-1.6-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 16 asn1oid_16 asn1oid_16-1.6-1PIGSTY.el9.x86_64.rpm pigsty 1.6 13.4KiB https://repo.pigsty.io/yum/pgsql/el9.x86_64/asn1oid_16-1.6-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 16 asn1oid_16 asn1oid_16-1.6-1PIGSTY.el9.aarch64.rpm pigsty 1.6 13.5KiB https://repo.pigsty.io/yum/pgsql/el9.aarch64/asn1oid_16-1.6-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 16 asn1oid_16 asn1oid_16-1.6-1PIGSTY.el10.x86_64.rpm pigsty 1.6 13.3KiB https://repo.pigsty.io/yum/pgsql/el10.x86_64/asn1oid_16-1.6-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 16 asn1oid_16 asn1oid_16-1.6-1PIGSTY.el10.aarch64.rpm pigsty 1.6 13.6KiB https://repo.pigsty.io/yum/pgsql/el10.aarch64/asn1oid_16-1.6-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 16 postgresql-16-asn1oid postgresql-16-asn1oid_1.6-3.pgdg12+1_amd64.deb pgdg 1.6 12.8KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pgsql-asn1oid/postgresql-16-asn1oid_1.6-3.pgdg12+1_amd64.deb
-@ d12.aarch64 16 postgresql-16-asn1oid postgresql-16-asn1oid_1.6-3.pgdg12+1_arm64.deb pgdg 1.6 12.8KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pgsql-asn1oid/postgresql-16-asn1oid_1.6-3.pgdg12+1_arm64.deb
-@ d13.x86_64 16 postgresql-16-asn1oid postgresql-16-asn1oid_1.6-3.pgdg13+1_amd64.deb pgdg 1.6 12.7KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pgsql-asn1oid/postgresql-16-asn1oid_1.6-3.pgdg13+1_amd64.deb
-@ d13.aarch64 16 postgresql-16-asn1oid postgresql-16-asn1oid_1.6-3.pgdg13+1_arm64.deb pgdg 1.6 12.9KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pgsql-asn1oid/postgresql-16-asn1oid_1.6-3.pgdg13+1_arm64.deb
-@ u22.x86_64 16 postgresql-16-asn1oid postgresql-16-asn1oid_1.6-3.pgdg22.04+1_amd64.deb pgdg 1.6 13.4KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pgsql-asn1oid/postgresql-16-asn1oid_1.6-3.pgdg22.04+1_amd64.deb
-@ u22.aarch64 16 postgresql-16-asn1oid postgresql-16-asn1oid_1.6-3.pgdg22.04+1_arm64.deb pgdg 1.6 13.3KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pgsql-asn1oid/postgresql-16-asn1oid_1.6-3.pgdg22.04+1_arm64.deb
-@ u24.x86_64 16 postgresql-16-asn1oid postgresql-16-asn1oid_1.6-3.pgdg24.04+1_amd64.deb pgdg 1.6 12.9KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pgsql-asn1oid/postgresql-16-asn1oid_1.6-3.pgdg24.04+1_amd64.deb
-@ u24.aarch64 16 postgresql-16-asn1oid postgresql-16-asn1oid_1.6-3.pgdg24.04+1_arm64.deb pgdg 1.6 12.9KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pgsql-asn1oid/postgresql-16-asn1oid_1.6-3.pgdg24.04+1_arm64.deb
-@ el8.x86_64 15 asn1oid_15 asn1oid_15-1.6-1PIGSTY.el8.x86_64.rpm pigsty 1.6 13.5KiB https://repo.pigsty.io/yum/pgsql/el8.x86_64/asn1oid_15-1.6-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 15 asn1oid_15 asn1oid_15-1.6-1PIGSTY.el8.aarch64.rpm pigsty 1.6 13.6KiB https://repo.pigsty.io/yum/pgsql/el8.aarch64/asn1oid_15-1.6-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 15 asn1oid_15 asn1oid_15-1.6-1PIGSTY.el9.x86_64.rpm pigsty 1.6 13.4KiB https://repo.pigsty.io/yum/pgsql/el9.x86_64/asn1oid_15-1.6-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 15 asn1oid_15 asn1oid_15-1.6-1PIGSTY.el9.aarch64.rpm pigsty 1.6 13.5KiB https://repo.pigsty.io/yum/pgsql/el9.aarch64/asn1oid_15-1.6-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 15 asn1oid_15 asn1oid_15-1.6-1PIGSTY.el10.x86_64.rpm pigsty 1.6 13.4KiB https://repo.pigsty.io/yum/pgsql/el10.x86_64/asn1oid_15-1.6-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 15 asn1oid_15 asn1oid_15-1.6-1PIGSTY.el10.aarch64.rpm pigsty 1.6 13.6KiB https://repo.pigsty.io/yum/pgsql/el10.aarch64/asn1oid_15-1.6-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 15 postgresql-15-asn1oid postgresql-15-asn1oid_1.6-3.pgdg12+1_amd64.deb pgdg 1.6 12.8KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pgsql-asn1oid/postgresql-15-asn1oid_1.6-3.pgdg12+1_amd64.deb
-@ d12.aarch64 15 postgresql-15-asn1oid postgresql-15-asn1oid_1.6-3.pgdg12+1_arm64.deb pgdg 1.6 12.8KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pgsql-asn1oid/postgresql-15-asn1oid_1.6-3.pgdg12+1_arm64.deb
-@ d13.x86_64 15 postgresql-15-asn1oid postgresql-15-asn1oid_1.6-3.pgdg13+1_amd64.deb pgdg 1.6 12.8KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pgsql-asn1oid/postgresql-15-asn1oid_1.6-3.pgdg13+1_amd64.deb
-@ d13.aarch64 15 postgresql-15-asn1oid postgresql-15-asn1oid_1.6-3.pgdg13+1_arm64.deb pgdg 1.6 12.9KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pgsql-asn1oid/postgresql-15-asn1oid_1.6-3.pgdg13+1_arm64.deb
-@ u22.x86_64 15 postgresql-15-asn1oid postgresql-15-asn1oid_1.6-3.pgdg22.04+1_amd64.deb pgdg 1.6 13.4KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pgsql-asn1oid/postgresql-15-asn1oid_1.6-3.pgdg22.04+1_amd64.deb
-@ u22.aarch64 15 postgresql-15-asn1oid postgresql-15-asn1oid_1.6-3.pgdg22.04+1_arm64.deb pgdg 1.6 13.3KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pgsql-asn1oid/postgresql-15-asn1oid_1.6-3.pgdg22.04+1_arm64.deb
-@ u24.x86_64 15 postgresql-15-asn1oid postgresql-15-asn1oid_1.6-3.pgdg24.04+1_amd64.deb pgdg 1.6 12.9KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pgsql-asn1oid/postgresql-15-asn1oid_1.6-3.pgdg24.04+1_amd64.deb
-@ u24.aarch64 15 postgresql-15-asn1oid postgresql-15-asn1oid_1.6-3.pgdg24.04+1_arm64.deb pgdg 1.6 13.0KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pgsql-asn1oid/postgresql-15-asn1oid_1.6-3.pgdg24.04+1_arm64.deb
-@ el8.x86_64 14 asn1oid_14 asn1oid_14-1.6-1PIGSTY.el8.x86_64.rpm pigsty 1.6 13.5KiB https://repo.pigsty.io/yum/pgsql/el8.x86_64/asn1oid_14-1.6-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 14 asn1oid_14 asn1oid_14-1.6-1PIGSTY.el8.aarch64.rpm pigsty 1.6 13.6KiB https://repo.pigsty.io/yum/pgsql/el8.aarch64/asn1oid_14-1.6-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 14 asn1oid_14 asn1oid_14-1.6-1PIGSTY.el9.x86_64.rpm pigsty 1.6 13.4KiB https://repo.pigsty.io/yum/pgsql/el9.x86_64/asn1oid_14-1.6-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 14 asn1oid_14 asn1oid_14-1.6-1PIGSTY.el9.aarch64.rpm pigsty 1.6 13.4KiB https://repo.pigsty.io/yum/pgsql/el9.aarch64/asn1oid_14-1.6-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 14 asn1oid_14 asn1oid_14-1.6-1PIGSTY.el10.x86_64.rpm pigsty 1.6 13.4KiB https://repo.pigsty.io/yum/pgsql/el10.x86_64/asn1oid_14-1.6-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 14 asn1oid_14 asn1oid_14-1.6-1PIGSTY.el10.aarch64.rpm pigsty 1.6 13.6KiB https://repo.pigsty.io/yum/pgsql/el10.aarch64/asn1oid_14-1.6-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 14 postgresql-14-asn1oid postgresql-14-asn1oid_1.6-3.pgdg12+1_amd64.deb pgdg 1.6 12.8KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pgsql-asn1oid/postgresql-14-asn1oid_1.6-3.pgdg12+1_amd64.deb
-@ d12.aarch64 14 postgresql-14-asn1oid postgresql-14-asn1oid_1.6-3.pgdg12+1_arm64.deb pgdg 1.6 12.8KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pgsql-asn1oid/postgresql-14-asn1oid_1.6-3.pgdg12+1_arm64.deb
-@ d13.x86_64 14 postgresql-14-asn1oid postgresql-14-asn1oid_1.6-3.pgdg13+1_amd64.deb pgdg 1.6 12.8KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pgsql-asn1oid/postgresql-14-asn1oid_1.6-3.pgdg13+1_amd64.deb
-@ d13.aarch64 14 postgresql-14-asn1oid postgresql-14-asn1oid_1.6-3.pgdg13+1_arm64.deb pgdg 1.6 12.9KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pgsql-asn1oid/postgresql-14-asn1oid_1.6-3.pgdg13+1_arm64.deb
-@ u22.x86_64 14 postgresql-14-asn1oid postgresql-14-asn1oid_1.6-3.pgdg22.04+1_amd64.deb pgdg 1.6 13.4KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pgsql-asn1oid/postgresql-14-asn1oid_1.6-3.pgdg22.04+1_amd64.deb
-@ u22.aarch64 14 postgresql-14-asn1oid postgresql-14-asn1oid_1.6-3.pgdg22.04+1_arm64.deb pgdg 1.6 13.3KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pgsql-asn1oid/postgresql-14-asn1oid_1.6-3.pgdg22.04+1_arm64.deb
-@ u24.x86_64 14 postgresql-14-asn1oid postgresql-14-asn1oid_1.6-3.pgdg24.04+1_amd64.deb pgdg 1.6 12.8KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pgsql-asn1oid/postgresql-14-asn1oid_1.6-3.pgdg24.04+1_amd64.deb
-@ u24.aarch64 14 postgresql-14-asn1oid postgresql-14-asn1oid_1.6-3.pgdg24.04+1_arm64.deb pgdg 1.6 13.0KiB https://apt.postgresql.org/pub/repos/apt/pool/main/p/pgsql-asn1oid/postgresql-14-asn1oid_1.6-3.pgdg24.04+1_arm64.deb
+@ el8.x86_64 18 asn1oid_18 asn1oid_18-1.6-1PIGSTY.el8.x86_64.rpm pigsty 1.6 13.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/asn1oid_18-1.6-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 18 asn1oid_18 asn1oid_18-1.6-1PIGSTY.el8.aarch64.rpm pigsty 1.6 13.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/asn1oid_18-1.6-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 18 asn1oid_18 asn1oid_18-1.6-1PIGSTY.el9.x86_64.rpm pigsty 1.6 13.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/asn1oid_18-1.6-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 18 asn1oid_18 asn1oid_18-1.6-1PIGSTY.el9.aarch64.rpm pigsty 1.6 13.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/asn1oid_18-1.6-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 18 asn1oid_18 asn1oid_18-1.6-1PIGSTY.el10.x86_64.rpm pigsty 1.6 13.3KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/asn1oid_18-1.6-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 18 asn1oid_18 asn1oid_18-1.6-1PIGSTY.el10.aarch64.rpm pigsty 1.6 13.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/asn1oid_18-1.6-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-asn1oid postgresql-18-asn1oid_1.6-3.pgdg12+1_amd64.deb pgdg 1.6 12.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsql-asn1oid/postgresql-18-asn1oid_1.6-3.pgdg12+1_amd64.deb
+@ d12.aarch64 18 postgresql-18-asn1oid postgresql-18-asn1oid_1.6-3.pgdg12+1_arm64.deb pgdg 1.6 12.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsql-asn1oid/postgresql-18-asn1oid_1.6-3.pgdg12+1_arm64.deb
+@ d13.x86_64 18 postgresql-18-asn1oid postgresql-18-asn1oid_1.6-3.pgdg13+1_amd64.deb pgdg 1.6 12.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsql-asn1oid/postgresql-18-asn1oid_1.6-3.pgdg13+1_amd64.deb
+@ d13.aarch64 18 postgresql-18-asn1oid postgresql-18-asn1oid_1.6-3.pgdg13+1_arm64.deb pgdg 1.6 13.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsql-asn1oid/postgresql-18-asn1oid_1.6-3.pgdg13+1_arm64.deb
+@ u22.x86_64 18 postgresql-18-asn1oid postgresql-18-asn1oid_1.6-3.pgdg22.04+1_amd64.deb pgdg 1.6 13.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsql-asn1oid/postgresql-18-asn1oid_1.6-3.pgdg22.04+1_amd64.deb
+@ u22.aarch64 18 postgresql-18-asn1oid postgresql-18-asn1oid_1.6-3.pgdg22.04+1_arm64.deb pgdg 1.6 13.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsql-asn1oid/postgresql-18-asn1oid_1.6-3.pgdg22.04+1_arm64.deb
+@ u24.x86_64 18 postgresql-18-asn1oid postgresql-18-asn1oid_1.6-3.pgdg24.04+1_amd64.deb pgdg 1.6 12.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsql-asn1oid/postgresql-18-asn1oid_1.6-3.pgdg24.04+1_amd64.deb
+@ u24.aarch64 18 postgresql-18-asn1oid postgresql-18-asn1oid_1.6-3.pgdg24.04+1_arm64.deb pgdg 1.6 13.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsql-asn1oid/postgresql-18-asn1oid_1.6-3.pgdg24.04+1_arm64.deb
+@ el8.x86_64 17 asn1oid_17 asn1oid_17-1.6-1PIGSTY.el8.x86_64.rpm pigsty 1.6 13.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/asn1oid_17-1.6-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 17 asn1oid_17 asn1oid_17-1.6-1PIGSTY.el8.aarch64.rpm pigsty 1.6 13.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/asn1oid_17-1.6-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 17 asn1oid_17 asn1oid_17-1.6-1PIGSTY.el9.x86_64.rpm pigsty 1.6 13.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/asn1oid_17-1.6-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 17 asn1oid_17 asn1oid_17-1.6-1PIGSTY.el9.aarch64.rpm pigsty 1.6 13.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/asn1oid_17-1.6-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 17 asn1oid_17 asn1oid_17-1.6-1PIGSTY.el10.x86_64.rpm pigsty 1.6 13.3KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/asn1oid_17-1.6-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 17 asn1oid_17 asn1oid_17-1.6-1PIGSTY.el10.aarch64.rpm pigsty 1.6 13.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/asn1oid_17-1.6-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-asn1oid postgresql-17-asn1oid_1.6-3.pgdg12+1_amd64.deb pgdg 1.6 12.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsql-asn1oid/postgresql-17-asn1oid_1.6-3.pgdg12+1_amd64.deb
+@ d12.aarch64 17 postgresql-17-asn1oid postgresql-17-asn1oid_1.6-3.pgdg12+1_arm64.deb pgdg 1.6 12.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsql-asn1oid/postgresql-17-asn1oid_1.6-3.pgdg12+1_arm64.deb
+@ d13.x86_64 17 postgresql-17-asn1oid postgresql-17-asn1oid_1.6-3.pgdg13+1_amd64.deb pgdg 1.6 12.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsql-asn1oid/postgresql-17-asn1oid_1.6-3.pgdg13+1_amd64.deb
+@ d13.aarch64 17 postgresql-17-asn1oid postgresql-17-asn1oid_1.6-3.pgdg13+1_arm64.deb pgdg 1.6 12.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsql-asn1oid/postgresql-17-asn1oid_1.6-3.pgdg13+1_arm64.deb
+@ u22.x86_64 17 postgresql-17-asn1oid postgresql-17-asn1oid_1.6-3.pgdg22.04+1_amd64.deb pgdg 1.6 13.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsql-asn1oid/postgresql-17-asn1oid_1.6-3.pgdg22.04+1_amd64.deb
+@ u22.aarch64 17 postgresql-17-asn1oid postgresql-17-asn1oid_1.6-3.pgdg22.04+1_arm64.deb pgdg 1.6 13.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsql-asn1oid/postgresql-17-asn1oid_1.6-3.pgdg22.04+1_arm64.deb
+@ u24.x86_64 17 postgresql-17-asn1oid postgresql-17-asn1oid_1.6-3.pgdg24.04+1_amd64.deb pgdg 1.6 12.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsql-asn1oid/postgresql-17-asn1oid_1.6-3.pgdg24.04+1_amd64.deb
+@ u24.aarch64 17 postgresql-17-asn1oid postgresql-17-asn1oid_1.6-3.pgdg24.04+1_arm64.deb pgdg 1.6 13.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsql-asn1oid/postgresql-17-asn1oid_1.6-3.pgdg24.04+1_arm64.deb
+@ el8.x86_64 16 asn1oid_16 asn1oid_16-1.6-1PIGSTY.el8.x86_64.rpm pigsty 1.6 13.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/asn1oid_16-1.6-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 16 asn1oid_16 asn1oid_16-1.6-1PIGSTY.el8.aarch64.rpm pigsty 1.6 13.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/asn1oid_16-1.6-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 16 asn1oid_16 asn1oid_16-1.6-1PIGSTY.el9.x86_64.rpm pigsty 1.6 13.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/asn1oid_16-1.6-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 16 asn1oid_16 asn1oid_16-1.6-1PIGSTY.el9.aarch64.rpm pigsty 1.6 13.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/asn1oid_16-1.6-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 16 asn1oid_16 asn1oid_16-1.6-1PIGSTY.el10.x86_64.rpm pigsty 1.6 13.3KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/asn1oid_16-1.6-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 16 asn1oid_16 asn1oid_16-1.6-1PIGSTY.el10.aarch64.rpm pigsty 1.6 13.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/asn1oid_16-1.6-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 16 postgresql-16-asn1oid postgresql-16-asn1oid_1.6-3.pgdg12+1_amd64.deb pgdg 1.6 12.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsql-asn1oid/postgresql-16-asn1oid_1.6-3.pgdg12+1_amd64.deb
+@ d12.aarch64 16 postgresql-16-asn1oid postgresql-16-asn1oid_1.6-3.pgdg12+1_arm64.deb pgdg 1.6 12.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsql-asn1oid/postgresql-16-asn1oid_1.6-3.pgdg12+1_arm64.deb
+@ d13.x86_64 16 postgresql-16-asn1oid postgresql-16-asn1oid_1.6-3.pgdg13+1_amd64.deb pgdg 1.6 12.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsql-asn1oid/postgresql-16-asn1oid_1.6-3.pgdg13+1_amd64.deb
+@ d13.aarch64 16 postgresql-16-asn1oid postgresql-16-asn1oid_1.6-3.pgdg13+1_arm64.deb pgdg 1.6 12.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsql-asn1oid/postgresql-16-asn1oid_1.6-3.pgdg13+1_arm64.deb
+@ u22.x86_64 16 postgresql-16-asn1oid postgresql-16-asn1oid_1.6-3.pgdg22.04+1_amd64.deb pgdg 1.6 13.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsql-asn1oid/postgresql-16-asn1oid_1.6-3.pgdg22.04+1_amd64.deb
+@ u22.aarch64 16 postgresql-16-asn1oid postgresql-16-asn1oid_1.6-3.pgdg22.04+1_arm64.deb pgdg 1.6 13.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsql-asn1oid/postgresql-16-asn1oid_1.6-3.pgdg22.04+1_arm64.deb
+@ u24.x86_64 16 postgresql-16-asn1oid postgresql-16-asn1oid_1.6-3.pgdg24.04+1_amd64.deb pgdg 1.6 12.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsql-asn1oid/postgresql-16-asn1oid_1.6-3.pgdg24.04+1_amd64.deb
+@ u24.aarch64 16 postgresql-16-asn1oid postgresql-16-asn1oid_1.6-3.pgdg24.04+1_arm64.deb pgdg 1.6 12.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsql-asn1oid/postgresql-16-asn1oid_1.6-3.pgdg24.04+1_arm64.deb
+@ el8.x86_64 15 asn1oid_15 asn1oid_15-1.6-1PIGSTY.el8.x86_64.rpm pigsty 1.6 13.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/asn1oid_15-1.6-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 15 asn1oid_15 asn1oid_15-1.6-1PIGSTY.el8.aarch64.rpm pigsty 1.6 13.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/asn1oid_15-1.6-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 15 asn1oid_15 asn1oid_15-1.6-1PIGSTY.el9.x86_64.rpm pigsty 1.6 13.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/asn1oid_15-1.6-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 15 asn1oid_15 asn1oid_15-1.6-1PIGSTY.el9.aarch64.rpm pigsty 1.6 13.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/asn1oid_15-1.6-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 15 asn1oid_15 asn1oid_15-1.6-1PIGSTY.el10.x86_64.rpm pigsty 1.6 13.4KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/asn1oid_15-1.6-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 15 asn1oid_15 asn1oid_15-1.6-1PIGSTY.el10.aarch64.rpm pigsty 1.6 13.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/asn1oid_15-1.6-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 15 postgresql-15-asn1oid postgresql-15-asn1oid_1.6-3.pgdg12+1_amd64.deb pgdg 1.6 12.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsql-asn1oid/postgresql-15-asn1oid_1.6-3.pgdg12+1_amd64.deb
+@ d12.aarch64 15 postgresql-15-asn1oid postgresql-15-asn1oid_1.6-3.pgdg12+1_arm64.deb pgdg 1.6 12.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsql-asn1oid/postgresql-15-asn1oid_1.6-3.pgdg12+1_arm64.deb
+@ d13.x86_64 15 postgresql-15-asn1oid postgresql-15-asn1oid_1.6-3.pgdg13+1_amd64.deb pgdg 1.6 12.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsql-asn1oid/postgresql-15-asn1oid_1.6-3.pgdg13+1_amd64.deb
+@ d13.aarch64 15 postgresql-15-asn1oid postgresql-15-asn1oid_1.6-3.pgdg13+1_arm64.deb pgdg 1.6 12.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsql-asn1oid/postgresql-15-asn1oid_1.6-3.pgdg13+1_arm64.deb
+@ u22.x86_64 15 postgresql-15-asn1oid postgresql-15-asn1oid_1.6-3.pgdg22.04+1_amd64.deb pgdg 1.6 13.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsql-asn1oid/postgresql-15-asn1oid_1.6-3.pgdg22.04+1_amd64.deb
+@ u22.aarch64 15 postgresql-15-asn1oid postgresql-15-asn1oid_1.6-3.pgdg22.04+1_arm64.deb pgdg 1.6 13.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsql-asn1oid/postgresql-15-asn1oid_1.6-3.pgdg22.04+1_arm64.deb
+@ u24.x86_64 15 postgresql-15-asn1oid postgresql-15-asn1oid_1.6-3.pgdg24.04+1_amd64.deb pgdg 1.6 12.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsql-asn1oid/postgresql-15-asn1oid_1.6-3.pgdg24.04+1_amd64.deb
+@ u24.aarch64 15 postgresql-15-asn1oid postgresql-15-asn1oid_1.6-3.pgdg24.04+1_arm64.deb pgdg 1.6 13.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsql-asn1oid/postgresql-15-asn1oid_1.6-3.pgdg24.04+1_arm64.deb
+@ el8.x86_64 14 asn1oid_14 asn1oid_14-1.6-1PIGSTY.el8.x86_64.rpm pigsty 1.6 13.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/asn1oid_14-1.6-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 14 asn1oid_14 asn1oid_14-1.6-1PIGSTY.el8.aarch64.rpm pigsty 1.6 13.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/asn1oid_14-1.6-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 14 asn1oid_14 asn1oid_14-1.6-1PIGSTY.el9.x86_64.rpm pigsty 1.6 13.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/asn1oid_14-1.6-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 14 asn1oid_14 asn1oid_14-1.6-1PIGSTY.el9.aarch64.rpm pigsty 1.6 13.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/asn1oid_14-1.6-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 14 asn1oid_14 asn1oid_14-1.6-1PIGSTY.el10.x86_64.rpm pigsty 1.6 13.4KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/asn1oid_14-1.6-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 14 asn1oid_14 asn1oid_14-1.6-1PIGSTY.el10.aarch64.rpm pigsty 1.6 13.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/asn1oid_14-1.6-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 14 postgresql-14-asn1oid postgresql-14-asn1oid_1.6-3.pgdg12+1_amd64.deb pgdg 1.6 12.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsql-asn1oid/postgresql-14-asn1oid_1.6-3.pgdg12+1_amd64.deb
+@ d12.aarch64 14 postgresql-14-asn1oid postgresql-14-asn1oid_1.6-3.pgdg12+1_arm64.deb pgdg 1.6 12.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsql-asn1oid/postgresql-14-asn1oid_1.6-3.pgdg12+1_arm64.deb
+@ d13.x86_64 14 postgresql-14-asn1oid postgresql-14-asn1oid_1.6-3.pgdg13+1_amd64.deb pgdg 1.6 12.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsql-asn1oid/postgresql-14-asn1oid_1.6-3.pgdg13+1_amd64.deb
+@ d13.aarch64 14 postgresql-14-asn1oid postgresql-14-asn1oid_1.6-3.pgdg13+1_arm64.deb pgdg 1.6 12.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsql-asn1oid/postgresql-14-asn1oid_1.6-3.pgdg13+1_arm64.deb
+@ u22.x86_64 14 postgresql-14-asn1oid postgresql-14-asn1oid_1.6-3.pgdg22.04+1_amd64.deb pgdg 1.6 13.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsql-asn1oid/postgresql-14-asn1oid_1.6-3.pgdg22.04+1_amd64.deb
+@ u22.aarch64 14 postgresql-14-asn1oid postgresql-14-asn1oid_1.6-3.pgdg22.04+1_arm64.deb pgdg 1.6 13.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsql-asn1oid/postgresql-14-asn1oid_1.6-3.pgdg22.04+1_arm64.deb
+@ u24.x86_64 14 postgresql-14-asn1oid postgresql-14-asn1oid_1.6-3.pgdg24.04+1_amd64.deb pgdg 1.6 12.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsql-asn1oid/postgresql-14-asn1oid_1.6-3.pgdg24.04+1_amd64.deb
+@ u24.aarch64 14 postgresql-14-asn1oid postgresql-14-asn1oid_1.6-3.pgdg24.04+1_arm64.deb pgdg 1.6 13.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsql-asn1oid/postgresql-14-asn1oid_1.6-3.pgdg24.04+1_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建

@@ -11,7 +11,7 @@ weight: 2960
     <div class="ext-card__title">https://docs.omnigres.org/omni_python/intro/</div>
     <div class="ext-card__desc">https://docs.omnigres.org/omni_python/intro/</div>
   </a>
-  <a class="ext-card ext-card--source" href="omnigres-20251108.tar.gz">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/omnigres-20251108.tar.gz">
     <div class="ext-card__kicker">源码</div>
     <div class="ext-card__title">omnigres-20251108.tar.gz</div>
     <div class="ext-card__desc">omnigres-20251108.tar.gz</div>

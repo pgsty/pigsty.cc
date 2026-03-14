@@ -11,7 +11,7 @@ weight: 3620
     <div class="ext-card__title">adjust/pg-currency</div>
     <div class="ext-card__desc">https://github.com/adjust/pg-currency</div>
   </a>
-  <a class="ext-card ext-card--source" href="pg-currency-0.0.3.tar.gz">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pg-currency-0.0.3.tar.gz">
     <div class="ext-card__kicker">源码</div>
     <div class="ext-card__title">pg-currency-0.0.3.tar.gz</div>
     <div class="ext-card__desc">pg-currency-0.0.3.tar.gz</div>
@@ -33,7 +33,7 @@ weight: 3620
 | 3620  | [**`currency`**](/ext/e/currency) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
 {.ext-table}
 
-| **相关扩展** | [`l10n_table_dependent_extension`](/ext/e/l10n_table_dependent_extension) [`country`](/ext/e/country) [`pg_xenophile`](/ext/e/pg_xenophile) [`numeral`](/ext/e/numeral) [`prefix`](/ext/e/prefix) [`semver`](/ext/e/semver) [`unit`](/ext/e/unit) [`pgpdf`](/ext/e/pgpdf) |
+| **相关扩展** | [`plpgsql`](/ext/e/plpgsql) [`l10n_table_dependent_extension`](/ext/e/l10n_table_dependent_extension) [`country`](/ext/e/country) [`pg_xenophile`](/ext/e/pg_xenophile) [`numeral`](/ext/e/numeral) [`prefix`](/ext/e/prefix) [`semver`](/ext/e/semver) [`unit`](/ext/e/unit) [`pgpdf`](/ext/e/pgpdf) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 
@@ -42,7 +42,7 @@ weight: 3620
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#type) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.0.3` | {{< pgvers "18,17,16,15,14" >}} | `pg_currency` | - |
+| [**EXT**](/ext/list#type) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.0.3` | {{< pgvers "18,17,16,15,14" >}} | `pg_currency` | `plpgsql` |
 | [**RPM**](/ext/rpm#type) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.0.3` | {{< pgvers "18,17,16,15,14" >}} | `pg_currency_$v` | - |
 | [**DEB**](/ext/deb#type) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.0.3` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pg-currency` | - |
 {.ext-table}
@@ -64,76 +64,76 @@ weight: 3620
 | u22.aarch64 | AVAIL PIGSTY 0.0.3 1 | AVAIL PIGSTY 0.0.3 1 | AVAIL PIGSTY 0.0.3 1 | AVAIL PIGSTY 0.0.3 1 | AVAIL PIGSTY 0.0.3 1 |
 | u24.x86_64 | AVAIL PIGSTY 0.0.3 1 | AVAIL PIGSTY 0.0.3 1 | AVAIL PIGSTY 0.0.3 1 | AVAIL PIGSTY 0.0.3 1 | AVAIL PIGSTY 0.0.3 1 |
 | u24.aarch64 | AVAIL PIGSTY 0.0.3 1 | AVAIL PIGSTY 0.0.3 1 | AVAIL PIGSTY 0.0.3 1 | AVAIL PIGSTY 0.0.3 1 | AVAIL PIGSTY 0.0.3 1 |
-@ el8.x86_64 18 pg_currency_18 pg_currency_18-0.0.3-1PIGSTY.el8.x86_64.rpm pigsty 0.0.3 16.8KiB https://repo.pigsty.io/yum/pgsql/el8.x86_64/pg_currency_18-0.0.3-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 18 pg_currency_18 pg_currency_18-0.0.3-1PIGSTY.el8.aarch64.rpm pigsty 0.0.3 17.4KiB https://repo.pigsty.io/yum/pgsql/el8.aarch64/pg_currency_18-0.0.3-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 18 pg_currency_18 pg_currency_18-0.0.3-1PIGSTY.el9.x86_64.rpm pigsty 0.0.3 17.2KiB https://repo.pigsty.io/yum/pgsql/el9.x86_64/pg_currency_18-0.0.3-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 18 pg_currency_18 pg_currency_18-0.0.3-1PIGSTY.el9.aarch64.rpm pigsty 0.0.3 17.6KiB https://repo.pigsty.io/yum/pgsql/el9.aarch64/pg_currency_18-0.0.3-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 18 pg_currency_18 pg_currency_18-0.0.3-1PIGSTY.el10.x86_64.rpm pigsty 0.0.3 17.0KiB https://repo.pigsty.io/yum/pgsql/el10.x86_64/pg_currency_18-0.0.3-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 18 pg_currency_18 pg_currency_18-0.0.3-1PIGSTY.el10.aarch64.rpm pigsty 0.0.3 17.7KiB https://repo.pigsty.io/yum/pgsql/el10.aarch64/pg_currency_18-0.0.3-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 18 postgresql-18-pg-currency postgresql-18-pg-currency_0.0.3-1PIGSTY~bookworm_amd64.deb pigsty 0.0.3 19.1KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/pg-currency/postgresql-18-pg-currency_0.0.3-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 18 postgresql-18-pg-currency postgresql-18-pg-currency_0.0.3-1PIGSTY~bookworm_arm64.deb pigsty 0.0.3 19.1KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/pg-currency/postgresql-18-pg-currency_0.0.3-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 18 postgresql-18-pg-currency postgresql-18-pg-currency_0.0.3-1PIGSTY~trixie_amd64.deb pigsty 0.0.3 19.0KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pg-currency/postgresql-18-pg-currency_0.0.3-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 18 postgresql-18-pg-currency postgresql-18-pg-currency_0.0.3-1PIGSTY~trixie_arm64.deb pigsty 0.0.3 19.2KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pg-currency/postgresql-18-pg-currency_0.0.3-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 18 postgresql-18-pg-currency postgresql-18-pg-currency_0.0.3-1PIGSTY~jammy_amd64.deb pigsty 0.0.3 20.3KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/pg-currency/postgresql-18-pg-currency_0.0.3-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 18 postgresql-18-pg-currency postgresql-18-pg-currency_0.0.3-1PIGSTY~jammy_arm64.deb pigsty 0.0.3 20.3KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/pg-currency/postgresql-18-pg-currency_0.0.3-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 18 postgresql-18-pg-currency postgresql-18-pg-currency_0.0.3-1PIGSTY~noble_amd64.deb pigsty 0.0.3 20.3KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pg-currency/postgresql-18-pg-currency_0.0.3-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 18 postgresql-18-pg-currency postgresql-18-pg-currency_0.0.3-1PIGSTY~noble_arm64.deb pigsty 0.0.3 20.7KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pg-currency/postgresql-18-pg-currency_0.0.3-1PIGSTY~noble_arm64.deb
-@ el8.x86_64 17 pg_currency_17 pg_currency_17-0.0.3-1PIGSTY.el8.x86_64.rpm pigsty 0.0.3 16.8KiB https://repo.pigsty.io/yum/pgsql/el8.x86_64/pg_currency_17-0.0.3-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 17 pg_currency_17 pg_currency_17-0.0.3-1PIGSTY.el8.aarch64.rpm pigsty 0.0.3 17.4KiB https://repo.pigsty.io/yum/pgsql/el8.aarch64/pg_currency_17-0.0.3-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 17 pg_currency_17 pg_currency_17-0.0.3-1PIGSTY.el9.x86_64.rpm pigsty 0.0.3 17.2KiB https://repo.pigsty.io/yum/pgsql/el9.x86_64/pg_currency_17-0.0.3-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 17 pg_currency_17 pg_currency_17-0.0.3-1PIGSTY.el9.aarch64.rpm pigsty 0.0.3 17.6KiB https://repo.pigsty.io/yum/pgsql/el9.aarch64/pg_currency_17-0.0.3-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 17 pg_currency_17 pg_currency_17-0.0.3-1PIGSTY.el10.x86_64.rpm pigsty 0.0.3 17.0KiB https://repo.pigsty.io/yum/pgsql/el10.x86_64/pg_currency_17-0.0.3-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 17 pg_currency_17 pg_currency_17-0.0.3-1PIGSTY.el10.aarch64.rpm pigsty 0.0.3 17.7KiB https://repo.pigsty.io/yum/pgsql/el10.aarch64/pg_currency_17-0.0.3-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 17 postgresql-17-pg-currency postgresql-17-pg-currency_0.0.3-1PIGSTY~bookworm_amd64.deb pigsty 0.0.3 19.0KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/pg-currency/postgresql-17-pg-currency_0.0.3-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 17 postgresql-17-pg-currency postgresql-17-pg-currency_0.0.3-1PIGSTY~bookworm_arm64.deb pigsty 0.0.3 19.1KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/pg-currency/postgresql-17-pg-currency_0.0.3-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 17 postgresql-17-pg-currency postgresql-17-pg-currency_0.0.3-1PIGSTY~trixie_amd64.deb pigsty 0.0.3 19.0KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pg-currency/postgresql-17-pg-currency_0.0.3-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 17 postgresql-17-pg-currency postgresql-17-pg-currency_0.0.3-1PIGSTY~trixie_arm64.deb pigsty 0.0.3 19.1KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pg-currency/postgresql-17-pg-currency_0.0.3-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 17 postgresql-17-pg-currency postgresql-17-pg-currency_0.0.3-1PIGSTY~jammy_amd64.deb pigsty 0.0.3 22.5KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/pg-currency/postgresql-17-pg-currency_0.0.3-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 17 postgresql-17-pg-currency postgresql-17-pg-currency_0.0.3-1PIGSTY~jammy_arm64.deb pigsty 0.0.3 22.4KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/pg-currency/postgresql-17-pg-currency_0.0.3-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 17 postgresql-17-pg-currency postgresql-17-pg-currency_0.0.3-1PIGSTY~noble_amd64.deb pigsty 0.0.3 20.3KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pg-currency/postgresql-17-pg-currency_0.0.3-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 17 postgresql-17-pg-currency postgresql-17-pg-currency_0.0.3-1PIGSTY~noble_arm64.deb pigsty 0.0.3 20.7KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pg-currency/postgresql-17-pg-currency_0.0.3-1PIGSTY~noble_arm64.deb
-@ el8.x86_64 16 pg_currency_16 pg_currency_16-0.0.3-1PIGSTY.el8.x86_64.rpm pigsty 0.0.3 16.8KiB https://repo.pigsty.io/yum/pgsql/el8.x86_64/pg_currency_16-0.0.3-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 16 pg_currency_16 pg_currency_16-0.0.3-1PIGSTY.el8.aarch64.rpm pigsty 0.0.3 17.4KiB https://repo.pigsty.io/yum/pgsql/el8.aarch64/pg_currency_16-0.0.3-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 16 pg_currency_16 pg_currency_16-0.0.3-1PIGSTY.el9.x86_64.rpm pigsty 0.0.3 17.2KiB https://repo.pigsty.io/yum/pgsql/el9.x86_64/pg_currency_16-0.0.3-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 16 pg_currency_16 pg_currency_16-0.0.3-1PIGSTY.el9.aarch64.rpm pigsty 0.0.3 17.6KiB https://repo.pigsty.io/yum/pgsql/el9.aarch64/pg_currency_16-0.0.3-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 16 pg_currency_16 pg_currency_16-0.0.3-1PIGSTY.el10.x86_64.rpm pigsty 0.0.3 17.0KiB https://repo.pigsty.io/yum/pgsql/el10.x86_64/pg_currency_16-0.0.3-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 16 pg_currency_16 pg_currency_16-0.0.3-1PIGSTY.el10.aarch64.rpm pigsty 0.0.3 17.7KiB https://repo.pigsty.io/yum/pgsql/el10.aarch64/pg_currency_16-0.0.3-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 16 postgresql-16-pg-currency postgresql-16-pg-currency_0.0.3-1PIGSTY~bookworm_amd64.deb pigsty 0.0.3 19.1KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/pg-currency/postgresql-16-pg-currency_0.0.3-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 16 postgresql-16-pg-currency postgresql-16-pg-currency_0.0.3-1PIGSTY~bookworm_arm64.deb pigsty 0.0.3 19.1KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/pg-currency/postgresql-16-pg-currency_0.0.3-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 16 postgresql-16-pg-currency postgresql-16-pg-currency_0.0.3-1PIGSTY~trixie_amd64.deb pigsty 0.0.3 19.0KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pg-currency/postgresql-16-pg-currency_0.0.3-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 16 postgresql-16-pg-currency postgresql-16-pg-currency_0.0.3-1PIGSTY~trixie_arm64.deb pigsty 0.0.3 19.1KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pg-currency/postgresql-16-pg-currency_0.0.3-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 16 postgresql-16-pg-currency postgresql-16-pg-currency_0.0.3-1PIGSTY~jammy_amd64.deb pigsty 0.0.3 22.4KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/pg-currency/postgresql-16-pg-currency_0.0.3-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 16 postgresql-16-pg-currency postgresql-16-pg-currency_0.0.3-1PIGSTY~jammy_arm64.deb pigsty 0.0.3 22.4KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/pg-currency/postgresql-16-pg-currency_0.0.3-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 16 postgresql-16-pg-currency postgresql-16-pg-currency_0.0.3-1PIGSTY~noble_amd64.deb pigsty 0.0.3 20.3KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pg-currency/postgresql-16-pg-currency_0.0.3-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 16 postgresql-16-pg-currency postgresql-16-pg-currency_0.0.3-1PIGSTY~noble_arm64.deb pigsty 0.0.3 20.7KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pg-currency/postgresql-16-pg-currency_0.0.3-1PIGSTY~noble_arm64.deb
-@ el8.x86_64 15 pg_currency_15 pg_currency_15-0.0.3-1PIGSTY.el8.x86_64.rpm pigsty 0.0.3 16.7KiB https://repo.pigsty.io/yum/pgsql/el8.x86_64/pg_currency_15-0.0.3-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 15 pg_currency_15 pg_currency_15-0.0.3-1PIGSTY.el8.aarch64.rpm pigsty 0.0.3 17.3KiB https://repo.pigsty.io/yum/pgsql/el8.aarch64/pg_currency_15-0.0.3-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 15 pg_currency_15 pg_currency_15-0.0.3-1PIGSTY.el9.x86_64.rpm pigsty 0.0.3 17.0KiB https://repo.pigsty.io/yum/pgsql/el9.x86_64/pg_currency_15-0.0.3-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 15 pg_currency_15 pg_currency_15-0.0.3-1PIGSTY.el9.aarch64.rpm pigsty 0.0.3 17.6KiB https://repo.pigsty.io/yum/pgsql/el9.aarch64/pg_currency_15-0.0.3-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 15 pg_currency_15 pg_currency_15-0.0.3-1PIGSTY.el10.x86_64.rpm pigsty 0.0.3 16.9KiB https://repo.pigsty.io/yum/pgsql/el10.x86_64/pg_currency_15-0.0.3-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 15 pg_currency_15 pg_currency_15-0.0.3-1PIGSTY.el10.aarch64.rpm pigsty 0.0.3 17.7KiB https://repo.pigsty.io/yum/pgsql/el10.aarch64/pg_currency_15-0.0.3-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 15 postgresql-15-pg-currency postgresql-15-pg-currency_0.0.3-1PIGSTY~bookworm_amd64.deb pigsty 0.0.3 19.1KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/pg-currency/postgresql-15-pg-currency_0.0.3-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 15 postgresql-15-pg-currency postgresql-15-pg-currency_0.0.3-1PIGSTY~bookworm_arm64.deb pigsty 0.0.3 19.3KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/pg-currency/postgresql-15-pg-currency_0.0.3-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 15 postgresql-15-pg-currency postgresql-15-pg-currency_0.0.3-1PIGSTY~trixie_amd64.deb pigsty 0.0.3 18.9KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pg-currency/postgresql-15-pg-currency_0.0.3-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 15 postgresql-15-pg-currency postgresql-15-pg-currency_0.0.3-1PIGSTY~trixie_arm64.deb pigsty 0.0.3 19.3KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pg-currency/postgresql-15-pg-currency_0.0.3-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 15 postgresql-15-pg-currency postgresql-15-pg-currency_0.0.3-1PIGSTY~jammy_amd64.deb pigsty 0.0.3 22.4KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/pg-currency/postgresql-15-pg-currency_0.0.3-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 15 postgresql-15-pg-currency postgresql-15-pg-currency_0.0.3-1PIGSTY~jammy_arm64.deb pigsty 0.0.3 22.4KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/pg-currency/postgresql-15-pg-currency_0.0.3-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 15 postgresql-15-pg-currency postgresql-15-pg-currency_0.0.3-1PIGSTY~noble_amd64.deb pigsty 0.0.3 20.3KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pg-currency/postgresql-15-pg-currency_0.0.3-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 15 postgresql-15-pg-currency postgresql-15-pg-currency_0.0.3-1PIGSTY~noble_arm64.deb pigsty 0.0.3 20.8KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pg-currency/postgresql-15-pg-currency_0.0.3-1PIGSTY~noble_arm64.deb
-@ el8.x86_64 14 pg_currency_14 pg_currency_14-0.0.3-1PIGSTY.el8.x86_64.rpm pigsty 0.0.3 16.7KiB https://repo.pigsty.io/yum/pgsql/el8.x86_64/pg_currency_14-0.0.3-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 14 pg_currency_14 pg_currency_14-0.0.3-1PIGSTY.el8.aarch64.rpm pigsty 0.0.3 17.3KiB https://repo.pigsty.io/yum/pgsql/el8.aarch64/pg_currency_14-0.0.3-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 14 pg_currency_14 pg_currency_14-0.0.3-1PIGSTY.el9.x86_64.rpm pigsty 0.0.3 17.0KiB https://repo.pigsty.io/yum/pgsql/el9.x86_64/pg_currency_14-0.0.3-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 14 pg_currency_14 pg_currency_14-0.0.3-1PIGSTY.el9.aarch64.rpm pigsty 0.0.3 17.6KiB https://repo.pigsty.io/yum/pgsql/el9.aarch64/pg_currency_14-0.0.3-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 14 pg_currency_14 pg_currency_14-0.0.3-1PIGSTY.el10.x86_64.rpm pigsty 0.0.3 16.9KiB https://repo.pigsty.io/yum/pgsql/el10.x86_64/pg_currency_14-0.0.3-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 14 pg_currency_14 pg_currency_14-0.0.3-1PIGSTY.el10.aarch64.rpm pigsty 0.0.3 17.7KiB https://repo.pigsty.io/yum/pgsql/el10.aarch64/pg_currency_14-0.0.3-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 14 postgresql-14-pg-currency postgresql-14-pg-currency_0.0.3-1PIGSTY~bookworm_amd64.deb pigsty 0.0.3 19.0KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/pg-currency/postgresql-14-pg-currency_0.0.3-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 14 postgresql-14-pg-currency postgresql-14-pg-currency_0.0.3-1PIGSTY~bookworm_arm64.deb pigsty 0.0.3 19.2KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/pg-currency/postgresql-14-pg-currency_0.0.3-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 14 postgresql-14-pg-currency postgresql-14-pg-currency_0.0.3-1PIGSTY~trixie_amd64.deb pigsty 0.0.3 18.9KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pg-currency/postgresql-14-pg-currency_0.0.3-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 14 postgresql-14-pg-currency postgresql-14-pg-currency_0.0.3-1PIGSTY~trixie_arm64.deb pigsty 0.0.3 19.2KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pg-currency/postgresql-14-pg-currency_0.0.3-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 14 postgresql-14-pg-currency postgresql-14-pg-currency_0.0.3-1PIGSTY~jammy_amd64.deb pigsty 0.0.3 22.3KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/pg-currency/postgresql-14-pg-currency_0.0.3-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 14 postgresql-14-pg-currency postgresql-14-pg-currency_0.0.3-1PIGSTY~jammy_arm64.deb pigsty 0.0.3 22.3KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/pg-currency/postgresql-14-pg-currency_0.0.3-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 14 postgresql-14-pg-currency postgresql-14-pg-currency_0.0.3-1PIGSTY~noble_amd64.deb pigsty 0.0.3 20.3KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pg-currency/postgresql-14-pg-currency_0.0.3-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 14 postgresql-14-pg-currency postgresql-14-pg-currency_0.0.3-1PIGSTY~noble_arm64.deb pigsty 0.0.3 20.8KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pg-currency/postgresql-14-pg-currency_0.0.3-1PIGSTY~noble_arm64.deb
+@ el8.x86_64 18 pg_currency_18 pg_currency_18-0.0.3-1PIGSTY.el8.x86_64.rpm pigsty 0.0.3 16.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_currency_18-0.0.3-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 18 pg_currency_18 pg_currency_18-0.0.3-1PIGSTY.el8.aarch64.rpm pigsty 0.0.3 17.4KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_currency_18-0.0.3-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 18 pg_currency_18 pg_currency_18-0.0.3-1PIGSTY.el9.x86_64.rpm pigsty 0.0.3 17.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_currency_18-0.0.3-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 18 pg_currency_18 pg_currency_18-0.0.3-1PIGSTY.el9.aarch64.rpm pigsty 0.0.3 17.6KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_currency_18-0.0.3-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 18 pg_currency_18 pg_currency_18-0.0.3-1PIGSTY.el10.x86_64.rpm pigsty 0.0.3 17.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_currency_18-0.0.3-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 18 pg_currency_18 pg_currency_18-0.0.3-1PIGSTY.el10.aarch64.rpm pigsty 0.0.3 17.7KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_currency_18-0.0.3-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-pg-currency postgresql-18-pg-currency_0.0.3-1PIGSTY~bookworm_amd64.deb pigsty 0.0.3 19.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-currency/postgresql-18-pg-currency_0.0.3-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 18 postgresql-18-pg-currency postgresql-18-pg-currency_0.0.3-1PIGSTY~bookworm_arm64.deb pigsty 0.0.3 19.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-currency/postgresql-18-pg-currency_0.0.3-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 18 postgresql-18-pg-currency postgresql-18-pg-currency_0.0.3-1PIGSTY~trixie_amd64.deb pigsty 0.0.3 19.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-currency/postgresql-18-pg-currency_0.0.3-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 18 postgresql-18-pg-currency postgresql-18-pg-currency_0.0.3-1PIGSTY~trixie_arm64.deb pigsty 0.0.3 19.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-currency/postgresql-18-pg-currency_0.0.3-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 18 postgresql-18-pg-currency postgresql-18-pg-currency_0.0.3-1PIGSTY~jammy_amd64.deb pigsty 0.0.3 20.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-currency/postgresql-18-pg-currency_0.0.3-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 18 postgresql-18-pg-currency postgresql-18-pg-currency_0.0.3-1PIGSTY~jammy_arm64.deb pigsty 0.0.3 20.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-currency/postgresql-18-pg-currency_0.0.3-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 18 postgresql-18-pg-currency postgresql-18-pg-currency_0.0.3-1PIGSTY~noble_amd64.deb pigsty 0.0.3 20.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-currency/postgresql-18-pg-currency_0.0.3-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 18 postgresql-18-pg-currency postgresql-18-pg-currency_0.0.3-1PIGSTY~noble_arm64.deb pigsty 0.0.3 20.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-currency/postgresql-18-pg-currency_0.0.3-1PIGSTY~noble_arm64.deb
+@ el8.x86_64 17 pg_currency_17 pg_currency_17-0.0.3-1PIGSTY.el8.x86_64.rpm pigsty 0.0.3 16.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_currency_17-0.0.3-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 17 pg_currency_17 pg_currency_17-0.0.3-1PIGSTY.el8.aarch64.rpm pigsty 0.0.3 17.4KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_currency_17-0.0.3-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 17 pg_currency_17 pg_currency_17-0.0.3-1PIGSTY.el9.x86_64.rpm pigsty 0.0.3 17.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_currency_17-0.0.3-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 17 pg_currency_17 pg_currency_17-0.0.3-1PIGSTY.el9.aarch64.rpm pigsty 0.0.3 17.6KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_currency_17-0.0.3-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 17 pg_currency_17 pg_currency_17-0.0.3-1PIGSTY.el10.x86_64.rpm pigsty 0.0.3 17.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_currency_17-0.0.3-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 17 pg_currency_17 pg_currency_17-0.0.3-1PIGSTY.el10.aarch64.rpm pigsty 0.0.3 17.7KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_currency_17-0.0.3-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-pg-currency postgresql-17-pg-currency_0.0.3-1PIGSTY~bookworm_amd64.deb pigsty 0.0.3 19.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-currency/postgresql-17-pg-currency_0.0.3-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 17 postgresql-17-pg-currency postgresql-17-pg-currency_0.0.3-1PIGSTY~bookworm_arm64.deb pigsty 0.0.3 19.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-currency/postgresql-17-pg-currency_0.0.3-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 17 postgresql-17-pg-currency postgresql-17-pg-currency_0.0.3-1PIGSTY~trixie_amd64.deb pigsty 0.0.3 19.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-currency/postgresql-17-pg-currency_0.0.3-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 17 postgresql-17-pg-currency postgresql-17-pg-currency_0.0.3-1PIGSTY~trixie_arm64.deb pigsty 0.0.3 19.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-currency/postgresql-17-pg-currency_0.0.3-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 17 postgresql-17-pg-currency postgresql-17-pg-currency_0.0.3-1PIGSTY~jammy_amd64.deb pigsty 0.0.3 22.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-currency/postgresql-17-pg-currency_0.0.3-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 17 postgresql-17-pg-currency postgresql-17-pg-currency_0.0.3-1PIGSTY~jammy_arm64.deb pigsty 0.0.3 22.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-currency/postgresql-17-pg-currency_0.0.3-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 17 postgresql-17-pg-currency postgresql-17-pg-currency_0.0.3-1PIGSTY~noble_amd64.deb pigsty 0.0.3 20.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-currency/postgresql-17-pg-currency_0.0.3-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 17 postgresql-17-pg-currency postgresql-17-pg-currency_0.0.3-1PIGSTY~noble_arm64.deb pigsty 0.0.3 20.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-currency/postgresql-17-pg-currency_0.0.3-1PIGSTY~noble_arm64.deb
+@ el8.x86_64 16 pg_currency_16 pg_currency_16-0.0.3-1PIGSTY.el8.x86_64.rpm pigsty 0.0.3 16.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_currency_16-0.0.3-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 16 pg_currency_16 pg_currency_16-0.0.3-1PIGSTY.el8.aarch64.rpm pigsty 0.0.3 17.4KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_currency_16-0.0.3-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 16 pg_currency_16 pg_currency_16-0.0.3-1PIGSTY.el9.x86_64.rpm pigsty 0.0.3 17.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_currency_16-0.0.3-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 16 pg_currency_16 pg_currency_16-0.0.3-1PIGSTY.el9.aarch64.rpm pigsty 0.0.3 17.6KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_currency_16-0.0.3-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 16 pg_currency_16 pg_currency_16-0.0.3-1PIGSTY.el10.x86_64.rpm pigsty 0.0.3 17.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_currency_16-0.0.3-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 16 pg_currency_16 pg_currency_16-0.0.3-1PIGSTY.el10.aarch64.rpm pigsty 0.0.3 17.7KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_currency_16-0.0.3-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 16 postgresql-16-pg-currency postgresql-16-pg-currency_0.0.3-1PIGSTY~bookworm_amd64.deb pigsty 0.0.3 19.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-currency/postgresql-16-pg-currency_0.0.3-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 16 postgresql-16-pg-currency postgresql-16-pg-currency_0.0.3-1PIGSTY~bookworm_arm64.deb pigsty 0.0.3 19.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-currency/postgresql-16-pg-currency_0.0.3-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 16 postgresql-16-pg-currency postgresql-16-pg-currency_0.0.3-1PIGSTY~trixie_amd64.deb pigsty 0.0.3 19.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-currency/postgresql-16-pg-currency_0.0.3-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 16 postgresql-16-pg-currency postgresql-16-pg-currency_0.0.3-1PIGSTY~trixie_arm64.deb pigsty 0.0.3 19.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-currency/postgresql-16-pg-currency_0.0.3-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 16 postgresql-16-pg-currency postgresql-16-pg-currency_0.0.3-1PIGSTY~jammy_amd64.deb pigsty 0.0.3 22.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-currency/postgresql-16-pg-currency_0.0.3-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 16 postgresql-16-pg-currency postgresql-16-pg-currency_0.0.3-1PIGSTY~jammy_arm64.deb pigsty 0.0.3 22.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-currency/postgresql-16-pg-currency_0.0.3-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 16 postgresql-16-pg-currency postgresql-16-pg-currency_0.0.3-1PIGSTY~noble_amd64.deb pigsty 0.0.3 20.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-currency/postgresql-16-pg-currency_0.0.3-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 16 postgresql-16-pg-currency postgresql-16-pg-currency_0.0.3-1PIGSTY~noble_arm64.deb pigsty 0.0.3 20.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-currency/postgresql-16-pg-currency_0.0.3-1PIGSTY~noble_arm64.deb
+@ el8.x86_64 15 pg_currency_15 pg_currency_15-0.0.3-1PIGSTY.el8.x86_64.rpm pigsty 0.0.3 16.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_currency_15-0.0.3-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 15 pg_currency_15 pg_currency_15-0.0.3-1PIGSTY.el8.aarch64.rpm pigsty 0.0.3 17.3KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_currency_15-0.0.3-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 15 pg_currency_15 pg_currency_15-0.0.3-1PIGSTY.el9.x86_64.rpm pigsty 0.0.3 17.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_currency_15-0.0.3-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 15 pg_currency_15 pg_currency_15-0.0.3-1PIGSTY.el9.aarch64.rpm pigsty 0.0.3 17.6KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_currency_15-0.0.3-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 15 pg_currency_15 pg_currency_15-0.0.3-1PIGSTY.el10.x86_64.rpm pigsty 0.0.3 16.9KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_currency_15-0.0.3-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 15 pg_currency_15 pg_currency_15-0.0.3-1PIGSTY.el10.aarch64.rpm pigsty 0.0.3 17.7KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_currency_15-0.0.3-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 15 postgresql-15-pg-currency postgresql-15-pg-currency_0.0.3-1PIGSTY~bookworm_amd64.deb pigsty 0.0.3 19.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-currency/postgresql-15-pg-currency_0.0.3-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 15 postgresql-15-pg-currency postgresql-15-pg-currency_0.0.3-1PIGSTY~bookworm_arm64.deb pigsty 0.0.3 19.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-currency/postgresql-15-pg-currency_0.0.3-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 15 postgresql-15-pg-currency postgresql-15-pg-currency_0.0.3-1PIGSTY~trixie_amd64.deb pigsty 0.0.3 18.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-currency/postgresql-15-pg-currency_0.0.3-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 15 postgresql-15-pg-currency postgresql-15-pg-currency_0.0.3-1PIGSTY~trixie_arm64.deb pigsty 0.0.3 19.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-currency/postgresql-15-pg-currency_0.0.3-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 15 postgresql-15-pg-currency postgresql-15-pg-currency_0.0.3-1PIGSTY~jammy_amd64.deb pigsty 0.0.3 22.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-currency/postgresql-15-pg-currency_0.0.3-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 15 postgresql-15-pg-currency postgresql-15-pg-currency_0.0.3-1PIGSTY~jammy_arm64.deb pigsty 0.0.3 22.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-currency/postgresql-15-pg-currency_0.0.3-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 15 postgresql-15-pg-currency postgresql-15-pg-currency_0.0.3-1PIGSTY~noble_amd64.deb pigsty 0.0.3 20.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-currency/postgresql-15-pg-currency_0.0.3-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 15 postgresql-15-pg-currency postgresql-15-pg-currency_0.0.3-1PIGSTY~noble_arm64.deb pigsty 0.0.3 20.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-currency/postgresql-15-pg-currency_0.0.3-1PIGSTY~noble_arm64.deb
+@ el8.x86_64 14 pg_currency_14 pg_currency_14-0.0.3-1PIGSTY.el8.x86_64.rpm pigsty 0.0.3 16.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_currency_14-0.0.3-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 14 pg_currency_14 pg_currency_14-0.0.3-1PIGSTY.el8.aarch64.rpm pigsty 0.0.3 17.3KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_currency_14-0.0.3-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 14 pg_currency_14 pg_currency_14-0.0.3-1PIGSTY.el9.x86_64.rpm pigsty 0.0.3 17.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_currency_14-0.0.3-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 14 pg_currency_14 pg_currency_14-0.0.3-1PIGSTY.el9.aarch64.rpm pigsty 0.0.3 17.6KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_currency_14-0.0.3-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 14 pg_currency_14 pg_currency_14-0.0.3-1PIGSTY.el10.x86_64.rpm pigsty 0.0.3 16.9KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_currency_14-0.0.3-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 14 pg_currency_14 pg_currency_14-0.0.3-1PIGSTY.el10.aarch64.rpm pigsty 0.0.3 17.7KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_currency_14-0.0.3-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 14 postgresql-14-pg-currency postgresql-14-pg-currency_0.0.3-1PIGSTY~bookworm_amd64.deb pigsty 0.0.3 19.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-currency/postgresql-14-pg-currency_0.0.3-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 14 postgresql-14-pg-currency postgresql-14-pg-currency_0.0.3-1PIGSTY~bookworm_arm64.deb pigsty 0.0.3 19.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-currency/postgresql-14-pg-currency_0.0.3-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 14 postgresql-14-pg-currency postgresql-14-pg-currency_0.0.3-1PIGSTY~trixie_amd64.deb pigsty 0.0.3 18.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-currency/postgresql-14-pg-currency_0.0.3-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 14 postgresql-14-pg-currency postgresql-14-pg-currency_0.0.3-1PIGSTY~trixie_arm64.deb pigsty 0.0.3 19.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-currency/postgresql-14-pg-currency_0.0.3-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 14 postgresql-14-pg-currency postgresql-14-pg-currency_0.0.3-1PIGSTY~jammy_amd64.deb pigsty 0.0.3 22.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-currency/postgresql-14-pg-currency_0.0.3-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 14 postgresql-14-pg-currency postgresql-14-pg-currency_0.0.3-1PIGSTY~jammy_arm64.deb pigsty 0.0.3 22.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-currency/postgresql-14-pg-currency_0.0.3-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 14 postgresql-14-pg-currency postgresql-14-pg-currency_0.0.3-1PIGSTY~noble_amd64.deb pigsty 0.0.3 20.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-currency/postgresql-14-pg-currency_0.0.3-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 14 postgresql-14-pg-currency postgresql-14-pg-currency_0.0.3-1PIGSTY~noble_arm64.deb pigsty 0.0.3 20.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-currency/postgresql-14-pg-currency_0.0.3-1PIGSTY~noble_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建
@@ -194,7 +194,7 @@ apt install -y postgresql-14-pg-currency   # PG 14
 **创建扩展**：
 
 ```sql
-CREATE EXTENSION currency;
+CREATE EXTENSION currency CASCADE;  -- 依赖: plpgsql
 ```
 
 

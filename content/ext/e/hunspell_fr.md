@@ -11,7 +11,7 @@ weight: 2273
     <div class="ext-card__title">postgrespro/hunspell_dicts</div>
     <div class="ext-card__desc">https://github.com/postgrespro/hunspell_dicts</div>
   </a>
-  <a class="ext-card ext-card--source" href="hunspell-1.0.tar.gz">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/hunspell-1.0.tar.gz">
     <div class="ext-card__kicker">源码</div>
     <div class="ext-card__title">hunspell-1.0.tar.gz</div>
     <div class="ext-card__desc">hunspell-1.0.tar.gz</div>
@@ -64,76 +64,76 @@ weight: 2273
 | u22.aarch64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 |
 | u24.x86_64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 |
 | u24.aarch64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 |
-@ el8.x86_64 18 hunspell_fr_18 hunspell_fr_18-1.0-1PIGSTY.el8.x86_64.rpm pigsty 1.0 351.5KiB https://repo.pigsty.io/yum/pgsql/el8.x86_64/hunspell_fr_18-1.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 18 hunspell_fr_18 hunspell_fr_18-1.0-1PIGSTY.el8.aarch64.rpm pigsty 1.0 351.5KiB https://repo.pigsty.io/yum/pgsql/el8.aarch64/hunspell_fr_18-1.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 18 hunspell_fr_18 hunspell_fr_18-1.0-1PIGSTY.el9.x86_64.rpm pigsty 1.0 325.3KiB https://repo.pigsty.io/yum/pgsql/el9.x86_64/hunspell_fr_18-1.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 18 hunspell_fr_18 hunspell_fr_18-1.0-1PIGSTY.el9.aarch64.rpm pigsty 1.0 325.2KiB https://repo.pigsty.io/yum/pgsql/el9.aarch64/hunspell_fr_18-1.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 18 hunspell_fr_18 hunspell_fr_18-1.0-1PIGSTY.el10.x86_64.rpm pigsty 1.0 325.2KiB https://repo.pigsty.io/yum/pgsql/el10.x86_64/hunspell_fr_18-1.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 18 hunspell_fr_18 hunspell_fr_18-1.0-1PIGSTY.el10.aarch64.rpm pigsty 1.0 325.1KiB https://repo.pigsty.io/yum/pgsql/el10.aarch64/hunspell_fr_18-1.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 18 postgresql-18-hunspell-fr postgresql-18-hunspell-fr_1.0-1PIGSTY~bookworm_amd64.deb pigsty 1.0 298.9KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/h/hunspell-fr/postgresql-18-hunspell-fr_1.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 18 postgresql-18-hunspell-fr postgresql-18-hunspell-fr_1.0-1PIGSTY~bookworm_arm64.deb pigsty 1.0 298.9KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/h/hunspell-fr/postgresql-18-hunspell-fr_1.0-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 18 postgresql-18-hunspell-fr postgresql-18-hunspell-fr_1.0-1PIGSTY~trixie_amd64.deb pigsty 1.0 299.3KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/h/hunspell-fr/postgresql-18-hunspell-fr_1.0-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 18 postgresql-18-hunspell-fr postgresql-18-hunspell-fr_1.0-1PIGSTY~trixie_arm64.deb pigsty 1.0 299.3KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/h/hunspell-fr/postgresql-18-hunspell-fr_1.0-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 18 postgresql-18-hunspell-fr postgresql-18-hunspell-fr_1.0-1PIGSTY~jammy_amd64.deb pigsty 1.0 318.2KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/h/hunspell-fr/postgresql-18-hunspell-fr_1.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 18 postgresql-18-hunspell-fr postgresql-18-hunspell-fr_1.0-1PIGSTY~jammy_arm64.deb pigsty 1.0 318.2KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/h/hunspell-fr/postgresql-18-hunspell-fr_1.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 18 postgresql-18-hunspell-fr postgresql-18-hunspell-fr_1.0-1PIGSTY~noble_amd64.deb pigsty 1.0 317.2KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/h/hunspell-fr/postgresql-18-hunspell-fr_1.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 18 postgresql-18-hunspell-fr postgresql-18-hunspell-fr_1.0-1PIGSTY~noble_arm64.deb pigsty 1.0 317.2KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/h/hunspell-fr/postgresql-18-hunspell-fr_1.0-1PIGSTY~noble_arm64.deb
-@ el8.x86_64 17 hunspell_fr_17 hunspell_fr_17-1.0-1PIGSTY.el8.x86_64.rpm pigsty 1.0 351.5KiB https://repo.pigsty.io/yum/pgsql/el8.x86_64/hunspell_fr_17-1.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 17 hunspell_fr_17 hunspell_fr_17-1.0-1PIGSTY.el8.aarch64.rpm pigsty 1.0 351.5KiB https://repo.pigsty.io/yum/pgsql/el8.aarch64/hunspell_fr_17-1.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 17 hunspell_fr_17 hunspell_fr_17-1.0-1PIGSTY.el9.x86_64.rpm pigsty 1.0 325.3KiB https://repo.pigsty.io/yum/pgsql/el9.x86_64/hunspell_fr_17-1.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 17 hunspell_fr_17 hunspell_fr_17-1.0-1PIGSTY.el9.aarch64.rpm pigsty 1.0 325.2KiB https://repo.pigsty.io/yum/pgsql/el9.aarch64/hunspell_fr_17-1.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 17 hunspell_fr_17 hunspell_fr_17-1.0-1PIGSTY.el10.x86_64.rpm pigsty 1.0 325.2KiB https://repo.pigsty.io/yum/pgsql/el10.x86_64/hunspell_fr_17-1.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 17 hunspell_fr_17 hunspell_fr_17-1.0-1PIGSTY.el10.aarch64.rpm pigsty 1.0 325.1KiB https://repo.pigsty.io/yum/pgsql/el10.aarch64/hunspell_fr_17-1.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 17 postgresql-17-hunspell-fr postgresql-17-hunspell-fr_1.0-1PIGSTY~bookworm_amd64.deb pigsty 1.0 299.0KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/h/hunspell-fr/postgresql-17-hunspell-fr_1.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 17 postgresql-17-hunspell-fr postgresql-17-hunspell-fr_1.0-1PIGSTY~bookworm_arm64.deb pigsty 1.0 299.0KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/h/hunspell-fr/postgresql-17-hunspell-fr_1.0-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 17 postgresql-17-hunspell-fr postgresql-17-hunspell-fr_1.0-1PIGSTY~trixie_amd64.deb pigsty 1.0 299.3KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/h/hunspell-fr/postgresql-17-hunspell-fr_1.0-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 17 postgresql-17-hunspell-fr postgresql-17-hunspell-fr_1.0-1PIGSTY~trixie_arm64.deb pigsty 1.0 299.3KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/h/hunspell-fr/postgresql-17-hunspell-fr_1.0-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 17 postgresql-17-hunspell-fr postgresql-17-hunspell-fr_1.0-1PIGSTY~jammy_amd64.deb pigsty 1.0 318.3KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/h/hunspell-fr/postgresql-17-hunspell-fr_1.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 17 postgresql-17-hunspell-fr postgresql-17-hunspell-fr_1.0-1PIGSTY~jammy_arm64.deb pigsty 1.0 318.3KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/h/hunspell-fr/postgresql-17-hunspell-fr_1.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 17 postgresql-17-hunspell-fr postgresql-17-hunspell-fr_1.0-1PIGSTY~noble_amd64.deb pigsty 1.0 317.3KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/h/hunspell-fr/postgresql-17-hunspell-fr_1.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 17 postgresql-17-hunspell-fr postgresql-17-hunspell-fr_1.0-1PIGSTY~noble_arm64.deb pigsty 1.0 317.3KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/h/hunspell-fr/postgresql-17-hunspell-fr_1.0-1PIGSTY~noble_arm64.deb
-@ el8.x86_64 16 hunspell_fr_16 hunspell_fr_16-1.0-1PIGSTY.el8.x86_64.rpm pigsty 1.0 351.5KiB https://repo.pigsty.io/yum/pgsql/el8.x86_64/hunspell_fr_16-1.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 16 hunspell_fr_16 hunspell_fr_16-1.0-1PIGSTY.el8.aarch64.rpm pigsty 1.0 351.5KiB https://repo.pigsty.io/yum/pgsql/el8.aarch64/hunspell_fr_16-1.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 16 hunspell_fr_16 hunspell_fr_16-1.0-1PIGSTY.el9.x86_64.rpm pigsty 1.0 325.3KiB https://repo.pigsty.io/yum/pgsql/el9.x86_64/hunspell_fr_16-1.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 16 hunspell_fr_16 hunspell_fr_16-1.0-1PIGSTY.el9.aarch64.rpm pigsty 1.0 325.2KiB https://repo.pigsty.io/yum/pgsql/el9.aarch64/hunspell_fr_16-1.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 16 hunspell_fr_16 hunspell_fr_16-1.0-1PIGSTY.el10.x86_64.rpm pigsty 1.0 325.3KiB https://repo.pigsty.io/yum/pgsql/el10.x86_64/hunspell_fr_16-1.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 16 hunspell_fr_16 hunspell_fr_16-1.0-1PIGSTY.el10.aarch64.rpm pigsty 1.0 325.3KiB https://repo.pigsty.io/yum/pgsql/el10.aarch64/hunspell_fr_16-1.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 16 postgresql-16-hunspell-fr postgresql-16-hunspell-fr_1.0-1PIGSTY~bookworm_amd64.deb pigsty 1.0 299.0KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/h/hunspell-fr/postgresql-16-hunspell-fr_1.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 16 postgresql-16-hunspell-fr postgresql-16-hunspell-fr_1.0-1PIGSTY~bookworm_arm64.deb pigsty 1.0 299.0KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/h/hunspell-fr/postgresql-16-hunspell-fr_1.0-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 16 postgresql-16-hunspell-fr postgresql-16-hunspell-fr_1.0-1PIGSTY~trixie_amd64.deb pigsty 1.0 299.1KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/h/hunspell-fr/postgresql-16-hunspell-fr_1.0-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 16 postgresql-16-hunspell-fr postgresql-16-hunspell-fr_1.0-1PIGSTY~trixie_arm64.deb pigsty 1.0 299.1KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/h/hunspell-fr/postgresql-16-hunspell-fr_1.0-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 16 postgresql-16-hunspell-fr postgresql-16-hunspell-fr_1.0-1PIGSTY~jammy_amd64.deb pigsty 1.0 318.3KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/h/hunspell-fr/postgresql-16-hunspell-fr_1.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 16 postgresql-16-hunspell-fr postgresql-16-hunspell-fr_1.0-1PIGSTY~jammy_arm64.deb pigsty 1.0 318.3KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/h/hunspell-fr/postgresql-16-hunspell-fr_1.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 16 postgresql-16-hunspell-fr postgresql-16-hunspell-fr_1.0-1PIGSTY~noble_amd64.deb pigsty 1.0 317.2KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/h/hunspell-fr/postgresql-16-hunspell-fr_1.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 16 postgresql-16-hunspell-fr postgresql-16-hunspell-fr_1.0-1PIGSTY~noble_arm64.deb pigsty 1.0 317.2KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/h/hunspell-fr/postgresql-16-hunspell-fr_1.0-1PIGSTY~noble_arm64.deb
-@ el8.x86_64 15 hunspell_fr_15 hunspell_fr_15-1.0-1PIGSTY.el8.x86_64.rpm pigsty 1.0 351.5KiB https://repo.pigsty.io/yum/pgsql/el8.x86_64/hunspell_fr_15-1.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 15 hunspell_fr_15 hunspell_fr_15-1.0-1PIGSTY.el8.aarch64.rpm pigsty 1.0 351.5KiB https://repo.pigsty.io/yum/pgsql/el8.aarch64/hunspell_fr_15-1.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 15 hunspell_fr_15 hunspell_fr_15-1.0-1PIGSTY.el9.x86_64.rpm pigsty 1.0 325.3KiB https://repo.pigsty.io/yum/pgsql/el9.x86_64/hunspell_fr_15-1.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 15 hunspell_fr_15 hunspell_fr_15-1.0-1PIGSTY.el9.aarch64.rpm pigsty 1.0 325.2KiB https://repo.pigsty.io/yum/pgsql/el9.aarch64/hunspell_fr_15-1.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 15 hunspell_fr_15 hunspell_fr_15-1.0-1PIGSTY.el10.x86_64.rpm pigsty 1.0 325.3KiB https://repo.pigsty.io/yum/pgsql/el10.x86_64/hunspell_fr_15-1.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 15 hunspell_fr_15 hunspell_fr_15-1.0-1PIGSTY.el10.aarch64.rpm pigsty 1.0 325.3KiB https://repo.pigsty.io/yum/pgsql/el10.aarch64/hunspell_fr_15-1.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 15 postgresql-15-hunspell-fr postgresql-15-hunspell-fr_1.0-1PIGSTY~bookworm_amd64.deb pigsty 1.0 299.0KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/h/hunspell-fr/postgresql-15-hunspell-fr_1.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 15 postgresql-15-hunspell-fr postgresql-15-hunspell-fr_1.0-1PIGSTY~bookworm_arm64.deb pigsty 1.0 299.0KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/h/hunspell-fr/postgresql-15-hunspell-fr_1.0-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 15 postgresql-15-hunspell-fr postgresql-15-hunspell-fr_1.0-1PIGSTY~trixie_amd64.deb pigsty 1.0 299.5KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/h/hunspell-fr/postgresql-15-hunspell-fr_1.0-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 15 postgresql-15-hunspell-fr postgresql-15-hunspell-fr_1.0-1PIGSTY~trixie_arm64.deb pigsty 1.0 299.5KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/h/hunspell-fr/postgresql-15-hunspell-fr_1.0-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 15 postgresql-15-hunspell-fr postgresql-15-hunspell-fr_1.0-1PIGSTY~jammy_amd64.deb pigsty 1.0 318.1KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/h/hunspell-fr/postgresql-15-hunspell-fr_1.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 15 postgresql-15-hunspell-fr postgresql-15-hunspell-fr_1.0-1PIGSTY~jammy_arm64.deb pigsty 1.0 318.1KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/h/hunspell-fr/postgresql-15-hunspell-fr_1.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 15 postgresql-15-hunspell-fr postgresql-15-hunspell-fr_1.0-1PIGSTY~noble_amd64.deb pigsty 1.0 317.2KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/h/hunspell-fr/postgresql-15-hunspell-fr_1.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 15 postgresql-15-hunspell-fr postgresql-15-hunspell-fr_1.0-1PIGSTY~noble_arm64.deb pigsty 1.0 317.2KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/h/hunspell-fr/postgresql-15-hunspell-fr_1.0-1PIGSTY~noble_arm64.deb
-@ el8.x86_64 14 hunspell_fr_14 hunspell_fr_14-1.0-1PIGSTY.el8.x86_64.rpm pigsty 1.0 351.5KiB https://repo.pigsty.io/yum/pgsql/el8.x86_64/hunspell_fr_14-1.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 14 hunspell_fr_14 hunspell_fr_14-1.0-1PIGSTY.el8.aarch64.rpm pigsty 1.0 351.5KiB https://repo.pigsty.io/yum/pgsql/el8.aarch64/hunspell_fr_14-1.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 14 hunspell_fr_14 hunspell_fr_14-1.0-1PIGSTY.el9.x86_64.rpm pigsty 1.0 325.3KiB https://repo.pigsty.io/yum/pgsql/el9.x86_64/hunspell_fr_14-1.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 14 hunspell_fr_14 hunspell_fr_14-1.0-1PIGSTY.el9.aarch64.rpm pigsty 1.0 325.2KiB https://repo.pigsty.io/yum/pgsql/el9.aarch64/hunspell_fr_14-1.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 14 hunspell_fr_14 hunspell_fr_14-1.0-1PIGSTY.el10.x86_64.rpm pigsty 1.0 325.3KiB https://repo.pigsty.io/yum/pgsql/el10.x86_64/hunspell_fr_14-1.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 14 hunspell_fr_14 hunspell_fr_14-1.0-1PIGSTY.el10.aarch64.rpm pigsty 1.0 325.3KiB https://repo.pigsty.io/yum/pgsql/el10.aarch64/hunspell_fr_14-1.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 14 postgresql-14-hunspell-fr postgresql-14-hunspell-fr_1.0-1PIGSTY~bookworm_amd64.deb pigsty 1.0 299.0KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/h/hunspell-fr/postgresql-14-hunspell-fr_1.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 14 postgresql-14-hunspell-fr postgresql-14-hunspell-fr_1.0-1PIGSTY~bookworm_arm64.deb pigsty 1.0 299.0KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/h/hunspell-fr/postgresql-14-hunspell-fr_1.0-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 14 postgresql-14-hunspell-fr postgresql-14-hunspell-fr_1.0-1PIGSTY~trixie_amd64.deb pigsty 1.0 299.1KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/h/hunspell-fr/postgresql-14-hunspell-fr_1.0-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 14 postgresql-14-hunspell-fr postgresql-14-hunspell-fr_1.0-1PIGSTY~trixie_arm64.deb pigsty 1.0 299.1KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/h/hunspell-fr/postgresql-14-hunspell-fr_1.0-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 14 postgresql-14-hunspell-fr postgresql-14-hunspell-fr_1.0-1PIGSTY~jammy_amd64.deb pigsty 1.0 318.2KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/h/hunspell-fr/postgresql-14-hunspell-fr_1.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 14 postgresql-14-hunspell-fr postgresql-14-hunspell-fr_1.0-1PIGSTY~jammy_arm64.deb pigsty 1.0 318.2KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/h/hunspell-fr/postgresql-14-hunspell-fr_1.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 14 postgresql-14-hunspell-fr postgresql-14-hunspell-fr_1.0-1PIGSTY~noble_amd64.deb pigsty 1.0 317.2KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/h/hunspell-fr/postgresql-14-hunspell-fr_1.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 14 postgresql-14-hunspell-fr postgresql-14-hunspell-fr_1.0-1PIGSTY~noble_arm64.deb pigsty 1.0 317.2KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/h/hunspell-fr/postgresql-14-hunspell-fr_1.0-1PIGSTY~noble_arm64.deb
+@ el8.x86_64 18 hunspell_fr_18 hunspell_fr_18-1.0-1PIGSTY.el8.x86_64.rpm pigsty 1.0 351.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/hunspell_fr_18-1.0-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 18 hunspell_fr_18 hunspell_fr_18-1.0-1PIGSTY.el8.aarch64.rpm pigsty 1.0 351.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/hunspell_fr_18-1.0-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 18 hunspell_fr_18 hunspell_fr_18-1.0-1PIGSTY.el9.x86_64.rpm pigsty 1.0 325.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/hunspell_fr_18-1.0-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 18 hunspell_fr_18 hunspell_fr_18-1.0-1PIGSTY.el9.aarch64.rpm pigsty 1.0 325.2KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/hunspell_fr_18-1.0-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 18 hunspell_fr_18 hunspell_fr_18-1.0-1PIGSTY.el10.x86_64.rpm pigsty 1.0 325.2KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/hunspell_fr_18-1.0-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 18 hunspell_fr_18 hunspell_fr_18-1.0-1PIGSTY.el10.aarch64.rpm pigsty 1.0 325.1KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/hunspell_fr_18-1.0-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-hunspell-fr postgresql-18-hunspell-fr_1.0-1PIGSTY~bookworm_amd64.deb pigsty 1.0 298.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/h/hunspell-fr/postgresql-18-hunspell-fr_1.0-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 18 postgresql-18-hunspell-fr postgresql-18-hunspell-fr_1.0-1PIGSTY~bookworm_arm64.deb pigsty 1.0 298.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/h/hunspell-fr/postgresql-18-hunspell-fr_1.0-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 18 postgresql-18-hunspell-fr postgresql-18-hunspell-fr_1.0-1PIGSTY~trixie_amd64.deb pigsty 1.0 299.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/h/hunspell-fr/postgresql-18-hunspell-fr_1.0-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 18 postgresql-18-hunspell-fr postgresql-18-hunspell-fr_1.0-1PIGSTY~trixie_arm64.deb pigsty 1.0 299.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/h/hunspell-fr/postgresql-18-hunspell-fr_1.0-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 18 postgresql-18-hunspell-fr postgresql-18-hunspell-fr_1.0-1PIGSTY~jammy_amd64.deb pigsty 1.0 318.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/h/hunspell-fr/postgresql-18-hunspell-fr_1.0-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 18 postgresql-18-hunspell-fr postgresql-18-hunspell-fr_1.0-1PIGSTY~jammy_arm64.deb pigsty 1.0 318.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/h/hunspell-fr/postgresql-18-hunspell-fr_1.0-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 18 postgresql-18-hunspell-fr postgresql-18-hunspell-fr_1.0-1PIGSTY~noble_amd64.deb pigsty 1.0 317.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/h/hunspell-fr/postgresql-18-hunspell-fr_1.0-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 18 postgresql-18-hunspell-fr postgresql-18-hunspell-fr_1.0-1PIGSTY~noble_arm64.deb pigsty 1.0 317.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/h/hunspell-fr/postgresql-18-hunspell-fr_1.0-1PIGSTY~noble_arm64.deb
+@ el8.x86_64 17 hunspell_fr_17 hunspell_fr_17-1.0-1PIGSTY.el8.x86_64.rpm pigsty 1.0 351.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/hunspell_fr_17-1.0-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 17 hunspell_fr_17 hunspell_fr_17-1.0-1PIGSTY.el8.aarch64.rpm pigsty 1.0 351.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/hunspell_fr_17-1.0-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 17 hunspell_fr_17 hunspell_fr_17-1.0-1PIGSTY.el9.x86_64.rpm pigsty 1.0 325.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/hunspell_fr_17-1.0-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 17 hunspell_fr_17 hunspell_fr_17-1.0-1PIGSTY.el9.aarch64.rpm pigsty 1.0 325.2KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/hunspell_fr_17-1.0-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 17 hunspell_fr_17 hunspell_fr_17-1.0-1PIGSTY.el10.x86_64.rpm pigsty 1.0 325.2KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/hunspell_fr_17-1.0-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 17 hunspell_fr_17 hunspell_fr_17-1.0-1PIGSTY.el10.aarch64.rpm pigsty 1.0 325.1KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/hunspell_fr_17-1.0-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-hunspell-fr postgresql-17-hunspell-fr_1.0-1PIGSTY~bookworm_amd64.deb pigsty 1.0 299.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/h/hunspell-fr/postgresql-17-hunspell-fr_1.0-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 17 postgresql-17-hunspell-fr postgresql-17-hunspell-fr_1.0-1PIGSTY~bookworm_arm64.deb pigsty 1.0 299.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/h/hunspell-fr/postgresql-17-hunspell-fr_1.0-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 17 postgresql-17-hunspell-fr postgresql-17-hunspell-fr_1.0-1PIGSTY~trixie_amd64.deb pigsty 1.0 299.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/h/hunspell-fr/postgresql-17-hunspell-fr_1.0-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 17 postgresql-17-hunspell-fr postgresql-17-hunspell-fr_1.0-1PIGSTY~trixie_arm64.deb pigsty 1.0 299.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/h/hunspell-fr/postgresql-17-hunspell-fr_1.0-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 17 postgresql-17-hunspell-fr postgresql-17-hunspell-fr_1.0-1PIGSTY~jammy_amd64.deb pigsty 1.0 318.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/h/hunspell-fr/postgresql-17-hunspell-fr_1.0-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 17 postgresql-17-hunspell-fr postgresql-17-hunspell-fr_1.0-1PIGSTY~jammy_arm64.deb pigsty 1.0 318.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/h/hunspell-fr/postgresql-17-hunspell-fr_1.0-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 17 postgresql-17-hunspell-fr postgresql-17-hunspell-fr_1.0-1PIGSTY~noble_amd64.deb pigsty 1.0 317.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/h/hunspell-fr/postgresql-17-hunspell-fr_1.0-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 17 postgresql-17-hunspell-fr postgresql-17-hunspell-fr_1.0-1PIGSTY~noble_arm64.deb pigsty 1.0 317.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/h/hunspell-fr/postgresql-17-hunspell-fr_1.0-1PIGSTY~noble_arm64.deb
+@ el8.x86_64 16 hunspell_fr_16 hunspell_fr_16-1.0-1PIGSTY.el8.x86_64.rpm pigsty 1.0 351.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/hunspell_fr_16-1.0-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 16 hunspell_fr_16 hunspell_fr_16-1.0-1PIGSTY.el8.aarch64.rpm pigsty 1.0 351.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/hunspell_fr_16-1.0-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 16 hunspell_fr_16 hunspell_fr_16-1.0-1PIGSTY.el9.x86_64.rpm pigsty 1.0 325.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/hunspell_fr_16-1.0-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 16 hunspell_fr_16 hunspell_fr_16-1.0-1PIGSTY.el9.aarch64.rpm pigsty 1.0 325.2KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/hunspell_fr_16-1.0-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 16 hunspell_fr_16 hunspell_fr_16-1.0-1PIGSTY.el10.x86_64.rpm pigsty 1.0 325.3KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/hunspell_fr_16-1.0-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 16 hunspell_fr_16 hunspell_fr_16-1.0-1PIGSTY.el10.aarch64.rpm pigsty 1.0 325.3KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/hunspell_fr_16-1.0-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 16 postgresql-16-hunspell-fr postgresql-16-hunspell-fr_1.0-1PIGSTY~bookworm_amd64.deb pigsty 1.0 299.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/h/hunspell-fr/postgresql-16-hunspell-fr_1.0-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 16 postgresql-16-hunspell-fr postgresql-16-hunspell-fr_1.0-1PIGSTY~bookworm_arm64.deb pigsty 1.0 299.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/h/hunspell-fr/postgresql-16-hunspell-fr_1.0-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 16 postgresql-16-hunspell-fr postgresql-16-hunspell-fr_1.0-1PIGSTY~trixie_amd64.deb pigsty 1.0 299.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/h/hunspell-fr/postgresql-16-hunspell-fr_1.0-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 16 postgresql-16-hunspell-fr postgresql-16-hunspell-fr_1.0-1PIGSTY~trixie_arm64.deb pigsty 1.0 299.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/h/hunspell-fr/postgresql-16-hunspell-fr_1.0-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 16 postgresql-16-hunspell-fr postgresql-16-hunspell-fr_1.0-1PIGSTY~jammy_amd64.deb pigsty 1.0 318.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/h/hunspell-fr/postgresql-16-hunspell-fr_1.0-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 16 postgresql-16-hunspell-fr postgresql-16-hunspell-fr_1.0-1PIGSTY~jammy_arm64.deb pigsty 1.0 318.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/h/hunspell-fr/postgresql-16-hunspell-fr_1.0-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 16 postgresql-16-hunspell-fr postgresql-16-hunspell-fr_1.0-1PIGSTY~noble_amd64.deb pigsty 1.0 317.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/h/hunspell-fr/postgresql-16-hunspell-fr_1.0-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 16 postgresql-16-hunspell-fr postgresql-16-hunspell-fr_1.0-1PIGSTY~noble_arm64.deb pigsty 1.0 317.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/h/hunspell-fr/postgresql-16-hunspell-fr_1.0-1PIGSTY~noble_arm64.deb
+@ el8.x86_64 15 hunspell_fr_15 hunspell_fr_15-1.0-1PIGSTY.el8.x86_64.rpm pigsty 1.0 351.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/hunspell_fr_15-1.0-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 15 hunspell_fr_15 hunspell_fr_15-1.0-1PIGSTY.el8.aarch64.rpm pigsty 1.0 351.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/hunspell_fr_15-1.0-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 15 hunspell_fr_15 hunspell_fr_15-1.0-1PIGSTY.el9.x86_64.rpm pigsty 1.0 325.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/hunspell_fr_15-1.0-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 15 hunspell_fr_15 hunspell_fr_15-1.0-1PIGSTY.el9.aarch64.rpm pigsty 1.0 325.2KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/hunspell_fr_15-1.0-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 15 hunspell_fr_15 hunspell_fr_15-1.0-1PIGSTY.el10.x86_64.rpm pigsty 1.0 325.3KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/hunspell_fr_15-1.0-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 15 hunspell_fr_15 hunspell_fr_15-1.0-1PIGSTY.el10.aarch64.rpm pigsty 1.0 325.3KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/hunspell_fr_15-1.0-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 15 postgresql-15-hunspell-fr postgresql-15-hunspell-fr_1.0-1PIGSTY~bookworm_amd64.deb pigsty 1.0 299.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/h/hunspell-fr/postgresql-15-hunspell-fr_1.0-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 15 postgresql-15-hunspell-fr postgresql-15-hunspell-fr_1.0-1PIGSTY~bookworm_arm64.deb pigsty 1.0 299.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/h/hunspell-fr/postgresql-15-hunspell-fr_1.0-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 15 postgresql-15-hunspell-fr postgresql-15-hunspell-fr_1.0-1PIGSTY~trixie_amd64.deb pigsty 1.0 299.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/h/hunspell-fr/postgresql-15-hunspell-fr_1.0-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 15 postgresql-15-hunspell-fr postgresql-15-hunspell-fr_1.0-1PIGSTY~trixie_arm64.deb pigsty 1.0 299.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/h/hunspell-fr/postgresql-15-hunspell-fr_1.0-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 15 postgresql-15-hunspell-fr postgresql-15-hunspell-fr_1.0-1PIGSTY~jammy_amd64.deb pigsty 1.0 318.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/h/hunspell-fr/postgresql-15-hunspell-fr_1.0-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 15 postgresql-15-hunspell-fr postgresql-15-hunspell-fr_1.0-1PIGSTY~jammy_arm64.deb pigsty 1.0 318.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/h/hunspell-fr/postgresql-15-hunspell-fr_1.0-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 15 postgresql-15-hunspell-fr postgresql-15-hunspell-fr_1.0-1PIGSTY~noble_amd64.deb pigsty 1.0 317.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/h/hunspell-fr/postgresql-15-hunspell-fr_1.0-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 15 postgresql-15-hunspell-fr postgresql-15-hunspell-fr_1.0-1PIGSTY~noble_arm64.deb pigsty 1.0 317.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/h/hunspell-fr/postgresql-15-hunspell-fr_1.0-1PIGSTY~noble_arm64.deb
+@ el8.x86_64 14 hunspell_fr_14 hunspell_fr_14-1.0-1PIGSTY.el8.x86_64.rpm pigsty 1.0 351.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/hunspell_fr_14-1.0-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 14 hunspell_fr_14 hunspell_fr_14-1.0-1PIGSTY.el8.aarch64.rpm pigsty 1.0 351.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/hunspell_fr_14-1.0-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 14 hunspell_fr_14 hunspell_fr_14-1.0-1PIGSTY.el9.x86_64.rpm pigsty 1.0 325.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/hunspell_fr_14-1.0-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 14 hunspell_fr_14 hunspell_fr_14-1.0-1PIGSTY.el9.aarch64.rpm pigsty 1.0 325.2KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/hunspell_fr_14-1.0-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 14 hunspell_fr_14 hunspell_fr_14-1.0-1PIGSTY.el10.x86_64.rpm pigsty 1.0 325.3KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/hunspell_fr_14-1.0-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 14 hunspell_fr_14 hunspell_fr_14-1.0-1PIGSTY.el10.aarch64.rpm pigsty 1.0 325.3KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/hunspell_fr_14-1.0-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 14 postgresql-14-hunspell-fr postgresql-14-hunspell-fr_1.0-1PIGSTY~bookworm_amd64.deb pigsty 1.0 299.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/h/hunspell-fr/postgresql-14-hunspell-fr_1.0-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 14 postgresql-14-hunspell-fr postgresql-14-hunspell-fr_1.0-1PIGSTY~bookworm_arm64.deb pigsty 1.0 299.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/h/hunspell-fr/postgresql-14-hunspell-fr_1.0-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 14 postgresql-14-hunspell-fr postgresql-14-hunspell-fr_1.0-1PIGSTY~trixie_amd64.deb pigsty 1.0 299.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/h/hunspell-fr/postgresql-14-hunspell-fr_1.0-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 14 postgresql-14-hunspell-fr postgresql-14-hunspell-fr_1.0-1PIGSTY~trixie_arm64.deb pigsty 1.0 299.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/h/hunspell-fr/postgresql-14-hunspell-fr_1.0-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 14 postgresql-14-hunspell-fr postgresql-14-hunspell-fr_1.0-1PIGSTY~jammy_amd64.deb pigsty 1.0 318.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/h/hunspell-fr/postgresql-14-hunspell-fr_1.0-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 14 postgresql-14-hunspell-fr postgresql-14-hunspell-fr_1.0-1PIGSTY~jammy_arm64.deb pigsty 1.0 318.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/h/hunspell-fr/postgresql-14-hunspell-fr_1.0-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 14 postgresql-14-hunspell-fr postgresql-14-hunspell-fr_1.0-1PIGSTY~noble_amd64.deb pigsty 1.0 317.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/h/hunspell-fr/postgresql-14-hunspell-fr_1.0-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 14 postgresql-14-hunspell-fr postgresql-14-hunspell-fr_1.0-1PIGSTY~noble_arm64.deb pigsty 1.0 317.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/h/hunspell-fr/postgresql-14-hunspell-fr_1.0-1PIGSTY~noble_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建

@@ -57,27 +57,27 @@ weight: 8670
 | u22.aarch64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
 | u24.x86_64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
 | u24.aarch64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
-@ el8.x86_64 18 informix_fdw_18 informix_fdw_18-0.6.3-1PGDG.rhel8.x86_64.rpm pgdg 0.6.3 61.3KiB https://download.postgresql.org/pub/repos/yum/non-free/18/redhat/rhel-8-x86_64/informix_fdw_18-0.6.3-1PGDG.rhel8.x86_64.rpm
-@ el9.x86_64 18 informix_fdw_18 informix_fdw_18-0.6.3-1PGDG.rhel9.x86_64.rpm pgdg 0.6.3 59.8KiB https://download.postgresql.org/pub/repos/yum/non-free/18/redhat/rhel-9-x86_64/informix_fdw_18-0.6.3-1PGDG.rhel9.x86_64.rpm
-@ el10.x86_64 18 informix_fdw_18 informix_fdw_18-0.6.3-1PGDG.rhel10.x86_64.rpm pgdg 0.6.3 60.6KiB https://download.postgresql.org/pub/repos/yum/non-free/18/redhat/rhel-10-x86_64/informix_fdw_18-0.6.3-1PGDG.rhel10.x86_64.rpm
-@ el8.x86_64 17 informix_fdw_17 informix_fdw_17-0.6.3-1PGDG.rhel8.x86_64.rpm pgdg 0.6.3 61.3KiB https://download.postgresql.org/pub/repos/yum/non-free/17/redhat/rhel-8-x86_64/informix_fdw_17-0.6.3-1PGDG.rhel8.x86_64.rpm
-@ el9.x86_64 17 informix_fdw_17 informix_fdw_17-0.6.3-1PGDG.rhel9.x86_64.rpm pgdg 0.6.3 59.9KiB https://download.postgresql.org/pub/repos/yum/non-free/17/redhat/rhel-9-x86_64/informix_fdw_17-0.6.3-1PGDG.rhel9.x86_64.rpm
-@ el10.x86_64 17 informix_fdw_17 informix_fdw_17-0.6.3-1PGDG.rhel10.x86_64.rpm pgdg 0.6.3 60.5KiB https://download.postgresql.org/pub/repos/yum/non-free/17/redhat/rhel-10-x86_64/informix_fdw_17-0.6.3-1PGDG.rhel10.x86_64.rpm
-@ el8.x86_64 16 informix_fdw_16 informix_fdw_16-0.6.3-1PGDG.rhel8.x86_64.rpm pgdg 0.6.3 61.3KiB https://download.postgresql.org/pub/repos/yum/non-free/16/redhat/rhel-8-x86_64/informix_fdw_16-0.6.3-1PGDG.rhel8.x86_64.rpm
-@ el9.x86_64 16 informix_fdw_16 informix_fdw_16-0.6.3-1PGDG.rhel9.x86_64.rpm pgdg 0.6.3 59.8KiB https://download.postgresql.org/pub/repos/yum/non-free/16/redhat/rhel-9-x86_64/informix_fdw_16-0.6.3-1PGDG.rhel9.x86_64.rpm
-@ el9.x86_64 16 informix_fdw_16 informix_fdw_16-0.6.2-2PGDG.rhel9.x86_64.rpm pgdg 0.6.2 59.5KiB https://download.postgresql.org/pub/repos/yum/non-free/16/redhat/rhel-9-x86_64/informix_fdw_16-0.6.2-2PGDG.rhel9.x86_64.rpm
-@ el10.x86_64 16 informix_fdw_16 informix_fdw_16-0.6.3-1PGDG.rhel10.x86_64.rpm pgdg 0.6.3 60.6KiB https://download.postgresql.org/pub/repos/yum/non-free/16/redhat/rhel-10-x86_64/informix_fdw_16-0.6.3-1PGDG.rhel10.x86_64.rpm
-@ el10.x86_64 16 informix_fdw_16 informix_fdw_16-0.6.2-2PGDG.rhel10.x86_64.rpm pgdg 0.6.2 60.2KiB https://download.postgresql.org/pub/repos/yum/non-free/16/redhat/rhel-10-x86_64/informix_fdw_16-0.6.2-2PGDG.rhel10.x86_64.rpm
-@ el8.x86_64 15 informix_fdw_15 informix_fdw_15-0.6.3-1PGDG.rhel8.x86_64.rpm pgdg 0.6.3 63.4KiB https://download.postgresql.org/pub/repos/yum/non-free/15/redhat/rhel-8-x86_64/informix_fdw_15-0.6.3-1PGDG.rhel8.x86_64.rpm
-@ el9.x86_64 15 informix_fdw_15 informix_fdw_15-0.6.3-1PGDG.rhel9.x86_64.rpm pgdg 0.6.3 64.2KiB https://download.postgresql.org/pub/repos/yum/non-free/15/redhat/rhel-9-x86_64/informix_fdw_15-0.6.3-1PGDG.rhel9.x86_64.rpm
-@ el9.x86_64 15 informix_fdw_15 informix_fdw_15-0.6.2-2PGDG.rhel9.x86_64.rpm pgdg 0.6.2 63.9KiB https://download.postgresql.org/pub/repos/yum/non-free/15/redhat/rhel-9-x86_64/informix_fdw_15-0.6.2-2PGDG.rhel9.x86_64.rpm
-@ el10.x86_64 15 informix_fdw_15 informix_fdw_15-0.6.3-1PGDG.rhel10.x86_64.rpm pgdg 0.6.3 64.9KiB https://download.postgresql.org/pub/repos/yum/non-free/15/redhat/rhel-10-x86_64/informix_fdw_15-0.6.3-1PGDG.rhel10.x86_64.rpm
-@ el10.x86_64 15 informix_fdw_15 informix_fdw_15-0.6.2-2PGDG.rhel10.x86_64.rpm pgdg 0.6.2 64.4KiB https://download.postgresql.org/pub/repos/yum/non-free/15/redhat/rhel-10-x86_64/informix_fdw_15-0.6.2-2PGDG.rhel10.x86_64.rpm
-@ el8.x86_64 14 informix_fdw_14 informix_fdw_14-0.6.3-1PGDG.rhel8.x86_64.rpm pgdg 0.6.3 63.4KiB https://download.postgresql.org/pub/repos/yum/non-free/14/redhat/rhel-8-x86_64/informix_fdw_14-0.6.3-1PGDG.rhel8.x86_64.rpm
-@ el9.x86_64 14 informix_fdw_14 informix_fdw_14-0.6.3-1PGDG.rhel9.x86_64.rpm pgdg 0.6.3 64.2KiB https://download.postgresql.org/pub/repos/yum/non-free/14/redhat/rhel-9-x86_64/informix_fdw_14-0.6.3-1PGDG.rhel9.x86_64.rpm
-@ el9.x86_64 14 informix_fdw_14 informix_fdw_14-0.6.2-2PGDG.rhel9.x86_64.rpm pgdg 0.6.2 63.8KiB https://download.postgresql.org/pub/repos/yum/non-free/14/redhat/rhel-9-x86_64/informix_fdw_14-0.6.2-2PGDG.rhel9.x86_64.rpm
-@ el10.x86_64 14 informix_fdw_14 informix_fdw_14-0.6.3-1PGDG.rhel10.x86_64.rpm pgdg 0.6.3 64.9KiB https://download.postgresql.org/pub/repos/yum/non-free/14/redhat/rhel-10-x86_64/informix_fdw_14-0.6.3-1PGDG.rhel10.x86_64.rpm
-@ el10.x86_64 14 informix_fdw_14 informix_fdw_14-0.6.2-2PGDG.rhel10.x86_64.rpm pgdg 0.6.2 64.5KiB https://download.postgresql.org/pub/repos/yum/non-free/14/redhat/rhel-10-x86_64/informix_fdw_14-0.6.2-2PGDG.rhel10.x86_64.rpm
+@ el8.x86_64 18 informix_fdw_18 informix_fdw_18-0.6.3-1PGDG.rhel8.x86_64.rpm pgdg 0.6.3 61.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/18/redhat/rhel-8-x86_64/informix_fdw_18-0.6.3-1PGDG.rhel8.x86_64.rpm
+@ el9.x86_64 18 informix_fdw_18 informix_fdw_18-0.6.3-1PGDG.rhel9.x86_64.rpm pgdg 0.6.3 59.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/18/redhat/rhel-9-x86_64/informix_fdw_18-0.6.3-1PGDG.rhel9.x86_64.rpm
+@ el10.x86_64 18 informix_fdw_18 informix_fdw_18-0.6.3-1PGDG.rhel10.x86_64.rpm pgdg 0.6.3 60.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/18/redhat/rhel-10-x86_64/informix_fdw_18-0.6.3-1PGDG.rhel10.x86_64.rpm
+@ el8.x86_64 17 informix_fdw_17 informix_fdw_17-0.6.3-1PGDG.rhel8.x86_64.rpm pgdg 0.6.3 61.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/17/redhat/rhel-8-x86_64/informix_fdw_17-0.6.3-1PGDG.rhel8.x86_64.rpm
+@ el9.x86_64 17 informix_fdw_17 informix_fdw_17-0.6.3-1PGDG.rhel9.x86_64.rpm pgdg 0.6.3 59.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/17/redhat/rhel-9-x86_64/informix_fdw_17-0.6.3-1PGDG.rhel9.x86_64.rpm
+@ el10.x86_64 17 informix_fdw_17 informix_fdw_17-0.6.3-1PGDG.rhel10.x86_64.rpm pgdg 0.6.3 60.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/17/redhat/rhel-10-x86_64/informix_fdw_17-0.6.3-1PGDG.rhel10.x86_64.rpm
+@ el8.x86_64 16 informix_fdw_16 informix_fdw_16-0.6.3-1PGDG.rhel8.x86_64.rpm pgdg 0.6.3 61.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/16/redhat/rhel-8-x86_64/informix_fdw_16-0.6.3-1PGDG.rhel8.x86_64.rpm
+@ el9.x86_64 16 informix_fdw_16 informix_fdw_16-0.6.3-1PGDG.rhel9.x86_64.rpm pgdg 0.6.3 59.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/16/redhat/rhel-9-x86_64/informix_fdw_16-0.6.3-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 16 informix_fdw_16 informix_fdw_16-0.6.2-2PGDG.rhel9.x86_64.rpm pgdg 0.6.2 59.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/16/redhat/rhel-9-x86_64/informix_fdw_16-0.6.2-2PGDG.rhel9.x86_64.rpm
+@ el10.x86_64 16 informix_fdw_16 informix_fdw_16-0.6.3-1PGDG.rhel10.x86_64.rpm pgdg 0.6.3 60.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/16/redhat/rhel-10-x86_64/informix_fdw_16-0.6.3-1PGDG.rhel10.x86_64.rpm
+@ el10.x86_64 16 informix_fdw_16 informix_fdw_16-0.6.2-2PGDG.rhel10.x86_64.rpm pgdg 0.6.2 60.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/16/redhat/rhel-10-x86_64/informix_fdw_16-0.6.2-2PGDG.rhel10.x86_64.rpm
+@ el8.x86_64 15 informix_fdw_15 informix_fdw_15-0.6.3-1PGDG.rhel8.x86_64.rpm pgdg 0.6.3 63.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/15/redhat/rhel-8-x86_64/informix_fdw_15-0.6.3-1PGDG.rhel8.x86_64.rpm
+@ el9.x86_64 15 informix_fdw_15 informix_fdw_15-0.6.3-1PGDG.rhel9.x86_64.rpm pgdg 0.6.3 64.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/15/redhat/rhel-9-x86_64/informix_fdw_15-0.6.3-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 15 informix_fdw_15 informix_fdw_15-0.6.2-2PGDG.rhel9.x86_64.rpm pgdg 0.6.2 63.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/15/redhat/rhel-9-x86_64/informix_fdw_15-0.6.2-2PGDG.rhel9.x86_64.rpm
+@ el10.x86_64 15 informix_fdw_15 informix_fdw_15-0.6.3-1PGDG.rhel10.x86_64.rpm pgdg 0.6.3 64.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/15/redhat/rhel-10-x86_64/informix_fdw_15-0.6.3-1PGDG.rhel10.x86_64.rpm
+@ el10.x86_64 15 informix_fdw_15 informix_fdw_15-0.6.2-2PGDG.rhel10.x86_64.rpm pgdg 0.6.2 64.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/15/redhat/rhel-10-x86_64/informix_fdw_15-0.6.2-2PGDG.rhel10.x86_64.rpm
+@ el8.x86_64 14 informix_fdw_14 informix_fdw_14-0.6.3-1PGDG.rhel8.x86_64.rpm pgdg 0.6.3 63.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/14/redhat/rhel-8-x86_64/informix_fdw_14-0.6.3-1PGDG.rhel8.x86_64.rpm
+@ el9.x86_64 14 informix_fdw_14 informix_fdw_14-0.6.3-1PGDG.rhel9.x86_64.rpm pgdg 0.6.3 64.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/14/redhat/rhel-9-x86_64/informix_fdw_14-0.6.3-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 14 informix_fdw_14 informix_fdw_14-0.6.2-2PGDG.rhel9.x86_64.rpm pgdg 0.6.2 63.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/14/redhat/rhel-9-x86_64/informix_fdw_14-0.6.2-2PGDG.rhel9.x86_64.rpm
+@ el10.x86_64 14 informix_fdw_14 informix_fdw_14-0.6.3-1PGDG.rhel10.x86_64.rpm pgdg 0.6.3 64.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/14/redhat/rhel-10-x86_64/informix_fdw_14-0.6.3-1PGDG.rhel10.x86_64.rpm
+@ el10.x86_64 14 informix_fdw_14 informix_fdw_14-0.6.2-2PGDG.rhel10.x86_64.rpm pgdg 0.6.2 64.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/14/redhat/rhel-10-x86_64/informix_fdw_14-0.6.2-2PGDG.rhel10.x86_64.rpm
 {{< /pgext_matrix >}}
 
 

@@ -11,7 +11,7 @@ weight: 2401
     <div class="ext-card__title">citusdata/citus</div>
     <div class="ext-card__desc">https://github.com/citusdata/citus</div>
   </a>
-  <a class="ext-card ext-card--source" href="citus-14.0.0.tar.gz">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/citus-14.0.0.tar.gz">
     <div class="ext-card__kicker">源码</div>
     <div class="ext-card__title">citus-14.0.0.tar.gz</div>
     <div class="ext-card__desc">citus-14.0.0.tar.gz</div>

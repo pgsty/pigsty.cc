@@ -11,7 +11,7 @@ weight: 7150
     <div class="ext-card__title">RafiaSabih/pg_auth_mon</div>
     <div class="ext-card__desc">https://github.com/RafiaSabih/pg_auth_mon</div>
   </a>
-  <a class="ext-card ext-card--source" href="pg_auth_mon-3.0.tar.gz">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pg_auth_mon-3.0.tar.gz">
     <div class="ext-card__kicker">源码</div>
     <div class="ext-card__title">pg_auth_mon-3.0.tar.gz</div>
     <div class="ext-card__desc">pg_auth_mon-3.0.tar.gz</div>
@@ -30,7 +30,7 @@ weight: 7150
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
 |:-----:|:-------------------------------------------------------------------------|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|:----------|
-| 7150  | [**`pg_auth_mon`**](/ext/e/pg_auth_mon) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
+| 7150  | [**`pg_auth_mon`**](/ext/e/pg_auth_mon) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
 {.ext-table}
 
 | **相关扩展** | [`passwordcheck_cracklib`](/ext/e/passwordcheck_cracklib) [`pgaudit`](/ext/e/pgaudit) [`pgauditlogtofile`](/ext/e/pgauditlogtofile) [`login_hook`](/ext/e/login_hook) [`auth_delay`](/ext/e/auth_delay) [`credcheck`](/ext/e/credcheck) [`logerrors`](/ext/e/logerrors) [`set_user`](/ext/e/set_user) |
@@ -64,83 +64,83 @@ weight: 7150
 | u22.aarch64 | AVAIL PIGSTY 3.0 1 | AVAIL PIGSTY 3.0 1 | AVAIL PIGSTY 3.0 1 | AVAIL PIGSTY 3.0 1 | AVAIL PIGSTY 3.0 1 |
 | u24.x86_64 | AVAIL PIGSTY 3.0 1 | AVAIL PIGSTY 3.0 1 | AVAIL PIGSTY 3.0 1 | AVAIL PIGSTY 3.0 1 | AVAIL PIGSTY 3.0 1 |
 | u24.aarch64 | AVAIL PIGSTY 3.0 1 | AVAIL PIGSTY 3.0 1 | AVAIL PIGSTY 3.0 1 | AVAIL PIGSTY 3.0 1 | AVAIL PIGSTY 3.0 1 |
-@ el8.x86_64 18 pg_auth_mon_18 pg_auth_mon_18-3.0-3PGDG.rhel8.x86_64.rpm pgdg 3.0 16.9KiB https://download.postgresql.org/pub/repos/yum/18/redhat/rhel-8-x86_64/pg_auth_mon_18-3.0-3PGDG.rhel8.x86_64.rpm
-@ el8.aarch64 18 pg_auth_mon_18 pg_auth_mon_18-3.0-3PGDG.rhel8.aarch64.rpm pgdg 3.0 17.0KiB https://download.postgresql.org/pub/repos/yum/18/redhat/rhel-8-aarch64/pg_auth_mon_18-3.0-3PGDG.rhel8.aarch64.rpm
-@ el9.x86_64 18 pg_auth_mon_18 pg_auth_mon_18-3.0-3PGDG.rhel9.x86_64.rpm pgdg 3.0 16.9KiB https://download.postgresql.org/pub/repos/yum/18/redhat/rhel-9-x86_64/pg_auth_mon_18-3.0-3PGDG.rhel9.x86_64.rpm
-@ el9.aarch64 18 pg_auth_mon_18 pg_auth_mon_18-3.0-3PGDG.rhel9.aarch64.rpm pgdg 3.0 16.7KiB https://download.postgresql.org/pub/repos/yum/18/redhat/rhel-9-aarch64/pg_auth_mon_18-3.0-3PGDG.rhel9.aarch64.rpm
-@ el10.x86_64 18 pg_auth_mon_18 pg_auth_mon_18-3.0-3PGDG.rhel10.x86_64.rpm pgdg 3.0 17.2KiB https://download.postgresql.org/pub/repos/yum/18/redhat/rhel-10-x86_64/pg_auth_mon_18-3.0-3PGDG.rhel10.x86_64.rpm
-@ el10.aarch64 18 pg_auth_mon_18 pg_auth_mon_18-3.0-3PGDG.rhel10.aarch64.rpm pgdg 3.0 17.4KiB https://download.postgresql.org/pub/repos/yum/18/redhat/rhel-10-aarch64/pg_auth_mon_18-3.0-3PGDG.rhel10.aarch64.rpm
-@ d12.x86_64 18 postgresql-18-pg-auth-mon postgresql-18-pg-auth-mon_3.0-3PIGSTY~bookworm_amd64.deb pigsty 3.0 16.5KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/pg-auth-mon/postgresql-18-pg-auth-mon_3.0-3PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 18 postgresql-18-pg-auth-mon postgresql-18-pg-auth-mon_3.0-3PIGSTY~bookworm_arm64.deb pigsty 3.0 16.7KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/pg-auth-mon/postgresql-18-pg-auth-mon_3.0-3PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 18 postgresql-18-pg-auth-mon postgresql-18-pg-auth-mon_3.0-3PIGSTY~trixie_amd64.deb pigsty 3.0 16.5KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pg-auth-mon/postgresql-18-pg-auth-mon_3.0-3PIGSTY~trixie_amd64.deb
-@ d13.aarch64 18 postgresql-18-pg-auth-mon postgresql-18-pg-auth-mon_3.0-3PIGSTY~trixie_arm64.deb pigsty 3.0 16.7KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pg-auth-mon/postgresql-18-pg-auth-mon_3.0-3PIGSTY~trixie_arm64.deb
-@ u22.x86_64 18 postgresql-18-pg-auth-mon postgresql-18-pg-auth-mon_3.0-3PIGSTY~jammy_amd64.deb pigsty 3.0 17.6KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/pg-auth-mon/postgresql-18-pg-auth-mon_3.0-3PIGSTY~jammy_amd64.deb
-@ u22.aarch64 18 postgresql-18-pg-auth-mon postgresql-18-pg-auth-mon_3.0-3PIGSTY~jammy_arm64.deb pigsty 3.0 17.5KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/pg-auth-mon/postgresql-18-pg-auth-mon_3.0-3PIGSTY~jammy_arm64.deb
-@ u24.x86_64 18 postgresql-18-pg-auth-mon postgresql-18-pg-auth-mon_3.0-3PIGSTY~noble_amd64.deb pigsty 3.0 17.3KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pg-auth-mon/postgresql-18-pg-auth-mon_3.0-3PIGSTY~noble_amd64.deb
-@ u24.aarch64 18 postgresql-18-pg-auth-mon postgresql-18-pg-auth-mon_3.0-3PIGSTY~noble_arm64.deb pigsty 3.0 17.4KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pg-auth-mon/postgresql-18-pg-auth-mon_3.0-3PIGSTY~noble_arm64.deb
-@ el8.x86_64 17 pg_auth_mon_17 pg_auth_mon_17-3.0-1PGDG.rhel8.x86_64.rpm pgdg 3.0 16.6KiB https://download.postgresql.org/pub/repos/yum/17/redhat/rhel-8-x86_64/pg_auth_mon_17-3.0-1PGDG.rhel8.x86_64.rpm
-@ el8.aarch64 17 pg_auth_mon_17 pg_auth_mon_17-3.0-1PGDG.rhel8.aarch64.rpm pgdg 3.0 16.7KiB https://download.postgresql.org/pub/repos/yum/17/redhat/rhel-8-aarch64/pg_auth_mon_17-3.0-1PGDG.rhel8.aarch64.rpm
-@ el9.x86_64 17 pg_auth_mon_17 pg_auth_mon_17-3.0-1PGDG.rhel9.x86_64.rpm pgdg 3.0 16.8KiB https://download.postgresql.org/pub/repos/yum/17/redhat/rhel-9-x86_64/pg_auth_mon_17-3.0-1PGDG.rhel9.x86_64.rpm
-@ el9.aarch64 17 pg_auth_mon_17 pg_auth_mon_17-3.0-1PGDG.rhel9.aarch64.rpm pgdg 3.0 16.7KiB https://download.postgresql.org/pub/repos/yum/17/redhat/rhel-9-aarch64/pg_auth_mon_17-3.0-1PGDG.rhel9.aarch64.rpm
-@ el10.x86_64 17 pg_auth_mon_17 pg_auth_mon_17-3.0-3PGDG.rhel10.x86_64.rpm pgdg 3.0 17.3KiB https://download.postgresql.org/pub/repos/yum/17/redhat/rhel-10-x86_64/pg_auth_mon_17-3.0-3PGDG.rhel10.x86_64.rpm
-@ el10.aarch64 17 pg_auth_mon_17 pg_auth_mon_17-3.0-3PGDG.rhel10.aarch64.rpm pgdg 3.0 17.4KiB https://download.postgresql.org/pub/repos/yum/17/redhat/rhel-10-aarch64/pg_auth_mon_17-3.0-3PGDG.rhel10.aarch64.rpm
-@ d12.x86_64 17 postgresql-17-pg-auth-mon postgresql-17-pg-auth-mon_3.0-3PIGSTY~bookworm_amd64.deb pigsty 3.0 16.4KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/pg-auth-mon/postgresql-17-pg-auth-mon_3.0-3PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 17 postgresql-17-pg-auth-mon postgresql-17-pg-auth-mon_3.0-3PIGSTY~bookworm_arm64.deb pigsty 3.0 16.7KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/pg-auth-mon/postgresql-17-pg-auth-mon_3.0-3PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 17 postgresql-17-pg-auth-mon postgresql-17-pg-auth-mon_3.0-3PIGSTY~trixie_amd64.deb pigsty 3.0 16.4KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pg-auth-mon/postgresql-17-pg-auth-mon_3.0-3PIGSTY~trixie_amd64.deb
-@ d13.aarch64 17 postgresql-17-pg-auth-mon postgresql-17-pg-auth-mon_3.0-3PIGSTY~trixie_arm64.deb pigsty 3.0 16.7KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pg-auth-mon/postgresql-17-pg-auth-mon_3.0-3PIGSTY~trixie_arm64.deb
-@ u22.x86_64 17 postgresql-17-pg-auth-mon postgresql-17-pg-auth-mon_3.0-3PIGSTY~jammy_amd64.deb pigsty 3.0 20.5KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/pg-auth-mon/postgresql-17-pg-auth-mon_3.0-3PIGSTY~jammy_amd64.deb
-@ u22.aarch64 17 postgresql-17-pg-auth-mon postgresql-17-pg-auth-mon_3.0-3PIGSTY~jammy_arm64.deb pigsty 3.0 20.5KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/pg-auth-mon/postgresql-17-pg-auth-mon_3.0-3PIGSTY~jammy_arm64.deb
-@ u24.x86_64 17 postgresql-17-pg-auth-mon postgresql-17-pg-auth-mon_3.0-3PIGSTY~noble_amd64.deb pigsty 3.0 17.3KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pg-auth-mon/postgresql-17-pg-auth-mon_3.0-3PIGSTY~noble_amd64.deb
-@ u24.aarch64 17 postgresql-17-pg-auth-mon postgresql-17-pg-auth-mon_3.0-3PIGSTY~noble_arm64.deb pigsty 3.0 17.4KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pg-auth-mon/postgresql-17-pg-auth-mon_3.0-3PIGSTY~noble_arm64.deb
-@ el8.x86_64 16 pg_auth_mon_16 pg_auth_mon_16-2.0-1.rhel8.x86_64.rpm pgdg 2.0 16.3KiB https://download.postgresql.org/pub/repos/yum/16/redhat/rhel-8-x86_64/pg_auth_mon_16-2.0-1.rhel8.x86_64.rpm
-@ el8.aarch64 16 pg_auth_mon_16 pg_auth_mon_16-2.0-1.rhel8.aarch64.rpm pgdg 2.0 16.4KiB https://download.postgresql.org/pub/repos/yum/16/redhat/rhel-8-aarch64/pg_auth_mon_16-2.0-1.rhel8.aarch64.rpm
-@ el9.x86_64 16 pg_auth_mon_16 pg_auth_mon_16-2.0-1.rhel9.x86_64.rpm pgdg 2.0 16.3KiB https://download.postgresql.org/pub/repos/yum/16/redhat/rhel-9-x86_64/pg_auth_mon_16-2.0-1.rhel9.x86_64.rpm
-@ el9.aarch64 16 pg_auth_mon_16 pg_auth_mon_16-2.0-1.rhel9.aarch64.rpm pgdg 2.0 16.1KiB https://download.postgresql.org/pub/repos/yum/16/redhat/rhel-9-aarch64/pg_auth_mon_16-2.0-1.rhel9.aarch64.rpm
-@ el10.x86_64 16 pg_auth_mon_16 pg_auth_mon_16-3.0-3PGDG.rhel10.x86_64.rpm pgdg 3.0 17.3KiB https://download.postgresql.org/pub/repos/yum/16/redhat/rhel-10-x86_64/pg_auth_mon_16-3.0-3PGDG.rhel10.x86_64.rpm
-@ el10.aarch64 16 pg_auth_mon_16 pg_auth_mon_16-3.0-3PGDG.rhel10.aarch64.rpm pgdg 3.0 17.4KiB https://download.postgresql.org/pub/repos/yum/16/redhat/rhel-10-aarch64/pg_auth_mon_16-3.0-3PGDG.rhel10.aarch64.rpm
-@ d12.x86_64 16 postgresql-16-pg-auth-mon postgresql-16-pg-auth-mon_3.0-3PIGSTY~bookworm_amd64.deb pigsty 3.0 16.4KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/pg-auth-mon/postgresql-16-pg-auth-mon_3.0-3PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 16 postgresql-16-pg-auth-mon postgresql-16-pg-auth-mon_3.0-3PIGSTY~bookworm_arm64.deb pigsty 3.0 16.7KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/pg-auth-mon/postgresql-16-pg-auth-mon_3.0-3PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 16 postgresql-16-pg-auth-mon postgresql-16-pg-auth-mon_3.0-3PIGSTY~trixie_amd64.deb pigsty 3.0 16.5KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pg-auth-mon/postgresql-16-pg-auth-mon_3.0-3PIGSTY~trixie_amd64.deb
-@ d13.aarch64 16 postgresql-16-pg-auth-mon postgresql-16-pg-auth-mon_3.0-3PIGSTY~trixie_arm64.deb pigsty 3.0 16.7KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pg-auth-mon/postgresql-16-pg-auth-mon_3.0-3PIGSTY~trixie_arm64.deb
-@ u22.x86_64 16 postgresql-16-pg-auth-mon postgresql-16-pg-auth-mon_3.0-3PIGSTY~jammy_amd64.deb pigsty 3.0 20.5KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/pg-auth-mon/postgresql-16-pg-auth-mon_3.0-3PIGSTY~jammy_amd64.deb
-@ u22.aarch64 16 postgresql-16-pg-auth-mon postgresql-16-pg-auth-mon_3.0-3PIGSTY~jammy_arm64.deb pigsty 3.0 20.4KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/pg-auth-mon/postgresql-16-pg-auth-mon_3.0-3PIGSTY~jammy_arm64.deb
-@ u24.x86_64 16 postgresql-16-pg-auth-mon postgresql-16-pg-auth-mon_3.0-3PIGSTY~noble_amd64.deb pigsty 3.0 17.3KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pg-auth-mon/postgresql-16-pg-auth-mon_3.0-3PIGSTY~noble_amd64.deb
-@ u24.aarch64 16 postgresql-16-pg-auth-mon postgresql-16-pg-auth-mon_3.0-3PIGSTY~noble_arm64.deb pigsty 3.0 17.4KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pg-auth-mon/postgresql-16-pg-auth-mon_3.0-3PIGSTY~noble_arm64.deb
-@ el8.x86_64 15 pg_auth_mon_15 pg_auth_mon_15-2.0-1.rhel8.x86_64.rpm pgdg 2.0 16.3KiB https://download.postgresql.org/pub/repos/yum/15/redhat/rhel-8-x86_64/pg_auth_mon_15-2.0-1.rhel8.x86_64.rpm
-@ el8.x86_64 15 pg_auth_mon_15 pg_auth_mon_15-1.0-1.rhel8.x86_64.rpm pgdg 1.0 23.5KiB https://download.postgresql.org/pub/repos/yum/15/redhat/rhel-8-x86_64/pg_auth_mon_15-1.0-1.rhel8.x86_64.rpm
-@ el8.aarch64 15 pg_auth_mon_15 pg_auth_mon_15-2.0-1.rhel8.aarch64.rpm pgdg 2.0 16.4KiB https://download.postgresql.org/pub/repos/yum/15/redhat/rhel-8-aarch64/pg_auth_mon_15-2.0-1.rhel8.aarch64.rpm
-@ el8.aarch64 15 pg_auth_mon_15 pg_auth_mon_15-1.0-1.rhel8.aarch64.rpm pgdg 1.0 23.5KiB https://download.postgresql.org/pub/repos/yum/15/redhat/rhel-8-aarch64/pg_auth_mon_15-1.0-1.rhel8.aarch64.rpm
-@ el9.x86_64 15 pg_auth_mon_15 pg_auth_mon_15-2.0-1.rhel9.x86_64.rpm pgdg 2.0 16.3KiB https://download.postgresql.org/pub/repos/yum/15/redhat/rhel-9-x86_64/pg_auth_mon_15-2.0-1.rhel9.x86_64.rpm
-@ el9.x86_64 15 pg_auth_mon_15 pg_auth_mon_15-1.0-1.rhel9.x86_64.rpm pgdg 1.0 23.9KiB https://download.postgresql.org/pub/repos/yum/15/redhat/rhel-9-x86_64/pg_auth_mon_15-1.0-1.rhel9.x86_64.rpm
-@ el9.aarch64 15 pg_auth_mon_15 pg_auth_mon_15-2.0-1.rhel9.aarch64.rpm pgdg 2.0 16.2KiB https://download.postgresql.org/pub/repos/yum/15/redhat/rhel-9-aarch64/pg_auth_mon_15-2.0-1.rhel9.aarch64.rpm
-@ el9.aarch64 15 pg_auth_mon_15 pg_auth_mon_15-1.0-1.rhel9.aarch64.rpm pgdg 1.0 23.7KiB https://download.postgresql.org/pub/repos/yum/15/redhat/rhel-9-aarch64/pg_auth_mon_15-1.0-1.rhel9.aarch64.rpm
-@ el10.x86_64 15 pg_auth_mon_15 pg_auth_mon_15-3.0-3PGDG.rhel10.x86_64.rpm pgdg 3.0 17.3KiB https://download.postgresql.org/pub/repos/yum/15/redhat/rhel-10-x86_64/pg_auth_mon_15-3.0-3PGDG.rhel10.x86_64.rpm
-@ el10.aarch64 15 pg_auth_mon_15 pg_auth_mon_15-3.0-3PGDG.rhel10.aarch64.rpm pgdg 3.0 17.4KiB https://download.postgresql.org/pub/repos/yum/15/redhat/rhel-10-aarch64/pg_auth_mon_15-3.0-3PGDG.rhel10.aarch64.rpm
-@ d12.x86_64 15 postgresql-15-pg-auth-mon postgresql-15-pg-auth-mon_3.0-3PIGSTY~bookworm_amd64.deb pigsty 3.0 16.5KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/pg-auth-mon/postgresql-15-pg-auth-mon_3.0-3PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 15 postgresql-15-pg-auth-mon postgresql-15-pg-auth-mon_3.0-3PIGSTY~bookworm_arm64.deb pigsty 3.0 16.7KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/pg-auth-mon/postgresql-15-pg-auth-mon_3.0-3PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 15 postgresql-15-pg-auth-mon postgresql-15-pg-auth-mon_3.0-3PIGSTY~trixie_amd64.deb pigsty 3.0 16.5KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pg-auth-mon/postgresql-15-pg-auth-mon_3.0-3PIGSTY~trixie_amd64.deb
-@ d13.aarch64 15 postgresql-15-pg-auth-mon postgresql-15-pg-auth-mon_3.0-3PIGSTY~trixie_arm64.deb pigsty 3.0 16.8KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pg-auth-mon/postgresql-15-pg-auth-mon_3.0-3PIGSTY~trixie_arm64.deb
-@ u22.x86_64 15 postgresql-15-pg-auth-mon postgresql-15-pg-auth-mon_3.0-3PIGSTY~jammy_amd64.deb pigsty 3.0 20.5KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/pg-auth-mon/postgresql-15-pg-auth-mon_3.0-3PIGSTY~jammy_amd64.deb
-@ u22.aarch64 15 postgresql-15-pg-auth-mon postgresql-15-pg-auth-mon_3.0-3PIGSTY~jammy_arm64.deb pigsty 3.0 20.4KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/pg-auth-mon/postgresql-15-pg-auth-mon_3.0-3PIGSTY~jammy_arm64.deb
-@ u24.x86_64 15 postgresql-15-pg-auth-mon postgresql-15-pg-auth-mon_3.0-3PIGSTY~noble_amd64.deb pigsty 3.0 17.4KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pg-auth-mon/postgresql-15-pg-auth-mon_3.0-3PIGSTY~noble_amd64.deb
-@ u24.aarch64 15 postgresql-15-pg-auth-mon postgresql-15-pg-auth-mon_3.0-3PIGSTY~noble_arm64.deb pigsty 3.0 17.4KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pg-auth-mon/postgresql-15-pg-auth-mon_3.0-3PIGSTY~noble_arm64.deb
-@ el8.x86_64 14 pg_auth_mon_14 pg_auth_mon_14-2.0-1.rhel8.x86_64.rpm pgdg 2.0 16.2KiB https://download.postgresql.org/pub/repos/yum/14/redhat/rhel-8-x86_64/pg_auth_mon_14-2.0-1.rhel8.x86_64.rpm
-@ el8.x86_64 14 pg_auth_mon_14 pg_auth_mon_14-1.0-1.rhel8.x86_64.rpm pgdg 1.0 23.9KiB https://download.postgresql.org/pub/repos/yum/14/redhat/rhel-8-x86_64/pg_auth_mon_14-1.0-1.rhel8.x86_64.rpm
-@ el8.aarch64 14 pg_auth_mon_14 pg_auth_mon_14-2.0-1.rhel8.aarch64.rpm pgdg 2.0 16.3KiB https://download.postgresql.org/pub/repos/yum/14/redhat/rhel-8-aarch64/pg_auth_mon_14-2.0-1.rhel8.aarch64.rpm
-@ el8.aarch64 14 pg_auth_mon_14 pg_auth_mon_14-1.0-1.rhel8.aarch64.rpm pgdg 1.0 23.5KiB https://download.postgresql.org/pub/repos/yum/14/redhat/rhel-8-aarch64/pg_auth_mon_14-1.0-1.rhel8.aarch64.rpm
-@ el9.x86_64 14 pg_auth_mon_14 pg_auth_mon_14-2.0-1.rhel9.x86_64.rpm pgdg 2.0 16.3KiB https://download.postgresql.org/pub/repos/yum/14/redhat/rhel-9-x86_64/pg_auth_mon_14-2.0-1.rhel9.x86_64.rpm
-@ el9.aarch64 14 pg_auth_mon_14 pg_auth_mon_14-2.0-1.rhel9.aarch64.rpm pgdg 2.0 16.1KiB https://download.postgresql.org/pub/repos/yum/14/redhat/rhel-9-aarch64/pg_auth_mon_14-2.0-1.rhel9.aarch64.rpm
-@ el9.aarch64 14 pg_auth_mon_14 pg_auth_mon_14-1.0-1.rhel9.aarch64.rpm pgdg 1.0 23.7KiB https://download.postgresql.org/pub/repos/yum/14/redhat/rhel-9-aarch64/pg_auth_mon_14-1.0-1.rhel9.aarch64.rpm
-@ el10.x86_64 14 pg_auth_mon_14 pg_auth_mon_14-3.0-3PGDG.rhel10.x86_64.rpm pgdg 3.0 17.2KiB https://download.postgresql.org/pub/repos/yum/14/redhat/rhel-10-x86_64/pg_auth_mon_14-3.0-3PGDG.rhel10.x86_64.rpm
-@ el10.aarch64 14 pg_auth_mon_14 pg_auth_mon_14-3.0-3PGDG.rhel10.aarch64.rpm pgdg 3.0 17.4KiB https://download.postgresql.org/pub/repos/yum/14/redhat/rhel-10-aarch64/pg_auth_mon_14-3.0-3PGDG.rhel10.aarch64.rpm
-@ d12.x86_64 14 postgresql-14-pg-auth-mon postgresql-14-pg-auth-mon_3.0-3PIGSTY~bookworm_amd64.deb pigsty 3.0 16.2KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/pg-auth-mon/postgresql-14-pg-auth-mon_3.0-3PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 14 postgresql-14-pg-auth-mon postgresql-14-pg-auth-mon_3.0-3PIGSTY~bookworm_arm64.deb pigsty 3.0 16.7KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/pg-auth-mon/postgresql-14-pg-auth-mon_3.0-3PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 14 postgresql-14-pg-auth-mon postgresql-14-pg-auth-mon_3.0-3PIGSTY~trixie_amd64.deb pigsty 3.0 16.3KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pg-auth-mon/postgresql-14-pg-auth-mon_3.0-3PIGSTY~trixie_amd64.deb
-@ d13.aarch64 14 postgresql-14-pg-auth-mon postgresql-14-pg-auth-mon_3.0-3PIGSTY~trixie_arm64.deb pigsty 3.0 16.7KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pg-auth-mon/postgresql-14-pg-auth-mon_3.0-3PIGSTY~trixie_arm64.deb
-@ u22.x86_64 14 postgresql-14-pg-auth-mon postgresql-14-pg-auth-mon_3.0-3PIGSTY~jammy_amd64.deb pigsty 3.0 20.3KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/pg-auth-mon/postgresql-14-pg-auth-mon_3.0-3PIGSTY~jammy_amd64.deb
-@ u22.aarch64 14 postgresql-14-pg-auth-mon postgresql-14-pg-auth-mon_3.0-3PIGSTY~jammy_arm64.deb pigsty 3.0 20.1KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/pg-auth-mon/postgresql-14-pg-auth-mon_3.0-3PIGSTY~jammy_arm64.deb
-@ u24.x86_64 14 postgresql-14-pg-auth-mon postgresql-14-pg-auth-mon_3.0-3PIGSTY~noble_amd64.deb pigsty 3.0 17.2KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pg-auth-mon/postgresql-14-pg-auth-mon_3.0-3PIGSTY~noble_amd64.deb
-@ u24.aarch64 14 postgresql-14-pg-auth-mon postgresql-14-pg-auth-mon_3.0-3PIGSTY~noble_arm64.deb pigsty 3.0 17.3KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pg-auth-mon/postgresql-14-pg-auth-mon_3.0-3PIGSTY~noble_arm64.deb
+@ el8.x86_64 18 pg_auth_mon_18 pg_auth_mon_18-3.0-3PGDG.rhel8.x86_64.rpm pgdg 3.0 16.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pg_auth_mon_18-3.0-3PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 18 pg_auth_mon_18 pg_auth_mon_18-3.0-3PGDG.rhel8.aarch64.rpm pgdg 3.0 17.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pg_auth_mon_18-3.0-3PGDG.rhel8.aarch64.rpm
+@ el9.x86_64 18 pg_auth_mon_18 pg_auth_mon_18-3.0-3PGDG.rhel9.x86_64.rpm pgdg 3.0 16.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pg_auth_mon_18-3.0-3PGDG.rhel9.x86_64.rpm
+@ el9.aarch64 18 pg_auth_mon_18 pg_auth_mon_18-3.0-3PGDG.rhel9.aarch64.rpm pgdg 3.0 16.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pg_auth_mon_18-3.0-3PGDG.rhel9.aarch64.rpm
+@ el10.x86_64 18 pg_auth_mon_18 pg_auth_mon_18-3.0-3PGDG.rhel10.x86_64.rpm pgdg 3.0 17.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pg_auth_mon_18-3.0-3PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 18 pg_auth_mon_18 pg_auth_mon_18-3.0-3PGDG.rhel10.aarch64.rpm pgdg 3.0 17.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_auth_mon_18-3.0-3PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-pg-auth-mon postgresql-18-pg-auth-mon_3.0-3PIGSTY~bookworm_amd64.deb pigsty 3.0 16.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-auth-mon/postgresql-18-pg-auth-mon_3.0-3PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 18 postgresql-18-pg-auth-mon postgresql-18-pg-auth-mon_3.0-3PIGSTY~bookworm_arm64.deb pigsty 3.0 16.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-auth-mon/postgresql-18-pg-auth-mon_3.0-3PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 18 postgresql-18-pg-auth-mon postgresql-18-pg-auth-mon_3.0-3PIGSTY~trixie_amd64.deb pigsty 3.0 16.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-auth-mon/postgresql-18-pg-auth-mon_3.0-3PIGSTY~trixie_amd64.deb
+@ d13.aarch64 18 postgresql-18-pg-auth-mon postgresql-18-pg-auth-mon_3.0-3PIGSTY~trixie_arm64.deb pigsty 3.0 16.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-auth-mon/postgresql-18-pg-auth-mon_3.0-3PIGSTY~trixie_arm64.deb
+@ u22.x86_64 18 postgresql-18-pg-auth-mon postgresql-18-pg-auth-mon_3.0-3PIGSTY~jammy_amd64.deb pigsty 3.0 17.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-auth-mon/postgresql-18-pg-auth-mon_3.0-3PIGSTY~jammy_amd64.deb
+@ u22.aarch64 18 postgresql-18-pg-auth-mon postgresql-18-pg-auth-mon_3.0-3PIGSTY~jammy_arm64.deb pigsty 3.0 17.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-auth-mon/postgresql-18-pg-auth-mon_3.0-3PIGSTY~jammy_arm64.deb
+@ u24.x86_64 18 postgresql-18-pg-auth-mon postgresql-18-pg-auth-mon_3.0-3PIGSTY~noble_amd64.deb pigsty 3.0 17.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-auth-mon/postgresql-18-pg-auth-mon_3.0-3PIGSTY~noble_amd64.deb
+@ u24.aarch64 18 postgresql-18-pg-auth-mon postgresql-18-pg-auth-mon_3.0-3PIGSTY~noble_arm64.deb pigsty 3.0 17.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-auth-mon/postgresql-18-pg-auth-mon_3.0-3PIGSTY~noble_arm64.deb
+@ el8.x86_64 17 pg_auth_mon_17 pg_auth_mon_17-3.0-1PGDG.rhel8.x86_64.rpm pgdg 3.0 16.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pg_auth_mon_17-3.0-1PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 17 pg_auth_mon_17 pg_auth_mon_17-3.0-1PGDG.rhel8.aarch64.rpm pgdg 3.0 16.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pg_auth_mon_17-3.0-1PGDG.rhel8.aarch64.rpm
+@ el9.x86_64 17 pg_auth_mon_17 pg_auth_mon_17-3.0-1PGDG.rhel9.x86_64.rpm pgdg 3.0 16.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_auth_mon_17-3.0-1PGDG.rhel9.x86_64.rpm
+@ el9.aarch64 17 pg_auth_mon_17 pg_auth_mon_17-3.0-1PGDG.rhel9.aarch64.rpm pgdg 3.0 16.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_auth_mon_17-3.0-1PGDG.rhel9.aarch64.rpm
+@ el10.x86_64 17 pg_auth_mon_17 pg_auth_mon_17-3.0-3PGDG.rhel10.x86_64.rpm pgdg 3.0 17.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_auth_mon_17-3.0-3PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 17 pg_auth_mon_17 pg_auth_mon_17-3.0-3PGDG.rhel10.aarch64.rpm pgdg 3.0 17.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_auth_mon_17-3.0-3PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-pg-auth-mon postgresql-17-pg-auth-mon_3.0-3PIGSTY~bookworm_amd64.deb pigsty 3.0 16.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-auth-mon/postgresql-17-pg-auth-mon_3.0-3PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 17 postgresql-17-pg-auth-mon postgresql-17-pg-auth-mon_3.0-3PIGSTY~bookworm_arm64.deb pigsty 3.0 16.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-auth-mon/postgresql-17-pg-auth-mon_3.0-3PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 17 postgresql-17-pg-auth-mon postgresql-17-pg-auth-mon_3.0-3PIGSTY~trixie_amd64.deb pigsty 3.0 16.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-auth-mon/postgresql-17-pg-auth-mon_3.0-3PIGSTY~trixie_amd64.deb
+@ d13.aarch64 17 postgresql-17-pg-auth-mon postgresql-17-pg-auth-mon_3.0-3PIGSTY~trixie_arm64.deb pigsty 3.0 16.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-auth-mon/postgresql-17-pg-auth-mon_3.0-3PIGSTY~trixie_arm64.deb
+@ u22.x86_64 17 postgresql-17-pg-auth-mon postgresql-17-pg-auth-mon_3.0-3PIGSTY~jammy_amd64.deb pigsty 3.0 20.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-auth-mon/postgresql-17-pg-auth-mon_3.0-3PIGSTY~jammy_amd64.deb
+@ u22.aarch64 17 postgresql-17-pg-auth-mon postgresql-17-pg-auth-mon_3.0-3PIGSTY~jammy_arm64.deb pigsty 3.0 20.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-auth-mon/postgresql-17-pg-auth-mon_3.0-3PIGSTY~jammy_arm64.deb
+@ u24.x86_64 17 postgresql-17-pg-auth-mon postgresql-17-pg-auth-mon_3.0-3PIGSTY~noble_amd64.deb pigsty 3.0 17.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-auth-mon/postgresql-17-pg-auth-mon_3.0-3PIGSTY~noble_amd64.deb
+@ u24.aarch64 17 postgresql-17-pg-auth-mon postgresql-17-pg-auth-mon_3.0-3PIGSTY~noble_arm64.deb pigsty 3.0 17.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-auth-mon/postgresql-17-pg-auth-mon_3.0-3PIGSTY~noble_arm64.deb
+@ el8.x86_64 16 pg_auth_mon_16 pg_auth_mon_16-2.0-1.rhel8.x86_64.rpm pgdg 2.0 16.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_auth_mon_16-2.0-1.rhel8.x86_64.rpm
+@ el8.aarch64 16 pg_auth_mon_16 pg_auth_mon_16-2.0-1.rhel8.aarch64.rpm pgdg 2.0 16.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pg_auth_mon_16-2.0-1.rhel8.aarch64.rpm
+@ el9.x86_64 16 pg_auth_mon_16 pg_auth_mon_16-2.0-1.rhel9.x86_64.rpm pgdg 2.0 16.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_auth_mon_16-2.0-1.rhel9.x86_64.rpm
+@ el9.aarch64 16 pg_auth_mon_16 pg_auth_mon_16-2.0-1.rhel9.aarch64.rpm pgdg 2.0 16.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_auth_mon_16-2.0-1.rhel9.aarch64.rpm
+@ el10.x86_64 16 pg_auth_mon_16 pg_auth_mon_16-3.0-3PGDG.rhel10.x86_64.rpm pgdg 3.0 17.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_auth_mon_16-3.0-3PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 16 pg_auth_mon_16 pg_auth_mon_16-3.0-3PGDG.rhel10.aarch64.rpm pgdg 3.0 17.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_auth_mon_16-3.0-3PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 16 postgresql-16-pg-auth-mon postgresql-16-pg-auth-mon_3.0-3PIGSTY~bookworm_amd64.deb pigsty 3.0 16.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-auth-mon/postgresql-16-pg-auth-mon_3.0-3PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 16 postgresql-16-pg-auth-mon postgresql-16-pg-auth-mon_3.0-3PIGSTY~bookworm_arm64.deb pigsty 3.0 16.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-auth-mon/postgresql-16-pg-auth-mon_3.0-3PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 16 postgresql-16-pg-auth-mon postgresql-16-pg-auth-mon_3.0-3PIGSTY~trixie_amd64.deb pigsty 3.0 16.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-auth-mon/postgresql-16-pg-auth-mon_3.0-3PIGSTY~trixie_amd64.deb
+@ d13.aarch64 16 postgresql-16-pg-auth-mon postgresql-16-pg-auth-mon_3.0-3PIGSTY~trixie_arm64.deb pigsty 3.0 16.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-auth-mon/postgresql-16-pg-auth-mon_3.0-3PIGSTY~trixie_arm64.deb
+@ u22.x86_64 16 postgresql-16-pg-auth-mon postgresql-16-pg-auth-mon_3.0-3PIGSTY~jammy_amd64.deb pigsty 3.0 20.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-auth-mon/postgresql-16-pg-auth-mon_3.0-3PIGSTY~jammy_amd64.deb
+@ u22.aarch64 16 postgresql-16-pg-auth-mon postgresql-16-pg-auth-mon_3.0-3PIGSTY~jammy_arm64.deb pigsty 3.0 20.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-auth-mon/postgresql-16-pg-auth-mon_3.0-3PIGSTY~jammy_arm64.deb
+@ u24.x86_64 16 postgresql-16-pg-auth-mon postgresql-16-pg-auth-mon_3.0-3PIGSTY~noble_amd64.deb pigsty 3.0 17.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-auth-mon/postgresql-16-pg-auth-mon_3.0-3PIGSTY~noble_amd64.deb
+@ u24.aarch64 16 postgresql-16-pg-auth-mon postgresql-16-pg-auth-mon_3.0-3PIGSTY~noble_arm64.deb pigsty 3.0 17.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-auth-mon/postgresql-16-pg-auth-mon_3.0-3PIGSTY~noble_arm64.deb
+@ el8.x86_64 15 pg_auth_mon_15 pg_auth_mon_15-2.0-1.rhel8.x86_64.rpm pgdg 2.0 16.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_auth_mon_15-2.0-1.rhel8.x86_64.rpm
+@ el8.x86_64 15 pg_auth_mon_15 pg_auth_mon_15-1.0-1.rhel8.x86_64.rpm pgdg 1.0 23.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_auth_mon_15-1.0-1.rhel8.x86_64.rpm
+@ el8.aarch64 15 pg_auth_mon_15 pg_auth_mon_15-2.0-1.rhel8.aarch64.rpm pgdg 2.0 16.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pg_auth_mon_15-2.0-1.rhel8.aarch64.rpm
+@ el8.aarch64 15 pg_auth_mon_15 pg_auth_mon_15-1.0-1.rhel8.aarch64.rpm pgdg 1.0 23.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pg_auth_mon_15-1.0-1.rhel8.aarch64.rpm
+@ el9.x86_64 15 pg_auth_mon_15 pg_auth_mon_15-2.0-1.rhel9.x86_64.rpm pgdg 2.0 16.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_auth_mon_15-2.0-1.rhel9.x86_64.rpm
+@ el9.x86_64 15 pg_auth_mon_15 pg_auth_mon_15-1.0-1.rhel9.x86_64.rpm pgdg 1.0 23.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_auth_mon_15-1.0-1.rhel9.x86_64.rpm
+@ el9.aarch64 15 pg_auth_mon_15 pg_auth_mon_15-2.0-1.rhel9.aarch64.rpm pgdg 2.0 16.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_auth_mon_15-2.0-1.rhel9.aarch64.rpm
+@ el9.aarch64 15 pg_auth_mon_15 pg_auth_mon_15-1.0-1.rhel9.aarch64.rpm pgdg 1.0 23.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_auth_mon_15-1.0-1.rhel9.aarch64.rpm
+@ el10.x86_64 15 pg_auth_mon_15 pg_auth_mon_15-3.0-3PGDG.rhel10.x86_64.rpm pgdg 3.0 17.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_auth_mon_15-3.0-3PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 15 pg_auth_mon_15 pg_auth_mon_15-3.0-3PGDG.rhel10.aarch64.rpm pgdg 3.0 17.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_auth_mon_15-3.0-3PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 15 postgresql-15-pg-auth-mon postgresql-15-pg-auth-mon_3.0-3PIGSTY~bookworm_amd64.deb pigsty 3.0 16.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-auth-mon/postgresql-15-pg-auth-mon_3.0-3PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 15 postgresql-15-pg-auth-mon postgresql-15-pg-auth-mon_3.0-3PIGSTY~bookworm_arm64.deb pigsty 3.0 16.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-auth-mon/postgresql-15-pg-auth-mon_3.0-3PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 15 postgresql-15-pg-auth-mon postgresql-15-pg-auth-mon_3.0-3PIGSTY~trixie_amd64.deb pigsty 3.0 16.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-auth-mon/postgresql-15-pg-auth-mon_3.0-3PIGSTY~trixie_amd64.deb
+@ d13.aarch64 15 postgresql-15-pg-auth-mon postgresql-15-pg-auth-mon_3.0-3PIGSTY~trixie_arm64.deb pigsty 3.0 16.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-auth-mon/postgresql-15-pg-auth-mon_3.0-3PIGSTY~trixie_arm64.deb
+@ u22.x86_64 15 postgresql-15-pg-auth-mon postgresql-15-pg-auth-mon_3.0-3PIGSTY~jammy_amd64.deb pigsty 3.0 20.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-auth-mon/postgresql-15-pg-auth-mon_3.0-3PIGSTY~jammy_amd64.deb
+@ u22.aarch64 15 postgresql-15-pg-auth-mon postgresql-15-pg-auth-mon_3.0-3PIGSTY~jammy_arm64.deb pigsty 3.0 20.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-auth-mon/postgresql-15-pg-auth-mon_3.0-3PIGSTY~jammy_arm64.deb
+@ u24.x86_64 15 postgresql-15-pg-auth-mon postgresql-15-pg-auth-mon_3.0-3PIGSTY~noble_amd64.deb pigsty 3.0 17.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-auth-mon/postgresql-15-pg-auth-mon_3.0-3PIGSTY~noble_amd64.deb
+@ u24.aarch64 15 postgresql-15-pg-auth-mon postgresql-15-pg-auth-mon_3.0-3PIGSTY~noble_arm64.deb pigsty 3.0 17.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-auth-mon/postgresql-15-pg-auth-mon_3.0-3PIGSTY~noble_arm64.deb
+@ el8.x86_64 14 pg_auth_mon_14 pg_auth_mon_14-2.0-1.rhel8.x86_64.rpm pgdg 2.0 16.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_auth_mon_14-2.0-1.rhel8.x86_64.rpm
+@ el8.x86_64 14 pg_auth_mon_14 pg_auth_mon_14-1.0-1.rhel8.x86_64.rpm pgdg 1.0 23.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_auth_mon_14-1.0-1.rhel8.x86_64.rpm
+@ el8.aarch64 14 pg_auth_mon_14 pg_auth_mon_14-2.0-1.rhel8.aarch64.rpm pgdg 2.0 16.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pg_auth_mon_14-2.0-1.rhel8.aarch64.rpm
+@ el8.aarch64 14 pg_auth_mon_14 pg_auth_mon_14-1.0-1.rhel8.aarch64.rpm pgdg 1.0 23.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pg_auth_mon_14-1.0-1.rhel8.aarch64.rpm
+@ el9.x86_64 14 pg_auth_mon_14 pg_auth_mon_14-2.0-1.rhel9.x86_64.rpm pgdg 2.0 16.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_auth_mon_14-2.0-1.rhel9.x86_64.rpm
+@ el9.aarch64 14 pg_auth_mon_14 pg_auth_mon_14-2.0-1.rhel9.aarch64.rpm pgdg 2.0 16.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_auth_mon_14-2.0-1.rhel9.aarch64.rpm
+@ el9.aarch64 14 pg_auth_mon_14 pg_auth_mon_14-1.0-1.rhel9.aarch64.rpm pgdg 1.0 23.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_auth_mon_14-1.0-1.rhel9.aarch64.rpm
+@ el10.x86_64 14 pg_auth_mon_14 pg_auth_mon_14-3.0-3PGDG.rhel10.x86_64.rpm pgdg 3.0 17.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_auth_mon_14-3.0-3PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 14 pg_auth_mon_14 pg_auth_mon_14-3.0-3PGDG.rhel10.aarch64.rpm pgdg 3.0 17.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_auth_mon_14-3.0-3PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 14 postgresql-14-pg-auth-mon postgresql-14-pg-auth-mon_3.0-3PIGSTY~bookworm_amd64.deb pigsty 3.0 16.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-auth-mon/postgresql-14-pg-auth-mon_3.0-3PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 14 postgresql-14-pg-auth-mon postgresql-14-pg-auth-mon_3.0-3PIGSTY~bookworm_arm64.deb pigsty 3.0 16.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-auth-mon/postgresql-14-pg-auth-mon_3.0-3PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 14 postgresql-14-pg-auth-mon postgresql-14-pg-auth-mon_3.0-3PIGSTY~trixie_amd64.deb pigsty 3.0 16.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-auth-mon/postgresql-14-pg-auth-mon_3.0-3PIGSTY~trixie_amd64.deb
+@ d13.aarch64 14 postgresql-14-pg-auth-mon postgresql-14-pg-auth-mon_3.0-3PIGSTY~trixie_arm64.deb pigsty 3.0 16.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-auth-mon/postgresql-14-pg-auth-mon_3.0-3PIGSTY~trixie_arm64.deb
+@ u22.x86_64 14 postgresql-14-pg-auth-mon postgresql-14-pg-auth-mon_3.0-3PIGSTY~jammy_amd64.deb pigsty 3.0 20.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-auth-mon/postgresql-14-pg-auth-mon_3.0-3PIGSTY~jammy_amd64.deb
+@ u22.aarch64 14 postgresql-14-pg-auth-mon postgresql-14-pg-auth-mon_3.0-3PIGSTY~jammy_arm64.deb pigsty 3.0 20.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-auth-mon/postgresql-14-pg-auth-mon_3.0-3PIGSTY~jammy_arm64.deb
+@ u24.x86_64 14 postgresql-14-pg-auth-mon postgresql-14-pg-auth-mon_3.0-3PIGSTY~noble_amd64.deb pigsty 3.0 17.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-auth-mon/postgresql-14-pg-auth-mon_3.0-3PIGSTY~noble_amd64.deb
+@ u24.aarch64 14 postgresql-14-pg-auth-mon postgresql-14-pg-auth-mon_3.0-3PIGSTY~noble_arm64.deb pigsty 3.0 17.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-auth-mon/postgresql-14-pg-auth-mon_3.0-3PIGSTY~noble_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建
@@ -196,6 +196,13 @@ apt install -y postgresql-14-pg-auth-mon   # PG 14
 ```
 {{% /tab %}}
 {{< /tabpane >}}
+
+
+**预加载配置**：
+
+```bash
+shared_preload_libraries = 'pg_auth_mon';
+```
 
 
 **创建扩展**：

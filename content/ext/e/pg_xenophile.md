@@ -11,7 +11,7 @@ weight: 3610
     <div class="ext-card__title">bigsmoke/pg_xenophile</div>
     <div class="ext-card__desc">https://github.com/bigsmoke/pg_xenophile</div>
   </a>
-  <a class="ext-card ext-card--source" href="pg_xenophile-0.8.3.tar.gz">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pg_xenophile-0.8.3.tar.gz">
     <div class="ext-card__kicker">源码</div>
     <div class="ext-card__title">pg_xenophile-0.8.3.tar.gz</div>
     <div class="ext-card__desc">pg_xenophile-0.8.3.tar.gz</div>
@@ -31,10 +31,10 @@ weight: 3610
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
 |:-----:|:-------------------------------------------------------------------------|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|:----------|
 | 3610  | [**`pg_xenophile`**](/ext/e/pg_xenophile) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `xeno` |
-| 3611  | [**`l10n_table_dependent_extension`**](/ext/e/l10n_table_dependent_extension) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
+| 3611  | [**`l10n_table_dependent_extension`**](/ext/e/l10n_table_dependent_extension) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
 {.ext-table}
 
-| **相关扩展** | [`country`](/ext/e/country) [`currency`](/ext/e/currency) [`icu_ext`](/ext/e/icu_ext) [`prefix`](/ext/e/prefix) [`semver`](/ext/e/semver) [`unit`](/ext/e/unit) [`pgpdf`](/ext/e/pgpdf) [`pglite_fusion`](/ext/e/pglite_fusion) |
+| **相关扩展** | [`hstore`](/ext/e/hstore) [`country`](/ext/e/country) [`currency`](/ext/e/currency) [`icu_ext`](/ext/e/icu_ext) [`prefix`](/ext/e/prefix) [`semver`](/ext/e/semver) [`unit`](/ext/e/unit) [`pgpdf`](/ext/e/pgpdf) [`pglite_fusion`](/ext/e/pglite_fusion) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **下游依赖** | [`l10n_table_dependent_extension`](/ext/e/l10n_table_dependent_extension) |
 {.ext-table .ext-table--rel}
@@ -44,7 +44,7 @@ weight: 3610
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#type) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.8.3` | {{< pgvers "18,17,16,15,14" >}} | `pg_xenophile` | - |
+| [**EXT**](/ext/list#type) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.8.3` | {{< pgvers "18,17,16,15,14" >}} | `pg_xenophile` | `hstore` |
 | [**RPM**](/ext/rpm#type) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.8.3` | {{< pgvers "18,17,16,15,14" >}} | `pg_xenophile_$v` | - |
 | [**DEB**](/ext/deb#type) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.8.3` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pg-xenophile` | - |
 {.ext-table}
@@ -66,76 +66,76 @@ weight: 3610
 | u22.aarch64 | AVAIL PIGSTY 0.8.3 1 | AVAIL PIGSTY 0.8.3 1 | AVAIL PIGSTY 0.8.3 1 | AVAIL PIGSTY 0.8.3 1 | AVAIL PIGSTY 0.8.3 1 |
 | u24.x86_64 | AVAIL PIGSTY 0.8.3 1 | AVAIL PIGSTY 0.8.3 1 | AVAIL PIGSTY 0.8.3 1 | AVAIL PIGSTY 0.8.3 1 | AVAIL PIGSTY 0.8.3 1 |
 | u24.aarch64 | AVAIL PIGSTY 0.8.3 1 | AVAIL PIGSTY 0.8.3 1 | AVAIL PIGSTY 0.8.3 1 | AVAIL PIGSTY 0.8.3 1 | AVAIL PIGSTY 0.8.3 1 |
-@ el8.x86_64 18 pg_xenophile_18 pg_xenophile_18-0.8.3-1PIGSTY.el8.x86_64.rpm pigsty 0.8.3 49.1KiB https://repo.pigsty.io/yum/pgsql/el8.x86_64/pg_xenophile_18-0.8.3-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 18 pg_xenophile_18 pg_xenophile_18-0.8.3-1PIGSTY.el8.aarch64.rpm pigsty 0.8.3 49.1KiB https://repo.pigsty.io/yum/pgsql/el8.aarch64/pg_xenophile_18-0.8.3-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 18 pg_xenophile_18 pg_xenophile_18-0.8.3-1PIGSTY.el9.x86_64.rpm pigsty 0.8.3 47.5KiB https://repo.pigsty.io/yum/pgsql/el9.x86_64/pg_xenophile_18-0.8.3-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 18 pg_xenophile_18 pg_xenophile_18-0.8.3-1PIGSTY.el9.aarch64.rpm pigsty 0.8.3 47.4KiB https://repo.pigsty.io/yum/pgsql/el9.aarch64/pg_xenophile_18-0.8.3-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 18 pg_xenophile_18 pg_xenophile_18-0.8.3-1PIGSTY.el10.x86_64.rpm pigsty 0.8.3 47.6KiB https://repo.pigsty.io/yum/pgsql/el10.x86_64/pg_xenophile_18-0.8.3-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 18 pg_xenophile_18 pg_xenophile_18-0.8.3-1PIGSTY.el10.aarch64.rpm pigsty 0.8.3 47.6KiB https://repo.pigsty.io/yum/pgsql/el10.aarch64/pg_xenophile_18-0.8.3-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 18 postgresql-18-pg-xenophile postgresql-18-pg-xenophile_0.8.3-1PIGSTY~bookworm_amd64.deb pigsty 0.8.3 46.0KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/pg-xenophile/postgresql-18-pg-xenophile_0.8.3-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 18 postgresql-18-pg-xenophile postgresql-18-pg-xenophile_0.8.3-1PIGSTY~bookworm_arm64.deb pigsty 0.8.3 46.0KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/pg-xenophile/postgresql-18-pg-xenophile_0.8.3-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 18 postgresql-18-pg-xenophile postgresql-18-pg-xenophile_0.8.3-1PIGSTY~trixie_amd64.deb pigsty 0.8.3 45.9KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pg-xenophile/postgresql-18-pg-xenophile_0.8.3-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 18 postgresql-18-pg-xenophile postgresql-18-pg-xenophile_0.8.3-1PIGSTY~trixie_arm64.deb pigsty 0.8.3 46.0KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pg-xenophile/postgresql-18-pg-xenophile_0.8.3-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 18 postgresql-18-pg-xenophile postgresql-18-pg-xenophile_0.8.3-1PIGSTY~jammy_amd64.deb pigsty 0.8.3 48.6KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/pg-xenophile/postgresql-18-pg-xenophile_0.8.3-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 18 postgresql-18-pg-xenophile postgresql-18-pg-xenophile_0.8.3-1PIGSTY~jammy_arm64.deb pigsty 0.8.3 48.7KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/pg-xenophile/postgresql-18-pg-xenophile_0.8.3-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 18 postgresql-18-pg-xenophile postgresql-18-pg-xenophile_0.8.3-1PIGSTY~noble_amd64.deb pigsty 0.8.3 48.2KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pg-xenophile/postgresql-18-pg-xenophile_0.8.3-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 18 postgresql-18-pg-xenophile postgresql-18-pg-xenophile_0.8.3-1PIGSTY~noble_arm64.deb pigsty 0.8.3 48.2KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pg-xenophile/postgresql-18-pg-xenophile_0.8.3-1PIGSTY~noble_arm64.deb
-@ el8.x86_64 17 pg_xenophile_17 pg_xenophile_17-0.8.3-1PIGSTY.el8.x86_64.rpm pigsty 0.8.3 49.1KiB https://repo.pigsty.io/yum/pgsql/el8.x86_64/pg_xenophile_17-0.8.3-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 17 pg_xenophile_17 pg_xenophile_17-0.8.3-1PIGSTY.el8.aarch64.rpm pigsty 0.8.3 49.1KiB https://repo.pigsty.io/yum/pgsql/el8.aarch64/pg_xenophile_17-0.8.3-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 17 pg_xenophile_17 pg_xenophile_17-0.8.3-1PIGSTY.el9.x86_64.rpm pigsty 0.8.3 47.5KiB https://repo.pigsty.io/yum/pgsql/el9.x86_64/pg_xenophile_17-0.8.3-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 17 pg_xenophile_17 pg_xenophile_17-0.8.3-1PIGSTY.el9.aarch64.rpm pigsty 0.8.3 47.4KiB https://repo.pigsty.io/yum/pgsql/el9.aarch64/pg_xenophile_17-0.8.3-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 17 pg_xenophile_17 pg_xenophile_17-0.8.3-1PIGSTY.el10.x86_64.rpm pigsty 0.8.3 47.6KiB https://repo.pigsty.io/yum/pgsql/el10.x86_64/pg_xenophile_17-0.8.3-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 17 pg_xenophile_17 pg_xenophile_17-0.8.3-1PIGSTY.el10.aarch64.rpm pigsty 0.8.3 47.6KiB https://repo.pigsty.io/yum/pgsql/el10.aarch64/pg_xenophile_17-0.8.3-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 17 postgresql-17-pg-xenophile postgresql-17-pg-xenophile_0.8.3-1PIGSTY~bookworm_amd64.deb pigsty 0.8.3 46.0KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/pg-xenophile/postgresql-17-pg-xenophile_0.8.3-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 17 postgresql-17-pg-xenophile postgresql-17-pg-xenophile_0.8.3-1PIGSTY~bookworm_arm64.deb pigsty 0.8.3 46.0KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/pg-xenophile/postgresql-17-pg-xenophile_0.8.3-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 17 postgresql-17-pg-xenophile postgresql-17-pg-xenophile_0.8.3-1PIGSTY~trixie_amd64.deb pigsty 0.8.3 46.0KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pg-xenophile/postgresql-17-pg-xenophile_0.8.3-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 17 postgresql-17-pg-xenophile postgresql-17-pg-xenophile_0.8.3-1PIGSTY~trixie_arm64.deb pigsty 0.8.3 46.0KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pg-xenophile/postgresql-17-pg-xenophile_0.8.3-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 17 postgresql-17-pg-xenophile postgresql-17-pg-xenophile_0.8.3-1PIGSTY~jammy_amd64.deb pigsty 0.8.3 48.7KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/pg-xenophile/postgresql-17-pg-xenophile_0.8.3-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 17 postgresql-17-pg-xenophile postgresql-17-pg-xenophile_0.8.3-1PIGSTY~jammy_arm64.deb pigsty 0.8.3 48.7KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/pg-xenophile/postgresql-17-pg-xenophile_0.8.3-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 17 postgresql-17-pg-xenophile postgresql-17-pg-xenophile_0.8.3-1PIGSTY~noble_amd64.deb pigsty 0.8.3 48.2KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pg-xenophile/postgresql-17-pg-xenophile_0.8.3-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 17 postgresql-17-pg-xenophile postgresql-17-pg-xenophile_0.8.3-1PIGSTY~noble_arm64.deb pigsty 0.8.3 48.2KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pg-xenophile/postgresql-17-pg-xenophile_0.8.3-1PIGSTY~noble_arm64.deb
-@ el8.x86_64 16 pg_xenophile_16 pg_xenophile_16-0.8.3-1PIGSTY.el8.x86_64.rpm pigsty 0.8.3 49.1KiB https://repo.pigsty.io/yum/pgsql/el8.x86_64/pg_xenophile_16-0.8.3-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 16 pg_xenophile_16 pg_xenophile_16-0.8.3-1PIGSTY.el8.aarch64.rpm pigsty 0.8.3 49.1KiB https://repo.pigsty.io/yum/pgsql/el8.aarch64/pg_xenophile_16-0.8.3-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 16 pg_xenophile_16 pg_xenophile_16-0.8.3-1PIGSTY.el9.x86_64.rpm pigsty 0.8.3 47.5KiB https://repo.pigsty.io/yum/pgsql/el9.x86_64/pg_xenophile_16-0.8.3-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 16 pg_xenophile_16 pg_xenophile_16-0.8.3-1PIGSTY.el9.aarch64.rpm pigsty 0.8.3 47.4KiB https://repo.pigsty.io/yum/pgsql/el9.aarch64/pg_xenophile_16-0.8.3-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 16 pg_xenophile_16 pg_xenophile_16-0.8.3-1PIGSTY.el10.x86_64.rpm pigsty 0.8.3 47.6KiB https://repo.pigsty.io/yum/pgsql/el10.x86_64/pg_xenophile_16-0.8.3-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 16 pg_xenophile_16 pg_xenophile_16-0.8.3-1PIGSTY.el10.aarch64.rpm pigsty 0.8.3 47.6KiB https://repo.pigsty.io/yum/pgsql/el10.aarch64/pg_xenophile_16-0.8.3-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 16 postgresql-16-pg-xenophile postgresql-16-pg-xenophile_0.8.3-1PIGSTY~bookworm_amd64.deb pigsty 0.8.3 46.0KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/pg-xenophile/postgresql-16-pg-xenophile_0.8.3-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 16 postgresql-16-pg-xenophile postgresql-16-pg-xenophile_0.8.3-1PIGSTY~bookworm_arm64.deb pigsty 0.8.3 46.0KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/pg-xenophile/postgresql-16-pg-xenophile_0.8.3-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 16 postgresql-16-pg-xenophile postgresql-16-pg-xenophile_0.8.3-1PIGSTY~trixie_amd64.deb pigsty 0.8.3 46.0KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pg-xenophile/postgresql-16-pg-xenophile_0.8.3-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 16 postgresql-16-pg-xenophile postgresql-16-pg-xenophile_0.8.3-1PIGSTY~trixie_arm64.deb pigsty 0.8.3 46.0KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pg-xenophile/postgresql-16-pg-xenophile_0.8.3-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 16 postgresql-16-pg-xenophile postgresql-16-pg-xenophile_0.8.3-1PIGSTY~jammy_amd64.deb pigsty 0.8.3 48.6KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/pg-xenophile/postgresql-16-pg-xenophile_0.8.3-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 16 postgresql-16-pg-xenophile postgresql-16-pg-xenophile_0.8.3-1PIGSTY~jammy_arm64.deb pigsty 0.8.3 48.7KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/pg-xenophile/postgresql-16-pg-xenophile_0.8.3-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 16 postgresql-16-pg-xenophile postgresql-16-pg-xenophile_0.8.3-1PIGSTY~noble_amd64.deb pigsty 0.8.3 48.2KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pg-xenophile/postgresql-16-pg-xenophile_0.8.3-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 16 postgresql-16-pg-xenophile postgresql-16-pg-xenophile_0.8.3-1PIGSTY~noble_arm64.deb pigsty 0.8.3 48.2KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pg-xenophile/postgresql-16-pg-xenophile_0.8.3-1PIGSTY~noble_arm64.deb
-@ el8.x86_64 15 pg_xenophile_15 pg_xenophile_15-0.8.3-1PIGSTY.el8.x86_64.rpm pigsty 0.8.3 49.1KiB https://repo.pigsty.io/yum/pgsql/el8.x86_64/pg_xenophile_15-0.8.3-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 15 pg_xenophile_15 pg_xenophile_15-0.8.3-1PIGSTY.el8.aarch64.rpm pigsty 0.8.3 49.1KiB https://repo.pigsty.io/yum/pgsql/el8.aarch64/pg_xenophile_15-0.8.3-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 15 pg_xenophile_15 pg_xenophile_15-0.8.3-1PIGSTY.el9.x86_64.rpm pigsty 0.8.3 47.5KiB https://repo.pigsty.io/yum/pgsql/el9.x86_64/pg_xenophile_15-0.8.3-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 15 pg_xenophile_15 pg_xenophile_15-0.8.3-1PIGSTY.el9.aarch64.rpm pigsty 0.8.3 47.5KiB https://repo.pigsty.io/yum/pgsql/el9.aarch64/pg_xenophile_15-0.8.3-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 15 pg_xenophile_15 pg_xenophile_15-0.8.3-1PIGSTY.el10.x86_64.rpm pigsty 0.8.3 47.6KiB https://repo.pigsty.io/yum/pgsql/el10.x86_64/pg_xenophile_15-0.8.3-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 15 pg_xenophile_15 pg_xenophile_15-0.8.3-1PIGSTY.el10.aarch64.rpm pigsty 0.8.3 47.6KiB https://repo.pigsty.io/yum/pgsql/el10.aarch64/pg_xenophile_15-0.8.3-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 15 postgresql-15-pg-xenophile postgresql-15-pg-xenophile_0.8.3-1PIGSTY~bookworm_amd64.deb pigsty 0.8.3 46.0KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/pg-xenophile/postgresql-15-pg-xenophile_0.8.3-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 15 postgresql-15-pg-xenophile postgresql-15-pg-xenophile_0.8.3-1PIGSTY~bookworm_arm64.deb pigsty 0.8.3 46.0KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/pg-xenophile/postgresql-15-pg-xenophile_0.8.3-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 15 postgresql-15-pg-xenophile postgresql-15-pg-xenophile_0.8.3-1PIGSTY~trixie_amd64.deb pigsty 0.8.3 46.0KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pg-xenophile/postgresql-15-pg-xenophile_0.8.3-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 15 postgresql-15-pg-xenophile postgresql-15-pg-xenophile_0.8.3-1PIGSTY~trixie_arm64.deb pigsty 0.8.3 46.0KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pg-xenophile/postgresql-15-pg-xenophile_0.8.3-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 15 postgresql-15-pg-xenophile postgresql-15-pg-xenophile_0.8.3-1PIGSTY~jammy_amd64.deb pigsty 0.8.3 48.7KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/pg-xenophile/postgresql-15-pg-xenophile_0.8.3-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 15 postgresql-15-pg-xenophile postgresql-15-pg-xenophile_0.8.3-1PIGSTY~jammy_arm64.deb pigsty 0.8.3 48.7KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/pg-xenophile/postgresql-15-pg-xenophile_0.8.3-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 15 postgresql-15-pg-xenophile postgresql-15-pg-xenophile_0.8.3-1PIGSTY~noble_amd64.deb pigsty 0.8.3 48.2KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pg-xenophile/postgresql-15-pg-xenophile_0.8.3-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 15 postgresql-15-pg-xenophile postgresql-15-pg-xenophile_0.8.3-1PIGSTY~noble_arm64.deb pigsty 0.8.3 48.2KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pg-xenophile/postgresql-15-pg-xenophile_0.8.3-1PIGSTY~noble_arm64.deb
-@ el8.x86_64 14 pg_xenophile_14 pg_xenophile_14-0.8.3-1PIGSTY.el8.x86_64.rpm pigsty 0.8.3 49.1KiB https://repo.pigsty.io/yum/pgsql/el8.x86_64/pg_xenophile_14-0.8.3-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 14 pg_xenophile_14 pg_xenophile_14-0.8.3-1PIGSTY.el8.aarch64.rpm pigsty 0.8.3 49.1KiB https://repo.pigsty.io/yum/pgsql/el8.aarch64/pg_xenophile_14-0.8.3-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 14 pg_xenophile_14 pg_xenophile_14-0.8.3-1PIGSTY.el9.x86_64.rpm pigsty 0.8.3 47.5KiB https://repo.pigsty.io/yum/pgsql/el9.x86_64/pg_xenophile_14-0.8.3-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 14 pg_xenophile_14 pg_xenophile_14-0.8.3-1PIGSTY.el9.aarch64.rpm pigsty 0.8.3 47.5KiB https://repo.pigsty.io/yum/pgsql/el9.aarch64/pg_xenophile_14-0.8.3-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 14 pg_xenophile_14 pg_xenophile_14-0.8.3-1PIGSTY.el10.x86_64.rpm pigsty 0.8.3 47.6KiB https://repo.pigsty.io/yum/pgsql/el10.x86_64/pg_xenophile_14-0.8.3-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 14 pg_xenophile_14 pg_xenophile_14-0.8.3-1PIGSTY.el10.aarch64.rpm pigsty 0.8.3 47.6KiB https://repo.pigsty.io/yum/pgsql/el10.aarch64/pg_xenophile_14-0.8.3-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 14 postgresql-14-pg-xenophile postgresql-14-pg-xenophile_0.8.3-1PIGSTY~bookworm_amd64.deb pigsty 0.8.3 46.0KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/pg-xenophile/postgresql-14-pg-xenophile_0.8.3-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 14 postgresql-14-pg-xenophile postgresql-14-pg-xenophile_0.8.3-1PIGSTY~bookworm_arm64.deb pigsty 0.8.3 46.0KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/p/pg-xenophile/postgresql-14-pg-xenophile_0.8.3-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 14 postgresql-14-pg-xenophile postgresql-14-pg-xenophile_0.8.3-1PIGSTY~trixie_amd64.deb pigsty 0.8.3 46.0KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pg-xenophile/postgresql-14-pg-xenophile_0.8.3-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 14 postgresql-14-pg-xenophile postgresql-14-pg-xenophile_0.8.3-1PIGSTY~trixie_arm64.deb pigsty 0.8.3 46.0KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/p/pg-xenophile/postgresql-14-pg-xenophile_0.8.3-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 14 postgresql-14-pg-xenophile postgresql-14-pg-xenophile_0.8.3-1PIGSTY~jammy_amd64.deb pigsty 0.8.3 48.7KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/pg-xenophile/postgresql-14-pg-xenophile_0.8.3-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 14 postgresql-14-pg-xenophile postgresql-14-pg-xenophile_0.8.3-1PIGSTY~jammy_arm64.deb pigsty 0.8.3 48.7KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/p/pg-xenophile/postgresql-14-pg-xenophile_0.8.3-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 14 postgresql-14-pg-xenophile postgresql-14-pg-xenophile_0.8.3-1PIGSTY~noble_amd64.deb pigsty 0.8.3 48.2KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pg-xenophile/postgresql-14-pg-xenophile_0.8.3-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 14 postgresql-14-pg-xenophile postgresql-14-pg-xenophile_0.8.3-1PIGSTY~noble_arm64.deb pigsty 0.8.3 48.2KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/p/pg-xenophile/postgresql-14-pg-xenophile_0.8.3-1PIGSTY~noble_arm64.deb
+@ el8.x86_64 18 pg_xenophile_18 pg_xenophile_18-0.8.3-1PIGSTY.el8.x86_64.rpm pigsty 0.8.3 49.1KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_xenophile_18-0.8.3-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 18 pg_xenophile_18 pg_xenophile_18-0.8.3-1PIGSTY.el8.aarch64.rpm pigsty 0.8.3 49.1KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_xenophile_18-0.8.3-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 18 pg_xenophile_18 pg_xenophile_18-0.8.3-1PIGSTY.el9.x86_64.rpm pigsty 0.8.3 47.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_xenophile_18-0.8.3-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 18 pg_xenophile_18 pg_xenophile_18-0.8.3-1PIGSTY.el9.aarch64.rpm pigsty 0.8.3 47.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_xenophile_18-0.8.3-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 18 pg_xenophile_18 pg_xenophile_18-0.8.3-1PIGSTY.el10.x86_64.rpm pigsty 0.8.3 47.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_xenophile_18-0.8.3-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 18 pg_xenophile_18 pg_xenophile_18-0.8.3-1PIGSTY.el10.aarch64.rpm pigsty 0.8.3 47.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_xenophile_18-0.8.3-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-pg-xenophile postgresql-18-pg-xenophile_0.8.3-1PIGSTY~bookworm_amd64.deb pigsty 0.8.3 46.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-xenophile/postgresql-18-pg-xenophile_0.8.3-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 18 postgresql-18-pg-xenophile postgresql-18-pg-xenophile_0.8.3-1PIGSTY~bookworm_arm64.deb pigsty 0.8.3 46.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-xenophile/postgresql-18-pg-xenophile_0.8.3-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 18 postgresql-18-pg-xenophile postgresql-18-pg-xenophile_0.8.3-1PIGSTY~trixie_amd64.deb pigsty 0.8.3 45.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-xenophile/postgresql-18-pg-xenophile_0.8.3-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 18 postgresql-18-pg-xenophile postgresql-18-pg-xenophile_0.8.3-1PIGSTY~trixie_arm64.deb pigsty 0.8.3 46.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-xenophile/postgresql-18-pg-xenophile_0.8.3-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 18 postgresql-18-pg-xenophile postgresql-18-pg-xenophile_0.8.3-1PIGSTY~jammy_amd64.deb pigsty 0.8.3 48.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-xenophile/postgresql-18-pg-xenophile_0.8.3-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 18 postgresql-18-pg-xenophile postgresql-18-pg-xenophile_0.8.3-1PIGSTY~jammy_arm64.deb pigsty 0.8.3 48.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-xenophile/postgresql-18-pg-xenophile_0.8.3-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 18 postgresql-18-pg-xenophile postgresql-18-pg-xenophile_0.8.3-1PIGSTY~noble_amd64.deb pigsty 0.8.3 48.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-xenophile/postgresql-18-pg-xenophile_0.8.3-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 18 postgresql-18-pg-xenophile postgresql-18-pg-xenophile_0.8.3-1PIGSTY~noble_arm64.deb pigsty 0.8.3 48.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-xenophile/postgresql-18-pg-xenophile_0.8.3-1PIGSTY~noble_arm64.deb
+@ el8.x86_64 17 pg_xenophile_17 pg_xenophile_17-0.8.3-1PIGSTY.el8.x86_64.rpm pigsty 0.8.3 49.1KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_xenophile_17-0.8.3-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 17 pg_xenophile_17 pg_xenophile_17-0.8.3-1PIGSTY.el8.aarch64.rpm pigsty 0.8.3 49.1KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_xenophile_17-0.8.3-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 17 pg_xenophile_17 pg_xenophile_17-0.8.3-1PIGSTY.el9.x86_64.rpm pigsty 0.8.3 47.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_xenophile_17-0.8.3-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 17 pg_xenophile_17 pg_xenophile_17-0.8.3-1PIGSTY.el9.aarch64.rpm pigsty 0.8.3 47.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_xenophile_17-0.8.3-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 17 pg_xenophile_17 pg_xenophile_17-0.8.3-1PIGSTY.el10.x86_64.rpm pigsty 0.8.3 47.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_xenophile_17-0.8.3-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 17 pg_xenophile_17 pg_xenophile_17-0.8.3-1PIGSTY.el10.aarch64.rpm pigsty 0.8.3 47.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_xenophile_17-0.8.3-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-pg-xenophile postgresql-17-pg-xenophile_0.8.3-1PIGSTY~bookworm_amd64.deb pigsty 0.8.3 46.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-xenophile/postgresql-17-pg-xenophile_0.8.3-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 17 postgresql-17-pg-xenophile postgresql-17-pg-xenophile_0.8.3-1PIGSTY~bookworm_arm64.deb pigsty 0.8.3 46.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-xenophile/postgresql-17-pg-xenophile_0.8.3-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 17 postgresql-17-pg-xenophile postgresql-17-pg-xenophile_0.8.3-1PIGSTY~trixie_amd64.deb pigsty 0.8.3 46.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-xenophile/postgresql-17-pg-xenophile_0.8.3-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 17 postgresql-17-pg-xenophile postgresql-17-pg-xenophile_0.8.3-1PIGSTY~trixie_arm64.deb pigsty 0.8.3 46.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-xenophile/postgresql-17-pg-xenophile_0.8.3-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 17 postgresql-17-pg-xenophile postgresql-17-pg-xenophile_0.8.3-1PIGSTY~jammy_amd64.deb pigsty 0.8.3 48.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-xenophile/postgresql-17-pg-xenophile_0.8.3-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 17 postgresql-17-pg-xenophile postgresql-17-pg-xenophile_0.8.3-1PIGSTY~jammy_arm64.deb pigsty 0.8.3 48.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-xenophile/postgresql-17-pg-xenophile_0.8.3-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 17 postgresql-17-pg-xenophile postgresql-17-pg-xenophile_0.8.3-1PIGSTY~noble_amd64.deb pigsty 0.8.3 48.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-xenophile/postgresql-17-pg-xenophile_0.8.3-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 17 postgresql-17-pg-xenophile postgresql-17-pg-xenophile_0.8.3-1PIGSTY~noble_arm64.deb pigsty 0.8.3 48.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-xenophile/postgresql-17-pg-xenophile_0.8.3-1PIGSTY~noble_arm64.deb
+@ el8.x86_64 16 pg_xenophile_16 pg_xenophile_16-0.8.3-1PIGSTY.el8.x86_64.rpm pigsty 0.8.3 49.1KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_xenophile_16-0.8.3-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 16 pg_xenophile_16 pg_xenophile_16-0.8.3-1PIGSTY.el8.aarch64.rpm pigsty 0.8.3 49.1KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_xenophile_16-0.8.3-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 16 pg_xenophile_16 pg_xenophile_16-0.8.3-1PIGSTY.el9.x86_64.rpm pigsty 0.8.3 47.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_xenophile_16-0.8.3-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 16 pg_xenophile_16 pg_xenophile_16-0.8.3-1PIGSTY.el9.aarch64.rpm pigsty 0.8.3 47.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_xenophile_16-0.8.3-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 16 pg_xenophile_16 pg_xenophile_16-0.8.3-1PIGSTY.el10.x86_64.rpm pigsty 0.8.3 47.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_xenophile_16-0.8.3-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 16 pg_xenophile_16 pg_xenophile_16-0.8.3-1PIGSTY.el10.aarch64.rpm pigsty 0.8.3 47.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_xenophile_16-0.8.3-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 16 postgresql-16-pg-xenophile postgresql-16-pg-xenophile_0.8.3-1PIGSTY~bookworm_amd64.deb pigsty 0.8.3 46.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-xenophile/postgresql-16-pg-xenophile_0.8.3-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 16 postgresql-16-pg-xenophile postgresql-16-pg-xenophile_0.8.3-1PIGSTY~bookworm_arm64.deb pigsty 0.8.3 46.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-xenophile/postgresql-16-pg-xenophile_0.8.3-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 16 postgresql-16-pg-xenophile postgresql-16-pg-xenophile_0.8.3-1PIGSTY~trixie_amd64.deb pigsty 0.8.3 46.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-xenophile/postgresql-16-pg-xenophile_0.8.3-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 16 postgresql-16-pg-xenophile postgresql-16-pg-xenophile_0.8.3-1PIGSTY~trixie_arm64.deb pigsty 0.8.3 46.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-xenophile/postgresql-16-pg-xenophile_0.8.3-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 16 postgresql-16-pg-xenophile postgresql-16-pg-xenophile_0.8.3-1PIGSTY~jammy_amd64.deb pigsty 0.8.3 48.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-xenophile/postgresql-16-pg-xenophile_0.8.3-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 16 postgresql-16-pg-xenophile postgresql-16-pg-xenophile_0.8.3-1PIGSTY~jammy_arm64.deb pigsty 0.8.3 48.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-xenophile/postgresql-16-pg-xenophile_0.8.3-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 16 postgresql-16-pg-xenophile postgresql-16-pg-xenophile_0.8.3-1PIGSTY~noble_amd64.deb pigsty 0.8.3 48.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-xenophile/postgresql-16-pg-xenophile_0.8.3-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 16 postgresql-16-pg-xenophile postgresql-16-pg-xenophile_0.8.3-1PIGSTY~noble_arm64.deb pigsty 0.8.3 48.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-xenophile/postgresql-16-pg-xenophile_0.8.3-1PIGSTY~noble_arm64.deb
+@ el8.x86_64 15 pg_xenophile_15 pg_xenophile_15-0.8.3-1PIGSTY.el8.x86_64.rpm pigsty 0.8.3 49.1KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_xenophile_15-0.8.3-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 15 pg_xenophile_15 pg_xenophile_15-0.8.3-1PIGSTY.el8.aarch64.rpm pigsty 0.8.3 49.1KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_xenophile_15-0.8.3-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 15 pg_xenophile_15 pg_xenophile_15-0.8.3-1PIGSTY.el9.x86_64.rpm pigsty 0.8.3 47.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_xenophile_15-0.8.3-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 15 pg_xenophile_15 pg_xenophile_15-0.8.3-1PIGSTY.el9.aarch64.rpm pigsty 0.8.3 47.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_xenophile_15-0.8.3-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 15 pg_xenophile_15 pg_xenophile_15-0.8.3-1PIGSTY.el10.x86_64.rpm pigsty 0.8.3 47.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_xenophile_15-0.8.3-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 15 pg_xenophile_15 pg_xenophile_15-0.8.3-1PIGSTY.el10.aarch64.rpm pigsty 0.8.3 47.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_xenophile_15-0.8.3-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 15 postgresql-15-pg-xenophile postgresql-15-pg-xenophile_0.8.3-1PIGSTY~bookworm_amd64.deb pigsty 0.8.3 46.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-xenophile/postgresql-15-pg-xenophile_0.8.3-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 15 postgresql-15-pg-xenophile postgresql-15-pg-xenophile_0.8.3-1PIGSTY~bookworm_arm64.deb pigsty 0.8.3 46.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-xenophile/postgresql-15-pg-xenophile_0.8.3-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 15 postgresql-15-pg-xenophile postgresql-15-pg-xenophile_0.8.3-1PIGSTY~trixie_amd64.deb pigsty 0.8.3 46.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-xenophile/postgresql-15-pg-xenophile_0.8.3-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 15 postgresql-15-pg-xenophile postgresql-15-pg-xenophile_0.8.3-1PIGSTY~trixie_arm64.deb pigsty 0.8.3 46.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-xenophile/postgresql-15-pg-xenophile_0.8.3-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 15 postgresql-15-pg-xenophile postgresql-15-pg-xenophile_0.8.3-1PIGSTY~jammy_amd64.deb pigsty 0.8.3 48.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-xenophile/postgresql-15-pg-xenophile_0.8.3-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 15 postgresql-15-pg-xenophile postgresql-15-pg-xenophile_0.8.3-1PIGSTY~jammy_arm64.deb pigsty 0.8.3 48.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-xenophile/postgresql-15-pg-xenophile_0.8.3-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 15 postgresql-15-pg-xenophile postgresql-15-pg-xenophile_0.8.3-1PIGSTY~noble_amd64.deb pigsty 0.8.3 48.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-xenophile/postgresql-15-pg-xenophile_0.8.3-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 15 postgresql-15-pg-xenophile postgresql-15-pg-xenophile_0.8.3-1PIGSTY~noble_arm64.deb pigsty 0.8.3 48.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-xenophile/postgresql-15-pg-xenophile_0.8.3-1PIGSTY~noble_arm64.deb
+@ el8.x86_64 14 pg_xenophile_14 pg_xenophile_14-0.8.3-1PIGSTY.el8.x86_64.rpm pigsty 0.8.3 49.1KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_xenophile_14-0.8.3-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 14 pg_xenophile_14 pg_xenophile_14-0.8.3-1PIGSTY.el8.aarch64.rpm pigsty 0.8.3 49.1KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_xenophile_14-0.8.3-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 14 pg_xenophile_14 pg_xenophile_14-0.8.3-1PIGSTY.el9.x86_64.rpm pigsty 0.8.3 47.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_xenophile_14-0.8.3-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 14 pg_xenophile_14 pg_xenophile_14-0.8.3-1PIGSTY.el9.aarch64.rpm pigsty 0.8.3 47.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_xenophile_14-0.8.3-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 14 pg_xenophile_14 pg_xenophile_14-0.8.3-1PIGSTY.el10.x86_64.rpm pigsty 0.8.3 47.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_xenophile_14-0.8.3-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 14 pg_xenophile_14 pg_xenophile_14-0.8.3-1PIGSTY.el10.aarch64.rpm pigsty 0.8.3 47.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_xenophile_14-0.8.3-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 14 postgresql-14-pg-xenophile postgresql-14-pg-xenophile_0.8.3-1PIGSTY~bookworm_amd64.deb pigsty 0.8.3 46.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-xenophile/postgresql-14-pg-xenophile_0.8.3-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 14 postgresql-14-pg-xenophile postgresql-14-pg-xenophile_0.8.3-1PIGSTY~bookworm_arm64.deb pigsty 0.8.3 46.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-xenophile/postgresql-14-pg-xenophile_0.8.3-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 14 postgresql-14-pg-xenophile postgresql-14-pg-xenophile_0.8.3-1PIGSTY~trixie_amd64.deb pigsty 0.8.3 46.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-xenophile/postgresql-14-pg-xenophile_0.8.3-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 14 postgresql-14-pg-xenophile postgresql-14-pg-xenophile_0.8.3-1PIGSTY~trixie_arm64.deb pigsty 0.8.3 46.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-xenophile/postgresql-14-pg-xenophile_0.8.3-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 14 postgresql-14-pg-xenophile postgresql-14-pg-xenophile_0.8.3-1PIGSTY~jammy_amd64.deb pigsty 0.8.3 48.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-xenophile/postgresql-14-pg-xenophile_0.8.3-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 14 postgresql-14-pg-xenophile postgresql-14-pg-xenophile_0.8.3-1PIGSTY~jammy_arm64.deb pigsty 0.8.3 48.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-xenophile/postgresql-14-pg-xenophile_0.8.3-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 14 postgresql-14-pg-xenophile postgresql-14-pg-xenophile_0.8.3-1PIGSTY~noble_amd64.deb pigsty 0.8.3 48.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-xenophile/postgresql-14-pg-xenophile_0.8.3-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 14 postgresql-14-pg-xenophile postgresql-14-pg-xenophile_0.8.3-1PIGSTY~noble_arm64.deb pigsty 0.8.3 48.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-xenophile/postgresql-14-pg-xenophile_0.8.3-1PIGSTY~noble_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建
@@ -196,7 +196,7 @@ apt install -y postgresql-14-pg-xenophile   # PG 14
 **创建扩展**：
 
 ```sql
-CREATE EXTENSION pg_xenophile;
+CREATE EXTENSION pg_xenophile CASCADE;  -- 依赖: hstore
 ```
 
 

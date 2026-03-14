@@ -5,11 +5,11 @@ description: "具有扩展依赖关系的 PostgreSQL 扩展"
 weight: 30
 ---
 
-共有 **85** 个扩展依赖其他扩展，**57** 个扩展被其他扩展所依赖。
+共有 **93** 个扩展依赖其他扩展，**58** 个扩展被其他扩展所依赖。
 
 ## 上游依赖
 
-以下 **85** 个扩展需要先安装其他扩展才能使用：
+以下 **93** 个扩展需要先安装其他扩展才能使用：
 
 | **扩展名** | **上游依赖** | **描述** |
 |:-----------|:-------------|:---------|
@@ -22,7 +22,7 @@ weight: 30
 | [`postgis_raster`](/ext/e/postgis_raster) | [`postgis`](/ext/e/postgis) | PostGIS 光栅类型和函数 |
 | [`postgis_sfcgal`](/ext/e/postgis_sfcgal) | [`postgis`](/ext/e/postgis) | PostGIS SFCGAL 函数 |
 | [`postgis_tiger_geocoder`](/ext/e/postgis_tiger_geocoder) | [`postgis`](/ext/e/postgis) [`fuzzystrmatch`](/ext/e/fuzzystrmatch) | PostGIS tiger 地理编码器和反向地理编码器 |
-| [`pgrouting`](/ext/e/pgrouting) | [`postgis`](/ext/e/postgis) | 提供寻路能力 |
+| [`pgrouting`](/ext/e/pgrouting) | [`plpgsql`](/ext/e/plpgsql) [`postgis`](/ext/e/postgis) | 提供寻路能力 |
 | [`pointcloud_postgis`](/ext/e/pointcloud_postgis) | [`postgis`](/ext/e/postgis) [`pointcloud`](/ext/e/pointcloud) | 将激光雷达点云与PostGIS几何类型相集成 |
 | [`h3_postgis`](/ext/e/h3_postgis) | [`h3`](/ext/e/h3) [`postgis`](/ext/e/postgis) [`postgis_raster`](/ext/e/postgis_raster) | H3与PostGIS集成的扩展插件 |
 | [`geoip`](/ext/e/geoip) | [`ip4r`](/ext/e/ip4r) | IP 地理位置扩展（围绕 MaxMind GeoLite 数据集的包装器） |
@@ -36,6 +36,8 @@ weight: 30
 | [`pg4ml`](/ext/e/pg4ml) | [`plpgsql`](/ext/e/plpgsql) [`tablefunc`](/ext/e/tablefunc) [`cube`](/ext/e/cube) [`plpython3u`](/ext/e/plpython3u) | PG4ML是一个机器学习框架 |
 | [`biscuit`](/ext/e/biscuit) | [`plpgsql`](/ext/e/plpgsql) | 使用IAM的高性能文本模式匹配 |
 | [`pg_mooncake`](/ext/e/pg_mooncake) | [`pg_duckdb`](/ext/e/pg_duckdb) | PostgreSQL列式存储表 |
+| [`pg_partman`](/ext/e/pg_partman) | [`plpgsql`](/ext/e/plpgsql) | 用于按时间或 ID 管理分区表的扩展 |
+| [`index_advisor`](/ext/e/index_advisor) | [`hypopg`](/ext/e/hypopg) | 查询索引建议器 |
 | [`pg_incremental`](/ext/e/pg_incremental) | [`pg_cron`](/ext/e/pg_cron) | 增量处理流式事件 |
 | [`pgmb`](/ext/e/pgmb) | [`pg_cron`](/ext/e/pg_cron) [`http`](/ext/e/http) | 一个简单的PostgreSQL消息代理系统 |
 | [`omni_auth`](/ext/e/omni_auth) | [`omni_types`](/ext/e/omni_types) [`omni_id`](/ext/e/omni_id) [`pgcrypto`](/ext/e/pgcrypto) [`btree_gist`](/ext/e/btree_gist) [`omni_polyfill`](/ext/e/omni_polyfill) | Omnigres 基础会话认证管理模块 |
@@ -57,20 +59,23 @@ weight: 30
 | [`hstore_pllua`](/ext/e/hstore_pllua) | [`hstore`](/ext/e/hstore) [`pllua`](/ext/e/pllua) | Lua 程序语言的Hstore适配扩展 |
 | [`hstore_plluau`](/ext/e/hstore_plluau) | [`hstore`](/ext/e/hstore) [`plluau`](/ext/e/plluau) | Lua 程序语言的Hstore适配扩展（不受信任的） |
 | [`plpgsql_check`](/ext/e/plpgsql_check) | [`plpgsql`](/ext/e/plpgsql) | 对 plpgsql 函数进行扩展检查 |
+| [`pgtap`](/ext/e/pgtap) | [`plpgsql`](/ext/e/plpgsql) | PostgreSQL单元测试框架 |
 | [`plperl`](/ext/e/plperl) | [`plperl`](/ext/e/plperl) | PL/Perl 存储过程语言 |
 | [`bool_plperl`](/ext/e/bool_plperl) | [`plperl`](/ext/e/plperl) | 在 bool 和 plperl 之间转换 |
-| [`hstore_plperl`](/ext/e/hstore_plperl) | [`plperl`](/ext/e/plperl) | 在 hstore 和 plperl 之间转换适配类型 |
+| [`hstore_plperl`](/ext/e/hstore_plperl) | [`hstore`](/ext/e/hstore) [`plperl`](/ext/e/plperl) | 在 hstore 和 plperl 之间转换适配类型 |
 | [`jsonb_plperl`](/ext/e/jsonb_plperl) | [`plperl`](/ext/e/plperl) | 在 jsonb 和 plperl 之间转换 |
 | [`plperlu`](/ext/e/plperlu) | [`plperlu`](/ext/e/plperlu) | PL/PerlU 存储过程语言（未受信/高权限） |
 | [`bool_plperlu`](/ext/e/bool_plperlu) | [`plperlu`](/ext/e/plperlu) | 在 bool 和 plperlu 之间转换 |
 | [`jsonb_plperlu`](/ext/e/jsonb_plperlu) | [`plperlu`](/ext/e/plperlu) | 在 jsonb 和 plperlu 之间转换 |
-| [`hstore_plperlu`](/ext/e/hstore_plperlu) | [`plperlu`](/ext/e/plperlu) | 在 hstore 和 plperlu 之间转换适配类型 |
+| [`hstore_plperlu`](/ext/e/hstore_plperlu) | [`hstore`](/ext/e/hstore) [`plperlu`](/ext/e/plperlu) | 在 hstore 和 plperlu 之间转换适配类型 |
 | [`jsonb_plpython3u`](/ext/e/jsonb_plpython3u) | [`plpython3u`](/ext/e/plpython3u) | 在 jsonb 和 plpython3u 之间转换 |
 | [`ltree_plpython3u`](/ext/e/ltree_plpython3u) | [`ltree`](/ext/e/ltree) [`plpython3u`](/ext/e/plpython3u) | 在 ltree 和 plpython3u 之间转换 |
 | [`hstore_plpython3u`](/ext/e/hstore_plpython3u) | [`hstore`](/ext/e/hstore) [`plpython3u`](/ext/e/plpython3u) | 在 hstore 和 plpython3u 之间转换 |
 | [`unit`](/ext/e/unit) | [`plpgsql`](/ext/e/plpgsql) | SI 国标单位扩展 |
 | [`pgfaceting`](/ext/e/pgfaceting) | [`roaringbitmap`](/ext/e/roaringbitmap) | 使用倒排索引的高速切面查询 |
+| [`pg_xenophile`](/ext/e/pg_xenophile) | [`hstore`](/ext/e/hstore) | PostgreSQL i8n与l10n工具包 |
 | [`l10n_table_dependent_extension`](/ext/e/l10n_table_dependent_extension) | [`pg_xenophile`](/ext/e/pg_xenophile) | PostgreSQL l10n 工具包 |
+| [`currency`](/ext/e/currency) | [`plpgsql`](/ext/e/plpgsql) | 使用1字节表示的货币数据类型 |
 | [`pgjwt`](/ext/e/pgjwt) | [`pgcrypto`](/ext/e/pgcrypto) | JSON Web Token API 的PG实现 (supabase) |
 | [`pg_readme`](/ext/e/pg_readme) | [`hstore`](/ext/e/hstore) | 为模式与扩展生成Markdown文档 |
 | [`pg_readme_test_extension`](/ext/e/pg_readme_test_extension) | [`hstore`](/ext/e/hstore) | 为模式与扩展生成Markdown文档 |
@@ -80,15 +85,18 @@ weight: 30
 | [`sparql`](/ext/e/sparql) | [`plperl`](/ext/e/plperl) [`plperlu`](/ext/e/plperlu) | 使用SQL查询SPARQL数据源 |
 | [`pgautofailover`](/ext/e/pgautofailover) | [`btree_gist`](/ext/e/btree_gist) | PG 自动故障迁移 |
 | [`pg_upless`](/ext/e/pg_upless) | [`plpgsql`](/ext/e/plpgsql) | 检测表上的无用UPDATE |
+| [`pgcozy`](/ext/e/pgcozy) | [`pg_buffercache`](/ext/e/pg_buffercache) [`pg_prewarm`](/ext/e/pg_prewarm) | 根据先前的pg_buffercache快照预热内存缓冲区 |
 | [`pg_drop_events`](/ext/e/pg_drop_events) | [`plpgsql`](/ext/e/plpgsql) | 记录删表删列删视图的事务号，辅助PITR确定时间点 |
 | [`pg_profile`](/ext/e/pg_profile) | [`dblink`](/ext/e/dblink) [`plpgsql`](/ext/e/plpgsql) | PostgreSQL 数据库负载记录与AWR报表工具 |
 | [`pg_stat_kcache`](/ext/e/pg_stat_kcache) | [`pg_stat_statements`](/ext/e/pg_stat_statements) | 内核统计信息收集 |
 | [`pg_sqlog`](/ext/e/pg_sqlog) | [`file_fdw`](/ext/e/file_fdw) | 提供访问PostgreSQL日志的SQL接口 |
 | [`powa`](/ext/e/powa) | [`plpgsql`](/ext/e/plpgsql) [`pg_stat_statements`](/ext/e/pg_stat_statements) [`btree_gist`](/ext/e/btree_gist) | PostgreSQL 工作负载分析器-核心 |
 | [`supabase_vault`](/ext/e/supabase_vault) | [`pgsodium`](/ext/e/pgsodium) | 在 Vault 中存储加密凭证的扩展 (supabase) |
+| [`pg_auditor`](/ext/e/pg_auditor) | [`hstore`](/ext/e/hstore) | 审计数据变更并提供闪回能力 |
 | [`pg_jobmon`](/ext/e/pg_jobmon) | [`dblink`](/ext/e/dblink) | 记录和监控函数 |
 | [`pgcryptokey`](/ext/e/pgcryptokey) | [`pgcrypto`](/ext/e/pgcrypto) | PG密钥管理 |
-| [`documentdb`](/ext/e/documentdb) | [`documentdb_core`](/ext/e/documentdb_core) [`pg_cron`](/ext/e/pg_cron) [`tsm_system_rows`](/ext/e/tsm_system_rows) [`vector`](/ext/e/vector) [`postgis`](/ext/e/postgis) [`rum`](/ext/e/rum) | 微软DocumentDB的API层 |
+| [`pgbouncer_fdw`](/ext/e/pgbouncer_fdw) | [`dblink`](/ext/e/dblink) | 用SQL查询pgbouncer统计信息，并执行pgbouncer命令 |
+| [`documentdb`](/ext/e/documentdb) | [`documentdb_core`](/ext/e/documentdb_core) [`pg_cron`](/ext/e/pg_cron) [`postgis`](/ext/e/postgis) [`tsm_system_rows`](/ext/e/tsm_system_rows) [`vector`](/ext/e/vector) | 微软DocumentDB的API层 |
 | [`documentdb_distributed`](/ext/e/documentdb_distributed) | [`citus`](/ext/e/citus) [`documentdb_core`](/ext/e/documentdb_core) [`documentdb`](/ext/e/documentdb) | DocumentDB多节点模式的API层 |
 | [`ora_btree_gin`](/ext/e/ora_btree_gin) | [`ivorysql_ora`](/ext/e/ivorysql_ora) | Oracle 数据类型 GIN 索引支持 |
 | [`ora_btree_gist`](/ext/e/ora_btree_gist) | [`ivorysql_ora`](/ext/e/ivorysql_ora) | Oracle 数据类型 GiST 索引支持 |
@@ -102,12 +110,12 @@ weight: 30
 
 ## 下游依赖
 
-以下 **57** 个扩展被其他扩展所依赖：
+以下 **58** 个扩展被其他扩展所依赖：
 
 | **扩展名** | **下游依赖** | **描述** |
 |:-----------|:-------------|:---------|
 | [`pg_cron`](/ext/e/pg_cron) | [`documentdb`](/ext/e/documentdb) [`pg_incremental`](/ext/e/pg_incremental) [`timeseries`](/ext/e/timeseries) [`vectorize`](/ext/e/vectorize) [`pgmb`](/ext/e/pgmb) | 定时任务调度器 |
-| [`postgis`](/ext/e/postgis) | [`documentdb`](/ext/e/documentdb) [`h3_postgis`](/ext/e/h3_postgis) [`mobilitydb`](/ext/e/mobilitydb) [`pgrouting`](/ext/e/pgrouting) [`pointcloud_postgis`](/ext/e/pointcloud_postgis) [`postgis_raster`](/ext/e/postgis_raster) [`postgis_sfcgal`](/ext/e/postgis_sfcgal) [`postgis_tiger_geocoder`](/ext/e/postgis_tiger_geocoder) [`postgis_topology`](/ext/e/postgis_topology) | PostGIS 几何和地理空间扩展 |
+| [`postgis`](/ext/e/postgis) | [`documentdb`](/ext/e/documentdb) [`h3_postgis`](/ext/e/h3_postgis) [`mobilitydb`](/ext/e/mobilitydb) [`pgrouting`](/ext/e/pgrouting) [`pointcloud_postgis`](/ext/e/pointcloud_postgis) [`postgis_raster`](/ext/e/postgis_raster) [`postgis_sfcgal`](/ext/e/postgis_sfcgal) [`postgis_tiger_geocoder`](/ext/e/postgis_tiger_geocoder) [`postgis_topology`](/ext/e/postgis_topology) [`pg_eviltransform`](/ext/e/pg_eviltransform) | PostGIS 几何和地理空间扩展 |
 | [`postgis_raster`](/ext/e/postgis_raster) | [`h3_postgis`](/ext/e/h3_postgis) | PostGIS 光栅类型和函数 |
 | [`pointcloud`](/ext/e/pointcloud) | [`pointcloud_postgis`](/ext/e/pointcloud_postgis) | 提供激光雷达点云数据类型支持 |
 | [`h3`](/ext/e/h3) | [`h3_postgis`](/ext/e/h3_postgis) | H3六边形层级索引支持 |
@@ -147,6 +155,7 @@ weight: 30
 | [`cube`](/ext/e/cube) | [`earthdistance`](/ext/e/earthdistance) [`pg4ml`](/ext/e/pg4ml) | 用于存储多维立方体的数据类型 |
 | [`ltree`](/ext/e/ltree) | [`ltree_plpython3u`](/ext/e/ltree_plpython3u) | 用于表示分层树状结构的数据类型 |
 | [`hstore`](/ext/e/hstore) | [`hstore_pllua`](/ext/e/hstore_pllua) [`hstore_plluau`](/ext/e/hstore_plluau) [`hstore_plpython3u`](/ext/e/hstore_plpython3u) [`pg_readme`](/ext/e/pg_readme) [`pg_readme_test_extension`](/ext/e/pg_readme_test_extension) | 用于存储（键，值）对集合的数据类型 |
+| [`pg_net`](/ext/e/pg_net) | [`pgmb`](/ext/e/pgmb) | 用 SQL 进行异步非阻塞HTTP/HTTPS 请求的扩展 (supabase) |
 | [`ddl_historization`](/ext/e/ddl_historization) | [`schedoc`](/ext/e/schedoc) | 用SQL将所有DDL变更写入到数据库表中 |
 | [`tsm_system_rows`](/ext/e/tsm_system_rows) | [`documentdb`](/ext/e/documentdb) | 接受行数限制的 TABLESAMPLE 方法 |
 | [`uuid-ossp`](/ext/e/uuid-ossp) | [`babelfishpg_tsql`](/ext/e/babelfishpg_tsql) | 生成通用唯一标识符（UUIDs） |

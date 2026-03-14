@@ -11,7 +11,7 @@ weight: 1521
     <div class="ext-card__title">pgpointcloud/pointcloud</div>
     <div class="ext-card__desc">https://github.com/pgpointcloud/pointcloud</div>
   </a>
-  <a class="ext-card ext-card--source" href="pointcloud-1.2.5.tar.gz">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pointcloud-1.2.5.tar.gz">
     <div class="ext-card__kicker">源码</div>
     <div class="ext-card__title">pointcloud-1.2.5.tar.gz</div>
     <div class="ext-card__desc">pointcloud-1.2.5.tar.gz</div>

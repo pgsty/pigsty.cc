@@ -11,7 +11,7 @@ weight: 9660
     <div class="ext-card__title">main/decoder_raw</div>
     <div class="ext-card__desc">https://github.com/michaelpq/pg_plugins/blob/main/decoder_raw/</div>
   </a>
-  <a class="ext-card ext-card--source" href="decoder_raw-1.0.tar.gz">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/decoder_raw-1.0.tar.gz">
     <div class="ext-card__kicker">源码</div>
     <div class="ext-card__title">decoder_raw-1.0.tar.gz</div>
     <div class="ext-card__desc">decoder_raw-1.0.tar.gz</div>
@@ -64,64 +64,64 @@ weight: 9660
 | u22.aarch64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 |
 | u24.x86_64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 |
 | u24.aarch64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 |
-@ el8.x86_64 18 decoder_raw_18 decoder_raw_18-1.0-1PIGSTY.el8.x86_64.rpm pigsty 1.0 15.2KiB https://repo.pigsty.io/yum/pgsql/el8.x86_64/decoder_raw_18-1.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 18 decoder_raw_18 decoder_raw_18-1.0-1PIGSTY.el8.aarch64.rpm pigsty 1.0 15.2KiB https://repo.pigsty.io/yum/pgsql/el8.aarch64/decoder_raw_18-1.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 18 decoder_raw_18 decoder_raw_18-1.0-1PIGSTY.el9.x86_64.rpm pigsty 1.0 14.9KiB https://repo.pigsty.io/yum/pgsql/el9.x86_64/decoder_raw_18-1.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 18 decoder_raw_18 decoder_raw_18-1.0-1PIGSTY.el9.aarch64.rpm pigsty 1.0 14.7KiB https://repo.pigsty.io/yum/pgsql/el9.aarch64/decoder_raw_18-1.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 18 decoder_raw_18 decoder_raw_18-1.0-1PIGSTY.el10.x86_64.rpm pigsty 1.0 15.0KiB https://repo.pigsty.io/yum/pgsql/el10.x86_64/decoder_raw_18-1.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 18 decoder_raw_18 decoder_raw_18-1.0-1PIGSTY.el10.aarch64.rpm pigsty 1.0 14.9KiB https://repo.pigsty.io/yum/pgsql/el10.aarch64/decoder_raw_18-1.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 18 postgresql-18-decoder-raw postgresql-18-decoder-raw_1.0-1PIGSTY~bookworm_amd64.deb pigsty 1.0 16.6KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/d/decoder-raw/postgresql-18-decoder-raw_1.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 18 postgresql-18-decoder-raw postgresql-18-decoder-raw_1.0-1PIGSTY~bookworm_arm64.deb pigsty 1.0 16.5KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/d/decoder-raw/postgresql-18-decoder-raw_1.0-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 18 postgresql-18-decoder-raw postgresql-18-decoder-raw_1.0-1PIGSTY~trixie_amd64.deb pigsty 1.0 16.6KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/d/decoder-raw/postgresql-18-decoder-raw_1.0-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 18 postgresql-18-decoder-raw postgresql-18-decoder-raw_1.0-1PIGSTY~trixie_arm64.deb pigsty 1.0 16.6KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/d/decoder-raw/postgresql-18-decoder-raw_1.0-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 18 postgresql-18-decoder-raw postgresql-18-decoder-raw_1.0-1PIGSTY~jammy_amd64.deb pigsty 1.0 17.9KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/d/decoder-raw/postgresql-18-decoder-raw_1.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 18 postgresql-18-decoder-raw postgresql-18-decoder-raw_1.0-1PIGSTY~jammy_arm64.deb pigsty 1.0 17.5KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/d/decoder-raw/postgresql-18-decoder-raw_1.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 18 postgresql-18-decoder-raw postgresql-18-decoder-raw_1.0-1PIGSTY~noble_amd64.deb pigsty 1.0 17.3KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/d/decoder-raw/postgresql-18-decoder-raw_1.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 18 postgresql-18-decoder-raw postgresql-18-decoder-raw_1.0-1PIGSTY~noble_arm64.deb pigsty 1.0 17.3KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/d/decoder-raw/postgresql-18-decoder-raw_1.0-1PIGSTY~noble_arm64.deb
-@ el8.x86_64 17 decoder_raw_17 decoder_raw_17-1.0-1PIGSTY.el8.x86_64.rpm pigsty 1.0 15.2KiB https://repo.pigsty.io/yum/pgsql/el8.x86_64/decoder_raw_17-1.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 17 decoder_raw_17 decoder_raw_17-1.0-1PIGSTY.el8.aarch64.rpm pigsty 1.0 15.3KiB https://repo.pigsty.io/yum/pgsql/el8.aarch64/decoder_raw_17-1.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 17 decoder_raw_17 decoder_raw_17-1.0-1PIGSTY.el9.x86_64.rpm pigsty 1.0 14.9KiB https://repo.pigsty.io/yum/pgsql/el9.x86_64/decoder_raw_17-1.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 17 decoder_raw_17 decoder_raw_17-1.0-1PIGSTY.el9.aarch64.rpm pigsty 1.0 14.7KiB https://repo.pigsty.io/yum/pgsql/el9.aarch64/decoder_raw_17-1.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 17 decoder_raw_17 decoder_raw_17-1.0-1PIGSTY.el10.x86_64.rpm pigsty 1.0 15.0KiB https://repo.pigsty.io/yum/pgsql/el10.x86_64/decoder_raw_17-1.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 17 decoder_raw_17 decoder_raw_17-1.0-1PIGSTY.el10.aarch64.rpm pigsty 1.0 15.0KiB https://repo.pigsty.io/yum/pgsql/el10.aarch64/decoder_raw_17-1.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 17 postgresql-17-decoder-raw postgresql-17-decoder-raw_1.0-1PIGSTY~bookworm_amd64.deb pigsty 1.0 16.5KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/d/decoder-raw/postgresql-17-decoder-raw_1.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 17 postgresql-17-decoder-raw postgresql-17-decoder-raw_1.0-1PIGSTY~bookworm_arm64.deb pigsty 1.0 16.5KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/d/decoder-raw/postgresql-17-decoder-raw_1.0-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 17 postgresql-17-decoder-raw postgresql-17-decoder-raw_1.0-1PIGSTY~trixie_amd64.deb pigsty 1.0 16.4KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/d/decoder-raw/postgresql-17-decoder-raw_1.0-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 17 postgresql-17-decoder-raw postgresql-17-decoder-raw_1.0-1PIGSTY~trixie_arm64.deb pigsty 1.0 16.6KiB https://repo.pigsty.io/apt/pgsql/trixie/pool/main/d/decoder-raw/postgresql-17-decoder-raw_1.0-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 17 postgresql-17-decoder-raw postgresql-17-decoder-raw_1.0-1PIGSTY~jammy_amd64.deb pigsty 1.0 20.1KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/d/decoder-raw/postgresql-17-decoder-raw_1.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 17 postgresql-17-decoder-raw postgresql-17-decoder-raw_1.0-1PIGSTY~jammy_arm64.deb pigsty 1.0 19.7KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/d/decoder-raw/postgresql-17-decoder-raw_1.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 17 postgresql-17-decoder-raw postgresql-17-decoder-raw_1.0-1PIGSTY~noble_amd64.deb pigsty 1.0 17.1KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/d/decoder-raw/postgresql-17-decoder-raw_1.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 17 postgresql-17-decoder-raw postgresql-17-decoder-raw_1.0-1PIGSTY~noble_arm64.deb pigsty 1.0 17.3KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/d/decoder-raw/postgresql-17-decoder-raw_1.0-1PIGSTY~noble_arm64.deb
-@ el8.x86_64 16 decoder_raw_16 decoder_raw_16-1.0-1PIGSTY.el8.x86_64.rpm pigsty 1.0 15.2KiB https://repo.pigsty.io/yum/pgsql/el8.x86_64/decoder_raw_16-1.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 16 decoder_raw_16 decoder_raw_16-1.0-1PIGSTY.el8.aarch64.rpm pigsty 1.0 15.3KiB https://repo.pigsty.io/yum/pgsql/el8.aarch64/decoder_raw_16-1.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 16 decoder_raw_16 decoder_raw_16-1.0-1PIGSTY.el9.x86_64.rpm pigsty 1.0 14.8KiB https://repo.pigsty.io/yum/pgsql/el9.x86_64/decoder_raw_16-1.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 16 decoder_raw_16 decoder_raw_16-1.0-1PIGSTY.el9.aarch64.rpm pigsty 1.0 14.7KiB https://repo.pigsty.io/yum/pgsql/el9.aarch64/decoder_raw_16-1.0-1PIGSTY.el9.aarch64.rpm
-@ d12.x86_64 16 postgresql-16-decoder-raw postgresql-16-decoder-raw_1.0-1PIGSTY~bookworm_amd64.deb pigsty 1.0 16.5KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/d/decoder-raw/postgresql-16-decoder-raw_1.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 16 postgresql-16-decoder-raw postgresql-16-decoder-raw_1.0-1PIGSTY~bookworm_arm64.deb pigsty 1.0 16.5KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/d/decoder-raw/postgresql-16-decoder-raw_1.0-1PIGSTY~bookworm_arm64.deb
-@ u22.x86_64 16 postgresql-16-decoder-raw postgresql-16-decoder-raw_1.0-1PIGSTY~jammy_amd64.deb pigsty 1.0 20.1KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/d/decoder-raw/postgresql-16-decoder-raw_1.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 16 postgresql-16-decoder-raw postgresql-16-decoder-raw_1.0-1PIGSTY~jammy_arm64.deb pigsty 1.0 19.7KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/d/decoder-raw/postgresql-16-decoder-raw_1.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 16 postgresql-16-decoder-raw postgresql-16-decoder-raw_1.0-1PIGSTY~noble_amd64.deb pigsty 1.0 17.1KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/d/decoder-raw/postgresql-16-decoder-raw_1.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 16 postgresql-16-decoder-raw postgresql-16-decoder-raw_1.0-1PIGSTY~noble_arm64.deb pigsty 1.0 17.3KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/d/decoder-raw/postgresql-16-decoder-raw_1.0-1PIGSTY~noble_arm64.deb
-@ el8.x86_64 15 decoder_raw_15 decoder_raw_15-1.0-1PIGSTY.el8.x86_64.rpm pigsty 1.0 15.0KiB https://repo.pigsty.io/yum/pgsql/el8.x86_64/decoder_raw_15-1.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 15 decoder_raw_15 decoder_raw_15-1.0-1PIGSTY.el8.aarch64.rpm pigsty 1.0 15.1KiB https://repo.pigsty.io/yum/pgsql/el8.aarch64/decoder_raw_15-1.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 15 decoder_raw_15 decoder_raw_15-1.0-1PIGSTY.el9.x86_64.rpm pigsty 1.0 14.7KiB https://repo.pigsty.io/yum/pgsql/el9.x86_64/decoder_raw_15-1.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 15 decoder_raw_15 decoder_raw_15-1.0-1PIGSTY.el9.aarch64.rpm pigsty 1.0 14.6KiB https://repo.pigsty.io/yum/pgsql/el9.aarch64/decoder_raw_15-1.0-1PIGSTY.el9.aarch64.rpm
-@ d12.x86_64 15 postgresql-15-decoder-raw postgresql-15-decoder-raw_1.0-1PIGSTY~bookworm_amd64.deb pigsty 1.0 16.1KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/d/decoder-raw/postgresql-15-decoder-raw_1.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 15 postgresql-15-decoder-raw postgresql-15-decoder-raw_1.0-1PIGSTY~bookworm_arm64.deb pigsty 1.0 16.2KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/d/decoder-raw/postgresql-15-decoder-raw_1.0-1PIGSTY~bookworm_arm64.deb
-@ u22.x86_64 15 postgresql-15-decoder-raw postgresql-15-decoder-raw_1.0-1PIGSTY~jammy_amd64.deb pigsty 1.0 19.7KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/d/decoder-raw/postgresql-15-decoder-raw_1.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 15 postgresql-15-decoder-raw postgresql-15-decoder-raw_1.0-1PIGSTY~jammy_arm64.deb pigsty 1.0 19.3KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/d/decoder-raw/postgresql-15-decoder-raw_1.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 15 postgresql-15-decoder-raw postgresql-15-decoder-raw_1.0-1PIGSTY~noble_amd64.deb pigsty 1.0 16.8KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/d/decoder-raw/postgresql-15-decoder-raw_1.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 15 postgresql-15-decoder-raw postgresql-15-decoder-raw_1.0-1PIGSTY~noble_arm64.deb pigsty 1.0 17.0KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/d/decoder-raw/postgresql-15-decoder-raw_1.0-1PIGSTY~noble_arm64.deb
-@ el8.x86_64 14 decoder_raw_14 decoder_raw_14-1.0-1PIGSTY.el8.x86_64.rpm pigsty 1.0 15.0KiB https://repo.pigsty.io/yum/pgsql/el8.x86_64/decoder_raw_14-1.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 14 decoder_raw_14 decoder_raw_14-1.0-1PIGSTY.el8.aarch64.rpm pigsty 1.0 15.1KiB https://repo.pigsty.io/yum/pgsql/el8.aarch64/decoder_raw_14-1.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 14 decoder_raw_14 decoder_raw_14-1.0-1PIGSTY.el9.x86_64.rpm pigsty 1.0 15.0KiB https://repo.pigsty.io/yum/pgsql/el9.x86_64/decoder_raw_14-1.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 14 decoder_raw_14 decoder_raw_14-1.0-1PIGSTY.el9.aarch64.rpm pigsty 1.0 14.9KiB https://repo.pigsty.io/yum/pgsql/el9.aarch64/decoder_raw_14-1.0-1PIGSTY.el9.aarch64.rpm
-@ d12.x86_64 14 postgresql-14-decoder-raw postgresql-14-decoder-raw_1.0-1PIGSTY~bookworm_amd64.deb pigsty 1.0 16.8KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/d/decoder-raw/postgresql-14-decoder-raw_1.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 14 postgresql-14-decoder-raw postgresql-14-decoder-raw_1.0-1PIGSTY~bookworm_arm64.deb pigsty 1.0 16.6KiB https://repo.pigsty.io/apt/pgsql/bookworm/pool/main/d/decoder-raw/postgresql-14-decoder-raw_1.0-1PIGSTY~bookworm_arm64.deb
-@ u22.x86_64 14 postgresql-14-decoder-raw postgresql-14-decoder-raw_1.0-1PIGSTY~jammy_amd64.deb pigsty 1.0 20.3KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/d/decoder-raw/postgresql-14-decoder-raw_1.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 14 postgresql-14-decoder-raw postgresql-14-decoder-raw_1.0-1PIGSTY~jammy_arm64.deb pigsty 1.0 19.9KiB https://repo.pigsty.io/apt/pgsql/jammy/pool/main/d/decoder-raw/postgresql-14-decoder-raw_1.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 14 postgresql-14-decoder-raw postgresql-14-decoder-raw_1.0-1PIGSTY~noble_amd64.deb pigsty 1.0 17.5KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/d/decoder-raw/postgresql-14-decoder-raw_1.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 14 postgresql-14-decoder-raw postgresql-14-decoder-raw_1.0-1PIGSTY~noble_arm64.deb pigsty 1.0 17.4KiB https://repo.pigsty.io/apt/pgsql/noble/pool/main/d/decoder-raw/postgresql-14-decoder-raw_1.0-1PIGSTY~noble_arm64.deb
+@ el8.x86_64 18 decoder_raw_18 decoder_raw_18-1.0-1PIGSTY.el8.x86_64.rpm pigsty 1.0 15.2KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/decoder_raw_18-1.0-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 18 decoder_raw_18 decoder_raw_18-1.0-1PIGSTY.el8.aarch64.rpm pigsty 1.0 15.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/decoder_raw_18-1.0-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 18 decoder_raw_18 decoder_raw_18-1.0-1PIGSTY.el9.x86_64.rpm pigsty 1.0 14.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/decoder_raw_18-1.0-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 18 decoder_raw_18 decoder_raw_18-1.0-1PIGSTY.el9.aarch64.rpm pigsty 1.0 14.7KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/decoder_raw_18-1.0-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 18 decoder_raw_18 decoder_raw_18-1.0-1PIGSTY.el10.x86_64.rpm pigsty 1.0 15.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/decoder_raw_18-1.0-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 18 decoder_raw_18 decoder_raw_18-1.0-1PIGSTY.el10.aarch64.rpm pigsty 1.0 14.9KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/decoder_raw_18-1.0-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-decoder-raw postgresql-18-decoder-raw_1.0-1PIGSTY~bookworm_amd64.deb pigsty 1.0 16.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/d/decoder-raw/postgresql-18-decoder-raw_1.0-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 18 postgresql-18-decoder-raw postgresql-18-decoder-raw_1.0-1PIGSTY~bookworm_arm64.deb pigsty 1.0 16.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/d/decoder-raw/postgresql-18-decoder-raw_1.0-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 18 postgresql-18-decoder-raw postgresql-18-decoder-raw_1.0-1PIGSTY~trixie_amd64.deb pigsty 1.0 16.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/d/decoder-raw/postgresql-18-decoder-raw_1.0-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 18 postgresql-18-decoder-raw postgresql-18-decoder-raw_1.0-1PIGSTY~trixie_arm64.deb pigsty 1.0 16.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/d/decoder-raw/postgresql-18-decoder-raw_1.0-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 18 postgresql-18-decoder-raw postgresql-18-decoder-raw_1.0-1PIGSTY~jammy_amd64.deb pigsty 1.0 17.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/d/decoder-raw/postgresql-18-decoder-raw_1.0-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 18 postgresql-18-decoder-raw postgresql-18-decoder-raw_1.0-1PIGSTY~jammy_arm64.deb pigsty 1.0 17.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/d/decoder-raw/postgresql-18-decoder-raw_1.0-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 18 postgresql-18-decoder-raw postgresql-18-decoder-raw_1.0-1PIGSTY~noble_amd64.deb pigsty 1.0 17.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/d/decoder-raw/postgresql-18-decoder-raw_1.0-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 18 postgresql-18-decoder-raw postgresql-18-decoder-raw_1.0-1PIGSTY~noble_arm64.deb pigsty 1.0 17.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/d/decoder-raw/postgresql-18-decoder-raw_1.0-1PIGSTY~noble_arm64.deb
+@ el8.x86_64 17 decoder_raw_17 decoder_raw_17-1.0-1PIGSTY.el8.x86_64.rpm pigsty 1.0 15.2KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/decoder_raw_17-1.0-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 17 decoder_raw_17 decoder_raw_17-1.0-1PIGSTY.el8.aarch64.rpm pigsty 1.0 15.3KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/decoder_raw_17-1.0-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 17 decoder_raw_17 decoder_raw_17-1.0-1PIGSTY.el9.x86_64.rpm pigsty 1.0 14.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/decoder_raw_17-1.0-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 17 decoder_raw_17 decoder_raw_17-1.0-1PIGSTY.el9.aarch64.rpm pigsty 1.0 14.7KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/decoder_raw_17-1.0-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 17 decoder_raw_17 decoder_raw_17-1.0-1PIGSTY.el10.x86_64.rpm pigsty 1.0 15.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/decoder_raw_17-1.0-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 17 decoder_raw_17 decoder_raw_17-1.0-1PIGSTY.el10.aarch64.rpm pigsty 1.0 15.0KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/decoder_raw_17-1.0-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-decoder-raw postgresql-17-decoder-raw_1.0-1PIGSTY~bookworm_amd64.deb pigsty 1.0 16.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/d/decoder-raw/postgresql-17-decoder-raw_1.0-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 17 postgresql-17-decoder-raw postgresql-17-decoder-raw_1.0-1PIGSTY~bookworm_arm64.deb pigsty 1.0 16.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/d/decoder-raw/postgresql-17-decoder-raw_1.0-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 17 postgresql-17-decoder-raw postgresql-17-decoder-raw_1.0-1PIGSTY~trixie_amd64.deb pigsty 1.0 16.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/d/decoder-raw/postgresql-17-decoder-raw_1.0-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 17 postgresql-17-decoder-raw postgresql-17-decoder-raw_1.0-1PIGSTY~trixie_arm64.deb pigsty 1.0 16.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/d/decoder-raw/postgresql-17-decoder-raw_1.0-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 17 postgresql-17-decoder-raw postgresql-17-decoder-raw_1.0-1PIGSTY~jammy_amd64.deb pigsty 1.0 20.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/d/decoder-raw/postgresql-17-decoder-raw_1.0-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 17 postgresql-17-decoder-raw postgresql-17-decoder-raw_1.0-1PIGSTY~jammy_arm64.deb pigsty 1.0 19.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/d/decoder-raw/postgresql-17-decoder-raw_1.0-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 17 postgresql-17-decoder-raw postgresql-17-decoder-raw_1.0-1PIGSTY~noble_amd64.deb pigsty 1.0 17.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/d/decoder-raw/postgresql-17-decoder-raw_1.0-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 17 postgresql-17-decoder-raw postgresql-17-decoder-raw_1.0-1PIGSTY~noble_arm64.deb pigsty 1.0 17.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/d/decoder-raw/postgresql-17-decoder-raw_1.0-1PIGSTY~noble_arm64.deb
+@ el8.x86_64 16 decoder_raw_16 decoder_raw_16-1.0-1PIGSTY.el8.x86_64.rpm pigsty 1.0 15.2KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/decoder_raw_16-1.0-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 16 decoder_raw_16 decoder_raw_16-1.0-1PIGSTY.el8.aarch64.rpm pigsty 1.0 15.3KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/decoder_raw_16-1.0-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 16 decoder_raw_16 decoder_raw_16-1.0-1PIGSTY.el9.x86_64.rpm pigsty 1.0 14.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/decoder_raw_16-1.0-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 16 decoder_raw_16 decoder_raw_16-1.0-1PIGSTY.el9.aarch64.rpm pigsty 1.0 14.7KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/decoder_raw_16-1.0-1PIGSTY.el9.aarch64.rpm
+@ d12.x86_64 16 postgresql-16-decoder-raw postgresql-16-decoder-raw_1.0-1PIGSTY~bookworm_amd64.deb pigsty 1.0 16.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/d/decoder-raw/postgresql-16-decoder-raw_1.0-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 16 postgresql-16-decoder-raw postgresql-16-decoder-raw_1.0-1PIGSTY~bookworm_arm64.deb pigsty 1.0 16.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/d/decoder-raw/postgresql-16-decoder-raw_1.0-1PIGSTY~bookworm_arm64.deb
+@ u22.x86_64 16 postgresql-16-decoder-raw postgresql-16-decoder-raw_1.0-1PIGSTY~jammy_amd64.deb pigsty 1.0 20.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/d/decoder-raw/postgresql-16-decoder-raw_1.0-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 16 postgresql-16-decoder-raw postgresql-16-decoder-raw_1.0-1PIGSTY~jammy_arm64.deb pigsty 1.0 19.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/d/decoder-raw/postgresql-16-decoder-raw_1.0-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 16 postgresql-16-decoder-raw postgresql-16-decoder-raw_1.0-1PIGSTY~noble_amd64.deb pigsty 1.0 17.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/d/decoder-raw/postgresql-16-decoder-raw_1.0-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 16 postgresql-16-decoder-raw postgresql-16-decoder-raw_1.0-1PIGSTY~noble_arm64.deb pigsty 1.0 17.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/d/decoder-raw/postgresql-16-decoder-raw_1.0-1PIGSTY~noble_arm64.deb
+@ el8.x86_64 15 decoder_raw_15 decoder_raw_15-1.0-1PIGSTY.el8.x86_64.rpm pigsty 1.0 15.0KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/decoder_raw_15-1.0-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 15 decoder_raw_15 decoder_raw_15-1.0-1PIGSTY.el8.aarch64.rpm pigsty 1.0 15.1KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/decoder_raw_15-1.0-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 15 decoder_raw_15 decoder_raw_15-1.0-1PIGSTY.el9.x86_64.rpm pigsty 1.0 14.7KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/decoder_raw_15-1.0-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 15 decoder_raw_15 decoder_raw_15-1.0-1PIGSTY.el9.aarch64.rpm pigsty 1.0 14.6KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/decoder_raw_15-1.0-1PIGSTY.el9.aarch64.rpm
+@ d12.x86_64 15 postgresql-15-decoder-raw postgresql-15-decoder-raw_1.0-1PIGSTY~bookworm_amd64.deb pigsty 1.0 16.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/d/decoder-raw/postgresql-15-decoder-raw_1.0-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 15 postgresql-15-decoder-raw postgresql-15-decoder-raw_1.0-1PIGSTY~bookworm_arm64.deb pigsty 1.0 16.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/d/decoder-raw/postgresql-15-decoder-raw_1.0-1PIGSTY~bookworm_arm64.deb
+@ u22.x86_64 15 postgresql-15-decoder-raw postgresql-15-decoder-raw_1.0-1PIGSTY~jammy_amd64.deb pigsty 1.0 19.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/d/decoder-raw/postgresql-15-decoder-raw_1.0-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 15 postgresql-15-decoder-raw postgresql-15-decoder-raw_1.0-1PIGSTY~jammy_arm64.deb pigsty 1.0 19.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/d/decoder-raw/postgresql-15-decoder-raw_1.0-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 15 postgresql-15-decoder-raw postgresql-15-decoder-raw_1.0-1PIGSTY~noble_amd64.deb pigsty 1.0 16.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/d/decoder-raw/postgresql-15-decoder-raw_1.0-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 15 postgresql-15-decoder-raw postgresql-15-decoder-raw_1.0-1PIGSTY~noble_arm64.deb pigsty 1.0 17.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/d/decoder-raw/postgresql-15-decoder-raw_1.0-1PIGSTY~noble_arm64.deb
+@ el8.x86_64 14 decoder_raw_14 decoder_raw_14-1.0-1PIGSTY.el8.x86_64.rpm pigsty 1.0 15.0KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/decoder_raw_14-1.0-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 14 decoder_raw_14 decoder_raw_14-1.0-1PIGSTY.el8.aarch64.rpm pigsty 1.0 15.1KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/decoder_raw_14-1.0-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 14 decoder_raw_14 decoder_raw_14-1.0-1PIGSTY.el9.x86_64.rpm pigsty 1.0 15.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/decoder_raw_14-1.0-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 14 decoder_raw_14 decoder_raw_14-1.0-1PIGSTY.el9.aarch64.rpm pigsty 1.0 14.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/decoder_raw_14-1.0-1PIGSTY.el9.aarch64.rpm
+@ d12.x86_64 14 postgresql-14-decoder-raw postgresql-14-decoder-raw_1.0-1PIGSTY~bookworm_amd64.deb pigsty 1.0 16.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/d/decoder-raw/postgresql-14-decoder-raw_1.0-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 14 postgresql-14-decoder-raw postgresql-14-decoder-raw_1.0-1PIGSTY~bookworm_arm64.deb pigsty 1.0 16.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/d/decoder-raw/postgresql-14-decoder-raw_1.0-1PIGSTY~bookworm_arm64.deb
+@ u22.x86_64 14 postgresql-14-decoder-raw postgresql-14-decoder-raw_1.0-1PIGSTY~jammy_amd64.deb pigsty 1.0 20.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/d/decoder-raw/postgresql-14-decoder-raw_1.0-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 14 postgresql-14-decoder-raw postgresql-14-decoder-raw_1.0-1PIGSTY~jammy_arm64.deb pigsty 1.0 19.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/d/decoder-raw/postgresql-14-decoder-raw_1.0-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 14 postgresql-14-decoder-raw postgresql-14-decoder-raw_1.0-1PIGSTY~noble_amd64.deb pigsty 1.0 17.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/d/decoder-raw/postgresql-14-decoder-raw_1.0-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 14 postgresql-14-decoder-raw postgresql-14-decoder-raw_1.0-1PIGSTY~noble_arm64.deb pigsty 1.0 17.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/d/decoder-raw/postgresql-14-decoder-raw_1.0-1PIGSTY~noble_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建
