@@ -303,7 +303,7 @@ icon: fa-brands fa-redhat
 | [`aws_s3`](/ext/e/aws_s3) | AVAIL PIGSTY 0.0.1 1 | AVAIL PIGSTY 0.0.1 1 | AVAIL PIGSTY 0.0.1 1 | AVAIL PIGSTY 0.0.1 1 | AVAIL PIGSTY 0.0.1 1 |
 | [`log_fdw`](/ext/e/log_fdw) | AVAIL PIGSTY 1.4 1 | AVAIL PIGSTY 1.4 2 | AVAIL PIGSTY 1.4 2 | AVAIL PIGSTY 1.4 2 | AVAIL PIGSTY 1.4 2 |
 | [`documentdb`](/ext/e/documentdb) | AVAIL PIGSTY 0.109 1 | AVAIL PIGSTY 0.109 1 | AVAIL PIGSTY 0.109 1 | AVAIL PIGSTY 0.107 1 | MISS PIGSTY - 0 |
-| [`orafce`](/ext/e/orafce) | AVAIL PGDG 4.16.2 3 | AVAIL PGDG 4.16.2 11 | AVAIL PGDG 4.16.2 20 | AVAIL PGDG 4.16.2 20 | AVAIL PGDG 4.16.2 20 |
+| [`orafce`](/ext/e/orafce) | AVAIL PGDG 4.16.5 4 | AVAIL PGDG 4.16.5 12 | AVAIL PGDG 4.16.5 21 | AVAIL PGDG 4.16.5 21 | AVAIL PGDG 4.16.5 21 |
 | [`pgtt`](/ext/e/pgtt) | AVAIL PGDG 4.4 1 | AVAIL PGDG 4.4 4 | AVAIL PGDG 4.4 6 | AVAIL PGDG 4.4 8 | AVAIL PGDG 4.4 10 |
 | [`session_variable`](/ext/e/session_variable) | AVAIL PIGSTY 3.4 1 | AVAIL PIGSTY 3.4 1 | AVAIL PIGSTY 3.4 1 | AVAIL PIGSTY 3.4 1 | AVAIL PIGSTY 3.4 1 |
 | [`pg_statement_rollback`](/ext/e/pg_statement_rollback) | AVAIL PGDG 1.5 1 | AVAIL PGDG 1.4 1 | AVAIL PGDG 1.4 1 | AVAIL PGDG 1.4 2 | AVAIL PGDG 1.4 2 |
