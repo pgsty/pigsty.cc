@@ -40,6 +40,9 @@ Database Maintenance:
   pig pg freeze   [db] [-a] [-t table]      vacuum freeze tables
   pig pg repack   [db] [-a] [-t table]      repack tables (online rebuild)
 
+Tuning:
+  pig pg tune     [-p profile]              generate optimized parameters
+
 Utilities:
   pig pg log <list|tail|cat|less>           view PostgreSQL logs
 ```
@@ -77,6 +80,13 @@ Utilities:
 | `pg analyze` | `ana, az` | 分析表 | 封装 vacuumdb --analyze-only |
 | `pg freeze` | `frz` | 冻结清理表 | 封装 vacuumdb --freeze |
 | `pg repack` | `rp` | 在线重整表 | 需要 pg_repack 扩展 |
+{.full-width}
+
+**参数调优**：
+
+| 命令 | 别名 | 描述 | 备注 |
+|:----|:----|:----|:----|
+| `pg tune` | `tuning` | 生成 PostgreSQL 调优参数 | 自动探测硬件，支持结构化输出 |
 {.full-width}
 
 **日志工具**：
@@ -125,6 +135,11 @@ pig pg kill -x                    # 终止连接（需要 -x 确认执行）
 pig pg vacuum mydb                # 清理指定数据库
 pig pg analyze mydb               # 分析指定数据库
 pig pg repack mydb                # 在线重整数据库
+
+# 参数调优
+pig pg tune                       # 自动探测硬件并生成调优参数
+pig pg tune -p olap               # 使用 OLAP 负载画像
+pig pg tune -c 8 -m 32768 -d 500  # 手工覆盖 CPU / 内存 / 磁盘
 
 # 日志查看
 pig pg log tail                   # 实时查看最新日志
@@ -497,6 +512,53 @@ pig pg repack mydb --dry-run      # 显示将被重整的表
 | `--jobs` | `-j` | 并行任务数（默认 1） |
 | `--dry-run` | `-N` | 显示将被重整的表 |
 {.full-width}
+
+
+## 参数调优命令
+
+### pg tune
+
+根据当前 PostgreSQL 主版本、主机硬件资源和工作负载画像，生成一组推荐的 PostgreSQL 参数。默认自动探测 CPU、内存与数据盘容量，并以文本形式输出配置项。
+
+```bash
+pig pg tune                       # 自动探测硬件，使用 oltp 画像
+pig pg tuning                     # 别名
+pig pg tune -p olap               # 使用 OLAP 画像
+pig pg tune -p tiny               # 小规格实例
+pig pg tune -c 8 -m 32768 -d 500  # 覆盖自动探测结果
+pig pg tune -C 500                # 覆盖 max_connections
+pig pg tune -R 0.30               # 调整 shared_buffers 比例
+pig pg tune -o json               # 结构化输出 JSON
+pig pg tune -o yaml               # 结构化输出 YAML
+```
+
+**选项：**
+
+| 参数 | 简写 | 默认值 | 说明 |
+|:----|:----|:------|:----|
+| `--profile` | `-p` | oltp | 调优画像：`oltp` / `olap` / `tiny` / `crit` |
+| `--cpu` | `-c` | 0 | CPU 核数，0 表示自动探测 |
+| `--mem` | `-m` | 0 | 内存大小（MB），0 表示自动探测 |
+| `--disk` | `-d` | 0 | 数据盘容量（GB），0 表示自动探测 |
+| `--max-conn` | `-C` | 0 | 覆盖 `max_connections`，0 表示使用画像默认值 |
+| `--shmem-ratio` | `-R` | 0.25 | `shared_buffers` 占内存比例，取值范围 `0.1 ~ 0.4` |
+{.full-width}
+
+**画像说明：**
+
+| 画像 | 适用场景 | 特点 |
+|:----|:----|:----|
+| `oltp` | 通用在线事务处理 | 平衡连接数、缓存与并行度 |
+| `olap` | 分析型负载 | 更激进地使用并行与工作内存 |
+| `tiny` | 小规格实例 | 控制内存占用与并行度 |
+| `crit` | 延迟敏感场景 | 限制并行 gather，偏向稳态响应 |
+{.full-width}
+
+**说明：**
+
+- 生成结果会随当前 PostgreSQL 主版本自动裁剪，例如 `io_workers` 仅会在 PG 18+ 输出。
+- 文本输出可直接重定向到配置片段，结构化输出适合自动化脚本消费。
+- 该命令当前生成建议参数，不会直接修改数据库配置文件。
 
 
 ## 日志命令

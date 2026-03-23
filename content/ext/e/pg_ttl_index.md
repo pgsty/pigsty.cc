@@ -11,10 +11,10 @@ weight: 2740
     <div class="ext-card__title">ibrahimkarimeddin/postgres-extensions-pg_ttl</div>
     <div class="ext-card__desc">https://github.com/ibrahimkarimeddin/postgres-extensions-pg_ttl</div>
   </a>
-  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/postgres-extensions-pg_ttl-2.0.0.tar.gz">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/postgres-extensions-pg_ttl-3.0.0.tar.gz">
     <div class="ext-card__kicker">源码</div>
-    <div class="ext-card__title">postgres-extensions-pg_ttl-2.0.0.tar.gz</div>
-    <div class="ext-card__desc">postgres-extensions-pg_ttl-2.0.0.tar.gz</div>
+    <div class="ext-card__title">postgres-extensions-pg_ttl-3.0.0.tar.gz</div>
+    <div class="ext-card__desc">postgres-extensions-pg_ttl-3.0.0.tar.gz</div>
   </a>
 </div>
 
@@ -25,7 +25,7 @@ weight: 2740
 
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
-| [**`pg_ttl_index`**](/ext/e/pg_ttl_index) | `2.0.0` | <a class="ext-badge ext-badge--cate feat" href="/ext/cate/feat">FEAT</a> | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
+| [**`pg_ttl_index`**](/ext/e/pg_ttl_index) | `3.0.0` | <a class="ext-badge ext-badge--cate feat" href="/ext/cate/feat">FEAT</a> | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
 {.ext-table}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
@@ -45,88 +45,84 @@ weight: 2740
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `2.0.0` | {{< pgvers "18,17,16,15" >}} | `pg_ttl_index` | - |
-| [**RPM**](/ext/rpm#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `2.0.0` | {{< pgvers "18,17,16,15" >}} | `pg_ttl_index_$v` | - |
-| [**DEB**](/ext/deb#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `2.0.0` | {{< pgvers "18,17,16,15" >}} | `postgresql-$v-ttl-index` | - |
+| [**EXT**](/ext/list#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `3.0.0` | {{< pgvers "18,17,16,15" >}} | `pg_ttl_index` | - |
+| [**RPM**](/ext/rpm#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `3.0.0` | {{< pgvers "18,17,16,15" >}} | `pg_ttl_index_$v` | - |
+| [**DEB**](/ext/deb#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `3.0.0` | {{< pgvers "18,17,16,15" >}} | `postgresql-$v-ttl-index` | - |
 {.ext-table}
 
 {{< pgext_matrix >}}
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 2.0.0 1 | AVAIL PIGSTY 2.0.0 1 | AVAIL PIGSTY 2.0.0 1 | AVAIL PIGSTY 2.0.0 1 | AVAIL PIGSTY 2.0.0 1 |
-| el8.aarch64 | AVAIL PIGSTY 2.0.0 1 | AVAIL PIGSTY 2.0.0 1 | AVAIL PIGSTY 2.0.0 1 | AVAIL PIGSTY 2.0.0 1 | AVAIL PIGSTY 2.0.0 1 |
-| el9.x86_64 | AVAIL PIGSTY 2.0.0 1 | AVAIL PIGSTY 2.0.0 1 | AVAIL PIGSTY 2.0.0 1 | AVAIL PIGSTY 2.0.0 1 | AVAIL PIGSTY 2.0.0 1 |
-| el9.aarch64 | AVAIL PIGSTY 2.0.0 1 | AVAIL PIGSTY 2.0.0 1 | AVAIL PIGSTY 2.0.0 1 | AVAIL PIGSTY 2.0.0 1 | AVAIL PIGSTY 2.0.0 1 |
-| el10.x86_64 | AVAIL PIGSTY 2.0.0 1 | AVAIL PIGSTY 2.0.0 1 | AVAIL PIGSTY 2.0.0 1 | AVAIL PIGSTY 2.0.0 1 | MISS PIGSTY - 0 |
-| el10.aarch64 | AVAIL PIGSTY 2.0.0 1 | AVAIL PIGSTY 2.0.0 1 | AVAIL PIGSTY 2.0.0 1 | AVAIL PIGSTY 2.0.0 1 | MISS PIGSTY - 0 |
-| d12.x86_64 | AVAIL PIGSTY 2.0.0 1 | AVAIL PIGSTY 2.0.0 1 | AVAIL PIGSTY 2.0.0 1 | AVAIL PIGSTY 2.0.0 1 | MISS PIGSTY - 0 |
-| d12.aarch64 | AVAIL PIGSTY 2.0.0 1 | AVAIL PIGSTY 2.0.0 1 | AVAIL PIGSTY 2.0.0 1 | AVAIL PIGSTY 2.0.0 1 | MISS PIGSTY - 0 |
-| d13.x86_64 | AVAIL PIGSTY 2.0.0 1 | AVAIL PIGSTY 2.0.0 1 | AVAIL PIGSTY 2.0.0 1 | AVAIL PIGSTY 2.0.0 1 | MISS PIGSTY - 0 |
-| d13.aarch64 | AVAIL PIGSTY 2.0.0 1 | AVAIL PIGSTY 2.0.0 1 | AVAIL PIGSTY 2.0.0 1 | AVAIL PIGSTY 2.0.0 1 | MISS PIGSTY - 0 |
-| u22.x86_64 | AVAIL PIGSTY 2.0.0 1 | AVAIL PIGSTY 2.0.0 1 | AVAIL PIGSTY 2.0.0 1 | AVAIL PIGSTY 2.0.0 1 | MISS PIGSTY - 0 |
-| u22.aarch64 | AVAIL PIGSTY 2.0.0 1 | AVAIL PIGSTY 2.0.0 1 | AVAIL PIGSTY 2.0.0 1 | AVAIL PIGSTY 2.0.0 1 | MISS PIGSTY - 0 |
-| u24.x86_64 | AVAIL PIGSTY 2.0.0 1 | AVAIL PIGSTY 2.0.0 1 | AVAIL PIGSTY 2.0.0 1 | AVAIL PIGSTY 2.0.0 1 | MISS PIGSTY - 0 |
-| u24.aarch64 | AVAIL PIGSTY 2.0.0 1 | AVAIL PIGSTY 2.0.0 1 | AVAIL PIGSTY 2.0.0 1 | AVAIL PIGSTY 2.0.0 1 | MISS PIGSTY - 0 |
-@ el8.x86_64 18 pg_ttl_index_18 pg_ttl_index_18-2.0.0-1PIGSTY.el8.x86_64.rpm pigsty 2.0.0 21.6KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_ttl_index_18-2.0.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 18 pg_ttl_index_18 pg_ttl_index_18-2.0.0-1PIGSTY.el8.aarch64.rpm pigsty 2.0.0 21.8KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_ttl_index_18-2.0.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 18 pg_ttl_index_18 pg_ttl_index_18-2.0.0-1PIGSTY.el9.x86_64.rpm pigsty 2.0.0 21.1KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_ttl_index_18-2.0.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 18 pg_ttl_index_18 pg_ttl_index_18-2.0.0-1PIGSTY.el9.aarch64.rpm pigsty 2.0.0 21.2KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_ttl_index_18-2.0.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 18 pg_ttl_index_18 pg_ttl_index_18-2.0.0-1PIGSTY.el10.x86_64.rpm pigsty 2.0.0 21.2KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_ttl_index_18-2.0.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 18 pg_ttl_index_18 pg_ttl_index_18-2.0.0-1PIGSTY.el10.aarch64.rpm pigsty 2.0.0 21.4KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_ttl_index_18-2.0.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 18 postgresql-18-ttl-index postgresql-18-ttl-index_2.0.0-2PIGSTY~bookworm_amd64.deb pigsty 2.0.0 12.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/t/ttl-index/postgresql-18-ttl-index_2.0.0-2PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 18 postgresql-18-ttl-index postgresql-18-ttl-index_2.0.0-2PIGSTY~bookworm_arm64.deb pigsty 2.0.0 11.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/t/ttl-index/postgresql-18-ttl-index_2.0.0-2PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 18 postgresql-18-ttl-index postgresql-18-ttl-index_2.0.0-2PIGSTY~trixie_amd64.deb pigsty 2.0.0 12.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/t/ttl-index/postgresql-18-ttl-index_2.0.0-2PIGSTY~trixie_amd64.deb
-@ d13.aarch64 18 postgresql-18-ttl-index postgresql-18-ttl-index_2.0.0-2PIGSTY~trixie_arm64.deb pigsty 2.0.0 12.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/t/ttl-index/postgresql-18-ttl-index_2.0.0-2PIGSTY~trixie_arm64.deb
-@ u22.x86_64 18 postgresql-18-ttl-index postgresql-18-ttl-index_2.0.0-2PIGSTY~jammy_amd64.deb pigsty 2.0.0 12.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/t/ttl-index/postgresql-18-ttl-index_2.0.0-2PIGSTY~jammy_amd64.deb
-@ u22.aarch64 18 postgresql-18-ttl-index postgresql-18-ttl-index_2.0.0-2PIGSTY~jammy_arm64.deb pigsty 2.0.0 11.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/t/ttl-index/postgresql-18-ttl-index_2.0.0-2PIGSTY~jammy_arm64.deb
-@ u24.x86_64 18 postgresql-18-ttl-index postgresql-18-ttl-index_2.0.0-2PIGSTY~noble_amd64.deb pigsty 2.0.0 11.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/ttl-index/postgresql-18-ttl-index_2.0.0-2PIGSTY~noble_amd64.deb
-@ u24.aarch64 18 postgresql-18-ttl-index postgresql-18-ttl-index_2.0.0-2PIGSTY~noble_arm64.deb pigsty 2.0.0 11.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/ttl-index/postgresql-18-ttl-index_2.0.0-2PIGSTY~noble_arm64.deb
-@ el8.x86_64 17 pg_ttl_index_17 pg_ttl_index_17-2.0.0-1PIGSTY.el8.x86_64.rpm pigsty 2.0.0 21.6KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_ttl_index_17-2.0.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 17 pg_ttl_index_17 pg_ttl_index_17-2.0.0-1PIGSTY.el8.aarch64.rpm pigsty 2.0.0 21.8KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_ttl_index_17-2.0.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 17 pg_ttl_index_17 pg_ttl_index_17-2.0.0-1PIGSTY.el9.x86_64.rpm pigsty 2.0.0 21.1KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_ttl_index_17-2.0.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 17 pg_ttl_index_17 pg_ttl_index_17-2.0.0-1PIGSTY.el9.aarch64.rpm pigsty 2.0.0 21.2KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_ttl_index_17-2.0.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 17 pg_ttl_index_17 pg_ttl_index_17-2.0.0-1PIGSTY.el10.x86_64.rpm pigsty 2.0.0 21.2KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_ttl_index_17-2.0.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 17 pg_ttl_index_17 pg_ttl_index_17-2.0.0-1PIGSTY.el10.aarch64.rpm pigsty 2.0.0 21.4KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_ttl_index_17-2.0.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 17 postgresql-17-ttl-index postgresql-17-ttl-index_2.0.0-2PIGSTY~bookworm_amd64.deb pigsty 2.0.0 12.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/t/ttl-index/postgresql-17-ttl-index_2.0.0-2PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 17 postgresql-17-ttl-index postgresql-17-ttl-index_2.0.0-2PIGSTY~bookworm_arm64.deb pigsty 2.0.0 11.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/t/ttl-index/postgresql-17-ttl-index_2.0.0-2PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 17 postgresql-17-ttl-index postgresql-17-ttl-index_2.0.0-2PIGSTY~trixie_amd64.deb pigsty 2.0.0 12.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/t/ttl-index/postgresql-17-ttl-index_2.0.0-2PIGSTY~trixie_amd64.deb
-@ d13.aarch64 17 postgresql-17-ttl-index postgresql-17-ttl-index_2.0.0-2PIGSTY~trixie_arm64.deb pigsty 2.0.0 12.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/t/ttl-index/postgresql-17-ttl-index_2.0.0-2PIGSTY~trixie_arm64.deb
-@ u22.x86_64 17 postgresql-17-ttl-index postgresql-17-ttl-index_2.0.0-2PIGSTY~jammy_amd64.deb pigsty 2.0.0 11.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/t/ttl-index/postgresql-17-ttl-index_2.0.0-2PIGSTY~jammy_amd64.deb
-@ u22.aarch64 17 postgresql-17-ttl-index postgresql-17-ttl-index_2.0.0-2PIGSTY~jammy_arm64.deb pigsty 2.0.0 11.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/t/ttl-index/postgresql-17-ttl-index_2.0.0-2PIGSTY~jammy_arm64.deb
-@ u24.x86_64 17 postgresql-17-ttl-index postgresql-17-ttl-index_2.0.0-2PIGSTY~noble_amd64.deb pigsty 2.0.0 11.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/ttl-index/postgresql-17-ttl-index_2.0.0-2PIGSTY~noble_amd64.deb
-@ u24.aarch64 17 postgresql-17-ttl-index postgresql-17-ttl-index_2.0.0-2PIGSTY~noble_arm64.deb pigsty 2.0.0 11.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/ttl-index/postgresql-17-ttl-index_2.0.0-2PIGSTY~noble_arm64.deb
-@ el8.x86_64 16 pg_ttl_index_16 pg_ttl_index_16-2.0.0-1PIGSTY.el8.x86_64.rpm pigsty 2.0.0 21.6KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_ttl_index_16-2.0.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 16 pg_ttl_index_16 pg_ttl_index_16-2.0.0-1PIGSTY.el8.aarch64.rpm pigsty 2.0.0 21.8KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_ttl_index_16-2.0.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 16 pg_ttl_index_16 pg_ttl_index_16-2.0.0-1PIGSTY.el9.x86_64.rpm pigsty 2.0.0 21.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_ttl_index_16-2.0.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 16 pg_ttl_index_16 pg_ttl_index_16-2.0.0-1PIGSTY.el9.aarch64.rpm pigsty 2.0.0 21.2KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_ttl_index_16-2.0.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 16 pg_ttl_index_16 pg_ttl_index_16-2.0.0-1PIGSTY.el10.x86_64.rpm pigsty 2.0.0 21.2KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_ttl_index_16-2.0.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 16 pg_ttl_index_16 pg_ttl_index_16-2.0.0-1PIGSTY.el10.aarch64.rpm pigsty 2.0.0 21.4KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_ttl_index_16-2.0.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 16 postgresql-16-ttl-index postgresql-16-ttl-index_2.0.0-2PIGSTY~bookworm_amd64.deb pigsty 2.0.0 12.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/t/ttl-index/postgresql-16-ttl-index_2.0.0-2PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 16 postgresql-16-ttl-index postgresql-16-ttl-index_2.0.0-2PIGSTY~bookworm_arm64.deb pigsty 2.0.0 11.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/t/ttl-index/postgresql-16-ttl-index_2.0.0-2PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 16 postgresql-16-ttl-index postgresql-16-ttl-index_2.0.0-2PIGSTY~trixie_amd64.deb pigsty 2.0.0 12.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/t/ttl-index/postgresql-16-ttl-index_2.0.0-2PIGSTY~trixie_amd64.deb
-@ d13.aarch64 16 postgresql-16-ttl-index postgresql-16-ttl-index_2.0.0-2PIGSTY~trixie_arm64.deb pigsty 2.0.0 12.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/t/ttl-index/postgresql-16-ttl-index_2.0.0-2PIGSTY~trixie_arm64.deb
-@ u22.x86_64 16 postgresql-16-ttl-index postgresql-16-ttl-index_2.0.0-2PIGSTY~jammy_amd64.deb pigsty 2.0.0 11.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/t/ttl-index/postgresql-16-ttl-index_2.0.0-2PIGSTY~jammy_amd64.deb
-@ u22.aarch64 16 postgresql-16-ttl-index postgresql-16-ttl-index_2.0.0-2PIGSTY~jammy_arm64.deb pigsty 2.0.0 11.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/t/ttl-index/postgresql-16-ttl-index_2.0.0-2PIGSTY~jammy_arm64.deb
-@ u24.x86_64 16 postgresql-16-ttl-index postgresql-16-ttl-index_2.0.0-2PIGSTY~noble_amd64.deb pigsty 2.0.0 11.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/ttl-index/postgresql-16-ttl-index_2.0.0-2PIGSTY~noble_amd64.deb
-@ u24.aarch64 16 postgresql-16-ttl-index postgresql-16-ttl-index_2.0.0-2PIGSTY~noble_arm64.deb pigsty 2.0.0 11.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/ttl-index/postgresql-16-ttl-index_2.0.0-2PIGSTY~noble_arm64.deb
-@ el8.x86_64 15 pg_ttl_index_15 pg_ttl_index_15-2.0.0-1PIGSTY.el8.x86_64.rpm pigsty 2.0.0 21.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_ttl_index_15-2.0.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 15 pg_ttl_index_15 pg_ttl_index_15-2.0.0-1PIGSTY.el8.aarch64.rpm pigsty 2.0.0 22.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_ttl_index_15-2.0.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 15 pg_ttl_index_15 pg_ttl_index_15-2.0.0-1PIGSTY.el9.x86_64.rpm pigsty 2.0.0 21.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_ttl_index_15-2.0.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 15 pg_ttl_index_15 pg_ttl_index_15-2.0.0-1PIGSTY.el9.aarch64.rpm pigsty 2.0.0 21.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_ttl_index_15-2.0.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 15 pg_ttl_index_15 pg_ttl_index_15-2.0.0-1PIGSTY.el10.x86_64.rpm pigsty 2.0.0 21.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_ttl_index_15-2.0.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 15 pg_ttl_index_15 pg_ttl_index_15-2.0.0-1PIGSTY.el10.aarch64.rpm pigsty 2.0.0 21.7KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_ttl_index_15-2.0.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 15 postgresql-15-ttl-index postgresql-15-ttl-index_2.0.0-2PIGSTY~bookworm_amd64.deb pigsty 2.0.0 12.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/t/ttl-index/postgresql-15-ttl-index_2.0.0-2PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 15 postgresql-15-ttl-index postgresql-15-ttl-index_2.0.0-2PIGSTY~bookworm_arm64.deb pigsty 2.0.0 12.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/t/ttl-index/postgresql-15-ttl-index_2.0.0-2PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 15 postgresql-15-ttl-index postgresql-15-ttl-index_2.0.0-2PIGSTY~trixie_amd64.deb pigsty 2.0.0 12.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/t/ttl-index/postgresql-15-ttl-index_2.0.0-2PIGSTY~trixie_amd64.deb
-@ d13.aarch64 15 postgresql-15-ttl-index postgresql-15-ttl-index_2.0.0-2PIGSTY~trixie_arm64.deb pigsty 2.0.0 12.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/t/ttl-index/postgresql-15-ttl-index_2.0.0-2PIGSTY~trixie_arm64.deb
-@ u22.x86_64 15 postgresql-15-ttl-index postgresql-15-ttl-index_2.0.0-2PIGSTY~jammy_amd64.deb pigsty 2.0.0 12.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/t/ttl-index/postgresql-15-ttl-index_2.0.0-2PIGSTY~jammy_amd64.deb
-@ u22.aarch64 15 postgresql-15-ttl-index postgresql-15-ttl-index_2.0.0-2PIGSTY~jammy_arm64.deb pigsty 2.0.0 12.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/t/ttl-index/postgresql-15-ttl-index_2.0.0-2PIGSTY~jammy_arm64.deb
-@ u24.x86_64 15 postgresql-15-ttl-index postgresql-15-ttl-index_2.0.0-2PIGSTY~noble_amd64.deb pigsty 2.0.0 12.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/ttl-index/postgresql-15-ttl-index_2.0.0-2PIGSTY~noble_amd64.deb
-@ u24.aarch64 15 postgresql-15-ttl-index postgresql-15-ttl-index_2.0.0-2PIGSTY~noble_arm64.deb pigsty 2.0.0 12.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/ttl-index/postgresql-15-ttl-index_2.0.0-2PIGSTY~noble_arm64.deb
-@ el8.x86_64 14 pg_ttl_index_14 pg_ttl_index_14-2.0.0-1PIGSTY.el8.x86_64.rpm pigsty 2.0.0 21.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_ttl_index_14-2.0.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 14 pg_ttl_index_14 pg_ttl_index_14-2.0.0-1PIGSTY.el8.aarch64.rpm pigsty 2.0.0 22.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_ttl_index_14-2.0.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 14 pg_ttl_index_14 pg_ttl_index_14-2.0.0-1PIGSTY.el9.x86_64.rpm pigsty 2.0.0 21.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_ttl_index_14-2.0.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 14 pg_ttl_index_14 pg_ttl_index_14-2.0.0-1PIGSTY.el9.aarch64.rpm pigsty 2.0.0 21.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_ttl_index_14-2.0.0-1PIGSTY.el9.aarch64.rpm
+| el8.x86_64 | AVAIL PIGSTY 3.0.0 1 | AVAIL PIGSTY 3.0.0 1 | AVAIL PIGSTY 3.0.0 1 | AVAIL PIGSTY 3.0.0 1 | MISS PIGSTY - 0 |
+| el8.aarch64 | AVAIL PIGSTY 3.0.0 1 | AVAIL PIGSTY 3.0.0 1 | AVAIL PIGSTY 3.0.0 1 | AVAIL PIGSTY 3.0.0 1 | MISS PIGSTY - 0 |
+| el9.x86_64 | AVAIL PIGSTY 3.0.0 1 | AVAIL PIGSTY 3.0.0 1 | AVAIL PIGSTY 3.0.0 1 | AVAIL PIGSTY 3.0.0 1 | MISS PIGSTY - 0 |
+| el9.aarch64 | AVAIL PIGSTY 3.0.0 1 | AVAIL PIGSTY 3.0.0 1 | AVAIL PIGSTY 3.0.0 1 | AVAIL PIGSTY 3.0.0 1 | MISS PIGSTY - 0 |
+| el10.x86_64 | AVAIL PIGSTY 3.0.0 1 | AVAIL PIGSTY 3.0.0 1 | AVAIL PIGSTY 3.0.0 1 | AVAIL PIGSTY 3.0.0 1 | MISS PIGSTY - 0 |
+| el10.aarch64 | AVAIL PIGSTY 3.0.0 1 | AVAIL PIGSTY 3.0.0 1 | AVAIL PIGSTY 3.0.0 1 | AVAIL PIGSTY 3.0.0 1 | MISS PIGSTY - 0 |
+| d12.x86_64 | AVAIL PIGSTY 3.0.0 1 | AVAIL PIGSTY 3.0.0 1 | AVAIL PIGSTY 3.0.0 1 | AVAIL PIGSTY 3.0.0 1 | MISS PIGSTY - 0 |
+| d12.aarch64 | AVAIL PIGSTY 3.0.0 1 | AVAIL PIGSTY 3.0.0 1 | AVAIL PIGSTY 3.0.0 1 | AVAIL PIGSTY 3.0.0 1 | MISS PIGSTY - 0 |
+| d13.x86_64 | AVAIL PIGSTY 3.0.0 1 | AVAIL PIGSTY 3.0.0 1 | AVAIL PIGSTY 3.0.0 1 | AVAIL PIGSTY 3.0.0 1 | MISS PIGSTY - 0 |
+| d13.aarch64 | AVAIL PIGSTY 3.0.0 1 | AVAIL PIGSTY 3.0.0 1 | AVAIL PIGSTY 3.0.0 1 | AVAIL PIGSTY 3.0.0 1 | MISS PIGSTY - 0 |
+| u22.x86_64 | AVAIL PIGSTY 3.0.0 1 | AVAIL PIGSTY 3.0.0 1 | AVAIL PIGSTY 3.0.0 1 | AVAIL PIGSTY 3.0.0 1 | MISS PIGSTY - 0 |
+| u22.aarch64 | AVAIL PIGSTY 3.0.0 1 | AVAIL PIGSTY 3.0.0 1 | AVAIL PIGSTY 3.0.0 1 | AVAIL PIGSTY 3.0.0 1 | MISS PIGSTY - 0 |
+| u24.x86_64 | AVAIL PIGSTY 3.0.0 1 | AVAIL PIGSTY 3.0.0 1 | AVAIL PIGSTY 3.0.0 1 | AVAIL PIGSTY 3.0.0 1 | MISS PIGSTY - 0 |
+| u24.aarch64 | AVAIL PIGSTY 3.0.0 1 | AVAIL PIGSTY 3.0.0 1 | AVAIL PIGSTY 3.0.0 1 | AVAIL PIGSTY 3.0.0 1 | MISS PIGSTY - 0 |
+@ el8.x86_64 18 pg_ttl_index_18 pg_ttl_index_18-3.0.0-1PIGSTY.el8.x86_64.rpm pigsty 3.0.0 23.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_ttl_index_18-3.0.0-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 18 pg_ttl_index_18 pg_ttl_index_18-3.0.0-1PIGSTY.el8.aarch64.rpm pigsty 3.0.0 24.1KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_ttl_index_18-3.0.0-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 18 pg_ttl_index_18 pg_ttl_index_18-3.0.0-1PIGSTY.el9.x86_64.rpm pigsty 3.0.0 23.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_ttl_index_18-3.0.0-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 18 pg_ttl_index_18 pg_ttl_index_18-3.0.0-1PIGSTY.el9.aarch64.rpm pigsty 3.0.0 23.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_ttl_index_18-3.0.0-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 18 pg_ttl_index_18 pg_ttl_index_18-3.0.0-1PIGSTY.el10.x86_64.rpm pigsty 3.0.0 23.4KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_ttl_index_18-3.0.0-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 18 pg_ttl_index_18 pg_ttl_index_18-3.0.0-1PIGSTY.el10.aarch64.rpm pigsty 3.0.0 23.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_ttl_index_18-3.0.0-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-ttl-index postgresql-18-ttl-index_3.0.0-1PIGSTY~bookworm_amd64.deb pigsty 3.0.0 13.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/t/ttl-index/postgresql-18-ttl-index_3.0.0-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 18 postgresql-18-ttl-index postgresql-18-ttl-index_3.0.0-1PIGSTY~bookworm_arm64.deb pigsty 3.0.0 13.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/t/ttl-index/postgresql-18-ttl-index_3.0.0-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 18 postgresql-18-ttl-index postgresql-18-ttl-index_3.0.0-1PIGSTY~trixie_amd64.deb pigsty 3.0.0 13.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/t/ttl-index/postgresql-18-ttl-index_3.0.0-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 18 postgresql-18-ttl-index postgresql-18-ttl-index_3.0.0-1PIGSTY~trixie_arm64.deb pigsty 3.0.0 13.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/t/ttl-index/postgresql-18-ttl-index_3.0.0-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 18 postgresql-18-ttl-index postgresql-18-ttl-index_3.0.0-1PIGSTY~jammy_amd64.deb pigsty 3.0.0 13.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/t/ttl-index/postgresql-18-ttl-index_3.0.0-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 18 postgresql-18-ttl-index postgresql-18-ttl-index_3.0.0-1PIGSTY~jammy_arm64.deb pigsty 3.0.0 13.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/t/ttl-index/postgresql-18-ttl-index_3.0.0-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 18 postgresql-18-ttl-index postgresql-18-ttl-index_3.0.0-1PIGSTY~noble_amd64.deb pigsty 3.0.0 13.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/ttl-index/postgresql-18-ttl-index_3.0.0-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 18 postgresql-18-ttl-index postgresql-18-ttl-index_3.0.0-1PIGSTY~noble_arm64.deb pigsty 3.0.0 13.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/ttl-index/postgresql-18-ttl-index_3.0.0-1PIGSTY~noble_arm64.deb
+@ el8.x86_64 17 pg_ttl_index_17 pg_ttl_index_17-3.0.0-1PIGSTY.el8.x86_64.rpm pigsty 3.0.0 23.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_ttl_index_17-3.0.0-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 17 pg_ttl_index_17 pg_ttl_index_17-3.0.0-1PIGSTY.el8.aarch64.rpm pigsty 3.0.0 24.1KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_ttl_index_17-3.0.0-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 17 pg_ttl_index_17 pg_ttl_index_17-3.0.0-1PIGSTY.el9.x86_64.rpm pigsty 3.0.0 23.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_ttl_index_17-3.0.0-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 17 pg_ttl_index_17 pg_ttl_index_17-3.0.0-1PIGSTY.el9.aarch64.rpm pigsty 3.0.0 23.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_ttl_index_17-3.0.0-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 17 pg_ttl_index_17 pg_ttl_index_17-3.0.0-1PIGSTY.el10.x86_64.rpm pigsty 3.0.0 23.4KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_ttl_index_17-3.0.0-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 17 pg_ttl_index_17 pg_ttl_index_17-3.0.0-1PIGSTY.el10.aarch64.rpm pigsty 3.0.0 23.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_ttl_index_17-3.0.0-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-ttl-index postgresql-17-ttl-index_3.0.0-1PIGSTY~bookworm_amd64.deb pigsty 3.0.0 13.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/t/ttl-index/postgresql-17-ttl-index_3.0.0-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 17 postgresql-17-ttl-index postgresql-17-ttl-index_3.0.0-1PIGSTY~bookworm_arm64.deb pigsty 3.0.0 13.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/t/ttl-index/postgresql-17-ttl-index_3.0.0-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 17 postgresql-17-ttl-index postgresql-17-ttl-index_3.0.0-1PIGSTY~trixie_amd64.deb pigsty 3.0.0 13.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/t/ttl-index/postgresql-17-ttl-index_3.0.0-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 17 postgresql-17-ttl-index postgresql-17-ttl-index_3.0.0-1PIGSTY~trixie_arm64.deb pigsty 3.0.0 13.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/t/ttl-index/postgresql-17-ttl-index_3.0.0-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 17 postgresql-17-ttl-index postgresql-17-ttl-index_3.0.0-1PIGSTY~jammy_amd64.deb pigsty 3.0.0 13.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/t/ttl-index/postgresql-17-ttl-index_3.0.0-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 17 postgresql-17-ttl-index postgresql-17-ttl-index_3.0.0-1PIGSTY~jammy_arm64.deb pigsty 3.0.0 13.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/t/ttl-index/postgresql-17-ttl-index_3.0.0-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 17 postgresql-17-ttl-index postgresql-17-ttl-index_3.0.0-1PIGSTY~noble_amd64.deb pigsty 3.0.0 13.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/ttl-index/postgresql-17-ttl-index_3.0.0-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 17 postgresql-17-ttl-index postgresql-17-ttl-index_3.0.0-1PIGSTY~noble_arm64.deb pigsty 3.0.0 13.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/ttl-index/postgresql-17-ttl-index_3.0.0-1PIGSTY~noble_arm64.deb
+@ el8.x86_64 16 pg_ttl_index_16 pg_ttl_index_16-3.0.0-1PIGSTY.el8.x86_64.rpm pigsty 3.0.0 23.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_ttl_index_16-3.0.0-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 16 pg_ttl_index_16 pg_ttl_index_16-3.0.0-1PIGSTY.el8.aarch64.rpm pigsty 3.0.0 24.1KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_ttl_index_16-3.0.0-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 16 pg_ttl_index_16 pg_ttl_index_16-3.0.0-1PIGSTY.el9.x86_64.rpm pigsty 3.0.0 23.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_ttl_index_16-3.0.0-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 16 pg_ttl_index_16 pg_ttl_index_16-3.0.0-1PIGSTY.el9.aarch64.rpm pigsty 3.0.0 23.3KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_ttl_index_16-3.0.0-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 16 pg_ttl_index_16 pg_ttl_index_16-3.0.0-1PIGSTY.el10.x86_64.rpm pigsty 3.0.0 23.4KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_ttl_index_16-3.0.0-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 16 pg_ttl_index_16 pg_ttl_index_16-3.0.0-1PIGSTY.el10.aarch64.rpm pigsty 3.0.0 23.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_ttl_index_16-3.0.0-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 16 postgresql-16-ttl-index postgresql-16-ttl-index_3.0.0-1PIGSTY~bookworm_amd64.deb pigsty 3.0.0 13.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/t/ttl-index/postgresql-16-ttl-index_3.0.0-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 16 postgresql-16-ttl-index postgresql-16-ttl-index_3.0.0-1PIGSTY~bookworm_arm64.deb pigsty 3.0.0 13.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/t/ttl-index/postgresql-16-ttl-index_3.0.0-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 16 postgresql-16-ttl-index postgresql-16-ttl-index_3.0.0-1PIGSTY~trixie_amd64.deb pigsty 3.0.0 13.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/t/ttl-index/postgresql-16-ttl-index_3.0.0-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 16 postgresql-16-ttl-index postgresql-16-ttl-index_3.0.0-1PIGSTY~trixie_arm64.deb pigsty 3.0.0 13.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/t/ttl-index/postgresql-16-ttl-index_3.0.0-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 16 postgresql-16-ttl-index postgresql-16-ttl-index_3.0.0-1PIGSTY~jammy_amd64.deb pigsty 3.0.0 13.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/t/ttl-index/postgresql-16-ttl-index_3.0.0-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 16 postgresql-16-ttl-index postgresql-16-ttl-index_3.0.0-1PIGSTY~jammy_arm64.deb pigsty 3.0.0 13.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/t/ttl-index/postgresql-16-ttl-index_3.0.0-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 16 postgresql-16-ttl-index postgresql-16-ttl-index_3.0.0-1PIGSTY~noble_amd64.deb pigsty 3.0.0 13.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/ttl-index/postgresql-16-ttl-index_3.0.0-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 16 postgresql-16-ttl-index postgresql-16-ttl-index_3.0.0-1PIGSTY~noble_arm64.deb pigsty 3.0.0 13.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/ttl-index/postgresql-16-ttl-index_3.0.0-1PIGSTY~noble_arm64.deb
+@ el8.x86_64 15 pg_ttl_index_15 pg_ttl_index_15-3.0.0-1PIGSTY.el8.x86_64.rpm pigsty 3.0.0 23.9KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_ttl_index_15-3.0.0-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 15 pg_ttl_index_15 pg_ttl_index_15-3.0.0-1PIGSTY.el8.aarch64.rpm pigsty 3.0.0 24.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_ttl_index_15-3.0.0-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 15 pg_ttl_index_15 pg_ttl_index_15-3.0.0-1PIGSTY.el9.x86_64.rpm pigsty 3.0.0 23.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_ttl_index_15-3.0.0-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 15 pg_ttl_index_15 pg_ttl_index_15-3.0.0-1PIGSTY.el9.aarch64.rpm pigsty 3.0.0 23.7KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_ttl_index_15-3.0.0-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 15 pg_ttl_index_15 pg_ttl_index_15-3.0.0-1PIGSTY.el10.x86_64.rpm pigsty 3.0.0 23.8KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_ttl_index_15-3.0.0-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 15 pg_ttl_index_15 pg_ttl_index_15-3.0.0-1PIGSTY.el10.aarch64.rpm pigsty 3.0.0 23.9KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_ttl_index_15-3.0.0-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 15 postgresql-15-ttl-index postgresql-15-ttl-index_3.0.0-1PIGSTY~bookworm_amd64.deb pigsty 3.0.0 14.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/t/ttl-index/postgresql-15-ttl-index_3.0.0-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 15 postgresql-15-ttl-index postgresql-15-ttl-index_3.0.0-1PIGSTY~bookworm_arm64.deb pigsty 3.0.0 14.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/t/ttl-index/postgresql-15-ttl-index_3.0.0-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 15 postgresql-15-ttl-index postgresql-15-ttl-index_3.0.0-1PIGSTY~trixie_amd64.deb pigsty 3.0.0 14.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/t/ttl-index/postgresql-15-ttl-index_3.0.0-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 15 postgresql-15-ttl-index postgresql-15-ttl-index_3.0.0-1PIGSTY~trixie_arm64.deb pigsty 3.0.0 14.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/t/ttl-index/postgresql-15-ttl-index_3.0.0-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 15 postgresql-15-ttl-index postgresql-15-ttl-index_3.0.0-1PIGSTY~jammy_amd64.deb pigsty 3.0.0 14.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/t/ttl-index/postgresql-15-ttl-index_3.0.0-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 15 postgresql-15-ttl-index postgresql-15-ttl-index_3.0.0-1PIGSTY~jammy_arm64.deb pigsty 3.0.0 13.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/t/ttl-index/postgresql-15-ttl-index_3.0.0-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 15 postgresql-15-ttl-index postgresql-15-ttl-index_3.0.0-1PIGSTY~noble_amd64.deb pigsty 3.0.0 14.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/ttl-index/postgresql-15-ttl-index_3.0.0-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 15 postgresql-15-ttl-index postgresql-15-ttl-index_3.0.0-1PIGSTY~noble_arm64.deb pigsty 3.0.0 13.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/ttl-index/postgresql-15-ttl-index_3.0.0-1PIGSTY~noble_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建

@@ -7,10 +7,11 @@ module: [PIG]
 categories: [参考]
 ---
 
-最新稳定版本是 [v1.3.1](https://github.com/pgsty/pig/releases/tag/v1.3.1)。
+最新稳定版本是 [v1.3.2](https://github.com/pgsty/pig/releases/tag/v1.3.2)。
 
 |       版本        |     日期     | 摘要                                |                                                     GitHub |
 |:---------------:|:----------:|-----------------------------------|-----------------------------------------------------------:|
+| [v1.3.2](#v132) | 2026-03-23 | 例行元数据更新，新增 `pg tune` 与构建别名        | [v1.3.2](https://github.com/pgsty/pig/releases/tag/v1.3.2) |
 | [v1.3.1](#v131) | 2026-03-05 | PG13 退役，支持窗口统一为 PG14-18，扩展增至 464  | [v1.3.1](https://github.com/pgsty/pig/releases/tag/v1.3.1) |
 | [v1.3.0](#v130) | 2026-02-27 | 构建链路强化，扩展增至 461，新内核支持             | [v1.3.0](https://github.com/pgsty/pig/releases/tag/v1.3.0) |
 | [v1.2.0](#v120) | 2026-02-23 | 统一别名，例行更新，计划模式，仓库修复               | [v1.2.0](https://github.com/pgsty/pig/releases/tag/v1.2.0) |
@@ -45,6 +46,33 @@ categories: [参考]
 | [v0.0.1](#v001) | 2024-12-23 | 创世发布                              | [v0.0.1](https://github.com/pgsty/pig/releases/tag/v0.0.1) |
 {.full-width}
 
+
+
+--------
+
+# v1.3.2
+
+例行维护版本。
+
+- 例行刷新部分扩展版本元数据与扩展目录条目，扩展版本更新。
+- 新增 `pig pg tune` 子命令，可根据硬件资源与工作负载画像生成 PostgreSQL 调优参数建议。
+- 为 `pig build get` 新增 `pdu` 与 `pgdog` 两个源码包 alias。
+- 调整 pgext.cloud 的 URL 至新版本的扩展目录 pigsty.io/ext
+
+**校验和**
+
+```bash
+d760f47652ff3e2e4a61eb7b9a68ca68665b2b36c187c52f5eaf50d2f007d8f3  pig-1.3.2-1.aarch64.rpm
+c2e02e62497f4c2055a9b448ddb3a24c618fcd488580c28b2b9a0e7cedacef55  pig-1.3.2-1.x86_64.rpm
+b8d066ddefa4530946c74c30e7e4acdab6abf8da70a47dcfe2a77719b79e397f  pig-v1.3.2.darwin-amd64.tar.gz
+a90e78d879fd720fd2865870c696aed7952558d5ae75591deced3121f2aab1f9  pig-v1.3.2.darwin-arm64.tar.gz
+2fe3a9ffbb6383154dfd25ed79420b210828eabf6a96a8af6e8feb9d744b9559  pig-v1.3.2.linux-amd64.tar.gz
+522290aaf14f98f0bae83ce75cc76749f2a4e72742eb5c3cba36a1d2fa4d12c2  pig-v1.3.2.linux-arm64.tar.gz
+d6c1cf2c52962045f6bbfb2a669058e7f903088526591d6c939e7723f3928d30  pig_1.3.2-1_amd64.deb
+4352385c629b26a1837054445a546da89591499848b557699c2fb70fde9377aa  pig_1.3.2-1_arm64.deb
+```
+
+发布：https://github.com/pgsty/pig/releases/tag/v1.3.2
 
 
 --------

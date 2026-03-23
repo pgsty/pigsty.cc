@@ -89,12 +89,14 @@ collector_branch_name:           # 此采集器的唯一标识符
         scale: 1000              # 值的缩放因子
 ```
 
-配置校验约束（`v1.2.0`）：
+配置校验约束（`v1.2.1`）：
 
 - 每个 `metrics` 列表项必须且只能定义一个列映射
 - 每个采集器至少要有一个 `GAUGE` 或 `COUNTER` 列
 - `usage` 仅支持 `GAUGE` / `COUNTER` / `LABEL` / `DISCARD`
 - 指标名、标签名会在加载阶段进行 Prometheus 规则校验，非法配置会直接报错
+- 常量标签会在加载阶段检查冲突；它们不能与查询标签重名，也不能与内置动态标签 `datname` / `query` 冲突
+- 如果使用单行内联 `metrics` 写法，`description` 建议始终使用双引号包裹，避免 YAML 歧义
 
 
 --------

@@ -34,7 +34,7 @@ description: 高级 PostgreSQL 与 PgBouncer 监控指标导出器
 
 ## 版本信息
 
-- 当前稳定版本：[`v1.2.0`](https://github.com/pgsty/pg_exporter/releases/tag/v1.2.0)
+- 当前稳定版本：[`v1.2.1`](https://github.com/pgsty/pg_exporter/releases/tag/v1.2.1)
 - 默认配置支持：PostgreSQL **10-18+**
 - Legacy 配置支持：PostgreSQL **9.1-9.6**（使用 `legacy/` 配置包）
 - PgBouncer 支持：**1.8-1.25+**
@@ -54,6 +54,7 @@ description: 高级 PostgreSQL 与 PgBouncer 监控指标导出器
 - 可持续运行：默认非阻塞启动，目标不可达时也可先启动 HTTP 端点，待数据库恢复后自动恢复采集
 - 热重载能力：支持 `POST/GET /reload` 与 `SIGHUP` 信号重载（非 Windows 额外支持 `SIGUSR1`）
 - 健康探针分离：健康端点基于后台探测缓存，避免每次探针请求都阻塞数据库
+- 管理面可收敛：`/reload`、`/explain`、`/stat` 会暴露配置与运行态信息，生产环境建议结合 `--web.config.file` 启用认证/TLS，或仅在内网暴露
 
 
 --------
@@ -94,10 +95,10 @@ sudo apt install -y pg-exporter
 {{< /tab >}}
 
 {{< tab header="二进制" lang="bash" >}}
-wget https://github.com/pgsty/pg_exporter/releases/download/v1.2.0/pg_exporter-1.2.0.linux-amd64.tar.gz
-tar -xf pg_exporter-1.2.0.linux-amd64.tar.gz
-sudo install pg_exporter-1.2.0.linux-amd64/pg_exporter /usr/bin/
-sudo install pg_exporter-1.2.0.linux-amd64/pg_exporter.yml /etc/pg_exporter.yml
+wget https://github.com/pgsty/pg_exporter/releases/download/v1.2.1/pg_exporter-1.2.1.linux-amd64.tar.gz
+tar -xf pg_exporter-1.2.1.linux-amd64.tar.gz
+sudo install pg_exporter-1.2.1.linux-amd64/pg_exporter /usr/bin/
+sudo install pg_exporter-1.2.1.linux-amd64/pg_exporter.yml /etc/pg_exporter.yml
 {{< /tab >}}
 
 {{< tab header="源码" lang="bash" >}}

@@ -81,7 +81,7 @@ icon: fa-brands fa-redhat
 
 | **扩展包** | **版本** | **仓库** | **包名** | **PG大版本** | **依赖** |
 |:----------|:--------:|:--------:|:---------|:-----------:|:---------|
-| [`pg_search`](/ext/e/pg_search) | `0.21.12` | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `pg_search_$v` | {{< pgvers "18,17,16,15" >}} | - |
+| [`pg_search`](/ext/e/pg_search) | `0.22.2` | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `pg_search_$v` | {{< pgvers "18,17,16,15" >}} | - |
 | [`pgroonga`](/ext/e/pgroonga) | `4.0.4` | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `pgroonga_$v` | {{< pgvers "18,17,16,15,14" >}} | `groonga-libs` |
 | [`pg_bigm`](/ext/e/pg_bigm) | `1.2` | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `pg_bigm_$v` | {{< pgvers "18,17,16,15,14" >}} | - |
 | [`zhparser`](/ext/e/zhparser) | `2.3` | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `zhparser_$v` | {{< pgvers "18,17,16,15,14" >}} | - |
@@ -115,7 +115,7 @@ icon: fa-brands fa-redhat
 | [`pg_analytics`](/ext/e/pg_analytics) | `0.3.7` | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `pg_analytics_$v` | {{< pgvers "17,16,15,14" >}} | - |
 | [`pg_duckdb`](/ext/e/pg_duckdb) | `1.1.1` | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `pg_duckdb_$v` | {{< pgvers "18,17,16,15,14" >}} | - |
 | [`pg_mooncake`](/ext/e/pg_mooncake) | `0.2.0` | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `pg_mooncake_$v` | {{< pgvers "18,17,16,15,14" >}} | - |
-| [`pg_clickhouse`](/ext/e/pg_clickhouse) | `0.1.4` | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `pg_clickhouse_$v` | {{< pgvers "18,17,16,15,14" >}} | - |
+| [`pg_clickhouse`](/ext/e/pg_clickhouse) | `0.1.5` | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `pg_clickhouse_$v` | {{< pgvers "18,17,16,15,14" >}} | - |
 | [`duckdb_fdw`](/ext/e/duckdb_fdw) | `1.1.2` | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `duckdb_fdw_$v` | {{< pgvers "17,16,15,14" >}} | `libduckdb` |
 | [`pg_parquet`](/ext/e/pg_parquet) | `0.5.1` | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `pg_parquet_$v` | {{< pgvers "18,17,16,15,14" >}} | - |
 | [`pg_fkpart`](/ext/e/pg_fkpart) | `1.7.0` | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `pg_fkpart_$v` | {{< pgvers "18,17,16,15,14" >}} | - |
@@ -135,7 +135,7 @@ icon: fa-brands fa-redhat
 | [`hll`](/ext/e/hll) | `2.19` | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `hll_$v` | {{< pgvers "18,17,16,15,14" >}} | - |
 | [`rum`](/ext/e/rum) | `1.3.15` | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `rum_$v` | {{< pgvers "18,17,16,15,14" >}} | - |
 | [`pg_ai_query`](/ext/e/pg_ai_query) | `0.1.1` | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `pg_ai_query_$v` | {{< pgvers "18,17,16,15,14" >}} | - |
-| [`pg_ttl_index`](/ext/e/pg_ttl_index) | `2.0.0` | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `pg_ttl_index_$v` | {{< pgvers "18,17,16,15" >}} | - |
+| [`pg_ttl_index`](/ext/e/pg_ttl_index) | `3.0.0` | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `pg_ttl_index_$v` | {{< pgvers "18,17,16,15" >}} | - |
 | [`pg_graphql`](/ext/e/pg_graphql) | `1.5.12` | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `pg_graphql_$v` | {{< pgvers "18,17,16,15,14" >}} | - |
 | [`pg_jsonschema`](/ext/e/pg_jsonschema) | `0.3.4` | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `pg_jsonschema_$v` | {{< pgvers "18,17,16,15,14" >}} | - |
 | [`jsquery`](/ext/e/jsquery) | `1.2` | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `jsquery_$v` | {{< pgvers "18,17,16,15,14" >}} | - |
@@ -198,7 +198,7 @@ icon: fa-brands fa-redhat
 | [`pg_country`](/ext/e/country) | `0.0.3` | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `pg_country_$v` | {{< pgvers "18,17,16,15,14" >}} | - |
 | [`pg_xenophile`](/ext/e/pg_xenophile) | `0.8.3` | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `pg_xenophile_$v` | {{< pgvers "18,17,16,15,14" >}} | - |
 | [`pg_currency`](/ext/e/currency) | `0.0.3` | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `pg_currency_$v` | {{< pgvers "18,17,16,15,14" >}} | - |
-| [`pgcollection`](/ext/e/collection) | `1.1.1` | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `pgcollection_$v` | {{< pgvers "18,17,16,15,14" >}} | - |
+| [`pgcollection`](/ext/e/collection) | `2.0.0` | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `pgcollection_$v` | {{< pgvers "18,17,16,15,14" >}} | - |
 | [`pgmp`](/ext/e/pgmp) | `1.0.5` | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `pgmp_$v` | {{< pgvers "18,17,16,15,14" >}} | - |
 | [`numeral`](/ext/e/numeral) | `1.3` | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `numeral_$v` | {{< pgvers "18,17,16,15,14" >}} | - |
 | [`pg_rational`](/ext/e/pg_rational) | `0.0.2` | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `pg_rational_$v` | {{< pgvers "18,17,16,15,14" >}} | - |
@@ -350,9 +350,9 @@ icon: fa-brands fa-redhat
 | [`pg_qualstats`](/ext/e/pg_qualstats) | `2.1.2` | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `pg_qualstats_$v` | {{< pgvers "18,17,16,15,14" >}} | - |
 | [`pg_store_plans`](/ext/e/pg_store_plans) | `1.9` | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `pg_store_plans_$v` | {{< pgvers "18,17,16,15,14" >}} | - |
 | [`pg_track_settings`](/ext/e/pg_track_settings) | `2.1.2` | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `pg_track_settings_$v` | {{< pgvers "18,17,16,15,14" >}} | - |
-| [`pg_track_optimizer`](/ext/e/pg_track_optimizer) | `0.9.1` | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `pg_track_optimizer_$v` | {{< pgvers "18,17" >}} | - |
+| [`pg_track_optimizer`](/ext/e/pg_track_optimizer) | `0.9.2` | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `pg_track_optimizer_$v` | {{< pgvers "18,17" >}} | - |
 | [`pg_wait_sampling`](/ext/e/pg_wait_sampling) | `1.1.9` | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `pg_wait_sampling_$v` | {{< pgvers "18,17,16,15,14" >}} | - |
-| [`pgsentinel`](/ext/e/pgsentinel) | `1.4.0` | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `pgsentinel_$v` | {{< pgvers "18,17,16,15,14" >}} | - |
+| [`pgsentinel`](/ext/e/pgsentinel) | `1.4.1` | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `pgsentinel_$v` | {{< pgvers "18,17,16,15,14" >}} | - |
 | [`system_stats`](/ext/e/system_stats) | `3.2` | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `system_stats_$v` | {{< pgvers "18,17,16,15,14" >}} | - |
 | [`pg_meta`](/ext/e/meta) | `0.4.0` | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `pg_meta_$v` | {{< pgvers "18,17,16,15,14" >}} | - |
 | [`pgnodemx`](/ext/e/pgnodemx) | `1.7` | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `pgnodemx_$v` | {{< pgvers "18,17,16,15,14" >}} | - |
@@ -438,7 +438,7 @@ icon: fa-brands fa-redhat
 | **扩展包** | **版本** | **仓库** | **包名** | **PG大版本** | **依赖** |
 |:----------|:--------:|:--------:|:---------|:-----------:|:---------|
 | [`documentdb`](/ext/e/documentdb) | `0.109` | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `documentdb_$v` | {{< pgvers "18,17,16,15" >}} | `postgresql$v-contrib`, `pg_cron_$v`, `pgvector_$v`, `rum_$v` |
-| [`orafce`](/ext/e/orafce) | `4.16.2` | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `orafce_$v` | {{< pgvers "18,17,16,15,14" >}} | - |
+| [`orafce`](/ext/e/orafce) | `4.16.5` | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `orafce_$v` | {{< pgvers "18,17,16,15,14" >}} | - |
 | [`pgtt`](/ext/e/pgtt) | `4.4` | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `pgtt_$v` | {{< pgvers "18,17,16,15,14" >}} | - |
 | [`session_variable`](/ext/e/session_variable) | `3.4` | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `session_variable_$v` | {{< pgvers "18,17,16,15,14" >}} | - |
 | [`pg_statement_rollback`](/ext/e/pg_statement_rollback) | `1.5` | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `pg_statement_rollback_$v` | {{< pgvers "18,17,16,15,14" >}} | - |

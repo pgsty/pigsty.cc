@@ -6,7 +6,7 @@ description: PG Exporter 的 HTTP API 端点参考
 categories: [参考]
 ---
 
-PG Exporter 提供全面的 REST API，用于指标采集、健康检查、流量路由和运维控制。所有端点都通过配置的端口（默认：9630）以 HTTP 方式暴露。
+PG Exporter 提供全面的 REST API，用于指标采集、健康检查、流量路由和运维控制。所有端点都通过配置的端口（默认：9630）以 HTTP/HTTPS 方式暴露。
 
 
 --------
@@ -44,21 +44,21 @@ curl http://localhost:9630/metrics
 #### 响应
 
 ```prometheus
-# HELP pg_up PostgreSQL server is up and accepting connections
+# HELP pg_up last scrape was able to connect to the server: 1 for yes, 0 for no
 # TYPE pg_up gauge
 pg_up 1
 
-# HELP pg_version PostgreSQL server version number
+# HELP pg_version server version number
 # TYPE pg_version gauge
 pg_version 140000
 
-# HELP pg_in_recovery PostgreSQL server is in recovery mode
+# HELP pg_in_recovery server is in recovery mode? 1 for yes 0 for no
 # TYPE pg_in_recovery gauge
 pg_in_recovery 0
 
-# HELP pg_exporter_build_info PG Exporter build information
+# HELP pg_exporter_build_info A metric with a constant '1' value labeled with version, revision, branch, goversion, builddate, goos, and goarch from which pg_exporter was built.
 # TYPE pg_exporter_build_info gauge
-pg_exporter_build_info{version="1.2.0",branch="main",revision="<git-sha>"} 1
+pg_exporter_build_info{version="1.2.1",branch="main",revision="<git-sha>",builddate="<build-date>",goversion="go1.26.1",goos="linux",goarch="amd64"} 1
 
 # ... 更多指标
 ```
@@ -151,10 +151,10 @@ readinessProbe:
 
 #### 响应码
 
-| 状态码 | 状态 | 描述 |
-|--------|------|------|
-| 200 | OK | 服务器是主库且接受写入 |
-| 404 | Not Found | 服务器不是主库（是从库） |
+| 状态码 | 状态                  | 描述                            |
+|-----|---------------------|-------------------------------|
+| 200 | OK                  | 服务器是主库且接受写入                   |
+| 404 | Not Found           | 服务器不是主库（是从库）                  |
 | 503 | Service Unavailable | 服务器不可用（down/starting/unknown） |
 {.full-width}
 
@@ -184,10 +184,10 @@ backend pg_primary
 
 #### 响应码
 
-| 状态码 | 状态 | 描述 |
-|--------|------|------|
-| 200 | OK | 服务器是从库且处于恢复状态 |
-| 404 | Not Found | 服务器不是从库（是主库） |
+| 状态码 | 状态                  | 描述                            |
+|-----|---------------------|-------------------------------|
+| 200 | OK                  | 服务器是从库且处于恢复状态                 |
+| 404 | Not Found           | 服务器不是从库（是主库）                  |
 | 503 | Service Unavailable | 服务器不可用（down/starting/unknown） |
 {.full-width}
 
@@ -283,6 +283,10 @@ server reloaded
 重载会刷新采集器配置和查询计划；如需修改进程级参数（例如监听地址、CLI 参数），仍需重启导出器。
 {{% /alert %}}
 
+{{% alert title="安全建议" color="warning" %}}
+`/reload`、`/explain`、`/stat` 都属于管理端点。若 exporter 不仅在本机或可信内网使用，建议通过 `--web.config.file` 启用认证/TLS，或在反向代理 / 防火墙层限制访问。
+{{% /alert %}}
+
 ### GET /explain
 
 显示所有已配置采集器的查询执行规划信息。
@@ -296,21 +300,21 @@ curl http://localhost:9630/explain
 #### 响应
 
 ```text
-Collector: pg_stat_database
-  Query: SELECT datname, numbackends FROM pg_stat_database
-  Tags: [cluster]
-  TTL: 10s
-  Timeout: 100ms
-  Version: 100000-999999
-  Status: Active
-
-Collector: pg_stat_replication
-  Query: SELECT client_addr, state FROM pg_stat_replication
-  Tags: [primary]
-  TTL: 5s
-  Timeout: 100ms
-  Version: 100000-999999
-  Status: Active (primary only)
+##
+# SYNOPSIS
+#       pg.pg_primary_only_*
+#
+# DESCRIPTION
+#       PostgreSQL basic information (on primary)
+#
+# OPTIONS
+#       Tags       [cluster, primary]
+#       TTL        1
+#       Priority   110
+#       Timeout    100ms
+#       Fatal      true
+#       Version    100000 ~ higher
+#       Source     pg_exporter.yml
 
 ...
 ```
@@ -328,20 +332,10 @@ curl http://localhost:9630/stat
 #### 响应
 
 ```text
-Collector Statistics:
-  pg_stat_database:
-    Executions: 1234
-    Successes: 1230
-    Failures: 4
-    Avg Duration: 2.5ms
-    Last Execution: 2024-01-15T10:29:55Z
-
-  pg_stat_activity:
-    Executions: 1234
-    Successes: 1234
-    Failures: 0
-    Avg Duration: 1.2ms
-    Last Execution: 2024-01-15T10:29:55Z
+name                     total      hit        error      skip       metric     ttl/s  duration/ms
+pg                       12         0          0          0          15         1      4.231000
+pg_db                    12         11         0          0          28         10     0.153000
+pg_activity              12         0          1          0          8          0      7.842000
 ...
 ```
 

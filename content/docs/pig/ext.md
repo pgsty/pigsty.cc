@@ -115,9 +115,9 @@ pig ext ls rag                   # 列出 RAG 类别扩展
 - `available`：扩展可用但未安装（黄色）
 - `not avail`：扩展在当前系统不可用（红色）
 
-默认扩展目录定义在 [**`cli/ext/assets/extension.csv`**](https://github.com/pgsty/pig/blob/main/cli/ext/assets/extension.csv)
+默认扩展目录定义在 [**`cli/ext/assets/extension.csv`**](https://github.com/pgsty/pig/blob/main/cli/ext/assets/extension.csv)。
 
-可用 `pig ext reload` 命令更新到最新扩展目录，数据将下载到 `~/.pig/extension.csv`。
+可用 `pig ext reload` 命令更新到最新扩展目录，数据将下载到 `~/.pig/extension.csv`；在线最新版目录同步发布于 [**pigsty.io/ext/data/extension.csv**](https://pigsty.io/ext/data/extension.csv)。
 
 
 ## ext info
@@ -143,7 +143,7 @@ pig ext av pgvector               # 显示 pgvector 的可用性
 pig ext matrix citus              # avail 命令的别名
 ```
 
-可用性矩阵会显示扩展在各个操作系统（EL8/9/10, Debian 12/13, Ubuntu 22/24）、架构（x86_64/aarch64）和 PostgreSQL 版本（13-18）上的可用情况。
+可用性矩阵会显示扩展在各个操作系统（EL8/9/10, Debian 12/13, Ubuntu 22/24）、架构（x86_64/aarch64）和 PostgreSQL 版本（14-18）上的可用情况。
 
 
 ## ext status

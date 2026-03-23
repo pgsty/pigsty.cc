@@ -32,6 +32,7 @@ pg_exporter 本身可以通过以下方式配置：
 - 可控失败策略：设置 `--fail-fast` 后，启动阶段目标不可达会直接失败退出
 - 在线变更：支持 `POST/GET /reload` 与 `SIGHUP` 触发热重载（非 Windows 额外支持 `SIGUSR1`）
 - 健康探针解耦：`/up` 等端点基于后台探测缓存，避免探针风暴影响数据库
+- 管理面默认同口暴露：`/reload`、`/explain`、`/stat` 建议通过 `--web.config.file` 保护，或仅在可信网络中开放
 
 
 --------
@@ -57,15 +58,14 @@ Flags:
   -h, --[no-]help                显示上下文相关帮助（也可尝试 --help-long 和 --help-man）。
   -u, --url=URL                  postgres 目标 URL
   -c, --config=CONFIG            配置目录或文件路径
-      --[no-]web.systemd-socket  使用 systemd socket 激活监听器代替端口监听器（仅限 Linux）。
       --web.listen-address=:9630 ...
                                  暴露指标和 Web 界面的地址。可重复指定多个地址。示例：`:9100` 或 `[::1]:9100` 用于 http，`vsock://:9100` 用于 vsock
       --web.config.file=""       可启用 TLS 或认证的配置文件路径。参见：https://github.com/prometheus/exporter-toolkit/blob/master/docs/web-configuration.md
-  -l, --label=""                 常量标签：逗号分隔的 label=value 对列表 ($PG_EXPORTER_LABEL)
-  -t, --tag=""                   标签，逗号分隔的服务器标签列表 ($PG_EXPORTER_TAG)
+  -l, --label=""                 常量标签：逗号分隔的 label=value 项 ($PG_EXPORTER_LABEL)
+  -t, --tag=""                   标签，逗号分隔的服务器标签 ($PG_EXPORTER_TAG)
   -C, --[no-]disable-cache       强制不使用缓存 ($PG_EXPORTER_DISABLE_CACHE)
-  -m, --[no-]disable-intro       禁用导出器内置/自监控指标，仅保留查询指标 ($PG_EXPORTER_DISABLE_INTRO)
-  -a, --[no-]auto-discovery      自动抓取给定服务器的所有数据库 ($PG_EXPORTER_AUTO_DISCOVERY)
+  -m, --[no-]disable-intro       禁用内部/导出器自监控指标（仅暴露查询指标）($PG_EXPORTER_DISABLE_INTRO)
+  -a, --[no-]auto-discovery      自动抓取目标服务器上的所有数据库 ($PG_EXPORTER_AUTO_DISCOVERY)
   -x, --exclude-database="template0,template1,postgres"
                                  启用自动发现时排除的数据库 ($PG_EXPORTER_EXCLUDE_DATABASE)
   -i, --include-database=""      启用自动发现时包含的数据库 ($PG_EXPORTER_INCLUDE_DATABASE)
@@ -76,7 +76,7 @@ Flags:
                                  暴露指标的 URL 路径 ($PG_EXPORTER_TELEMETRY_PATH)
   -D, --[no-]dry-run             干运行并打印原始配置
   -E, --[no-]explain             解释服务器计划的查询
-      --log.level="info"         日志级别：debug|info|warn|error]
+      --log.level="info"         日志级别：debug|info|warn|error
       --log.format="logfmt"      日志格式：logfmt|json
       --[no-]version             显示应用程序版本
 ```
@@ -110,6 +110,10 @@ pg_exporter
 
 - `PGURL`：作为连接 URL 的兼容环境变量
 - `PG_EXPORTER_URL_FILE`：从文件中读取连接 URL（适合容器 Secret）
+
+{{% alert title="建议" color="info" %}}
+如果 exporter 需要暴露到共享网络，而不仅是本机或内网，请优先配置 `--web.config.file` 为 `/metrics` 和管理端点启用认证/TLS；否则任何能访问该端口的用户都可以读取 `/explain`、`/stat`，并触发 `/reload`。
+{{% /alert %}}
 
 
 --------
@@ -197,7 +201,7 @@ PG_EXPORTER_URL='postgres://monitor@db.example.com:5432/postgres'
 ```ini
 [Unit]
 Description=Prometheus exporter for PostgreSQL/Pgbouncer server metrics
-Documentation=https://github.com/pgsty/pg_exporter
+Documentation=https://pigsty.io/docs/pg_exporter
 After=network.target
 
 [Service]
@@ -213,7 +217,7 @@ WantedBy=multi-user.target
 环境文件 `/etc/default/pg_exporter`：
 
 ```bash
-PG_EXPORTER_URL='postgresql:///?sslmode=disable'
+PG_EXPORTER_URL='postgres://:5432/?sslmode=disable'
 PG_EXPORTER_CONFIG=/etc/pg_exporter.yml
 PG_EXPORTER_LABEL=""
 PG_EXPORTER_TAG=""
@@ -227,6 +231,8 @@ PG_EXPORTER_CONNECT_TIMEOUT=100
 PG_EXPORTER_TELEMETRY_PATH="/metrics"
 PG_EXPORTER_OPTS='--log.level=info'
 ```
+
+这里的 `/etc/default/pg_exporter` 是包安装后的环境文件示例；如果需要，也可以自行追加 `PG_EXPORTER_DISABLE_INTRO=false` 等额外环境变量。如果完全不设置 `PG_EXPORTER_URL`，二进制自身仍会回退到 `postgresql:///?sslmode=disable` 的本地优先默认连接串。
 
 
 --------
@@ -280,6 +286,8 @@ docker run -d \
   -e PG_EXPORTER_URL="postgres://user:pass@host:5432/postgres" \
   pgsty/pg_exporter:latest
 ```
+
+如果容器以远程 TLS 模式连接 PostgreSQL，记得额外挂载 `sslrootcert` 或系统 CA bundle。当前官方镜像基于 `scratch`，不会自带通用系统证书。
 
 ### Docker Compose
 

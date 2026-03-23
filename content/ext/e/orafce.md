@@ -41,7 +41,7 @@ weight: 9100
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
 | [**EXT**](/ext/list#sim) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `4.16.5` | {{< pgvers "18,17,16,15,14" >}} | `orafce` | - |
-| [**RPM**](/ext/rpm#sim) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `4.16.2` | {{< pgvers "18,17,16,15,14" >}} | `orafce_$v` | - |
+| [**RPM**](/ext/rpm#sim) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `4.16.5` | {{< pgvers "18,17,16,15,14" >}} | `orafce_$v` | - |
 | [**DEB**](/ext/deb#sim) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `4.16.5` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-orafce` | - |
 {.ext-table}
 

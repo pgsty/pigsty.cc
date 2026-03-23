@@ -32,7 +32,7 @@ Examples:
   pig install pg_duckdb       # 安装指定的 PostgreSQL 扩展
   pig install pgactive -v 18  # 为特定 PG 版本安装扩展
 
-  访问 https://pgext.cloud 获取详情
+  访问 https://pigsty.io/ext/ 获取详情
 
 PostgreSQL Extension Manager
   build       构建 Postgres 扩展
@@ -152,6 +152,7 @@ pig pg status                    # 查看状态
 pig pg psql mydb                 # 连接数据库
 pig pg ps                        # 查看当前连接
 pig pg vacuum mydb               # 清理数据库
+pig pg tune -p olap              # 生成调优参数
 pig pg log tail                  # 实时查看日志
 ```
 

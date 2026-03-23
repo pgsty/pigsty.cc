@@ -16,7 +16,7 @@ icon: fas fa-icons
 | [`hll`](/ext/e/hll) | [`hll`](https://github.com/citusdata/postgresql-hll) | `2.19` | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang cpp" href="/ext/language#cpp">C++</a> | hyperloglog 数据类型 |
 | [`rum`](/ext/e/rum) | [`rum`](https://github.com/postgrespro/rum) | `1.3.15` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | RUM 索引访问方法 |
 | [`pg_ai_query`](/ext/e/pg_ai_query) | [`pg_ai_query`](https://github.com/benodiwal/pg_ai_query) | `0.1.1` | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang cpp" href="/ext/language#cpp">C++</a> | AI驱动的 Postgres SQL 查询生成 |
-| [`pg_ttl_index`](/ext/e/pg_ttl_index) | [`pg_ttl_index`](https://github.com/ibrahimkarimeddin/postgres-extensions-pg_ttl) | `2.0.0` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 基于TTL索引的自动数据过期清理 |
+| [`pg_ttl_index`](/ext/e/pg_ttl_index) | [`pg_ttl_index`](https://github.com/ibrahimkarimeddin/postgres-extensions-pg_ttl) | `3.0.0` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 基于TTL索引的自动数据过期清理 |
 | [`pg_graphql`](/ext/e/pg_graphql) | [`pg_graphql`](https://github.com/supabase/pg_graphql) | `1.5.12` | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | PG内的GraphQL支持 |
 | [`pg_jsonschema`](/ext/e/pg_jsonschema) | [`pg_jsonschema`](https://github.com/supabase/pg_jsonschema) | `0.3.4` | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | 提供JSON Schema校验能力 |
 | [`jsquery`](/ext/e/jsquery) | [`jsquery`](https://github.com/postgrespro/jsquery) | `1.2` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 用于内省 JSONB 数据类型的查询类型 |
@@ -153,12 +153,12 @@ icon: fas fa-icons
 
 ## pg_ttl_index {#pg_ttl_index}
 
-[**`pg_ttl_index`**](/ext/e/pg_ttl_index) - `2.0.0` : 基于TTL索引的自动数据过期清理
+[**`pg_ttl_index`**](/ext/e/pg_ttl_index) - `3.0.0` : 基于TTL索引的自动数据过期清理
 
 | **条目** | **属性** | **OS** | **x86_64** | **aarch64** |
 |:---:|:---|:---:|:---:|:---:|
-| **扩展名** | [`pg_ttl_index`](/ext/e/pg_ttl_index) | **el8** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
-| **扩展包** | [`pg_ttl_index`](https://github.com/ibrahimkarimeddin/postgres-extensions-pg_ttl) | **el9** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+| **扩展名** | [`pg_ttl_index`](/ext/e/pg_ttl_index) | **el8** | {{< pgvers "18,17,16,15" >}} | {{< pgvers "18,17,16,15" >}} |
+| **扩展包** | [`pg_ttl_index`](https://github.com/ibrahimkarimeddin/postgres-extensions-pg_ttl) | **el9** | {{< pgvers "18,17,16,15" >}} | {{< pgvers "18,17,16,15" >}} |
 | **RPM** | `pg_ttl_index_$v` | **el10** | {{< pgvers "18,17,16,15" >}} | {{< pgvers "18,17,16,15" >}} |
 | **DEB** | `postgresql-$v-ttl-index` | **d12** | {{< pgvers "18,17,16,15" >}} | {{< pgvers "18,17,16,15" >}} |
 | **语言** | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | **d13** | {{< pgvers "18,17,16,15" >}} | {{< pgvers "18,17,16,15" >}} |

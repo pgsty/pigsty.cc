@@ -191,7 +191,18 @@ pig build get citus              # 单个扩展
 pig build get citus pgvector     # 多个扩展
 pig build get all                # 所有可用扩展
 pig build get std                # 标准扩展
+pig build get pdu pgdog          # 使用内置源码 alias
 ```
+
+一些源码包并不直接对应扩展名，`pig build get` 内置了少量特殊 alias 以便直接下载源码。`v1.3.2` 新增了 `pdu` 与 `pgdog` 两个 alias。
+
+```bash
+pig build get pdu                # 下载 pdu-3.0.25.12.tar.gz
+pig build get pgdog              # 下载 pgdog-0.1.32.tar.gz
+pig build get pgedge             # 同时下载 PostgreSQL 与 spock 源码
+```
+
+当前常见的特殊源码 alias 包括：`babelfishpg` / `babelfish`、`agensgraph` / `agens`、`pgedge`、`pdu`、`pgdog`。
 
 
 ## build dep

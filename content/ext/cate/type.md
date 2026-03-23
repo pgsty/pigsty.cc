@@ -26,7 +26,7 @@ icon: fas fa-cubes
 | [`pg_xenophile`](/ext/e/pg_xenophile) | [`pg_xenophile`](https://github.com/bigsmoke/pg_xenophile) | `0.8.3` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> | PostgreSQL i8n与l10n工具包 |
 | [`l10n_table_dependent_extension`](/ext/e/l10n_table_dependent_extension) | [`pg_xenophile`](https://github.com/bigsmoke/pg_xenophile) | `0.8.3` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> | PostgreSQL l10n 工具包 |
 | [`currency`](/ext/e/currency) | [`pg_currency`](https://github.com/adjust/pg-currency) | `0.0.3` | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 使用1字节表示的货币数据类型 |
-| [`collection`](/ext/e/collection) | [`pgcollection`](https://github.com/aws/pgcollection) | `1.1.1` | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 在PlPGSQL中使用的内存优化高性能集合数据结构 |
+| [`collection`](/ext/e/collection) | [`pgcollection`](https://github.com/aws/pgcollection) | `2.0.0` | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 在PlPGSQL中使用的内存优化高性能集合数据结构 |
 | [`pgmp`](/ext/e/pgmp) | [`pgmp`](https://github.com/dvarrazzo/pgmp/) | `1.0.5` | <a class="ext-badge ext-badge--license lgpl30" href="/ext/license#lgpl30">LGPL-3.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 多精度算术扩展 |
 | [`numeral`](/ext/e/numeral) | [`numeral`](https://github.com/df7cb/postgresql-numeral) | `1.3` | <a class="ext-badge ext-badge--license gpl20" href="/ext/license#gpl20">GPL-2.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 数值类型扩展 |
 | [`pg_rational`](/ext/e/pg_rational) | [`pg_rational`](https://github.com/begriffs/pg_rational) | `0.0.2` | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 使用BIGINT表示的有理数数据类型 |
@@ -308,7 +308,7 @@ icon: fas fa-cubes
 
 ## collection {#collection}
 
-[**`pgcollection`**](/ext/e/collection) - `1.1.1` : 在PlPGSQL中使用的内存优化高性能集合数据结构
+[**`pgcollection`**](/ext/e/collection) - `2.0.0` : 在PlPGSQL中使用的内存优化高性能集合数据结构
 
 | **条目** | **属性** | **OS** | **x86_64** | **aarch64** |
 |:---:|:---|:---:|:---:|:---:|
