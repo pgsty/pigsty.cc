@@ -143,16 +143,6 @@ Pigsty 当前的最新稳定版本为 [**v4.2.2**](#v422)。
 | `mcli`                     | 20260213       | 20260321       |    |
 | `claude`                   | 2.1.68         | 2.1.81         |    |
 
-**提交摘要（按时间）**
-
-- `b9377f7` 修复 `patroni_watchdog_mode` 因 YAML `off` 被当作布尔值导致的配置损坏问题，降低 `off` 与 `false` 混淆风险。
-- `b4f97e5` 关闭 Claude Code 自动清缓存导致的非预期行为。
-- `3898b42` 新增 `insforge` 应用模板与示例；`c465e91` 将该应用版本提升到 `2.0.1`。
-- `545ff4c` 监控面板不再在部分场景隐藏 PostgreSQL DB。
-- `e3c93a2` 将 `pgext.cloud` 链接更新为 `pigsty.io/ext`。
-- `a9da8b7` 项目内将 `4.2.1` 版本号统一升级到 `v4.2.2`。
-- `c4ddba7` 从 `roles/pgsql/templates/crit.yml` 移除 `pg_ttl_index` 的 `pg14` 兼容配置。
-
 **校验和**
 
 ```bash
@@ -171,11 +161,8 @@ dbccfeb3978ffb928bd0b501c3c0d42d  pigsty-pkg-v4.2.2.el10.aarch64.tgz
 cabeeb898b56b26c0855f33d5e60411a  pigsty-v4.2.2.tgz
 ```
 
-**发布页面**
 
-- [GitHub Release v4.2.2](https://github.com/pgsty/pigsty/releases/tag/v4.2.2)
-
-
+------
 
 ## v4.2.1
 
