@@ -6,10 +6,11 @@ icon: fa-solid fa-clipboard-list
 categories: [参考]
 ---
 
-Pigsty 当前的最新稳定版本为 [**v4.2.1**](#v421)。
+Pigsty 当前的最新稳定版本为 [**v4.2.2**](#v422)。
 
 |       版本        |    发布日期    | 摘要                                                      |                                           发布页面                                            |
 |:---------------:|:----------:|---------------------------------------------------------|:-----------------------------------------------------------------------------------------:|
+| [v4.2.2](#v422) | 2026-03-23 | Insforge 应用自建，Infra 包批量更新，新增 pdu，pgdog                  |               [v4.2.2](https://github.com/pgsty/pigsty/releases/tag/v4.2.2)               |
 | [v4.2.1](#v421) | 2026-03-06 | 移除 PG13 支持，新增扩展，问题修复                                    |               [v4.2.1](https://github.com/pgsty/pigsty/releases/tag/v4.2.1)               |
 | [v4.2.0](#v420) | 2026-02-28 | 例行小版本更新，六大 PG 内核集中更新                                    |               [v4.2.0](https://github.com/pgsty/pigsty/releases/tag/v4.2.0)               |
 | [v4.1.0](#v410) | 2026-02-12 | 大小版本更新支持，Agent-Native CLI，默认防火墙安全策略收紧                   |               [v4.1.0](https://github.com/pgsty/pigsty/releases/tag/v4.1.0)               |
@@ -69,6 +70,112 @@ Pigsty 当前的最新稳定版本为 [**v4.2.1**](#v421)。
 
 
 ------
+
+## v4.2.2
+
+**亮点特性**
+
+- Insforge 2.0.1 自建模板
+- Infra 软件包批量更新，MinIO/MCLI 更新至 20260321
+- 更新 PG 工具：数据恢复 pdu，连接池 pgdog 
+- 更新 PG 扩展：pg_search, pgsentinel, pg_track_optimizer, pgcollection, pg_ttl_index, pg_clickhouse
+
+**PostgreSQL 软件包更新**
+
+| 包名                 | 旧版本     | 新版本       | 备注      |
+|:-------------------|:--------|:----------|:--------|
+| pg_search          | 0.21.12 | 0.22.2    |         |
+| pgsentinel         | 1.4.0   | 1.4.1     | 仅更新 rpm |
+| pg_track_optimizer | 0.9.1   | 0.9.2     |         |
+| pgcollection       | 1.0.0   | 2.0.0     |         |
+| pg_ttl_index       | 2.0.0   | 3.0.0     |         |
+| pg_clickhouse      | 0.1.4   | 0.1.5     |         |
+| pdu                |         | 3.0.25.12 | 新增      |
+| pgdog              |         | 0.1.32    | 新增      |
+
+**基础设施软件包更新**
+
+| 名称                         | 旧版本            | 新版本            | 备注 |
+|:---------------------------|:---------------|:---------------|:---|
+| `grafana`                  | 12.4.0         | 12.4.1         |    |
+| `pgbackrest_exporter`      | 0.22.0         | 0.23.0         |    |
+| `redis_exporter`           | 1.81.0         | 1.82.0         |    |
+| `victoria-logs`            | 1.47.0         | 1.48.0         |    |
+| `vlagent`                  | 1.47.0         | 1.48.0         |    |
+| `vlogscli`                 | 1.47.0         | 1.48.0         |    |
+| `victoria-traces`          | 0.7.1          | 0.8.0          |    |
+| `duckdb`                   | 1.4.4          | 1.5.0          |    |
+| `pg_timetable`             | 6.2.0          | 6.3.0          |    |
+| `pgschema`                 | 1.4.2          | 1.7.4          |    |
+| `pgstream`                 | -              | 1.0.1          | 新增 |
+| `tigerbeetle`              | 0.16.75        | 0.16.77        |    |
+| `grafana-victorialogs-ds`  | 0.26.2         | 0.26.3         |    |
+| `grafana-infinity-ds`      | 3.7.3          | 3.7.4          |    |
+| `caddy`                    | 2.11.1         | 2.11.2         |    |
+| `npgsqlrest`               | 3.10.0         | 3.11.1         |    |
+| `postgrest`                | 14.5           | 14.7           |    |
+| `opencode`                 | 1.2.17         | 1.2.27         |    |
+| `pev2`                     | 1.20.2         | 1.21.0         |    |
+| `golang`                   | 1.26.0         | 1.26.1         |    |
+| `vector`                   | 0.53.0         | 0.54.0         |    |
+| `rclone`                   | 1.73.1         | 1.73.2         |    |
+| `code-server`              | 4.109.5        | 4.112.0        |    |
+| `code`                     | 1.109.4        | 1.112.0        |    |
+| `seaweedfs`                | 4.15           | 4.17           |    |
+| `uv`                       | 0.10.8         | 0.10.12        |    |
+| `codex`                    | 0.110.0        | 0.116.0        |    |
+| `v2ray`                    | 5.44.1         | 5.47.0         |    |
+| `sabiql`                   | 1.6.2          | 1.8.2          |    |
+| `sql-studio`               | -              | 0.1.51         | 新增 |
+| `rainfrog`                 | -              | 0.3.17         | 新增 |
+| `agentsview`               | 0.10.0         | 0.15.0         |    |
+| `crush`                    | -              | 0.51.2         | 新增 |
+| `tigerfs`                  | -              | 0.5.0          | 新增 |
+| `victoria-metrics`         | 1.137.0        | 1.138.0        |    |
+| `victoria-metrics-cluster` | 1.137.0        | 1.138.0        |    |
+| `vmutils`                  | 1.137.0        | 1.138.0        |    |
+| `hugo`                     | 0.157.0        | 0.158.0        |    |
+| `rustfs`                   | 1.0.0-alpha.85 | 1.0.0-alpha.89 |    |
+| `mysqld_exporter`          | 0.18.0         | 0.19.0         |    |
+| `pg_exporter`              | 1.2.0          | 1.2.1          |    |
+| `pig`                      | 1.3.1          | 1.3.2          |    |
+| `minio`                    | 20260214       | 20260321       |    |
+| `mcli`                     | 20260213       | 20260321       |    |
+| `claude`                   | 2.1.68         | 2.1.81         |    |
+
+**提交摘要（按时间）**
+
+- `b9377f7` 修复 `patroni_watchdog_mode` 因 YAML `off` 被当作布尔值导致的配置损坏问题，降低 `off` 与 `false` 混淆风险。
+- `b4f97e5` 关闭 Claude Code 自动清缓存导致的非预期行为。
+- `3898b42` 新增 `insforge` 应用模板与示例；`c465e91` 将该应用版本提升到 `2.0.1`。
+- `545ff4c` 监控面板不再在部分场景隐藏 PostgreSQL DB。
+- `e3c93a2` 将 `pgext.cloud` 链接更新为 `pigsty.io/ext`。
+- `a9da8b7` 项目内将 `4.2.1` 版本号统一升级到 `v4.2.2`。
+- `c4ddba7` 从 `roles/pgsql/templates/crit.yml` 移除 `pg_ttl_index` 的 `pg14` 兼容配置。
+
+**校验和**
+
+```bash
+0d9f907ff626203578c687d1418b38ba  pigsty-pkg-v4.2.2.d12.aarch64.tgz
+4129baf773c3005f4d697cf452f927a0  pigsty-pkg-v4.2.2.d12.x86_64.tgz
+40d5a0d9c2a97615bf0421bae42458ae  pigsty-pkg-v4.2.2.d13.aarch64.tgz
+cf91113a2296ad11fff79802ac9b1483  pigsty-pkg-v4.2.2.d13.x86_64.tgz
+dbccfeb3978ffb928bd0b501c3c0d42d  pigsty-pkg-v4.2.2.el10.aarch64.tgz
+8c848a4e3fa93c2455285fbcad5ddd78  pigsty-pkg-v4.2.2.el10.x86_64.tgz
+7c15c9a36f7d2dd740019c20e8c75a4b  pigsty-pkg-v4.2.2.el9.aarch64.tgz
+7d6e9e529236a0db2382f42660790ed9  pigsty-pkg-v4.2.2.el9.x86_64.tgz
+8f64bb14885ce330603172b186062671  pigsty-pkg-v4.2.2.u22.aarch64.tgz
+16d4c36c9e1ff848848c34a257b1025c  pigsty-pkg-v4.2.2.u22.x86_64.tgz
+401230741af5b04f163ffc8e688315ab  pigsty-pkg-v4.2.2.u24.aarch64.tgz
+5312aa0841694fc560778b9377a32c89  pigsty-pkg-v4.2.2.u24.x86_64.tgz
+cabeeb898b56b26c0855f33d5e60411a  pigsty-v4.2.2.tgz
+```
+
+**发布页面**
+
+- [GitHub Release v4.2.2](https://github.com/pgsty/pigsty/releases/tag/v4.2.2)
+
+
 
 ## v4.2.1
 
