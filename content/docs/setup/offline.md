@@ -47,18 +47,18 @@ Pigsty 默认从互联网上游 [**安装**](/docs/setup/install/) 所需软件�
 
 | Linux 发行版             | 系统代码           | 小版本       | 软件包                                                                                                                                     |
 |:----------------------|:---------------|:----------|:----------------------------------------------------------------------------------------------------------------------------------------|
-| RockyLinux 9 x86_64   | `el9.x86_64`   | `9.7`     | [**`pigsty-pkg-v4.2.1.el9.x86_64.tgz`**](https://github.com/pgsty/pigsty/releases/download/v4.2.1/pigsty-pkg-v4.2.1.el9.x86_64.tgz)     |
-| RockyLinux 9 aarch64  | `el9.aarch64`  | `9.7`     | [**`pigsty-pkg-v4.2.1.el9.aarch64.tgz`**](https://github.com/pgsty/pigsty/releases/download/v4.2.1/pigsty-pkg-v4.2.1.el9.aarch64.tgz)   |
-| RockyLinux 10 x86_64  | `el10.x86_64`  | `10.1`    | [**`pigsty-pkg-v4.2.1.el10.x86_64.tgz`**](https://github.com/pgsty/pigsty/releases/download/v4.2.1/pigsty-pkg-v4.2.1.el10.x86_64.tgz)   |
-| RockyLinux 10 aarch64 | `el10.aarch64` | `10.1`    | [**`pigsty-pkg-v4.2.1.el10.aarch64.tgz`**](https://github.com/pgsty/pigsty/releases/download/v4.2.1/pigsty-pkg-v4.2.1.el10.aarch64.tgz) |
-| Debian 12 x86_64      | `d12.x86_64`   | `12.13`   | [**`pigsty-pkg-v4.2.1.d12.x86_64.tgz`**](https://github.com/pgsty/pigsty/releases/download/v4.2.1/pigsty-pkg-v4.2.1.d12.x86_64.tgz)     |
-| Debian 12 aarch64     | `d12.aarch64`  | `12.13`   | [**`pigsty-pkg-v4.2.1.d12.aarch64.tgz`**](https://github.com/pgsty/pigsty/releases/download/v4.2.1/pigsty-pkg-v4.2.1.d12.aarch64.tgz)   |
-| Debian 13 x86_64      | `d13.x86_64`   | `13.3`    | [**`pigsty-pkg-v4.2.1.d13.x86_64.tgz`**](https://github.com/pgsty/pigsty/releases/download/v4.2.1/pigsty-pkg-v4.2.1.d13.x86_64.tgz)     |
-| Debian 13 aarch64     | `d13.aarch64`  | `13.3`    | [**`pigsty-pkg-v4.2.1.d13.aarch64.tgz`**](https://github.com/pgsty/pigsty/releases/download/v4.2.1/pigsty-pkg-v4.2.1.d13.aarch64.tgz)   |
-| Ubuntu 24.04 x86_64   | `u24.x86_64`   | `24.04.4` | [**`pigsty-pkg-v4.2.1.u24.x86_64.tgz`**](https://github.com/pgsty/pigsty/releases/download/v4.2.1/pigsty-pkg-v4.2.1.u24.x86_64.tgz)     |
-| Ubuntu 24.04 aarch64  | `u24.aarch64`  | `24.04.4` | [**`pigsty-pkg-v4.2.1.u24.aarch64.tgz`**](https://github.com/pgsty/pigsty/releases/download/v4.2.1/pigsty-pkg-v4.2.1.u24.aarch64.tgz)   |
-| Ubuntu 22.04 x86_64   | `u22.x86_64`   | `22.04.5` | [**`pigsty-pkg-v4.2.1.u22.x86_64.tgz`**](https://github.com/pgsty/pigsty/releases/download/v4.2.1/pigsty-pkg-v4.2.1.u22.x86_64.tgz)     |
-| Ubuntu 22.04 aarch64  | `u22.aarch64`  | `22.04.5` | [**`pigsty-pkg-v4.2.1.u22.aarch64.tgz`**](https://github.com/pgsty/pigsty/releases/download/v4.2.1/pigsty-pkg-v4.2.1.u22.aarch64.tgz)   |
+| RockyLinux 9 x86_64   | `el9.x86_64`   | `9.7`     | [**`pigsty-pkg-v4.2.2.el9.x86_64.tgz`**](https://github.com/pgsty/pigsty/releases/download/v4.2.2/pigsty-pkg-v4.2.2.el9.x86_64.tgz)     |
+| RockyLinux 9 aarch64  | `el9.aarch64`  | `9.7`     | [**`pigsty-pkg-v4.2.2.el9.aarch64.tgz`**](https://github.com/pgsty/pigsty/releases/download/v4.2.2/pigsty-pkg-v4.2.2.el9.aarch64.tgz)   |
+| RockyLinux 10 x86_64  | `el10.x86_64`  | `10.1`    | [**`pigsty-pkg-v4.2.2.el10.x86_64.tgz`**](https://github.com/pgsty/pigsty/releases/download/v4.2.2/pigsty-pkg-v4.2.2.el10.x86_64.tgz)   |
+| RockyLinux 10 aarch64 | `el10.aarch64` | `10.1`    | [**`pigsty-pkg-v4.2.2.el10.aarch64.tgz`**](https://github.com/pgsty/pigsty/releases/download/v4.2.2/pigsty-pkg-v4.2.2.el10.aarch64.tgz) |
+| Debian 12 x86_64      | `d12.x86_64`   | `12.13`   | [**`pigsty-pkg-v4.2.2.d12.x86_64.tgz`**](https://github.com/pgsty/pigsty/releases/download/v4.2.2/pigsty-pkg-v4.2.2.d12.x86_64.tgz)     |
+| Debian 12 aarch64     | `d12.aarch64`  | `12.13`   | [**`pigsty-pkg-v4.2.2.d12.aarch64.tgz`**](https://github.com/pgsty/pigsty/releases/download/v4.2.2/pigsty-pkg-v4.2.2.d12.aarch64.tgz)   |
+| Debian 13 x86_64      | `d13.x86_64`   | `13.3`    | [**`pigsty-pkg-v4.2.2.d13.x86_64.tgz`**](https://github.com/pgsty/pigsty/releases/download/v4.2.2/pigsty-pkg-v4.2.2.d13.x86_64.tgz)     |
+| Debian 13 aarch64     | `d13.aarch64`  | `13.3`    | [**`pigsty-pkg-v4.2.2.d13.aarch64.tgz`**](https://github.com/pgsty/pigsty/releases/download/v4.2.2/pigsty-pkg-v4.2.2.d13.aarch64.tgz)   |
+| Ubuntu 24.04 x86_64   | `u24.x86_64`   | `24.04.4` | [**`pigsty-pkg-v4.2.2.u24.x86_64.tgz`**](https://github.com/pgsty/pigsty/releases/download/v4.2.2/pigsty-pkg-v4.2.2.u24.x86_64.tgz)     |
+| Ubuntu 24.04 aarch64  | `u24.aarch64`  | `24.04.4` | [**`pigsty-pkg-v4.2.2.u24.aarch64.tgz`**](https://github.com/pgsty/pigsty/releases/download/v4.2.2/pigsty-pkg-v4.2.2.u24.aarch64.tgz)   |
+| Ubuntu 22.04 x86_64   | `u22.x86_64`   | `22.04.5` | [**`pigsty-pkg-v4.2.2.u22.x86_64.tgz`**](https://github.com/pgsty/pigsty/releases/download/v4.2.2/pigsty-pkg-v4.2.2.u22.x86_64.tgz)     |
+| Ubuntu 22.04 aarch64  | `u22.aarch64`  | `22.04.5` | [**`pigsty-pkg-v4.2.2.u22.aarch64.tgz`**](https://github.com/pgsty/pigsty/releases/download/v4.2.2/pigsty-pkg-v4.2.2.u22.aarch64.tgz)   |
 {.full-width}
 
 如果您使用的是上述列表中给出的操作系统（精确匹配的小版本），那么建议使用离线软件包。
@@ -67,18 +67,18 @@ Pigsty 为这些系统提供了开箱即用的预制离线软件包，在 GitHub
 您可以从 [**GitHub 发布页面**](https://github.com/pgsty/pigsty/releases/) 下载对应资产，下载地址遵循以下模式：
 
 ```bash
-62edcca1d1e572a247be018e1c26eda8  pigsty-pkg-v4.2.1.d12.aarch64.tgz
-1d55367e2fd9106e6f18b7ee112be736  pigsty-pkg-v4.2.1.d12.x86_64.tgz
-f122b1e5ba8a7ae8e3dc6e6dd53eba65  pigsty-pkg-v4.2.1.d13.aarch64.tgz
-617a76bfc8df8766e78abf24339152eb  pigsty-pkg-v4.2.1.d13.x86_64.tgz
-908509b350403ad1a4a27a88795fee06  pigsty-pkg-v4.2.1.el10.aarch64.tgz
-70cb4afd90ed7aea6ab43a264f8eb4a8  pigsty-pkg-v4.2.1.el10.x86_64.tgz
-98fbd67334f5c674b12e6af81ef76923  pigsty-pkg-v4.2.1.el9.aarch64.tgz
-687fa741ccd9dcf611a2aa964bcf1de8  pigsty-pkg-v4.2.1.el9.x86_64.tgz
-a2a30f4b1146b3e79be91d5be57615b6  pigsty-pkg-v4.2.1.u22.aarch64.tgz
-7a1f571bd8526106775c175ba728eee1  pigsty-pkg-v4.2.1.u22.x86_64.tgz
-a5574071bac1955798265f71ad73c3d4  pigsty-pkg-v4.2.1.u24.aarch64.tgz
-59a7632c650a3c034f1fe6cd589d7ab5  pigsty-pkg-v4.2.1.u24.x86_64.tgz
+62edcca1d1e572a247be018e1c26eda8  pigsty-pkg-v4.2.2.d12.aarch64.tgz
+1d55367e2fd9106e6f18b7ee112be736  pigsty-pkg-v4.2.2.d12.x86_64.tgz
+f122b1e5ba8a7ae8e3dc6e6dd53eba65  pigsty-pkg-v4.2.2.d13.aarch64.tgz
+617a76bfc8df8766e78abf24339152eb  pigsty-pkg-v4.2.2.d13.x86_64.tgz
+908509b350403ad1a4a27a88795fee06  pigsty-pkg-v4.2.2.el10.aarch64.tgz
+70cb4afd90ed7aea6ab43a264f8eb4a8  pigsty-pkg-v4.2.2.el10.x86_64.tgz
+98fbd67334f5c674b12e6af81ef76923  pigsty-pkg-v4.2.2.el9.aarch64.tgz
+687fa741ccd9dcf611a2aa964bcf1de8  pigsty-pkg-v4.2.2.el9.x86_64.tgz
+a2a30f4b1146b3e79be91d5be57615b6  pigsty-pkg-v4.2.2.u22.aarch64.tgz
+7a1f571bd8526106775c175ba728eee1  pigsty-pkg-v4.2.2.u22.x86_64.tgz
+a5574071bac1955798265f71ad73c3d4  pigsty-pkg-v4.2.2.u24.aarch64.tgz
+59a7632c650a3c034f1fe6cd589d7ab5  pigsty-pkg-v4.2.2.u24.x86_64.tgz
 
 ```
 

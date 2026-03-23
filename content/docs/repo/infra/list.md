@@ -119,7 +119,7 @@ PostgreSQL 相关工具、数据库管理系统和其他实用程序
 | [`duckdb`](https://github.com/duckdb/duckdb)                | `1.5.0`   | [MIT](https://github.com/duckdb/duckdb/blob/main/LICENSE)                            | 嵌入式 OLAP                       |
 | [`ferretdb`](https://github.com/FerretDB/FerretDB)          | `2.7.0`   | [Apache-2.0](https://github.com/FerretDB/FerretDB/blob/main/LICENSE)                 | 基于 PG 的 MongoDB                |
 | [`tigerbeetle`](https://github.com/tigerbeetle/tigerbeetle) | `0.16.77` | [Apache-2.0](https://github.com/tigerbeetle/tigerbeetle/blob/main/LICENSE)           | 金融 OLTP                        |
-| [`IvorySQL`](https://github.com/IvorySQL/IvorySQL)          | `5.1`     | [Apache-2.0](https://github.com/IvorySQL/IvorySQL/blob/IVORY_REL_5_STABLE/LICENSE)   | Oracle 兼容的 PG 18.1             |
+| [`ivorysql`](https://github.com/IvorySQL/IvorySQL)          | `5.3`     | [Apache-2.0](https://github.com/IvorySQL/IvorySQL/blob/IVORY_REL_5_STABLE/LICENSE)   | Oracle 兼容的 PG 18.1             |
 {.stretch-last}
 
 

@@ -39,7 +39,7 @@ Pigsty 是一个开源项目，**默认密码众所周知**。如果您的部署
 
 ```bash
 $ ./configure -g
-configure pigsty v4.2.1 begin
+configure pigsty v4.2.2 begin
 [ OK ] region = china
 [WARN] kernel  = Darwin, can be used as admin node only
 [ OK ] machine = arm64

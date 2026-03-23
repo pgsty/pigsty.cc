@@ -10,7 +10,7 @@ Pigsty 当前的最新稳定版本为 [**v4.2.2**](#v422)。
 
 |       版本        |    发布日期    | 摘要                                                      |                                           发布页面                                            |
 |:---------------:|:----------:|---------------------------------------------------------|:-----------------------------------------------------------------------------------------:|
-| [v4.2.2](#v422) | 2026-03-23 | Insforge 应用自建，Infra 包批量更新，新增 pdu，pgdog                  |               [v4.2.2](https://github.com/pgsty/pigsty/releases/tag/v4.2.2)               |
+| [v4.2.2](#v422) | 2026-03-23 | Insforge 应用自建，Infra 包批量更新，新增 pdu，pgdog，tigerfs          |               [v4.2.2](https://github.com/pgsty/pigsty/releases/tag/v4.2.2)               |
 | [v4.2.1](#v421) | 2026-03-06 | 移除 PG13 支持，新增扩展，问题修复                                    |               [v4.2.1](https://github.com/pgsty/pigsty/releases/tag/v4.2.1)               |
 | [v4.2.0](#v420) | 2026-02-28 | 例行小版本更新，六大 PG 内核集中更新                                    |               [v4.2.0](https://github.com/pgsty/pigsty/releases/tag/v4.2.0)               |
 | [v4.1.0](#v410) | 2026-02-12 | 大小版本更新支持，Agent-Native CLI，默认防火墙安全策略收紧                   |               [v4.1.0](https://github.com/pgsty/pigsty/releases/tag/v4.1.0)               |
@@ -77,8 +77,10 @@ Pigsty 当前的最新稳定版本为 [**v4.2.2**](#v422)。
 
 - Insforge 2.0.1 自建模板
 - Infra 软件包批量更新，MinIO/MCLI 更新至 20260321
+- 新增 infra 软件包: tigerfs, pgstream, sql-studio, rainfog, crush
 - 更新 PG 工具：数据恢复 pdu，连接池 pgdog 
 - 更新 PG 扩展：pg_search, pgsentinel, pg_track_optimizer, pgcollection, pg_ttl_index, pg_clickhouse
+- 更新 PG 内核：IvorySQL 5.1 -> 5.3
 
 **PostgreSQL 软件包更新**
 
@@ -142,6 +144,7 @@ Pigsty 当前的最新稳定版本为 [**v4.2.2**](#v422)。
 | `minio`                    | 20260214       | 20260321       |    |
 | `mcli`                     | 20260213       | 20260321       |    |
 | `claude`                   | 2.1.68         | 2.1.81         |    |
+| `ivroysql`                 | 5.1            | 5.3            |    |
 
 **校验和**
 
