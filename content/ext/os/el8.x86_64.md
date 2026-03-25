@@ -265,7 +265,7 @@ icon: fa-brands fa-redhat
 | [`pgsmcrypto`](/ext/e/pgsmcrypto) | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 |
 | [`pg_enigma`](/ext/e/pg_enigma) | AVAIL PIGSTY 0.5.0 1 | AVAIL PIGSTY 0.5.0 1 | AVAIL PIGSTY 0.5.0 1 | AVAIL PIGSTY 0.5.0 1 | AVAIL PIGSTY 0.5.0 1 |
 | [`pgaudit`](/ext/e/pgaudit) | AVAIL PGDG 18.0 1 | AVAIL PGDG 17.1 2 | AVAIL PGDG 16.1 2 | AVAIL PGDG 1.7.1 3 | AVAIL PGDG 1.6.3 4 |
-| [`pgauditlogtofile`](/ext/e/pgauditlogtofile) | AVAIL PGDG 1.8.0 5 | AVAIL PGDG 1.8.0 8 | AVAIL PGDG 1.8.0 10 | AVAIL PGDG 1.8.0 12 | AVAIL PGDG 1.8.0 17 |
+| [`pgauditlogtofile`](/ext/e/pgauditlogtofile) | AVAIL PGDG 1.8.1 6 | AVAIL PGDG 1.8.1 9 | AVAIL PGDG 1.8.1 11 | AVAIL PGDG 1.8.1 13 | AVAIL PGDG 1.8.1 18 |
 | [`pg_auditor`](/ext/e/pg_auditor) | AVAIL PIGSTY 0.2 1 | AVAIL PIGSTY 0.2 1 | AVAIL PIGSTY 0.2 1 | AVAIL PIGSTY 0.2 1 | AVAIL PIGSTY 0.2 1 |
 | [`logerrors`](/ext/e/logerrors) | AVAIL PGDG 2.1.5 1 | AVAIL PGDG 2.1.5 2 | AVAIL PGDG 2.1.5 3 | AVAIL PGDG 2.1.5 7 | AVAIL PGDG 2.1.5 7 |
 | [`pg_auth_mon`](/ext/e/pg_auth_mon) | AVAIL PGDG 3.0 1 | AVAIL PGDG 3.0 1 | AVAIL PGDG 2.0 1 | AVAIL PGDG 2.0 2 | AVAIL PGDG 2.0 2 |
