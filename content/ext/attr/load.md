@@ -5,7 +5,7 @@ description: "需要动态加载的 PostgreSQL 扩展"
 weight: 10
 ---
 
-以下 **87** 个扩展需要在 [`shared_preload_libraries`](https://www.postgresql.org/docs/current/runtime-config-client.html#GUC-SHARED-PRELOAD-LIBRARIES) 中动态加载，才能正常使用。
+以下 **92** 个扩展需要在 [`shared_preload_libraries`](https://www.postgresql.org/docs/current/runtime-config-client.html#GUC-SHARED-PRELOAD-LIBRARIES) 中动态加载，才能正常使用。
 
 也就是说，您需要修改 PostgreSQL 配置文件 `postgresql.conf` 中的 [`shared_preload_libraries`](https://www.postgresql.org/docs/current/runtime-config-client.html#GUC-SHARED-PRELOAD-LIBRARIES) 参数，将扩展的库名添加进去，然后重启数据库才能生效。
 
@@ -32,12 +32,14 @@ weight: 10
 | [`pg_hint_plan`](/ext/e/pg_hint_plan) | `pg_hint_plan` | 添加强制指定执行计划的能力 |
 | [`plan_filter`](/ext/e/plan_filter) | `plan_filter` | 使用执行计划代价过滤阻止特定查询语句 |
 | [`pg_ivm`](/ext/e/pg_ivm) | `pg_ivm` | 增量维护的物化视图 |
+| [`pg_trickle`](/ext/e/pg_trickle) | `pg_trickle` | 为 PostgreSQL 18 提供流式表与差分视图维护 |
 | [`orioledb`](/ext/e/orioledb) | `orioledb` | OrioleDB，下一代事务处理引擎 |
 | [`omni`](/ext/e/omni) | `omni--0.2.14.so` | PostgreSQL即平台，Omnigres主扩展与加载器 |
 | [`pg_tle`](/ext/e/pg_tle) | `pg_tle` | AWS 可信语言扩展 |
 | [`pldbgapi`](/ext/e/pldbgapi) | `pldbgapi` | 用于调试 PL/pgSQL 函数的服务器端支持 |
 | [`plpgsql_check`](/ext/e/plpgsql_check) | `plpgsql_check` | 对 plpgsql 函数进行扩展检查 |
 | [`plprofiler`](/ext/e/plprofiler) | `plprofiler` | 剖析 PL/pgSQL 函数 |
+| [`pg_regresql`](/ext/e/pg_regresql) | `pg_regresql` | 用 pg_class 统计信息替代物理文件大小参与查询规划 |
 | [`pgpdf`](/ext/e/pgpdf) | `pgpdf` | PDF数据类型，管理函数与全文检索 |
 | [`pglite_fusion`](/ext/e/pglite_fusion) | `pglite_fusion` | 在PG表中嵌入SQLite数据库作为数据类型 |
 | [`pg_net`](/ext/e/pg_net) | `pg_net` | 用 SQL 进行异步非阻塞HTTP/HTTPS 请求的扩展 (supabase) |
@@ -52,6 +54,7 @@ weight: 10
 | [`pg_strict`](/ext/e/pg_strict) | `pg_strict` | 防止不带WHERE条件的危险UPDATE和DELETE操作 |
 | [`pg_prewarm`](/ext/e/pg_prewarm) | `pg_prewarm` | 预热关系数据 |
 | [`pg_tracing`](/ext/e/pg_tracing) | `pg_tracing` | PostgreSQL分布式Tracing |
+| [`pg_stat_ch`](/ext/e/pg_stat_ch) | `pg_stat_ch` | 将 PostgreSQL 查询遥测实时导出到 ClickHouse |
 | [`pg_show_plans`](/ext/e/pg_show_plans) | `pg_show_plans` | 打印所有当前正在运行查询的执行计划 |
 | [`pg_stat_kcache`](/ext/e/pg_stat_kcache) | `pg_stat_kcache` | 内核统计信息收集 |
 | [`pg_stat_monitor`](/ext/e/pg_stat_monitor) | `pg_stat_monitor` | 提供查询聚合统计、客户端信息、执行计划详细信息和直方图 |
@@ -78,6 +81,7 @@ weight: 10
 | [`set_user`](/ext/e/set_user) | `set_user` | 增加了日志记录的 SET ROLE |
 | [`pg_snakeoil`](/ext/e/pg_snakeoil) | `pg_snakeoil` | PostgreSQL动态链接库反病毒功能 |
 | [`pgextwlist`](/ext/e/pgextwlist) | `pgextwlist` | PostgreSQL扩展白名单功能 |
+| [`pg_command_fw`](/ext/e/pg_command_fw) | `pg_command_fw` | PostgreSQL 的 DDL 与 utility 命令防火墙 |
 | [`noset`](/ext/e/noset) | `noset` | 阻止非超级用户使用SET/RESET设置变量 |
 | [`pg_tde`](/ext/e/pg_tde) | `pg_tde` | Percona加密存储引擎 |
 | [`sepgsql`](/ext/e/sepgsql) | `sepgsql` | 基于SELinux标签的强制访问控制 |
@@ -96,6 +100,7 @@ weight: 10
 | [`pg_failover_slots`](/ext/e/pg_failover_slots) | `pg_failover_slots` | 在Failover过程中保留复制槽 |
 | [`pgactive`](/ext/e/pgactive) | `pgactive` | PostgreSQL多主逻辑复制 |
 | [`spock`](/ext/e/spock) | `spock` | PostgreSQL 多主逻辑复制扩展 |
+| [`pgclone`](/ext/e/pgclone) | `pgclone` | 在不同环境间克隆 PostgreSQL 数据库、模式、表和函数 |
 | [`decoderbufs`](/ext/e/decoderbufs) | `decoderbufs` | 将WAL逻辑解码为ProtocolBuffer协议的消息 |
 | [`repmgr`](/ext/e/repmgr) | `repmgr` | PostgreSQL复制管理组件 |
 {.ext-table}

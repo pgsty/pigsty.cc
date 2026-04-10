@@ -5,11 +5,11 @@ description: "具有扩展依赖关系的 PostgreSQL 扩展"
 weight: 30
 ---
 
-共有 **93** 个扩展依赖其他扩展，**58** 个扩展被其他扩展所依赖。
+共有 **97** 个扩展依赖其他扩展，**58** 个扩展被其他扩展所依赖。
 
 ## 上游依赖
 
-以下 **93** 个扩展需要先安装其他扩展才能使用：
+以下 **97** 个扩展需要先安装其他扩展才能使用：
 
 | **扩展名** | **上游依赖** | **描述** |
 |:-----------|:-------------|:---------|
@@ -18,6 +18,7 @@ weight: 30
 | [`emaj`](/ext/e/emaj) | [`dblink`](/ext/e/dblink) [`btree_gist`](/ext/e/btree_gist) | 让数据库的子集具有细粒度日志和时间旅行功能 |
 | [`table_version`](/ext/e/table_version) | [`plpgsql`](/ext/e/plpgsql) | PostgreSQL 版本控制表扩展 |
 | [`pg_later`](/ext/e/pg_later) | [`pgmq`](/ext/e/pgmq) | 执行查询，并在稍后异步获取查询结果 |
+| [`pg_dispatch`](/ext/e/pg_dispatch) | [`pgcrypto`](/ext/e/pgcrypto) [`pg_cron`](/ext/e/pg_cron) | 基于 pg_cron 的异步 SQL 分发器 |
 | [`postgis_topology`](/ext/e/postgis_topology) | [`postgis`](/ext/e/postgis) | PostGIS 拓扑空间类型和函数 |
 | [`postgis_raster`](/ext/e/postgis_raster) | [`postgis`](/ext/e/postgis) | PostGIS 光栅类型和函数 |
 | [`postgis_sfcgal`](/ext/e/postgis_sfcgal) | [`postgis`](/ext/e/postgis) | PostGIS SFCGAL 函数 |
@@ -76,6 +77,8 @@ weight: 30
 | [`pg_xenophile`](/ext/e/pg_xenophile) | [`hstore`](/ext/e/hstore) | PostgreSQL i8n与l10n工具包 |
 | [`l10n_table_dependent_extension`](/ext/e/l10n_table_dependent_extension) | [`pg_xenophile`](/ext/e/pg_xenophile) | PostgreSQL l10n 工具包 |
 | [`currency`](/ext/e/currency) | [`plpgsql`](/ext/e/plpgsql) | 使用1字节表示的货币数据类型 |
+| [`pg_fsql`](/ext/e/pg_fsql) | [`plpgsql`](/ext/e/plpgsql) | 支持 JSONB 驱动执行的递归 SQL 模板引擎 |
+| [`pglock`](/ext/e/pglock) | [`pg_cron`](/ext/e/pg_cron) | 在 PostgreSQL 内实现轻量级分布式锁服务 |
 | [`pgjwt`](/ext/e/pgjwt) | [`pgcrypto`](/ext/e/pgcrypto) | JSON Web Token API 的PG实现 (supabase) |
 | [`pg_readme`](/ext/e/pg_readme) | [`hstore`](/ext/e/hstore) | 为模式与扩展生成Markdown文档 |
 | [`pg_readme_test_extension`](/ext/e/pg_readme_test_extension) | [`hstore`](/ext/e/hstore) | 为模式与扩展生成Markdown文档 |
@@ -87,6 +90,7 @@ weight: 30
 | [`pg_upless`](/ext/e/pg_upless) | [`plpgsql`](/ext/e/plpgsql) | 检测表上的无用UPDATE |
 | [`pgcozy`](/ext/e/pgcozy) | [`pg_buffercache`](/ext/e/pg_buffercache) [`pg_prewarm`](/ext/e/pg_prewarm) | 根据先前的pg_buffercache快照预热内存缓冲区 |
 | [`pg_drop_events`](/ext/e/pg_drop_events) | [`plpgsql`](/ext/e/plpgsql) | 记录删表删列删视图的事务号，辅助PITR确定时间点 |
+| [`pgelog`](/ext/e/pgelog) | [`dblink`](/ext/e/dblink) [`pg_variables`](/ext/e/pg_variables) | 通过伪自治事务实现扩展日志记录 |
 | [`pg_profile`](/ext/e/pg_profile) | [`dblink`](/ext/e/dblink) [`plpgsql`](/ext/e/plpgsql) | PostgreSQL 数据库负载记录与AWR报表工具 |
 | [`pg_stat_kcache`](/ext/e/pg_stat_kcache) | [`pg_stat_statements`](/ext/e/pg_stat_statements) | 内核统计信息收集 |
 | [`pg_sqlog`](/ext/e/pg_sqlog) | [`file_fdw`](/ext/e/file_fdw) | 提供访问PostgreSQL日志的SQL接口 |

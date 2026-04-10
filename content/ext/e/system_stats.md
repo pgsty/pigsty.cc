@@ -11,10 +11,10 @@ weight: 6420
     <div class="ext-card__title">EnterpriseDB/system_stats</div>
     <div class="ext-card__desc">https://github.com/EnterpriseDB/system_stats</div>
   </a>
-  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/system_stats-3.2.tar.gz">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/system_stats-4.0.tar.gz">
     <div class="ext-card__kicker">源码</div>
-    <div class="ext-card__title">system_stats-3.2.tar.gz</div>
-    <div class="ext-card__desc">system_stats-3.2.tar.gz</div>
+    <div class="ext-card__title">system_stats-4.0.tar.gz</div>
+    <div class="ext-card__desc">system_stats-4.0.tar.gz</div>
   </a>
 </div>
 
@@ -25,7 +25,7 @@ weight: 6420
 
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
-| [**`system_stats`**](/ext/e/system_stats) | `3.2` | <a class="ext-badge ext-badge--cate stat" href="/ext/cate/stat">STAT</a> | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
+| [**`system_stats`**](/ext/e/system_stats) | `4.0` | <a class="ext-badge ext-badge--cate stat" href="/ext/cate/stat">STAT</a> | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
 {.ext-table}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
@@ -42,147 +42,177 @@ weight: 6420
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#stat) | <a class="ext-badge ext-badge--repo mixed" href="/ext/repo#mixed">MIXED</a> | `3.2` | {{< pgvers "18,17,16,15,14" >}} | `system_stats` | - |
-| [**RPM**](/ext/rpm#stat) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `3.2` | {{< pgvers "18,17,16,15,14" >}} | `system_stats_$v` | - |
-| [**DEB**](/ext/deb#stat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `3.2` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-system-stats` | - |
+| [**EXT**](/ext/list#stat) | <a class="ext-badge ext-badge--repo mixed" href="/ext/repo#mixed">MIXED</a> | `4.0` | {{< pgvers "18,17,16,15,14" >}} | `system_stats` | - |
+| [**RPM**](/ext/rpm#stat) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `4.0` | {{< pgvers "18,17,16,15,14" >}} | `system_stats_$v` | - |
+| [**DEB**](/ext/deb#stat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `4.0` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-system-stats` | - |
 {.ext-table}
 
 {{< pgext_matrix >}}
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PGDG 3.2 2 | AVAIL PGDG 3.2.1 2 | AVAIL PGDG 3.2.1 3 | AVAIL PGDG 3.2.1 4 | AVAIL PGDG 3.2.1 4 |
-| el8.aarch64 | AVAIL PGDG 3.2 2 | AVAIL PGDG 3.2.1 2 | AVAIL PGDG 3.2.1 3 | AVAIL PGDG 3.2.1 4 | AVAIL PGDG 3.2.1 4 |
-| el9.x86_64 | AVAIL PGDG 3.2 2 | AVAIL PGDG 3.2.1 2 | AVAIL PGDG 3.2.1 3 | AVAIL PGDG 3.2.1 4 | AVAIL PGDG 3.2.1 3 |
-| el9.aarch64 | AVAIL PGDG 3.2 2 | AVAIL PGDG 3.2.1 2 | AVAIL PGDG 3.2.1 3 | AVAIL PGDG 3.2.1 4 | AVAIL PGDG 3.2.1 4 |
-| el10.x86_64 | AVAIL PGDG 3.2 2 | AVAIL PGDG 3.2 2 | AVAIL PGDG 3.2 2 | AVAIL PGDG 3.2 2 | AVAIL PGDG 3.2 2 |
-| el10.aarch64 | AVAIL PGDG 3.2 2 | AVAIL PGDG 3.2 2 | AVAIL PGDG 3.2 2 | AVAIL PGDG 3.2 2 | AVAIL PGDG 3.2 2 |
-| d12.x86_64 | AVAIL PIGSTY 3.2 1 | AVAIL PIGSTY 3.2 1 | AVAIL PIGSTY 3.2 1 | AVAIL PIGSTY 3.2 1 | AVAIL PIGSTY 3.2 1 |
-| d12.aarch64 | AVAIL PIGSTY 3.2 1 | AVAIL PIGSTY 3.2 1 | AVAIL PIGSTY 3.2 1 | AVAIL PIGSTY 3.2 1 | AVAIL PIGSTY 3.2 1 |
-| d13.x86_64 | AVAIL PIGSTY 3.2 1 | AVAIL PIGSTY 3.2 1 | AVAIL PIGSTY 3.2 1 | AVAIL PIGSTY 3.2 1 | AVAIL PIGSTY 3.2 1 |
-| d13.aarch64 | AVAIL PIGSTY 3.2 1 | AVAIL PIGSTY 3.2 1 | AVAIL PIGSTY 3.2 1 | AVAIL PIGSTY 3.2 1 | AVAIL PIGSTY 3.2 1 |
-| u22.x86_64 | AVAIL PIGSTY 3.2 1 | AVAIL PIGSTY 3.2 1 | AVAIL PIGSTY 3.2 1 | AVAIL PIGSTY 3.2 1 | AVAIL PIGSTY 3.2 1 |
-| u22.aarch64 | AVAIL PIGSTY 3.2 1 | AVAIL PIGSTY 3.2 1 | AVAIL PIGSTY 3.2 1 | AVAIL PIGSTY 3.2 1 | AVAIL PIGSTY 3.2 1 |
-| u24.x86_64 | AVAIL PIGSTY 3.2 1 | AVAIL PIGSTY 3.2 1 | AVAIL PIGSTY 3.2 1 | AVAIL PIGSTY 3.2 1 | AVAIL PIGSTY 3.2 1 |
-| u24.aarch64 | AVAIL PIGSTY 3.2 1 | AVAIL PIGSTY 3.2 1 | AVAIL PIGSTY 3.2 1 | AVAIL PIGSTY 3.2 1 | AVAIL PIGSTY 3.2 1 |
+| el8.x86_64 | AVAIL PGDG 4.0 3 | AVAIL PGDG 4.0 3 | AVAIL PGDG 4.0 4 | AVAIL PGDG 4.0 5 | AVAIL PGDG 4.0 5 |
+| el8.aarch64 | AVAIL PGDG 4.0 3 | AVAIL PGDG 4.0 3 | AVAIL PGDG 4.0 4 | AVAIL PGDG 4.0 5 | AVAIL PGDG 4.0 5 |
+| el9.x86_64 | AVAIL PGDG 4.0 3 | AVAIL PGDG 4.0 3 | AVAIL PGDG 4.0 4 | AVAIL PGDG 4.0 5 | AVAIL PGDG 4.0 4 |
+| el9.aarch64 | AVAIL PGDG 4.0 3 | AVAIL PGDG 4.0 3 | AVAIL PGDG 4.0 4 | AVAIL PGDG 4.0 5 | AVAIL PGDG 4.0 5 |
+| el10.x86_64 | AVAIL PGDG 4.0 3 | AVAIL PGDG 4.0 3 | AVAIL PGDG 4.0 3 | AVAIL PGDG 4.0 3 | AVAIL PGDG 4.0 3 |
+| el10.aarch64 | AVAIL PGDG 4.0 3 | AVAIL PGDG 4.0 3 | AVAIL PGDG 4.0 3 | AVAIL PGDG 4.0 3 | AVAIL PGDG 4.0 3 |
+| d12.x86_64 | AVAIL PIGSTY 4.0 1 | AVAIL PIGSTY 4.0 1 | AVAIL PIGSTY 4.0 1 | AVAIL PIGSTY 4.0 1 | AVAIL PIGSTY 4.0 1 |
+| d12.aarch64 | AVAIL PIGSTY 4.0 1 | AVAIL PIGSTY 4.0 1 | AVAIL PIGSTY 4.0 1 | AVAIL PIGSTY 4.0 1 | AVAIL PIGSTY 4.0 1 |
+| d13.x86_64 | AVAIL PIGSTY 4.0 1 | AVAIL PIGSTY 4.0 1 | AVAIL PIGSTY 4.0 1 | AVAIL PIGSTY 4.0 1 | AVAIL PIGSTY 4.0 1 |
+| d13.aarch64 | AVAIL PIGSTY 4.0 1 | AVAIL PIGSTY 4.0 1 | AVAIL PIGSTY 4.0 1 | AVAIL PIGSTY 4.0 1 | AVAIL PIGSTY 4.0 1 |
+| u22.x86_64 | AVAIL PIGSTY 4.0 1 | AVAIL PIGSTY 4.0 1 | AVAIL PIGSTY 4.0 1 | AVAIL PIGSTY 4.0 1 | AVAIL PIGSTY 4.0 1 |
+| u22.aarch64 | AVAIL PIGSTY 4.0 1 | AVAIL PIGSTY 4.0 1 | AVAIL PIGSTY 4.0 1 | AVAIL PIGSTY 4.0 1 | AVAIL PIGSTY 4.0 1 |
+| u24.x86_64 | AVAIL PIGSTY 4.0 1 | AVAIL PIGSTY 4.0 1 | AVAIL PIGSTY 4.0 1 | AVAIL PIGSTY 4.0 1 | AVAIL PIGSTY 4.0 1 |
+| u24.aarch64 | AVAIL PIGSTY 4.0 1 | AVAIL PIGSTY 4.0 1 | AVAIL PIGSTY 4.0 1 | AVAIL PIGSTY 4.0 1 | AVAIL PIGSTY 4.0 1 |
+@ el8.x86_64 18 system_stats_18 system_stats_18-4.0-1PGDG.rhel8.10.x86_64.rpm pgdg 4.0 32.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/system_stats_18-4.0-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 18 system_stats_18 system_stats_18-3.2-2PGDG.rhel8.x86_64.rpm pgdg 3.2 28.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/system_stats_18-3.2-2PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 18 system_stats_18 system_stats_18-3.2.1-1PGDG.rhel8.10.x86_64.rpm pgdg 3.2.1 30.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/system_stats_18-3.2.1-1PGDG.rhel8.10.x86_64.rpm
+@ el8.aarch64 18 system_stats_18 system_stats_18-4.0-1PGDG.rhel8.10.aarch64.rpm pgdg 4.0 32.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/system_stats_18-4.0-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 18 system_stats_18 system_stats_18-3.2-2PGDG.rhel8.aarch64.rpm pgdg 3.2 28.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/system_stats_18-3.2-2PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 18 system_stats_18 system_stats_18-3.2.1-1PGDG.rhel8.10.aarch64.rpm pgdg 3.2.1 30.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/system_stats_18-3.2.1-1PGDG.rhel8.10.aarch64.rpm
+@ el9.x86_64 18 system_stats_18 system_stats_18-4.0-1PGDG.rhel9.7.x86_64.rpm pgdg 4.0 31.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/system_stats_18-4.0-1PGDG.rhel9.7.x86_64.rpm
 @ el9.x86_64 18 system_stats_18 system_stats_18-3.2-2PGDG.rhel9.x86_64.rpm pgdg 3.2 28.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/system_stats_18-3.2-2PGDG.rhel9.x86_64.rpm
 @ el9.x86_64 18 system_stats_18 system_stats_18-3.2.1-1PGDG.rhel9.7.x86_64.rpm pgdg 3.2.1 29.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/system_stats_18-3.2.1-1PGDG.rhel9.7.x86_64.rpm
+@ el9.aarch64 18 system_stats_18 system_stats_18-4.0-1PGDG.rhel9.7.aarch64.rpm pgdg 4.0 31.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/system_stats_18-4.0-1PGDG.rhel9.7.aarch64.rpm
 @ el9.aarch64 18 system_stats_18 system_stats_18-3.2-2PGDG.rhel9.aarch64.rpm pgdg 3.2 28.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/system_stats_18-3.2-2PGDG.rhel9.aarch64.rpm
 @ el9.aarch64 18 system_stats_18 system_stats_18-3.2.1-1PGDG.rhel9.7.aarch64.rpm pgdg 3.2.1 29.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/system_stats_18-3.2.1-1PGDG.rhel9.7.aarch64.rpm
+@ el10.x86_64 18 system_stats_18 system_stats_18-4.0-1PGDG.rhel10.1.x86_64.rpm pgdg 4.0 32.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/system_stats_18-4.0-1PGDG.rhel10.1.x86_64.rpm
 @ el10.x86_64 18 system_stats_18 system_stats_18-3.2-2PGDG.rhel10.x86_64.rpm pgdg 3.2 29.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/system_stats_18-3.2-2PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 18 system_stats_18 system_stats_18-3.2.1-1PGDG.rhel10.1.x86_64.rpm pgdg 3.2.1 30.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/system_stats_18-3.2.1-1PGDG.rhel10.1.x86_64.rpm
+@ el10.aarch64 18 system_stats_18 system_stats_18-4.0-1PGDG.rhel10.1.aarch64.rpm pgdg 4.0 31.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/system_stats_18-4.0-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 18 system_stats_18 system_stats_18-3.2-2PGDG.rhel10.aarch64.rpm pgdg 3.2 28.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/system_stats_18-3.2-2PGDG.rhel10.aarch64.rpm
 @ el10.aarch64 18 system_stats_18 system_stats_18-3.2.1-1PGDG.rhel10.1.aarch64.rpm pgdg 3.2.1 29.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/system_stats_18-3.2.1-1PGDG.rhel10.1.aarch64.rpm
-@ d12.x86_64 18 postgresql-18-system-stats postgresql-18-system-stats_3.2-1PIGSTY~bookworm_amd64.deb pigsty 3.2 59.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/s/system-stats/postgresql-18-system-stats_3.2-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 18 postgresql-18-system-stats postgresql-18-system-stats_3.2-1PIGSTY~bookworm_arm64.deb pigsty 3.2 58.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/s/system-stats/postgresql-18-system-stats_3.2-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 18 postgresql-18-system-stats postgresql-18-system-stats_3.2-1PIGSTY~trixie_amd64.deb pigsty 3.2 59.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/s/system-stats/postgresql-18-system-stats_3.2-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 18 postgresql-18-system-stats postgresql-18-system-stats_3.2-1PIGSTY~trixie_arm64.deb pigsty 3.2 58.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/s/system-stats/postgresql-18-system-stats_3.2-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 18 postgresql-18-system-stats postgresql-18-system-stats_3.2-1PIGSTY~jammy_amd64.deb pigsty 3.2 61.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/s/system-stats/postgresql-18-system-stats_3.2-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 18 postgresql-18-system-stats postgresql-18-system-stats_3.2-1PIGSTY~jammy_arm64.deb pigsty 3.2 61.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/s/system-stats/postgresql-18-system-stats_3.2-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 18 postgresql-18-system-stats postgresql-18-system-stats_3.2-1PIGSTY~noble_amd64.deb pigsty 3.2 61.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/s/system-stats/postgresql-18-system-stats_3.2-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 18 postgresql-18-system-stats postgresql-18-system-stats_3.2-1PIGSTY~noble_arm64.deb pigsty 3.2 61.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/s/system-stats/postgresql-18-system-stats_3.2-1PIGSTY~noble_arm64.deb
+@ d12.x86_64 18 postgresql-18-system-stats postgresql-18-system-stats_4.0-1PIGSTY~bookworm_amd64.deb pigsty 4.0 67.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/s/system-stats/postgresql-18-system-stats_4.0-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 18 postgresql-18-system-stats postgresql-18-system-stats_4.0-1PIGSTY~bookworm_arm64.deb pigsty 4.0 66.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/s/system-stats/postgresql-18-system-stats_4.0-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 18 postgresql-18-system-stats postgresql-18-system-stats_4.0-1PIGSTY~trixie_amd64.deb pigsty 4.0 67.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/s/system-stats/postgresql-18-system-stats_4.0-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 18 postgresql-18-system-stats postgresql-18-system-stats_4.0-1PIGSTY~trixie_arm64.deb pigsty 4.0 66.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/s/system-stats/postgresql-18-system-stats_4.0-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 18 postgresql-18-system-stats postgresql-18-system-stats_4.0-1PIGSTY~jammy_amd64.deb pigsty 4.0 70.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/s/system-stats/postgresql-18-system-stats_4.0-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 18 postgresql-18-system-stats postgresql-18-system-stats_4.0-1PIGSTY~jammy_arm64.deb pigsty 4.0 70.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/s/system-stats/postgresql-18-system-stats_4.0-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 18 postgresql-18-system-stats postgresql-18-system-stats_4.0-1PIGSTY~noble_amd64.deb pigsty 4.0 70.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/s/system-stats/postgresql-18-system-stats_4.0-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 18 postgresql-18-system-stats postgresql-18-system-stats_4.0-1PIGSTY~noble_arm64.deb pigsty 4.0 69.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/s/system-stats/postgresql-18-system-stats_4.0-1PIGSTY~noble_arm64.deb
+@ el8.x86_64 17 system_stats_17 system_stats_17-4.0-1PGDG.rhel8.10.x86_64.rpm pgdg 4.0 32.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/system_stats_17-4.0-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 system_stats_17 system_stats_17-3.2.1-1PGDG.rhel8.10.x86_64.rpm pgdg 3.2.1 30.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/system_stats_17-3.2.1-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 system_stats_17 system_stats_17-3.2-1PGDG.rhel8.x86_64.rpm pgdg 3.2 28.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/system_stats_17-3.2-1PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 17 system_stats_17 system_stats_17-4.0-1PGDG.rhel8.10.aarch64.rpm pgdg 4.0 32.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/system_stats_17-4.0-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 17 system_stats_17 system_stats_17-3.2.1-1PGDG.rhel8.10.aarch64.rpm pgdg 3.2.1 30.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/system_stats_17-3.2.1-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 17 system_stats_17 system_stats_17-3.2-1PGDG.rhel8.aarch64.rpm pgdg 3.2 28.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/system_stats_17-3.2-1PGDG.rhel8.aarch64.rpm
+@ el9.x86_64 17 system_stats_17 system_stats_17-4.0-1PGDG.rhel9.7.x86_64.rpm pgdg 4.0 31.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/system_stats_17-4.0-1PGDG.rhel9.7.x86_64.rpm
 @ el9.x86_64 17 system_stats_17 system_stats_17-3.2.1-1PGDG.rhel9.7.x86_64.rpm pgdg 3.2.1 29.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/system_stats_17-3.2.1-1PGDG.rhel9.7.x86_64.rpm
 @ el9.x86_64 17 system_stats_17 system_stats_17-3.2-1PGDG.rhel9.x86_64.rpm pgdg 3.2 28.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/system_stats_17-3.2-1PGDG.rhel9.x86_64.rpm
+@ el9.aarch64 17 system_stats_17 system_stats_17-4.0-1PGDG.rhel9.7.aarch64.rpm pgdg 4.0 31.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/system_stats_17-4.0-1PGDG.rhel9.7.aarch64.rpm
 @ el9.aarch64 17 system_stats_17 system_stats_17-3.2.1-1PGDG.rhel9.7.aarch64.rpm pgdg 3.2.1 29.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/system_stats_17-3.2.1-1PGDG.rhel9.7.aarch64.rpm
 @ el9.aarch64 17 system_stats_17 system_stats_17-3.2-1PGDG.rhel9.aarch64.rpm pgdg 3.2 28.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/system_stats_17-3.2-1PGDG.rhel9.aarch64.rpm
+@ el10.x86_64 17 system_stats_17 system_stats_17-4.0-1PGDG.rhel10.1.x86_64.rpm pgdg 4.0 32.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/system_stats_17-4.0-1PGDG.rhel10.1.x86_64.rpm
 @ el10.x86_64 17 system_stats_17 system_stats_17-3.2-2PGDG.rhel10.x86_64.rpm pgdg 3.2 29.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/system_stats_17-3.2-2PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 17 system_stats_17 system_stats_17-3.2.1-1PGDG.rhel10.1.x86_64.rpm pgdg 3.2.1 30.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/system_stats_17-3.2.1-1PGDG.rhel10.1.x86_64.rpm
+@ el10.aarch64 17 system_stats_17 system_stats_17-4.0-1PGDG.rhel10.1.aarch64.rpm pgdg 4.0 31.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/system_stats_17-4.0-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 17 system_stats_17 system_stats_17-3.2-2PGDG.rhel10.aarch64.rpm pgdg 3.2 28.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/system_stats_17-3.2-2PGDG.rhel10.aarch64.rpm
 @ el10.aarch64 17 system_stats_17 system_stats_17-3.2.1-1PGDG.rhel10.1.aarch64.rpm pgdg 3.2.1 29.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/system_stats_17-3.2.1-1PGDG.rhel10.1.aarch64.rpm
-@ d12.x86_64 17 postgresql-17-system-stats postgresql-17-system-stats_3.2-1PIGSTY~bookworm_amd64.deb pigsty 3.2 59.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/s/system-stats/postgresql-17-system-stats_3.2-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 17 postgresql-17-system-stats postgresql-17-system-stats_3.2-1PIGSTY~bookworm_arm64.deb pigsty 3.2 58.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/s/system-stats/postgresql-17-system-stats_3.2-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 17 postgresql-17-system-stats postgresql-17-system-stats_3.2-1PIGSTY~trixie_amd64.deb pigsty 3.2 59.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/s/system-stats/postgresql-17-system-stats_3.2-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 17 postgresql-17-system-stats postgresql-17-system-stats_3.2-1PIGSTY~trixie_arm64.deb pigsty 3.2 58.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/s/system-stats/postgresql-17-system-stats_3.2-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 17 postgresql-17-system-stats postgresql-17-system-stats_3.2-1PIGSTY~jammy_amd64.deb pigsty 3.2 68.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/s/system-stats/postgresql-17-system-stats_3.2-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 17 postgresql-17-system-stats postgresql-17-system-stats_3.2-1PIGSTY~jammy_arm64.deb pigsty 3.2 69.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/s/system-stats/postgresql-17-system-stats_3.2-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 17 postgresql-17-system-stats postgresql-17-system-stats_3.2-1PIGSTY~noble_amd64.deb pigsty 3.2 61.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/s/system-stats/postgresql-17-system-stats_3.2-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 17 postgresql-17-system-stats postgresql-17-system-stats_3.2-1PIGSTY~noble_arm64.deb pigsty 3.2 61.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/s/system-stats/postgresql-17-system-stats_3.2-1PIGSTY~noble_arm64.deb
+@ d12.x86_64 17 postgresql-17-system-stats postgresql-17-system-stats_4.0-1PIGSTY~bookworm_amd64.deb pigsty 4.0 67.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/s/system-stats/postgresql-17-system-stats_4.0-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 17 postgresql-17-system-stats postgresql-17-system-stats_4.0-1PIGSTY~bookworm_arm64.deb pigsty 4.0 66.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/s/system-stats/postgresql-17-system-stats_4.0-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 17 postgresql-17-system-stats postgresql-17-system-stats_4.0-1PIGSTY~trixie_amd64.deb pigsty 4.0 67.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/s/system-stats/postgresql-17-system-stats_4.0-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 17 postgresql-17-system-stats postgresql-17-system-stats_4.0-1PIGSTY~trixie_arm64.deb pigsty 4.0 66.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/s/system-stats/postgresql-17-system-stats_4.0-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 17 postgresql-17-system-stats postgresql-17-system-stats_4.0-1PIGSTY~jammy_amd64.deb pigsty 4.0 77.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/s/system-stats/postgresql-17-system-stats_4.0-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 17 postgresql-17-system-stats postgresql-17-system-stats_4.0-1PIGSTY~jammy_arm64.deb pigsty 4.0 77.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/s/system-stats/postgresql-17-system-stats_4.0-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 17 postgresql-17-system-stats postgresql-17-system-stats_4.0-1PIGSTY~noble_amd64.deb pigsty 4.0 69.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/s/system-stats/postgresql-17-system-stats_4.0-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 17 postgresql-17-system-stats postgresql-17-system-stats_4.0-1PIGSTY~noble_arm64.deb pigsty 4.0 69.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/s/system-stats/postgresql-17-system-stats_4.0-1PIGSTY~noble_arm64.deb
+@ el8.x86_64 16 system_stats_16 system_stats_16-4.0-1PGDG.rhel8.10.x86_64.rpm pgdg 4.0 32.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/system_stats_16-4.0-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 system_stats_16 system_stats_16-3.2.1-1PGDG.rhel8.10.x86_64.rpm pgdg 3.2.1 30.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/system_stats_16-3.2.1-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 system_stats_16 system_stats_16-3.2-1PGDG.rhel8.x86_64.rpm pgdg 3.2 28.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/system_stats_16-3.2-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 16 system_stats_16 system_stats_16-2.1-1PGDG.rhel8.x86_64.rpm pgdg 2.1 28.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/system_stats_16-2.1-1PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 16 system_stats_16 system_stats_16-4.0-1PGDG.rhel8.10.aarch64.rpm pgdg 4.0 32.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/system_stats_16-4.0-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 16 system_stats_16 system_stats_16-3.2.1-1PGDG.rhel8.10.aarch64.rpm pgdg 3.2.1 29.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/system_stats_16-3.2.1-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 16 system_stats_16 system_stats_16-3.2-1PGDG.rhel8.aarch64.rpm pgdg 3.2 28.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/system_stats_16-3.2-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 16 system_stats_16 system_stats_16-2.1-1PGDG.rhel8.aarch64.rpm pgdg 2.1 27.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/system_stats_16-2.1-1PGDG.rhel8.aarch64.rpm
+@ el9.x86_64 16 system_stats_16 system_stats_16-4.0-1PGDG.rhel9.7.x86_64.rpm pgdg 4.0 31.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/system_stats_16-4.0-1PGDG.rhel9.7.x86_64.rpm
 @ el9.x86_64 16 system_stats_16 system_stats_16-3.2.1-1PGDG.rhel9.7.x86_64.rpm pgdg 3.2.1 29.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/system_stats_16-3.2.1-1PGDG.rhel9.7.x86_64.rpm
 @ el9.x86_64 16 system_stats_16 system_stats_16-3.2-1PGDG.rhel9.x86_64.rpm pgdg 3.2 28.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/system_stats_16-3.2-1PGDG.rhel9.x86_64.rpm
 @ el9.x86_64 16 system_stats_16 system_stats_16-2.1-1PGDG.rhel9.x86_64.rpm pgdg 2.1 27.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/system_stats_16-2.1-1PGDG.rhel9.x86_64.rpm
+@ el9.aarch64 16 system_stats_16 system_stats_16-4.0-1PGDG.rhel9.7.aarch64.rpm pgdg 4.0 31.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/system_stats_16-4.0-1PGDG.rhel9.7.aarch64.rpm
 @ el9.aarch64 16 system_stats_16 system_stats_16-3.2.1-1PGDG.rhel9.7.aarch64.rpm pgdg 3.2.1 29.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/system_stats_16-3.2.1-1PGDG.rhel9.7.aarch64.rpm
 @ el9.aarch64 16 system_stats_16 system_stats_16-3.2-1PGDG.rhel9.aarch64.rpm pgdg 3.2 28.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/system_stats_16-3.2-1PGDG.rhel9.aarch64.rpm
 @ el9.aarch64 16 system_stats_16 system_stats_16-2.1-1PGDG.rhel9.aarch64.rpm pgdg 2.1 27.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/system_stats_16-2.1-1PGDG.rhel9.aarch64.rpm
+@ el10.x86_64 16 system_stats_16 system_stats_16-4.0-1PGDG.rhel10.1.x86_64.rpm pgdg 4.0 32.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/system_stats_16-4.0-1PGDG.rhel10.1.x86_64.rpm
 @ el10.x86_64 16 system_stats_16 system_stats_16-3.2-2PGDG.rhel10.x86_64.rpm pgdg 3.2 29.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/system_stats_16-3.2-2PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 16 system_stats_16 system_stats_16-3.2.1-1PGDG.rhel10.1.x86_64.rpm pgdg 3.2.1 30.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/system_stats_16-3.2.1-1PGDG.rhel10.1.x86_64.rpm
+@ el10.aarch64 16 system_stats_16 system_stats_16-4.0-1PGDG.rhel10.1.aarch64.rpm pgdg 4.0 31.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/system_stats_16-4.0-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 16 system_stats_16 system_stats_16-3.2-2PGDG.rhel10.aarch64.rpm pgdg 3.2 28.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/system_stats_16-3.2-2PGDG.rhel10.aarch64.rpm
 @ el10.aarch64 16 system_stats_16 system_stats_16-3.2.1-1PGDG.rhel10.1.aarch64.rpm pgdg 3.2.1 29.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/system_stats_16-3.2.1-1PGDG.rhel10.1.aarch64.rpm
-@ d12.x86_64 16 postgresql-16-system-stats postgresql-16-system-stats_3.2-1PIGSTY~bookworm_amd64.deb pigsty 3.2 59.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/s/system-stats/postgresql-16-system-stats_3.2-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 16 postgresql-16-system-stats postgresql-16-system-stats_3.2-1PIGSTY~bookworm_arm64.deb pigsty 3.2 58.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/s/system-stats/postgresql-16-system-stats_3.2-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 16 postgresql-16-system-stats postgresql-16-system-stats_3.2-1PIGSTY~trixie_amd64.deb pigsty 3.2 59.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/s/system-stats/postgresql-16-system-stats_3.2-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 16 postgresql-16-system-stats postgresql-16-system-stats_3.2-1PIGSTY~trixie_arm64.deb pigsty 3.2 58.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/s/system-stats/postgresql-16-system-stats_3.2-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 16 postgresql-16-system-stats postgresql-16-system-stats_3.2-1PIGSTY~jammy_amd64.deb pigsty 3.2 68.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/s/system-stats/postgresql-16-system-stats_3.2-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 16 postgresql-16-system-stats postgresql-16-system-stats_3.2-1PIGSTY~jammy_arm64.deb pigsty 3.2 68.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/s/system-stats/postgresql-16-system-stats_3.2-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 16 postgresql-16-system-stats postgresql-16-system-stats_3.2-1PIGSTY~noble_amd64.deb pigsty 3.2 61.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/s/system-stats/postgresql-16-system-stats_3.2-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 16 postgresql-16-system-stats postgresql-16-system-stats_3.2-1PIGSTY~noble_arm64.deb pigsty 3.2 61.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/s/system-stats/postgresql-16-system-stats_3.2-1PIGSTY~noble_arm64.deb
+@ d12.x86_64 16 postgresql-16-system-stats postgresql-16-system-stats_4.0-1PIGSTY~bookworm_amd64.deb pigsty 4.0 67.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/s/system-stats/postgresql-16-system-stats_4.0-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 16 postgresql-16-system-stats postgresql-16-system-stats_4.0-1PIGSTY~bookworm_arm64.deb pigsty 4.0 66.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/s/system-stats/postgresql-16-system-stats_4.0-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 16 postgresql-16-system-stats postgresql-16-system-stats_4.0-1PIGSTY~trixie_amd64.deb pigsty 4.0 67.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/s/system-stats/postgresql-16-system-stats_4.0-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 16 postgresql-16-system-stats postgresql-16-system-stats_4.0-1PIGSTY~trixie_arm64.deb pigsty 4.0 66.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/s/system-stats/postgresql-16-system-stats_4.0-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 16 postgresql-16-system-stats postgresql-16-system-stats_4.0-1PIGSTY~jammy_amd64.deb pigsty 4.0 77.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/s/system-stats/postgresql-16-system-stats_4.0-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 16 postgresql-16-system-stats postgresql-16-system-stats_4.0-1PIGSTY~jammy_arm64.deb pigsty 4.0 77.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/s/system-stats/postgresql-16-system-stats_4.0-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 16 postgresql-16-system-stats postgresql-16-system-stats_4.0-1PIGSTY~noble_amd64.deb pigsty 4.0 69.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/s/system-stats/postgresql-16-system-stats_4.0-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 16 postgresql-16-system-stats postgresql-16-system-stats_4.0-1PIGSTY~noble_arm64.deb pigsty 4.0 69.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/s/system-stats/postgresql-16-system-stats_4.0-1PIGSTY~noble_arm64.deb
+@ el8.x86_64 15 system_stats_15 system_stats_15-4.0-1PGDG.rhel8.10.x86_64.rpm pgdg 4.0 33.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/system_stats_15-4.0-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 system_stats_15 system_stats_15-3.2.1-1PGDG.rhel8.10.x86_64.rpm pgdg 3.2.1 31.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/system_stats_15-3.2.1-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 system_stats_15 system_stats_15-3.2-1PGDG.rhel8.x86_64.rpm pgdg 3.2 29.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/system_stats_15-3.2-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 15 system_stats_15 system_stats_15-2.1-1PGDG.rhel8.x86_64.rpm pgdg 2.1 28.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/system_stats_15-2.1-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 15 system_stats_15 system_stats_15-1.0-2.rhel8.x86_64.rpm pgdg 1.0 74.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/system_stats_15-1.0-2.rhel8.x86_64.rpm
+@ el8.aarch64 15 system_stats_15 system_stats_15-4.0-1PGDG.rhel8.10.aarch64.rpm pgdg 4.0 32.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/system_stats_15-4.0-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 15 system_stats_15 system_stats_15-3.2.1-1PGDG.rhel8.10.aarch64.rpm pgdg 3.2.1 30.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/system_stats_15-3.2.1-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 15 system_stats_15 system_stats_15-3.2-1PGDG.rhel8.aarch64.rpm pgdg 3.2 29.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/system_stats_15-3.2-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 15 system_stats_15 system_stats_15-2.1-1PGDG.rhel8.aarch64.rpm pgdg 2.1 28.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/system_stats_15-2.1-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 15 system_stats_15 system_stats_15-1.0-2.rhel8.aarch64.rpm pgdg 1.0 74.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/system_stats_15-1.0-2.rhel8.aarch64.rpm
+@ el9.x86_64 15 system_stats_15 system_stats_15-4.0-1PGDG.rhel9.7.x86_64.rpm pgdg 4.0 33.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/system_stats_15-4.0-1PGDG.rhel9.7.x86_64.rpm
 @ el9.x86_64 15 system_stats_15 system_stats_15-3.2.1-1PGDG.rhel9.7.x86_64.rpm pgdg 3.2.1 31.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/system_stats_15-3.2.1-1PGDG.rhel9.7.x86_64.rpm
 @ el9.x86_64 15 system_stats_15 system_stats_15-3.2-1PGDG.rhel9.x86_64.rpm pgdg 3.2 30.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/system_stats_15-3.2-1PGDG.rhel9.x86_64.rpm
 @ el9.x86_64 15 system_stats_15 system_stats_15-2.1-1PGDG.rhel9.x86_64.rpm pgdg 2.1 29.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/system_stats_15-2.1-1PGDG.rhel9.x86_64.rpm
 @ el9.x86_64 15 system_stats_15 system_stats_15-1.0-2.rhel9.x86_64.rpm pgdg 1.0 76.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/system_stats_15-1.0-2.rhel9.x86_64.rpm
+@ el9.aarch64 15 system_stats_15 system_stats_15-4.0-1PGDG.rhel9.7.aarch64.rpm pgdg 4.0 33.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/system_stats_15-4.0-1PGDG.rhel9.7.aarch64.rpm
 @ el9.aarch64 15 system_stats_15 system_stats_15-3.2.1-1PGDG.rhel9.7.aarch64.rpm pgdg 3.2.1 31.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/system_stats_15-3.2.1-1PGDG.rhel9.7.aarch64.rpm
 @ el9.aarch64 15 system_stats_15 system_stats_15-3.2-1PGDG.rhel9.aarch64.rpm pgdg 3.2 30.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/system_stats_15-3.2-1PGDG.rhel9.aarch64.rpm
 @ el9.aarch64 15 system_stats_15 system_stats_15-2.1-1PGDG.rhel9.aarch64.rpm pgdg 2.1 29.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/system_stats_15-2.1-1PGDG.rhel9.aarch64.rpm
 @ el9.aarch64 15 system_stats_15 system_stats_15-1.0-2.rhel9.aarch64.rpm pgdg 1.0 75.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/system_stats_15-1.0-2.rhel9.aarch64.rpm
+@ el10.x86_64 15 system_stats_15 system_stats_15-4.0-1PGDG.rhel10.1.x86_64.rpm pgdg 4.0 34.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/system_stats_15-4.0-1PGDG.rhel10.1.x86_64.rpm
 @ el10.x86_64 15 system_stats_15 system_stats_15-3.2-2PGDG.rhel10.x86_64.rpm pgdg 3.2 31.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/system_stats_15-3.2-2PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 15 system_stats_15 system_stats_15-3.2.1-1PGDG.rhel10.1.x86_64.rpm pgdg 3.2.1 32.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/system_stats_15-3.2.1-1PGDG.rhel10.1.x86_64.rpm
+@ el10.aarch64 15 system_stats_15 system_stats_15-4.0-1PGDG.rhel10.1.aarch64.rpm pgdg 4.0 33.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/system_stats_15-4.0-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 15 system_stats_15 system_stats_15-3.2-2PGDG.rhel10.aarch64.rpm pgdg 3.2 30.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/system_stats_15-3.2-2PGDG.rhel10.aarch64.rpm
 @ el10.aarch64 15 system_stats_15 system_stats_15-3.2.1-1PGDG.rhel10.1.aarch64.rpm pgdg 3.2.1 31.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/system_stats_15-3.2.1-1PGDG.rhel10.1.aarch64.rpm
-@ d12.x86_64 15 postgresql-15-system-stats postgresql-15-system-stats_3.2-1PIGSTY~bookworm_amd64.deb pigsty 3.2 60.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/s/system-stats/postgresql-15-system-stats_3.2-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 15 postgresql-15-system-stats postgresql-15-system-stats_3.2-1PIGSTY~bookworm_arm64.deb pigsty 3.2 59.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/s/system-stats/postgresql-15-system-stats_3.2-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 15 postgresql-15-system-stats postgresql-15-system-stats_3.2-1PIGSTY~trixie_amd64.deb pigsty 3.2 60.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/s/system-stats/postgresql-15-system-stats_3.2-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 15 postgresql-15-system-stats postgresql-15-system-stats_3.2-1PIGSTY~trixie_arm64.deb pigsty 3.2 59.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/s/system-stats/postgresql-15-system-stats_3.2-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 15 postgresql-15-system-stats postgresql-15-system-stats_3.2-1PIGSTY~jammy_amd64.deb pigsty 3.2 70.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/s/system-stats/postgresql-15-system-stats_3.2-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 15 postgresql-15-system-stats postgresql-15-system-stats_3.2-1PIGSTY~jammy_arm64.deb pigsty 3.2 70.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/s/system-stats/postgresql-15-system-stats_3.2-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 15 postgresql-15-system-stats postgresql-15-system-stats_3.2-1PIGSTY~noble_amd64.deb pigsty 3.2 62.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/s/system-stats/postgresql-15-system-stats_3.2-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 15 postgresql-15-system-stats postgresql-15-system-stats_3.2-1PIGSTY~noble_arm64.deb pigsty 3.2 62.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/s/system-stats/postgresql-15-system-stats_3.2-1PIGSTY~noble_arm64.deb
+@ d12.x86_64 15 postgresql-15-system-stats postgresql-15-system-stats_4.0-1PIGSTY~bookworm_amd64.deb pigsty 4.0 67.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/s/system-stats/postgresql-15-system-stats_4.0-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 15 postgresql-15-system-stats postgresql-15-system-stats_4.0-1PIGSTY~bookworm_arm64.deb pigsty 4.0 66.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/s/system-stats/postgresql-15-system-stats_4.0-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 15 postgresql-15-system-stats postgresql-15-system-stats_4.0-1PIGSTY~trixie_amd64.deb pigsty 4.0 68.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/s/system-stats/postgresql-15-system-stats_4.0-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 15 postgresql-15-system-stats postgresql-15-system-stats_4.0-1PIGSTY~trixie_arm64.deb pigsty 4.0 66.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/s/system-stats/postgresql-15-system-stats_4.0-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 15 postgresql-15-system-stats postgresql-15-system-stats_4.0-1PIGSTY~jammy_amd64.deb pigsty 4.0 79.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/s/system-stats/postgresql-15-system-stats_4.0-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 15 postgresql-15-system-stats postgresql-15-system-stats_4.0-1PIGSTY~jammy_arm64.deb pigsty 4.0 79.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/s/system-stats/postgresql-15-system-stats_4.0-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 15 postgresql-15-system-stats postgresql-15-system-stats_4.0-1PIGSTY~noble_amd64.deb pigsty 4.0 71.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/s/system-stats/postgresql-15-system-stats_4.0-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 15 postgresql-15-system-stats postgresql-15-system-stats_4.0-1PIGSTY~noble_arm64.deb pigsty 4.0 70.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/s/system-stats/postgresql-15-system-stats_4.0-1PIGSTY~noble_arm64.deb
+@ el8.x86_64 14 system_stats_14 system_stats_14-4.0-1PGDG.rhel8.10.x86_64.rpm pgdg 4.0 33.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/system_stats_14-4.0-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 14 system_stats_14 system_stats_14-3.2.1-1PGDG.rhel8.10.x86_64.rpm pgdg 3.2.1 31.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/system_stats_14-3.2.1-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 14 system_stats_14 system_stats_14-3.2-1PGDG.rhel8.x86_64.rpm pgdg 3.2 29.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/system_stats_14-3.2-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 14 system_stats_14 system_stats_14-2.1-1PGDG.rhel8.x86_64.rpm pgdg 2.1 28.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/system_stats_14-2.1-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 14 system_stats_14 system_stats_14-1.0-2.rhel8.x86_64.rpm pgdg 1.0 75.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/system_stats_14-1.0-2.rhel8.x86_64.rpm
+@ el8.aarch64 14 system_stats_14 system_stats_14-4.0-1PGDG.rhel8.10.aarch64.rpm pgdg 4.0 32.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/system_stats_14-4.0-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 14 system_stats_14 system_stats_14-3.2.1-1PGDG.rhel8.10.aarch64.rpm pgdg 3.2.1 30.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/system_stats_14-3.2.1-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 14 system_stats_14 system_stats_14-3.2-1PGDG.rhel8.aarch64.rpm pgdg 3.2 29.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/system_stats_14-3.2-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 14 system_stats_14 system_stats_14-2.1-1PGDG.rhel8.aarch64.rpm pgdg 2.1 28.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/system_stats_14-2.1-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 14 system_stats_14 system_stats_14-1.0-2.rhel8.aarch64.rpm pgdg 1.0 74.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/system_stats_14-1.0-2.rhel8.aarch64.rpm
+@ el9.x86_64 14 system_stats_14 system_stats_14-4.0-1PGDG.rhel9.7.x86_64.rpm pgdg 4.0 33.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/system_stats_14-4.0-1PGDG.rhel9.7.x86_64.rpm
 @ el9.x86_64 14 system_stats_14 system_stats_14-3.2.1-1PGDG.rhel9.7.x86_64.rpm pgdg 3.2.1 31.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/system_stats_14-3.2.1-1PGDG.rhel9.7.x86_64.rpm
 @ el9.x86_64 14 system_stats_14 system_stats_14-3.2-1PGDG.rhel9.x86_64.rpm pgdg 3.2 30.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/system_stats_14-3.2-1PGDG.rhel9.x86_64.rpm
 @ el9.x86_64 14 system_stats_14 system_stats_14-2.1-1PGDG.rhel9.x86_64.rpm pgdg 2.1 29.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/system_stats_14-2.1-1PGDG.rhel9.x86_64.rpm
+@ el9.aarch64 14 system_stats_14 system_stats_14-4.0-1PGDG.rhel9.7.aarch64.rpm pgdg 4.0 33.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/system_stats_14-4.0-1PGDG.rhel9.7.aarch64.rpm
 @ el9.aarch64 14 system_stats_14 system_stats_14-3.2.1-1PGDG.rhel9.7.aarch64.rpm pgdg 3.2.1 31.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/system_stats_14-3.2.1-1PGDG.rhel9.7.aarch64.rpm
 @ el9.aarch64 14 system_stats_14 system_stats_14-3.2-1PGDG.rhel9.aarch64.rpm pgdg 3.2 30.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/system_stats_14-3.2-1PGDG.rhel9.aarch64.rpm
 @ el9.aarch64 14 system_stats_14 system_stats_14-2.1-1PGDG.rhel9.aarch64.rpm pgdg 2.1 29.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/system_stats_14-2.1-1PGDG.rhel9.aarch64.rpm
 @ el9.aarch64 14 system_stats_14 system_stats_14-1.0-2.rhel9.aarch64.rpm pgdg 1.0 75.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/system_stats_14-1.0-2.rhel9.aarch64.rpm
+@ el10.x86_64 14 system_stats_14 system_stats_14-4.0-1PGDG.rhel10.1.x86_64.rpm pgdg 4.0 34.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/system_stats_14-4.0-1PGDG.rhel10.1.x86_64.rpm
 @ el10.x86_64 14 system_stats_14 system_stats_14-3.2-2PGDG.rhel10.x86_64.rpm pgdg 3.2 31.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/system_stats_14-3.2-2PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 14 system_stats_14 system_stats_14-3.2.1-1PGDG.rhel10.1.x86_64.rpm pgdg 3.2.1 32.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/system_stats_14-3.2.1-1PGDG.rhel10.1.x86_64.rpm
+@ el10.aarch64 14 system_stats_14 system_stats_14-4.0-1PGDG.rhel10.1.aarch64.rpm pgdg 4.0 33.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/system_stats_14-4.0-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 14 system_stats_14 system_stats_14-3.2-2PGDG.rhel10.aarch64.rpm pgdg 3.2 30.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/system_stats_14-3.2-2PGDG.rhel10.aarch64.rpm
 @ el10.aarch64 14 system_stats_14 system_stats_14-3.2.1-1PGDG.rhel10.1.aarch64.rpm pgdg 3.2.1 31.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/system_stats_14-3.2.1-1PGDG.rhel10.1.aarch64.rpm
-@ d12.x86_64 14 postgresql-14-system-stats postgresql-14-system-stats_3.2-1PIGSTY~bookworm_amd64.deb pigsty 3.2 60.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/s/system-stats/postgresql-14-system-stats_3.2-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 14 postgresql-14-system-stats postgresql-14-system-stats_3.2-1PIGSTY~bookworm_arm64.deb pigsty 3.2 59.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/s/system-stats/postgresql-14-system-stats_3.2-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 14 postgresql-14-system-stats postgresql-14-system-stats_3.2-1PIGSTY~trixie_amd64.deb pigsty 3.2 60.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/s/system-stats/postgresql-14-system-stats_3.2-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 14 postgresql-14-system-stats postgresql-14-system-stats_3.2-1PIGSTY~trixie_arm64.deb pigsty 3.2 59.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/s/system-stats/postgresql-14-system-stats_3.2-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 14 postgresql-14-system-stats postgresql-14-system-stats_3.2-1PIGSTY~jammy_amd64.deb pigsty 3.2 70.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/s/system-stats/postgresql-14-system-stats_3.2-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 14 postgresql-14-system-stats postgresql-14-system-stats_3.2-1PIGSTY~jammy_arm64.deb pigsty 3.2 70.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/s/system-stats/postgresql-14-system-stats_3.2-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 14 postgresql-14-system-stats postgresql-14-system-stats_3.2-1PIGSTY~noble_amd64.deb pigsty 3.2 62.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/s/system-stats/postgresql-14-system-stats_3.2-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 14 postgresql-14-system-stats postgresql-14-system-stats_3.2-1PIGSTY~noble_arm64.deb pigsty 3.2 62.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/s/system-stats/postgresql-14-system-stats_3.2-1PIGSTY~noble_arm64.deb
+@ d12.x86_64 14 postgresql-14-system-stats postgresql-14-system-stats_4.0-1PIGSTY~bookworm_amd64.deb pigsty 4.0 67.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/s/system-stats/postgresql-14-system-stats_4.0-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 14 postgresql-14-system-stats postgresql-14-system-stats_4.0-1PIGSTY~bookworm_arm64.deb pigsty 4.0 66.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/s/system-stats/postgresql-14-system-stats_4.0-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 14 postgresql-14-system-stats postgresql-14-system-stats_4.0-1PIGSTY~trixie_amd64.deb pigsty 4.0 67.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/s/system-stats/postgresql-14-system-stats_4.0-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 14 postgresql-14-system-stats postgresql-14-system-stats_4.0-1PIGSTY~trixie_arm64.deb pigsty 4.0 66.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/s/system-stats/postgresql-14-system-stats_4.0-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 14 postgresql-14-system-stats postgresql-14-system-stats_4.0-1PIGSTY~jammy_amd64.deb pigsty 4.0 78.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/s/system-stats/postgresql-14-system-stats_4.0-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 14 postgresql-14-system-stats postgresql-14-system-stats_4.0-1PIGSTY~jammy_arm64.deb pigsty 4.0 78.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/s/system-stats/postgresql-14-system-stats_4.0-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 14 postgresql-14-system-stats postgresql-14-system-stats_4.0-1PIGSTY~noble_amd64.deb pigsty 4.0 71.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/s/system-stats/postgresql-14-system-stats_4.0-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 14 postgresql-14-system-stats postgresql-14-system-stats_4.0-1PIGSTY~noble_arm64.deb pigsty 4.0 70.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/s/system-stats/postgresql-14-system-stats_4.0-1PIGSTY~noble_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建
@@ -247,13 +277,11 @@ CREATE EXTENSION system_stats;
 ```
 
 
-
-
 ## 用法
 
 > [system_stats: PostgreSQL 系统级统计信息](https://github.com/EnterpriseDB/system_stats)
 
-system_stats 提供 SQL 函数来访问操作系统级别的统计信息用于监控。支持 Linux、macOS 和 Windows。
+`system_stats` 提供 SQL 函数，用于访问操作系统级统计信息并支持监控。支持 Linux、macOS 和 Windows。
 
 ### 函数
 
@@ -264,19 +292,19 @@ SELECT * FROM pg_sys_os_info();
 -- CPU 信息（厂商、型号、核心数、时钟频率、缓存大小）
 SELECT * FROM pg_sys_cpu_info();
 
--- CPU 使用率（用户、系统、空闲、IO等待百分比）
+-- CPU 使用率（用户态、系统态、空闲、iowait 百分比）
 SELECT * FROM pg_sys_cpu_usage_info();
 
 -- 内存信息（总量、已用、空闲、交换区、缓存，单位字节）
 SELECT * FROM pg_sys_memory_info();
 
--- 磁盘 I/O 分析（每设备的读写次数、字节数、时间）
+-- 磁盘 I/O 分析（每个设备的读写次数、字节数、耗时）
 SELECT * FROM pg_sys_io_analysis_info();
 
 -- 磁盘信息（文件系统、挂载点、总量/已用/可用空间）
 SELECT * FROM pg_sys_disk_info();
 
--- 负载均值（1、5、10、15 分钟间隔）
+-- 负载均值（1、5、10、15 分钟区间）
 SELECT * FROM pg_sys_load_avg_info();
 
 -- 进程信息（总数、运行中、睡眠、停止、僵尸进程数）
@@ -285,7 +313,7 @@ SELECT * FROM pg_sys_process_info();
 -- 网络信息（接口、IP、发送/接收的字节数/包数、错误数）
 SELECT * FROM pg_sys_network_info();
 
--- 每进程 CPU 和内存使用情况
+-- 每个进程的 CPU 和内存使用情况
 SELECT * FROM pg_sys_cpu_memory_by_process();
 ```
 

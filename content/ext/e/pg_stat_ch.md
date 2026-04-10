@@ -1,0 +1,244 @@
+---
+title: "pg_stat_ch"
+linkTitle: "pg_stat_ch"
+description: "将 PostgreSQL 查询遥测实时导出到 ClickHouse"
+weight: 6020
+---
+
+<div class="ext-cards">
+  <a class="ext-card ext-card--repo" href="https://github.com/ClickHouse/pg_stat_ch">
+    <div class="ext-card__kicker">仓库</div>
+    <div class="ext-card__title">ClickHouse/pg_stat_ch</div>
+    <div class="ext-card__desc">https://github.com/ClickHouse/pg_stat_ch</div>
+  </a>
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pg_stat_ch-0.3.3-vendor.tar.gz">
+    <div class="ext-card__kicker">源码</div>
+    <div class="ext-card__title">pg_stat_ch-0.3.3-vendor.tar.gz</div>
+    <div class="ext-card__desc">pg_stat_ch-0.3.3-vendor.tar.gz</div>
+  </a>
+</div>
+
+
+---------
+
+## 概览
+
+| **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
+|:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
+| [**`pg_stat_ch`**](/ext/e/pg_stat_ch) | `0.3.3` | <a class="ext-badge ext-badge--cate stat" href="/ext/cate/stat">STAT</a> | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang cpp" href="/ext/language#cpp">C++</a> |
+{.ext-table}
+
+|  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
+|:-----:|:-------------------------------------------------------------------------|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|:----------|
+| 6020  | [**`pg_stat_ch`**](/ext/e/pg_stat_ch) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | - |
+{.ext-table}
+
+| **相关扩展** | [`pg_tracing`](/ext/e/pg_tracing) [`pg_stat_monitor`](/ext/e/pg_stat_monitor) [`pg_stat_kcache`](/ext/e/pg_stat_kcache) [`powa`](/ext/e/powa) |
+|:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+{.ext-table .ext-table--rel}
+
+
+> Requires shared_preload_libraries = pg_stat_ch; README recommends track_io_timing = on.
+
+
+## 版本
+
+| 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
+|:----:|:----:|:----:|:------:|:--------:|:----:|
+| [**EXT**](/ext/list#stat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.3.3` | {{< pgvers "18,17,16" >}} | `pg_stat_ch` | - |
+| [**RPM**](/ext/rpm#stat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.3.3` | {{< pgvers "18,17,16" >}} | `pg_stat_ch_$v` | - |
+| [**DEB**](/ext/deb#stat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.3.3` | {{< pgvers "18,17,16" >}} | `postgresql-$v-pg-stat-ch` | - |
+{.ext-table}
+
+{{< pgext_matrix >}}
+| **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
+|:--:|:--:|:--:|:--:|:--:|:--:|
+| el8.x86_64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| el8.aarch64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| el9.x86_64 | AVAIL PIGSTY 0.3.3 1 | AVAIL PIGSTY 0.3.3 1 | AVAIL PIGSTY 0.3.3 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| el9.aarch64 | AVAIL PIGSTY 0.3.3 1 | AVAIL PIGSTY 0.3.3 1 | AVAIL PIGSTY 0.3.3 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| el10.x86_64 | AVAIL PIGSTY 0.3.3 1 | AVAIL PIGSTY 0.3.3 1 | AVAIL PIGSTY 0.3.3 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| el10.aarch64 | AVAIL PIGSTY 0.3.3 1 | AVAIL PIGSTY 0.3.3 1 | AVAIL PIGSTY 0.3.3 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| d12.x86_64 | AVAIL PIGSTY 0.3.3 1 | AVAIL PIGSTY 0.3.3 1 | AVAIL PIGSTY 0.3.3 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| d12.aarch64 | AVAIL PIGSTY 0.3.3 1 | AVAIL PIGSTY 0.3.3 1 | AVAIL PIGSTY 0.3.3 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| d13.x86_64 | AVAIL PIGSTY 0.3.3 1 | AVAIL PIGSTY 0.3.3 1 | AVAIL PIGSTY 0.3.3 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| d13.aarch64 | AVAIL PIGSTY 0.3.3 1 | AVAIL PIGSTY 0.3.3 1 | AVAIL PIGSTY 0.3.3 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| u22.x86_64 | AVAIL PIGSTY 0.3.3 1 | AVAIL PIGSTY 0.3.3 1 | AVAIL PIGSTY 0.3.3 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| u22.aarch64 | AVAIL PIGSTY 0.3.3 1 | AVAIL PIGSTY 0.3.3 1 | AVAIL PIGSTY 0.3.3 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| u24.x86_64 | AVAIL PIGSTY 0.3.3 1 | AVAIL PIGSTY 0.3.3 1 | AVAIL PIGSTY 0.3.3 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| u24.aarch64 | AVAIL PIGSTY 0.3.3 1 | AVAIL PIGSTY 0.3.3 1 | AVAIL PIGSTY 0.3.3 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+@ el9.x86_64 18 pg_stat_ch_18 pg_stat_ch_18-0.3.3-1PIGSTY.el9.x86_64.rpm pigsty 0.3.3 1.1MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_stat_ch_18-0.3.3-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 18 pg_stat_ch_18 pg_stat_ch_18-0.3.3-1PIGSTY.el9.aarch64.rpm pigsty 0.3.3 1.1MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_stat_ch_18-0.3.3-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 18 pg_stat_ch_18 pg_stat_ch_18-0.3.3-1PIGSTY.el10.x86_64.rpm pigsty 0.3.3 1.0MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_stat_ch_18-0.3.3-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 18 pg_stat_ch_18 pg_stat_ch_18-0.3.3-1PIGSTY.el10.aarch64.rpm pigsty 0.3.3 994.3KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_stat_ch_18-0.3.3-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-pg-stat-ch postgresql-18-pg-stat-ch_0.3.3-1PIGSTY~bookworm_amd64.deb pigsty 0.3.3 962.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-stat-ch/postgresql-18-pg-stat-ch_0.3.3-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 18 postgresql-18-pg-stat-ch postgresql-18-pg-stat-ch_0.3.3-1PIGSTY~bookworm_arm64.deb pigsty 0.3.3 865.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-stat-ch/postgresql-18-pg-stat-ch_0.3.3-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 18 postgresql-18-pg-stat-ch postgresql-18-pg-stat-ch_0.3.3-1PIGSTY~trixie_amd64.deb pigsty 0.3.3 987.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-stat-ch/postgresql-18-pg-stat-ch_0.3.3-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 18 postgresql-18-pg-stat-ch postgresql-18-pg-stat-ch_0.3.3-1PIGSTY~trixie_arm64.deb pigsty 0.3.3 885.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-stat-ch/postgresql-18-pg-stat-ch_0.3.3-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 18 postgresql-18-pg-stat-ch postgresql-18-pg-stat-ch_0.3.3-1PIGSTY~jammy_amd64.deb pigsty 0.3.3 5.6MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-stat-ch/postgresql-18-pg-stat-ch_0.3.3-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 18 postgresql-18-pg-stat-ch postgresql-18-pg-stat-ch_0.3.3-1PIGSTY~jammy_arm64.deb pigsty 0.3.3 5.3MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-stat-ch/postgresql-18-pg-stat-ch_0.3.3-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 18 postgresql-18-pg-stat-ch postgresql-18-pg-stat-ch_0.3.3-1PIGSTY~noble_amd64.deb pigsty 0.3.3 922.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-stat-ch/postgresql-18-pg-stat-ch_0.3.3-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 18 postgresql-18-pg-stat-ch postgresql-18-pg-stat-ch_0.3.3-1PIGSTY~noble_arm64.deb pigsty 0.3.3 880.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-stat-ch/postgresql-18-pg-stat-ch_0.3.3-1PIGSTY~noble_arm64.deb
+@ el9.x86_64 17 pg_stat_ch_17 pg_stat_ch_17-0.3.3-1PIGSTY.el9.x86_64.rpm pigsty 0.3.3 1.1MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_stat_ch_17-0.3.3-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 17 pg_stat_ch_17 pg_stat_ch_17-0.3.3-1PIGSTY.el9.aarch64.rpm pigsty 0.3.3 1.1MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_stat_ch_17-0.3.3-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 17 pg_stat_ch_17 pg_stat_ch_17-0.3.3-1PIGSTY.el10.x86_64.rpm pigsty 0.3.3 1.0MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_stat_ch_17-0.3.3-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 17 pg_stat_ch_17 pg_stat_ch_17-0.3.3-1PIGSTY.el10.aarch64.rpm pigsty 0.3.3 991.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_stat_ch_17-0.3.3-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-pg-stat-ch postgresql-17-pg-stat-ch_0.3.3-1PIGSTY~bookworm_amd64.deb pigsty 0.3.3 961.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-stat-ch/postgresql-17-pg-stat-ch_0.3.3-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 17 postgresql-17-pg-stat-ch postgresql-17-pg-stat-ch_0.3.3-1PIGSTY~bookworm_arm64.deb pigsty 0.3.3 865.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-stat-ch/postgresql-17-pg-stat-ch_0.3.3-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 17 postgresql-17-pg-stat-ch postgresql-17-pg-stat-ch_0.3.3-1PIGSTY~trixie_amd64.deb pigsty 0.3.3 988.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-stat-ch/postgresql-17-pg-stat-ch_0.3.3-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 17 postgresql-17-pg-stat-ch postgresql-17-pg-stat-ch_0.3.3-1PIGSTY~trixie_arm64.deb pigsty 0.3.3 884.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-stat-ch/postgresql-17-pg-stat-ch_0.3.3-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 17 postgresql-17-pg-stat-ch postgresql-17-pg-stat-ch_0.3.3-1PIGSTY~jammy_amd64.deb pigsty 0.3.3 5.6MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-stat-ch/postgresql-17-pg-stat-ch_0.3.3-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 17 postgresql-17-pg-stat-ch postgresql-17-pg-stat-ch_0.3.3-1PIGSTY~jammy_arm64.deb pigsty 0.3.3 5.3MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-stat-ch/postgresql-17-pg-stat-ch_0.3.3-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 17 postgresql-17-pg-stat-ch postgresql-17-pg-stat-ch_0.3.3-1PIGSTY~noble_amd64.deb pigsty 0.3.3 922.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-stat-ch/postgresql-17-pg-stat-ch_0.3.3-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 17 postgresql-17-pg-stat-ch postgresql-17-pg-stat-ch_0.3.3-1PIGSTY~noble_arm64.deb pigsty 0.3.3 879.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-stat-ch/postgresql-17-pg-stat-ch_0.3.3-1PIGSTY~noble_arm64.deb
+@ el9.x86_64 16 pg_stat_ch_16 pg_stat_ch_16-0.3.3-1PIGSTY.el9.x86_64.rpm pigsty 0.3.3 1.1MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_stat_ch_16-0.3.3-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 16 pg_stat_ch_16 pg_stat_ch_16-0.3.3-1PIGSTY.el9.aarch64.rpm pigsty 0.3.3 1.1MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_stat_ch_16-0.3.3-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 16 pg_stat_ch_16 pg_stat_ch_16-0.3.3-1PIGSTY.el10.x86_64.rpm pigsty 0.3.3 1.0MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_stat_ch_16-0.3.3-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 16 pg_stat_ch_16 pg_stat_ch_16-0.3.3-1PIGSTY.el10.aarch64.rpm pigsty 0.3.3 994.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_stat_ch_16-0.3.3-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 16 postgresql-16-pg-stat-ch postgresql-16-pg-stat-ch_0.3.3-1PIGSTY~bookworm_amd64.deb pigsty 0.3.3 961.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-stat-ch/postgresql-16-pg-stat-ch_0.3.3-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 16 postgresql-16-pg-stat-ch postgresql-16-pg-stat-ch_0.3.3-1PIGSTY~bookworm_arm64.deb pigsty 0.3.3 865.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-stat-ch/postgresql-16-pg-stat-ch_0.3.3-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 16 postgresql-16-pg-stat-ch postgresql-16-pg-stat-ch_0.3.3-1PIGSTY~trixie_amd64.deb pigsty 0.3.3 989.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-stat-ch/postgresql-16-pg-stat-ch_0.3.3-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 16 postgresql-16-pg-stat-ch postgresql-16-pg-stat-ch_0.3.3-1PIGSTY~trixie_arm64.deb pigsty 0.3.3 884.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-stat-ch/postgresql-16-pg-stat-ch_0.3.3-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 16 postgresql-16-pg-stat-ch postgresql-16-pg-stat-ch_0.3.3-1PIGSTY~jammy_amd64.deb pigsty 0.3.3 5.6MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-stat-ch/postgresql-16-pg-stat-ch_0.3.3-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 16 postgresql-16-pg-stat-ch postgresql-16-pg-stat-ch_0.3.3-1PIGSTY~jammy_arm64.deb pigsty 0.3.3 5.3MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-stat-ch/postgresql-16-pg-stat-ch_0.3.3-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 16 postgresql-16-pg-stat-ch postgresql-16-pg-stat-ch_0.3.3-1PIGSTY~noble_amd64.deb pigsty 0.3.3 921.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-stat-ch/postgresql-16-pg-stat-ch_0.3.3-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 16 postgresql-16-pg-stat-ch postgresql-16-pg-stat-ch_0.3.3-1PIGSTY~noble_arm64.deb pigsty 0.3.3 879.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-stat-ch/postgresql-16-pg-stat-ch_0.3.3-1PIGSTY~noble_arm64.deb
+{{< /pgext_matrix >}}
+
+## 构建
+
+您可以使用 `pig build` 命令构建 `pg_stat_ch` 扩展的 RPM / DEB 包：
+
+```bash
+pig build pkg pg_stat_ch         # 构建 RPM / DEB 包
+```
+
+
+## 安装
+
+您可以直接安装 `pg_stat_ch` 扩展包的预置二进制包，首先确保 [**PGDG**](/docs/repo/pgdg) 和 [**PIGSTY**](/docs/repo/pgsql) 仓库已经添加并启用：
+
+```bash
+pig repo add pgsql -u          # 添加仓库并更新缓存
+```
+
+使用 [**pig**](/docs/pig) 或者是 `apt/yum/dnf` 安装扩展：
+
+{{< tabpane text=true persist=header >}}
+{{% tab header="安装" %}}
+```bash
+pig install pg_stat_ch;          # 当前活跃 PG 版本安装
+```
+{{% /tab %}}
+{{% tab header="pig" %}}
+```bash
+pig ext install -y pg_stat_ch -v 18  # PG 18
+pig ext install -y pg_stat_ch -v 17  # PG 17
+pig ext install -y pg_stat_ch -v 16  # PG 16
+```
+{{% /tab %}}
+{{% tab header="dnf" %}}
+```bash
+dnf install -y pg_stat_ch_18       # PG 18
+dnf install -y pg_stat_ch_17       # PG 17
+dnf install -y pg_stat_ch_16       # PG 16
+```
+{{% /tab %}}
+{{% tab header="apt" %}}
+```bash
+apt install -y postgresql-18-pg-stat-ch   # PG 18
+apt install -y postgresql-17-pg-stat-ch   # PG 17
+apt install -y postgresql-16-pg-stat-ch   # PG 16
+```
+{{% /tab %}}
+{{< /tabpane >}}
+
+
+**预加载配置**：
+
+```bash
+shared_preload_libraries = 'pg_stat_ch';
+```
+
+
+**创建扩展**：
+
+```sql
+CREATE EXTENSION pg_stat_ch;
+```
+
+
+## 用法
+
+> 语法：
+>
+> ```sql
+> CREATE EXTENSION pg_stat_ch;
+> SELECT pg_stat_ch_version();
+> SELECT * FROM pg_stat_ch_stats();
+> ```
+>
+> 来源：[README](https://github.com/ClickHouse/pg_stat_ch)，[博客文章](https://clickhouse.com/blog/pg_stat_ch-postgres-extension-stats-to-clickhouse)
+
+`pg_stat_ch` 会在 PostgreSQL 中捕获每条查询的执行遥测信息，并实时把原始事件导出到 ClickHouse。上游项目将其与 `pg_stat_statements` 对比：后者在 PostgreSQL 内聚合统计，而它把原始事件发送到 ClickHouse 进行下游分析。
+
+## 架构
+
+README 将数据流描述为：
+
+```text
+PostgreSQL hooks -> shared memory queue -> background worker -> ClickHouse
+```
+
+上游明确强调的设计目标包括：
+
+- 查询路径上不发生网络 I/O
+- 通过固定大小环形缓冲区限制内存
+- 导出原始事件，而不是在本地聚合
+- 当队列溢出或 ClickHouse 不可用时优雅降级
+
+## 配置
+
+扩展必须预加载，并配置 ClickHouse 连接参数：
+
+```ini
+shared_preload_libraries = 'pg_stat_ch'
+track_io_timing = on
+
+pg_stat_ch.clickhouse_host = 'localhost'
+pg_stat_ch.clickhouse_port = 9000
+pg_stat_ch.clickhouse_database = 'pg_stat_ch'
+pg_stat_ch.clickhouse_use_tls = on
+pg_stat_ch.clickhouse_skip_tls_verify = off
+```
+
+在 PostgreSQL 重启并完成 ClickHouse schema 初始化后：
+
+```sql
+CREATE EXTENSION pg_stat_ch;
+```
+
+## SQL API
+
+README 记录了以下 SQL 函数：
+
+- `pg_stat_ch_version()`
+- `pg_stat_ch_stats()`
+- `pg_stat_ch_reset()`
+
+`pg_stat_ch_stats()` 会暴露队列和导出器计数器，便于确认事件是否已被捕获并刷出。
+
+## 捕获内容
+
+当前 README 说明支持捕获：
+
+- 查询耗时与返回行数
+- 缓冲区使用量与 WAL 使用量
+- CPU 时间
+- DML、DDL 和通用语句
+- SQLSTATE 与错误级别
+- PostgreSQL 15+ 的 JIT 信息
+- PostgreSQL 18+ 的并行 worker 统计
+- 诸如应用名和客户端 IP 等客户端上下文信息
+
+项目目前声明对 PostgreSQL 16、17 和 18 提供完整支持。

@@ -50,10 +50,10 @@ weight: 8730
 {{< pgext_matrix >}}
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 0.0.3 1 | AVAIL PIGSTY 0.0.3 1 | AVAIL PIGSTY 0.0.3 2 | AVAIL PIGSTY 0.0.3 2 | AVAIL PIGSTY 0.0.3 2 |
-| el8.aarch64 | AVAIL PIGSTY 0.0.3 1 | AVAIL PIGSTY 0.0.3 1 | AVAIL PIGSTY 0.0.3 2 | AVAIL PIGSTY 0.0.3 2 | AVAIL PIGSTY 0.0.3 2 |
-| el9.x86_64 | AVAIL PIGSTY 0.0.3 1 | AVAIL PIGSTY 0.0.3 1 | AVAIL PIGSTY 0.0.3 2 | AVAIL PIGSTY 0.0.3 2 | AVAIL PIGSTY 0.0.3 2 |
-| el9.aarch64 | AVAIL PIGSTY 0.0.3 1 | AVAIL PIGSTY 0.0.3 1 | AVAIL PIGSTY 0.0.3 2 | AVAIL PIGSTY 0.0.3 2 | AVAIL PIGSTY 0.0.3 2 |
+| el8.x86_64 | AVAIL PIGSTY 0.0.3 1 | AVAIL PIGSTY 0.0.3 1 | AVAIL PIGSTY 0.0.3 1 | AVAIL PIGSTY 0.0.3 1 | AVAIL PIGSTY 0.0.3 1 |
+| el8.aarch64 | AVAIL PIGSTY 0.0.3 1 | AVAIL PIGSTY 0.0.3 1 | AVAIL PIGSTY 0.0.3 1 | AVAIL PIGSTY 0.0.3 1 | AVAIL PIGSTY 0.0.3 1 |
+| el9.x86_64 | AVAIL PIGSTY 0.0.3 1 | AVAIL PIGSTY 0.0.3 1 | AVAIL PIGSTY 0.0.3 1 | AVAIL PIGSTY 0.0.3 1 | AVAIL PIGSTY 0.0.3 1 |
+| el9.aarch64 | AVAIL PIGSTY 0.0.3 1 | AVAIL PIGSTY 0.0.3 1 | AVAIL PIGSTY 0.0.3 1 | AVAIL PIGSTY 0.0.3 1 | AVAIL PIGSTY 0.0.3 1 |
 | el10.x86_64 | AVAIL PIGSTY 0.0.3 1 | AVAIL PIGSTY 0.0.3 1 | AVAIL PIGSTY 0.0.3 1 | AVAIL PIGSTY 0.0.3 1 | AVAIL PIGSTY 0.0.3 1 |
 | el10.aarch64 | AVAIL PIGSTY 0.0.3 1 | AVAIL PIGSTY 0.0.3 1 | AVAIL PIGSTY 0.0.3 1 | AVAIL PIGSTY 0.0.3 1 | AVAIL PIGSTY 0.0.3 1 |
 | d12.x86_64 | AVAIL PIGSTY 0.0.3 1 | AVAIL PIGSTY 0.0.3 1 | AVAIL PIGSTY 0.0.3 1 | AVAIL PIGSTY 0.0.3 1 | AVAIL PIGSTY 0.0.3 1 |
@@ -93,13 +93,9 @@ weight: 8730
 @ u24.x86_64 17 postgresql-17-kafka-fdw postgresql-17-kafka-fdw_0.0.3-2PIGSTY~noble_amd64.deb pigsty 0.0.3 82.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/k/kafka-fdw/postgresql-17-kafka-fdw_0.0.3-2PIGSTY~noble_amd64.deb
 @ u24.aarch64 17 postgresql-17-kafka-fdw postgresql-17-kafka-fdw_0.0.3-2PIGSTY~noble_arm64.deb pigsty 0.0.3 80.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/k/kafka-fdw/postgresql-17-kafka-fdw_0.0.3-2PIGSTY~noble_arm64.deb
 @ el8.x86_64 16 kafka_fdw_16 kafka_fdw_16-0.0.3-2PIGSTY.el8.x86_64.rpm pigsty 0.0.3 37.0KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/kafka_fdw_16-0.0.3-2PIGSTY.el8.x86_64.rpm
-@ el8.x86_64 16 kafka_fdw_16 kafka_fdw_16-0.0.3-1PIGSTY.el8.x86_64.rpm pigsty 0.0.3 35.1KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/kafka_fdw_16-0.0.3-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 16 kafka_fdw_16 kafka_fdw_16-0.0.3-2PIGSTY.el8.aarch64.rpm pigsty 0.0.3 35.4KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/kafka_fdw_16-0.0.3-2PIGSTY.el8.aarch64.rpm
-@ el8.aarch64 16 kafka_fdw_16 kafka_fdw_16-0.0.3-1PIGSTY.el8.aarch64.rpm pigsty 0.0.3 33.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/kafka_fdw_16-0.0.3-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 16 kafka_fdw_16 kafka_fdw_16-0.0.3-2PIGSTY.el9.x86_64.rpm pigsty 0.0.3 36.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/kafka_fdw_16-0.0.3-2PIGSTY.el9.x86_64.rpm
-@ el9.x86_64 16 kafka_fdw_16 kafka_fdw_16-0.0.3-1PIGSTY.el9.x86_64.rpm pigsty 0.0.3 35.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/kafka_fdw_16-0.0.3-1PIGSTY.el9.x86_64.rpm
 @ el9.aarch64 16 kafka_fdw_16 kafka_fdw_16-0.0.3-2PIGSTY.el9.aarch64.rpm pigsty 0.0.3 35.2KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/kafka_fdw_16-0.0.3-2PIGSTY.el9.aarch64.rpm
-@ el9.aarch64 16 kafka_fdw_16 kafka_fdw_16-0.0.3-1PIGSTY.el9.aarch64.rpm pigsty 0.0.3 34.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/kafka_fdw_16-0.0.3-1PIGSTY.el9.aarch64.rpm
 @ el10.x86_64 16 kafka_fdw_16 kafka_fdw_16-0.0.3-2PIGSTY.el10.x86_64.rpm pigsty 0.0.3 36.8KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/kafka_fdw_16-0.0.3-2PIGSTY.el10.x86_64.rpm
 @ el10.aarch64 16 kafka_fdw_16 kafka_fdw_16-0.0.3-2PIGSTY.el10.aarch64.rpm pigsty 0.0.3 36.1KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/kafka_fdw_16-0.0.3-2PIGSTY.el10.aarch64.rpm
 @ d12.x86_64 16 postgresql-16-kafka-fdw postgresql-16-kafka-fdw_0.0.3-2PIGSTY~bookworm_amd64.deb pigsty 0.0.3 84.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/k/kafka-fdw/postgresql-16-kafka-fdw_0.0.3-2PIGSTY~bookworm_amd64.deb
@@ -111,13 +107,9 @@ weight: 8730
 @ u24.x86_64 16 postgresql-16-kafka-fdw postgresql-16-kafka-fdw_0.0.3-2PIGSTY~noble_amd64.deb pigsty 0.0.3 88.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/k/kafka-fdw/postgresql-16-kafka-fdw_0.0.3-2PIGSTY~noble_amd64.deb
 @ u24.aarch64 16 postgresql-16-kafka-fdw postgresql-16-kafka-fdw_0.0.3-2PIGSTY~noble_arm64.deb pigsty 0.0.3 86.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/k/kafka-fdw/postgresql-16-kafka-fdw_0.0.3-2PIGSTY~noble_arm64.deb
 @ el8.x86_64 15 kafka_fdw_15 kafka_fdw_15-0.0.3-2PIGSTY.el8.x86_64.rpm pigsty 0.0.3 37.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/kafka_fdw_15-0.0.3-2PIGSTY.el8.x86_64.rpm
-@ el8.x86_64 15 kafka_fdw_15 kafka_fdw_15-0.0.3-1PIGSTY.el8.x86_64.rpm pigsty 0.0.3 35.4KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/kafka_fdw_15-0.0.3-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 15 kafka_fdw_15 kafka_fdw_15-0.0.3-2PIGSTY.el8.aarch64.rpm pigsty 0.0.3 35.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/kafka_fdw_15-0.0.3-2PIGSTY.el8.aarch64.rpm
-@ el8.aarch64 15 kafka_fdw_15 kafka_fdw_15-0.0.3-1PIGSTY.el8.aarch64.rpm pigsty 0.0.3 33.4KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/kafka_fdw_15-0.0.3-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 15 kafka_fdw_15 kafka_fdw_15-0.0.3-2PIGSTY.el9.x86_64.rpm pigsty 0.0.3 36.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/kafka_fdw_15-0.0.3-2PIGSTY.el9.x86_64.rpm
-@ el9.x86_64 15 kafka_fdw_15 kafka_fdw_15-0.0.3-1PIGSTY.el9.x86_64.rpm pigsty 0.0.3 36.1KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/kafka_fdw_15-0.0.3-1PIGSTY.el9.x86_64.rpm
 @ el9.aarch64 15 kafka_fdw_15 kafka_fdw_15-0.0.3-2PIGSTY.el9.aarch64.rpm pigsty 0.0.3 35.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/kafka_fdw_15-0.0.3-2PIGSTY.el9.aarch64.rpm
-@ el9.aarch64 15 kafka_fdw_15 kafka_fdw_15-0.0.3-1PIGSTY.el9.aarch64.rpm pigsty 0.0.3 35.1KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/kafka_fdw_15-0.0.3-1PIGSTY.el9.aarch64.rpm
 @ el10.x86_64 15 kafka_fdw_15 kafka_fdw_15-0.0.3-2PIGSTY.el10.x86_64.rpm pigsty 0.0.3 37.4KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/kafka_fdw_15-0.0.3-2PIGSTY.el10.x86_64.rpm
 @ el10.aarch64 15 kafka_fdw_15 kafka_fdw_15-0.0.3-2PIGSTY.el10.aarch64.rpm pigsty 0.0.3 36.8KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/kafka_fdw_15-0.0.3-2PIGSTY.el10.aarch64.rpm
 @ d12.x86_64 15 postgresql-15-kafka-fdw postgresql-15-kafka-fdw_0.0.3-2PIGSTY~bookworm_amd64.deb pigsty 0.0.3 84.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/k/kafka-fdw/postgresql-15-kafka-fdw_0.0.3-2PIGSTY~bookworm_amd64.deb
@@ -129,13 +121,9 @@ weight: 8730
 @ u24.x86_64 15 postgresql-15-kafka-fdw postgresql-15-kafka-fdw_0.0.3-2PIGSTY~noble_amd64.deb pigsty 0.0.3 88.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/k/kafka-fdw/postgresql-15-kafka-fdw_0.0.3-2PIGSTY~noble_amd64.deb
 @ u24.aarch64 15 postgresql-15-kafka-fdw postgresql-15-kafka-fdw_0.0.3-2PIGSTY~noble_arm64.deb pigsty 0.0.3 87.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/k/kafka-fdw/postgresql-15-kafka-fdw_0.0.3-2PIGSTY~noble_arm64.deb
 @ el8.x86_64 14 kafka_fdw_14 kafka_fdw_14-0.0.3-2PIGSTY.el8.x86_64.rpm pigsty 0.0.3 37.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/kafka_fdw_14-0.0.3-2PIGSTY.el8.x86_64.rpm
-@ el8.x86_64 14 kafka_fdw_14 kafka_fdw_14-0.0.3-1PIGSTY.el8.x86_64.rpm pigsty 0.0.3 35.4KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/kafka_fdw_14-0.0.3-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 14 kafka_fdw_14 kafka_fdw_14-0.0.3-2PIGSTY.el8.aarch64.rpm pigsty 0.0.3 35.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/kafka_fdw_14-0.0.3-2PIGSTY.el8.aarch64.rpm
-@ el8.aarch64 14 kafka_fdw_14 kafka_fdw_14-0.0.3-1PIGSTY.el8.aarch64.rpm pigsty 0.0.3 33.4KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/kafka_fdw_14-0.0.3-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 14 kafka_fdw_14 kafka_fdw_14-0.0.3-2PIGSTY.el9.x86_64.rpm pigsty 0.0.3 36.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/kafka_fdw_14-0.0.3-2PIGSTY.el9.x86_64.rpm
-@ el9.x86_64 14 kafka_fdw_14 kafka_fdw_14-0.0.3-1PIGSTY.el9.x86_64.rpm pigsty 0.0.3 36.1KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/kafka_fdw_14-0.0.3-1PIGSTY.el9.x86_64.rpm
 @ el9.aarch64 14 kafka_fdw_14 kafka_fdw_14-0.0.3-2PIGSTY.el9.aarch64.rpm pigsty 0.0.3 35.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/kafka_fdw_14-0.0.3-2PIGSTY.el9.aarch64.rpm
-@ el9.aarch64 14 kafka_fdw_14 kafka_fdw_14-0.0.3-1PIGSTY.el9.aarch64.rpm pigsty 0.0.3 35.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/kafka_fdw_14-0.0.3-1PIGSTY.el9.aarch64.rpm
 @ el10.x86_64 14 kafka_fdw_14 kafka_fdw_14-0.0.3-2PIGSTY.el10.x86_64.rpm pigsty 0.0.3 37.4KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/kafka_fdw_14-0.0.3-2PIGSTY.el10.x86_64.rpm
 @ el10.aarch64 14 kafka_fdw_14 kafka_fdw_14-0.0.3-2PIGSTY.el10.aarch64.rpm pigsty 0.0.3 36.9KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/kafka_fdw_14-0.0.3-2PIGSTY.el10.aarch64.rpm
 @ d12.x86_64 14 postgresql-14-kafka-fdw postgresql-14-kafka-fdw_0.0.3-2PIGSTY~bookworm_amd64.deb pigsty 0.0.3 84.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/k/kafka-fdw/postgresql-14-kafka-fdw_0.0.3-2PIGSTY~bookworm_amd64.deb
@@ -210,83 +198,119 @@ CREATE EXTENSION kafka_fdw;
 ```
 
 
-
 ## 用法
 
-> [kafka_fdw: CSV 格式消息的 Kafka 外部数据包装器](https://github.com/adjust/kafka_fdw)
+> [README](https://github.com/adjust/kafka_fdw)
 
-### 创建服务器
+`kafka_fdw` 是一个将 Kafka 消息暴露为 PostgreSQL 外部表的外部数据包装器。上游 README 明确提醒，这个项目尚未达到生产级就绪状态。
+
+### 服务器与映射
+
+先定义带 Kafka broker 列表的外部服务器，再创建用户映射：
 
 ```sql
 CREATE EXTENSION kafka_fdw;
 
-CREATE SERVER kafka_server FOREIGN DATA WRAPPER kafka_fdw
-  OPTIONS (brokers 'localhost:9092');
-```
+CREATE SERVER kafka_server
+FOREIGN DATA WRAPPER kafka_fdw
+OPTIONS (brokers 'localhost:9092');
 
-**服务器选项：** `brokers`（必填，逗号分隔的 Kafka broker 端点）。
-
-### 创建用户映射
-
-```sql
 CREATE USER MAPPING FOR PUBLIC SERVER kafka_server;
 ```
 
-### 创建外部表（CSV 格式）
+## 外部表
+
+Kafka 外部表必须包含两个元数据列，一个标记为 `partition 'true'`，另一个标记为 `offset 'true'`。其余列用于描述消息负载。
+
+### CSV 消息
 
 ```sql
-CREATE FOREIGN TABLE kafka_csv (
-  part int OPTIONS (partition 'true'),
-  offs bigint OPTIONS (offset 'true'),
-  some_int int,
-  some_text text,
-  some_date date,
-  some_time timestamp
+CREATE FOREIGN TABLE kafka_test (
+    part int OPTIONS (partition 'true'),
+    offs bigint OPTIONS (offset 'true'),
+    some_int int,
+    some_text text,
+    some_date date,
+    some_time timestamp
 )
 SERVER kafka_server
-OPTIONS (format 'csv', topic 'my_topic', batch_size '30', buffer_delay '100');
+OPTIONS (
+    format 'csv',
+    topic 'contrib_regress',
+    batch_size '30',
+    buffer_delay '100'
+);
 ```
 
-需要两个元数据列：一个带 `partition 'true'`，一个带 `offset 'true'`。其余列与消息格式匹配。
+对于 CSV，列按位置映射。上游说明，字段校验强度取决于消息写入方，因此在数据质量不稳定时，严格解析和 junk 处理选项很重要。
 
-**表选项：** `format`（`csv` 或 `json`）、`topic`（Kafka 主题名）、`batch_size`、`buffer_delay`（毫秒）、`strict`（强制严格模式验证）、`ignore_junk`（将格式错误的列设为 NULL）。
-
-### 创建外部表（JSON 格式）
+### JSON 消息
 
 ```sql
-CREATE FOREIGN TABLE kafka_json (
-  part int OPTIONS (partition 'true'),
-  offs bigint OPTIONS (offset 'true'),
-  some_int int OPTIONS (json 'int_val'),
-  some_text text OPTIONS (json 'text_val')
+CREATE FOREIGN TABLE kafka_test_json (
+    part int OPTIONS (partition 'true'),
+    offs bigint OPTIONS (offset 'true'),
+    some_int int OPTIONS (json 'int_val'),
+    some_text text OPTIONS (json 'text_val'),
+    some_date date OPTIONS (json 'date_val'),
+    some_time timestamp OPTIONS (json 'time_val')
 )
 SERVER kafka_server
-OPTIONS (format 'json', topic 'my_json_topic', batch_size '30', buffer_delay '100');
+OPTIONS (
+    format 'json',
+    topic 'contrib_regress_json',
+    batch_size '30',
+    buffer_delay '100'
+);
 ```
 
-使用 `json` 列选项将列名映射到 JSON 键。
+对于 JSON，每个列都可以通过 `json` 选项映射到对象键。当前实现支持 JSON 对象，不支持顶层 JSON 数组。
 
-### 消费消息
+## 查询与写入
+
+偏移量列和分区列是特殊列，上游 README 建议在查询中尽可能显式指定它们：
 
 ```sql
--- 从特定分区和偏移量读取
-SELECT * FROM kafka_csv WHERE part = 0 AND offs > 1000 LIMIT 60;
+SELECT * FROM kafka_test WHERE part = 0 AND offs > 1000 LIMIT 60;
 
--- 从多个分区读取
-SELECT * FROM kafka_csv
-WHERE (part = 0 AND offs > 100) OR (part = 1 AND offs > 300);
+SELECT *
+FROM kafka_test
+WHERE (part = 0 AND offs > 100)
+   OR (part = 1 AND offs > 300)
+   OR (part = 3 AND offs > 700);
 ```
 
-注意：`offset` 在 SQL 中是保留关键字；在某些上下文中引用偏移量列时使用双引号。
-
-### 生产消息
+也可以通过 `INSERT` 发送消息。如果指定了分区值，就使用该分区；否则由 Kafka 内置分区器决定：
 
 ```sql
--- 指定分区插入
-INSERT INTO kafka_csv (part, some_int, some_text)
-  VALUES (0, 42, 'hello from partition 0');
-
--- 自动分区选择插入
-INSERT INTO kafka_csv (some_int, some_text)
-  VALUES (42, 'auto-partitioned message');
+INSERT INTO kafka_test(part, some_int, some_text)
+VALUES
+    (0, 5464565, 'some text goes into partition 0'),
+    (NULL, 5464565, 'some text goes into partition selected by kafka');
 ```
+
+## 错误处理
+
+默认行为较为宽松：
+
+- 缺失尾部列会视为 `NULL`
+- 多余字段会被忽略
+- 但无法解析的值默认仍会报错
+
+相关表选项和辅助列包括：
+
+- `strict 'true'`，拒绝列数不匹配
+- `ignore_junk 'true'`，将格式错误的值设为 `NULL`
+- 标记为 `junk 'true'` 的列，用于捕获原始负载
+- 标记为 `junk_error 'true'` 的列，用于捕获解析错误
+
+## 构建说明
+
+该扩展使用 `librdkafka`，上游构建步骤很标准：
+
+```bash
+make && make install
+make installcheck
+```
+
+测试环境假定 Kafka 运行在 `localhost:9092`，ZooKeeper 运行在 `localhost:2181`。

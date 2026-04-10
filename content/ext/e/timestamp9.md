@@ -2,7 +2,7 @@
 title: "timestamp9"
 linkTitle: "timestamp9"
 description: "纳秒分辨率时间戳"
-weight: 3890
+weight: 3900
 ---
 
 <div class="ext-cards">
@@ -30,7 +30,7 @@ weight: 3890
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
 |:-----:|:-------------------------------------------------------------------------|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|:----------|
-| 3890  | [**`timestamp9`**](/ext/e/timestamp9) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | - |
+| 3900  | [**`timestamp9`**](/ext/e/timestamp9) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | - |
 {.ext-table}
 
 | **相关扩展** | [`prefix`](/ext/e/prefix) [`semver`](/ext/e/semver) [`unit`](/ext/e/unit) [`pgpdf`](/ext/e/pgpdf) [`pglite_fusion`](/ext/e/pglite_fusion) [`md5hash`](/ext/e/md5hash) [`asn1oid`](/ext/e/asn1oid) [`roaringbitmap`](/ext/e/roaringbitmap) |
@@ -206,12 +206,11 @@ CREATE EXTENSION timestamp9;
 ```
 
 
-
 ## 用法
 
 > [timestamp9: PostgreSQL 的纳秒精度时间戳类型](https://github.com/optiver/timestamp9)
 
-`timestamp9` 扩展提供了纳秒精度的时间戳类型，以 64 位整数存储（自 UNIX 纪元以来的纳秒数）。
+`timestamp9` 扩展提供纳秒精度的时间戳类型，底层以 64 位整数存储，即自 UNIX 纪元以来的纳秒数。
 
 ```sql
 CREATE EXTENSION timestamp9;
@@ -219,7 +218,7 @@ CREATE EXTENSION timestamp9;
 
 ### 数据类型
 
-`timestamp9` 类型支持从 1970-01-01 到 2262-04-12 的时间戳，精度为纳秒。
+`timestamp9` 支持从 1970-01-01 到 2262-04-12 的时间戳，精度为纳秒。
 
 ### 输入格式
 
@@ -230,7 +229,7 @@ SELECT '2019-09-19 08:30:05'::timestamp9;
 -- 带时区的完整纳秒精度
 SELECT '2019-09-19 08:30:05.123456789 +0200'::timestamp9;
 
--- 从 bigint 转换（自纪元以来的纳秒数）
+-- 从 bigint 转换，自纪元以来的纳秒数
 SELECT 1568878205123456789::bigint::timestamp9;
 ```
 
@@ -239,7 +238,7 @@ SELECT 1568878205123456789::bigint::timestamp9;
 - 与 `timestamp` 和 `timestamptz` 之间的相互转换
 - 与 `date` 之间的相互转换
 
-转换过程中保留纳秒精度。
+转换过程中会保留纳秒精度。
 
 ### 运算符
 

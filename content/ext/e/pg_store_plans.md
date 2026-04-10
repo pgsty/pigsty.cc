@@ -11,10 +11,10 @@ weight: 6250
     <div class="ext-card__title">ossc-db/pg_store_plans</div>
     <div class="ext-card__desc">https://github.com/ossc-db/pg_store_plans</div>
   </a>
-  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pg_store_plans-1.9.tar.gz">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pg_store_plans-1.10.tar.gz">
     <div class="ext-card__kicker">源码</div>
-    <div class="ext-card__title">pg_store_plans-1.9.tar.gz</div>
-    <div class="ext-card__desc">pg_store_plans-1.9.tar.gz</div>
+    <div class="ext-card__title">pg_store_plans-1.10.tar.gz</div>
+    <div class="ext-card__desc">pg_store_plans-1.10.tar.gz</div>
   </a>
 </div>
 
@@ -25,7 +25,7 @@ weight: 6250
 
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
-| [**`pg_store_plans`**](/ext/e/pg_store_plans) | `1.9` | <a class="ext-badge ext-badge--cate stat" href="/ext/cate/stat">STAT</a> | <a class="ext-badge ext-badge--license bsd 3clause" href="/ext/license#bsd3clause">BSD 3-Clause</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
+| [**`pg_store_plans`**](/ext/e/pg_store_plans) | `1.10` | <a class="ext-badge ext-badge--cate stat" href="/ext/cate/stat">STAT</a> | <a class="ext-badge ext-badge--license bsd 3clause" href="/ext/license#bsd3clause">BSD 3-Clause</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
 {.ext-table}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
@@ -38,115 +38,142 @@ weight: 6250
 {.ext-table .ext-table--rel}
 
 
-> pg18 breaks, fixed by Vonng
-
-
 ## 版本
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#stat) | <a class="ext-badge ext-badge--repo mixed" href="/ext/repo#mixed">MIXED</a> | `1.9` | {{< pgvers "18,17,16,15,14" >}} | `pg_store_plans` | - |
-| [**RPM**](/ext/rpm#stat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.9` | {{< pgvers "18,17,16,15,14" >}} | `pg_store_plans_$v` | - |
-| [**DEB**](/ext/deb#stat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.9` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pg-store-plan` | - |
+| [**EXT**](/ext/list#stat) | <a class="ext-badge ext-badge--repo mixed" href="/ext/repo#mixed">MIXED</a> | `1.10` | {{< pgvers "18,17,16,15,14" >}} | `pg_store_plans` | - |
+| [**RPM**](/ext/rpm#stat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.10` | {{< pgvers "18,17,16,15,14" >}} | `pg_store_plans_$v` | - |
+| [**DEB**](/ext/deb#stat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.10` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pg-store-plan` | - |
 {.ext-table}
 
 {{< pgext_matrix >}}
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 1.9 1 | AVAIL PIGSTY 1.8 1 | AVAIL PIGSTY 1.8 2 | AVAIL PIGSTY 1.8 3 | AVAIL PIGSTY 1.8 1 |
-| el8.aarch64 | AVAIL PIGSTY 1.9 1 | AVAIL PIGSTY 1.8 1 | AVAIL PIGSTY 1.8 2 | AVAIL PIGSTY 1.8 3 | AVAIL PIGSTY 1.8 1 |
-| el9.x86_64 | AVAIL PIGSTY 1.9 1 | AVAIL PIGSTY 1.8 1 | AVAIL PIGSTY 1.8 2 | AVAIL PIGSTY 1.8 3 | AVAIL PIGSTY 1.8 1 |
-| el9.aarch64 | AVAIL PIGSTY 1.9 1 | AVAIL PIGSTY 1.8 1 | AVAIL PIGSTY 1.8 2 | AVAIL PIGSTY 1.8 3 | AVAIL PIGSTY 1.8 1 |
-| el10.x86_64 | AVAIL PIGSTY 1.9 1 | AVAIL PIGSTY 1.9 1 | AVAIL PGDG 1.8 1 | AVAIL PGDG 1.8 1 | MISS PIGSTY - 0 |
-| el10.aarch64 | AVAIL PIGSTY 1.9 1 | AVAIL PIGSTY 1.9 1 | AVAIL PGDG 1.8 1 | AVAIL PGDG 1.8 1 | MISS PIGSTY - 0 |
-| d12.x86_64 | AVAIL PIGSTY 1.9 1 | AVAIL PIGSTY 1.9 1 | AVAIL PIGSTY 1.9 1 | AVAIL PIGSTY 1.9 1 | AVAIL PIGSTY 1.9 1 |
-| d12.aarch64 | AVAIL PIGSTY 1.9 1 | AVAIL PIGSTY 1.9 1 | AVAIL PIGSTY 1.9 1 | AVAIL PIGSTY 1.9 1 | AVAIL PIGSTY 1.9 1 |
-| d13.x86_64 | AVAIL PIGSTY 1.9 1 | AVAIL PIGSTY 1.9 1 | AVAIL PIGSTY 1.9 1 | AVAIL PIGSTY 1.9 1 | AVAIL PIGSTY 1.9 1 |
-| d13.aarch64 | AVAIL PIGSTY 1.9 1 | AVAIL PIGSTY 1.9 1 | AVAIL PIGSTY 1.9 1 | AVAIL PIGSTY 1.9 1 | AVAIL PIGSTY 1.9 1 |
-| u22.x86_64 | AVAIL PIGSTY 1.9 1 | AVAIL PIGSTY 1.9 1 | AVAIL PIGSTY 1.9 1 | AVAIL PIGSTY 1.9 1 | AVAIL PIGSTY 1.9 1 |
-| u22.aarch64 | AVAIL PIGSTY 1.9 1 | AVAIL PIGSTY 1.9 1 | AVAIL PIGSTY 1.9 1 | AVAIL PIGSTY 1.9 1 | AVAIL PIGSTY 1.9 1 |
-| u24.x86_64 | AVAIL PIGSTY 1.9 1 | AVAIL PIGSTY 1.9 1 | AVAIL PIGSTY 1.9 1 | AVAIL PIGSTY 1.9 1 | AVAIL PIGSTY 1.9 1 |
-| u24.aarch64 | AVAIL PIGSTY 1.9 1 | AVAIL PIGSTY 1.9 1 | AVAIL PIGSTY 1.9 1 | AVAIL PIGSTY 1.9 1 | AVAIL PIGSTY 1.9 1 |
-@ el8.x86_64 18 pg_store_plans_18 pg_store_plans_18-1.9-1PIGSTY.el8.x86_64.rpm pigsty 1.9 44.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_store_plans_18-1.9-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 18 pg_store_plans_18 pg_store_plans_18-1.9-1PIGSTY.el8.aarch64.rpm pigsty 1.9 43.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_store_plans_18-1.9-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 18 pg_store_plans_18 pg_store_plans_18-1.9-1PIGSTY.el9.x86_64.rpm pigsty 1.9 43.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_store_plans_18-1.9-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 18 pg_store_plans_18 pg_store_plans_18-1.9-1PIGSTY.el9.aarch64.rpm pigsty 1.9 42.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_store_plans_18-1.9-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 18 pg_store_plans_18 pg_store_plans_18-1.9-1PIGSTY.el10.x86_64.rpm pigsty 1.9 44.7KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_store_plans_18-1.9-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 18 pg_store_plans_18 pg_store_plans_18-1.9-1PIGSTY.el10.aarch64.rpm pigsty 1.9 43.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_store_plans_18-1.9-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 18 postgresql-18-pg-store-plan postgresql-18-pg-store-plan_1.9-1PIGSTY~bookworm_amd64.deb pigsty 1.9 108.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-store-plan/postgresql-18-pg-store-plan_1.9-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 18 postgresql-18-pg-store-plan postgresql-18-pg-store-plan_1.9-1PIGSTY~bookworm_arm64.deb pigsty 1.9 105.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-store-plan/postgresql-18-pg-store-plan_1.9-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 18 postgresql-18-pg-store-plan postgresql-18-pg-store-plan_1.9-1PIGSTY~trixie_amd64.deb pigsty 1.9 108.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-store-plan/postgresql-18-pg-store-plan_1.9-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 18 postgresql-18-pg-store-plan postgresql-18-pg-store-plan_1.9-1PIGSTY~trixie_arm64.deb pigsty 1.9 105.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-store-plan/postgresql-18-pg-store-plan_1.9-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 18 postgresql-18-pg-store-plan postgresql-18-pg-store-plan_1.9-1PIGSTY~jammy_amd64.deb pigsty 1.9 118.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-store-plan/postgresql-18-pg-store-plan_1.9-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 18 postgresql-18-pg-store-plan postgresql-18-pg-store-plan_1.9-1PIGSTY~jammy_arm64.deb pigsty 1.9 116.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-store-plan/postgresql-18-pg-store-plan_1.9-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 18 postgresql-18-pg-store-plan postgresql-18-pg-store-plan_1.9-1PIGSTY~noble_amd64.deb pigsty 1.9 113.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-store-plan/postgresql-18-pg-store-plan_1.9-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 18 postgresql-18-pg-store-plan postgresql-18-pg-store-plan_1.9-1PIGSTY~noble_arm64.deb pigsty 1.9 112.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-store-plan/postgresql-18-pg-store-plan_1.9-1PIGSTY~noble_arm64.deb
-@ el8.x86_64 17 pg_store_plans_17 pg_store_plans_17-1.8-2PIGSTY.el8.x86_64.rpm pigsty 1.8 40.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_store_plans_17-1.8-2PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 17 pg_store_plans_17 pg_store_plans_17-1.8-2PIGSTY.el8.aarch64.rpm pigsty 1.8 39.4KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_store_plans_17-1.8-2PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 17 pg_store_plans_17 pg_store_plans_17-1.8-2PIGSTY.el9.x86_64.rpm pigsty 1.8 42.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_store_plans_17-1.8-2PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 17 pg_store_plans_17 pg_store_plans_17-1.8-2PIGSTY.el9.aarch64.rpm pigsty 1.8 41.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_store_plans_17-1.8-2PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 17 pg_store_plans_17 pg_store_plans_17-1.9-1PIGSTY.el10.x86_64.rpm pigsty 1.9 43.2KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_store_plans_17-1.9-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 17 pg_store_plans_17 pg_store_plans_17-1.9-1PIGSTY.el10.aarch64.rpm pigsty 1.9 42.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_store_plans_17-1.9-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 17 postgresql-17-pg-store-plan postgresql-17-pg-store-plan_1.9-1PIGSTY~bookworm_amd64.deb pigsty 1.9 107.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-store-plan/postgresql-17-pg-store-plan_1.9-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 17 postgresql-17-pg-store-plan postgresql-17-pg-store-plan_1.9-1PIGSTY~bookworm_arm64.deb pigsty 1.9 105.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-store-plan/postgresql-17-pg-store-plan_1.9-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 17 postgresql-17-pg-store-plan postgresql-17-pg-store-plan_1.9-1PIGSTY~trixie_amd64.deb pigsty 1.9 108.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-store-plan/postgresql-17-pg-store-plan_1.9-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 17 postgresql-17-pg-store-plan postgresql-17-pg-store-plan_1.9-1PIGSTY~trixie_arm64.deb pigsty 1.9 105.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-store-plan/postgresql-17-pg-store-plan_1.9-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 17 postgresql-17-pg-store-plan postgresql-17-pg-store-plan_1.9-1PIGSTY~jammy_amd64.deb pigsty 1.9 129.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-store-plan/postgresql-17-pg-store-plan_1.9-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 17 postgresql-17-pg-store-plan postgresql-17-pg-store-plan_1.9-1PIGSTY~jammy_arm64.deb pigsty 1.9 127.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-store-plan/postgresql-17-pg-store-plan_1.9-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 17 postgresql-17-pg-store-plan postgresql-17-pg-store-plan_1.9-1PIGSTY~noble_amd64.deb pigsty 1.9 113.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-store-plan/postgresql-17-pg-store-plan_1.9-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 17 postgresql-17-pg-store-plan postgresql-17-pg-store-plan_1.9-1PIGSTY~noble_arm64.deb pigsty 1.9 112.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-store-plan/postgresql-17-pg-store-plan_1.9-1PIGSTY~noble_arm64.deb
-@ el8.x86_64 16 pg_store_plans_16 pg_store_plans_16-1.8-2PIGSTY.el8.x86_64.rpm pigsty 1.8 40.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_store_plans_16-1.8-2PIGSTY.el8.x86_64.rpm
+| el8.x86_64 | AVAIL PIGSTY 1.10 2 | AVAIL PIGSTY 1.10 2 | AVAIL PIGSTY 1.10 3 | AVAIL PIGSTY 1.10 4 | AVAIL PIGSTY 1.10 1 |
+| el8.aarch64 | AVAIL PIGSTY 1.10 2 | AVAIL PIGSTY 1.10 2 | AVAIL PIGSTY 1.10 3 | AVAIL PIGSTY 1.10 4 | AVAIL PIGSTY 1.10 1 |
+| el9.x86_64 | AVAIL PIGSTY 1.10 2 | AVAIL PIGSTY 1.10 2 | AVAIL PIGSTY 1.10 3 | AVAIL PIGSTY 1.10 4 | AVAIL PIGSTY 1.10 1 |
+| el9.aarch64 | AVAIL PIGSTY 1.10 2 | AVAIL PIGSTY 1.10 2 | AVAIL PIGSTY 1.10 3 | AVAIL PIGSTY 1.10 4 | AVAIL PIGSTY 1.10 1 |
+| el10.x86_64 | AVAIL PIGSTY 1.10 2 | AVAIL PIGSTY 1.10 2 | AVAIL PIGSTY 1.10 3 | AVAIL PIGSTY 1.10 3 | AVAIL PIGSTY 1.10 1 |
+| el10.aarch64 | AVAIL PIGSTY 1.10 2 | AVAIL PIGSTY 1.10 2 | AVAIL PIGSTY 1.10 3 | AVAIL PIGSTY 1.10 3 | AVAIL PIGSTY 1.10 1 |
+| d12.x86_64 | AVAIL PIGSTY 1.10 1 | AVAIL PIGSTY 1.10 1 | AVAIL PIGSTY 1.10 1 | AVAIL PIGSTY 1.10 1 | AVAIL PIGSTY 1.10 1 |
+| d12.aarch64 | AVAIL PIGSTY 1.10 1 | AVAIL PIGSTY 1.10 1 | AVAIL PIGSTY 1.10 1 | AVAIL PIGSTY 1.10 1 | AVAIL PIGSTY 1.10 1 |
+| d13.x86_64 | AVAIL PIGSTY 1.10 1 | AVAIL PIGSTY 1.10 1 | AVAIL PIGSTY 1.10 1 | AVAIL PIGSTY 1.10 1 | AVAIL PIGSTY 1.10 1 |
+| d13.aarch64 | AVAIL PIGSTY 1.10 1 | AVAIL PIGSTY 1.10 1 | AVAIL PIGSTY 1.10 1 | AVAIL PIGSTY 1.10 1 | AVAIL PIGSTY 1.10 1 |
+| u22.x86_64 | AVAIL PIGSTY 1.10 1 | AVAIL PIGSTY 1.10 1 | AVAIL PIGSTY 1.10 1 | AVAIL PIGSTY 1.10 1 | AVAIL PIGSTY 1.10 1 |
+| u22.aarch64 | AVAIL PIGSTY 1.10 1 | AVAIL PIGSTY 1.10 1 | AVAIL PIGSTY 1.10 1 | AVAIL PIGSTY 1.10 1 | AVAIL PIGSTY 1.10 1 |
+| u24.x86_64 | AVAIL PIGSTY 1.10 1 | AVAIL PIGSTY 1.10 1 | AVAIL PIGSTY 1.10 1 | AVAIL PIGSTY 1.10 1 | AVAIL PIGSTY 1.10 1 |
+| u24.aarch64 | AVAIL PIGSTY 1.10 1 | AVAIL PIGSTY 1.10 1 | AVAIL PIGSTY 1.10 1 | AVAIL PIGSTY 1.10 1 | AVAIL PIGSTY 1.10 1 |
+@ el8.x86_64 18 pg_store_plans_18 pg_store_plans_18-1.10-1PIGSTY.el8.x86_64.rpm pigsty 1.10 44.6KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_store_plans_18-1.10-1PIGSTY.el8.x86_64.rpm
+@ el8.x86_64 18 pg_store_plans_18 pg_store_plans_18-1.10-1PGDG.rhel8.10.x86_64.rpm pgdg 1.10 45.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pg_store_plans_18-1.10-1PGDG.rhel8.10.x86_64.rpm
+@ el8.aarch64 18 pg_store_plans_18 pg_store_plans_18-1.10-1PIGSTY.el8.aarch64.rpm pigsty 1.10 43.4KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_store_plans_18-1.10-1PIGSTY.el8.aarch64.rpm
+@ el8.aarch64 18 pg_store_plans_18 pg_store_plans_18-1.10-1PGDG.rhel8.10.aarch64.rpm pgdg 1.10 44.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pg_store_plans_18-1.10-1PGDG.rhel8.10.aarch64.rpm
+@ el9.x86_64 18 pg_store_plans_18 pg_store_plans_18-1.10-1PIGSTY.el9.x86_64.rpm pigsty 1.10 43.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_store_plans_18-1.10-1PIGSTY.el9.x86_64.rpm
+@ el9.x86_64 18 pg_store_plans_18 pg_store_plans_18-1.10-1PGDG.rhel9.7.x86_64.rpm pgdg 1.10 46.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pg_store_plans_18-1.10-1PGDG.rhel9.7.x86_64.rpm
+@ el9.aarch64 18 pg_store_plans_18 pg_store_plans_18-1.10-1PIGSTY.el9.aarch64.rpm pigsty 1.10 43.1KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_store_plans_18-1.10-1PIGSTY.el9.aarch64.rpm
+@ el9.aarch64 18 pg_store_plans_18 pg_store_plans_18-1.10-1PGDG.rhel9.7.aarch64.rpm pgdg 1.10 45.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pg_store_plans_18-1.10-1PGDG.rhel9.7.aarch64.rpm
+@ el10.x86_64 18 pg_store_plans_18 pg_store_plans_18-1.10-1PIGSTY.el10.x86_64.rpm pigsty 1.10 44.2KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_store_plans_18-1.10-1PIGSTY.el10.x86_64.rpm
+@ el10.x86_64 18 pg_store_plans_18 pg_store_plans_18-1.10-1PGDG.rhel10.1.x86_64.rpm pgdg 1.10 46.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pg_store_plans_18-1.10-1PGDG.rhel10.1.x86_64.rpm
+@ el10.aarch64 18 pg_store_plans_18 pg_store_plans_18-1.10-1PIGSTY.el10.aarch64.rpm pigsty 1.10 43.8KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_store_plans_18-1.10-1PIGSTY.el10.aarch64.rpm
+@ el10.aarch64 18 pg_store_plans_18 pg_store_plans_18-1.10-1PGDG.rhel10.1.aarch64.rpm pgdg 1.10 45.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_store_plans_18-1.10-1PGDG.rhel10.1.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-pg-store-plan postgresql-18-pg-store-plan_1.10-1PIGSTY~bookworm_amd64.deb pigsty 1.10 108.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-store-plan/postgresql-18-pg-store-plan_1.10-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 18 postgresql-18-pg-store-plan postgresql-18-pg-store-plan_1.10-1PIGSTY~bookworm_arm64.deb pigsty 1.10 105.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-store-plan/postgresql-18-pg-store-plan_1.10-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 18 postgresql-18-pg-store-plan postgresql-18-pg-store-plan_1.10-1PIGSTY~trixie_amd64.deb pigsty 1.10 108.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-store-plan/postgresql-18-pg-store-plan_1.10-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 18 postgresql-18-pg-store-plan postgresql-18-pg-store-plan_1.10-1PIGSTY~trixie_arm64.deb pigsty 1.10 105.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-store-plan/postgresql-18-pg-store-plan_1.10-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 18 postgresql-18-pg-store-plan postgresql-18-pg-store-plan_1.10-1PIGSTY~jammy_amd64.deb pigsty 1.10 118.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-store-plan/postgresql-18-pg-store-plan_1.10-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 18 postgresql-18-pg-store-plan postgresql-18-pg-store-plan_1.10-1PIGSTY~jammy_arm64.deb pigsty 1.10 116.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-store-plan/postgresql-18-pg-store-plan_1.10-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 18 postgresql-18-pg-store-plan postgresql-18-pg-store-plan_1.10-1PIGSTY~noble_amd64.deb pigsty 1.10 113.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-store-plan/postgresql-18-pg-store-plan_1.10-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 18 postgresql-18-pg-store-plan postgresql-18-pg-store-plan_1.10-1PIGSTY~noble_arm64.deb pigsty 1.10 112.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-store-plan/postgresql-18-pg-store-plan_1.10-1PIGSTY~noble_arm64.deb
+@ el8.x86_64 17 pg_store_plans_17 pg_store_plans_17-1.10-1PIGSTY.el8.x86_64.rpm pigsty 1.10 44.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_store_plans_17-1.10-1PIGSTY.el8.x86_64.rpm
+@ el8.x86_64 17 pg_store_plans_17 pg_store_plans_17-1.10-1PGDG.rhel8.10.x86_64.rpm pgdg 1.10 45.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pg_store_plans_17-1.10-1PGDG.rhel8.10.x86_64.rpm
+@ el8.aarch64 17 pg_store_plans_17 pg_store_plans_17-1.10-1PIGSTY.el8.aarch64.rpm pigsty 1.10 43.4KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_store_plans_17-1.10-1PIGSTY.el8.aarch64.rpm
+@ el8.aarch64 17 pg_store_plans_17 pg_store_plans_17-1.10-1PGDG.rhel8.10.aarch64.rpm pgdg 1.10 44.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pg_store_plans_17-1.10-1PGDG.rhel8.10.aarch64.rpm
+@ el9.x86_64 17 pg_store_plans_17 pg_store_plans_17-1.10-1PIGSTY.el9.x86_64.rpm pigsty 1.10 43.7KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_store_plans_17-1.10-1PIGSTY.el9.x86_64.rpm
+@ el9.x86_64 17 pg_store_plans_17 pg_store_plans_17-1.10-1PGDG.rhel9.7.x86_64.rpm pgdg 1.10 46.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_store_plans_17-1.10-1PGDG.rhel9.7.x86_64.rpm
+@ el9.aarch64 17 pg_store_plans_17 pg_store_plans_17-1.10-1PIGSTY.el9.aarch64.rpm pigsty 1.10 43.2KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_store_plans_17-1.10-1PIGSTY.el9.aarch64.rpm
+@ el9.aarch64 17 pg_store_plans_17 pg_store_plans_17-1.10-1PGDG.rhel9.7.aarch64.rpm pgdg 1.10 45.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_store_plans_17-1.10-1PGDG.rhel9.7.aarch64.rpm
+@ el10.x86_64 17 pg_store_plans_17 pg_store_plans_17-1.10-1PIGSTY.el10.x86_64.rpm pigsty 1.10 44.9KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_store_plans_17-1.10-1PIGSTY.el10.x86_64.rpm
+@ el10.x86_64 17 pg_store_plans_17 pg_store_plans_17-1.10-1PGDG.rhel10.1.x86_64.rpm pgdg 1.10 47.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_store_plans_17-1.10-1PGDG.rhel10.1.x86_64.rpm
+@ el10.aarch64 17 pg_store_plans_17 pg_store_plans_17-1.10-1PIGSTY.el10.aarch64.rpm pigsty 1.10 43.9KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_store_plans_17-1.10-1PIGSTY.el10.aarch64.rpm
+@ el10.aarch64 17 pg_store_plans_17 pg_store_plans_17-1.10-1PGDG.rhel10.1.aarch64.rpm pgdg 1.10 45.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_store_plans_17-1.10-1PGDG.rhel10.1.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-pg-store-plan postgresql-17-pg-store-plan_1.10-1PIGSTY~bookworm_amd64.deb pigsty 1.10 108.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-store-plan/postgresql-17-pg-store-plan_1.10-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 17 postgresql-17-pg-store-plan postgresql-17-pg-store-plan_1.10-1PIGSTY~bookworm_arm64.deb pigsty 1.10 105.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-store-plan/postgresql-17-pg-store-plan_1.10-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 17 postgresql-17-pg-store-plan postgresql-17-pg-store-plan_1.10-1PIGSTY~trixie_amd64.deb pigsty 1.10 108.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-store-plan/postgresql-17-pg-store-plan_1.10-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 17 postgresql-17-pg-store-plan postgresql-17-pg-store-plan_1.10-1PIGSTY~trixie_arm64.deb pigsty 1.10 105.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-store-plan/postgresql-17-pg-store-plan_1.10-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 17 postgresql-17-pg-store-plan postgresql-17-pg-store-plan_1.10-1PIGSTY~jammy_amd64.deb pigsty 1.10 129.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-store-plan/postgresql-17-pg-store-plan_1.10-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 17 postgresql-17-pg-store-plan postgresql-17-pg-store-plan_1.10-1PIGSTY~jammy_arm64.deb pigsty 1.10 127.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-store-plan/postgresql-17-pg-store-plan_1.10-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 17 postgresql-17-pg-store-plan postgresql-17-pg-store-plan_1.10-1PIGSTY~noble_amd64.deb pigsty 1.10 113.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-store-plan/postgresql-17-pg-store-plan_1.10-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 17 postgresql-17-pg-store-plan postgresql-17-pg-store-plan_1.10-1PIGSTY~noble_arm64.deb pigsty 1.10 112.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-store-plan/postgresql-17-pg-store-plan_1.10-1PIGSTY~noble_arm64.deb
+@ el8.x86_64 16 pg_store_plans_16 pg_store_plans_16-1.10-1PIGSTY.el8.x86_64.rpm pigsty 1.10 44.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_store_plans_16-1.10-1PIGSTY.el8.x86_64.rpm
+@ el8.x86_64 16 pg_store_plans_16 pg_store_plans_16-1.10-1PGDG.rhel8.10.x86_64.rpm pgdg 1.10 46.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_store_plans_16-1.10-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 pg_store_plans_16 pg_store_plans_16-1.8-1PGDG.rhel8.x86_64.rpm pgdg 1.8 45.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_store_plans_16-1.8-1PGDG.rhel8.x86_64.rpm
-@ el8.aarch64 16 pg_store_plans_16 pg_store_plans_16-1.8-2PIGSTY.el8.aarch64.rpm pigsty 1.8 39.4KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_store_plans_16-1.8-2PIGSTY.el8.aarch64.rpm
+@ el8.aarch64 16 pg_store_plans_16 pg_store_plans_16-1.10-1PIGSTY.el8.aarch64.rpm pigsty 1.10 43.4KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_store_plans_16-1.10-1PIGSTY.el8.aarch64.rpm
+@ el8.aarch64 16 pg_store_plans_16 pg_store_plans_16-1.10-1PGDG.rhel8.10.aarch64.rpm pgdg 1.10 44.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pg_store_plans_16-1.10-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 16 pg_store_plans_16 pg_store_plans_16-1.8-1PGDG.rhel8.aarch64.rpm pgdg 1.8 44.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pg_store_plans_16-1.8-1PGDG.rhel8.aarch64.rpm
-@ el9.x86_64 16 pg_store_plans_16 pg_store_plans_16-1.8-2PIGSTY.el9.x86_64.rpm pigsty 1.8 42.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_store_plans_16-1.8-2PIGSTY.el9.x86_64.rpm
+@ el9.x86_64 16 pg_store_plans_16 pg_store_plans_16-1.10-1PIGSTY.el9.x86_64.rpm pigsty 1.10 43.7KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_store_plans_16-1.10-1PIGSTY.el9.x86_64.rpm
+@ el9.x86_64 16 pg_store_plans_16 pg_store_plans_16-1.10-1PGDG.rhel9.7.x86_64.rpm pgdg 1.10 46.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_store_plans_16-1.10-1PGDG.rhel9.7.x86_64.rpm
 @ el9.x86_64 16 pg_store_plans_16 pg_store_plans_16-1.8-1PGDG.rhel9.x86_64.rpm pgdg 1.8 46.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_store_plans_16-1.8-1PGDG.rhel9.x86_64.rpm
-@ el9.aarch64 16 pg_store_plans_16 pg_store_plans_16-1.8-2PIGSTY.el9.aarch64.rpm pigsty 1.8 41.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_store_plans_16-1.8-2PIGSTY.el9.aarch64.rpm
+@ el9.aarch64 16 pg_store_plans_16 pg_store_plans_16-1.10-1PIGSTY.el9.aarch64.rpm pigsty 1.10 43.2KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_store_plans_16-1.10-1PIGSTY.el9.aarch64.rpm
+@ el9.aarch64 16 pg_store_plans_16 pg_store_plans_16-1.10-1PGDG.rhel9.7.aarch64.rpm pgdg 1.10 45.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_store_plans_16-1.10-1PGDG.rhel9.7.aarch64.rpm
 @ el9.aarch64 16 pg_store_plans_16 pg_store_plans_16-1.8-1PGDG.rhel9.aarch64.rpm pgdg 1.8 45.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_store_plans_16-1.8-1PGDG.rhel9.aarch64.rpm
+@ el10.x86_64 16 pg_store_plans_16 pg_store_plans_16-1.10-1PIGSTY.el10.x86_64.rpm pigsty 1.10 44.8KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_store_plans_16-1.10-1PIGSTY.el10.x86_64.rpm
+@ el10.x86_64 16 pg_store_plans_16 pg_store_plans_16-1.10-1PGDG.rhel10.1.x86_64.rpm pgdg 1.10 46.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_store_plans_16-1.10-1PGDG.rhel10.1.x86_64.rpm
 @ el10.x86_64 16 pg_store_plans_16 pg_store_plans_16-1.8-3PGDG.rhel10.x86_64.rpm pgdg 1.8 47.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_store_plans_16-1.8-3PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 16 pg_store_plans_16 pg_store_plans_16-1.10-1PIGSTY.el10.aarch64.rpm pigsty 1.10 43.8KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_store_plans_16-1.10-1PIGSTY.el10.aarch64.rpm
+@ el10.aarch64 16 pg_store_plans_16 pg_store_plans_16-1.10-1PGDG.rhel10.1.aarch64.rpm pgdg 1.10 45.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_store_plans_16-1.10-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 16 pg_store_plans_16 pg_store_plans_16-1.8-3PGDG.rhel10.aarch64.rpm pgdg 1.8 46.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_store_plans_16-1.8-3PGDG.rhel10.aarch64.rpm
-@ d12.x86_64 16 postgresql-16-pg-store-plan postgresql-16-pg-store-plan_1.9-1PIGSTY~bookworm_amd64.deb pigsty 1.9 108.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-store-plan/postgresql-16-pg-store-plan_1.9-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 16 postgresql-16-pg-store-plan postgresql-16-pg-store-plan_1.9-1PIGSTY~bookworm_arm64.deb pigsty 1.9 105.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-store-plan/postgresql-16-pg-store-plan_1.9-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 16 postgresql-16-pg-store-plan postgresql-16-pg-store-plan_1.9-1PIGSTY~trixie_amd64.deb pigsty 1.9 108.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-store-plan/postgresql-16-pg-store-plan_1.9-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 16 postgresql-16-pg-store-plan postgresql-16-pg-store-plan_1.9-1PIGSTY~trixie_arm64.deb pigsty 1.9 105.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-store-plan/postgresql-16-pg-store-plan_1.9-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 16 postgresql-16-pg-store-plan postgresql-16-pg-store-plan_1.9-1PIGSTY~jammy_amd64.deb pigsty 1.9 129.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-store-plan/postgresql-16-pg-store-plan_1.9-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 16 postgresql-16-pg-store-plan postgresql-16-pg-store-plan_1.9-1PIGSTY~jammy_arm64.deb pigsty 1.9 127.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-store-plan/postgresql-16-pg-store-plan_1.9-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 16 postgresql-16-pg-store-plan postgresql-16-pg-store-plan_1.9-1PIGSTY~noble_amd64.deb pigsty 1.9 113.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-store-plan/postgresql-16-pg-store-plan_1.9-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 16 postgresql-16-pg-store-plan postgresql-16-pg-store-plan_1.9-1PIGSTY~noble_arm64.deb pigsty 1.9 112.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-store-plan/postgresql-16-pg-store-plan_1.9-1PIGSTY~noble_arm64.deb
-@ el8.x86_64 15 pg_store_plans_15 pg_store_plans_15-1.8-2PIGSTY.el8.x86_64.rpm pigsty 1.8 41.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_store_plans_15-1.8-2PIGSTY.el8.x86_64.rpm
+@ d12.x86_64 16 postgresql-16-pg-store-plan postgresql-16-pg-store-plan_1.10-1PIGSTY~bookworm_amd64.deb pigsty 1.10 108.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-store-plan/postgresql-16-pg-store-plan_1.10-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 16 postgresql-16-pg-store-plan postgresql-16-pg-store-plan_1.10-1PIGSTY~bookworm_arm64.deb pigsty 1.10 105.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-store-plan/postgresql-16-pg-store-plan_1.10-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 16 postgresql-16-pg-store-plan postgresql-16-pg-store-plan_1.10-1PIGSTY~trixie_amd64.deb pigsty 1.10 109.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-store-plan/postgresql-16-pg-store-plan_1.10-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 16 postgresql-16-pg-store-plan postgresql-16-pg-store-plan_1.10-1PIGSTY~trixie_arm64.deb pigsty 1.10 105.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-store-plan/postgresql-16-pg-store-plan_1.10-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 16 postgresql-16-pg-store-plan postgresql-16-pg-store-plan_1.10-1PIGSTY~jammy_amd64.deb pigsty 1.10 129.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-store-plan/postgresql-16-pg-store-plan_1.10-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 16 postgresql-16-pg-store-plan postgresql-16-pg-store-plan_1.10-1PIGSTY~jammy_arm64.deb pigsty 1.10 127.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-store-plan/postgresql-16-pg-store-plan_1.10-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 16 postgresql-16-pg-store-plan postgresql-16-pg-store-plan_1.10-1PIGSTY~noble_amd64.deb pigsty 1.10 114.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-store-plan/postgresql-16-pg-store-plan_1.10-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 16 postgresql-16-pg-store-plan postgresql-16-pg-store-plan_1.10-1PIGSTY~noble_arm64.deb pigsty 1.10 113.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-store-plan/postgresql-16-pg-store-plan_1.10-1PIGSTY~noble_arm64.deb
+@ el8.x86_64 15 pg_store_plans_15 pg_store_plans_15-1.10-1PIGSTY.el8.x86_64.rpm pigsty 1.10 46.2KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_store_plans_15-1.10-1PIGSTY.el8.x86_64.rpm
+@ el8.x86_64 15 pg_store_plans_15 pg_store_plans_15-1.10-1PGDG.rhel8.10.x86_64.rpm pgdg 1.10 46.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_store_plans_15-1.10-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 pg_store_plans_15 pg_store_plans_15-1.8-1PGDG.rhel8.x86_64.rpm pgdg 1.8 46.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_store_plans_15-1.8-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 15 pg_store_plans_15 pg_store_plans_15-1.7-1PGDG.rhel8.x86_64.rpm pgdg 1.7 46.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_store_plans_15-1.7-1PGDG.rhel8.x86_64.rpm
-@ el8.aarch64 15 pg_store_plans_15 pg_store_plans_15-1.8-2PIGSTY.el8.aarch64.rpm pigsty 1.8 40.3KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_store_plans_15-1.8-2PIGSTY.el8.aarch64.rpm
+@ el8.aarch64 15 pg_store_plans_15 pg_store_plans_15-1.10-1PIGSTY.el8.aarch64.rpm pigsty 1.10 44.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_store_plans_15-1.10-1PIGSTY.el8.aarch64.rpm
+@ el8.aarch64 15 pg_store_plans_15 pg_store_plans_15-1.10-1PGDG.rhel8.10.aarch64.rpm pgdg 1.10 45.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pg_store_plans_15-1.10-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 15 pg_store_plans_15 pg_store_plans_15-1.8-1PGDG.rhel8.aarch64.rpm pgdg 1.8 45.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pg_store_plans_15-1.8-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 15 pg_store_plans_15 pg_store_plans_15-1.7-1PGDG.rhel8.aarch64.rpm pgdg 1.7 44.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pg_store_plans_15-1.7-1PGDG.rhel8.aarch64.rpm
-@ el9.x86_64 15 pg_store_plans_15 pg_store_plans_15-1.8-2PIGSTY.el9.x86_64.rpm pigsty 1.8 43.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_store_plans_15-1.8-2PIGSTY.el9.x86_64.rpm
+@ el9.x86_64 15 pg_store_plans_15 pg_store_plans_15-1.10-1PIGSTY.el9.x86_64.rpm pigsty 1.10 45.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_store_plans_15-1.10-1PIGSTY.el9.x86_64.rpm
+@ el9.x86_64 15 pg_store_plans_15 pg_store_plans_15-1.10-1PGDG.rhel9.7.x86_64.rpm pgdg 1.10 47.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_store_plans_15-1.10-1PGDG.rhel9.7.x86_64.rpm
 @ el9.x86_64 15 pg_store_plans_15 pg_store_plans_15-1.8-1PGDG.rhel9.x86_64.rpm pgdg 1.8 47.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_store_plans_15-1.8-1PGDG.rhel9.x86_64.rpm
 @ el9.x86_64 15 pg_store_plans_15 pg_store_plans_15-1.7-1PGDG.rhel9.x86_64.rpm pgdg 1.7 47.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_store_plans_15-1.7-1PGDG.rhel9.x86_64.rpm
-@ el9.aarch64 15 pg_store_plans_15 pg_store_plans_15-1.8-2PIGSTY.el9.aarch64.rpm pigsty 1.8 43.1KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_store_plans_15-1.8-2PIGSTY.el9.aarch64.rpm
+@ el9.aarch64 15 pg_store_plans_15 pg_store_plans_15-1.10-1PIGSTY.el9.aarch64.rpm pigsty 1.10 45.1KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_store_plans_15-1.10-1PIGSTY.el9.aarch64.rpm
+@ el9.aarch64 15 pg_store_plans_15 pg_store_plans_15-1.10-1PGDG.rhel9.7.aarch64.rpm pgdg 1.10 46.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_store_plans_15-1.10-1PGDG.rhel9.7.aarch64.rpm
 @ el9.aarch64 15 pg_store_plans_15 pg_store_plans_15-1.8-1PGDG.rhel9.aarch64.rpm pgdg 1.8 46.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_store_plans_15-1.8-1PGDG.rhel9.aarch64.rpm
 @ el9.aarch64 15 pg_store_plans_15 pg_store_plans_15-1.7-1PGDG.rhel9.aarch64.rpm pgdg 1.7 45.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_store_plans_15-1.7-1PGDG.rhel9.aarch64.rpm
+@ el10.x86_64 15 pg_store_plans_15 pg_store_plans_15-1.10-1PIGSTY.el10.x86_64.rpm pigsty 1.10 46.5KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_store_plans_15-1.10-1PIGSTY.el10.x86_64.rpm
+@ el10.x86_64 15 pg_store_plans_15 pg_store_plans_15-1.10-1PGDG.rhel10.1.x86_64.rpm pgdg 1.10 48.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_store_plans_15-1.10-1PGDG.rhel10.1.x86_64.rpm
 @ el10.x86_64 15 pg_store_plans_15 pg_store_plans_15-1.8-3PGDG.rhel10.x86_64.rpm pgdg 1.8 48.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_store_plans_15-1.8-3PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 15 pg_store_plans_15 pg_store_plans_15-1.10-1PIGSTY.el10.aarch64.rpm pigsty 1.10 45.7KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_store_plans_15-1.10-1PIGSTY.el10.aarch64.rpm
+@ el10.aarch64 15 pg_store_plans_15 pg_store_plans_15-1.10-1PGDG.rhel10.1.aarch64.rpm pgdg 1.10 46.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_store_plans_15-1.10-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 15 pg_store_plans_15 pg_store_plans_15-1.8-3PGDG.rhel10.aarch64.rpm pgdg 1.8 47.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_store_plans_15-1.8-3PGDG.rhel10.aarch64.rpm
-@ d12.x86_64 15 postgresql-15-pg-store-plan postgresql-15-pg-store-plan_1.9-1PIGSTY~bookworm_amd64.deb pigsty 1.9 109.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-store-plan/postgresql-15-pg-store-plan_1.9-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 15 postgresql-15-pg-store-plan postgresql-15-pg-store-plan_1.9-1PIGSTY~bookworm_arm64.deb pigsty 1.9 106.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-store-plan/postgresql-15-pg-store-plan_1.9-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 15 postgresql-15-pg-store-plan postgresql-15-pg-store-plan_1.9-1PIGSTY~trixie_amd64.deb pigsty 1.9 110.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-store-plan/postgresql-15-pg-store-plan_1.9-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 15 postgresql-15-pg-store-plan postgresql-15-pg-store-plan_1.9-1PIGSTY~trixie_arm64.deb pigsty 1.9 106.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-store-plan/postgresql-15-pg-store-plan_1.9-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 15 postgresql-15-pg-store-plan postgresql-15-pg-store-plan_1.9-1PIGSTY~jammy_amd64.deb pigsty 1.9 131.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-store-plan/postgresql-15-pg-store-plan_1.9-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 15 postgresql-15-pg-store-plan postgresql-15-pg-store-plan_1.9-1PIGSTY~jammy_arm64.deb pigsty 1.9 129.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-store-plan/postgresql-15-pg-store-plan_1.9-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 15 postgresql-15-pg-store-plan postgresql-15-pg-store-plan_1.9-1PIGSTY~noble_amd64.deb pigsty 1.9 116.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-store-plan/postgresql-15-pg-store-plan_1.9-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 15 postgresql-15-pg-store-plan postgresql-15-pg-store-plan_1.9-1PIGSTY~noble_arm64.deb pigsty 1.9 114.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-store-plan/postgresql-15-pg-store-plan_1.9-1PIGSTY~noble_arm64.deb
-@ el8.x86_64 14 pg_store_plans_14 pg_store_plans_14-1.8-2PIGSTY.el8.x86_64.rpm pigsty 1.8 41.6KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_store_plans_14-1.8-2PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 14 pg_store_plans_14 pg_store_plans_14-1.8-2PIGSTY.el8.aarch64.rpm pigsty 1.8 40.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_store_plans_14-1.8-2PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 14 pg_store_plans_14 pg_store_plans_14-1.8-2PIGSTY.el9.x86_64.rpm pigsty 1.8 43.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_store_plans_14-1.8-2PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 14 pg_store_plans_14 pg_store_plans_14-1.8-2PIGSTY.el9.aarch64.rpm pigsty 1.8 43.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_store_plans_14-1.8-2PIGSTY.el9.aarch64.rpm
-@ d12.x86_64 14 postgresql-14-pg-store-plan postgresql-14-pg-store-plan_1.9-1PIGSTY~bookworm_amd64.deb pigsty 1.9 109.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-store-plan/postgresql-14-pg-store-plan_1.9-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 14 postgresql-14-pg-store-plan postgresql-14-pg-store-plan_1.9-1PIGSTY~bookworm_arm64.deb pigsty 1.9 106.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-store-plan/postgresql-14-pg-store-plan_1.9-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 14 postgresql-14-pg-store-plan postgresql-14-pg-store-plan_1.9-1PIGSTY~trixie_amd64.deb pigsty 1.9 109.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-store-plan/postgresql-14-pg-store-plan_1.9-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 14 postgresql-14-pg-store-plan postgresql-14-pg-store-plan_1.9-1PIGSTY~trixie_arm64.deb pigsty 1.9 106.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-store-plan/postgresql-14-pg-store-plan_1.9-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 14 postgresql-14-pg-store-plan postgresql-14-pg-store-plan_1.9-1PIGSTY~jammy_amd64.deb pigsty 1.9 130.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-store-plan/postgresql-14-pg-store-plan_1.9-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 14 postgresql-14-pg-store-plan postgresql-14-pg-store-plan_1.9-1PIGSTY~jammy_arm64.deb pigsty 1.9 128.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-store-plan/postgresql-14-pg-store-plan_1.9-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 14 postgresql-14-pg-store-plan postgresql-14-pg-store-plan_1.9-1PIGSTY~noble_amd64.deb pigsty 1.9 115.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-store-plan/postgresql-14-pg-store-plan_1.9-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 14 postgresql-14-pg-store-plan postgresql-14-pg-store-plan_1.9-1PIGSTY~noble_arm64.deb pigsty 1.9 114.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-store-plan/postgresql-14-pg-store-plan_1.9-1PIGSTY~noble_arm64.deb
+@ d12.x86_64 15 postgresql-15-pg-store-plan postgresql-15-pg-store-plan_1.10-1PIGSTY~bookworm_amd64.deb pigsty 1.10 109.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-store-plan/postgresql-15-pg-store-plan_1.10-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 15 postgresql-15-pg-store-plan postgresql-15-pg-store-plan_1.10-1PIGSTY~bookworm_arm64.deb pigsty 1.10 106.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-store-plan/postgresql-15-pg-store-plan_1.10-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 15 postgresql-15-pg-store-plan postgresql-15-pg-store-plan_1.10-1PIGSTY~trixie_amd64.deb pigsty 1.10 110.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-store-plan/postgresql-15-pg-store-plan_1.10-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 15 postgresql-15-pg-store-plan postgresql-15-pg-store-plan_1.10-1PIGSTY~trixie_arm64.deb pigsty 1.10 106.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-store-plan/postgresql-15-pg-store-plan_1.10-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 15 postgresql-15-pg-store-plan postgresql-15-pg-store-plan_1.10-1PIGSTY~jammy_amd64.deb pigsty 1.10 131.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-store-plan/postgresql-15-pg-store-plan_1.10-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 15 postgresql-15-pg-store-plan postgresql-15-pg-store-plan_1.10-1PIGSTY~jammy_arm64.deb pigsty 1.10 129.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-store-plan/postgresql-15-pg-store-plan_1.10-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 15 postgresql-15-pg-store-plan postgresql-15-pg-store-plan_1.10-1PIGSTY~noble_amd64.deb pigsty 1.10 116.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-store-plan/postgresql-15-pg-store-plan_1.10-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 15 postgresql-15-pg-store-plan postgresql-15-pg-store-plan_1.10-1PIGSTY~noble_arm64.deb pigsty 1.10 114.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-store-plan/postgresql-15-pg-store-plan_1.10-1PIGSTY~noble_arm64.deb
+@ el8.x86_64 14 pg_store_plans_14 pg_store_plans_14-1.10-1PIGSTY.el8.x86_64.rpm pigsty 1.10 46.0KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_store_plans_14-1.10-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 14 pg_store_plans_14 pg_store_plans_14-1.10-1PIGSTY.el8.aarch64.rpm pigsty 1.10 44.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_store_plans_14-1.10-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 14 pg_store_plans_14 pg_store_plans_14-1.10-1PIGSTY.el9.x86_64.rpm pigsty 1.10 45.1KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_store_plans_14-1.10-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 14 pg_store_plans_14 pg_store_plans_14-1.10-1PIGSTY.el9.aarch64.rpm pigsty 1.10 45.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_store_plans_14-1.10-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 14 pg_store_plans_14 pg_store_plans_14-1.10-1PIGSTY.el10.x86_64.rpm pigsty 1.10 46.5KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_store_plans_14-1.10-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 14 pg_store_plans_14 pg_store_plans_14-1.10-1PIGSTY.el10.aarch64.rpm pigsty 1.10 45.7KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_store_plans_14-1.10-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 14 postgresql-14-pg-store-plan postgresql-14-pg-store-plan_1.10-1PIGSTY~bookworm_amd64.deb pigsty 1.10 109.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-store-plan/postgresql-14-pg-store-plan_1.10-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 14 postgresql-14-pg-store-plan postgresql-14-pg-store-plan_1.10-1PIGSTY~bookworm_arm64.deb pigsty 1.10 106.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-store-plan/postgresql-14-pg-store-plan_1.10-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 14 postgresql-14-pg-store-plan postgresql-14-pg-store-plan_1.10-1PIGSTY~trixie_amd64.deb pigsty 1.10 109.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-store-plan/postgresql-14-pg-store-plan_1.10-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 14 postgresql-14-pg-store-plan postgresql-14-pg-store-plan_1.10-1PIGSTY~trixie_arm64.deb pigsty 1.10 106.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-store-plan/postgresql-14-pg-store-plan_1.10-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 14 postgresql-14-pg-store-plan postgresql-14-pg-store-plan_1.10-1PIGSTY~jammy_amd64.deb pigsty 1.10 130.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-store-plan/postgresql-14-pg-store-plan_1.10-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 14 postgresql-14-pg-store-plan postgresql-14-pg-store-plan_1.10-1PIGSTY~jammy_arm64.deb pigsty 1.10 128.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-store-plan/postgresql-14-pg-store-plan_1.10-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 14 postgresql-14-pg-store-plan postgresql-14-pg-store-plan_1.10-1PIGSTY~noble_amd64.deb pigsty 1.10 116.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-store-plan/postgresql-14-pg-store-plan_1.10-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 14 postgresql-14-pg-store-plan postgresql-14-pg-store-plan_1.10-1PIGSTY~noble_arm64.deb pigsty 1.10 114.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-store-plan/postgresql-14-pg-store-plan_1.10-1PIGSTY~noble_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建
@@ -218,18 +245,16 @@ CREATE EXTENSION pg_store_plans;
 ```
 
 
-
-
 ## 用法
 
 > [pg_store_plans: 执行计划存储与统计](https://github.com/ossc-db/pg_store_plans)
 
-pg_store_plans 追踪所有 SQL 语句的执行计划统计信息，为 `pg_stat_statements` 提供计划级别的补充。在 PostgreSQL 14+ 上可通过 `queryid` 进行关联。
+`pg_store_plans` 会追踪 SQL 语句的执行计划统计信息，为 `pg_stat_statements` 补充计划级别的数据。在 PostgreSQL 14+ 上可通过 `queryid` 关联两者。
 
 ### 查看计划统计
 
 ```sql
--- 查看追踪的计划及统计信息
+-- 查看追踪到的计划及统计
 SELECT queryid, planid, plan, calls, total_time, rows
 FROM pg_store_plans
 ORDER BY total_time DESC;
@@ -242,21 +267,21 @@ SELECT * FROM pg_store_plans_info;
 
 | 列名 | 类型 | 描述 |
 |--------|------|-------------|
-| `queryid` | bigint | 查询 ID（可与 pg_stat_statements 关联） |
-| `planid` | bigint | 计划哈希码 |
+| `queryid` | bigint | 查询 ID，可与 `pg_stat_statements` 关联 |
+| `planid` | bigint | 计划哈希值 |
 | `plan` | text | 代表性计划文本 |
 | `calls` | bigint | 执行次数 |
 | `total_time` | double precision | 总执行时间（毫秒） |
-| `rows` | bigint | 检索/影响的总行数 |
-| `shared_blks_hit` | bigint | 共享缓冲区命中数 |
-| `shared_blks_read` | bigint | 共享块读取数 |
+| `rows` | bigint | 检索或影响的总行数 |
+| `shared_blks_hit` | bigint | 共享缓冲区命中次数 |
+| `shared_blks_read` | bigint | 共享块读取次数 |
 | `first_call` | timestamptz | 首次执行时间 |
 | `last_call` | timestamptz | 最后执行时间 |
 
 ### 函数
 
 ```sql
--- 重置所有统计信息（仅超级用户）
+-- 重置所有统计信息，仅超级用户可用
 SELECT pg_store_plans_reset();
 
 -- 转换计划格式
@@ -273,7 +298,7 @@ SELECT pg_store_hash_query('SELECT 1');
 
 | 参数 | 默认值 | 描述 |
 |-----------|---------|-------------|
-| `pg_store_plans.max` | 1000 | 最大追踪计划数（仅在服务器启动时） |
+| `pg_store_plans.max` | 1000 | 最大追踪计划数，仅在服务器启动时生效 |
 | `pg_store_plans.track` | `top` | `top`、`all`、`verbose`、`none` |
 | `pg_store_plans.plan_format` | `text` | `text`、`json`、`xml`、`yaml`、`raw` |
 | `pg_store_plans.min_duration` | 0 | 最小追踪执行时间（毫秒） |

@@ -2,7 +2,7 @@
 title: "pg_uuidv7"
 linkTitle: "pg_uuidv7"
 description: "UUIDv7 支持"
-weight: 4540
+weight: 4520
 ---
 
 <div class="ext-cards">
@@ -30,7 +30,7 @@ weight: 4540
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
 |:-----:|:-------------------------------------------------------------------------|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|:----------|
-| 4540  | [**`pg_uuidv7`**](/ext/e/pg_uuidv7) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
+| 4520  | [**`pg_uuidv7`**](/ext/e/pg_uuidv7) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
 {.ext-table}
 
 | **相关扩展** | [`pg_idkit`](/ext/e/pg_idkit) [`pgx_ulid`](/ext/e/pgx_ulid) [`uuid-ossp`](/ext/e/uuid-ossp) [`sequential_uuids`](/ext/e/sequential_uuids) [`pg_hashids`](/ext/e/pg_hashids) [`permuteseq`](/ext/e/permuteseq) |
@@ -345,7 +345,6 @@ CREATE EXTENSION pg_uuidv7;
 ```
 
 
-
 ## 用法
 
 > [pg_uuidv7: 在 PostgreSQL 中创建有效的版本 7 UUID](https://github.com/fboulnois/pg_uuidv7)
@@ -360,7 +359,7 @@ CREATE EXTENSION pg_uuidv7;
 |---|---|
 | `uuid_generate_v7()` | 生成一个新的 UUIDv7 |
 | `uuid_v7_to_timestamptz(uuid)` | 从 UUIDv7 中提取时间戳 |
-| `uuid_timestamptz_to_v7(timestamptz [, bool])` | 将时间戳转换为 UUIDv7（第二个参数设为 `true` 则将随机位清零） |
+| `uuid_timestamptz_to_v7(timestamptz [, bool])` | 将时间戳转换为 UUIDv7，第二个参数设为 `true` 时会将随机位清零 |
 
 ### 示例
 
