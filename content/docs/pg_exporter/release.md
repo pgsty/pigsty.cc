@@ -5,10 +5,11 @@ icon: fa-solid fa-clipboard-list
 description: PG Exporter 版本发布历史
 ---
 
-`pg_exporter` 的最新稳定版本是 [v1.2.1](https://github.com/pgsty/pg_exporter/releases/tag/v1.2.1)
+`pg_exporter` 的最新稳定版本是 [v1.2.2](https://github.com/pgsty/pg_exporter/releases/tag/v1.2.2)
 
 |       版本        |     日期     | 摘要                                           |                               GitHub                               |
 |:---------------:|:----------:|----------------------------------------------|:------------------------------------------------------------------:|
+| [v1.2.2](#v122) | 2026-04-14 | 例行更新到 Go 1.26.2，无功能改动                        | [v1.2.2](https://github.com/pgsty/pg_exporter/releases/tag/v1.2.2) |
 | [v1.2.1](#v121) | 2026-03-21 | 配置样式统一，Go 1.26.1 更新                          | [v1.2.1](https://github.com/pgsty/pg_exporter/releases/tag/v1.2.1) |
 | [v1.2.0](#v120) | 2026-02-12 | 热重载与非阻塞启动，新增 PG9.1-9.6 legacy 支持             | [v1.2.0](https://github.com/pgsty/pg_exporter/releases/tag/v1.2.0) |
 | [v1.1.2](#v112) | 2026-01-16 | 修复 pg_timeline 配置问题，使用最新依赖构建                 | [v1.1.2](https://github.com/pgsty/pg_exporter/releases/tag/v1.1.2) |
@@ -39,6 +40,39 @@ description: PG Exporter 版本发布历史
 | [v0.0.2](#v002) | 2019-12-09 | 早期测试版本                                       | [v0.0.2](https://github.com/pgsty/pg_exporter/releases/tag/v0.0.2) |
 | [v0.0.1](#v001) | 2019-12-06 | 初始版本，支持 PgBouncer 模式                         | [v0.0.1](https://github.com/pgsty/pg_exporter/releases/tag/v0.0.1) |
 {.full-width}
+
+
+--------
+
+## v1.2.2
+
+`v1.2.2` 是一次例行维护发布，仅将发布构建链更新到 Go `1.26.2`，未引入新的采集器、配置语义或运行时行为变更。
+
+**变更摘要：**
+
+- 刷新构建链：发布流程更新到 Go `1.26.2`
+- 无功能改动：未调整采集器、默认配置、指标定义或运行时行为
+
+**校验和**
+
+https://github.com/pgsty/pg_exporter/releases/download/v1.2.2/checksums.txt
+
+```bash
+273dfd45ac367f71044998d19171ee27d7deb094ec9410d4b31aef7caacfdcc6  pg-exporter_1.2.2-1_amd64.deb
+5e83c8448ee6350bec96ab95550df439a129c6700e5c9c7d0f9411aa9c2e7f40  pg-exporter_1.2.2-1_arm64.deb
+97bb804bd1018c111708df9118561421d2cc51bd47d031b6d1f12cf1c988a3b2  pg-exporter_1.2.2-1_ppc64le.deb
+b2f76799b21aba02b6bf5b6e71bf7ae2cf4487ad8817d53aad92f1d710c00120  pg_exporter-1.2.2-1.aarch64.rpm
+f0ab38907bc87a9634c22911d8a0501634d58ce34020c0952dd49281a06787e6  pg_exporter-1.2.2-1.ppc64le.rpm
+2000593d9d6732f3e03a43e291bc4e2368d2ecea125a2744dc533a030f51c800  pg_exporter-1.2.2-1.x86_64.rpm
+e8a71704eb6957beaebd8ecaf83479e44db4a09bd9dc95c32f7b617f141b0386  pg_exporter-1.2.2.darwin-amd64.tar.gz
+e648d9444f9a5f3ee49b82bcbbb459eefd73307c789f24f0d5238dbe1bcfec9c  pg_exporter-1.2.2.darwin-arm64.tar.gz
+f278aba93d09b2a47aeef66898e770cacfdbc046eab0ba02de29f7c0261d9ede  pg_exporter-1.2.2.linux-amd64.tar.gz
+bbeef56452643b8eb6bf9bb5baf113ab2c38177c06f8e1d008e63cce82260801  pg_exporter-1.2.2.linux-arm64.tar.gz
+ad2385278ec6060fef2f7db7873c025f56f5c55048b51815cb4195486ca9dbe2  pg_exporter-1.2.2.linux-ppc64le.tar.gz
+2ac53298058f09c5569464f918396f13d3a9efebec00296d89497e97ea74caf4  pg_exporter-1.2.2.windows-amd64.tar.gz
+```
+
+https://github.com/pgsty/pg_exporter/releases/tag/v1.2.2
 
 
 --------

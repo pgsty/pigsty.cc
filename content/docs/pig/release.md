@@ -7,10 +7,11 @@ module: [PIG]
 categories: [参考]
 ---
 
-最新稳定版本是 [v1.3.3](https://github.com/pgsty/pig/releases/tag/v1.3.3)。
+最新稳定版本是 [v1.3.4](https://github.com/pgsty/pig/releases/tag/v1.3.4)。
 
 |       版本        |     日期     | 摘要                                |                                                     GitHub |
 |:---------------:|:----------:|-----------------------------------|-----------------------------------------------------------:|
+| [v1.3.4](#v134) | 2026-04-14 | 504 扩展更新与发布产物校验和刷新             | [v1.3.4](https://github.com/pgsty/pig/releases/tag/v1.3.4) |
 | [v1.3.3](#v133) | 2026-04-10 | 481 扩展与 Go 1.26.2 更新              | [v1.3.3](https://github.com/pgsty/pig/releases/tag/v1.3.3) |
 | [v1.3.2](#v132) | 2026-03-23 | 例行元数据更新，新增 `pg tune` 与构建别名        | [v1.3.2](https://github.com/pgsty/pig/releases/tag/v1.3.2) |
 | [v1.3.1](#v131) | 2026-03-05 | PG13 退役，支持窗口统一为 PG14-18，扩展增至 464  | [v1.3.1](https://github.com/pgsty/pig/releases/tag/v1.3.1) |
@@ -47,6 +48,28 @@ categories: [参考]
 | [v0.0.1](#v001) | 2024-12-23 | 创世发布                              | [v0.0.1](https://github.com/pgsty/pig/releases/tag/v0.0.1) |
 {.full-width}
 
+
+
+--------
+
+# v1.3.4
+
+扩展数量更新至 **504** 个。
+
+**校验和**
+
+```bash
+dc78def9a1e5eb483ac5df4c87f4ac0ef2018bb12b4bedff650d8ba4d58a05fd  pig-1.3.4-1.aarch64.rpm
+998fcbdab1846c94c3155391d2100dad9b0fe338f48212022db38980bb11e696  pig-1.3.4-1.x86_64.rpm
+031048c561abbeeeaa73fa3ac919b9fb89479b61c8a759bee5db2efba2e8a1df  pig-v1.3.4.darwin-amd64.tar.gz
+e13c939330d32fa91819ce2da88d121fb02a1063240dbf6cc8fa7975960f8fd3  pig-v1.3.4.darwin-arm64.tar.gz
+46aa321cf45fc9be635d91b38969b7f3602b7f226f43e5ee0e7614a030945c64  pig-v1.3.4.linux-amd64.tar.gz
+f25c4f336edba5c9d2145368082f54e5b1a8b2d4261285b7a1721c088df4caa4  pig-v1.3.4.linux-arm64.tar.gz
+563516047e37b25da01da9e25bcbada2c55642d1636b1bdab7d62488f9dcdfbb  pig_1.3.4-1_amd64.deb
+81bb482892f7fd4be862d0f377cb37d01c925006c96998d81d94c770ed9652ba  pig_1.3.4-1_arm64.deb
+```
+
+发布：https://github.com/pgsty/pig/releases/tag/v1.3.4
 
 
 --------

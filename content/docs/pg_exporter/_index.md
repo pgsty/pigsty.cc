@@ -34,7 +34,7 @@ description: 高级 PostgreSQL 与 PgBouncer 监控指标导出器
 
 ## 版本信息
 
-- 当前稳定版本：[`v1.2.1`](https://github.com/pgsty/pg_exporter/releases/tag/v1.2.1)
+- 当前稳定版本：[`v1.2.2`](https://github.com/pgsty/pg_exporter/releases/tag/v1.2.2)
 - 默认配置支持：PostgreSQL **10-18+**
 - Legacy 配置支持：PostgreSQL **9.1-9.6**（使用 `legacy/` 配置包）
 - PgBouncer 支持：**1.8-1.25+**
@@ -95,10 +95,10 @@ sudo apt install -y pg-exporter
 {{< /tab >}}
 
 {{< tab header="二进制" lang="bash" >}}
-wget https://github.com/pgsty/pg_exporter/releases/download/v1.2.1/pg_exporter-1.2.1.linux-amd64.tar.gz
-tar -xf pg_exporter-1.2.1.linux-amd64.tar.gz
-sudo install pg_exporter-1.2.1.linux-amd64/pg_exporter /usr/bin/
-sudo install pg_exporter-1.2.1.linux-amd64/pg_exporter.yml /etc/pg_exporter.yml
+wget https://github.com/pgsty/pg_exporter/releases/download/v1.2.2/pg_exporter-1.2.2.linux-amd64.tar.gz
+tar -xf pg_exporter-1.2.2.linux-amd64.tar.gz
+sudo install pg_exporter-1.2.2.linux-amd64/pg_exporter /usr/bin/
+sudo install pg_exporter-1.2.2.linux-amd64/pg_exporter.yml /etc/pg_exporter.yml
 {{< /tab >}}
 
 {{< tab header="源码" lang="bash" >}}

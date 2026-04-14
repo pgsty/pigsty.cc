@@ -4,6 +4,14 @@ weight: 10
 module: [PIGSTY]
 categories: [参考]
 linkTitle: 文档
+outputs:
+  - HTML
+  - RSS
+  - print
+cascade:
+  outputs:
+    - HTML
+    - print
 ---
 
 "**P**ostgreSQL **I**n **G**reat **STY**le": **P**ostgres, **I**nfras, **G**raphics, **S**ervice, **T**oolbox, it's all **Y**ours.

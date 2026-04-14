@@ -83,9 +83,11 @@ markup:
           block: [['\[', '\]'], ['$$', '$$']]
           inline: [['\(', '\)']]
   highlight:
+    # Use class-based Chroma output so Docsy can swap light/dark palettes
+    # via CSS instead of baking light-theme colors into the generated HTML.
     style: tango
     codeFences: true
-    noClasses: true
+    noClasses: false
 
 #=======================================#
 # Outputs
@@ -98,12 +100,11 @@ outputs:
   section:
     - HTML
     - RSS
-    - print
 
-# Disable RSS for ext section (465 extension pages make index.xml exceed 25MB)
+# Keep ext HTML-only; large catalog outputs can exceed hosting limits.
 cascade:
-  - _target:
-      path: /ext/**
+  - target:
+      path: '{/ext,/ext/**}'
     outputs:
       - HTML
 

@@ -58,7 +58,7 @@ pg_in_recovery 0
 
 # HELP pg_exporter_build_info A metric with a constant '1' value labeled with version, revision, branch, goversion, builddate, goos, and goarch from which pg_exporter was built.
 # TYPE pg_exporter_build_info gauge
-pg_exporter_build_info{version="1.2.1",branch="main",revision="<git-sha>",builddate="<build-date>",goversion="go1.26.1",goos="linux",goarch="amd64"} 1
+pg_exporter_build_info{version="1.2.2",branch="main",revision="<git-sha>",builddate="<build-date>",goversion="go1.26.2",goos="linux",goarch="amd64"} 1
 
 # ... 更多指标
 ```

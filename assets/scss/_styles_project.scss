@@ -1,5 +1,41 @@
 // Custom styles for Pigsty.cc
 
+// Syntax highlighting must stay class-based so the site theme can control
+// light/dark palettes. Our Docsy module version ships the Chroma theme partials
+// but does not import them into the main bundle, so wire them up here.
+[data-bs-theme='light'] {
+  @import 'td/chroma/tango';
+}
+
+[data-bs-theme='dark'] {
+  @import 'td/chroma/dark';
+
+  .chroma {
+    background-color: var(--td-pre-bg);
+
+    // Native's default number and line-number colors are too dim on our dark
+    // code surface, so lift them slightly for readability.
+    .m,
+    .mb,
+    .mf,
+    .mh,
+    .mi,
+    .il,
+    .mo {
+      color: #6cb6ff;
+    }
+
+    .ln,
+    .lnt {
+      color: #7b8591;
+    }
+
+    .go {
+      color: #c8d1dc;
+    }
+  }
+}
+
 // 覆盖 Docsy 默认的内容最大宽度（从 80% 改为 90%）
 // 影响：段落、代码块、blockquote、表格、asciinema 播放器等
 .td-max-width-on-larger-screens {

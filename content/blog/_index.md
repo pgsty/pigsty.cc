@@ -8,11 +8,17 @@ menu:
     weight: 30
     pre: <i class="fas fa-blog"></i>
 
+outputs:
+  - HTML
+  - RSS
+  - print
 cascade:
+  outputs:
+    - HTML
+    - print
   params:
     ui:
       sidebar_menu_foldable: false
       sidebar_menu_compact: false
       ul_show: 3
 ---
-
