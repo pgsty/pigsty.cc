@@ -2,7 +2,7 @@
 title: "pglite_fusion"
 linkTitle: "pglite_fusion"
 description: "在PG表中嵌入SQLite数据库作为数据类型"
-weight: 3540
+weight: 3590
 ---
 
 <div class="ext-cards">
@@ -30,7 +30,7 @@ weight: 3540
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
 |:-----:|:-------------------------------------------------------------------------|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|:----------|
-| 3540  | [**`pglite_fusion`**](/ext/e/pglite_fusion) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | - |
+| 3590  | [**`pglite_fusion`**](/ext/e/pglite_fusion) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | - |
 {.ext-table}
 
 | **相关扩展** | [`duckdb_fdw`](/ext/e/duckdb_fdw) [`sqlite_fdw`](/ext/e/sqlite_fdw) [`prefix`](/ext/e/prefix) [`semver`](/ext/e/semver) [`unit`](/ext/e/unit) [`pgpdf`](/ext/e/pgpdf) [`md5hash`](/ext/e/md5hash) [`asn1oid`](/ext/e/asn1oid) |

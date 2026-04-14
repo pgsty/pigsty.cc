@@ -2,7 +2,7 @@
 title: "lolor"
 linkTitle: "lolor"
 description: "让 PostgreSQL 大对象兼容逻辑复制的扩展"
-weight: 9570
+weight: 9580
 ---
 
 <div class="ext-cards">
@@ -30,7 +30,7 @@ weight: 9570
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
 |:-----:|:-------------------------------------------------------------------------|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|:----------|
-| 9570  | [**`lolor`**](/ext/e/lolor) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | `lolor` |
+| 9580  | [**`lolor`**](/ext/e/lolor) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | `lolor` |
 {.ext-table}
 
 | **相关扩展** | [`spock`](/ext/e/spock) [`snowflake`](/ext/e/snowflake) |

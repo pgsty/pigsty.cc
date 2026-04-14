@@ -8,12 +8,12 @@ icon: fas fa-square-root-variable
 
 ## 扩展列表
 
-共有 **49** 个扩展，位于 **49** 个扩展包中。
+共有 **50** 个扩展，位于 **50** 个扩展包中。
 
 | **扩展** | **包** | **版本** | **许可证** | **语言** | **描述** |
 |:---------|:-------|:--------:|:----------:|:--------:|:---------|
 | [`pg_idkit`](/ext/e/pg_idkit) | [`pg_idkit`](https://github.com/VADOSWARE/pg_idkit) | `0.4.0` | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | 生成各式各样的唯一标识符：UUIDv6, ULID, KSUID |
-| [`pgx_ulid`](/ext/e/pgx_ulid) | [`pgx_ulid`](https://github.com/pksunkara/pgx_ulid) | `0.2.2` | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | ULID数据类型与函数 |
+| [`pgx_ulid`](/ext/e/pgx_ulid) | [`pgx_ulid`](https://github.com/pksunkara/pgx_ulid) | `0.2.3` | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | ULID数据类型与函数 |
 | [`pg_uuidv7`](/ext/e/pg_uuidv7) | [`pg_uuidv7`](https://github.com/fboulnois/pg_uuidv7) | `1.7.0` | <a class="ext-badge ext-badge--license mpl20" href="/ext/license#mpl20">MPL-2.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | UUIDv7 支持 |
 | [`permuteseq`](/ext/e/permuteseq) | [`permuteseq`](https://github.com/dverite/permuteseq) | `1.2.2` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 伪随机数ID置换生成器 |
 | [`pg_hashids`](/ext/e/pg_hashids) | [`pg_hashids`](https://github.com/iCyberon/pg_hashids) | `1.3` | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 加盐将整型ID转为短字符串ID |
@@ -30,6 +30,7 @@ icon: fas fa-square-root-variable
 | [`vasco`](/ext/e/vasco) | [`vasco`](https://github.com/Florents-Tselai/vasco) | `0.1.0` | <a class="ext-badge ext-badge--license gpl30" href="/ext/license#gpl30">GPL-3.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 使用MIC发现数据中隐含的关联 |
 | [`xicor`](/ext/e/xicor) | [`pgxicor`](https://github.com/Florents-Tselai/pgxicor) | `0.1.0` | <a class="ext-badge ext-badge--license gpl30" href="/ext/license#gpl30">GPL-3.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 在PG中计算XI相关系数 |
 | [`weighted_statistics`](/ext/e/weighted_statistics) | [`pg_weighted_statistics`](https://github.com/schmidni/pg_weighted_statistics) | `1.0.0` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 针对稀疏数据的高性能加权统计量计算 |
+| [`datasketches`](/ext/e/datasketches) | [`datasketches`](https://github.com/apache/datasketches-postgresql) | `1.7.0` | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang cpp" href="/ext/language#cpp">C++</a> | PostgreSQL 近似分析摘要数据结构与聚合函数 |
 | [`tdigest`](/ext/e/tdigest) | [`tdigest`](https://github.com/tvondra/tdigest) | `1.4.3` | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | tdigest 聚合函数 |
 | [`first_last_agg`](/ext/e/first_last_agg) | [`first_last_agg`](https://github.com/wulczer/first_last_agg) | `0.1.4` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | first() 与 last() 聚合函数 |
 | [`extra_window_functions`](/ext/e/extra_window_functions) | [`extra_window_functions`](https://github.com/xocolatl/extra_window_functions) | `1.0` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 额外的窗口函数 |
@@ -86,7 +87,7 @@ icon: fas fa-square-root-variable
 
 ## pgx_ulid {#pgx_ulid}
 
-[**`pgx_ulid`**](/ext/e/pgx_ulid) - `0.2.2` : ULID数据类型与函数
+[**`pgx_ulid`**](/ext/e/pgx_ulid) - `0.2.3` : ULID数据类型与函数
 
 | **条目** | **属性** | **OS** | **x86_64** | **aarch64** |
 |:---:|:---|:---:|:---:|:---:|
@@ -385,6 +386,24 @@ icon: fas fa-square-root-variable
 | **语言** | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | **d13** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
 | **仓库** | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | **u22** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
 | **协议** | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | **u24** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+{.ext-table .ext-table--cate}
+
+
+---------
+
+## datasketches {#datasketches}
+
+[**`datasketches`**](/ext/e/datasketches) - `1.7.0` : PostgreSQL 近似分析摘要数据结构与聚合函数
+
+| **条目** | **属性** | **OS** | **x86_64** | **aarch64** |
+|:---:|:---|:---:|:---:|:---:|
+| **扩展名** | [`datasketches`](/ext/e/datasketches) | **el8** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+| **扩展包** | [`datasketches`](https://github.com/apache/datasketches-postgresql) | **el9** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+| **RPM** | `datasketches_$v` | **el10** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+| **DEB** | `postgresql-$v-datasketches` | **d12** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+| **语言** | <a class="ext-badge ext-badge--lang cpp" href="/ext/language#cpp">C++</a> | **d13** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+| **仓库** | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | **u22** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+| **协议** | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | **u24** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
 {.ext-table .ext-table--cate}
 
 

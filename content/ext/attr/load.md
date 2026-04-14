@@ -5,7 +5,7 @@ description: "需要动态加载的 PostgreSQL 扩展"
 weight: 10
 ---
 
-以下 **92** 个扩展需要在 [`shared_preload_libraries`](https://www.postgresql.org/docs/current/runtime-config-client.html#GUC-SHARED-PRELOAD-LIBRARIES) 中动态加载，才能正常使用。
+以下 **100** 个扩展需要在 [`shared_preload_libraries`](https://www.postgresql.org/docs/current/runtime-config-client.html#GUC-SHARED-PRELOAD-LIBRARIES) 中动态加载，才能正常使用。
 
 也就是说，您需要修改 PostgreSQL 配置文件 `postgresql.conf` 中的 [`shared_preload_libraries`](https://www.postgresql.org/docs/current/runtime-config-client.html#GUC-SHARED-PRELOAD-LIBRARIES) 参数，将扩展的库名添加进去，然后重启数据库才能生效。
 
@@ -16,11 +16,14 @@ weight: 10
 | [`pg_task`](/ext/e/pg_task) | `pg_task` | 在特定时间点在后台执行SQL命令 |
 | [`pg_later`](/ext/e/pg_later) | `pg_later` | 执行查询，并在稍后异步获取查询结果 |
 | [`vchord`](/ext/e/vchord) | `vchord` | 使用Rust重写的高性能向量扩展 |
+| [`vectorize`](/ext/e/vectorize) | `vectorize` | 在PostgreSQL中封装RAG向量检索服务 |
 | [`pgml`](/ext/e/pgml) | `pgml` | PostgresML：用SQL运行机器学习算法并训练模型 |
+| [`pg_search`](/ext/e/pg_search) | `pg_search` | ParadeDB BM25算法全文检索插件，ES全文检索 |
 | [`pg_bigm`](/ext/e/pg_bigm) | `pg_bigm` | 基于二字组的多语言全文检索扩展 |
 | [`pg_bestmatch`](/ext/e/pg_bestmatch) | `pg_bestmatch` | 在数据库内生成BM25稀疏向量 |
 | [`vchord_bm25`](/ext/e/vchord_bm25) | `vchord_bm25` | BM25排序算法 |
 | [`pg_tokenizer`](/ext/e/pg_tokenizer) | `pg_tokenizer` | 用于全文检索的分词器 |
+| [`pg_textsearch`](/ext/e/pg_textsearch) | `pg_textsearch` | 带有BM25排序的全文搜索扩展 |
 | [`citus`](/ext/e/citus) | `citus` | Citus 分布式数据库 |
 | [`pg_analytics`](/ext/e/pg_analytics) | `pg_analytics` | 由 DuckDB 驱动的数据分析引擎 |
 | [`pg_duckdb`](/ext/e/pg_duckdb) | `pg_duckdb` | 在PostgreSQL中的嵌入式DuckDB扩展 |
@@ -33,6 +36,7 @@ weight: 10
 | [`plan_filter`](/ext/e/plan_filter) | `plan_filter` | 使用执行计划代价过滤阻止特定查询语句 |
 | [`pg_ivm`](/ext/e/pg_ivm) | `pg_ivm` | 增量维护的物化视图 |
 | [`pg_trickle`](/ext/e/pg_trickle) | `pg_trickle` | 为 PostgreSQL 18 提供流式表与差分视图维护 |
+| [`provsql`](/ext/e/provsql) | `provsql` | PostgreSQL 半环溯源与不确定性管理扩展 |
 | [`orioledb`](/ext/e/orioledb) | `orioledb` | OrioleDB，下一代事务处理引擎 |
 | [`omni`](/ext/e/omni) | `omni--0.2.14.so` | PostgreSQL即平台，Omnigres主扩展与加载器 |
 | [`pg_tle`](/ext/e/pg_tle) | `pg_tle` | AWS 可信语言扩展 |
@@ -45,6 +49,7 @@ weight: 10
 | [`pg_net`](/ext/e/pg_net) | `pg_net` | 用 SQL 进行异步非阻塞HTTP/HTTPS 请求的扩展 (supabase) |
 | [`pgx_ulid`](/ext/e/pgx_ulid) | `pgx_ulid` | ULID数据类型与函数 |
 | [`pg_rewrite`](/ext/e/pg_rewrite) | `pg_rewrite` | 在线重写整表，不阻塞读写 |
+| [`pg_query_rewrite`](/ext/e/pg_query_rewrite) | `pg_query_rewrite` | 使用 ProcessUtility hook 重写 SQL 语句 |
 | [`pg_squeeze`](/ext/e/pg_squeeze) | `pg_squeeze` | 从关系中删除未使用空间 |
 | [`pg_readonly`](/ext/e/pg_readonly) | `pg_readonly` | 将集群设置为只读 |
 | [`pgautofailover`](/ext/e/pgautofailover) | `pgautofailover` | PG 自动故障迁移 |
@@ -62,6 +67,7 @@ weight: 10
 | [`pg_store_plans`](/ext/e/pg_store_plans) | `pg_store_plans` | 跟踪所有执行的 SQL 语句的计划统计信息 |
 | [`pg_track_optimizer`](/ext/e/pg_track_optimizer) | `pg_track_optimizer` | 跟踪规划器决策与实际执行的差距 |
 | [`pg_wait_sampling`](/ext/e/pg_wait_sampling) | `pg_wait_sampling` | 基于采样的等待事件统计 |
+| [`pg_datasentinel`](/ext/e/pg_datasentinel) | `pg_datasentinel` | PostgreSQL 可观测性与活动监控扩展 |
 | [`pgsentinel`](/ext/e/pgsentinel) | `pgsentinel` | 活跃会话历史 |
 | [`pgnodemx`](/ext/e/pgnodemx) | `pgnodemx` | 使用SQL查询获取操作系统指标 |
 | [`bgw_replstatus`](/ext/e/bgw_replstatus) | `bgw_replstatus` | 用于汇报本机主从状态的后台工作进程 |
@@ -72,6 +78,7 @@ weight: 10
 | [`passwordcheck_cracklib`](/ext/e/passwordcheck_cracklib) | `$libdir/passwordcheck_cracklib` | 使用cracklib加固PG用户密码 |
 | [`supautils`](/ext/e/supautils) | `supautils` | 用于在云环境中确保数据库集群的安全 |
 | [`pgsodium`](/ext/e/pgsodium) | `pgsodium` | 表数据加密存储 TDE |
+| [`column_encrypt`](/ext/e/column_encrypt) | `column_encrypt` | 透明列级加密扩展，提供 encrypted_text 与 encrypted_bytea 类型 |
 | [`anon`](/ext/e/anon) | `anon` | 数据匿名化处理工具 |
 | [`pgaudit`](/ext/e/pgaudit) | `pgaudit` | 提供审计功能 |
 | [`pgauditlogtofile`](/ext/e/pgauditlogtofile) | `pgauditlogtofile` | pgAudit 子扩展，将审计日志写入单独的文件中 |
@@ -82,6 +89,7 @@ weight: 10
 | [`pg_snakeoil`](/ext/e/pg_snakeoil) | `pg_snakeoil` | PostgreSQL动态链接库反病毒功能 |
 | [`pgextwlist`](/ext/e/pgextwlist) | `pgextwlist` | PostgreSQL扩展白名单功能 |
 | [`pg_command_fw`](/ext/e/pg_command_fw) | `pg_command_fw` | PostgreSQL 的 DDL 与 utility 命令防火墙 |
+| [`block_copy_command`](/ext/e/block_copy_command) | `block_copy_command` | 通过可配置的 ProcessUtility hook 阻止 COPY 命令 |
 | [`noset`](/ext/e/noset) | `noset` | 阻止非超级用户使用SET/RESET设置变量 |
 | [`pg_tde`](/ext/e/pg_tde) | `pg_tde` | Percona加密存储引擎 |
 | [`sepgsql`](/ext/e/sepgsql) | `sepgsql` | 基于SELinux标签的强制访问控制 |

@@ -8,7 +8,7 @@ icon: fas fa-magnifying-glass
 
 ## 扩展列表
 
-共有 **23** 个扩展，位于 **22** 个扩展包中。
+共有 **24** 个扩展，位于 **23** 个扩展包中。
 
 | **扩展** | **包** | **版本** | **许可证** | **语言** | **描述** |
 |:---------|:-------|:--------:|:----------:|:--------:|:---------|
@@ -23,6 +23,7 @@ icon: fas fa-magnifying-glass
 | [`biscuit`](/ext/e/biscuit) | [`pg_biscuit`](https://github.com/CrystallineCore/Biscuit) | `2.2.2` | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 使用IAM的高性能文本模式匹配 |
 | [`pg_textsearch`](/ext/e/pg_textsearch) | [`pg_textsearch`](https://github.com/timescale/pg_textsearch) | `1.0.0` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 带有BM25排序的全文搜索扩展 |
 | [`pg_pinyin`](/ext/e/pg_pinyin) | [`pg_pinyin`](https://github.com/aiyou178/pg_pinyin) | `0.0.2` | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | PostgreSQL 拼音转写与检索辅助扩展 |
+| [`pg_kazsearch`](/ext/e/pg_kazsearch) | [`pg_kazsearch`](https://github.com/darkhanakh/pg-kazsearch) | `0.1.0` | <a class="ext-badge ext-badge--license lgpl30" href="/ext/license#lgpl30">LGPL-3.0</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | PostgreSQL 哈萨克语全文检索扩展 |
 | [`hunspell_cs_cz`](/ext/e/hunspell_cs_cz) | [`hunspell_cs_cz`](https://github.com/postgrespro/hunspell_dicts) | `1.0` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang data" href="/ext/language#data">Data</a> | Hunspell捷克语全文检索词典 |
 | [`hunspell_de_de`](/ext/e/hunspell_de_de) | [`hunspell_de_de`](https://github.com/postgrespro/hunspell_dicts) | `1.0` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang data" href="/ext/language#data">Data</a> | Hunspell德语全文检索词典 |
 | [`hunspell_en_us`](/ext/e/hunspell_en_us) | [`hunspell_en_us`](https://github.com/postgrespro/hunspell_dicts) | `1.0` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang data" href="/ext/language#data">Data</a> | Hunspell英语全文检索词典 |
@@ -233,6 +234,24 @@ icon: fas fa-magnifying-glass
 | **语言** | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | **d13** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
 | **仓库** | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | **u22** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
 | **协议** | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | **u24** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+{.ext-table .ext-table--cate}
+
+
+---------
+
+## pg_kazsearch {#pg_kazsearch}
+
+[**`pg_kazsearch`**](/ext/e/pg_kazsearch) - `0.1.0` : PostgreSQL 哈萨克语全文检索扩展
+
+| **条目** | **属性** | **OS** | **x86_64** | **aarch64** |
+|:---:|:---|:---:|:---:|:---:|
+| **扩展名** | [`pg_kazsearch`](/ext/e/pg_kazsearch) | **el8** | {{< pgvers "18,17,16" >}} | {{< pgvers "18,17,16" >}} |
+| **扩展包** | [`pg_kazsearch`](https://github.com/darkhanakh/pg-kazsearch) | **el9** | {{< pgvers "18,17,16" >}} | {{< pgvers "18,17,16" >}} |
+| **RPM** | `pg_kazsearch_$v` | **el10** | {{< pgvers "18,17,16" >}} | {{< pgvers "18,17,16" >}} |
+| **DEB** | `postgresql-$v-pg-kazsearch` | **d12** | {{< pgvers "18,17,16" >}} | {{< pgvers "18,17,16" >}} |
+| **语言** | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | **d13** | {{< pgvers "18,17,16" >}} | {{< pgvers "18,17,16" >}} |
+| **仓库** | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | **u22** | {{< pgvers "18,17,16" >}} | {{< pgvers "18,17,16" >}} |
+| **协议** | <a class="ext-badge ext-badge--license lgpl30" href="/ext/license#lgpl30">LGPL-3.0</a> | **u24** | {{< pgvers "18,17,16" >}} | {{< pgvers "18,17,16" >}} |
 {.ext-table .ext-table--cate}
 
 

@@ -38,7 +38,7 @@ weight: 2460
 {.ext-table .ext-table--rel}
 
 
-> with submodule
+> Release tag 0.1.10 still ships extension SQL version 0.1; source tarball vendors submodules.
 
 
 ## 版本

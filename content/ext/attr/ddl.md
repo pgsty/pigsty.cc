@@ -24,13 +24,13 @@ slug: ddl
 | [`pg_overexplain`](/ext/e/pg_overexplain) | [`pg_overexplain`](https://www.postgresql.org/docs/devel/pgoverexplain.html) | `1.0` | `c-sL---` | 允许 EXPLAIN 转储更多详细 |
 | [`auto_explain`](/ext/e/auto_explain) | [`auto_explain`](https://www.postgresql.org/docs/current/auto-explain.html) | `-` | `c-sL---` | 提供一种自动记录执行计划的手段 |
 | [`passwordcheck_cracklib`](/ext/e/passwordcheck_cracklib) | [`passwordcheck_cracklib`](https://github.com/devrimgunduz/passwordcheck_cracklib) | `3.1.0` | `--sL---` | 使用cracklib加固PG用户密码 |
-| [`supautils`](/ext/e/supautils) | [`supautils`](https://github.com/supabase/supautils) | `3.1.0` | `--sL---` | 用于在云环境中确保数据库集群的安全 |
+| [`supautils`](/ext/e/supautils) | [`supautils`](https://github.com/supabase/supautils) | `3.2.1` | `--sL---` | 用于在云环境中确保数据库集群的安全 |
 | [`pgextwlist`](/ext/e/pgextwlist) | [`pgextwlist`](https://github.com/dimitri/pgextwlist) | `1.19` | `--sL---` | PostgreSQL扩展白名单功能 |
 | [`sepgsql`](/ext/e/sepgsql) | [`sepgsql`](https://www.postgresql.org/docs/current/sepgsql.html) | `-` | `c-sL---` | 基于SELinux标签的强制访问控制 |
 | [`auth_delay`](/ext/e/auth_delay) | [`auth_delay`](https://www.postgresql.org/docs/current/auth-delay.html) | `-` | `c-sL---` | 在返回认证失败前暂停一会，避免爆破 |
 | [`passwordcheck`](/ext/e/passwordcheck) | [`passwordcheck`](https://www.postgresql.org/docs/current/passwordcheck.html) | `-` | `c-sL---` | 用于强制拒绝修改弱密码的扩展 |
 | [`pg_statement_rollback`](/ext/e/pg_statement_rollback) | [`pg_statement_rollback`](https://github.com/lzlabs/pg_statement_rollback) | `1.5` | `--sL---` | 在服务端提供类似Oracle/DB2的语句级回滚能力 |
-| [`pg_failover_slots`](/ext/e/pg_failover_slots) | [`pg_failover_slots`](https://github.com/EnterpriseDB/pg_failover_slots) | `1.2.0` | `--sL--r` | 在Failover过程中保留复制槽 |
+| [`pg_failover_slots`](/ext/e/pg_failover_slots) | [`pg_failover_slots`](https://github.com/EnterpriseDB/pg_failover_slots) | `1.2.1` | `--sL--r` | 在Failover过程中保留复制槽 |
 | [`wal2json`](/ext/e/wal2json) | [`wal2json`](https://github.com/eulerto/wal2json) | `2.6` | `--s----` | 用逻辑解码捕获 JSON 格式的 CDC 变更 |
 | [`wal2mongo`](/ext/e/wal2mongo) | [`wal2mongo`](https://github.com/HighgoSoftware/wal2mongo) | `1.0.7` | `--s----` | 使用逻辑解码捕获MongoDB JSON格式的CDC变更 |
 | [`decoderbufs`](/ext/e/decoderbufs) | [`decoderbufs`](https://github.com/debezium/postgres-decoderbufs) | `3.4.1` | `--sL---` | 将WAL逻辑解码为ProtocolBuffer协议的消息 |

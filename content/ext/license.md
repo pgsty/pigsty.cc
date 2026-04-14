@@ -8,9 +8,9 @@ icon: fas fa-scale-balanced
 
 | **许可证** | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--license isc" href="/ext/license#isc">ISC</a> | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--license bsd 0clause" href="/ext/license#bsd0clause">BSD 0-Clause</a> | <a class="ext-badge ext-badge--license bsd 2clause" href="/ext/license#bsd2clause">BSD 2-Clause</a> | <a class="ext-badge ext-badge--license bsd 3clause" href="/ext/license#bsd3clause">BSD 3-Clause</a> | <a class="ext-badge ext-badge--license artistic" href="/ext/license#artistic">Artistic</a> | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--license mpl20" href="/ext/license#mpl20">MPL-2.0</a> |
 |:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|
-| **宽松** | 76 | 6 | 221 | 2 | 14 | 30 | 3 | 82 | 1 |
-| **许可证** | <a class="ext-badge ext-badge--license gpl20" href="/ext/license#gpl20">GPL-2.0</a> | <a class="ext-badge ext-badge--license gpl30" href="/ext/license#gpl30">GPL-3.0</a> | <a class="ext-badge ext-badge--license lgpl21" href="/ext/license#lgpl21">LGPL-2.1</a> | <a class="ext-badge ext-badge--license lgpl30" href="/ext/license#lgpl30">LGPL-3.0</a> | <a class="ext-badge ext-badge--license agpl30" href="/ext/license#agpl30">AGPL-3.0</a> | <a class="ext-badge ext-badge--license timescale" href="/ext/license#timescale">Timescale</a> | <a class="ext-badge ext-badge--license bsd2clause" href="/ext/license#bsd2clause">BSD-2-Clause</a> | <a class="ext-badge ext-badge--license bsd3clause" href="/ext/license#bsd3clause">BSD-3-Clause</a> | |
-| **严格** | 14 | 15 | 1 | 2 | 10 | 2 | 1 | 1 | |
+| **宽松** | 80 | 6 | 225 | 2 | 15 | 31 | 3 | 84 | 1 |
+| **许可证** | <a class="ext-badge ext-badge--license gpl20" href="/ext/license#gpl20">GPL-2.0</a> | <a class="ext-badge ext-badge--license gpl30" href="/ext/license#gpl30">GPL-3.0</a> | <a class="ext-badge ext-badge--license lgpl21" href="/ext/license#lgpl21">LGPL-2.1</a> | <a class="ext-badge ext-badge--license lgpl30" href="/ext/license#lgpl30">LGPL-3.0</a> | <a class="ext-badge ext-badge--license agpl30" href="/ext/license#agpl30">AGPL-3.0</a> | <a class="ext-badge ext-badge--license timescale" href="/ext/license#timescale">Timescale</a> | <a class="ext-badge ext-badge--license bsd2clause" href="/ext/license#bsd2clause">BSD-2-Clause</a> | <a class="ext-badge ext-badge--license bsd3clause" href="/ext/license#bsd3clause">BSD-3-Clause</a> | <a class="ext-badge ext-badge--license elastic license 20" href="/ext/license#elasticlicense20">Elastic License 2.0</a> |
+| **严格** | 21 | 15 | 1 | 3 | 11 | 2 | 1 | 2 | 1 |
 {.ext-table}
 
 
@@ -18,24 +18,27 @@ icon: fas fa-scale-balanced
 
 ## MIT {#mit}
 
-使用 MIT 许可证的扩展（76 个）
+使用 MIT 许可证的扩展（80 个）
 
 | **扩展** | **包** | **版本** | **分类** | **语言** | **描述** |
 |:---------|:-------|:--------:|:--------:|:--------:|:---------|
 | [`pg_task`](/ext/e/pg_task) | [`pg_task`](https://github.com/RekGRpth/pg_task) | `1.0.0` | <a class="ext-badge ext-badge--cate time" href="/ext/cate/time">TIME</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 在特定时间点在后台执行SQL命令 |
+| [`pg_when`](/ext/e/pg_when) | [`pg_when`](https://github.com/frectonz/pg-when) | `0.1.9` | <a class="ext-badge ext-badge--cate time" href="/ext/cate/time">TIME</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | PostgreSQL 自然语言时间解析扩展 |
 | [`ogr_fdw`](/ext/e/ogr_fdw) | [`ogr_fdw`](https://github.com/pramsey/pgsql-ogr-fdw) | `1.1.7` | <a class="ext-badge ext-badge--cate gis" href="/ext/cate/gis">GIS</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | GIS 数据外部数据源包装器 |
 | [`pg_polyline`](/ext/e/pg_polyline) | [`pg_polyline`](https://github.com/yihong0618/pg_polyline) | `0.0.1` | <a class="ext-badge ext-badge--cate gis" href="/ext/cate/gis">GIS</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | Google快速Polyline编码解码扩展 |
 | [`pg_eviltransform`](/ext/e/pg_eviltransform) | [`pg_eviltransform`](https://github.com/aiyou178/pg_eviltransform) | `0.0.2` | <a class="ext-badge ext-badge--cate gis" href="/ext/cate/gis">GIS</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | 基于PostGIS ST_Transform 的 BD09/GCJ02 坐标转换扩展 |
 | [`pg_geohash`](/ext/e/pg_geohash) | [`pg_geohash`](https://github.com/jistok/pg_geohash) | `1.0` | <a class="ext-badge ext-badge--cate gis" href="/ext/cate/gis">GIS</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 使用GeoHash处理空间坐标的函数包 |
-| [`tzf`](/ext/e/tzf) | [`pg_tzf`](https://github.com/ringsaturn/pg-tzf) | `0.2.3` | <a class="ext-badge ext-badge--cate gis" href="/ext/cate/gis">GIS</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | 快速根据GPS经纬度坐标查找时区 |
+| [`tzf`](/ext/e/tzf) | [`pg_tzf`](https://github.com/ringsaturn/pg-tzf) | `0.2.4` | <a class="ext-badge ext-badge--cate gis" href="/ext/cate/gis">GIS</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | 快速根据GPS经纬度坐标查找时区 |
+| [`pg_rrf`](/ext/e/pg_rrf) | [`pg_rrf`](https://github.com/yuiseki/pg_rrf) | `0.0.3` | <a class="ext-badge ext-badge--cate rag" href="/ext/cate/rag">RAG</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | 混合检索的倒数排序融合函数 |
 | [`pgml`](/ext/e/pgml) | [`pgml`](https://github.com/postgresml/postgresml) | `2.10.0` | <a class="ext-badge ext-badge--cate rag" href="/ext/cate/rag">RAG</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | PostgresML：用SQL运行机器学习算法并训练模型 |
 | [`biscuit`](/ext/e/biscuit) | [`pg_biscuit`](https://github.com/CrystallineCore/Biscuit) | `2.2.2` | <a class="ext-badge ext-badge--cate fts" href="/ext/cate/fts">FTS</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 使用IAM的高性能文本模式匹配 |
 | [`pg_pinyin`](/ext/e/pg_pinyin) | [`pg_pinyin`](https://github.com/aiyou178/pg_pinyin) | `0.0.2` | <a class="ext-badge ext-badge--cate fts" href="/ext/cate/fts">FTS</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | PostgreSQL 拼音转写与检索辅助扩展 |
 | [`pg_duckdb`](/ext/e/pg_duckdb) | [`pg_duckdb`](https://github.com/duckdb/pg_duckdb) | `1.1.1` | <a class="ext-badge ext-badge--cate olap" href="/ext/cate/olap">OLAP</a> | <a class="ext-badge ext-badge--lang cpp" href="/ext/language#cpp">C++</a> | 在PostgreSQL中的嵌入式DuckDB扩展 |
 | [`pg_mooncake`](/ext/e/pg_mooncake) | [`pg_mooncake`](https://github.com/Mooncake-Labs/pg_mooncake) | `0.2.0` | <a class="ext-badge ext-badge--cate olap" href="/ext/cate/olap">OLAP</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | PostgreSQL列式存储表 |
-| [`duckdb_fdw`](/ext/e/duckdb_fdw) | [`duckdb_fdw`](https://github.com/alitrack/duckdb_fdw) | `1.1.2` | <a class="ext-badge ext-badge--cate olap" href="/ext/cate/olap">OLAP</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | DuckDB 外部数据源包装器 |
+| [`duckdb_fdw`](/ext/e/duckdb_fdw) | [`duckdb_fdw`](https://github.com/alitrack/duckdb_fdw) | `1.4.3` | <a class="ext-badge ext-badge--cate olap" href="/ext/cate/olap">OLAP</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | DuckDB 外部数据源包装器 |
 | [`pg_liquid`](/ext/e/pg_liquid) | [`pg_liquid`](https://github.com/michael-golfi/pg_liquid) | `0.1.7` | <a class="ext-badge ext-badge--cate feat" href="/ext/cate/feat">FEAT</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 受 Liquid 启发的 Datalog 图查询扩展 |
-| [`pg_cardano`](/ext/e/pg_cardano) | [`pg_cardano`](https://github.com/Fell-x27/pg_cardano) | `1.1.1` | <a class="ext-badge ext-badge--cate feat" href="/ext/cate/feat">FEAT</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | Cardano相关工具包：加密函数，地址编解码，区块链处理 |
+| [`provsql`](/ext/e/provsql) | [`provsql`](https://github.com/PierreSenellart/provsql) | `1.2.3` | <a class="ext-badge ext-badge--cate feat" href="/ext/cate/feat">FEAT</a> | <a class="ext-badge ext-badge--lang cpp" href="/ext/language#cpp">C++</a> | PostgreSQL 半环溯源与不确定性管理扩展 |
+| [`pg_cardano`](/ext/e/pg_cardano) | [`pg_cardano`](https://github.com/Fell-x27/pg_cardano) | `1.2.0` | <a class="ext-badge ext-badge--cate feat" href="/ext/cate/feat">FEAT</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | Cardano相关工具包：加密函数，地址编解码，区块链处理 |
 | [`pllua`](/ext/e/pllua) | [`pllua`](https://github.com/pllua/pllua) | `2.0.12` | <a class="ext-badge ext-badge--cate lang" href="/ext/cate/lang">LANG</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | Lua 程序语言 |
 | [`hstore_pllua`](/ext/e/hstore_pllua) | [`pllua`](https://github.com/pllua/pllua) | `2.0.12` | <a class="ext-badge ext-badge--cate lang" href="/ext/cate/lang">LANG</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | Lua 程序语言的Hstore适配扩展 |
 | [`plluau`](/ext/e/plluau) | [`pllua`](https://github.com/pllua/pllua) | `2.0.12` | <a class="ext-badge ext-badge--cate lang" href="/ext/cate/lang">LANG</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | Lua 程序语言（不受信任的） |
@@ -60,7 +63,7 @@ icon: fas fa-scale-balanced
 | [`pg_smtp_client`](/ext/e/pg_smtp_client) | [`pg_smtp_client`](https://github.com/brianpursley/pg_smtp_client) | `0.2.1` | <a class="ext-badge ext-badge--cate util" href="/ext/cate/util">UTIL</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | 使用SMTP从PostgreSQL内发送邮件的客户端扩展 |
 | [`floatfile`](/ext/e/floatfile) | [`floatfile`](https://github.com/pjungwir/floatfile) | `1.3.1` | <a class="ext-badge ext-badge--cate util" href="/ext/cate/util">UTIL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 将浮点数组存储到文件中而不是堆表中 |
 | [`pg_render`](/ext/e/pg_render) | [`pg_render`](https://github.com/mkaski/pg_render) | `0.1.3` | <a class="ext-badge ext-badge--cate util" href="/ext/cate/util">UTIL</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | 使用SQL渲染HTML页面 |
-| [`pgx_ulid`](/ext/e/pgx_ulid) | [`pgx_ulid`](https://github.com/pksunkara/pgx_ulid) | `0.2.2` | <a class="ext-badge ext-badge--cate func" href="/ext/cate/func">FUNC</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | ULID数据类型与函数 |
+| [`pgx_ulid`](/ext/e/pgx_ulid) | [`pgx_ulid`](https://github.com/pksunkara/pgx_ulid) | `0.2.3` | <a class="ext-badge ext-badge--cate func" href="/ext/cate/func">FUNC</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | ULID数据类型与函数 |
 | [`pg_hashids`](/ext/e/pg_hashids) | [`pg_hashids`](https://github.com/iCyberon/pg_hashids) | `1.3` | <a class="ext-badge ext-badge--cate func" href="/ext/cate/func">FUNC</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 加盐将整型ID转为短字符串ID |
 | [`pg_slug_gen`](/ext/e/pg_slug_gen) | [`pg_slug_gen`](https://github.com/fernandoolle/pg_slug_gen) | `1.0.0` | <a class="ext-badge ext-badge--cate func" href="/ext/cate/func">FUNC</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 生成带时间戳的加密安全短标识 |
 | [`sequential_uuids`](/ext/e/sequential_uuids) | [`sequential_uuids`](https://github.com/tvondra/sequential-uuids) | `1.0.3` | <a class="ext-badge ext-badge--cate func" href="/ext/cate/func">FUNC</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 生成连续生成的UUID |
@@ -75,7 +78,7 @@ icon: fas fa-scale-balanced
 | [`pg_base58`](/ext/e/pg_base58) | [`pg_base58`](https://github.com/Fell-x27/pg_base58) | `0.0.1` | <a class="ext-badge ext-badge--cate func" href="/ext/cate/func">FUNC</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | Base58 编码/解码函数 |
 | [`convert`](/ext/e/convert) | [`pg_convert`](https://github.com/rustprooflabs/convert) | `0.1.0` | <a class="ext-badge ext-badge--cate func" href="/ext/cate/func">FUNC</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | 用于空间里程等的公英制转换函数 |
 | [`pgdd`](/ext/e/pgdd) | [`pgdd`](https://github.com/rustprooflabs/pgdd) | `0.6.1` | <a class="ext-badge ext-badge--cate admin" href="/ext/cate/admin">ADMIN</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | 提供通过标准SQL查询数据库目录集簇的能力 |
-| [`pg_strict`](/ext/e/pg_strict) | [`pg_strict`](https://github.com/spa5k/pg_strict) | `1.0.2` | <a class="ext-badge ext-badge--cate admin" href="/ext/cate/admin">ADMIN</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | 防止不带WHERE条件的危险UPDATE和DELETE操作 |
+| [`pg_strict`](/ext/e/pg_strict) | [`pg_strict`](https://github.com/spa5k/pg_strict) | `1.0.5` | <a class="ext-badge ext-badge--cate admin" href="/ext/cate/admin">ADMIN</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | 防止不带WHERE条件的危险UPDATE和DELETE操作 |
 | [`pg_tracing`](/ext/e/pg_tracing) | [`pg_tracing`](https://github.com/DataDog/pg_tracing) | `0.1.3` | <a class="ext-badge ext-badge--cate stat" href="/ext/cate/stat">STAT</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | PostgreSQL分布式Tracing |
 | [`pg_track_optimizer`](/ext/e/pg_track_optimizer) | [`pg_track_optimizer`](https://github.com/danolivo/pg_track_optimizer) | `0.9.2` | <a class="ext-badge ext-badge--cate stat" href="/ext/cate/stat">STAT</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 跟踪规划器决策与实际执行的差距 |
 | [`pgmeminfo`](/ext/e/pgmeminfo) | [`pgmeminfo`](https://github.com/okbob/pgmeminfo) | `1.0.0` | <a class="ext-badge ext-badge--cate stat" href="/ext/cate/stat">STAT</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 显示内存使用情况 |
@@ -96,6 +99,7 @@ icon: fas fa-scale-balanced
 | [`documentdb_extended_rum`](/ext/e/documentdb_extended_rum) | [`documentdb`](https://github.com/documentdb/documentdb) | `0.109` | <a class="ext-badge ext-badge--cate sim" href="/ext/cate/sim">SIM</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | DocumentDB扩展RUM索引访问方法 |
 | [`pgmemcache`](/ext/e/pgmemcache) | [`pgmemcache`](https://github.com/ohmu/pgmemcache) | `2.3.0` | <a class="ext-badge ext-badge--cate sim" href="/ext/cate/sim">SIM</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 为PG提供memcached兼容接口 |
 | [`pgl_ddl_deploy`](/ext/e/pgl_ddl_deploy) | [`pgl_ddl_deploy`](https://github.com/enova/pgl_ddl_deploy) | `2.2.1` | <a class="ext-badge ext-badge--cate etl" href="/ext/cate/etl">ETL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 使用 pglogical 执行自动 DDL 部署 |
+| [`logical_ddl`](/ext/e/logical_ddl) | [`logical_ddl`](https://github.com/samedyildirim/logical_ddl) | `0.1.0` | <a class="ext-badge ext-badge--cate etl" href="/ext/cate/etl">ETL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 在 PostgreSQL 逻辑复制中复制受支持的 DDL 变更 |
 | [`decoderbufs`](/ext/e/decoderbufs) | [`decoderbufs`](https://github.com/debezium/postgres-decoderbufs) | `3.4.1` | <a class="ext-badge ext-badge--cate etl" href="/ext/cate/etl">ETL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 将WAL逻辑解码为ProtocolBuffer协议的消息 |
 | [`pg_fact_loader`](/ext/e/pg_fact_loader) | [`pg_fact_loader`](https://github.com/enova/pg_fact_loader) | `2.0.1` | <a class="ext-badge ext-badge--cate etl" href="/ext/cate/etl">ETL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 在 Postgres 中构建事实表 |
 {.ext-table}
@@ -122,7 +126,7 @@ icon: fas fa-scale-balanced
 
 ## PostgreSQL {#postgresql}
 
-使用 PostgreSQL 许可证的扩展（221 个）
+使用 PostgreSQL 许可证的扩展（225 个）
 
 | **扩展** | **包** | **版本** | **分类** | **语言** | **描述** |
 |:---------|:-------|:--------:|:--------:|:--------:|:---------|
@@ -134,7 +138,7 @@ icon: fas fa-scale-balanced
 | [`earthdistance`](/ext/e/earthdistance) | [`earthdistance`](https://www.postgresql.org/docs/current/earthdistance.html) | `1.2` | <a class="ext-badge ext-badge--cate gis" href="/ext/cate/gis">GIS</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 计算地球表面上的大圆距离 |
 | [`vector`](/ext/e/vector) | [`pgvector`](https://github.com/pgvector/pgvector) | `0.8.2` | <a class="ext-badge ext-badge--cate rag" href="/ext/cate/rag">RAG</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 向量数据类型和 ivfflat / hnsw 访问方法 |
 | [`vectorscale`](/ext/e/vectorscale) | [`pgvectorscale`](https://github.com/timescale/pgvectorscale) | `0.9.0` | <a class="ext-badge ext-badge--cate rag" href="/ext/cate/rag">RAG</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | 使用DiskANN算法对向量进行高效索引 |
-| [`vectorize`](/ext/e/vectorize) | [`pg_vectorize`](https://github.com/ChuckHend/pg_vectorize) | `0.26.0` | <a class="ext-badge ext-badge--cate rag" href="/ext/cate/rag">RAG</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | 在PostgreSQL中封装RAG向量检索服务 |
+| [`vectorize`](/ext/e/vectorize) | [`pg_vectorize`](https://github.com/ChuckHend/pg_vectorize) | `0.26.1` | <a class="ext-badge ext-badge--cate rag" href="/ext/cate/rag">RAG</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | 在PostgreSQL中封装RAG向量检索服务 |
 | [`smlar`](/ext/e/smlar) | [`smlar`](https://github.com/jirutka/smlar) | `1.0` | <a class="ext-badge ext-badge--cate rag" href="/ext/cate/rag">RAG</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 高效的相似度搜索函数 |
 | [`pg_summarize`](/ext/e/pg_summarize) | [`pg_summarize`](https://github.com/HexaCluster/pg_summarize) | `0.0.1` | <a class="ext-badge ext-badge--cate rag" href="/ext/cate/rag">RAG</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | 使用LLM对文本字段进行总结 |
 | [`pgroonga`](/ext/e/pgroonga) | [`pgroonga`](https://github.com/pgroonga/pgroonga) | `4.0.4` | <a class="ext-badge ext-badge--cate fts" href="/ext/cate/fts">FTS</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 使用Groonga，面向所有语言的高速全文检索平台 |
@@ -168,7 +172,7 @@ icon: fas fa-scale-balanced
 | [`pg_variables`](/ext/e/pg_variables) | [`pg_variables`](https://github.com/postgrespro/pg_variables) | `1.2.5` | <a class="ext-badge ext-badge--cate feat" href="/ext/cate/feat">FEAT</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 提供标量、数组和记录类型的会话变量 |
 | [`imgsmlr`](/ext/e/imgsmlr) | [`imgsmlr`](https://github.com/postgrespro/imgsmlr) | `1.0` | <a class="ext-badge ext-badge--cate feat" href="/ext/cate/feat">FEAT</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 使用Haar小波分析计算图片相似度 |
 | [`pg_ivm`](/ext/e/pg_ivm) | [`pg_ivm`](https://github.com/sraoss/pg_ivm) | `1.13` | <a class="ext-badge ext-badge--cate feat" href="/ext/cate/feat">FEAT</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 增量维护的物化视图 |
-| [`pg_incremental`](/ext/e/pg_incremental) | [`pg_incremental`](https://github.com/CrunchyData/pg_incremental) | `1.4.1` | <a class="ext-badge ext-badge--cate feat" href="/ext/cate/feat">FEAT</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 增量处理流式事件 |
+| [`pg_incremental`](/ext/e/pg_incremental) | [`pg_incremental`](https://github.com/CrunchyData/pg_incremental) | `1.5.0` | <a class="ext-badge ext-badge--cate feat" href="/ext/cate/feat">FEAT</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 增量处理流式事件 |
 | [`pgmb`](/ext/e/pgmb) | [`pgmb`](https://github.com/fraruiz/pgmb) | `1.0.0` | <a class="ext-badge ext-badge--cate feat" href="/ext/cate/feat">FEAT</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> | 一个简单的PostgreSQL消息代理系统 |
 | [`pgmq`](/ext/e/pgmq) | [`pgmq`](https://github.com/pgmq/pgmq) | `1.11.0` | <a class="ext-badge ext-badge--cate feat" href="/ext/cate/feat">FEAT</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> | 基于Postgres实现类似AWS SQS/RSMQ的消息队列 |
 | [`orioledb`](/ext/e/orioledb) | [`orioledb`](https://github.com/orioledb/orioledb) | `1.6` | <a class="ext-badge ext-badge--cate feat" href="/ext/cate/feat">FEAT</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | OrioleDB，下一代事务处理引擎 |
@@ -195,6 +199,7 @@ icon: fas fa-scale-balanced
 | [`hstore_plpython3u`](/ext/e/hstore_plpython3u) | [`plpython3u`](https://www.postgresql.org/docs/current/plpython.html) | `1.0` | <a class="ext-badge ext-badge--cate lang" href="/ext/cate/lang">LANG</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 在 hstore 和 plpython3u 之间转换 |
 | [`prefix`](/ext/e/prefix) | [`pg_prefix`](https://github.com/dimitri/prefix) | `1.2.10` | <a class="ext-badge ext-badge--cate type" href="/ext/cate/type">TYPE</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 前缀树数据类型 |
 | [`semver`](/ext/e/semver) | [`pg_semver`](https://github.com/theory/pg-semver) | `0.41.0` | <a class="ext-badge ext-badge--cate type" href="/ext/cate/type">TYPE</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 语义版本号数据类型 |
+| [`pg_text_semver`](/ext/e/pg_text_semver) | [`pg_text_semver`](https://github.com/bigsmoke/pg_text_semver) | `1.2.1` | <a class="ext-badge ext-badge--cate type" href="/ext/cate/type">TYPE</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> | PostgreSQL 语义版本域类型与比较运算符 |
 | [`country`](/ext/e/country) | [`pg_country`](https://github.com/adjust/pg-country) | `0.0.3` | <a class="ext-badge ext-badge--cate type" href="/ext/cate/type">TYPE</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 国家代码数据类型，遵循ISO 3166-1标准 |
 | [`pg_xenophile`](/ext/e/pg_xenophile) | [`pg_xenophile`](https://github.com/bigsmoke/pg_xenophile) | `0.8.3` | <a class="ext-badge ext-badge--cate type" href="/ext/cate/type">TYPE</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> | PostgreSQL i8n与l10n工具包 |
 | [`l10n_table_dependent_extension`](/ext/e/l10n_table_dependent_extension) | [`pg_xenophile`](https://github.com/bigsmoke/pg_xenophile) | `0.8.3` | <a class="ext-badge ext-badge--cate type" href="/ext/cate/type">TYPE</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> | PostgreSQL l10n 工具包 |
@@ -215,7 +220,7 @@ icon: fas fa-scale-balanced
 | [`xml2`](/ext/e/xml2) | [`xml2`](https://www.postgresql.org/docs/current/xml2.html) | `1.1` | <a class="ext-badge ext-badge--cate type" href="/ext/cate/type">TYPE</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | XPath 查询和 XSLT |
 | [`pg_retry`](/ext/e/pg_retry) | [`pg_retry`](https://github.com/Agent-Hellboy/pg_retry) | `1.0.0` | <a class="ext-badge ext-badge--cate util" href="/ext/cate/util">UTIL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 在临时错误中使用指数退避重试语句 |
 | [`pg_fsql`](/ext/e/pg_fsql) | [`pg_fsql`](https://github.com/yurc/pg_fsql) | `1.1.0` | <a class="ext-badge ext-badge--cate util" href="/ext/cate/util">UTIL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 支持 JSONB 驱动执行的递归 SQL 模板引擎 |
-| [`pgproto`](/ext/e/pgproto) | [`pgproto`](https://github.com/Apaezmx/pgproto) | `0.2.1` | <a class="ext-badge ext-badge--cate util" href="/ext/cate/util">UTIL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 原生 Protobuf 解析、修改、索引与 JSON 转换支持 |
+| [`pgproto`](/ext/e/pgproto) | [`pgproto`](https://github.com/Apaezmx/pgproto) | `0.2.4` | <a class="ext-badge ext-badge--cate util" href="/ext/cate/util">UTIL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 原生 Protobuf 解析、修改、索引与 JSON 转换支持 |
 | [`pglock`](/ext/e/pglock) | [`pglock`](https://github.com/fraruiz/pglock) | `1.0.0` | <a class="ext-badge ext-badge--cate util" href="/ext/cate/util">UTIL</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> | 在 PostgreSQL 内实现轻量级分布式锁服务 |
 | [`pg_html5_email_address`](/ext/e/pg_html5_email_address) | [`pg_html5_email_address`](https://github.com/bigsmoke/pg_html5_email_address) | `1.2.3` | <a class="ext-badge ext-badge--cate util" href="/ext/cate/util">UTIL</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> | 验证Email是否符合HTML5规范的扩展 |
 | [`url_encode`](/ext/e/url_encode) | [`url_encode`](https://github.com/okbob/url_encode) | `1.2.5` | <a class="ext-badge ext-badge--cate util" href="/ext/cate/util">UTIL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 提供URL编码解码函数 |
@@ -224,6 +229,7 @@ icon: fas fa-scale-balanced
 | [`pgpcre`](/ext/e/pgpcre) | [`pgpcre`](https://github.com/petere/pgpcre) | `0.20190509` | <a class="ext-badge ext-badge--cate util" href="/ext/cate/util">UTIL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | PCRE/Perl风格的正则表达式支持 |
 | [`icu_ext`](/ext/e/icu_ext) | [`icu_ext`](https://github.com/dverite/icu_ext) | `1.10.0` | <a class="ext-badge ext-badge--cate util" href="/ext/cate/util">UTIL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 访问ICU库提供的函数 |
 | [`envvar`](/ext/e/envvar) | [`pg_envvar`](https://github.com/theory/pg-envvar) | `1.0.1` | <a class="ext-badge ext-badge--cate util" href="/ext/cate/util">UTIL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 获取环境变量的函数 |
+| [`external_file`](/ext/e/external_file) | [`external_file`](https://github.com/darold/external_file) | `1.2` | <a class="ext-badge ext-badge--cate util" href="/ext/cate/util">UTIL</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> | 通过 PostgreSQL 函数访问服务器端外部文件 |
 | [`pg_readme`](/ext/e/pg_readme) | [`pg_readme`](https://github.com/bigsmoke/pg_readme) | `0.7.0` | <a class="ext-badge ext-badge--cate util" href="/ext/cate/util">UTIL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 为模式与扩展生成Markdown文档 |
 | [`pg_readme_test_extension`](/ext/e/pg_readme_test_extension) | [`pg_readme`](https://github.com/bigsmoke/pg_readme) | `0.7.0` | <a class="ext-badge ext-badge--cate util" href="/ext/cate/util">UTIL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 为模式与扩展生成Markdown文档 |
 | [`data_historization`](/ext/e/data_historization) | [`data_historization`](https://github.com/rodo/postgresql-data-historization) | `1.1.0` | <a class="ext-badge ext-badge--cate util" href="/ext/cate/util">UTIL</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> | 用SQL将数据变更历史保存到分区表中 |
@@ -256,8 +262,9 @@ icon: fas fa-scale-balanced
 | [`dict_int`](/ext/e/dict_int) | [`dict_int`](https://www.postgresql.org/docs/current/dict-int.html) | `1.0` | <a class="ext-badge ext-badge--cate func" href="/ext/cate/func">FUNC</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 用于整数的文本搜索字典模板 |
 | [`unaccent`](/ext/e/unaccent) | [`unaccent`](https://www.postgresql.org/docs/current/unaccent.html) | `1.1` | <a class="ext-badge ext-badge--cate func" href="/ext/cate/func">FUNC</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 删除重音的文本搜索字典 |
 | [`pg_repack`](/ext/e/pg_repack) | [`pg_repack`](https://github.com/reorg/pg_repack) | `1.5.3` | <a class="ext-badge ext-badge--cate admin" href="/ext/cate/admin">ADMIN</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 在线垃圾清理与表膨胀治理 |
+| [`pg_query_rewrite`](/ext/e/pg_query_rewrite) | [`pg_query_rewrite`](https://github.com/pierreforstmann/pg_query_rewrite) | `0.0.5` | <a class="ext-badge ext-badge--cate admin" href="/ext/cate/admin">ADMIN</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 使用 ProcessUtility hook 重写 SQL 语句 |
 | [`ddlx`](/ext/e/ddlx) | [`pg_ddlx`](https://github.com/lacanoid/pgddl) | `0.30` | <a class="ext-badge ext-badge--cate admin" href="/ext/cate/admin">ADMIN</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> | 提取数据库对象的DDL |
-| [`pglinter`](/ext/e/pglinter) | [`pglinter`](https://github.com/pmpetit/pglinter) | `1.1.1` | <a class="ext-badge ext-badge--cate admin" href="/ext/cate/admin">ADMIN</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | PG数据库规则检查插件 |
+| [`pglinter`](/ext/e/pglinter) | [`pglinter`](https://github.com/pmpetit/pglinter) | `1.1.2` | <a class="ext-badge ext-badge--cate admin" href="/ext/cate/admin">ADMIN</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | PG数据库规则检查插件 |
 | [`prioritize`](/ext/e/prioritize) | [`pg_prioritize`](https://github.com/schmiddy/pg_prioritize) | `1.0.4` | <a class="ext-badge ext-badge--cate admin" href="/ext/cate/admin">ADMIN</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 获取和设置 PostgreSQL 后端的优先级 |
 | [`pg_readonly`](/ext/e/pg_readonly) | [`pg_readonly`](https://github.com/pierreforstmann/pg_readonly) | `1.0.4` | <a class="ext-badge ext-badge--cate admin" href="/ext/cate/admin">ADMIN</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 将集群设置为只读 |
 | [`pgautofailover`](/ext/e/pgautofailover) | [`pgautofailover`](https://github.com/hapostgres/pg_auto_failover) | `2.2` | <a class="ext-badge ext-badge--cate admin" href="/ext/cate/admin">ADMIN</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | PG 自动故障迁移 |
@@ -303,7 +310,8 @@ icon: fas fa-scale-balanced
 | [`pgstattuple`](/ext/e/pgstattuple) | [`pgstattuple`](https://www.postgresql.org/docs/current/pgstattuple.html) | `1.5` | <a class="ext-badge ext-badge--cate stat" href="/ext/cate/stat">STAT</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 显示元组级统计信息 |
 | [`auto_explain`](/ext/e/auto_explain) | [`auto_explain`](https://www.postgresql.org/docs/current/auto-explain.html) | `-` | <a class="ext-badge ext-badge--cate stat" href="/ext/cate/stat">STAT</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 提供一种自动记录执行计划的手段 |
 | [`pg_stat_statements`](/ext/e/pg_stat_statements) | [`pg_stat_statements`](https://www.postgresql.org/docs/current/pgstatstatements.html) | `1.11` | <a class="ext-badge ext-badge--cate stat" href="/ext/cate/stat">STAT</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 跟踪所有执行的 SQL 语句的计划和执行统计信息 |
-| [`anon`](/ext/e/anon) | [`pg_anon`](https://gitlab.com/dalibo/postgresql_anonymizer/) | `3.0.1` | <a class="ext-badge ext-badge--cate sec" href="/ext/cate/sec">SEC</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | 数据匿名化处理工具 |
+| [`column_encrypt`](/ext/e/column_encrypt) | [`column_encrypt`](https://github.com/vibhorkum/column_encrypt) | `4.0` | <a class="ext-badge ext-badge--cate sec" href="/ext/cate/sec">SEC</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 透明列级加密扩展，提供 encrypted_text 与 encrypted_bytea 类型 |
+| [`anon`](/ext/e/anon) | [`pg_anon`](https://gitlab.com/dalibo/postgresql_anonymizer/) | `3.0.13` | <a class="ext-badge ext-badge--cate sec" href="/ext/cate/sec">SEC</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | 数据匿名化处理工具 |
 | [`pgaudit`](/ext/e/pgaudit) | [`pgaudit`](https://github.com/pgaudit/pgaudit) | `18.0` | <a class="ext-badge ext-badge--cate sec" href="/ext/cate/sec">SEC</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 提供审计功能 |
 | [`pgauditlogtofile`](/ext/e/pgauditlogtofile) | [`pgauditlogtofile`](https://github.com/fmbiete/pgauditlogtofile) | `1.8.3` | <a class="ext-badge ext-badge--cate sec" href="/ext/cate/sec">SEC</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | pgAudit 子扩展，将审计日志写入单独的文件中 |
 | [`pg_jobmon`](/ext/e/pg_jobmon) | [`pg_jobmon`](https://github.com/omniti-labs/pg_jobmon) | `1.4.1` | <a class="ext-badge ext-badge--cate sec" href="/ext/cate/sec">SEC</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> | 记录和监控函数 |
@@ -339,10 +347,10 @@ icon: fas fa-scale-balanced
 | [`pglogical`](/ext/e/pglogical) | [`pglogical`](https://github.com/2ndQuadrant/pglogical) | `2.4.6` | <a class="ext-badge ext-badge--cate etl" href="/ext/cate/etl">ETL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | PostgreSQL逻辑复制：三方扩展实现 |
 | [`pglogical_origin`](/ext/e/pglogical_origin) | [`pglogical`](https://github.com/2ndQuadrant/pglogical) | `2.4.6` | <a class="ext-badge ext-badge--cate etl" href="/ext/cate/etl">ETL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 用于从 Postgres 9.4 升级时的兼容性虚拟扩展 |
 | [`pglogical_ticker`](/ext/e/pglogical_ticker) | [`pglogical_ticker`](https://github.com/enova/pglogical_ticker) | `1.4.1` | <a class="ext-badge ext-badge--cate etl" href="/ext/cate/etl">ETL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | pglogical复制延迟以秒计的精确视图 |
-| [`pg_failover_slots`](/ext/e/pg_failover_slots) | [`pg_failover_slots`](https://github.com/EnterpriseDB/pg_failover_slots) | `1.2.0` | <a class="ext-badge ext-badge--cate etl" href="/ext/cate/etl">ETL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 在Failover过程中保留复制槽 |
+| [`pg_failover_slots`](/ext/e/pg_failover_slots) | [`pg_failover_slots`](https://github.com/EnterpriseDB/pg_failover_slots) | `1.2.1` | <a class="ext-badge ext-badge--cate etl" href="/ext/cate/etl">ETL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 在Failover过程中保留复制槽 |
 | [`spock`](/ext/e/spock) | [`spock`](https://github.com/pgEdge/spock) | `5.0.5` | <a class="ext-badge ext-badge--cate etl" href="/ext/cate/etl">ETL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | PostgreSQL 多主逻辑复制扩展 |
 | [`lolor`](/ext/e/lolor) | [`lolor`](https://github.com/pgEdge/lolor) | `1.2.2` | <a class="ext-badge ext-badge--cate etl" href="/ext/cate/etl">ETL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 让 PostgreSQL 大对象兼容逻辑复制的扩展 |
-| [`pgclone`](/ext/e/pgclone) | [`pgclone`](https://github.com/valehdba/pgclone) | `2.2.0` | <a class="ext-badge ext-badge--cate etl" href="/ext/cate/etl">ETL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 在不同环境间克隆 PostgreSQL 数据库、模式、表和函数 |
+| [`pgclone`](/ext/e/pgclone) | [`pgclone`](https://github.com/valehdba/pgclone) | `3.6.0` | <a class="ext-badge ext-badge--cate etl" href="/ext/cate/etl">ETL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 在不同环境间克隆 PostgreSQL 数据库、模式、表和函数 |
 | [`decoder_raw`](/ext/e/decoder_raw) | [`decoder_raw`](https://github.com/michaelpq/pg_plugins/blob/main/decoder_raw/) | `1.0` | <a class="ext-badge ext-badge--cate etl" href="/ext/cate/etl">ETL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 逻辑复制解码输出插件：RAW SQL格式 |
 | [`mimeo`](/ext/e/mimeo) | [`mimeo`](https://github.com/omniti-labs/mimeo) | `1.5.1` | <a class="ext-badge ext-badge--cate etl" href="/ext/cate/etl">ETL</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> | 在PostgreSQL实例间进行表级复制 |
 | [`test_decoding`](/ext/e/test_decoding) | [`test_decoding`](https://www.postgresql.org/docs/current/test-decoding.html) | `-` | <a class="ext-badge ext-badge--cate etl" href="/ext/cate/etl">ETL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 基于SQL的WAL逻辑解码样例 |
@@ -367,7 +375,7 @@ icon: fas fa-scale-balanced
 
 ## BSD 2-Clause {#bsd2clause}
 
-使用 BSD 2-Clause 许可证的扩展（14 个）
+使用 BSD 2-Clause 许可证的扩展（15 个）
 
 | **扩展** | **包** | **版本** | **分类** | **语言** | **描述** |
 |:---------|:-------|:--------:|:--------:|:--------:|:---------|
@@ -375,6 +383,7 @@ icon: fas fa-scale-balanced
 | [`geoip`](/ext/e/geoip) | [`geoip`](https://github.com/tvondra/geoip) | `0.3.0` | <a class="ext-badge ext-badge--cate gis" href="/ext/cate/gis">GIS</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> | IP 地理位置扩展（围绕 MaxMind GeoLite 数据集的包装器） |
 | [`md5hash`](/ext/e/md5hash) | [`md5hash`](https://github.com/tvondra/md5hash) | `1.0.1` | <a class="ext-badge ext-badge--cate type" href="/ext/cate/type">TYPE</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 提供128位MD5的原生数据类型 |
 | [`acl`](/ext/e/acl) | [`pg_acl`](https://github.com/arkhipov/acl) | `1.0.4` | <a class="ext-badge ext-badge--cate type" href="/ext/cate/type">TYPE</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | ACL数据类型 |
+| [`byteamagic`](/ext/e/byteamagic) | [`pg_byteamagic`](https://github.com/nmandery/pg_byteamagic) | `0.2.4` | <a class="ext-badge ext-badge--cate util" href="/ext/cate/util">UTIL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 从 PostgreSQL bytea 值检测 MIME 类型与文件格式 |
 | [`xxhash`](/ext/e/xxhash) | [`pg_xxhash`](https://github.com/hatarist/pg_xxhash) | `0.0.1` | <a class="ext-badge ext-badge--cate util" href="/ext/cate/util">UTIL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | xxhash哈希函数包 |
 | [`pguecc`](/ext/e/pguecc) | [`pg_ecdsa`](https://github.com/ameensol/pg-ecdsa) | `1.0` | <a class="ext-badge ext-badge--cate util" href="/ext/cate/util">UTIL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | PostgreSQL的uECC绑定，椭圆曲线加解密函数包 |
 | [`quantile`](/ext/e/quantile) | [`quantile`](https://github.com/tvondra/quantile) | `1.1.8` | <a class="ext-badge ext-badge--cate func" href="/ext/cate/func">FUNC</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | Quantile聚合函数 |
@@ -392,7 +401,7 @@ icon: fas fa-scale-balanced
 
 ## BSD 3-Clause {#bsd3clause}
 
-使用 BSD 3-Clause 许可证的扩展（30 个）
+使用 BSD 3-Clause 许可证的扩展（31 个）
 
 | **扩展** | **包** | **版本** | **分类** | **语言** | **描述** |
 |:---------|:-------|:--------:|:--------:|:--------:|:---------|
@@ -401,7 +410,7 @@ icon: fas fa-scale-balanced
 | [`pointcloud_postgis`](/ext/e/pointcloud_postgis) | [`pointcloud`](https://github.com/pgpointcloud/pointcloud) | `1.2.5` | <a class="ext-badge ext-badge--cate gis" href="/ext/cate/gis">GIS</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 将激光雷达点云与PostGIS几何类型相集成 |
 | [`pg_similarity`](/ext/e/pg_similarity) | [`pg_similarity`](https://github.com/eulerto/pg_similarity) | `1.0` | <a class="ext-badge ext-badge--cate rag" href="/ext/cate/rag">RAG</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 提供17种距离度量函数 |
 | [`pg_hint_plan`](/ext/e/pg_hint_plan) | [`pg_hint_plan`](https://github.com/ossc-db/pg_hint_plan) | `1.8.0` | <a class="ext-badge ext-badge--cate feat" href="/ext/cate/feat">FEAT</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 添加强制指定执行计划的能力 |
-| [`rdkit`](/ext/e/rdkit) | [`rdkit`](https://github.com/rdkit/rdkit) | `202503.1` | <a class="ext-badge ext-badge--cate feat" href="/ext/cate/feat">FEAT</a> | <a class="ext-badge ext-badge--lang cpp" href="/ext/language#cpp">C++</a> | 在PostgreSQL化学领域数据管理功能 |
+| [`rdkit`](/ext/e/rdkit) | [`rdkit`](https://github.com/rdkit/rdkit) | `202503.6` | <a class="ext-badge ext-badge--cate feat" href="/ext/cate/feat">FEAT</a> | <a class="ext-badge ext-badge--lang cpp" href="/ext/language#cpp">C++</a> | 在PostgreSQL化学领域数据管理功能 |
 | [`pljava`](/ext/e/pljava) | [`pljava`](https://github.com/tada/pljava) | `1.6.10` | <a class="ext-badge ext-badge--cate lang" href="/ext/cate/lang">LANG</a> | <a class="ext-badge ext-badge--lang java" href="/ext/language#java">Java</a> | Java 程序语言 |
 | [`pgfaceting`](/ext/e/pgfaceting) | [`pgfaceting`](https://github.com/cybertec-postgresql/pgfaceting) | `0.2.0` | <a class="ext-badge ext-badge--cate type" href="/ext/cate/type">TYPE</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> | 使用倒排索引的高速切面查询 |
 | [`pg_sphere`](/ext/e/pg_sphere) | [`pgsphere`](https://github.com/postgrespro/pgsphere) | `1.5.2` | <a class="ext-badge ext-badge--cate type" href="/ext/cate/type">TYPE</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 球面对象函数、运算符与索引支持 |
@@ -421,6 +430,7 @@ icon: fas fa-scale-balanced
 | [`pgsodium`](/ext/e/pgsodium) | [`pgsodium`](https://github.com/michelp/pgsodium) | `3.1.9` | <a class="ext-badge ext-badge--cate sec" href="/ext/cate/sec">SEC</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 表数据加密存储 TDE |
 | [`pg_auditor`](/ext/e/pg_auditor) | [`pg_auditor`](https://github.com/kouber/pg_auditor) | `0.2` | <a class="ext-badge ext-badge--cate sec" href="/ext/cate/sec">SEC</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> | 审计数据变更并提供闪回能力 |
 | [`logerrors`](/ext/e/logerrors) | [`logerrors`](https://github.com/munakoiso/logerrors) | `2.1.5` | <a class="ext-badge ext-badge--cate sec" href="/ext/cate/sec">SEC</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 用于收集日志文件中消息统计信息的函数 |
+| [`block_copy_command`](/ext/e/block_copy_command) | [`block_copy_command`](https://github.com/rustwizard/block_copy_command) | `0.1.5` | <a class="ext-badge ext-badge--cate sec" href="/ext/cate/sec">SEC</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | 通过可配置的 ProcessUtility hook 阻止 COPY 命令 |
 | [`mysql_fdw`](/ext/e/mysql_fdw) | [`mysql_fdw`](https://github.com/EnterpriseDB/mysql_fdw) | `2.9.3` | <a class="ext-badge ext-badge--cate fdw" href="/ext/cate/fdw">FDW</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | MySQL外部数据包装器 |
 | [`hdfs_fdw`](/ext/e/hdfs_fdw) | [`hdfs_fdw`](https://github.com/EnterpriseDB/hdfs_fdw) | `2.3.3` | <a class="ext-badge ext-badge--cate fdw" href="/ext/cate/fdw">FDW</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | hdfs 外部数据包装器 |
 | [`db_migrator`](/ext/e/db_migrator) | [`db_migrator`](https://github.com/cybertec-postgresql/db_migrator) | `1.0.0` | <a class="ext-badge ext-badge--cate etl" href="/ext/cate/etl">ETL</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> | 使用FDW从其他DBMS迁移到PostgreSQL |
@@ -447,7 +457,7 @@ icon: fas fa-scale-balanced
 
 ## Apache-2.0 {#apache20}
 
-使用 Apache-2.0 许可证的扩展（82 个）
+使用 Apache-2.0 许可证的扩展（84 个）
 
 | **扩展** | **包** | **版本** | **分类** | **语言** | **描述** |
 |:---------|:-------|:--------:|:--------:|:--------:|:---------|
@@ -462,7 +472,7 @@ icon: fas fa-scale-balanced
 | [`pg_ai_query`](/ext/e/pg_ai_query) | [`pg_ai_query`](https://github.com/benodiwal/pg_ai_query) | `0.1.1` | <a class="ext-badge ext-badge--cate feat" href="/ext/cate/feat">FEAT</a> | <a class="ext-badge ext-badge--lang cpp" href="/ext/language#cpp">C++</a> | AI驱动的 Postgres SQL 查询生成 |
 | [`pg_graphql`](/ext/e/pg_graphql) | [`pg_graphql`](https://github.com/supabase/pg_graphql) | `1.5.12` | <a class="ext-badge ext-badge--cate feat" href="/ext/cate/feat">FEAT</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | PG内的GraphQL支持 |
 | [`pg_jsonschema`](/ext/e/pg_jsonschema) | [`pg_jsonschema`](https://github.com/supabase/pg_jsonschema) | `0.3.4` | <a class="ext-badge ext-badge--cate feat" href="/ext/cate/feat">FEAT</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | 提供JSON Schema校验能力 |
-| [`pg_trickle`](/ext/e/pg_trickle) | [`pg_trickle`](https://github.com/grove/pg-trickle) | `0.16.0` | <a class="ext-badge ext-badge--cate feat" href="/ext/cate/feat">FEAT</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | 为 PostgreSQL 18 提供流式表与差分视图维护 |
+| [`pg_trickle`](/ext/e/pg_trickle) | [`pg_trickle`](https://github.com/grove/pg-trickle) | `0.17.0` | <a class="ext-badge ext-badge--cate feat" href="/ext/cate/feat">FEAT</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | 为 PostgreSQL 18 提供流式表与差分视图维护 |
 | [`omni`](/ext/e/omni) | [`omnigres`](https://github.com/omnigres/omnigres) | `0.2.14` | <a class="ext-badge ext-badge--cate feat" href="/ext/cate/feat">FEAT</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | PostgreSQL即平台，Omnigres主扩展与加载器 |
 | [`omni_auth`](/ext/e/omni_auth) | [`omnigres`](https://docs.omnigres.org/omni_auth/basics/) | `0.1.3` | <a class="ext-badge ext-badge--cate feat" href="/ext/cate/feat">FEAT</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | Omnigres 基础会话认证管理模块 |
 | [`omni_aws`](/ext/e/omni_aws) | [`omnigres`](https://docs.omnigres.org/omni_aws/s3/) | `0.1.2` | <a class="ext-badge ext-badge--cate feat" href="/ext/cate/feat">FEAT</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | Omnigres AWS S3 API封装 |
@@ -503,6 +513,7 @@ icon: fas fa-scale-balanced
 | [`omni_worker`](/ext/e/omni_worker) | [`omnigres`](https://docs.omnigres.org/omni_worker/intro/) | `0.2.1` | <a class="ext-badge ext-badge--cate feat" href="/ext/cate/feat">FEAT</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | Omnigres 通用Worker池 |
 | [`omni_xml`](/ext/e/omni_xml) | [`omnigres`](https://docs.omnigres.org/omni_xml/overview/) | `0.1.2` | <a class="ext-badge ext-badge--cate feat" href="/ext/cate/feat">FEAT</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | Omnigres XML工具包 |
 | [`omni_yaml`](/ext/e/omni_yaml) | [`omnigres`](https://docs.omnigres.org/omni_yaml/yaml/) | `0.1.0` | <a class="ext-badge ext-badge--cate feat" href="/ext/cate/feat">FEAT</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | Omnigres YAML工具包 |
+| [`onesparse`](/ext/e/onesparse) | [`one_sparse`](https://github.com/OneSparse/OneSparse) | `1.0.0` | <a class="ext-badge ext-badge--cate feat" href="/ext/cate/feat">FEAT</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | PostgreSQL 18 的稀疏线性代数与图算法扩展 |
 | [`pg_tle`](/ext/e/pg_tle) | [`pg_tle`](https://github.com/aws/pg_tle) | `1.5.2` | <a class="ext-badge ext-badge--cate lang" href="/ext/cate/lang">LANG</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | AWS 可信语言扩展 |
 | [`plprql`](/ext/e/plprql) | [`plprql`](https://github.com/kaspermarstal/plprql) | `18.0.1` | <a class="ext-badge ext-badge--cate lang" href="/ext/cate/lang">LANG</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | 在PostgreSQL使用PRQL——管线式关系查询语言 |
 | [`roaringbitmap`](/ext/e/roaringbitmap) | [`pg_roaringbitmap`](https://github.com/ChenHuajun/pg_roaringbitmap) | `1.1.0` | <a class="ext-badge ext-badge--cate type" href="/ext/cate/type">TYPE</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 支持RoaringBitmap数据类型 |
@@ -510,15 +521,16 @@ icon: fas fa-scale-balanced
 | [`pg_net`](/ext/e/pg_net) | [`pg_net`](https://github.com/supabase/pg_net) | `0.20.2` | <a class="ext-badge ext-badge--cate util" href="/ext/cate/util">UTIL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 用 SQL 进行异步非阻塞HTTP/HTTPS 请求的扩展 (supabase) |
 | [`sparql`](/ext/e/sparql) | [`pgsparql`](https://github.com/lacanoid/pgsparql) | `1.0` | <a class="ext-badge ext-badge--cate util" href="/ext/cate/util">UTIL</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> | 使用SQL查询SPARQL数据源 |
 | [`pg_idkit`](/ext/e/pg_idkit) | [`pg_idkit`](https://github.com/VADOSWARE/pg_idkit) | `0.4.0` | <a class="ext-badge ext-badge--cate func" href="/ext/cate/func">FUNC</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | 生成各式各样的唯一标识符：UUIDv6, ULID, KSUID |
+| [`datasketches`](/ext/e/datasketches) | [`datasketches`](https://github.com/apache/datasketches-postgresql) | `1.7.0` | <a class="ext-badge ext-badge--cate func" href="/ext/cate/func">FUNC</a> | <a class="ext-badge ext-badge--lang cpp" href="/ext/language#cpp">C++</a> | PostgreSQL 近似分析摘要数据结构与聚合函数 |
 | [`tdigest`](/ext/e/tdigest) | [`tdigest`](https://github.com/tvondra/tdigest) | `1.4.3` | <a class="ext-badge ext-badge--cate func" href="/ext/cate/func">FUNC</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | tdigest 聚合函数 |
 | [`pg_cooldown`](/ext/e/pg_cooldown) | [`pg_cooldown`](https://github.com/rbergm/pg_cooldown) | `0.1` | <a class="ext-badge ext-badge--cate admin" href="/ext/cate/admin">ADMIN</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 从缓冲区中移除特定关系的页面 |
 | [`pg_savior`](/ext/e/pg_savior) | [`pg_savior`](https://github.com/viggy28/pg_savior) | `0.0.1` | <a class="ext-badge ext-badge--cate admin" href="/ext/cate/admin">ADMIN</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 阻止不带条件的全表更新以避免意外事故 |
-| [`pg_stat_ch`](/ext/e/pg_stat_ch) | [`pg_stat_ch`](https://github.com/ClickHouse/pg_stat_ch) | `0.3.3` | <a class="ext-badge ext-badge--cate stat" href="/ext/cate/stat">STAT</a> | <a class="ext-badge ext-badge--lang cpp" href="/ext/language#cpp">C++</a> | 将 PostgreSQL 查询遥测实时导出到 ClickHouse |
+| [`pg_stat_ch`](/ext/e/pg_stat_ch) | [`pg_stat_ch`](https://github.com/ClickHouse/pg_stat_ch) | `0.3.4` | <a class="ext-badge ext-badge--cate stat" href="/ext/cate/stat">STAT</a> | <a class="ext-badge ext-badge--lang cpp" href="/ext/language#cpp">C++</a> | 将 PostgreSQL 查询遥测实时导出到 ClickHouse |
 | [`pgnodemx`](/ext/e/pgnodemx) | [`pgnodemx`](https://github.com/CrunchyData/pgnodemx) | `1.7` | <a class="ext-badge ext-badge--cate stat" href="/ext/cate/stat">STAT</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 使用SQL查询获取操作系统指标 |
-| [`supautils`](/ext/e/supautils) | [`supautils`](https://github.com/supabase/supautils) | `3.1.0` | <a class="ext-badge ext-badge--cate sec" href="/ext/cate/sec">SEC</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 用于在云环境中确保数据库集群的安全 |
+| [`supautils`](/ext/e/supautils) | [`supautils`](https://github.com/supabase/supautils) | `3.2.1` | <a class="ext-badge ext-badge--cate sec" href="/ext/cate/sec">SEC</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 用于在云环境中确保数据库集群的安全 |
 | [`supabase_vault`](/ext/e/supabase_vault) | [`pg_vault`](https://github.com/supabase/vault) | `0.3.1` | <a class="ext-badge ext-badge--cate sec" href="/ext/cate/sec">SEC</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 在 Vault 中存储加密凭证的扩展 (supabase) |
 | [`pg_session_jwt`](/ext/e/pg_session_jwt) | [`pg_session_jwt`](https://github.com/neondatabase/pg_session_jwt) | `0.4.0` | <a class="ext-badge ext-badge--cate sec" href="/ext/cate/sec">SEC</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | 使用JWT进行会话认证 |
-| [`wrappers`](/ext/e/wrappers) | [`wrappers`](https://github.com/supabase/wrappers) | `0.5.7` | <a class="ext-badge ext-badge--cate fdw" href="/ext/cate/fdw">FDW</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | Supabase提供的外部数据源包装器捆绑包 |
+| [`wrappers`](/ext/e/wrappers) | [`wrappers`](https://github.com/supabase/wrappers) | `0.6.0` | <a class="ext-badge ext-badge--cate fdw" href="/ext/cate/fdw">FDW</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | Supabase提供的外部数据源包装器捆绑包 |
 | [`aws_s3`](/ext/e/aws_s3) | [`aws_s3`](https://github.com/chimpler/postgres-aws-s3) | `0.0.1` | <a class="ext-badge ext-badge--cate fdw" href="/ext/cate/fdw">FDW</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> | 从S3导入导出数据的外部数据源包装器 |
 | [`log_fdw`](/ext/e/log_fdw) | [`log_fdw`](https://github.com/aws/postgresql-logfdw) | `1.4` | <a class="ext-badge ext-badge--cate fdw" href="/ext/cate/fdw">FDW</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 访问PostgreSQL日志文件的FDW |
 | [`ivorysql_ora`](/ext/e/ivorysql_ora) | [`ivorysql`](https://github.com/IvorySQL/IvorySQL/tree/master/contrib/ivorysql_ora) | `1.0` | <a class="ext-badge ext-badge--cate sim" href="/ext/cate/sim">SIM</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | Oracle 兼容扩展 |
@@ -552,7 +564,7 @@ icon: fas fa-scale-balanced
 
 ## GPL-2.0 {#gpl20}
 
-使用 GPL-2.0 许可证的扩展（14 个）
+使用 GPL-2.0 许可证的扩展（21 个）
 
 | **扩展** | **包** | **版本** | **分类** | **语言** | **描述** |
 |:---------|:-------|:--------:|:--------:|:--------:|:---------|
@@ -565,11 +577,18 @@ icon: fas fa-scale-balanced
 | [`address_standardizer_data_us`](/ext/e/address_standardizer_data_us) | [`postgis`](https://git.osgeo.org/gitea/postgis/postgis) | `3.6.2` | <a class="ext-badge ext-badge--cate gis" href="/ext/cate/gis">GIS</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 地址标准化函数：美国数据集示例 |
 | [`pgrouting`](/ext/e/pgrouting) | [`pgrouting`](https://github.com/pgRouting/pgrouting) | `4.0.1` | <a class="ext-badge ext-badge--cate gis" href="/ext/cate/gis">GIS</a> | <a class="ext-badge ext-badge--lang cpp" href="/ext/language#cpp">C++</a> | 提供寻路能力 |
 | [`q3c`](/ext/e/q3c) | [`q3c`](https://github.com/segasai/q3c) | `2.0.2` | <a class="ext-badge ext-badge--cate gis" href="/ext/cate/gis">GIS</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | Q3C天空索引插件 |
+| [`pghydro`](/ext/e/pghydro) | [`pghydro`](https://github.com/pghydro/pghydro) | `6.6` | <a class="ext-badge ext-badge--cate gis" href="/ext/cate/gis">GIS</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> | PostgreSQL/PostGIS 排水网络分析核心扩展 |
+| [`pgh_raster`](/ext/e/pgh_raster) | [`pghydro`](https://github.com/pghydro/pghydro) | `6.6` | <a class="ext-badge ext-badge--cate gis" href="/ext/cate/gis">GIS</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> | PgHydro 栅格水文分析扩展 |
+| [`pgh_hgm`](/ext/e/pgh_hgm) | [`pghydro`](https://github.com/pghydro/pghydro) | `2.2.6` | <a class="ext-badge ext-badge--cate gis" href="/ext/cate/gis">GIS</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> | PgHydro 水文地貌分析扩展 |
+| [`pgh_output`](/ext/e/pgh_output) | [`pghydro`](https://github.com/pghydro/pghydro) | `6.6` | <a class="ext-badge ext-badge--cate gis" href="/ext/cate/gis">GIS</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> | PgHydro 输出与报表扩展 |
+| [`pgh_output_en_au`](/ext/e/pgh_output_en_au) | [`pghydro`](https://github.com/pghydro/pghydro) | `6.6` | <a class="ext-badge ext-badge--cate gis" href="/ext/cate/gis">GIS</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> | PgHydro 澳式英语输出扩展 |
+| [`pgh_output_pt_br`](/ext/e/pgh_output_pt_br) | [`pghydro`](https://github.com/pghydro/pghydro) | `6.6` | <a class="ext-badge ext-badge--cate gis" href="/ext/cate/gis">GIS</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> | PgHydro 巴西葡语输出扩展 |
+| [`pgh_consistency`](/ext/e/pgh_consistency) | [`pghydro`](https://github.com/pghydro/pghydro) | `6.6` | <a class="ext-badge ext-badge--cate gis" href="/ext/cate/gis">GIS</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> | PgHydro Pfafstetter 一致性检查扩展 |
 | [`pg_fkpart`](/ext/e/pg_fkpart) | [`pg_fkpart`](https://github.com/lemoineat/pg_fkpart) | `1.7.0` | <a class="ext-badge ext-badge--cate olap" href="/ext/cate/olap">OLAP</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> | 按外键实用程序进行表分区的扩展 |
 | [`plr`](/ext/e/plr) | [`plr`](https://github.com/postgres-plr/plr) | `8.4.8` | <a class="ext-badge ext-badge--cate lang" href="/ext/cate/lang">LANG</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 从数据库中加载R语言解释器并执行R脚本 |
 | [`unit`](/ext/e/unit) | [`pgunit`](https://github.com/df7cb/postgresql-unit) | `7.10` | <a class="ext-badge ext-badge--cate type" href="/ext/cate/type">TYPE</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | SI 国标单位扩展 |
 | [`numeral`](/ext/e/numeral) | [`numeral`](https://github.com/df7cb/postgresql-numeral) | `1.3` | <a class="ext-badge ext-badge--cate type" href="/ext/cate/type">TYPE</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 数值类型扩展 |
-| [`ddl_historization`](/ext/e/ddl_historization) | [`ddl_historization`](https://github.com/rodo/pg_ddl_historization) | `0.0.7` | <a class="ext-badge ext-badge--cate util" href="/ext/cate/util">UTIL</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> | 用SQL将所有DDL变更写入到数据库表中 |
+| [`ddl_historization`](/ext/e/ddl_historization) | [`ddl_historization`](https://github.com/rodo/pg_ddl_historization) | `0.2` | <a class="ext-badge ext-badge--cate util" href="/ext/cate/util">UTIL</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> | 用SQL将所有DDL变更写入到数据库表中 |
 {.ext-table}
 
 
@@ -615,10 +634,11 @@ icon: fas fa-scale-balanced
 
 ## LGPL-3.0 {#lgpl30}
 
-使用 LGPL-3.0 许可证的扩展（2 个）
+使用 LGPL-3.0 许可证的扩展（3 个）
 
 | **扩展** | **包** | **版本** | **分类** | **语言** | **描述** |
 |:---------|:-------|:--------:|:--------:|:--------:|:---------|
+| [`pg_kazsearch`](/ext/e/pg_kazsearch) | [`pg_kazsearch`](https://github.com/darkhanakh/pg-kazsearch) | `0.1.0` | <a class="ext-badge ext-badge--cate fts" href="/ext/cate/fts">FTS</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | PostgreSQL 哈萨克语全文检索扩展 |
 | [`pgmp`](/ext/e/pgmp) | [`pgmp`](https://github.com/dvarrazzo/pgmp/) | `1.0.5` | <a class="ext-badge ext-badge--cate type" href="/ext/cate/type">TYPE</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 多精度算术扩展 |
 | [`mongo_fdw`](/ext/e/mongo_fdw) | [`mongo_fdw`](https://github.com/EnterpriseDB/mongo_fdw) | `5.5.3` | <a class="ext-badge ext-badge--cate fdw" href="/ext/cate/fdw">FDW</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | MongoDB 外部数据包装器 |
 {.ext-table}
@@ -628,7 +648,7 @@ icon: fas fa-scale-balanced
 
 ## AGPL-3.0 {#agpl30}
 
-使用 AGPL-3.0 许可证的扩展（10 个）
+使用 AGPL-3.0 许可证的扩展（11 个）
 
 | **扩展** | **包** | **版本** | **分类** | **语言** | **描述** |
 |:---------|:-------|:--------:|:--------:|:--------:|:---------|
@@ -639,6 +659,7 @@ icon: fas fa-scale-balanced
 | [`citus`](/ext/e/citus) | [`citus`](https://github.com/citusdata/citus) | `14.0.0` | <a class="ext-badge ext-badge--cate olap" href="/ext/cate/olap">OLAP</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | Citus 分布式数据库 |
 | [`citus_columnar`](/ext/e/citus_columnar) | [`citus`](https://github.com/citusdata/citus) | `14.0.0` | <a class="ext-badge ext-badge--cate olap" href="/ext/cate/olap">OLAP</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | Citus 列式存储引擎 |
 | [`columnar`](/ext/e/columnar) | [`hydra`](https://github.com/hydradatabase/hydra) | `1.1.2` | <a class="ext-badge ext-badge--cate olap" href="/ext/cate/olap">OLAP</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 开源列式存储扩展 |
+| [`pg_isok`](/ext/e/pg_isok) | [`pg_isok`](https://codeberg.org/kop/pg_isok) | `1.4.1` | <a class="ext-badge ext-badge--cate util" href="/ext/cate/util">UTIL</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> | 基于查询的数据完整性管理与软告警扩展 |
 | [`topn`](/ext/e/topn) | [`topn`](https://github.com/citusdata/postgresql-topn) | `2.7.0` | <a class="ext-badge ext-badge--cate func" href="/ext/cate/func">FUNC</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | top-n JSONB 的类型 |
 | [`noset`](/ext/e/noset) | [`pg_noset`](https://gitlab.com/ongresinc/extensions/noset) | `0.3.0` | <a class="ext-badge ext-badge--cate sec" href="/ext/cate/sec">SEC</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 阻止非超级用户使用SET/RESET设置变量 |
 | [`spat`](/ext/e/spat) | [`spat`](https://github.com/Florents-Tselai/spat) | `0.1.0a4` | <a class="ext-badge ext-badge--cate sim" href="/ext/cate/sim">SIM</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 在PG中嵌入Redis风格的内存数据库 |
@@ -674,10 +695,23 @@ icon: fas fa-scale-balanced
 
 ## BSD-3-Clause {#bsd3clause}
 
-使用 BSD-3-Clause 许可证的扩展（1 个）
+使用 BSD-3-Clause 许可证的扩展（2 个）
 
 | **扩展** | **包** | **版本** | **分类** | **语言** | **描述** |
 |:---------|:-------|:--------:|:--------:|:--------:|:---------|
+| [`pg_datasentinel`](/ext/e/pg_datasentinel) | [`pg_datasentinel`](https://github.com/datasentinel/pg_datasentinel) | `1.0` | <a class="ext-badge ext-badge--cate stat" href="/ext/cate/stat">STAT</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | PostgreSQL 可观测性与活动监控扩展 |
 | [`pg_command_fw`](/ext/e/pg_command_fw) | [`pg_command_fw`](https://github.com/rustwizard/pg_command_fw) | `0.1.0` | <a class="ext-badge ext-badge--cate sec" href="/ext/cate/sec">SEC</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | PostgreSQL 的 DDL 与 utility 命令防火墙 |
+{.ext-table}
+
+
+--------
+
+## Elastic License 2.0 {#elasticlicense20}
+
+使用 Elastic License 2.0 许可证的扩展（1 个）
+
+| **扩展** | **包** | **版本** | **分类** | **语言** | **描述** |
+|:---------|:-------|:--------:|:--------:|:--------:|:---------|
+| [`pgmqtt`](/ext/e/pgmqtt) | [`pgmqtt`](https://github.com/RayElg/pgmqtt) | `0.1.0` | <a class="ext-badge ext-badge--cate etl" href="/ext/cate/etl">ETL</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | PostgreSQL 的 CDC 到 MQTT 代理扩展 |
 {.ext-table}
 

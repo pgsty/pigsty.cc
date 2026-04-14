@@ -2,7 +2,7 @@
 title: "md5hash"
 linkTitle: "md5hash"
 description: "提供128位MD5的原生数据类型"
-weight: 3550
+weight: 3610
 ---
 
 <div class="ext-cards">
@@ -30,7 +30,7 @@ weight: 3550
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
 |:-----:|:-------------------------------------------------------------------------|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|:----------|
-| 3550  | [**`md5hash`**](/ext/e/md5hash) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
+| 3610  | [**`md5hash`**](/ext/e/md5hash) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
 {.ext-table}
 
 | **相关扩展** | [`hashlib`](/ext/e/hashlib) [`xxhash`](/ext/e/xxhash) [`prefix`](/ext/e/prefix) [`semver`](/ext/e/semver) [`unit`](/ext/e/unit) [`pgpdf`](/ext/e/pgpdf) [`pglite_fusion`](/ext/e/pglite_fusion) [`asn1oid`](/ext/e/asn1oid) |

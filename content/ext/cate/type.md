@@ -8,12 +8,13 @@ icon: fas fa-cubes
 
 ## 扩展列表
 
-共有 **39** 个扩展，位于 **38** 个扩展包中。
+共有 **40** 个扩展，位于 **39** 个扩展包中。
 
 | **扩展** | **包** | **版本** | **许可证** | **语言** | **描述** |
 |:---------|:-------|:--------:|:----------:|:--------:|:---------|
 | [`prefix`](/ext/e/prefix) | [`pg_prefix`](https://github.com/dimitri/prefix) | `1.2.10` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 前缀树数据类型 |
 | [`semver`](/ext/e/semver) | [`pg_semver`](https://github.com/theory/pg-semver) | `0.41.0` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 语义版本号数据类型 |
+| [`pg_text_semver`](/ext/e/pg_text_semver) | [`pg_text_semver`](https://github.com/bigsmoke/pg_text_semver) | `1.2.1` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> | PostgreSQL 语义版本域类型与比较运算符 |
 | [`unit`](/ext/e/unit) | [`pgunit`](https://github.com/df7cb/postgresql-unit) | `7.10` | <a class="ext-badge ext-badge--license gpl20" href="/ext/license#gpl20">GPL-2.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | SI 国标单位扩展 |
 | [`pgpdf`](/ext/e/pgpdf) | [`pgpdf`](https://github.com/Florents-Tselai/pgpdf) | `0.1.0` | <a class="ext-badge ext-badge--license gpl30" href="/ext/license#gpl30">GPL-3.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | PDF数据类型，管理函数与全文检索 |
 | [`pglite_fusion`](/ext/e/pglite_fusion) | [`pglite_fusion`](https://github.com/frectonz/pglite-fusion) | `0.0.6` | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | 在PG表中嵌入SQLite数据库作为数据类型 |
@@ -86,6 +87,24 @@ icon: fas fa-cubes
 | **DEB** | `postgresql-$v-semver` | **d12** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
 | **语言** | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | **d13** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
 | **仓库** | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | **u22** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+| **协议** | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | **u24** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+{.ext-table .ext-table--cate}
+
+
+---------
+
+## pg_text_semver {#pg_text_semver}
+
+[**`pg_text_semver`**](/ext/e/pg_text_semver) - `1.2.1` : PostgreSQL 语义版本域类型与比较运算符
+
+| **条目** | **属性** | **OS** | **x86_64** | **aarch64** |
+|:---:|:---|:---:|:---:|:---:|
+| **扩展名** | [`pg_text_semver`](/ext/e/pg_text_semver) | **el8** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+| **扩展包** | [`pg_text_semver`](https://github.com/bigsmoke/pg_text_semver) | **el9** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+| **RPM** | `pg_text_semver_$v` | **el10** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+| **DEB** | `postgresql-$v-pg-text-semver` | **d12** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+| **语言** | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> | **d13** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+| **仓库** | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | **u22** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
 | **协议** | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | **u24** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
 {.ext-table .ext-table--cate}
 

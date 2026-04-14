@@ -2,7 +2,7 @@
 title: "currency"
 linkTitle: "currency"
 description: "使用1字节表示的货币数据类型"
-weight: 3620
+weight: 3680
 ---
 
 <div class="ext-cards">
@@ -30,7 +30,7 @@ weight: 3620
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
 |:-----:|:-------------------------------------------------------------------------|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|:----------|
-| 3620  | [**`currency`**](/ext/e/currency) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
+| 3680  | [**`currency`**](/ext/e/currency) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
 {.ext-table}
 
 | **相关扩展** | [`plpgsql`](/ext/e/plpgsql) [`l10n_table_dependent_extension`](/ext/e/l10n_table_dependent_extension) [`country`](/ext/e/country) [`pg_xenophile`](/ext/e/pg_xenophile) [`numeral`](/ext/e/numeral) [`prefix`](/ext/e/prefix) [`semver`](/ext/e/semver) [`unit`](/ext/e/unit) [`pgpdf`](/ext/e/pgpdf) |

@@ -2,7 +2,7 @@
 title: "country"
 linkTitle: "country"
 description: "国家代码数据类型，遵循ISO 3166-1标准"
-weight: 3600
+weight: 3660
 ---
 
 <div class="ext-cards">
@@ -30,7 +30,7 @@ weight: 3600
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
 |:-----:|:-------------------------------------------------------------------------|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|:----------|
-| 3600  | [**`country`**](/ext/e/country) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
+| 3660  | [**`country`**](/ext/e/country) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
 {.ext-table}
 
 | **相关扩展** | [`l10n_table_dependent_extension`](/ext/e/l10n_table_dependent_extension) [`pg_xenophile`](/ext/e/pg_xenophile) [`currency`](/ext/e/currency) [`geoip`](/ext/e/geoip) [`icu_ext`](/ext/e/icu_ext) [`prefix`](/ext/e/prefix) [`semver`](/ext/e/semver) [`unit`](/ext/e/unit) |

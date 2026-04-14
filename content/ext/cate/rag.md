@@ -8,15 +8,16 @@ icon: fas fa-brain
 
 ## 扩展列表
 
-共有 **10** 个扩展，位于 **10** 个扩展包中。
+共有 **11** 个扩展，位于 **11** 个扩展包中。
 
 | **扩展** | **包** | **版本** | **许可证** | **语言** | **描述** |
 |:---------|:-------|:--------:|:----------:|:--------:|:---------|
 | [`vector`](/ext/e/vector) | [`pgvector`](https://github.com/pgvector/pgvector) | `0.8.2` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 向量数据类型和 ivfflat / hnsw 访问方法 |
 | [`vchord`](/ext/e/vchord) | [`vchord`](https://github.com/tensorchord/VectorChord) | `1.1.1` | <a class="ext-badge ext-badge--license agpl30" href="/ext/license#agpl30">AGPL-3.0</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | 使用Rust重写的高性能向量扩展 |
 | [`vectorscale`](/ext/e/vectorscale) | [`pgvectorscale`](https://github.com/timescale/pgvectorscale) | `0.9.0` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | 使用DiskANN算法对向量进行高效索引 |
-| [`vectorize`](/ext/e/vectorize) | [`pg_vectorize`](https://github.com/ChuckHend/pg_vectorize) | `0.26.0` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | 在PostgreSQL中封装RAG向量检索服务 |
+| [`vectorize`](/ext/e/vectorize) | [`pg_vectorize`](https://github.com/ChuckHend/pg_vectorize) | `0.26.1` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | 在PostgreSQL中封装RAG向量检索服务 |
 | [`pg_similarity`](/ext/e/pg_similarity) | [`pg_similarity`](https://github.com/eulerto/pg_similarity) | `1.0` | <a class="ext-badge ext-badge--license bsd 3clause" href="/ext/license#bsd3clause">BSD 3-Clause</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 提供17种距离度量函数 |
+| [`pg_rrf`](/ext/e/pg_rrf) | [`pg_rrf`](https://github.com/yuiseki/pg_rrf) | `0.0.3` | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | 混合检索的倒数排序融合函数 |
 | [`smlar`](/ext/e/smlar) | [`smlar`](https://github.com/jirutka/smlar) | `1.0` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 高效的相似度搜索函数 |
 | [`pg_summarize`](/ext/e/pg_summarize) | [`pg_summarize`](https://github.com/HexaCluster/pg_summarize) | `0.0.1` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | 使用LLM对文本字段进行总结 |
 | [`pg_tiktoken`](/ext/e/pg_tiktoken) | [`pg_tiktoken`](https://github.com/kelvich/pg_tiktoken) | `0.0.1` | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | 在PostgreSQL中计算OpenAI使用的Token数 |
@@ -83,7 +84,7 @@ icon: fas fa-brain
 
 ## vectorize {#vectorize}
 
-[**`pg_vectorize`**](/ext/e/vectorize) - `0.26.0` : 在PostgreSQL中封装RAG向量检索服务
+[**`pg_vectorize`**](/ext/e/vectorize) - `0.26.1` : 在PostgreSQL中封装RAG向量检索服务
 
 | **条目** | **属性** | **OS** | **x86_64** | **aarch64** |
 |:---:|:---|:---:|:---:|:---:|
@@ -112,6 +113,24 @@ icon: fas fa-brain
 | **语言** | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | **d13** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
 | **仓库** | <a class="ext-badge ext-badge--repo mixed" href="/ext/repo#mixed">MIXED</a> | **u22** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
 | **协议** | <a class="ext-badge ext-badge--license bsd 3clause" href="/ext/license#bsd3clause">BSD 3-Clause</a> | **u24** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+{.ext-table .ext-table--cate}
+
+
+---------
+
+## pg_rrf {#pg_rrf}
+
+[**`pg_rrf`**](/ext/e/pg_rrf) - `0.0.3` : 混合检索的倒数排序融合函数
+
+| **条目** | **属性** | **OS** | **x86_64** | **aarch64** |
+|:---:|:---|:---:|:---:|:---:|
+| **扩展名** | [`pg_rrf`](/ext/e/pg_rrf) | **el8** | {{< pgvers "17,16,15,14" >}} | {{< pgvers "17,16,15,14" >}} |
+| **扩展包** | [`pg_rrf`](https://github.com/yuiseki/pg_rrf) | **el9** | {{< pgvers "17,16,15,14" >}} | {{< pgvers "17,16,15,14" >}} |
+| **RPM** | `pg_rrf_$v` | **el10** | {{< pgvers "17,16,15,14" >}} | {{< pgvers "17,16,15,14" >}} |
+| **DEB** | `postgresql-$v-pg-rrf` | **d12** | {{< pgvers "17,16,15,14" >}} | {{< pgvers "17,16,15,14" >}} |
+| **语言** | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | **d13** | {{< pgvers "17,16,15,14" >}} | {{< pgvers "17,16,15,14" >}} |
+| **仓库** | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | **u22** | {{< pgvers "17,16,15,14" >}} | {{< pgvers "17,16,15,14" >}} |
+| **协议** | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | **u24** | {{< pgvers "17,16,15,14" >}} | {{< pgvers "17,16,15,14" >}} |
 {.ext-table .ext-table--cate}
 
 

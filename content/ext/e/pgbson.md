@@ -38,7 +38,7 @@ weight: 3910
 {.ext-table .ext-table--rel}
 
 
-> PGXN dist name is bson, but CREATE EXTENSION name is pgbson; RPM package root is postgresbson; RPM runtime dependency is libbson.
+> Release tag 2.0.2 still ships extension SQL version 2.0; PGXN dist name is bson, CREATE EXTENSION name is pgbson, RPM package root is postgresbson, and the runtime dependency is libbson.
 
 
 ## 版本

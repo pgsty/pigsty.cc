@@ -8,16 +8,17 @@ icon: fas fa-shield-halved
 
 ## 扩展列表
 
-共有 **29** 个扩展，位于 **29** 个扩展包中。
+共有 **31** 个扩展，位于 **31** 个扩展包中。
 
 | **扩展** | **包** | **版本** | **许可证** | **语言** | **描述** |
 |:---------|:-------|:--------:|:----------:|:--------:|:---------|
 | [`passwordcheck_cracklib`](/ext/e/passwordcheck_cracklib) | [`passwordcheck_cracklib`](https://github.com/devrimgunduz/passwordcheck_cracklib) | `3.1.0` | <a class="ext-badge ext-badge--license lgpl21" href="/ext/license#lgpl21">LGPL-2.1</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 使用cracklib加固PG用户密码 |
-| [`supautils`](/ext/e/supautils) | [`supautils`](https://github.com/supabase/supautils) | `3.1.0` | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 用于在云环境中确保数据库集群的安全 |
+| [`supautils`](/ext/e/supautils) | [`supautils`](https://github.com/supabase/supautils) | `3.2.1` | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 用于在云环境中确保数据库集群的安全 |
 | [`pgsodium`](/ext/e/pgsodium) | [`pgsodium`](https://github.com/michelp/pgsodium) | `3.1.9` | <a class="ext-badge ext-badge--license bsd 3clause" href="/ext/license#bsd3clause">BSD 3-Clause</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 表数据加密存储 TDE |
+| [`column_encrypt`](/ext/e/column_encrypt) | [`column_encrypt`](https://github.com/vibhorkum/column_encrypt) | `4.0` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 透明列级加密扩展，提供 encrypted_text 与 encrypted_bytea 类型 |
 | [`supabase_vault`](/ext/e/supabase_vault) | [`pg_vault`](https://github.com/supabase/vault) | `0.3.1` | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 在 Vault 中存储加密凭证的扩展 (supabase) |
 | [`pg_session_jwt`](/ext/e/pg_session_jwt) | [`pg_session_jwt`](https://github.com/neondatabase/pg_session_jwt) | `0.4.0` | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | 使用JWT进行会话认证 |
-| [`anon`](/ext/e/anon) | [`pg_anon`](https://gitlab.com/dalibo/postgresql_anonymizer/) | `3.0.1` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | 数据匿名化处理工具 |
+| [`anon`](/ext/e/anon) | [`pg_anon`](https://gitlab.com/dalibo/postgresql_anonymizer/) | `3.0.13` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | 数据匿名化处理工具 |
 | [`pgsmcrypto`](/ext/e/pgsmcrypto) | [`pgsmcrypto`](https://github.com/zhuobie/pgsmcrypto) | `0.1.1` | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | 为PostgreSQL提供商密算法支持：SM2,SM3,SM4 |
 | [`pg_enigma`](/ext/e/pg_enigma) | [`pg_enigma`](https://github.com/SoftwareLibreMx/pg_enigma) | `0.5.0` | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | PostgreSQL 加密数据类型 |
 | [`pgaudit`](/ext/e/pgaudit) | [`pgaudit`](https://github.com/pgaudit/pgaudit) | `18.0` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 提供审计功能 |
@@ -34,6 +35,7 @@ icon: fas fa-shield-halved
 | [`pg_snakeoil`](/ext/e/pg_snakeoil) | [`pg_snakeoil`](https://github.com/credativ/pg_snakeoil) | `1.4` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | PostgreSQL动态链接库反病毒功能 |
 | [`pgextwlist`](/ext/e/pgextwlist) | [`pgextwlist`](https://github.com/dimitri/pgextwlist) | `1.19` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | PostgreSQL扩展白名单功能 |
 | [`pg_command_fw`](/ext/e/pg_command_fw) | [`pg_command_fw`](https://github.com/rustwizard/pg_command_fw) | `0.1.0` | <a class="ext-badge ext-badge--license bsd3clause" href="/ext/license#bsd3clause">BSD-3-Clause</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | PostgreSQL 的 DDL 与 utility 命令防火墙 |
+| [`block_copy_command`](/ext/e/block_copy_command) | [`block_copy_command`](https://github.com/rustwizard/block_copy_command) | `0.1.5` | <a class="ext-badge ext-badge--license bsd 3clause" href="/ext/license#bsd3clause">BSD 3-Clause</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | 通过可配置的 ProcessUtility hook 阻止 COPY 命令 |
 | [`sslutils`](/ext/e/sslutils) | [`sslutils`](https://github.com/EnterpriseDB/sslutils) | `1.4` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 使用SQL管理SSL证书 |
 | [`noset`](/ext/e/noset) | [`pg_noset`](https://gitlab.com/ongresinc/extensions/noset) | `0.3.0` | <a class="ext-badge ext-badge--license agpl30" href="/ext/license#agpl30">AGPL-3.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 阻止非超级用户使用SET/RESET设置变量 |
 | [`pg_tde`](/ext/e/pg_tde) | [`pg_tde`](https://github.com/percona/pg_tde) | `2.1` | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | Percona加密存储引擎 |
@@ -66,7 +68,7 @@ icon: fas fa-shield-halved
 
 ## supautils {#supautils}
 
-[**`supautils`**](/ext/e/supautils) - `3.1.0` : 用于在云环境中确保数据库集群的安全
+[**`supautils`**](/ext/e/supautils) - `3.2.1` : 用于在云环境中确保数据库集群的安全
 
 | **条目** | **属性** | **OS** | **x86_64** | **aarch64** |
 |:---:|:---|:---:|:---:|:---:|
@@ -95,6 +97,24 @@ icon: fas fa-shield-halved
 | **语言** | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | **d13** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
 | **仓库** | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | **u22** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
 | **协议** | <a class="ext-badge ext-badge--license bsd 3clause" href="/ext/license#bsd3clause">BSD 3-Clause</a> | **u24** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+{.ext-table .ext-table--cate}
+
+
+---------
+
+## column_encrypt {#column_encrypt}
+
+[**`column_encrypt`**](/ext/e/column_encrypt) - `4.0` : 透明列级加密扩展，提供 encrypted_text 与 encrypted_bytea 类型
+
+| **条目** | **属性** | **OS** | **x86_64** | **aarch64** |
+|:---:|:---|:---:|:---:|:---:|
+| **扩展名** | [`column_encrypt`](/ext/e/column_encrypt) | **el8** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+| **扩展包** | [`column_encrypt`](https://github.com/vibhorkum/column_encrypt) | **el9** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+| **RPM** | `column_encrypt_$v` | **el10** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+| **DEB** | `postgresql-$v-column-encrypt` | **d12** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+| **语言** | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | **d13** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+| **仓库** | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | **u22** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+| **协议** | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | **u24** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
 {.ext-table .ext-table--cate}
 
 
@@ -138,7 +158,7 @@ icon: fas fa-shield-halved
 
 ## anon {#anon}
 
-[**`pg_anon`**](/ext/e/anon) - `3.0.1` : 数据匿名化处理工具
+[**`pg_anon`**](/ext/e/anon) - `3.0.13` : 数据匿名化处理工具
 
 | **条目** | **属性** | **OS** | **x86_64** | **aarch64** |
 |:---:|:---|:---:|:---:|:---:|
@@ -437,6 +457,24 @@ icon: fas fa-shield-halved
 | **语言** | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | **d13** | {{< pgvers "18,17,16,15" >}} | {{< pgvers "18,17,16,15" >}} |
 | **仓库** | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | **u22** | {{< pgvers "18,17,16,15" >}} | {{< pgvers "18,17,16,15" >}} |
 | **协议** | <a class="ext-badge ext-badge--license bsd3clause" href="/ext/license#bsd3clause">BSD-3-Clause</a> | **u24** | {{< pgvers "18,17,16,15" >}} | {{< pgvers "18,17,16,15" >}} |
+{.ext-table .ext-table--cate}
+
+
+---------
+
+## block_copy_command {#block_copy_command}
+
+[**`block_copy_command`**](/ext/e/block_copy_command) - `0.1.5` : 通过可配置的 ProcessUtility hook 阻止 COPY 命令
+
+| **条目** | **属性** | **OS** | **x86_64** | **aarch64** |
+|:---:|:---|:---:|:---:|:---:|
+| **扩展名** | [`block_copy_command`](/ext/e/block_copy_command) | **el8** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+| **扩展包** | [`block_copy_command`](https://github.com/rustwizard/block_copy_command) | **el9** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+| **RPM** | `block_copy_command_$v` | **el10** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+| **DEB** | `postgresql-$v-block-copy-command` | **d12** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+| **语言** | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | **d13** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+| **仓库** | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | **u22** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+| **协议** | <a class="ext-badge ext-badge--license bsd 3clause" href="/ext/license#bsd3clause">BSD 3-Clause</a> | **u24** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
 {.ext-table .ext-table--cate}
 
 

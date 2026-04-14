@@ -11,10 +11,10 @@ weight: 7400
     <div class="ext-card__title">rustwizard/pg_command_fw</div>
     <div class="ext-card__desc">https://github.com/rustwizard/pg_command_fw</div>
   </a>
-  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pg_command_fw-0.1.0.zip">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pg_command_fw-0.1.0.tar.gz">
     <div class="ext-card__kicker">源码</div>
-    <div class="ext-card__title">pg_command_fw-0.1.0.zip</div>
-    <div class="ext-card__desc">pg_command_fw-0.1.0.zip</div>
+    <div class="ext-card__title">pg_command_fw-0.1.0.tar.gz</div>
+    <div class="ext-card__desc">pg_command_fw-0.1.0.tar.gz</div>
   </a>
 </div>
 

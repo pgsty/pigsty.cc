@@ -112,7 +112,7 @@ cascade:
 #=======================================#
 params:
   # metadata
-  description: 'Pigsty 是开源免费的 PostgreSQL 数据库发行版，提供本地优先的RDS，以及开箱即用的监控、管控、IaC、高可用，以及PG生态的 451 款插件'
+  description: 'Pigsty 是开源免费的 PostgreSQL 数据库发行版，提供本地优先的RDS，以及开箱即用的监控、管控、IaC、高可用，以及PG生态的 504 款插件与12款内核'
   version: 4.0.0
   copyright:
     authors: Ruohang Feng

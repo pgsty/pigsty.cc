@@ -11,10 +11,10 @@ weight: 3230
     <div class="ext-card__title">boringsql/regresql</div>
     <div class="ext-card__desc">https://github.com/boringsql/regresql</div>
   </a>
-  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pg_regresql-2.0.0.zip">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pg_regresql-2.0.0.tar.gz">
     <div class="ext-card__kicker">源码</div>
-    <div class="ext-card__title">pg_regresql-2.0.0.zip</div>
-    <div class="ext-card__desc">pg_regresql-2.0.0.zip</div>
+    <div class="ext-card__title">pg_regresql-2.0.0.tar.gz</div>
+    <div class="ext-card__desc">pg_regresql-2.0.0.tar.gz</div>
   </a>
 </div>
 

@@ -5,7 +5,7 @@ description: "包含多个扩展的 PostgreSQL 扩展包"
 weight: 40
 ---
 
-以下 **20** 个扩展包中包含多个扩展，共计 **97** 个扩展。
+以下 **21** 个扩展包中包含多个扩展，共计 **104** 个扩展。
 
 在安装这些包时，您将同时获得包中的所有扩展。主扩展用粗体标出。
 
@@ -42,6 +42,21 @@ weight: 40
 |:------:|:-----------|:--------:|:--------:|:---------|:---------|
 | 1530 | [**`h3`**](/ext/e/h3) | `4.2.3` | `--s-d-r` | - | H3六边形层级索引支持 |
 | 1531 | [`h3_postgis`](/ext/e/h3_postgis) | `4.2.3` | `--s-d-r` | - | H3与PostGIS集成的扩展插件 |
+{.ext-table}
+
+### pghydro
+
+[`pghydro`](/ext/e/pghydro) 扩展包共有 **7** 个扩展：
+
+| **ID** | **扩展名** | **版本** | **属性** | **模式** | **描述** |
+|:------:|:-----------|:--------:|:--------:|:---------|:---------|
+| 1600 | [**`pghydro`**](/ext/e/pghydro) | `6.6` | `----d--` | `pghydro` | PostgreSQL/PostGIS 排水网络分析核心扩展 |
+| 1601 | [`pgh_raster`](/ext/e/pgh_raster) | `6.6` | `----d--` | `pgh_raster` | PgHydro 栅格水文分析扩展 |
+| 1602 | [`pgh_hgm`](/ext/e/pgh_hgm) | `2.2.6` | `----d--` | `pgh_hgm` | PgHydro 水文地貌分析扩展 |
+| 1603 | [`pgh_output`](/ext/e/pgh_output) | `6.6` | `----d--` | `pgh_output` | PgHydro 输出与报表扩展 |
+| 1604 | [`pgh_output_en_au`](/ext/e/pgh_output_en_au) | `6.6` | `----d--` | `pgh_output_en_au` | PgHydro 澳式英语输出扩展 |
+| 1605 | [`pgh_output_pt_br`](/ext/e/pgh_output_pt_br) | `6.6` | `----d--` | `pgh_output_pt_br` | PgHydro 巴西葡语输出扩展 |
+| 1606 | [`pgh_consistency`](/ext/e/pgh_consistency) | `6.6` | `----d--` | `pgh_consistency` | PgHydro Pfafstetter 一致性检查扩展 |
 {.ext-table}
 
 ### mobilitydb
@@ -183,8 +198,8 @@ weight: 40
 
 | **ID** | **扩展名** | **版本** | **属性** | **模式** | **描述** |
 |:------:|:-----------|:--------:|:--------:|:---------|:---------|
-| 3610 | [**`pg_xenophile`**](/ext/e/pg_xenophile) | `0.8.3` | `----d--` | `xeno` | PostgreSQL i8n与l10n工具包 |
-| 3611 | [`l10n_table_dependent_extension`](/ext/e/l10n_table_dependent_extension) | `0.8.3` | `----d-r` | - | PostgreSQL l10n 工具包 |
+| 3670 | [**`pg_xenophile`**](/ext/e/pg_xenophile) | `0.8.3` | `----d--` | `xeno` | PostgreSQL i8n与l10n工具包 |
+| 3671 | [`l10n_table_dependent_extension`](/ext/e/l10n_table_dependent_extension) | `0.8.3` | `----d-r` | - | PostgreSQL l10n 工具包 |
 {.ext-table}
 
 ### pg_readme

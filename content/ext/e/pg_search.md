@@ -11,10 +11,10 @@ weight: 2100
     <div class="ext-card__title">dev/pg_search</div>
     <div class="ext-card__desc">https://github.com/paradedb/paradedb/tree/dev/pg_search</div>
   </a>
-  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pg_search-0.22.5.tar.gz">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pg_search-0.22.6.tar.gz">
     <div class="ext-card__kicker">源码</div>
-    <div class="ext-card__title">pg_search-0.22.5.tar.gz</div>
-    <div class="ext-card__desc">pg_search-0.22.5.tar.gz</div>
+    <div class="ext-card__title">pg_search-0.22.6.tar.gz</div>
+    <div class="ext-card__desc">pg_search-0.22.6.tar.gz</div>
   </a>
 </div>
 
@@ -30,7 +30,7 @@ weight: 2100
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
 |:-----:|:-------------------------------------------------------------------------|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|:----------|
-| 2100  | [**`pg_search`**](/ext/e/pg_search) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `paradedb` |
+| 2100  | [**`pg_search`**](/ext/e/pg_search) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `paradedb` |
 {.ext-table}
 
 | **相关扩展** | [`pgroonga`](/ext/e/pgroonga) [`pgroonga_database`](/ext/e/pgroonga_database) [`pg_bestmatch`](/ext/e/pg_bestmatch) [`vchord_bm25`](/ext/e/vchord_bm25) [`pg_bigm`](/ext/e/pg_bigm) [`zhparser`](/ext/e/zhparser) [`pg_tokenizer`](/ext/e/pg_tokenizer) [`pg_trgm`](/ext/e/pg_trgm) |
@@ -38,7 +38,7 @@ weight: 2100
 {.ext-table .ext-table--rel}
 
 
-> bm25 am conflict with pg_textsearch, PG 17+ does not require dynamic loading 
+> bm25 am conflicts with pg_textsearch; PG15-16 require shared_preload_libraries while PG17-18 do not.
 
 
 ## 版本
@@ -187,6 +187,13 @@ apt install -y postgresql-15-pg-search   # PG 15
 ```
 {{% /tab %}}
 {{< /tabpane >}}
+
+
+**预加载配置**：
+
+```bash
+shared_preload_libraries = 'pg_search';
+```
 
 
 **创建扩展**：

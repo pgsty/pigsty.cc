@@ -11,10 +11,10 @@ weight: 2705
     <div class="ext-card__title">michael-golfi/pg_liquid</div>
     <div class="ext-card__desc">https://github.com/michael-golfi/pg_liquid</div>
   </a>
-  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pg_liquid-0.1.7.zip">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pg_liquid-0.1.7.tar.gz">
     <div class="ext-card__kicker">源码</div>
-    <div class="ext-card__title">pg_liquid-0.1.7.zip</div>
-    <div class="ext-card__desc">pg_liquid-0.1.7.zip</div>
+    <div class="ext-card__title">pg_liquid-0.1.7.tar.gz</div>
+    <div class="ext-card__desc">pg_liquid-0.1.7.tar.gz</div>
   </a>
 </div>
 

@@ -2,7 +2,7 @@
 title: "pgfaceting"
 linkTitle: "pgfaceting"
 description: "使用倒排索引的高速切面查询"
-weight: 3580
+weight: 3640
 ---
 
 <div class="ext-cards">
@@ -30,7 +30,7 @@ weight: 3580
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
 |:-----:|:-------------------------------------------------------------------------|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|:----------|
-| 3580  | [**`pgfaceting`**](/ext/e/pgfaceting) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `faceting` |
+| 3640  | [**`pgfaceting`**](/ext/e/pgfaceting) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `faceting` |
 {.ext-table}
 
 | **相关扩展** | [`roaringbitmap`](/ext/e/roaringbitmap) [`pg_trgm`](/ext/e/pg_trgm) [`rum`](/ext/e/rum) [`prefix`](/ext/e/prefix) [`semver`](/ext/e/semver) [`unit`](/ext/e/unit) [`pgpdf`](/ext/e/pgpdf) [`pglite_fusion`](/ext/e/pglite_fusion) [`md5hash`](/ext/e/md5hash) |

@@ -11,10 +11,10 @@ weight: 4110
     <div class="ext-card__title">yurc/pg_fsql</div>
     <div class="ext-card__desc">https://github.com/yurc/pg_fsql</div>
   </a>
-  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pg_fsql-1.1.0.zip">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pg_fsql-1.1.0.tar.gz">
     <div class="ext-card__kicker">源码</div>
-    <div class="ext-card__title">pg_fsql-1.1.0.zip</div>
-    <div class="ext-card__desc">pg_fsql-1.1.0.zip</div>
+    <div class="ext-card__title">pg_fsql-1.1.0.tar.gz</div>
+    <div class="ext-card__desc">pg_fsql-1.1.0.tar.gz</div>
   </a>
 </div>
 
@@ -38,7 +38,7 @@ weight: 4110
 {.ext-table .ext-table--rel}
 
 
-> shared_preload_libraries is optional and only needed for session-start GUC availability.
+> Release tag 1.1.0 still ships extension SQL version 1.0; shared_preload_libraries is optional and only needed for session-start GUC availability.
 
 
 ## 版本

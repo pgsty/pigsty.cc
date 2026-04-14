@@ -11,10 +11,10 @@ weight: 3890
     <div class="ext-card__title">h4kbas/pgcalendar</div>
     <div class="ext-card__desc">https://github.com/h4kbas/pgcalendar</div>
   </a>
-  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pgcalendar-1.1.0.zip">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pgcalendar-1.1.0.tar.gz">
     <div class="ext-card__kicker">源码</div>
-    <div class="ext-card__title">pgcalendar-1.1.0.zip</div>
-    <div class="ext-card__desc">pgcalendar-1.1.0.zip</div>
+    <div class="ext-card__title">pgcalendar-1.1.0.tar.gz</div>
+    <div class="ext-card__desc">pgcalendar-1.1.0.tar.gz</div>
   </a>
 </div>
 
@@ -67,12 +67,12 @@ weight: 3890
 | u22.aarch64 | AVAIL PIGSTY 1.1.0 1 | AVAIL PIGSTY 1.1.0 1 | AVAIL PIGSTY 1.1.0 1 | AVAIL PIGSTY 1.1.0 1 | AVAIL PIGSTY 1.1.0 1 |
 | u24.x86_64 | AVAIL PIGSTY 1.1.0 1 | AVAIL PIGSTY 1.1.0 1 | AVAIL PIGSTY 1.1.0 1 | AVAIL PIGSTY 1.1.0 1 | AVAIL PIGSTY 1.1.0 1 |
 | u24.aarch64 | AVAIL PIGSTY 1.1.0 1 | AVAIL PIGSTY 1.1.0 1 | AVAIL PIGSTY 1.1.0 1 | AVAIL PIGSTY 1.1.0 1 | AVAIL PIGSTY 1.1.0 1 |
-@ el8.x86_64 18 pgcalendar_18 pgcalendar_18-1.1.0-1PIGSTY.el8.noarch.rpm pigsty 1.1.0 13.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgcalendar_18-1.1.0-1PIGSTY.el8.noarch.rpm
-@ el8.aarch64 18 pgcalendar_18 pgcalendar_18-1.1.0-1PIGSTY.el8.noarch.rpm pigsty 1.1.0 13.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgcalendar_18-1.1.0-1PIGSTY.el8.noarch.rpm
-@ el9.x86_64 18 pgcalendar_18 pgcalendar_18-1.1.0-1PIGSTY.el9.noarch.rpm pigsty 1.1.0 13.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgcalendar_18-1.1.0-1PIGSTY.el9.noarch.rpm
-@ el9.aarch64 18 pgcalendar_18 pgcalendar_18-1.1.0-1PIGSTY.el9.noarch.rpm pigsty 1.1.0 13.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgcalendar_18-1.1.0-1PIGSTY.el9.noarch.rpm
-@ el10.x86_64 18 pgcalendar_18 pgcalendar_18-1.1.0-1PIGSTY.el10.noarch.rpm pigsty 1.1.0 13.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgcalendar_18-1.1.0-1PIGSTY.el10.noarch.rpm
-@ el10.aarch64 18 pgcalendar_18 pgcalendar_18-1.1.0-1PIGSTY.el10.noarch.rpm pigsty 1.1.0 13.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgcalendar_18-1.1.0-1PIGSTY.el10.noarch.rpm
+@ el8.x86_64 18 pgcalendar_18 pgcalendar_18-1.1.0-1PIGSTY.el8.x86_64.rpm pigsty 1.1.0 13.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgcalendar_18-1.1.0-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 18 pgcalendar_18 pgcalendar_18-1.1.0-1PIGSTY.el8.aarch64.rpm pigsty 1.1.0 13.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgcalendar_18-1.1.0-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 18 pgcalendar_18 pgcalendar_18-1.1.0-1PIGSTY.el9.x86_64.rpm pigsty 1.1.0 13.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgcalendar_18-1.1.0-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 18 pgcalendar_18 pgcalendar_18-1.1.0-1PIGSTY.el9.aarch64.rpm pigsty 1.1.0 13.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgcalendar_18-1.1.0-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 18 pgcalendar_18 pgcalendar_18-1.1.0-1PIGSTY.el10.x86_64.rpm pigsty 1.1.0 13.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgcalendar_18-1.1.0-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 18 pgcalendar_18 pgcalendar_18-1.1.0-1PIGSTY.el10.aarch64.rpm pigsty 1.1.0 13.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgcalendar_18-1.1.0-1PIGSTY.el10.aarch64.rpm
 @ d12.x86_64 18 postgresql-18-pgcalendar postgresql-18-pgcalendar_1.1.0-1PIGSTY~bookworm_amd64.deb pigsty 1.1.0 7.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgcalendar/postgresql-18-pgcalendar_1.1.0-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 18 postgresql-18-pgcalendar postgresql-18-pgcalendar_1.1.0-1PIGSTY~bookworm_arm64.deb pigsty 1.1.0 7.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgcalendar/postgresql-18-pgcalendar_1.1.0-1PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 18 postgresql-18-pgcalendar postgresql-18-pgcalendar_1.1.0-1PIGSTY~trixie_amd64.deb pigsty 1.1.0 7.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgcalendar/postgresql-18-pgcalendar_1.1.0-1PIGSTY~trixie_amd64.deb
@@ -81,12 +81,12 @@ weight: 3890
 @ u22.aarch64 18 postgresql-18-pgcalendar postgresql-18-pgcalendar_1.1.0-1PIGSTY~jammy_arm64.deb pigsty 1.1.0 7.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgcalendar/postgresql-18-pgcalendar_1.1.0-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 18 postgresql-18-pgcalendar postgresql-18-pgcalendar_1.1.0-1PIGSTY~noble_amd64.deb pigsty 1.1.0 7.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgcalendar/postgresql-18-pgcalendar_1.1.0-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 18 postgresql-18-pgcalendar postgresql-18-pgcalendar_1.1.0-1PIGSTY~noble_arm64.deb pigsty 1.1.0 7.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgcalendar/postgresql-18-pgcalendar_1.1.0-1PIGSTY~noble_arm64.deb
-@ el8.x86_64 17 pgcalendar_17 pgcalendar_17-1.1.0-1PIGSTY.el8.noarch.rpm pigsty 1.1.0 13.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgcalendar_17-1.1.0-1PIGSTY.el8.noarch.rpm
-@ el8.aarch64 17 pgcalendar_17 pgcalendar_17-1.1.0-1PIGSTY.el8.noarch.rpm pigsty 1.1.0 13.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgcalendar_17-1.1.0-1PIGSTY.el8.noarch.rpm
-@ el9.x86_64 17 pgcalendar_17 pgcalendar_17-1.1.0-1PIGSTY.el9.noarch.rpm pigsty 1.1.0 13.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgcalendar_17-1.1.0-1PIGSTY.el9.noarch.rpm
-@ el9.aarch64 17 pgcalendar_17 pgcalendar_17-1.1.0-1PIGSTY.el9.noarch.rpm pigsty 1.1.0 13.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgcalendar_17-1.1.0-1PIGSTY.el9.noarch.rpm
-@ el10.x86_64 17 pgcalendar_17 pgcalendar_17-1.1.0-1PIGSTY.el10.noarch.rpm pigsty 1.1.0 13.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgcalendar_17-1.1.0-1PIGSTY.el10.noarch.rpm
-@ el10.aarch64 17 pgcalendar_17 pgcalendar_17-1.1.0-1PIGSTY.el10.noarch.rpm pigsty 1.1.0 13.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgcalendar_17-1.1.0-1PIGSTY.el10.noarch.rpm
+@ el8.x86_64 17 pgcalendar_17 pgcalendar_17-1.1.0-1PIGSTY.el8.x86_64.rpm pigsty 1.1.0 13.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgcalendar_17-1.1.0-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 17 pgcalendar_17 pgcalendar_17-1.1.0-1PIGSTY.el8.aarch64.rpm pigsty 1.1.0 13.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgcalendar_17-1.1.0-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 17 pgcalendar_17 pgcalendar_17-1.1.0-1PIGSTY.el9.x86_64.rpm pigsty 1.1.0 13.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgcalendar_17-1.1.0-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 17 pgcalendar_17 pgcalendar_17-1.1.0-1PIGSTY.el9.aarch64.rpm pigsty 1.1.0 13.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgcalendar_17-1.1.0-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 17 pgcalendar_17 pgcalendar_17-1.1.0-1PIGSTY.el10.x86_64.rpm pigsty 1.1.0 13.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgcalendar_17-1.1.0-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 17 pgcalendar_17 pgcalendar_17-1.1.0-1PIGSTY.el10.aarch64.rpm pigsty 1.1.0 13.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgcalendar_17-1.1.0-1PIGSTY.el10.aarch64.rpm
 @ d12.x86_64 17 postgresql-17-pgcalendar postgresql-17-pgcalendar_1.1.0-1PIGSTY~bookworm_amd64.deb pigsty 1.1.0 7.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgcalendar/postgresql-17-pgcalendar_1.1.0-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 17 postgresql-17-pgcalendar postgresql-17-pgcalendar_1.1.0-1PIGSTY~bookworm_arm64.deb pigsty 1.1.0 7.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgcalendar/postgresql-17-pgcalendar_1.1.0-1PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 17 postgresql-17-pgcalendar postgresql-17-pgcalendar_1.1.0-1PIGSTY~trixie_amd64.deb pigsty 1.1.0 7.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgcalendar/postgresql-17-pgcalendar_1.1.0-1PIGSTY~trixie_amd64.deb
@@ -95,12 +95,12 @@ weight: 3890
 @ u22.aarch64 17 postgresql-17-pgcalendar postgresql-17-pgcalendar_1.1.0-1PIGSTY~jammy_arm64.deb pigsty 1.1.0 7.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgcalendar/postgresql-17-pgcalendar_1.1.0-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 17 postgresql-17-pgcalendar postgresql-17-pgcalendar_1.1.0-1PIGSTY~noble_amd64.deb pigsty 1.1.0 7.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgcalendar/postgresql-17-pgcalendar_1.1.0-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 17 postgresql-17-pgcalendar postgresql-17-pgcalendar_1.1.0-1PIGSTY~noble_arm64.deb pigsty 1.1.0 7.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgcalendar/postgresql-17-pgcalendar_1.1.0-1PIGSTY~noble_arm64.deb
-@ el8.x86_64 16 pgcalendar_16 pgcalendar_16-1.1.0-1PIGSTY.el8.noarch.rpm pigsty 1.1.0 13.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgcalendar_16-1.1.0-1PIGSTY.el8.noarch.rpm
-@ el8.aarch64 16 pgcalendar_16 pgcalendar_16-1.1.0-1PIGSTY.el8.noarch.rpm pigsty 1.1.0 13.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgcalendar_16-1.1.0-1PIGSTY.el8.noarch.rpm
-@ el9.x86_64 16 pgcalendar_16 pgcalendar_16-1.1.0-1PIGSTY.el9.noarch.rpm pigsty 1.1.0 13.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgcalendar_16-1.1.0-1PIGSTY.el9.noarch.rpm
-@ el9.aarch64 16 pgcalendar_16 pgcalendar_16-1.1.0-1PIGSTY.el9.noarch.rpm pigsty 1.1.0 13.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgcalendar_16-1.1.0-1PIGSTY.el9.noarch.rpm
-@ el10.x86_64 16 pgcalendar_16 pgcalendar_16-1.1.0-1PIGSTY.el10.noarch.rpm pigsty 1.1.0 13.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgcalendar_16-1.1.0-1PIGSTY.el10.noarch.rpm
-@ el10.aarch64 16 pgcalendar_16 pgcalendar_16-1.1.0-1PIGSTY.el10.noarch.rpm pigsty 1.1.0 13.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgcalendar_16-1.1.0-1PIGSTY.el10.noarch.rpm
+@ el8.x86_64 16 pgcalendar_16 pgcalendar_16-1.1.0-1PIGSTY.el8.x86_64.rpm pigsty 1.1.0 13.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgcalendar_16-1.1.0-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 16 pgcalendar_16 pgcalendar_16-1.1.0-1PIGSTY.el8.aarch64.rpm pigsty 1.1.0 13.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgcalendar_16-1.1.0-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 16 pgcalendar_16 pgcalendar_16-1.1.0-1PIGSTY.el9.x86_64.rpm pigsty 1.1.0 13.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgcalendar_16-1.1.0-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 16 pgcalendar_16 pgcalendar_16-1.1.0-1PIGSTY.el9.aarch64.rpm pigsty 1.1.0 13.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgcalendar_16-1.1.0-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 16 pgcalendar_16 pgcalendar_16-1.1.0-1PIGSTY.el10.x86_64.rpm pigsty 1.1.0 13.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgcalendar_16-1.1.0-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 16 pgcalendar_16 pgcalendar_16-1.1.0-1PIGSTY.el10.aarch64.rpm pigsty 1.1.0 13.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgcalendar_16-1.1.0-1PIGSTY.el10.aarch64.rpm
 @ d12.x86_64 16 postgresql-16-pgcalendar postgresql-16-pgcalendar_1.1.0-1PIGSTY~bookworm_amd64.deb pigsty 1.1.0 7.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgcalendar/postgresql-16-pgcalendar_1.1.0-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 16 postgresql-16-pgcalendar postgresql-16-pgcalendar_1.1.0-1PIGSTY~bookworm_arm64.deb pigsty 1.1.0 7.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgcalendar/postgresql-16-pgcalendar_1.1.0-1PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 16 postgresql-16-pgcalendar postgresql-16-pgcalendar_1.1.0-1PIGSTY~trixie_amd64.deb pigsty 1.1.0 7.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgcalendar/postgresql-16-pgcalendar_1.1.0-1PIGSTY~trixie_amd64.deb
@@ -109,12 +109,12 @@ weight: 3890
 @ u22.aarch64 16 postgresql-16-pgcalendar postgresql-16-pgcalendar_1.1.0-1PIGSTY~jammy_arm64.deb pigsty 1.1.0 7.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgcalendar/postgresql-16-pgcalendar_1.1.0-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 16 postgresql-16-pgcalendar postgresql-16-pgcalendar_1.1.0-1PIGSTY~noble_amd64.deb pigsty 1.1.0 7.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgcalendar/postgresql-16-pgcalendar_1.1.0-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 16 postgresql-16-pgcalendar postgresql-16-pgcalendar_1.1.0-1PIGSTY~noble_arm64.deb pigsty 1.1.0 7.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgcalendar/postgresql-16-pgcalendar_1.1.0-1PIGSTY~noble_arm64.deb
-@ el8.x86_64 15 pgcalendar_15 pgcalendar_15-1.1.0-1PIGSTY.el8.noarch.rpm pigsty 1.1.0 13.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgcalendar_15-1.1.0-1PIGSTY.el8.noarch.rpm
-@ el8.aarch64 15 pgcalendar_15 pgcalendar_15-1.1.0-1PIGSTY.el8.noarch.rpm pigsty 1.1.0 13.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgcalendar_15-1.1.0-1PIGSTY.el8.noarch.rpm
-@ el9.x86_64 15 pgcalendar_15 pgcalendar_15-1.1.0-1PIGSTY.el9.noarch.rpm pigsty 1.1.0 13.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgcalendar_15-1.1.0-1PIGSTY.el9.noarch.rpm
-@ el9.aarch64 15 pgcalendar_15 pgcalendar_15-1.1.0-1PIGSTY.el9.noarch.rpm pigsty 1.1.0 13.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgcalendar_15-1.1.0-1PIGSTY.el9.noarch.rpm
-@ el10.x86_64 15 pgcalendar_15 pgcalendar_15-1.1.0-1PIGSTY.el10.noarch.rpm pigsty 1.1.0 13.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgcalendar_15-1.1.0-1PIGSTY.el10.noarch.rpm
-@ el10.aarch64 15 pgcalendar_15 pgcalendar_15-1.1.0-1PIGSTY.el10.noarch.rpm pigsty 1.1.0 13.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgcalendar_15-1.1.0-1PIGSTY.el10.noarch.rpm
+@ el8.x86_64 15 pgcalendar_15 pgcalendar_15-1.1.0-1PIGSTY.el8.x86_64.rpm pigsty 1.1.0 13.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgcalendar_15-1.1.0-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 15 pgcalendar_15 pgcalendar_15-1.1.0-1PIGSTY.el8.aarch64.rpm pigsty 1.1.0 13.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgcalendar_15-1.1.0-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 15 pgcalendar_15 pgcalendar_15-1.1.0-1PIGSTY.el9.x86_64.rpm pigsty 1.1.0 13.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgcalendar_15-1.1.0-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 15 pgcalendar_15 pgcalendar_15-1.1.0-1PIGSTY.el9.aarch64.rpm pigsty 1.1.0 13.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgcalendar_15-1.1.0-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 15 pgcalendar_15 pgcalendar_15-1.1.0-1PIGSTY.el10.x86_64.rpm pigsty 1.1.0 13.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgcalendar_15-1.1.0-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 15 pgcalendar_15 pgcalendar_15-1.1.0-1PIGSTY.el10.aarch64.rpm pigsty 1.1.0 13.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgcalendar_15-1.1.0-1PIGSTY.el10.aarch64.rpm
 @ d12.x86_64 15 postgresql-15-pgcalendar postgresql-15-pgcalendar_1.1.0-1PIGSTY~bookworm_amd64.deb pigsty 1.1.0 7.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgcalendar/postgresql-15-pgcalendar_1.1.0-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 15 postgresql-15-pgcalendar postgresql-15-pgcalendar_1.1.0-1PIGSTY~bookworm_arm64.deb pigsty 1.1.0 7.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgcalendar/postgresql-15-pgcalendar_1.1.0-1PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 15 postgresql-15-pgcalendar postgresql-15-pgcalendar_1.1.0-1PIGSTY~trixie_amd64.deb pigsty 1.1.0 7.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgcalendar/postgresql-15-pgcalendar_1.1.0-1PIGSTY~trixie_amd64.deb
@@ -123,12 +123,12 @@ weight: 3890
 @ u22.aarch64 15 postgresql-15-pgcalendar postgresql-15-pgcalendar_1.1.0-1PIGSTY~jammy_arm64.deb pigsty 1.1.0 7.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgcalendar/postgresql-15-pgcalendar_1.1.0-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 15 postgresql-15-pgcalendar postgresql-15-pgcalendar_1.1.0-1PIGSTY~noble_amd64.deb pigsty 1.1.0 7.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgcalendar/postgresql-15-pgcalendar_1.1.0-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 15 postgresql-15-pgcalendar postgresql-15-pgcalendar_1.1.0-1PIGSTY~noble_arm64.deb pigsty 1.1.0 7.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgcalendar/postgresql-15-pgcalendar_1.1.0-1PIGSTY~noble_arm64.deb
-@ el8.x86_64 14 pgcalendar_14 pgcalendar_14-1.1.0-1PIGSTY.el8.noarch.rpm pigsty 1.1.0 13.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgcalendar_14-1.1.0-1PIGSTY.el8.noarch.rpm
-@ el8.aarch64 14 pgcalendar_14 pgcalendar_14-1.1.0-1PIGSTY.el8.noarch.rpm pigsty 1.1.0 13.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgcalendar_14-1.1.0-1PIGSTY.el8.noarch.rpm
-@ el9.x86_64 14 pgcalendar_14 pgcalendar_14-1.1.0-1PIGSTY.el9.noarch.rpm pigsty 1.1.0 13.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgcalendar_14-1.1.0-1PIGSTY.el9.noarch.rpm
-@ el9.aarch64 14 pgcalendar_14 pgcalendar_14-1.1.0-1PIGSTY.el9.noarch.rpm pigsty 1.1.0 13.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgcalendar_14-1.1.0-1PIGSTY.el9.noarch.rpm
-@ el10.x86_64 14 pgcalendar_14 pgcalendar_14-1.1.0-1PIGSTY.el10.noarch.rpm pigsty 1.1.0 13.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgcalendar_14-1.1.0-1PIGSTY.el10.noarch.rpm
-@ el10.aarch64 14 pgcalendar_14 pgcalendar_14-1.1.0-1PIGSTY.el10.noarch.rpm pigsty 1.1.0 13.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgcalendar_14-1.1.0-1PIGSTY.el10.noarch.rpm
+@ el8.x86_64 14 pgcalendar_14 pgcalendar_14-1.1.0-1PIGSTY.el8.x86_64.rpm pigsty 1.1.0 13.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgcalendar_14-1.1.0-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 14 pgcalendar_14 pgcalendar_14-1.1.0-1PIGSTY.el8.aarch64.rpm pigsty 1.1.0 13.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgcalendar_14-1.1.0-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 14 pgcalendar_14 pgcalendar_14-1.1.0-1PIGSTY.el9.x86_64.rpm pigsty 1.1.0 13.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgcalendar_14-1.1.0-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 14 pgcalendar_14 pgcalendar_14-1.1.0-1PIGSTY.el9.aarch64.rpm pigsty 1.1.0 13.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgcalendar_14-1.1.0-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 14 pgcalendar_14 pgcalendar_14-1.1.0-1PIGSTY.el10.x86_64.rpm pigsty 1.1.0 13.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgcalendar_14-1.1.0-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 14 pgcalendar_14 pgcalendar_14-1.1.0-1PIGSTY.el10.aarch64.rpm pigsty 1.1.0 13.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgcalendar_14-1.1.0-1PIGSTY.el10.aarch64.rpm
 @ d12.x86_64 14 postgresql-14-pgcalendar postgresql-14-pgcalendar_1.1.0-1PIGSTY~bookworm_amd64.deb pigsty 1.1.0 7.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgcalendar/postgresql-14-pgcalendar_1.1.0-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 14 postgresql-14-pgcalendar postgresql-14-pgcalendar_1.1.0-1PIGSTY~bookworm_arm64.deb pigsty 1.1.0 7.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgcalendar/postgresql-14-pgcalendar_1.1.0-1PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 14 postgresql-14-pgcalendar postgresql-14-pgcalendar_1.1.0-1PIGSTY~trixie_amd64.deb pigsty 1.1.0 7.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgcalendar/postgresql-14-pgcalendar_1.1.0-1PIGSTY~trixie_amd64.deb

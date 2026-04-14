@@ -2,7 +2,7 @@
 title: "pgactive"
 linkTitle: "pgactive"
 description: "PostgreSQL多主逻辑复制"
-weight: 9550
+weight: 9560
 ---
 
 <div class="ext-cards">
@@ -30,7 +30,7 @@ weight: 9550
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
 |:-----:|:-------------------------------------------------------------------------|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|:----------|
-| 9550  | [**`pgactive`**](/ext/e/pgactive) | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `pg_catalog` |
+| 9560  | [**`pgactive`**](/ext/e/pgactive) | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `pg_catalog` |
 {.ext-table}
 
 | **相关扩展** | [`pglogical`](/ext/e/pglogical) [`pg_failover_slots`](/ext/e/pg_failover_slots) [`repmgr`](/ext/e/repmgr) [`bgw_replstatus`](/ext/e/bgw_replstatus) [`pglogical_origin`](/ext/e/pglogical_origin) [`pglogical_ticker`](/ext/e/pglogical_ticker) [`pgl_ddl_deploy`](/ext/e/pgl_ddl_deploy) [`decoderbufs`](/ext/e/decoderbufs) |

@@ -8,7 +8,7 @@ icon: fas fa-icons
 
 ## 扩展列表
 
-共有 **65** 个扩展，位于 **26** 个扩展包中。
+共有 **67** 个扩展，位于 **28** 个扩展包中。
 
 | **扩展** | **包** | **版本** | **许可证** | **语言** | **描述** |
 |:---------|:-------|:--------:|:----------:|:--------:|:---------|
@@ -28,14 +28,15 @@ icon: fas fa-icons
 | [`pg_variables`](/ext/e/pg_variables) | [`pg_variables`](https://github.com/postgrespro/pg_variables) | `1.2.5` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 提供标量、数组和记录类型的会话变量 |
 | [`imgsmlr`](/ext/e/imgsmlr) | [`imgsmlr`](https://github.com/postgrespro/imgsmlr) | `1.0` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 使用Haar小波分析计算图片相似度 |
 | [`pg_ivm`](/ext/e/pg_ivm) | [`pg_ivm`](https://github.com/sraoss/pg_ivm) | `1.13` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 增量维护的物化视图 |
-| [`pg_incremental`](/ext/e/pg_incremental) | [`pg_incremental`](https://github.com/CrunchyData/pg_incremental) | `1.4.1` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 增量处理流式事件 |
-| [`pg_trickle`](/ext/e/pg_trickle) | [`pg_trickle`](https://github.com/grove/pg-trickle) | `0.16.0` | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | 为 PostgreSQL 18 提供流式表与差分视图维护 |
+| [`pg_incremental`](/ext/e/pg_incremental) | [`pg_incremental`](https://github.com/CrunchyData/pg_incremental) | `1.5.0` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 增量处理流式事件 |
+| [`pg_trickle`](/ext/e/pg_trickle) | [`pg_trickle`](https://github.com/grove/pg-trickle) | `0.17.0` | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | 为 PostgreSQL 18 提供流式表与差分视图维护 |
 | [`pgmb`](/ext/e/pgmb) | [`pgmb`](https://github.com/fraruiz/pgmb) | `1.0.0` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> | 一个简单的PostgreSQL消息代理系统 |
 | [`pgmq`](/ext/e/pgmq) | [`pgmq`](https://github.com/pgmq/pgmq) | `1.11.0` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> | 基于Postgres实现类似AWS SQS/RSMQ的消息队列 |
 | [`pgq`](/ext/e/pgq) | [`pgq`](https://github.com/pgq/pgq) | `3.5.1` | <a class="ext-badge ext-badge--license isc" href="/ext/license#isc">ISC</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 通用队列的PG实现 |
+| [`provsql`](/ext/e/provsql) | [`provsql`](https://github.com/PierreSenellart/provsql) | `1.2.3` | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang cpp" href="/ext/language#cpp">C++</a> | PostgreSQL 半环溯源与不确定性管理扩展 |
 | [`orioledb`](/ext/e/orioledb) | [`orioledb`](https://github.com/orioledb/orioledb) | `1.6` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | OrioleDB，下一代事务处理引擎 |
-| [`pg_cardano`](/ext/e/pg_cardano) | [`pg_cardano`](https://github.com/Fell-x27/pg_cardano) | `1.1.1` | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | Cardano相关工具包：加密函数，地址编解码，区块链处理 |
-| [`rdkit`](/ext/e/rdkit) | [`rdkit`](https://github.com/rdkit/rdkit) | `202503.1` | <a class="ext-badge ext-badge--license bsd 3clause" href="/ext/license#bsd3clause">BSD 3-Clause</a> | <a class="ext-badge ext-badge--lang cpp" href="/ext/language#cpp">C++</a> | 在PostgreSQL化学领域数据管理功能 |
+| [`pg_cardano`](/ext/e/pg_cardano) | [`pg_cardano`](https://github.com/Fell-x27/pg_cardano) | `1.2.0` | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | Cardano相关工具包：加密函数，地址编解码，区块链处理 |
+| [`rdkit`](/ext/e/rdkit) | [`rdkit`](https://github.com/rdkit/rdkit) | `202503.6` | <a class="ext-badge ext-badge--license bsd 3clause" href="/ext/license#bsd3clause">BSD 3-Clause</a> | <a class="ext-badge ext-badge--lang cpp" href="/ext/language#cpp">C++</a> | 在PostgreSQL化学领域数据管理功能 |
 | [`omni`](/ext/e/omni) | [`omnigres`](https://github.com/omnigres/omnigres) | `0.2.14` | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | PostgreSQL即平台，Omnigres主扩展与加载器 |
 | [`omni_auth`](/ext/e/omni_auth) | [`omnigres`](https://docs.omnigres.org/omni_auth/basics/) | `0.1.3` | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | Omnigres 基础会话认证管理模块 |
 | [`omni_aws`](/ext/e/omni_aws) | [`omnigres`](https://docs.omnigres.org/omni_aws/s3/) | `0.1.2` | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | Omnigres AWS S3 API封装 |
@@ -76,6 +77,7 @@ icon: fas fa-icons
 | [`omni_worker`](/ext/e/omni_worker) | [`omnigres`](https://docs.omnigres.org/omni_worker/intro/) | `0.2.1` | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | Omnigres 通用Worker池 |
 | [`omni_xml`](/ext/e/omni_xml) | [`omnigres`](https://docs.omnigres.org/omni_xml/overview/) | `0.1.2` | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | Omnigres XML工具包 |
 | [`omni_yaml`](/ext/e/omni_yaml) | [`omnigres`](https://docs.omnigres.org/omni_yaml/yaml/) | `0.1.0` | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | Omnigres YAML工具包 |
+| [`onesparse`](/ext/e/onesparse) | [`one_sparse`](https://github.com/OneSparse/OneSparse) | `1.0.0` | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | PostgreSQL 18 的稀疏线性代数与图算法扩展 |
 | [`bloom`](/ext/e/bloom) | [`bloom`](https://www.postgresql.org/docs/current/bloom.html) | `1.0` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | bloom 索引-基于指纹的索引 |
 {.ext-table}
 
@@ -372,7 +374,7 @@ icon: fas fa-icons
 
 ## pg_incremental {#pg_incremental}
 
-[**`pg_incremental`**](/ext/e/pg_incremental) - `1.4.1` : 增量处理流式事件
+[**`pg_incremental`**](/ext/e/pg_incremental) - `1.5.0` : 增量处理流式事件
 
 | **条目** | **属性** | **OS** | **x86_64** | **aarch64** |
 |:---:|:---|:---:|:---:|:---:|
@@ -390,7 +392,7 @@ icon: fas fa-icons
 
 ## pg_trickle {#pg_trickle}
 
-[**`pg_trickle`**](/ext/e/pg_trickle) - `0.16.0` : 为 PostgreSQL 18 提供流式表与差分视图维护
+[**`pg_trickle`**](/ext/e/pg_trickle) - `0.17.0` : 为 PostgreSQL 18 提供流式表与差分视图维护
 
 | **条目** | **属性** | **OS** | **x86_64** | **aarch64** |
 |:---:|:---|:---:|:---:|:---:|
@@ -460,6 +462,24 @@ icon: fas fa-icons
 
 ---------
 
+## provsql {#provsql}
+
+[**`provsql`**](/ext/e/provsql) - `1.2.3` : PostgreSQL 半环溯源与不确定性管理扩展
+
+| **条目** | **属性** | **OS** | **x86_64** | **aarch64** |
+|:---:|:---|:---:|:---:|:---:|
+| **扩展名** | [`provsql`](/ext/e/provsql) | **el8** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+| **扩展包** | [`provsql`](https://github.com/PierreSenellart/provsql) | **el9** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+| **RPM** | `provsql_$v` | **el10** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+| **DEB** | `postgresql-$v-provsql` | **d12** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+| **语言** | <a class="ext-badge ext-badge--lang cpp" href="/ext/language#cpp">C++</a> | **d13** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+| **仓库** | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | **u22** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+| **协议** | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | **u24** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+{.ext-table .ext-table--cate}
+
+
+---------
+
 ## orioledb {#orioledb}
 
 [**`orioledb`**](/ext/e/orioledb) - `1.6` : OrioleDB，下一代事务处理引擎
@@ -480,7 +500,7 @@ icon: fas fa-icons
 
 ## pg_cardano {#pg_cardano}
 
-[**`pg_cardano`**](/ext/e/pg_cardano) - `1.1.1` : Cardano相关工具包：加密函数，地址编解码，区块链处理
+[**`pg_cardano`**](/ext/e/pg_cardano) - `1.2.0` : Cardano相关工具包：加密函数，地址编解码，区块链处理
 
 | **条目** | **属性** | **OS** | **x86_64** | **aarch64** |
 |:---:|:---|:---:|:---:|:---:|
@@ -498,16 +518,16 @@ icon: fas fa-icons
 
 ## rdkit {#rdkit}
 
-[**`rdkit`**](/ext/e/rdkit) - `202503.1` : 在PostgreSQL化学领域数据管理功能
+[**`rdkit`**](/ext/e/rdkit) - `202503.6` : 在PostgreSQL化学领域数据管理功能
 
 | **条目** | **属性** | **OS** | **x86_64** | **aarch64** |
 |:---:|:---|:---:|:---:|:---:|
 | **扩展名** | [`rdkit`](/ext/e/rdkit) | **el8** | - | - |
 | **扩展包** | [`rdkit`](https://github.com/rdkit/rdkit) | **el9** | - | - |
-| **RPM** | - | **el10** | - | - |
+| **RPM** | `rdkit_$v` | **el10** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
 | **DEB** | `postgresql-$v-rdkit` | **d12** | {{< pgvers "16,15,14" >}} | {{< pgvers "16,15,14" >}} |
 | **语言** | <a class="ext-badge ext-badge--lang cpp" href="/ext/language#cpp">C++</a> | **d13** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
-| **仓库** | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | **u22** | {{< pgvers "16,15,14" >}} | {{< pgvers "16,15,14" >}} |
+| **仓库** | <a class="ext-badge ext-badge--repo mixed" href="/ext/repo#mixed">MIXED</a> | **u22** | {{< pgvers "16,15,14" >}} | {{< pgvers "16,15,14" >}} |
 | **协议** | <a class="ext-badge ext-badge--license bsd 3clause" href="/ext/license#bsd3clause">BSD 3-Clause</a> | **u24** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
 {.ext-table .ext-table--cate}
 
@@ -1229,6 +1249,24 @@ icon: fas fa-icons
 | **语言** | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | **d13** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
 | **仓库** | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | **u22** | {{< pgvers "17,16,15,14" >}} | {{< pgvers "17,16,15,14" >}} |
 | **协议** | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | **u24** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+{.ext-table .ext-table--cate}
+
+
+---------
+
+## onesparse {#onesparse}
+
+[**`one_sparse`**](/ext/e/onesparse) - `1.0.0` : PostgreSQL 18 的稀疏线性代数与图算法扩展
+
+| **条目** | **属性** | **OS** | **x86_64** | **aarch64** |
+|:---:|:---|:---:|:---:|:---:|
+| **扩展名** | [`onesparse`](/ext/e/onesparse) | **el8** | {{< pgvers "18" >}} | {{< pgvers "18" >}} |
+| **扩展包** | [`one_sparse`](https://github.com/OneSparse/OneSparse) | **el9** | {{< pgvers "18" >}} | {{< pgvers "18" >}} |
+| **RPM** | `onesparse_$v` | **el10** | {{< pgvers "18" >}} | {{< pgvers "18" >}} |
+| **DEB** | `postgresql-$v-onesparse` | **d12** | {{< pgvers "18" >}} | {{< pgvers "18" >}} |
+| **语言** | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | **d13** | {{< pgvers "18" >}} | {{< pgvers "18" >}} |
+| **仓库** | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | **u22** | {{< pgvers "18" >}} | {{< pgvers "18" >}} |
+| **协议** | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | **u24** | {{< pgvers "18" >}} | {{< pgvers "18" >}} |
 {.ext-table .ext-table--cate}
 
 

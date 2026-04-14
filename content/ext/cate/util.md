@@ -8,7 +8,7 @@ icon: fas fa-wrench
 
 ## 扩展列表
 
-共有 **35** 个扩展，位于 **34** 个扩展包中。
+共有 **38** 个扩展，位于 **37** 个扩展包中。
 
 | **扩展** | **包** | **版本** | **许可证** | **语言** | **描述** |
 |:---------|:-------|:--------:|:----------:|:--------:|:---------|
@@ -21,7 +21,7 @@ icon: fas fa-wrench
 | [`pg_retry`](/ext/e/pg_retry) | [`pg_retry`](https://github.com/Agent-Hellboy/pg_retry) | `1.0.0` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 在临时错误中使用指数退避重试语句 |
 | [`pg_fsql`](/ext/e/pg_fsql) | [`pg_fsql`](https://github.com/yurc/pg_fsql) | `1.1.0` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 支持 JSONB 驱动执行的递归 SQL 模板引擎 |
 | [`pg_protobuf`](/ext/e/pg_protobuf) | [`pg_protobuf`](https://github.com/afiskon/pg_protobuf) | `1.0` | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 提供Protobuf函数支持 |
-| [`pgproto`](/ext/e/pgproto) | [`pgproto`](https://github.com/Apaezmx/pgproto) | `0.2.1` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 原生 Protobuf 解析、修改、索引与 JSON 转换支持 |
+| [`pgproto`](/ext/e/pgproto) | [`pgproto`](https://github.com/Apaezmx/pgproto) | `0.2.4` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 原生 Protobuf 解析、修改、索引与 JSON 转换支持 |
 | [`pglock`](/ext/e/pglock) | [`pglock`](https://github.com/fraruiz/pglock) | `1.0.0` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> | 在 PostgreSQL 内实现轻量级分布式锁服务 |
 | [`pgjq`](/ext/e/pgjq) | [`pgjq`](https://github.com/Florents-Tselai/pgJQ) | `0.1.0` | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 在Postgres中使用jq查询JSON |
 | [`pgjwt`](/ext/e/pgjwt) | [`pgjwt`](https://github.com/michelp/pgjwt) | `0.2.0` | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> | JSON Web Token API 的PG实现 (supabase) |
@@ -34,13 +34,16 @@ icon: fas fa-wrench
 | [`icu_ext`](/ext/e/icu_ext) | [`icu_ext`](https://github.com/dverite/icu_ext) | `1.10.0` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 访问ICU库提供的函数 |
 | [`pgqr`](/ext/e/pgqr) | [`pgqr`](https://github.com/AbdulYadi/pgqr) | `1.0` | <a class="ext-badge ext-badge--license bsd 3clause" href="/ext/license#bsd3clause">BSD 3-Clause</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 从数据库中直接生成QR二维码 |
 | [`envvar`](/ext/e/envvar) | [`pg_envvar`](https://github.com/theory/pg-envvar) | `1.0.1` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 获取环境变量的函数 |
+| [`byteamagic`](/ext/e/byteamagic) | [`pg_byteamagic`](https://github.com/nmandery/pg_byteamagic) | `0.2.4` | <a class="ext-badge ext-badge--license bsd 2clause" href="/ext/license#bsd2clause">BSD 2-Clause</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 从 PostgreSQL bytea 值检测 MIME 类型与文件格式 |
 | [`floatfile`](/ext/e/floatfile) | [`floatfile`](https://github.com/pjungwir/floatfile) | `1.3.1` | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 将浮点数组存储到文件中而不是堆表中 |
+| [`external_file`](/ext/e/external_file) | [`external_file`](https://github.com/darold/external_file) | `1.2` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> | 通过 PostgreSQL 函数访问服务器端外部文件 |
 | [`pg_render`](/ext/e/pg_render) | [`pg_render`](https://github.com/mkaski/pg_render) | `0.1.3` | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | 使用SQL渲染HTML页面 |
 | [`pg_readme`](/ext/e/pg_readme) | [`pg_readme`](https://github.com/bigsmoke/pg_readme) | `0.7.0` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 为模式与扩展生成Markdown文档 |
 | [`pg_readme_test_extension`](/ext/e/pg_readme_test_extension) | [`pg_readme`](https://github.com/bigsmoke/pg_readme) | `0.7.0` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 为模式与扩展生成Markdown文档 |
-| [`ddl_historization`](/ext/e/ddl_historization) | [`ddl_historization`](https://github.com/rodo/pg_ddl_historization) | `0.0.7` | <a class="ext-badge ext-badge--license gpl20" href="/ext/license#gpl20">GPL-2.0</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> | 用SQL将所有DDL变更写入到数据库表中 |
+| [`ddl_historization`](/ext/e/ddl_historization) | [`ddl_historization`](https://github.com/rodo/pg_ddl_historization) | `0.2` | <a class="ext-badge ext-badge--license gpl20" href="/ext/license#gpl20">GPL-2.0</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> | 用SQL将所有DDL变更写入到数据库表中 |
 | [`data_historization`](/ext/e/data_historization) | [`data_historization`](https://github.com/rodo/postgresql-data-historization) | `1.1.0` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> | 用SQL将数据变更历史保存到分区表中 |
 | [`schedoc`](/ext/e/schedoc) | [`pg_schedoc`](https://github.com/ZeroGachis/pg_schedoc) | `0.0.1` | <a class="ext-badge ext-badge--license gpl30" href="/ext/license#gpl30">GPL-3.0</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> | 在Django与DBT之间通过注释文档交换元数据 |
+| [`pg_isok`](/ext/e/pg_isok) | [`pg_isok`](https://codeberg.org/kop/pg_isok) | `1.4.1` | <a class="ext-badge ext-badge--license agpl30" href="/ext/license#agpl30">AGPL-3.0</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> | 基于查询的数据完整性管理与软告警扩展 |
 | [`hashlib`](/ext/e/hashlib) | [`pg_hashlib`](https://github.com/markokr/pghashlib) | `1.1` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 稳定哈希函数包 |
 | [`xxhash`](/ext/e/xxhash) | [`pg_xxhash`](https://github.com/hatarist/pg_xxhash) | `0.0.1` | <a class="ext-badge ext-badge--license bsd 2clause" href="/ext/license#bsd2clause">BSD 2-Clause</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | xxhash哈希函数包 |
 | [`shacrypt`](/ext/e/shacrypt) | [`shacrypt`](https://github.com/dverite/postgres-shacrypt) | `1.1` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 实现SHA256-CRYPT与SHA512-CRYPT密钥加密算法 |
@@ -216,7 +219,7 @@ icon: fas fa-wrench
 
 ## pgproto {#pgproto}
 
-[**`pgproto`**](/ext/e/pgproto) - `0.2.1` : 原生 Protobuf 解析、修改、索引与 JSON 转换支持
+[**`pgproto`**](/ext/e/pgproto) - `0.2.4` : 原生 Protobuf 解析、修改、索引与 JSON 转换支持
 
 | **条目** | **属性** | **OS** | **x86_64** | **aarch64** |
 |:---:|:---|:---:|:---:|:---:|
@@ -448,6 +451,24 @@ icon: fas fa-wrench
 
 ---------
 
+## byteamagic {#byteamagic}
+
+[**`pg_byteamagic`**](/ext/e/byteamagic) - `0.2.4` : 从 PostgreSQL bytea 值检测 MIME 类型与文件格式
+
+| **条目** | **属性** | **OS** | **x86_64** | **aarch64** |
+|:---:|:---|:---:|:---:|:---:|
+| **扩展名** | [`byteamagic`](/ext/e/byteamagic) | **el8** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+| **扩展包** | [`pg_byteamagic`](https://github.com/nmandery/pg_byteamagic) | **el9** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+| **RPM** | `pg_byteamagic_$v` | **el10** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+| **DEB** | `postgresql-$v-pg-byteamagic` | **d12** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+| **语言** | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | **d13** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+| **仓库** | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | **u22** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+| **协议** | <a class="ext-badge ext-badge--license bsd 2clause" href="/ext/license#bsd2clause">BSD 2-Clause</a> | **u24** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+{.ext-table .ext-table--cate}
+
+
+---------
+
 ## floatfile {#floatfile}
 
 [**`floatfile`**](/ext/e/floatfile) - `1.3.1` : 将浮点数组存储到文件中而不是堆表中
@@ -461,6 +482,24 @@ icon: fas fa-wrench
 | **语言** | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | **d13** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
 | **仓库** | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | **u22** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
 | **协议** | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | **u24** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+{.ext-table .ext-table--cate}
+
+
+---------
+
+## external_file {#external_file}
+
+[**`external_file`**](/ext/e/external_file) - `1.2` : 通过 PostgreSQL 函数访问服务器端外部文件
+
+| **条目** | **属性** | **OS** | **x86_64** | **aarch64** |
+|:---:|:---|:---:|:---:|:---:|
+| **扩展名** | [`external_file`](/ext/e/external_file) | **el8** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+| **扩展包** | [`external_file`](https://github.com/darold/external_file) | **el9** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+| **RPM** | `external_file_$v` | **el10** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+| **DEB** | `postgresql-$v-external-file` | **d12** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+| **语言** | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> | **d13** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+| **仓库** | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | **u22** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+| **协议** | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | **u24** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
 {.ext-table .ext-table--cate}
 
 
@@ -522,7 +561,7 @@ icon: fas fa-wrench
 
 ## ddl_historization {#ddl_historization}
 
-[**`ddl_historization`**](/ext/e/ddl_historization) - `0.0.7` : 用SQL将所有DDL变更写入到数据库表中
+[**`ddl_historization`**](/ext/e/ddl_historization) - `0.2` : 用SQL将所有DDL变更写入到数据库表中
 
 | **条目** | **属性** | **OS** | **x86_64** | **aarch64** |
 |:---:|:---|:---:|:---:|:---:|
@@ -569,6 +608,24 @@ icon: fas fa-wrench
 | **语言** | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> | **d13** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
 | **仓库** | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | **u22** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
 | **协议** | <a class="ext-badge ext-badge--license gpl30" href="/ext/license#gpl30">GPL-3.0</a> | **u24** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+{.ext-table .ext-table--cate}
+
+
+---------
+
+## pg_isok {#pg_isok}
+
+[**`pg_isok`**](/ext/e/pg_isok) - `1.4.1` : 基于查询的数据完整性管理与软告警扩展
+
+| **条目** | **属性** | **OS** | **x86_64** | **aarch64** |
+|:---:|:---|:---:|:---:|:---:|
+| **扩展名** | [`pg_isok`](/ext/e/pg_isok) | **el8** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+| **扩展包** | [`pg_isok`](https://codeberg.org/kop/pg_isok) | **el9** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+| **RPM** | `pg_isok_$v` | **el10** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+| **DEB** | `postgresql-$v-pg-isok` | **d12** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+| **语言** | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> | **d13** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+| **仓库** | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | **u22** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+| **协议** | <a class="ext-badge ext-badge--license agpl30" href="/ext/license#agpl30">AGPL-3.0</a> | **u24** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
 {.ext-table .ext-table--cate}
 
 

@@ -2,7 +2,7 @@
 title: "pgsmcrypto"
 linkTitle: "pgsmcrypto"
 description: "为PostgreSQL提供商密算法支持：SM2,SM3,SM4"
-weight: 7060
+weight: 7080
 ---
 
 <div class="ext-cards">
@@ -30,7 +30,7 @@ weight: 7060
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
 |:-----:|:-------------------------------------------------------------------------|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|:----------|
-| 7060  | [**`pgsmcrypto`**](/ext/e/pgsmcrypto) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | - |
+| 7080  | [**`pgsmcrypto`**](/ext/e/pgsmcrypto) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | - |
 {.ext-table}
 
 | **相关扩展** | [`pgsodium`](/ext/e/pgsodium) [`pgcryptokey`](/ext/e/pgcryptokey) [`pgcrypto`](/ext/e/pgcrypto) [`pg_tde`](/ext/e/pg_tde) [`sslutils`](/ext/e/sslutils) [`faker`](/ext/e/faker) [`uuid-ossp`](/ext/e/uuid-ossp) [`lo`](/ext/e/lo) |

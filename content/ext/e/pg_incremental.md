@@ -11,10 +11,10 @@ weight: 2850
     <div class="ext-card__title">CrunchyData/pg_incremental</div>
     <div class="ext-card__desc">https://github.com/CrunchyData/pg_incremental</div>
   </a>
-  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pg_incremental-1.4.1.tar.gz">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pg_incremental-1.5.0.tar.gz">
     <div class="ext-card__kicker">源码</div>
-    <div class="ext-card__title">pg_incremental-1.4.1.tar.gz</div>
-    <div class="ext-card__desc">pg_incremental-1.4.1.tar.gz</div>
+    <div class="ext-card__title">pg_incremental-1.5.0.tar.gz</div>
+    <div class="ext-card__desc">pg_incremental-1.5.0.tar.gz</div>
   </a>
 </div>
 
@@ -25,7 +25,7 @@ weight: 2850
 
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
-| [**`pg_incremental`**](/ext/e/pg_incremental) | `1.4.1` | <a class="ext-badge ext-badge--cate feat" href="/ext/cate/feat">FEAT</a> | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
+| [**`pg_incremental`**](/ext/e/pg_incremental) | `1.5.0` | <a class="ext-badge ext-badge--cate feat" href="/ext/cate/feat">FEAT</a> | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
 {.ext-table}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
@@ -33,97 +33,100 @@ weight: 2850
 | 2850  | [**`pg_incremental`**](/ext/e/pg_incremental) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `pg_catalog` |
 {.ext-table}
 
-| **相关扩展** | [`pg_cron`](/ext/e/pg_cron) [`age`](/ext/e/age) [`hll`](/ext/e/hll) [`rum`](/ext/e/rum) [`pg_graphql`](/ext/e/pg_graphql) [`pg_jsonschema`](/ext/e/pg_jsonschema) [`jsquery`](/ext/e/jsquery) [`pg_hint_plan`](/ext/e/pg_hint_plan) |
+| **相关扩展** | [`age`](/ext/e/age) [`hll`](/ext/e/hll) [`rum`](/ext/e/rum) [`pg_graphql`](/ext/e/pg_graphql) [`pg_jsonschema`](/ext/e/pg_jsonschema) [`jsquery`](/ext/e/jsquery) [`pg_hint_plan`](/ext/e/pg_hint_plan) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
+
+
+> pg_cron is optional since v1.3 and only required for scheduled pipelines.
 
 
 ## 版本
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.4.1` | {{< pgvers "18,17,16" >}} | `pg_incremental` | `pg_cron` |
-| [**RPM**](/ext/rpm#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.4.1` | {{< pgvers "18,17,16" >}} | `pg_incremental_$v` | `pg_cron_$v` |
-| [**DEB**](/ext/deb#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.4.1` | {{< pgvers "18,17,16" >}} | `postgresql-$v-pg-incremental` | `postgresql-$v-cron` |
+| [**EXT**](/ext/list#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.5.0` | {{< pgvers "18,17,16" >}} | `pg_incremental` | - |
+| [**RPM**](/ext/rpm#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.5.0` | {{< pgvers "18,17,16" >}} | `pg_incremental_$v` | - |
+| [**DEB**](/ext/deb#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.5.0` | {{< pgvers "18,17,16" >}} | `postgresql-$v-pg-incremental` | - |
 {.ext-table}
 
 {{< pgext_matrix >}}
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 1.4.1 2 | AVAIL PIGSTY 1.4.1 2 | AVAIL PIGSTY 1.4.1 2 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| el8.aarch64 | AVAIL PIGSTY 1.4.1 2 | AVAIL PIGSTY 1.4.1 2 | AVAIL PIGSTY 1.4.1 2 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| el9.x86_64 | AVAIL PIGSTY 1.4.1 2 | AVAIL PIGSTY 1.4.1 2 | AVAIL PIGSTY 1.4.1 2 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| el9.aarch64 | AVAIL PIGSTY 1.4.1 2 | AVAIL PIGSTY 1.4.1 2 | AVAIL PIGSTY 1.4.1 2 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| el10.x86_64 | AVAIL PIGSTY 1.4.1 2 | AVAIL PIGSTY 1.4.1 2 | AVAIL PIGSTY 1.4.1 2 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| el10.aarch64 | AVAIL PIGSTY 1.4.1 2 | AVAIL PIGSTY 1.4.1 2 | AVAIL PIGSTY 1.4.1 2 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| d12.x86_64 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| d12.aarch64 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| d13.x86_64 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| d13.aarch64 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| u22.x86_64 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| u22.aarch64 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| u24.x86_64 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| u24.aarch64 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-@ el8.x86_64 18 pg_incremental_18 pg_incremental_18-1.4.1-1PIGSTY.el8.x86_64.rpm pigsty 1.4.1 31.6KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_incremental_18-1.4.1-1PIGSTY.el8.x86_64.rpm
+| el8.x86_64 | AVAIL PIGSTY 1.5.0 2 | AVAIL PIGSTY 1.5.0 2 | AVAIL PIGSTY 1.5.0 2 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| el8.aarch64 | AVAIL PIGSTY 1.5.0 2 | AVAIL PIGSTY 1.5.0 2 | AVAIL PIGSTY 1.5.0 2 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| el9.x86_64 | AVAIL PIGSTY 1.5.0 2 | AVAIL PIGSTY 1.5.0 2 | AVAIL PIGSTY 1.5.0 2 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| el9.aarch64 | AVAIL PIGSTY 1.5.0 2 | AVAIL PIGSTY 1.5.0 2 | AVAIL PIGSTY 1.5.0 2 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| el10.x86_64 | AVAIL PIGSTY 1.5.0 2 | AVAIL PIGSTY 1.5.0 2 | AVAIL PIGSTY 1.5.0 2 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| el10.aarch64 | AVAIL PIGSTY 1.5.0 2 | AVAIL PIGSTY 1.5.0 2 | AVAIL PIGSTY 1.5.0 2 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| d12.x86_64 | AVAIL PIGSTY 1.5.0 1 | AVAIL PIGSTY 1.5.0 1 | AVAIL PIGSTY 1.5.0 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| d12.aarch64 | AVAIL PIGSTY 1.5.0 1 | AVAIL PIGSTY 1.5.0 1 | AVAIL PIGSTY 1.5.0 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| d13.x86_64 | AVAIL PIGSTY 1.5.0 1 | AVAIL PIGSTY 1.5.0 1 | AVAIL PIGSTY 1.5.0 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| d13.aarch64 | AVAIL PIGSTY 1.5.0 1 | AVAIL PIGSTY 1.5.0 1 | AVAIL PIGSTY 1.5.0 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| u22.x86_64 | AVAIL PIGSTY 1.5.0 1 | AVAIL PIGSTY 1.5.0 1 | AVAIL PIGSTY 1.5.0 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| u22.aarch64 | AVAIL PIGSTY 1.5.0 1 | AVAIL PIGSTY 1.5.0 1 | AVAIL PIGSTY 1.5.0 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| u24.x86_64 | AVAIL PIGSTY 1.5.0 1 | AVAIL PIGSTY 1.5.0 1 | AVAIL PIGSTY 1.5.0 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| u24.aarch64 | AVAIL PIGSTY 1.5.0 1 | AVAIL PIGSTY 1.5.0 1 | AVAIL PIGSTY 1.5.0 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+@ el8.x86_64 18 pg_incremental_18 pg_incremental_18-1.5.0-1PIGSTY.el8.x86_64.rpm pigsty 1.5.0 33.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_incremental_18-1.5.0-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 18 pg_incremental_18 pg_incremental_18-1.0.0-1PGDG.rhel8.x86_64.rpm pgdg 1.0.0 26.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pg_incremental_18-1.0.0-1PGDG.rhel8.x86_64.rpm
-@ el8.aarch64 18 pg_incremental_18 pg_incremental_18-1.4.1-1PIGSTY.el8.aarch64.rpm pigsty 1.4.1 31.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_incremental_18-1.4.1-1PIGSTY.el8.aarch64.rpm
+@ el8.aarch64 18 pg_incremental_18 pg_incremental_18-1.5.0-1PIGSTY.el8.aarch64.rpm pigsty 1.5.0 33.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_incremental_18-1.5.0-1PIGSTY.el8.aarch64.rpm
 @ el8.aarch64 18 pg_incremental_18 pg_incremental_18-1.0.0-1PGDG.rhel8.aarch64.rpm pgdg 1.0.0 26.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pg_incremental_18-1.0.0-1PGDG.rhel8.aarch64.rpm
-@ el9.x86_64 18 pg_incremental_18 pg_incremental_18-1.4.1-1PIGSTY.el9.x86_64.rpm pigsty 1.4.1 30.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_incremental_18-1.4.1-1PIGSTY.el9.x86_64.rpm
+@ el9.x86_64 18 pg_incremental_18 pg_incremental_18-1.5.0-1PIGSTY.el9.x86_64.rpm pigsty 1.5.0 31.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_incremental_18-1.5.0-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 18 pg_incremental_18 pg_incremental_18-1.0.0-1PGDG.rhel9.x86_64.rpm pgdg 1.0.0 26.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pg_incremental_18-1.0.0-1PGDG.rhel9.x86_64.rpm
-@ el9.aarch64 18 pg_incremental_18 pg_incremental_18-1.4.1-1PIGSTY.el9.aarch64.rpm pigsty 1.4.1 29.8KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_incremental_18-1.4.1-1PIGSTY.el9.aarch64.rpm
+@ el9.aarch64 18 pg_incremental_18 pg_incremental_18-1.5.0-1PIGSTY.el9.aarch64.rpm pigsty 1.5.0 31.6KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_incremental_18-1.5.0-1PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 18 pg_incremental_18 pg_incremental_18-1.0.0-1PGDG.rhel9.aarch64.rpm pgdg 1.0.0 25.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pg_incremental_18-1.0.0-1PGDG.rhel9.aarch64.rpm
-@ el10.x86_64 18 pg_incremental_18 pg_incremental_18-1.4.1-1PIGSTY.el10.x86_64.rpm pigsty 1.4.1 30.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_incremental_18-1.4.1-1PIGSTY.el10.x86_64.rpm
+@ el10.x86_64 18 pg_incremental_18 pg_incremental_18-1.5.0-1PIGSTY.el10.x86_64.rpm pigsty 1.5.0 32.4KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_incremental_18-1.5.0-1PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 18 pg_incremental_18 pg_incremental_18-1.0.0-1PGDG.rhel10.x86_64.rpm pgdg 1.0.0 26.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pg_incremental_18-1.0.0-1PGDG.rhel10.x86_64.rpm
-@ el10.aarch64 18 pg_incremental_18 pg_incremental_18-1.4.1-1PIGSTY.el10.aarch64.rpm pigsty 1.4.1 30.1KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_incremental_18-1.4.1-1PIGSTY.el10.aarch64.rpm
+@ el10.aarch64 18 pg_incremental_18 pg_incremental_18-1.5.0-1PIGSTY.el10.aarch64.rpm pigsty 1.5.0 31.9KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_incremental_18-1.5.0-1PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 18 pg_incremental_18 pg_incremental_18-1.0.0-1PGDG.rhel10.aarch64.rpm pgdg 1.0.0 26.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_incremental_18-1.0.0-1PGDG.rhel10.aarch64.rpm
-@ d12.x86_64 18 postgresql-18-pg-incremental postgresql-18-pg-incremental_1.4.1-1PIGSTY~bookworm_amd64.deb pigsty 1.4.1 53.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-incremental/postgresql-18-pg-incremental_1.4.1-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 18 postgresql-18-pg-incremental postgresql-18-pg-incremental_1.4.1-1PIGSTY~bookworm_arm64.deb pigsty 1.4.1 52.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-incremental/postgresql-18-pg-incremental_1.4.1-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 18 postgresql-18-pg-incremental postgresql-18-pg-incremental_1.4.1-1PIGSTY~trixie_amd64.deb pigsty 1.4.1 53.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-incremental/postgresql-18-pg-incremental_1.4.1-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 18 postgresql-18-pg-incremental postgresql-18-pg-incremental_1.4.1-1PIGSTY~trixie_arm64.deb pigsty 1.4.1 52.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-incremental/postgresql-18-pg-incremental_1.4.1-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 18 postgresql-18-pg-incremental postgresql-18-pg-incremental_1.4.1-1PIGSTY~jammy_amd64.deb pigsty 1.4.1 55.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-incremental/postgresql-18-pg-incremental_1.4.1-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 18 postgresql-18-pg-incremental postgresql-18-pg-incremental_1.4.1-1PIGSTY~jammy_arm64.deb pigsty 1.4.1 54.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-incremental/postgresql-18-pg-incremental_1.4.1-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 18 postgresql-18-pg-incremental postgresql-18-pg-incremental_1.4.1-1PIGSTY~noble_amd64.deb pigsty 1.4.1 54.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-incremental/postgresql-18-pg-incremental_1.4.1-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 18 postgresql-18-pg-incremental postgresql-18-pg-incremental_1.4.1-1PIGSTY~noble_arm64.deb pigsty 1.4.1 53.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-incremental/postgresql-18-pg-incremental_1.4.1-1PIGSTY~noble_arm64.deb
-@ el8.x86_64 17 pg_incremental_17 pg_incremental_17-1.4.1-1PIGSTY.el8.x86_64.rpm pigsty 1.4.1 31.6KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_incremental_17-1.4.1-1PIGSTY.el8.x86_64.rpm
+@ d12.x86_64 18 postgresql-18-pg-incremental postgresql-18-pg-incremental_1.5.0-1PIGSTY~bookworm_amd64.deb pigsty 1.5.0 55.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-incremental/postgresql-18-pg-incremental_1.5.0-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 18 postgresql-18-pg-incremental postgresql-18-pg-incremental_1.5.0-1PIGSTY~bookworm_arm64.deb pigsty 1.5.0 54.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-incremental/postgresql-18-pg-incremental_1.5.0-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 18 postgresql-18-pg-incremental postgresql-18-pg-incremental_1.5.0-1PIGSTY~trixie_amd64.deb pigsty 1.5.0 55.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-incremental/postgresql-18-pg-incremental_1.5.0-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 18 postgresql-18-pg-incremental postgresql-18-pg-incremental_1.5.0-1PIGSTY~trixie_arm64.deb pigsty 1.5.0 54.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-incremental/postgresql-18-pg-incremental_1.5.0-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 18 postgresql-18-pg-incremental postgresql-18-pg-incremental_1.5.0-1PIGSTY~jammy_amd64.deb pigsty 1.5.0 57.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-incremental/postgresql-18-pg-incremental_1.5.0-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 18 postgresql-18-pg-incremental postgresql-18-pg-incremental_1.5.0-1PIGSTY~jammy_arm64.deb pigsty 1.5.0 56.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-incremental/postgresql-18-pg-incremental_1.5.0-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 18 postgresql-18-pg-incremental postgresql-18-pg-incremental_1.5.0-1PIGSTY~noble_amd64.deb pigsty 1.5.0 56.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-incremental/postgresql-18-pg-incremental_1.5.0-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 18 postgresql-18-pg-incremental postgresql-18-pg-incremental_1.5.0-1PIGSTY~noble_arm64.deb pigsty 1.5.0 55.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-incremental/postgresql-18-pg-incremental_1.5.0-1PIGSTY~noble_arm64.deb
+@ el8.x86_64 17 pg_incremental_17 pg_incremental_17-1.5.0-1PIGSTY.el8.x86_64.rpm pigsty 1.5.0 33.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_incremental_17-1.5.0-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 17 pg_incremental_17 pg_incremental_17-1.0.0-1PGDG.rhel8.x86_64.rpm pgdg 1.0.0 26.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pg_incremental_17-1.0.0-1PGDG.rhel8.x86_64.rpm
-@ el8.aarch64 17 pg_incremental_17 pg_incremental_17-1.4.1-1PIGSTY.el8.aarch64.rpm pigsty 1.4.1 31.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_incremental_17-1.4.1-1PIGSTY.el8.aarch64.rpm
+@ el8.aarch64 17 pg_incremental_17 pg_incremental_17-1.5.0-1PIGSTY.el8.aarch64.rpm pigsty 1.5.0 33.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_incremental_17-1.5.0-1PIGSTY.el8.aarch64.rpm
 @ el8.aarch64 17 pg_incremental_17 pg_incremental_17-1.0.0-1PGDG.rhel8.aarch64.rpm pgdg 1.0.0 26.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pg_incremental_17-1.0.0-1PGDG.rhel8.aarch64.rpm
-@ el9.x86_64 17 pg_incremental_17 pg_incremental_17-1.4.1-1PIGSTY.el9.x86_64.rpm pigsty 1.4.1 30.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_incremental_17-1.4.1-1PIGSTY.el9.x86_64.rpm
+@ el9.x86_64 17 pg_incremental_17 pg_incremental_17-1.5.0-1PIGSTY.el9.x86_64.rpm pigsty 1.5.0 31.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_incremental_17-1.5.0-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 17 pg_incremental_17 pg_incremental_17-1.0.0-1PGDG.rhel9.x86_64.rpm pgdg 1.0.0 26.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_incremental_17-1.0.0-1PGDG.rhel9.x86_64.rpm
-@ el9.aarch64 17 pg_incremental_17 pg_incremental_17-1.4.1-1PIGSTY.el9.aarch64.rpm pigsty 1.4.1 29.8KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_incremental_17-1.4.1-1PIGSTY.el9.aarch64.rpm
+@ el9.aarch64 17 pg_incremental_17 pg_incremental_17-1.5.0-1PIGSTY.el9.aarch64.rpm pigsty 1.5.0 31.6KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_incremental_17-1.5.0-1PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 17 pg_incremental_17 pg_incremental_17-1.0.0-1PGDG.rhel9.aarch64.rpm pgdg 1.0.0 25.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_incremental_17-1.0.0-1PGDG.rhel9.aarch64.rpm
-@ el10.x86_64 17 pg_incremental_17 pg_incremental_17-1.4.1-1PIGSTY.el10.x86_64.rpm pigsty 1.4.1 30.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_incremental_17-1.4.1-1PIGSTY.el10.x86_64.rpm
+@ el10.x86_64 17 pg_incremental_17 pg_incremental_17-1.5.0-1PIGSTY.el10.x86_64.rpm pigsty 1.5.0 32.4KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_incremental_17-1.5.0-1PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 17 pg_incremental_17 pg_incremental_17-1.0.0-1PGDG.rhel10.x86_64.rpm pgdg 1.0.0 26.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_incremental_17-1.0.0-1PGDG.rhel10.x86_64.rpm
-@ el10.aarch64 17 pg_incremental_17 pg_incremental_17-1.4.1-1PIGSTY.el10.aarch64.rpm pigsty 1.4.1 30.1KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_incremental_17-1.4.1-1PIGSTY.el10.aarch64.rpm
+@ el10.aarch64 17 pg_incremental_17 pg_incremental_17-1.5.0-1PIGSTY.el10.aarch64.rpm pigsty 1.5.0 31.8KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_incremental_17-1.5.0-1PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 17 pg_incremental_17 pg_incremental_17-1.0.0-1PGDG.rhel10.aarch64.rpm pgdg 1.0.0 26.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_incremental_17-1.0.0-1PGDG.rhel10.aarch64.rpm
-@ d12.x86_64 17 postgresql-17-pg-incremental postgresql-17-pg-incremental_1.4.1-1PIGSTY~bookworm_amd64.deb pigsty 1.4.1 53.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-incremental/postgresql-17-pg-incremental_1.4.1-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 17 postgresql-17-pg-incremental postgresql-17-pg-incremental_1.4.1-1PIGSTY~bookworm_arm64.deb pigsty 1.4.1 52.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-incremental/postgresql-17-pg-incremental_1.4.1-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 17 postgresql-17-pg-incremental postgresql-17-pg-incremental_1.4.1-1PIGSTY~trixie_amd64.deb pigsty 1.4.1 53.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-incremental/postgresql-17-pg-incremental_1.4.1-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 17 postgresql-17-pg-incremental postgresql-17-pg-incremental_1.4.1-1PIGSTY~trixie_arm64.deb pigsty 1.4.1 52.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-incremental/postgresql-17-pg-incremental_1.4.1-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 17 postgresql-17-pg-incremental postgresql-17-pg-incremental_1.4.1-1PIGSTY~jammy_amd64.deb pigsty 1.4.1 59.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-incremental/postgresql-17-pg-incremental_1.4.1-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 17 postgresql-17-pg-incremental postgresql-17-pg-incremental_1.4.1-1PIGSTY~jammy_arm64.deb pigsty 1.4.1 59.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-incremental/postgresql-17-pg-incremental_1.4.1-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 17 postgresql-17-pg-incremental postgresql-17-pg-incremental_1.4.1-1PIGSTY~noble_amd64.deb pigsty 1.4.1 54.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-incremental/postgresql-17-pg-incremental_1.4.1-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 17 postgresql-17-pg-incremental postgresql-17-pg-incremental_1.4.1-1PIGSTY~noble_arm64.deb pigsty 1.4.1 53.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-incremental/postgresql-17-pg-incremental_1.4.1-1PIGSTY~noble_arm64.deb
-@ el8.x86_64 16 pg_incremental_16 pg_incremental_16-1.4.1-1PIGSTY.el8.x86_64.rpm pigsty 1.4.1 31.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_incremental_16-1.4.1-1PIGSTY.el8.x86_64.rpm
+@ d12.x86_64 17 postgresql-17-pg-incremental postgresql-17-pg-incremental_1.5.0-1PIGSTY~bookworm_amd64.deb pigsty 1.5.0 55.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-incremental/postgresql-17-pg-incremental_1.5.0-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 17 postgresql-17-pg-incremental postgresql-17-pg-incremental_1.5.0-1PIGSTY~bookworm_arm64.deb pigsty 1.5.0 54.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-incremental/postgresql-17-pg-incremental_1.5.0-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 17 postgresql-17-pg-incremental postgresql-17-pg-incremental_1.5.0-1PIGSTY~trixie_amd64.deb pigsty 1.5.0 55.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-incremental/postgresql-17-pg-incremental_1.5.0-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 17 postgresql-17-pg-incremental postgresql-17-pg-incremental_1.5.0-1PIGSTY~trixie_arm64.deb pigsty 1.5.0 54.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-incremental/postgresql-17-pg-incremental_1.5.0-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 17 postgresql-17-pg-incremental postgresql-17-pg-incremental_1.5.0-1PIGSTY~jammy_amd64.deb pigsty 1.5.0 62.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-incremental/postgresql-17-pg-incremental_1.5.0-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 17 postgresql-17-pg-incremental postgresql-17-pg-incremental_1.5.0-1PIGSTY~jammy_arm64.deb pigsty 1.5.0 61.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-incremental/postgresql-17-pg-incremental_1.5.0-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 17 postgresql-17-pg-incremental postgresql-17-pg-incremental_1.5.0-1PIGSTY~noble_amd64.deb pigsty 1.5.0 56.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-incremental/postgresql-17-pg-incremental_1.5.0-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 17 postgresql-17-pg-incremental postgresql-17-pg-incremental_1.5.0-1PIGSTY~noble_arm64.deb pigsty 1.5.0 55.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-incremental/postgresql-17-pg-incremental_1.5.0-1PIGSTY~noble_arm64.deb
+@ el8.x86_64 16 pg_incremental_16 pg_incremental_16-1.5.0-1PIGSTY.el8.x86_64.rpm pigsty 1.5.0 33.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_incremental_16-1.5.0-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 16 pg_incremental_16 pg_incremental_16-1.0.0-1PGDG.rhel8.x86_64.rpm pgdg 1.0.0 26.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_incremental_16-1.0.0-1PGDG.rhel8.x86_64.rpm
-@ el8.aarch64 16 pg_incremental_16 pg_incremental_16-1.4.1-1PIGSTY.el8.aarch64.rpm pigsty 1.4.1 31.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_incremental_16-1.4.1-1PIGSTY.el8.aarch64.rpm
+@ el8.aarch64 16 pg_incremental_16 pg_incremental_16-1.5.0-1PIGSTY.el8.aarch64.rpm pigsty 1.5.0 33.1KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_incremental_16-1.5.0-1PIGSTY.el8.aarch64.rpm
 @ el8.aarch64 16 pg_incremental_16 pg_incremental_16-1.0.0-1PGDG.rhel8.aarch64.rpm pgdg 1.0.0 26.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pg_incremental_16-1.0.0-1PGDG.rhel8.aarch64.rpm
-@ el9.x86_64 16 pg_incremental_16 pg_incremental_16-1.4.1-1PIGSTY.el9.x86_64.rpm pigsty 1.4.1 30.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_incremental_16-1.4.1-1PIGSTY.el9.x86_64.rpm
+@ el9.x86_64 16 pg_incremental_16 pg_incremental_16-1.5.0-1PIGSTY.el9.x86_64.rpm pigsty 1.5.0 31.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_incremental_16-1.5.0-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 16 pg_incremental_16 pg_incremental_16-1.0.0-1PGDG.rhel9.x86_64.rpm pgdg 1.0.0 26.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_incremental_16-1.0.0-1PGDG.rhel9.x86_64.rpm
-@ el9.aarch64 16 pg_incremental_16 pg_incremental_16-1.4.1-1PIGSTY.el9.aarch64.rpm pigsty 1.4.1 29.8KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_incremental_16-1.4.1-1PIGSTY.el9.aarch64.rpm
+@ el9.aarch64 16 pg_incremental_16 pg_incremental_16-1.5.0-1PIGSTY.el9.aarch64.rpm pigsty 1.5.0 31.6KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_incremental_16-1.5.0-1PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 16 pg_incremental_16 pg_incremental_16-1.0.0-1PGDG.rhel9.aarch64.rpm pgdg 1.0.0 25.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_incremental_16-1.0.0-1PGDG.rhel9.aarch64.rpm
-@ el10.x86_64 16 pg_incremental_16 pg_incremental_16-1.4.1-1PIGSTY.el10.x86_64.rpm pigsty 1.4.1 30.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_incremental_16-1.4.1-1PIGSTY.el10.x86_64.rpm
+@ el10.x86_64 16 pg_incremental_16 pg_incremental_16-1.5.0-1PIGSTY.el10.x86_64.rpm pigsty 1.5.0 32.4KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_incremental_16-1.5.0-1PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 16 pg_incremental_16 pg_incremental_16-1.0.0-1PGDG.rhel10.x86_64.rpm pgdg 1.0.0 26.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_incremental_16-1.0.0-1PGDG.rhel10.x86_64.rpm
-@ el10.aarch64 16 pg_incremental_16 pg_incremental_16-1.4.1-1PIGSTY.el10.aarch64.rpm pigsty 1.4.1 30.1KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_incremental_16-1.4.1-1PIGSTY.el10.aarch64.rpm
+@ el10.aarch64 16 pg_incremental_16 pg_incremental_16-1.5.0-1PIGSTY.el10.aarch64.rpm pigsty 1.5.0 31.8KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_incremental_16-1.5.0-1PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 16 pg_incremental_16 pg_incremental_16-1.0.0-1PGDG.rhel10.aarch64.rpm pgdg 1.0.0 26.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_incremental_16-1.0.0-1PGDG.rhel10.aarch64.rpm
-@ d12.x86_64 16 postgresql-16-pg-incremental postgresql-16-pg-incremental_1.4.1-1PIGSTY~bookworm_amd64.deb pigsty 1.4.1 53.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-incremental/postgresql-16-pg-incremental_1.4.1-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 16 postgresql-16-pg-incremental postgresql-16-pg-incremental_1.4.1-1PIGSTY~bookworm_arm64.deb pigsty 1.4.1 52.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-incremental/postgresql-16-pg-incremental_1.4.1-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 16 postgresql-16-pg-incremental postgresql-16-pg-incremental_1.4.1-1PIGSTY~trixie_amd64.deb pigsty 1.4.1 53.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-incremental/postgresql-16-pg-incremental_1.4.1-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 16 postgresql-16-pg-incremental postgresql-16-pg-incremental_1.4.1-1PIGSTY~trixie_arm64.deb pigsty 1.4.1 52.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-incremental/postgresql-16-pg-incremental_1.4.1-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 16 postgresql-16-pg-incremental postgresql-16-pg-incremental_1.4.1-1PIGSTY~jammy_amd64.deb pigsty 1.4.1 59.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-incremental/postgresql-16-pg-incremental_1.4.1-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 16 postgresql-16-pg-incremental postgresql-16-pg-incremental_1.4.1-1PIGSTY~jammy_arm64.deb pigsty 1.4.1 59.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-incremental/postgresql-16-pg-incremental_1.4.1-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 16 postgresql-16-pg-incremental postgresql-16-pg-incremental_1.4.1-1PIGSTY~noble_amd64.deb pigsty 1.4.1 54.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-incremental/postgresql-16-pg-incremental_1.4.1-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 16 postgresql-16-pg-incremental postgresql-16-pg-incremental_1.4.1-1PIGSTY~noble_arm64.deb pigsty 1.4.1 53.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-incremental/postgresql-16-pg-incremental_1.4.1-1PIGSTY~noble_arm64.deb
+@ d12.x86_64 16 postgresql-16-pg-incremental postgresql-16-pg-incremental_1.5.0-1PIGSTY~bookworm_amd64.deb pigsty 1.5.0 55.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-incremental/postgresql-16-pg-incremental_1.5.0-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 16 postgresql-16-pg-incremental postgresql-16-pg-incremental_1.5.0-1PIGSTY~bookworm_arm64.deb pigsty 1.5.0 54.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-incremental/postgresql-16-pg-incremental_1.5.0-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 16 postgresql-16-pg-incremental postgresql-16-pg-incremental_1.5.0-1PIGSTY~trixie_amd64.deb pigsty 1.5.0 55.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-incremental/postgresql-16-pg-incremental_1.5.0-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 16 postgresql-16-pg-incremental postgresql-16-pg-incremental_1.5.0-1PIGSTY~trixie_arm64.deb pigsty 1.5.0 54.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-incremental/postgresql-16-pg-incremental_1.5.0-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 16 postgresql-16-pg-incremental postgresql-16-pg-incremental_1.5.0-1PIGSTY~jammy_amd64.deb pigsty 1.5.0 62.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-incremental/postgresql-16-pg-incremental_1.5.0-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 16 postgresql-16-pg-incremental postgresql-16-pg-incremental_1.5.0-1PIGSTY~jammy_arm64.deb pigsty 1.5.0 61.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-incremental/postgresql-16-pg-incremental_1.5.0-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 16 postgresql-16-pg-incremental postgresql-16-pg-incremental_1.5.0-1PIGSTY~noble_amd64.deb pigsty 1.5.0 56.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-incremental/postgresql-16-pg-incremental_1.5.0-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 16 postgresql-16-pg-incremental postgresql-16-pg-incremental_1.5.0-1PIGSTY~noble_arm64.deb pigsty 1.5.0 55.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-incremental/postgresql-16-pg-incremental_1.5.0-1PIGSTY~noble_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建
@@ -178,7 +181,7 @@ apt install -y postgresql-16-pg-incremental   # PG 16
 **创建扩展**：
 
 ```sql
-CREATE EXTENSION pg_incremental CASCADE;  -- 依赖: pg_cron
+CREATE EXTENSION pg_incremental;
 ```
 
 

@@ -11,10 +11,10 @@ weight: 4550
     <div class="ext-card__title">fernandoolle/pg_slug_gen</div>
     <div class="ext-card__desc">https://github.com/fernandoolle/pg_slug_gen</div>
   </a>
-  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pg_slug_gen-1.0.0.zip">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pg_slug_gen-1.0.0.tar.gz">
     <div class="ext-card__kicker">源码</div>
-    <div class="ext-card__title">pg_slug_gen-1.0.0.zip</div>
-    <div class="ext-card__desc">pg_slug_gen-1.0.0.zip</div>
+    <div class="ext-card__title">pg_slug_gen-1.0.0.tar.gz</div>
+    <div class="ext-card__desc">pg_slug_gen-1.0.0.tar.gz</div>
   </a>
 </div>
 
@@ -70,56 +70,56 @@ weight: 4550
 @ el9.aarch64 18 pg_slug_gen_18 pg_slug_gen_18-1.0.0-1PIGSTY.el9.aarch64.rpm pigsty 1.0.0 14.8KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_slug_gen_18-1.0.0-1PIGSTY.el9.aarch64.rpm
 @ el10.x86_64 18 pg_slug_gen_18 pg_slug_gen_18-1.0.0-1PIGSTY.el10.x86_64.rpm pigsty 1.0.0 14.5KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_slug_gen_18-1.0.0-1PIGSTY.el10.x86_64.rpm
 @ el10.aarch64 18 pg_slug_gen_18 pg_slug_gen_18-1.0.0-1PIGSTY.el10.aarch64.rpm pigsty 1.0.0 14.8KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_slug_gen_18-1.0.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 18 postgresql-18-pg-slug-gen postgresql-18-pg-slug-gen_1.0.0-1PIGSTY~bookworm_amd64.deb pigsty 1.0.0 12.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-slug-gen/postgresql-18-pg-slug-gen_1.0.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 18 postgresql-18-pg-slug-gen postgresql-18-pg-slug-gen_1.0.0-1PIGSTY~bookworm_arm64.deb pigsty 1.0.0 12.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-slug-gen/postgresql-18-pg-slug-gen_1.0.0-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 18 postgresql-18-pg-slug-gen postgresql-18-pg-slug-gen_1.0.0-1PIGSTY~trixie_amd64.deb pigsty 1.0.0 12.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-slug-gen/postgresql-18-pg-slug-gen_1.0.0-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 18 postgresql-18-pg-slug-gen postgresql-18-pg-slug-gen_1.0.0-1PIGSTY~trixie_arm64.deb pigsty 1.0.0 12.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-slug-gen/postgresql-18-pg-slug-gen_1.0.0-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 18 postgresql-18-pg-slug-gen postgresql-18-pg-slug-gen_1.0.0-1PIGSTY~jammy_amd64.deb pigsty 1.0.0 12.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-slug-gen/postgresql-18-pg-slug-gen_1.0.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 18 postgresql-18-pg-slug-gen postgresql-18-pg-slug-gen_1.0.0-1PIGSTY~jammy_arm64.deb pigsty 1.0.0 12.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-slug-gen/postgresql-18-pg-slug-gen_1.0.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 18 postgresql-18-pg-slug-gen postgresql-18-pg-slug-gen_1.0.0-1PIGSTY~noble_amd64.deb pigsty 1.0.0 12.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-slug-gen/postgresql-18-pg-slug-gen_1.0.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 18 postgresql-18-pg-slug-gen postgresql-18-pg-slug-gen_1.0.0-1PIGSTY~noble_arm64.deb pigsty 1.0.0 12.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-slug-gen/postgresql-18-pg-slug-gen_1.0.0-1PIGSTY~noble_arm64.deb
+@ d12.x86_64 18 postgresql-18-pg-slug-gen postgresql-18-pg-slug-gen_1.0.0-2PIGSTY~bookworm_amd64.deb pigsty 1.0.0 12.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-slug-gen/postgresql-18-pg-slug-gen_1.0.0-2PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 18 postgresql-18-pg-slug-gen postgresql-18-pg-slug-gen_1.0.0-2PIGSTY~bookworm_arm64.deb pigsty 1.0.0 12.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-slug-gen/postgresql-18-pg-slug-gen_1.0.0-2PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 18 postgresql-18-pg-slug-gen postgresql-18-pg-slug-gen_1.0.0-2PIGSTY~trixie_amd64.deb pigsty 1.0.0 12.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-slug-gen/postgresql-18-pg-slug-gen_1.0.0-2PIGSTY~trixie_amd64.deb
+@ d13.aarch64 18 postgresql-18-pg-slug-gen postgresql-18-pg-slug-gen_1.0.0-2PIGSTY~trixie_arm64.deb pigsty 1.0.0 12.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-slug-gen/postgresql-18-pg-slug-gen_1.0.0-2PIGSTY~trixie_arm64.deb
+@ u22.x86_64 18 postgresql-18-pg-slug-gen postgresql-18-pg-slug-gen_1.0.0-2PIGSTY~jammy_amd64.deb pigsty 1.0.0 12.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-slug-gen/postgresql-18-pg-slug-gen_1.0.0-2PIGSTY~jammy_amd64.deb
+@ u22.aarch64 18 postgresql-18-pg-slug-gen postgresql-18-pg-slug-gen_1.0.0-2PIGSTY~jammy_arm64.deb pigsty 1.0.0 12.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-slug-gen/postgresql-18-pg-slug-gen_1.0.0-2PIGSTY~jammy_arm64.deb
+@ u24.x86_64 18 postgresql-18-pg-slug-gen postgresql-18-pg-slug-gen_1.0.0-2PIGSTY~noble_amd64.deb pigsty 1.0.0 12.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-slug-gen/postgresql-18-pg-slug-gen_1.0.0-2PIGSTY~noble_amd64.deb
+@ u24.aarch64 18 postgresql-18-pg-slug-gen postgresql-18-pg-slug-gen_1.0.0-2PIGSTY~noble_arm64.deb pigsty 1.0.0 12.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-slug-gen/postgresql-18-pg-slug-gen_1.0.0-2PIGSTY~noble_arm64.deb
 @ el8.x86_64 17 pg_slug_gen_17 pg_slug_gen_17-1.0.0-1PIGSTY.el8.x86_64.rpm pigsty 1.0.0 14.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_slug_gen_17-1.0.0-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 17 pg_slug_gen_17 pg_slug_gen_17-1.0.0-1PIGSTY.el8.aarch64.rpm pigsty 1.0.0 14.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_slug_gen_17-1.0.0-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 17 pg_slug_gen_17 pg_slug_gen_17-1.0.0-1PIGSTY.el9.x86_64.rpm pigsty 1.0.0 14.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_slug_gen_17-1.0.0-1PIGSTY.el9.x86_64.rpm
 @ el9.aarch64 17 pg_slug_gen_17 pg_slug_gen_17-1.0.0-1PIGSTY.el9.aarch64.rpm pigsty 1.0.0 14.8KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_slug_gen_17-1.0.0-1PIGSTY.el9.aarch64.rpm
 @ el10.x86_64 17 pg_slug_gen_17 pg_slug_gen_17-1.0.0-1PIGSTY.el10.x86_64.rpm pigsty 1.0.0 14.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_slug_gen_17-1.0.0-1PIGSTY.el10.x86_64.rpm
 @ el10.aarch64 17 pg_slug_gen_17 pg_slug_gen_17-1.0.0-1PIGSTY.el10.aarch64.rpm pigsty 1.0.0 14.8KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_slug_gen_17-1.0.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 17 postgresql-17-pg-slug-gen postgresql-17-pg-slug-gen_1.0.0-1PIGSTY~bookworm_amd64.deb pigsty 1.0.0 12.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-slug-gen/postgresql-17-pg-slug-gen_1.0.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 17 postgresql-17-pg-slug-gen postgresql-17-pg-slug-gen_1.0.0-1PIGSTY~bookworm_arm64.deb pigsty 1.0.0 12.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-slug-gen/postgresql-17-pg-slug-gen_1.0.0-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 17 postgresql-17-pg-slug-gen postgresql-17-pg-slug-gen_1.0.0-1PIGSTY~trixie_amd64.deb pigsty 1.0.0 12.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-slug-gen/postgresql-17-pg-slug-gen_1.0.0-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 17 postgresql-17-pg-slug-gen postgresql-17-pg-slug-gen_1.0.0-1PIGSTY~trixie_arm64.deb pigsty 1.0.0 12.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-slug-gen/postgresql-17-pg-slug-gen_1.0.0-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 17 postgresql-17-pg-slug-gen postgresql-17-pg-slug-gen_1.0.0-1PIGSTY~jammy_amd64.deb pigsty 1.0.0 12.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-slug-gen/postgresql-17-pg-slug-gen_1.0.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 17 postgresql-17-pg-slug-gen postgresql-17-pg-slug-gen_1.0.0-1PIGSTY~jammy_arm64.deb pigsty 1.0.0 12.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-slug-gen/postgresql-17-pg-slug-gen_1.0.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 17 postgresql-17-pg-slug-gen postgresql-17-pg-slug-gen_1.0.0-1PIGSTY~noble_amd64.deb pigsty 1.0.0 12.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-slug-gen/postgresql-17-pg-slug-gen_1.0.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 17 postgresql-17-pg-slug-gen postgresql-17-pg-slug-gen_1.0.0-1PIGSTY~noble_arm64.deb pigsty 1.0.0 12.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-slug-gen/postgresql-17-pg-slug-gen_1.0.0-1PIGSTY~noble_arm64.deb
+@ d12.x86_64 17 postgresql-17-pg-slug-gen postgresql-17-pg-slug-gen_1.0.0-2PIGSTY~bookworm_amd64.deb pigsty 1.0.0 12.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-slug-gen/postgresql-17-pg-slug-gen_1.0.0-2PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 17 postgresql-17-pg-slug-gen postgresql-17-pg-slug-gen_1.0.0-2PIGSTY~bookworm_arm64.deb pigsty 1.0.0 12.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-slug-gen/postgresql-17-pg-slug-gen_1.0.0-2PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 17 postgresql-17-pg-slug-gen postgresql-17-pg-slug-gen_1.0.0-2PIGSTY~trixie_amd64.deb pigsty 1.0.0 12.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-slug-gen/postgresql-17-pg-slug-gen_1.0.0-2PIGSTY~trixie_amd64.deb
+@ d13.aarch64 17 postgresql-17-pg-slug-gen postgresql-17-pg-slug-gen_1.0.0-2PIGSTY~trixie_arm64.deb pigsty 1.0.0 12.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-slug-gen/postgresql-17-pg-slug-gen_1.0.0-2PIGSTY~trixie_arm64.deb
+@ u22.x86_64 17 postgresql-17-pg-slug-gen postgresql-17-pg-slug-gen_1.0.0-2PIGSTY~jammy_amd64.deb pigsty 1.0.0 12.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-slug-gen/postgresql-17-pg-slug-gen_1.0.0-2PIGSTY~jammy_amd64.deb
+@ u22.aarch64 17 postgresql-17-pg-slug-gen postgresql-17-pg-slug-gen_1.0.0-2PIGSTY~jammy_arm64.deb pigsty 1.0.0 12.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-slug-gen/postgresql-17-pg-slug-gen_1.0.0-2PIGSTY~jammy_arm64.deb
+@ u24.x86_64 17 postgresql-17-pg-slug-gen postgresql-17-pg-slug-gen_1.0.0-2PIGSTY~noble_amd64.deb pigsty 1.0.0 12.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-slug-gen/postgresql-17-pg-slug-gen_1.0.0-2PIGSTY~noble_amd64.deb
+@ u24.aarch64 17 postgresql-17-pg-slug-gen postgresql-17-pg-slug-gen_1.0.0-2PIGSTY~noble_arm64.deb pigsty 1.0.0 12.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-slug-gen/postgresql-17-pg-slug-gen_1.0.0-2PIGSTY~noble_arm64.deb
 @ el8.x86_64 16 pg_slug_gen_16 pg_slug_gen_16-1.0.0-1PIGSTY.el8.x86_64.rpm pigsty 1.0.0 14.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_slug_gen_16-1.0.0-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 16 pg_slug_gen_16 pg_slug_gen_16-1.0.0-1PIGSTY.el8.aarch64.rpm pigsty 1.0.0 14.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_slug_gen_16-1.0.0-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 16 pg_slug_gen_16 pg_slug_gen_16-1.0.0-1PIGSTY.el9.x86_64.rpm pigsty 1.0.0 14.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_slug_gen_16-1.0.0-1PIGSTY.el9.x86_64.rpm
 @ el9.aarch64 16 pg_slug_gen_16 pg_slug_gen_16-1.0.0-1PIGSTY.el9.aarch64.rpm pigsty 1.0.0 14.8KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_slug_gen_16-1.0.0-1PIGSTY.el9.aarch64.rpm
 @ el10.x86_64 16 pg_slug_gen_16 pg_slug_gen_16-1.0.0-1PIGSTY.el10.x86_64.rpm pigsty 1.0.0 14.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_slug_gen_16-1.0.0-1PIGSTY.el10.x86_64.rpm
 @ el10.aarch64 16 pg_slug_gen_16 pg_slug_gen_16-1.0.0-1PIGSTY.el10.aarch64.rpm pigsty 1.0.0 14.8KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_slug_gen_16-1.0.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 16 postgresql-16-pg-slug-gen postgresql-16-pg-slug-gen_1.0.0-1PIGSTY~bookworm_amd64.deb pigsty 1.0.0 12.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-slug-gen/postgresql-16-pg-slug-gen_1.0.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 16 postgresql-16-pg-slug-gen postgresql-16-pg-slug-gen_1.0.0-1PIGSTY~bookworm_arm64.deb pigsty 1.0.0 12.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-slug-gen/postgresql-16-pg-slug-gen_1.0.0-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 16 postgresql-16-pg-slug-gen postgresql-16-pg-slug-gen_1.0.0-1PIGSTY~trixie_amd64.deb pigsty 1.0.0 12.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-slug-gen/postgresql-16-pg-slug-gen_1.0.0-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 16 postgresql-16-pg-slug-gen postgresql-16-pg-slug-gen_1.0.0-1PIGSTY~trixie_arm64.deb pigsty 1.0.0 12.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-slug-gen/postgresql-16-pg-slug-gen_1.0.0-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 16 postgresql-16-pg-slug-gen postgresql-16-pg-slug-gen_1.0.0-1PIGSTY~jammy_amd64.deb pigsty 1.0.0 12.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-slug-gen/postgresql-16-pg-slug-gen_1.0.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 16 postgresql-16-pg-slug-gen postgresql-16-pg-slug-gen_1.0.0-1PIGSTY~jammy_arm64.deb pigsty 1.0.0 12.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-slug-gen/postgresql-16-pg-slug-gen_1.0.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 16 postgresql-16-pg-slug-gen postgresql-16-pg-slug-gen_1.0.0-1PIGSTY~noble_amd64.deb pigsty 1.0.0 12.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-slug-gen/postgresql-16-pg-slug-gen_1.0.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 16 postgresql-16-pg-slug-gen postgresql-16-pg-slug-gen_1.0.0-1PIGSTY~noble_arm64.deb pigsty 1.0.0 12.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-slug-gen/postgresql-16-pg-slug-gen_1.0.0-1PIGSTY~noble_arm64.deb
+@ d12.x86_64 16 postgresql-16-pg-slug-gen postgresql-16-pg-slug-gen_1.0.0-2PIGSTY~bookworm_amd64.deb pigsty 1.0.0 12.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-slug-gen/postgresql-16-pg-slug-gen_1.0.0-2PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 16 postgresql-16-pg-slug-gen postgresql-16-pg-slug-gen_1.0.0-2PIGSTY~bookworm_arm64.deb pigsty 1.0.0 12.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-slug-gen/postgresql-16-pg-slug-gen_1.0.0-2PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 16 postgresql-16-pg-slug-gen postgresql-16-pg-slug-gen_1.0.0-2PIGSTY~trixie_amd64.deb pigsty 1.0.0 12.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-slug-gen/postgresql-16-pg-slug-gen_1.0.0-2PIGSTY~trixie_amd64.deb
+@ d13.aarch64 16 postgresql-16-pg-slug-gen postgresql-16-pg-slug-gen_1.0.0-2PIGSTY~trixie_arm64.deb pigsty 1.0.0 12.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-slug-gen/postgresql-16-pg-slug-gen_1.0.0-2PIGSTY~trixie_arm64.deb
+@ u22.x86_64 16 postgresql-16-pg-slug-gen postgresql-16-pg-slug-gen_1.0.0-2PIGSTY~jammy_amd64.deb pigsty 1.0.0 12.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-slug-gen/postgresql-16-pg-slug-gen_1.0.0-2PIGSTY~jammy_amd64.deb
+@ u22.aarch64 16 postgresql-16-pg-slug-gen postgresql-16-pg-slug-gen_1.0.0-2PIGSTY~jammy_arm64.deb pigsty 1.0.0 12.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-slug-gen/postgresql-16-pg-slug-gen_1.0.0-2PIGSTY~jammy_arm64.deb
+@ u24.x86_64 16 postgresql-16-pg-slug-gen postgresql-16-pg-slug-gen_1.0.0-2PIGSTY~noble_amd64.deb pigsty 1.0.0 12.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-slug-gen/postgresql-16-pg-slug-gen_1.0.0-2PIGSTY~noble_amd64.deb
+@ u24.aarch64 16 postgresql-16-pg-slug-gen postgresql-16-pg-slug-gen_1.0.0-2PIGSTY~noble_arm64.deb pigsty 1.0.0 12.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-slug-gen/postgresql-16-pg-slug-gen_1.0.0-2PIGSTY~noble_arm64.deb
 @ el8.x86_64 15 pg_slug_gen_15 pg_slug_gen_15-1.0.0-1PIGSTY.el8.x86_64.rpm pigsty 1.0.0 14.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_slug_gen_15-1.0.0-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 15 pg_slug_gen_15 pg_slug_gen_15-1.0.0-1PIGSTY.el8.aarch64.rpm pigsty 1.0.0 14.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_slug_gen_15-1.0.0-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 15 pg_slug_gen_15 pg_slug_gen_15-1.0.0-1PIGSTY.el9.x86_64.rpm pigsty 1.0.0 14.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_slug_gen_15-1.0.0-1PIGSTY.el9.x86_64.rpm
 @ el9.aarch64 15 pg_slug_gen_15 pg_slug_gen_15-1.0.0-1PIGSTY.el9.aarch64.rpm pigsty 1.0.0 14.8KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_slug_gen_15-1.0.0-1PIGSTY.el9.aarch64.rpm
 @ el10.x86_64 15 pg_slug_gen_15 pg_slug_gen_15-1.0.0-1PIGSTY.el10.x86_64.rpm pigsty 1.0.0 14.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_slug_gen_15-1.0.0-1PIGSTY.el10.x86_64.rpm
 @ el10.aarch64 15 pg_slug_gen_15 pg_slug_gen_15-1.0.0-1PIGSTY.el10.aarch64.rpm pigsty 1.0.0 14.8KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_slug_gen_15-1.0.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 15 postgresql-15-pg-slug-gen postgresql-15-pg-slug-gen_1.0.0-1PIGSTY~bookworm_amd64.deb pigsty 1.0.0 12.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-slug-gen/postgresql-15-pg-slug-gen_1.0.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 15 postgresql-15-pg-slug-gen postgresql-15-pg-slug-gen_1.0.0-1PIGSTY~bookworm_arm64.deb pigsty 1.0.0 12.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-slug-gen/postgresql-15-pg-slug-gen_1.0.0-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 15 postgresql-15-pg-slug-gen postgresql-15-pg-slug-gen_1.0.0-1PIGSTY~trixie_amd64.deb pigsty 1.0.0 12.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-slug-gen/postgresql-15-pg-slug-gen_1.0.0-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 15 postgresql-15-pg-slug-gen postgresql-15-pg-slug-gen_1.0.0-1PIGSTY~trixie_arm64.deb pigsty 1.0.0 11.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-slug-gen/postgresql-15-pg-slug-gen_1.0.0-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 15 postgresql-15-pg-slug-gen postgresql-15-pg-slug-gen_1.0.0-1PIGSTY~jammy_amd64.deb pigsty 1.0.0 12.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-slug-gen/postgresql-15-pg-slug-gen_1.0.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 15 postgresql-15-pg-slug-gen postgresql-15-pg-slug-gen_1.0.0-1PIGSTY~jammy_arm64.deb pigsty 1.0.0 12.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-slug-gen/postgresql-15-pg-slug-gen_1.0.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 15 postgresql-15-pg-slug-gen postgresql-15-pg-slug-gen_1.0.0-1PIGSTY~noble_amd64.deb pigsty 1.0.0 12.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-slug-gen/postgresql-15-pg-slug-gen_1.0.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 15 postgresql-15-pg-slug-gen postgresql-15-pg-slug-gen_1.0.0-1PIGSTY~noble_arm64.deb pigsty 1.0.0 12.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-slug-gen/postgresql-15-pg-slug-gen_1.0.0-1PIGSTY~noble_arm64.deb
+@ d12.x86_64 15 postgresql-15-pg-slug-gen postgresql-15-pg-slug-gen_1.0.0-2PIGSTY~bookworm_amd64.deb pigsty 1.0.0 12.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-slug-gen/postgresql-15-pg-slug-gen_1.0.0-2PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 15 postgresql-15-pg-slug-gen postgresql-15-pg-slug-gen_1.0.0-2PIGSTY~bookworm_arm64.deb pigsty 1.0.0 12.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-slug-gen/postgresql-15-pg-slug-gen_1.0.0-2PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 15 postgresql-15-pg-slug-gen postgresql-15-pg-slug-gen_1.0.0-2PIGSTY~trixie_amd64.deb pigsty 1.0.0 12.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-slug-gen/postgresql-15-pg-slug-gen_1.0.0-2PIGSTY~trixie_amd64.deb
+@ d13.aarch64 15 postgresql-15-pg-slug-gen postgresql-15-pg-slug-gen_1.0.0-2PIGSTY~trixie_arm64.deb pigsty 1.0.0 12.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-slug-gen/postgresql-15-pg-slug-gen_1.0.0-2PIGSTY~trixie_arm64.deb
+@ u22.x86_64 15 postgresql-15-pg-slug-gen postgresql-15-pg-slug-gen_1.0.0-2PIGSTY~jammy_amd64.deb pigsty 1.0.0 12.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-slug-gen/postgresql-15-pg-slug-gen_1.0.0-2PIGSTY~jammy_amd64.deb
+@ u22.aarch64 15 postgresql-15-pg-slug-gen postgresql-15-pg-slug-gen_1.0.0-2PIGSTY~jammy_arm64.deb pigsty 1.0.0 12.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-slug-gen/postgresql-15-pg-slug-gen_1.0.0-2PIGSTY~jammy_arm64.deb
+@ u24.x86_64 15 postgresql-15-pg-slug-gen postgresql-15-pg-slug-gen_1.0.0-2PIGSTY~noble_amd64.deb pigsty 1.0.0 12.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-slug-gen/postgresql-15-pg-slug-gen_1.0.0-2PIGSTY~noble_amd64.deb
+@ u24.aarch64 15 postgresql-15-pg-slug-gen postgresql-15-pg-slug-gen_1.0.0-2PIGSTY~noble_arm64.deb pigsty 1.0.0 12.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-slug-gen/postgresql-15-pg-slug-gen_1.0.0-2PIGSTY~noble_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建

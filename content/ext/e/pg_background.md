@@ -38,6 +38,9 @@ weight: 1110
 {.ext-table .ext-table--rel}
 
 
+> Release tag 1.9.2 still ships extension SQL version 1.9.
+
+
 ## 版本
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
@@ -56,14 +59,14 @@ weight: 1110
 | el9.aarch64 | AVAIL PIGSTY 1.9.2 5 | AVAIL PIGSTY 1.9.2 6 | AVAIL PIGSTY 1.9.2 6 | AVAIL PIGSTY 1.9.2 7 | AVAIL PIGSTY 1.9.2 6 |
 | el10.x86_64 | AVAIL PIGSTY 1.9.2 5 | AVAIL PIGSTY 1.9.2 5 | AVAIL PIGSTY 1.9.2 5 | AVAIL PIGSTY 1.9.2 5 | AVAIL PIGSTY 1.9.2 5 |
 | el10.aarch64 | AVAIL PIGSTY 1.9.2 5 | AVAIL PIGSTY 1.9.2 5 | AVAIL PIGSTY 1.9.2 5 | AVAIL PIGSTY 1.9.2 5 | AVAIL PIGSTY 1.9.2 5 |
-| d12.x86_64 | AVAIL PIGSTY 1.9.2 1 | AVAIL PIGSTY 1.9.2 1 | AVAIL PIGSTY 1.9.2 1 | AVAIL PIGSTY 1.9.2 1 | AVAIL PIGSTY 1.9.2 1 |
-| d12.aarch64 | AVAIL PIGSTY 1.9.2 1 | AVAIL PIGSTY 1.9.2 1 | AVAIL PIGSTY 1.9.2 1 | AVAIL PIGSTY 1.9.2 1 | AVAIL PIGSTY 1.9.2 1 |
-| d13.x86_64 | AVAIL PIGSTY 1.9.2 1 | AVAIL PIGSTY 1.9.2 1 | AVAIL PIGSTY 1.9.2 1 | AVAIL PIGSTY 1.9.2 1 | AVAIL PIGSTY 1.9.2 1 |
-| d13.aarch64 | AVAIL PIGSTY 1.9.2 1 | AVAIL PIGSTY 1.9.2 1 | AVAIL PIGSTY 1.9.2 1 | AVAIL PIGSTY 1.9.2 1 | AVAIL PIGSTY 1.9.2 1 |
-| u22.x86_64 | AVAIL PIGSTY 1.9.2 1 | AVAIL PIGSTY 1.9.2 1 | AVAIL PIGSTY 1.9.2 1 | AVAIL PIGSTY 1.9.2 1 | AVAIL PIGSTY 1.9.2 1 |
-| u22.aarch64 | AVAIL PIGSTY 1.9.2 1 | AVAIL PIGSTY 1.9.2 1 | AVAIL PIGSTY 1.9.2 1 | AVAIL PIGSTY 1.9.2 1 | AVAIL PIGSTY 1.9.2 1 |
-| u24.x86_64 | AVAIL PIGSTY 1.9.2 1 | AVAIL PIGSTY 1.9.2 1 | AVAIL PIGSTY 1.9.2 1 | AVAIL PIGSTY 1.9.2 1 | AVAIL PIGSTY 1.9.2 1 |
-| u24.aarch64 | AVAIL PIGSTY 1.9.2 1 | AVAIL PIGSTY 1.9.2 1 | AVAIL PIGSTY 1.9.2 1 | AVAIL PIGSTY 1.9.2 1 | AVAIL PIGSTY 1.9.2 1 |
+| d12.x86_64 | AVAIL PIGSTY 1.9.2 2 | AVAIL PIGSTY 1.9.2 2 | AVAIL PIGSTY 1.9.2 2 | AVAIL PIGSTY 1.9.2 2 | AVAIL PIGSTY 1.9.2 2 |
+| d12.aarch64 | AVAIL PIGSTY 1.9.2 2 | AVAIL PIGSTY 1.9.2 2 | AVAIL PIGSTY 1.9.2 2 | AVAIL PIGSTY 1.9.2 2 | AVAIL PIGSTY 1.9.2 2 |
+| d13.x86_64 | AVAIL PIGSTY 1.9.2 2 | AVAIL PIGSTY 1.9.2 2 | AVAIL PIGSTY 1.9.2 2 | AVAIL PIGSTY 1.9.2 2 | AVAIL PIGSTY 1.9.2 2 |
+| d13.aarch64 | AVAIL PIGSTY 1.9.2 2 | AVAIL PIGSTY 1.9.2 2 | AVAIL PIGSTY 1.9.2 2 | AVAIL PIGSTY 1.9.2 2 | AVAIL PIGSTY 1.9.2 2 |
+| u22.x86_64 | AVAIL PIGSTY 1.9.2 2 | AVAIL PIGSTY 1.9.2 2 | AVAIL PIGSTY 1.9.2 2 | AVAIL PIGSTY 1.9.2 2 | AVAIL PIGSTY 1.9.2 2 |
+| u22.aarch64 | AVAIL PIGSTY 1.9.2 2 | AVAIL PIGSTY 1.9.2 2 | AVAIL PIGSTY 1.9.2 2 | AVAIL PIGSTY 1.9.2 2 | AVAIL PIGSTY 1.9.2 2 |
+| u24.x86_64 | AVAIL PIGSTY 1.9.2 2 | AVAIL PIGSTY 1.9.2 2 | AVAIL PIGSTY 1.9.2 2 | AVAIL PIGSTY 1.9.2 2 | AVAIL PIGSTY 1.9.2 2 |
+| u24.aarch64 | AVAIL PIGSTY 1.9.2 2 | AVAIL PIGSTY 1.9.2 2 | AVAIL PIGSTY 1.9.2 2 | AVAIL PIGSTY 1.9.2 2 | AVAIL PIGSTY 1.9.2 2 |
 @ el8.x86_64 18 pg_background_18 pg_background_18-1.9.2-1PIGSTY.el8.x86_64.rpm pigsty 1.9.2 56.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_background_18-1.9.2-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 18 pg_background_18 pg_background_18-1.9.1-1PGDG.rhel8.10.x86_64.rpm pgdg 1.9.1 55.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pg_background_18-1.9.1-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 18 pg_background_18 pg_background_18-1.6-1PGDG.rhel8.10.x86_64.rpm pgdg 1.6 41.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pg_background_18-1.6-1PGDG.rhel8.10.x86_64.rpm
@@ -94,13 +97,21 @@ weight: 1110
 @ el10.aarch64 18 pg_background_18 pg_background_18-1.6-1PGDG.rhel10.1.aarch64.rpm pgdg 1.6 40.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_background_18-1.6-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 18 pg_background_18 pg_background_18-1.5-1PGDG.rhel10.aarch64.rpm pgdg 1.5 22.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_background_18-1.5-1PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 18 postgresql-18-pg-background postgresql-18-pg-background_1.9.2-1PIGSTY~bookworm_amd64.deb pigsty 1.9.2 89.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-background/postgresql-18-pg-background_1.9.2-1PIGSTY~bookworm_amd64.deb
+@ d12.x86_64 18 postgresql-18-pg-background postgresql-18-pg-background_1.9.1-1.pgdg12+1_amd64.deb pgdg 1.9.1 58.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-background/postgresql-18-pg-background_1.9.1-1.pgdg12+1_amd64.deb
 @ d12.aarch64 18 postgresql-18-pg-background postgresql-18-pg-background_1.9.2-1PIGSTY~bookworm_arm64.deb pigsty 1.9.2 87.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-background/postgresql-18-pg-background_1.9.2-1PIGSTY~bookworm_arm64.deb
+@ d12.aarch64 18 postgresql-18-pg-background postgresql-18-pg-background_1.9.1-1.pgdg12+1_arm64.deb pgdg 1.9.1 56.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-background/postgresql-18-pg-background_1.9.1-1.pgdg12+1_arm64.deb
 @ d13.x86_64 18 postgresql-18-pg-background postgresql-18-pg-background_1.9.2-1PIGSTY~trixie_amd64.deb pigsty 1.9.2 89.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-background/postgresql-18-pg-background_1.9.2-1PIGSTY~trixie_amd64.deb
+@ d13.x86_64 18 postgresql-18-pg-background postgresql-18-pg-background_1.9.1-1.pgdg13+1_amd64.deb pgdg 1.9.1 58.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-background/postgresql-18-pg-background_1.9.1-1.pgdg13+1_amd64.deb
 @ d13.aarch64 18 postgresql-18-pg-background postgresql-18-pg-background_1.9.2-1PIGSTY~trixie_arm64.deb pigsty 1.9.2 87.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-background/postgresql-18-pg-background_1.9.2-1PIGSTY~trixie_arm64.deb
+@ d13.aarch64 18 postgresql-18-pg-background postgresql-18-pg-background_1.9.1-1.pgdg13+1_arm64.deb pgdg 1.9.1 57.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-background/postgresql-18-pg-background_1.9.1-1.pgdg13+1_arm64.deb
 @ u22.x86_64 18 postgresql-18-pg-background postgresql-18-pg-background_1.9.2-1PIGSTY~jammy_amd64.deb pigsty 1.9.2 94.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-background/postgresql-18-pg-background_1.9.2-1PIGSTY~jammy_amd64.deb
+@ u22.x86_64 18 postgresql-18-pg-background postgresql-18-pg-background_1.9.1-1.pgdg22.04+1_amd64.deb pgdg 1.9.1 59.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-background/postgresql-18-pg-background_1.9.1-1.pgdg22.04+1_amd64.deb
 @ u22.aarch64 18 postgresql-18-pg-background postgresql-18-pg-background_1.9.2-1PIGSTY~jammy_arm64.deb pigsty 1.9.2 93.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-background/postgresql-18-pg-background_1.9.2-1PIGSTY~jammy_arm64.deb
+@ u22.aarch64 18 postgresql-18-pg-background postgresql-18-pg-background_1.9.1-1.pgdg22.04+1_arm64.deb pgdg 1.9.1 58.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-background/postgresql-18-pg-background_1.9.1-1.pgdg22.04+1_arm64.deb
 @ u24.x86_64 18 postgresql-18-pg-background postgresql-18-pg-background_1.9.2-1PIGSTY~noble_amd64.deb pigsty 1.9.2 92.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-background/postgresql-18-pg-background_1.9.2-1PIGSTY~noble_amd64.deb
+@ u24.x86_64 18 postgresql-18-pg-background postgresql-18-pg-background_1.9.1-1.pgdg24.04+1_amd64.deb pgdg 1.9.1 58.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-background/postgresql-18-pg-background_1.9.1-1.pgdg24.04+1_amd64.deb
 @ u24.aarch64 18 postgresql-18-pg-background postgresql-18-pg-background_1.9.2-1PIGSTY~noble_arm64.deb pigsty 1.9.2 91.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-background/postgresql-18-pg-background_1.9.2-1PIGSTY~noble_arm64.deb
+@ u24.aarch64 18 postgresql-18-pg-background postgresql-18-pg-background_1.9.1-1.pgdg24.04+1_arm64.deb pgdg 1.9.1 57.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-background/postgresql-18-pg-background_1.9.1-1.pgdg24.04+1_arm64.deb
 @ el8.x86_64 17 pg_background_17 pg_background_17-1.9.2-1PIGSTY.el8.x86_64.rpm pigsty 1.9.2 56.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_background_17-1.9.2-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 17 pg_background_17 pg_background_17-1.9.1-1PGDG.rhel8.10.x86_64.rpm pgdg 1.9.1 55.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pg_background_17-1.9.1-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 pg_background_17 pg_background_17-1.6-1PGDG.rhel8.10.x86_64.rpm pgdg 1.6 41.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pg_background_17-1.6-1PGDG.rhel8.10.x86_64.rpm
@@ -135,13 +146,21 @@ weight: 1110
 @ el10.aarch64 17 pg_background_17 pg_background_17-1.6-1PGDG.rhel10.1.aarch64.rpm pgdg 1.6 40.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_background_17-1.6-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 17 pg_background_17 pg_background_17-1.3-3PGDG.rhel10.aarch64.rpm pgdg 1.3 22.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_background_17-1.3-3PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 17 postgresql-17-pg-background postgresql-17-pg-background_1.9.2-1PIGSTY~bookworm_amd64.deb pigsty 1.9.2 89.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-background/postgresql-17-pg-background_1.9.2-1PIGSTY~bookworm_amd64.deb
+@ d12.x86_64 17 postgresql-17-pg-background postgresql-17-pg-background_1.9.1-1.pgdg12+1_amd64.deb pgdg 1.9.1 58.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-background/postgresql-17-pg-background_1.9.1-1.pgdg12+1_amd64.deb
 @ d12.aarch64 17 postgresql-17-pg-background postgresql-17-pg-background_1.9.2-1PIGSTY~bookworm_arm64.deb pigsty 1.9.2 87.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-background/postgresql-17-pg-background_1.9.2-1PIGSTY~bookworm_arm64.deb
+@ d12.aarch64 17 postgresql-17-pg-background postgresql-17-pg-background_1.9.1-1.pgdg12+1_arm64.deb pgdg 1.9.1 56.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-background/postgresql-17-pg-background_1.9.1-1.pgdg12+1_arm64.deb
 @ d13.x86_64 17 postgresql-17-pg-background postgresql-17-pg-background_1.9.2-1PIGSTY~trixie_amd64.deb pigsty 1.9.2 89.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-background/postgresql-17-pg-background_1.9.2-1PIGSTY~trixie_amd64.deb
+@ d13.x86_64 17 postgresql-17-pg-background postgresql-17-pg-background_1.9.1-1.pgdg13+1_amd64.deb pgdg 1.9.1 58.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-background/postgresql-17-pg-background_1.9.1-1.pgdg13+1_amd64.deb
 @ d13.aarch64 17 postgresql-17-pg-background postgresql-17-pg-background_1.9.2-1PIGSTY~trixie_arm64.deb pigsty 1.9.2 87.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-background/postgresql-17-pg-background_1.9.2-1PIGSTY~trixie_arm64.deb
+@ d13.aarch64 17 postgresql-17-pg-background postgresql-17-pg-background_1.9.1-1.pgdg13+1_arm64.deb pgdg 1.9.1 57.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-background/postgresql-17-pg-background_1.9.1-1.pgdg13+1_arm64.deb
 @ u22.x86_64 17 postgresql-17-pg-background postgresql-17-pg-background_1.9.2-1PIGSTY~jammy_amd64.deb pigsty 1.9.2 100.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-background/postgresql-17-pg-background_1.9.2-1PIGSTY~jammy_amd64.deb
+@ u22.x86_64 17 postgresql-17-pg-background postgresql-17-pg-background_1.9.1-1.pgdg22.04+1_amd64.deb pgdg 1.9.1 64.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-background/postgresql-17-pg-background_1.9.1-1.pgdg22.04+1_amd64.deb
 @ u22.aarch64 17 postgresql-17-pg-background postgresql-17-pg-background_1.9.2-1PIGSTY~jammy_arm64.deb pigsty 1.9.2 98.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-background/postgresql-17-pg-background_1.9.2-1PIGSTY~jammy_arm64.deb
+@ u22.aarch64 17 postgresql-17-pg-background postgresql-17-pg-background_1.9.1-1.pgdg22.04+1_arm64.deb pgdg 1.9.1 62.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-background/postgresql-17-pg-background_1.9.1-1.pgdg22.04+1_arm64.deb
 @ u24.x86_64 17 postgresql-17-pg-background postgresql-17-pg-background_1.9.2-1PIGSTY~noble_amd64.deb pigsty 1.9.2 92.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-background/postgresql-17-pg-background_1.9.2-1PIGSTY~noble_amd64.deb
+@ u24.x86_64 17 postgresql-17-pg-background postgresql-17-pg-background_1.9.1-1.pgdg24.04+1_amd64.deb pgdg 1.9.1 58.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-background/postgresql-17-pg-background_1.9.1-1.pgdg24.04+1_amd64.deb
 @ u24.aarch64 17 postgresql-17-pg-background postgresql-17-pg-background_1.9.2-1PIGSTY~noble_arm64.deb pigsty 1.9.2 91.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-background/postgresql-17-pg-background_1.9.2-1PIGSTY~noble_arm64.deb
+@ u24.aarch64 17 postgresql-17-pg-background postgresql-17-pg-background_1.9.1-1.pgdg24.04+1_arm64.deb pgdg 1.9.1 57.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-background/postgresql-17-pg-background_1.9.1-1.pgdg24.04+1_arm64.deb
 @ el8.x86_64 16 pg_background_16 pg_background_16-1.9.2-1PIGSTY.el8.x86_64.rpm pigsty 1.9.2 56.2KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_background_16-1.9.2-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 16 pg_background_16 pg_background_16-1.9.1-1PGDG.rhel8.10.x86_64.rpm pgdg 1.9.1 55.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_background_16-1.9.1-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 pg_background_16 pg_background_16-1.6-1PGDG.rhel8.10.x86_64.rpm pgdg 1.6 41.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_background_16-1.6-1PGDG.rhel8.10.x86_64.rpm
@@ -176,13 +195,21 @@ weight: 1110
 @ el10.aarch64 16 pg_background_16 pg_background_16-1.6-1PGDG.rhel10.1.aarch64.rpm pgdg 1.6 40.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_background_16-1.6-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 16 pg_background_16 pg_background_16-1.3-3PGDG.rhel10.aarch64.rpm pgdg 1.3 22.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_background_16-1.3-3PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 16 postgresql-16-pg-background postgresql-16-pg-background_1.9.2-1PIGSTY~bookworm_amd64.deb pigsty 1.9.2 89.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-background/postgresql-16-pg-background_1.9.2-1PIGSTY~bookworm_amd64.deb
+@ d12.x86_64 16 postgresql-16-pg-background postgresql-16-pg-background_1.9.1-1.pgdg12+1_amd64.deb pgdg 1.9.1 58.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-background/postgresql-16-pg-background_1.9.1-1.pgdg12+1_amd64.deb
 @ d12.aarch64 16 postgresql-16-pg-background postgresql-16-pg-background_1.9.2-1PIGSTY~bookworm_arm64.deb pigsty 1.9.2 87.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-background/postgresql-16-pg-background_1.9.2-1PIGSTY~bookworm_arm64.deb
+@ d12.aarch64 16 postgresql-16-pg-background postgresql-16-pg-background_1.9.1-1.pgdg12+1_arm64.deb pgdg 1.9.1 56.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-background/postgresql-16-pg-background_1.9.1-1.pgdg12+1_arm64.deb
 @ d13.x86_64 16 postgresql-16-pg-background postgresql-16-pg-background_1.9.2-1PIGSTY~trixie_amd64.deb pigsty 1.9.2 89.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-background/postgresql-16-pg-background_1.9.2-1PIGSTY~trixie_amd64.deb
+@ d13.x86_64 16 postgresql-16-pg-background postgresql-16-pg-background_1.9.1-1.pgdg13+1_amd64.deb pgdg 1.9.1 58.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-background/postgresql-16-pg-background_1.9.1-1.pgdg13+1_amd64.deb
 @ d13.aarch64 16 postgresql-16-pg-background postgresql-16-pg-background_1.9.2-1PIGSTY~trixie_arm64.deb pigsty 1.9.2 87.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-background/postgresql-16-pg-background_1.9.2-1PIGSTY~trixie_arm64.deb
+@ d13.aarch64 16 postgresql-16-pg-background postgresql-16-pg-background_1.9.1-1.pgdg13+1_arm64.deb pgdg 1.9.1 57.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-background/postgresql-16-pg-background_1.9.1-1.pgdg13+1_arm64.deb
 @ u22.x86_64 16 postgresql-16-pg-background postgresql-16-pg-background_1.9.2-1PIGSTY~jammy_amd64.deb pigsty 1.9.2 100.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-background/postgresql-16-pg-background_1.9.2-1PIGSTY~jammy_amd64.deb
+@ u22.x86_64 16 postgresql-16-pg-background postgresql-16-pg-background_1.9.1-1.pgdg22.04+1_amd64.deb pgdg 1.9.1 64.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-background/postgresql-16-pg-background_1.9.1-1.pgdg22.04+1_amd64.deb
 @ u22.aarch64 16 postgresql-16-pg-background postgresql-16-pg-background_1.9.2-1PIGSTY~jammy_arm64.deb pigsty 1.9.2 98.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-background/postgresql-16-pg-background_1.9.2-1PIGSTY~jammy_arm64.deb
+@ u22.aarch64 16 postgresql-16-pg-background postgresql-16-pg-background_1.9.1-1.pgdg22.04+1_arm64.deb pgdg 1.9.1 62.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-background/postgresql-16-pg-background_1.9.1-1.pgdg22.04+1_arm64.deb
 @ u24.x86_64 16 postgresql-16-pg-background postgresql-16-pg-background_1.9.2-1PIGSTY~noble_amd64.deb pigsty 1.9.2 91.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-background/postgresql-16-pg-background_1.9.2-1PIGSTY~noble_amd64.deb
+@ u24.x86_64 16 postgresql-16-pg-background postgresql-16-pg-background_1.9.1-1.pgdg24.04+1_amd64.deb pgdg 1.9.1 58.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-background/postgresql-16-pg-background_1.9.1-1.pgdg24.04+1_amd64.deb
 @ u24.aarch64 16 postgresql-16-pg-background postgresql-16-pg-background_1.9.2-1PIGSTY~noble_arm64.deb pigsty 1.9.2 91.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-background/postgresql-16-pg-background_1.9.2-1PIGSTY~noble_arm64.deb
+@ u24.aarch64 16 postgresql-16-pg-background postgresql-16-pg-background_1.9.1-1.pgdg24.04+1_arm64.deb pgdg 1.9.1 57.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-background/postgresql-16-pg-background_1.9.1-1.pgdg24.04+1_arm64.deb
 @ el8.x86_64 15 pg_background_15 pg_background_15-1.9.2-1PIGSTY.el8.x86_64.rpm pigsty 1.9.2 56.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_background_15-1.9.2-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 15 pg_background_15 pg_background_15-1.9.1-1PGDG.rhel8.10.x86_64.rpm pgdg 1.9.1 55.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_background_15-1.9.1-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 pg_background_15 pg_background_15-1.6-1PGDG.rhel8.10.x86_64.rpm pgdg 1.6 41.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_background_15-1.6-1PGDG.rhel8.10.x86_64.rpm
@@ -221,13 +248,21 @@ weight: 1110
 @ el10.aarch64 15 pg_background_15 pg_background_15-1.6-1PGDG.rhel10.1.aarch64.rpm pgdg 1.6 40.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_background_15-1.6-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 15 pg_background_15 pg_background_15-1.3-3PGDG.rhel10.aarch64.rpm pgdg 1.3 22.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_background_15-1.3-3PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 15 postgresql-15-pg-background postgresql-15-pg-background_1.9.2-1PIGSTY~bookworm_amd64.deb pigsty 1.9.2 89.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-background/postgresql-15-pg-background_1.9.2-1PIGSTY~bookworm_amd64.deb
+@ d12.x86_64 15 postgresql-15-pg-background postgresql-15-pg-background_1.9.1-1.pgdg12+1_amd64.deb pgdg 1.9.1 58.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-background/postgresql-15-pg-background_1.9.1-1.pgdg12+1_amd64.deb
 @ d12.aarch64 15 postgresql-15-pg-background postgresql-15-pg-background_1.9.2-1PIGSTY~bookworm_arm64.deb pigsty 1.9.2 87.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-background/postgresql-15-pg-background_1.9.2-1PIGSTY~bookworm_arm64.deb
+@ d12.aarch64 15 postgresql-15-pg-background postgresql-15-pg-background_1.9.1-1.pgdg12+1_arm64.deb pgdg 1.9.1 56.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-background/postgresql-15-pg-background_1.9.1-1.pgdg12+1_arm64.deb
 @ d13.x86_64 15 postgresql-15-pg-background postgresql-15-pg-background_1.9.2-1PIGSTY~trixie_amd64.deb pigsty 1.9.2 89.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-background/postgresql-15-pg-background_1.9.2-1PIGSTY~trixie_amd64.deb
+@ d13.x86_64 15 postgresql-15-pg-background postgresql-15-pg-background_1.9.1-1.pgdg13+1_amd64.deb pgdg 1.9.1 58.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-background/postgresql-15-pg-background_1.9.1-1.pgdg13+1_amd64.deb
 @ d13.aarch64 15 postgresql-15-pg-background postgresql-15-pg-background_1.9.2-1PIGSTY~trixie_arm64.deb pigsty 1.9.2 87.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-background/postgresql-15-pg-background_1.9.2-1PIGSTY~trixie_arm64.deb
+@ d13.aarch64 15 postgresql-15-pg-background postgresql-15-pg-background_1.9.1-1.pgdg13+1_arm64.deb pgdg 1.9.1 57.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-background/postgresql-15-pg-background_1.9.1-1.pgdg13+1_arm64.deb
 @ u22.x86_64 15 postgresql-15-pg-background postgresql-15-pg-background_1.9.2-1PIGSTY~jammy_amd64.deb pigsty 1.9.2 100.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-background/postgresql-15-pg-background_1.9.2-1PIGSTY~jammy_amd64.deb
+@ u22.x86_64 15 postgresql-15-pg-background postgresql-15-pg-background_1.9.1-1.pgdg22.04+1_amd64.deb pgdg 1.9.1 64.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-background/postgresql-15-pg-background_1.9.1-1.pgdg22.04+1_amd64.deb
 @ u22.aarch64 15 postgresql-15-pg-background postgresql-15-pg-background_1.9.2-1PIGSTY~jammy_arm64.deb pigsty 1.9.2 98.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-background/postgresql-15-pg-background_1.9.2-1PIGSTY~jammy_arm64.deb
+@ u22.aarch64 15 postgresql-15-pg-background postgresql-15-pg-background_1.9.1-1.pgdg22.04+1_arm64.deb pgdg 1.9.1 62.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-background/postgresql-15-pg-background_1.9.1-1.pgdg22.04+1_arm64.deb
 @ u24.x86_64 15 postgresql-15-pg-background postgresql-15-pg-background_1.9.2-1PIGSTY~noble_amd64.deb pigsty 1.9.2 91.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-background/postgresql-15-pg-background_1.9.2-1PIGSTY~noble_amd64.deb
+@ u24.x86_64 15 postgresql-15-pg-background postgresql-15-pg-background_1.9.1-1.pgdg24.04+1_amd64.deb pgdg 1.9.1 58.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-background/postgresql-15-pg-background_1.9.1-1.pgdg24.04+1_amd64.deb
 @ u24.aarch64 15 postgresql-15-pg-background postgresql-15-pg-background_1.9.2-1PIGSTY~noble_arm64.deb pigsty 1.9.2 91.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-background/postgresql-15-pg-background_1.9.2-1PIGSTY~noble_arm64.deb
+@ u24.aarch64 15 postgresql-15-pg-background postgresql-15-pg-background_1.9.1-1.pgdg24.04+1_arm64.deb pgdg 1.9.1 57.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-background/postgresql-15-pg-background_1.9.1-1.pgdg24.04+1_arm64.deb
 @ el8.x86_64 14 pg_background_14 pg_background_14-1.9.2-1PIGSTY.el8.x86_64.rpm pigsty 1.9.2 56.2KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_background_14-1.9.2-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 14 pg_background_14 pg_background_14-1.9.1-1PGDG.rhel8.10.x86_64.rpm pgdg 1.9.1 55.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_background_14-1.9.1-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 14 pg_background_14 pg_background_14-1.6-1PGDG.rhel8.10.x86_64.rpm pgdg 1.6 41.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_background_14-1.6-1PGDG.rhel8.10.x86_64.rpm
@@ -262,13 +297,21 @@ weight: 1110
 @ el10.aarch64 14 pg_background_14 pg_background_14-1.6-1PGDG.rhel10.1.aarch64.rpm pgdg 1.6 40.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_background_14-1.6-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 14 pg_background_14 pg_background_14-1.3-3PGDG.rhel10.aarch64.rpm pgdg 1.3 22.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_background_14-1.3-3PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 14 postgresql-14-pg-background postgresql-14-pg-background_1.9.2-1PIGSTY~bookworm_amd64.deb pigsty 1.9.2 88.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-background/postgresql-14-pg-background_1.9.2-1PIGSTY~bookworm_amd64.deb
+@ d12.x86_64 14 postgresql-14-pg-background postgresql-14-pg-background_1.9.1-1.pgdg12+1_amd64.deb pgdg 1.9.1 83.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-background/postgresql-14-pg-background_1.9.1-1.pgdg12+1_amd64.deb
 @ d12.aarch64 14 postgresql-14-pg-background postgresql-14-pg-background_1.9.2-1PIGSTY~bookworm_arm64.deb pigsty 1.9.2 87.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-background/postgresql-14-pg-background_1.9.2-1PIGSTY~bookworm_arm64.deb
+@ d12.aarch64 14 postgresql-14-pg-background postgresql-14-pg-background_1.9.1-1.pgdg12+1_arm64.deb pgdg 1.9.1 81.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-background/postgresql-14-pg-background_1.9.1-1.pgdg12+1_arm64.deb
 @ d13.x86_64 14 postgresql-14-pg-background postgresql-14-pg-background_1.9.2-1PIGSTY~trixie_amd64.deb pigsty 1.9.2 89.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-background/postgresql-14-pg-background_1.9.2-1PIGSTY~trixie_amd64.deb
+@ d13.x86_64 14 postgresql-14-pg-background postgresql-14-pg-background_1.9.1-1.pgdg13+1_amd64.deb pgdg 1.9.1 83.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-background/postgresql-14-pg-background_1.9.1-1.pgdg13+1_amd64.deb
 @ d13.aarch64 14 postgresql-14-pg-background postgresql-14-pg-background_1.9.2-1PIGSTY~trixie_arm64.deb pigsty 1.9.2 87.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-background/postgresql-14-pg-background_1.9.2-1PIGSTY~trixie_arm64.deb
+@ d13.aarch64 14 postgresql-14-pg-background postgresql-14-pg-background_1.9.1-1.pgdg13+1_arm64.deb pgdg 1.9.1 82.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-background/postgresql-14-pg-background_1.9.1-1.pgdg13+1_arm64.deb
 @ u22.x86_64 14 postgresql-14-pg-background postgresql-14-pg-background_1.9.2-1PIGSTY~jammy_amd64.deb pigsty 1.9.2 100.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-background/postgresql-14-pg-background_1.9.2-1PIGSTY~jammy_amd64.deb
+@ u22.x86_64 14 postgresql-14-pg-background postgresql-14-pg-background_1.9.1-1.pgdg22.04+1_amd64.deb pgdg 1.9.1 89.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-background/postgresql-14-pg-background_1.9.1-1.pgdg22.04+1_amd64.deb
 @ u22.aarch64 14 postgresql-14-pg-background postgresql-14-pg-background_1.9.2-1PIGSTY~jammy_arm64.deb pigsty 1.9.2 98.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-background/postgresql-14-pg-background_1.9.2-1PIGSTY~jammy_arm64.deb
+@ u22.aarch64 14 postgresql-14-pg-background postgresql-14-pg-background_1.9.1-1.pgdg22.04+1_arm64.deb pgdg 1.9.1 87.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-background/postgresql-14-pg-background_1.9.1-1.pgdg22.04+1_arm64.deb
 @ u24.x86_64 14 postgresql-14-pg-background postgresql-14-pg-background_1.9.2-1PIGSTY~noble_amd64.deb pigsty 1.9.2 91.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-background/postgresql-14-pg-background_1.9.2-1PIGSTY~noble_amd64.deb
+@ u24.x86_64 14 postgresql-14-pg-background postgresql-14-pg-background_1.9.1-1.pgdg24.04+1_amd64.deb pgdg 1.9.1 83.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-background/postgresql-14-pg-background_1.9.1-1.pgdg24.04+1_amd64.deb
 @ u24.aarch64 14 postgresql-14-pg-background postgresql-14-pg-background_1.9.2-1PIGSTY~noble_arm64.deb pigsty 1.9.2 90.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-background/postgresql-14-pg-background_1.9.2-1PIGSTY~noble_arm64.deb
+@ u24.aarch64 14 postgresql-14-pg-background postgresql-14-pg-background_1.9.1-1.pgdg24.04+1_arm64.deb pgdg 1.9.1 81.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-background/postgresql-14-pg-background_1.9.1-1.pgdg24.04+1_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建

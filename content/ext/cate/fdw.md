@@ -12,7 +12,7 @@ icon: fas fa-file-import
 
 | **扩展** | **包** | **版本** | **许可证** | **语言** | **描述** |
 |:---------|:-------|:--------:|:----------:|:--------:|:---------|
-| [`wrappers`](/ext/e/wrappers) | [`wrappers`](https://github.com/supabase/wrappers) | `0.5.7` | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | Supabase提供的外部数据源包装器捆绑包 |
+| [`wrappers`](/ext/e/wrappers) | [`wrappers`](https://github.com/supabase/wrappers) | `0.6.0` | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | Supabase提供的外部数据源包装器捆绑包 |
 | [`multicorn`](/ext/e/multicorn) | [`multicorn`](https://github.com/pgsql-io/multicorn2) | `3.2` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 用Python编写自定义的外部数据源包装器 |
 | [`odbc_fdw`](/ext/e/odbc_fdw) | [`odbc_fdw`](https://github.com/CartoDB/odbc_fdw) | `0.5.1` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 访问ODBC可访问的任何外部数据源 |
 | [`jdbc_fdw`](/ext/e/jdbc_fdw) | [`jdbc_fdw`](https://github.com/pgspider/jdbc_fdw) | `0.4.0` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 访问JDBC可访问的任何外部数据源 |
@@ -45,7 +45,7 @@ icon: fas fa-file-import
 
 ## wrappers {#wrappers}
 
-[**`wrappers`**](/ext/e/wrappers) - `0.5.7` : Supabase提供的外部数据源包装器捆绑包
+[**`wrappers`**](/ext/e/wrappers) - `0.6.0` : Supabase提供的外部数据源包装器捆绑包
 
 | **条目** | **属性** | **OS** | **x86_64** | **aarch64** |
 |:---:|:---|:---:|:---:|:---:|

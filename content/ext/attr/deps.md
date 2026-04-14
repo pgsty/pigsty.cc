@@ -5,11 +5,11 @@ description: "具有扩展依赖关系的 PostgreSQL 扩展"
 weight: 30
 ---
 
-共有 **97** 个扩展依赖其他扩展，**58** 个扩展被其他扩展所依赖。
+共有 **105** 个扩展依赖其他扩展，**58** 个扩展被其他扩展所依赖。
 
 ## 上游依赖
 
-以下 **97** 个扩展需要先安装其他扩展才能使用：
+以下 **105** 个扩展需要先安装其他扩展才能使用：
 
 | **扩展名** | **上游依赖** | **描述** |
 |:-----------|:-------------|:---------|
@@ -28,6 +28,13 @@ weight: 30
 | [`h3_postgis`](/ext/e/h3_postgis) | [`h3`](/ext/e/h3) [`postgis`](/ext/e/postgis) [`postgis_raster`](/ext/e/postgis_raster) | H3与PostGIS集成的扩展插件 |
 | [`geoip`](/ext/e/geoip) | [`ip4r`](/ext/e/ip4r) | IP 地理位置扩展（围绕 MaxMind GeoLite 数据集的包装器） |
 | [`pg_eviltransform`](/ext/e/pg_eviltransform) | [`postgis`](/ext/e/postgis) | 基于PostGIS ST_Transform 的 BD09/GCJ02 坐标转换扩展 |
+| [`pghydro`](/ext/e/pghydro) | [`plpgsql`](/ext/e/plpgsql) [`postgis`](/ext/e/postgis) | PostgreSQL/PostGIS 排水网络分析核心扩展 |
+| [`pgh_raster`](/ext/e/pgh_raster) | [`plpgsql`](/ext/e/plpgsql) [`postgis`](/ext/e/postgis) [`postgis_raster`](/ext/e/postgis_raster) [`pghydro`](/ext/e/pghydro) | PgHydro 栅格水文分析扩展 |
+| [`pgh_hgm`](/ext/e/pgh_hgm) | [`plpgsql`](/ext/e/plpgsql) [`postgis`](/ext/e/postgis) [`postgis_raster`](/ext/e/postgis_raster) [`pghydro`](/ext/e/pghydro) [`pgh_raster`](/ext/e/pgh_raster) | PgHydro 水文地貌分析扩展 |
+| [`pgh_output`](/ext/e/pgh_output) | [`plpgsql`](/ext/e/plpgsql) [`postgis`](/ext/e/postgis) [`pghydro`](/ext/e/pghydro) | PgHydro 输出与报表扩展 |
+| [`pgh_output_en_au`](/ext/e/pgh_output_en_au) | [`plpgsql`](/ext/e/plpgsql) [`postgis`](/ext/e/postgis) [`pghydro`](/ext/e/pghydro) | PgHydro 澳式英语输出扩展 |
+| [`pgh_output_pt_br`](/ext/e/pgh_output_pt_br) | [`plpgsql`](/ext/e/plpgsql) [`postgis`](/ext/e/postgis) [`pghydro`](/ext/e/pghydro) | PgHydro 巴西葡语输出扩展 |
+| [`pgh_consistency`](/ext/e/pgh_consistency) | [`plpgsql`](/ext/e/plpgsql) [`postgis`](/ext/e/postgis) [`pghydro`](/ext/e/pghydro) | PgHydro Pfafstetter 一致性检查扩展 |
 | [`mobilitydb`](/ext/e/mobilitydb) | [`postgis`](/ext/e/postgis) | MobilityDB地理空间投影数据管理分析平台 |
 | [`mobilitydb_datagen`](/ext/e/mobilitydb_datagen) | [`mobilitydb`](/ext/e/mobilitydb) | MobilityDB随机数据生成函数 |
 | [`earthdistance`](/ext/e/earthdistance) | [`cube`](/ext/e/cube) | 计算地球表面上的大圆距离 |
@@ -39,8 +46,8 @@ weight: 30
 | [`pg_mooncake`](/ext/e/pg_mooncake) | [`pg_duckdb`](/ext/e/pg_duckdb) | PostgreSQL列式存储表 |
 | [`pg_partman`](/ext/e/pg_partman) | [`plpgsql`](/ext/e/plpgsql) | 用于按时间或 ID 管理分区表的扩展 |
 | [`index_advisor`](/ext/e/index_advisor) | [`hypopg`](/ext/e/hypopg) | 查询索引建议器 |
-| [`pg_incremental`](/ext/e/pg_incremental) | [`pg_cron`](/ext/e/pg_cron) | 增量处理流式事件 |
 | [`pgmb`](/ext/e/pgmb) | [`pg_cron`](/ext/e/pg_cron) [`http`](/ext/e/http) | 一个简单的PostgreSQL消息代理系统 |
+| [`provsql`](/ext/e/provsql) | [`uuid-ossp`](/ext/e/uuid-ossp) | PostgreSQL 半环溯源与不确定性管理扩展 |
 | [`omni_auth`](/ext/e/omni_auth) | [`omni_types`](/ext/e/omni_types) [`omni_id`](/ext/e/omni_id) [`pgcrypto`](/ext/e/pgcrypto) [`btree_gist`](/ext/e/btree_gist) [`omni_polyfill`](/ext/e/omni_polyfill) | Omnigres 基础会话认证管理模块 |
 | [`omni_aws`](/ext/e/omni_aws) | [`omni_httpc`](/ext/e/omni_httpc) [`pgcrypto`](/ext/e/pgcrypto) [`omni_xml`](/ext/e/omni_xml) [`omni_web`](/ext/e/omni_web) | Omnigres AWS S3 API封装 |
 | [`omni_cloudevents`](/ext/e/omni_cloudevents) | [`omni_web`](/ext/e/omni_web) | Omnigres CloudEvents 支持 |
@@ -95,6 +102,7 @@ weight: 30
 | [`pg_stat_kcache`](/ext/e/pg_stat_kcache) | [`pg_stat_statements`](/ext/e/pg_stat_statements) | 内核统计信息收集 |
 | [`pg_sqlog`](/ext/e/pg_sqlog) | [`file_fdw`](/ext/e/file_fdw) | 提供访问PostgreSQL日志的SQL接口 |
 | [`powa`](/ext/e/powa) | [`plpgsql`](/ext/e/plpgsql) [`pg_stat_statements`](/ext/e/pg_stat_statements) [`btree_gist`](/ext/e/btree_gist) | PostgreSQL 工作负载分析器-核心 |
+| [`column_encrypt`](/ext/e/column_encrypt) | [`pgcrypto`](/ext/e/pgcrypto) | 透明列级加密扩展，提供 encrypted_text 与 encrypted_bytea 类型 |
 | [`supabase_vault`](/ext/e/supabase_vault) | [`pgsodium`](/ext/e/pgsodium) | 在 Vault 中存储加密凭证的扩展 (supabase) |
 | [`pg_auditor`](/ext/e/pg_auditor) | [`hstore`](/ext/e/hstore) | 审计数据变更并提供闪回能力 |
 | [`pg_jobmon`](/ext/e/pg_jobmon) | [`dblink`](/ext/e/dblink) | 记录和监控函数 |

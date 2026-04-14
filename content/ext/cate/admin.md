@@ -8,18 +8,19 @@ icon: fas fa-bank
 
 ## 扩展列表
 
-共有 **41** 个扩展，位于 **39** 个扩展包中。
+共有 **42** 个扩展，位于 **40** 个扩展包中。
 
 | **扩展** | **包** | **版本** | **许可证** | **语言** | **描述** |
 |:---------|:-------|:--------:|:----------:|:--------:|:---------|
 | [`pg_repack`](/ext/e/pg_repack) | [`pg_repack`](https://github.com/reorg/pg_repack) | `1.5.3` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 在线垃圾清理与表膨胀治理 |
 | [`pg_rewrite`](/ext/e/pg_rewrite) | [`pg_rewrite`](https://github.com/cybertec-postgresql/pg_rewrite) | `2.1.0` | <a class="ext-badge ext-badge--license bsd 3clause" href="/ext/license#bsd3clause">BSD 3-Clause</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 在线重写整表，不阻塞读写 |
+| [`pg_query_rewrite`](/ext/e/pg_query_rewrite) | [`pg_query_rewrite`](https://github.com/pierreforstmann/pg_query_rewrite) | `0.0.5` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 使用 ProcessUtility hook 重写 SQL 语句 |
 | [`pg_squeeze`](/ext/e/pg_squeeze) | [`pg_squeeze`](https://github.com/cybertec-postgresql/pg_squeeze) | `1.9.1` | <a class="ext-badge ext-badge--license bsd 2clause" href="/ext/license#bsd2clause">BSD 2-Clause</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 从关系中删除未使用空间 |
 | [`pg_dirtyread`](/ext/e/pg_dirtyread) | [`pg_dirtyread`](https://github.com/df7cb/pg_dirtyread) | `2.7` | <a class="ext-badge ext-badge--license bsd 3clause" href="/ext/license#bsd3clause">BSD 3-Clause</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 从表中读取尚未垃圾回收的行 |
 | [`pgfincore`](/ext/e/pgfincore) | [`pgfincore`](https://github.com/klando/pgfincore) | `1.3.1` | <a class="ext-badge ext-badge--license bsd 3clause" href="/ext/license#bsd3clause">BSD 3-Clause</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 检查和管理操作系统缓冲区缓存 |
 | [`pg_cooldown`](/ext/e/pg_cooldown) | [`pg_cooldown`](https://github.com/rbergm/pg_cooldown) | `0.1` | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 从缓冲区中移除特定关系的页面 |
 | [`ddlx`](/ext/e/ddlx) | [`pg_ddlx`](https://github.com/lacanoid/pgddl) | `0.30` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> | 提取数据库对象的DDL |
-| [`pglinter`](/ext/e/pglinter) | [`pglinter`](https://github.com/pmpetit/pglinter) | `1.1.1` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | PG数据库规则检查插件 |
+| [`pglinter`](/ext/e/pglinter) | [`pglinter`](https://github.com/pmpetit/pglinter) | `1.1.2` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | PG数据库规则检查插件 |
 | [`prioritize`](/ext/e/prioritize) | [`pg_prioritize`](https://github.com/schmiddy/pg_prioritize) | `1.0.4` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 获取和设置 PostgreSQL 后端的优先级 |
 | [`pg_checksums`](/ext/e/pg_checksums) | [`pg_checksums`](https://github.com/credativ/pg_checksums) | `1.3` | <a class="ext-badge ext-badge--license bsd 2clause" href="/ext/license#bsd2clause">BSD 2-Clause</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 在离线模式下激活/启用/禁用数据库集群的校验和功能 |
 | [`pg_readonly`](/ext/e/pg_readonly) | [`pg_readonly`](https://github.com/pierreforstmann/pg_readonly) | `1.0.4` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 将集群设置为只读 |
@@ -37,7 +38,7 @@ icon: fas fa-bank
 | [`qos`](/ext/e/qos) | [`pg_qos`](https://github.com/appstonia/pg_qos) | `1.0` | <a class="ext-badge ext-badge--license gpl30" href="/ext/license#gpl30">GPL-3.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | PostgreSQL QoS 资源治理扩展（会话与查询限流/隔离） |
 | [`pg_savior`](/ext/e/pg_savior) | [`pg_savior`](https://github.com/viggy28/pg_savior) | `0.0.1` | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 阻止不带条件的全表更新以避免意外事故 |
 | [`safeupdate`](/ext/e/safeupdate) | [`safeupdate`](https://github.com/eradman/pg-safeupdate) | `1.5` | <a class="ext-badge ext-badge--license isc" href="/ext/license#isc">ISC</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 强制在 UPDATE 和 DELETE 时提供 Where 条件 |
-| [`pg_strict`](/ext/e/pg_strict) | [`pg_strict`](https://github.com/spa5k/pg_strict) | `1.0.2` | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | 防止不带WHERE条件的危险UPDATE和DELETE操作 |
+| [`pg_strict`](/ext/e/pg_strict) | [`pg_strict`](https://github.com/spa5k/pg_strict) | `1.0.5` | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | 防止不带WHERE条件的危险UPDATE和DELETE操作 |
 | [`pg_drop_events`](/ext/e/pg_drop_events) | [`pg_drop_events`](https://github.com/bolajiwahab/pg_drop_events) | `0.1.0` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> | 记录删表删列删视图的事务号，辅助PITR确定时间点 |
 | [`table_log`](/ext/e/table_log) | [`table_log`](https://github.com/df7cb/table_log) | `0.6.4` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 记录某张表的修改日志并做表/行级时间点恢复 |
 | [`pgelog`](/ext/e/pgelog) | [`pgelog`](https://github.com/anfiau/pgelog) | `1.0.2` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> | 通过伪自治事务实现扩展日志记录 |
@@ -89,6 +90,24 @@ icon: fas fa-bank
 | **语言** | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | **d13** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
 | **仓库** | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | **u22** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
 | **协议** | <a class="ext-badge ext-badge--license bsd 3clause" href="/ext/license#bsd3clause">BSD 3-Clause</a> | **u24** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+{.ext-table .ext-table--cate}
+
+
+---------
+
+## pg_query_rewrite {#pg_query_rewrite}
+
+[**`pg_query_rewrite`**](/ext/e/pg_query_rewrite) - `0.0.5` : 使用 ProcessUtility hook 重写 SQL 语句
+
+| **条目** | **属性** | **OS** | **x86_64** | **aarch64** |
+|:---:|:---|:---:|:---:|:---:|
+| **扩展名** | [`pg_query_rewrite`](/ext/e/pg_query_rewrite) | **el8** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+| **扩展包** | [`pg_query_rewrite`](https://github.com/pierreforstmann/pg_query_rewrite) | **el9** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+| **RPM** | `pg_query_rewrite_$v` | **el10** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+| **DEB** | `postgresql-$v-pg-query-rewrite` | **d12** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+| **语言** | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | **d13** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+| **仓库** | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | **u22** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+| **协议** | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | **u24** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
 {.ext-table .ext-table--cate}
 
 
@@ -186,7 +205,7 @@ icon: fas fa-bank
 
 ## pglinter {#pglinter}
 
-[**`pglinter`**](/ext/e/pglinter) - `1.1.1` : PG数据库规则检查插件
+[**`pglinter`**](/ext/e/pglinter) - `1.1.2` : PG数据库规则检查插件
 
 | **条目** | **属性** | **OS** | **x86_64** | **aarch64** |
 |:---:|:---|:---:|:---:|:---:|
@@ -510,17 +529,17 @@ icon: fas fa-bank
 
 ## pg_strict {#pg_strict}
 
-[**`pg_strict`**](/ext/e/pg_strict) - `1.0.2` : 防止不带WHERE条件的危险UPDATE和DELETE操作
+[**`pg_strict`**](/ext/e/pg_strict) - `1.0.5` : 防止不带WHERE条件的危险UPDATE和DELETE操作
 
 | **条目** | **属性** | **OS** | **x86_64** | **aarch64** |
 |:---:|:---|:---:|:---:|:---:|
 | **扩展名** | [`pg_strict`](/ext/e/pg_strict) | **el8** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
 | **扩展包** | [`pg_strict`](https://github.com/spa5k/pg_strict) | **el9** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
 | **RPM** | `pg_strict_$v` | **el10** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
-| **DEB** | `pg_strict_$v` | **d12** | - | - |
-| **语言** | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | **d13** | - | - |
-| **仓库** | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | **u22** | - | - |
-| **协议** | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | **u24** | - | - |
+| **DEB** | `postgresql-$v-pg-strict` | **d12** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+| **语言** | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | **d13** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+| **仓库** | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | **u22** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+| **协议** | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | **u24** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
 {.ext-table .ext-table--cate}
 
 

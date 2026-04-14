@@ -2,7 +2,7 @@
 title: "db_migrator"
 linkTitle: "db_migrator"
 description: "使用FDW从其他DBMS迁移到PostgreSQL"
-weight: 9540
+weight: 9550
 ---
 
 <div class="ext-cards">
@@ -30,7 +30,7 @@ weight: 9540
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
 |:-----:|:-------------------------------------------------------------------------|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|:----------|
-| 9540  | [**`db_migrator`**](/ext/e/db_migrator) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
+| 9550  | [**`db_migrator`**](/ext/e/db_migrator) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
 {.ext-table}
 
 | **相关扩展** | [`mysql_fdw`](/ext/e/mysql_fdw) [`oracle_fdw`](/ext/e/oracle_fdw) [`tds_fdw`](/ext/e/tds_fdw) [`orafce`](/ext/e/orafce) [`pg_bulkload`](/ext/e/pg_bulkload) [`jdbc_fdw`](/ext/e/jdbc_fdw) [`db2_fdw`](/ext/e/db2_fdw) [`pgtt`](/ext/e/pgtt) |
