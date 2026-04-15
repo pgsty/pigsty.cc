@@ -19,7 +19,7 @@ categories: [参考]
 - 节点数量： 单节点
 - 配置说明：使用 PolarDB for PostgreSQL 内核
 - 适用系统：`el8`, `el9`, `el10`, `d12`, `d13`, `u22`, `u24`
-- 适用架构：`x86_64`
+- 适用架构：`x86_64`, `aarch64`
 - 相关配置：[`meta`](/docs/conf/meta/)
 
 启用方式：
@@ -49,6 +49,7 @@ categories: [参考]
 - 支持一写多读，读副本秒级扩展
 - 兼容 PostgreSQL 生态，保持 SQL 兼容性
 - 支持共享存储场景，适合云环境部署
+- 默认 PolarDB 内核路径为 `/u01/polardb_pg_17`
 
 **适用场景**：
 - 需要存算分离架构的云原生场景
@@ -57,8 +58,7 @@ categories: [参考]
 - 评估 PolarDB 特性的测试环境
 
 **注意事项**：
-- PolarDB 基于 PostgreSQL 15，不支持更高版本特性
+- PolarDB 当前基于 PostgreSQL 17
 - 复制用户需要超级用户权限（与原生 PostgreSQL 不同）
 - 部分 PostgreSQL 扩展可能存在兼容性问题
-- 不支持 ARM64 架构
-
+- 当前模板已提供 `x86_64` 与 `aarch64` 软件包支持

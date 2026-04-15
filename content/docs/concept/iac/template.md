@@ -34,7 +34,7 @@ Pigsty 提供了 [**`configure`**](https://github.com/pgsty/pigsty/blob/main/con
 ./configure -c pgsql            # 原生 PostgreSQL 内核，基础功能 (13~18)
 ./configure -c citus            # Citus 分布式高可用 PostgreSQL (14~17)
 ./configure -c mssql            # Babelfish 内核，兼容 SQL Server 协议 (17)
-./configure -c polar            # PolarDB PG 内核，Aurora/RAC 风格 (15)
+./configure -c polar            # PolarDB PG 内核，Aurora/RAC 风格 (17)
 ./configure -c ivory            # IvorySQL 内核，兼容 Oracle 语法 (18)
 ./configure -c mysql            # OpenHalo 内核，兼容 MySQL (14)
 ./configure -c pgtde            # Percona PostgreSQL Server 透明加密 (18)
@@ -74,7 +74,7 @@ Pigsty 提供了 [**`configure`**](https://github.com/pgsty/pigsty/blob/main/con
 | [**`pgsql.yml`**](/docs/conf/pgsql/)       | 原生 PostgreSQL 内核，基础功能 (13~18)             |
 | [**`citus.yml`**](/docs/conf/citus/)       | Citus 分布式高可用 PostgreSQL (14~17)           |
 | [**`mssql.yml`**](/docs/conf/mssql/)       | Babelfish 内核，兼容 SQL Server 协议 (17)        |
-| [**`polar.yml`**](/docs/conf/polar/)       | PolarDB PG 内核，Aurora/RAC 风格 (15)          |
+| [**`polar.yml`**](/docs/conf/polar/)       | PolarDB PG 内核，Aurora/RAC 风格 (17)          |
 | [**`ivory.yml`**](/docs/conf/ivory/)       | IvorySQL 内核，兼容 Oracle 语法 (17)             |
 | [**`mysql.yml`**](/docs/conf/mysql/)       | OpenHalo 内核，兼容 MySQL (14)                 |
 | [**`pgtde.yml`**](/docs/conf/pgtde/)       | Percona PostgreSQL Server 透明加密 (17)       |

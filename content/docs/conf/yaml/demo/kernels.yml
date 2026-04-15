@@ -318,7 +318,7 @@ all:
       vars:
         node_repo_modules: local,node,pgsql
         pg_cluster: pg-dst
-        pg_version: 15          # PolarDB for PostgreSQL is PG 15 compatible
+        pg_version: 17          # PolarDB for PostgreSQL is PG 17 compatible
         pg_mode: polar
         pg_vip_enabled: true
         pg_vip_address: 10.10.10.5/24
