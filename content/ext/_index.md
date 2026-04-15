@@ -6,10 +6,12 @@ description: >
 weight: 20
 outputs:
   - HTML
+  - print
 cascade:
   type: docs
   outputs:
     - HTML
+    - print
 ---
 
 Pigsty 提供了以下三样基础设施，帮助用户更好的利用 PostgreSQL 扩展生态系统的协同超能力：

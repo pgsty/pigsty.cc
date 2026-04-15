@@ -10,7 +10,7 @@ icon: fa-brands fa-redhat
 {{< pgext_os_matrix >}}
 | **PKG / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
 |:---|:--:|:--:|:--:|:--:|:--:|
-| [`timescaledb`](/ext/e/timescaledb) | AVAIL PIGSTY 2.26.2 9 | AVAIL PIGSTY 2.26.2 28 | AVAIL PIGSTY 2.26.2 34 | AVAIL PIGSTY 2.26.2 33 | AVAIL PIGSTY 2.19.3 35 |
+| [`timescaledb`](/ext/e/timescaledb) | AVAIL PGDG 2.26.3 10 | AVAIL PGDG 2.26.3 29 | AVAIL PGDG 2.26.3 35 | AVAIL PGDG 2.26.3 34 | AVAIL PIGSTY 2.19.3 35 |
 | [`timescaledb_toolkit`](/ext/e/timescaledb_toolkit) | AVAIL PIGSTY 1.22.0 1 | AVAIL PIGSTY 1.22.0 1 | AVAIL PIGSTY 1.22.0 1 | AVAIL PIGSTY 1.22.0 1 | MISS PIGSTY - 0 |
 | [`pg_timeseries`](/ext/e/timeseries) | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 |
 | [`periods`](/ext/e/periods) | AVAIL PIGSTY 1.2.3 1 | AVAIL PIGSTY 1.2.3 2 | AVAIL PIGSTY 1.2.3 2 | AVAIL PIGSTY 1.2.3 3 | AVAIL PIGSTY 1.2.3 3 |
@@ -323,7 +323,7 @@ icon: fa-brands fa-redhat
 | [`pgbouncer_fdw`](/ext/e/pgbouncer_fdw) | AVAIL PGDG 1.4.0 1 | AVAIL PGDG 1.4.0 4 | AVAIL PGDG 1.4.0 6 | AVAIL PGDG 1.4.0 6 | AVAIL PGDG 1.4.0 8 |
 | [`etcd_fdw`](/ext/e/etcd_fdw) | AVAIL PIGSTY 0.0.0 1 | AVAIL PIGSTY 0.0.0 1 | AVAIL PIGSTY 0.0.0 1 | AVAIL PIGSTY 0.0.0 1 | AVAIL PIGSTY 0.0.0 1 |
 | [`informix_fdw`](/ext/e/informix_fdw) | AVAIL PGDG 0.6.3 1 | AVAIL PGDG 0.6.3 1 | AVAIL PGDG 0.6.3 1 | AVAIL PGDG 0.6.3 1 | AVAIL PGDG 0.6.3 1 |
-| [`nominatim_fdw`](/ext/e/nominatim_fdw) | AVAIL PGDG 1.3 3 | AVAIL PGDG 1.3 3 | AVAIL PGDG 1.3 3 | AVAIL PGDG 1.3 3 | AVAIL PGDG 1.3 3 |
+| [`nominatim_fdw`](/ext/e/nominatim_fdw) | AVAIL PGDG 1.3 4 | AVAIL PGDG 1.3 4 | AVAIL PGDG 1.3 4 | AVAIL PGDG 1.3 4 | AVAIL PGDG 1.3 4 |
 | [`mongo_fdw`](/ext/e/mongo_fdw) | AVAIL PGDG 5.5.3 1 | AVAIL PGDG 5.5.3 1 | AVAIL PGDG 5.5.3 2 | AVAIL PGDG 5.5.3 4 | AVAIL PGDG 5.5.3 6 |
 | [`redis_fdw`](/ext/e/redis_fdw) | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 |
 | [`pg_redis_pubsub`](/ext/e/redis) | AVAIL PIGSTY 0.0.1 1 | AVAIL PIGSTY 0.0.1 1 | AVAIL PIGSTY 0.0.1 1 | AVAIL PIGSTY 0.0.1 1 | AVAIL PIGSTY 0.0.1 1 |

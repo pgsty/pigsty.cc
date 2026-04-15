@@ -450,7 +450,7 @@ icon: fa-brands fa-redhat
 | [`pgbouncer_fdw`](/ext/e/pgbouncer_fdw) | `1.4.0` | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `pgbouncer_fdw_$v` | {{< pgvers "18,17,16,15,14" >}} | - |
 | [`etcd_fdw`](/ext/e/etcd_fdw) | `0.0.0` | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `etcd_fdw_$v` | {{< pgvers "18,17,16,15,14" >}} | - |
 | [`informix_fdw`](/ext/e/informix_fdw) | `0.6.3` | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `informix_fdw_$v` | {{< pgvers "18,17,16,15,14" >}} | - |
-| [`nominatim_fdw`](/ext/e/nominatim_fdw) | `1.2` | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `nominatim_fdw_$v` | {{< pgvers "18,17,16,15,14" >}} | - |
+| [`nominatim_fdw`](/ext/e/nominatim_fdw) | `1.3` | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `nominatim_fdw_$v` | {{< pgvers "18,17,16,15,14" >}} | - |
 | [`mongo_fdw`](/ext/e/mongo_fdw) | `5.5.3` | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `mongo_fdw_$v` | {{< pgvers "16,15,14" >}} | - |
 | [`redis_fdw`](/ext/e/redis_fdw) | `1.0` | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `redis_fdw_$v` | {{< pgvers "18,17,16,15,14" >}} | - |
 | [`pg_redis_pubsub`](/ext/e/redis) | `0.0.1` | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `pg_redis_pubsub_$v` | {{< pgvers "18,17,16,15,14" >}} | - |

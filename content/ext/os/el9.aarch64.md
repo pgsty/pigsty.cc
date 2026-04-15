@@ -323,7 +323,7 @@ icon: fa-brands fa-redhat fa-flip-vertical
 | [`pgbouncer_fdw`](/ext/e/pgbouncer_fdw) | AVAIL PGDG 1.4.0 1 | AVAIL PGDG 1.4.0 4 | AVAIL PGDG 1.4.0 6 | AVAIL PGDG 1.4.0 6 | AVAIL PGDG 1.4.0 6 |
 | [`etcd_fdw`](/ext/e/etcd_fdw) | AVAIL PIGSTY 0.0.0 1 | AVAIL PIGSTY 0.0.0 1 | AVAIL PIGSTY 0.0.0 1 | AVAIL PIGSTY 0.0.0 1 | AVAIL PIGSTY 0.0.0 1 |
 | [`informix_fdw`](/ext/e/informix_fdw) | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
-| [`nominatim_fdw`](/ext/e/nominatim_fdw) | AVAIL PGDG 1.3 3 | AVAIL PGDG 1.3 3 | AVAIL PGDG 1.3 3 | AVAIL PGDG 1.3 3 | AVAIL PGDG 1.3 3 |
+| [`nominatim_fdw`](/ext/e/nominatim_fdw) | AVAIL PGDG 1.3 4 | AVAIL PGDG 1.3 4 | AVAIL PGDG 1.3 4 | AVAIL PGDG 1.3 4 | AVAIL PGDG 1.3 4 |
 | [`mongo_fdw`](/ext/e/mongo_fdw) | AVAIL PGDG 5.5.3 1 | AVAIL PGDG 5.5.3 1 | AVAIL PGDG 5.5.3 2 | AVAIL PGDG 5.5.3 2 | AVAIL PGDG 5.5.3 2 |
 | [`redis_fdw`](/ext/e/redis_fdw) | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 |
 | [`pg_redis_pubsub`](/ext/e/redis) | AVAIL PIGSTY 0.0.1 1 | AVAIL PIGSTY 0.0.1 1 | AVAIL PIGSTY 0.0.1 1 | AVAIL PIGSTY 0.0.1 1 | AVAIL PIGSTY 0.0.1 1 |
