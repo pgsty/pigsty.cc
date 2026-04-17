@@ -10,7 +10,7 @@ categories: [教程]
 
 Pigsty 默认从互联网上游 [**安装**](/docs/setup/install/) 所需软件包，但有些环境与互联网隔离。
 为了解决这个问题，Pigsty 支持使用 [**离线软件包**](#离线软件包) 进行离线安装。
-您可以将其视作 Linux-原生版本的 Docker 镜像。
+您可以将其视作 Linux- 原生版本的 Docker 镜像。
 
 
 ----------------
@@ -101,7 +101,7 @@ a5574071bac1955798265f71ad73c3d4  pigsty-pkg-v4.2.2.u24.aarch64.tgz
 
 1. 下载 Pigsty 离线软件包，将其放到 **`/tmp/pkg.tgz`**
 2. 下载 Pigsty 源码包，解压并进入目录（假设解压到家目录：**`cd ~/pigsty`**）
-3. [**`./bootstrap`**](#bootstrap)，它将解压软件包并配置使用本地仓库（并从中离线安装 [**`ansible`**](/docs/setup/playbook) ）
+3. [**`./bootstrap`**](#bootstrap)，它将解压软件包并配置使用本地仓库（并从中离线安装 [**`ansible`**](/docs/setup/playbook)）
 4. **`./configure -g -c rich`**，您可以直接使用配置好离线安装的模板 [**`rich`**](/docs/conf/rich)，或者自行配置
 5. 照常运行 **`./deploy.yml`**，它将从本地仓库安装所有内容
 
@@ -124,7 +124,7 @@ a5574071bac1955798265f71ad73c3d4  pigsty-pkg-v4.2.2.u24.aarch64.tgz
 **混合安装模式**
 
 如果您的环境有互联网访问，那么有一种混合方法可以融合离线安装与在线安装的优点。
-您可以可以使用离线软件包作为基础，并在线补足不匹配的增量软件包。
+您可以使用离线软件包作为基础，并在线补足不匹配的增量软件包。
 
 例如，假设您使用的是 RockyLinux 9.6，但官方离线软件包是为 RockyLinux 9.7 制作的。
 您可以使用 `el9` 离线软件包（虽然是针对 9.7 制作的），然后在执行正式安装前，执行 `make repo-build` 重新下载 9.6 对应的缺失软件包，
@@ -144,7 +144,7 @@ Pigsty 将从上游仓库重新下载所需的 **增量**。
 3. `cd ~/pigsty; ./cache.yml`：制作并获取离线软件包到 `~/pigsty/dist/${version}/`
 4. 将离线软件包复制到没有互联网访问的环境中（ftp、scp、usb 等），通过 `bootstrap` 解包使用
 
-我们提供 [**付费服务**](/docs/about/service/)，提供经过测试的预制 Linux 主版本.次版本制作离线软件包（**¥200**）。
+我们提供 [**付费服务**](/docs/about/service/)，提供经过测试的预制 Linux 主版本。次版本制作离线软件包（**¥200**）。
 
 
 

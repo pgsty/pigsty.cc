@@ -71,7 +71,7 @@ pig version 1.0.0 linux/amd64
 build: HEAD dc8f343 2026-01-26T15:52:04Z
 ```
 
-使用 `pig status` 命令，会打印当前环境的状态，操作系统代码，PG的安装情况，仓库的可访问性与延迟。
+使用 `pig status` 命令，会打印当前环境的状态，操作系统代码，PG 的安装情况，仓库的可访问性与延迟。
 
 ```bash
 $ pig status
@@ -237,7 +237,7 @@ pg14-core:    "postgresql14 postgresql14-server postgresql14-libs postgresql14-c
 ```
 
 注意这里的 `$v` 占位符会被替换为 PG 大版本号，因此当您使用 `pgsql` 别名时，`$v` 会被实际替代为 18，17 这样的大版本号。
-因此，当您安装 `pg18-server` 别名时，EL 上实际安装的是 `postgresql18-server`, `postgresql18-libs`, `postgresql18-contrib`，在 Debian / Ubuntu 上安装的是 `postgresql-18` ，pig 会处理好所有细节。
+因此，当您安装 `pg18-server` 别名时，EL 上实际安装的是 `postgresql18-server`, `postgresql18-libs`, `postgresql18-contrib`，在 Debian / Ubuntu 上安装的是 `postgresql-18`，pig 会处理好所有细节。
 
 <details>
 <summary>常用 PostgreSQL 别名</summary>

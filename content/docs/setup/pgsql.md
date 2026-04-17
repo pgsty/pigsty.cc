@@ -208,9 +208,9 @@ PostgreSQL 最强大的特性之一是其 [**扩展生态系统**](/docs/pgsql/e
 Pigsty 提供了 PG 生态中独一无二的 [**504 扩展**](/ext/list/)，涵盖时序、地理、向量、全文检索等 16 大类别，一键安装即可使用。
 你可以先从三个最强大常用的功能扩展开始，然后按需 [**加装**](/docs/pgsql/ext/install) `timescaledb` 等更多扩展。
 
-- [**`postgis`**](/ext/e/postgis) ：地理信息系统，处理地图、位置数据（默认安装）
-- [**`pgvector`**](/ext/e/vector) ：向量数据库，支持 AI 嵌入向量相似度搜索（默认安装）
-- [**`timescaledb`**](/ext/e/timescaledb) ：时序数据库，高效存储和查询时间序列数据（可选安装）
+- [**`postgis`**](/ext/e/postgis)：地理信息系统，处理地图、位置数据（默认安装）
+- [**`pgvector`**](/ext/e/vector)：向量数据库，支持 AI 嵌入向量相似度搜索（默认安装）
+- [**`timescaledb`**](/ext/e/timescaledb)：时序数据库，高效存储和查询时间序列数据（可选安装）
 
 ```sql
 \dx                            -- psql 元命令，列出已经安装的扩展

@@ -33,14 +33,14 @@ Pigsty 提供了一个 “一条龙” 部署剧本 **`deploy.yml`**，一次性
 | `pgsql.yml` | `./pgsql.yml` |            |         |           |        |         |     ✓     |
 {.full-width}
 
-这是最简单的部署方式，您也可以参考 [**定制指南**](/docs/setup/config/) 里的说明，一步一步来增量式地完成所有模块与节点的部署。
+这是最简单的部署方式，您也可以参考 [**定制指南**](/docs/setup/config/) 里的说明，一步来增量式地完成所有模块与节点的部署。
 
 
 ------
 
 ## 安装 Ansible
 
-使用 [**Pigsty 安装脚本**](/docs/setup/install#安装) ，或离线安装的 [**`bootstrap`**](/docs/setup/offline#bootstrap) 阶段，Pigsty 会自动为您安装 `ansible` 及其依赖。
+使用 [**Pigsty 安装脚本**](/docs/setup/install#安装)，或离线安装的 [**`bootstrap`**](/docs/setup/offline#bootstrap) 阶段，Pigsty 会自动为您安装 `ansible` 及其依赖。
 
 如果您想手动安装 Ansible，可以参考以下说明，支持的 Ansible 最低版本为 2.9
 

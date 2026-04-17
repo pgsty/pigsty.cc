@@ -18,7 +18,7 @@ weight: 5440
 |   EL   | `rpm` |   ✓    |    ✓    |
 | Debian | `deb` |   ✓    |    ✓    |
 
-Infra 仓库的更新记录可以参考 [**发布 - Infra 变更日志**](/docs/repo/infra/log/) 。
+Infra 仓库的更新记录可以参考 [**发布 - Infra 变更日志**](/docs/repo/infra/log/)。
 
 
 ---------

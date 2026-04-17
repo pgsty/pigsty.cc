@@ -3,7 +3,7 @@ title: 备份恢复
 weight: 1600
 description: 时间点恢复（PITR）备份与恢复
 icon: fa-solid fa-clock-rotate-left
-categories: [任务, 参考]
+categories: [任务，参考]
 ---
 
 Pigsty 使用 [pgBackRest](https://pgbackrest.org/) 管理 PostgreSQL 备份，这可能是生态系统中最强大的开源备份工具。

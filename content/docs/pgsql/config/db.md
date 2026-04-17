@@ -12,7 +12,7 @@ categories: [参考]
 
 一组 PostgreSQL 服务器可以同时服务于多个 **数据库** （Database）。在 Pigsty 中，你可以在集群配置中 [**定义**](#定义数据库) 好所需的数据库。
 
-Pigsty会对默认模板数据库`template1`进行修改与定制，创建默认模式，安装默认扩展，配置默认权限，新创建的数据库默认会从`template1`继承这些设置。
+Pigsty 会对默认模板数据库`template1`进行修改与定制，创建默认模式，安装默认扩展，配置默认权限，新创建的数据库默认会从`template1`继承这些设置。
 您也可以通过 [**`template`**](#template) 参数指定其他模板数据库，实现瞬间 [**数据库克隆**](/docs/pgsql/admin/db#克隆数据库)。
 
 默认情况下，所有业务数据库都会被 1:1 添加到 [**Pgbouncer**](/docs/concept/arch/pgsql#pgbouncer) [**连接池**](#连接池) 中；[**`pg_exporter`**](/docs/concept/arch/pgsql#pg_exporter) 默认会通过 **自动发现** 机制查找所有业务数据库并进行库内对象监控。
@@ -137,7 +137,7 @@ pg-meta:
 
 ### `name`
 
-字符串，必选参数，表示数据库的名称，在一个数据库集群内集群内必须唯一。
+字符串，必选参数，表示数据库的名称，在一个数据库集群内必须唯一。
 
 数据库名称必须是有效的 PostgreSQL 标识符，长度不超过 63 个字符，不得使用 SQL 关键字，
 形式上以字母或下划线开头，后续字符可以是字母、数字或下划线，不能包含空格或特殊字符。
@@ -666,16 +666,16 @@ ALTER DATABASE "myapp" SET "statement_timeout" = '30s';
 
 Pigsty 提供了丰富的定制参数与配置旋钮，如果你想定制模板数据库，请参考以下资源：
 
-- [**`pg_default_roles`**](/docs/pgsql/param#pg_default_roles)           ：postgres 集群中的默认预定义角色和系统用户
-- [**`pg_default_privileges`**](/docs/pgsql/param#pg_default_privileges) ：由管理员用户创建数据库内对象时的默认权限
-- [**`pg_default_schemas`**](/docs/pgsql/param#pg_default_schemas)       ：要创建的默认模式列表
-- [**`pg_default_extensions`**](/docs/pgsql/param#pg_default_extensions) ：要创建的默认扩展列表
-- [**`pg_default_hba_rules`**](/docs/pgsql/param#pg_default_hba_rules)   ：postgres 基于主机的认证规则，全局PG默认HBA
-- [**`pgb_default_hba_rules`**](/docs/pgsql/param#pgb_default_hba_rules) ：pgbouncer 默认的基于主机的认证规则，全局PGB默认HBA
+- [**`pg_default_roles`**](/docs/pgsql/param#pg_default_roles)：postgres 集群中的默认预定义角色和系统用户
+- [**`pg_default_privileges`**](/docs/pgsql/param#pg_default_privileges)：由管理员用户创建数据库内对象时的默认权限
+- [**`pg_default_schemas`**](/docs/pgsql/param#pg_default_schemas)：要创建的默认模式列表
+- [**`pg_default_extensions`**](/docs/pgsql/param#pg_default_extensions)：要创建的默认扩展列表
+- [**`pg_default_hba_rules`**](/docs/pgsql/param#pg_default_hba_rules)：postgres 基于主机的认证规则，全局 PG 默认 HBA
+- [**`pgb_default_hba_rules`**](/docs/pgsql/param#pgb_default_hba_rules)：pgbouncer 默认的基于主机的认证规则，全局 PGB 默认 HBA
 
 如果上面这些配置仍然无法满足您的需求，您可以使用 [**`pg_init`**](/docs/pgsql/param#pg_init) 指定自定义的集群初始化脚本进行定制：
 
-- [**`pg-init`**](https://github.com/pgsty/pigsty/blob/main/roles/pgsql/templates/pg-init) ：集群初始化脚本
+- [**`pg-init`**](https://github.com/pgsty/pigsty/blob/main/roles/pgsql/templates/pg-init)：集群初始化脚本
 - [**`pg-init-template.sql`**](https://github.com/pgsty/pigsty/blob/main/roles/pgsql/templates/pg-init-template.sql)：模板定制 SQL
 - [**`pg-init-roles.sql`**](https://github.com/pgsty/pigsty/blob/main/roles/pgsql/templates/pg-init-roles.sql)：定制默认角色的 SQL
 

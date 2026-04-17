@@ -14,10 +14,10 @@ categories: [参考]
 
 Pigsty 使用语义化版本号，`<主版本>.<次版本>.<修订号>`。Alpha / Beta / RC 版本会在版本号后添加后缀，如 `-a1`，`-b1`，`-c1`。
 
-主版本更新意味着不兼容的基础性变化与重大新特性；次版本更新通常表示普通功能特性更新，较小的API变动；修订版本更新意味着 Bug 修复与软件包版本更新。
+主版本更新意味着不兼容的基础性变化与重大新特性；次版本更新通常表示普通功能特性更新，较小的 API 变动；修订版本更新意味着 Bug 修复与软件包版本更新。
 
 Pigsty 计划每年发布一次主版本更新，次版本更新通常跟随 PostgreSQL 小版本更新节奏，在 PostgreSQL 新版本发布后最迟一个月内跟进。
-Pigsty 通常每年计划 4 - 6 个小版本，完整发布历史请参考 [**发行注记**](/docs/about/release) 。
+Pigsty 通常每年计划 4 - 6 个小版本，完整发布历史请参考 [**发行注记**](/docs/about/release)。
 
 {{% alert title="使用具体的版本号进行部署" color="primary" %}}
 Pigsty 使用 **main** 主干分支进行开发，请始终使用带有版本号的 [**Release**](https://github.com/pgsty/pigsty/releases)。
@@ -73,8 +73,8 @@ Pigsty 使用 **main** 主干分支进行开发，请始终使用带有版本号
 
 ### 暂不考虑
 
-- [pg_tier](https://github.com/tembo-io/pg_tier): not ready due to incomplete dep parquet_s3_fdw
-- [parquet_s3_fdw](https://github.com/pgspider/parquet_s3_fdw): not ready due to compiler version
+- [pg_tier](https://github.com/tembo-io/pg_tier)：not ready due to incomplete dep parquet_s3_fdw
+- [parquet_s3_fdw](https://github.com/pgspider/parquet_s3_fdw)：not ready due to compiler version
 - pg_top: not ready due to cmake error
 - timestamp9: not ready due to compiler error
 - pg_tier obsolete

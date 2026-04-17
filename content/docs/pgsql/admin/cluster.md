@@ -76,7 +76,7 @@ bin/pgsql-add pg-test   # 例子，创建 pg-test 集群
 
 {{% alert title="针对已经存在的集群重新执行创建存在风险" color="warning" %}}
 如果您在已经存在的集群上重新执行创建操作，Pigsty 不会移除已有的数据文件，但现有服务配置会被覆盖，集群会发生 **重启**！
-此外，如果你在 [**数据库定义**](/docs/pgsql/config/db#baseline) 中指定了 `baseline` SQL ，它也会重新执行，如果里面包含删除/覆盖逻辑，可能会导致 **数据丢失**。
+此外，如果你在 [**数据库定义**](/docs/pgsql/config/db#baseline) 中指定了 `baseline` SQL，它也会重新执行，如果里面包含删除/覆盖逻辑，可能会导致 **数据丢失**。
 {{% /alert %}}
 
 
@@ -332,7 +332,7 @@ bin/pgsql-svc pg-test 10.10.10.13     # 例子，刷新 pg-test 集群中 10.10.
 
 {{< asciinema file="demo/pgsql-svc.cast" markers="" speed="1.2" autoplay="true" loop="true" >}}
 
-<details><summary>示例：重载PG服务以踢除一个实例</summary>
+<details><summary>示例：重载 PG 服务以踢除一个实例</summary>
 
 [![asciicast](https://asciinema.org/a/568815.svg)](https://asciinema.org/a/568815)
 
@@ -524,7 +524,7 @@ PITR 支持多种恢复目标类型：
 | 目标类型 | 参数示例 | 说明 |
 |:---------|:---------|:-----|
 | 时间点 | `time: "2025-01-10 10:00:00+00"` | 恢复到指定时间戳 |
-| 事务ID | `xid: "250000"` | 恢复到指定事务之前/之后 |
+| 事务 ID | `xid: "250000"` | 恢复到指定事务之前/之后 |
 | 恢复点 | `name: "before_migration"` | 恢复到命名恢复点 |
 | LSN | `lsn: "0/4001C80"` | 恢复到指定 WAL 位置 |
 | 最新 | `type: "latest"` | 恢复到 WAL 归档末尾 |

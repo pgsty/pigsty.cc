@@ -12,7 +12,7 @@ categories: [参考]
 
 ## GitHub
 
-我们的 GitHub 仓库地址是：[https://github.com/pgsty/pigsty](https://github.com/pgsty/pigsty) ，欢迎点个 ⭐️ [**关注**](https://github.com/pgsty/pigsty/stargazers) 我们。
+我们的 GitHub 仓库地址是：[https://github.com/pgsty/pigsty](https://github.com/pgsty/pigsty)，欢迎点个 ⭐️ [**关注**](https://github.com/pgsty/pigsty/stargazers) 我们。
 
 我们欢迎任何人 [提交新 Issue](https://github.com/pgsty/pigsty/issues/new) 或创建 [Pull Request](https://github.com/pgsty/pigsty/pulls)，提出功能建议并参与 Pigsty 贡献。
 
@@ -52,12 +52,12 @@ Discord: https://discord.gg/j5pG8qfKxU
 
 当您使用 Pigsty 遇到问题时，可以向社区求助，您提供的信息越丰富，就越有可能在社区得到帮助。
 
-请参考 [社区求助指南](https://github.com/pgsty/pigsty/discussions/338) ，尽可能提供足够的信息，以便社区成员帮助您解决问题。以下是求助提问的参考模板：
+请参考 [社区求助指南](https://github.com/pgsty/pigsty/discussions/338)，尽可能提供足够的信息，以便社区成员帮助您解决问题。以下是求助提问的参考模板：
 
 
 **发生了什么事？**  (**必选项**)
 
-**Pigsty版本号与操作系统版本** (**必选项**)
+**Pigsty 版本号与操作系统版本** (**必选项**)
 
 ```
 $ grep version pigsty.yml 
@@ -71,7 +71,7 @@ $ uname -a
 如果您在安装操作系统后对环境进行了定制与修改，或者在您的局域网中有特定的安全规则与防火墙配置，也请在提问时告知我们。
 
 
-**Pigsty配置文件**
+**Pigsty 配置文件**
 
 > 请不要忘记抹掉任何敏感信息：密码，内部密钥，敏感配置等。
 
@@ -112,7 +112,7 @@ journalctl -u <service name>
 
 
 
-**您已经搜索过 Issue/网站/FAQ了吗？**
+**您已经搜索过 Issue/网站/FAQ 了吗？**
 
 > 在 FAQ 中，我们提供了许多常见问题的解答，请在提问前检查
 

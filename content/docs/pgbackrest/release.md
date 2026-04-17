@@ -2153,7 +2153,7 @@ pgBackRest 的版本号由主版本号和次版本号两部分组成。主版本
 
 - 在 PostgreSQL 9.6 上将自动使用非独占备份。
 - 新增 `cmd-ssh` 选项，允许指定 SSH 客户端。（*建议者：Jens Wilke。*）
-- 新增 `log-level-stderr` 选项，控制控制台日志消息输出到 `stderr` 还是 `stdout`。默认值为 `warn`，与旧版本行为略有不同，但更符合直觉。设置 `log-level-stderr=off` 可恢复旧行为。（*建议者：Sascha Biberhofer。*）
+- 新增 `log-level-stderr` 选项，控制台日志消息输出到 `stderr` 还是 `stdout`。默认值为 `warn`，与旧版本行为略有不同，但更符合直觉。设置 `log-level-stderr=off` 可恢复旧行为。（*建议者：Sascha Biberhofer。*）
 - 将数据库连接的 `application_name` 设置为 `"pgBackRest [command]"`。（*建议者：Jens Wilke。*）
 - 当 `archive-check` 选项启用时，检查 `archive_mode` 是否已开启。
 

@@ -10,7 +10,7 @@ categories: [任务]
 
 ## 概述
 
-Pigsty 的 PGSQL 模块由多个组件构成，每个组件都以 systemd 服务的形式运行在节点上。（ [**pgbackrest**](/docs/concept/arch/pgsql#pgbackrest) 除外）
+Pigsty 的 PGSQL 模块由多个组件构成，每个组件都以 systemd 服务的形式运行在节点上。（[**pgbackrest**](/docs/concept/arch/pgsql#pgbackrest) 除外）
 
 了解这些组件及其管理方式，对于维护生产环境中的 PostgreSQL 集群非常重要。
 

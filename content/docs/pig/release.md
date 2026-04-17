@@ -27,7 +27,7 @@ categories: [参考]
 | [v0.7.1](#v071) | 2025-11-10 | 新网站，改进容器内的使用体验                    | [v0.7.1](https://github.com/pgsty/pig/releases/tag/v0.7.1) |
 | [v0.7.0](#v070) | 2025-11-05 | 强化 build 能力，大批量包更新                | [v0.7.0](https://github.com/pgsty/pig/releases/tag/v0.7.0) |
 | [v0.6.2](#v062) | 2025-10-03 | 正式提供 PG 18 支持                     | [v0.6.2](https://github.com/pgsty/pig/releases/tag/v0.6.2) |
-| [v0.6.1](#v061) | 2025-08-14 | CI/CD, el10 存根, PGDG 中国镜像         | [v0.6.1](https://github.com/pgsty/pig/releases/tag/v0.6.1) |
+| [v0.6.1](#v061) | 2025-08-14 | CI/CD, el10 存根，PGDG 中国镜像         | [v0.6.1](https://github.com/pgsty/pig/releases/tag/v0.6.1) |
 | [v0.6.0](#v060) | 2025-07-17 | 423 个扩展，percona pg_tde，mcp 工具箱    | [v0.6.0](https://github.com/pgsty/pig/releases/tag/v0.6.0) |
 | [v0.5.0](#v050) | 2025-06-30 | 422 个扩展，新的扩展目录                    | [v0.5.0](https://github.com/pgsty/pig/releases/tag/v0.5.0) |
 | [v0.4.2](#v042) | 2025-05-27 | 421 个扩展，halo 和 oriole deb         | [v0.4.2](https://github.com/pgsty/pig/releases/tag/v0.4.2) |
@@ -291,7 +291,7 @@ d61430eeafc8005a22918a9aa60dea5c987916f9834331b5484f761b8235644f  pig-v1.3.0.lin
 
 - 35 Commit，66 文件变更，代码行：`+5006 / -379`
 
-- **PG扩展与内核包更新**
+- **PG 扩展与内核包更新**
 
 | 包名                  | 旧版本      | 新版本      | 备注                    |
 |:--------------------|:---------|:---------|:----------------------|
@@ -668,7 +668,7 @@ fc2a34aeb46e07cb0ae93611de47d6622c3bd46fe4c415ce4c9091840e0e08a2  pig_0.7.1-1_ar
   - `pig build pgrx [-v pgrx_version]` 现在可以直接使用现有的 PG 安装
   - `pig build dep` 现在会处理 EL 和 Debian 系统下的扩展依赖
   - `pig build ext` 命令现在有了更为紧凑和美观的输出，可在 EL 下不依赖 build 脚本直接构建 RPM
-  - `pig build spec` 现在支持直接从Pigsty仓库下载 spec 文件包
+  - `pig build spec` 现在支持直接从 Pigsty 仓库下载 spec 文件包
   - `pig build repo` / `pig repo add` / `pig repo set` 现在默认使用 `node,pgsql,infra` 仓库模块，取代原本的 `node,pgdg,pigsty`
 - 大量优化了错误日志记录。
 - 基于 hugo 与 hextra 全新目录网站

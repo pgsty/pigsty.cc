@@ -10,7 +10,7 @@ categories: [参考]
 
 Pigsty 提供四种预置的 Patroni/PostgreSQL 配置模板，针对不同的使用场景进行了参数优化：
 
-| 模板                     | CPU核心  | 适用场景      | 特点            |
+| 模板                     | CPU 核心  | 适用场景      | 特点            |
 |:-----------------------|:-------|:----------|:--------------|
 | [**`/docs/pgsql/template/oltp.yml`**](/docs/pgsql/template/oltp) | 4-128C | OLTP 事务处理 | 高并发、低延迟、高吞吐   |
 | [**`/docs/pgsql/template/olap.yml`**](/docs/pgsql/template/olap) | 4-128C | OLAP 分析处理 | 大查询、高并行、长事务   |

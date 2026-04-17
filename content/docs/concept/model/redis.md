@@ -180,7 +180,7 @@ redis_instances:
 | 9121 | [**`redis_exporter_port`**](/docs/redis/param#redis_exporter_port) | Redis Exporter 端口 |
 {.full-width}
 
-Redis 模块的单机多实例部署模型带有一些一些局限性：
+Redis 模块的单机多实例部署模型带有一些局限性：
 
 - **节点独占**：一个节点只能属于一个 Redis 集群，不能同时分配给不同的 Redis 集群。
 - **端口唯一**：同一节点上的 Redis 实例必须使用不同的端口号，避免端口冲突。

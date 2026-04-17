@@ -37,7 +37,7 @@ pig repo add -u                           # all = node + pgsql (pgdg + pigsty) +
 Pigsty 在中国区域提供了 PGDG 镜像的子集，更新频率约为一周一更新。对于 EL 7-10，Debian 11-13，Ubuntu 20.04 - 24.04 提供 x86_64 与 arm64 架构的镜像仓库。覆盖范围为所有生命周期内的 PG 大版本（PG12 - 19alpha）。
 
 {{% alert title="2025-11 更新通知：阿里云/清华TUNA 恢复更新" color="info" %}}
-目前阿里云/清华TUNA镜像站已经恢复 PGDG 仓库的同步。
+目前阿里云/清华 TUNA 镜像站已经恢复 PGDG 仓库的同步。
 {{% /alert %}}
 
 

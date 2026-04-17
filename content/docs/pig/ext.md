@@ -158,7 +158,7 @@ pig ext status -v 16        # 显示 PG 16 已安装扩展
 
 **选项：**
 
-- `-c|--contrib`: 结果中包含 contrib 扩展
+- `-c|--contrib`：结果中包含 contrib 扩展
 
 
 ## ext scan
@@ -237,7 +237,7 @@ pig ext import -d /www/pigsty postgis # 指定路径导入
 
 **选项：**
 
-- `-d|--repo`: 指定仓库目录（默认：`/www/pigsty`）
+- `-d|--repo`：指定仓库目录（默认：`/www/pigsty`）
 
 
 ## ext link

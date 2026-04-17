@@ -3,7 +3,7 @@ title: 备份机制
 weight: 1702
 description: 备份脚本、定时任务、备份仓库与基础设施
 icon: fa-solid fa-gears
-categories: [任务, 概念]
+categories: [任务，概念]
 ---
 
 

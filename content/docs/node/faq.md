@@ -13,7 +13,7 @@ categories: [参考]
 
 ## 如何配置主机节点上的NTP服务？
 
-> NTP对于生产环境各项服务非常重要，如果没有配置 NTP，您可以使用公共 NTP 服务，或管理节点上的 Chronyd 作为标准时间。
+> NTP 对于生产环境各项服务非常重要，如果没有配置 NTP，您可以使用公共 NTP 服务，或管理节点上的 Chronyd 作为标准时间。
 
 如果您的节点已经配置了 NTP，可以通过设置 `node_ntp_enabled` 为 `false` 来保留现有配置，不进行任何变更。
 
@@ -45,7 +45,7 @@ ansible all -b -a 'chronyc -a makestep'     # 同步时间
 
 ## 远程节点无法通过SSH访问怎么办？
 
-如果目标机器隐藏在SSH跳板机后面， 或者进行了一些无法直接使用`ssh ip`访问的自定义操作， 可以使用诸如 `ansible_port`
+如果目标机器隐藏在 SSH 跳板机后面， 或者进行了一些无法直接使用`ssh ip`访问的自定义操作， 可以使用诸如 `ansible_port`
 或 `ansible_host` 这一类 [Ansible连接参数](https://docs.ansible.com/ansible/latest/inventory_guide/connection_details.html) 来指定各种 SSH 连接信息，如下所示：
 
 ```bash
@@ -67,7 +67,7 @@ pg-test:
 
 您可以在执行剧本时通过 `-k|-K` 参数传入 ssh 和 sudo 密码，甚至可以通过 `-e ansible_user=<another_user>` 使用另一个用户来运行剧本。
 
-但是，Pigsty强烈建议为管理员用户配置SSH**无密码登录**以及无密码的`sudo`。
+但是，Pigsty 强烈建议为管理员用户配置 SSH**无密码登录**以及无密码的`sudo`。
 
 
 
@@ -89,7 +89,7 @@ pg-test:
 您可以在配置中中使用 [`haproxy_services`](/docs/node/param#haproxy_services)
 来暴露服务，并使用 `node.yml -t haproxy_config,haproxy_reload` 来更新配置。
 
-以下是使用它暴露MinIO服务的示例：[暴露MinIO服务](/docs/minio/config#服务接入)
+以下是使用它暴露 MinIO 服务的示例：[暴露MinIO服务](/docs/minio/config#服务接入)
 
 
 
@@ -97,7 +97,7 @@ pg-test:
 
 ## 为什么我的 `/etc/yum.repos.d/*` 全没了？
 
-Pigsty会在infra节点上构建的本地软件仓库源中包含所有依赖项。而所有普通节点会根据 [`node_repo_modules`](/docs/node/param#node_repo_modules) 的默认配置 `local` 来引用并使用 Infra 节点上的本地软件源。
+Pigsty 会在 infra 节点上构建的本地软件仓库源中包含所有依赖项。而所有普通节点会根据 [`node_repo_modules`](/docs/node/param#node_repo_modules) 的默认配置 `local` 来引用并使用 Infra 节点上的本地软件源。
 
 这一设计从而避免了互联网访问，增强了安装过程的稳定性与可靠性。所有原有的源定义文件会被移动到 `/etc/yum.repos.d/backup` 目录中，您只要按需复制回来即可。
 

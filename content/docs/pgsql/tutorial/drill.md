@@ -5,7 +5,7 @@ date: 2025-01-11
 description: 高可用典型场景处理预案：三节点坏了两个节点，高可用不生效了，怎么从紧急状态中恢复？
 icon: fa-solid fa-arrow-right-from-bracket
 module: [PGSQL]
-categories: [任务, 概念]
+categories: [任务，概念]
 ---
 
 

@@ -48,7 +48,7 @@ docker_image_cache: /tmp/docker/*.tgz # Docker 镜像缓存 tarball 匹配模式
 
 参数名称： `docker_enabled`， 类型： `bool`， 层次：`G/C/I`
 
-是否在当前节点启用Docker？默认为： `false`，即不启用。
+是否在当前节点启用 Docker？默认为： `false`，即不启用。
 
 
 
@@ -87,7 +87,7 @@ Docker 存储驱动，默认为 `overlay2`。
 
 参数名称： `docker_cgroups_driver`， 类型： `enum`， 层次：`G/C/I`
 
-Docker使用的 CGroup FS 驱动，可以是 `cgroupfs` 或 `systemd`，默认值为： `systemd`
+Docker 使用的 CGroup FS 驱动，可以是 `cgroupfs` 或 `systemd`，默认值为： `systemd`
 
 
 

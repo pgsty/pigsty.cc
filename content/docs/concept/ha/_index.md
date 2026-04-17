@@ -23,15 +23,15 @@ Pigsty 内置了 HAProxy 负载均衡器用于自动流量切换，提供 DNS/VI
 
 ~~![pigsty-ha](/img/pigsty/ha.png)~~
 
-许多大型组织与核心机构已经在生产环境中长时间使用 Pigsty ，最大的部署有 25K CPU 核心与 220+ PostgreSQL 超大规格实例（64c / 512g / 3TB NVMe SSD）；在这一部署案例中，五年内经历了数十次硬件故障与各类事故，但依然可以保持高于 **99.999%** 的总体可用性战绩。
+许多大型组织与核心机构已经在生产环境中长时间使用 Pigsty，最大的部署有 25K CPU 核心与 220+ PostgreSQL 超大规格实例（64c / 512g / 3TB NVMe SSD）；在这一部署案例中，五年内经历了数十次硬件故障与各类事故，但依然可以保持高于 **99.999%** 的总体可用性战绩。
 
 -----------------
 
 **高可用（High-Availability）解决什么问题？**
 
-* 将数据安全C/IA中的可用性提高到一个新高度：RPO ≈ 0, RTO < 45s。
+* 将数据安全 C/IA 中的可用性提高到一个新高度：RPO ≈ 0, RTO < 45s。
 * 获得无缝滚动维护的能力，最小化维护窗口需求，带来极大便利。
-* 硬件故障可以立即自愈，无需人工介入，运维DBA可以睡个好觉。
+* 硬件故障可以立即自愈，无需人工介入，运维 DBA 可以睡个好觉。
 * 从库可以用于承载只读请求，分担主库负载，让资源得以充分利用。
 
 **高可用有什么代价？**
@@ -50,9 +50,9 @@ Pigsty 内置了 HAProxy 负载均衡器用于自动流量切换，提供 DNS/VI
 |:---------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------|
 | 单机 + <i class="fa-solid fa-music text-danger"></i> 什么也不做                                                                   | <i class="fas fa-circle-xmark text-danger"></i> **数据永久丢失，无法恢复**                 | <i class="fas fa-circle-xmark text-danger"></i> **数据全部丢失**                           |
 | 单机 + <i class="fa-solid fa-copy text-secondary"></i> 基础备份                                                                  | <i class="fa-solid fa-triangle-exclamation text-secondary"></i> 取决于备份大小与带宽（几小时） | <i class="fa-solid fa-triangle-exclamation text-secondary"></i> 丢失上一次备份后的数据（几个小时到几天） |
-| 单机 + <i class="fa-solid fa-copy text-primary"></i> 基础备份 + <i class="fa-solid fa-clock-rotate-left text-primary"></i> WAL归档 | <i class="fa-solid fa-triangle-exclamation text-primary"></i> 取决于备份大小与带宽（几小时）   | <i class="fa-solid fa-triangle-exclamation text-primary"></i> 丢失最后尚未归档的数据（几十MB）      |
-| 主从 + <i class="fa-solid fa-wrench text-secondary"></i> 手工故障切换                                                              | <i class="fa-solid fa-triangle-exclamation text-primary"></i>  十分钟              | <i class="fa-solid fa-circle-check text-primary"></i> 丢失复制延迟中的数据（约百KB）               |
-| 主从 + <i class="fa-solid fa-infinity text-primary"></i> 自动故障切换                                                              | <i class="fa-solid fa-circle-check text-primary"></i> 一分钟内                      | <i class="fa-solid fa-circle-check text-primary"></i> 丢失复制延迟中的数据（约百KB）               |
+| 单机 + <i class="fa-solid fa-copy text-primary"></i> 基础备份 + <i class="fa-solid fa-clock-rotate-left text-primary"></i> WAL 归档 | <i class="fa-solid fa-triangle-exclamation text-primary"></i> 取决于备份大小与带宽（几小时）   | <i class="fa-solid fa-triangle-exclamation text-primary"></i> 丢失最后尚未归档的数据（几十 MB）      |
+| 主从 + <i class="fa-solid fa-wrench text-secondary"></i> 手工故障切换                                                              | <i class="fa-solid fa-triangle-exclamation text-primary"></i>  十分钟              | <i class="fa-solid fa-circle-check text-primary"></i> 丢失复制延迟中的数据（约百 KB）               |
+| 主从 + <i class="fa-solid fa-infinity text-primary"></i> 自动故障切换                                                              | <i class="fa-solid fa-circle-check text-primary"></i> 一分钟内                      | <i class="fa-solid fa-circle-check text-primary"></i> 丢失复制延迟中的数据（约百 KB）               |
 | 主从 + <i class="fa-solid fa-infinity text-primary"></i> 自动故障切换 + <i class="fa-solid fa-rotate text-success"></i> 同步提交       | <i class="fa-solid fa-circle-check text-success"></i> 一分钟内                      | <i class="fa-solid fa-circle-check text-success"></i> 无数据丢失                          |
 
 
@@ -72,7 +72,7 @@ Pigsty 内置了 HAProxy 负载均衡器用于自动流量切换，提供 DNS/VI
 - HAProxy 对外暴露集群服务，并利⽤ Patroni 健康检查接口，自动分发流量至健康节点。
 - vip-manager 提供一个可选的二层 VIP，从 Etcd 中获取领导者信息，并将 VIP 绑定在集群主库所在节点上。
 
-当主库故障时，将触发新一轮领导者竞选，集群中最为健康的从库将胜出（LSN位点最高，数据损失最小者），并被提升为新的主库。 胜选从库提升后，读写流量将立即路由至新的主库。
+当主库故障时，将触发新一轮领导者竞选，集群中最为健康的从库将胜出（LSN 位点最高，数据损失最小者），并被提升为新的主库。 胜选从库提升后，读写流量将立即路由至新的主库。
 主库故障影响是 **写服务短暂不可用**：从主库故障到新主库提升期间，写入请求将被阻塞或直接失败，不可用时长通常在 15秒 ～ 30秒，通常不会超过 1 分钟。
 
 当从库故障时，只读流量将路由至其他从库，如果所有从库都故障，只读流量才会最终由主库承载。

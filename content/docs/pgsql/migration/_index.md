@@ -1,14 +1,14 @@
 ---
 title: 数据迁移
 weight: 1700
-description: 如何将现有的 PostgreSQL 集群以最小的停机时间迁移至新的、由Pigsty管理的 PostgreSQL 集群？
+description: 如何将现有的 PostgreSQL 集群以最小的停机时间迁移至新的、由 Pigsty 管理的 PostgreSQL 集群？
 icon: fa-solid fa-truck-moving
 module: [PGSQL]
-categories: [任务, 参考]
+categories: [任务，参考]
 ---
 
 
-Pigsty 内置了一个剧本 [`pgsql-migration.yml`](https://github.com/Vonng/pigsty/blob/main/pgsql-migration.yml) ，基于逻辑复制来实现在线数据库迁移。
+Pigsty 内置了一个剧本 [`pgsql-migration.yml`](https://github.com/Vonng/pigsty/blob/main/pgsql-migration.yml)，基于逻辑复制来实现在线数据库迁移。
 
 通过预生成的自动化脚本，应用停机时间可以缩减到几秒内。但请注意，逻辑复制需要 PostgreSQL 10 以上的版本才能工作。
 
@@ -19,9 +19,9 @@ Pigsty 内置了一个剧本 [`pgsql-migration.yml`](https://github.com/Vonng/pi
 
 ## 定义迁移任务
 
-想要使用Pigsty提供的在线迁移剧本，您需要创建一个定义文件，来描述迁移任务的细节。
+想要使用 Pigsty 提供的在线迁移剧本，您需要创建一个定义文件，来描述迁移任务的细节。
 
-请查看任务定义文件示例作为参考： [`files/migration/pg-meta.yml`](https://github.com/Vonng/pigsty/blob/main/files/migration/pg-meta.yml) 。
+请查看任务定义文件示例作为参考： [`files/migration/pg-meta.yml`](https://github.com/Vonng/pigsty/blob/main/files/migration/pg-meta.yml)。
 
 这个迁移任务要将 `pg-meta.meta` 在线迁移到 `pg-test.test`，前者称为 **源集群（SRC）**， 后者称为 **宿集群（DST）**。
 
@@ -120,7 +120,7 @@ pg_monitor_password: DBUser.Monitor
 
 **注意事项**
 
-如果担心拷贝序列号时出现主键冲突，您可以在拷贝时将所有序列号向前推进一段距离，例如 +1000 ，你可以使用 `./copy-seq` 加一个参数 `1000` 来实现这一点。
+如果担心拷贝序列号时出现主键冲突，您可以在拷贝时将所有序列号向前推进一段距离，例如 +1000，你可以使用 `./copy-seq` 加一个参数 `1000` 来实现这一点。
 
 你必须实现自己的 `./re-routing` 脚本，以将你的应用流量从 src 路由到 dst。 因为我们不知道你的流量是如何路由的（例如 dns, VIP, haproxy 或 pgbouncer）。 当然，您也可以手动完成这项操作...
 

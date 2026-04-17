@@ -80,7 +80,7 @@ stanza: pg-meta
 {{< tabpane persist="disabled" >}}
 {{% tab header="心跳生成" disabled=true /%}}
 {{< tab header="alias" lang="bash" >}}
-make rh     # 运行心跳: ssh 10.10.10.10 'sudo -iu postgres /pg/bin/pg-heartbeat'
+make rh     # 运行心跳：ssh 10.10.10.10 'sudo -iu postgres /pg/bin/pg-heartbeat'
 {{< /tab >}}
 {{< tab header="pgbench" lang="bash" >}}
 ssh 10.10.10.10 'sudo -iu postgres /pg/bin/pg-heartbeat'

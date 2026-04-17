@@ -15,7 +15,7 @@ categories: [参考]
 
 GitHub 仓库地址：[https://github.com/Vonng/pigsty-app/tree/master/db](https://github.com/Vonng/pigsty-app/tree/master/db)
 
-在线Demo地址：[https://demo.pigsty.cc/d/sf-survey](https://demo.pigsty.cc/d/sf-survey)
+在线 Demo 地址：[https://demo.pigsty.cc/d/sf-survey](https://demo.pigsty.cc/d/sf-survey)
 
 [![](/img/docs/app/sf-survey.jpg)](https://demo.pigsty.cc/d/sf-survey)
 

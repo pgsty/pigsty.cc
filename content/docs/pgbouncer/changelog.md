@@ -24,12 +24,12 @@ categories: [参考]
     3. `auth_query` 配置时未使用完全限定的对象名（默认配置，`<` 运算符未经 Schema 限定）
 
 - 修复
-    - 修复重连服务器后临时 SCRAM 认证的错误（ [#1432]，引入自 1.25.0）
-    - 为不支持 SIMD 的特殊架构补充缺失的类型定义（ [#1414]，引入自 1.25.0）
-    - 移除客户端在发送任何数据之前关闭连接时产生的噪音警告日志（ [#1420]，引入自 1.25.0）
-    - 防止潜在的 NULL 指针解引用（ [#1423]，引入自 1.25.0）
-    - 修复潜在的内存泄漏（ [#1422]，引入自 1.25.0）
-    - 修复 SCRAM 对服务端消息的解析（ [#1431]，引入自 1.25.0）
+    - 修复重连服务器后临时 SCRAM 认证的错误（[#1432]，引入自 1.25.0）
+    - 为不支持 SIMD 的特殊架构补充缺失的类型定义（[#1414]，引入自 1.25.0）
+    - 移除客户端在发送任何数据之前关闭连接时产生的噪音警告日志（[#1420]，引入自 1.25.0）
+    - 防止潜在的 NULL 指针解引用（[#1423]，引入自 1.25.0）
+    - 修复潜在的内存泄漏（[#1422]，引入自 1.25.0）
+    - 修复 SCRAM 对服务端消息的解析（[#1431]，引入自 1.25.0）
 
 [#1414]: https://github.com/pgbouncer/pgbouncer/pull/1414
 [#1420]: https://github.com/pgbouncer/pgbouncer/pull/1420
@@ -41,29 +41,29 @@ categories: [参考]
 **2025-11-09  -  PgBouncer 1.25.0  -  "The one with LDAP support（支持 LDAP 的版本）"**
 
 - 功能
-    * 新增 LDAP 认证支持！可通过 HBA 文件或使用 `auth_ldap_options` 进行配置。（ [#731]）
-    * 新增客户端侧直连 TLS 支持。这使客户端能够使用 PostgreSQL 17 引入的更快速的 TLS 连接建立方式。PgBouncer 暂不支持通过此更快方式连接 PostgreSQL 服务器。（ [#1359]）
-    * 在 `SHOW CLIENTS` 中新增空闲状态字段。（ [#1191]）
-    * 新增 `transaction_timeout` 设置，支持全局配置及用户级别配置。（ [#1242]）
-    * 若客户端排队等待超过 5 秒仍未获得连接，则向客户端发送 NOTICE 消息。此时长可通过 `query_wait_notify` 修改或禁用。（ [#1264]）
-    * 新增 `scram_iterations` 设置，允许运维人员在安全性与认证速度之间做出权衡。（ [#1339]）
-    * 新增 `client_tls13_ciphers` 与 `server_tls13_ciphers`，用于选择启用哪些 TLSv1.3 加密套件。（ [#1352]）
+    * 新增 LDAP 认证支持！可通过 HBA 文件或使用 `auth_ldap_options` 进行配置。（[#731]）
+    * 新增客户端侧直连 TLS 支持。这使客户端能够使用 PostgreSQL 17 引入的更快速的 TLS 连接建立方式。PgBouncer 暂不支持通过此更快方式连接 PostgreSQL 服务器。（[#1359]）
+    * 在 `SHOW CLIENTS` 中新增空闲状态字段。（[#1191]）
+    * 新增 `transaction_timeout` 设置，支持全局配置及用户级别配置。（[#1242]）
+    * 若客户端排队等待超过 5 秒仍未获得连接，则向客户端发送 NOTICE 消息。此时长可通过 `query_wait_notify` 修改或禁用。（[#1264]）
+    * 新增 `scram_iterations` 设置，允许运维人员在安全性与认证速度之间做出权衡。（[#1339]）
+    * 新增 `client_tls13_ciphers` 与 `server_tls13_ciphers`，用于选择启用哪些 TLSv1.3 加密套件。（[#1352]）
 - 变更
-    * 大幅提升临时 SCRAM 认证的性能。（ [#1338]）
-    * 允许 `KILL` 命令不指定数据库，此时表示终止所有数据库。（ [#1317]）
-    * 健康检查查询默认改为发送空查询，而非 `SELECT 1`。（ [#1233]）
-    * 将完整的 PAM 队列记录为警告日志，便于排查由此引起的慢查询原因。（ [#1297]）
-    * `RELOAD` 命令现在会报告重载过程中发生的任何错误。（ [#1231]）
-    * 在关闭过程中开放对 PgBouncer UNIX 套接字的管理连接访问。这使运维人员更容易排查 PgBouncer 进程无法关闭的原因，并可手动执行 `KILL_CLIENT` 终止卡住的连接。（ [#1305]）
-    * 修改 `mkauth.py`，不再添加已废弃的第三个字段。（ [#1365]）
-    * 改进 `disconnect_client` 和 `disconnect_server` 函数中的 `FATAL` 消息。（ [#1382]）
-    * 停止使用已废弃的 OpenSSL 函数 `EVP_PKEY_get0_EC_KEY`，该函数可能在某些 FIPS 实现中引发问题。（ [#1384]）
+    * 大幅提升临时 SCRAM 认证的性能。（[#1338]）
+    * 允许 `KILL` 命令不指定数据库，此时表示终止所有数据库。（[#1317]）
+    * 健康检查查询默认改为发送空查询，而非 `SELECT 1`。（[#1233]）
+    * 将完整的 PAM 队列记录为警告日志，便于排查由此引起的慢查询原因。（[#1297]）
+    * `RELOAD` 命令现在会报告重载过程中发生的任何错误。（[#1231]）
+    * 在关闭过程中开放对 PgBouncer UNIX 套接字的管理连接访问。这使运维人员更容易排查 PgBouncer 进程无法关闭的原因，并可手动执行 `KILL_CLIENT` 终止卡住的连接。（[#1305]）
+    * 修改 `mkauth.py`，不再添加已废弃的第三个字段。（[#1365]）
+    * 改进 `disconnect_client` 和 `disconnect_server` 函数中的 `FATAL` 消息。（[#1382]）
+    * 停止使用已废弃的 OpenSSL 函数 `EVP_PKEY_get0_EC_KEY`，该函数可能在某些 FIPS 实现中引发问题。（[#1384]）
 - 修复
-    * 修复涉及长密码（1024 个字符或以上）的崩溃问题。（ [#1215]）
-    * 修复使用 `server_tls_sslmode=verify-full` 时多主机连接的问题。（ [#1303]）
-    * 修复转发取消请求时偶发的 `FATAL` 错误。（ [#1383]）
-    * 修复 `SHOW CONFIG` 中参数的排序问题。（ [#1403]）
-    * 加固启动包的解析逻辑。（ [#1407]）
+    * 修复涉及长密码（1024 个字符或以上）的崩溃问题。（[#1215]）
+    * 修复使用 `server_tls_sslmode=verify-full` 时多主机连接的问题。（[#1303]）
+    * 修复转发取消请求时偶发的 `FATAL` 错误。（[#1383]）
+    * 修复 `SHOW CONFIG` 中参数的排序问题。（[#1403]）
+    * 加固启动包的解析逻辑。（[#1407]）
 
 [#731]: https://github.com/pgbouncer/pgbouncer/pull/731
 [#1191]: https://github.com/pgbouncer/pgbouncer/pull/1191
@@ -97,13 +97,13 @@ categories: [参考]
   * 修复 CVE-2025-2291：此前 PgBouncer 在通过 `auth_query` 查询密码哈希时，未考虑用户密码的 `VALID UNTIL` 有效期。因此，若将 PgBouncer 用作 PostgreSQL 前端的透明代理，可能允许已过期的密码通过验证。为解决此问题，文档中默认 `auth_query` 及自定义 `auth_query` 函数的示例均已更新，以正确处理 `VALID UNTIL`。如果您使用的是自定义 `auth_query`，请相应更新。如果您使用的是默认 `auth_query`，可以升级到 PgBouncer 1.24.1，或在旧版本中手动修改配置以使用新的默认 `auth_query`。
 
 - 修复
-  * 通过回退 HBA 文件中 `pam` 认证支持来修复 PAM 问题。（ [#1291]）（Bug 引入自 1.24.0）
-  * 修复用户连接计数递减时的 Bug。该修复已包含在 GitHub 上的 1.24.0 标签中，但发布压缩包未包含此修复。（ [#1238]）（Bug 引入自 1.24.0）
-  * 将 `test_load_balance_hosts.py` 添加到发布压缩包中。（ [#1282]）
-  * 修复测试相关问题，以便 Debian 打包人员可以正常运行测试。（ [#1266]，[#1250]）
+  * 通过回退 HBA 文件中 `pam` 认证支持来修复 PAM 问题。（[#1291]）（Bug 引入自 1.24.0）
+  * 修复用户连接计数递减时的 Bug。该修复已包含在 GitHub 上的 1.24.0 标签中，但发布压缩包未包含此修复。（[#1238]）（Bug 引入自 1.24.0）
+  * 将 `test_load_balance_hosts.py` 添加到发布压缩包中。（[#1282]）
+  * 修复测试相关问题，以便 Debian 打包人员可以正常运行测试。（[#1266]，[#1250]）
 
 - 文档
-  * 更新 `auth_query` 示例，设置安全的 `search_path`。（ [#1245]）
+  * 更新 `auth_query` 示例，设置安全的 `search_path`。（[#1245]）
 
 [#1238]: https://github.com/pgbouncer/pgbouncer/pull/1238
 [#1291]: https://github.com/pgbouncer/pgbouncer/pull/1291
@@ -115,33 +115,33 @@ categories: [参考]
 **2025-01-10  -  PgBouncer 1.24.0  -  "New year, new bouncer（新年，新连接池）"**
 
 - 功能
-  * 新增对 systemd `Type=notify-reload` 的支持，需要 systemd 253 或更高版本。（ [#1148]）
-  * 在管理控制台新增 `KILL_CLIENT` 命令，允许强制终止客户端连接。（ [#1147]）
-  * 新增 `max_user_client_connections` 设置，支持全局配置及用户级别配置。（ [#1137]）
-  * 新增 `max_db_client_connections` 设置，支持全局配置及数据库级别配置。（ [#1138]）
-  * 在 `SHOW USERS` 和 `SHOW DATABASES` 输出中新增 `current_client_connections` 计数器。（ [#1137]，[#1138]）
-  * 新增 `load_balance_hosts` 参数，支持**禁止**在多个主机之间进行负载均衡。（ [#736]）
-  * 在 `SHOW STATS` 中暴露预备语句使用计数器。（ [#1192]）
-  * 新增 `client_idle_timeout` 设置。（ [#1189]）
-  * 新增用户级别的 `query_timeout` 和 `reserve_pool_size`。（ [#1180]，[#1228]）
-  * 在 HBA 文件中启用 `pam` 认证支持。（ [#326]）
+  * 新增对 systemd `Type=notify-reload` 的支持，需要 systemd 253 或更高版本。（[#1148]）
+  * 在管理控制台新增 `KILL_CLIENT` 命令，允许强制终止客户端连接。（[#1147]）
+  * 新增 `max_user_client_connections` 设置，支持全局配置及用户级别配置。（[#1137]）
+  * 新增 `max_db_client_connections` 设置，支持全局配置及数据库级别配置。（[#1138]）
+  * 在 `SHOW USERS` 和 `SHOW DATABASES` 输出中新增 `current_client_connections` 计数器。（[#1137]，[#1138]）
+  * 新增 `load_balance_hosts` 参数，支持**禁止**在多个主机之间进行负载均衡。（[#736]）
+  * 在 `SHOW STATS` 中暴露预备语句使用计数器。（[#1192]）
+  * 新增 `client_idle_timeout` 设置。（[#1189]）
+  * 新增用户级别的 `query_timeout` 和 `reserve_pool_size`。（[#1180]，[#1228]）
+  * 在 HBA 文件中启用 `pam` 认证支持。（[#326]）
 
 - 变更
-  * TLS 配置未发生变更时，`RELOAD` 不再回收连接。此前只要执行 RELOAD，所有 TLS 连接都会被回收，可能导致短暂但严重的性能下降。现在仅在 TLS 设置实际发生变更时才会触发回收。（ [#1157]）
-  * 默认启用预备语句支持，`max_prepared_statements` 默认值现为 200。此默认值变更仅影响实际使用预备语句的客户端。如果您使用预备语句，建议阅读 [文档][prepared-docs] 中关于预备语句支持限制的说明。（ [#1144]）
-  * 套接字、客户端和服务器现在可通过唯一 ID 在管理输出中进行标识。此前使用指针标识，但指针在断开连接后常被新客户端复用。（ [#1172]）
-  * 对空 pidfile 提供更清晰的错误提示。（ [#1195]）
-  * `server_login_retry` 失败时，将原始错误返回给客户端。（ [#1152]）
-  * `auth_query` 出错时，在日志中记录原始服务器错误。（ [#1187]）
-  * 将 `default_pool_size` 设置为 0 表示不限制大小。（ [#1227]）
-  * 将数据库级别的 `reserve_pool` 设置重命名为 `reserve_pool_size`，原名称仍作为别名保留。（ [#1232]）
+  * TLS 配置未发生变更时，`RELOAD` 不再回收连接。此前只要执行 RELOAD，所有 TLS 连接都会被回收，可能导致短暂但严重的性能下降。现在仅在 TLS 设置实际发生变更时才会触发回收。（[#1157]）
+  * 默认启用预备语句支持，`max_prepared_statements` 默认值现为 200。此默认值变更仅影响实际使用预备语句的客户端。如果您使用预备语句，建议阅读 [文档][prepared-docs] 中关于预备语句支持限制的说明。（[#1144]）
+  * 套接字、客户端和服务器现在可通过唯一 ID 在管理输出中进行标识。此前使用指针标识，但指针在断开连接后常被新客户端复用。（[#1172]）
+  * 对空 pidfile 提供更清晰的错误提示。（[#1195]）
+  * `server_login_retry` 失败时，将原始错误返回给客户端。（[#1152]）
+  * `auth_query` 出错时，在日志中记录原始服务器错误。（[#1187]）
+  * 将 `default_pool_size` 设置为 0 表示不限制大小。（[#1227]）
+  * 将数据库级别的 `reserve_pool` 设置重命名为 `reserve_pool_size`，原名称仍作为别名保留。（[#1232]）
 
 - 修复
-  * 更好地处理各种低概率错误情况，例如 OOM 错误，此类情况此前可能导致崩溃或内存泄漏。（ [#1108]，[#1101]，[#1099]，[#1169]，[#1202]）
-  * 修正示例配置文件中 `server_tls_sslmode` 的默认值。（ [#1133]）
-  * 移除文档中对 `server_tls_protocols` 无效别名的描述。（ [#1155]）
-  * 修复同时使用 `auth_query` 和复制连接时的 Bug，该 Bug 会导致此类场景下的连接失败。（ [#1166]）
-  * PgBouncer 配置服务器参数期间忽略客户端取消请求。（ [#298]）
+  * 更好地处理各种低概率错误情况，例如 OOM 错误，此类情况此前可能导致崩溃或内存泄漏。（[#1108]，[#1101]，[#1099]，[#1169]，[#1202]）
+  * 修正示例配置文件中 `server_tls_sslmode` 的默认值。（[#1133]）
+  * 移除文档中对 `server_tls_protocols` 无效别名的描述。（[#1155]）
+  * 修复同时使用 `auth_query` 和复制连接时的 Bug，该 Bug 会导致此类场景下的连接失败。（[#1166]）
+  * PgBouncer 配置服务器参数期间忽略客户端取消请求。（[#298]）
 
 [prepared-docs]: /docs/pgbouncer/config/#max_prepared_statements
 
@@ -180,9 +180,9 @@ categories: [参考]
 **2024-08-02  -  PgBouncer 1.23.1  -  "Everything is put back in order（一切恢复有序）"**
 
 - 修复
-  * 修复 PgBouncer 重载配置后可能发生的段错误。（ [#1105]）（Bug 引入自 1.23.0）
-  * 修复所有已知的 `put_in_order` 崩溃问题。（ [#1120]）（新崩溃引入自 1.23.0）
-  * 将发布压缩包中缺失的测试所需文件补充完整。（ [#1124]）（文件缺失引入自 1.23.0）
+  * 修复 PgBouncer 重载配置后可能发生的段错误。（[#1105]）（Bug 引入自 1.23.0）
+  * 修复所有已知的 `put_in_order` 崩溃问题。（[#1120]）（新崩溃引入自 1.23.0）
+  * 将发布压缩包中缺失的测试所需文件补充完整。（[#1124]）（文件缺失引入自 1.23.0）
 
 [#1120]: https://github.com/pgbouncer/pgbouncer/pull/1120
 [#1105]: https://github.com/pgbouncer/pgbouncer/pull/1105
@@ -191,25 +191,25 @@ categories: [参考]
 **2024-07-03  -  PgBouncer 1.23.0  -  "Into the new beginnings（迈向新的起点）"**
 
 - 功能
-  * 新增滚动重启支持。SIGTERM 不再触发 PgBouncer 进程的立即关闭，现在改为执行"超安全关闭"：等待所有客户端断开连接后再关闭。新的 SIGTERM 行为允许在负载均衡器后对多个 PgBouncer 进程进行滚动重启，或在使用 `so_reuseport` 监听同一端口的场景下滚动重启。这是一个**次要的破坏性变更**：如果您在 Dockerfile 或 Systemd 服务文件中依赖 SIGTERM 的旧行为，现在应改用 SIGQUIT。（ [#902]）
-  * 新增对 `cert` 和 `peer` 认证方式的用户名映射支持。此功能提供了灵活性，使发起连接的用户无需与数据库用户相同。PgBouncer 对用户名映射的支持与 PostgreSQL 非常相似，但存在文档中列出的若干例外。（ [#996]）
-  * 新增通过 PgBouncer 进行复制连接的支持。（ [#876]）
+  * 新增滚动重启支持。SIGTERM 不再触发 PgBouncer 进程的立即关闭，现在改为执行"超安全关闭"：等待所有客户端断开连接后再关闭。新的 SIGTERM 行为允许在负载均衡器后对多个 PgBouncer 进程进行滚动重启，或在使用 `so_reuseport` 监听同一端口的场景下滚动重启。这是一个**次要的破坏性变更**：如果您在 Dockerfile 或 Systemd 服务文件中依赖 SIGTERM 的旧行为，现在应改用 SIGQUIT。（[#902]）
+  * 新增对 `cert` 和 `peer` 认证方式的用户名映射支持。此功能提供了灵活性，使发起连接的用户无需与数据库用户相同。PgBouncer 对用户名映射的支持与 PostgreSQL 非常相似，但存在文档中列出的若干例外。（[#996]）
+  * 新增通过 PgBouncer 进行复制连接的支持。（[#876]）
 
 - 变更
-  * 改进 `SHOW USERS` 输出中的连接列表展示。（ [#1040]）
-  * 允许按用户配置 `pool_size`。（ [#1049]）
-  * 允许按数据库配置 `server_lifetime`。（ [#1057]）
-  * 在 `SHOW USERS` 输出中支持列举动态创建的用户。（ [#1052]）
-  * 在 HBA 配置中支持 `all` 地址类型。（ [#1078]）
-  * 支持使用 systemd 时自动重启。（ [#1080]）
-  * 将 c-ares 最低版本要求提升至 1.9.0。（ [#1076]）
+  * 改进 `SHOW USERS` 输出中的连接列表展示。（[#1040]）
+  * 允许按用户配置 `pool_size`。（[#1049]）
+  * 允许按数据库配置 `server_lifetime`。（[#1057]）
+  * 在 `SHOW USERS` 输出中支持列举动态创建的用户。（[#1052]）
+  * 在 HBA 配置中支持 `all` 地址类型。（[#1078]）
+  * 支持使用 systemd 时自动重启。（[#1080]）
+  * 将 c-ares 最低版本要求提升至 1.9.0。（[#1076]）
 
 - 修复
-  * 修复处理大型及不完整启动包时的问题。（ [#1058]）
-  * 在 options 启动参数中新增对 `--config=value` 格式的支持。（ [#1064]）
-  * 修复 `avg_wait_time` 指标计算错误。（ [#727]）
-  * 新增与客户端协商 PostgreSQL 协议版本的支持。（ [#1007]）
-  * 为 `auth_query` 添加未完成请求的处理。（ [#1034]）
+  * 修复处理大型及不完整启动包时的问题。（[#1058]）
+  * 在 options 启动参数中新增对 `--config=value` 格式的支持。（[#1064]）
+  * 修复 `avg_wait_time` 指标计算错误。（[#727]）
+  * 新增与客户端协商 PostgreSQL 协议版本的支持。（[#1007]）
+  * 为 `auth_query` 添加未完成请求的处理。（[#1034]）
   * 多项文档与 CI 改进。
 
 [#996]: https://github.com/pgbouncer/pgbouncer/pull/996
@@ -494,10 +494,10 @@ categories: [参考]
 
 - 修复
   * 配置解析在多处增强了错误处理的严格程度。此前可能仅记录错误并继续运行的情况，现在将导致启动失败。这才是应有的正确行为，但部分代码之前并未做到。某些用户可能会发现其配置一直存在问题，并将无法继续使用。
-  * 修复了查询取消的处理逻辑。在某些情况下，取消请求会莫名地卡住很长时间，此问题现已解决。事实上，取消请求现在可以超出连接池大小两倍，因此不应再出现卡住的情况。（ [#542](https://github.com/pgbouncer/pgbouncer/pull/542)、 [#543](https://github.com/pgbouncer/pgbouncer/pull/543)）
+  * 修复了查询取消的处理逻辑。在某些情况下，取消请求会莫名地卡住很长时间，此问题现已解决。事实上，取消请求现在可以超出连接池大小两倍，因此不应再出现卡住的情况。（[#542](https://github.com/pgbouncer/pgbouncer/pull/542)、 [#543](https://github.com/pgbouncer/pgbouncer/pull/543)）
   * 修复了通过 HBA 混用 md5 和 scram 认证的问题。
   * 修复了 Windows 上使用 c-ares 的构建问题。
-  * 修复了令人头疼的"FIXME: query end, but query_start == 0"日志信息。我们现在已知其成因，您不应再看到这条信息。（ [#565](https://github.com/pgbouncer/pgbouncer/pull/565)）
+  * 修复了令人头疼的"FIXME: query end, but query_start == 0"日志信息。我们现在已知其成因，您不应再看到这条信息。（[#565](https://github.com/pgbouncer/pgbouncer/pull/565)）
   * 修复 `default_pool_size`、`min_pool_size` 和 `res_pool_size` 的热重载问题。此前重载这些配置项不会生效。
 
 - 清理
@@ -505,8 +505,8 @@ categories: [参考]
   * 照例新增了许多测试用例。
   * "unclean server"日志信息已进一步明确。现在会显示"client disconnect while server was not ready"或"client disconnect before everything was sent to the server"。前者可能发生在客户端断开时服务器仍有事务块未关闭的情况下，此前曾令部分用户感到困惑。
   * 不再允许将"pgbouncer"用作数据库名称。该名称为管理控制台保留，将其用作普通数据库名称从未真正正常工作过，现已明确禁止。
-  * 在关闭连接前发送给客户端的错误信息现在标记为 FATAL 而非 ERROR。部分客户端此前会因此产生困惑。（ [#564](https://github.com/pgbouncer/pgbouncer/pull/564)）
-  * 修复了 GCC 11 的编译警告。（ [#623](https://github.com/pgbouncer/pgbouncer/issues/623)）
+  * 在关闭连接前发送给客户端的错误信息现在标记为 FATAL 而非 ERROR。部分客户端此前会因此产生困惑。（[#564](https://github.com/pgbouncer/pgbouncer/pull/564)）
+  * 修复了 GCC 11 的编译警告。（[#623](https://github.com/pgbouncer/pgbouncer/issues/623)）
 
 --------
 
@@ -522,11 +522,11 @@ categories: [参考]
   * `SHOW CONFIG` 现在同时显示各配置项的默认值。
 
 - 修复
-  * 修复 FreeBSD 上的 `so_reuseport` 选项。PgBouncer 1.12.0 中的原始实现在 FreeBSD 上实际无法工作。（ [#504](https://github.com/pgbouncer/pgbouncer/pull/504)）
-  * 修复在旧版 systemd 系统上的编译问题。该问题在 1.14.0 中引入。（ [#505](https://github.com/pgbouncer/pgbouncer/issues/505)）
+  * 修复 FreeBSD 上的 `so_reuseport` 选项。PgBouncer 1.12.0 中的原始实现在 FreeBSD 上实际无法工作。（[#504](https://github.com/pgbouncer/pgbouncer/pull/504)）
+  * 修复在旧版 systemd 系统上的编译问题。该问题在 1.14.0 中引入。（[#505](https://github.com/pgbouncer/pgbouncer/issues/505)）
   * 修复了用于构建 Windows 二进制 zip 包的 Makefile 目标。
   * 长格式命令行选项现在也可以在 Windows 上正常使用。
-  * 修复全局 `auth_user` 配置项的行为。旧的行为取决于配置文件中的顺序，容易造成混乱且不稳定，现已不再如此。（ [#391](https://github.com/pgbouncer/pgbouncer/issues/391)、 [#393](https://github.com/pgbouncer/pgbouncer/issues/393)）
+  * 修复全局 `auth_user` 配置项的行为。旧的行为取决于配置文件中的顺序，容易造成混乱且不稳定，现已不再如此。（[#391](https://github.com/pgbouncer/pgbouncer/issues/391)、 [#393](https://github.com/pgbouncer/pgbouncer/issues/393)）
 
 - 清理
   * 提高测试的稳定性和可移植性。
@@ -559,8 +559,8 @@ categories: [参考]
   * 新增对 systemd 服务通知的支持。目前支持使用 `Type=notify` 服务单元，未来版本计划提供更深入的集成。
 
 - 修复
-  * 修复多行日志消息问题（ [libusual #24](https://github.com/libusual/libusual/pull/24)）
-  * 正确处理 `auth_query` 返回的空用户名（ [#340](https://github.com/pgbouncer/pgbouncer/pull/340)）
+  * 修复多行日志消息问题（[libusual #24](https://github.com/libusual/libusual/pull/24)）
+  * 正确处理 `auth_query` 返回的空用户名（[#340](https://github.com/pgbouncer/pgbouncer/pull/340)）
 
 - 清理
   * 移除了 `debian` 目录下的 Debian 打包文件，建议使用来自 https://apt.postgresql.org/ 的软件包。
@@ -581,8 +581,8 @@ categories: [参考]
   * 将 `SHOW VERSION` 的输出从 NOTICE 消息改为普通结果行返回。这样更易于处理，并与其他 `SHOW` 命令保持一致。
 
 - 修复
-  * 将统计列的类型从 `bigint` 改为 `numeric` 发送。这避免了在值超出 `bigint` 范围时某些客户端库报错的问题。（ [#360](https://github.com/pgbouncer/pgbouncer/pull/360)，[#401](https://github.com/pgbouncer/pgbouncer/pull/401) ）
-  * 修复 PAM 用户密码丢失的问题。（ [#285](https://github.com/pgbouncer/pgbouncer/issues/285) ）
+  * 将统计列的类型从 `bigint` 改为 `numeric` 发送。这避免了在值超出 `bigint` 范围时某些客户端库报错的问题。（[#360](https://github.com/pgbouncer/pgbouncer/pull/360)，[#401](https://github.com/pgbouncer/pgbouncer/pull/401)）
+  * 修复 PAM 用户密码丢失的问题。（[#285](https://github.com/pgbouncer/pgbouncer/issues/285)）
   * 接受启用了 SCRAM channel binding 的客户端。此前，支持 channel binding 的客户端（即 PostgreSQL 11+）在某些情况下连接 PgBouncer 时会失败。（PgBouncer 本身不支持 channel binding，此修复仅为兼容提供该功能的客户端。）
   * 修复与较新版本 musl-libc（Alpine Linux 所用）的编译兼容性问题。
 
@@ -601,18 +601,18 @@ categories: [参考]
 
 - 功能
   * 新增对客户端和服务端 SCRAM 认证的支持，添加了新的认证类型 `scram-sha-256`。
-  * 当存储密码为 md5 格式时，`auth_type=password` 的处理行为与 PostgreSQL 服务器保持一致。（ [#129](https://github.com/pgbouncer/pgbouncer/pull/129) ）
-  * 新增 `log_stats` 选项，用于禁止将统计信息打印到日志。（ [#287](https://github.com/pgbouncer/pgbouncer/pull/287) ）
+  * 当存储密码为 md5 格式时，`auth_type=password` 的处理行为与 PostgreSQL 服务器保持一致。（[#129](https://github.com/pgbouncer/pgbouncer/pull/129)）
+  * 新增 `log_stats` 选项，用于禁止将统计信息打印到日志。（[#287](https://github.com/pgbouncer/pgbouncer/pull/287)）
   * 在日志时间戳中添加时区信息。
   * 在日志前缀中以方括号包裹 PID。
 - 修复
   * 修复在针对较新版本 OpenSSL（使用 `-Werror`）运行时的 OpenSSL 配置检测问题。
-  * 修复使用 `auth_user` 时等待时间的计算错误，该问题会导致程序崩溃或报告错误的等待时间。（ [#393](https://github.com/pgbouncer/pgbouncer/pull/393) ）
+  * 修复使用 `auth_user` 时等待时间的计算错误，该问题会导致程序崩溃或报告错误的等待时间。（[#393](https://github.com/pgbouncer/pgbouncer/pull/393)）
   * 处理 PostgreSQL 12 新增的 GSSENCRequest 数据包。当前该处理不执行任何操作，但可避免出现关于"bad packet header"的令人困惑的错误信息。
 - 清理
   * 对测试套件进行了大量改进，并新增了若干测试用例。
   * 修复 Windows 上的多个编译器警告。
-  * 扩展了 `[users]` 节的文档说明，并在示例配置文件中补充了相关内容。（ [#330](https://github.com/pgbouncer/pgbouncer/pull/330) ）
+  * 扩展了 `[users]` 节的文档说明，并在示例配置文件中补充了相关内容。（[#330](https://github.com/pgbouncer/pgbouncer/pull/330)）
 
 --------
 
@@ -624,10 +624,10 @@ categories: [参考]
   * 新增启用和禁用 TLS 1.3 的支持。（TLS 1.3 在之前已可依赖 OpenSSL 库的版本获得支持，但现在配置 TLS 协议版本的相关设置项也正式支持 TLS 1.3。）
 - 修复
   * 修复 TLS 1.3 支持问题，该问题在 OpenSSL 1.1.1 和 1.1.1a 版本中存在（更早或更新版本不受影响）。
-  * 修复 `SHOW FDS` 命令中偶发的崩溃问题。（ [#311](https://github.com/pgbouncer/pgbouncer/issues/311) ）
-  * 修复大量取消请求到达时可能导致长时间宕机的问题。（ [#329](https://github.com/pgbouncer/pgbouncer/issues/329) ）
-  * 避免 PostgreSQL 执行 reload 后出现"unexpected response from login query"错误。（ [#220](https://github.com/pgbouncer/pgbouncer/issues/220) ）
-  * 修复 `idle_transaction_timeout` 的计算错误，该缺陷会在特定情况下导致过早超时。（ [#125](https://github.com/pgbouncer/pgbouncer/issues/125) ）
+  * 修复 `SHOW FDS` 命令中偶发的崩溃问题。（[#311](https://github.com/pgbouncer/pgbouncer/issues/311)）
+  * 修复大量取消请求到达时可能导致长时间宕机的问题。（[#329](https://github.com/pgbouncer/pgbouncer/issues/329)）
+  * 避免 PostgreSQL 执行 reload 后出现"unexpected response from login query"错误。（[#220](https://github.com/pgbouncer/pgbouncer/issues/220)）
+  * 修复 `idle_transaction_timeout` 的计算错误，该缺陷会在特定情况下导致过早超时。（[#125](https://github.com/pgbouncer/pgbouncer/issues/125)）
 - 清理
   * 使各类日志和错误信息更加精确。
   * 修复 Coverity 发现的若干问题（均对实际运行无显著影响）。
@@ -687,11 +687,11 @@ categories: [参考]
 - 修复
   * 更新 libusual 以支持 OpenSSL 1.1。
   * 不再尝试在 UNIX 套接字上使用 TLS。
-  * 解析 `pg_hba.conf` 时，遇到错误行后继续解析，而非拒绝整个文件。（ [#118](https://github.com/pgbouncer/pgbouncer/issues/118) ）
+  * 解析 `pg_hba.conf` 时，遇到错误行后继续解析，而非拒绝整个文件。（[#118](https://github.com/pgbouncer/pgbouncer/issues/118)）
   * 其他若干 HBA 解析修复。
-  * 修复取消查询时的竞争条件（race condition）。（ [#141](https://github.com/pgbouncer/pgbouncer/issues/141) ）
+  * 修复取消查询时的竞争条件（race condition）。（[#141](https://github.com/pgbouncer/pgbouncer/issues/141)）
 - 清理
-  * `auth_user` 设置现在也允许在全局范围内配置，而不仅限于单个数据库。（ [#142](https://github.com/pgbouncer/pgbouncer/issues/142) ）
+  * `auth_user` 设置现在也允许在全局范围内配置，而不仅限于单个数据库。（[#142](https://github.com/pgbouncer/pgbouncer/issues/142)）
   * 将控制台客户端和服务端编码设置为 `UTF8`。
 
 --------
@@ -703,10 +703,10 @@ categories: [参考]
 - 修复
   * 修复删除过期 pidfile 时的崩溃问题，该问题由 1.7.1 版本引入。
   * 禁用内存清理功能——该功能会破坏接管（takeover）流程，对生产负载也无益。该问题由 1.7.1 版本引入。
-  * 接管完成后，等待 pidfile 消失再启动。缓慢的内存清理关闭暴露了已存在的竞争条件。（ [#113](https://github.com/pgbouncer/pgbouncer/issues/113) ）
+  * 接管完成后，等待 pidfile 消失再启动。缓慢的内存清理关闭暴露了已存在的竞争条件。（[#113](https://github.com/pgbouncer/pgbouncer/issues/113)）
 - 清理
-  * 移除 DBGVER 处理，使构建结果可重现。（ [#112](https://github.com/pgbouncer/pgbouncer/issues/112) ）
-  * Antimake：对 `$(wildcard)` 的文件列表进行排序，较新版本的 gmake 已不再自动排序。（ [#111](https://github.com/pgbouncer/pgbouncer/issues/111) ）
+  * 移除 DBGVER 处理，使构建结果可重现。（[#112](https://github.com/pgbouncer/pgbouncer/issues/112)）
+  * Antimake：对 `$(wildcard)` 的文件列表进行排序，较新版本的 gmake 已不再自动排序。（[#111](https://github.com/pgbouncer/pgbouncer/issues/111)）
   * 在日志中显示 libssl 版本信息。
   * deb：开启完整的构建安全加固选项。
 
@@ -718,18 +718,18 @@ categories: [参考]
 
 - 修复
   * TLS：将 sslmode 中的"disabled"重命名为"disable"，与 PostgreSQL 的命名保持一致。
-  * TLS：`client_tls_sslmode=verify-ca/-full` 现在会拒绝未提供客户端证书的连接。（ [#104](https://github.com/pgbouncer/pgbouncer/issues/104) ）
-  * TLS：`client_tls_sslmode=allow/require` 在客户端提供证书时会对其进行验证。此前由于证书验证未配置，带有客户端证书的连接会失败。（ [#105](https://github.com/pgbouncer/pgbouncer/issues/105) ）
+  * TLS：`client_tls_sslmode=verify-ca/-full` 现在会拒绝未提供客户端证书的连接。（[#104](https://github.com/pgbouncer/pgbouncer/issues/104)）
+  * TLS：`client_tls_sslmode=allow/require` 在客户端提供证书时会对其进行验证。此前由于证书验证未配置，带有客户端证书的连接会失败。（[#105](https://github.com/pgbouncer/pgbouncer/issues/105)）
   * 修复释放数据库时的内存泄漏。
   * 修复 `tls_handshake()` 中潜在的内存泄漏。
   * 修复 `tls_handshake()` 中的 EOF 处理问题。
   * 修复 `asn1_time_parse` 兼容实现中 memset 大小过小的问题。
-  * 修复非 TLS 构建（`--without-openssl`）的编译问题。（ [#101](https://github.com/pgbouncer/pgbouncer/issues/101) ）
-  * 修复 Windows 构建中的若干问题。（ [#100](https://github.com/pgbouncer/pgbouncer/issues/100) ）
+  * 修复非 TLS 构建（`--without-openssl`）的编译问题。（[#101](https://github.com/pgbouncer/pgbouncer/issues/101)）
+  * 修复 Windows 构建中的若干问题。（[#100](https://github.com/pgbouncer/pgbouncer/issues/100)）
 - 清理
   * TLS：使用 `SSL_MODE_RELEASE_BUFFERS` 降低非活跃连接的内存占用。
   * 在退出时释放已分配的内存，便于使用内存泄漏检测工具。
-  * 改进 `server_reset_query` 的文档说明。（ [#110](https://github.com/pgbouncer/pgbouncer/issues/110) ）
+  * 改进 `server_reset_query` 的文档说明。（[#110](https://github.com/pgbouncer/pgbouncer/issues/110)）
   * 在示例配置文件中新增 TLS 相关选项。
 
 **2015-12-18  -  PgBouncer 1.7  -  "Colors Vary After Resurrection"（复活之后，色彩各异）**

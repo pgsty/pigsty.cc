@@ -9,14 +9,14 @@ categories: [参考]
 
 > 在这里的上下文中，用户指的是使用 SQL 命令 `CREATE USER/ROLE` 创建的，数据库集簇内的逻辑对象。
 
-在PostgreSQL中，用户直接隶属于数据库集簇而非某个具体的数据库。因此在创建业务数据库和业务用户时，应当遵循"先用户，后数据库"的原则。
+在 PostgreSQL 中，用户直接隶属于数据库集簇而非某个具体的数据库。因此在创建业务数据库和业务用户时，应当遵循"先用户，后数据库"的原则。
 
 
 ----------------
 
 ## 定义用户
 
-Pigsty通过两个配置参数定义数据库集群中的角色与用户：
+Pigsty 通过两个配置参数定义数据库集群中的角色与用户：
 
 - [`pg_default_roles`](/docs/pgsql/param#pg_default_roles)：定义全局统一使用的角色和用户
 - [`pg_users`](/docs/pgsql/param#pg_users)：在数据库集群层面定义业务用户和角色
@@ -74,13 +74,13 @@ pg-meta:
 - `login`、`superuser`、`createdb`、`createrole`、`inherit`、`replication`、`bypassrls` 是布尔标志。
 - `pgbouncer` 默认是禁用的：要将业务用户添加到 pgbouncer 用户列表，您应当显式将其设置为 `true`。
 
-**ACL系统**
+**ACL 系统**
 
 Pigsty 具有一套内置的，开箱即用的访问控制 / [ACL](/docs/concept/sec/ac/#默认角色与系统用户) 系统，您只需将以下四个默认角色分配给业务用户即可轻松使用：
 
 - `dbrole_readwrite`：全局读写访问的角色（主属业务使用的生产账号应当具有数据库读写权限）
 - `dbrole_readonly`：全局只读访问的角色（如果别的业务想要只读访问，可以使用此角色）
-- `dbrole_admin`：拥有DDL权限的角色 （业务管理员，需要在应用中建表的场景）
+- `dbrole_admin`：拥有 DDL 权限的角色 （业务管理员，需要在应用中建表的场景）
 - `dbrole_offline`：受限的只读访问角色（只能访问 [offline](/docs/pgsql/config/cluster#离线从库) 实例，通常是个人用户）
 
 如果您希望重新设计您自己的 ACL 系统，可以考虑定制以下参数和模板：
@@ -104,7 +104,7 @@ Pigsty 具有一套内置的，开箱即用的访问控制 / [ACL](/docs/concept
 bin/pgsql-user <cls> <username>    # pgsql-user.yml -l <cls> -e username=<username>
 ```
 
-不同于数据库，创建用户的剧本总是幂等的。当目标用户已经存在时，Pigsty会修改目标用户的属性使其符合配置。所以在现有集群上重复运行它通常不会有问题。
+不同于数据库，创建用户的剧本总是幂等的。当目标用户已经存在时，Pigsty 会修改目标用户的属性使其符合配置。所以在现有集群上重复运行它通常不会有问题。
 
 
 {{% alert title="请使用剧本创建用户" color="secondary" %}}
@@ -166,7 +166,7 @@ dbuser_monitor              = pool_mode=session max_user_connections=8
 
 Pgbouncer 使用和 PostgreSQL 同样的 `dbsu` 运行，默认为 `postgres` 操作系统用户，您可以使用 `pgb` 别名，使用 dbsu 访问 pgbouncer 管理功能。
 
-Pigsty 还提供了一个实用函数 `pgb-route` ，可以将 pgbouncer 数据库流量快速切换至集群中的其他节点，用于零停机迁移：
+Pigsty 还提供了一个实用函数 `pgb-route`，可以将 pgbouncer 数据库流量快速切换至集群中的其他节点，用于零停机迁移：
 
 连接池用户配置文件 `userlist.txt` 与 `useropts.txt` 会在您 [创建用户](#创建用户) 时自动刷新，并通过在线重载配置的方式生效，正常不会影响现有的连接。
 

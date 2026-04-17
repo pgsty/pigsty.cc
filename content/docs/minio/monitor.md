@@ -12,7 +12,7 @@ categories: [参考]
 
 ## 内置控制台
 
-MinIO 内置了一个相当不错的管控界面，默认您可以通过任意 MinIO 实例的管控端口 （[`minio_admin_port`](/docs/minio/param#minio_admin_port) ，默认为 `9001`），使用 HTTPS 访问此界面。
+MinIO 内置了一个相当不错的管控界面，默认您可以通过任意 MinIO 实例的管控端口 （[`minio_admin_port`](/docs/minio/param#minio_admin_port)，默认为 `9001`），使用 HTTPS 访问此界面。
 
 在大多数提供 MinIO 服务的配置模板中，MinIO 都会以 `m.pigsty` 的自定义服务对外暴露。在配置域名解析后，您可以通过 `https://m.pigsty` 访问 MinIO 管控界面。
 

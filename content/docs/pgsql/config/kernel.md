@@ -104,7 +104,7 @@ pg-analytics:
 
 ## 调优模板 (`pg_conf`)
 
-`pg_conf` 指向 `roles/pgsql/templates/*.yml` 中的 Patroni 模板。Pigsty内置四套通用模板：
+`pg_conf` 指向 `roles/pgsql/templates/*.yml` 中的 Patroni 模板。Pigsty 内置四套通用模板：
 
 | 模板         | 适用场景                   |
 |------------|------------------------|

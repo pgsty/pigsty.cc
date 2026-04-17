@@ -65,7 +65,7 @@ pg-citus:
 
 - [`pg_mode`](/docs/pgsql/param#pg_mode)： 必须设置为 `citus`，从而告知 Patroni 使用 Citus 模式。
 - [`pg_primary_db`](/docs/pgsql/param#pg_primary_db)：必须指定一个首要数据库的名称，该数据库必须安装 `citus` 扩展，这里名为 `citus`。
-- [`pg_shard`](/docs/pgsql/param#pg_shard)：必须指定一个统一的名称，字符串，作为所有水平分片PG集群的集群名称前缀，这里为 `pg-citus`。
+- [`pg_shard`](/docs/pgsql/param#pg_shard)：必须指定一个统一的名称，字符串，作为所有水平分片 PG 集群的集群名称前缀，这里为 `pg-citus`。
 - [`pg_group`](/docs/pgsql/param#pg_group)：必须指定一个分片号，从零开始依次分配的整数，`0` 号固定代表协调者集群，其他为 Worker 集群。
 - [`pg_cluster`](/docs/pgsql/param#pg_cluster) 必须与 [`pg_shard`](/docs/pgsql/param#pg_shard) 和 [`pg_group`](/docs/pgsql/param#pg_group) 组合后的结果对应。
 - [`pg_dbsu_password`](/docs/pgsql/param#pg_dbsu_password)：必须设置为非空的纯文本密码，否则 Citus 无法正常工作。

@@ -14,7 +14,7 @@ categories: [参考]
 
 GitHub 仓库地址：[https://github.com/Vonng/pigsty-app/tree/master/db](https://github.com/Vonng/pigsty-app/tree/master/db)
 
-在线Demo地址：[https://demo.pigsty.cc/d/db-engine](https://demo.pigsty.cc/d/db-engine)
+在线 Demo 地址：[https://demo.pigsty.cc/d/db-engine](https://demo.pigsty.cc/d/db-engine)
 
 [![](/img/docs/app/db-engine.jpg)](https://demo.pigsty.cc/d/db-engine)
 

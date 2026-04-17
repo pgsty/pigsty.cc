@@ -42,10 +42,10 @@ sidebar_root_for: self
 
 > [描述](/docs/pgsql/config) 你想要的 PostgreSQL 集群
 
-- [身份参数](/docs/concept/model/pgsql#身份参数)：定义PostgreSQL集群的身份参数
-- [读写主库](/docs/pgsql/config/cluster#读写主库)：创建由单一主库构成的单实例“集群“
+- [身份参数](/docs/concept/model/pgsql#身份参数)：定义 PostgreSQL 集群的身份参数
+- [读写主库](/docs/pgsql/config/cluster#读写主库)：创建由单一主库构成的单实例“集群”
 - [只读从库](/docs/pgsql/config/cluster#只读从库)：创建一主一从的两节点基础高可用集群
-- [离线从库](/docs/pgsql/config/cluster#离线从库)：创建专用于OLAP/ETL/交互式查询的特殊只读实例
+- [离线从库](/docs/pgsql/config/cluster#离线从库)：创建专用于 OLAP/ETL/交互式查询的特殊只读实例
 - [同步备库](/docs/pgsql/config/cluster#同步备库)：启用同步提交，以确保没有数据丢失
 - [法定人数](/docs/pgsql/config/cluster#法定人数提交)：使用法定人数同步提交以获得更高的一致性级别
 - [备份集群](/docs/pgsql/config/cluster#备份集群)：克隆现有集群，并保持同步（异地灾备集群）
@@ -82,12 +82,12 @@ sidebar_root_for: self
 
 > 使用幂等的 [剧本](/docs/pgsql/playbook)，将您的描述变为现实。
 
-- [`pgsql.yml`](/docs/pgsql/playbook#pgsqlyml) ：初始化PostgreSQL集群或添加新的从库。
-- [`pgsql-rm.yml`](/docs/pgsql/playbook#pgsql-rmyml) ：移除PostgreSQL集群，或移除某个实例
-- [`pgsql-user.yml`](/docs/pgsql/playbook#pgsql-useryml) ：在现有的PostgreSQL集群中添加新的业务用户
-- [`pgsql-db.yml`](/docs/pgsql/playbook#pgsql-dbyml) ：在现有的PostgreSQL集群中添加新的业务数据库
-- [`pgsql-monitor.yml`](/docs/pgsql/playbook#pgsql-monitoryml) ：将远程postgres实例纳入监控中
-- [`pgsql-migration.yml`](/docs/pgsql/playbook#pgsql-migrationyml) ：为现有的PostgreSQL集群生成迁移手册和脚本
+- [`pgsql.yml`](/docs/pgsql/playbook#pgsqlyml)：初始化 PostgreSQL 集群或添加新的从库。
+- [`pgsql-rm.yml`](/docs/pgsql/playbook#pgsql-rmyml)：移除 PostgreSQL 集群，或移除某个实例
+- [`pgsql-user.yml`](/docs/pgsql/playbook#pgsql-useryml)：在现有的 PostgreSQL 集群中添加新的业务用户
+- [`pgsql-db.yml`](/docs/pgsql/playbook#pgsql-dbyml)：在现有的 PostgreSQL 集群中添加新的业务数据库
+- [`pgsql-monitor.yml`](/docs/pgsql/playbook#pgsql-monitoryml)：将远程 postgres 实例纳入监控中
+- [`pgsql-migration.yml`](/docs/pgsql/playbook#pgsql-migrationyml)：为现有的 PostgreSQL 集群生成迁移手册和脚本
 
 ----------------
 
@@ -116,22 +116,22 @@ sidebar_root_for: self
 
 > [PGSQL](/docs/pgsql/param) 模块的配置参数列表
 
-- [`PG_ID`](/docs/pgsql/param#pg_id) : 计算和校验 PostgreSQL 实例身份
-- [`PG_BUSINESS`](/docs/pgsql/param#pg_business) : PostgreSQL业务对象定义
-- [`PG_INSTALL`](/docs/pgsql/param#pg_install) : 安装 PostgreSQL 内核，支持软件包与扩展插件
-- [`PG_BOOTSTRAP`](/docs/pgsql/param#pg_bootstrap) : 使用 Patroni 初始化高可用 PostgreSQL 集群
-- [`PG_PROVISION`](/docs/pgsql/param#pg_provision) : 创建 PostgreSQL 用户、数据库和其他数据库内对象
-- [`PG_BACKUP`](/docs/pgsql/param#pg_backup) : 使用 pgbackrest 设置备份仓库
-- [`PG_ACCESS`](/docs/pgsql/param#pg_access) : 暴露 PostgreSQL 服务，绑定 VIP （可选），以及注册DNS
-- [`PG_MONITOR`](/docs/pgsql/param#pg_monitor) : 为 PostgreSQL 实例添加监控，并注册至基础设施中。
-- [`PG_REMOVE`](/docs/pgsql/param#pg_remove) : 移除 PostgreSQL 集群，实例和相关资源。
+- [`PG_ID`](/docs/pgsql/param#pg_id)：计算和校验 PostgreSQL 实例身份
+- [`PG_BUSINESS`](/docs/pgsql/param#pg_business)：PostgreSQL 业务对象定义
+- [`PG_INSTALL`](/docs/pgsql/param#pg_install)：安装 PostgreSQL 内核，支持软件包与扩展插件
+- [`PG_BOOTSTRAP`](/docs/pgsql/param#pg_bootstrap)：使用 Patroni 初始化高可用 PostgreSQL 集群
+- [`PG_PROVISION`](/docs/pgsql/param#pg_provision)：创建 PostgreSQL 用户、数据库和其他数据库内对象
+- [`PG_BACKUP`](/docs/pgsql/param#pg_backup)：使用 pgbackrest 设置备份仓库
+- [`PG_ACCESS`](/docs/pgsql/param#pg_access)：暴露 PostgreSQL 服务，绑定 VIP （可选），以及注册 DNS
+- [`PG_MONITOR`](/docs/pgsql/param#pg_monitor)：为 PostgreSQL 实例添加监控，并注册至基础设施中。
+- [`PG_REMOVE`](/docs/pgsql/param#pg_remove)：移除 PostgreSQL 集群，实例和相关资源。
 
 
 ----------------
 
 ## 教程
 
-> 一些使用/管理 Pigsty中 PostgreSQL 数据库的教程。
+> 一些使用/管理 Pigsty 中 PostgreSQL 数据库的教程。
 
 - 克隆一套现有的 PostgreSQL 集群
 - 创建一套现有 PostgreSQL 集群的在线备份集群。
@@ -139,8 +139,8 @@ sidebar_root_for: self
 - 监控一个已有的 postgres 实例？
 - 使用逻辑复制从外部 PostgreSQL 迁移至 Pigsty 托管的 PostgreSQL 实例？
 - 使用 MinIO 作为集中的 pgBackRest 备份仓库。
-- 使用专门的 etcd 集群作为 PostgreSQL / Patroni 的 DCS ？
-- 使用专用的 haproxy 负载均衡器集群对外暴露暴露 PostgreSQL 服务。
+- 使用专门的 etcd 集群作为 PostgreSQL / Patroni 的 DCS？
+- 使用专用的 haproxy 负载均衡器集群对外暴露 PostgreSQL 服务。
 - 使用 pg-meta CMDB 替代 pigsty.yml 作为配置清单源。
 - 使用 PostgreSQL 作为 Grafana 的后端存储数据库？
 - 使用 PostgreSQL 作为 Prometheus 后端存储数据库？

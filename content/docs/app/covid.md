@@ -20,7 +20,7 @@ Covid 是 Pigsty 自带的，用于展示世界卫生组织官方疫情数据大
 
 GitHub 仓库地址：[https://github.com/Vonng/pigsty-app/tree/master/covid](https://github.com/Vonng/pigsty-app/tree/master/covid)
 
-在线Demo地址：[https://demo.pigsty.cc/d/covid](https://demo.pigsty.cc/d/covid)
+在线 Demo 地址：[https://demo.pigsty.cc/d/covid](https://demo.pigsty.cc/d/covid)
 
 [![](/img/docs/app/covid.jpg)](https://demo.pigsty.cc/d/covid)
 

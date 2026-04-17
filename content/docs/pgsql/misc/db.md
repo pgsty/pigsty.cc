@@ -12,7 +12,7 @@ categories: [参考]
 
 一组 PostgreSQL 服务器可以同时服务于多个 **数据库** （Database）。在 Pigsty 中，你可以在集群配置中 [定义](#定义数据库) 好所需的数据库。
 
-Pigsty会对默认模板数据库`template1`进行修改与定制，创建默认模式，安装默认扩展，配置默认权限，新创建的数据库默认会从`template1`继承这些设置。
+Pigsty 会对默认模板数据库`template1`进行修改与定制，创建默认模式，安装默认扩展，配置默认权限，新创建的数据库默认会从`template1`继承这些设置。
 
 默认情况下，所有业务数据库都会被1:1添加到 Pgbouncer 连接池中；`pg_exporter` 默认会通过 **自动发现** 机制查找所有业务数据库并进行库内对象监控。
 
@@ -74,20 +74,20 @@ pg-meta:
 唯一必选的字段是 `name`，它应该是当前 PostgreSQL 集群中有效且唯一的数据库名称，其他参数都有合理的默认值。
 
 - `name`：数据库名称，**必选项**。
-- `baseline`：SQL文件路径（Ansible搜索路径，通常位于`files`），用于初始化数据库内容。
+- `baseline`：SQL 文件路径（Ansible 搜索路径，通常位于`files`），用于初始化数据库内容。
 - `owner`：数据库属主，默认为`postgres`
 - `template`：数据库创建时使用的模板，默认为`template1`
 - `encoding`：数据库默认字符编码，默认为`UTF8`，默认与实例保持一致。建议不要配置与修改。
 - `locale`：数据库默认的本地化规则，默认为`C`，建议不要配置，与实例保持一致。
 - `lc_collate`：数据库默认的本地化字符串排序规则，默认与实例设置相同，建议不要修改，必须与模板数据库一致。强烈建议不要配置，或配置为`C`。
-- `lc_ctype`：数据库默认的LOCALE，默认与实例设置相同，建议不要修改或设置，必须与模板数据库一致。建议配置为C或`en_US.UTF8`。
+- `lc_ctype`：数据库默认的 LOCALE，默认与实例设置相同，建议不要修改或设置，必须与模板数据库一致。建议配置为 C 或`en_US.UTF8`。
 - `allowconn`：是否允许连接至数据库，默认为`true`，不建议修改。
-- `revokeconn`：是否回收连接至数据库的权限？默认为`false`。如果为`true`，则数据库上的`PUBLIC CONNECT`权限会被回收。只有默认用户（`dbsu|monitor|admin|replicator|owner`）可以连接。此外，`admin|owner` 会拥有GRANT OPTION，可以赋予其他用户连接权限。
+- `revokeconn`：是否回收连接至数据库的权限？默认为`false`。如果为`true`，则数据库上的`PUBLIC CONNECT`权限会被回收。只有默认用户（`dbsu|monitor|admin|replicator|owner`）可以连接。此外，`admin|owner` 会拥有 GRANT OPTION，可以赋予其他用户连接权限。
 - `tablespace`：数据库关联的表空间，默认为`pg_default`。
 - `connlimit`：数据库连接数限制，默认为`-1`，即没有限制。
-- `extensions`：对象数组 ，每一个对象定义了一个数据库中的**扩展**，以及其安装的**模式**。
-- `parameters`：KV对象，每一个KV定义了一个需要针对数据库通过`ALTER DATABASE`修改的参数。
-- `pgbouncer`：布尔选项，是否将该数据库加入到Pgbouncer中。所有数据库都会加入至Pgbouncer列表，除非显式指定`pgbouncer: false`。
+- `extensions`：对象数组，每一个对象定义了一个数据库中的**扩展**，以及其安装的**模式**。
+- `parameters`：KV 对象，每一个 KV 定义了一个需要针对数据库通过`ALTER DATABASE`修改的参数。
+- `pgbouncer`：布尔选项，是否将该数据库加入到 Pgbouncer 中。所有数据库都会加入至 Pgbouncer 列表，除非显式指定`pgbouncer: false`。
 - `comment`：数据库备注信息。
 - `pool_auth_user`：启用 [`pgbouncer_auth_query`](/docs/pgsql/param#pgbouncer_auth_query) 时，连接到此 pgbouncer 数据库的所有连接都将使用这里指定的用户执行认证查询。你需要使用一个具有访问 `pg_shadow` 表权限的用户。
 - `pool_mode`：数据库级别的 pgbouncer 池化模式，默认为 transaction，即事物池化。如果留空，会使用 [`pgbouncer_poolmode`](/docs/pgsql/param#pgbouncer_poolmode) 参数作为默认值。
@@ -116,7 +116,7 @@ bin/pgsql-db <cls> <dbname>    # pgsql-db.yml -l <cls> -e dbname=<dbname>
 
 下面是新建数据库时的一些注意事项：
 
-创建数据库的剧本默认为幂等剧本，不过当您当使用 `baseline` 脚本时就不一定了：这种情况下，通常不建议在现有数据库上重复执行此操作，除非您确定所提供的 baseline SQL也是幂等的。
+创建数据库的剧本默认为幂等剧本，不过当您当使用 `baseline` 脚本时就不一定了：这种情况下，通常不建议在现有数据库上重复执行此操作，除非您确定所提供的 baseline SQL 也是幂等的。
 
 我们不建议您手工创建新的数据库，特别当您使用默认的 pgbouncer 连接池时：除非您愿意手工负责维护 Pgbouncer 中的数据库列表并与 PostgreSQL 保持一致。
 使用 `pgsql-db` 工具或 `pgsql-db.yml` 剧本创建新数据库时，会将此数据库一并添加到 [Pgbouncer 数据库](#pgbouncer数据库) 列表中。
@@ -137,7 +137,7 @@ Pigsty 会默认为 PostgreSQL 实例 1:1 配置启用一个 Pgbouncer 连接池
 Pigsty 默认将 [`pg_databases`](/docs/pgsql/param#pg_databases) 中的所有数据库都添加到 pgbouncer 的数据库列表中。
 您可以通过在数据库 [定义](#定义数据库) 中显式设置 `pgbouncer: false` 来禁用特定数据库的 pgbouncer 连接池支持。
 
-Pgbouncer数据库列表在 `/etc/pgbouncer/database.txt` 中定义，数据库定义中关于连接池的参数会体现在这里：
+Pgbouncer 数据库列表在 `/etc/pgbouncer/database.txt` 中定义，数据库定义中关于连接池的参数会体现在这里：
 
 ```yaml
 meta                        = host=/var/run/postgresql mode=session
@@ -154,7 +154,7 @@ mongo                       = host=/var/run/postgresql
 
 Pgbouncer 使用和 PostgreSQL 同样的 `dbsu` 运行，默认为 `postgres` 操作系统用户，您可以使用 `pgb` 别名，使用 dbsu 访问 pgbouncer 管理功能。
 
-Pigsty 还提供了一个实用函数 `pgb-route` ，可以将 pgbouncer 数据库流量快速切换至集群中的其他节点，用于零停机迁移：
+Pigsty 还提供了一个实用函数 `pgb-route`，可以将 pgbouncer 数据库流量快速切换至集群中的其他节点，用于零停机迁移：
 
 ```bash
 # route pgbouncer traffic to another cluster member

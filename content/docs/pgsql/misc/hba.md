@@ -11,14 +11,14 @@ categories: [参考]
 
 认证是 [访问控制](/docs/concept/sec/ac/) 与 [权限系统](/docs/concept/sec/ac/#默认权限策略) 的基石，PostgreSQL 拥有多种 [认证](https://www.postgresql.org/docs/current/client-authentication.html) 方法。
 
-这里主要介绍 HBA：Host Based Authentication，HBA规则定义了哪些用户能够通过哪些方式从哪些地方访问哪些数据库。
+这里主要介绍 HBA：Host Based Authentication，HBA 规则定义了哪些用户能够通过哪些方式从哪些地方访问哪些数据库。
 
 
 ----------------
 
 ## 客户端认证
 
-要连接到PostgreSQL数据库，用户必须先经过认证（默认使用密码）。
+要连接到 PostgreSQL 数据库，用户必须先经过认证（默认使用密码）。
 
 您可以在连接字符串中提供密码（不安全）或使用`PGPASSWORD`环境变量或`.pgpass`文件传递密码。参考 [`psql`](https://www.postgresql.org/docs/current/app-psql.html#usage) 文档和 [PostgreSQL连接字符串](https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-CONNSTRING) 以获取更多详细信息。
 
@@ -36,13 +36,13 @@ psql postgres://dbuser_dba:DBUser.DBA@10.10.10.10:5432/meta
 PGPASSWORD=DBUser.DBA; psql -U dbuser_dba -h 10.10.10.10 -p 5432 -d meta
 ```
 
-默认配置下，Pigsty会启用服务端 SSL 加密，但不验证客户端 SSL 证书。要使用客户端SSL证书连接，你可以使用`PGSSLCERT`和`PGSSLKEY`环境变量或`sslkey`和`sslcert`参数提供客户端参数。
+默认配置下，Pigsty 会启用服务端 SSL 加密，但不验证客户端 SSL 证书。要使用客户端 SSL 证书连接，你可以使用`PGSSLCERT`和`PGSSLKEY`环境变量或`sslkey`和`sslcert`参数提供客户端参数。
 
 ```bash
 psql 'postgres://dbuser_dba:DBUser.DBA@10.10.10.10:5432/meta?sslkey=/path/to/dbuser_dba.key&sslcert=/path/to/dbuser_dba.crt'
 ```
 
-客户端证书（`CN` = 用户名）可以使用本地CA与 [`cert.yml`](https://github.com/Vonng/pigsty/blob/main/cert.yml) 剧本签发。
+客户端证书（`CN` = 用户名）可以使用本地 CA 与 [`cert.yml`](https://github.com/Vonng/pigsty/blob/main/cert.yml) 剧本签发。
 
 
 
@@ -51,14 +51,14 @@ psql 'postgres://dbuser_dba:DBUser.DBA@10.10.10.10:5432/meta?sslkey=/path/to/dbu
 
 ## 定义HBA
 
-在Pigsty中，有四个与HBA规则有关的参数：
+在 Pigsty 中，有四个与 HBA 规则有关的参数：
 
-- [`pg_hba_rules`](/docs/pgsql/param#pg_hba_rules)：postgres HBA规则
-- [`pg_default_hba_rules`](/docs/pgsql/param#pg_default_hba_rules)：postgres 全局默认HBA规则
-- [`pgb_hba_rules`](/docs/pgsql/param#pgb_hba_rules)：pgbouncer HBA规则
-- [`pgb_default_hba_rules`](/docs/pgsql/param#pgb_default_hba_rules)：pgbouncer 全局默认HBA规则
+- [`pg_hba_rules`](/docs/pgsql/param#pg_hba_rules)：postgres HBA 规则
+- [`pg_default_hba_rules`](/docs/pgsql/param#pg_default_hba_rules)：postgres 全局默认 HBA 规则
+- [`pgb_hba_rules`](/docs/pgsql/param#pgb_hba_rules)：pgbouncer HBA 规则
+- [`pgb_default_hba_rules`](/docs/pgsql/param#pgb_default_hba_rules)：pgbouncer 全局默认 HBA 规则
 
-这些都是 HBA 规则对象的数组，每个HBA规则都是以下两种形式之一的对象：
+这些都是 HBA 规则对象的数组，每个 HBA 规则都是以下两种形式之一的对象：
 
 
 ### 1. 原始形式
@@ -76,11 +76,11 @@ psql 'postgres://dbuser_dba:DBUser.DBA@10.10.10.10:5432/meta?sslkey=/path/to/dbu
 
 在这种形式中，`rules` 字段是字符串数组，每一行都是条原始形式的 [HBA规则](https://www.postgresql.org/docs/current/auth-pg-hba-conf.html)。`title` 字段会被渲染为一条注释，解释下面规则的作用。
 
-`role` 字段用于说明该规则适用于哪些实例角色，当实例的 [`pg_role`](/docs/pgsql/param#pg_role) 与`role`相同时，HBA规则将被添加到这台实例的 HBA 中。
-- `role: common`的HBA规则将被添加到所有实例上。
+`role` 字段用于说明该规则适用于哪些实例角色，当实例的 [`pg_role`](/docs/pgsql/param#pg_role) 与`role`相同时，HBA 规则将被添加到这台实例的 HBA 中。
+- `role: common`的 HBA 规则将被添加到所有实例上。
 - `role: primary` 的 HBA 规则只会添加到主库实例上。
 - `role: replica` 的 HBA 规则只会添加到从库实例上。
-- `role: offline`的HBA规则将被添加到离线实例上（ [`pg_role`](/docs/pgsql/param#pg_role) = `offline`或 [`pg_offline_query`](/docs/pgsql/param#pg_offline_query) = `true`）
+- `role: offline`的 HBA 规则将被添加到离线实例上（[`pg_role`](/docs/pgsql/param#pg_role) = `offline`或 [`pg_offline_query`](/docs/pgsql/param#pg_offline_query) = `true`）
 
 
 
@@ -99,53 +99,53 @@ psql 'postgres://dbuser_dba:DBUser.DBA@10.10.10.10:5432/meta?sslkey=/path/to/dbu
   order: 100       # 排序权重，数字小的排前面（可选，默认追加到最后）
 ```
 
-- `addr`: **where** 哪些IP地址段受本条规则影响？
-  - `world`: 所有的IP地址
-  - `intra`: 所有的内网IP地址段： `'10.0.0.0/8', '172.16.0.0/12', '192.168.0.0/16'`
-  - `infra`: Infra节点的IP地址
-  - `admin`: `admin_ip` 管理节点的IP地址
-  - `local`: 本地 Unix Socket
-  - `localhost`: 本地 Unix Socket 以及TCP 127.0.0.1/32 环回地址
-  - `cluster`: 同一个 PostgresQL 集群所有成员的IP地址
-  - `<cidr>`: 一个特定的 CIDR 地址块或IP地址
+- `addr`: **where** 哪些 IP 地址段受本条规则影响？
+  - `world`：所有的 IP 地址
+  - `intra`：所有的内网 IP 地址段： `'10.0.0.0/8', '172.16.0.0/12', '192.168.0.0/16'`
+  - `infra`：Infra 节点的 IP 地址
+  - `admin`: `admin_ip` 管理节点的 IP 地址
+  - `local`：本地 Unix Socket
+  - `localhost`：本地 Unix Socket 以及 TCP 127.0.0.1/32 环回地址
+  - `cluster`：同一个 PostgresQL 集群所有成员的 IP 地址
+  - `<cidr>`：一个特定的 CIDR 地址块或 IP 地址
 - `auth`: **how** 本条规则指定的认证方式？
-  - `deny`: 拒绝访问
-  - `trust`: 直接信任，不需要认证
-  - `pwd`: 密码认证，根据 [`pg_pwd_enc`](/docs/pgsql/param#pg_pwd_enc) 参数选用 `md5` 或 `scram-sha-256` 认证
+  - `deny`：拒绝访问
+  - `trust`：直接信任，不需要认证
+  - `pwd`：密码认证，根据 [`pg_pwd_enc`](/docs/pgsql/param#pg_pwd_enc) 参数选用 `md5` 或 `scram-sha-256` 认证
   - `sha`/`scram-sha-256`：强制使用 `scram-sha-256` 密码认证方式。
   - `md5`: `md5` 密码认证方式，但也可以兼容  `scram-sha-256` 认证，不建议使用。
-  - `ssl`: 在密码认证 `pwd` 的基础上，强制要求启用SSL
-  - `ssl-md5`: 在密码认证 `md5` 的基础上，强制要求启用SSL
-  - `ssl-sha`: 在密码认证 `sha` 的基础上，强制要求启用SSL
-  - `os`/`ident`: 使用操作系统用户的身份进行 `ident` 认证
-  - `peer`: 使用 `peer` 认证方式，类似于 `os ident`
-  - `cert`: 使用基于客户端SSL证书的认证方式，证书CN为用户名
+  - `ssl`：在密码认证 `pwd` 的基础上，强制要求启用 SSL
+  - `ssl-md5`：在密码认证 `md5` 的基础上，强制要求启用 SSL
+  - `ssl-sha`：在密码认证 `sha` 的基础上，强制要求启用 SSL
+  - `os`/`ident`：使用操作系统用户的身份进行 `ident` 认证
+  - `peer`：使用 `peer` 认证方式，类似于 `os ident`
+  - `cert`：使用基于客户端 SSL 证书的认证方式，证书 CN 为用户名
 - `user`: **who**：哪些用户受本条规则影响？
-  - `all`: 所有用户
-  - `${dbsu}`: 默认数据库超级用户 [`pg_dbsu`](/docs/pgsql/param#pg_dbsu)
-  - `${repl}`: 默认数据库复制用户 [`pg_replication_username`](/docs/pgsql/param#pg_replication_username)
-  - `${admin}`: 默认数据库管理用户 [`pg_admin_username`](/docs/pgsql/param#pg_admin_username)
-  - `${monitor}`: 默认数据库监控用户 [`pg_monitor_username`](/docs/pgsql/param#pg_monitor_username)
+  - `all`：所有用户
+  - `${dbsu}`：默认数据库超级用户 [`pg_dbsu`](/docs/pgsql/param#pg_dbsu)
+  - `${repl}`：默认数据库复制用户 [`pg_replication_username`](/docs/pgsql/param#pg_replication_username)
+  - `${admin}`：默认数据库管理用户 [`pg_admin_username`](/docs/pgsql/param#pg_admin_username)
+  - `${monitor}`：默认数据库监控用户 [`pg_monitor_username`](/docs/pgsql/param#pg_monitor_username)
   - 其他特定的用户或者角色
 - `db`: **which**：哪些数据库受本条规则影响？
-  - `all`: 所有数据库
-  - `replication`: 允许建立复制连接（不指定特定数据库）
+  - `all`：所有数据库
+  - `replication`：允许建立复制连接（不指定特定数据库）
   - 某个特定的数据库
 
 
 ### 3. 定义位置
 
-通常，全局的HBA定义在 `all.vars` 中，如果您想要修改全局默认的HBA规则，可以从 [`full.yml`](https://github.com/Vonng/pigsty/blob/main/conf/full.yml#L690) 模板中复制一份到 `all.vars` 中进行修改。
+通常，全局的 HBA 定义在 `all.vars` 中，如果您想要修改全局默认的 HBA 规则，可以从 [`full.yml`](https://github.com/Vonng/pigsty/blob/main/conf/full.yml#L690) 模板中复制一份到 `all.vars` 中进行修改。
 
-- [`pg_default_hba_rules`](/docs/pgsql/param#pg_default_hba_rules)：postgres 全局默认HBA规则
-- [`pgb_default_hba_rules`](/docs/pgsql/param#pgb_default_hba_rules)：pgbouncer 全局默认HBA规则
+- [`pg_default_hba_rules`](/docs/pgsql/param#pg_default_hba_rules)：postgres 全局默认 HBA 规则
+- [`pgb_default_hba_rules`](/docs/pgsql/param#pgb_default_hba_rules)：pgbouncer 全局默认 HBA 规则
 
 而集群特定的 HBA 规则定义在数据库的集群级配置中：
 
-- [`pg_hba_rules`](/docs/pgsql/param#pg_hba_rules)：postgres HBA规则
-- [`pgb_hba_rules`](/docs/pgsql/param#pgb_hba_rules)：pgbouncer HBA规则
+- [`pg_hba_rules`](/docs/pgsql/param#pg_hba_rules)：postgres HBA 规则
+- [`pgb_hba_rules`](/docs/pgsql/param#pgb_hba_rules)：pgbouncer HBA 规则
 
-下面是一些集群HBA规则的定义例子：
+下面是一些集群 HBA 规则的定义例子：
 
 ```yaml
 pg-meta:
@@ -166,7 +166,7 @@ pg-meta:
 
 HBA 是一个静态的规则配置文件，修改后需要重载才能生效。默认的 HBA 规则集合因为不涉及 Role 与集群成员，所以通常不需要重载。
 
-如果您设计的 HBA 使用了特定的实例角色限制，或者集群成员限制，那么当集群实例成员发生变化（新增/下线/主从切换），一部分HBA规则的生效条件/涉及范围发生变化，通常也需要 [重载HBA](/docs/pgsql/admin/cluster#刷新hba) 以反映最新变化。
+如果您设计的 HBA 使用了特定的实例角色限制，或者集群成员限制，那么当集群实例成员发生变化（新增/下线/主从切换），一部分 HBA 规则的生效条件/涉及范围发生变化，通常也需要 [重载HBA](/docs/pgsql/admin/cluster#刷新hba) 以反映最新变化。
 
 要重新加载 postgres/pgbouncer 的 hba 规则：
 
@@ -301,7 +301,7 @@ host     all                +dbrole_offline    192.168.0.0/16     scram-sha-256
 
 
 
-<details><summary>示例: 渲染 pgb_hba.conf</summary>
+<details><summary>示例：渲染 pgb_hba.conf</summary>
 
 ```ini
 #==============================================================#

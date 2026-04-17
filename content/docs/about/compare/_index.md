@@ -69,13 +69,13 @@ categories: [参考]
 | 消息队列     | <i class="fas fa-circle-check text-success"></i> pgq 3.5.0                      |              <i class="fas fa-circle-xmark text-danger"></i>               |         <i class="fas fa-circle-xmark text-danger"></i>          |
 | DuckDB   | <i class="fas fa-circle-check text-success"></i> duckdb_fdw 1.1                 |              <i class="fas fa-circle-xmark text-danger"></i>               |         <i class="fas fa-circle-xmark text-danger"></i>          |
 | 模糊分词     | <i class="fas fa-circle-check text-success"></i> zhparser 1.1 / pg_bigm 1.2     |  <i class="fas fa-circle-check text-success"></i> zhparser 1.0 / pg_jieba  |   <i class="fas fa-circle-check text-success"></i> pg_bigm 1.2   |
-| CDC抽取    | <i class="fas fa-circle-check text-success"></i> wal2json 2.5.3                 |              <i class="fas fa-circle-xmark text-danger"></i>               |  <i class="fas fa-circle-check text-success"></i> wal2json 2.5   |
+| CDC 抽取    | <i class="fas fa-circle-check text-success"></i> wal2json 2.5.3                 |              <i class="fas fa-circle-xmark text-danger"></i>               |  <i class="fas fa-circle-check text-success"></i> wal2json 2.5   |
 | 膨胀治理     | <i class="fas fa-circle-check text-success"></i> pg_repack 1.5.0                |      <i class="fas fa-circle-check text-success"></i> pg_repack 1.4.8      | <i class="fas fa-circle-check text-success"></i> pg_repack 1.5.0 |
 {.full-width}
 
 <details><summary>AWS RDS PG 可用扩展</summary>
 
-AWS RDS for PostgreSQL 16 可用扩展（已刨除PG自带扩展）
+AWS RDS for PostgreSQL 16 可用扩展（已刨除 PG 自带扩展）
 
 | name                 | pg16 | pg15 | pg14 | pg13 | pg12 | pg11 | pg10 |
 |:---------------------|:-----|:-----|:-----|:-----|:-----|:-----|:-----|
@@ -135,43 +135,43 @@ AWS RDS for PostgreSQL 16 可用扩展（已刨除PG自带扩展）
 
 <details><summary>Aliyun RDS PG 可用扩展</summary>
 
-阿里云 RDS for PostgreSQL 16 可用扩展（已刨除PG自带扩展） 
+阿里云 RDS for PostgreSQL 16 可用扩展（已刨除 PG 自带扩展） 
 
 | name                 | pg16 | pg15 | pg14 | pg13 | pg12 | pg11 | pg10 | ali\_desc                                |
 |:---------------------|:-----|:-----|:-----|:-----|:-----|:-----|:-----|:-----------------------------------------|
 | bloom                | 1    | 1    | 1    | 1    | 1    | 1    | 1    | 提供一种基于布鲁姆过滤器的索引访问方法。                     |
-| btree\_gin           | 1.3  | 1.3  | 1.3  | 1.3  | 1.3  | 1.3  | 1.2  | 提供一个为多种数据类型和所有enum类型实现B树等价行为的GIN操作符类示例。  |
-| btree\_gist          | 1.7  | 1.7  | 1.6  | 1.5  | 1.5  | 1.5  | 1.5  | 提供一个为多种数据类型和所有enum类型实现B树等价行为的GiST操作符类示例。 |
+| btree\_gin           | 1.3  | 1.3  | 1.3  | 1.3  | 1.3  | 1.3  | 1.2  | 提供一个为多种数据类型和所有 enum 类型实现 B 树等价行为的 GIN 操作符类示例。  |
+| btree\_gist          | 1.7  | 1.7  | 1.6  | 1.5  | 1.5  | 1.5  | 1.5  | 提供一个为多种数据类型和所有 enum 类型实现 B 树等价行为的 GiST 操作符类示例。 |
 | citext               | 1.6  | 1.6  | 1.6  | 1.6  | 1.6  | 1.5  | 1.4  | 提供一种大小写不敏感的字符串类型。                        |
 | cube                 | 1.5  | 1.5  | 1.5  | 1.4  | 1.4  | 1.4  | 1.2  | 提供一种数据类型来表示多维立方体。                        |
 | dblink               | 1.2  | 1.2  | 1.2  | 1.2  | 1.2  | 1.2  | 1.2  | 跨库操作表。                                   |
 | dict\_int            | 1    | 1    | 1    | 1    | 1    | 1    | 1    | 附加全文搜索词典模板的示例。                           |
 | earthdistance        | 1.1  | 1.1  | 1.1  | 1.1  | 1.1  | 1.1  | 1.1  | 提供两种不同的方法来计算地球表面的大圆距离。                   |
 | fuzzystrmatch        | 1.2  | 1.1  | 1.1  | 1.1  | 1.1  | 1.1  | 1.1  | 判断字符串之间的相似性和距离。                          |
-| hstore               | 1.8  | 1.8  | 1.8  | 1.7  | 1.6  | 1.5  | 1.4  | 在单一PostgreSQL值中存储键值对。                    |
+| hstore               | 1.8  | 1.8  | 1.8  | 1.7  | 1.6  | 1.5  | 1.4  | 在单一 PostgreSQL 值中存储键值对。                    |
 | intagg               | 1.1  | 1.1  | 1.1  | 1.1  | 1.1  | 1.1  | 1.1  | 提供一个整数聚集器和一个枚举器。                         |
 | intarray             | 1.5  | 1.5  | 1.5  | 1.3  | 1.2  | 1.2  | 1.2  | 提供一些有用的函数和操作符来操纵不含空值的整数数组。               |
 | isn                  | 1.2  | 1.2  | 1.2  | 1.2  | 1.2  | 1.2  | 1.1  | 按照一个硬编码的前缀列表对输入进行验证，也被用来在输出时连接号码。        |
 | ltree                | 1.2  | 1.2  | 1.2  | 1.2  | 1.1  | 1.1  | 1.1  | 用于表示存储在一个层次树状结构中的数据的标签。                  |
 | pg\_buffercache      | 1.4  | 1.3  | 1.3  | 1.3  | 1.3  | 1.3  | 1.3  | 提供一种方法实时检查共享缓冲区。                         |
 | pg\_freespacemap     | 1.2  | 1.2  | 1.2  | 1.2  | 1.2  | 1.2  | 1.2  | 检查空闲空间映射（FSM）。                           |
-| pg\_prewarm          | 1.2  | 1.2  | 1.2  | 1.2  | 1.2  | 1.2  | 1.1  | 提供一种方便的方法把数据载入到操作系统缓冲区或者PostgreSQL缓冲区。   |
-| pg\_stat\_statements | 1.1  | 1.1  | 1.9  | 1.8  | 1.7  | 1.6  | 1.6  | 提供一种方法追踪服务器执行的所有SQL语句的执行统计信息。            |
+| pg\_prewarm          | 1.2  | 1.2  | 1.2  | 1.2  | 1.2  | 1.2  | 1.1  | 提供一种方便的方法把数据载入到操作系统缓冲区或者 PostgreSQL 缓冲区。   |
+| pg\_stat\_statements | 1.1  | 1.1  | 1.9  | 1.8  | 1.7  | 1.6  | 1.6  | 提供一种方法追踪服务器执行的所有 SQL 语句的执行统计信息。            |
 | pg\_trgm             | 1.6  | 1.6  | 1.6  | 1.5  | 1.4  | 1.4  | 1.3  | 提供字母数字文本相似度的函数和操作符，以及支持快速搜索相似字符串的索引操作符类。 |
-| pgcrypto             | 1.3  | 1.3  | 1.3  | 1.3  | 1.3  | 1.3  | 1.3  | 为PostgreSQL提供了密码函数。                      |
+| pgcrypto             | 1.3  | 1.3  | 1.3  | 1.3  | 1.3  | 1.3  | 1.3  | 为 PostgreSQL 提供了密码函数。                      |
 | pgrowlocks           | 1.2  | 1.2  | 1.2  | 1.2  | 1.2  | 1.2  | 1.2  | 提供一个函数来显示一个指定表的行锁定信息。                    |
 | pgstattuple          | 1.5  | 1.5  | 1.5  | 1.5  | 1.5  | 1.5  | 1.5  | 提供多种函数来获得元组层的统计信息。                       |
-| plperl               | 1    | 1    | 1    | 1    | 1    | 1    | 1    | 提供perl过程语言。                              |
-| plpgsql              | 1    | 1    | 1    | 1    | 1    | 1    | 1    | 提供SQL过程语言。                               |
-| pltcl                | 1    | 1    | 1    | 1    | 1    | 1    | 1    | 提供tcl过程语言。                               |
+| plperl               | 1    | 1    | 1    | 1    | 1    | 1    | 1    | 提供 perl 过程语言。                              |
+| plpgsql              | 1    | 1    | 1    | 1    | 1    | 1    | 1    | 提供 SQL 过程语言。                               |
+| pltcl                | 1    | 1    | 1    | 1    | 1    | 1    | 1    | 提供 tcl 过程语言。                               |
 | postgres\_fdw        | 1.1  | 1.1  | 1.1  | 1    | 1    | 1    | 1    | 跨库操作表。                                   |
 | sslinfo              | 1.2  | 1.2  | 1.2  | 1.2  | 1.2  | 1.2  | 1.2  | 提供当前客户端提供的 SSL 证书的有关信息。                  |
 | tablefunc            | 1    | 1    | 1    | 1    | 1    | 1    | 1    | 包括多个返回表的函数。                              |
-| tsm\_system\_rows    | 1    | 1    | 1    | 1    | 1    | 1    | 1    | 提供表采样方法SYSTEM\_ROWS。                     |
-| tsm\_system\_time    | 1    | 1    | 1    | 1    | 1    | 1    | 1    | 提供了表采样方法SYSTEM\_TIME。                    |
+| tsm\_system\_rows    | 1    | 1    | 1    | 1    | 1    | 1    | 1    | 提供表采样方法 SYSTEM\_ROWS。                     |
+| tsm\_system\_time    | 1    | 1    | 1    | 1    | 1    | 1    | 1    | 提供了表采样方法 SYSTEM\_TIME。                    |
 | unaccent             | 1.1  | 1.1  | 1.1  | 1.1  | 1.1  | 1.1  | 1.1  | 文本搜索字典，它能从词位中移除重音（附加符号）。                 |
 | uuid-ossp            | 1.1  | 1.1  | 1.1  | 1.1  | 1.1  | 1.1  | 1.1  | 提供函数使用几种标准算法之一产生通用唯一标识符（UUID）。           |
-| xml2                 | 1.1  | 1.1  | 1.1  | 1.1  | 1.1  | 1.1  | 1.1  | 提供XPath查询和XSLT功能。                        |
+| xml2                 | 1.1  | 1.1  | 1.1  | 1.1  | 1.1  | 1.1  | 1.1  | 提供 XPath 查询和 XSLT 功能。                        |
 
 
 </details>
@@ -187,8 +187,8 @@ AWS RDS for PostgreSQL 16 可用扩展（已刨除PG自带扩展）
 |--------------|----------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 最佳性能         | [PGTPC on NVME SSD 评测](https://github.com/Vonng/pgtpc/tree/master/sysbench) sysbench oltp_rw | [RDS PG 性能白皮书](https://help.aliyun.com/document_detail/101470.html) sysbench oltp 场景 每核 QPS 4000 ~ 8000 |                                                                                                                                                                     |
 | 存储规格：最高档容量   | 32TB / [NVME SSD](https://en.shannon-sys.com/product.html?name=gen_4)                        | 32 TB / **ESSD PL3**                                                                                    | 64 TB / **io2** [EBS](https://aws.amazon.com/cn/blogs/storage/achieve-higher-database-performance-using-amazon-ebs-io2-block-express-volumes/) Block Express        |
-| 存储规格：最高档IOPS | 4K随机读：最大3M，随机写 2000~350K                                                                     | 4K随机读：最大 1M                                                                                             | 16K随机IOPS： 256K                                                                                                                                                     |
-| 存储规格：最高档延迟   | 4K随机读：75µs，随机写 15µs                                                                          | 4K随机读：200µs                                                                                             | 500µs / 推断为16K随机IO                                                                                                                                                  |
+| 存储规格：最高档 IOPS | 4K 随机读：最大3M，随机写 2000~350K                                                                     | 4K 随机读：最大 1M                                                                                             | 16K 随机 IOPS： 256K                                                                                                                                                     |
+| 存储规格：最高档延迟   | 4K 随机读：75µs，随机写 15µs                                                                          | 4K 随机读：200µs                                                                                             | 500µs / 推断为16K 随机 IO                                                                                                                                                  |
 | 存储规格：最高档可靠性  | UBER < 1e-18，折合18个9 MTBF: 200万小时 5DWPD，持续三年                                                  | 可靠性 9个9， 合 UBER 1e-9 [存储与数据可靠性](https://help.aliyun.com/document_detail/476273.html)                    | **持久性**：99.999%，5个9 （0.001% 年故障率） [io2 说明](https://aws.amazon.com/cn/blogs/storage/achieve-higher-database-performance-using-amazon-ebs-io2-block-express-volumes/) |
 | 存储规格：最高档成本   | 31.5 ¥/TB·月 ( 5年质保均摊 / 3.2T / 企业级 / MLC )                                                    | 3200¥/TB·月 （原价 6400¥，包月4000¥） 3年预付整体打5折才有此价格                                                            | 1900 ¥/TB·月 使用最大规格 65536GB / 256K IOPS 最大优惠                                                                                                                         |
 {.full-width}
@@ -208,13 +208,13 @@ Pigsty 提供了 638 与 PostgreSQL 有关的监控指标，而 AWS RDS 只有 9
 此外，也有一些项目提供了监控 PostgreSQL 的能力，但都相对比较简单初级：
 
 - [pgwatch](https://pgwatch.com/)： 123 类指标
-- [pgmonitor](https://github.com/CrunchyData/pgmonitor) ： 156 类指标
-- [datadog](https://docs.datadoghq.com/integrations/postgres) ： 69 类指标
+- [pgmonitor](https://github.com/CrunchyData/pgmonitor)： 156 类指标
+- [datadog](https://docs.datadoghq.com/integrations/postgres)： 69 类指标
 - [pgDash](https://pgdash.io/)
 - [ClusterControl](https://severalnines.com/product/clustercontrol)
 - [pganalyze](https://pganalyze.com/)
-- [Aliyun RDS](https://help.aliyun.com/document_detail/102748.html) ： 8 类指标
-- [AWS RDS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Monitoring.OS.html) ： 99 类指标
+- [Aliyun RDS](https://help.aliyun.com/document_detail/102748.html)： 8 类指标
+- [AWS RDS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Monitoring.OS.html)： 99 类指标
 - [Azure RDS](https://docs.microsoft.com/en-us/azure/postgresql/)
 
 
@@ -232,7 +232,7 @@ Pigsty 提供了 638 与 PostgreSQL 有关的监控指标，而 AWS RDS 只有 9
 | 可定制参数点        | [Pigsty Parameters](/docs/conf) 283 个   |                                                                                                                       |               |
 | 服务与支持         | 提供商业订阅支持兜底                              | 提供售后工单支持                                                                                                              | 提供售后工单支持      |
 | 无互联网部署        | 可离线安装部署                                 | N/A                                                                                                                   | N/A           |
-| 数据库迁移         | 提供从现有v10+ PG实例基于逻辑复制不停机迁移至Pigsty托管实例的剧本 | 提供上云辅助迁移 [Aliyun RDS 数据同步](https://help.aliyun.com/document_detail/322179.html?spm=a2c4g.11186623.0.0.5fb374c9OOi4Dm) |               |
+| 数据库迁移         | 提供从现有 v10+ PG 实例基于逻辑复制不停机迁移至 Pigsty 托管实例的剧本 | 提供上云辅助迁移 [Aliyun RDS 数据同步](https://help.aliyun.com/document_detail/322179.html?spm=a2c4g.11186623.0.0.5fb374c9OOi4Dm) |               |
 {.full-width}
 
 -----------
@@ -254,7 +254,7 @@ Pigsty 提供了 638 与 PostgreSQL 有关的监控指标，而 AWS RDS 只有 9
 一些提供管理 PostgreSQL 能力的软件与供应商
 
 - [Aiven](https://aiven.io/)： 闭源商业云托管方案
-- [Percona](https://www.percona.com/software/postgresql-distribution)： 商业咨询，简易PG发行版
+- [Percona](https://www.percona.com/software/postgresql-distribution)： 商业咨询，简易 PG 发行版
 - [ClusterControl](https://docs.severalnines.com/docs/clustercontrol/)：商业数据库管控软件
 
 ------------------

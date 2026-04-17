@@ -2,12 +2,12 @@
 title: Wiki.js：维基百科站
 weight: 590
 date: 2022-05-25
-description: 如何使用 Wiki.js 搭建你自己的开源维基百科，并使用 Pigsty 管理的PG作为持久数据存储
+description: 如何使用 Wiki.js 搭建你自己的开源维基百科，并使用 Pigsty 管理的 PG 作为持久数据存储
 module: [SOFTWARE]
 categories: [参考]
 ---
 
-公开Demo地址：[http://wiki.pigsty.cc](http://wiki.pigsty.cc)
+公开 Demo 地址：[http://wiki.pigsty.cc](http://wiki.pigsty.cc)
 
 ![](/img/docs/app/wiki.jpg)
 

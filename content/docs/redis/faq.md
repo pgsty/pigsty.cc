@@ -22,7 +22,7 @@ categories: [参考]
 
 ## 如何在某个节点上添加一个新的Redis实例？
 
-使用 `bin/redis-add <ip> <port>` 在节点上部署一个新的redis实例。
+使用 `bin/redis-add <ip> <port>` 在节点上部署一个新的 redis 实例。
 
 
 
@@ -30,7 +30,7 @@ categories: [参考]
 
 ## 如何从节点上移除一个特定实例？
 
-使用 `bin/redis-rm <ip> <port>` 从节点上移除一个单独的redis实例。
+使用 `bin/redis-rm <ip> <port>` 从节点上移除一个单独的 redis 实例。
 
 
 ----------------

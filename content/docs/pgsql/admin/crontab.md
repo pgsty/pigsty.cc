@@ -186,7 +186,7 @@ pg_crontab:
 
 ## pg-vacuum
 
-`pg-vacuum` 是 Pigsty 提供的事务冻结脚本，用于执行 `VACUUM FREEZE` 操作，防止事务ID（XID）回卷导致数据库停机。
+`pg-vacuum` 是 Pigsty 提供的事务冻结脚本，用于执行 `VACUUM FREEZE` 操作，防止事务 ID（XID）回卷导致数据库停机。
 
 **基本用法**
 

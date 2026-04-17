@@ -17,7 +17,7 @@ main_menu: True
 
 **探探**：两百台+物理机，用于 PostgreSQL 与 Redis 服务 
 
-**哔哩哔哩**：用于支持 PostgreSQL 创新业务
+**哔哩**：用于支持 PostgreSQL 创新业务
 
 ## 云厂商
 

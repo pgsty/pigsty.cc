@@ -2,7 +2,7 @@
 title: Supabase
 weight: 2102
 date: 2024-06-23
-description: 如何使用Pigsty自建Supabase，一键拉起开源Firebase替代，后端全栈全家桶。
+description: 如何使用 Pigsty 自建 Supabase，一键拉起开源 Firebase 替代，后端全栈全家桶。
 icon: fas fa-bolt
 module: [SOFTWARE]
 categories: [概念]
@@ -49,9 +49,9 @@ Pigsty 默认提供的 [`supa.yml`](https://github.com/Vonng/pigsty/blob/main/co
 ```
 
 中国区域用户注意，请您配置合适的 Docker 镜像站点或代理服务器绕过 GFW 以拉取 DockerHub 镜像。
-对于 [专业订阅](/docs/about/service) ，我们提供在没有互联网访问的情况下，[离线安装](/docs/setup/offline) Pigsty 与 Supabase 的能力。
+对于 [专业订阅](/docs/about/service)，我们提供在没有互联网访问的情况下，[离线安装](/docs/setup/offline) Pigsty 与 Supabase 的能力。
 
-Pigsty 默认通过管理节点/INFRA节点上的 Nginx 对外暴露 Web 服务，您可以在本地添加 `supa.pigsty` 的 DNS 解析指向该节点，
+Pigsty 默认通过管理节点/INFRA 节点上的 Nginx 对外暴露 Web 服务，您可以在本地添加 `supa.pigsty` 的 DNS 解析指向该节点，
 然后通过浏览器访问 `https://supa.pigsty` 即可进入 Supabase Studio 管理界面。
 
 > 默认用户名与密码：supabase / pigsty

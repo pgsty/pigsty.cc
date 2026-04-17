@@ -15,7 +15,7 @@ categories: [参考]
 
 GitHub 仓库地址：[https://github.com/Vonng/pigsty-app/tree/master/cloud](https://github.com/Vonng/pigsty-app/tree/master/cloud)
 
-在线Demo地址：[https://demo.pigsty.cc/d/ecs](https://demo.pigsty.cc/d/ecs)
+在线 Demo 地址：[https://demo.pigsty.cc/d/ecs](https://demo.pigsty.cc/d/ecs)
 
 文章地址：《[剖析算力成本：阿里云真降价了吗？](/blog/cloud/ecs)》
 

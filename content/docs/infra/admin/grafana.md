@@ -11,14 +11,14 @@ categories: [任务]
 
 您可以使用 PostgreSQL 作为 Grafana 后端使用的数据库。
 
-这是了解Pigsty部署系统使用方式的好机会，完成此教程，您会了解：
+这是了解 Pigsty 部署系统使用方式的好机会，完成此教程，您会了解：
 
 * 如何 [创建新数据库集群](#创建数据库集群)
 * 如何在已有数据库集群中 [创建新业务用户](#创建grafana业务用户)
 * 如何在已有数据库集群中 [创建新业务数据库](#创建grafana业务数据库)
 * 如何 [访问Pigsty所创建的数据库](#使用grafana业务数据库)
 * 如何 [管理Grafana中的监控面板](#管理grafana监控面板)
-* 如何管理Grafana中的 [PostgreSQL数据源](#管理postgres数据源)
+* 如何管理 Grafana 中的 [PostgreSQL数据源](#管理postgres数据源)
 * 如何一步到位完成 [Grafana数据库升级](#一步到位更新grafana)
 
 
@@ -46,7 +46,7 @@ systemctl restart grafana-server
 
 ## 创建数据库集群
 
-我们可以在`pg-meta`上定义一个新的数据库`grafana`，也可以在新的机器节点上创建一个专用于Grafana的数据库集群：`pg-grafana`
+我们可以在`pg-meta`上定义一个新的数据库`grafana`，也可以在新的机器节点上创建一个专用于 Grafana 的数据库集群：`pg-grafana`
 
 ### 定义集群
 
@@ -82,7 +82,7 @@ pg-grafana:
 
 该命令是 Ansible Playbook [`pgsql.yml`](/docs/pgsql/playbook#pgsqlyml)，用于创建数据库集群。
 
-定义在 [`pg_users`](/docs/pgsql/param#pg_users) 与 [`pg_databases`](/docs/pgsql/param#pg_databases) 中的业务用户与业务数据库会在集群初始化时自动创建，因此使用该配置时，集群创建完毕后，（在没有DNS支持的情况下）您可以使用以下连接串 [访问](/docs/concept/sec/ac) 数据库（任一即可）：
+定义在 [`pg_users`](/docs/pgsql/param#pg_users) 与 [`pg_databases`](/docs/pgsql/param#pg_databases) 中的业务用户与业务数据库会在集群初始化时自动创建，因此使用该配置时，集群创建完毕后，（在没有 DNS 支持的情况下）您可以使用以下连接串 [访问](/docs/concept/sec/ac) 数据库（任一即可）：
 
 ```bash
 postgres://dbuser_grafana:DBUser.Grafana@10.10.10.11:5432/grafana # 主库直连
@@ -94,7 +94,7 @@ postgres://dbuser_grafana:DBUser.Grafana@10.10.10.12:5436/grafana # 直连defaul
 postgres://dbuser_grafana:DBUser.Grafana@10.10.10.12:5433/grafana # 连接串读写服务
 ```
 
-因为默认情况下Pigsty安装在**单个元节点**上，接下来的步骤我们会在已有的`pg-meta`数据库集群上创建Grafana所需的用户与数据库，而并非使用这里创建的`pg-grafana`集群。
+因为默认情况下 Pigsty 安装在**单个元节点**上，接下来的步骤我们会在已有的`pg-meta`数据库集群上创建 Grafana 所需的用户与数据库，而并非使用这里创建的`pg-grafana`集群。
 
 
 
@@ -135,7 +135,7 @@ bin/pgsql-user pg-meta dbuser_grafana # 在pg-meta集群上创建`dbuser_grafana
 ./pgsql-user.yml -l pg-meta -e pg_user=dbuser_grafana  # Ansible
 ```
 
-`dbrole_admin` 角色具有在数据库中执行DDL变更的权限，这正是Grafana所需要的。
+`dbrole_admin` 角色具有在数据库中执行 DDL 变更的权限，这正是 Grafana 所需要的。
 
 
 
@@ -187,7 +187,7 @@ postgres://dbuser_grafana:DBUser.Grafana@meta:5433/grafana # primary服务
 
 这里，我们将使用通过负载均衡器直接访问主库的 [Default服务](/docs/pgsql/service#default服务) 访问数据库。
 
-首先检查连接串是否可达，以及是否有权限执行DDL命令。
+首先检查连接串是否可达，以及是否有权限执行 DDL 命令。
 
 ```bash
 psql postgres://dbuser_grafana:DBUser.Grafana@meta:5436/grafana -c \
@@ -196,7 +196,7 @@ psql postgres://dbuser_grafana:DBUser.Grafana@meta:5436/grafana -c \
 
 ### 直接修改Grafana配置
 
-为了让Grafana使用 Postgres 数据源，您需要编辑 `/etc/grafana/grafana.ini`，并修改配置项：
+为了让 Grafana 使用 Postgres 数据源，您需要编辑 `/etc/grafana/grafana.ini`，并修改配置项：
 
 ```ini
 [database]
@@ -217,14 +217,14 @@ type = postgres
 url =  postgres://dbuser_grafana:DBUser.Grafana@meta/grafana
 ```
 
-随后重启Grafana即可：
+随后重启 Grafana 即可：
 
 ```bash
 systemctl restart grafana-server
 ```
 
-从监控系统中看到新增的 [`grafana`](http://g.pigsty.cc/d/pgsql-database/pgsql-database?var-cls=pg-meta&var-ins=pg-meta-1&var-datname=grafana&orgId=1) 数据库已经开始有活动，则说明Grafana已经开始使用Postgres作为首要后端数据库了。
-但一个新的问题是，Grafana中原有的Dashboards与Datasources都消失了！这里需要重新导入 [监控面板](#管理grafana监控面板) 与 [Postgres数据源](#管理postgres数据源)
+从监控系统中看到新增的 [`grafana`](http://g.pigsty.cc/d/pgsql-database/pgsql-database?var-cls=pg-meta&var-ins=pg-meta-1&var-datname=grafana&orgId=1) 数据库已经开始有活动，则说明 Grafana 已经开始使用 Postgres 作为首要后端数据库了。
+但一个新的问题是，Grafana 中原有的 Dashboards 与 Datasources 都消失了！这里需要重新导入 [监控面板](#管理grafana监控面板) 与 [Postgres数据源](#管理postgres数据源)
 
 
 
@@ -283,11 +283,11 @@ export GRAFANA_USERNAME=admin
 export GRAFANA_PASSWORD=pigsty
 ```
 
-题外话，使用`grafana.py clean`会清空目标监控面板，使用`grafana.py load`会加载当前目录下所有监控面板，当Pigsty的监控面板发生变更，可以使用这两个命令升级所有的监控面板。
+题外话，使用`grafana.py clean`会清空目标监控面板，使用`grafana.py load`会加载当前目录下所有监控面板，当 Pigsty 的监控面板发生变更，可以使用这两个命令升级所有的监控面板。
 
 ## 管理Postgres数据源
 
-当使用 [`pgsql.yml`](/docs/pgsql/playbook#pgsqlyml) 创建新 PostgreSQL 集群，或使用 [`pgsql-db.yml`](/docs/pgsql/playbook#pgsql-dbyml) 创建新业务数据库时，Pigsty会在Grafana中注册新的PostgreSQL数据源，您可以使用默认的监控用户通过Grafana直接访问目标数据库实例。应用`pgcat`的绝大部分功能有赖于此。
+当使用 [`pgsql.yml`](/docs/pgsql/playbook#pgsqlyml) 创建新 PostgreSQL 集群，或使用 [`pgsql-db.yml`](/docs/pgsql/playbook#pgsql-dbyml) 创建新业务数据库时，Pigsty 会在 Grafana 中注册新的 PostgreSQL 数据源，您可以使用默认的监控用户通过 Grafana 直接访问目标数据库实例。应用`pgcat`的绝大部分功能有赖于此。
 
 要注册 Postgres 数据库数据源，可以使用 [`pgsql.yml`](/docs/pgsql/playbook#pgsqlyml) 中的 `add_ds` 任务（或使用更全面的 `pg_register`）：
 

@@ -26,10 +26,10 @@ Pigsty 支持 PostgreSQL 14 ~ 18，并提供 504 个 PG 扩展。
 大多数 [配置模板](/docs/conf/) 默认使用 PostgreSQL 内核，例如：
 
 - [`meta`](https://github.com/pgsty/pigsty/blob/main/conf/meta.yml) : **默认**，带有核心扩展（vector、postgis、timescale）的 postgres
-- [`rich`](https://github.com/pgsty/pigsty/blob/main/conf/rich.yml) : 安装了所有扩展的 postgres
-- [`slim`](https://github.com/pgsty/pigsty/blob/main/conf/slim.yml) : 仅 postgres，无监控基础设施
-- [`full`](https://github.com/pgsty/pigsty/blob/main/conf/full.yml) : 用于 HA 演示的 4 节点沙盒
-- [`pgsql`](https://github.com/pgsty/pigsty/blob/main/conf/pgsql.yml) : 最小的 postgres 内核配置示例
+- [`rich`](https://github.com/pgsty/pigsty/blob/main/conf/rich.yml)：安装了所有扩展的 postgres
+- [`slim`](https://github.com/pgsty/pigsty/blob/main/conf/slim.yml)：仅 postgres，无监控基础设施
+- [`full`](https://github.com/pgsty/pigsty/blob/main/conf/full.yml)：用于 HA 演示的 4 节点沙盒
+- [`pgsql`](https://github.com/pgsty/pigsty/blob/main/conf/pgsql.yml)：最小的 postgres 内核配置示例
 
 
 ------

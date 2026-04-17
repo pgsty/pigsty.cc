@@ -53,8 +53,8 @@ Pigsty 中有四个默认角色：
 
 - 业务只读 (`dbrole_readonly`): 用于全局只读访问的角色。如果别的业务想要此库只读访问权限，可以使用此角色。
 - 业务读写 (`dbrole_readwrite`): 用于全局读写访问的角色，主属业务使用的生产账号应当具有数据库读写权限
-- 业务管理员 (`dbrole_admin`): 拥有DDL权限的角色，通常用于业务管理员，或者需要在应用中建表的场景（比如各种业务软件）
-- 离线只读访问 (`dbrole_offline`): 受限的只读访问角色（只能访问 [offline](/docs/pgsql/config/cluster#离线从库) 实例，通常是个人用户，ETL工具账号）
+- 业务管理员 (`dbrole_admin`): 拥有 DDL 权限的角色，通常用于业务管理员，或者需要在应用中建表的场景（比如各种业务软件）
+- 离线只读访问 (`dbrole_offline`): 受限的只读访问角色（只能访问 [offline](/docs/pgsql/config/cluster#离线从库) 实例，通常是个人用户，ETL 工具账号）
 
 默认角色在 [`pg_default_roles`](/docs/pgsql/param#pg_default_roles) 中定义，除非您确实知道自己在干什么，建议不要更改默认角色的名称。
 
@@ -201,7 +201,7 @@ ALTER DEFAULT PRIVILEGES FOR ROLE "dbrole_admin" {{ priv }};
 {% endfor %}
 ```
 
-这些内容将会被 PG集群初始化模板 [`pg-init-template.sql`](https://github.com/Vonng/pigsty/blob/main/roles/pgsql/templates/pg-init-template.sql) 所使用，在集群初始化的过程中渲染并输出至 `/pg/tmp/pg-init-template.sql`。
+这些内容将会被 PG 集群初始化模板 [`pg-init-template.sql`](https://github.com/Vonng/pigsty/blob/main/roles/pgsql/templates/pg-init-template.sql) 所使用，在集群初始化的过程中渲染并输出至 `/pg/tmp/pg-init-template.sql`。
 该命令会在 `template1` 与 `postgres` 数据库中执行，新创建的数据库会通过模板 `template1` 继承这些默认权限配置。
 
 

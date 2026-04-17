@@ -20,21 +20,21 @@ MinIO 模块提供了两个内置剧本用于集群管理：
 
 剧本 [`minio.yml`](https://github.com/pgsty/pigsty/blob/main/minio.yml) 用于在节点上安装 MinIO 模块。
 
-- `minio-id`        : 生成/校验 minio 身份参数
-- `minio_install`   : 安装 minio
-  - `minio_os_user` : 创建操作系统用户 minio
-  - `minio_pkg`     : 安装 minio/mcli 软件包
-  - `minio_dir`     : 创建 minio 目录
-- `minio_config`    : 生成 minio 配置
-  - `minio_conf`    : minio 主配置文件
-  - `minio_cert`    : minio SSL 证书签发
-  - `minio_dns`     : minio DNS 记录插入
-- `minio_launch`    : minio 服务启动
-- `minio_register`  : minio 纳入监控
-- `minio_provision` : 创建 minio 别名/存储桶/业务用户
-  - `minio_alias`   : 创建 minio 客户端别名（管理节点上）
-  - `minio_bucket`  : 创建 minio 存储桶
-  - `minio_user`    : 创建 minio 业务用户
+- `minio-id`：生成/校验 minio 身份参数
+- `minio_install`：安装 minio
+  - `minio_os_user`：创建操作系统用户 minio
+  - `minio_pkg`：安装 minio/mcli 软件包
+  - `minio_dir`：创建 minio 目录
+- `minio_config`：生成 minio 配置
+  - `minio_conf`：minio 主配置文件
+  - `minio_cert`：minio SSL 证书签发
+  - `minio_dns`：minio DNS 记录插入
+- `minio_launch`：minio 服务启动
+- `minio_register`：minio 纳入监控
+- `minio_provision`：创建 minio 别名/存储桶/业务用户
+  - `minio_alias`：创建 minio 客户端别名（管理节点上）
+  - `minio_bucket`：创建 minio 存储桶
+  - `minio_user`：创建 minio 业务用户
 
 在执行剧本前，请先在 [配置清单](/docs/setup/config) 中，完成 MinIO 集群的 [配置](/docs/minio/config/)。
 
@@ -53,13 +53,13 @@ MinIO 模块提供了两个内置剧本用于集群管理：
 
 剧本 [`minio-rm.yml`](https://github.com/pgsty/pigsty/blob/main/minio-rm.yml) 用于移除 MinIO 集群。
 
-- `minio-id`          : 生成 minio 身份参数用于移除操作（启用 `any_errors_fatal`，身份验证失败时立即停止）
-- `minio_safeguard`   : 安全检查，防止意外删除（默认：`false`）
-- `minio_pause`       : 暂停 3 秒，允许用户中止操作（Ctrl+C 可取消）
-- `minio_deregister`  : 从 Victoria/Prometheus 监控中移除目标，清理 DNS 记录
-- `minio_svc`         : 停止并禁用 minio systemd 服务
-- `minio_data`        : 移除 minio 数据目录（可通过 `minio_rm_data=false` 禁用）
-- `minio_pkg`         : 卸载 minio 软件包（可通过 `minio_rm_pkg=true` 启用）
+- `minio-id`：生成 minio 身份参数用于移除操作（启用 `any_errors_fatal`，身份验证失败时立即停止）
+- `minio_safeguard`：安全检查，防止意外删除（默认：`false`）
+- `minio_pause`：暂停 3 秒，允许用户中止操作（Ctrl+C 可取消）
+- `minio_deregister`：从 Victoria/Prometheus 监控中移除目标，清理 DNS 记录
+- `minio_svc`：停止并禁用 minio systemd 服务
+- `minio_data`：移除 minio 数据目录（可通过 `minio_rm_data=false` 禁用）
+- `minio_pkg`：卸载 minio 软件包（可通过 `minio_rm_pkg=true` 启用）
 
 {{% alert title="执行条件与安全机制" color="primary" %}}
 - 剧本会自动跳过未定义 [`minio_seq`](/docs/minio/param#minio_seq) 的主机，防止误操作非 MinIO 节点

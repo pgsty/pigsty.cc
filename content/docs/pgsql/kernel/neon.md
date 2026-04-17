@@ -1,7 +1,7 @@
 ---
 title: Neon
 weight: 2114
-description: 使用 Neon 开源的 Serverless 版本 PostgreSQL 内核，自建灵活伸缩，Scale To Zero，灵活分叉的PG服务。
+description: 使用 Neon 开源的 Serverless 版本 PostgreSQL 内核，自建灵活伸缩，Scale To Zero，灵活分叉的 PG 服务。
 icon: fab fa-neos
 module: [PGSQL]
 categories: [概念]

@@ -48,7 +48,7 @@ pgsql-main:    "postgresql$v postgresql$v-server postgresql$v-libs postgresql$v-
 pgsql-common:  "patroni patroni-etcd pgbouncer pgbackrest pg_exporter pgbackrest_exporter vip-manager"
 ```
 
-接下来，Pigsty 又进一步通过当前指定的 PG 大版本（假设 [**`pg_version`**](/docs/pgsql/param#pg_version) = `18` ），将 `pgsql-main` 翻译为：
+接下来，Pigsty 又进一步通过当前指定的 PG 大版本（假设 [**`pg_version`**](/docs/pgsql/param#pg_version) = `18`），将 `pgsql-main` 翻译为：
 
 ```yaml
 pg18-main:   "postgresql18 postgresql18-server postgresql18-libs postgresql18-contrib postgresql18-plperl postgresql18-plpython3 postgresql18-pltcl postgresql18-llvmjit pg_repack_18* wal2json_18* pgvector_18*"

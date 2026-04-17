@@ -93,7 +93,7 @@ categories: [参考]
 
 ### 限制执行范围
 
-执行剧本时建议使用 `-l` 参数限制命令执行的对象范围:
+执行剧本时建议使用 `-l` 参数限制命令执行的对象范围：
 
 ```bash
 ./pgsql.yml -l pg-meta            # 限制在集群 pg-meta 上执行
@@ -116,7 +116,7 @@ categories: [参考]
 
 ### 任务标签
 
-可以使用 `-t` 参数只执行特定的任务子集:
+可以使用 `-t` 参数只执行特定的任务子集：
 
 ```bash
 ./pgsql.yml -l pg-test -t pg_service    # 只刷新集群 pg-test 的服务

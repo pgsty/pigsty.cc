@@ -7,7 +7,7 @@ module: [PGSQL]
 categories: [概念]
 ---
 
-[IvorySQL](https://www.ivorysql.org/) 是一个开源的，旨在基于 PG 提供 “Oracle兼容性” 的 PostgreSQL 内核分支。
+[IvorySQL](https://www.ivorysql.org/) 是一个开源的，旨在基于 PG 提供 “Oracle 兼容性” 的 PostgreSQL 内核分支。
 
 
 --------

@@ -2,7 +2,7 @@
 title: PGAdmin：GUI 工具
 weight: 630
 date: 2022-04-25
-description: 使用Docker拉起PgAdmin4，并加载Pigsty服务器列表
+description: 使用 Docker 拉起 PgAdmin4，并加载 Pigsty 服务器列表
 module: [SOFTWARE]
 categories: [任务]
 ---

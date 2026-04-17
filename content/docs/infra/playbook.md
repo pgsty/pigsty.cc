@@ -47,13 +47,13 @@ Pigsty 提供了三个与 INFRA 模块相关的剧本：
 
 ## `infra.yml`
 
-在配置文件的 `infra` 分组所定义的 Infra节点 上初始化基础设施模块。
+在配置文件的 `infra` 分组所定义的 Infra 节点 上初始化基础设施模块。
 
 执行该剧本将完成以下任务：
 
-- 配置 Infra节点 的目录与环境变量
+- 配置 Infra 节点 的目录与环境变量
 - 下载并创建本地软件仓库，加速后续安装
-- 将当前 Infra节点 作为普通节点纳入 Pigsty 管理
+- 将当前 Infra 节点 作为普通节点纳入 Pigsty 管理
 - 部署基础设施组件（VictoriaMetrics/Logs/Traces、VMAlert、Grafana、Alertmanager、Blackbox Exporter 等）
 
 **剧本注意事项**：
@@ -118,7 +118,7 @@ Pigsty 提供了三个与 INFRA 模块相关的剧本：
 
 ## `infra-rm.yml`
 
-从配置文件 `infra` 分组定义的 Infra节点 上移除 Pigsty 基础设施。
+从配置文件 `infra` 分组定义的 Infra 节点 上移除 Pigsty 基础设施。
 
 常用子任务包括：
 

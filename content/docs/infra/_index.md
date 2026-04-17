@@ -44,10 +44,10 @@ categories: [参考]
 * VMAlert 根据 VictoriaMetrics 中的指标**评估**告警规则，并将事件转发到 Alertmanager。
 * 用户会从 Infra/Admin 节点上使用 Ansible 或其他工具发起对数据库节点的**管理**：
   * 执行集群创建，扩缩容，实例/集群回收
-  * 创建业务用户、业务数据库、修改服务、HBA修改；
+  * 创建业务用户、业务数据库、修改服务、HBA 修改；
   * 执行日志采集、垃圾清理，备份，巡检等
 * 数据库节点默认会从 INFRA/ADMIN 节点上的 NTP 服务器同步时间
-* 如果没有专用集群，高可用组件 Patroni 会使用 INFRA 节点上的 etcd 作为高可用DCS。
+* 如果没有专用集群，高可用组件 Patroni 会使用 INFRA 节点上的 etcd 作为高可用 DCS。
 * 如果没有专用集群，备份组件 pgbackrest 会使用 INFRA 节点上的 minio 作为可选的集中备份仓库。
 
 
@@ -55,11 +55,11 @@ categories: [参考]
 
 ### Nginx
 
-Nginx是Pigsty所有WebUI类服务的访问入口，默认使用管理节点80端口。
+Nginx 是 Pigsty 所有 WebUI 类服务的访问入口，默认使用管理节点80端口。
 
 有许多带有 WebUI 的基础设施组件通过 Nginx 对外暴露服务，例如 Grafana、VictoriaMetrics（VMUI）、AlertManager，以及 HAProxy 流量管理页等，此外 yum/apt 仓库等静态文件资源也通过 Nginx 对外提供服务。
 
-Nginx会根据 [`infra_portal`](/docs/infra/param#infra_portal) 的内容，通过**域名**进行区分，将访问请求转发至对应的上游组件处理。如果您使用了其他的域名，或者公网域名，可以在这里进行相应修改：
+Nginx 会根据 [`infra_portal`](/docs/infra/param#infra_portal) 的内容，通过**域名**进行区分，将访问请求转发至对应的上游组件处理。如果您使用了其他的域名，或者公网域名，可以在这里进行相应修改：
 
 ```yaml
 infra_portal:  # domain names and upstream servers
@@ -73,34 +73,34 @@ infra_portal:  # domain names and upstream servers
   #minio        : { domain: m.pigsty    ,endpoint: "${admin_ip}:9001" ,scheme: https ,websocket: true }
 ```
 
-Pigsty强烈建议使用域名访问Pigsty UI系统，而不是直接通过IP+端口的方式访问，基于以下几个理由：
-* 使用域名便于启用 HTTPS 流量加密，可以将访问收拢至Nginx，审计一切请求，并方便地集成认证机制。
-* 一些组件默认只监听 127.0.0.1 ，因此只能通过Nginx代理访问。
+Pigsty 强烈建议使用域名访问 Pigsty UI 系统，而不是直接通过 IP+ 端口的方式访问，基于以下几个理由：
+* 使用域名便于启用 HTTPS 流量加密，可以将访问收拢至 Nginx，审计一切请求，并方便地集成认证机制。
+* 一些组件默认只监听 127.0.0.1，因此只能通过 Nginx 代理访问。
 * 域名更容易记忆，并提供了额外的配置灵活性。
 
-如果您没有可用的互联网域名或本地DNS解析，您可以在 `/etc/hosts` （MacOS/Linux）或`C:\Windows\System32\drivers\etc\hosts` （Windows）中添加本地静态解析记录。
+如果您没有可用的互联网域名或本地 DNS 解析，您可以在 `/etc/hosts` （MacOS/Linux）或`C:\Windows\System32\drivers\etc\hosts` （Windows）中添加本地静态解析记录。
 
-Nginx相关配置参数位于：[配置：INFRA - NGINX](/docs/infra/param#nginx)
+Nginx 相关配置参数位于：[配置：INFRA - NGINX](/docs/infra/param#nginx)
 
 
 ----------------
 
 ### 本地软件仓库
 
-Pigsty会在安装时首先建立一个本地软件源，以加速后续软件安装。
+Pigsty 会在安装时首先建立一个本地软件源，以加速后续软件安装。
 
-该软件源由Nginx提供服务，默认位于为 `/www/pigsty`，可以访问 `http://i.pigsty/pigsty` 使用。
+该软件源由 Nginx 提供服务，默认位于为 `/www/pigsty`，可以访问 `http://i.pigsty/pigsty` 使用。
 
-Pigsty的离线软件包即是将已经建立好的软件源目录（yum/apt）整个打成压缩包，当Pigsty尝试构建本地源时，如果发现本地源目录 `/www/pigsty` 已经存在，
+Pigsty 的离线软件包即是将已经建立好的软件源目录（yum/apt）整个打成压缩包，当 Pigsty 尝试构建本地源时，如果发现本地源目录 `/www/pigsty` 已经存在，
 且带有 `/www/pigsty/repo_complete` 标记文件，则会认为本地源已经构建完成，从而跳过从原始上游下载软件的步骤，消除了对互联网访问的依赖。
 
-Repo定义文件位于 `/www/pigsty.repo`，默认可以通过 `http://${admin_ip}/pigsty.repo` 获取
+Repo 定义文件位于 `/www/pigsty.repo`，默认可以通过 `http://${admin_ip}/pigsty.repo` 获取
 
 ```bash
 curl -L http://i.pigsty/pigsty.repo -o /etc/yum.repos.d/pigsty.repo
 ```
 
-您也可以在没有Nginx的情况下直接使用文件本地源：
+您也可以在没有 Nginx 的情况下直接使用文件本地源：
 
 ```ini
 [pigsty-local]
@@ -148,18 +148,18 @@ Grafana 相关配置参数位于：[配置：INFRA - GRAFANA](/docs/infra/param#
 
 ### Ansible
 
-Pigsty默认会在元节点上安装Ansible，Ansible是一个流行的运维工具，采用声明式的配置风格与幂等的剧本设计，可以极大降低系统维护的复杂度。
+Pigsty 默认会在元节点上安装 Ansible，Ansible 是一个流行的运维工具，采用声明式的配置风格与幂等的剧本设计，可以极大降低系统维护的复杂度。
 
 
 ----------------
 
 ### DNSMASQ
 
-DNSMASQ 提供环境内的DNS**解析**服务，其他模块的域名将会注册到 INFRA节点上的 DNSMASQ 服务中。
+DNSMASQ 提供环境内的 DNS**解析**服务，其他模块的域名将会注册到 INFRA 节点上的 DNSMASQ 服务中。
 
-DNS记录默认放置于所有INFRA节点的 `/etc/hosts.d/` 目录中。
+DNS 记录默认放置于所有 INFRA 节点的 `/etc/hosts.d/` 目录中。
 
-DNSMASQ相关配置参数位于：[配置：INFRA - DNS](/docs/infra/param#dns)
+DNSMASQ 相关配置参数位于：[配置：INFRA - DNS](/docs/infra/param#dns)
 
 
 
@@ -168,9 +168,9 @@ DNSMASQ相关配置参数位于：[配置：INFRA - DNS](/docs/infra/param#dns)
 
 ### Chronyd
 
-NTP服务用于同步环境内所有节点的时间（可选）
+NTP 服务用于同步环境内所有节点的时间（可选）
 
-NTP相关配置参数位于：[配置：NODES - NTP](/docs/node/param#node_time)
+NTP 相关配置参数位于：[配置：NODES - NTP](/docs/node/param#node_time)
 
 ----------------
 
@@ -224,7 +224,7 @@ infra:
 
 ### 管理本地软件仓库
 
-您可以使用以下剧本子任务，管理 Infra节点 上的本地yun源：
+您可以使用以下剧本子任务，管理 Infra 节点 上的本地 yun 源：
 
 ```bash
 ./infra.yml -t repo              #从互联网或离线包中创建本地软件源
@@ -259,7 +259,7 @@ infra:
 
 ### 管理基础设施组件
 
-您可以使用以下剧本子任务，管理 Infra节点 上的各个基础设施组件
+您可以使用以下剧本子任务，管理 Infra 节点 上的各个基础设施组件
 
 ```bash
 ./infra.yml -t infra           # 配置基础设施
@@ -294,7 +294,7 @@ infra:
 
 Pigsty 提供了三个与 INFRA 模块相关的剧本：
 
-- [`infra.yml`](#infrayml) ：在 infra 节点上初始化 pigsty 基础设施
+- [`infra.yml`](#infrayml)：在 infra 节点上初始化 pigsty 基础设施
 - [`infra-rm.yml`](#infra-rmyml)：从 infra 节点移除基础设施组件
 - [`deploy.yml`](#deployyml)：在当前节点上一次性完整安装 Pigsty
 
@@ -302,7 +302,7 @@ Pigsty 提供了三个与 INFRA 模块相关的剧本：
 
 ### `infra.yml`
 
-INFRA模块剧本 [`infra.yml`](https://github.com/pgsty/pigsty/blob/main/infra.yml) 用于在 [**Infra节点**](/docs/concept/arch/node#infra节点) 上初始化 pigsty 基础设施
+INFRA 模块剧本 [`infra.yml`](https://github.com/pgsty/pigsty/blob/main/infra.yml) 用于在 [**Infra节点**](/docs/concept/arch/node#infra节点) 上初始化 pigsty 基础设施
 
 **执行该剧本将完成以下任务**
 
@@ -313,8 +313,8 @@ INFRA模块剧本 [`infra.yml`](https://github.com/pgsty/pigsty/blob/main/infra.
 
 **该剧本默认在 [**INFRA节点**](/docs/concept/arch/node#infra节点) 上执行**
 
-* Pigsty默认将使用**当前执行此剧本的节点**作为Pigsty的 [**Infra节点**](/docs/concept/arch/node#infra节点) 与 [**ADMIN节点**](/docs/concept/arch/node#admin节点)。
-* Pigsty在 [配置过程](/docs/setup/install#配置) 中默认会将当前节点标记为Infra/Admin节点，并使用**当前节点首要IP地址**替换配置模板中的占位IP地址`10.10.10.10`。
+* Pigsty 默认将使用**当前执行此剧本的节点**作为 Pigsty 的 [**Infra节点**](/docs/concept/arch/node#infra节点) 与 [**ADMIN节点**](/docs/concept/arch/node#admin节点)。
+* Pigsty 在 [配置过程](/docs/setup/install#配置) 中默认会将当前节点标记为 Infra/Admin 节点，并使用**当前节点首要 IP 地址**替换配置模板中的占位 IP 地址`10.10.10.10`。
 * 该节点除了可以发起管理，部署有基础设施，与一个部署普通托管节点并无区别。
 * 单机安装时，ETCD 也会安装在此节点上，提供 DCS 服务
 
@@ -333,7 +333,7 @@ INFRA模块剧本 [`infra.yml`](https://github.com/pgsty/pigsty/blob/main/infra.
 
 ### `infra-rm.yml`
 
-INFRA模块剧本 [`infra-rm.yml`](https://github.com/pgsty/pigsty/blob/main/infra-rm.yml) 用于从 [**INFRA节点**](/docs/concept/arch/node#infra节点) 上移除 pigsty 基础设施
+INFRA 模块剧本 [`infra-rm.yml`](https://github.com/pgsty/pigsty/blob/main/infra-rm.yml) 用于从 [**INFRA节点**](/docs/concept/arch/node#infra节点) 上移除 pigsty 基础设施
 
 常用子任务包括：
 
@@ -349,7 +349,7 @@ INFRA模块剧本 [`infra-rm.yml`](https://github.com/pgsty/pigsty/blob/main/inf
 
 ### `deploy.yml`
 
-INFRA模块剧本 [`deploy.yml`](https://github.com/pgsty/pigsty/blob/main/deploy.yml) 用于在**所有节点**上一次性完整安装 Pigsty
+INFRA 模块剧本 [`deploy.yml`](https://github.com/pgsty/pigsty/blob/main/deploy.yml) 用于在**所有节点**上一次性完整安装 Pigsty
 
 该剧本在 [剧本：一次性安装](/docs/setup/playbook#部署剧本) 中有更详细的介绍。
 
@@ -361,7 +361,7 @@ INFRA模块剧本 [`deploy.yml`](https://github.com/pgsty/pigsty/blob/main/deplo
 ## 监控
 
 
-[Pigsty Home](https://demo.pigsty.cc/d/pigsty) : Pigsty 监控系统主页
+[Pigsty Home](https://demo.pigsty.cc/d/pigsty)：Pigsty 监控系统主页
 
 <details><summary>Pigsty Home Dashboard</summary>
 
@@ -370,7 +370,7 @@ INFRA模块剧本 [`deploy.yml`](https://github.com/pgsty/pigsty/blob/main/deplo
 </details>
 
 
-[INFRA Overview](https://demo.pigsty.cc/d/infra-overview) : Pigsty 基础设施自监控概览
+[INFRA Overview](https://demo.pigsty.cc/d/infra-overview)：Pigsty 基础设施自监控概览
 
 <details><summary>INFRA Overview Dashboard</summary>
 
@@ -379,7 +379,7 @@ INFRA模块剧本 [`deploy.yml`](https://github.com/pgsty/pigsty/blob/main/deplo
 </details>
 
 
-[Nginx Instance](https://demo.pigsty.cc/d/nginx-instance) : Nginx 监控指标与日志
+[Nginx Instance](https://demo.pigsty.cc/d/nginx-instance)：Nginx 监控指标与日志
 
 <details><summary>Nginx Overview Dashboard</summary>
 
@@ -388,7 +388,7 @@ INFRA模块剧本 [`deploy.yml`](https://github.com/pgsty/pigsty/blob/main/deplo
 </details>
 
 
-[Grafana Instance](https://demo.pigsty.cc/d/grafana-instance): Grafana 监控指标与日志
+[Grafana Instance](https://demo.pigsty.cc/d/grafana-instance)：Grafana 监控指标与日志
 
 <details><summary>Grafana Overview Dashboard</summary>
 
@@ -397,18 +397,18 @@ INFRA模块剧本 [`deploy.yml`](https://github.com/pgsty/pigsty/blob/main/deplo
 </details>
 
 
-[VictoriaMetrics Instance](https://demo.pigsty.cc/d/vmetrics-instance): VictoriaMetrics 抓取、查询与存储指标
+[VictoriaMetrics Instance](https://demo.pigsty.cc/d/vmetrics-instance)：VictoriaMetrics 抓取、查询与存储指标
 
-[VMAlert Instance](https://demo.pigsty.cc/d/vmalert-instance): 告警规则评估与队列状态
+[VMAlert Instance](https://demo.pigsty.cc/d/vmalert-instance)：告警规则评估与队列状态
 
-[Alertmanager Instance](https://demo.pigsty.cc/d/alertmanager-instance): 告警聚合、通知管道与 Silences
+[Alertmanager Instance](https://demo.pigsty.cc/d/alertmanager-instance)：告警聚合、通知管道与 Silences
 
-[VictoriaLogs Instance](https://demo.pigsty.cc/d/vlogs-instance): 日志写入速率、查询负载与索引命中
+[VictoriaLogs Instance](https://demo.pigsty.cc/d/vlogs-instance)：日志写入速率、查询负载与索引命中
 
-[VictoriaTraces Instance](https://demo.pigsty.cc/d/vtraces-instance): Trace/KV 存储与 Jaeger 接口
+[VictoriaTraces Instance](https://demo.pigsty.cc/d/vtraces-instance)：Trace/KV 存储与 Jaeger 接口
 
 
-[Logs Instance](https://demo.pigsty.cc/d/logs-instance): 基于 Vector + VictoriaLogs 的节点日志检索
+[Logs Instance](https://demo.pigsty.cc/d/logs-instance)：基于 Vector + VictoriaLogs 的节点日志检索
 
 <details><summary>Logs Instance Dashboard</summary>
 
@@ -417,7 +417,7 @@ INFRA模块剧本 [`deploy.yml`](https://github.com/pgsty/pigsty/blob/main/deplo
 </details>
 
 
-[CMDB Overview](https://demo.pigsty.cc/d/cmdb-overview): CMDB 可视化
+[CMDB Overview](https://demo.pigsty.cc/d/cmdb-overview)：CMDB 可视化
 
 <details><summary>CMDB Overview Dashboard</summary>
 
@@ -426,7 +426,7 @@ INFRA模块剧本 [`deploy.yml`](https://github.com/pgsty/pigsty/blob/main/deplo
 </details>
 
 
-[ETCD Overview](https://demo.pigsty.cc/d/etcd-overview): etcd 监控指标与日志
+[ETCD Overview](https://demo.pigsty.cc/d/etcd-overview)：etcd 监控指标与日志
 
 <details><summary>ETCD Overview Dashboard</summary>
 
@@ -443,9 +443,9 @@ INFRA模块剧本 [`deploy.yml`](https://github.com/pgsty/pigsty/blob/main/deplo
 
 [`INFRA`](/docs/infra/param) 模块有下列10个参数组。
 
-- [`META`](/docs/infra/param#meta)：Pigsty元数据
+- [`META`](/docs/infra/param#meta)：Pigsty 元数据
 - [`CA`](/docs/infra/param#ca)：自签名公私钥基础设施/CA
-- [`INFRA_ID`](/docs/infra/param#infra_id)：基础设施门户，Nginx域名
+- [`INFRA_ID`](/docs/infra/param#infra_id)：基础设施门户，Nginx 域名
 - [`REPO`](/docs/infra/param#repo)：本地软件源
 - [`INFRA_PACKAGE`](/docs/infra/param#infra_package)：基础设施软件包
 - [`NGINX`](/docs/infra/param#nginx)：Nginx 网络服务器

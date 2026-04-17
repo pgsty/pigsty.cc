@@ -38,7 +38,7 @@ cd ~/pigsty
 - 针对小微实例（vCPU < 4），为 [**`node_tune`**](/docs/node/param#node_tune) 和 [**`pg_conf`**](/docs/pgsql/param#pg_conf) 参数使用 **`tiny`** 参数模板，优化资源使用。
 - 如果指定了 **`-v`** PG 大版本，将 [**`pg_version`**](/docs/pgsql/param#pg_version) 以及所有 PG 别名参数设置为对应大版本。
 - 如果指定了 **`-g`** 参数，将所有默认密码替换为随机生成的强密码，提升安全性。（**强烈推荐**）
-- 当 PG 大版本 ≥ 17 时优先使用内置的 **`C.UTF-8`** Locale，次选由操作系统支持的 **`C.UTF-8`** 。
+- 当 PG 大版本 ≥ 17 时优先使用内置的 **`C.UTF-8`** Locale，次选由操作系统支持的 **`C.UTF-8`**。
 - 检测当前环境中，用于执行部署的核心依赖 **`ansible`** 是否可用
 - 同时检测部署目标节点是否 ssh 可达，并可以使用 sudo 执行命令。（**`-s`** 跳过）
 

@@ -9,7 +9,7 @@ categories: [任务]
 
 
 
-REDIS模块提供了两个剧本，用于部署/移除 Redis 集群/节点/实例：
+REDIS 模块提供了两个剧本，用于部署/移除 Redis 集群/节点/实例：
 
 - [`redis.yml`](#redisyml)：部署 Redis 集群/节点/实例
 - [`redis-rm.yml`](#redis-rmyml)：移除 Redis 集群/节点/实例

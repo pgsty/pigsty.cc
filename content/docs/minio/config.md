@@ -121,7 +121,7 @@ SNMD 模式可以利用单机上的多块磁盘，提供更高的性能和容量
 
 MNMD 模式，部署参考教程：[MinIO 多机多盘部署](https://min.io/docs/minio/linux/operations/install-deploy-manage/deploy-minio-multi-node-multi-drive.html)
 
-除了需要 [单机多盘](#单机多盘) 模式中的 [`minio_data`](/docs/minio/param#minio_data) 指定磁盘驱动器，使用MinIO 多节点部署需要使用一个额外的 [`minio_node`](/docs/minio/param#minio_node) 参数。
+除了需要 [单机多盘](#单机多盘) 模式中的 [`minio_data`](/docs/minio/param#minio_data) 指定磁盘驱动器，使用 MinIO 多节点部署需要使用一个额外的 [`minio_node`](/docs/minio/param#minio_node) 参数。
 
 例如，以下配置定义了一个 MinIO 集群，其中有四个节点，每个节点有四块磁盘：
 
@@ -142,7 +142,7 @@ minio:
 默认情况下，节点名称是 `${minio_cluster}-${minio_seq}.pigsty`，其中 `${minio_cluster}` 是集群名称，`${minio_seq}` 是节点序号。
 MinIO 实例的名称非常重要，会自动写入到 MinIO 节点的 `/etc/hosts` 中进行静态解析。MinIO 依靠这些名称来识别并访问集群中的其他节点。
 
-在这种情况下，`MINIO_VOLUMES` 将被设置为 `https://minio-{1...4}.pigsty:9000/data{1...4}` ，以标识四个节点上的四块盘。
+在这种情况下，`MINIO_VOLUMES` 将被设置为 `https://minio-{1...4}.pigsty:9000/data{1...4}`，以标识四个节点上的四块盘。
 您可以直接在 MinIO 集群中指定 [`minio_volumes`](/docs/minio/param#minio_volumes) 参数，来覆盖自动根据规则生成的值。
 但通常不需要这样做，因为 Pigsty 会自动根据配置清单生成它。
 
@@ -270,7 +270,7 @@ minio:
           - { name: minio-4 ,ip: 10.10.10.13 ,port: 9000 ,options: 'check-ssl ca-file /etc/pki/ca.crt check port 9000' }
 ```
 
-例如，上面的配置块为 MinIO 集群的所有节点上启用了 HAProxy ，在 9002 端口上暴露 MinIO 服务，同时为集群绑定了一个二层 VIP。
+例如，上面的配置块为 MinIO 集群的所有节点上启用了 HAProxy，在 9002 端口上暴露 MinIO 服务，同时为集群绑定了一个二层 VIP。
 当使用时，用户应当将 `sss.pigsty` 域名解析指向 VIP 地址 `10.10.10.9`，并使用 `9002` 端口访问 MinIO 服务。这样当任意一个节点发生故障时，VIP 会自动切换到另一个节点，保证服务的高可用性。
 
 在这种情况下，您通常还需要在全局修改域名解析的目的地，以及 [`minio_endpoint`](/docs/minio/param#minio_endpoint) 参数，修改写入管理节点 MinIO Alias 对应的端点地址：
@@ -352,7 +352,7 @@ minio_ha:
 
 ## 暴露管控
 
-MinIO 默认通过 `9001` 端口（由 [`minio_admin_port`](/docs/minio/param#minio_admin_port) 参数指定）提供Web管控界面。
+MinIO 默认通过 `9001` 端口（由 [`minio_admin_port`](/docs/minio/param#minio_admin_port) 参数指定）提供 Web 管控界面。
 
 将后台管理界面暴露给外部可能存在安全隐患。如果你希望这样做，请将 MinIO 添加到 [`infra_portal`](/docs/infra/param#infra_portal) 并刷新 Nginx 配置。
 
@@ -378,4 +378,4 @@ infra_portal:
 
 这意味着，您通常需要在您的 DNS 服务器，或者本机 `/etc/hosts` 中添加 `m.pigsty` 的解析记录，以便访问 MinIO 管控页面。
 
-与此同时，如果您使用的是 Pigsty 自签名的 CA 而不是一个正规的公共 CA ，通常您还需要手工信任该 CA 或证书，才能跳过浏览器中的 “不安全” 提示信息。 
+与此同时，如果您使用的是 Pigsty 自签名的 CA 而不是一个正规的公共 CA，通常您还需要手工信任该 CA 或证书，才能跳过浏览器中的 “不安全” 提示信息。 

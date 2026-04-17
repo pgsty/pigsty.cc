@@ -152,7 +152,7 @@ Grafana 有两个密码参数：[**`grafana_admin_password`**](/docs/infra/param
 
 这两个密码一旦初始化之后，就只能通过 grafana 界面进行修改。
 
-Pigsty 会在初始化 Grafana 监控面板，注册 Grafana 数据源的时候，使用 [**`grafana_admin_password`**](/docs/infra/param#grafana_admin_password) 。
+Pigsty 会在初始化 Grafana 监控面板，注册 Grafana 数据源的时候，使用 [**`grafana_admin_password`**](/docs/infra/param#grafana_admin_password)。
 所以如果你通过 Grafana GUI 修改了这个密码，请相应调整配置文件里面的配置。另外，您可以使用以下命令渲染新的密码到环境变量中。
 
 ```bash

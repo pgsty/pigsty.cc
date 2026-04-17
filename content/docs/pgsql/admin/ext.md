@@ -134,7 +134,7 @@ pig install pgvector -v 18            # 针对特定 PG 大版本安装
 ansible pg-test -b -a 'pig install pg_duckdb'   # 使用 Ansible 在集群上批量安装
 ```
 
-您也可以 **直接使用操作系统包管理器** (`apt/dnf`) 进行安装，但您必须知道具体操作系统/PG下的 RPM/DEB 包名：
+您也可以 **直接使用操作系统包管理器** (`apt/dnf`) 进行安装，但您必须知道具体操作系统/PG 下的 RPM/DEB 包名：
 
 ```bash
 # EL 系统（RHEL、Rocky、Alma、Oracle Linux）

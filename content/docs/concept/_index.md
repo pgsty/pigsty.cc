@@ -76,7 +76,7 @@ Pigsty 并不是传统的、包罗万象的 PaaS（平台即服务）系统。
 
 - **Pigsty 不会锁定您**。它基于开源组件构建，不修改 PostgreSQL 内核，不引入专有协议。您随时可以脱离 Pigsty 继续使用管理好的 PostgreSQL 集群。
 
-Pigsty 不限制您应该或不应该如何构建数据库服务。例如:
+Pigsty 不限制您应该或不应该如何构建数据库服务。例如：
 
 - Pigsty 为您提供了良好的参数默认值和配置模板，但您可以覆盖任何参数。
 - Pigsty 提供了声明式 API，但您依然可以使用底层工具（Ansible、Patroni、pgBackRest 等）进行手动管理。
@@ -134,7 +134,7 @@ Pigsty 结合了前两种方式的优点：
 
 ## 接下来
 
-现在您已经了解了 Pigsty 的基本概念，可以:
+现在您已经了解了 Pigsty 的基本概念，可以：
 
 - 查看 [**系统架构**](/docs/concept/arch) 了解 Pigsty 的模块化设计
 - 了解 [**集群模型**](/docs/concept/model) 理解 Pigsty 如何组织数据库集群

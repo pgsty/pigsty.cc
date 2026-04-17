@@ -1,7 +1,7 @@
 ---
 title: 使用方法
 weight: 3610
-description: 快速上手，如何上手使用 MinIO ？如何可靠地接入 MinIO？如何使用 mc / rclone 客户端工具？
+description: 快速上手，如何上手使用 MinIO？如何可靠地接入 MinIO？如何使用 mc / rclone 客户端工具？
 icon: fa-solid fa-bell-concierge
 module: [MINIO]
 categories: [参考]
@@ -21,7 +21,7 @@ categories: [参考]
 minio: { hosts: { 10.10.10.10: { minio_seq: 1 } }, vars: { minio_cluster: minio } }
 ```
 
-然后，针对定义的分组（这里为 `minio` ）执行 Pigsty 提供的 [`minio.yml`](/docs/minio/playbook/) 剧本即可：
+然后，针对定义的分组（这里为 `minio`）执行 Pigsty 提供的 [`minio.yml`](/docs/minio/playbook/) 剧本即可：
 
 ```bash
 ./minio.yml -l minio
@@ -101,7 +101,7 @@ set -o history
 
 ## 存储桶管理
 
-**您可以对MinIO中的存储桶进行增删改查**：
+**您可以对 MinIO 中的存储桶进行增删改查**：
 
 ```bash
 mcli ls sss/                         # 列出别名 'sss' 的所有桶

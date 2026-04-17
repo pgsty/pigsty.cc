@@ -72,7 +72,7 @@ series:
 | **主库降级** |         `retry`          |       `loop + retry`        |       `loop/2 + retry`      | Patroni 检测分区后重试，超时后主动降级          |
 | **租约过期** |    `ttl - loop - retry`  |     `ttl - loop - retry`    |     `ttl - loop - retry`    | 降级后剩余的 TTL 时间（近似常数）              |
 | **从库检测** |           `0`            |           `loop`            |          `loop/2`           | 最好：恰好在检测点<br/>最坏：刚错过检测点          |
-| **抢锁提拔** |           `0`            |            `2`              |             `1`             | 最好：直接抢锁提升<br/>最坏：API超时+Promote   |
+| **抢锁提拔** |           `0`            |            `2`              |             `1`             | 最好：直接抢锁提升<br/>最坏：API 超时+Promote   |
 | **健康检查** |  `(rise-1) × fastinter`  | `(rise-1) × fastinter + inter` | `(rise-1) × fastinter + inter/2` | 最好：检查前状态变化<br/>最坏：检查后瞬间状态变化 |
 {.full-width}
 

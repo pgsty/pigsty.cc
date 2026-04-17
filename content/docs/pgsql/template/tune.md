@@ -12,8 +12,8 @@ categories: [参考]
 Pigsty 默认提供了四套场景化参数模板，可以通过 [**`pg_conf`**](/docs/pgsql/param#pg_conf) 参数指定并使用。
 
 - [**`tiny.yml`**](/docs/pgsql/template/tiny)：为小节点、虚拟机、小型演示优化（1-8核，1-16GB）
-- [**`oltp.yml`**](/docs/pgsql/template/oltp)：为OLTP工作负载和延迟敏感应用优化（4C8GB+）（默认模板）
-- [**`olap.yml`**](/docs/pgsql/template/olap)：为OLAP工作负载和吞吐量优化（4C8G+）
+- [**`oltp.yml`**](/docs/pgsql/template/oltp)：为 OLTP 工作负载和延迟敏感应用优化（4C8GB+）（默认模板）
+- [**`olap.yml`**](/docs/pgsql/template/olap)：为 OLAP 工作负载和吞吐量优化（4C8G+）
 - [**`crit.yml`**](/docs/pgsql/template/crit)：为数据一致性和关键应用优化（4C8G+）
 
 Pigsty 会针对这四种默认场景，采取不同的参数优化策略，如下所示：
@@ -130,7 +130,7 @@ temp_file_limit: {{ ([pg_size_twentieth, 200])|min }}GB               # 1/20 of 
 - `max_wal_size` 默认为磁盘空间的 20%，封顶不超过 2TB。
 - `max_slot_wal_keep_size` 默认为磁盘空间的 30%，封顶不超过 3TB。
 
-作为特例， OLAP 模板允许 20% 的 `temp_file_limit` ，封顶不超过 2TB
+作为特例， OLAP 模板允许 20% 的 `temp_file_limit`，封顶不超过 2TB
 
 
 --------

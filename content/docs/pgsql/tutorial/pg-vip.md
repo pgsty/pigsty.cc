@@ -4,7 +4,7 @@ linkTitle: "配置 PG VIP"
 weight: 2002
 icon: fa-solid fa-arrows-split-up-and-left
 module: [PGSQL]
-categories: [任务, 参考]
+categories: [任务，参考]
 ---
 
 

@@ -237,7 +237,7 @@ etcdctl member promote <new_ins_server_id>
 添加新成员时必须使用 `etcd_init=existing` 参数，否则新实例会尝试创建新集群而非加入现有集群。
 {{% /alert %}}
 
-<details><summary>详细步骤：向etcd集群添加成员</summary>
+<details><summary>详细步骤：向 etcd 集群添加成员</summary>
 
 下面是具体操作的详细细节，让我们从一个单实例 etcd 集群开始：
 
@@ -294,7 +294,7 @@ $ em list                # 再次检查，新成员已提升为正式成员
 429ee12c7fbab5c1, started, etcd-1, https://10.10.10.10:2380, https://10.10.10.10:2379, false
 ```
 
-新成员添加完成，请不要忘记 [重载配置](#重载配置) ，让所有客户端也知道新成员的存在。
+新成员添加完成，请不要忘记 [重载配置](#重载配置)，让所有客户端也知道新成员的存在。
 
 重复以上步骤，可以添加更多成员。记住，生产环境中至少要使用 3 个成员。
 
@@ -340,7 +340,7 @@ etcdctl member remove <server_id>      # 从集群中踢除
 ./etcd-rm.yml -l <ip>                  # 清理实例
 ```
 
-<details><summary>详细步骤：从etcd集群移除成员</summary>
+<details><summary>详细步骤：从 etcd 集群移除成员</summary>
 
 让我们以一个 3 节点的 etcd 集群为例，从中移除 3 号实例。
 

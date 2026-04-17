@@ -7,7 +7,7 @@ module: [DOCKER]
 categories: [任务]
 ---
 
-Docker 模块提供了一个默认的剧本 [`docker.yml`](#dockeryml) ，用于安装 Docker Daemon 与 Docker Compose。
+Docker 模块提供了一个默认的剧本 [`docker.yml`](#dockeryml)，用于安装 Docker Daemon 与 Docker Compose。
 
 ------
 
@@ -19,13 +19,13 @@ Docker 模块提供了一个默认的剧本 [`docker.yml`](#dockeryml) ，用于
 
 以下是 `docker.yml` 剧本中可用的任务子集：
 
-- `docker_install`   ： 在节点上安装 Docker，Docker Compose 软件包
-- `docker_admin`     ： 将指定的用户加入 Docker 管理员用户组中
-- `docker_dir`       ： 创建 Docker 相关目录
-- `docker_config`    ： 生成 Docker 守护进程服务配置文件
-- `docker_launch`    ： 启动 Docker 守护进程服务
-- `docker_register`  ： 将 Docker 守护进程注册为监控目标（别名标签：`register` / `add_metrics`）
-- `docker_image`     ： 尝试从 `/tmp/docker/*.tgz` 加载预置镜像压缩包（如果存在）
+- `docker_install`： 在节点上安装 Docker，Docker Compose 软件包
+- `docker_admin`： 将指定的用户加入 Docker 管理员用户组中
+- `docker_dir`： 创建 Docker 相关目录
+- `docker_config`： 生成 Docker 守护进程服务配置文件
+- `docker_launch`： 启动 Docker 守护进程服务
+- `docker_register`： 将 Docker 守护进程注册为监控目标（别名标签：`register` / `add_metrics`）
+- `docker_image`： 尝试从 `/tmp/docker/*.tgz` 加载预置镜像压缩包（如果存在）
 
 Docker 模块没有提供专门的卸载剧本，如果您需要卸载 Docker，可以手工停止 docker 后卸载：
 

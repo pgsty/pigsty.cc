@@ -340,7 +340,7 @@ Redis 高可用设置需要使用集群模式或哨兵模式，详情请参阅 [
 
 ## 部署 MinIO 集群
 
-Pigsty 提供了可选的开源对象存储，S3 替代 —— [**MinIO**](/docs/minio) 支持，可作为 PostgreSQL 的 [**备份存储仓库**](/docs/pgsql/backup/repository) 。
+Pigsty 提供了可选的开源对象存储，S3 替代 —— [**MinIO**](/docs/minio) 支持，可作为 PostgreSQL 的 [**备份存储仓库**](/docs/pgsql/backup/repository)。
 
 ```bash
 ./minio.yml -l minio

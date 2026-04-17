@@ -74,7 +74,7 @@ Percona 提供了 80 个可用的扩展，包括 `pg_tde`, `pgvector`, `postgis`
 | pg_stat_monitor | 2.3   | PostgreSQL 查询性能监控工具         |
 | set_user        | 4.2.0 | 类似 SET ROLE 但带有额外日志记录       |
 | pg_repack       | 1.5.3 | 以最小锁定重组 PostgreSQL 数据库中的表   |
-| hstore          | 1.8   | 用于存储(键,值)对集合的数据类型           |
+| hstore          | 1.8   | 用于存储（键，值）对集合的数据类型           |
 | ltree           | 1.3   | 用于层次树状结构的数据类型               |
 | pg_trgm         | 1.6   | 基于三元组的文本相似度测量和索引搜索          |
 {.full-width}
