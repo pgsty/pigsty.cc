@@ -1,5 +1,5 @@
 ---
-title: "自建Supabase：创业出海的首选数据库"
+title: "自建 Supabase：创业出海的首选数据库"
 linkTitle: "企业级 Supabase 自建指南"
 date: 2024-11-25
 manualLink: /blog/db/supabase/

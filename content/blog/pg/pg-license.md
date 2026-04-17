@@ -1,5 +1,5 @@
 ---
-title: "PostgreSQL会修改开源许可证吗？"
+title: "PostgreSQL 会修改开源许可证吗？"
 date: 2024-03-20
 manualLink: https://vonng.com/pg/pg-license/
 author: Jonathan Katz

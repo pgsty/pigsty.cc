@@ -1,5 +1,5 @@
 ---
-title: "PG慢查询诊断方法论"
+title: "PG 慢查询诊断方法论"
 date: 2021-02-23
 manualLink: https://vonng.com/pg/slow-query/
 author: 冯若航

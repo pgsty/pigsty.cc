@@ -5,11 +5,11 @@ date: 2018-07-20
 manualLink: https://vonng.com/pg/sequence-overflow/
 author: 冯若航
 description: >
-  如果您在表上用了Interger的序列号，最好还是考虑一下可能溢出的情况。
+  如果您在表上用了 Interger 的序列号，最好还是考虑一下可能溢出的情况。
 images: ['/img/hero/pg/sequence-overflow.jpg']
 tags: [PostgreSQL]
 ---
 
 [![featured](/img/hero/pg/sequence-overflow.jpg)](https://vonng.com/pg/sequence-overflow/)
 
-如果您在表上用了Interger的序列号，最好还是考虑一下可能溢出的情况。 [**阅读全文**](https://vonng.com/pg/sequence-overflow/)
+如果您在表上用了 Interger 的序列号，最好还是考虑一下可能溢出的情况。 [**阅读全文**](https://vonng.com/pg/sequence-overflow/)

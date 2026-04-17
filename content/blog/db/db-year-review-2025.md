@@ -7,7 +7,7 @@ author: 冯若航
 description: >
   图灵奖得主 + CMU 教授：2025 数据库圈最犀利的一场对话。关于数据库，LLM，Agent，AI 落地的实际效果，程序员的职业生涯……
 images: ['/img/hero/db/db-year-review-2025.jpg']
-tags: [数据库, DBOS, PostgreSQL]
+tags: [数据库，DBOS, PostgreSQL]
 ---
 
 [![featured](/img/hero/db/db-year-review-2025.jpg)](https://vonng.com/db/db-year-review-2025/)

@@ -1,5 +1,5 @@
 ---
-title: "技术极简主义：一切皆用Postgres"
+title: "技术极简主义：一切皆用 Postgres"
 date: 2024-02-19
 manualLink: https://vonng.com/pg/just-use-pg/
 author: Stephan Schmidt

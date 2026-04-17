@@ -4,7 +4,7 @@ date: 2023-05-07
 manualLink: https://vonng.com/db/microservice-bad-idea/
 author: Dhh
 description: >
-  连SOA典范亚马逊自己都觉得微服务和Serverless拉胯了。Prime Video团队放弃微服务改用单体架构，运营成本节省了惊人的90%。微服务就像塞壬歌声一样诱惑你为系统添加毫无必要的复杂度。
+  连 SOA 典范亚马逊自己都觉得微服务和 Serverless 拉胯了。Prime Video 团队放弃微服务改用单体架构，运营成本节省了惊人的90%。微服务就像塞壬歌声一样诱惑你为系统添加毫无必要的复杂度。
 images: ['/img/hero/db/microservice-bad-idea.jpg']
 tags: [数据库]
 ---
@@ -13,4 +13,4 @@ tags: [数据库]
 
 [![featured](/img/hero/db/microservice-bad-idea.jpg)](https://vonng.com/db/microservice-bad-idea/)
 
-连SOA典范亚马逊自己都觉得微服务和Serverless拉胯了。Prime Video团队放弃微服务改用单体架构，运营成本节省了惊人的90%。微服务就像塞壬歌声一样诱惑你为系统添加毫无必要的复杂度。 [**阅读全文**](https://vonng.com/db/microservice-bad-idea/)
+连 SOA 典范亚马逊自己都觉得微服务和 Serverless 拉胯了。Prime Video 团队放弃微服务改用单体架构，运营成本节省了惊人的90%。微服务就像塞壬歌声一样诱惑你为系统添加毫无必要的复杂度。 [**阅读全文**](https://vonng.com/db/microservice-bad-idea/)

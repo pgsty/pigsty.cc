@@ -1,5 +1,5 @@
 ---
-title: "温备：使用pg_receivewal"
+title: "温备：使用 pg_receivewal"
 date: 2019-03-02
 manualLink: https://vonng.com/pg/backup-plan/
 author: 冯若航

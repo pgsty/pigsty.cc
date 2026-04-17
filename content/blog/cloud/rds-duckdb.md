@@ -1,5 +1,5 @@
 ---
-title: "阿里云rds_duckdb：致敬还是抄袭？"
+title: "阿里云 rds_duckdb：致敬还是抄袭？"
 date: 2025-03-06
 manualLink: https://vonng.com/cloud/rds-duckdb/
 author: 冯若航

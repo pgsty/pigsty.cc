@@ -1,5 +1,5 @@
 ---
-title: "WordPress社区内战：论共同体划界问题"
+title: "WordPress 社区内战：论共同体划界问题"
 date: 2024-10-17
 manualLink: https://vonng.com/cloud/wordpress-drama/
 author: 冯若航

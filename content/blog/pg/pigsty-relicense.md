@@ -1,5 +1,5 @@
 ---
-title: "从AGPL到Apache：Pigsty 协议变更的思考"
+title: "从 AGPL 到 Apache：Pigsty 协议变更的思考"
 date: 2026-01-29
 manualLink: https://vonng.com/pg/pigsty-relicense/
 author: 冯若航

@@ -1,6 +1,6 @@
 ---
-title: "PostGIS高效解决行政区划归属查询"
-linkTitle: "行政区划查询：GIS点找面"
+title: "PostGIS 高效解决行政区划归属查询"
+linkTitle: "行政区划查询：GIS 点找面"
 date: 2018-06-06
 manualLink: https://vonng.com/pg/adcode-geodecode/
 author: 冯若航

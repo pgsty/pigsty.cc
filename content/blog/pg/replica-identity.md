@@ -1,6 +1,6 @@
 ---
-title: "PG复制标识详解（Replica Identity）"
-linkTitle: "PG复制标识详解"
+title: "PG 复制标识详解（Replica Identity）"
+linkTitle: "PG 复制标识详解"
 date: 2021-03-03
 manualLink: https://vonng.com/pg/replica-identity/
 author: 冯若航

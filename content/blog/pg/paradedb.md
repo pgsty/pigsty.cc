@@ -1,5 +1,5 @@
 ---
-title: "PG生态新玩家：ParadeDB"
+title: "PG 生态新玩家：ParadeDB"
 date: 2024-02-18
 manualLink: https://vonng.com/pg/paradedb/
 author: 冯若航

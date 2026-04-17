@@ -7,7 +7,7 @@ author: 冯若航
 description: >
   如何在瞬间克隆一个巨大的 PostgreSQL 数据库，还不占用额外的存储？PG 18 与 XFS 可以擦出很多火花。
 images: ['/img/hero/pg/pg-clone.jpg']
-tags: [PostgreSQL, PG开发]
+tags: [PostgreSQL, PG 开发]
 ---
 
 [![featured](/img/hero/pg/pg-clone.jpg)](https://vonng.com/pg/pg-clone/)

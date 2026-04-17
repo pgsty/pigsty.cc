@@ -1,5 +1,5 @@
 ---
-title: "空中换引擎：PostgreSQL不停机迁移数据"
+title: "空中换引擎：PostgreSQL 不停机迁移数据"
 linkTitle: "不停机迁移数据基本原理"
 date: 2018-02-06
 manualLink: https://vonng.com/pg/migration-without-downtime/

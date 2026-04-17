@@ -1,6 +1,6 @@
 ---
 title: "PostgreSQL 宏观查询优化之 pg_stat_statements"
-linkTitle: "PG查询优化：观宏之道"
+linkTitle: "PG 查询优化：观宏之道"
 date: 2023-10-26
 manualLink: https://vonng.com/pg/pgss/
 author: Nikolay Samokhvalov

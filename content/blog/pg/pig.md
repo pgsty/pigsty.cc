@@ -1,6 +1,6 @@
 ---
-title: "小猪骑大象：PG内核与扩展包管理神器"
-linkTitle: "小猪骑大象：PG包管理神器Pig"
+title: "小猪骑大象：PG 内核与扩展包管理神器"
+linkTitle: "小猪骑大象：PG 包管理神器 Pig"
 date: 2024-12-23
 manualLink: https://vonng.com/pg/pig/
 author: 冯若航

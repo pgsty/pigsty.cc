@@ -1,5 +1,5 @@
 ---
-title: "卡脖子：PGDG切断镜像站同步通道"
+title: "卡脖子：PGDG 切断镜像站同步通道"
 date: 2025-07-07
 manualLink: https://vonng.com/pg/pg-mirror-break/
 author: 冯若航

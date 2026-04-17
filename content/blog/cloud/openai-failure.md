@@ -1,5 +1,5 @@
 ---
-title: "OpenAI全球宕机复盘：K8S循环依赖"
+title: "OpenAI 全球宕机复盘：K8S 循环依赖"
 date: 2024-12-14
 manualLink: https://vonng.com/cloud/openai-failure/
 author: 冯若航

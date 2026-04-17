@@ -1,5 +1,5 @@
 ---
-title: "驳《再论为什么你不应该招DBA》"
+title: "驳《再论为什么你不应该招 DBA》"
 date: 2023-03-01
 manualLink: https://vonng.com/cloud/no-dba-bullshit/
 author: 冯若航

@@ -1,5 +1,5 @@
 ---
-title: "为什么PG将主宰AI时代的数据库"
+title: "为什么 PG 将主宰 AI 时代的数据库"
 date: 2025-12-01
 manualLink: https://vonng.com/pg/ai-db-king/
 author: 冯若航

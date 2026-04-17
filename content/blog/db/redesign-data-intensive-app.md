@@ -6,7 +6,7 @@ author: Martin Kleppmann
 description: >
   Martin Kleppmann 在播客三聊到了关于《设计数据密集型应用》第二版的一些内容。以及一些关于数据密集型应用设计的思考。
 images: ['/img/hero/db/redesign-data-intensive-app.webp']
-tags: [DDIA, 数据库, 翻译]
+tags: [DDIA, 数据库，翻译]
 ---
 
 > 原文链接：[https://www.youtube.com/watch?v=UHdPnubbzBI](https://www.youtube.com/watch?v=UHdPnubbzBI)

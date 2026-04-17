@@ -1,5 +1,5 @@
 ---
-title: "批量配置SSH免密登录"
+title: "批量配置 SSH 免密登录"
 date: 2018-01-07
 manualLink: https://vonng.com/pg/ssh-add-key/
 author: 冯若航

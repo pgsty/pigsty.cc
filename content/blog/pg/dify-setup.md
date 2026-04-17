@@ -1,5 +1,5 @@
 ---
-title: "使用Pigsty自建Dify：AI工作流平台"
+title: "使用 Pigsty 自建 Dify：AI 工作流平台"
 date: 2024-06-22
 manualLink: https://vonng.com/pg/dify-setup/
 author: 冯若航
