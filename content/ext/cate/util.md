@@ -8,7 +8,7 @@ icon: fas fa-wrench
 
 ## 扩展列表
 
-共有 **38** 个扩展，位于 **37** 个扩展包中。
+共有 **39** 个扩展，位于 **38** 个扩展包中。
 
 | **扩展** | **包** | **版本** | **许可证** | **语言** | **描述** |
 |:---------|:-------|:--------:|:----------:|:--------:|:---------|
@@ -21,7 +21,7 @@ icon: fas fa-wrench
 | [`pg_retry`](/ext/e/pg_retry) | [`pg_retry`](https://github.com/Agent-Hellboy/pg_retry) | `1.0.0` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 在临时错误中使用指数退避重试语句 |
 | [`pg_fsql`](/ext/e/pg_fsql) | [`pg_fsql`](https://github.com/yurc/pg_fsql) | `1.1.0` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 支持 JSONB 驱动执行的递归 SQL 模板引擎 |
 | [`pg_protobuf`](/ext/e/pg_protobuf) | [`pg_protobuf`](https://github.com/afiskon/pg_protobuf) | `1.0` | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 提供Protobuf函数支持 |
-| [`pgproto`](/ext/e/pgproto) | [`pgproto`](https://github.com/Apaezmx/pgproto) | `0.2.4` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 原生 Protobuf 解析、修改、索引与 JSON 转换支持 |
+| [`pgproto`](/ext/e/pgproto) | [`pgproto`](https://github.com/Apaezmx/pgproto) | `0.3.3` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 原生 Protobuf 解析、修改、索引与 JSON 转换支持 |
 | [`pglock`](/ext/e/pglock) | [`pglock`](https://github.com/fraruiz/pglock) | `1.0.0` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> | 在 PostgreSQL 内实现轻量级分布式锁服务 |
 | [`pgjq`](/ext/e/pgjq) | [`pgjq`](https://github.com/Florents-Tselai/pgJQ) | `0.1.0` | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 在Postgres中使用jq查询JSON |
 | [`pgjwt`](/ext/e/pgjwt) | [`pgjwt`](https://github.com/michelp/pgjwt) | `0.2.0` | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> | JSON Web Token API 的PG实现 (supabase) |
@@ -31,6 +31,7 @@ icon: fas fa-wrench
 | [`pgsql_tweaks`](/ext/e/pgsql_tweaks) | [`pgsql_tweaks`](https://codeberg.org/pgsql_tweaks/pgsql_tweaks) | `1.0.2` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> | 一些日常会用到的便利函数与视图 |
 | [`pg_extra_time`](/ext/e/pg_extra_time) | [`pg_extra_time`](https://github.com/bigsmoke/pg_extra_time) | `2.0.0` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> | 一些关于日期与时间的扩展函数 |
 | [`pgpcre`](/ext/e/pgpcre) | [`pgpcre`](https://github.com/petere/pgpcre) | `0.20190509` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | PCRE/Perl风格的正则表达式支持 |
+| [`re2`](/ext/e/re2) | [`re2`](https://github.com/ClickHouse/pg_re2) | `0.1.1` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang cpp" href="/ext/language#cpp">C++</a> | 使用 RE2 的 ClickHouse 兼容正则函数 |
 | [`icu_ext`](/ext/e/icu_ext) | [`icu_ext`](https://github.com/dverite/icu_ext) | `1.10.0` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 访问ICU库提供的函数 |
 | [`pgqr`](/ext/e/pgqr) | [`pgqr`](https://github.com/AbdulYadi/pgqr) | `1.0` | <a class="ext-badge ext-badge--license bsd 3clause" href="/ext/license#bsd3clause">BSD 3-Clause</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 从数据库中直接生成QR二维码 |
 | [`envvar`](/ext/e/envvar) | [`pg_envvar`](https://github.com/theory/pg-envvar) | `1.0.1` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 获取环境变量的函数 |
@@ -219,7 +220,7 @@ icon: fas fa-wrench
 
 ## pgproto {#pgproto}
 
-[**`pgproto`**](/ext/e/pgproto) - `0.2.4` : 原生 Protobuf 解析、修改、索引与 JSON 转换支持
+[**`pgproto`**](/ext/e/pgproto) - `0.3.3` : 原生 Protobuf 解析、修改、索引与 JSON 转换支持
 
 | **条目** | **属性** | **OS** | **x86_64** | **aarch64** |
 |:---:|:---|:---:|:---:|:---:|
@@ -392,6 +393,24 @@ icon: fas fa-wrench
 | **语言** | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | **d13** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
 | **仓库** | <a class="ext-badge ext-badge--repo mixed" href="/ext/repo#mixed">MIXED</a> | **u22** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
 | **协议** | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | **u24** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+{.ext-table .ext-table--cate}
+
+
+---------
+
+## re2 {#re2}
+
+[**`re2`**](/ext/e/re2) - `0.1.1` : 使用 RE2 的 ClickHouse 兼容正则函数
+
+| **条目** | **属性** | **OS** | **x86_64** | **aarch64** |
+|:---:|:---|:---:|:---:|:---:|
+| **扩展名** | [`re2`](/ext/e/re2) | **el8** | {{< pgvers "18,17,16" >}} | {{< pgvers "18,17,16" >}} |
+| **扩展包** | [`re2`](https://github.com/ClickHouse/pg_re2) | **el9** | {{< pgvers "18,17,16" >}} | {{< pgvers "18,17,16" >}} |
+| **RPM** | `re2_$v` | **el10** | {{< pgvers "18,17,16" >}} | {{< pgvers "18,17,16" >}} |
+| **DEB** | `postgresql-$v-re2` | **d12** | {{< pgvers "18,17,16" >}} | {{< pgvers "18,17,16" >}} |
+| **语言** | <a class="ext-badge ext-badge--lang cpp" href="/ext/language#cpp">C++</a> | **d13** | {{< pgvers "18,17,16" >}} | {{< pgvers "18,17,16" >}} |
+| **仓库** | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | **u22** | {{< pgvers "18,17,16" >}} | {{< pgvers "18,17,16" >}} |
+| **协议** | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | **u24** | {{< pgvers "18,17,16" >}} | {{< pgvers "18,17,16" >}} |
 {.ext-table .ext-table--cate}
 
 

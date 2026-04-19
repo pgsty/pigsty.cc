@@ -2,7 +2,7 @@
 title: "pg_liquid"
 linkTitle: "pg_liquid"
 description: "受 Liquid 启发的 Datalog 图查询扩展"
-weight: 2705
+weight: 2610
 ---
 
 <div class="ext-cards">
@@ -30,7 +30,7 @@ weight: 2705
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
 |:-----:|:-------------------------------------------------------------------------|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|:----------|
-| 2705  | [**`pg_liquid`**](/ext/e/pg_liquid) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `liquid` |
+| 2610  | [**`pg_liquid`**](/ext/e/pg_liquid) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `liquid` |
 {.ext-table}
 
 | **相关扩展** | [`age`](/ext/e/age) [`jsquery`](/ext/e/jsquery) [`pg_jsonschema`](/ext/e/pg_jsonschema) [`pg_search`](/ext/e/pg_search) |

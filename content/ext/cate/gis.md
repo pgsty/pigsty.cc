@@ -12,13 +12,13 @@ icon: fas fa-globe
 
 | **扩展** | **包** | **版本** | **许可证** | **语言** | **描述** |
 |:---------|:-------|:--------:|:----------:|:--------:|:---------|
-| [`postgis`](/ext/e/postgis) | [`postgis`](https://git.osgeo.org/gitea/postgis/postgis) | `3.6.2` | <a class="ext-badge ext-badge--license gpl20" href="/ext/license#gpl20">GPL-2.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | PostGIS 几何和地理空间扩展 |
-| [`postgis_topology`](/ext/e/postgis_topology) | [`postgis`](https://git.osgeo.org/gitea/postgis/postgis) | `3.6.2` | <a class="ext-badge ext-badge--license gpl20" href="/ext/license#gpl20">GPL-2.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | PostGIS 拓扑空间类型和函数 |
-| [`postgis_raster`](/ext/e/postgis_raster) | [`postgis`](https://git.osgeo.org/gitea/postgis/postgis) | `3.6.2` | <a class="ext-badge ext-badge--license gpl20" href="/ext/license#gpl20">GPL-2.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | PostGIS 光栅类型和函数 |
-| [`postgis_sfcgal`](/ext/e/postgis_sfcgal) | [`postgis`](https://git.osgeo.org/gitea/postgis/postgis) | `3.6.2` | <a class="ext-badge ext-badge--license gpl20" href="/ext/license#gpl20">GPL-2.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | PostGIS SFCGAL 函数 |
-| [`postgis_tiger_geocoder`](/ext/e/postgis_tiger_geocoder) | [`postgis`](https://git.osgeo.org/gitea/postgis/postgis) | `3.6.2` | <a class="ext-badge ext-badge--license gpl20" href="/ext/license#gpl20">GPL-2.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | PostGIS tiger 地理编码器和反向地理编码器 |
-| [`address_standardizer`](/ext/e/address_standardizer) | [`postgis`](https://git.osgeo.org/gitea/postgis/postgis) | `3.6.2` | <a class="ext-badge ext-badge--license gpl20" href="/ext/license#gpl20">GPL-2.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 地址标准化函数。 |
-| [`address_standardizer_data_us`](/ext/e/address_standardizer_data_us) | [`postgis`](https://git.osgeo.org/gitea/postgis/postgis) | `3.6.2` | <a class="ext-badge ext-badge--license gpl20" href="/ext/license#gpl20">GPL-2.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 地址标准化函数：美国数据集示例 |
+| [`postgis`](/ext/e/postgis) | [`postgis`](https://git.osgeo.org/gitea/postgis/postgis) | `3.6.3` | <a class="ext-badge ext-badge--license gpl20" href="/ext/license#gpl20">GPL-2.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | PostGIS 几何和地理空间扩展 |
+| [`postgis_topology`](/ext/e/postgis_topology) | [`postgis`](https://git.osgeo.org/gitea/postgis/postgis) | `3.6.3` | <a class="ext-badge ext-badge--license gpl20" href="/ext/license#gpl20">GPL-2.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | PostGIS 拓扑空间类型和函数 |
+| [`postgis_raster`](/ext/e/postgis_raster) | [`postgis`](https://git.osgeo.org/gitea/postgis/postgis) | `3.6.3` | <a class="ext-badge ext-badge--license gpl20" href="/ext/license#gpl20">GPL-2.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | PostGIS 光栅类型和函数 |
+| [`postgis_sfcgal`](/ext/e/postgis_sfcgal) | [`postgis`](https://git.osgeo.org/gitea/postgis/postgis) | `3.6.3` | <a class="ext-badge ext-badge--license gpl20" href="/ext/license#gpl20">GPL-2.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | PostGIS SFCGAL 函数 |
+| [`postgis_tiger_geocoder`](/ext/e/postgis_tiger_geocoder) | [`postgis`](https://git.osgeo.org/gitea/postgis/postgis) | `3.6.3` | <a class="ext-badge ext-badge--license gpl20" href="/ext/license#gpl20">GPL-2.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | PostGIS tiger 地理编码器和反向地理编码器 |
+| [`address_standardizer`](/ext/e/address_standardizer) | [`postgis`](https://git.osgeo.org/gitea/postgis/postgis) | `3.6.3` | <a class="ext-badge ext-badge--license gpl20" href="/ext/license#gpl20">GPL-2.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 地址标准化函数。 |
+| [`address_standardizer_data_us`](/ext/e/address_standardizer_data_us) | [`postgis`](https://git.osgeo.org/gitea/postgis/postgis) | `3.6.3` | <a class="ext-badge ext-badge--license gpl20" href="/ext/license#gpl20">GPL-2.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 地址标准化函数：美国数据集示例 |
 | [`pgrouting`](/ext/e/pgrouting) | [`pgrouting`](https://github.com/pgRouting/pgrouting) | `4.0.1` | <a class="ext-badge ext-badge--license gpl20" href="/ext/license#gpl20">GPL-2.0</a> | <a class="ext-badge ext-badge--lang cpp" href="/ext/language#cpp">C++</a> | 提供寻路能力 |
 | [`pointcloud`](/ext/e/pointcloud) | [`pointcloud`](https://github.com/pgpointcloud/pointcloud) | `1.2.5` | <a class="ext-badge ext-badge--license bsd 3clause" href="/ext/license#bsd3clause">BSD 3-Clause</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 提供激光雷达点云数据类型支持 |
 | [`pointcloud_postgis`](/ext/e/pointcloud_postgis) | [`pointcloud`](https://github.com/pgpointcloud/pointcloud) | `1.2.5` | <a class="ext-badge ext-badge--license bsd 3clause" href="/ext/license#bsd3clause">BSD 3-Clause</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 将激光雷达点云与PostGIS几何类型相集成 |
@@ -48,7 +48,7 @@ icon: fas fa-globe
 
 ## postgis {#postgis}
 
-[**`postgis`**](/ext/e/postgis) - `3.6.2` : PostGIS 几何和地理空间扩展
+[**`postgis`**](/ext/e/postgis) - `3.6.3` : PostGIS 几何和地理空间扩展
 
 | **条目** | **属性** | **OS** | **x86_64** | **aarch64** |
 |:---:|:---|:---:|:---:|:---:|
@@ -66,7 +66,7 @@ icon: fas fa-globe
 
 ## postgis_topology {#postgis_topology}
 
-[**`postgis`**](/ext/e/postgis_topology) - `3.6.2` : PostGIS 拓扑空间类型和函数
+[**`postgis`**](/ext/e/postgis_topology) - `3.6.3` : PostGIS 拓扑空间类型和函数
 
 | **条目** | **属性** | **OS** | **x86_64** | **aarch64** |
 |:---:|:---|:---:|:---:|:---:|
@@ -84,7 +84,7 @@ icon: fas fa-globe
 
 ## postgis_raster {#postgis_raster}
 
-[**`postgis`**](/ext/e/postgis_raster) - `3.6.2` : PostGIS 光栅类型和函数
+[**`postgis`**](/ext/e/postgis_raster) - `3.6.3` : PostGIS 光栅类型和函数
 
 | **条目** | **属性** | **OS** | **x86_64** | **aarch64** |
 |:---:|:---|:---:|:---:|:---:|
@@ -102,7 +102,7 @@ icon: fas fa-globe
 
 ## postgis_sfcgal {#postgis_sfcgal}
 
-[**`postgis`**](/ext/e/postgis_sfcgal) - `3.6.2` : PostGIS SFCGAL 函数
+[**`postgis`**](/ext/e/postgis_sfcgal) - `3.6.3` : PostGIS SFCGAL 函数
 
 | **条目** | **属性** | **OS** | **x86_64** | **aarch64** |
 |:---:|:---|:---:|:---:|:---:|
@@ -120,7 +120,7 @@ icon: fas fa-globe
 
 ## postgis_tiger_geocoder {#postgis_tiger_geocoder}
 
-[**`postgis`**](/ext/e/postgis_tiger_geocoder) - `3.6.2` : PostGIS tiger 地理编码器和反向地理编码器
+[**`postgis`**](/ext/e/postgis_tiger_geocoder) - `3.6.3` : PostGIS tiger 地理编码器和反向地理编码器
 
 | **条目** | **属性** | **OS** | **x86_64** | **aarch64** |
 |:---:|:---|:---:|:---:|:---:|
@@ -138,7 +138,7 @@ icon: fas fa-globe
 
 ## address_standardizer {#address_standardizer}
 
-[**`postgis`**](/ext/e/address_standardizer) - `3.6.2` : 地址标准化函数。
+[**`postgis`**](/ext/e/address_standardizer) - `3.6.3` : 地址标准化函数。
 
 | **条目** | **属性** | **OS** | **x86_64** | **aarch64** |
 |:---:|:---|:---:|:---:|:---:|
@@ -156,7 +156,7 @@ icon: fas fa-globe
 
 ## address_standardizer_data_us {#address_standardizer_data_us}
 
-[**`postgis`**](/ext/e/address_standardizer_data_us) - `3.6.2` : 地址标准化函数：美国数据集示例
+[**`postgis`**](/ext/e/address_standardizer_data_us) - `3.6.3` : 地址标准化函数：美国数据集示例
 
 | **条目** | **属性** | **OS** | **x86_64** | **aarch64** |
 |:---:|:---|:---:|:---:|:---:|

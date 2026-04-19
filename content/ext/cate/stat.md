@@ -14,7 +14,7 @@ icon: fas fa-file-waveform
 |:---------|:-------|:--------:|:----------:|:--------:|:---------|
 | [`pg_profile`](/ext/e/pg_profile) | [`pg_profile`](https://github.com/zubkov-andrei/pg_profile) | `4.11` | <a class="ext-badge ext-badge--license bsd 2clause" href="/ext/license#bsd2clause">BSD 2-Clause</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | PostgreSQL 数据库负载记录与AWR报表工具 |
 | [`pg_tracing`](/ext/e/pg_tracing) | [`pg_tracing`](https://github.com/DataDog/pg_tracing) | `0.1.3` | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | PostgreSQL分布式Tracing |
-| [`pg_stat_ch`](/ext/e/pg_stat_ch) | [`pg_stat_ch`](https://github.com/ClickHouse/pg_stat_ch) | `0.3.4` | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang cpp" href="/ext/language#cpp">C++</a> | 将 PostgreSQL 查询遥测实时导出到 ClickHouse |
+| [`pg_stat_ch`](/ext/e/pg_stat_ch) | [`pg_stat_ch`](https://github.com/ClickHouse/pg_stat_ch) | `0.3.6` | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang cpp" href="/ext/language#cpp">C++</a> | 将 PostgreSQL 查询遥测实时导出到 ClickHouse |
 | [`pg_show_plans`](/ext/e/pg_show_plans) | [`pg_show_plans`](https://github.com/cybertec-postgresql/pg_show_plans) | `2.1.7` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 打印所有当前正在运行查询的执行计划 |
 | [`pg_stat_kcache`](/ext/e/pg_stat_kcache) | [`pg_stat_kcache`](https://github.com/powa-team/pg_stat_kcache) | `2.3.1` | <a class="ext-badge ext-badge--license bsd 3clause" href="/ext/license#bsd3clause">BSD 3-Clause</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 内核统计信息收集 |
 | [`pg_stat_monitor`](/ext/e/pg_stat_monitor) | [`pg_stat_monitor`](https://github.com/percona/pg_stat_monitor) | `2.3.2` | <a class="ext-badge ext-badge--license bsd 3clause" href="/ext/license#bsd3clause">BSD 3-Clause</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 提供查询聚合统计、客户端信息、执行计划详细信息和直方图 |
@@ -92,7 +92,7 @@ icon: fas fa-file-waveform
 
 ## pg_stat_ch {#pg_stat_ch}
 
-[**`pg_stat_ch`**](/ext/e/pg_stat_ch) - `0.3.4` : 将 PostgreSQL 查询遥测实时导出到 ClickHouse
+[**`pg_stat_ch`**](/ext/e/pg_stat_ch) - `0.3.6` : 将 PostgreSQL 查询遥测实时导出到 ClickHouse
 
 | **条目** | **属性** | **OS** | **x86_64** | **aarch64** |
 |:---:|:---|:---:|:---:|:---:|

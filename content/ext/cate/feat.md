@@ -8,12 +8,17 @@ icon: fas fa-icons
 
 ## 扩展列表
 
-共有 **67** 个扩展，位于 **28** 个扩展包中。
+共有 **68** 个扩展，位于 **29** 个扩展包中。
 
 | **扩展** | **包** | **版本** | **许可证** | **语言** | **描述** |
 |:---------|:-------|:--------:|:----------:|:--------:|:---------|
 | [`age`](/ext/e/age) | [`age`](https://github.com/apache/age) | `1.7.0` | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | Apache AGE，图数据库扩展 （Deb可用） |
 | [`pg_liquid`](/ext/e/pg_liquid) | [`pg_liquid`](https://github.com/michael-golfi/pg_liquid) | `0.1.7` | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 受 Liquid 启发的 Datalog 图查询扩展 |
+| [`onesparse`](/ext/e/onesparse) | [`one_sparse`](https://github.com/OneSparse/OneSparse) | `1.0.0` | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | PostgreSQL 18 的稀疏线性代数与图算法扩展 |
+| [`pgq`](/ext/e/pgq) | [`pgq`](https://github.com/pgq/pgq) | `3.5.1` | <a class="ext-badge ext-badge--license isc" href="/ext/license#isc">ISC</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 通用队列的PG实现 |
+| [`pgmq`](/ext/e/pgmq) | [`pgmq`](https://github.com/pgmq/pgmq) | `1.11.0` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> | 基于Postgres实现类似AWS SQS/RSMQ的消息队列 |
+| [`pgmb`](/ext/e/pgmb) | [`pgmb`](https://github.com/fraruiz/pgmb) | `1.0.0` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> | 一个简单的PostgreSQL消息代理系统 |
+| [`ulak`](/ext/e/ulak) | [`ulak`](https://github.com/zeybek/ulak) | `0.0.2` | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 支持可靠异步投递的 PostgreSQL 事务型 Outbox 扩展 |
 | [`hll`](/ext/e/hll) | [`hll`](https://github.com/citusdata/postgresql-hll) | `2.19` | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang cpp" href="/ext/language#cpp">C++</a> | hyperloglog 数据类型 |
 | [`rum`](/ext/e/rum) | [`rum`](https://github.com/postgrespro/rum) | `1.3.15` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | RUM 索引访问方法 |
 | [`pg_ai_query`](/ext/e/pg_ai_query) | [`pg_ai_query`](https://github.com/benodiwal/pg_ai_query) | `0.1.1` | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang cpp" href="/ext/language#cpp">C++</a> | AI驱动的 Postgres SQL 查询生成 |
@@ -30,11 +35,8 @@ icon: fas fa-icons
 | [`pg_ivm`](/ext/e/pg_ivm) | [`pg_ivm`](https://github.com/sraoss/pg_ivm) | `1.13` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 增量维护的物化视图 |
 | [`pg_incremental`](/ext/e/pg_incremental) | [`pg_incremental`](https://github.com/CrunchyData/pg_incremental) | `1.5.0` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 增量处理流式事件 |
 | [`pg_trickle`](/ext/e/pg_trickle) | [`pg_trickle`](https://github.com/grove/pg-trickle) | `0.17.0` | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | 为 PostgreSQL 18 提供流式表与差分视图维护 |
-| [`pgmb`](/ext/e/pgmb) | [`pgmb`](https://github.com/fraruiz/pgmb) | `1.0.0` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> | 一个简单的PostgreSQL消息代理系统 |
-| [`pgmq`](/ext/e/pgmq) | [`pgmq`](https://github.com/pgmq/pgmq) | `1.11.0` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> | 基于Postgres实现类似AWS SQS/RSMQ的消息队列 |
-| [`pgq`](/ext/e/pgq) | [`pgq`](https://github.com/pgq/pgq) | `3.5.1` | <a class="ext-badge ext-badge--license isc" href="/ext/license#isc">ISC</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 通用队列的PG实现 |
 | [`provsql`](/ext/e/provsql) | [`provsql`](https://github.com/PierreSenellart/provsql) | `1.2.3` | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang cpp" href="/ext/language#cpp">C++</a> | PostgreSQL 半环溯源与不确定性管理扩展 |
-| [`orioledb`](/ext/e/orioledb) | [`orioledb`](https://github.com/orioledb/orioledb) | `1.6` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | OrioleDB，下一代事务处理引擎 |
+| [`orioledb`](/ext/e/orioledb) | [`orioledb`](https://github.com/orioledb/orioledb) | `1.7` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | OrioleDB，下一代事务处理引擎 |
 | [`pg_cardano`](/ext/e/pg_cardano) | [`pg_cardano`](https://github.com/Fell-x27/pg_cardano) | `1.2.0` | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | Cardano相关工具包：加密函数，地址编解码，区块链处理 |
 | [`rdkit`](/ext/e/rdkit) | [`rdkit`](https://github.com/rdkit/rdkit) | `202503.6` | <a class="ext-badge ext-badge--license bsd 3clause" href="/ext/license#bsd3clause">BSD 3-Clause</a> | <a class="ext-badge ext-badge--lang cpp" href="/ext/language#cpp">C++</a> | 在PostgreSQL化学领域数据管理功能 |
 | [`omni`](/ext/e/omni) | [`omnigres`](https://github.com/omnigres/omnigres) | `0.2.14` | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | PostgreSQL即平台，Omnigres主扩展与加载器 |
@@ -77,7 +79,6 @@ icon: fas fa-icons
 | [`omni_worker`](/ext/e/omni_worker) | [`omnigres`](https://docs.omnigres.org/omni_worker/intro/) | `0.2.1` | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | Omnigres 通用Worker池 |
 | [`omni_xml`](/ext/e/omni_xml) | [`omnigres`](https://docs.omnigres.org/omni_xml/overview/) | `0.1.2` | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | Omnigres XML工具包 |
 | [`omni_yaml`](/ext/e/omni_yaml) | [`omnigres`](https://docs.omnigres.org/omni_yaml/yaml/) | `0.1.0` | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | Omnigres YAML工具包 |
-| [`onesparse`](/ext/e/onesparse) | [`one_sparse`](https://github.com/OneSparse/OneSparse) | `1.0.0` | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | PostgreSQL 18 的稀疏线性代数与图算法扩展 |
 | [`bloom`](/ext/e/bloom) | [`bloom`](https://www.postgresql.org/docs/current/bloom.html) | `1.0` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | bloom 索引-基于指纹的索引 |
 {.ext-table}
 
@@ -115,6 +116,96 @@ icon: fas fa-icons
 | **语言** | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | **d13** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
 | **仓库** | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | **u22** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
 | **协议** | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | **u24** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+{.ext-table .ext-table--cate}
+
+
+---------
+
+## onesparse {#onesparse}
+
+[**`one_sparse`**](/ext/e/onesparse) - `1.0.0` : PostgreSQL 18 的稀疏线性代数与图算法扩展
+
+| **条目** | **属性** | **OS** | **x86_64** | **aarch64** |
+|:---:|:---|:---:|:---:|:---:|
+| **扩展名** | [`onesparse`](/ext/e/onesparse) | **el8** | {{< pgvers "18" >}} | {{< pgvers "18" >}} |
+| **扩展包** | [`one_sparse`](https://github.com/OneSparse/OneSparse) | **el9** | {{< pgvers "18" >}} | {{< pgvers "18" >}} |
+| **RPM** | `onesparse_$v` | **el10** | {{< pgvers "18" >}} | {{< pgvers "18" >}} |
+| **DEB** | `postgresql-$v-onesparse` | **d12** | {{< pgvers "18" >}} | {{< pgvers "18" >}} |
+| **语言** | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | **d13** | {{< pgvers "18" >}} | {{< pgvers "18" >}} |
+| **仓库** | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | **u22** | {{< pgvers "18" >}} | {{< pgvers "18" >}} |
+| **协议** | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | **u24** | {{< pgvers "18" >}} | {{< pgvers "18" >}} |
+{.ext-table .ext-table--cate}
+
+
+---------
+
+## pgq {#pgq}
+
+[**`pgq`**](/ext/e/pgq) - `3.5.1` : 通用队列的PG实现
+
+| **条目** | **属性** | **OS** | **x86_64** | **aarch64** |
+|:---:|:---|:---:|:---:|:---:|
+| **扩展名** | [`pgq`](/ext/e/pgq) | **el8** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+| **扩展包** | [`pgq`](https://github.com/pgq/pgq) | **el9** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+| **RPM** | `pgq_$v` | **el10** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+| **DEB** | `postgresql-$v-pgq3` | **d12** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+| **语言** | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | **d13** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+| **仓库** | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | **u22** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+| **协议** | <a class="ext-badge ext-badge--license isc" href="/ext/license#isc">ISC</a> | **u24** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+{.ext-table .ext-table--cate}
+
+
+---------
+
+## pgmq {#pgmq}
+
+[**`pgmq`**](/ext/e/pgmq) - `1.11.0` : 基于Postgres实现类似AWS SQS/RSMQ的消息队列
+
+| **条目** | **属性** | **OS** | **x86_64** | **aarch64** |
+|:---:|:---|:---:|:---:|:---:|
+| **扩展名** | [`pgmq`](/ext/e/pgmq) | **el8** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+| **扩展包** | [`pgmq`](https://github.com/pgmq/pgmq) | **el9** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+| **RPM** | `pgmq_$v` | **el10** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+| **DEB** | `postgresql-$v-pgmq` | **d12** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+| **语言** | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> | **d13** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+| **仓库** | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | **u22** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+| **协议** | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | **u24** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+{.ext-table .ext-table--cate}
+
+
+---------
+
+## pgmb {#pgmb}
+
+[**`pgmb`**](/ext/e/pgmb) - `1.0.0` : 一个简单的PostgreSQL消息代理系统
+
+| **条目** | **属性** | **OS** | **x86_64** | **aarch64** |
+|:---:|:---|:---:|:---:|:---:|
+| **扩展名** | [`pgmb`](/ext/e/pgmb) | **el8** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+| **扩展包** | [`pgmb`](https://github.com/fraruiz/pgmb) | **el9** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+| **RPM** | `pgmb_$v` | **el10** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+| **DEB** | `postgresql-$v-pgmb` | **d12** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+| **语言** | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> | **d13** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+| **仓库** | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | **u22** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+| **协议** | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | **u24** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+{.ext-table .ext-table--cate}
+
+
+---------
+
+## ulak {#ulak}
+
+[**`ulak`**](/ext/e/ulak) - `0.0.2` : 支持可靠异步投递的 PostgreSQL 事务型 Outbox 扩展
+
+| **条目** | **属性** | **OS** | **x86_64** | **aarch64** |
+|:---:|:---|:---:|:---:|:---:|
+| **扩展名** | [`ulak`](/ext/e/ulak) | **el8** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+| **扩展包** | [`ulak`](https://github.com/zeybek/ulak) | **el9** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+| **RPM** | `ulak_$v` | **el10** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+| **DEB** | `postgresql-$v-ulak` | **d12** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+| **语言** | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | **d13** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+| **仓库** | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | **u22** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+| **协议** | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | **u24** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
 {.ext-table .ext-table--cate}
 
 
@@ -408,60 +499,6 @@ icon: fas fa-icons
 
 ---------
 
-## pgmb {#pgmb}
-
-[**`pgmb`**](/ext/e/pgmb) - `1.0.0` : 一个简单的PostgreSQL消息代理系统
-
-| **条目** | **属性** | **OS** | **x86_64** | **aarch64** |
-|:---:|:---|:---:|:---:|:---:|
-| **扩展名** | [`pgmb`](/ext/e/pgmb) | **el8** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
-| **扩展包** | [`pgmb`](https://github.com/fraruiz/pgmb) | **el9** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
-| **RPM** | `pgmb_$v` | **el10** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
-| **DEB** | `postgresql-$v-pgmb` | **d12** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
-| **语言** | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> | **d13** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
-| **仓库** | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | **u22** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
-| **协议** | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | **u24** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
-{.ext-table .ext-table--cate}
-
-
----------
-
-## pgmq {#pgmq}
-
-[**`pgmq`**](/ext/e/pgmq) - `1.11.0` : 基于Postgres实现类似AWS SQS/RSMQ的消息队列
-
-| **条目** | **属性** | **OS** | **x86_64** | **aarch64** |
-|:---:|:---|:---:|:---:|:---:|
-| **扩展名** | [`pgmq`](/ext/e/pgmq) | **el8** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
-| **扩展包** | [`pgmq`](https://github.com/pgmq/pgmq) | **el9** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
-| **RPM** | `pgmq_$v` | **el10** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
-| **DEB** | `postgresql-$v-pgmq` | **d12** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
-| **语言** | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> | **d13** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
-| **仓库** | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | **u22** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
-| **协议** | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | **u24** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
-{.ext-table .ext-table--cate}
-
-
----------
-
-## pgq {#pgq}
-
-[**`pgq`**](/ext/e/pgq) - `3.5.1` : 通用队列的PG实现
-
-| **条目** | **属性** | **OS** | **x86_64** | **aarch64** |
-|:---:|:---|:---:|:---:|:---:|
-| **扩展名** | [`pgq`](/ext/e/pgq) | **el8** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
-| **扩展包** | [`pgq`](https://github.com/pgq/pgq) | **el9** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
-| **RPM** | `pgq_$v` | **el10** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
-| **DEB** | `postgresql-$v-pgq3` | **d12** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
-| **语言** | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | **d13** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
-| **仓库** | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | **u22** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
-| **协议** | <a class="ext-badge ext-badge--license isc" href="/ext/license#isc">ISC</a> | **u24** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
-{.ext-table .ext-table--cate}
-
-
----------
-
 ## provsql {#provsql}
 
 [**`provsql`**](/ext/e/provsql) - `1.2.3` : PostgreSQL 半环溯源与不确定性管理扩展
@@ -482,7 +519,7 @@ icon: fas fa-icons
 
 ## orioledb {#orioledb}
 
-[**`orioledb`**](/ext/e/orioledb) - `1.6` : OrioleDB，下一代事务处理引擎
+[**`orioledb`**](/ext/e/orioledb) - `1.7` : OrioleDB，下一代事务处理引擎
 
 | **条目** | **属性** | **OS** | **x86_64** | **aarch64** |
 |:---:|:---|:---:|:---:|:---:|
@@ -1249,24 +1286,6 @@ icon: fas fa-icons
 | **语言** | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | **d13** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
 | **仓库** | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | **u22** | {{< pgvers "17,16,15,14" >}} | {{< pgvers "17,16,15,14" >}} |
 | **协议** | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | **u24** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
-{.ext-table .ext-table--cate}
-
-
----------
-
-## onesparse {#onesparse}
-
-[**`one_sparse`**](/ext/e/onesparse) - `1.0.0` : PostgreSQL 18 的稀疏线性代数与图算法扩展
-
-| **条目** | **属性** | **OS** | **x86_64** | **aarch64** |
-|:---:|:---|:---:|:---:|:---:|
-| **扩展名** | [`onesparse`](/ext/e/onesparse) | **el8** | {{< pgvers "18" >}} | {{< pgvers "18" >}} |
-| **扩展包** | [`one_sparse`](https://github.com/OneSparse/OneSparse) | **el9** | {{< pgvers "18" >}} | {{< pgvers "18" >}} |
-| **RPM** | `onesparse_$v` | **el10** | {{< pgvers "18" >}} | {{< pgvers "18" >}} |
-| **DEB** | `postgresql-$v-onesparse` | **d12** | {{< pgvers "18" >}} | {{< pgvers "18" >}} |
-| **语言** | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | **d13** | {{< pgvers "18" >}} | {{< pgvers "18" >}} |
-| **仓库** | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | **u22** | {{< pgvers "18" >}} | {{< pgvers "18" >}} |
-| **协议** | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | **u24** | {{< pgvers "18" >}} | {{< pgvers "18" >}} |
 {.ext-table .ext-table--cate}
 
 

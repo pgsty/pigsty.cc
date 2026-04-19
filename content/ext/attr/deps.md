@@ -45,8 +45,8 @@ weight: 30
 | [`biscuit`](/ext/e/biscuit) | [`plpgsql`](/ext/e/plpgsql) | 使用IAM的高性能文本模式匹配 |
 | [`pg_mooncake`](/ext/e/pg_mooncake) | [`pg_duckdb`](/ext/e/pg_duckdb) | PostgreSQL列式存储表 |
 | [`pg_partman`](/ext/e/pg_partman) | [`plpgsql`](/ext/e/plpgsql) | 用于按时间或 ID 管理分区表的扩展 |
-| [`index_advisor`](/ext/e/index_advisor) | [`hypopg`](/ext/e/hypopg) | 查询索引建议器 |
 | [`pgmb`](/ext/e/pgmb) | [`pg_cron`](/ext/e/pg_cron) [`http`](/ext/e/http) | 一个简单的PostgreSQL消息代理系统 |
+| [`index_advisor`](/ext/e/index_advisor) | [`hypopg`](/ext/e/hypopg) | 查询索引建议器 |
 | [`provsql`](/ext/e/provsql) | [`uuid-ossp`](/ext/e/uuid-ossp) | PostgreSQL 半环溯源与不确定性管理扩展 |
 | [`omni_auth`](/ext/e/omni_auth) | [`omni_types`](/ext/e/omni_types) [`omni_id`](/ext/e/omni_id) [`pgcrypto`](/ext/e/pgcrypto) [`btree_gist`](/ext/e/btree_gist) [`omni_polyfill`](/ext/e/omni_polyfill) | Omnigres 基础会话认证管理模块 |
 | [`omni_aws`](/ext/e/omni_aws) | [`omni_httpc`](/ext/e/omni_httpc) [`pgcrypto`](/ext/e/pgcrypto) [`omni_xml`](/ext/e/omni_xml) [`omni_web`](/ext/e/omni_web) | Omnigres AWS S3 API封装 |
@@ -138,8 +138,8 @@ weight: 30
 | [`pg_duckdb`](/ext/e/pg_duckdb) | [`pg_mooncake`](/ext/e/pg_mooncake) | 在PostgreSQL中的嵌入式DuckDB扩展 |
 | [`pg_partman`](/ext/e/pg_partman) | [`timeseries`](/ext/e/timeseries) | 用于按时间或 ID 管理分区表的扩展 |
 | [`tablefunc`](/ext/e/tablefunc) | [`pg4ml`](/ext/e/pg4ml) | 交叉表函数 |
-| [`rum`](/ext/e/rum) | [`documentdb`](/ext/e/documentdb) | RUM 索引访问方法 |
 | [`pgmq`](/ext/e/pgmq) | [`pg_later`](/ext/e/pg_later) [`vectorize`](/ext/e/vectorize) | 基于Postgres实现类似AWS SQS/RSMQ的消息队列 |
+| [`rum`](/ext/e/rum) | [`documentdb`](/ext/e/documentdb) | RUM 索引访问方法 |
 | [`omni_cloudevents`](/ext/e/omni_cloudevents) | [`omni_email`](/ext/e/omni_email) [`omni_schema`](/ext/e/omni_schema) [`omni_test`](/ext/e/omni_test) | Omnigres CloudEvents 支持 |
 | [`omni_http`](/ext/e/omni_http) | [`omni_httpc`](/ext/e/omni_httpc) [`omni_httpd`](/ext/e/omni_httpd) | Omnigres 基本HTTP类型 |
 | [`omni_httpc`](/ext/e/omni_httpc) | [`omni_aws`](/ext/e/omni_aws) [`omni_containers`](/ext/e/omni_containers) [`omni_kube`](/ext/e/omni_kube) | Omnigres HTTP客户端 |

@@ -2,7 +2,7 @@
 title: "onesparse"
 linkTitle: "onesparse"
 description: "PostgreSQL 18 的稀疏线性代数与图算法扩展"
-weight: 2980
+weight: 2620
 ---
 
 <div class="ext-cards">
@@ -30,7 +30,7 @@ weight: 2980
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
 |:-----:|:-------------------------------------------------------------------------|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|:----------|
-| 2980  | [**`onesparse`**](/ext/e/onesparse) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `onesparse` |
+| 2620  | [**`onesparse`**](/ext/e/onesparse) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `onesparse` |
 {.ext-table}
 
 | **相关扩展** | [`age`](/ext/e/age) [`pgrouting`](/ext/e/pgrouting) [`postgis`](/ext/e/postgis) |

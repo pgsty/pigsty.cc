@@ -5,7 +5,7 @@ description: "需要动态加载的 PostgreSQL 扩展"
 weight: 10
 ---
 
-以下 **100** 个扩展需要在 [`shared_preload_libraries`](https://www.postgresql.org/docs/current/runtime-config-client.html#GUC-SHARED-PRELOAD-LIBRARIES) 中动态加载，才能正常使用。
+以下 **102** 个扩展需要在 [`shared_preload_libraries`](https://www.postgresql.org/docs/current/runtime-config-client.html#GUC-SHARED-PRELOAD-LIBRARIES) 中动态加载，才能正常使用。
 
 也就是说，您需要修改 PostgreSQL 配置文件 `postgresql.conf` 中的 [`shared_preload_libraries`](https://www.postgresql.org/docs/current/runtime-config-client.html#GUC-SHARED-PRELOAD-LIBRARIES) 参数，将扩展的库名添加进去，然后重启数据库才能生效。
 
@@ -28,9 +28,11 @@ weight: 10
 | [`pg_analytics`](/ext/e/pg_analytics) | `pg_analytics` | 由 DuckDB 驱动的数据分析引擎 |
 | [`pg_duckdb`](/ext/e/pg_duckdb) | `pg_duckdb` | 在PostgreSQL中的嵌入式DuckDB扩展 |
 | [`pg_mooncake`](/ext/e/pg_mooncake) | `pg_mooncake` | PostgreSQL列式存储表 |
+| [`storage_engine`](/ext/e/storage_engine) | `storage_engine` | 带向量化执行的 colcompress 与 rowcompress 表访问方法 |
 | [`pg_clickhouse`](/ext/e/pg_clickhouse) | `pg_clickhouse` | 从PostgreSQL中查询ClickHouse的接口 |
 | [`pg_parquet`](/ext/e/pg_parquet) | `pg_parquet` | 在PostgreSQL与本地/S3中的Parquet文件复制数据 |
 | [`age`](/ext/e/age) | `age` | Apache AGE，图数据库扩展 （Deb可用） |
+| [`ulak`](/ext/e/ulak) | `ulak` | 支持可靠异步投递的 PostgreSQL 事务型 Outbox 扩展 |
 | [`pg_ttl_index`](/ext/e/pg_ttl_index) | `pg_ttl_index` | 基于TTL索引的自动数据过期清理 |
 | [`pg_hint_plan`](/ext/e/pg_hint_plan) | `pg_hint_plan` | 添加强制指定执行计划的能力 |
 | [`plan_filter`](/ext/e/plan_filter) | `plan_filter` | 使用执行计划代价过滤阻止特定查询语句 |

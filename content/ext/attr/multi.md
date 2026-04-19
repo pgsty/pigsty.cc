@@ -15,13 +15,13 @@ weight: 40
 
 | **ID** | **扩展名** | **版本** | **属性** | **模式** | **描述** |
 |:------:|:-----------|:--------:|:--------:|:---------|:---------|
-| 1500 | [**`postgis`**](/ext/e/postgis) | `3.6.2` | `--s-d--` | - | PostGIS 几何和地理空间扩展 |
-| 1501 | [`postgis_topology`](/ext/e/postgis_topology) | `3.6.2` | `--s-d--` | `topology` | PostGIS 拓扑空间类型和函数 |
-| 1502 | [`postgis_raster`](/ext/e/postgis_raster) | `3.6.2` | `--s-d--` | - | PostGIS 光栅类型和函数 |
-| 1503 | [`postgis_sfcgal`](/ext/e/postgis_sfcgal) | `3.6.2` | `--s-d-r` | - | PostGIS SFCGAL 函数 |
-| 1504 | [`postgis_tiger_geocoder`](/ext/e/postgis_tiger_geocoder) | `3.6.2` | `--s-dt-` | `tiger` | PostGIS tiger 地理编码器和反向地理编码器 |
-| 1505 | [`address_standardizer`](/ext/e/address_standardizer) | `3.6.2` | `--s-d-r` | - | 地址标准化函数。 |
-| 1506 | [`address_standardizer_data_us`](/ext/e/address_standardizer_data_us) | `3.6.2` | `--s-d-r` | - | 地址标准化函数：美国数据集示例 |
+| 1500 | [**`postgis`**](/ext/e/postgis) | `3.6.3` | `--s-d--` | - | PostGIS 几何和地理空间扩展 |
+| 1501 | [`postgis_topology`](/ext/e/postgis_topology) | `3.6.3` | `--s-d--` | `topology` | PostGIS 拓扑空间类型和函数 |
+| 1502 | [`postgis_raster`](/ext/e/postgis_raster) | `3.6.3` | `--s-d--` | - | PostGIS 光栅类型和函数 |
+| 1503 | [`postgis_sfcgal`](/ext/e/postgis_sfcgal) | `3.6.3` | `--s-d-r` | - | PostGIS SFCGAL 函数 |
+| 1504 | [`postgis_tiger_geocoder`](/ext/e/postgis_tiger_geocoder) | `3.6.3` | `--s-dt-` | `tiger` | PostGIS tiger 地理编码器和反向地理编码器 |
+| 1505 | [`address_standardizer`](/ext/e/address_standardizer) | `3.6.3` | `--s-d-r` | - | 地址标准化函数。 |
+| 1506 | [`address_standardizer_data_us`](/ext/e/address_standardizer_data_us) | `3.6.3` | `--s-d-r` | - | 地址标准化函数：美国数据集示例 |
 {.ext-table}
 
 ### pointcloud

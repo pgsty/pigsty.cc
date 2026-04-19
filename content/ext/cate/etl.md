@@ -22,7 +22,7 @@ icon: fas fa-truck
 | [`pgactive`](/ext/e/pgactive) | [`pgactive`](https://github.com/aws/pgactive) | `2.1.7` | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | PostgreSQL多主逻辑复制 |
 | [`spock`](/ext/e/spock) | [`spock`](https://github.com/pgEdge/spock) | `5.0.5` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | PostgreSQL 多主逻辑复制扩展 |
 | [`lolor`](/ext/e/lolor) | [`lolor`](https://github.com/pgEdge/lolor) | `1.2.2` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 让 PostgreSQL 大对象兼容逻辑复制的扩展 |
-| [`pgclone`](/ext/e/pgclone) | [`pgclone`](https://github.com/valehdba/pgclone) | `3.6.0` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 在不同环境间克隆 PostgreSQL 数据库、模式、表和函数 |
+| [`pgclone`](/ext/e/pgclone) | [`pgclone`](https://github.com/valehdba/pgclone) | `4.0.0` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 在不同环境间克隆 PostgreSQL 数据库、模式、表和函数 |
 | [`pgmqtt`](/ext/e/pgmqtt) | [`pgmqtt`](https://github.com/RayElg/pgmqtt) | `0.1.0` | <a class="ext-badge ext-badge--license elastic license 20" href="/ext/license#elasticlicense20">Elastic License 2.0</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | PostgreSQL 的 CDC 到 MQTT 代理扩展 |
 | [`wal2json`](/ext/e/wal2json) | [`wal2json`](https://github.com/eulerto/wal2json) | `2.6` | <a class="ext-badge ext-badge--license bsd 3clause" href="/ext/license#bsd3clause">BSD 3-Clause</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 用逻辑解码捕获 JSON 格式的 CDC 变更 |
 | [`wal2mongo`](/ext/e/wal2mongo) | [`wal2mongo`](https://github.com/HighgoSoftware/wal2mongo) | `1.0.7` | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 使用逻辑解码捕获MongoDB JSON格式的CDC变更 |
@@ -221,7 +221,7 @@ icon: fas fa-truck
 
 ## pgclone {#pgclone}
 
-[**`pgclone`**](/ext/e/pgclone) - `3.6.0` : 在不同环境间克隆 PostgreSQL 数据库、模式、表和函数
+[**`pgclone`**](/ext/e/pgclone) - `4.0.0` : 在不同环境间克隆 PostgreSQL 数据库、模式、表和函数
 
 | **条目** | **属性** | **OS** | **x86_64** | **aarch64** |
 |:---:|:---|:---:|:---:|:---:|

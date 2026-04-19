@@ -2,7 +2,7 @@
 title: "age"
 linkTitle: "age"
 description: "Apache AGE，图数据库扩展 （Deb可用）"
-weight: 2700
+weight: 2600
 ---
 
 <div class="ext-cards">
@@ -30,7 +30,7 @@ weight: 2700
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
 |:-----:|:-------------------------------------------------------------------------|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|:----------|
-| 2700  | [**`age`**](/ext/e/age) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `ag_catalog` |
+| 2600  | [**`age`**](/ext/e/age) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `ag_catalog` |
 {.ext-table}
 
 | **相关扩展** | [`pg_graphql`](/ext/e/pg_graphql) [`rum`](/ext/e/rum) [`pg_jsonschema`](/ext/e/pg_jsonschema) [`jsquery`](/ext/e/jsquery) [`ltree`](/ext/e/ltree) [`http`](/ext/e/http) [`pg_net`](/ext/e/pg_net) [`citus`](/ext/e/citus) |

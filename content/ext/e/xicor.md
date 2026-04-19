@@ -11,10 +11,10 @@ weight: 4670
     <div class="ext-card__title">Florents-Tselai/pgxicor</div>
     <div class="ext-card__desc">https://github.com/Florents-Tselai/pgxicor</div>
   </a>
-  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pgxicor-0.1.0.tar.gz">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pgxicor-0.1.1.tar.gz">
     <div class="ext-card__kicker">源码</div>
-    <div class="ext-card__title">pgxicor-0.1.0.tar.gz</div>
-    <div class="ext-card__desc">pgxicor-0.1.0.tar.gz</div>
+    <div class="ext-card__title">pgxicor-0.1.1.tar.gz</div>
+    <div class="ext-card__desc">pgxicor-0.1.1.tar.gz</div>
   </a>
 </div>
 
@@ -25,7 +25,7 @@ weight: 4670
 
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
-| [**`pgxicor`**](/ext/e/xicor) | `0.1.0` | <a class="ext-badge ext-badge--cate func" href="/ext/cate/func">FUNC</a> | <a class="ext-badge ext-badge--license gpl30" href="/ext/license#gpl30">GPL-3.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
+| [**`pgxicor`**](/ext/e/xicor) | `0.1.1` | <a class="ext-badge ext-badge--cate func" href="/ext/cate/func">FUNC</a> | <a class="ext-badge ext-badge--license gpl30" href="/ext/license#gpl30">GPL-3.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
 {.ext-table}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
@@ -42,98 +42,98 @@ weight: 4670
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#func) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.1.0` | {{< pgvers "18,17,16,15,14" >}} | `pgxicor` | - |
-| [**RPM**](/ext/rpm#func) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.1.0` | {{< pgvers "18,17,16,15,14" >}} | `pgxicor_$v` | - |
-| [**DEB**](/ext/deb#func) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.1.0` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pgxicor` | - |
+| [**EXT**](/ext/list#func) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.1.1` | {{< pgvers "18,17,16,15,14" >}} | `pgxicor` | - |
+| [**RPM**](/ext/rpm#func) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.1.1` | {{< pgvers "18,17,16,15,14" >}} | `pgxicor_$v` | - |
+| [**DEB**](/ext/deb#func) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.1.1` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pgxicor` | - |
 {.ext-table}
 
 {{< pgext_matrix >}}
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 |
-| el8.aarch64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 |
-| el9.x86_64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 |
-| el9.aarch64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 |
-| el10.x86_64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 |
-| el10.aarch64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 |
-| d12.x86_64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 |
-| d12.aarch64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 |
-| d13.x86_64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 |
-| d13.aarch64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 |
-| u22.x86_64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 |
-| u22.aarch64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 |
-| u24.x86_64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 |
-| u24.aarch64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 |
-@ el8.x86_64 18 pgxicor_18 pgxicor_18-0.1.0-1PIGSTY.el8.x86_64.rpm pigsty 0.1.0 25.9KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgxicor_18-0.1.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 18 pgxicor_18 pgxicor_18-0.1.0-1PIGSTY.el8.aarch64.rpm pigsty 0.1.0 26.1KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgxicor_18-0.1.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 18 pgxicor_18 pgxicor_18-0.1.0-1PIGSTY.el9.x86_64.rpm pigsty 0.1.0 25.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgxicor_18-0.1.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 18 pgxicor_18 pgxicor_18-0.1.0-1PIGSTY.el9.aarch64.rpm pigsty 0.1.0 25.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgxicor_18-0.1.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 18 pgxicor_18 pgxicor_18-0.1.0-1PIGSTY.el10.x86_64.rpm pigsty 0.1.0 25.5KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgxicor_18-0.1.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 18 pgxicor_18 pgxicor_18-0.1.0-1PIGSTY.el10.aarch64.rpm pigsty 0.1.0 25.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgxicor_18-0.1.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 18 postgresql-18-pgxicor postgresql-18-pgxicor_0.1.0-1PIGSTY~bookworm_amd64.deb pigsty 0.1.0 24.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgxicor/postgresql-18-pgxicor_0.1.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 18 postgresql-18-pgxicor postgresql-18-pgxicor_0.1.0-1PIGSTY~bookworm_arm64.deb pigsty 0.1.0 24.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgxicor/postgresql-18-pgxicor_0.1.0-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 18 postgresql-18-pgxicor postgresql-18-pgxicor_0.1.0-1PIGSTY~trixie_amd64.deb pigsty 0.1.0 24.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgxicor/postgresql-18-pgxicor_0.1.0-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 18 postgresql-18-pgxicor postgresql-18-pgxicor_0.1.0-1PIGSTY~trixie_arm64.deb pigsty 0.1.0 24.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgxicor/postgresql-18-pgxicor_0.1.0-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 18 postgresql-18-pgxicor postgresql-18-pgxicor_0.1.0-1PIGSTY~jammy_amd64.deb pigsty 0.1.0 26.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgxicor/postgresql-18-pgxicor_0.1.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 18 postgresql-18-pgxicor postgresql-18-pgxicor_0.1.0-1PIGSTY~jammy_arm64.deb pigsty 0.1.0 25.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgxicor/postgresql-18-pgxicor_0.1.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 18 postgresql-18-pgxicor postgresql-18-pgxicor_0.1.0-1PIGSTY~noble_amd64.deb pigsty 0.1.0 25.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgxicor/postgresql-18-pgxicor_0.1.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 18 postgresql-18-pgxicor postgresql-18-pgxicor_0.1.0-1PIGSTY~noble_arm64.deb pigsty 0.1.0 25.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgxicor/postgresql-18-pgxicor_0.1.0-1PIGSTY~noble_arm64.deb
-@ el8.x86_64 17 pgxicor_17 pgxicor_17-0.1.0-1PIGSTY.el8.x86_64.rpm pigsty 0.1.0 25.9KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgxicor_17-0.1.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 17 pgxicor_17 pgxicor_17-0.1.0-1PIGSTY.el8.aarch64.rpm pigsty 0.1.0 26.1KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgxicor_17-0.1.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 17 pgxicor_17 pgxicor_17-0.1.0-1PIGSTY.el9.x86_64.rpm pigsty 0.1.0 25.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgxicor_17-0.1.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 17 pgxicor_17 pgxicor_17-0.1.0-1PIGSTY.el9.aarch64.rpm pigsty 0.1.0 25.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgxicor_17-0.1.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 17 pgxicor_17 pgxicor_17-0.1.0-1PIGSTY.el10.x86_64.rpm pigsty 0.1.0 25.5KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgxicor_17-0.1.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 17 pgxicor_17 pgxicor_17-0.1.0-1PIGSTY.el10.aarch64.rpm pigsty 0.1.0 25.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgxicor_17-0.1.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 17 postgresql-17-pgxicor postgresql-17-pgxicor_0.1.0-1PIGSTY~bookworm_amd64.deb pigsty 0.1.0 24.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgxicor/postgresql-17-pgxicor_0.1.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 17 postgresql-17-pgxicor postgresql-17-pgxicor_0.1.0-1PIGSTY~bookworm_arm64.deb pigsty 0.1.0 24.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgxicor/postgresql-17-pgxicor_0.1.0-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 17 postgresql-17-pgxicor postgresql-17-pgxicor_0.1.0-1PIGSTY~trixie_amd64.deb pigsty 0.1.0 24.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgxicor/postgresql-17-pgxicor_0.1.0-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 17 postgresql-17-pgxicor postgresql-17-pgxicor_0.1.0-1PIGSTY~trixie_arm64.deb pigsty 0.1.0 24.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgxicor/postgresql-17-pgxicor_0.1.0-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 17 postgresql-17-pgxicor postgresql-17-pgxicor_0.1.0-1PIGSTY~jammy_amd64.deb pigsty 0.1.0 26.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgxicor/postgresql-17-pgxicor_0.1.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 17 postgresql-17-pgxicor postgresql-17-pgxicor_0.1.0-1PIGSTY~jammy_arm64.deb pigsty 0.1.0 26.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgxicor/postgresql-17-pgxicor_0.1.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 17 postgresql-17-pgxicor postgresql-17-pgxicor_0.1.0-1PIGSTY~noble_amd64.deb pigsty 0.1.0 25.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgxicor/postgresql-17-pgxicor_0.1.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 17 postgresql-17-pgxicor postgresql-17-pgxicor_0.1.0-1PIGSTY~noble_arm64.deb pigsty 0.1.0 25.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgxicor/postgresql-17-pgxicor_0.1.0-1PIGSTY~noble_arm64.deb
-@ el8.x86_64 16 pgxicor_16 pgxicor_16-0.1.0-1PIGSTY.el8.x86_64.rpm pigsty 0.1.0 25.9KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgxicor_16-0.1.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 16 pgxicor_16 pgxicor_16-0.1.0-1PIGSTY.el8.aarch64.rpm pigsty 0.1.0 26.1KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgxicor_16-0.1.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 16 pgxicor_16 pgxicor_16-0.1.0-1PIGSTY.el9.x86_64.rpm pigsty 0.1.0 25.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgxicor_16-0.1.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 16 pgxicor_16 pgxicor_16-0.1.0-1PIGSTY.el9.aarch64.rpm pigsty 0.1.0 25.3KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgxicor_16-0.1.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 16 pgxicor_16 pgxicor_16-0.1.0-1PIGSTY.el10.x86_64.rpm pigsty 0.1.0 25.5KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgxicor_16-0.1.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 16 pgxicor_16 pgxicor_16-0.1.0-1PIGSTY.el10.aarch64.rpm pigsty 0.1.0 25.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgxicor_16-0.1.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 16 postgresql-16-pgxicor postgresql-16-pgxicor_0.1.0-1PIGSTY~bookworm_amd64.deb pigsty 0.1.0 24.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgxicor/postgresql-16-pgxicor_0.1.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 16 postgresql-16-pgxicor postgresql-16-pgxicor_0.1.0-1PIGSTY~bookworm_arm64.deb pigsty 0.1.0 24.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgxicor/postgresql-16-pgxicor_0.1.0-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 16 postgresql-16-pgxicor postgresql-16-pgxicor_0.1.0-1PIGSTY~trixie_amd64.deb pigsty 0.1.0 24.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgxicor/postgresql-16-pgxicor_0.1.0-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 16 postgresql-16-pgxicor postgresql-16-pgxicor_0.1.0-1PIGSTY~trixie_arm64.deb pigsty 0.1.0 24.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgxicor/postgresql-16-pgxicor_0.1.0-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 16 postgresql-16-pgxicor postgresql-16-pgxicor_0.1.0-1PIGSTY~jammy_amd64.deb pigsty 0.1.0 26.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgxicor/postgresql-16-pgxicor_0.1.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 16 postgresql-16-pgxicor postgresql-16-pgxicor_0.1.0-1PIGSTY~jammy_arm64.deb pigsty 0.1.0 26.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgxicor/postgresql-16-pgxicor_0.1.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 16 postgresql-16-pgxicor postgresql-16-pgxicor_0.1.0-1PIGSTY~noble_amd64.deb pigsty 0.1.0 25.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgxicor/postgresql-16-pgxicor_0.1.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 16 postgresql-16-pgxicor postgresql-16-pgxicor_0.1.0-1PIGSTY~noble_arm64.deb pigsty 0.1.0 25.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgxicor/postgresql-16-pgxicor_0.1.0-1PIGSTY~noble_arm64.deb
-@ el8.x86_64 15 pgxicor_15 pgxicor_15-0.1.0-1PIGSTY.el8.x86_64.rpm pigsty 0.1.0 26.0KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgxicor_15-0.1.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 15 pgxicor_15 pgxicor_15-0.1.0-1PIGSTY.el8.aarch64.rpm pigsty 0.1.0 26.1KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgxicor_15-0.1.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 15 pgxicor_15 pgxicor_15-0.1.0-1PIGSTY.el9.x86_64.rpm pigsty 0.1.0 25.7KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgxicor_15-0.1.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 15 pgxicor_15 pgxicor_15-0.1.0-1PIGSTY.el9.aarch64.rpm pigsty 0.1.0 25.8KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgxicor_15-0.1.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 15 pgxicor_15 pgxicor_15-0.1.0-1PIGSTY.el10.x86_64.rpm pigsty 0.1.0 25.8KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgxicor_15-0.1.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 15 pgxicor_15 pgxicor_15-0.1.0-1PIGSTY.el10.aarch64.rpm pigsty 0.1.0 26.0KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgxicor_15-0.1.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 15 postgresql-15-pgxicor postgresql-15-pgxicor_0.1.0-1PIGSTY~bookworm_amd64.deb pigsty 0.1.0 24.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgxicor/postgresql-15-pgxicor_0.1.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 15 postgresql-15-pgxicor postgresql-15-pgxicor_0.1.0-1PIGSTY~bookworm_arm64.deb pigsty 0.1.0 24.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgxicor/postgresql-15-pgxicor_0.1.0-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 15 postgresql-15-pgxicor postgresql-15-pgxicor_0.1.0-1PIGSTY~trixie_amd64.deb pigsty 0.1.0 24.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgxicor/postgresql-15-pgxicor_0.1.0-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 15 postgresql-15-pgxicor postgresql-15-pgxicor_0.1.0-1PIGSTY~trixie_arm64.deb pigsty 0.1.0 24.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgxicor/postgresql-15-pgxicor_0.1.0-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 15 postgresql-15-pgxicor postgresql-15-pgxicor_0.1.0-1PIGSTY~jammy_amd64.deb pigsty 0.1.0 27.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgxicor/postgresql-15-pgxicor_0.1.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 15 postgresql-15-pgxicor postgresql-15-pgxicor_0.1.0-1PIGSTY~jammy_arm64.deb pigsty 0.1.0 26.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgxicor/postgresql-15-pgxicor_0.1.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 15 postgresql-15-pgxicor postgresql-15-pgxicor_0.1.0-1PIGSTY~noble_amd64.deb pigsty 0.1.0 25.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgxicor/postgresql-15-pgxicor_0.1.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 15 postgresql-15-pgxicor postgresql-15-pgxicor_0.1.0-1PIGSTY~noble_arm64.deb pigsty 0.1.0 25.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgxicor/postgresql-15-pgxicor_0.1.0-1PIGSTY~noble_arm64.deb
-@ el8.x86_64 14 pgxicor_14 pgxicor_14-0.1.0-1PIGSTY.el8.x86_64.rpm pigsty 0.1.0 25.9KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgxicor_14-0.1.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 14 pgxicor_14 pgxicor_14-0.1.0-1PIGSTY.el8.aarch64.rpm pigsty 0.1.0 26.1KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgxicor_14-0.1.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 14 pgxicor_14 pgxicor_14-0.1.0-1PIGSTY.el9.x86_64.rpm pigsty 0.1.0 25.7KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgxicor_14-0.1.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 14 pgxicor_14 pgxicor_14-0.1.0-1PIGSTY.el9.aarch64.rpm pigsty 0.1.0 25.7KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgxicor_14-0.1.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 14 pgxicor_14 pgxicor_14-0.1.0-1PIGSTY.el10.x86_64.rpm pigsty 0.1.0 25.8KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgxicor_14-0.1.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 14 pgxicor_14 pgxicor_14-0.1.0-1PIGSTY.el10.aarch64.rpm pigsty 0.1.0 26.0KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgxicor_14-0.1.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 14 postgresql-14-pgxicor postgresql-14-pgxicor_0.1.0-1PIGSTY~bookworm_amd64.deb pigsty 0.1.0 24.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgxicor/postgresql-14-pgxicor_0.1.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 14 postgresql-14-pgxicor postgresql-14-pgxicor_0.1.0-1PIGSTY~bookworm_arm64.deb pigsty 0.1.0 24.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgxicor/postgresql-14-pgxicor_0.1.0-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 14 postgresql-14-pgxicor postgresql-14-pgxicor_0.1.0-1PIGSTY~trixie_amd64.deb pigsty 0.1.0 24.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgxicor/postgresql-14-pgxicor_0.1.0-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 14 postgresql-14-pgxicor postgresql-14-pgxicor_0.1.0-1PIGSTY~trixie_arm64.deb pigsty 0.1.0 24.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgxicor/postgresql-14-pgxicor_0.1.0-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 14 postgresql-14-pgxicor postgresql-14-pgxicor_0.1.0-1PIGSTY~jammy_amd64.deb pigsty 0.1.0 27.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgxicor/postgresql-14-pgxicor_0.1.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 14 postgresql-14-pgxicor postgresql-14-pgxicor_0.1.0-1PIGSTY~jammy_arm64.deb pigsty 0.1.0 26.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgxicor/postgresql-14-pgxicor_0.1.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 14 postgresql-14-pgxicor postgresql-14-pgxicor_0.1.0-1PIGSTY~noble_amd64.deb pigsty 0.1.0 25.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgxicor/postgresql-14-pgxicor_0.1.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 14 postgresql-14-pgxicor postgresql-14-pgxicor_0.1.0-1PIGSTY~noble_arm64.deb pigsty 0.1.0 25.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgxicor/postgresql-14-pgxicor_0.1.0-1PIGSTY~noble_arm64.deb
+| el8.x86_64 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 |
+| el8.aarch64 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 |
+| el9.x86_64 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 |
+| el9.aarch64 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 |
+| el10.x86_64 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 |
+| el10.aarch64 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 |
+| d12.x86_64 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 |
+| d12.aarch64 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 |
+| d13.x86_64 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 |
+| d13.aarch64 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 |
+| u22.x86_64 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 |
+| u22.aarch64 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 |
+| u24.x86_64 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 |
+| u24.aarch64 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 |
+@ el8.x86_64 18 pgxicor_18 pgxicor_18-0.1.1-1PIGSTY.el8.x86_64.rpm pigsty 0.1.1 27.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgxicor_18-0.1.1-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 18 pgxicor_18 pgxicor_18-0.1.1-1PIGSTY.el8.aarch64.rpm pigsty 0.1.1 27.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgxicor_18-0.1.1-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 18 pgxicor_18 pgxicor_18-0.1.1-1PIGSTY.el9.x86_64.rpm pigsty 0.1.1 27.1KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgxicor_18-0.1.1-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 18 pgxicor_18 pgxicor_18-0.1.1-1PIGSTY.el9.aarch64.rpm pigsty 0.1.1 26.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgxicor_18-0.1.1-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 18 pgxicor_18 pgxicor_18-0.1.1-1PIGSTY.el10.x86_64.rpm pigsty 0.1.1 27.2KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgxicor_18-0.1.1-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 18 pgxicor_18 pgxicor_18-0.1.1-1PIGSTY.el10.aarch64.rpm pigsty 0.1.1 27.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgxicor_18-0.1.1-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-pgxicor postgresql-18-pgxicor_0.1.1-1PIGSTY~bookworm_amd64.deb pigsty 0.1.1 27.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgxicor/postgresql-18-pgxicor_0.1.1-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 18 postgresql-18-pgxicor postgresql-18-pgxicor_0.1.1-1PIGSTY~bookworm_arm64.deb pigsty 0.1.1 26.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgxicor/postgresql-18-pgxicor_0.1.1-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 18 postgresql-18-pgxicor postgresql-18-pgxicor_0.1.1-1PIGSTY~trixie_amd64.deb pigsty 0.1.1 27.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgxicor/postgresql-18-pgxicor_0.1.1-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 18 postgresql-18-pgxicor postgresql-18-pgxicor_0.1.1-1PIGSTY~trixie_arm64.deb pigsty 0.1.1 26.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgxicor/postgresql-18-pgxicor_0.1.1-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 18 postgresql-18-pgxicor postgresql-18-pgxicor_0.1.1-1PIGSTY~jammy_amd64.deb pigsty 0.1.1 28.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgxicor/postgresql-18-pgxicor_0.1.1-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 18 postgresql-18-pgxicor postgresql-18-pgxicor_0.1.1-1PIGSTY~jammy_arm64.deb pigsty 0.1.1 28.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgxicor/postgresql-18-pgxicor_0.1.1-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 18 postgresql-18-pgxicor postgresql-18-pgxicor_0.1.1-1PIGSTY~noble_amd64.deb pigsty 0.1.1 27.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgxicor/postgresql-18-pgxicor_0.1.1-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 18 postgresql-18-pgxicor postgresql-18-pgxicor_0.1.1-1PIGSTY~noble_arm64.deb pigsty 0.1.1 27.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgxicor/postgresql-18-pgxicor_0.1.1-1PIGSTY~noble_arm64.deb
+@ el8.x86_64 17 pgxicor_17 pgxicor_17-0.1.1-1PIGSTY.el8.x86_64.rpm pigsty 0.1.1 27.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgxicor_17-0.1.1-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 17 pgxicor_17 pgxicor_17-0.1.1-1PIGSTY.el8.aarch64.rpm pigsty 0.1.1 27.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgxicor_17-0.1.1-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 17 pgxicor_17 pgxicor_17-0.1.1-1PIGSTY.el9.x86_64.rpm pigsty 0.1.1 27.1KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgxicor_17-0.1.1-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 17 pgxicor_17 pgxicor_17-0.1.1-1PIGSTY.el9.aarch64.rpm pigsty 0.1.1 26.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgxicor_17-0.1.1-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 17 pgxicor_17 pgxicor_17-0.1.1-1PIGSTY.el10.x86_64.rpm pigsty 0.1.1 27.2KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgxicor_17-0.1.1-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 17 pgxicor_17 pgxicor_17-0.1.1-1PIGSTY.el10.aarch64.rpm pigsty 0.1.1 27.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgxicor_17-0.1.1-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-pgxicor postgresql-17-pgxicor_0.1.1-1PIGSTY~bookworm_amd64.deb pigsty 0.1.1 27.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgxicor/postgresql-17-pgxicor_0.1.1-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 17 postgresql-17-pgxicor postgresql-17-pgxicor_0.1.1-1PIGSTY~bookworm_arm64.deb pigsty 0.1.1 26.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgxicor/postgresql-17-pgxicor_0.1.1-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 17 postgresql-17-pgxicor postgresql-17-pgxicor_0.1.1-1PIGSTY~trixie_amd64.deb pigsty 0.1.1 27.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgxicor/postgresql-17-pgxicor_0.1.1-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 17 postgresql-17-pgxicor postgresql-17-pgxicor_0.1.1-1PIGSTY~trixie_arm64.deb pigsty 0.1.1 26.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgxicor/postgresql-17-pgxicor_0.1.1-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 17 postgresql-17-pgxicor postgresql-17-pgxicor_0.1.1-1PIGSTY~jammy_amd64.deb pigsty 0.1.1 29.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgxicor/postgresql-17-pgxicor_0.1.1-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 17 postgresql-17-pgxicor postgresql-17-pgxicor_0.1.1-1PIGSTY~jammy_arm64.deb pigsty 0.1.1 29.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgxicor/postgresql-17-pgxicor_0.1.1-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 17 postgresql-17-pgxicor postgresql-17-pgxicor_0.1.1-1PIGSTY~noble_amd64.deb pigsty 0.1.1 27.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgxicor/postgresql-17-pgxicor_0.1.1-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 17 postgresql-17-pgxicor postgresql-17-pgxicor_0.1.1-1PIGSTY~noble_arm64.deb pigsty 0.1.1 27.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgxicor/postgresql-17-pgxicor_0.1.1-1PIGSTY~noble_arm64.deb
+@ el8.x86_64 16 pgxicor_16 pgxicor_16-0.1.1-1PIGSTY.el8.x86_64.rpm pigsty 0.1.1 27.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgxicor_16-0.1.1-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 16 pgxicor_16 pgxicor_16-0.1.1-1PIGSTY.el8.aarch64.rpm pigsty 0.1.1 27.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgxicor_16-0.1.1-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 16 pgxicor_16 pgxicor_16-0.1.1-1PIGSTY.el9.x86_64.rpm pigsty 0.1.1 27.1KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgxicor_16-0.1.1-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 16 pgxicor_16 pgxicor_16-0.1.1-1PIGSTY.el9.aarch64.rpm pigsty 0.1.1 26.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgxicor_16-0.1.1-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 16 pgxicor_16 pgxicor_16-0.1.1-1PIGSTY.el10.x86_64.rpm pigsty 0.1.1 27.2KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgxicor_16-0.1.1-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 16 pgxicor_16 pgxicor_16-0.1.1-1PIGSTY.el10.aarch64.rpm pigsty 0.1.1 27.1KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgxicor_16-0.1.1-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 16 postgresql-16-pgxicor postgresql-16-pgxicor_0.1.1-1PIGSTY~bookworm_amd64.deb pigsty 0.1.1 27.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgxicor/postgresql-16-pgxicor_0.1.1-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 16 postgresql-16-pgxicor postgresql-16-pgxicor_0.1.1-1PIGSTY~bookworm_arm64.deb pigsty 0.1.1 26.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgxicor/postgresql-16-pgxicor_0.1.1-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 16 postgresql-16-pgxicor postgresql-16-pgxicor_0.1.1-1PIGSTY~trixie_amd64.deb pigsty 0.1.1 27.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgxicor/postgresql-16-pgxicor_0.1.1-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 16 postgresql-16-pgxicor postgresql-16-pgxicor_0.1.1-1PIGSTY~trixie_arm64.deb pigsty 0.1.1 26.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgxicor/postgresql-16-pgxicor_0.1.1-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 16 postgresql-16-pgxicor postgresql-16-pgxicor_0.1.1-1PIGSTY~jammy_amd64.deb pigsty 0.1.1 29.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgxicor/postgresql-16-pgxicor_0.1.1-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 16 postgresql-16-pgxicor postgresql-16-pgxicor_0.1.1-1PIGSTY~jammy_arm64.deb pigsty 0.1.1 29.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgxicor/postgresql-16-pgxicor_0.1.1-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 16 postgresql-16-pgxicor postgresql-16-pgxicor_0.1.1-1PIGSTY~noble_amd64.deb pigsty 0.1.1 27.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgxicor/postgresql-16-pgxicor_0.1.1-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 16 postgresql-16-pgxicor postgresql-16-pgxicor_0.1.1-1PIGSTY~noble_arm64.deb pigsty 0.1.1 27.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgxicor/postgresql-16-pgxicor_0.1.1-1PIGSTY~noble_arm64.deb
+@ el8.x86_64 15 pgxicor_15 pgxicor_15-0.1.1-1PIGSTY.el8.x86_64.rpm pigsty 0.1.1 27.6KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgxicor_15-0.1.1-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 15 pgxicor_15 pgxicor_15-0.1.1-1PIGSTY.el8.aarch64.rpm pigsty 0.1.1 27.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgxicor_15-0.1.1-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 15 pgxicor_15 pgxicor_15-0.1.1-1PIGSTY.el9.x86_64.rpm pigsty 0.1.1 27.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgxicor_15-0.1.1-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 15 pgxicor_15 pgxicor_15-0.1.1-1PIGSTY.el9.aarch64.rpm pigsty 0.1.1 27.3KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgxicor_15-0.1.1-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 15 pgxicor_15 pgxicor_15-0.1.1-1PIGSTY.el10.x86_64.rpm pigsty 0.1.1 27.4KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgxicor_15-0.1.1-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 15 pgxicor_15 pgxicor_15-0.1.1-1PIGSTY.el10.aarch64.rpm pigsty 0.1.1 27.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgxicor_15-0.1.1-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 15 postgresql-15-pgxicor postgresql-15-pgxicor_0.1.1-1PIGSTY~bookworm_amd64.deb pigsty 0.1.1 27.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgxicor/postgresql-15-pgxicor_0.1.1-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 15 postgresql-15-pgxicor postgresql-15-pgxicor_0.1.1-1PIGSTY~bookworm_arm64.deb pigsty 0.1.1 26.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgxicor/postgresql-15-pgxicor_0.1.1-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 15 postgresql-15-pgxicor postgresql-15-pgxicor_0.1.1-1PIGSTY~trixie_amd64.deb pigsty 0.1.1 27.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgxicor/postgresql-15-pgxicor_0.1.1-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 15 postgresql-15-pgxicor postgresql-15-pgxicor_0.1.1-1PIGSTY~trixie_arm64.deb pigsty 0.1.1 27.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgxicor/postgresql-15-pgxicor_0.1.1-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 15 postgresql-15-pgxicor postgresql-15-pgxicor_0.1.1-1PIGSTY~jammy_amd64.deb pigsty 0.1.1 30.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgxicor/postgresql-15-pgxicor_0.1.1-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 15 postgresql-15-pgxicor postgresql-15-pgxicor_0.1.1-1PIGSTY~jammy_arm64.deb pigsty 0.1.1 29.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgxicor/postgresql-15-pgxicor_0.1.1-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 15 postgresql-15-pgxicor postgresql-15-pgxicor_0.1.1-1PIGSTY~noble_amd64.deb pigsty 0.1.1 28.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgxicor/postgresql-15-pgxicor_0.1.1-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 15 postgresql-15-pgxicor postgresql-15-pgxicor_0.1.1-1PIGSTY~noble_arm64.deb pigsty 0.1.1 27.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgxicor/postgresql-15-pgxicor_0.1.1-1PIGSTY~noble_arm64.deb
+@ el8.x86_64 14 pgxicor_14 pgxicor_14-0.1.1-1PIGSTY.el8.x86_64.rpm pigsty 0.1.1 27.6KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgxicor_14-0.1.1-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 14 pgxicor_14 pgxicor_14-0.1.1-1PIGSTY.el8.aarch64.rpm pigsty 0.1.1 27.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgxicor_14-0.1.1-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 14 pgxicor_14 pgxicor_14-0.1.1-1PIGSTY.el9.x86_64.rpm pigsty 0.1.1 27.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgxicor_14-0.1.1-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 14 pgxicor_14 pgxicor_14-0.1.1-1PIGSTY.el9.aarch64.rpm pigsty 0.1.1 27.3KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgxicor_14-0.1.1-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 14 pgxicor_14 pgxicor_14-0.1.1-1PIGSTY.el10.x86_64.rpm pigsty 0.1.1 27.4KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgxicor_14-0.1.1-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 14 pgxicor_14 pgxicor_14-0.1.1-1PIGSTY.el10.aarch64.rpm pigsty 0.1.1 27.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgxicor_14-0.1.1-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 14 postgresql-14-pgxicor postgresql-14-pgxicor_0.1.1-1PIGSTY~bookworm_amd64.deb pigsty 0.1.1 27.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgxicor/postgresql-14-pgxicor_0.1.1-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 14 postgresql-14-pgxicor postgresql-14-pgxicor_0.1.1-1PIGSTY~bookworm_arm64.deb pigsty 0.1.1 26.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgxicor/postgresql-14-pgxicor_0.1.1-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 14 postgresql-14-pgxicor postgresql-14-pgxicor_0.1.1-1PIGSTY~trixie_amd64.deb pigsty 0.1.1 27.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgxicor/postgresql-14-pgxicor_0.1.1-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 14 postgresql-14-pgxicor postgresql-14-pgxicor_0.1.1-1PIGSTY~trixie_arm64.deb pigsty 0.1.1 26.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgxicor/postgresql-14-pgxicor_0.1.1-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 14 postgresql-14-pgxicor postgresql-14-pgxicor_0.1.1-1PIGSTY~jammy_amd64.deb pigsty 0.1.1 29.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgxicor/postgresql-14-pgxicor_0.1.1-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 14 postgresql-14-pgxicor postgresql-14-pgxicor_0.1.1-1PIGSTY~jammy_arm64.deb pigsty 0.1.1 29.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgxicor/postgresql-14-pgxicor_0.1.1-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 14 postgresql-14-pgxicor postgresql-14-pgxicor_0.1.1-1PIGSTY~noble_amd64.deb pigsty 0.1.1 28.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgxicor/postgresql-14-pgxicor_0.1.1-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 14 postgresql-14-pgxicor postgresql-14-pgxicor_0.1.1-1PIGSTY~noble_arm64.deb pigsty 0.1.1 27.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgxicor/postgresql-14-pgxicor_0.1.1-1PIGSTY~noble_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建

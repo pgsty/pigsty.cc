@@ -12,7 +12,7 @@ icon: fas fa-magnifying-glass
 
 | **扩展** | **包** | **版本** | **许可证** | **语言** | **描述** |
 |:---------|:-------|:--------:|:----------:|:--------:|:---------|
-| [`pg_search`](/ext/e/pg_search) | [`pg_search`](https://github.com/paradedb/paradedb/tree/dev/pg_search) | `0.22.6` | <a class="ext-badge ext-badge--license agpl30" href="/ext/license#agpl30">AGPL-3.0</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | ParadeDB BM25算法全文检索插件，ES全文检索 |
+| [`pg_search`](/ext/e/pg_search) | [`pg_search`](https://github.com/paradedb/paradedb/tree/dev/pg_search) | `0.23.0` | <a class="ext-badge ext-badge--license agpl30" href="/ext/license#agpl30">AGPL-3.0</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | ParadeDB BM25算法全文检索插件，ES全文检索 |
 | [`pgroonga`](/ext/e/pgroonga) | [`pgroonga`](https://github.com/pgroonga/pgroonga) | `4.0.4` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 使用Groonga，面向所有语言的高速全文检索平台 |
 | [`pgroonga_database`](/ext/e/pgroonga_database) | [`pgroonga`](https://github.com/pgroonga/pgroonga) | `4.0.4` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | PGGroonga 数据库管理模块 |
 | [`pg_bigm`](/ext/e/pg_bigm) | [`pg_bigm`](https://github.com/pgbigm/pg_bigm) | `1.2` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 基于二字组的多语言全文检索扩展 |
@@ -43,7 +43,7 @@ icon: fas fa-magnifying-glass
 
 ## pg_search {#pg_search}
 
-[**`pg_search`**](/ext/e/pg_search) - `0.22.6` : ParadeDB BM25算法全文检索插件，ES全文检索
+[**`pg_search`**](/ext/e/pg_search) - `0.23.0` : ParadeDB BM25算法全文检索插件，ES全文检索
 
 | **条目** | **属性** | **OS** | **x86_64** | **aarch64** |
 |:---:|:---|:---:|:---:|:---:|

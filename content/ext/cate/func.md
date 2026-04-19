@@ -28,7 +28,7 @@ icon: fas fa-square-root-variable
 | [`omnisketch`](/ext/e/omnisketch) | [`omnisketch`](https://github.com/tvondra/omnisketch) | `1.0.2` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 实现OmniSketch数据结构，实现近似摘要聚合 |
 | [`ddsketch`](/ext/e/ddsketch) | [`ddsketch`](https://github.com/tvondra/ddsketch) | `1.0.1` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 实现DDSketch数据结构，实现在线的Quantile聚合 |
 | [`vasco`](/ext/e/vasco) | [`vasco`](https://github.com/Florents-Tselai/vasco) | `0.1.0` | <a class="ext-badge ext-badge--license gpl30" href="/ext/license#gpl30">GPL-3.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 使用MIC发现数据中隐含的关联 |
-| [`xicor`](/ext/e/xicor) | [`pgxicor`](https://github.com/Florents-Tselai/pgxicor) | `0.1.0` | <a class="ext-badge ext-badge--license gpl30" href="/ext/license#gpl30">GPL-3.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 在PG中计算XI相关系数 |
+| [`xicor`](/ext/e/xicor) | [`pgxicor`](https://github.com/Florents-Tselai/pgxicor) | `0.1.1` | <a class="ext-badge ext-badge--license gpl30" href="/ext/license#gpl30">GPL-3.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 在PG中计算XI相关系数 |
 | [`weighted_statistics`](/ext/e/weighted_statistics) | [`pg_weighted_statistics`](https://github.com/schmidni/pg_weighted_statistics) | `1.0.0` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 针对稀疏数据的高性能加权统计量计算 |
 | [`datasketches`](/ext/e/datasketches) | [`datasketches`](https://github.com/apache/datasketches-postgresql) | `1.7.0` | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang cpp" href="/ext/language#cpp">C++</a> | PostgreSQL 近似分析摘要数据结构与聚合函数 |
 | [`tdigest`](/ext/e/tdigest) | [`tdigest`](https://github.com/tvondra/tdigest) | `1.4.3` | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | tdigest 聚合函数 |
@@ -357,7 +357,7 @@ icon: fas fa-square-root-variable
 
 ## xicor {#xicor}
 
-[**`pgxicor`**](/ext/e/xicor) - `0.1.0` : 在PG中计算XI相关系数
+[**`pgxicor`**](/ext/e/xicor) - `0.1.1` : 在PG中计算XI相关系数
 
 | **条目** | **属性** | **OS** | **x86_64** | **aarch64** |
 |:---:|:---|:---:|:---:|:---:|

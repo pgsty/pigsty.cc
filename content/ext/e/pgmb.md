@@ -2,7 +2,7 @@
 title: "pgmb"
 linkTitle: "pgmb"
 description: "一个简单的PostgreSQL消息代理系统"
-weight: 2870
+weight: 2670
 ---
 
 <div class="ext-cards">
@@ -30,7 +30,7 @@ weight: 2870
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
 |:-----:|:-------------------------------------------------------------------------|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|:----------|
-| 2870  | [**`pgmb`**](/ext/e/pgmb) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `pgmb` |
+| 2670  | [**`pgmb`**](/ext/e/pgmb) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `pgmb` |
 {.ext-table}
 
 | **相关扩展** | [`pg_cron`](/ext/e/pg_cron) [`http`](/ext/e/http) [`pgmq`](/ext/e/pgmq) [`pgq`](/ext/e/pgq) [`pg_task`](/ext/e/pg_task) [`pg_cron`](/ext/e/pg_cron) [`pg_background`](/ext/e/pg_background) [`pg_later`](/ext/e/pg_later) [`pg_net`](/ext/e/pg_net) [`kafka_fdw`](/ext/e/kafka_fdw) |

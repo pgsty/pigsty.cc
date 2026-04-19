@@ -11,10 +11,10 @@ weight: 2460
     <div class="ext-card__title">ClickHouse/pg_clickhouse</div>
     <div class="ext-card__desc">https://github.com/ClickHouse/pg_clickhouse</div>
   </a>
-  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pg_clickhouse-0.1.10.tar.gz">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pg_clickhouse-0.2.0.tar.gz">
     <div class="ext-card__kicker">源码</div>
-    <div class="ext-card__title">pg_clickhouse-0.1.10.tar.gz</div>
-    <div class="ext-card__desc">pg_clickhouse-0.1.10.tar.gz</div>
+    <div class="ext-card__title">pg_clickhouse-0.2.0.tar.gz</div>
+    <div class="ext-card__desc">pg_clickhouse-0.2.0.tar.gz</div>
   </a>
 </div>
 
@@ -25,7 +25,7 @@ weight: 2460
 
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
-| [**`pg_clickhouse`**](/ext/e/pg_clickhouse) | `0.1.10` | <a class="ext-badge ext-badge--cate olap" href="/ext/cate/olap">OLAP</a> | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang cpp" href="/ext/language#cpp">C++</a> |
+| [**`pg_clickhouse`**](/ext/e/pg_clickhouse) | `0.2.0` | <a class="ext-badge ext-badge--cate olap" href="/ext/cate/olap">OLAP</a> | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang cpp" href="/ext/language#cpp">C++</a> |
 {.ext-table}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
@@ -38,105 +38,105 @@ weight: 2460
 {.ext-table .ext-table--rel}
 
 
-> Release tag 0.1.10 still ships extension SQL version 0.1; source tarball vendors submodules.
+> release 0.2.0; SQL v0.2
 
 
 ## 版本
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#olap) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.1.10` | {{< pgvers "18,17,16,15,14" >}} | `pg_clickhouse` | - |
-| [**RPM**](/ext/rpm#olap) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.1.10` | {{< pgvers "18,17,16,15,14" >}} | `pg_clickhouse_$v` | - |
-| [**DEB**](/ext/deb#olap) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.1.10` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-clickhouse` | - |
+| [**EXT**](/ext/list#olap) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.2.0` | {{< pgvers "18,17,16,15,14" >}} | `pg_clickhouse` | - |
+| [**RPM**](/ext/rpm#olap) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.2.0` | {{< pgvers "18,17,16,15,14" >}} | `pg_clickhouse_$v` | - |
+| [**DEB**](/ext/deb#olap) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.2.0` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-clickhouse` | - |
 {.ext-table}
 
 {{< pgext_matrix >}}
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 0.1.10 1 | AVAIL PIGSTY 0.1.10 1 | AVAIL PIGSTY 0.1.10 1 | AVAIL PIGSTY 0.1.10 1 | AVAIL PIGSTY 0.1.10 1 |
-| el8.aarch64 | AVAIL PIGSTY 0.1.10 1 | AVAIL PIGSTY 0.1.10 1 | AVAIL PIGSTY 0.1.10 1 | AVAIL PIGSTY 0.1.10 1 | AVAIL PIGSTY 0.1.10 1 |
-| el9.x86_64 | AVAIL PIGSTY 0.1.10 1 | AVAIL PIGSTY 0.1.10 1 | AVAIL PIGSTY 0.1.10 1 | AVAIL PIGSTY 0.1.10 1 | AVAIL PIGSTY 0.1.10 1 |
-| el9.aarch64 | AVAIL PIGSTY 0.1.10 1 | AVAIL PIGSTY 0.1.10 1 | AVAIL PIGSTY 0.1.10 1 | AVAIL PIGSTY 0.1.10 1 | AVAIL PIGSTY 0.1.10 1 |
-| el10.x86_64 | AVAIL PIGSTY 0.1.10 1 | AVAIL PIGSTY 0.1.10 1 | AVAIL PIGSTY 0.1.10 1 | AVAIL PIGSTY 0.1.10 1 | AVAIL PIGSTY 0.1.10 1 |
-| el10.aarch64 | AVAIL PIGSTY 0.1.10 1 | AVAIL PIGSTY 0.1.10 1 | AVAIL PIGSTY 0.1.10 1 | AVAIL PIGSTY 0.1.10 1 | AVAIL PIGSTY 0.1.10 1 |
-| d12.x86_64 | AVAIL PIGSTY 0.1.10 1 | AVAIL PIGSTY 0.1.10 1 | AVAIL PIGSTY 0.1.10 1 | AVAIL PIGSTY 0.1.10 1 | AVAIL PIGSTY 0.1.10 1 |
-| d12.aarch64 | AVAIL PIGSTY 0.1.10 1 | AVAIL PIGSTY 0.1.10 1 | AVAIL PIGSTY 0.1.10 1 | AVAIL PIGSTY 0.1.10 1 | AVAIL PIGSTY 0.1.10 1 |
-| d13.x86_64 | AVAIL PIGSTY 0.1.10 1 | AVAIL PIGSTY 0.1.10 1 | AVAIL PIGSTY 0.1.10 1 | AVAIL PIGSTY 0.1.10 1 | AVAIL PIGSTY 0.1.10 1 |
-| d13.aarch64 | AVAIL PIGSTY 0.1.10 1 | AVAIL PIGSTY 0.1.10 1 | AVAIL PIGSTY 0.1.10 1 | AVAIL PIGSTY 0.1.10 1 | AVAIL PIGSTY 0.1.10 1 |
-| u22.x86_64 | AVAIL PIGSTY 0.1.10 1 | AVAIL PIGSTY 0.1.10 1 | AVAIL PIGSTY 0.1.10 1 | AVAIL PIGSTY 0.1.10 1 | AVAIL PIGSTY 0.1.10 1 |
-| u22.aarch64 | AVAIL PIGSTY 0.1.10 1 | AVAIL PIGSTY 0.1.10 1 | AVAIL PIGSTY 0.1.10 1 | AVAIL PIGSTY 0.1.10 1 | AVAIL PIGSTY 0.1.10 1 |
-| u24.x86_64 | AVAIL PIGSTY 0.1.10 1 | AVAIL PIGSTY 0.1.10 1 | AVAIL PIGSTY 0.1.10 1 | AVAIL PIGSTY 0.1.10 1 | AVAIL PIGSTY 0.1.10 1 |
-| u24.aarch64 | AVAIL PIGSTY 0.1.10 1 | AVAIL PIGSTY 0.1.10 1 | AVAIL PIGSTY 0.1.10 1 | AVAIL PIGSTY 0.1.10 1 | AVAIL PIGSTY 0.1.10 1 |
-@ el8.x86_64 18 pg_clickhouse_18 pg_clickhouse_18-0.1.10-1PIGSTY.el8.x86_64.rpm pigsty 0.1.10 714.4KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_clickhouse_18-0.1.10-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 18 pg_clickhouse_18 pg_clickhouse_18-0.1.10-1PIGSTY.el8.aarch64.rpm pigsty 0.1.10 636.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_clickhouse_18-0.1.10-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 18 pg_clickhouse_18 pg_clickhouse_18-0.1.10-1PIGSTY.el9.x86_64.rpm pigsty 0.1.10 720.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_clickhouse_18-0.1.10-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 18 pg_clickhouse_18 pg_clickhouse_18-0.1.10-1PIGSTY.el9.aarch64.rpm pigsty 0.1.10 690.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_clickhouse_18-0.1.10-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 18 pg_clickhouse_18 pg_clickhouse_18-0.1.10-1PIGSTY.el10.x86_64.rpm pigsty 0.1.10 744.5KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_clickhouse_18-0.1.10-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 18 pg_clickhouse_18 pg_clickhouse_18-0.1.10-1PIGSTY.el10.aarch64.rpm pigsty 0.1.10 707.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_clickhouse_18-0.1.10-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 18 postgresql-18-clickhouse postgresql-18-clickhouse_0.1.10-1PIGSTY~bookworm_amd64.deb pigsty 0.1.10 846.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-clickhouse/postgresql-18-clickhouse_0.1.10-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 18 postgresql-18-clickhouse postgresql-18-clickhouse_0.1.10-1PIGSTY~bookworm_arm64.deb pigsty 0.1.10 783.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-clickhouse/postgresql-18-clickhouse_0.1.10-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 18 postgresql-18-clickhouse postgresql-18-clickhouse_0.1.10-1PIGSTY~trixie_amd64.deb pigsty 0.1.10 850.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-clickhouse/postgresql-18-clickhouse_0.1.10-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 18 postgresql-18-clickhouse postgresql-18-clickhouse_0.1.10-1PIGSTY~trixie_arm64.deb pigsty 0.1.10 789.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-clickhouse/postgresql-18-clickhouse_0.1.10-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 18 postgresql-18-clickhouse postgresql-18-clickhouse_0.1.10-1PIGSTY~jammy_amd64.deb pigsty 0.1.10 914.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-clickhouse/postgresql-18-clickhouse_0.1.10-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 18 postgresql-18-clickhouse postgresql-18-clickhouse_0.1.10-1PIGSTY~jammy_arm64.deb pigsty 0.1.10 886.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-clickhouse/postgresql-18-clickhouse_0.1.10-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 18 postgresql-18-clickhouse postgresql-18-clickhouse_0.1.10-1PIGSTY~noble_amd64.deb pigsty 0.1.10 927.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-clickhouse/postgresql-18-clickhouse_0.1.10-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 18 postgresql-18-clickhouse postgresql-18-clickhouse_0.1.10-1PIGSTY~noble_arm64.deb pigsty 0.1.10 893.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-clickhouse/postgresql-18-clickhouse_0.1.10-1PIGSTY~noble_arm64.deb
-@ el8.x86_64 17 pg_clickhouse_17 pg_clickhouse_17-0.1.10-1PIGSTY.el8.x86_64.rpm pigsty 0.1.10 714.1KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_clickhouse_17-0.1.10-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 17 pg_clickhouse_17 pg_clickhouse_17-0.1.10-1PIGSTY.el8.aarch64.rpm pigsty 0.1.10 636.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_clickhouse_17-0.1.10-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 17 pg_clickhouse_17 pg_clickhouse_17-0.1.10-1PIGSTY.el9.x86_64.rpm pigsty 0.1.10 720.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_clickhouse_17-0.1.10-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 17 pg_clickhouse_17 pg_clickhouse_17-0.1.10-1PIGSTY.el9.aarch64.rpm pigsty 0.1.10 689.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_clickhouse_17-0.1.10-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 17 pg_clickhouse_17 pg_clickhouse_17-0.1.10-1PIGSTY.el10.x86_64.rpm pigsty 0.1.10 744.4KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_clickhouse_17-0.1.10-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 17 pg_clickhouse_17 pg_clickhouse_17-0.1.10-1PIGSTY.el10.aarch64.rpm pigsty 0.1.10 707.1KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_clickhouse_17-0.1.10-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 17 postgresql-17-clickhouse postgresql-17-clickhouse_0.1.10-1PIGSTY~bookworm_amd64.deb pigsty 0.1.10 845.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-clickhouse/postgresql-17-clickhouse_0.1.10-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 17 postgresql-17-clickhouse postgresql-17-clickhouse_0.1.10-1PIGSTY~bookworm_arm64.deb pigsty 0.1.10 783.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-clickhouse/postgresql-17-clickhouse_0.1.10-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 17 postgresql-17-clickhouse postgresql-17-clickhouse_0.1.10-1PIGSTY~trixie_amd64.deb pigsty 0.1.10 850.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-clickhouse/postgresql-17-clickhouse_0.1.10-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 17 postgresql-17-clickhouse postgresql-17-clickhouse_0.1.10-1PIGSTY~trixie_arm64.deb pigsty 0.1.10 788.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-clickhouse/postgresql-17-clickhouse_0.1.10-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 17 postgresql-17-clickhouse postgresql-17-clickhouse_0.1.10-1PIGSTY~jammy_amd64.deb pigsty 0.1.10 967.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-clickhouse/postgresql-17-clickhouse_0.1.10-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 17 postgresql-17-clickhouse postgresql-17-clickhouse_0.1.10-1PIGSTY~jammy_arm64.deb pigsty 0.1.10 939.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-clickhouse/postgresql-17-clickhouse_0.1.10-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 17 postgresql-17-clickhouse postgresql-17-clickhouse_0.1.10-1PIGSTY~noble_amd64.deb pigsty 0.1.10 926.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-clickhouse/postgresql-17-clickhouse_0.1.10-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 17 postgresql-17-clickhouse postgresql-17-clickhouse_0.1.10-1PIGSTY~noble_arm64.deb pigsty 0.1.10 893.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-clickhouse/postgresql-17-clickhouse_0.1.10-1PIGSTY~noble_arm64.deb
-@ el8.x86_64 16 pg_clickhouse_16 pg_clickhouse_16-0.1.10-1PIGSTY.el8.x86_64.rpm pigsty 0.1.10 714.0KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_clickhouse_16-0.1.10-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 16 pg_clickhouse_16 pg_clickhouse_16-0.1.10-1PIGSTY.el8.aarch64.rpm pigsty 0.1.10 636.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_clickhouse_16-0.1.10-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 16 pg_clickhouse_16 pg_clickhouse_16-0.1.10-1PIGSTY.el9.x86_64.rpm pigsty 0.1.10 720.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_clickhouse_16-0.1.10-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 16 pg_clickhouse_16 pg_clickhouse_16-0.1.10-1PIGSTY.el9.aarch64.rpm pigsty 0.1.10 689.8KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_clickhouse_16-0.1.10-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 16 pg_clickhouse_16 pg_clickhouse_16-0.1.10-1PIGSTY.el10.x86_64.rpm pigsty 0.1.10 744.7KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_clickhouse_16-0.1.10-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 16 pg_clickhouse_16 pg_clickhouse_16-0.1.10-1PIGSTY.el10.aarch64.rpm pigsty 0.1.10 707.1KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_clickhouse_16-0.1.10-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 16 postgresql-16-clickhouse postgresql-16-clickhouse_0.1.10-1PIGSTY~bookworm_amd64.deb pigsty 0.1.10 846.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-clickhouse/postgresql-16-clickhouse_0.1.10-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 16 postgresql-16-clickhouse postgresql-16-clickhouse_0.1.10-1PIGSTY~bookworm_arm64.deb pigsty 0.1.10 783.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-clickhouse/postgresql-16-clickhouse_0.1.10-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 16 postgresql-16-clickhouse postgresql-16-clickhouse_0.1.10-1PIGSTY~trixie_amd64.deb pigsty 0.1.10 849.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-clickhouse/postgresql-16-clickhouse_0.1.10-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 16 postgresql-16-clickhouse postgresql-16-clickhouse_0.1.10-1PIGSTY~trixie_arm64.deb pigsty 0.1.10 788.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-clickhouse/postgresql-16-clickhouse_0.1.10-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 16 postgresql-16-clickhouse postgresql-16-clickhouse_0.1.10-1PIGSTY~jammy_amd64.deb pigsty 0.1.10 964.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-clickhouse/postgresql-16-clickhouse_0.1.10-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 16 postgresql-16-clickhouse postgresql-16-clickhouse_0.1.10-1PIGSTY~jammy_arm64.deb pigsty 0.1.10 935.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-clickhouse/postgresql-16-clickhouse_0.1.10-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 16 postgresql-16-clickhouse postgresql-16-clickhouse_0.1.10-1PIGSTY~noble_amd64.deb pigsty 0.1.10 926.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-clickhouse/postgresql-16-clickhouse_0.1.10-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 16 postgresql-16-clickhouse postgresql-16-clickhouse_0.1.10-1PIGSTY~noble_arm64.deb pigsty 0.1.10 892.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-clickhouse/postgresql-16-clickhouse_0.1.10-1PIGSTY~noble_arm64.deb
-@ el8.x86_64 15 pg_clickhouse_15 pg_clickhouse_15-0.1.10-1PIGSTY.el8.x86_64.rpm pigsty 0.1.10 717.4KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_clickhouse_15-0.1.10-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 15 pg_clickhouse_15 pg_clickhouse_15-0.1.10-1PIGSTY.el8.aarch64.rpm pigsty 0.1.10 638.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_clickhouse_15-0.1.10-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 15 pg_clickhouse_15 pg_clickhouse_15-0.1.10-1PIGSTY.el9.x86_64.rpm pigsty 0.1.10 723.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_clickhouse_15-0.1.10-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 15 pg_clickhouse_15 pg_clickhouse_15-0.1.10-1PIGSTY.el9.aarch64.rpm pigsty 0.1.10 693.2KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_clickhouse_15-0.1.10-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 15 pg_clickhouse_15 pg_clickhouse_15-0.1.10-1PIGSTY.el10.x86_64.rpm pigsty 0.1.10 747.8KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_clickhouse_15-0.1.10-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 15 pg_clickhouse_15 pg_clickhouse_15-0.1.10-1PIGSTY.el10.aarch64.rpm pigsty 0.1.10 710.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_clickhouse_15-0.1.10-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 15 postgresql-15-clickhouse postgresql-15-clickhouse_0.1.10-1PIGSTY~bookworm_amd64.deb pigsty 0.1.10 847.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-clickhouse/postgresql-15-clickhouse_0.1.10-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 15 postgresql-15-clickhouse postgresql-15-clickhouse_0.1.10-1PIGSTY~bookworm_arm64.deb pigsty 0.1.10 785.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-clickhouse/postgresql-15-clickhouse_0.1.10-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 15 postgresql-15-clickhouse postgresql-15-clickhouse_0.1.10-1PIGSTY~trixie_amd64.deb pigsty 0.1.10 851.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-clickhouse/postgresql-15-clickhouse_0.1.10-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 15 postgresql-15-clickhouse postgresql-15-clickhouse_0.1.10-1PIGSTY~trixie_arm64.deb pigsty 0.1.10 789.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-clickhouse/postgresql-15-clickhouse_0.1.10-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 15 postgresql-15-clickhouse postgresql-15-clickhouse_0.1.10-1PIGSTY~jammy_amd64.deb pigsty 0.1.10 966.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-clickhouse/postgresql-15-clickhouse_0.1.10-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 15 postgresql-15-clickhouse postgresql-15-clickhouse_0.1.10-1PIGSTY~jammy_arm64.deb pigsty 0.1.10 938.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-clickhouse/postgresql-15-clickhouse_0.1.10-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 15 postgresql-15-clickhouse postgresql-15-clickhouse_0.1.10-1PIGSTY~noble_amd64.deb pigsty 0.1.10 929.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-clickhouse/postgresql-15-clickhouse_0.1.10-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 15 postgresql-15-clickhouse postgresql-15-clickhouse_0.1.10-1PIGSTY~noble_arm64.deb pigsty 0.1.10 895.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-clickhouse/postgresql-15-clickhouse_0.1.10-1PIGSTY~noble_arm64.deb
-@ el8.x86_64 14 pg_clickhouse_14 pg_clickhouse_14-0.1.10-1PIGSTY.el8.x86_64.rpm pigsty 0.1.10 717.4KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_clickhouse_14-0.1.10-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 14 pg_clickhouse_14 pg_clickhouse_14-0.1.10-1PIGSTY.el8.aarch64.rpm pigsty 0.1.10 638.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_clickhouse_14-0.1.10-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 14 pg_clickhouse_14 pg_clickhouse_14-0.1.10-1PIGSTY.el9.x86_64.rpm pigsty 0.1.10 723.1KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_clickhouse_14-0.1.10-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 14 pg_clickhouse_14 pg_clickhouse_14-0.1.10-1PIGSTY.el9.aarch64.rpm pigsty 0.1.10 693.3KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_clickhouse_14-0.1.10-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 14 pg_clickhouse_14 pg_clickhouse_14-0.1.10-1PIGSTY.el10.x86_64.rpm pigsty 0.1.10 747.7KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_clickhouse_14-0.1.10-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 14 pg_clickhouse_14 pg_clickhouse_14-0.1.10-1PIGSTY.el10.aarch64.rpm pigsty 0.1.10 710.4KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_clickhouse_14-0.1.10-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 14 postgresql-14-clickhouse postgresql-14-clickhouse_0.1.10-1PIGSTY~bookworm_amd64.deb pigsty 0.1.10 847.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-clickhouse/postgresql-14-clickhouse_0.1.10-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 14 postgresql-14-clickhouse postgresql-14-clickhouse_0.1.10-1PIGSTY~bookworm_arm64.deb pigsty 0.1.10 784.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-clickhouse/postgresql-14-clickhouse_0.1.10-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 14 postgresql-14-clickhouse postgresql-14-clickhouse_0.1.10-1PIGSTY~trixie_amd64.deb pigsty 0.1.10 851.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-clickhouse/postgresql-14-clickhouse_0.1.10-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 14 postgresql-14-clickhouse postgresql-14-clickhouse_0.1.10-1PIGSTY~trixie_arm64.deb pigsty 0.1.10 789.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-clickhouse/postgresql-14-clickhouse_0.1.10-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 14 postgresql-14-clickhouse postgresql-14-clickhouse_0.1.10-1PIGSTY~jammy_amd64.deb pigsty 0.1.10 965.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-clickhouse/postgresql-14-clickhouse_0.1.10-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 14 postgresql-14-clickhouse postgresql-14-clickhouse_0.1.10-1PIGSTY~jammy_arm64.deb pigsty 0.1.10 936.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-clickhouse/postgresql-14-clickhouse_0.1.10-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 14 postgresql-14-clickhouse postgresql-14-clickhouse_0.1.10-1PIGSTY~noble_amd64.deb pigsty 0.1.10 928.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-clickhouse/postgresql-14-clickhouse_0.1.10-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 14 postgresql-14-clickhouse postgresql-14-clickhouse_0.1.10-1PIGSTY~noble_arm64.deb pigsty 0.1.10 895.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-clickhouse/postgresql-14-clickhouse_0.1.10-1PIGSTY~noble_arm64.deb
+| el8.x86_64 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 |
+| el8.aarch64 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 |
+| el9.x86_64 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 |
+| el9.aarch64 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 |
+| el10.x86_64 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 |
+| el10.aarch64 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 |
+| d12.x86_64 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 |
+| d12.aarch64 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 |
+| d13.x86_64 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 |
+| d13.aarch64 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 |
+| u22.x86_64 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 |
+| u22.aarch64 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 |
+| u24.x86_64 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 |
+| u24.aarch64 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 |
+@ el8.x86_64 18 pg_clickhouse_18 pg_clickhouse_18-0.2.0-1PIGSTY.el8.x86_64.rpm pigsty 0.2.0 724.2KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_clickhouse_18-0.2.0-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 18 pg_clickhouse_18 pg_clickhouse_18-0.2.0-1PIGSTY.el8.aarch64.rpm pigsty 0.2.0 645.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_clickhouse_18-0.2.0-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 18 pg_clickhouse_18 pg_clickhouse_18-0.2.0-1PIGSTY.el9.x86_64.rpm pigsty 0.2.0 729.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_clickhouse_18-0.2.0-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 18 pg_clickhouse_18 pg_clickhouse_18-0.2.0-1PIGSTY.el9.aarch64.rpm pigsty 0.2.0 699.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_clickhouse_18-0.2.0-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 18 pg_clickhouse_18 pg_clickhouse_18-0.2.0-1PIGSTY.el10.x86_64.rpm pigsty 0.2.0 753.2KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_clickhouse_18-0.2.0-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 18 pg_clickhouse_18 pg_clickhouse_18-0.2.0-1PIGSTY.el10.aarch64.rpm pigsty 0.2.0 717.0KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_clickhouse_18-0.2.0-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-clickhouse postgresql-18-clickhouse_0.2.0-1PIGSTY~bookworm_amd64.deb pigsty 0.2.0 859.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-clickhouse/postgresql-18-clickhouse_0.2.0-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 18 postgresql-18-clickhouse postgresql-18-clickhouse_0.2.0-1PIGSTY~bookworm_arm64.deb pigsty 0.2.0 796.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-clickhouse/postgresql-18-clickhouse_0.2.0-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 18 postgresql-18-clickhouse postgresql-18-clickhouse_0.2.0-1PIGSTY~trixie_amd64.deb pigsty 0.2.0 863.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-clickhouse/postgresql-18-clickhouse_0.2.0-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 18 postgresql-18-clickhouse postgresql-18-clickhouse_0.2.0-1PIGSTY~trixie_arm64.deb pigsty 0.2.0 801.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-clickhouse/postgresql-18-clickhouse_0.2.0-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 18 postgresql-18-clickhouse postgresql-18-clickhouse_0.2.0-1PIGSTY~jammy_amd64.deb pigsty 0.2.0 927.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-clickhouse/postgresql-18-clickhouse_0.2.0-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 18 postgresql-18-clickhouse postgresql-18-clickhouse_0.2.0-1PIGSTY~jammy_arm64.deb pigsty 0.2.0 900.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-clickhouse/postgresql-18-clickhouse_0.2.0-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 18 postgresql-18-clickhouse postgresql-18-clickhouse_0.2.0-1PIGSTY~noble_amd64.deb pigsty 0.2.0 939.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-clickhouse/postgresql-18-clickhouse_0.2.0-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 18 postgresql-18-clickhouse postgresql-18-clickhouse_0.2.0-1PIGSTY~noble_arm64.deb pigsty 0.2.0 906.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-clickhouse/postgresql-18-clickhouse_0.2.0-1PIGSTY~noble_arm64.deb
+@ el8.x86_64 17 pg_clickhouse_17 pg_clickhouse_17-0.2.0-1PIGSTY.el8.x86_64.rpm pigsty 0.2.0 723.9KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_clickhouse_17-0.2.0-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 17 pg_clickhouse_17 pg_clickhouse_17-0.2.0-1PIGSTY.el8.aarch64.rpm pigsty 0.2.0 644.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_clickhouse_17-0.2.0-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 17 pg_clickhouse_17 pg_clickhouse_17-0.2.0-1PIGSTY.el9.x86_64.rpm pigsty 0.2.0 729.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_clickhouse_17-0.2.0-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 17 pg_clickhouse_17 pg_clickhouse_17-0.2.0-1PIGSTY.el9.aarch64.rpm pigsty 0.2.0 699.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_clickhouse_17-0.2.0-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 17 pg_clickhouse_17 pg_clickhouse_17-0.2.0-1PIGSTY.el10.x86_64.rpm pigsty 0.2.0 753.4KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_clickhouse_17-0.2.0-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 17 pg_clickhouse_17 pg_clickhouse_17-0.2.0-1PIGSTY.el10.aarch64.rpm pigsty 0.2.0 716.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_clickhouse_17-0.2.0-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-clickhouse postgresql-17-clickhouse_0.2.0-1PIGSTY~bookworm_amd64.deb pigsty 0.2.0 859.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-clickhouse/postgresql-17-clickhouse_0.2.0-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 17 postgresql-17-clickhouse postgresql-17-clickhouse_0.2.0-1PIGSTY~bookworm_arm64.deb pigsty 0.2.0 796.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-clickhouse/postgresql-17-clickhouse_0.2.0-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 17 postgresql-17-clickhouse postgresql-17-clickhouse_0.2.0-1PIGSTY~trixie_amd64.deb pigsty 0.2.0 862.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-clickhouse/postgresql-17-clickhouse_0.2.0-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 17 postgresql-17-clickhouse postgresql-17-clickhouse_0.2.0-1PIGSTY~trixie_arm64.deb pigsty 0.2.0 801.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-clickhouse/postgresql-17-clickhouse_0.2.0-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 17 postgresql-17-clickhouse postgresql-17-clickhouse_0.2.0-1PIGSTY~jammy_amd64.deb pigsty 0.2.0 981.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-clickhouse/postgresql-17-clickhouse_0.2.0-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 17 postgresql-17-clickhouse postgresql-17-clickhouse_0.2.0-1PIGSTY~jammy_arm64.deb pigsty 0.2.0 953.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-clickhouse/postgresql-17-clickhouse_0.2.0-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 17 postgresql-17-clickhouse postgresql-17-clickhouse_0.2.0-1PIGSTY~noble_amd64.deb pigsty 0.2.0 939.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-clickhouse/postgresql-17-clickhouse_0.2.0-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 17 postgresql-17-clickhouse postgresql-17-clickhouse_0.2.0-1PIGSTY~noble_arm64.deb pigsty 0.2.0 906.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-clickhouse/postgresql-17-clickhouse_0.2.0-1PIGSTY~noble_arm64.deb
+@ el8.x86_64 16 pg_clickhouse_16 pg_clickhouse_16-0.2.0-1PIGSTY.el8.x86_64.rpm pigsty 0.2.0 723.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_clickhouse_16-0.2.0-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 16 pg_clickhouse_16 pg_clickhouse_16-0.2.0-1PIGSTY.el8.aarch64.rpm pigsty 0.2.0 644.8KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_clickhouse_16-0.2.0-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 16 pg_clickhouse_16 pg_clickhouse_16-0.2.0-1PIGSTY.el9.x86_64.rpm pigsty 0.2.0 729.7KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_clickhouse_16-0.2.0-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 16 pg_clickhouse_16 pg_clickhouse_16-0.2.0-1PIGSTY.el9.aarch64.rpm pigsty 0.2.0 699.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_clickhouse_16-0.2.0-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 16 pg_clickhouse_16 pg_clickhouse_16-0.2.0-1PIGSTY.el10.x86_64.rpm pigsty 0.2.0 753.1KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_clickhouse_16-0.2.0-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 16 pg_clickhouse_16 pg_clickhouse_16-0.2.0-1PIGSTY.el10.aarch64.rpm pigsty 0.2.0 716.7KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_clickhouse_16-0.2.0-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 16 postgresql-16-clickhouse postgresql-16-clickhouse_0.2.0-1PIGSTY~bookworm_amd64.deb pigsty 0.2.0 859.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-clickhouse/postgresql-16-clickhouse_0.2.0-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 16 postgresql-16-clickhouse postgresql-16-clickhouse_0.2.0-1PIGSTY~bookworm_arm64.deb pigsty 0.2.0 795.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-clickhouse/postgresql-16-clickhouse_0.2.0-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 16 postgresql-16-clickhouse postgresql-16-clickhouse_0.2.0-1PIGSTY~trixie_amd64.deb pigsty 0.2.0 862.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-clickhouse/postgresql-16-clickhouse_0.2.0-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 16 postgresql-16-clickhouse postgresql-16-clickhouse_0.2.0-1PIGSTY~trixie_arm64.deb pigsty 0.2.0 800.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-clickhouse/postgresql-16-clickhouse_0.2.0-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 16 postgresql-16-clickhouse postgresql-16-clickhouse_0.2.0-1PIGSTY~jammy_amd64.deb pigsty 0.2.0 978.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-clickhouse/postgresql-16-clickhouse_0.2.0-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 16 postgresql-16-clickhouse postgresql-16-clickhouse_0.2.0-1PIGSTY~jammy_arm64.deb pigsty 0.2.0 950.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-clickhouse/postgresql-16-clickhouse_0.2.0-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 16 postgresql-16-clickhouse postgresql-16-clickhouse_0.2.0-1PIGSTY~noble_amd64.deb pigsty 0.2.0 939.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-clickhouse/postgresql-16-clickhouse_0.2.0-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 16 postgresql-16-clickhouse postgresql-16-clickhouse_0.2.0-1PIGSTY~noble_arm64.deb pigsty 0.2.0 906.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-clickhouse/postgresql-16-clickhouse_0.2.0-1PIGSTY~noble_arm64.deb
+@ el8.x86_64 15 pg_clickhouse_15 pg_clickhouse_15-0.2.0-1PIGSTY.el8.x86_64.rpm pigsty 0.2.0 727.4KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_clickhouse_15-0.2.0-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 15 pg_clickhouse_15 pg_clickhouse_15-0.2.0-1PIGSTY.el8.aarch64.rpm pigsty 0.2.0 649.8KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_clickhouse_15-0.2.0-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 15 pg_clickhouse_15 pg_clickhouse_15-0.2.0-1PIGSTY.el9.x86_64.rpm pigsty 0.2.0 732.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_clickhouse_15-0.2.0-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 15 pg_clickhouse_15 pg_clickhouse_15-0.2.0-1PIGSTY.el9.aarch64.rpm pigsty 0.2.0 702.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_clickhouse_15-0.2.0-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 15 pg_clickhouse_15 pg_clickhouse_15-0.2.0-1PIGSTY.el10.x86_64.rpm pigsty 0.2.0 757.1KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_clickhouse_15-0.2.0-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 15 pg_clickhouse_15 pg_clickhouse_15-0.2.0-1PIGSTY.el10.aarch64.rpm pigsty 0.2.0 720.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_clickhouse_15-0.2.0-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 15 postgresql-15-clickhouse postgresql-15-clickhouse_0.2.0-1PIGSTY~bookworm_amd64.deb pigsty 0.2.0 861.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-clickhouse/postgresql-15-clickhouse_0.2.0-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 15 postgresql-15-clickhouse postgresql-15-clickhouse_0.2.0-1PIGSTY~bookworm_arm64.deb pigsty 0.2.0 797.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-clickhouse/postgresql-15-clickhouse_0.2.0-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 15 postgresql-15-clickhouse postgresql-15-clickhouse_0.2.0-1PIGSTY~trixie_amd64.deb pigsty 0.2.0 864.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-clickhouse/postgresql-15-clickhouse_0.2.0-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 15 postgresql-15-clickhouse postgresql-15-clickhouse_0.2.0-1PIGSTY~trixie_arm64.deb pigsty 0.2.0 802.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-clickhouse/postgresql-15-clickhouse_0.2.0-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 15 postgresql-15-clickhouse postgresql-15-clickhouse_0.2.0-1PIGSTY~jammy_amd64.deb pigsty 0.2.0 980.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-clickhouse/postgresql-15-clickhouse_0.2.0-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 15 postgresql-15-clickhouse postgresql-15-clickhouse_0.2.0-1PIGSTY~jammy_arm64.deb pigsty 0.2.0 950.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-clickhouse/postgresql-15-clickhouse_0.2.0-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 15 postgresql-15-clickhouse postgresql-15-clickhouse_0.2.0-1PIGSTY~noble_amd64.deb pigsty 0.2.0 942.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-clickhouse/postgresql-15-clickhouse_0.2.0-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 15 postgresql-15-clickhouse postgresql-15-clickhouse_0.2.0-1PIGSTY~noble_arm64.deb pigsty 0.2.0 909.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-clickhouse/postgresql-15-clickhouse_0.2.0-1PIGSTY~noble_arm64.deb
+@ el8.x86_64 14 pg_clickhouse_14 pg_clickhouse_14-0.2.0-1PIGSTY.el8.x86_64.rpm pigsty 0.2.0 727.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_clickhouse_14-0.2.0-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 14 pg_clickhouse_14 pg_clickhouse_14-0.2.0-1PIGSTY.el8.aarch64.rpm pigsty 0.2.0 649.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_clickhouse_14-0.2.0-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 14 pg_clickhouse_14 pg_clickhouse_14-0.2.0-1PIGSTY.el9.x86_64.rpm pigsty 0.2.0 732.7KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_clickhouse_14-0.2.0-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 14 pg_clickhouse_14 pg_clickhouse_14-0.2.0-1PIGSTY.el9.aarch64.rpm pigsty 0.2.0 702.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_clickhouse_14-0.2.0-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 14 pg_clickhouse_14 pg_clickhouse_14-0.2.0-1PIGSTY.el10.x86_64.rpm pigsty 0.2.0 757.1KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_clickhouse_14-0.2.0-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 14 pg_clickhouse_14 pg_clickhouse_14-0.2.0-1PIGSTY.el10.aarch64.rpm pigsty 0.2.0 720.3KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_clickhouse_14-0.2.0-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 14 postgresql-14-clickhouse postgresql-14-clickhouse_0.2.0-1PIGSTY~bookworm_amd64.deb pigsty 0.2.0 861.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-clickhouse/postgresql-14-clickhouse_0.2.0-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 14 postgresql-14-clickhouse postgresql-14-clickhouse_0.2.0-1PIGSTY~bookworm_arm64.deb pigsty 0.2.0 798.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-clickhouse/postgresql-14-clickhouse_0.2.0-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 14 postgresql-14-clickhouse postgresql-14-clickhouse_0.2.0-1PIGSTY~trixie_amd64.deb pigsty 0.2.0 864.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-clickhouse/postgresql-14-clickhouse_0.2.0-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 14 postgresql-14-clickhouse postgresql-14-clickhouse_0.2.0-1PIGSTY~trixie_arm64.deb pigsty 0.2.0 802.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-clickhouse/postgresql-14-clickhouse_0.2.0-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 14 postgresql-14-clickhouse postgresql-14-clickhouse_0.2.0-1PIGSTY~jammy_amd64.deb pigsty 0.2.0 979.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-clickhouse/postgresql-14-clickhouse_0.2.0-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 14 postgresql-14-clickhouse postgresql-14-clickhouse_0.2.0-1PIGSTY~jammy_arm64.deb pigsty 0.2.0 950.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-clickhouse/postgresql-14-clickhouse_0.2.0-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 14 postgresql-14-clickhouse postgresql-14-clickhouse_0.2.0-1PIGSTY~noble_amd64.deb pigsty 0.2.0 942.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-clickhouse/postgresql-14-clickhouse_0.2.0-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 14 postgresql-14-clickhouse postgresql-14-clickhouse_0.2.0-1PIGSTY~noble_arm64.deb pigsty 0.2.0 909.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-clickhouse/postgresql-14-clickhouse_0.2.0-1PIGSTY~noble_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建

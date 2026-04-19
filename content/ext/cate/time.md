@@ -12,7 +12,7 @@ icon: fas fa-clock
 
 | **扩展** | **包** | **版本** | **许可证** | **语言** | **描述** |
 |:---------|:-------|:--------:|:----------:|:--------:|:---------|
-| [`timescaledb`](/ext/e/timescaledb) | [`timescaledb`](https://github.com/timescale/timescaledb) | `2.26.2` | <a class="ext-badge ext-badge--license timescale" href="/ext/license#timescale">Timescale</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 时序数据库扩展插件 |
+| [`timescaledb`](/ext/e/timescaledb) | [`timescaledb`](https://github.com/timescale/timescaledb) | `2.26.3` | <a class="ext-badge ext-badge--license timescale" href="/ext/license#timescale">Timescale</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 时序数据库扩展插件 |
 | [`timescaledb_toolkit`](/ext/e/timescaledb_toolkit) | [`timescaledb_toolkit`](https://github.com/timescale/timescaledb-toolkit) | `1.22.0` | <a class="ext-badge ext-badge--license timescale" href="/ext/license#timescale">Timescale</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | 超表分析查询，时间序列流式处理，以及其他SQL工具 |
 | [`timeseries`](/ext/e/timeseries) | [`pg_timeseries`](https://github.com/ChuckHend/pg_timeseries) | `0.2.0` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> | 时序数据API封装 |
 | [`periods`](/ext/e/periods) | [`periods`](https://github.com/xocolatl/periods) | `1.2.3` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 为 PERIODs 和 SYSTEM VERSIONING 提供标准 SQL 功能 |
@@ -32,7 +32,7 @@ icon: fas fa-clock
 
 ## timescaledb {#timescaledb}
 
-[**`timescaledb`**](/ext/e/timescaledb) - `2.26.2` : 时序数据库扩展插件
+[**`timescaledb`**](/ext/e/timescaledb) - `2.26.3` : 时序数据库扩展插件
 
 | **条目** | **属性** | **OS** | **x86_64** | **aarch64** |
 |:---:|:---|:---:|:---:|:---:|
