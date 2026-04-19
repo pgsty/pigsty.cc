@@ -8,7 +8,51 @@
 }
 
 [data-bs-theme='dark'] {
+  --pg-code-surface: color-mix(in srgb, var(--bs-body-bg) 82%, #000 18%);
+  --pg-code-border: color-mix(in srgb, var(--bs-border-color) 82%, #000 18%);
+  --pg-inline-code-surface: color-mix(
+    in srgb,
+    var(--pg-code-surface) 78%,
+    var(--bs-primary-bg-subtle) 22%
+  );
+
   @import 'td/chroma/dark';
+
+  .td-content {
+    .highlight {
+      background-color: var(--pg-code-surface);
+      border: 1px solid var(--pg-code-border);
+      border-radius: 0.6rem;
+      overflow: hidden;
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
+    }
+
+    pre {
+      background-color: var(--pg-code-surface);
+      border-color: var(--pg-code-border);
+    }
+
+    .highlight pre,
+    pre.chroma,
+    .chroma {
+      background-color: var(--pg-code-surface);
+    }
+
+    .highlight pre {
+      border: 0;
+      border-radius: 0;
+    }
+
+    // Inline code needs a dedicated dark surface so it does not blend into
+    // surrounding paragraph text or table cells.
+    p code,
+    li > code,
+    table code {
+      color: inherit;
+      background-color: var(--pg-inline-code-surface);
+      border: 1px solid color-mix(in srgb, var(--pg-code-border) 85%, transparent);
+    }
+  }
 
   .chroma {
     background-color: var(--td-pre-bg);
