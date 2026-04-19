@@ -8,7 +8,7 @@ weight: 610
 
 Pigsty 为主流 [Linux 发行版](/docs/ref/linux/) 提供了 PostgreSQL 扩展仓库，其中包含 340+ 额外的 PostgreSQL 扩展。
 
-Pigsty 扩展仓库旨在与 [PGDG](https://www.postgresql.org/download/linux/) 官方仓库配合使用，共同使用时可以安装多达 [504 个 PostgreSQL 扩展](https://ext.pigsty.io)。
+Pigsty 扩展仓库旨在与 [PGDG](https://www.postgresql.org/download/linux/) 官方仓库配合使用，共同使用时可以安装多达 [507 个 PostgreSQL 扩展](https://ext.pigsty.io)。
 
 |   PGSQL 仓库   |                      描述                       |              链接               |
 |:------------:|:---------------------------------------------:|:-----------------------------:|

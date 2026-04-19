@@ -233,7 +233,7 @@ Pigsty 专业版/企业版相比开源版本，包含以下额外功能：
     - [**IvorySQL**](/docs/pgsql/kernel/ivorysql)：基于 PG 提供 Oracle 语法/类型/存储过程兼容能力
     - [**PolarDB PG**](/docs/pgsql/kernel/polardb)：提供基于开源的 PolarDB for PostgreSQL 内核支持
     - [**PolarDB O**](/docs/pgsql/kernel/polardb-o)：信创数据库，满足国产化合规要求的 Oracle 兼容内核（**仅限企业版订阅**）
-- **扩展支持能力**：针对 504 个可用 PG Extension，提供 PG 13-18 在主流操作系统上开箱即用的安装能力。
+- **扩展支持能力**：针对 507 个可用 PG Extension，提供 PG 13-18 在主流操作系统上开箱即用的安装能力。
 - **完整功能模块**：提供所有功能模块：
     - [**Supabase**](/docs/pgsql/kernel/supabase)：可靠地自建生产级开源 Firebase
     - [**MinIO**](/docs/minio)：企业 PB 级对象存储规划与自建
