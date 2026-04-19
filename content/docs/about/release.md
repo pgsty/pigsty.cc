@@ -8,65 +8,220 @@ categories: [参考]
 
 Pigsty 当前的最新稳定版本为 [**v4.2.2**](#v422)。
 
-|       版本        |    发布日期    | 摘要                                                      |                                           发布页面                                            |
-|:---------------:|:----------:|---------------------------------------------------------|:-----------------------------------------------------------------------------------------:|
-| [v4.2.2](#v422) | 2026-03-23 | Insforge 应用自建，Infra 包批量更新，新增 pdu，pgdog，tigerfs          |               [v4.2.2](https://github.com/pgsty/pigsty/releases/tag/v4.2.2)               |
-| [v4.2.1](#v421) | 2026-03-06 | 移除 PG13 支持，新增扩展，问题修复                                    |               [v4.2.1](https://github.com/pgsty/pigsty/releases/tag/v4.2.1)               |
-| [v4.2.0](#v420) | 2026-02-28 | 例行小版本更新，六大 PG 内核集中更新                                    |               [v4.2.0](https://github.com/pgsty/pigsty/releases/tag/v4.2.0)               |
-| [v4.1.0](#v410) | 2026-02-12 | 大小版本更新支持，Agent-Native CLI，默认防火墙安全策略收紧                   |               [v4.1.0](https://github.com/pgsty/pigsty/releases/tag/v4.1.0)               |
-| [v4.0.0](#v400) | 2026-01-28 | Victoria 可观测性，安全加固，JUICE/VIBE 模块，容器支持，Apache-2.0        |               [v4.0.0](https://github.com/pgsty/pigsty/releases/tag/v4.0.0)               |
-| [v3.7.0](#v370) | 2025-12-02 | PG18 成为默认，437 个扩展，EL10 与 Debian13 支持，PGEXT.CLOUD        |               [v3.7.0](https://github.com/pgsty/pigsty/releases/tag/v3.7.0)               |
-| [v3.6.1](#v361) | 2025-08-15 | 例行 PG 小版本更新，PGDG 中国区域镜像，EL9，D13 存根                      |               [v3.6.1](https://github.com/pgsty/pigsty/releases/tag/v3.6.1)               |
-| [v3.6.0](#v360) | 2025-07-30 | pgactive，MinIO / ETCD 改进，安装简化，配置梳理                      |               [v3.6.0](https://github.com/pgsty/pigsty/releases/tag/v3.6.0)               |
-| [v3.5.0](#v350) | 2025-06-16 | PG18 beta，421 扩展，监控升级，代码重构                              |               [v3.5.0](https://github.com/pgsty/pigsty/releases/tag/v3.5.0)               |
-| [v3.4.1](#v341) | 2025-04-05 | OpenHalo & OrioleDB，MySQL 兼容，pgAdmin 改进                   |               [v3.4.1](https://github.com/pgsty/pigsty/releases/tag/v3.4.1)               |
-| [v3.4.0](#v340) | 2025-03-30 | 备份改进，自动证书，AGE，Ivory 全平台，本地化，架构与参数改进                     |               [v3.4.0](https://github.com/pgsty/pigsty/releases/tag/v3.4.0)               |
-| [v3.3.0](#v330) | 2025-02-24 | 404 扩展，扩展目录，App 剧本，Nginx 定制，DocumentDB 支持               |               [v3.3.0](https://github.com/pgsty/pigsty/releases/tag/v3.3.0)               |
-| [v3.2.2](#v322) | 2025-01-23 | 390扩展，Omnigres 支持，Mooncake，Citus13 与 PG17 支持                |               [v3.2.2](https://github.com/pgsty/pigsty/releases/tag/v3.2.2)               |
-| [v3.2.1](#v321) | 2025-01-12 | 350扩展，Ivory4，Citus 强化，Odoo 模板                             |               [v3.2.1](https://github.com/pgsty/pigsty/releases/tag/v3.2.1)               |
-| [v3.2.0](#v320) | 2024-12-24 | 扩展管理 CLI，Grafana 强化，ARM64 扩展补完                         |               [v3.2.0](https://github.com/pgsty/pigsty/releases/tag/v3.2.0)               |
-| [v3.1.0](#v310) | 2024-11-24 | PG 17 升默认大版本，配置简化，Ubuntu24 与 ARM 支持，Supabase，MinIO 改进     |               [v3.1.0](https://github.com/pgsty/pigsty/releases/tag/v3.1.0)               |
-| [v3.0.4](#v304) | 2024-10-30 | PG 17 扩展，OLAP 全家桶，pg_duckdb                             |               [v3.0.4](https://github.com/pgsty/pigsty/releases/tag/v3.0.4)               |
-| [v3.0.3](#v303) | 2024-09-27 | PostgreSQL 17，Etcd 运维优化，IvorySQL 3.4，PostGIS 3.5        |               [v3.0.3](https://github.com/pgsty/pigsty/releases/tag/v3.0.3)               |
-| [v3.0.2](#v302) | 2024-09-07 | 精简安装模式，PolarDB 15支持，监控视图更新                              |               [v3.0.2](https://github.com/pgsty/pigsty/releases/tag/v3.0.2)               |
+|       版本        |    发布日期    | 摘要                                                       |                                           发布页面                                            |
+|:---------------:|:----------:|----------------------------------------------------------|:-----------------------------------------------------------------------------------------:|
+| [v4.3.0](#v430) | 2026-04-19 | 占位稿：4 月 Infra / RPM 编号整理，Grafana 13，Cloudberry 2.1         |                                            待发布                                            |
+| [v4.2.2](#v422) | 2026-03-23 | Insforge 应用自建，Infra 包批量更新，新增 pdu，pgdog，tigerfs           |               [v4.2.2](https://github.com/pgsty/pigsty/releases/tag/v4.2.2)               |
+| [v4.2.1](#v421) | 2026-03-06 | 移除 PG13 支持，新增扩展，问题修复                                     |               [v4.2.1](https://github.com/pgsty/pigsty/releases/tag/v4.2.1)               |
+| [v4.2.0](#v420) | 2026-02-28 | 例行小版本更新，六大 PG 内核集中更新                                     |               [v4.2.0](https://github.com/pgsty/pigsty/releases/tag/v4.2.0)               |
+| [v4.1.0](#v410) | 2026-02-12 | 大小版本更新支持，Agent-Native CLI，默认防火墙安全策略收紧                    |               [v4.1.0](https://github.com/pgsty/pigsty/releases/tag/v4.1.0)               |
+| [v4.0.0](#v400) | 2026-01-28 | Victoria 可观测性，安全加固，JUICE/VIBE 模块，容器支持，Apache-2.0         |               [v4.0.0](https://github.com/pgsty/pigsty/releases/tag/v4.0.0)               |
+| [v3.7.0](#v370) | 2025-12-02 | PG18 成为默认，437 个扩展，EL10 与 Debian13 支持，PGEXT.CLOUD         |               [v3.7.0](https://github.com/pgsty/pigsty/releases/tag/v3.7.0)               |
+| [v3.6.1](#v361) | 2025-08-15 | 例行 PG 小版本更新，PGDG 中国区域镜像，EL9，D13 存根                       |               [v3.6.1](https://github.com/pgsty/pigsty/releases/tag/v3.6.1)               |
+| [v3.6.0](#v360) | 2025-07-30 | pgactive，MinIO / ETCD 改进，安装简化，配置梳理                       |               [v3.6.0](https://github.com/pgsty/pigsty/releases/tag/v3.6.0)               |
+| [v3.5.0](#v350) | 2025-06-16 | PG18 beta，421 扩展，监控升级，代码重构                               |               [v3.5.0](https://github.com/pgsty/pigsty/releases/tag/v3.5.0)               |
+| [v3.4.1](#v341) | 2025-04-05 | OpenHalo & OrioleDB，MySQL 兼容，pgAdmin 改进                  |               [v3.4.1](https://github.com/pgsty/pigsty/releases/tag/v3.4.1)               |
+| [v3.4.0](#v340) | 2025-03-30 | 备份改进，自动证书，AGE，Ivory 全平台，本地化，架构与参数改进                      |               [v3.4.0](https://github.com/pgsty/pigsty/releases/tag/v3.4.0)               |
+| [v3.3.0](#v330) | 2025-02-24 | 404 扩展，扩展目录，App 剧本，Nginx 定制，DocumentDB 支持                |               [v3.3.0](https://github.com/pgsty/pigsty/releases/tag/v3.3.0)               |
+| [v3.2.2](#v322) | 2025-01-23 | 390扩展，Omnigres 支持，Mooncake，Citus13 与 PG17 支持             |               [v3.2.2](https://github.com/pgsty/pigsty/releases/tag/v3.2.2)               |
+| [v3.2.1](#v321) | 2025-01-12 | 350扩展，Ivory4，Citus 强化，Odoo 模板                            |               [v3.2.1](https://github.com/pgsty/pigsty/releases/tag/v3.2.1)               |
+| [v3.2.0](#v320) | 2024-12-24 | 扩展管理 CLI，Grafana 强化，ARM64 扩展补完                           |               [v3.2.0](https://github.com/pgsty/pigsty/releases/tag/v3.2.0)               |
+| [v3.1.0](#v310) | 2024-11-24 | PG 17 升默认大版本，配置简化，Ubuntu24 与 ARM 支持，Supabase，MinIO 改进    |               [v3.1.0](https://github.com/pgsty/pigsty/releases/tag/v3.1.0)               |
+| [v3.0.4](#v304) | 2024-10-30 | PG 17 扩展，OLAP 全家桶，pg_duckdb                              |               [v3.0.4](https://github.com/pgsty/pigsty/releases/tag/v3.0.4)               |
+| [v3.0.3](#v303) | 2024-09-27 | PostgreSQL 17，Etcd 运维优化，IvorySQL 3.4，PostGIS 3.5         |               [v3.0.3](https://github.com/pgsty/pigsty/releases/tag/v3.0.3)               |
+| [v3.0.2](#v302) | 2024-09-07 | 精简安装模式，PolarDB 15支持，监控视图更新                               |               [v3.0.2](https://github.com/pgsty/pigsty/releases/tag/v3.0.2)               |
 | [v3.0.1](#v301) | 2024-08-31 | 例行问题修复，Patroni 4支持，Oracle 兼容性改进                          |               [v3.0.1](https://github.com/pgsty/pigsty/releases/tag/v3.0.1)               |
-| [v3.0.0](#v300) | 2024-08-25 | 333个扩展插件，可插拔内核，MSSQL，Oracle，PolarDB 兼容性                 |               [v3.0.0](https://github.com/pgsty/pigsty/releases/tag/v3.0.0)               |
-| [v2.7.0](#v270) | 2024-05-20 | 扩展大爆炸，新增20+强力扩展插件，与多款 Docker 应用                           |               [v2.7.0](https://github.com/pgsty/pigsty/releases/tag/v2.7.0)               |
-| [v2.6.0](#v260) | 2024-02-28 | PG 16 作为默认大版本，引入 ParadeDB 与 DuckDB 等扩展                  |               [v2.6.0](https://github.com/pgsty/pigsty/releases/tag/v2.6.0)               |
+| [v3.0.0](#v300) | 2024-08-25 | 333个扩展插件，可插拔内核，MSSQL，Oracle，PolarDB 兼容性                  |               [v3.0.0](https://github.com/pgsty/pigsty/releases/tag/v3.0.0)               |
+| [v2.7.0](#v270) | 2024-05-20 | 扩展大爆炸，新增20+强力扩展插件，与多款 Docker 应用                          |               [v2.7.0](https://github.com/pgsty/pigsty/releases/tag/v2.7.0)               |
+| [v2.6.0](#v260) | 2024-02-28 | PG 16 作为默认大版本，引入 ParadeDB 与 DuckDB 等扩展                   |               [v2.6.0](https://github.com/pgsty/pigsty/releases/tag/v2.6.0)               |
 | [v2.5.1](#v251) | 2023-12-01 | 例行小版本更新，PG16 重要扩展支持                                      |               [v2.5.1](https://github.com/pgsty/pigsty/releases/tag/v2.5.1)               |
 | [v2.5.0](#v250) | 2023-09-24 | Ubuntu/Debian 支持：bullseye, bookworm, jammy, focal        |               [v2.5.0](https://github.com/pgsty/pigsty/releases/tag/v2.5.0)               |
 | [v2.4.1](#v241) | 2023-09-24 | Supabase/PostgresML 支持与各种新扩展：graphql, jwt, pg_net, vault |               [v2.4.1](https://github.com/pgsty/pigsty/releases/tag/v2.4.1)               |
 | [v2.4.0](#v240) | 2023-09-14 | PG16，监控 RDS，服务咨询支持，新扩展：中文分词全文检索/图/HTTP/嵌入等               |               [v2.4.0](https://github.com/pgsty/pigsty/releases/tag/v2.4.0)               |
-| [v2.3.1](#v231) | 2023-09-01 | 带 HNSW 的 PGVector，PG 16 RC1, 文档翻新，中文文档，例行问题修复              |               [v2.3.1](https://github.com/pgsty/pigsty/releases/tag/v2.3.1)               |
-| [v2.3.0](#v230) | 2023-08-20 | 主机 VIP, ferretdb, nocodb, MySQL 存根，CVE 修复                 |               [v2.3.0](https://github.com/pgsty/pigsty/releases/tag/v2.3.0)               |
-| [v2.2.0](#v220) | 2023-08-04 | 仪表盘 & 置备重做，UOS 兼容性                                      |               [v2.2.0](https://github.com/pgsty/pigsty/releases/tag/v2.2.0)               |
-| [v2.1.0](#v210) | 2023-06-10 | 支持 PostgreSQL 12 ~ 16beta                               |               [v2.1.0](https://github.com/pgsty/pigsty/releases/tag/v2.1.0)               |
-| [v2.0.2](#v202) | 2023-03-31 | 新增 pgvector 支持，修复 MinIO CVE                             |               [v2.0.2](https://github.com/pgsty/pigsty/releases/tag/v2.0.2)               |
-| [v2.0.1](#v201) | 2023-03-21 | v2 错误修复，安全增强，升级 Grafana 版本                              |               [v2.0.1](https://github.com/pgsty/pigsty/releases/tag/v2.0.1)               |
-| [v2.0.0](#v200) | 2023-02-28 | 架构大升级，兼容性、安全性、可维护性显著增强                                  |               [v2.0.0](https://github.com/pgsty/pigsty/releases/tag/v2.0.0)               |
-| [v1.5.1](#v151) | 2022-06-18 | Grafana 安全性修复                                           |               [v1.5.1](https://github.com/pgsty/pigsty/releases/tag/v1.5.1)               |
-| [v1.5.0](#v150) | 2022-05-31 | Docker 应用程序支持                                           |               [v1.5.0](https://github.com/pgsty/pigsty/releases/tag/v1.5.0)               |
-| [v1.4.1](#v141) | 2022-04-20 | 错误修复 & 英文文档完整翻译                                         |               [v1.4.1](https://github.com/pgsty/pigsty/releases/tag/v1.4.1)               |
+| [v2.3.1](#v231) | 2023-09-01 | 带 HNSW 的 PGVector，PG 16 RC1, 文档翻新，中文文档，例行问题修复            |               [v2.3.1](https://github.com/pgsty/pigsty/releases/tag/v2.3.1)               |
+| [v2.3.0](#v230) | 2023-08-20 | 主机 VIP, ferretdb, nocodb, MySQL 存根，CVE 修复                |               [v2.3.0](https://github.com/pgsty/pigsty/releases/tag/v2.3.0)               |
+| [v2.2.0](#v220) | 2023-08-04 | 仪表盘 & 置备重做，UOS 兼容性                                       |               [v2.2.0](https://github.com/pgsty/pigsty/releases/tag/v2.2.0)               |
+| [v2.1.0](#v210) | 2023-06-10 | 支持 PostgreSQL 12 ~ 16beta                                |               [v2.1.0](https://github.com/pgsty/pigsty/releases/tag/v2.1.0)               |
+| [v2.0.2](#v202) | 2023-03-31 | 新增 pgvector 支持，修复 MinIO CVE                              |               [v2.0.2](https://github.com/pgsty/pigsty/releases/tag/v2.0.2)               |
+| [v2.0.1](#v201) | 2023-03-21 | v2 错误修复，安全增强，升级 Grafana 版本                               |               [v2.0.1](https://github.com/pgsty/pigsty/releases/tag/v2.0.1)               |
+| [v2.0.0](#v200) | 2023-02-28 | 架构大升级，兼容性、安全性、可维护性显著增强                                   |               [v2.0.0](https://github.com/pgsty/pigsty/releases/tag/v2.0.0)               |
+| [v1.5.1](#v151) | 2022-06-18 | Grafana 安全性修复                                            |               [v1.5.1](https://github.com/pgsty/pigsty/releases/tag/v1.5.1)               |
+| [v1.5.0](#v150) | 2022-05-31 | Docker 应用程序支持                                            |               [v1.5.0](https://github.com/pgsty/pigsty/releases/tag/v1.5.0)               |
+| [v1.4.1](#v141) | 2022-04-20 | 错误修复 & 英文文档完整翻译                                          |               [v1.4.1](https://github.com/pgsty/pigsty/releases/tag/v1.4.1)               |
 | [v1.4.0](#v140) | 2022-03-31 | MatrixDB 支持，分离 INFRA/NODES/PGSQL/REDIS 模块                |               [v1.4.0](https://github.com/pgsty/pigsty/releases/tag/v1.4.0)               |
 | [v1.3.0](#v130) | 2021-11-30 | PGCAT 重整 & PGSQL 增强 & Redis Beta 支持                      |               [v1.3.0](https://github.com/pgsty/pigsty/releases/tag/v1.3.0)               |
-| [v1.2.0](#v120) | 2021-11-03 | 默认 PGSQL 版本升级至 14                                       |               [v1.2.0](https://github.com/pgsty/pigsty/releases/tag/v1.2.0)               |
-| [v1.1.0](#v110) | 2021-10-12 | 主页，JupyterLab, PGWEB, Pev2 & pgbadger                  |               [v1.1.0](https://github.com/pgsty/pigsty/releases/tag/v1.1.0)               |
-| [v1.0.0](#v100) | 2021-07-26 | v1 正式版，监控系统重整                                          |               [v1.0.0](https://github.com/pgsty/pigsty/releases/tag/v1.0.0)               |
-| [v0.9.0](#v090) | 2021-04-04 | Pigsty 图形界面，命令行界面，日志集成                                |               [v0.9.0](https://github.com/pgsty/pigsty/releases/tag/v0.9.0)               |
-| [v0.8.0](#v080) | 2021-03-28 | 服务置备，定制对外暴露的数据库服务                                       |               [v0.8.0](https://github.com/pgsty/pigsty/releases/tag/v0.8.0)               |
-| [v0.7.0](#v070) | 2021-03-01 | 仅监控部署，监控现有 PostgreSQL 实例                                |               [v0.7.0](https://github.com/pgsty/pigsty/releases/tag/v0.7.0)               |
-| [v0.6.0](#v060) | 2021-02-19 | 架构增强，将 PG 与 Consul 解耦                                       |               [v0.6.0](https://github.com/pgsty/pigsty/releases/tag/v0.6.0)               |
-| [v0.5.0](#v050) | 2021-01-07 | 支持在配置中定义业务数据库/用户                                        |               [v0.5.0](https://github.com/pgsty/pigsty/releases/tag/v0.5.0)               |
-| [v0.4.0](#v040) | 2020-12-14 | 支持 PostgreSQL 13，添加官方文档                                 |               [v0.4.0](https://github.com/pgsty/pigsty/releases/tag/v0.4.0)               |
-| [v0.3.0](#v030) | 2020-10-22 | 虚拟机置备方案正式定稿                                             |               [v0.3.0](https://github.com/pgsty/pigsty/releases/tag/v0.3.0)               |
+| [v1.2.0](#v120) | 2021-11-03 | 默认 PGSQL 版本升级至 14                                        |               [v1.2.0](https://github.com/pgsty/pigsty/releases/tag/v1.2.0)               |
+| [v1.1.0](#v110) | 2021-10-12 | 主页，JupyterLab, PGWEB, Pev2 & pgbadger                    |               [v1.1.0](https://github.com/pgsty/pigsty/releases/tag/v1.1.0)               |
+| [v1.0.0](#v100) | 2021-07-26 | v1 正式版，监控系统重整                                            |               [v1.0.0](https://github.com/pgsty/pigsty/releases/tag/v1.0.0)               |
+| [v0.9.0](#v090) | 2021-04-04 | Pigsty 图形界面，命令行界面，日志集成                                   |               [v0.9.0](https://github.com/pgsty/pigsty/releases/tag/v0.9.0)               |
+| [v0.8.0](#v080) | 2021-03-28 | 服务置备，定制对外暴露的数据库服务                                        |               [v0.8.0](https://github.com/pgsty/pigsty/releases/tag/v0.8.0)               |
+| [v0.7.0](#v070) | 2021-03-01 | 仅监控部署，监控现有 PostgreSQL 实例                                 |               [v0.7.0](https://github.com/pgsty/pigsty/releases/tag/v0.7.0)               |
+| [v0.6.0](#v060) | 2021-02-19 | 架构增强，将 PG 与 Consul 解耦                                    |               [v0.6.0](https://github.com/pgsty/pigsty/releases/tag/v0.6.0)               |
+| [v0.5.0](#v050) | 2021-01-07 | 支持在配置中定义业务数据库/用户                                         |               [v0.5.0](https://github.com/pgsty/pigsty/releases/tag/v0.5.0)               |
+| [v0.4.0](#v040) | 2020-12-14 | 支持 PostgreSQL 13，添加官方文档                                  |               [v0.4.0](https://github.com/pgsty/pigsty/releases/tag/v0.4.0)               |
+| [v0.3.0](#v030) | 2020-10-22 | 虚拟机置备方案正式定稿                                              |               [v0.3.0](https://github.com/pgsty/pigsty/releases/tag/v0.3.0)               |
 |     v0.2.0      | 2020-07-10 | PG 监控系统第六版正式发布                                           | [v0.2.0](https://github.com/pgsty/pigsty/commit/385e33a62a19817e8ba19997260e6b77d99fe2ba) |
-|     v0.1.0      | 2020-06-20 | 在生产仿真测试环境中验证通过                                          | [v0.1.0](https://github.com/pgsty/pigsty/commit/1cf2ea5ee91db071de00ec805032928ff582453b) |
-|     v0.0.5      | 2020-08-19 | 离线安装模式：无需互联网访问即可交付                                      | [v0.0.5](https://github.com/pgsty/pigsty/commit/0fe9e829b298fe5e56307de3f78c95071de28245) |
-|     v0.0.4      | 2020-07-27 | 将 Ansible 剧本重构为 Role                                    | [v0.0.4](https://github.com/pgsty/pigsty/commit/90b44259818d2c71e37df5250fe8ed1078a883d0) |
-|     v0.0.3      | 2020-06-22 | 接口设计改进                                                  | [v0.0.3](https://github.com/pgsty/pigsty/commit/4c5c68ccd57bc32a9e9c98aa3f264aa19f45c7ee) |
-|     v0.0.2      | 2020-04-30 | 首次提交                                                    | [v0.0.2](https://github.com/pgsty/pigsty/commit/dd646775624ddb33aef7884f4f030682bdc371f8) |
-|     v0.0.1      | 2019-05-15 | 概念原型                                                    |   [v0.0.1](https://github.com/Vonng/pg/commit/fa2ade31f8e81093eeba9d966c20120054f0646b)   |
+|     v0.1.0      | 2020-06-20 | 在生产仿真测试环境中验证通过                                           | [v0.1.0](https://github.com/pgsty/pigsty/commit/1cf2ea5ee91db071de00ec805032928ff582453b) |
+|     v0.0.5      | 2020-08-19 | 离线安装模式：无需互联网访问即可交付                                       | [v0.0.5](https://github.com/pgsty/pigsty/commit/0fe9e829b298fe5e56307de3f78c95071de28245) |
+|     v0.0.4      | 2020-07-27 | 将 Ansible 剧本重构为 Role                                     | [v0.0.4](https://github.com/pgsty/pigsty/commit/90b44259818d2c71e37df5250fe8ed1078a883d0) |
+|     v0.0.3      | 2020-06-22 | 接口设计改进                                                   | [v0.0.3](https://github.com/pgsty/pigsty/commit/4c5c68ccd57bc32a9e9c98aa3f264aa19f45c7ee) |
+|     v0.0.2      | 2020-04-30 | 首次提交                                                     | [v0.0.2](https://github.com/pgsty/pigsty/commit/dd646775624ddb33aef7884f4f030682bdc371f8) |
+|     v0.0.1      | 2019-05-15 | 概念原型                                                     |   [v0.0.1](https://github.com/Vonng/pg/commit/fa2ade31f8e81093eeba9d966c20120054f0646b)   |
 {.full-width}
+
+
+------
+
+## v4.3.0
+
+**占位说明**
+
+- 本节为 `v4.3.0` 占位发行注记，当前先归集 `2026-04-14` 与 `2026-04-19` 两次仓库更新中的包版本编号。
+- 功能说明、API 变化、兼容性说明、提交统计与校验和待正式发版时补充。
+
+**亮点特性**
+
+- Infra 组件集中升级到 `Grafana 13.0.0`、`VictoriaMetrics 1.140.0`、`VictoriaLogs 1.50.0`，并补入 `victoria-traces 0.8.1`、`garage 2.3.0`、`grafana-plugins 13.0.0` 等 4 月新增批次。
+- PG/RPM 侧集中补充一批新扩展与升级包，涵盖 `Cloudberry 2.1`、`OriolePG 17.18`、`OrioleDB 1.7 / beta15`、`TimescaleDB 2.26.3`、`pg_search 0.23.0` 等关键条目。
+- 占位稿中的 RPM 大表已经将共享更新、RPM 独有、以及数据库内核/配套的相关变动合并在一张表里，便于后续直接补正文。
+
+**基础设施软件包更新**
+
+- [Infra Changelog 2026-04-14](/docs/repo/infra/log/#2026-04-14)
+- [Infra Changelog 2026-04-19](/docs/repo/infra/log/#2026-04-19)
+
+| 名称                           | 旧版本            | 新版本            | 备注                                           |
+|:-----------------------------|:---------------|:---------------|:---------------------------------------------|
+| `alertmanager`               | 0.31.1         | 0.32.0         |                                              |
+| `agentsview`                 | 0.15.0         | 0.22.2         |                                              |
+| `claude`                     | 2.1.81         | 2.1.114        | 两次更新；按版本化模板重构并收敛到最新 stable                   |
+| `code`                       | 1.112.0        | 1.115.0        |                                              |
+| `code-server`                | 4.112.0        | 4.115.0        |                                              |
+| `codex`                      | 0.116.0        | 0.121.0        | 预发布链升级后切换稳定版                                 |
+| `crush`                      | 0.51.2         | 0.57.0         |                                              |
+| `dblab`                      | 0.34.3         | 0.38.0         | 两次更新                                         |
+| `duckdb`                     | 1.5.0          | 1.5.2          |                                              |
+| `etcd`                       | 3.6.9          | 3.6.10         | 4/14 先冻结到 3.6.8；4/19 仅 EL 仓库升至 3.6.10，APT 暂缓 |
+| `garage`                     | 2.2.0          | 2.3.0          |                                              |
+| `genai-toolbox`              | 0.27.0         | 1.1.0          | 两次更新；项目更名为 mcp-toolbox 后同步构建产物               |
+| `golang`                     | 1.26.1         | 1.26.2         |                                              |
+| `grafana`                    | 12.4.1         | 13.0.0         | 主版本升级                                        |
+| `grafana-infinity-ds`        | 3.7.4          | 3.8.0          |                                              |
+| `grafana-plugins`            | 12.3.0         | 13.0.0         | noarch 插件包，手工归集                              |
+| `grafana-victoriametrics-ds` | 0.23.1         | 0.24.0         |                                              |
+| `hugo`                       | 0.158.0        | 0.160.1        |                                              |
+| `loki`                       | 3.6.7          | 3.6.7          | 已弃用，保持冻结                                     |
+| `maddy`                      | 0.8.2          | 0.9.3          |                                              |
+| `mcli`                       | 20260321000000 | 20260417000000 | 直链元数据更新；pgsty fork 构建刷新                      |
+| `minio`                      | 20260325000000 | 20260417000000 | 直链元数据更新；pgsty fork 构建刷新                      |
+| `mongodb_exporter`           | 0.49.0         | 0.50.0         |                                              |
+| `node_exporter`              | 1.10.2         | 1.11.1         |                                              |
+| `nodejs`                     | 24.14.0        | 24.15.0        | 保持在 24.x 策略线；两次更新                            |
+| `npgsqlrest`                 | 3.11.1         | 3.12.0         |                                              |
+| `opencode`                   | 1.2.27         | 1.4.11         | 两次更新；改为版本化缓存并重新构建                            |
+| `pg_exporter`                | 1.2.1          | 1.2.2          | 直链元数据更新                                      |
+| `pgflo`                      | 0.0.15         | -              | 已移除                                          |
+| `pgschema`                   | 1.7.4          | 1.9.0          |                                              |
+| `pig`                        | 1.3.2          | 1.4.0          | 两次更新                                         |
+| `postgrest`                  | 14.7           | 14.10          | 两次更新                                         |
+| `prometheus`                 | 3.10.0         | 3.11.2         |                                              |
+| `promtail`                   | 3.6.7          | 3.6.7          | 已弃用，保持冻结                                     |
+| `rainfrog`                   | 0.3.17         | 0.3.18         |                                              |
+| `rclone`                     | 1.73.2         | 1.73.4         |                                              |
+| `rustfs`                     | 1.0.0-alpha.89 | 1.0.0-alpha.94 | 两次更新；改为使用带版本号的发布资产                           |
+| `sabiql`                     | 1.8.2          | 1.11.0         | 两次更新                                         |
+| `seaweedfs`                  | 4.17           | 4.20           |                                              |
+| `sqlcmd`                     | 1.9.0          | 1.10.0         |                                              |
+| `tigerbeetle`                | 0.16.77        | 0.17.0         |                                              |
+| `tigerfs`                    | 0.5.0          | 0.6.0          |                                              |
+| `uv`                         | 0.10.12        | 0.11.7         | 两次更新                                         |
+| `victoria-logs`              | 1.48.0         | 1.50.0         | 两次更新                                         |
+| `victoria-metrics`           | 1.138.0        | 1.140.0        |                                              |
+| `victoria-metrics-cluster`   | 1.138.0        | 1.140.0        | VictoriaMetrics 配套组件                         |
+| `victoria-traces`            | 0.8.0          | 0.8.1          |                                              |
+| `vlagent`                    | 1.48.0         | 1.50.0         | VictoriaLogs 配套组件；两次更新                       |
+| `vlogscli`                   | 1.48.0         | 1.50.0         | VictoriaLogs 配套组件；两次更新                       |
+| `vmutils`                    | 1.138.0        | 1.140.0        | VictoriaMetrics 配套组件                         |
+| `v2ray`                      | 5.47.0         | 5.48.0         |                                              |
+| `xray`                       | 26.2.6         | 26.3.27        |                                              |
+{.stretch-last}
+
+**RPM/DEB 包变更列表**
+
+- [RPM Changelog 2026-04-14](/docs/repo/pgsql/rpm/#2026-04-14)
+- [RPM Changelog 2026-04-19](/docs/repo/pgsql/rpm/#2026-04-19)
+- [DEB Changelog 2026-04-14](/docs/repo/pgsql/deb/#2026-04-14)
+- [DEB Changelog 2026-04-19](/docs/repo/pgsql/deb/#2026-04-19)
+
+| 包名                   | 旧版本        | 新版本        | 备注                                        |
+|:---------------------|:-----------|:-----------|:------------------------------------------|
+| `cloudberry`         | 2.0.0      | 2.1.0      | 内核包组；共享升级，RPM release 2 修复 `initdb errno` |
+| `cloudberry-backup`  | -          | 2.1.0      | 内核包组新增子包                                  |
+| `cloudberry-pxf`     | -          | 2.1.0      | 内核包组新增子包                                  |
+| `oriolepg`           | 17.16      | 17.18      | 内核包组；共享升级                                 |
+| `orioledb`           | 1.6 beta14 | 1.7 beta15 | 内核包组；                                     |
+| `PolarDB`            | 15.15      | 17.9.1.0   | RPM only；PG 15 -> 17                      |
+| `storage_engine`     | -          | 1.0.7      | 共享新增；PG 14-18                             |
+| `re2`                | -          | 0.1.1      | 共享新增；PG 16-18                             |
+| `ulak`               | -          | 0.0.2      | 共享新增；PG 14-18                             |
+| `block_copy_command` | -          | 0.1.5      | 共享新增；PG 14-18，Rust/pgrx 0.17.0            |
+| `pg_kazsearch`       | -          | 2.0.0      | 共享新增；PG 16-18，Rust/pgrx 0.17.0            |
+| `pg_rrf`             | -          | 0.0.3      | 共享新增；PG 14-17，Rust/pgrx 0.16.1 -> 0.17.0  |
+| `pgmqtt`             | -          | 0.1.0      | 共享新增；PG 14-18，Rust/pgrx 0.16.1 -> 0.17.0  |
+| `pg_when`            | -          | 0.1.9      | 共享新增；PG 14-18，Rust/pgrx 0.17.0            |
+| `provsql`            | -          | 1.2.3      | 共享新增；PG 14-18                             |
+| `pg_isok`            | -          | 1.4.1      | 共享新增；PG 14-18                             |
+| `pg_byteamagic`      | -          | 0.2.4      | 共享新增；PG 14-18                             |
+| `logical_ddl`        | -          | 0.1.0      | 共享新增；PG 14-18                             |
+| `datasketches`       | -          | 1.7.0      | 共享新增；PG 14-18                             |
+| `pg_text_semver`     | -          | 1.2.1      | 共享新增；PG 14-18                             |
+| `external_file`      | -          | 1.2        | 共享新增；PG 14-18                             |
+| `pg_query_rewrite`   | -          | 0.0.5      | 共享新增；PG 14-18                             |
+| `pghydro`            | -          | 6.6        | 共享新增；PG 14-18                             |
+| `pg_datasentinel`    | -          | 1.0        | 共享新增；PG 15-18                             |
+| `onesparse`          | -          | 1.0.0      | 共享新增；仅 PG 18                              |
+| `rdkit`              | -          | 202503.6   | 共享新增；PG 14-18                             |
+| `pg_dispatch`        | -          | 0.1.5      | 共享新增；PG 14-18                             |
+| `pg_fsql`            | -          | 1.1.0      | 共享新增；PG 14-18                             |
+| `pg_liquid`          | -          | 0.1.7      | 共享新增；PG 14-18                             |
+| `pg_regresql`        | -          | 2.0.0      | 共享新增；PG 14-18                             |
+| `pg_slug_gen`        | -          | 1.0.0      | 共享新增；PG 15-18                             |
+| `pg_variables`       | -          | 1.2.5      | 共享新增；PG 14-18                             |
+| `pgcalendar`         | -          | 1.1.0      | 共享新增；PG 14-18                             |
+| `pgelog`             | -          | 1.0.2      | 共享新增；PG 14-18                             |
+| `pglock`             | -          | 1.0.0      | 共享新增；PG 14-18                             |
+| `postgresbson`       | -          | 2.0.2      | 共享新增；PG 14-18                             |
+| `rdf_fdw`            | -          | 2.4.0      | 共享新增；PG 14-18                             |
+| `parray_gin`         | -          | 1.4.0      | 共享新增；PG 14-18                             |
+| `pg_stat_ch`         | -          | 0.3.6      | 共享新增后再升级；PG 16-18，RPM 仅 EL9+              |
+| `pgclone`            | -          | 4.0.0      | 共享新增后再升级，4/14 首次引入 3.6.0                  |
+| `pgproto`            | -          | 0.3.3      | 共享新增后再升级，4/14 首次引入 0.2.4                  |
+| `timescaledb`        | 2.25.2     | 2.26.3     | 共享升级；两次更新                                 |
+| `postgis`            | 3.6.2      | 3.6.3      | DEB only                                  |
+| `pg_clickhouse`      | 0.1.5      | 0.2.0      | 共享升级；两次更新                                 |
+| `pg_search`          | 0.22.2     | 0.23.0     | 共享升级；两次更新                                 |
+| `pg_trickle`         | 0.16.0     | 0.20.0     | 共享升级；两次更新，仅 PG 18                         |
+| `pgxicor`            | 0.1.0      | 0.1.1      | 共享升级                                      |
+| `pg_ivm`             | 1.13       | 1.14       | 共享升级                                      |
+| `system_stats`       | 3.2        | 4.0        | 共享升级                                      |
+| `nominatim_fdw`      | 1.1.0      | 1.2        | 共享升级                                      |
+| `pg_textsearch`      | 0.5.0      | 1.0.0      | 共享升级                                      |
+| `pg_store_plans`     | 1.9        | 1.10       | 共享升级                                      |
+| `pg_tzf`             | 0.2.3      | 0.2.4      | 共享升级；Rust/pgrx 0.17.0                     |
+| `pg_anon`            | 3.0.1      | 3.0.13     | 共享升级；Rust/pgrx 0.16.1 -> 0.17.0           |
+| `pg_cardano`         | 1.1.1      | 1.2.0      | 共享升级；Rust/pgrx 0.17.0                     |
+| `pg_strict`          | 1.0.3      | 1.0.5      | 共享升级；Rust/pgrx 0.16.1 -> 0.17.0           |
+| `pg_vectorize`       | 0.26.0     | 0.26.1     | 共享升级；Rust/pgrx 0.16.1 -> 0.17.0           |
+| `pglinter`           | 1.1.1      | 1.1.2      | 共享升级；Rust/pgrx 0.16.1 -> 0.17.0           |
+| `pgx_ulid`           | 0.2.2      | 0.2.3      | 共享升级；Rust/pgrx 0.17.0                     |
+| `wrappers`           | 0.5.7      | 0.6.0      | 共享升级；Rust/pgrx 0.16.1 -> 0.17.0           |
+| `supautils`          | 3.1.0      | 3.2.1      | 共享升级                                      |
+| `ddl_historization`  | 0.0.7      | 0.2        | 共享升级                                      |
+| `pg_incremental`     | 1.4.1      | 1.5.0      | 共享升级                                      |
+| `pg_failover_slots`  | 1.2.0      | 1.2.1      | 共享升级                                      |
+| `plv8`               | 3.2.4      | 3.2.4-2    | RPM only；EL10 构建修复                        |
+| `pg_background`      | 1.8        | 1.9.2      | DEB only                                  |
+{.stretch-last}
 
 
 ------

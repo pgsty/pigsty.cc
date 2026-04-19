@@ -8,6 +8,30 @@ categories: [参考]
 
 ------
 
+## 2026-04-19
+
+| 包名                | 旧版本    | 新版本     | 备注                                     |
+|:------------------|:-------|:--------|:---------------------------------------|
+| cloudberry        | 2.0.0  | 2.1.0-2 | 升级到 2.1.0，release 2 修复 initdb errno 问题 |
+| cloudberry-backup | -      | 2.1.0-2 | 新增 Cloudberry 备份工具包                    |
+| cloudberry-pxf    | -      | 2.1.0-2 | 新增 Cloudberry PXF 包                    |
+| re2               | -      | 0.1.1   | 新增，PG 16-18                            |
+| storage_engine    | -      | 1.0.7   | 新增，PG 14-18                            |
+| ulak              | -      | 0.0.2   | 新增，PG 14-18                            |
+| orioledb          | beta14 | beta15  | 配套 OriolePG 17.18                      |
+| oriolepg          | 17.16  | 17.18   | 内核补丁集更新                                |
+| pg_clickhouse     | 0.1.10 | 0.2.0   |                                        |
+| pg_search         | 0.22.6 | 0.23.0  |                                        |
+| pg_stat_ch        | 0.3.4  | 0.3.6   | 仅支持 EL9+                               |
+| pg_trickle        | 0.17.0 | 0.20.0  | 仅支持 PG 18                              |
+| pgclone           | 3.6.0  | 4.0.0   |                                        |
+| pgproto           | 0.2.4  | 0.3.3   |                                        |
+| pgxicor           | 0.1.0  | 0.1.1   |                                        |
+| timescaledb       | 2.26.2 | 2.26.3  |                                        |
+{.stretch-last}
+
+------
+
 ## 2026-04-14
 
 | 包名                 | 旧版本    | 新版本      | 备注                                     |
@@ -66,6 +90,7 @@ categories: [参考]
 | pg_incremental     | 1.4.1  | 1.5.0    | 升级                                     |
 | pg_failover_slots  | 1.2.0  | 1.2.1    | 升级                                     |
 | plv8               | 3.2.4  | 3.2.4-2  | fix el10 build                         |
+| PolarDB            | 15.15  | 17.9.1.0 | PG 15 -> 17                            |
 {.stretch-last}
 
 ------
@@ -243,26 +268,26 @@ categories: [参考]
 
 ## 2025-11-20
 
-| 名称                       |  旧版本     |  新版本     | 备注                         |
-|----------------------------|-----------|-----------|----------------------------|
-| `vchord`                   |  `0.5.3`  |  `1.0.0`  |                            |
-| `pg_later`                 |  `0.3.1`  |  `0.4.0`  |                            |
-| `pgvectorscale`            |  `0.8.0`  |  `0.9.0`  | -pg13, +pg18               |
-| `pglite_fusion`            |  `0.0.5`  |  `0.0.6`  |                            |
-| `pgx_ulid`                 |  `0.2.1`  |  `0.2.2`  |                            |
-| `pg_search`                | `0.19.5`  | `0.19.7`  | 恢复由 PIGSTY 构建              |
-| `citus`                    | `13.2.0`  | `13.2.0`  | 使用官方 tag 构建                |
-| `timescaledb`              | `2.23.0`  | `2.23.1`  |                            |
-| `pg_profile`               |  `4.10`   |  `4.11`   |                            |
-| `pglinter`                 |           |  `1.0.0`  | new                        |
-| `pg_typeid`                |           |  `0.3.0`  | 对齐 pg18 支持                 |
-| `pg_enigma`                |           |  `0.4.0`  | vonng patched pgrx version |
-| `pg_retry`                 |           |  `1.0.0`  | 新增，pg17-18                 |
-| `pg_biscuit`               |           |   `1.0`   | 新增，pg16-18                 |
-| `pg_weighted_statistics`   |           |  `1.0.0`  | 新增，pg13-18                 |
-| `pg_stat_monitor`          |  `2.2.0`  |  `2.3.0`  | 修复 PGDG pg18 缺失问题          |
-| `documentdb`               | `0.106`   | `0.107`   | ferretdb 分支                |
-| `polardb`                  |           | `15.15`   | 15.15.5.0-38948055         |
+| 名称                       | 旧版本      | 新版本      | 备注                         |
+|--------------------------|----------|----------|----------------------------|
+| `vchord`                 | `0.5.3`  | `1.0.0`  |                            |
+| `pg_later`               | `0.3.1`  | `0.4.0`  |                            |
+| `pgvectorscale`          | `0.8.0`  | `0.9.0`  | -pg13, +pg18               |
+| `pglite_fusion`          | `0.0.5`  | `0.0.6`  |                            |
+| `pgx_ulid`               | `0.2.1`  | `0.2.2`  |                            |
+| `pg_search`              | `0.19.5` | `0.19.7` | 恢复由 PIGSTY 构建              |
+| `citus`                  | `13.2.0` | `13.2.0` | 使用官方 tag 构建                |
+| `timescaledb`            | `2.23.0` | `2.23.1` |                            |
+| `pg_profile`             | `4.10`   | `4.11`   |                            |
+| `pglinter`               |          | `1.0.0`  | new                        |
+| `pg_typeid`              |          | `0.3.0`  | 对齐 pg18 支持                 |
+| `pg_enigma`              |          | `0.4.0`  | vonng patched pgrx version |
+| `pg_retry`               |          | `1.0.0`  | 新增，pg17-18                 |
+| `pg_biscuit`             |          | `1.0`    | 新增，pg16-18                 |
+| `pg_weighted_statistics` |          | `1.0.0`  | 新增，pg13-18                 |
+| `pg_stat_monitor`        | `2.2.0`  | `2.3.0`  | 修复 PGDG pg18 缺失问题          |
+| `documentdb`             | `0.106`  | `0.107`  | ferretdb 分支                |
+| `polardb`                |          | `15.15`  | 15.15.5.0-38948055         |
 {.stretch-last}
 
 

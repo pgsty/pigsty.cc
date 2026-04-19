@@ -112,14 +112,14 @@ allow_loading_unsigned_plugins = victoriametrics-logs-datasource,victoriametrics
 
 PostgreSQL 相关工具、数据库管理系统和其他实用程序
 
-| 名称                                                          | 版本        | 许可证                                                                                  | 备注                             |
-|-------------------------------------------------------------|-----------|--------------------------------------------------------------------------------------|--------------------------------|
-| [`etcd`](https://github.com/etcd-io/etcd)                   | `3.6.10`  | [Apache-2.0](https://github.com/etcd-io/etcd/blob/main/LICENSE)                      | 容错分布式协调服务（仅 EL 仓库更新，APT 暂缓）   |
-| [`kafka`](https://github.com/apache/kafka)                  | `4.2.0`   | [Apache-2.0](https://github.com/apache/kafka/blob/trunk/LICENSE)                     | 消息队列                           |
-| [`duckdb`](https://github.com/duckdb/duckdb)                | `1.5.2`   | [MIT](https://github.com/duckdb/duckdb/blob/main/LICENSE)                            | 嵌入式 OLAP                       |
-| [`ferretdb`](https://github.com/FerretDB/FerretDB)          | `2.7.0`   | [Apache-2.0](https://github.com/FerretDB/FerretDB/blob/main/LICENSE)                 | 基于 PG 的 MongoDB                |
-| [`tigerbeetle`](https://github.com/tigerbeetle/tigerbeetle) | `0.17.0` | [Apache-2.0](https://github.com/tigerbeetle/tigerbeetle/blob/main/LICENSE)           | 金融 OLTP                        |
-| [`ivorysql`](https://github.com/IvorySQL/IvorySQL)          | `5.3`     | [Apache-2.0](https://github.com/IvorySQL/IvorySQL/blob/IVORY_REL_5_STABLE/LICENSE)   | Oracle 兼容的 PG 18.1             |
+| 名称                                                          | 版本       | 许可证                                                                                | 备注                          |
+|-------------------------------------------------------------|----------|------------------------------------------------------------------------------------|-----------------------------|
+| [`etcd`](https://github.com/etcd-io/etcd)                   | `3.6.10` | [Apache-2.0](https://github.com/etcd-io/etcd/blob/main/LICENSE)                    | 容错分布式协调服务（仅 EL 仓库更新，APT 暂缓） |
+| [`kafka`](https://github.com/apache/kafka)                  | `4.2.0`  | [Apache-2.0](https://github.com/apache/kafka/blob/trunk/LICENSE)                   | 消息队列                        |
+| [`duckdb`](https://github.com/duckdb/duckdb)                | `1.5.2`  | [MIT](https://github.com/duckdb/duckdb/blob/main/LICENSE)                          | 嵌入式 OLAP                    |
+| [`ferretdb`](https://github.com/FerretDB/FerretDB)          | `2.7.0`  | [Apache-2.0](https://github.com/FerretDB/FerretDB/blob/main/LICENSE)               | 基于 PG 的 MongoDB             |
+| [`tigerbeetle`](https://github.com/tigerbeetle/tigerbeetle) | `0.17.0` | [Apache-2.0](https://github.com/tigerbeetle/tigerbeetle/blob/main/LICENSE)         | 金融 OLTP                     |
+| [`ivorysql`](https://github.com/IvorySQL/IvorySQL)          | `5.3`    | [Apache-2.0](https://github.com/IvorySQL/IvorySQL/blob/IVORY_REL_5_STABLE/LICENSE) | Oracle 兼容的 PG 18.1          |
 {.stretch-last}
 
 
@@ -131,7 +131,7 @@ Pig 包管理器、PostgreSQL 工具和其他数据库相关实用程序
 
 | 名称                                                                                      | 版本         | 许可证                                                                                     | 备注                            |
 |-----------------------------------------------------------------------------------------|------------|-----------------------------------------------------------------------------------------|-------------------------------|
-| [`pig`](https://github.com/pgsty/pig)                                                   | `1.3.4`    | [Apache-2.0](https://github.com/pgsty/pig/blob/main/LICENSE)                            | PG 包管理器                       |
+| [`pig`](https://github.com/pgsty/pig)                                                   | `1.4.0`    | [Apache-2.0](https://github.com/pgsty/pig/blob/main/LICENSE)                            | PG 包管理器                       |
 | [`vip-manager`](https://github.com/cybertec-postgresql/vip-manager)                     | `4.0.0`    | [BSD-2](https://github.com/cybertec-postgresql/vip-manager/blob/master/LICENSE)         | 将 L2 VIP 绑定到 PG 主节点           |
 | [`pgschema`](https://github.com/pgplex/pgschema)                                        | `1.9.0`    | [Apache-2.0](https://github.com/pgplex/pgschema/blob/main/LICENSE)                      | Terraform 风格的声明式 PG 模式迁移 CLI  |
 | [`pgstream`](https://github.com/xataio/pgstream)                                        | `1.0.1`    | [Apache-2.0](https://github.com/xataio/pgstream/blob/main/LICENSE)                      | PostgreSQL 复制与 DDL 变更同步       |
@@ -142,14 +142,14 @@ Pig 包管理器、PostgreSQL 工具和其他数据库相关实用程序
 | [`dblab`](https://github.com/danvergara/dblab)                                          | `0.38.0`   | [MIT](https://github.com/danvergara/dblab/blob/main/LICENSE)                            | 多数据库命令行工具                     |
 | [`rainfrog`](https://github.com/achristmascarl/rainfrog)                                | `0.3.18`   | [MIT](https://github.com/achristmascarl/rainfrog/blob/main/LICENSE)                     | Postgres 终端数据库管理工具            |
 | [`sql-studio`](https://github.com/frectonz/sql-studio)                                  | `0.1.51`   | [MIT](https://github.com/frectonz/sql-studio/blob/main/LICENSE)                         | 终端 SQL 数据库浏览器                 |
-| [`sqlcmd`](https://github.com/microsoft/go-sqlcmd)                                      | `1.10.0`    | [MIT](https://github.com/microsoft/go-sqlcmd/blob/main/LICENSE)                         | MS SQL Server 数据库客户端          |
+| [`sqlcmd`](https://github.com/microsoft/go-sqlcmd)                                      | `1.10.0`   | [MIT](https://github.com/microsoft/go-sqlcmd/blob/main/LICENSE)                         | MS SQL Server 数据库客户端          |
 | [`pev2`](https://github.com/dalibo/pev2)                                                | `1.21.0`   | [PostgreSQL](https://github.com/dalibo/pev2/blob/master/LICENSE.md)                     | PostgreSQL 执行计划可视化工具 2        |
 | [`sealos`](https://github.com/labring/sealos)                                           | `5.1.1`    | [Apache-2.0](https://github.com/labring/sealos/blob/main/LICENSE)                       | 开箱即用的 Kubernetes 发行版          |
 | [`vray`](https://github.com/v2fly/v2ray-core)                                           | `5.48.0`   | [MIT](https://github.com/v2fly/v2ray-core/blob/master/LICENSE)                          | 构建代理以绕过网络限制                   |
-| [`xray`](https://github.com/XTLS/Xray-core)                                             | `26.3.27`   | [MPL-2.0](https://github.com/XTLS/Xray-core/blob/main/LICENSE)                          | 新一代代理核心，支持更强路由与传输协议           |
+| [`xray`](https://github.com/XTLS/Xray-core)                                             | `26.3.27`  | [MPL-2.0](https://github.com/XTLS/Xray-core/blob/main/LICENSE)                          | 新一代代理核心，支持更强路由与传输协议           |
 | [`gost`](https://github.com/ginuerzh/gost)                                              | `2.12.0`   | [MIT](https://github.com/ginuerzh/gost/blob/master/LICENSE)                             | Go 编写的通用隧道与代理工具               |
-| [`sabiql`](https://github.com/riii111/sabiql)                                           | `1.11.0`    | [MIT](https://github.com/riii111/sabiql/blob/main/LICENSE)                              | 现代化 SQL 客户端（PostgreSQL/MySQL） |
-| [`postgrest`](https://github.com/PostgREST/postgrest)                                   | `14.10`     | [MIT](https://github.com/PostgREST/postgrest/blob/main/LICENSE)                         | PostgreSQL RESTful API 服务器    |
+| [`sabiql`](https://github.com/riii111/sabiql)                                           | `1.11.0`   | [MIT](https://github.com/riii111/sabiql/blob/main/LICENSE)                              | 现代化 SQL 客户端（PostgreSQL/MySQL） |
+| [`postgrest`](https://github.com/PostgREST/postgrest)                                   | `14.10`    | [MIT](https://github.com/PostgREST/postgrest/blob/main/LICENSE)                         | PostgreSQL RESTful API 服务器    |
 | [`npgsqlrest`](https://github.com/vb-consulting/NpgsqlRest)                             | `3.12.0`   | [MIT](https://github.com/vb-consulting/NpgsqlRest/blob/master/LICENSE.md)               | .NET PostgreSQL REST API 生成器  |
 | [`caddy`](https://github.com/caddyserver/caddy)                                         | `2.11.2`   | [Apache-2.0](https://github.com/caddyserver/caddy/blob/master/LICENSE)                  | 自动 HTTPS 的 Web 服务器            |
 | [`hugo`](https://github.com/gohugoio/hugo)                                              | `0.160.1`  | [Apache-2.0](https://github.com/gohugoio/hugo/blob/master/LICENSE)                      | 快速静态网站生成器                     |
