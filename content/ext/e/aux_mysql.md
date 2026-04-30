@@ -63,6 +63,8 @@ weight: 9420
 | u22.aarch64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | FORK PIGSTY 1.0 1 |
 | u24.x86_64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | FORK PIGSTY 1.0 1 |
 | u24.aarch64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | FORK PIGSTY 1.0 1 |
+| u26.x86_64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| u26.aarch64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
 @ el8.x86_64 14 openhalodb_14 openhalodb_14-1.0-beta1PIGSTY.el8.x86_64.rpm pigsty 1.0 10.2MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/openhalodb_14-1.0-beta1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 14 openhalodb_14 openhalodb_14-1.0-beta1PIGSTY.el8.aarch64.rpm pigsty 1.0 9.8MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/openhalodb_14-1.0-beta1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 14 openhalodb_14 openhalodb_14-1.0-beta1PIGSTY.el9.x86_64.rpm pigsty 1.0 9.8MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/openhalodb_14-1.0-beta1PIGSTY.el9.x86_64.rpm

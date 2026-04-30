@@ -67,6 +67,8 @@ weight: 7390
 | u22.aarch64 | AVAIL PGDG 1.19 1 | AVAIL PGDG 1.19 1 | AVAIL PGDG 1.19 1 | AVAIL PGDG 1.19 1 | AVAIL PGDG 1.19 1 |
 | u24.x86_64 | AVAIL PGDG 1.19 1 | AVAIL PGDG 1.19 1 | AVAIL PGDG 1.19 1 | AVAIL PGDG 1.19 1 | AVAIL PGDG 1.19 1 |
 | u24.aarch64 | AVAIL PGDG 1.19 1 | AVAIL PGDG 1.19 1 | AVAIL PGDG 1.19 1 | AVAIL PGDG 1.19 1 | AVAIL PGDG 1.19 1 |
+| u26.x86_64 | AVAIL PGDG 1.19 1 | AVAIL PGDG 1.19 1 | AVAIL PGDG 1.19 1 | AVAIL PGDG 1.19 1 | AVAIL PGDG 1.19 1 |
+| u26.aarch64 | AVAIL PGDG 1.19 1 | AVAIL PGDG 1.19 1 | AVAIL PGDG 1.19 1 | AVAIL PGDG 1.19 1 | AVAIL PGDG 1.19 1 |
 @ el8.x86_64 18 pgextwlist_18 pgextwlist_18-1.19-1PIGSTY.el8.x86_64.rpm pigsty 1.19 20.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgextwlist_18-1.19-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 18 pgextwlist_18 pgextwlist_18-1.19-1PGDG.rhel8.10.x86_64.rpm pgdg 1.19 20.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pgextwlist_18-1.19-1PGDG.rhel8.10.x86_64.rpm
 @ el8.aarch64 18 pgextwlist_18 pgextwlist_18-1.19-1PIGSTY.el8.aarch64.rpm pigsty 1.19 20.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgextwlist_18-1.19-1PIGSTY.el8.aarch64.rpm
@@ -87,6 +89,8 @@ weight: 7390
 @ u22.aarch64 18 postgresql-18-pgextwlist postgresql-18-pgextwlist_1.19-2.pgdg22.04+1_arm64.deb pgdg 1.19 29.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgextwlist/postgresql-18-pgextwlist_1.19-2.pgdg22.04+1_arm64.deb
 @ u24.x86_64 18 postgresql-18-pgextwlist postgresql-18-pgextwlist_1.19-2.pgdg24.04+1_amd64.deb pgdg 1.19 29.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgextwlist/postgresql-18-pgextwlist_1.19-2.pgdg24.04+1_amd64.deb
 @ u24.aarch64 18 postgresql-18-pgextwlist postgresql-18-pgextwlist_1.19-2.pgdg24.04+1_arm64.deb pgdg 1.19 28.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgextwlist/postgresql-18-pgextwlist_1.19-2.pgdg24.04+1_arm64.deb
+@ u26.x86_64 18 postgresql-18-pgextwlist postgresql-18-pgextwlist_1.19-2.pgdg26.04+1_amd64.deb pgdg 1.19 29.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgextwlist/postgresql-18-pgextwlist_1.19-2.pgdg26.04+1_amd64.deb
+@ u26.aarch64 18 postgresql-18-pgextwlist postgresql-18-pgextwlist_1.19-2.pgdg26.04+1_arm64.deb pgdg 1.19 28.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgextwlist/postgresql-18-pgextwlist_1.19-2.pgdg26.04+1_arm64.deb
 @ el8.x86_64 17 pgextwlist_17 pgextwlist_17-1.19-1PIGSTY.el8.x86_64.rpm pigsty 1.19 20.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgextwlist_17-1.19-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 17 pgextwlist_17 pgextwlist_17-1.19-1PGDG.rhel8.10.x86_64.rpm pgdg 1.19 20.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pgextwlist_17-1.19-1PGDG.rhel8.10.x86_64.rpm
 @ el8.aarch64 17 pgextwlist_17 pgextwlist_17-1.19-1PIGSTY.el8.aarch64.rpm pigsty 1.19 20.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgextwlist_17-1.19-1PIGSTY.el8.aarch64.rpm
@@ -107,6 +111,8 @@ weight: 7390
 @ u22.aarch64 17 postgresql-17-pgextwlist postgresql-17-pgextwlist_1.19-2.pgdg22.04+1_arm64.deb pgdg 1.19 37.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgextwlist/postgresql-17-pgextwlist_1.19-2.pgdg22.04+1_arm64.deb
 @ u24.x86_64 17 postgresql-17-pgextwlist postgresql-17-pgextwlist_1.19-2.pgdg24.04+1_amd64.deb pgdg 1.19 29.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgextwlist/postgresql-17-pgextwlist_1.19-2.pgdg24.04+1_amd64.deb
 @ u24.aarch64 17 postgresql-17-pgextwlist postgresql-17-pgextwlist_1.19-2.pgdg24.04+1_arm64.deb pgdg 1.19 28.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgextwlist/postgresql-17-pgextwlist_1.19-2.pgdg24.04+1_arm64.deb
+@ u26.x86_64 17 postgresql-17-pgextwlist postgresql-17-pgextwlist_1.19-2.pgdg26.04+1_amd64.deb pgdg 1.19 29.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgextwlist/postgresql-17-pgextwlist_1.19-2.pgdg26.04+1_amd64.deb
+@ u26.aarch64 17 postgresql-17-pgextwlist postgresql-17-pgextwlist_1.19-2.pgdg26.04+1_arm64.deb pgdg 1.19 28.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgextwlist/postgresql-17-pgextwlist_1.19-2.pgdg26.04+1_arm64.deb
 @ el8.x86_64 16 pgextwlist_16 pgextwlist_16-1.19-1PIGSTY.el8.x86_64.rpm pigsty 1.19 20.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgextwlist_16-1.19-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 16 pgextwlist_16 pgextwlist_16-1.19-1PGDG.rhel8.10.x86_64.rpm pgdg 1.19 20.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pgextwlist_16-1.19-1PGDG.rhel8.10.x86_64.rpm
 @ el8.aarch64 16 pgextwlist_16 pgextwlist_16-1.19-1PIGSTY.el8.aarch64.rpm pigsty 1.19 20.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgextwlist_16-1.19-1PIGSTY.el8.aarch64.rpm
@@ -127,6 +133,8 @@ weight: 7390
 @ u22.aarch64 16 postgresql-16-pgextwlist postgresql-16-pgextwlist_1.19-2.pgdg22.04+1_arm64.deb pgdg 1.19 37.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgextwlist/postgresql-16-pgextwlist_1.19-2.pgdg22.04+1_arm64.deb
 @ u24.x86_64 16 postgresql-16-pgextwlist postgresql-16-pgextwlist_1.19-2.pgdg24.04+1_amd64.deb pgdg 1.19 29.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgextwlist/postgresql-16-pgextwlist_1.19-2.pgdg24.04+1_amd64.deb
 @ u24.aarch64 16 postgresql-16-pgextwlist postgresql-16-pgextwlist_1.19-2.pgdg24.04+1_arm64.deb pgdg 1.19 28.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgextwlist/postgresql-16-pgextwlist_1.19-2.pgdg24.04+1_arm64.deb
+@ u26.x86_64 16 postgresql-16-pgextwlist postgresql-16-pgextwlist_1.19-2.pgdg26.04+1_amd64.deb pgdg 1.19 29.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgextwlist/postgresql-16-pgextwlist_1.19-2.pgdg26.04+1_amd64.deb
+@ u26.aarch64 16 postgresql-16-pgextwlist postgresql-16-pgextwlist_1.19-2.pgdg26.04+1_arm64.deb pgdg 1.19 28.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgextwlist/postgresql-16-pgextwlist_1.19-2.pgdg26.04+1_arm64.deb
 @ el8.x86_64 15 pgextwlist_15 pgextwlist_15-1.19-1PIGSTY.el8.x86_64.rpm pigsty 1.19 20.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgextwlist_15-1.19-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 15 pgextwlist_15 pgextwlist_15-1.19-1PGDG.rhel8.10.x86_64.rpm pgdg 1.19 20.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pgextwlist_15-1.19-1PGDG.rhel8.10.x86_64.rpm
 @ el8.aarch64 15 pgextwlist_15 pgextwlist_15-1.19-1PIGSTY.el8.aarch64.rpm pigsty 1.19 20.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgextwlist_15-1.19-1PIGSTY.el8.aarch64.rpm
@@ -147,6 +155,8 @@ weight: 7390
 @ u22.aarch64 15 postgresql-15-pgextwlist postgresql-15-pgextwlist_1.19-2.pgdg22.04+1_arm64.deb pgdg 1.19 36.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgextwlist/postgresql-15-pgextwlist_1.19-2.pgdg22.04+1_arm64.deb
 @ u24.x86_64 15 postgresql-15-pgextwlist postgresql-15-pgextwlist_1.19-2.pgdg24.04+1_amd64.deb pgdg 1.19 29.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgextwlist/postgresql-15-pgextwlist_1.19-2.pgdg24.04+1_amd64.deb
 @ u24.aarch64 15 postgresql-15-pgextwlist postgresql-15-pgextwlist_1.19-2.pgdg24.04+1_arm64.deb pgdg 1.19 28.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgextwlist/postgresql-15-pgextwlist_1.19-2.pgdg24.04+1_arm64.deb
+@ u26.x86_64 15 postgresql-15-pgextwlist postgresql-15-pgextwlist_1.19-2.pgdg26.04+1_amd64.deb pgdg 1.19 29.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgextwlist/postgresql-15-pgextwlist_1.19-2.pgdg26.04+1_amd64.deb
+@ u26.aarch64 15 postgresql-15-pgextwlist postgresql-15-pgextwlist_1.19-2.pgdg26.04+1_arm64.deb pgdg 1.19 28.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgextwlist/postgresql-15-pgextwlist_1.19-2.pgdg26.04+1_arm64.deb
 @ el8.x86_64 14 pgextwlist_14 pgextwlist_14-1.19-1PIGSTY.el8.x86_64.rpm pigsty 1.19 20.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgextwlist_14-1.19-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 14 pgextwlist_14 pgextwlist_14-1.19-1PGDG.rhel8.10.x86_64.rpm pgdg 1.19 20.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pgextwlist_14-1.19-1PGDG.rhel8.10.x86_64.rpm
 @ el8.aarch64 14 pgextwlist_14 pgextwlist_14-1.19-1PIGSTY.el8.aarch64.rpm pigsty 1.19 20.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgextwlist_14-1.19-1PIGSTY.el8.aarch64.rpm
@@ -167,6 +177,8 @@ weight: 7390
 @ u22.aarch64 14 postgresql-14-pgextwlist postgresql-14-pgextwlist_1.19-2.pgdg22.04+1_arm64.deb pgdg 1.19 36.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgextwlist/postgresql-14-pgextwlist_1.19-2.pgdg22.04+1_arm64.deb
 @ u24.x86_64 14 postgresql-14-pgextwlist postgresql-14-pgextwlist_1.19-2.pgdg24.04+1_amd64.deb pgdg 1.19 29.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgextwlist/postgresql-14-pgextwlist_1.19-2.pgdg24.04+1_amd64.deb
 @ u24.aarch64 14 postgresql-14-pgextwlist postgresql-14-pgextwlist_1.19-2.pgdg24.04+1_arm64.deb pgdg 1.19 28.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgextwlist/postgresql-14-pgextwlist_1.19-2.pgdg24.04+1_arm64.deb
+@ u26.x86_64 14 postgresql-14-pgextwlist postgresql-14-pgextwlist_1.19-2.pgdg26.04+1_amd64.deb pgdg 1.19 28.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgextwlist/postgresql-14-pgextwlist_1.19-2.pgdg26.04+1_amd64.deb
+@ u26.aarch64 14 postgresql-14-pgextwlist postgresql-14-pgextwlist_1.19-2.pgdg26.04+1_arm64.deb pgdg 1.19 28.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgextwlist/postgresql-14-pgextwlist_1.19-2.pgdg26.04+1_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建

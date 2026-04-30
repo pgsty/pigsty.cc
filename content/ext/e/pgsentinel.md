@@ -64,6 +64,8 @@ weight: 6410
 | u22.aarch64 | AVAIL PGDG 1.4.1 3 | AVAIL PGDG 1.4.1 3 | AVAIL PGDG 1.4.1 3 | AVAIL PGDG 1.4.1 3 | AVAIL PGDG 1.4.1 3 |
 | u24.x86_64 | AVAIL PGDG 1.4.1 3 | AVAIL PGDG 1.4.1 3 | AVAIL PGDG 1.4.1 3 | AVAIL PGDG 1.4.1 3 | AVAIL PGDG 1.4.1 3 |
 | u24.aarch64 | AVAIL PGDG 1.4.1 3 | AVAIL PGDG 1.4.1 3 | AVAIL PGDG 1.4.1 3 | AVAIL PGDG 1.4.1 3 | AVAIL PGDG 1.4.1 3 |
+| u26.x86_64 | AVAIL PGDG 1.4.1 2 | AVAIL PGDG 1.4.1 2 | AVAIL PGDG 1.4.1 2 | AVAIL PGDG 1.4.1 2 | AVAIL PGDG 1.4.1 2 |
+| u26.aarch64 | AVAIL PGDG 1.4.1 2 | AVAIL PGDG 1.4.1 2 | AVAIL PGDG 1.4.1 2 | AVAIL PGDG 1.4.1 2 | AVAIL PGDG 1.4.1 2 |
 @ el8.x86_64 18 pgsentinel_18 pgsentinel_18-1.4.1-1PIGSTY.el8.x86_64.rpm pigsty 1.4.1 23.4KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgsentinel_18-1.4.1-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 18 pgsentinel_18 pgsentinel_18-1.4.0-1PGDG.rhel8.10.x86_64.rpm pgdg 1.4.0 24.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pgsentinel_18-1.4.0-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 18 pgsentinel_18 pgsentinel_18-1.3.1-1PGDG.rhel8.10.x86_64.rpm pgdg 1.3.1 24.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pgsentinel_18-1.3.1-1PGDG.rhel8.10.x86_64.rpm
@@ -106,6 +108,10 @@ weight: 6410
 @ u24.aarch64 18 postgresql-18-pgsentinel postgresql-18-pgsentinel_1.4.1-1.pgdg24.04+1_arm64.deb pgdg 1.4.1 44.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-18-pgsentinel_1.4.1-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 18 postgresql-18-pgsentinel postgresql-18-pgsentinel_1.4.0-1.pgdg24.04+1_arm64.deb pgdg 1.4.0 43.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-18-pgsentinel_1.4.0-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 18 postgresql-18-pgsentinel postgresql-18-pgsentinel_1.4.0-1PIGSTY~noble_arm64.deb pigsty 1.4.0 42.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgsentinel/postgresql-18-pgsentinel_1.4.0-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 18 postgresql-18-pgsentinel postgresql-18-pgsentinel_1.4.1-1.pgdg26.04+1_amd64.deb pgdg 1.4.1 45.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-18-pgsentinel_1.4.1-1.pgdg26.04+1_amd64.deb
+@ u26.x86_64 18 postgresql-18-pgsentinel postgresql-18-pgsentinel_1.4.0-1.pgdg26.04+1_amd64.deb pgdg 1.4.0 44.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-18-pgsentinel_1.4.0-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 18 postgresql-18-pgsentinel postgresql-18-pgsentinel_1.4.1-1.pgdg26.04+1_arm64.deb pgdg 1.4.1 44.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-18-pgsentinel_1.4.1-1.pgdg26.04+1_arm64.deb
+@ u26.aarch64 18 postgresql-18-pgsentinel postgresql-18-pgsentinel_1.4.0-1.pgdg26.04+1_arm64.deb pgdg 1.4.0 43.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-18-pgsentinel_1.4.0-1.pgdg26.04+1_arm64.deb
 @ el8.x86_64 17 pgsentinel_17 pgsentinel_17-1.4.1-1PIGSTY.el8.x86_64.rpm pigsty 1.4.1 23.4KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgsentinel_17-1.4.1-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 17 pgsentinel_17 pgsentinel_17-1.4.0-1PGDG.rhel8.10.x86_64.rpm pgdg 1.4.0 24.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pgsentinel_17-1.4.0-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 pgsentinel_17 pgsentinel_17-1.3.1-1PGDG.rhel8.10.x86_64.rpm pgdg 1.3.1 24.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pgsentinel_17-1.3.1-1PGDG.rhel8.10.x86_64.rpm
@@ -154,6 +160,10 @@ weight: 6410
 @ u24.aarch64 17 postgresql-17-pgsentinel postgresql-17-pgsentinel_1.4.1-1.pgdg24.04+1_arm64.deb pgdg 1.4.1 44.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-17-pgsentinel_1.4.1-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 17 postgresql-17-pgsentinel postgresql-17-pgsentinel_1.4.0-1.pgdg24.04+1_arm64.deb pgdg 1.4.0 43.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-17-pgsentinel_1.4.0-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 17 postgresql-17-pgsentinel postgresql-17-pgsentinel_1.4.0-1PIGSTY~noble_arm64.deb pigsty 1.4.0 42.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgsentinel/postgresql-17-pgsentinel_1.4.0-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 17 postgresql-17-pgsentinel postgresql-17-pgsentinel_1.4.1-1.pgdg26.04+1_amd64.deb pgdg 1.4.1 45.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-17-pgsentinel_1.4.1-1.pgdg26.04+1_amd64.deb
+@ u26.x86_64 17 postgresql-17-pgsentinel postgresql-17-pgsentinel_1.4.0-1.pgdg26.04+1_amd64.deb pgdg 1.4.0 44.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-17-pgsentinel_1.4.0-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 17 postgresql-17-pgsentinel postgresql-17-pgsentinel_1.4.1-1.pgdg26.04+1_arm64.deb pgdg 1.4.1 44.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-17-pgsentinel_1.4.1-1.pgdg26.04+1_arm64.deb
+@ u26.aarch64 17 postgresql-17-pgsentinel postgresql-17-pgsentinel_1.4.0-1.pgdg26.04+1_arm64.deb pgdg 1.4.0 43.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-17-pgsentinel_1.4.0-1.pgdg26.04+1_arm64.deb
 @ el8.x86_64 16 pgsentinel_16 pgsentinel_16-1.4.1-1PIGSTY.el8.x86_64.rpm pigsty 1.4.1 23.4KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgsentinel_16-1.4.1-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 16 pgsentinel_16 pgsentinel_16-1.4.0-1PGDG.rhel8.10.x86_64.rpm pgdg 1.4.0 24.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pgsentinel_16-1.4.0-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 pgsentinel_16 pgsentinel_16-1.3.1-1PGDG.rhel8.10.x86_64.rpm pgdg 1.3.1 24.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pgsentinel_16-1.3.1-1PGDG.rhel8.10.x86_64.rpm
@@ -202,6 +212,10 @@ weight: 6410
 @ u24.aarch64 16 postgresql-16-pgsentinel postgresql-16-pgsentinel_1.4.1-1.pgdg24.04+1_arm64.deb pgdg 1.4.1 44.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-16-pgsentinel_1.4.1-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 16 postgresql-16-pgsentinel postgresql-16-pgsentinel_1.4.0-1.pgdg24.04+1_arm64.deb pgdg 1.4.0 43.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-16-pgsentinel_1.4.0-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 16 postgresql-16-pgsentinel postgresql-16-pgsentinel_1.4.0-1PIGSTY~noble_arm64.deb pigsty 1.4.0 42.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgsentinel/postgresql-16-pgsentinel_1.4.0-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 16 postgresql-16-pgsentinel postgresql-16-pgsentinel_1.4.1-1.pgdg26.04+1_amd64.deb pgdg 1.4.1 45.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-16-pgsentinel_1.4.1-1.pgdg26.04+1_amd64.deb
+@ u26.x86_64 16 postgresql-16-pgsentinel postgresql-16-pgsentinel_1.4.0-1.pgdg26.04+1_amd64.deb pgdg 1.4.0 44.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-16-pgsentinel_1.4.0-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 16 postgresql-16-pgsentinel postgresql-16-pgsentinel_1.4.1-1.pgdg26.04+1_arm64.deb pgdg 1.4.1 44.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-16-pgsentinel_1.4.1-1.pgdg26.04+1_arm64.deb
+@ u26.aarch64 16 postgresql-16-pgsentinel postgresql-16-pgsentinel_1.4.0-1.pgdg26.04+1_arm64.deb pgdg 1.4.0 43.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-16-pgsentinel_1.4.0-1.pgdg26.04+1_arm64.deb
 @ el8.x86_64 15 pgsentinel_15 pgsentinel_15-1.4.1-1PIGSTY.el8.x86_64.rpm pigsty 1.4.1 23.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgsentinel_15-1.4.1-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 15 pgsentinel_15 pgsentinel_15-1.4.0-1PGDG.rhel8.10.x86_64.rpm pgdg 1.4.0 24.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pgsentinel_15-1.4.0-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 pgsentinel_15 pgsentinel_15-1.3.1-1PGDG.rhel8.10.x86_64.rpm pgdg 1.3.1 24.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pgsentinel_15-1.3.1-1PGDG.rhel8.10.x86_64.rpm
@@ -250,6 +264,10 @@ weight: 6410
 @ u24.aarch64 15 postgresql-15-pgsentinel postgresql-15-pgsentinel_1.4.1-1.pgdg24.04+1_arm64.deb pgdg 1.4.1 44.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-15-pgsentinel_1.4.1-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 15 postgresql-15-pgsentinel postgresql-15-pgsentinel_1.4.0-1.pgdg24.04+1_arm64.deb pgdg 1.4.0 43.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-15-pgsentinel_1.4.0-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 15 postgresql-15-pgsentinel postgresql-15-pgsentinel_1.4.0-1PIGSTY~noble_arm64.deb pigsty 1.4.0 42.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgsentinel/postgresql-15-pgsentinel_1.4.0-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 15 postgresql-15-pgsentinel postgresql-15-pgsentinel_1.4.1-1.pgdg26.04+1_amd64.deb pgdg 1.4.1 45.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-15-pgsentinel_1.4.1-1.pgdg26.04+1_amd64.deb
+@ u26.x86_64 15 postgresql-15-pgsentinel postgresql-15-pgsentinel_1.4.0-1.pgdg26.04+1_amd64.deb pgdg 1.4.0 45.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-15-pgsentinel_1.4.0-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 15 postgresql-15-pgsentinel postgresql-15-pgsentinel_1.4.1-1.pgdg26.04+1_arm64.deb pgdg 1.4.1 44.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-15-pgsentinel_1.4.1-1.pgdg26.04+1_arm64.deb
+@ u26.aarch64 15 postgresql-15-pgsentinel postgresql-15-pgsentinel_1.4.0-1.pgdg26.04+1_arm64.deb pgdg 1.4.0 43.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-15-pgsentinel_1.4.0-1.pgdg26.04+1_arm64.deb
 @ el8.x86_64 14 pgsentinel_14 pgsentinel_14-1.4.1-1PIGSTY.el8.x86_64.rpm pigsty 1.4.1 23.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgsentinel_14-1.4.1-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 14 pgsentinel_14 pgsentinel_14-1.4.0-1PGDG.rhel8.10.x86_64.rpm pgdg 1.4.0 24.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pgsentinel_14-1.4.0-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 14 pgsentinel_14 pgsentinel_14-1.3.1-1PGDG.rhel8.10.x86_64.rpm pgdg 1.3.1 24.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pgsentinel_14-1.3.1-1PGDG.rhel8.10.x86_64.rpm
@@ -298,6 +316,10 @@ weight: 6410
 @ u24.aarch64 14 postgresql-14-pgsentinel postgresql-14-pgsentinel_1.4.1-1.pgdg24.04+1_arm64.deb pgdg 1.4.1 43.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-14-pgsentinel_1.4.1-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 14 postgresql-14-pgsentinel postgresql-14-pgsentinel_1.4.0-1.pgdg24.04+1_arm64.deb pgdg 1.4.0 43.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-14-pgsentinel_1.4.0-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 14 postgresql-14-pgsentinel postgresql-14-pgsentinel_1.4.0-1PIGSTY~noble_arm64.deb pigsty 1.4.0 41.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgsentinel/postgresql-14-pgsentinel_1.4.0-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 14 postgresql-14-pgsentinel postgresql-14-pgsentinel_1.4.1-1.pgdg26.04+1_amd64.deb pgdg 1.4.1 45.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-14-pgsentinel_1.4.1-1.pgdg26.04+1_amd64.deb
+@ u26.x86_64 14 postgresql-14-pgsentinel postgresql-14-pgsentinel_1.4.0-1.pgdg26.04+1_amd64.deb pgdg 1.4.0 44.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-14-pgsentinel_1.4.0-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 14 postgresql-14-pgsentinel postgresql-14-pgsentinel_1.4.1-1.pgdg26.04+1_arm64.deb pgdg 1.4.1 43.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-14-pgsentinel_1.4.1-1.pgdg26.04+1_arm64.deb
+@ u26.aarch64 14 postgresql-14-pgsentinel postgresql-14-pgsentinel_1.4.0-1.pgdg26.04+1_arm64.deb pgdg 1.4.0 43.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsentinel/postgresql-14-pgsentinel_1.4.0-1.pgdg26.04+1_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建

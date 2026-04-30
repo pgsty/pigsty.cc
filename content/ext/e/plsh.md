@@ -59,6 +59,8 @@ weight: 3080
 | u22.aarch64 | AVAIL PGDG 1.20220917 1 | AVAIL PGDG 1.20220917 1 | AVAIL PGDG 1.20220917 1 | AVAIL PGDG 1.20220917 1 | AVAIL PGDG 1.20220917 1 |
 | u24.x86_64 | AVAIL PGDG 1.20220917 1 | AVAIL PGDG 1.20220917 1 | AVAIL PGDG 1.20220917 1 | AVAIL PGDG 1.20220917 1 | AVAIL PGDG 1.20220917 1 |
 | u24.aarch64 | AVAIL PGDG 1.20220917 1 | AVAIL PGDG 1.20220917 1 | AVAIL PGDG 1.20220917 1 | AVAIL PGDG 1.20220917 1 | AVAIL PGDG 1.20220917 1 |
+| u26.x86_64 | AVAIL PGDG 1.20220917 1 | AVAIL PGDG 1.20220917 1 | AVAIL PGDG 1.20220917 1 | AVAIL PGDG 1.20220917 1 | AVAIL PGDG 1.20220917 1 |
+| u26.aarch64 | AVAIL PGDG 1.20220917 1 | AVAIL PGDG 1.20220917 1 | AVAIL PGDG 1.20220917 1 | AVAIL PGDG 1.20220917 1 | AVAIL PGDG 1.20220917 1 |
 @ el8.x86_64 18 plsh_18 plsh_18-1.20220917-7PGDG.rhel8.x86_64.rpm pgdg 1.20220917 22.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/plsh_18-1.20220917-7PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 18 plsh_18 plsh_18-1.20220917-7PGDG.rhel8.aarch64.rpm pgdg 1.20220917 22.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/plsh_18-1.20220917-7PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 18 plsh_18 plsh_18-1.20220917-7PGDG.rhel9.x86_64.rpm pgdg 1.20220917 21.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/plsh_18-1.20220917-7PGDG.rhel9.x86_64.rpm
@@ -73,6 +75,8 @@ weight: 3080
 @ u22.aarch64 18 postgresql-18-plsh postgresql-18-plsh_1.20220917-4.pgdg22.04+1_arm64.deb pgdg 1.20220917 28.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-plsh/postgresql-18-plsh_1.20220917-4.pgdg22.04+1_arm64.deb
 @ u24.x86_64 18 postgresql-18-plsh postgresql-18-plsh_1.20220917-4.pgdg24.04+1_amd64.deb pgdg 1.20220917 27.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-plsh/postgresql-18-plsh_1.20220917-4.pgdg24.04+1_amd64.deb
 @ u24.aarch64 18 postgresql-18-plsh postgresql-18-plsh_1.20220917-4.pgdg24.04+1_arm64.deb pgdg 1.20220917 27.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-plsh/postgresql-18-plsh_1.20220917-4.pgdg24.04+1_arm64.deb
+@ u26.x86_64 18 postgresql-18-plsh postgresql-18-plsh_1.20220917-4.pgdg26.04+1_amd64.deb pgdg 1.20220917 27.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-plsh/postgresql-18-plsh_1.20220917-4.pgdg26.04+1_amd64.deb
+@ u26.aarch64 18 postgresql-18-plsh postgresql-18-plsh_1.20220917-4.pgdg26.04+1_arm64.deb pgdg 1.20220917 27.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-plsh/postgresql-18-plsh_1.20220917-4.pgdg26.04+1_arm64.deb
 @ el8.x86_64 17 plsh_17 plsh_17-1.20220917-6PGDG.rhel8.x86_64.rpm pgdg 1.20220917 22.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/plsh_17-1.20220917-6PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 17 plsh_17 plsh_17-1.20220917-6PGDG.rhel8.aarch64.rpm pgdg 1.20220917 22.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/plsh_17-1.20220917-6PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 17 plsh_17 plsh_17-1.20220917-6PGDG.rhel9.x86_64.rpm pgdg 1.20220917 21.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/plsh_17-1.20220917-6PGDG.rhel9.x86_64.rpm
@@ -87,6 +91,8 @@ weight: 3080
 @ u22.aarch64 17 postgresql-17-plsh postgresql-17-plsh_1.20220917-4.pgdg22.04+1_arm64.deb pgdg 1.20220917 33.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-plsh/postgresql-17-plsh_1.20220917-4.pgdg22.04+1_arm64.deb
 @ u24.x86_64 17 postgresql-17-plsh postgresql-17-plsh_1.20220917-4.pgdg24.04+1_amd64.deb pgdg 1.20220917 27.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-plsh/postgresql-17-plsh_1.20220917-4.pgdg24.04+1_amd64.deb
 @ u24.aarch64 17 postgresql-17-plsh postgresql-17-plsh_1.20220917-4.pgdg24.04+1_arm64.deb pgdg 1.20220917 27.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-plsh/postgresql-17-plsh_1.20220917-4.pgdg24.04+1_arm64.deb
+@ u26.x86_64 17 postgresql-17-plsh postgresql-17-plsh_1.20220917-4.pgdg26.04+1_amd64.deb pgdg 1.20220917 27.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-plsh/postgresql-17-plsh_1.20220917-4.pgdg26.04+1_amd64.deb
+@ u26.aarch64 17 postgresql-17-plsh postgresql-17-plsh_1.20220917-4.pgdg26.04+1_arm64.deb pgdg 1.20220917 27.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-plsh/postgresql-17-plsh_1.20220917-4.pgdg26.04+1_arm64.deb
 @ el8.x86_64 16 plsh_16 plsh_16-1.20220917-4PGDG.rhel8.x86_64.rpm pgdg 1.20220917 22.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/plsh_16-1.20220917-4PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 16 plsh_16 plsh_16-1.20220917-4PGDG.rhel8.aarch64.rpm pgdg 1.20220917 22.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/plsh_16-1.20220917-4PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 16 plsh_16 plsh_16-1.20220917-4PGDG.rhel9.x86_64.rpm pgdg 1.20220917 21.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/plsh_16-1.20220917-4PGDG.rhel9.x86_64.rpm
@@ -101,6 +107,8 @@ weight: 3080
 @ u22.aarch64 16 postgresql-16-plsh postgresql-16-plsh_1.20220917-4.pgdg22.04+1_arm64.deb pgdg 1.20220917 32.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-plsh/postgresql-16-plsh_1.20220917-4.pgdg22.04+1_arm64.deb
 @ u24.x86_64 16 postgresql-16-plsh postgresql-16-plsh_1.20220917-4.pgdg24.04+1_amd64.deb pgdg 1.20220917 27.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-plsh/postgresql-16-plsh_1.20220917-4.pgdg24.04+1_amd64.deb
 @ u24.aarch64 16 postgresql-16-plsh postgresql-16-plsh_1.20220917-4.pgdg24.04+1_arm64.deb pgdg 1.20220917 27.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-plsh/postgresql-16-plsh_1.20220917-4.pgdg24.04+1_arm64.deb
+@ u26.x86_64 16 postgresql-16-plsh postgresql-16-plsh_1.20220917-4.pgdg26.04+1_amd64.deb pgdg 1.20220917 27.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-plsh/postgresql-16-plsh_1.20220917-4.pgdg26.04+1_amd64.deb
+@ u26.aarch64 16 postgresql-16-plsh postgresql-16-plsh_1.20220917-4.pgdg26.04+1_arm64.deb pgdg 1.20220917 27.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-plsh/postgresql-16-plsh_1.20220917-4.pgdg26.04+1_arm64.deb
 @ el8.x86_64 15 plsh_15 plsh_15-1.20220917-1.rhel8.x86_64.rpm pgdg 1.20220917 21.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/plsh_15-1.20220917-1.rhel8.x86_64.rpm
 @ el8.aarch64 15 plsh_15 plsh_15-1.20220917-1.rhel8.aarch64.rpm pgdg 1.20220917 21.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/plsh_15-1.20220917-1.rhel8.aarch64.rpm
 @ el9.x86_64 15 plsh_15 plsh_15-1.20220917-1.rhel9.x86_64.rpm pgdg 1.20220917 21.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/plsh_15-1.20220917-1.rhel9.x86_64.rpm
@@ -115,6 +123,8 @@ weight: 3080
 @ u22.aarch64 15 postgresql-15-plsh postgresql-15-plsh_1.20220917-4.pgdg22.04+1_arm64.deb pgdg 1.20220917 32.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-plsh/postgresql-15-plsh_1.20220917-4.pgdg22.04+1_arm64.deb
 @ u24.x86_64 15 postgresql-15-plsh postgresql-15-plsh_1.20220917-4.pgdg24.04+1_amd64.deb pgdg 1.20220917 27.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-plsh/postgresql-15-plsh_1.20220917-4.pgdg24.04+1_amd64.deb
 @ u24.aarch64 15 postgresql-15-plsh postgresql-15-plsh_1.20220917-4.pgdg24.04+1_arm64.deb pgdg 1.20220917 26.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-plsh/postgresql-15-plsh_1.20220917-4.pgdg24.04+1_arm64.deb
+@ u26.x86_64 15 postgresql-15-plsh postgresql-15-plsh_1.20220917-4.pgdg26.04+1_amd64.deb pgdg 1.20220917 27.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-plsh/postgresql-15-plsh_1.20220917-4.pgdg26.04+1_amd64.deb
+@ u26.aarch64 15 postgresql-15-plsh postgresql-15-plsh_1.20220917-4.pgdg26.04+1_arm64.deb pgdg 1.20220917 27.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-plsh/postgresql-15-plsh_1.20220917-4.pgdg26.04+1_arm64.deb
 @ el8.x86_64 14 plsh_14 plsh_14-1.20220917-1.rhel8.x86_64.rpm pgdg 1.20220917 21.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/plsh_14-1.20220917-1.rhel8.x86_64.rpm
 @ el8.x86_64 14 plsh_14 plsh_14-1.20200522-3.rhel8.x86_64.rpm pgdg 1.20200522 41.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/plsh_14-1.20200522-3.rhel8.x86_64.rpm
 @ el8.aarch64 14 plsh_14 plsh_14-1.20220917-1.rhel8.aarch64.rpm pgdg 1.20220917 21.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/plsh_14-1.20220917-1.rhel8.aarch64.rpm
@@ -130,6 +140,8 @@ weight: 3080
 @ u22.aarch64 14 postgresql-14-plsh postgresql-14-plsh_1.20220917-4.pgdg22.04+1_arm64.deb pgdg 1.20220917 32.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-plsh/postgresql-14-plsh_1.20220917-4.pgdg22.04+1_arm64.deb
 @ u24.x86_64 14 postgresql-14-plsh postgresql-14-plsh_1.20220917-4.pgdg24.04+1_amd64.deb pgdg 1.20220917 27.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-plsh/postgresql-14-plsh_1.20220917-4.pgdg24.04+1_amd64.deb
 @ u24.aarch64 14 postgresql-14-plsh postgresql-14-plsh_1.20220917-4.pgdg24.04+1_arm64.deb pgdg 1.20220917 26.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-plsh/postgresql-14-plsh_1.20220917-4.pgdg24.04+1_arm64.deb
+@ u26.x86_64 14 postgresql-14-plsh postgresql-14-plsh_1.20220917-4.pgdg26.04+1_amd64.deb pgdg 1.20220917 27.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-plsh/postgresql-14-plsh_1.20220917-4.pgdg26.04+1_amd64.deb
+@ u26.aarch64 14 postgresql-14-plsh postgresql-14-plsh_1.20220917-4.pgdg26.04+1_arm64.deb pgdg 1.20220917 27.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-plsh/postgresql-14-plsh_1.20220917-4.pgdg26.04+1_arm64.deb
 {{< /pgext_matrix >}}
 
 

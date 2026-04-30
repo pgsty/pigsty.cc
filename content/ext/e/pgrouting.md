@@ -59,6 +59,8 @@ weight: 1510
 | u22.aarch64 | AVAIL PGDG 4.0.1 1 | AVAIL PGDG 4.0.1 1 | AVAIL PGDG 4.0.1 1 | AVAIL PGDG 4.0.1 1 | AVAIL PGDG 4.0.1 1 |
 | u24.x86_64 | AVAIL PGDG 4.0.1 1 | AVAIL PGDG 4.0.1 1 | AVAIL PGDG 4.0.1 1 | AVAIL PGDG 4.0.1 1 | AVAIL PGDG 4.0.1 1 |
 | u24.aarch64 | AVAIL PGDG 4.0.1 1 | AVAIL PGDG 4.0.1 1 | AVAIL PGDG 4.0.1 1 | AVAIL PGDG 4.0.1 1 | AVAIL PGDG 4.0.1 1 |
+| u26.x86_64 | AVAIL PGDG 4.0.1 1 | AVAIL PGDG 4.0.1 1 | AVAIL PGDG 4.0.1 1 | AVAIL PGDG 4.0.1 1 | AVAIL PGDG 4.0.1 1 |
+| u26.aarch64 | AVAIL PGDG 4.0.1 1 | AVAIL PGDG 4.0.1 1 | AVAIL PGDG 4.0.1 1 | AVAIL PGDG 4.0.1 1 | AVAIL PGDG 4.0.1 1 |
 @ el8.x86_64 18 pgrouting_18 pgrouting_18-4.0.1-1PGDG.rhel8.10.x86_64.rpm pgdg 4.0.1 904.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pgrouting_18-4.0.1-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 18 pgrouting_18 pgrouting_18-3.8.0-1PGDG.rhel8.x86_64.rpm pgdg 3.8.0 943.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pgrouting_18-3.8.0-1PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 18 pgrouting_18 pgrouting_18-4.0.1-1PGDG.rhel8.10.aarch64.rpm pgdg 4.0.1 797.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pgrouting_18-4.0.1-1PGDG.rhel8.10.aarch64.rpm
@@ -79,6 +81,8 @@ weight: 1510
 @ u22.aarch64 18 postgresql-18-pgrouting postgresql-18-pgrouting_4.0.1-1.pgdg22.04+1_arm64.deb pgdg 4.0.1 521.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-18-pgrouting_4.0.1-1.pgdg22.04+1_arm64.deb
 @ u24.x86_64 18 postgresql-18-pgrouting postgresql-18-pgrouting_4.0.1-1.pgdg24.04+1_amd64.deb pgdg 4.0.1 596.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-18-pgrouting_4.0.1-1.pgdg24.04+1_amd64.deb
 @ u24.aarch64 18 postgresql-18-pgrouting postgresql-18-pgrouting_4.0.1-1.pgdg24.04+1_arm64.deb pgdg 4.0.1 518.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-18-pgrouting_4.0.1-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 18 postgresql-18-pgrouting postgresql-18-pgrouting_4.0.1-1.pgdg26.04+1_amd64.deb pgdg 4.0.1 641.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-18-pgrouting_4.0.1-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 18 postgresql-18-pgrouting postgresql-18-pgrouting_4.0.1-1.pgdg26.04+1_arm64.deb pgdg 4.0.1 566.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-18-pgrouting_4.0.1-1.pgdg26.04+1_arm64.deb
 @ el8.x86_64 17 pgrouting_17 pgrouting_17-4.0.1-1PGDG.rhel8.10.x86_64.rpm pgdg 4.0.1 904.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pgrouting_17-4.0.1-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 pgrouting_17 pgrouting_17-3.8.0-1PGDG.rhel8.x86_64.rpm pgdg 3.8.0 943.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pgrouting_17-3.8.0-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 17 pgrouting_17 pgrouting_17-3.7.3-1PGDG.rhel8.x86_64.rpm pgdg 3.7.3 921.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pgrouting_17-3.7.3-1PGDG.rhel8.x86_64.rpm
@@ -119,6 +123,8 @@ weight: 1510
 @ u22.aarch64 17 postgresql-17-pgrouting postgresql-17-pgrouting_4.0.1-1.pgdg22.04+1_arm64.deb pgdg 4.0.1 522.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-17-pgrouting_4.0.1-1.pgdg22.04+1_arm64.deb
 @ u24.x86_64 17 postgresql-17-pgrouting postgresql-17-pgrouting_4.0.1-1.pgdg24.04+1_amd64.deb pgdg 4.0.1 596.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-17-pgrouting_4.0.1-1.pgdg24.04+1_amd64.deb
 @ u24.aarch64 17 postgresql-17-pgrouting postgresql-17-pgrouting_4.0.1-1.pgdg24.04+1_arm64.deb pgdg 4.0.1 518.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-17-pgrouting_4.0.1-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 17 postgresql-17-pgrouting postgresql-17-pgrouting_4.0.1-1.pgdg26.04+1_amd64.deb pgdg 4.0.1 641.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-17-pgrouting_4.0.1-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 17 postgresql-17-pgrouting postgresql-17-pgrouting_4.0.1-1.pgdg26.04+1_arm64.deb pgdg 4.0.1 566.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-17-pgrouting_4.0.1-1.pgdg26.04+1_arm64.deb
 @ el8.x86_64 16 pgrouting_16 pgrouting_16-4.0.1-1PGDG.rhel8.10.x86_64.rpm pgdg 4.0.1 904.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pgrouting_16-4.0.1-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 pgrouting_16 pgrouting_16-3.8.0-1PGDG.rhel8.x86_64.rpm pgdg 3.8.0 943.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pgrouting_16-3.8.0-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 16 pgrouting_16 pgrouting_16-3.7.3-1PGDG.rhel8.x86_64.rpm pgdg 3.7.3 921.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pgrouting_16-3.7.3-1PGDG.rhel8.x86_64.rpm
@@ -163,6 +169,8 @@ weight: 1510
 @ u22.aarch64 16 postgresql-16-pgrouting postgresql-16-pgrouting_4.0.1-1.pgdg22.04+1_arm64.deb pgdg 4.0.1 521.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-16-pgrouting_4.0.1-1.pgdg22.04+1_arm64.deb
 @ u24.x86_64 16 postgresql-16-pgrouting postgresql-16-pgrouting_4.0.1-1.pgdg24.04+1_amd64.deb pgdg 4.0.1 596.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-16-pgrouting_4.0.1-1.pgdg24.04+1_amd64.deb
 @ u24.aarch64 16 postgresql-16-pgrouting postgresql-16-pgrouting_4.0.1-1.pgdg24.04+1_arm64.deb pgdg 4.0.1 518.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-16-pgrouting_4.0.1-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 16 postgresql-16-pgrouting postgresql-16-pgrouting_4.0.1-1.pgdg26.04+1_amd64.deb pgdg 4.0.1 641.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-16-pgrouting_4.0.1-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 16 postgresql-16-pgrouting postgresql-16-pgrouting_4.0.1-1.pgdg26.04+1_arm64.deb pgdg 4.0.1 566.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-16-pgrouting_4.0.1-1.pgdg26.04+1_arm64.deb
 @ el8.x86_64 15 pgrouting_15 pgrouting_15-4.0.1-1PGDG.rhel8.10.x86_64.rpm pgdg 4.0.1 904.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pgrouting_15-4.0.1-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 pgrouting_15 pgrouting_15-3.8.0-1PGDG.rhel8.x86_64.rpm pgdg 3.8.0 943.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pgrouting_15-3.8.0-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 15 pgrouting_15 pgrouting_15-3.7.3-1PGDG.rhel8.x86_64.rpm pgdg 3.7.3 921.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pgrouting_15-3.7.3-1PGDG.rhel8.x86_64.rpm
@@ -231,6 +239,8 @@ weight: 1510
 @ u22.aarch64 15 postgresql-15-pgrouting postgresql-15-pgrouting_4.0.1-1.pgdg22.04+1_arm64.deb pgdg 4.0.1 522.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-15-pgrouting_4.0.1-1.pgdg22.04+1_arm64.deb
 @ u24.x86_64 15 postgresql-15-pgrouting postgresql-15-pgrouting_4.0.1-1.pgdg24.04+1_amd64.deb pgdg 4.0.1 596.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-15-pgrouting_4.0.1-1.pgdg24.04+1_amd64.deb
 @ u24.aarch64 15 postgresql-15-pgrouting postgresql-15-pgrouting_4.0.1-1.pgdg24.04+1_arm64.deb pgdg 4.0.1 518.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-15-pgrouting_4.0.1-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 15 postgresql-15-pgrouting postgresql-15-pgrouting_4.0.1-1.pgdg26.04+1_amd64.deb pgdg 4.0.1 641.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-15-pgrouting_4.0.1-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 15 postgresql-15-pgrouting postgresql-15-pgrouting_4.0.1-1.pgdg26.04+1_arm64.deb pgdg 4.0.1 566.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-15-pgrouting_4.0.1-1.pgdg26.04+1_arm64.deb
 @ el8.x86_64 14 pgrouting_14 pgrouting_14-4.0.1-1PGDG.rhel8.10.x86_64.rpm pgdg 4.0.1 904.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pgrouting_14-4.0.1-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 14 pgrouting_14 pgrouting_14-3.8.0-1PGDG.rhel8.x86_64.rpm pgdg 3.8.0 943.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pgrouting_14-3.8.0-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 14 pgrouting_14 pgrouting_14-3.7.3-1PGDG.rhel8.x86_64.rpm pgdg 3.7.3 921.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pgrouting_14-3.7.3-1PGDG.rhel8.x86_64.rpm
@@ -307,6 +317,8 @@ weight: 1510
 @ u22.aarch64 14 postgresql-14-pgrouting postgresql-14-pgrouting_4.0.1-1.pgdg22.04+1_arm64.deb pgdg 4.0.1 521.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-14-pgrouting_4.0.1-1.pgdg22.04+1_arm64.deb
 @ u24.x86_64 14 postgresql-14-pgrouting postgresql-14-pgrouting_4.0.1-1.pgdg24.04+1_amd64.deb pgdg 4.0.1 596.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-14-pgrouting_4.0.1-1.pgdg24.04+1_amd64.deb
 @ u24.aarch64 14 postgresql-14-pgrouting postgresql-14-pgrouting_4.0.1-1.pgdg24.04+1_arm64.deb pgdg 4.0.1 518.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-14-pgrouting_4.0.1-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 14 postgresql-14-pgrouting postgresql-14-pgrouting_4.0.1-1.pgdg26.04+1_amd64.deb pgdg 4.0.1 641.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-14-pgrouting_4.0.1-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 14 postgresql-14-pgrouting postgresql-14-pgrouting_4.0.1-1.pgdg26.04+1_arm64.deb pgdg 4.0.1 566.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-14-pgrouting_4.0.1-1.pgdg26.04+1_arm64.deb
 {{< /pgext_matrix >}}
 
 

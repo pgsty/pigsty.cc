@@ -11,10 +11,10 @@ weight: 4860
     <div class="ext-card__title">theirix/parray_gin</div>
     <div class="ext-card__desc">https://github.com/theirix/parray_gin</div>
   </a>
-  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/parray_gin-1.4.0.tar.gz">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/parray_gin-1.5.0.tar.gz">
     <div class="ext-card__kicker">源码</div>
-    <div class="ext-card__title">parray_gin-1.4.0.tar.gz</div>
-    <div class="ext-card__desc">parray_gin-1.4.0.tar.gz</div>
+    <div class="ext-card__title">parray_gin-1.5.0.tar.gz</div>
+    <div class="ext-card__desc">parray_gin-1.5.0.tar.gz</div>
   </a>
 </div>
 
@@ -25,7 +25,7 @@ weight: 4860
 
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
-| [**`parray_gin`**](/ext/e/parray_gin) | `1.4.0` | <a class="ext-badge ext-badge--cate func" href="/ext/cate/func">FUNC</a> | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
+| [**`parray_gin`**](/ext/e/parray_gin) | `1.5.0` | <a class="ext-badge ext-badge--cate func" href="/ext/cate/func">FUNC</a> | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
 {.ext-table}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
@@ -45,9 +45,9 @@ weight: 4860
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#func) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.4.0` | {{< pgvers "18,17,16,15,14" >}} | `parray_gin` | - |
-| [**RPM**](/ext/rpm#func) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.4.0` | {{< pgvers "18,17,16,15,14" >}} | `parray_gin_$v` | - |
-| [**DEB**](/ext/deb#func) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.4.0` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-parray-gin` | - |
+| [**EXT**](/ext/list#func) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.5.0` | {{< pgvers "18,17,16,15,14" >}} | `parray_gin` | - |
+| [**RPM**](/ext/rpm#func) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.5.0` | {{< pgvers "18,17,16,15,14" >}} | `parray_gin_$v` | - |
+| [**DEB**](/ext/deb#func) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.5.0` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-parray-gin` | - |
 {.ext-table}
 
 {{< pgext_matrix >}}
@@ -67,6 +67,8 @@ weight: 4860
 | u22.aarch64 | AVAIL PIGSTY 1.4.0 1 | AVAIL PIGSTY 1.4.0 1 | AVAIL PIGSTY 1.4.0 1 | AVAIL PIGSTY 1.4.0 1 | AVAIL PIGSTY 1.4.0 1 |
 | u24.x86_64 | AVAIL PIGSTY 1.4.0 1 | AVAIL PIGSTY 1.4.0 1 | AVAIL PIGSTY 1.4.0 1 | AVAIL PIGSTY 1.4.0 1 | AVAIL PIGSTY 1.4.0 1 |
 | u24.aarch64 | AVAIL PIGSTY 1.4.0 1 | AVAIL PIGSTY 1.4.0 1 | AVAIL PIGSTY 1.4.0 1 | AVAIL PIGSTY 1.4.0 1 | AVAIL PIGSTY 1.4.0 1 |
+| u26.x86_64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| u26.aarch64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
 @ el8.x86_64 18 parray_gin_18 parray_gin_18-1.4.0-1PIGSTY.el8.x86_64.rpm pigsty 1.4.0 22.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/parray_gin_18-1.4.0-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 18 parray_gin_18 parray_gin_18-1.4.0-1PIGSTY.el8.aarch64.rpm pigsty 1.4.0 22.4KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/parray_gin_18-1.4.0-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 18 parray_gin_18 parray_gin_18-1.4.0-1PIGSTY.el9.x86_64.rpm pigsty 1.4.0 22.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/parray_gin_18-1.4.0-1PIGSTY.el9.x86_64.rpm

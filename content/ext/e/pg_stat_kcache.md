@@ -59,6 +59,8 @@ weight: 6220
 | u22.aarch64 | AVAIL PGDG 2.3.1 1 | AVAIL PGDG 2.3.1 1 | AVAIL PGDG 2.3.1 1 | AVAIL PGDG 2.3.1 1 | AVAIL PGDG 2.3.1 1 |
 | u24.x86_64 | AVAIL PGDG 2.3.1 1 | AVAIL PGDG 2.3.1 1 | AVAIL PGDG 2.3.1 1 | AVAIL PGDG 2.3.1 1 | AVAIL PGDG 2.3.1 1 |
 | u24.aarch64 | AVAIL PGDG 2.3.1 1 | AVAIL PGDG 2.3.1 1 | AVAIL PGDG 2.3.1 1 | AVAIL PGDG 2.3.1 1 | AVAIL PGDG 2.3.1 1 |
+| u26.x86_64 | AVAIL PGDG 2.3.1 1 | AVAIL PGDG 2.3.1 1 | AVAIL PGDG 2.3.1 1 | AVAIL PGDG 2.3.1 1 | AVAIL PGDG 2.3.1 1 |
+| u26.aarch64 | AVAIL PGDG 2.3.1 1 | AVAIL PGDG 2.3.1 1 | AVAIL PGDG 2.3.1 1 | AVAIL PGDG 2.3.1 1 | AVAIL PGDG 2.3.1 1 |
 @ el8.x86_64 18 pg_stat_kcache_18 pg_stat_kcache_18-2.3.1-1PGDG.rhel8.x86_64.rpm pgdg 2.3.1 27.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pg_stat_kcache_18-2.3.1-1PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 18 pg_stat_kcache_18 pg_stat_kcache_18-2.3.1-1PGDG.rhel8.aarch64.rpm pgdg 2.3.1 27.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pg_stat_kcache_18-2.3.1-1PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 18 pg_stat_kcache_18 pg_stat_kcache_18-2.3.1-1PGDG.rhel9.x86_64.rpm pgdg 2.3.1 26.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pg_stat_kcache_18-2.3.1-1PGDG.rhel9.x86_64.rpm
@@ -73,6 +75,8 @@ weight: 6220
 @ u22.aarch64 18 postgresql-18-pg-stat-kcache postgresql-18-pg-stat-kcache_2.3.1-1.pgdg22.04+1_arm64.deb pgdg 2.3.1 35.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-stat-kcache/postgresql-18-pg-stat-kcache_2.3.1-1.pgdg22.04+1_arm64.deb
 @ u24.x86_64 18 postgresql-18-pg-stat-kcache postgresql-18-pg-stat-kcache_2.3.1-1.pgdg24.04+1_amd64.deb pgdg 2.3.1 35.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-stat-kcache/postgresql-18-pg-stat-kcache_2.3.1-1.pgdg24.04+1_amd64.deb
 @ u24.aarch64 18 postgresql-18-pg-stat-kcache postgresql-18-pg-stat-kcache_2.3.1-1.pgdg24.04+1_arm64.deb pgdg 2.3.1 34.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-stat-kcache/postgresql-18-pg-stat-kcache_2.3.1-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 18 postgresql-18-pg-stat-kcache postgresql-18-pg-stat-kcache_2.3.1-1.pgdg26.04+1_amd64.deb pgdg 2.3.1 35.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-stat-kcache/postgresql-18-pg-stat-kcache_2.3.1-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 18 postgresql-18-pg-stat-kcache postgresql-18-pg-stat-kcache_2.3.1-1.pgdg26.04+1_arm64.deb pgdg 2.3.1 34.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-stat-kcache/postgresql-18-pg-stat-kcache_2.3.1-1.pgdg26.04+1_arm64.deb
 @ el8.x86_64 17 pg_stat_kcache_17 pg_stat_kcache_17-2.3.1-1PGDG.rhel8.x86_64.rpm pgdg 2.3.1 27.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pg_stat_kcache_17-2.3.1-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 17 pg_stat_kcache_17 pg_stat_kcache_17-2.3.0-1PGDG.rhel8.x86_64.rpm pgdg 2.3.0 27.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pg_stat_kcache_17-2.3.0-1PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 17 pg_stat_kcache_17 pg_stat_kcache_17-2.3.1-1PGDG.rhel8.aarch64.rpm pgdg 2.3.1 27.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pg_stat_kcache_17-2.3.1-1PGDG.rhel8.aarch64.rpm
@@ -93,6 +97,8 @@ weight: 6220
 @ u22.aarch64 17 postgresql-17-pg-stat-kcache postgresql-17-pg-stat-kcache_2.3.1-1.pgdg22.04+1_arm64.deb pgdg 2.3.1 38.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-stat-kcache/postgresql-17-pg-stat-kcache_2.3.1-1.pgdg22.04+1_arm64.deb
 @ u24.x86_64 17 postgresql-17-pg-stat-kcache postgresql-17-pg-stat-kcache_2.3.1-1.pgdg24.04+1_amd64.deb pgdg 2.3.1 35.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-stat-kcache/postgresql-17-pg-stat-kcache_2.3.1-1.pgdg24.04+1_amd64.deb
 @ u24.aarch64 17 postgresql-17-pg-stat-kcache postgresql-17-pg-stat-kcache_2.3.1-1.pgdg24.04+1_arm64.deb pgdg 2.3.1 34.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-stat-kcache/postgresql-17-pg-stat-kcache_2.3.1-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 17 postgresql-17-pg-stat-kcache postgresql-17-pg-stat-kcache_2.3.1-1.pgdg26.04+1_amd64.deb pgdg 2.3.1 35.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-stat-kcache/postgresql-17-pg-stat-kcache_2.3.1-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 17 postgresql-17-pg-stat-kcache postgresql-17-pg-stat-kcache_2.3.1-1.pgdg26.04+1_arm64.deb pgdg 2.3.1 34.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-stat-kcache/postgresql-17-pg-stat-kcache_2.3.1-1.pgdg26.04+1_arm64.deb
 @ el8.x86_64 16 pg_stat_kcache_16 pg_stat_kcache_16-2.3.1-1PGDG.rhel8.x86_64.rpm pgdg 2.3.1 27.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_stat_kcache_16-2.3.1-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 16 pg_stat_kcache_16 pg_stat_kcache_16-2.3.0-1PGDG.rhel8.x86_64.rpm pgdg 2.3.0 27.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_stat_kcache_16-2.3.0-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 16 pg_stat_kcache_16 pg_stat_kcache_16-2.2.3-1PGDG.rhel8.x86_64.rpm pgdg 2.2.3 26.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_stat_kcache_16-2.2.3-1PGDG.rhel8.x86_64.rpm
@@ -121,6 +127,8 @@ weight: 6220
 @ u22.aarch64 16 postgresql-16-pg-stat-kcache postgresql-16-pg-stat-kcache_2.3.1-1.pgdg22.04+1_arm64.deb pgdg 2.3.1 38.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-stat-kcache/postgresql-16-pg-stat-kcache_2.3.1-1.pgdg22.04+1_arm64.deb
 @ u24.x86_64 16 postgresql-16-pg-stat-kcache postgresql-16-pg-stat-kcache_2.3.1-1.pgdg24.04+1_amd64.deb pgdg 2.3.1 35.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-stat-kcache/postgresql-16-pg-stat-kcache_2.3.1-1.pgdg24.04+1_amd64.deb
 @ u24.aarch64 16 postgresql-16-pg-stat-kcache postgresql-16-pg-stat-kcache_2.3.1-1.pgdg24.04+1_arm64.deb pgdg 2.3.1 34.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-stat-kcache/postgresql-16-pg-stat-kcache_2.3.1-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 16 postgresql-16-pg-stat-kcache postgresql-16-pg-stat-kcache_2.3.1-1.pgdg26.04+1_amd64.deb pgdg 2.3.1 35.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-stat-kcache/postgresql-16-pg-stat-kcache_2.3.1-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 16 postgresql-16-pg-stat-kcache postgresql-16-pg-stat-kcache_2.3.1-1.pgdg26.04+1_arm64.deb pgdg 2.3.1 34.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-stat-kcache/postgresql-16-pg-stat-kcache_2.3.1-1.pgdg26.04+1_arm64.deb
 @ el8.x86_64 15 pg_stat_kcache_15 pg_stat_kcache_15-2.3.1-1PGDG.rhel8.x86_64.rpm pgdg 2.3.1 27.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_stat_kcache_15-2.3.1-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 15 pg_stat_kcache_15 pg_stat_kcache_15-2.3.0-1PGDG.rhel8.x86_64.rpm pgdg 2.3.0 27.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_stat_kcache_15-2.3.0-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 15 pg_stat_kcache_15 pg_stat_kcache_15-2.2.3-1PGDG.rhel8.x86_64.rpm pgdg 2.2.3 26.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_stat_kcache_15-2.2.3-1PGDG.rhel8.x86_64.rpm
@@ -153,6 +161,8 @@ weight: 6220
 @ u22.aarch64 15 postgresql-15-pg-stat-kcache postgresql-15-pg-stat-kcache_2.3.1-1.pgdg22.04+1_arm64.deb pgdg 2.3.1 38.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-stat-kcache/postgresql-15-pg-stat-kcache_2.3.1-1.pgdg22.04+1_arm64.deb
 @ u24.x86_64 15 postgresql-15-pg-stat-kcache postgresql-15-pg-stat-kcache_2.3.1-1.pgdg24.04+1_amd64.deb pgdg 2.3.1 35.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-stat-kcache/postgresql-15-pg-stat-kcache_2.3.1-1.pgdg24.04+1_amd64.deb
 @ u24.aarch64 15 postgresql-15-pg-stat-kcache postgresql-15-pg-stat-kcache_2.3.1-1.pgdg24.04+1_arm64.deb pgdg 2.3.1 34.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-stat-kcache/postgresql-15-pg-stat-kcache_2.3.1-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 15 postgresql-15-pg-stat-kcache postgresql-15-pg-stat-kcache_2.3.1-1.pgdg26.04+1_amd64.deb pgdg 2.3.1 35.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-stat-kcache/postgresql-15-pg-stat-kcache_2.3.1-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 15 postgresql-15-pg-stat-kcache postgresql-15-pg-stat-kcache_2.3.1-1.pgdg26.04+1_arm64.deb pgdg 2.3.1 34.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-stat-kcache/postgresql-15-pg-stat-kcache_2.3.1-1.pgdg26.04+1_arm64.deb
 @ el8.x86_64 14 pg_stat_kcache_14 pg_stat_kcache_14-2.3.1-1PGDG.rhel8.x86_64.rpm pgdg 2.3.1 27.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_stat_kcache_14-2.3.1-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 14 pg_stat_kcache_14 pg_stat_kcache_14-2.3.0-1PGDG.rhel8.x86_64.rpm pgdg 2.3.0 27.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_stat_kcache_14-2.3.0-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 14 pg_stat_kcache_14 pg_stat_kcache_14-2.2.3-1PGDG.rhel8.x86_64.rpm pgdg 2.2.3 26.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_stat_kcache_14-2.2.3-1PGDG.rhel8.x86_64.rpm
@@ -186,6 +196,8 @@ weight: 6220
 @ u22.aarch64 14 postgresql-14-pg-stat-kcache postgresql-14-pg-stat-kcache_2.3.1-1.pgdg22.04+1_arm64.deb pgdg 2.3.1 38.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-stat-kcache/postgresql-14-pg-stat-kcache_2.3.1-1.pgdg22.04+1_arm64.deb
 @ u24.x86_64 14 postgresql-14-pg-stat-kcache postgresql-14-pg-stat-kcache_2.3.1-1.pgdg24.04+1_amd64.deb pgdg 2.3.1 35.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-stat-kcache/postgresql-14-pg-stat-kcache_2.3.1-1.pgdg24.04+1_amd64.deb
 @ u24.aarch64 14 postgresql-14-pg-stat-kcache postgresql-14-pg-stat-kcache_2.3.1-1.pgdg24.04+1_arm64.deb pgdg 2.3.1 34.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-stat-kcache/postgresql-14-pg-stat-kcache_2.3.1-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 14 postgresql-14-pg-stat-kcache postgresql-14-pg-stat-kcache_2.3.1-1.pgdg26.04+1_amd64.deb pgdg 2.3.1 35.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-stat-kcache/postgresql-14-pg-stat-kcache_2.3.1-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 14 postgresql-14-pg-stat-kcache postgresql-14-pg-stat-kcache_2.3.1-1.pgdg26.04+1_arm64.deb pgdg 2.3.1 34.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-stat-kcache/postgresql-14-pg-stat-kcache_2.3.1-1.pgdg26.04+1_arm64.deb
 {{< /pgext_matrix >}}
 
 

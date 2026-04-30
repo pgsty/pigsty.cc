@@ -67,6 +67,8 @@ weight: 9510
 | u22.aarch64 | AVAIL PIGSTY 1.4.1 1 | AVAIL PGDG 1.4.1 1 | AVAIL PGDG 1.4.1 1 | AVAIL PGDG 1.4.1 1 | AVAIL PGDG 1.4.1 1 |
 | u24.x86_64 | AVAIL PIGSTY 1.4.1 1 | AVAIL PGDG 1.4.1 2 | AVAIL PGDG 1.4.1 2 | AVAIL PGDG 1.4.1 2 | AVAIL PGDG 1.4.1 2 |
 | u24.aarch64 | AVAIL PIGSTY 1.4.1 1 | AVAIL PGDG 1.4.1 1 | AVAIL PGDG 1.4.1 1 | AVAIL PGDG 1.4.1 1 | AVAIL PGDG 1.4.1 1 |
+| u26.x86_64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
+| u26.aarch64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
 @ el8.x86_64 18 pglogical_ticker_18 pglogical_ticker_18-1.4.1-2PIGSTY.el8.x86_64.rpm pigsty 1.4.1 17.6KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pglogical_ticker_18-1.4.1-2PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 18 pglogical_ticker_18 pglogical_ticker_18-1.4.1-2PIGSTY.el8.aarch64.rpm pigsty 1.4.1 17.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pglogical_ticker_18-1.4.1-2PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 18 pglogical_ticker_18 pglogical_ticker_18-1.4.1-2PIGSTY.el9.x86_64.rpm pigsty 1.4.1 17.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pglogical_ticker_18-1.4.1-2PIGSTY.el9.x86_64.rpm

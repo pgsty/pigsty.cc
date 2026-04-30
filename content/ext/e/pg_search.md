@@ -11,10 +11,10 @@ weight: 2100
     <div class="ext-card__title">dev/pg_search</div>
     <div class="ext-card__desc">https://github.com/paradedb/paradedb/tree/dev/pg_search</div>
   </a>
-  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pg_search-0.23.0.tar.gz">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pg_search-0.23.1.tar.gz">
     <div class="ext-card__kicker">源码</div>
-    <div class="ext-card__title">pg_search-0.23.0.tar.gz</div>
-    <div class="ext-card__desc">pg_search-0.23.0.tar.gz</div>
+    <div class="ext-card__title">pg_search-0.23.1.tar.gz</div>
+    <div class="ext-card__desc">pg_search-0.23.1.tar.gz</div>
   </a>
 </div>
 
@@ -25,7 +25,7 @@ weight: 2100
 
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
-| [**`pg_search`**](/ext/e/pg_search) | `0.23.0` | <a class="ext-badge ext-badge--cate fts" href="/ext/cate/fts">FTS</a> | <a class="ext-badge ext-badge--license agpl30" href="/ext/license#agpl30">AGPL-3.0</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> |
+| [**`pg_search`**](/ext/e/pg_search) | `0.23.1` | <a class="ext-badge ext-badge--cate fts" href="/ext/cate/fts">FTS</a> | <a class="ext-badge ext-badge--license agpl30" href="/ext/license#agpl30">AGPL-3.0</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> |
 {.ext-table}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
@@ -45,9 +45,9 @@ weight: 2100
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#fts) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.23.0` | {{< pgvers "18,17,16,15" >}} | `pg_search` | - |
-| [**RPM**](/ext/rpm#fts) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.23.0` | {{< pgvers "18,17,16,15" >}} | `pg_search_$v` | - |
-| [**DEB**](/ext/deb#fts) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.23.0` | {{< pgvers "18,17,16,15" >}} | `postgresql-$v-pg-search` | - |
+| [**EXT**](/ext/list#fts) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.23.1` | {{< pgvers "18,17,16,15" >}} | `pg_search` | - |
+| [**RPM**](/ext/rpm#fts) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.23.1` | {{< pgvers "18,17,16,15" >}} | `pg_search_$v` | - |
+| [**DEB**](/ext/deb#fts) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.23.1` | {{< pgvers "18,17,16,15" >}} | `postgresql-$v-pg-search` | - |
 {.ext-table}
 
 {{< pgext_matrix >}}
@@ -67,6 +67,8 @@ weight: 2100
 | u22.aarch64 | AVAIL PIGSTY 0.22.6 1 | AVAIL PIGSTY 0.22.6 1 | AVAIL PIGSTY 0.22.6 1 | AVAIL PIGSTY 0.22.6 1 | AVAIL PIGSTY 0.20.7 1 |
 | u24.x86_64 | AVAIL PIGSTY 0.22.6 1 | AVAIL PIGSTY 0.22.6 1 | AVAIL PIGSTY 0.22.6 1 | AVAIL PIGSTY 0.22.6 1 | AVAIL PIGSTY 0.20.7 1 |
 | u24.aarch64 | AVAIL PIGSTY 0.22.6 1 | AVAIL PIGSTY 0.22.6 1 | AVAIL PIGSTY 0.22.6 1 | AVAIL PIGSTY 0.22.6 1 | AVAIL PIGSTY 0.20.7 1 |
+| u26.x86_64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| u26.aarch64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
 @ el8.x86_64 18 pg_search_18 pg_search_18-0.23.0-1PIGSTY.el8.x86_64.rpm pigsty 0.23.0 61.6MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_search_18-0.23.0-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 18 pg_search_18 pg_search_18-0.23.0-1PIGSTY.el8.aarch64.rpm pigsty 0.23.0 60.6MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_search_18-0.23.0-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 18 pg_search_18 pg_search_18-0.22.6-1PARADEDB.el9.x86_64.rpm pigsty 0.22.6 60.4MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_search_18-0.22.6-1PARADEDB.el9.x86_64.rpm

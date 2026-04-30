@@ -64,6 +64,8 @@ weight: 5170
 | u22.aarch64 | AVAIL PGDG 0.9 1 | AVAIL PGDG 0.9 1 | AVAIL PGDG 0.9 1 | AVAIL PGDG 0.9 1 | AVAIL PGDG 0.9 1 |
 | u24.x86_64 | AVAIL PGDG 0.9 1 | AVAIL PGDG 0.9 1 | AVAIL PGDG 0.9 1 | AVAIL PGDG 0.9 1 | AVAIL PGDG 0.9 1 |
 | u24.aarch64 | AVAIL PGDG 0.9 1 | AVAIL PGDG 0.9 1 | AVAIL PGDG 0.9 1 | AVAIL PGDG 0.9 1 | AVAIL PGDG 0.9 1 |
+| u26.x86_64 | AVAIL PGDG 0.9 1 | AVAIL PGDG 0.9 1 | AVAIL PGDG 0.9 1 | AVAIL PGDG 0.9 1 | AVAIL PGDG 0.9 1 |
+| u26.aarch64 | AVAIL PGDG 0.9 1 | AVAIL PGDG 0.9 1 | AVAIL PGDG 0.9 1 | AVAIL PGDG 0.9 1 | AVAIL PGDG 0.9 1 |
 @ el8.x86_64 18 preprepare_18 preprepare_18-0.9-1PIGSTY.el8.x86_64.rpm pigsty 0.9 13.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/preprepare_18-0.9-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 18 preprepare_18 preprepare_18-0.9-1PIGSTY.el8.aarch64.rpm pigsty 0.9 13.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/preprepare_18-0.9-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 18 preprepare_18 preprepare_18-0.9-1PIGSTY.el9.x86_64.rpm pigsty 0.9 13.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/preprepare_18-0.9-1PIGSTY.el9.x86_64.rpm
@@ -78,6 +80,8 @@ weight: 5170
 @ u22.aarch64 18 postgresql-18-preprepare postgresql-18-preprepare_0.9-10.pgdg22.04+1_arm64.deb pgdg 0.9 17.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/preprepare/postgresql-18-preprepare_0.9-10.pgdg22.04+1_arm64.deb
 @ u24.x86_64 18 postgresql-18-preprepare postgresql-18-preprepare_0.9-10.pgdg24.04+1_amd64.deb pgdg 0.9 16.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/preprepare/postgresql-18-preprepare_0.9-10.pgdg24.04+1_amd64.deb
 @ u24.aarch64 18 postgresql-18-preprepare postgresql-18-preprepare_0.9-10.pgdg24.04+1_arm64.deb pgdg 0.9 16.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/preprepare/postgresql-18-preprepare_0.9-10.pgdg24.04+1_arm64.deb
+@ u26.x86_64 18 postgresql-18-preprepare postgresql-18-preprepare_0.9-10.pgdg26.04+1_amd64.deb pgdg 0.9 16.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/preprepare/postgresql-18-preprepare_0.9-10.pgdg26.04+1_amd64.deb
+@ u26.aarch64 18 postgresql-18-preprepare postgresql-18-preprepare_0.9-10.pgdg26.04+1_arm64.deb pgdg 0.9 16.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/preprepare/postgresql-18-preprepare_0.9-10.pgdg26.04+1_arm64.deb
 @ el8.x86_64 17 preprepare_17 preprepare_17-0.9-1PIGSTY.el8.x86_64.rpm pigsty 0.9 13.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/preprepare_17-0.9-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 17 preprepare_17 preprepare_17-0.9-1PIGSTY.el8.aarch64.rpm pigsty 0.9 13.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/preprepare_17-0.9-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 17 preprepare_17 preprepare_17-0.9-1PIGSTY.el9.x86_64.rpm pigsty 0.9 13.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/preprepare_17-0.9-1PIGSTY.el9.x86_64.rpm
@@ -92,6 +96,8 @@ weight: 5170
 @ u22.aarch64 17 postgresql-17-preprepare postgresql-17-preprepare_0.9-10.pgdg22.04+1_arm64.deb pgdg 0.9 18.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/preprepare/postgresql-17-preprepare_0.9-10.pgdg22.04+1_arm64.deb
 @ u24.x86_64 17 postgresql-17-preprepare postgresql-17-preprepare_0.9-10.pgdg24.04+1_amd64.deb pgdg 0.9 16.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/preprepare/postgresql-17-preprepare_0.9-10.pgdg24.04+1_amd64.deb
 @ u24.aarch64 17 postgresql-17-preprepare postgresql-17-preprepare_0.9-10.pgdg24.04+1_arm64.deb pgdg 0.9 16.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/preprepare/postgresql-17-preprepare_0.9-10.pgdg24.04+1_arm64.deb
+@ u26.x86_64 17 postgresql-17-preprepare postgresql-17-preprepare_0.9-10.pgdg26.04+1_amd64.deb pgdg 0.9 16.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/preprepare/postgresql-17-preprepare_0.9-10.pgdg26.04+1_amd64.deb
+@ u26.aarch64 17 postgresql-17-preprepare postgresql-17-preprepare_0.9-10.pgdg26.04+1_arm64.deb pgdg 0.9 16.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/preprepare/postgresql-17-preprepare_0.9-10.pgdg26.04+1_arm64.deb
 @ el8.x86_64 16 preprepare_16 preprepare_16-0.9-1PIGSTY.el8.x86_64.rpm pigsty 0.9 13.4KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/preprepare_16-0.9-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 16 preprepare_16 preprepare_16-0.9-1PIGSTY.el8.aarch64.rpm pigsty 0.9 13.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/preprepare_16-0.9-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 16 preprepare_16 preprepare_16-0.9-1PIGSTY.el9.x86_64.rpm pigsty 0.9 13.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/preprepare_16-0.9-1PIGSTY.el9.x86_64.rpm
@@ -106,6 +112,8 @@ weight: 5170
 @ u22.aarch64 16 postgresql-16-preprepare postgresql-16-preprepare_0.9-10.pgdg22.04+1_arm64.deb pgdg 0.9 18.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/preprepare/postgresql-16-preprepare_0.9-10.pgdg22.04+1_arm64.deb
 @ u24.x86_64 16 postgresql-16-preprepare postgresql-16-preprepare_0.9-10.pgdg24.04+1_amd64.deb pgdg 0.9 16.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/preprepare/postgresql-16-preprepare_0.9-10.pgdg24.04+1_amd64.deb
 @ u24.aarch64 16 postgresql-16-preprepare postgresql-16-preprepare_0.9-10.pgdg24.04+1_arm64.deb pgdg 0.9 16.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/preprepare/postgresql-16-preprepare_0.9-10.pgdg24.04+1_arm64.deb
+@ u26.x86_64 16 postgresql-16-preprepare postgresql-16-preprepare_0.9-10.pgdg26.04+1_amd64.deb pgdg 0.9 16.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/preprepare/postgresql-16-preprepare_0.9-10.pgdg26.04+1_amd64.deb
+@ u26.aarch64 16 postgresql-16-preprepare postgresql-16-preprepare_0.9-10.pgdg26.04+1_arm64.deb pgdg 0.9 16.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/preprepare/postgresql-16-preprepare_0.9-10.pgdg26.04+1_arm64.deb
 @ el8.x86_64 15 preprepare_15 preprepare_15-0.9-1PIGSTY.el8.x86_64.rpm pigsty 0.9 13.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/preprepare_15-0.9-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 15 preprepare_15 preprepare_15-0.9-1PIGSTY.el8.aarch64.rpm pigsty 0.9 13.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/preprepare_15-0.9-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 15 preprepare_15 preprepare_15-0.9-1PIGSTY.el9.x86_64.rpm pigsty 0.9 13.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/preprepare_15-0.9-1PIGSTY.el9.x86_64.rpm
@@ -120,6 +128,8 @@ weight: 5170
 @ u22.aarch64 15 postgresql-15-preprepare postgresql-15-preprepare_0.9-10.pgdg22.04+1_arm64.deb pgdg 0.9 18.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/preprepare/postgresql-15-preprepare_0.9-10.pgdg22.04+1_arm64.deb
 @ u24.x86_64 15 postgresql-15-preprepare postgresql-15-preprepare_0.9-10.pgdg24.04+1_amd64.deb pgdg 0.9 16.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/preprepare/postgresql-15-preprepare_0.9-10.pgdg24.04+1_amd64.deb
 @ u24.aarch64 15 postgresql-15-preprepare postgresql-15-preprepare_0.9-10.pgdg24.04+1_arm64.deb pgdg 0.9 16.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/preprepare/postgresql-15-preprepare_0.9-10.pgdg24.04+1_arm64.deb
+@ u26.x86_64 15 postgresql-15-preprepare postgresql-15-preprepare_0.9-10.pgdg26.04+1_amd64.deb pgdg 0.9 16.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/preprepare/postgresql-15-preprepare_0.9-10.pgdg26.04+1_amd64.deb
+@ u26.aarch64 15 postgresql-15-preprepare postgresql-15-preprepare_0.9-10.pgdg26.04+1_arm64.deb pgdg 0.9 16.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/preprepare/postgresql-15-preprepare_0.9-10.pgdg26.04+1_arm64.deb
 @ el8.x86_64 14 preprepare_14 preprepare_14-0.9-1PIGSTY.el8.x86_64.rpm pigsty 0.9 13.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/preprepare_14-0.9-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 14 preprepare_14 preprepare_14-0.9-1PIGSTY.el8.aarch64.rpm pigsty 0.9 13.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/preprepare_14-0.9-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 14 preprepare_14 preprepare_14-0.9-1PIGSTY.el9.x86_64.rpm pigsty 0.9 13.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/preprepare_14-0.9-1PIGSTY.el9.x86_64.rpm
@@ -134,6 +144,8 @@ weight: 5170
 @ u22.aarch64 14 postgresql-14-preprepare postgresql-14-preprepare_0.9-10.pgdg22.04+1_arm64.deb pgdg 0.9 18.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/preprepare/postgresql-14-preprepare_0.9-10.pgdg22.04+1_arm64.deb
 @ u24.x86_64 14 postgresql-14-preprepare postgresql-14-preprepare_0.9-10.pgdg24.04+1_amd64.deb pgdg 0.9 16.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/preprepare/postgresql-14-preprepare_0.9-10.pgdg24.04+1_amd64.deb
 @ u24.aarch64 14 postgresql-14-preprepare postgresql-14-preprepare_0.9-10.pgdg24.04+1_arm64.deb pgdg 0.9 16.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/preprepare/postgresql-14-preprepare_0.9-10.pgdg24.04+1_arm64.deb
+@ u26.x86_64 14 postgresql-14-preprepare postgresql-14-preprepare_0.9-10.pgdg26.04+1_amd64.deb pgdg 0.9 16.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/preprepare/postgresql-14-preprepare_0.9-10.pgdg26.04+1_amd64.deb
+@ u26.aarch64 14 postgresql-14-preprepare postgresql-14-preprepare_0.9-10.pgdg26.04+1_arm64.deb pgdg 0.9 16.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/preprepare/postgresql-14-preprepare_0.9-10.pgdg26.04+1_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建

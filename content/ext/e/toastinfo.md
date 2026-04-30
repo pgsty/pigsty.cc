@@ -64,6 +64,8 @@ weight: 6530
 | u22.aarch64 | AVAIL PGDG 1.5 1 | AVAIL PGDG 1.5 1 | AVAIL PGDG 1.5 1 | AVAIL PGDG 1.5 1 | AVAIL PGDG 1.5 1 |
 | u24.x86_64 | AVAIL PGDG 1.5 1 | AVAIL PGDG 1.5 1 | AVAIL PGDG 1.5 1 | AVAIL PGDG 1.5 1 | AVAIL PGDG 1.5 1 |
 | u24.aarch64 | AVAIL PGDG 1.5 1 | AVAIL PGDG 1.5 1 | AVAIL PGDG 1.5 1 | AVAIL PGDG 1.5 1 | AVAIL PGDG 1.5 1 |
+| u26.x86_64 | AVAIL PGDG 1.5 1 | AVAIL PGDG 1.5 1 | AVAIL PGDG 1.5 1 | AVAIL PGDG 1.5 1 | AVAIL PGDG 1.5 1 |
+| u26.aarch64 | AVAIL PGDG 1.5 1 | AVAIL PGDG 1.5 1 | AVAIL PGDG 1.5 1 | AVAIL PGDG 1.5 1 | AVAIL PGDG 1.5 1 |
 @ el8.x86_64 18 toastinfo_18 toastinfo_18-1.5-1PIGSTY.el8.x86_64.rpm pigsty 1.5 13.6KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/toastinfo_18-1.5-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 18 toastinfo_18 toastinfo_18-1.5-1PIGSTY.el8.aarch64.rpm pigsty 1.5 13.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/toastinfo_18-1.5-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 18 toastinfo_18 toastinfo_18-1.5-1PIGSTY.el9.x86_64.rpm pigsty 1.5 13.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/toastinfo_18-1.5-1PIGSTY.el9.x86_64.rpm
@@ -78,6 +80,8 @@ weight: 6530
 @ u22.aarch64 18 postgresql-18-toastinfo postgresql-18-toastinfo_1.5-3.pgdg22.04+1_arm64.deb pgdg 1.5 12.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/t/toastinfo/postgresql-18-toastinfo_1.5-3.pgdg22.04+1_arm64.deb
 @ u24.x86_64 18 postgresql-18-toastinfo postgresql-18-toastinfo_1.5-3.pgdg24.04+1_amd64.deb pgdg 1.5 12.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/t/toastinfo/postgresql-18-toastinfo_1.5-3.pgdg24.04+1_amd64.deb
 @ u24.aarch64 18 postgresql-18-toastinfo postgresql-18-toastinfo_1.5-3.pgdg24.04+1_arm64.deb pgdg 1.5 12.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/t/toastinfo/postgresql-18-toastinfo_1.5-3.pgdg24.04+1_arm64.deb
+@ u26.x86_64 18 postgresql-18-toastinfo postgresql-18-toastinfo_1.5-3.pgdg26.04+1_amd64.deb pgdg 1.5 12.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/t/toastinfo/postgresql-18-toastinfo_1.5-3.pgdg26.04+1_amd64.deb
+@ u26.aarch64 18 postgresql-18-toastinfo postgresql-18-toastinfo_1.5-3.pgdg26.04+1_arm64.deb pgdg 1.5 13.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/t/toastinfo/postgresql-18-toastinfo_1.5-3.pgdg26.04+1_arm64.deb
 @ el8.x86_64 17 toastinfo_17 toastinfo_17-1.5-1PIGSTY.el8.x86_64.rpm pigsty 1.5 13.6KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/toastinfo_17-1.5-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 17 toastinfo_17 toastinfo_17-1.5-1PIGSTY.el8.aarch64.rpm pigsty 1.5 13.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/toastinfo_17-1.5-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 17 toastinfo_17 toastinfo_17-1.5-1PIGSTY.el9.x86_64.rpm pigsty 1.5 13.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/toastinfo_17-1.5-1PIGSTY.el9.x86_64.rpm
@@ -92,6 +96,8 @@ weight: 6530
 @ u22.aarch64 17 postgresql-17-toastinfo postgresql-17-toastinfo_1.5-3.pgdg22.04+1_arm64.deb pgdg 1.5 12.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/t/toastinfo/postgresql-17-toastinfo_1.5-3.pgdg22.04+1_arm64.deb
 @ u24.x86_64 17 postgresql-17-toastinfo postgresql-17-toastinfo_1.5-3.pgdg24.04+1_amd64.deb pgdg 1.5 12.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/t/toastinfo/postgresql-17-toastinfo_1.5-3.pgdg24.04+1_amd64.deb
 @ u24.aarch64 17 postgresql-17-toastinfo postgresql-17-toastinfo_1.5-3.pgdg24.04+1_arm64.deb pgdg 1.5 12.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/t/toastinfo/postgresql-17-toastinfo_1.5-3.pgdg24.04+1_arm64.deb
+@ u26.x86_64 17 postgresql-17-toastinfo postgresql-17-toastinfo_1.5-3.pgdg26.04+1_amd64.deb pgdg 1.5 12.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/t/toastinfo/postgresql-17-toastinfo_1.5-3.pgdg26.04+1_amd64.deb
+@ u26.aarch64 17 postgresql-17-toastinfo postgresql-17-toastinfo_1.5-3.pgdg26.04+1_arm64.deb pgdg 1.5 13.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/t/toastinfo/postgresql-17-toastinfo_1.5-3.pgdg26.04+1_arm64.deb
 @ el8.x86_64 16 toastinfo_16 toastinfo_16-1.5-1PIGSTY.el8.x86_64.rpm pigsty 1.5 13.6KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/toastinfo_16-1.5-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 16 toastinfo_16 toastinfo_16-1.5-1PIGSTY.el8.aarch64.rpm pigsty 1.5 13.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/toastinfo_16-1.5-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 16 toastinfo_16 toastinfo_16-1.5-1PIGSTY.el9.x86_64.rpm pigsty 1.5 13.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/toastinfo_16-1.5-1PIGSTY.el9.x86_64.rpm
@@ -106,6 +112,8 @@ weight: 6530
 @ u22.aarch64 16 postgresql-16-toastinfo postgresql-16-toastinfo_1.5-3.pgdg22.04+1_arm64.deb pgdg 1.5 12.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/t/toastinfo/postgresql-16-toastinfo_1.5-3.pgdg22.04+1_arm64.deb
 @ u24.x86_64 16 postgresql-16-toastinfo postgresql-16-toastinfo_1.5-3.pgdg24.04+1_amd64.deb pgdg 1.5 12.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/t/toastinfo/postgresql-16-toastinfo_1.5-3.pgdg24.04+1_amd64.deb
 @ u24.aarch64 16 postgresql-16-toastinfo postgresql-16-toastinfo_1.5-3.pgdg24.04+1_arm64.deb pgdg 1.5 12.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/t/toastinfo/postgresql-16-toastinfo_1.5-3.pgdg24.04+1_arm64.deb
+@ u26.x86_64 16 postgresql-16-toastinfo postgresql-16-toastinfo_1.5-3.pgdg26.04+1_amd64.deb pgdg 1.5 12.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/t/toastinfo/postgresql-16-toastinfo_1.5-3.pgdg26.04+1_amd64.deb
+@ u26.aarch64 16 postgresql-16-toastinfo postgresql-16-toastinfo_1.5-3.pgdg26.04+1_arm64.deb pgdg 1.5 13.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/t/toastinfo/postgresql-16-toastinfo_1.5-3.pgdg26.04+1_arm64.deb
 @ el8.x86_64 15 toastinfo_15 toastinfo_15-1.5-1PIGSTY.el8.x86_64.rpm pigsty 1.5 13.6KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/toastinfo_15-1.5-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 15 toastinfo_15 toastinfo_15-1.5-1PIGSTY.el8.aarch64.rpm pigsty 1.5 13.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/toastinfo_15-1.5-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 15 toastinfo_15 toastinfo_15-1.5-1PIGSTY.el9.x86_64.rpm pigsty 1.5 13.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/toastinfo_15-1.5-1PIGSTY.el9.x86_64.rpm
@@ -120,6 +128,8 @@ weight: 6530
 @ u22.aarch64 15 postgresql-15-toastinfo postgresql-15-toastinfo_1.5-3.pgdg22.04+1_arm64.deb pgdg 1.5 13.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/t/toastinfo/postgresql-15-toastinfo_1.5-3.pgdg22.04+1_arm64.deb
 @ u24.x86_64 15 postgresql-15-toastinfo postgresql-15-toastinfo_1.5-3.pgdg24.04+1_amd64.deb pgdg 1.5 12.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/t/toastinfo/postgresql-15-toastinfo_1.5-3.pgdg24.04+1_amd64.deb
 @ u24.aarch64 15 postgresql-15-toastinfo postgresql-15-toastinfo_1.5-3.pgdg24.04+1_arm64.deb pgdg 1.5 12.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/t/toastinfo/postgresql-15-toastinfo_1.5-3.pgdg24.04+1_arm64.deb
+@ u26.x86_64 15 postgresql-15-toastinfo postgresql-15-toastinfo_1.5-3.pgdg26.04+1_amd64.deb pgdg 1.5 12.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/t/toastinfo/postgresql-15-toastinfo_1.5-3.pgdg26.04+1_amd64.deb
+@ u26.aarch64 15 postgresql-15-toastinfo postgresql-15-toastinfo_1.5-3.pgdg26.04+1_arm64.deb pgdg 1.5 13.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/t/toastinfo/postgresql-15-toastinfo_1.5-3.pgdg26.04+1_arm64.deb
 @ el8.x86_64 14 toastinfo_14 toastinfo_14-1.5-1PIGSTY.el8.x86_64.rpm pigsty 1.5 13.6KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/toastinfo_14-1.5-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 14 toastinfo_14 toastinfo_14-1.5-1PIGSTY.el8.aarch64.rpm pigsty 1.5 13.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/toastinfo_14-1.5-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 14 toastinfo_14 toastinfo_14-1.5-1PIGSTY.el9.x86_64.rpm pigsty 1.5 13.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/toastinfo_14-1.5-1PIGSTY.el9.x86_64.rpm
@@ -134,6 +144,8 @@ weight: 6530
 @ u22.aarch64 14 postgresql-14-toastinfo postgresql-14-toastinfo_1.5-3.pgdg22.04+1_arm64.deb pgdg 1.5 12.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/t/toastinfo/postgresql-14-toastinfo_1.5-3.pgdg22.04+1_arm64.deb
 @ u24.x86_64 14 postgresql-14-toastinfo postgresql-14-toastinfo_1.5-3.pgdg24.04+1_amd64.deb pgdg 1.5 12.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/t/toastinfo/postgresql-14-toastinfo_1.5-3.pgdg24.04+1_amd64.deb
 @ u24.aarch64 14 postgresql-14-toastinfo postgresql-14-toastinfo_1.5-3.pgdg24.04+1_arm64.deb pgdg 1.5 12.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/t/toastinfo/postgresql-14-toastinfo_1.5-3.pgdg24.04+1_arm64.deb
+@ u26.x86_64 14 postgresql-14-toastinfo postgresql-14-toastinfo_1.5-3.pgdg26.04+1_amd64.deb pgdg 1.5 12.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/t/toastinfo/postgresql-14-toastinfo_1.5-3.pgdg26.04+1_amd64.deb
+@ u26.aarch64 14 postgresql-14-toastinfo postgresql-14-toastinfo_1.5-3.pgdg26.04+1_arm64.deb pgdg 1.5 13.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/t/toastinfo/postgresql-14-toastinfo_1.5-3.pgdg26.04+1_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建

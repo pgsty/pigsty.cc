@@ -20,7 +20,7 @@ weight: 9260
 
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
-| [**`pg_dbms_job`**](/ext/e/pg_dbms_job) | `1.5` | <a class="ext-badge ext-badge--cate sim" href="/ext/cate/sim">SIM</a> | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> |
+| [**`pg_dbms_job`**](/ext/e/pg_dbms_job) | `2.0` | <a class="ext-badge ext-badge--cate sim" href="/ext/cate/sim">SIM</a> | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> |
 {.ext-table}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
@@ -37,19 +37,19 @@ weight: 9260
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#sim) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `1.5` | {{< pgvers "18,17,16,15,14" >}} | `pg_dbms_job` | - |
-| [**RPM**](/ext/rpm#sim) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `1.5` | {{< pgvers "18,17,16,15,14" >}} | `pg_dbms_job_$v` | - |
+| [**EXT**](/ext/list#sim) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `2.0` | {{< pgvers "18,17,16,15,14" >}} | `pg_dbms_job` | - |
+| [**RPM**](/ext/rpm#sim) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `2.0` | {{< pgvers "18,17,16,15,14" >}} | `pg_dbms_job_$v` | - |
 {.ext-table}
 
 {{< pgext_matrix >}}
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | BREAK PGDG 1.5 1 | BREAK PGDG 1.5 1 | BREAK PGDG 1.5 1 | BREAK PGDG 1.5 1 | BREAK PGDG 1.5 3 |
-| el8.aarch64 | BREAK PGDG 1.5 1 | BREAK PGDG 1.5 1 | BREAK PGDG 1.5 1 | BREAK PGDG 1.5 1 | BREAK PGDG 1.5 1 |
-| el9.x86_64 | AVAIL PGDG 1.5 1 | AVAIL PGDG 1.5 1 | AVAIL PGDG 1.5 1 | AVAIL PGDG 1.5 1 | AVAIL PGDG 1.5 3 |
-| el9.aarch64 | AVAIL PGDG 1.5 1 | AVAIL PGDG 1.5 1 | AVAIL PGDG 1.5 1 | AVAIL PGDG 1.5 1 | AVAIL PGDG 1.5 1 |
-| el10.x86_64 | AVAIL PGDG 1.5 1 | AVAIL PGDG 1.5 1 | AVAIL PGDG 1.5 1 | AVAIL PGDG 1.5 1 | AVAIL PGDG 1.5 1 |
-| el10.aarch64 | AVAIL PGDG 1.5 1 | AVAIL PGDG 1.5 1 | AVAIL PGDG 1.5 1 | AVAIL PGDG 1.5 1 | AVAIL PGDG 1.5 1 |
+| el8.x86_64 | BREAK PGDG 2.0 2 | BREAK PGDG 2.0 2 | BREAK PGDG 2.0 2 | BREAK PGDG 2.0 2 | BREAK PGDG 2.0 4 |
+| el8.aarch64 | BREAK PGDG 2.0 2 | BREAK PGDG 2.0 2 | BREAK PGDG 2.0 2 | BREAK PGDG 2.0 2 | BREAK PGDG 2.0 2 |
+| el9.x86_64 | AVAIL PGDG 2.0 2 | AVAIL PGDG 2.0 2 | AVAIL PGDG 2.0 2 | AVAIL PGDG 2.0 2 | AVAIL PGDG 2.0 4 |
+| el9.aarch64 | AVAIL PGDG 2.0 2 | AVAIL PGDG 2.0 2 | AVAIL PGDG 2.0 2 | AVAIL PGDG 2.0 2 | AVAIL PGDG 2.0 2 |
+| el10.x86_64 | AVAIL PGDG 2.0 2 | AVAIL PGDG 2.0 2 | AVAIL PGDG 2.0 2 | AVAIL PGDG 2.0 2 | AVAIL PGDG 2.0 2 |
+| el10.aarch64 | AVAIL PGDG 2.0 2 | AVAIL PGDG 2.0 2 | AVAIL PGDG 2.0 2 | AVAIL PGDG 2.0 2 | AVAIL PGDG 2.0 2 |
 | d12.x86_64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
 | d12.aarch64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
 | d13.x86_64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
@@ -58,39 +58,71 @@ weight: 9260
 | u22.aarch64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
 | u24.x86_64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
 | u24.aarch64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
+| u26.x86_64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
+| u26.aarch64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
+@ el8.x86_64 18 pg_dbms_job_18 pg_dbms_job_18-2.0-1PGDG.rhel8.10.x86_64.rpm pgdg 2.0 31.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pg_dbms_job_18-2.0-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 18 pg_dbms_job_18 pg_dbms_job_18-1.5-5PGDG.rhel8.x86_64.rpm pgdg 1.5 26.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pg_dbms_job_18-1.5-5PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 18 pg_dbms_job_18 pg_dbms_job_18-2.0-1PGDG.rhel8.10.aarch64.rpm pgdg 2.0 30.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pg_dbms_job_18-2.0-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 18 pg_dbms_job_18 pg_dbms_job_18-1.5-5PGDG.rhel8.aarch64.rpm pgdg 1.5 26.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pg_dbms_job_18-1.5-5PGDG.rhel8.aarch64.rpm
+@ el9.x86_64 18 pg_dbms_job_18 pg_dbms_job_18-2.0-1PGDG.rhel9.7.x86_64.rpm pgdg 2.0 30.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pg_dbms_job_18-2.0-1PGDG.rhel9.7.x86_64.rpm
 @ el9.x86_64 18 pg_dbms_job_18 pg_dbms_job_18-1.5-5PGDG.rhel9.x86_64.rpm pgdg 1.5 26.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pg_dbms_job_18-1.5-5PGDG.rhel9.x86_64.rpm
+@ el9.aarch64 18 pg_dbms_job_18 pg_dbms_job_18-2.0-1PGDG.rhel9.7.aarch64.rpm pgdg 2.0 30.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pg_dbms_job_18-2.0-1PGDG.rhel9.7.aarch64.rpm
 @ el9.aarch64 18 pg_dbms_job_18 pg_dbms_job_18-1.5-5PGDG.rhel9.aarch64.rpm pgdg 1.5 26.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pg_dbms_job_18-1.5-5PGDG.rhel9.aarch64.rpm
+@ el10.x86_64 18 pg_dbms_job_18 pg_dbms_job_18-2.0-1PGDG.rhel10.1.x86_64.rpm pgdg 2.0 31.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pg_dbms_job_18-2.0-1PGDG.rhel10.1.x86_64.rpm
 @ el10.x86_64 18 pg_dbms_job_18 pg_dbms_job_18-1.5-5PGDG.rhel10.x86_64.rpm pgdg 1.5 26.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pg_dbms_job_18-1.5-5PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 18 pg_dbms_job_18 pg_dbms_job_18-2.0-1PGDG.rhel10.1.aarch64.rpm pgdg 2.0 30.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_dbms_job_18-2.0-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 18 pg_dbms_job_18 pg_dbms_job_18-1.5-5PGDG.rhel10.aarch64.rpm pgdg 1.5 26.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_dbms_job_18-1.5-5PGDG.rhel10.aarch64.rpm
+@ el8.x86_64 17 pg_dbms_job_17 pg_dbms_job_17-2.0-1PGDG.rhel8.10.x86_64.rpm pgdg 2.0 31.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pg_dbms_job_17-2.0-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 pg_dbms_job_17 pg_dbms_job_17-1.5-3PGDG.rhel8.x86_64.rpm pgdg 1.5 26.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pg_dbms_job_17-1.5-3PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 17 pg_dbms_job_17 pg_dbms_job_17-2.0-1PGDG.rhel8.10.aarch64.rpm pgdg 2.0 30.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pg_dbms_job_17-2.0-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 17 pg_dbms_job_17 pg_dbms_job_17-1.5-3PGDG.rhel8.aarch64.rpm pgdg 1.5 26.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pg_dbms_job_17-1.5-3PGDG.rhel8.aarch64.rpm
+@ el9.x86_64 17 pg_dbms_job_17 pg_dbms_job_17-2.0-1PGDG.rhel9.7.x86_64.rpm pgdg 2.0 31.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_dbms_job_17-2.0-1PGDG.rhel9.7.x86_64.rpm
 @ el9.x86_64 17 pg_dbms_job_17 pg_dbms_job_17-1.5-3PGDG.rhel9.x86_64.rpm pgdg 1.5 26.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_dbms_job_17-1.5-3PGDG.rhel9.x86_64.rpm
+@ el9.aarch64 17 pg_dbms_job_17 pg_dbms_job_17-2.0-1PGDG.rhel9.7.aarch64.rpm pgdg 2.0 30.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_dbms_job_17-2.0-1PGDG.rhel9.7.aarch64.rpm
 @ el9.aarch64 17 pg_dbms_job_17 pg_dbms_job_17-1.5-3PGDG.rhel9.aarch64.rpm pgdg 1.5 26.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_dbms_job_17-1.5-3PGDG.rhel9.aarch64.rpm
+@ el10.x86_64 17 pg_dbms_job_17 pg_dbms_job_17-2.0-1PGDG.rhel10.1.x86_64.rpm pgdg 2.0 31.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_dbms_job_17-2.0-1PGDG.rhel10.1.x86_64.rpm
 @ el10.x86_64 17 pg_dbms_job_17 pg_dbms_job_17-1.5-5PGDG.rhel10.x86_64.rpm pgdg 1.5 26.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_dbms_job_17-1.5-5PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 17 pg_dbms_job_17 pg_dbms_job_17-2.0-1PGDG.rhel10.1.aarch64.rpm pgdg 2.0 30.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_dbms_job_17-2.0-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 17 pg_dbms_job_17 pg_dbms_job_17-1.5-5PGDG.rhel10.aarch64.rpm pgdg 1.5 26.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_dbms_job_17-1.5-5PGDG.rhel10.aarch64.rpm
+@ el8.x86_64 16 pg_dbms_job_16 pg_dbms_job_16-2.0-1PGDG.rhel8.10.x86_64.rpm pgdg 2.0 31.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_dbms_job_16-2.0-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 pg_dbms_job_16 pg_dbms_job_16-1.5-3PGDG.rhel8.x86_64.rpm pgdg 1.5 26.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_dbms_job_16-1.5-3PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 16 pg_dbms_job_16 pg_dbms_job_16-2.0-1PGDG.rhel8.10.aarch64.rpm pgdg 2.0 30.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pg_dbms_job_16-2.0-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 16 pg_dbms_job_16 pg_dbms_job_16-1.5-3PGDG.rhel8.aarch64.rpm pgdg 1.5 26.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pg_dbms_job_16-1.5-3PGDG.rhel8.aarch64.rpm
+@ el9.x86_64 16 pg_dbms_job_16 pg_dbms_job_16-2.0-1PGDG.rhel9.7.x86_64.rpm pgdg 2.0 30.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_dbms_job_16-2.0-1PGDG.rhel9.7.x86_64.rpm
 @ el9.x86_64 16 pg_dbms_job_16 pg_dbms_job_16-1.5-3PGDG.rhel9.x86_64.rpm pgdg 1.5 26.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_dbms_job_16-1.5-3PGDG.rhel9.x86_64.rpm
+@ el9.aarch64 16 pg_dbms_job_16 pg_dbms_job_16-2.0-1PGDG.rhel9.7.aarch64.rpm pgdg 2.0 30.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_dbms_job_16-2.0-1PGDG.rhel9.7.aarch64.rpm
 @ el9.aarch64 16 pg_dbms_job_16 pg_dbms_job_16-1.5-3PGDG.rhel9.aarch64.rpm pgdg 1.5 26.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_dbms_job_16-1.5-3PGDG.rhel9.aarch64.rpm
+@ el10.x86_64 16 pg_dbms_job_16 pg_dbms_job_16-2.0-1PGDG.rhel10.1.x86_64.rpm pgdg 2.0 31.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_dbms_job_16-2.0-1PGDG.rhel10.1.x86_64.rpm
 @ el10.x86_64 16 pg_dbms_job_16 pg_dbms_job_16-1.5-5PGDG.rhel10.x86_64.rpm pgdg 1.5 26.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_dbms_job_16-1.5-5PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 16 pg_dbms_job_16 pg_dbms_job_16-2.0-1PGDG.rhel10.1.aarch64.rpm pgdg 2.0 30.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_dbms_job_16-2.0-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 16 pg_dbms_job_16 pg_dbms_job_16-1.5-5PGDG.rhel10.aarch64.rpm pgdg 1.5 26.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_dbms_job_16-1.5-5PGDG.rhel10.aarch64.rpm
+@ el8.x86_64 15 pg_dbms_job_15 pg_dbms_job_15-2.0-1PGDG.rhel8.10.x86_64.rpm pgdg 2.0 31.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_dbms_job_15-2.0-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 pg_dbms_job_15 pg_dbms_job_15-1.5-1.rhel8.x86_64.rpm pgdg 1.5 26.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_dbms_job_15-1.5-1.rhel8.x86_64.rpm
+@ el8.aarch64 15 pg_dbms_job_15 pg_dbms_job_15-2.0-1PGDG.rhel8.10.aarch64.rpm pgdg 2.0 30.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pg_dbms_job_15-2.0-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 15 pg_dbms_job_15 pg_dbms_job_15-1.5-1.rhel8.aarch64.rpm pgdg 1.5 26.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pg_dbms_job_15-1.5-1.rhel8.aarch64.rpm
+@ el9.x86_64 15 pg_dbms_job_15 pg_dbms_job_15-2.0-1PGDG.rhel9.7.x86_64.rpm pgdg 2.0 30.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_dbms_job_15-2.0-1PGDG.rhel9.7.x86_64.rpm
 @ el9.x86_64 15 pg_dbms_job_15 pg_dbms_job_15-1.5-1.rhel9.x86_64.rpm pgdg 1.5 25.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_dbms_job_15-1.5-1.rhel9.x86_64.rpm
+@ el9.aarch64 15 pg_dbms_job_15 pg_dbms_job_15-2.0-1PGDG.rhel9.7.aarch64.rpm pgdg 2.0 30.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_dbms_job_15-2.0-1PGDG.rhel9.7.aarch64.rpm
 @ el9.aarch64 15 pg_dbms_job_15 pg_dbms_job_15-1.5-1.rhel9.aarch64.rpm pgdg 1.5 25.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_dbms_job_15-1.5-1.rhel9.aarch64.rpm
+@ el10.x86_64 15 pg_dbms_job_15 pg_dbms_job_15-2.0-1PGDG.rhel10.1.x86_64.rpm pgdg 2.0 31.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_dbms_job_15-2.0-1PGDG.rhel10.1.x86_64.rpm
 @ el10.x86_64 15 pg_dbms_job_15 pg_dbms_job_15-1.5-5PGDG.rhel10.x86_64.rpm pgdg 1.5 26.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_dbms_job_15-1.5-5PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 15 pg_dbms_job_15 pg_dbms_job_15-2.0-1PGDG.rhel10.1.aarch64.rpm pgdg 2.0 30.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_dbms_job_15-2.0-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 15 pg_dbms_job_15 pg_dbms_job_15-1.5-5PGDG.rhel10.aarch64.rpm pgdg 1.5 26.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_dbms_job_15-1.5-5PGDG.rhel10.aarch64.rpm
+@ el8.x86_64 14 pg_dbms_job_14 pg_dbms_job_14-2.0-1PGDG.rhel8.10.x86_64.rpm pgdg 2.0 31.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_dbms_job_14-2.0-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 14 pg_dbms_job_14 pg_dbms_job_14-1.5-1.rhel8.x86_64.rpm pgdg 1.5 26.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_dbms_job_14-1.5-1.rhel8.x86_64.rpm
 @ el8.x86_64 14 pg_dbms_job_14 pg_dbms_job_14-1.4.0-1.rhel8.x86_64.rpm pgdg 1.4.0 26.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_dbms_job_14-1.4.0-1.rhel8.x86_64.rpm
 @ el8.x86_64 14 pg_dbms_job_14 pg_dbms_job_14-1.2.0-1.rhel8.x86_64.rpm pgdg 1.2.0 25.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_dbms_job_14-1.2.0-1.rhel8.x86_64.rpm
+@ el8.aarch64 14 pg_dbms_job_14 pg_dbms_job_14-2.0-1PGDG.rhel8.10.aarch64.rpm pgdg 2.0 30.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pg_dbms_job_14-2.0-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 14 pg_dbms_job_14 pg_dbms_job_14-1.5-1.rhel8.aarch64.rpm pgdg 1.5 26.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pg_dbms_job_14-1.5-1.rhel8.aarch64.rpm
+@ el9.x86_64 14 pg_dbms_job_14 pg_dbms_job_14-2.0-1PGDG.rhel9.7.x86_64.rpm pgdg 2.0 30.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_dbms_job_14-2.0-1PGDG.rhel9.7.x86_64.rpm
 @ el9.x86_64 14 pg_dbms_job_14 pg_dbms_job_14-1.5-1.rhel9.x86_64.rpm pgdg 1.5 25.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_dbms_job_14-1.5-1.rhel9.x86_64.rpm
 @ el9.x86_64 14 pg_dbms_job_14 pg_dbms_job_14-1.4.0-1.rhel9.x86_64.rpm pgdg 1.4.0 25.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_dbms_job_14-1.4.0-1.rhel9.x86_64.rpm
 @ el9.x86_64 14 pg_dbms_job_14 pg_dbms_job_14-1.2.0-1.rhel9.x86_64.rpm pgdg 1.2.0 24.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_dbms_job_14-1.2.0-1.rhel9.x86_64.rpm
+@ el9.aarch64 14 pg_dbms_job_14 pg_dbms_job_14-2.0-1PGDG.rhel9.7.aarch64.rpm pgdg 2.0 30.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_dbms_job_14-2.0-1PGDG.rhel9.7.aarch64.rpm
 @ el9.aarch64 14 pg_dbms_job_14 pg_dbms_job_14-1.5-1.rhel9.aarch64.rpm pgdg 1.5 25.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_dbms_job_14-1.5-1.rhel9.aarch64.rpm
+@ el10.x86_64 14 pg_dbms_job_14 pg_dbms_job_14-2.0-1PGDG.rhel10.1.x86_64.rpm pgdg 2.0 31.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_dbms_job_14-2.0-1PGDG.rhel10.1.x86_64.rpm
 @ el10.x86_64 14 pg_dbms_job_14 pg_dbms_job_14-1.5-5PGDG.rhel10.x86_64.rpm pgdg 1.5 26.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_dbms_job_14-1.5-5PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 14 pg_dbms_job_14 pg_dbms_job_14-2.0-1PGDG.rhel10.1.aarch64.rpm pgdg 2.0 30.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_dbms_job_14-2.0-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 14 pg_dbms_job_14 pg_dbms_job_14-1.5-5PGDG.rhel10.aarch64.rpm pgdg 1.5 26.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_dbms_job_14-1.5-5PGDG.rhel10.aarch64.rpm
 {{< /pgext_matrix >}}
 

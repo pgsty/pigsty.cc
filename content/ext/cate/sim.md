@@ -12,10 +12,10 @@ icon: fas fa-user-ninja
 
 | **扩展** | **包** | **版本** | **许可证** | **语言** | **描述** |
 |:---------|:-------|:--------:|:----------:|:--------:|:---------|
-| [`documentdb`](/ext/e/documentdb) | [`documentdb`](https://github.com/documentdb/documentdb) | `0.109` | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 微软DocumentDB的API层 |
-| [`documentdb_core`](/ext/e/documentdb_core) | [`documentdb`](https://github.com/documentdb/documentdb) | `0.109` | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 微软DocumentDB的核心API层实现 |
-| [`documentdb_distributed`](/ext/e/documentdb_distributed) | [`documentdb`](https://github.com/documentdb/documentdb) | `0.109` | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | DocumentDB多节点模式的API层 |
-| [`documentdb_extended_rum`](/ext/e/documentdb_extended_rum) | [`documentdb`](https://github.com/documentdb/documentdb) | `0.109` | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | DocumentDB扩展RUM索引访问方法 |
+| [`documentdb`](/ext/e/documentdb) | [`documentdb`](https://github.com/documentdb/documentdb) | `0.110` | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 微软DocumentDB的API层 |
+| [`documentdb_core`](/ext/e/documentdb_core) | [`documentdb`](https://github.com/documentdb/documentdb) | `0.110` | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 微软DocumentDB的核心API层实现 |
+| [`documentdb_distributed`](/ext/e/documentdb_distributed) | [`documentdb`](https://github.com/documentdb/documentdb) | `0.110` | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | DocumentDB多节点模式的API层 |
+| [`documentdb_extended_rum`](/ext/e/documentdb_extended_rum) | [`documentdb`](https://github.com/documentdb/documentdb) | `0.110` | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | DocumentDB扩展RUM索引访问方法 |
 | [`orafce`](/ext/e/orafce) | [`orafce`](https://github.com/orafce/orafce) | `4.16.5` | <a class="ext-badge ext-badge--license bsd 0clause" href="/ext/license#bsd0clause">BSD 0-Clause</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 模拟 Oracle RDBMS 的一部分函数和包的函数和运算符 |
 | [`pgtt`](/ext/e/pgtt) | [`pgtt`](https://github.com/darold/pgtt) | `4.4` | <a class="ext-badge ext-badge--license isc" href="/ext/license#isc">ISC</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 类似Oracle的全局临时表功能 |
 | [`session_variable`](/ext/e/session_variable) | [`session_variable`](https://github.com/splendiddata/session_variable) | `3.4` | <a class="ext-badge ext-badge--license gpl30" href="/ext/license#gpl30">GPL-3.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | Oracle兼容的会话变量/常量操作函数 |
@@ -28,7 +28,7 @@ icon: fas fa-user-ninja
 | [`gb18030_2022`](/ext/e/gb18030_2022) | [`ivorysql`](https://github.com/IvorySQL/IvorySQL/tree/master/contrib/gb18030_2022) | `1.0` | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 支持 GB18030-2022 与 UTF-8 编码转换 |
 | [`pg_dbms_metadata`](/ext/e/pg_dbms_metadata) | [`pg_dbms_metadata`](https://github.com/HexaCluster/pg_dbms_metadata) | `1.0.0` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> | 添加 Oracle DBMS_METADATA 兼容性支持的扩展 |
 | [`pg_dbms_lock`](/ext/e/pg_dbms_lock) | [`pg_dbms_lock`](https://github.com/HexaCluster/pg_dbms_lock) | `1.0` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> | 为PG添加对 Oracle DBMS_LOCK 的完整兼容性支持 |
-| [`pg_dbms_job`](/ext/e/pg_dbms_job) | [`pg_dbms_job`](https://github.com/MigOpsRepos/pg_dbms_job) | `1.5` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> | 添加 Oracle DBMS_JOB 兼容性支持的扩展 |
+| [`pg_dbms_job`](/ext/e/pg_dbms_job) | [`pg_dbms_job`](https://github.com/MigOpsRepos/pg_dbms_job) | `2.0` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> | 添加 Oracle DBMS_JOB 兼容性支持的扩展 |
 | [`pg_dbms_errlog`](/ext/e/pg_dbms_errlog) | [`pg_dbms_errlog`](https://github.com/HexaCluster/pg_dbms_errlog) | `2.2` | <a class="ext-badge ext-badge--license isc" href="/ext/license#isc">ISC</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 模仿 Oracle DBMS_ERRLOG 模块来记录特定表的DML错误 |
 | [`pg_utl_smtp`](/ext/e/pg_utl_smtp) | [`pg_utl_smtp`](https://github.com/hexacluster/pg_utl_smtp) | `1.0.0` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> | Oracle UTL_SMTP 兼容扩展（基于 plperlu） |
 | [`babelfishpg_common`](/ext/e/babelfishpg_common) | [`babelfish`](https://babelfishpg.org/) | `5.5.0` | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | SQL Server 数据类型兼容扩展 |
@@ -45,7 +45,7 @@ icon: fas fa-user-ninja
 
 ## documentdb {#documentdb}
 
-[**`documentdb`**](/ext/e/documentdb) - `0.109` : 微软DocumentDB的API层
+[**`documentdb`**](/ext/e/documentdb) - `0.110` : 微软DocumentDB的API层
 
 | **条目** | **属性** | **OS** | **x86_64** | **aarch64** |
 |:---:|:---|:---:|:---:|:---:|
@@ -56,6 +56,7 @@ icon: fas fa-user-ninja
 | **语言** | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | **d13** | {{< pgvers "18,17,16,15" >}} | {{< pgvers "18,17,16,15" >}} |
 | **仓库** | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | **u22** | {{< pgvers "18,17,16,15" >}} | {{< pgvers "18,17,16,15" >}} |
 | **协议** | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | **u24** | {{< pgvers "18,17,16,15" >}} | {{< pgvers "18,17,16,15" >}} |
+| | | **u26** | {{< pgvers "18,17,16,15" >}} | {{< pgvers "18,17,16,15" >}} |
 {.ext-table .ext-table--cate}
 
 
@@ -63,7 +64,7 @@ icon: fas fa-user-ninja
 
 ## documentdb_core {#documentdb_core}
 
-[**`documentdb`**](/ext/e/documentdb_core) - `0.109` : 微软DocumentDB的核心API层实现
+[**`documentdb`**](/ext/e/documentdb_core) - `0.110` : 微软DocumentDB的核心API层实现
 
 | **条目** | **属性** | **OS** | **x86_64** | **aarch64** |
 |:---:|:---|:---:|:---:|:---:|
@@ -74,6 +75,7 @@ icon: fas fa-user-ninja
 | **语言** | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | **d13** | {{< pgvers "18,17,16,15" >}} | {{< pgvers "18,17,16,15" >}} |
 | **仓库** | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | **u22** | {{< pgvers "18,17,16,15" >}} | {{< pgvers "18,17,16,15" >}} |
 | **协议** | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | **u24** | {{< pgvers "18,17,16,15" >}} | {{< pgvers "18,17,16,15" >}} |
+| | | **u26** | {{< pgvers "18,17,16,15" >}} | {{< pgvers "18,17,16,15" >}} |
 {.ext-table .ext-table--cate}
 
 
@@ -81,7 +83,7 @@ icon: fas fa-user-ninja
 
 ## documentdb_distributed {#documentdb_distributed}
 
-[**`documentdb`**](/ext/e/documentdb_distributed) - `0.109` : DocumentDB多节点模式的API层
+[**`documentdb`**](/ext/e/documentdb_distributed) - `0.110` : DocumentDB多节点模式的API层
 
 | **条目** | **属性** | **OS** | **x86_64** | **aarch64** |
 |:---:|:---|:---:|:---:|:---:|
@@ -92,6 +94,7 @@ icon: fas fa-user-ninja
 | **语言** | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | **d13** | {{< pgvers "18,17,16,15" >}} | {{< pgvers "18,17,16,15" >}} |
 | **仓库** | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | **u22** | {{< pgvers "18,17,16,15" >}} | {{< pgvers "18,17,16,15" >}} |
 | **协议** | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | **u24** | {{< pgvers "18,17,16,15" >}} | {{< pgvers "18,17,16,15" >}} |
+| | | **u26** | {{< pgvers "18,17,16,15" >}} | {{< pgvers "18,17,16,15" >}} |
 {.ext-table .ext-table--cate}
 
 
@@ -99,7 +102,7 @@ icon: fas fa-user-ninja
 
 ## documentdb_extended_rum {#documentdb_extended_rum}
 
-[**`documentdb`**](/ext/e/documentdb_extended_rum) - `0.109` : DocumentDB扩展RUM索引访问方法
+[**`documentdb`**](/ext/e/documentdb_extended_rum) - `0.110` : DocumentDB扩展RUM索引访问方法
 
 | **条目** | **属性** | **OS** | **x86_64** | **aarch64** |
 |:---:|:---|:---:|:---:|:---:|
@@ -110,6 +113,7 @@ icon: fas fa-user-ninja
 | **语言** | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | **d13** | {{< pgvers "18,17,16,15" >}} | {{< pgvers "18,17,16,15" >}} |
 | **仓库** | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | **u22** | {{< pgvers "18,17,16,15" >}} | {{< pgvers "18,17,16,15" >}} |
 | **协议** | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | **u24** | {{< pgvers "18,17,16,15" >}} | {{< pgvers "18,17,16,15" >}} |
+| | | **u26** | {{< pgvers "18,17,16,15" >}} | {{< pgvers "18,17,16,15" >}} |
 {.ext-table .ext-table--cate}
 
 
@@ -128,6 +132,7 @@ icon: fas fa-user-ninja
 | **语言** | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | **d13** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
 | **仓库** | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | **u22** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
 | **协议** | <a class="ext-badge ext-badge--license bsd 0clause" href="/ext/license#bsd0clause">BSD 0-Clause</a> | **u24** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+| | | **u26** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
 {.ext-table .ext-table--cate}
 
 
@@ -146,6 +151,7 @@ icon: fas fa-user-ninja
 | **语言** | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | **d13** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
 | **仓库** | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | **u22** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
 | **协议** | <a class="ext-badge ext-badge--license isc" href="/ext/license#isc">ISC</a> | **u24** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+| | | **u26** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
 {.ext-table .ext-table--cate}
 
 
@@ -164,6 +170,7 @@ icon: fas fa-user-ninja
 | **语言** | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | **d13** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
 | **仓库** | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | **u22** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
 | **协议** | <a class="ext-badge ext-badge--license gpl30" href="/ext/license#gpl30">GPL-3.0</a> | **u24** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+| | | **u26** | - | - |
 {.ext-table .ext-table--cate}
 
 
@@ -182,6 +189,7 @@ icon: fas fa-user-ninja
 | **语言** | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | **d13** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
 | **仓库** | <a class="ext-badge ext-badge--repo mixed" href="/ext/repo#mixed">MIXED</a> | **u22** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
 | **协议** | <a class="ext-badge ext-badge--license isc" href="/ext/license#isc">ISC</a> | **u24** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+| | | **u26** | - | - |
 {.ext-table .ext-table--cate}
 
 
@@ -200,6 +208,7 @@ icon: fas fa-user-ninja
 | **语言** | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | **d13** | {{< pgvers "18" >}} | {{< pgvers "18" >}} |
 | **仓库** | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | **u22** | {{< pgvers "18" >}} | {{< pgvers "18" >}} |
 | **协议** | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | **u24** | {{< pgvers "18" >}} | {{< pgvers "18" >}} |
+| | | **u26** | {{< pgvers "18" >}} | {{< pgvers "18" >}} |
 {.ext-table .ext-table--cate}
 
 
@@ -218,6 +227,7 @@ icon: fas fa-user-ninja
 | **语言** | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | **d13** | {{< pgvers "18" >}} | {{< pgvers "18" >}} |
 | **仓库** | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | **u22** | {{< pgvers "18" >}} | {{< pgvers "18" >}} |
 | **协议** | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | **u24** | {{< pgvers "18" >}} | {{< pgvers "18" >}} |
+| | | **u26** | {{< pgvers "18" >}} | {{< pgvers "18" >}} |
 {.ext-table .ext-table--cate}
 
 
@@ -236,6 +246,7 @@ icon: fas fa-user-ninja
 | **语言** | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | **d13** | {{< pgvers "18" >}} | {{< pgvers "18" >}} |
 | **仓库** | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | **u22** | {{< pgvers "18" >}} | {{< pgvers "18" >}} |
 | **协议** | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | **u24** | {{< pgvers "18" >}} | {{< pgvers "18" >}} |
+| | | **u26** | {{< pgvers "18" >}} | {{< pgvers "18" >}} |
 {.ext-table .ext-table--cate}
 
 
@@ -254,6 +265,7 @@ icon: fas fa-user-ninja
 | **语言** | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | **d13** | {{< pgvers "18" >}} | {{< pgvers "18" >}} |
 | **仓库** | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | **u22** | {{< pgvers "18" >}} | {{< pgvers "18" >}} |
 | **协议** | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | **u24** | {{< pgvers "18" >}} | {{< pgvers "18" >}} |
+| | | **u26** | {{< pgvers "18" >}} | {{< pgvers "18" >}} |
 {.ext-table .ext-table--cate}
 
 
@@ -272,6 +284,7 @@ icon: fas fa-user-ninja
 | **语言** | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | **d13** | {{< pgvers "18" >}} | {{< pgvers "18" >}} |
 | **仓库** | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | **u22** | {{< pgvers "18" >}} | {{< pgvers "18" >}} |
 | **协议** | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | **u24** | {{< pgvers "18" >}} | {{< pgvers "18" >}} |
+| | | **u26** | {{< pgvers "18" >}} | {{< pgvers "18" >}} |
 {.ext-table .ext-table--cate}
 
 
@@ -290,6 +303,7 @@ icon: fas fa-user-ninja
 | **语言** | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | **d13** | {{< pgvers "18" >}} | {{< pgvers "18" >}} |
 | **仓库** | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | **u22** | {{< pgvers "18" >}} | {{< pgvers "18" >}} |
 | **协议** | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | **u24** | {{< pgvers "18" >}} | {{< pgvers "18" >}} |
+| | | **u26** | {{< pgvers "18" >}} | {{< pgvers "18" >}} |
 {.ext-table .ext-table--cate}
 
 
@@ -308,6 +322,7 @@ icon: fas fa-user-ninja
 | **语言** | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> | **d13** | - | - |
 | **仓库** | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | **u22** | - | - |
 | **协议** | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | **u24** | - | - |
+| | | **u26** | - | - |
 {.ext-table .ext-table--cate}
 
 
@@ -326,6 +341,7 @@ icon: fas fa-user-ninja
 | **语言** | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> | **d13** | - | - |
 | **仓库** | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | **u22** | - | - |
 | **协议** | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | **u24** | - | - |
+| | | **u26** | - | - |
 {.ext-table .ext-table--cate}
 
 
@@ -333,7 +349,7 @@ icon: fas fa-user-ninja
 
 ## pg_dbms_job {#pg_dbms_job}
 
-[**`pg_dbms_job`**](/ext/e/pg_dbms_job) - `1.5` : 添加 Oracle DBMS_JOB 兼容性支持的扩展
+[**`pg_dbms_job`**](/ext/e/pg_dbms_job) - `2.0` : 添加 Oracle DBMS_JOB 兼容性支持的扩展
 
 | **条目** | **属性** | **OS** | **x86_64** | **aarch64** |
 |:---:|:---|:---:|:---:|:---:|
@@ -344,6 +360,7 @@ icon: fas fa-user-ninja
 | **语言** | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> | **d13** | - | - |
 | **仓库** | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | **u22** | - | - |
 | **协议** | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | **u24** | - | - |
+| | | **u26** | - | - |
 {.ext-table .ext-table--cate}
 
 
@@ -362,6 +379,7 @@ icon: fas fa-user-ninja
 | **语言** | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | **d13** | - | - |
 | **仓库** | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | **u22** | - | - |
 | **协议** | <a class="ext-badge ext-badge--license isc" href="/ext/license#isc">ISC</a> | **u24** | - | - |
+| | | **u26** | - | - |
 {.ext-table .ext-table--cate}
 
 
@@ -380,6 +398,7 @@ icon: fas fa-user-ninja
 | **语言** | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> | **d13** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
 | **仓库** | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | **u22** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
 | **协议** | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | **u24** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+| | | **u26** | - | - |
 {.ext-table .ext-table--cate}
 
 
@@ -398,6 +417,7 @@ icon: fas fa-user-ninja
 | **语言** | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | **d13** | {{< pgvers "17" >}} | {{< pgvers "17" >}} |
 | **仓库** | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | **u22** | {{< pgvers "17" >}} | {{< pgvers "17" >}} |
 | **协议** | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | **u24** | {{< pgvers "17" >}} | {{< pgvers "17" >}} |
+| | | **u26** | {{< pgvers "17" >}} | {{< pgvers "17" >}} |
 {.ext-table .ext-table--cate}
 
 
@@ -416,6 +436,7 @@ icon: fas fa-user-ninja
 | **语言** | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | **d13** | {{< pgvers "17" >}} | {{< pgvers "17" >}} |
 | **仓库** | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | **u22** | {{< pgvers "17" >}} | {{< pgvers "17" >}} |
 | **协议** | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | **u24** | {{< pgvers "17" >}} | {{< pgvers "17" >}} |
+| | | **u26** | {{< pgvers "17" >}} | {{< pgvers "17" >}} |
 {.ext-table .ext-table--cate}
 
 
@@ -434,6 +455,7 @@ icon: fas fa-user-ninja
 | **语言** | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | **d13** | {{< pgvers "17" >}} | {{< pgvers "17" >}} |
 | **仓库** | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | **u22** | {{< pgvers "17" >}} | {{< pgvers "17" >}} |
 | **协议** | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | **u24** | {{< pgvers "17" >}} | {{< pgvers "17" >}} |
+| | | **u26** | {{< pgvers "17" >}} | {{< pgvers "17" >}} |
 {.ext-table .ext-table--cate}
 
 
@@ -452,6 +474,7 @@ icon: fas fa-user-ninja
 | **语言** | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | **d13** | {{< pgvers "17" >}} | {{< pgvers "17" >}} |
 | **仓库** | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | **u22** | {{< pgvers "17" >}} | {{< pgvers "17" >}} |
 | **协议** | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | **u24** | {{< pgvers "17" >}} | {{< pgvers "17" >}} |
+| | | **u26** | {{< pgvers "17" >}} | {{< pgvers "17" >}} |
 {.ext-table .ext-table--cate}
 
 
@@ -470,6 +493,7 @@ icon: fas fa-user-ninja
 | **语言** | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | **d13** | - | - |
 | **仓库** | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | **u22** | {{< pgvers "17" >}} | {{< pgvers "17" >}} |
 | **协议** | <a class="ext-badge ext-badge--license agpl30" href="/ext/license#agpl30">AGPL-3.0</a> | **u24** | {{< pgvers "17" >}} | {{< pgvers "17" >}} |
+| | | **u26** | - | - |
 {.ext-table .ext-table--cate}
 
 
@@ -488,6 +512,7 @@ icon: fas fa-user-ninja
 | **语言** | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | **d13** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
 | **仓库** | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | **u22** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
 | **协议** | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | **u24** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+| | | **u26** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
 {.ext-table .ext-table--cate}
 
 
@@ -506,5 +531,6 @@ icon: fas fa-user-ninja
 | **语言** | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | **d13** | {{< pgvers "14" >}} | {{< pgvers "14" >}} |
 | **仓库** | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | **u22** | {{< pgvers "14" >}} | {{< pgvers "14" >}} |
 | **协议** | <a class="ext-badge ext-badge--license gpl30" href="/ext/license#gpl30">GPL-3.0</a> | **u24** | {{< pgvers "14" >}} | {{< pgvers "14" >}} |
+| | | **u26** | {{< pgvers "14" >}} | {{< pgvers "14" >}} |
 {.ext-table .ext-table--cate}
 

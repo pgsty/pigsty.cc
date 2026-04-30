@@ -2,7 +2,7 @@
 title: Pigsty 扩展目录
 linkTitle: Pigsty 扩展目录
 description: >
-  扩展是 PostgreSQL 的灵魂所在，Pigsty 制作、收录、整合了 507 个 PG 生态扩展，供用户开箱即用。
+  扩展是 PostgreSQL 的灵魂所在，Pigsty 制作、收录、整合了 508 个 PG 生态扩展，供用户开箱即用。
 weight: 20
 outputs:
   - HTML
@@ -14,8 +14,8 @@ cascade:
 
 Pigsty 提供了以下三样基础设施，帮助用户更好的利用 PostgreSQL 扩展生态系统的协同超能力：
 
-- [**扩展目录**](/ext/list)：查阅 [**507**](/ext/list) 个扩展插件的详细信息，使用方法，元数据，下载链接与文档
-- [**扩展仓库**](/docs/repo/pgsql)：获取预先打包的 RPM/DEB 二进制包，在 [**14 个 Linux 系统**](/ext/os) 上可用
+- [**扩展目录**](/ext/list)：查阅 [**508**](/ext/list) 个扩展插件的详细信息，使用方法，元数据，下载链接与文档
+- [**扩展仓库**](/docs/repo/pgsql)：获取预先打包的 RPM/DEB 二进制包，在 [**16 个 Linux 系统**](/ext/os) 上可用
 - [**包管理器**](/docs/pig)：使用 [**`pig`**](/docs/pig) 命令行工具，屏蔽复杂度与操作系统与架构差异
 
 ```bash
@@ -34,7 +34,7 @@ pig install pg_duckdb -v 18                   # 例：针对 PG 18 安装 pg_duc
 
 ## 核心特点
 
-- **数量**：无与伦比的扩展数量：**507** 个可用扩展，为 PG 扩展生态之最
+- **数量**：无与伦比的扩展数量：**508** 个可用扩展，为 PG 扩展生态之最
 - **质量**：原生 Linux RPM/DEB 包，完全兼容 PGDG 打包规范
 - **易用**：提供包管理器 [**`pig`**](/docs/pig)，屏蔽操作系统与架构差异，开箱即用
 - **兼容**：扩展完全兼容 PGDG 打包规范，可与 PGDG 仓库无缝混用
@@ -48,9 +48,9 @@ pig install pg_duckdb -v 18                   # 例：针对 PG 18 安装 pg_duc
 
 | **分类** | **All** | **PGDG** | **PIGSTY** | **CONTRIB** | | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
 |:------:|:------:|:------:|:------:|:------:|:---:|:------:|:------:|:------:|:------:|:------:|
-| **ALL** | 507 | 162 | 327 | 71 | | 484 | 491 | 482 | 476 | 460 |
-| **EL** | 502 | 129 | 302 | 71 | | 475 | 485 | 477 | 470 | 454 |
-| **Debian** | 492 | 107 | 314 | 71 | | 469 | 477 | 467 | 460 | 444 |
+| **ALL** | 508 | 162 | 328 | 71 | | 485 | 492 | 483 | 477 | 461 |
+| **EL** | 503 | 129 | 303 | 71 | | 476 | 486 | 478 | 471 | 455 |
+| **Debian** | 493 | 107 | 315 | 71 | | 470 | 478 | 468 | 461 | 445 |
 {.ext-table}
 
 > 详见：[扩展列表](/ext/list)，[RPM 列表](/ext/rpm)，[DEB 列表](/ext/deb)，[归属仓库](/ext/repo)
@@ -71,7 +71,7 @@ pig install pg_duckdb -v 18                   # 例：针对 PG 18 安装 pg_duc
 | <a class="ext-badge ext-badge--cate lang" href="/ext/cate/lang">LANG</a> | [`pg_tle`](/ext/e/pg_tle)  [`plv8`](/ext/e/plv8)  [`pljs`](/ext/e/pljs)  [`pllua`](/ext/e/pllua)  [`plprql`](/ext/e/plprql)  [`pldebugger`](/ext/e/pldbgapi)  [`plpgsql_check`](/ext/e/plpgsql_check)  [`plprofiler`](/ext/e/plprofiler)  [`plsh`](/ext/e/plsh)  [`pljava`](/ext/e/pljava)  [`plr`](/ext/e/plr)  [`plxslt`](/ext/e/plxslt)  [`pgtap`](/ext/e/pgtap)  [`faker`](/ext/e/faker)  [`dbt2`](/ext/e/dbt2)  [`pg_regresql`](/ext/e/pg_regresql) |
 | <a class="ext-badge ext-badge--cate type" href="/ext/cate/type">TYPE</a> | [`pg_prefix`](/ext/e/prefix)  [`pg_semver`](/ext/e/semver)  [`pg_text_semver`](/ext/e/pg_text_semver)  [`pgunit`](/ext/e/unit)  [`pgpdf`](/ext/e/pgpdf)  [`pglite_fusion`](/ext/e/pglite_fusion)  [`md5hash`](/ext/e/md5hash)  [`asn1oid`](/ext/e/asn1oid)  [`pg_roaringbitmap`](/ext/e/roaringbitmap)  [`pgfaceting`](/ext/e/pgfaceting)  [`pgsphere`](/ext/e/pg_sphere)  [`pg_country`](/ext/e/country)  [`pg_xenophile`](/ext/e/pg_xenophile)  [`pg_currency`](/ext/e/currency)  [`pgcollection`](/ext/e/collection)  [`pgmp`](/ext/e/pgmp)  [`numeral`](/ext/e/numeral)  [`pg_rational`](/ext/e/pg_rational)  [`pguint`](/ext/e/uint)  [`pg_uint128`](/ext/e/uint128)  [`hashtypes`](/ext/e/hashtypes)  [`ip4r`](/ext/e/ip4r)  [`pg_duration`](/ext/e/pg_duration)  [`pg_uri`](/ext/e/uri)  [`pg_emailaddr`](/ext/e/emailaddr)  [`pg_acl`](/ext/e/acl)  [`debversion`](/ext/e/debversion)  [`pg_rrule`](/ext/e/pg_rrule)  [`pgcalendar`](/ext/e/pgcalendar)  [`timestamp9`](/ext/e/timestamp9)  [`pgbson`](/ext/e/pgbson)  [`chkpass`](/ext/e/chkpass) |
 | <a class="ext-badge ext-badge--cate util" href="/ext/cate/util">UTIL</a> | [`pg_gzip`](/ext/e/gzip)  [`pg_bzip`](/ext/e/bzip)  [`pg_zstd`](/ext/e/zstd)  [`pg_http`](/ext/e/http)  [`pg_net`](/ext/e/pg_net)  [`pg_curl`](/ext/e/pg_curl)  [`pg_retry`](/ext/e/pg_retry)  [`pg_fsql`](/ext/e/pg_fsql)  [`pg_protobuf`](/ext/e/pg_protobuf)  [`pgproto`](/ext/e/pgproto)  [`pglock`](/ext/e/pglock)  [`pgjq`](/ext/e/pgjq)  [`pgjwt`](/ext/e/pgjwt)  [`pg_smtp_client`](/ext/e/pg_smtp_client)  [`pg_html5_email_address`](/ext/e/pg_html5_email_address)  [`url_encode`](/ext/e/url_encode)  [`pgsql_tweaks`](/ext/e/pgsql_tweaks)  [`pg_extra_time`](/ext/e/pg_extra_time)  [`pgpcre`](/ext/e/pgpcre)  [`re2`](/ext/e/re2)  [`icu_ext`](/ext/e/icu_ext)  [`pgqr`](/ext/e/pgqr)  [`pg_envvar`](/ext/e/envvar)  [`pg_byteamagic`](/ext/e/byteamagic)  [`floatfile`](/ext/e/floatfile)  [`external_file`](/ext/e/external_file)  [`pg_render`](/ext/e/pg_render)  [`pg_readme`](/ext/e/pg_readme)  [`ddl_historization`](/ext/e/ddl_historization)  [`data_historization`](/ext/e/data_historization)  [`pg_schedoc`](/ext/e/schedoc)  [`pg_isok`](/ext/e/pg_isok)  [`pg_hashlib`](/ext/e/hashlib)  [`pg_xxhash`](/ext/e/xxhash)  [`shacrypt`](/ext/e/shacrypt)  [`cryptint`](/ext/e/cryptint)  [`pg_ecdsa`](/ext/e/pguecc)  [`pgsparql`](/ext/e/sparql) |
-| <a class="ext-badge ext-badge--cate func" href="/ext/cate/func">FUNC</a> | [`pg_idkit`](/ext/e/pg_idkit)  [`pgx_ulid`](/ext/e/pgx_ulid)  [`pg_uuidv7`](/ext/e/pg_uuidv7)  [`permuteseq`](/ext/e/permuteseq)  [`pg_hashids`](/ext/e/pg_hashids)  [`pg_slug_gen`](/ext/e/pg_slug_gen)  [`sequential_uuids`](/ext/e/sequential_uuids)  [`pg_typeid`](/ext/e/typeid)  [`snowflake`](/ext/e/snowflake)  [`topn`](/ext/e/topn)  [`quantile`](/ext/e/quantile)  [`lower_quantile`](/ext/e/lower_quantile)  [`count_distinct`](/ext/e/count_distinct)  [`omnisketch`](/ext/e/omnisketch)  [`ddsketch`](/ext/e/ddsketch)  [`vasco`](/ext/e/vasco)  [`pgxicor`](/ext/e/xicor)  [`pg_weighted_statistics`](/ext/e/weighted_statistics)  [`datasketches`](/ext/e/datasketches)  [`tdigest`](/ext/e/tdigest)  [`first_last_agg`](/ext/e/first_last_agg)  [`extra_window_functions`](/ext/e/extra_window_functions)  [`floatvec`](/ext/e/floatvec)  [`aggs_for_vecs`](/ext/e/aggs_for_vecs)  [`aggs_for_arrays`](/ext/e/aggs_for_arrays)  [`pg_csv`](/ext/e/pg_csv)  [`pg_arraymath`](/ext/e/arraymath)  [`pg_math`](/ext/e/pg_math)  [`pg_random`](/ext/e/random)  [`pg_base36`](/ext/e/base36)  [`pg_base62`](/ext/e/base62)  [`pg_base58`](/ext/e/pg_base58)  [`pg_financial`](/ext/e/financial)  [`pg_convert`](/ext/e/convert)  [`parray_gin`](/ext/e/parray_gin) |
+| <a class="ext-badge ext-badge--cate func" href="/ext/cate/func">FUNC</a> | [`pg_idkit`](/ext/e/pg_idkit)  [`pgx_ulid`](/ext/e/pgx_ulid)  [`pg_uuidv7`](/ext/e/pg_uuidv7)  [`permuteseq`](/ext/e/permuteseq)  [`pg_hashids`](/ext/e/pg_hashids)  [`pg_slug_gen`](/ext/e/pg_slug_gen)  [`sequential_uuids`](/ext/e/sequential_uuids)  [`pg_typeid`](/ext/e/typeid)  [`snowflake`](/ext/e/snowflake)  [`topn`](/ext/e/topn)  [`quantile`](/ext/e/quantile)  [`lower_quantile`](/ext/e/lower_quantile)  [`count_distinct`](/ext/e/count_distinct)  [`omnisketch`](/ext/e/omnisketch)  [`ddsketch`](/ext/e/ddsketch)  [`vasco`](/ext/e/vasco)  [`pgxicor`](/ext/e/xicor)  [`pg_weighted_statistics`](/ext/e/weighted_statistics)  [`datasketches`](/ext/e/datasketches)  [`tdigest`](/ext/e/tdigest)  [`first_last_agg`](/ext/e/first_last_agg)  [`extra_window_functions`](/ext/e/extra_window_functions)  [`floatvec`](/ext/e/floatvec)  [`aggs_for_vecs`](/ext/e/aggs_for_vecs)  [`aggs_for_arrays`](/ext/e/aggs_for_arrays)  [`pg_csv`](/ext/e/pg_csv)  [`pg_arraymath`](/ext/e/arraymath)  [`pg_math`](/ext/e/pg_math)  [`pg_random`](/ext/e/random)  [`pg_base36`](/ext/e/base36)  [`pg_base62`](/ext/e/base62)  [`pg_base58`](/ext/e/pg_base58)  [`pg_financial`](/ext/e/financial)  [`pg_accumulator`](/ext/e/pg_accumulator)  [`pg_convert`](/ext/e/convert)  [`parray_gin`](/ext/e/parray_gin) |
 | <a class="ext-badge ext-badge--cate admin" href="/ext/cate/admin">ADMIN</a> | [`pg_repack`](/ext/e/pg_repack)  [`pg_rewrite`](/ext/e/pg_rewrite)  [`pg_query_rewrite`](/ext/e/pg_query_rewrite)  [`pg_squeeze`](/ext/e/pg_squeeze)  [`pg_dirtyread`](/ext/e/pg_dirtyread)  [`pgfincore`](/ext/e/pgfincore)  [`pg_cooldown`](/ext/e/pg_cooldown)  [`pg_ddlx`](/ext/e/ddlx)  [`pglinter`](/ext/e/pglinter)  [`pg_prioritize`](/ext/e/prioritize)  [`pg_checksums`](/ext/e/pg_checksums)  [`pg_readonly`](/ext/e/pg_readonly)  [`pgdd`](/ext/e/pgdd)  [`pg_permissions`](/ext/e/pg_permissions)  [`pgautofailover`](/ext/e/pgautofailover)  [`pg_catcheck`](/ext/e/pg_catcheck)  [`preprepare`](/ext/e/pre_prepare)  [`pg_upless`](/ext/e/pg_upless)  [`pgcozy`](/ext/e/pgcozy)  [`pg_orphaned`](/ext/e/pg_orphaned)  [`pg_crash`](/ext/e/pg_crash)  [`pg_cheat_funcs`](/ext/e/pg_cheat_funcs)  [`pg_fio`](/ext/e/fio)  [`pg_qos`](/ext/e/qos)  [`pg_savior`](/ext/e/pg_savior)  [`safeupdate`](/ext/e/safeupdate)  [`pg_strict`](/ext/e/pg_strict)  [`pg_drop_events`](/ext/e/pg_drop_events)  [`table_log`](/ext/e/table_log)  [`pgelog`](/ext/e/pgelog)  [`pgagent`](/ext/e/pgagent)  [`pgpool`](/ext/e/pgpool_adm) |
 | <a class="ext-badge ext-badge--cate stat" href="/ext/cate/stat">STAT</a> | [`pg_profile`](/ext/e/pg_profile)  [`pg_tracing`](/ext/e/pg_tracing)  [`pg_stat_ch`](/ext/e/pg_stat_ch)  [`pg_show_plans`](/ext/e/pg_show_plans)  [`pg_stat_kcache`](/ext/e/pg_stat_kcache)  [`pg_stat_monitor`](/ext/e/pg_stat_monitor)  [`pg_qualstats`](/ext/e/pg_qualstats)  [`pg_store_plans`](/ext/e/pg_store_plans)  [`pg_track_settings`](/ext/e/pg_track_settings)  [`pg_track_optimizer`](/ext/e/pg_track_optimizer)  [`pg_wait_sampling`](/ext/e/pg_wait_sampling)  [`pg_datasentinel`](/ext/e/pg_datasentinel)  [`pgsentinel`](/ext/e/pgsentinel)  [`system_stats`](/ext/e/system_stats)  [`pg_meta`](/ext/e/meta)  [`pgnodemx`](/ext/e/pgnodemx)  [`pg_sqlog`](/ext/e/pg_sqlog)  [`bgw_replstatus`](/ext/e/bgw_replstatus)  [`pgmeminfo`](/ext/e/pgmeminfo)  [`toastinfo`](/ext/e/toastinfo)  [`pg_explain_ui`](/ext/e/explain_ui)  [`pg_relusage`](/ext/e/pg_relusage)  [`pagevis`](/ext/e/pagevis)  [`powa`](/ext/e/powa) |
 | <a class="ext-badge ext-badge--cate sec" href="/ext/cate/sec">SEC</a> | [`passwordcheck_cracklib`](/ext/e/passwordcheck_cracklib)  [`supautils`](/ext/e/supautils)  [`pgsodium`](/ext/e/pgsodium)  [`column_encrypt`](/ext/e/column_encrypt)  [`pg_vault`](/ext/e/supabase_vault)  [`pg_session_jwt`](/ext/e/pg_session_jwt)  [`pg_anon`](/ext/e/anon)  [`pgsmcrypto`](/ext/e/pgsmcrypto)  [`pg_enigma`](/ext/e/pg_enigma)  [`pgaudit`](/ext/e/pgaudit)  [`pgauditlogtofile`](/ext/e/pgauditlogtofile)  [`pg_auditor`](/ext/e/pg_auditor)  [`logerrors`](/ext/e/logerrors)  [`pg_auth_mon`](/ext/e/pg_auth_mon)  [`pg_jobmon`](/ext/e/pg_jobmon)  [`credcheck`](/ext/e/credcheck)  [`pgcryptokey`](/ext/e/pgcryptokey)  [`pg_pwhash`](/ext/e/pg_pwhash)  [`login_hook`](/ext/e/login_hook)  [`set_user`](/ext/e/set_user)  [`pg_snakeoil`](/ext/e/pg_snakeoil)  [`pgextwlist`](/ext/e/pgextwlist)  [`pg_command_fw`](/ext/e/pg_command_fw)  [`block_copy_command`](/ext/e/block_copy_command)  [`sslutils`](/ext/e/sslutils)  [`pg_noset`](/ext/e/noset)  [`pg_tde`](/ext/e/pg_tde) |
@@ -105,6 +105,7 @@ pig install pg_duckdb -v 18                   # 例：针对 PG 18 安装 pg_duc
 | `Debian 13` | `13` | [`d13.x86_64`](/ext/os/d13.x86_64) | [`d13.aarch64`](/ext/os/d13.aarch64) | {{< pgvers "18,17,16,15,14" >}} |
 | `Ubuntu 22.04` | `22.04` | [`u22.x86_64`](/ext/os/u22.x86_64) | [`u22.aarch64`](/ext/os/u22.aarch64) | {{< pgvers "18,17,16,15,14" >}} |
 | `Ubuntu 24.04` | `24.04` | [`u24.x86_64`](/ext/os/u24.x86_64) | [`u24.aarch64`](/ext/os/u24.aarch64) | {{< pgvers "18,17,16,15,14" >}} |
+| `Ubuntu 26.04` | `26.04` | [`u26.x86_64`](/ext/os/u26.x86_64) | [`u26.aarch64`](/ext/os/u26.aarch64) | {{< pgvers "18,17,16,15,14" >}} |
 {.ext-table}
 
 > 详见：[操作系统](/ext/os)，[RPM 列表](/ext/rpm)，[DEB 列表](/ext/deb)

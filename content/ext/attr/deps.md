@@ -5,11 +5,11 @@ description: "具有扩展依赖关系的 PostgreSQL 扩展"
 weight: 30
 ---
 
-共有 **105** 个扩展依赖其他扩展，**58** 个扩展被其他扩展所依赖。
+共有 **106** 个扩展依赖其他扩展，**58** 个扩展被其他扩展所依赖。
 
 ## 上游依赖
 
-以下 **105** 个扩展需要先安装其他扩展才能使用：
+以下 **106** 个扩展需要先安装其他扩展才能使用：
 
 | **扩展名** | **上游依赖** | **描述** |
 |:-----------|:-------------|:---------|
@@ -93,6 +93,7 @@ weight: 30
 | [`data_historization`](/ext/e/data_historization) | [`plpgsql`](/ext/e/plpgsql) | 用SQL将数据变更历史保存到分区表中 |
 | [`schedoc`](/ext/e/schedoc) | [`ddl_historization`](/ext/e/ddl_historization) | 在Django与DBT之间通过注释文档交换元数据 |
 | [`sparql`](/ext/e/sparql) | [`plperl`](/ext/e/plperl) [`plperlu`](/ext/e/plperlu) | 使用SQL查询SPARQL数据源 |
+| [`pg_accumulator`](/ext/e/pg_accumulator) | [`plpgsql`](/ext/e/plpgsql) | PostgreSQL 中用于余额与周转跟踪的累积寄存器 |
 | [`pgautofailover`](/ext/e/pgautofailover) | [`btree_gist`](/ext/e/btree_gist) | PG 自动故障迁移 |
 | [`pg_upless`](/ext/e/pg_upless) | [`plpgsql`](/ext/e/plpgsql) | 检测表上的无用UPDATE |
 | [`pgcozy`](/ext/e/pgcozy) | [`pg_buffercache`](/ext/e/pg_buffercache) [`pg_prewarm`](/ext/e/pg_prewarm) | 根据先前的pg_buffercache快照预热内存缓冲区 |

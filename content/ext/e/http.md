@@ -64,6 +64,8 @@ weight: 4070
 | u22.aarch64 | AVAIL PGDG 1.7.0 1 | AVAIL PGDG 1.7.0 1 | AVAIL PGDG 1.7.0 1 | AVAIL PGDG 1.7.0 1 | AVAIL PGDG 1.7.0 1 |
 | u24.x86_64 | AVAIL PGDG 1.7.0 1 | AVAIL PGDG 1.7.0 1 | AVAIL PGDG 1.7.0 1 | AVAIL PGDG 1.7.0 1 | AVAIL PGDG 1.7.0 1 |
 | u24.aarch64 | AVAIL PGDG 1.7.0 1 | AVAIL PGDG 1.7.0 1 | AVAIL PGDG 1.7.0 1 | AVAIL PGDG 1.7.0 1 | AVAIL PGDG 1.7.0 1 |
+| u26.x86_64 | AVAIL PGDG 1.7.0 1 | AVAIL PGDG 1.7.0 1 | AVAIL PGDG 1.7.0 1 | AVAIL PGDG 1.7.0 1 | AVAIL PGDG 1.7.0 1 |
+| u26.aarch64 | AVAIL PGDG 1.7.0 1 | AVAIL PGDG 1.7.0 1 | AVAIL PGDG 1.7.0 1 | AVAIL PGDG 1.7.0 1 | AVAIL PGDG 1.7.0 1 |
 @ el8.x86_64 18 pg_http_18 pg_http_18-1.7.0-1PIGSTY.el8.x86_64.rpm pigsty 1.7.0 29.0KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_http_18-1.7.0-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 18 pg_http_18 pg_http_18-1.7.0-1PIGSTY.el8.aarch64.rpm pigsty 1.7.0 28.3KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_http_18-1.7.0-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 18 pg_http_18 pg_http_18-1.7.0-1PIGSTY.el9.x86_64.rpm pigsty 1.7.0 29.1KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_http_18-1.7.0-1PIGSTY.el9.x86_64.rpm
@@ -78,6 +80,8 @@ weight: 4070
 @ u22.aarch64 18 postgresql-18-http postgresql-18-http_1.7.0-3.pgdg22.04+1_arm64.deb pgdg 1.7.0 43.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsql-http/postgresql-18-http_1.7.0-3.pgdg22.04+1_arm64.deb
 @ u24.x86_64 18 postgresql-18-http postgresql-18-http_1.7.0-3.pgdg24.04+1_amd64.deb pgdg 1.7.0 44.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsql-http/postgresql-18-http_1.7.0-3.pgdg24.04+1_amd64.deb
 @ u24.aarch64 18 postgresql-18-http postgresql-18-http_1.7.0-3.pgdg24.04+1_arm64.deb pgdg 1.7.0 43.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsql-http/postgresql-18-http_1.7.0-3.pgdg24.04+1_arm64.deb
+@ u26.x86_64 18 postgresql-18-http postgresql-18-http_1.7.0-3.pgdg26.04+1_amd64.deb pgdg 1.7.0 51.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsql-http/postgresql-18-http_1.7.0-3.pgdg26.04+1_amd64.deb
+@ u26.aarch64 18 postgresql-18-http postgresql-18-http_1.7.0-3.pgdg26.04+1_arm64.deb pgdg 1.7.0 49.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsql-http/postgresql-18-http_1.7.0-3.pgdg26.04+1_arm64.deb
 @ el8.x86_64 17 pg_http_17 pg_http_17-1.7.0-1PIGSTY.el8.x86_64.rpm pigsty 1.7.0 29.1KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_http_17-1.7.0-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 17 pg_http_17 pg_http_17-1.7.0-1PIGSTY.el8.aarch64.rpm pigsty 1.7.0 28.3KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_http_17-1.7.0-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 17 pg_http_17 pg_http_17-1.7.0-1PIGSTY.el9.x86_64.rpm pigsty 1.7.0 29.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_http_17-1.7.0-1PIGSTY.el9.x86_64.rpm
@@ -92,6 +96,8 @@ weight: 4070
 @ u22.aarch64 17 postgresql-17-http postgresql-17-http_1.7.0-3.pgdg22.04+1_arm64.deb pgdg 1.7.0 47.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsql-http/postgresql-17-http_1.7.0-3.pgdg22.04+1_arm64.deb
 @ u24.x86_64 17 postgresql-17-http postgresql-17-http_1.7.0-3.pgdg24.04+1_amd64.deb pgdg 1.7.0 44.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsql-http/postgresql-17-http_1.7.0-3.pgdg24.04+1_amd64.deb
 @ u24.aarch64 17 postgresql-17-http postgresql-17-http_1.7.0-3.pgdg24.04+1_arm64.deb pgdg 1.7.0 43.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsql-http/postgresql-17-http_1.7.0-3.pgdg24.04+1_arm64.deb
+@ u26.x86_64 17 postgresql-17-http postgresql-17-http_1.7.0-3.pgdg26.04+1_amd64.deb pgdg 1.7.0 51.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsql-http/postgresql-17-http_1.7.0-3.pgdg26.04+1_amd64.deb
+@ u26.aarch64 17 postgresql-17-http postgresql-17-http_1.7.0-3.pgdg26.04+1_arm64.deb pgdg 1.7.0 50.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsql-http/postgresql-17-http_1.7.0-3.pgdg26.04+1_arm64.deb
 @ el8.x86_64 16 pg_http_16 pg_http_16-1.7.0-1PIGSTY.el8.x86_64.rpm pigsty 1.7.0 29.1KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_http_16-1.7.0-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 16 pg_http_16 pg_http_16-1.7.0-1PIGSTY.el8.aarch64.rpm pigsty 1.7.0 28.3KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_http_16-1.7.0-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 16 pg_http_16 pg_http_16-1.7.0-1PIGSTY.el9.x86_64.rpm pigsty 1.7.0 29.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_http_16-1.7.0-1PIGSTY.el9.x86_64.rpm
@@ -106,6 +112,8 @@ weight: 4070
 @ u22.aarch64 16 postgresql-16-http postgresql-16-http_1.7.0-3.pgdg22.04+1_arm64.deb pgdg 1.7.0 47.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsql-http/postgresql-16-http_1.7.0-3.pgdg22.04+1_arm64.deb
 @ u24.x86_64 16 postgresql-16-http postgresql-16-http_1.7.0-3.pgdg24.04+1_amd64.deb pgdg 1.7.0 44.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsql-http/postgresql-16-http_1.7.0-3.pgdg24.04+1_amd64.deb
 @ u24.aarch64 16 postgresql-16-http postgresql-16-http_1.7.0-3.pgdg24.04+1_arm64.deb pgdg 1.7.0 43.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsql-http/postgresql-16-http_1.7.0-3.pgdg24.04+1_arm64.deb
+@ u26.x86_64 16 postgresql-16-http postgresql-16-http_1.7.0-3.pgdg26.04+1_amd64.deb pgdg 1.7.0 51.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsql-http/postgresql-16-http_1.7.0-3.pgdg26.04+1_amd64.deb
+@ u26.aarch64 16 postgresql-16-http postgresql-16-http_1.7.0-3.pgdg26.04+1_arm64.deb pgdg 1.7.0 50.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsql-http/postgresql-16-http_1.7.0-3.pgdg26.04+1_arm64.deb
 @ el8.x86_64 15 pg_http_15 pg_http_15-1.7.0-1PIGSTY.el8.x86_64.rpm pigsty 1.7.0 29.4KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_http_15-1.7.0-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 15 pg_http_15 pg_http_15-1.7.0-1PIGSTY.el8.aarch64.rpm pigsty 1.7.0 28.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_http_15-1.7.0-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 15 pg_http_15 pg_http_15-1.7.0-1PIGSTY.el9.x86_64.rpm pigsty 1.7.0 29.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_http_15-1.7.0-1PIGSTY.el9.x86_64.rpm
@@ -120,6 +128,8 @@ weight: 4070
 @ u22.aarch64 15 postgresql-15-http postgresql-15-http_1.7.0-3.pgdg22.04+1_arm64.deb pgdg 1.7.0 48.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsql-http/postgresql-15-http_1.7.0-3.pgdg22.04+1_arm64.deb
 @ u24.x86_64 15 postgresql-15-http postgresql-15-http_1.7.0-3.pgdg24.04+1_amd64.deb pgdg 1.7.0 45.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsql-http/postgresql-15-http_1.7.0-3.pgdg24.04+1_amd64.deb
 @ u24.aarch64 15 postgresql-15-http postgresql-15-http_1.7.0-3.pgdg24.04+1_arm64.deb pgdg 1.7.0 44.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsql-http/postgresql-15-http_1.7.0-3.pgdg24.04+1_arm64.deb
+@ u26.x86_64 15 postgresql-15-http postgresql-15-http_1.7.0-3.pgdg26.04+1_amd64.deb pgdg 1.7.0 52.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsql-http/postgresql-15-http_1.7.0-3.pgdg26.04+1_amd64.deb
+@ u26.aarch64 15 postgresql-15-http postgresql-15-http_1.7.0-3.pgdg26.04+1_arm64.deb pgdg 1.7.0 50.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsql-http/postgresql-15-http_1.7.0-3.pgdg26.04+1_arm64.deb
 @ el8.x86_64 14 pg_http_14 pg_http_14-1.7.0-1PIGSTY.el8.x86_64.rpm pigsty 1.7.0 29.4KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_http_14-1.7.0-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 14 pg_http_14 pg_http_14-1.7.0-1PIGSTY.el8.aarch64.rpm pigsty 1.7.0 28.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_http_14-1.7.0-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 14 pg_http_14 pg_http_14-1.7.0-1PIGSTY.el9.x86_64.rpm pigsty 1.7.0 29.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_http_14-1.7.0-1PIGSTY.el9.x86_64.rpm
@@ -134,6 +144,8 @@ weight: 4070
 @ u22.aarch64 14 postgresql-14-http postgresql-14-http_1.7.0-3.pgdg22.04+1_arm64.deb pgdg 1.7.0 48.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsql-http/postgresql-14-http_1.7.0-3.pgdg22.04+1_arm64.deb
 @ u24.x86_64 14 postgresql-14-http postgresql-14-http_1.7.0-3.pgdg24.04+1_amd64.deb pgdg 1.7.0 45.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsql-http/postgresql-14-http_1.7.0-3.pgdg24.04+1_amd64.deb
 @ u24.aarch64 14 postgresql-14-http postgresql-14-http_1.7.0-3.pgdg24.04+1_arm64.deb pgdg 1.7.0 44.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsql-http/postgresql-14-http_1.7.0-3.pgdg24.04+1_arm64.deb
+@ u26.x86_64 14 postgresql-14-http postgresql-14-http_1.7.0-3.pgdg26.04+1_amd64.deb pgdg 1.7.0 52.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsql-http/postgresql-14-http_1.7.0-3.pgdg26.04+1_amd64.deb
+@ u26.aarch64 14 postgresql-14-http postgresql-14-http_1.7.0-3.pgdg26.04+1_arm64.deb pgdg 1.7.0 50.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsql-http/postgresql-14-http_1.7.0-3.pgdg26.04+1_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建

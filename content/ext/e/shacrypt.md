@@ -64,6 +64,8 @@ weight: 4440
 | u22.aarch64 | AVAIL PIGSTY 1.1 1 | AVAIL PIGSTY 1.1 1 | AVAIL PIGSTY 1.1 1 | AVAIL PIGSTY 1.1 1 | AVAIL PIGSTY 1.1 1 |
 | u24.x86_64 | AVAIL PIGSTY 1.1 1 | AVAIL PIGSTY 1.1 1 | AVAIL PIGSTY 1.1 1 | AVAIL PIGSTY 1.1 1 | AVAIL PIGSTY 1.1 1 |
 | u24.aarch64 | AVAIL PIGSTY 1.1 1 | AVAIL PIGSTY 1.1 1 | AVAIL PIGSTY 1.1 1 | AVAIL PIGSTY 1.1 1 | AVAIL PIGSTY 1.1 1 |
+| u26.x86_64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| u26.aarch64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
 @ el8.x86_64 18 shacrypt_18 shacrypt_18-1.1-2PIGSTY.el8.x86_64.rpm pigsty 1.1 19.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/shacrypt_18-1.1-2PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 18 shacrypt_18 shacrypt_18-1.1-2PIGSTY.el8.aarch64.rpm pigsty 1.1 19.4KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/shacrypt_18-1.1-2PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 18 shacrypt_18 shacrypt_18-1.1-2PIGSTY.el9.x86_64.rpm pigsty 1.1 18.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/shacrypt_18-1.1-2PIGSTY.el9.x86_64.rpm

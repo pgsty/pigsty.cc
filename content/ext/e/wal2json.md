@@ -64,6 +64,8 @@ weight: 9630
 | u22.aarch64 | AVAIL PGDG 2.6 1 | AVAIL PGDG 2.6 1 | AVAIL PGDG 2.6 1 | AVAIL PGDG 2.6 1 | AVAIL PGDG 2.6 1 |
 | u24.x86_64 | AVAIL PGDG 2.6 1 | AVAIL PGDG 2.6 1 | AVAIL PGDG 2.6 1 | AVAIL PGDG 2.6 1 | AVAIL PGDG 2.6 1 |
 | u24.aarch64 | AVAIL PGDG 2.6 1 | AVAIL PGDG 2.6 1 | AVAIL PGDG 2.6 1 | AVAIL PGDG 2.6 1 | AVAIL PGDG 2.6 1 |
+| u26.x86_64 | AVAIL PGDG 2.6 1 | AVAIL PGDG 2.6 1 | AVAIL PGDG 2.6 1 | AVAIL PGDG 2.6 1 | AVAIL PGDG 2.6 1 |
+| u26.aarch64 | AVAIL PGDG 2.6 1 | AVAIL PGDG 2.6 1 | AVAIL PGDG 2.6 1 | AVAIL PGDG 2.6 1 | AVAIL PGDG 2.6 1 |
 @ el8.x86_64 18 wal2json_18 wal2json_18-2.6-3PGDG.rhel8.x86_64.rpm pgdg 2.6 33.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/wal2json_18-2.6-3PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 18 wal2json_18 wal2json_18-2.6-1PIGSTY.el8.x86_64.rpm pigsty 2.6 31.4KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/wal2json_18-2.6-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 18 wal2json_18 wal2json_18-2.6-3PGDG.rhel8.aarch64.rpm pgdg 2.6 31.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/wal2json_18-2.6-3PGDG.rhel8.aarch64.rpm
@@ -82,6 +84,8 @@ weight: 9630
 @ u22.aarch64 18 postgresql-18-wal2json postgresql-18-wal2json_2.6-3.pgdg22.04+1_arm64.deb pgdg 2.6 54.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-18-wal2json_2.6-3.pgdg22.04+1_arm64.deb
 @ u24.x86_64 18 postgresql-18-wal2json postgresql-18-wal2json_2.6-3.pgdg24.04+1_amd64.deb pgdg 2.6 56.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-18-wal2json_2.6-3.pgdg24.04+1_amd64.deb
 @ u24.aarch64 18 postgresql-18-wal2json postgresql-18-wal2json_2.6-3.pgdg24.04+1_arm64.deb pgdg 2.6 53.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-18-wal2json_2.6-3.pgdg24.04+1_arm64.deb
+@ u26.x86_64 18 postgresql-18-wal2json postgresql-18-wal2json_2.6-3.pgdg26.04+1_amd64.deb pgdg 2.6 55.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-18-wal2json_2.6-3.pgdg26.04+1_amd64.deb
+@ u26.aarch64 18 postgresql-18-wal2json postgresql-18-wal2json_2.6-3.pgdg26.04+1_arm64.deb pgdg 2.6 53.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-18-wal2json_2.6-3.pgdg26.04+1_arm64.deb
 @ el8.x86_64 17 wal2json_17 wal2json_17-2.6-2PGDG.rhel8.x86_64.rpm pgdg 2.6 33.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/wal2json_17-2.6-2PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 17 wal2json_17 wal2json_17-2.6-2PGDG.rhel8.aarch64.rpm pgdg 2.6 31.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/wal2json_17-2.6-2PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 17 wal2json_17 wal2json_17-2.6-2PGDG.rhel9.x86_64.rpm pgdg 2.6 32.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/wal2json_17-2.6-2PGDG.rhel9.x86_64.rpm
@@ -96,6 +100,8 @@ weight: 9630
 @ u22.aarch64 17 postgresql-17-wal2json postgresql-17-wal2json_2.6-3.pgdg22.04+1_arm64.deb pgdg 2.6 61.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-17-wal2json_2.6-3.pgdg22.04+1_arm64.deb
 @ u24.x86_64 17 postgresql-17-wal2json postgresql-17-wal2json_2.6-3.pgdg24.04+1_amd64.deb pgdg 2.6 55.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-17-wal2json_2.6-3.pgdg24.04+1_amd64.deb
 @ u24.aarch64 17 postgresql-17-wal2json postgresql-17-wal2json_2.6-3.pgdg24.04+1_arm64.deb pgdg 2.6 53.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-17-wal2json_2.6-3.pgdg24.04+1_arm64.deb
+@ u26.x86_64 17 postgresql-17-wal2json postgresql-17-wal2json_2.6-3.pgdg26.04+1_amd64.deb pgdg 2.6 55.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-17-wal2json_2.6-3.pgdg26.04+1_amd64.deb
+@ u26.aarch64 17 postgresql-17-wal2json postgresql-17-wal2json_2.6-3.pgdg26.04+1_arm64.deb pgdg 2.6 53.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-17-wal2json_2.6-3.pgdg26.04+1_arm64.deb
 @ el8.x86_64 16 wal2json_16 wal2json_16-2.6-1PGDG.rhel8.x86_64.rpm pgdg 2.6 33.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/wal2json_16-2.6-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 16 wal2json_16 wal2json_16-2.5-3.rhel8.1.x86_64.rpm pgdg 2.5 32.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/wal2json_16-2.5-3.rhel8.1.x86_64.rpm
 @ el8.aarch64 16 wal2json_16 wal2json_16-2.6-1PGDG.rhel8.aarch64.rpm pgdg 2.6 31.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/wal2json_16-2.6-1PGDG.rhel8.aarch64.rpm
@@ -113,6 +119,8 @@ weight: 9630
 @ u22.aarch64 16 postgresql-16-wal2json postgresql-16-wal2json_2.6-3.pgdg22.04+1_arm64.deb pgdg 2.6 61.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-16-wal2json_2.6-3.pgdg22.04+1_arm64.deb
 @ u24.x86_64 16 postgresql-16-wal2json postgresql-16-wal2json_2.6-3.pgdg24.04+1_amd64.deb pgdg 2.6 56.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-16-wal2json_2.6-3.pgdg24.04+1_amd64.deb
 @ u24.aarch64 16 postgresql-16-wal2json postgresql-16-wal2json_2.6-3.pgdg24.04+1_arm64.deb pgdg 2.6 53.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-16-wal2json_2.6-3.pgdg24.04+1_arm64.deb
+@ u26.x86_64 16 postgresql-16-wal2json postgresql-16-wal2json_2.6-3.pgdg26.04+1_amd64.deb pgdg 2.6 55.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-16-wal2json_2.6-3.pgdg26.04+1_amd64.deb
+@ u26.aarch64 16 postgresql-16-wal2json postgresql-16-wal2json_2.6-3.pgdg26.04+1_arm64.deb pgdg 2.6 53.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-16-wal2json_2.6-3.pgdg26.04+1_arm64.deb
 @ el8.x86_64 15 wal2json_15 wal2json_15-2.6-1PGDG.rhel8.x86_64.rpm pgdg 2.6 33.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/wal2json_15-2.6-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 15 wal2json_15 wal2json_15-2.5-1.rhel8.x86_64.rpm pgdg 2.5 32.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/wal2json_15-2.5-1.rhel8.x86_64.rpm
 @ el8.aarch64 15 wal2json_15 wal2json_15-2.6-1PGDG.rhel8.aarch64.rpm pgdg 2.6 31.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/wal2json_15-2.6-1PGDG.rhel8.aarch64.rpm
@@ -132,6 +140,8 @@ weight: 9630
 @ u22.aarch64 15 postgresql-15-wal2json postgresql-15-wal2json_2.6-3.pgdg22.04+1_arm64.deb pgdg 2.6 61.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-15-wal2json_2.6-3.pgdg22.04+1_arm64.deb
 @ u24.x86_64 15 postgresql-15-wal2json postgresql-15-wal2json_2.6-3.pgdg24.04+1_amd64.deb pgdg 2.6 56.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-15-wal2json_2.6-3.pgdg24.04+1_amd64.deb
 @ u24.aarch64 15 postgresql-15-wal2json postgresql-15-wal2json_2.6-3.pgdg24.04+1_arm64.deb pgdg 2.6 54.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-15-wal2json_2.6-3.pgdg24.04+1_arm64.deb
+@ u26.x86_64 15 postgresql-15-wal2json postgresql-15-wal2json_2.6-3.pgdg26.04+1_amd64.deb pgdg 2.6 55.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-15-wal2json_2.6-3.pgdg26.04+1_amd64.deb
+@ u26.aarch64 15 postgresql-15-wal2json postgresql-15-wal2json_2.6-3.pgdg26.04+1_arm64.deb pgdg 2.6 53.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-15-wal2json_2.6-3.pgdg26.04+1_arm64.deb
 @ el8.x86_64 14 wal2json_14 wal2json_14-2.6-1PGDG.rhel8.x86_64.rpm pgdg 2.6 33.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/wal2json_14-2.6-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 14 wal2json_14 wal2json_14-2.5-1.rhel8.x86_64.rpm pgdg 2.5 32.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/wal2json_14-2.5-1.rhel8.x86_64.rpm
 @ el8.x86_64 14 wal2json_14 wal2json_14-2.4-1.rhel8.x86_64.rpm pgdg 2.4 76.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/wal2json_14-2.4-1.rhel8.x86_64.rpm
@@ -152,6 +162,8 @@ weight: 9630
 @ u22.aarch64 14 postgresql-14-wal2json postgresql-14-wal2json_2.6-3.pgdg22.04+1_arm64.deb pgdg 2.6 61.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-14-wal2json_2.6-3.pgdg22.04+1_arm64.deb
 @ u24.x86_64 14 postgresql-14-wal2json postgresql-14-wal2json_2.6-3.pgdg24.04+1_amd64.deb pgdg 2.6 56.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-14-wal2json_2.6-3.pgdg24.04+1_amd64.deb
 @ u24.aarch64 14 postgresql-14-wal2json postgresql-14-wal2json_2.6-3.pgdg24.04+1_arm64.deb pgdg 2.6 53.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-14-wal2json_2.6-3.pgdg24.04+1_arm64.deb
+@ u26.x86_64 14 postgresql-14-wal2json postgresql-14-wal2json_2.6-3.pgdg26.04+1_amd64.deb pgdg 2.6 55.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-14-wal2json_2.6-3.pgdg26.04+1_amd64.deb
+@ u26.aarch64 14 postgresql-14-wal2json postgresql-14-wal2json_2.6-3.pgdg26.04+1_arm64.deb pgdg 2.6 53.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-14-wal2json_2.6-3.pgdg26.04+1_arm64.deb
 {{< /pgext_matrix >}}
 
 

@@ -59,6 +59,8 @@ weight: 7370
 | u22.aarch64 | AVAIL PGDG 4.2.0 1 | AVAIL PGDG 4.2.0 1 | AVAIL PGDG 4.2.0 1 | AVAIL PGDG 4.2.0 1 | AVAIL PGDG 4.2.0 1 |
 | u24.x86_64 | AVAIL PGDG 4.2.0 1 | AVAIL PGDG 4.2.0 1 | AVAIL PGDG 4.2.0 1 | AVAIL PGDG 4.2.0 1 | AVAIL PGDG 4.2.0 1 |
 | u24.aarch64 | AVAIL PGDG 4.2.0 1 | AVAIL PGDG 4.2.0 1 | AVAIL PGDG 4.2.0 1 | AVAIL PGDG 4.2.0 1 | AVAIL PGDG 4.2.0 1 |
+| u26.x86_64 | AVAIL PGDG 4.2.0 1 | AVAIL PGDG 4.2.0 1 | AVAIL PGDG 4.2.0 1 | AVAIL PGDG 4.2.0 1 | AVAIL PGDG 4.2.0 1 |
+| u26.aarch64 | AVAIL PGDG 4.2.0 1 | AVAIL PGDG 4.2.0 1 | AVAIL PGDG 4.2.0 1 | AVAIL PGDG 4.2.0 1 | AVAIL PGDG 4.2.0 1 |
 @ el8.x86_64 18 set_user_18 set_user_18-4.2.0-1PGDG.rhel8.x86_64.rpm pgdg 4.2.0 26.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/set_user_18-4.2.0-1PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 18 set_user_18 set_user_18-4.2.0-1PGDG.rhel8.aarch64.rpm pgdg 4.2.0 26.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/set_user_18-4.2.0-1PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 18 set_user_18 set_user_18-4.2.0-1PGDG.rhel9.x86_64.rpm pgdg 4.2.0 26.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/set_user_18-4.2.0-1PGDG.rhel9.x86_64.rpm
@@ -73,6 +75,8 @@ weight: 7370
 @ u22.aarch64 18 postgresql-18-set-user postgresql-18-set-user_4.2.0-1.pgdg22.04+1_arm64.deb pgdg 4.2.0 34.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-set-user/postgresql-18-set-user_4.2.0-1.pgdg22.04+1_arm64.deb
 @ u24.x86_64 18 postgresql-18-set-user postgresql-18-set-user_4.2.0-1.pgdg24.04+1_amd64.deb pgdg 4.2.0 34.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-set-user/postgresql-18-set-user_4.2.0-1.pgdg24.04+1_amd64.deb
 @ u24.aarch64 18 postgresql-18-set-user postgresql-18-set-user_4.2.0-1.pgdg24.04+1_arm64.deb pgdg 4.2.0 34.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-set-user/postgresql-18-set-user_4.2.0-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 18 postgresql-18-set-user postgresql-18-set-user_4.2.0-1.pgdg26.04+1_amd64.deb pgdg 4.2.0 34.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-set-user/postgresql-18-set-user_4.2.0-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 18 postgresql-18-set-user postgresql-18-set-user_4.2.0-1.pgdg26.04+1_arm64.deb pgdg 4.2.0 34.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-set-user/postgresql-18-set-user_4.2.0-1.pgdg26.04+1_arm64.deb
 @ el8.x86_64 17 set_user_17 set_user_17-4.1.0-1PGDG.rhel8.x86_64.rpm pgdg 4.1.0 26.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/set_user_17-4.1.0-1PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 17 set_user_17 set_user_17-4.1.0-1PGDG.rhel8.aarch64.rpm pgdg 4.1.0 26.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/set_user_17-4.1.0-1PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 17 set_user_17 set_user_17-4.1.0-1PGDG.rhel9.x86_64.rpm pgdg 4.1.0 26.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/set_user_17-4.1.0-1PGDG.rhel9.x86_64.rpm
@@ -87,6 +91,8 @@ weight: 7370
 @ u22.aarch64 17 postgresql-17-set-user postgresql-17-set-user_4.2.0-1.pgdg22.04+1_arm64.deb pgdg 4.2.0 38.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-set-user/postgresql-17-set-user_4.2.0-1.pgdg22.04+1_arm64.deb
 @ u24.x86_64 17 postgresql-17-set-user postgresql-17-set-user_4.2.0-1.pgdg24.04+1_amd64.deb pgdg 4.2.0 34.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-set-user/postgresql-17-set-user_4.2.0-1.pgdg24.04+1_amd64.deb
 @ u24.aarch64 17 postgresql-17-set-user postgresql-17-set-user_4.2.0-1.pgdg24.04+1_arm64.deb pgdg 4.2.0 34.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-set-user/postgresql-17-set-user_4.2.0-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 17 postgresql-17-set-user postgresql-17-set-user_4.2.0-1.pgdg26.04+1_amd64.deb pgdg 4.2.0 34.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-set-user/postgresql-17-set-user_4.2.0-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 17 postgresql-17-set-user postgresql-17-set-user_4.2.0-1.pgdg26.04+1_arm64.deb pgdg 4.2.0 34.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-set-user/postgresql-17-set-user_4.2.0-1.pgdg26.04+1_arm64.deb
 @ el8.x86_64 16 set_user_16 set_user_16-4.1.0-1PGDG.rhel8.x86_64.rpm pgdg 4.1.0 26.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/set_user_16-4.1.0-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 16 set_user_16 set_user_16-4.0.1-2.rhel8.1.x86_64.rpm pgdg 4.0.1 26.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/set_user_16-4.0.1-2.rhel8.1.x86_64.rpm
 @ el8.aarch64 16 set_user_16 set_user_16-4.1.0-1PGDG.rhel8.aarch64.rpm pgdg 4.1.0 26.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/set_user_16-4.1.0-1PGDG.rhel8.aarch64.rpm
@@ -105,6 +111,8 @@ weight: 7370
 @ u22.aarch64 16 postgresql-16-set-user postgresql-16-set-user_4.2.0-1.pgdg22.04+1_arm64.deb pgdg 4.2.0 38.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-set-user/postgresql-16-set-user_4.2.0-1.pgdg22.04+1_arm64.deb
 @ u24.x86_64 16 postgresql-16-set-user postgresql-16-set-user_4.2.0-1.pgdg24.04+1_amd64.deb pgdg 4.2.0 34.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-set-user/postgresql-16-set-user_4.2.0-1.pgdg24.04+1_amd64.deb
 @ u24.aarch64 16 postgresql-16-set-user postgresql-16-set-user_4.2.0-1.pgdg24.04+1_arm64.deb pgdg 4.2.0 34.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-set-user/postgresql-16-set-user_4.2.0-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 16 postgresql-16-set-user postgresql-16-set-user_4.2.0-1.pgdg26.04+1_amd64.deb pgdg 4.2.0 34.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-set-user/postgresql-16-set-user_4.2.0-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 16 postgresql-16-set-user postgresql-16-set-user_4.2.0-1.pgdg26.04+1_arm64.deb pgdg 4.2.0 34.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-set-user/postgresql-16-set-user_4.2.0-1.pgdg26.04+1_arm64.deb
 @ el8.x86_64 15 set_user_15 set_user_15-4.1.0-1PGDG.rhel8.x86_64.rpm pgdg 4.1.0 26.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/set_user_15-4.1.0-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 15 set_user_15 set_user_15-4.0.1-2.rhel8.x86_64.rpm pgdg 4.0.1 26.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/set_user_15-4.0.1-2.rhel8.x86_64.rpm
 @ el8.x86_64 15 set_user_15 set_user_15-4.0.0-1.rhel8.x86_64.rpm pgdg 4.0.0 25.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/set_user_15-4.0.0-1.rhel8.x86_64.rpm
@@ -127,6 +135,8 @@ weight: 7370
 @ u22.aarch64 15 postgresql-15-set-user postgresql-15-set-user_4.2.0-1.pgdg22.04+1_arm64.deb pgdg 4.2.0 37.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-set-user/postgresql-15-set-user_4.2.0-1.pgdg22.04+1_arm64.deb
 @ u24.x86_64 15 postgresql-15-set-user postgresql-15-set-user_4.2.0-1.pgdg24.04+1_amd64.deb pgdg 4.2.0 34.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-set-user/postgresql-15-set-user_4.2.0-1.pgdg24.04+1_amd64.deb
 @ u24.aarch64 15 postgresql-15-set-user postgresql-15-set-user_4.2.0-1.pgdg24.04+1_arm64.deb pgdg 4.2.0 33.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-set-user/postgresql-15-set-user_4.2.0-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 15 postgresql-15-set-user postgresql-15-set-user_4.2.0-1.pgdg26.04+1_amd64.deb pgdg 4.2.0 34.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-set-user/postgresql-15-set-user_4.2.0-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 15 postgresql-15-set-user postgresql-15-set-user_4.2.0-1.pgdg26.04+1_arm64.deb pgdg 4.2.0 33.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-set-user/postgresql-15-set-user_4.2.0-1.pgdg26.04+1_arm64.deb
 @ el8.x86_64 14 set_user_14 set_user_14-4.1.0-1PGDG.rhel8.x86_64.rpm pgdg 4.1.0 26.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/set_user_14-4.1.0-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 14 set_user_14 set_user_14-4.0.1-2.rhel8.x86_64.rpm pgdg 4.0.1 26.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/set_user_14-4.0.1-2.rhel8.x86_64.rpm
 @ el8.x86_64 14 set_user_14 set_user_14-4.0.0-1.rhel8.x86_64.rpm pgdg 4.0.0 25.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/set_user_14-4.0.0-1.rhel8.x86_64.rpm
@@ -152,6 +162,8 @@ weight: 7370
 @ u22.aarch64 14 postgresql-14-set-user postgresql-14-set-user_4.2.0-1.pgdg22.04+1_arm64.deb pgdg 4.2.0 37.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-set-user/postgresql-14-set-user_4.2.0-1.pgdg22.04+1_arm64.deb
 @ u24.x86_64 14 postgresql-14-set-user postgresql-14-set-user_4.2.0-1.pgdg24.04+1_amd64.deb pgdg 4.2.0 34.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-set-user/postgresql-14-set-user_4.2.0-1.pgdg24.04+1_amd64.deb
 @ u24.aarch64 14 postgresql-14-set-user postgresql-14-set-user_4.2.0-1.pgdg24.04+1_arm64.deb pgdg 4.2.0 33.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-set-user/postgresql-14-set-user_4.2.0-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 14 postgresql-14-set-user postgresql-14-set-user_4.2.0-1.pgdg26.04+1_amd64.deb pgdg 4.2.0 34.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-set-user/postgresql-14-set-user_4.2.0-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 14 postgresql-14-set-user postgresql-14-set-user_4.2.0-1.pgdg26.04+1_arm64.deb pgdg 4.2.0 33.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-set-user/postgresql-14-set-user_4.2.0-1.pgdg26.04+1_arm64.deb
 {{< /pgext_matrix >}}
 
 

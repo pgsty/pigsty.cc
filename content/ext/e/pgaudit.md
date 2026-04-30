@@ -62,6 +62,8 @@ weight: 7100
 | u22.aarch64 | AVAIL PGDG 18.0 1 | AVAIL PGDG 17.1 1 | AVAIL PGDG 16.1 1 | AVAIL PGDG 1.7.1 1 | AVAIL PGDG 1.6.3 1 |
 | u24.x86_64 | AVAIL PGDG 18.0 1 | AVAIL PGDG 17.1 1 | AVAIL PGDG 16.1 1 | AVAIL PGDG 1.7.1 1 | AVAIL PGDG 1.6.3 1 |
 | u24.aarch64 | AVAIL PGDG 18.0 1 | AVAIL PGDG 17.1 1 | AVAIL PGDG 16.1 1 | AVAIL PGDG 1.7.1 1 | AVAIL PGDG 1.6.3 1 |
+| u26.x86_64 | AVAIL PGDG 18.0 1 | AVAIL PGDG 17.1 1 | AVAIL PGDG 16.1 1 | AVAIL PGDG 1.7.1 1 | AVAIL PGDG 1.6.3 1 |
+| u26.aarch64 | AVAIL PGDG 18.0 1 | AVAIL PGDG 17.1 1 | AVAIL PGDG 16.1 1 | AVAIL PGDG 1.7.1 1 | AVAIL PGDG 1.6.3 1 |
 @ el8.x86_64 18 pgaudit_18 pgaudit_18-18.0-1PGDG.rhel8.x86_64.rpm pgdg 18.0 27.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pgaudit_18-18.0-1PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 18 pgaudit_18 pgaudit_18-18.0-1PGDG.rhel8.aarch64.rpm pgdg 18.0 27.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pgaudit_18-18.0-1PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 18 pgaudit_18 pgaudit_18-18.0-1PGDG.rhel9.x86_64.rpm pgdg 18.0 27.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pgaudit_18-18.0-1PGDG.rhel9.x86_64.rpm
@@ -76,6 +78,8 @@ weight: 7100
 @ u22.aarch64 18 postgresql-18-pgaudit postgresql-18-pgaudit_18.0-2.pgdg22.04+1_arm64.deb pgdg 18.0 47.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgaudit-18/postgresql-18-pgaudit_18.0-2.pgdg22.04+1_arm64.deb
 @ u24.x86_64 18 postgresql-18-pgaudit postgresql-18-pgaudit_18.0-2.pgdg24.04+1_amd64.deb pgdg 18.0 47.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgaudit-18/postgresql-18-pgaudit_18.0-2.pgdg24.04+1_amd64.deb
 @ u24.aarch64 18 postgresql-18-pgaudit postgresql-18-pgaudit_18.0-2.pgdg24.04+1_arm64.deb pgdg 18.0 46.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgaudit-18/postgresql-18-pgaudit_18.0-2.pgdg24.04+1_arm64.deb
+@ u26.x86_64 18 postgresql-18-pgaudit postgresql-18-pgaudit_18.0-2.pgdg26.04+1_amd64.deb pgdg 18.0 47.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgaudit-18/postgresql-18-pgaudit_18.0-2.pgdg26.04+1_amd64.deb
+@ u26.aarch64 18 postgresql-18-pgaudit postgresql-18-pgaudit_18.0-2.pgdg26.04+1_arm64.deb pgdg 18.0 46.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgaudit-18/postgresql-18-pgaudit_18.0-2.pgdg26.04+1_arm64.deb
 @ el8.x86_64 17 pgaudit_17 pgaudit_17-17.1-1PGDG.rhel8.x86_64.rpm pgdg 17.1 28.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pgaudit_17-17.1-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 17 pgaudit_17 pgaudit_17-17.0-1PGDG.rhel8.x86_64.rpm pgdg 17.0 27.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pgaudit_17-17.0-1PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 17 pgaudit_17 pgaudit_17-17.1-1PGDG.rhel8.aarch64.rpm pgdg 17.1 27.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pgaudit_17-17.1-1PGDG.rhel8.aarch64.rpm
@@ -94,6 +98,8 @@ weight: 7100
 @ u22.aarch64 17 postgresql-17-pgaudit postgresql-17-pgaudit_17.1-2.pgdg22.04+1_arm64.deb pgdg 17.1 52.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgaudit-17/postgresql-17-pgaudit_17.1-2.pgdg22.04+1_arm64.deb
 @ u24.x86_64 17 postgresql-17-pgaudit postgresql-17-pgaudit_17.1-2.pgdg24.04+1_amd64.deb pgdg 17.1 46.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgaudit-17/postgresql-17-pgaudit_17.1-2.pgdg24.04+1_amd64.deb
 @ u24.aarch64 17 postgresql-17-pgaudit postgresql-17-pgaudit_17.1-2.pgdg24.04+1_arm64.deb pgdg 17.1 45.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgaudit-17/postgresql-17-pgaudit_17.1-2.pgdg24.04+1_arm64.deb
+@ u26.x86_64 17 postgresql-17-pgaudit postgresql-17-pgaudit_17.1-2.pgdg26.04+1_amd64.deb pgdg 17.1 46.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgaudit-17/postgresql-17-pgaudit_17.1-2.pgdg26.04+1_amd64.deb
+@ u26.aarch64 17 postgresql-17-pgaudit postgresql-17-pgaudit_17.1-2.pgdg26.04+1_arm64.deb pgdg 17.1 45.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgaudit-17/postgresql-17-pgaudit_17.1-2.pgdg26.04+1_arm64.deb
 @ el8.x86_64 16 pgaudit_16 pgaudit_16-16.1-1PGDG.rhel8.x86_64.rpm pgdg 16.1 27.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pgaudit_16-16.1-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 16 pgaudit_16 pgaudit_16-16.0-1PGDG.rhel8.x86_64.rpm pgdg 16.0 26.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pgaudit_16-16.0-1PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 16 pgaudit_16 pgaudit_16-16.1-1PGDG.rhel8.aarch64.rpm pgdg 16.1 27.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pgaudit_16-16.1-1PGDG.rhel8.aarch64.rpm
@@ -112,6 +118,8 @@ weight: 7100
 @ u22.aarch64 16 postgresql-16-pgaudit postgresql-16-pgaudit_16.1-2.pgdg22.04+1_arm64.deb pgdg 16.1 50.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgaudit-16/postgresql-16-pgaudit_16.1-2.pgdg22.04+1_arm64.deb
 @ u24.x86_64 16 postgresql-16-pgaudit postgresql-16-pgaudit_16.1-2.pgdg24.04+1_amd64.deb pgdg 16.1 45.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgaudit-16/postgresql-16-pgaudit_16.1-2.pgdg24.04+1_amd64.deb
 @ u24.aarch64 16 postgresql-16-pgaudit postgresql-16-pgaudit_16.1-2.pgdg24.04+1_arm64.deb pgdg 16.1 45.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgaudit-16/postgresql-16-pgaudit_16.1-2.pgdg24.04+1_arm64.deb
+@ u26.x86_64 16 postgresql-16-pgaudit postgresql-16-pgaudit_16.1-2.pgdg26.04+1_amd64.deb pgdg 16.1 45.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgaudit-16/postgresql-16-pgaudit_16.1-2.pgdg26.04+1_amd64.deb
+@ u26.aarch64 16 postgresql-16-pgaudit postgresql-16-pgaudit_16.1-2.pgdg26.04+1_arm64.deb pgdg 16.1 45.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgaudit-16/postgresql-16-pgaudit_16.1-2.pgdg26.04+1_arm64.deb
 @ el8.x86_64 15 pgaudit17_15 pgaudit17_15-1.7.1-1PGDG.rhel8.x86_64.rpm pgdg 1.7.1 27.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pgaudit17_15-1.7.1-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 15 pgaudit17_15 pgaudit17_15-1.7.0-1.rhel8.x86_64.rpm pgdg 1.7.0 55.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pgaudit17_15-1.7.0-1.rhel8.x86_64.rpm
 @ el8.x86_64 15 pgaudit17_15 pgaudit17_15-1.7-beta1_1.rhel8.x86_64.rpm pgdg 1.7 55.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pgaudit17_15-1.7-beta1_1.rhel8.x86_64.rpm
@@ -132,6 +140,8 @@ weight: 7100
 @ u22.aarch64 15 postgresql-15-pgaudit postgresql-15-pgaudit_1.7.1-2.pgdg22.04+1_arm64.deb pgdg 1.7.1 49.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgaudit-1.7/postgresql-15-pgaudit_1.7.1-2.pgdg22.04+1_arm64.deb
 @ u24.x86_64 15 postgresql-15-pgaudit postgresql-15-pgaudit_1.7.1-2.pgdg24.04+1_amd64.deb pgdg 1.7.1 44.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgaudit-1.7/postgresql-15-pgaudit_1.7.1-2.pgdg24.04+1_amd64.deb
 @ u24.aarch64 15 postgresql-15-pgaudit postgresql-15-pgaudit_1.7.1-2.pgdg24.04+1_arm64.deb pgdg 1.7.1 43.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgaudit-1.7/postgresql-15-pgaudit_1.7.1-2.pgdg24.04+1_arm64.deb
+@ u26.x86_64 15 postgresql-15-pgaudit postgresql-15-pgaudit_1.7.1-2.pgdg26.04+1_amd64.deb pgdg 1.7.1 44.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgaudit-1.7/postgresql-15-pgaudit_1.7.1-2.pgdg26.04+1_amd64.deb
+@ u26.aarch64 15 postgresql-15-pgaudit postgresql-15-pgaudit_1.7.1-2.pgdg26.04+1_arm64.deb pgdg 1.7.1 44.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgaudit-1.7/postgresql-15-pgaudit_1.7.1-2.pgdg26.04+1_arm64.deb
 @ el8.x86_64 14 pgaudit16_14 pgaudit16_14-1.6.3-1PGDG.rhel8.x86_64.rpm pgdg 1.6.3 27.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pgaudit16_14-1.6.3-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 14 pgaudit16_14 pgaudit16_14-1.6.2-1.rhel8.x86_64.rpm pgdg 1.6.2 56.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pgaudit16_14-1.6.2-1.rhel8.x86_64.rpm
 @ el8.x86_64 14 pgaudit16_14 pgaudit16_14-1.6.0-1.rhel8.x86_64.rpm pgdg 1.6.0 55.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pgaudit16_14-1.6.0-1.rhel8.x86_64.rpm
@@ -152,6 +162,8 @@ weight: 7100
 @ u22.aarch64 14 postgresql-14-pgaudit postgresql-14-pgaudit_1.6.3-2.pgdg22.04+1_arm64.deb pgdg 1.6.3 48.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgaudit-1.6/postgresql-14-pgaudit_1.6.3-2.pgdg22.04+1_arm64.deb
 @ u24.x86_64 14 postgresql-14-pgaudit postgresql-14-pgaudit_1.6.3-2.pgdg24.04+1_amd64.deb pgdg 1.6.3 44.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgaudit-1.6/postgresql-14-pgaudit_1.6.3-2.pgdg24.04+1_amd64.deb
 @ u24.aarch64 14 postgresql-14-pgaudit postgresql-14-pgaudit_1.6.3-2.pgdg24.04+1_arm64.deb pgdg 1.6.3 43.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgaudit-1.6/postgresql-14-pgaudit_1.6.3-2.pgdg24.04+1_arm64.deb
+@ u26.x86_64 14 postgresql-14-pgaudit postgresql-14-pgaudit_1.6.3-2.pgdg26.04+1_amd64.deb pgdg 1.6.3 44.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgaudit-1.6/postgresql-14-pgaudit_1.6.3-2.pgdg26.04+1_amd64.deb
+@ u26.aarch64 14 postgresql-14-pgaudit postgresql-14-pgaudit_1.6.3-2.pgdg26.04+1_arm64.deb pgdg 1.6.3 44.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgaudit-1.6/postgresql-14-pgaudit_1.6.3-2.pgdg26.04+1_arm64.deb
 {{< /pgext_matrix >}}
 
 

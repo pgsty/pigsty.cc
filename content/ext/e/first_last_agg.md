@@ -64,6 +64,8 @@ weight: 4710
 | u22.aarch64 | AVAIL PGDG 0.1.4 1 | AVAIL PGDG 0.1.4 1 | AVAIL PGDG 0.1.4 1 | AVAIL PGDG 0.1.4 1 | AVAIL PGDG 0.1.4 1 |
 | u24.x86_64 | AVAIL PGDG 0.1.4 1 | AVAIL PGDG 0.1.4 1 | AVAIL PGDG 0.1.4 1 | AVAIL PGDG 0.1.4 1 | AVAIL PGDG 0.1.4 1 |
 | u24.aarch64 | AVAIL PGDG 0.1.4 1 | AVAIL PGDG 0.1.4 1 | AVAIL PGDG 0.1.4 1 | AVAIL PGDG 0.1.4 1 | AVAIL PGDG 0.1.4 1 |
+| u26.x86_64 | AVAIL PGDG 0.1.4 1 | AVAIL PGDG 0.1.4 1 | AVAIL PGDG 0.1.4 1 | AVAIL PGDG 0.1.4 1 | AVAIL PGDG 0.1.4 1 |
+| u26.aarch64 | AVAIL PGDG 0.1.4 1 | AVAIL PGDG 0.1.4 1 | AVAIL PGDG 0.1.4 1 | AVAIL PGDG 0.1.4 1 | AVAIL PGDG 0.1.4 1 |
 @ el8.x86_64 18 first_last_agg_18 first_last_agg_18-0.1.4-1PIGSTY.el8.x86_64.rpm pigsty 0.1.4 11.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/first_last_agg_18-0.1.4-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 18 first_last_agg_18 first_last_agg_18-0.1.4-1PIGSTY.el8.aarch64.rpm pigsty 0.1.4 12.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/first_last_agg_18-0.1.4-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 18 first_last_agg_18 first_last_agg_18-0.1.4-1PIGSTY.el9.x86_64.rpm pigsty 0.1.4 11.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/first_last_agg_18-0.1.4-1PIGSTY.el9.x86_64.rpm
@@ -78,6 +80,8 @@ weight: 4710
 @ u22.aarch64 18 postgresql-18-first-last-agg postgresql-18-first-last-agg_0.1.4-4-gd63ea3b-9.pgdg22.04+1_arm64.deb pgdg 0.1.4 8.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/f/first-last-agg/postgresql-18-first-last-agg_0.1.4-4-gd63ea3b-9.pgdg22.04+1_arm64.deb
 @ u24.x86_64 18 postgresql-18-first-last-agg postgresql-18-first-last-agg_0.1.4-4-gd63ea3b-9.pgdg24.04+1_amd64.deb pgdg 0.1.4 8.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/f/first-last-agg/postgresql-18-first-last-agg_0.1.4-4-gd63ea3b-9.pgdg24.04+1_amd64.deb
 @ u24.aarch64 18 postgresql-18-first-last-agg postgresql-18-first-last-agg_0.1.4-4-gd63ea3b-9.pgdg24.04+1_arm64.deb pgdg 0.1.4 8.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/f/first-last-agg/postgresql-18-first-last-agg_0.1.4-4-gd63ea3b-9.pgdg24.04+1_arm64.deb
+@ u26.x86_64 18 postgresql-18-first-last-agg postgresql-18-first-last-agg_0.1.4-4-gd63ea3b-9.pgdg26.04+1_amd64.deb pgdg 0.1.4 8.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/f/first-last-agg/postgresql-18-first-last-agg_0.1.4-4-gd63ea3b-9.pgdg26.04+1_amd64.deb
+@ u26.aarch64 18 postgresql-18-first-last-agg postgresql-18-first-last-agg_0.1.4-4-gd63ea3b-9.pgdg26.04+1_arm64.deb pgdg 0.1.4 8.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/f/first-last-agg/postgresql-18-first-last-agg_0.1.4-4-gd63ea3b-9.pgdg26.04+1_arm64.deb
 @ el8.x86_64 17 first_last_agg_17 first_last_agg_17-0.1.4-1PIGSTY.el8.x86_64.rpm pigsty 0.1.4 11.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/first_last_agg_17-0.1.4-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 17 first_last_agg_17 first_last_agg_17-0.1.4-1PIGSTY.el8.aarch64.rpm pigsty 0.1.4 12.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/first_last_agg_17-0.1.4-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 17 first_last_agg_17 first_last_agg_17-0.1.4-1PIGSTY.el9.x86_64.rpm pigsty 0.1.4 11.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/first_last_agg_17-0.1.4-1PIGSTY.el9.x86_64.rpm
@@ -92,6 +96,8 @@ weight: 4710
 @ u22.aarch64 17 postgresql-17-first-last-agg postgresql-17-first-last-agg_0.1.4-4-gd63ea3b-9.pgdg22.04+1_arm64.deb pgdg 0.1.4 8.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/f/first-last-agg/postgresql-17-first-last-agg_0.1.4-4-gd63ea3b-9.pgdg22.04+1_arm64.deb
 @ u24.x86_64 17 postgresql-17-first-last-agg postgresql-17-first-last-agg_0.1.4-4-gd63ea3b-9.pgdg24.04+1_amd64.deb pgdg 0.1.4 8.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/f/first-last-agg/postgresql-17-first-last-agg_0.1.4-4-gd63ea3b-9.pgdg24.04+1_amd64.deb
 @ u24.aarch64 17 postgresql-17-first-last-agg postgresql-17-first-last-agg_0.1.4-4-gd63ea3b-9.pgdg24.04+1_arm64.deb pgdg 0.1.4 8.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/f/first-last-agg/postgresql-17-first-last-agg_0.1.4-4-gd63ea3b-9.pgdg24.04+1_arm64.deb
+@ u26.x86_64 17 postgresql-17-first-last-agg postgresql-17-first-last-agg_0.1.4-4-gd63ea3b-9.pgdg26.04+1_amd64.deb pgdg 0.1.4 8.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/f/first-last-agg/postgresql-17-first-last-agg_0.1.4-4-gd63ea3b-9.pgdg26.04+1_amd64.deb
+@ u26.aarch64 17 postgresql-17-first-last-agg postgresql-17-first-last-agg_0.1.4-4-gd63ea3b-9.pgdg26.04+1_arm64.deb pgdg 0.1.4 8.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/f/first-last-agg/postgresql-17-first-last-agg_0.1.4-4-gd63ea3b-9.pgdg26.04+1_arm64.deb
 @ el8.x86_64 16 first_last_agg_16 first_last_agg_16-0.1.4-1PIGSTY.el8.x86_64.rpm pigsty 0.1.4 11.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/first_last_agg_16-0.1.4-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 16 first_last_agg_16 first_last_agg_16-0.1.4-1PIGSTY.el8.aarch64.rpm pigsty 0.1.4 12.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/first_last_agg_16-0.1.4-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 16 first_last_agg_16 first_last_agg_16-0.1.4-1PIGSTY.el9.x86_64.rpm pigsty 0.1.4 11.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/first_last_agg_16-0.1.4-1PIGSTY.el9.x86_64.rpm
@@ -106,6 +112,8 @@ weight: 4710
 @ u22.aarch64 16 postgresql-16-first-last-agg postgresql-16-first-last-agg_0.1.4-4-gd63ea3b-9.pgdg22.04+1_arm64.deb pgdg 0.1.4 8.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/f/first-last-agg/postgresql-16-first-last-agg_0.1.4-4-gd63ea3b-9.pgdg22.04+1_arm64.deb
 @ u24.x86_64 16 postgresql-16-first-last-agg postgresql-16-first-last-agg_0.1.4-4-gd63ea3b-9.pgdg24.04+1_amd64.deb pgdg 0.1.4 8.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/f/first-last-agg/postgresql-16-first-last-agg_0.1.4-4-gd63ea3b-9.pgdg24.04+1_amd64.deb
 @ u24.aarch64 16 postgresql-16-first-last-agg postgresql-16-first-last-agg_0.1.4-4-gd63ea3b-9.pgdg24.04+1_arm64.deb pgdg 0.1.4 8.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/f/first-last-agg/postgresql-16-first-last-agg_0.1.4-4-gd63ea3b-9.pgdg24.04+1_arm64.deb
+@ u26.x86_64 16 postgresql-16-first-last-agg postgresql-16-first-last-agg_0.1.4-4-gd63ea3b-9.pgdg26.04+1_amd64.deb pgdg 0.1.4 8.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/f/first-last-agg/postgresql-16-first-last-agg_0.1.4-4-gd63ea3b-9.pgdg26.04+1_amd64.deb
+@ u26.aarch64 16 postgresql-16-first-last-agg postgresql-16-first-last-agg_0.1.4-4-gd63ea3b-9.pgdg26.04+1_arm64.deb pgdg 0.1.4 8.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/f/first-last-agg/postgresql-16-first-last-agg_0.1.4-4-gd63ea3b-9.pgdg26.04+1_arm64.deb
 @ el8.x86_64 15 first_last_agg_15 first_last_agg_15-0.1.4-1PIGSTY.el8.x86_64.rpm pigsty 0.1.4 11.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/first_last_agg_15-0.1.4-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 15 first_last_agg_15 first_last_agg_15-0.1.4-1PIGSTY.el8.aarch64.rpm pigsty 0.1.4 12.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/first_last_agg_15-0.1.4-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 15 first_last_agg_15 first_last_agg_15-0.1.4-1PIGSTY.el9.x86_64.rpm pigsty 0.1.4 11.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/first_last_agg_15-0.1.4-1PIGSTY.el9.x86_64.rpm
@@ -120,6 +128,8 @@ weight: 4710
 @ u22.aarch64 15 postgresql-15-first-last-agg postgresql-15-first-last-agg_0.1.4-4-gd63ea3b-9.pgdg22.04+1_arm64.deb pgdg 0.1.4 8.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/f/first-last-agg/postgresql-15-first-last-agg_0.1.4-4-gd63ea3b-9.pgdg22.04+1_arm64.deb
 @ u24.x86_64 15 postgresql-15-first-last-agg postgresql-15-first-last-agg_0.1.4-4-gd63ea3b-9.pgdg24.04+1_amd64.deb pgdg 0.1.4 8.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/f/first-last-agg/postgresql-15-first-last-agg_0.1.4-4-gd63ea3b-9.pgdg24.04+1_amd64.deb
 @ u24.aarch64 15 postgresql-15-first-last-agg postgresql-15-first-last-agg_0.1.4-4-gd63ea3b-9.pgdg24.04+1_arm64.deb pgdg 0.1.4 8.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/f/first-last-agg/postgresql-15-first-last-agg_0.1.4-4-gd63ea3b-9.pgdg24.04+1_arm64.deb
+@ u26.x86_64 15 postgresql-15-first-last-agg postgresql-15-first-last-agg_0.1.4-4-gd63ea3b-9.pgdg26.04+1_amd64.deb pgdg 0.1.4 8.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/f/first-last-agg/postgresql-15-first-last-agg_0.1.4-4-gd63ea3b-9.pgdg26.04+1_amd64.deb
+@ u26.aarch64 15 postgresql-15-first-last-agg postgresql-15-first-last-agg_0.1.4-4-gd63ea3b-9.pgdg26.04+1_arm64.deb pgdg 0.1.4 8.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/f/first-last-agg/postgresql-15-first-last-agg_0.1.4-4-gd63ea3b-9.pgdg26.04+1_arm64.deb
 @ el8.x86_64 14 first_last_agg_14 first_last_agg_14-0.1.4-1PIGSTY.el8.x86_64.rpm pigsty 0.1.4 11.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/first_last_agg_14-0.1.4-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 14 first_last_agg_14 first_last_agg_14-0.1.4-1PIGSTY.el8.aarch64.rpm pigsty 0.1.4 12.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/first_last_agg_14-0.1.4-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 14 first_last_agg_14 first_last_agg_14-0.1.4-1PIGSTY.el9.x86_64.rpm pigsty 0.1.4 11.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/first_last_agg_14-0.1.4-1PIGSTY.el9.x86_64.rpm
@@ -134,6 +144,8 @@ weight: 4710
 @ u22.aarch64 14 postgresql-14-first-last-agg postgresql-14-first-last-agg_0.1.4-4-gd63ea3b-9.pgdg22.04+1_arm64.deb pgdg 0.1.4 8.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/f/first-last-agg/postgresql-14-first-last-agg_0.1.4-4-gd63ea3b-9.pgdg22.04+1_arm64.deb
 @ u24.x86_64 14 postgresql-14-first-last-agg postgresql-14-first-last-agg_0.1.4-4-gd63ea3b-9.pgdg24.04+1_amd64.deb pgdg 0.1.4 8.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/f/first-last-agg/postgresql-14-first-last-agg_0.1.4-4-gd63ea3b-9.pgdg24.04+1_amd64.deb
 @ u24.aarch64 14 postgresql-14-first-last-agg postgresql-14-first-last-agg_0.1.4-4-gd63ea3b-9.pgdg24.04+1_arm64.deb pgdg 0.1.4 8.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/f/first-last-agg/postgresql-14-first-last-agg_0.1.4-4-gd63ea3b-9.pgdg24.04+1_arm64.deb
+@ u26.x86_64 14 postgresql-14-first-last-agg postgresql-14-first-last-agg_0.1.4-4-gd63ea3b-9.pgdg26.04+1_amd64.deb pgdg 0.1.4 8.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/f/first-last-agg/postgresql-14-first-last-agg_0.1.4-4-gd63ea3b-9.pgdg26.04+1_amd64.deb
+@ u26.aarch64 14 postgresql-14-first-last-agg postgresql-14-first-last-agg_0.1.4-4-gd63ea3b-9.pgdg26.04+1_arm64.deb pgdg 0.1.4 8.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/f/first-last-agg/postgresql-14-first-last-agg_0.1.4-4-gd63ea3b-9.pgdg26.04+1_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建

@@ -67,6 +67,8 @@ weight: 9400
 | u22.aarch64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.1.0 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
 | u24.x86_64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.1.0 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
 | u24.aarch64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.1.0 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| u26.x86_64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| u26.aarch64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
 @ el8.x86_64 17 spat_17 spat_17-0.1.0a4-1PIGSTY.el8.x86_64.rpm pigsty 0.1.0 36.4KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/spat_17-0.1.0a4-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 17 spat_17 spat_17-0.1.0a4-1PIGSTY.el8.aarch64.rpm pigsty 0.1.0 35.8KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/spat_17-0.1.0a4-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 17 spat_17 spat_17-0.1.0a4-1PIGSTY.el9.x86_64.rpm pigsty 0.1.0 36.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/spat_17-0.1.0a4-1PIGSTY.el9.x86_64.rpm

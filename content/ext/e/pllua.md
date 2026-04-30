@@ -66,6 +66,8 @@ weight: 3020
 | u22.aarch64 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 |
 | u24.x86_64 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 |
 | u24.aarch64 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 |
+| u26.x86_64 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 |
+| u26.aarch64 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 |
 @ d12.x86_64 18 postgresql-18-pllua postgresql-18-pllua_2.0.12-7.pgdg12+1_amd64.deb pgdg 2.0.12 347.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-18-pllua_2.0.12-7.pgdg12+1_amd64.deb
 @ d12.aarch64 18 postgresql-18-pllua postgresql-18-pllua_2.0.12-7.pgdg12+1_arm64.deb pgdg 2.0.12 336.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-18-pllua_2.0.12-7.pgdg12+1_arm64.deb
 @ d13.x86_64 18 postgresql-18-pllua postgresql-18-pllua_2.0.12-7.pgdg13+1_amd64.deb pgdg 2.0.12 348.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-18-pllua_2.0.12-7.pgdg13+1_amd64.deb
@@ -74,6 +76,8 @@ weight: 3020
 @ u22.aarch64 18 postgresql-18-pllua postgresql-18-pllua_2.0.12-7.pgdg22.04+1_arm64.deb pgdg 2.0.12 341.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-18-pllua_2.0.12-7.pgdg22.04+1_arm64.deb
 @ u24.x86_64 18 postgresql-18-pllua postgresql-18-pllua_2.0.12-7.pgdg24.04+1_amd64.deb pgdg 2.0.12 347.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-18-pllua_2.0.12-7.pgdg24.04+1_amd64.deb
 @ u24.aarch64 18 postgresql-18-pllua postgresql-18-pllua_2.0.12-7.pgdg24.04+1_arm64.deb pgdg 2.0.12 335.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-18-pllua_2.0.12-7.pgdg24.04+1_arm64.deb
+@ u26.x86_64 18 postgresql-18-pllua postgresql-18-pllua_2.0.12-7.pgdg26.04+1_amd64.deb pgdg 2.0.12 345.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-18-pllua_2.0.12-7.pgdg26.04+1_amd64.deb
+@ u26.aarch64 18 postgresql-18-pllua postgresql-18-pllua_2.0.12-7.pgdg26.04+1_arm64.deb pgdg 2.0.12 332.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-18-pllua_2.0.12-7.pgdg26.04+1_arm64.deb
 @ el8.x86_64 17 pllua_17 pllua_17-2.0.12-3PGDG.rhel8.x86_64.rpm pgdg 2.0.12 119.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pllua_17-2.0.12-3PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 17 pllua_17 pllua_17-2.0.12-3PGDG.rhel8.aarch64.rpm pgdg 2.0.12 110.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pllua_17-2.0.12-3PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 17 pllua_17 pllua_17-2.0.12-3PGDG.rhel9.x86_64.rpm pgdg 2.0.12 120.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pllua_17-2.0.12-3PGDG.rhel9.x86_64.rpm
@@ -88,6 +92,8 @@ weight: 3020
 @ u22.aarch64 17 postgresql-17-pllua postgresql-17-pllua_2.0.12-7.pgdg22.04+1_arm64.deb pgdg 2.0.12 379.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-17-pllua_2.0.12-7.pgdg22.04+1_arm64.deb
 @ u24.x86_64 17 postgresql-17-pllua postgresql-17-pllua_2.0.12-7.pgdg24.04+1_amd64.deb pgdg 2.0.12 347.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-17-pllua_2.0.12-7.pgdg24.04+1_amd64.deb
 @ u24.aarch64 17 postgresql-17-pllua postgresql-17-pllua_2.0.12-7.pgdg24.04+1_arm64.deb pgdg 2.0.12 335.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-17-pllua_2.0.12-7.pgdg24.04+1_arm64.deb
+@ u26.x86_64 17 postgresql-17-pllua postgresql-17-pllua_2.0.12-7.pgdg26.04+1_amd64.deb pgdg 2.0.12 344.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-17-pllua_2.0.12-7.pgdg26.04+1_amd64.deb
+@ u26.aarch64 17 postgresql-17-pllua postgresql-17-pllua_2.0.12-7.pgdg26.04+1_arm64.deb pgdg 2.0.12 331.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-17-pllua_2.0.12-7.pgdg26.04+1_arm64.deb
 @ el8.x86_64 16 pllua_16 pllua_16-2.0.12-1PGDG.rhel8.x86_64.rpm pgdg 2.0.12 119.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pllua_16-2.0.12-1PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 16 pllua_16 pllua_16-2.0.12-1PGDG.rhel8.aarch64.rpm pgdg 2.0.12 110.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pllua_16-2.0.12-1PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 16 pllua_16 pllua_16-2.0.12-1PGDG.rhel9.x86_64.rpm pgdg 2.0.12 120.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pllua_16-2.0.12-1PGDG.rhel9.x86_64.rpm
@@ -102,6 +108,8 @@ weight: 3020
 @ u22.aarch64 16 postgresql-16-pllua postgresql-16-pllua_2.0.12-7.pgdg22.04+1_arm64.deb pgdg 2.0.12 377.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-16-pllua_2.0.12-7.pgdg22.04+1_arm64.deb
 @ u24.x86_64 16 postgresql-16-pllua postgresql-16-pllua_2.0.12-7.pgdg24.04+1_amd64.deb pgdg 2.0.12 347.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-16-pllua_2.0.12-7.pgdg24.04+1_amd64.deb
 @ u24.aarch64 16 postgresql-16-pllua postgresql-16-pllua_2.0.12-7.pgdg24.04+1_arm64.deb pgdg 2.0.12 335.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-16-pllua_2.0.12-7.pgdg24.04+1_arm64.deb
+@ u26.x86_64 16 postgresql-16-pllua postgresql-16-pllua_2.0.12-7.pgdg26.04+1_amd64.deb pgdg 2.0.12 344.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-16-pllua_2.0.12-7.pgdg26.04+1_amd64.deb
+@ u26.aarch64 16 postgresql-16-pllua postgresql-16-pllua_2.0.12-7.pgdg26.04+1_arm64.deb pgdg 2.0.12 331.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-16-pllua_2.0.12-7.pgdg26.04+1_arm64.deb
 @ el8.x86_64 15 pllua_15 pllua_15-2.0.11-1.rhel8.x86_64.rpm pgdg 2.0.11 120.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pllua_15-2.0.11-1.rhel8.x86_64.rpm
 @ el8.x86_64 15 pllua_15 pllua_15-2.0.10-1.rhel8.x86_64.rpm pgdg 2.0.10 120.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pllua_15-2.0.10-1.rhel8.x86_64.rpm
 @ el9.x86_64 15 pllua_15 pllua_15-2.0.11-1.rhel9.x86_64.rpm pgdg 2.0.11 123.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pllua_15-2.0.11-1.rhel9.x86_64.rpm
@@ -116,6 +124,8 @@ weight: 3020
 @ u22.aarch64 15 postgresql-15-pllua postgresql-15-pllua_2.0.12-7.pgdg22.04+1_arm64.deb pgdg 2.0.12 380.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-15-pllua_2.0.12-7.pgdg22.04+1_arm64.deb
 @ u24.x86_64 15 postgresql-15-pllua postgresql-15-pllua_2.0.12-7.pgdg24.04+1_amd64.deb pgdg 2.0.12 348.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-15-pllua_2.0.12-7.pgdg24.04+1_amd64.deb
 @ u24.aarch64 15 postgresql-15-pllua postgresql-15-pllua_2.0.12-7.pgdg24.04+1_arm64.deb pgdg 2.0.12 337.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-15-pllua_2.0.12-7.pgdg24.04+1_arm64.deb
+@ u26.x86_64 15 postgresql-15-pllua postgresql-15-pllua_2.0.12-7.pgdg26.04+1_amd64.deb pgdg 2.0.12 346.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-15-pllua_2.0.12-7.pgdg26.04+1_amd64.deb
+@ u26.aarch64 15 postgresql-15-pllua postgresql-15-pllua_2.0.12-7.pgdg26.04+1_arm64.deb pgdg 2.0.12 333.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-15-pllua_2.0.12-7.pgdg26.04+1_arm64.deb
 @ el8.x86_64 14 pllua_14 pllua_14-2.0.11-1.rhel8.x86_64.rpm pgdg 2.0.11 121.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pllua_14-2.0.11-1.rhel8.x86_64.rpm
 @ el8.x86_64 14 pllua_14 pllua_14-2.0.10-1.rhel8.x86_64.rpm pgdg 2.0.10 120.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pllua_14-2.0.10-1.rhel8.x86_64.rpm
 @ el9.x86_64 14 pllua_14 pllua_14-2.0.11-1.rhel9.x86_64.rpm pgdg 2.0.11 123.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pllua_14-2.0.11-1.rhel9.x86_64.rpm
@@ -129,6 +139,8 @@ weight: 3020
 @ u22.aarch64 14 postgresql-14-pllua postgresql-14-pllua_2.0.12-7.pgdg22.04+1_arm64.deb pgdg 2.0.12 375.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-14-pllua_2.0.12-7.pgdg22.04+1_arm64.deb
 @ u24.x86_64 14 postgresql-14-pllua postgresql-14-pllua_2.0.12-7.pgdg24.04+1_amd64.deb pgdg 2.0.12 348.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-14-pllua_2.0.12-7.pgdg24.04+1_amd64.deb
 @ u24.aarch64 14 postgresql-14-pllua postgresql-14-pllua_2.0.12-7.pgdg24.04+1_arm64.deb pgdg 2.0.12 336.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-14-pllua_2.0.12-7.pgdg24.04+1_arm64.deb
+@ u26.x86_64 14 postgresql-14-pllua postgresql-14-pllua_2.0.12-7.pgdg26.04+1_amd64.deb pgdg 2.0.12 346.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-14-pllua_2.0.12-7.pgdg26.04+1_amd64.deb
+@ u26.aarch64 14 postgresql-14-pllua postgresql-14-pllua_2.0.12-7.pgdg26.04+1_arm64.deb pgdg 2.0.12 333.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pllua/postgresql-14-pllua_2.0.12-7.pgdg26.04+1_arm64.deb
 {{< /pgext_matrix >}}
 
 

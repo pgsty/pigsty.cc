@@ -64,6 +64,8 @@ weight: 4530
 | u22.aarch64 | AVAIL PIGSTY 1.2.2 1 | AVAIL PIGSTY 1.2.2 1 | AVAIL PIGSTY 1.2.2 1 | AVAIL PIGSTY 1.2.2 1 | AVAIL PIGSTY 1.2.2 1 |
 | u24.x86_64 | AVAIL PIGSTY 1.2.2 1 | AVAIL PIGSTY 1.2.2 1 | AVAIL PIGSTY 1.2.2 1 | AVAIL PIGSTY 1.2.2 1 | AVAIL PIGSTY 1.2.2 1 |
 | u24.aarch64 | AVAIL PIGSTY 1.2.2 1 | AVAIL PIGSTY 1.2.2 1 | AVAIL PIGSTY 1.2.2 1 | AVAIL PIGSTY 1.2.2 1 | AVAIL PIGSTY 1.2.2 1 |
+| u26.x86_64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| u26.aarch64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
 @ el8.x86_64 18 permuteseq_18 permuteseq_18-1.2.2-1PIGSTY.el8.x86_64.rpm pigsty 1.2.2 13.2KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/permuteseq_18-1.2.2-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 18 permuteseq_18 permuteseq_18-1.2.2-1PIGSTY.el8.aarch64.rpm pigsty 1.2.2 13.4KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/permuteseq_18-1.2.2-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 18 permuteseq_18 permuteseq_18-1.2.2-1PIGSTY.el9.x86_64.rpm pigsty 1.2.2 13.1KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/permuteseq_18-1.2.2-1PIGSTY.el9.x86_64.rpm

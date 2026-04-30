@@ -64,6 +64,8 @@ weight: 6000
 | u22.aarch64 | AVAIL PIGSTY 4.11 1 | AVAIL PIGSTY 4.11 1 | AVAIL PIGSTY 4.11 1 | AVAIL PIGSTY 4.11 1 | AVAIL PIGSTY 4.11 1 |
 | u24.x86_64 | AVAIL PIGSTY 4.11 1 | AVAIL PIGSTY 4.11 1 | AVAIL PIGSTY 4.11 1 | AVAIL PIGSTY 4.11 1 | AVAIL PIGSTY 4.11 1 |
 | u24.aarch64 | AVAIL PIGSTY 4.11 1 | AVAIL PIGSTY 4.11 1 | AVAIL PIGSTY 4.11 1 | AVAIL PIGSTY 4.11 1 | AVAIL PIGSTY 4.11 1 |
+| u26.x86_64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| u26.aarch64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
 @ el8.x86_64 18 pg_profile_18 pg_profile_18-4.11-1PGDG.rhel8.noarch.rpm pgdg 4.11 214.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pg_profile_18-4.11-1PGDG.rhel8.noarch.rpm
 @ el8.x86_64 18 pg_profile_18 pg_profile_18-4.10-1PGDG.rhel8.noarch.rpm pgdg 4.10 214.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pg_profile_18-4.10-1PGDG.rhel8.noarch.rpm
 @ el8.aarch64 18 pg_profile_18 pg_profile_18-4.11-1PGDG.rhel8.noarch.rpm pgdg 4.11 214.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pg_profile_18-4.11-1PGDG.rhel8.noarch.rpm

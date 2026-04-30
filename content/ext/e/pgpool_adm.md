@@ -61,6 +61,8 @@ weight: 5900
 | u22.aarch64 | AVAIL PGDG 4.7.1 2 | AVAIL PGDG 4.7.1 2 | AVAIL PGDG 4.7.1 2 | AVAIL PGDG 4.7.1 2 | AVAIL PGDG 4.7.1 2 |
 | u24.x86_64 | AVAIL PGDG 4.7.1 2 | AVAIL PGDG 4.7.1 2 | AVAIL PGDG 4.7.1 2 | AVAIL PGDG 4.7.1 2 | AVAIL PGDG 4.7.1 2 |
 | u24.aarch64 | AVAIL PGDG 4.7.1 2 | AVAIL PGDG 4.7.1 2 | AVAIL PGDG 4.7.1 2 | AVAIL PGDG 4.7.1 2 | AVAIL PGDG 4.7.1 2 |
+| u26.x86_64 | AVAIL PGDG 4.7.1 2 | AVAIL PGDG 4.7.1 2 | AVAIL PGDG 4.7.1 2 | AVAIL PGDG 4.7.1 2 | AVAIL PGDG 4.7.1 2 |
+| u26.aarch64 | AVAIL PGDG 4.7.1 2 | AVAIL PGDG 4.7.1 2 | AVAIL PGDG 4.7.1 2 | AVAIL PGDG 4.7.1 2 | AVAIL PGDG 4.7.1 2 |
 @ el8.x86_64 18 pgpool-II-pg18-extensions pgpool-II-pg18-extensions-4.7.1-1PGDG.rhel8.10.x86_64.rpm pgdg 4.7.1 33.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pgpool-II-pg18-extensions-4.7.1-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 18 pgpool-II-pg18-extensions pgpool-II-pg18-extensions-4.7.0-1PGDG.rhel8.10.x86_64.rpm pgdg 4.7.0 33.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pgpool-II-pg18-extensions-4.7.0-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 18 pgpool-II-pg18-extensions pgpool-II-pg18-extensions-4.6.5-1PGDG.rhel8.10.x86_64.rpm pgdg 4.6.5 32.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pgpool-II-pg18-extensions-4.6.5-1PGDG.rhel8.10.x86_64.rpm
@@ -107,6 +109,10 @@ weight: 5900
 @ u24.x86_64 18 postgresql-18-pgpool2 postgresql-18-pgpool2_4.7.0-1.pgdg24.04+1_amd64.deb pgdg 4.7.0 155.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgpool2/postgresql-18-pgpool2_4.7.0-1.pgdg24.04+1_amd64.deb
 @ u24.aarch64 18 postgresql-18-pgpool2 postgresql-18-pgpool2_4.7.1-1.pgdg24.04+1_arm64.deb pgdg 4.7.1 155.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgpool2/postgresql-18-pgpool2_4.7.1-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 18 postgresql-18-pgpool2 postgresql-18-pgpool2_4.7.0-1.pgdg24.04+1_arm64.deb pgdg 4.7.0 155.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgpool2/postgresql-18-pgpool2_4.7.0-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 18 postgresql-18-pgpool2 postgresql-18-pgpool2_4.7.1-1.pgdg26.04+1_amd64.deb pgdg 4.7.1 156.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgpool2/postgresql-18-pgpool2_4.7.1-1.pgdg26.04+1_amd64.deb
+@ u26.x86_64 18 postgresql-18-pgpool2 postgresql-18-pgpool2_4.7.0-1.pgdg26.04+1_amd64.deb pgdg 4.7.0 156.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgpool2/postgresql-18-pgpool2_4.7.0-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 18 postgresql-18-pgpool2 postgresql-18-pgpool2_4.7.1-1.pgdg26.04+1_arm64.deb pgdg 4.7.1 155.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgpool2/postgresql-18-pgpool2_4.7.1-1.pgdg26.04+1_arm64.deb
+@ u26.aarch64 18 postgresql-18-pgpool2 postgresql-18-pgpool2_4.7.0-1.pgdg26.04+1_arm64.deb pgdg 4.7.0 155.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgpool2/postgresql-18-pgpool2_4.7.0-1.pgdg26.04+1_arm64.deb
 @ el8.x86_64 17 pgpool-II-pg17-extensions pgpool-II-pg17-extensions-4.7.1-1PGDG.rhel8.10.x86_64.rpm pgdg 4.7.1 33.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pgpool-II-pg17-extensions-4.7.1-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 pgpool-II-pg17-extensions pgpool-II-pg17-extensions-4.7.0-1PGDG.rhel8.10.x86_64.rpm pgdg 4.7.0 33.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pgpool-II-pg17-extensions-4.7.0-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 pgpool-II-pg17-extensions pgpool-II-pg17-extensions-4.6.5-1PGDG.rhel8.10.x86_64.rpm pgdg 4.6.5 32.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pgpool-II-pg17-extensions-4.6.5-1PGDG.rhel8.10.x86_64.rpm
@@ -179,6 +185,10 @@ weight: 5900
 @ u24.x86_64 17 postgresql-17-pgpool2 postgresql-17-pgpool2_4.7.0-1.pgdg24.04+1_amd64.deb pgdg 4.7.0 155.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgpool2/postgresql-17-pgpool2_4.7.0-1.pgdg24.04+1_amd64.deb
 @ u24.aarch64 17 postgresql-17-pgpool2 postgresql-17-pgpool2_4.7.1-1.pgdg24.04+1_arm64.deb pgdg 4.7.1 155.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgpool2/postgresql-17-pgpool2_4.7.1-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 17 postgresql-17-pgpool2 postgresql-17-pgpool2_4.7.0-1.pgdg24.04+1_arm64.deb pgdg 4.7.0 155.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgpool2/postgresql-17-pgpool2_4.7.0-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 17 postgresql-17-pgpool2 postgresql-17-pgpool2_4.7.1-1.pgdg26.04+1_amd64.deb pgdg 4.7.1 156.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgpool2/postgresql-17-pgpool2_4.7.1-1.pgdg26.04+1_amd64.deb
+@ u26.x86_64 17 postgresql-17-pgpool2 postgresql-17-pgpool2_4.7.0-1.pgdg26.04+1_amd64.deb pgdg 4.7.0 156.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgpool2/postgresql-17-pgpool2_4.7.0-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 17 postgresql-17-pgpool2 postgresql-17-pgpool2_4.7.1-1.pgdg26.04+1_arm64.deb pgdg 4.7.1 155.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgpool2/postgresql-17-pgpool2_4.7.1-1.pgdg26.04+1_arm64.deb
+@ u26.aarch64 17 postgresql-17-pgpool2 postgresql-17-pgpool2_4.7.0-1.pgdg26.04+1_arm64.deb pgdg 4.7.0 155.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgpool2/postgresql-17-pgpool2_4.7.0-1.pgdg26.04+1_arm64.deb
 @ el8.x86_64 16 pgpool-II-pg16-extensions pgpool-II-pg16-extensions-4.7.1-1PGDG.rhel8.10.x86_64.rpm pgdg 4.7.1 33.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pgpool-II-pg16-extensions-4.7.1-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 pgpool-II-pg16-extensions pgpool-II-pg16-extensions-4.7.0-1PGDG.rhel8.10.x86_64.rpm pgdg 4.7.0 33.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pgpool-II-pg16-extensions-4.7.0-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 pgpool-II-pg16-extensions pgpool-II-pg16-extensions-4.6.5-1PGDG.rhel8.10.x86_64.rpm pgdg 4.6.5 32.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pgpool-II-pg16-extensions-4.6.5-1PGDG.rhel8.10.x86_64.rpm
@@ -263,6 +273,10 @@ weight: 5900
 @ u24.x86_64 16 postgresql-16-pgpool2 postgresql-16-pgpool2_4.7.0-1.pgdg24.04+1_amd64.deb pgdg 4.7.0 155.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgpool2/postgresql-16-pgpool2_4.7.0-1.pgdg24.04+1_amd64.deb
 @ u24.aarch64 16 postgresql-16-pgpool2 postgresql-16-pgpool2_4.7.1-1.pgdg24.04+1_arm64.deb pgdg 4.7.1 155.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgpool2/postgresql-16-pgpool2_4.7.1-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 16 postgresql-16-pgpool2 postgresql-16-pgpool2_4.7.0-1.pgdg24.04+1_arm64.deb pgdg 4.7.0 155.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgpool2/postgresql-16-pgpool2_4.7.0-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 16 postgresql-16-pgpool2 postgresql-16-pgpool2_4.7.1-1.pgdg26.04+1_amd64.deb pgdg 4.7.1 156.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgpool2/postgresql-16-pgpool2_4.7.1-1.pgdg26.04+1_amd64.deb
+@ u26.x86_64 16 postgresql-16-pgpool2 postgresql-16-pgpool2_4.7.0-1.pgdg26.04+1_amd64.deb pgdg 4.7.0 156.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgpool2/postgresql-16-pgpool2_4.7.0-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 16 postgresql-16-pgpool2 postgresql-16-pgpool2_4.7.1-1.pgdg26.04+1_arm64.deb pgdg 4.7.1 155.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgpool2/postgresql-16-pgpool2_4.7.1-1.pgdg26.04+1_arm64.deb
+@ u26.aarch64 16 postgresql-16-pgpool2 postgresql-16-pgpool2_4.7.0-1.pgdg26.04+1_arm64.deb pgdg 4.7.0 155.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgpool2/postgresql-16-pgpool2_4.7.0-1.pgdg26.04+1_arm64.deb
 @ el8.x86_64 15 pgpool-II-pg15-extensions pgpool-II-pg15-extensions-4.7.1-1PGDG.rhel8.10.x86_64.rpm pgdg 4.7.1 33.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pgpool-II-pg15-extensions-4.7.1-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 pgpool-II-pg15-extensions pgpool-II-pg15-extensions-4.7.0-1PGDG.rhel8.10.x86_64.rpm pgdg 4.7.0 33.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pgpool-II-pg15-extensions-4.7.0-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 pgpool-II-pg15-extensions pgpool-II-pg15-extensions-4.6.5-1PGDG.rhel8.10.x86_64.rpm pgdg 4.6.5 32.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pgpool-II-pg15-extensions-4.6.5-1PGDG.rhel8.10.x86_64.rpm
@@ -358,6 +372,10 @@ weight: 5900
 @ u24.x86_64 15 postgresql-15-pgpool2 postgresql-15-pgpool2_4.7.0-1.pgdg24.04+1_amd64.deb pgdg 4.7.0 155.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgpool2/postgresql-15-pgpool2_4.7.0-1.pgdg24.04+1_amd64.deb
 @ u24.aarch64 15 postgresql-15-pgpool2 postgresql-15-pgpool2_4.7.1-1.pgdg24.04+1_arm64.deb pgdg 4.7.1 155.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgpool2/postgresql-15-pgpool2_4.7.1-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 15 postgresql-15-pgpool2 postgresql-15-pgpool2_4.7.0-1.pgdg24.04+1_arm64.deb pgdg 4.7.0 155.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgpool2/postgresql-15-pgpool2_4.7.0-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 15 postgresql-15-pgpool2 postgresql-15-pgpool2_4.7.1-1.pgdg26.04+1_amd64.deb pgdg 4.7.1 156.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgpool2/postgresql-15-pgpool2_4.7.1-1.pgdg26.04+1_amd64.deb
+@ u26.x86_64 15 postgresql-15-pgpool2 postgresql-15-pgpool2_4.7.0-1.pgdg26.04+1_amd64.deb pgdg 4.7.0 156.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgpool2/postgresql-15-pgpool2_4.7.0-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 15 postgresql-15-pgpool2 postgresql-15-pgpool2_4.7.1-1.pgdg26.04+1_arm64.deb pgdg 4.7.1 155.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgpool2/postgresql-15-pgpool2_4.7.1-1.pgdg26.04+1_arm64.deb
+@ u26.aarch64 15 postgresql-15-pgpool2 postgresql-15-pgpool2_4.7.0-1.pgdg26.04+1_arm64.deb pgdg 4.7.0 155.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgpool2/postgresql-15-pgpool2_4.7.0-1.pgdg26.04+1_arm64.deb
 @ el8.x86_64 14 pgpool-II-pg14-extensions pgpool-II-pg14-extensions-4.7.1-1PGDG.rhel8.10.x86_64.rpm pgdg 4.7.1 33.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pgpool-II-pg14-extensions-4.7.1-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 14 pgpool-II-pg14-extensions pgpool-II-pg14-extensions-4.7.0-1PGDG.rhel8.10.x86_64.rpm pgdg 4.7.0 33.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pgpool-II-pg14-extensions-4.7.0-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 14 pgpool-II-pg14-extensions pgpool-II-pg14-extensions-4.6.5-1PGDG.rhel8.10.x86_64.rpm pgdg 4.6.5 32.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pgpool-II-pg14-extensions-4.6.5-1PGDG.rhel8.10.x86_64.rpm
@@ -458,6 +476,10 @@ weight: 5900
 @ u24.x86_64 14 postgresql-14-pgpool2 postgresql-14-pgpool2_4.7.0-1.pgdg24.04+1_amd64.deb pgdg 4.7.0 155.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgpool2/postgresql-14-pgpool2_4.7.0-1.pgdg24.04+1_amd64.deb
 @ u24.aarch64 14 postgresql-14-pgpool2 postgresql-14-pgpool2_4.7.1-1.pgdg24.04+1_arm64.deb pgdg 4.7.1 155.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgpool2/postgresql-14-pgpool2_4.7.1-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 14 postgresql-14-pgpool2 postgresql-14-pgpool2_4.7.0-1.pgdg24.04+1_arm64.deb pgdg 4.7.0 155.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgpool2/postgresql-14-pgpool2_4.7.0-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 14 postgresql-14-pgpool2 postgresql-14-pgpool2_4.7.1-1.pgdg26.04+1_amd64.deb pgdg 4.7.1 156.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgpool2/postgresql-14-pgpool2_4.7.1-1.pgdg26.04+1_amd64.deb
+@ u26.x86_64 14 postgresql-14-pgpool2 postgresql-14-pgpool2_4.7.0-1.pgdg26.04+1_amd64.deb pgdg 4.7.0 156.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgpool2/postgresql-14-pgpool2_4.7.0-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 14 postgresql-14-pgpool2 postgresql-14-pgpool2_4.7.1-1.pgdg26.04+1_arm64.deb pgdg 4.7.1 155.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgpool2/postgresql-14-pgpool2_4.7.1-1.pgdg26.04+1_arm64.deb
+@ u26.aarch64 14 postgresql-14-pgpool2 postgresql-14-pgpool2_4.7.0-1.pgdg26.04+1_arm64.deb pgdg 4.7.0 155.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgpool2/postgresql-14-pgpool2_4.7.0-1.pgdg26.04+1_arm64.deb
 {{< /pgext_matrix >}}
 
 

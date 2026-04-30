@@ -66,6 +66,8 @@ weight: 1500
 | u22.aarch64 | AVAIL PGDG 3.6.3 2 | AVAIL PGDG 3.6.3 2 | AVAIL PGDG 3.6.3 2 | AVAIL PGDG 3.6.3 2 | AVAIL PGDG 3.6.3 2 |
 | u24.x86_64 | AVAIL PGDG 3.6.3 2 | AVAIL PGDG 3.6.3 2 | AVAIL PGDG 3.6.3 2 | AVAIL PGDG 3.6.3 2 | AVAIL PGDG 3.6.3 2 |
 | u24.aarch64 | AVAIL PGDG 3.6.3 2 | AVAIL PGDG 3.6.3 2 | AVAIL PGDG 3.6.3 2 | AVAIL PGDG 3.6.3 2 | AVAIL PGDG 3.6.3 2 |
+| u26.x86_64 | AVAIL PGDG 3.6.3 2 | AVAIL PGDG 3.6.3 2 | AVAIL PGDG 3.6.3 2 | AVAIL PGDG 3.6.3 2 | AVAIL PGDG 3.6.3 2 |
+| u26.aarch64 | AVAIL PGDG 3.6.3 2 | AVAIL PGDG 3.6.3 2 | AVAIL PGDG 3.6.3 2 | AVAIL PGDG 3.6.3 2 | AVAIL PGDG 3.6.3 2 |
 @ el8.x86_64 18 postgis36_18 postgis36_18-3.6.3-1PGDG.rhel8.10.x86_64.rpm pgdg 3.6.3 5.1MiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/postgis36_18-3.6.3-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 18 postgis36_18 postgis36_18-3.6.1-1PGDG.rhel8.10.x86_64.rpm pgdg 3.6.1 5.2MiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/postgis36_18-3.6.1-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 18 postgis36_18 postgis36_18-3.6.0-1PGDG.rhel8.1.x86_64.rpm pgdg 3.6.0 5.1MiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/postgis36_18-3.6.0-1PGDG.rhel8.1.x86_64.rpm
@@ -111,6 +113,10 @@ weight: 1500
 @ u24.x86_64 18 postgresql-18-postgis-3 postgresql-18-postgis-3_3.6.2+dfsg-1.pgdg24.04+1_amd64.deb pgdg 3.6.2 3.4MiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgis/postgresql-18-postgis-3_3.6.2+dfsg-1.pgdg24.04+1_amd64.deb
 @ u24.aarch64 18 postgresql-18-postgis-3 postgresql-18-postgis-3_3.6.3+dfsg-1.pgdg24.04+1_arm64.deb pgdg 3.6.3 5.7MiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgis/postgresql-18-postgis-3_3.6.3+dfsg-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 18 postgresql-18-postgis-3 postgresql-18-postgis-3_3.6.2+dfsg-1.pgdg24.04+1_arm64.deb pgdg 3.6.2 5.7MiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgis/postgresql-18-postgis-3_3.6.2+dfsg-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 18 postgresql-18-postgis-3 postgresql-18-postgis-3_3.6.3+dfsg-1.pgdg26.04+1_amd64.deb pgdg 3.6.3 3.5MiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgis/postgresql-18-postgis-3_3.6.3+dfsg-1.pgdg26.04+1_amd64.deb
+@ u26.x86_64 18 postgresql-18-postgis-3 postgresql-18-postgis-3_3.6.2+dfsg-1.pgdg26.04+1_amd64.deb pgdg 3.6.2 3.5MiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgis/postgresql-18-postgis-3_3.6.2+dfsg-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 18 postgresql-18-postgis-3 postgresql-18-postgis-3_3.6.3+dfsg-1.pgdg26.04+1_arm64.deb pgdg 3.6.3 5.7MiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgis/postgresql-18-postgis-3_3.6.3+dfsg-1.pgdg26.04+1_arm64.deb
+@ u26.aarch64 18 postgresql-18-postgis-3 postgresql-18-postgis-3_3.6.2+dfsg-1.pgdg26.04+1_arm64.deb pgdg 3.6.2 5.7MiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgis/postgresql-18-postgis-3_3.6.2+dfsg-1.pgdg26.04+1_arm64.deb
 @ el8.x86_64 17 postgis36_17 postgis36_17-3.6.3-1PGDG.rhel8.10.x86_64.rpm pgdg 3.6.3 5.1MiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/postgis36_17-3.6.3-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 postgis36_17 postgis36_17-3.6.1-1PGDG.rhel8.10.x86_64.rpm pgdg 3.6.1 5.2MiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/postgis36_17-3.6.1-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 postgis36_17 postgis36_17-3.6.0-1PGDG.rhel8.x86_64.rpm pgdg 3.6.0 5.1MiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/postgis36_17-3.6.0-1PGDG.rhel8.x86_64.rpm
@@ -156,6 +162,10 @@ weight: 1500
 @ u24.x86_64 17 postgresql-17-postgis-3 postgresql-17-postgis-3_3.6.2+dfsg-1.pgdg24.04+1_amd64.deb pgdg 3.6.2 3.4MiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgis/postgresql-17-postgis-3_3.6.2+dfsg-1.pgdg24.04+1_amd64.deb
 @ u24.aarch64 17 postgresql-17-postgis-3 postgresql-17-postgis-3_3.6.3+dfsg-1.pgdg24.04+1_arm64.deb pgdg 3.6.3 5.6MiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgis/postgresql-17-postgis-3_3.6.3+dfsg-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 17 postgresql-17-postgis-3 postgresql-17-postgis-3_3.6.2+dfsg-1.pgdg24.04+1_arm64.deb pgdg 3.6.2 5.6MiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgis/postgresql-17-postgis-3_3.6.2+dfsg-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 17 postgresql-17-postgis-3 postgresql-17-postgis-3_3.6.3+dfsg-1.pgdg26.04+1_amd64.deb pgdg 3.6.3 3.5MiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgis/postgresql-17-postgis-3_3.6.3+dfsg-1.pgdg26.04+1_amd64.deb
+@ u26.x86_64 17 postgresql-17-postgis-3 postgresql-17-postgis-3_3.6.2+dfsg-1.pgdg26.04+1_amd64.deb pgdg 3.6.2 3.5MiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgis/postgresql-17-postgis-3_3.6.2+dfsg-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 17 postgresql-17-postgis-3 postgresql-17-postgis-3_3.6.3+dfsg-1.pgdg26.04+1_arm64.deb pgdg 3.6.3 5.7MiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgis/postgresql-17-postgis-3_3.6.3+dfsg-1.pgdg26.04+1_arm64.deb
+@ u26.aarch64 17 postgresql-17-postgis-3 postgresql-17-postgis-3_3.6.2+dfsg-1.pgdg26.04+1_arm64.deb pgdg 3.6.2 5.7MiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgis/postgresql-17-postgis-3_3.6.2+dfsg-1.pgdg26.04+1_arm64.deb
 @ el8.x86_64 16 postgis36_16 postgis36_16-3.6.3-1PGDG.rhel8.10.x86_64.rpm pgdg 3.6.3 5.1MiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/postgis36_16-3.6.3-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 postgis36_16 postgis36_16-3.6.1-1PGDG.rhel8.10.x86_64.rpm pgdg 3.6.1 5.2MiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/postgis36_16-3.6.1-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 postgis36_16 postgis36_16-3.6.0-1PGDG.rhel8.x86_64.rpm pgdg 3.6.0 5.1MiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/postgis36_16-3.6.0-1PGDG.rhel8.x86_64.rpm
@@ -201,6 +211,10 @@ weight: 1500
 @ u24.x86_64 16 postgresql-16-postgis-3 postgresql-16-postgis-3_3.6.2+dfsg-1.pgdg24.04+1_amd64.deb pgdg 3.6.2 3.4MiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgis/postgresql-16-postgis-3_3.6.2+dfsg-1.pgdg24.04+1_amd64.deb
 @ u24.aarch64 16 postgresql-16-postgis-3 postgresql-16-postgis-3_3.6.3+dfsg-1.pgdg24.04+1_arm64.deb pgdg 3.6.3 5.6MiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgis/postgresql-16-postgis-3_3.6.3+dfsg-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 16 postgresql-16-postgis-3 postgresql-16-postgis-3_3.6.2+dfsg-1.pgdg24.04+1_arm64.deb pgdg 3.6.2 5.6MiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgis/postgresql-16-postgis-3_3.6.2+dfsg-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 16 postgresql-16-postgis-3 postgresql-16-postgis-3_3.6.3+dfsg-1.pgdg26.04+1_amd64.deb pgdg 3.6.3 3.4MiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgis/postgresql-16-postgis-3_3.6.3+dfsg-1.pgdg26.04+1_amd64.deb
+@ u26.x86_64 16 postgresql-16-postgis-3 postgresql-16-postgis-3_3.6.2+dfsg-1.pgdg26.04+1_amd64.deb pgdg 3.6.2 3.4MiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgis/postgresql-16-postgis-3_3.6.2+dfsg-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 16 postgresql-16-postgis-3 postgresql-16-postgis-3_3.6.3+dfsg-1.pgdg26.04+1_arm64.deb pgdg 3.6.3 5.6MiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgis/postgresql-16-postgis-3_3.6.3+dfsg-1.pgdg26.04+1_arm64.deb
+@ u26.aarch64 16 postgresql-16-postgis-3 postgresql-16-postgis-3_3.6.2+dfsg-1.pgdg26.04+1_arm64.deb pgdg 3.6.2 5.6MiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgis/postgresql-16-postgis-3_3.6.2+dfsg-1.pgdg26.04+1_arm64.deb
 @ el8.x86_64 15 postgis36_15 postgis36_15-3.6.3-1PGDG.rhel8.10.x86_64.rpm pgdg 3.6.3 5.1MiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/postgis36_15-3.6.3-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 postgis36_15 postgis36_15-3.6.1-1PGDG.rhel8.10.x86_64.rpm pgdg 3.6.1 5.2MiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/postgis36_15-3.6.1-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 postgis36_15 postgis36_15-3.6.0-1PGDG.rhel8.x86_64.rpm pgdg 3.6.0 5.1MiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/postgis36_15-3.6.0-1PGDG.rhel8.x86_64.rpm
@@ -246,6 +260,10 @@ weight: 1500
 @ u24.x86_64 15 postgresql-15-postgis-3 postgresql-15-postgis-3_3.6.2+dfsg-1.pgdg24.04+1_amd64.deb pgdg 3.6.2 3.3MiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgis/postgresql-15-postgis-3_3.6.2+dfsg-1.pgdg24.04+1_amd64.deb
 @ u24.aarch64 15 postgresql-15-postgis-3 postgresql-15-postgis-3_3.6.3+dfsg-1.pgdg24.04+1_arm64.deb pgdg 3.6.3 5.4MiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgis/postgresql-15-postgis-3_3.6.3+dfsg-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 15 postgresql-15-postgis-3 postgresql-15-postgis-3_3.6.2+dfsg-1.pgdg24.04+1_arm64.deb pgdg 3.6.2 5.4MiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgis/postgresql-15-postgis-3_3.6.2+dfsg-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 15 postgresql-15-postgis-3 postgresql-15-postgis-3_3.6.3+dfsg-1.pgdg26.04+1_amd64.deb pgdg 3.6.3 3.4MiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgis/postgresql-15-postgis-3_3.6.3+dfsg-1.pgdg26.04+1_amd64.deb
+@ u26.x86_64 15 postgresql-15-postgis-3 postgresql-15-postgis-3_3.6.2+dfsg-1.pgdg26.04+1_amd64.deb pgdg 3.6.2 3.4MiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgis/postgresql-15-postgis-3_3.6.2+dfsg-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 15 postgresql-15-postgis-3 postgresql-15-postgis-3_3.6.3+dfsg-1.pgdg26.04+1_arm64.deb pgdg 3.6.3 5.5MiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgis/postgresql-15-postgis-3_3.6.3+dfsg-1.pgdg26.04+1_arm64.deb
+@ u26.aarch64 15 postgresql-15-postgis-3 postgresql-15-postgis-3_3.6.2+dfsg-1.pgdg26.04+1_arm64.deb pgdg 3.6.2 5.5MiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgis/postgresql-15-postgis-3_3.6.2+dfsg-1.pgdg26.04+1_arm64.deb
 @ el8.x86_64 14 postgis36_14 postgis36_14-3.6.3-1PGDG.rhel8.10.x86_64.rpm pgdg 3.6.3 5.1MiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/postgis36_14-3.6.3-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 14 postgis36_14 postgis36_14-3.6.1-1PGDG.rhel8.10.x86_64.rpm pgdg 3.6.1 5.2MiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/postgis36_14-3.6.1-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 14 postgis36_14 postgis36_14-3.6.0-1PGDG.rhel8.x86_64.rpm pgdg 3.6.0 5.1MiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/postgis36_14-3.6.0-1PGDG.rhel8.x86_64.rpm
@@ -291,6 +309,10 @@ weight: 1500
 @ u24.x86_64 14 postgresql-14-postgis-3 postgresql-14-postgis-3_3.6.2+dfsg-1.pgdg24.04+1_amd64.deb pgdg 3.6.2 3.3MiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgis/postgresql-14-postgis-3_3.6.2+dfsg-1.pgdg24.04+1_amd64.deb
 @ u24.aarch64 14 postgresql-14-postgis-3 postgresql-14-postgis-3_3.6.3+dfsg-1.pgdg24.04+1_arm64.deb pgdg 3.6.3 5.4MiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgis/postgresql-14-postgis-3_3.6.3+dfsg-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 14 postgresql-14-postgis-3 postgresql-14-postgis-3_3.6.2+dfsg-1.pgdg24.04+1_arm64.deb pgdg 3.6.2 5.4MiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgis/postgresql-14-postgis-3_3.6.2+dfsg-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 14 postgresql-14-postgis-3 postgresql-14-postgis-3_3.6.3+dfsg-1.pgdg26.04+1_amd64.deb pgdg 3.6.3 3.3MiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgis/postgresql-14-postgis-3_3.6.3+dfsg-1.pgdg26.04+1_amd64.deb
+@ u26.x86_64 14 postgresql-14-postgis-3 postgresql-14-postgis-3_3.6.2+dfsg-1.pgdg26.04+1_amd64.deb pgdg 3.6.2 3.3MiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgis/postgresql-14-postgis-3_3.6.2+dfsg-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 14 postgresql-14-postgis-3 postgresql-14-postgis-3_3.6.3+dfsg-1.pgdg26.04+1_arm64.deb pgdg 3.6.3 5.4MiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgis/postgresql-14-postgis-3_3.6.3+dfsg-1.pgdg26.04+1_arm64.deb
+@ u26.aarch64 14 postgresql-14-postgis-3 postgresql-14-postgis-3_3.6.2+dfsg-1.pgdg26.04+1_arm64.deb pgdg 3.6.2 5.4MiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgis/postgresql-14-postgis-3_3.6.2+dfsg-1.pgdg26.04+1_arm64.deb
 {{< /pgext_matrix >}}
 
 

@@ -11,10 +11,10 @@ weight: 8760
     <div class="ext-card__title">jimjonesbr/rdf_fdw</div>
     <div class="ext-card__desc">https://github.com/jimjonesbr/rdf_fdw</div>
   </a>
-  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/rdf_fdw-2.4.0.tar.gz">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/rdf_fdw-2.5.0.tar.gz">
     <div class="ext-card__kicker">源码</div>
-    <div class="ext-card__title">rdf_fdw-2.4.0.tar.gz</div>
-    <div class="ext-card__desc">rdf_fdw-2.4.0.tar.gz</div>
+    <div class="ext-card__title">rdf_fdw-2.5.0.tar.gz</div>
+    <div class="ext-card__desc">rdf_fdw-2.5.0.tar.gz</div>
   </a>
 </div>
 
@@ -25,7 +25,7 @@ weight: 8760
 
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
-| [**`rdf_fdw`**](/ext/e/rdf_fdw) | `2.4.0` | <a class="ext-badge ext-badge--cate fdw" href="/ext/cate/fdw">FDW</a> | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
+| [**`rdf_fdw`**](/ext/e/rdf_fdw) | `2.5.0` | <a class="ext-badge ext-badge--cate fdw" href="/ext/cate/fdw">FDW</a> | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
 {.ext-table}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
@@ -42,9 +42,9 @@ weight: 8760
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#fdw) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `2.4.0` | {{< pgvers "18,17,16,15,14" >}} | `rdf_fdw` | - |
-| [**RPM**](/ext/rpm#fdw) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `2.4.0` | {{< pgvers "18,17,16,15,14" >}} | `rdf_fdw_$v` | - |
-| [**DEB**](/ext/deb#fdw) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `2.4.0` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-rdf-fdw` | - |
+| [**EXT**](/ext/list#fdw) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `2.5.0` | {{< pgvers "18,17,16,15,14" >}} | `rdf_fdw` | - |
+| [**RPM**](/ext/rpm#fdw) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `2.5.0` | {{< pgvers "18,17,16,15,14" >}} | `rdf_fdw_$v` | - |
+| [**DEB**](/ext/deb#fdw) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `2.5.0` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-rdf-fdw` | - |
 {.ext-table}
 
 {{< pgext_matrix >}}
@@ -64,6 +64,8 @@ weight: 8760
 | u22.aarch64 | AVAIL PIGSTY 2.4.0 1 | AVAIL PIGSTY 2.4.0 1 | AVAIL PIGSTY 2.4.0 1 | AVAIL PIGSTY 2.4.0 1 | AVAIL PIGSTY 2.4.0 1 |
 | u24.x86_64 | AVAIL PIGSTY 2.4.0 1 | AVAIL PIGSTY 2.4.0 1 | AVAIL PIGSTY 2.4.0 1 | AVAIL PIGSTY 2.4.0 1 | AVAIL PIGSTY 2.4.0 1 |
 | u24.aarch64 | AVAIL PIGSTY 2.4.0 1 | AVAIL PIGSTY 2.4.0 1 | AVAIL PIGSTY 2.4.0 1 | AVAIL PIGSTY 2.4.0 1 | AVAIL PIGSTY 2.4.0 1 |
+| u26.x86_64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| u26.aarch64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
 @ el9.x86_64 18 rdf_fdw_18 rdf_fdw_18-2.4.0-1PIGSTY.el9.x86_64.rpm pigsty 2.4.0 138.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/rdf_fdw_18-2.4.0-1PIGSTY.el9.x86_64.rpm
 @ el9.aarch64 18 rdf_fdw_18 rdf_fdw_18-2.4.0-1PIGSTY.el9.aarch64.rpm pigsty 2.4.0 134.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/rdf_fdw_18-2.4.0-1PIGSTY.el9.aarch64.rpm
 @ el10.x86_64 18 rdf_fdw_18 rdf_fdw_18-2.4.0-1PIGSTY.el10.x86_64.rpm pigsty 2.4.0 139.3KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/rdf_fdw_18-2.4.0-1PIGSTY.el10.x86_64.rpm

@@ -68,6 +68,8 @@ weight: 2110
 | u22.aarch64 | AVAIL PIGSTY 4.0.4 1 | AVAIL PIGSTY 4.0.4 1 | AVAIL PIGSTY 4.0.4 1 | AVAIL PIGSTY 4.0.4 1 | AVAIL PIGSTY 4.0.4 1 |
 | u24.x86_64 | AVAIL PIGSTY 4.0.4 1 | AVAIL PIGSTY 4.0.4 1 | AVAIL PIGSTY 4.0.4 1 | AVAIL PIGSTY 4.0.4 1 | AVAIL PIGSTY 4.0.4 1 |
 | u24.aarch64 | AVAIL PIGSTY 4.0.4 1 | AVAIL PIGSTY 4.0.4 1 | AVAIL PIGSTY 4.0.4 1 | AVAIL PIGSTY 4.0.4 1 | AVAIL PIGSTY 4.0.4 1 |
+| u26.x86_64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| u26.aarch64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
 @ el8.x86_64 18 pgroonga_18 pgroonga_18-4.0.4-1.el8.x86_64.rpm pigsty 4.0.4 360.6KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgroonga_18-4.0.4-1.el8.x86_64.rpm
 @ el8.aarch64 18 pgroonga_18 pgroonga_18-4.0.4-1.el8.aarch64.rpm pigsty 4.0.4 348.8KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgroonga_18-4.0.4-1.el8.aarch64.rpm
 @ el9.x86_64 18 pgroonga_18 pgroonga_18-4.0.4-1.el9.x86_64.rpm pigsty 4.0.4 345.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgroonga_18-4.0.4-1.el9.x86_64.rpm

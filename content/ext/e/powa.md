@@ -62,6 +62,8 @@ weight: 6870
 | u22.aarch64 | AVAIL PGDG 5.1.1 1 | AVAIL PGDG 5.1.1 1 | AVAIL PGDG 5.1.1 1 | AVAIL PGDG 5.1.1 1 | AVAIL PGDG 5.1.1 1 |
 | u24.x86_64 | AVAIL PGDG 5.1.1 1 | AVAIL PGDG 5.1.1 1 | AVAIL PGDG 5.1.1 1 | AVAIL PGDG 5.1.1 1 | AVAIL PGDG 5.1.1 1 |
 | u24.aarch64 | AVAIL PGDG 5.1.1 1 | AVAIL PGDG 5.1.1 1 | AVAIL PGDG 5.1.1 1 | AVAIL PGDG 5.1.1 1 | AVAIL PGDG 5.1.1 1 |
+| u26.x86_64 | AVAIL PGDG 5.1.1 1 | AVAIL PGDG 5.1.1 1 | AVAIL PGDG 5.1.1 1 | AVAIL PGDG 5.1.1 1 | AVAIL PGDG 5.1.1 1 |
+| u26.aarch64 | AVAIL PGDG 5.1.1 1 | AVAIL PGDG 5.1.1 1 | AVAIL PGDG 5.1.1 1 | AVAIL PGDG 5.1.1 1 | AVAIL PGDG 5.1.1 1 |
 @ el8.x86_64 18 powa_18 powa_18-5.1.0-1PGDG.rhel8.10.x86_64.rpm pgdg 5.1.0 6.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/powa_18-5.1.0-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 18 powa_18 powa_18-5.0.1-1PGDG.rhel8.x86_64.rpm pgdg 5.0.1 6.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/powa_18-5.0.1-1PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 18 powa_18 powa_18-5.1.0-1PGDG.rhel8.10.aarch64.rpm pgdg 5.1.0 6.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/powa_18-5.1.0-1PGDG.rhel8.10.aarch64.rpm
@@ -82,6 +84,8 @@ weight: 6870
 @ u22.aarch64 18 postgresql-18-powa postgresql-18-powa_5.1.1-1.pgdg22.04+1_arm64.deb pgdg 5.1.1 59.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-18-powa_5.1.1-1.pgdg22.04+1_arm64.deb
 @ u24.x86_64 18 postgresql-18-powa postgresql-18-powa_5.1.1-1.pgdg24.04+1_amd64.deb pgdg 5.1.1 59.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-18-powa_5.1.1-1.pgdg24.04+1_amd64.deb
 @ u24.aarch64 18 postgresql-18-powa postgresql-18-powa_5.1.1-1.pgdg24.04+1_arm64.deb pgdg 5.1.1 58.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-18-powa_5.1.1-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 18 postgresql-18-powa postgresql-18-powa_5.1.1-1.pgdg26.04+1_amd64.deb pgdg 5.1.1 58.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-18-powa_5.1.1-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 18 postgresql-18-powa postgresql-18-powa_5.1.1-1.pgdg26.04+1_arm64.deb pgdg 5.1.1 58.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-18-powa_5.1.1-1.pgdg26.04+1_arm64.deb
 @ el8.x86_64 17 powa_17 powa_17-5.1.0-1PGDG.rhel8.10.x86_64.rpm pgdg 5.1.0 6.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/powa_17-5.1.0-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 powa_17 powa_17-5.0.1-1PGDG.rhel8.x86_64.rpm pgdg 5.0.1 6.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/powa_17-5.0.1-1PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 17 powa_17 powa_17-5.1.0-1PGDG.rhel8.10.aarch64.rpm pgdg 5.1.0 6.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/powa_17-5.1.0-1PGDG.rhel8.10.aarch64.rpm
@@ -98,6 +102,8 @@ weight: 6870
 @ u22.aarch64 17 postgresql-17-powa postgresql-17-powa_5.1.1-1.pgdg22.04+1_arm64.deb pgdg 5.1.1 63.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-17-powa_5.1.1-1.pgdg22.04+1_arm64.deb
 @ u24.x86_64 17 postgresql-17-powa postgresql-17-powa_5.1.1-1.pgdg24.04+1_amd64.deb pgdg 5.1.1 59.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-17-powa_5.1.1-1.pgdg24.04+1_amd64.deb
 @ u24.aarch64 17 postgresql-17-powa postgresql-17-powa_5.1.1-1.pgdg24.04+1_arm64.deb pgdg 5.1.1 58.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-17-powa_5.1.1-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 17 postgresql-17-powa postgresql-17-powa_5.1.1-1.pgdg26.04+1_amd64.deb pgdg 5.1.1 59.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-17-powa_5.1.1-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 17 postgresql-17-powa postgresql-17-powa_5.1.1-1.pgdg26.04+1_arm64.deb pgdg 5.1.1 58.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-17-powa_5.1.1-1.pgdg26.04+1_arm64.deb
 @ el8.x86_64 16 powa_16 powa_16-5.1.0-1PGDG.rhel8.10.x86_64.rpm pgdg 5.1.0 6.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/powa_16-5.1.0-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 powa_16 powa_16-5.0.1-1PGDG.rhel8.x86_64.rpm pgdg 5.0.1 6.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/powa_16-5.0.1-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 16 powa_16 powa_16-4.2.2-1PGDG.rhel8.x86_64.rpm pgdg 4.2.2 6.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/powa_16-4.2.2-1PGDG.rhel8.x86_64.rpm
@@ -130,6 +136,8 @@ weight: 6870
 @ u22.aarch64 16 postgresql-16-powa postgresql-16-powa_5.1.1-1.pgdg22.04+1_arm64.deb pgdg 5.1.1 63.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-16-powa_5.1.1-1.pgdg22.04+1_arm64.deb
 @ u24.x86_64 16 postgresql-16-powa postgresql-16-powa_5.1.1-1.pgdg24.04+1_amd64.deb pgdg 5.1.1 59.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-16-powa_5.1.1-1.pgdg24.04+1_amd64.deb
 @ u24.aarch64 16 postgresql-16-powa postgresql-16-powa_5.1.1-1.pgdg24.04+1_arm64.deb pgdg 5.1.1 58.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-16-powa_5.1.1-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 16 postgresql-16-powa postgresql-16-powa_5.1.1-1.pgdg26.04+1_amd64.deb pgdg 5.1.1 59.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-16-powa_5.1.1-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 16 postgresql-16-powa postgresql-16-powa_5.1.1-1.pgdg26.04+1_arm64.deb pgdg 5.1.1 58.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-16-powa_5.1.1-1.pgdg26.04+1_arm64.deb
 @ el8.x86_64 15 powa_15 powa_15-5.1.0-1PGDG.rhel8.10.x86_64.rpm pgdg 5.1.0 6.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/powa_15-5.1.0-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 powa_15 powa_15-5.0.1-1PGDG.rhel8.x86_64.rpm pgdg 5.0.1 6.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/powa_15-5.0.1-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 15 powa_15 powa_15-4.2.2-1PGDG.rhel8.x86_64.rpm pgdg 4.2.2 6.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/powa_15-4.2.2-1PGDG.rhel8.x86_64.rpm
@@ -166,6 +174,8 @@ weight: 6870
 @ u22.aarch64 15 postgresql-15-powa postgresql-15-powa_5.1.1-1.pgdg22.04+1_arm64.deb pgdg 5.1.1 63.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-15-powa_5.1.1-1.pgdg22.04+1_arm64.deb
 @ u24.x86_64 15 postgresql-15-powa postgresql-15-powa_5.1.1-1.pgdg24.04+1_amd64.deb pgdg 5.1.1 59.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-15-powa_5.1.1-1.pgdg24.04+1_amd64.deb
 @ u24.aarch64 15 postgresql-15-powa postgresql-15-powa_5.1.1-1.pgdg24.04+1_arm64.deb pgdg 5.1.1 59.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-15-powa_5.1.1-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 15 postgresql-15-powa postgresql-15-powa_5.1.1-1.pgdg26.04+1_amd64.deb pgdg 5.1.1 59.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-15-powa_5.1.1-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 15 postgresql-15-powa postgresql-15-powa_5.1.1-1.pgdg26.04+1_arm64.deb pgdg 5.1.1 59.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-15-powa_5.1.1-1.pgdg26.04+1_arm64.deb
 @ el8.x86_64 14 powa_14 powa_14-5.1.0-1PGDG.rhel8.10.x86_64.rpm pgdg 5.1.0 6.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/powa_14-5.1.0-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 14 powa_14 powa_14-5.0.1-1PGDG.rhel8.x86_64.rpm pgdg 5.0.1 6.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/powa_14-5.0.1-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 14 powa_14 powa_14-4.2.2-1PGDG.rhel8.x86_64.rpm pgdg 4.2.2 6.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/powa_14-4.2.2-1PGDG.rhel8.x86_64.rpm
@@ -205,6 +215,8 @@ weight: 6870
 @ u22.aarch64 14 postgresql-14-powa postgresql-14-powa_5.1.1-1.pgdg22.04+1_arm64.deb pgdg 5.1.1 64.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-14-powa_5.1.1-1.pgdg22.04+1_arm64.deb
 @ u24.x86_64 14 postgresql-14-powa postgresql-14-powa_5.1.1-1.pgdg24.04+1_amd64.deb pgdg 5.1.1 61.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-14-powa_5.1.1-1.pgdg24.04+1_amd64.deb
 @ u24.aarch64 14 postgresql-14-powa postgresql-14-powa_5.1.1-1.pgdg24.04+1_arm64.deb pgdg 5.1.1 61.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-14-powa_5.1.1-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 14 postgresql-14-powa postgresql-14-powa_5.1.1-1.pgdg26.04+1_amd64.deb pgdg 5.1.1 61.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-14-powa_5.1.1-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 14 postgresql-14-powa postgresql-14-powa_5.1.1-1.pgdg26.04+1_arm64.deb pgdg 5.1.1 60.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-14-powa_5.1.1-1.pgdg26.04+1_arm64.deb
 {{< /pgext_matrix >}}
 
 

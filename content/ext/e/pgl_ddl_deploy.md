@@ -59,6 +59,8 @@ weight: 9520
 | u22.aarch64 | MISS PGDG - 0 | AVAIL PGDG 2.2.1 1 | AVAIL PGDG 2.2.1 1 | AVAIL PGDG 2.2.1 1 | AVAIL PGDG 2.2.1 1 |
 | u24.x86_64 | MISS PGDG - 0 | AVAIL PGDG 2.2.1 1 | AVAIL PGDG 2.2.1 1 | AVAIL PGDG 2.2.1 1 | AVAIL PGDG 2.2.1 1 |
 | u24.aarch64 | MISS PGDG - 0 | AVAIL PGDG 2.2.1 1 | AVAIL PGDG 2.2.1 1 | AVAIL PGDG 2.2.1 1 | AVAIL PGDG 2.2.1 1 |
+| u26.x86_64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
+| u26.aarch64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
 @ el8.x86_64 17 pgl_ddl_deploy_17 pgl_ddl_deploy_17-2.2.1-2PGDG.rhel8.x86_64.rpm pgdg 2.2.1 39.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pgl_ddl_deploy_17-2.2.1-2PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 17 pgl_ddl_deploy_17 pgl_ddl_deploy_17-2.2.1-2PGDG.rhel8.aarch64.rpm pgdg 2.2.1 39.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pgl_ddl_deploy_17-2.2.1-2PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 17 pgl_ddl_deploy_17 pgl_ddl_deploy_17-2.2.1-2PGDG.rhel9.x86_64.rpm pgdg 2.2.1 38.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pgl_ddl_deploy_17-2.2.1-2PGDG.rhel9.x86_64.rpm

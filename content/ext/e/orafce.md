@@ -62,6 +62,8 @@ weight: 9100
 | u22.aarch64 | AVAIL PGDG 4.16.5 3 | AVAIL PGDG 4.16.5 3 | AVAIL PGDG 4.16.5 3 | AVAIL PGDG 4.16.5 3 | AVAIL PGDG 4.16.5 3 |
 | u24.x86_64 | AVAIL PGDG 4.16.5 3 | AVAIL PGDG 4.16.5 3 | AVAIL PGDG 4.16.5 3 | AVAIL PGDG 4.16.5 3 | AVAIL PGDG 4.16.5 3 |
 | u24.aarch64 | AVAIL PGDG 4.16.5 3 | AVAIL PGDG 4.16.5 3 | AVAIL PGDG 4.16.5 3 | AVAIL PGDG 4.16.5 3 | AVAIL PGDG 4.16.5 3 |
+| u26.x86_64 | AVAIL PGDG 4.16.5 3 | AVAIL PGDG 4.16.5 3 | AVAIL PGDG 4.16.5 3 | AVAIL PGDG 4.16.5 3 | AVAIL PGDG 4.16.5 3 |
+| u26.aarch64 | AVAIL PGDG 4.16.5 3 | AVAIL PGDG 4.16.5 3 | AVAIL PGDG 4.16.5 3 | AVAIL PGDG 4.16.5 3 | AVAIL PGDG 4.16.5 3 |
 @ el8.x86_64 18 orafce_18 orafce_18-4.16.5-1PGDG.rhel8.10.x86_64.rpm pgdg 4.16.5 153.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/orafce_18-4.16.5-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 18 orafce_18 orafce_18-4.16.2-2PGDG.rhel8.x86_64.rpm pgdg 4.16.2 152.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/orafce_18-4.16.2-2PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 18 orafce_18 orafce_18-4.14.6-1PGDG.rhel8.x86_64.rpm pgdg 4.14.6 151.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/orafce_18-4.14.6-1PGDG.rhel8.x86_64.rpm
@@ -114,6 +116,12 @@ weight: 9100
 @ u24.aarch64 18 postgresql-18-orafce postgresql-18-orafce_4.16.5-1.pgdg24.04+1_arm64.deb pgdg 4.16.5 354.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/orafce/postgresql-18-orafce_4.16.5-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 18 postgresql-18-orafce postgresql-18-orafce_4.16.4-1.pgdg24.04+1_arm64.deb pgdg 4.16.4 354.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/orafce/postgresql-18-orafce_4.16.4-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 18 postgresql-18-orafce postgresql-18-orafce_4.16.3-1.pgdg24.04+1_arm64.deb pgdg 4.16.3 355.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/orafce/postgresql-18-orafce_4.16.3-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 18 postgresql-18-orafce postgresql-18-orafce_4.16.5-1.pgdg26.04+1_amd64.deb pgdg 4.16.5 357.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/orafce/postgresql-18-orafce_4.16.5-1.pgdg26.04+1_amd64.deb
+@ u26.x86_64 18 postgresql-18-orafce postgresql-18-orafce_4.16.4-1.pgdg26.04+1_amd64.deb pgdg 4.16.4 358.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/orafce/postgresql-18-orafce_4.16.4-1.pgdg26.04+1_amd64.deb
+@ u26.x86_64 18 postgresql-18-orafce postgresql-18-orafce_4.16.3-1.pgdg26.04+1_amd64.deb pgdg 4.16.3 358.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/orafce/postgresql-18-orafce_4.16.3-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 18 postgresql-18-orafce postgresql-18-orafce_4.16.5-1.pgdg26.04+1_arm64.deb pgdg 4.16.5 351.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/orafce/postgresql-18-orafce_4.16.5-1.pgdg26.04+1_arm64.deb
+@ u26.aarch64 18 postgresql-18-orafce postgresql-18-orafce_4.16.4-1.pgdg26.04+1_arm64.deb pgdg 4.16.4 351.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/orafce/postgresql-18-orafce_4.16.4-1.pgdg26.04+1_arm64.deb
+@ u26.aarch64 18 postgresql-18-orafce postgresql-18-orafce_4.16.3-1.pgdg26.04+1_arm64.deb pgdg 4.16.3 351.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/orafce/postgresql-18-orafce_4.16.3-1.pgdg26.04+1_arm64.deb
 @ el8.x86_64 17 orafce_17 orafce_17-4.16.5-1PGDG.rhel8.10.x86_64.rpm pgdg 4.16.5 153.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/orafce_17-4.16.5-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 orafce_17 orafce_17-4.16.2-2PGDG.rhel8.x86_64.rpm pgdg 4.16.2 152.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/orafce_17-4.16.2-2PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 17 orafce_17 orafce_17-4.14.6-1PGDG.rhel8.x86_64.rpm pgdg 4.14.6 151.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/orafce_17-4.14.6-1PGDG.rhel8.x86_64.rpm
@@ -200,6 +208,12 @@ weight: 9100
 @ u24.aarch64 17 postgresql-17-orafce postgresql-17-orafce_4.16.5-1.pgdg24.04+1_arm64.deb pgdg 4.16.5 354.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/orafce/postgresql-17-orafce_4.16.5-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 17 postgresql-17-orafce postgresql-17-orafce_4.16.4-1.pgdg24.04+1_arm64.deb pgdg 4.16.4 354.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/orafce/postgresql-17-orafce_4.16.4-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 17 postgresql-17-orafce postgresql-17-orafce_4.16.3-1.pgdg24.04+1_arm64.deb pgdg 4.16.3 355.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/orafce/postgresql-17-orafce_4.16.3-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 17 postgresql-17-orafce postgresql-17-orafce_4.16.5-1.pgdg26.04+1_amd64.deb pgdg 4.16.5 358.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/orafce/postgresql-17-orafce_4.16.5-1.pgdg26.04+1_amd64.deb
+@ u26.x86_64 17 postgresql-17-orafce postgresql-17-orafce_4.16.4-1.pgdg26.04+1_amd64.deb pgdg 4.16.4 358.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/orafce/postgresql-17-orafce_4.16.4-1.pgdg26.04+1_amd64.deb
+@ u26.x86_64 17 postgresql-17-orafce postgresql-17-orafce_4.16.3-1.pgdg26.04+1_amd64.deb pgdg 4.16.3 358.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/orafce/postgresql-17-orafce_4.16.3-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 17 postgresql-17-orafce postgresql-17-orafce_4.16.5-1.pgdg26.04+1_arm64.deb pgdg 4.16.5 351.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/orafce/postgresql-17-orafce_4.16.5-1.pgdg26.04+1_arm64.deb
+@ u26.aarch64 17 postgresql-17-orafce postgresql-17-orafce_4.16.4-1.pgdg26.04+1_arm64.deb pgdg 4.16.4 352.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/orafce/postgresql-17-orafce_4.16.4-1.pgdg26.04+1_arm64.deb
+@ u26.aarch64 17 postgresql-17-orafce postgresql-17-orafce_4.16.3-1.pgdg26.04+1_arm64.deb pgdg 4.16.3 351.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/orafce/postgresql-17-orafce_4.16.3-1.pgdg26.04+1_arm64.deb
 @ el8.x86_64 16 orafce_16 orafce_16-4.16.5-1PGDG.rhel8.10.x86_64.rpm pgdg 4.16.5 153.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/orafce_16-4.16.5-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 orafce_16 orafce_16-4.16.2-2PGDG.rhel8.x86_64.rpm pgdg 4.16.2 152.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/orafce_16-4.16.2-2PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 16 orafce_16 orafce_16-4.14.6-1PGDG.rhel8.x86_64.rpm pgdg 4.14.6 151.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/orafce_16-4.14.6-1PGDG.rhel8.x86_64.rpm
@@ -322,6 +336,12 @@ weight: 9100
 @ u24.aarch64 16 postgresql-16-orafce postgresql-16-orafce_4.16.5-1.pgdg24.04+1_arm64.deb pgdg 4.16.5 354.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/orafce/postgresql-16-orafce_4.16.5-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 16 postgresql-16-orafce postgresql-16-orafce_4.16.4-1.pgdg24.04+1_arm64.deb pgdg 4.16.4 354.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/orafce/postgresql-16-orafce_4.16.4-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 16 postgresql-16-orafce postgresql-16-orafce_4.16.3-1.pgdg24.04+1_arm64.deb pgdg 4.16.3 354.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/orafce/postgresql-16-orafce_4.16.3-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 16 postgresql-16-orafce postgresql-16-orafce_4.16.5-1.pgdg26.04+1_amd64.deb pgdg 4.16.5 358.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/orafce/postgresql-16-orafce_4.16.5-1.pgdg26.04+1_amd64.deb
+@ u26.x86_64 16 postgresql-16-orafce postgresql-16-orafce_4.16.4-1.pgdg26.04+1_amd64.deb pgdg 4.16.4 358.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/orafce/postgresql-16-orafce_4.16.4-1.pgdg26.04+1_amd64.deb
+@ u26.x86_64 16 postgresql-16-orafce postgresql-16-orafce_4.16.3-1.pgdg26.04+1_amd64.deb pgdg 4.16.3 358.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/orafce/postgresql-16-orafce_4.16.3-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 16 postgresql-16-orafce postgresql-16-orafce_4.16.5-1.pgdg26.04+1_arm64.deb pgdg 4.16.5 350.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/orafce/postgresql-16-orafce_4.16.5-1.pgdg26.04+1_arm64.deb
+@ u26.aarch64 16 postgresql-16-orafce postgresql-16-orafce_4.16.4-1.pgdg26.04+1_arm64.deb pgdg 4.16.4 351.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/orafce/postgresql-16-orafce_4.16.4-1.pgdg26.04+1_arm64.deb
+@ u26.aarch64 16 postgresql-16-orafce postgresql-16-orafce_4.16.3-1.pgdg26.04+1_arm64.deb pgdg 4.16.3 351.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/orafce/postgresql-16-orafce_4.16.3-1.pgdg26.04+1_arm64.deb
 @ el8.x86_64 15 orafce_15 orafce_15-4.16.5-1PGDG.rhel8.10.x86_64.rpm pgdg 4.16.5 153.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/orafce_15-4.16.5-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 orafce_15 orafce_15-4.16.2-2PGDG.rhel8.x86_64.rpm pgdg 4.16.2 152.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/orafce_15-4.16.2-2PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 15 orafce_15 orafce_15-4.14.6-1PGDG.rhel8.x86_64.rpm pgdg 4.14.6 151.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/orafce_15-4.14.6-1PGDG.rhel8.x86_64.rpm
@@ -444,6 +464,12 @@ weight: 9100
 @ u24.aarch64 15 postgresql-15-orafce postgresql-15-orafce_4.16.5-1.pgdg24.04+1_arm64.deb pgdg 4.16.5 358.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/orafce/postgresql-15-orafce_4.16.5-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 15 postgresql-15-orafce postgresql-15-orafce_4.16.4-1.pgdg24.04+1_arm64.deb pgdg 4.16.4 358.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/orafce/postgresql-15-orafce_4.16.4-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 15 postgresql-15-orafce postgresql-15-orafce_4.16.3-1.pgdg24.04+1_arm64.deb pgdg 4.16.3 358.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/orafce/postgresql-15-orafce_4.16.3-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 15 postgresql-15-orafce postgresql-15-orafce_4.16.5-1.pgdg26.04+1_amd64.deb pgdg 4.16.5 363.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/orafce/postgresql-15-orafce_4.16.5-1.pgdg26.04+1_amd64.deb
+@ u26.x86_64 15 postgresql-15-orafce postgresql-15-orafce_4.16.4-1.pgdg26.04+1_amd64.deb pgdg 4.16.4 364.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/orafce/postgresql-15-orafce_4.16.4-1.pgdg26.04+1_amd64.deb
+@ u26.x86_64 15 postgresql-15-orafce postgresql-15-orafce_4.16.3-1.pgdg26.04+1_amd64.deb pgdg 4.16.3 363.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/orafce/postgresql-15-orafce_4.16.3-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 15 postgresql-15-orafce postgresql-15-orafce_4.16.5-1.pgdg26.04+1_arm64.deb pgdg 4.16.5 355.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/orafce/postgresql-15-orafce_4.16.5-1.pgdg26.04+1_arm64.deb
+@ u26.aarch64 15 postgresql-15-orafce postgresql-15-orafce_4.16.4-1.pgdg26.04+1_arm64.deb pgdg 4.16.4 356.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/orafce/postgresql-15-orafce_4.16.4-1.pgdg26.04+1_arm64.deb
+@ u26.aarch64 15 postgresql-15-orafce postgresql-15-orafce_4.16.3-1.pgdg26.04+1_arm64.deb pgdg 4.16.3 356.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/orafce/postgresql-15-orafce_4.16.3-1.pgdg26.04+1_arm64.deb
 @ el8.x86_64 14 orafce_14 orafce_14-4.16.5-1PGDG.rhel8.10.x86_64.rpm pgdg 4.16.5 154.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/orafce_14-4.16.5-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 14 orafce_14 orafce_14-4.16.2-2PGDG.rhel8.x86_64.rpm pgdg 4.16.2 153.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/orafce_14-4.16.2-2PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 14 orafce_14 orafce_14-4.14.6-1PGDG.rhel8.x86_64.rpm pgdg 4.14.6 152.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/orafce_14-4.14.6-1PGDG.rhel8.x86_64.rpm
@@ -566,6 +592,12 @@ weight: 9100
 @ u24.aarch64 14 postgresql-14-orafce postgresql-14-orafce_4.16.5-1.pgdg24.04+1_arm64.deb pgdg 4.16.5 361.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/orafce/postgresql-14-orafce_4.16.5-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 14 postgresql-14-orafce postgresql-14-orafce_4.16.4-1.pgdg24.04+1_arm64.deb pgdg 4.16.4 361.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/orafce/postgresql-14-orafce_4.16.4-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 14 postgresql-14-orafce postgresql-14-orafce_4.16.3-1.pgdg24.04+1_arm64.deb pgdg 4.16.3 361.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/orafce/postgresql-14-orafce_4.16.3-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 14 postgresql-14-orafce postgresql-14-orafce_4.16.5-1.pgdg26.04+1_amd64.deb pgdg 4.16.5 365.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/orafce/postgresql-14-orafce_4.16.5-1.pgdg26.04+1_amd64.deb
+@ u26.x86_64 14 postgresql-14-orafce postgresql-14-orafce_4.16.4-1.pgdg26.04+1_amd64.deb pgdg 4.16.4 366.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/orafce/postgresql-14-orafce_4.16.4-1.pgdg26.04+1_amd64.deb
+@ u26.x86_64 14 postgresql-14-orafce postgresql-14-orafce_4.16.3-1.pgdg26.04+1_amd64.deb pgdg 4.16.3 366.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/orafce/postgresql-14-orafce_4.16.3-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 14 postgresql-14-orafce postgresql-14-orafce_4.16.5-1.pgdg26.04+1_arm64.deb pgdg 4.16.5 358.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/orafce/postgresql-14-orafce_4.16.5-1.pgdg26.04+1_arm64.deb
+@ u26.aarch64 14 postgresql-14-orafce postgresql-14-orafce_4.16.4-1.pgdg26.04+1_arm64.deb pgdg 4.16.4 358.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/orafce/postgresql-14-orafce_4.16.4-1.pgdg26.04+1_arm64.deb
+@ u26.aarch64 14 postgresql-14-orafce postgresql-14-orafce_4.16.3-1.pgdg26.04+1_arm64.deb pgdg 4.16.3 359.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/orafce/postgresql-14-orafce_4.16.3-1.pgdg26.04+1_arm64.deb
 {{< /pgext_matrix >}}
 
 

@@ -62,6 +62,8 @@ weight: 3090
 | u22.aarch64 | MISS PGDG - 0 | AVAIL PGDG 1.6.9 1 | AVAIL PGDG 1.6.9 1 | AVAIL PGDG 1.6.9 1 | AVAIL PGDG 1.6.9 1 |
 | u24.x86_64 | MISS PGDG - 0 | AVAIL PGDG 1.6.9 1 | AVAIL PGDG 1.6.9 1 | AVAIL PGDG 1.6.9 1 | AVAIL PGDG 1.6.9 1 |
 | u24.aarch64 | MISS PGDG - 0 | AVAIL PGDG 1.6.9 1 | AVAIL PGDG 1.6.9 1 | AVAIL PGDG 1.6.9 1 | AVAIL PGDG 1.6.9 1 |
+| u26.x86_64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
+| u26.aarch64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
 @ el8.x86_64 18 pljava_18 pljava_18-1.6.10-1PGDG.rhel8.x86_64.rpm pgdg 1.6.10 927.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pljava_18-1.6.10-1PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 18 pljava_18 pljava_18-1.6.10-1PGDG.rhel8.aarch64.rpm pgdg 1.6.10 923.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pljava_18-1.6.10-1PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 18 pljava_18 pljava_18-1.6.10-1PGDG.rhel9.x86_64.rpm pgdg 1.6.10 917.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pljava_18-1.6.10-1PGDG.rhel9.x86_64.rpm

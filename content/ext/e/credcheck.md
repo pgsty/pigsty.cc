@@ -20,7 +20,7 @@ weight: 7310
 
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
-| [**`credcheck`**](/ext/e/credcheck) | `4.6` | <a class="ext-badge ext-badge--cate sec" href="/ext/cate/sec">SEC</a> | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
+| [**`credcheck`**](/ext/e/credcheck) | `4.7` | <a class="ext-badge ext-badge--cate sec" href="/ext/cate/sec">SEC</a> | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
 {.ext-table}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
@@ -37,28 +37,31 @@ weight: 7310
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#sec) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `4.6` | {{< pgvers "18,17,16,15,14" >}} | `credcheck` | - |
-| [**RPM**](/ext/rpm#sec) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `4.6` | {{< pgvers "18,17,16,15,14" >}} | `credcheck_$v` | - |
-| [**DEB**](/ext/deb#sec) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `4.6` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-credcheck` | - |
+| [**EXT**](/ext/list#sec) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `4.7` | {{< pgvers "18,17,16,15,14" >}} | `credcheck` | - |
+| [**RPM**](/ext/rpm#sec) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `4.7` | {{< pgvers "18,17,16,15,14" >}} | `credcheck_$v` | - |
+| [**DEB**](/ext/deb#sec) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `4.7` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-credcheck` | - |
 {.ext-table}
 
 {{< pgext_matrix >}}
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PGDG 4.6 7 | AVAIL PGDG 4.6 8 | AVAIL PGDG 4.6 11 | AVAIL PGDG 4.6 16 | AVAIL PGDG 4.6 16 |
-| el8.aarch64 | AVAIL PGDG 4.6 7 | AVAIL PGDG 4.6 8 | AVAIL PGDG 4.6 11 | AVAIL PGDG 4.6 16 | AVAIL PGDG 4.6 16 |
-| el9.x86_64 | AVAIL PGDG 4.6 7 | AVAIL PGDG 4.6 8 | AVAIL PGDG 4.6 11 | AVAIL PGDG 4.6 16 | AVAIL PGDG 4.6 15 |
-| el9.aarch64 | AVAIL PGDG 4.6 7 | AVAIL PGDG 4.6 8 | AVAIL PGDG 4.6 11 | AVAIL PGDG 4.6 16 | AVAIL PGDG 4.6 16 |
-| el10.x86_64 | AVAIL PGDG 4.5 6 | AVAIL PGDG 4.5 6 | AVAIL PGDG 4.5 6 | AVAIL PGDG 4.5 6 | AVAIL PGDG 4.5 6 |
-| el10.aarch64 | AVAIL PGDG 4.6 7 | AVAIL PGDG 4.6 7 | AVAIL PGDG 4.6 7 | AVAIL PGDG 4.6 7 | AVAIL PGDG 4.6 7 |
-| d12.x86_64 | AVAIL PGDG 4.6 1 | AVAIL PGDG 4.6 1 | AVAIL PGDG 4.6 1 | AVAIL PGDG 4.6 1 | AVAIL PGDG 4.6 1 |
-| d12.aarch64 | AVAIL PGDG 4.6 1 | AVAIL PGDG 4.6 1 | AVAIL PGDG 4.6 1 | AVAIL PGDG 4.6 1 | AVAIL PGDG 4.6 1 |
-| d13.x86_64 | AVAIL PGDG 4.6 1 | AVAIL PGDG 4.6 1 | AVAIL PGDG 4.6 1 | AVAIL PGDG 4.6 1 | AVAIL PGDG 4.6 1 |
-| d13.aarch64 | AVAIL PGDG 4.6 1 | AVAIL PGDG 4.6 1 | AVAIL PGDG 4.6 1 | AVAIL PGDG 4.6 1 | AVAIL PGDG 4.6 1 |
-| u22.x86_64 | AVAIL PGDG 4.6 1 | AVAIL PGDG 4.6 1 | AVAIL PGDG 4.6 1 | AVAIL PGDG 4.6 1 | AVAIL PGDG 4.6 1 |
-| u22.aarch64 | AVAIL PGDG 4.6 1 | AVAIL PGDG 4.6 1 | AVAIL PGDG 4.6 1 | AVAIL PGDG 4.6 1 | AVAIL PGDG 4.6 1 |
-| u24.x86_64 | AVAIL PGDG 4.6 1 | AVAIL PGDG 4.6 1 | AVAIL PGDG 4.6 1 | AVAIL PGDG 4.6 1 | AVAIL PGDG 4.6 1 |
-| u24.aarch64 | AVAIL PGDG 4.6 1 | AVAIL PGDG 4.6 1 | AVAIL PGDG 4.6 1 | AVAIL PGDG 4.6 1 | AVAIL PGDG 4.6 1 |
+| el8.x86_64 | AVAIL PGDG 4.7 8 | AVAIL PGDG 4.7 9 | AVAIL PGDG 4.7 12 | AVAIL PGDG 4.7 17 | AVAIL PGDG 4.7 17 |
+| el8.aarch64 | AVAIL PGDG 4.7 8 | AVAIL PGDG 4.7 9 | AVAIL PGDG 4.7 12 | AVAIL PGDG 4.7 17 | AVAIL PGDG 4.7 17 |
+| el9.x86_64 | AVAIL PGDG 4.7 8 | AVAIL PGDG 4.7 9 | AVAIL PGDG 4.7 12 | AVAIL PGDG 4.7 17 | AVAIL PGDG 4.7 16 |
+| el9.aarch64 | AVAIL PGDG 4.7 8 | AVAIL PGDG 4.7 9 | AVAIL PGDG 4.7 12 | AVAIL PGDG 4.7 17 | AVAIL PGDG 4.7 17 |
+| el10.x86_64 | AVAIL PGDG 4.7 7 | AVAIL PGDG 4.7 7 | AVAIL PGDG 4.7 7 | AVAIL PGDG 4.7 7 | AVAIL PGDG 4.7 7 |
+| el10.aarch64 | AVAIL PGDG 4.7 8 | AVAIL PGDG 4.7 8 | AVAIL PGDG 4.7 8 | AVAIL PGDG 4.7 8 | AVAIL PGDG 4.7 8 |
+| d12.x86_64 | AVAIL PGDG 4.7 2 | AVAIL PGDG 4.7 2 | AVAIL PGDG 4.7 2 | AVAIL PGDG 4.7 2 | AVAIL PGDG 4.7 2 |
+| d12.aarch64 | AVAIL PGDG 4.7 2 | AVAIL PGDG 4.7 2 | AVAIL PGDG 4.7 2 | AVAIL PGDG 4.7 2 | AVAIL PGDG 4.7 2 |
+| d13.x86_64 | AVAIL PGDG 4.7 2 | AVAIL PGDG 4.7 2 | AVAIL PGDG 4.7 2 | AVAIL PGDG 4.7 2 | AVAIL PGDG 4.7 2 |
+| d13.aarch64 | AVAIL PGDG 4.7 2 | AVAIL PGDG 4.7 2 | AVAIL PGDG 4.7 2 | AVAIL PGDG 4.7 2 | AVAIL PGDG 4.7 2 |
+| u22.x86_64 | AVAIL PGDG 4.7 2 | AVAIL PGDG 4.7 2 | AVAIL PGDG 4.7 2 | AVAIL PGDG 4.7 2 | AVAIL PGDG 4.7 2 |
+| u22.aarch64 | AVAIL PGDG 4.7 2 | AVAIL PGDG 4.7 2 | AVAIL PGDG 4.7 2 | AVAIL PGDG 4.7 2 | AVAIL PGDG 4.7 2 |
+| u24.x86_64 | AVAIL PGDG 4.7 2 | AVAIL PGDG 4.7 2 | AVAIL PGDG 4.7 2 | AVAIL PGDG 4.7 2 | AVAIL PGDG 4.7 2 |
+| u24.aarch64 | AVAIL PGDG 4.7 2 | AVAIL PGDG 4.7 2 | AVAIL PGDG 4.7 2 | AVAIL PGDG 4.7 2 | AVAIL PGDG 4.7 2 |
+| u26.x86_64 | AVAIL PGDG 4.7 2 | AVAIL PGDG 4.7 2 | AVAIL PGDG 4.7 2 | AVAIL PGDG 4.7 2 | AVAIL PGDG 4.7 2 |
+| u26.aarch64 | AVAIL PGDG 4.7 2 | AVAIL PGDG 4.7 2 | AVAIL PGDG 4.7 2 | AVAIL PGDG 4.7 2 | AVAIL PGDG 4.7 2 |
+@ el8.x86_64 18 credcheck_18 credcheck_18-4.7-1PGDG.rhel8.10.x86_64.rpm pgdg 4.7 42.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/credcheck_18-4.7-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 18 credcheck_18 credcheck_18-4.6-1PGDG.rhel8.10.x86_64.rpm pgdg 4.6 41.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/credcheck_18-4.6-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 18 credcheck_18 credcheck_18-4.5-1PGDG.rhel8.10.x86_64.rpm pgdg 4.5 41.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/credcheck_18-4.5-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 18 credcheck_18 credcheck_18-4.4-1PGDG.rhel8.10.x86_64.rpm pgdg 4.4 40.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/credcheck_18-4.4-1PGDG.rhel8.10.x86_64.rpm
@@ -66,6 +69,7 @@ weight: 7310
 @ el8.x86_64 18 credcheck_18 credcheck_18-4.2-1PGDG.rhel8.x86_64.rpm pgdg 4.2 40.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/credcheck_18-4.2-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 18 credcheck_18 credcheck_18-4.1-1PGDG.rhel8.x86_64.rpm pgdg 4.1 39.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/credcheck_18-4.1-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 18 credcheck_18 credcheck_18-3.0-2PGDG.rhel8.x86_64.rpm pgdg 3.0 35.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/credcheck_18-3.0-2PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 18 credcheck_18 credcheck_18-4.7-1PGDG.rhel8.10.aarch64.rpm pgdg 4.7 41.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/credcheck_18-4.7-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 18 credcheck_18 credcheck_18-4.6-1PGDG.rhel8.10.aarch64.rpm pgdg 4.6 41.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/credcheck_18-4.6-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 18 credcheck_18 credcheck_18-4.5-1PGDG.rhel8.10.aarch64.rpm pgdg 4.5 40.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/credcheck_18-4.5-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 18 credcheck_18 credcheck_18-4.4-1PGDG.rhel8.10.aarch64.rpm pgdg 4.4 40.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/credcheck_18-4.4-1PGDG.rhel8.10.aarch64.rpm
@@ -73,6 +77,7 @@ weight: 7310
 @ el8.aarch64 18 credcheck_18 credcheck_18-4.2-1PGDG.rhel8.aarch64.rpm pgdg 4.2 39.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/credcheck_18-4.2-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 18 credcheck_18 credcheck_18-4.1-1PGDG.rhel8.aarch64.rpm pgdg 4.1 38.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/credcheck_18-4.1-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 18 credcheck_18 credcheck_18-3.0-2PGDG.rhel8.aarch64.rpm pgdg 3.0 35.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/credcheck_18-3.0-2PGDG.rhel8.aarch64.rpm
+@ el9.x86_64 18 credcheck_18 credcheck_18-4.7-1PGDG.rhel9.7.x86_64.rpm pgdg 4.7 41.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/credcheck_18-4.7-1PGDG.rhel9.7.x86_64.rpm
 @ el9.x86_64 18 credcheck_18 credcheck_18-4.6-1PGDG.rhel9.7.x86_64.rpm pgdg 4.6 40.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/credcheck_18-4.6-1PGDG.rhel9.7.x86_64.rpm
 @ el9.x86_64 18 credcheck_18 credcheck_18-4.5-1PGDG.rhel9.7.x86_64.rpm pgdg 4.5 40.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/credcheck_18-4.5-1PGDG.rhel9.7.x86_64.rpm
 @ el9.x86_64 18 credcheck_18 credcheck_18-4.4-1PGDG.rhel9.7.x86_64.rpm pgdg 4.4 40.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/credcheck_18-4.4-1PGDG.rhel9.7.x86_64.rpm
@@ -80,6 +85,7 @@ weight: 7310
 @ el9.x86_64 18 credcheck_18 credcheck_18-4.2-1PGDG.rhel9.x86_64.rpm pgdg 4.2 39.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/credcheck_18-4.2-1PGDG.rhel9.x86_64.rpm
 @ el9.x86_64 18 credcheck_18 credcheck_18-4.1-1PGDG.rhel9.x86_64.rpm pgdg 4.1 39.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/credcheck_18-4.1-1PGDG.rhel9.x86_64.rpm
 @ el9.x86_64 18 credcheck_18 credcheck_18-3.0-2PGDG.rhel9.x86_64.rpm pgdg 3.0 35.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/credcheck_18-3.0-2PGDG.rhel9.x86_64.rpm
+@ el9.aarch64 18 credcheck_18 credcheck_18-4.7-1PGDG.rhel9.7.aarch64.rpm pgdg 4.7 40.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/credcheck_18-4.7-1PGDG.rhel9.7.aarch64.rpm
 @ el9.aarch64 18 credcheck_18 credcheck_18-4.6-1PGDG.rhel9.7.aarch64.rpm pgdg 4.6 40.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/credcheck_18-4.6-1PGDG.rhel9.7.aarch64.rpm
 @ el9.aarch64 18 credcheck_18 credcheck_18-4.5-1PGDG.rhel9.7.aarch64.rpm pgdg 4.5 40.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/credcheck_18-4.5-1PGDG.rhel9.7.aarch64.rpm
 @ el9.aarch64 18 credcheck_18 credcheck_18-4.4-1PGDG.rhel9.7.aarch64.rpm pgdg 4.4 39.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/credcheck_18-4.4-1PGDG.rhel9.7.aarch64.rpm
@@ -87,12 +93,14 @@ weight: 7310
 @ el9.aarch64 18 credcheck_18 credcheck_18-4.2-1PGDG.rhel9.aarch64.rpm pgdg 4.2 39.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/credcheck_18-4.2-1PGDG.rhel9.aarch64.rpm
 @ el9.aarch64 18 credcheck_18 credcheck_18-4.1-1PGDG.rhel9.aarch64.rpm pgdg 4.1 38.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/credcheck_18-4.1-1PGDG.rhel9.aarch64.rpm
 @ el9.aarch64 18 credcheck_18 credcheck_18-3.0-2PGDG.rhel9.aarch64.rpm pgdg 3.0 35.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/credcheck_18-3.0-2PGDG.rhel9.aarch64.rpm
+@ el10.x86_64 18 credcheck_18 credcheck_18-4.7-1PGDG.rhel10.1.x86_64.rpm pgdg 4.7 41.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/credcheck_18-4.7-1PGDG.rhel10.1.x86_64.rpm
 @ el10.x86_64 18 credcheck_18 credcheck_18-4.5-1PGDG.rhel10.1.x86_64.rpm pgdg 4.5 41.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/credcheck_18-4.5-1PGDG.rhel10.1.x86_64.rpm
 @ el10.x86_64 18 credcheck_18 credcheck_18-4.4-1PGDG.rhel10.1.x86_64.rpm pgdg 4.4 40.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/credcheck_18-4.4-1PGDG.rhel10.1.x86_64.rpm
 @ el10.x86_64 18 credcheck_18 credcheck_18-4.3-1PGDG.rhel10.1.x86_64.rpm pgdg 4.3 40.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/credcheck_18-4.3-1PGDG.rhel10.1.x86_64.rpm
 @ el10.x86_64 18 credcheck_18 credcheck_18-4.2-1PGDG.rhel10.x86_64.rpm pgdg 4.2 40.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/credcheck_18-4.2-1PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 18 credcheck_18 credcheck_18-4.1-1PGDG.rhel10.x86_64.rpm pgdg 4.1 39.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/credcheck_18-4.1-1PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 18 credcheck_18 credcheck_18-3.0-2PGDG.rhel10.x86_64.rpm pgdg 3.0 36.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/credcheck_18-3.0-2PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 18 credcheck_18 credcheck_18-4.7-1PGDG.rhel10.1.aarch64.rpm pgdg 4.7 41.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/credcheck_18-4.7-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 18 credcheck_18 credcheck_18-4.6-1PGDG.rhel10.1.aarch64.rpm pgdg 4.6 40.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/credcheck_18-4.6-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 18 credcheck_18 credcheck_18-4.5-1PGDG.rhel10.1.aarch64.rpm pgdg 4.5 40.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/credcheck_18-4.5-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 18 credcheck_18 credcheck_18-4.4-1PGDG.rhel10.1.aarch64.rpm pgdg 4.4 40.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/credcheck_18-4.4-1PGDG.rhel10.1.aarch64.rpm
@@ -100,14 +108,27 @@ weight: 7310
 @ el10.aarch64 18 credcheck_18 credcheck_18-4.2-1PGDG.rhel10.aarch64.rpm pgdg 4.2 39.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/credcheck_18-4.2-1PGDG.rhel10.aarch64.rpm
 @ el10.aarch64 18 credcheck_18 credcheck_18-4.1-1PGDG.rhel10.aarch64.rpm pgdg 4.1 39.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/credcheck_18-4.1-1PGDG.rhel10.aarch64.rpm
 @ el10.aarch64 18 credcheck_18 credcheck_18-3.0-2PGDG.rhel10.aarch64.rpm pgdg 3.0 36.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/credcheck_18-3.0-2PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-credcheck postgresql-18-credcheck_4.7-1.pgdg12+1_amd64.deb pgdg 4.7 75.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/c/credcheck/postgresql-18-credcheck_4.7-1.pgdg12+1_amd64.deb
 @ d12.x86_64 18 postgresql-18-credcheck postgresql-18-credcheck_4.6-1.pgdg12+1_amd64.deb pgdg 4.6 74.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/c/credcheck/postgresql-18-credcheck_4.6-1.pgdg12+1_amd64.deb
+@ d12.aarch64 18 postgresql-18-credcheck postgresql-18-credcheck_4.7-1.pgdg12+1_arm64.deb pgdg 4.7 74.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/c/credcheck/postgresql-18-credcheck_4.7-1.pgdg12+1_arm64.deb
 @ d12.aarch64 18 postgresql-18-credcheck postgresql-18-credcheck_4.6-1.pgdg12+1_arm64.deb pgdg 4.6 73.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/c/credcheck/postgresql-18-credcheck_4.6-1.pgdg12+1_arm64.deb
+@ d13.x86_64 18 postgresql-18-credcheck postgresql-18-credcheck_4.7-1.pgdg13+1_amd64.deb pgdg 4.7 75.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/c/credcheck/postgresql-18-credcheck_4.7-1.pgdg13+1_amd64.deb
 @ d13.x86_64 18 postgresql-18-credcheck postgresql-18-credcheck_4.6-1.pgdg13+1_amd64.deb pgdg 4.6 74.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/c/credcheck/postgresql-18-credcheck_4.6-1.pgdg13+1_amd64.deb
+@ d13.aarch64 18 postgresql-18-credcheck postgresql-18-credcheck_4.7-1.pgdg13+1_arm64.deb pgdg 4.7 73.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/c/credcheck/postgresql-18-credcheck_4.7-1.pgdg13+1_arm64.deb
 @ d13.aarch64 18 postgresql-18-credcheck postgresql-18-credcheck_4.6-1.pgdg13+1_arm64.deb pgdg 4.6 73.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/c/credcheck/postgresql-18-credcheck_4.6-1.pgdg13+1_arm64.deb
+@ u22.x86_64 18 postgresql-18-credcheck postgresql-18-credcheck_4.7-1.pgdg22.04+1_amd64.deb pgdg 4.7 69.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/c/credcheck/postgresql-18-credcheck_4.7-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 18 postgresql-18-credcheck postgresql-18-credcheck_4.6-1.pgdg22.04+1_amd64.deb pgdg 4.6 68.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/c/credcheck/postgresql-18-credcheck_4.6-1.pgdg22.04+1_amd64.deb
+@ u22.aarch64 18 postgresql-18-credcheck postgresql-18-credcheck_4.7-1.pgdg22.04+1_arm64.deb pgdg 4.7 68.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/c/credcheck/postgresql-18-credcheck_4.7-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 18 postgresql-18-credcheck postgresql-18-credcheck_4.6-1.pgdg22.04+1_arm64.deb pgdg 4.6 67.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/c/credcheck/postgresql-18-credcheck_4.6-1.pgdg22.04+1_arm64.deb
+@ u24.x86_64 18 postgresql-18-credcheck postgresql-18-credcheck_4.7-1.pgdg24.04+1_amd64.deb pgdg 4.7 68.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/c/credcheck/postgresql-18-credcheck_4.7-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 18 postgresql-18-credcheck postgresql-18-credcheck_4.6-1.pgdg24.04+1_amd64.deb pgdg 4.6 68.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/c/credcheck/postgresql-18-credcheck_4.6-1.pgdg24.04+1_amd64.deb
+@ u24.aarch64 18 postgresql-18-credcheck postgresql-18-credcheck_4.7-1.pgdg24.04+1_arm64.deb pgdg 4.7 67.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/c/credcheck/postgresql-18-credcheck_4.7-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 18 postgresql-18-credcheck postgresql-18-credcheck_4.6-1.pgdg24.04+1_arm64.deb pgdg 4.6 66.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/c/credcheck/postgresql-18-credcheck_4.6-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 18 postgresql-18-credcheck postgresql-18-credcheck_4.7-1.pgdg26.04+1_amd64.deb pgdg 4.7 68.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/c/credcheck/postgresql-18-credcheck_4.7-1.pgdg26.04+1_amd64.deb
+@ u26.x86_64 18 postgresql-18-credcheck postgresql-18-credcheck_4.6-1.pgdg26.04+1_amd64.deb pgdg 4.6 67.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/c/credcheck/postgresql-18-credcheck_4.6-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 18 postgresql-18-credcheck postgresql-18-credcheck_4.7-1.pgdg26.04+1_arm64.deb pgdg 4.7 67.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/c/credcheck/postgresql-18-credcheck_4.7-1.pgdg26.04+1_arm64.deb
+@ u26.aarch64 18 postgresql-18-credcheck postgresql-18-credcheck_4.6-1.pgdg26.04+1_arm64.deb pgdg 4.6 66.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/c/credcheck/postgresql-18-credcheck_4.6-1.pgdg26.04+1_arm64.deb
+@ el8.x86_64 17 credcheck_17 credcheck_17-4.7-1PGDG.rhel8.10.x86_64.rpm pgdg 4.7 42.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/credcheck_17-4.7-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 credcheck_17 credcheck_17-4.6-1PGDG.rhel8.10.x86_64.rpm pgdg 4.6 41.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/credcheck_17-4.6-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 credcheck_17 credcheck_17-4.5-1PGDG.rhel8.10.x86_64.rpm pgdg 4.5 41.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/credcheck_17-4.5-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 credcheck_17 credcheck_17-4.4-1PGDG.rhel8.10.x86_64.rpm pgdg 4.4 40.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/credcheck_17-4.4-1PGDG.rhel8.10.x86_64.rpm
@@ -116,6 +137,7 @@ weight: 7310
 @ el8.x86_64 17 credcheck_17 credcheck_17-4.1-1PGDG.rhel8.x86_64.rpm pgdg 4.1 39.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/credcheck_17-4.1-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 17 credcheck_17 credcheck_17-3.0-1PGDG.rhel8.x86_64.rpm pgdg 3.0 35.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/credcheck_17-3.0-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 17 credcheck_17 credcheck_17-2.8-1PGDG.rhel8.x86_64.rpm pgdg 2.8 35.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/credcheck_17-2.8-1PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 17 credcheck_17 credcheck_17-4.7-1PGDG.rhel8.10.aarch64.rpm pgdg 4.7 41.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/credcheck_17-4.7-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 17 credcheck_17 credcheck_17-4.6-1PGDG.rhel8.10.aarch64.rpm pgdg 4.6 41.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/credcheck_17-4.6-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 17 credcheck_17 credcheck_17-4.5-1PGDG.rhel8.10.aarch64.rpm pgdg 4.5 40.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/credcheck_17-4.5-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 17 credcheck_17 credcheck_17-4.4-1PGDG.rhel8.10.aarch64.rpm pgdg 4.4 40.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/credcheck_17-4.4-1PGDG.rhel8.10.aarch64.rpm
@@ -124,6 +146,7 @@ weight: 7310
 @ el8.aarch64 17 credcheck_17 credcheck_17-4.1-1PGDG.rhel8.aarch64.rpm pgdg 4.1 38.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/credcheck_17-4.1-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 17 credcheck_17 credcheck_17-3.0-1PGDG.rhel8.aarch64.rpm pgdg 3.0 35.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/credcheck_17-3.0-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 17 credcheck_17 credcheck_17-2.8-1PGDG.rhel8.aarch64.rpm pgdg 2.8 34.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/credcheck_17-2.8-1PGDG.rhel8.aarch64.rpm
+@ el9.x86_64 17 credcheck_17 credcheck_17-4.7-1PGDG.rhel9.7.x86_64.rpm pgdg 4.7 41.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/credcheck_17-4.7-1PGDG.rhel9.7.x86_64.rpm
 @ el9.x86_64 17 credcheck_17 credcheck_17-4.6-1PGDG.rhel9.7.x86_64.rpm pgdg 4.6 40.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/credcheck_17-4.6-1PGDG.rhel9.7.x86_64.rpm
 @ el9.x86_64 17 credcheck_17 credcheck_17-4.5-1PGDG.rhel9.7.x86_64.rpm pgdg 4.5 40.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/credcheck_17-4.5-1PGDG.rhel9.7.x86_64.rpm
 @ el9.x86_64 17 credcheck_17 credcheck_17-4.4-1PGDG.rhel9.7.x86_64.rpm pgdg 4.4 40.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/credcheck_17-4.4-1PGDG.rhel9.7.x86_64.rpm
@@ -132,6 +155,7 @@ weight: 7310
 @ el9.x86_64 17 credcheck_17 credcheck_17-4.1-1PGDG.rhel9.x86_64.rpm pgdg 4.1 39.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/credcheck_17-4.1-1PGDG.rhel9.x86_64.rpm
 @ el9.x86_64 17 credcheck_17 credcheck_17-3.0-1PGDG.rhel9.x86_64.rpm pgdg 3.0 35.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/credcheck_17-3.0-1PGDG.rhel9.x86_64.rpm
 @ el9.x86_64 17 credcheck_17 credcheck_17-2.8-1PGDG.rhel9.x86_64.rpm pgdg 2.8 35.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/credcheck_17-2.8-1PGDG.rhel9.x86_64.rpm
+@ el9.aarch64 17 credcheck_17 credcheck_17-4.7-1PGDG.rhel9.7.aarch64.rpm pgdg 4.7 40.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/credcheck_17-4.7-1PGDG.rhel9.7.aarch64.rpm
 @ el9.aarch64 17 credcheck_17 credcheck_17-4.6-1PGDG.rhel9.7.aarch64.rpm pgdg 4.6 40.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/credcheck_17-4.6-1PGDG.rhel9.7.aarch64.rpm
 @ el9.aarch64 17 credcheck_17 credcheck_17-4.5-1PGDG.rhel9.7.aarch64.rpm pgdg 4.5 40.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/credcheck_17-4.5-1PGDG.rhel9.7.aarch64.rpm
 @ el9.aarch64 17 credcheck_17 credcheck_17-4.4-1PGDG.rhel9.7.aarch64.rpm pgdg 4.4 40.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/credcheck_17-4.4-1PGDG.rhel9.7.aarch64.rpm
@@ -140,12 +164,14 @@ weight: 7310
 @ el9.aarch64 17 credcheck_17 credcheck_17-4.1-1PGDG.rhel9.aarch64.rpm pgdg 4.1 38.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/credcheck_17-4.1-1PGDG.rhel9.aarch64.rpm
 @ el9.aarch64 17 credcheck_17 credcheck_17-3.0-1PGDG.rhel9.aarch64.rpm pgdg 3.0 35.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/credcheck_17-3.0-1PGDG.rhel9.aarch64.rpm
 @ el9.aarch64 17 credcheck_17 credcheck_17-2.8-1PGDG.rhel9.aarch64.rpm pgdg 2.8 35.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/credcheck_17-2.8-1PGDG.rhel9.aarch64.rpm
+@ el10.x86_64 17 credcheck_17 credcheck_17-4.7-1PGDG.rhel10.1.x86_64.rpm pgdg 4.7 41.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/credcheck_17-4.7-1PGDG.rhel10.1.x86_64.rpm
 @ el10.x86_64 17 credcheck_17 credcheck_17-4.5-1PGDG.rhel10.1.x86_64.rpm pgdg 4.5 41.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/credcheck_17-4.5-1PGDG.rhel10.1.x86_64.rpm
 @ el10.x86_64 17 credcheck_17 credcheck_17-4.4-1PGDG.rhel10.1.x86_64.rpm pgdg 4.4 40.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/credcheck_17-4.4-1PGDG.rhel10.1.x86_64.rpm
 @ el10.x86_64 17 credcheck_17 credcheck_17-4.3-1PGDG.rhel10.1.x86_64.rpm pgdg 4.3 40.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/credcheck_17-4.3-1PGDG.rhel10.1.x86_64.rpm
 @ el10.x86_64 17 credcheck_17 credcheck_17-4.2-1PGDG.rhel10.x86_64.rpm pgdg 4.2 40.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/credcheck_17-4.2-1PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 17 credcheck_17 credcheck_17-4.1-1PGDG.rhel10.x86_64.rpm pgdg 4.1 39.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/credcheck_17-4.1-1PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 17 credcheck_17 credcheck_17-3.0-2PGDG.rhel10.x86_64.rpm pgdg 3.0 36.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/credcheck_17-3.0-2PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 17 credcheck_17 credcheck_17-4.7-1PGDG.rhel10.1.aarch64.rpm pgdg 4.7 41.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/credcheck_17-4.7-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 17 credcheck_17 credcheck_17-4.6-1PGDG.rhel10.1.aarch64.rpm pgdg 4.6 40.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/credcheck_17-4.6-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 17 credcheck_17 credcheck_17-4.5-1PGDG.rhel10.1.aarch64.rpm pgdg 4.5 40.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/credcheck_17-4.5-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 17 credcheck_17 credcheck_17-4.4-1PGDG.rhel10.1.aarch64.rpm pgdg 4.4 40.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/credcheck_17-4.4-1PGDG.rhel10.1.aarch64.rpm
@@ -153,14 +179,27 @@ weight: 7310
 @ el10.aarch64 17 credcheck_17 credcheck_17-4.2-1PGDG.rhel10.aarch64.rpm pgdg 4.2 40.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/credcheck_17-4.2-1PGDG.rhel10.aarch64.rpm
 @ el10.aarch64 17 credcheck_17 credcheck_17-4.1-1PGDG.rhel10.aarch64.rpm pgdg 4.1 39.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/credcheck_17-4.1-1PGDG.rhel10.aarch64.rpm
 @ el10.aarch64 17 credcheck_17 credcheck_17-3.0-2PGDG.rhel10.aarch64.rpm pgdg 3.0 36.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/credcheck_17-3.0-2PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-credcheck postgresql-17-credcheck_4.7-1.pgdg12+1_amd64.deb pgdg 4.7 75.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/c/credcheck/postgresql-17-credcheck_4.7-1.pgdg12+1_amd64.deb
 @ d12.x86_64 17 postgresql-17-credcheck postgresql-17-credcheck_4.6-1.pgdg12+1_amd64.deb pgdg 4.6 74.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/c/credcheck/postgresql-17-credcheck_4.6-1.pgdg12+1_amd64.deb
+@ d12.aarch64 17 postgresql-17-credcheck postgresql-17-credcheck_4.7-1.pgdg12+1_arm64.deb pgdg 4.7 74.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/c/credcheck/postgresql-17-credcheck_4.7-1.pgdg12+1_arm64.deb
 @ d12.aarch64 17 postgresql-17-credcheck postgresql-17-credcheck_4.6-1.pgdg12+1_arm64.deb pgdg 4.6 73.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/c/credcheck/postgresql-17-credcheck_4.6-1.pgdg12+1_arm64.deb
+@ d13.x86_64 17 postgresql-17-credcheck postgresql-17-credcheck_4.7-1.pgdg13+1_amd64.deb pgdg 4.7 74.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/c/credcheck/postgresql-17-credcheck_4.7-1.pgdg13+1_amd64.deb
 @ d13.x86_64 17 postgresql-17-credcheck postgresql-17-credcheck_4.6-1.pgdg13+1_amd64.deb pgdg 4.6 74.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/c/credcheck/postgresql-17-credcheck_4.6-1.pgdg13+1_amd64.deb
+@ d13.aarch64 17 postgresql-17-credcheck postgresql-17-credcheck_4.7-1.pgdg13+1_arm64.deb pgdg 4.7 73.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/c/credcheck/postgresql-17-credcheck_4.7-1.pgdg13+1_arm64.deb
 @ d13.aarch64 17 postgresql-17-credcheck postgresql-17-credcheck_4.6-1.pgdg13+1_arm64.deb pgdg 4.6 73.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/c/credcheck/postgresql-17-credcheck_4.6-1.pgdg13+1_arm64.deb
+@ u22.x86_64 17 postgresql-17-credcheck postgresql-17-credcheck_4.7-1.pgdg22.04+1_amd64.deb pgdg 4.7 76.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/c/credcheck/postgresql-17-credcheck_4.7-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 17 postgresql-17-credcheck postgresql-17-credcheck_4.6-1.pgdg22.04+1_amd64.deb pgdg 4.6 75.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/c/credcheck/postgresql-17-credcheck_4.6-1.pgdg22.04+1_amd64.deb
+@ u22.aarch64 17 postgresql-17-credcheck postgresql-17-credcheck_4.7-1.pgdg22.04+1_arm64.deb pgdg 4.7 74.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/c/credcheck/postgresql-17-credcheck_4.7-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 17 postgresql-17-credcheck postgresql-17-credcheck_4.6-1.pgdg22.04+1_arm64.deb pgdg 4.6 74.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/c/credcheck/postgresql-17-credcheck_4.6-1.pgdg22.04+1_arm64.deb
+@ u24.x86_64 17 postgresql-17-credcheck postgresql-17-credcheck_4.7-1.pgdg24.04+1_amd64.deb pgdg 4.7 68.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/c/credcheck/postgresql-17-credcheck_4.7-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 17 postgresql-17-credcheck postgresql-17-credcheck_4.6-1.pgdg24.04+1_amd64.deb pgdg 4.6 68.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/c/credcheck/postgresql-17-credcheck_4.6-1.pgdg24.04+1_amd64.deb
+@ u24.aarch64 17 postgresql-17-credcheck postgresql-17-credcheck_4.7-1.pgdg24.04+1_arm64.deb pgdg 4.7 67.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/c/credcheck/postgresql-17-credcheck_4.7-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 17 postgresql-17-credcheck postgresql-17-credcheck_4.6-1.pgdg24.04+1_arm64.deb pgdg 4.6 67.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/c/credcheck/postgresql-17-credcheck_4.6-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 17 postgresql-17-credcheck postgresql-17-credcheck_4.7-1.pgdg26.04+1_amd64.deb pgdg 4.7 68.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/c/credcheck/postgresql-17-credcheck_4.7-1.pgdg26.04+1_amd64.deb
+@ u26.x86_64 17 postgresql-17-credcheck postgresql-17-credcheck_4.6-1.pgdg26.04+1_amd64.deb pgdg 4.6 67.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/c/credcheck/postgresql-17-credcheck_4.6-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 17 postgresql-17-credcheck postgresql-17-credcheck_4.7-1.pgdg26.04+1_arm64.deb pgdg 4.7 67.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/c/credcheck/postgresql-17-credcheck_4.7-1.pgdg26.04+1_arm64.deb
+@ u26.aarch64 17 postgresql-17-credcheck postgresql-17-credcheck_4.6-1.pgdg26.04+1_arm64.deb pgdg 4.6 66.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/c/credcheck/postgresql-17-credcheck_4.6-1.pgdg26.04+1_arm64.deb
+@ el8.x86_64 16 credcheck_16 credcheck_16-4.7-1PGDG.rhel8.10.x86_64.rpm pgdg 4.7 42.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/credcheck_16-4.7-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 credcheck_16 credcheck_16-4.6-1PGDG.rhel8.10.x86_64.rpm pgdg 4.6 41.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/credcheck_16-4.6-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 credcheck_16 credcheck_16-4.5-1PGDG.rhel8.10.x86_64.rpm pgdg 4.5 41.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/credcheck_16-4.5-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 credcheck_16 credcheck_16-4.4-1PGDG.rhel8.10.x86_64.rpm pgdg 4.4 40.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/credcheck_16-4.4-1PGDG.rhel8.10.x86_64.rpm
@@ -172,6 +211,7 @@ weight: 7310
 @ el8.x86_64 16 credcheck_16 credcheck_16-2.6-1PGDG.rhel8.x86_64.rpm pgdg 2.6 34.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/credcheck_16-2.6-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 16 credcheck_16 credcheck_16-2.2-1PGDG.rhel8.x86_64.rpm pgdg 2.2 32.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/credcheck_16-2.2-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 16 credcheck_16 credcheck_16-2.1-1PGDG.rhel8.x86_64.rpm pgdg 2.1 31.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/credcheck_16-2.1-1PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 16 credcheck_16 credcheck_16-4.7-1PGDG.rhel8.10.aarch64.rpm pgdg 4.7 41.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/credcheck_16-4.7-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 16 credcheck_16 credcheck_16-4.6-1PGDG.rhel8.10.aarch64.rpm pgdg 4.6 41.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/credcheck_16-4.6-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 16 credcheck_16 credcheck_16-4.5-1PGDG.rhel8.10.aarch64.rpm pgdg 4.5 40.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/credcheck_16-4.5-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 16 credcheck_16 credcheck_16-4.4-1PGDG.rhel8.10.aarch64.rpm pgdg 4.4 40.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/credcheck_16-4.4-1PGDG.rhel8.10.aarch64.rpm
@@ -183,6 +223,7 @@ weight: 7310
 @ el8.aarch64 16 credcheck_16 credcheck_16-2.6-1PGDG.rhel8.aarch64.rpm pgdg 2.6 33.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/credcheck_16-2.6-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 16 credcheck_16 credcheck_16-2.2-1PGDG.rhel8.aarch64.rpm pgdg 2.2 32.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/credcheck_16-2.2-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 16 credcheck_16 credcheck_16-2.1-1PGDG.rhel8.aarch64.rpm pgdg 2.1 31.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/credcheck_16-2.1-1PGDG.rhel8.aarch64.rpm
+@ el9.x86_64 16 credcheck_16 credcheck_16-4.7-1PGDG.rhel9.7.x86_64.rpm pgdg 4.7 41.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/credcheck_16-4.7-1PGDG.rhel9.7.x86_64.rpm
 @ el9.x86_64 16 credcheck_16 credcheck_16-4.6-1PGDG.rhel9.7.x86_64.rpm pgdg 4.6 40.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/credcheck_16-4.6-1PGDG.rhel9.7.x86_64.rpm
 @ el9.x86_64 16 credcheck_16 credcheck_16-4.5-1PGDG.rhel9.7.x86_64.rpm pgdg 4.5 40.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/credcheck_16-4.5-1PGDG.rhel9.7.x86_64.rpm
 @ el9.x86_64 16 credcheck_16 credcheck_16-4.4-1PGDG.rhel9.7.x86_64.rpm pgdg 4.4 40.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/credcheck_16-4.4-1PGDG.rhel9.7.x86_64.rpm
@@ -194,6 +235,7 @@ weight: 7310
 @ el9.x86_64 16 credcheck_16 credcheck_16-2.6-1PGDG.rhel9.x86_64.rpm pgdg 2.6 34.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/credcheck_16-2.6-1PGDG.rhel9.x86_64.rpm
 @ el9.x86_64 16 credcheck_16 credcheck_16-2.2-1PGDG.rhel9.x86_64.rpm pgdg 2.2 33.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/credcheck_16-2.2-1PGDG.rhel9.x86_64.rpm
 @ el9.x86_64 16 credcheck_16 credcheck_16-2.1-1PGDG.rhel9.x86_64.rpm pgdg 2.1 32.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/credcheck_16-2.1-1PGDG.rhel9.x86_64.rpm
+@ el9.aarch64 16 credcheck_16 credcheck_16-4.7-1PGDG.rhel9.7.aarch64.rpm pgdg 4.7 40.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/credcheck_16-4.7-1PGDG.rhel9.7.aarch64.rpm
 @ el9.aarch64 16 credcheck_16 credcheck_16-4.6-1PGDG.rhel9.7.aarch64.rpm pgdg 4.6 40.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/credcheck_16-4.6-1PGDG.rhel9.7.aarch64.rpm
 @ el9.aarch64 16 credcheck_16 credcheck_16-4.5-1PGDG.rhel9.7.aarch64.rpm pgdg 4.5 40.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/credcheck_16-4.5-1PGDG.rhel9.7.aarch64.rpm
 @ el9.aarch64 16 credcheck_16 credcheck_16-4.4-1PGDG.rhel9.7.aarch64.rpm pgdg 4.4 40.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/credcheck_16-4.4-1PGDG.rhel9.7.aarch64.rpm
@@ -205,12 +247,14 @@ weight: 7310
 @ el9.aarch64 16 credcheck_16 credcheck_16-2.6-1PGDG.rhel9.aarch64.rpm pgdg 2.6 34.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/credcheck_16-2.6-1PGDG.rhel9.aarch64.rpm
 @ el9.aarch64 16 credcheck_16 credcheck_16-2.2-1PGDG.rhel9.aarch64.rpm pgdg 2.2 32.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/credcheck_16-2.2-1PGDG.rhel9.aarch64.rpm
 @ el9.aarch64 16 credcheck_16 credcheck_16-2.1-1PGDG.rhel9.aarch64.rpm pgdg 2.1 31.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/credcheck_16-2.1-1PGDG.rhel9.aarch64.rpm
+@ el10.x86_64 16 credcheck_16 credcheck_16-4.7-1PGDG.rhel10.1.x86_64.rpm pgdg 4.7 41.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/credcheck_16-4.7-1PGDG.rhel10.1.x86_64.rpm
 @ el10.x86_64 16 credcheck_16 credcheck_16-4.5-1PGDG.rhel10.1.x86_64.rpm pgdg 4.5 41.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/credcheck_16-4.5-1PGDG.rhel10.1.x86_64.rpm
 @ el10.x86_64 16 credcheck_16 credcheck_16-4.4-1PGDG.rhel10.1.x86_64.rpm pgdg 4.4 40.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/credcheck_16-4.4-1PGDG.rhel10.1.x86_64.rpm
 @ el10.x86_64 16 credcheck_16 credcheck_16-4.3-1PGDG.rhel10.1.x86_64.rpm pgdg 4.3 40.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/credcheck_16-4.3-1PGDG.rhel10.1.x86_64.rpm
 @ el10.x86_64 16 credcheck_16 credcheck_16-4.2-1PGDG.rhel10.x86_64.rpm pgdg 4.2 40.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/credcheck_16-4.2-1PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 16 credcheck_16 credcheck_16-4.1-1PGDG.rhel10.x86_64.rpm pgdg 4.1 39.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/credcheck_16-4.1-1PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 16 credcheck_16 credcheck_16-3.0-2PGDG.rhel10.x86_64.rpm pgdg 3.0 36.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/credcheck_16-3.0-2PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 16 credcheck_16 credcheck_16-4.7-1PGDG.rhel10.1.aarch64.rpm pgdg 4.7 41.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/credcheck_16-4.7-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 16 credcheck_16 credcheck_16-4.6-1PGDG.rhel10.1.aarch64.rpm pgdg 4.6 40.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/credcheck_16-4.6-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 16 credcheck_16 credcheck_16-4.5-1PGDG.rhel10.1.aarch64.rpm pgdg 4.5 40.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/credcheck_16-4.5-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 16 credcheck_16 credcheck_16-4.4-1PGDG.rhel10.1.aarch64.rpm pgdg 4.4 40.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/credcheck_16-4.4-1PGDG.rhel10.1.aarch64.rpm
@@ -218,14 +262,27 @@ weight: 7310
 @ el10.aarch64 16 credcheck_16 credcheck_16-4.2-1PGDG.rhel10.aarch64.rpm pgdg 4.2 40.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/credcheck_16-4.2-1PGDG.rhel10.aarch64.rpm
 @ el10.aarch64 16 credcheck_16 credcheck_16-4.1-1PGDG.rhel10.aarch64.rpm pgdg 4.1 39.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/credcheck_16-4.1-1PGDG.rhel10.aarch64.rpm
 @ el10.aarch64 16 credcheck_16 credcheck_16-3.0-2PGDG.rhel10.aarch64.rpm pgdg 3.0 36.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/credcheck_16-3.0-2PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 16 postgresql-16-credcheck postgresql-16-credcheck_4.7-1.pgdg12+1_amd64.deb pgdg 4.7 75.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/c/credcheck/postgresql-16-credcheck_4.7-1.pgdg12+1_amd64.deb
 @ d12.x86_64 16 postgresql-16-credcheck postgresql-16-credcheck_4.6-1.pgdg12+1_amd64.deb pgdg 4.6 74.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/c/credcheck/postgresql-16-credcheck_4.6-1.pgdg12+1_amd64.deb
+@ d12.aarch64 16 postgresql-16-credcheck postgresql-16-credcheck_4.7-1.pgdg12+1_arm64.deb pgdg 4.7 74.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/c/credcheck/postgresql-16-credcheck_4.7-1.pgdg12+1_arm64.deb
 @ d12.aarch64 16 postgresql-16-credcheck postgresql-16-credcheck_4.6-1.pgdg12+1_arm64.deb pgdg 4.6 73.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/c/credcheck/postgresql-16-credcheck_4.6-1.pgdg12+1_arm64.deb
+@ d13.x86_64 16 postgresql-16-credcheck postgresql-16-credcheck_4.7-1.pgdg13+1_amd64.deb pgdg 4.7 74.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/c/credcheck/postgresql-16-credcheck_4.7-1.pgdg13+1_amd64.deb
 @ d13.x86_64 16 postgresql-16-credcheck postgresql-16-credcheck_4.6-1.pgdg13+1_amd64.deb pgdg 4.6 74.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/c/credcheck/postgresql-16-credcheck_4.6-1.pgdg13+1_amd64.deb
+@ d13.aarch64 16 postgresql-16-credcheck postgresql-16-credcheck_4.7-1.pgdg13+1_arm64.deb pgdg 4.7 73.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/c/credcheck/postgresql-16-credcheck_4.7-1.pgdg13+1_arm64.deb
 @ d13.aarch64 16 postgresql-16-credcheck postgresql-16-credcheck_4.6-1.pgdg13+1_arm64.deb pgdg 4.6 73.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/c/credcheck/postgresql-16-credcheck_4.6-1.pgdg13+1_arm64.deb
+@ u22.x86_64 16 postgresql-16-credcheck postgresql-16-credcheck_4.7-1.pgdg22.04+1_amd64.deb pgdg 4.7 76.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/c/credcheck/postgresql-16-credcheck_4.7-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 16 postgresql-16-credcheck postgresql-16-credcheck_4.6-1.pgdg22.04+1_amd64.deb pgdg 4.6 75.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/c/credcheck/postgresql-16-credcheck_4.6-1.pgdg22.04+1_amd64.deb
+@ u22.aarch64 16 postgresql-16-credcheck postgresql-16-credcheck_4.7-1.pgdg22.04+1_arm64.deb pgdg 4.7 74.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/c/credcheck/postgresql-16-credcheck_4.7-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 16 postgresql-16-credcheck postgresql-16-credcheck_4.6-1.pgdg22.04+1_arm64.deb pgdg 4.6 73.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/c/credcheck/postgresql-16-credcheck_4.6-1.pgdg22.04+1_arm64.deb
+@ u24.x86_64 16 postgresql-16-credcheck postgresql-16-credcheck_4.7-1.pgdg24.04+1_amd64.deb pgdg 4.7 68.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/c/credcheck/postgresql-16-credcheck_4.7-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 16 postgresql-16-credcheck postgresql-16-credcheck_4.6-1.pgdg24.04+1_amd64.deb pgdg 4.6 68.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/c/credcheck/postgresql-16-credcheck_4.6-1.pgdg24.04+1_amd64.deb
+@ u24.aarch64 16 postgresql-16-credcheck postgresql-16-credcheck_4.7-1.pgdg24.04+1_arm64.deb pgdg 4.7 67.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/c/credcheck/postgresql-16-credcheck_4.7-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 16 postgresql-16-credcheck postgresql-16-credcheck_4.6-1.pgdg24.04+1_arm64.deb pgdg 4.6 67.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/c/credcheck/postgresql-16-credcheck_4.6-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 16 postgresql-16-credcheck postgresql-16-credcheck_4.7-1.pgdg26.04+1_amd64.deb pgdg 4.7 68.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/c/credcheck/postgresql-16-credcheck_4.7-1.pgdg26.04+1_amd64.deb
+@ u26.x86_64 16 postgresql-16-credcheck postgresql-16-credcheck_4.6-1.pgdg26.04+1_amd64.deb pgdg 4.6 67.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/c/credcheck/postgresql-16-credcheck_4.6-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 16 postgresql-16-credcheck postgresql-16-credcheck_4.7-1.pgdg26.04+1_arm64.deb pgdg 4.7 67.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/c/credcheck/postgresql-16-credcheck_4.7-1.pgdg26.04+1_arm64.deb
+@ u26.aarch64 16 postgresql-16-credcheck postgresql-16-credcheck_4.6-1.pgdg26.04+1_arm64.deb pgdg 4.6 66.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/c/credcheck/postgresql-16-credcheck_4.6-1.pgdg26.04+1_arm64.deb
+@ el8.x86_64 15 credcheck_15 credcheck_15-4.7-1PGDG.rhel8.10.x86_64.rpm pgdg 4.7 42.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/credcheck_15-4.7-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 credcheck_15 credcheck_15-4.6-1PGDG.rhel8.10.x86_64.rpm pgdg 4.6 41.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/credcheck_15-4.6-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 credcheck_15 credcheck_15-4.5-1PGDG.rhel8.10.x86_64.rpm pgdg 4.5 41.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/credcheck_15-4.5-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 credcheck_15 credcheck_15-4.4-1PGDG.rhel8.10.x86_64.rpm pgdg 4.4 41.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/credcheck_15-4.4-1PGDG.rhel8.10.x86_64.rpm
@@ -242,6 +299,7 @@ weight: 7310
 @ el8.x86_64 15 credcheck_15 credcheck_15-1.0-1.rhel8.x86_64.rpm pgdg 1.0 27.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/credcheck_15-1.0-1.rhel8.x86_64.rpm
 @ el8.x86_64 15 credcheck_15 credcheck_15-0.2.0-3.rhel8.x86_64.rpm pgdg 0.2.0 18.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/credcheck_15-0.2.0-3.rhel8.x86_64.rpm
 @ el8.x86_64 15 credcheck_15 credcheck_15-0.2.0-1.rhel8.x86_64.rpm pgdg 0.2.0 35.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/credcheck_15-0.2.0-1.rhel8.x86_64.rpm
+@ el8.aarch64 15 credcheck_15 credcheck_15-4.7-1PGDG.rhel8.10.aarch64.rpm pgdg 4.7 41.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/credcheck_15-4.7-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 15 credcheck_15 credcheck_15-4.6-1PGDG.rhel8.10.aarch64.rpm pgdg 4.6 41.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/credcheck_15-4.6-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 15 credcheck_15 credcheck_15-4.5-1PGDG.rhel8.10.aarch64.rpm pgdg 4.5 40.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/credcheck_15-4.5-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 15 credcheck_15 credcheck_15-4.4-1PGDG.rhel8.10.aarch64.rpm pgdg 4.4 40.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/credcheck_15-4.4-1PGDG.rhel8.10.aarch64.rpm
@@ -258,6 +316,7 @@ weight: 7310
 @ el8.aarch64 15 credcheck_15 credcheck_15-1.0-1.rhel8.aarch64.rpm pgdg 1.0 26.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/credcheck_15-1.0-1.rhel8.aarch64.rpm
 @ el8.aarch64 15 credcheck_15 credcheck_15-0.2.0-3.rhel8.aarch64.rpm pgdg 0.2.0 18.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/credcheck_15-0.2.0-3.rhel8.aarch64.rpm
 @ el8.aarch64 15 credcheck_15 credcheck_15-0.2.0-1.rhel8.aarch64.rpm pgdg 0.2.0 34.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/credcheck_15-0.2.0-1.rhel8.aarch64.rpm
+@ el9.x86_64 15 credcheck_15 credcheck_15-4.7-1PGDG.rhel9.7.x86_64.rpm pgdg 4.7 41.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/credcheck_15-4.7-1PGDG.rhel9.7.x86_64.rpm
 @ el9.x86_64 15 credcheck_15 credcheck_15-4.6-1PGDG.rhel9.7.x86_64.rpm pgdg 4.6 40.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/credcheck_15-4.6-1PGDG.rhel9.7.x86_64.rpm
 @ el9.x86_64 15 credcheck_15 credcheck_15-4.5-1PGDG.rhel9.7.x86_64.rpm pgdg 4.5 40.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/credcheck_15-4.5-1PGDG.rhel9.7.x86_64.rpm
 @ el9.x86_64 15 credcheck_15 credcheck_15-4.4-1PGDG.rhel9.7.x86_64.rpm pgdg 4.4 40.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/credcheck_15-4.4-1PGDG.rhel9.7.x86_64.rpm
@@ -274,6 +333,7 @@ weight: 7310
 @ el9.x86_64 15 credcheck_15 credcheck_15-1.0-1.rhel9.x86_64.rpm pgdg 1.0 27.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/credcheck_15-1.0-1.rhel9.x86_64.rpm
 @ el9.x86_64 15 credcheck_15 credcheck_15-0.2.0-3.rhel9.x86_64.rpm pgdg 0.2.0 18.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/credcheck_15-0.2.0-3.rhel9.x86_64.rpm
 @ el9.x86_64 15 credcheck_15 credcheck_15-0.2.0-1.rhel9.x86_64.rpm pgdg 0.2.0 35.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/credcheck_15-0.2.0-1.rhel9.x86_64.rpm
+@ el9.aarch64 15 credcheck_15 credcheck_15-4.7-1PGDG.rhel9.7.aarch64.rpm pgdg 4.7 40.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/credcheck_15-4.7-1PGDG.rhel9.7.aarch64.rpm
 @ el9.aarch64 15 credcheck_15 credcheck_15-4.6-1PGDG.rhel9.7.aarch64.rpm pgdg 4.6 40.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/credcheck_15-4.6-1PGDG.rhel9.7.aarch64.rpm
 @ el9.aarch64 15 credcheck_15 credcheck_15-4.5-1PGDG.rhel9.7.aarch64.rpm pgdg 4.5 40.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/credcheck_15-4.5-1PGDG.rhel9.7.aarch64.rpm
 @ el9.aarch64 15 credcheck_15 credcheck_15-4.4-1PGDG.rhel9.7.aarch64.rpm pgdg 4.4 39.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/credcheck_15-4.4-1PGDG.rhel9.7.aarch64.rpm
@@ -290,12 +350,14 @@ weight: 7310
 @ el9.aarch64 15 credcheck_15 credcheck_15-1.0-1.rhel9.aarch64.rpm pgdg 1.0 26.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/credcheck_15-1.0-1.rhel9.aarch64.rpm
 @ el9.aarch64 15 credcheck_15 credcheck_15-0.2.0-3.rhel9.aarch64.rpm pgdg 0.2.0 18.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/credcheck_15-0.2.0-3.rhel9.aarch64.rpm
 @ el9.aarch64 15 credcheck_15 credcheck_15-0.2.0-1.rhel9.aarch64.rpm pgdg 0.2.0 35.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/credcheck_15-0.2.0-1.rhel9.aarch64.rpm
+@ el10.x86_64 15 credcheck_15 credcheck_15-4.7-1PGDG.rhel10.1.x86_64.rpm pgdg 4.7 41.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/credcheck_15-4.7-1PGDG.rhel10.1.x86_64.rpm
 @ el10.x86_64 15 credcheck_15 credcheck_15-4.5-1PGDG.rhel10.1.x86_64.rpm pgdg 4.5 41.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/credcheck_15-4.5-1PGDG.rhel10.1.x86_64.rpm
 @ el10.x86_64 15 credcheck_15 credcheck_15-4.4-1PGDG.rhel10.1.x86_64.rpm pgdg 4.4 40.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/credcheck_15-4.4-1PGDG.rhel10.1.x86_64.rpm
 @ el10.x86_64 15 credcheck_15 credcheck_15-4.3-1PGDG.rhel10.1.x86_64.rpm pgdg 4.3 40.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/credcheck_15-4.3-1PGDG.rhel10.1.x86_64.rpm
 @ el10.x86_64 15 credcheck_15 credcheck_15-4.2-1PGDG.rhel10.x86_64.rpm pgdg 4.2 40.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/credcheck_15-4.2-1PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 15 credcheck_15 credcheck_15-4.1-1PGDG.rhel10.x86_64.rpm pgdg 4.1 39.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/credcheck_15-4.1-1PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 15 credcheck_15 credcheck_15-3.0-2PGDG.rhel10.x86_64.rpm pgdg 3.0 36.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/credcheck_15-3.0-2PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 15 credcheck_15 credcheck_15-4.7-1PGDG.rhel10.1.aarch64.rpm pgdg 4.7 41.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/credcheck_15-4.7-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 15 credcheck_15 credcheck_15-4.6-1PGDG.rhel10.1.aarch64.rpm pgdg 4.6 40.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/credcheck_15-4.6-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 15 credcheck_15 credcheck_15-4.5-1PGDG.rhel10.1.aarch64.rpm pgdg 4.5 40.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/credcheck_15-4.5-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 15 credcheck_15 credcheck_15-4.4-1PGDG.rhel10.1.aarch64.rpm pgdg 4.4 40.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/credcheck_15-4.4-1PGDG.rhel10.1.aarch64.rpm
@@ -303,14 +365,27 @@ weight: 7310
 @ el10.aarch64 15 credcheck_15 credcheck_15-4.2-1PGDG.rhel10.aarch64.rpm pgdg 4.2 39.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/credcheck_15-4.2-1PGDG.rhel10.aarch64.rpm
 @ el10.aarch64 15 credcheck_15 credcheck_15-4.1-1PGDG.rhel10.aarch64.rpm pgdg 4.1 39.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/credcheck_15-4.1-1PGDG.rhel10.aarch64.rpm
 @ el10.aarch64 15 credcheck_15 credcheck_15-3.0-2PGDG.rhel10.aarch64.rpm pgdg 3.0 36.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/credcheck_15-3.0-2PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 15 postgresql-15-credcheck postgresql-15-credcheck_4.7-1.pgdg12+1_amd64.deb pgdg 4.7 74.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/c/credcheck/postgresql-15-credcheck_4.7-1.pgdg12+1_amd64.deb
 @ d12.x86_64 15 postgresql-15-credcheck postgresql-15-credcheck_4.6-1.pgdg12+1_amd64.deb pgdg 4.6 74.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/c/credcheck/postgresql-15-credcheck_4.6-1.pgdg12+1_amd64.deb
+@ d12.aarch64 15 postgresql-15-credcheck postgresql-15-credcheck_4.7-1.pgdg12+1_arm64.deb pgdg 4.7 73.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/c/credcheck/postgresql-15-credcheck_4.7-1.pgdg12+1_arm64.deb
 @ d12.aarch64 15 postgresql-15-credcheck postgresql-15-credcheck_4.6-1.pgdg12+1_arm64.deb pgdg 4.6 72.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/c/credcheck/postgresql-15-credcheck_4.6-1.pgdg12+1_arm64.deb
+@ d13.x86_64 15 postgresql-15-credcheck postgresql-15-credcheck_4.7-1.pgdg13+1_amd64.deb pgdg 4.7 74.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/c/credcheck/postgresql-15-credcheck_4.7-1.pgdg13+1_amd64.deb
 @ d13.x86_64 15 postgresql-15-credcheck postgresql-15-credcheck_4.6-1.pgdg13+1_amd64.deb pgdg 4.6 73.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/c/credcheck/postgresql-15-credcheck_4.6-1.pgdg13+1_amd64.deb
+@ d13.aarch64 15 postgresql-15-credcheck postgresql-15-credcheck_4.7-1.pgdg13+1_arm64.deb pgdg 4.7 73.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/c/credcheck/postgresql-15-credcheck_4.7-1.pgdg13+1_arm64.deb
 @ d13.aarch64 15 postgresql-15-credcheck postgresql-15-credcheck_4.6-1.pgdg13+1_arm64.deb pgdg 4.6 72.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/c/credcheck/postgresql-15-credcheck_4.6-1.pgdg13+1_arm64.deb
+@ u22.x86_64 15 postgresql-15-credcheck postgresql-15-credcheck_4.7-1.pgdg22.04+1_amd64.deb pgdg 4.7 75.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/c/credcheck/postgresql-15-credcheck_4.7-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 15 postgresql-15-credcheck postgresql-15-credcheck_4.6-1.pgdg22.04+1_amd64.deb pgdg 4.6 74.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/c/credcheck/postgresql-15-credcheck_4.6-1.pgdg22.04+1_amd64.deb
+@ u22.aarch64 15 postgresql-15-credcheck postgresql-15-credcheck_4.7-1.pgdg22.04+1_arm64.deb pgdg 4.7 74.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/c/credcheck/postgresql-15-credcheck_4.7-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 15 postgresql-15-credcheck postgresql-15-credcheck_4.6-1.pgdg22.04+1_arm64.deb pgdg 4.6 73.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/c/credcheck/postgresql-15-credcheck_4.6-1.pgdg22.04+1_arm64.deb
+@ u24.x86_64 15 postgresql-15-credcheck postgresql-15-credcheck_4.7-1.pgdg24.04+1_amd64.deb pgdg 4.7 68.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/c/credcheck/postgresql-15-credcheck_4.7-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 15 postgresql-15-credcheck postgresql-15-credcheck_4.6-1.pgdg24.04+1_amd64.deb pgdg 4.6 67.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/c/credcheck/postgresql-15-credcheck_4.6-1.pgdg24.04+1_amd64.deb
+@ u24.aarch64 15 postgresql-15-credcheck postgresql-15-credcheck_4.7-1.pgdg24.04+1_arm64.deb pgdg 4.7 67.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/c/credcheck/postgresql-15-credcheck_4.7-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 15 postgresql-15-credcheck postgresql-15-credcheck_4.6-1.pgdg24.04+1_arm64.deb pgdg 4.6 66.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/c/credcheck/postgresql-15-credcheck_4.6-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 15 postgresql-15-credcheck postgresql-15-credcheck_4.7-1.pgdg26.04+1_amd64.deb pgdg 4.7 68.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/c/credcheck/postgresql-15-credcheck_4.7-1.pgdg26.04+1_amd64.deb
+@ u26.x86_64 15 postgresql-15-credcheck postgresql-15-credcheck_4.6-1.pgdg26.04+1_amd64.deb pgdg 4.6 67.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/c/credcheck/postgresql-15-credcheck_4.6-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 15 postgresql-15-credcheck postgresql-15-credcheck_4.7-1.pgdg26.04+1_arm64.deb pgdg 4.7 66.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/c/credcheck/postgresql-15-credcheck_4.7-1.pgdg26.04+1_arm64.deb
+@ u26.aarch64 15 postgresql-15-credcheck postgresql-15-credcheck_4.6-1.pgdg26.04+1_arm64.deb pgdg 4.6 65.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/c/credcheck/postgresql-15-credcheck_4.6-1.pgdg26.04+1_arm64.deb
+@ el8.x86_64 14 credcheck_14 credcheck_14-4.7-1PGDG.rhel8.10.x86_64.rpm pgdg 4.7 42.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/credcheck_14-4.7-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 14 credcheck_14 credcheck_14-4.6-1PGDG.rhel8.10.x86_64.rpm pgdg 4.6 41.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/credcheck_14-4.6-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 14 credcheck_14 credcheck_14-4.5-1PGDG.rhel8.10.x86_64.rpm pgdg 4.5 41.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/credcheck_14-4.5-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 14 credcheck_14 credcheck_14-4.4-1PGDG.rhel8.10.x86_64.rpm pgdg 4.4 41.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/credcheck_14-4.4-1PGDG.rhel8.10.x86_64.rpm
@@ -327,6 +402,7 @@ weight: 7310
 @ el8.x86_64 14 credcheck_14 credcheck_14-1.0-1.rhel8.x86_64.rpm pgdg 1.0 27.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/credcheck_14-1.0-1.rhel8.x86_64.rpm
 @ el8.x86_64 14 credcheck_14 credcheck_14-0.2.0-3.rhel8.x86_64.rpm pgdg 0.2.0 18.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/credcheck_14-0.2.0-3.rhel8.x86_64.rpm
 @ el8.x86_64 14 credcheck_14 credcheck_14-0.2.0-1.rhel8.x86_64.rpm pgdg 0.2.0 35.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/credcheck_14-0.2.0-1.rhel8.x86_64.rpm
+@ el8.aarch64 14 credcheck_14 credcheck_14-4.7-1PGDG.rhel8.10.aarch64.rpm pgdg 4.7 41.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/credcheck_14-4.7-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 14 credcheck_14 credcheck_14-4.6-1PGDG.rhel8.10.aarch64.rpm pgdg 4.6 41.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/credcheck_14-4.6-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 14 credcheck_14 credcheck_14-4.5-1PGDG.rhel8.10.aarch64.rpm pgdg 4.5 40.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/credcheck_14-4.5-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 14 credcheck_14 credcheck_14-4.4-1PGDG.rhel8.10.aarch64.rpm pgdg 4.4 40.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/credcheck_14-4.4-1PGDG.rhel8.10.aarch64.rpm
@@ -343,6 +419,7 @@ weight: 7310
 @ el8.aarch64 14 credcheck_14 credcheck_14-1.0-1.rhel8.aarch64.rpm pgdg 1.0 26.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/credcheck_14-1.0-1.rhel8.aarch64.rpm
 @ el8.aarch64 14 credcheck_14 credcheck_14-0.2.0-3.rhel8.aarch64.rpm pgdg 0.2.0 18.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/credcheck_14-0.2.0-3.rhel8.aarch64.rpm
 @ el8.aarch64 14 credcheck_14 credcheck_14-0.2.0-1.rhel8.aarch64.rpm pgdg 0.2.0 34.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/credcheck_14-0.2.0-1.rhel8.aarch64.rpm
+@ el9.x86_64 14 credcheck_14 credcheck_14-4.7-1PGDG.rhel9.7.x86_64.rpm pgdg 4.7 41.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/credcheck_14-4.7-1PGDG.rhel9.7.x86_64.rpm
 @ el9.x86_64 14 credcheck_14 credcheck_14-4.6-1PGDG.rhel9.7.x86_64.rpm pgdg 4.6 40.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/credcheck_14-4.6-1PGDG.rhel9.7.x86_64.rpm
 @ el9.x86_64 14 credcheck_14 credcheck_14-4.5-1PGDG.rhel9.7.x86_64.rpm pgdg 4.5 40.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/credcheck_14-4.5-1PGDG.rhel9.7.x86_64.rpm
 @ el9.x86_64 14 credcheck_14 credcheck_14-4.4-1PGDG.rhel9.7.x86_64.rpm pgdg 4.4 40.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/credcheck_14-4.4-1PGDG.rhel9.7.x86_64.rpm
@@ -358,6 +435,7 @@ weight: 7310
 @ el9.x86_64 14 credcheck_14 credcheck_14-1.2-1.rhel9.x86_64.rpm pgdg 1.2 28.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/credcheck_14-1.2-1.rhel9.x86_64.rpm
 @ el9.x86_64 14 credcheck_14 credcheck_14-1.0-1.rhel9.x86_64.rpm pgdg 1.0 27.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/credcheck_14-1.0-1.rhel9.x86_64.rpm
 @ el9.x86_64 14 credcheck_14 credcheck_14-0.2.0-3.rhel9.x86_64.rpm pgdg 0.2.0 18.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/credcheck_14-0.2.0-3.rhel9.x86_64.rpm
+@ el9.aarch64 14 credcheck_14 credcheck_14-4.7-1PGDG.rhel9.7.aarch64.rpm pgdg 4.7 40.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/credcheck_14-4.7-1PGDG.rhel9.7.aarch64.rpm
 @ el9.aarch64 14 credcheck_14 credcheck_14-4.6-1PGDG.rhel9.7.aarch64.rpm pgdg 4.6 40.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/credcheck_14-4.6-1PGDG.rhel9.7.aarch64.rpm
 @ el9.aarch64 14 credcheck_14 credcheck_14-4.5-1PGDG.rhel9.7.aarch64.rpm pgdg 4.5 40.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/credcheck_14-4.5-1PGDG.rhel9.7.aarch64.rpm
 @ el9.aarch64 14 credcheck_14 credcheck_14-4.4-1PGDG.rhel9.7.aarch64.rpm pgdg 4.4 39.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/credcheck_14-4.4-1PGDG.rhel9.7.aarch64.rpm
@@ -374,12 +452,14 @@ weight: 7310
 @ el9.aarch64 14 credcheck_14 credcheck_14-1.0-1.rhel9.aarch64.rpm pgdg 1.0 26.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/credcheck_14-1.0-1.rhel9.aarch64.rpm
 @ el9.aarch64 14 credcheck_14 credcheck_14-0.2.0-3.rhel9.aarch64.rpm pgdg 0.2.0 18.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/credcheck_14-0.2.0-3.rhel9.aarch64.rpm
 @ el9.aarch64 14 credcheck_14 credcheck_14-0.2.0-1.rhel9.aarch64.rpm pgdg 0.2.0 35.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/credcheck_14-0.2.0-1.rhel9.aarch64.rpm
+@ el10.x86_64 14 credcheck_14 credcheck_14-4.7-1PGDG.rhel10.1.x86_64.rpm pgdg 4.7 41.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/credcheck_14-4.7-1PGDG.rhel10.1.x86_64.rpm
 @ el10.x86_64 14 credcheck_14 credcheck_14-4.5-1PGDG.rhel10.1.x86_64.rpm pgdg 4.5 41.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/credcheck_14-4.5-1PGDG.rhel10.1.x86_64.rpm
 @ el10.x86_64 14 credcheck_14 credcheck_14-4.4-1PGDG.rhel10.1.x86_64.rpm pgdg 4.4 40.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/credcheck_14-4.4-1PGDG.rhel10.1.x86_64.rpm
 @ el10.x86_64 14 credcheck_14 credcheck_14-4.3-1PGDG.rhel10.1.x86_64.rpm pgdg 4.3 40.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/credcheck_14-4.3-1PGDG.rhel10.1.x86_64.rpm
 @ el10.x86_64 14 credcheck_14 credcheck_14-4.2-1PGDG.rhel10.x86_64.rpm pgdg 4.2 40.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/credcheck_14-4.2-1PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 14 credcheck_14 credcheck_14-4.1-1PGDG.rhel10.x86_64.rpm pgdg 4.1 39.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/credcheck_14-4.1-1PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 14 credcheck_14 credcheck_14-3.0-2PGDG.rhel10.x86_64.rpm pgdg 3.0 36.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/credcheck_14-3.0-2PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 14 credcheck_14 credcheck_14-4.7-1PGDG.rhel10.1.aarch64.rpm pgdg 4.7 41.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/credcheck_14-4.7-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 14 credcheck_14 credcheck_14-4.6-1PGDG.rhel10.1.aarch64.rpm pgdg 4.6 40.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/credcheck_14-4.6-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 14 credcheck_14 credcheck_14-4.5-1PGDG.rhel10.1.aarch64.rpm pgdg 4.5 40.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/credcheck_14-4.5-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 14 credcheck_14 credcheck_14-4.4-1PGDG.rhel10.1.aarch64.rpm pgdg 4.4 39.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/credcheck_14-4.4-1PGDG.rhel10.1.aarch64.rpm
@@ -387,14 +467,26 @@ weight: 7310
 @ el10.aarch64 14 credcheck_14 credcheck_14-4.2-1PGDG.rhel10.aarch64.rpm pgdg 4.2 39.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/credcheck_14-4.2-1PGDG.rhel10.aarch64.rpm
 @ el10.aarch64 14 credcheck_14 credcheck_14-4.1-1PGDG.rhel10.aarch64.rpm pgdg 4.1 39.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/credcheck_14-4.1-1PGDG.rhel10.aarch64.rpm
 @ el10.aarch64 14 credcheck_14 credcheck_14-3.0-2PGDG.rhel10.aarch64.rpm pgdg 3.0 36.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/credcheck_14-3.0-2PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 14 postgresql-14-credcheck postgresql-14-credcheck_4.7-1.pgdg12+1_amd64.deb pgdg 4.7 74.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/c/credcheck/postgresql-14-credcheck_4.7-1.pgdg12+1_amd64.deb
 @ d12.x86_64 14 postgresql-14-credcheck postgresql-14-credcheck_4.6-1.pgdg12+1_amd64.deb pgdg 4.6 73.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/c/credcheck/postgresql-14-credcheck_4.6-1.pgdg12+1_amd64.deb
+@ d12.aarch64 14 postgresql-14-credcheck postgresql-14-credcheck_4.7-1.pgdg12+1_arm64.deb pgdg 4.7 73.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/c/credcheck/postgresql-14-credcheck_4.7-1.pgdg12+1_arm64.deb
 @ d12.aarch64 14 postgresql-14-credcheck postgresql-14-credcheck_4.6-1.pgdg12+1_arm64.deb pgdg 4.6 72.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/c/credcheck/postgresql-14-credcheck_4.6-1.pgdg12+1_arm64.deb
+@ d13.x86_64 14 postgresql-14-credcheck postgresql-14-credcheck_4.7-1.pgdg13+1_amd64.deb pgdg 4.7 74.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/c/credcheck/postgresql-14-credcheck_4.7-1.pgdg13+1_amd64.deb
 @ d13.x86_64 14 postgresql-14-credcheck postgresql-14-credcheck_4.6-1.pgdg13+1_amd64.deb pgdg 4.6 73.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/c/credcheck/postgresql-14-credcheck_4.6-1.pgdg13+1_amd64.deb
+@ d13.aarch64 14 postgresql-14-credcheck postgresql-14-credcheck_4.7-1.pgdg13+1_arm64.deb pgdg 4.7 73.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/c/credcheck/postgresql-14-credcheck_4.7-1.pgdg13+1_arm64.deb
 @ d13.aarch64 14 postgresql-14-credcheck postgresql-14-credcheck_4.6-1.pgdg13+1_arm64.deb pgdg 4.6 72.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/c/credcheck/postgresql-14-credcheck_4.6-1.pgdg13+1_arm64.deb
+@ u22.x86_64 14 postgresql-14-credcheck postgresql-14-credcheck_4.7-1.pgdg22.04+1_amd64.deb pgdg 4.7 75.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/c/credcheck/postgresql-14-credcheck_4.7-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 14 postgresql-14-credcheck postgresql-14-credcheck_4.6-1.pgdg22.04+1_amd64.deb pgdg 4.6 74.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/c/credcheck/postgresql-14-credcheck_4.6-1.pgdg22.04+1_amd64.deb
+@ u22.aarch64 14 postgresql-14-credcheck postgresql-14-credcheck_4.7-1.pgdg22.04+1_arm64.deb pgdg 4.7 74.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/c/credcheck/postgresql-14-credcheck_4.7-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 14 postgresql-14-credcheck postgresql-14-credcheck_4.6-1.pgdg22.04+1_arm64.deb pgdg 4.6 73.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/c/credcheck/postgresql-14-credcheck_4.6-1.pgdg22.04+1_arm64.deb
+@ u24.x86_64 14 postgresql-14-credcheck postgresql-14-credcheck_4.7-1.pgdg24.04+1_amd64.deb pgdg 4.7 68.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/c/credcheck/postgresql-14-credcheck_4.7-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 14 postgresql-14-credcheck postgresql-14-credcheck_4.6-1.pgdg24.04+1_amd64.deb pgdg 4.6 67.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/c/credcheck/postgresql-14-credcheck_4.6-1.pgdg24.04+1_amd64.deb
+@ u24.aarch64 14 postgresql-14-credcheck postgresql-14-credcheck_4.7-1.pgdg24.04+1_arm64.deb pgdg 4.7 67.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/c/credcheck/postgresql-14-credcheck_4.7-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 14 postgresql-14-credcheck postgresql-14-credcheck_4.6-1.pgdg24.04+1_arm64.deb pgdg 4.6 66.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/c/credcheck/postgresql-14-credcheck_4.6-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 14 postgresql-14-credcheck postgresql-14-credcheck_4.7-1.pgdg26.04+1_amd64.deb pgdg 4.7 68.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/c/credcheck/postgresql-14-credcheck_4.7-1.pgdg26.04+1_amd64.deb
+@ u26.x86_64 14 postgresql-14-credcheck postgresql-14-credcheck_4.6-1.pgdg26.04+1_amd64.deb pgdg 4.6 67.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/c/credcheck/postgresql-14-credcheck_4.6-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 14 postgresql-14-credcheck postgresql-14-credcheck_4.7-1.pgdg26.04+1_arm64.deb pgdg 4.7 66.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/c/credcheck/postgresql-14-credcheck_4.7-1.pgdg26.04+1_arm64.deb
+@ u26.aarch64 14 postgresql-14-credcheck postgresql-14-credcheck_4.6-1.pgdg26.04+1_arm64.deb pgdg 4.6 65.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/c/credcheck/postgresql-14-credcheck_4.6-1.pgdg26.04+1_arm64.deb
 {{< /pgext_matrix >}}
 
 

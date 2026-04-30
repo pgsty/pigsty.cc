@@ -11,10 +11,10 @@ weight: 2660
     <div class="ext-card__title">pgmq/pgmq</div>
     <div class="ext-card__desc">https://github.com/pgmq/pgmq</div>
   </a>
-  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pgmq-1.11.0.tar.gz">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pgmq-1.11.1.tar.gz">
     <div class="ext-card__kicker">源码</div>
-    <div class="ext-card__title">pgmq-1.11.0.tar.gz</div>
-    <div class="ext-card__desc">pgmq-1.11.0.tar.gz</div>
+    <div class="ext-card__title">pgmq-1.11.1.tar.gz</div>
+    <div class="ext-card__desc">pgmq-1.11.1.tar.gz</div>
   </a>
 </div>
 
@@ -25,7 +25,7 @@ weight: 2660
 
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
-| [**`pgmq`**](/ext/e/pgmq) | `1.11.0` | <a class="ext-badge ext-badge--cate feat" href="/ext/cate/feat">FEAT</a> | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> |
+| [**`pgmq`**](/ext/e/pgmq) | `1.11.1` | <a class="ext-badge ext-badge--cate feat" href="/ext/cate/feat">FEAT</a> | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> |
 {.ext-table}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
@@ -33,7 +33,7 @@ weight: 2660
 | 2660  | [**`pgmq`**](/ext/e/pgmq) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `pgmq` |
 {.ext-table}
 
-| **相关扩展** | [`kafka_fdw`](/ext/e/kafka_fdw) [`pg_cron`](/ext/e/pg_cron) [`pg_task`](/ext/e/pg_task) [`pg_net`](/ext/e/pg_net) [`pg_background`](/ext/e/pg_background) [`pgagent`](/ext/e/pgagent) [`pg_jobmon`](/ext/e/pg_jobmon) |
+| **相关扩展** | [`kafka_fdw`](/ext/e/kafka_fdw) [`pg_task`](/ext/e/pg_task) [`pg_net`](/ext/e/pg_net) [`pg_background`](/ext/e/pg_background) [`pgagent`](/ext/e/pgagent) [`pg_jobmon`](/ext/e/pg_jobmon) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **下游依赖** | [`pg_later`](/ext/e/pg_later) [`vectorize`](/ext/e/vectorize) |
 {.ext-table .ext-table--rel}
@@ -43,9 +43,9 @@ weight: 2660
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.11.0` | {{< pgvers "18,17,16,15,14" >}} | `pgmq` | - |
-| [**RPM**](/ext/rpm#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.11.0` | {{< pgvers "18,17,16,15,14" >}} | `pgmq_$v` | - |
-| [**DEB**](/ext/deb#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.11.0` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pgmq` | - |
+| [**EXT**](/ext/list#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.11.1` | {{< pgvers "18,17,16,15,14" >}} | `pgmq` | - |
+| [**RPM**](/ext/rpm#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.11.1` | {{< pgvers "18,17,16,15,14" >}} | `pgmq_$v` | - |
+| [**DEB**](/ext/deb#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.11.1` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pgmq` | - |
 {.ext-table}
 
 {{< pgext_matrix >}}
@@ -65,6 +65,8 @@ weight: 2660
 | u22.aarch64 | AVAIL PIGSTY 1.11.0 1 | AVAIL PIGSTY 1.11.0 1 | AVAIL PIGSTY 1.11.0 1 | AVAIL PIGSTY 1.11.0 1 | AVAIL PIGSTY 1.11.0 1 |
 | u24.x86_64 | AVAIL PIGSTY 1.11.0 1 | AVAIL PIGSTY 1.11.0 1 | AVAIL PIGSTY 1.11.0 1 | AVAIL PIGSTY 1.11.0 1 | AVAIL PIGSTY 1.11.0 1 |
 | u24.aarch64 | AVAIL PIGSTY 1.11.0 1 | AVAIL PIGSTY 1.11.0 1 | AVAIL PIGSTY 1.11.0 1 | AVAIL PIGSTY 1.11.0 1 | AVAIL PIGSTY 1.11.0 1 |
+| u26.x86_64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| u26.aarch64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
 @ el8.x86_64 18 pgmq_18 pgmq_18-1.11.0-1PIGSTY.el8.x86_64.rpm pigsty 1.11.0 38.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgmq_18-1.11.0-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 18 pgmq_18 pgmq_18-1.11.0-1PGDG.rhel8.10.noarch.rpm pgdg 1.11.0 54.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pgmq_18-1.11.0-1PGDG.rhel8.10.noarch.rpm
 @ el8.x86_64 18 pgmq_18 pgmq_18-1.10.1-1PGDG.rhel8.10.noarch.rpm pgdg 1.10.1 44.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pgmq_18-1.10.1-1PGDG.rhel8.10.noarch.rpm

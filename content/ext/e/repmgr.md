@@ -59,6 +59,8 @@ weight: 9710
 | u22.aarch64 | AVAIL PGDG 5.5.0 1 | AVAIL PGDG 5.5.0 1 | AVAIL PGDG 5.5.0 1 | AVAIL PGDG 5.5.0 1 | AVAIL PGDG 5.5.0 1 |
 | u24.x86_64 | AVAIL PGDG 5.5.0 1 | AVAIL PGDG 5.5.0 1 | AVAIL PGDG 5.5.0 1 | AVAIL PGDG 5.5.0 1 | AVAIL PGDG 5.5.0 1 |
 | u24.aarch64 | AVAIL PGDG 5.5.0 1 | AVAIL PGDG 5.5.0 1 | AVAIL PGDG 5.5.0 1 | AVAIL PGDG 5.5.0 1 | AVAIL PGDG 5.5.0 1 |
+| u26.x86_64 | AVAIL PGDG 5.5.0 1 | AVAIL PGDG 5.5.0 1 | AVAIL PGDG 5.5.0 1 | AVAIL PGDG 5.5.0 1 | AVAIL PGDG 5.5.0 1 |
+| u26.aarch64 | AVAIL PGDG 5.5.0 1 | AVAIL PGDG 5.5.0 1 | AVAIL PGDG 5.5.0 1 | AVAIL PGDG 5.5.0 1 | AVAIL PGDG 5.5.0 1 |
 @ el8.x86_64 18 repmgr_18 repmgr_18-5.5.0-6PGDG.rhel8.10.x86_64.rpm pgdg 5.5.0 295.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/repmgr_18-5.5.0-6PGDG.rhel8.10.x86_64.rpm
 @ el8.aarch64 18 repmgr_18 repmgr_18-5.5.0-6PGDG.rhel8.10.aarch64.rpm pgdg 5.5.0 285.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/repmgr_18-5.5.0-6PGDG.rhel8.10.aarch64.rpm
 @ el9.x86_64 18 repmgr_18 repmgr_18-5.5.0-6PGDG.rhel9.7.x86_64.rpm pgdg 5.5.0 266.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/repmgr_18-5.5.0-6PGDG.rhel9.7.x86_64.rpm
@@ -73,6 +75,8 @@ weight: 9710
 @ u22.aarch64 18 postgresql-18-repmgr postgresql-18-repmgr_5.5.0+debpgdg-3.pgdg22.04+1_arm64.deb pgdg 5.5.0 211.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/r/repmgr/postgresql-18-repmgr_5.5.0+debpgdg-3.pgdg22.04+1_arm64.deb
 @ u24.x86_64 18 postgresql-18-repmgr postgresql-18-repmgr_5.5.0+debpgdg-3.pgdg24.04+1_amd64.deb pgdg 5.5.0 231.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/r/repmgr/postgresql-18-repmgr_5.5.0+debpgdg-3.pgdg24.04+1_amd64.deb
 @ u24.aarch64 18 postgresql-18-repmgr postgresql-18-repmgr_5.5.0+debpgdg-3.pgdg24.04+1_arm64.deb pgdg 5.5.0 208.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/r/repmgr/postgresql-18-repmgr_5.5.0+debpgdg-3.pgdg24.04+1_arm64.deb
+@ u26.x86_64 18 postgresql-18-repmgr postgresql-18-repmgr_5.5.0+debpgdg-3.pgdg26.04+1_amd64.deb pgdg 5.5.0 233.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/r/repmgr/postgresql-18-repmgr_5.5.0+debpgdg-3.pgdg26.04+1_amd64.deb
+@ u26.aarch64 18 postgresql-18-repmgr postgresql-18-repmgr_5.5.0+debpgdg-3.pgdg26.04+1_arm64.deb pgdg 5.5.0 209.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/r/repmgr/postgresql-18-repmgr_5.5.0+debpgdg-3.pgdg26.04+1_arm64.deb
 @ el8.x86_64 17 repmgr_17 repmgr_17-5.5.0-1PGDG.rhel8.x86_64.rpm pgdg 5.5.0 295.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/repmgr_17-5.5.0-1PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 17 repmgr_17 repmgr_17-5.5.0-1PGDG.rhel8.aarch64.rpm pgdg 5.5.0 285.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/repmgr_17-5.5.0-1PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 17 repmgr_17 repmgr_17-5.5.0-1PGDG.rhel9.x86_64.rpm pgdg 5.5.0 267.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/repmgr_17-5.5.0-1PGDG.rhel9.x86_64.rpm
@@ -87,6 +91,8 @@ weight: 9710
 @ u22.aarch64 17 postgresql-17-repmgr postgresql-17-repmgr_5.5.0+debpgdg-3.pgdg22.04+1_arm64.deb pgdg 5.5.0 212.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/r/repmgr/postgresql-17-repmgr_5.5.0+debpgdg-3.pgdg22.04+1_arm64.deb
 @ u24.x86_64 17 postgresql-17-repmgr postgresql-17-repmgr_5.5.0+debpgdg-3.pgdg24.04+1_amd64.deb pgdg 5.5.0 231.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/r/repmgr/postgresql-17-repmgr_5.5.0+debpgdg-3.pgdg24.04+1_amd64.deb
 @ u24.aarch64 17 postgresql-17-repmgr postgresql-17-repmgr_5.5.0+debpgdg-3.pgdg24.04+1_arm64.deb pgdg 5.5.0 207.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/r/repmgr/postgresql-17-repmgr_5.5.0+debpgdg-3.pgdg24.04+1_arm64.deb
+@ u26.x86_64 17 postgresql-17-repmgr postgresql-17-repmgr_5.5.0+debpgdg-3.pgdg26.04+1_amd64.deb pgdg 5.5.0 234.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/r/repmgr/postgresql-17-repmgr_5.5.0+debpgdg-3.pgdg26.04+1_amd64.deb
+@ u26.aarch64 17 postgresql-17-repmgr postgresql-17-repmgr_5.5.0+debpgdg-3.pgdg26.04+1_arm64.deb pgdg 5.5.0 209.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/r/repmgr/postgresql-17-repmgr_5.5.0+debpgdg-3.pgdg26.04+1_arm64.deb
 @ el8.x86_64 16 repmgr_16 repmgr_16-5.5.0-1PGDG.rhel8.x86_64.rpm pgdg 5.5.0 293.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/repmgr_16-5.5.0-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 16 repmgr_16 repmgr_16-5.4.1-1PGDG.rhel8.x86_64.rpm pgdg 5.4.1 291.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/repmgr_16-5.4.1-1PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 16 repmgr_16 repmgr_16-5.5.0-1PGDG.rhel8.aarch64.rpm pgdg 5.5.0 282.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/repmgr_16-5.5.0-1PGDG.rhel8.aarch64.rpm
@@ -105,6 +111,8 @@ weight: 9710
 @ u22.aarch64 16 postgresql-16-repmgr postgresql-16-repmgr_5.5.0+debpgdg-3.pgdg22.04+1_arm64.deb pgdg 5.5.0 209.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/r/repmgr/postgresql-16-repmgr_5.5.0+debpgdg-3.pgdg22.04+1_arm64.deb
 @ u24.x86_64 16 postgresql-16-repmgr postgresql-16-repmgr_5.5.0+debpgdg-3.pgdg24.04+1_amd64.deb pgdg 5.5.0 229.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/r/repmgr/postgresql-16-repmgr_5.5.0+debpgdg-3.pgdg24.04+1_amd64.deb
 @ u24.aarch64 16 postgresql-16-repmgr postgresql-16-repmgr_5.5.0+debpgdg-3.pgdg24.04+1_arm64.deb pgdg 5.5.0 205.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/r/repmgr/postgresql-16-repmgr_5.5.0+debpgdg-3.pgdg24.04+1_arm64.deb
+@ u26.x86_64 16 postgresql-16-repmgr postgresql-16-repmgr_5.5.0+debpgdg-3.pgdg26.04+1_amd64.deb pgdg 5.5.0 231.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/r/repmgr/postgresql-16-repmgr_5.5.0+debpgdg-3.pgdg26.04+1_amd64.deb
+@ u26.aarch64 16 postgresql-16-repmgr postgresql-16-repmgr_5.5.0+debpgdg-3.pgdg26.04+1_arm64.deb pgdg 5.5.0 207.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/r/repmgr/postgresql-16-repmgr_5.5.0+debpgdg-3.pgdg26.04+1_arm64.deb
 @ el8.x86_64 15 repmgr_15 repmgr_15-5.5.0-1PGDG.rhel8.x86_64.rpm pgdg 5.5.0 291.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/repmgr_15-5.5.0-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 15 repmgr_15 repmgr_15-5.4.1-1PGDG.rhel8.x86_64.rpm pgdg 5.4.1 290.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/repmgr_15-5.4.1-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 15 repmgr_15 repmgr_15-5.4.0-1.rhel8.x86_64.rpm pgdg 5.4.0 289.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/repmgr_15-5.4.0-1.rhel8.x86_64.rpm
@@ -130,6 +138,8 @@ weight: 9710
 @ u22.aarch64 15 postgresql-15-repmgr postgresql-15-repmgr_5.5.0+debpgdg-3.pgdg22.04+1_arm64.deb pgdg 5.5.0 211.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/r/repmgr/postgresql-15-repmgr_5.5.0+debpgdg-3.pgdg22.04+1_arm64.deb
 @ u24.x86_64 15 postgresql-15-repmgr postgresql-15-repmgr_5.5.0+debpgdg-3.pgdg24.04+1_amd64.deb pgdg 5.5.0 230.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/r/repmgr/postgresql-15-repmgr_5.5.0+debpgdg-3.pgdg24.04+1_amd64.deb
 @ u24.aarch64 15 postgresql-15-repmgr postgresql-15-repmgr_5.5.0+debpgdg-3.pgdg24.04+1_arm64.deb pgdg 5.5.0 206.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/r/repmgr/postgresql-15-repmgr_5.5.0+debpgdg-3.pgdg24.04+1_arm64.deb
+@ u26.x86_64 15 postgresql-15-repmgr postgresql-15-repmgr_5.5.0+debpgdg-3.pgdg26.04+1_amd64.deb pgdg 5.5.0 231.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/r/repmgr/postgresql-15-repmgr_5.5.0+debpgdg-3.pgdg26.04+1_amd64.deb
+@ u26.aarch64 15 postgresql-15-repmgr postgresql-15-repmgr_5.5.0+debpgdg-3.pgdg26.04+1_arm64.deb pgdg 5.5.0 206.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/r/repmgr/postgresql-15-repmgr_5.5.0+debpgdg-3.pgdg26.04+1_arm64.deb
 @ el8.x86_64 14 repmgr_14 repmgr_14-5.5.0-1PGDG.rhel8.x86_64.rpm pgdg 5.5.0 289.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/repmgr_14-5.5.0-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 14 repmgr_14 repmgr_14-5.4.1-1PGDG.rhel8.x86_64.rpm pgdg 5.4.1 288.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/repmgr_14-5.4.1-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 14 repmgr_14 repmgr_14-5.4.0-1.rhel8.x86_64.rpm pgdg 5.4.0 288.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/repmgr_14-5.4.0-1.rhel8.x86_64.rpm
@@ -160,6 +170,8 @@ weight: 9710
 @ u22.aarch64 14 postgresql-14-repmgr postgresql-14-repmgr_5.5.0+debpgdg-3.pgdg22.04+1_arm64.deb pgdg 5.5.0 209.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/r/repmgr/postgresql-14-repmgr_5.5.0+debpgdg-3.pgdg22.04+1_arm64.deb
 @ u24.x86_64 14 postgresql-14-repmgr postgresql-14-repmgr_5.5.0+debpgdg-3.pgdg24.04+1_amd64.deb pgdg 5.5.0 229.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/r/repmgr/postgresql-14-repmgr_5.5.0+debpgdg-3.pgdg24.04+1_amd64.deb
 @ u24.aarch64 14 postgresql-14-repmgr postgresql-14-repmgr_5.5.0+debpgdg-3.pgdg24.04+1_arm64.deb pgdg 5.5.0 205.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/r/repmgr/postgresql-14-repmgr_5.5.0+debpgdg-3.pgdg24.04+1_arm64.deb
+@ u26.x86_64 14 postgresql-14-repmgr postgresql-14-repmgr_5.5.0+debpgdg-3.pgdg26.04+1_amd64.deb pgdg 5.5.0 230.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/r/repmgr/postgresql-14-repmgr_5.5.0+debpgdg-3.pgdg26.04+1_amd64.deb
+@ u26.aarch64 14 postgresql-14-repmgr postgresql-14-repmgr_5.5.0+debpgdg-3.pgdg26.04+1_arm64.deb pgdg 5.5.0 206.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/r/repmgr/postgresql-14-repmgr_5.5.0+debpgdg-3.pgdg26.04+1_arm64.deb
 {{< /pgext_matrix >}}
 
 

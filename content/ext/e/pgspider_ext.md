@@ -64,6 +64,8 @@ weight: 8540
 | u22.aarch64 | MISS PIGSTY - 0 | AVAIL PIGSTY 1.3.0 1 | AVAIL PIGSTY 1.3.0 1 | AVAIL PIGSTY 1.3.0 1 | MISS PIGSTY - 0 |
 | u24.x86_64 | MISS PIGSTY - 0 | AVAIL PIGSTY 1.3.0 1 | AVAIL PIGSTY 1.3.0 1 | AVAIL PIGSTY 1.3.0 1 | MISS PIGSTY - 0 |
 | u24.aarch64 | MISS PIGSTY - 0 | AVAIL PIGSTY 1.3.0 1 | AVAIL PIGSTY 1.3.0 1 | AVAIL PIGSTY 1.3.0 1 | MISS PIGSTY - 0 |
+| u26.x86_64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| u26.aarch64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
 @ el8.x86_64 17 pgspider_ext_17 pgspider_ext_17-1.3.0-1PGDG.rhel8.x86_64.rpm pgdg 1.3.0 28.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pgspider_ext_17-1.3.0-1PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 17 pgspider_ext_17 pgspider_ext_17-1.3.0-1PGDG.rhel8.aarch64.rpm pgdg 1.3.0 27.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pgspider_ext_17-1.3.0-1PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 17 pgspider_ext_17 pgspider_ext_17-1.3.0-1PGDG.rhel9.x86_64.rpm pgdg 1.3.0 29.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pgspider_ext_17-1.3.0-1PGDG.rhel9.x86_64.rpm

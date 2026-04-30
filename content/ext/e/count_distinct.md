@@ -67,6 +67,8 @@ weight: 4630
 | u22.aarch64 | AVAIL PIGSTY 3.0.2 1 | AVAIL PIGSTY 3.0.2 1 | AVAIL PIGSTY 3.0.2 1 | AVAIL PIGSTY 3.0.2 1 | AVAIL PIGSTY 3.0.2 1 |
 | u24.x86_64 | AVAIL PIGSTY 3.0.2 1 | AVAIL PIGSTY 3.0.2 1 | AVAIL PIGSTY 3.0.2 1 | AVAIL PIGSTY 3.0.2 1 | AVAIL PIGSTY 3.0.2 1 |
 | u24.aarch64 | AVAIL PIGSTY 3.0.2 1 | AVAIL PIGSTY 3.0.2 1 | AVAIL PIGSTY 3.0.2 1 | AVAIL PIGSTY 3.0.2 1 | AVAIL PIGSTY 3.0.2 1 |
+| u26.x86_64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| u26.aarch64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
 @ el8.x86_64 18 count_distinct_18 count_distinct_18-3.0.2-1PIGSTY.el8.x86_64.rpm pigsty 3.0.2 16.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/count_distinct_18-3.0.2-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 18 count_distinct_18 count_distinct_18-3.0.2-1PGDG.rhel8.x86_64.rpm pgdg 3.0.2 23.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/count_distinct_18-3.0.2-1PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 18 count_distinct_18 count_distinct_18-3.0.2-1PIGSTY.el8.aarch64.rpm pigsty 3.0.2 16.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/count_distinct_18-3.0.2-1PIGSTY.el8.aarch64.rpm

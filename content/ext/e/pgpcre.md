@@ -64,6 +64,8 @@ weight: 4230
 | u22.aarch64 | AVAIL PGDG 0.20190509 1 | AVAIL PGDG 0.20190509 1 | AVAIL PGDG 0.20190509 1 | AVAIL PGDG 0.20190509 1 | AVAIL PGDG 0.20190509 1 |
 | u24.x86_64 | AVAIL PGDG 0.20190509 1 | AVAIL PGDG 0.20190509 1 | AVAIL PGDG 0.20190509 1 | AVAIL PGDG 0.20190509 1 | AVAIL PGDG 0.20190509 1 |
 | u24.aarch64 | AVAIL PGDG 0.20190509 1 | AVAIL PGDG 0.20190509 1 | AVAIL PGDG 0.20190509 1 | AVAIL PGDG 0.20190509 1 | AVAIL PGDG 0.20190509 1 |
+| u26.x86_64 | AVAIL PGDG 0.20190509 1 | AVAIL PGDG 0.20190509 1 | AVAIL PGDG 0.20190509 1 | AVAIL PGDG 0.20190509 1 | AVAIL PGDG 0.20190509 1 |
+| u26.aarch64 | AVAIL PGDG 0.20190509 1 | AVAIL PGDG 0.20190509 1 | AVAIL PGDG 0.20190509 1 | AVAIL PGDG 0.20190509 1 | AVAIL PGDG 0.20190509 1 |
 @ el8.x86_64 18 pgpcre_18 pgpcre_18-0.20190509-3PGDG.rhel8.x86_64.rpm pgdg 0.20190509 17.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pgpcre_18-0.20190509-3PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 18 pgpcre_18 pgpcre_18-0.20190509-1PIGSTY.el8.x86_64.rpm pigsty 0.20190509 16.4KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgpcre_18-0.20190509-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 18 pgpcre_18 pgpcre_18-0.20190509-3PGDG.rhel8.aarch64.rpm pgdg 0.20190509 17.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pgpcre_18-0.20190509-3PGDG.rhel8.aarch64.rpm
@@ -84,6 +86,8 @@ weight: 4230
 @ u22.aarch64 18 postgresql-18-pgpcre postgresql-18-pgpcre_0.20190509-9.pgdg22.04+1_arm64.deb pgdg 0.20190509 18.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgpcre/postgresql-18-pgpcre_0.20190509-9.pgdg22.04+1_arm64.deb
 @ u24.x86_64 18 postgresql-18-pgpcre postgresql-18-pgpcre_0.20190509-9.pgdg24.04+1_amd64.deb pgdg 0.20190509 18.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgpcre/postgresql-18-pgpcre_0.20190509-9.pgdg24.04+1_amd64.deb
 @ u24.aarch64 18 postgresql-18-pgpcre postgresql-18-pgpcre_0.20190509-9.pgdg24.04+1_arm64.deb pgdg 0.20190509 18.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgpcre/postgresql-18-pgpcre_0.20190509-9.pgdg24.04+1_arm64.deb
+@ u26.x86_64 18 postgresql-18-pgpcre postgresql-18-pgpcre_0.20190509-9.pgdg26.04+1_amd64.deb pgdg 0.20190509 18.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgpcre/postgresql-18-pgpcre_0.20190509-9.pgdg26.04+1_amd64.deb
+@ u26.aarch64 18 postgresql-18-pgpcre postgresql-18-pgpcre_0.20190509-9.pgdg26.04+1_arm64.deb pgdg 0.20190509 18.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgpcre/postgresql-18-pgpcre_0.20190509-9.pgdg26.04+1_arm64.deb
 @ el8.x86_64 17 pgpcre_17 pgpcre_17-0.20190509-1PIGSTY.el8.x86_64.rpm pigsty 0.20190509 16.4KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgpcre_17-0.20190509-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 17 pgpcre_17 pgpcre_17-0.20190509-1PGDG.rhel8.x86_64.rpm pgdg 0.20190509 17.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pgpcre_17-0.20190509-1PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 17 pgpcre_17 pgpcre_17-0.20190509-1PIGSTY.el8.aarch64.rpm pigsty 0.20190509 16.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgpcre_17-0.20190509-1PIGSTY.el8.aarch64.rpm
@@ -106,6 +110,8 @@ weight: 4230
 @ u22.aarch64 17 postgresql-17-pgpcre postgresql-17-pgpcre_0.20190509-9.pgdg22.04+1_arm64.deb pgdg 0.20190509 18.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgpcre/postgresql-17-pgpcre_0.20190509-9.pgdg22.04+1_arm64.deb
 @ u24.x86_64 17 postgresql-17-pgpcre postgresql-17-pgpcre_0.20190509-9.pgdg24.04+1_amd64.deb pgdg 0.20190509 18.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgpcre/postgresql-17-pgpcre_0.20190509-9.pgdg24.04+1_amd64.deb
 @ u24.aarch64 17 postgresql-17-pgpcre postgresql-17-pgpcre_0.20190509-9.pgdg24.04+1_arm64.deb pgdg 0.20190509 18.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgpcre/postgresql-17-pgpcre_0.20190509-9.pgdg24.04+1_arm64.deb
+@ u26.x86_64 17 postgresql-17-pgpcre postgresql-17-pgpcre_0.20190509-9.pgdg26.04+1_amd64.deb pgdg 0.20190509 18.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgpcre/postgresql-17-pgpcre_0.20190509-9.pgdg26.04+1_amd64.deb
+@ u26.aarch64 17 postgresql-17-pgpcre postgresql-17-pgpcre_0.20190509-9.pgdg26.04+1_arm64.deb pgdg 0.20190509 18.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgpcre/postgresql-17-pgpcre_0.20190509-9.pgdg26.04+1_arm64.deb
 @ el8.x86_64 16 pgpcre_16 pgpcre_16-0.20190509-1PIGSTY.el8.x86_64.rpm pigsty 0.20190509 16.4KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgpcre_16-0.20190509-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 16 pgpcre_16 pgpcre_16-0.20190509-1PGDG.rhel8.x86_64.rpm pgdg 0.20190509 17.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pgpcre_16-0.20190509-1PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 16 pgpcre_16 pgpcre_16-0.20190509-1PIGSTY.el8.aarch64.rpm pigsty 0.20190509 16.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgpcre_16-0.20190509-1PIGSTY.el8.aarch64.rpm
@@ -128,6 +134,8 @@ weight: 4230
 @ u22.aarch64 16 postgresql-16-pgpcre postgresql-16-pgpcre_0.20190509-9.pgdg22.04+1_arm64.deb pgdg 0.20190509 18.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgpcre/postgresql-16-pgpcre_0.20190509-9.pgdg22.04+1_arm64.deb
 @ u24.x86_64 16 postgresql-16-pgpcre postgresql-16-pgpcre_0.20190509-9.pgdg24.04+1_amd64.deb pgdg 0.20190509 18.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgpcre/postgresql-16-pgpcre_0.20190509-9.pgdg24.04+1_amd64.deb
 @ u24.aarch64 16 postgresql-16-pgpcre postgresql-16-pgpcre_0.20190509-9.pgdg24.04+1_arm64.deb pgdg 0.20190509 18.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgpcre/postgresql-16-pgpcre_0.20190509-9.pgdg24.04+1_arm64.deb
+@ u26.x86_64 16 postgresql-16-pgpcre postgresql-16-pgpcre_0.20190509-9.pgdg26.04+1_amd64.deb pgdg 0.20190509 18.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgpcre/postgresql-16-pgpcre_0.20190509-9.pgdg26.04+1_amd64.deb
+@ u26.aarch64 16 postgresql-16-pgpcre postgresql-16-pgpcre_0.20190509-9.pgdg26.04+1_arm64.deb pgdg 0.20190509 18.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgpcre/postgresql-16-pgpcre_0.20190509-9.pgdg26.04+1_arm64.deb
 @ el8.x86_64 15 pgpcre_15 pgpcre_15-0.20190509-1PIGSTY.el8.x86_64.rpm pigsty 0.20190509 16.4KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgpcre_15-0.20190509-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 15 pgpcre_15 pgpcre_15-0.20190509-1PGDG.rhel8.x86_64.rpm pgdg 0.20190509 17.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pgpcre_15-0.20190509-1PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 15 pgpcre_15 pgpcre_15-0.20190509-1PIGSTY.el8.aarch64.rpm pigsty 0.20190509 16.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgpcre_15-0.20190509-1PIGSTY.el8.aarch64.rpm
@@ -150,6 +158,8 @@ weight: 4230
 @ u22.aarch64 15 postgresql-15-pgpcre postgresql-15-pgpcre_0.20190509-9.pgdg22.04+1_arm64.deb pgdg 0.20190509 18.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgpcre/postgresql-15-pgpcre_0.20190509-9.pgdg22.04+1_arm64.deb
 @ u24.x86_64 15 postgresql-15-pgpcre postgresql-15-pgpcre_0.20190509-9.pgdg24.04+1_amd64.deb pgdg 0.20190509 18.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgpcre/postgresql-15-pgpcre_0.20190509-9.pgdg24.04+1_amd64.deb
 @ u24.aarch64 15 postgresql-15-pgpcre postgresql-15-pgpcre_0.20190509-9.pgdg24.04+1_arm64.deb pgdg 0.20190509 18.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgpcre/postgresql-15-pgpcre_0.20190509-9.pgdg24.04+1_arm64.deb
+@ u26.x86_64 15 postgresql-15-pgpcre postgresql-15-pgpcre_0.20190509-9.pgdg26.04+1_amd64.deb pgdg 0.20190509 18.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgpcre/postgresql-15-pgpcre_0.20190509-9.pgdg26.04+1_amd64.deb
+@ u26.aarch64 15 postgresql-15-pgpcre postgresql-15-pgpcre_0.20190509-9.pgdg26.04+1_arm64.deb pgdg 0.20190509 18.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgpcre/postgresql-15-pgpcre_0.20190509-9.pgdg26.04+1_arm64.deb
 @ el8.x86_64 14 pgpcre_14 pgpcre_14-0.20190509-1PIGSTY.el8.x86_64.rpm pigsty 0.20190509 16.4KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgpcre_14-0.20190509-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 14 pgpcre_14 pgpcre_14-0.20190509-1PGDG.rhel8.x86_64.rpm pgdg 0.20190509 17.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pgpcre_14-0.20190509-1PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 14 pgpcre_14 pgpcre_14-0.20190509-1PIGSTY.el8.aarch64.rpm pigsty 0.20190509 16.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgpcre_14-0.20190509-1PIGSTY.el8.aarch64.rpm
@@ -172,6 +182,8 @@ weight: 4230
 @ u22.aarch64 14 postgresql-14-pgpcre postgresql-14-pgpcre_0.20190509-9.pgdg22.04+1_arm64.deb pgdg 0.20190509 18.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgpcre/postgresql-14-pgpcre_0.20190509-9.pgdg22.04+1_arm64.deb
 @ u24.x86_64 14 postgresql-14-pgpcre postgresql-14-pgpcre_0.20190509-9.pgdg24.04+1_amd64.deb pgdg 0.20190509 18.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgpcre/postgresql-14-pgpcre_0.20190509-9.pgdg24.04+1_amd64.deb
 @ u24.aarch64 14 postgresql-14-pgpcre postgresql-14-pgpcre_0.20190509-9.pgdg24.04+1_arm64.deb pgdg 0.20190509 18.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgpcre/postgresql-14-pgpcre_0.20190509-9.pgdg24.04+1_arm64.deb
+@ u26.x86_64 14 postgresql-14-pgpcre postgresql-14-pgpcre_0.20190509-9.pgdg26.04+1_amd64.deb pgdg 0.20190509 18.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgpcre/postgresql-14-pgpcre_0.20190509-9.pgdg26.04+1_amd64.deb
+@ u26.aarch64 14 postgresql-14-pgpcre postgresql-14-pgpcre_0.20190509-9.pgdg26.04+1_arm64.deb pgdg 0.20190509 18.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgpcre/postgresql-14-pgpcre_0.20190509-9.pgdg26.04+1_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建

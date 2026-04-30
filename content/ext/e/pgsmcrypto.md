@@ -67,6 +67,8 @@ weight: 7080
 | u22.aarch64 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 |
 | u24.x86_64 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 |
 | u24.aarch64 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 |
+| u26.x86_64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| u26.aarch64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
 @ el8.x86_64 18 pgsmcrypto_18 pgsmcrypto_18-0.1.1-1PIGSTY.el8.x86_64.rpm pigsty 0.1.1 845.9KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgsmcrypto_18-0.1.1-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 18 pgsmcrypto_18 pgsmcrypto_18-0.1.1-1PIGSTY.el8.aarch64.rpm pigsty 0.1.1 667.4KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgsmcrypto_18-0.1.1-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 18 pgsmcrypto_18 pgsmcrypto_18-0.1.1-1PIGSTY.el9.x86_64.rpm pigsty 0.1.1 877.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgsmcrypto_18-0.1.1-1PIGSTY.el9.x86_64.rpm

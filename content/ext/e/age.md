@@ -67,6 +67,8 @@ weight: 2600
 | u22.aarch64 | AVAIL PIGSTY 1.7.0 2 | AVAIL PIGSTY 1.7.0 2 | AVAIL PGDG 1.6.0 1 | AVAIL PGDG 1.6.0 1 | AVAIL PGDG 1.6.0 1 |
 | u24.x86_64 | AVAIL PIGSTY 1.7.0 2 | AVAIL PIGSTY 1.7.0 2 | AVAIL PGDG 1.6.0 1 | AVAIL PGDG 1.6.0 1 | AVAIL PGDG 1.6.0 1 |
 | u24.aarch64 | AVAIL PIGSTY 1.7.0 2 | AVAIL PIGSTY 1.7.0 2 | AVAIL PGDG 1.6.0 1 | AVAIL PGDG 1.6.0 1 | AVAIL PGDG 1.6.0 1 |
+| u26.x86_64 | AVAIL PGDG 1.7.0 1 | AVAIL PGDG 1.7.0 1 | AVAIL PGDG 1.6.0 1 | AVAIL PGDG 1.6.0 1 | AVAIL PGDG 1.6.0 1 |
+| u26.aarch64 | AVAIL PGDG 1.7.0 1 | AVAIL PGDG 1.7.0 1 | AVAIL PGDG 1.6.0 1 | AVAIL PGDG 1.6.0 1 | AVAIL PGDG 1.6.0 1 |
 @ el8.x86_64 18 apache-age_18 apache-age_18-1.7.0-2PIGSTY.el8.x86_64.rpm pigsty 1.7.0 247.6KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/apache-age_18-1.7.0-2PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 18 apache-age_18 apache-age_18-1.7.0-2PIGSTY.el8.aarch64.rpm pigsty 1.7.0 229.8KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/apache-age_18-1.7.0-2PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 18 apache-age_18 apache-age_18-1.7.0-2PIGSTY.el9.x86_64.rpm pigsty 1.7.0 229.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/apache-age_18-1.7.0-2PIGSTY.el9.x86_64.rpm
@@ -89,6 +91,8 @@ weight: 2600
 @ u24.x86_64 18 postgresql-18-age postgresql-18-age_1.7.0~rc0-1.pgdg24.04+1_amd64.deb pgdg 1.7.0 681.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-18-age/postgresql-18-age_1.7.0~rc0-1.pgdg24.04+1_amd64.deb
 @ u24.aarch64 18 postgresql-18-age postgresql-18-age_1.7.0-1PIGSTY~noble_arm64.deb pigsty 1.7.0 717.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/a/age/postgresql-18-age_1.7.0-1PIGSTY~noble_arm64.deb
 @ u24.aarch64 18 postgresql-18-age postgresql-18-age_1.7.0~rc0-1.pgdg24.04+1_arm64.deb pgdg 1.7.0 660.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-18-age/postgresql-18-age_1.7.0~rc0-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 18 postgresql-18-age postgresql-18-age_1.7.0~rc0-1.pgdg26.04+1_amd64.deb pgdg 1.7.0 680.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-18-age/postgresql-18-age_1.7.0~rc0-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 18 postgresql-18-age postgresql-18-age_1.7.0~rc0-1.pgdg26.04+1_arm64.deb pgdg 1.7.0 656.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-18-age/postgresql-18-age_1.7.0~rc0-1.pgdg26.04+1_arm64.deb
 @ el8.x86_64 17 apache-age_17 apache-age_17-1.7.0-2PIGSTY.el8.x86_64.rpm pigsty 1.7.0 247.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/apache-age_17-1.7.0-2PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 17 apache-age_17 apache-age_17-1.7.0-2PIGSTY.el8.aarch64.rpm pigsty 1.7.0 229.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/apache-age_17-1.7.0-2PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 17 apache-age_17 apache-age_17-1.7.0-2PIGSTY.el9.x86_64.rpm pigsty 1.7.0 229.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/apache-age_17-1.7.0-2PIGSTY.el9.x86_64.rpm
@@ -111,6 +115,8 @@ weight: 2600
 @ u24.x86_64 17 postgresql-17-age postgresql-17-age_1.7.0~rc0-1.pgdg24.04+1_amd64.deb pgdg 1.7.0 680.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-17-age/postgresql-17-age_1.7.0~rc0-1.pgdg24.04+1_amd64.deb
 @ u24.aarch64 17 postgresql-17-age postgresql-17-age_1.7.0-1PIGSTY~noble_arm64.deb pigsty 1.7.0 717.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/a/age/postgresql-17-age_1.7.0-1PIGSTY~noble_arm64.deb
 @ u24.aarch64 17 postgresql-17-age postgresql-17-age_1.7.0~rc0-1.pgdg24.04+1_arm64.deb pgdg 1.7.0 660.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-17-age/postgresql-17-age_1.7.0~rc0-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 17 postgresql-17-age postgresql-17-age_1.7.0~rc0-1.pgdg26.04+1_amd64.deb pgdg 1.7.0 679.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-17-age/postgresql-17-age_1.7.0~rc0-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 17 postgresql-17-age postgresql-17-age_1.7.0~rc0-1.pgdg26.04+1_arm64.deb pgdg 1.7.0 655.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-17-age/postgresql-17-age_1.7.0~rc0-1.pgdg26.04+1_arm64.deb
 @ el8.x86_64 16 apache-age_16 apache-age_16-1.6.0-1PIGSTY.el8.x86_64.rpm pigsty 1.6.0 246.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/apache-age_16-1.6.0-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 16 apache-age_16 apache-age_16-1.6.0-1PIGSTY.el8.aarch64.rpm pigsty 1.6.0 228.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/apache-age_16-1.6.0-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 16 apache-age_16 apache-age_16-1.6.0-1PIGSTY.el9.x86_64.rpm pigsty 1.6.0 226.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/apache-age_16-1.6.0-1PIGSTY.el9.x86_64.rpm
@@ -125,6 +131,8 @@ weight: 2600
 @ u22.aarch64 16 postgresql-16-age postgresql-16-age_1.6.0~rc0-2.pgdg22.04+1_arm64.deb pgdg 1.6.0 769.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-16-age/postgresql-16-age_1.6.0~rc0-2.pgdg22.04+1_arm64.deb
 @ u24.x86_64 16 postgresql-16-age postgresql-16-age_1.6.0~rc0-2.pgdg24.04+1_amd64.deb pgdg 1.6.0 677.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-16-age/postgresql-16-age_1.6.0~rc0-2.pgdg24.04+1_amd64.deb
 @ u24.aarch64 16 postgresql-16-age postgresql-16-age_1.6.0~rc0-2.pgdg24.04+1_arm64.deb pgdg 1.6.0 656.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-16-age/postgresql-16-age_1.6.0~rc0-2.pgdg24.04+1_arm64.deb
+@ u26.x86_64 16 postgresql-16-age postgresql-16-age_1.6.0~rc0-2.pgdg26.04+1_amd64.deb pgdg 1.6.0 674.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-16-age/postgresql-16-age_1.6.0~rc0-2.pgdg26.04+1_amd64.deb
+@ u26.aarch64 16 postgresql-16-age postgresql-16-age_1.6.0~rc0-2.pgdg26.04+1_arm64.deb pgdg 1.6.0 654.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-16-age/postgresql-16-age_1.6.0~rc0-2.pgdg26.04+1_arm64.deb
 @ el8.x86_64 15 apache-age_15 apache-age_15-1.6.0-1PIGSTY.el8.x86_64.rpm pigsty 1.6.0 250.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/apache-age_15-1.6.0-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 15 apache-age_15 apache-age_15-1.6.0-1PIGSTY.el8.aarch64.rpm pigsty 1.6.0 233.1KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/apache-age_15-1.6.0-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 15 apache-age_15 apache-age_15-1.6.0-1PIGSTY.el9.x86_64.rpm pigsty 1.6.0 233.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/apache-age_15-1.6.0-1PIGSTY.el9.x86_64.rpm
@@ -139,6 +147,8 @@ weight: 2600
 @ u22.aarch64 15 postgresql-15-age postgresql-15-age_1.6.0~rc0-1.pgdg22.04+1_arm64.deb pgdg 1.6.0 771.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-15-age/postgresql-15-age_1.6.0~rc0-1.pgdg22.04+1_arm64.deb
 @ u24.x86_64 15 postgresql-15-age postgresql-15-age_1.6.0~rc0-1.pgdg24.04+1_amd64.deb pgdg 1.6.0 679.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-15-age/postgresql-15-age_1.6.0~rc0-1.pgdg24.04+1_amd64.deb
 @ u24.aarch64 15 postgresql-15-age postgresql-15-age_1.6.0~rc0-1.pgdg24.04+1_arm64.deb pgdg 1.6.0 661.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-15-age/postgresql-15-age_1.6.0~rc0-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 15 postgresql-15-age postgresql-15-age_1.6.0~rc0-1.pgdg26.04+1_amd64.deb pgdg 1.6.0 679.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-15-age/postgresql-15-age_1.6.0~rc0-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 15 postgresql-15-age postgresql-15-age_1.6.0~rc0-1.pgdg26.04+1_arm64.deb pgdg 1.6.0 658.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-15-age/postgresql-15-age_1.6.0~rc0-1.pgdg26.04+1_arm64.deb
 @ el8.x86_64 14 apache-age_14 apache-age_14-1.6.0-1PIGSTY.el8.x86_64.rpm pigsty 1.6.0 250.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/apache-age_14-1.6.0-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 14 apache-age_14 apache-age_14-1.6.0-1PIGSTY.el8.aarch64.rpm pigsty 1.6.0 232.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/apache-age_14-1.6.0-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 14 apache-age_14 apache-age_14-1.6.0-1PIGSTY.el9.x86_64.rpm pigsty 1.6.0 233.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/apache-age_14-1.6.0-1PIGSTY.el9.x86_64.rpm
@@ -153,6 +163,8 @@ weight: 2600
 @ u22.aarch64 14 postgresql-14-age postgresql-14-age_1.6.0~rc0-1.pgdg22.04+1_arm64.deb pgdg 1.6.0 771.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-14-age/postgresql-14-age_1.6.0~rc0-1.pgdg22.04+1_arm64.deb
 @ u24.x86_64 14 postgresql-14-age postgresql-14-age_1.6.0~rc0-1.pgdg24.04+1_amd64.deb pgdg 1.6.0 679.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-14-age/postgresql-14-age_1.6.0~rc0-1.pgdg24.04+1_amd64.deb
 @ u24.aarch64 14 postgresql-14-age postgresql-14-age_1.6.0~rc0-1.pgdg24.04+1_arm64.deb pgdg 1.6.0 660.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-14-age/postgresql-14-age_1.6.0~rc0-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 14 postgresql-14-age postgresql-14-age_1.6.0~rc0-1.pgdg26.04+1_amd64.deb pgdg 1.6.0 678.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-14-age/postgresql-14-age_1.6.0~rc0-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 14 postgresql-14-age postgresql-14-age_1.6.0~rc0-1.pgdg26.04+1_arm64.deb pgdg 1.6.0 657.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-14-age/postgresql-14-age_1.6.0~rc0-1.pgdg26.04+1_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建

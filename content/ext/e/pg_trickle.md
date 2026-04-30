@@ -11,10 +11,10 @@ weight: 2860
     <div class="ext-card__title">grove/pg-trickle</div>
     <div class="ext-card__desc">https://github.com/grove/pg-trickle</div>
   </a>
-  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pg_trickle-0.17.0.tar.gz">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pg_trickle-0.31.0.tar.gz">
     <div class="ext-card__kicker">源码</div>
-    <div class="ext-card__title">pg_trickle-0.17.0.tar.gz</div>
-    <div class="ext-card__desc">pg_trickle-0.17.0.tar.gz</div>
+    <div class="ext-card__title">pg_trickle-0.31.0.tar.gz</div>
+    <div class="ext-card__desc">pg_trickle-0.31.0.tar.gz</div>
   </a>
 </div>
 
@@ -25,7 +25,7 @@ weight: 2860
 
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
-| [**`pg_trickle`**](/ext/e/pg_trickle) | `0.17.0` | <a class="ext-badge ext-badge--cate feat" href="/ext/cate/feat">FEAT</a> | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> |
+| [**`pg_trickle`**](/ext/e/pg_trickle) | `0.31.0` | <a class="ext-badge ext-badge--cate feat" href="/ext/cate/feat">FEAT</a> | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> |
 {.ext-table}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
@@ -42,9 +42,9 @@ weight: 2860
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.17.0` | {{< pgvers "18" >}} | `pg_trickle` | - |
-| [**RPM**](/ext/rpm#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.17.0` | {{< pgvers "18" >}} | `pg_trickle_$v` | - |
-| [**DEB**](/ext/deb#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.17.0` | {{< pgvers "18" >}} | `postgresql-$v-pg-trickle` | - |
+| [**EXT**](/ext/list#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.31.0` | {{< pgvers "18" >}} | `pg_trickle` | - |
+| [**RPM**](/ext/rpm#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.31.0` | {{< pgvers "18" >}} | `pg_trickle_$v` | - |
+| [**DEB**](/ext/deb#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.31.0` | {{< pgvers "18" >}} | `postgresql-$v-pg-trickle` | - |
 {.ext-table}
 
 {{< pgext_matrix >}}
@@ -64,6 +64,8 @@ weight: 2860
 | u22.aarch64 | AVAIL PIGSTY 0.20.0 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
 | u24.x86_64 | AVAIL PIGSTY 0.20.0 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
 | u24.aarch64 | AVAIL PIGSTY 0.20.0 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| u26.x86_64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| u26.aarch64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
 @ el8.x86_64 18 pg_trickle_18 pg_trickle_18-0.20.0-1PIGSTY.el8.x86_64.rpm pigsty 0.20.0 2.2MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_trickle_18-0.20.0-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 18 pg_trickle_18 pg_trickle_18-0.20.0-1PIGSTY.el8.aarch64.rpm pigsty 0.20.0 1.9MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_trickle_18-0.20.0-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 18 pg_trickle_18 pg_trickle_18-0.20.0-1PIGSTY.el9.x86_64.rpm pigsty 0.20.0 2.3MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_trickle_18-0.20.0-1PIGSTY.el9.x86_64.rpm

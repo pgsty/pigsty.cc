@@ -67,6 +67,8 @@ weight: 4130
 | u22.aarch64 | AVAIL PIGSTY 0.3.3 1 | AVAIL PIGSTY 0.3.3 1 | AVAIL PIGSTY 0.3.3 1 | AVAIL PIGSTY 0.3.3 1 | AVAIL PIGSTY 0.3.3 1 |
 | u24.x86_64 | AVAIL PIGSTY 0.3.3 1 | AVAIL PIGSTY 0.3.3 1 | AVAIL PIGSTY 0.3.3 1 | AVAIL PIGSTY 0.3.3 1 | AVAIL PIGSTY 0.3.3 1 |
 | u24.aarch64 | AVAIL PIGSTY 0.3.3 1 | AVAIL PIGSTY 0.3.3 1 | AVAIL PIGSTY 0.3.3 1 | AVAIL PIGSTY 0.3.3 1 | AVAIL PIGSTY 0.3.3 1 |
+| u26.x86_64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| u26.aarch64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
 @ el8.x86_64 18 pgproto_18 pgproto_18-0.3.3-1PIGSTY.el8.x86_64.rpm pigsty 0.3.3 228.6KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgproto_18-0.3.3-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 18 pgproto_18 pgproto_18-0.3.3-1PIGSTY.el8.aarch64.rpm pigsty 0.3.3 213.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgproto_18-0.3.3-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 18 pgproto_18 pgproto_18-0.3.3-1PIGSTY.el9.x86_64.rpm pigsty 0.3.3 127.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgproto_18-0.3.3-1PIGSTY.el9.x86_64.rpm

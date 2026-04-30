@@ -64,6 +64,8 @@ weight: 5140
 | u22.aarch64 | AVAIL PGDG 1.4 1 | AVAIL PGDG 1.4 2 | AVAIL PGDG 1.4 2 | AVAIL PGDG 1.4 2 | AVAIL PGDG 1.4 2 |
 | u24.x86_64 | AVAIL PGDG 1.4 1 | AVAIL PGDG 1.4 2 | AVAIL PGDG 1.4 2 | AVAIL PGDG 1.4 2 | AVAIL PGDG 1.4 2 |
 | u24.aarch64 | AVAIL PGDG 1.4 1 | AVAIL PGDG 1.4 2 | AVAIL PGDG 1.4 2 | AVAIL PGDG 1.4 2 | AVAIL PGDG 1.4 2 |
+| u26.x86_64 | AVAIL PGDG 1.4 1 | AVAIL PGDG 1.4 1 | AVAIL PGDG 1.4 1 | AVAIL PGDG 1.4 1 | AVAIL PGDG 1.4 1 |
+| u26.aarch64 | AVAIL PGDG 1.4 1 | AVAIL PGDG 1.4 1 | AVAIL PGDG 1.4 1 | AVAIL PGDG 1.4 1 | AVAIL PGDG 1.4 1 |
 @ el8.x86_64 18 pg_permissions_18 pg_permissions_18-1.4-2PGDG.rhel8.noarch.rpm pgdg 1.4 13.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pg_permissions_18-1.4-2PGDG.rhel8.noarch.rpm
 @ el8.aarch64 18 pg_permissions_18 pg_permissions_18-1.4-2PGDG.rhel8.noarch.rpm pgdg 1.4 13.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pg_permissions_18-1.4-2PGDG.rhel8.noarch.rpm
 @ el9.x86_64 18 pg_permissions_18 pg_permissions_18-1.4-2PGDG.rhel9.noarch.rpm pgdg 1.4 13.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pg_permissions_18-1.4-2PGDG.rhel9.noarch.rpm
@@ -78,6 +80,8 @@ weight: 5140
 @ u22.aarch64 18 postgresql-18-pg-permissions postgresql-18-pg-permissions_1.4-2.pgdg22.04+1_all.deb pgdg 1.4 8.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-permissions/postgresql-18-pg-permissions_1.4-2.pgdg22.04+1_all.deb
 @ u24.x86_64 18 postgresql-18-pg-permissions postgresql-18-pg-permissions_1.4-2.pgdg24.04+1_all.deb pgdg 1.4 8.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-permissions/postgresql-18-pg-permissions_1.4-2.pgdg24.04+1_all.deb
 @ u24.aarch64 18 postgresql-18-pg-permissions postgresql-18-pg-permissions_1.4-2.pgdg24.04+1_all.deb pgdg 1.4 8.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-permissions/postgresql-18-pg-permissions_1.4-2.pgdg24.04+1_all.deb
+@ u26.x86_64 18 postgresql-18-pg-permissions postgresql-18-pg-permissions_1.4-2.pgdg26.04+1_all.deb pgdg 1.4 8.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-permissions/postgresql-18-pg-permissions_1.4-2.pgdg26.04+1_all.deb
+@ u26.aarch64 18 postgresql-18-pg-permissions postgresql-18-pg-permissions_1.4-2.pgdg26.04+1_all.deb pgdg 1.4 8.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-permissions/postgresql-18-pg-permissions_1.4-2.pgdg26.04+1_all.deb
 @ el8.x86_64 17 pg_permissions_17 pg_permissions_17-1.4-1PGDG.rhel8.noarch.rpm pgdg 1.4 13.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pg_permissions_17-1.4-1PGDG.rhel8.noarch.rpm
 @ el8.x86_64 17 pg_permissions_17 pg_permissions_17-1.3-2PGDG.rhel8.noarch.rpm pgdg 1.3 13.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pg_permissions_17-1.3-2PGDG.rhel8.noarch.rpm
 @ el8.aarch64 17 pg_permissions_17 pg_permissions_17-1.4-1PGDG.rhel8.noarch.rpm pgdg 1.4 13.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pg_permissions_17-1.4-1PGDG.rhel8.noarch.rpm
@@ -104,6 +108,8 @@ weight: 5140
 @ u24.x86_64 17 postgresql-17-pg-permissions postgresql-17-pg-permissions_1.3-1PIGSTY~noble_amd64.deb pigsty 1.3 7.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-permissions/postgresql-17-pg-permissions_1.3-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 17 postgresql-17-pg-permissions postgresql-17-pg-permissions_1.4-2.pgdg24.04+1_all.deb pgdg 1.4 8.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-permissions/postgresql-17-pg-permissions_1.4-2.pgdg24.04+1_all.deb
 @ u24.aarch64 17 postgresql-17-pg-permissions postgresql-17-pg-permissions_1.3-1PIGSTY~noble_arm64.deb pigsty 1.3 7.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-permissions/postgresql-17-pg-permissions_1.3-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 17 postgresql-17-pg-permissions postgresql-17-pg-permissions_1.4-2.pgdg26.04+1_all.deb pgdg 1.4 8.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-permissions/postgresql-17-pg-permissions_1.4-2.pgdg26.04+1_all.deb
+@ u26.aarch64 17 postgresql-17-pg-permissions postgresql-17-pg-permissions_1.4-2.pgdg26.04+1_all.deb pgdg 1.4 8.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-permissions/postgresql-17-pg-permissions_1.4-2.pgdg26.04+1_all.deb
 @ el8.x86_64 16 pg_permissions_16 pg_permissions_16-1.4-1PGDG.rhel8.noarch.rpm pgdg 1.4 13.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_permissions_16-1.4-1PGDG.rhel8.noarch.rpm
 @ el8.x86_64 16 pg_permissions_16 pg_permissions_16-1.3-2PGDG.rhel8.noarch.rpm pgdg 1.3 13.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_permissions_16-1.3-2PGDG.rhel8.noarch.rpm
 @ el8.x86_64 16 pg_permissions_16 pg_permissions_16-1.3-1PGDG.rhel8.noarch.rpm pgdg 1.3 13.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_permissions_16-1.3-1PGDG.rhel8.noarch.rpm
@@ -138,6 +144,8 @@ weight: 5140
 @ u24.x86_64 16 postgresql-16-pg-permissions postgresql-16-pg-permissions_1.3-1PIGSTY~noble_amd64.deb pigsty 1.3 7.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-permissions/postgresql-16-pg-permissions_1.3-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 16 postgresql-16-pg-permissions postgresql-16-pg-permissions_1.4-2.pgdg24.04+1_all.deb pgdg 1.4 8.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-permissions/postgresql-16-pg-permissions_1.4-2.pgdg24.04+1_all.deb
 @ u24.aarch64 16 postgresql-16-pg-permissions postgresql-16-pg-permissions_1.3-1PIGSTY~noble_arm64.deb pigsty 1.3 7.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-permissions/postgresql-16-pg-permissions_1.3-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 16 postgresql-16-pg-permissions postgresql-16-pg-permissions_1.4-2.pgdg26.04+1_all.deb pgdg 1.4 8.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-permissions/postgresql-16-pg-permissions_1.4-2.pgdg26.04+1_all.deb
+@ u26.aarch64 16 postgresql-16-pg-permissions postgresql-16-pg-permissions_1.4-2.pgdg26.04+1_all.deb pgdg 1.4 8.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-permissions/postgresql-16-pg-permissions_1.4-2.pgdg26.04+1_all.deb
 @ el8.x86_64 15 pg_permissions_15 pg_permissions_15-1.4-1PGDG.rhel8.noarch.rpm pgdg 1.4 13.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_permissions_15-1.4-1PGDG.rhel8.noarch.rpm
 @ el8.x86_64 15 pg_permissions_15 pg_permissions_15-1.3-2PGDG.rhel8.noarch.rpm pgdg 1.3 13.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_permissions_15-1.3-2PGDG.rhel8.noarch.rpm
 @ el8.x86_64 15 pg_permissions_15 pg_permissions_15-1.3-1PGDG.rhel8.noarch.rpm pgdg 1.3 13.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_permissions_15-1.3-1PGDG.rhel8.noarch.rpm
@@ -172,6 +180,8 @@ weight: 5140
 @ u24.x86_64 15 postgresql-15-pg-permissions postgresql-15-pg-permissions_1.3-1PIGSTY~noble_amd64.deb pigsty 1.3 7.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-permissions/postgresql-15-pg-permissions_1.3-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 15 postgresql-15-pg-permissions postgresql-15-pg-permissions_1.4-2.pgdg24.04+1_all.deb pgdg 1.4 8.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-permissions/postgresql-15-pg-permissions_1.4-2.pgdg24.04+1_all.deb
 @ u24.aarch64 15 postgresql-15-pg-permissions postgresql-15-pg-permissions_1.3-1PIGSTY~noble_arm64.deb pigsty 1.3 7.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-permissions/postgresql-15-pg-permissions_1.3-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 15 postgresql-15-pg-permissions postgresql-15-pg-permissions_1.4-2.pgdg26.04+1_all.deb pgdg 1.4 8.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-permissions/postgresql-15-pg-permissions_1.4-2.pgdg26.04+1_all.deb
+@ u26.aarch64 15 postgresql-15-pg-permissions postgresql-15-pg-permissions_1.4-2.pgdg26.04+1_all.deb pgdg 1.4 8.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-permissions/postgresql-15-pg-permissions_1.4-2.pgdg26.04+1_all.deb
 @ el8.x86_64 14 pg_permissions_14 pg_permissions_14-1.4-1PGDG.rhel8.noarch.rpm pgdg 1.4 13.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_permissions_14-1.4-1PGDG.rhel8.noarch.rpm
 @ el8.x86_64 14 pg_permissions_14 pg_permissions_14-1.3-2PGDG.rhel8.noarch.rpm pgdg 1.3 13.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_permissions_14-1.3-2PGDG.rhel8.noarch.rpm
 @ el8.x86_64 14 pg_permissions_14 pg_permissions_14-1.3-1PGDG.rhel8.noarch.rpm pgdg 1.3 13.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_permissions_14-1.3-1PGDG.rhel8.noarch.rpm
@@ -206,6 +216,8 @@ weight: 5140
 @ u24.x86_64 14 postgresql-14-pg-permissions postgresql-14-pg-permissions_1.3-1PIGSTY~noble_amd64.deb pigsty 1.3 7.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-permissions/postgresql-14-pg-permissions_1.3-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 14 postgresql-14-pg-permissions postgresql-14-pg-permissions_1.4-2.pgdg24.04+1_all.deb pgdg 1.4 8.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-permissions/postgresql-14-pg-permissions_1.4-2.pgdg24.04+1_all.deb
 @ u24.aarch64 14 postgresql-14-pg-permissions postgresql-14-pg-permissions_1.3-1PIGSTY~noble_arm64.deb pigsty 1.3 7.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-permissions/postgresql-14-pg-permissions_1.3-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 14 postgresql-14-pg-permissions postgresql-14-pg-permissions_1.4-2.pgdg26.04+1_all.deb pgdg 1.4 8.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-permissions/postgresql-14-pg-permissions_1.4-2.pgdg26.04+1_all.deb
+@ u26.aarch64 14 postgresql-14-pg-permissions postgresql-14-pg-permissions_1.4-2.pgdg26.04+1_all.deb pgdg 1.4 8.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-permissions/postgresql-14-pg-permissions_1.4-2.pgdg26.04+1_all.deb
 {{< /pgext_matrix >}}
 
 ## 构建

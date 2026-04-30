@@ -67,6 +67,8 @@ weight: 8500
 | u22.aarch64 | AVAIL PIGSTY 0.6.0 1 | AVAIL PIGSTY 0.6.0 1 | AVAIL PIGSTY 0.6.0 1 | AVAIL PIGSTY 0.6.0 1 | AVAIL PIGSTY 0.6.0 1 |
 | u24.x86_64 | AVAIL PIGSTY 0.6.0 1 | AVAIL PIGSTY 0.6.0 1 | AVAIL PIGSTY 0.6.0 1 | AVAIL PIGSTY 0.6.0 1 | AVAIL PIGSTY 0.6.0 1 |
 | u24.aarch64 | AVAIL PIGSTY 0.6.0 1 | AVAIL PIGSTY 0.6.0 1 | AVAIL PIGSTY 0.6.0 1 | AVAIL PIGSTY 0.6.0 1 | AVAIL PIGSTY 0.6.0 1 |
+| u26.x86_64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| u26.aarch64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
 @ el8.x86_64 18 wrappers_18 wrappers_18-0.6.0-1PIGSTY.el8.x86_64.rpm pigsty 0.6.0 236.9KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/wrappers_18-0.6.0-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 18 wrappers_18 wrappers_18-0.6.0-1PIGSTY.el8.aarch64.rpm pigsty 0.6.0 154.4KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/wrappers_18-0.6.0-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 18 wrappers_18 wrappers_18-0.6.0-1PIGSTY.el9.x86_64.rpm pigsty 0.6.0 247.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/wrappers_18-0.6.0-1PIGSTY.el9.x86_64.rpm

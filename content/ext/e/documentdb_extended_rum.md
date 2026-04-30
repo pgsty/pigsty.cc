@@ -11,10 +11,10 @@ weight: 9030
     <div class="ext-card__title">documentdb/documentdb</div>
     <div class="ext-card__desc">https://github.com/documentdb/documentdb</div>
   </a>
-  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/documentdb-0.109-0.tar.gz">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/documentdb-0.110-0.tar.gz">
     <div class="ext-card__kicker">源码</div>
-    <div class="ext-card__title">documentdb-0.109-0.tar.gz</div>
-    <div class="ext-card__desc">documentdb-0.109-0.tar.gz</div>
+    <div class="ext-card__title">documentdb-0.110-0.tar.gz</div>
+    <div class="ext-card__desc">documentdb-0.110-0.tar.gz</div>
   </a>
 </div>
 
@@ -25,7 +25,7 @@ weight: 9030
 
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
-| [**`documentdb`**](/ext/e/documentdb) | `0.109` | <a class="ext-badge ext-badge--cate sim" href="/ext/cate/sim">SIM</a> | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
+| [**`documentdb`**](/ext/e/documentdb) | `0.110` | <a class="ext-badge ext-badge--cate sim" href="/ext/cate/sim">SIM</a> | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
 {.ext-table}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
@@ -45,9 +45,9 @@ weight: 9030
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#sim) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.109` | {{< pgvers "18,17,16,15" >}} | `documentdb` | - |
-| [**RPM**](/ext/rpm#sim) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.109` | {{< pgvers "18,17,16,15" >}} | `documentdb_$v` | `postgresql$v-contrib`, `pg_cron_$v`, `pgvector_$v`, `rum_$v` |
-| [**DEB**](/ext/deb#sim) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.109` | {{< pgvers "18,17,16,15" >}} | `postgresql-$v-documentdb` | `postgresql-$v-cron`, `postgresql-$v-pgvector`, `postgresql-$v-rum` |
+| [**EXT**](/ext/list#sim) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.110` | {{< pgvers "18,17,16,15" >}} | `documentdb` | - |
+| [**RPM**](/ext/rpm#sim) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.110` | {{< pgvers "18,17,16,15" >}} | `documentdb_$v` | `postgresql$v-contrib`, `pg_cron_$v`, `pgvector_$v`, `rum_$v`, `postgis36_$v` |
+| [**DEB**](/ext/deb#sim) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.110` | {{< pgvers "18,17,16,15" >}} | `postgresql-$v-documentdb` | `postgresql-$v-cron`, `postgresql-$v-pgvector`, `postgresql-$v-rum`, `postgresql-$v-postgis-3` |
 {.ext-table}
 
 {{< pgext_matrix >}}
@@ -67,6 +67,8 @@ weight: 9030
 | u22.aarch64 | AVAIL PIGSTY 0.109 1 | AVAIL PIGSTY 0.109 1 | AVAIL PIGSTY 0.109 1 | AVAIL PIGSTY 0.109 1 | MISS PIGSTY - 0 |
 | u24.x86_64 | AVAIL PIGSTY 0.109 1 | AVAIL PIGSTY 0.109 1 | AVAIL PIGSTY 0.109 1 | AVAIL PIGSTY 0.109 1 | MISS PIGSTY - 0 |
 | u24.aarch64 | AVAIL PIGSTY 0.109 1 | AVAIL PIGSTY 0.109 1 | AVAIL PIGSTY 0.109 1 | AVAIL PIGSTY 0.109 1 | MISS PIGSTY - 0 |
+| u26.x86_64 | AVAIL PGDG 0.108 1 | AVAIL PGDG 0.108 1 | AVAIL PGDG 0.108 1 | AVAIL PGDG 0.108 1 | MISS PIGSTY - 0 |
+| u26.aarch64 | AVAIL PGDG 0.108 1 | AVAIL PGDG 0.108 1 | AVAIL PGDG 0.108 1 | AVAIL PGDG 0.108 1 | MISS PIGSTY - 0 |
 {{< /pgext_matrix >}}
 
 ## 构建

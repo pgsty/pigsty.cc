@@ -64,6 +64,8 @@ weight: 9110
 | u22.aarch64 | AVAIL PGDG 4.4 1 | AVAIL PGDG 4.4 2 | AVAIL PGDG 4.4 2 | AVAIL PGDG 4.4 2 | AVAIL PGDG 4.4 2 |
 | u24.x86_64 | AVAIL PGDG 4.4 1 | AVAIL PGDG 4.4 2 | AVAIL PGDG 4.4 2 | AVAIL PGDG 4.4 2 | AVAIL PGDG 4.4 2 |
 | u24.aarch64 | AVAIL PGDG 4.4 1 | AVAIL PGDG 4.4 2 | AVAIL PGDG 4.4 2 | AVAIL PGDG 4.4 2 | AVAIL PGDG 4.4 2 |
+| u26.x86_64 | AVAIL PGDG 4.4 1 | AVAIL PGDG 4.4 1 | AVAIL PGDG 4.4 1 | AVAIL PGDG 4.4 1 | AVAIL PGDG 4.4 1 |
+| u26.aarch64 | AVAIL PGDG 4.4 1 | AVAIL PGDG 4.4 1 | AVAIL PGDG 4.4 1 | AVAIL PGDG 4.4 1 | AVAIL PGDG 4.4 1 |
 @ el8.x86_64 18 pgtt_18 pgtt_18-4.4-1PGDG.rhel8.x86_64.rpm pgdg 4.4 38.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pgtt_18-4.4-1PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 18 pgtt_18 pgtt_18-4.4-1PGDG.rhel8.aarch64.rpm pgdg 4.4 37.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pgtt_18-4.4-1PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 18 pgtt_18 pgtt_18-4.4-1PGDG.rhel9.x86_64.rpm pgdg 4.4 37.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pgtt_18-4.4-1PGDG.rhel9.x86_64.rpm
@@ -78,6 +80,8 @@ weight: 9110
 @ u22.aarch64 18 postgresql-18-pgtt postgresql-18-pgtt_4.4-2.pgdg22.04+1_arm64.deb pgdg 4.4 52.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgtt/postgresql-18-pgtt_4.4-2.pgdg22.04+1_arm64.deb
 @ u24.x86_64 18 postgresql-18-pgtt postgresql-18-pgtt_4.4-2.pgdg24.04+1_amd64.deb pgdg 4.4 53.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgtt/postgresql-18-pgtt_4.4-2.pgdg24.04+1_amd64.deb
 @ u24.aarch64 18 postgresql-18-pgtt postgresql-18-pgtt_4.4-2.pgdg24.04+1_arm64.deb pgdg 4.4 51.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgtt/postgresql-18-pgtt_4.4-2.pgdg24.04+1_arm64.deb
+@ u26.x86_64 18 postgresql-18-pgtt postgresql-18-pgtt_4.4-2.pgdg26.04+1_amd64.deb pgdg 4.4 52.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgtt/postgresql-18-pgtt_4.4-2.pgdg26.04+1_amd64.deb
+@ u26.aarch64 18 postgresql-18-pgtt postgresql-18-pgtt_4.4-2.pgdg26.04+1_arm64.deb pgdg 4.4 51.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgtt/postgresql-18-pgtt_4.4-2.pgdg26.04+1_arm64.deb
 @ el8.x86_64 17 pgtt_17 pgtt_17-4.4-1PGDG.rhel8.x86_64.rpm pgdg 4.4 38.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pgtt_17-4.4-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 17 pgtt_17 pgtt_17-4.3-1PGDG.rhel8.x86_64.rpm pgdg 4.3 38.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pgtt_17-4.3-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 17 pgtt_17 pgtt_17-4.0-3PGDG.rhel8.x86_64.rpm pgdg 4.0 36.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pgtt_17-4.0-3PGDG.rhel8.x86_64.rpm
@@ -114,6 +118,8 @@ weight: 9110
 @ u24.x86_64 17 postgresql-17-pgtt postgresql-17-pgtt_4.0-1PIGSTY~noble_amd64.deb pigsty 4.0 49.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgtt/postgresql-17-pgtt_4.0-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 17 postgresql-17-pgtt postgresql-17-pgtt_4.4-2.pgdg24.04+1_arm64.deb pgdg 4.4 51.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgtt/postgresql-17-pgtt_4.4-2.pgdg24.04+1_arm64.deb
 @ u24.aarch64 17 postgresql-17-pgtt postgresql-17-pgtt_4.0-1PIGSTY~noble_arm64.deb pigsty 4.0 48.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgtt/postgresql-17-pgtt_4.0-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 17 postgresql-17-pgtt postgresql-17-pgtt_4.4-2.pgdg26.04+1_amd64.deb pgdg 4.4 52.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgtt/postgresql-17-pgtt_4.4-2.pgdg26.04+1_amd64.deb
+@ u26.aarch64 17 postgresql-17-pgtt postgresql-17-pgtt_4.4-2.pgdg26.04+1_arm64.deb pgdg 4.4 51.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgtt/postgresql-17-pgtt_4.4-2.pgdg26.04+1_arm64.deb
 @ el8.x86_64 16 pgtt_16 pgtt_16-4.4-1PGDG.rhel8.x86_64.rpm pgdg 4.4 38.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pgtt_16-4.4-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 16 pgtt_16 pgtt_16-4.3-1PGDG.rhel8.x86_64.rpm pgdg 4.3 38.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pgtt_16-4.3-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 16 pgtt_16 pgtt_16-4.0-3PGDG.rhel8.x86_64.rpm pgdg 4.0 36.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pgtt_16-4.0-3PGDG.rhel8.x86_64.rpm
@@ -158,6 +164,8 @@ weight: 9110
 @ u24.x86_64 16 postgresql-16-pgtt postgresql-16-pgtt_4.0-1PIGSTY~noble_amd64.deb pigsty 4.0 49.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgtt/postgresql-16-pgtt_4.0-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 16 postgresql-16-pgtt postgresql-16-pgtt_4.4-2.pgdg24.04+1_arm64.deb pgdg 4.4 52.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgtt/postgresql-16-pgtt_4.4-2.pgdg24.04+1_arm64.deb
 @ u24.aarch64 16 postgresql-16-pgtt postgresql-16-pgtt_4.0-1PIGSTY~noble_arm64.deb pigsty 4.0 48.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgtt/postgresql-16-pgtt_4.0-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 16 postgresql-16-pgtt postgresql-16-pgtt_4.4-2.pgdg26.04+1_amd64.deb pgdg 4.4 52.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgtt/postgresql-16-pgtt_4.4-2.pgdg26.04+1_amd64.deb
+@ u26.aarch64 16 postgresql-16-pgtt postgresql-16-pgtt_4.4-2.pgdg26.04+1_arm64.deb pgdg 4.4 51.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgtt/postgresql-16-pgtt_4.4-2.pgdg26.04+1_arm64.deb
 @ el8.x86_64 15 pgtt_15 pgtt_15-4.4-1PGDG.rhel8.x86_64.rpm pgdg 4.4 38.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pgtt_15-4.4-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 15 pgtt_15 pgtt_15-4.3-1PGDG.rhel8.x86_64.rpm pgdg 4.3 38.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pgtt_15-4.3-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 15 pgtt_15 pgtt_15-4.0-3PGDG.rhel8.x86_64.rpm pgdg 4.0 37.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pgtt_15-4.0-3PGDG.rhel8.x86_64.rpm
@@ -210,6 +218,8 @@ weight: 9110
 @ u24.x86_64 15 postgresql-15-pgtt postgresql-15-pgtt_4.0-1PIGSTY~noble_amd64.deb pigsty 4.0 50.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgtt/postgresql-15-pgtt_4.0-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 15 postgresql-15-pgtt postgresql-15-pgtt_4.4-2.pgdg24.04+1_arm64.deb pgdg 4.4 52.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgtt/postgresql-15-pgtt_4.4-2.pgdg24.04+1_arm64.deb
 @ u24.aarch64 15 postgresql-15-pgtt postgresql-15-pgtt_4.0-1PIGSTY~noble_arm64.deb pigsty 4.0 49.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgtt/postgresql-15-pgtt_4.0-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 15 postgresql-15-pgtt postgresql-15-pgtt_4.4-2.pgdg26.04+1_amd64.deb pgdg 4.4 54.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgtt/postgresql-15-pgtt_4.4-2.pgdg26.04+1_amd64.deb
+@ u26.aarch64 15 postgresql-15-pgtt postgresql-15-pgtt_4.4-2.pgdg26.04+1_arm64.deb pgdg 4.4 52.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgtt/postgresql-15-pgtt_4.4-2.pgdg26.04+1_arm64.deb
 @ el8.x86_64 14 pgtt_14 pgtt_14-4.4-1PGDG.rhel8.x86_64.rpm pgdg 4.4 38.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pgtt_14-4.4-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 14 pgtt_14 pgtt_14-4.3-1PGDG.rhel8.x86_64.rpm pgdg 4.3 38.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pgtt_14-4.3-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 14 pgtt_14 pgtt_14-4.0-3PGDG.rhel8.x86_64.rpm pgdg 4.0 37.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pgtt_14-4.0-3PGDG.rhel8.x86_64.rpm
@@ -265,6 +275,8 @@ weight: 9110
 @ u24.x86_64 14 postgresql-14-pgtt postgresql-14-pgtt_4.0-1PIGSTY~noble_amd64.deb pigsty 4.0 50.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgtt/postgresql-14-pgtt_4.0-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 14 postgresql-14-pgtt postgresql-14-pgtt_4.4-2.pgdg24.04+1_arm64.deb pgdg 4.4 52.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgtt/postgresql-14-pgtt_4.4-2.pgdg24.04+1_arm64.deb
 @ u24.aarch64 14 postgresql-14-pgtt postgresql-14-pgtt_4.0-1PIGSTY~noble_arm64.deb pigsty 4.0 49.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgtt/postgresql-14-pgtt_4.0-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 14 postgresql-14-pgtt postgresql-14-pgtt_4.4-2.pgdg26.04+1_amd64.deb pgdg 4.4 54.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgtt/postgresql-14-pgtt_4.4-2.pgdg26.04+1_amd64.deb
+@ u26.aarch64 14 postgresql-14-pgtt postgresql-14-pgtt_4.4-2.pgdg26.04+1_arm64.deb pgdg 4.4 52.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgtt/postgresql-14-pgtt_4.4-2.pgdg26.04+1_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建

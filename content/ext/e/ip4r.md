@@ -60,6 +60,8 @@ weight: 3820
 | u22.aarch64 | AVAIL PGDG 2.4.2 1 | AVAIL PGDG 2.4.2 1 | AVAIL PGDG 2.4.2 1 | AVAIL PGDG 2.4.2 1 | AVAIL PGDG 2.4.2 1 |
 | u24.x86_64 | AVAIL PGDG 2.4.2 1 | AVAIL PGDG 2.4.2 1 | AVAIL PGDG 2.4.2 1 | AVAIL PGDG 2.4.2 1 | AVAIL PGDG 2.4.2 1 |
 | u24.aarch64 | AVAIL PGDG 2.4.2 1 | AVAIL PGDG 2.4.2 1 | AVAIL PGDG 2.4.2 1 | AVAIL PGDG 2.4.2 1 | AVAIL PGDG 2.4.2 1 |
+| u26.x86_64 | AVAIL PGDG 2.4.2 1 | AVAIL PGDG 2.4.2 1 | AVAIL PGDG 2.4.2 1 | AVAIL PGDG 2.4.2 1 | AVAIL PGDG 2.4.2 1 |
+| u26.aarch64 | AVAIL PGDG 2.4.2 1 | AVAIL PGDG 2.4.2 1 | AVAIL PGDG 2.4.2 1 | AVAIL PGDG 2.4.2 1 | AVAIL PGDG 2.4.2 1 |
 @ el8.x86_64 18 ip4r_18 ip4r_18-2.4.2-3PGDG.rhel8.x86_64.rpm pgdg 2.4.2 78.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/ip4r_18-2.4.2-3PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 18 ip4r_18 ip4r_18-2.4.2-3PGDG.rhel8.aarch64.rpm pgdg 2.4.2 73.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/ip4r_18-2.4.2-3PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 18 ip4r_18 ip4r_18-2.4.2-3PGDG.rhel9.x86_64.rpm pgdg 2.4.2 76.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/ip4r_18-2.4.2-3PGDG.rhel9.x86_64.rpm
@@ -74,6 +76,8 @@ weight: 3820
 @ u22.aarch64 18 postgresql-18-ip4r postgresql-18-ip4r_2.4.2-4.pgdg22.04+1_arm64.deb pgdg 2.4.2 176.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/i/ip4r/postgresql-18-ip4r_2.4.2-4.pgdg22.04+1_arm64.deb
 @ u24.x86_64 18 postgresql-18-ip4r postgresql-18-ip4r_2.4.2-4.pgdg24.04+1_amd64.deb pgdg 2.4.2 176.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/i/ip4r/postgresql-18-ip4r_2.4.2-4.pgdg24.04+1_amd64.deb
 @ u24.aarch64 18 postgresql-18-ip4r postgresql-18-ip4r_2.4.2-4.pgdg24.04+1_arm64.deb pgdg 2.4.2 171.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/i/ip4r/postgresql-18-ip4r_2.4.2-4.pgdg24.04+1_arm64.deb
+@ u26.x86_64 18 postgresql-18-ip4r postgresql-18-ip4r_2.4.2-4.pgdg26.04+1_amd64.deb pgdg 2.4.2 174.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/i/ip4r/postgresql-18-ip4r_2.4.2-4.pgdg26.04+1_amd64.deb
+@ u26.aarch64 18 postgresql-18-ip4r postgresql-18-ip4r_2.4.2-4.pgdg26.04+1_arm64.deb pgdg 2.4.2 170.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/i/ip4r/postgresql-18-ip4r_2.4.2-4.pgdg26.04+1_arm64.deb
 @ el8.x86_64 17 ip4r_17 ip4r_17-2.4.2-2PGDG.rhel8.x86_64.rpm pgdg 2.4.2 77.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/ip4r_17-2.4.2-2PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 17 ip4r_17 ip4r_17-2.4.2-2PGDG.rhel8.aarch64.rpm pgdg 2.4.2 73.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/ip4r_17-2.4.2-2PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 17 ip4r_17 ip4r_17-2.4.2-2PGDG.rhel9.x86_64.rpm pgdg 2.4.2 76.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/ip4r_17-2.4.2-2PGDG.rhel9.x86_64.rpm
@@ -88,6 +92,8 @@ weight: 3820
 @ u22.aarch64 17 postgresql-17-ip4r postgresql-17-ip4r_2.4.2-4.pgdg22.04+1_arm64.deb pgdg 2.4.2 189.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/i/ip4r/postgresql-17-ip4r_2.4.2-4.pgdg22.04+1_arm64.deb
 @ u24.x86_64 17 postgresql-17-ip4r postgresql-17-ip4r_2.4.2-4.pgdg24.04+1_amd64.deb pgdg 2.4.2 176.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/i/ip4r/postgresql-17-ip4r_2.4.2-4.pgdg24.04+1_amd64.deb
 @ u24.aarch64 17 postgresql-17-ip4r postgresql-17-ip4r_2.4.2-4.pgdg24.04+1_arm64.deb pgdg 2.4.2 171.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/i/ip4r/postgresql-17-ip4r_2.4.2-4.pgdg24.04+1_arm64.deb
+@ u26.x86_64 17 postgresql-17-ip4r postgresql-17-ip4r_2.4.2-4.pgdg26.04+1_amd64.deb pgdg 2.4.2 174.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/i/ip4r/postgresql-17-ip4r_2.4.2-4.pgdg26.04+1_amd64.deb
+@ u26.aarch64 17 postgresql-17-ip4r postgresql-17-ip4r_2.4.2-4.pgdg26.04+1_arm64.deb pgdg 2.4.2 170.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/i/ip4r/postgresql-17-ip4r_2.4.2-4.pgdg26.04+1_arm64.deb
 @ el8.x86_64 16 ip4r_16 ip4r_16-2.4.2-1PGDG.rhel8.x86_64.rpm pgdg 2.4.2 77.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/ip4r_16-2.4.2-1PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 16 ip4r_16 ip4r_16-2.4.2-1PGDG.rhel8.aarch64.rpm pgdg 2.4.2 73.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/ip4r_16-2.4.2-1PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 16 ip4r_16 ip4r_16-2.4.2-1PGDG.rhel9.x86_64.rpm pgdg 2.4.2 76.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/ip4r_16-2.4.2-1PGDG.rhel9.x86_64.rpm
@@ -102,6 +108,8 @@ weight: 3820
 @ u22.aarch64 16 postgresql-16-ip4r postgresql-16-ip4r_2.4.2-4.pgdg22.04+1_arm64.deb pgdg 2.4.2 189.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/i/ip4r/postgresql-16-ip4r_2.4.2-4.pgdg22.04+1_arm64.deb
 @ u24.x86_64 16 postgresql-16-ip4r postgresql-16-ip4r_2.4.2-4.pgdg24.04+1_amd64.deb pgdg 2.4.2 176.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/i/ip4r/postgresql-16-ip4r_2.4.2-4.pgdg24.04+1_amd64.deb
 @ u24.aarch64 16 postgresql-16-ip4r postgresql-16-ip4r_2.4.2-4.pgdg24.04+1_arm64.deb pgdg 2.4.2 171.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/i/ip4r/postgresql-16-ip4r_2.4.2-4.pgdg24.04+1_arm64.deb
+@ u26.x86_64 16 postgresql-16-ip4r postgresql-16-ip4r_2.4.2-4.pgdg26.04+1_amd64.deb pgdg 2.4.2 175.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/i/ip4r/postgresql-16-ip4r_2.4.2-4.pgdg26.04+1_amd64.deb
+@ u26.aarch64 16 postgresql-16-ip4r postgresql-16-ip4r_2.4.2-4.pgdg26.04+1_arm64.deb pgdg 2.4.2 170.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/i/ip4r/postgresql-16-ip4r_2.4.2-4.pgdg26.04+1_arm64.deb
 @ el8.x86_64 15 ip4r_15 ip4r_15-2.4.2-1PGDG.rhel8.x86_64.rpm pgdg 2.4.2 77.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/ip4r_15-2.4.2-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 15 ip4r_15 ip4r_15-2.4.1-2.rhel8.x86_64.rpm pgdg 2.4.1 208.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/ip4r_15-2.4.1-2.rhel8.x86_64.rpm
 @ el8.aarch64 15 ip4r_15 ip4r_15-2.4.2-1PGDG.rhel8.aarch64.rpm pgdg 2.4.2 72.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/ip4r_15-2.4.2-1PGDG.rhel8.aarch64.rpm
@@ -120,6 +128,8 @@ weight: 3820
 @ u22.aarch64 15 postgresql-15-ip4r postgresql-15-ip4r_2.4.2-4.pgdg22.04+1_arm64.deb pgdg 2.4.2 187.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/i/ip4r/postgresql-15-ip4r_2.4.2-4.pgdg22.04+1_arm64.deb
 @ u24.x86_64 15 postgresql-15-ip4r postgresql-15-ip4r_2.4.2-4.pgdg24.04+1_amd64.deb pgdg 2.4.2 175.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/i/ip4r/postgresql-15-ip4r_2.4.2-4.pgdg24.04+1_amd64.deb
 @ u24.aarch64 15 postgresql-15-ip4r postgresql-15-ip4r_2.4.2-4.pgdg24.04+1_arm64.deb pgdg 2.4.2 170.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/i/ip4r/postgresql-15-ip4r_2.4.2-4.pgdg24.04+1_arm64.deb
+@ u26.x86_64 15 postgresql-15-ip4r postgresql-15-ip4r_2.4.2-4.pgdg26.04+1_amd64.deb pgdg 2.4.2 172.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/i/ip4r/postgresql-15-ip4r_2.4.2-4.pgdg26.04+1_amd64.deb
+@ u26.aarch64 15 postgresql-15-ip4r postgresql-15-ip4r_2.4.2-4.pgdg26.04+1_arm64.deb pgdg 2.4.2 169.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/i/ip4r/postgresql-15-ip4r_2.4.2-4.pgdg26.04+1_arm64.deb
 @ el8.x86_64 14 ip4r_14 ip4r_14-2.4.2-1PGDG.rhel8.x86_64.rpm pgdg 2.4.2 77.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/ip4r_14-2.4.2-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 14 ip4r_14 ip4r_14-2.4.1-2.rhel8.x86_64.rpm pgdg 2.4.1 210.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/ip4r_14-2.4.1-2.rhel8.x86_64.rpm
 @ el8.aarch64 14 ip4r_14 ip4r_14-2.4.2-1PGDG.rhel8.aarch64.rpm pgdg 2.4.2 71.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/ip4r_14-2.4.2-1PGDG.rhel8.aarch64.rpm
@@ -137,6 +147,8 @@ weight: 3820
 @ u22.aarch64 14 postgresql-14-ip4r postgresql-14-ip4r_2.4.2-4.pgdg22.04+1_arm64.deb pgdg 2.4.2 187.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/i/ip4r/postgresql-14-ip4r_2.4.2-4.pgdg22.04+1_arm64.deb
 @ u24.x86_64 14 postgresql-14-ip4r postgresql-14-ip4r_2.4.2-4.pgdg24.04+1_amd64.deb pgdg 2.4.2 175.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/i/ip4r/postgresql-14-ip4r_2.4.2-4.pgdg24.04+1_amd64.deb
 @ u24.aarch64 14 postgresql-14-ip4r postgresql-14-ip4r_2.4.2-4.pgdg24.04+1_arm64.deb pgdg 2.4.2 170.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/i/ip4r/postgresql-14-ip4r_2.4.2-4.pgdg24.04+1_arm64.deb
+@ u26.x86_64 14 postgresql-14-ip4r postgresql-14-ip4r_2.4.2-4.pgdg26.04+1_amd64.deb pgdg 2.4.2 173.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/i/ip4r/postgresql-14-ip4r_2.4.2-4.pgdg26.04+1_amd64.deb
+@ u26.aarch64 14 postgresql-14-ip4r postgresql-14-ip4r_2.4.2-4.pgdg26.04+1_arm64.deb pgdg 2.4.2 168.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/i/ip4r/postgresql-14-ip4r_2.4.2-4.pgdg26.04+1_arm64.deb
 {{< /pgext_matrix >}}
 
 

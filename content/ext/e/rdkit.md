@@ -67,6 +67,8 @@ weight: 2930
 | u22.aarch64 | MISS PGDG - 0 | MISS PGDG - 0 | AVAIL PGDG 202303.3 1 | AVAIL PGDG 202303.3 1 | AVAIL PGDG 202303.3 1 |
 | u24.x86_64 | AVAIL PIGSTY 202503.6 2 | AVAIL PIGSTY 202503.6 2 | AVAIL PIGSTY 202503.6 2 | AVAIL PIGSTY 202503.6 2 | AVAIL PIGSTY 202503.6 2 |
 | u24.aarch64 | AVAIL PIGSTY 202503.6 2 | AVAIL PIGSTY 202503.6 2 | AVAIL PIGSTY 202503.6 2 | AVAIL PIGSTY 202503.6 2 | AVAIL PIGSTY 202503.6 2 |
+| u26.x86_64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
+| u26.aarch64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
 @ el10.x86_64 18 rdkit_18 rdkit_18-202503.6-1PIGSTY.el10.x86_64.rpm pigsty 202503.6 143.1KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/rdkit_18-202503.6-1PIGSTY.el10.x86_64.rpm
 @ el10.aarch64 18 rdkit_18 rdkit_18-202503.6-1PIGSTY.el10.aarch64.rpm pigsty 202503.6 135.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/rdkit_18-202503.6-1PIGSTY.el10.aarch64.rpm
 @ d13.x86_64 18 postgresql-18-rdkit postgresql-18-rdkit_202503.6-4PIGSTY~trixie_amd64.deb pigsty 202503.6 102.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/r/rdkit/postgresql-18-rdkit_202503.6-4PIGSTY~trixie_amd64.deb

@@ -64,6 +64,8 @@ weight: 3640
 | u22.aarch64 | AVAIL PGDG 0.2.0 1 | AVAIL PGDG 0.2.0 1 | AVAIL PGDG 0.2.0 1 | AVAIL PGDG 0.2.0 1 | AVAIL PGDG 0.2.0 1 |
 | u24.x86_64 | AVAIL PGDG 0.2.0 1 | AVAIL PGDG 0.2.0 1 | AVAIL PGDG 0.2.0 1 | AVAIL PGDG 0.2.0 1 | AVAIL PGDG 0.2.0 1 |
 | u24.aarch64 | AVAIL PGDG 0.2.0 1 | AVAIL PGDG 0.2.0 1 | AVAIL PGDG 0.2.0 1 | AVAIL PGDG 0.2.0 1 | AVAIL PGDG 0.2.0 1 |
+| u26.x86_64 | AVAIL PGDG 0.2.0 1 | AVAIL PGDG 0.2.0 1 | AVAIL PGDG 0.2.0 1 | AVAIL PGDG 0.2.0 1 | AVAIL PGDG 0.2.0 1 |
+| u26.aarch64 | AVAIL PGDG 0.2.0 1 | AVAIL PGDG 0.2.0 1 | AVAIL PGDG 0.2.0 1 | AVAIL PGDG 0.2.0 1 | AVAIL PGDG 0.2.0 1 |
 @ el8.x86_64 18 pgfaceting_18 pgfaceting_18-0.2.0-1PIGSTY.el8.x86_64.rpm pigsty 0.2.0 14.6KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgfaceting_18-0.2.0-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 18 pgfaceting_18 pgfaceting_18-0.2.0-1PGDG.rhel8.noarch.rpm pgdg 0.2.0 15.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pgfaceting_18-0.2.0-1PGDG.rhel8.noarch.rpm
 @ el8.aarch64 18 pgfaceting_18 pgfaceting_18-0.2.0-1PIGSTY.el8.aarch64.rpm pigsty 0.2.0 14.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgfaceting_18-0.2.0-1PIGSTY.el8.aarch64.rpm
@@ -82,6 +84,8 @@ weight: 3640
 @ u22.aarch64 18 postgresql-18-pgfaceting postgresql-18-pgfaceting_0.2.0-5.pgdg22.04+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-18-pgfaceting_0.2.0-5.pgdg22.04+1_all.deb
 @ u24.x86_64 18 postgresql-18-pgfaceting postgresql-18-pgfaceting_0.2.0-5.pgdg24.04+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-18-pgfaceting_0.2.0-5.pgdg24.04+1_all.deb
 @ u24.aarch64 18 postgresql-18-pgfaceting postgresql-18-pgfaceting_0.2.0-5.pgdg24.04+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-18-pgfaceting_0.2.0-5.pgdg24.04+1_all.deb
+@ u26.x86_64 18 postgresql-18-pgfaceting postgresql-18-pgfaceting_0.2.0-5.pgdg26.04+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-18-pgfaceting_0.2.0-5.pgdg26.04+1_all.deb
+@ u26.aarch64 18 postgresql-18-pgfaceting postgresql-18-pgfaceting_0.2.0-5.pgdg26.04+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-18-pgfaceting_0.2.0-5.pgdg26.04+1_all.deb
 @ el8.x86_64 17 pgfaceting_17 pgfaceting_17-0.2.0-1PIGSTY.el8.x86_64.rpm pigsty 0.2.0 14.6KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgfaceting_17-0.2.0-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 17 pgfaceting_17 pgfaceting_17-0.2.0-1PGDG.rhel8.noarch.rpm pgdg 0.2.0 15.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pgfaceting_17-0.2.0-1PGDG.rhel8.noarch.rpm
 @ el8.aarch64 17 pgfaceting_17 pgfaceting_17-0.2.0-1PIGSTY.el8.aarch64.rpm pigsty 0.2.0 14.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgfaceting_17-0.2.0-1PIGSTY.el8.aarch64.rpm
@@ -100,6 +104,8 @@ weight: 3640
 @ u22.aarch64 17 postgresql-17-pgfaceting postgresql-17-pgfaceting_0.2.0-5.pgdg22.04+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-17-pgfaceting_0.2.0-5.pgdg22.04+1_all.deb
 @ u24.x86_64 17 postgresql-17-pgfaceting postgresql-17-pgfaceting_0.2.0-5.pgdg24.04+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-17-pgfaceting_0.2.0-5.pgdg24.04+1_all.deb
 @ u24.aarch64 17 postgresql-17-pgfaceting postgresql-17-pgfaceting_0.2.0-5.pgdg24.04+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-17-pgfaceting_0.2.0-5.pgdg24.04+1_all.deb
+@ u26.x86_64 17 postgresql-17-pgfaceting postgresql-17-pgfaceting_0.2.0-5.pgdg26.04+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-17-pgfaceting_0.2.0-5.pgdg26.04+1_all.deb
+@ u26.aarch64 17 postgresql-17-pgfaceting postgresql-17-pgfaceting_0.2.0-5.pgdg26.04+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-17-pgfaceting_0.2.0-5.pgdg26.04+1_all.deb
 @ el8.x86_64 16 pgfaceting_16 pgfaceting_16-0.2.0-1PIGSTY.el8.x86_64.rpm pigsty 0.2.0 14.6KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgfaceting_16-0.2.0-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 16 pgfaceting_16 pgfaceting_16-0.2.0-1PGDG.rhel8.noarch.rpm pgdg 0.2.0 15.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pgfaceting_16-0.2.0-1PGDG.rhel8.noarch.rpm
 @ el8.aarch64 16 pgfaceting_16 pgfaceting_16-0.2.0-1PIGSTY.el8.aarch64.rpm pigsty 0.2.0 14.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgfaceting_16-0.2.0-1PIGSTY.el8.aarch64.rpm
@@ -118,6 +124,8 @@ weight: 3640
 @ u22.aarch64 16 postgresql-16-pgfaceting postgresql-16-pgfaceting_0.2.0-5.pgdg22.04+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-16-pgfaceting_0.2.0-5.pgdg22.04+1_all.deb
 @ u24.x86_64 16 postgresql-16-pgfaceting postgresql-16-pgfaceting_0.2.0-5.pgdg24.04+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-16-pgfaceting_0.2.0-5.pgdg24.04+1_all.deb
 @ u24.aarch64 16 postgresql-16-pgfaceting postgresql-16-pgfaceting_0.2.0-5.pgdg24.04+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-16-pgfaceting_0.2.0-5.pgdg24.04+1_all.deb
+@ u26.x86_64 16 postgresql-16-pgfaceting postgresql-16-pgfaceting_0.2.0-5.pgdg26.04+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-16-pgfaceting_0.2.0-5.pgdg26.04+1_all.deb
+@ u26.aarch64 16 postgresql-16-pgfaceting postgresql-16-pgfaceting_0.2.0-5.pgdg26.04+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-16-pgfaceting_0.2.0-5.pgdg26.04+1_all.deb
 @ el8.x86_64 15 pgfaceting_15 pgfaceting_15-0.2.0-1PIGSTY.el8.x86_64.rpm pigsty 0.2.0 14.6KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgfaceting_15-0.2.0-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 15 pgfaceting_15 pgfaceting_15-0.2.0-1PGDG.rhel8.noarch.rpm pgdg 0.2.0 15.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pgfaceting_15-0.2.0-1PGDG.rhel8.noarch.rpm
 @ el8.aarch64 15 pgfaceting_15 pgfaceting_15-0.2.0-1PIGSTY.el8.aarch64.rpm pigsty 0.2.0 14.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgfaceting_15-0.2.0-1PIGSTY.el8.aarch64.rpm
@@ -136,6 +144,8 @@ weight: 3640
 @ u22.aarch64 15 postgresql-15-pgfaceting postgresql-15-pgfaceting_0.2.0-5.pgdg22.04+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-15-pgfaceting_0.2.0-5.pgdg22.04+1_all.deb
 @ u24.x86_64 15 postgresql-15-pgfaceting postgresql-15-pgfaceting_0.2.0-5.pgdg24.04+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-15-pgfaceting_0.2.0-5.pgdg24.04+1_all.deb
 @ u24.aarch64 15 postgresql-15-pgfaceting postgresql-15-pgfaceting_0.2.0-5.pgdg24.04+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-15-pgfaceting_0.2.0-5.pgdg24.04+1_all.deb
+@ u26.x86_64 15 postgresql-15-pgfaceting postgresql-15-pgfaceting_0.2.0-5.pgdg26.04+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-15-pgfaceting_0.2.0-5.pgdg26.04+1_all.deb
+@ u26.aarch64 15 postgresql-15-pgfaceting postgresql-15-pgfaceting_0.2.0-5.pgdg26.04+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-15-pgfaceting_0.2.0-5.pgdg26.04+1_all.deb
 @ el8.x86_64 14 pgfaceting_14 pgfaceting_14-0.2.0-1PIGSTY.el8.x86_64.rpm pigsty 0.2.0 14.6KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgfaceting_14-0.2.0-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 14 pgfaceting_14 pgfaceting_14-0.2.0-1PGDG.rhel8.noarch.rpm pgdg 0.2.0 15.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pgfaceting_14-0.2.0-1PGDG.rhel8.noarch.rpm
 @ el8.aarch64 14 pgfaceting_14 pgfaceting_14-0.2.0-1PIGSTY.el8.aarch64.rpm pigsty 0.2.0 14.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgfaceting_14-0.2.0-1PIGSTY.el8.aarch64.rpm
@@ -154,6 +164,8 @@ weight: 3640
 @ u22.aarch64 14 postgresql-14-pgfaceting postgresql-14-pgfaceting_0.2.0-5.pgdg22.04+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-14-pgfaceting_0.2.0-5.pgdg22.04+1_all.deb
 @ u24.x86_64 14 postgresql-14-pgfaceting postgresql-14-pgfaceting_0.2.0-5.pgdg24.04+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-14-pgfaceting_0.2.0-5.pgdg24.04+1_all.deb
 @ u24.aarch64 14 postgresql-14-pgfaceting postgresql-14-pgfaceting_0.2.0-5.pgdg24.04+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-14-pgfaceting_0.2.0-5.pgdg24.04+1_all.deb
+@ u26.x86_64 14 postgresql-14-pgfaceting postgresql-14-pgfaceting_0.2.0-5.pgdg26.04+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-14-pgfaceting_0.2.0-5.pgdg26.04+1_all.deb
+@ u26.aarch64 14 postgresql-14-pgfaceting postgresql-14-pgfaceting_0.2.0-5.pgdg26.04+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-14-pgfaceting_0.2.0-5.pgdg26.04+1_all.deb
 {{< /pgext_matrix >}}
 
 ## 构建

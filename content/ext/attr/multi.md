@@ -239,10 +239,10 @@ weight: 40
 
 | **ID** | **扩展名** | **版本** | **属性** | **模式** | **描述** |
 |:------:|:-----------|:--------:|:--------:|:---------|:---------|
-| 9000 | [**`documentdb`**](/ext/e/documentdb) | `0.109` | `--sLd--` | - | 微软DocumentDB的API层 |
-| 9010 | [`documentdb_core`](/ext/e/documentdb_core) | `0.109` | `--sLd--` | - | 微软DocumentDB的核心API层实现 |
-| 9020 | [`documentdb_distributed`](/ext/e/documentdb_distributed) | `0.109` | `--sLd--` | - | DocumentDB多节点模式的API层 |
-| 9030 | [`documentdb_extended_rum`](/ext/e/documentdb_extended_rum) | `0.109` | `--sLd-r` | - | DocumentDB扩展RUM索引访问方法 |
+| 9000 | [**`documentdb`**](/ext/e/documentdb) | `0.110` | `--sLd--` | - | 微软DocumentDB的API层 |
+| 9010 | [`documentdb_core`](/ext/e/documentdb_core) | `0.110` | `--sLd--` | - | 微软DocumentDB的核心API层实现 |
+| 9020 | [`documentdb_distributed`](/ext/e/documentdb_distributed) | `0.110` | `--sLd--` | - | DocumentDB多节点模式的API层 |
+| 9030 | [`documentdb_extended_rum`](/ext/e/documentdb_extended_rum) | `0.110` | `--sLd-r` | - | DocumentDB扩展RUM索引访问方法 |
 {.ext-table}
 
 ### ivorysql

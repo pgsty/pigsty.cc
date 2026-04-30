@@ -64,6 +64,8 @@ weight: 3060
 | u22.aarch64 | AVAIL PGDG 2.8.11 1 | AVAIL PGDG 2.8.11 1 | AVAIL PGDG 2.8.11 1 | AVAIL PGDG 2.8.11 1 | AVAIL PGDG 2.8.11 1 |
 | u24.x86_64 | AVAIL PGDG 2.8.11 1 | AVAIL PGDG 2.8.11 1 | AVAIL PGDG 2.8.11 1 | AVAIL PGDG 2.8.11 1 | AVAIL PGDG 2.8.11 1 |
 | u24.aarch64 | AVAIL PGDG 2.8.11 1 | AVAIL PGDG 2.8.11 1 | AVAIL PGDG 2.8.11 1 | AVAIL PGDG 2.8.11 1 | AVAIL PGDG 2.8.11 1 |
+| u26.x86_64 | AVAIL PGDG 2.8.11 1 | AVAIL PGDG 2.8.11 1 | AVAIL PGDG 2.8.11 1 | AVAIL PGDG 2.8.11 1 | AVAIL PGDG 2.8.11 1 |
+| u26.aarch64 | AVAIL PGDG 2.8.11 1 | AVAIL PGDG 2.8.11 1 | AVAIL PGDG 2.8.11 1 | AVAIL PGDG 2.8.11 1 | AVAIL PGDG 2.8.11 1 |
 @ el8.x86_64 18 plpgsql_check_18 plpgsql_check_18-2.8.10-1PGDG.rhel8.10.x86_64.rpm pgdg 2.8.10 116.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/plpgsql_check_18-2.8.10-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 18 plpgsql_check_18 plpgsql_check_18-2.8.8-1PGDG.rhel8.10.x86_64.rpm pgdg 2.8.8 116.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/plpgsql_check_18-2.8.8-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 18 plpgsql_check_18 plpgsql_check_18-2.8.5-1PGDG.rhel8.10.x86_64.rpm pgdg 2.8.5 114.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/plpgsql_check_18-2.8.5-1PGDG.rhel8.10.x86_64.rpm
@@ -108,6 +110,8 @@ weight: 3060
 @ u22.aarch64 18 postgresql-18-plpgsql-check postgresql-18-plpgsql-check_2.8.11-1.pgdg22.04+1_arm64.deb pgdg 2.8.11 291.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-18-plpgsql-check_2.8.11-1.pgdg22.04+1_arm64.deb
 @ u24.x86_64 18 postgresql-18-plpgsql-check postgresql-18-plpgsql-check_2.8.11-1.pgdg24.04+1_amd64.deb pgdg 2.8.11 291.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-18-plpgsql-check_2.8.11-1.pgdg24.04+1_amd64.deb
 @ u24.aarch64 18 postgresql-18-plpgsql-check postgresql-18-plpgsql-check_2.8.11-1.pgdg24.04+1_arm64.deb pgdg 2.8.11 280.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-18-plpgsql-check_2.8.11-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 18 postgresql-18-plpgsql-check postgresql-18-plpgsql-check_2.8.11-1.pgdg26.04+1_amd64.deb pgdg 2.8.11 290.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-18-plpgsql-check_2.8.11-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 18 postgresql-18-plpgsql-check postgresql-18-plpgsql-check_2.8.11-1.pgdg26.04+1_arm64.deb pgdg 2.8.11 278.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-18-plpgsql-check_2.8.11-1.pgdg26.04+1_arm64.deb
 @ el8.x86_64 17 plpgsql_check_17 plpgsql_check_17-2.8.10-1PGDG.rhel8.10.x86_64.rpm pgdg 2.8.10 116.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/plpgsql_check_17-2.8.10-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 plpgsql_check_17 plpgsql_check_17-2.8.8-1PGDG.rhel8.10.x86_64.rpm pgdg 2.8.8 116.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/plpgsql_check_17-2.8.8-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 plpgsql_check_17 plpgsql_check_17-2.8.5-1PGDG.rhel8.10.x86_64.rpm pgdg 2.8.5 114.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/plpgsql_check_17-2.8.5-1PGDG.rhel8.10.x86_64.rpm
@@ -174,6 +178,8 @@ weight: 3060
 @ u22.aarch64 17 postgresql-17-plpgsql-check postgresql-17-plpgsql-check_2.8.11-1.pgdg22.04+1_arm64.deb pgdg 2.8.11 361.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-17-plpgsql-check_2.8.11-1.pgdg22.04+1_arm64.deb
 @ u24.x86_64 17 postgresql-17-plpgsql-check postgresql-17-plpgsql-check_2.8.11-1.pgdg24.04+1_amd64.deb pgdg 2.8.11 291.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-17-plpgsql-check_2.8.11-1.pgdg24.04+1_amd64.deb
 @ u24.aarch64 17 postgresql-17-plpgsql-check postgresql-17-plpgsql-check_2.8.11-1.pgdg24.04+1_arm64.deb pgdg 2.8.11 280.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-17-plpgsql-check_2.8.11-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 17 postgresql-17-plpgsql-check postgresql-17-plpgsql-check_2.8.11-1.pgdg26.04+1_amd64.deb pgdg 2.8.11 290.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-17-plpgsql-check_2.8.11-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 17 postgresql-17-plpgsql-check postgresql-17-plpgsql-check_2.8.11-1.pgdg26.04+1_arm64.deb pgdg 2.8.11 278.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-17-plpgsql-check_2.8.11-1.pgdg26.04+1_arm64.deb
 @ el8.x86_64 16 plpgsql_check_16 plpgsql_check_16-2.8.10-1PGDG.rhel8.10.x86_64.rpm pgdg 2.8.10 116.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/plpgsql_check_16-2.8.10-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 plpgsql_check_16 plpgsql_check_16-2.8.8-1PGDG.rhel8.10.x86_64.rpm pgdg 2.8.8 116.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/plpgsql_check_16-2.8.8-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 plpgsql_check_16 plpgsql_check_16-2.8.5-1PGDG.rhel8.10.x86_64.rpm pgdg 2.8.5 114.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/plpgsql_check_16-2.8.5-1PGDG.rhel8.10.x86_64.rpm
@@ -296,6 +302,8 @@ weight: 3060
 @ u22.aarch64 16 postgresql-16-plpgsql-check postgresql-16-plpgsql-check_2.8.11-1.pgdg22.04+1_arm64.deb pgdg 2.8.11 356.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-16-plpgsql-check_2.8.11-1.pgdg22.04+1_arm64.deb
 @ u24.x86_64 16 postgresql-16-plpgsql-check postgresql-16-plpgsql-check_2.8.11-1.pgdg24.04+1_amd64.deb pgdg 2.8.11 291.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-16-plpgsql-check_2.8.11-1.pgdg24.04+1_amd64.deb
 @ u24.aarch64 16 postgresql-16-plpgsql-check postgresql-16-plpgsql-check_2.8.11-1.pgdg24.04+1_arm64.deb pgdg 2.8.11 280.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-16-plpgsql-check_2.8.11-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 16 postgresql-16-plpgsql-check postgresql-16-plpgsql-check_2.8.11-1.pgdg26.04+1_amd64.deb pgdg 2.8.11 290.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-16-plpgsql-check_2.8.11-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 16 postgresql-16-plpgsql-check postgresql-16-plpgsql-check_2.8.11-1.pgdg26.04+1_arm64.deb pgdg 2.8.11 278.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-16-plpgsql-check_2.8.11-1.pgdg26.04+1_arm64.deb
 @ el8.x86_64 15 plpgsql_check_15 plpgsql_check_15-2.8.10-1PGDG.rhel8.10.x86_64.rpm pgdg 2.8.10 116.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/plpgsql_check_15-2.8.10-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 plpgsql_check_15 plpgsql_check_15-2.8.8-1PGDG.rhel8.10.x86_64.rpm pgdg 2.8.8 116.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/plpgsql_check_15-2.8.8-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 plpgsql_check_15 plpgsql_check_15-2.8.5-1PGDG.rhel8.10.x86_64.rpm pgdg 2.8.5 116.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/plpgsql_check_15-2.8.5-1PGDG.rhel8.10.x86_64.rpm
@@ -448,6 +456,8 @@ weight: 3060
 @ u22.aarch64 15 postgresql-15-plpgsql-check postgresql-15-plpgsql-check_2.8.11-1.pgdg22.04+1_arm64.deb pgdg 2.8.11 359.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-15-plpgsql-check_2.8.11-1.pgdg22.04+1_arm64.deb
 @ u24.x86_64 15 postgresql-15-plpgsql-check postgresql-15-plpgsql-check_2.8.11-1.pgdg24.04+1_amd64.deb pgdg 2.8.11 295.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-15-plpgsql-check_2.8.11-1.pgdg24.04+1_amd64.deb
 @ u24.aarch64 15 postgresql-15-plpgsql-check postgresql-15-plpgsql-check_2.8.11-1.pgdg24.04+1_arm64.deb pgdg 2.8.11 283.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-15-plpgsql-check_2.8.11-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 15 postgresql-15-plpgsql-check postgresql-15-plpgsql-check_2.8.11-1.pgdg26.04+1_amd64.deb pgdg 2.8.11 293.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-15-plpgsql-check_2.8.11-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 15 postgresql-15-plpgsql-check postgresql-15-plpgsql-check_2.8.11-1.pgdg26.04+1_arm64.deb pgdg 2.8.11 281.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-15-plpgsql-check_2.8.11-1.pgdg26.04+1_arm64.deb
 @ el8.x86_64 14 plpgsql_check_14 plpgsql_check_14-2.8.10-1PGDG.rhel8.10.x86_64.rpm pgdg 2.8.10 116.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/plpgsql_check_14-2.8.10-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 14 plpgsql_check_14 plpgsql_check_14-2.8.8-1PGDG.rhel8.10.x86_64.rpm pgdg 2.8.8 116.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/plpgsql_check_14-2.8.8-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 14 plpgsql_check_14 plpgsql_check_14-2.8.5-1PGDG.rhel8.10.x86_64.rpm pgdg 2.8.5 116.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/plpgsql_check_14-2.8.5-1PGDG.rhel8.10.x86_64.rpm
@@ -617,6 +627,8 @@ weight: 3060
 @ u22.aarch64 14 postgresql-14-plpgsql-check postgresql-14-plpgsql-check_2.8.11-1.pgdg22.04+1_arm64.deb pgdg 2.8.11 343.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-14-plpgsql-check_2.8.11-1.pgdg22.04+1_arm64.deb
 @ u24.x86_64 14 postgresql-14-plpgsql-check postgresql-14-plpgsql-check_2.8.11-1.pgdg24.04+1_amd64.deb pgdg 2.8.11 295.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-14-plpgsql-check_2.8.11-1.pgdg24.04+1_amd64.deb
 @ u24.aarch64 14 postgresql-14-plpgsql-check postgresql-14-plpgsql-check_2.8.11-1.pgdg24.04+1_arm64.deb pgdg 2.8.11 283.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-14-plpgsql-check_2.8.11-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 14 postgresql-14-plpgsql-check postgresql-14-plpgsql-check_2.8.11-1.pgdg26.04+1_amd64.deb pgdg 2.8.11 293.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-14-plpgsql-check_2.8.11-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 14 postgresql-14-plpgsql-check postgresql-14-plpgsql-check_2.8.11-1.pgdg26.04+1_arm64.deb pgdg 2.8.11 281.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-14-plpgsql-check_2.8.11-1.pgdg26.04+1_arm64.deb
 {{< /pgext_matrix >}}
 
 

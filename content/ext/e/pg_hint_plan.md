@@ -64,6 +64,8 @@ weight: 2780
 | u22.aarch64 | AVAIL PGDG 1.8.0 1 | AVAIL PGDG 1.7.1 1 | AVAIL PGDG 1.6.2 1 | AVAIL PGDG 1.5.3 1 | AVAIL PGDG 1.4.4 1 |
 | u24.x86_64 | AVAIL PGDG 1.8.0 1 | AVAIL PGDG 1.7.1 1 | AVAIL PGDG 1.6.2 1 | AVAIL PGDG 1.5.3 1 | AVAIL PGDG 1.4.4 1 |
 | u24.aarch64 | AVAIL PGDG 1.8.0 1 | AVAIL PGDG 1.7.1 1 | AVAIL PGDG 1.6.2 1 | AVAIL PGDG 1.5.3 1 | AVAIL PGDG 1.4.4 1 |
+| u26.x86_64 | AVAIL PGDG 1.8.0 1 | AVAIL PGDG 1.7.1 1 | AVAIL PGDG 1.6.2 1 | AVAIL PGDG 1.5.3 1 | AVAIL PGDG 1.4.4 1 |
+| u26.aarch64 | AVAIL PGDG 1.8.0 1 | AVAIL PGDG 1.7.1 1 | AVAIL PGDG 1.6.2 1 | AVAIL PGDG 1.5.3 1 | AVAIL PGDG 1.4.4 1 |
 @ el8.x86_64 18 pg_hint_plan_18 pg_hint_plan_18-1.8.0-1PGDG.rhel8.x86_64.rpm pgdg 1.8.0 55.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pg_hint_plan_18-1.8.0-1PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 18 pg_hint_plan_18 pg_hint_plan_18-1.8.0-1PGDG.rhel8.aarch64.rpm pgdg 1.8.0 51.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pg_hint_plan_18-1.8.0-1PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 18 pg_hint_plan_18 pg_hint_plan_18-1.8.0-1PGDG.rhel9.x86_64.rpm pgdg 1.8.0 54.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pg_hint_plan_18-1.8.0-1PGDG.rhel9.x86_64.rpm
@@ -78,6 +80,8 @@ weight: 2780
 @ u22.aarch64 18 postgresql-18-pg-hint-plan postgresql-18-pg-hint-plan_1.8.0-3.pgdg22.04+1_arm64.deb pgdg 1.8.0 129.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-hint-plan-18/postgresql-18-pg-hint-plan_1.8.0-3.pgdg22.04+1_arm64.deb
 @ u24.x86_64 18 postgresql-18-pg-hint-plan postgresql-18-pg-hint-plan_1.8.0-3.pgdg24.04+1_amd64.deb pgdg 1.8.0 131.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-hint-plan-18/postgresql-18-pg-hint-plan_1.8.0-3.pgdg24.04+1_amd64.deb
 @ u24.aarch64 18 postgresql-18-pg-hint-plan postgresql-18-pg-hint-plan_1.8.0-3.pgdg24.04+1_arm64.deb pgdg 1.8.0 128.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-hint-plan-18/postgresql-18-pg-hint-plan_1.8.0-3.pgdg24.04+1_arm64.deb
+@ u26.x86_64 18 postgresql-18-pg-hint-plan postgresql-18-pg-hint-plan_1.8.0-3.pgdg26.04+1_amd64.deb pgdg 1.8.0 130.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-hint-plan-18/postgresql-18-pg-hint-plan_1.8.0-3.pgdg26.04+1_amd64.deb
+@ u26.aarch64 18 postgresql-18-pg-hint-plan postgresql-18-pg-hint-plan_1.8.0-3.pgdg26.04+1_arm64.deb pgdg 1.8.0 126.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-hint-plan-18/postgresql-18-pg-hint-plan_1.8.0-3.pgdg26.04+1_arm64.deb
 @ el8.x86_64 17 pg_hint_plan_17 pg_hint_plan_17-1.7.1-1PGDG.rhel8.x86_64.rpm pgdg 1.7.1 53.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pg_hint_plan_17-1.7.1-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 17 pg_hint_plan_17 pg_hint_plan_17-1.7.0-1PGDG.rhel8.x86_64.rpm pgdg 1.7.0 51.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pg_hint_plan_17-1.7.0-1PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 17 pg_hint_plan_17 pg_hint_plan_17-1.7.1-1PGDG.rhel8.aarch64.rpm pgdg 1.7.1 50.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pg_hint_plan_17-1.7.1-1PGDG.rhel8.aarch64.rpm
@@ -98,6 +102,8 @@ weight: 2780
 @ u22.aarch64 17 postgresql-17-pg-hint-plan postgresql-17-pg-hint-plan_1.7.1-1.pgdg22.04+1_arm64.deb pgdg 1.7.1 137.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-hint-plan-17/postgresql-17-pg-hint-plan_1.7.1-1.pgdg22.04+1_arm64.deb
 @ u24.x86_64 17 postgresql-17-pg-hint-plan postgresql-17-pg-hint-plan_1.7.1-1.pgdg24.04+1_amd64.deb pgdg 1.7.1 126.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-hint-plan-17/postgresql-17-pg-hint-plan_1.7.1-1.pgdg24.04+1_amd64.deb
 @ u24.aarch64 17 postgresql-17-pg-hint-plan postgresql-17-pg-hint-plan_1.7.1-1.pgdg24.04+1_arm64.deb pgdg 1.7.1 123.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-hint-plan-17/postgresql-17-pg-hint-plan_1.7.1-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 17 postgresql-17-pg-hint-plan postgresql-17-pg-hint-plan_1.7.1-1.pgdg26.04+1_amd64.deb pgdg 1.7.1 125.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-hint-plan-17/postgresql-17-pg-hint-plan_1.7.1-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 17 postgresql-17-pg-hint-plan postgresql-17-pg-hint-plan_1.7.1-1.pgdg26.04+1_arm64.deb pgdg 1.7.1 121.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-hint-plan-17/postgresql-17-pg-hint-plan_1.7.1-1.pgdg26.04+1_arm64.deb
 @ el8.x86_64 16 pg_hint_plan_16 pg_hint_plan_16-1.6.2-1PGDG.rhel8.x86_64.rpm pgdg 1.6.2 45.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_hint_plan_16-1.6.2-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 16 pg_hint_plan_16 pg_hint_plan_16-1.6.1-1PGDG.rhel8.x86_64.rpm pgdg 1.6.1 44.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_hint_plan_16-1.6.1-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 16 pg_hint_plan_16 pg_hint_plan_16-1.6.0-1PGDG.rhel8.x86_64.rpm pgdg 1.6.0 42.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_hint_plan_16-1.6.0-1PGDG.rhel8.x86_64.rpm
@@ -122,6 +128,8 @@ weight: 2780
 @ u22.aarch64 16 postgresql-16-pg-hint-plan postgresql-16-pg-hint-plan_1.6.2-1.pgdg22.04+1_arm64.deb pgdg 1.6.2 114.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-hint-plan-16/postgresql-16-pg-hint-plan_1.6.2-1.pgdg22.04+1_arm64.deb
 @ u24.x86_64 16 postgresql-16-pg-hint-plan postgresql-16-pg-hint-plan_1.6.2-1.pgdg24.04+1_amd64.deb pgdg 1.6.2 104.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-hint-plan-16/postgresql-16-pg-hint-plan_1.6.2-1.pgdg24.04+1_amd64.deb
 @ u24.aarch64 16 postgresql-16-pg-hint-plan postgresql-16-pg-hint-plan_1.6.2-1.pgdg24.04+1_arm64.deb pgdg 1.6.2 101.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-hint-plan-16/postgresql-16-pg-hint-plan_1.6.2-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 16 postgresql-16-pg-hint-plan postgresql-16-pg-hint-plan_1.6.2-1.pgdg26.04+1_amd64.deb pgdg 1.6.2 103.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-hint-plan-16/postgresql-16-pg-hint-plan_1.6.2-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 16 postgresql-16-pg-hint-plan postgresql-16-pg-hint-plan_1.6.2-1.pgdg26.04+1_arm64.deb pgdg 1.6.2 100.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-hint-plan-16/postgresql-16-pg-hint-plan_1.6.2-1.pgdg26.04+1_arm64.deb
 @ el8.x86_64 15 pg_hint_plan_15 pg_hint_plan_15-1.5.3-1PGDG.rhel8.x86_64.rpm pgdg 1.5.3 45.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_hint_plan_15-1.5.3-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 15 pg_hint_plan_15 pg_hint_plan_15-1.5.2-1PGDG.rhel8.x86_64.rpm pgdg 1.5.2 43.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_hint_plan_15-1.5.2-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 15 pg_hint_plan_15 pg_hint_plan_15-1.5.1-1PGDG.rhel8.x86_64.rpm pgdg 1.5.1 48.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_hint_plan_15-1.5.1-1PGDG.rhel8.x86_64.rpm
@@ -146,6 +154,8 @@ weight: 2780
 @ u22.aarch64 15 postgresql-15-pg-hint-plan postgresql-15-pg-hint-plan_1.5.3-1.pgdg22.04+1_arm64.deb pgdg 1.5.3 114.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-hint-plan-15/postgresql-15-pg-hint-plan_1.5.3-1.pgdg22.04+1_arm64.deb
 @ u24.x86_64 15 postgresql-15-pg-hint-plan postgresql-15-pg-hint-plan_1.5.3-1.pgdg24.04+1_amd64.deb pgdg 1.5.3 104.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-hint-plan-15/postgresql-15-pg-hint-plan_1.5.3-1.pgdg24.04+1_amd64.deb
 @ u24.aarch64 15 postgresql-15-pg-hint-plan postgresql-15-pg-hint-plan_1.5.3-1.pgdg24.04+1_arm64.deb pgdg 1.5.3 101.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-hint-plan-15/postgresql-15-pg-hint-plan_1.5.3-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 15 postgresql-15-pg-hint-plan postgresql-15-pg-hint-plan_1.5.3-1.pgdg26.04+1_amd64.deb pgdg 1.5.3 103.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-hint-plan-15/postgresql-15-pg-hint-plan_1.5.3-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 15 postgresql-15-pg-hint-plan postgresql-15-pg-hint-plan_1.5.3-1.pgdg26.04+1_arm64.deb pgdg 1.5.3 99.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-hint-plan-15/postgresql-15-pg-hint-plan_1.5.3-1.pgdg26.04+1_arm64.deb
 @ el8.x86_64 14 pg_hint_plan_14 pg_hint_plan_14-1.4.4-1PGDG.rhel8.x86_64.rpm pgdg 1.4.4 44.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_hint_plan_14-1.4.4-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 14 pg_hint_plan_14 pg_hint_plan_14-1.4.3-1PGDG.rhel8.x86_64.rpm pgdg 1.4.3 43.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_hint_plan_14-1.4.3-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 14 pg_hint_plan_14 pg_hint_plan_14-1.4.2-1PGDG.rhel8.x86_64.rpm pgdg 1.4.2 42.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_hint_plan_14-1.4.2-1PGDG.rhel8.x86_64.rpm
@@ -170,6 +180,8 @@ weight: 2780
 @ u22.aarch64 14 postgresql-14-pg-hint-plan postgresql-14-pg-hint-plan_1.4.4-1.pgdg22.04+1_arm64.deb pgdg 1.4.4 113.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-hint-plan-14/postgresql-14-pg-hint-plan_1.4.4-1.pgdg22.04+1_arm64.deb
 @ u24.x86_64 14 postgresql-14-pg-hint-plan postgresql-14-pg-hint-plan_1.4.4-1.pgdg24.04+1_amd64.deb pgdg 1.4.4 104.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-hint-plan-14/postgresql-14-pg-hint-plan_1.4.4-1.pgdg24.04+1_amd64.deb
 @ u24.aarch64 14 postgresql-14-pg-hint-plan postgresql-14-pg-hint-plan_1.4.4-1.pgdg24.04+1_arm64.deb pgdg 1.4.4 101.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-hint-plan-14/postgresql-14-pg-hint-plan_1.4.4-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 14 postgresql-14-pg-hint-plan postgresql-14-pg-hint-plan_1.4.4-1.pgdg26.04+1_amd64.deb pgdg 1.4.4 102.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-hint-plan-14/postgresql-14-pg-hint-plan_1.4.4-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 14 postgresql-14-pg-hint-plan postgresql-14-pg-hint-plan_1.4.4-1.pgdg26.04+1_arm64.deb pgdg 1.4.4 99.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-hint-plan-14/postgresql-14-pg-hint-plan_1.4.4-1.pgdg26.04+1_arm64.deb
 {{< /pgext_matrix >}}
 
 

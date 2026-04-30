@@ -64,6 +64,8 @@ weight: 3510
 | u22.aarch64 | AVAIL PGDG 0.41.0 1 | AVAIL PGDG 0.41.0 1 | AVAIL PGDG 0.41.0 1 | AVAIL PGDG 0.41.0 1 | AVAIL PGDG 0.41.0 1 |
 | u24.x86_64 | AVAIL PGDG 0.41.0 1 | AVAIL PGDG 0.41.0 1 | AVAIL PGDG 0.41.0 1 | AVAIL PGDG 0.41.0 1 | AVAIL PGDG 0.41.0 1 |
 | u24.aarch64 | AVAIL PGDG 0.41.0 1 | AVAIL PGDG 0.41.0 1 | AVAIL PGDG 0.41.0 1 | AVAIL PGDG 0.41.0 1 | AVAIL PGDG 0.41.0 1 |
+| u26.x86_64 | AVAIL PGDG 0.41.0 1 | AVAIL PGDG 0.41.0 1 | AVAIL PGDG 0.41.0 1 | AVAIL PGDG 0.41.0 1 | AVAIL PGDG 0.41.0 1 |
+| u26.aarch64 | AVAIL PGDG 0.41.0 1 | AVAIL PGDG 0.41.0 1 | AVAIL PGDG 0.41.0 1 | AVAIL PGDG 0.41.0 1 | AVAIL PGDG 0.41.0 1 |
 @ el8.x86_64 18 semver_18 semver_18-0.41.0-1PIGSTY.el8.x86_64.rpm pigsty 0.41.0 27.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/semver_18-0.41.0-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 18 semver_18 semver_18-0.41.0-1PGDG.rhel8.10.x86_64.rpm pgdg 0.41.0 28.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/semver_18-0.41.0-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 18 semver_18 semver_18-0.40.0-1PGDG.rhel8.x86_64.rpm pgdg 0.40.0 27.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/semver_18-0.40.0-1PGDG.rhel8.x86_64.rpm
@@ -90,6 +92,8 @@ weight: 3510
 @ u22.aarch64 18 postgresql-18-semver postgresql-18-semver_0.41.0-1.pgdg22.04+1_arm64.deb pgdg 0.41.0 38.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-18-semver_0.41.0-1.pgdg22.04+1_arm64.deb
 @ u24.x86_64 18 postgresql-18-semver postgresql-18-semver_0.41.0-1.pgdg24.04+1_amd64.deb pgdg 0.41.0 38.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-18-semver_0.41.0-1.pgdg24.04+1_amd64.deb
 @ u24.aarch64 18 postgresql-18-semver postgresql-18-semver_0.41.0-1.pgdg24.04+1_arm64.deb pgdg 0.41.0 38.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-18-semver_0.41.0-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 18 postgresql-18-semver postgresql-18-semver_0.41.0-1.pgdg26.04+1_amd64.deb pgdg 0.41.0 38.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-18-semver_0.41.0-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 18 postgresql-18-semver postgresql-18-semver_0.41.0-1.pgdg26.04+1_arm64.deb pgdg 0.41.0 38.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-18-semver_0.41.0-1.pgdg26.04+1_arm64.deb
 @ el8.x86_64 17 semver_17 semver_17-0.41.0-1PIGSTY.el8.x86_64.rpm pigsty 0.41.0 27.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/semver_17-0.41.0-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 17 semver_17 semver_17-0.41.0-1PGDG.rhel8.10.x86_64.rpm pgdg 0.41.0 28.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/semver_17-0.41.0-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 semver_17 semver_17-0.32.1-1PGDG.rhel8.x86_64.rpm pgdg 0.32.1 27.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/semver_17-0.32.1-1PGDG.rhel8.x86_64.rpm
@@ -116,6 +120,8 @@ weight: 3510
 @ u22.aarch64 17 postgresql-17-semver postgresql-17-semver_0.41.0-1.pgdg22.04+1_arm64.deb pgdg 0.41.0 38.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-17-semver_0.41.0-1.pgdg22.04+1_arm64.deb
 @ u24.x86_64 17 postgresql-17-semver postgresql-17-semver_0.41.0-1.pgdg24.04+1_amd64.deb pgdg 0.41.0 38.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-17-semver_0.41.0-1.pgdg24.04+1_amd64.deb
 @ u24.aarch64 17 postgresql-17-semver postgresql-17-semver_0.41.0-1.pgdg24.04+1_arm64.deb pgdg 0.41.0 38.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-17-semver_0.41.0-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 17 postgresql-17-semver postgresql-17-semver_0.41.0-1.pgdg26.04+1_amd64.deb pgdg 0.41.0 38.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-17-semver_0.41.0-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 17 postgresql-17-semver postgresql-17-semver_0.41.0-1.pgdg26.04+1_arm64.deb pgdg 0.41.0 38.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-17-semver_0.41.0-1.pgdg26.04+1_arm64.deb
 @ el8.x86_64 16 semver_16 semver_16-0.41.0-1PIGSTY.el8.x86_64.rpm pigsty 0.41.0 27.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/semver_16-0.41.0-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 16 semver_16 semver_16-0.41.0-1PGDG.rhel8.10.x86_64.rpm pgdg 0.41.0 28.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/semver_16-0.41.0-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 semver_16 semver_16-0.32.1-1PGDG.rhel8.x86_64.rpm pgdg 0.32.1 27.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/semver_16-0.32.1-1PGDG.rhel8.x86_64.rpm
@@ -142,6 +148,8 @@ weight: 3510
 @ u22.aarch64 16 postgresql-16-semver postgresql-16-semver_0.41.0-1.pgdg22.04+1_arm64.deb pgdg 0.41.0 38.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-16-semver_0.41.0-1.pgdg22.04+1_arm64.deb
 @ u24.x86_64 16 postgresql-16-semver postgresql-16-semver_0.41.0-1.pgdg24.04+1_amd64.deb pgdg 0.41.0 38.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-16-semver_0.41.0-1.pgdg24.04+1_amd64.deb
 @ u24.aarch64 16 postgresql-16-semver postgresql-16-semver_0.41.0-1.pgdg24.04+1_arm64.deb pgdg 0.41.0 38.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-16-semver_0.41.0-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 16 postgresql-16-semver postgresql-16-semver_0.41.0-1.pgdg26.04+1_amd64.deb pgdg 0.41.0 38.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-16-semver_0.41.0-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 16 postgresql-16-semver postgresql-16-semver_0.41.0-1.pgdg26.04+1_arm64.deb pgdg 0.41.0 38.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-16-semver_0.41.0-1.pgdg26.04+1_arm64.deb
 @ el8.x86_64 15 semver_15 semver_15-0.41.0-1PIGSTY.el8.x86_64.rpm pigsty 0.41.0 27.6KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/semver_15-0.41.0-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 15 semver_15 semver_15-0.41.0-1PGDG.rhel8.10.x86_64.rpm pgdg 0.41.0 28.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/semver_15-0.41.0-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 semver_15 semver_15-0.32.1-1PGDG.rhel8.x86_64.rpm pgdg 0.32.1 27.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/semver_15-0.32.1-1PGDG.rhel8.x86_64.rpm
@@ -174,6 +182,8 @@ weight: 3510
 @ u22.aarch64 15 postgresql-15-semver postgresql-15-semver_0.41.0-1.pgdg22.04+1_arm64.deb pgdg 0.41.0 38.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-15-semver_0.41.0-1.pgdg22.04+1_arm64.deb
 @ u24.x86_64 15 postgresql-15-semver postgresql-15-semver_0.41.0-1.pgdg24.04+1_amd64.deb pgdg 0.41.0 38.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-15-semver_0.41.0-1.pgdg24.04+1_amd64.deb
 @ u24.aarch64 15 postgresql-15-semver postgresql-15-semver_0.41.0-1.pgdg24.04+1_arm64.deb pgdg 0.41.0 38.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-15-semver_0.41.0-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 15 postgresql-15-semver postgresql-15-semver_0.41.0-1.pgdg26.04+1_amd64.deb pgdg 0.41.0 38.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-15-semver_0.41.0-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 15 postgresql-15-semver postgresql-15-semver_0.41.0-1.pgdg26.04+1_arm64.deb pgdg 0.41.0 38.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-15-semver_0.41.0-1.pgdg26.04+1_arm64.deb
 @ el8.x86_64 14 semver_14 semver_14-0.41.0-1PIGSTY.el8.x86_64.rpm pigsty 0.41.0 27.6KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/semver_14-0.41.0-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 14 semver_14 semver_14-0.41.0-1PGDG.rhel8.10.x86_64.rpm pgdg 0.41.0 28.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/semver_14-0.41.0-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 14 semver_14 semver_14-0.32.1-1PGDG.rhel8.x86_64.rpm pgdg 0.32.1 27.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/semver_14-0.32.1-1PGDG.rhel8.x86_64.rpm
@@ -206,6 +216,8 @@ weight: 3510
 @ u22.aarch64 14 postgresql-14-semver postgresql-14-semver_0.41.0-1.pgdg22.04+1_arm64.deb pgdg 0.41.0 38.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-14-semver_0.41.0-1.pgdg22.04+1_arm64.deb
 @ u24.x86_64 14 postgresql-14-semver postgresql-14-semver_0.41.0-1.pgdg24.04+1_amd64.deb pgdg 0.41.0 38.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-14-semver_0.41.0-1.pgdg24.04+1_amd64.deb
 @ u24.aarch64 14 postgresql-14-semver postgresql-14-semver_0.41.0-1.pgdg24.04+1_arm64.deb pgdg 0.41.0 38.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-14-semver_0.41.0-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 14 postgresql-14-semver postgresql-14-semver_0.41.0-1.pgdg26.04+1_amd64.deb pgdg 0.41.0 38.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-14-semver_0.41.0-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 14 postgresql-14-semver postgresql-14-semver_0.41.0-1.pgdg26.04+1_arm64.deb pgdg 0.41.0 38.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-14-semver_0.41.0-1.pgdg26.04+1_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建

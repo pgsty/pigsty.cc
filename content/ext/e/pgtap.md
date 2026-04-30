@@ -62,6 +62,8 @@ weight: 3200
 | u22.aarch64 | AVAIL PGDG 1.3.4 1 | AVAIL PGDG 1.3.4 1 | AVAIL PGDG 1.3.4 1 | AVAIL PGDG 1.3.4 1 | AVAIL PGDG 1.3.4 1 |
 | u24.x86_64 | AVAIL PGDG 1.3.4 1 | AVAIL PGDG 1.3.4 1 | AVAIL PGDG 1.3.4 1 | AVAIL PGDG 1.3.4 1 | AVAIL PGDG 1.3.4 1 |
 | u24.aarch64 | AVAIL PGDG 1.3.4 1 | AVAIL PGDG 1.3.4 1 | AVAIL PGDG 1.3.4 1 | AVAIL PGDG 1.3.4 1 | AVAIL PGDG 1.3.4 1 |
+| u26.x86_64 | AVAIL PGDG 1.3.4 1 | AVAIL PGDG 1.3.4 1 | AVAIL PGDG 1.3.4 1 | AVAIL PGDG 1.3.4 1 | AVAIL PGDG 1.3.4 1 |
+| u26.aarch64 | AVAIL PGDG 1.3.4 1 | AVAIL PGDG 1.3.4 1 | AVAIL PGDG 1.3.4 1 | AVAIL PGDG 1.3.4 1 | AVAIL PGDG 1.3.4 1 |
 @ el8.x86_64 18 pgtap_18 pgtap_18-1.3.4-1PGDG.rhel8.noarch.rpm pgdg 1.3.4 118.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pgtap_18-1.3.4-1PGDG.rhel8.noarch.rpm
 @ el8.x86_64 18 pgtap_18 pgtap_18-1.3.3-1PGDG.rhel8.noarch.rpm pgdg 1.3.3 117.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pgtap_18-1.3.3-1PGDG.rhel8.noarch.rpm
 @ el8.aarch64 18 pgtap_18 pgtap_18-1.3.4-1PGDG.rhel8.noarch.rpm pgdg 1.3.4 118.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pgtap_18-1.3.4-1PGDG.rhel8.noarch.rpm
@@ -82,6 +84,8 @@ weight: 3200
 @ u22.aarch64 18 postgresql-18-pgtap postgresql-18-pgtap_1.3.4-1.pgdg22.04+1_all.deb pgdg 1.3.4 46.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgtap/postgresql-18-pgtap_1.3.4-1.pgdg22.04+1_all.deb
 @ u24.x86_64 18 postgresql-18-pgtap postgresql-18-pgtap_1.3.4-1.pgdg24.04+1_all.deb pgdg 1.3.4 44.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgtap/postgresql-18-pgtap_1.3.4-1.pgdg24.04+1_all.deb
 @ u24.aarch64 18 postgresql-18-pgtap postgresql-18-pgtap_1.3.4-1.pgdg24.04+1_all.deb pgdg 1.3.4 44.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgtap/postgresql-18-pgtap_1.3.4-1.pgdg24.04+1_all.deb
+@ u26.x86_64 18 postgresql-18-pgtap postgresql-18-pgtap_1.3.4-1.pgdg26.04+1_all.deb pgdg 1.3.4 44.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgtap/postgresql-18-pgtap_1.3.4-1.pgdg26.04+1_all.deb
+@ u26.aarch64 18 postgresql-18-pgtap postgresql-18-pgtap_1.3.4-1.pgdg26.04+1_all.deb pgdg 1.3.4 44.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgtap/postgresql-18-pgtap_1.3.4-1.pgdg26.04+1_all.deb
 @ el8.x86_64 17 pgtap_17 pgtap_17-1.3.4-1PGDG.rhel8.noarch.rpm pgdg 1.3.4 118.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pgtap_17-1.3.4-1PGDG.rhel8.noarch.rpm
 @ el8.x86_64 17 pgtap_17 pgtap_17-1.3.3-1PGDG.rhel8.noarch.rpm pgdg 1.3.3 117.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pgtap_17-1.3.3-1PGDG.rhel8.noarch.rpm
 @ el8.aarch64 17 pgtap_17 pgtap_17-1.3.4-1PGDG.rhel8.noarch.rpm pgdg 1.3.4 118.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pgtap_17-1.3.4-1PGDG.rhel8.noarch.rpm
@@ -101,6 +105,8 @@ weight: 3200
 @ u22.aarch64 17 postgresql-17-pgtap postgresql-17-pgtap_1.3.4-1.pgdg22.04+1_all.deb pgdg 1.3.4 46.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgtap/postgresql-17-pgtap_1.3.4-1.pgdg22.04+1_all.deb
 @ u24.x86_64 17 postgresql-17-pgtap postgresql-17-pgtap_1.3.4-1.pgdg24.04+1_all.deb pgdg 1.3.4 44.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgtap/postgresql-17-pgtap_1.3.4-1.pgdg24.04+1_all.deb
 @ u24.aarch64 17 postgresql-17-pgtap postgresql-17-pgtap_1.3.4-1.pgdg24.04+1_all.deb pgdg 1.3.4 44.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgtap/postgresql-17-pgtap_1.3.4-1.pgdg24.04+1_all.deb
+@ u26.x86_64 17 postgresql-17-pgtap postgresql-17-pgtap_1.3.4-1.pgdg26.04+1_all.deb pgdg 1.3.4 44.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgtap/postgresql-17-pgtap_1.3.4-1.pgdg26.04+1_all.deb
+@ u26.aarch64 17 postgresql-17-pgtap postgresql-17-pgtap_1.3.4-1.pgdg26.04+1_all.deb pgdg 1.3.4 44.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgtap/postgresql-17-pgtap_1.3.4-1.pgdg26.04+1_all.deb
 @ el8.x86_64 16 pgtap_16 pgtap_16-1.3.4-1PGDG.rhel8.noarch.rpm pgdg 1.3.4 118.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pgtap_16-1.3.4-1PGDG.rhel8.noarch.rpm
 @ el8.x86_64 16 pgtap_16 pgtap_16-1.3.3-1PGDG.rhel8.noarch.rpm pgdg 1.3.3 117.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pgtap_16-1.3.3-1PGDG.rhel8.noarch.rpm
 @ el8.aarch64 16 pgtap_16 pgtap_16-1.3.4-1PGDG.rhel8.noarch.rpm pgdg 1.3.4 118.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pgtap_16-1.3.4-1PGDG.rhel8.noarch.rpm
@@ -121,6 +127,8 @@ weight: 3200
 @ u22.aarch64 16 postgresql-16-pgtap postgresql-16-pgtap_1.3.4-1.pgdg22.04+1_all.deb pgdg 1.3.4 46.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgtap/postgresql-16-pgtap_1.3.4-1.pgdg22.04+1_all.deb
 @ u24.x86_64 16 postgresql-16-pgtap postgresql-16-pgtap_1.3.4-1.pgdg24.04+1_all.deb pgdg 1.3.4 44.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgtap/postgresql-16-pgtap_1.3.4-1.pgdg24.04+1_all.deb
 @ u24.aarch64 16 postgresql-16-pgtap postgresql-16-pgtap_1.3.4-1.pgdg24.04+1_all.deb pgdg 1.3.4 44.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgtap/postgresql-16-pgtap_1.3.4-1.pgdg24.04+1_all.deb
+@ u26.x86_64 16 postgresql-16-pgtap postgresql-16-pgtap_1.3.4-1.pgdg26.04+1_all.deb pgdg 1.3.4 44.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgtap/postgresql-16-pgtap_1.3.4-1.pgdg26.04+1_all.deb
+@ u26.aarch64 16 postgresql-16-pgtap postgresql-16-pgtap_1.3.4-1.pgdg26.04+1_all.deb pgdg 1.3.4 44.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgtap/postgresql-16-pgtap_1.3.4-1.pgdg26.04+1_all.deb
 @ el8.x86_64 15 pgtap_15 pgtap_15-1.3.4-1PGDG.rhel8.noarch.rpm pgdg 1.3.4 118.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pgtap_15-1.3.4-1PGDG.rhel8.noarch.rpm
 @ el8.x86_64 15 pgtap_15 pgtap_15-1.3.3-1PGDG.rhel8.noarch.rpm pgdg 1.3.3 117.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pgtap_15-1.3.3-1PGDG.rhel8.noarch.rpm
 @ el8.x86_64 15 pgtap_15 pgtap_15-1.2.0-1.rhel8.noarch.rpm pgdg 1.2.0 113.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pgtap_15-1.2.0-1.rhel8.noarch.rpm
@@ -142,6 +150,8 @@ weight: 3200
 @ u22.aarch64 15 postgresql-15-pgtap postgresql-15-pgtap_1.3.4-1.pgdg22.04+1_all.deb pgdg 1.3.4 46.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgtap/postgresql-15-pgtap_1.3.4-1.pgdg22.04+1_all.deb
 @ u24.x86_64 15 postgresql-15-pgtap postgresql-15-pgtap_1.3.4-1.pgdg24.04+1_all.deb pgdg 1.3.4 44.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgtap/postgresql-15-pgtap_1.3.4-1.pgdg24.04+1_all.deb
 @ u24.aarch64 15 postgresql-15-pgtap postgresql-15-pgtap_1.3.4-1.pgdg24.04+1_all.deb pgdg 1.3.4 44.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgtap/postgresql-15-pgtap_1.3.4-1.pgdg24.04+1_all.deb
+@ u26.x86_64 15 postgresql-15-pgtap postgresql-15-pgtap_1.3.4-1.pgdg26.04+1_all.deb pgdg 1.3.4 44.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgtap/postgresql-15-pgtap_1.3.4-1.pgdg26.04+1_all.deb
+@ u26.aarch64 15 postgresql-15-pgtap postgresql-15-pgtap_1.3.4-1.pgdg26.04+1_all.deb pgdg 1.3.4 44.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgtap/postgresql-15-pgtap_1.3.4-1.pgdg26.04+1_all.deb
 @ el8.x86_64 14 pgtap_14 pgtap_14-1.3.4-1PGDG.rhel8.noarch.rpm pgdg 1.3.4 118.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pgtap_14-1.3.4-1PGDG.rhel8.noarch.rpm
 @ el8.x86_64 14 pgtap_14 pgtap_14-1.3.3-1PGDG.rhel8.noarch.rpm pgdg 1.3.3 117.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pgtap_14-1.3.3-1PGDG.rhel8.noarch.rpm
 @ el8.x86_64 14 pgtap_14 pgtap_14-1.2.0-1.rhel8.noarch.rpm pgdg 1.2.0 113.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pgtap_14-1.2.0-1.rhel8.noarch.rpm
@@ -164,6 +174,8 @@ weight: 3200
 @ u22.aarch64 14 postgresql-14-pgtap postgresql-14-pgtap_1.3.4-1.pgdg22.04+1_all.deb pgdg 1.3.4 46.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgtap/postgresql-14-pgtap_1.3.4-1.pgdg22.04+1_all.deb
 @ u24.x86_64 14 postgresql-14-pgtap postgresql-14-pgtap_1.3.4-1.pgdg24.04+1_all.deb pgdg 1.3.4 44.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgtap/postgresql-14-pgtap_1.3.4-1.pgdg24.04+1_all.deb
 @ u24.aarch64 14 postgresql-14-pgtap postgresql-14-pgtap_1.3.4-1.pgdg24.04+1_all.deb pgdg 1.3.4 44.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgtap/postgresql-14-pgtap_1.3.4-1.pgdg24.04+1_all.deb
+@ u26.x86_64 14 postgresql-14-pgtap postgresql-14-pgtap_1.3.4-1.pgdg26.04+1_all.deb pgdg 1.3.4 44.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgtap/postgresql-14-pgtap_1.3.4-1.pgdg26.04+1_all.deb
+@ u26.aarch64 14 postgresql-14-pgtap postgresql-14-pgtap_1.3.4-1.pgdg26.04+1_all.deb pgdg 1.3.4 44.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgtap/postgresql-14-pgtap_1.3.4-1.pgdg26.04+1_all.deb
 {{< /pgext_matrix >}}
 
 

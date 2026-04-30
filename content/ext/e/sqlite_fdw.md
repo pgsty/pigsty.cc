@@ -67,6 +67,8 @@ weight: 8640
 | u22.aarch64 | MISS PGDG - 0 | AVAIL PIGSTY 2.5.0 1 | AVAIL PIGSTY 2.5.0 1 | AVAIL PIGSTY 2.5.0 1 | AVAIL PIGSTY 2.5.0 1 |
 | u24.x86_64 | MISS PGDG - 0 | AVAIL PIGSTY 2.5.0 1 | AVAIL PIGSTY 2.5.0 1 | AVAIL PIGSTY 2.5.0 1 | AVAIL PIGSTY 2.5.0 1 |
 | u24.aarch64 | MISS PGDG - 0 | AVAIL PIGSTY 2.5.0 1 | AVAIL PIGSTY 2.5.0 1 | AVAIL PIGSTY 2.5.0 1 | AVAIL PIGSTY 2.5.0 1 |
+| u26.x86_64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
+| u26.aarch64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
 @ el8.x86_64 17 sqlite_fdw_17 sqlite_fdw_17-2.4.0-4PGDG.rhel8.x86_64.rpm pgdg 2.4.0 57.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/sqlite_fdw_17-2.4.0-4PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 17 sqlite_fdw_17 sqlite_fdw_17-2.4.0-4PGDG.rhel8.aarch64.rpm pgdg 2.4.0 55.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/sqlite_fdw_17-2.4.0-4PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 17 sqlite_fdw_17 sqlite_fdw_17-2.5.0-2PIGSTY.el9.x86_64.rpm pigsty 2.5.0 65.7KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/sqlite_fdw_17-2.5.0-2PIGSTY.el9.x86_64.rpm

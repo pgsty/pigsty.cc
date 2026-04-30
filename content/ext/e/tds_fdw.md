@@ -59,6 +59,8 @@ weight: 8620
 | u22.aarch64 | AVAIL PGDG 2.0.5 1 | AVAIL PGDG 2.0.5 1 | AVAIL PGDG 2.0.5 1 | AVAIL PGDG 2.0.5 1 | AVAIL PGDG 2.0.5 1 |
 | u24.x86_64 | AVAIL PGDG 2.0.5 1 | AVAIL PGDG 2.0.5 1 | AVAIL PGDG 2.0.5 1 | AVAIL PGDG 2.0.5 1 | AVAIL PGDG 2.0.5 1 |
 | u24.aarch64 | AVAIL PGDG 2.0.5 1 | AVAIL PGDG 2.0.5 1 | AVAIL PGDG 2.0.5 1 | AVAIL PGDG 2.0.5 1 | AVAIL PGDG 2.0.5 1 |
+| u26.x86_64 | AVAIL PGDG 2.0.5 1 | AVAIL PGDG 2.0.5 1 | AVAIL PGDG 2.0.5 1 | AVAIL PGDG 2.0.5 1 | AVAIL PGDG 2.0.5 1 |
+| u26.aarch64 | AVAIL PGDG 2.0.5 1 | AVAIL PGDG 2.0.5 1 | AVAIL PGDG 2.0.5 1 | AVAIL PGDG 2.0.5 1 | AVAIL PGDG 2.0.5 1 |
 @ el8.x86_64 18 tds_fdw_18 tds_fdw_18-2.0.5-1PGDG.rhel8.x86_64.rpm pgdg 2.0.5 49.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/tds_fdw_18-2.0.5-1PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 18 tds_fdw_18 tds_fdw_18-2.0.5-1PGDG.rhel8.aarch64.rpm pgdg 2.0.5 47.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/tds_fdw_18-2.0.5-1PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 18 tds_fdw_18 tds_fdw_18-2.0.5-1PGDG.rhel9.x86_64.rpm pgdg 2.0.5 47.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/tds_fdw_18-2.0.5-1PGDG.rhel9.x86_64.rpm
@@ -73,6 +75,8 @@ weight: 8620
 @ u22.aarch64 18 postgresql-18-tds-fdw postgresql-18-tds-fdw_2.0.5-1.pgdg22.04+1_arm64.deb pgdg 2.0.5 109.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/t/tds-fdw/postgresql-18-tds-fdw_2.0.5-1.pgdg22.04+1_arm64.deb
 @ u24.x86_64 18 postgresql-18-tds-fdw postgresql-18-tds-fdw_2.0.5-1.pgdg24.04+1_amd64.deb pgdg 2.0.5 109.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/t/tds-fdw/postgresql-18-tds-fdw_2.0.5-1.pgdg24.04+1_amd64.deb
 @ u24.aarch64 18 postgresql-18-tds-fdw postgresql-18-tds-fdw_2.0.5-1.pgdg24.04+1_arm64.deb pgdg 2.0.5 107.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/t/tds-fdw/postgresql-18-tds-fdw_2.0.5-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 18 postgresql-18-tds-fdw postgresql-18-tds-fdw_2.0.5-1.pgdg26.04+1_amd64.deb pgdg 2.0.5 108.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/t/tds-fdw/postgresql-18-tds-fdw_2.0.5-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 18 postgresql-18-tds-fdw postgresql-18-tds-fdw_2.0.5-1.pgdg26.04+1_arm64.deb pgdg 2.0.5 106.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/t/tds-fdw/postgresql-18-tds-fdw_2.0.5-1.pgdg26.04+1_arm64.deb
 @ el8.x86_64 17 tds_fdw_17 tds_fdw_17-2.0.5-1PGDG.rhel8.x86_64.rpm pgdg 2.0.5 49.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/tds_fdw_17-2.0.5-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 17 tds_fdw_17 tds_fdw_17-2.0.4-1PGDG.rhel8.x86_64.rpm pgdg 2.0.4 49.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/tds_fdw_17-2.0.4-1PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 17 tds_fdw_17 tds_fdw_17-2.0.5-1PGDG.rhel8.aarch64.rpm pgdg 2.0.5 47.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/tds_fdw_17-2.0.5-1PGDG.rhel8.aarch64.rpm
@@ -93,6 +97,8 @@ weight: 8620
 @ u22.aarch64 17 postgresql-17-tds-fdw postgresql-17-tds-fdw_2.0.5-1.pgdg22.04+1_arm64.deb pgdg 2.0.5 124.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/t/tds-fdw/postgresql-17-tds-fdw_2.0.5-1.pgdg22.04+1_arm64.deb
 @ u24.x86_64 17 postgresql-17-tds-fdw postgresql-17-tds-fdw_2.0.5-1.pgdg24.04+1_amd64.deb pgdg 2.0.5 109.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/t/tds-fdw/postgresql-17-tds-fdw_2.0.5-1.pgdg24.04+1_amd64.deb
 @ u24.aarch64 17 postgresql-17-tds-fdw postgresql-17-tds-fdw_2.0.5-1.pgdg24.04+1_arm64.deb pgdg 2.0.5 106.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/t/tds-fdw/postgresql-17-tds-fdw_2.0.5-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 17 postgresql-17-tds-fdw postgresql-17-tds-fdw_2.0.5-1.pgdg26.04+1_amd64.deb pgdg 2.0.5 108.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/t/tds-fdw/postgresql-17-tds-fdw_2.0.5-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 17 postgresql-17-tds-fdw postgresql-17-tds-fdw_2.0.5-1.pgdg26.04+1_arm64.deb pgdg 2.0.5 105.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/t/tds-fdw/postgresql-17-tds-fdw_2.0.5-1.pgdg26.04+1_arm64.deb
 @ el8.x86_64 16 tds_fdw_16 tds_fdw_16-2.0.5-1PGDG.rhel8.x86_64.rpm pgdg 2.0.5 49.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/tds_fdw_16-2.0.5-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 16 tds_fdw_16 tds_fdw_16-2.0.4-1PGDG.rhel8.x86_64.rpm pgdg 2.0.4 49.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/tds_fdw_16-2.0.4-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 16 tds_fdw_16 tds_fdw_16-2.0.3-4PGDG.rhel8.x86_64.rpm pgdg 2.0.3 47.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/tds_fdw_16-2.0.3-4PGDG.rhel8.x86_64.rpm
@@ -119,6 +125,8 @@ weight: 8620
 @ u22.aarch64 16 postgresql-16-tds-fdw postgresql-16-tds-fdw_2.0.5-1.pgdg22.04+1_arm64.deb pgdg 2.0.5 122.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/t/tds-fdw/postgresql-16-tds-fdw_2.0.5-1.pgdg22.04+1_arm64.deb
 @ u24.x86_64 16 postgresql-16-tds-fdw postgresql-16-tds-fdw_2.0.5-1.pgdg24.04+1_amd64.deb pgdg 2.0.5 109.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/t/tds-fdw/postgresql-16-tds-fdw_2.0.5-1.pgdg24.04+1_amd64.deb
 @ u24.aarch64 16 postgresql-16-tds-fdw postgresql-16-tds-fdw_2.0.5-1.pgdg24.04+1_arm64.deb pgdg 2.0.5 107.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/t/tds-fdw/postgresql-16-tds-fdw_2.0.5-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 16 postgresql-16-tds-fdw postgresql-16-tds-fdw_2.0.5-1.pgdg26.04+1_amd64.deb pgdg 2.0.5 108.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/t/tds-fdw/postgresql-16-tds-fdw_2.0.5-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 16 postgresql-16-tds-fdw postgresql-16-tds-fdw_2.0.5-1.pgdg26.04+1_arm64.deb pgdg 2.0.5 106.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/t/tds-fdw/postgresql-16-tds-fdw_2.0.5-1.pgdg26.04+1_arm64.deb
 @ el8.x86_64 15 tds_fdw_15 tds_fdw_15-2.0.5-1PGDG.rhel8.x86_64.rpm pgdg 2.0.5 49.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/tds_fdw_15-2.0.5-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 15 tds_fdw_15 tds_fdw_15-2.0.4-1PGDG.rhel8.x86_64.rpm pgdg 2.0.4 49.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/tds_fdw_15-2.0.4-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 15 tds_fdw_15 tds_fdw_15-2.0.3-1.rhel8.x86_64.rpm pgdg 2.0.3 47.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/tds_fdw_15-2.0.3-1.rhel8.x86_64.rpm
@@ -143,6 +151,8 @@ weight: 8620
 @ u22.aarch64 15 postgresql-15-tds-fdw postgresql-15-tds-fdw_2.0.5-1.pgdg22.04+1_arm64.deb pgdg 2.0.5 122.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/t/tds-fdw/postgresql-15-tds-fdw_2.0.5-1.pgdg22.04+1_arm64.deb
 @ u24.x86_64 15 postgresql-15-tds-fdw postgresql-15-tds-fdw_2.0.5-1.pgdg24.04+1_amd64.deb pgdg 2.0.5 109.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/t/tds-fdw/postgresql-15-tds-fdw_2.0.5-1.pgdg24.04+1_amd64.deb
 @ u24.aarch64 15 postgresql-15-tds-fdw postgresql-15-tds-fdw_2.0.5-1.pgdg24.04+1_arm64.deb pgdg 2.0.5 107.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/t/tds-fdw/postgresql-15-tds-fdw_2.0.5-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 15 postgresql-15-tds-fdw postgresql-15-tds-fdw_2.0.5-1.pgdg26.04+1_amd64.deb pgdg 2.0.5 108.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/t/tds-fdw/postgresql-15-tds-fdw_2.0.5-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 15 postgresql-15-tds-fdw postgresql-15-tds-fdw_2.0.5-1.pgdg26.04+1_arm64.deb pgdg 2.0.5 106.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/t/tds-fdw/postgresql-15-tds-fdw_2.0.5-1.pgdg26.04+1_arm64.deb
 @ el8.x86_64 14 tds_fdw_14 tds_fdw_14-2.0.5-1PGDG.rhel8.x86_64.rpm pgdg 2.0.5 49.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/tds_fdw_14-2.0.5-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 14 tds_fdw_14 tds_fdw_14-2.0.4-1PGDG.rhel8.x86_64.rpm pgdg 2.0.4 49.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/tds_fdw_14-2.0.4-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 14 tds_fdw_14 tds_fdw_14-2.0.3-1.rhel8.x86_64.rpm pgdg 2.0.3 47.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/tds_fdw_14-2.0.3-1.rhel8.x86_64.rpm
@@ -168,6 +178,8 @@ weight: 8620
 @ u22.aarch64 14 postgresql-14-tds-fdw postgresql-14-tds-fdw_2.0.5-1.pgdg22.04+1_arm64.deb pgdg 2.0.5 123.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/t/tds-fdw/postgresql-14-tds-fdw_2.0.5-1.pgdg22.04+1_arm64.deb
 @ u24.x86_64 14 postgresql-14-tds-fdw postgresql-14-tds-fdw_2.0.5-1.pgdg24.04+1_amd64.deb pgdg 2.0.5 109.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/t/tds-fdw/postgresql-14-tds-fdw_2.0.5-1.pgdg24.04+1_amd64.deb
 @ u24.aarch64 14 postgresql-14-tds-fdw postgresql-14-tds-fdw_2.0.5-1.pgdg24.04+1_arm64.deb pgdg 2.0.5 106.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/t/tds-fdw/postgresql-14-tds-fdw_2.0.5-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 14 postgresql-14-tds-fdw postgresql-14-tds-fdw_2.0.5-1.pgdg26.04+1_amd64.deb pgdg 2.0.5 108.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/t/tds-fdw/postgresql-14-tds-fdw_2.0.5-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 14 postgresql-14-tds-fdw postgresql-14-tds-fdw_2.0.5-1.pgdg26.04+1_arm64.deb pgdg 2.0.5 105.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/t/tds-fdw/postgresql-14-tds-fdw_2.0.5-1.pgdg26.04+1_arm64.deb
 {{< /pgext_matrix >}}
 
 

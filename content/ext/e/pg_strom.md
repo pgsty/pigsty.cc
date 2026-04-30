@@ -58,6 +58,8 @@ weight: 2530
 | u22.aarch64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
 | u24.x86_64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
 | u24.aarch64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
+| u26.x86_64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
+| u26.aarch64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
 @ el8.x86_64 18 pg_strom_18 pg_strom_18-6.1-2PGDG.rhel8.10.x86_64.rpm pgdg 6.1 725.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/18/redhat/rhel-8-x86_64/pg_strom_18-6.1-2PGDG.rhel8.10.x86_64.rpm
 @ el9.x86_64 18 pg_strom_18 pg_strom_18-6.1-2PGDG.rhel9.7.x86_64.rpm pgdg 6.1 691.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/18/redhat/rhel-9-x86_64/pg_strom_18-6.1-2PGDG.rhel9.7.x86_64.rpm
 @ el9.x86_64 18 pg_strom_18 pg_strom_18-6.1-1PGDG.el9.x86_64.rpm pgdg 6.1 691.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/18/redhat/rhel-9-x86_64/pg_strom_18-6.1-1PGDG.el9.x86_64.rpm

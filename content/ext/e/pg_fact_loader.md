@@ -59,6 +59,8 @@ weight: 9820
 | u22.aarch64 | MISS PGDG - 0 | AVAIL PGDG 2.0.1 1 | AVAIL PGDG 2.0.1 1 | AVAIL PGDG 2.0.1 1 | AVAIL PGDG 2.0.1 1 |
 | u24.x86_64 | MISS PGDG - 0 | AVAIL PGDG 2.0.1 1 | AVAIL PGDG 2.0.1 1 | AVAIL PGDG 2.0.1 1 | AVAIL PGDG 2.0.1 1 |
 | u24.aarch64 | MISS PGDG - 0 | AVAIL PGDG 2.0.1 1 | AVAIL PGDG 2.0.1 1 | AVAIL PGDG 2.0.1 1 | AVAIL PGDG 2.0.1 1 |
+| u26.x86_64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
+| u26.aarch64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
 @ el8.x86_64 18 pg_fact_loader_18 pg_fact_loader_18-2.0.1-3PGDG.rhel8.noarch.rpm pgdg 2.0.1 36.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pg_fact_loader_18-2.0.1-3PGDG.rhel8.noarch.rpm
 @ el8.aarch64 18 pg_fact_loader_18 pg_fact_loader_18-2.0.1-3PGDG.rhel8.noarch.rpm pgdg 2.0.1 36.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pg_fact_loader_18-2.0.1-3PGDG.rhel8.noarch.rpm
 @ el9.x86_64 18 pg_fact_loader_18 pg_fact_loader_18-2.0.1-3PGDG.rhel9.noarch.rpm pgdg 2.0.1 34.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pg_fact_loader_18-2.0.1-3PGDG.rhel9.noarch.rpm

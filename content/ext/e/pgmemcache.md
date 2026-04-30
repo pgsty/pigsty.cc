@@ -62,6 +62,8 @@ weight: 9410
 | u22.aarch64 | AVAIL PGDG 2.3.0 1 | AVAIL PGDG 2.3.0 1 | AVAIL PGDG 2.3.0 1 | AVAIL PGDG 2.3.0 1 | AVAIL PGDG 2.3.0 1 |
 | u24.x86_64 | AVAIL PGDG 2.3.0 1 | AVAIL PGDG 2.3.0 1 | AVAIL PGDG 2.3.0 1 | AVAIL PGDG 2.3.0 1 | AVAIL PGDG 2.3.0 1 |
 | u24.aarch64 | AVAIL PGDG 2.3.0 1 | AVAIL PGDG 2.3.0 1 | AVAIL PGDG 2.3.0 1 | AVAIL PGDG 2.3.0 1 | AVAIL PGDG 2.3.0 1 |
+| u26.x86_64 | AVAIL PGDG 2.3.0 1 | AVAIL PGDG 2.3.0 1 | AVAIL PGDG 2.3.0 1 | AVAIL PGDG 2.3.0 1 | AVAIL PGDG 2.3.0 1 |
+| u26.aarch64 | AVAIL PGDG 2.3.0 1 | AVAIL PGDG 2.3.0 1 | AVAIL PGDG 2.3.0 1 | AVAIL PGDG 2.3.0 1 | AVAIL PGDG 2.3.0 1 |
 @ el8.x86_64 18 pgmemcache_18 pgmemcache_18-2.3.0-9PGDG.rhel8.x86_64.rpm pgdg 2.3.0 26.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pgmemcache_18-2.3.0-9PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 18 pgmemcache_18 pgmemcache_18-2.3.0-9PGDG.rhel8.aarch64.rpm pgdg 2.3.0 26.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pgmemcache_18-2.3.0-9PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 18 pgmemcache_18 pgmemcache_18-2.3.0-9PGDG.rhel9.x86_64.rpm pgdg 2.3.0 25.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pgmemcache_18-2.3.0-9PGDG.rhel9.x86_64.rpm
@@ -76,6 +78,8 @@ weight: 9410
 @ u22.aarch64 18 postgresql-18-pgmemcache postgresql-18-pgmemcache_2.3.0-15.pgdg22.04+1_arm64.deb pgdg 2.3.0 46.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-18-pgmemcache_2.3.0-15.pgdg22.04+1_arm64.deb
 @ u24.x86_64 18 postgresql-18-pgmemcache postgresql-18-pgmemcache_2.3.0-15.pgdg24.04+1_amd64.deb pgdg 2.3.0 45.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-18-pgmemcache_2.3.0-15.pgdg24.04+1_amd64.deb
 @ u24.aarch64 18 postgresql-18-pgmemcache postgresql-18-pgmemcache_2.3.0-15.pgdg24.04+1_arm64.deb pgdg 2.3.0 45.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-18-pgmemcache_2.3.0-15.pgdg24.04+1_arm64.deb
+@ u26.x86_64 18 postgresql-18-pgmemcache postgresql-18-pgmemcache_2.3.0-15.pgdg26.04+1_amd64.deb pgdg 2.3.0 45.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-18-pgmemcache_2.3.0-15.pgdg26.04+1_amd64.deb
+@ u26.aarch64 18 postgresql-18-pgmemcache postgresql-18-pgmemcache_2.3.0-15.pgdg26.04+1_arm64.deb pgdg 2.3.0 44.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-18-pgmemcache_2.3.0-15.pgdg26.04+1_arm64.deb
 @ el8.x86_64 17 pgmemcache_17 pgmemcache_17-2.3.0-8PGDG.rhel8.x86_64.rpm pgdg 2.3.0 26.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pgmemcache_17-2.3.0-8PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 17 pgmemcache_17 pgmemcache_17-2.3.0-8PGDG.rhel8.aarch64.rpm pgdg 2.3.0 25.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pgmemcache_17-2.3.0-8PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 17 pgmemcache_17 pgmemcache_17-2.3.0-8PGDG.rhel9.x86_64.rpm pgdg 2.3.0 26.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pgmemcache_17-2.3.0-8PGDG.rhel9.x86_64.rpm
@@ -90,6 +94,8 @@ weight: 9410
 @ u22.aarch64 17 postgresql-17-pgmemcache postgresql-17-pgmemcache_2.3.0-15.pgdg22.04+1_arm64.deb pgdg 2.3.0 51.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-17-pgmemcache_2.3.0-15.pgdg22.04+1_arm64.deb
 @ u24.x86_64 17 postgresql-17-pgmemcache postgresql-17-pgmemcache_2.3.0-15.pgdg24.04+1_amd64.deb pgdg 2.3.0 45.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-17-pgmemcache_2.3.0-15.pgdg24.04+1_amd64.deb
 @ u24.aarch64 17 postgresql-17-pgmemcache postgresql-17-pgmemcache_2.3.0-15.pgdg24.04+1_arm64.deb pgdg 2.3.0 45.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-17-pgmemcache_2.3.0-15.pgdg24.04+1_arm64.deb
+@ u26.x86_64 17 postgresql-17-pgmemcache postgresql-17-pgmemcache_2.3.0-15.pgdg26.04+1_amd64.deb pgdg 2.3.0 45.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-17-pgmemcache_2.3.0-15.pgdg26.04+1_amd64.deb
+@ u26.aarch64 17 postgresql-17-pgmemcache postgresql-17-pgmemcache_2.3.0-15.pgdg26.04+1_arm64.deb pgdg 2.3.0 45.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-17-pgmemcache_2.3.0-15.pgdg26.04+1_arm64.deb
 @ el8.x86_64 16 pgmemcache_16 pgmemcache_16-2.3.0-6.rhel8.1.x86_64.rpm pgdg 2.3.0 26.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pgmemcache_16-2.3.0-6.rhel8.1.x86_64.rpm
 @ el8.aarch64 16 pgmemcache_16 pgmemcache_16-2.3.0-6.rhel8.1.aarch64.rpm pgdg 2.3.0 25.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pgmemcache_16-2.3.0-6.rhel8.1.aarch64.rpm
 @ el9.x86_64 16 pgmemcache_16 pgmemcache_16-2.3.0-6.rhel9.1.x86_64.rpm pgdg 2.3.0 25.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pgmemcache_16-2.3.0-6.rhel9.1.x86_64.rpm
@@ -104,6 +110,8 @@ weight: 9410
 @ u22.aarch64 16 postgresql-16-pgmemcache postgresql-16-pgmemcache_2.3.0-15.pgdg22.04+1_arm64.deb pgdg 2.3.0 51.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-16-pgmemcache_2.3.0-15.pgdg22.04+1_arm64.deb
 @ u24.x86_64 16 postgresql-16-pgmemcache postgresql-16-pgmemcache_2.3.0-15.pgdg24.04+1_amd64.deb pgdg 2.3.0 45.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-16-pgmemcache_2.3.0-15.pgdg24.04+1_amd64.deb
 @ u24.aarch64 16 postgresql-16-pgmemcache postgresql-16-pgmemcache_2.3.0-15.pgdg24.04+1_arm64.deb pgdg 2.3.0 45.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-16-pgmemcache_2.3.0-15.pgdg24.04+1_arm64.deb
+@ u26.x86_64 16 postgresql-16-pgmemcache postgresql-16-pgmemcache_2.3.0-15.pgdg26.04+1_amd64.deb pgdg 2.3.0 45.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-16-pgmemcache_2.3.0-15.pgdg26.04+1_amd64.deb
+@ u26.aarch64 16 postgresql-16-pgmemcache postgresql-16-pgmemcache_2.3.0-15.pgdg26.04+1_arm64.deb pgdg 2.3.0 45.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-16-pgmemcache_2.3.0-15.pgdg26.04+1_arm64.deb
 @ el8.x86_64 15 pgmemcache_15 pgmemcache_15-2.3.0-5.rhel8.x86_64.rpm pgdg 2.3.0 56.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pgmemcache_15-2.3.0-5.rhel8.x86_64.rpm
 @ el9.x86_64 15 pgmemcache_15 pgmemcache_15-2.3.0-5.rhel9.x86_64.rpm pgdg 2.3.0 57.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pgmemcache_15-2.3.0-5.rhel9.x86_64.rpm
 @ el10.x86_64 15 pgmemcache_15 pgmemcache_15-2.3.0-9PGDG.rhel10.x86_64.rpm pgdg 2.3.0 26.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pgmemcache_15-2.3.0-9PGDG.rhel10.x86_64.rpm
@@ -116,6 +124,8 @@ weight: 9410
 @ u22.aarch64 15 postgresql-15-pgmemcache postgresql-15-pgmemcache_2.3.0-15.pgdg22.04+1_arm64.deb pgdg 2.3.0 51.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-15-pgmemcache_2.3.0-15.pgdg22.04+1_arm64.deb
 @ u24.x86_64 15 postgresql-15-pgmemcache postgresql-15-pgmemcache_2.3.0-15.pgdg24.04+1_amd64.deb pgdg 2.3.0 45.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-15-pgmemcache_2.3.0-15.pgdg24.04+1_amd64.deb
 @ u24.aarch64 15 postgresql-15-pgmemcache postgresql-15-pgmemcache_2.3.0-15.pgdg24.04+1_arm64.deb pgdg 2.3.0 45.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-15-pgmemcache_2.3.0-15.pgdg24.04+1_arm64.deb
+@ u26.x86_64 15 postgresql-15-pgmemcache postgresql-15-pgmemcache_2.3.0-15.pgdg26.04+1_amd64.deb pgdg 2.3.0 45.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-15-pgmemcache_2.3.0-15.pgdg26.04+1_amd64.deb
+@ u26.aarch64 15 postgresql-15-pgmemcache postgresql-15-pgmemcache_2.3.0-15.pgdg26.04+1_arm64.deb pgdg 2.3.0 45.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-15-pgmemcache_2.3.0-15.pgdg26.04+1_arm64.deb
 @ el8.x86_64 14 pgmemcache_14 pgmemcache_14-2.3.0-5.rhel8.x86_64.rpm pgdg 2.3.0 56.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pgmemcache_14-2.3.0-5.rhel8.x86_64.rpm
 @ el10.x86_64 14 pgmemcache_14 pgmemcache_14-2.3.0-9PGDG.rhel10.x86_64.rpm pgdg 2.3.0 26.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pgmemcache_14-2.3.0-9PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 14 pgmemcache_14 pgmemcache_14-2.3.0-9PGDG.rhel10.aarch64.rpm pgdg 2.3.0 26.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgmemcache_14-2.3.0-9PGDG.rhel10.aarch64.rpm
@@ -127,6 +137,8 @@ weight: 9410
 @ u22.aarch64 14 postgresql-14-pgmemcache postgresql-14-pgmemcache_2.3.0-15.pgdg22.04+1_arm64.deb pgdg 2.3.0 51.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-14-pgmemcache_2.3.0-15.pgdg22.04+1_arm64.deb
 @ u24.x86_64 14 postgresql-14-pgmemcache postgresql-14-pgmemcache_2.3.0-15.pgdg24.04+1_amd64.deb pgdg 2.3.0 45.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-14-pgmemcache_2.3.0-15.pgdg24.04+1_amd64.deb
 @ u24.aarch64 14 postgresql-14-pgmemcache postgresql-14-pgmemcache_2.3.0-15.pgdg24.04+1_arm64.deb pgdg 2.3.0 45.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-14-pgmemcache_2.3.0-15.pgdg24.04+1_arm64.deb
+@ u26.x86_64 14 postgresql-14-pgmemcache postgresql-14-pgmemcache_2.3.0-15.pgdg26.04+1_amd64.deb pgdg 2.3.0 45.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-14-pgmemcache_2.3.0-15.pgdg26.04+1_amd64.deb
+@ u26.aarch64 14 postgresql-14-pgmemcache postgresql-14-pgmemcache_2.3.0-15.pgdg26.04+1_arm64.deb pgdg 2.3.0 45.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgmemcache/postgresql-14-pgmemcache_2.3.0-15.pgdg26.04+1_arm64.deb
 {{< /pgext_matrix >}}
 
 

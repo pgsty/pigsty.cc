@@ -62,6 +62,8 @@ weight: 2420
 | u22.aarch64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.3.7 1 | AVAIL PIGSTY 0.3.7 1 | AVAIL PIGSTY 0.3.7 1 | AVAIL PIGSTY 0.3.7 1 |
 | u24.x86_64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.3.7 1 | AVAIL PIGSTY 0.3.7 1 | AVAIL PIGSTY 0.3.7 1 | AVAIL PIGSTY 0.3.7 1 |
 | u24.aarch64 | MISS PIGSTY - 0 | AVAIL PIGSTY 0.3.7 1 | AVAIL PIGSTY 0.3.7 1 | AVAIL PIGSTY 0.3.7 1 | AVAIL PIGSTY 0.3.7 1 |
+| u26.x86_64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| u26.aarch64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
 @ el8.x86_64 17 pg_analytics_17 pg_analytics_17-0.3.7-1PARADEDB.el8.x86_64.rpm pigsty 0.3.7 11.1MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_analytics_17-0.3.7-1PARADEDB.el8.x86_64.rpm
 @ el8.aarch64 17 pg_analytics_17 pg_analytics_17-0.3.7-1PARADEDB.el8.aarch64.rpm pigsty 0.3.7 9.7MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_analytics_17-0.3.7-1PARADEDB.el8.aarch64.rpm
 @ el9.x86_64 17 pg_analytics_17 pg_analytics_17-0.3.7-1PARADEDB.el9.x86_64.rpm pigsty 0.3.7 11.1MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_analytics_17-0.3.7-1PARADEDB.el9.x86_64.rpm

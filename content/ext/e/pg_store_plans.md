@@ -64,6 +64,8 @@ weight: 6250
 | u22.aarch64 | AVAIL PIGSTY 1.10 1 | AVAIL PIGSTY 1.10 1 | AVAIL PIGSTY 1.10 1 | AVAIL PIGSTY 1.10 1 | AVAIL PIGSTY 1.10 1 |
 | u24.x86_64 | AVAIL PIGSTY 1.10 1 | AVAIL PIGSTY 1.10 1 | AVAIL PIGSTY 1.10 1 | AVAIL PIGSTY 1.10 1 | AVAIL PIGSTY 1.10 1 |
 | u24.aarch64 | AVAIL PIGSTY 1.10 1 | AVAIL PIGSTY 1.10 1 | AVAIL PIGSTY 1.10 1 | AVAIL PIGSTY 1.10 1 | AVAIL PIGSTY 1.10 1 |
+| u26.x86_64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| u26.aarch64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
 @ el8.x86_64 18 pg_store_plans_18 pg_store_plans_18-1.10-1PIGSTY.el8.x86_64.rpm pigsty 1.10 44.6KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_store_plans_18-1.10-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 18 pg_store_plans_18 pg_store_plans_18-1.10-1PGDG.rhel8.10.x86_64.rpm pgdg 1.10 45.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pg_store_plans_18-1.10-1PGDG.rhel8.10.x86_64.rpm
 @ el8.aarch64 18 pg_store_plans_18 pg_store_plans_18-1.10-1PIGSTY.el8.aarch64.rpm pigsty 1.10 43.4KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_store_plans_18-1.10-1PIGSTY.el8.aarch64.rpm

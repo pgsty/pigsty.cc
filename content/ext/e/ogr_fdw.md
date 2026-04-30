@@ -59,6 +59,8 @@ weight: 1550
 | u22.aarch64 | AVAIL PGDG 1.1.7 1 | AVAIL PGDG 1.1.7 1 | AVAIL PGDG 1.1.7 1 | AVAIL PGDG 1.1.7 1 | AVAIL PGDG 1.1.7 1 |
 | u24.x86_64 | AVAIL PGDG 1.1.7 1 | AVAIL PGDG 1.1.7 1 | AVAIL PGDG 1.1.7 1 | AVAIL PGDG 1.1.7 1 | AVAIL PGDG 1.1.7 1 |
 | u24.aarch64 | AVAIL PGDG 1.1.7 1 | AVAIL PGDG 1.1.7 1 | AVAIL PGDG 1.1.7 1 | AVAIL PGDG 1.1.7 1 | AVAIL PGDG 1.1.7 1 |
+| u26.x86_64 | AVAIL PGDG 1.1.7 1 | AVAIL PGDG 1.1.7 1 | AVAIL PGDG 1.1.7 1 | AVAIL PGDG 1.1.7 1 | AVAIL PGDG 1.1.7 1 |
+| u26.aarch64 | AVAIL PGDG 1.1.7 1 | AVAIL PGDG 1.1.7 1 | AVAIL PGDG 1.1.7 1 | AVAIL PGDG 1.1.7 1 | AVAIL PGDG 1.1.7 1 |
 @ el8.x86_64 18 ogr_fdw_18 ogr_fdw_18-1.1.7-1PGDG.rhel8.x86_64.rpm pgdg 1.1.7 51.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/ogr_fdw_18-1.1.7-1PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 18 ogr_fdw_18 ogr_fdw_18-1.1.7-1PGDG.rhel8.aarch64.rpm pgdg 1.1.7 49.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/ogr_fdw_18-1.1.7-1PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 18 ogr_fdw_18 ogr_fdw_18-1.1.7-1PGDG.rhel9.x86_64.rpm pgdg 1.1.7 49.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/ogr_fdw_18-1.1.7-1PGDG.rhel9.x86_64.rpm
@@ -73,6 +75,8 @@ weight: 1550
 @ u22.aarch64 18 postgresql-18-ogr-fdw postgresql-18-ogr-fdw_1.1.7-2.pgdg22.04+1_arm64.deb pgdg 1.1.7 89.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsql-ogr-fdw/postgresql-18-ogr-fdw_1.1.7-2.pgdg22.04+1_arm64.deb
 @ u24.x86_64 18 postgresql-18-ogr-fdw postgresql-18-ogr-fdw_1.1.7-2.pgdg24.04+1_amd64.deb pgdg 1.1.7 89.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsql-ogr-fdw/postgresql-18-ogr-fdw_1.1.7-2.pgdg24.04+1_amd64.deb
 @ u24.aarch64 18 postgresql-18-ogr-fdw postgresql-18-ogr-fdw_1.1.7-2.pgdg24.04+1_arm64.deb pgdg 1.1.7 87.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsql-ogr-fdw/postgresql-18-ogr-fdw_1.1.7-2.pgdg24.04+1_arm64.deb
+@ u26.x86_64 18 postgresql-18-ogr-fdw postgresql-18-ogr-fdw_1.1.7-2.pgdg26.04+1_amd64.deb pgdg 1.1.7 88.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsql-ogr-fdw/postgresql-18-ogr-fdw_1.1.7-2.pgdg26.04+1_amd64.deb
+@ u26.aarch64 18 postgresql-18-ogr-fdw postgresql-18-ogr-fdw_1.1.7-2.pgdg26.04+1_arm64.deb pgdg 1.1.7 87.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsql-ogr-fdw/postgresql-18-ogr-fdw_1.1.7-2.pgdg26.04+1_arm64.deb
 @ el8.x86_64 17 ogr_fdw_17 ogr_fdw_17-1.1.7-1PGDG.rhel8.x86_64.rpm pgdg 1.1.7 51.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/ogr_fdw_17-1.1.7-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 17 ogr_fdw_17 ogr_fdw_17-1.1.6-1PGDG.rhel8.x86_64.rpm pgdg 1.1.6 51.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/ogr_fdw_17-1.1.6-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 17 ogr_fdw_17 ogr_fdw_17-1.1.5-4PGDG.rhel8.x86_64.rpm pgdg 1.1.5 50.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/ogr_fdw_17-1.1.5-4PGDG.rhel8.x86_64.rpm
@@ -98,6 +102,8 @@ weight: 1550
 @ u22.aarch64 17 postgresql-17-ogr-fdw postgresql-17-ogr-fdw_1.1.7-2.pgdg22.04+1_arm64.deb pgdg 1.1.7 103.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsql-ogr-fdw/postgresql-17-ogr-fdw_1.1.7-2.pgdg22.04+1_arm64.deb
 @ u24.x86_64 17 postgresql-17-ogr-fdw postgresql-17-ogr-fdw_1.1.7-2.pgdg24.04+1_amd64.deb pgdg 1.1.7 89.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsql-ogr-fdw/postgresql-17-ogr-fdw_1.1.7-2.pgdg24.04+1_amd64.deb
 @ u24.aarch64 17 postgresql-17-ogr-fdw postgresql-17-ogr-fdw_1.1.7-2.pgdg24.04+1_arm64.deb pgdg 1.1.7 87.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsql-ogr-fdw/postgresql-17-ogr-fdw_1.1.7-2.pgdg24.04+1_arm64.deb
+@ u26.x86_64 17 postgresql-17-ogr-fdw postgresql-17-ogr-fdw_1.1.7-2.pgdg26.04+1_amd64.deb pgdg 1.1.7 89.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsql-ogr-fdw/postgresql-17-ogr-fdw_1.1.7-2.pgdg26.04+1_amd64.deb
+@ u26.aarch64 17 postgresql-17-ogr-fdw postgresql-17-ogr-fdw_1.1.7-2.pgdg26.04+1_arm64.deb pgdg 1.1.7 87.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsql-ogr-fdw/postgresql-17-ogr-fdw_1.1.7-2.pgdg26.04+1_arm64.deb
 @ el8.x86_64 16 ogr_fdw_16 ogr_fdw_16-1.1.7-1PGDG.rhel8.x86_64.rpm pgdg 1.1.7 51.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/ogr_fdw_16-1.1.7-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 16 ogr_fdw_16 ogr_fdw_16-1.1.6-1PGDG.rhel8.x86_64.rpm pgdg 1.1.6 51.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/ogr_fdw_16-1.1.6-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 16 ogr_fdw_16 ogr_fdw_16-1.1.5-4PGDG.rhel8.x86_64.rpm pgdg 1.1.5 50.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/ogr_fdw_16-1.1.5-4PGDG.rhel8.x86_64.rpm
@@ -126,6 +132,8 @@ weight: 1550
 @ u22.aarch64 16 postgresql-16-ogr-fdw postgresql-16-ogr-fdw_1.1.7-2.pgdg22.04+1_arm64.deb pgdg 1.1.7 103.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsql-ogr-fdw/postgresql-16-ogr-fdw_1.1.7-2.pgdg22.04+1_arm64.deb
 @ u24.x86_64 16 postgresql-16-ogr-fdw postgresql-16-ogr-fdw_1.1.7-2.pgdg24.04+1_amd64.deb pgdg 1.1.7 89.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsql-ogr-fdw/postgresql-16-ogr-fdw_1.1.7-2.pgdg24.04+1_amd64.deb
 @ u24.aarch64 16 postgresql-16-ogr-fdw postgresql-16-ogr-fdw_1.1.7-2.pgdg24.04+1_arm64.deb pgdg 1.1.7 87.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsql-ogr-fdw/postgresql-16-ogr-fdw_1.1.7-2.pgdg24.04+1_arm64.deb
+@ u26.x86_64 16 postgresql-16-ogr-fdw postgresql-16-ogr-fdw_1.1.7-2.pgdg26.04+1_amd64.deb pgdg 1.1.7 89.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsql-ogr-fdw/postgresql-16-ogr-fdw_1.1.7-2.pgdg26.04+1_amd64.deb
+@ u26.aarch64 16 postgresql-16-ogr-fdw postgresql-16-ogr-fdw_1.1.7-2.pgdg26.04+1_arm64.deb pgdg 1.1.7 87.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsql-ogr-fdw/postgresql-16-ogr-fdw_1.1.7-2.pgdg26.04+1_arm64.deb
 @ el8.x86_64 15 ogr_fdw_15 ogr_fdw_15-1.1.7-1PGDG.rhel8.x86_64.rpm pgdg 1.1.7 52.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/ogr_fdw_15-1.1.7-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 15 ogr_fdw_15 ogr_fdw_15-1.1.6-1PGDG.rhel8.x86_64.rpm pgdg 1.1.6 51.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/ogr_fdw_15-1.1.6-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 15 ogr_fdw_15 ogr_fdw_15-1.1.5-4PGDG.rhel8.x86_64.rpm pgdg 1.1.5 51.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/ogr_fdw_15-1.1.5-4PGDG.rhel8.x86_64.rpm
@@ -162,6 +170,8 @@ weight: 1550
 @ u22.aarch64 15 postgresql-15-ogr-fdw postgresql-15-ogr-fdw_1.1.7-2.pgdg22.04+1_arm64.deb pgdg 1.1.7 104.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsql-ogr-fdw/postgresql-15-ogr-fdw_1.1.7-2.pgdg22.04+1_arm64.deb
 @ u24.x86_64 15 postgresql-15-ogr-fdw postgresql-15-ogr-fdw_1.1.7-2.pgdg24.04+1_amd64.deb pgdg 1.1.7 90.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsql-ogr-fdw/postgresql-15-ogr-fdw_1.1.7-2.pgdg24.04+1_amd64.deb
 @ u24.aarch64 15 postgresql-15-ogr-fdw postgresql-15-ogr-fdw_1.1.7-2.pgdg24.04+1_arm64.deb pgdg 1.1.7 88.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsql-ogr-fdw/postgresql-15-ogr-fdw_1.1.7-2.pgdg24.04+1_arm64.deb
+@ u26.x86_64 15 postgresql-15-ogr-fdw postgresql-15-ogr-fdw_1.1.7-2.pgdg26.04+1_amd64.deb pgdg 1.1.7 89.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsql-ogr-fdw/postgresql-15-ogr-fdw_1.1.7-2.pgdg26.04+1_amd64.deb
+@ u26.aarch64 15 postgresql-15-ogr-fdw postgresql-15-ogr-fdw_1.1.7-2.pgdg26.04+1_arm64.deb pgdg 1.1.7 88.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsql-ogr-fdw/postgresql-15-ogr-fdw_1.1.7-2.pgdg26.04+1_arm64.deb
 @ el8.x86_64 14 ogr_fdw_14 ogr_fdw_14-1.1.7-1PGDG.rhel8.x86_64.rpm pgdg 1.1.7 52.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/ogr_fdw_14-1.1.7-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 14 ogr_fdw_14 ogr_fdw_14-1.1.6-1PGDG.rhel8.x86_64.rpm pgdg 1.1.6 51.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/ogr_fdw_14-1.1.6-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 14 ogr_fdw_14 ogr_fdw_14-1.1.5-4PGDG.rhel8.x86_64.rpm pgdg 1.1.5 51.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/ogr_fdw_14-1.1.5-4PGDG.rhel8.x86_64.rpm
@@ -201,6 +211,8 @@ weight: 1550
 @ u22.aarch64 14 postgresql-14-ogr-fdw postgresql-14-ogr-fdw_1.1.7-2.pgdg22.04+1_arm64.deb pgdg 1.1.7 104.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsql-ogr-fdw/postgresql-14-ogr-fdw_1.1.7-2.pgdg22.04+1_arm64.deb
 @ u24.x86_64 14 postgresql-14-ogr-fdw postgresql-14-ogr-fdw_1.1.7-2.pgdg24.04+1_amd64.deb pgdg 1.1.7 90.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsql-ogr-fdw/postgresql-14-ogr-fdw_1.1.7-2.pgdg24.04+1_amd64.deb
 @ u24.aarch64 14 postgresql-14-ogr-fdw postgresql-14-ogr-fdw_1.1.7-2.pgdg24.04+1_arm64.deb pgdg 1.1.7 88.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsql-ogr-fdw/postgresql-14-ogr-fdw_1.1.7-2.pgdg24.04+1_arm64.deb
+@ u26.x86_64 14 postgresql-14-ogr-fdw postgresql-14-ogr-fdw_1.1.7-2.pgdg26.04+1_amd64.deb pgdg 1.1.7 89.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsql-ogr-fdw/postgresql-14-ogr-fdw_1.1.7-2.pgdg26.04+1_amd64.deb
+@ u26.aarch64 14 postgresql-14-ogr-fdw postgresql-14-ogr-fdw_1.1.7-2.pgdg26.04+1_arm64.deb pgdg 1.1.7 88.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsql-ogr-fdw/postgresql-14-ogr-fdw_1.1.7-2.pgdg26.04+1_arm64.deb
 {{< /pgext_matrix >}}
 
 

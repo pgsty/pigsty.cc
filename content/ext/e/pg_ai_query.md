@@ -64,6 +64,8 @@ weight: 2730
 | u22.aarch64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
 | u24.x86_64 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 |
 | u24.aarch64 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 | AVAIL PIGSTY 0.1.1 1 |
+| u26.x86_64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| u26.aarch64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
 @ el9.x86_64 18 pg_ai_query_18 pg_ai_query_18-0.1.1-1PIGSTY.el9.x86_64.rpm pigsty 0.1.1 967.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_ai_query_18-0.1.1-1PIGSTY.el9.x86_64.rpm
 @ el9.aarch64 18 pg_ai_query_18 pg_ai_query_18-0.1.1-1PIGSTY.el9.aarch64.rpm pigsty 0.1.1 880.6KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_ai_query_18-0.1.1-1PIGSTY.el9.aarch64.rpm
 @ el10.x86_64 18 pg_ai_query_18 pg_ai_query_18-0.1.1-1PIGSTY.el10.x86_64.rpm pigsty 0.1.1 899.5KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_ai_query_18-0.1.1-1PIGSTY.el10.x86_64.rpm

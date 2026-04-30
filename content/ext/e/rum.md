@@ -68,6 +68,8 @@ weight: 2720
 | u22.aarch64 | AVAIL PGDG 1.3.15 1 | AVAIL PGDG 1.3.15 1 | AVAIL PGDG 1.3.15 1 | AVAIL PGDG 1.3.15 1 | AVAIL PGDG 1.3.15 1 |
 | u24.x86_64 | AVAIL PGDG 1.3.15 1 | AVAIL PGDG 1.3.15 1 | AVAIL PGDG 1.3.15 1 | AVAIL PGDG 1.3.15 1 | AVAIL PGDG 1.3.15 1 |
 | u24.aarch64 | AVAIL PGDG 1.3.15 1 | AVAIL PGDG 1.3.15 1 | AVAIL PGDG 1.3.15 1 | AVAIL PGDG 1.3.15 1 | AVAIL PGDG 1.3.15 1 |
+| u26.x86_64 | AVAIL PGDG 1.3.15 1 | AVAIL PGDG 1.3.15 1 | AVAIL PGDG 1.3.15 1 | AVAIL PGDG 1.3.15 1 | AVAIL PGDG 1.3.15 1 |
+| u26.aarch64 | AVAIL PGDG 1.3.15 1 | AVAIL PGDG 1.3.15 1 | AVAIL PGDG 1.3.15 1 | AVAIL PGDG 1.3.15 1 | AVAIL PGDG 1.3.15 1 |
 @ el8.x86_64 18 rum_18 rum_18-1.3.15-1PIGSTY.el8.x86_64.rpm pigsty 1.3.15 104.0KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/rum_18-1.3.15-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 18 rum_18 rum_18-1.3.15-1PIGSTY.el8.aarch64.rpm pigsty 1.3.15 97.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/rum_18-1.3.15-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 18 rum_18 rum_18-1.3.15-1PIGSTY.el9.x86_64.rpm pigsty 1.3.15 96.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/rum_18-1.3.15-1PIGSTY.el9.x86_64.rpm
@@ -82,6 +84,8 @@ weight: 2720
 @ u22.aarch64 18 postgresql-18-rum postgresql-18-rum_1.3.15-1.pgdg22.04+1_arm64.deb pgdg 1.3.15 232.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-rum/postgresql-18-rum_1.3.15-1.pgdg22.04+1_arm64.deb
 @ u24.x86_64 18 postgresql-18-rum postgresql-18-rum_1.3.15-1.pgdg24.04+1_amd64.deb pgdg 1.3.15 234.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-rum/postgresql-18-rum_1.3.15-1.pgdg24.04+1_amd64.deb
 @ u24.aarch64 18 postgresql-18-rum postgresql-18-rum_1.3.15-1.pgdg24.04+1_arm64.deb pgdg 1.3.15 226.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-rum/postgresql-18-rum_1.3.15-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 18 postgresql-18-rum postgresql-18-rum_1.3.15-1.pgdg26.04+1_amd64.deb pgdg 1.3.15 232.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-rum/postgresql-18-rum_1.3.15-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 18 postgresql-18-rum postgresql-18-rum_1.3.15-1.pgdg26.04+1_arm64.deb pgdg 1.3.15 223.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-rum/postgresql-18-rum_1.3.15-1.pgdg26.04+1_arm64.deb
 @ el8.x86_64 17 rum_17 rum_17-1.3.15-1PIGSTY.el8.x86_64.rpm pigsty 1.3.15 104.2KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/rum_17-1.3.15-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 17 rum_17 rum_17-1.3.14-1PGDG.rhel8.x86_64.rpm pgdg 1.3.14 93.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/rum_17-1.3.14-1PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 17 rum_17 rum_17-1.3.15-1PIGSTY.el8.aarch64.rpm pigsty 1.3.15 97.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/rum_17-1.3.15-1PIGSTY.el8.aarch64.rpm
@@ -102,6 +106,8 @@ weight: 2720
 @ u22.aarch64 17 postgresql-17-rum postgresql-17-rum_1.3.15-1.pgdg22.04+1_arm64.deb pgdg 1.3.15 257.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-rum/postgresql-17-rum_1.3.15-1.pgdg22.04+1_arm64.deb
 @ u24.x86_64 17 postgresql-17-rum postgresql-17-rum_1.3.15-1.pgdg24.04+1_amd64.deb pgdg 1.3.15 235.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-rum/postgresql-17-rum_1.3.15-1.pgdg24.04+1_amd64.deb
 @ u24.aarch64 17 postgresql-17-rum postgresql-17-rum_1.3.15-1.pgdg24.04+1_arm64.deb pgdg 1.3.15 227.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-rum/postgresql-17-rum_1.3.15-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 17 postgresql-17-rum postgresql-17-rum_1.3.15-1.pgdg26.04+1_amd64.deb pgdg 1.3.15 233.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-rum/postgresql-17-rum_1.3.15-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 17 postgresql-17-rum postgresql-17-rum_1.3.15-1.pgdg26.04+1_arm64.deb pgdg 1.3.15 224.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-rum/postgresql-17-rum_1.3.15-1.pgdg26.04+1_arm64.deb
 @ el8.x86_64 16 rum_16 rum_16-1.3.15-1PIGSTY.el8.x86_64.rpm pigsty 1.3.15 104.1KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/rum_16-1.3.15-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 16 rum_16 rum_16-1.3.14-1PGDG.rhel8.x86_64.rpm pgdg 1.3.14 93.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/rum_16-1.3.14-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 16 rum_16 rum_16-1.3.13-2.rhel8.1.x86_64.rpm pgdg 1.3.13 92.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/rum_16-1.3.13-2.rhel8.1.x86_64.rpm
@@ -126,6 +132,8 @@ weight: 2720
 @ u22.aarch64 16 postgresql-16-rum postgresql-16-rum_1.3.15-1.pgdg22.04+1_arm64.deb pgdg 1.3.15 256.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-rum/postgresql-16-rum_1.3.15-1.pgdg22.04+1_arm64.deb
 @ u24.x86_64 16 postgresql-16-rum postgresql-16-rum_1.3.15-1.pgdg24.04+1_amd64.deb pgdg 1.3.15 234.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-rum/postgresql-16-rum_1.3.15-1.pgdg24.04+1_amd64.deb
 @ u24.aarch64 16 postgresql-16-rum postgresql-16-rum_1.3.15-1.pgdg24.04+1_arm64.deb pgdg 1.3.15 226.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-rum/postgresql-16-rum_1.3.15-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 16 postgresql-16-rum postgresql-16-rum_1.3.15-1.pgdg26.04+1_amd64.deb pgdg 1.3.15 232.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-rum/postgresql-16-rum_1.3.15-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 16 postgresql-16-rum postgresql-16-rum_1.3.15-1.pgdg26.04+1_arm64.deb pgdg 1.3.15 224.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-rum/postgresql-16-rum_1.3.15-1.pgdg26.04+1_arm64.deb
 @ el8.x86_64 15 rum_15 rum_15-1.3.14-1PGDG.rhel8.x86_64.rpm pgdg 1.3.14 113.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/rum_15-1.3.14-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 15 rum_15 rum_15-1.3.13-1.rhel8.x86_64.rpm pgdg 1.3.13 113.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/rum_15-1.3.13-1.rhel8.x86_64.rpm
 @ el8.aarch64 15 rum_15 rum_15-1.3.14-1PGDG.rhel8.aarch64.rpm pgdg 1.3.14 105.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/rum_15-1.3.14-1PGDG.rhel8.aarch64.rpm
@@ -144,6 +152,8 @@ weight: 2720
 @ u22.aarch64 15 postgresql-15-rum postgresql-15-rum_1.3.15-1.pgdg22.04+1_arm64.deb pgdg 1.3.15 316.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-rum/postgresql-15-rum_1.3.15-1.pgdg22.04+1_arm64.deb
 @ u24.x86_64 15 postgresql-15-rum postgresql-15-rum_1.3.15-1.pgdg24.04+1_amd64.deb pgdg 1.3.15 288.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-rum/postgresql-15-rum_1.3.15-1.pgdg24.04+1_amd64.deb
 @ u24.aarch64 15 postgresql-15-rum postgresql-15-rum_1.3.15-1.pgdg24.04+1_arm64.deb pgdg 1.3.15 279.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-rum/postgresql-15-rum_1.3.15-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 15 postgresql-15-rum postgresql-15-rum_1.3.15-1.pgdg26.04+1_amd64.deb pgdg 1.3.15 287.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-rum/postgresql-15-rum_1.3.15-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 15 postgresql-15-rum postgresql-15-rum_1.3.15-1.pgdg26.04+1_arm64.deb pgdg 1.3.15 276.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-rum/postgresql-15-rum_1.3.15-1.pgdg26.04+1_arm64.deb
 @ el8.x86_64 14 rum_14 rum_14-1.3.14-1PGDG.rhel8.x86_64.rpm pgdg 1.3.14 111.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/rum_14-1.3.14-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 14 rum_14 rum_14-1.3.13-1.rhel8.x86_64.rpm pgdg 1.3.13 111.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/rum_14-1.3.13-1.rhel8.x86_64.rpm
 @ el8.x86_64 14 rum_14 rum_14-1.3.8-1.rhel8.x86_64.rpm pgdg 1.3.8 308.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/rum_14-1.3.8-1.rhel8.x86_64.rpm
@@ -163,6 +173,8 @@ weight: 2720
 @ u22.aarch64 14 postgresql-14-rum postgresql-14-rum_1.3.15-1.pgdg22.04+1_arm64.deb pgdg 1.3.15 314.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-rum/postgresql-14-rum_1.3.15-1.pgdg22.04+1_arm64.deb
 @ u24.x86_64 14 postgresql-14-rum postgresql-14-rum_1.3.15-1.pgdg24.04+1_amd64.deb pgdg 1.3.15 287.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-rum/postgresql-14-rum_1.3.15-1.pgdg24.04+1_amd64.deb
 @ u24.aarch64 14 postgresql-14-rum postgresql-14-rum_1.3.15-1.pgdg24.04+1_arm64.deb pgdg 1.3.15 277.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-rum/postgresql-14-rum_1.3.15-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 14 postgresql-14-rum postgresql-14-rum_1.3.15-1.pgdg26.04+1_amd64.deb pgdg 1.3.15 284.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-rum/postgresql-14-rum_1.3.15-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 14 postgresql-14-rum postgresql-14-rum_1.3.15-1.pgdg26.04+1_arm64.deb pgdg 1.3.15 274.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-rum/postgresql-14-rum_1.3.15-1.pgdg26.04+1_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建

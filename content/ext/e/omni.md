@@ -99,6 +99,8 @@ weight: 2940
 | u22.aarch64 | MISS PIGSTY - 0 | AVAIL PIGSTY 20250120 1 | AVAIL PIGSTY 20250120 1 | AVAIL PIGSTY 20250120 1 | AVAIL PIGSTY 20250120 1 |
 | u24.x86_64 | AVAIL PIGSTY 20251108 1 | AVAIL PIGSTY 20251108 1 | AVAIL PIGSTY 20251108 1 | AVAIL PIGSTY 20251108 1 | AVAIL PIGSTY 20251108 1 |
 | u24.aarch64 | AVAIL PIGSTY 20251108 1 | AVAIL PIGSTY 20251108 1 | AVAIL PIGSTY 20251108 1 | AVAIL PIGSTY 20251108 1 | AVAIL PIGSTY 20251108 1 |
+| u26.x86_64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| u26.aarch64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
 @ d13.x86_64 18 postgresql-18-omnigres postgresql-18-omnigres_20251108-1PIGSTY~trixie_amd64.deb pigsty 20251108 3.0MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/o/omnigres/postgresql-18-omnigres_20251108-1PIGSTY~trixie_amd64.deb
 @ d13.aarch64 18 postgresql-18-omnigres postgresql-18-omnigres_20251108-1PIGSTY~trixie_arm64.deb pigsty 20251108 2.7MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/o/omnigres/postgresql-18-omnigres_20251108-1PIGSTY~trixie_arm64.deb
 @ u24.x86_64 18 postgresql-18-omnigres postgresql-18-omnigres_20251108-1PIGSTY~noble_amd64.deb pigsty 20251108 3.2MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/o/omnigres/postgresql-18-omnigres_20251108-1PIGSTY~noble_amd64.deb
