@@ -16,7 +16,7 @@ categories: [参考]
 - 配置名称： `ha/simu`
 - 节点数量： 20 节点，[`pigsty/vagrant/spec/simu.rb`](https://github.com/pgsty/pigsty/blob/main/vagrant/spec/simu.rb)
 - 配置说明：20 节点的生产环境仿真配置，需要强大的宿主机方可运行。
-- 适用系统：`el8`, `el9`, `el10`, `d12`, `d13`, `u22`, `u24`
+- 适用系统：`el8`, `el9`, `el10`, `d12`, `d13`, `u22`, `u24`, `u26`
 - 适用架构：`x86_64`, `aarch64`
 
 启用方式：
@@ -47,7 +47,7 @@ categories: [参考]
 - 2 节点 Proxy（HAProxy + Keepalived VIP）
 - 多套 PostgreSQL 集群：
   - pg-meta：2 节点高可用
-  - pg-v12~v17：单节点多版本测试
+  - pg-v14~v18：单节点多版本测试
   - pg-pitr：单节点 PITR 测试
   - pg-test：4 节点高可用
   - pg-src/pg-dst：3+2 节点复制测试
@@ -63,4 +63,3 @@ categories: [参考]
 **注意事项**：
 - 需要强大的宿主机（推荐 64GB+ 内存）
 - 使用 Vagrant 虚拟机模拟
-

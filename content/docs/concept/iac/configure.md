@@ -94,7 +94,7 @@ cd ~/pigsty
 ./configure
     [-c|--conf <template>]      # 配置模板名称（meta|rich|slim|ha/full|...）
     [-i|--ip <ipaddr>]          # 指定主 IP 地址
-    [-v|--version <pgver>]      # PostgreSQL 大版本号（13|14|15|16|17|18）
+    [-v|--version <pgver>]      # PostgreSQL 大版本号（14|15|16|17|18）
     [-r|--region <region>]      # 上游软件仓库区域（default|china|europe）
     [-o|--output <file>]        # 输出配置文件路径（默认：pigsty.yml）
     [-s|--skip]                 # 跳过 IP 地址探测与替换
@@ -111,7 +111,7 @@ cd ~/pigsty
 |:------------------------|:------------------------------------------------------------------|
 | `-c, --conf`            | 从 `conf/<template>.yml` 生成配置文件，支持子目录如 `ha/full`                   |
 | `-i, --ip`              | 用指定 IP 替换配置模板中的占位符 `10.10.10.10`                                  |
-| `-v, --version`         | 指定 PostgreSQL 大版本号（13-18），不指定时保持模板默认值                             |
+| `-v, --version`         | 指定 PostgreSQL 大版本号（14-18），不指定时保持模板默认值                             |
 | `-r, --region`          | 设置软件仓库镜像区域：`default`（默认）、`china`（中国镜像）、`europe`（欧洲镜像）             |
 | `-o, --output`          | 指定输出文件路径，默认为 `pigsty.yml`                                         |
 | `-s, --skip`            | 跳过 IP 地址探测与替换，保留模板中的 `10.10.10.10` 占位符                            |

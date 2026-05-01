@@ -31,7 +31,7 @@ Pigsty 提供了 [**`configure`**](https://github.com/pgsty/pigsty/blob/main/con
 ./configure -c slim             # 使用最小化的单节点模板
 
 # 使用不同的数据库内核
-./configure -c pgsql            # 原生 PostgreSQL 内核，基础功能 (13~18)
+./configure -c pgsql            # 原生 PostgreSQL 内核，基础功能 (14~18)
 ./configure -c citus            # Citus 分布式高可用 PostgreSQL (14~17)
 ./configure -c mssql            # Babelfish 内核，兼容 SQL Server 协议 (17)
 ./configure -c polar            # PolarDB PG 内核，Aurora/RAC 风格 (17)
@@ -71,7 +71,7 @@ Pigsty 提供了 [**`configure`**](https://github.com/pgsty/pigsty/blob/main/con
 
 | 模板                                         | 说明                                        |
 |--------------------------------------------|-------------------------------------------|
-| [**`pgsql.yml`**](/docs/conf/pgsql/)       | 原生 PostgreSQL 内核，基础功能 (13~18)             |
+| [**`pgsql.yml`**](/docs/conf/pgsql/)       | 原生 PostgreSQL 内核，基础功能 (14~18)             |
 | [**`citus.yml`**](/docs/conf/citus/)       | Citus 分布式高可用 PostgreSQL (14~17)           |
 | [**`mssql.yml`**](/docs/conf/mssql/)       | Babelfish 内核，兼容 SQL Server 协议 (17)        |
 | [**`polar.yml`**](/docs/conf/polar/)       | PolarDB PG 内核，Aurora/RAC 风格 (17)          |
@@ -141,5 +141,5 @@ Pigsty 提供了 [**`configure`**](https://github.com/pgsty/pigsty/blob/main/con
 
 | 模板              | 说明                                             |
 |-----------------|------------------------------------------------|
-| **`build.yml`** | EL 9/10、Debian 12/13、Ubuntu 22.04/24.04 开源构建配置 |
+| **`build.yml`** | EL 9/10、Debian 12/13、Ubuntu 22.04/24.04/26.04 开源构建配置 |
 {.full-width}

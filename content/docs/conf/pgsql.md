@@ -1,12 +1,12 @@
 ---
 title: pgsql
 weight: 410
-description: 原生 PostgreSQL 内核，支持 PostgreSQL 13 到 18 的多版本部署
+description: 原生 PostgreSQL 内核，支持 PostgreSQL 14 到 18 的多版本部署
 icon: fa-brands fa-linux
 categories: [参考]
 ---
 
-`pgsql` 配置模板使用原生 PostgreSQL 内核，是 Pigsty 的默认数据库内核，支持 PostgreSQL 13 到 18 版本。
+`pgsql` 配置模板使用原生 PostgreSQL 内核，是 Pigsty 的默认数据库内核，支持 PostgreSQL 14 到 18 版本。
 
 
 --------
@@ -16,7 +16,7 @@ categories: [参考]
 - 配置名称： `pgsql`
 - 节点数量： 单节点
 - 配置说明：原生 PostgreSQL 内核配置模板
-- 适用系统：`el8`, `el9`, `el10`, `d12`, `d13`, `u22`, `u24`
+- 适用系统：`el8`, `el9`, `el10`, `d12`, `d13`, `u22`, `u24`, `u26`
 - 适用架构：`x86_64`, `aarch64`
 - 相关配置：[`meta`](/docs/conf/meta/)
 
@@ -50,7 +50,7 @@ categories: [参考]
 
 **版本支持**：
 - PostgreSQL 18（默认）
-- PostgreSQL 17、16、15、14、13
+- PostgreSQL 17、16、15、14
 
 **适用场景**：
 - 需要使用最新 PostgreSQL 特性

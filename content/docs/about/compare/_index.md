@@ -25,7 +25,7 @@ categories: [参考]
 
 | **指标** | **Pigsty**                                                                  | **Aliyun RDS**                                                             | **AWS RDS**                                                                      |
 |--------|-----------------------------------------------------------------------------|----------------------------------------------------------------------------|----------------------------------------------------------------------------------|
-| 大版本支持  | 13 - 18                                                                     | 13 - 18                                                                    | 13 - 18                                                                          |
+| 大版本支持  | 14 - 18                                                                     | 13 - 18                                                                    | 13 - 18                                                                          |
 | 只读从库   | <i class="fas fa-circle-check text-success"></i> 支持任意数量只读从库                 | <i class="fas fa-circle-xmark text-danger"></i> 备实例不对用户开放                  | <i class="fas fa-circle-xmark text-danger"></i> 备实例不对用户开放                        |
 | 读写分离   | <i class="fas fa-circle-check text-success"></i> 支持端口区分读写流量                 | <i class="fa-solid fa-triangle-exclamation text-secondary"></i> 独立收费组件     | <i class="fa-solid fa-triangle-exclamation text-secondary"></i> 独立收费组件           |
 | 快慢分离   | <i class="fas fa-circle-check text-success"></i> 支持离线 ETL 实例                | <i class="fas fa-circle-xmark text-danger"></i> 未见相关特性                     | <i class="fas fa-circle-xmark text-danger"></i> 未见相关特性                           |

@@ -6,7 +6,7 @@ icon: fa-solid fa-crown
 categories: [参考]
 ---
 
-`build/pro` 配置模板是 Pigsty 专业版离线软件包的构建环境配置，包含 PostgreSQL 13-18 全版本及额外商业组件。
+`build/pro` 配置模板是 Pigsty 专业版离线软件包的构建环境配置，包含 PostgreSQL 14-18 全版本及额外商业组件。
 
 此配置仅供开发者和贡献者使用。
 
@@ -46,13 +46,13 @@ cp conf/build/pro.yml pigsty.yml
 `build/pro` 模板是 Pigsty 专业版离线软件包的构建配置，比开源版包含更多内容。
 
 **与 OSS 版的区别**：
-- 包含 PostgreSQL 13-18 全部六个大版本
+- 包含 PostgreSQL 14-18 全部五个大版本
 - 包含额外商业/企业组件：Kafka、PolarDB、IvorySQL 等
 - 包含 Java 运行时和 Sealos 等工具
 - 输出目录为 `dist/${version}/pro/`
 
 **构建内容**：
-- PostgreSQL 13、14、15、16、17、18 全版本
+- PostgreSQL 14、15、16、17、18 全版本
 - 每个版本的全部分类扩展包
 - Kafka 消息队列
 - PolarDB 和 IvorySQL 内核
@@ -77,4 +77,3 @@ cp conf/build/pro.yml pigsty.yml
 # 3. 打包离线安装包
 make cache-pro
 ```
-

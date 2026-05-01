@@ -32,7 +32,7 @@ categories: [参考]
 
 Pigsty 是一个更好的本地开源 RDS for PostgreSQL 替代：
 
-- [开箱即用的RDS](#开箱即用的rds)：从内核到 RDS 发行版，在 EL/Debian/Ubuntu 下提供 13-18 版本的生产级 PG 数据库服务。
+- [开箱即用的RDS](#开箱即用的rds)：从内核到 RDS 发行版，在 EL/Debian/Ubuntu 下提供 14-18 版本的生产级 PG 数据库服务。
 - [丰富的扩展插件](#丰富的扩展插件)：提供无可比拟的 507 扩展，提供开箱即用的分布式的时序地理空间图文向量多模态数据库能力。
 - [灵活的模块架构](#灵活的模块架构)：灵活组合，自由扩展：Redis/Etcd/MinIO/Mongo；可独立使用，监控现有 RDS/主机/数据库。
 - [惊艳的观测能力](#惊艳的观测能力)：基于现代可观测性技术栈 Prometheus/Grafana，提供令人惊艳，无可比拟的数据库观测能力。
@@ -45,7 +45,7 @@ Pigsty 是一个更好的本地开源 RDS for PostgreSQL 替代：
 PostgreSQL 整合了生态中的工具与最佳实践：
 
 - 开箱即用的 [PostgreSQL](https://www.postgresql.org/) 发行版，深度整合地理、时序、分布式、图、向量、搜索、AI 等 507 个 [扩展插件](/ext/list)！
-- 运行于裸操作系统之上，无需容器支持，支持主流操作系统： EL 8/9/10, Ubuntu 22.04/24.04 以及 Debian 12/13。
+- 运行于裸操作系统之上，无需容器支持，支持主流操作系统： EL 8/9/10, Ubuntu 22.04/24.04/26.04 以及 Debian 12/13。
 - 基于 [patroni](https://patroni.readthedocs.io/en/latest/), [haproxy](http://www.haproxy.org/), 与 [etcd](https://etcd.io/)，打造故障自愈的高可用架构：硬件故障自动切换，流量无缝衔接。
 - 基于 [pgBackRest](https://pgbackrest.org/) 与可选的 [MinIO](https://min.io/) 集群提供开箱即用的 PITR 时间点恢复，为软件缺陷与人为删库兜底。
 - 基于 [Ansible](https://www.ansible.com/) 提供声明式的 API 对复杂度进行抽象，以 **Database-as-Code** 的方式极大简化了日常运维管理操作。
@@ -64,7 +64,7 @@ PostgreSQL 是一个足够完美的数据库内核，但它需要更多工具与
 Pigsty 为您解决使用 PostgreSQL 中会遇到的各种难题：内核扩展安装，连接池，负载均衡，服务接入，高可用 / 自动故障切换，日志收集，指标监控，告警，备份恢复，PITR，访问控制，参数调优，安全加密，证书签发，NTP，DNS，参数调优，配置管理，CMDB，管理预案… 您无需再为这些细节烦心劳神！
 
 
-Pigsty 支持 PostgreSQL 13 ～ 18 主干内核与其他兼容分支，可运行于 EL / Debian / Ubuntu 以及 [兼容操作系统发行版](/docs/ref/linux) 上，在 x86_64 与 ARM64 芯片架构上可用，且无需容器支持。
+Pigsty 支持 PostgreSQL 14 ～ 18 主干内核与其他兼容分支，可运行于 EL / Debian / Ubuntu 以及 [兼容操作系统发行版](/docs/ref/linux) 上，在 x86_64 与 ARM64 芯片架构上可用，且无需容器支持。
 除了数据库内核与大量开箱即用的扩展插件以外，Pigsty 还提供了数据库服务所需的完整基础设施与运行时，以及本地沙箱 / 生产环境 / 云 IaaS 自动部署方案。
 
 Pigsty 可以一键从裸机开始拉起整套环境，触达软件交付的最后一公里。普通研发运维均可快速上手并兼职进行数据库管理，无需数据库专家即可自建企业级 RDS 服务！

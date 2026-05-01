@@ -46,19 +46,18 @@ all:
 
 
     #==========================================================#
-    # nodes: 36 nodes
+    # nodes: 35 nodes
     #==========================================================#
     # ./node.yml
     nodes:
       hosts:
         10.10.10.10 : { nodename: meta1  ,node_cluster: meta   ,pg_cluster: pg_meta  ,pg_seq: 1 ,pg_role: primary, infra_seq: 1 }
         10.10.10.11 : { nodename: meta2  ,node_cluster: meta   ,pg_cluster: pg_meta  ,pg_seq: 2 ,pg_role: replica, infra_seq: 2 }
-        10.10.10.12 : { nodename: pg12   ,node_cluster: pg12   ,pg_cluster: pg-v12   ,pg_seq: 1 ,pg_role: primary }
-        10.10.10.13 : { nodename: pg13   ,node_cluster: pg13   ,pg_cluster: pg-v13   ,pg_seq: 1 ,pg_role: primary }
-        10.10.10.14 : { nodename: pg14   ,node_cluster: pg14   ,pg_cluster: pg-v14   ,pg_seq: 1 ,pg_role: primary }
-        10.10.10.15 : { nodename: pg15   ,node_cluster: pg15   ,pg_cluster: pg-v15   ,pg_seq: 1 ,pg_role: primary }
-        10.10.10.16 : { nodename: pg16   ,node_cluster: pg16   ,pg_cluster: pg-v16   ,pg_seq: 1 ,pg_role: primary }
-        10.10.10.17 : { nodename: pg17   ,node_cluster: pg17   ,pg_cluster: pg-v17   ,pg_seq: 1 ,pg_role: primary }
+        10.10.10.12 : { nodename: pg14   ,node_cluster: pg14   ,pg_cluster: pg-v14   ,pg_seq: 1 ,pg_role: primary }
+        10.10.10.13 : { nodename: pg15   ,node_cluster: pg15   ,pg_cluster: pg-v15   ,pg_seq: 1 ,pg_role: primary }
+        10.10.10.14 : { nodename: pg16   ,node_cluster: pg16   ,pg_cluster: pg-v16   ,pg_seq: 1 ,pg_role: primary }
+        10.10.10.15 : { nodename: pg17   ,node_cluster: pg17   ,pg_cluster: pg-v17   ,pg_seq: 1 ,pg_role: primary }
+        10.10.10.16 : { nodename: pg18   ,node_cluster: pg18   ,pg_cluster: pg-v18   ,pg_seq: 1 ,pg_role: primary }
         10.10.10.18 : { nodename: proxy1 ,node_cluster: proxy  ,vip_address: 10.10.10.20 ,vip_vrid: 20 ,vip_interface: eth1 ,vip_role: master }
         10.10.10.19 : { nodename: proxy2 ,node_cluster: proxy  ,vip_address: 10.10.10.20 ,vip_vrid: 20 ,vip_interface: eth1 ,vip_role: backup }
         10.10.10.21 : { nodename: minio1 ,node_cluster: minio  ,minio_cluster: minio ,minio_seq: 1 ,etcd_cluster: etcd ,etcd_seq: 1}
@@ -179,50 +178,43 @@ all:
           - '00 01 * * 2,3,4,5,6,7 /pg/bin/pg-backup'
 
     #==========================================================#
-    # pg-v12 - v16 (no longer supported in OSS ver since 2.6)
+    # pg-v14 - v18
     #==========================================================#
     # ./pgsql.yml -l pg-v*
-    pg-v12:
-      hosts: { 10.10.10.12: {}}
-      vars:
-        pg_version: 12
-        pg_service_provider: proxy       # use load balancer on group `proxy` with port 10012
-        pg_default_services:  [{ name: primary ,port: 10012 ,dest: postgres  ,check: /primary   ,selector: "[]" }]
-
-    pg-v13:
-      hosts: { 10.10.10.13: {}}
-      vars:
-        pg_version: 13
-        pg_service_provider: proxy       # use load balancer on group `proxy` with port 10013
-        pg_default_services:  [{ name: primary ,port: 10013 ,dest: postgres  ,check: /primary   ,selector: "[]" }]
-
     pg-v14:
-      hosts: { 10.10.10.14: {}}
+      hosts: { 10.10.10.12: {}}
       vars:
         pg_version: 14
         pg_service_provider: proxy       # use load balancer on group `proxy` with port 10014
         pg_default_services:  [{ name: primary ,port: 10014 ,dest: postgres  ,check: /primary   ,selector: "[]" }]
 
     pg-v15:
-      hosts: { 10.10.10.15: {}}
+      hosts: { 10.10.10.13: {}}
       vars:
         pg_version: 15
         pg_service_provider: proxy       # use load balancer on group `proxy` with port 10015
         pg_default_services:  [{ name: primary ,port: 10015 ,dest: postgres  ,check: /primary   ,selector: "[]" }]
 
     pg-v16:
-      hosts: { 10.10.10.16: {}}
+      hosts: { 10.10.10.14: {}}
       vars:
         pg_version: 16
         pg_service_provider: proxy       # use load balancer on group `proxy` with port 10016
         pg_default_services:  [{ name: primary ,port: 10016 ,dest: postgres  ,check: /primary   ,selector: "[]" }]
 
     pg-v17:
-      hosts: { 10.10.10.17: {}}
+      hosts: { 10.10.10.15: {}}
       vars:
         pg_version: 17
         pg_service_provider: proxy       # use load balancer on group `proxy` with port 10017
         pg_default_services:  [{ name: primary ,port: 10017 ,dest: postgres  ,check: /primary   ,selector: "[]" }]
+
+    pg-v18:
+      hosts: { 10.10.10.16: {}}
+      vars:
+        pg_version: 18
+        pg_service_provider: proxy       # use load balancer on group `proxy` with port 10018
+        pg_default_services:  [{ name: primary ,port: 10018 ,dest: postgres  ,check: /primary   ,selector: "[]" }]
 
     #==========================================================#
     # pg-pitr: single node
@@ -466,7 +458,7 @@ all:
     #==========================================================#
     # INFRA
     #==========================================================#
-    version: v4.2.2                   # pigsty version string
+    version: v4.3.0                   # pigsty version string
     admin_ip: 10.10.10.10             # admin node ip address
     region: default                   # upstream mirror region: default|china|europe
     infra_portal:                     # infra services exposed via portal

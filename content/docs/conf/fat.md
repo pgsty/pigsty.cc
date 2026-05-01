@@ -1,12 +1,12 @@
 ---
 title: fat
 weight: 240
-description: 功能全测试模板，单节点安装所有扩展，构建包含 PG 13-18 全版本的本地软件源。
+description: 功能全测试模板，单节点安装所有扩展，构建包含 PG 14-18 全版本的本地软件源。
 icon: fa-solid fa-database
 categories: [参考]
 ---
 
-`fat` 配置模板是 Pigsty 的 **功能全测试模板**（Feature-All-Test），在单节点上安装所有扩展插件，并构建包含 PostgreSQL 13-18 全部六个大版本所有扩展的本地软件源。
+`fat` 配置模板是 Pigsty 的 **功能全测试模板**（Feature-All-Test），在单节点上安装所有扩展插件，并构建包含 PostgreSQL 14-18 全部五个大版本所有扩展的本地软件源。
 
 这是一个用于测试与开发的全功能配置，适合需要完整软件包缓存或测试全部扩展的场景。
 
@@ -17,8 +17,8 @@ categories: [参考]
 
 - 配置名称： `fat`
 - 节点数量： 单节点
-- 配置说明：功能全测试模板，安装所有扩展，构建包含 PG 13-18 全版本的本地软件源
-- 适用系统：`el8`, `el9`, `el10`, `d12`, `d13`, `u22`, `u24`
+- 配置说明：功能全测试模板，安装所有扩展，构建包含 PG 14-18 全版本的本地软件源
+- 适用系统：`el8`, `el9`, `el10`, `d12`, `d13`, `u22`, `u24`, `u26`
 - 适用架构：`x86_64`, `aarch64`
 - 相关配置：[`meta`](/docs/conf/meta/)，[`slim`](/docs/conf/slim/)，[`fat`](/docs/conf/fat/)
 
@@ -52,7 +52,7 @@ categories: [参考]
 
 **关键特性**：
 - **全扩展安装**：安装 PostgreSQL 18 的所有分类扩展包
-- **多版本软件源**：本地软件源包含 PostgreSQL 13-18 全部六个大版本
+- **多版本软件源**：本地软件源包含 PostgreSQL 14-18 全部五个大版本
 - **完整组件栈**：包含 MinIO 备份、Docker 应用、VIP 等功能
 - **企业级组件**：包含 Kafka、PolarDB、IvorySQL、TigerBeetle 等
 
@@ -60,13 +60,13 @@ categories: [参考]
 
 | 分类 | 说明 |
 |:--|:--|
-| PostgreSQL 13-18 | 六个大版本的内核和全部扩展 |
+| PostgreSQL 14-18 | 五个大版本的内核和全部扩展 |
 | 扩展分类包 | `time`, `gis`, `rag`, `fts`, `olap`, `feat`, `lang`, `type`, `util`, `func`, `admin`, `stat`, `sec`, `fdw`, `sim`, `etl` |
 | 企业组件 | Kafka、Java 运行时、Sealos、TigerBeetle |
 | 数据库内核 | PolarDB、IvorySQL |
 
 **与 rich 的区别**：
-- `fat` 包含 PostgreSQL 13-18 全部六个版本，`rich` 只包含当前默认版本
+- `fat` 包含 PostgreSQL 14-18 全部五个版本，`rich` 只包含当前默认版本
 - `fat` 包含额外的企业组件（Kafka、PolarDB、IvorySQL 等）
 - `fat` 需要更大的磁盘空间和更长的构建时间
 

@@ -46,7 +46,7 @@ curl -fsSL https://repo.pigsty.cc/yum/repo | sudo tee /etc/yum.repos.d/pigsty.re
 
 ## APT 仓库
 
-适用于 Debian 11/12/13 和 Ubuntu 22.04/24.04 及其兼容系统。
+适用于 Debian 11/12/13 和 Ubuntu 22.04/24.04/26.04 及其兼容系统。
 
 ### 添加仓库
 
@@ -101,7 +101,7 @@ Pigsty 仓库遵循以下原则：
 
 1. **补充性**：只收录 PGDG 仓库中不存在的扩展
 2. **一致性**：扩展进入 PGDG 仓库后，Pigsty 仓库会移除或保持一致
-3. **兼容性**：支持 PostgreSQL 13-18 多个大版本
+3. **兼容性**：支持 PostgreSQL 14-18 多个大版本
 4. **多平台**：支持 x86_64 和 aarch64 架构
 
 
@@ -112,4 +112,3 @@ Pigsty 仓库遵循以下原则：
 - [Pigsty 扩展目录](/ext/list/)：查阅所有可用扩展
 - [PGDG YUM 仓库](https://download.postgresql.org/pub/repos/yum/)
 - [PGDG APT 仓库](https://apt.postgresql.org/pub/repos/apt/)
-
