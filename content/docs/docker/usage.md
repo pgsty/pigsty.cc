@@ -110,7 +110,7 @@ repo_extra_packages:
 
 ```yaml
 - { name: docker-ce ,description: 'Docker CE' ,module: infra  ,releases: [8,9,10] ,arch: [x86_64, aarch64] ,baseurl: { default: 'https://download.docker.com/linux/centos/$releasever/$basearch/stable'    ,china: 'https://mirrors.aliyun.com/docker-ce/linux/centos/$releasever/$basearch/stable'  ,europe: 'https://mirrors.xtom.de/docker-ce/linux/centos/$releasever/$basearch/stable' }}
-- { name: docker-ce ,description: 'Docker'    ,module: infra  ,releases: [11,12,13,20,22,24] ,arch: [x86_64, aarch64] ,baseurl: { default: 'https://download.docker.com/linux/${distro_name} ${distro_codename} stable' ,china: 'https://mirrors.aliyun.com/docker-ce/linux/${distro_name} ${distro_codename} stable' }}
+- { name: docker-ce ,description: 'Docker'    ,module: infra  ,releases: [11,12,13,22,24,26] ,arch: [x86_64, aarch64] ,baseurl: { default: 'https://download.docker.com/linux/${distro_name} ${distro_codename} stable' ,china: 'https://mirrors.aliyun.com/docker-ce/linux/${distro_name} ${distro_codename} stable' }}
 ```
 
 您可以在 [`repo_modules`](/docs/infra/param#repo_modules) 与 [`node_repo_modules`](/docs/node/param#node_repo_modules) 两个参数中，使用 `infra` 模块名引用这个仓库。

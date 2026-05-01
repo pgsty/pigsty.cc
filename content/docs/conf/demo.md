@@ -18,7 +18,7 @@ categories: [参考]
 - 配置名称： `demo/demo`
 - 节点数量： 单节点
 - 配置说明：Pigsty 公开演示站点配置
-- 适用系统：`el8`, `el9`, `el10`, `d12`, `d13`, `u22`, `u24`
+- 适用系统：`el8`, `el9`, `el10`, `d12`, `d13`, `u22`, `u24`, `u26`
 - 适用架构：`x86_64`
 - 相关配置：[`meta`](/docs/conf/meta/)，[`rich`](/docs/conf/rich/)
 

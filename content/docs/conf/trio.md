@@ -16,7 +16,7 @@ categories: [参考]
 - 配置名称： `ha/trio`
 - 节点数量： 三节点
 - 配置说明：三节点标准高可用架构，允许任意一台服务器宕机
-- 适用系统：`el8`, `el9`, `el10`, `d12`, `d13`, `u22`, `u24`
+- 适用系统：`el8`, `el9`, `el10`, `d12`, `d13`, `u22`, `u24`, `u26`
 - 适用架构：`x86_64`, `aarch64`
 - 相关配置：[`ha/dual`](/docs/conf/dual/)，[`ha/full`](/docs/conf/full/)，[`ha/safe`](/docs/conf/safe/)
 

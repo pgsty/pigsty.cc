@@ -1,14 +1,14 @@
 ---
 title: Teable：AI 无代码数据库
 weight: 580
-description: 使用 Pigsty v4.2 自建 Teable，并接入外部 PostgreSQL 与 MinIO。
+description: 使用 Pigsty v4.3 自建 Teable，并接入外部 PostgreSQL 与 MinIO。
 module: [SOFTWARE]
 categories: [参考]
 ---
 
 [**Teable**](https://teable.io/) 是面向团队协作的无代码数据库平台。
 
-Pigsty v4.2 提供 `app/teable` 模板（`conf/app/teable.yml`），默认依赖 **PostgreSQL + MinIO + Docker**（不依赖 Redis）。
+Pigsty v4.3 提供 `app/teable` 模板（`conf/app/teable.yml`），默认依赖 **PostgreSQL + MinIO + Docker**（不依赖 Redis）。
 
 ## 快速开始
 

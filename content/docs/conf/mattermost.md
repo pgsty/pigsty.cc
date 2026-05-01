@@ -16,7 +16,7 @@ categories: [参考]
 - 配置名称： `app/mattermost`
 - 节点数量： 单节点（默认）
 - 配置说明：Mattermost + PostgreSQL + Docker 的开箱即用模板。
-- 适用系统：`el8`, `el9`, `el10`, `d12`, `d13`, `u22`, `u24`
+- 适用系统：`el8`, `el9`, `el10`, `d12`, `d13`, `u22`, `u24`, `u26`
 - 适用架构：`x86_64`, `aarch64`
 - 相关配置：[`app/odoo`](/docs/conf/odoo/)、[`app/registry`](/docs/conf/registry/)、[`supabase`](/docs/conf/supabase/)
 

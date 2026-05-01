@@ -1,14 +1,14 @@
 ---
 title: Maybe：个人财务管理
 weight: 600
-description: 使用 Pigsty v4.2 自建 Maybe，并将数据存储到外部 PostgreSQL。
+description: 使用 Pigsty v4.3 自建 Maybe，并将数据存储到外部 PostgreSQL。
 module: [SOFTWARE]
 categories: [参考]
 ---
 
 [**Maybe**](https://github.com/maybe-finance/maybe) 是开源个人财务管理工具。
 
-Pigsty v4.2 提供 `app/maybe` 配置模板（`conf/app/maybe.yml`）。该模板会把 Maybe 作为无状态容器部署，并将业务数据落到外部 PostgreSQL。
+Pigsty v4.3 提供 `app/maybe` 配置模板（`conf/app/maybe.yml`）。该模板会把 Maybe 作为无状态容器部署，并将业务数据落到外部 PostgreSQL。
 
 ## 快速开始
 

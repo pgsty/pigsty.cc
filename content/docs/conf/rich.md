@@ -19,7 +19,7 @@ categories: [参考]
 - 配置名称： `rich`
 - 节点数量： 单节点
 - 配置说明：功能丰富的单节点配置，在 `meta` 基础上增加本地软件源、MinIO 备份、完整扩展、Docker 应用示例
-- 适用系统：`el8`, `el9`, `el10`, `d12`, `d13`, `u22`, `u24`
+- 适用系统：`el8`, `el9`, `el10`, `d12`, `d13`, `u22`, `u24`, `u26`
 - 适用架构：`x86_64`, `aarch64`
 - 相关配置：[`meta`](/docs/conf/meta/)，[`slim`](/docs/conf/slim/)，[`fat`](/docs/conf/fat/)
 

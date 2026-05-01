@@ -45,7 +45,7 @@ Kubernetes 支持多种容器运行时，要使用 Containerd 容器运行时，
 ./node.yml -t node_install -e '{"node_repo_modules":"node,docker","node_packages":["containerd.io"]}'
 ```
 
-若要使用 Docker 作为容器运行时，您需要安装 Docker，并使用 `cri-dockerd` 项目桥接（EL9 / D11 / U20 尚不可用）：
+若要使用 Docker 作为容器运行时，您需要安装 Docker，并使用 `cri-dockerd` 项目桥接（EL9 / D11 等平台尚不可用）：
 
 ```bash
 ./node.yml -t node_install -e '{"node_repo_modules":"node,infra,docker","node_packages":["docker-ce,docker-compose-plugin,cri-dockerd"]}'

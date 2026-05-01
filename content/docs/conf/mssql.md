@@ -20,7 +20,7 @@ categories: [参考]
 - 配置名称： `mssql`
 - 节点数量： 单节点
 - 配置说明：Babelfish（PG17）配置模板，提供 SQL Server 协议兼容
-- 适用系统：`el8`, `el9`, `el10`, `d12`, `d13`, `u22`, `u24`
+- 适用系统：`el8`, `el9`, `el10`, `d12`, `d13`, `u22`, `u24`, `u26`
 - 适用架构：`x86_64`, `aarch64`
 - 相关配置：[`meta`](/docs/conf/meta/)
 
@@ -53,7 +53,7 @@ categories: [参考]
 - 支持 `multi-db` 和 `single-db` 两种迁移模式
 - 默认包组为 `babelfish + pgsql-common + sqlcmd`
 - 默认创建扩展：`uuid-ossp`、`babelfishpg_common`、`babelfishpg_tsql`、`babelfishpg_tds`、`babelfishpg_money`、`pg_hint_plan`、`system_stats`、`tds_fdw`
-- v4.2.0 起支持主流平台全覆盖（EL8/9/10、Debian 12/13、Ubuntu 22/24；`x86_64` / `aarch64`）
+- v4.2.0 起支持主流平台全覆盖（EL8/9/10、Debian 12/13、Ubuntu 22/24/26；`x86_64` / `aarch64`）
 
 **连接方式**：
 

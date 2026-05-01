@@ -16,9 +16,9 @@ categories: [参考]
 ## 配置概览
 
 - 配置名称： `build/oss`
-- 节点数量： 六节点（el9, el10, d12, d13, u22, u24）
+- 节点数量： 七节点（el9, el10, d12, d13, u22, u24, u26）
 - 配置说明：Pigsty 开源版离线软件包构建环境
-- 适用系统：`el9`, `el10`, `d12`, `d13`, `u22`, `u24`
+- 适用系统：`el9`, `el10`, `d12`, `d13`, `u22`, `u24`, `u26`
 - 适用架构：`x86_64`
 
 启用方式：
@@ -58,6 +58,7 @@ cp conf/build/oss.yml pigsty.yml
 - Debian 13 (Trixie)
 - Ubuntu 22.04 (Jammy)
 - Ubuntu 24.04 (Noble)
+- Ubuntu 26.04 (Resolute)
 
 **构建流程**：
 
@@ -76,4 +77,3 @@ make cache
 - Pigsty 开发者构建新版本
 - 贡献者测试新扩展
 - 企业用户自定义离线包
-

@@ -20,7 +20,7 @@ Pigsty 需要 Linux 环境运行，您可以使用 Vagrant 轻松在本地创建
 
 在 MacOS 上，您可以使用 [**Homebrew**](https://brew.sh/) 一键安装 vagrant 与 virtualbox；
 在 Linux 上，您可以使用 VirtualBox 或 [**vagrant-libvirt**](https://vagrant-libvirt.github.io/vagrant-libvirt/) 作为虚拟机管理软件；
-在 Windows 专业版上，可以使用 Virtualbox 与 Hyper-V 作为提供商。
+在 Windows 专业版上，可以使用 VirtualBox 与 Hyper-V 作为提供商。
 
 {{< tabpane persist="disabled" >}}
 {{< tab header="macOS" lang="Bash" >}}
@@ -61,9 +61,10 @@ make deci       # 10 节点环境
 make meta9      # 使用 RockyLinux 9.7 创建单节点
 make full12     # 使用 Debian 12.13 创建 4 节点沙箱
 make simu24     # 使用 Ubuntu 24.04 创建 20 节点仿真环境
+make full26     # 使用 Ubuntu 26.04 创建 4 节点沙箱
 ```
 
-可用的操作系统后缀：`8`（EL8）、`9`（EL9）、`10`（EL10）、`12`（Debian 12）、`13`（Debian 13）、`22`（Ubuntu 22.04）、`24`（Ubuntu 24.04）
+可用的操作系统后缀：`8`（EL8）、`9`（EL9）、`10`（EL10）、`12`（Debian 12）、`13`（Debian 13）、`22`（Ubuntu 22.04）、`24`（Ubuntu 24.04）、`26`（Ubuntu 26.04）
 
 ### 构建环境
 
@@ -106,10 +107,10 @@ Pigsty 在 [`vagrant/spec/`](https://github.com/pgsty/pigsty/tree/main/vagrant/s
 # full: pigsty full-featured 4-node sandbox for HA-testing & tutorial & practices
 
 Specs = [
-  { "name" => "meta"   , "ip" => "10.10.10.10" ,  "cpu" => "2" ,  "mem" => "4096" ,  "image" => "bento/rockylinux-9" },
-  { "name" => "node-1" , "ip" => "10.10.10.11" ,  "cpu" => "1" ,  "mem" => "2048" ,  "image" => "bento/rockylinux-9" },
-  { "name" => "node-2" , "ip" => "10.10.10.12" ,  "cpu" => "1" ,  "mem" => "2048" ,  "image" => "bento/rockylinux-9" },
-  { "name" => "node-3" , "ip" => "10.10.10.13" ,  "cpu" => "1" ,  "mem" => "2048" ,  "image" => "bento/rockylinux-9" },
+  { "name" => "meta"   , "ip" => "10.10.10.10" ,  "cpu" => "2" ,  "mem" => "4096" ,  "image" => "cloud-image/ubuntu-24.04" },
+  { "name" => "node-1" , "ip" => "10.10.10.11" ,  "cpu" => "1" ,  "mem" => "2048" ,  "image" => "cloud-image/ubuntu-24.04" },
+  { "name" => "node-2" , "ip" => "10.10.10.12" ,  "cpu" => "1" ,  "mem" => "2048" ,  "image" => "cloud-image/ubuntu-24.04" },
+  { "name" => "node-3" , "ip" => "10.10.10.13" ,  "cpu" => "1" ,  "mem" => "2048" ,  "image" => "cloud-image/ubuntu-24.04" },
 ]
 ```
 
@@ -135,11 +136,11 @@ cd ~/pigsty
 vagrant/config [spec] [image] [scale] [provider]
 
 # 示例
-vagrant/config meta                # 使用 1 节点规格，默认 RockyLinux 9.7（EL9）镜像
-vagrant/config dual el9            # 使用 2 节点规格，EL9 镜像
+vagrant/config meta u24            # 使用 1 节点规格，Ubuntu 24.04 镜像
+vagrant/config dual el9            # 使用 2 节点规格，RockyLinux 9.7 镜像
 vagrant/config trio d12 2          # 使用 3 节点规格，Debian 12.13 镜像，双倍资源
-vagrant/config full u22 4          # 使用 4 节点规格，Ubuntu 22 镜像，4 倍资源
-vagrant/config simu u24 1 libvirt  # 使用 20 节点规格，Ubuntu 24 镜像，libvirt 提供商
+vagrant/config full u22 4          # 使用 4 节点规格，Ubuntu 22.04 镜像，4 倍资源
+vagrant/config simu u26 1 libvirt  # 使用 20 节点规格，Ubuntu 26.04 镜像，libvirt 提供商
 ```
 
 ### 镜像别名
@@ -148,13 +149,17 @@ config 脚本支持多种镜像别名：
 
 | 发行版 | 别名 | Vagrant Box |
 |--------|------|-------------|
-| AlmaLinux 8 | `el8`, `rocky8` | `cloud-image/almalinux-8` |
-| Rocky 9 | `el9`, `rocky9`, `el` | `bento/rockylinux-9` |
-| AlmaLinux 10 | `el10`, `rocky10` | `cloud-image/almalinux-10` |
-| Debian 12 | `d12`, `debian12` | `cloud-image/debian-12` |
-| Debian 13 | `d13`, `debian13` | `cloud-image/debian-13` |
-| Ubuntu 22.04 | `u22`, `ubuntu22`, `ubuntu` | `cloud-image/ubuntu-22.04` |
-| Ubuntu 24.04 | `u24`, `ubuntu24` | `bento/ubuntu-24.04` |
+| Rocky 8 | `el8`, `rocky8`, `r8` | `cloud-image/rocky-8` |
+| Rocky 9 | `el9`, `rocky9`, `el`, `r9` | `cloud-image/rocky-9` |
+| Rocky 10 | `el10`, `rocky10`, `r10` | `cloud-image/rocky-10` |
+| Debian 12 | `d12`, `debian12`, `deb12` | `cloud-image/debian-12` |
+| Debian 13 | `d13`, `debian13`, `deb13` | `cloud-image/debian-13` |
+| Ubuntu 22.04 | `u22`, `ubuntu22`, `ubuntu2204` | `cloud-image/ubuntu-22.04` |
+| Ubuntu 24.04 | `u24`, `ubuntu24`, `ubuntu2404`, `ubuntu` | `cloud-image/ubuntu-24.04` |
+| Ubuntu 26.04 | `u26`, `ubuntu26`, `ubuntu2604` | `cloud-image/ubuntu-26.04` |
+| AlmaLinux 8 | `alma8` | `cloud-image/almalinux-8` |
+| AlmaLinux 9 | `alma9` | `cloud-image/almalinux-9` |
+| AlmaLinux 10 | `alma10` | `cloud-image/almalinux-10` |
 
 ### 资源缩放
 
@@ -168,7 +173,7 @@ VM_SCALE=2 vagrant/config meta     # 将 meta 规格的 CPU/内存资源翻倍
 
 ```ruby
 Specs = [
-  { "name" => "meta" , "ip" => "10.10.10.10", "cpu" => "8" , "mem" => "16384" , "image" => "bento/rockylinux-9" },
+  { "name" => "meta" , "ip" => "10.10.10.10", "cpu" => "8" , "mem" => "16384" , "image" => "cloud-image/ubuntu-24.04" },
 ]
 ```
 
@@ -217,35 +222,43 @@ ssh-keygen -t rsa -b 2048 -N '' -f ~/.ssh/id_rsa -q
 
 ## 支持的镜像
 
-Pigsty 目前使用以下 Vagrant Box 进行测试：
+Pigsty v4.3 统一使用 [**Vagrant Cloud**](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image) 上的 `cloud-image/*` Box，VirtualBox 与 libvirt 均提供 `amd64` / `arm64` 架构版本。
 
-```bash
-# x86_64 / amd64
-el8 :  cloud-image/almalinux-8   (EL 8.10)
-el9 :  bento/rockylinux-9        (RockyLinux 9.7)
-el10:  cloud-image/almalinux-10  (RockyLinux 10.1)
+### VirtualBox
 
-d12 :  cloud-image/debian-12     (Debian 12.13)
-d13 :  cloud-image/debian-13     (Debian 13.3)
+| 系统 | Vagrant Box | `amd64` 版本 | `arm64` 版本 |
+|------|-------------|:------------:|:------------:|
+| Rocky 8 | [`cloud-image/rocky-8`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/rocky-8) | `8.10.20240528.0` | `8.10.20240528.0` |
+| Rocky 9 | [`cloud-image/rocky-9`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/rocky-9) | `9.7.20251123.2` | `9.7.20251123.2` |
+| Rocky 10 | [`cloud-image/rocky-10`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/rocky-10) | `10.1.20251116.0` | `10.1.20251116.0` |
+| Debian 11 | [`cloud-image/debian-11`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/debian-11) | `20260419.2453.0` | `20260419.2453.0` |
+| Debian 12 | [`cloud-image/debian-12`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/debian-12) | `20260413.2447.0` | `20260413.2447.0` |
+| Debian 13 | [`cloud-image/debian-13`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/debian-13) | `20260413.2447.0` | `20260413.2447.0` |
+| Ubuntu 22.04 | [`cloud-image/ubuntu-22.04`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/ubuntu-22.04) | `20260320.0.0` | `20260320.0.0` |
+| Ubuntu 24.04 | [`cloud-image/ubuntu-24.04`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/ubuntu-24.04) | `20260323.0.0` | `20260323.0.0` |
+| Ubuntu 26.04 | [`cloud-image/ubuntu-26.04`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/ubuntu-26.04) | `20260421.0.0` | `20260421.0.0` |
+| AlmaLinux 8 | [`cloud-image/almalinux-8`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/almalinux-8) | `8.10.20260414` | `8.10.20260414` |
+| AlmaLinux 9 | [`cloud-image/almalinux-9`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/almalinux-9) | `9.7.20260414` | `9.7.20260414` |
+| AlmaLinux 10 | [`cloud-image/almalinux-10`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/almalinux-10) | `10.1.20260414.0` | `10.1.20260414.0` |
+{.full-width}
 
-u22 :  cloud-image/ubuntu-22.04
-u24 :  bento/ubuntu-24.04
-```
+### libvirt
 
-对于 Apple Silicon (aarch64) 架构：
-
-```bash
-# aarch64 / arm64
-el8 :  cloud-image/almalinux-8
-el9 :  bento/rockylinux-9
-el10:  cloud-image/almalinux-10
-d12 :  cloud-image/debian-12
-d13 :  cloud-image/debian-13
-u22 :  cloud-image/ubuntu-22.04
-u24 :  bento/ubuntu-24.04
-```
-
-您可以在 [**Vagrant Cloud**](https://app.vagrantup.com/boxes/search) 上查找对应 provider / 架构可用的 Box 镜像。
+| 系统 | Vagrant Box | `amd64` 版本 | `arm64` 版本 |
+|------|-------------|:------------:|:------------:|
+| Rocky 8 | [`cloud-image/rocky-8`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/rocky-8) | `8.10.20240528.0` | `8.10.20240528.0` |
+| Rocky 9 | [`cloud-image/rocky-9`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/rocky-9) | `9.7.20251123.2` | `9.7.20251123.2` |
+| Rocky 10 | [`cloud-image/rocky-10`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/rocky-10) | `10.1.20251116.0` | `10.1.20251116.0` |
+| Debian 11 | [`cloud-image/debian-11`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/debian-11) | `20260419.2453.0` | `20260419.2453.0` |
+| Debian 12 | [`cloud-image/debian-12`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/debian-12) | `20260413.2447.0` | `20260413.2447.0` |
+| Debian 13 | [`cloud-image/debian-13`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/debian-13) | `20260413.2447.0` | `20260413.2447.0` |
+| Ubuntu 22.04 | [`cloud-image/ubuntu-22.04`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/ubuntu-22.04) | `20260320.0.0` | `20260320.0.0` |
+| Ubuntu 24.04 | [`cloud-image/ubuntu-24.04`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/ubuntu-24.04) | `20260323.0.0` | `20260323.0.0` |
+| Ubuntu 26.04 | [`cloud-image/ubuntu-26.04`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/ubuntu-26.04) | `20260421.0.0` | `20260421.0.0` |
+| AlmaLinux 8 | [`cloud-image/almalinux-8`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/almalinux-8) | `8.10.20260414` | `8.10.20260414` |
+| AlmaLinux 9 | [`cloud-image/almalinux-9`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/almalinux-9) | `9.7.20260414` | `9.7.20260414` |
+| AlmaLinux 10 | [`cloud-image/almalinux-10`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/almalinux-10) | `10.1.20260414.0` | `10.1.20260414.0` |
+{.full-width}
 
 
 ----------------
@@ -256,7 +269,7 @@ u24 :  bento/ubuntu-24.04
 
 ```bash
 export VM_SPEC='meta'              # 规格名称
-export VM_IMAGE='bento/rockylinux-9'  # 镜像名称
+export VM_IMAGE='cloud-image/rocky-9' # 镜像名称
 export VM_SCALE='1'                # 资源缩放倍数
 export VM_PROVIDER='virtualbox'    # 虚拟化提供商
 export VAGRANT_EXPERIMENTAL=disks  # 启用实验性磁盘功能

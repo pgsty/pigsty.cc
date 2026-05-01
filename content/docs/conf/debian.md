@@ -16,7 +16,7 @@ categories: [参考]
 - 配置名称： `demo/debian`
 - 节点数量： 单节点
 - 配置说明：Debian/Ubuntu 专用配置模板
-- 适用系统：`d12`, `d13`, `u22`, `u24`
+- 适用系统：`d12`, `d13`, `u22`, `u24`, `u26`
 - 适用架构：`x86_64`, `aarch64`
 - 相关配置：[`meta`](/docs/conf/meta/)，[`demo/el`](/docs/conf/el/)
 
@@ -47,6 +47,7 @@ categories: [参考]
 - Debian 13 (Trixie)
 - Ubuntu 22.04 LTS (Jammy)
 - Ubuntu 24.04 LTS (Noble)
+- Ubuntu 26.04 LTS (Resolute)
 
 **关键特性**：
 - 使用 PGDG APT 软件源
@@ -57,4 +58,3 @@ categories: [参考]
 - 云服务器（Ubuntu 广泛使用）
 - 容器环境（Debian 常用作基础镜像）
 - 开发测试环境
-

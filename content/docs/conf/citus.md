@@ -16,7 +16,7 @@ categories: [参考]
 - 配置名称： `ha/citus`
 - 节点数量： 13 节点（1 基础设施 + 1 协调组 × 2 + 5 工作组 × 2）
 - 配置说明：Citus 分布式 PostgreSQL 高可用集群
-- 适用系统：`el8`, `el9`, `el10`, `d12`, `d13`, `u22`, `u24`
+- 适用系统：`el8`, `el9`, `el10`, `d12`, `d13`, `u22`, `u24`, `u26`
 - 适用架构：`x86_64`
 - 相关配置：[`meta`](/docs/conf/meta/)，[`ha/trio`](/docs/conf/trio/)
 

@@ -1,5 +1,5 @@
 ---
-title: Pigsty 中文文档 v4.2
+title: Pigsty 中文文档 v4.3
 weight: 10
 module: [PIGSTY]
 categories: [参考]
@@ -20,7 +20,7 @@ cascade:
 
 > [仓库](https://github.com/pgsty/pigsty) | [演示](https://demo.pigsty.cc) | [博客](/blog) | [论坛](https://github.com/pgsty/pigsty/discussions) | [微信](https://mp.weixin.qq.com/s/-E_-HZ7LvOze5lmzy3QbQA) | [EN Docs](https://pigsty.io/docs/)
 >
-> [快速上手](/docs/setup/install) 最新版本的 Pigsty：`curl -fsSL https://repo.pigsty.cc/get | bash -s v4.2.2`
+> [快速上手](/docs/setup/install) 最新版本的 Pigsty：`curl -fsSL https://repo.pigsty.cc/get | bash -s v4.3.0`
 
 -----------------
 

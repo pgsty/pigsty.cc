@@ -64,7 +64,7 @@ cd ~/pigsty      # 进入 Pigsty 目录
 |     [**磁盘**](/docs/deploy/prepare#磁盘)     | `/data` 作为默认主挂载点             |   [**FS**](/docs/deploy/prepare#文件系统)   | 推荐使用 `xfs`，按需使用 `ext4` / `zfs`                   |
 |    [**VIP**](/docs/deploy/prepare#vip)    | L2 VIP，可选 （云环境不可用）           |    [**网络**](/docs/deploy/prepare#网络)    | 静态 IPv4 地址，单节点无固定 IP 可使用 `127.0.0.1`             |
 |     [**CA**](/docs/deploy/prepare#ca)     | 可以使用自签名 CA 或指定已有证书           |    [**域名**](/docs/deploy/prepare#域名)    | 本地 / 公网域名，可选，默认 `i.pigsty` 自签名域名                 |
-|   [**内核**](/docs/deploy/prepare#linux)    | `Linux` `x86_64` / `aarch64` | [**Linux**](/docs/deploy/prepare#linux) | `el8`, `el9`, `el10`, `d12`, `d13`, `u22`, `u24` |
+|   [**内核**](/docs/deploy/prepare#linux)    | `Linux` `x86_64` / `aarch64` | [**Linux**](/docs/deploy/prepare#linux) | `el8`, `el9`, `el10`, `d12`, `d13`, `u22`, `u24`, `u26` |
 | [**Locale**](/docs/deploy/prepare#locale) | `C.UTF-8` 或 `C`              |    [**防火墙**](/docs/deploy/admin#防火墙)    | 端口：`80` / `443` / `22` / `5432` （可选）             |
 |      [**用户**](/docs/deploy/admin#用户)      | 避免使用 `root` 和 `postgres`     |   [**Sudo**](/docs/deploy/admin#sudo)   | sudo 权限，最好带有 `nopass` 免密选项                       |
 |     [**SSH**](/docs/deploy/admin#ssh)     | 通过公钥 `nopass` SSH 登陆纳管节点     |   [**可达性**](/docs/deploy/admin#验证可达性)   | `ssh <ip\|alias> sudo ls` 无错误                    |
@@ -81,14 +81,14 @@ cd ~/pigsty      # 进入 Pigsty 目录
 {{< tabpane text=true persist=header >}}
 {{% tab header="pigsty.cc（中国）" %}}
 ```bash
-curl -fsSL https://repo.pigsty.cc/get | bash            # 安装最新稳定版本
-curl -fsSL https://repo.pigsty.cc/get | bash -s v4.2.2  # 安装特定版本
+curl -fsSL https://repo.pigsty.cc/get | bash            # 安装当前默认版本
+curl -fsSL https://repo.pigsty.cc/get | bash -s v4.3.0  # 安装特定版本
 ```
 {{% /tab %}}
 {{% tab header="pigsty.io（全球）" %}}
 ```bash
-curl -fsSL https://repo.pigsty.io/get | bash            # 安装最新稳定版本
-curl -fsSL https://repo.pigsty.io/get | bash -s v4.2.2  # 安装特定版本
+curl -fsSL https://repo.pigsty.io/get | bash            # 安装当前默认版本
+curl -fsSL https://repo.pigsty.io/get | bash -s v4.3.0  # 安装特定版本
 ```
 {{% /tab %}}
 {{< /tabpane >}}
@@ -97,7 +97,7 @@ curl -fsSL https://repo.pigsty.io/get | bash -s v4.2.2  # 安装特定版本
 
 ```bash
 git clone https://github.com/pgsty/pigsty; cd pigsty;
-git checkout v4.2.2;  # 使用 git 安装时，请务必检出特定版本
+git checkout v4.3.0;  # 使用 git 安装时，请务必检出特定版本
 ```
 
 手工下载克隆安装时，请额外执行 [**`bootstrap`**](/docs/setup/offline#bootstrap) 脚本以手动安装 Ansible 等部署依赖，您也可以 [**自行安装**](/docs/setup/playbook#安装-ansible)。
@@ -137,7 +137,7 @@ Pigsty 提供了 [**`configure`**](https://github.com/pgsty/pigsty/blob/main/con
 
 ```bash
 vagrant@meta:~/pigsty$ ./configure
-configure pigsty v4.2.2 begin
+configure pigsty v4.3.0 begin
 [ OK ] region = china
 [ OK ] kernel  = Linux
 [ OK ] machine = x86_64

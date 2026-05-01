@@ -18,7 +18,7 @@ Pigsty 大部分教程和示例都基于此模板的沙箱环境。
 - 配置名称： `ha/full`
 - 节点数量： 四节点
 - 配置说明：四节点完整功能演示环境，带有两套 PostgreSQL 集群、MinIO、Redis 等组件示例
-- 适用系统：`el8`, `el9`, `el10`, `d12`, `d13`, `u22`, `u24`
+- 适用系统：`el8`, `el9`, `el10`, `d12`, `d13`, `u22`, `u24`, `u26`
 - 适用架构：`x86_64`, `aarch64`
 - 相关配置：[`ha/trio`](/docs/conf/trio/)，[`ha/safe`](/docs/conf/safe/)，[`demo/demo`](/docs/conf/demo/)
 

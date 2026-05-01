@@ -1,14 +1,14 @@
 ---
 title: Mattermost：开源团队协作
 weight: 595
-description: 使用 Pigsty v4.2 部署 Mattermost，并将状态托管到外部 PostgreSQL。
+description: 使用 Pigsty v4.3 部署 Mattermost，并将状态托管到外部 PostgreSQL。
 module: [SOFTWARE]
 categories: [参考]
 ---
 
 [**Mattermost**](https://mattermost.com/) 是开源团队协作平台，可作为 Slack 的私有化替代方案。
 
-Pigsty v4.2 提供 `app/mattermost` 配置模板（`conf/app/mattermost.yml`），默认将应用状态存放到外部 PostgreSQL，并将文件目录持久化到主机路径。
+Pigsty v4.3 提供 `app/mattermost` 配置模板（`conf/app/mattermost.yml`），默认将应用状态存放到外部 PostgreSQL，并将文件目录持久化到主机路径。
 
 ## 快速开始
 

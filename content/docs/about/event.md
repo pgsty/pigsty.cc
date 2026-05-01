@@ -105,6 +105,7 @@ categories: [参考]
 
 | 版本                                 |    发布时间    | 摘要                                                         | 地址                                                                                        |
 |:-----------------------------------|:----------:|------------------------------------------------------------|-------------------------------------------------------------------------------------------|
+| [v4.3.0](/docs/about/release#v430) | 2026-04-19 | 占位稿：4 月 Infra / RPM 编号整理，Grafana 13，Cloudberry 2.1       | 待发布                                                                                       |
 | [v4.2.2](/docs/about/release#v422) | 2026-03-23 | Insforge 应用自建，Infra 包批量更新，新增 pdu，pgdog                      | [v4.2.2](https://github.com/pgsty/pigsty/releases/tag/v4.2.2)                             |
 | [v4.2.1](/docs/about/release#v421) | 2026-03-06 | 弃用 PG 13 支持，464 扩展                                         | [v4.2.1](https://github.com/pgsty/pigsty/releases/tag/v4.2.1)                             |
 | [v4.2.0](/docs/about/release#v420) | 2026-02-28 | 例行小版本更新，六大 PG 内核集中更新                                       | [v4.2.0](https://github.com/pgsty/pigsty/releases/tag/v4.2.0)                             |

@@ -47,7 +47,7 @@ all:
       vars: { pg_cluster: pg-test }
 
   vars:
-    version: v4.2.2
+    version: v4.3.0
     admin_ip: 10.10.10.10
     region: default
     pg_version: 18
@@ -97,13 +97,12 @@ all:
 
 Pigsty 提供了开箱即用的模板，您可以使用 [**Vagrant**](/docs/deploy/vagrant/) 在本地创建沙箱，或使用 [**Terraform**](/docs/deploy/terraform/) 在云上创建沙箱。
 
-4节点的沙箱
-当然，您也可以自己手工准备置备这些节点。
+当然，您也可以自己手工准备并置备这些节点。
 
 
 ### 本地沙箱（Vagrant）
 
-本地沙箱使用 Virtualbox/libvirt 创建本地虚拟机，可以在您的 Mac / PC 上免费运行。
+本地沙箱使用 VirtualBox/libvirt 创建本地虚拟机，可以在您的 Mac / PC 上免费运行。
 
 运行完整的 4 节点沙箱，您的机器应至少拥有 **4 核 CPU** 与 **8GB 内存**。
 
@@ -113,7 +112,46 @@ make full       # 使用默认 RockyLinux 9 镜像创建 4 节点沙箱
 make full9      # 使用 RockyLinux 9 创建 4 节点沙箱
 make full12     # 使用 Debian 12 创建 4 节点沙箱
 make full24     # 使用 Ubuntu 24.04 创建 4 节点沙箱
+make full26     # 使用 Ubuntu 26.04 创建 4 节点沙箱
 ```
+
+Pigsty v4.3 统一使用 [**Vagrant Cloud**](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image) 上的 `cloud-image/*` Box。下表列出 4 节点本地沙箱可使用的 VirtualBox/libvirt 镜像版本。
+
+#### VirtualBox
+
+| 系统 | Vagrant Box | `amd64` 版本 | `arm64` 版本 |
+|------|-------------|:------------:|:------------:|
+| Rocky 8 | [`cloud-image/rocky-8`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/rocky-8) | `8.10.20240528.0` | `8.10.20240528.0` |
+| Rocky 9 | [`cloud-image/rocky-9`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/rocky-9) | `9.7.20251123.2` | `9.7.20251123.2` |
+| Rocky 10 | [`cloud-image/rocky-10`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/rocky-10) | `10.1.20251116.0` | `10.1.20251116.0` |
+| Debian 11 | [`cloud-image/debian-11`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/debian-11) | `20260419.2453.0` | `20260419.2453.0` |
+| Debian 12 | [`cloud-image/debian-12`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/debian-12) | `20260413.2447.0` | `20260413.2447.0` |
+| Debian 13 | [`cloud-image/debian-13`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/debian-13) | `20260413.2447.0` | `20260413.2447.0` |
+| Ubuntu 22.04 | [`cloud-image/ubuntu-22.04`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/ubuntu-22.04) | `20260320.0.0` | `20260320.0.0` |
+| Ubuntu 24.04 | [`cloud-image/ubuntu-24.04`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/ubuntu-24.04) | `20260323.0.0` | `20260323.0.0` |
+| Ubuntu 26.04 | [`cloud-image/ubuntu-26.04`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/ubuntu-26.04) | `20260421.0.0` | `20260421.0.0` |
+| AlmaLinux 8 | [`cloud-image/almalinux-8`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/almalinux-8) | `8.10.20260414` | `8.10.20260414` |
+| AlmaLinux 9 | [`cloud-image/almalinux-9`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/almalinux-9) | `9.7.20260414` | `9.7.20260414` |
+| AlmaLinux 10 | [`cloud-image/almalinux-10`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/almalinux-10) | `10.1.20260414.0` | `10.1.20260414.0` |
+{.full-width}
+
+#### libvirt
+
+| 系统 | Vagrant Box | `amd64` 版本 | `arm64` 版本 |
+|------|-------------|:------------:|:------------:|
+| Rocky 8 | [`cloud-image/rocky-8`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/rocky-8) | `8.10.20240528.0` | `8.10.20240528.0` |
+| Rocky 9 | [`cloud-image/rocky-9`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/rocky-9) | `9.7.20251123.2` | `9.7.20251123.2` |
+| Rocky 10 | [`cloud-image/rocky-10`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/rocky-10) | `10.1.20251116.0` | `10.1.20251116.0` |
+| Debian 11 | [`cloud-image/debian-11`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/debian-11) | `20260419.2453.0` | `20260419.2453.0` |
+| Debian 12 | [`cloud-image/debian-12`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/debian-12) | `20260413.2447.0` | `20260413.2447.0` |
+| Debian 13 | [`cloud-image/debian-13`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/debian-13) | `20260413.2447.0` | `20260413.2447.0` |
+| Ubuntu 22.04 | [`cloud-image/ubuntu-22.04`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/ubuntu-22.04) | `20260320.0.0` | `20260320.0.0` |
+| Ubuntu 24.04 | [`cloud-image/ubuntu-24.04`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/ubuntu-24.04) | `20260323.0.0` | `20260323.0.0` |
+| Ubuntu 26.04 | [`cloud-image/ubuntu-26.04`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/ubuntu-26.04) | `20260421.0.0` | `20260421.0.0` |
+| AlmaLinux 8 | [`cloud-image/almalinux-8`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/almalinux-8) | `8.10.20260414` | `8.10.20260414` |
+| AlmaLinux 9 | [`cloud-image/almalinux-9`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/almalinux-9) | `9.7.20260414` | `9.7.20260414` |
+| AlmaLinux 10 | [`cloud-image/almalinux-10`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/almalinux-10) | `10.1.20260414.0` | `10.1.20260414.0` |
+{.full-width}
 
 更多详情请参考 [**Vagrant**](/docs/deploy/vagrant/) 文档。
 
