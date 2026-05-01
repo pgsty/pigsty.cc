@@ -8,7 +8,7 @@ categories: [参考]
 
 `pgedge` 配置模板使用 pgEdge 数据库内核替代原生 PostgreSQL，提供面向边缘场景的分布式与多主复制能力。
 
-完整教程请参考：**[pgEdge 内核使用说明](/docs/pgsql/kernel/pgedge/)**
+完整教程请参考：**[pgEdge 内核使用说明](/docs/pgsql/kernel/pgedge/)**；所有内核分支的差异与版本口径见 [PGSQL 内核总览](/docs/pgsql/kernel/)。
 
 
 --------
@@ -17,8 +17,8 @@ categories: [参考]
 
 - 配置名称： `pgedge`
 - 节点数量： 单节点
-- 配置说明：pgEdge（PG17）分布式内核配置模板
-- 适用系统：`el8`, `el9`, `el10`, `d12`, `d13`, `u22`, `u24`
+- 配置说明：pgEdge（PG18）分布式内核配置模板
+- 适用系统：`d12`, `d13`, `u22`, `u24`, `u26`（PG18 包）；EL/RPM 平台请以当前 PGSQL 仓库的 `pgedge_18` 包可用性为准
 - 适用架构：`x86_64`, `aarch64`
 - 相关配置：[`meta`](/docs/conf/meta/)、[`pgsql`](/docs/conf/pgsql/)
 
@@ -45,9 +45,9 @@ categories: [参考]
 `pgedge` 模板在 `pg-meta` 集群中启用 `pg_mode: pgedge`，并预装 pgEdge 核心扩展用于逻辑复制与边缘分布式场景。
 
 **关键特性**：
-- 使用 `pgedge` 内核包替代标准 PostgreSQL（兼容 PG17）
-- 默认安装 `spock`、`snowflake`、`lolor` 扩展
-- 默认预加载 `spock` 与 `lolor`，便于后续多主复制配置
+- 使用 `pgedge` 内核包替代标准 PostgreSQL（兼容 PG18）
+- 默认安装 [`spock`](/ext/e/spock/)、[`snowflake`](/ext/e/snowflake/)、[`lolor`](/ext/e/lolor/) 扩展
+- 默认预加载 [`spock`](/ext/e/spock/) 与 [`lolor`](/ext/e/lolor/)，便于后续多主复制配置
 - 保留 Pigsty 的标准备份、监控与运维能力
 
 **适用场景**：
@@ -57,5 +57,5 @@ categories: [参考]
 
 **注意事项**：
 - 当前模板用于单节点内核验证，生产多主需额外规划节点拓扑与复制策略
-- 默认 `pg_version: 17`，建议与目标集群版本保持一致
+- 默认 `pg_version: 18`，建议与目标集群版本保持一致
 - 进行跨地域复制前，请先评估网络时延与冲突处理策略

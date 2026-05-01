@@ -8,7 +8,7 @@ categories: [参考]
 
 `polar` 配置模板使用阿里云 PolarDB for PostgreSQL 数据库内核替代原生 PostgreSQL，提供"云原生" Aurora 风格的存算分离能力。
 
-完整教程请参考：**[PolarDB for PostgreSQL (POLAR) 内核使用说明](/docs/pgsql/kernel/polardb/)**
+完整教程请参考：**[PolarDB for PostgreSQL (POLAR) 内核使用说明](/docs/pgsql/kernel/polardb/)**；所有内核分支的差异与版本口径见 [PGSQL 内核总览](/docs/pgsql/kernel/)。
 
 
 --------
@@ -50,6 +50,7 @@ categories: [参考]
 - 兼容 PostgreSQL 生态，保持 SQL 兼容性
 - 支持共享存储场景，适合云环境部署
 - 默认 PolarDB 内核路径为 `/u01/polardb_pg_17`
+- 可用扩展以 PolarDB 17 内核为准，常用扩展可参考 [`pgaudit`](/ext/e/pgaudit/)、[`pg_partman`](/ext/e/pg_partman/)、[`pg_profile`](/ext/e/pg_profile/)、[`pg_repack`](/ext/e/pg_repack/)、[`pg_stat_kcache`](/ext/e/pg_stat_kcache/)、[`pg_cron`](/ext/e/pg_cron/)、[`pg_hint_plan`](/ext/e/pg_hint_plan/)
 
 **适用场景**：
 - 需要存算分离架构的云原生场景

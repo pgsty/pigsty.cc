@@ -88,7 +88,7 @@ pg_default_roles:
 
 | 变化类型 | 数量 | 说明 |
 |----------|------|------|
-| 新增扩展 | 33 | 新增了 `pgaudit`、`pg_partman`、`pg_profile`、`pg_repack`、`pg_stat_kcache`、`pg_jieba`、`pg_cron`、`pg_hint_plan`、`pg_walinspect`，以及 `polar_advisor`、`polar_feature_utils`、`polar_parameter_manager`、`polar_proxy_utils`、`polar_resource_manager`、`polar_smgrperf` 等 PolarDB / 运维相关扩展。 |
+| 新增扩展 | 33 | 新增了 [`pgaudit`](/ext/e/pgaudit/)、[`pg_partman`](/ext/e/pg_partman/)、[`pg_profile`](/ext/e/pg_profile/)、[`pg_repack`](/ext/e/pg_repack/)、[`pg_stat_kcache`](/ext/e/pg_stat_kcache/)、`pg_jieba`、[`pg_cron`](/ext/e/pg_cron/)、[`pg_hint_plan`](/ext/e/pg_hint_plan/)、[`pg_walinspect`](/ext/e/pg_walinspect/)，以及 `polar_advisor`、`polar_feature_utils`、`polar_parameter_manager`、`polar_proxy_utils`、`polar_resource_manager`、`polar_smgrperf` 等 PolarDB / 运维相关扩展。 |
 | 移除扩展 | 14 | 旧文档中的 `polar_csn`、`polar_px`、`polar_stat_env`、`polar_stat_sql`、`timetravel`、`smlar` 已不在当前 PG17 可用列表中；同时，多项 `plpython2u` / `plpythonu` 兼容扩展也一并移除。 |
 {.full-width}
 

@@ -1,7 +1,7 @@
 ---
 title: pgEdge
 weight: 2116
-description: 在 Pigsty 中使用 pgEdge（PG17）内核，借助 Spock 多主逻辑复制构建面向边缘场景的分布式 PostgreSQL。
+description: 在 Pigsty 中使用 pgEdge（PG18）内核，借助 Spock 多主逻辑复制构建面向边缘场景的分布式 PostgreSQL。
 icon: fa-solid fa-network-wired
 module: [PGSQL]
 categories: [概念]
@@ -16,12 +16,12 @@ categories: [概念]
 
 Pigsty 通过 `pg_mode: pgedge` 接入 pgEdge，并用标准 PG 集群编排流程交付其核心组件：
 
-- `pgedge`：PG17 兼容内核
-- `spock`：多主（active-active）逻辑复制
-- `snowflake`：分布式唯一序列
-- `lolor`：大对象逻辑复制兼容层
+- `pgedge`：PG18 兼容内核
+- [`spock`](/ext/e/spock/)：多主（active-active）逻辑复制
+- [`snowflake`](/ext/e/snowflake/)：分布式唯一序列
+- [`lolor`](/ext/e/lolor/)：大对象逻辑复制兼容层
 
-当前 Pigsty 仓库中，pgEdge 对应版本为 `17.9`，并同时提供 `spock 5.0.5`、`snowflake 2.4` 与 `lolor 1.2.2`。
+当前 Pigsty 仓库中，pgEdge PG18 对应包为 `pgedge-18 18.3`，并同时提供 `spock 5.0.6`、`snowflake 2.4` 与 `lolor 1.2.2`。PG17 包仍可作为过渡版本保留，但 `pgedge` 配置模板已经默认使用 `pg_version: 18`。
 对客户端来说，pgEdge 仍然是 PostgreSQL 线缆协议，`psql`、JDBC/ODBC、DBeaver 等工具都可以直接接入。
 
 Pigsty 提供的是“先验证单节点内核，再扩展到多节点复制拓扑”的交付路径：
@@ -57,7 +57,7 @@ psql -d meta -c "SELECT extname, extversion FROM pg_extension WHERE extname IN (
 
 ```yaml
 pg_mode: pgedge
-pg_version: 17
+pg_version: 18
 pg_packages: [ pgedge, pgsql-common ]
 pg_extensions: [ spock, snowflake, lolor ]
 pg_libs: 'spock, lolor, pg_stat_statements, auto_explain'
@@ -115,6 +115,9 @@ CREATE EXTENSION IF NOT EXISTS lolor;
 - [PGSQL 内核总览](/docs/pgsql/kernel/)
 - [`pgedge` 配置模板](/docs/conf/pgedge/)
 - [PGSQL 内核模式参数](/docs/pgsql/config/kernel/)
+- [`spock` 扩展](/ext/e/spock/)
+- [`snowflake` 扩展](/ext/e/snowflake/)
+- [`lolor` 扩展](/ext/e/lolor/)
 - [pgEdge 官方文档首页](https://docs.pgedge.com/)
 - [Spock Limitations](https://docs.pgedge.com/spock-v5/development/limitations/)
 - [Snowflake Sequences](https://docs.pgedge.com/platform/snowflake)
