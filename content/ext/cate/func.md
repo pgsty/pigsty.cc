@@ -226,14 +226,14 @@ icon: fas fa-square-root-variable
 
 | **条目** | **属性** | **OS** | **x86_64** | **aarch64** |
 |:---:|:---|:---:|:---:|:---:|
-| **扩展名** | [`snowflake`](/ext/e/snowflake) | **el8** | {{< pgvers "17" >}} | {{< pgvers "17" >}} |
-| **扩展包** | [`snowflake`](https://github.com/pgEdge/snowflake) | **el9** | {{< pgvers "17" >}} | {{< pgvers "17" >}} |
-| **RPM** | `snowflake_$v` | **el10** | {{< pgvers "17" >}} | {{< pgvers "17" >}} |
-| **DEB** | `pgedge-$v-snowflake` | **d12** | {{< pgvers "17" >}} | {{< pgvers "17" >}} |
-| **语言** | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | **d13** | {{< pgvers "17" >}} | {{< pgvers "17" >}} |
-| **仓库** | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | **u22** | {{< pgvers "17" >}} | {{< pgvers "17" >}} |
-| **协议** | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | **u24** | {{< pgvers "17" >}} | {{< pgvers "17" >}} |
-| | | **u26** | {{< pgvers "17" >}} | {{< pgvers "17" >}} |
+| **扩展名** | [`snowflake`](/ext/e/snowflake) | **el8** | {{< pgvers "18" >}} | {{< pgvers "18" >}} |
+| **扩展包** | [`snowflake`](https://github.com/pgEdge/snowflake) | **el9** | {{< pgvers "18" >}} | {{< pgvers "18" >}} |
+| **RPM** | `snowflake_$v` | **el10** | {{< pgvers "18" >}} | {{< pgvers "18" >}} |
+| **DEB** | `pgedge-$v-snowflake` | **d12** | {{< pgvers "18" >}} | {{< pgvers "18" >}} |
+| **语言** | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | **d13** | {{< pgvers "18" >}} | {{< pgvers "18" >}} |
+| **仓库** | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | **u22** | {{< pgvers "18" >}} | {{< pgvers "18" >}} |
+| **协议** | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | **u24** | {{< pgvers "18" >}} | {{< pgvers "18" >}} |
+| | | **u26** | {{< pgvers "18" >}} | {{< pgvers "18" >}} |
 {.ext-table .ext-table--cate}
 
 

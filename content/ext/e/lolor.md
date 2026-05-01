@@ -45,9 +45,9 @@ weight: 9580
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#etl) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.2.2` | {{< pgvers "17" >}} | `lolor` | - |
-| [**RPM**](/ext/rpm#etl) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.2.2` | {{< pgvers "17" >}} | `lolor_$v` | `pgedge_$v` |
-| [**DEB**](/ext/deb#etl) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.2.2` | {{< pgvers "17" >}} | `pgedge-$v-lolor` | `pgedge-$v` |
+| [**EXT**](/ext/list#etl) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.2.2` | {{< pgvers "18" >}} | `lolor` | - |
+| [**RPM**](/ext/rpm#etl) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.2.2` | {{< pgvers "18" >}} | `lolor_$v` | `pgedge_$v` |
+| [**DEB**](/ext/deb#etl) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.2.2` | {{< pgvers "18" >}} | `pgedge-$v-lolor` | `pgedge-$v` |
 {.ext-table}
 
 {{< pgext_matrix >}}
@@ -59,16 +59,26 @@ weight: 9580
 | el9.aarch64 | MISS PIGSTY - 0 | FORK PIGSTY 1.2.2 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
 | el10.x86_64 | MISS PIGSTY - 0 | FORK PIGSTY 1.2.2 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
 | el10.aarch64 | MISS PIGSTY - 0 | FORK PIGSTY 1.2.2 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| d12.x86_64 | MISS PIGSTY - 0 | FORK PIGSTY 1.2.2 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| d12.aarch64 | MISS PIGSTY - 0 | FORK PIGSTY 1.2.2 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| d13.x86_64 | MISS PIGSTY - 0 | FORK PIGSTY 1.2.2 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| d13.aarch64 | MISS PIGSTY - 0 | FORK PIGSTY 1.2.2 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| u22.x86_64 | MISS PIGSTY - 0 | FORK PIGSTY 1.2.2 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| u22.aarch64 | MISS PIGSTY - 0 | FORK PIGSTY 1.2.2 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| u24.x86_64 | MISS PIGSTY - 0 | FORK PIGSTY 1.2.2 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| u24.aarch64 | MISS PIGSTY - 0 | FORK PIGSTY 1.2.2 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| u26.x86_64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| u26.aarch64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| d12.x86_64 | FORK PIGSTY 1.2.2 1 | FORK PIGSTY 1.2.2 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| d12.aarch64 | FORK PIGSTY 1.2.2 1 | FORK PIGSTY 1.2.2 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| d13.x86_64 | FORK PIGSTY 1.2.2 1 | FORK PIGSTY 1.2.2 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| d13.aarch64 | FORK PIGSTY 1.2.2 1 | FORK PIGSTY 1.2.2 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| u22.x86_64 | FORK PIGSTY 1.2.2 1 | FORK PIGSTY 1.2.2 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| u22.aarch64 | FORK PIGSTY 1.2.2 1 | FORK PIGSTY 1.2.2 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| u24.x86_64 | FORK PIGSTY 1.2.2 1 | FORK PIGSTY 1.2.2 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| u24.aarch64 | FORK PIGSTY 1.2.2 1 | FORK PIGSTY 1.2.2 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| u26.x86_64 | FORK PIGSTY 1.2.2 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| u26.aarch64 | FORK PIGSTY 1.2.2 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+@ d12.x86_64 18 pgedge-18-lolor pgedge-18-lolor_1.2.2-1PIGSTY~bookworm_amd64.deb pigsty 1.2.2 16.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/l/lolor/pgedge-18-lolor_1.2.2-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 18 pgedge-18-lolor pgedge-18-lolor_1.2.2-1PIGSTY~bookworm_arm64.deb pigsty 1.2.2 15.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/l/lolor/pgedge-18-lolor_1.2.2-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 18 pgedge-18-lolor pgedge-18-lolor_1.2.2-1PIGSTY~trixie_amd64.deb pigsty 1.2.2 16.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/l/lolor/pgedge-18-lolor_1.2.2-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 18 pgedge-18-lolor pgedge-18-lolor_1.2.2-1PIGSTY~trixie_arm64.deb pigsty 1.2.2 15.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/l/lolor/pgedge-18-lolor_1.2.2-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 18 pgedge-18-lolor pgedge-18-lolor_1.2.2-1PIGSTY~jammy_amd64.deb pigsty 1.2.2 18.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/l/lolor/pgedge-18-lolor_1.2.2-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 18 pgedge-18-lolor pgedge-18-lolor_1.2.2-1PIGSTY~jammy_arm64.deb pigsty 1.2.2 17.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/l/lolor/pgedge-18-lolor_1.2.2-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 18 pgedge-18-lolor pgedge-18-lolor_1.2.2-1PIGSTY~noble_amd64.deb pigsty 1.2.2 17.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/l/lolor/pgedge-18-lolor_1.2.2-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 18 pgedge-18-lolor pgedge-18-lolor_1.2.2-1PIGSTY~noble_arm64.deb pigsty 1.2.2 17.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/l/lolor/pgedge-18-lolor_1.2.2-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 18 pgedge-18-lolor pgedge-18-lolor_1.2.2-1PIGSTY~resolute_amd64.deb pigsty 1.2.2 18.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/l/lolor/pgedge-18-lolor_1.2.2-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 18 pgedge-18-lolor pgedge-18-lolor_1.2.2-1PIGSTY~resolute_arm64.deb pigsty 1.2.2 17.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/l/lolor/pgedge-18-lolor_1.2.2-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 17 lolor_17 lolor_17-1.2.2-1PIGSTY.el8.x86_64.rpm pigsty 1.2.2 29.4KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/lolor_17-1.2.2-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 17 lolor_17 lolor_17-1.2.2-1PIGSTY.el8.aarch64.rpm pigsty 1.2.2 28.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/lolor_17-1.2.2-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 17 lolor_17 lolor_17-1.2.2-1PIGSTY.el9.x86_64.rpm pigsty 1.2.2 28.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/lolor_17-1.2.2-1PIGSTY.el9.x86_64.rpm
@@ -112,17 +122,17 @@ pig install lolor;          # 当前活跃 PG 版本安装
 {{% /tab %}}
 {{% tab header="pig" %}}
 ```bash
-pig ext install -y lolor -v 17  # PG 17
+pig ext install -y lolor -v 18  # PG 18
 ```
 {{% /tab %}}
 {{% tab header="dnf" %}}
 ```bash
-dnf install -y lolor_17       # PG 17
+dnf install -y lolor_18       # PG 18
 ```
 {{% /tab %}}
 {{% tab header="apt" %}}
 ```bash
-apt install -y pgedge-17-lolor   # PG 17
+apt install -y pgedge-18-lolor   # PG 18
 ```
 {{% /tab %}}
 {{< /tabpane >}}

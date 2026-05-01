@@ -11,8 +11,8 @@ icon: fa-brands fa-debian
 
 | **分类** | **All** | **PGDG** | **PIGSTY** | **CONTRIB** | | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
 |:--------:|:------:|:--------:|:----------:|:-----------:|:---:|:--------:|:--------:|:--------:|:--------:|:--------:|
-| [**EXT**](/ext/deb) | 495 | 107 | 317 | 71 | | 472 | 480 | 469 | 462 | 446 |
-| [**PKG**](/ext/repo) | 409 | 92 | 256 | 0 | | 389 | 399 | 391 | 385 | 372 |
+| [**EXT**](/ext/deb) | 495 | 107 | 317 | 71 | | 475 | 477 | 469 | 462 | 446 |
+| [**PKG**](/ext/repo) | 409 | 92 | 256 | 0 | | 392 | 396 | 391 | 385 | 372 |
 {.ext-table}
 
 
@@ -294,7 +294,7 @@ icon: fa-brands fa-debian
 | [`pg_slug_gen`](/ext/e/pg_slug_gen) | `1.0.0` | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `postgresql-$v-pg-slug-gen` | {{< pgvers "18,17,16,15" >}} | - |
 | [`sequential_uuids`](/ext/e/sequential_uuids) | `1.0.3` | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `postgresql-$v-sequential-uuids` | {{< pgvers "18,17,16,15,14" >}} | - |
 | [`pg_typeid`](/ext/e/typeid) | `0.3.0` | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `postgresql-$v-typeid` | {{< pgvers "18,17,16,15,14" >}} | - |
-| [`snowflake`](/ext/e/snowflake) | `2.4` | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `pgedge-$v-snowflake` | {{< pgvers "17" >}} | `pgedge-$v` |
+| [`snowflake`](/ext/e/snowflake) | `2.4` | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `pgedge-$v-snowflake` | {{< pgvers "18" >}} | `pgedge-$v` |
 | [`topn`](/ext/e/topn) | `2.7.0` | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `postgresql-$v-topn` | {{< pgvers "18,17,16,15,14" >}} | - |
 | [`quantile`](/ext/e/quantile) | `1.1.8` | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `postgresql-$v-quantile` | {{< pgvers "18,17,16,15,14" >}} | - |
 | [`lower_quantile`](/ext/e/lower_quantile) | `1.0.3` | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `postgresql-$v-lower-quantile` | {{< pgvers "18,17,16,15,14" >}} | - |
@@ -493,8 +493,8 @@ icon: fa-brands fa-debian
 | [`pg_failover_slots`](/ext/e/pg_failover_slots) | `1.2.1` | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `postgresql-$v-pg-failover-slots` | {{< pgvers "18,17,16,15,14" >}} | - |
 | [`db_migrator`](/ext/e/db_migrator) | `1.0.0` | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `postgresql-$v-db-migrator` | {{< pgvers "18,17,16,15,14" >}} | - |
 | [`pgactive`](/ext/e/pgactive) | `2.1.7` | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `postgresql-$v-pgactive` | {{< pgvers "18,17,16,15,14" >}} | - |
-| [`spock`](/ext/e/spock) | `5.0.5` | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `pgedge-$v-spock` | {{< pgvers "17" >}} | `pgedge-$v` |
-| [`lolor`](/ext/e/lolor) | `1.2.2` | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `pgedge-$v-lolor` | {{< pgvers "17" >}} | `pgedge-$v` |
+| [`spock`](/ext/e/spock) | `5.0.6` | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `pgedge-$v-spock` | {{< pgvers "18" >}} | `pgedge-$v` |
+| [`lolor`](/ext/e/lolor) | `1.2.2` | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `pgedge-$v-lolor` | {{< pgvers "18" >}} | `pgedge-$v` |
 | [`pgclone`](/ext/e/pgclone) | `4.0.0` | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `postgresql-$v-pgclone` | {{< pgvers "18,17,16,15,14" >}} | - |
 | [`pgmqtt`](/ext/e/pgmqtt) | `0.1.0` | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `postgresql-$v-pgmqtt` | {{< pgvers "18,17,16,15,14,13" >}} | - |
 | [`wal2json`](/ext/e/wal2json) | `2.6` | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `postgresql-$v-wal2json` | {{< pgvers "18,17,16,15,14" >}} | - |

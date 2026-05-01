@@ -45,9 +45,9 @@ weight: 4590
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#func) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `2.4` | {{< pgvers "17" >}} | `snowflake` | - |
-| [**RPM**](/ext/rpm#func) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `2.4` | {{< pgvers "17" >}} | `snowflake_$v` | `pgedge_$v` |
-| [**DEB**](/ext/deb#func) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `2.4` | {{< pgvers "17" >}} | `pgedge-$v-snowflake` | `pgedge-$v` |
+| [**EXT**](/ext/list#func) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `2.4` | {{< pgvers "18" >}} | `snowflake` | - |
+| [**RPM**](/ext/rpm#func) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `2.4` | {{< pgvers "18" >}} | `snowflake_$v` | `pgedge_$v` |
+| [**DEB**](/ext/deb#func) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `2.4` | {{< pgvers "18" >}} | `pgedge-$v-snowflake` | `pgedge-$v` |
 {.ext-table}
 
 {{< pgext_matrix >}}
@@ -59,16 +59,26 @@ weight: 4590
 | el9.aarch64 | MISS PIGSTY - 0 | FORK PIGSTY 2.4 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
 | el10.x86_64 | MISS PIGSTY - 0 | FORK PIGSTY 2.4 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
 | el10.aarch64 | MISS PIGSTY - 0 | FORK PIGSTY 2.4 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| d12.x86_64 | MISS PIGSTY - 0 | FORK PIGSTY 2.4 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| d12.aarch64 | MISS PIGSTY - 0 | FORK PIGSTY 2.4 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| d13.x86_64 | MISS PIGSTY - 0 | FORK PIGSTY 2.4 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| d13.aarch64 | MISS PIGSTY - 0 | FORK PIGSTY 2.4 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| u22.x86_64 | MISS PIGSTY - 0 | FORK PIGSTY 2.4 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| u22.aarch64 | MISS PIGSTY - 0 | FORK PIGSTY 2.4 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| u24.x86_64 | MISS PIGSTY - 0 | FORK PIGSTY 2.4 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| u24.aarch64 | MISS PIGSTY - 0 | FORK PIGSTY 2.4 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| u26.x86_64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| u26.aarch64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| d12.x86_64 | FORK PIGSTY 2.4 1 | FORK PIGSTY 2.4 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| d12.aarch64 | FORK PIGSTY 2.4 1 | FORK PIGSTY 2.4 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| d13.x86_64 | FORK PIGSTY 2.4 1 | FORK PIGSTY 2.4 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| d13.aarch64 | FORK PIGSTY 2.4 1 | FORK PIGSTY 2.4 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| u22.x86_64 | FORK PIGSTY 2.4 1 | FORK PIGSTY 2.4 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| u22.aarch64 | FORK PIGSTY 2.4 1 | FORK PIGSTY 2.4 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| u24.x86_64 | FORK PIGSTY 2.4 1 | FORK PIGSTY 2.4 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| u24.aarch64 | FORK PIGSTY 2.4 1 | FORK PIGSTY 2.4 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| u26.x86_64 | FORK PIGSTY 2.4 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| u26.aarch64 | FORK PIGSTY 2.4 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+@ d12.x86_64 18 pgedge-18-snowflake pgedge-18-snowflake_2.4-1PIGSTY~bookworm_amd64.deb pigsty 2.4 10.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/s/snowflake/pgedge-18-snowflake_2.4-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 18 pgedge-18-snowflake pgedge-18-snowflake_2.4-1PIGSTY~bookworm_arm64.deb pigsty 2.4 10.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/s/snowflake/pgedge-18-snowflake_2.4-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 18 pgedge-18-snowflake pgedge-18-snowflake_2.4-1PIGSTY~trixie_amd64.deb pigsty 2.4 10.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/s/snowflake/pgedge-18-snowflake_2.4-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 18 pgedge-18-snowflake pgedge-18-snowflake_2.4-1PIGSTY~trixie_arm64.deb pigsty 2.4 10.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/s/snowflake/pgedge-18-snowflake_2.4-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 18 pgedge-18-snowflake pgedge-18-snowflake_2.4-1PIGSTY~jammy_amd64.deb pigsty 2.4 10.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/s/snowflake/pgedge-18-snowflake_2.4-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 18 pgedge-18-snowflake pgedge-18-snowflake_2.4-1PIGSTY~jammy_arm64.deb pigsty 2.4 10.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/s/snowflake/pgedge-18-snowflake_2.4-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 18 pgedge-18-snowflake pgedge-18-snowflake_2.4-1PIGSTY~noble_amd64.deb pigsty 2.4 10.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/s/snowflake/pgedge-18-snowflake_2.4-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 18 pgedge-18-snowflake pgedge-18-snowflake_2.4-1PIGSTY~noble_arm64.deb pigsty 2.4 10.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/s/snowflake/pgedge-18-snowflake_2.4-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 18 pgedge-18-snowflake pgedge-18-snowflake_2.4-1PIGSTY~resolute_amd64.deb pigsty 2.4 10.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/s/snowflake/pgedge-18-snowflake_2.4-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 18 pgedge-18-snowflake pgedge-18-snowflake_2.4-1PIGSTY~resolute_arm64.deb pigsty 2.4 10.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/s/snowflake/pgedge-18-snowflake_2.4-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 17 snowflake_17 snowflake_17-2.4-1PIGSTY.el8.x86_64.rpm pigsty 2.4 20.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/snowflake_17-2.4-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 17 snowflake_17 snowflake_17-2.4-1PIGSTY.el8.aarch64.rpm pigsty 2.4 20.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/snowflake_17-2.4-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 17 snowflake_17 snowflake_17-2.4-1PIGSTY.el9.x86_64.rpm pigsty 2.4 20.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/snowflake_17-2.4-1PIGSTY.el9.x86_64.rpm
@@ -112,17 +122,17 @@ pig install snowflake;          # 当前活跃 PG 版本安装
 {{% /tab %}}
 {{% tab header="pig" %}}
 ```bash
-pig ext install -y snowflake -v 17  # PG 17
+pig ext install -y snowflake -v 18  # PG 18
 ```
 {{% /tab %}}
 {{% tab header="dnf" %}}
 ```bash
-dnf install -y snowflake_17       # PG 17
+dnf install -y snowflake_18       # PG 18
 ```
 {{% /tab %}}
 {{% tab header="apt" %}}
 ```bash
-apt install -y pgedge-17-snowflake   # PG 17
+apt install -y pgedge-18-snowflake   # PG 18
 ```
 {{% /tab %}}
 {{< /tabpane >}}
