@@ -3,7 +3,7 @@
 #=======================================#
 baseURL: https://pigsty.cc/
 title: PIGSTY
-languageCode: zh-CN
+locale: zh-CN
 defaultContentLanguage: zh-cn
 enableRobotsTXT: true
 enableGitInfo: true
