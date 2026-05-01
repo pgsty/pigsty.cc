@@ -35,31 +35,31 @@ curl -fsSL https://repo.pigsty.cc/pig | bash
 **默认安装**（Cloudflare CDN）：
 
 ```bash
-curl -fsSL https://repo.pigsty.io/pig | bash -s 1.4.0
+curl -fsSL https://repo.pigsty.io/pig | bash -s 1.4.1
 ```
 
 **中国镜像**：
 
 ```bash
-curl -fsSL https://repo.pigsty.cc/pig | bash -s 1.4.0
+curl -fsSL https://repo.pigsty.cc/pig | bash -s 1.4.1
 ```
 
 
 ## 发布页下载
 
-你也可以直接从 Pigsty 仓库下载 `pig` 安装包（`RPM`/`DEB`/ 压缩包）：[GitHub v1.4.0 稳定版发布页](https://github.com/pgsty/pig/releases/tag/v1.4.0)
+你也可以直接从 Pigsty 仓库下载 `pig` 安装包（`RPM`/`DEB`/ 压缩包）：[GitHub v1.4.1 稳定版发布页](https://github.com/pgsty/pig/releases/tag/v1.4.1)
 
 ```
 latest
-└── v1.4.0
-    ├── pig_1.4.0-1_amd64.deb
-    ├── pig_1.4.0-1_arm64.deb
-    ├── pig-1.4.0-1.aarch64.rpm
-    ├── pig-1.4.0-1.x86_64.rpm
-    ├── pig-v1.4.0.linux-amd64.tar.gz
-    ├── pig-v1.4.0.linux-arm64.tar.gz
-    ├── pig-v1.4.0.darwin-amd64.tar.gz
-    └── pig-v1.4.0.darwin-arm64.tar.gz
+└── v1.4.1
+    ├── pig_1.4.1-1_amd64.deb
+    ├── pig_1.4.1-1_arm64.deb
+    ├── pig-1.4.1-1.aarch64.rpm
+    ├── pig-1.4.1-1.x86_64.rpm
+    ├── pig-v1.4.1.linux-amd64.tar.gz
+    ├── pig-v1.4.1.linux-arm64.tar.gz
+    ├── pig-v1.4.1.darwin-amd64.tar.gz
+    └── pig-v1.4.1.darwin-arm64.tar.gz
 ```
 
 将其解压后，将二进制文件放入您的 PATH 系统路径中即可。

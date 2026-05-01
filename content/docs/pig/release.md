@@ -7,10 +7,11 @@ module: [PIG]
 categories: [参考]
 ---
 
-最新稳定版本是 [v1.4.0](https://github.com/pgsty/pig/releases/tag/v1.4.0)。
+最新稳定版本是 [v1.4.1](https://github.com/pgsty/pig/releases/tag/v1.4.1)。
 
 |       版本        |     日期     | 摘要                                |                                                     GitHub |
 |:---------------:|:----------:|-----------------------------------|-----------------------------------------------------------:|
+| [v1.4.1](#v141) | 2026-05-01 | 510 个扩展，支持 Ubuntu 26.04，仓库校准    | [v1.4.1](https://github.com/pgsty/pig/releases/tag/v1.4.1) |
 | [v1.4.0](#v140) | 2026-04-19 | 507 个扩展，pgrx 0.18.0，更多构建规格      | [v1.4.0](https://github.com/pgsty/pig/releases/tag/v1.4.0) |
 | [v1.3.4](#v134) | 2026-04-14 | 504 扩展更新与发布产物校验和刷新             | [v1.3.4](https://github.com/pgsty/pig/releases/tag/v1.3.4) |
 | [v1.3.3](#v133) | 2026-04-10 | 481 扩展与 Go 1.26.2 更新              | [v1.3.3](https://github.com/pgsty/pig/releases/tag/v1.3.3) |
@@ -49,6 +50,31 @@ categories: [参考]
 | [v0.0.1](#v001) | 2024-12-23 | 创世发布                              | [v0.0.1](https://github.com/pgsty/pig/releases/tag/v0.0.1) |
 {.full-width}
 
+
+
+--------
+
+# v1.4.1
+
+- 扩展目录更新到 **510** 个扩展，新增 3 个扩展，更新 17 个扩展。
+- 新增 Ubuntu 26.04 `resolute` 支持，移除 Ubuntu 20.04 `focal` 支持。
+- 将 `el9.aarch64` 特例中的 `patroni` / `patroni-etcd` 提升到 `4.1.2`。
+- 校准上游软件仓库定义。
+
+**校验和**
+
+```bash
+2b96e06d26e7425b13ac1f27d620b24b258f232bfc1d84c0b3aa2ee6505ea8aa  pig-1.4.1-1.aarch64.rpm
+30a68d2fb97bb1d146ec57bcec2f279ce7fa4cf075fdcc9afc3d143f9a365896  pig-1.4.1-1.x86_64.rpm
+ff4ac1a15f6a1e0aa935922a4e402a428fd3579c0143a5e411e835089a55cc2c  pig-v1.4.1.darwin-amd64.tar.gz
+a23048d854bc2bef74a2b5cf42bd2f4aae79f3c9df3181a829ddf2167d939dc2  pig-v1.4.1.darwin-arm64.tar.gz
+74feec28ee879853633d8e9f3722c95aa25c47a3d3f6fb5bde3f3609b5c09378  pig-v1.4.1.linux-amd64.tar.gz
+d50d1ce2b0d682a4ced72a4a11e6bddbd90f9dccbd16eae886045845eec83104  pig-v1.4.1.linux-arm64.tar.gz
+3fe640c3b6678fe4cef527a58dca54285f15d56c8fe0b3c2ed8b6879e1e91d41  pig_1.4.1-1_amd64.deb
+d09fd6e747cb65acda225ffd5448a8fba3f676ce8044f4237d75a59b3d6a5b4e  pig_1.4.1-1_arm64.deb
+```
+
+发布：https://github.com/pgsty/pig/releases/tag/v1.4.1
 
 
 --------

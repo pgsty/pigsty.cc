@@ -42,7 +42,7 @@ pig repo add -u                             # all = node + pgsql (pgdg + pigsty)
 # 将 Pigsty 的 GPG 公钥添加到您的系统密钥链以验证包签名
 curl -fsSL https://repo.pigsty.io/key | sudo gpg --dearmor -o /etc/apt/keyrings/pigsty.gpg
 
-# 获取 Debian 发行版代号（distro_codename=jammy, focal, bullseye, bookworm），并将相应的上游仓库地址写入 APT List 文件
+# 获取 Debian / Ubuntu 发行版代号（bookworm, trixie, jammy, noble, resolute），并将相应的上游仓库地址写入 APT List 文件
 distro_codename=$(lsb_release -cs)
 sudo tee /etc/apt/sources.list.d/pigsty-io.list > /dev/null <<EOF
 deb [signed-by=/etc/apt/keyrings/pigsty.gpg] https://repo.pigsty.io/apt/pgsql/${distro_codename} ${distro_codename} main

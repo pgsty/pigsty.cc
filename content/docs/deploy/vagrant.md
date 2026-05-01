@@ -84,20 +84,20 @@ make all        # 7 节点全量构建环境
 
 Pigsty 在 [`vagrant/spec/`](https://github.com/pgsty/pigsty/tree/main/vagrant/spec) 目录下提供了多种预定义的虚拟机规格：
 
-|                                 模板                                  |  节点数  |       规格        |         说明          |  别名   |
-|:-------------------------------------------------------------------:|:-----:|:---------------:|:-------------------:|:-----:|
-| [meta.rb](https://github.com/pgsty/pigsty/blob/main/vagrant/spec/meta.rb) | 1 节点  |    2c4g x 1     |      单节点开发箱      | Devbox |
-| [dual.rb](https://github.com/pgsty/pigsty/blob/main/vagrant/spec/dual.rb) | 2 节点  |    1c2g x 2     |       双节点环境       |       |
-| [trio.rb](https://github.com/pgsty/pigsty/blob/main/vagrant/spec/trio.rb) | 3 节点  |    1c2g x 3     |       三节点环境       |       |
-| [full.rb](https://github.com/pgsty/pigsty/blob/main/vagrant/spec/full.rb) | 4 节点  | 2c4g + 1c2g x 3 |     4 节点完整沙箱     | Sandbox |
-| [deci.rb](https://github.com/pgsty/pigsty/blob/main/vagrant/spec/deci.rb) | 10 节点 |       混合       |      10 节点环境      |       |
-| [simu.rb](https://github.com/pgsty/pigsty/blob/main/vagrant/spec/simu.rb) | 20 节点 |       混合       |   20 节点生产仿真环境    | Simubox |
-| [minio.rb](https://github.com/pgsty/pigsty/blob/main/vagrant/spec/minio.rb) | 4 节点  |  1c2g x 4 + 磁盘  |   MinIO 测试环境     |       |
-| [oss.rb](https://github.com/pgsty/pigsty/blob/main/vagrant/spec/oss.rb) | 3 节点  |    1c2g x 3     | 3 节点 OSS 构建环境  |       |
-| [pro.rb](https://github.com/pgsty/pigsty/blob/main/vagrant/spec/pro.rb) | 5 节点  |    1c2g x 5     | 5 节点 PRO 构建环境  |       |
-| [rpm.rb](https://github.com/pgsty/pigsty/blob/main/vagrant/spec/rpm.rb) | 3 节点  |    1c2g x 3     | 3 节点 EL 构建环境   |       |
-| [deb.rb](https://github.com/pgsty/pigsty/blob/main/vagrant/spec/deb.rb) | 4 节点  |    1c2g x 4     | 4 节点 Deb 构建环境  |       |
-| [all.rb](https://github.com/pgsty/pigsty/blob/main/vagrant/spec/all.rb) | 7 节点  |    1c2g x 7     | 7 节点全量构建环境    |       |
+|                                     模板                                      |  节点数  |       规格        |      说明       |   别名    |
+|:---------------------------------------------------------------------------:|:-----:|:---------------:|:-------------:|:-------:|
+|  [meta.rb](https://github.com/pgsty/pigsty/blob/main/vagrant/spec/meta.rb)  | 1 节点  |    2c4g x 1     |    单节点开发箱     | Devbox  |
+|  [dual.rb](https://github.com/pgsty/pigsty/blob/main/vagrant/spec/dual.rb)  | 2 节点  |    1c2g x 2     |     双节点环境     |         |
+|  [trio.rb](https://github.com/pgsty/pigsty/blob/main/vagrant/spec/trio.rb)  | 3 节点  |    1c2g x 3     |     三节点环境     |         |
+|  [full.rb](https://github.com/pgsty/pigsty/blob/main/vagrant/spec/full.rb)  | 4 节点  | 2c4g + 1c2g x 3 |   4 节点完整沙箱    | Sandbox |
+|  [deci.rb](https://github.com/pgsty/pigsty/blob/main/vagrant/spec/deci.rb)  | 10 节点 |       混合        |    10 节点环境    |         |
+|  [simu.rb](https://github.com/pgsty/pigsty/blob/main/vagrant/spec/simu.rb)  | 20 节点 |       混合        |  20 节点生产仿真环境  | Simubox |
+| [minio.rb](https://github.com/pgsty/pigsty/blob/main/vagrant/spec/minio.rb) | 4 节点  |  1c2g x 4 + 磁盘  |  MinIO 测试环境   |         |
+|   [oss.rb](https://github.com/pgsty/pigsty/blob/main/vagrant/spec/oss.rb)   | 3 节点  |    1c2g x 3     | 3 节点 OSS 构建环境 |         |
+|   [pro.rb](https://github.com/pgsty/pigsty/blob/main/vagrant/spec/pro.rb)   | 5 节点  |    1c2g x 5     | 5 节点 PRO 构建环境 |         |
+|   [rpm.rb](https://github.com/pgsty/pigsty/blob/main/vagrant/spec/rpm.rb)   | 3 节点  |    1c2g x 3     | 3 节点 EL 构建环境  |         |
+|   [deb.rb](https://github.com/pgsty/pigsty/blob/main/vagrant/spec/deb.rb)   | 4 节点  |    1c2g x 4     | 4 节点 Deb 构建环境 |         |
+|   [all.rb](https://github.com/pgsty/pigsty/blob/main/vagrant/spec/all.rb)   | 7 节点  |    1c2g x 7     |  7 节点全量构建环境   |         |
 {.full-width}
 
 每个规格文件包含一个描述虚拟机节点的 `Specs` 变量。例如，`full.rb` 包含 4 节点沙箱的定义：
