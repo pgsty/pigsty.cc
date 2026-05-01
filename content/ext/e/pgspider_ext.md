@@ -64,8 +64,8 @@ weight: 8540
 | u22.aarch64 | MISS PIGSTY - 0 | AVAIL PIGSTY 1.3.0 1 | AVAIL PIGSTY 1.3.0 1 | AVAIL PIGSTY 1.3.0 1 | MISS PIGSTY - 0 |
 | u24.x86_64 | MISS PIGSTY - 0 | AVAIL PIGSTY 1.3.0 1 | AVAIL PIGSTY 1.3.0 1 | AVAIL PIGSTY 1.3.0 1 | MISS PIGSTY - 0 |
 | u24.aarch64 | MISS PIGSTY - 0 | AVAIL PIGSTY 1.3.0 1 | AVAIL PIGSTY 1.3.0 1 | AVAIL PIGSTY 1.3.0 1 | MISS PIGSTY - 0 |
-| u26.x86_64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| u26.aarch64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| u26.x86_64 | MISS PIGSTY - 0 | AVAIL PIGSTY 1.3.0 1 | AVAIL PIGSTY 1.3.0 1 | AVAIL PIGSTY 1.3.0 1 | MISS PIGSTY - 0 |
+| u26.aarch64 | MISS PIGSTY - 0 | AVAIL PIGSTY 1.3.0 1 | AVAIL PIGSTY 1.3.0 1 | AVAIL PIGSTY 1.3.0 1 | MISS PIGSTY - 0 |
 @ el8.x86_64 17 pgspider_ext_17 pgspider_ext_17-1.3.0-1PGDG.rhel8.x86_64.rpm pgdg 1.3.0 28.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pgspider_ext_17-1.3.0-1PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 17 pgspider_ext_17 pgspider_ext_17-1.3.0-1PGDG.rhel8.aarch64.rpm pgdg 1.3.0 27.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pgspider_ext_17-1.3.0-1PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 17 pgspider_ext_17 pgspider_ext_17-1.3.0-1PGDG.rhel9.x86_64.rpm pgdg 1.3.0 29.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pgspider_ext_17-1.3.0-1PGDG.rhel9.x86_64.rpm
@@ -80,6 +80,8 @@ weight: 8540
 @ u22.aarch64 17 postgresql-17-pgspider-ext postgresql-17-pgspider-ext_1.3.0-1PIGSTY~jammy_arm64.deb pigsty 1.3.0 60.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgspider-ext/postgresql-17-pgspider-ext_1.3.0-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 17 postgresql-17-pgspider-ext postgresql-17-pgspider-ext_1.3.0-1PIGSTY~noble_amd64.deb pigsty 1.3.0 50.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgspider-ext/postgresql-17-pgspider-ext_1.3.0-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 17 postgresql-17-pgspider-ext postgresql-17-pgspider-ext_1.3.0-1PIGSTY~noble_arm64.deb pigsty 1.3.0 49.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgspider-ext/postgresql-17-pgspider-ext_1.3.0-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 17 postgresql-17-pgspider-ext postgresql-17-pgspider-ext_1.3.0-1PIGSTY~resolute_amd64.deb pigsty 1.3.0 50.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgspider-ext/postgresql-17-pgspider-ext_1.3.0-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 17 postgresql-17-pgspider-ext postgresql-17-pgspider-ext_1.3.0-1PIGSTY~resolute_arm64.deb pigsty 1.3.0 49.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgspider-ext/postgresql-17-pgspider-ext_1.3.0-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 16 pgspider_ext_16 pgspider_ext_16-1.3.0-1PGDG.rhel8.x86_64.rpm pgdg 1.3.0 28.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pgspider_ext_16-1.3.0-1PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 16 pgspider_ext_16 pgspider_ext_16-1.3.0-1PGDG.rhel8.aarch64.rpm pgdg 1.3.0 27.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pgspider_ext_16-1.3.0-1PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 16 pgspider_ext_16 pgspider_ext_16-1.3.0-1PGDG.rhel9.x86_64.rpm pgdg 1.3.0 29.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pgspider_ext_16-1.3.0-1PGDG.rhel9.x86_64.rpm
@@ -94,6 +96,8 @@ weight: 8540
 @ u22.aarch64 16 postgresql-16-pgspider-ext postgresql-16-pgspider-ext_1.3.0-1PIGSTY~jammy_arm64.deb pigsty 1.3.0 60.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgspider-ext/postgresql-16-pgspider-ext_1.3.0-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 16 postgresql-16-pgspider-ext postgresql-16-pgspider-ext_1.3.0-1PIGSTY~noble_amd64.deb pigsty 1.3.0 50.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgspider-ext/postgresql-16-pgspider-ext_1.3.0-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 16 postgresql-16-pgspider-ext postgresql-16-pgspider-ext_1.3.0-1PIGSTY~noble_arm64.deb pigsty 1.3.0 49.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgspider-ext/postgresql-16-pgspider-ext_1.3.0-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 16 postgresql-16-pgspider-ext postgresql-16-pgspider-ext_1.3.0-1PIGSTY~resolute_amd64.deb pigsty 1.3.0 50.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgspider-ext/postgresql-16-pgspider-ext_1.3.0-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 16 postgresql-16-pgspider-ext postgresql-16-pgspider-ext_1.3.0-1PIGSTY~resolute_arm64.deb pigsty 1.3.0 49.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgspider-ext/postgresql-16-pgspider-ext_1.3.0-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 15 pgspider_ext_15 pgspider_ext_15-1.3.0-1PGDG.rhel8.x86_64.rpm pgdg 1.3.0 29.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pgspider_ext_15-1.3.0-1PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 15 pgspider_ext_15 pgspider_ext_15-1.3.0-1PGDG.rhel8.aarch64.rpm pgdg 1.3.0 28.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pgspider_ext_15-1.3.0-1PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 15 pgspider_ext_15 pgspider_ext_15-1.3.0-1PGDG.rhel9.x86_64.rpm pgdg 1.3.0 29.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pgspider_ext_15-1.3.0-1PGDG.rhel9.x86_64.rpm
@@ -108,6 +112,8 @@ weight: 8540
 @ u22.aarch64 15 postgresql-15-pgspider-ext postgresql-15-pgspider-ext_1.3.0-1PIGSTY~jammy_arm64.deb pigsty 1.3.0 60.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgspider-ext/postgresql-15-pgspider-ext_1.3.0-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 15 postgresql-15-pgspider-ext postgresql-15-pgspider-ext_1.3.0-1PIGSTY~noble_amd64.deb pigsty 1.3.0 51.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgspider-ext/postgresql-15-pgspider-ext_1.3.0-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 15 postgresql-15-pgspider-ext postgresql-15-pgspider-ext_1.3.0-1PIGSTY~noble_arm64.deb pigsty 1.3.0 49.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgspider-ext/postgresql-15-pgspider-ext_1.3.0-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 15 postgresql-15-pgspider-ext postgresql-15-pgspider-ext_1.3.0-1PIGSTY~resolute_amd64.deb pigsty 1.3.0 50.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgspider-ext/postgresql-15-pgspider-ext_1.3.0-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 15 postgresql-15-pgspider-ext postgresql-15-pgspider-ext_1.3.0-1PIGSTY~resolute_arm64.deb pigsty 1.3.0 49.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgspider-ext/postgresql-15-pgspider-ext_1.3.0-1PIGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建

@@ -68,8 +68,8 @@ weight: 7020
 | u22.aarch64 | AVAIL PIGSTY 3.1.9 1 | AVAIL PIGSTY 3.1.9 1 | AVAIL PIGSTY 3.1.9 1 | AVAIL PIGSTY 3.1.9 1 | AVAIL PIGSTY 3.1.9 1 |
 | u24.x86_64 | AVAIL PIGSTY 3.1.9 1 | AVAIL PIGSTY 3.1.9 1 | AVAIL PIGSTY 3.1.9 1 | AVAIL PIGSTY 3.1.9 1 | AVAIL PIGSTY 3.1.9 1 |
 | u24.aarch64 | AVAIL PIGSTY 3.1.9 1 | AVAIL PIGSTY 3.1.9 1 | AVAIL PIGSTY 3.1.9 1 | AVAIL PIGSTY 3.1.9 1 | AVAIL PIGSTY 3.1.9 1 |
-| u26.x86_64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| u26.aarch64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| u26.x86_64 | AVAIL PIGSTY 3.1.9 1 | AVAIL PIGSTY 3.1.9 1 | AVAIL PIGSTY 3.1.9 1 | AVAIL PIGSTY 3.1.9 1 | AVAIL PIGSTY 3.1.9 1 |
+| u26.aarch64 | AVAIL PIGSTY 3.1.9 1 | AVAIL PIGSTY 3.1.9 1 | AVAIL PIGSTY 3.1.9 1 | AVAIL PIGSTY 3.1.9 1 | AVAIL PIGSTY 3.1.9 1 |
 @ el8.x86_64 18 pgsodium_18 pgsodium_18-3.1.9-4PGDG.rhel8.x86_64.rpm pgdg 3.1.9 71.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pgsodium_18-3.1.9-4PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 18 pgsodium_18 pgsodium_18-3.1.9-1PIGSTY.el8.x86_64.rpm pigsty 3.1.9 60.4KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgsodium_18-3.1.9-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 18 pgsodium_18 pgsodium_18-3.1.9-4PGDG.rhel8.aarch64.rpm pgdg 3.1.9 67.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pgsodium_18-3.1.9-4PGDG.rhel8.aarch64.rpm
@@ -90,6 +90,8 @@ weight: 7020
 @ u22.aarch64 18 postgresql-18-pgsodium postgresql-18-pgsodium_3.1.9-1PIGSTY~jammy_arm64.deb pigsty 3.1.9 190.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgsodium/postgresql-18-pgsodium_3.1.9-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 18 postgresql-18-pgsodium postgresql-18-pgsodium_3.1.9-1PIGSTY~noble_amd64.deb pigsty 3.1.9 192.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgsodium/postgresql-18-pgsodium_3.1.9-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 18 postgresql-18-pgsodium postgresql-18-pgsodium_3.1.9-1PIGSTY~noble_arm64.deb pigsty 3.1.9 189.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgsodium/postgresql-18-pgsodium_3.1.9-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 18 postgresql-18-pgsodium postgresql-18-pgsodium_3.1.9-1PIGSTY~resolute_amd64.deb pigsty 3.1.9 192.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgsodium/postgresql-18-pgsodium_3.1.9-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 18 postgresql-18-pgsodium postgresql-18-pgsodium_3.1.9-1PIGSTY~resolute_arm64.deb pigsty 3.1.9 189.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgsodium/postgresql-18-pgsodium_3.1.9-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 17 pgsodium_17 pgsodium_17-3.1.9-3PGDG.rhel8.x86_64.rpm pgdg 3.1.9 71.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pgsodium_17-3.1.9-3PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 17 pgsodium_17 pgsodium_17-3.1.9-1PIGSTY.el8.x86_64.rpm pigsty 3.1.9 60.4KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgsodium_17-3.1.9-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 17 pgsodium_17 pgsodium_17-3.1.9-3PGDG.rhel8.aarch64.rpm pgdg 3.1.9 67.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pgsodium_17-3.1.9-3PGDG.rhel8.aarch64.rpm
@@ -110,6 +112,8 @@ weight: 7020
 @ u22.aarch64 17 postgresql-17-pgsodium postgresql-17-pgsodium_3.1.9-1PIGSTY~jammy_arm64.deb pigsty 3.1.9 201.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgsodium/postgresql-17-pgsodium_3.1.9-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 17 postgresql-17-pgsodium postgresql-17-pgsodium_3.1.9-1PIGSTY~noble_amd64.deb pigsty 3.1.9 192.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgsodium/postgresql-17-pgsodium_3.1.9-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 17 postgresql-17-pgsodium postgresql-17-pgsodium_3.1.9-1PIGSTY~noble_arm64.deb pigsty 3.1.9 189.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgsodium/postgresql-17-pgsodium_3.1.9-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 17 postgresql-17-pgsodium postgresql-17-pgsodium_3.1.9-1PIGSTY~resolute_amd64.deb pigsty 3.1.9 192.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgsodium/postgresql-17-pgsodium_3.1.9-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 17 postgresql-17-pgsodium postgresql-17-pgsodium_3.1.9-1PIGSTY~resolute_arm64.deb pigsty 3.1.9 189.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgsodium/postgresql-17-pgsodium_3.1.9-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 16 pgsodium_16 pgsodium_16-3.1.9-1PIGSTY.el8.x86_64.rpm pigsty 3.1.9 60.4KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgsodium_16-3.1.9-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 16 pgsodium_16 pgsodium_16-3.1.9-1PGDG.rhel8.x86_64.rpm pgdg 3.1.9 71.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pgsodium_16-3.1.9-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 16 pgsodium_16 pgsodium_16-3.1.8-1PGDG.rhel8.x86_64.rpm pgdg 3.1.8 69.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pgsodium_16-3.1.8-1PGDG.rhel8.x86_64.rpm
@@ -134,6 +138,8 @@ weight: 7020
 @ u22.aarch64 16 postgresql-16-pgsodium postgresql-16-pgsodium_3.1.9-1PIGSTY~jammy_arm64.deb pigsty 3.1.9 196.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgsodium/postgresql-16-pgsodium_3.1.9-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 16 postgresql-16-pgsodium postgresql-16-pgsodium_3.1.9-1PIGSTY~noble_amd64.deb pigsty 3.1.9 187.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgsodium/postgresql-16-pgsodium_3.1.9-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 16 postgresql-16-pgsodium postgresql-16-pgsodium_3.1.9-1PIGSTY~noble_arm64.deb pigsty 3.1.9 184.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgsodium/postgresql-16-pgsodium_3.1.9-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 16 postgresql-16-pgsodium postgresql-16-pgsodium_3.1.9-1PIGSTY~resolute_amd64.deb pigsty 3.1.9 187.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgsodium/postgresql-16-pgsodium_3.1.9-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 16 postgresql-16-pgsodium postgresql-16-pgsodium_3.1.9-1PIGSTY~resolute_arm64.deb pigsty 3.1.9 184.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgsodium/postgresql-16-pgsodium_3.1.9-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 15 pgsodium_15 pgsodium_15-3.1.9-1PIGSTY.el8.x86_64.rpm pigsty 3.1.9 58.9KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgsodium_15-3.1.9-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 15 pgsodium_15 pgsodium_15-3.1.9-1PGDG.rhel8.x86_64.rpm pgdg 3.1.9 69.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pgsodium_15-3.1.9-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 15 pgsodium_15 pgsodium_15-3.1.8-1PGDG.rhel8.x86_64.rpm pgdg 3.1.8 67.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pgsodium_15-3.1.8-1PGDG.rhel8.x86_64.rpm
@@ -191,6 +197,8 @@ weight: 7020
 @ u22.aarch64 15 postgresql-15-pgsodium postgresql-15-pgsodium_3.1.9-1PIGSTY~jammy_arm64.deb pigsty 3.1.9 192.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgsodium/postgresql-15-pgsodium_3.1.9-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 15 postgresql-15-pgsodium postgresql-15-pgsodium_3.1.9-1PIGSTY~noble_amd64.deb pigsty 3.1.9 181.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgsodium/postgresql-15-pgsodium_3.1.9-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 15 postgresql-15-pgsodium postgresql-15-pgsodium_3.1.9-1PIGSTY~noble_arm64.deb pigsty 3.1.9 178.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgsodium/postgresql-15-pgsodium_3.1.9-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 15 postgresql-15-pgsodium postgresql-15-pgsodium_3.1.9-1PIGSTY~resolute_amd64.deb pigsty 3.1.9 181.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgsodium/postgresql-15-pgsodium_3.1.9-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 15 postgresql-15-pgsodium postgresql-15-pgsodium_3.1.9-1PIGSTY~resolute_arm64.deb pigsty 3.1.9 178.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgsodium/postgresql-15-pgsodium_3.1.9-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 14 pgsodium_14 pgsodium_14-3.1.9-1PIGSTY.el8.x86_64.rpm pigsty 3.1.9 58.9KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgsodium_14-3.1.9-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 14 pgsodium_14 pgsodium_14-3.1.9-1PGDG.rhel8.x86_64.rpm pgdg 3.1.9 69.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pgsodium_14-3.1.9-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 14 pgsodium_14 pgsodium_14-3.1.8-1PGDG.rhel8.x86_64.rpm pgdg 3.1.8 67.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pgsodium_14-3.1.8-1PGDG.rhel8.x86_64.rpm
@@ -252,6 +260,8 @@ weight: 7020
 @ u22.aarch64 14 postgresql-14-pgsodium postgresql-14-pgsodium_3.1.9-1PIGSTY~jammy_arm64.deb pigsty 3.1.9 192.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgsodium/postgresql-14-pgsodium_3.1.9-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 14 postgresql-14-pgsodium postgresql-14-pgsodium_3.1.9-1PIGSTY~noble_amd64.deb pigsty 3.1.9 181.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgsodium/postgresql-14-pgsodium_3.1.9-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 14 postgresql-14-pgsodium postgresql-14-pgsodium_3.1.9-1PIGSTY~noble_arm64.deb pigsty 3.1.9 178.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgsodium/postgresql-14-pgsodium_3.1.9-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 14 postgresql-14-pgsodium postgresql-14-pgsodium_3.1.9-1PIGSTY~resolute_amd64.deb pigsty 3.1.9 181.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgsodium/postgresql-14-pgsodium_3.1.9-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 14 postgresql-14-pgsodium postgresql-14-pgsodium_3.1.9-1PIGSTY~resolute_arm64.deb pigsty 3.1.9 177.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgsodium/postgresql-14-pgsodium_3.1.9-1PIGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建

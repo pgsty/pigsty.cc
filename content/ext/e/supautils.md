@@ -64,8 +64,8 @@ weight: 7010
 | u22.aarch64 | AVAIL PIGSTY 3.2.1 1 | AVAIL PIGSTY 3.2.1 1 | AVAIL PIGSTY 3.2.1 1 | AVAIL PIGSTY 3.2.1 1 | AVAIL PIGSTY 3.2.1 1 |
 | u24.x86_64 | AVAIL PIGSTY 3.2.1 1 | AVAIL PIGSTY 3.2.1 1 | AVAIL PIGSTY 3.2.1 1 | AVAIL PIGSTY 3.2.1 1 | AVAIL PIGSTY 3.2.1 1 |
 | u24.aarch64 | AVAIL PIGSTY 3.2.1 1 | AVAIL PIGSTY 3.2.1 1 | AVAIL PIGSTY 3.2.1 1 | AVAIL PIGSTY 3.2.1 1 | AVAIL PIGSTY 3.2.1 1 |
-| u26.x86_64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| u26.aarch64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| u26.x86_64 | AVAIL PIGSTY 3.2.1 1 | AVAIL PIGSTY 3.2.1 1 | AVAIL PIGSTY 3.2.1 1 | AVAIL PIGSTY 3.2.1 1 | AVAIL PIGSTY 3.2.1 1 |
+| u26.aarch64 | AVAIL PIGSTY 3.2.1 1 | AVAIL PIGSTY 3.2.1 1 | AVAIL PIGSTY 3.2.1 1 | AVAIL PIGSTY 3.2.1 1 | AVAIL PIGSTY 3.2.1 1 |
 @ el8.x86_64 18 supautils_18 supautils_18-3.2.1-1PIGSTY.el8.x86_64.rpm pigsty 3.2.1 32.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/supautils_18-3.2.1-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 18 supautils_18 supautils_18-3.2.1-1PIGSTY.el8.aarch64.rpm pigsty 3.2.1 31.4KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/supautils_18-3.2.1-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 18 supautils_18 supautils_18-3.2.1-1PIGSTY.el9.x86_64.rpm pigsty 3.2.1 30.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/supautils_18-3.2.1-1PIGSTY.el9.x86_64.rpm
@@ -80,6 +80,8 @@ weight: 7010
 @ u22.aarch64 18 postgresql-18-supautils postgresql-18-supautils_3.2.1-1PIGSTY~jammy_arm64.deb pigsty 3.2.1 25.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/s/supautils/postgresql-18-supautils_3.2.1-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 18 postgresql-18-supautils postgresql-18-supautils_3.2.1-1PIGSTY~noble_amd64.deb pigsty 3.2.1 26.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/s/supautils/postgresql-18-supautils_3.2.1-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 18 postgresql-18-supautils postgresql-18-supautils_3.2.1-1PIGSTY~noble_arm64.deb pigsty 3.2.1 25.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/s/supautils/postgresql-18-supautils_3.2.1-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 18 postgresql-18-supautils postgresql-18-supautils_3.2.1-1PIGSTY~resolute_amd64.deb pigsty 3.2.1 26.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/s/supautils/postgresql-18-supautils_3.2.1-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 18 postgresql-18-supautils postgresql-18-supautils_3.2.1-1PIGSTY~resolute_arm64.deb pigsty 3.2.1 25.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/s/supautils/postgresql-18-supautils_3.2.1-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 17 supautils_17 supautils_17-3.2.1-1PIGSTY.el8.x86_64.rpm pigsty 3.2.1 32.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/supautils_17-3.2.1-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 17 supautils_17 supautils_17-3.2.1-1PIGSTY.el8.aarch64.rpm pigsty 3.2.1 31.4KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/supautils_17-3.2.1-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 17 supautils_17 supautils_17-3.2.1-1PIGSTY.el9.x86_64.rpm pigsty 3.2.1 30.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/supautils_17-3.2.1-1PIGSTY.el9.x86_64.rpm
@@ -94,6 +96,8 @@ weight: 7010
 @ u22.aarch64 17 postgresql-17-supautils postgresql-17-supautils_3.2.1-1PIGSTY~jammy_arm64.deb pigsty 3.2.1 25.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/s/supautils/postgresql-17-supautils_3.2.1-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 17 postgresql-17-supautils postgresql-17-supautils_3.2.1-1PIGSTY~noble_amd64.deb pigsty 3.2.1 26.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/s/supautils/postgresql-17-supautils_3.2.1-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 17 postgresql-17-supautils postgresql-17-supautils_3.2.1-1PIGSTY~noble_arm64.deb pigsty 3.2.1 25.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/s/supautils/postgresql-17-supautils_3.2.1-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 17 postgresql-17-supautils postgresql-17-supautils_3.2.1-1PIGSTY~resolute_amd64.deb pigsty 3.2.1 26.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/s/supautils/postgresql-17-supautils_3.2.1-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 17 postgresql-17-supautils postgresql-17-supautils_3.2.1-1PIGSTY~resolute_arm64.deb pigsty 3.2.1 25.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/s/supautils/postgresql-17-supautils_3.2.1-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 16 supautils_16 supautils_16-3.2.1-1PIGSTY.el8.x86_64.rpm pigsty 3.2.1 32.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/supautils_16-3.2.1-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 16 supautils_16 supautils_16-3.2.1-1PIGSTY.el8.aarch64.rpm pigsty 3.2.1 31.4KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/supautils_16-3.2.1-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 16 supautils_16 supautils_16-3.2.1-1PIGSTY.el9.x86_64.rpm pigsty 3.2.1 30.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/supautils_16-3.2.1-1PIGSTY.el9.x86_64.rpm
@@ -108,6 +112,8 @@ weight: 7010
 @ u22.aarch64 16 postgresql-16-supautils postgresql-16-supautils_3.2.1-1PIGSTY~jammy_arm64.deb pigsty 3.2.1 25.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/s/supautils/postgresql-16-supautils_3.2.1-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 16 postgresql-16-supautils postgresql-16-supautils_3.2.1-1PIGSTY~noble_amd64.deb pigsty 3.2.1 26.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/s/supautils/postgresql-16-supautils_3.2.1-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 16 postgresql-16-supautils postgresql-16-supautils_3.2.1-1PIGSTY~noble_arm64.deb pigsty 3.2.1 25.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/s/supautils/postgresql-16-supautils_3.2.1-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 16 postgresql-16-supautils postgresql-16-supautils_3.2.1-1PIGSTY~resolute_amd64.deb pigsty 3.2.1 26.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/s/supautils/postgresql-16-supautils_3.2.1-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 16 postgresql-16-supautils postgresql-16-supautils_3.2.1-1PIGSTY~resolute_arm64.deb pigsty 3.2.1 25.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/s/supautils/postgresql-16-supautils_3.2.1-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 15 supautils_15 supautils_15-3.2.1-1PIGSTY.el8.x86_64.rpm pigsty 3.2.1 33.1KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/supautils_15-3.2.1-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 15 supautils_15 supautils_15-3.2.1-1PIGSTY.el8.aarch64.rpm pigsty 3.2.1 32.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/supautils_15-3.2.1-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 15 supautils_15 supautils_15-3.2.1-1PIGSTY.el9.x86_64.rpm pigsty 3.2.1 32.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/supautils_15-3.2.1-1PIGSTY.el9.x86_64.rpm
@@ -122,6 +128,8 @@ weight: 7010
 @ u22.aarch64 15 postgresql-15-supautils postgresql-15-supautils_3.2.1-1PIGSTY~jammy_arm64.deb pigsty 3.2.1 27.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/s/supautils/postgresql-15-supautils_3.2.1-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 15 postgresql-15-supautils postgresql-15-supautils_3.2.1-1PIGSTY~noble_amd64.deb pigsty 3.2.1 27.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/s/supautils/postgresql-15-supautils_3.2.1-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 15 postgresql-15-supautils postgresql-15-supautils_3.2.1-1PIGSTY~noble_arm64.deb pigsty 3.2.1 26.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/s/supautils/postgresql-15-supautils_3.2.1-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 15 postgresql-15-supautils postgresql-15-supautils_3.2.1-1PIGSTY~resolute_amd64.deb pigsty 3.2.1 27.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/s/supautils/postgresql-15-supautils_3.2.1-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 15 postgresql-15-supautils postgresql-15-supautils_3.2.1-1PIGSTY~resolute_arm64.deb pigsty 3.2.1 27.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/s/supautils/postgresql-15-supautils_3.2.1-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 14 supautils_14 supautils_14-3.2.1-1PIGSTY.el8.x86_64.rpm pigsty 3.2.1 33.1KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/supautils_14-3.2.1-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 14 supautils_14 supautils_14-3.2.1-1PIGSTY.el8.aarch64.rpm pigsty 3.2.1 31.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/supautils_14-3.2.1-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 14 supautils_14 supautils_14-3.2.1-1PIGSTY.el9.x86_64.rpm pigsty 3.2.1 32.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/supautils_14-3.2.1-1PIGSTY.el9.x86_64.rpm
@@ -136,6 +144,8 @@ weight: 7010
 @ u22.aarch64 14 postgresql-14-supautils postgresql-14-supautils_3.2.1-1PIGSTY~jammy_arm64.deb pigsty 3.2.1 26.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/s/supautils/postgresql-14-supautils_3.2.1-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 14 postgresql-14-supautils postgresql-14-supautils_3.2.1-1PIGSTY~noble_amd64.deb pigsty 3.2.1 27.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/s/supautils/postgresql-14-supautils_3.2.1-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 14 postgresql-14-supautils postgresql-14-supautils_3.2.1-1PIGSTY~noble_arm64.deb pigsty 3.2.1 26.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/s/supautils/postgresql-14-supautils_3.2.1-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 14 postgresql-14-supautils postgresql-14-supautils_3.2.1-1PIGSTY~resolute_amd64.deb pigsty 3.2.1 27.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/s/supautils/postgresql-14-supautils_3.2.1-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 14 postgresql-14-supautils postgresql-14-supautils_3.2.1-1PIGSTY~resolute_arm64.deb pigsty 3.2.1 27.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/s/supautils/postgresql-14-supautils_3.2.1-1PIGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建

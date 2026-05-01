@@ -67,8 +67,8 @@ weight: 6400
 | u22.aarch64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | MISS PIGSTY - 0 |
 | u24.x86_64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | MISS PIGSTY - 0 |
 | u24.aarch64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | MISS PIGSTY - 0 |
-| u26.x86_64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| u26.aarch64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| u26.x86_64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | MISS PIGSTY - 0 |
+| u26.aarch64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | MISS PIGSTY - 0 |
 @ el8.x86_64 18 pg_datasentinel_18 pg_datasentinel_18-1.0-1PIGSTY.el8.x86_64.rpm pigsty 1.0 34.6KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_datasentinel_18-1.0-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 18 pg_datasentinel_18 pg_datasentinel_18-1.0-1PIGSTY.el8.aarch64.rpm pigsty 1.0 34.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_datasentinel_18-1.0-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 18 pg_datasentinel_18 pg_datasentinel_18-1.0-1PIGSTY.el9.x86_64.rpm pigsty 1.0 34.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_datasentinel_18-1.0-1PIGSTY.el9.x86_64.rpm
@@ -83,6 +83,8 @@ weight: 6400
 @ u22.aarch64 18 postgresql-18-pg-datasentinel postgresql-18-pg-datasentinel_1.0-1PIGSTY~jammy_arm64.deb pigsty 1.0 63.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-datasentinel/postgresql-18-pg-datasentinel_1.0-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 18 postgresql-18-pg-datasentinel postgresql-18-pg-datasentinel_1.0-1PIGSTY~noble_amd64.deb pigsty 1.0 61.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-datasentinel/postgresql-18-pg-datasentinel_1.0-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 18 postgresql-18-pg-datasentinel postgresql-18-pg-datasentinel_1.0-1PIGSTY~noble_arm64.deb pigsty 1.0 62.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-datasentinel/postgresql-18-pg-datasentinel_1.0-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 18 postgresql-18-pg-datasentinel postgresql-18-pg-datasentinel_1.0-1PIGSTY~resolute_amd64.deb pigsty 1.0 61.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-datasentinel/postgresql-18-pg-datasentinel_1.0-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 18 postgresql-18-pg-datasentinel postgresql-18-pg-datasentinel_1.0-1PIGSTY~resolute_arm64.deb pigsty 1.0 61.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-datasentinel/postgresql-18-pg-datasentinel_1.0-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 17 pg_datasentinel_17 pg_datasentinel_17-1.0-1PIGSTY.el8.x86_64.rpm pigsty 1.0 34.6KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_datasentinel_17-1.0-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 17 pg_datasentinel_17 pg_datasentinel_17-1.0-1PIGSTY.el8.aarch64.rpm pigsty 1.0 34.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_datasentinel_17-1.0-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 17 pg_datasentinel_17 pg_datasentinel_17-1.0-1PIGSTY.el9.x86_64.rpm pigsty 1.0 34.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_datasentinel_17-1.0-1PIGSTY.el9.x86_64.rpm
@@ -97,6 +99,8 @@ weight: 6400
 @ u22.aarch64 17 postgresql-17-pg-datasentinel postgresql-17-pg-datasentinel_1.0-1PIGSTY~jammy_arm64.deb pigsty 1.0 72.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-datasentinel/postgresql-17-pg-datasentinel_1.0-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 17 postgresql-17-pg-datasentinel postgresql-17-pg-datasentinel_1.0-1PIGSTY~noble_amd64.deb pigsty 1.0 61.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-datasentinel/postgresql-17-pg-datasentinel_1.0-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 17 postgresql-17-pg-datasentinel postgresql-17-pg-datasentinel_1.0-1PIGSTY~noble_arm64.deb pigsty 1.0 62.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-datasentinel/postgresql-17-pg-datasentinel_1.0-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 17 postgresql-17-pg-datasentinel postgresql-17-pg-datasentinel_1.0-1PIGSTY~resolute_amd64.deb pigsty 1.0 61.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-datasentinel/postgresql-17-pg-datasentinel_1.0-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 17 postgresql-17-pg-datasentinel postgresql-17-pg-datasentinel_1.0-1PIGSTY~resolute_arm64.deb pigsty 1.0 61.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-datasentinel/postgresql-17-pg-datasentinel_1.0-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 16 pg_datasentinel_16 pg_datasentinel_16-1.0-1PIGSTY.el8.x86_64.rpm pigsty 1.0 34.6KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_datasentinel_16-1.0-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 16 pg_datasentinel_16 pg_datasentinel_16-1.0-1PIGSTY.el8.aarch64.rpm pigsty 1.0 34.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_datasentinel_16-1.0-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 16 pg_datasentinel_16 pg_datasentinel_16-1.0-1PIGSTY.el9.x86_64.rpm pigsty 1.0 34.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_datasentinel_16-1.0-1PIGSTY.el9.x86_64.rpm
@@ -111,6 +115,8 @@ weight: 6400
 @ u22.aarch64 16 postgresql-16-pg-datasentinel postgresql-16-pg-datasentinel_1.0-1PIGSTY~jammy_arm64.deb pigsty 1.0 72.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-datasentinel/postgresql-16-pg-datasentinel_1.0-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 16 postgresql-16-pg-datasentinel postgresql-16-pg-datasentinel_1.0-1PIGSTY~noble_amd64.deb pigsty 1.0 61.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-datasentinel/postgresql-16-pg-datasentinel_1.0-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 16 postgresql-16-pg-datasentinel postgresql-16-pg-datasentinel_1.0-1PIGSTY~noble_arm64.deb pigsty 1.0 62.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-datasentinel/postgresql-16-pg-datasentinel_1.0-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 16 postgresql-16-pg-datasentinel postgresql-16-pg-datasentinel_1.0-1PIGSTY~resolute_amd64.deb pigsty 1.0 61.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-datasentinel/postgresql-16-pg-datasentinel_1.0-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 16 postgresql-16-pg-datasentinel postgresql-16-pg-datasentinel_1.0-1PIGSTY~resolute_arm64.deb pigsty 1.0 61.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-datasentinel/postgresql-16-pg-datasentinel_1.0-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 15 pg_datasentinel_15 pg_datasentinel_15-1.0-1PIGSTY.el8.x86_64.rpm pigsty 1.0 34.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_datasentinel_15-1.0-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 15 pg_datasentinel_15 pg_datasentinel_15-1.0-1PIGSTY.el8.aarch64.rpm pigsty 1.0 34.8KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_datasentinel_15-1.0-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 15 pg_datasentinel_15 pg_datasentinel_15-1.0-1PIGSTY.el9.x86_64.rpm pigsty 1.0 34.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_datasentinel_15-1.0-1PIGSTY.el9.x86_64.rpm
@@ -125,6 +131,8 @@ weight: 6400
 @ u22.aarch64 15 postgresql-15-pg-datasentinel postgresql-15-pg-datasentinel_1.0-1PIGSTY~jammy_arm64.deb pigsty 1.0 72.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-datasentinel/postgresql-15-pg-datasentinel_1.0-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 15 postgresql-15-pg-datasentinel postgresql-15-pg-datasentinel_1.0-1PIGSTY~noble_amd64.deb pigsty 1.0 61.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-datasentinel/postgresql-15-pg-datasentinel_1.0-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 15 postgresql-15-pg-datasentinel postgresql-15-pg-datasentinel_1.0-1PIGSTY~noble_arm64.deb pigsty 1.0 62.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-datasentinel/postgresql-15-pg-datasentinel_1.0-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 15 postgresql-15-pg-datasentinel postgresql-15-pg-datasentinel_1.0-1PIGSTY~resolute_amd64.deb pigsty 1.0 61.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-datasentinel/postgresql-15-pg-datasentinel_1.0-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 15 postgresql-15-pg-datasentinel postgresql-15-pg-datasentinel_1.0-1PIGSTY~resolute_arm64.deb pigsty 1.0 61.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-datasentinel/postgresql-15-pg-datasentinel_1.0-1PIGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建

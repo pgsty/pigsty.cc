@@ -64,8 +64,8 @@ weight: 5820
 | u22.aarch64 | AVAIL PIGSTY 1.5 1 | AVAIL PIGSTY 1.5 1 | AVAIL PIGSTY 1.5 1 | AVAIL PIGSTY 1.5 1 | AVAIL PIGSTY 1.5 1 |
 | u24.x86_64 | AVAIL PIGSTY 1.5 1 | AVAIL PIGSTY 1.5 1 | AVAIL PIGSTY 1.5 1 | AVAIL PIGSTY 1.5 1 | AVAIL PIGSTY 1.5 1 |
 | u24.aarch64 | AVAIL PIGSTY 1.5 1 | AVAIL PIGSTY 1.5 1 | AVAIL PIGSTY 1.5 1 | AVAIL PIGSTY 1.5 1 | AVAIL PIGSTY 1.5 1 |
-| u26.x86_64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| u26.aarch64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| u26.x86_64 | AVAIL PIGSTY 1.5 1 | AVAIL PIGSTY 1.5 1 | AVAIL PIGSTY 1.5 1 | AVAIL PIGSTY 1.5 1 | AVAIL PIGSTY 1.5 1 |
+| u26.aarch64 | AVAIL PIGSTY 1.5 1 | AVAIL PIGSTY 1.5 1 | AVAIL PIGSTY 1.5 1 | AVAIL PIGSTY 1.5 1 | AVAIL PIGSTY 1.5 1 |
 @ el8.x86_64 18 safeupdate_18 safeupdate_18-1.5-2PGDG.rhel8.x86_64.rpm pgdg 1.5 13.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/safeupdate_18-1.5-2PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 18 safeupdate_18 safeupdate_18-1.5-2PGDG.rhel8.aarch64.rpm pgdg 1.5 13.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/safeupdate_18-1.5-2PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 18 safeupdate_18 safeupdate_18-1.5-2PGDG.rhel9.x86_64.rpm pgdg 1.5 12.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/safeupdate_18-1.5-2PGDG.rhel9.x86_64.rpm
@@ -80,6 +80,8 @@ weight: 5820
 @ u22.aarch64 18 postgresql-18-pg-safeupdate postgresql-18-pg-safeupdate_1.5-2PIGSTY~jammy_arm64.deb pigsty 1.5 8.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-safeupdate/postgresql-18-pg-safeupdate_1.5-2PIGSTY~jammy_arm64.deb
 @ u24.x86_64 18 postgresql-18-pg-safeupdate postgresql-18-pg-safeupdate_1.5-2PIGSTY~noble_amd64.deb pigsty 1.5 9.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-safeupdate/postgresql-18-pg-safeupdate_1.5-2PIGSTY~noble_amd64.deb
 @ u24.aarch64 18 postgresql-18-pg-safeupdate postgresql-18-pg-safeupdate_1.5-2PIGSTY~noble_arm64.deb pigsty 1.5 9.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-safeupdate/postgresql-18-pg-safeupdate_1.5-2PIGSTY~noble_arm64.deb
+@ u26.x86_64 18 postgresql-18-pg-safeupdate postgresql-18-pg-safeupdate_1.5-2PIGSTY~resolute_amd64.deb pigsty 1.5 9.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-safeupdate/postgresql-18-pg-safeupdate_1.5-2PIGSTY~resolute_amd64.deb
+@ u26.aarch64 18 postgresql-18-pg-safeupdate postgresql-18-pg-safeupdate_1.5-2PIGSTY~resolute_arm64.deb pigsty 1.5 9.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-safeupdate/postgresql-18-pg-safeupdate_1.5-2PIGSTY~resolute_arm64.deb
 @ el8.x86_64 17 safeupdate_17 safeupdate_17-1.5-1PGDG.rhel8.x86_64.rpm pgdg 1.5 13.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/safeupdate_17-1.5-1PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 17 safeupdate_17 safeupdate_17-1.5-1PGDG.rhel8.aarch64.rpm pgdg 1.5 13.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/safeupdate_17-1.5-1PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 17 safeupdate_17 safeupdate_17-1.5-1PGDG.rhel9.x86_64.rpm pgdg 1.5 12.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/safeupdate_17-1.5-1PGDG.rhel9.x86_64.rpm
@@ -94,6 +96,8 @@ weight: 5820
 @ u22.aarch64 17 postgresql-17-pg-safeupdate postgresql-17-pg-safeupdate_1.5-2PIGSTY~jammy_arm64.deb pigsty 1.5 9.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-safeupdate/postgresql-17-pg-safeupdate_1.5-2PIGSTY~jammy_arm64.deb
 @ u24.x86_64 17 postgresql-17-pg-safeupdate postgresql-17-pg-safeupdate_1.5-2PIGSTY~noble_amd64.deb pigsty 1.5 8.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-safeupdate/postgresql-17-pg-safeupdate_1.5-2PIGSTY~noble_amd64.deb
 @ u24.aarch64 17 postgresql-17-pg-safeupdate postgresql-17-pg-safeupdate_1.5-2PIGSTY~noble_arm64.deb pigsty 1.5 9.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-safeupdate/postgresql-17-pg-safeupdate_1.5-2PIGSTY~noble_arm64.deb
+@ u26.x86_64 17 postgresql-17-pg-safeupdate postgresql-17-pg-safeupdate_1.5-2PIGSTY~resolute_amd64.deb pigsty 1.5 9.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-safeupdate/postgresql-17-pg-safeupdate_1.5-2PIGSTY~resolute_amd64.deb
+@ u26.aarch64 17 postgresql-17-pg-safeupdate postgresql-17-pg-safeupdate_1.5-2PIGSTY~resolute_arm64.deb pigsty 1.5 9.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-safeupdate/postgresql-17-pg-safeupdate_1.5-2PIGSTY~resolute_arm64.deb
 @ el8.x86_64 16 safeupdate_16 safeupdate_16-1.5-1PGDG.rhel8.x86_64.rpm pgdg 1.5 13.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/safeupdate_16-1.5-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 16 safeupdate_16 safeupdate_16-1.4.2-2PGDG.rhel8.x86_64.rpm pgdg 1.4.2 13.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/safeupdate_16-1.4.2-2PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 16 safeupdate_16 safeupdate_16-1.5-1PGDG.rhel8.aarch64.rpm pgdg 1.5 13.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/safeupdate_16-1.5-1PGDG.rhel8.aarch64.rpm
@@ -112,6 +116,8 @@ weight: 5820
 @ u22.aarch64 16 postgresql-16-pg-safeupdate postgresql-16-pg-safeupdate_1.5-2PIGSTY~jammy_arm64.deb pigsty 1.5 9.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-safeupdate/postgresql-16-pg-safeupdate_1.5-2PIGSTY~jammy_arm64.deb
 @ u24.x86_64 16 postgresql-16-pg-safeupdate postgresql-16-pg-safeupdate_1.5-2PIGSTY~noble_amd64.deb pigsty 1.5 8.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-safeupdate/postgresql-16-pg-safeupdate_1.5-2PIGSTY~noble_amd64.deb
 @ u24.aarch64 16 postgresql-16-pg-safeupdate postgresql-16-pg-safeupdate_1.5-2PIGSTY~noble_arm64.deb pigsty 1.5 8.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-safeupdate/postgresql-16-pg-safeupdate_1.5-2PIGSTY~noble_arm64.deb
+@ u26.x86_64 16 postgresql-16-pg-safeupdate postgresql-16-pg-safeupdate_1.5-2PIGSTY~resolute_amd64.deb pigsty 1.5 9.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-safeupdate/postgresql-16-pg-safeupdate_1.5-2PIGSTY~resolute_amd64.deb
+@ u26.aarch64 16 postgresql-16-pg-safeupdate postgresql-16-pg-safeupdate_1.5-2PIGSTY~resolute_arm64.deb pigsty 1.5 9.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-safeupdate/postgresql-16-pg-safeupdate_1.5-2PIGSTY~resolute_arm64.deb
 @ el8.x86_64 15 safeupdate_15 safeupdate_15-1.5-1PGDG.rhel8.x86_64.rpm pgdg 1.5 13.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/safeupdate_15-1.5-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 15 safeupdate_15 safeupdate_15-1.4-1.rhel8.x86_64.rpm pgdg 1.4 17.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/safeupdate_15-1.4-1.rhel8.x86_64.rpm
 @ el8.aarch64 15 safeupdate_15 safeupdate_15-1.5-1PGDG.rhel8.aarch64.rpm pgdg 1.5 13.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/safeupdate_15-1.5-1PGDG.rhel8.aarch64.rpm
@@ -133,6 +139,8 @@ weight: 5820
 @ u22.aarch64 15 postgresql-15-pg-safeupdate postgresql-15-pg-safeupdate_1.5-2PIGSTY~jammy_arm64.deb pigsty 1.5 9.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-safeupdate/postgresql-15-pg-safeupdate_1.5-2PIGSTY~jammy_arm64.deb
 @ u24.x86_64 15 postgresql-15-pg-safeupdate postgresql-15-pg-safeupdate_1.5-2PIGSTY~noble_amd64.deb pigsty 1.5 8.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-safeupdate/postgresql-15-pg-safeupdate_1.5-2PIGSTY~noble_amd64.deb
 @ u24.aarch64 15 postgresql-15-pg-safeupdate postgresql-15-pg-safeupdate_1.5-2PIGSTY~noble_arm64.deb pigsty 1.5 8.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-safeupdate/postgresql-15-pg-safeupdate_1.5-2PIGSTY~noble_arm64.deb
+@ u26.x86_64 15 postgresql-15-pg-safeupdate postgresql-15-pg-safeupdate_1.5-2PIGSTY~resolute_amd64.deb pigsty 1.5 9.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-safeupdate/postgresql-15-pg-safeupdate_1.5-2PIGSTY~resolute_amd64.deb
+@ u26.aarch64 15 postgresql-15-pg-safeupdate postgresql-15-pg-safeupdate_1.5-2PIGSTY~resolute_arm64.deb pigsty 1.5 9.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-safeupdate/postgresql-15-pg-safeupdate_1.5-2PIGSTY~resolute_arm64.deb
 @ el8.x86_64 14 safeupdate_14 safeupdate_14-1.5-1PGDG.rhel8.x86_64.rpm pgdg 1.5 13.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/safeupdate_14-1.5-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 14 safeupdate_14 safeupdate_14-1.4-1.rhel8.x86_64.rpm pgdg 1.4 18.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/safeupdate_14-1.4-1.rhel8.x86_64.rpm
 @ el8.aarch64 14 safeupdate_14 safeupdate_14-1.5-1PGDG.rhel8.aarch64.rpm pgdg 1.5 13.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/safeupdate_14-1.5-1PGDG.rhel8.aarch64.rpm
@@ -153,6 +161,8 @@ weight: 5820
 @ u22.aarch64 14 postgresql-14-pg-safeupdate postgresql-14-pg-safeupdate_1.5-2PIGSTY~jammy_arm64.deb pigsty 1.5 9.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-safeupdate/postgresql-14-pg-safeupdate_1.5-2PIGSTY~jammy_arm64.deb
 @ u24.x86_64 14 postgresql-14-pg-safeupdate postgresql-14-pg-safeupdate_1.5-2PIGSTY~noble_amd64.deb pigsty 1.5 8.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-safeupdate/postgresql-14-pg-safeupdate_1.5-2PIGSTY~noble_amd64.deb
 @ u24.aarch64 14 postgresql-14-pg-safeupdate postgresql-14-pg-safeupdate_1.5-2PIGSTY~noble_arm64.deb pigsty 1.5 8.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-safeupdate/postgresql-14-pg-safeupdate_1.5-2PIGSTY~noble_arm64.deb
+@ u26.x86_64 14 postgresql-14-pg-safeupdate postgresql-14-pg-safeupdate_1.5-2PIGSTY~resolute_amd64.deb pigsty 1.5 9.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-safeupdate/postgresql-14-pg-safeupdate_1.5-2PIGSTY~resolute_amd64.deb
+@ u26.aarch64 14 postgresql-14-pg-safeupdate postgresql-14-pg-safeupdate_1.5-2PIGSTY~resolute_arm64.deb pigsty 1.5 9.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-safeupdate/postgresql-14-pg-safeupdate_1.5-2PIGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建

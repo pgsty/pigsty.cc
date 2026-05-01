@@ -64,8 +64,8 @@ weight: 3900
 | u22.aarch64 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 |
 | u24.x86_64 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 |
 | u24.aarch64 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 |
-| u26.x86_64 | AVAIL PGDG 1.4.0 1 | AVAIL PGDG 1.4.0 1 | AVAIL PGDG 1.4.0 1 | AVAIL PGDG 1.4.0 1 | AVAIL PGDG 1.4.0 1 |
-| u26.aarch64 | AVAIL PGDG 1.4.0 1 | AVAIL PGDG 1.4.0 1 | AVAIL PGDG 1.4.0 1 | AVAIL PGDG 1.4.0 1 | AVAIL PGDG 1.4.0 1 |
+| u26.x86_64 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 |
+| u26.aarch64 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 |
 @ el8.x86_64 18 timestamp9_18 timestamp9_18-1.4.0-3PGDG.rhel8.x86_64.rpm pgdg 1.4.0 17.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/timestamp9_18-1.4.0-3PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 18 timestamp9_18 timestamp9_18-1.4.0-3PGDG.rhel8.aarch64.rpm pgdg 1.4.0 17.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/timestamp9_18-1.4.0-3PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 18 timestamp9_18 timestamp9_18-1.4.0-3PGDG.rhel9.x86_64.rpm pgdg 1.4.0 17.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/timestamp9_18-1.4.0-3PGDG.rhel9.x86_64.rpm
@@ -89,7 +89,9 @@ weight: 3900
 @ u24.aarch64 18 postgresql-18-timestamp9 postgresql-18-timestamp9_1.4.0-2.pgdg24.04+1_arm64.deb pgdg 1.4.0 10.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-18-timestamp9_1.4.0-2.pgdg24.04+1_arm64.deb
 @ u24.aarch64 18 postgresql-18-timestamp9 postgresql-18-timestamp9_1.4.0-2PIGSTY~noble_arm64.deb pigsty 1.4.0 9.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/timestamp9/postgresql-18-timestamp9_1.4.0-2PIGSTY~noble_arm64.deb
 @ u26.x86_64 18 postgresql-18-timestamp9 postgresql-18-timestamp9_1.4.0-2.pgdg26.04+1_amd64.deb pgdg 1.4.0 10.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-18-timestamp9_1.4.0-2.pgdg26.04+1_amd64.deb
+@ u26.x86_64 18 postgresql-18-timestamp9 postgresql-18-timestamp9_1.4.0-2PIGSTY~resolute_amd64.deb pigsty 1.4.0 9.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/t/timestamp9/postgresql-18-timestamp9_1.4.0-2PIGSTY~resolute_amd64.deb
 @ u26.aarch64 18 postgresql-18-timestamp9 postgresql-18-timestamp9_1.4.0-2.pgdg26.04+1_arm64.deb pgdg 1.4.0 10.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-18-timestamp9_1.4.0-2.pgdg26.04+1_arm64.deb
+@ u26.aarch64 18 postgresql-18-timestamp9 postgresql-18-timestamp9_1.4.0-2PIGSTY~resolute_arm64.deb pigsty 1.4.0 9.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/t/timestamp9/postgresql-18-timestamp9_1.4.0-2PIGSTY~resolute_arm64.deb
 @ el8.x86_64 17 timestamp9_17 timestamp9_17-1.4.0-2PGDG.rhel8.x86_64.rpm pgdg 1.4.0 17.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/timestamp9_17-1.4.0-2PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 17 timestamp9_17 timestamp9_17-1.4.0-2PGDG.rhel8.aarch64.rpm pgdg 1.4.0 17.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/timestamp9_17-1.4.0-2PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 17 timestamp9_17 timestamp9_17-1.4.0-2PGDG.rhel9.x86_64.rpm pgdg 1.4.0 17.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/timestamp9_17-1.4.0-2PGDG.rhel9.x86_64.rpm
@@ -113,7 +115,9 @@ weight: 3900
 @ u24.aarch64 17 postgresql-17-timestamp9 postgresql-17-timestamp9_1.4.0-2.pgdg24.04+1_arm64.deb pgdg 1.4.0 10.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-17-timestamp9_1.4.0-2.pgdg24.04+1_arm64.deb
 @ u24.aarch64 17 postgresql-17-timestamp9 postgresql-17-timestamp9_1.4.0-2PIGSTY~noble_arm64.deb pigsty 1.4.0 9.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/timestamp9/postgresql-17-timestamp9_1.4.0-2PIGSTY~noble_arm64.deb
 @ u26.x86_64 17 postgresql-17-timestamp9 postgresql-17-timestamp9_1.4.0-2.pgdg26.04+1_amd64.deb pgdg 1.4.0 10.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-17-timestamp9_1.4.0-2.pgdg26.04+1_amd64.deb
+@ u26.x86_64 17 postgresql-17-timestamp9 postgresql-17-timestamp9_1.4.0-2PIGSTY~resolute_amd64.deb pigsty 1.4.0 9.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/t/timestamp9/postgresql-17-timestamp9_1.4.0-2PIGSTY~resolute_amd64.deb
 @ u26.aarch64 17 postgresql-17-timestamp9 postgresql-17-timestamp9_1.4.0-2.pgdg26.04+1_arm64.deb pgdg 1.4.0 10.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-17-timestamp9_1.4.0-2.pgdg26.04+1_arm64.deb
+@ u26.aarch64 17 postgresql-17-timestamp9 postgresql-17-timestamp9_1.4.0-2PIGSTY~resolute_arm64.deb pigsty 1.4.0 9.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/t/timestamp9/postgresql-17-timestamp9_1.4.0-2PIGSTY~resolute_arm64.deb
 @ el8.x86_64 16 timestamp9_16 timestamp9_16-1.4.0-2PGDG.rhel8.x86_64.rpm pgdg 1.4.0 17.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/timestamp9_16-1.4.0-2PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 16 timestamp9_16 timestamp9_16-1.4.0-2PGDG.rhel8.aarch64.rpm pgdg 1.4.0 17.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/timestamp9_16-1.4.0-2PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 16 timestamp9_16 timestamp9_16-1.4.0-2PGDG.rhel9.x86_64.rpm pgdg 1.4.0 17.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/timestamp9_16-1.4.0-2PGDG.rhel9.x86_64.rpm
@@ -137,7 +141,9 @@ weight: 3900
 @ u24.aarch64 16 postgresql-16-timestamp9 postgresql-16-timestamp9_1.4.0-2.pgdg24.04+1_arm64.deb pgdg 1.4.0 10.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-16-timestamp9_1.4.0-2.pgdg24.04+1_arm64.deb
 @ u24.aarch64 16 postgresql-16-timestamp9 postgresql-16-timestamp9_1.4.0-2PIGSTY~noble_arm64.deb pigsty 1.4.0 9.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/timestamp9/postgresql-16-timestamp9_1.4.0-2PIGSTY~noble_arm64.deb
 @ u26.x86_64 16 postgresql-16-timestamp9 postgresql-16-timestamp9_1.4.0-2.pgdg26.04+1_amd64.deb pgdg 1.4.0 10.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-16-timestamp9_1.4.0-2.pgdg26.04+1_amd64.deb
+@ u26.x86_64 16 postgresql-16-timestamp9 postgresql-16-timestamp9_1.4.0-2PIGSTY~resolute_amd64.deb pigsty 1.4.0 9.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/t/timestamp9/postgresql-16-timestamp9_1.4.0-2PIGSTY~resolute_amd64.deb
 @ u26.aarch64 16 postgresql-16-timestamp9 postgresql-16-timestamp9_1.4.0-2.pgdg26.04+1_arm64.deb pgdg 1.4.0 10.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-16-timestamp9_1.4.0-2.pgdg26.04+1_arm64.deb
+@ u26.aarch64 16 postgresql-16-timestamp9 postgresql-16-timestamp9_1.4.0-2PIGSTY~resolute_arm64.deb pigsty 1.4.0 9.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/t/timestamp9/postgresql-16-timestamp9_1.4.0-2PIGSTY~resolute_arm64.deb
 @ el8.x86_64 15 timestamp9_15 timestamp9_15-1.3.0-1.rhel8.x86_64.rpm pgdg 1.3.0 17.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/timestamp9_15-1.3.0-1.rhel8.x86_64.rpm
 @ el8.x86_64 15 timestamp9_15 timestamp9_15-1.1.0-1.rhel8.x86_64.rpm pgdg 1.1.0 16.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/timestamp9_15-1.1.0-1.rhel8.x86_64.rpm
 @ el8.aarch64 15 timestamp9_15 timestamp9_15-1.3.0-1.rhel8.aarch64.rpm pgdg 1.3.0 17.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/timestamp9_15-1.3.0-1.rhel8.aarch64.rpm
@@ -165,7 +171,9 @@ weight: 3900
 @ u24.aarch64 15 postgresql-15-timestamp9 postgresql-15-timestamp9_1.4.0-2.pgdg24.04+1_arm64.deb pgdg 1.4.0 10.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-15-timestamp9_1.4.0-2.pgdg24.04+1_arm64.deb
 @ u24.aarch64 15 postgresql-15-timestamp9 postgresql-15-timestamp9_1.4.0-2PIGSTY~noble_arm64.deb pigsty 1.4.0 9.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/timestamp9/postgresql-15-timestamp9_1.4.0-2PIGSTY~noble_arm64.deb
 @ u26.x86_64 15 postgresql-15-timestamp9 postgresql-15-timestamp9_1.4.0-2.pgdg26.04+1_amd64.deb pgdg 1.4.0 10.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-15-timestamp9_1.4.0-2.pgdg26.04+1_amd64.deb
+@ u26.x86_64 15 postgresql-15-timestamp9 postgresql-15-timestamp9_1.4.0-2PIGSTY~resolute_amd64.deb pigsty 1.4.0 9.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/t/timestamp9/postgresql-15-timestamp9_1.4.0-2PIGSTY~resolute_amd64.deb
 @ u26.aarch64 15 postgresql-15-timestamp9 postgresql-15-timestamp9_1.4.0-2.pgdg26.04+1_arm64.deb pgdg 1.4.0 10.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-15-timestamp9_1.4.0-2.pgdg26.04+1_arm64.deb
+@ u26.aarch64 15 postgresql-15-timestamp9 postgresql-15-timestamp9_1.4.0-2PIGSTY~resolute_arm64.deb pigsty 1.4.0 9.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/t/timestamp9/postgresql-15-timestamp9_1.4.0-2PIGSTY~resolute_arm64.deb
 @ el8.x86_64 14 timestamp9_14 timestamp9_14-1.3.0-1.rhel8.x86_64.rpm pgdg 1.3.0 17.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/timestamp9_14-1.3.0-1.rhel8.x86_64.rpm
 @ el8.x86_64 14 timestamp9_14 timestamp9_14-1.1.0-1.rhel8.x86_64.rpm pgdg 1.1.0 16.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/timestamp9_14-1.1.0-1.rhel8.x86_64.rpm
 @ el8.aarch64 14 timestamp9_14 timestamp9_14-1.3.0-1.rhel8.aarch64.rpm pgdg 1.3.0 17.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/timestamp9_14-1.3.0-1.rhel8.aarch64.rpm
@@ -193,7 +201,9 @@ weight: 3900
 @ u24.aarch64 14 postgresql-14-timestamp9 postgresql-14-timestamp9_1.4.0-2.pgdg24.04+1_arm64.deb pgdg 1.4.0 10.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-14-timestamp9_1.4.0-2.pgdg24.04+1_arm64.deb
 @ u24.aarch64 14 postgresql-14-timestamp9 postgresql-14-timestamp9_1.4.0-2PIGSTY~noble_arm64.deb pigsty 1.4.0 9.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/timestamp9/postgresql-14-timestamp9_1.4.0-2PIGSTY~noble_arm64.deb
 @ u26.x86_64 14 postgresql-14-timestamp9 postgresql-14-timestamp9_1.4.0-2.pgdg26.04+1_amd64.deb pgdg 1.4.0 10.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-14-timestamp9_1.4.0-2.pgdg26.04+1_amd64.deb
+@ u26.x86_64 14 postgresql-14-timestamp9 postgresql-14-timestamp9_1.4.0-2PIGSTY~resolute_amd64.deb pigsty 1.4.0 9.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/t/timestamp9/postgresql-14-timestamp9_1.4.0-2PIGSTY~resolute_amd64.deb
 @ u26.aarch64 14 postgresql-14-timestamp9 postgresql-14-timestamp9_1.4.0-2.pgdg26.04+1_arm64.deb pgdg 1.4.0 10.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/t/timestamp9/postgresql-14-timestamp9_1.4.0-2.pgdg26.04+1_arm64.deb
+@ u26.aarch64 14 postgresql-14-timestamp9 postgresql-14-timestamp9_1.4.0-2PIGSTY~resolute_arm64.deb pigsty 1.4.0 9.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/t/timestamp9/postgresql-14-timestamp9_1.4.0-2PIGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建

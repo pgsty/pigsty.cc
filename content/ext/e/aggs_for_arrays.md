@@ -64,8 +64,8 @@ weight: 4750
 | u22.aarch64 | AVAIL PIGSTY 1.3.3 1 | AVAIL PIGSTY 1.3.3 1 | AVAIL PIGSTY 1.3.3 1 | AVAIL PIGSTY 1.3.3 1 | AVAIL PIGSTY 1.3.3 1 |
 | u24.x86_64 | AVAIL PIGSTY 1.3.3 1 | AVAIL PIGSTY 1.3.3 1 | AVAIL PIGSTY 1.3.3 1 | AVAIL PIGSTY 1.3.3 1 | AVAIL PIGSTY 1.3.3 1 |
 | u24.aarch64 | AVAIL PIGSTY 1.3.3 1 | AVAIL PIGSTY 1.3.3 1 | AVAIL PIGSTY 1.3.3 1 | AVAIL PIGSTY 1.3.3 1 | AVAIL PIGSTY 1.3.3 1 |
-| u26.x86_64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| u26.aarch64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| u26.x86_64 | AVAIL PIGSTY 1.3.3 1 | AVAIL PIGSTY 1.3.3 1 | AVAIL PIGSTY 1.3.3 1 | AVAIL PIGSTY 1.3.3 1 | AVAIL PIGSTY 1.3.3 1 |
+| u26.aarch64 | AVAIL PIGSTY 1.3.3 1 | AVAIL PIGSTY 1.3.3 1 | AVAIL PIGSTY 1.3.3 1 | AVAIL PIGSTY 1.3.3 1 | AVAIL PIGSTY 1.3.3 1 |
 @ el8.x86_64 18 aggs_for_arrays_18 aggs_for_arrays_18-1.3.3-1PIGSTY.el8.x86_64.rpm pigsty 1.3.3 27.6KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/aggs_for_arrays_18-1.3.3-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 18 aggs_for_arrays_18 aggs_for_arrays_18-1.3.3-1PIGSTY.el8.aarch64.rpm pigsty 1.3.3 30.8KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/aggs_for_arrays_18-1.3.3-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 18 aggs_for_arrays_18 aggs_for_arrays_18-1.3.3-1PIGSTY.el9.x86_64.rpm pigsty 1.3.3 26.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/aggs_for_arrays_18-1.3.3-1PIGSTY.el9.x86_64.rpm
@@ -80,6 +80,8 @@ weight: 4750
 @ u22.aarch64 18 postgresql-18-aggs-for-arrays postgresql-18-aggs-for-arrays_1.3.3-1PIGSTY~jammy_arm64.deb pigsty 1.3.3 48.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/a/aggs-for-arrays/postgresql-18-aggs-for-arrays_1.3.3-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 18 postgresql-18-aggs-for-arrays postgresql-18-aggs-for-arrays_1.3.3-1PIGSTY~noble_amd64.deb pigsty 1.3.3 43.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/a/aggs-for-arrays/postgresql-18-aggs-for-arrays_1.3.3-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 18 postgresql-18-aggs-for-arrays postgresql-18-aggs-for-arrays_1.3.3-1PIGSTY~noble_arm64.deb pigsty 1.3.3 49.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/a/aggs-for-arrays/postgresql-18-aggs-for-arrays_1.3.3-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 18 postgresql-18-aggs-for-arrays postgresql-18-aggs-for-arrays_1.3.3-1PIGSTY~resolute_amd64.deb pigsty 1.3.3 44.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/a/aggs-for-arrays/postgresql-18-aggs-for-arrays_1.3.3-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 18 postgresql-18-aggs-for-arrays postgresql-18-aggs-for-arrays_1.3.3-1PIGSTY~resolute_arm64.deb pigsty 1.3.3 49.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/a/aggs-for-arrays/postgresql-18-aggs-for-arrays_1.3.3-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 17 aggs_for_arrays_17 aggs_for_arrays_17-1.3.3-1PIGSTY.el8.x86_64.rpm pigsty 1.3.3 27.6KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/aggs_for_arrays_17-1.3.3-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 17 aggs_for_arrays_17 aggs_for_arrays_17-1.3.3-1PIGSTY.el8.aarch64.rpm pigsty 1.3.3 30.8KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/aggs_for_arrays_17-1.3.3-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 17 aggs_for_arrays_17 aggs_for_arrays_17-1.3.3-1PIGSTY.el9.x86_64.rpm pigsty 1.3.3 26.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/aggs_for_arrays_17-1.3.3-1PIGSTY.el9.x86_64.rpm
@@ -94,6 +96,8 @@ weight: 4750
 @ u22.aarch64 17 postgresql-17-aggs-for-arrays postgresql-17-aggs-for-arrays_1.3.3-1PIGSTY~jammy_arm64.deb pigsty 1.3.3 49.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/a/aggs-for-arrays/postgresql-17-aggs-for-arrays_1.3.3-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 17 postgresql-17-aggs-for-arrays postgresql-17-aggs-for-arrays_1.3.3-1PIGSTY~noble_amd64.deb pigsty 1.3.3 43.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/a/aggs-for-arrays/postgresql-17-aggs-for-arrays_1.3.3-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 17 postgresql-17-aggs-for-arrays postgresql-17-aggs-for-arrays_1.3.3-1PIGSTY~noble_arm64.deb pigsty 1.3.3 49.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/a/aggs-for-arrays/postgresql-17-aggs-for-arrays_1.3.3-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 17 postgresql-17-aggs-for-arrays postgresql-17-aggs-for-arrays_1.3.3-1PIGSTY~resolute_amd64.deb pigsty 1.3.3 44.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/a/aggs-for-arrays/postgresql-17-aggs-for-arrays_1.3.3-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 17 postgresql-17-aggs-for-arrays postgresql-17-aggs-for-arrays_1.3.3-1PIGSTY~resolute_arm64.deb pigsty 1.3.3 49.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/a/aggs-for-arrays/postgresql-17-aggs-for-arrays_1.3.3-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 16 aggs_for_arrays_16 aggs_for_arrays_16-1.3.3-1PIGSTY.el8.x86_64.rpm pigsty 1.3.3 27.6KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/aggs_for_arrays_16-1.3.3-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 16 aggs_for_arrays_16 aggs_for_arrays_16-1.3.3-1PIGSTY.el8.aarch64.rpm pigsty 1.3.3 30.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/aggs_for_arrays_16-1.3.3-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 16 aggs_for_arrays_16 aggs_for_arrays_16-1.3.3-1PIGSTY.el9.x86_64.rpm pigsty 1.3.3 26.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/aggs_for_arrays_16-1.3.3-1PIGSTY.el9.x86_64.rpm
@@ -108,6 +112,8 @@ weight: 4750
 @ u22.aarch64 16 postgresql-16-aggs-for-arrays postgresql-16-aggs-for-arrays_1.3.3-1PIGSTY~jammy_arm64.deb pigsty 1.3.3 49.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/a/aggs-for-arrays/postgresql-16-aggs-for-arrays_1.3.3-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 16 postgresql-16-aggs-for-arrays postgresql-16-aggs-for-arrays_1.3.3-1PIGSTY~noble_amd64.deb pigsty 1.3.3 43.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/a/aggs-for-arrays/postgresql-16-aggs-for-arrays_1.3.3-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 16 postgresql-16-aggs-for-arrays postgresql-16-aggs-for-arrays_1.3.3-1PIGSTY~noble_arm64.deb pigsty 1.3.3 49.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/a/aggs-for-arrays/postgresql-16-aggs-for-arrays_1.3.3-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 16 postgresql-16-aggs-for-arrays postgresql-16-aggs-for-arrays_1.3.3-1PIGSTY~resolute_amd64.deb pigsty 1.3.3 44.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/a/aggs-for-arrays/postgresql-16-aggs-for-arrays_1.3.3-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 16 postgresql-16-aggs-for-arrays postgresql-16-aggs-for-arrays_1.3.3-1PIGSTY~resolute_arm64.deb pigsty 1.3.3 49.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/a/aggs-for-arrays/postgresql-16-aggs-for-arrays_1.3.3-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 15 aggs_for_arrays_15 aggs_for_arrays_15-1.3.3-1PIGSTY.el8.x86_64.rpm pigsty 1.3.3 27.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/aggs_for_arrays_15-1.3.3-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 15 aggs_for_arrays_15 aggs_for_arrays_15-1.3.3-1PIGSTY.el8.aarch64.rpm pigsty 1.3.3 31.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/aggs_for_arrays_15-1.3.3-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 15 aggs_for_arrays_15 aggs_for_arrays_15-1.3.3-1PIGSTY.el9.x86_64.rpm pigsty 1.3.3 27.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/aggs_for_arrays_15-1.3.3-1PIGSTY.el9.x86_64.rpm
@@ -122,6 +128,8 @@ weight: 4750
 @ u22.aarch64 15 postgresql-15-aggs-for-arrays postgresql-15-aggs-for-arrays_1.3.3-1PIGSTY~jammy_arm64.deb pigsty 1.3.3 50.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/a/aggs-for-arrays/postgresql-15-aggs-for-arrays_1.3.3-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 15 postgresql-15-aggs-for-arrays postgresql-15-aggs-for-arrays_1.3.3-1PIGSTY~noble_amd64.deb pigsty 1.3.3 43.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/a/aggs-for-arrays/postgresql-15-aggs-for-arrays_1.3.3-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 15 postgresql-15-aggs-for-arrays postgresql-15-aggs-for-arrays_1.3.3-1PIGSTY~noble_arm64.deb pigsty 1.3.3 50.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/a/aggs-for-arrays/postgresql-15-aggs-for-arrays_1.3.3-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 15 postgresql-15-aggs-for-arrays postgresql-15-aggs-for-arrays_1.3.3-1PIGSTY~resolute_amd64.deb pigsty 1.3.3 44.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/a/aggs-for-arrays/postgresql-15-aggs-for-arrays_1.3.3-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 15 postgresql-15-aggs-for-arrays postgresql-15-aggs-for-arrays_1.3.3-1PIGSTY~resolute_arm64.deb pigsty 1.3.3 50.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/a/aggs-for-arrays/postgresql-15-aggs-for-arrays_1.3.3-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 14 aggs_for_arrays_14 aggs_for_arrays_14-1.3.3-1PIGSTY.el8.x86_64.rpm pigsty 1.3.3 27.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/aggs_for_arrays_14-1.3.3-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 14 aggs_for_arrays_14 aggs_for_arrays_14-1.3.3-1PIGSTY.el8.aarch64.rpm pigsty 1.3.3 31.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/aggs_for_arrays_14-1.3.3-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 14 aggs_for_arrays_14 aggs_for_arrays_14-1.3.3-1PIGSTY.el9.x86_64.rpm pigsty 1.3.3 27.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/aggs_for_arrays_14-1.3.3-1PIGSTY.el9.x86_64.rpm
@@ -136,6 +144,8 @@ weight: 4750
 @ u22.aarch64 14 postgresql-14-aggs-for-arrays postgresql-14-aggs-for-arrays_1.3.3-1PIGSTY~jammy_arm64.deb pigsty 1.3.3 50.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/a/aggs-for-arrays/postgresql-14-aggs-for-arrays_1.3.3-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 14 postgresql-14-aggs-for-arrays postgresql-14-aggs-for-arrays_1.3.3-1PIGSTY~noble_amd64.deb pigsty 1.3.3 43.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/a/aggs-for-arrays/postgresql-14-aggs-for-arrays_1.3.3-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 14 postgresql-14-aggs-for-arrays postgresql-14-aggs-for-arrays_1.3.3-1PIGSTY~noble_arm64.deb pigsty 1.3.3 50.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/a/aggs-for-arrays/postgresql-14-aggs-for-arrays_1.3.3-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 14 postgresql-14-aggs-for-arrays postgresql-14-aggs-for-arrays_1.3.3-1PIGSTY~resolute_amd64.deb pigsty 1.3.3 44.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/a/aggs-for-arrays/postgresql-14-aggs-for-arrays_1.3.3-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 14 postgresql-14-aggs-for-arrays postgresql-14-aggs-for-arrays_1.3.3-1PIGSTY~resolute_arm64.deb pigsty 1.3.3 50.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/a/aggs-for-arrays/postgresql-14-aggs-for-arrays_1.3.3-1PIGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建

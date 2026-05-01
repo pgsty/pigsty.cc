@@ -2,7 +2,7 @@
 title: "pg_duration"
 linkTitle: "pg_duration"
 description: "用于表示时间段的强化数据类型"
-weight: 3830
+weight: 3850
 ---
 
 <div class="ext-cards">
@@ -30,7 +30,7 @@ weight: 3830
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
 |:-----:|:-------------------------------------------------------------------------|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|:----------|
-| 3830  | [**`pg_duration`**](/ext/e/pg_duration) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
+| 3850  | [**`pg_duration`**](/ext/e/pg_duration) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
 {.ext-table}
 
 | **相关扩展** | [`prefix`](/ext/e/prefix) [`semver`](/ext/e/semver) [`unit`](/ext/e/unit) [`pgpdf`](/ext/e/pgpdf) [`pglite_fusion`](/ext/e/pglite_fusion) [`md5hash`](/ext/e/md5hash) [`asn1oid`](/ext/e/asn1oid) [`roaringbitmap`](/ext/e/roaringbitmap) |
@@ -64,8 +64,8 @@ weight: 3830
 | u22.aarch64 | AVAIL PIGSTY 1.0.2 1 | AVAIL PIGSTY 1.0.2 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
 | u24.x86_64 | AVAIL PIGSTY 1.0.2 1 | AVAIL PIGSTY 1.0.2 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
 | u24.aarch64 | AVAIL PIGSTY 1.0.2 1 | AVAIL PIGSTY 1.0.2 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| u26.x86_64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| u26.aarch64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| u26.x86_64 | AVAIL PIGSTY 1.0.2 1 | AVAIL PIGSTY 1.0.2 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| u26.aarch64 | AVAIL PIGSTY 1.0.2 1 | AVAIL PIGSTY 1.0.2 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
 @ el8.x86_64 18 pg_duration_18 pg_duration_18-1.0.2-1PIGSTY.el8.x86_64.rpm pigsty 1.0.2 24.0KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_duration_18-1.0.2-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 18 pg_duration_18 pg_duration_18-1.0.2-1PIGSTY.el8.aarch64.rpm pigsty 1.0.2 23.3KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_duration_18-1.0.2-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 18 pg_duration_18 pg_duration_18-1.0.2-1PIGSTY.el9.x86_64.rpm pigsty 1.0.2 23.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_duration_18-1.0.2-1PIGSTY.el9.x86_64.rpm
@@ -80,6 +80,8 @@ weight: 3830
 @ u22.aarch64 18 postgresql-18-pg-duration postgresql-18-pg-duration_1.0.2-1PIGSTY~jammy_arm64.deb pigsty 1.0.2 30.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-duration/postgresql-18-pg-duration_1.0.2-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 18 postgresql-18-pg-duration postgresql-18-pg-duration_1.0.2-1PIGSTY~noble_amd64.deb pigsty 1.0.2 30.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-duration/postgresql-18-pg-duration_1.0.2-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 18 postgresql-18-pg-duration postgresql-18-pg-duration_1.0.2-1PIGSTY~noble_arm64.deb pigsty 1.0.2 30.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-duration/postgresql-18-pg-duration_1.0.2-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 18 postgresql-18-pg-duration postgresql-18-pg-duration_1.0.2-1PIGSTY~resolute_amd64.deb pigsty 1.0.2 30.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-duration/postgresql-18-pg-duration_1.0.2-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 18 postgresql-18-pg-duration postgresql-18-pg-duration_1.0.2-1PIGSTY~resolute_arm64.deb pigsty 1.0.2 30.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-duration/postgresql-18-pg-duration_1.0.2-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 17 pg_duration_17 pg_duration_17-1.0.2-1PIGSTY.el8.x86_64.rpm pigsty 1.0.2 24.0KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_duration_17-1.0.2-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 17 pg_duration_17 pg_duration_17-1.0.2-1PIGSTY.el8.aarch64.rpm pigsty 1.0.2 23.3KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_duration_17-1.0.2-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 17 pg_duration_17 pg_duration_17-1.0.2-1PIGSTY.el9.x86_64.rpm pigsty 1.0.2 23.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_duration_17-1.0.2-1PIGSTY.el9.x86_64.rpm
@@ -94,6 +96,8 @@ weight: 3830
 @ u22.aarch64 17 postgresql-17-pg-duration postgresql-17-pg-duration_1.0.2-1PIGSTY~jammy_arm64.deb pigsty 1.0.2 31.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-duration/postgresql-17-pg-duration_1.0.2-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 17 postgresql-17-pg-duration postgresql-17-pg-duration_1.0.2-1PIGSTY~noble_amd64.deb pigsty 1.0.2 30.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-duration/postgresql-17-pg-duration_1.0.2-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 17 postgresql-17-pg-duration postgresql-17-pg-duration_1.0.2-1PIGSTY~noble_arm64.deb pigsty 1.0.2 30.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-duration/postgresql-17-pg-duration_1.0.2-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 17 postgresql-17-pg-duration postgresql-17-pg-duration_1.0.2-1PIGSTY~resolute_amd64.deb pigsty 1.0.2 30.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-duration/postgresql-17-pg-duration_1.0.2-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 17 postgresql-17-pg-duration postgresql-17-pg-duration_1.0.2-1PIGSTY~resolute_arm64.deb pigsty 1.0.2 30.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-duration/postgresql-17-pg-duration_1.0.2-1PIGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建

@@ -64,8 +64,8 @@ weight: 1060
 | u22.aarch64 | AVAIL PIGSTY 1.11.1 1 | AVAIL PIGSTY 1.11.1 1 | AVAIL PIGSTY 1.11.1 1 | AVAIL PIGSTY 1.11.1 1 | AVAIL PIGSTY 1.11.1 1 |
 | u24.x86_64 | AVAIL PIGSTY 1.11.1 1 | AVAIL PIGSTY 1.11.1 1 | AVAIL PIGSTY 1.11.1 1 | AVAIL PIGSTY 1.11.1 1 | AVAIL PIGSTY 1.11.1 1 |
 | u24.aarch64 | AVAIL PIGSTY 1.11.1 1 | AVAIL PIGSTY 1.11.1 1 | AVAIL PIGSTY 1.11.1 1 | AVAIL PIGSTY 1.11.1 1 | AVAIL PIGSTY 1.11.1 1 |
-| u26.x86_64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| u26.aarch64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| u26.x86_64 | AVAIL PIGSTY 1.11.1 1 | AVAIL PIGSTY 1.11.1 1 | AVAIL PIGSTY 1.11.1 1 | AVAIL PIGSTY 1.11.1 1 | AVAIL PIGSTY 1.11.1 1 |
+| u26.aarch64 | AVAIL PIGSTY 1.11.1 1 | AVAIL PIGSTY 1.11.1 1 | AVAIL PIGSTY 1.11.1 1 | AVAIL PIGSTY 1.11.1 1 | AVAIL PIGSTY 1.11.1 1 |
 @ el8.x86_64 18 table_version_18 table_version_18-1.11.1-2PGDG.rhel8.noarch.rpm pgdg 1.11.1 32.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/table_version_18-1.11.1-2PGDG.rhel8.noarch.rpm
 @ el8.x86_64 18 table_version_18 table_version_18-1.11.1-1PIGSTY.el8.x86_64.rpm pigsty 1.11.1 32.1KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/table_version_18-1.11.1-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 18 table_version_18 table_version_18-1.11.1-2PGDG.rhel8.noarch.rpm pgdg 1.11.1 32.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/table_version_18-1.11.1-2PGDG.rhel8.noarch.rpm
@@ -86,6 +86,8 @@ weight: 1060
 @ u22.aarch64 18 postgresql-18-table-version postgresql-18-table-version_1.11.1-1PIGSTY~jammy_arm64.deb pigsty 1.11.1 25.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/t/table-version/postgresql-18-table-version_1.11.1-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 18 postgresql-18-table-version postgresql-18-table-version_1.11.1-1PIGSTY~noble_amd64.deb pigsty 1.11.1 25.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/table-version/postgresql-18-table-version_1.11.1-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 18 postgresql-18-table-version postgresql-18-table-version_1.11.1-1PIGSTY~noble_arm64.deb pigsty 1.11.1 25.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/table-version/postgresql-18-table-version_1.11.1-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 18 postgresql-18-table-version postgresql-18-table-version_1.11.1-1PIGSTY~resolute_amd64.deb pigsty 1.11.1 18.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/t/table-version/postgresql-18-table-version_1.11.1-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 18 postgresql-18-table-version postgresql-18-table-version_1.11.1-1PIGSTY~resolute_arm64.deb pigsty 1.11.1 18.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/t/table-version/postgresql-18-table-version_1.11.1-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 17 table_version_17 table_version_17-1.11.1-1PIGSTY.el8.x86_64.rpm pigsty 1.11.1 32.1KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/table_version_17-1.11.1-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 17 table_version_17 table_version_17-1.11.1-1PGDG.rhel8.noarch.rpm pgdg 1.11.1 32.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/table_version_17-1.11.1-1PGDG.rhel8.noarch.rpm
 @ el8.aarch64 17 table_version_17 table_version_17-1.11.1-1PIGSTY.el8.aarch64.rpm pigsty 1.11.1 32.1KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/table_version_17-1.11.1-1PIGSTY.el8.aarch64.rpm
@@ -108,6 +110,8 @@ weight: 1060
 @ u22.aarch64 17 postgresql-17-table-version postgresql-17-table-version_1.11.1-1PIGSTY~jammy_arm64.deb pigsty 1.11.1 25.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/t/table-version/postgresql-17-table-version_1.11.1-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 17 postgresql-17-table-version postgresql-17-table-version_1.11.1-1PIGSTY~noble_amd64.deb pigsty 1.11.1 25.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/table-version/postgresql-17-table-version_1.11.1-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 17 postgresql-17-table-version postgresql-17-table-version_1.11.1-1PIGSTY~noble_arm64.deb pigsty 1.11.1 25.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/table-version/postgresql-17-table-version_1.11.1-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 17 postgresql-17-table-version postgresql-17-table-version_1.11.1-1PIGSTY~resolute_amd64.deb pigsty 1.11.1 18.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/t/table-version/postgresql-17-table-version_1.11.1-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 17 postgresql-17-table-version postgresql-17-table-version_1.11.1-1PIGSTY~resolute_arm64.deb pigsty 1.11.1 18.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/t/table-version/postgresql-17-table-version_1.11.1-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 16 table_version_16 table_version_16-1.11.1-1PIGSTY.el8.x86_64.rpm pigsty 1.11.1 32.1KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/table_version_16-1.11.1-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 16 table_version_16 table_version_16-1.11.1-1PGDG.rhel8.noarch.rpm pgdg 1.11.1 32.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/table_version_16-1.11.1-1PGDG.rhel8.noarch.rpm
 @ el8.x86_64 16 table_version_16 table_version_16-1.10.3-3PGDG.rhel8.x86_64.rpm pgdg 1.10.3 32.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/table_version_16-1.10.3-3PGDG.rhel8.x86_64.rpm
@@ -129,6 +133,8 @@ weight: 1060
 @ u22.aarch64 16 postgresql-16-table-version postgresql-16-table-version_1.11.1-1PIGSTY~jammy_arm64.deb pigsty 1.11.1 25.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/t/table-version/postgresql-16-table-version_1.11.1-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 16 postgresql-16-table-version postgresql-16-table-version_1.11.1-1PIGSTY~noble_amd64.deb pigsty 1.11.1 25.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/table-version/postgresql-16-table-version_1.11.1-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 16 postgresql-16-table-version postgresql-16-table-version_1.11.1-1PIGSTY~noble_arm64.deb pigsty 1.11.1 25.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/table-version/postgresql-16-table-version_1.11.1-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 16 postgresql-16-table-version postgresql-16-table-version_1.11.1-1PIGSTY~resolute_amd64.deb pigsty 1.11.1 18.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/t/table-version/postgresql-16-table-version_1.11.1-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 16 postgresql-16-table-version postgresql-16-table-version_1.11.1-1PIGSTY~resolute_arm64.deb pigsty 1.11.1 18.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/t/table-version/postgresql-16-table-version_1.11.1-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 15 table_version_15 table_version_15-1.11.1-1PIGSTY.el8.x86_64.rpm pigsty 1.11.1 32.1KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/table_version_15-1.11.1-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 15 table_version_15 table_version_15-1.11.1-1PGDG.rhel8.noarch.rpm pgdg 1.11.1 32.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/table_version_15-1.11.1-1PGDG.rhel8.noarch.rpm
 @ el8.x86_64 15 table_version_15 table_version_15-1.10.3-1.rhel8.x86_64.rpm pgdg 1.10.3 32.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/table_version_15-1.10.3-1.rhel8.x86_64.rpm
@@ -150,6 +156,8 @@ weight: 1060
 @ u22.aarch64 15 postgresql-15-table-version postgresql-15-table-version_1.11.1-1PIGSTY~jammy_arm64.deb pigsty 1.11.1 25.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/t/table-version/postgresql-15-table-version_1.11.1-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 15 postgresql-15-table-version postgresql-15-table-version_1.11.1-1PIGSTY~noble_amd64.deb pigsty 1.11.1 25.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/table-version/postgresql-15-table-version_1.11.1-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 15 postgresql-15-table-version postgresql-15-table-version_1.11.1-1PIGSTY~noble_arm64.deb pigsty 1.11.1 25.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/table-version/postgresql-15-table-version_1.11.1-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 15 postgresql-15-table-version postgresql-15-table-version_1.11.1-1PIGSTY~resolute_amd64.deb pigsty 1.11.1 18.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/t/table-version/postgresql-15-table-version_1.11.1-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 15 postgresql-15-table-version postgresql-15-table-version_1.11.1-1PIGSTY~resolute_arm64.deb pigsty 1.11.1 18.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/t/table-version/postgresql-15-table-version_1.11.1-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 14 table_version_14 table_version_14-1.11.1-1PIGSTY.el8.x86_64.rpm pigsty 1.11.1 32.1KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/table_version_14-1.11.1-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 14 table_version_14 table_version_14-1.11.1-1PGDG.rhel8.noarch.rpm pgdg 1.11.1 32.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/table_version_14-1.11.1-1PGDG.rhel8.noarch.rpm
 @ el8.x86_64 14 table_version_14 table_version_14-1.9.0-1.rhel8.x86_64.rpm pgdg 1.9.0 40.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/table_version_14-1.9.0-1.rhel8.x86_64.rpm
@@ -171,6 +179,8 @@ weight: 1060
 @ u22.aarch64 14 postgresql-14-table-version postgresql-14-table-version_1.11.1-1PIGSTY~jammy_arm64.deb pigsty 1.11.1 25.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/t/table-version/postgresql-14-table-version_1.11.1-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 14 postgresql-14-table-version postgresql-14-table-version_1.11.1-1PIGSTY~noble_amd64.deb pigsty 1.11.1 25.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/table-version/postgresql-14-table-version_1.11.1-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 14 postgresql-14-table-version postgresql-14-table-version_1.11.1-1PIGSTY~noble_arm64.deb pigsty 1.11.1 25.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/table-version/postgresql-14-table-version_1.11.1-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 14 postgresql-14-table-version postgresql-14-table-version_1.11.1-1PIGSTY~resolute_amd64.deb pigsty 1.11.1 18.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/t/table-version/postgresql-14-table-version_1.11.1-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 14 postgresql-14-table-version postgresql-14-table-version_1.11.1-1PIGSTY~resolute_arm64.deb pigsty 1.11.1 18.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/t/table-version/postgresql-14-table-version_1.11.1-1PIGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建

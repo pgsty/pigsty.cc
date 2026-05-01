@@ -65,8 +65,8 @@ weight: 6440
 | u22.aarch64 | AVAIL PGDG 2.0.1 3 | AVAIL PGDG 2.0.1 3 | AVAIL PGDG 2.0.1 3 | AVAIL PGDG 2.0.1 3 | AVAIL PGDG 2.0.1 3 |
 | u24.x86_64 | AVAIL PGDG 2.0.1 3 | AVAIL PGDG 2.0.1 3 | AVAIL PGDG 2.0.1 3 | AVAIL PGDG 2.0.1 3 | AVAIL PGDG 2.0.1 3 |
 | u24.aarch64 | AVAIL PGDG 2.0.1 3 | AVAIL PGDG 2.0.1 3 | AVAIL PGDG 2.0.1 3 | AVAIL PGDG 2.0.1 3 | AVAIL PGDG 2.0.1 3 |
-| u26.x86_64 | AVAIL PGDG 2.0.1 2 | AVAIL PGDG 2.0.1 2 | AVAIL PGDG 2.0.1 2 | AVAIL PGDG 2.0.1 2 | AVAIL PGDG 2.0.1 2 |
-| u26.aarch64 | AVAIL PGDG 2.0.1 2 | AVAIL PGDG 2.0.1 2 | AVAIL PGDG 2.0.1 2 | AVAIL PGDG 2.0.1 2 | AVAIL PGDG 2.0.1 2 |
+| u26.x86_64 | AVAIL PGDG 2.0.1 3 | AVAIL PGDG 2.0.1 3 | AVAIL PGDG 2.0.1 3 | AVAIL PGDG 2.0.1 3 | AVAIL PGDG 2.0.1 3 |
+| u26.aarch64 | AVAIL PGDG 2.0.1 3 | AVAIL PGDG 2.0.1 3 | AVAIL PGDG 2.0.1 3 | AVAIL PGDG 2.0.1 3 | AVAIL PGDG 2.0.1 3 |
 @ el8.x86_64 18 pgnodemx_18 pgnodemx_18-1.7-1PIGSTY.el8.x86_64.rpm pigsty 1.7 37.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgnodemx_18-1.7-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 18 pgnodemx_18 pgnodemx_18-1.7-1PGDG.rhel8.x86_64.rpm pgdg 1.7 41.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pgnodemx_18-1.7-1PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 18 pgnodemx_18 pgnodemx_18-1.7-1PIGSTY.el8.aarch64.rpm pigsty 1.7 37.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgnodemx_18-1.7-1PIGSTY.el8.aarch64.rpm
@@ -105,8 +105,10 @@ weight: 6440
 @ u24.aarch64 18 postgresql-18-pgnodemx postgresql-18-pgnodemx_1.7-1PIGSTY~noble_arm64.deb pigsty 1.7 87.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgnodemx/postgresql-18-pgnodemx_1.7-1PIGSTY~noble_arm64.deb
 @ u26.x86_64 18 postgresql-18-pgnodemx postgresql-18-pgnodemx_2.0.1-1.pgdg26.04+1_amd64.deb pgdg 2.0.1 93.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgnodemx/postgresql-18-pgnodemx_2.0.1-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 18 postgresql-18-pgnodemx postgresql-18-pgnodemx_1.7-2.pgdg26.04+1_amd64.deb pgdg 1.7 81.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgnodemx/postgresql-18-pgnodemx_1.7-2.pgdg26.04+1_amd64.deb
+@ u26.x86_64 18 postgresql-18-pgnodemx postgresql-18-pgnodemx_1.7-1PIGSTY~resolute_amd64.deb pigsty 1.7 87.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgnodemx/postgresql-18-pgnodemx_1.7-1PIGSTY~resolute_amd64.deb
 @ u26.aarch64 18 postgresql-18-pgnodemx postgresql-18-pgnodemx_2.0.1-1.pgdg26.04+1_arm64.deb pgdg 2.0.1 93.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgnodemx/postgresql-18-pgnodemx_2.0.1-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 18 postgresql-18-pgnodemx postgresql-18-pgnodemx_1.7-2.pgdg26.04+1_arm64.deb pgdg 1.7 80.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgnodemx/postgresql-18-pgnodemx_1.7-2.pgdg26.04+1_arm64.deb
+@ u26.aarch64 18 postgresql-18-pgnodemx postgresql-18-pgnodemx_1.7-1PIGSTY~resolute_arm64.deb pigsty 1.7 87.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgnodemx/postgresql-18-pgnodemx_1.7-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 17 pgnodemx_17 pgnodemx_17-1.7-1PIGSTY.el8.x86_64.rpm pigsty 1.7 37.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgnodemx_17-1.7-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 17 pgnodemx_17 pgnodemx_17-1.7-1PGDG.rhel8.x86_64.rpm pgdg 1.7 41.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pgnodemx_17-1.7-1PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 17 pgnodemx_17 pgnodemx_17-1.7-1PIGSTY.el8.aarch64.rpm pigsty 1.7 37.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgnodemx_17-1.7-1PIGSTY.el8.aarch64.rpm
@@ -145,8 +147,10 @@ weight: 6440
 @ u24.aarch64 17 postgresql-17-pgnodemx postgresql-17-pgnodemx_1.7-1PIGSTY~noble_arm64.deb pigsty 1.7 87.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgnodemx/postgresql-17-pgnodemx_1.7-1PIGSTY~noble_arm64.deb
 @ u26.x86_64 17 postgresql-17-pgnodemx postgresql-17-pgnodemx_2.0.1-1.pgdg26.04+1_amd64.deb pgdg 2.0.1 94.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgnodemx/postgresql-17-pgnodemx_2.0.1-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 17 postgresql-17-pgnodemx postgresql-17-pgnodemx_1.7-2.pgdg26.04+1_amd64.deb pgdg 1.7 81.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgnodemx/postgresql-17-pgnodemx_1.7-2.pgdg26.04+1_amd64.deb
+@ u26.x86_64 17 postgresql-17-pgnodemx postgresql-17-pgnodemx_1.7-1PIGSTY~resolute_amd64.deb pigsty 1.7 87.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgnodemx/postgresql-17-pgnodemx_1.7-1PIGSTY~resolute_amd64.deb
 @ u26.aarch64 17 postgresql-17-pgnodemx postgresql-17-pgnodemx_2.0.1-1.pgdg26.04+1_arm64.deb pgdg 2.0.1 93.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgnodemx/postgresql-17-pgnodemx_2.0.1-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 17 postgresql-17-pgnodemx postgresql-17-pgnodemx_1.7-2.pgdg26.04+1_arm64.deb pgdg 1.7 80.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgnodemx/postgresql-17-pgnodemx_1.7-2.pgdg26.04+1_arm64.deb
+@ u26.aarch64 17 postgresql-17-pgnodemx postgresql-17-pgnodemx_1.7-1PIGSTY~resolute_arm64.deb pigsty 1.7 87.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgnodemx/postgresql-17-pgnodemx_1.7-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 16 pgnodemx_16 pgnodemx_16-1.7-1PIGSTY.el8.x86_64.rpm pigsty 1.7 37.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgnodemx_16-1.7-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 16 pgnodemx_16 pgnodemx_16-1.7-1PGDG.rhel8.x86_64.rpm pgdg 1.7 41.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pgnodemx_16-1.7-1PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 16 pgnodemx_16 pgnodemx_16-1.7-1PIGSTY.el8.aarch64.rpm pigsty 1.7 37.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgnodemx_16-1.7-1PIGSTY.el8.aarch64.rpm
@@ -185,8 +189,10 @@ weight: 6440
 @ u24.aarch64 16 postgresql-16-pgnodemx postgresql-16-pgnodemx_1.7-1PIGSTY~noble_arm64.deb pigsty 1.7 87.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgnodemx/postgresql-16-pgnodemx_1.7-1PIGSTY~noble_arm64.deb
 @ u26.x86_64 16 postgresql-16-pgnodemx postgresql-16-pgnodemx_2.0.1-1.pgdg26.04+1_amd64.deb pgdg 2.0.1 94.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgnodemx/postgresql-16-pgnodemx_2.0.1-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 16 postgresql-16-pgnodemx postgresql-16-pgnodemx_1.7-2.pgdg26.04+1_amd64.deb pgdg 1.7 81.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgnodemx/postgresql-16-pgnodemx_1.7-2.pgdg26.04+1_amd64.deb
+@ u26.x86_64 16 postgresql-16-pgnodemx postgresql-16-pgnodemx_1.7-1PIGSTY~resolute_amd64.deb pigsty 1.7 87.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgnodemx/postgresql-16-pgnodemx_1.7-1PIGSTY~resolute_amd64.deb
 @ u26.aarch64 16 postgresql-16-pgnodemx postgresql-16-pgnodemx_2.0.1-1.pgdg26.04+1_arm64.deb pgdg 2.0.1 93.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgnodemx/postgresql-16-pgnodemx_2.0.1-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 16 postgresql-16-pgnodemx postgresql-16-pgnodemx_1.7-2.pgdg26.04+1_arm64.deb pgdg 1.7 80.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgnodemx/postgresql-16-pgnodemx_1.7-2.pgdg26.04+1_arm64.deb
+@ u26.aarch64 16 postgresql-16-pgnodemx postgresql-16-pgnodemx_1.7-1PIGSTY~resolute_arm64.deb pigsty 1.7 87.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgnodemx/postgresql-16-pgnodemx_1.7-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 15 pgnodemx_15 pgnodemx_15-1.7-1PIGSTY.el8.x86_64.rpm pigsty 1.7 38.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgnodemx_15-1.7-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 15 pgnodemx_15 pgnodemx_15-1.7-1PGDG.rhel8.x86_64.rpm pgdg 1.7 43.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pgnodemx_15-1.7-1PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 15 pgnodemx_15 pgnodemx_15-1.7-1PIGSTY.el8.aarch64.rpm pigsty 1.7 38.1KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgnodemx_15-1.7-1PIGSTY.el8.aarch64.rpm
@@ -225,8 +231,10 @@ weight: 6440
 @ u24.aarch64 15 postgresql-15-pgnodemx postgresql-15-pgnodemx_1.7-1PIGSTY~noble_arm64.deb pigsty 1.7 89.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgnodemx/postgresql-15-pgnodemx_1.7-1PIGSTY~noble_arm64.deb
 @ u26.x86_64 15 postgresql-15-pgnodemx postgresql-15-pgnodemx_2.0.1-1.pgdg26.04+1_amd64.deb pgdg 2.0.1 95.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgnodemx/postgresql-15-pgnodemx_2.0.1-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 15 postgresql-15-pgnodemx postgresql-15-pgnodemx_1.7-2.pgdg26.04+1_amd64.deb pgdg 1.7 83.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgnodemx/postgresql-15-pgnodemx_1.7-2.pgdg26.04+1_amd64.deb
+@ u26.x86_64 15 postgresql-15-pgnodemx postgresql-15-pgnodemx_1.7-1PIGSTY~resolute_amd64.deb pigsty 1.7 89.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgnodemx/postgresql-15-pgnodemx_1.7-1PIGSTY~resolute_amd64.deb
 @ u26.aarch64 15 postgresql-15-pgnodemx postgresql-15-pgnodemx_2.0.1-1.pgdg26.04+1_arm64.deb pgdg 2.0.1 95.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgnodemx/postgresql-15-pgnodemx_2.0.1-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 15 postgresql-15-pgnodemx postgresql-15-pgnodemx_1.7-2.pgdg26.04+1_arm64.deb pgdg 1.7 82.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgnodemx/postgresql-15-pgnodemx_1.7-2.pgdg26.04+1_arm64.deb
+@ u26.aarch64 15 postgresql-15-pgnodemx postgresql-15-pgnodemx_1.7-1PIGSTY~resolute_arm64.deb pigsty 1.7 89.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgnodemx/postgresql-15-pgnodemx_1.7-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 14 pgnodemx_14 pgnodemx_14-1.7-1PIGSTY.el8.x86_64.rpm pigsty 1.7 38.6KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgnodemx_14-1.7-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 14 pgnodemx_14 pgnodemx_14-1.7-1PGDG.rhel8.x86_64.rpm pgdg 1.7 43.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pgnodemx_14-1.7-1PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 14 pgnodemx_14 pgnodemx_14-1.7-1PIGSTY.el8.aarch64.rpm pigsty 1.7 38.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgnodemx_14-1.7-1PIGSTY.el8.aarch64.rpm
@@ -265,8 +273,10 @@ weight: 6440
 @ u24.aarch64 14 postgresql-14-pgnodemx postgresql-14-pgnodemx_1.7-1PIGSTY~noble_arm64.deb pigsty 1.7 89.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgnodemx/postgresql-14-pgnodemx_1.7-1PIGSTY~noble_arm64.deb
 @ u26.x86_64 14 postgresql-14-pgnodemx postgresql-14-pgnodemx_2.0.1-1.pgdg26.04+1_amd64.deb pgdg 2.0.1 94.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgnodemx/postgresql-14-pgnodemx_2.0.1-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 14 postgresql-14-pgnodemx postgresql-14-pgnodemx_1.7-2.pgdg26.04+1_amd64.deb pgdg 1.7 82.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgnodemx/postgresql-14-pgnodemx_1.7-2.pgdg26.04+1_amd64.deb
+@ u26.x86_64 14 postgresql-14-pgnodemx postgresql-14-pgnodemx_1.7-1PIGSTY~resolute_amd64.deb pigsty 1.7 88.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgnodemx/postgresql-14-pgnodemx_1.7-1PIGSTY~resolute_amd64.deb
 @ u26.aarch64 14 postgresql-14-pgnodemx postgresql-14-pgnodemx_2.0.1-1.pgdg26.04+1_arm64.deb pgdg 2.0.1 93.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgnodemx/postgresql-14-pgnodemx_2.0.1-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 14 postgresql-14-pgnodemx postgresql-14-pgnodemx_1.7-2.pgdg26.04+1_arm64.deb pgdg 1.7 81.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgnodemx/postgresql-14-pgnodemx_1.7-2.pgdg26.04+1_arm64.deb
+@ u26.aarch64 14 postgresql-14-pgnodemx postgresql-14-pgnodemx_1.7-1PIGSTY~resolute_arm64.deb pigsty 1.7 89.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgnodemx/postgresql-14-pgnodemx_1.7-1PIGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建

@@ -67,8 +67,8 @@ weight: 3730
 | u22.aarch64 | AVAIL PIGSTY 1.20250815 1 | AVAIL PIGSTY 1.20250815 1 | AVAIL PIGSTY 1.20250815 1 | AVAIL PIGSTY 1.20250815 1 | AVAIL PIGSTY 1.20250815 1 |
 | u24.x86_64 | AVAIL PIGSTY 1.20250815 1 | AVAIL PIGSTY 1.20250815 1 | AVAIL PIGSTY 1.20250815 1 | AVAIL PIGSTY 1.20250815 1 | AVAIL PIGSTY 1.20250815 1 |
 | u24.aarch64 | AVAIL PIGSTY 1.20250815 1 | AVAIL PIGSTY 1.20250815 1 | AVAIL PIGSTY 1.20250815 1 | AVAIL PIGSTY 1.20250815 1 | AVAIL PIGSTY 1.20250815 1 |
-| u26.x86_64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| u26.aarch64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| u26.x86_64 | AVAIL PIGSTY 1.20250815 1 | AVAIL PIGSTY 1.20250815 1 | AVAIL PIGSTY 1.20250815 1 | AVAIL PIGSTY 1.20250815 1 | AVAIL PIGSTY 1.20250815 1 |
+| u26.aarch64 | AVAIL PIGSTY 1.20250815 1 | AVAIL PIGSTY 1.20250815 1 | AVAIL PIGSTY 1.20250815 1 | AVAIL PIGSTY 1.20250815 1 | AVAIL PIGSTY 1.20250815 1 |
 @ el8.x86_64 18 pguint_18 pguint_18-1.20250815-1PIGSTY.el8.x86_64.rpm pigsty 1.20250815 94.6KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pguint_18-1.20250815-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 18 pguint_18 pguint_18-1.20250815-1PGDG.rhel8.x86_64.rpm pgdg 1.20250815 72.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pguint_18-1.20250815-1PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 18 pguint_18 pguint_18-1.20250815-1PIGSTY.el8.aarch64.rpm pigsty 1.20250815 82.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pguint_18-1.20250815-1PIGSTY.el8.aarch64.rpm
@@ -89,6 +89,8 @@ weight: 3730
 @ u22.aarch64 18 postgresql-18-pguint postgresql-18-pguint_1.20250815-1PIGSTY~jammy_arm64.deb pigsty 1.20250815 185.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pguint/postgresql-18-pguint_1.20250815-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 18 postgresql-18-pguint postgresql-18-pguint_1.20250815-1PIGSTY~noble_amd64.deb pigsty 1.20250815 177.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pguint/postgresql-18-pguint_1.20250815-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 18 postgresql-18-pguint postgresql-18-pguint_1.20250815-1PIGSTY~noble_arm64.deb pigsty 1.20250815 175.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pguint/postgresql-18-pguint_1.20250815-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 18 postgresql-18-pguint postgresql-18-pguint_1.20250815-1PIGSTY~resolute_amd64.deb pigsty 1.20250815 179.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pguint/postgresql-18-pguint_1.20250815-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 18 postgresql-18-pguint postgresql-18-pguint_1.20250815-1PIGSTY~resolute_arm64.deb pigsty 1.20250815 177.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pguint/postgresql-18-pguint_1.20250815-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 17 pguint_17 pguint_17-1.20250815-1PIGSTY.el8.x86_64.rpm pigsty 1.20250815 94.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pguint_17-1.20250815-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 17 pguint_17 pguint_17-1.20250815-1PGDG.rhel8.x86_64.rpm pgdg 1.20250815 72.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pguint_17-1.20250815-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 17 pguint_17 pguint_17-1.20231206-2PGDG.rhel8.x86_64.rpm pgdg 1.20231206 71.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pguint_17-1.20231206-2PGDG.rhel8.x86_64.rpm
@@ -115,6 +117,8 @@ weight: 3730
 @ u22.aarch64 17 postgresql-17-pguint postgresql-17-pguint_1.20250815-1PIGSTY~jammy_arm64.deb pigsty 1.20250815 188.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pguint/postgresql-17-pguint_1.20250815-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 17 postgresql-17-pguint postgresql-17-pguint_1.20250815-1PIGSTY~noble_amd64.deb pigsty 1.20250815 177.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pguint/postgresql-17-pguint_1.20250815-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 17 postgresql-17-pguint postgresql-17-pguint_1.20250815-1PIGSTY~noble_arm64.deb pigsty 1.20250815 175.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pguint/postgresql-17-pguint_1.20250815-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 17 postgresql-17-pguint postgresql-17-pguint_1.20250815-1PIGSTY~resolute_amd64.deb pigsty 1.20250815 179.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pguint/postgresql-17-pguint_1.20250815-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 17 postgresql-17-pguint postgresql-17-pguint_1.20250815-1PIGSTY~resolute_arm64.deb pigsty 1.20250815 177.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pguint/postgresql-17-pguint_1.20250815-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 16 pguint_16 pguint_16-1.20250815-1PIGSTY.el8.x86_64.rpm pigsty 1.20250815 94.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pguint_16-1.20250815-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 16 pguint_16 pguint_16-1.20250815-1PGDG.rhel8.x86_64.rpm pgdg 1.20250815 72.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pguint_16-1.20250815-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 16 pguint_16 pguint_16-1.20231206-1PGDG.rhel8.x86_64.rpm pgdg 1.20231206 71.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pguint_16-1.20231206-1PGDG.rhel8.x86_64.rpm
@@ -145,6 +149,8 @@ weight: 3730
 @ u22.aarch64 16 postgresql-16-pguint postgresql-16-pguint_1.20250815-1PIGSTY~jammy_arm64.deb pigsty 1.20250815 188.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pguint/postgresql-16-pguint_1.20250815-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 16 postgresql-16-pguint postgresql-16-pguint_1.20250815-1PIGSTY~noble_amd64.deb pigsty 1.20250815 177.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pguint/postgresql-16-pguint_1.20250815-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 16 postgresql-16-pguint postgresql-16-pguint_1.20250815-1PIGSTY~noble_arm64.deb pigsty 1.20250815 175.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pguint/postgresql-16-pguint_1.20250815-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 16 postgresql-16-pguint postgresql-16-pguint_1.20250815-1PIGSTY~resolute_amd64.deb pigsty 1.20250815 179.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pguint/postgresql-16-pguint_1.20250815-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 16 postgresql-16-pguint postgresql-16-pguint_1.20250815-1PIGSTY~resolute_arm64.deb pigsty 1.20250815 177.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pguint/postgresql-16-pguint_1.20250815-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 15 pguint_15 pguint_15-1.20250815-1PIGSTY.el8.x86_64.rpm pigsty 1.20250815 94.6KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pguint_15-1.20250815-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 15 pguint_15 pguint_15-1.20250815-1PGDG.rhel8.x86_64.rpm pgdg 1.20250815 72.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pguint_15-1.20250815-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 15 pguint_15 pguint_15-1.20231206-1PGDG.rhel8.x86_64.rpm pgdg 1.20231206 71.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pguint_15-1.20231206-1PGDG.rhel8.x86_64.rpm
@@ -171,6 +177,8 @@ weight: 3730
 @ u22.aarch64 15 postgresql-15-pguint postgresql-15-pguint_1.20250815-1PIGSTY~jammy_arm64.deb pigsty 1.20250815 187.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pguint/postgresql-15-pguint_1.20250815-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 15 postgresql-15-pguint postgresql-15-pguint_1.20250815-1PIGSTY~noble_amd64.deb pigsty 1.20250815 178.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pguint/postgresql-15-pguint_1.20250815-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 15 postgresql-15-pguint postgresql-15-pguint_1.20250815-1PIGSTY~noble_arm64.deb pigsty 1.20250815 176.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pguint/postgresql-15-pguint_1.20250815-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 15 postgresql-15-pguint postgresql-15-pguint_1.20250815-1PIGSTY~resolute_amd64.deb pigsty 1.20250815 178.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pguint/postgresql-15-pguint_1.20250815-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 15 postgresql-15-pguint postgresql-15-pguint_1.20250815-1PIGSTY~resolute_arm64.deb pigsty 1.20250815 177.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pguint/postgresql-15-pguint_1.20250815-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 14 pguint_14 pguint_14-1.20250815-1PIGSTY.el8.x86_64.rpm pigsty 1.20250815 94.6KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pguint_14-1.20250815-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 14 pguint_14 pguint_14-1.20250815-1PIGSTY.el8.aarch64.rpm pigsty 1.20250815 82.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pguint_14-1.20250815-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 14 pguint_14 pguint_14-1.20250815-1PIGSTY.el9.x86_64.rpm pigsty 1.20250815 82.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pguint_14-1.20250815-1PIGSTY.el9.x86_64.rpm
@@ -185,6 +193,8 @@ weight: 3730
 @ u22.aarch64 14 postgresql-14-pguint postgresql-14-pguint_1.20250815-1PIGSTY~jammy_arm64.deb pigsty 1.20250815 187.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pguint/postgresql-14-pguint_1.20250815-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 14 postgresql-14-pguint postgresql-14-pguint_1.20250815-1PIGSTY~noble_amd64.deb pigsty 1.20250815 178.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pguint/postgresql-14-pguint_1.20250815-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 14 postgresql-14-pguint postgresql-14-pguint_1.20250815-1PIGSTY~noble_arm64.deb pigsty 1.20250815 148.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pguint/postgresql-14-pguint_1.20250815-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 14 postgresql-14-pguint postgresql-14-pguint_1.20250815-1PIGSTY~resolute_amd64.deb pigsty 1.20250815 178.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pguint/postgresql-14-pguint_1.20250815-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 14 postgresql-14-pguint postgresql-14-pguint_1.20250815-1PIGSTY~resolute_arm64.deb pigsty 1.20250815 177.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pguint/postgresql-14-pguint_1.20250815-1PIGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建

@@ -64,8 +64,8 @@ weight: 3920
 | u22.aarch64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 |
 | u24.x86_64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 |
 | u24.aarch64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 |
-| u26.x86_64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| u26.aarch64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| u26.x86_64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 |
+| u26.aarch64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 |
 @ el8.x86_64 18 chkpass_18 chkpass_18-1.0-1PIGSTY.el8.x86_64.rpm pigsty 1.0 13.4KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/chkpass_18-1.0-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 18 chkpass_18 chkpass_18-1.0-1PIGSTY.el8.aarch64.rpm pigsty 1.0 13.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/chkpass_18-1.0-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 18 chkpass_18 chkpass_18-1.0-1PIGSTY.el9.x86_64.rpm pigsty 1.0 13.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/chkpass_18-1.0-1PIGSTY.el9.x86_64.rpm
@@ -80,6 +80,8 @@ weight: 3920
 @ u22.aarch64 18 postgresql-18-chkpass postgresql-18-chkpass_1.0-1PIGSTY~jammy_arm64.deb pigsty 1.0 10.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/c/chkpass/postgresql-18-chkpass_1.0-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 18 postgresql-18-chkpass postgresql-18-chkpass_1.0-1PIGSTY~noble_amd64.deb pigsty 1.0 11.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/c/chkpass/postgresql-18-chkpass_1.0-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 18 postgresql-18-chkpass postgresql-18-chkpass_1.0-1PIGSTY~noble_arm64.deb pigsty 1.0 11.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/c/chkpass/postgresql-18-chkpass_1.0-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 18 postgresql-18-chkpass postgresql-18-chkpass_1.0-1PIGSTY~resolute_amd64.deb pigsty 1.0 11.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/c/chkpass/postgresql-18-chkpass_1.0-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 18 postgresql-18-chkpass postgresql-18-chkpass_1.0-1PIGSTY~resolute_arm64.deb pigsty 1.0 11.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/c/chkpass/postgresql-18-chkpass_1.0-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 17 chkpass_17 chkpass_17-1.0-1PIGSTY.el8.x86_64.rpm pigsty 1.0 13.4KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/chkpass_17-1.0-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 17 chkpass_17 chkpass_17-1.0-1PIGSTY.el8.aarch64.rpm pigsty 1.0 13.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/chkpass_17-1.0-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 17 chkpass_17 chkpass_17-1.0-1PIGSTY.el9.x86_64.rpm pigsty 1.0 13.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/chkpass_17-1.0-1PIGSTY.el9.x86_64.rpm
@@ -94,6 +96,8 @@ weight: 3920
 @ u22.aarch64 17 postgresql-17-chkpass postgresql-17-chkpass_1.0-1PIGSTY~jammy_arm64.deb pigsty 1.0 11.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/c/chkpass/postgresql-17-chkpass_1.0-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 17 postgresql-17-chkpass postgresql-17-chkpass_1.0-1PIGSTY~noble_amd64.deb pigsty 1.0 11.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/c/chkpass/postgresql-17-chkpass_1.0-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 17 postgresql-17-chkpass postgresql-17-chkpass_1.0-1PIGSTY~noble_arm64.deb pigsty 1.0 11.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/c/chkpass/postgresql-17-chkpass_1.0-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 17 postgresql-17-chkpass postgresql-17-chkpass_1.0-1PIGSTY~resolute_amd64.deb pigsty 1.0 11.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/c/chkpass/postgresql-17-chkpass_1.0-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 17 postgresql-17-chkpass postgresql-17-chkpass_1.0-1PIGSTY~resolute_arm64.deb pigsty 1.0 11.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/c/chkpass/postgresql-17-chkpass_1.0-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 16 chkpass_16 chkpass_16-1.0-1PIGSTY.el8.x86_64.rpm pigsty 1.0 13.4KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/chkpass_16-1.0-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 16 chkpass_16 chkpass_16-1.0-1PIGSTY.el8.aarch64.rpm pigsty 1.0 13.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/chkpass_16-1.0-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 16 chkpass_16 chkpass_16-1.0-1PIGSTY.el9.x86_64.rpm pigsty 1.0 13.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/chkpass_16-1.0-1PIGSTY.el9.x86_64.rpm
@@ -108,6 +112,8 @@ weight: 3920
 @ u22.aarch64 16 postgresql-16-chkpass postgresql-16-chkpass_1.0-1PIGSTY~jammy_arm64.deb pigsty 1.0 11.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/c/chkpass/postgresql-16-chkpass_1.0-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 16 postgresql-16-chkpass postgresql-16-chkpass_1.0-1PIGSTY~noble_amd64.deb pigsty 1.0 11.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/c/chkpass/postgresql-16-chkpass_1.0-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 16 postgresql-16-chkpass postgresql-16-chkpass_1.0-1PIGSTY~noble_arm64.deb pigsty 1.0 11.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/c/chkpass/postgresql-16-chkpass_1.0-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 16 postgresql-16-chkpass postgresql-16-chkpass_1.0-1PIGSTY~resolute_amd64.deb pigsty 1.0 11.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/c/chkpass/postgresql-16-chkpass_1.0-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 16 postgresql-16-chkpass postgresql-16-chkpass_1.0-1PIGSTY~resolute_arm64.deb pigsty 1.0 11.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/c/chkpass/postgresql-16-chkpass_1.0-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 15 chkpass_15 chkpass_15-1.0-1PIGSTY.el8.x86_64.rpm pigsty 1.0 13.4KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/chkpass_15-1.0-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 15 chkpass_15 chkpass_15-1.0-1PIGSTY.el8.aarch64.rpm pigsty 1.0 13.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/chkpass_15-1.0-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 15 chkpass_15 chkpass_15-1.0-1PIGSTY.el9.x86_64.rpm pigsty 1.0 13.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/chkpass_15-1.0-1PIGSTY.el9.x86_64.rpm
@@ -122,6 +128,8 @@ weight: 3920
 @ u22.aarch64 15 postgresql-15-chkpass postgresql-15-chkpass_1.0-1PIGSTY~jammy_arm64.deb pigsty 1.0 11.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/c/chkpass/postgresql-15-chkpass_1.0-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 15 postgresql-15-chkpass postgresql-15-chkpass_1.0-1PIGSTY~noble_amd64.deb pigsty 1.0 11.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/c/chkpass/postgresql-15-chkpass_1.0-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 15 postgresql-15-chkpass postgresql-15-chkpass_1.0-1PIGSTY~noble_arm64.deb pigsty 1.0 11.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/c/chkpass/postgresql-15-chkpass_1.0-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 15 postgresql-15-chkpass postgresql-15-chkpass_1.0-1PIGSTY~resolute_amd64.deb pigsty 1.0 11.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/c/chkpass/postgresql-15-chkpass_1.0-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 15 postgresql-15-chkpass postgresql-15-chkpass_1.0-1PIGSTY~resolute_arm64.deb pigsty 1.0 11.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/c/chkpass/postgresql-15-chkpass_1.0-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 14 chkpass_14 chkpass_14-1.0-1PIGSTY.el8.x86_64.rpm pigsty 1.0 13.4KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/chkpass_14-1.0-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 14 chkpass_14 chkpass_14-1.0-1PIGSTY.el8.aarch64.rpm pigsty 1.0 13.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/chkpass_14-1.0-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 14 chkpass_14 chkpass_14-1.0-1PIGSTY.el9.x86_64.rpm pigsty 1.0 13.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/chkpass_14-1.0-1PIGSTY.el9.x86_64.rpm
@@ -136,6 +144,8 @@ weight: 3920
 @ u22.aarch64 14 postgresql-14-chkpass postgresql-14-chkpass_1.0-1PIGSTY~jammy_arm64.deb pigsty 1.0 11.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/c/chkpass/postgresql-14-chkpass_1.0-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 14 postgresql-14-chkpass postgresql-14-chkpass_1.0-1PIGSTY~noble_amd64.deb pigsty 1.0 11.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/c/chkpass/postgresql-14-chkpass_1.0-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 14 postgresql-14-chkpass postgresql-14-chkpass_1.0-1PIGSTY~noble_arm64.deb pigsty 1.0 11.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/c/chkpass/postgresql-14-chkpass_1.0-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 14 postgresql-14-chkpass postgresql-14-chkpass_1.0-1PIGSTY~resolute_amd64.deb pigsty 1.0 11.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/c/chkpass/postgresql-14-chkpass_1.0-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 14 postgresql-14-chkpass postgresql-14-chkpass_1.0-1PIGSTY~resolute_arm64.deb pigsty 1.0 11.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/c/chkpass/postgresql-14-chkpass_1.0-1PIGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建

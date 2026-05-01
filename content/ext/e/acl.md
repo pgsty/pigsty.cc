@@ -2,7 +2,7 @@
 title: "acl"
 linkTitle: "acl"
 description: "ACL数据类型"
-weight: 3860
+weight: 3810
 ---
 
 <div class="ext-cards">
@@ -30,7 +30,7 @@ weight: 3860
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
 |:-----:|:-------------------------------------------------------------------------|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|:----------|
-| 3860  | [**`acl`**](/ext/e/acl) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
+| 3810  | [**`acl`**](/ext/e/acl) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
 {.ext-table}
 
 | **相关扩展** | [`prefix`](/ext/e/prefix) [`semver`](/ext/e/semver) [`unit`](/ext/e/unit) [`pgpdf`](/ext/e/pgpdf) [`pglite_fusion`](/ext/e/pglite_fusion) [`md5hash`](/ext/e/md5hash) [`asn1oid`](/ext/e/asn1oid) [`roaringbitmap`](/ext/e/roaringbitmap) |
@@ -67,8 +67,8 @@ weight: 3860
 | u22.aarch64 | AVAIL PIGSTY 1.0.4 1 | AVAIL PIGSTY 1.0.4 1 | AVAIL PIGSTY 1.0.4 1 | AVAIL PIGSTY 1.0.4 1 | AVAIL PIGSTY 1.0.4 1 |
 | u24.x86_64 | AVAIL PIGSTY 1.0.4 1 | AVAIL PIGSTY 1.0.4 1 | AVAIL PIGSTY 1.0.4 1 | AVAIL PIGSTY 1.0.4 1 | AVAIL PIGSTY 1.0.4 1 |
 | u24.aarch64 | AVAIL PIGSTY 1.0.4 1 | AVAIL PIGSTY 1.0.4 1 | AVAIL PIGSTY 1.0.4 1 | AVAIL PIGSTY 1.0.4 1 | AVAIL PIGSTY 1.0.4 1 |
-| u26.x86_64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| u26.aarch64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| u26.x86_64 | AVAIL PIGSTY 1.0.4 1 | AVAIL PIGSTY 1.0.4 1 | AVAIL PIGSTY 1.0.4 1 | AVAIL PIGSTY 1.0.4 1 | AVAIL PIGSTY 1.0.4 1 |
+| u26.aarch64 | AVAIL PIGSTY 1.0.4 1 | AVAIL PIGSTY 1.0.4 1 | AVAIL PIGSTY 1.0.4 1 | AVAIL PIGSTY 1.0.4 1 | AVAIL PIGSTY 1.0.4 1 |
 @ el8.x86_64 18 acl_18 acl_18-1.0.4-1PIGSTY.el8.x86_64.rpm pigsty 1.0.4 28.4KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/acl_18-1.0.4-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 18 acl_18 acl_18-1.0.4-1PIGSTY.el8.aarch64.rpm pigsty 1.0.4 27.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/acl_18-1.0.4-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 18 acl_18 acl_18-1.0.4-1PIGSTY.el9.x86_64.rpm pigsty 1.0.4 27.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/acl_18-1.0.4-1PIGSTY.el9.x86_64.rpm
@@ -83,6 +83,8 @@ weight: 3860
 @ u22.aarch64 18 postgresql-18-acl postgresql-18-acl_1.0.4-1PIGSTY~jammy_arm64.deb pigsty 1.0.4 47.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/a/acl/postgresql-18-acl_1.0.4-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 18 postgresql-18-acl postgresql-18-acl_1.0.4-1PIGSTY~noble_amd64.deb pigsty 1.0.4 47.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/a/acl/postgresql-18-acl_1.0.4-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 18 postgresql-18-acl postgresql-18-acl_1.0.4-1PIGSTY~noble_arm64.deb pigsty 1.0.4 46.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/a/acl/postgresql-18-acl_1.0.4-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 18 postgresql-18-acl postgresql-18-acl_1.0.4-1PIGSTY~resolute_amd64.deb pigsty 1.0.4 46.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/a/acl/postgresql-18-acl_1.0.4-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 18 postgresql-18-acl postgresql-18-acl_1.0.4-1PIGSTY~resolute_arm64.deb pigsty 1.0.4 45.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/a/acl/postgresql-18-acl_1.0.4-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 17 acl_17 acl_17-1.0.4-1PIGSTY.el8.x86_64.rpm pigsty 1.0.4 28.4KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/acl_17-1.0.4-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 17 acl_17 acl_17-1.0.4-1PIGSTY.el8.aarch64.rpm pigsty 1.0.4 27.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/acl_17-1.0.4-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 17 acl_17 acl_17-1.0.4-1PIGSTY.el9.x86_64.rpm pigsty 1.0.4 27.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/acl_17-1.0.4-1PIGSTY.el9.x86_64.rpm
@@ -97,6 +99,8 @@ weight: 3860
 @ u22.aarch64 17 postgresql-17-acl postgresql-17-acl_1.0.4-1PIGSTY~jammy_arm64.deb pigsty 1.0.4 50.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/a/acl/postgresql-17-acl_1.0.4-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 17 postgresql-17-acl postgresql-17-acl_1.0.4-1PIGSTY~noble_amd64.deb pigsty 1.0.4 47.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/a/acl/postgresql-17-acl_1.0.4-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 17 postgresql-17-acl postgresql-17-acl_1.0.4-1PIGSTY~noble_arm64.deb pigsty 1.0.4 46.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/a/acl/postgresql-17-acl_1.0.4-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 17 postgresql-17-acl postgresql-17-acl_1.0.4-1PIGSTY~resolute_amd64.deb pigsty 1.0.4 46.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/a/acl/postgresql-17-acl_1.0.4-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 17 postgresql-17-acl postgresql-17-acl_1.0.4-1PIGSTY~resolute_arm64.deb pigsty 1.0.4 45.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/a/acl/postgresql-17-acl_1.0.4-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 16 acl_16 acl_16-1.0.4-1PIGSTY.el8.x86_64.rpm pigsty 1.0.4 28.4KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/acl_16-1.0.4-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 16 acl_16 acl_16-1.0.4-1PIGSTY.el8.aarch64.rpm pigsty 1.0.4 27.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/acl_16-1.0.4-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 16 acl_16 acl_16-1.0.4-1PIGSTY.el9.x86_64.rpm pigsty 1.0.4 27.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/acl_16-1.0.4-1PIGSTY.el9.x86_64.rpm
@@ -111,6 +115,8 @@ weight: 3860
 @ u22.aarch64 16 postgresql-16-acl postgresql-16-acl_1.0.4-1PIGSTY~jammy_arm64.deb pigsty 1.0.4 50.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/a/acl/postgresql-16-acl_1.0.4-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 16 postgresql-16-acl postgresql-16-acl_1.0.4-1PIGSTY~noble_amd64.deb pigsty 1.0.4 47.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/a/acl/postgresql-16-acl_1.0.4-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 16 postgresql-16-acl postgresql-16-acl_1.0.4-1PIGSTY~noble_arm64.deb pigsty 1.0.4 46.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/a/acl/postgresql-16-acl_1.0.4-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 16 postgresql-16-acl postgresql-16-acl_1.0.4-1PIGSTY~resolute_amd64.deb pigsty 1.0.4 46.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/a/acl/postgresql-16-acl_1.0.4-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 16 postgresql-16-acl postgresql-16-acl_1.0.4-1PIGSTY~resolute_arm64.deb pigsty 1.0.4 45.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/a/acl/postgresql-16-acl_1.0.4-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 15 acl_15 acl_15-1.0.4-1PIGSTY.el8.x86_64.rpm pigsty 1.0.4 28.4KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/acl_15-1.0.4-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 15 acl_15 acl_15-1.0.4-1PIGSTY.el8.aarch64.rpm pigsty 1.0.4 27.8KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/acl_15-1.0.4-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 15 acl_15 acl_15-1.0.4-1PIGSTY.el9.x86_64.rpm pigsty 1.0.4 27.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/acl_15-1.0.4-1PIGSTY.el9.x86_64.rpm
@@ -125,6 +131,8 @@ weight: 3860
 @ u22.aarch64 15 postgresql-15-acl postgresql-15-acl_1.0.4-1PIGSTY~jammy_arm64.deb pigsty 1.0.4 49.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/a/acl/postgresql-15-acl_1.0.4-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 15 postgresql-15-acl postgresql-15-acl_1.0.4-1PIGSTY~noble_amd64.deb pigsty 1.0.4 46.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/a/acl/postgresql-15-acl_1.0.4-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 15 postgresql-15-acl postgresql-15-acl_1.0.4-1PIGSTY~noble_arm64.deb pigsty 1.0.4 46.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/a/acl/postgresql-15-acl_1.0.4-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 15 postgresql-15-acl postgresql-15-acl_1.0.4-1PIGSTY~resolute_amd64.deb pigsty 1.0.4 46.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/a/acl/postgresql-15-acl_1.0.4-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 15 postgresql-15-acl postgresql-15-acl_1.0.4-1PIGSTY~resolute_arm64.deb pigsty 1.0.4 45.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/a/acl/postgresql-15-acl_1.0.4-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 14 acl_14 acl_14-1.0.4-1PIGSTY.el8.x86_64.rpm pigsty 1.0.4 28.4KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/acl_14-1.0.4-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 14 acl_14 acl_14-1.0.4-1PIGSTY.el8.aarch64.rpm pigsty 1.0.4 27.8KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/acl_14-1.0.4-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 14 acl_14 acl_14-1.0.4-1PIGSTY.el9.x86_64.rpm pigsty 1.0.4 27.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/acl_14-1.0.4-1PIGSTY.el9.x86_64.rpm
@@ -139,6 +147,8 @@ weight: 3860
 @ u22.aarch64 14 postgresql-14-acl postgresql-14-acl_1.0.4-1PIGSTY~jammy_arm64.deb pigsty 1.0.4 49.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/a/acl/postgresql-14-acl_1.0.4-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 14 postgresql-14-acl postgresql-14-acl_1.0.4-1PIGSTY~noble_amd64.deb pigsty 1.0.4 46.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/a/acl/postgresql-14-acl_1.0.4-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 14 postgresql-14-acl postgresql-14-acl_1.0.4-1PIGSTY~noble_arm64.deb pigsty 1.0.4 46.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/a/acl/postgresql-14-acl_1.0.4-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 14 postgresql-14-acl postgresql-14-acl_1.0.4-1PIGSTY~resolute_amd64.deb pigsty 1.0.4 46.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/a/acl/postgresql-14-acl_1.0.4-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 14 postgresql-14-acl postgresql-14-acl_1.0.4-1PIGSTY~resolute_arm64.deb pigsty 1.0.4 45.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/a/acl/postgresql-14-acl_1.0.4-1PIGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建

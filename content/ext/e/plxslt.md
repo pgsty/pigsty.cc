@@ -64,8 +64,8 @@ weight: 3110
 | u22.aarch64 | AVAIL PIGSTY 0.20140221 1 | AVAIL PIGSTY 0.20140221 1 | AVAIL PIGSTY 0.20140221 1 | AVAIL PIGSTY 0.20140221 1 | AVAIL PIGSTY 0.20140221 1 |
 | u24.x86_64 | AVAIL PIGSTY 0.20140221 1 | AVAIL PIGSTY 0.20140221 1 | AVAIL PIGSTY 0.20140221 1 | AVAIL PIGSTY 0.20140221 1 | AVAIL PIGSTY 0.20140221 1 |
 | u24.aarch64 | AVAIL PIGSTY 0.20140221 1 | AVAIL PIGSTY 0.20140221 1 | AVAIL PIGSTY 0.20140221 1 | AVAIL PIGSTY 0.20140221 1 | AVAIL PIGSTY 0.20140221 1 |
-| u26.x86_64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| u26.aarch64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| u26.x86_64 | AVAIL PIGSTY 0.20140221 1 | AVAIL PIGSTY 0.20140221 1 | AVAIL PIGSTY 0.20140221 1 | AVAIL PIGSTY 0.20140221 1 | AVAIL PIGSTY 0.20140221 1 |
+| u26.aarch64 | AVAIL PIGSTY 0.20140221 1 | AVAIL PIGSTY 0.20140221 1 | AVAIL PIGSTY 0.20140221 1 | AVAIL PIGSTY 0.20140221 1 | AVAIL PIGSTY 0.20140221 1 |
 @ el8.x86_64 18 plxslt_18 plxslt_18-0.20140221-1PGDG.rhel8.x86_64.rpm pgdg 0.20140221 14.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/plxslt_18-0.20140221-1PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 18 plxslt_18 plxslt_18-0.20140221-1PGDG.rhel8.aarch64.rpm pgdg 0.20140221 14.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/plxslt_18-0.20140221-1PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 18 plxslt_18 plxslt_18-0.20140221-1PGDG.rhel9.x86_64.rpm pgdg 0.20140221 14.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/plxslt_18-0.20140221-1PGDG.rhel9.x86_64.rpm
@@ -80,6 +80,8 @@ weight: 3110
 @ u22.aarch64 18 postgresql-18-plxslt postgresql-18-plxslt_0.20140221-1PIGSTY~jammy_arm64.deb pigsty 0.20140221 13.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/plxslt/postgresql-18-plxslt_0.20140221-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 18 postgresql-18-plxslt postgresql-18-plxslt_0.20140221-1PIGSTY~noble_amd64.deb pigsty 0.20140221 13.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/plxslt/postgresql-18-plxslt_0.20140221-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 18 postgresql-18-plxslt postgresql-18-plxslt_0.20140221-1PIGSTY~noble_arm64.deb pigsty 0.20140221 13.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/plxslt/postgresql-18-plxslt_0.20140221-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 18 postgresql-18-plxslt postgresql-18-plxslt_0.20140221-1PIGSTY~resolute_amd64.deb pigsty 0.20140221 14.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/plxslt/postgresql-18-plxslt_0.20140221-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 18 postgresql-18-plxslt postgresql-18-plxslt_0.20140221-1PIGSTY~resolute_arm64.deb pigsty 0.20140221 14.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/plxslt/postgresql-18-plxslt_0.20140221-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 17 plxslt_17 plxslt_17-0.20140221-1PGDG.rhel8.x86_64.rpm pgdg 0.20140221 14.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/plxslt_17-0.20140221-1PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 17 plxslt_17 plxslt_17-0.20140221-1PGDG.rhel8.aarch64.rpm pgdg 0.20140221 14.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/plxslt_17-0.20140221-1PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 17 plxslt_17 plxslt_17-0.20140221-1PGDG.rhel9.x86_64.rpm pgdg 0.20140221 14.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/plxslt_17-0.20140221-1PGDG.rhel9.x86_64.rpm
@@ -94,6 +96,8 @@ weight: 3110
 @ u22.aarch64 17 postgresql-17-plxslt postgresql-17-plxslt_0.20140221-1PIGSTY~jammy_arm64.deb pigsty 0.20140221 14.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/plxslt/postgresql-17-plxslt_0.20140221-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 17 postgresql-17-plxslt postgresql-17-plxslt_0.20140221-1PIGSTY~noble_amd64.deb pigsty 0.20140221 13.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/plxslt/postgresql-17-plxslt_0.20140221-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 17 postgresql-17-plxslt postgresql-17-plxslt_0.20140221-1PIGSTY~noble_arm64.deb pigsty 0.20140221 13.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/plxslt/postgresql-17-plxslt_0.20140221-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 17 postgresql-17-plxslt postgresql-17-plxslt_0.20140221-1PIGSTY~resolute_amd64.deb pigsty 0.20140221 14.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/plxslt/postgresql-17-plxslt_0.20140221-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 17 postgresql-17-plxslt postgresql-17-plxslt_0.20140221-1PIGSTY~resolute_arm64.deb pigsty 0.20140221 14.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/plxslt/postgresql-17-plxslt_0.20140221-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 16 plxslt_16 plxslt_16-0.20140221-1PGDG.rhel8.x86_64.rpm pgdg 0.20140221 14.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/plxslt_16-0.20140221-1PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 16 plxslt_16 plxslt_16-0.20140221-1PGDG.rhel8.aarch64.rpm pgdg 0.20140221 14.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/plxslt_16-0.20140221-1PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 16 plxslt_16 plxslt_16-0.20140221-1PGDG.rhel9.x86_64.rpm pgdg 0.20140221 14.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/plxslt_16-0.20140221-1PGDG.rhel9.x86_64.rpm
@@ -108,6 +112,8 @@ weight: 3110
 @ u22.aarch64 16 postgresql-16-plxslt postgresql-16-plxslt_0.20140221-1PIGSTY~jammy_arm64.deb pigsty 0.20140221 14.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/plxslt/postgresql-16-plxslt_0.20140221-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 16 postgresql-16-plxslt postgresql-16-plxslt_0.20140221-1PIGSTY~noble_amd64.deb pigsty 0.20140221 13.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/plxslt/postgresql-16-plxslt_0.20140221-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 16 postgresql-16-plxslt postgresql-16-plxslt_0.20140221-1PIGSTY~noble_arm64.deb pigsty 0.20140221 13.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/plxslt/postgresql-16-plxslt_0.20140221-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 16 postgresql-16-plxslt postgresql-16-plxslt_0.20140221-1PIGSTY~resolute_amd64.deb pigsty 0.20140221 14.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/plxslt/postgresql-16-plxslt_0.20140221-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 16 postgresql-16-plxslt postgresql-16-plxslt_0.20140221-1PIGSTY~resolute_arm64.deb pigsty 0.20140221 14.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/plxslt/postgresql-16-plxslt_0.20140221-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 15 plxslt_15 plxslt_15-0.20140221-1PGDG.rhel8.x86_64.rpm pgdg 0.20140221 14.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/plxslt_15-0.20140221-1PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 15 plxslt_15 plxslt_15-0.20140221-1PGDG.rhel8.aarch64.rpm pgdg 0.20140221 14.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/plxslt_15-0.20140221-1PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 15 plxslt_15 plxslt_15-0.20140221-1PGDG.rhel9.x86_64.rpm pgdg 0.20140221 14.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/plxslt_15-0.20140221-1PGDG.rhel9.x86_64.rpm
@@ -122,6 +128,8 @@ weight: 3110
 @ u22.aarch64 15 postgresql-15-plxslt postgresql-15-plxslt_0.20140221-1PIGSTY~jammy_arm64.deb pigsty 0.20140221 14.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/plxslt/postgresql-15-plxslt_0.20140221-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 15 postgresql-15-plxslt postgresql-15-plxslt_0.20140221-1PIGSTY~noble_amd64.deb pigsty 0.20140221 13.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/plxslt/postgresql-15-plxslt_0.20140221-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 15 postgresql-15-plxslt postgresql-15-plxslt_0.20140221-1PIGSTY~noble_arm64.deb pigsty 0.20140221 13.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/plxslt/postgresql-15-plxslt_0.20140221-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 15 postgresql-15-plxslt postgresql-15-plxslt_0.20140221-1PIGSTY~resolute_amd64.deb pigsty 0.20140221 14.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/plxslt/postgresql-15-plxslt_0.20140221-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 15 postgresql-15-plxslt postgresql-15-plxslt_0.20140221-1PIGSTY~resolute_arm64.deb pigsty 0.20140221 14.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/plxslt/postgresql-15-plxslt_0.20140221-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 14 plxslt_14 plxslt_14-0.20140221-1PGDG.rhel8.x86_64.rpm pgdg 0.20140221 14.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/plxslt_14-0.20140221-1PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 14 plxslt_14 plxslt_14-0.20140221-1PGDG.rhel8.aarch64.rpm pgdg 0.20140221 14.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/plxslt_14-0.20140221-1PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 14 plxslt_14 plxslt_14-0.20140221-1PGDG.rhel9.x86_64.rpm pgdg 0.20140221 14.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/plxslt_14-0.20140221-1PGDG.rhel9.x86_64.rpm
@@ -136,6 +144,8 @@ weight: 3110
 @ u22.aarch64 14 postgresql-14-plxslt postgresql-14-plxslt_0.20140221-1PIGSTY~jammy_arm64.deb pigsty 0.20140221 14.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/plxslt/postgresql-14-plxslt_0.20140221-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 14 postgresql-14-plxslt postgresql-14-plxslt_0.20140221-1PIGSTY~noble_amd64.deb pigsty 0.20140221 13.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/plxslt/postgresql-14-plxslt_0.20140221-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 14 postgresql-14-plxslt postgresql-14-plxslt_0.20140221-1PIGSTY~noble_arm64.deb pigsty 0.20140221 13.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/plxslt/postgresql-14-plxslt_0.20140221-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 14 postgresql-14-plxslt postgresql-14-plxslt_0.20140221-1PIGSTY~resolute_amd64.deb pigsty 0.20140221 14.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/plxslt/postgresql-14-plxslt_0.20140221-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 14 postgresql-14-plxslt postgresql-14-plxslt_0.20140221-1PIGSTY~resolute_arm64.deb pigsty 0.20140221 14.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/plxslt/postgresql-14-plxslt_0.20140221-1PIGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建

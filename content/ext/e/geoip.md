@@ -67,8 +67,8 @@ weight: 1560
 | u22.aarch64 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 |
 | u24.x86_64 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 |
 | u24.aarch64 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 |
-| u26.x86_64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| u26.aarch64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| u26.x86_64 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 |
+| u26.aarch64 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 |
 @ el8.x86_64 18 geoip_18 geoip_18-0.3.0-1PIGSTY.el8.x86_64.rpm pigsty 0.3.0 11.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/geoip_18-0.3.0-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 18 geoip_18 geoip_18-0.3.0-1PIGSTY.el8.aarch64.rpm pigsty 0.3.0 11.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/geoip_18-0.3.0-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 18 geoip_18 geoip_18-0.3.0-1PIGSTY.el9.x86_64.rpm pigsty 0.3.0 11.7KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/geoip_18-0.3.0-1PIGSTY.el9.x86_64.rpm
@@ -83,6 +83,8 @@ weight: 1560
 @ u22.aarch64 18 postgresql-18-geoip postgresql-18-geoip_0.3.0-1PIGSTY~jammy_arm64.deb pigsty 0.3.0 6.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/g/geoip/postgresql-18-geoip_0.3.0-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 18 postgresql-18-geoip postgresql-18-geoip_0.3.0-1PIGSTY~noble_amd64.deb pigsty 0.3.0 6.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/g/geoip/postgresql-18-geoip_0.3.0-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 18 postgresql-18-geoip postgresql-18-geoip_0.3.0-1PIGSTY~noble_arm64.deb pigsty 0.3.0 6.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/g/geoip/postgresql-18-geoip_0.3.0-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 18 postgresql-18-geoip postgresql-18-geoip_0.3.0-1PIGSTY~resolute_amd64.deb pigsty 0.3.0 6.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/g/geoip/postgresql-18-geoip_0.3.0-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 18 postgresql-18-geoip postgresql-18-geoip_0.3.0-1PIGSTY~resolute_arm64.deb pigsty 0.3.0 6.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/g/geoip/postgresql-18-geoip_0.3.0-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 17 geoip_17 geoip_17-0.3.0-1PIGSTY.el8.x86_64.rpm pigsty 0.3.0 11.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/geoip_17-0.3.0-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 17 geoip_17 geoip_17-0.3.0-1PIGSTY.el8.aarch64.rpm pigsty 0.3.0 11.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/geoip_17-0.3.0-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 17 geoip_17 geoip_17-0.3.0-1PIGSTY.el9.x86_64.rpm pigsty 0.3.0 11.7KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/geoip_17-0.3.0-1PIGSTY.el9.x86_64.rpm
@@ -97,6 +99,8 @@ weight: 1560
 @ u22.aarch64 17 postgresql-17-geoip postgresql-17-geoip_0.3.0-1PIGSTY~jammy_arm64.deb pigsty 0.3.0 6.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/g/geoip/postgresql-17-geoip_0.3.0-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 17 postgresql-17-geoip postgresql-17-geoip_0.3.0-1PIGSTY~noble_amd64.deb pigsty 0.3.0 6.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/g/geoip/postgresql-17-geoip_0.3.0-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 17 postgresql-17-geoip postgresql-17-geoip_0.3.0-1PIGSTY~noble_arm64.deb pigsty 0.3.0 6.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/g/geoip/postgresql-17-geoip_0.3.0-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 17 postgresql-17-geoip postgresql-17-geoip_0.3.0-1PIGSTY~resolute_amd64.deb pigsty 0.3.0 6.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/g/geoip/postgresql-17-geoip_0.3.0-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 17 postgresql-17-geoip postgresql-17-geoip_0.3.0-1PIGSTY~resolute_arm64.deb pigsty 0.3.0 6.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/g/geoip/postgresql-17-geoip_0.3.0-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 16 geoip_16 geoip_16-0.3.0-1PIGSTY.el8.x86_64.rpm pigsty 0.3.0 11.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/geoip_16-0.3.0-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 16 geoip_16 geoip_16-0.3.0-1PIGSTY.el8.aarch64.rpm pigsty 0.3.0 11.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/geoip_16-0.3.0-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 16 geoip_16 geoip_16-0.3.0-1PIGSTY.el9.x86_64.rpm pigsty 0.3.0 11.7KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/geoip_16-0.3.0-1PIGSTY.el9.x86_64.rpm
@@ -111,6 +115,8 @@ weight: 1560
 @ u22.aarch64 16 postgresql-16-geoip postgresql-16-geoip_0.3.0-1PIGSTY~jammy_arm64.deb pigsty 0.3.0 6.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/g/geoip/postgresql-16-geoip_0.3.0-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 16 postgresql-16-geoip postgresql-16-geoip_0.3.0-1PIGSTY~noble_amd64.deb pigsty 0.3.0 6.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/g/geoip/postgresql-16-geoip_0.3.0-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 16 postgresql-16-geoip postgresql-16-geoip_0.3.0-1PIGSTY~noble_arm64.deb pigsty 0.3.0 6.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/g/geoip/postgresql-16-geoip_0.3.0-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 16 postgresql-16-geoip postgresql-16-geoip_0.3.0-1PIGSTY~resolute_amd64.deb pigsty 0.3.0 6.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/g/geoip/postgresql-16-geoip_0.3.0-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 16 postgresql-16-geoip postgresql-16-geoip_0.3.0-1PIGSTY~resolute_arm64.deb pigsty 0.3.0 6.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/g/geoip/postgresql-16-geoip_0.3.0-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 15 geoip_15 geoip_15-0.3.0-1PIGSTY.el8.x86_64.rpm pigsty 0.3.0 11.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/geoip_15-0.3.0-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 15 geoip_15 geoip_15-0.2.4-3.rhel8.noarch.rpm pgdg 0.2.4 11.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/geoip_15-0.2.4-3.rhel8.noarch.rpm
 @ el8.aarch64 15 geoip_15 geoip_15-0.3.0-1PIGSTY.el8.aarch64.rpm pigsty 0.3.0 11.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/geoip_15-0.3.0-1PIGSTY.el8.aarch64.rpm
@@ -129,6 +135,8 @@ weight: 1560
 @ u22.aarch64 15 postgresql-15-geoip postgresql-15-geoip_0.3.0-1PIGSTY~jammy_arm64.deb pigsty 0.3.0 6.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/g/geoip/postgresql-15-geoip_0.3.0-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 15 postgresql-15-geoip postgresql-15-geoip_0.3.0-1PIGSTY~noble_amd64.deb pigsty 0.3.0 6.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/g/geoip/postgresql-15-geoip_0.3.0-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 15 postgresql-15-geoip postgresql-15-geoip_0.3.0-1PIGSTY~noble_arm64.deb pigsty 0.3.0 6.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/g/geoip/postgresql-15-geoip_0.3.0-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 15 postgresql-15-geoip postgresql-15-geoip_0.3.0-1PIGSTY~resolute_amd64.deb pigsty 0.3.0 6.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/g/geoip/postgresql-15-geoip_0.3.0-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 15 postgresql-15-geoip postgresql-15-geoip_0.3.0-1PIGSTY~resolute_arm64.deb pigsty 0.3.0 6.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/g/geoip/postgresql-15-geoip_0.3.0-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 14 geoip_14 geoip_14-0.3.0-1PIGSTY.el8.x86_64.rpm pigsty 0.3.0 11.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/geoip_14-0.3.0-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 14 geoip_14 geoip_14-0.2.4-3.rhel8.noarch.rpm pgdg 0.2.4 11.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/geoip_14-0.2.4-3.rhel8.noarch.rpm
 @ el8.aarch64 14 geoip_14 geoip_14-0.3.0-1PIGSTY.el8.aarch64.rpm pigsty 0.3.0 11.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/geoip_14-0.3.0-1PIGSTY.el8.aarch64.rpm
@@ -147,6 +155,8 @@ weight: 1560
 @ u22.aarch64 14 postgresql-14-geoip postgresql-14-geoip_0.3.0-1PIGSTY~jammy_arm64.deb pigsty 0.3.0 6.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/g/geoip/postgresql-14-geoip_0.3.0-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 14 postgresql-14-geoip postgresql-14-geoip_0.3.0-1PIGSTY~noble_amd64.deb pigsty 0.3.0 6.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/g/geoip/postgresql-14-geoip_0.3.0-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 14 postgresql-14-geoip postgresql-14-geoip_0.3.0-1PIGSTY~noble_arm64.deb pigsty 0.3.0 6.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/g/geoip/postgresql-14-geoip_0.3.0-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 14 postgresql-14-geoip postgresql-14-geoip_0.3.0-1PIGSTY~resolute_amd64.deb pigsty 0.3.0 6.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/g/geoip/postgresql-14-geoip_0.3.0-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 14 postgresql-14-geoip postgresql-14-geoip_0.3.0-1PIGSTY~resolute_arm64.deb pigsty 0.3.0 6.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/g/geoip/postgresql-14-geoip_0.3.0-1PIGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建

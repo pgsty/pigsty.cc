@@ -64,8 +64,8 @@ weight: 4610
 | u22.aarch64 | AVAIL PIGSTY 1.1.8 1 | AVAIL PIGSTY 1.1.8 1 | AVAIL PIGSTY 1.1.8 1 | AVAIL PIGSTY 1.1.8 1 | AVAIL PIGSTY 1.1.8 1 |
 | u24.x86_64 | AVAIL PIGSTY 1.1.8 1 | AVAIL PIGSTY 1.1.8 1 | AVAIL PIGSTY 1.1.8 1 | AVAIL PIGSTY 1.1.8 1 | AVAIL PIGSTY 1.1.8 1 |
 | u24.aarch64 | AVAIL PIGSTY 1.1.8 1 | AVAIL PIGSTY 1.1.8 1 | AVAIL PIGSTY 1.1.8 1 | AVAIL PIGSTY 1.1.8 1 | AVAIL PIGSTY 1.1.8 1 |
-| u26.x86_64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| u26.aarch64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| u26.x86_64 | AVAIL PIGSTY 1.1.8 1 | AVAIL PIGSTY 1.1.8 1 | AVAIL PIGSTY 1.1.8 1 | AVAIL PIGSTY 1.1.8 1 | AVAIL PIGSTY 1.1.8 1 |
+| u26.aarch64 | AVAIL PIGSTY 1.1.8 1 | AVAIL PIGSTY 1.1.8 1 | AVAIL PIGSTY 1.1.8 1 | AVAIL PIGSTY 1.1.8 1 | AVAIL PIGSTY 1.1.8 1 |
 @ el8.x86_64 18 quantile_18 quantile_18-1.1.8-1PIGSTY.el8.x86_64.rpm pigsty 1.1.8 18.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/quantile_18-1.1.8-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 18 quantile_18 quantile_18-1.1.8-1PIGSTY.el8.aarch64.rpm pigsty 1.1.8 17.8KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/quantile_18-1.1.8-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 18 quantile_18 quantile_18-1.1.8-1PIGSTY.el9.x86_64.rpm pigsty 1.1.8 18.1KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/quantile_18-1.1.8-1PIGSTY.el9.x86_64.rpm
@@ -80,6 +80,8 @@ weight: 4610
 @ u22.aarch64 18 postgresql-18-quantile postgresql-18-quantile_1.1.8-1PIGSTY~jammy_arm64.deb pigsty 1.1.8 21.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/q/quantile/postgresql-18-quantile_1.1.8-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 18 postgresql-18-quantile postgresql-18-quantile_1.1.8-1PIGSTY~noble_amd64.deb pigsty 1.1.8 22.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/q/quantile/postgresql-18-quantile_1.1.8-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 18 postgresql-18-quantile postgresql-18-quantile_1.1.8-1PIGSTY~noble_arm64.deb pigsty 1.1.8 22.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/q/quantile/postgresql-18-quantile_1.1.8-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 18 postgresql-18-quantile postgresql-18-quantile_1.1.8-1PIGSTY~resolute_amd64.deb pigsty 1.1.8 22.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/q/quantile/postgresql-18-quantile_1.1.8-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 18 postgresql-18-quantile postgresql-18-quantile_1.1.8-1PIGSTY~resolute_arm64.deb pigsty 1.1.8 22.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/q/quantile/postgresql-18-quantile_1.1.8-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 17 quantile_17 quantile_17-1.1.8-1PIGSTY.el8.x86_64.rpm pigsty 1.1.8 18.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/quantile_17-1.1.8-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 17 quantile_17 quantile_17-1.1.8-1PIGSTY.el8.aarch64.rpm pigsty 1.1.8 17.8KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/quantile_17-1.1.8-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 17 quantile_17 quantile_17-1.1.8-1PIGSTY.el9.x86_64.rpm pigsty 1.1.8 18.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/quantile_17-1.1.8-1PIGSTY.el9.x86_64.rpm
@@ -94,6 +96,8 @@ weight: 4610
 @ u22.aarch64 17 postgresql-17-quantile postgresql-17-quantile_1.1.8-1PIGSTY~jammy_arm64.deb pigsty 1.1.8 23.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/q/quantile/postgresql-17-quantile_1.1.8-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 17 postgresql-17-quantile postgresql-17-quantile_1.1.8-1PIGSTY~noble_amd64.deb pigsty 1.1.8 22.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/q/quantile/postgresql-17-quantile_1.1.8-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 17 postgresql-17-quantile postgresql-17-quantile_1.1.8-1PIGSTY~noble_arm64.deb pigsty 1.1.8 22.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/q/quantile/postgresql-17-quantile_1.1.8-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 17 postgresql-17-quantile postgresql-17-quantile_1.1.8-1PIGSTY~resolute_amd64.deb pigsty 1.1.8 22.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/q/quantile/postgresql-17-quantile_1.1.8-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 17 postgresql-17-quantile postgresql-17-quantile_1.1.8-1PIGSTY~resolute_arm64.deb pigsty 1.1.8 22.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/q/quantile/postgresql-17-quantile_1.1.8-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 16 quantile_16 quantile_16-1.1.8-1PIGSTY.el8.x86_64.rpm pigsty 1.1.8 18.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/quantile_16-1.1.8-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 16 quantile_16 quantile_16-1.1.8-1PIGSTY.el8.aarch64.rpm pigsty 1.1.8 17.8KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/quantile_16-1.1.8-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 16 quantile_16 quantile_16-1.1.8-1PIGSTY.el9.x86_64.rpm pigsty 1.1.8 18.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/quantile_16-1.1.8-1PIGSTY.el9.x86_64.rpm
@@ -108,6 +112,8 @@ weight: 4610
 @ u22.aarch64 16 postgresql-16-quantile postgresql-16-quantile_1.1.8-1PIGSTY~jammy_arm64.deb pigsty 1.1.8 23.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/q/quantile/postgresql-16-quantile_1.1.8-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 16 postgresql-16-quantile postgresql-16-quantile_1.1.8-1PIGSTY~noble_amd64.deb pigsty 1.1.8 22.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/q/quantile/postgresql-16-quantile_1.1.8-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 16 postgresql-16-quantile postgresql-16-quantile_1.1.8-1PIGSTY~noble_arm64.deb pigsty 1.1.8 21.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/q/quantile/postgresql-16-quantile_1.1.8-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 16 postgresql-16-quantile postgresql-16-quantile_1.1.8-1PIGSTY~resolute_amd64.deb pigsty 1.1.8 22.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/q/quantile/postgresql-16-quantile_1.1.8-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 16 postgresql-16-quantile postgresql-16-quantile_1.1.8-1PIGSTY~resolute_arm64.deb pigsty 1.1.8 22.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/q/quantile/postgresql-16-quantile_1.1.8-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 15 quantile_15 quantile_15-1.1.8-1PIGSTY.el8.x86_64.rpm pigsty 1.1.8 18.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/quantile_15-1.1.8-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 15 quantile_15 quantile_15-1.1.8-1PIGSTY.el8.aarch64.rpm pigsty 1.1.8 17.8KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/quantile_15-1.1.8-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 15 quantile_15 quantile_15-1.1.8-1PIGSTY.el9.x86_64.rpm pigsty 1.1.8 18.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/quantile_15-1.1.8-1PIGSTY.el9.x86_64.rpm
@@ -122,6 +128,8 @@ weight: 4610
 @ u22.aarch64 15 postgresql-15-quantile postgresql-15-quantile_1.1.8-1PIGSTY~jammy_arm64.deb pigsty 1.1.8 22.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/q/quantile/postgresql-15-quantile_1.1.8-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 15 postgresql-15-quantile postgresql-15-quantile_1.1.8-1PIGSTY~noble_amd64.deb pigsty 1.1.8 22.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/q/quantile/postgresql-15-quantile_1.1.8-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 15 postgresql-15-quantile postgresql-15-quantile_1.1.8-1PIGSTY~noble_arm64.deb pigsty 1.1.8 21.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/q/quantile/postgresql-15-quantile_1.1.8-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 15 postgresql-15-quantile postgresql-15-quantile_1.1.8-1PIGSTY~resolute_amd64.deb pigsty 1.1.8 22.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/q/quantile/postgresql-15-quantile_1.1.8-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 15 postgresql-15-quantile postgresql-15-quantile_1.1.8-1PIGSTY~resolute_arm64.deb pigsty 1.1.8 22.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/q/quantile/postgresql-15-quantile_1.1.8-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 14 quantile_14 quantile_14-1.1.8-1PIGSTY.el8.x86_64.rpm pigsty 1.1.8 18.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/quantile_14-1.1.8-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 14 quantile_14 quantile_14-1.1.8-1PIGSTY.el8.aarch64.rpm pigsty 1.1.8 17.8KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/quantile_14-1.1.8-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 14 quantile_14 quantile_14-1.1.8-1PIGSTY.el9.x86_64.rpm pigsty 1.1.8 18.1KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/quantile_14-1.1.8-1PIGSTY.el9.x86_64.rpm
@@ -136,6 +144,8 @@ weight: 4610
 @ u22.aarch64 14 postgresql-14-quantile postgresql-14-quantile_1.1.8-1PIGSTY~jammy_arm64.deb pigsty 1.1.8 22.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/q/quantile/postgresql-14-quantile_1.1.8-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 14 postgresql-14-quantile postgresql-14-quantile_1.1.8-1PIGSTY~noble_amd64.deb pigsty 1.1.8 22.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/q/quantile/postgresql-14-quantile_1.1.8-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 14 postgresql-14-quantile postgresql-14-quantile_1.1.8-1PIGSTY~noble_arm64.deb pigsty 1.1.8 22.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/q/quantile/postgresql-14-quantile_1.1.8-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 14 postgresql-14-quantile postgresql-14-quantile_1.1.8-1PIGSTY~resolute_amd64.deb pigsty 1.1.8 22.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/q/quantile/postgresql-14-quantile_1.1.8-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 14 postgresql-14-quantile postgresql-14-quantile_1.1.8-1PIGSTY~resolute_arm64.deb pigsty 1.1.8 22.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/q/quantile/postgresql-14-quantile_1.1.8-1PIGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建

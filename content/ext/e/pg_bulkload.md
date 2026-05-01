@@ -67,8 +67,8 @@ weight: 9830
 | u22.aarch64 | AVAIL PIGSTY 3.1.23 1 | AVAIL PIGSTY 3.1.23 1 | AVAIL PIGSTY 3.1.23 1 | AVAIL PIGSTY 3.1.23 1 | AVAIL PIGSTY 3.1.23 1 |
 | u24.x86_64 | AVAIL PIGSTY 3.1.23 1 | AVAIL PIGSTY 3.1.23 1 | AVAIL PIGSTY 3.1.23 1 | AVAIL PIGSTY 3.1.23 1 | AVAIL PIGSTY 3.1.23 1 |
 | u24.aarch64 | AVAIL PIGSTY 3.1.23 1 | AVAIL PIGSTY 3.1.23 1 | AVAIL PIGSTY 3.1.23 1 | AVAIL PIGSTY 3.1.23 1 | AVAIL PIGSTY 3.1.23 1 |
-| u26.x86_64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| u26.aarch64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| u26.x86_64 | AVAIL PIGSTY 3.1.23 1 | AVAIL PIGSTY 3.1.23 1 | AVAIL PIGSTY 3.1.23 1 | AVAIL PIGSTY 3.1.23 1 | AVAIL PIGSTY 3.1.23 1 |
+| u26.aarch64 | AVAIL PIGSTY 3.1.23 1 | AVAIL PIGSTY 3.1.23 1 | AVAIL PIGSTY 3.1.23 1 | AVAIL PIGSTY 3.1.23 1 | AVAIL PIGSTY 3.1.23 1 |
 @ el8.x86_64 18 pg_bulkload_18 pg_bulkload_18-3.1.23-1PIGSTY.el8.x86_64.rpm pigsty 3.1.23 65.1KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_bulkload_18-3.1.23-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 18 pg_bulkload_18 pg_bulkload_18-3.1.23-1PGDG.rhel8.10.x86_64.rpm pgdg 3.1.23 68.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pg_bulkload_18-3.1.23-1PGDG.rhel8.10.x86_64.rpm
 @ el8.aarch64 18 pg_bulkload_18 pg_bulkload_18-3.1.23-1PIGSTY.el8.aarch64.rpm pigsty 3.1.23 60.4KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_bulkload_18-3.1.23-1PIGSTY.el8.aarch64.rpm
@@ -89,6 +89,8 @@ weight: 9830
 @ u22.aarch64 18 postgresql-18-pg-bulkload postgresql-18-pg-bulkload_3.1.23-1PIGSTY~jammy_arm64.deb pigsty 3.1.23 244.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-bulkload/postgresql-18-pg-bulkload_3.1.23-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 18 postgresql-18-pg-bulkload postgresql-18-pg-bulkload_3.1.23-1PIGSTY~noble_amd64.deb pigsty 3.1.23 240.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-bulkload/postgresql-18-pg-bulkload_3.1.23-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 18 postgresql-18-pg-bulkload postgresql-18-pg-bulkload_3.1.23-1PIGSTY~noble_arm64.deb pigsty 3.1.23 237.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-bulkload/postgresql-18-pg-bulkload_3.1.23-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 18 postgresql-18-pg-bulkload postgresql-18-pg-bulkload_3.1.23-1PIGSTY~resolute_amd64.deb pigsty 3.1.23 239.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-bulkload/postgresql-18-pg-bulkload_3.1.23-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 18 postgresql-18-pg-bulkload postgresql-18-pg-bulkload_3.1.23-1PIGSTY~resolute_arm64.deb pigsty 3.1.23 235.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-bulkload/postgresql-18-pg-bulkload_3.1.23-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 17 pg_bulkload_17 pg_bulkload_17-3.1.23-1PIGSTY.el8.x86_64.rpm pigsty 3.1.23 64.9KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_bulkload_17-3.1.23-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 17 pg_bulkload_17 pg_bulkload_17-3.1.23-1PIGSTY.el8.aarch64.rpm pigsty 3.1.23 60.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_bulkload_17-3.1.23-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 17 pg_bulkload_17 pg_bulkload_17-3.1.23-1PIGSTY.el9.x86_64.rpm pigsty 3.1.23 61.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_bulkload_17-3.1.23-1PIGSTY.el9.x86_64.rpm
@@ -105,6 +107,8 @@ weight: 9830
 @ u22.aarch64 17 postgresql-17-pg-bulkload postgresql-17-pg-bulkload_3.1.23-1PIGSTY~jammy_arm64.deb pigsty 3.1.23 291.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-bulkload/postgresql-17-pg-bulkload_3.1.23-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 17 postgresql-17-pg-bulkload postgresql-17-pg-bulkload_3.1.23-1PIGSTY~noble_amd64.deb pigsty 3.1.23 240.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-bulkload/postgresql-17-pg-bulkload_3.1.23-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 17 postgresql-17-pg-bulkload postgresql-17-pg-bulkload_3.1.23-1PIGSTY~noble_arm64.deb pigsty 3.1.23 236.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-bulkload/postgresql-17-pg-bulkload_3.1.23-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 17 postgresql-17-pg-bulkload postgresql-17-pg-bulkload_3.1.23-1PIGSTY~resolute_amd64.deb pigsty 3.1.23 238.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-bulkload/postgresql-17-pg-bulkload_3.1.23-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 17 postgresql-17-pg-bulkload postgresql-17-pg-bulkload_3.1.23-1PIGSTY~resolute_arm64.deb pigsty 3.1.23 234.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-bulkload/postgresql-17-pg-bulkload_3.1.23-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 16 pg_bulkload_16 pg_bulkload_16-3.1.23-1PIGSTY.el8.x86_64.rpm pigsty 3.1.23 65.2KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_bulkload_16-3.1.23-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 16 pg_bulkload_16 pg_bulkload_16-3.1.21-1PGDG.rhel8.x86_64.rpm pgdg 3.1.21 76.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_bulkload_16-3.1.21-1PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 16 pg_bulkload_16 pg_bulkload_16-3.1.23-1PIGSTY.el8.aarch64.rpm pigsty 3.1.23 60.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_bulkload_16-3.1.23-1PIGSTY.el8.aarch64.rpm
@@ -125,6 +129,8 @@ weight: 9830
 @ u22.aarch64 16 postgresql-16-pg-bulkload postgresql-16-pg-bulkload_3.1.23-1PIGSTY~jammy_arm64.deb pigsty 3.1.23 289.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-bulkload/postgresql-16-pg-bulkload_3.1.23-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 16 postgresql-16-pg-bulkload postgresql-16-pg-bulkload_3.1.23-1PIGSTY~noble_amd64.deb pigsty 3.1.23 241.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-bulkload/postgresql-16-pg-bulkload_3.1.23-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 16 postgresql-16-pg-bulkload postgresql-16-pg-bulkload_3.1.23-1PIGSTY~noble_arm64.deb pigsty 3.1.23 236.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-bulkload/postgresql-16-pg-bulkload_3.1.23-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 16 postgresql-16-pg-bulkload postgresql-16-pg-bulkload_3.1.23-1PIGSTY~resolute_amd64.deb pigsty 3.1.23 240.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-bulkload/postgresql-16-pg-bulkload_3.1.23-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 16 postgresql-16-pg-bulkload postgresql-16-pg-bulkload_3.1.23-1PIGSTY~resolute_arm64.deb pigsty 3.1.23 234.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-bulkload/postgresql-16-pg-bulkload_3.1.23-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 15 pg_bulkload_15 pg_bulkload_15-3.1.23-1PIGSTY.el8.x86_64.rpm pigsty 3.1.23 65.1KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_bulkload_15-3.1.23-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 15 pg_bulkload_15 pg_bulkload_15-3.1.21-1PGDG.rhel8.x86_64.rpm pgdg 3.1.21 76.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_bulkload_15-3.1.21-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 15 pg_bulkload_15 pg_bulkload_15-3.1.20-1.rhel8.x86_64.rpm pgdg 3.1.20 76.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_bulkload_15-3.1.20-1.rhel8.x86_64.rpm
@@ -148,6 +154,8 @@ weight: 9830
 @ u22.aarch64 15 postgresql-15-pg-bulkload postgresql-15-pg-bulkload_3.1.23-1PIGSTY~jammy_arm64.deb pigsty 3.1.23 291.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-bulkload/postgresql-15-pg-bulkload_3.1.23-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 15 postgresql-15-pg-bulkload postgresql-15-pg-bulkload_3.1.23-1PIGSTY~noble_amd64.deb pigsty 3.1.23 241.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-bulkload/postgresql-15-pg-bulkload_3.1.23-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 15 postgresql-15-pg-bulkload postgresql-15-pg-bulkload_3.1.23-1PIGSTY~noble_arm64.deb pigsty 3.1.23 237.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-bulkload/postgresql-15-pg-bulkload_3.1.23-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 15 postgresql-15-pg-bulkload postgresql-15-pg-bulkload_3.1.23-1PIGSTY~resolute_amd64.deb pigsty 3.1.23 240.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-bulkload/postgresql-15-pg-bulkload_3.1.23-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 15 postgresql-15-pg-bulkload postgresql-15-pg-bulkload_3.1.23-1PIGSTY~resolute_arm64.deb pigsty 3.1.23 235.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-bulkload/postgresql-15-pg-bulkload_3.1.23-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 14 pg_bulkload_14 pg_bulkload_14-3.1.23-1PIGSTY.el8.x86_64.rpm pigsty 3.1.23 64.9KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_bulkload_14-3.1.23-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 14 pg_bulkload_14 pg_bulkload_14-3.1.21-1PGDG.rhel8.x86_64.rpm pgdg 3.1.21 76.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_bulkload_14-3.1.21-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 14 pg_bulkload_14 pg_bulkload_14-3.1.20-1.rhel8.x86_64.rpm pgdg 3.1.20 76.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_bulkload_14-3.1.20-1.rhel8.x86_64.rpm
@@ -174,6 +182,8 @@ weight: 9830
 @ u22.aarch64 14 postgresql-14-pg-bulkload postgresql-14-pg-bulkload_3.1.23-1PIGSTY~jammy_arm64.deb pigsty 3.1.23 289.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-bulkload/postgresql-14-pg-bulkload_3.1.23-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 14 postgresql-14-pg-bulkload postgresql-14-pg-bulkload_3.1.23-1PIGSTY~noble_amd64.deb pigsty 3.1.23 240.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-bulkload/postgresql-14-pg-bulkload_3.1.23-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 14 postgresql-14-pg-bulkload postgresql-14-pg-bulkload_3.1.23-1PIGSTY~noble_arm64.deb pigsty 3.1.23 235.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-bulkload/postgresql-14-pg-bulkload_3.1.23-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 14 postgresql-14-pg-bulkload postgresql-14-pg-bulkload_3.1.23-1PIGSTY~resolute_amd64.deb pigsty 3.1.23 239.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-bulkload/postgresql-14-pg-bulkload_3.1.23-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 14 postgresql-14-pg-bulkload postgresql-14-pg-bulkload_3.1.23-1PIGSTY~resolute_arm64.deb pigsty 3.1.23 234.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-bulkload/postgresql-14-pg-bulkload_3.1.23-1PIGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建

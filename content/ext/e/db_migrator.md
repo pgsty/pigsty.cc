@@ -64,8 +64,8 @@ weight: 9550
 | u22.aarch64 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 |
 | u24.x86_64 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 |
 | u24.aarch64 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 |
-| u26.x86_64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| u26.aarch64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| u26.x86_64 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 |
+| u26.aarch64 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 |
 @ el8.x86_64 18 db_migrator_18 db_migrator_18-1.0.0-1PIGSTY.el8.x86_64.rpm pigsty 1.0.0 26.4KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/db_migrator_18-1.0.0-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 18 db_migrator_18 db_migrator_18-1.0.0-1PIGSTY.el8.aarch64.rpm pigsty 1.0.0 26.4KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/db_migrator_18-1.0.0-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 18 db_migrator_18 db_migrator_18-1.0.0-1PIGSTY.el9.x86_64.rpm pigsty 1.0.0 25.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/db_migrator_18-1.0.0-1PIGSTY.el9.x86_64.rpm
@@ -80,6 +80,8 @@ weight: 9550
 @ u22.aarch64 18 postgresql-18-db-migrator postgresql-18-db-migrator_1.0.0-1PIGSTY~jammy_arm64.deb pigsty 1.0.0 21.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/d/db-migrator/postgresql-18-db-migrator_1.0.0-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 18 postgresql-18-db-migrator postgresql-18-db-migrator_1.0.0-1PIGSTY~noble_amd64.deb pigsty 1.0.0 21.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/d/db-migrator/postgresql-18-db-migrator_1.0.0-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 18 postgresql-18-db-migrator postgresql-18-db-migrator_1.0.0-1PIGSTY~noble_arm64.deb pigsty 1.0.0 21.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/d/db-migrator/postgresql-18-db-migrator_1.0.0-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 18 postgresql-18-db-migrator postgresql-18-db-migrator_1.0.0-1PIGSTY~resolute_amd64.deb pigsty 1.0.0 21.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/d/db-migrator/postgresql-18-db-migrator_1.0.0-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 18 postgresql-18-db-migrator postgresql-18-db-migrator_1.0.0-1PIGSTY~resolute_arm64.deb pigsty 1.0.0 21.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/d/db-migrator/postgresql-18-db-migrator_1.0.0-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 17 db_migrator_17 db_migrator_17-1.0.0-1PIGSTY.el8.x86_64.rpm pigsty 1.0.0 26.4KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/db_migrator_17-1.0.0-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 17 db_migrator_17 db_migrator_17-1.0.0-1PIGSTY.el8.aarch64.rpm pigsty 1.0.0 26.4KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/db_migrator_17-1.0.0-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 17 db_migrator_17 db_migrator_17-1.0.0-1PIGSTY.el9.x86_64.rpm pigsty 1.0.0 25.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/db_migrator_17-1.0.0-1PIGSTY.el9.x86_64.rpm
@@ -94,6 +96,8 @@ weight: 9550
 @ u22.aarch64 17 postgresql-17-db-migrator postgresql-17-db-migrator_1.0.0-1PIGSTY~jammy_arm64.deb pigsty 1.0.0 21.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/d/db-migrator/postgresql-17-db-migrator_1.0.0-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 17 postgresql-17-db-migrator postgresql-17-db-migrator_1.0.0-1PIGSTY~noble_amd64.deb pigsty 1.0.0 21.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/d/db-migrator/postgresql-17-db-migrator_1.0.0-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 17 postgresql-17-db-migrator postgresql-17-db-migrator_1.0.0-1PIGSTY~noble_arm64.deb pigsty 1.0.0 21.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/d/db-migrator/postgresql-17-db-migrator_1.0.0-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 17 postgresql-17-db-migrator postgresql-17-db-migrator_1.0.0-1PIGSTY~resolute_amd64.deb pigsty 1.0.0 21.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/d/db-migrator/postgresql-17-db-migrator_1.0.0-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 17 postgresql-17-db-migrator postgresql-17-db-migrator_1.0.0-1PIGSTY~resolute_arm64.deb pigsty 1.0.0 21.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/d/db-migrator/postgresql-17-db-migrator_1.0.0-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 16 db_migrator_16 db_migrator_16-1.0.0-1PIGSTY.el8.x86_64.rpm pigsty 1.0.0 26.4KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/db_migrator_16-1.0.0-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 16 db_migrator_16 db_migrator_16-1.0.0-1PIGSTY.el8.aarch64.rpm pigsty 1.0.0 26.4KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/db_migrator_16-1.0.0-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 16 db_migrator_16 db_migrator_16-1.0.0-1PIGSTY.el9.x86_64.rpm pigsty 1.0.0 25.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/db_migrator_16-1.0.0-1PIGSTY.el9.x86_64.rpm
@@ -108,6 +112,8 @@ weight: 9550
 @ u22.aarch64 16 postgresql-16-db-migrator postgresql-16-db-migrator_1.0.0-1PIGSTY~jammy_arm64.deb pigsty 1.0.0 21.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/d/db-migrator/postgresql-16-db-migrator_1.0.0-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 16 postgresql-16-db-migrator postgresql-16-db-migrator_1.0.0-1PIGSTY~noble_amd64.deb pigsty 1.0.0 21.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/d/db-migrator/postgresql-16-db-migrator_1.0.0-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 16 postgresql-16-db-migrator postgresql-16-db-migrator_1.0.0-1PIGSTY~noble_arm64.deb pigsty 1.0.0 21.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/d/db-migrator/postgresql-16-db-migrator_1.0.0-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 16 postgresql-16-db-migrator postgresql-16-db-migrator_1.0.0-1PIGSTY~resolute_amd64.deb pigsty 1.0.0 21.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/d/db-migrator/postgresql-16-db-migrator_1.0.0-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 16 postgresql-16-db-migrator postgresql-16-db-migrator_1.0.0-1PIGSTY~resolute_arm64.deb pigsty 1.0.0 21.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/d/db-migrator/postgresql-16-db-migrator_1.0.0-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 15 db_migrator_15 db_migrator_15-1.0.0-1PIGSTY.el8.x86_64.rpm pigsty 1.0.0 26.4KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/db_migrator_15-1.0.0-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 15 db_migrator_15 db_migrator_15-1.0.0-1PIGSTY.el8.aarch64.rpm pigsty 1.0.0 26.4KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/db_migrator_15-1.0.0-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 15 db_migrator_15 db_migrator_15-1.0.0-1PIGSTY.el9.x86_64.rpm pigsty 1.0.0 25.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/db_migrator_15-1.0.0-1PIGSTY.el9.x86_64.rpm
@@ -122,6 +128,8 @@ weight: 9550
 @ u22.aarch64 15 postgresql-15-db-migrator postgresql-15-db-migrator_1.0.0-1PIGSTY~jammy_arm64.deb pigsty 1.0.0 21.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/d/db-migrator/postgresql-15-db-migrator_1.0.0-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 15 postgresql-15-db-migrator postgresql-15-db-migrator_1.0.0-1PIGSTY~noble_amd64.deb pigsty 1.0.0 21.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/d/db-migrator/postgresql-15-db-migrator_1.0.0-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 15 postgresql-15-db-migrator postgresql-15-db-migrator_1.0.0-1PIGSTY~noble_arm64.deb pigsty 1.0.0 21.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/d/db-migrator/postgresql-15-db-migrator_1.0.0-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 15 postgresql-15-db-migrator postgresql-15-db-migrator_1.0.0-1PIGSTY~resolute_amd64.deb pigsty 1.0.0 21.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/d/db-migrator/postgresql-15-db-migrator_1.0.0-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 15 postgresql-15-db-migrator postgresql-15-db-migrator_1.0.0-1PIGSTY~resolute_arm64.deb pigsty 1.0.0 21.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/d/db-migrator/postgresql-15-db-migrator_1.0.0-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 14 db_migrator_14 db_migrator_14-1.0.0-1PIGSTY.el8.x86_64.rpm pigsty 1.0.0 26.4KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/db_migrator_14-1.0.0-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 14 db_migrator_14 db_migrator_14-1.0.0-1PIGSTY.el8.aarch64.rpm pigsty 1.0.0 26.4KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/db_migrator_14-1.0.0-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 14 db_migrator_14 db_migrator_14-1.0.0-1PIGSTY.el9.x86_64.rpm pigsty 1.0.0 25.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/db_migrator_14-1.0.0-1PIGSTY.el9.x86_64.rpm
@@ -136,6 +144,8 @@ weight: 9550
 @ u22.aarch64 14 postgresql-14-db-migrator postgresql-14-db-migrator_1.0.0-1PIGSTY~jammy_arm64.deb pigsty 1.0.0 21.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/d/db-migrator/postgresql-14-db-migrator_1.0.0-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 14 postgresql-14-db-migrator postgresql-14-db-migrator_1.0.0-1PIGSTY~noble_amd64.deb pigsty 1.0.0 21.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/d/db-migrator/postgresql-14-db-migrator_1.0.0-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 14 postgresql-14-db-migrator postgresql-14-db-migrator_1.0.0-1PIGSTY~noble_arm64.deb pigsty 1.0.0 21.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/d/db-migrator/postgresql-14-db-migrator_1.0.0-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 14 postgresql-14-db-migrator postgresql-14-db-migrator_1.0.0-1PIGSTY~resolute_amd64.deb pigsty 1.0.0 21.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/d/db-migrator/postgresql-14-db-migrator_1.0.0-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 14 postgresql-14-db-migrator postgresql-14-db-migrator_1.0.0-1PIGSTY~resolute_arm64.deb pigsty 1.0.0 21.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/d/db-migrator/postgresql-14-db-migrator_1.0.0-1PIGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建

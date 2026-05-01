@@ -67,8 +67,8 @@ weight: 8640
 | u22.aarch64 | MISS PGDG - 0 | AVAIL PIGSTY 2.5.0 1 | AVAIL PIGSTY 2.5.0 1 | AVAIL PIGSTY 2.5.0 1 | AVAIL PIGSTY 2.5.0 1 |
 | u24.x86_64 | MISS PGDG - 0 | AVAIL PIGSTY 2.5.0 1 | AVAIL PIGSTY 2.5.0 1 | AVAIL PIGSTY 2.5.0 1 | AVAIL PIGSTY 2.5.0 1 |
 | u24.aarch64 | MISS PGDG - 0 | AVAIL PIGSTY 2.5.0 1 | AVAIL PIGSTY 2.5.0 1 | AVAIL PIGSTY 2.5.0 1 | AVAIL PIGSTY 2.5.0 1 |
-| u26.x86_64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
-| u26.aarch64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
+| u26.x86_64 | MISS PGDG - 0 | AVAIL PIGSTY 2.5.0 1 | AVAIL PIGSTY 2.5.0 1 | AVAIL PIGSTY 2.5.0 1 | AVAIL PIGSTY 2.5.0 1 |
+| u26.aarch64 | MISS PGDG - 0 | AVAIL PIGSTY 2.5.0 1 | AVAIL PIGSTY 2.5.0 1 | AVAIL PIGSTY 2.5.0 1 | AVAIL PIGSTY 2.5.0 1 |
 @ el8.x86_64 17 sqlite_fdw_17 sqlite_fdw_17-2.4.0-4PGDG.rhel8.x86_64.rpm pgdg 2.4.0 57.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/sqlite_fdw_17-2.4.0-4PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 17 sqlite_fdw_17 sqlite_fdw_17-2.4.0-4PGDG.rhel8.aarch64.rpm pgdg 2.4.0 55.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/sqlite_fdw_17-2.4.0-4PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 17 sqlite_fdw_17 sqlite_fdw_17-2.5.0-2PIGSTY.el9.x86_64.rpm pigsty 2.5.0 65.7KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/sqlite_fdw_17-2.5.0-2PIGSTY.el9.x86_64.rpm
@@ -89,6 +89,8 @@ weight: 8640
 @ u22.aarch64 17 postgresql-17-sqlite-fdw postgresql-17-sqlite-fdw_2.5.0-1PIGSTY~jammy_arm64.deb pigsty 2.5.0 185.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/s/sqlite-fdw/postgresql-17-sqlite-fdw_2.5.0-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 17 postgresql-17-sqlite-fdw postgresql-17-sqlite-fdw_2.5.0-1PIGSTY~noble_amd64.deb pigsty 2.5.0 159.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/s/sqlite-fdw/postgresql-17-sqlite-fdw_2.5.0-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 17 postgresql-17-sqlite-fdw postgresql-17-sqlite-fdw_2.5.0-1PIGSTY~noble_arm64.deb pigsty 2.5.0 156.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/s/sqlite-fdw/postgresql-17-sqlite-fdw_2.5.0-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 17 postgresql-17-sqlite-fdw postgresql-17-sqlite-fdw_2.5.0-1PIGSTY~resolute_amd64.deb pigsty 2.5.0 157.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/s/sqlite-fdw/postgresql-17-sqlite-fdw_2.5.0-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 17 postgresql-17-sqlite-fdw postgresql-17-sqlite-fdw_2.5.0-1PIGSTY~resolute_arm64.deb pigsty 2.5.0 155.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/s/sqlite-fdw/postgresql-17-sqlite-fdw_2.5.0-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 16 sqlite_fdw_16 sqlite_fdw_16-2.4.0-1PGDG.rhel8.x86_64.rpm pgdg 2.4.0 57.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/sqlite_fdw_16-2.4.0-1PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 16 sqlite_fdw_16 sqlite_fdw_16-2.4.0-1PGDG.rhel8.aarch64.rpm pgdg 2.4.0 55.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/sqlite_fdw_16-2.4.0-1PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 16 sqlite_fdw_16 sqlite_fdw_16-2.5.0-2PIGSTY.el9.x86_64.rpm pigsty 2.5.0 64.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/sqlite_fdw_16-2.5.0-2PIGSTY.el9.x86_64.rpm
@@ -109,6 +111,8 @@ weight: 8640
 @ u22.aarch64 16 postgresql-16-sqlite-fdw postgresql-16-sqlite-fdw_2.5.0-1PIGSTY~jammy_arm64.deb pigsty 2.5.0 181.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/s/sqlite-fdw/postgresql-16-sqlite-fdw_2.5.0-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 16 postgresql-16-sqlite-fdw postgresql-16-sqlite-fdw_2.5.0-1PIGSTY~noble_amd64.deb pigsty 2.5.0 157.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/s/sqlite-fdw/postgresql-16-sqlite-fdw_2.5.0-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 16 postgresql-16-sqlite-fdw postgresql-16-sqlite-fdw_2.5.0-1PIGSTY~noble_arm64.deb pigsty 2.5.0 155.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/s/sqlite-fdw/postgresql-16-sqlite-fdw_2.5.0-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 16 postgresql-16-sqlite-fdw postgresql-16-sqlite-fdw_2.5.0-1PIGSTY~resolute_amd64.deb pigsty 2.5.0 155.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/s/sqlite-fdw/postgresql-16-sqlite-fdw_2.5.0-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 16 postgresql-16-sqlite-fdw postgresql-16-sqlite-fdw_2.5.0-1PIGSTY~resolute_arm64.deb pigsty 2.5.0 153.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/s/sqlite-fdw/postgresql-16-sqlite-fdw_2.5.0-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 15 sqlite_fdw_15 sqlite_fdw_15-2.4.0-1PGDG.rhel8.x86_64.rpm pgdg 2.4.0 58.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/sqlite_fdw_15-2.4.0-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 15 sqlite_fdw_15 sqlite_fdw_15-2.3.0-1.rhel8.x86_64.rpm pgdg 2.3.0 53.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/sqlite_fdw_15-2.3.0-1.rhel8.x86_64.rpm
 @ el8.x86_64 15 sqlite_fdw_15 sqlite_fdw_15-2.2.0-1.rhel8.x86_64.rpm pgdg 2.2.0 159.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/sqlite_fdw_15-2.2.0-1.rhel8.x86_64.rpm
@@ -137,6 +141,8 @@ weight: 8640
 @ u22.aarch64 15 postgresql-15-sqlite-fdw postgresql-15-sqlite-fdw_2.5.0-1PIGSTY~jammy_arm64.deb pigsty 2.5.0 183.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/s/sqlite-fdw/postgresql-15-sqlite-fdw_2.5.0-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 15 postgresql-15-sqlite-fdw postgresql-15-sqlite-fdw_2.5.0-1PIGSTY~noble_amd64.deb pigsty 2.5.0 158.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/s/sqlite-fdw/postgresql-15-sqlite-fdw_2.5.0-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 15 postgresql-15-sqlite-fdw postgresql-15-sqlite-fdw_2.5.0-1PIGSTY~noble_arm64.deb pigsty 2.5.0 157.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/s/sqlite-fdw/postgresql-15-sqlite-fdw_2.5.0-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 15 postgresql-15-sqlite-fdw postgresql-15-sqlite-fdw_2.5.0-1PIGSTY~resolute_amd64.deb pigsty 2.5.0 157.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/s/sqlite-fdw/postgresql-15-sqlite-fdw_2.5.0-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 15 postgresql-15-sqlite-fdw postgresql-15-sqlite-fdw_2.5.0-1PIGSTY~resolute_arm64.deb pigsty 2.5.0 155.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/s/sqlite-fdw/postgresql-15-sqlite-fdw_2.5.0-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 14 sqlite_fdw_14 sqlite_fdw_14-2.4.0-1PGDG.rhel8.x86_64.rpm pgdg 2.4.0 58.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/sqlite_fdw_14-2.4.0-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 14 sqlite_fdw_14 sqlite_fdw_14-2.3.0-1.rhel8.x86_64.rpm pgdg 2.3.0 53.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/sqlite_fdw_14-2.3.0-1.rhel8.x86_64.rpm
 @ el8.x86_64 14 sqlite_fdw_14 sqlite_fdw_14-2.1.1-1.rhel8.x86_64.rpm pgdg 2.1.1 157.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/sqlite_fdw_14-2.1.1-1.rhel8.x86_64.rpm
@@ -166,6 +172,8 @@ weight: 8640
 @ u22.aarch64 14 postgresql-14-sqlite-fdw postgresql-14-sqlite-fdw_2.5.0-1PIGSTY~jammy_arm64.deb pigsty 2.5.0 183.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/s/sqlite-fdw/postgresql-14-sqlite-fdw_2.5.0-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 14 postgresql-14-sqlite-fdw postgresql-14-sqlite-fdw_2.5.0-1PIGSTY~noble_amd64.deb pigsty 2.5.0 159.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/s/sqlite-fdw/postgresql-14-sqlite-fdw_2.5.0-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 14 postgresql-14-sqlite-fdw postgresql-14-sqlite-fdw_2.5.0-1PIGSTY~noble_arm64.deb pigsty 2.5.0 157.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/s/sqlite-fdw/postgresql-14-sqlite-fdw_2.5.0-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 14 postgresql-14-sqlite-fdw postgresql-14-sqlite-fdw_2.5.0-1PIGSTY~resolute_amd64.deb pigsty 2.5.0 157.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/s/sqlite-fdw/postgresql-14-sqlite-fdw_2.5.0-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 14 postgresql-14-sqlite-fdw postgresql-14-sqlite-fdw_2.5.0-1PIGSTY~resolute_arm64.deb pigsty 2.5.0 155.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/s/sqlite-fdw/postgresql-14-sqlite-fdw_2.5.0-1PIGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建

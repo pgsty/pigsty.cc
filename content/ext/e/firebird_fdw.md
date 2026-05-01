@@ -67,8 +67,8 @@ weight: 8750
 | u22.aarch64 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 |
 | u24.x86_64 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 |
 | u24.aarch64 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 |
-| u26.x86_64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| u26.aarch64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| u26.x86_64 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 |
+| u26.aarch64 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 |
 @ el8.x86_64 18 firebird_fdw_18 firebird_fdw_18-1.4.1-1PIGSTY.el8.x86_64.rpm pigsty 1.4.1 53.9KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/firebird_fdw_18-1.4.1-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 18 firebird_fdw_18 firebird_fdw_18-1.4.1-1PIGSTY.el8.aarch64.rpm pigsty 1.4.1 52.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/firebird_fdw_18-1.4.1-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 18 firebird_fdw_18 firebird_fdw_18-1.4.1-3PGDG.rhel9.7.x86_64.rpm pgdg 1.4.1 52.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/firebird_fdw_18-1.4.1-3PGDG.rhel9.7.x86_64.rpm
@@ -85,6 +85,8 @@ weight: 8750
 @ u22.aarch64 18 postgresql-18-firebird-fdw postgresql-18-firebird-fdw_1.4.1-1PIGSTY~jammy_arm64.deb pigsty 1.4.1 148.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/f/firebird-fdw/postgresql-18-firebird-fdw_1.4.1-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 18 postgresql-18-firebird-fdw postgresql-18-firebird-fdw_1.4.1-1PIGSTY~noble_amd64.deb pigsty 1.4.1 143.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/f/firebird-fdw/postgresql-18-firebird-fdw_1.4.1-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 18 postgresql-18-firebird-fdw postgresql-18-firebird-fdw_1.4.1-1PIGSTY~noble_arm64.deb pigsty 1.4.1 143.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/f/firebird-fdw/postgresql-18-firebird-fdw_1.4.1-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 18 postgresql-18-firebird-fdw postgresql-18-firebird-fdw_1.4.1-1PIGSTY~resolute_amd64.deb pigsty 1.4.1 142.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/f/firebird-fdw/postgresql-18-firebird-fdw_1.4.1-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 18 postgresql-18-firebird-fdw postgresql-18-firebird-fdw_1.4.1-1PIGSTY~resolute_arm64.deb pigsty 1.4.1 141.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/f/firebird-fdw/postgresql-18-firebird-fdw_1.4.1-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 17 firebird_fdw_17 firebird_fdw_17-1.4.1-1PIGSTY.el8.x86_64.rpm pigsty 1.4.1 53.9KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/firebird_fdw_17-1.4.1-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 17 firebird_fdw_17 firebird_fdw_17-1.4.1-1PIGSTY.el8.aarch64.rpm pigsty 1.4.1 52.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/firebird_fdw_17-1.4.1-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 17 firebird_fdw_17 firebird_fdw_17-1.4.1-3PGDG.rhel9.7.x86_64.rpm pgdg 1.4.1 52.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/firebird_fdw_17-1.4.1-3PGDG.rhel9.7.x86_64.rpm
@@ -101,6 +103,8 @@ weight: 8750
 @ u22.aarch64 17 postgresql-17-firebird-fdw postgresql-17-firebird-fdw_1.4.1-1PIGSTY~jammy_arm64.deb pigsty 1.4.1 167.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/f/firebird-fdw/postgresql-17-firebird-fdw_1.4.1-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 17 postgresql-17-firebird-fdw postgresql-17-firebird-fdw_1.4.1-1PIGSTY~noble_amd64.deb pigsty 1.4.1 143.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/f/firebird-fdw/postgresql-17-firebird-fdw_1.4.1-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 17 postgresql-17-firebird-fdw postgresql-17-firebird-fdw_1.4.1-1PIGSTY~noble_arm64.deb pigsty 1.4.1 142.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/f/firebird-fdw/postgresql-17-firebird-fdw_1.4.1-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 17 postgresql-17-firebird-fdw postgresql-17-firebird-fdw_1.4.1-1PIGSTY~resolute_amd64.deb pigsty 1.4.1 142.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/f/firebird-fdw/postgresql-17-firebird-fdw_1.4.1-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 17 postgresql-17-firebird-fdw postgresql-17-firebird-fdw_1.4.1-1PIGSTY~resolute_arm64.deb pigsty 1.4.1 140.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/f/firebird-fdw/postgresql-17-firebird-fdw_1.4.1-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 16 firebird_fdw_16 firebird_fdw_16-1.4.1-1PIGSTY.el8.x86_64.rpm pigsty 1.4.1 53.9KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/firebird_fdw_16-1.4.1-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 16 firebird_fdw_16 firebird_fdw_16-1.4.1-1PIGSTY.el8.aarch64.rpm pigsty 1.4.1 52.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/firebird_fdw_16-1.4.1-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 16 firebird_fdw_16 firebird_fdw_16-1.4.1-3PGDG.rhel9.7.x86_64.rpm pgdg 1.4.1 52.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/firebird_fdw_16-1.4.1-3PGDG.rhel9.7.x86_64.rpm
@@ -118,6 +122,8 @@ weight: 8750
 @ u22.aarch64 16 postgresql-16-firebird-fdw postgresql-16-firebird-fdw_1.4.1-1PIGSTY~jammy_arm64.deb pigsty 1.4.1 167.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/f/firebird-fdw/postgresql-16-firebird-fdw_1.4.1-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 16 postgresql-16-firebird-fdw postgresql-16-firebird-fdw_1.4.1-1PIGSTY~noble_amd64.deb pigsty 1.4.1 143.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/f/firebird-fdw/postgresql-16-firebird-fdw_1.4.1-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 16 postgresql-16-firebird-fdw postgresql-16-firebird-fdw_1.4.1-1PIGSTY~noble_arm64.deb pigsty 1.4.1 142.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/f/firebird-fdw/postgresql-16-firebird-fdw_1.4.1-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 16 postgresql-16-firebird-fdw postgresql-16-firebird-fdw_1.4.1-1PIGSTY~resolute_amd64.deb pigsty 1.4.1 142.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/f/firebird-fdw/postgresql-16-firebird-fdw_1.4.1-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 16 postgresql-16-firebird-fdw postgresql-16-firebird-fdw_1.4.1-1PIGSTY~resolute_arm64.deb pigsty 1.4.1 140.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/f/firebird-fdw/postgresql-16-firebird-fdw_1.4.1-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 15 firebird_fdw_15 firebird_fdw_15-1.4.1-1PIGSTY.el8.x86_64.rpm pigsty 1.4.1 54.4KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/firebird_fdw_15-1.4.1-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 15 firebird_fdw_15 firebird_fdw_15-1.4.1-1PIGSTY.el8.aarch64.rpm pigsty 1.4.1 52.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/firebird_fdw_15-1.4.1-1PIGSTY.el8.aarch64.rpm
 @ el8.aarch64 15 firebird_fdw_15 firebird_fdw_15-1.3.0-1.rhel8.aarch64.rpm pgdg 1.3.0 49.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/firebird_fdw_15-1.3.0-1.rhel8.aarch64.rpm
@@ -136,6 +142,8 @@ weight: 8750
 @ u22.aarch64 15 postgresql-15-firebird-fdw postgresql-15-firebird-fdw_1.4.1-1PIGSTY~jammy_arm64.deb pigsty 1.4.1 168.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/f/firebird-fdw/postgresql-15-firebird-fdw_1.4.1-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 15 postgresql-15-firebird-fdw postgresql-15-firebird-fdw_1.4.1-1PIGSTY~noble_amd64.deb pigsty 1.4.1 144.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/f/firebird-fdw/postgresql-15-firebird-fdw_1.4.1-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 15 postgresql-15-firebird-fdw postgresql-15-firebird-fdw_1.4.1-1PIGSTY~noble_arm64.deb pigsty 1.4.1 143.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/f/firebird-fdw/postgresql-15-firebird-fdw_1.4.1-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 15 postgresql-15-firebird-fdw postgresql-15-firebird-fdw_1.4.1-1PIGSTY~resolute_amd64.deb pigsty 1.4.1 143.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/f/firebird-fdw/postgresql-15-firebird-fdw_1.4.1-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 15 postgresql-15-firebird-fdw postgresql-15-firebird-fdw_1.4.1-1PIGSTY~resolute_arm64.deb pigsty 1.4.1 141.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/f/firebird-fdw/postgresql-15-firebird-fdw_1.4.1-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 14 firebird_fdw_14 firebird_fdw_14-1.4.1-1PIGSTY.el8.x86_64.rpm pigsty 1.4.1 54.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/firebird_fdw_14-1.4.1-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 14 firebird_fdw_14 firebird_fdw_14-1.2.3-2.rhel8.x86_64.rpm pgdg 1.2.3 151.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/firebird_fdw_14-1.2.3-2.rhel8.x86_64.rpm
 @ el8.x86_64 14 firebird_fdw_14 firebird_fdw_14-1.2.3-1.rhel8.x86_64.rpm pgdg 1.2.3 151.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/firebird_fdw_14-1.2.3-1.rhel8.x86_64.rpm
@@ -160,6 +168,8 @@ weight: 8750
 @ u22.aarch64 14 postgresql-14-firebird-fdw postgresql-14-firebird-fdw_1.4.1-1PIGSTY~jammy_arm64.deb pigsty 1.4.1 167.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/f/firebird-fdw/postgresql-14-firebird-fdw_1.4.1-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 14 postgresql-14-firebird-fdw postgresql-14-firebird-fdw_1.4.1-1PIGSTY~noble_amd64.deb pigsty 1.4.1 144.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/f/firebird-fdw/postgresql-14-firebird-fdw_1.4.1-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 14 postgresql-14-firebird-fdw postgresql-14-firebird-fdw_1.4.1-1PIGSTY~noble_arm64.deb pigsty 1.4.1 143.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/f/firebird-fdw/postgresql-14-firebird-fdw_1.4.1-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 14 postgresql-14-firebird-fdw postgresql-14-firebird-fdw_1.4.1-1PIGSTY~resolute_amd64.deb pigsty 1.4.1 143.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/f/firebird-fdw/postgresql-14-firebird-fdw_1.4.1-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 14 postgresql-14-firebird-fdw postgresql-14-firebird-fdw_1.4.1-1PIGSTY~resolute_arm64.deb pigsty 1.4.1 141.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/f/firebird-fdw/postgresql-14-firebird-fdw_1.4.1-1PIGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建

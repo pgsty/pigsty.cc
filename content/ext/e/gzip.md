@@ -64,8 +64,8 @@ weight: 4010
 | u22.aarch64 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 |
 | u24.x86_64 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 |
 | u24.aarch64 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 |
-| u26.x86_64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| u26.aarch64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| u26.x86_64 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 |
+| u26.aarch64 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 |
 @ el8.x86_64 18 pg_gzip_18 pg_gzip_18-1.0.0-2PIGSTY.el8.x86_64.rpm pigsty 1.0.0 13.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_gzip_18-1.0.0-2PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 18 pg_gzip_18 pg_gzip_18-1.0.0-2PIGSTY.el8.aarch64.rpm pigsty 1.0.0 13.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_gzip_18-1.0.0-2PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 18 pg_gzip_18 pg_gzip_18-1.0.0-2PIGSTY.el9.x86_64.rpm pigsty 1.0.0 13.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_gzip_18-1.0.0-2PIGSTY.el9.x86_64.rpm
@@ -80,6 +80,8 @@ weight: 4010
 @ u22.aarch64 18 postgresql-18-gzip postgresql-18-gzip_1.0.0-1PIGSTY~jammy_arm64.deb pigsty 1.0.0 12.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgsql-gzip/postgresql-18-gzip_1.0.0-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 18 postgresql-18-gzip postgresql-18-gzip_1.0.0-1PIGSTY~noble_amd64.deb pigsty 1.0.0 12.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgsql-gzip/postgresql-18-gzip_1.0.0-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 18 postgresql-18-gzip postgresql-18-gzip_1.0.0-1PIGSTY~noble_arm64.deb pigsty 1.0.0 12.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgsql-gzip/postgresql-18-gzip_1.0.0-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 18 postgresql-18-gzip postgresql-18-gzip_1.0.0-1PIGSTY~resolute_amd64.deb pigsty 1.0.0 13.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgsql-gzip/postgresql-18-gzip_1.0.0-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 18 postgresql-18-gzip postgresql-18-gzip_1.0.0-1PIGSTY~resolute_arm64.deb pigsty 1.0.0 13.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgsql-gzip/postgresql-18-gzip_1.0.0-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 17 pg_gzip_17 pg_gzip_17-1.0.0-2PIGSTY.el8.x86_64.rpm pigsty 1.0.0 13.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_gzip_17-1.0.0-2PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 17 pg_gzip_17 pg_gzip_17-1.0.0-2PIGSTY.el8.aarch64.rpm pigsty 1.0.0 13.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_gzip_17-1.0.0-2PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 17 pg_gzip_17 pg_gzip_17-1.0.0-2PIGSTY.el9.x86_64.rpm pigsty 1.0.0 13.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_gzip_17-1.0.0-2PIGSTY.el9.x86_64.rpm
@@ -94,6 +96,8 @@ weight: 4010
 @ u22.aarch64 17 postgresql-17-gzip postgresql-17-gzip_1.0.0-1PIGSTY~jammy_arm64.deb pigsty 1.0.0 13.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgsql-gzip/postgresql-17-gzip_1.0.0-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 17 postgresql-17-gzip postgresql-17-gzip_1.0.0-1PIGSTY~noble_amd64.deb pigsty 1.0.0 12.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgsql-gzip/postgresql-17-gzip_1.0.0-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 17 postgresql-17-gzip postgresql-17-gzip_1.0.0-1PIGSTY~noble_arm64.deb pigsty 1.0.0 12.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgsql-gzip/postgresql-17-gzip_1.0.0-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 17 postgresql-17-gzip postgresql-17-gzip_1.0.0-1PIGSTY~resolute_amd64.deb pigsty 1.0.0 13.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgsql-gzip/postgresql-17-gzip_1.0.0-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 17 postgresql-17-gzip postgresql-17-gzip_1.0.0-1PIGSTY~resolute_arm64.deb pigsty 1.0.0 13.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgsql-gzip/postgresql-17-gzip_1.0.0-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 16 pg_gzip_16 pg_gzip_16-1.0.0-2PIGSTY.el8.x86_64.rpm pigsty 1.0.0 13.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_gzip_16-1.0.0-2PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 16 pg_gzip_16 pg_gzip_16-1.0.0-2PIGSTY.el8.aarch64.rpm pigsty 1.0.0 13.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_gzip_16-1.0.0-2PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 16 pg_gzip_16 pg_gzip_16-1.0.0-2PIGSTY.el9.x86_64.rpm pigsty 1.0.0 13.7KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_gzip_16-1.0.0-2PIGSTY.el9.x86_64.rpm
@@ -108,6 +112,8 @@ weight: 4010
 @ u22.aarch64 16 postgresql-16-gzip postgresql-16-gzip_1.0.0-1PIGSTY~jammy_arm64.deb pigsty 1.0.0 13.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgsql-gzip/postgresql-16-gzip_1.0.0-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 16 postgresql-16-gzip postgresql-16-gzip_1.0.0-1PIGSTY~noble_amd64.deb pigsty 1.0.0 12.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgsql-gzip/postgresql-16-gzip_1.0.0-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 16 postgresql-16-gzip postgresql-16-gzip_1.0.0-1PIGSTY~noble_arm64.deb pigsty 1.0.0 12.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgsql-gzip/postgresql-16-gzip_1.0.0-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 16 postgresql-16-gzip postgresql-16-gzip_1.0.0-1PIGSTY~resolute_amd64.deb pigsty 1.0.0 13.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgsql-gzip/postgresql-16-gzip_1.0.0-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 16 postgresql-16-gzip postgresql-16-gzip_1.0.0-1PIGSTY~resolute_arm64.deb pigsty 1.0.0 13.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgsql-gzip/postgresql-16-gzip_1.0.0-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 15 pg_gzip_15 pg_gzip_15-1.0.0-2PIGSTY.el8.x86_64.rpm pigsty 1.0.0 13.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_gzip_15-1.0.0-2PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 15 pg_gzip_15 pg_gzip_15-1.0.0-2PIGSTY.el8.aarch64.rpm pigsty 1.0.0 13.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_gzip_15-1.0.0-2PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 15 pg_gzip_15 pg_gzip_15-1.0.0-2PIGSTY.el9.x86_64.rpm pigsty 1.0.0 13.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_gzip_15-1.0.0-2PIGSTY.el9.x86_64.rpm
@@ -122,6 +128,8 @@ weight: 4010
 @ u22.aarch64 15 postgresql-15-gzip postgresql-15-gzip_1.0.0-1PIGSTY~jammy_arm64.deb pigsty 1.0.0 13.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgsql-gzip/postgresql-15-gzip_1.0.0-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 15 postgresql-15-gzip postgresql-15-gzip_1.0.0-1PIGSTY~noble_amd64.deb pigsty 1.0.0 12.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgsql-gzip/postgresql-15-gzip_1.0.0-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 15 postgresql-15-gzip postgresql-15-gzip_1.0.0-1PIGSTY~noble_arm64.deb pigsty 1.0.0 12.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgsql-gzip/postgresql-15-gzip_1.0.0-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 15 postgresql-15-gzip postgresql-15-gzip_1.0.0-1PIGSTY~resolute_amd64.deb pigsty 1.0.0 13.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgsql-gzip/postgresql-15-gzip_1.0.0-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 15 postgresql-15-gzip postgresql-15-gzip_1.0.0-1PIGSTY~resolute_arm64.deb pigsty 1.0.0 13.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgsql-gzip/postgresql-15-gzip_1.0.0-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 14 pg_gzip_14 pg_gzip_14-1.0.0-2PIGSTY.el8.x86_64.rpm pigsty 1.0.0 13.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_gzip_14-1.0.0-2PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 14 pg_gzip_14 pg_gzip_14-1.0.0-2PIGSTY.el8.aarch64.rpm pigsty 1.0.0 13.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_gzip_14-1.0.0-2PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 14 pg_gzip_14 pg_gzip_14-1.0.0-2PIGSTY.el9.x86_64.rpm pigsty 1.0.0 13.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_gzip_14-1.0.0-2PIGSTY.el9.x86_64.rpm
@@ -136,6 +144,8 @@ weight: 4010
 @ u22.aarch64 14 postgresql-14-gzip postgresql-14-gzip_1.0.0-1PIGSTY~jammy_arm64.deb pigsty 1.0.0 13.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgsql-gzip/postgresql-14-gzip_1.0.0-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 14 postgresql-14-gzip postgresql-14-gzip_1.0.0-1PIGSTY~noble_amd64.deb pigsty 1.0.0 12.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgsql-gzip/postgresql-14-gzip_1.0.0-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 14 postgresql-14-gzip postgresql-14-gzip_1.0.0-1PIGSTY~noble_arm64.deb pigsty 1.0.0 12.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgsql-gzip/postgresql-14-gzip_1.0.0-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 14 postgresql-14-gzip postgresql-14-gzip_1.0.0-1PIGSTY~resolute_amd64.deb pigsty 1.0.0 13.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgsql-gzip/postgresql-14-gzip_1.0.0-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 14 postgresql-14-gzip postgresql-14-gzip_1.0.0-1PIGSTY~resolute_arm64.deb pigsty 1.0.0 13.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgsql-gzip/postgresql-14-gzip_1.0.0-1PIGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建

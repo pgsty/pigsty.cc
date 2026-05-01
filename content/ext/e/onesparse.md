@@ -67,8 +67,8 @@ weight: 2620
 | u22.aarch64 | AVAIL PIGSTY 1.0.0 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
 | u24.x86_64 | AVAIL PIGSTY 1.0.0 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
 | u24.aarch64 | AVAIL PIGSTY 1.0.0 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| u26.x86_64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| u26.aarch64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| u26.x86_64 | AVAIL PIGSTY 1.0.0 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| u26.aarch64 | AVAIL PIGSTY 1.0.0 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
 @ el8.x86_64 18 onesparse_18 onesparse_18-1.0.0-1PIGSTY.el8.x86_64.rpm pigsty 1.0.0 222.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/onesparse_18-1.0.0-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 18 onesparse_18 onesparse_18-1.0.0-1PIGSTY.el8.aarch64.rpm pigsty 1.0.0 201.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/onesparse_18-1.0.0-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 18 onesparse_18 onesparse_18-1.0.0-1PIGSTY.el9.x86_64.rpm pigsty 1.0.0 195.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/onesparse_18-1.0.0-1PIGSTY.el9.x86_64.rpm
@@ -83,6 +83,8 @@ weight: 2620
 @ u22.aarch64 18 postgresql-18-onesparse postgresql-18-onesparse_1.0.0-1PIGSTY~jammy_arm64.deb pigsty 1.0.0 681.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/o/onesparse/postgresql-18-onesparse_1.0.0-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 18 postgresql-18-onesparse postgresql-18-onesparse_1.0.0-1PIGSTY~noble_amd64.deb pigsty 1.0.0 645.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/o/onesparse/postgresql-18-onesparse_1.0.0-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 18 postgresql-18-onesparse postgresql-18-onesparse_1.0.0-1PIGSTY~noble_arm64.deb pigsty 1.0.0 634.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/o/onesparse/postgresql-18-onesparse_1.0.0-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 18 postgresql-18-onesparse postgresql-18-onesparse_1.0.0-1PIGSTY~resolute_amd64.deb pigsty 1.0.0 657.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/o/onesparse/postgresql-18-onesparse_1.0.0-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 18 postgresql-18-onesparse postgresql-18-onesparse_1.0.0-1PIGSTY~resolute_arm64.deb pigsty 1.0.0 642.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/o/onesparse/postgresql-18-onesparse_1.0.0-1PIGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建

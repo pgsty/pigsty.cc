@@ -68,8 +68,8 @@ weight: 4080
 | u22.aarch64 | AVAIL PIGSTY 0.9.2 1 | AVAIL PIGSTY 0.9.2 1 | AVAIL PIGSTY 0.9.2 1 | AVAIL PIGSTY 0.9.2 1 | AVAIL PIGSTY 0.9.2 1 |
 | u24.x86_64 | AVAIL PIGSTY 0.20.2 1 | AVAIL PIGSTY 0.20.2 1 | AVAIL PIGSTY 0.20.2 1 | AVAIL PIGSTY 0.20.2 1 | AVAIL PIGSTY 0.20.2 1 |
 | u24.aarch64 | AVAIL PIGSTY 0.20.2 1 | AVAIL PIGSTY 0.20.2 1 | AVAIL PIGSTY 0.20.2 1 | AVAIL PIGSTY 0.20.2 1 | AVAIL PIGSTY 0.20.2 1 |
-| u26.x86_64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| u26.aarch64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| u26.x86_64 | AVAIL PIGSTY 0.20.2 1 | AVAIL PIGSTY 0.20.2 1 | AVAIL PIGSTY 0.20.2 1 | AVAIL PIGSTY 0.20.2 1 | AVAIL PIGSTY 0.20.2 1 |
+| u26.aarch64 | AVAIL PIGSTY 0.20.2 1 | AVAIL PIGSTY 0.20.2 1 | AVAIL PIGSTY 0.20.2 1 | AVAIL PIGSTY 0.20.2 1 | AVAIL PIGSTY 0.20.2 1 |
 @ el8.x86_64 18 pg_net_18 pg_net_18-0.9.2-2PIGSTY.el8.x86_64.rpm pigsty 0.9.2 27.1KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_net_18-0.9.2-2PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 18 pg_net_18 pg_net_18-0.9.2-2PIGSTY.el8.aarch64.rpm pigsty 0.9.2 26.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_net_18-0.9.2-2PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 18 pg_net_18 pg_net_18-0.9.2-2PIGSTY.el9.x86_64.rpm pigsty 0.9.2 26.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_net_18-0.9.2-2PIGSTY.el9.x86_64.rpm
@@ -88,6 +88,8 @@ weight: 4080
 @ u22.aarch64 18 postgresql-18-pg-net postgresql-18-pg-net_0.9.2-2PIGSTY~jammy_arm64.deb pigsty 0.9.2 40.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-net/postgresql-18-pg-net_0.9.2-2PIGSTY~jammy_arm64.deb
 @ u24.x86_64 18 postgresql-18-pg-net postgresql-18-pg-net_0.20.2-1PIGSTY~noble_amd64.deb pigsty 0.20.2 62.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-net/postgresql-18-pg-net_0.20.2-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 18 postgresql-18-pg-net postgresql-18-pg-net_0.20.2-1PIGSTY~noble_arm64.deb pigsty 0.20.2 61.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-net/postgresql-18-pg-net_0.20.2-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 18 postgresql-18-pg-net postgresql-18-pg-net_0.20.2-1PIGSTY~resolute_amd64.deb pigsty 0.20.2 61.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-net/postgresql-18-pg-net_0.20.2-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 18 postgresql-18-pg-net postgresql-18-pg-net_0.20.2-1PIGSTY~resolute_arm64.deb pigsty 0.20.2 60.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-net/postgresql-18-pg-net_0.20.2-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 17 pg_net_17 pg_net_17-0.9.2-2PIGSTY.el8.x86_64.rpm pigsty 0.9.2 27.1KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_net_17-0.9.2-2PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 17 pg_net_17 pg_net_17-0.9.2-2PIGSTY.el8.aarch64.rpm pigsty 0.9.2 26.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_net_17-0.9.2-2PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 17 pg_net_17 pg_net_17-0.9.2-2PIGSTY.el9.x86_64.rpm pigsty 0.9.2 26.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_net_17-0.9.2-2PIGSTY.el9.x86_64.rpm
@@ -122,6 +124,8 @@ weight: 4080
 @ u22.aarch64 17 postgresql-17-pg-net postgresql-17-pg-net_0.9.2-2PIGSTY~jammy_arm64.deb pigsty 0.9.2 43.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-net/postgresql-17-pg-net_0.9.2-2PIGSTY~jammy_arm64.deb
 @ u24.x86_64 17 postgresql-17-pg-net postgresql-17-pg-net_0.20.2-1PIGSTY~noble_amd64.deb pigsty 0.20.2 62.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-net/postgresql-17-pg-net_0.20.2-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 17 postgresql-17-pg-net postgresql-17-pg-net_0.20.2-1PIGSTY~noble_arm64.deb pigsty 0.20.2 61.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-net/postgresql-17-pg-net_0.20.2-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 17 postgresql-17-pg-net postgresql-17-pg-net_0.20.2-1PIGSTY~resolute_amd64.deb pigsty 0.20.2 61.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-net/postgresql-17-pg-net_0.20.2-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 17 postgresql-17-pg-net postgresql-17-pg-net_0.20.2-1PIGSTY~resolute_arm64.deb pigsty 0.20.2 60.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-net/postgresql-17-pg-net_0.20.2-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 16 pg_net_16 pg_net_16-0.9.2-2PIGSTY.el8.x86_64.rpm pigsty 0.9.2 27.1KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_net_16-0.9.2-2PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 16 pg_net_16 pg_net_16-0.9.2-1PGDG.rhel8.x86_64.rpm pgdg 0.9.2 21.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_net_16-0.9.2-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 16 pg_net_16 pg_net_16-0.9.1-1PGDG.rhel8.x86_64.rpm pgdg 0.9.1 21.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_net_16-0.9.1-1PGDG.rhel8.x86_64.rpm
@@ -164,6 +168,8 @@ weight: 4080
 @ u22.aarch64 16 postgresql-16-pg-net postgresql-16-pg-net_0.9.2-2PIGSTY~jammy_arm64.deb pigsty 0.9.2 43.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-net/postgresql-16-pg-net_0.9.2-2PIGSTY~jammy_arm64.deb
 @ u24.x86_64 16 postgresql-16-pg-net postgresql-16-pg-net_0.20.2-1PIGSTY~noble_amd64.deb pigsty 0.20.2 62.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-net/postgresql-16-pg-net_0.20.2-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 16 postgresql-16-pg-net postgresql-16-pg-net_0.20.2-1PIGSTY~noble_arm64.deb pigsty 0.20.2 61.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-net/postgresql-16-pg-net_0.20.2-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 16 postgresql-16-pg-net postgresql-16-pg-net_0.20.2-1PIGSTY~resolute_amd64.deb pigsty 0.20.2 62.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-net/postgresql-16-pg-net_0.20.2-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 16 postgresql-16-pg-net postgresql-16-pg-net_0.20.2-1PIGSTY~resolute_arm64.deb pigsty 0.20.2 61.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-net/postgresql-16-pg-net_0.20.2-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 15 pg_net_15 pg_net_15-0.9.2-2PIGSTY.el8.x86_64.rpm pigsty 0.9.2 27.1KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_net_15-0.9.2-2PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 15 pg_net_15 pg_net_15-0.9.2-1PGDG.rhel8.x86_64.rpm pgdg 0.9.2 21.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_net_15-0.9.2-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 15 pg_net_15 pg_net_15-0.9.1-1PGDG.rhel8.x86_64.rpm pgdg 0.9.1 21.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_net_15-0.9.1-1PGDG.rhel8.x86_64.rpm
@@ -206,6 +212,8 @@ weight: 4080
 @ u22.aarch64 15 postgresql-15-pg-net postgresql-15-pg-net_0.9.2-2PIGSTY~jammy_arm64.deb pigsty 0.9.2 43.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-net/postgresql-15-pg-net_0.9.2-2PIGSTY~jammy_arm64.deb
 @ u24.x86_64 15 postgresql-15-pg-net postgresql-15-pg-net_0.20.2-1PIGSTY~noble_amd64.deb pigsty 0.20.2 63.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-net/postgresql-15-pg-net_0.20.2-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 15 postgresql-15-pg-net postgresql-15-pg-net_0.20.2-1PIGSTY~noble_arm64.deb pigsty 0.20.2 62.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-net/postgresql-15-pg-net_0.20.2-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 15 postgresql-15-pg-net postgresql-15-pg-net_0.20.2-1PIGSTY~resolute_amd64.deb pigsty 0.20.2 63.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-net/postgresql-15-pg-net_0.20.2-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 15 postgresql-15-pg-net postgresql-15-pg-net_0.20.2-1PIGSTY~resolute_arm64.deb pigsty 0.20.2 62.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-net/postgresql-15-pg-net_0.20.2-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 14 pg_net_14 pg_net_14-0.9.2-2PIGSTY.el8.x86_64.rpm pigsty 0.9.2 27.1KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_net_14-0.9.2-2PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 14 pg_net_14 pg_net_14-0.9.2-1PGDG.rhel8.x86_64.rpm pgdg 0.9.2 21.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_net_14-0.9.2-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 14 pg_net_14 pg_net_14-0.9.1-1PGDG.rhel8.x86_64.rpm pgdg 0.9.1 21.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_net_14-0.9.1-1PGDG.rhel8.x86_64.rpm
@@ -248,6 +256,8 @@ weight: 4080
 @ u22.aarch64 14 postgresql-14-pg-net postgresql-14-pg-net_0.9.2-2PIGSTY~jammy_arm64.deb pigsty 0.9.2 43.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-net/postgresql-14-pg-net_0.9.2-2PIGSTY~jammy_arm64.deb
 @ u24.x86_64 14 postgresql-14-pg-net postgresql-14-pg-net_0.20.2-1PIGSTY~noble_amd64.deb pigsty 0.20.2 63.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-net/postgresql-14-pg-net_0.20.2-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 14 postgresql-14-pg-net postgresql-14-pg-net_0.20.2-1PIGSTY~noble_arm64.deb pigsty 0.20.2 62.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-net/postgresql-14-pg-net_0.20.2-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 14 postgresql-14-pg-net postgresql-14-pg-net_0.20.2-1PIGSTY~resolute_amd64.deb pigsty 0.20.2 63.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-net/postgresql-14-pg-net_0.20.2-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 14 postgresql-14-pg-net postgresql-14-pg-net_0.20.2-1PIGSTY~resolute_arm64.deb pigsty 0.20.2 61.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-net/postgresql-14-pg-net_0.20.2-1PIGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建

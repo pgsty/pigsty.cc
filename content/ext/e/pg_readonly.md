@@ -64,8 +64,8 @@ weight: 5120
 | u22.aarch64 | AVAIL PIGSTY 1.0.4 1 | AVAIL PIGSTY 1.0.4 1 | AVAIL PIGSTY 1.0.4 1 | AVAIL PIGSTY 1.0.4 1 | AVAIL PIGSTY 1.0.4 1 |
 | u24.x86_64 | AVAIL PIGSTY 1.0.4 1 | AVAIL PIGSTY 1.0.4 1 | AVAIL PIGSTY 1.0.4 1 | AVAIL PIGSTY 1.0.4 1 | AVAIL PIGSTY 1.0.4 1 |
 | u24.aarch64 | AVAIL PIGSTY 1.0.4 1 | AVAIL PIGSTY 1.0.4 1 | AVAIL PIGSTY 1.0.4 1 | AVAIL PIGSTY 1.0.4 1 | AVAIL PIGSTY 1.0.4 1 |
-| u26.x86_64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| u26.aarch64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| u26.x86_64 | AVAIL PIGSTY 1.0.4 1 | AVAIL PIGSTY 1.0.4 1 | AVAIL PIGSTY 1.0.4 1 | AVAIL PIGSTY 1.0.4 1 | AVAIL PIGSTY 1.0.4 1 |
+| u26.aarch64 | AVAIL PIGSTY 1.0.4 1 | AVAIL PIGSTY 1.0.4 1 | AVAIL PIGSTY 1.0.4 1 | AVAIL PIGSTY 1.0.4 1 | AVAIL PIGSTY 1.0.4 1 |
 @ el8.x86_64 18 pg_readonly_18 pg_readonly_18-1.0.4-1PGDG.rhel8.10.x86_64.rpm pgdg 1.0.4 16.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pg_readonly_18-1.0.4-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 18 pg_readonly_18 pg_readonly_18-1.0.3-5PGDG.rhel8.x86_64.rpm pgdg 1.0.3 16.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pg_readonly_18-1.0.3-5PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 18 pg_readonly_18 pg_readonly_18-1.0.4-1PGDG.rhel8.10.aarch64.rpm pgdg 1.0.4 16.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pg_readonly_18-1.0.4-1PGDG.rhel8.10.aarch64.rpm
@@ -86,6 +86,8 @@ weight: 5120
 @ u22.aarch64 18 postgresql-18-pg-readonly postgresql-18-pg-readonly_1.0.4-1PIGSTY~jammy_arm64.deb pigsty 1.0.4 16.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-readonly/postgresql-18-pg-readonly_1.0.4-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 18 postgresql-18-pg-readonly postgresql-18-pg-readonly_1.0.4-1PIGSTY~noble_amd64.deb pigsty 1.0.4 17.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-readonly/postgresql-18-pg-readonly_1.0.4-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 18 postgresql-18-pg-readonly postgresql-18-pg-readonly_1.0.4-1PIGSTY~noble_arm64.deb pigsty 1.0.4 17.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-readonly/postgresql-18-pg-readonly_1.0.4-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 18 postgresql-18-pg-readonly postgresql-18-pg-readonly_1.0.4-1PIGSTY~resolute_amd64.deb pigsty 1.0.4 17.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-readonly/postgresql-18-pg-readonly_1.0.4-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 18 postgresql-18-pg-readonly postgresql-18-pg-readonly_1.0.4-1PIGSTY~resolute_arm64.deb pigsty 1.0.4 16.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-readonly/postgresql-18-pg-readonly_1.0.4-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 17 pg_readonly_17 pg_readonly_17-1.0.4-1PGDG.rhel8.10.x86_64.rpm pgdg 1.0.4 16.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pg_readonly_17-1.0.4-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 pg_readonly_17 pg_readonly_17-1.0.3-4PGDG.rhel8.x86_64.rpm pgdg 1.0.3 16.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pg_readonly_17-1.0.3-4PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 17 pg_readonly_17 pg_readonly_17-1.0.4-1PGDG.rhel8.10.aarch64.rpm pgdg 1.0.4 16.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pg_readonly_17-1.0.4-1PGDG.rhel8.10.aarch64.rpm
@@ -106,6 +108,8 @@ weight: 5120
 @ u22.aarch64 17 postgresql-17-pg-readonly postgresql-17-pg-readonly_1.0.4-1PIGSTY~jammy_arm64.deb pigsty 1.0.4 19.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-readonly/postgresql-17-pg-readonly_1.0.4-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 17 postgresql-17-pg-readonly postgresql-17-pg-readonly_1.0.4-1PIGSTY~noble_amd64.deb pigsty 1.0.4 17.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-readonly/postgresql-17-pg-readonly_1.0.4-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 17 postgresql-17-pg-readonly postgresql-17-pg-readonly_1.0.4-1PIGSTY~noble_arm64.deb pigsty 1.0.4 17.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-readonly/postgresql-17-pg-readonly_1.0.4-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 17 postgresql-17-pg-readonly postgresql-17-pg-readonly_1.0.4-1PIGSTY~resolute_amd64.deb pigsty 1.0.4 17.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-readonly/postgresql-17-pg-readonly_1.0.4-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 17 postgresql-17-pg-readonly postgresql-17-pg-readonly_1.0.4-1PIGSTY~resolute_arm64.deb pigsty 1.0.4 17.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-readonly/postgresql-17-pg-readonly_1.0.4-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 16 pg_readonly_16 pg_readonly_16-1.0.4-1PGDG.rhel8.10.x86_64.rpm pgdg 1.0.4 16.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_readonly_16-1.0.4-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 pg_readonly_16 pg_readonly_16-1.0.3-2.rhel8.1.x86_64.rpm pgdg 1.0.3 16.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_readonly_16-1.0.3-2.rhel8.1.x86_64.rpm
 @ el8.aarch64 16 pg_readonly_16 pg_readonly_16-1.0.4-1PGDG.rhel8.10.aarch64.rpm pgdg 1.0.4 16.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pg_readonly_16-1.0.4-1PGDG.rhel8.10.aarch64.rpm
@@ -126,6 +130,8 @@ weight: 5120
 @ u22.aarch64 16 postgresql-16-pg-readonly postgresql-16-pg-readonly_1.0.4-1PIGSTY~jammy_arm64.deb pigsty 1.0.4 19.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-readonly/postgresql-16-pg-readonly_1.0.4-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 16 postgresql-16-pg-readonly postgresql-16-pg-readonly_1.0.4-1PIGSTY~noble_amd64.deb pigsty 1.0.4 17.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-readonly/postgresql-16-pg-readonly_1.0.4-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 16 postgresql-16-pg-readonly postgresql-16-pg-readonly_1.0.4-1PIGSTY~noble_arm64.deb pigsty 1.0.4 17.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-readonly/postgresql-16-pg-readonly_1.0.4-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 16 postgresql-16-pg-readonly postgresql-16-pg-readonly_1.0.4-1PIGSTY~resolute_amd64.deb pigsty 1.0.4 17.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-readonly/postgresql-16-pg-readonly_1.0.4-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 16 postgresql-16-pg-readonly postgresql-16-pg-readonly_1.0.4-1PIGSTY~resolute_arm64.deb pigsty 1.0.4 17.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-readonly/postgresql-16-pg-readonly_1.0.4-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 15 pg_readonly_15 pg_readonly_15-1.0.4-1PGDG.rhel8.10.x86_64.rpm pgdg 1.0.4 16.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_readonly_15-1.0.4-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 pg_readonly_15 pg_readonly_15-1.0.3-1.rhel8.x86_64.rpm pgdg 1.0.3 30.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_readonly_15-1.0.3-1.rhel8.x86_64.rpm
 @ el8.x86_64 15 pg_readonly_15 pg_readonly_15-1.0.1-1.rhel8.x86_64.rpm pgdg 1.0.1 29.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_readonly_15-1.0.1-1.rhel8.x86_64.rpm
@@ -148,6 +154,8 @@ weight: 5120
 @ u22.aarch64 15 postgresql-15-pg-readonly postgresql-15-pg-readonly_1.0.4-1PIGSTY~jammy_arm64.deb pigsty 1.0.4 19.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-readonly/postgresql-15-pg-readonly_1.0.4-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 15 postgresql-15-pg-readonly postgresql-15-pg-readonly_1.0.4-1PIGSTY~noble_amd64.deb pigsty 1.0.4 17.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-readonly/postgresql-15-pg-readonly_1.0.4-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 15 postgresql-15-pg-readonly postgresql-15-pg-readonly_1.0.4-1PIGSTY~noble_arm64.deb pigsty 1.0.4 17.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-readonly/postgresql-15-pg-readonly_1.0.4-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 15 postgresql-15-pg-readonly postgresql-15-pg-readonly_1.0.4-1PIGSTY~resolute_amd64.deb pigsty 1.0.4 17.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-readonly/postgresql-15-pg-readonly_1.0.4-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 15 postgresql-15-pg-readonly postgresql-15-pg-readonly_1.0.4-1PIGSTY~resolute_arm64.deb pigsty 1.0.4 16.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-readonly/postgresql-15-pg-readonly_1.0.4-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 14 pg_readonly_14 pg_readonly_14-1.0.4-1PGDG.rhel8.10.x86_64.rpm pgdg 1.0.4 16.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_readonly_14-1.0.4-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 14 pg_readonly_14 pg_readonly_14-1.0.3-1.rhel8.x86_64.rpm pgdg 1.0.3 30.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_readonly_14-1.0.3-1.rhel8.x86_64.rpm
 @ el8.x86_64 14 pg_readonly_14 pg_readonly_14-1.0.1-1.rhel8.x86_64.rpm pgdg 1.0.1 29.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_readonly_14-1.0.1-1.rhel8.x86_64.rpm
@@ -170,6 +178,8 @@ weight: 5120
 @ u22.aarch64 14 postgresql-14-pg-readonly postgresql-14-pg-readonly_1.0.4-1PIGSTY~jammy_arm64.deb pigsty 1.0.4 19.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-readonly/postgresql-14-pg-readonly_1.0.4-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 14 postgresql-14-pg-readonly postgresql-14-pg-readonly_1.0.4-1PIGSTY~noble_amd64.deb pigsty 1.0.4 17.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-readonly/postgresql-14-pg-readonly_1.0.4-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 14 postgresql-14-pg-readonly postgresql-14-pg-readonly_1.0.4-1PIGSTY~noble_arm64.deb pigsty 1.0.4 16.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-readonly/postgresql-14-pg-readonly_1.0.4-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 14 postgresql-14-pg-readonly postgresql-14-pg-readonly_1.0.4-1PIGSTY~resolute_amd64.deb pigsty 1.0.4 16.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-readonly/postgresql-14-pg-readonly_1.0.4-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 14 postgresql-14-pg-readonly postgresql-14-pg-readonly_1.0.4-1PIGSTY~resolute_arm64.deb pigsty 1.0.4 16.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-readonly/postgresql-14-pg-readonly_1.0.4-1PIGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建

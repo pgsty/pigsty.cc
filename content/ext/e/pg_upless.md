@@ -64,8 +64,8 @@ weight: 5180
 | u22.aarch64 | AVAIL PIGSTY 0.0.3 1 | AVAIL PIGSTY 0.0.3 1 | AVAIL PIGSTY 0.0.3 1 | AVAIL PIGSTY 0.0.3 1 | AVAIL PIGSTY 0.0.3 1 |
 | u24.x86_64 | AVAIL PIGSTY 0.0.3 1 | AVAIL PIGSTY 0.0.3 1 | AVAIL PIGSTY 0.0.3 1 | AVAIL PIGSTY 0.0.3 1 | AVAIL PIGSTY 0.0.3 1 |
 | u24.aarch64 | AVAIL PIGSTY 0.0.3 1 | AVAIL PIGSTY 0.0.3 1 | AVAIL PIGSTY 0.0.3 1 | AVAIL PIGSTY 0.0.3 1 | AVAIL PIGSTY 0.0.3 1 |
-| u26.x86_64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| u26.aarch64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| u26.x86_64 | AVAIL PIGSTY 0.0.3 1 | AVAIL PIGSTY 0.0.3 1 | AVAIL PIGSTY 0.0.3 1 | AVAIL PIGSTY 0.0.3 1 | AVAIL PIGSTY 0.0.3 1 |
+| u26.aarch64 | AVAIL PIGSTY 0.0.3 1 | AVAIL PIGSTY 0.0.3 1 | AVAIL PIGSTY 0.0.3 1 | AVAIL PIGSTY 0.0.3 1 | AVAIL PIGSTY 0.0.3 1 |
 @ el8.x86_64 18 pg_upless_18 pg_upless_18-0.0.3-1PIGSTY.el8.x86_64.rpm pigsty 0.0.3 11.6KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_upless_18-0.0.3-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 18 pg_upless_18 pg_upless_18-0.0.3-1PIGSTY.el8.aarch64.rpm pigsty 0.0.3 11.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_upless_18-0.0.3-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 18 pg_upless_18 pg_upless_18-0.0.3-1PIGSTY.el9.x86_64.rpm pigsty 0.0.3 11.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_upless_18-0.0.3-1PIGSTY.el9.x86_64.rpm
@@ -80,6 +80,8 @@ weight: 5180
 @ u22.aarch64 18 postgresql-18-pg-upless postgresql-18-pg-upless_0.0.3-1PIGSTY~jammy_arm64.deb pigsty 0.0.3 4.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-upless/postgresql-18-pg-upless_0.0.3-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 18 postgresql-18-pg-upless postgresql-18-pg-upless_0.0.3-1PIGSTY~noble_amd64.deb pigsty 0.0.3 4.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-upless/postgresql-18-pg-upless_0.0.3-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 18 postgresql-18-pg-upless postgresql-18-pg-upless_0.0.3-1PIGSTY~noble_arm64.deb pigsty 0.0.3 4.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-upless/postgresql-18-pg-upless_0.0.3-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 18 postgresql-18-pg-upless postgresql-18-pg-upless_0.0.3-1PIGSTY~resolute_amd64.deb pigsty 0.0.3 4.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-upless/postgresql-18-pg-upless_0.0.3-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 18 postgresql-18-pg-upless postgresql-18-pg-upless_0.0.3-1PIGSTY~resolute_arm64.deb pigsty 0.0.3 4.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-upless/postgresql-18-pg-upless_0.0.3-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 17 pg_upless_17 pg_upless_17-0.0.3-1PIGSTY.el8.x86_64.rpm pigsty 0.0.3 11.6KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_upless_17-0.0.3-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 17 pg_upless_17 pg_upless_17-0.0.3-1PIGSTY.el8.aarch64.rpm pigsty 0.0.3 11.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_upless_17-0.0.3-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 17 pg_upless_17 pg_upless_17-0.0.3-1PIGSTY.el9.x86_64.rpm pigsty 0.0.3 11.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_upless_17-0.0.3-1PIGSTY.el9.x86_64.rpm
@@ -94,6 +96,8 @@ weight: 5180
 @ u22.aarch64 17 postgresql-17-pg-upless postgresql-17-pg-upless_0.0.3-1PIGSTY~jammy_arm64.deb pigsty 0.0.3 4.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-upless/postgresql-17-pg-upless_0.0.3-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 17 postgresql-17-pg-upless postgresql-17-pg-upless_0.0.3-1PIGSTY~noble_amd64.deb pigsty 0.0.3 4.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-upless/postgresql-17-pg-upless_0.0.3-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 17 postgresql-17-pg-upless postgresql-17-pg-upless_0.0.3-1PIGSTY~noble_arm64.deb pigsty 0.0.3 4.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-upless/postgresql-17-pg-upless_0.0.3-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 17 postgresql-17-pg-upless postgresql-17-pg-upless_0.0.3-1PIGSTY~resolute_amd64.deb pigsty 0.0.3 4.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-upless/postgresql-17-pg-upless_0.0.3-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 17 postgresql-17-pg-upless postgresql-17-pg-upless_0.0.3-1PIGSTY~resolute_arm64.deb pigsty 0.0.3 4.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-upless/postgresql-17-pg-upless_0.0.3-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 16 pg_upless_16 pg_upless_16-0.0.3-1PIGSTY.el8.x86_64.rpm pigsty 0.0.3 11.6KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_upless_16-0.0.3-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 16 pg_upless_16 pg_upless_16-0.0.3-1PIGSTY.el8.aarch64.rpm pigsty 0.0.3 11.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_upless_16-0.0.3-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 16 pg_upless_16 pg_upless_16-0.0.3-1PIGSTY.el9.x86_64.rpm pigsty 0.0.3 11.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_upless_16-0.0.3-1PIGSTY.el9.x86_64.rpm
@@ -108,6 +112,8 @@ weight: 5180
 @ u22.aarch64 16 postgresql-16-pg-upless postgresql-16-pg-upless_0.0.3-1PIGSTY~jammy_arm64.deb pigsty 0.0.3 4.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-upless/postgresql-16-pg-upless_0.0.3-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 16 postgresql-16-pg-upless postgresql-16-pg-upless_0.0.3-1PIGSTY~noble_amd64.deb pigsty 0.0.3 4.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-upless/postgresql-16-pg-upless_0.0.3-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 16 postgresql-16-pg-upless postgresql-16-pg-upless_0.0.3-1PIGSTY~noble_arm64.deb pigsty 0.0.3 4.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-upless/postgresql-16-pg-upless_0.0.3-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 16 postgresql-16-pg-upless postgresql-16-pg-upless_0.0.3-1PIGSTY~resolute_amd64.deb pigsty 0.0.3 4.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-upless/postgresql-16-pg-upless_0.0.3-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 16 postgresql-16-pg-upless postgresql-16-pg-upless_0.0.3-1PIGSTY~resolute_arm64.deb pigsty 0.0.3 4.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-upless/postgresql-16-pg-upless_0.0.3-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 15 pg_upless_15 pg_upless_15-0.0.3-1PIGSTY.el8.x86_64.rpm pigsty 0.0.3 11.6KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_upless_15-0.0.3-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 15 pg_upless_15 pg_upless_15-0.0.3-1PIGSTY.el8.aarch64.rpm pigsty 0.0.3 11.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_upless_15-0.0.3-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 15 pg_upless_15 pg_upless_15-0.0.3-1PIGSTY.el9.x86_64.rpm pigsty 0.0.3 11.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_upless_15-0.0.3-1PIGSTY.el9.x86_64.rpm
@@ -122,6 +128,8 @@ weight: 5180
 @ u22.aarch64 15 postgresql-15-pg-upless postgresql-15-pg-upless_0.0.3-1PIGSTY~jammy_arm64.deb pigsty 0.0.3 4.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-upless/postgresql-15-pg-upless_0.0.3-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 15 postgresql-15-pg-upless postgresql-15-pg-upless_0.0.3-1PIGSTY~noble_amd64.deb pigsty 0.0.3 4.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-upless/postgresql-15-pg-upless_0.0.3-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 15 postgresql-15-pg-upless postgresql-15-pg-upless_0.0.3-1PIGSTY~noble_arm64.deb pigsty 0.0.3 4.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-upless/postgresql-15-pg-upless_0.0.3-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 15 postgresql-15-pg-upless postgresql-15-pg-upless_0.0.3-1PIGSTY~resolute_amd64.deb pigsty 0.0.3 4.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-upless/postgresql-15-pg-upless_0.0.3-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 15 postgresql-15-pg-upless postgresql-15-pg-upless_0.0.3-1PIGSTY~resolute_arm64.deb pigsty 0.0.3 4.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-upless/postgresql-15-pg-upless_0.0.3-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 14 pg_upless_14 pg_upless_14-0.0.3-1PIGSTY.el8.x86_64.rpm pigsty 0.0.3 11.6KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_upless_14-0.0.3-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 14 pg_upless_14 pg_upless_14-0.0.3-1PIGSTY.el8.aarch64.rpm pigsty 0.0.3 11.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_upless_14-0.0.3-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 14 pg_upless_14 pg_upless_14-0.0.3-1PIGSTY.el9.x86_64.rpm pigsty 0.0.3 11.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_upless_14-0.0.3-1PIGSTY.el9.x86_64.rpm
@@ -136,6 +144,8 @@ weight: 5180
 @ u22.aarch64 14 postgresql-14-pg-upless postgresql-14-pg-upless_0.0.3-1PIGSTY~jammy_arm64.deb pigsty 0.0.3 4.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-upless/postgresql-14-pg-upless_0.0.3-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 14 postgresql-14-pg-upless postgresql-14-pg-upless_0.0.3-1PIGSTY~noble_amd64.deb pigsty 0.0.3 4.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-upless/postgresql-14-pg-upless_0.0.3-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 14 postgresql-14-pg-upless postgresql-14-pg-upless_0.0.3-1PIGSTY~noble_arm64.deb pigsty 0.0.3 4.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-upless/postgresql-14-pg-upless_0.0.3-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 14 postgresql-14-pg-upless postgresql-14-pg-upless_0.0.3-1PIGSTY~resolute_amd64.deb pigsty 0.0.3 4.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-upless/postgresql-14-pg-upless_0.0.3-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 14 postgresql-14-pg-upless postgresql-14-pg-upless_0.0.3-1PIGSTY~resolute_arm64.deb pigsty 0.0.3 4.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-upless/postgresql-14-pg-upless_0.0.3-1PIGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建

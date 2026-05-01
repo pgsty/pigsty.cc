@@ -64,8 +64,8 @@ weight: 4430
 | u22.aarch64 | AVAIL PIGSTY 0.0.1 1 | AVAIL PIGSTY 0.0.1 1 | AVAIL PIGSTY 0.0.1 1 | AVAIL PIGSTY 0.0.1 1 | AVAIL PIGSTY 0.0.1 1 |
 | u24.x86_64 | AVAIL PIGSTY 0.0.1 1 | AVAIL PIGSTY 0.0.1 1 | AVAIL PIGSTY 0.0.1 1 | AVAIL PIGSTY 0.0.1 1 | AVAIL PIGSTY 0.0.1 1 |
 | u24.aarch64 | AVAIL PIGSTY 0.0.1 1 | AVAIL PIGSTY 0.0.1 1 | AVAIL PIGSTY 0.0.1 1 | AVAIL PIGSTY 0.0.1 1 | AVAIL PIGSTY 0.0.1 1 |
-| u26.x86_64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| u26.aarch64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| u26.x86_64 | AVAIL PIGSTY 0.0.1 1 | AVAIL PIGSTY 0.0.1 1 | AVAIL PIGSTY 0.0.1 1 | AVAIL PIGSTY 0.0.1 1 | AVAIL PIGSTY 0.0.1 1 |
+| u26.aarch64 | AVAIL PIGSTY 0.0.1 1 | AVAIL PIGSTY 0.0.1 1 | AVAIL PIGSTY 0.0.1 1 | AVAIL PIGSTY 0.0.1 1 | AVAIL PIGSTY 0.0.1 1 |
 @ el8.x86_64 18 pg_xxhash_18 pg_xxhash_18-0.0.1-1PIGSTY.el8.x86_64.rpm pigsty 0.0.1 30.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_xxhash_18-0.0.1-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 18 pg_xxhash_18 pg_xxhash_18-0.0.1-1PIGSTY.el8.aarch64.rpm pigsty 0.0.1 30.8KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_xxhash_18-0.0.1-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 18 pg_xxhash_18 pg_xxhash_18-0.0.1-1PIGSTY.el9.x86_64.rpm pigsty 0.0.1 18.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_xxhash_18-0.0.1-1PIGSTY.el9.x86_64.rpm
@@ -80,6 +80,8 @@ weight: 4430
 @ u22.aarch64 18 postgresql-18-pg-xxhash postgresql-18-pg-xxhash_0.0.1-1PIGSTY~jammy_arm64.deb pigsty 0.0.1 76.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-xxhash/postgresql-18-pg-xxhash_0.0.1-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 18 postgresql-18-pg-xxhash postgresql-18-pg-xxhash_0.0.1-1PIGSTY~noble_amd64.deb pigsty 0.0.1 62.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-xxhash/postgresql-18-pg-xxhash_0.0.1-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 18 postgresql-18-pg-xxhash postgresql-18-pg-xxhash_0.0.1-1PIGSTY~noble_arm64.deb pigsty 0.0.1 67.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-xxhash/postgresql-18-pg-xxhash_0.0.1-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 18 postgresql-18-pg-xxhash postgresql-18-pg-xxhash_0.0.1-1PIGSTY~resolute_amd64.deb pigsty 0.0.1 63.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-xxhash/postgresql-18-pg-xxhash_0.0.1-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 18 postgresql-18-pg-xxhash postgresql-18-pg-xxhash_0.0.1-1PIGSTY~resolute_arm64.deb pigsty 0.0.1 68.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-xxhash/postgresql-18-pg-xxhash_0.0.1-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 17 pg_xxhash_17 pg_xxhash_17-0.0.1-1PIGSTY.el8.x86_64.rpm pigsty 0.0.1 30.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_xxhash_17-0.0.1-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 17 pg_xxhash_17 pg_xxhash_17-0.0.1-1PIGSTY.el8.aarch64.rpm pigsty 0.0.1 30.8KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_xxhash_17-0.0.1-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 17 pg_xxhash_17 pg_xxhash_17-0.0.1-1PIGSTY.el9.x86_64.rpm pigsty 0.0.1 18.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_xxhash_17-0.0.1-1PIGSTY.el9.x86_64.rpm
@@ -94,6 +96,8 @@ weight: 4430
 @ u22.aarch64 17 postgresql-17-pg-xxhash postgresql-17-pg-xxhash_0.0.1-1PIGSTY~jammy_arm64.deb pigsty 0.0.1 78.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-xxhash/postgresql-17-pg-xxhash_0.0.1-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 17 postgresql-17-pg-xxhash postgresql-17-pg-xxhash_0.0.1-1PIGSTY~noble_amd64.deb pigsty 0.0.1 62.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-xxhash/postgresql-17-pg-xxhash_0.0.1-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 17 postgresql-17-pg-xxhash postgresql-17-pg-xxhash_0.0.1-1PIGSTY~noble_arm64.deb pigsty 0.0.1 67.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-xxhash/postgresql-17-pg-xxhash_0.0.1-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 17 postgresql-17-pg-xxhash postgresql-17-pg-xxhash_0.0.1-1PIGSTY~resolute_amd64.deb pigsty 0.0.1 63.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-xxhash/postgresql-17-pg-xxhash_0.0.1-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 17 postgresql-17-pg-xxhash postgresql-17-pg-xxhash_0.0.1-1PIGSTY~resolute_arm64.deb pigsty 0.0.1 68.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-xxhash/postgresql-17-pg-xxhash_0.0.1-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 16 pg_xxhash_16 pg_xxhash_16-0.0.1-1PIGSTY.el8.x86_64.rpm pigsty 0.0.1 30.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_xxhash_16-0.0.1-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 16 pg_xxhash_16 pg_xxhash_16-0.0.1-1PIGSTY.el8.aarch64.rpm pigsty 0.0.1 30.8KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_xxhash_16-0.0.1-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 16 pg_xxhash_16 pg_xxhash_16-0.0.1-1PIGSTY.el9.x86_64.rpm pigsty 0.0.1 18.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_xxhash_16-0.0.1-1PIGSTY.el9.x86_64.rpm
@@ -108,6 +112,8 @@ weight: 4430
 @ u22.aarch64 16 postgresql-16-pg-xxhash postgresql-16-pg-xxhash_0.0.1-1PIGSTY~jammy_arm64.deb pigsty 0.0.1 78.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-xxhash/postgresql-16-pg-xxhash_0.0.1-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 16 postgresql-16-pg-xxhash postgresql-16-pg-xxhash_0.0.1-1PIGSTY~noble_amd64.deb pigsty 0.0.1 62.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-xxhash/postgresql-16-pg-xxhash_0.0.1-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 16 postgresql-16-pg-xxhash postgresql-16-pg-xxhash_0.0.1-1PIGSTY~noble_arm64.deb pigsty 0.0.1 67.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-xxhash/postgresql-16-pg-xxhash_0.0.1-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 16 postgresql-16-pg-xxhash postgresql-16-pg-xxhash_0.0.1-1PIGSTY~resolute_amd64.deb pigsty 0.0.1 63.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-xxhash/postgresql-16-pg-xxhash_0.0.1-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 16 postgresql-16-pg-xxhash postgresql-16-pg-xxhash_0.0.1-1PIGSTY~resolute_arm64.deb pigsty 0.0.1 68.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-xxhash/postgresql-16-pg-xxhash_0.0.1-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 15 pg_xxhash_15 pg_xxhash_15-0.0.1-1PIGSTY.el8.x86_64.rpm pigsty 0.0.1 31.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_xxhash_15-0.0.1-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 15 pg_xxhash_15 pg_xxhash_15-0.0.1-1PIGSTY.el8.aarch64.rpm pigsty 0.0.1 31.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_xxhash_15-0.0.1-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 15 pg_xxhash_15 pg_xxhash_15-0.0.1-1PIGSTY.el9.x86_64.rpm pigsty 0.0.1 29.1KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_xxhash_15-0.0.1-1PIGSTY.el9.x86_64.rpm
@@ -122,6 +128,8 @@ weight: 4430
 @ u22.aarch64 15 postgresql-15-pg-xxhash postgresql-15-pg-xxhash_0.0.1-1PIGSTY~jammy_arm64.deb pigsty 0.0.1 89.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-xxhash/postgresql-15-pg-xxhash_0.0.1-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 15 postgresql-15-pg-xxhash postgresql-15-pg-xxhash_0.0.1-1PIGSTY~noble_amd64.deb pigsty 0.0.1 73.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-xxhash/postgresql-15-pg-xxhash_0.0.1-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 15 postgresql-15-pg-xxhash postgresql-15-pg-xxhash_0.0.1-1PIGSTY~noble_arm64.deb pigsty 0.0.1 78.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-xxhash/postgresql-15-pg-xxhash_0.0.1-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 15 postgresql-15-pg-xxhash postgresql-15-pg-xxhash_0.0.1-1PIGSTY~resolute_amd64.deb pigsty 0.0.1 74.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-xxhash/postgresql-15-pg-xxhash_0.0.1-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 15 postgresql-15-pg-xxhash postgresql-15-pg-xxhash_0.0.1-1PIGSTY~resolute_arm64.deb pigsty 0.0.1 79.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-xxhash/postgresql-15-pg-xxhash_0.0.1-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 14 pg_xxhash_14 pg_xxhash_14-0.0.1-1PIGSTY.el8.x86_64.rpm pigsty 0.0.1 31.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_xxhash_14-0.0.1-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 14 pg_xxhash_14 pg_xxhash_14-0.0.1-1PIGSTY.el8.aarch64.rpm pigsty 0.0.1 31.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_xxhash_14-0.0.1-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 14 pg_xxhash_14 pg_xxhash_14-0.0.1-1PIGSTY.el9.x86_64.rpm pigsty 0.0.1 29.1KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_xxhash_14-0.0.1-1PIGSTY.el9.x86_64.rpm
@@ -136,6 +144,8 @@ weight: 4430
 @ u22.aarch64 14 postgresql-14-pg-xxhash postgresql-14-pg-xxhash_0.0.1-1PIGSTY~jammy_arm64.deb pigsty 0.0.1 89.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-xxhash/postgresql-14-pg-xxhash_0.0.1-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 14 postgresql-14-pg-xxhash postgresql-14-pg-xxhash_0.0.1-1PIGSTY~noble_amd64.deb pigsty 0.0.1 73.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-xxhash/postgresql-14-pg-xxhash_0.0.1-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 14 postgresql-14-pg-xxhash postgresql-14-pg-xxhash_0.0.1-1PIGSTY~noble_arm64.deb pigsty 0.0.1 78.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-xxhash/postgresql-14-pg-xxhash_0.0.1-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 14 postgresql-14-pg-xxhash postgresql-14-pg-xxhash_0.0.1-1PIGSTY~resolute_amd64.deb pigsty 0.0.1 74.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-xxhash/postgresql-14-pg-xxhash_0.0.1-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 14 postgresql-14-pg-xxhash postgresql-14-pg-xxhash_0.0.1-1PIGSTY~resolute_arm64.deb pigsty 0.0.1 79.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-xxhash/postgresql-14-pg-xxhash_0.0.1-1PIGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建

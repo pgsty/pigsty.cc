@@ -11,10 +11,10 @@ weight: 2100
     <div class="ext-card__title">dev/pg_search</div>
     <div class="ext-card__desc">https://github.com/paradedb/paradedb/tree/dev/pg_search</div>
   </a>
-  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pg_search-0.23.1.tar.gz">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pg_search-0.23.0.tar.gz">
     <div class="ext-card__kicker">源码</div>
-    <div class="ext-card__title">pg_search-0.23.1.tar.gz</div>
-    <div class="ext-card__desc">pg_search-0.23.1.tar.gz</div>
+    <div class="ext-card__title">pg_search-0.23.0.tar.gz</div>
+    <div class="ext-card__desc">pg_search-0.23.0.tar.gz</div>
   </a>
 </div>
 
@@ -54,77 +54,85 @@ weight: 2100
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
 | el8.x86_64 | AVAIL PIGSTY 0.23.0 1 | AVAIL PIGSTY 0.23.0 1 | AVAIL PIGSTY 0.23.0 1 | AVAIL PIGSTY 0.23.0 1 | AVAIL PIGSTY 0.20.10 1 |
-| el8.aarch64 | AVAIL PIGSTY 0.23.0 1 | AVAIL PIGSTY 0.23.0 1 | AVAIL PIGSTY 0.23.0 1 | AVAIL PIGSTY 0.23.0 1 | AVAIL PIGSTY 0.20.10 1 |
-| el9.x86_64 | AVAIL PIGSTY 0.22.6 1 | AVAIL PIGSTY 0.22.6 1 | AVAIL PIGSTY 0.22.6 1 | AVAIL PIGSTY 0.22.6 1 | AVAIL PIGSTY 0.20.10 1 |
-| el9.aarch64 | AVAIL PIGSTY 0.22.6 1 | AVAIL PIGSTY 0.22.6 1 | AVAIL PIGSTY 0.22.6 1 | AVAIL PIGSTY 0.22.6 1 | AVAIL PIGSTY 0.20.10 1 |
-| el10.x86_64 | AVAIL PIGSTY 0.22.6 1 | AVAIL PIGSTY 0.22.6 1 | AVAIL PIGSTY 0.22.6 1 | AVAIL PIGSTY 0.22.6 1 | MISS PIGSTY - 0 |
-| el10.aarch64 | AVAIL PIGSTY 0.22.6 1 | AVAIL PIGSTY 0.22.6 1 | AVAIL PIGSTY 0.22.6 1 | AVAIL PIGSTY 0.22.6 1 | MISS PIGSTY - 0 |
-| d12.x86_64 | AVAIL PIGSTY 0.22.6 1 | AVAIL PIGSTY 0.22.6 1 | AVAIL PIGSTY 0.22.6 1 | AVAIL PIGSTY 0.22.6 1 | AVAIL PIGSTY 0.20.7 1 |
-| d12.aarch64 | AVAIL PIGSTY 0.22.6 1 | AVAIL PIGSTY 0.22.6 1 | AVAIL PIGSTY 0.22.6 1 | AVAIL PIGSTY 0.22.6 1 | AVAIL PIGSTY 0.20.7 1 |
-| d13.x86_64 | AVAIL PIGSTY 0.22.6 1 | AVAIL PIGSTY 0.22.6 1 | AVAIL PIGSTY 0.22.6 1 | AVAIL PIGSTY 0.22.6 1 | AVAIL PIGSTY 0.20.5 1 |
-| d13.aarch64 | AVAIL PIGSTY 0.22.6 1 | AVAIL PIGSTY 0.22.6 1 | AVAIL PIGSTY 0.22.6 1 | AVAIL PIGSTY 0.22.6 1 | AVAIL PIGSTY 0.20.5 1 |
-| u22.x86_64 | AVAIL PIGSTY 0.22.6 1 | AVAIL PIGSTY 0.22.6 1 | AVAIL PIGSTY 0.22.6 1 | AVAIL PIGSTY 0.22.6 1 | AVAIL PIGSTY 0.20.7 1 |
-| u22.aarch64 | AVAIL PIGSTY 0.22.6 1 | AVAIL PIGSTY 0.22.6 1 | AVAIL PIGSTY 0.22.6 1 | AVAIL PIGSTY 0.22.6 1 | AVAIL PIGSTY 0.20.7 1 |
-| u24.x86_64 | AVAIL PIGSTY 0.22.6 1 | AVAIL PIGSTY 0.22.6 1 | AVAIL PIGSTY 0.22.6 1 | AVAIL PIGSTY 0.22.6 1 | AVAIL PIGSTY 0.20.7 1 |
-| u24.aarch64 | AVAIL PIGSTY 0.22.6 1 | AVAIL PIGSTY 0.22.6 1 | AVAIL PIGSTY 0.22.6 1 | AVAIL PIGSTY 0.22.6 1 | AVAIL PIGSTY 0.20.7 1 |
-| u26.x86_64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| u26.aarch64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| el8.aarch64 | AVAIL PIGSTY 0.23.1 1 | AVAIL PIGSTY 0.23.1 1 | AVAIL PIGSTY 0.23.1 1 | AVAIL PIGSTY 0.23.1 1 | AVAIL PIGSTY 0.20.10 1 |
+| el9.x86_64 | AVAIL PIGSTY 0.23.1 1 | AVAIL PIGSTY 0.23.1 1 | AVAIL PIGSTY 0.23.1 1 | AVAIL PIGSTY 0.23.1 1 | AVAIL PIGSTY 0.20.10 1 |
+| el9.aarch64 | AVAIL PIGSTY 0.23.1 1 | AVAIL PIGSTY 0.23.1 1 | AVAIL PIGSTY 0.23.1 1 | AVAIL PIGSTY 0.23.1 1 | AVAIL PIGSTY 0.20.10 1 |
+| el10.x86_64 | AVAIL PIGSTY 0.23.1 1 | AVAIL PIGSTY 0.23.1 1 | AVAIL PIGSTY 0.23.1 1 | AVAIL PIGSTY 0.23.1 1 | MISS PIGSTY - 0 |
+| el10.aarch64 | AVAIL PIGSTY 0.22.6 1 | AVAIL PIGSTY 0.22.6 1 | AVAIL PIGSTY 0.22.6 1 | AVAIL PIGSTY 0.23.1 1 | MISS PIGSTY - 0 |
+| d12.x86_64 | AVAIL PIGSTY 0.23.1 1 | AVAIL PIGSTY 0.23.1 1 | AVAIL PIGSTY 0.23.1 1 | AVAIL PIGSTY 0.23.1 1 | AVAIL PIGSTY 0.20.7 1 |
+| d12.aarch64 | AVAIL PIGSTY 0.23.1 1 | AVAIL PIGSTY 0.23.1 1 | AVAIL PIGSTY 0.23.1 1 | AVAIL PIGSTY 0.23.1 1 | AVAIL PIGSTY 0.20.7 1 |
+| d13.x86_64 | AVAIL PIGSTY 0.23.1 1 | AVAIL PIGSTY 0.23.1 1 | AVAIL PIGSTY 0.23.1 1 | AVAIL PIGSTY 0.23.1 1 | AVAIL PIGSTY 0.20.5 1 |
+| d13.aarch64 | AVAIL PIGSTY 0.23.1 1 | AVAIL PIGSTY 0.23.1 1 | AVAIL PIGSTY 0.23.1 1 | AVAIL PIGSTY 0.23.1 1 | AVAIL PIGSTY 0.20.5 1 |
+| u22.x86_64 | AVAIL PIGSTY 0.23.1 1 | AVAIL PIGSTY 0.23.1 1 | AVAIL PIGSTY 0.23.1 1 | AVAIL PIGSTY 0.23.1 1 | AVAIL PIGSTY 0.20.7 1 |
+| u22.aarch64 | AVAIL PIGSTY 0.23.1 1 | AVAIL PIGSTY 0.23.1 1 | AVAIL PIGSTY 0.23.1 1 | AVAIL PIGSTY 0.23.1 1 | AVAIL PIGSTY 0.20.7 1 |
+| u24.x86_64 | AVAIL PIGSTY 0.23.1 1 | AVAIL PIGSTY 0.23.1 1 | AVAIL PIGSTY 0.23.1 1 | AVAIL PIGSTY 0.23.1 1 | AVAIL PIGSTY 0.20.7 1 |
+| u24.aarch64 | AVAIL PIGSTY 0.23.1 1 | AVAIL PIGSTY 0.23.1 1 | AVAIL PIGSTY 0.23.1 1 | AVAIL PIGSTY 0.23.1 1 | AVAIL PIGSTY 0.20.7 1 |
+| u26.x86_64 | AVAIL PIGSTY 0.23.0 1 | AVAIL PIGSTY 0.23.0 1 | AVAIL PIGSTY 0.23.0 1 | AVAIL PIGSTY 0.23.0 1 | MISS PIGSTY - 0 |
+| u26.aarch64 | AVAIL PIGSTY 0.23.0 1 | AVAIL PIGSTY 0.23.0 1 | AVAIL PIGSTY 0.23.0 1 | AVAIL PIGSTY 0.23.0 1 | MISS PIGSTY - 0 |
 @ el8.x86_64 18 pg_search_18 pg_search_18-0.23.0-1PIGSTY.el8.x86_64.rpm pigsty 0.23.0 61.6MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_search_18-0.23.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 18 pg_search_18 pg_search_18-0.23.0-1PIGSTY.el8.aarch64.rpm pigsty 0.23.0 60.6MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_search_18-0.23.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 18 pg_search_18 pg_search_18-0.22.6-1PARADEDB.el9.x86_64.rpm pigsty 0.22.6 60.4MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_search_18-0.22.6-1PARADEDB.el9.x86_64.rpm
-@ el9.aarch64 18 pg_search_18 pg_search_18-0.22.6-1PARADEDB.el9.aarch64.rpm pigsty 0.22.6 61.1MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_search_18-0.22.6-1PARADEDB.el9.aarch64.rpm
-@ el10.x86_64 18 pg_search_18 pg_search_18-0.22.6-1PARADEDB.el10.x86_64.rpm pigsty 0.22.6 60.5MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_search_18-0.22.6-1PARADEDB.el10.x86_64.rpm
+@ el8.aarch64 18 pg_search_18 pg_search_18-0.23.1-1PIGSTY.el8.aarch64.rpm pigsty 0.23.1 76.1MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_search_18-0.23.1-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 18 pg_search_18 pg_search_18-0.23.1-1PARADEDB.el9.x86_64.rpm pigsty 0.23.1 62.0MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_search_18-0.23.1-1PARADEDB.el9.x86_64.rpm
+@ el9.aarch64 18 pg_search_18 pg_search_18-0.23.1-1PIGSTY.el9.aarch64.rpm pigsty 0.23.1 76.0MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_search_18-0.23.1-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 18 pg_search_18 pg_search_18-0.23.1-1PARADEDB.el10.x86_64.rpm pigsty 0.23.1 62.0MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_search_18-0.23.1-1PARADEDB.el10.x86_64.rpm
 @ el10.aarch64 18 pg_search_18 pg_search_18-0.22.6-1PARADEDB.el10.aarch64.rpm pigsty 0.22.6 61.0MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_search_18-0.22.6-1PARADEDB.el10.aarch64.rpm
-@ d12.x86_64 18 postgresql-18-pg-search postgresql-18-pg-search_0.22.6_amd64.deb pigsty 0.22.6 59.0MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/postgresql-18-pg-search/postgresql-18-pg-search_0.22.6_amd64.deb
-@ d12.aarch64 18 postgresql-18-pg-search postgresql-18-pg-search_0.22.6_arm64.deb pigsty 0.22.6 58.4MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/postgresql-18-pg-search/postgresql-18-pg-search_0.22.6_arm64.deb
-@ d13.x86_64 18 postgresql-18-pg-search postgresql-18-pg-search_0.22.6_amd64.deb pigsty 0.22.6 58.9MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/postgresql-18-pg-search/postgresql-18-pg-search_0.22.6_amd64.deb
-@ d13.aarch64 18 postgresql-18-pg-search postgresql-18-pg-search_0.22.6_arm64.deb pigsty 0.22.6 58.4MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/postgresql-18-pg-search/postgresql-18-pg-search_0.22.6_arm64.deb
-@ u22.x86_64 18 postgresql-18-pg-search postgresql-18-pg-search_0.22.6_amd64.deb pigsty 0.22.6 59.0MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/postgresql-18-pg-search/postgresql-18-pg-search_0.22.6_amd64.deb
-@ u22.aarch64 18 postgresql-18-pg-search postgresql-18-pg-search_0.22.6_arm64.deb pigsty 0.22.6 58.4MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/postgresql-18-pg-search/postgresql-18-pg-search_0.22.6_arm64.deb
-@ u24.x86_64 18 postgresql-18-pg-search postgresql-18-pg-search_0.22.6_amd64.deb pigsty 0.22.6 58.9MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/postgresql-18-pg-search/postgresql-18-pg-search_0.22.6_amd64.deb
-@ u24.aarch64 18 postgresql-18-pg-search postgresql-18-pg-search_0.22.6_arm64.deb pigsty 0.22.6 58.5MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/postgresql-18-pg-search/postgresql-18-pg-search_0.22.6_arm64.deb
+@ d12.x86_64 18 postgresql-18-pg-search postgresql-18-pg-search_0.23.1_amd64.deb pigsty 0.23.1 60.5MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/postgresql-18-pg-search/postgresql-18-pg-search_0.23.1_amd64.deb
+@ d12.aarch64 18 postgresql-18-pg-search postgresql-18-pg-search_0.23.1_arm64.deb pigsty 0.23.1 58.2MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/postgresql-18-pg-search/postgresql-18-pg-search_0.23.1_arm64.deb
+@ d13.x86_64 18 postgresql-18-pg-search postgresql-18-pg-search_0.23.1_amd64.deb pigsty 0.23.1 60.5MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/postgresql-18-pg-search/postgresql-18-pg-search_0.23.1_amd64.deb
+@ d13.aarch64 18 postgresql-18-pg-search postgresql-18-pg-search_0.23.1_arm64.deb pigsty 0.23.1 58.2MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/postgresql-18-pg-search/postgresql-18-pg-search_0.23.1_arm64.deb
+@ u22.x86_64 18 postgresql-18-pg-search postgresql-18-pg-search_0.23.1_amd64.deb pigsty 0.23.1 60.5MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/postgresql-18-pg-search/postgresql-18-pg-search_0.23.1_amd64.deb
+@ u22.aarch64 18 postgresql-18-pg-search postgresql-18-pg-search_0.23.1_arm64.deb pigsty 0.23.1 58.2MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/postgresql-18-pg-search/postgresql-18-pg-search_0.23.1_arm64.deb
+@ u24.x86_64 18 postgresql-18-pg-search postgresql-18-pg-search_0.23.1_amd64.deb pigsty 0.23.1 60.5MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/postgresql-18-pg-search/postgresql-18-pg-search_0.23.1_amd64.deb
+@ u24.aarch64 18 postgresql-18-pg-search postgresql-18-pg-search_0.23.1_arm64.deb pigsty 0.23.1 58.2MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/postgresql-18-pg-search/postgresql-18-pg-search_0.23.1_arm64.deb
+@ u26.x86_64 18 postgresql-18-pg-search postgresql-18-pg-search_0.23.0-1PIGSTY~resolute_amd64.deb pigsty 0.23.0 59.6MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-search/postgresql-18-pg-search_0.23.0-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 18 postgresql-18-pg-search postgresql-18-pg-search_0.23.0-1PIGSTY~resolute_arm64.deb pigsty 0.23.0 59.3MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-search/postgresql-18-pg-search_0.23.0-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 17 pg_search_17 pg_search_17-0.23.0-1PIGSTY.el8.x86_64.rpm pigsty 0.23.0 61.6MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_search_17-0.23.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 17 pg_search_17 pg_search_17-0.23.0-1PIGSTY.el8.aarch64.rpm pigsty 0.23.0 60.6MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_search_17-0.23.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 17 pg_search_17 pg_search_17-0.22.6-1PARADEDB.el9.x86_64.rpm pigsty 0.22.6 60.4MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_search_17-0.22.6-1PARADEDB.el9.x86_64.rpm
-@ el9.aarch64 17 pg_search_17 pg_search_17-0.22.6-1PARADEDB.el9.aarch64.rpm pigsty 0.22.6 61.1MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_search_17-0.22.6-1PARADEDB.el9.aarch64.rpm
-@ el10.x86_64 17 pg_search_17 pg_search_17-0.22.6-1PARADEDB.el10.x86_64.rpm pigsty 0.22.6 60.4MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_search_17-0.22.6-1PARADEDB.el10.x86_64.rpm
+@ el8.aarch64 17 pg_search_17 pg_search_17-0.23.1-1PIGSTY.el8.aarch64.rpm pigsty 0.23.1 76.1MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_search_17-0.23.1-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 17 pg_search_17 pg_search_17-0.23.1-1PARADEDB.el9.x86_64.rpm pigsty 0.23.1 62.0MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_search_17-0.23.1-1PARADEDB.el9.x86_64.rpm
+@ el9.aarch64 17 pg_search_17 pg_search_17-0.23.1-1PIGSTY.el9.aarch64.rpm pigsty 0.23.1 76.1MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_search_17-0.23.1-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 17 pg_search_17 pg_search_17-0.23.1-1PARADEDB.el10.x86_64.rpm pigsty 0.23.1 62.0MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_search_17-0.23.1-1PARADEDB.el10.x86_64.rpm
 @ el10.aarch64 17 pg_search_17 pg_search_17-0.22.6-1PARADEDB.el10.aarch64.rpm pigsty 0.22.6 61.1MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_search_17-0.22.6-1PARADEDB.el10.aarch64.rpm
-@ d12.x86_64 17 postgresql-17-pg-search postgresql-17-pg-search_0.22.6_amd64.deb pigsty 0.22.6 59.0MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/postgresql-17-pg-search/postgresql-17-pg-search_0.22.6_amd64.deb
-@ d12.aarch64 17 postgresql-17-pg-search postgresql-17-pg-search_0.22.6_arm64.deb pigsty 0.22.6 58.4MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/postgresql-17-pg-search/postgresql-17-pg-search_0.22.6_arm64.deb
-@ d13.x86_64 17 postgresql-17-pg-search postgresql-17-pg-search_0.22.6_amd64.deb pigsty 0.22.6 59.0MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/postgresql-17-pg-search/postgresql-17-pg-search_0.22.6_amd64.deb
-@ d13.aarch64 17 postgresql-17-pg-search postgresql-17-pg-search_0.22.6_arm64.deb pigsty 0.22.6 58.4MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/postgresql-17-pg-search/postgresql-17-pg-search_0.22.6_arm64.deb
-@ u22.x86_64 17 postgresql-17-pg-search postgresql-17-pg-search_0.22.6_amd64.deb pigsty 0.22.6 59.0MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/postgresql-17-pg-search/postgresql-17-pg-search_0.22.6_amd64.deb
-@ u22.aarch64 17 postgresql-17-pg-search postgresql-17-pg-search_0.22.6_arm64.deb pigsty 0.22.6 58.4MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/postgresql-17-pg-search/postgresql-17-pg-search_0.22.6_arm64.deb
-@ u24.x86_64 17 postgresql-17-pg-search postgresql-17-pg-search_0.22.6_amd64.deb pigsty 0.22.6 59.0MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/postgresql-17-pg-search/postgresql-17-pg-search_0.22.6_amd64.deb
-@ u24.aarch64 17 postgresql-17-pg-search postgresql-17-pg-search_0.22.6_arm64.deb pigsty 0.22.6 58.4MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/postgresql-17-pg-search/postgresql-17-pg-search_0.22.6_arm64.deb
+@ d12.x86_64 17 postgresql-17-pg-search postgresql-17-pg-search_0.23.1_amd64.deb pigsty 0.23.1 60.5MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/postgresql-17-pg-search/postgresql-17-pg-search_0.23.1_amd64.deb
+@ d12.aarch64 17 postgresql-17-pg-search postgresql-17-pg-search_0.23.1_arm64.deb pigsty 0.23.1 58.2MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/postgresql-17-pg-search/postgresql-17-pg-search_0.23.1_arm64.deb
+@ d13.x86_64 17 postgresql-17-pg-search postgresql-17-pg-search_0.23.1_amd64.deb pigsty 0.23.1 60.5MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/postgresql-17-pg-search/postgresql-17-pg-search_0.23.1_amd64.deb
+@ d13.aarch64 17 postgresql-17-pg-search postgresql-17-pg-search_0.23.1_arm64.deb pigsty 0.23.1 58.3MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/postgresql-17-pg-search/postgresql-17-pg-search_0.23.1_arm64.deb
+@ u22.x86_64 17 postgresql-17-pg-search postgresql-17-pg-search_0.23.1_amd64.deb pigsty 0.23.1 60.5MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/postgresql-17-pg-search/postgresql-17-pg-search_0.23.1_amd64.deb
+@ u22.aarch64 17 postgresql-17-pg-search postgresql-17-pg-search_0.23.1_arm64.deb pigsty 0.23.1 58.2MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/postgresql-17-pg-search/postgresql-17-pg-search_0.23.1_arm64.deb
+@ u24.x86_64 17 postgresql-17-pg-search postgresql-17-pg-search_0.23.1_amd64.deb pigsty 0.23.1 60.5MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/postgresql-17-pg-search/postgresql-17-pg-search_0.23.1_amd64.deb
+@ u24.aarch64 17 postgresql-17-pg-search postgresql-17-pg-search_0.23.1_arm64.deb pigsty 0.23.1 58.2MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/postgresql-17-pg-search/postgresql-17-pg-search_0.23.1_arm64.deb
+@ u26.x86_64 17 postgresql-17-pg-search postgresql-17-pg-search_0.23.0-1PIGSTY~resolute_amd64.deb pigsty 0.23.0 59.6MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-search/postgresql-17-pg-search_0.23.0-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 17 postgresql-17-pg-search postgresql-17-pg-search_0.23.0-1PIGSTY~resolute_arm64.deb pigsty 0.23.0 59.3MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-search/postgresql-17-pg-search_0.23.0-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 16 pg_search_16 pg_search_16-0.23.0-1PIGSTY.el8.x86_64.rpm pigsty 0.23.0 61.6MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_search_16-0.23.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 16 pg_search_16 pg_search_16-0.23.0-1PIGSTY.el8.aarch64.rpm pigsty 0.23.0 60.6MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_search_16-0.23.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 16 pg_search_16 pg_search_16-0.22.6-1PARADEDB.el9.x86_64.rpm pigsty 0.22.6 60.4MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_search_16-0.22.6-1PARADEDB.el9.x86_64.rpm
-@ el9.aarch64 16 pg_search_16 pg_search_16-0.22.6-1PARADEDB.el9.aarch64.rpm pigsty 0.22.6 61.0MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_search_16-0.22.6-1PARADEDB.el9.aarch64.rpm
-@ el10.x86_64 16 pg_search_16 pg_search_16-0.22.6-1PARADEDB.el10.x86_64.rpm pigsty 0.22.6 60.4MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_search_16-0.22.6-1PARADEDB.el10.x86_64.rpm
+@ el8.aarch64 16 pg_search_16 pg_search_16-0.23.1-1PIGSTY.el8.aarch64.rpm pigsty 0.23.1 76.1MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_search_16-0.23.1-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 16 pg_search_16 pg_search_16-0.23.1-1PARADEDB.el9.x86_64.rpm pigsty 0.23.1 62.0MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_search_16-0.23.1-1PARADEDB.el9.x86_64.rpm
+@ el9.aarch64 16 pg_search_16 pg_search_16-0.23.1-1PIGSTY.el9.aarch64.rpm pigsty 0.23.1 76.0MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_search_16-0.23.1-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 16 pg_search_16 pg_search_16-0.23.1-1PARADEDB.el10.x86_64.rpm pigsty 0.23.1 62.1MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_search_16-0.23.1-1PARADEDB.el10.x86_64.rpm
 @ el10.aarch64 16 pg_search_16 pg_search_16-0.22.6-1PARADEDB.el10.aarch64.rpm pigsty 0.22.6 61.1MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_search_16-0.22.6-1PARADEDB.el10.aarch64.rpm
-@ d12.x86_64 16 postgresql-16-pg-search postgresql-16-pg-search_0.22.6_amd64.deb pigsty 0.22.6 59.0MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/postgresql-16-pg-search/postgresql-16-pg-search_0.22.6_amd64.deb
-@ d12.aarch64 16 postgresql-16-pg-search postgresql-16-pg-search_0.22.6_arm64.deb pigsty 0.22.6 58.4MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/postgresql-16-pg-search/postgresql-16-pg-search_0.22.6_arm64.deb
-@ d13.x86_64 16 postgresql-16-pg-search postgresql-16-pg-search_0.22.6_amd64.deb pigsty 0.22.6 59.0MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/postgresql-16-pg-search/postgresql-16-pg-search_0.22.6_amd64.deb
-@ d13.aarch64 16 postgresql-16-pg-search postgresql-16-pg-search_0.22.6_arm64.deb pigsty 0.22.6 58.4MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/postgresql-16-pg-search/postgresql-16-pg-search_0.22.6_arm64.deb
-@ u22.x86_64 16 postgresql-16-pg-search postgresql-16-pg-search_0.22.6_amd64.deb pigsty 0.22.6 59.0MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/postgresql-16-pg-search/postgresql-16-pg-search_0.22.6_amd64.deb
-@ u22.aarch64 16 postgresql-16-pg-search postgresql-16-pg-search_0.22.6_arm64.deb pigsty 0.22.6 58.4MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/postgresql-16-pg-search/postgresql-16-pg-search_0.22.6_arm64.deb
-@ u24.x86_64 16 postgresql-16-pg-search postgresql-16-pg-search_0.22.6_amd64.deb pigsty 0.22.6 59.0MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/postgresql-16-pg-search/postgresql-16-pg-search_0.22.6_amd64.deb
-@ u24.aarch64 16 postgresql-16-pg-search postgresql-16-pg-search_0.22.6_arm64.deb pigsty 0.22.6 58.4MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/postgresql-16-pg-search/postgresql-16-pg-search_0.22.6_arm64.deb
+@ d12.x86_64 16 postgresql-16-pg-search postgresql-16-pg-search_0.23.1_amd64.deb pigsty 0.23.1 60.5MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/postgresql-16-pg-search/postgresql-16-pg-search_0.23.1_amd64.deb
+@ d12.aarch64 16 postgresql-16-pg-search postgresql-16-pg-search_0.23.1_arm64.deb pigsty 0.23.1 58.3MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/postgresql-16-pg-search/postgresql-16-pg-search_0.23.1_arm64.deb
+@ d13.x86_64 16 postgresql-16-pg-search postgresql-16-pg-search_0.23.1_amd64.deb pigsty 0.23.1 60.5MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/postgresql-16-pg-search/postgresql-16-pg-search_0.23.1_amd64.deb
+@ d13.aarch64 16 postgresql-16-pg-search postgresql-16-pg-search_0.23.1_arm64.deb pigsty 0.23.1 58.3MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/postgresql-16-pg-search/postgresql-16-pg-search_0.23.1_arm64.deb
+@ u22.x86_64 16 postgresql-16-pg-search postgresql-16-pg-search_0.23.1_amd64.deb pigsty 0.23.1 60.5MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/postgresql-16-pg-search/postgresql-16-pg-search_0.23.1_amd64.deb
+@ u22.aarch64 16 postgresql-16-pg-search postgresql-16-pg-search_0.23.1_arm64.deb pigsty 0.23.1 58.3MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/postgresql-16-pg-search/postgresql-16-pg-search_0.23.1_arm64.deb
+@ u24.x86_64 16 postgresql-16-pg-search postgresql-16-pg-search_0.23.1_amd64.deb pigsty 0.23.1 60.5MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/postgresql-16-pg-search/postgresql-16-pg-search_0.23.1_amd64.deb
+@ u24.aarch64 16 postgresql-16-pg-search postgresql-16-pg-search_0.23.1_arm64.deb pigsty 0.23.1 58.3MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/postgresql-16-pg-search/postgresql-16-pg-search_0.23.1_arm64.deb
+@ u26.x86_64 16 postgresql-16-pg-search postgresql-16-pg-search_0.23.0-1PIGSTY~resolute_amd64.deb pigsty 0.23.0 59.6MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-search/postgresql-16-pg-search_0.23.0-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 16 postgresql-16-pg-search postgresql-16-pg-search_0.23.0-1PIGSTY~resolute_arm64.deb pigsty 0.23.0 59.3MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-search/postgresql-16-pg-search_0.23.0-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 15 pg_search_15 pg_search_15-0.23.0-1PIGSTY.el8.x86_64.rpm pigsty 0.23.0 61.5MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_search_15-0.23.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 15 pg_search_15 pg_search_15-0.23.0-1PIGSTY.el8.aarch64.rpm pigsty 0.23.0 60.6MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_search_15-0.23.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 15 pg_search_15 pg_search_15-0.22.6-1PARADEDB.el9.x86_64.rpm pigsty 0.22.6 60.5MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_search_15-0.22.6-1PARADEDB.el9.x86_64.rpm
-@ el9.aarch64 15 pg_search_15 pg_search_15-0.22.6-1PARADEDB.el9.aarch64.rpm pigsty 0.22.6 61.0MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_search_15-0.22.6-1PARADEDB.el9.aarch64.rpm
-@ el10.x86_64 15 pg_search_15 pg_search_15-0.22.6-1PARADEDB.el10.x86_64.rpm pigsty 0.22.6 60.4MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_search_15-0.22.6-1PARADEDB.el10.x86_64.rpm
-@ el10.aarch64 15 pg_search_15 pg_search_15-0.22.6-1PARADEDB.el10.aarch64.rpm pigsty 0.22.6 61.1MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_search_15-0.22.6-1PARADEDB.el10.aarch64.rpm
-@ d12.x86_64 15 postgresql-15-pg-search postgresql-15-pg-search_0.22.6_amd64.deb pigsty 0.22.6 58.9MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/postgresql-15-pg-search/postgresql-15-pg-search_0.22.6_amd64.deb
-@ d12.aarch64 15 postgresql-15-pg-search postgresql-15-pg-search_0.22.6_arm64.deb pigsty 0.22.6 58.4MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/postgresql-15-pg-search/postgresql-15-pg-search_0.22.6_arm64.deb
-@ d13.x86_64 15 postgresql-15-pg-search postgresql-15-pg-search_0.22.6_amd64.deb pigsty 0.22.6 59.0MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/postgresql-15-pg-search/postgresql-15-pg-search_0.22.6_amd64.deb
-@ d13.aarch64 15 postgresql-15-pg-search postgresql-15-pg-search_0.22.6_arm64.deb pigsty 0.22.6 58.4MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/postgresql-15-pg-search/postgresql-15-pg-search_0.22.6_arm64.deb
-@ u22.x86_64 15 postgresql-15-pg-search postgresql-15-pg-search_0.22.6_amd64.deb pigsty 0.22.6 58.9MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/postgresql-15-pg-search/postgresql-15-pg-search_0.22.6_amd64.deb
-@ u22.aarch64 15 postgresql-15-pg-search postgresql-15-pg-search_0.22.6_arm64.deb pigsty 0.22.6 58.4MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/postgresql-15-pg-search/postgresql-15-pg-search_0.22.6_arm64.deb
-@ u24.x86_64 15 postgresql-15-pg-search postgresql-15-pg-search_0.22.6_amd64.deb pigsty 0.22.6 58.9MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/postgresql-15-pg-search/postgresql-15-pg-search_0.22.6_amd64.deb
-@ u24.aarch64 15 postgresql-15-pg-search postgresql-15-pg-search_0.22.6_arm64.deb pigsty 0.22.6 58.4MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/postgresql-15-pg-search/postgresql-15-pg-search_0.22.6_arm64.deb
+@ el8.aarch64 15 pg_search_15 pg_search_15-0.23.1-1PIGSTY.el8.aarch64.rpm pigsty 0.23.1 76.1MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_search_15-0.23.1-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 15 pg_search_15 pg_search_15-0.23.1-1PARADEDB.el9.x86_64.rpm pigsty 0.23.1 62.0MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_search_15-0.23.1-1PARADEDB.el9.x86_64.rpm
+@ el9.aarch64 15 pg_search_15 pg_search_15-0.23.1-1PIGSTY.el9.aarch64.rpm pigsty 0.23.1 76.1MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_search_15-0.23.1-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 15 pg_search_15 pg_search_15-0.23.1-1PARADEDB.el10.x86_64.rpm pigsty 0.23.1 62.0MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_search_15-0.23.1-1PARADEDB.el10.x86_64.rpm
+@ el10.aarch64 15 pg_search_15 pg_search_15-0.23.1-1PARADEDB.el10.aarch64.rpm pigsty 0.23.1 60.8MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_search_15-0.23.1-1PARADEDB.el10.aarch64.rpm
+@ d12.x86_64 15 postgresql-15-pg-search postgresql-15-pg-search_0.23.1_amd64.deb pigsty 0.23.1 60.5MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/postgresql-15-pg-search/postgresql-15-pg-search_0.23.1_amd64.deb
+@ d12.aarch64 15 postgresql-15-pg-search postgresql-15-pg-search_0.23.1_arm64.deb pigsty 0.23.1 58.2MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/postgresql-15-pg-search/postgresql-15-pg-search_0.23.1_arm64.deb
+@ d13.x86_64 15 postgresql-15-pg-search postgresql-15-pg-search_0.23.1_amd64.deb pigsty 0.23.1 60.5MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/postgresql-15-pg-search/postgresql-15-pg-search_0.23.1_amd64.deb
+@ d13.aarch64 15 postgresql-15-pg-search postgresql-15-pg-search_0.23.1_arm64.deb pigsty 0.23.1 58.2MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/postgresql-15-pg-search/postgresql-15-pg-search_0.23.1_arm64.deb
+@ u22.x86_64 15 postgresql-15-pg-search postgresql-15-pg-search_0.23.1_amd64.deb pigsty 0.23.1 60.4MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/postgresql-15-pg-search/postgresql-15-pg-search_0.23.1_amd64.deb
+@ u22.aarch64 15 postgresql-15-pg-search postgresql-15-pg-search_0.23.1_arm64.deb pigsty 0.23.1 58.2MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/postgresql-15-pg-search/postgresql-15-pg-search_0.23.1_arm64.deb
+@ u24.x86_64 15 postgresql-15-pg-search postgresql-15-pg-search_0.23.1_amd64.deb pigsty 0.23.1 60.5MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/postgresql-15-pg-search/postgresql-15-pg-search_0.23.1_amd64.deb
+@ u24.aarch64 15 postgresql-15-pg-search postgresql-15-pg-search_0.23.1_arm64.deb pigsty 0.23.1 58.2MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/postgresql-15-pg-search/postgresql-15-pg-search_0.23.1_arm64.deb
+@ u26.x86_64 15 postgresql-15-pg-search postgresql-15-pg-search_0.23.0-1PIGSTY~resolute_amd64.deb pigsty 0.23.0 59.6MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-search/postgresql-15-pg-search_0.23.0-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 15 postgresql-15-pg-search postgresql-15-pg-search_0.23.0-1PIGSTY~resolute_arm64.deb pigsty 0.23.0 59.3MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-search/postgresql-15-pg-search_0.23.0-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 14 pg_search_14 pg_search_14-0.20.10-1PARADEDB.el8.x86_64.rpm pigsty 0.20.10 46.3MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_search_14-0.20.10-1PARADEDB.el8.x86_64.rpm
 @ el8.aarch64 14 pg_search_14 pg_search_14-0.20.10-1PARADEDB.el8.aarch64.rpm pigsty 0.20.10 45.7MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_search_14-0.20.10-1PARADEDB.el8.aarch64.rpm
 @ el9.x86_64 14 pg_search_14 pg_search_14-0.20.10-1PARADEDB.el9.x86_64.rpm pigsty 0.20.10 46.1MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_search_14-0.20.10-1PARADEDB.el9.x86_64.rpm

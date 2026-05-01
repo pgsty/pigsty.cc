@@ -64,8 +64,8 @@ weight: 2272
 | u22.aarch64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 |
 | u24.x86_64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 |
 | u24.aarch64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 |
-| u26.x86_64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| u26.aarch64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| u26.x86_64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 |
+| u26.aarch64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 |
 @ el8.x86_64 18 hunspell_en_us_18 hunspell_en_us_18-1.0-1PIGSTY.el8.x86_64.rpm pigsty 1.0 186.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/hunspell_en_us_18-1.0-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 18 hunspell_en_us_18 hunspell_en_us_18-1.0-1PIGSTY.el8.aarch64.rpm pigsty 1.0 186.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/hunspell_en_us_18-1.0-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 18 hunspell_en_us_18 hunspell_en_us_18-1.0-1PIGSTY.el9.x86_64.rpm pigsty 1.0 174.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/hunspell_en_us_18-1.0-1PIGSTY.el9.x86_64.rpm
@@ -80,6 +80,8 @@ weight: 2272
 @ u22.aarch64 18 postgresql-18-hunspell-en-us postgresql-18-hunspell-en-us_1.0-1PIGSTY~jammy_arm64.deb pigsty 1.0 166.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/h/hunspell-en-us/postgresql-18-hunspell-en-us_1.0-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 18 postgresql-18-hunspell-en-us postgresql-18-hunspell-en-us_1.0-1PIGSTY~noble_amd64.deb pigsty 1.0 166.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/h/hunspell-en-us/postgresql-18-hunspell-en-us_1.0-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 18 postgresql-18-hunspell-en-us postgresql-18-hunspell-en-us_1.0-1PIGSTY~noble_arm64.deb pigsty 1.0 166.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/h/hunspell-en-us/postgresql-18-hunspell-en-us_1.0-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 18 postgresql-18-hunspell-en-us postgresql-18-hunspell-en-us_1.0-1PIGSTY~resolute_amd64.deb pigsty 1.0 166.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/h/hunspell-en-us/postgresql-18-hunspell-en-us_1.0-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 18 postgresql-18-hunspell-en-us postgresql-18-hunspell-en-us_1.0-1PIGSTY~resolute_arm64.deb pigsty 1.0 166.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/h/hunspell-en-us/postgresql-18-hunspell-en-us_1.0-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 17 hunspell_en_us_17 hunspell_en_us_17-1.0-1PIGSTY.el8.x86_64.rpm pigsty 1.0 186.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/hunspell_en_us_17-1.0-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 17 hunspell_en_us_17 hunspell_en_us_17-1.0-1PIGSTY.el8.aarch64.rpm pigsty 1.0 186.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/hunspell_en_us_17-1.0-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 17 hunspell_en_us_17 hunspell_en_us_17-1.0-1PIGSTY.el9.x86_64.rpm pigsty 1.0 174.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/hunspell_en_us_17-1.0-1PIGSTY.el9.x86_64.rpm
@@ -94,6 +96,8 @@ weight: 2272
 @ u22.aarch64 17 postgresql-17-hunspell-en-us postgresql-17-hunspell-en-us_1.0-1PIGSTY~jammy_arm64.deb pigsty 1.0 166.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/h/hunspell-en-us/postgresql-17-hunspell-en-us_1.0-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 17 postgresql-17-hunspell-en-us postgresql-17-hunspell-en-us_1.0-1PIGSTY~noble_amd64.deb pigsty 1.0 166.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/h/hunspell-en-us/postgresql-17-hunspell-en-us_1.0-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 17 postgresql-17-hunspell-en-us postgresql-17-hunspell-en-us_1.0-1PIGSTY~noble_arm64.deb pigsty 1.0 166.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/h/hunspell-en-us/postgresql-17-hunspell-en-us_1.0-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 17 postgresql-17-hunspell-en-us postgresql-17-hunspell-en-us_1.0-1PIGSTY~resolute_amd64.deb pigsty 1.0 166.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/h/hunspell-en-us/postgresql-17-hunspell-en-us_1.0-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 17 postgresql-17-hunspell-en-us postgresql-17-hunspell-en-us_1.0-1PIGSTY~resolute_arm64.deb pigsty 1.0 166.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/h/hunspell-en-us/postgresql-17-hunspell-en-us_1.0-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 16 hunspell_en_us_16 hunspell_en_us_16-1.0-1PIGSTY.el8.x86_64.rpm pigsty 1.0 186.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/hunspell_en_us_16-1.0-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 16 hunspell_en_us_16 hunspell_en_us_16-1.0-1PIGSTY.el8.aarch64.rpm pigsty 1.0 186.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/hunspell_en_us_16-1.0-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 16 hunspell_en_us_16 hunspell_en_us_16-1.0-1PIGSTY.el9.x86_64.rpm pigsty 1.0 174.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/hunspell_en_us_16-1.0-1PIGSTY.el9.x86_64.rpm
@@ -108,6 +112,8 @@ weight: 2272
 @ u22.aarch64 16 postgresql-16-hunspell-en-us postgresql-16-hunspell-en-us_1.0-1PIGSTY~jammy_arm64.deb pigsty 1.0 167.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/h/hunspell-en-us/postgresql-16-hunspell-en-us_1.0-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 16 postgresql-16-hunspell-en-us postgresql-16-hunspell-en-us_1.0-1PIGSTY~noble_amd64.deb pigsty 1.0 166.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/h/hunspell-en-us/postgresql-16-hunspell-en-us_1.0-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 16 postgresql-16-hunspell-en-us postgresql-16-hunspell-en-us_1.0-1PIGSTY~noble_arm64.deb pigsty 1.0 166.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/h/hunspell-en-us/postgresql-16-hunspell-en-us_1.0-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 16 postgresql-16-hunspell-en-us postgresql-16-hunspell-en-us_1.0-1PIGSTY~resolute_amd64.deb pigsty 1.0 166.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/h/hunspell-en-us/postgresql-16-hunspell-en-us_1.0-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 16 postgresql-16-hunspell-en-us postgresql-16-hunspell-en-us_1.0-1PIGSTY~resolute_arm64.deb pigsty 1.0 166.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/h/hunspell-en-us/postgresql-16-hunspell-en-us_1.0-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 15 hunspell_en_us_15 hunspell_en_us_15-1.0-1PIGSTY.el8.x86_64.rpm pigsty 1.0 186.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/hunspell_en_us_15-1.0-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 15 hunspell_en_us_15 hunspell_en_us_15-1.0-1PIGSTY.el8.aarch64.rpm pigsty 1.0 186.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/hunspell_en_us_15-1.0-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 15 hunspell_en_us_15 hunspell_en_us_15-1.0-1PIGSTY.el9.x86_64.rpm pigsty 1.0 174.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/hunspell_en_us_15-1.0-1PIGSTY.el9.x86_64.rpm
@@ -122,6 +128,8 @@ weight: 2272
 @ u22.aarch64 15 postgresql-15-hunspell-en-us postgresql-15-hunspell-en-us_1.0-1PIGSTY~jammy_arm64.deb pigsty 1.0 166.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/h/hunspell-en-us/postgresql-15-hunspell-en-us_1.0-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 15 postgresql-15-hunspell-en-us postgresql-15-hunspell-en-us_1.0-1PIGSTY~noble_amd64.deb pigsty 1.0 166.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/h/hunspell-en-us/postgresql-15-hunspell-en-us_1.0-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 15 postgresql-15-hunspell-en-us postgresql-15-hunspell-en-us_1.0-1PIGSTY~noble_arm64.deb pigsty 1.0 166.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/h/hunspell-en-us/postgresql-15-hunspell-en-us_1.0-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 15 postgresql-15-hunspell-en-us postgresql-15-hunspell-en-us_1.0-1PIGSTY~resolute_amd64.deb pigsty 1.0 166.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/h/hunspell-en-us/postgresql-15-hunspell-en-us_1.0-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 15 postgresql-15-hunspell-en-us postgresql-15-hunspell-en-us_1.0-1PIGSTY~resolute_arm64.deb pigsty 1.0 166.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/h/hunspell-en-us/postgresql-15-hunspell-en-us_1.0-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 14 hunspell_en_us_14 hunspell_en_us_14-1.0-1PIGSTY.el8.x86_64.rpm pigsty 1.0 186.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/hunspell_en_us_14-1.0-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 14 hunspell_en_us_14 hunspell_en_us_14-1.0-1PIGSTY.el8.aarch64.rpm pigsty 1.0 186.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/hunspell_en_us_14-1.0-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 14 hunspell_en_us_14 hunspell_en_us_14-1.0-1PIGSTY.el9.x86_64.rpm pigsty 1.0 174.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/hunspell_en_us_14-1.0-1PIGSTY.el9.x86_64.rpm
@@ -136,6 +144,8 @@ weight: 2272
 @ u22.aarch64 14 postgresql-14-hunspell-en-us postgresql-14-hunspell-en-us_1.0-1PIGSTY~jammy_arm64.deb pigsty 1.0 166.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/h/hunspell-en-us/postgresql-14-hunspell-en-us_1.0-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 14 postgresql-14-hunspell-en-us postgresql-14-hunspell-en-us_1.0-1PIGSTY~noble_amd64.deb pigsty 1.0 166.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/h/hunspell-en-us/postgresql-14-hunspell-en-us_1.0-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 14 postgresql-14-hunspell-en-us postgresql-14-hunspell-en-us_1.0-1PIGSTY~noble_arm64.deb pigsty 1.0 166.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/h/hunspell-en-us/postgresql-14-hunspell-en-us_1.0-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 14 postgresql-14-hunspell-en-us postgresql-14-hunspell-en-us_1.0-1PIGSTY~resolute_amd64.deb pigsty 1.0 166.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/h/hunspell-en-us/postgresql-14-hunspell-en-us_1.0-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 14 postgresql-14-hunspell-en-us postgresql-14-hunspell-en-us_1.0-1PIGSTY~resolute_arm64.deb pigsty 1.0 166.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/h/hunspell-en-us/postgresql-14-hunspell-en-us_1.0-1PIGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建

@@ -67,8 +67,8 @@ weight: 3011
 | u22.aarch64 | AVAIL PGDG 1.0.5 2 | AVAIL PGDG 1.0.5 2 | AVAIL PGDG 1.0.5 2 | AVAIL PGDG 1.0.5 2 | AVAIL PGDG 1.0.5 2 |
 | u24.x86_64 | AVAIL PGDG 1.0.5 2 | AVAIL PGDG 1.0.5 2 | AVAIL PGDG 1.0.5 2 | AVAIL PGDG 1.0.5 2 | AVAIL PGDG 1.0.5 2 |
 | u24.aarch64 | AVAIL PGDG 1.0.5 2 | AVAIL PGDG 1.0.5 2 | AVAIL PGDG 1.0.5 2 | AVAIL PGDG 1.0.5 2 | AVAIL PGDG 1.0.5 2 |
-| u26.x86_64 | AVAIL PGDG 1.0.5 1 | AVAIL PGDG 1.0.5 1 | AVAIL PGDG 1.0.5 1 | AVAIL PGDG 1.0.5 1 | AVAIL PGDG 1.0.5 1 |
-| u26.aarch64 | AVAIL PGDG 1.0.5 1 | AVAIL PGDG 1.0.5 1 | AVAIL PGDG 1.0.5 1 | AVAIL PGDG 1.0.5 1 | AVAIL PGDG 1.0.5 1 |
+| u26.x86_64 | AVAIL PGDG 1.0.5 2 | AVAIL PGDG 1.0.5 2 | AVAIL PGDG 1.0.5 2 | AVAIL PGDG 1.0.5 2 | AVAIL PGDG 1.0.5 2 |
+| u26.aarch64 | AVAIL PGDG 1.0.5 2 | AVAIL PGDG 1.0.5 2 | AVAIL PGDG 1.0.5 2 | AVAIL PGDG 1.0.5 2 | AVAIL PGDG 1.0.5 2 |
 @ el8.x86_64 18 pljs_18 pljs_18-1.0.5-1PIGSTY.el8.x86_64.rpm pigsty 1.0.5 381.9KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pljs_18-1.0.5-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 18 pljs_18 pljs_18-1.0.5-1PIGSTY.el8.aarch64.rpm pigsty 1.0.5 349.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pljs_18-1.0.5-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 18 pljs_18 pljs_18-1.0.5-1PIGSTY.el9.x86_64.rpm pigsty 1.0.5 388.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pljs_18-1.0.5-1PIGSTY.el9.x86_64.rpm
@@ -92,7 +92,9 @@ weight: 3011
 @ u24.aarch64 18 postgresql-18-pljs postgresql-18-pljs_1.0.5-1.pgdg24.04+1_arm64.deb pgdg 1.0.5 376.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pljs/postgresql-18-pljs_1.0.5-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 18 postgresql-18-pljs postgresql-18-pljs_1.0.5-1PIGSTY~noble_arm64.deb pigsty 1.0.5 422.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pljs/postgresql-18-pljs_1.0.5-1PIGSTY~noble_arm64.deb
 @ u26.x86_64 18 postgresql-18-pljs postgresql-18-pljs_1.0.5-1.pgdg26.04+1_amd64.deb pgdg 1.0.5 429.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pljs/postgresql-18-pljs_1.0.5-1.pgdg26.04+1_amd64.deb
+@ u26.x86_64 18 postgresql-18-pljs postgresql-18-pljs_1.0.5-1PIGSTY~resolute_amd64.deb pigsty 1.0.5 453.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pljs/postgresql-18-pljs_1.0.5-1PIGSTY~resolute_amd64.deb
 @ u26.aarch64 18 postgresql-18-pljs postgresql-18-pljs_1.0.5-1.pgdg26.04+1_arm64.deb pgdg 1.0.5 381.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pljs/postgresql-18-pljs_1.0.5-1.pgdg26.04+1_arm64.deb
+@ u26.aarch64 18 postgresql-18-pljs postgresql-18-pljs_1.0.5-1PIGSTY~resolute_arm64.deb pigsty 1.0.5 429.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pljs/postgresql-18-pljs_1.0.5-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 17 pljs_17 pljs_17-1.0.5-1PIGSTY.el8.x86_64.rpm pigsty 1.0.5 381.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pljs_17-1.0.5-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 17 pljs_17 pljs_17-1.0.5-1PIGSTY.el8.aarch64.rpm pigsty 1.0.5 349.3KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pljs_17-1.0.5-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 17 pljs_17 pljs_17-1.0.5-1PIGSTY.el9.x86_64.rpm pigsty 1.0.5 388.1KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pljs_17-1.0.5-1PIGSTY.el9.x86_64.rpm
@@ -116,7 +118,9 @@ weight: 3011
 @ u24.aarch64 17 postgresql-17-pljs postgresql-17-pljs_1.0.5-1.pgdg24.04+1_arm64.deb pgdg 1.0.5 375.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pljs/postgresql-17-pljs_1.0.5-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 17 postgresql-17-pljs postgresql-17-pljs_1.0.5-1PIGSTY~noble_arm64.deb pigsty 1.0.5 422.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pljs/postgresql-17-pljs_1.0.5-1PIGSTY~noble_arm64.deb
 @ u26.x86_64 17 postgresql-17-pljs postgresql-17-pljs_1.0.5-1.pgdg26.04+1_amd64.deb pgdg 1.0.5 428.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pljs/postgresql-17-pljs_1.0.5-1.pgdg26.04+1_amd64.deb
+@ u26.x86_64 17 postgresql-17-pljs postgresql-17-pljs_1.0.5-1PIGSTY~resolute_amd64.deb pigsty 1.0.5 453.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pljs/postgresql-17-pljs_1.0.5-1PIGSTY~resolute_amd64.deb
 @ u26.aarch64 17 postgresql-17-pljs postgresql-17-pljs_1.0.5-1.pgdg26.04+1_arm64.deb pgdg 1.0.5 382.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pljs/postgresql-17-pljs_1.0.5-1.pgdg26.04+1_arm64.deb
+@ u26.aarch64 17 postgresql-17-pljs postgresql-17-pljs_1.0.5-1PIGSTY~resolute_arm64.deb pigsty 1.0.5 429.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pljs/postgresql-17-pljs_1.0.5-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 16 pljs_16 pljs_16-1.0.5-1PIGSTY.el8.x86_64.rpm pigsty 1.0.5 381.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pljs_16-1.0.5-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 16 pljs_16 pljs_16-1.0.5-1PIGSTY.el8.aarch64.rpm pigsty 1.0.5 349.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pljs_16-1.0.5-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 16 pljs_16 pljs_16-1.0.5-1PIGSTY.el9.x86_64.rpm pigsty 1.0.5 388.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pljs_16-1.0.5-1PIGSTY.el9.x86_64.rpm
@@ -140,7 +144,9 @@ weight: 3011
 @ u24.aarch64 16 postgresql-16-pljs postgresql-16-pljs_1.0.5-1.pgdg24.04+1_arm64.deb pgdg 1.0.5 375.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pljs/postgresql-16-pljs_1.0.5-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 16 postgresql-16-pljs postgresql-16-pljs_1.0.5-1PIGSTY~noble_arm64.deb pigsty 1.0.5 422.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pljs/postgresql-16-pljs_1.0.5-1PIGSTY~noble_arm64.deb
 @ u26.x86_64 16 postgresql-16-pljs postgresql-16-pljs_1.0.5-1.pgdg26.04+1_amd64.deb pgdg 1.0.5 428.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pljs/postgresql-16-pljs_1.0.5-1.pgdg26.04+1_amd64.deb
+@ u26.x86_64 16 postgresql-16-pljs postgresql-16-pljs_1.0.5-1PIGSTY~resolute_amd64.deb pigsty 1.0.5 453.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pljs/postgresql-16-pljs_1.0.5-1PIGSTY~resolute_amd64.deb
 @ u26.aarch64 16 postgresql-16-pljs postgresql-16-pljs_1.0.5-1.pgdg26.04+1_arm64.deb pgdg 1.0.5 381.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pljs/postgresql-16-pljs_1.0.5-1.pgdg26.04+1_arm64.deb
+@ u26.aarch64 16 postgresql-16-pljs postgresql-16-pljs_1.0.5-1PIGSTY~resolute_arm64.deb pigsty 1.0.5 429.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pljs/postgresql-16-pljs_1.0.5-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 15 pljs_15 pljs_15-1.0.5-1PIGSTY.el8.x86_64.rpm pigsty 1.0.5 382.4KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pljs_15-1.0.5-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 15 pljs_15 pljs_15-1.0.5-1PIGSTY.el8.aarch64.rpm pigsty 1.0.5 349.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pljs_15-1.0.5-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 15 pljs_15 pljs_15-1.0.5-1PIGSTY.el9.x86_64.rpm pigsty 1.0.5 389.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pljs_15-1.0.5-1PIGSTY.el9.x86_64.rpm
@@ -164,7 +170,9 @@ weight: 3011
 @ u24.aarch64 15 postgresql-15-pljs postgresql-15-pljs_1.0.5-1.pgdg24.04+1_arm64.deb pgdg 1.0.5 376.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pljs/postgresql-15-pljs_1.0.5-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 15 postgresql-15-pljs postgresql-15-pljs_1.0.5-1PIGSTY~noble_arm64.deb pigsty 1.0.5 423.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pljs/postgresql-15-pljs_1.0.5-1PIGSTY~noble_arm64.deb
 @ u26.x86_64 15 postgresql-15-pljs postgresql-15-pljs_1.0.5-1.pgdg26.04+1_amd64.deb pgdg 1.0.5 429.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pljs/postgresql-15-pljs_1.0.5-1.pgdg26.04+1_amd64.deb
+@ u26.x86_64 15 postgresql-15-pljs postgresql-15-pljs_1.0.5-1PIGSTY~resolute_amd64.deb pigsty 1.0.5 453.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pljs/postgresql-15-pljs_1.0.5-1PIGSTY~resolute_amd64.deb
 @ u26.aarch64 15 postgresql-15-pljs postgresql-15-pljs_1.0.5-1.pgdg26.04+1_arm64.deb pgdg 1.0.5 382.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pljs/postgresql-15-pljs_1.0.5-1.pgdg26.04+1_arm64.deb
+@ u26.aarch64 15 postgresql-15-pljs postgresql-15-pljs_1.0.5-1PIGSTY~resolute_arm64.deb pigsty 1.0.5 430.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pljs/postgresql-15-pljs_1.0.5-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 14 pljs_14 pljs_14-1.0.5-1PIGSTY.el8.x86_64.rpm pigsty 1.0.5 382.4KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pljs_14-1.0.5-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 14 pljs_14 pljs_14-1.0.5-1PIGSTY.el8.aarch64.rpm pigsty 1.0.5 349.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pljs_14-1.0.5-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 14 pljs_14 pljs_14-1.0.5-1PIGSTY.el9.x86_64.rpm pigsty 1.0.5 388.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pljs_14-1.0.5-1PIGSTY.el9.x86_64.rpm
@@ -188,7 +196,9 @@ weight: 3011
 @ u24.aarch64 14 postgresql-14-pljs postgresql-14-pljs_1.0.5-1.pgdg24.04+1_arm64.deb pgdg 1.0.5 376.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pljs/postgresql-14-pljs_1.0.5-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 14 postgresql-14-pljs postgresql-14-pljs_1.0.5-1PIGSTY~noble_arm64.deb pigsty 1.0.5 423.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pljs/postgresql-14-pljs_1.0.5-1PIGSTY~noble_arm64.deb
 @ u26.x86_64 14 postgresql-14-pljs postgresql-14-pljs_1.0.5-1.pgdg26.04+1_amd64.deb pgdg 1.0.5 429.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pljs/postgresql-14-pljs_1.0.5-1.pgdg26.04+1_amd64.deb
+@ u26.x86_64 14 postgresql-14-pljs postgresql-14-pljs_1.0.5-1PIGSTY~resolute_amd64.deb pigsty 1.0.5 453.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pljs/postgresql-14-pljs_1.0.5-1PIGSTY~resolute_amd64.deb
 @ u26.aarch64 14 postgresql-14-pljs postgresql-14-pljs_1.0.5-1.pgdg26.04+1_arm64.deb pgdg 1.0.5 382.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pljs/postgresql-14-pljs_1.0.5-1.pgdg26.04+1_arm64.deb
+@ u26.aarch64 14 postgresql-14-pljs postgresql-14-pljs_1.0.5-1PIGSTY~resolute_arm64.deb pigsty 1.0.5 430.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pljs/postgresql-14-pljs_1.0.5-1PIGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建

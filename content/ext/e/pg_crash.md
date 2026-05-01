@@ -64,8 +64,8 @@ weight: 5210
 | u22.aarch64 | AVAIL PGDG 0.3 1 | AVAIL PIGSTY 1.0 2 | AVAIL PIGSTY 1.0 2 | AVAIL PIGSTY 1.0 2 | AVAIL PIGSTY 1.0 2 |
 | u24.x86_64 | AVAIL PGDG 0.3 1 | AVAIL PIGSTY 1.0 2 | AVAIL PIGSTY 1.0 2 | AVAIL PIGSTY 1.0 2 | AVAIL PIGSTY 1.0 2 |
 | u24.aarch64 | AVAIL PGDG 0.3 1 | AVAIL PIGSTY 1.0 2 | AVAIL PIGSTY 1.0 2 | AVAIL PIGSTY 1.0 2 | AVAIL PIGSTY 1.0 2 |
-| u26.x86_64 | AVAIL PGDG 0.3 1 | AVAIL PGDG 0.3 1 | AVAIL PGDG 0.3 1 | AVAIL PGDG 0.3 1 | AVAIL PGDG 0.3 1 |
-| u26.aarch64 | AVAIL PGDG 0.3 1 | AVAIL PGDG 0.3 1 | AVAIL PGDG 0.3 1 | AVAIL PGDG 0.3 1 | AVAIL PGDG 0.3 1 |
+| u26.x86_64 | AVAIL PIGSTY 1.0 2 | AVAIL PIGSTY 1.0 2 | AVAIL PIGSTY 1.0 2 | AVAIL PIGSTY 1.0 2 | AVAIL PIGSTY 1.0 2 |
+| u26.aarch64 | AVAIL PIGSTY 1.0 2 | AVAIL PIGSTY 1.0 2 | AVAIL PIGSTY 1.0 2 | AVAIL PIGSTY 1.0 2 | AVAIL PIGSTY 1.0 2 |
 @ el8.x86_64 18 pg_crash_18 pg_crash_18-1.0-1PIGSTY.el8.x86_64.rpm pigsty 1.0 13.0KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_crash_18-1.0-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 18 pg_crash_18 pg_crash_18-1.0-1PIGSTY.el8.aarch64.rpm pigsty 1.0 13.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_crash_18-1.0-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 18 pg_crash_18 pg_crash_18-1.0-1PIGSTY.el9.x86_64.rpm pigsty 1.0 13.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_crash_18-1.0-1PIGSTY.el9.x86_64.rpm
@@ -80,7 +80,9 @@ weight: 5210
 @ u22.aarch64 18 postgresql-18-pg-crash postgresql-18-pg-crash_0.3-2.pgdg22.04+1_arm64.deb pgdg 0.3 12.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-18-pg-crash_0.3-2.pgdg22.04+1_arm64.deb
 @ u24.x86_64 18 postgresql-18-pg-crash postgresql-18-pg-crash_0.3-2.pgdg24.04+1_amd64.deb pgdg 0.3 12.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-18-pg-crash_0.3-2.pgdg24.04+1_amd64.deb
 @ u24.aarch64 18 postgresql-18-pg-crash postgresql-18-pg-crash_0.3-2.pgdg24.04+1_arm64.deb pgdg 0.3 13.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-18-pg-crash_0.3-2.pgdg24.04+1_arm64.deb
+@ u26.x86_64 18 postgresql-18-pg-crash postgresql-18-pg-crash_1.0-1PIGSTY~resolute_amd64.deb pigsty 1.0 13.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-crash/postgresql-18-pg-crash_1.0-1PIGSTY~resolute_amd64.deb
 @ u26.x86_64 18 postgresql-18-pg-crash postgresql-18-pg-crash_0.3-2.pgdg26.04+1_amd64.deb pgdg 0.3 13.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-18-pg-crash_0.3-2.pgdg26.04+1_amd64.deb
+@ u26.aarch64 18 postgresql-18-pg-crash postgresql-18-pg-crash_1.0-1PIGSTY~resolute_arm64.deb pigsty 1.0 13.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-crash/postgresql-18-pg-crash_1.0-1PIGSTY~resolute_arm64.deb
 @ u26.aarch64 18 postgresql-18-pg-crash postgresql-18-pg-crash_0.3-2.pgdg26.04+1_arm64.deb pgdg 0.3 13.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-18-pg-crash_0.3-2.pgdg26.04+1_arm64.deb
 @ el8.x86_64 17 pg_crash_17 pg_crash_17-1.0-1PIGSTY.el8.x86_64.rpm pigsty 1.0 13.0KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_crash_17-1.0-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 17 pg_crash_17 pg_crash_17-1.0-1PIGSTY.el8.aarch64.rpm pigsty 1.0 13.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_crash_17-1.0-1PIGSTY.el8.aarch64.rpm
@@ -102,7 +104,9 @@ weight: 5210
 @ u24.x86_64 17 postgresql-17-pg-crash postgresql-17-pg-crash_0.3-2.pgdg24.04+1_amd64.deb pgdg 0.3 12.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-17-pg-crash_0.3-2.pgdg24.04+1_amd64.deb
 @ u24.aarch64 17 postgresql-17-pg-crash postgresql-17-pg-crash_1.0-1PIGSTY~noble_arm64.deb pigsty 1.0 13.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-crash/postgresql-17-pg-crash_1.0-1PIGSTY~noble_arm64.deb
 @ u24.aarch64 17 postgresql-17-pg-crash postgresql-17-pg-crash_0.3-2.pgdg24.04+1_arm64.deb pgdg 0.3 13.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-17-pg-crash_0.3-2.pgdg24.04+1_arm64.deb
+@ u26.x86_64 17 postgresql-17-pg-crash postgresql-17-pg-crash_1.0-1PIGSTY~resolute_amd64.deb pigsty 1.0 13.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-crash/postgresql-17-pg-crash_1.0-1PIGSTY~resolute_amd64.deb
 @ u26.x86_64 17 postgresql-17-pg-crash postgresql-17-pg-crash_0.3-2.pgdg26.04+1_amd64.deb pgdg 0.3 13.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-17-pg-crash_0.3-2.pgdg26.04+1_amd64.deb
+@ u26.aarch64 17 postgresql-17-pg-crash postgresql-17-pg-crash_1.0-1PIGSTY~resolute_arm64.deb pigsty 1.0 13.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-crash/postgresql-17-pg-crash_1.0-1PIGSTY~resolute_arm64.deb
 @ u26.aarch64 17 postgresql-17-pg-crash postgresql-17-pg-crash_0.3-2.pgdg26.04+1_arm64.deb pgdg 0.3 13.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-17-pg-crash_0.3-2.pgdg26.04+1_arm64.deb
 @ el8.x86_64 16 pg_crash_16 pg_crash_16-1.0-1PIGSTY.el8.x86_64.rpm pigsty 1.0 13.0KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_crash_16-1.0-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 16 pg_crash_16 pg_crash_16-1.0-1PIGSTY.el8.aarch64.rpm pigsty 1.0 13.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_crash_16-1.0-1PIGSTY.el8.aarch64.rpm
@@ -124,7 +128,9 @@ weight: 5210
 @ u24.x86_64 16 postgresql-16-pg-crash postgresql-16-pg-crash_0.3-2.pgdg24.04+1_amd64.deb pgdg 0.3 12.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-16-pg-crash_0.3-2.pgdg24.04+1_amd64.deb
 @ u24.aarch64 16 postgresql-16-pg-crash postgresql-16-pg-crash_1.0-1PIGSTY~noble_arm64.deb pigsty 1.0 13.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-crash/postgresql-16-pg-crash_1.0-1PIGSTY~noble_arm64.deb
 @ u24.aarch64 16 postgresql-16-pg-crash postgresql-16-pg-crash_0.3-2.pgdg24.04+1_arm64.deb pgdg 0.3 13.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-16-pg-crash_0.3-2.pgdg24.04+1_arm64.deb
+@ u26.x86_64 16 postgresql-16-pg-crash postgresql-16-pg-crash_1.0-1PIGSTY~resolute_amd64.deb pigsty 1.0 13.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-crash/postgresql-16-pg-crash_1.0-1PIGSTY~resolute_amd64.deb
 @ u26.x86_64 16 postgresql-16-pg-crash postgresql-16-pg-crash_0.3-2.pgdg26.04+1_amd64.deb pgdg 0.3 13.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-16-pg-crash_0.3-2.pgdg26.04+1_amd64.deb
+@ u26.aarch64 16 postgresql-16-pg-crash postgresql-16-pg-crash_1.0-1PIGSTY~resolute_arm64.deb pigsty 1.0 13.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-crash/postgresql-16-pg-crash_1.0-1PIGSTY~resolute_arm64.deb
 @ u26.aarch64 16 postgresql-16-pg-crash postgresql-16-pg-crash_0.3-2.pgdg26.04+1_arm64.deb pgdg 0.3 13.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-16-pg-crash_0.3-2.pgdg26.04+1_arm64.deb
 @ el8.x86_64 15 pg_crash_15 pg_crash_15-1.0-1PIGSTY.el8.x86_64.rpm pigsty 1.0 13.0KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_crash_15-1.0-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 15 pg_crash_15 pg_crash_15-1.0-1PIGSTY.el8.aarch64.rpm pigsty 1.0 13.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_crash_15-1.0-1PIGSTY.el8.aarch64.rpm
@@ -146,7 +152,9 @@ weight: 5210
 @ u24.x86_64 15 postgresql-15-pg-crash postgresql-15-pg-crash_0.3-2.pgdg24.04+1_amd64.deb pgdg 0.3 12.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-15-pg-crash_0.3-2.pgdg24.04+1_amd64.deb
 @ u24.aarch64 15 postgresql-15-pg-crash postgresql-15-pg-crash_1.0-1PIGSTY~noble_arm64.deb pigsty 1.0 13.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-crash/postgresql-15-pg-crash_1.0-1PIGSTY~noble_arm64.deb
 @ u24.aarch64 15 postgresql-15-pg-crash postgresql-15-pg-crash_0.3-2.pgdg24.04+1_arm64.deb pgdg 0.3 13.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-15-pg-crash_0.3-2.pgdg24.04+1_arm64.deb
+@ u26.x86_64 15 postgresql-15-pg-crash postgresql-15-pg-crash_1.0-1PIGSTY~resolute_amd64.deb pigsty 1.0 13.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-crash/postgresql-15-pg-crash_1.0-1PIGSTY~resolute_amd64.deb
 @ u26.x86_64 15 postgresql-15-pg-crash postgresql-15-pg-crash_0.3-2.pgdg26.04+1_amd64.deb pgdg 0.3 13.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-15-pg-crash_0.3-2.pgdg26.04+1_amd64.deb
+@ u26.aarch64 15 postgresql-15-pg-crash postgresql-15-pg-crash_1.0-1PIGSTY~resolute_arm64.deb pigsty 1.0 13.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-crash/postgresql-15-pg-crash_1.0-1PIGSTY~resolute_arm64.deb
 @ u26.aarch64 15 postgresql-15-pg-crash postgresql-15-pg-crash_0.3-2.pgdg26.04+1_arm64.deb pgdg 0.3 13.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-15-pg-crash_0.3-2.pgdg26.04+1_arm64.deb
 @ el8.x86_64 14 pg_crash_14 pg_crash_14-1.0-1PIGSTY.el8.x86_64.rpm pigsty 1.0 13.0KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_crash_14-1.0-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 14 pg_crash_14 pg_crash_14-1.0-1PIGSTY.el8.aarch64.rpm pigsty 1.0 13.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_crash_14-1.0-1PIGSTY.el8.aarch64.rpm
@@ -168,7 +176,9 @@ weight: 5210
 @ u24.x86_64 14 postgresql-14-pg-crash postgresql-14-pg-crash_0.3-2.pgdg24.04+1_amd64.deb pgdg 0.3 12.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-14-pg-crash_0.3-2.pgdg24.04+1_amd64.deb
 @ u24.aarch64 14 postgresql-14-pg-crash postgresql-14-pg-crash_1.0-1PIGSTY~noble_arm64.deb pigsty 1.0 13.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-crash/postgresql-14-pg-crash_1.0-1PIGSTY~noble_arm64.deb
 @ u24.aarch64 14 postgresql-14-pg-crash postgresql-14-pg-crash_0.3-2.pgdg24.04+1_arm64.deb pgdg 0.3 13.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-14-pg-crash_0.3-2.pgdg24.04+1_arm64.deb
+@ u26.x86_64 14 postgresql-14-pg-crash postgresql-14-pg-crash_1.0-1PIGSTY~resolute_amd64.deb pigsty 1.0 13.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-crash/postgresql-14-pg-crash_1.0-1PIGSTY~resolute_amd64.deb
 @ u26.x86_64 14 postgresql-14-pg-crash postgresql-14-pg-crash_0.3-2.pgdg26.04+1_amd64.deb pgdg 0.3 13.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-14-pg-crash_0.3-2.pgdg26.04+1_amd64.deb
+@ u26.aarch64 14 postgresql-14-pg-crash postgresql-14-pg-crash_1.0-1PIGSTY~resolute_arm64.deb pigsty 1.0 13.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-crash/postgresql-14-pg-crash_1.0-1PIGSTY~resolute_arm64.deb
 @ u26.aarch64 14 postgresql-14-pg-crash postgresql-14-pg-crash_0.3-2.pgdg26.04+1_arm64.deb pgdg 0.3 13.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-crash/postgresql-14-pg-crash_0.3-2.pgdg26.04+1_arm64.deb
 {{< /pgext_matrix >}}
 

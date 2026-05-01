@@ -64,8 +64,8 @@ weight: 5080
 | u22.aarch64 | AVAIL PIGSTY 0.30 1 | AVAIL PIGSTY 0.30 1 | AVAIL PIGSTY 0.30 1 | AVAIL PIGSTY 0.30 1 | AVAIL PIGSTY 0.30 1 |
 | u24.x86_64 | AVAIL PIGSTY 0.30 1 | AVAIL PIGSTY 0.30 1 | AVAIL PIGSTY 0.30 1 | AVAIL PIGSTY 0.30 1 | AVAIL PIGSTY 0.30 1 |
 | u24.aarch64 | AVAIL PIGSTY 0.30 1 | AVAIL PIGSTY 0.30 1 | AVAIL PIGSTY 0.30 1 | AVAIL PIGSTY 0.30 1 | AVAIL PIGSTY 0.30 1 |
-| u26.x86_64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| u26.aarch64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| u26.x86_64 | AVAIL PIGSTY 0.30 1 | AVAIL PIGSTY 0.30 1 | AVAIL PIGSTY 0.30 1 | AVAIL PIGSTY 0.30 1 | AVAIL PIGSTY 0.30 1 |
+| u26.aarch64 | AVAIL PIGSTY 0.30 1 | AVAIL PIGSTY 0.30 1 | AVAIL PIGSTY 0.30 1 | AVAIL PIGSTY 0.30 1 | AVAIL PIGSTY 0.30 1 |
 @ el8.x86_64 18 ddlx_18 ddlx_18-0.30-1PGDG.rhel8.noarch.rpm pgdg 0.30 33.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/ddlx_18-0.30-1PGDG.rhel8.noarch.rpm
 @ el8.aarch64 18 ddlx_18 ddlx_18-0.30-1PGDG.rhel8.noarch.rpm pgdg 0.30 33.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/ddlx_18-0.30-1PGDG.rhel8.noarch.rpm
 @ el9.x86_64 18 ddlx_18 ddlx_18-0.30-1PGDG.rhel9.noarch.rpm pgdg 0.30 31.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/ddlx_18-0.30-1PGDG.rhel9.noarch.rpm
@@ -80,6 +80,8 @@ weight: 5080
 @ u22.aarch64 18 postgresql-18-ddlx postgresql-18-ddlx_0.30-1PIGSTY~jammy_arm64.deb pigsty 0.30 26.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/d/ddlx/postgresql-18-ddlx_0.30-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 18 postgresql-18-ddlx postgresql-18-ddlx_0.30-1PIGSTY~noble_amd64.deb pigsty 0.30 25.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/d/ddlx/postgresql-18-ddlx_0.30-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 18 postgresql-18-ddlx postgresql-18-ddlx_0.30-1PIGSTY~noble_arm64.deb pigsty 0.30 25.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/d/ddlx/postgresql-18-ddlx_0.30-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 18 postgresql-18-ddlx postgresql-18-ddlx_0.30-1PIGSTY~resolute_amd64.deb pigsty 0.30 25.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/d/ddlx/postgresql-18-ddlx_0.30-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 18 postgresql-18-ddlx postgresql-18-ddlx_0.30-1PIGSTY~resolute_arm64.deb pigsty 0.30 25.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/d/ddlx/postgresql-18-ddlx_0.30-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 17 ddlx_17 ddlx_17-0.30-1PIGSTY.el8.x86_64.rpm pigsty 0.30 32.4KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/ddlx_17-0.30-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 17 ddlx_17 ddlx_17-0.30-1PGDG.rhel8.noarch.rpm pgdg 0.30 33.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/ddlx_17-0.30-1PGDG.rhel8.noarch.rpm
 @ el8.x86_64 17 ddlx_17 ddlx_17-0.29-1PGDG.rhel8.noarch.rpm pgdg 0.29 32.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/ddlx_17-0.29-1PGDG.rhel8.noarch.rpm
@@ -104,6 +106,8 @@ weight: 5080
 @ u22.aarch64 17 postgresql-17-ddlx postgresql-17-ddlx_0.30-1PIGSTY~jammy_arm64.deb pigsty 0.30 26.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/d/ddlx/postgresql-17-ddlx_0.30-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 17 postgresql-17-ddlx postgresql-17-ddlx_0.30-1PIGSTY~noble_amd64.deb pigsty 0.30 25.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/d/ddlx/postgresql-17-ddlx_0.30-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 17 postgresql-17-ddlx postgresql-17-ddlx_0.30-1PIGSTY~noble_arm64.deb pigsty 0.30 25.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/d/ddlx/postgresql-17-ddlx_0.30-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 17 postgresql-17-ddlx postgresql-17-ddlx_0.30-1PIGSTY~resolute_amd64.deb pigsty 0.30 25.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/d/ddlx/postgresql-17-ddlx_0.30-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 17 postgresql-17-ddlx postgresql-17-ddlx_0.30-1PIGSTY~resolute_arm64.deb pigsty 0.30 25.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/d/ddlx/postgresql-17-ddlx_0.30-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 16 ddlx_16 ddlx_16-0.30-1PIGSTY.el8.x86_64.rpm pigsty 0.30 32.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/ddlx_16-0.30-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 16 ddlx_16 ddlx_16-0.30-1PGDG.rhel8.noarch.rpm pgdg 0.30 33.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/ddlx_16-0.30-1PGDG.rhel8.noarch.rpm
 @ el8.x86_64 16 ddlx_16 ddlx_16-0.29-1PGDG.rhel8.noarch.rpm pgdg 0.29 32.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/ddlx_16-0.29-1PGDG.rhel8.noarch.rpm
@@ -140,6 +144,8 @@ weight: 5080
 @ u22.aarch64 16 postgresql-16-ddlx postgresql-16-ddlx_0.30-1PIGSTY~jammy_arm64.deb pigsty 0.30 26.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/d/ddlx/postgresql-16-ddlx_0.30-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 16 postgresql-16-ddlx postgresql-16-ddlx_0.30-1PIGSTY~noble_amd64.deb pigsty 0.30 25.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/d/ddlx/postgresql-16-ddlx_0.30-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 16 postgresql-16-ddlx postgresql-16-ddlx_0.30-1PIGSTY~noble_arm64.deb pigsty 0.30 25.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/d/ddlx/postgresql-16-ddlx_0.30-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 16 postgresql-16-ddlx postgresql-16-ddlx_0.30-1PIGSTY~resolute_amd64.deb pigsty 0.30 25.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/d/ddlx/postgresql-16-ddlx_0.30-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 16 postgresql-16-ddlx postgresql-16-ddlx_0.30-1PIGSTY~resolute_arm64.deb pigsty 0.30 25.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/d/ddlx/postgresql-16-ddlx_0.30-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 15 ddlx_15 ddlx_15-0.30-1PIGSTY.el8.x86_64.rpm pigsty 0.30 32.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/ddlx_15-0.30-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 15 ddlx_15 ddlx_15-0.30-1PGDG.rhel8.noarch.rpm pgdg 0.30 33.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/ddlx_15-0.30-1PGDG.rhel8.noarch.rpm
 @ el8.x86_64 15 ddlx_15 ddlx_15-0.29-1PGDG.rhel8.noarch.rpm pgdg 0.29 32.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/ddlx_15-0.29-1PGDG.rhel8.noarch.rpm
@@ -184,6 +190,8 @@ weight: 5080
 @ u22.aarch64 15 postgresql-15-ddlx postgresql-15-ddlx_0.30-1PIGSTY~jammy_arm64.deb pigsty 0.30 25.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/d/ddlx/postgresql-15-ddlx_0.30-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 15 postgresql-15-ddlx postgresql-15-ddlx_0.30-1PIGSTY~noble_amd64.deb pigsty 0.30 25.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/d/ddlx/postgresql-15-ddlx_0.30-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 15 postgresql-15-ddlx postgresql-15-ddlx_0.30-1PIGSTY~noble_arm64.deb pigsty 0.30 25.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/d/ddlx/postgresql-15-ddlx_0.30-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 15 postgresql-15-ddlx postgresql-15-ddlx_0.30-1PIGSTY~resolute_amd64.deb pigsty 0.30 25.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/d/ddlx/postgresql-15-ddlx_0.30-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 15 postgresql-15-ddlx postgresql-15-ddlx_0.30-1PIGSTY~resolute_arm64.deb pigsty 0.30 25.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/d/ddlx/postgresql-15-ddlx_0.30-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 14 ddlx_14 ddlx_14-0.30-1PIGSTY.el8.x86_64.rpm pigsty 0.30 32.1KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/ddlx_14-0.30-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 14 ddlx_14 ddlx_14-0.30-1PGDG.rhel8.noarch.rpm pgdg 0.30 33.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/ddlx_14-0.30-1PGDG.rhel8.noarch.rpm
 @ el8.x86_64 14 ddlx_14 ddlx_14-0.29-1PGDG.rhel8.noarch.rpm pgdg 0.29 32.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/ddlx_14-0.29-1PGDG.rhel8.noarch.rpm
@@ -228,6 +236,8 @@ weight: 5080
 @ u22.aarch64 14 postgresql-14-ddlx postgresql-14-ddlx_0.30-1PIGSTY~jammy_arm64.deb pigsty 0.30 25.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/d/ddlx/postgresql-14-ddlx_0.30-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 14 postgresql-14-ddlx postgresql-14-ddlx_0.30-1PIGSTY~noble_amd64.deb pigsty 0.30 25.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/d/ddlx/postgresql-14-ddlx_0.30-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 14 postgresql-14-ddlx postgresql-14-ddlx_0.30-1PIGSTY~noble_arm64.deb pigsty 0.30 25.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/d/ddlx/postgresql-14-ddlx_0.30-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 14 postgresql-14-ddlx postgresql-14-ddlx_0.30-1PIGSTY~resolute_amd64.deb pigsty 0.30 25.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/d/ddlx/postgresql-14-ddlx_0.30-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 14 postgresql-14-ddlx postgresql-14-ddlx_0.30-1PIGSTY~resolute_arm64.deb pigsty 0.30 25.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/d/ddlx/postgresql-14-ddlx_0.30-1PIGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建

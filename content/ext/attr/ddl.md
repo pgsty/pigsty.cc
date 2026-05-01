@@ -6,7 +6,7 @@ weight: 20
 slug: ddl
 ---
 
-以下 **25** 个扩展不需要执行 `CREATE EXTENSION` 即可使用。
+以下 **26** 个扩展不需要执行 `CREATE EXTENSION` 即可使用。
 
 这些扩展通常以共享库（Hook）或独立工具的形式存在，安装后直接通过配置参数启用或自动生效，无需在数据库中显式创建扩展对象。
 
@@ -16,6 +16,7 @@ slug: ddl
 | [`plan_filter`](/ext/e/plan_filter) | [`pg_plan_filter`](https://github.com/pgexperts/pg_plan_filter) | `0.0.1` | `--sL---` | 使用执行计划代价过滤阻止特定查询语句 |
 | [`pg_checksums`](/ext/e/pg_checksums) | [`pg_checksums`](https://github.com/credativ/pg_checksums) | `1.3` | `--s---r` | 在离线模式下激活/启用/禁用数据库集群的校验和功能 |
 | [`pg_crash`](/ext/e/pg_crash) | [`pg_crash`](https://github.com/cybertec-postgresql/pg_crash) | `1.0` | `--sL---` | 向数据库进程随机发送信号模拟故障 |
+| [`pg_pathcheck`](/ext/e/pg_pathcheck) | [`pg_pathcheck`](https://github.com/danolivo/pg_pathcheck) | `0.9.1` | `--sL---` | 校验 planner Path 树，诊断已释放或损坏的内存引用 |
 | [`safeupdate`](/ext/e/safeupdate) | [`safeupdate`](https://github.com/eradman/pg-safeupdate) | `1.5` | `--sL---` | 强制在 UPDATE 和 DELETE 时提供 Where 条件 |
 | [`basic_archive`](/ext/e/basic_archive) | [`basic_archive`](https://www.postgresql.org/docs/current/basic-archive.html) | `-` | `c-s----` | 归档模块样例 |
 | [`basebackup_to_shell`](/ext/e/basebackup_to_shell) | [`basebackup_to_shell`](https://www.postgresql.org/docs/current/basebackup-to-shell.html) | `-` | `c-s----` | 添加一种备份到Shell终端到基础备份方式 |

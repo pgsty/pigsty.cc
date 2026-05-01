@@ -64,8 +64,8 @@ weight: 7360
 | u22.aarch64 | AVAIL PIGSTY 1.7 1 | AVAIL PIGSTY 1.7 1 | AVAIL PIGSTY 1.7 1 | AVAIL PIGSTY 1.7 1 | AVAIL PIGSTY 1.7 1 |
 | u24.x86_64 | AVAIL PIGSTY 1.7 1 | AVAIL PIGSTY 1.7 1 | AVAIL PIGSTY 1.7 1 | AVAIL PIGSTY 1.7 1 | AVAIL PIGSTY 1.7 1 |
 | u24.aarch64 | AVAIL PIGSTY 1.7 1 | AVAIL PIGSTY 1.7 1 | AVAIL PIGSTY 1.7 1 | AVAIL PIGSTY 1.7 1 | AVAIL PIGSTY 1.7 1 |
-| u26.x86_64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| u26.aarch64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| u26.x86_64 | AVAIL PIGSTY 1.7 1 | AVAIL PIGSTY 1.7 1 | AVAIL PIGSTY 1.7 1 | AVAIL PIGSTY 1.7 1 | AVAIL PIGSTY 1.7 1 |
+| u26.aarch64 | AVAIL PIGSTY 1.7 1 | AVAIL PIGSTY 1.7 1 | AVAIL PIGSTY 1.7 1 | AVAIL PIGSTY 1.7 1 | AVAIL PIGSTY 1.7 1 |
 @ el8.x86_64 18 login_hook_18 login_hook_18-1.7-3PIGSTY.el8.x86_64.rpm pigsty 1.7 17.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/login_hook_18-1.7-3PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 18 login_hook_18 login_hook_18-1.7-3PIGSTY.el8.aarch64.rpm pigsty 1.7 17.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/login_hook_18-1.7-3PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 18 login_hook_18 login_hook_18-1.7-3PIGSTY.el9.x86_64.rpm pigsty 1.7 17.7KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/login_hook_18-1.7-3PIGSTY.el9.x86_64.rpm
@@ -80,6 +80,8 @@ weight: 7360
 @ u22.aarch64 18 postgresql-18-login-hook postgresql-18-login-hook_1.7-2PIGSTY~jammy_arm64.deb pigsty 1.7 29.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/l/login-hook/postgresql-18-login-hook_1.7-2PIGSTY~jammy_arm64.deb
 @ u24.x86_64 18 postgresql-18-login-hook postgresql-18-login-hook_1.7-2PIGSTY~noble_amd64.deb pigsty 1.7 28.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/l/login-hook/postgresql-18-login-hook_1.7-2PIGSTY~noble_amd64.deb
 @ u24.aarch64 18 postgresql-18-login-hook postgresql-18-login-hook_1.7-2PIGSTY~noble_arm64.deb pigsty 1.7 28.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/l/login-hook/postgresql-18-login-hook_1.7-2PIGSTY~noble_arm64.deb
+@ u26.x86_64 18 postgresql-18-login-hook postgresql-18-login-hook_1.7-2PIGSTY~resolute_amd64.deb pigsty 1.7 27.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/l/login-hook/postgresql-18-login-hook_1.7-2PIGSTY~resolute_amd64.deb
+@ u26.aarch64 18 postgresql-18-login-hook postgresql-18-login-hook_1.7-2PIGSTY~resolute_arm64.deb pigsty 1.7 27.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/l/login-hook/postgresql-18-login-hook_1.7-2PIGSTY~resolute_arm64.deb
 @ el8.x86_64 17 login_hook_17 login_hook_17-1.7-1PGDG.rhel8.x86_64.rpm pgdg 1.7 18.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/login_hook_17-1.7-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 17 login_hook_17 login_hook_17-1.6-1PGDG.rhel8.x86_64.rpm pgdg 1.6 17.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/login_hook_17-1.6-1PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 17 login_hook_17 login_hook_17-1.7-1PGDG.rhel8.aarch64.rpm pgdg 1.7 18.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/login_hook_17-1.7-1PGDG.rhel8.aarch64.rpm
@@ -98,6 +100,8 @@ weight: 7360
 @ u22.aarch64 17 postgresql-17-login-hook postgresql-17-login-hook_1.7-2PIGSTY~jammy_arm64.deb pigsty 1.7 29.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/l/login-hook/postgresql-17-login-hook_1.7-2PIGSTY~jammy_arm64.deb
 @ u24.x86_64 17 postgresql-17-login-hook postgresql-17-login-hook_1.7-2PIGSTY~noble_amd64.deb pigsty 1.7 28.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/l/login-hook/postgresql-17-login-hook_1.7-2PIGSTY~noble_amd64.deb
 @ u24.aarch64 17 postgresql-17-login-hook postgresql-17-login-hook_1.7-2PIGSTY~noble_arm64.deb pigsty 1.7 28.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/l/login-hook/postgresql-17-login-hook_1.7-2PIGSTY~noble_arm64.deb
+@ u26.x86_64 17 postgresql-17-login-hook postgresql-17-login-hook_1.7-2PIGSTY~resolute_amd64.deb pigsty 1.7 27.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/l/login-hook/postgresql-17-login-hook_1.7-2PIGSTY~resolute_amd64.deb
+@ u26.aarch64 17 postgresql-17-login-hook postgresql-17-login-hook_1.7-2PIGSTY~resolute_arm64.deb pigsty 1.7 27.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/l/login-hook/postgresql-17-login-hook_1.7-2PIGSTY~resolute_arm64.deb
 @ el8.x86_64 16 login_hook_16 login_hook_16-1.7-1PGDG.rhel8.x86_64.rpm pgdg 1.7 17.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/login_hook_16-1.7-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 16 login_hook_16 login_hook_16-1.6-1PGDG.rhel8.x86_64.rpm pgdg 1.6 17.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/login_hook_16-1.6-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 16 login_hook_16 login_hook_16-1.5-1PGDG.rhel8.x86_64.rpm pgdg 1.5 16.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/login_hook_16-1.5-1PGDG.rhel8.x86_64.rpm
@@ -120,6 +124,8 @@ weight: 7360
 @ u22.aarch64 16 postgresql-16-login-hook postgresql-16-login-hook_1.7-2PIGSTY~jammy_arm64.deb pigsty 1.7 28.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/l/login-hook/postgresql-16-login-hook_1.7-2PIGSTY~jammy_arm64.deb
 @ u24.x86_64 16 postgresql-16-login-hook postgresql-16-login-hook_1.7-2PIGSTY~noble_amd64.deb pigsty 1.7 28.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/l/login-hook/postgresql-16-login-hook_1.7-2PIGSTY~noble_amd64.deb
 @ u24.aarch64 16 postgresql-16-login-hook postgresql-16-login-hook_1.7-2PIGSTY~noble_arm64.deb pigsty 1.7 28.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/l/login-hook/postgresql-16-login-hook_1.7-2PIGSTY~noble_arm64.deb
+@ u26.x86_64 16 postgresql-16-login-hook postgresql-16-login-hook_1.7-2PIGSTY~resolute_amd64.deb pigsty 1.7 27.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/l/login-hook/postgresql-16-login-hook_1.7-2PIGSTY~resolute_amd64.deb
+@ u26.aarch64 16 postgresql-16-login-hook postgresql-16-login-hook_1.7-2PIGSTY~resolute_arm64.deb pigsty 1.7 26.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/l/login-hook/postgresql-16-login-hook_1.7-2PIGSTY~resolute_arm64.deb
 @ el8.x86_64 15 login_hook_15 login_hook_15-1.7-1PGDG.rhel8.x86_64.rpm pgdg 1.7 17.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/login_hook_15-1.7-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 15 login_hook_15 login_hook_15-1.6-1PGDG.rhel8.x86_64.rpm pgdg 1.6 17.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/login_hook_15-1.6-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 15 login_hook_15 login_hook_15-1.5-1PGDG.rhel8.x86_64.rpm pgdg 1.5 16.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/login_hook_15-1.5-1PGDG.rhel8.x86_64.rpm
@@ -142,6 +148,8 @@ weight: 7360
 @ u22.aarch64 15 postgresql-15-login-hook postgresql-15-login-hook_1.7-2PIGSTY~jammy_arm64.deb pigsty 1.7 28.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/l/login-hook/postgresql-15-login-hook_1.7-2PIGSTY~jammy_arm64.deb
 @ u24.x86_64 15 postgresql-15-login-hook postgresql-15-login-hook_1.7-2PIGSTY~noble_amd64.deb pigsty 1.7 28.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/l/login-hook/postgresql-15-login-hook_1.7-2PIGSTY~noble_amd64.deb
 @ u24.aarch64 15 postgresql-15-login-hook postgresql-15-login-hook_1.7-2PIGSTY~noble_arm64.deb pigsty 1.7 28.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/l/login-hook/postgresql-15-login-hook_1.7-2PIGSTY~noble_arm64.deb
+@ u26.x86_64 15 postgresql-15-login-hook postgresql-15-login-hook_1.7-2PIGSTY~resolute_amd64.deb pigsty 1.7 27.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/l/login-hook/postgresql-15-login-hook_1.7-2PIGSTY~resolute_amd64.deb
+@ u26.aarch64 15 postgresql-15-login-hook postgresql-15-login-hook_1.7-2PIGSTY~resolute_arm64.deb pigsty 1.7 26.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/l/login-hook/postgresql-15-login-hook_1.7-2PIGSTY~resolute_arm64.deb
 @ el8.x86_64 14 login_hook_14 login_hook_14-1.7-1PGDG.rhel8.x86_64.rpm pgdg 1.7 18.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/login_hook_14-1.7-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 14 login_hook_14 login_hook_14-1.6-1PGDG.rhel8.x86_64.rpm pgdg 1.6 17.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/login_hook_14-1.6-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 14 login_hook_14 login_hook_14-1.5-1PGDG.rhel8.x86_64.rpm pgdg 1.5 16.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/login_hook_14-1.5-1PGDG.rhel8.x86_64.rpm
@@ -164,6 +172,8 @@ weight: 7360
 @ u22.aarch64 14 postgresql-14-login-hook postgresql-14-login-hook_1.7-2PIGSTY~jammy_arm64.deb pigsty 1.7 29.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/l/login-hook/postgresql-14-login-hook_1.7-2PIGSTY~jammy_arm64.deb
 @ u24.x86_64 14 postgresql-14-login-hook postgresql-14-login-hook_1.7-2PIGSTY~noble_amd64.deb pigsty 1.7 28.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/l/login-hook/postgresql-14-login-hook_1.7-2PIGSTY~noble_amd64.deb
 @ u24.aarch64 14 postgresql-14-login-hook postgresql-14-login-hook_1.7-2PIGSTY~noble_arm64.deb pigsty 1.7 28.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/l/login-hook/postgresql-14-login-hook_1.7-2PIGSTY~noble_arm64.deb
+@ u26.x86_64 14 postgresql-14-login-hook postgresql-14-login-hook_1.7-2PIGSTY~resolute_amd64.deb pigsty 1.7 27.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/l/login-hook/postgresql-14-login-hook_1.7-2PIGSTY~resolute_amd64.deb
+@ u26.aarch64 14 postgresql-14-login-hook postgresql-14-login-hook_1.7-2PIGSTY~resolute_arm64.deb pigsty 1.7 27.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/l/login-hook/postgresql-14-login-hook_1.7-2PIGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建

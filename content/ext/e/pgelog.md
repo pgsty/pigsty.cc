@@ -67,8 +67,8 @@ weight: 5870
 | u22.aarch64 | AVAIL PIGSTY 1.0.2 1 | AVAIL PIGSTY 1.0.2 1 | AVAIL PIGSTY 1.0.2 1 | AVAIL PIGSTY 1.0.2 1 | AVAIL PIGSTY 1.0.2 1 |
 | u24.x86_64 | AVAIL PIGSTY 1.0.2 1 | AVAIL PIGSTY 1.0.2 1 | AVAIL PIGSTY 1.0.2 1 | AVAIL PIGSTY 1.0.2 1 | AVAIL PIGSTY 1.0.2 1 |
 | u24.aarch64 | AVAIL PIGSTY 1.0.2 1 | AVAIL PIGSTY 1.0.2 1 | AVAIL PIGSTY 1.0.2 1 | AVAIL PIGSTY 1.0.2 1 | AVAIL PIGSTY 1.0.2 1 |
-| u26.x86_64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| u26.aarch64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| u26.x86_64 | AVAIL PIGSTY 1.0.2 1 | AVAIL PIGSTY 1.0.2 1 | AVAIL PIGSTY 1.0.2 1 | AVAIL PIGSTY 1.0.2 1 | AVAIL PIGSTY 1.0.2 1 |
+| u26.aarch64 | AVAIL PIGSTY 1.0.2 1 | AVAIL PIGSTY 1.0.2 1 | AVAIL PIGSTY 1.0.2 1 | AVAIL PIGSTY 1.0.2 1 | AVAIL PIGSTY 1.0.2 1 |
 @ el8.x86_64 18 pgelog_18 pgelog_18-1.0.2-1PIGSTY.el8.x86_64.rpm pigsty 1.0.2 15.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgelog_18-1.0.2-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 18 pgelog_18 pgelog_18-1.0.2-1PIGSTY.el8.aarch64.rpm pigsty 1.0.2 15.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgelog_18-1.0.2-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 18 pgelog_18 pgelog_18-1.0.2-1PIGSTY.el9.x86_64.rpm pigsty 1.0.2 15.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgelog_18-1.0.2-1PIGSTY.el9.x86_64.rpm
@@ -83,6 +83,8 @@ weight: 5870
 @ u22.aarch64 18 postgresql-18-pgelog postgresql-18-pgelog_1.0.2-1PIGSTY~jammy_arm64.deb pigsty 1.0.2 9.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgelog/postgresql-18-pgelog_1.0.2-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 18 postgresql-18-pgelog postgresql-18-pgelog_1.0.2-1PIGSTY~noble_amd64.deb pigsty 1.0.2 9.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgelog/postgresql-18-pgelog_1.0.2-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 18 postgresql-18-pgelog postgresql-18-pgelog_1.0.2-1PIGSTY~noble_arm64.deb pigsty 1.0.2 9.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgelog/postgresql-18-pgelog_1.0.2-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 18 postgresql-18-pgelog postgresql-18-pgelog_1.0.2-1PIGSTY~resolute_amd64.deb pigsty 1.0.2 9.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgelog/postgresql-18-pgelog_1.0.2-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 18 postgresql-18-pgelog postgresql-18-pgelog_1.0.2-1PIGSTY~resolute_arm64.deb pigsty 1.0.2 9.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgelog/postgresql-18-pgelog_1.0.2-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 17 pgelog_17 pgelog_17-1.0.2-1PIGSTY.el8.x86_64.rpm pigsty 1.0.2 15.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgelog_17-1.0.2-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 17 pgelog_17 pgelog_17-1.0.2-1PIGSTY.el8.aarch64.rpm pigsty 1.0.2 15.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgelog_17-1.0.2-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 17 pgelog_17 pgelog_17-1.0.2-1PIGSTY.el9.x86_64.rpm pigsty 1.0.2 15.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgelog_17-1.0.2-1PIGSTY.el9.x86_64.rpm
@@ -97,6 +99,8 @@ weight: 5870
 @ u22.aarch64 17 postgresql-17-pgelog postgresql-17-pgelog_1.0.2-1PIGSTY~jammy_arm64.deb pigsty 1.0.2 9.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgelog/postgresql-17-pgelog_1.0.2-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 17 postgresql-17-pgelog postgresql-17-pgelog_1.0.2-1PIGSTY~noble_amd64.deb pigsty 1.0.2 9.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgelog/postgresql-17-pgelog_1.0.2-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 17 postgresql-17-pgelog postgresql-17-pgelog_1.0.2-1PIGSTY~noble_arm64.deb pigsty 1.0.2 9.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgelog/postgresql-17-pgelog_1.0.2-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 17 postgresql-17-pgelog postgresql-17-pgelog_1.0.2-1PIGSTY~resolute_amd64.deb pigsty 1.0.2 9.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgelog/postgresql-17-pgelog_1.0.2-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 17 postgresql-17-pgelog postgresql-17-pgelog_1.0.2-1PIGSTY~resolute_arm64.deb pigsty 1.0.2 9.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgelog/postgresql-17-pgelog_1.0.2-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 16 pgelog_16 pgelog_16-1.0.2-1PIGSTY.el8.x86_64.rpm pigsty 1.0.2 15.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgelog_16-1.0.2-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 16 pgelog_16 pgelog_16-1.0.2-1PIGSTY.el8.aarch64.rpm pigsty 1.0.2 15.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgelog_16-1.0.2-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 16 pgelog_16 pgelog_16-1.0.2-1PIGSTY.el9.x86_64.rpm pigsty 1.0.2 15.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgelog_16-1.0.2-1PIGSTY.el9.x86_64.rpm
@@ -111,6 +115,8 @@ weight: 5870
 @ u22.aarch64 16 postgresql-16-pgelog postgresql-16-pgelog_1.0.2-1PIGSTY~jammy_arm64.deb pigsty 1.0.2 9.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgelog/postgresql-16-pgelog_1.0.2-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 16 postgresql-16-pgelog postgresql-16-pgelog_1.0.2-1PIGSTY~noble_amd64.deb pigsty 1.0.2 9.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgelog/postgresql-16-pgelog_1.0.2-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 16 postgresql-16-pgelog postgresql-16-pgelog_1.0.2-1PIGSTY~noble_arm64.deb pigsty 1.0.2 9.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgelog/postgresql-16-pgelog_1.0.2-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 16 postgresql-16-pgelog postgresql-16-pgelog_1.0.2-1PIGSTY~resolute_amd64.deb pigsty 1.0.2 9.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgelog/postgresql-16-pgelog_1.0.2-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 16 postgresql-16-pgelog postgresql-16-pgelog_1.0.2-1PIGSTY~resolute_arm64.deb pigsty 1.0.2 9.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgelog/postgresql-16-pgelog_1.0.2-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 15 pgelog_15 pgelog_15-1.0.2-1PIGSTY.el8.x86_64.rpm pigsty 1.0.2 15.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgelog_15-1.0.2-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 15 pgelog_15 pgelog_15-1.0.2-1PIGSTY.el8.aarch64.rpm pigsty 1.0.2 15.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgelog_15-1.0.2-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 15 pgelog_15 pgelog_15-1.0.2-1PIGSTY.el9.x86_64.rpm pigsty 1.0.2 15.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgelog_15-1.0.2-1PIGSTY.el9.x86_64.rpm
@@ -125,6 +131,8 @@ weight: 5870
 @ u22.aarch64 15 postgresql-15-pgelog postgresql-15-pgelog_1.0.2-1PIGSTY~jammy_arm64.deb pigsty 1.0.2 9.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgelog/postgresql-15-pgelog_1.0.2-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 15 postgresql-15-pgelog postgresql-15-pgelog_1.0.2-1PIGSTY~noble_amd64.deb pigsty 1.0.2 9.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgelog/postgresql-15-pgelog_1.0.2-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 15 postgresql-15-pgelog postgresql-15-pgelog_1.0.2-1PIGSTY~noble_arm64.deb pigsty 1.0.2 9.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgelog/postgresql-15-pgelog_1.0.2-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 15 postgresql-15-pgelog postgresql-15-pgelog_1.0.2-1PIGSTY~resolute_amd64.deb pigsty 1.0.2 9.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgelog/postgresql-15-pgelog_1.0.2-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 15 postgresql-15-pgelog postgresql-15-pgelog_1.0.2-1PIGSTY~resolute_arm64.deb pigsty 1.0.2 9.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgelog/postgresql-15-pgelog_1.0.2-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 14 pgelog_14 pgelog_14-1.0.2-1PIGSTY.el8.x86_64.rpm pigsty 1.0.2 15.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgelog_14-1.0.2-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 14 pgelog_14 pgelog_14-1.0.2-1PIGSTY.el8.aarch64.rpm pigsty 1.0.2 15.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgelog_14-1.0.2-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 14 pgelog_14 pgelog_14-1.0.2-1PIGSTY.el9.x86_64.rpm pigsty 1.0.2 15.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgelog_14-1.0.2-1PIGSTY.el9.x86_64.rpm
@@ -139,6 +147,8 @@ weight: 5870
 @ u22.aarch64 14 postgresql-14-pgelog postgresql-14-pgelog_1.0.2-1PIGSTY~jammy_arm64.deb pigsty 1.0.2 9.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgelog/postgresql-14-pgelog_1.0.2-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 14 postgresql-14-pgelog postgresql-14-pgelog_1.0.2-1PIGSTY~noble_amd64.deb pigsty 1.0.2 9.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgelog/postgresql-14-pgelog_1.0.2-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 14 postgresql-14-pgelog postgresql-14-pgelog_1.0.2-1PIGSTY~noble_arm64.deb pigsty 1.0.2 9.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgelog/postgresql-14-pgelog_1.0.2-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 14 postgresql-14-pgelog postgresql-14-pgelog_1.0.2-1PIGSTY~resolute_amd64.deb pigsty 1.0.2 9.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgelog/postgresql-14-pgelog_1.0.2-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 14 postgresql-14-pgelog postgresql-14-pgelog_1.0.2-1PIGSTY~resolute_arm64.deb pigsty 1.0.2 9.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgelog/postgresql-14-pgelog_1.0.2-1PIGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建

@@ -5,7 +5,7 @@ description: "需要动态加载的 PostgreSQL 扩展"
 weight: 10
 ---
 
-以下 **102** 个扩展需要在 [`shared_preload_libraries`](https://www.postgresql.org/docs/current/runtime-config-client.html#GUC-SHARED-PRELOAD-LIBRARIES) 中动态加载，才能正常使用。
+以下 **103** 个扩展需要在 [`shared_preload_libraries`](https://www.postgresql.org/docs/current/runtime-config-client.html#GUC-SHARED-PRELOAD-LIBRARIES) 中动态加载，才能正常使用。
 
 也就是说，您需要修改 PostgreSQL 配置文件 `postgresql.conf` 中的 [`shared_preload_libraries`](https://www.postgresql.org/docs/current/runtime-config-client.html#GUC-SHARED-PRELOAD-LIBRARIES) 参数，将扩展的库名添加进去，然后重启数据库才能生效。
 
@@ -57,6 +57,7 @@ weight: 10
 | [`pgautofailover`](/ext/e/pgautofailover) | `pgautofailover` | PG 自动故障迁移 |
 | [`pg_crash`](/ext/e/pg_crash) | `pg_crash` | 向数据库进程随机发送信号模拟故障 |
 | [`qos`](/ext/e/qos) | `qos` | PostgreSQL QoS 资源治理扩展（会话与查询限流/隔离） |
+| [`pg_pathcheck`](/ext/e/pg_pathcheck) | `pg_pathcheck` | 校验 planner Path 树，诊断已释放或损坏的内存引用 |
 | [`safeupdate`](/ext/e/safeupdate) | `safeupdate` | 强制在 UPDATE 和 DELETE 时提供 Where 条件 |
 | [`pg_strict`](/ext/e/pg_strict) | `pg_strict` | 防止不带WHERE条件的危险UPDATE和DELETE操作 |
 | [`pg_prewarm`](/ext/e/pg_prewarm) | `pg_prewarm` | 预热关系数据 |

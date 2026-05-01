@@ -63,8 +63,8 @@ weight: 4690
 | u22.aarch64 | AVAIL PIGSTY 1.7.0 1 | AVAIL PIGSTY 1.7.0 1 | AVAIL PIGSTY 1.7.0 1 | AVAIL PIGSTY 1.7.0 1 | AVAIL PIGSTY 1.7.0 1 |
 | u24.x86_64 | AVAIL PIGSTY 1.7.0 1 | AVAIL PIGSTY 1.7.0 1 | AVAIL PIGSTY 1.7.0 1 | AVAIL PIGSTY 1.7.0 1 | AVAIL PIGSTY 1.7.0 1 |
 | u24.aarch64 | AVAIL PIGSTY 1.7.0 1 | AVAIL PIGSTY 1.7.0 1 | AVAIL PIGSTY 1.7.0 1 | AVAIL PIGSTY 1.7.0 1 | AVAIL PIGSTY 1.7.0 1 |
-| u26.x86_64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| u26.aarch64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| u26.x86_64 | AVAIL PIGSTY 1.7.0 1 | AVAIL PIGSTY 1.7.0 1 | AVAIL PIGSTY 1.7.0 1 | AVAIL PIGSTY 1.7.0 1 | AVAIL PIGSTY 1.7.0 1 |
+| u26.aarch64 | AVAIL PIGSTY 1.7.0 1 | AVAIL PIGSTY 1.7.0 1 | AVAIL PIGSTY 1.7.0 1 | AVAIL PIGSTY 1.7.0 1 | AVAIL PIGSTY 1.7.0 1 |
 @ el8.x86_64 18 datasketches_18 datasketches_18-1.7.0-1PIGSTY.el8.x86_64.rpm pigsty 1.7.0 324.4KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/datasketches_18-1.7.0-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 18 datasketches_18 datasketches_18-1.7.0-1PIGSTY.el8.aarch64.rpm pigsty 1.7.0 314.1KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/datasketches_18-1.7.0-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 18 datasketches_18 datasketches_18-1.7.0-1PIGSTY.el9.x86_64.rpm pigsty 1.7.0 309.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/datasketches_18-1.7.0-1PIGSTY.el9.x86_64.rpm
@@ -79,6 +79,8 @@ weight: 4690
 @ u22.aarch64 18 postgresql-18-datasketches postgresql-18-datasketches_1.7.0-1PIGSTY~jammy_arm64.deb pigsty 1.7.0 1020.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/d/datasketches/postgresql-18-datasketches_1.7.0-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 18 postgresql-18-datasketches postgresql-18-datasketches_1.7.0-1PIGSTY~noble_amd64.deb pigsty 1.7.0 977.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/d/datasketches/postgresql-18-datasketches_1.7.0-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 18 postgresql-18-datasketches postgresql-18-datasketches_1.7.0-1PIGSTY~noble_arm64.deb pigsty 1.7.0 991.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/d/datasketches/postgresql-18-datasketches_1.7.0-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 18 postgresql-18-datasketches postgresql-18-datasketches_1.7.0-1PIGSTY~resolute_amd64.deb pigsty 1.7.0 945.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/d/datasketches/postgresql-18-datasketches_1.7.0-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 18 postgresql-18-datasketches postgresql-18-datasketches_1.7.0-1PIGSTY~resolute_arm64.deb pigsty 1.7.0 951.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/d/datasketches/postgresql-18-datasketches_1.7.0-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 17 datasketches_17 datasketches_17-1.7.0-1PIGSTY.el8.x86_64.rpm pigsty 1.7.0 324.4KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/datasketches_17-1.7.0-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 17 datasketches_17 datasketches_17-1.7.0-1PIGSTY.el8.aarch64.rpm pigsty 1.7.0 314.1KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/datasketches_17-1.7.0-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 17 datasketches_17 datasketches_17-1.7.0-1PIGSTY.el9.x86_64.rpm pigsty 1.7.0 309.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/datasketches_17-1.7.0-1PIGSTY.el9.x86_64.rpm
@@ -93,6 +95,8 @@ weight: 4690
 @ u22.aarch64 17 postgresql-17-datasketches postgresql-17-datasketches_1.7.0-1PIGSTY~jammy_arm64.deb pigsty 1.7.0 1.1MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/d/datasketches/postgresql-17-datasketches_1.7.0-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 17 postgresql-17-datasketches postgresql-17-datasketches_1.7.0-1PIGSTY~noble_amd64.deb pigsty 1.7.0 977.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/d/datasketches/postgresql-17-datasketches_1.7.0-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 17 postgresql-17-datasketches postgresql-17-datasketches_1.7.0-1PIGSTY~noble_arm64.deb pigsty 1.7.0 991.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/d/datasketches/postgresql-17-datasketches_1.7.0-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 17 postgresql-17-datasketches postgresql-17-datasketches_1.7.0-1PIGSTY~resolute_amd64.deb pigsty 1.7.0 945.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/d/datasketches/postgresql-17-datasketches_1.7.0-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 17 postgresql-17-datasketches postgresql-17-datasketches_1.7.0-1PIGSTY~resolute_arm64.deb pigsty 1.7.0 951.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/d/datasketches/postgresql-17-datasketches_1.7.0-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 16 datasketches_16 datasketches_16-1.7.0-1PIGSTY.el8.x86_64.rpm pigsty 1.7.0 324.4KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/datasketches_16-1.7.0-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 16 datasketches_16 datasketches_16-1.7.0-1PIGSTY.el8.aarch64.rpm pigsty 1.7.0 314.1KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/datasketches_16-1.7.0-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 16 datasketches_16 datasketches_16-1.7.0-1PIGSTY.el9.x86_64.rpm pigsty 1.7.0 309.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/datasketches_16-1.7.0-1PIGSTY.el9.x86_64.rpm
@@ -107,6 +111,8 @@ weight: 4690
 @ u22.aarch64 16 postgresql-16-datasketches postgresql-16-datasketches_1.7.0-1PIGSTY~jammy_arm64.deb pigsty 1.7.0 1.1MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/d/datasketches/postgresql-16-datasketches_1.7.0-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 16 postgresql-16-datasketches postgresql-16-datasketches_1.7.0-1PIGSTY~noble_amd64.deb pigsty 1.7.0 977.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/d/datasketches/postgresql-16-datasketches_1.7.0-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 16 postgresql-16-datasketches postgresql-16-datasketches_1.7.0-1PIGSTY~noble_arm64.deb pigsty 1.7.0 991.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/d/datasketches/postgresql-16-datasketches_1.7.0-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 16 postgresql-16-datasketches postgresql-16-datasketches_1.7.0-1PIGSTY~resolute_amd64.deb pigsty 1.7.0 945.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/d/datasketches/postgresql-16-datasketches_1.7.0-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 16 postgresql-16-datasketches postgresql-16-datasketches_1.7.0-1PIGSTY~resolute_arm64.deb pigsty 1.7.0 951.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/d/datasketches/postgresql-16-datasketches_1.7.0-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 15 datasketches_15 datasketches_15-1.7.0-1PIGSTY.el8.x86_64.rpm pigsty 1.7.0 342.1KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/datasketches_15-1.7.0-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 15 datasketches_15 datasketches_15-1.7.0-1PIGSTY.el8.aarch64.rpm pigsty 1.7.0 332.3KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/datasketches_15-1.7.0-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 15 datasketches_15 datasketches_15-1.7.0-1PIGSTY.el9.x86_64.rpm pigsty 1.7.0 323.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/datasketches_15-1.7.0-1PIGSTY.el9.x86_64.rpm
@@ -121,6 +127,8 @@ weight: 4690
 @ u22.aarch64 15 postgresql-15-datasketches postgresql-15-datasketches_1.7.0-1PIGSTY~jammy_arm64.deb pigsty 1.7.0 1.1MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/d/datasketches/postgresql-15-datasketches_1.7.0-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 15 postgresql-15-datasketches postgresql-15-datasketches_1.7.0-1PIGSTY~noble_amd64.deb pigsty 1.7.0 984.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/d/datasketches/postgresql-15-datasketches_1.7.0-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 15 postgresql-15-datasketches postgresql-15-datasketches_1.7.0-1PIGSTY~noble_arm64.deb pigsty 1.7.0 998.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/d/datasketches/postgresql-15-datasketches_1.7.0-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 15 postgresql-15-datasketches postgresql-15-datasketches_1.7.0-1PIGSTY~resolute_amd64.deb pigsty 1.7.0 951.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/d/datasketches/postgresql-15-datasketches_1.7.0-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 15 postgresql-15-datasketches postgresql-15-datasketches_1.7.0-1PIGSTY~resolute_arm64.deb pigsty 1.7.0 957.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/d/datasketches/postgresql-15-datasketches_1.7.0-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 14 datasketches_14 datasketches_14-1.7.0-1PIGSTY.el8.x86_64.rpm pigsty 1.7.0 342.1KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/datasketches_14-1.7.0-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 14 datasketches_14 datasketches_14-1.7.0-1PIGSTY.el8.aarch64.rpm pigsty 1.7.0 332.3KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/datasketches_14-1.7.0-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 14 datasketches_14 datasketches_14-1.7.0-1PIGSTY.el9.x86_64.rpm pigsty 1.7.0 323.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/datasketches_14-1.7.0-1PIGSTY.el9.x86_64.rpm
@@ -135,6 +143,8 @@ weight: 4690
 @ u22.aarch64 14 postgresql-14-datasketches postgresql-14-datasketches_1.7.0-1PIGSTY~jammy_arm64.deb pigsty 1.7.0 1.1MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/d/datasketches/postgresql-14-datasketches_1.7.0-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 14 postgresql-14-datasketches postgresql-14-datasketches_1.7.0-1PIGSTY~noble_amd64.deb pigsty 1.7.0 984.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/d/datasketches/postgresql-14-datasketches_1.7.0-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 14 postgresql-14-datasketches postgresql-14-datasketches_1.7.0-1PIGSTY~noble_arm64.deb pigsty 1.7.0 998.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/d/datasketches/postgresql-14-datasketches_1.7.0-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 14 postgresql-14-datasketches postgresql-14-datasketches_1.7.0-1PIGSTY~resolute_amd64.deb pigsty 1.7.0 951.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/d/datasketches/postgresql-14-datasketches_1.7.0-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 14 postgresql-14-datasketches postgresql-14-datasketches_1.7.0-1PIGSTY~resolute_arm64.deb pigsty 1.7.0 957.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/d/datasketches/postgresql-14-datasketches_1.7.0-1PIGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建

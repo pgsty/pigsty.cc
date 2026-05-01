@@ -2,7 +2,7 @@
 title: "uri"
 linkTitle: "uri"
 description: "URI数据类型"
-weight: 3840
+weight: 3790
 ---
 
 <div class="ext-cards">
@@ -30,7 +30,7 @@ weight: 3840
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
 |:-----:|:-------------------------------------------------------------------------|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|:----------|
-| 3840  | [**`uri`**](/ext/e/uri) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
+| 3790  | [**`uri`**](/ext/e/uri) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
 {.ext-table}
 
 | **相关扩展** | [`prefix`](/ext/e/prefix) [`semver`](/ext/e/semver) [`unit`](/ext/e/unit) [`pgpdf`](/ext/e/pgpdf) [`pglite_fusion`](/ext/e/pglite_fusion) [`md5hash`](/ext/e/md5hash) [`asn1oid`](/ext/e/asn1oid) [`roaringbitmap`](/ext/e/roaringbitmap) |
@@ -67,8 +67,8 @@ weight: 3840
 | u22.aarch64 | AVAIL PIGSTY 1.20251029 1 | AVAIL PIGSTY 1.20251029 1 | AVAIL PIGSTY 1.20251029 1 | AVAIL PIGSTY 1.20251029 1 | AVAIL PIGSTY 1.20251029 1 |
 | u24.x86_64 | AVAIL PIGSTY 1.20251029 1 | AVAIL PIGSTY 1.20251029 1 | AVAIL PIGSTY 1.20251029 1 | AVAIL PIGSTY 1.20251029 1 | AVAIL PIGSTY 1.20251029 1 |
 | u24.aarch64 | AVAIL PIGSTY 1.20251029 1 | AVAIL PIGSTY 1.20251029 1 | AVAIL PIGSTY 1.20251029 1 | AVAIL PIGSTY 1.20251029 1 | AVAIL PIGSTY 1.20251029 1 |
-| u26.x86_64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| u26.aarch64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| u26.x86_64 | AVAIL PIGSTY 1.20251029 1 | AVAIL PIGSTY 1.20251029 1 | AVAIL PIGSTY 1.20251029 1 | AVAIL PIGSTY 1.20251029 1 | AVAIL PIGSTY 1.20251029 1 |
+| u26.aarch64 | AVAIL PIGSTY 1.20251029 1 | AVAIL PIGSTY 1.20251029 1 | AVAIL PIGSTY 1.20251029 1 | AVAIL PIGSTY 1.20251029 1 | AVAIL PIGSTY 1.20251029 1 |
 @ el8.x86_64 18 pg_uri_18 pg_uri_18-1.20251029-1PIGSTY.el8.x86_64.rpm pigsty 1.20251029 19.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_uri_18-1.20251029-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 18 pg_uri_18 pg_uri_18-1.20251029-1PIGSTY.el8.aarch64.rpm pigsty 1.20251029 19.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_uri_18-1.20251029-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 18 pg_uri_18 pg_uri_18-1.20251029-1PIGSTY.el9.x86_64.rpm pigsty 1.20251029 19.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_uri_18-1.20251029-1PIGSTY.el9.x86_64.rpm
@@ -83,6 +83,8 @@ weight: 3840
 @ u22.aarch64 18 postgresql-18-pg-uri postgresql-18-pg-uri_1.20251029-1PIGSTY~jammy_arm64.deb pigsty 1.20251029 22.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-uri/postgresql-18-pg-uri_1.20251029-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 18 postgresql-18-pg-uri postgresql-18-pg-uri_1.20251029-1PIGSTY~noble_amd64.deb pigsty 1.20251029 22.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-uri/postgresql-18-pg-uri_1.20251029-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 18 postgresql-18-pg-uri postgresql-18-pg-uri_1.20251029-1PIGSTY~noble_arm64.deb pigsty 1.20251029 22.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-uri/postgresql-18-pg-uri_1.20251029-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 18 postgresql-18-pg-uri postgresql-18-pg-uri_1.20251029-1PIGSTY~resolute_amd64.deb pigsty 1.20251029 22.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-uri/postgresql-18-pg-uri_1.20251029-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 18 postgresql-18-pg-uri postgresql-18-pg-uri_1.20251029-1PIGSTY~resolute_arm64.deb pigsty 1.20251029 22.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-uri/postgresql-18-pg-uri_1.20251029-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 17 pg_uri_17 pg_uri_17-1.20251029-1PIGSTY.el8.x86_64.rpm pigsty 1.20251029 19.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_uri_17-1.20251029-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 17 pg_uri_17 pg_uri_17-1.20251029-1PIGSTY.el8.aarch64.rpm pigsty 1.20251029 19.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_uri_17-1.20251029-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 17 pg_uri_17 pg_uri_17-1.20251029-1PIGSTY.el9.x86_64.rpm pigsty 1.20251029 18.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_uri_17-1.20251029-1PIGSTY.el9.x86_64.rpm
@@ -97,6 +99,8 @@ weight: 3840
 @ u22.aarch64 17 postgresql-17-pg-uri postgresql-17-pg-uri_1.20251029-1PIGSTY~jammy_arm64.deb pigsty 1.20251029 23.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-uri/postgresql-17-pg-uri_1.20251029-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 17 postgresql-17-pg-uri postgresql-17-pg-uri_1.20251029-1PIGSTY~noble_amd64.deb pigsty 1.20251029 22.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-uri/postgresql-17-pg-uri_1.20251029-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 17 postgresql-17-pg-uri postgresql-17-pg-uri_1.20251029-1PIGSTY~noble_arm64.deb pigsty 1.20251029 22.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-uri/postgresql-17-pg-uri_1.20251029-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 17 postgresql-17-pg-uri postgresql-17-pg-uri_1.20251029-1PIGSTY~resolute_amd64.deb pigsty 1.20251029 22.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-uri/postgresql-17-pg-uri_1.20251029-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 17 postgresql-17-pg-uri postgresql-17-pg-uri_1.20251029-1PIGSTY~resolute_arm64.deb pigsty 1.20251029 22.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-uri/postgresql-17-pg-uri_1.20251029-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 16 pg_uri_16 pg_uri_16-1.20251029-1PIGSTY.el8.x86_64.rpm pigsty 1.20251029 19.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_uri_16-1.20251029-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 16 pg_uri_16 pg_uri_16-1.20251029-1PIGSTY.el8.aarch64.rpm pigsty 1.20251029 19.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_uri_16-1.20251029-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 16 pg_uri_16 pg_uri_16-1.20251029-1PIGSTY.el9.x86_64.rpm pigsty 1.20251029 18.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_uri_16-1.20251029-1PIGSTY.el9.x86_64.rpm
@@ -111,6 +115,8 @@ weight: 3840
 @ u22.aarch64 16 postgresql-16-pg-uri postgresql-16-pg-uri_1.20251029-1PIGSTY~jammy_arm64.deb pigsty 1.20251029 23.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-uri/postgresql-16-pg-uri_1.20251029-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 16 postgresql-16-pg-uri postgresql-16-pg-uri_1.20251029-1PIGSTY~noble_amd64.deb pigsty 1.20251029 22.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-uri/postgresql-16-pg-uri_1.20251029-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 16 postgresql-16-pg-uri postgresql-16-pg-uri_1.20251029-1PIGSTY~noble_arm64.deb pigsty 1.20251029 22.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-uri/postgresql-16-pg-uri_1.20251029-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 16 postgresql-16-pg-uri postgresql-16-pg-uri_1.20251029-1PIGSTY~resolute_amd64.deb pigsty 1.20251029 22.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-uri/postgresql-16-pg-uri_1.20251029-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 16 postgresql-16-pg-uri postgresql-16-pg-uri_1.20251029-1PIGSTY~resolute_arm64.deb pigsty 1.20251029 22.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-uri/postgresql-16-pg-uri_1.20251029-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 15 pg_uri_15 pg_uri_15-1.20251029-1PIGSTY.el8.x86_64.rpm pigsty 1.20251029 19.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_uri_15-1.20251029-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 15 pg_uri_15 pg_uri_15-1.20251029-1PIGSTY.el8.aarch64.rpm pigsty 1.20251029 19.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_uri_15-1.20251029-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 15 pg_uri_15 pg_uri_15-1.20251029-1PIGSTY.el9.x86_64.rpm pigsty 1.20251029 18.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_uri_15-1.20251029-1PIGSTY.el9.x86_64.rpm
@@ -125,6 +131,8 @@ weight: 3840
 @ u22.aarch64 15 postgresql-15-pg-uri postgresql-15-pg-uri_1.20251029-1PIGSTY~jammy_arm64.deb pigsty 1.20251029 23.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-uri/postgresql-15-pg-uri_1.20251029-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 15 postgresql-15-pg-uri postgresql-15-pg-uri_1.20251029-1PIGSTY~noble_amd64.deb pigsty 1.20251029 22.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-uri/postgresql-15-pg-uri_1.20251029-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 15 postgresql-15-pg-uri postgresql-15-pg-uri_1.20251029-1PIGSTY~noble_arm64.deb pigsty 1.20251029 22.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-uri/postgresql-15-pg-uri_1.20251029-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 15 postgresql-15-pg-uri postgresql-15-pg-uri_1.20251029-1PIGSTY~resolute_amd64.deb pigsty 1.20251029 22.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-uri/postgresql-15-pg-uri_1.20251029-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 15 postgresql-15-pg-uri postgresql-15-pg-uri_1.20251029-1PIGSTY~resolute_arm64.deb pigsty 1.20251029 22.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-uri/postgresql-15-pg-uri_1.20251029-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 14 pg_uri_14 pg_uri_14-1.20251029-1PIGSTY.el8.x86_64.rpm pigsty 1.20251029 19.2KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_uri_14-1.20251029-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 14 pg_uri_14 pg_uri_14-1.20251029-1PIGSTY.el8.aarch64.rpm pigsty 1.20251029 19.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_uri_14-1.20251029-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 14 pg_uri_14 pg_uri_14-1.20251029-1PIGSTY.el9.x86_64.rpm pigsty 1.20251029 18.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_uri_14-1.20251029-1PIGSTY.el9.x86_64.rpm
@@ -139,6 +147,8 @@ weight: 3840
 @ u22.aarch64 14 postgresql-14-pg-uri postgresql-14-pg-uri_1.20251029-1PIGSTY~jammy_arm64.deb pigsty 1.20251029 22.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-uri/postgresql-14-pg-uri_1.20251029-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 14 postgresql-14-pg-uri postgresql-14-pg-uri_1.20251029-1PIGSTY~noble_amd64.deb pigsty 1.20251029 22.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-uri/postgresql-14-pg-uri_1.20251029-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 14 postgresql-14-pg-uri postgresql-14-pg-uri_1.20251029-1PIGSTY~noble_arm64.deb pigsty 1.20251029 22.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-uri/postgresql-14-pg-uri_1.20251029-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 14 postgresql-14-pg-uri postgresql-14-pg-uri_1.20251029-1PIGSTY~resolute_amd64.deb pigsty 1.20251029 22.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-uri/postgresql-14-pg-uri_1.20251029-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 14 postgresql-14-pg-uri postgresql-14-pg-uri_1.20251029-1PIGSTY~resolute_arm64.deb pigsty 1.20251029 22.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-uri/postgresql-14-pg-uri_1.20251029-1PIGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建

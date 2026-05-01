@@ -67,8 +67,8 @@ weight: 1080
 | u22.aarch64 | AVAIL PIGSTY 2.1.12 1 | AVAIL PIGSTY 2.1.12 1 | AVAIL PIGSTY 2.1.12 1 | AVAIL PIGSTY 2.1.12 1 | AVAIL PIGSTY 2.1.12 1 |
 | u24.x86_64 | AVAIL PIGSTY 2.1.12 1 | AVAIL PIGSTY 2.1.12 1 | AVAIL PIGSTY 2.1.12 1 | AVAIL PIGSTY 2.1.12 1 | AVAIL PIGSTY 2.1.12 1 |
 | u24.aarch64 | AVAIL PIGSTY 2.1.12 1 | AVAIL PIGSTY 2.1.12 1 | AVAIL PIGSTY 2.1.12 1 | AVAIL PIGSTY 2.1.12 1 | AVAIL PIGSTY 2.1.12 1 |
-| u26.x86_64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| u26.aarch64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| u26.x86_64 | AVAIL PIGSTY 2.1.12 1 | AVAIL PIGSTY 2.1.12 1 | AVAIL PIGSTY 2.1.12 1 | AVAIL PIGSTY 2.1.12 1 | AVAIL PIGSTY 2.1.12 1 |
+| u26.aarch64 | AVAIL PIGSTY 2.1.12 1 | AVAIL PIGSTY 2.1.12 1 | AVAIL PIGSTY 2.1.12 1 | AVAIL PIGSTY 2.1.12 1 | AVAIL PIGSTY 2.1.12 1 |
 @ el8.x86_64 18 pg_task_18 pg_task_18-2.1.7-3PGDG.rhel8.x86_64.rpm pgdg 2.1.7 72.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pg_task_18-2.1.7-3PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 18 pg_task_18 pg_task_18-2.1.7-3PGDG.rhel8.aarch64.rpm pgdg 2.1.7 63.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pg_task_18-2.1.7-3PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 18 pg_task_18 pg_task_18-2.1.7-3PGDG.rhel9.x86_64.rpm pgdg 2.1.7 63.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pg_task_18-2.1.7-3PGDG.rhel9.x86_64.rpm
@@ -83,6 +83,8 @@ weight: 1080
 @ u22.aarch64 18 postgresql-18-pg-task postgresql-18-pg-task_2.1.12-1PIGSTY~jammy_arm64.deb pigsty 2.1.12 190.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-task/postgresql-18-pg-task_2.1.12-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 18 postgresql-18-pg-task postgresql-18-pg-task_2.1.12-1PIGSTY~noble_amd64.deb pigsty 2.1.12 193.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-task/postgresql-18-pg-task_2.1.12-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 18 postgresql-18-pg-task postgresql-18-pg-task_2.1.12-1PIGSTY~noble_arm64.deb pigsty 2.1.12 183.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-task/postgresql-18-pg-task_2.1.12-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 18 postgresql-18-pg-task postgresql-18-pg-task_2.1.12-1PIGSTY~resolute_amd64.deb pigsty 2.1.12 189.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-task/postgresql-18-pg-task_2.1.12-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 18 postgresql-18-pg-task postgresql-18-pg-task_2.1.12-1PIGSTY~resolute_arm64.deb pigsty 2.1.12 183.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-task/postgresql-18-pg-task_2.1.12-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 17 pg_task_17 pg_task_17-2.1.7-1PGDG.rhel8.x86_64.rpm pgdg 2.1.7 72.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pg_task_17-2.1.7-1PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 17 pg_task_17 pg_task_17-2.1.7-1PGDG.rhel8.aarch64.rpm pgdg 2.1.7 63.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pg_task_17-2.1.7-1PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 17 pg_task_17 pg_task_17-2.1.7-1PGDG.rhel9.x86_64.rpm pgdg 2.1.7 63.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_task_17-2.1.7-1PGDG.rhel9.x86_64.rpm
@@ -97,6 +99,8 @@ weight: 1080
 @ u22.aarch64 17 postgresql-17-pg-task postgresql-17-pg-task_2.1.12-1PIGSTY~jammy_arm64.deb pigsty 2.1.12 219.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-task/postgresql-17-pg-task_2.1.12-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 17 postgresql-17-pg-task postgresql-17-pg-task_2.1.12-1PIGSTY~noble_amd64.deb pigsty 2.1.12 193.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-task/postgresql-17-pg-task_2.1.12-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 17 postgresql-17-pg-task postgresql-17-pg-task_2.1.12-1PIGSTY~noble_arm64.deb pigsty 2.1.12 184.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-task/postgresql-17-pg-task_2.1.12-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 17 postgresql-17-pg-task postgresql-17-pg-task_2.1.12-1PIGSTY~resolute_amd64.deb pigsty 2.1.12 190.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-task/postgresql-17-pg-task_2.1.12-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 17 postgresql-17-pg-task postgresql-17-pg-task_2.1.12-1PIGSTY~resolute_arm64.deb pigsty 2.1.12 183.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-task/postgresql-17-pg-task_2.1.12-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 16 pg_task_16 pg_task_16-2.1.7-1PGDG.rhel8.x86_64.rpm pgdg 2.1.7 72.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_task_16-2.1.7-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 16 pg_task_16 pg_task_16-2.1.5-1PGDG.rhel8.x86_64.rpm pgdg 2.1.5 72.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_task_16-2.1.5-1PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 16 pg_task_16 pg_task_16-2.1.7-1PGDG.rhel8.aarch64.rpm pgdg 2.1.7 63.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pg_task_16-2.1.7-1PGDG.rhel8.aarch64.rpm
@@ -115,6 +119,8 @@ weight: 1080
 @ u22.aarch64 16 postgresql-16-pg-task postgresql-16-pg-task_2.1.12-1PIGSTY~jammy_arm64.deb pigsty 2.1.12 216.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-task/postgresql-16-pg-task_2.1.12-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 16 postgresql-16-pg-task postgresql-16-pg-task_2.1.12-1PIGSTY~noble_amd64.deb pigsty 2.1.12 193.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-task/postgresql-16-pg-task_2.1.12-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 16 postgresql-16-pg-task postgresql-16-pg-task_2.1.12-1PIGSTY~noble_arm64.deb pigsty 2.1.12 183.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-task/postgresql-16-pg-task_2.1.12-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 16 postgresql-16-pg-task postgresql-16-pg-task_2.1.12-1PIGSTY~resolute_amd64.deb pigsty 2.1.12 189.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-task/postgresql-16-pg-task_2.1.12-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 16 postgresql-16-pg-task postgresql-16-pg-task_2.1.12-1PIGSTY~resolute_arm64.deb pigsty 2.1.12 182.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-task/postgresql-16-pg-task_2.1.12-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 15 pg_task_15 pg_task_15-2.1.7-1PGDG.rhel8.x86_64.rpm pgdg 2.1.7 73.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_task_15-2.1.7-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 15 pg_task_15 pg_task_15-2.1.5-1PGDG.rhel8.x86_64.rpm pgdg 2.1.5 73.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_task_15-2.1.5-1PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 15 pg_task_15 pg_task_15-2.1.7-1PGDG.rhel8.aarch64.rpm pgdg 2.1.7 64.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pg_task_15-2.1.7-1PGDG.rhel8.aarch64.rpm
@@ -133,6 +139,8 @@ weight: 1080
 @ u22.aarch64 15 postgresql-15-pg-task postgresql-15-pg-task_2.1.12-1PIGSTY~jammy_arm64.deb pigsty 2.1.12 229.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-task/postgresql-15-pg-task_2.1.12-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 15 postgresql-15-pg-task postgresql-15-pg-task_2.1.12-1PIGSTY~noble_amd64.deb pigsty 2.1.12 202.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-task/postgresql-15-pg-task_2.1.12-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 15 postgresql-15-pg-task postgresql-15-pg-task_2.1.12-1PIGSTY~noble_arm64.deb pigsty 2.1.12 195.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-task/postgresql-15-pg-task_2.1.12-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 15 postgresql-15-pg-task postgresql-15-pg-task_2.1.12-1PIGSTY~resolute_amd64.deb pigsty 2.1.12 199.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-task/postgresql-15-pg-task_2.1.12-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 15 postgresql-15-pg-task postgresql-15-pg-task_2.1.12-1PIGSTY~resolute_arm64.deb pigsty 2.1.12 195.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-task/postgresql-15-pg-task_2.1.12-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 14 pg_task_14 pg_task_14-2.1.7-1PGDG.rhel8.x86_64.rpm pgdg 2.1.7 73.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_task_14-2.1.7-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 14 pg_task_14 pg_task_14-2.1.5-1PGDG.rhel8.x86_64.rpm pgdg 2.1.5 72.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_task_14-2.1.5-1PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 14 pg_task_14 pg_task_14-2.1.7-1PGDG.rhel8.aarch64.rpm pgdg 2.1.7 63.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pg_task_14-2.1.7-1PGDG.rhel8.aarch64.rpm
@@ -151,6 +159,8 @@ weight: 1080
 @ u22.aarch64 14 postgresql-14-pg-task postgresql-14-pg-task_2.1.12-1PIGSTY~jammy_arm64.deb pigsty 2.1.12 224.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-task/postgresql-14-pg-task_2.1.12-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 14 postgresql-14-pg-task postgresql-14-pg-task_2.1.12-1PIGSTY~noble_amd64.deb pigsty 2.1.12 201.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-task/postgresql-14-pg-task_2.1.12-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 14 postgresql-14-pg-task postgresql-14-pg-task_2.1.12-1PIGSTY~noble_arm64.deb pigsty 2.1.12 195.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-task/postgresql-14-pg-task_2.1.12-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 14 postgresql-14-pg-task postgresql-14-pg-task_2.1.12-1PIGSTY~resolute_amd64.deb pigsty 2.1.12 198.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-task/postgresql-14-pg-task_2.1.12-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 14 postgresql-14-pg-task postgresql-14-pg-task_2.1.12-1PIGSTY~resolute_arm64.deb pigsty 2.1.12 194.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-task/postgresql-14-pg-task_2.1.12-1PIGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建

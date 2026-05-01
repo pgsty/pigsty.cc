@@ -64,8 +64,8 @@ weight: 4570
 | u22.aarch64 | AVAIL PIGSTY 1.0.3 1 | AVAIL PIGSTY 1.0.3 1 | AVAIL PIGSTY 1.0.3 1 | AVAIL PIGSTY 1.0.3 1 | AVAIL PIGSTY 1.0.3 1 |
 | u24.x86_64 | AVAIL PIGSTY 1.0.3 1 | AVAIL PIGSTY 1.0.3 1 | AVAIL PIGSTY 1.0.3 1 | AVAIL PIGSTY 1.0.3 1 | AVAIL PIGSTY 1.0.3 1 |
 | u24.aarch64 | AVAIL PIGSTY 1.0.3 1 | AVAIL PIGSTY 1.0.3 1 | AVAIL PIGSTY 1.0.3 1 | AVAIL PIGSTY 1.0.3 1 | AVAIL PIGSTY 1.0.3 1 |
-| u26.x86_64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| u26.aarch64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| u26.x86_64 | AVAIL PIGSTY 1.0.3 1 | AVAIL PIGSTY 1.0.3 1 | AVAIL PIGSTY 1.0.3 1 | AVAIL PIGSTY 1.0.3 1 | AVAIL PIGSTY 1.0.3 1 |
+| u26.aarch64 | AVAIL PIGSTY 1.0.3 1 | AVAIL PIGSTY 1.0.3 1 | AVAIL PIGSTY 1.0.3 1 | AVAIL PIGSTY 1.0.3 1 | AVAIL PIGSTY 1.0.3 1 |
 @ el8.x86_64 18 sequential_uuids_18 sequential_uuids_18-1.0.3-2PIGSTY.el8.x86_64.rpm pigsty 1.0.3 12.6KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/sequential_uuids_18-1.0.3-2PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 18 sequential_uuids_18 sequential_uuids_18-1.0.3-2PGDG.rhel8.x86_64.rpm pgdg 1.0.3 16.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/sequential_uuids_18-1.0.3-2PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 18 sequential_uuids_18 sequential_uuids_18-1.0.3-2PIGSTY.el8.aarch64.rpm pigsty 1.0.3 12.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/sequential_uuids_18-1.0.3-2PIGSTY.el8.aarch64.rpm
@@ -86,6 +86,8 @@ weight: 4570
 @ u22.aarch64 18 postgresql-18-sequential-uuids postgresql-18-sequential-uuids_1.0.3-1PIGSTY~jammy_arm64.deb pigsty 1.0.3 13.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/s/sequential-uuids/postgresql-18-sequential-uuids_1.0.3-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 18 postgresql-18-sequential-uuids postgresql-18-sequential-uuids_1.0.3-1PIGSTY~noble_amd64.deb pigsty 1.0.3 13.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/s/sequential-uuids/postgresql-18-sequential-uuids_1.0.3-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 18 postgresql-18-sequential-uuids postgresql-18-sequential-uuids_1.0.3-1PIGSTY~noble_arm64.deb pigsty 1.0.3 13.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/s/sequential-uuids/postgresql-18-sequential-uuids_1.0.3-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 18 postgresql-18-sequential-uuids postgresql-18-sequential-uuids_1.0.3-1PIGSTY~resolute_amd64.deb pigsty 1.0.3 13.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/s/sequential-uuids/postgresql-18-sequential-uuids_1.0.3-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 18 postgresql-18-sequential-uuids postgresql-18-sequential-uuids_1.0.3-1PIGSTY~resolute_arm64.deb pigsty 1.0.3 13.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/s/sequential-uuids/postgresql-18-sequential-uuids_1.0.3-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 17 sequential_uuids_17 sequential_uuids_17-1.0.3-2PIGSTY.el8.x86_64.rpm pigsty 1.0.3 12.6KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/sequential_uuids_17-1.0.3-2PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 17 sequential_uuids_17 sequential_uuids_17-1.0.3-2PIGSTY.el8.aarch64.rpm pigsty 1.0.3 12.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/sequential_uuids_17-1.0.3-2PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 17 sequential_uuids_17 sequential_uuids_17-1.0.3-2PIGSTY.el9.x86_64.rpm pigsty 1.0.3 12.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/sequential_uuids_17-1.0.3-2PIGSTY.el9.x86_64.rpm
@@ -104,6 +106,8 @@ weight: 4570
 @ u22.aarch64 17 postgresql-17-sequential-uuids postgresql-17-sequential-uuids_1.0.3-1PIGSTY~jammy_arm64.deb pigsty 1.0.3 13.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/s/sequential-uuids/postgresql-17-sequential-uuids_1.0.3-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 17 postgresql-17-sequential-uuids postgresql-17-sequential-uuids_1.0.3-1PIGSTY~noble_amd64.deb pigsty 1.0.3 13.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/s/sequential-uuids/postgresql-17-sequential-uuids_1.0.3-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 17 postgresql-17-sequential-uuids postgresql-17-sequential-uuids_1.0.3-1PIGSTY~noble_arm64.deb pigsty 1.0.3 13.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/s/sequential-uuids/postgresql-17-sequential-uuids_1.0.3-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 17 postgresql-17-sequential-uuids postgresql-17-sequential-uuids_1.0.3-1PIGSTY~resolute_amd64.deb pigsty 1.0.3 13.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/s/sequential-uuids/postgresql-17-sequential-uuids_1.0.3-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 17 postgresql-17-sequential-uuids postgresql-17-sequential-uuids_1.0.3-1PIGSTY~resolute_arm64.deb pigsty 1.0.3 13.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/s/sequential-uuids/postgresql-17-sequential-uuids_1.0.3-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 16 sequential_uuids_16 sequential_uuids_16-1.0.3-2PIGSTY.el8.x86_64.rpm pigsty 1.0.3 12.6KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/sequential_uuids_16-1.0.3-2PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 16 sequential_uuids_16 sequential_uuids_16-1.0.3-2PIGSTY.el8.aarch64.rpm pigsty 1.0.3 12.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/sequential_uuids_16-1.0.3-2PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 16 sequential_uuids_16 sequential_uuids_16-1.0.3-2PIGSTY.el9.x86_64.rpm pigsty 1.0.3 12.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/sequential_uuids_16-1.0.3-2PIGSTY.el9.x86_64.rpm
@@ -122,6 +126,8 @@ weight: 4570
 @ u22.aarch64 16 postgresql-16-sequential-uuids postgresql-16-sequential-uuids_1.0.3-1PIGSTY~jammy_arm64.deb pigsty 1.0.3 13.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/s/sequential-uuids/postgresql-16-sequential-uuids_1.0.3-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 16 postgresql-16-sequential-uuids postgresql-16-sequential-uuids_1.0.3-1PIGSTY~noble_amd64.deb pigsty 1.0.3 13.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/s/sequential-uuids/postgresql-16-sequential-uuids_1.0.3-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 16 postgresql-16-sequential-uuids postgresql-16-sequential-uuids_1.0.3-1PIGSTY~noble_arm64.deb pigsty 1.0.3 13.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/s/sequential-uuids/postgresql-16-sequential-uuids_1.0.3-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 16 postgresql-16-sequential-uuids postgresql-16-sequential-uuids_1.0.3-1PIGSTY~resolute_amd64.deb pigsty 1.0.3 13.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/s/sequential-uuids/postgresql-16-sequential-uuids_1.0.3-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 16 postgresql-16-sequential-uuids postgresql-16-sequential-uuids_1.0.3-1PIGSTY~resolute_arm64.deb pigsty 1.0.3 13.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/s/sequential-uuids/postgresql-16-sequential-uuids_1.0.3-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 15 sequential_uuids_15 sequential_uuids_15-1.0.3-2PIGSTY.el8.x86_64.rpm pigsty 1.0.3 12.6KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/sequential_uuids_15-1.0.3-2PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 15 sequential_uuids_15 sequential_uuids_15-1.0.3-2PIGSTY.el8.aarch64.rpm pigsty 1.0.3 12.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/sequential_uuids_15-1.0.3-2PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 15 sequential_uuids_15 sequential_uuids_15-1.0.3-2PIGSTY.el9.x86_64.rpm pigsty 1.0.3 12.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/sequential_uuids_15-1.0.3-2PIGSTY.el9.x86_64.rpm
@@ -140,6 +146,8 @@ weight: 4570
 @ u22.aarch64 15 postgresql-15-sequential-uuids postgresql-15-sequential-uuids_1.0.3-1PIGSTY~jammy_arm64.deb pigsty 1.0.3 13.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/s/sequential-uuids/postgresql-15-sequential-uuids_1.0.3-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 15 postgresql-15-sequential-uuids postgresql-15-sequential-uuids_1.0.3-1PIGSTY~noble_amd64.deb pigsty 1.0.3 13.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/s/sequential-uuids/postgresql-15-sequential-uuids_1.0.3-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 15 postgresql-15-sequential-uuids postgresql-15-sequential-uuids_1.0.3-1PIGSTY~noble_arm64.deb pigsty 1.0.3 13.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/s/sequential-uuids/postgresql-15-sequential-uuids_1.0.3-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 15 postgresql-15-sequential-uuids postgresql-15-sequential-uuids_1.0.3-1PIGSTY~resolute_amd64.deb pigsty 1.0.3 13.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/s/sequential-uuids/postgresql-15-sequential-uuids_1.0.3-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 15 postgresql-15-sequential-uuids postgresql-15-sequential-uuids_1.0.3-1PIGSTY~resolute_arm64.deb pigsty 1.0.3 13.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/s/sequential-uuids/postgresql-15-sequential-uuids_1.0.3-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 14 sequential_uuids_14 sequential_uuids_14-1.0.3-2PIGSTY.el8.x86_64.rpm pigsty 1.0.3 12.6KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/sequential_uuids_14-1.0.3-2PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 14 sequential_uuids_14 sequential_uuids_14-1.0.2-1.rhel8.x86_64.rpm pgdg 1.0.2 21.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/sequential_uuids_14-1.0.2-1.rhel8.x86_64.rpm
 @ el8.aarch64 14 sequential_uuids_14 sequential_uuids_14-1.0.3-2PIGSTY.el8.aarch64.rpm pigsty 1.0.3 12.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/sequential_uuids_14-1.0.3-2PIGSTY.el8.aarch64.rpm
@@ -159,6 +167,8 @@ weight: 4570
 @ u22.aarch64 14 postgresql-14-sequential-uuids postgresql-14-sequential-uuids_1.0.3-1PIGSTY~jammy_arm64.deb pigsty 1.0.3 13.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/s/sequential-uuids/postgresql-14-sequential-uuids_1.0.3-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 14 postgresql-14-sequential-uuids postgresql-14-sequential-uuids_1.0.3-1PIGSTY~noble_amd64.deb pigsty 1.0.3 13.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/s/sequential-uuids/postgresql-14-sequential-uuids_1.0.3-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 14 postgresql-14-sequential-uuids postgresql-14-sequential-uuids_1.0.3-1PIGSTY~noble_arm64.deb pigsty 1.0.3 13.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/s/sequential-uuids/postgresql-14-sequential-uuids_1.0.3-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 14 postgresql-14-sequential-uuids postgresql-14-sequential-uuids_1.0.3-1PIGSTY~resolute_amd64.deb pigsty 1.0.3 13.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/s/sequential-uuids/postgresql-14-sequential-uuids_1.0.3-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 14 postgresql-14-sequential-uuids postgresql-14-sequential-uuids_1.0.3-1PIGSTY~resolute_arm64.deb pigsty 1.0.3 13.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/s/sequential-uuids/postgresql-14-sequential-uuids_1.0.3-1PIGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建

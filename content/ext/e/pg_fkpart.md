@@ -64,8 +64,8 @@ weight: 2500
 | u22.aarch64 | AVAIL PIGSTY 1.7.0 1 | AVAIL PIGSTY 1.7.0 1 | AVAIL PIGSTY 1.7.0 1 | AVAIL PIGSTY 1.7.0 1 | AVAIL PIGSTY 1.7.0 1 |
 | u24.x86_64 | AVAIL PIGSTY 1.7.0 1 | AVAIL PIGSTY 1.7.0 1 | AVAIL PIGSTY 1.7.0 1 | AVAIL PIGSTY 1.7.0 1 | AVAIL PIGSTY 1.7.0 1 |
 | u24.aarch64 | AVAIL PIGSTY 1.7.0 1 | AVAIL PIGSTY 1.7.0 1 | AVAIL PIGSTY 1.7.0 1 | AVAIL PIGSTY 1.7.0 1 | AVAIL PIGSTY 1.7.0 1 |
-| u26.x86_64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| u26.aarch64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| u26.x86_64 | AVAIL PIGSTY 1.7.0 1 | AVAIL PIGSTY 1.7.0 1 | AVAIL PIGSTY 1.7.0 1 | AVAIL PIGSTY 1.7.0 1 | AVAIL PIGSTY 1.7.0 1 |
+| u26.aarch64 | AVAIL PIGSTY 1.7.0 1 | AVAIL PIGSTY 1.7.0 1 | AVAIL PIGSTY 1.7.0 1 | AVAIL PIGSTY 1.7.0 1 | AVAIL PIGSTY 1.7.0 1 |
 @ el8.x86_64 18 pg_fkpart_18 pg_fkpart_18-1.7.0-6PGDG.rhel8.noarch.rpm pgdg 1.7.0 24.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pg_fkpart_18-1.7.0-6PGDG.rhel8.noarch.rpm
 @ el8.aarch64 18 pg_fkpart_18 pg_fkpart_18-1.7.0-6PGDG.rhel8.noarch.rpm pgdg 1.7.0 24.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pg_fkpart_18-1.7.0-6PGDG.rhel8.noarch.rpm
 @ el9.x86_64 18 pg_fkpart_18 pg_fkpart_18-1.7.0-6PGDG.rhel9.noarch.rpm pgdg 1.7.0 22.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pg_fkpart_18-1.7.0-6PGDG.rhel9.noarch.rpm
@@ -80,6 +80,8 @@ weight: 2500
 @ u22.aarch64 18 postgresql-18-pg-fkpart postgresql-18-pg-fkpart_1.7.0-1PIGSTY~jammy_arm64.deb pigsty 1.7.0 15.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-fkpart/postgresql-18-pg-fkpart_1.7.0-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 18 postgresql-18-pg-fkpart postgresql-18-pg-fkpart_1.7.0-1PIGSTY~noble_amd64.deb pigsty 1.7.0 15.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-fkpart/postgresql-18-pg-fkpart_1.7.0-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 18 postgresql-18-pg-fkpart postgresql-18-pg-fkpart_1.7.0-1PIGSTY~noble_arm64.deb pigsty 1.7.0 15.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-fkpart/postgresql-18-pg-fkpart_1.7.0-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 18 postgresql-18-pg-fkpart postgresql-18-pg-fkpart_1.7.0-1PIGSTY~resolute_amd64.deb pigsty 1.7.0 15.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-fkpart/postgresql-18-pg-fkpart_1.7.0-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 18 postgresql-18-pg-fkpart postgresql-18-pg-fkpart_1.7.0-1PIGSTY~resolute_arm64.deb pigsty 1.7.0 15.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-fkpart/postgresql-18-pg-fkpart_1.7.0-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 17 pg_fkpart_17 pg_fkpart_17-1.7.0-6PGDG.rhel8.noarch.rpm pgdg 1.7.0 24.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pg_fkpart_17-1.7.0-6PGDG.rhel8.noarch.rpm
 @ el8.x86_64 17 pg_fkpart_17 pg_fkpart_17-1.7.0-1PIGSTY.el8.x86_64.rpm pigsty 1.7.0 23.1KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_fkpart_17-1.7.0-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 17 pg_fkpart_17 pg_fkpart_17-1.7.0-6PGDG.rhel8.noarch.rpm pgdg 1.7.0 24.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pg_fkpart_17-1.7.0-6PGDG.rhel8.noarch.rpm
@@ -98,6 +100,8 @@ weight: 2500
 @ u22.aarch64 17 postgresql-17-pg-fkpart postgresql-17-pg-fkpart_1.7.0-1PIGSTY~jammy_arm64.deb pigsty 1.7.0 15.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-fkpart/postgresql-17-pg-fkpart_1.7.0-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 17 postgresql-17-pg-fkpart postgresql-17-pg-fkpart_1.7.0-1PIGSTY~noble_amd64.deb pigsty 1.7.0 15.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-fkpart/postgresql-17-pg-fkpart_1.7.0-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 17 postgresql-17-pg-fkpart postgresql-17-pg-fkpart_1.7.0-1PIGSTY~noble_arm64.deb pigsty 1.7.0 15.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-fkpart/postgresql-17-pg-fkpart_1.7.0-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 17 postgresql-17-pg-fkpart postgresql-17-pg-fkpart_1.7.0-1PIGSTY~resolute_amd64.deb pigsty 1.7.0 15.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-fkpart/postgresql-17-pg-fkpart_1.7.0-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 17 postgresql-17-pg-fkpart postgresql-17-pg-fkpart_1.7.0-1PIGSTY~resolute_arm64.deb pigsty 1.7.0 15.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-fkpart/postgresql-17-pg-fkpart_1.7.0-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 16 pg_fkpart_16 pg_fkpart_16-1.7.0-4.rhel8.noarch.rpm pgdg 1.7.0 24.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_fkpart_16-1.7.0-4.rhel8.noarch.rpm
 @ el8.x86_64 16 pg_fkpart_16 pg_fkpart_16-1.7.0-1PIGSTY.el8.x86_64.rpm pigsty 1.7.0 23.1KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_fkpart_16-1.7.0-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 16 pg_fkpart_16 pg_fkpart_16-1.7.0-4.rhel8.noarch.rpm pgdg 1.7.0 24.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pg_fkpart_16-1.7.0-4.rhel8.noarch.rpm
@@ -116,6 +120,8 @@ weight: 2500
 @ u22.aarch64 16 postgresql-16-pg-fkpart postgresql-16-pg-fkpart_1.7.0-1PIGSTY~jammy_arm64.deb pigsty 1.7.0 15.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-fkpart/postgresql-16-pg-fkpart_1.7.0-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 16 postgresql-16-pg-fkpart postgresql-16-pg-fkpart_1.7.0-1PIGSTY~noble_amd64.deb pigsty 1.7.0 15.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-fkpart/postgresql-16-pg-fkpart_1.7.0-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 16 postgresql-16-pg-fkpart postgresql-16-pg-fkpart_1.7.0-1PIGSTY~noble_arm64.deb pigsty 1.7.0 15.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-fkpart/postgresql-16-pg-fkpart_1.7.0-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 16 postgresql-16-pg-fkpart postgresql-16-pg-fkpart_1.7.0-1PIGSTY~resolute_amd64.deb pigsty 1.7.0 15.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-fkpart/postgresql-16-pg-fkpart_1.7.0-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 16 postgresql-16-pg-fkpart postgresql-16-pg-fkpart_1.7.0-1PIGSTY~resolute_arm64.deb pigsty 1.7.0 15.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-fkpart/postgresql-16-pg-fkpart_1.7.0-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 15 pg_fkpart_15 pg_fkpart_15-1.7.0-3.rhel8.noarch.rpm pgdg 1.7.0 24.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_fkpart_15-1.7.0-3.rhel8.noarch.rpm
 @ el8.x86_64 15 pg_fkpart_15 pg_fkpart_15-1.7.0-1PIGSTY.el8.x86_64.rpm pigsty 1.7.0 23.1KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_fkpart_15-1.7.0-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 15 pg_fkpart_15 pg_fkpart_15-1.7.0-3.rhel8.noarch.rpm pgdg 1.7.0 24.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pg_fkpart_15-1.7.0-3.rhel8.noarch.rpm
@@ -134,6 +140,8 @@ weight: 2500
 @ u22.aarch64 15 postgresql-15-pg-fkpart postgresql-15-pg-fkpart_1.7.0-1PIGSTY~jammy_arm64.deb pigsty 1.7.0 15.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-fkpart/postgresql-15-pg-fkpart_1.7.0-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 15 postgresql-15-pg-fkpart postgresql-15-pg-fkpart_1.7.0-1PIGSTY~noble_amd64.deb pigsty 1.7.0 15.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-fkpart/postgresql-15-pg-fkpart_1.7.0-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 15 postgresql-15-pg-fkpart postgresql-15-pg-fkpart_1.7.0-1PIGSTY~noble_arm64.deb pigsty 1.7.0 15.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-fkpart/postgresql-15-pg-fkpart_1.7.0-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 15 postgresql-15-pg-fkpart postgresql-15-pg-fkpart_1.7.0-1PIGSTY~resolute_amd64.deb pigsty 1.7.0 15.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-fkpart/postgresql-15-pg-fkpart_1.7.0-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 15 postgresql-15-pg-fkpart postgresql-15-pg-fkpart_1.7.0-1PIGSTY~resolute_arm64.deb pigsty 1.7.0 15.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-fkpart/postgresql-15-pg-fkpart_1.7.0-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 14 pg_fkpart_14 pg_fkpart_14-1.7.0-3.rhel8.noarch.rpm pgdg 1.7.0 24.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_fkpart_14-1.7.0-3.rhel8.noarch.rpm
 @ el8.x86_64 14 pg_fkpart_14 pg_fkpart_14-1.7.0-1PIGSTY.el8.x86_64.rpm pigsty 1.7.0 23.1KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_fkpart_14-1.7.0-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 14 pg_fkpart_14 pg_fkpart_14-1.7.0-3.rhel8.noarch.rpm pgdg 1.7.0 24.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pg_fkpart_14-1.7.0-3.rhel8.noarch.rpm
@@ -152,6 +160,8 @@ weight: 2500
 @ u22.aarch64 14 postgresql-14-pg-fkpart postgresql-14-pg-fkpart_1.7.0-1PIGSTY~jammy_arm64.deb pigsty 1.7.0 15.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-fkpart/postgresql-14-pg-fkpart_1.7.0-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 14 postgresql-14-pg-fkpart postgresql-14-pg-fkpart_1.7.0-1PIGSTY~noble_amd64.deb pigsty 1.7.0 15.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-fkpart/postgresql-14-pg-fkpart_1.7.0-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 14 postgresql-14-pg-fkpart postgresql-14-pg-fkpart_1.7.0-1PIGSTY~noble_arm64.deb pigsty 1.7.0 15.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-fkpart/postgresql-14-pg-fkpart_1.7.0-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 14 postgresql-14-pg-fkpart postgresql-14-pg-fkpart_1.7.0-1PIGSTY~resolute_amd64.deb pigsty 1.7.0 15.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-fkpart/postgresql-14-pg-fkpart_1.7.0-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 14 postgresql-14-pg-fkpart postgresql-14-pg-fkpart_1.7.0-1PIGSTY~resolute_arm64.deb pigsty 1.7.0 15.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-fkpart/postgresql-14-pg-fkpart_1.7.0-1PIGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建

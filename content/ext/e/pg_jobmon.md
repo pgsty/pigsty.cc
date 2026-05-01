@@ -64,8 +64,8 @@ weight: 7160
 | u22.aarch64 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 |
 | u24.x86_64 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 |
 | u24.aarch64 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 |
-| u26.x86_64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| u26.aarch64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| u26.x86_64 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 |
+| u26.aarch64 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 |
 @ el8.x86_64 18 pg_jobmon_18 pg_jobmon_18-1.4.1-5PGDG.rhel8.noarch.rpm pgdg 1.4.1 31.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pg_jobmon_18-1.4.1-5PGDG.rhel8.noarch.rpm
 @ el8.aarch64 18 pg_jobmon_18 pg_jobmon_18-1.4.1-5PGDG.rhel8.noarch.rpm pgdg 1.4.1 31.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pg_jobmon_18-1.4.1-5PGDG.rhel8.noarch.rpm
 @ el9.x86_64 18 pg_jobmon_18 pg_jobmon_18-1.4.1-5PGDG.rhel9.noarch.rpm pgdg 1.4.1 29.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pg_jobmon_18-1.4.1-5PGDG.rhel9.noarch.rpm
@@ -80,6 +80,8 @@ weight: 7160
 @ u22.aarch64 18 postgresql-18-pg-jobmon postgresql-18-pg-jobmon_1.4.1-1PIGSTY~jammy_arm64.deb pigsty 1.4.1 23.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-jobmon/postgresql-18-pg-jobmon_1.4.1-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 18 postgresql-18-pg-jobmon postgresql-18-pg-jobmon_1.4.1-1PIGSTY~noble_amd64.deb pigsty 1.4.1 23.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-jobmon/postgresql-18-pg-jobmon_1.4.1-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 18 postgresql-18-pg-jobmon postgresql-18-pg-jobmon_1.4.1-1PIGSTY~noble_arm64.deb pigsty 1.4.1 23.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-jobmon/postgresql-18-pg-jobmon_1.4.1-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 18 postgresql-18-pg-jobmon postgresql-18-pg-jobmon_1.4.1-1PIGSTY~resolute_amd64.deb pigsty 1.4.1 18.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-jobmon/postgresql-18-pg-jobmon_1.4.1-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 18 postgresql-18-pg-jobmon postgresql-18-pg-jobmon_1.4.1-1PIGSTY~resolute_arm64.deb pigsty 1.4.1 18.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-jobmon/postgresql-18-pg-jobmon_1.4.1-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 17 pg_jobmon_17 pg_jobmon_17-1.4.1-4PGDG.rhel8.noarch.rpm pgdg 1.4.1 31.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pg_jobmon_17-1.4.1-4PGDG.rhel8.noarch.rpm
 @ el8.aarch64 17 pg_jobmon_17 pg_jobmon_17-1.4.1-4PGDG.rhel8.noarch.rpm pgdg 1.4.1 31.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pg_jobmon_17-1.4.1-4PGDG.rhel8.noarch.rpm
 @ el9.x86_64 17 pg_jobmon_17 pg_jobmon_17-1.4.1-4PGDG.rhel9.noarch.rpm pgdg 1.4.1 29.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_jobmon_17-1.4.1-4PGDG.rhel9.noarch.rpm
@@ -94,6 +96,8 @@ weight: 7160
 @ u22.aarch64 17 postgresql-17-pg-jobmon postgresql-17-pg-jobmon_1.4.1-1PIGSTY~jammy_arm64.deb pigsty 1.4.1 23.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-jobmon/postgresql-17-pg-jobmon_1.4.1-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 17 postgresql-17-pg-jobmon postgresql-17-pg-jobmon_1.4.1-1PIGSTY~noble_amd64.deb pigsty 1.4.1 23.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-jobmon/postgresql-17-pg-jobmon_1.4.1-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 17 postgresql-17-pg-jobmon postgresql-17-pg-jobmon_1.4.1-1PIGSTY~noble_arm64.deb pigsty 1.4.1 23.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-jobmon/postgresql-17-pg-jobmon_1.4.1-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 17 postgresql-17-pg-jobmon postgresql-17-pg-jobmon_1.4.1-1PIGSTY~resolute_amd64.deb pigsty 1.4.1 18.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-jobmon/postgresql-17-pg-jobmon_1.4.1-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 17 postgresql-17-pg-jobmon postgresql-17-pg-jobmon_1.4.1-1PIGSTY~resolute_arm64.deb pigsty 1.4.1 18.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-jobmon/postgresql-17-pg-jobmon_1.4.1-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 16 pg_jobmon_16 pg_jobmon_16-1.4.1-2.rhel8.noarch.rpm pgdg 1.4.1 31.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_jobmon_16-1.4.1-2.rhel8.noarch.rpm
 @ el8.aarch64 16 pg_jobmon_16 pg_jobmon_16-1.4.1-2.rhel8.noarch.rpm pgdg 1.4.1 31.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pg_jobmon_16-1.4.1-2.rhel8.noarch.rpm
 @ el9.x86_64 16 pg_jobmon_16 pg_jobmon_16-1.4.1-2.rhel9.noarch.rpm pgdg 1.4.1 29.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_jobmon_16-1.4.1-2.rhel9.noarch.rpm
@@ -108,6 +112,8 @@ weight: 7160
 @ u22.aarch64 16 postgresql-16-pg-jobmon postgresql-16-pg-jobmon_1.4.1-1PIGSTY~jammy_arm64.deb pigsty 1.4.1 23.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-jobmon/postgresql-16-pg-jobmon_1.4.1-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 16 postgresql-16-pg-jobmon postgresql-16-pg-jobmon_1.4.1-1PIGSTY~noble_amd64.deb pigsty 1.4.1 23.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-jobmon/postgresql-16-pg-jobmon_1.4.1-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 16 postgresql-16-pg-jobmon postgresql-16-pg-jobmon_1.4.1-1PIGSTY~noble_arm64.deb pigsty 1.4.1 23.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-jobmon/postgresql-16-pg-jobmon_1.4.1-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 16 postgresql-16-pg-jobmon postgresql-16-pg-jobmon_1.4.1-1PIGSTY~resolute_amd64.deb pigsty 1.4.1 18.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-jobmon/postgresql-16-pg-jobmon_1.4.1-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 16 postgresql-16-pg-jobmon postgresql-16-pg-jobmon_1.4.1-1PIGSTY~resolute_arm64.deb pigsty 1.4.1 18.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-jobmon/postgresql-16-pg-jobmon_1.4.1-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 15 pg_jobmon_15 pg_jobmon_15-1.4.1-1.rhel8.noarch.rpm pgdg 1.4.1 31.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_jobmon_15-1.4.1-1.rhel8.noarch.rpm
 @ el8.aarch64 15 pg_jobmon_15 pg_jobmon_15-1.4.1-1.rhel8.noarch.rpm pgdg 1.4.1 31.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pg_jobmon_15-1.4.1-1.rhel8.noarch.rpm
 @ el9.x86_64 15 pg_jobmon_15 pg_jobmon_15-1.4.1-1.rhel9.noarch.rpm pgdg 1.4.1 29.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_jobmon_15-1.4.1-1.rhel9.noarch.rpm
@@ -122,6 +128,8 @@ weight: 7160
 @ u22.aarch64 15 postgresql-15-pg-jobmon postgresql-15-pg-jobmon_1.4.1-1PIGSTY~jammy_arm64.deb pigsty 1.4.1 23.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-jobmon/postgresql-15-pg-jobmon_1.4.1-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 15 postgresql-15-pg-jobmon postgresql-15-pg-jobmon_1.4.1-1PIGSTY~noble_amd64.deb pigsty 1.4.1 23.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-jobmon/postgresql-15-pg-jobmon_1.4.1-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 15 postgresql-15-pg-jobmon postgresql-15-pg-jobmon_1.4.1-1PIGSTY~noble_arm64.deb pigsty 1.4.1 23.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-jobmon/postgresql-15-pg-jobmon_1.4.1-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 15 postgresql-15-pg-jobmon postgresql-15-pg-jobmon_1.4.1-1PIGSTY~resolute_amd64.deb pigsty 1.4.1 18.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-jobmon/postgresql-15-pg-jobmon_1.4.1-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 15 postgresql-15-pg-jobmon postgresql-15-pg-jobmon_1.4.1-1PIGSTY~resolute_arm64.deb pigsty 1.4.1 18.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-jobmon/postgresql-15-pg-jobmon_1.4.1-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 14 pg_jobmon_14 pg_jobmon_14-1.4.1-1.rhel8.noarch.rpm pgdg 1.4.1 31.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_jobmon_14-1.4.1-1.rhel8.noarch.rpm
 @ el8.aarch64 14 pg_jobmon_14 pg_jobmon_14-1.4.1-1.rhel8.noarch.rpm pgdg 1.4.1 31.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pg_jobmon_14-1.4.1-1.rhel8.noarch.rpm
 @ el9.x86_64 14 pg_jobmon_14 pg_jobmon_14-1.4.1-1.rhel9.noarch.rpm pgdg 1.4.1 29.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_jobmon_14-1.4.1-1.rhel9.noarch.rpm
@@ -136,6 +144,8 @@ weight: 7160
 @ u22.aarch64 14 postgresql-14-pg-jobmon postgresql-14-pg-jobmon_1.4.1-1PIGSTY~jammy_arm64.deb pigsty 1.4.1 23.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-jobmon/postgresql-14-pg-jobmon_1.4.1-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 14 postgresql-14-pg-jobmon postgresql-14-pg-jobmon_1.4.1-1PIGSTY~noble_amd64.deb pigsty 1.4.1 23.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-jobmon/postgresql-14-pg-jobmon_1.4.1-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 14 postgresql-14-pg-jobmon postgresql-14-pg-jobmon_1.4.1-1PIGSTY~noble_arm64.deb pigsty 1.4.1 23.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-jobmon/postgresql-14-pg-jobmon_1.4.1-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 14 postgresql-14-pg-jobmon postgresql-14-pg-jobmon_1.4.1-1PIGSTY~resolute_amd64.deb pigsty 1.4.1 18.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-jobmon/postgresql-14-pg-jobmon_1.4.1-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 14 postgresql-14-pg-jobmon postgresql-14-pg-jobmon_1.4.1-1PIGSTY~resolute_arm64.deb pigsty 1.4.1 18.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-jobmon/postgresql-14-pg-jobmon_1.4.1-1PIGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建

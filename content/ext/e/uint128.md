@@ -67,8 +67,8 @@ weight: 3740
 | u22.aarch64 | AVAIL PIGSTY 1.2.0 1 | AVAIL PIGSTY 1.2.0 1 | AVAIL PIGSTY 1.2.0 1 | AVAIL PIGSTY 1.2.0 1 | AVAIL PIGSTY 1.2.0 1 |
 | u24.x86_64 | AVAIL PIGSTY 1.2.0 1 | AVAIL PIGSTY 1.2.0 1 | AVAIL PIGSTY 1.2.0 1 | AVAIL PIGSTY 1.2.0 1 | AVAIL PIGSTY 1.2.0 1 |
 | u24.aarch64 | AVAIL PIGSTY 1.2.0 1 | AVAIL PIGSTY 1.2.0 1 | AVAIL PIGSTY 1.2.0 1 | AVAIL PIGSTY 1.2.0 1 | AVAIL PIGSTY 1.2.0 1 |
-| u26.x86_64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| u26.aarch64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| u26.x86_64 | AVAIL PIGSTY 1.2.0 1 | AVAIL PIGSTY 1.2.0 1 | AVAIL PIGSTY 1.2.0 1 | AVAIL PIGSTY 1.2.0 1 | AVAIL PIGSTY 1.2.0 1 |
+| u26.aarch64 | AVAIL PIGSTY 1.2.0 1 | AVAIL PIGSTY 1.2.0 1 | AVAIL PIGSTY 1.2.0 1 | AVAIL PIGSTY 1.2.0 1 | AVAIL PIGSTY 1.2.0 1 |
 @ el8.x86_64 18 pg_uint128_18 pg_uint128_18-1.2.0-1PIGSTY.el8.x86_64.rpm pigsty 1.2.0 189.2KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_uint128_18-1.2.0-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 18 pg_uint128_18 pg_uint128_18-1.2.0-1PIGSTY.el8.aarch64.rpm pigsty 1.2.0 176.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_uint128_18-1.2.0-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 18 pg_uint128_18 pg_uint128_18-1.2.0-1PIGSTY.el9.x86_64.rpm pigsty 1.2.0 170.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_uint128_18-1.2.0-1PIGSTY.el9.x86_64.rpm
@@ -83,6 +83,8 @@ weight: 3740
 @ u22.aarch64 18 postgresql-18-pg-uint128 postgresql-18-pg-uint128_1.2.0-1PIGSTY~jammy_arm64.deb pigsty 1.2.0 357.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-uint128/postgresql-18-pg-uint128_1.2.0-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 18 postgresql-18-pg-uint128 postgresql-18-pg-uint128_1.2.0-1PIGSTY~noble_amd64.deb pigsty 1.2.0 355.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-uint128/postgresql-18-pg-uint128_1.2.0-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 18 postgresql-18-pg-uint128 postgresql-18-pg-uint128_1.2.0-1PIGSTY~noble_arm64.deb pigsty 1.2.0 352.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-uint128/postgresql-18-pg-uint128_1.2.0-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 18 postgresql-18-pg-uint128 postgresql-18-pg-uint128_1.2.0-1PIGSTY~resolute_amd64.deb pigsty 1.2.0 357.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-uint128/postgresql-18-pg-uint128_1.2.0-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 18 postgresql-18-pg-uint128 postgresql-18-pg-uint128_1.2.0-1PIGSTY~resolute_arm64.deb pigsty 1.2.0 350.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-uint128/postgresql-18-pg-uint128_1.2.0-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 17 pg_uint128_17 pg_uint128_17-1.2.0-1PIGSTY.el8.x86_64.rpm pigsty 1.2.0 189.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_uint128_17-1.2.0-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 17 pg_uint128_17 pg_uint128_17-1.2.0-1PIGSTY.el8.aarch64.rpm pigsty 1.2.0 176.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_uint128_17-1.2.0-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 17 pg_uint128_17 pg_uint128_17-1.2.0-1PIGSTY.el9.x86_64.rpm pigsty 1.2.0 169.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_uint128_17-1.2.0-1PIGSTY.el9.x86_64.rpm
@@ -97,6 +99,8 @@ weight: 3740
 @ u22.aarch64 17 postgresql-17-pg-uint128 postgresql-17-pg-uint128_1.2.0-1PIGSTY~jammy_arm64.deb pigsty 1.2.0 373.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-uint128/postgresql-17-pg-uint128_1.2.0-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 17 postgresql-17-pg-uint128 postgresql-17-pg-uint128_1.2.0-1PIGSTY~noble_amd64.deb pigsty 1.2.0 355.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-uint128/postgresql-17-pg-uint128_1.2.0-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 17 postgresql-17-pg-uint128 postgresql-17-pg-uint128_1.2.0-1PIGSTY~noble_arm64.deb pigsty 1.2.0 352.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-uint128/postgresql-17-pg-uint128_1.2.0-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 17 postgresql-17-pg-uint128 postgresql-17-pg-uint128_1.2.0-1PIGSTY~resolute_amd64.deb pigsty 1.2.0 357.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-uint128/postgresql-17-pg-uint128_1.2.0-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 17 postgresql-17-pg-uint128 postgresql-17-pg-uint128_1.2.0-1PIGSTY~resolute_arm64.deb pigsty 1.2.0 350.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-uint128/postgresql-17-pg-uint128_1.2.0-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 16 pg_uint128_16 pg_uint128_16-1.2.0-1PIGSTY.el8.x86_64.rpm pigsty 1.2.0 189.1KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_uint128_16-1.2.0-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 16 pg_uint128_16 pg_uint128_16-1.2.0-1PIGSTY.el8.aarch64.rpm pigsty 1.2.0 176.3KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_uint128_16-1.2.0-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 16 pg_uint128_16 pg_uint128_16-1.2.0-1PIGSTY.el9.x86_64.rpm pigsty 1.2.0 170.7KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_uint128_16-1.2.0-1PIGSTY.el9.x86_64.rpm
@@ -111,6 +115,8 @@ weight: 3740
 @ u22.aarch64 16 postgresql-16-pg-uint128 postgresql-16-pg-uint128_1.2.0-1PIGSTY~jammy_arm64.deb pigsty 1.2.0 371.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-uint128/postgresql-16-pg-uint128_1.2.0-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 16 postgresql-16-pg-uint128 postgresql-16-pg-uint128_1.2.0-1PIGSTY~noble_amd64.deb pigsty 1.2.0 354.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-uint128/postgresql-16-pg-uint128_1.2.0-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 16 postgresql-16-pg-uint128 postgresql-16-pg-uint128_1.2.0-1PIGSTY~noble_arm64.deb pigsty 1.2.0 352.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-uint128/postgresql-16-pg-uint128_1.2.0-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 16 postgresql-16-pg-uint128 postgresql-16-pg-uint128_1.2.0-1PIGSTY~resolute_amd64.deb pigsty 1.2.0 356.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-uint128/postgresql-16-pg-uint128_1.2.0-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 16 postgresql-16-pg-uint128 postgresql-16-pg-uint128_1.2.0-1PIGSTY~resolute_arm64.deb pigsty 1.2.0 350.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-uint128/postgresql-16-pg-uint128_1.2.0-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 15 pg_uint128_15 pg_uint128_15-1.2.0-1PIGSTY.el8.x86_64.rpm pigsty 1.2.0 189.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_uint128_15-1.2.0-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 15 pg_uint128_15 pg_uint128_15-1.2.0-1PIGSTY.el8.aarch64.rpm pigsty 1.2.0 176.8KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_uint128_15-1.2.0-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 15 pg_uint128_15 pg_uint128_15-1.2.0-1PIGSTY.el9.x86_64.rpm pigsty 1.2.0 170.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_uint128_15-1.2.0-1PIGSTY.el9.x86_64.rpm
@@ -125,6 +131,8 @@ weight: 3740
 @ u22.aarch64 15 postgresql-15-pg-uint128 postgresql-15-pg-uint128_1.2.0-1PIGSTY~jammy_arm64.deb pigsty 1.2.0 374.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-uint128/postgresql-15-pg-uint128_1.2.0-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 15 postgresql-15-pg-uint128 postgresql-15-pg-uint128_1.2.0-1PIGSTY~noble_amd64.deb pigsty 1.2.0 359.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-uint128/postgresql-15-pg-uint128_1.2.0-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 15 postgresql-15-pg-uint128 postgresql-15-pg-uint128_1.2.0-1PIGSTY~noble_arm64.deb pigsty 1.2.0 356.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-uint128/postgresql-15-pg-uint128_1.2.0-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 15 postgresql-15-pg-uint128 postgresql-15-pg-uint128_1.2.0-1PIGSTY~resolute_amd64.deb pigsty 1.2.0 358.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-uint128/postgresql-15-pg-uint128_1.2.0-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 15 postgresql-15-pg-uint128 postgresql-15-pg-uint128_1.2.0-1PIGSTY~resolute_arm64.deb pigsty 1.2.0 351.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-uint128/postgresql-15-pg-uint128_1.2.0-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 14 pg_uint128_14 pg_uint128_14-1.2.0-1PIGSTY.el8.x86_64.rpm pigsty 1.2.0 189.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_uint128_14-1.2.0-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 14 pg_uint128_14 pg_uint128_14-1.2.0-1PIGSTY.el8.aarch64.rpm pigsty 1.2.0 176.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_uint128_14-1.2.0-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 14 pg_uint128_14 pg_uint128_14-1.2.0-1PIGSTY.el9.x86_64.rpm pigsty 1.2.0 171.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_uint128_14-1.2.0-1PIGSTY.el9.x86_64.rpm
@@ -139,6 +147,8 @@ weight: 3740
 @ u22.aarch64 14 postgresql-14-pg-uint128 postgresql-14-pg-uint128_1.2.0-1PIGSTY~jammy_arm64.deb pigsty 1.2.0 374.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-uint128/postgresql-14-pg-uint128_1.2.0-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 14 postgresql-14-pg-uint128 postgresql-14-pg-uint128_1.2.0-1PIGSTY~noble_amd64.deb pigsty 1.2.0 359.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-uint128/postgresql-14-pg-uint128_1.2.0-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 14 postgresql-14-pg-uint128 postgresql-14-pg-uint128_1.2.0-1PIGSTY~noble_arm64.deb pigsty 1.2.0 356.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-uint128/postgresql-14-pg-uint128_1.2.0-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 14 postgresql-14-pg-uint128 postgresql-14-pg-uint128_1.2.0-1PIGSTY~resolute_amd64.deb pigsty 1.2.0 358.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-uint128/postgresql-14-pg-uint128_1.2.0-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 14 postgresql-14-pg-uint128 postgresql-14-pg-uint128_1.2.0-1PIGSTY~resolute_arm64.deb pigsty 1.2.0 351.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-uint128/postgresql-14-pg-uint128_1.2.0-1PIGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建

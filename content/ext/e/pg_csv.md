@@ -64,8 +64,8 @@ weight: 4760
 | u22.aarch64 | AVAIL PGDG 1.0.2 3 | AVAIL PGDG 1.0.2 3 | AVAIL PGDG 1.0.2 3 | AVAIL PGDG 1.0.2 3 | AVAIL PGDG 1.0.2 3 |
 | u24.x86_64 | AVAIL PGDG 1.0.2 3 | AVAIL PGDG 1.0.2 3 | AVAIL PGDG 1.0.2 3 | AVAIL PGDG 1.0.2 3 | AVAIL PGDG 1.0.2 3 |
 | u24.aarch64 | AVAIL PGDG 1.0.2 3 | AVAIL PGDG 1.0.2 3 | AVAIL PGDG 1.0.2 3 | AVAIL PGDG 1.0.2 3 | AVAIL PGDG 1.0.2 3 |
-| u26.x86_64 | AVAIL PGDG 1.0.2 2 | AVAIL PGDG 1.0.2 2 | AVAIL PGDG 1.0.2 2 | AVAIL PGDG 1.0.2 2 | AVAIL PGDG 1.0.2 2 |
-| u26.aarch64 | AVAIL PGDG 1.0.2 2 | AVAIL PGDG 1.0.2 2 | AVAIL PGDG 1.0.2 2 | AVAIL PGDG 1.0.2 2 | AVAIL PGDG 1.0.2 2 |
+| u26.x86_64 | AVAIL PGDG 1.0.2 3 | AVAIL PGDG 1.0.2 3 | AVAIL PGDG 1.0.2 3 | AVAIL PGDG 1.0.2 3 | AVAIL PGDG 1.0.2 3 |
+| u26.aarch64 | AVAIL PGDG 1.0.2 3 | AVAIL PGDG 1.0.2 3 | AVAIL PGDG 1.0.2 3 | AVAIL PGDG 1.0.2 3 | AVAIL PGDG 1.0.2 3 |
 @ el8.x86_64 18 pg_csv_18 pg_csv_18-1.0.1-1PGDG.rhel8.x86_64.rpm pgdg 1.0.1 14.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pg_csv_18-1.0.1-1PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 18 pg_csv_18 pg_csv_18-1.0.1-1PGDG.rhel8.aarch64.rpm pgdg 1.0.1 14.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pg_csv_18-1.0.1-1PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 18 pg_csv_18 pg_csv_18-1.0.1-1PGDG.rhel9.x86_64.rpm pgdg 1.0.1 14.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pg_csv_18-1.0.1-1PGDG.rhel9.x86_64.rpm
@@ -98,8 +98,10 @@ weight: 4760
 @ u24.aarch64 18 postgresql-18-pg-csv postgresql-18-pg-csv_1.0.1-1PIGSTY~noble_arm64.deb pigsty 1.0.1 16.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-csv/postgresql-18-pg-csv_1.0.1-1PIGSTY~noble_arm64.deb
 @ u26.x86_64 18 postgresql-18-pg-csv postgresql-18-pg-csv_1.0.2-1.pgdg26.04+1_amd64.deb pgdg 1.0.2 17.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-csv/postgresql-18-pg-csv_1.0.2-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 18 postgresql-18-pg-csv postgresql-18-pg-csv_1.0.1-1.pgdg26.04+1_amd64.deb pgdg 1.0.1 16.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-csv/postgresql-18-pg-csv_1.0.1-1.pgdg26.04+1_amd64.deb
+@ u26.x86_64 18 postgresql-18-pg-csv postgresql-18-pg-csv_1.0.1-1PIGSTY~resolute_amd64.deb pigsty 1.0.1 17.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-csv/postgresql-18-pg-csv_1.0.1-1PIGSTY~resolute_amd64.deb
 @ u26.aarch64 18 postgresql-18-pg-csv postgresql-18-pg-csv_1.0.2-1.pgdg26.04+1_arm64.deb pgdg 1.0.2 16.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-csv/postgresql-18-pg-csv_1.0.2-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 18 postgresql-18-pg-csv postgresql-18-pg-csv_1.0.1-1.pgdg26.04+1_arm64.deb pgdg 1.0.1 16.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-csv/postgresql-18-pg-csv_1.0.1-1.pgdg26.04+1_arm64.deb
+@ u26.aarch64 18 postgresql-18-pg-csv postgresql-18-pg-csv_1.0.1-1PIGSTY~resolute_arm64.deb pigsty 1.0.1 17.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-csv/postgresql-18-pg-csv_1.0.1-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 17 pg_csv_17 pg_csv_17-1.0.1-1PGDG.rhel8.x86_64.rpm pgdg 1.0.1 14.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pg_csv_17-1.0.1-1PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 17 pg_csv_17 pg_csv_17-1.0.1-1PGDG.rhel8.aarch64.rpm pgdg 1.0.1 14.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pg_csv_17-1.0.1-1PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 17 pg_csv_17 pg_csv_17-1.0.1-1PGDG.rhel9.x86_64.rpm pgdg 1.0.1 14.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_csv_17-1.0.1-1PGDG.rhel9.x86_64.rpm
@@ -132,8 +134,10 @@ weight: 4760
 @ u24.aarch64 17 postgresql-17-pg-csv postgresql-17-pg-csv_1.0.1-1PIGSTY~noble_arm64.deb pigsty 1.0.1 16.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-csv/postgresql-17-pg-csv_1.0.1-1PIGSTY~noble_arm64.deb
 @ u26.x86_64 17 postgresql-17-pg-csv postgresql-17-pg-csv_1.0.2-1.pgdg26.04+1_amd64.deb pgdg 1.0.2 16.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-csv/postgresql-17-pg-csv_1.0.2-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 17 postgresql-17-pg-csv postgresql-17-pg-csv_1.0.1-1.pgdg26.04+1_amd64.deb pgdg 1.0.1 16.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-csv/postgresql-17-pg-csv_1.0.1-1.pgdg26.04+1_amd64.deb
+@ u26.x86_64 17 postgresql-17-pg-csv postgresql-17-pg-csv_1.0.1-1PIGSTY~resolute_amd64.deb pigsty 1.0.1 17.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-csv/postgresql-17-pg-csv_1.0.1-1PIGSTY~resolute_amd64.deb
 @ u26.aarch64 17 postgresql-17-pg-csv postgresql-17-pg-csv_1.0.2-1.pgdg26.04+1_arm64.deb pgdg 1.0.2 16.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-csv/postgresql-17-pg-csv_1.0.2-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 17 postgresql-17-pg-csv postgresql-17-pg-csv_1.0.1-1.pgdg26.04+1_arm64.deb pgdg 1.0.1 16.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-csv/postgresql-17-pg-csv_1.0.1-1.pgdg26.04+1_arm64.deb
+@ u26.aarch64 17 postgresql-17-pg-csv postgresql-17-pg-csv_1.0.1-1PIGSTY~resolute_arm64.deb pigsty 1.0.1 17.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-csv/postgresql-17-pg-csv_1.0.1-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 16 pg_csv_16 pg_csv_16-1.0.1-1PGDG.rhel8.x86_64.rpm pgdg 1.0.1 14.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_csv_16-1.0.1-1PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 16 pg_csv_16 pg_csv_16-1.0.1-1PGDG.rhel8.aarch64.rpm pgdg 1.0.1 14.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pg_csv_16-1.0.1-1PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 16 pg_csv_16 pg_csv_16-1.0.1-1PGDG.rhel9.x86_64.rpm pgdg 1.0.1 14.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_csv_16-1.0.1-1PGDG.rhel9.x86_64.rpm
@@ -166,8 +170,10 @@ weight: 4760
 @ u24.aarch64 16 postgresql-16-pg-csv postgresql-16-pg-csv_1.0.1-1PIGSTY~noble_arm64.deb pigsty 1.0.1 16.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-csv/postgresql-16-pg-csv_1.0.1-1PIGSTY~noble_arm64.deb
 @ u26.x86_64 16 postgresql-16-pg-csv postgresql-16-pg-csv_1.0.2-1.pgdg26.04+1_amd64.deb pgdg 1.0.2 16.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-csv/postgresql-16-pg-csv_1.0.2-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 16 postgresql-16-pg-csv postgresql-16-pg-csv_1.0.1-1.pgdg26.04+1_amd64.deb pgdg 1.0.1 16.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-csv/postgresql-16-pg-csv_1.0.1-1.pgdg26.04+1_amd64.deb
+@ u26.x86_64 16 postgresql-16-pg-csv postgresql-16-pg-csv_1.0.1-1PIGSTY~resolute_amd64.deb pigsty 1.0.1 17.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-csv/postgresql-16-pg-csv_1.0.1-1PIGSTY~resolute_amd64.deb
 @ u26.aarch64 16 postgresql-16-pg-csv postgresql-16-pg-csv_1.0.2-1.pgdg26.04+1_arm64.deb pgdg 1.0.2 16.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-csv/postgresql-16-pg-csv_1.0.2-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 16 postgresql-16-pg-csv postgresql-16-pg-csv_1.0.1-1.pgdg26.04+1_arm64.deb pgdg 1.0.1 16.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-csv/postgresql-16-pg-csv_1.0.1-1.pgdg26.04+1_arm64.deb
+@ u26.aarch64 16 postgresql-16-pg-csv postgresql-16-pg-csv_1.0.1-1PIGSTY~resolute_arm64.deb pigsty 1.0.1 17.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-csv/postgresql-16-pg-csv_1.0.1-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 15 pg_csv_15 pg_csv_15-1.0.1-1PGDG.rhel8.x86_64.rpm pgdg 1.0.1 14.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_csv_15-1.0.1-1PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 15 pg_csv_15 pg_csv_15-1.0.1-1PGDG.rhel8.aarch64.rpm pgdg 1.0.1 14.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pg_csv_15-1.0.1-1PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 15 pg_csv_15 pg_csv_15-1.0.1-1PGDG.rhel9.x86_64.rpm pgdg 1.0.1 14.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_csv_15-1.0.1-1PGDG.rhel9.x86_64.rpm
@@ -200,8 +206,10 @@ weight: 4760
 @ u24.aarch64 15 postgresql-15-pg-csv postgresql-15-pg-csv_1.0.1-1PIGSTY~noble_arm64.deb pigsty 1.0.1 16.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-csv/postgresql-15-pg-csv_1.0.1-1PIGSTY~noble_arm64.deb
 @ u26.x86_64 15 postgresql-15-pg-csv postgresql-15-pg-csv_1.0.2-1.pgdg26.04+1_amd64.deb pgdg 1.0.2 17.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-csv/postgresql-15-pg-csv_1.0.2-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 15 postgresql-15-pg-csv postgresql-15-pg-csv_1.0.1-1.pgdg26.04+1_amd64.deb pgdg 1.0.1 17.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-csv/postgresql-15-pg-csv_1.0.1-1.pgdg26.04+1_amd64.deb
+@ u26.x86_64 15 postgresql-15-pg-csv postgresql-15-pg-csv_1.0.1-1PIGSTY~resolute_amd64.deb pigsty 1.0.1 17.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-csv/postgresql-15-pg-csv_1.0.1-1PIGSTY~resolute_amd64.deb
 @ u26.aarch64 15 postgresql-15-pg-csv postgresql-15-pg-csv_1.0.2-1.pgdg26.04+1_arm64.deb pgdg 1.0.2 17.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-csv/postgresql-15-pg-csv_1.0.2-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 15 postgresql-15-pg-csv postgresql-15-pg-csv_1.0.1-1.pgdg26.04+1_arm64.deb pgdg 1.0.1 17.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-csv/postgresql-15-pg-csv_1.0.1-1.pgdg26.04+1_arm64.deb
+@ u26.aarch64 15 postgresql-15-pg-csv postgresql-15-pg-csv_1.0.1-1PIGSTY~resolute_arm64.deb pigsty 1.0.1 17.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-csv/postgresql-15-pg-csv_1.0.1-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 14 pg_csv_14 pg_csv_14-1.0.1-1PGDG.rhel8.x86_64.rpm pgdg 1.0.1 14.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_csv_14-1.0.1-1PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 14 pg_csv_14 pg_csv_14-1.0.1-1PGDG.rhel8.aarch64.rpm pgdg 1.0.1 14.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pg_csv_14-1.0.1-1PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 14 pg_csv_14 pg_csv_14-1.0.1-1PGDG.rhel9.x86_64.rpm pgdg 1.0.1 14.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_csv_14-1.0.1-1PGDG.rhel9.x86_64.rpm
@@ -234,8 +242,10 @@ weight: 4760
 @ u24.aarch64 14 postgresql-14-pg-csv postgresql-14-pg-csv_1.0.1-1PIGSTY~noble_arm64.deb pigsty 1.0.1 16.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-csv/postgresql-14-pg-csv_1.0.1-1PIGSTY~noble_arm64.deb
 @ u26.x86_64 14 postgresql-14-pg-csv postgresql-14-pg-csv_1.0.2-1.pgdg26.04+1_amd64.deb pgdg 1.0.2 17.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-csv/postgresql-14-pg-csv_1.0.2-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 14 postgresql-14-pg-csv postgresql-14-pg-csv_1.0.1-1.pgdg26.04+1_amd64.deb pgdg 1.0.1 17.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-csv/postgresql-14-pg-csv_1.0.1-1.pgdg26.04+1_amd64.deb
+@ u26.x86_64 14 postgresql-14-pg-csv postgresql-14-pg-csv_1.0.1-1PIGSTY~resolute_amd64.deb pigsty 1.0.1 17.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-csv/postgresql-14-pg-csv_1.0.1-1PIGSTY~resolute_amd64.deb
 @ u26.aarch64 14 postgresql-14-pg-csv postgresql-14-pg-csv_1.0.2-1.pgdg26.04+1_arm64.deb pgdg 1.0.2 17.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-csv/postgresql-14-pg-csv_1.0.2-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 14 postgresql-14-pg-csv postgresql-14-pg-csv_1.0.1-1.pgdg26.04+1_arm64.deb pgdg 1.0.1 16.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-csv/postgresql-14-pg-csv_1.0.1-1.pgdg26.04+1_arm64.deb
+@ u26.aarch64 14 postgresql-14-pg-csv postgresql-14-pg-csv_1.0.1-1PIGSTY~resolute_arm64.deb pigsty 1.0.1 17.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-csv/postgresql-14-pg-csv_1.0.1-1PIGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建

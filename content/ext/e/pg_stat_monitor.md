@@ -64,8 +64,8 @@ weight: 6230
 | u22.aarch64 | AVAIL PIGSTY 2.3.2 1 | AVAIL PIGSTY 2.3.2 1 | AVAIL PIGSTY 2.3.2 1 | AVAIL PIGSTY 2.3.2 1 | AVAIL PIGSTY 2.3.2 1 |
 | u24.x86_64 | AVAIL PIGSTY 2.3.2 1 | AVAIL PIGSTY 2.3.2 1 | AVAIL PIGSTY 2.3.2 1 | AVAIL PIGSTY 2.3.2 1 | AVAIL PIGSTY 2.3.2 1 |
 | u24.aarch64 | AVAIL PIGSTY 2.3.2 1 | AVAIL PIGSTY 2.3.2 1 | AVAIL PIGSTY 2.3.2 1 | AVAIL PIGSTY 2.3.2 1 | AVAIL PIGSTY 2.3.2 1 |
-| u26.x86_64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| u26.aarch64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| u26.x86_64 | AVAIL PIGSTY 2.3.2 1 | AVAIL PIGSTY 2.3.2 1 | AVAIL PIGSTY 2.3.2 1 | AVAIL PIGSTY 2.3.2 1 | AVAIL PIGSTY 2.3.2 1 |
+| u26.aarch64 | AVAIL PIGSTY 2.3.2 1 | AVAIL PIGSTY 2.3.2 1 | AVAIL PIGSTY 2.3.2 1 | AVAIL PIGSTY 2.3.2 1 | AVAIL PIGSTY 2.3.2 1 |
 @ el8.x86_64 18 pg_stat_monitor_18 pg_stat_monitor_18-2.3.2-1PGDG.rhel8.10.x86_64.rpm pgdg 2.3.2 43.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pg_stat_monitor_18-2.3.2-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 18 pg_stat_monitor_18 pg_stat_monitor_18-2.3.1-1PIGSTY.el8.x86_64.rpm pigsty 2.3.1 43.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_stat_monitor_18-2.3.1-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 18 pg_stat_monitor_18 pg_stat_monitor_18-2.3.1-1PGDG.rhel8.10.x86_64.rpm pgdg 2.3.1 43.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pg_stat_monitor_18-2.3.1-1PGDG.rhel8.10.x86_64.rpm
@@ -92,6 +92,8 @@ weight: 6230
 @ u22.aarch64 18 postgresql-18-pg-stat-monitor postgresql-18-pg-stat-monitor_2.3.2-1PIGSTY~jammy_arm64.deb pigsty 2.3.2 79.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-stat-monitor/postgresql-18-pg-stat-monitor_2.3.2-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 18 postgresql-18-pg-stat-monitor postgresql-18-pg-stat-monitor_2.3.2-1PIGSTY~noble_amd64.deb pigsty 2.3.2 77.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-stat-monitor/postgresql-18-pg-stat-monitor_2.3.2-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 18 postgresql-18-pg-stat-monitor postgresql-18-pg-stat-monitor_2.3.2-1PIGSTY~noble_arm64.deb pigsty 2.3.2 76.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-stat-monitor/postgresql-18-pg-stat-monitor_2.3.2-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 18 postgresql-18-pg-stat-monitor postgresql-18-pg-stat-monitor_2.3.2-1PIGSTY~resolute_amd64.deb pigsty 2.3.2 76.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-stat-monitor/postgresql-18-pg-stat-monitor_2.3.2-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 18 postgresql-18-pg-stat-monitor postgresql-18-pg-stat-monitor_2.3.2-1PIGSTY~resolute_arm64.deb pigsty 2.3.2 75.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-stat-monitor/postgresql-18-pg-stat-monitor_2.3.2-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 17 pg_stat_monitor_17 pg_stat_monitor_17-2.3.2-1PGDG.rhel8.10.x86_64.rpm pgdg 2.3.2 43.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pg_stat_monitor_17-2.3.2-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 pg_stat_monitor_17 pg_stat_monitor_17-2.3.1-1PIGSTY.el8.x86_64.rpm pigsty 2.3.1 43.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_stat_monitor_17-2.3.1-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 17 pg_stat_monitor_17 pg_stat_monitor_17-2.3.1-1PGDG.rhel8.10.x86_64.rpm pgdg 2.3.1 43.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pg_stat_monitor_17-2.3.1-1PGDG.rhel8.10.x86_64.rpm
@@ -134,6 +136,8 @@ weight: 6230
 @ u22.aarch64 17 postgresql-17-pg-stat-monitor postgresql-17-pg-stat-monitor_2.3.2-1PIGSTY~jammy_arm64.deb pigsty 2.3.2 85.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-stat-monitor/postgresql-17-pg-stat-monitor_2.3.2-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 17 postgresql-17-pg-stat-monitor postgresql-17-pg-stat-monitor_2.3.2-1PIGSTY~noble_amd64.deb pigsty 2.3.2 77.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-stat-monitor/postgresql-17-pg-stat-monitor_2.3.2-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 17 postgresql-17-pg-stat-monitor postgresql-17-pg-stat-monitor_2.3.2-1PIGSTY~noble_arm64.deb pigsty 2.3.2 76.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-stat-monitor/postgresql-17-pg-stat-monitor_2.3.2-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 17 postgresql-17-pg-stat-monitor postgresql-17-pg-stat-monitor_2.3.2-1PIGSTY~resolute_amd64.deb pigsty 2.3.2 76.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-stat-monitor/postgresql-17-pg-stat-monitor_2.3.2-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 17 postgresql-17-pg-stat-monitor postgresql-17-pg-stat-monitor_2.3.2-1PIGSTY~resolute_arm64.deb pigsty 2.3.2 75.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-stat-monitor/postgresql-17-pg-stat-monitor_2.3.2-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 16 pg_stat_monitor_16 pg_stat_monitor_16-2.3.2-1PGDG.rhel8.10.x86_64.rpm pgdg 2.3.2 43.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_stat_monitor_16-2.3.2-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 pg_stat_monitor_16 pg_stat_monitor_16-2.3.1-1PIGSTY.el8.x86_64.rpm pigsty 2.3.1 43.1KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_stat_monitor_16-2.3.1-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 16 pg_stat_monitor_16 pg_stat_monitor_16-2.3.1-1PGDG.rhel8.10.x86_64.rpm pgdg 2.3.1 43.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_stat_monitor_16-2.3.1-1PGDG.rhel8.10.x86_64.rpm
@@ -184,6 +188,8 @@ weight: 6230
 @ u22.aarch64 16 postgresql-16-pg-stat-monitor postgresql-16-pg-stat-monitor_2.3.2-1PIGSTY~jammy_arm64.deb pigsty 2.3.2 84.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-stat-monitor/postgresql-16-pg-stat-monitor_2.3.2-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 16 postgresql-16-pg-stat-monitor postgresql-16-pg-stat-monitor_2.3.2-1PIGSTY~noble_amd64.deb pigsty 2.3.2 77.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-stat-monitor/postgresql-16-pg-stat-monitor_2.3.2-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 16 postgresql-16-pg-stat-monitor postgresql-16-pg-stat-monitor_2.3.2-1PIGSTY~noble_arm64.deb pigsty 2.3.2 76.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-stat-monitor/postgresql-16-pg-stat-monitor_2.3.2-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 16 postgresql-16-pg-stat-monitor postgresql-16-pg-stat-monitor_2.3.2-1PIGSTY~resolute_amd64.deb pigsty 2.3.2 76.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-stat-monitor/postgresql-16-pg-stat-monitor_2.3.2-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 16 postgresql-16-pg-stat-monitor postgresql-16-pg-stat-monitor_2.3.2-1PIGSTY~resolute_arm64.deb pigsty 2.3.2 74.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-stat-monitor/postgresql-16-pg-stat-monitor_2.3.2-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 15 pg_stat_monitor_15 pg_stat_monitor_15-2.3.2-1PGDG.rhel8.10.x86_64.rpm pgdg 2.3.2 44.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_stat_monitor_15-2.3.2-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 pg_stat_monitor_15 pg_stat_monitor_15-2.3.1-1PIGSTY.el8.x86_64.rpm pigsty 2.3.1 44.4KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_stat_monitor_15-2.3.1-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 15 pg_stat_monitor_15 pg_stat_monitor_15-2.3.1-1PGDG.rhel8.10.x86_64.rpm pgdg 2.3.1 44.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_stat_monitor_15-2.3.1-1PGDG.rhel8.10.x86_64.rpm
@@ -238,6 +244,8 @@ weight: 6230
 @ u22.aarch64 15 postgresql-15-pg-stat-monitor postgresql-15-pg-stat-monitor_2.3.2-1PIGSTY~jammy_arm64.deb pigsty 2.3.2 86.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-stat-monitor/postgresql-15-pg-stat-monitor_2.3.2-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 15 postgresql-15-pg-stat-monitor postgresql-15-pg-stat-monitor_2.3.2-1PIGSTY~noble_amd64.deb pigsty 2.3.2 78.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-stat-monitor/postgresql-15-pg-stat-monitor_2.3.2-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 15 postgresql-15-pg-stat-monitor postgresql-15-pg-stat-monitor_2.3.2-1PIGSTY~noble_arm64.deb pigsty 2.3.2 77.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-stat-monitor/postgresql-15-pg-stat-monitor_2.3.2-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 15 postgresql-15-pg-stat-monitor postgresql-15-pg-stat-monitor_2.3.2-1PIGSTY~resolute_amd64.deb pigsty 2.3.2 77.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-stat-monitor/postgresql-15-pg-stat-monitor_2.3.2-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 15 postgresql-15-pg-stat-monitor postgresql-15-pg-stat-monitor_2.3.2-1PIGSTY~resolute_arm64.deb pigsty 2.3.2 76.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-stat-monitor/postgresql-15-pg-stat-monitor_2.3.2-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 14 pg_stat_monitor_14 pg_stat_monitor_14-2.3.2-1PGDG.rhel8.10.x86_64.rpm pgdg 2.3.2 44.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_stat_monitor_14-2.3.2-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 14 pg_stat_monitor_14 pg_stat_monitor_14-2.3.1-1PIGSTY.el8.x86_64.rpm pigsty 2.3.1 44.2KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_stat_monitor_14-2.3.1-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 14 pg_stat_monitor_14 pg_stat_monitor_14-2.3.1-1PGDG.rhel8.10.x86_64.rpm pgdg 2.3.1 44.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_stat_monitor_14-2.3.1-1PGDG.rhel8.10.x86_64.rpm
@@ -299,6 +307,8 @@ weight: 6230
 @ u22.aarch64 14 postgresql-14-pg-stat-monitor postgresql-14-pg-stat-monitor_2.3.2-1PIGSTY~jammy_arm64.deb pigsty 2.3.2 86.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-stat-monitor/postgresql-14-pg-stat-monitor_2.3.2-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 14 postgresql-14-pg-stat-monitor postgresql-14-pg-stat-monitor_2.3.2-1PIGSTY~noble_amd64.deb pigsty 2.3.2 78.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-stat-monitor/postgresql-14-pg-stat-monitor_2.3.2-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 14 postgresql-14-pg-stat-monitor postgresql-14-pg-stat-monitor_2.3.2-1PIGSTY~noble_arm64.deb pigsty 2.3.2 77.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-stat-monitor/postgresql-14-pg-stat-monitor_2.3.2-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 14 postgresql-14-pg-stat-monitor postgresql-14-pg-stat-monitor_2.3.2-1PIGSTY~resolute_amd64.deb pigsty 2.3.2 77.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-stat-monitor/postgresql-14-pg-stat-monitor_2.3.2-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 14 postgresql-14-pg-stat-monitor postgresql-14-pg-stat-monitor_2.3.2-1PIGSTY~resolute_arm64.deb pigsty 2.3.2 76.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-stat-monitor/postgresql-14-pg-stat-monitor_2.3.2-1PIGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建

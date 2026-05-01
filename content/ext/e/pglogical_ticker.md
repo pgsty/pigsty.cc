@@ -67,8 +67,8 @@ weight: 9510
 | u22.aarch64 | AVAIL PIGSTY 1.4.1 1 | AVAIL PGDG 1.4.1 1 | AVAIL PGDG 1.4.1 1 | AVAIL PGDG 1.4.1 1 | AVAIL PGDG 1.4.1 1 |
 | u24.x86_64 | AVAIL PIGSTY 1.4.1 1 | AVAIL PGDG 1.4.1 2 | AVAIL PGDG 1.4.1 2 | AVAIL PGDG 1.4.1 2 | AVAIL PGDG 1.4.1 2 |
 | u24.aarch64 | AVAIL PIGSTY 1.4.1 1 | AVAIL PGDG 1.4.1 1 | AVAIL PGDG 1.4.1 1 | AVAIL PGDG 1.4.1 1 | AVAIL PGDG 1.4.1 1 |
-| u26.x86_64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
-| u26.aarch64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
+| u26.x86_64 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 |
+| u26.aarch64 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 |
 @ el8.x86_64 18 pglogical_ticker_18 pglogical_ticker_18-1.4.1-2PIGSTY.el8.x86_64.rpm pigsty 1.4.1 17.6KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pglogical_ticker_18-1.4.1-2PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 18 pglogical_ticker_18 pglogical_ticker_18-1.4.1-2PIGSTY.el8.aarch64.rpm pigsty 1.4.1 17.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pglogical_ticker_18-1.4.1-2PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 18 pglogical_ticker_18 pglogical_ticker_18-1.4.1-2PIGSTY.el9.x86_64.rpm pigsty 1.4.1 17.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pglogical_ticker_18-1.4.1-2PIGSTY.el9.x86_64.rpm
@@ -83,6 +83,8 @@ weight: 9510
 @ u22.aarch64 18 postgresql-18-pglogical-ticker postgresql-18-pglogical-ticker_1.4.1-2PIGSTY~jammy_arm64.deb pigsty 1.4.1 19.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pglogical-ticker/postgresql-18-pglogical-ticker_1.4.1-2PIGSTY~jammy_arm64.deb
 @ u24.x86_64 18 postgresql-18-pglogical-ticker postgresql-18-pglogical-ticker_1.4.1-2PIGSTY~noble_amd64.deb pigsty 1.4.1 19.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pglogical-ticker/postgresql-18-pglogical-ticker_1.4.1-2PIGSTY~noble_amd64.deb
 @ u24.aarch64 18 postgresql-18-pglogical-ticker postgresql-18-pglogical-ticker_1.4.1-2PIGSTY~noble_arm64.deb pigsty 1.4.1 20.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pglogical-ticker/postgresql-18-pglogical-ticker_1.4.1-2PIGSTY~noble_arm64.deb
+@ u26.x86_64 18 postgresql-18-pglogical-ticker postgresql-18-pglogical-ticker_1.4.1-2PIGSTY~resolute_amd64.deb pigsty 1.4.1 19.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pglogical-ticker/postgresql-18-pglogical-ticker_1.4.1-2PIGSTY~resolute_amd64.deb
+@ u26.aarch64 18 postgresql-18-pglogical-ticker postgresql-18-pglogical-ticker_1.4.1-2PIGSTY~resolute_arm64.deb pigsty 1.4.1 20.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pglogical-ticker/postgresql-18-pglogical-ticker_1.4.1-2PIGSTY~resolute_arm64.deb
 @ el8.x86_64 17 pglogical_ticker_17 pglogical_ticker_17-1.4.1-1PIGSTY.el8.x86_64.rpm pigsty 1.4.1 17.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pglogical_ticker_17-1.4.1-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 17 pglogical_ticker_17 pglogical_ticker_17-1.4.1-1PIGSTY.el8.aarch64.rpm pigsty 1.4.1 17.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pglogical_ticker_17-1.4.1-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 17 pglogical_ticker_17 pglogical_ticker_17-1.4.1-1PIGSTY.el9.x86_64.rpm pigsty 1.4.1 17.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pglogical_ticker_17-1.4.1-1PIGSTY.el9.x86_64.rpm
@@ -100,6 +102,8 @@ weight: 9510
 @ u24.x86_64 17 postgresql-17-pglogical-ticker postgresql-17-pglogical-ticker_1.4.1-8.pgdg24.04+1_amd64.deb pgdg 1.4.1 20.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pglogical-ticker/postgresql-17-pglogical-ticker_1.4.1-8.pgdg24.04+1_amd64.deb
 @ u24.x86_64 17 postgresql-17-pglogical-ticker postgresql-17-pglogical-ticker_1.4.1-2PIGSTY~noble_amd64.deb pigsty 1.4.1 19.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pglogical-ticker/postgresql-17-pglogical-ticker_1.4.1-2PIGSTY~noble_amd64.deb
 @ u24.aarch64 17 postgresql-17-pglogical-ticker postgresql-17-pglogical-ticker_1.4.1-8.pgdg24.04+1_arm64.deb pgdg 1.4.1 20.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pglogical-ticker/postgresql-17-pglogical-ticker_1.4.1-8.pgdg24.04+1_arm64.deb
+@ u26.x86_64 17 postgresql-17-pglogical-ticker postgresql-17-pglogical-ticker_1.4.1-2PIGSTY~resolute_amd64.deb pigsty 1.4.1 19.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pglogical-ticker/postgresql-17-pglogical-ticker_1.4.1-2PIGSTY~resolute_amd64.deb
+@ u26.aarch64 17 postgresql-17-pglogical-ticker postgresql-17-pglogical-ticker_1.4.1-2PIGSTY~resolute_arm64.deb pigsty 1.4.1 20.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pglogical-ticker/postgresql-17-pglogical-ticker_1.4.1-2PIGSTY~resolute_arm64.deb
 @ el8.x86_64 16 pglogical_ticker_16 pglogical_ticker_16-1.4.1-1PIGSTY.el8.x86_64.rpm pigsty 1.4.1 17.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pglogical_ticker_16-1.4.1-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 16 pglogical_ticker_16 pglogical_ticker_16-1.4.1-1PIGSTY.el8.aarch64.rpm pigsty 1.4.1 17.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pglogical_ticker_16-1.4.1-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 16 pglogical_ticker_16 pglogical_ticker_16-1.4.1-1PIGSTY.el9.x86_64.rpm pigsty 1.4.1 17.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pglogical_ticker_16-1.4.1-1PIGSTY.el9.x86_64.rpm
@@ -117,6 +121,8 @@ weight: 9510
 @ u24.x86_64 16 postgresql-16-pglogical-ticker postgresql-16-pglogical-ticker_1.4.1-8.pgdg24.04+1_amd64.deb pgdg 1.4.1 20.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pglogical-ticker/postgresql-16-pglogical-ticker_1.4.1-8.pgdg24.04+1_amd64.deb
 @ u24.x86_64 16 postgresql-16-pglogical-ticker postgresql-16-pglogical-ticker_1.4.1-2PIGSTY~noble_amd64.deb pigsty 1.4.1 19.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pglogical-ticker/postgresql-16-pglogical-ticker_1.4.1-2PIGSTY~noble_amd64.deb
 @ u24.aarch64 16 postgresql-16-pglogical-ticker postgresql-16-pglogical-ticker_1.4.1-8.pgdg24.04+1_arm64.deb pgdg 1.4.1 20.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pglogical-ticker/postgresql-16-pglogical-ticker_1.4.1-8.pgdg24.04+1_arm64.deb
+@ u26.x86_64 16 postgresql-16-pglogical-ticker postgresql-16-pglogical-ticker_1.4.1-2PIGSTY~resolute_amd64.deb pigsty 1.4.1 19.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pglogical-ticker/postgresql-16-pglogical-ticker_1.4.1-2PIGSTY~resolute_amd64.deb
+@ u26.aarch64 16 postgresql-16-pglogical-ticker postgresql-16-pglogical-ticker_1.4.1-2PIGSTY~resolute_arm64.deb pigsty 1.4.1 20.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pglogical-ticker/postgresql-16-pglogical-ticker_1.4.1-2PIGSTY~resolute_arm64.deb
 @ el8.x86_64 15 pglogical_ticker_15 pglogical_ticker_15-1.4.1-1PIGSTY.el8.x86_64.rpm pigsty 1.4.1 17.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pglogical_ticker_15-1.4.1-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 15 pglogical_ticker_15 pglogical_ticker_15-1.4.1-1PIGSTY.el8.aarch64.rpm pigsty 1.4.1 17.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pglogical_ticker_15-1.4.1-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 15 pglogical_ticker_15 pglogical_ticker_15-1.4.1-1PIGSTY.el9.x86_64.rpm pigsty 1.4.1 17.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pglogical_ticker_15-1.4.1-1PIGSTY.el9.x86_64.rpm
@@ -134,6 +140,8 @@ weight: 9510
 @ u24.x86_64 15 postgresql-15-pglogical-ticker postgresql-15-pglogical-ticker_1.4.1-8.pgdg24.04+1_amd64.deb pgdg 1.4.1 20.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pglogical-ticker/postgresql-15-pglogical-ticker_1.4.1-8.pgdg24.04+1_amd64.deb
 @ u24.x86_64 15 postgresql-15-pglogical-ticker postgresql-15-pglogical-ticker_1.4.1-2PIGSTY~noble_amd64.deb pigsty 1.4.1 19.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pglogical-ticker/postgresql-15-pglogical-ticker_1.4.1-2PIGSTY~noble_amd64.deb
 @ u24.aarch64 15 postgresql-15-pglogical-ticker postgresql-15-pglogical-ticker_1.4.1-8.pgdg24.04+1_arm64.deb pgdg 1.4.1 20.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pglogical-ticker/postgresql-15-pglogical-ticker_1.4.1-8.pgdg24.04+1_arm64.deb
+@ u26.x86_64 15 postgresql-15-pglogical-ticker postgresql-15-pglogical-ticker_1.4.1-2PIGSTY~resolute_amd64.deb pigsty 1.4.1 19.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pglogical-ticker/postgresql-15-pglogical-ticker_1.4.1-2PIGSTY~resolute_amd64.deb
+@ u26.aarch64 15 postgresql-15-pglogical-ticker postgresql-15-pglogical-ticker_1.4.1-2PIGSTY~resolute_arm64.deb pigsty 1.4.1 20.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pglogical-ticker/postgresql-15-pglogical-ticker_1.4.1-2PIGSTY~resolute_arm64.deb
 @ el8.x86_64 14 pglogical_ticker_14 pglogical_ticker_14-1.4.1-1PIGSTY.el8.x86_64.rpm pigsty 1.4.1 17.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pglogical_ticker_14-1.4.1-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 14 pglogical_ticker_14 pglogical_ticker_14-1.4.1-1PIGSTY.el8.aarch64.rpm pigsty 1.4.1 17.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pglogical_ticker_14-1.4.1-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 14 pglogical_ticker_14 pglogical_ticker_14-1.4.1-1PIGSTY.el9.x86_64.rpm pigsty 1.4.1 17.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pglogical_ticker_14-1.4.1-1PIGSTY.el9.x86_64.rpm
@@ -151,6 +159,8 @@ weight: 9510
 @ u24.x86_64 14 postgresql-14-pglogical-ticker postgresql-14-pglogical-ticker_1.4.1-8.pgdg24.04+1_amd64.deb pgdg 1.4.1 20.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pglogical-ticker/postgresql-14-pglogical-ticker_1.4.1-8.pgdg24.04+1_amd64.deb
 @ u24.x86_64 14 postgresql-14-pglogical-ticker postgresql-14-pglogical-ticker_1.4.1-2PIGSTY~noble_amd64.deb pigsty 1.4.1 19.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pglogical-ticker/postgresql-14-pglogical-ticker_1.4.1-2PIGSTY~noble_amd64.deb
 @ u24.aarch64 14 postgresql-14-pglogical-ticker postgresql-14-pglogical-ticker_1.4.1-8.pgdg24.04+1_arm64.deb pgdg 1.4.1 20.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pglogical-ticker/postgresql-14-pglogical-ticker_1.4.1-8.pgdg24.04+1_arm64.deb
+@ u26.x86_64 14 postgresql-14-pglogical-ticker postgresql-14-pglogical-ticker_1.4.1-2PIGSTY~resolute_amd64.deb pigsty 1.4.1 19.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pglogical-ticker/postgresql-14-pglogical-ticker_1.4.1-2PIGSTY~resolute_amd64.deb
+@ u26.aarch64 14 postgresql-14-pglogical-ticker postgresql-14-pglogical-ticker_1.4.1-2PIGSTY~resolute_arm64.deb pigsty 1.4.1 20.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pglogical-ticker/postgresql-14-pglogical-ticker_1.4.1-2PIGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建
