@@ -10,7 +10,7 @@ Pigsty 当前文档对应的准备发布版本为 [**v4.3.0**](#v430)。
 
 |       版本        |    发布日期    | 摘要                                                       |                                           发布页面                                            |
 |:---------------:|:----------:|----------------------------------------------------------|:-----------------------------------------------------------------------------------------:|
-| [v4.3.0](#v430) | 2026-04-19 | 占位稿：4 月 Infra / RPM 编号整理，Grafana 13，Cloudberry 2.1       |                                            待发布                                            |
+| [v4.3.0](#v430) | 2026-05-01 | 510 扩展，Infra / PGSQL / 内核包批量更新，Ubuntu 26 支持              |                                            待发布                                            |
 | [v4.2.2](#v422) | 2026-03-23 | Insforge 应用自建，Infra 包批量更新，新增 pdu，pgdog，tigerfs           |               [v4.2.2](https://github.com/pgsty/pigsty/releases/tag/v4.2.2)               |
 | [v4.2.1](#v421) | 2026-03-06 | 移除 PG13 支持，新增扩展，问题修复                                     |               [v4.2.1](https://github.com/pgsty/pigsty/releases/tag/v4.2.1)               |
 | [v4.2.0](#v420) | 2026-02-28 | 例行小版本更新，六大 PG 内核集中更新                                     |               [v4.2.0](https://github.com/pgsty/pigsty/releases/tag/v4.2.0)               |
@@ -74,155 +74,181 @@ Pigsty 当前文档对应的准备发布版本为 [**v4.3.0**](#v430)。
 
 ## v4.3.0
 
-**占位说明**
+**亮点**
 
-- 本节为 `v4.3.0` 占位发行注记，当前先归集 `2026-04-14` 与 `2026-04-19` 两次仓库更新中的包版本编号。
-- 功能说明、API 变化、兼容性说明、提交统计与校验和待正式发版时补充。
+- 新增约 50 个 PostgreSQL 扩展，总可用数量达到 510 个
+- 支持 Ubuntu 26.04 x86_64/arm64 新架构，弃用 Ubuntu 20.04 支持；小版本更新至 Debian 13.4 / Ubuntu 24.04.4
+- 内核更新：Supabase 更新至最新版本，pgEdge 更新至 PG 18，PolarDB 更新至 PG 17
+- Grafana 更新至 13.0.0，MinIO 使用修复 CVE 后的 pgsty 分支。
+- vagrant 模板统一切换至 cloud-image 系列镜像。
 
-**亮点特性**
+**问题修复**
 
-- Infra 组件集中升级到 `Grafana 13.0.0`、`VictoriaMetrics 1.140.0`、`VictoriaLogs 1.50.0`，并补入 `victoria-traces 0.8.1`、`garage 2.3.0`、`grafana-plugins 13.0.0` 等 4 月新增批次。
-- PG/RPM 侧集中补充一批新扩展与升级包，涵盖 `Cloudberry 2.1`、`OriolePG 17.18`、`OrioleDB 1.7 / beta15`、`TimescaleDB 2.26.3`、`pg_search 0.23.0` 等关键条目。
-- 占位稿中的 RPM 大表已经将共享更新、RPM 独有、以及数据库内核/配套的相关变动合并在一张表里，便于后续直接补正文。
+- PostgreSQL 用户名校验放宽，允许 `@.-` 几个字符出现在用户名中。
+- 修复 IPv6 nameserver 解析，避免 DNS 配置只匹配提取 IPv4 的旧 DNS Server。
+- VictoriaTraces Grafana 数据源路径改为 `/select/jaeger`。
+- Vagrant 磁盘探测更稳健，新增 EL vagrant 镜像 guest 网络修复脚本 bin/el-fix。
 
-**基础设施软件包更新**
-
-- [Infra Changelog 2026-04-14](/docs/repo/infra/log/#2026-04-14)
-- [Infra Changelog 2026-04-19](/docs/repo/infra/log/#2026-04-19)
-
-| 名称                           | 旧版本            | 新版本            | 备注                                     |
-|:-----------------------------|:---------------|:---------------|:---------------------------------------|
-| `alertmanager`               | 0.31.1         | 0.32.0         |                                        |
-| `agentsview`                 | 0.15.0         | 0.22.2         |                                        |
-| `claude`                     | 2.1.81         | 2.1.114        |                                        |
-| `code`                       | 1.112.0        | 1.115.0        |                                        |
-| `code-server`                | 4.112.0        | 4.115.0        |                                        |
-| `codex`                      | 0.116.0        | 0.121.0        |                                        |
-| `crush`                      | 0.51.2         | 0.57.0         |                                        |
-| `dblab`                      | 0.34.3         | 0.38.0         |                                        |
-| `duckdb`                     | 1.5.0          | 1.5.2          |                                        |
-| `etcd`                       | 3.6.9          | 3.6.10         | APT 冻结在 3.6.8，直到 PGDG patroni 4.1.1 发布 |
-| `garage`                     | 2.2.0          | 2.3.0          |                                        |
-| `genai-toolbox`              | 0.27.0         | 1.1.0          |                                        |
-| `golang`                     | 1.26.1         | 1.26.2         |                                        |
-| `grafana`                    | 12.4.1         | 13.0.0         | 主版本升级                                  |
-| `grafana-infinity-ds`        | 3.7.4          | 3.8.0          |                                        |
-| `grafana-plugins`            | 12.3.0         | 13.0.0         | Noarch 插件包                             |
-| `grafana-victoriametrics-ds` | 0.23.1         | 0.24.0         |                                        |
-| `hugo`                       | 0.158.0        | 0.160.1        |                                        |
-| `loki`                       | 3.6.7          | 3.6.7          | 已弃用并保持冻结                               |
-| `maddy`                      | 0.8.2          | 0.9.3          |                                        |
-| `mcli`                       | 20260321000000 | 20260417000000 | 由 pgsty fork 重新构建                      |
-| `minio`                      | 20260325000000 | 20260417000000 | 由 pgsty fork 重新构建，已修复 CVE              |
-| `mongodb_exporter`           | 0.49.0         | 0.50.0         |                                        |
-| `node_exporter`              | 1.10.2         | 1.11.1         |                                        |
-| `nodejs`                     | 24.14.0        | 24.15.0        | 维持在 24.x 策略线                           |
-| `npgsqlrest`                 | 3.11.1         | 3.12.0         |                                        |
-| `opencode`                   | 1.2.27         | 1.4.11         |                                        |
-| `pg_exporter`                | 1.2.1          | 1.2.2          | Go 1.26.2                              |
-| `pgflo`                      | 0.0.15         | -              | 已移除                                    |
-| `pgschema`                   | 1.7.4          | 1.9.0          |                                        |
-| `pig`                        | 1.3.2          | 1.4.0          |                                        |
-| `postgrest`                  | 14.7           | 14.10          |                                        |
-| `prometheus`                 | 3.10.0         | 3.11.2         |                                        |
-| `promtail`                   | 3.6.7          | 3.6.7          |                                        |
-| `rainfrog`                   | 0.3.17         | 0.3.18         |                                        |
-| `rclone`                     | 1.73.2         | 1.73.4         |                                        |
-| `rustfs`                     | 1.0.0-alpha.89 | 1.0.0-alpha.94 |                                        |
-| `sabiql`                     | 1.8.2          | 1.11.0         |                                        |
-| `seaweedfs`                  | 4.17           | 4.20           |                                        |
-| `sqlcmd`                     | 1.9.0          | 1.10.0         |                                        |
-| `tigerbeetle`                | 0.16.77        | 0.17.0         |                                        |
-| `tigerfs`                    | 0.5.0          | 0.6.0          |                                        |
-| `uv`                         | 0.10.12        | 0.11.7         |                                        |
-| `victoria-logs`              | 1.48.0         | 1.50.0         |                                        |
-| `victoria-metrics`           | 1.138.0        | 1.140.0        |                                        |
-| `victoria-metrics-cluster`   | 1.138.0        | 1.140.0        |                                        |
-| `victoria-traces`            | 0.8.0          | 0.8.1          |                                        |
-| `vlagent`                    | 1.48.0         | 1.50.0         |                                        |
-| `vlogscli`                   | 1.48.0         | 1.50.0         |                                        |
-| `vmutils`                    | 1.138.0        | 1.140.0        |                                        |
-| `v2ray`                      | 5.47.0         | 5.48.0         |                                        |
-| `xray`                       | 26.2.6         | 26.3.27        |                                        |
-{.stretch-last}
-
-**RPM/DEB 包变更列表**
-
-- [RPM Changelog 2026-04-14](/docs/repo/pgsql/rpm/#2026-04-14)
-- [RPM Changelog 2026-04-19](/docs/repo/pgsql/rpm/#2026-04-19)
-- [DEB Changelog 2026-04-14](/docs/repo/pgsql/deb/#2026-04-14)
-- [DEB Changelog 2026-04-19](/docs/repo/pgsql/deb/#2026-04-19)
+**PostgreSQL 与扩展包变更汇总**
 
 | 包名                   | 旧版本        | 新版本        | 备注                                      |
 |:---------------------|:-----------|:-----------|:----------------------------------------|
-| `cloudberry`         | 2.0.0      | 2.1.0      | 内核包组                                    |
-| `cloudberry-backup`  | -          | 2.1.0      | 新增内核包组子包                                |
-| `cloudberry-pxf`     | -          | 2.1.0      | 新增内核包组子包                                |
-| `oriolepg`           | 17.16      | 17.18      | 内核包组；共享升级                               |
-| `orioledb`           | 1.6 beta14 | 1.7 beta15 | 内核包组                                    |
-| `PolarDB`            | 15.15      | 17.9.1.0   | PG 15 -> 17                             |
-| `storage_engine`     | -          | 1.0.7      | 新增包；PG 14-18                            |
-| `re2`                | -          | 0.1.1      | 新增包；PG 16-18                            |
-| `ulak`               | -          | 0.0.2      | 新增包；PG 14-18                            |
-| `block_copy_command` | -          | 0.1.5      | 新增包；PG 14-18，Rust/pgrx 0.17.0           |
-| `pg_kazsearch`       | -          | 2.0.0      | 新增包；PG 16-18，Rust/pgrx 0.17.0           |
-| `pg_rrf`             | -          | 0.0.3      | 新增包；PG 14-17，Rust/pgrx 0.16.1 -> 0.17.0 |
-| `pgmqtt`             | -          | 0.1.0      | 新增包；PG 14-18，Rust/pgrx 0.16.1 -> 0.17.0 |
-| `pg_when`            | -          | 0.1.9      | 新增包；PG 14-18，Rust/pgrx 0.17.0           |
-| `provsql`            | -          | 1.2.3      | 新增包；PG 14-18                            |
-| `pg_isok`            | -          | 1.4.1      | 新增包；PG 14-18                            |
-| `pg_byteamagic`      | -          | 0.2.4      | 新增包；PG 14-18                            |
-| `logical_ddl`        | -          | 0.1.0      | 新增包；PG 14-18                            |
-| `datasketches`       | -          | 1.7.0      | 新增包；PG 14-18                            |
-| `pg_text_semver`     | -          | 1.2.1      | 新增包；PG 14-18                            |
-| `external_file`      | -          | 1.2        | 新增包；PG 14-18                            |
-| `pg_query_rewrite`   | -          | 0.0.5      | 新增包；PG 14-18                            |
-| `pghydro`            | -          | 6.6        | 新增包；PG 14-18                            |
-| `pg_datasentinel`    | -          | 1.0        | 新增包；PG 15-18                            |
-| `onesparse`          | -          | 1.0.0      | 新增包；仅 PG 18                             |
-| `rdkit`              | -          | 202503.6   | 新增包；PG 14-18                            |
-| `pg_dispatch`        | -          | 0.1.5      | 新增包；PG 14-18                            |
-| `pg_fsql`            | -          | 1.1.0      | 新增包；PG 14-18                            |
-| `pg_liquid`          | -          | 0.1.7      | 新增包；PG 14-18                            |
-| `pg_regresql`        | -          | 2.0.0      | 新增包；PG 14-18                            |
-| `pg_slug_gen`        | -          | 1.0.0      | 新增包；PG 15-18                            |
-| `pg_variables`       | -          | 1.2.5      | 新增包；PG 14-18                            |
-| `pgcalendar`         | -          | 1.1.0      | 新增包；PG 14-18                            |
-| `pgelog`             | -          | 1.0.2      | 新增包；PG 14-18                            |
-| `pglock`             | -          | 1.0.0      | 新增包；PG 14-18                            |
-| `postgresbson`       | -          | 2.0.2      | 新增包；PG 14-18                            |
-| `rdf_fdw`            | -          | 2.4.0      | 新增包；PG 14-18                            |
-| `parray_gin`         | -          | 1.4.0      | 新增包；PG 14-18                            |
-| `pg_stat_ch`         | -          | 0.3.6      | 新增包；PG 16-18，EL8 break                  |
-| `pgclone`            | -          | 4.0.0      | 新增包                                     |
-| `pgproto`            | -          | 0.3.3      | 新增包                                     |
-| `timescaledb`        | 2.25.2     | 2.26.3     | 升级；更新两次                                 |
-| `postgis`            | 3.6.2      | 3.6.3      | 仅 DEB                                   |
-| `pg_clickhouse`      | 0.1.5      | 0.2.0      | 升级；更新两次                                 |
-| `pg_search`          | 0.22.2     | 0.23.0     | 升级；更新两次                                 |
-| `pg_trickle`         | 0.16.0     | 0.20.0     | 升级；更新两次，仅 PG 18                         |
-| `pgxicor`            | 0.1.0      | 0.1.1      | 升级                                      |
-| `pg_ivm`             | 1.13       | 1.14       | 升级                                      |
-| `system_stats`       | 3.2        | 4.0        | 升级                                      |
-| `nominatim_fdw`      | 1.1.0      | 1.2        | 升级                                      |
-| `pg_textsearch`      | 0.5.0      | 1.0.0      | 升级                                      |
-| `pg_store_plans`     | 1.9        | 1.10       | 升级                                      |
-| `pg_tzf`             | 0.2.3      | 0.2.4      | 升级；Rust/pgrx 0.17.0                     |
-| `pg_anon`            | 3.0.1      | 3.0.13     | 升级；Rust/pgrx 0.16.1 -> 0.17.0           |
-| `pg_cardano`         | 1.1.1      | 1.2.0      | 升级；Rust/pgrx 0.17.0                     |
-| `pg_strict`          | 1.0.3      | 1.0.5      | 升级；Rust/pgrx 0.16.1 -> 0.17.0           |
-| `pg_vectorize`       | 0.26.0     | 0.26.1     | 升级；Rust/pgrx 0.16.1 -> 0.17.0           |
-| `pglinter`           | 1.1.1      | 1.1.2      | 升级；Rust/pgrx 0.16.1 -> 0.17.0           |
-| `pgx_ulid`           | 0.2.2      | 0.2.3      | 升级；Rust/pgrx 0.17.0                     |
-| `wrappers`           | 0.5.7      | 0.6.0      | 升级；Rust/pgrx 0.16.1 -> 0.17.0           |
-| `supautils`          | 3.1.0      | 3.2.1      | 升级                                      |
+| `block_copy_command` | -          | 0.1.5      | 新增；PG 14-18；Rust/pgrx 0.17.0            |
+| `cloudberry`         | 2.0.0      | 2.1.0      | 内核包组；RPM release 2 修复 initdb errno 问题   |
+| `cloudberry-backup`  | -          | 2.1.0      | 新增 Cloudberry 备份工具包                     |
+| `cloudberry-pxf`     | -          | 2.1.0      | 新增 Cloudberry PXF 包                     |
+| `credcheck`          | 4.6        | 4.7        | 升级；PG 14-18；PGDG                        |
+| `datasketches`       | -          | 1.7.0      | 新增；PG 14-18                             |
 | `ddl_historization`  | 0.0.7      | 0.2        | 升级                                      |
-| `pg_incremental`     | 1.4.1      | 1.5.0      | 升级                                      |
-| `pg_failover_slots`  | 1.2.0      | 1.2.1      | 升级                                      |
-| `plv8`               | 3.2.4      | 3.2.4-2    | 仅 RPM；EL10 构建修复                         |
+| `documentdb`         | 0.109      | 0.110      | 升级到上游版本；PG 15-18                        |
+| `external_file`      | -          | 1.2        | 新增；PG 14-18                             |
+| `logical_ddl`        | -          | 0.1.0      | 新增；PG 14-18                             |
+| `nominatim_fdw`      | 1.1.0      | 1.2        | 升级                                      |
+| `onesparse`          | -          | 1.0.0      | 新增；仅 PG 18                              |
+| `orioledb`           | beta15 1.7 | beta15 1.7 | 配套 OriolePG 17.18                       |
+| `oriolepg`           | 17.16      | 17.18      | 内核补丁集更新                                 |
+| `parray_gin`         | -          | 1.5.0      | 新增后升级；PG 14-18                          |
+| `pg_accumulator`     | -          | 1.1.3      | 新增；PG 14-18                             |
+| `pg_anon`            | 3.0.1      | 3.0.13     | 升级；Rust/pgrx 0.16.1 -> 0.17.0           |
 | `pg_background`      | 1.8        | 1.9.2      | 仅 DEB                                   |
+| `pg_bikram_sambat`   | -          | 0.1.0      | 新增；Bikram Sambat 日期类型与 AD/BS 转换函数       |
+| `pg_byteamagic`      | -          | 0.2.4      | 新增；PG 14-18                             |
+| `pg_cardano`         | 1.1.1      | 1.2.0      | 升级；Rust/pgrx 0.17.0                     |
+| `pg_clickhouse`      | 0.1.5      | 0.2.0      | 升级                                      |
+| `pg_datasentinel`    | -          | 1.0        | 新增；PG 15-18                             |
+| `pg_dbms_job`        | 1.5        | 2.0        | 升级；PG 14-18；PGDG                        |
+| `pg_dispatch`        | -          | 0.1.5      | 新增；PG 14-18                             |
+| `pg_failover_slots`  | 1.2.0      | 1.2.1      | 升级                                      |
+| `pg_fsql`            | -          | 1.1.0      | 新增；PG 14-18                             |
+| `pg_incremental`     | 1.4.1      | 1.5.0      | 升级                                      |
+| `pg_isok`            | -          | 1.4.1      | 新增；PG 14-18                             |
+| `pg_ivm`             | 1.13       | 1.14       | 升级；PG 14-18                             |
+| `pg_kazsearch`       | -          | 2.0.0      | 新增；PG 16-18；Rust/pgrx 0.17.0            |
+| `pg_liquid`          | -          | 0.1.7      | 新增；PG 14-18                             |
+| `pg_pathcheck`       | -          | 0.9.1      | 新增；PG 17-18；需 shared_preload_libraries  |
+| `pg_query_rewrite`   | -          | 0.0.5      | 新增；PG 14-18                             |
+| `pg_regresql`        | -          | 2.0.0      | 新增；PG 14-18                             |
+| `pg_rrf`             | -          | 0.0.3      | 新增；PG 14-17；Rust/pgrx 0.16.1 -> 0.17.0  |
+| `pg_savior`          | 0.0.1      | 0.1.0      | 升级；高风险 DDL/DML 防护 hook；需 preload 或 LOAD |
+| `pg_search`          | 0.22.2     | 0.23.1     | 升级；PG 15-18；pgrx 0.18.0                 |
+| `pg_slug_gen`        | -          | 1.0.0      | 新增；PG 15-18                             |
+| `pg_stat_ch`         | -          | 0.3.6      | 新增后升级；PG 16-18；EL8 break                |
+| `pg_store_plans`     | 1.9        | 1.10       | 升级                                      |
+| `pg_strict`          | 1.0.3      | 1.0.5      | 升级；Rust/pgrx 0.16.1 -> 0.17.0           |
+| `pg_text_semver`     | -          | 1.2.1      | 新增；PG 14-18                             |
+| `pg_textsearch`      | 0.5.0      | 1.1.0      | 升级；PG 17-18；需 shared_preload_libraries  |
+| `pg_trickle`         | 0.16.0     | 0.40.0     | 升级；仅 PG 18；pgrx 0.18.0                  |
+| `pg_tzf`             | 0.2.3      | 0.2.4      | 升级；Rust/pgrx 0.17.0                     |
+| `pg_vectorize`       | 0.26.0     | 0.26.1     | 升级；Rust/pgrx 0.16.1 -> 0.17.0           |
+| `pg_variables`       | -          | 1.2.5      | 新增；PG 14-18                             |
+| `pg_when`            | -          | 0.1.9      | 新增；PG 14-18；Rust/pgrx 0.17.0            |
+| `pgxicor`            | 0.1.0      | 0.1.1      | 升级                                      |
+| `pgcalendar`         | -          | 1.1.0      | 新增；PG 14-18                             |
+| `pgclone`            | -          | 4.0.0      | 新增后升级；PG 14-18                          |
+| `pgelog`             | -          | 1.0.2      | 新增；PG 14-18                             |
+| `pglinter`           | 1.1.1      | 1.1.2      | 升级；Rust/pgrx 0.16.1 -> 0.17.0           |
+| `pglock`             | -          | 1.0.0      | 新增；PG 14-18                             |
+| `pgmq`               | 1.11.0     | 1.11.1     | 升级；PG 14-18                             |
+| `pgmqtt`             | -          | 0.1.0      | 新增；PG 14-18；Rust/pgrx 0.16.1 -> 0.17.0  |
+| `pgproto`            | -          | 0.5.0      | 新增后升级；原生 Protobuf 支持                    |
+| `pghydro`            | -          | 6.6        | 新增；PG 14-18                             |
+| `pgx_ulid`           | 0.2.2      | 0.2.3      | 升级；Rust/pgrx 0.17.0                     |
+| `plv8`               | 3.2.4      | 3.2.4-2    | 仅 RPM；EL10 构建修复                         |
+| `PolarDB`            | 15.15      | 17.9.1.0   | PG 15 -> 17                             |
+| `postgresbson`       | -          | 2.0.2      | 新增；PG 14-18                             |
+| `postgis`            | 3.6.2      | 3.6.3      | 仅 DEB                                   |
+| `prefix`             | 1.2.10     | 1.2.11     | 升级；PG 14-18；PGDG                        |
+| `provsql`            | -          | 1.2.3      | 新增；PG 14-18                             |
+| `rdf_fdw`            | -          | 2.5.0      | 新增后升级；PG 14-18                          |
+| `rdkit`              | -          | 202503.6   | 新增；PG 14-18                             |
+| `re2`                | -          | 0.1.1      | 新增；PG 16-18                             |
+| `storage_engine`     | -          | 1.3.4      | 新增后升级；PG 14-18；列式与行压缩表访问方法              |
+| `supautils`          | 3.1.0      | 3.2.1      | 升级                                      |
+| `system_stats`       | 3.2        | 4.0        | 升级                                      |
+| `timescaledb`        | 2.25.2     | 2.26.4     | 升级；TSL 小版本更新                            |
+| `ulak`               | -          | 0.0.2      | 新增；PG 14-18                             |
+| `wrappers`           | 0.5.7      | 0.6.0      | 升级；Rust/pgrx 0.16.1 -> 0.17.0           |
 {.stretch-last}
 
+
+**基础设施软件包更新**
+
+| 包名                           | 旧版本            | 新版本            | 备注                    |
+|:-----------------------------|:---------------|:---------------|:----------------------|
+| `alertmanager`               | 0.31.1         | 0.32.1         |                       |
+| `agentsview`                 | 0.15.0         | 0.26.0         |                       |
+| `claude`                     | 2.1.81         | 2.1.123        | 通过 8118 代理下载并核验       |
+| `code`                       | 1.112.0        | 1.118.1        | 直链元数据更新               |
+| `code-server`                | 4.112.0        | 4.117.0        | 直链元数据更新               |
+| `codex`                      | 0.116.0        | 0.125.0        | 从预发布链收敛到稳定版后继续升级      |
+| `crush`                      | 0.51.2         | 0.64.0         | 直链元数据更新               |
+| `dblab`                      | 0.34.3         | 0.38.0         |                       |
+| `duckdb`                     | 1.5.0          | 1.5.2          |                       |
+| `etcd`                       | 3.6.9          | 3.6.10         | 统一软件包版本               |
+| `garage`                     | 2.2.0          | 2.3.0          |                       |
+| `genai-toolbox`              | 0.27.0         | 1.1.0          | 上游已更名为 mcp-toolbox    |
+| `golang`                     | 1.26.1         | 1.26.2         |                       |
+| `grafana`                    | 12.4.1         | 13.0.1         | 主版本升级后继续刷新元数据         |
+| `grafana-infinity-ds`        | 3.7.4          | 3.8.0          |                       |
+| `grafana-plugins`            | 12.3.0         | 13.0.0         | Noarch 插件包，手工归集       |
+| `grafana-victoriametrics-ds` | 0.23.1         | 0.24.0         |                       |
+| `hugo`                       | 0.158.0        | 0.161.1        |                       |
+| `maddy`                      | 0.8.2          | 0.9.3          |                       |
+| `mcli`                       | 20260321000000 | 20260417000000 | pgsty 分支，修复 cve       |
+| `minio`                      | 20260325000000 | 20260417000000 | pgsty 分支，修复 cve       |
+| `mongodb_exporter`           | 0.49.0         | 0.50.0         |                       |
+| `node_exporter`              | 1.10.2         | 1.11.1         |                       |
+| `nodejs`                     | 24.14.0        | 24.15.0        | 维持在 24.x 策略线          |
+| `npgsqlrest`                 | 3.11.1         | 3.12.0         |                       |
+| `opencode`                   | 1.2.27         | 1.14.30        | 改为版本化缓存并重新构建          |
+| `pg_exporter`                | 1.2.1          | 1.2.2          | 直链元数据更新               |
+| `pgflo`                      | 0.0.15         | -              | 已移除                   |
+| `pgschema`                   | 1.7.4          | 1.9.0          |                       |
+| `pig`                        | 1.3.2          | 1.4.1          | 仅更新元信息                |
+| `postgrest`                  | 14.7           | 14.10          |                       |
+| `prometheus`                 | 3.10.0         | 3.11.3         |                       |
+| `rainfrog`                   | 0.3.17         | 0.3.18         |                       |
+| `rclone`                     | 1.73.2         | 1.73.5         | 直链元数据更新               |
+| `rustfs`                     | 1.0.0-alpha.89 | 1.0.0-b1       | 预发布版本线                |
+| `sabiql`                     | 1.8.2          | 1.11.1         |                       |
+| `seaweedfs`                  | 4.17           | 4.22           |                       |
+| `sqlcmd`                     | 1.9.0          | 1.10.0         |                       |
+| `stalwart`                   | 0.15.5         | 0.16.2         |                       |
+| `tigerbeetle`                | 0.16.77        | 0.17.2         |                       |
+| `tigerfs`                    | 0.5.0          | 0.6.0          |                       |
+| `timescaledb-tools`          | 0.18.2         | 0.19.0         | 重新构建 timescaledb-tune |
+| `uv`                         | 0.10.12        | 0.11.8         |                       |
+| `victoria-logs`              | 1.48.0         | 1.50.0         | 主包                    |
+| `victoria-metrics`           | 1.138.0        | 1.142.0        |                       |
+| `victoria-metrics-cluster`   | 1.138.0        | 1.142.0        | VictoriaMetrics 配套组件  |
+| `victoria-traces`            | 0.8.0          | 0.8.2          |                       |
+| `vip-manager`                | 4.0.0          | 4.2.0          | 直链元数据更新               |
+| `vlagent`                    | 1.48.0         | 1.50.0         | VictoriaLogs 配套组件     |
+| `vlogscli`                   | 1.48.0         | 1.50.0         | VictoriaLogs 配套组件     |
+| `vmutils`                    | 1.138.0        | 1.142.0        | VictoriaMetrics 配套组件  |
+| `vector`                     | 0.54.0         | 0.55.0         | 直链元数据更新               |
+| `v2ray`                      | 5.47.0         | 5.48.0         |                       |
+| `xray`                       | 26.2.6         | 26.3.27        |                       |
+
+**校验和**
+
+```bash
+58a914fce7bc521b65e167f66e7961a3  pigsty-v4.3.0.tgz
+9ce070efb0420057a83c632b2856d1b3  pigsty-pkg-v4.3.0.d12.aarch64.tgz
+bf21c36d3aff94a1a6353130597ffa85  pigsty-pkg-v4.3.0.d12.x86_64.tgz
+81b4790c4e5567cee9d1beadd06e48e6  pigsty-pkg-v4.3.0.d13.aarch64.tgz
+06baab9341ab683eaeea2e066b28a0f4  pigsty-pkg-v4.3.0.d13.x86_64.tgz
+fb4bf751df5e09f547c49b8ab7cac9a0  pigsty-pkg-v4.3.0.el10.aarch64.tgz
+a3e752c8148122d1eaea74a6d8d8df0d  pigsty-pkg-v4.3.0.el10.x86_64.tgz
+cb2a9af36615513e66fd5ac3e9f4d797  pigsty-pkg-v4.3.0.el9.aarch64.tgz
+e24641a879dec7a8eea74dab42f85920  pigsty-pkg-v4.3.0.el9.x86_64.tgz
+6b675fd8d9e039193481f0838aa4b92c  pigsty-pkg-v4.3.0.u22.aarch64.tgz
+c0e344ccb9d190a619591e5d46116424  pigsty-pkg-v4.3.0.u22.x86_64.tgz
+3e0ec9534cf595201ec79eb1fc6549d8  pigsty-pkg-v4.3.0.u24.aarch64.tgz
+0a3d19513eca9615bdd66a4b2bf66f1d  pigsty-pkg-v4.3.0.u24.x86_64.tgz
+683a10ff8fd993358d6befa9f4e02913  pigsty-pkg-v4.3.0.u26.aarch64.tgz
+fd1ea5cd5554bfe91fadd51ad80860e3  pigsty-pkg-v4.3.0.u26.x86_64.tgz
+```
 
 ------
 
