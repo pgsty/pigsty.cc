@@ -10,7 +10,7 @@ categories: [任务]
 
 ## 快速上手
 
-Pigsty 提供 [**507 扩展**](/ext/list/)，使用扩展涉及四个步骤：**下载**、**安装**、**配置**、**启用**。
+Pigsty 提供 [**510 扩展**](/ext/list/)，使用扩展涉及四个步骤：**下载**、**安装**、**配置**、**启用**。
 
 ```yaml
 pg-meta:
@@ -497,6 +497,6 @@ SELECT * FROM pg_available_extension_versions WHERE name = 'vector';
 ## 相关资源
 
 - [**扩展插件**](/docs/pgsql/ext/)：扩展管理的详细文档
-- [**扩展目录**](/ext/list/)：查阅 507 可用扩展
+- [**扩展目录**](/ext/list/)：查阅 510 可用扩展
 - [**pig 包管理器**](/ext/pig/)：扩展安装命令行工具
 - [**数据库管理**](/docs/pgsql/admin/db/)：在数据库中启用扩展

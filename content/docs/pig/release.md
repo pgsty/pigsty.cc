@@ -12,7 +12,7 @@ categories: [参考]
 |       版本        |     日期     | 摘要                                |                                                     GitHub |
 |:---------------:|:----------:|-----------------------------------|-----------------------------------------------------------:|
 | [v1.4.1](#v141) | 2026-05-01 | 510 个扩展，支持 Ubuntu 26.04，仓库校准    | [v1.4.1](https://github.com/pgsty/pig/releases/tag/v1.4.1) |
-| [v1.4.0](#v140) | 2026-04-19 | 507 个扩展，pgrx 0.18.0，更多构建规格      | [v1.4.0](https://github.com/pgsty/pig/releases/tag/v1.4.0) |
+| [v1.4.0](#v140) | 2026-04-19 | 510 个扩展，pgrx 0.18.0，更多构建规格      | [v1.4.0](https://github.com/pgsty/pig/releases/tag/v1.4.0) |
 | [v1.3.4](#v134) | 2026-04-14 | 504 扩展更新与发布产物校验和刷新             | [v1.3.4](https://github.com/pgsty/pig/releases/tag/v1.3.4) |
 | [v1.3.3](#v133) | 2026-04-10 | 481 扩展与 Go 1.26.2 更新              | [v1.3.3](https://github.com/pgsty/pig/releases/tag/v1.3.3) |
 | [v1.3.2](#v132) | 2026-03-23 | 例行元数据更新，新增 `pg tune` 与构建别名        | [v1.3.2](https://github.com/pgsty/pig/releases/tag/v1.3.2) |
@@ -81,7 +81,7 @@ d09fd6e747cb65acda225ffd5448a8fba3f676ce8044f4237d75a59b3d6a5b4e  pig_1.4.1-1_ar
 
 # v1.4.0
 
-- 刷新扩展目录，可用扩展总数增加到 **507**，并更新 `timescaledb 2.26.3`、`decoderbufs 3.5.0`、`pgclone 4.0.0`、`nominatim_fdw 1.3` 等版本。
+- 刷新扩展目录，可用扩展总数增加到 **510**，并更新 `timescaledb 2.26.3`、`decoderbufs 3.5.0`、`pgclone 4.0.0`、`nominatim_fdw 1.3` 等版本。
 - 默认 `pgrx` 从 `0.17.0` 升级到 `0.18.0`，同步对齐相关 Rust 扩展构建版本。
 - 为 `pig build get` 刷新权威源码包映射，覆盖 Cloudberry / OrioleDB 构建输入，以及 RDKit / OneSparse 相关附加源码。
 - 修复 `repo set` 标志位隔离问题，并修正 PostgreSQL schema 级维护 SQL。
