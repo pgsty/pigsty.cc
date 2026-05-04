@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>任务，概念 on PIGSTY</title><link>https://pigsty.cc/categories/%E4%BB%BB%E5%8A%A1%E6%A6%82%E5%BF%B5/</link><description>Recent content in 任务，概念 on PIGSTY</description><generator>Hugo</generator><language>zh-CN</language><lastBuildDate>Fri, 17 Apr 2026 09:23:28 +0800</lastBuildDate><atom:link href="https://pigsty.cc/categories/%E4%BB%BB%E5%8A%A1%E6%A6%82%E5%BF%B5/index.xml" rel="self" type="application/rss+xml"/><item><title>备份机制</title><link>https://pigsty.cc/docs/pgsql/backup/mechanism/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/pgsql/backup/mechanism/</guid><description>&lt;p&gt;备份可以通过内置 &lt;a href="#%E8%84%9A%E6%9C%AC"&gt;脚本&lt;/a&gt; 调用，使用节点 &lt;a href="#%E5%AE%9A%E6%97%B6%E5%A4%87%E4%BB%BD"&gt;crontab&lt;/a&gt; 定时执行，
+由 &lt;a href="https://pgbackrest.org/"&gt;pgbackrest&lt;/a&gt; 管理，存储在备份仓库中，
+仓库可以是本地磁盘文件系统或 MinIO / S3，并支持不同的 &lt;a href="https://pigsty.cc/docs/pgsql/backup/repository#%E4%BB%93%E5%BA%93%E4%BF%9D%E7%95%99%E7%AD%96%E7%95%A5"&gt;保留&lt;/a&gt; 策略。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="脚本"&gt;脚本&lt;/h2&gt;
+&lt;p&gt;您可以使用 &lt;a href="https://pigsty.cc/docs/pgsql/param#pg_dbsu"&gt;&lt;code&gt;pg_dbsu&lt;/code&gt;&lt;/a&gt; 用户（默认为 &lt;code&gt;postgres&lt;/code&gt;）执行 &lt;code&gt;pgbackrest&lt;/code&gt; 命令创建备份：&lt;/p&gt;
+
+
+
+
+
+
+
+&lt;ul class="nav nav-tabs" id="tabs-0" role="tablist"&gt;
+ &lt;li class="nav-item"&gt;
+ &lt;button class="nav-link disabled"
+ id="tabs-00-00-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-00" role="tab"
+ aria-controls="tabs-00-00" aria-selected="false"&gt;
+ 备份命令
+ &lt;/button&gt;
+ &lt;/li&gt;&lt;li class="nav-item"&gt;
+ &lt;button class="nav-link active"
+ id="tabs-00-01-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-01" role="tab"
+ aria-controls="tabs-00-01" aria-selected="true"&gt;
+ backup
+ &lt;/button&gt;
+ &lt;/li&gt;&lt;li class="nav-item"&gt;
+ &lt;button class="nav-link"
+ id="tabs-00-02-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-02" role="tab"
+ aria-controls="tabs-00-02" aria-selected="false"&gt;
+ full
+ &lt;/button&gt;
+ &lt;/li&gt;&lt;li class="nav-item"&gt;
+ &lt;button class="nav-link"
+ id="tabs-00-03-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-03" role="tab"
+ aria-controls="tabs-00-03" aria-selected="false"&gt;
+ diff
+ &lt;/button&gt;
+ &lt;/li&gt;&lt;li class="nav-item"&gt;
+ &lt;button class="nav-link"
+ id="tabs-00-04-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-04" role="tab"
+ aria-controls="tabs-00-04" aria-selected="false"&gt;
+ incr
+ &lt;/button&gt;
+ &lt;/li&gt;&lt;li class="nav-item"&gt;
+ &lt;button class="nav-link"
+ id="tabs-00-05-tab" data-bs-toggle="tab" data-bs-target="#tabs-00-05" role="tab"
+ aria-controls="tabs-00-05" aria-selected="false"&gt;
+ info
+ &lt;/button&gt;
+ &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class="tab-content" id="tabs-0-content"&gt;
+ &lt;div class="tab-pane fade"
+ id="tabs-00-00" role="tabpanel" aria-labelled-by="tabs-00-00-tab" tabindex="0"&gt;
+ &lt;pre tabindex="0"&gt;&lt;code&gt;&lt;/code&gt;&lt;/pre&gt;
+ &lt;/div&gt;
+ &lt;div class="tab-pane fade show active"
+ id="tabs-00-01" role="tabpanel" aria-labelled-by="tabs-00-01-tab" tabindex="0"&gt;
+ &lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;pgbackrest --stanza&lt;span class="o"&gt;=&lt;/span&gt;pg-meta --type&lt;span class="o"&gt;=&lt;/span&gt;full backup &lt;span class="c1"&gt;# 为集群 pg-meta 创建全量备份&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+ &lt;/div&gt;
+ &lt;div class="tab-pane fade"
+ id="tabs-00-02" role="tabpanel" aria-labelled-by="tabs-00-02-tab" tabindex="0"&gt;
+ &lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;$ pgbackrest --stanza&lt;span class="o"&gt;=&lt;/span&gt;pg-meta --type&lt;span class="o"&gt;=&lt;/span&gt;full backup
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;2025-07-15 01:36:57.007 P00 INFO: backup &lt;span class="nb"&gt;command&lt;/span&gt; begin 2.54.2: --annotation&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nv"&gt;pg_cluster&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;pg-meta ...
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;2025-07-15 01:36:57.030 P00 INFO: execute non-exclusive backup start: backup begins after the requested immediate checkpoint completes
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;2025-07-15 01:36:57.105 P00 INFO: backup start &lt;span class="nv"&gt;archive&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; 000000010000000000000006, &lt;span class="nv"&gt;lsn&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; 0/6000028
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;2025-07-15 01:36:58.540 P00 INFO: new backup &lt;span class="nv"&gt;label&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; 20250715-013657F
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;2025-07-15 01:36:58.588 P00 INFO: full backup &lt;span class="nv"&gt;size&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; 44.5MB, file &lt;span class="nv"&gt;total&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="m"&gt;1437&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;2025-07-15 01:36:58.589 P00 INFO: backup &lt;span class="nb"&gt;command&lt;/span&gt; end: completed successfully &lt;span class="o"&gt;(&lt;/span&gt;1584ms&lt;span class="o"&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+ &lt;/div&gt;
+ &lt;div class="tab-pane fade"
+ id="tabs-00-03" role="tabpanel" aria-labelled-by="tabs-00-03-tab" tabindex="0"&gt;
+ &lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;$ pgbackrest --stanza&lt;span class="o"&gt;=&lt;/span&gt;pg-meta --type&lt;span class="o"&gt;=&lt;/span&gt;diff backup
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;2025-07-15 01:37:24.952 P00 INFO: backup &lt;span class="nb"&gt;command&lt;/span&gt; begin 2.54.2: ...
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;2025-07-15 01:37:24.985 P00 INFO: last backup &lt;span class="nv"&gt;label&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; 20250715-013657F, &lt;span class="nv"&gt;version&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; 2.54.2
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;2025-07-15 01:37:26.337 P00 INFO: new backup &lt;span class="nv"&gt;label&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; 20250715-013657F_20250715-013724D
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;2025-07-15 01:37:26.381 P00 INFO: diff backup &lt;span class="nv"&gt;size&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; 424.3KB, file &lt;span class="nv"&gt;total&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="m"&gt;1437&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;2025-07-15 01:37:26.381 P00 INFO: backup &lt;span class="nb"&gt;command&lt;/span&gt; end: completed successfully &lt;span class="o"&gt;(&lt;/span&gt;1431ms&lt;span class="o"&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+ &lt;/div&gt;
+ &lt;div class="tab-pane fade"
+ id="tabs-00-04" role="tabpanel" aria-labelled-by="tabs-00-04-tab" tabindex="0"&gt;
+ &lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;$ pgbackrest --stanza&lt;span class="o"&gt;=&lt;/span&gt;pg-meta --type&lt;span class="o"&gt;=&lt;/span&gt;incr backup
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;2025-07-15 01:37:30.305 P00 INFO: backup &lt;span class="nb"&gt;command&lt;/span&gt; begin 2.54.2: ...
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;2025-07-15 01:37:30.337 P00 INFO: last backup &lt;span class="nv"&gt;label&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; 20250715-013657F_20250715-013724D, &lt;span class="nv"&gt;version&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; 2.54.2
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;2025-07-15 01:37:31.356 P00 INFO: new backup &lt;span class="nv"&gt;label&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; 20250715-013657F_20250715-013730I
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;2025-07-15 01:37:31.403 P00 INFO: incr backup &lt;span class="nv"&gt;size&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; 8.3KB, file &lt;span class="nv"&gt;total&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="m"&gt;1437&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;2025-07-15 01:37:31.403 P00 INFO: backup &lt;span class="nb"&gt;command&lt;/span&gt; end: completed successfully &lt;span class="o"&gt;(&lt;/span&gt;1099ms&lt;span class="o"&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+ &lt;/div&gt;
+ &lt;div class="tab-pane fade"
+ id="tabs-00-05" role="tabpanel" aria-labelled-by="tabs-00-05-tab" tabindex="0"&gt;
+ &lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;$ pgbackrest --stanza&lt;span class="o"&gt;=&lt;/span&gt;pg-meta info
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;stanza: pg-meta
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; status: ok
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; cipher: aes-256-cbc
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; db &lt;span class="o"&gt;(&lt;/span&gt;current&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; wal archive min/max &lt;span class="o"&gt;(&lt;/span&gt;17&lt;span class="o"&gt;)&lt;/span&gt;: 000000010000000000000001/00000001000000000000000A
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; full backup: 20250715-013657F
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; timestamp start/stop: 2025-07-15 01:36:57+00 / 2025-07-15 01:36:58+00
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; wal start/stop: &lt;span class="m"&gt;000000010000000000000006&lt;/span&gt; / &lt;span class="m"&gt;000000010000000000000006&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; database size: 44.5MB, database backup size: 44.5MB
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; repo1: backup size: 8.7MB
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; diff backup: 20250715-013657F_20250715-013724D
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; timestamp start/stop: 2025-07-15 01:37:24+00 / 2025-07-15 01:37:26+00
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; database size: 44.5MB, database backup size: 424.3KB
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; repo1: backup size: 94KB
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; backup reference total: &lt;span class="m"&gt;1&lt;/span&gt; full
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; incr backup: 20250715-013657F_20250715-013730I
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; timestamp start/stop: 2025-07-15 01:37:30+00 / 2025-07-15 01:37:31+00
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; database size: 44.5MB, database backup size: 8.3KB
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; repo1: backup size: 504B
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; backup reference total: &lt;span class="m"&gt;1&lt;/span&gt; full, &lt;span class="m"&gt;1&lt;/span&gt; diff&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+ &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;这里的 &lt;code&gt;stanza&lt;/code&gt; 是数据库集群名称：&lt;a href="https://pigsty.cc/docs/pgsql/param#pg_cluster"&gt;&lt;code&gt;pg_cluster&lt;/code&gt;&lt;/a&gt;，在默认配置中为 &lt;code&gt;pg-meta&lt;/code&gt;。&lt;/p&gt;</description></item><item><title>3坏2应急处理</title><link>https://pigsty.cc/docs/pgsql/tutorial/drill/</link><pubDate>Sat, 11 Jan 2025 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/pgsql/tutorial/drill/</guid><description>&lt;p&gt;如果经典3节点高可用部署同时出现两台（多数主体）故障，系统通常无法自动完成故障切换，需要人工介入：&lt;/p&gt;
+&lt;p&gt;首先判断另外两台服务器的情况，如果短时间内可以拉起，优先选择拉起另外两台服务。否则进入 &lt;strong&gt;紧急止血流程&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;紧急止血流程假设您的管理节点故障&lt;/strong&gt;，只有单台普通数据库节点存活，在这种情况下，最快的恢复操作流程为：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;调整 HAProxy 配置，将流量指向主库。&lt;/li&gt;
+&lt;li&gt;关闭 Patroni，手动提升 PostgreSQL 从库为主库。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id="调整haproxy配置"&gt;调整HAProxy配置&lt;/h2&gt;
+&lt;p&gt;如果你通过其他方式绕开 HAProxy 访问集群，那么可以跳过这一步。
+如果你通过 HAProxy 方式访问数据库集群，那么你需要调整负载均衡配置，将读写流量手工指向主库。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;编辑 &lt;code&gt;/etc/haproxy/&amp;lt;pg_cluster&amp;gt;-primary.cfg&lt;/code&gt; 配置文件，其中 &lt;code&gt;&amp;lt;pg_cluster&amp;gt;&lt;/code&gt; 为你的 PostgreSQL 集群名称，例如 &lt;code&gt;pg-meta&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;将健康检查配置选项注释，停止进行健康鉴擦好&lt;/li&gt;
+&lt;li&gt;将服务器列表中，其他两台故障的机器注释掉，只保留当前主库服务器。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-ini" data-lang="ini"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="na"&gt;listen pg-meta-primary&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="na"&gt;bind *:5433&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="na"&gt;mode tcp&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="na"&gt;maxconn 5000&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="na"&gt;balance roundrobin&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c1"&gt;# 注释掉以下四行健康检查配置&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c1"&gt;#option httpchk # &amp;lt;---- remove this&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c1"&gt;#option http-keep-alive # &amp;lt;---- remove this&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c1"&gt;#http-check send meth OPTIONS uri /primary # &amp;lt;---- remove this&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c1"&gt;#http-check expect status 200 # &amp;lt;---- remove this&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="na"&gt;default-server inter 3s fastinter 1s downinter 5s rise 3 fall 3 on-marked-down shutdown-sessions slowstart 30s maxconn 3000 maxqueue 128 weight 100&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="na"&gt;server pg-meta-1 10.10.10.10:6432 check port 8008 weight 100&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c1"&gt;# 注释掉其他两台故障的机器&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c1"&gt;#server pg-meta-2 10.10.10.11:6432 check port 8008 weight 100 &amp;lt;---- comment this&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c1"&gt;#server pg-meta-3 10.10.10.12:6432 check port 8008 weight 100 &amp;lt;---- comment this&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;配置调整完成后，先不着急执行 &lt;code&gt;systemctl reload haproxy&lt;/code&gt; 重载生效，等待后续主库提升后一起执行。
+以上配置的效果是，HAProxy 将不再进行主库健康检查（默认使用 Patroni），而是直接将写入流量指向当前主库&lt;/p&gt;</description></item></channel></rss>

@@ -1,0 +1,451 @@
+<!doctype html><html itemscope itemtype=http://schema.org/WebPage lang=zh-cn class=no-js data-theme-init><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=color-scheme content="light dark"><meta name=theme-color media="(prefers-color-scheme: light)" content="#ffffff"><meta name=theme-color media="(prefers-color-scheme: dark)" content="#000000"><style>html{background:Canvas;color:CanvasText}@media(prefers-color-scheme:dark){html{background:#0b0d12;color:#e6e6e6}}html[data-theme-init] *{transition:none!important}</style><script>(function(){const t="td-color-theme",n=localStorage.getItem(t);let e=n||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");e==="auto"&&(e=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"),document.documentElement.setAttribute("data-bs-theme",e)})()</script><link rel=canonical type=text/html href=https://pigsty.cc/docs/patroni/rest_api/><meta name=robots content="noindex, nofollow"><link rel="shortcut icon" href=/favicons/favicon.ico><link rel=apple-touch-icon href=/favicons/apple-touch-icon-180x180.png sizes=180x180><link rel=icon type=image/png href=/favicons/favicon-16x16.png sizes=16x16><link rel=icon type=image/png href=/favicons/favicon-32x32.png sizes=32x32><link rel=icon type=image/png href=/favicons/android-36x36.png sizes=36x36><link rel=icon type=image/png href=/favicons/android-48x48.png sizes=48x48><link rel=icon type=image/png href=/favicons/android-72x72.png sizes=72x72><link rel=icon type=image/png href=/favicons/android-96x96.png sizes=96x96><link rel=icon type=image/png href=/favicons/android-144x144.png sizes=144x144><link rel=icon type=image/png href=/favicons/android-192x192.png sizes=192x192><title>Patroni REST API | PIGSTY</title><meta name=description content="Patroni REST API 端点与操作行为参考。"><meta property="og:url" content="https://pigsty.cc/docs/patroni/rest_api/"><meta property="og:site_name" content="PIGSTY"><meta property="og:title" content="Patroni REST API"><meta property="og:description" content="Patroni REST API 端点与操作行为参考。"><meta property="og:locale" content="zh_CN"><meta property="og:type" content="article"><meta property="article:section" content="docs"><meta property="article:modified_time" content="2026-03-08T21:58:59+08:00"><meta itemprop=name content="Patroni REST API"><meta itemprop=description content="Patroni REST API 端点与操作行为参考。"><meta itemprop=dateModified content="2026-03-08T21:58:59+08:00"><meta itemprop=wordCount content="1768"><meta itemprop=keywords content="参考,PATRONI"><meta name=twitter:card content="summary"><meta name=twitter:title content="Patroni REST API"><meta name=twitter:description content="Patroni REST API 端点与操作行为参考。"><link rel=preload href=/scss/main.min.9832548ee9de103c40e430465e72b6722575d66c9c3cf87f275ccd9c925b3594.css as=style integrity="sha256-mDJUjuneEDxA5DBGXnK2ciV11mycPPh/J1zNnJJbNZQ=" crossorigin=anonymous><link href=/scss/main.min.9832548ee9de103c40e430465e72b6722575d66c9c3cf87f275ccd9c925b3594.css rel=stylesheet integrity="sha256-mDJUjuneEDxA5DBGXnK2ciV11mycPPh/J1zNnJJbNZQ=" crossorigin=anonymous><script src=/vendor/jquery/jquery.min.js></script><script defer src=/vendor/lunr/lunr.min.js></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-LG1V9WTKGE"></script><script>var doNotTrack=!1,dnt=navigator.doNotTrack||window.doNotTrack||navigator.msDoNotTrack,doNotTrack=dnt=="1"||dnt=="yes";if(!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-LG1V9WTKGE")}</script></head><body class=td-page><header><nav class="td-navbar js-navbar-scroll" data-bs-theme=dark><div class="td-navbar-container container-fluid flex-column flex-md-row"><a class=navbar-brand href=/><span class="navbar-brand__logo navbar-logo"><svg viewBox="0 0 24 24" width="24" height="24"><defs/><g id="32" fill="none" stroke-dasharray="none" fill-opacity="1" stroke-opacity="1" stroke="none"><title>32</title><g id="32_图层_2"><title>图层 2</title><g id="Group_17"><g id="Graphic_16"/><g id="Graphic_15"><path d="M7.666187 11.971335l2.165064-3.75H14.16138l2.165065 3.75-2.165065 3.75H9.831251z" fill="#bbb" fill-opacity=".9526367"/><path d="M7.666187 11.971335l2.165064-3.75H14.16138l2.165065 3.75-2.165065 3.75H9.831251z" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width=".6730434"/></g><g id="Graphic_14"><path d="M7.666187 19.474806l2.165064-3.75H14.16138l2.165065 3.75-2.165065 3.75H9.831251z" fill="#de372c" fill-opacity=".8545852"/><path d="M7.666187 19.474806l2.165064-3.75H14.16138l2.165065 3.75-2.165065 3.75H9.831251z" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width=".6730434"/></g><g id="Graphic_13"><path d="M14.161476 15.751202l2.165064-3.75h4.33013l2.165064 3.75-2.165064 3.75H16.32654z" fill="#424242" fill-opacity=".9016462"/><path d="M14.161476 15.751202l2.165064-3.75h4.33013l2.165064 3.75-2.165064 3.75H16.32654z" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width=".6730434"/></g><g id="Graphic_12"><path d="M14.161476 8.226008 16.32654 4.4760076h4.33013L22.821734 8.226008l-2.165064 3.75H16.32654z" fill="#ffa269" fill-opacity=".8975772"/><path d="M14.161476 8.226008 16.32654 4.4760076h4.33013L22.821734 8.226008l-2.165064 3.75H16.32654z" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width=".6730434"/></g><g id="Graphic_11"><path d="M7.666187 4.5 9.831251.75H14.16138L16.326445 4.5 14.16138 8.25H9.831251z" fill="#419edb" fill-opacity=".8979957"/><path d="M7.666187 4.5 9.831251.75H14.16138L16.326445 4.5 14.16138 8.25H9.831251z" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width=".6730434"/></g><g id="Graphic_10"><path d="M1.1491742 8.226008 3.3142388 4.4760076H7.644368L9.809432 8.226008l-2.165064 3.75H3.3142388z" fill="#2f6793" fill-opacity=".9002511"/><path d="M1.1491742 8.226008 3.3142388 4.4760076H7.644368L9.809432 8.226008l-2.165064 3.75H3.3142388z" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width=".6730434"/></g><g id="Graphic_9"><path d="M1.182071 15.741036l2.1650645-3.75h4.330129l2.1650645 3.75-2.1650645 3.75H3.3471355z" fill="#53ac79" fill-opacity=".9"/><path d="M1.182071 15.741036l2.1650645-3.75h4.330129l2.1650645 3.75-2.1650645 3.75H3.3471355z" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width=".6730434"/></g></g></g></g></svg></span><span class=navbar-brand__name>PIGSTY</span></a><div class="td-navbar-nav-scroll td-navbar-nav-scroll--indicator" id=main_navbar><div class="scroll-indicator scroll-left"></div><ul class=navbar-nav><li class=nav-item><a class=nav-link href=/docs/><i class='fa-solid fa-book'></i><span>文档</span></a></li><li class=nav-item><a class=nav-link href=/ext/><i class='fa-solid fa-puzzle-piece'></i><span>扩展</span></a></li><li class=nav-item><a class=nav-link href=/blog/><i class="fas fa-blog"></i><span>博客</span></a></li><li class="nav-item td-navbar__light-dark-menu"><div class="td-light-dark-menu dropdown"><svg class="d-none"><symbol id="check2" viewBox="0 0 16 16"><path d="M13.854 3.646a.5.5.0 010 .708l-7 7a.5.5.0 01-.708.0l-3.5-3.5a.5.5.0 11.708-.708L6.5 10.293l6.646-6.647a.5.5.0 01.708.0z"/></symbol><symbol id="circle-half" viewBox="0 0 16 16"><path d="M8 15A7 7 0 108 1v14zm0 1A8 8 0 118 0a8 8 0 010 16z"/></symbol><symbol id="moon-stars-fill" viewBox="0 0 16 16"><path d="M6 .278a.768.768.0 01.08.858 7.208 7.208.0 00-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527.0 1.04-.055 1.533-.16a.787.787.0 01.81.316.733.733.0 01-.031.893A8.349 8.349.0 018.344 16C3.734 16 0 12.286.0 7.71.0 4.266 2.114 1.312 5.124.06A.752.752.0 016 .278z"/><path d="M10.794 3.148a.217.217.0 01.412.0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217.0 010 .412l-1.162.387A1.734 1.734.0 0011.593 7.69l-.387 1.162a.217.217.0 01-.412.0l-.387-1.162A1.734 1.734.0 009.31 6.593l-1.162-.387a.217.217.0 010-.412l1.162-.387a1.734 1.734.0 001.097-1.097l.387-1.162zM13.863.099a.145.145.0 01.274.0l.258.774c.115.346.386.617.732.732l.774.258a.145.145.0 010 .274l-.774.258a1.156 1.156.0 00-.732.732l-.258.774a.145.145.0 01-.274.0l-.258-.774a1.156 1.156.0 00-.732-.732l-.774-.258a.145.145.0 010-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/></symbol><symbol id="sun-fill" viewBox="0 0 16 16"><path d="M8 12a4 4 0 100-8 4 4 0 000 8zM8 0a.5.5.0 01.5.5v2a.5.5.0 01-1 0v-2A.5.5.0 018 0zm0 13a.5.5.0 01.5.5v2a.5.5.0 01-1 0v-2A.5.5.0 018 13zm8-5a.5.5.0 01-.5.5h-2a.5.5.0 010-1h2a.5.5.0 01.5.5zM3 8a.5.5.0 01-.5.5h-2a.5.5.0 010-1h2A.5.5.0 013 8zm10.657-5.657a.5.5.0 010 .707l-1.414 1.415a.5.5.0 11-.707-.708l1.414-1.414a.5.5.0 01.707.0zm-9.193 9.193a.5.5.0 010 .707L3.05 13.657a.5.5.0 01-.707-.707l1.414-1.414a.5.5.0 01.707.0zm9.193 2.121a.5.5.0 01-.707.0l-1.414-1.414a.5.5.0 01.707-.707l1.414 1.414a.5.5.0 010 .707zM4.464 4.465a.5.5.0 01-.707.0L2.343 3.05a.5.5.0 11.707-.707l1.414 1.414a.5.5.0 010 .708z"/></symbol></svg>
+<button class="btn btn-link nav-link dropdown-toggle d-flex align-items-center" id=bd-theme type=button aria-expanded=false data-bs-toggle=dropdown aria-label="Toggle theme (auto)">
+<svg class="bi my-1 theme-icon-active"><use href="#circle-half"/></svg></button><ul class=dropdown-menu aria-labelledby=bd-theme><li><button type=button class="dropdown-item d-flex align-items-center" data-bs-theme-value=light aria-pressed=false>
+<svg class="bi me-2 opacity-50"><use href="#sun-fill"/></svg>
+Light
+<svg class="bi ms-auto d-none"><use href="#check2"/></svg></button></li><li><button type=button class="dropdown-item d-flex align-items-center" data-bs-theme-value=dark aria-pressed=false>
+<svg class="bi me-2 opacity-50"><use href="#moon-stars-fill"/></svg>
+Dark
+<svg class="bi ms-auto d-none"><use href="#check2"/></svg></button></li><li><button type=button class="dropdown-item d-flex align-items-center active" data-bs-theme-value=auto aria-pressed=true>
+<svg class="bi me-2 opacity-50"><use href="#circle-half"/></svg>
+Auto
+<svg class="bi ms-auto d-none"><use href="#check2"/></svg></button></li></ul></div></li><li class=nav-item><a class=nav-link href=# onclick="return switchLang(),!1" title="Switch to English / 切换语言"><i class="fas fa-language"></i></a></li></ul><div class="scroll-indicator scroll-right"></div></div><div class="d-none d-lg-block td-navbar__search"><div class="td-search td-search--offline"><div class=td-search__icon></div><input type=search name=q class="td-search__input form-control" placeholder=站内搜索…… aria-label=站内搜索…… autocomplete=off data-offline-search-index-json-src=/offline-search-index.c2255295de2f4be3efebdaef16e9cc4e.json data-offline-search-base-href=/ data-offline-search-max-results=10></div></div></div></nav><script>function switchLang(){var t=window.location.host,e=window.location.pathname+window.location.search+window.location.hash;t.indexOf("pigsty.cc")!==-1?window.location.href="https://pigsty.io"+e:t.indexOf("pigsty.io")!==-1?window.location.href="https://pigsty.cc"+e:window.location.href="https://pigsty.io"+e}</script></header><div class="container-fluid td-outer"><div class=td-main><div class="row flex-xl-nowrap"><main class="col-12 col-md-9 col-xl-8 ps-md-5" role=main><div class=td-content><h1>Patroni REST API</h1><div class=lead>Patroni REST API 端点与操作行为参考。</div><header class=article-meta></header><blockquote><p>原始页面： <a href=https://patroni.readthedocs.io/en/latest/rest_api.html>https://patroni.readthedocs.io/en/latest/rest_api.html</a></p></blockquote><p><a id=rest_api></a>Patroni 提供了丰富的 REST API，供 Patroni 自身在主库竞选期间调用，也供 <a href=/docs/patroni/patronictl#patronictl>patronictl</a> 工具执行故障转移、主从切换、重新初始化、重启和重载等操作，还可供 HAProxy 或其他负载均衡器执行 HTTP 健康检查，以及用于监控目的。以下是 Patroni REST API 端点的完整列表。</p><hr><h2 id=健康检查端点>健康检查端点</h2><p>对于所有健康检查 <strong><code>GET</code></strong> 请求，Patroni 返回描述节点状态的 JSON 文档，并附带相应的 HTTP 状态码。若不需要 JSON 响应体，可使用 <strong><code>HEAD</code></strong> 或 <strong><code>OPTIONS</code></strong> 方法代替 <strong><code>GET</code></strong>。</p><ul><li><p>以下请求仅在 Patroni 节点作为持有领导者锁的主库运行时返回 HTTP 状态码 <strong><code>200</code></strong>：</p><ul><li><strong><code>GET /</code></strong></li><li><strong><code>GET /primary</code></strong></li><li><strong><code>GET /read-write</code></strong></li></ul></li><li><p><strong><code>GET /standby-leader</code></strong>：仅当 Patroni 节点作为 <a href=/docs/patroni/standby_cluster#standby_cluster>备用集群</a> 中的领导者运行时，返回 HTTP 状态码 <strong><code>200</code></strong>。</p></li><li><p><strong><code>GET /leader</code></strong>：当 Patroni 节点持有领导者锁时返回 HTTP 状态码 <strong><code>200</code></strong>。与前两个端点的主要区别在于，它不区分 PostgreSQL 以 <strong><code>primary</code></strong> 还是 <strong><code>standby_leader</code></strong> 身份运行。</p></li><li><p><strong><code>GET /replica</code></strong>：从库健康检查端点，仅当 Patroni 节点状态为 <strong><code>running</code></strong>、角色为 <strong><code>replica</code></strong> 且未设置 <strong><code>noloadbalance</code></strong> 标签时返回 HTTP 状态码 <strong><code>200</code></strong>。</p></li><li><p><strong><code>GET /replica?replication_state=&lt;required state></code></strong>：从库检查端点，在 <strong><code>replica</code></strong> 检查的基础上，还会验证复制状态是否与指定状态匹配。主要用于 <strong><code>replication_state=streaming</code></strong>，以排除仍在通过归档恢复追赶进度的从库。</p></li><li><p><strong><code>GET /replica?lag=&lt;max-lag></code></strong>：从库检查端点，在 <strong><code>replica</code></strong> 检查的基础上还会检查复制延迟，仅当延迟低于指定值时才返回 <strong><code>200</code></strong>。出于性能考虑，延迟计算使用 DCS 中的 <strong><code>cluster.last_leader_operation</code></strong> 键作为领导者 WAL 位置。<strong><code>max-lag</code></strong> 可用字节数（整数）或可读格式指定，例如 16kB、64MB、1GB。</p><ul><li><strong><code>GET /replica?lag=1048576</code></strong></li><li><strong><code>GET /replica?lag=1024kB</code></strong></li><li><strong><code>GET /replica?lag=10MB</code></strong></li><li><strong><code>GET /replica?lag=1GB</code></strong></li></ul></li><li><p><strong><code>GET /replica?tag_key1=value1&amp;tag_key2=value2</code></strong>：从库检查端点，还会检查 YAML 配置 <strong><code>tags</code></strong> 节中用户自定义的 <strong><code>key1</code></strong> 和 <strong><code>key2</code></strong> 标签及其对应值。若实例未定义该标签，或 YAML 配置中的值与查询值不匹配，则返回 HTTP 503。</p><p>以下请求检查的是 leader 或 standby-leader 状态，Patroni 不会应用任何用户自定义标签，这些标签将被忽略：</p><ul><li><strong><code>GET /?tag_key1=value1&amp;tag_key2=value2</code></strong></li><li><strong><code>GET /leader?tag_key1=value1&amp;tag_key2=value2</code></strong></li><li><strong><code>GET /primary?tag_key1=value1&amp;tag_key2=value2</code></strong></li><li><strong><code>GET /read-write?tag_key1=value1&amp;tag_key2=value2</code></strong></li><li><strong><code>GET /standby_leader?tag_key1=value1&amp;tag_key2=value2</code></strong></li><li><strong><code>GET /standby-leader?tag_key1=value1&amp;tag_key2=value2</code></strong></li></ul></li><li><p><strong><code>GET /read-only</code></strong>：与上述端点类似，但同时包含主库。</p></li><li><p><strong><code>GET /synchronous</code></strong> 或 <strong><code>GET /sync</code></strong>：仅当 Patroni 节点作为同步备库运行时返回 HTTP 状态码 <strong><code>200</code></strong>。</p></li><li><p><strong><code>GET /read-only-sync</code></strong>：与上述端点类似，但同时包含主库。</p></li><li><p><strong><code>GET /quorum</code></strong>：仅当此 Patroni 节点被列入主库 <strong><code>synchronous_standby_names</code></strong> 中的法定人数节点时返回 HTTP 状态码 <strong><code>200</code></strong>。</p></li><li><p><strong><code>GET /read-only-quorum</code></strong>：与上述端点类似，但同时包含主库。</p></li><li><p><strong><code>GET /asynchronous</code></strong> 或 <strong><code>GET /async</code></strong>：仅当 Patroni 节点作为异步备库运行时返回 HTTP 状态码 <strong><code>200</code></strong>。</p></li><li><p><strong><code>GET /asynchronous?lag=&lt;max-lag></code></strong> 或 <strong><code>GET /async?lag=&lt;max-lag></code></strong>：异步备库检查端点，在 <strong><code>asynchronous</code></strong> 或 <strong><code>async</code></strong> 检查的基础上还会检查复制延迟，仅当延迟低于指定值时才返回 <strong><code>200</code></strong>。出于性能考虑，延迟计算使用 DCS 中的 <strong><code>cluster.last_leader_operation</code></strong> 键。<strong><code>max-lag</code></strong> 可用字节数（整数）或可读格式指定，例如 16kB、64MB、1GB。</p><ul><li><strong><code>GET /async?lag=1048576</code></strong></li><li><strong><code>GET /async?lag=1024kB</code></strong></li><li><strong><code>GET /async?lag=10MB</code></strong></li><li><strong><code>GET /async?lag=1GB</code></strong></li></ul></li><li><p><strong><code>GET /health</code></strong>：仅当 PostgreSQL 正常运行时，返回 HTTP 状态码 <strong><code>200</code></strong>。</p></li><li><p><strong><code>GET /liveness</code></strong>：若 Patroni 心跳循环正常运行，返回 HTTP 状态码 <strong><code>200</code></strong>；若主库上次心跳距今超过 <strong><code>ttl</code></strong> 秒，或从库超过 <strong><code>2*ttl</code></strong> 秒，则返回 <strong><code>503</code></strong>。可用于 Kubernetes <strong><code>livenessProbe</code></strong>。</p></li><li><p><strong><code>GET /readiness?lag=&lt;max-lag>&amp;mode=apply|write</code></strong>：当 Patroni 节点作为领导者运行时，或当 PostgreSQL 正常运行、正在复制且与领导者差距在允许范围内时，返回 HTTP 状态码 <strong><code>200</code></strong>。<strong><code>lag</code></strong> 参数设置备库允许落后的最大距离，默认为 <strong><code>maximum_lag_on_failover</code></strong>，可用字节数或可读格式指定，例如 16kB、64MB、1GB。<strong><code>mode</code></strong> 设置 WAL 是否需要已回放（apply）还是仅接收即可（write），默认为 apply。</p><p>作为 Kubernetes <strong><code>readinessProbe</code></strong> 使用时，可确保新启动的 Pod 只有在追上领导者后才变为就绪状态。结合 PodDisruptionBudget，可防止滚动重启期间领导者过早被终止，并确保复制落后的从库不会承接只读流量。在无法使用 Kubernetes endpoints 进行领导者选举的环境（如 OpenShift）中，也可将此端点用于 <strong><code>readinessProbe</code></strong>。</p></li></ul><p><strong><code>liveness</code></strong> 端点非常轻量，不执行任何 SQL。探针应配置为在领导者键即将过期时开始报错。以 <strong><code>ttl</code></strong> 默认值 <strong><code>30s</code></strong> 为例，探针配置如下：</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-yaml data-lang=yaml><span class=line><span class=cl><span class=nt>readinessProbe</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=nt>httpGet</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>scheme</span><span class=p>:</span><span class=w> </span><span class=l>HTTP</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>path</span><span class=p>:</span><span class=w> </span><span class=l>/readiness</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>port</span><span class=p>:</span><span class=w> </span><span class=m>8008</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=nt>initialDelaySeconds</span><span class=p>:</span><span class=w> </span><span class=m>3</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=nt>periodSeconds</span><span class=p>:</span><span class=w> </span><span class=m>10</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=nt>timeoutSeconds</span><span class=p>:</span><span class=w> </span><span class=m>5</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=nt>successThreshold</span><span class=p>:</span><span class=w> </span><span class=m>1</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=nt>failureThreshold</span><span class=p>:</span><span class=w> </span><span class=m>3</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=nt>livenessProbe</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=nt>httpGet</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>scheme</span><span class=p>:</span><span class=w> </span><span class=l>HTTP</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>path</span><span class=p>:</span><span class=w> </span><span class=l>/liveness</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>port</span><span class=p>:</span><span class=w> </span><span class=m>8008</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=nt>initialDelaySeconds</span><span class=p>:</span><span class=w> </span><span class=m>3</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=nt>periodSeconds</span><span class=p>:</span><span class=w> </span><span class=m>10</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=nt>timeoutSeconds</span><span class=p>:</span><span class=w> </span><span class=m>5</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=nt>successThreshold</span><span class=p>:</span><span class=w> </span><span class=m>1</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=nt>failureThreshold</span><span class=p>:</span><span class=w> </span><span class=m>3</span><span class=w>
+</span></span></span></code></pre></div><hr><h2 id=监控端点>监控端点</h2><p><strong><code>GET /patroni</code></strong> 由 Patroni 在主库竞选期间内部调用，也可供监控系统使用。此端点返回的 JSON 文档与健康检查端点结构相同。</p><p><strong>示例：</strong> 健康运行中的集群</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>$ curl -s http://localhost:8008/patroni <span class=p>|</span> jq .
+</span></span><span class=line><span class=cl><span class=o>{</span>
+</span></span><span class=line><span class=cl>  <span class=s2>&#34;state&#34;</span>: <span class=s2>&#34;running&#34;</span>,
+</span></span><span class=line><span class=cl>  <span class=s2>&#34;postmaster_start_time&#34;</span>: <span class=s2>&#34;2024-08-28 19:39:26.352526+00:00&#34;</span>,
+</span></span><span class=line><span class=cl>  <span class=s2>&#34;role&#34;</span>: <span class=s2>&#34;primary&#34;</span>,
+</span></span><span class=line><span class=cl>  <span class=s2>&#34;server_version&#34;</span>: 160004,
+</span></span><span class=line><span class=cl>  <span class=s2>&#34;xlog&#34;</span>: <span class=o>{</span>
+</span></span><span class=line><span class=cl>    <span class=s2>&#34;location&#34;</span>: <span class=m>67395656</span>
+</span></span><span class=line><span class=cl>  <span class=o>}</span>,
+</span></span><span class=line><span class=cl>  <span class=s2>&#34;timeline&#34;</span>: 1,
+</span></span><span class=line><span class=cl>  <span class=s2>&#34;replication&#34;</span>: <span class=o>[</span>
+</span></span><span class=line><span class=cl>    <span class=o>{</span>
+</span></span><span class=line><span class=cl>      <span class=s2>&#34;usename&#34;</span>: <span class=s2>&#34;replicator&#34;</span>,
+</span></span><span class=line><span class=cl>      <span class=s2>&#34;application_name&#34;</span>: <span class=s2>&#34;patroni2&#34;</span>,
+</span></span><span class=line><span class=cl>      <span class=s2>&#34;client_addr&#34;</span>: <span class=s2>&#34;10.89.0.6&#34;</span>,
+</span></span><span class=line><span class=cl>      <span class=s2>&#34;state&#34;</span>: <span class=s2>&#34;streaming&#34;</span>,
+</span></span><span class=line><span class=cl>      <span class=s2>&#34;sync_state&#34;</span>: <span class=s2>&#34;async&#34;</span>,
+</span></span><span class=line><span class=cl>      <span class=s2>&#34;sync_priority&#34;</span>: <span class=m>0</span>
+</span></span><span class=line><span class=cl>    <span class=o>}</span>,
+</span></span><span class=line><span class=cl>    <span class=o>{</span>
+</span></span><span class=line><span class=cl>      <span class=s2>&#34;usename&#34;</span>: <span class=s2>&#34;replicator&#34;</span>,
+</span></span><span class=line><span class=cl>      <span class=s2>&#34;application_name&#34;</span>: <span class=s2>&#34;patroni3&#34;</span>,
+</span></span><span class=line><span class=cl>      <span class=s2>&#34;client_addr&#34;</span>: <span class=s2>&#34;10.89.0.2&#34;</span>,
+</span></span><span class=line><span class=cl>      <span class=s2>&#34;state&#34;</span>: <span class=s2>&#34;streaming&#34;</span>,
+</span></span><span class=line><span class=cl>      <span class=s2>&#34;sync_state&#34;</span>: <span class=s2>&#34;async&#34;</span>,
+</span></span><span class=line><span class=cl>      <span class=s2>&#34;sync_priority&#34;</span>: <span class=m>0</span>
+</span></span><span class=line><span class=cl>    <span class=o>}</span>
+</span></span><span class=line><span class=cl>  <span class=o>]</span>,
+</span></span><span class=line><span class=cl>  <span class=s2>&#34;dcs_last_seen&#34;</span>: 1692356718,
+</span></span><span class=line><span class=cl>  <span class=s2>&#34;tags&#34;</span>: <span class=o>{</span>
+</span></span><span class=line><span class=cl>    <span class=s2>&#34;clonefrom&#34;</span>: <span class=nb>true</span>
+</span></span><span class=line><span class=cl>  <span class=o>}</span>,
+</span></span><span class=line><span class=cl>  <span class=s2>&#34;database_system_identifier&#34;</span>: <span class=s2>&#34;7268616322854375442&#34;</span>,
+</span></span><span class=line><span class=cl>  <span class=s2>&#34;patroni&#34;</span>: <span class=o>{</span>
+</span></span><span class=line><span class=cl>    <span class=s2>&#34;version&#34;</span>: <span class=s2>&#34;4.0.0&#34;</span>,
+</span></span><span class=line><span class=cl>    <span class=s2>&#34;scope&#34;</span>: <span class=s2>&#34;demo&#34;</span>,
+</span></span><span class=line><span class=cl>    <span class=s2>&#34;name&#34;</span>: <span class=s2>&#34;patroni1&#34;</span>
+</span></span><span class=line><span class=cl>  <span class=o>}</span>
+</span></span><span class=line><span class=cl><span class=o>}</span>
+</span></span></code></pre></div><p><strong>示例：</strong> 无主锁的集群</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>$ curl -s http://localhost:8008/patroni  <span class=p>|</span> jq .
+</span></span><span class=line><span class=cl><span class=o>{</span>
+</span></span><span class=line><span class=cl>  <span class=s2>&#34;state&#34;</span>: <span class=s2>&#34;running&#34;</span>,
+</span></span><span class=line><span class=cl>  <span class=s2>&#34;postmaster_start_time&#34;</span>: <span class=s2>&#34;2024-08-28 19:39:26.352526+00:00&#34;</span>,
+</span></span><span class=line><span class=cl>  <span class=s2>&#34;role&#34;</span>: <span class=s2>&#34;replica&#34;</span>,
+</span></span><span class=line><span class=cl>  <span class=s2>&#34;server_version&#34;</span>: 160004,
+</span></span><span class=line><span class=cl>  <span class=s2>&#34;xlog&#34;</span>: <span class=o>{</span>
+</span></span><span class=line><span class=cl>    <span class=s2>&#34;received_location&#34;</span>: 67419744,
+</span></span><span class=line><span class=cl>    <span class=s2>&#34;replayed_location&#34;</span>: 67419744,
+</span></span><span class=line><span class=cl>    <span class=s2>&#34;replayed_timestamp&#34;</span>: null,
+</span></span><span class=line><span class=cl>    <span class=s2>&#34;paused&#34;</span>: <span class=nb>false</span>
+</span></span><span class=line><span class=cl>  <span class=o>}</span>,
+</span></span><span class=line><span class=cl>  <span class=s2>&#34;timeline&#34;</span>: 1,
+</span></span><span class=line><span class=cl>  <span class=s2>&#34;replication&#34;</span>: <span class=o>[</span>
+</span></span><span class=line><span class=cl>    <span class=o>{</span>
+</span></span><span class=line><span class=cl>      <span class=s2>&#34;usename&#34;</span>: <span class=s2>&#34;replicator&#34;</span>,
+</span></span><span class=line><span class=cl>      <span class=s2>&#34;application_name&#34;</span>: <span class=s2>&#34;patroni2&#34;</span>,
+</span></span><span class=line><span class=cl>      <span class=s2>&#34;client_addr&#34;</span>: <span class=s2>&#34;10.89.0.6&#34;</span>,
+</span></span><span class=line><span class=cl>      <span class=s2>&#34;state&#34;</span>: <span class=s2>&#34;streaming&#34;</span>,
+</span></span><span class=line><span class=cl>      <span class=s2>&#34;sync_state&#34;</span>: <span class=s2>&#34;async&#34;</span>,
+</span></span><span class=line><span class=cl>      <span class=s2>&#34;sync_priority&#34;</span>: <span class=m>0</span>
+</span></span><span class=line><span class=cl>    <span class=o>}</span>,
+</span></span><span class=line><span class=cl>    <span class=o>{</span>
+</span></span><span class=line><span class=cl>      <span class=s2>&#34;usename&#34;</span>: <span class=s2>&#34;replicator&#34;</span>,
+</span></span><span class=line><span class=cl>      <span class=s2>&#34;application_name&#34;</span>: <span class=s2>&#34;patroni3&#34;</span>,
+</span></span><span class=line><span class=cl>      <span class=s2>&#34;client_addr&#34;</span>: <span class=s2>&#34;10.89.0.2&#34;</span>,
+</span></span><span class=line><span class=cl>      <span class=s2>&#34;state&#34;</span>: <span class=s2>&#34;streaming&#34;</span>,
+</span></span><span class=line><span class=cl>      <span class=s2>&#34;sync_state&#34;</span>: <span class=s2>&#34;async&#34;</span>,
+</span></span><span class=line><span class=cl>      <span class=s2>&#34;sync_priority&#34;</span>: <span class=m>0</span>
+</span></span><span class=line><span class=cl>    <span class=o>}</span>
+</span></span><span class=line><span class=cl>  <span class=o>]</span>,
+</span></span><span class=line><span class=cl>  <span class=s2>&#34;cluster_unlocked&#34;</span>: true,
+</span></span><span class=line><span class=cl>  <span class=s2>&#34;dcs_last_seen&#34;</span>: 1692356928,
+</span></span><span class=line><span class=cl>  <span class=s2>&#34;tags&#34;</span>: <span class=o>{</span>
+</span></span><span class=line><span class=cl>    <span class=s2>&#34;clonefrom&#34;</span>: <span class=nb>true</span>
+</span></span><span class=line><span class=cl>  <span class=o>}</span>,
+</span></span><span class=line><span class=cl>  <span class=s2>&#34;database_system_identifier&#34;</span>: <span class=s2>&#34;7268616322854375442&#34;</span>,
+</span></span><span class=line><span class=cl>  <span class=s2>&#34;patroni&#34;</span>: <span class=o>{</span>
+</span></span><span class=line><span class=cl>    <span class=s2>&#34;version&#34;</span>: <span class=s2>&#34;4.0.0&#34;</span>,
+</span></span><span class=line><span class=cl>    <span class=s2>&#34;scope&#34;</span>: <span class=s2>&#34;demo&#34;</span>,
+</span></span><span class=line><span class=cl>    <span class=s2>&#34;name&#34;</span>: <span class=s2>&#34;patroni1&#34;</span>
+</span></span><span class=line><span class=cl>  <span class=o>}</span>
+</span></span><span class=line><span class=cl><span class=o>}</span>
+</span></span></code></pre></div><p><strong>示例：</strong> 启用了 <a href=/docs/patroni/dcs_failsafe_mode#dcs_failsafe_mode>DCS 故障安全模式</a> 的无主锁集群</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>$ curl -s http://localhost:8008/patroni  <span class=p>|</span> jq .
+</span></span><span class=line><span class=cl><span class=o>{</span>
+</span></span><span class=line><span class=cl>  <span class=s2>&#34;state&#34;</span>: <span class=s2>&#34;running&#34;</span>,
+</span></span><span class=line><span class=cl>  <span class=s2>&#34;postmaster_start_time&#34;</span>: <span class=s2>&#34;2024-08-28 19:39:26.352526+00:00&#34;</span>,
+</span></span><span class=line><span class=cl>  <span class=s2>&#34;role&#34;</span>: <span class=s2>&#34;replica&#34;</span>,
+</span></span><span class=line><span class=cl>  <span class=s2>&#34;server_version&#34;</span>: 160004,
+</span></span><span class=line><span class=cl>  <span class=s2>&#34;xlog&#34;</span>: <span class=o>{</span>
+</span></span><span class=line><span class=cl>    <span class=s2>&#34;location&#34;</span>: <span class=m>67420024</span>
+</span></span><span class=line><span class=cl>  <span class=o>}</span>,
+</span></span><span class=line><span class=cl>  <span class=s2>&#34;timeline&#34;</span>: 1,
+</span></span><span class=line><span class=cl>  <span class=s2>&#34;replication&#34;</span>: <span class=o>[</span>
+</span></span><span class=line><span class=cl>    <span class=o>{</span>
+</span></span><span class=line><span class=cl>      <span class=s2>&#34;usename&#34;</span>: <span class=s2>&#34;replicator&#34;</span>,
+</span></span><span class=line><span class=cl>      <span class=s2>&#34;application_name&#34;</span>: <span class=s2>&#34;patroni2&#34;</span>,
+</span></span><span class=line><span class=cl>      <span class=s2>&#34;client_addr&#34;</span>: <span class=s2>&#34;10.89.0.6&#34;</span>,
+</span></span><span class=line><span class=cl>      <span class=s2>&#34;state&#34;</span>: <span class=s2>&#34;streaming&#34;</span>,
+</span></span><span class=line><span class=cl>      <span class=s2>&#34;sync_state&#34;</span>: <span class=s2>&#34;async&#34;</span>,
+</span></span><span class=line><span class=cl>      <span class=s2>&#34;sync_priority&#34;</span>: <span class=m>0</span>
+</span></span><span class=line><span class=cl>    <span class=o>}</span>,
+</span></span><span class=line><span class=cl>    <span class=o>{</span>
+</span></span><span class=line><span class=cl>      <span class=s2>&#34;usename&#34;</span>: <span class=s2>&#34;replicator&#34;</span>,
+</span></span><span class=line><span class=cl>      <span class=s2>&#34;application_name&#34;</span>: <span class=s2>&#34;patroni3&#34;</span>,
+</span></span><span class=line><span class=cl>      <span class=s2>&#34;client_addr&#34;</span>: <span class=s2>&#34;10.89.0.2&#34;</span>,
+</span></span><span class=line><span class=cl>      <span class=s2>&#34;state&#34;</span>: <span class=s2>&#34;streaming&#34;</span>,
+</span></span><span class=line><span class=cl>      <span class=s2>&#34;sync_state&#34;</span>: <span class=s2>&#34;async&#34;</span>,
+</span></span><span class=line><span class=cl>      <span class=s2>&#34;sync_priority&#34;</span>: <span class=m>0</span>
+</span></span><span class=line><span class=cl>    <span class=o>}</span>
+</span></span><span class=line><span class=cl>  <span class=o>]</span>,
+</span></span><span class=line><span class=cl>  <span class=s2>&#34;cluster_unlocked&#34;</span>: true,
+</span></span><span class=line><span class=cl>  <span class=s2>&#34;failsafe_mode_is_active&#34;</span>: true,
+</span></span><span class=line><span class=cl>  <span class=s2>&#34;dcs_last_seen&#34;</span>: 1692356928,
+</span></span><span class=line><span class=cl>  <span class=s2>&#34;tags&#34;</span>: <span class=o>{</span>
+</span></span><span class=line><span class=cl>    <span class=s2>&#34;clonefrom&#34;</span>: <span class=nb>true</span>
+</span></span><span class=line><span class=cl>  <span class=o>}</span>,
+</span></span><span class=line><span class=cl>  <span class=s2>&#34;database_system_identifier&#34;</span>: <span class=s2>&#34;7268616322854375442&#34;</span>,
+</span></span><span class=line><span class=cl>  <span class=s2>&#34;patroni&#34;</span>: <span class=o>{</span>
+</span></span><span class=line><span class=cl>    <span class=s2>&#34;version&#34;</span>: <span class=s2>&#34;4.0.0&#34;</span>,
+</span></span><span class=line><span class=cl>    <span class=s2>&#34;scope&#34;</span>: <span class=s2>&#34;demo&#34;</span>,
+</span></span><span class=line><span class=cl>    <span class=s2>&#34;name&#34;</span>: <span class=s2>&#34;patroni1&#34;</span>
+</span></span><span class=line><span class=cl>  <span class=o>}</span>
+</span></span><span class=line><span class=cl><span class=o>}</span>
+</span></span></code></pre></div><p><strong>示例：</strong> 启用了 <a href=/docs/patroni/pause#pause>暂停模式</a> 的集群</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>$ curl -s http://localhost:8008/patroni  <span class=p>|</span> jq .
+</span></span><span class=line><span class=cl><span class=o>{</span>
+</span></span><span class=line><span class=cl>  <span class=s2>&#34;state&#34;</span>: <span class=s2>&#34;running&#34;</span>,
+</span></span><span class=line><span class=cl>  <span class=s2>&#34;postmaster_start_time&#34;</span>: <span class=s2>&#34;2024-08-28 19:39:26.352526+00:00&#34;</span>,
+</span></span><span class=line><span class=cl>  <span class=s2>&#34;role&#34;</span>: <span class=s2>&#34;replica&#34;</span>,
+</span></span><span class=line><span class=cl>  <span class=s2>&#34;server_version&#34;</span>: 160004,
+</span></span><span class=line><span class=cl>  <span class=s2>&#34;xlog&#34;</span>: <span class=o>{</span>
+</span></span><span class=line><span class=cl>    <span class=s2>&#34;location&#34;</span>: <span class=m>67420024</span>
+</span></span><span class=line><span class=cl>  <span class=o>}</span>,
+</span></span><span class=line><span class=cl>  <span class=s2>&#34;timeline&#34;</span>: 1,
+</span></span><span class=line><span class=cl>  <span class=s2>&#34;replication&#34;</span>: <span class=o>[</span>
+</span></span><span class=line><span class=cl>    <span class=o>{</span>
+</span></span><span class=line><span class=cl>      <span class=s2>&#34;usename&#34;</span>: <span class=s2>&#34;replicator&#34;</span>,
+</span></span><span class=line><span class=cl>      <span class=s2>&#34;application_name&#34;</span>: <span class=s2>&#34;patroni2&#34;</span>,
+</span></span><span class=line><span class=cl>      <span class=s2>&#34;client_addr&#34;</span>: <span class=s2>&#34;10.89.0.6&#34;</span>,
+</span></span><span class=line><span class=cl>      <span class=s2>&#34;state&#34;</span>: <span class=s2>&#34;streaming&#34;</span>,
+</span></span><span class=line><span class=cl>      <span class=s2>&#34;sync_state&#34;</span>: <span class=s2>&#34;async&#34;</span>,
+</span></span><span class=line><span class=cl>      <span class=s2>&#34;sync_priority&#34;</span>: <span class=m>0</span>
+</span></span><span class=line><span class=cl>    <span class=o>}</span>,
+</span></span><span class=line><span class=cl>    <span class=o>{</span>
+</span></span><span class=line><span class=cl>      <span class=s2>&#34;usename&#34;</span>: <span class=s2>&#34;replicator&#34;</span>,
+</span></span><span class=line><span class=cl>      <span class=s2>&#34;application_name&#34;</span>: <span class=s2>&#34;patroni3&#34;</span>,
+</span></span><span class=line><span class=cl>      <span class=s2>&#34;client_addr&#34;</span>: <span class=s2>&#34;10.89.0.2&#34;</span>,
+</span></span><span class=line><span class=cl>      <span class=s2>&#34;state&#34;</span>: <span class=s2>&#34;streaming&#34;</span>,
+</span></span><span class=line><span class=cl>      <span class=s2>&#34;sync_state&#34;</span>: <span class=s2>&#34;async&#34;</span>,
+</span></span><span class=line><span class=cl>      <span class=s2>&#34;sync_priority&#34;</span>: <span class=m>0</span>
+</span></span><span class=line><span class=cl>    <span class=o>}</span>
+</span></span><span class=line><span class=cl>  <span class=o>]</span>,
+</span></span><span class=line><span class=cl>  <span class=s2>&#34;pause&#34;</span>: true,
+</span></span><span class=line><span class=cl>  <span class=s2>&#34;dcs_last_seen&#34;</span>: 1724874295,
+</span></span><span class=line><span class=cl>  <span class=s2>&#34;tags&#34;</span>: <span class=o>{</span>
+</span></span><span class=line><span class=cl>    <span class=s2>&#34;clonefrom&#34;</span>: <span class=nb>true</span>
+</span></span><span class=line><span class=cl>  <span class=o>}</span>,
+</span></span><span class=line><span class=cl>  <span class=s2>&#34;database_system_identifier&#34;</span>: <span class=s2>&#34;7268616322854375442&#34;</span>,
+</span></span><span class=line><span class=cl>  <span class=s2>&#34;patroni&#34;</span>: <span class=o>{</span>
+</span></span><span class=line><span class=cl>    <span class=s2>&#34;version&#34;</span>: <span class=s2>&#34;4.0.0&#34;</span>,
+</span></span><span class=line><span class=cl>    <span class=s2>&#34;scope&#34;</span>: <span class=s2>&#34;demo&#34;</span>,
+</span></span><span class=line><span class=cl>    <span class=s2>&#34;name&#34;</span>: <span class=s2>&#34;patroni1&#34;</span>
+</span></span><span class=line><span class=cl>  <span class=o>}</span>
+</span></span><span class=line><span class=cl><span class=o>}</span>
+</span></span></code></pre></div><p><strong><code>GET /metrics</code></strong> 端点以 Prometheus 格式返回 Patroni 监控指标：</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>$ curl http://localhost:8008/metrics
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># HELP patroni_version Patroni semver without periods. \</span>
+</span></span><span class=line><span class=cl><span class=c1># TYPE patroni_version gauge</span>
+</span></span><span class=line><span class=cl>patroni_version<span class=o>{</span><span class=nv>scope</span><span class=o>=</span><span class=s2>&#34;batman&#34;</span>,name<span class=o>=</span><span class=s2>&#34;patroni1&#34;</span><span class=o>}</span> <span class=m>040000</span>
+</span></span><span class=line><span class=cl><span class=c1># HELP patroni_postgres_running Value is 1 if Postgres is running, 0 otherwise.</span>
+</span></span><span class=line><span class=cl><span class=c1># TYPE patroni_postgres_running gauge</span>
+</span></span><span class=line><span class=cl>patroni_postgres_running<span class=o>{</span><span class=nv>scope</span><span class=o>=</span><span class=s2>&#34;batman&#34;</span>,name<span class=o>=</span><span class=s2>&#34;patroni1&#34;</span><span class=o>}</span> <span class=m>1</span>
+</span></span><span class=line><span class=cl><span class=c1># HELP patroni_postmaster_start_time Epoch seconds since Postgres started.</span>
+</span></span><span class=line><span class=cl><span class=c1># TYPE patroni_postmaster_start_time gauge</span>
+</span></span><span class=line><span class=cl>patroni_postmaster_start_time<span class=o>{</span><span class=nv>scope</span><span class=o>=</span><span class=s2>&#34;batman&#34;</span>,name<span class=o>=</span><span class=s2>&#34;patroni1&#34;</span><span class=o>}</span> 1724873966.352526
+</span></span><span class=line><span class=cl><span class=c1># HELP patroni_primary Value is 1 if this node is the leader, 0 otherwise.</span>
+</span></span><span class=line><span class=cl><span class=c1># TYPE patroni_primary gauge</span>
+</span></span><span class=line><span class=cl>patroni_primary<span class=o>{</span><span class=nv>scope</span><span class=o>=</span><span class=s2>&#34;batman&#34;</span>,name<span class=o>=</span><span class=s2>&#34;patroni1&#34;</span><span class=o>}</span> <span class=m>1</span>
+</span></span><span class=line><span class=cl><span class=c1># HELP patroni_xlog_location Current location of the Postgres transaction log, 0 if this node is not the leader.</span>
+</span></span><span class=line><span class=cl><span class=c1># TYPE patroni_xlog_location counter</span>
+</span></span><span class=line><span class=cl>patroni_xlog_location<span class=o>{</span><span class=nv>scope</span><span class=o>=</span><span class=s2>&#34;batman&#34;</span>,name<span class=o>=</span><span class=s2>&#34;patroni1&#34;</span><span class=o>}</span> <span class=m>22320573386952</span>
+</span></span><span class=line><span class=cl><span class=c1># HELP patroni_standby_leader Value is 1 if this node is the standby_leader, 0 otherwise.</span>
+</span></span><span class=line><span class=cl><span class=c1># TYPE patroni_standby_leader gauge</span>
+</span></span><span class=line><span class=cl>patroni_standby_leader<span class=o>{</span><span class=nv>scope</span><span class=o>=</span><span class=s2>&#34;batman&#34;</span>,name<span class=o>=</span><span class=s2>&#34;patroni1&#34;</span><span class=o>}</span> <span class=m>0</span>
+</span></span><span class=line><span class=cl><span class=c1># HELP patroni_replica Value is 1 if this node is a replica, 0 otherwise.</span>
+</span></span><span class=line><span class=cl><span class=c1># TYPE patroni_replica gauge</span>
+</span></span><span class=line><span class=cl>patroni_replica<span class=o>{</span><span class=nv>scope</span><span class=o>=</span><span class=s2>&#34;batman&#34;</span>,name<span class=o>=</span><span class=s2>&#34;patroni1&#34;</span><span class=o>}</span> <span class=m>0</span>
+</span></span><span class=line><span class=cl><span class=c1># HELP patroni_sync_standby Value is 1 if this node is a sync standby replica, 0 otherwise.</span>
+</span></span><span class=line><span class=cl><span class=c1># TYPE patroni_sync_standby gauge</span>
+</span></span><span class=line><span class=cl>patroni_sync_standby<span class=o>{</span><span class=nv>scope</span><span class=o>=</span><span class=s2>&#34;batman&#34;</span>,name<span class=o>=</span><span class=s2>&#34;patroni1&#34;</span><span class=o>}</span> <span class=m>0</span>
+</span></span><span class=line><span class=cl><span class=c1># HELP patroni_quorum_standby Value is 1 if this node is a quorum standby replica, 0 otherwise.</span>
+</span></span><span class=line><span class=cl><span class=c1># TYPE patroni_quorum_standby gauge</span>
+</span></span><span class=line><span class=cl>patroni_quorum_standby<span class=o>{</span><span class=nv>scope</span><span class=o>=</span><span class=s2>&#34;batman&#34;</span>,name<span class=o>=</span><span class=s2>&#34;patroni1&#34;</span><span class=o>}</span> <span class=m>0</span>
+</span></span><span class=line><span class=cl><span class=c1># HELP patroni_xlog_received_location Current location of the received Postgres transaction log, 0 if this node is not a replica.</span>
+</span></span><span class=line><span class=cl><span class=c1># TYPE patroni_xlog_received_location counter</span>
+</span></span><span class=line><span class=cl>patroni_xlog_received_location<span class=o>{</span><span class=nv>scope</span><span class=o>=</span><span class=s2>&#34;batman&#34;</span>,name<span class=o>=</span><span class=s2>&#34;patroni1&#34;</span><span class=o>}</span> <span class=m>0</span>
+</span></span><span class=line><span class=cl><span class=c1># HELP patroni_xlog_replayed_location Current location of the replayed Postgres transaction log, 0 if this node is not a replica.</span>
+</span></span><span class=line><span class=cl><span class=c1># TYPE patroni_xlog_replayed_location counter</span>
+</span></span><span class=line><span class=cl>patroni_xlog_replayed_location<span class=o>{</span><span class=nv>scope</span><span class=o>=</span><span class=s2>&#34;batman&#34;</span>,name<span class=o>=</span><span class=s2>&#34;patroni1&#34;</span><span class=o>}</span> <span class=m>0</span>
+</span></span><span class=line><span class=cl><span class=c1># HELP patroni_xlog_replayed_timestamp Current timestamp of the replayed Postgres transaction log, 0 if null.</span>
+</span></span><span class=line><span class=cl><span class=c1># TYPE patroni_xlog_replayed_timestamp gauge</span>
+</span></span><span class=line><span class=cl>patroni_xlog_replayed_timestamp<span class=o>{</span><span class=nv>scope</span><span class=o>=</span><span class=s2>&#34;batman&#34;</span>,name<span class=o>=</span><span class=s2>&#34;patroni1&#34;</span><span class=o>}</span> <span class=m>0</span>
+</span></span><span class=line><span class=cl><span class=c1># HELP patroni_xlog_paused Value is 1 if the Postgres xlog is paused, 0 otherwise.</span>
+</span></span><span class=line><span class=cl><span class=c1># TYPE patroni_xlog_paused gauge</span>
+</span></span><span class=line><span class=cl>patroni_xlog_paused<span class=o>{</span><span class=nv>scope</span><span class=o>=</span><span class=s2>&#34;batman&#34;</span>,name<span class=o>=</span><span class=s2>&#34;patroni1&#34;</span><span class=o>}</span> <span class=m>0</span>
+</span></span><span class=line><span class=cl><span class=c1># HELP patroni_postgres_streaming Value is 1 if Postgres is streaming, 0 otherwise.</span>
+</span></span><span class=line><span class=cl><span class=c1># TYPE patroni_postgres_streaming gauge</span>
+</span></span><span class=line><span class=cl>patroni_postgres_streaming<span class=o>{</span><span class=nv>scope</span><span class=o>=</span><span class=s2>&#34;batman&#34;</span>,name<span class=o>=</span><span class=s2>&#34;patroni1&#34;</span><span class=o>}</span> <span class=m>1</span>
+</span></span><span class=line><span class=cl><span class=c1># HELP patroni_postgres_in_archive_recovery Value is 1 if Postgres is replicating from archive, 0 otherwise.</span>
+</span></span><span class=line><span class=cl><span class=c1># TYPE patroni_postgres_in_archive_recovery gauge</span>
+</span></span><span class=line><span class=cl>patroni_postgres_in_archive_recovery<span class=o>{</span><span class=nv>scope</span><span class=o>=</span><span class=s2>&#34;batman&#34;</span>,name<span class=o>=</span><span class=s2>&#34;patroni1&#34;</span><span class=o>}</span> <span class=m>0</span>
+</span></span><span class=line><span class=cl><span class=c1># HELP patroni_postgres_server_version Version of Postgres (if running), 0 otherwise.</span>
+</span></span><span class=line><span class=cl><span class=c1># TYPE patroni_postgres_server_version gauge</span>
+</span></span><span class=line><span class=cl>patroni_postgres_server_version<span class=o>{</span><span class=nv>scope</span><span class=o>=</span><span class=s2>&#34;batman&#34;</span>,name<span class=o>=</span><span class=s2>&#34;patroni1&#34;</span><span class=o>}</span> <span class=m>160004</span>
+</span></span><span class=line><span class=cl><span class=c1># HELP patroni_cluster_unlocked Value is 1 if the cluster is unlocked, 0 if locked.</span>
+</span></span><span class=line><span class=cl><span class=c1># TYPE patroni_cluster_unlocked gauge</span>
+</span></span><span class=line><span class=cl>patroni_cluster_unlocked<span class=o>{</span><span class=nv>scope</span><span class=o>=</span><span class=s2>&#34;batman&#34;</span>,name<span class=o>=</span><span class=s2>&#34;patroni1&#34;</span><span class=o>}</span> <span class=m>0</span>
+</span></span><span class=line><span class=cl><span class=c1># HELP patroni_postgres_timeline Postgres timeline of this node (if running), 0 otherwise.</span>
+</span></span><span class=line><span class=cl><span class=c1># TYPE patroni_postgres_timeline counter</span>
+</span></span><span class=line><span class=cl>patroni_failsafe_mode_is_active<span class=o>{</span><span class=nv>scope</span><span class=o>=</span><span class=s2>&#34;batman&#34;</span>,name<span class=o>=</span><span class=s2>&#34;patroni1&#34;</span><span class=o>}</span> <span class=m>0</span>
+</span></span><span class=line><span class=cl><span class=c1># HELP patroni_postgres_timeline Postgres timeline of this node (if running), 0 otherwise.</span>
+</span></span><span class=line><span class=cl><span class=c1># TYPE patroni_postgres_timeline counter</span>
+</span></span><span class=line><span class=cl>patroni_postgres_timeline<span class=o>{</span><span class=nv>scope</span><span class=o>=</span><span class=s2>&#34;batman&#34;</span>,name<span class=o>=</span><span class=s2>&#34;patroni1&#34;</span><span class=o>}</span> <span class=m>24</span>
+</span></span><span class=line><span class=cl><span class=c1># HELP patroni_dcs_last_seen Epoch timestamp when DCS was last contacted successfully by Patroni.</span>
+</span></span><span class=line><span class=cl><span class=c1># TYPE patroni_dcs_last_seen gauge</span>
+</span></span><span class=line><span class=cl>patroni_dcs_last_seen<span class=o>{</span><span class=nv>scope</span><span class=o>=</span><span class=s2>&#34;batman&#34;</span>,name<span class=o>=</span><span class=s2>&#34;patroni1&#34;</span><span class=o>}</span> <span class=m>1724874235</span>
+</span></span><span class=line><span class=cl><span class=c1># HELP patroni_pending_restart Value is 1 if the node needs a restart, 0 otherwise.</span>
+</span></span><span class=line><span class=cl><span class=c1># TYPE patroni_pending_restart gauge</span>
+</span></span><span class=line><span class=cl>patroni_pending_restart<span class=o>{</span><span class=nv>scope</span><span class=o>=</span><span class=s2>&#34;batman&#34;</span>,name<span class=o>=</span><span class=s2>&#34;patroni1&#34;</span><span class=o>}</span> <span class=m>1</span>
+</span></span><span class=line><span class=cl><span class=c1># HELP patroni_is_paused Value is 1 if auto failover is disabled, 0 otherwise.</span>
+</span></span><span class=line><span class=cl><span class=c1># TYPE patroni_is_paused gauge</span>
+</span></span><span class=line><span class=cl>patroni_is_paused<span class=o>{</span><span class=nv>scope</span><span class=o>=</span><span class=s2>&#34;batman&#34;</span>,name<span class=o>=</span><span class=s2>&#34;patroni1&#34;</span><span class=o>}</span> <span class=m>1</span>
+</span></span><span class=line><span class=cl><span class=c1># HELP patroni_postgres_state Numeric representation of Postgres state.</span>
+</span></span><span class=line><span class=cl><span class=c1># Values: 0=initdb, 1=initdb_failed, 2=custom_bootstrap, 3=custom_bootstrap_failed, 4=creating_replica, 5=running, 6=starting, 7=bootstrap_starting, 8=start_failed, 9=restarting, 10=restart_failed, 11=stopping, 12=stopped, 13=stop_failed, 14=crashed</span>
+</span></span><span class=line><span class=cl><span class=c1># TYPE patroni_postgres_state gauge</span>
+</span></span><span class=line><span class=cl>patroni_postgres_state<span class=o>{</span><span class=nv>scope</span><span class=o>=</span><span class=s2>&#34;batman&#34;</span>,name<span class=o>=</span><span class=s2>&#34;patroni1&#34;</span><span class=o>}</span> <span class=m>5</span>
+</span></span></code></pre></div><h3 id=postgresql-状态值>PostgreSQL 状态值</h3><p><strong><code>patroni_postgres_state</code></strong> 指标以数值形式表示当前 PostgreSQL 实例的状态，对于需要跟踪状态随时间变化的监控和告警系统很有用。数值由 <strong><code>PostgresqlState.get_metrics_description()</code></strong> 静态方法生成。</p><table><thead><tr><th>值</th><th>状态名称</th><th>描述</th></tr></thead><tbody><tr><td>0</td><td>initdb</td><td>正在初始化新集群</td></tr><tr><td>1</td><td>initdb_failed</td><td>新集群初始化失败</td></tr><tr><td>2</td><td>custom_bootstrap</td><td>正在运行自定义引导脚本</td></tr><tr><td>3</td><td>custom_bootstrap_failed</td><td>自定义引导脚本失败</td></tr><tr><td>4</td><td>creating_replica</td><td>正在从主库创建从库</td></tr><tr><td>5</td><td>running</td><td>PostgreSQL 正常运行</td></tr><tr><td>6</td><td>starting</td><td>PostgreSQL 正在启动</td></tr><tr><td>7</td><td>bootstrap_starting</td><td>自定义引导后正在启动</td></tr><tr><td>8</td><td>start_failed</td><td>PostgreSQL 启动失败</td></tr><tr><td>9</td><td>restarting</td><td>PostgreSQL 正在重启</td></tr><tr><td>10</td><td>restart_failed</td><td>PostgreSQL 重启失败</td></tr><tr><td>11</td><td>stopping</td><td>PostgreSQL 正在停止</td></tr><tr><td>12</td><td>stopped</td><td>PostgreSQL 已停止</td></tr><tr><td>13</td><td>stop_failed</td><td>PostgreSQL 停止失败</td></tr><tr><td>14</td><td>crashed</td><td>PostgreSQL 已崩溃</td></tr></tbody></table><div class="td-alert td-alert--md alert alert-note" role=alert><div class="td-alert-heading alert-heading" role=heading>说明</div><div class=td-alert-body><p>上述数值固定不变，以保持与现有监控系统的向后兼容性。未来如需新增状态，将分配新的数值，已有数值不会改变。</p></div></div><hr><h2 id=集群状态端点>集群状态端点</h2><ul><li><strong><code>GET /cluster</code></strong>：返回描述当前集群拓扑和状态的 JSON 文档：</li></ul><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>$ curl -s http://localhost:8008/cluster <span class=p>|</span> jq .
+</span></span><span class=line><span class=cl><span class=o>{</span>
+</span></span><span class=line><span class=cl>  <span class=s2>&#34;members&#34;</span>: <span class=o>[</span>
+</span></span><span class=line><span class=cl>    <span class=o>{</span>
+</span></span><span class=line><span class=cl>      <span class=s2>&#34;name&#34;</span>: <span class=s2>&#34;patroni1&#34;</span>,
+</span></span><span class=line><span class=cl>      <span class=s2>&#34;role&#34;</span>: <span class=s2>&#34;leader&#34;</span>,
+</span></span><span class=line><span class=cl>      <span class=s2>&#34;state&#34;</span>: <span class=s2>&#34;running&#34;</span>,
+</span></span><span class=line><span class=cl>      <span class=s2>&#34;api_url&#34;</span>: <span class=s2>&#34;http://10.89.0.4:8008/patroni&#34;</span>,
+</span></span><span class=line><span class=cl>      <span class=s2>&#34;host&#34;</span>: <span class=s2>&#34;10.89.0.4&#34;</span>,
+</span></span><span class=line><span class=cl>      <span class=s2>&#34;port&#34;</span>: 5432,
+</span></span><span class=line><span class=cl>      <span class=s2>&#34;timeline&#34;</span>: 5,
+</span></span><span class=line><span class=cl>      <span class=s2>&#34;tags&#34;</span>: <span class=o>{</span>
+</span></span><span class=line><span class=cl>        <span class=s2>&#34;clonefrom&#34;</span>: <span class=nb>true</span>
+</span></span><span class=line><span class=cl>      <span class=o>}</span>
+</span></span><span class=line><span class=cl>    <span class=o>}</span>,
+</span></span><span class=line><span class=cl>    <span class=o>{</span>
+</span></span><span class=line><span class=cl>      <span class=s2>&#34;name&#34;</span>: <span class=s2>&#34;patroni2&#34;</span>,
+</span></span><span class=line><span class=cl>      <span class=s2>&#34;role&#34;</span>: <span class=s2>&#34;replica&#34;</span>,
+</span></span><span class=line><span class=cl>      <span class=s2>&#34;state&#34;</span>: <span class=s2>&#34;streaming&#34;</span>,
+</span></span><span class=line><span class=cl>      <span class=s2>&#34;api_url&#34;</span>: <span class=s2>&#34;http://10.89.0.6:8008/patroni&#34;</span>,
+</span></span><span class=line><span class=cl>      <span class=s2>&#34;host&#34;</span>: <span class=s2>&#34;10.89.0.6&#34;</span>,
+</span></span><span class=line><span class=cl>      <span class=s2>&#34;port&#34;</span>: 5433,
+</span></span><span class=line><span class=cl>      <span class=s2>&#34;timeline&#34;</span>: 5,
+</span></span><span class=line><span class=cl>      <span class=s2>&#34;tags&#34;</span>: <span class=o>{</span>
+</span></span><span class=line><span class=cl>        <span class=s2>&#34;clonefrom&#34;</span>: <span class=nb>true</span>
+</span></span><span class=line><span class=cl>      <span class=o>}</span>,
+</span></span><span class=line><span class=cl>      <span class=s2>&#34;receive_lag&#34;</span>: 0,
+</span></span><span class=line><span class=cl>      <span class=s2>&#34;receive_lsn&#34;</span>: <span class=s2>&#34;0/4000060&#34;</span>,
+</span></span><span class=line><span class=cl>      <span class=s2>&#34;replay_lag&#34;</span>: 0,
+</span></span><span class=line><span class=cl>      <span class=s2>&#34;replay_lsn&#34;</span>: <span class=s2>&#34;0/4000060&#34;</span>,
+</span></span><span class=line><span class=cl>      <span class=s2>&#34;lag&#34;</span>: 0,
+</span></span><span class=line><span class=cl>      <span class=s2>&#34;lsn&#34;</span>: <span class=s2>&#34;0/4000060&#34;</span>
+</span></span><span class=line><span class=cl>    <span class=o>}</span>
+</span></span><span class=line><span class=cl>  <span class=o>]</span>,
+</span></span><span class=line><span class=cl>  <span class=s2>&#34;scope&#34;</span>: <span class=s2>&#34;demo&#34;</span>,
+</span></span><span class=line><span class=cl>  <span class=s2>&#34;scheduled_switchover&#34;</span>: <span class=o>{</span>
+</span></span><span class=line><span class=cl>    <span class=s2>&#34;at&#34;</span>: <span class=s2>&#34;2023-09-24T10:36:00+02:00&#34;</span>,
+</span></span><span class=line><span class=cl>    <span class=s2>&#34;from&#34;</span>: <span class=s2>&#34;patroni1&#34;</span>,
+</span></span><span class=line><span class=cl>    <span class=s2>&#34;to&#34;</span>: <span class=s2>&#34;patroni3&#34;</span>
+</span></span><span class=line><span class=cl>  <span class=o>}</span>
+</span></span><span class=line><span class=cl><span class=o>}</span>
+</span></span></code></pre></div><ul><li><strong><code>GET /history</code></strong>：返回集群主从切换/故障转移历史记录，格式与 <strong><code>pg_wal</code></strong> 目录中历史文件的内容非常相似，唯一区别是增加了一个时间戳字段，标记新时间线的创建时间。</li></ul><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>$ curl -s http://localhost:8008/history <span class=p>|</span> jq .
+</span></span><span class=line><span class=cl><span class=o>[</span>
+</span></span><span class=line><span class=cl>  <span class=o>[</span>
+</span></span><span class=line><span class=cl>    1,
+</span></span><span class=line><span class=cl>    25623960,
+</span></span><span class=line><span class=cl>    <span class=s2>&#34;no recovery target specified&#34;</span>,
+</span></span><span class=line><span class=cl>    <span class=s2>&#34;2019-09-23T16:57:57+02:00&#34;</span>
+</span></span><span class=line><span class=cl>  <span class=o>]</span>,
+</span></span><span class=line><span class=cl>  <span class=o>[</span>
+</span></span><span class=line><span class=cl>    2,
+</span></span><span class=line><span class=cl>    25624344,
+</span></span><span class=line><span class=cl>    <span class=s2>&#34;no recovery target specified&#34;</span>,
+</span></span><span class=line><span class=cl>    <span class=s2>&#34;2019-09-24T09:22:33+02:00&#34;</span>
+</span></span><span class=line><span class=cl>  <span class=o>]</span>,
+</span></span><span class=line><span class=cl>  <span class=o>[</span>
+</span></span><span class=line><span class=cl>    3,
+</span></span><span class=line><span class=cl>    25624752,
+</span></span><span class=line><span class=cl>    <span class=s2>&#34;no recovery target specified&#34;</span>,
+</span></span><span class=line><span class=cl>    <span class=s2>&#34;2019-09-24T09:26:15+02:00&#34;</span>
+</span></span><span class=line><span class=cl>  <span class=o>]</span>,
+</span></span><span class=line><span class=cl>  <span class=o>[</span>
+</span></span><span class=line><span class=cl>    4,
+</span></span><span class=line><span class=cl>    50331856,
+</span></span><span class=line><span class=cl>    <span class=s2>&#34;no recovery target specified&#34;</span>,
+</span></span><span class=line><span class=cl>    <span class=s2>&#34;2019-09-24T09:35:52+02:00&#34;</span>
+</span></span><span class=line><span class=cl>  <span class=o>]</span>
+</span></span><span class=line><span class=cl><span class=o>]</span>
+</span></span></code></pre></div><p><a id=config_endpoint></a></p><hr><h2 id=配置端点>配置端点</h2><p><strong><code>GET /config</code></strong>：获取当前动态配置：</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>$ curl -s http://localhost:8008/config <span class=p>|</span> jq .
+</span></span><span class=line><span class=cl><span class=o>{</span>
+</span></span><span class=line><span class=cl>  <span class=s2>&#34;ttl&#34;</span>: 30,
+</span></span><span class=line><span class=cl>  <span class=s2>&#34;loop_wait&#34;</span>: 10,
+</span></span><span class=line><span class=cl>  <span class=s2>&#34;retry_timeout&#34;</span>: 10,
+</span></span><span class=line><span class=cl>  <span class=s2>&#34;maximum_lag_on_failover&#34;</span>: 1048576,
+</span></span><span class=line><span class=cl>  <span class=s2>&#34;postgresql&#34;</span>: <span class=o>{</span>
+</span></span><span class=line><span class=cl>    <span class=s2>&#34;use_slots&#34;</span>: true,
+</span></span><span class=line><span class=cl>    <span class=s2>&#34;use_pg_rewind&#34;</span>: true,
+</span></span><span class=line><span class=cl>    <span class=s2>&#34;parameters&#34;</span>: <span class=o>{</span>
+</span></span><span class=line><span class=cl>      <span class=s2>&#34;hot_standby&#34;</span>: <span class=s2>&#34;on&#34;</span>,
+</span></span><span class=line><span class=cl>      <span class=s2>&#34;wal_level&#34;</span>: <span class=s2>&#34;hot_standby&#34;</span>,
+</span></span><span class=line><span class=cl>      <span class=s2>&#34;max_wal_senders&#34;</span>: 5,
+</span></span><span class=line><span class=cl>      <span class=s2>&#34;max_replication_slots&#34;</span>: 5,
+</span></span><span class=line><span class=cl>      <span class=s2>&#34;max_connections&#34;</span>: <span class=s2>&#34;100&#34;</span>
+</span></span><span class=line><span class=cl>    <span class=o>}</span>
+</span></span><span class=line><span class=cl>  <span class=o>}</span>
+</span></span><span class=line><span class=cl><span class=o>}</span>
+</span></span></code></pre></div><p><strong><code>PATCH /config</code></strong>：修改现有配置。</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>$ curl -s -XPATCH -d <span class=se>\
+</span></span></span><span class=line><span class=cl>    <span class=s1>&#39;{&#34;loop_wait&#34;:5,&#34;ttl&#34;:20,&#34;postgresql&#34;:{&#34;parameters&#34;:{&#34;max_connections&#34;:&#34;101&#34;}}}&#39;</span> <span class=se>\
+</span></span></span><span class=line><span class=cl>    http://localhost:8008/config <span class=p>|</span> jq .
+</span></span><span class=line><span class=cl><span class=o>{</span>
+</span></span><span class=line><span class=cl>  <span class=s2>&#34;ttl&#34;</span>: 20,
+</span></span><span class=line><span class=cl>  <span class=s2>&#34;loop_wait&#34;</span>: 5,
+</span></span><span class=line><span class=cl>  <span class=s2>&#34;maximum_lag_on_failover&#34;</span>: 1048576,
+</span></span><span class=line><span class=cl>  <span class=s2>&#34;retry_timeout&#34;</span>: 10,
+</span></span><span class=line><span class=cl>  <span class=s2>&#34;postgresql&#34;</span>: <span class=o>{</span>
+</span></span><span class=line><span class=cl>    <span class=s2>&#34;use_slots&#34;</span>: true,
+</span></span><span class=line><span class=cl>    <span class=s2>&#34;use_pg_rewind&#34;</span>: true,
+</span></span><span class=line><span class=cl>    <span class=s2>&#34;parameters&#34;</span>: <span class=o>{</span>
+</span></span><span class=line><span class=cl>      <span class=s2>&#34;hot_standby&#34;</span>: <span class=s2>&#34;on&#34;</span>,
+</span></span><span class=line><span class=cl>      <span class=s2>&#34;wal_level&#34;</span>: <span class=s2>&#34;hot_standby&#34;</span>,
+</span></span><span class=line><span class=cl>      <span class=s2>&#34;max_wal_senders&#34;</span>: 5,
+</span></span><span class=line><span class=cl>      <span class=s2>&#34;max_replication_slots&#34;</span>: 5,
+</span></span><span class=line><span class=cl>      <span class=s2>&#34;max_connections&#34;</span>: <span class=s2>&#34;101&#34;</span>
+</span></span><span class=line><span class=cl>    <span class=o>}</span>
+</span></span><span class=line><span class=cl>  <span class=o>}</span>
+</span></span><span class=line><span class=cl><span class=o>}</span>
+</span></span></code></pre></div><p>上述调用对现有配置进行部分更新（patch），并返回更新后的配置。</p><p>验证节点是否已处理该配置：日志应每 5 秒打印一次（loop_wait=5）。由于 <strong><code>max_connections</code></strong> 的变更需要重启，响应中应出现 <strong><code>pending_restart</code></strong> 标志：</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>$ curl -s http://localhost:8008/patroni <span class=p>|</span> jq .
+</span></span><span class=line><span class=cl><span class=o>{</span>
+</span></span><span class=line><span class=cl>  <span class=s2>&#34;database_system_identifier&#34;</span>: <span class=s2>&#34;6287881213849985952&#34;</span>,
+</span></span><span class=line><span class=cl>  <span class=s2>&#34;postmaster_start_time&#34;</span>: <span class=s2>&#34;2024-08-28 19:39:26.352526+00:00&#34;</span>,
+</span></span><span class=line><span class=cl>  <span class=s2>&#34;xlog&#34;</span>: <span class=o>{</span>
+</span></span><span class=line><span class=cl>    <span class=s2>&#34;location&#34;</span>: <span class=m>2197818976</span>
+</span></span><span class=line><span class=cl>  <span class=o>}</span>,
+</span></span><span class=line><span class=cl>  <span class=s2>&#34;timeline&#34;</span>: 1,
+</span></span><span class=line><span class=cl>  <span class=s2>&#34;dcs_last_seen&#34;</span>: 1724874545,
+</span></span><span class=line><span class=cl>  <span class=s2>&#34;database_system_identifier&#34;</span>: <span class=s2>&#34;7408277255830290455&#34;</span>,
+</span></span><span class=line><span class=cl>  <span class=s2>&#34;pending_restart&#34;</span>: true,
+</span></span><span class=line><span class=cl>  <span class=s2>&#34;pending_restart_reason&#34;</span>: <span class=o>{</span>
+</span></span><span class=line><span class=cl>    <span class=s2>&#34;max_connections&#34;</span>: <span class=o>{</span>
+</span></span><span class=line><span class=cl>      <span class=s2>&#34;old_value&#34;</span>: <span class=s2>&#34;100&#34;</span>,
+</span></span><span class=line><span class=cl>      <span class=s2>&#34;new_value&#34;</span>: <span class=s2>&#34;101&#34;</span>
+</span></span><span class=line><span class=cl>    <span class=o>}</span>
+</span></span><span class=line><span class=cl>  <span class=o>}</span>,
+</span></span><span class=line><span class=cl>  <span class=s2>&#34;patroni&#34;</span>: <span class=o>{</span>
+</span></span><span class=line><span class=cl>    <span class=s2>&#34;version&#34;</span>: <span class=s2>&#34;4.0.0&#34;</span>,
+</span></span><span class=line><span class=cl>    <span class=s2>&#34;scope&#34;</span>: <span class=s2>&#34;batman&#34;</span>,
+</span></span><span class=line><span class=cl>    <span class=s2>&#34;name&#34;</span>: <span class=s2>&#34;patroni1&#34;</span>
+</span></span><span class=line><span class=cl>  <span class=o>}</span>,
+</span></span><span class=line><span class=cl>  <span class=s2>&#34;state&#34;</span>: <span class=s2>&#34;running&#34;</span>,
+</span></span><span class=line><span class=cl>  <span class=s2>&#34;role&#34;</span>: <span class=s2>&#34;primary&#34;</span>,
+</span></span><span class=line><span class=cl>  <span class=s2>&#34;server_version&#34;</span>: <span class=m>160004</span>
+</span></span><span class=line><span class=cl><span class=o>}</span>
+</span></span></code></pre></div><p><strong>删除参数：</strong></p><p>若要删除（重置）某个配置项，将其 patch 为 <strong><code>null</code></strong> 即可：</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>$ curl -s -XPATCH -d <span class=se>\
+</span></span></span><span class=line><span class=cl>    <span class=s1>&#39;{&#34;postgresql&#34;:{&#34;parameters&#34;:{&#34;max_connections&#34;:null}}}&#39;</span> <span class=se>\
+</span></span></span><span class=line><span class=cl>    http://localhost:8008/config <span class=p>|</span> jq .
+</span></span><span class=line><span class=cl><span class=o>{</span>
+</span></span><span class=line><span class=cl>  <span class=s2>&#34;ttl&#34;</span>: 20,
+</span></span><span class=line><span class=cl>  <span class=s2>&#34;loop_wait&#34;</span>: 5,
+</span></span><span class=line><span class=cl>  <span class=s2>&#34;retry_timeout&#34;</span>: 10,
+</span></span><span class=line><span class=cl>  <span class=s2>&#34;maximum_lag_on_failover&#34;</span>: 1048576,
+</span></span><span class=line><span class=cl>  <span class=s2>&#34;postgresql&#34;</span>: <span class=o>{</span>
+</span></span><span class=line><span class=cl>    <span class=s2>&#34;use_slots&#34;</span>: true,
+</span></span><span class=line><span class=cl>    <span class=s2>&#34;use_pg_rewind&#34;</span>: true,
+</span></span><span class=line><span class=cl>    <span class=s2>&#34;parameters&#34;</span>: <span class=o>{</span>
+</span></span><span class=line><span class=cl>      <span class=s2>&#34;hot_standby&#34;</span>: <span class=s2>&#34;on&#34;</span>,
+</span></span><span class=line><span class=cl>      <span class=s2>&#34;unix_socket_directories&#34;</span>: <span class=s2>&#34;.&#34;</span>,
+</span></span><span class=line><span class=cl>      <span class=s2>&#34;wal_level&#34;</span>: <span class=s2>&#34;hot_standby&#34;</span>,
+</span></span><span class=line><span class=cl>      <span class=s2>&#34;max_wal_senders&#34;</span>: 5,
+</span></span><span class=line><span class=cl>      <span class=s2>&#34;max_replication_slots&#34;</span>: <span class=m>5</span>
+</span></span><span class=line><span class=cl>    <span class=o>}</span>
+</span></span><span class=line><span class=cl>  <span class=o>}</span>
+</span></span><span class=line><span class=cl><span class=o>}</span>
+</span></span></code></pre></div><p>上述调用从动态配置中删除了 <strong><code>postgresql.parameters.max_connections</code></strong>。</p><p><strong><code>PUT /config</code></strong>：对现有动态配置进行无条件的完整覆写：</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>$ curl -s -XPUT -d <span class=se>\
+</span></span></span><span class=line><span class=cl>    <span class=s1>&#39;{&#34;maximum_lag_on_failover&#34;:1048576,&#34;retry_timeout&#34;:10,&#34;postgresql&#34;:{&#34;use_slots&#34;:true,&#34;use_pg_rewind&#34;:true,&#34;parameters&#34;:{&#34;hot_standby&#34;:&#34;on&#34;,&#34;wal_level&#34;:&#34;hot_standby&#34;,&#34;unix_socket_directories&#34;:&#34;.&#34;,&#34;max_wal_senders&#34;:5}},&#34;loop_wait&#34;:3,&#34;ttl&#34;:20}&#39;</span> <span class=se>\
+</span></span></span><span class=line><span class=cl>    http://localhost:8008/config <span class=p>|</span> jq .
+</span></span><span class=line><span class=cl><span class=o>{</span>
+</span></span><span class=line><span class=cl>  <span class=s2>&#34;ttl&#34;</span>: 20,
+</span></span><span class=line><span class=cl>  <span class=s2>&#34;maximum_lag_on_failover&#34;</span>: 1048576,
+</span></span><span class=line><span class=cl>  <span class=s2>&#34;retry_timeout&#34;</span>: 10,
+</span></span><span class=line><span class=cl>  <span class=s2>&#34;postgresql&#34;</span>: <span class=o>{</span>
+</span></span><span class=line><span class=cl>    <span class=s2>&#34;use_slots&#34;</span>: true,
+</span></span><span class=line><span class=cl>    <span class=s2>&#34;parameters&#34;</span>: <span class=o>{</span>
+</span></span><span class=line><span class=cl>      <span class=s2>&#34;hot_standby&#34;</span>: <span class=s2>&#34;on&#34;</span>,
+</span></span><span class=line><span class=cl>      <span class=s2>&#34;unix_socket_directories&#34;</span>: <span class=s2>&#34;.&#34;</span>,
+</span></span><span class=line><span class=cl>      <span class=s2>&#34;wal_level&#34;</span>: <span class=s2>&#34;hot_standby&#34;</span>,
+</span></span><span class=line><span class=cl>      <span class=s2>&#34;max_wal_senders&#34;</span>: <span class=m>5</span>
+</span></span><span class=line><span class=cl>    <span class=o>}</span>,
+</span></span><span class=line><span class=cl>    <span class=s2>&#34;use_pg_rewind&#34;</span>: <span class=nb>true</span>
+</span></span><span class=line><span class=cl>  <span class=o>}</span>,
+</span></span><span class=line><span class=cl>  <span class=s2>&#34;loop_wait&#34;</span>: <span class=m>3</span>
+</span></span><span class=line><span class=cl><span class=o>}</span>
+</span></span></code></pre></div><hr><h2 id=主从切换与故障转移端点>主从切换与故障转移端点</h2><p><a id=switchover_api></a></p><h3 id=主从切换switchover>主从切换（Switchover）</h3><p><strong><code>/switchover</code></strong> 端点仅在集群健康（存在领导者）时有效，也支持在指定时间调度主从切换。</p><p>调用 <strong><code>/switchover</code></strong> 端点时，候选节点可以指定，也可以不指定——这与 <strong><code>/failover</code></strong> 端点不同。若未指定候选节点，领导者降级后集群中所有符合条件的节点将参与主库竞选。</p><p><strong><code>POST</code></strong> 请求的 JSON 请求体中必须包含 <strong><code>leader</code></strong> 字段，<strong><code>candidate</code></strong> 和 <strong><code>scheduled_at</code></strong> 字段为可选，可用于指定切换目标和调度时间。</p><p>根据执行情况，请求可能返回不同的 HTTP 状态码。主从切换或故障转移成功完成时返回 <strong><code>200</code></strong>；切换成功调度时返回 <strong><code>202</code></strong>；若出现错误，返回 <strong><code>400</code></strong>、<strong><code>412</code></strong> 或 <strong><code>503</code></strong> 之一，并在响应体中提供详情。</p><p><strong><code>DELETE /switchover</code></strong> 可用于删除当前已调度的主从切换计划。</p><p><strong>示例：</strong> 切换到任意健康备库</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>$ curl -s http://localhost:8008/switchover -XPOST -d <span class=s1>&#39;{&#34;leader&#34;:&#34;postgresql1&#34;}&#39;</span>
+</span></span><span class=line><span class=cl>Successfully switched over to <span class=s2>&#34;postgresql2&#34;</span>
+</span></span></code></pre></div><p><strong>示例：</strong> 切换到指定节点</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>$ curl -s http://localhost:8008/switchover -XPOST -d <span class=se>\
+</span></span></span><span class=line><span class=cl>    <span class=s1>&#39;{&#34;leader&#34;:&#34;postgresql1&#34;,&#34;candidate&#34;:&#34;postgresql2&#34;}&#39;</span>
+</span></span><span class=line><span class=cl>Successfully switched over to <span class=s2>&#34;postgresql2&#34;</span>
+</span></span></code></pre></div><p><strong>示例：</strong> 在指定时间将领导者切换到集群中任意健康备库。</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>$ curl -s http://localhost:8008/switchover -XPOST -d <span class=se>\
+</span></span></span><span class=line><span class=cl>    <span class=s1>&#39;{&#34;leader&#34;:&#34;postgresql0&#34;,&#34;scheduled_at&#34;:&#34;2019-09-24T12:00+00&#34;}&#39;</span>
+</span></span><span class=line><span class=cl>Switchover scheduled
+</span></span></code></pre></div><h3 id=故障转移failover>故障转移（Failover）</h3><p><strong><code>/failover</code></strong> 端点可在没有健康节点时执行手动故障转移（例如，当所有同步备库均无法提升时，可将一个异步备库提升为主库）。集群不一定要处于无主状态——故障转移也可以在健康集群上执行。</p><p><strong><code>POST</code></strong> 请求的 JSON 请求体中必须指定 <strong><code>candidate</code></strong> 字段。若同时指定了 <strong><code>leader</code></strong> 字段，则触发主从切换而非故障转移。</p><p><strong>示例：</strong></p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>$ curl -s http://localhost:8008/failover -XPOST -d <span class=s1>&#39;{&#34;candidate&#34;:&#34;postgresql1&#34;}&#39;</span>
+</span></span><span class=line><span class=cl>Successfully failed over to <span class=s2>&#34;postgresql1&#34;</span>
+</span></span></code></pre></div><div class="td-alert td-alert--md alert alert-warning" role=alert><div class="td-alert-heading alert-heading" role=heading>警告</div><div class=td-alert-body><p>使用此端点时请 <a href=/docs/patroni/rest_api#failover_healthcheck>格外谨慎</a>，在某些情况下可能造成数据丢失。大多数情况下，使用 <a href=/docs/patroni/rest_api#switchover_api>主从切换端点</a> 即可满足需求。</p></div></div><p><strong><code>POST /switchover</code></strong> 和 <strong><code>POST /failover</code></strong> 端点分别由 <a href=/docs/patroni/patronictl#patronictl_switchover>patronictl_switchover</a> 和 <a href=/docs/patroni/patronictl#patronictl_failover>patronictl_failover</a> 使用。</p><p><strong><code>DELETE /switchover</code></strong> 由 <a href=/docs/patroni/patronictl#patronictl_flush_parameters>patronictl flush cluster-name switchover</a> 使用。</p><table><thead><tr><th></th><th>故障转移</th><th>主从切换</th></tr></thead><tbody><tr><td>需要指定 leader</td><td>否</td><td>是</td></tr><tr><td>需要指定 candidate</td><td>是</td><td>否</td></tr><tr><td>可在暂停模式下执行</td><td>是</td><td>是（仅限指定候选节点的情况）</td></tr><tr><td>可调度执行</td><td>否</td><td>是（非暂停模式下）</td></tr></tbody></table><p><a id=failover_healthcheck></a></p><h3 id=健康备库>健康备库</h3><p>集群成员需满足以下所有条件，才能在主从切换期间参与主库竞选，或被选为故障转移/主从切换的候选节点：</p><ul><li>可通过 Patroni API 访问；</li><li>未将 <strong><code>nofailover</code></strong> 标签设为 <strong><code>true</code></strong>；</li><li>watchdog 功能完整可用（若配置要求）；</li><li>在健康集群的主从切换或自动故障转移场景中，复制延迟不超过 <strong><code>maximum_lag_on_failover</code></strong> <a href=/docs/patroni/config/dynamic#dynamic>配置参数</a> 所设的上限；</li><li>在健康集群的主从切换或自动故障转移场景中，若 <strong><code>check_timeline</code></strong> <a href=/docs/patroni/config/dynamic#dynamic>配置参数</a> 设为 <strong><code>true</code></strong>，时间线编号不得小于集群当前时间线；</li><li>在 <a href=/docs/patroni/replication_modes#synchronous_mode>同步模式</a> 下：<ul><li>主从切换场景（无论是否指定候选节点）：必须列于 <strong><code>/sync</code></strong> 键的成员中；</li><li>故障转移场景（无论集群是否健康）：跳过此检查。</li></ul></li></ul><div class="td-alert td-alert--md alert alert-warning" role=alert><div class="td-alert-heading alert-heading" role=heading>警告</div><div class=td-alert-body><p>在无领导者的集群中执行手动故障转移时，候选节点即便存在以下情况也将被允许提升：同步模式下该节点不在 <strong><code>/sync</code></strong> 键成员中；复制延迟超过允许的最大值；时间线编号小于已知的最后集群时间线。</p></div></div><p><a id=restart_endpoint></a></p><hr><h2 id=重启端点>重启端点</h2><ul><li><strong><code>POST /restart</code></strong>：重启指定节点上的 PostgreSQL。<strong><code>POST</code></strong> 请求体中可选择指定以下重启条件：<ul><li><strong><code>restart_pending</code></strong>：布尔值，若设为 <strong><code>true</code></strong>，仅在有待应用的 PostgreSQL 配置变更时才执行重启。</li><li><strong><code>role</code></strong>：仅当节点当前角色与请求中指定的角色匹配时才执行重启。</li><li><strong><code>postgres_version</code></strong>：仅当当前 PostgreSQL 版本低于请求中指定的版本时才执行重启。</li><li><strong><code>timeout</code></strong>：等待 PostgreSQL 开始接受连接的时长，覆盖 <strong><code>primary_start_timeout</code></strong>。</li><li><strong><code>schedule</code></strong>：带时区的时间戳，用于在未来某个时间调度重启。</li></ul></li><li><strong><code>DELETE /restart</code></strong>：取消已调度的重启计划。</li></ul><p><strong><code>POST /restart</code></strong> 和 <strong><code>DELETE /restart</code></strong> 端点分别由 <a href=/docs/patroni/patronictl#patronictl_restart>patronictl_restart</a> 和 <a href=/docs/patroni/patronictl#patronictl_flush_parameters><code>patronictl flush cluster-name restart</code></a> 使用。</p><p><a id=reload_endpoint></a></p><hr><h2 id=重载端点>重载端点</h2><p><strong><code>POST /reload</code></strong> 指示 Patroni 重新读取并应用配置文件，等同于向 Patroni 进程发送 <strong><code>SIGHUP</code></strong> 信号。若修改了需要重启才能生效的 PostgreSQL 参数（如 <strong><code>shared_buffers</code></strong>），仍需通过 <strong><code>POST /restart</code></strong> 端点或 <a href=/docs/patroni/patronictl#patronictl_restart>patronictl_restart</a> 显式重启 PostgreSQL。</p><p>重载端点由 <a href=/docs/patroni/patronictl#patronictl_reload>patronictl_reload</a> 使用。</p><hr><h2 id=重新初始化端点>重新初始化端点</h2><p><strong><code>POST /reinitialize</code></strong>：重新初始化指定节点上的 PostgreSQL 数据目录，仅允许在从库上执行。调用后，将删除数据目录并启动 <strong><code>pg_basebackup</code></strong> 或其他 <a href=/docs/patroni/replica_bootstrap#custom_replica_creation>从库创建方法</a>。</p><p>若 Patroni 正处于循环尝试恢复失败 PostgreSQL 的过程中，此调用可能失败。解决方法是在请求体中指定 <strong><code>{"force":true}</code></strong>。</p><p>也可在请求体中指定 <strong><code>{"from-leader":true}</code></strong>，直接从领导者节点获取基础备份，在所有从库均已失败的情况下执行重新初始化时尤为有用。</p><p>重新初始化端点由 <a href=/docs/patroni/patronictl#patronictl_reinit>patronictl_reinit</a> 使用。</p><style>.feedback--answer{display:inline-block}.feedback--answer-no{margin-left:1em}.feedback--response{display:none;margin-top:1em}.feedback--response__visible{display:block}</style><div class=d-print-none><h2 class=feedback--title>意见反馈</h2><p class=feedback--question>这个页面对您有帮助吗？</p><button class="btn btn-primary mb-4 feedback--answer feedback--answer-yes">有帮助</button>
+<button class="btn btn-primary mb-4 feedback--answer feedback--answer-no">没帮助</button><p class="feedback--response feedback--response-yes">感谢反馈！请 <a href=https://github.com/pgsty/pigsty/issues/new>告诉我们如何改进</a>。</p><p class="feedback--response feedback--response-no">抱歉给您带来不便。请 <a href=https://github.com/pgsty/pigsty/issues/new>告诉我们如何改进</a>。</p></div><script>const yesButton=document.querySelector(".feedback--answer-yes"),noButton=document.querySelector(".feedback--answer-no"),yesResponse=document.querySelector(".feedback--response-yes"),noResponse=document.querySelector(".feedback--response-no"),disableButtons=()=>{yesButton.disabled=!0,noButton.disabled=!0},sendFeedback=e=>{if(typeof gtag!="function")return;gtag("event","page_helpful",{event_category:"Helpful",event_label:window.location.pathname,value:e})};yesButton.addEventListener("click",()=>{yesResponse.classList.add("feedback--response__visible"),disableButtons(),sendFeedback(100)}),noButton.addEventListener("click",()=>{noResponse.classList.add("feedback--response__visible"),disableButtons(),sendFeedback(0)})</script><br><div class=td-page-meta__lastmod>最后修改 2026-03-08: <a data-proofer-ignore href=https://github.com/pgsty/pigsty.cc/commit/28cc1075499eac3f1761133bd07be9ff857faeaa>fix pgbouncer patroni pgbackrest categories (28cc107)</a></div></div></main></div></div><footer class="td-footer row d-print-none"><div class=container-fluid><div class="row mx-md-2"><div class="td-footer__left col-6 col-sm-4 order-sm-1"><ul class=td-footer__links-list><li class=td-footer__links-item data-bs-toggle=tooltip title=邮件 aria-label=邮件><a target=_blank rel=noopener href=mailto:rh@vonng.com aria-label=邮件><i class="fa fa-envelope"></i></a></li><li class=td-footer__links-item data-bs-toggle=tooltip title="GitHub - Vonng" aria-label="GitHub - Vonng"><a target=_blank rel=noopener href=https://github.com/Vonng aria-label="GitHub - Vonng"><i class="fab fa-github"></i></a></li><li class=td-footer__links-item data-bs-toggle=tooltip title="X - Vonng" aria-label="X - Vonng"><a target=_blank rel=noopener href=https://x.com/RonVonng aria-label="X - Vonng"><i class="fab fa-x-twitter"></i></a></li><li class=td-footer__links-item data-bs-toggle=tooltip title="X - Pigsty" aria-label="X - Pigsty"><a target=_blank rel=noopener href=https://x.com/PlGSTY aria-label="X - Pigsty"><i class="fab fa-twitter"></i></a></li><li class=td-footer__links-item data-bs-toggle=tooltip title="LinkedIn - Vonng" aria-label="LinkedIn - Vonng"><a target=_blank rel=noopener href=https://www.linkedin.com/in/vonng/ aria-label="LinkedIn - Vonng"><i class="fab fa-linkedin"></i></a></li></ul></div><div class="td-footer__right col-6 col-sm-4 order-sm-3"><ul class=td-footer__links-list><li class=td-footer__links-item data-bs-toggle=tooltip title=Discord aria-label=Discord><a target=_blank rel=noopener href=https://discord.gg/wDzt5VyWEz aria-label=Discord><i class="fab fa-discord"></i></a></li><li class=td-footer__links-item data-bs-toggle=tooltip title=Telegram aria-label=Telegram><a target=_blank rel=noopener href=https://t.me/joinchat/gV9zfZraNPM3YjFh aria-label=Telegram><i class="fab fa-telegram"></i></a></li><li class=td-footer__links-item data-bs-toggle=tooltip title=微信 aria-label=微信><a target=_blank rel=noopener href=/img/pigsty/pigsty-cc.jpg aria-label=微信><i class="fab fa-weixin"></i></a></li><li class=td-footer__links-item data-bs-toggle=tooltip title=论坛 aria-label=论坛><a target=_blank rel=noopener href=https://github.com/orgs/pgsty/discussions aria-label=论坛><i class="fab fa-discourse"></i></a></li><li class=td-footer__links-item data-bs-toggle=tooltip title=GitHub aria-label=GitHub><a target=_blank rel=noopener href=https://github.com/pgsty/pigsty aria-label=GitHub><i class="fab fa-github"></i></a></li></ul></div><div class="td-footer__center col-12 col-sm-4 py-2 order-sm-2"><span class=td-footer__copyright>&copy;
+2018&ndash;2026
+<span class=td-footer__authors>Ruohang Feng</span></span><span class=td-footer__all_rights_reserved>保留所有权利</span><span class=ms-2><a href=/docs/about/privacy target=_blank rel=noopener>隐私政策</a></span></div></div></div></footer></div><script src=/js/main.min.65d702cee0bf35691ed701b78b7b713d03be4a9f1f184f95e8049d065c07bc57.js integrity="sha256-ZdcCzuC/NWke1wG3i3txPQO+Sp8fGE+V6ASdBlwHvFc=" crossorigin=anonymous></script><script defer src=/js/click-to-copy.min.24576ff9fe9f85bb1948ecae52ce227cafce53757a3ad52301f2a79260f6b97d.js integrity="sha256-JFdv+f6fhbsZSOyuUs4ifK/OU3V6OtUjAfKnkmD2uX0=" crossorigin=anonymous></script><script src=/js/tabpane-persist.js></script></body></html>

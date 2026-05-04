@@ -1,0 +1,862 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>PIG on PIGSTY</title><link>https://pigsty.cc/module/pig/</link><description>Recent content in PIG on PIGSTY</description><generator>Hugo</generator><language>zh-CN</language><atom:link href="https://pigsty.cc/module/pig/index.xml" rel="self" type="application/rss+xml"/><item><title>上手</title><link>https://pigsty.cc/docs/pig/start/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/pig/start/</guid><description>&lt;p&gt;下面是一个简单的上手教程，带您体验 PIG 包管理器的核心能力。&lt;/p&gt;
+&lt;h2 id="简短版本"&gt;简短版本&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;curl -fsSL https://repo.pigsty.io/pig &lt;span class="p"&gt;|&lt;/span&gt; bash &lt;span class="c1"&gt;# 从 Cloudflare 安装 PIG&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;pig repo &lt;span class="nb"&gt;set&lt;/span&gt; &lt;span class="c1"&gt;# 一次性设置好 Linux, Pigsty + PGDG 仓库（覆盖式！）&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;pig install -v &lt;span class="m"&gt;18&lt;/span&gt; -y pg18 pg_duckdb vector &lt;span class="c1"&gt;# 安装 PG 18 内核，pg_duckdb, pgvector 扩展……&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="安装"&gt;安装&lt;/h2&gt;
+&lt;p&gt;您可以使用以下命令 &lt;a href="https://pigsty.cc/docs/pig/install/"&gt;&lt;strong&gt;一键安装&lt;/strong&gt;&lt;/a&gt; &lt;code&gt;pig&lt;/code&gt;：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;中国大陆&lt;/strong&gt;：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;curl -fsSL https://repo.pigsty.cc/pig &lt;span class="p"&gt;|&lt;/span&gt; bash
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;全球网站&lt;/strong&gt;（Cloudflare CDN）：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;curl -fsSL https://repo.pigsty.io/pig &lt;span class="p"&gt;|&lt;/span&gt; bash
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;PIG 二进制包大约 4 MB，在 Linux 上会自动使用 &lt;code&gt;rpm&lt;/code&gt; 或 &lt;code&gt;dpkg&lt;/code&gt; 安装最新可用版本：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;$ curl -fsSL https://repo.pigsty.cc/pig &lt;span class="p"&gt;|&lt;/span&gt; bash
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="o"&gt;[&lt;/span&gt;INFO&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="nv"&gt;kernel&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; Linux
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="o"&gt;[&lt;/span&gt;INFO&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="nv"&gt;machine&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; x86_64
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="o"&gt;[&lt;/span&gt;INFO&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="nv"&gt;package&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; deb
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="o"&gt;[&lt;/span&gt;INFO&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="nv"&gt;pkg_url&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; https://repo.pigsty.cc/pkg/pig/v1.4.1/pig_1.4.1-1_amd64.deb
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="o"&gt;[&lt;/span&gt;INFO&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="nv"&gt;download&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; /tmp/pig_1.4.1-1_amd64.deb
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="o"&gt;[&lt;/span&gt;INFO&lt;span class="o"&gt;]&lt;/span&gt; downloading pig v1.4.1
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;curl -fSL https://repo.pigsty.cc/pkg/pig/v1.4.1/pig_1.4.1-1_amd64.deb -o /tmp/pig_1.4.1-1_amd64.deb
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;######################################################################## 100.0%&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="o"&gt;[&lt;/span&gt;INFO&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="nv"&gt;md5sum&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; 3fe640c3b6678fe4cef527a58dca54285f15d56c8fe0b3c2ed8b6879e1e91d41
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="o"&gt;[&lt;/span&gt;INFO&lt;span class="o"&gt;]&lt;/span&gt; installing: dpkg -i /tmp/pig_1.4.1-1_amd64.deb
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="o"&gt;(&lt;/span&gt;Reading database ... &lt;span class="m"&gt;166001&lt;/span&gt; files and directories currently installed.&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Preparing to unpack /tmp/pig_1.4.1-1_amd64.deb ...
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Unpacking pig &lt;span class="o"&gt;(&lt;/span&gt;1.4.1-1&lt;span class="o"&gt;)&lt;/span&gt; ...
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Setting up pig &lt;span class="o"&gt;(&lt;/span&gt;1.4.1-1&lt;span class="o"&gt;)&lt;/span&gt; ...
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="o"&gt;[&lt;/span&gt;INFO&lt;span class="o"&gt;]&lt;/span&gt; pig v1.4.1 installed successfully
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;check https://pigsty.io/ext/ &lt;span class="k"&gt;for&lt;/span&gt; details
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="检查环境"&gt;检查环境&lt;/h2&gt;
+&lt;p&gt;PIG 是一个由 Go 编写的二进制程序，默认安装路径为 &lt;code&gt;/usr/bin/pig&lt;/code&gt;，&lt;code&gt;pig version&lt;/code&gt; 会打印版本信息：&lt;/p&gt;</description></item><item><title>简介</title><link>https://pigsty.cc/docs/pig/intro/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/pig/intro/</guid><description>&lt;p&gt;你是否曾因安装或升级 PostgreSQL 扩展而头疼？翻查过时的文档、晦涩难懂的配置脚本，或是在 GitHub 上苦寻分支与补丁？
+Postgres 丰富的扩展生态同时意味着复杂的部署流程 —— 在多发行版、多架构环境下尤为棘手。而 PIG 可以为您解决这些烦恼。&lt;/p&gt;
+&lt;p&gt;这正是 &lt;strong&gt;Pig&lt;/strong&gt; 诞生的初衷。Pig 由 Go 语言开发，致力于一站式管理 Postgres 及其 &lt;a href="https://pigsty.cc/ext/list/"&gt;510&lt;/a&gt; 个扩展。
+无论是 TimescaleDB、Citus、PGVector，还是 30+ Rust 扩展，亦或 自建 Supabase 所需的全部组件 —— Pig 统一的 CLI 让一切触手可及。
+它彻底告别源码编译与杂乱仓库，直接提供版本对齐的 RPM/DEB 包，完美兼容 Debian、Ubuntu、RedHat 等主流发行版，支持 x86 与 Arm 架构，无需猜测，无需折腾。&lt;/p&gt;
+&lt;p&gt;Pig 并非重复造轮子，而是充分利用系统原生包管理器（APT、YUM、DNF），严格遵循 &lt;a href="https://pigsty.cc/docs/repo/pgdg/"&gt;PGDG 官方&lt;/a&gt; 打包规范，确保无缝集成。
+你无需在&amp;quot;标准做法&amp;quot;与&amp;quot;快捷方式&amp;quot;之间权衡；Pig 尊重现有仓库，遵循操作系统最佳实践，与现有仓库和软件包和谐共存。
+如果你的 Linux 系统和 PostgreSQL 大版本不在 &lt;a href="#linux-%E5%85%BC%E5%AE%B9%E6%80%A7"&gt;支持的列表&lt;/a&gt; 中，你还可以使用 &lt;a href="https://pigsty.cc/docs/pig/build/"&gt;&lt;code&gt;pig build&lt;/code&gt;&lt;/a&gt; 直接针对特定组合编译扩展。&lt;/p&gt;
+&lt;p&gt;想让你的 Postgres 如虎添翼、远离繁琐？欢迎访问 &lt;a href="https://pigsty.cc/docs/pig"&gt;PIG 官方文档&lt;/a&gt; 获取文档、指南，并查阅庞大的 &lt;a href="https://pigsty.cc/ext/list/"&gt;扩展列表&lt;/a&gt;，
+让你的本地 Postgres 数据库一键进化为全能的多模态数据中台。
+如果说 &lt;a href="https://medium.com/@fengruohang/postgres-is-eating-the-database-world-157c204dcfc4"&gt;Postgres 的未来是无可匹敌的可扩展性&lt;/a&gt;，那么 Pig 就是帮你解锁它的神灯。毕竟，从没有人抱怨 &amp;ldquo;扩展太多&amp;rdquo;。&lt;/p&gt;
+&lt;h2 id="自动化友好"&gt;自动化友好&lt;/h2&gt;
+&lt;p&gt;PIG 的命令体系可直接用于自动化脚本：参数风格统一、输出稳定，并在高风险操作中提供 &lt;code&gt;--dry-run&lt;/code&gt; 或确认步骤，减少误操作风险。&lt;/p&gt;</description></item><item><title>安装</title><link>https://pigsty.cc/docs/pig/install/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/pig/install/</guid><description>&lt;h2 id="脚本安装"&gt;脚本安装&lt;/h2&gt;
+&lt;p&gt;安装 &lt;code&gt;pig&lt;/code&gt; 最简单的方式是运行以下安装脚本：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;默认安装&lt;/strong&gt;（Cloudflare CDN）：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;curl -fsSL https://repo.pigsty.io/pig &lt;span class="p"&gt;|&lt;/span&gt; bash
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;中国镜像&lt;/strong&gt;：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;curl -fsSL https://repo.pigsty.cc/pig &lt;span class="p"&gt;|&lt;/span&gt; bash
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;该脚本会从 Pigsty &lt;a href="https://pigsty.cc/docs/repo/"&gt;软件仓库&lt;/a&gt; 下载最新版 &lt;code&gt;pig&lt;/code&gt; 的 RPM / DEB 包，并通过 &lt;code&gt;rpm&lt;/code&gt; 或 &lt;code&gt;dpkg&lt;/code&gt; 进行安装。&lt;/p&gt;
+&lt;h2 id="指定版本"&gt;指定版本&lt;/h2&gt;
+&lt;p&gt;您可以指定特定版本进行安装，将版本号作为参数传入即可：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;默认安装&lt;/strong&gt;（Cloudflare CDN）：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;curl -fsSL https://repo.pigsty.io/pig &lt;span class="p"&gt;|&lt;/span&gt; bash -s 1.4.1
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;中国镜像&lt;/strong&gt;：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;curl -fsSL https://repo.pigsty.cc/pig &lt;span class="p"&gt;|&lt;/span&gt; bash -s 1.4.1
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="发布页下载"&gt;发布页下载&lt;/h2&gt;
+&lt;p&gt;你也可以直接从 Pigsty 仓库下载 &lt;code&gt;pig&lt;/code&gt; 安装包（&lt;code&gt;RPM&lt;/code&gt;/&lt;code&gt;DEB&lt;/code&gt;/ 压缩包）：&lt;a href="https://github.com/pgsty/pig/releases/tag/v1.4.1"&gt;GitHub v1.4.1 稳定版发布页&lt;/a&gt;&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;latest
+└── v1.4.1
+ ├── pig_1.4.1-1_amd64.deb
+ ├── pig_1.4.1-1_arm64.deb
+ ├── pig-1.4.1-1.aarch64.rpm
+ ├── pig-1.4.1-1.x86_64.rpm
+ ├── pig-v1.4.1.linux-amd64.tar.gz
+ ├── pig-v1.4.1.linux-arm64.tar.gz
+ ├── pig-v1.4.1.darwin-amd64.tar.gz
+ └── pig-v1.4.1.darwin-arm64.tar.gz
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;将其解压后，将二进制文件放入您的 PATH 系统路径中即可。&lt;/p&gt;</description></item><item><title>版本</title><link>https://pigsty.cc/docs/pig/release/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/pig/release/</guid><description>&lt;p&gt;最新稳定版本是 &lt;a href="https://github.com/pgsty/pig/releases/tag/v1.4.1"&gt;v1.4.1&lt;/a&gt;。&lt;/p&gt;
+&lt;table class="full-width"&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th style="text-align: center"&gt;版本&lt;/th&gt;
+ &lt;th style="text-align: center"&gt;日期&lt;/th&gt;
+ &lt;th&gt;摘要&lt;/th&gt;
+ &lt;th style="text-align: right"&gt;GitHub&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="#v141"&gt;v1.4.1&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;2026-05-01&lt;/td&gt;
+ &lt;td&gt;510 个扩展，支持 Ubuntu 26.04，仓库校准&lt;/td&gt;
+ &lt;td style="text-align: right"&gt;&lt;a href="https://github.com/pgsty/pig/releases/tag/v1.4.1"&gt;v1.4.1&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="#v140"&gt;v1.4.0&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;2026-04-19&lt;/td&gt;
+ &lt;td&gt;510 个扩展，pgrx 0.18.0，更多构建规格&lt;/td&gt;
+ &lt;td style="text-align: right"&gt;&lt;a href="https://github.com/pgsty/pig/releases/tag/v1.4.0"&gt;v1.4.0&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="#v134"&gt;v1.3.4&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;2026-04-14&lt;/td&gt;
+ &lt;td&gt;504 扩展更新与发布产物校验和刷新&lt;/td&gt;
+ &lt;td style="text-align: right"&gt;&lt;a href="https://github.com/pgsty/pig/releases/tag/v1.3.4"&gt;v1.3.4&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="#v133"&gt;v1.3.3&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;2026-04-10&lt;/td&gt;
+ &lt;td&gt;481 扩展与 Go 1.26.2 更新&lt;/td&gt;
+ &lt;td style="text-align: right"&gt;&lt;a href="https://github.com/pgsty/pig/releases/tag/v1.3.3"&gt;v1.3.3&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="#v132"&gt;v1.3.2&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;2026-03-23&lt;/td&gt;
+ &lt;td&gt;例行元数据更新，新增 &lt;code&gt;pg tune&lt;/code&gt; 与构建别名&lt;/td&gt;
+ &lt;td style="text-align: right"&gt;&lt;a href="https://github.com/pgsty/pig/releases/tag/v1.3.2"&gt;v1.3.2&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="#v131"&gt;v1.3.1&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;2026-03-05&lt;/td&gt;
+ &lt;td&gt;PG13 退役，支持窗口统一为 PG14-18，扩展增至 464&lt;/td&gt;
+ &lt;td style="text-align: right"&gt;&lt;a href="https://github.com/pgsty/pig/releases/tag/v1.3.1"&gt;v1.3.1&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="#v130"&gt;v1.3.0&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;2026-02-27&lt;/td&gt;
+ &lt;td&gt;构建链路强化，扩展增至 461，新内核支持&lt;/td&gt;
+ &lt;td style="text-align: right"&gt;&lt;a href="https://github.com/pgsty/pig/releases/tag/v1.3.0"&gt;v1.3.0&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="#v120"&gt;v1.2.0&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;2026-02-23&lt;/td&gt;
+ &lt;td&gt;统一别名，例行更新，计划模式，仓库修复&lt;/td&gt;
+ &lt;td style="text-align: right"&gt;&lt;a href="https://github.com/pgsty/pig/releases/tag/v1.2.0"&gt;v1.2.0&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="#v110"&gt;v1.1.0&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;2026-02-12&lt;/td&gt;
+ &lt;td&gt;451 扩展，Agent-Native CLI 框架&lt;/td&gt;
+ &lt;td style="text-align: right"&gt;&lt;a href="https://github.com/pgsty/pig/releases/tag/v1.1.0"&gt;v1.1.0&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="#v100"&gt;v1.0.0&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;2026-01-26&lt;/td&gt;
+ &lt;td&gt;444, 新增 pg/pt/pb/pitr 子命令，可用性矩阵&lt;/td&gt;
+ &lt;td style="text-align: right"&gt;&lt;a href="https://github.com/pgsty/pig/releases/tag/v1.0.0"&gt;v1.0.0&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="#v080"&gt;v0.8.0&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;2025-12-26&lt;/td&gt;
+ &lt;td&gt;440 extensions，移除 sysupdate 仓库&lt;/td&gt;
+ &lt;td style="text-align: right"&gt;&lt;a href="https://github.com/pgsty/pig/releases/tag/v0.8.0"&gt;v0.8.0&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="#v075"&gt;v0.7.5&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;2025-12-12&lt;/td&gt;
+ &lt;td&gt;常规扩展更新，使用修复后的阿里云镜像&lt;/td&gt;
+ &lt;td style="text-align: right"&gt;&lt;a href="https://github.com/pgsty/pig/releases/tag/v0.7.5"&gt;v0.7.5&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="#v074"&gt;v0.7.4&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;2025-12-01&lt;/td&gt;
+ &lt;td&gt;更新 ivory/pgtde 内核与 pgdg extras 仓库&lt;/td&gt;
+ &lt;td style="text-align: right"&gt;&lt;a href="https://github.com/pgsty/pig/releases/tag/v0.7.4"&gt;v0.7.4&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="#v073"&gt;v0.7.3&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;2025-11-24&lt;/td&gt;
+ &lt;td&gt;修复 el10 &amp;amp; debian13 仓库配置&lt;/td&gt;
+ &lt;td style="text-align: right"&gt;&lt;a href="https://github.com/pgsty/pig/releases/tag/v0.7.3"&gt;v0.7.3&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="#v072"&gt;v0.7.2&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;2025-11-20&lt;/td&gt;
+ &lt;td&gt;437 个扩展，修复 pig build 的一些问题&lt;/td&gt;
+ &lt;td style="text-align: right"&gt;&lt;a href="https://github.com/pgsty/pig/releases/tag/v0.7.2"&gt;v0.7.2&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="#v071"&gt;v0.7.1&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;2025-11-10&lt;/td&gt;
+ &lt;td&gt;新网站，改进容器内的使用体验&lt;/td&gt;
+ &lt;td style="text-align: right"&gt;&lt;a href="https://github.com/pgsty/pig/releases/tag/v0.7.1"&gt;v0.7.1&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="#v070"&gt;v0.7.0&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;2025-11-05&lt;/td&gt;
+ &lt;td&gt;强化 build 能力，大批量包更新&lt;/td&gt;
+ &lt;td style="text-align: right"&gt;&lt;a href="https://github.com/pgsty/pig/releases/tag/v0.7.0"&gt;v0.7.0&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="#v062"&gt;v0.6.2&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;2025-10-03&lt;/td&gt;
+ &lt;td&gt;正式提供 PG 18 支持&lt;/td&gt;
+ &lt;td style="text-align: right"&gt;&lt;a href="https://github.com/pgsty/pig/releases/tag/v0.6.2"&gt;v0.6.2&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="#v061"&gt;v0.6.1&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;2025-08-14&lt;/td&gt;
+ &lt;td&gt;CI/CD, el10 存根，PGDG 中国镜像&lt;/td&gt;
+ &lt;td style="text-align: right"&gt;&lt;a href="https://github.com/pgsty/pig/releases/tag/v0.6.1"&gt;v0.6.1&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="#v060"&gt;v0.6.0&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;2025-07-17&lt;/td&gt;
+ &lt;td&gt;423 个扩展，percona pg_tde，mcp 工具箱&lt;/td&gt;
+ &lt;td style="text-align: right"&gt;&lt;a href="https://github.com/pgsty/pig/releases/tag/v0.6.0"&gt;v0.6.0&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="#v050"&gt;v0.5.0&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;2025-06-30&lt;/td&gt;
+ &lt;td&gt;422 个扩展，新的扩展目录&lt;/td&gt;
+ &lt;td style="text-align: right"&gt;&lt;a href="https://github.com/pgsty/pig/releases/tag/v0.5.0"&gt;v0.5.0&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="#v042"&gt;v0.4.2&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;2025-05-27&lt;/td&gt;
+ &lt;td&gt;421 个扩展，halo 和 oriole deb&lt;/td&gt;
+ &lt;td style="text-align: right"&gt;&lt;a href="https://github.com/pgsty/pig/releases/tag/v0.4.2"&gt;v0.4.2&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="#v041"&gt;v0.4.1&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;2025-05-07&lt;/td&gt;
+ &lt;td&gt;414 个扩展，pg18 别名支持&lt;/td&gt;
+ &lt;td style="text-align: right"&gt;&lt;a href="https://github.com/pgsty/pig/releases/tag/v0.4.1"&gt;v0.4.1&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="#v040"&gt;v0.4.0&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;2025-05-01&lt;/td&gt;
+ &lt;td&gt;do 和 pt 子命令，halo 和 orioledb&lt;/td&gt;
+ &lt;td style="text-align: right"&gt;&lt;a href="https://github.com/pgsty/pig/releases/tag/v0.4.0"&gt;v0.4.0&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="#v034"&gt;v0.3.4&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;2025-04-05&lt;/td&gt;
+ &lt;td&gt;常规更新&lt;/td&gt;
+ &lt;td style="text-align: right"&gt;&lt;a href="https://github.com/pgsty/pig/releases/tag/v0.3.4"&gt;v0.3.4&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="#v033"&gt;v0.3.3&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;2025-03-25&lt;/td&gt;
+ &lt;td&gt;别名、仓库、依赖&lt;/td&gt;
+ &lt;td style="text-align: right"&gt;&lt;a href="https://github.com/pgsty/pig/releases/tag/v0.3.3"&gt;v0.3.3&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="#v032"&gt;v0.3.2&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;2025-03-21&lt;/td&gt;
+ &lt;td&gt;新扩展&lt;/td&gt;
+ &lt;td style="text-align: right"&gt;&lt;a href="https://github.com/pgsty/pig/releases/tag/v0.3.2"&gt;v0.3.2&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="#v031"&gt;v0.3.1&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;2025-03-19&lt;/td&gt;
+ &lt;td&gt;轻微错误修复&lt;/td&gt;
+ &lt;td style="text-align: right"&gt;&lt;a href="https://github.com/pgsty/pig/releases/tag/v0.3.1"&gt;v0.3.1&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="#v030"&gt;v0.3.0&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;2025-02-24&lt;/td&gt;
+ &lt;td&gt;新主页和扩展目录&lt;/td&gt;
+ &lt;td style="text-align: right"&gt;&lt;a href="https://github.com/pgsty/pig/releases/tag/v0.3.0"&gt;v0.3.0&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="#v022"&gt;v0.2.2&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;2025-02-22&lt;/td&gt;
+ &lt;td&gt;404 个扩展&lt;/td&gt;
+ &lt;td style="text-align: right"&gt;&lt;a href="https://github.com/pgsty/pig/releases/tag/v0.2.2"&gt;v0.2.2&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="#v020"&gt;v0.2.0&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;2025-02-14&lt;/td&gt;
+ &lt;td&gt;400 个扩展&lt;/td&gt;
+ &lt;td style="text-align: right"&gt;&lt;a href="https://github.com/pgsty/pig/releases/tag/v0.2.0"&gt;v0.2.0&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="#v014"&gt;v0.1.4&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;2025-02-12&lt;/td&gt;
+ &lt;td&gt;常规错误修复&lt;/td&gt;
+ &lt;td style="text-align: right"&gt;&lt;a href="https://github.com/pgsty/pig/releases/tag/v0.1.4"&gt;v0.1.4&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="#v013"&gt;v0.1.3&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;2025-01-23&lt;/td&gt;
+ &lt;td&gt;390 个扩展&lt;/td&gt;
+ &lt;td style="text-align: right"&gt;&lt;a href="https://github.com/pgsty/pig/releases/tag/v0.1.3"&gt;v0.1.3&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="#v012"&gt;v0.1.2&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;2025-01-12&lt;/td&gt;
+ &lt;td&gt;anon 扩展和其他 350 个扩展&lt;/td&gt;
+ &lt;td style="text-align: right"&gt;&lt;a href="https://github.com/pgsty/pig/releases/tag/v0.1.2"&gt;v0.1.2&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="#v011"&gt;v0.1.1&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;2025-01-09&lt;/td&gt;
+ &lt;td&gt;更新扩展列表&lt;/td&gt;
+ &lt;td style="text-align: right"&gt;&lt;a href="https://github.com/pgsty/pig/releases/tag/v0.1.1"&gt;v0.1.1&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="#v010"&gt;v0.1.0&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;2024-12-29&lt;/td&gt;
+ &lt;td&gt;repo、ext、sty 和自更新&lt;/td&gt;
+ &lt;td style="text-align: right"&gt;&lt;a href="https://github.com/pgsty/pig/releases/tag/v0.1.0"&gt;v0.1.0&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: center"&gt;&lt;a href="#v001"&gt;v0.0.1&lt;/a&gt;&lt;/td&gt;
+ &lt;td style="text-align: center"&gt;2024-12-23&lt;/td&gt;
+ &lt;td&gt;创世发布&lt;/td&gt;
+ &lt;td style="text-align: right"&gt;&lt;a href="https://github.com/pgsty/pig/releases/tag/v0.0.1"&gt;v0.0.1&lt;/a&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h1 id="v141"&gt;v1.4.1&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;扩展目录更新到 &lt;strong&gt;510&lt;/strong&gt; 个扩展，新增 3 个扩展，更新 17 个扩展。&lt;/li&gt;
+&lt;li&gt;新增 Ubuntu 26.04 &lt;code&gt;resolute&lt;/code&gt; 支持，移除 Ubuntu 20.04 &lt;code&gt;focal&lt;/code&gt; 支持。&lt;/li&gt;
+&lt;li&gt;将 &lt;code&gt;el9.aarch64&lt;/code&gt; 特例中的 &lt;code&gt;patroni&lt;/code&gt; / &lt;code&gt;patroni-etcd&lt;/code&gt; 提升到 &lt;code&gt;4.1.2&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;校准上游软件仓库定义。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;校验和&lt;/strong&gt;&lt;/p&gt;</description></item><item><title>pig</title><link>https://pigsty.cc/docs/pig/cmd/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/pig/cmd/</guid><description>&lt;p&gt;&lt;code&gt;pig&lt;/code&gt; CLI 提供了全面的工具集，用于管理 PostgreSQL 安装、扩展、软件仓库以及从源码构建扩展。使用 &lt;code&gt;pig help &amp;lt;command&amp;gt;&lt;/code&gt; 查看命令文档。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://pigsty.cc/docs/pig/repo/"&gt;&lt;strong&gt;pig repo&lt;/strong&gt;&lt;/a&gt;：管理软件仓库&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://pigsty.cc/docs/pig/ext/"&gt;&lt;strong&gt;pig ext&lt;/strong&gt;&lt;/a&gt;：管理 PostgreSQL 扩展&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://pigsty.cc/docs/pig/build/"&gt;&lt;strong&gt;pig build&lt;/strong&gt;&lt;/a&gt;：从源码构建扩展&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://pigsty.cc/docs/pig/sty/"&gt;&lt;strong&gt;pig sty&lt;/strong&gt;&lt;/a&gt;：管理 Pigsty 安装&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://pigsty.cc/docs/pig/pg/"&gt;&lt;strong&gt;pig pg&lt;/strong&gt;&lt;/a&gt;：管理本地 PostgreSQL 服务器&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://pigsty.cc/docs/pig/pt/"&gt;&lt;strong&gt;pig pt&lt;/strong&gt;&lt;/a&gt;：管理 Patroni HA 集群&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://pigsty.cc/docs/pig/pb/"&gt;&lt;strong&gt;pig pb&lt;/strong&gt;&lt;/a&gt;：管理 pgBackRest 备份与恢复&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="概览"&gt;概览&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;pig - PostgreSQL 的 Linux 包管理器
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Usage:
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig &lt;span class="o"&gt;[&lt;/span&gt;command&lt;span class="o"&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Examples:
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig repo add -ru &lt;span class="c1"&gt;# 覆盖现有仓库并更新缓存&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig install pg18 &lt;span class="c1"&gt;# 安装 PostgreSQL 18 PGDG 软件包&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig install pg_duckdb &lt;span class="c1"&gt;# 安装指定的 PostgreSQL 扩展&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig install pgactive -v &lt;span class="m"&gt;18&lt;/span&gt; &lt;span class="c1"&gt;# 为特定 PG 版本安装扩展&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; 访问 https://pigsty.io/ext/ 获取详情
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;PostgreSQL Extension Manager
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; build 构建 Postgres 扩展
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ext 管理 PostgreSQL 扩展 &lt;span class="o"&gt;(&lt;/span&gt;pgext&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; repo 管理 Linux 软件仓库 &lt;span class="o"&gt;(&lt;/span&gt;apt/dnf&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Pigsty Management Commands
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;do&lt;/span&gt; 运行管理任务
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; patroni 使用 patronictl 管理 Patroni 集群
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pg_exporter 管理 pg_exporter 与监控指标
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pgbackrest 管理 pgBackRest 备份与恢复
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pitr 编排式时间点恢复
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; postgres 管理本地 PostgreSQL 服务器与数据库
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; sty 管理 Pigsty 安装
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Additional Commands:
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; completion 生成指定 shell 的自动补全脚本
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nb"&gt;help&lt;/span&gt; 获取任何命令的帮助信息
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; install 使用原生包管理器安装软件包
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; status 显示环境状态
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; update 升级 pig 自身
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; version 显示 pig 版本信息
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Flags:
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; --debug 启用调试模式
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; -h, --help 获取帮助信息
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; -H, --home string Pigsty 主目录路径
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; -i, --inventory string 配置清单路径
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; -t, --toggle 帮助信息中的占位参数
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; --log-level string 日志级别: debug, info, warn, error, fatal, panic &lt;span class="o"&gt;(&lt;/span&gt;默认 &lt;span class="s2"&gt;&amp;#34;info&amp;#34;&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; --log-path string 日志文件路径，默认为终端输出
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;使用 &lt;span class="s2"&gt;&amp;#34;pig [command] --help&amp;#34;&lt;/span&gt; 获取命令的详细信息。
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="pig-repo"&gt;pig repo&lt;/h2&gt;
+&lt;p&gt;管理 PostgreSQL 软件包的 APT/YUM 仓库，详情请参考 &lt;a href="https://pigsty.cc/docs/pig/repo/"&gt;&lt;code&gt;pig repo&lt;/code&gt;&lt;/a&gt;&lt;/p&gt;</description></item><item><title>pig repo</title><link>https://pigsty.cc/docs/pig/repo/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/pig/repo/</guid><description>&lt;p&gt;&lt;code&gt;pig repo&lt;/code&gt; 命令是一个综合性的软件包仓库管理工具。它提供了添加、移除、创建和管理软件仓库的功能，支持 RPM 系统（RHEL/CentOS/Rocky/Alma）和 Debian 系统（Debian/Ubuntu）。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;pig repo - Manage Linux APT/YUM Repo
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig repo list &lt;span class="c1"&gt;# available repo list (info)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig repo info &lt;span class="o"&gt;[&lt;/span&gt;repo&lt;span class="p"&gt;|&lt;/span&gt;module...&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="c1"&gt;# show repo info (info)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig repo status &lt;span class="c1"&gt;# show current repo status (info)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig repo add &lt;span class="o"&gt;[&lt;/span&gt;repo&lt;span class="p"&gt;|&lt;/span&gt;module...&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="c1"&gt;# add repo and modules (root)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig repo rm &lt;span class="o"&gt;[&lt;/span&gt;repo&lt;span class="p"&gt;|&lt;/span&gt;module...&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="c1"&gt;# remove repo &amp;amp; modules (root)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig repo update &lt;span class="c1"&gt;# update repo pkg cache (root)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig repo create &lt;span class="c1"&gt;# create repo on current system (root)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig repo boot &lt;span class="c1"&gt;# boot repo from offline package (root)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig repo cache &lt;span class="c1"&gt;# cache repo as offline package (root)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Examples:
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig repo add -ru &lt;span class="c1"&gt;# add all repo and update cache (brute but effective)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig repo add pigsty -u &lt;span class="c1"&gt;# gentle version, only add pigsty repo and update cache&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig repo add node pgdg pigsty &lt;span class="c1"&gt;# essential repo to install postgres packages&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig repo add all &lt;span class="c1"&gt;# all = node + pgdg + pigsty&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig repo add all extra &lt;span class="c1"&gt;# extra module has non-free and some 3rd repo for certain extensions&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig repo update &lt;span class="c1"&gt;# update repo cache&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig repo create &lt;span class="c1"&gt;# update local repo /www/pigsty meta&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig repo boot &lt;span class="c1"&gt;# extract /tmp/pkg.tgz to /www/pigsty&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig repo cache &lt;span class="c1"&gt;# cache /www/pigsty into /tmp/pkg.tgz&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;table class="full-width"&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th style="text-align: left"&gt;命令&lt;/th&gt;
+ &lt;th style="text-align: left"&gt;描述&lt;/th&gt;
+ &lt;th style="text-align: left"&gt;备注&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;repo list&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;打印可用仓库与模块列表&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;repo info&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;获取仓库详细信息&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;repo status&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;显示当前仓库状态&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;repo add&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;添加新仓库&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;需要 sudo 或 root 权限&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;repo set&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;清空、覆盖并更新仓库&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;需要 sudo 或 root 权限&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;repo rm&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;移除仓库&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;需要 sudo 或 root 权限&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;repo update&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;更新仓库缓存&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;需要 sudo 或 root 权限&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;repo create&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;创建本地 YUM/APT 仓库&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;需要 sudo 或 root 权限&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;repo cache&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;从本地仓库创建离线包&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;需要 sudo 或 root 权限&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;repo boot&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;从离线包引导仓库&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;需要 sudo 或 root 权限&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;repo reload&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;刷新仓库目录&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id="快速入门"&gt;快速入门&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# 方法 1：清理干净现有仓库，添加所有必要仓库并更新缓存（推荐）&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;pig repo add all --remove --update &lt;span class="c1"&gt;# 移除旧仓库，添加所有必要仓库，更新缓存&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# 方法 1 变体：一步到位&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;pig repo &lt;span class="nb"&gt;set&lt;/span&gt; &lt;span class="c1"&gt;# = pig repo add all --remove --update&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# 方法 2：温和方式 - 仅添加所需仓库，保留你目前的仓库配置&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;pig repo add pgsql &lt;span class="c1"&gt;# 添加 PGDG 和 Pigsty 仓库并更新缓存&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;pig repo add pigsty --region&lt;span class="o"&gt;=&lt;/span&gt;china &lt;span class="c1"&gt;# 添加 Pigsty 仓库，指定使用中国区域&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;pig repo add pgdg --region&lt;span class="o"&gt;=&lt;/span&gt;europe &lt;span class="c1"&gt;# 添加 PGDG 仓库，指定使用欧洲区域&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;pig repo add infra --region&lt;span class="o"&gt;=&lt;/span&gt;default &lt;span class="c1"&gt;# 添加 INFRA 仓库 ，指定使用默认区域&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;# 如果上面没有-u|--update 选项一步到位，请额外执行此命令&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;pig repo update &lt;span class="c1"&gt;# 更新系统包缓存&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="模块"&gt;模块&lt;/h2&gt;
+&lt;p&gt;在 pig 中，APT/YUM 仓库被组织为 &lt;strong&gt;模块&lt;/strong&gt; —— 服务于特定目的的一组仓库。&lt;/p&gt;</description></item><item><title>pig ext</title><link>https://pigsty.cc/docs/pig/ext/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/pig/ext/</guid><description>&lt;p&gt;&lt;code&gt;pig ext&lt;/code&gt; 命令是一个用于管理 PostgreSQL 扩展的全能工具。它允许用户搜索、安装、移除、更新和管理 PostgreSQL 扩展，甚至支持内核包的管理。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;pig ext - Manage PostgreSQL Extensions
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig repo add -ru &lt;span class="c1"&gt;# add all repo and update cache (brute but effective)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig ext add pg18 &lt;span class="c1"&gt;# install optional postgresql 18 package&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig ext list duck &lt;span class="c1"&gt;# search extension in catalog&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig ext scan -v &lt;span class="m"&gt;18&lt;/span&gt; &lt;span class="c1"&gt;# scan installed extension for pg 18&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig ext add pg_duckdb &lt;span class="c1"&gt;# install certain postgresql extension&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Examples:
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig ext list &lt;span class="o"&gt;[&lt;/span&gt;query&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="c1"&gt;# list &amp;amp; search extension&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig ext info &lt;span class="o"&gt;[&lt;/span&gt;ext...&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="c1"&gt;# get information of a specific extension&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig ext status &lt;span class="o"&gt;[&lt;/span&gt;-v&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="c1"&gt;# show installed extension and pg status&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig ext add &lt;span class="o"&gt;[&lt;/span&gt;ext...&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="c1"&gt;# install extension for current pg version&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig ext rm &lt;span class="o"&gt;[&lt;/span&gt;ext...&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="c1"&gt;# remove extension for current pg version&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig ext update &lt;span class="o"&gt;[&lt;/span&gt;ext...&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="c1"&gt;# update extension to the latest version&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig ext import &lt;span class="o"&gt;[&lt;/span&gt;ext...&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="c1"&gt;# download extension to local repo&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig ext link &lt;span class="o"&gt;[&lt;/span&gt;ext...&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="c1"&gt;# link postgres installation to path&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig ext reload &lt;span class="c1"&gt;# reload the latest extension catalog data&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;table class="full-width"&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th style="text-align: left"&gt;命令&lt;/th&gt;
+ &lt;th style="text-align: left"&gt;描述&lt;/th&gt;
+ &lt;th style="text-align: left"&gt;备注&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;ext list&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;搜索扩展&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;ext info&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;显示扩展详细信息&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;ext avail&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;显示扩展可用性矩阵&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;ext status&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;显示已安装的扩展&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;ext scan&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;扫描已安装的扩展&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;ext add&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;安装扩展&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;需要 sudo 或 root 权限&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;ext rm&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;移除扩展&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;需要 sudo 或 root 权限&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;ext update&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;更新扩展&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;需要 sudo 或 root 权限&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;ext import&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;下载扩展以供离线使用&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;需要 sudo 或 root 权限&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;ext link&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;链接 PG 版本到 PATH&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;需要 sudo 或 root 权限&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;ext reload&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;刷新扩展目录&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id="快速入门"&gt;快速入门&lt;/h2&gt;
+&lt;p&gt;在安装 PostgreSQL 扩展前，你需要先添加 &lt;a href="https://pigsty.cc/docs/pig/repo/"&gt;&lt;code&gt;pig repo add&lt;/code&gt;&lt;/a&gt;：&lt;/p&gt;</description></item><item><title>pig build</title><link>https://pigsty.cc/docs/pig/build/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/pig/build/</guid><description>&lt;p&gt;&lt;code&gt;pig build&lt;/code&gt; 命令是一个强大的工具，简化了从源码构建 PostgreSQL 扩展的整个工作流程。它提供了完整的构建基础设施设置、依赖管理，以及标准和自定义 PostgreSQL 扩展在不同操作系统上的编译环境。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;pig build - Build Postgres Extension
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Environment Setup:
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig build spec &lt;span class="c1"&gt;# init build spec and directory (~ext)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig build repo &lt;span class="c1"&gt;# init build repo (=repo set, with remove+update)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig build tool &lt;span class="o"&gt;[&lt;/span&gt;mini&lt;span class="p"&gt;|&lt;/span&gt;full&lt;span class="p"&gt;|&lt;/span&gt;...&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="c1"&gt;# init build toolset&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig build rust &lt;span class="o"&gt;[&lt;/span&gt;-y&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="c1"&gt;# install Rust toolchain&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig build pgrx &lt;span class="o"&gt;[&lt;/span&gt;-v &amp;lt;ver&amp;gt;&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="c1"&gt;# install &amp;amp; init pgrx (0.18.0)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig build proxy &lt;span class="o"&gt;[&lt;/span&gt;id@host:port &lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="c1"&gt;# init build proxy (optional)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Package Building:
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig build pkg &lt;span class="o"&gt;[&lt;/span&gt;ext&lt;span class="p"&gt;|&lt;/span&gt;pkg...&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="c1"&gt;# complete pipeline: get + dep + ext&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig build get &lt;span class="o"&gt;[&lt;/span&gt;ext&lt;span class="p"&gt;|&lt;/span&gt;pkg...&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="c1"&gt;# download extension source tarball&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig build dep &lt;span class="o"&gt;[&lt;/span&gt;ext&lt;span class="p"&gt;|&lt;/span&gt;pkg...&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="c1"&gt;# install extension build dependencies&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig build ext &lt;span class="o"&gt;[&lt;/span&gt;ext&lt;span class="p"&gt;|&lt;/span&gt;pkg...&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="c1"&gt;# build extension package&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Quick Start:
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig build spec &lt;span class="c1"&gt;# setup build spec and directory&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig build pkg citus &lt;span class="c1"&gt;# build citus extension&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;table class="full-width"&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th style="text-align: left"&gt;命令&lt;/th&gt;
+ &lt;th style="text-align: left"&gt;描述&lt;/th&gt;
+ &lt;th style="text-align: left"&gt;备注&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;build spec&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;初始化构建规范仓库&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;build repo&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;初始化所需仓库&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;需要 sudo 或 root 权限&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;build tool&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;初始化构建工具&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;需要 sudo 或 root 权限&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;build rust&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;安装 Rust 工具链&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;需要 sudo 或 root 权限&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;build pgrx&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;安装并初始化 pgrx&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;需要 sudo 或 root 权限&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;build proxy&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;初始化构建代理&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;build get&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;下载源代码 tarball&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;build dep&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;安装扩展构建依赖&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;需要 sudo 或 root 权限&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;build ext&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;构建扩展包&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;需要 sudo 或 root 权限&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;build pkg&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;完整构建流程：get、dep、ext&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;需要 sudo 或 root 权限&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id="快速入门"&gt;快速入门&lt;/h2&gt;
+&lt;p&gt;设置构建环境并构建扩展的最快方式：&lt;/p&gt;</description></item><item><title>pig sty</title><link>https://pigsty.cc/docs/pig/sty/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/pig/sty/</guid><description>&lt;p&gt;&lt;strong&gt;pig&lt;/strong&gt; 也可作为 Pigsty 的命令行工具使用 —— 这是一款开箱即用的免费 PostgreSQL RDS 解决方案。
+它为你的 PostgreSQL 集群带来高可用（HA）、PITR、监控、基础设施即代码（IaC）以及丰富的扩展支持。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;pig sty - Init &lt;span class="o"&gt;(&lt;/span&gt;Download&lt;span class="o"&gt;)&lt;/span&gt;, Bootstrap, Configure, and Deploy Pigsty
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig sty init &lt;span class="o"&gt;[&lt;/span&gt;-pfvd&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="c1"&gt;# install pigsty (~/pigsty by default)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig sty boot &lt;span class="o"&gt;[&lt;/span&gt;-rpk&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="c1"&gt;# install ansible and prepare offline pkg&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig sty conf &lt;span class="o"&gt;[&lt;/span&gt;-cvrsoxnpg&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="c1"&gt;# configure pigsty and generate config&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig sty deploy &lt;span class="c1"&gt;# use pigsty to deploy everything (CAUTION!)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig sty get &lt;span class="c1"&gt;# download pigsty source tarball&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig sty list &lt;span class="c1"&gt;# list available pigsty versions&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Examples:
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig sty init &lt;span class="c1"&gt;# extract and init ~/pigsty&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig sty boot &lt;span class="c1"&gt;# install ansible &amp;amp; other deps&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig sty conf &lt;span class="c1"&gt;# generate pigsty.yml config file&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig sty deploy &lt;span class="c1"&gt;# run the deploy.yml playbook&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;table class="full-width"&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th style="text-align: left"&gt;命令&lt;/th&gt;
+ &lt;th style="text-align: left"&gt;描述&lt;/th&gt;
+ &lt;th style="text-align: left"&gt;备注&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;sty init&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;安装 Pigsty&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;sty boot&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;安装 Ansible 依赖&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;需要 sudo 或 root 权限&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;sty conf&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;生成配置&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;sty deploy&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;运行部署 playbook&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;sty list&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;列出可用 Pigsty 版本&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td style="text-align: left"&gt;&lt;code&gt;sty get&lt;/code&gt;&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;下载 Pigsty 源码压缩包&lt;/td&gt;
+ &lt;td style="text-align: left"&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id="快速入门"&gt;快速入门&lt;/h2&gt;
+&lt;p&gt;你可以使用 &lt;code&gt;pig sty&lt;/code&gt; 子命令在当前节点引导部署 Pigsty。&lt;/p&gt;</description></item><item><title>pig postgres</title><link>https://pigsty.cc/docs/pig/pg/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/pig/pg/</guid><description>&lt;p&gt;&lt;code&gt;pig pg&lt;/code&gt; 命令（别名 &lt;code&gt;pig postgres&lt;/code&gt;）用于管理本地 PostgreSQL 服务器和数据库。它封装了 &lt;code&gt;pg_ctl&lt;/code&gt;、&lt;code&gt;psql&lt;/code&gt;、&lt;code&gt;vacuumdb&lt;/code&gt; 等原生工具，提供简化的服务器管理体验。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;pig pg - Manage &lt;span class="nb"&gt;local&lt;/span&gt; PostgreSQL server and databases.
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Server Control &lt;span class="o"&gt;(&lt;/span&gt;via pg_ctl&lt;span class="o"&gt;)&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig pg init &lt;span class="o"&gt;[&lt;/span&gt;-v ver&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt;-D datadir&lt;span class="o"&gt;]&lt;/span&gt; initialize data directory
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig pg start &lt;span class="o"&gt;[&lt;/span&gt;-D datadir&lt;span class="o"&gt;]&lt;/span&gt; start PostgreSQL server
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig pg stop &lt;span class="o"&gt;[&lt;/span&gt;-D datadir&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt;-m fast&lt;span class="o"&gt;]&lt;/span&gt; stop PostgreSQL server
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig pg restart &lt;span class="o"&gt;[&lt;/span&gt;-D datadir&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt;-m fast&lt;span class="o"&gt;]&lt;/span&gt; restart PostgreSQL server
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig pg reload &lt;span class="o"&gt;[&lt;/span&gt;-D datadir&lt;span class="o"&gt;]&lt;/span&gt; reload configuration
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig pg status &lt;span class="o"&gt;[&lt;/span&gt;-D datadir&lt;span class="o"&gt;]&lt;/span&gt; show server status
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig pg promote &lt;span class="o"&gt;[&lt;/span&gt;-D datadir&lt;span class="o"&gt;]&lt;/span&gt; promote standby to primary
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig pg role &lt;span class="o"&gt;[&lt;/span&gt;-D datadir&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt;-V&lt;span class="o"&gt;]&lt;/span&gt; detect instance role &lt;span class="o"&gt;(&lt;/span&gt;primary/replica&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Service Management &lt;span class="o"&gt;(&lt;/span&gt;via systemctl&lt;span class="o"&gt;)&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig pg svc start start postgres systemd service
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig pg svc stop stop postgres systemd service
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig pg svc restart restart postgres systemd service
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig pg svc reload reload postgres systemd service
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig pg svc status show postgres service status
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Connection &lt;span class="p"&gt;&amp;amp;&lt;/span&gt; Query:
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig pg psql &lt;span class="o"&gt;[&lt;/span&gt;db&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt;-c cmd&lt;span class="o"&gt;]&lt;/span&gt; connect to database via psql
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig pg ps &lt;span class="o"&gt;[&lt;/span&gt;-a&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt;-u user&lt;span class="o"&gt;]&lt;/span&gt; show current connections
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig pg &lt;span class="nb"&gt;kill&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt;-x&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt;-u user&lt;span class="o"&gt;]&lt;/span&gt; terminate connections &lt;span class="o"&gt;(&lt;/span&gt;dry-run by default&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Database Maintenance:
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig pg vacuum &lt;span class="o"&gt;[&lt;/span&gt;db&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt;-a&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt;-t table&lt;span class="o"&gt;]&lt;/span&gt; vacuum tables
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig pg analyze &lt;span class="o"&gt;[&lt;/span&gt;db&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt;-a&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt;-t table&lt;span class="o"&gt;]&lt;/span&gt; analyze tables
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig pg freeze &lt;span class="o"&gt;[&lt;/span&gt;db&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt;-a&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt;-t table&lt;span class="o"&gt;]&lt;/span&gt; vacuum freeze tables
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig pg repack &lt;span class="o"&gt;[&lt;/span&gt;db&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt;-a&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt;-t table&lt;span class="o"&gt;]&lt;/span&gt; repack tables &lt;span class="o"&gt;(&lt;/span&gt;online rebuild&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Tuning:
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig pg tune &lt;span class="o"&gt;[&lt;/span&gt;-p profile&lt;span class="o"&gt;]&lt;/span&gt; generate optimized parameters
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Utilities:
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig pg log &amp;lt;list&lt;span class="p"&gt;|&lt;/span&gt;tail&lt;span class="p"&gt;|&lt;/span&gt;cat&lt;span class="p"&gt;|&lt;/span&gt;less&amp;gt; view PostgreSQL logs
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="命令概览"&gt;命令概览&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;服务控制&lt;/strong&gt;（pg_ctl 封装）：&lt;/p&gt;</description></item><item><title>pig patroni</title><link>https://pigsty.cc/docs/pig/pt/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/pig/pt/</guid><description>&lt;hr&gt;
+&lt;h2 id="categories-参考"&gt;title: &amp;ldquo;pig patroni&amp;rdquo;
+description: &amp;ldquo;使用 pig patroni 子命令管理 Patroni 服务与集群&amp;rdquo;
+weight: 170
+icon: fas fa-infinity
+module: [PIG]
+categories: [参考]&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;pig patroni&lt;/code&gt; 命令（别名 &lt;code&gt;pig pt&lt;/code&gt;）用于管理 Patroni 服务和 PostgreSQL HA 集群。它封装了常用的 &lt;code&gt;patronictl&lt;/code&gt; 和 &lt;code&gt;systemctl&lt;/code&gt; 操作，提供简化的集群管理体验。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;pig pt - Manage Patroni cluster using patronictl commands.
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Cluster Operations &lt;span class="o"&gt;(&lt;/span&gt;via patronictl&lt;span class="o"&gt;)&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig pt list list cluster members
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig pt restart &lt;span class="o"&gt;[&lt;/span&gt;member&lt;span class="o"&gt;]&lt;/span&gt; restart PostgreSQL &lt;span class="o"&gt;(&lt;/span&gt;rolling restart&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig pt reload reload PostgreSQL config
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig pt reinit &amp;lt;member&amp;gt; reinitialize a member
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig pt pause pause automatic failover
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig pt resume resume automatic failover
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig pt switchover perform planned switchover
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig pt failover perform manual failover
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig pt config &amp;lt;action&amp;gt; manage cluster config
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Service Management &lt;span class="o"&gt;(&lt;/span&gt;via systemctl&lt;span class="o"&gt;)&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig pt status show comprehensive patroni status
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig pt start start patroni service &lt;span class="o"&gt;(&lt;/span&gt;shortcut&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig pt stop stop patroni service &lt;span class="o"&gt;(&lt;/span&gt;shortcut&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig pt svc start start patroni service
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig pt svc stop stop patroni service
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig pt svc restart restart patroni service
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig pt svc status show patroni service status
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Logs:
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig pt log &lt;span class="o"&gt;[&lt;/span&gt;-f&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt;-n 100&lt;span class="o"&gt;]&lt;/span&gt; view patroni logs
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="命令概览"&gt;命令概览&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;集群操作&lt;/strong&gt;（patronictl 封装）：&lt;/p&gt;</description></item><item><title>pig pgbackrest</title><link>https://pigsty.cc/docs/pig/pb/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/pig/pb/</guid><description>&lt;p&gt;&lt;code&gt;pig pgbackrest&lt;/code&gt; 命令（别名 &lt;code&gt;pig pb&lt;/code&gt;）用于管理 pgBackRest 备份和时间点恢复（PITR）。它封装了常用的 &lt;code&gt;pgbackrest&lt;/code&gt; 操作，提供简化的备份管理体验。所有命令均以数据库超级用户身份（默认 &lt;code&gt;postgres&lt;/code&gt;）执行。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;pig pb - Manage pgBackRest backup and point-in-time recovery.
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Information:
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig pb info show backup info
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig pb ls list backups
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig pb ls repo list configured repositories
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig pb ls stanza list all stanzas
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Backup &lt;span class="p"&gt;&amp;amp;&lt;/span&gt; Restore:
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig pb backup create backup &lt;span class="o"&gt;(&lt;/span&gt;auto: full/incr&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig pb backup full create full backup
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig pb restore restore from backup &lt;span class="o"&gt;(&lt;/span&gt;PITR&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig pb restore -t &lt;span class="s2"&gt;&amp;#34;...&amp;#34;&lt;/span&gt; restore to specific &lt;span class="nb"&gt;time&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig pb expire cleanup expired backups
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Stanza Management:
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig pb create create stanza &lt;span class="o"&gt;(&lt;/span&gt;first-time setup&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig pb upgrade upgrade stanza &lt;span class="o"&gt;(&lt;/span&gt;after PG upgrade&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig pb delete delete stanza &lt;span class="o"&gt;(&lt;/span&gt;DANGEROUS!&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Control:
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig pb check verify backup integrity
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig pb start &lt;span class="nb"&gt;enable&lt;/span&gt; pgBackRest operations
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig pb stop disable pgBackRest operations
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig pb log view pgBackRest logs
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Examples:
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig pb info &lt;span class="c1"&gt;# show all backup info&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig pb backup &lt;span class="c1"&gt;# auto: full if none, else incr&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig pb backup full &lt;span class="c1"&gt;# full backup&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig pb restore -d &lt;span class="c1"&gt;# restore to latest (end of WAL)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig pb restore -t &lt;span class="s2"&gt;&amp;#34;2025-01-01 12:00:00+08&amp;#34;&lt;/span&gt; &lt;span class="c1"&gt;# restore to time&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig pb create &lt;span class="c1"&gt;# initialize stanza&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig pb expire &lt;span class="c1"&gt;# cleanup per retention policy&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="命令概览"&gt;命令概览&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;信息查询&lt;/strong&gt;：&lt;/p&gt;</description></item><item><title>pig pitr</title><link>https://pigsty.cc/docs/pig/pitr/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/pig/pitr/</guid><description>&lt;p&gt;&lt;code&gt;pig pitr&lt;/code&gt; 命令用于执行&lt;strong&gt;编排式时间点恢复&lt;/strong&gt;（Orchestrated Point-In-Time Recovery）。与 &lt;code&gt;pig pb restore&lt;/code&gt; 不同，此命令会自动协调 Patroni、PostgreSQL 和 pgBackRest，完成完整的 PITR 工作流。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;pig pitr - Perform PITR with automatic Patroni/PostgreSQL lifecycle management.
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;This &lt;span class="nb"&gt;command&lt;/span&gt; orchestrates a &lt;span class="nb"&gt;complete&lt;/span&gt; PITR workflow:
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; 1. Stop Patroni service &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="k"&gt;if&lt;/span&gt; running&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; 2. Ensure PostgreSQL is stopped &lt;span class="o"&gt;(&lt;/span&gt;with retry and fallback&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; 3. Execute pgbackrest restore
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; 4. Start PostgreSQL
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; 5. Provide post-restore guidance
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Recovery Targets &lt;span class="o"&gt;(&lt;/span&gt;at least one required&lt;span class="o"&gt;)&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; --default, -d Recover to end of WAL stream &lt;span class="o"&gt;(&lt;/span&gt;latest&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; --immediate, -I Recover to backup consistency point
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; --time, -t Recover to specific timestamp
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; --name, -n Recover to named restore point
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; --lsn, -l Recover to specific LSN
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; --xid, -x Recover to specific transaction ID
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Time Format:
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; - Full: &lt;span class="s2"&gt;&amp;#34;2025-01-01 12:00:00+08&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; - Date only: &lt;span class="s2"&gt;&amp;#34;2025-01-01&amp;#34;&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;defaults to 00:00:00&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; - Time only: &lt;span class="s2"&gt;&amp;#34;12:00:00&amp;#34;&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;defaults to today&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Examples:
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig pitr -d &lt;span class="c1"&gt;# Recover to latest (most common)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig pitr -t &lt;span class="s2"&gt;&amp;#34;2025-01-01 12:00&amp;#34;&lt;/span&gt; &lt;span class="c1"&gt;# Recover to specific time&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig pitr -I &lt;span class="c1"&gt;# Recover to backup consistency point&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig pitr -d --dry-run &lt;span class="c1"&gt;# Show execution plan without running&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig pitr -d -y &lt;span class="c1"&gt;# Skip confirmation (for automation)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig pitr -d --skip-patroni &lt;span class="c1"&gt;# Skip Patroni management&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; pig pitr -d --no-restart &lt;span class="c1"&gt;# Don&amp;#39;t auto-start PostgreSQL after restore&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="命令概览"&gt;命令概览&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;pig pitr&lt;/code&gt; 是一个高度自动化的恢复命令，它会：&lt;/p&gt;</description></item><item><title>pig 文档</title><link>https://pigsty.cc/docs/pig/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://pigsty.cc/docs/pig/</guid><description>&lt;p&gt;—— &lt;strong&gt;Postgres Install Genius，PostgreSQL 生态中缺失的扩展包管理器&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;PIG 包管理器是一个专门用于安装、管理、构建 PostgreSQL 及其扩展的命令行工具，使用 Go 开发，开箱即用，简单易用，小巧玲珑（4MB）。
+PIG 包管理器并非重新发明的土鳖轮子，而是 &lt;strong&gt;依托&lt;/strong&gt; （PiggyBack）现有 Linux 发行版包管理器 （&lt;code&gt;apt&lt;/code&gt;/&lt;code&gt;dnf&lt;/code&gt;）的一个高级抽象层。
+它屏蔽了不同操作系统，不同芯片架构，以及不同 PG 大版本的管理差异，让您用简单的几行命令，就可以完成 PG 内核与 510 个扩展的安装与管理。&lt;/p&gt;
+&lt;p&gt;PIG 的命令设计同样适合自动化脚本：提供统一的参数风格、清晰的错误提示，以及如 &lt;code&gt;--dry-run&lt;/code&gt; 等安全开关。&lt;/p&gt;
+&lt;p&gt;请注意：对于扩展安装来说，&lt;strong&gt;pig 并非必须组件&lt;/strong&gt;，您依然可以使用 apt / dnf 等包管理器直接访问 &lt;a href="https://pigsty.cc/docs/repo/pgsql/"&gt;&lt;strong&gt;Pigsty PGSQL&lt;/strong&gt;&lt;/a&gt; 仓库。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://pigsty.cc/docs/pig/intro/"&gt;&lt;strong&gt;简介&lt;/strong&gt;&lt;/a&gt;：为什么需要专用的 PG 包管理器？&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://pigsty.cc/docs/pig/start/"&gt;&lt;strong&gt;上手&lt;/strong&gt;&lt;/a&gt;：快速上手与样例&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://pigsty.cc/docs/pig/install/"&gt;&lt;strong&gt;安装&lt;/strong&gt;&lt;/a&gt;：下载、安装、更新 pig&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="快速上手"&gt;快速上手&lt;/h2&gt;
+&lt;p&gt;使用以下命令即可在您的系统上 &lt;a href="https://pigsty.cc/docs/pig/install/"&gt;&lt;strong&gt;安装&lt;/strong&gt;&lt;/a&gt; PIG 包管理器：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;默认安装&lt;/strong&gt;（Cloudflare CDN）：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;curl -fsSL https://repo.pigsty.io/pig &lt;span class="p"&gt;|&lt;/span&gt; bash
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;中国镜像&lt;/strong&gt;：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;curl -fsSL https://repo.pigsty.cc/pig &lt;span class="p"&gt;|&lt;/span&gt; bash
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;安装完成后，几行命令即可 &lt;a href="https://pigsty.cc/docs/pig/start/"&gt;&lt;strong&gt;快速开始&lt;/strong&gt;&lt;/a&gt;。例如，若需安装 PG 18 与相应的 &lt;a href="https://pigsty.cc/ext/e/pg_duckdb"&gt;&lt;strong&gt;&lt;code&gt;pg_duckdb&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt; 扩展：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;$ pig repo &lt;span class="nb"&gt;set&lt;/span&gt; &lt;span class="c1"&gt;# 一次性设置好 Linux, Pigsty + PGDG 仓库（覆盖式！）&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;$ pig install pg18 &lt;span class="c1"&gt;# 安装 PostgreSQL 18 内核（原生 PGDG 包）&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;$ pig install pg_duckdb -v &lt;span class="m"&gt;18&lt;/span&gt; &lt;span class="c1"&gt;# 安装 pg_duckdb 扩展（针对当前 pg 18）&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;$ pig install -y postgis timescaledb &lt;span class="c1"&gt;# 针对当前活跃PG版本，安装多个扩展&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;$ pig install -y vector &lt;span class="c1"&gt;# 您可以使用扩展名称（vector）或者扩展包名称（pgvector）来安装扩展！&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="命令参考"&gt;命令参考&lt;/h2&gt;
+&lt;p&gt;你可以执行 &lt;code&gt;pig help &amp;lt;command&amp;gt;&lt;/code&gt; 获取子命令的详细帮助。&lt;/p&gt;</description></item></channel></rss>
