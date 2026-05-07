@@ -30,6 +30,9 @@
 {% endif %}
 {% set pg_effective_io_method = pg_io_method if pg_io_method|default('auto') != 'auto' else ('io_uring' if (os_package|default('rpm') == 'deb' or os_version|default(9)|int >= 10) else 'worker') %}
 {% set pg_io_workers = 3 %}
+{% set pg_rto_mode = pg_rto if pg_rto in pg_rto_plan else 'norm' %}
+{% set rto = pg_rto_plan[pg_rto_mode] %}
+{% set pg_ttl = rto[0] %}{% set pg_loop_wait = rto[1] %}{% set pg_retry_timeout = rto[2] %}{% set pg_primary_start_timeout = rto[3] %}{% set pg_safety_margin = rto[4] %}
 
 #==============================================================#
 # Summary for patroni TINY config template (1-3 cpu cores)
@@ -38,7 +41,7 @@
 
 # Node: {{ node_cpu }}C{{ node_mem_gb }}G , node_tune = {{ node_tune }}
 # Memory: {{ node_mem_mb }}MB , Disk : {{ [ (node_fs_bytes|int / 1073741824)|round(0, 'ceil')|int , 1 ] | max }}GB {{ pg_storage_type|default('SSD') }} @ {{ pg_fs_main }}
-# ETCD: {% for ip in groups['etcd']|sort %}{{ ip }}:{{ etcd_port }} {% endfor %}
+# ETCD: {% for ip in groups['etcd']|default([])|sort %}{{ ip }}:{{ etcd_port }} {% endfor %}
 
 #--------------------------------------------------------------#
 # pgconf, maxconn, workmem   = {{ pg_conf }} , {{ pg_max_connections }} , {{ pg_workmem }}MB
@@ -81,32 +84,13 @@ log:
 # etcd
 #--------------------------------------------------------------#
 etcd3:
-  hosts: '{% for ip in groups['etcd']|sort %}{% if not loop.first %},{% endif %}{{ ip }}:{{ etcd_port }}{% endfor %}'
-  protocol: https
+  hosts: '{% for ip in groups['etcd']|default([])|sort %}{% if not loop.first %},{% endif %}{{ ip }}:{{ etcd_port }}{% endfor %}'
   cacert: /pg/cert/ca.crt
   cert:   /pg/cert/server.crt
   key:    /pg/cert/server.key
+  protocol: https
   username: '{{ pg_shard if pg_mode == "citus" else pg_cluster }}'
   password: '{{ pg_etcd_password | default(pg_shard if pg_mode == "citus" else pg_cluster, true) }}'
-
-#--------------------------------------------------------------#
-# api
-#--------------------------------------------------------------#
-# how to expose patroni service
-restapi:
-  listen: {{ inventory_hostname }}:{{ patroni_port }}
-  connect_address: {{ inventory_hostname }}:{{ patroni_port }}
-{% if patroni_ssl_enabled|bool %}
-  cacert:   '/pg/cert/ca.crt'
-  certfile: '/pg/cert/server.crt'
-  keyfile:  '/pg/cert/server.key'
-  verify_client: none  # none|optional|required
-{% endif %}
-  # unsafe api can only be accessed from meta nodes with auth
-  authentication:
-    username: '{{ patroni_username }}'
-    password: '{{ patroni_password }}'
-  allowlist: [ {{ pg_allow_list|join(', ') }} ]
 
 #--------------------------------------------------------------#
 # ctl
@@ -114,12 +98,31 @@ restapi:
 ctl:
 {% if patroni_ssl_enabled|bool %}
   insecure: false
-  cacert:   '/pg/cert/ca.crt'
-  certfile: '/pg/cert/server.crt'
-  keyfile:  '/pg/cert/server.key'
-{% else %}
+  cacert:   /pg/cert/ca.crt
+  certfile: /pg/cert/server.crt
+  keyfile:  /pg/cert/server.key
+{% else %}                                      # patroni_ssl disabled
   insecure: true
+{% endif %}                                     # end of patroni_ssl_enabled
+
+#--------------------------------------------------------------#
+# api
+#--------------------------------------------------------------#
+# how to expose patroni service
+restapi:
+{% if patroni_ssl_enabled|bool %}
+  cacert:   /pg/cert/ca.crt
+  certfile: /pg/cert/server.crt
+  keyfile:  /pg/cert/server.key
+  verify_client: none            # none|optional|required
 {% endif %}
+  listen: {{ inventory_hostname }}:{{ patroni_port }}
+  connect_address: {{ inventory_hostname }}:{{ patroni_port }}
+  # unsafe api can only be accessed from meta nodes with auth
+  authentication:
+    username: '{{ patroni_username }}'
+    password: '{{ patroni_password }}'
+  allowlist: [ {{ pg_allow_list|join(', ') }} ]
 
 #--------------------------------------------------------------#
 # tags
@@ -141,9 +144,9 @@ tags:
 #--------------------------------------------------------------#
 # available mode: off|automatic|required
 watchdog:
-  mode: {{ patroni_watchdog_mode }}
+  mode: '{{ 'off' if patroni_watchdog_mode|string|lower in ['off', 'false'] else patroni_watchdog_mode|string|lower }}'
   device: /dev/watchdog
-  #safety_margin: {{ ([(pg_rto|int - 5) , 0])|max }}   # -1 to use ttl/2
+  safety_margin: {{ pg_safety_margin }}
 
 #--------------------------------------------------------------#
 # bootstrap
@@ -160,7 +163,7 @@ bootstrap:
   initdb:
 {% if pg_checksum != '' and pg_checksum|bool %}
     - data-checksums
-{% elif pg_version|int >= 17 and not pg_checksum|bool %}
+{% elif pg_version|int >= 18 and not pg_checksum|bool %}
     - no-data-checksums
 {% endif %}
 {% if pg_version|default(18)|int >= 17 and pg_encoding|default('UTF8') in ['UTF8','UTF-8'] and pg_locale|default('C')|upper in ['C', 'C.UTF-8'] %}
@@ -216,22 +219,22 @@ bootstrap:
     #----------------------------------------------------------#
     # important parameters
     #----------------------------------------------------------#
-    # constraint: ttl >: loop_wait + retry_timeout * 2
+    # constraint: ttl >= loop_wait + retry_timeout * 2
 
     # the TTL to acquire the leader lock (in seconds). Think of it as the length of time before initiation of the automatic failover process. Default value: 30
     # config this according to your network condition to avoid false-positive failover
-    ttl: {{ pg_rto }}
+    ttl: {{ pg_ttl }}
 
     # the number of seconds the loop will sleep. Default value: 10
     # this is patroni check loop interval
-    loop_wait: {{ (pg_rto / 3)|round(0, 'ceil')|int }}
+    loop_wait: {{ pg_loop_wait }}
 
     # timeout for DCS and PostgreSQL operation retries (in seconds). DCS or network issues shorter than this will not cause Patroni to demote the leader. Default value: 10
-    retry_timeout: {{ (pg_rto / 3)|round(0, 'ceil')|int }}
+    retry_timeout: {{ pg_retry_timeout }}
 
     # the amount of time a primary is allowed to recover from failures before failover is triggered (in seconds)
     # Max RTO: 2 loop wait + primary_start_timeout
-    primary_start_timeout: {{ (pg_rto / 3)|round(0, 'ceil')|int }}
+    primary_start_timeout: {{ pg_primary_start_timeout }}
 
     # important: candidate will not be promoted if replication lag is higher than this
     # maximum RPO: 1MB
@@ -287,7 +290,7 @@ bootstrap:
         #------------------------------------------------------#
         # AUTHENTICATION
         #------------------------------------------------------#
-        password_encryption: {{ pg_pwd_enc }}
+        password_encryption: {{ pg_pwd_enc|default('scram-sha-256') }}
         ssl: 'on'                               # enable server ssl
         ssl_cert_file: '/pg/cert/server.crt'    # public cert path
         ssl_key_file: '/pg/cert/server.key'     # private key path
@@ -307,7 +310,7 @@ bootstrap:
         hash_mem_multiplier: 8.0                # use 8x work mem in hash-based operations
 {% endif %}
         huge_pages: try                         # try huge pages
-{% if pg_version|int >= 17 %}
+{% if pg_version|int >= 18 %}
         io_method: {{ pg_effective_io_method }}            # io method: sync, worker, io_uring
         io_workers: {{ pg_io_workers }}                    # number of io workers: {{ pg_io_workers }}
 {% endif %}
@@ -324,7 +327,7 @@ bootstrap:
         min_wal_size: {{ ([pg_size_twentieth, 200])|min }}GB                      # 1/20 disk size, max 200GB
         max_wal_size: {{ ([pg_size_twentieth * 4, 2000])|min }}GB                     # 2/10 disk size, max 2000GB
         max_slot_wal_keep_size: {{ ([pg_size_twentieth * 6, 3000])|min }}GB           # 3/10 disk size, max 3000GB
-{% if pg_version|int >= 17 %}
+{% if pg_version|int >= 18 %}
         idle_replication_slot_timeout: 7d       # drop idle replication slot after 7 days
 {% endif %}
         wal_buffers: 16MB                       # max to 16MB
@@ -333,10 +336,10 @@ bootstrap:
         commit_delay: 20                        # 200ms -> 20ms, increase speed
         commit_siblings: 10                     # 5 -> 10
         checkpoint_timeout: 15min               # checkpoint 5min -> 15min
-        checkpoint_completion_target: 0.80      # 0.5 -> 0.8
+        checkpoint_completion_target: 0.95      # 0.9 -> 0.95
 {% if pgbackrest_enabled|bool %}
         archive_mode: 'on'
-        archive_timeout: 300                    # 5 min timeout for archiving
+        archive_timeout: 300                    # 5min archive timeout
         archive_command: 'pgbackrest --stanza={{ pg_cluster }} archive-push %p'
 {% endif %}
 
@@ -362,7 +365,7 @@ bootstrap:
 {% if pg_storage_type == 'SSD' %}
         random_page_cost: 1.1                   # 4 for HDD, 1.1 for SSD
         effective_io_concurrency: 200           # 200 for SSD
-{% if pg_version|int >= 17 %}
+{% if pg_version|int >= 13 %}
         maintenance_io_concurrency: 100        # 100 for SSD maintenance
 {% endif %}
 {% endif %}
@@ -376,7 +379,7 @@ bootstrap:
         log_destination: csvlog                 # use standard csv log
 {% endif %}
         logging_collector: 'on'                 # enable csvlog
-        log_directory: {{ pg_log_dir }}         # postgres log dir
+        log_directory: {{ pg_log_dir }}         # postgres log directory
         log_timezone: 'UTC'                     # always use UTC timezone for logging
         log_filename: 'postgresql-%a.log'       # rotate on weekly basis
         log_file_mode: '0640'                   # allow group log read
@@ -390,7 +393,9 @@ bootstrap:
         log_statement: ddl                      # log ddl change
         log_min_duration_statement: 100         # log slow query (>100ms)
 {% if pg_version|int >= 18 %}
+{% if pg_mode|default('pgsql') != 'ivory' %}
         file_copy_method: clone                 # clone for instant db clone on CoW fs
+{% endif %}
 {% endif %}
 
         #------------------------------------------------------#
@@ -406,11 +411,11 @@ bootstrap:
         log_autovacuum_min_duration: 1s         # log autovacuum activity take more than 1s
         autovacuum_max_workers: 2               # default autovacuum worker 3 -> 2
         autovacuum_naptime: 1min                # default autovacuum naptime 1min
-        # autovacuum_vacuum_scale_factor: 0.16    # fraction of table size before vacuum   20% -> 8%
-        # autovacuum_analyze_scale_factor: 0.04   # fraction of table size before analyze  10% -> 4%
+        autovacuum_vacuum_threshold: 500        # 50 -> 500, reduce small table vacuum frequency
+        autovacuum_analyze_threshold: 250       # 50 -> 250, reduce small table analyze frequency
         autovacuum_vacuum_cost_delay: -1        # default vacuum cost delay: same as vacuum_cost_delay
         autovacuum_vacuum_cost_limit: -1        # default vacuum cost limit: same as vacuum_cost_limit
-        autovacuum_freeze_max_age: 1000000000   # age > 1 billion triggers force vacuum
+        autovacuum_freeze_max_age: 1000000000   # age > 1e9 triggers force vacuum
 
         #------------------------------------------------------#
         # CLIENT
@@ -510,7 +515,7 @@ postgresql:
   #------------------------------------------------------------#
   # how to react to database operations
   #------------------------------------------------------------#
-  # event callback script log: {{ patroni_log_dir }}/callback.log
+  # event callback script log: /pg/log/patroni/callback.log
   callbacks:
     on_start: /pg/bin/pg-failover-callback
     on_stop: /pg/bin/pg-failover-callback
@@ -554,11 +559,11 @@ postgresql:
   # host based authentication, overwrite default pg_hba.conf
   #------------------------------------------------------------#
   # pg_hba:
-  #   - local  all          postgres             ident
-  #   - local  all          all                  {{ pg_pwd_enc }}
-  #   - host   all          all       0.0.0.0/0  {{ pg_pwd_enc }}
-  #   - local  replication  postgres             ident
-  #   - local  replication  all                  {{ pg_pwd_enc }}
-  #   - host   replication  all       0.0.0.0/0  {{ pg_pwd_enc }}
+  #   - local  all          postgres            ident
+  #   - local  all          all                 {{ pg_pwd_enc }}
+  #   - host   all          all      0.0.0.0/0  {{ pg_pwd_enc }}
+  #   - local  replication  postgres            ident
+  #   - local  replication  all                 {{ pg_pwd_enc }}
+  #   - host   replication  all      0.0.0.0/0  {{ pg_pwd_enc }}
 
-...
+... # end of patroni tiny template
