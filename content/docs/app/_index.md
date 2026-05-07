@@ -19,7 +19,7 @@ Pigsty v4.3 的“应用”分为两类：
 ```bash
 curl -fsSL https://repo.pigsty.cc/get | bash; cd ~/pigsty
 ./bootstrap
-./configure -c <template>     # 例如 app/dify、app/odoo、app/registry、supabase
+./configure -c <template>     # 例如 app/dify、app/insforge、app/registry、supabase
 vi pigsty.yml                 # 修改密码、域名、IP、密钥
 ./deploy.yml                  # 部署基础设施与数据库
 ./docker.yml                  # 安装 Docker
@@ -30,7 +30,7 @@ vi pigsty.yml                 # 修改密码、域名、IP、密钥
 
 ## 维护中的配置模板
 
-当前 v4.3 在源码中提供了以下应用配置模板（`conf/app/*.yml` 与 `conf/supabase.yml`）：
+当前 v4.3 在源码中提供了以下应用配置模板（`conf/app/*.yml`、`conf/supabase.yml` 与 `conf/app/supa.yml` 软链接）：
 
 - `app/dify`
 - `app/odoo`
@@ -39,20 +39,22 @@ vi pigsty.yml                 # 修改密码、域名、IP、密钥
 - `app/electric`
 - `app/maybe`
 - `app/registry`
+- `app/insforge`
+- `app/hindsight`
 - `supabase`
 
 这些模板开箱即用，且与 `./configure -c ...`、`./app.yml` 工作流保持一致。
 
 ## 轻量 Compose 应用
 
-对于 `gitea`、`postgrest`、`pgweb`、`wiki`、`kong`、`bytebase` 等应用，也可直接使用对应目录下的 Compose 模板：
+对于 `bytebase`、`ferretdb`、`gitea`、`jupyter`、`kong`、`metabase`、`minio`、`nocodb`、`pgadmin`、`pgweb`、`postgrest`、`pg_exporter`、`wiki` 等应用，也可直接使用对应目录下的 Compose 模板：
 
 ```bash
 cd ~/pigsty/app/<name>
 make up
 ```
 
-如果你希望统一纳入 Pigsty IaC，可使用：
+如果你希望统一纳入 Pigsty IaC，可用 `app.yml` 指定应用目录：
 
 ```bash
 ./app.yml -e app=<name>
