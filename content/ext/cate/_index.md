@@ -12,7 +12,7 @@ sidebar_expanded: true
 | <a class="ext-badge ext-badge--cate time" href="/ext/cate/time">TIME</a> | 13 | 13 | 时间时态扩展：时序数据库 TimescaleDB，时态数据库，版本控制表，定时任务，异步后台任务调度扩展。 |
 | <a class="ext-badge ext-badge--cate gis" href="/ext/cate/gis">GIS</a> | 29 | 14 | 地理空间扩展：PostGIS，地理空间数据类型、函数与索引，天空索引 Q3C，OGR FDW， 寻路算法，地理正/逆查询。 |
 | <a class="ext-badge ext-badge--cate rag" href="/ext/cate/rag">RAG</a> | 11 | 11 | AI与RAG扩展插件：向量数据库，DiskANN 向量索引，相似度度量函数集，库内机器学习与推理 pgml，等等。 |
-| <a class="ext-badge ext-badge--cate fts" href="/ext/cate/fts">FTS</a> | 24 | 23 | 全文检索扩展：ES 替代 pg_search，BM25，中文分词，欧洲语言分词字典 hunspell，模糊检索，2-gram/3-gram 索引。 |
+| <a class="ext-badge ext-badge--cate fts" href="/ext/cate/fts">FTS</a> | 25 | 24 | 全文检索扩展：ES 替代 pg_search，BM25，中文分词，欧洲语言分词字典 hunspell，模糊检索，2-gram/3-gram 索引。 |
 | <a class="ext-badge ext-badge--cate olap" href="/ext/cate/olap">OLAP</a> | 15 | 14 | 分析能力扩展：列式存储，DuckDB与外部数据源包装器，Parquet S3，数据冷热分级存储，分布式计算，透明分片，GPU加速 |
 | <a class="ext-badge ext-badge--cate feat" href="/ext/cate/feat">FEAT</a> | 68 | 29 | 功能特性扩展：图数据库，Hyperloglog，Rum索引，GraphQL，JsonSchema，Hint，虚拟索引，增量物化视图，消息队列等等 |
 | <a class="ext-badge ext-badge--cate lang" href="/ext/cate/lang">LANG</a> | 34 | 21 | 存储过程语言扩展：使用各种编程语言开发，调试，打包，分发，测试 PostgreSQL 存储过程：Java，Js，Lua，R，SH，PRQL… |

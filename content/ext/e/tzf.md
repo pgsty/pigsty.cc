@@ -65,7 +65,7 @@ weight: 1680
 | u24.x86_64 | AVAIL PIGSTY 0.2.4 1 | AVAIL PIGSTY 0.2.4 1 | AVAIL PIGSTY 0.2.4 1 | AVAIL PIGSTY 0.2.4 1 | AVAIL PIGSTY 0.2.4 1 |
 | u24.aarch64 | AVAIL PIGSTY 0.2.4 1 | AVAIL PIGSTY 0.2.4 1 | AVAIL PIGSTY 0.2.4 1 | AVAIL PIGSTY 0.2.4 1 | AVAIL PIGSTY 0.2.4 1 |
 | u26.x86_64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| u26.aarch64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| u26.aarch64 | AVAIL PIGSTY 0.2.4 1 | AVAIL PIGSTY 0.2.4 1 | AVAIL PIGSTY 0.2.4 1 | AVAIL PIGSTY 0.2.4 1 | AVAIL PIGSTY 0.2.4 1 |
 @ el8.x86_64 18 pg_tzf_18 pg_tzf_18-0.2.4-1PIGSTY.el8.x86_64.rpm pigsty 0.2.4 3.6MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_tzf_18-0.2.4-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 18 pg_tzf_18 pg_tzf_18-0.2.4-1PIGSTY.el8.aarch64.rpm pigsty 0.2.4 3.5MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_tzf_18-0.2.4-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 18 pg_tzf_18 pg_tzf_18-0.2.4-1PIGSTY.el9.x86_64.rpm pigsty 0.2.4 3.7MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_tzf_18-0.2.4-1PIGSTY.el9.x86_64.rpm
@@ -80,6 +80,7 @@ weight: 1680
 @ u22.aarch64 18 postgresql-18-tzf postgresql-18-tzf_0.2.4-1PIGSTY~jammy_arm64.deb pigsty 0.2.4 3.7MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/t/tzf/postgresql-18-tzf_0.2.4-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 18 postgresql-18-tzf postgresql-18-tzf_0.2.4-1PIGSTY~noble_amd64.deb pigsty 0.2.4 3.6MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/tzf/postgresql-18-tzf_0.2.4-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 18 postgresql-18-tzf postgresql-18-tzf_0.2.4-1PIGSTY~noble_arm64.deb pigsty 0.2.4 3.5MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/tzf/postgresql-18-tzf_0.2.4-1PIGSTY~noble_arm64.deb
+@ u26.aarch64 18 postgresql-18-tzf postgresql-18-tzf_0.2.4-2PIGSTY~resolute_arm64.deb pigsty 0.2.4 3.5MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/t/tzf/postgresql-18-tzf_0.2.4-2PIGSTY~resolute_arm64.deb
 @ el8.x86_64 17 pg_tzf_17 pg_tzf_17-0.2.4-1PIGSTY.el8.x86_64.rpm pigsty 0.2.4 3.6MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_tzf_17-0.2.4-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 17 pg_tzf_17 pg_tzf_17-0.2.4-1PIGSTY.el8.aarch64.rpm pigsty 0.2.4 3.5MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_tzf_17-0.2.4-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 17 pg_tzf_17 pg_tzf_17-0.2.4-1PIGSTY.el9.x86_64.rpm pigsty 0.2.4 3.7MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_tzf_17-0.2.4-1PIGSTY.el9.x86_64.rpm
@@ -94,6 +95,7 @@ weight: 1680
 @ u22.aarch64 17 postgresql-17-tzf postgresql-17-tzf_0.2.4-1PIGSTY~jammy_arm64.deb pigsty 0.2.4 3.7MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/t/tzf/postgresql-17-tzf_0.2.4-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 17 postgresql-17-tzf postgresql-17-tzf_0.2.4-1PIGSTY~noble_amd64.deb pigsty 0.2.4 3.6MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/tzf/postgresql-17-tzf_0.2.4-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 17 postgresql-17-tzf postgresql-17-tzf_0.2.4-1PIGSTY~noble_arm64.deb pigsty 0.2.4 3.5MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/tzf/postgresql-17-tzf_0.2.4-1PIGSTY~noble_arm64.deb
+@ u26.aarch64 17 postgresql-17-tzf postgresql-17-tzf_0.2.4-2PIGSTY~resolute_arm64.deb pigsty 0.2.4 3.5MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/t/tzf/postgresql-17-tzf_0.2.4-2PIGSTY~resolute_arm64.deb
 @ el8.x86_64 16 pg_tzf_16 pg_tzf_16-0.2.4-1PIGSTY.el8.x86_64.rpm pigsty 0.2.4 3.6MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_tzf_16-0.2.4-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 16 pg_tzf_16 pg_tzf_16-0.2.4-1PIGSTY.el8.aarch64.rpm pigsty 0.2.4 3.5MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_tzf_16-0.2.4-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 16 pg_tzf_16 pg_tzf_16-0.2.4-1PIGSTY.el9.x86_64.rpm pigsty 0.2.4 3.7MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_tzf_16-0.2.4-1PIGSTY.el9.x86_64.rpm
@@ -108,6 +110,7 @@ weight: 1680
 @ u22.aarch64 16 postgresql-16-tzf postgresql-16-tzf_0.2.4-1PIGSTY~jammy_arm64.deb pigsty 0.2.4 3.7MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/t/tzf/postgresql-16-tzf_0.2.4-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 16 postgresql-16-tzf postgresql-16-tzf_0.2.4-1PIGSTY~noble_amd64.deb pigsty 0.2.4 3.6MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/tzf/postgresql-16-tzf_0.2.4-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 16 postgresql-16-tzf postgresql-16-tzf_0.2.4-1PIGSTY~noble_arm64.deb pigsty 0.2.4 3.5MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/tzf/postgresql-16-tzf_0.2.4-1PIGSTY~noble_arm64.deb
+@ u26.aarch64 16 postgresql-16-tzf postgresql-16-tzf_0.2.4-2PIGSTY~resolute_arm64.deb pigsty 0.2.4 3.5MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/t/tzf/postgresql-16-tzf_0.2.4-2PIGSTY~resolute_arm64.deb
 @ el8.x86_64 15 pg_tzf_15 pg_tzf_15-0.2.4-1PIGSTY.el8.x86_64.rpm pigsty 0.2.4 3.6MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_tzf_15-0.2.4-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 15 pg_tzf_15 pg_tzf_15-0.2.4-1PIGSTY.el8.aarch64.rpm pigsty 0.2.4 3.5MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_tzf_15-0.2.4-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 15 pg_tzf_15 pg_tzf_15-0.2.4-1PIGSTY.el9.x86_64.rpm pigsty 0.2.4 3.7MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_tzf_15-0.2.4-1PIGSTY.el9.x86_64.rpm
@@ -122,6 +125,7 @@ weight: 1680
 @ u22.aarch64 15 postgresql-15-tzf postgresql-15-tzf_0.2.4-1PIGSTY~jammy_arm64.deb pigsty 0.2.4 3.7MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/t/tzf/postgresql-15-tzf_0.2.4-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 15 postgresql-15-tzf postgresql-15-tzf_0.2.4-1PIGSTY~noble_amd64.deb pigsty 0.2.4 3.6MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/tzf/postgresql-15-tzf_0.2.4-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 15 postgresql-15-tzf postgresql-15-tzf_0.2.4-1PIGSTY~noble_arm64.deb pigsty 0.2.4 3.5MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/tzf/postgresql-15-tzf_0.2.4-1PIGSTY~noble_arm64.deb
+@ u26.aarch64 15 postgresql-15-tzf postgresql-15-tzf_0.2.4-2PIGSTY~resolute_arm64.deb pigsty 0.2.4 3.5MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/t/tzf/postgresql-15-tzf_0.2.4-2PIGSTY~resolute_arm64.deb
 @ el8.x86_64 14 pg_tzf_14 pg_tzf_14-0.2.4-1PIGSTY.el8.x86_64.rpm pigsty 0.2.4 3.6MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_tzf_14-0.2.4-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 14 pg_tzf_14 pg_tzf_14-0.2.4-1PIGSTY.el8.aarch64.rpm pigsty 0.2.4 3.5MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_tzf_14-0.2.4-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 14 pg_tzf_14 pg_tzf_14-0.2.4-1PIGSTY.el9.x86_64.rpm pigsty 0.2.4 3.7MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_tzf_14-0.2.4-1PIGSTY.el9.x86_64.rpm
@@ -136,6 +140,7 @@ weight: 1680
 @ u22.aarch64 14 postgresql-14-tzf postgresql-14-tzf_0.2.4-1PIGSTY~jammy_arm64.deb pigsty 0.2.4 3.7MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/t/tzf/postgresql-14-tzf_0.2.4-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 14 postgresql-14-tzf postgresql-14-tzf_0.2.4-1PIGSTY~noble_amd64.deb pigsty 0.2.4 3.6MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/tzf/postgresql-14-tzf_0.2.4-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 14 postgresql-14-tzf postgresql-14-tzf_0.2.4-1PIGSTY~noble_arm64.deb pigsty 0.2.4 3.5MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/tzf/postgresql-14-tzf_0.2.4-1PIGSTY~noble_arm64.deb
+@ u26.aarch64 14 postgresql-14-tzf postgresql-14-tzf_0.2.4-2PIGSTY~resolute_arm64.deb pigsty 0.2.4 3.5MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/t/tzf/postgresql-14-tzf_0.2.4-2PIGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建
@@ -201,9 +206,9 @@ CREATE EXTENSION tzf;
 
 ## 用法
 
-来源：[README](https://github.com/ringsaturn/pg-tzf/blob/main/README.md)，[releases](https://github.com/ringsaturn/pg-tzf/releases)，[Cargo.toml](https://github.com/ringsaturn/pg-tzf/blob/main/Cargo.toml)
+来源：[README](https://github.com/ringsaturn/pg-tzf/blob/main/README.md), [releases](https://github.com/ringsaturn/pg-tzf/releases)
 
-`tzf` 是一个 PostgreSQL 扩展，用于根据经纬度快速查找时区名称。
+`tzf` 是一个 PostgreSQL 扩展，用于根据经纬度坐标快速查找 timezone。pgext catalog 将 package `pg_tzf` 映射到 extension `tzf`，并记录版本 `0.2.4`，覆盖 PostgreSQL 14-18。
 
 ### 创建扩展
 
@@ -211,17 +216,17 @@ CREATE EXTENSION tzf;
 CREATE EXTENSION tzf;
 ```
 
-上游项目按 PostgreSQL major version 分别打包构建产物。当前源码元数据声明的扩展版本是 `0.2.4`。
+上游项目按 PostgreSQL major version 提供一个构建产物。其 release page 现在在 `v0.2.4` 之后列出 `v0.3.0`；此 stub 仍让版本和 package 名与 `db/extension.csv` 对齐。
 
 ### 函数
 
-#### 坐标查找
+坐标查询：
 
 ```sql
 SELECT tzf_tzname(116.3883, 39.9289) AS timezone;
 ```
 
-#### 批量坐标查找
+批量坐标查询：
 
 ```sql
 SELECT unnest(
@@ -232,13 +237,13 @@ SELECT unnest(
 ) AS timezones;
 ```
 
-#### 点查找
+Point 查询：
 
 ```sql
 SELECT tzf_tzname_point(point(-74.0060, 40.7128)) AS timezone;
 ```
 
-#### 批量点查找
+批量 point 查询：
 
 ```sql
 SELECT unnest(
@@ -254,6 +259,6 @@ SELECT unnest(
 
 ### 说明
 
-- 上游 README 记录其支持 PostgreSQL 14 到 18 的构建。
-- 预编译发布包内包含 `tzf.so`、`tzf.control` 和 `tzf--<version>.sql`。
-- 当前 README 仍指向 `sql/tzf.sql` 中的完整 schema，并附带这四个查找函数的 benchmark 数据。
+- 上游 README 记录支持 PostgreSQL 14 到 18 builds。
+- 预构建 release tarballs 包含 `tzf.so`、`tzf.control` 和 `tzf--<version>.sql`。
+- 当前 README 仍指向 `sql/tzf.sql` 中的完整 schema，并包含上面四个查询函数的 benchmark 数字。

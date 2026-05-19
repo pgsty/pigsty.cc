@@ -38,7 +38,7 @@ weight: 2100
 {.ext-table .ext-table--rel}
 
 
-> bm25 am conflicts with pg_textsearch; PG15-16 require shared_preload_libraries while PG17-18 do not.
+> bm25 am conflicts with pg_textsearch and vchord_bm25; PG17-18 do not require shared_preload_libraries
 
 
 ## 版本

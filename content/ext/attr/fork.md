@@ -21,9 +21,9 @@ weight: 50
 | [`babelfishpg_money`](/ext/e/babelfishpg_money) | [`babelfish`](https://babelfishpg.org/) | `1.1.0` | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | SQL Server 货币数据类型兼容扩展 |
 {.ext-table}
 
-## IvorySQL
+## ivorysql
 
-以下扩展基于 [**IvorySQL**](/docs/pgsql/kernel/ivorysql) 内核分支：
+以下扩展基于 **ivorysql** 内核分支：
 
 | **扩展** | **包** | **版本** | **许可证** | **语言** | **描述** |
 |:---------|:-------|:--------:|:----------:|:--------:|:---------|
@@ -44,18 +44,18 @@ weight: 50
 | [`aux_mysql`](/ext/e/aux_mysql) | [`openhalo`](https://github.com/HaloTech-Co-Ltd/openHalo) | `1.5` | <a class="ext-badge ext-badge--license gpl30" href="/ext/license#gpl30">GPL-3.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | MySQL兼容辅助扩展模块 |
 {.ext-table}
 
-## OrioleDB
+## orioledb
 
-以下扩展基于 [**OrioleDB**](/docs/pgsql/kernel/orioledb) 内核分支：
+以下扩展基于 **orioledb** 内核分支：
 
 | **扩展** | **包** | **版本** | **许可证** | **语言** | **描述** |
 |:---------|:-------|:--------:|:----------:|:--------:|:---------|
 | [`orioledb`](/ext/e/orioledb) | [`orioledb`](https://github.com/orioledb/orioledb) | `1.7` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | OrioleDB，下一代事务处理引擎 |
 {.ext-table}
 
-## Percona
+## percona-pg
 
-以下扩展基于 [**Percona**](/docs/pgsql/kernel/percona) 内核分支：
+以下扩展基于 **percona-pg** 内核分支：
 
 | **扩展** | **包** | **版本** | **许可证** | **语言** | **描述** |
 |:---------|:-------|:--------:|:----------:|:--------:|:---------|

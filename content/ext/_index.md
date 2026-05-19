@@ -2,7 +2,7 @@
 title: Pigsty 扩展目录
 linkTitle: Pigsty 扩展目录
 description: >
-  扩展是 PostgreSQL 的灵魂所在，Pigsty 制作、收录、整合了 510 个 PG 生态扩展，供用户开箱即用。
+  扩展是 PostgreSQL 的灵魂所在，Pigsty 制作、收录、整合了 511 个 PG 生态扩展，供用户开箱即用。
 weight: 20
 outputs:
   - HTML
@@ -14,7 +14,7 @@ cascade:
 
 Pigsty 提供了以下三样基础设施，帮助用户更好的利用 PostgreSQL 扩展生态系统的协同超能力：
 
-- [**扩展目录**](/ext/list)：查阅 [**510**](/ext/list) 个扩展插件的详细信息，使用方法，元数据，下载链接与文档
+- [**扩展目录**](/ext/list)：查阅 [**511**](/ext/list) 个扩展插件的详细信息，使用方法，元数据，下载链接与文档
 - [**扩展仓库**](/docs/repo/pgsql)：获取预先打包的 RPM/DEB 二进制包，在 [**16 个 Linux 系统**](/ext/os) 上可用
 - [**包管理器**](/docs/pig)：使用 [**`pig`**](/docs/pig) 命令行工具，屏蔽复杂度与操作系统与架构差异
 
@@ -34,7 +34,7 @@ pig install pg_duckdb -v 18                   # 例：针对 PG 18 安装 pg_duc
 
 ## 核心特点
 
-- **数量**：无与伦比的扩展数量：**510** 个可用扩展，为 PG 扩展生态之最
+- **数量**：无与伦比的扩展数量：**511** 个可用扩展，为 PG 扩展生态之最
 - **质量**：原生 Linux RPM/DEB 包，完全兼容 PGDG 打包规范
 - **易用**：提供包管理器 [**`pig`**](/docs/pig)，屏蔽操作系统与架构差异，开箱即用
 - **兼容**：扩展完全兼容 PGDG 打包规范，可与 PGDG 仓库无缝混用
@@ -48,9 +48,9 @@ pig install pg_duckdb -v 18                   # 例：针对 PG 18 安装 pg_duc
 
 | **分类** | **All** | **PGDG** | **PIGSTY** | **CONTRIB** | | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
 |:------:|:------:|:------:|:------:|:------:|:---:|:------:|:------:|:------:|:------:|:------:|
-| **ALL** | 510 | 162 | 330 | 71 | | 490 | 491 | 484 | 478 | 462 |
-| **EL** | 505 | 129 | 305 | 71 | | 481 | 485 | 479 | 472 | 456 |
-| **Debian** | 495 | 107 | 317 | 71 | | 475 | 477 | 469 | 462 | 446 |
+| **ALL** | 511 | 162 | 331 | 71 | | 491 | 492 | 484 | 478 | 461 |
+| **EL** | 506 | 129 | 306 | 71 | | 482 | 486 | 479 | 472 | 455 |
+| **Debian** | 496 | 107 | 318 | 71 | | 476 | 478 | 469 | 462 | 445 |
 {.ext-table}
 
 > 详见：[扩展列表](/ext/list)，[RPM 列表](/ext/rpm)，[DEB 列表](/ext/deb)，[归属仓库](/ext/repo)
@@ -65,7 +65,7 @@ pig install pg_duckdb -v 18                   # 例：针对 PG 18 安装 pg_duc
 | <a class="ext-badge ext-badge--cate time" href="/ext/cate/time">TIME</a> | [`timescaledb`](/ext/e/timescaledb)  [`timescaledb_toolkit`](/ext/e/timescaledb_toolkit)  [`pg_timeseries`](/ext/e/timeseries)  [`periods`](/ext/e/periods)  [`temporal_tables`](/ext/e/temporal_tables)  [`emaj`](/ext/e/emaj)  [`table_version`](/ext/e/table_version)  [`pg_cron`](/ext/e/pg_cron)  [`pg_task`](/ext/e/pg_task)  [`pg_later`](/ext/e/pg_later)  [`pg_dispatch`](/ext/e/pg_dispatch)  [`pg_background`](/ext/e/pg_background)  [`pg_when`](/ext/e/pg_when) |
 | <a class="ext-badge ext-badge--cate gis" href="/ext/cate/gis">GIS</a> | [`postgis`](/ext/e/postgis)  [`pgrouting`](/ext/e/pgrouting)  [`pointcloud`](/ext/e/pointcloud)  [`pg_h3`](/ext/e/h3)  [`q3c`](/ext/e/q3c)  [`ogr_fdw`](/ext/e/ogr_fdw)  [`geoip`](/ext/e/geoip)  [`pg_polyline`](/ext/e/pg_polyline)  [`pg_eviltransform`](/ext/e/pg_eviltransform)  [`pg_geohash`](/ext/e/pg_geohash)  [`pghydro`](/ext/e/pghydro)  [`mobilitydb`](/ext/e/mobilitydb)  [`pg_tzf`](/ext/e/tzf) |
 | <a class="ext-badge ext-badge--cate rag" href="/ext/cate/rag">RAG</a> | [`pgvector`](/ext/e/vector)  [`vchord`](/ext/e/vchord)  [`pgvectorscale`](/ext/e/vectorscale)  [`pg_vectorize`](/ext/e/vectorize)  [`pg_similarity`](/ext/e/pg_similarity)  [`pg_rrf`](/ext/e/pg_rrf)  [`smlar`](/ext/e/smlar)  [`pg_summarize`](/ext/e/pg_summarize)  [`pg_tiktoken`](/ext/e/pg_tiktoken)  [`pg4ml`](/ext/e/pg4ml)  [`pgml`](/ext/e/pgml) |
-| <a class="ext-badge ext-badge--cate fts" href="/ext/cate/fts">FTS</a> | [`pg_search`](/ext/e/pg_search)  [`pgroonga`](/ext/e/pgroonga)  [`pg_bigm`](/ext/e/pg_bigm)  [`zhparser`](/ext/e/zhparser)  [`pg_bestmatch`](/ext/e/pg_bestmatch)  [`vchord_bm25`](/ext/e/vchord_bm25)  [`pg_tokenizer`](/ext/e/pg_tokenizer)  [`pg_biscuit`](/ext/e/biscuit)  [`pg_textsearch`](/ext/e/pg_textsearch)  [`pg_pinyin`](/ext/e/pg_pinyin)  [`pg_kazsearch`](/ext/e/pg_kazsearch)  [`hunspell_cs_cz`](/ext/e/hunspell_cs_cz)  [`hunspell_de_de`](/ext/e/hunspell_de_de)  [`hunspell_en_us`](/ext/e/hunspell_en_us)  [`hunspell_fr`](/ext/e/hunspell_fr)  [`hunspell_ne_np`](/ext/e/hunspell_ne_np)  [`hunspell_nl_nl`](/ext/e/hunspell_nl_nl)  [`hunspell_nn_no`](/ext/e/hunspell_nn_no)  [`hunspell_pt_pt`](/ext/e/hunspell_pt_pt)  [`hunspell_ru_ru`](/ext/e/hunspell_ru_ru)  [`hunspell_ru_ru_aot`](/ext/e/hunspell_ru_ru_aot) |
+| <a class="ext-badge ext-badge--cate fts" href="/ext/cate/fts">FTS</a> | [`pg_search`](/ext/e/pg_search)  [`pgroonga`](/ext/e/pgroonga)  [`pg_bigm`](/ext/e/pg_bigm)  [`zhparser`](/ext/e/zhparser)  [`pg_bestmatch`](/ext/e/pg_bestmatch)  [`vchord_bm25`](/ext/e/vchord_bm25)  [`pg_tokenizer`](/ext/e/pg_tokenizer)  [`pg_biscuit`](/ext/e/biscuit)  [`pg_textsearch`](/ext/e/pg_textsearch)  [`pg_pinyin`](/ext/e/pg_pinyin)  [`pg_kazsearch`](/ext/e/pg_kazsearch)  [`psql_bm25s`](/ext/e/psql_bm25s)  [`hunspell_cs_cz`](/ext/e/hunspell_cs_cz)  [`hunspell_de_de`](/ext/e/hunspell_de_de)  [`hunspell_en_us`](/ext/e/hunspell_en_us)  [`hunspell_fr`](/ext/e/hunspell_fr)  [`hunspell_ne_np`](/ext/e/hunspell_ne_np)  [`hunspell_nl_nl`](/ext/e/hunspell_nl_nl)  [`hunspell_nn_no`](/ext/e/hunspell_nn_no)  [`hunspell_pt_pt`](/ext/e/hunspell_pt_pt)  [`hunspell_ru_ru`](/ext/e/hunspell_ru_ru)  [`hunspell_ru_ru_aot`](/ext/e/hunspell_ru_ru_aot) |
 | <a class="ext-badge ext-badge--cate olap" href="/ext/cate/olap">OLAP</a> | [`citus`](/ext/e/citus)  [`hydra`](/ext/e/columnar)  [`pg_analytics`](/ext/e/pg_analytics)  [`pg_duckdb`](/ext/e/pg_duckdb)  [`pg_mooncake`](/ext/e/pg_mooncake)  [`storage_engine`](/ext/e/storage_engine)  [`pg_clickhouse`](/ext/e/pg_clickhouse)  [`duckdb_fdw`](/ext/e/duckdb_fdw)  [`pg_parquet`](/ext/e/pg_parquet)  [`pg_fkpart`](/ext/e/pg_fkpart)  [`pg_partman`](/ext/e/pg_partman)  [`plproxy`](/ext/e/plproxy)  [`pg_strom`](/ext/e/pg_strom) |
 | <a class="ext-badge ext-badge--cate feat" href="/ext/cate/feat">FEAT</a> | [`age`](/ext/e/age)  [`pg_liquid`](/ext/e/pg_liquid)  [`one_sparse`](/ext/e/onesparse)  [`pgq`](/ext/e/pgq)  [`pgmq`](/ext/e/pgmq)  [`pgmb`](/ext/e/pgmb)  [`ulak`](/ext/e/ulak)  [`hll`](/ext/e/hll)  [`rum`](/ext/e/rum)  [`pg_ai_query`](/ext/e/pg_ai_query)  [`pg_ttl_index`](/ext/e/pg_ttl_index)  [`pg_graphql`](/ext/e/pg_graphql)  [`pg_jsonschema`](/ext/e/pg_jsonschema)  [`jsquery`](/ext/e/jsquery)  [`pg_hint_plan`](/ext/e/pg_hint_plan)  [`hypopg`](/ext/e/hypopg)  [`index_advisor`](/ext/e/index_advisor)  [`pg_plan_filter`](/ext/e/plan_filter)  [`pg_variables`](/ext/e/pg_variables)  [`imgsmlr`](/ext/e/imgsmlr)  [`pg_ivm`](/ext/e/pg_ivm)  [`pg_incremental`](/ext/e/pg_incremental)  [`pg_trickle`](/ext/e/pg_trickle)  [`provsql`](/ext/e/provsql)  [`orioledb`](/ext/e/orioledb)  [`pg_cardano`](/ext/e/pg_cardano)  [`rdkit`](/ext/e/rdkit)  [`omnigres`](/ext/e/omni) |
 | <a class="ext-badge ext-badge--cate lang" href="/ext/cate/lang">LANG</a> | [`pg_tle`](/ext/e/pg_tle)  [`plv8`](/ext/e/plv8)  [`pljs`](/ext/e/pljs)  [`pllua`](/ext/e/pllua)  [`plprql`](/ext/e/plprql)  [`pldebugger`](/ext/e/pldbgapi)  [`plpgsql_check`](/ext/e/plpgsql_check)  [`plprofiler`](/ext/e/plprofiler)  [`plsh`](/ext/e/plsh)  [`pljava`](/ext/e/pljava)  [`plr`](/ext/e/plr)  [`plxslt`](/ext/e/plxslt)  [`pgtap`](/ext/e/pgtap)  [`faker`](/ext/e/faker)  [`dbt2`](/ext/e/dbt2)  [`pg_regresql`](/ext/e/pg_regresql) |
