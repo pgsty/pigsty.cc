@@ -45,13 +45,21 @@
     mermaid.initialize(settings);
 
     // Handle light/dark mode theme changes.
+    let currentTheme = document.documentElement.getAttribute('data-bs-theme');
     const lightDarkModeThemeChangeHandler = function (mutationsList, observer) {
       for (const mutation of mutationsList) {
         if (mutation.type === 'attributes' && mutation.attributeName === 'data-bs-theme') {
+          const nextTheme = document.documentElement.getAttribute('data-bs-theme');
+          if (nextTheme === currentTheme) {
+            continue;
+          }
+          currentTheme = nextTheme;
+
           // Mermaid doesn't currently support reinitialization, see
           // https://github.com/mermaid-js/mermaid/issues/1945. Until then,
           // just reload the page.
           location.reload();
+          break;
         }
       }
     };
