@@ -30,7 +30,7 @@ weight: 4930
 
 | **相关扩展** | [`pg_idkit`](/ext/e/pg_idkit) [`pgx_ulid`](/ext/e/pgx_ulid) [`pg_uuidv7`](/ext/e/pg_uuidv7) [`pg_hashids`](/ext/e/pg_hashids) [`sequential_uuids`](/ext/e/sequential_uuids) [`permuteseq`](/ext/e/permuteseq) [`ddsketch`](/ext/e/ddsketch) [`vasco`](/ext/e/vasco) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **下游依赖** | [`babelfishpg_tsql`](/ext/e/babelfishpg_tsql) |
+| **下游依赖** | [`babelfishpg_tsql`](/ext/e/babelfishpg_tsql) [`provsql`](/ext/e/provsql) |
 {.ext-table .ext-table--rel}
 
 

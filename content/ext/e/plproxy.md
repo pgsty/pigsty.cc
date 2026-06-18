@@ -52,8 +52,8 @@ weight: 2520
 |:--:|:--:|:--:|:--:|:--:|:--:|
 | el8.x86_64 | AVAIL PGDG 2.11.0 2 | AVAIL PGDG 2.11.0 2 | AVAIL PIGSTY 2.11.0 1 | AVAIL PIGSTY 2.11.0 3 | AVAIL PIGSTY 2.11.0 3 |
 | el8.aarch64 | AVAIL PGDG 2.11.0 2 | AVAIL PGDG 2.11.0 2 | AVAIL PIGSTY 2.11.0 1 | AVAIL PIGSTY 2.11.0 3 | AVAIL PIGSTY 2.11.0 3 |
-| el9.x86_64 | AVAIL PGDG 2.11.0 2 | AVAIL PGDG 2.11.0 2 | AVAIL PIGSTY 2.11.0 1 | AVAIL PIGSTY 2.11.0 3 | AVAIL PIGSTY 2.11.0 2 |
-| el9.aarch64 | AVAIL PGDG 2.11.0 2 | AVAIL PGDG 2.11.0 2 | AVAIL PIGSTY 2.11.0 1 | AVAIL PIGSTY 2.11.0 3 | AVAIL PIGSTY 2.11.0 3 |
+| el9.x86_64 | AVAIL PGDG 2.11.0 2 | AVAIL PGDG 2.11.0 2 | AVAIL PGDG 2.11.0 2 | AVAIL PGDG 2.11.0 2 | AVAIL PGDG 2.11.0 2 |
+| el9.aarch64 | AVAIL PGDG 2.11.0 2 | AVAIL PGDG 2.11.0 2 | AVAIL PGDG 2.11.0 2 | AVAIL PGDG 2.11.0 2 | AVAIL PGDG 2.11.0 2 |
 | el10.x86_64 | AVAIL PGDG 2.11.0 1 | AVAIL PGDG 2.11.0 1 | AVAIL PGDG 2.11.0 1 | AVAIL PGDG 2.11.0 1 | AVAIL PGDG 2.11.0 1 |
 | el10.aarch64 | AVAIL PGDG 2.11.0 1 | AVAIL PGDG 2.11.0 1 | AVAIL PGDG 2.11.0 1 | AVAIL PGDG 2.11.0 1 | AVAIL PGDG 2.11.0 1 |
 | d12.x86_64 | AVAIL PGDG 2.11.0 1 | AVAIL PGDG 2.11.0 1 | AVAIL PGDG 2.11.0 1 | AVAIL PGDG 2.11.0 1 | AVAIL PGDG 2.11.0 1 |
@@ -70,12 +70,12 @@ weight: 2520
 @ el8.x86_64 18 plproxy_18 plproxy_18-2.11.0-1PIGSTY.el8.x86_64.rpm pigsty 2.11.0 44.4KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/plproxy_18-2.11.0-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 18 plproxy_18 plproxy_18-2.11.0-4PGDG.rhel8.aarch64.rpm pgdg 2.11.0 45.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/plproxy_18-2.11.0-4PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 18 plproxy_18 plproxy_18-2.11.0-1PIGSTY.el8.aarch64.rpm pigsty 2.11.0 42.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/plproxy_18-2.11.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 18 plproxy_18 plproxy_18-2.11.0-4PGDG.rhel9.x86_64.rpm pgdg 2.11.0 45.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/plproxy_18-2.11.0-4PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 18 plproxy_18 plproxy_18-2.11.0-6PGDG.rhel9.8.x86_64.rpm pgdg 2.11.0 45.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/plproxy_18-2.11.0-6PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 18 plproxy_18 plproxy_18-2.11.0-1PIGSTY.el9.x86_64.rpm pigsty 2.11.0 43.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/plproxy_18-2.11.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 18 plproxy_18 plproxy_18-2.11.0-4PGDG.rhel9.aarch64.rpm pgdg 2.11.0 43.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/plproxy_18-2.11.0-4PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 18 plproxy_18 plproxy_18-2.11.0-6PGDG.rhel9.8.aarch64.rpm pgdg 2.11.0 43.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/plproxy_18-2.11.0-6PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 18 plproxy_18 plproxy_18-2.11.0-1PIGSTY.el9.aarch64.rpm pigsty 2.11.0 41.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/plproxy_18-2.11.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 18 plproxy_18 plproxy_18-2.11.0-4PGDG.rhel10.x86_64.rpm pgdg 2.11.0 46.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/plproxy_18-2.11.0-4PGDG.rhel10.x86_64.rpm
-@ el10.aarch64 18 plproxy_18 plproxy_18-2.11.0-4PGDG.rhel10.aarch64.rpm pgdg 2.11.0 44.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/plproxy_18-2.11.0-4PGDG.rhel10.aarch64.rpm
+@ el10.x86_64 18 plproxy_18 plproxy_18-2.11.0-6PGDG.rhel10.2.x86_64.rpm pgdg 2.11.0 46.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/plproxy_18-2.11.0-6PGDG.rhel10.2.x86_64.rpm
+@ el10.aarch64 18 plproxy_18 plproxy_18-2.11.0-6PGDG.rhel10.2.aarch64.rpm pgdg 2.11.0 44.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/plproxy_18-2.11.0-6PGDG.rhel10.2.aarch64.rpm
 @ d12.x86_64 18 postgresql-18-plproxy postgresql-18-plproxy_2.11.0-13.pgdg12+1_amd64.deb pgdg 2.11.0 133.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-plproxy/postgresql-18-plproxy_2.11.0-13.pgdg12+1_amd64.deb
 @ d12.aarch64 18 postgresql-18-plproxy postgresql-18-plproxy_2.11.0-13.pgdg12+1_arm64.deb pgdg 2.11.0 130.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-plproxy/postgresql-18-plproxy_2.11.0-13.pgdg12+1_arm64.deb
 @ d13.x86_64 18 postgresql-18-plproxy postgresql-18-plproxy_2.11.0-13.pgdg13+1_amd64.deb pgdg 2.11.0 133.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-plproxy/postgresql-18-plproxy_2.11.0-13.pgdg13+1_amd64.deb
@@ -90,12 +90,12 @@ weight: 2520
 @ el8.x86_64 17 plproxy_17 plproxy_17-2.11.0-1PIGSTY.el8.x86_64.rpm pigsty 2.11.0 44.4KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/plproxy_17-2.11.0-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 17 plproxy_17 plproxy_17-2.11.0-2PGDG.rhel8.aarch64.rpm pgdg 2.11.0 45.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/plproxy_17-2.11.0-2PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 17 plproxy_17 plproxy_17-2.11.0-1PIGSTY.el8.aarch64.rpm pigsty 2.11.0 42.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/plproxy_17-2.11.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 17 plproxy_17 plproxy_17-2.11.0-2PGDG.rhel9.x86_64.rpm pgdg 2.11.0 45.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/plproxy_17-2.11.0-2PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 17 plproxy_17 plproxy_17-2.11.0-6PGDG.rhel9.8.x86_64.rpm pgdg 2.11.0 45.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/plproxy_17-2.11.0-6PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 17 plproxy_17 plproxy_17-2.11.0-1PIGSTY.el9.x86_64.rpm pigsty 2.11.0 43.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/plproxy_17-2.11.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 17 plproxy_17 plproxy_17-2.11.0-2PGDG.rhel9.aarch64.rpm pgdg 2.11.0 43.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/plproxy_17-2.11.0-2PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 17 plproxy_17 plproxy_17-2.11.0-6PGDG.rhel9.8.aarch64.rpm pgdg 2.11.0 43.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/plproxy_17-2.11.0-6PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 17 plproxy_17 plproxy_17-2.11.0-1PIGSTY.el9.aarch64.rpm pigsty 2.11.0 41.6KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/plproxy_17-2.11.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 17 plproxy_17 plproxy_17-2.11.0-4PGDG.rhel10.x86_64.rpm pgdg 2.11.0 46.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/plproxy_17-2.11.0-4PGDG.rhel10.x86_64.rpm
-@ el10.aarch64 17 plproxy_17 plproxy_17-2.11.0-4PGDG.rhel10.aarch64.rpm pgdg 2.11.0 44.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/plproxy_17-2.11.0-4PGDG.rhel10.aarch64.rpm
+@ el10.x86_64 17 plproxy_17 plproxy_17-2.11.0-6PGDG.rhel10.2.x86_64.rpm pgdg 2.11.0 46.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/plproxy_17-2.11.0-6PGDG.rhel10.2.x86_64.rpm
+@ el10.aarch64 17 plproxy_17 plproxy_17-2.11.0-6PGDG.rhel10.2.aarch64.rpm pgdg 2.11.0 44.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/plproxy_17-2.11.0-6PGDG.rhel10.2.aarch64.rpm
 @ d12.x86_64 17 postgresql-17-plproxy postgresql-17-plproxy_2.11.0-13.pgdg12+1_amd64.deb pgdg 2.11.0 133.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-plproxy/postgresql-17-plproxy_2.11.0-13.pgdg12+1_amd64.deb
 @ d12.aarch64 17 postgresql-17-plproxy postgresql-17-plproxy_2.11.0-13.pgdg12+1_arm64.deb pgdg 2.11.0 130.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-plproxy/postgresql-17-plproxy_2.11.0-13.pgdg12+1_arm64.deb
 @ d13.x86_64 17 postgresql-17-plproxy postgresql-17-plproxy_2.11.0-13.pgdg13+1_amd64.deb pgdg 2.11.0 133.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-plproxy/postgresql-17-plproxy_2.11.0-13.pgdg13+1_amd64.deb
@@ -108,10 +108,12 @@ weight: 2520
 @ u26.aarch64 17 postgresql-17-plproxy postgresql-17-plproxy_2.11.0-13.pgdg26.04+1_arm64.deb pgdg 2.11.0 127.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-plproxy/postgresql-17-plproxy_2.11.0-13.pgdg26.04+1_arm64.deb
 @ el8.x86_64 16 plproxy_16 plproxy_16-2.11.0-1PIGSTY.el8.x86_64.rpm pigsty 2.11.0 44.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/plproxy_16-2.11.0-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 16 plproxy_16 plproxy_16-2.11.0-1PIGSTY.el8.aarch64.rpm pigsty 2.11.0 42.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/plproxy_16-2.11.0-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 16 plproxy_16 plproxy_16-2.11.0-6PGDG.rhel9.8.x86_64.rpm pgdg 2.11.0 45.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/plproxy_16-2.11.0-6PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 16 plproxy_16 plproxy_16-2.11.0-1PIGSTY.el9.x86_64.rpm pigsty 2.11.0 43.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/plproxy_16-2.11.0-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 16 plproxy_16 plproxy_16-2.11.0-6PGDG.rhel9.8.aarch64.rpm pgdg 2.11.0 43.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/plproxy_16-2.11.0-6PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 16 plproxy_16 plproxy_16-2.11.0-1PIGSTY.el9.aarch64.rpm pigsty 2.11.0 41.6KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/plproxy_16-2.11.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 16 plproxy_16 plproxy_16-2.11.0-4PGDG.rhel10.x86_64.rpm pgdg 2.11.0 46.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/plproxy_16-2.11.0-4PGDG.rhel10.x86_64.rpm
-@ el10.aarch64 16 plproxy_16 plproxy_16-2.11.0-4PGDG.rhel10.aarch64.rpm pgdg 2.11.0 44.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/plproxy_16-2.11.0-4PGDG.rhel10.aarch64.rpm
+@ el10.x86_64 16 plproxy_16 plproxy_16-2.11.0-6PGDG.rhel10.2.x86_64.rpm pgdg 2.11.0 46.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/plproxy_16-2.11.0-6PGDG.rhel10.2.x86_64.rpm
+@ el10.aarch64 16 plproxy_16 plproxy_16-2.11.0-6PGDG.rhel10.2.aarch64.rpm pgdg 2.11.0 44.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/plproxy_16-2.11.0-6PGDG.rhel10.2.aarch64.rpm
 @ d12.x86_64 16 postgresql-16-plproxy postgresql-16-plproxy_2.11.0-13.pgdg12+1_amd64.deb pgdg 2.11.0 133.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-plproxy/postgresql-16-plproxy_2.11.0-13.pgdg12+1_amd64.deb
 @ d12.aarch64 16 postgresql-16-plproxy postgresql-16-plproxy_2.11.0-13.pgdg12+1_arm64.deb pgdg 2.11.0 129.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-plproxy/postgresql-16-plproxy_2.11.0-13.pgdg12+1_arm64.deb
 @ d13.x86_64 16 postgresql-16-plproxy postgresql-16-plproxy_2.11.0-13.pgdg13+1_amd64.deb pgdg 2.11.0 133.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-plproxy/postgresql-16-plproxy_2.11.0-13.pgdg13+1_amd64.deb
@@ -128,14 +130,12 @@ weight: 2520
 @ el8.aarch64 15 plproxy_15 plproxy_15-2.11.0-1PIGSTY.el8.aarch64.rpm pigsty 2.11.0 43.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/plproxy_15-2.11.0-1PIGSTY.el8.aarch64.rpm
 @ el8.aarch64 15 plproxy_15 plproxy_15-2.11.0-1PGDG.rhel8.aarch64.rpm pgdg 2.11.0 46.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/plproxy_15-2.11.0-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 15 plproxy_15 plproxy_15-2.10.0-3.rhel8.aarch64.rpm pgdg 2.10.0 142.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/plproxy_15-2.10.0-3.rhel8.aarch64.rpm
+@ el9.x86_64 15 plproxy_15 plproxy_15-2.11.0-6PGDG.rhel9.8.x86_64.rpm pgdg 2.11.0 49.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/plproxy_15-2.11.0-6PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 15 plproxy_15 plproxy_15-2.11.0-1PIGSTY.el9.x86_64.rpm pigsty 2.11.0 47.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/plproxy_15-2.11.0-1PIGSTY.el9.x86_64.rpm
-@ el9.x86_64 15 plproxy_15 plproxy_15-2.11.0-1PGDG.rhel9.x86_64.rpm pgdg 2.11.0 49.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/plproxy_15-2.11.0-1PGDG.rhel9.x86_64.rpm
-@ el9.x86_64 15 plproxy_15 plproxy_15-2.10.0-3.rhel9.x86_64.rpm pgdg 2.10.0 146.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/plproxy_15-2.10.0-3.rhel9.x86_64.rpm
+@ el9.aarch64 15 plproxy_15 plproxy_15-2.11.0-6PGDG.rhel9.8.aarch64.rpm pgdg 2.11.0 47.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/plproxy_15-2.11.0-6PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 15 plproxy_15 plproxy_15-2.11.0-1PIGSTY.el9.aarch64.rpm pigsty 2.11.0 45.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/plproxy_15-2.11.0-1PIGSTY.el9.aarch64.rpm
-@ el9.aarch64 15 plproxy_15 plproxy_15-2.11.0-1PGDG.rhel9.aarch64.rpm pgdg 2.11.0 46.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/plproxy_15-2.11.0-1PGDG.rhel9.aarch64.rpm
-@ el9.aarch64 15 plproxy_15 plproxy_15-2.10.0-3.rhel9.aarch64.rpm pgdg 2.10.0 144.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/plproxy_15-2.10.0-3.rhel9.aarch64.rpm
-@ el10.x86_64 15 plproxy_15 plproxy_15-2.11.0-4PGDG.rhel10.x86_64.rpm pgdg 2.11.0 49.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/plproxy_15-2.11.0-4PGDG.rhel10.x86_64.rpm
-@ el10.aarch64 15 plproxy_15 plproxy_15-2.11.0-4PGDG.rhel10.aarch64.rpm pgdg 2.11.0 48.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/plproxy_15-2.11.0-4PGDG.rhel10.aarch64.rpm
+@ el10.x86_64 15 plproxy_15 plproxy_15-2.11.0-6PGDG.rhel10.2.x86_64.rpm pgdg 2.11.0 49.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/plproxy_15-2.11.0-6PGDG.rhel10.2.x86_64.rpm
+@ el10.aarch64 15 plproxy_15 plproxy_15-2.11.0-6PGDG.rhel10.2.aarch64.rpm pgdg 2.11.0 47.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/plproxy_15-2.11.0-6PGDG.rhel10.2.aarch64.rpm
 @ d12.x86_64 15 postgresql-15-plproxy postgresql-15-plproxy_2.11.0-13.pgdg12+1_amd64.deb pgdg 2.11.0 134.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-plproxy/postgresql-15-plproxy_2.11.0-13.pgdg12+1_amd64.deb
 @ d12.aarch64 15 postgresql-15-plproxy postgresql-15-plproxy_2.11.0-13.pgdg12+1_arm64.deb pgdg 2.11.0 131.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-plproxy/postgresql-15-plproxy_2.11.0-13.pgdg12+1_arm64.deb
 @ d13.x86_64 15 postgresql-15-plproxy postgresql-15-plproxy_2.11.0-13.pgdg13+1_amd64.deb pgdg 2.11.0 135.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-plproxy/postgresql-15-plproxy_2.11.0-13.pgdg13+1_amd64.deb
@@ -152,13 +152,12 @@ weight: 2520
 @ el8.aarch64 14 plproxy_14 plproxy_14-2.11.0-1PIGSTY.el8.aarch64.rpm pigsty 2.11.0 43.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/plproxy_14-2.11.0-1PIGSTY.el8.aarch64.rpm
 @ el8.aarch64 14 plproxy_14 plproxy_14-2.11.0-1PGDG.rhel8.aarch64.rpm pgdg 2.11.0 46.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/plproxy_14-2.11.0-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 14 plproxy_14 plproxy_14-2.10.0-3.rhel8.aarch64.rpm pgdg 2.10.0 140.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/plproxy_14-2.10.0-3.rhel8.aarch64.rpm
+@ el9.x86_64 14 plproxy_14 plproxy_14-2.11.0-6PGDG.rhel9.8.x86_64.rpm pgdg 2.11.0 48.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/plproxy_14-2.11.0-6PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 14 plproxy_14 plproxy_14-2.11.0-1PIGSTY.el9.x86_64.rpm pigsty 2.11.0 47.1KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/plproxy_14-2.11.0-1PIGSTY.el9.x86_64.rpm
-@ el9.x86_64 14 plproxy_14 plproxy_14-2.11.0-1PGDG.rhel9.x86_64.rpm pgdg 2.11.0 48.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/plproxy_14-2.11.0-1PGDG.rhel9.x86_64.rpm
+@ el9.aarch64 14 plproxy_14 plproxy_14-2.11.0-6PGDG.rhel9.8.aarch64.rpm pgdg 2.11.0 47.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/plproxy_14-2.11.0-6PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 14 plproxy_14 plproxy_14-2.11.0-1PIGSTY.el9.aarch64.rpm pigsty 2.11.0 45.3KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/plproxy_14-2.11.0-1PIGSTY.el9.aarch64.rpm
-@ el9.aarch64 14 plproxy_14 plproxy_14-2.11.0-1PGDG.rhel9.aarch64.rpm pgdg 2.11.0 46.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/plproxy_14-2.11.0-1PGDG.rhel9.aarch64.rpm
-@ el9.aarch64 14 plproxy_14 plproxy_14-2.10.0-3.rhel9.aarch64.rpm pgdg 2.10.0 142.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/plproxy_14-2.10.0-3.rhel9.aarch64.rpm
-@ el10.x86_64 14 plproxy_14 plproxy_14-2.11.0-4PGDG.rhel10.x86_64.rpm pgdg 2.11.0 49.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/plproxy_14-2.11.0-4PGDG.rhel10.x86_64.rpm
-@ el10.aarch64 14 plproxy_14 plproxy_14-2.11.0-4PGDG.rhel10.aarch64.rpm pgdg 2.11.0 48.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/plproxy_14-2.11.0-4PGDG.rhel10.aarch64.rpm
+@ el10.x86_64 14 plproxy_14 plproxy_14-2.11.0-6PGDG.rhel10.2.x86_64.rpm pgdg 2.11.0 49.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/plproxy_14-2.11.0-6PGDG.rhel10.2.x86_64.rpm
+@ el10.aarch64 14 plproxy_14 plproxy_14-2.11.0-6PGDG.rhel10.2.aarch64.rpm pgdg 2.11.0 47.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/plproxy_14-2.11.0-6PGDG.rhel10.2.aarch64.rpm
 @ d12.x86_64 14 postgresql-14-plproxy postgresql-14-plproxy_2.11.0-13.pgdg12+1_amd64.deb pgdg 2.11.0 134.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-plproxy/postgresql-14-plproxy_2.11.0-13.pgdg12+1_amd64.deb
 @ d12.aarch64 14 postgresql-14-plproxy postgresql-14-plproxy_2.11.0-13.pgdg12+1_arm64.deb pgdg 2.11.0 130.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-plproxy/postgresql-14-plproxy_2.11.0-13.pgdg12+1_arm64.deb
 @ d13.x86_64 14 postgresql-14-plproxy postgresql-14-plproxy_2.11.0-13.pgdg13+1_amd64.deb pgdg 2.11.0 134.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-plproxy/postgresql-14-plproxy_2.11.0-13.pgdg13+1_amd64.deb

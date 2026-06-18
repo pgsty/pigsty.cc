@@ -52,10 +52,10 @@ weight: 4240
 |:--:|:--:|:--:|:--:|:--:|:--:|
 | el8.x86_64 | AVAIL PIGSTY 1.10.0 2 | AVAIL PIGSTY 1.10.0 2 | AVAIL PIGSTY 1.10.0 2 | AVAIL PIGSTY 1.10.0 2 | AVAIL PIGSTY 1.10.0 2 |
 | el8.aarch64 | AVAIL PIGSTY 1.10.0 2 | AVAIL PIGSTY 1.10.0 2 | AVAIL PIGSTY 1.10.0 2 | AVAIL PIGSTY 1.10.0 2 | AVAIL PIGSTY 1.10.0 2 |
-| el9.x86_64 | AVAIL PIGSTY 1.10.0 2 | AVAIL PIGSTY 1.10.0 2 | AVAIL PIGSTY 1.10.0 2 | AVAIL PIGSTY 1.10.0 2 | AVAIL PIGSTY 1.10.0 2 |
-| el9.aarch64 | AVAIL PIGSTY 1.10.0 2 | AVAIL PIGSTY 1.10.0 2 | AVAIL PIGSTY 1.10.0 2 | AVAIL PIGSTY 1.10.0 2 | AVAIL PIGSTY 1.10.0 2 |
-| el10.x86_64 | AVAIL PIGSTY 1.10.0 2 | AVAIL PIGSTY 1.10.0 2 | AVAIL PIGSTY 1.10.0 2 | AVAIL PIGSTY 1.10.0 2 | AVAIL PIGSTY 1.10.0 2 |
-| el10.aarch64 | AVAIL PIGSTY 1.10.0 2 | AVAIL PIGSTY 1.10.0 2 | AVAIL PIGSTY 1.10.0 2 | AVAIL PIGSTY 1.10.0 2 | AVAIL PIGSTY 1.10.0 2 |
+| el9.x86_64 | AVAIL PGDG 1.10.0 2 | AVAIL PGDG 1.10.0 2 | AVAIL PGDG 1.10.0 2 | AVAIL PGDG 1.10.0 2 | AVAIL PGDG 1.10.0 2 |
+| el9.aarch64 | AVAIL PGDG 1.10.0 2 | AVAIL PGDG 1.10.0 2 | AVAIL PGDG 1.10.0 2 | AVAIL PGDG 1.10.0 2 | AVAIL PGDG 1.10.0 2 |
+| el10.x86_64 | AVAIL PGDG 1.10.0 2 | AVAIL PGDG 1.10.0 2 | AVAIL PGDG 1.10.0 2 | AVAIL PGDG 1.10.0 2 | AVAIL PGDG 1.10.0 2 |
+| el10.aarch64 | AVAIL PGDG 1.10.0 2 | AVAIL PGDG 1.10.0 2 | AVAIL PGDG 1.10.0 2 | AVAIL PGDG 1.10.0 2 | AVAIL PGDG 1.10.0 2 |
 | d12.x86_64 | AVAIL PGDG 1.10.0 2 | AVAIL PGDG 1.10.0 2 | AVAIL PGDG 1.10.0 2 | AVAIL PGDG 1.10.0 2 | AVAIL PGDG 1.10.0 2 |
 | d12.aarch64 | AVAIL PGDG 1.10.0 2 | AVAIL PGDG 1.10.0 2 | AVAIL PGDG 1.10.0 2 | AVAIL PGDG 1.10.0 2 | AVAIL PGDG 1.10.0 2 |
 | d13.x86_64 | AVAIL PGDG 1.10.0 2 | AVAIL PGDG 1.10.0 2 | AVAIL PGDG 1.10.0 2 | AVAIL PGDG 1.10.0 2 | AVAIL PGDG 1.10.0 2 |
@@ -70,14 +70,14 @@ weight: 4240
 @ el8.x86_64 18 icu_ext_18 icu_ext_18-1.10.0-1PGDG.rhel8.x86_64.rpm pgdg 1.10.0 47.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/icu_ext_18-1.10.0-1PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 18 icu_ext_18 icu_ext_18-1.10.0-1PIGSTY.el8.aarch64.rpm pigsty 1.10.0 49.8KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/icu_ext_18-1.10.0-1PIGSTY.el8.aarch64.rpm
 @ el8.aarch64 18 icu_ext_18 icu_ext_18-1.10.0-1PGDG.rhel8.aarch64.rpm pgdg 1.10.0 46.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/icu_ext_18-1.10.0-1PGDG.rhel8.aarch64.rpm
+@ el9.x86_64 18 icu_ext_18 icu_ext_18-1.10.0-3PGDG.rhel9.8.x86_64.rpm pgdg 1.10.0 48.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/icu_ext_18-1.10.0-3PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 18 icu_ext_18 icu_ext_18-1.10.0-1PIGSTY.el9.x86_64.rpm pigsty 1.10.0 49.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/icu_ext_18-1.10.0-1PIGSTY.el9.x86_64.rpm
-@ el9.x86_64 18 icu_ext_18 icu_ext_18-1.10.0-1PGDG.rhel9.x86_64.rpm pgdg 1.10.0 48.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/icu_ext_18-1.10.0-1PGDG.rhel9.x86_64.rpm
+@ el9.aarch64 18 icu_ext_18 icu_ext_18-1.10.0-3PGDG.rhel9.8.aarch64.rpm pgdg 1.10.0 47.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/icu_ext_18-1.10.0-3PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 18 icu_ext_18 icu_ext_18-1.10.0-1PIGSTY.el9.aarch64.rpm pigsty 1.10.0 47.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/icu_ext_18-1.10.0-1PIGSTY.el9.aarch64.rpm
-@ el9.aarch64 18 icu_ext_18 icu_ext_18-1.10.0-1PGDG.rhel9.aarch64.rpm pgdg 1.10.0 46.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/icu_ext_18-1.10.0-1PGDG.rhel9.aarch64.rpm
+@ el10.x86_64 18 icu_ext_18 icu_ext_18-1.10.0-3PGDG.rhel10.2.x86_64.rpm pgdg 1.10.0 49.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/icu_ext_18-1.10.0-3PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 18 icu_ext_18 icu_ext_18-1.10.0-1PIGSTY.el10.x86_64.rpm pigsty 1.10.0 50.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/icu_ext_18-1.10.0-1PIGSTY.el10.x86_64.rpm
-@ el10.x86_64 18 icu_ext_18 icu_ext_18-1.10.0-1PGDG.rhel10.x86_64.rpm pgdg 1.10.0 49.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/icu_ext_18-1.10.0-1PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 18 icu_ext_18 icu_ext_18-1.10.0-3PGDG.rhel10.2.aarch64.rpm pgdg 1.10.0 47.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/icu_ext_18-1.10.0-3PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 18 icu_ext_18 icu_ext_18-1.10.0-1PIGSTY.el10.aarch64.rpm pigsty 1.10.0 48.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/icu_ext_18-1.10.0-1PIGSTY.el10.aarch64.rpm
-@ el10.aarch64 18 icu_ext_18 icu_ext_18-1.10.0-1PGDG.rhel10.aarch64.rpm pgdg 1.10.0 47.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/icu_ext_18-1.10.0-1PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 18 postgresql-18-icu-ext postgresql-18-icu-ext_1.10.0-4.pgdg12+1_amd64.deb pgdg 1.10.0 94.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/i/icu-ext/postgresql-18-icu-ext_1.10.0-4.pgdg12+1_amd64.deb
 @ d12.x86_64 18 postgresql-18-icu-ext postgresql-18-icu-ext_1.10.0-3.pgdg12+1_amd64.deb pgdg 1.10.0 94.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/i/icu-ext/postgresql-18-icu-ext_1.10.0-3.pgdg12+1_amd64.deb
 @ d12.aarch64 18 postgresql-18-icu-ext postgresql-18-icu-ext_1.10.0-4.pgdg12+1_arm64.deb pgdg 1.10.0 92.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/i/icu-ext/postgresql-18-icu-ext_1.10.0-4.pgdg12+1_arm64.deb
@@ -102,14 +102,14 @@ weight: 4240
 @ el8.x86_64 17 icu_ext_17 icu_ext_17-1.9.0-1PGDG.rhel8.x86_64.rpm pgdg 1.9.0 46.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/icu_ext_17-1.9.0-1PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 17 icu_ext_17 icu_ext_17-1.10.0-1PIGSTY.el8.aarch64.rpm pigsty 1.10.0 49.8KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/icu_ext_17-1.10.0-1PIGSTY.el8.aarch64.rpm
 @ el8.aarch64 17 icu_ext_17 icu_ext_17-1.9.0-1PGDG.rhel8.aarch64.rpm pgdg 1.9.0 45.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/icu_ext_17-1.9.0-1PGDG.rhel8.aarch64.rpm
+@ el9.x86_64 17 icu_ext_17 icu_ext_17-1.10.0-3PGDG.rhel9.8.x86_64.rpm pgdg 1.10.0 48.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/icu_ext_17-1.10.0-3PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 17 icu_ext_17 icu_ext_17-1.10.0-1PIGSTY.el9.x86_64.rpm pigsty 1.10.0 49.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/icu_ext_17-1.10.0-1PIGSTY.el9.x86_64.rpm
-@ el9.x86_64 17 icu_ext_17 icu_ext_17-1.9.0-1PGDG.rhel9.x86_64.rpm pgdg 1.9.0 47.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/icu_ext_17-1.9.0-1PGDG.rhel9.x86_64.rpm
+@ el9.aarch64 17 icu_ext_17 icu_ext_17-1.10.0-3PGDG.rhel9.8.aarch64.rpm pgdg 1.10.0 47.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/icu_ext_17-1.10.0-3PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 17 icu_ext_17 icu_ext_17-1.10.0-1PIGSTY.el9.aarch64.rpm pigsty 1.10.0 47.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/icu_ext_17-1.10.0-1PIGSTY.el9.aarch64.rpm
-@ el9.aarch64 17 icu_ext_17 icu_ext_17-1.9.0-1PGDG.rhel9.aarch64.rpm pgdg 1.9.0 46.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/icu_ext_17-1.9.0-1PGDG.rhel9.aarch64.rpm
+@ el10.x86_64 17 icu_ext_17 icu_ext_17-1.10.0-3PGDG.rhel10.2.x86_64.rpm pgdg 1.10.0 49.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/icu_ext_17-1.10.0-3PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 17 icu_ext_17 icu_ext_17-1.10.0-1PIGSTY.el10.x86_64.rpm pigsty 1.10.0 50.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/icu_ext_17-1.10.0-1PIGSTY.el10.x86_64.rpm
-@ el10.x86_64 17 icu_ext_17 icu_ext_17-1.9.0-1PGDG.rhel10.x86_64.rpm pgdg 1.9.0 48.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/icu_ext_17-1.9.0-1PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 17 icu_ext_17 icu_ext_17-1.10.0-3PGDG.rhel10.2.aarch64.rpm pgdg 1.10.0 47.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/icu_ext_17-1.10.0-3PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 17 icu_ext_17 icu_ext_17-1.10.0-1PIGSTY.el10.aarch64.rpm pigsty 1.10.0 48.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/icu_ext_17-1.10.0-1PIGSTY.el10.aarch64.rpm
-@ el10.aarch64 17 icu_ext_17 icu_ext_17-1.9.0-1PGDG.rhel10.aarch64.rpm pgdg 1.9.0 46.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/icu_ext_17-1.9.0-1PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 17 postgresql-17-icu-ext postgresql-17-icu-ext_1.10.0-4.pgdg12+1_amd64.deb pgdg 1.10.0 94.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/i/icu-ext/postgresql-17-icu-ext_1.10.0-4.pgdg12+1_amd64.deb
 @ d12.x86_64 17 postgresql-17-icu-ext postgresql-17-icu-ext_1.10.0-3.pgdg12+1_amd64.deb pgdg 1.10.0 94.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/i/icu-ext/postgresql-17-icu-ext_1.10.0-3.pgdg12+1_amd64.deb
 @ d12.aarch64 17 postgresql-17-icu-ext postgresql-17-icu-ext_1.10.0-4.pgdg12+1_arm64.deb pgdg 1.10.0 92.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/i/icu-ext/postgresql-17-icu-ext_1.10.0-4.pgdg12+1_arm64.deb
@@ -134,14 +134,14 @@ weight: 4240
 @ el8.x86_64 16 icu_ext_16 icu_ext_16-1.9.0-1PGDG.rhel8.x86_64.rpm pgdg 1.9.0 46.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/icu_ext_16-1.9.0-1PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 16 icu_ext_16 icu_ext_16-1.10.0-1PIGSTY.el8.aarch64.rpm pigsty 1.10.0 49.8KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/icu_ext_16-1.10.0-1PIGSTY.el8.aarch64.rpm
 @ el8.aarch64 16 icu_ext_16 icu_ext_16-1.9.0-1PGDG.rhel8.aarch64.rpm pgdg 1.9.0 45.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/icu_ext_16-1.9.0-1PGDG.rhel8.aarch64.rpm
+@ el9.x86_64 16 icu_ext_16 icu_ext_16-1.10.0-3PGDG.rhel9.8.x86_64.rpm pgdg 1.10.0 48.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/icu_ext_16-1.10.0-3PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 16 icu_ext_16 icu_ext_16-1.10.0-1PIGSTY.el9.x86_64.rpm pigsty 1.10.0 49.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/icu_ext_16-1.10.0-1PIGSTY.el9.x86_64.rpm
-@ el9.x86_64 16 icu_ext_16 icu_ext_16-1.9.0-1PGDG.rhel9.x86_64.rpm pgdg 1.9.0 47.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/icu_ext_16-1.9.0-1PGDG.rhel9.x86_64.rpm
+@ el9.aarch64 16 icu_ext_16 icu_ext_16-1.10.0-3PGDG.rhel9.8.aarch64.rpm pgdg 1.10.0 47.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/icu_ext_16-1.10.0-3PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 16 icu_ext_16 icu_ext_16-1.10.0-1PIGSTY.el9.aarch64.rpm pigsty 1.10.0 47.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/icu_ext_16-1.10.0-1PIGSTY.el9.aarch64.rpm
-@ el9.aarch64 16 icu_ext_16 icu_ext_16-1.9.0-1PGDG.rhel9.aarch64.rpm pgdg 1.9.0 45.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/icu_ext_16-1.9.0-1PGDG.rhel9.aarch64.rpm
+@ el10.x86_64 16 icu_ext_16 icu_ext_16-1.10.0-3PGDG.rhel10.2.x86_64.rpm pgdg 1.10.0 49.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/icu_ext_16-1.10.0-3PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 16 icu_ext_16 icu_ext_16-1.10.0-1PIGSTY.el10.x86_64.rpm pigsty 1.10.0 50.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/icu_ext_16-1.10.0-1PIGSTY.el10.x86_64.rpm
-@ el10.x86_64 16 icu_ext_16 icu_ext_16-1.9.0-1PGDG.rhel10.x86_64.rpm pgdg 1.9.0 48.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/icu_ext_16-1.9.0-1PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 16 icu_ext_16 icu_ext_16-1.10.0-3PGDG.rhel10.2.aarch64.rpm pgdg 1.10.0 47.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/icu_ext_16-1.10.0-3PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 16 icu_ext_16 icu_ext_16-1.10.0-1PIGSTY.el10.aarch64.rpm pigsty 1.10.0 48.3KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/icu_ext_16-1.10.0-1PIGSTY.el10.aarch64.rpm
-@ el10.aarch64 16 icu_ext_16 icu_ext_16-1.9.0-1PGDG.rhel10.aarch64.rpm pgdg 1.9.0 46.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/icu_ext_16-1.9.0-1PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 16 postgresql-16-icu-ext postgresql-16-icu-ext_1.10.0-4.pgdg12+1_amd64.deb pgdg 1.10.0 94.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/i/icu-ext/postgresql-16-icu-ext_1.10.0-4.pgdg12+1_amd64.deb
 @ d12.x86_64 16 postgresql-16-icu-ext postgresql-16-icu-ext_1.10.0-3.pgdg12+1_amd64.deb pgdg 1.10.0 94.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/i/icu-ext/postgresql-16-icu-ext_1.10.0-3.pgdg12+1_amd64.deb
 @ d12.aarch64 16 postgresql-16-icu-ext postgresql-16-icu-ext_1.10.0-4.pgdg12+1_arm64.deb pgdg 1.10.0 92.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/i/icu-ext/postgresql-16-icu-ext_1.10.0-4.pgdg12+1_arm64.deb
@@ -166,14 +166,14 @@ weight: 4240
 @ el8.x86_64 15 icu_ext_15 icu_ext_15-1.9.0-1PGDG.rhel8.x86_64.rpm pgdg 1.9.0 46.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/icu_ext_15-1.9.0-1PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 15 icu_ext_15 icu_ext_15-1.10.0-1PIGSTY.el8.aarch64.rpm pigsty 1.10.0 49.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/icu_ext_15-1.10.0-1PIGSTY.el8.aarch64.rpm
 @ el8.aarch64 15 icu_ext_15 icu_ext_15-1.9.0-1PGDG.rhel8.aarch64.rpm pgdg 1.9.0 45.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/icu_ext_15-1.9.0-1PGDG.rhel8.aarch64.rpm
+@ el9.x86_64 15 icu_ext_15 icu_ext_15-1.10.0-3PGDG.rhel9.8.x86_64.rpm pgdg 1.10.0 49.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/icu_ext_15-1.10.0-3PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 15 icu_ext_15 icu_ext_15-1.10.0-1PIGSTY.el9.x86_64.rpm pigsty 1.10.0 50.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/icu_ext_15-1.10.0-1PIGSTY.el9.x86_64.rpm
-@ el9.x86_64 15 icu_ext_15 icu_ext_15-1.9.0-1PGDG.rhel9.x86_64.rpm pgdg 1.9.0 47.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/icu_ext_15-1.9.0-1PGDG.rhel9.x86_64.rpm
+@ el9.aarch64 15 icu_ext_15 icu_ext_15-1.10.0-3PGDG.rhel9.8.aarch64.rpm pgdg 1.10.0 47.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/icu_ext_15-1.10.0-3PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 15 icu_ext_15 icu_ext_15-1.10.0-1PIGSTY.el9.aarch64.rpm pigsty 1.10.0 48.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/icu_ext_15-1.10.0-1PIGSTY.el9.aarch64.rpm
-@ el9.aarch64 15 icu_ext_15 icu_ext_15-1.9.0-1PGDG.rhel9.aarch64.rpm pgdg 1.9.0 46.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/icu_ext_15-1.9.0-1PGDG.rhel9.aarch64.rpm
+@ el10.x86_64 15 icu_ext_15 icu_ext_15-1.10.0-3PGDG.rhel10.2.x86_64.rpm pgdg 1.10.0 49.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/icu_ext_15-1.10.0-3PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 15 icu_ext_15 icu_ext_15-1.10.0-1PIGSTY.el10.x86_64.rpm pigsty 1.10.0 49.9KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/icu_ext_15-1.10.0-1PIGSTY.el10.x86_64.rpm
-@ el10.x86_64 15 icu_ext_15 icu_ext_15-1.9.0-1PGDG.rhel10.x86_64.rpm pgdg 1.9.0 48.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/icu_ext_15-1.9.0-1PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 15 icu_ext_15 icu_ext_15-1.10.0-3PGDG.rhel10.2.aarch64.rpm pgdg 1.10.0 47.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/icu_ext_15-1.10.0-3PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 15 icu_ext_15 icu_ext_15-1.10.0-1PIGSTY.el10.aarch64.rpm pigsty 1.10.0 48.3KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/icu_ext_15-1.10.0-1PIGSTY.el10.aarch64.rpm
-@ el10.aarch64 15 icu_ext_15 icu_ext_15-1.9.0-1PGDG.rhel10.aarch64.rpm pgdg 1.9.0 46.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/icu_ext_15-1.9.0-1PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 15 postgresql-15-icu-ext postgresql-15-icu-ext_1.10.0-4.pgdg12+1_amd64.deb pgdg 1.10.0 94.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/i/icu-ext/postgresql-15-icu-ext_1.10.0-4.pgdg12+1_amd64.deb
 @ d12.x86_64 15 postgresql-15-icu-ext postgresql-15-icu-ext_1.10.0-3.pgdg12+1_amd64.deb pgdg 1.10.0 94.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/i/icu-ext/postgresql-15-icu-ext_1.10.0-3.pgdg12+1_amd64.deb
 @ d12.aarch64 15 postgresql-15-icu-ext postgresql-15-icu-ext_1.10.0-4.pgdg12+1_arm64.deb pgdg 1.10.0 92.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/i/icu-ext/postgresql-15-icu-ext_1.10.0-4.pgdg12+1_arm64.deb
@@ -198,14 +198,14 @@ weight: 4240
 @ el8.x86_64 14 icu_ext_14 icu_ext_14-1.9.0-1PGDG.rhel8.x86_64.rpm pgdg 1.9.0 46.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/icu_ext_14-1.9.0-1PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 14 icu_ext_14 icu_ext_14-1.10.0-1PIGSTY.el8.aarch64.rpm pigsty 1.10.0 49.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/icu_ext_14-1.10.0-1PIGSTY.el8.aarch64.rpm
 @ el8.aarch64 14 icu_ext_14 icu_ext_14-1.9.0-1PGDG.rhel8.aarch64.rpm pgdg 1.9.0 45.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/icu_ext_14-1.9.0-1PGDG.rhel8.aarch64.rpm
+@ el9.x86_64 14 icu_ext_14 icu_ext_14-1.10.0-3PGDG.rhel9.8.x86_64.rpm pgdg 1.10.0 49.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/icu_ext_14-1.10.0-3PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 14 icu_ext_14 icu_ext_14-1.10.0-1PIGSTY.el9.x86_64.rpm pigsty 1.10.0 50.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/icu_ext_14-1.10.0-1PIGSTY.el9.x86_64.rpm
-@ el9.x86_64 14 icu_ext_14 icu_ext_14-1.9.0-1PGDG.rhel9.x86_64.rpm pgdg 1.9.0 48.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/icu_ext_14-1.9.0-1PGDG.rhel9.x86_64.rpm
+@ el9.aarch64 14 icu_ext_14 icu_ext_14-1.10.0-3PGDG.rhel9.8.aarch64.rpm pgdg 1.10.0 47.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/icu_ext_14-1.10.0-3PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 14 icu_ext_14 icu_ext_14-1.10.0-1PIGSTY.el9.aarch64.rpm pigsty 1.10.0 48.2KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/icu_ext_14-1.10.0-1PIGSTY.el9.aarch64.rpm
-@ el9.aarch64 14 icu_ext_14 icu_ext_14-1.9.0-1PGDG.rhel9.aarch64.rpm pgdg 1.9.0 46.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/icu_ext_14-1.9.0-1PGDG.rhel9.aarch64.rpm
+@ el10.x86_64 14 icu_ext_14 icu_ext_14-1.10.0-3PGDG.rhel10.2.x86_64.rpm pgdg 1.10.0 49.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/icu_ext_14-1.10.0-3PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 14 icu_ext_14 icu_ext_14-1.10.0-1PIGSTY.el10.x86_64.rpm pigsty 1.10.0 49.9KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/icu_ext_14-1.10.0-1PIGSTY.el10.x86_64.rpm
-@ el10.x86_64 14 icu_ext_14 icu_ext_14-1.9.0-1PGDG.rhel10.x86_64.rpm pgdg 1.9.0 48.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/icu_ext_14-1.9.0-1PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 14 icu_ext_14 icu_ext_14-1.10.0-3PGDG.rhel10.2.aarch64.rpm pgdg 1.10.0 47.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/icu_ext_14-1.10.0-3PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 14 icu_ext_14 icu_ext_14-1.10.0-1PIGSTY.el10.aarch64.rpm pigsty 1.10.0 48.4KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/icu_ext_14-1.10.0-1PIGSTY.el10.aarch64.rpm
-@ el10.aarch64 14 icu_ext_14 icu_ext_14-1.9.0-1PGDG.rhel10.aarch64.rpm pgdg 1.9.0 46.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/icu_ext_14-1.9.0-1PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 14 postgresql-14-icu-ext postgresql-14-icu-ext_1.10.0-4.pgdg12+1_amd64.deb pgdg 1.10.0 95.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/i/icu-ext/postgresql-14-icu-ext_1.10.0-4.pgdg12+1_amd64.deb
 @ d12.x86_64 14 postgresql-14-icu-ext postgresql-14-icu-ext_1.10.0-3.pgdg12+1_amd64.deb pgdg 1.10.0 94.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/i/icu-ext/postgresql-14-icu-ext_1.10.0-3.pgdg12+1_amd64.deb
 @ d12.aarch64 14 postgresql-14-icu-ext postgresql-14-icu-ext_1.10.0-4.pgdg12+1_arm64.deb pgdg 1.10.0 92.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/i/icu-ext/postgresql-14-icu-ext_1.10.0-4.pgdg12+1_arm64.deb

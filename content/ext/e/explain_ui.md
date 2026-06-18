@@ -38,7 +38,7 @@ weight: 6540
 {.ext-table .ext-table--rel}
 
 
-> manual updated pgrx by Vonng
+> pgrx patched to 0.18.1.
 
 
 ## 版本
@@ -67,8 +67,8 @@ weight: 6540
 | u22.aarch64 | AVAIL PIGSTY 0.0.2 1 | AVAIL PIGSTY 0.0.2 1 | AVAIL PIGSTY 0.0.2 1 | AVAIL PIGSTY 0.0.2 1 | AVAIL PIGSTY 0.0.2 1 |
 | u24.x86_64 | AVAIL PIGSTY 0.0.2 1 | AVAIL PIGSTY 0.0.2 1 | AVAIL PIGSTY 0.0.2 1 | AVAIL PIGSTY 0.0.2 1 | AVAIL PIGSTY 0.0.2 1 |
 | u24.aarch64 | AVAIL PIGSTY 0.0.2 1 | AVAIL PIGSTY 0.0.2 1 | AVAIL PIGSTY 0.0.2 1 | AVAIL PIGSTY 0.0.2 1 | AVAIL PIGSTY 0.0.2 1 |
-| u26.x86_64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| u26.aarch64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| u26.x86_64 | AVAIL PIGSTY 0.0.2 1 | AVAIL PIGSTY 0.0.2 1 | AVAIL PIGSTY 0.0.2 1 | AVAIL PIGSTY 0.0.2 1 | AVAIL PIGSTY 0.0.2 1 |
+| u26.aarch64 | AVAIL PIGSTY 0.0.2 1 | AVAIL PIGSTY 0.0.2 1 | AVAIL PIGSTY 0.0.2 1 | AVAIL PIGSTY 0.0.2 1 | AVAIL PIGSTY 0.0.2 1 |
 @ el8.x86_64 18 pg_explain_ui_18 pg_explain_ui_18-0.0.2-1PIGSTY.el8.x86_64.rpm pigsty 0.0.2 1.1MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_explain_ui_18-0.0.2-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 18 pg_explain_ui_18 pg_explain_ui_18-0.0.2-1PIGSTY.el8.aarch64.rpm pigsty 0.0.2 935.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_explain_ui_18-0.0.2-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 18 pg_explain_ui_18 pg_explain_ui_18-0.0.2-1PIGSTY.el9.x86_64.rpm pigsty 0.0.2 1.1MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_explain_ui_18-0.0.2-1PIGSTY.el9.x86_64.rpm
@@ -83,6 +83,8 @@ weight: 6540
 @ u22.aarch64 18 postgresql-18-pg-explain-ui postgresql-18-pg-explain-ui_0.0.2-1PIGSTY~jammy_arm64.deb pigsty 0.0.2 846.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-explain-ui/postgresql-18-pg-explain-ui_0.0.2-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 18 postgresql-18-pg-explain-ui postgresql-18-pg-explain-ui_0.0.2-1PIGSTY~noble_amd64.deb pigsty 0.0.2 968.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-explain-ui/postgresql-18-pg-explain-ui_0.0.2-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 18 postgresql-18-pg-explain-ui postgresql-18-pg-explain-ui_0.0.2-1PIGSTY~noble_arm64.deb pigsty 0.0.2 836.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-explain-ui/postgresql-18-pg-explain-ui_0.0.2-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 18 postgresql-18-pg-explain-ui postgresql-18-pg-explain-ui_0.0.2-2PIGSTY~resolute_amd64.deb pigsty 0.0.2 1.8MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-explain-ui/postgresql-18-pg-explain-ui_0.0.2-2PIGSTY~resolute_amd64.deb
+@ u26.aarch64 18 postgresql-18-pg-explain-ui postgresql-18-pg-explain-ui_0.0.2-2PIGSTY~resolute_arm64.deb pigsty 0.0.2 1.7MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-explain-ui/postgresql-18-pg-explain-ui_0.0.2-2PIGSTY~resolute_arm64.deb
 @ el8.x86_64 17 pg_explain_ui_17 pg_explain_ui_17-0.0.2-1PIGSTY.el8.x86_64.rpm pigsty 0.0.2 1.1MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_explain_ui_17-0.0.2-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 17 pg_explain_ui_17 pg_explain_ui_17-0.0.2-1PIGSTY.el8.aarch64.rpm pigsty 0.0.2 935.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_explain_ui_17-0.0.2-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 17 pg_explain_ui_17 pg_explain_ui_17-0.0.2-1PIGSTY.el9.x86_64.rpm pigsty 0.0.2 1.1MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_explain_ui_17-0.0.2-1PIGSTY.el9.x86_64.rpm
@@ -97,6 +99,8 @@ weight: 6540
 @ u22.aarch64 17 postgresql-17-pg-explain-ui postgresql-17-pg-explain-ui_0.0.2-1PIGSTY~jammy_arm64.deb pigsty 0.0.2 846.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-explain-ui/postgresql-17-pg-explain-ui_0.0.2-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 17 postgresql-17-pg-explain-ui postgresql-17-pg-explain-ui_0.0.2-1PIGSTY~noble_amd64.deb pigsty 0.0.2 970.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-explain-ui/postgresql-17-pg-explain-ui_0.0.2-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 17 postgresql-17-pg-explain-ui postgresql-17-pg-explain-ui_0.0.2-1PIGSTY~noble_arm64.deb pigsty 0.0.2 836.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-explain-ui/postgresql-17-pg-explain-ui_0.0.2-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 17 postgresql-17-pg-explain-ui postgresql-17-pg-explain-ui_0.0.2-2PIGSTY~resolute_amd64.deb pigsty 0.0.2 1.8MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-explain-ui/postgresql-17-pg-explain-ui_0.0.2-2PIGSTY~resolute_amd64.deb
+@ u26.aarch64 17 postgresql-17-pg-explain-ui postgresql-17-pg-explain-ui_0.0.2-2PIGSTY~resolute_arm64.deb pigsty 0.0.2 1.7MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-explain-ui/postgresql-17-pg-explain-ui_0.0.2-2PIGSTY~resolute_arm64.deb
 @ el8.x86_64 16 pg_explain_ui_16 pg_explain_ui_16-0.0.2-1PIGSTY.el8.x86_64.rpm pigsty 0.0.2 1.1MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_explain_ui_16-0.0.2-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 16 pg_explain_ui_16 pg_explain_ui_16-0.0.2-1PIGSTY.el8.aarch64.rpm pigsty 0.0.2 935.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_explain_ui_16-0.0.2-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 16 pg_explain_ui_16 pg_explain_ui_16-0.0.2-1PIGSTY.el9.x86_64.rpm pigsty 0.0.2 1.1MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_explain_ui_16-0.0.2-1PIGSTY.el9.x86_64.rpm
@@ -111,6 +115,8 @@ weight: 6540
 @ u22.aarch64 16 postgresql-16-pg-explain-ui postgresql-16-pg-explain-ui_0.0.2-1PIGSTY~jammy_arm64.deb pigsty 0.0.2 846.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-explain-ui/postgresql-16-pg-explain-ui_0.0.2-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 16 postgresql-16-pg-explain-ui postgresql-16-pg-explain-ui_0.0.2-1PIGSTY~noble_amd64.deb pigsty 0.0.2 970.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-explain-ui/postgresql-16-pg-explain-ui_0.0.2-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 16 postgresql-16-pg-explain-ui postgresql-16-pg-explain-ui_0.0.2-1PIGSTY~noble_arm64.deb pigsty 0.0.2 837.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-explain-ui/postgresql-16-pg-explain-ui_0.0.2-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 16 postgresql-16-pg-explain-ui postgresql-16-pg-explain-ui_0.0.2-2PIGSTY~resolute_amd64.deb pigsty 0.0.2 1.8MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-explain-ui/postgresql-16-pg-explain-ui_0.0.2-2PIGSTY~resolute_amd64.deb
+@ u26.aarch64 16 postgresql-16-pg-explain-ui postgresql-16-pg-explain-ui_0.0.2-2PIGSTY~resolute_arm64.deb pigsty 0.0.2 1.7MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-explain-ui/postgresql-16-pg-explain-ui_0.0.2-2PIGSTY~resolute_arm64.deb
 @ el8.x86_64 15 pg_explain_ui_15 pg_explain_ui_15-0.0.2-1PIGSTY.el8.x86_64.rpm pigsty 0.0.2 1.1MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_explain_ui_15-0.0.2-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 15 pg_explain_ui_15 pg_explain_ui_15-0.0.2-1PIGSTY.el8.aarch64.rpm pigsty 0.0.2 935.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_explain_ui_15-0.0.2-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 15 pg_explain_ui_15 pg_explain_ui_15-0.0.2-1PIGSTY.el9.x86_64.rpm pigsty 0.0.2 1.1MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_explain_ui_15-0.0.2-1PIGSTY.el9.x86_64.rpm
@@ -125,6 +131,8 @@ weight: 6540
 @ u22.aarch64 15 postgresql-15-pg-explain-ui postgresql-15-pg-explain-ui_0.0.2-1PIGSTY~jammy_arm64.deb pigsty 0.0.2 847.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-explain-ui/postgresql-15-pg-explain-ui_0.0.2-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 15 postgresql-15-pg-explain-ui postgresql-15-pg-explain-ui_0.0.2-1PIGSTY~noble_amd64.deb pigsty 0.0.2 969.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-explain-ui/postgresql-15-pg-explain-ui_0.0.2-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 15 postgresql-15-pg-explain-ui postgresql-15-pg-explain-ui_0.0.2-1PIGSTY~noble_arm64.deb pigsty 0.0.2 837.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-explain-ui/postgresql-15-pg-explain-ui_0.0.2-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 15 postgresql-15-pg-explain-ui postgresql-15-pg-explain-ui_0.0.2-2PIGSTY~resolute_amd64.deb pigsty 0.0.2 1.8MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-explain-ui/postgresql-15-pg-explain-ui_0.0.2-2PIGSTY~resolute_amd64.deb
+@ u26.aarch64 15 postgresql-15-pg-explain-ui postgresql-15-pg-explain-ui_0.0.2-2PIGSTY~resolute_arm64.deb pigsty 0.0.2 1.6MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-explain-ui/postgresql-15-pg-explain-ui_0.0.2-2PIGSTY~resolute_arm64.deb
 @ el8.x86_64 14 pg_explain_ui_14 pg_explain_ui_14-0.0.2-1PIGSTY.el8.x86_64.rpm pigsty 0.0.2 1.1MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_explain_ui_14-0.0.2-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 14 pg_explain_ui_14 pg_explain_ui_14-0.0.2-1PIGSTY.el8.aarch64.rpm pigsty 0.0.2 935.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_explain_ui_14-0.0.2-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 14 pg_explain_ui_14 pg_explain_ui_14-0.0.2-1PIGSTY.el9.x86_64.rpm pigsty 0.0.2 1.1MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_explain_ui_14-0.0.2-1PIGSTY.el9.x86_64.rpm
@@ -139,6 +147,8 @@ weight: 6540
 @ u22.aarch64 14 postgresql-14-pg-explain-ui postgresql-14-pg-explain-ui_0.0.2-1PIGSTY~jammy_arm64.deb pigsty 0.0.2 847.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-explain-ui/postgresql-14-pg-explain-ui_0.0.2-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 14 postgresql-14-pg-explain-ui postgresql-14-pg-explain-ui_0.0.2-1PIGSTY~noble_amd64.deb pigsty 0.0.2 969.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-explain-ui/postgresql-14-pg-explain-ui_0.0.2-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 14 postgresql-14-pg-explain-ui postgresql-14-pg-explain-ui_0.0.2-1PIGSTY~noble_arm64.deb pigsty 0.0.2 837.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-explain-ui/postgresql-14-pg-explain-ui_0.0.2-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 14 postgresql-14-pg-explain-ui postgresql-14-pg-explain-ui_0.0.2-2PIGSTY~resolute_amd64.deb pigsty 0.0.2 1.8MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-explain-ui/postgresql-14-pg-explain-ui_0.0.2-2PIGSTY~resolute_amd64.deb
+@ u26.aarch64 14 postgresql-14-pg-explain-ui postgresql-14-pg-explain-ui_0.0.2-2PIGSTY~resolute_arm64.deb pigsty 0.0.2 1.6MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-explain-ui/postgresql-14-pg-explain-ui_0.0.2-2PIGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建

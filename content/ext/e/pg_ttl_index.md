@@ -2,7 +2,7 @@
 title: "pg_ttl_index"
 linkTitle: "pg_ttl_index"
 description: "基于TTL索引的自动数据过期清理"
-weight: 2740
+weight: 2730
 ---
 
 <div class="ext-cards">
@@ -30,7 +30,7 @@ weight: 2740
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
 |:-----:|:-------------------------------------------------------------------------|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|:----------|
-| 2740  | [**`pg_ttl_index`**](/ext/e/pg_ttl_index) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
+| 2730  | [**`pg_ttl_index`**](/ext/e/pg_ttl_index) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
 {.ext-table}
 
 | **相关扩展** | [`temporal_tables`](/ext/e/temporal_tables) [`periods`](/ext/e/periods) [`hll`](/ext/e/hll) [`rum`](/ext/e/rum) [`pg_partman`](/ext/e/pg_partman) [`pg_cron`](/ext/e/pg_cron) [`pg_task`](/ext/e/pg_task) [`timescaledb`](/ext/e/timescaledb) |

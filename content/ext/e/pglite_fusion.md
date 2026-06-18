@@ -38,6 +38,9 @@ weight: 3590
 {.ext-table .ext-table--rel}
 
 
+> pgrx patched to 0.18.1.
+
+
 ## 版本
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
@@ -64,8 +67,8 @@ weight: 3590
 | u22.aarch64 | AVAIL PIGSTY 0.0.6 1 | AVAIL PIGSTY 0.0.6 1 | AVAIL PIGSTY 0.0.6 1 | AVAIL PIGSTY 0.0.6 1 | AVAIL PIGSTY 0.0.6 1 |
 | u24.x86_64 | AVAIL PIGSTY 0.0.6 1 | AVAIL PIGSTY 0.0.6 1 | AVAIL PIGSTY 0.0.6 1 | AVAIL PIGSTY 0.0.6 1 | AVAIL PIGSTY 0.0.6 1 |
 | u24.aarch64 | AVAIL PIGSTY 0.0.6 1 | AVAIL PIGSTY 0.0.6 1 | AVAIL PIGSTY 0.0.6 1 | AVAIL PIGSTY 0.0.6 1 | AVAIL PIGSTY 0.0.6 1 |
-| u26.x86_64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| u26.aarch64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| u26.x86_64 | AVAIL PIGSTY 0.0.6 1 | AVAIL PIGSTY 0.0.6 1 | AVAIL PIGSTY 0.0.6 1 | AVAIL PIGSTY 0.0.6 1 | AVAIL PIGSTY 0.0.6 1 |
+| u26.aarch64 | AVAIL PIGSTY 0.0.6 1 | AVAIL PIGSTY 0.0.6 1 | AVAIL PIGSTY 0.0.6 1 | AVAIL PIGSTY 0.0.6 1 | AVAIL PIGSTY 0.0.6 1 |
 @ el8.x86_64 18 pglite_fusion_18 pglite_fusion_18-0.0.6-2PIGSTY.el8.x86_64.rpm pigsty 0.0.6 1.2MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pglite_fusion_18-0.0.6-2PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 18 pglite_fusion_18 pglite_fusion_18-0.0.6-2PIGSTY.el8.aarch64.rpm pigsty 0.0.6 1.0MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pglite_fusion_18-0.0.6-2PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 18 pglite_fusion_18 pglite_fusion_18-0.0.6-2PIGSTY.el9.x86_64.rpm pigsty 0.0.6 1.3MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pglite_fusion_18-0.0.6-2PIGSTY.el9.x86_64.rpm
@@ -80,6 +83,8 @@ weight: 3590
 @ u22.aarch64 18 postgresql-18-pglite-fusion postgresql-18-pglite-fusion_0.0.6-1PIGSTY~jammy_arm64.deb pigsty 0.0.6 1.1MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pglite-fusion/postgresql-18-pglite-fusion_0.0.6-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 18 postgresql-18-pglite-fusion postgresql-18-pglite-fusion_0.0.6-1PIGSTY~noble_amd64.deb pigsty 0.0.6 1.2MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pglite-fusion/postgresql-18-pglite-fusion_0.0.6-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 18 postgresql-18-pglite-fusion postgresql-18-pglite-fusion_0.0.6-1PIGSTY~noble_arm64.deb pigsty 0.0.6 1.1MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pglite-fusion/postgresql-18-pglite-fusion_0.0.6-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 18 postgresql-18-pglite-fusion postgresql-18-pglite-fusion_0.0.6-2PIGSTY~resolute_amd64.deb pigsty 0.0.6 1.7MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pglite-fusion/postgresql-18-pglite-fusion_0.0.6-2PIGSTY~resolute_amd64.deb
+@ u26.aarch64 18 postgresql-18-pglite-fusion postgresql-18-pglite-fusion_0.0.6-2PIGSTY~resolute_arm64.deb pigsty 0.0.6 1.6MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pglite-fusion/postgresql-18-pglite-fusion_0.0.6-2PIGSTY~resolute_arm64.deb
 @ el8.x86_64 17 pglite_fusion_17 pglite_fusion_17-0.0.6-2PIGSTY.el8.x86_64.rpm pigsty 0.0.6 1.2MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pglite_fusion_17-0.0.6-2PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 17 pglite_fusion_17 pglite_fusion_17-0.0.6-2PIGSTY.el8.aarch64.rpm pigsty 0.0.6 1.0MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pglite_fusion_17-0.0.6-2PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 17 pglite_fusion_17 pglite_fusion_17-0.0.6-2PIGSTY.el9.x86_64.rpm pigsty 0.0.6 1.3MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pglite_fusion_17-0.0.6-2PIGSTY.el9.x86_64.rpm
@@ -94,6 +99,8 @@ weight: 3590
 @ u22.aarch64 17 postgresql-17-pglite-fusion postgresql-17-pglite-fusion_0.0.6-1PIGSTY~jammy_arm64.deb pigsty 0.0.6 1.1MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pglite-fusion/postgresql-17-pglite-fusion_0.0.6-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 17 postgresql-17-pglite-fusion postgresql-17-pglite-fusion_0.0.6-1PIGSTY~noble_amd64.deb pigsty 0.0.6 1.2MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pglite-fusion/postgresql-17-pglite-fusion_0.0.6-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 17 postgresql-17-pglite-fusion postgresql-17-pglite-fusion_0.0.6-1PIGSTY~noble_arm64.deb pigsty 0.0.6 1.1MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pglite-fusion/postgresql-17-pglite-fusion_0.0.6-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 17 postgresql-17-pglite-fusion postgresql-17-pglite-fusion_0.0.6-2PIGSTY~resolute_amd64.deb pigsty 0.0.6 1.7MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pglite-fusion/postgresql-17-pglite-fusion_0.0.6-2PIGSTY~resolute_amd64.deb
+@ u26.aarch64 17 postgresql-17-pglite-fusion postgresql-17-pglite-fusion_0.0.6-2PIGSTY~resolute_arm64.deb pigsty 0.0.6 1.6MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pglite-fusion/postgresql-17-pglite-fusion_0.0.6-2PIGSTY~resolute_arm64.deb
 @ el8.x86_64 16 pglite_fusion_16 pglite_fusion_16-0.0.6-2PIGSTY.el8.x86_64.rpm pigsty 0.0.6 1.2MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pglite_fusion_16-0.0.6-2PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 16 pglite_fusion_16 pglite_fusion_16-0.0.6-2PIGSTY.el8.aarch64.rpm pigsty 0.0.6 1.0MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pglite_fusion_16-0.0.6-2PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 16 pglite_fusion_16 pglite_fusion_16-0.0.6-2PIGSTY.el9.x86_64.rpm pigsty 0.0.6 1.3MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pglite_fusion_16-0.0.6-2PIGSTY.el9.x86_64.rpm
@@ -108,6 +115,8 @@ weight: 3590
 @ u22.aarch64 16 postgresql-16-pglite-fusion postgresql-16-pglite-fusion_0.0.6-1PIGSTY~jammy_arm64.deb pigsty 0.0.6 1.1MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pglite-fusion/postgresql-16-pglite-fusion_0.0.6-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 16 postgresql-16-pglite-fusion postgresql-16-pglite-fusion_0.0.6-1PIGSTY~noble_amd64.deb pigsty 0.0.6 1.2MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pglite-fusion/postgresql-16-pglite-fusion_0.0.6-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 16 postgresql-16-pglite-fusion postgresql-16-pglite-fusion_0.0.6-1PIGSTY~noble_arm64.deb pigsty 0.0.6 1.1MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pglite-fusion/postgresql-16-pglite-fusion_0.0.6-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 16 postgresql-16-pglite-fusion postgresql-16-pglite-fusion_0.0.6-2PIGSTY~resolute_amd64.deb pigsty 0.0.6 1.7MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pglite-fusion/postgresql-16-pglite-fusion_0.0.6-2PIGSTY~resolute_amd64.deb
+@ u26.aarch64 16 postgresql-16-pglite-fusion postgresql-16-pglite-fusion_0.0.6-2PIGSTY~resolute_arm64.deb pigsty 0.0.6 1.6MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pglite-fusion/postgresql-16-pglite-fusion_0.0.6-2PIGSTY~resolute_arm64.deb
 @ el8.x86_64 15 pglite_fusion_15 pglite_fusion_15-0.0.6-2PIGSTY.el8.x86_64.rpm pigsty 0.0.6 1.2MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pglite_fusion_15-0.0.6-2PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 15 pglite_fusion_15 pglite_fusion_15-0.0.6-2PIGSTY.el8.aarch64.rpm pigsty 0.0.6 1.0MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pglite_fusion_15-0.0.6-2PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 15 pglite_fusion_15 pglite_fusion_15-0.0.6-2PIGSTY.el9.x86_64.rpm pigsty 0.0.6 1.3MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pglite_fusion_15-0.0.6-2PIGSTY.el9.x86_64.rpm
@@ -122,6 +131,8 @@ weight: 3590
 @ u22.aarch64 15 postgresql-15-pglite-fusion postgresql-15-pglite-fusion_0.0.6-1PIGSTY~jammy_arm64.deb pigsty 0.0.6 1.1MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pglite-fusion/postgresql-15-pglite-fusion_0.0.6-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 15 postgresql-15-pglite-fusion postgresql-15-pglite-fusion_0.0.6-1PIGSTY~noble_amd64.deb pigsty 0.0.6 1.2MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pglite-fusion/postgresql-15-pglite-fusion_0.0.6-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 15 postgresql-15-pglite-fusion postgresql-15-pglite-fusion_0.0.6-1PIGSTY~noble_arm64.deb pigsty 0.0.6 1.1MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pglite-fusion/postgresql-15-pglite-fusion_0.0.6-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 15 postgresql-15-pglite-fusion postgresql-15-pglite-fusion_0.0.6-2PIGSTY~resolute_amd64.deb pigsty 0.0.6 1.7MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pglite-fusion/postgresql-15-pglite-fusion_0.0.6-2PIGSTY~resolute_amd64.deb
+@ u26.aarch64 15 postgresql-15-pglite-fusion postgresql-15-pglite-fusion_0.0.6-2PIGSTY~resolute_arm64.deb pigsty 0.0.6 1.6MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pglite-fusion/postgresql-15-pglite-fusion_0.0.6-2PIGSTY~resolute_arm64.deb
 @ el8.x86_64 14 pglite_fusion_14 pglite_fusion_14-0.0.6-2PIGSTY.el8.x86_64.rpm pigsty 0.0.6 1.2MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pglite_fusion_14-0.0.6-2PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 14 pglite_fusion_14 pglite_fusion_14-0.0.6-2PIGSTY.el8.aarch64.rpm pigsty 0.0.6 1.0MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pglite_fusion_14-0.0.6-2PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 14 pglite_fusion_14 pglite_fusion_14-0.0.6-2PIGSTY.el9.x86_64.rpm pigsty 0.0.6 1.3MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pglite_fusion_14-0.0.6-2PIGSTY.el9.x86_64.rpm
@@ -136,6 +147,8 @@ weight: 3590
 @ u22.aarch64 14 postgresql-14-pglite-fusion postgresql-14-pglite-fusion_0.0.6-1PIGSTY~jammy_arm64.deb pigsty 0.0.6 1.1MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pglite-fusion/postgresql-14-pglite-fusion_0.0.6-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 14 postgresql-14-pglite-fusion postgresql-14-pglite-fusion_0.0.6-1PIGSTY~noble_amd64.deb pigsty 0.0.6 1.2MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pglite-fusion/postgresql-14-pglite-fusion_0.0.6-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 14 postgresql-14-pglite-fusion postgresql-14-pglite-fusion_0.0.6-1PIGSTY~noble_arm64.deb pigsty 0.0.6 1.1MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pglite-fusion/postgresql-14-pglite-fusion_0.0.6-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 14 postgresql-14-pglite-fusion postgresql-14-pglite-fusion_0.0.6-2PIGSTY~resolute_amd64.deb pigsty 0.0.6 1.7MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pglite-fusion/postgresql-14-pglite-fusion_0.0.6-2PIGSTY~resolute_amd64.deb
+@ u26.aarch64 14 postgresql-14-pglite-fusion postgresql-14-pglite-fusion_0.0.6-2PIGSTY~resolute_arm64.deb pigsty 0.0.6 1.6MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pglite-fusion/postgresql-14-pglite-fusion_0.0.6-2PIGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建

@@ -55,10 +55,10 @@ weight: 4630
 |:--:|:--:|:--:|:--:|:--:|:--:|
 | el8.x86_64 | AVAIL PIGSTY 3.0.2 2 | AVAIL PIGSTY 3.0.2 2 | AVAIL PIGSTY 3.0.2 2 | AVAIL PIGSTY 3.0.2 2 | AVAIL PIGSTY 3.0.2 2 |
 | el8.aarch64 | AVAIL PIGSTY 3.0.2 2 | AVAIL PIGSTY 3.0.2 2 | AVAIL PIGSTY 3.0.2 2 | AVAIL PIGSTY 3.0.2 2 | AVAIL PIGSTY 3.0.2 2 |
-| el9.x86_64 | AVAIL PIGSTY 3.0.2 2 | AVAIL PIGSTY 3.0.2 2 | AVAIL PIGSTY 3.0.2 2 | AVAIL PIGSTY 3.0.2 2 | AVAIL PIGSTY 3.0.2 1 |
-| el9.aarch64 | AVAIL PIGSTY 3.0.2 2 | AVAIL PIGSTY 3.0.2 2 | AVAIL PIGSTY 3.0.2 2 | AVAIL PIGSTY 3.0.2 2 | AVAIL PIGSTY 3.0.2 2 |
-| el10.x86_64 | AVAIL PIGSTY 3.0.2 2 | AVAIL PIGSTY 3.0.2 2 | AVAIL PIGSTY 3.0.2 2 | AVAIL PIGSTY 3.0.2 2 | AVAIL PIGSTY 3.0.2 2 |
-| el10.aarch64 | AVAIL PIGSTY 3.0.2 2 | AVAIL PIGSTY 3.0.2 2 | AVAIL PIGSTY 3.0.2 2 | AVAIL PIGSTY 3.0.2 2 | AVAIL PIGSTY 3.0.2 2 |
+| el9.x86_64 | AVAIL PGDG 3.0.2 2 | AVAIL PGDG 3.0.2 2 | AVAIL PGDG 3.0.2 2 | AVAIL PGDG 3.0.2 2 | AVAIL PGDG 3.0.2 2 |
+| el9.aarch64 | AVAIL PGDG 3.0.2 2 | AVAIL PGDG 3.0.2 2 | AVAIL PGDG 3.0.2 2 | AVAIL PGDG 3.0.2 2 | AVAIL PGDG 3.0.2 2 |
+| el10.x86_64 | AVAIL PGDG 3.0.2 2 | AVAIL PGDG 3.0.2 2 | AVAIL PGDG 3.0.2 2 | AVAIL PGDG 3.0.2 2 | AVAIL PGDG 3.0.2 2 |
+| el10.aarch64 | AVAIL PGDG 3.0.2 2 | AVAIL PGDG 3.0.2 2 | AVAIL PGDG 3.0.2 2 | AVAIL PGDG 3.0.2 2 | AVAIL PGDG 3.0.2 2 |
 | d12.x86_64 | AVAIL PIGSTY 3.0.2 1 | AVAIL PIGSTY 3.0.2 1 | AVAIL PIGSTY 3.0.2 1 | AVAIL PIGSTY 3.0.2 1 | AVAIL PIGSTY 3.0.2 1 |
 | d12.aarch64 | AVAIL PIGSTY 3.0.2 1 | AVAIL PIGSTY 3.0.2 1 | AVAIL PIGSTY 3.0.2 1 | AVAIL PIGSTY 3.0.2 1 | AVAIL PIGSTY 3.0.2 1 |
 | d13.x86_64 | AVAIL PIGSTY 3.0.2 1 | AVAIL PIGSTY 3.0.2 1 | AVAIL PIGSTY 3.0.2 1 | AVAIL PIGSTY 3.0.2 1 | AVAIL PIGSTY 3.0.2 1 |
@@ -73,14 +73,14 @@ weight: 4630
 @ el8.x86_64 18 count_distinct_18 count_distinct_18-3.0.2-1PGDG.rhel8.x86_64.rpm pgdg 3.0.2 23.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/count_distinct_18-3.0.2-1PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 18 count_distinct_18 count_distinct_18-3.0.2-1PIGSTY.el8.aarch64.rpm pigsty 3.0.2 16.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/count_distinct_18-3.0.2-1PIGSTY.el8.aarch64.rpm
 @ el8.aarch64 18 count_distinct_18 count_distinct_18-3.0.2-1PGDG.rhel8.aarch64.rpm pgdg 3.0.2 22.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/count_distinct_18-3.0.2-1PGDG.rhel8.aarch64.rpm
+@ el9.x86_64 18 count_distinct_18 count_distinct_18-3.0.2-3PGDG.rhel9.8.x86_64.rpm pgdg 3.0.2 22.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/count_distinct_18-3.0.2-3PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 18 count_distinct_18 count_distinct_18-3.0.2-1PIGSTY.el9.x86_64.rpm pigsty 3.0.2 16.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/count_distinct_18-3.0.2-1PIGSTY.el9.x86_64.rpm
-@ el9.x86_64 18 count_distinct_18 count_distinct_18-3.0.2-1PGDG.rhel9.x86_64.rpm pgdg 3.0.2 22.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/count_distinct_18-3.0.2-1PGDG.rhel9.x86_64.rpm
+@ el9.aarch64 18 count_distinct_18 count_distinct_18-3.0.2-3PGDG.rhel9.8.aarch64.rpm pgdg 3.0.2 22.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/count_distinct_18-3.0.2-3PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 18 count_distinct_18 count_distinct_18-3.0.2-1PIGSTY.el9.aarch64.rpm pigsty 3.0.2 16.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/count_distinct_18-3.0.2-1PIGSTY.el9.aarch64.rpm
-@ el9.aarch64 18 count_distinct_18 count_distinct_18-3.0.2-1PGDG.rhel9.aarch64.rpm pgdg 3.0.2 22.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/count_distinct_18-3.0.2-1PGDG.rhel9.aarch64.rpm
+@ el10.x86_64 18 count_distinct_18 count_distinct_18-3.0.2-3PGDG.rhel10.2.x86_64.rpm pgdg 3.0.2 23.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/count_distinct_18-3.0.2-3PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 18 count_distinct_18 count_distinct_18-3.0.2-1PIGSTY.el10.x86_64.rpm pigsty 3.0.2 16.7KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/count_distinct_18-3.0.2-1PIGSTY.el10.x86_64.rpm
-@ el10.x86_64 18 count_distinct_18 count_distinct_18-3.0.2-1PGDG.rhel10.x86_64.rpm pgdg 3.0.2 23.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/count_distinct_18-3.0.2-1PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 18 count_distinct_18 count_distinct_18-3.0.2-3PGDG.rhel10.2.aarch64.rpm pgdg 3.0.2 22.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/count_distinct_18-3.0.2-3PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 18 count_distinct_18 count_distinct_18-3.0.2-1PIGSTY.el10.aarch64.rpm pigsty 3.0.2 16.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/count_distinct_18-3.0.2-1PIGSTY.el10.aarch64.rpm
-@ el10.aarch64 18 count_distinct_18 count_distinct_18-3.0.2-1PGDG.rhel10.aarch64.rpm pgdg 3.0.2 22.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/count_distinct_18-3.0.2-1PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 18 postgresql-18-count-distinct postgresql-18-count-distinct_3.0.2-1PIGSTY~bookworm_amd64.deb pigsty 3.0.2 34.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/c/count-distinct/postgresql-18-count-distinct_3.0.2-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 18 postgresql-18-count-distinct postgresql-18-count-distinct_3.0.2-1PIGSTY~bookworm_arm64.deb pigsty 3.0.2 34.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/c/count-distinct/postgresql-18-count-distinct_3.0.2-1PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 18 postgresql-18-count-distinct postgresql-18-count-distinct_3.0.2-1PIGSTY~trixie_amd64.deb pigsty 3.0.2 34.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/c/count-distinct/postgresql-18-count-distinct_3.0.2-1PIGSTY~trixie_amd64.deb
@@ -95,14 +95,14 @@ weight: 4630
 @ el8.x86_64 17 count_distinct_17 count_distinct_17-3.0.1-6PGDG.rhel8.x86_64.rpm pgdg 3.0.1 20.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/count_distinct_17-3.0.1-6PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 17 count_distinct_17 count_distinct_17-3.0.2-1PIGSTY.el8.aarch64.rpm pigsty 3.0.2 16.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/count_distinct_17-3.0.2-1PIGSTY.el8.aarch64.rpm
 @ el8.aarch64 17 count_distinct_17 count_distinct_17-3.0.1-6PGDG.rhel8.aarch64.rpm pgdg 3.0.1 20.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/count_distinct_17-3.0.1-6PGDG.rhel8.aarch64.rpm
+@ el9.x86_64 17 count_distinct_17 count_distinct_17-3.0.2-3PGDG.rhel9.8.x86_64.rpm pgdg 3.0.2 22.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/count_distinct_17-3.0.2-3PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 17 count_distinct_17 count_distinct_17-3.0.2-1PIGSTY.el9.x86_64.rpm pigsty 3.0.2 16.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/count_distinct_17-3.0.2-1PIGSTY.el9.x86_64.rpm
-@ el9.x86_64 17 count_distinct_17 count_distinct_17-3.0.1-6PGDG.rhel9.x86_64.rpm pgdg 3.0.1 20.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/count_distinct_17-3.0.1-6PGDG.rhel9.x86_64.rpm
+@ el9.aarch64 17 count_distinct_17 count_distinct_17-3.0.2-3PGDG.rhel9.8.aarch64.rpm pgdg 3.0.2 22.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/count_distinct_17-3.0.2-3PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 17 count_distinct_17 count_distinct_17-3.0.2-1PIGSTY.el9.aarch64.rpm pigsty 3.0.2 16.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/count_distinct_17-3.0.2-1PIGSTY.el9.aarch64.rpm
-@ el9.aarch64 17 count_distinct_17 count_distinct_17-3.0.1-6PGDG.rhel9.aarch64.rpm pgdg 3.0.1 20.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/count_distinct_17-3.0.1-6PGDG.rhel9.aarch64.rpm
+@ el10.x86_64 17 count_distinct_17 count_distinct_17-3.0.2-3PGDG.rhel10.2.x86_64.rpm pgdg 3.0.2 23.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/count_distinct_17-3.0.2-3PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 17 count_distinct_17 count_distinct_17-3.0.2-1PIGSTY.el10.x86_64.rpm pigsty 3.0.2 16.7KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/count_distinct_17-3.0.2-1PIGSTY.el10.x86_64.rpm
-@ el10.x86_64 17 count_distinct_17 count_distinct_17-3.0.2-1PGDG.rhel10.x86_64.rpm pgdg 3.0.2 23.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/count_distinct_17-3.0.2-1PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 17 count_distinct_17 count_distinct_17-3.0.2-3PGDG.rhel10.2.aarch64.rpm pgdg 3.0.2 22.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/count_distinct_17-3.0.2-3PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 17 count_distinct_17 count_distinct_17-3.0.2-1PIGSTY.el10.aarch64.rpm pigsty 3.0.2 16.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/count_distinct_17-3.0.2-1PIGSTY.el10.aarch64.rpm
-@ el10.aarch64 17 count_distinct_17 count_distinct_17-3.0.2-1PGDG.rhel10.aarch64.rpm pgdg 3.0.2 22.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/count_distinct_17-3.0.2-1PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 17 postgresql-17-count-distinct postgresql-17-count-distinct_3.0.2-1PIGSTY~bookworm_amd64.deb pigsty 3.0.2 34.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/c/count-distinct/postgresql-17-count-distinct_3.0.2-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 17 postgresql-17-count-distinct postgresql-17-count-distinct_3.0.2-1PIGSTY~bookworm_arm64.deb pigsty 3.0.2 34.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/c/count-distinct/postgresql-17-count-distinct_3.0.2-1PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 17 postgresql-17-count-distinct postgresql-17-count-distinct_3.0.2-1PIGSTY~trixie_amd64.deb pigsty 3.0.2 34.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/c/count-distinct/postgresql-17-count-distinct_3.0.2-1PIGSTY~trixie_amd64.deb
@@ -117,14 +117,14 @@ weight: 4630
 @ el8.x86_64 16 count_distinct_16 count_distinct_16-3.0.1-5PGDG.rhel8.x86_64.rpm pgdg 3.0.1 20.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/count_distinct_16-3.0.1-5PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 16 count_distinct_16 count_distinct_16-3.0.2-1PIGSTY.el8.aarch64.rpm pigsty 3.0.2 16.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/count_distinct_16-3.0.2-1PIGSTY.el8.aarch64.rpm
 @ el8.aarch64 16 count_distinct_16 count_distinct_16-3.0.1-5PGDG.rhel8.aarch64.rpm pgdg 3.0.1 20.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/count_distinct_16-3.0.1-5PGDG.rhel8.aarch64.rpm
+@ el9.x86_64 16 count_distinct_16 count_distinct_16-3.0.2-3PGDG.rhel9.8.x86_64.rpm pgdg 3.0.2 22.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/count_distinct_16-3.0.2-3PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 16 count_distinct_16 count_distinct_16-3.0.2-1PIGSTY.el9.x86_64.rpm pigsty 3.0.2 16.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/count_distinct_16-3.0.2-1PIGSTY.el9.x86_64.rpm
-@ el9.x86_64 16 count_distinct_16 count_distinct_16-3.0.1-5PGDG.rhel9.x86_64.rpm pgdg 3.0.1 20.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/count_distinct_16-3.0.1-5PGDG.rhel9.x86_64.rpm
+@ el9.aarch64 16 count_distinct_16 count_distinct_16-3.0.2-3PGDG.rhel9.8.aarch64.rpm pgdg 3.0.2 22.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/count_distinct_16-3.0.2-3PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 16 count_distinct_16 count_distinct_16-3.0.2-1PIGSTY.el9.aarch64.rpm pigsty 3.0.2 16.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/count_distinct_16-3.0.2-1PIGSTY.el9.aarch64.rpm
-@ el9.aarch64 16 count_distinct_16 count_distinct_16-3.0.1-5PGDG.rhel9.aarch64.rpm pgdg 3.0.1 19.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/count_distinct_16-3.0.1-5PGDG.rhel9.aarch64.rpm
+@ el10.x86_64 16 count_distinct_16 count_distinct_16-3.0.2-3PGDG.rhel10.2.x86_64.rpm pgdg 3.0.2 23.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/count_distinct_16-3.0.2-3PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 16 count_distinct_16 count_distinct_16-3.0.2-1PIGSTY.el10.x86_64.rpm pigsty 3.0.2 16.7KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/count_distinct_16-3.0.2-1PIGSTY.el10.x86_64.rpm
-@ el10.x86_64 16 count_distinct_16 count_distinct_16-3.0.2-1PGDG.rhel10.x86_64.rpm pgdg 3.0.2 23.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/count_distinct_16-3.0.2-1PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 16 count_distinct_16 count_distinct_16-3.0.2-3PGDG.rhel10.2.aarch64.rpm pgdg 3.0.2 22.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/count_distinct_16-3.0.2-3PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 16 count_distinct_16 count_distinct_16-3.0.2-1PIGSTY.el10.aarch64.rpm pigsty 3.0.2 16.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/count_distinct_16-3.0.2-1PIGSTY.el10.aarch64.rpm
-@ el10.aarch64 16 count_distinct_16 count_distinct_16-3.0.2-1PGDG.rhel10.aarch64.rpm pgdg 3.0.2 22.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/count_distinct_16-3.0.2-1PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 16 postgresql-16-count-distinct postgresql-16-count-distinct_3.0.2-1PIGSTY~bookworm_amd64.deb pigsty 3.0.2 34.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/c/count-distinct/postgresql-16-count-distinct_3.0.2-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 16 postgresql-16-count-distinct postgresql-16-count-distinct_3.0.2-1PIGSTY~bookworm_arm64.deb pigsty 3.0.2 34.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/c/count-distinct/postgresql-16-count-distinct_3.0.2-1PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 16 postgresql-16-count-distinct postgresql-16-count-distinct_3.0.2-1PIGSTY~trixie_amd64.deb pigsty 3.0.2 34.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/c/count-distinct/postgresql-16-count-distinct_3.0.2-1PIGSTY~trixie_amd64.deb
@@ -139,14 +139,14 @@ weight: 4630
 @ el8.x86_64 15 count_distinct_15 count_distinct_15-3.0.1-3.rhel8.x86_64.rpm pgdg 3.0.1 31.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/count_distinct_15-3.0.1-3.rhel8.x86_64.rpm
 @ el8.aarch64 15 count_distinct_15 count_distinct_15-3.0.2-1PIGSTY.el8.aarch64.rpm pigsty 3.0.2 16.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/count_distinct_15-3.0.2-1PIGSTY.el8.aarch64.rpm
 @ el8.aarch64 15 count_distinct_15 count_distinct_15-3.0.1-3.rhel8.aarch64.rpm pgdg 3.0.1 31.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/count_distinct_15-3.0.1-3.rhel8.aarch64.rpm
+@ el9.x86_64 15 count_distinct_15 count_distinct_15-3.0.2-3PGDG.rhel9.8.x86_64.rpm pgdg 3.0.2 22.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/count_distinct_15-3.0.2-3PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 15 count_distinct_15 count_distinct_15-3.0.2-1PIGSTY.el9.x86_64.rpm pigsty 3.0.2 16.7KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/count_distinct_15-3.0.2-1PIGSTY.el9.x86_64.rpm
-@ el9.x86_64 15 count_distinct_15 count_distinct_15-3.0.1-3.rhel9.x86_64.rpm pgdg 3.0.1 32.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/count_distinct_15-3.0.1-3.rhel9.x86_64.rpm
+@ el9.aarch64 15 count_distinct_15 count_distinct_15-3.0.2-3PGDG.rhel9.8.aarch64.rpm pgdg 3.0.2 22.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/count_distinct_15-3.0.2-3PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 15 count_distinct_15 count_distinct_15-3.0.2-1PIGSTY.el9.aarch64.rpm pigsty 3.0.2 16.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/count_distinct_15-3.0.2-1PIGSTY.el9.aarch64.rpm
-@ el9.aarch64 15 count_distinct_15 count_distinct_15-3.0.1-3.rhel9.aarch64.rpm pgdg 3.0.1 31.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/count_distinct_15-3.0.1-3.rhel9.aarch64.rpm
+@ el10.x86_64 15 count_distinct_15 count_distinct_15-3.0.2-3PGDG.rhel10.2.x86_64.rpm pgdg 3.0.2 22.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/count_distinct_15-3.0.2-3PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 15 count_distinct_15 count_distinct_15-3.0.2-1PIGSTY.el10.x86_64.rpm pigsty 3.0.2 16.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/count_distinct_15-3.0.2-1PIGSTY.el10.x86_64.rpm
-@ el10.x86_64 15 count_distinct_15 count_distinct_15-3.0.2-1PGDG.rhel10.x86_64.rpm pgdg 3.0.2 23.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/count_distinct_15-3.0.2-1PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 15 count_distinct_15 count_distinct_15-3.0.2-3PGDG.rhel10.2.aarch64.rpm pgdg 3.0.2 22.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/count_distinct_15-3.0.2-3PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 15 count_distinct_15 count_distinct_15-3.0.2-1PIGSTY.el10.aarch64.rpm pigsty 3.0.2 16.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/count_distinct_15-3.0.2-1PIGSTY.el10.aarch64.rpm
-@ el10.aarch64 15 count_distinct_15 count_distinct_15-3.0.2-1PGDG.rhel10.aarch64.rpm pgdg 3.0.2 22.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/count_distinct_15-3.0.2-1PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 15 postgresql-15-count-distinct postgresql-15-count-distinct_3.0.2-1PIGSTY~bookworm_amd64.deb pigsty 3.0.2 34.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/c/count-distinct/postgresql-15-count-distinct_3.0.2-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 15 postgresql-15-count-distinct postgresql-15-count-distinct_3.0.2-1PIGSTY~bookworm_arm64.deb pigsty 3.0.2 34.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/c/count-distinct/postgresql-15-count-distinct_3.0.2-1PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 15 postgresql-15-count-distinct postgresql-15-count-distinct_3.0.2-1PIGSTY~trixie_amd64.deb pigsty 3.0.2 34.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/c/count-distinct/postgresql-15-count-distinct_3.0.2-1PIGSTY~trixie_amd64.deb
@@ -161,13 +161,14 @@ weight: 4630
 @ el8.x86_64 14 count_distinct_14 count_distinct_14-3.0.1-3.rhel8.x86_64.rpm pgdg 3.0.1 32.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/count_distinct_14-3.0.1-3.rhel8.x86_64.rpm
 @ el8.aarch64 14 count_distinct_14 count_distinct_14-3.0.2-1PIGSTY.el8.aarch64.rpm pigsty 3.0.2 16.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/count_distinct_14-3.0.2-1PIGSTY.el8.aarch64.rpm
 @ el8.aarch64 14 count_distinct_14 count_distinct_14-3.0.1-3.rhel8.aarch64.rpm pgdg 3.0.1 31.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/count_distinct_14-3.0.1-3.rhel8.aarch64.rpm
+@ el9.x86_64 14 count_distinct_14 count_distinct_14-3.0.2-3PGDG.rhel9.8.x86_64.rpm pgdg 3.0.2 22.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/count_distinct_14-3.0.2-3PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 14 count_distinct_14 count_distinct_14-3.0.2-1PIGSTY.el9.x86_64.rpm pigsty 3.0.2 16.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/count_distinct_14-3.0.2-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 14 count_distinct_14 count_distinct_14-3.0.2-3PGDG.rhel9.8.aarch64.rpm pgdg 3.0.2 22.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/count_distinct_14-3.0.2-3PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 14 count_distinct_14 count_distinct_14-3.0.2-1PIGSTY.el9.aarch64.rpm pigsty 3.0.2 16.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/count_distinct_14-3.0.2-1PIGSTY.el9.aarch64.rpm
-@ el9.aarch64 14 count_distinct_14 count_distinct_14-3.0.1-3.rhel9.aarch64.rpm pgdg 3.0.1 31.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/count_distinct_14-3.0.1-3.rhel9.aarch64.rpm
+@ el10.x86_64 14 count_distinct_14 count_distinct_14-3.0.2-3PGDG.rhel10.2.x86_64.rpm pgdg 3.0.2 22.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/count_distinct_14-3.0.2-3PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 14 count_distinct_14 count_distinct_14-3.0.2-1PIGSTY.el10.x86_64.rpm pigsty 3.0.2 16.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/count_distinct_14-3.0.2-1PIGSTY.el10.x86_64.rpm
-@ el10.x86_64 14 count_distinct_14 count_distinct_14-3.0.2-1PGDG.rhel10.x86_64.rpm pgdg 3.0.2 23.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/count_distinct_14-3.0.2-1PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 14 count_distinct_14 count_distinct_14-3.0.2-3PGDG.rhel10.2.aarch64.rpm pgdg 3.0.2 22.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/count_distinct_14-3.0.2-3PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 14 count_distinct_14 count_distinct_14-3.0.2-1PIGSTY.el10.aarch64.rpm pigsty 3.0.2 16.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/count_distinct_14-3.0.2-1PIGSTY.el10.aarch64.rpm
-@ el10.aarch64 14 count_distinct_14 count_distinct_14-3.0.2-1PGDG.rhel10.aarch64.rpm pgdg 3.0.2 22.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/count_distinct_14-3.0.2-1PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 14 postgresql-14-count-distinct postgresql-14-count-distinct_3.0.2-1PIGSTY~bookworm_amd64.deb pigsty 3.0.2 34.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/c/count-distinct/postgresql-14-count-distinct_3.0.2-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 14 postgresql-14-count-distinct postgresql-14-count-distinct_3.0.2-1PIGSTY~bookworm_arm64.deb pigsty 3.0.2 34.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/c/count-distinct/postgresql-14-count-distinct_3.0.2-1PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 14 postgresql-14-count-distinct postgresql-14-count-distinct_3.0.2-1PIGSTY~trixie_amd64.deb pigsty 3.0.2 34.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/c/count-distinct/postgresql-14-count-distinct_3.0.2-1PIGSTY~trixie_amd64.deb

@@ -55,10 +55,10 @@ weight: 3730
 |:--:|:--:|:--:|:--:|:--:|:--:|
 | el8.x86_64 | AVAIL PIGSTY 1.20250815 2 | AVAIL PIGSTY 1.20250815 3 | AVAIL PIGSTY 1.20250815 4 | AVAIL PIGSTY 1.20250815 3 | AVAIL PIGSTY 1.20250815 1 |
 | el8.aarch64 | AVAIL PIGSTY 1.20250815 2 | AVAIL PIGSTY 1.20250815 3 | AVAIL PIGSTY 1.20250815 4 | AVAIL PIGSTY 1.20250815 3 | AVAIL PIGSTY 1.20250815 1 |
-| el9.x86_64 | AVAIL PIGSTY 1.20250815 2 | AVAIL PIGSTY 1.20250815 3 | AVAIL PIGSTY 1.20250815 4 | AVAIL PIGSTY 1.20250815 3 | AVAIL PIGSTY 1.20250815 1 |
-| el9.aarch64 | AVAIL PIGSTY 1.20250815 2 | AVAIL PIGSTY 1.20250815 3 | AVAIL PIGSTY 1.20250815 4 | AVAIL PIGSTY 1.20250815 3 | AVAIL PIGSTY 1.20250815 1 |
-| el10.x86_64 | AVAIL PIGSTY 1.20250815 2 | AVAIL PIGSTY 1.20250815 3 | AVAIL PIGSTY 1.20250815 3 | AVAIL PIGSTY 1.20250815 3 | AVAIL PIGSTY 1.20250815 1 |
-| el10.aarch64 | AVAIL PIGSTY 1.20250815 2 | AVAIL PIGSTY 1.20250815 3 | AVAIL PIGSTY 1.20250815 3 | AVAIL PIGSTY 1.20250815 3 | AVAIL PIGSTY 1.20250815 1 |
+| el9.x86_64 | AVAIL PGDG 1.20250815 2 | AVAIL PGDG 1.20250815 2 | AVAIL PGDG 1.20250815 2 | AVAIL PGDG 1.20250815 2 | AVAIL PIGSTY 1.20250815 1 |
+| el9.aarch64 | AVAIL PGDG 1.20250815 2 | AVAIL PGDG 1.20250815 2 | AVAIL PGDG 1.20250815 2 | AVAIL PGDG 1.20250815 2 | AVAIL PIGSTY 1.20250815 1 |
+| el10.x86_64 | AVAIL PGDG 1.20250815 2 | AVAIL PGDG 1.20250815 2 | AVAIL PGDG 1.20250815 2 | AVAIL PGDG 1.20250815 2 | AVAIL PIGSTY 1.20250815 1 |
+| el10.aarch64 | AVAIL PGDG 1.20250815 2 | AVAIL PGDG 1.20250815 2 | AVAIL PGDG 1.20250815 2 | AVAIL PGDG 1.20250815 2 | AVAIL PIGSTY 1.20250815 1 |
 | d12.x86_64 | AVAIL PIGSTY 1.20250815 1 | AVAIL PIGSTY 1.20250815 1 | AVAIL PIGSTY 1.20250815 1 | AVAIL PIGSTY 1.20250815 1 | AVAIL PIGSTY 1.20250815 1 |
 | d12.aarch64 | AVAIL PIGSTY 1.20250815 1 | AVAIL PIGSTY 1.20250815 1 | AVAIL PIGSTY 1.20250815 1 | AVAIL PIGSTY 1.20250815 1 | AVAIL PIGSTY 1.20250815 1 |
 | d13.x86_64 | AVAIL PIGSTY 1.20250815 1 | AVAIL PIGSTY 1.20250815 1 | AVAIL PIGSTY 1.20250815 1 | AVAIL PIGSTY 1.20250815 1 | AVAIL PIGSTY 1.20250815 1 |
@@ -73,14 +73,14 @@ weight: 3730
 @ el8.x86_64 18 pguint_18 pguint_18-1.20250815-1PGDG.rhel8.x86_64.rpm pgdg 1.20250815 72.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pguint_18-1.20250815-1PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 18 pguint_18 pguint_18-1.20250815-1PIGSTY.el8.aarch64.rpm pigsty 1.20250815 82.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pguint_18-1.20250815-1PIGSTY.el8.aarch64.rpm
 @ el8.aarch64 18 pguint_18 pguint_18-1.20250815-1PGDG.rhel8.aarch64.rpm pgdg 1.20250815 66.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pguint_18-1.20250815-1PGDG.rhel8.aarch64.rpm
+@ el9.x86_64 18 pguint_18 pguint_18-1.20250815-3PGDG.rhel9.8.x86_64.rpm pgdg 1.20250815 75.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pguint_18-1.20250815-3PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 18 pguint_18 pguint_18-1.20250815-1PIGSTY.el9.x86_64.rpm pigsty 1.20250815 82.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pguint_18-1.20250815-1PIGSTY.el9.x86_64.rpm
-@ el9.x86_64 18 pguint_18 pguint_18-1.20250815-1PGDG.rhel9.x86_64.rpm pgdg 1.20250815 75.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pguint_18-1.20250815-1PGDG.rhel9.x86_64.rpm
+@ el9.aarch64 18 pguint_18 pguint_18-1.20250815-3PGDG.rhel9.8.aarch64.rpm pgdg 1.20250815 70.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pguint_18-1.20250815-3PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 18 pguint_18 pguint_18-1.20250815-1PIGSTY.el9.aarch64.rpm pigsty 1.20250815 77.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pguint_18-1.20250815-1PIGSTY.el9.aarch64.rpm
-@ el9.aarch64 18 pguint_18 pguint_18-1.20250815-1PGDG.rhel9.aarch64.rpm pgdg 1.20250815 70.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pguint_18-1.20250815-1PGDG.rhel9.aarch64.rpm
+@ el10.x86_64 18 pguint_18 pguint_18-1.20250815-3PGDG.rhel10.2.x86_64.rpm pgdg 1.20250815 75.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pguint_18-1.20250815-3PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 18 pguint_18 pguint_18-1.20250815-1PIGSTY.el10.x86_64.rpm pigsty 1.20250815 82.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pguint_18-1.20250815-1PIGSTY.el10.x86_64.rpm
-@ el10.x86_64 18 pguint_18 pguint_18-1.20250815-1PGDG.rhel10.x86_64.rpm pgdg 1.20250815 75.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pguint_18-1.20250815-1PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 18 pguint_18 pguint_18-1.20250815-3PGDG.rhel10.2.aarch64.rpm pgdg 1.20250815 71.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pguint_18-1.20250815-3PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 18 pguint_18 pguint_18-1.20250815-1PIGSTY.el10.aarch64.rpm pigsty 1.20250815 78.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pguint_18-1.20250815-1PIGSTY.el10.aarch64.rpm
-@ el10.aarch64 18 pguint_18 pguint_18-1.20250815-1PGDG.rhel10.aarch64.rpm pgdg 1.20250815 72.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pguint_18-1.20250815-1PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 18 postgresql-18-pguint postgresql-18-pguint_1.20250815-1PIGSTY~bookworm_amd64.deb pigsty 1.20250815 159.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pguint/postgresql-18-pguint_1.20250815-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 18 postgresql-18-pguint postgresql-18-pguint_1.20250815-1PIGSTY~bookworm_arm64.deb pigsty 1.20250815 156.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pguint/postgresql-18-pguint_1.20250815-1PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 18 postgresql-18-pguint postgresql-18-pguint_1.20250815-1PIGSTY~trixie_amd64.deb pigsty 1.20250815 159.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pguint/postgresql-18-pguint_1.20250815-1PIGSTY~trixie_amd64.deb
@@ -97,18 +97,14 @@ weight: 3730
 @ el8.aarch64 17 pguint_17 pguint_17-1.20250815-1PIGSTY.el8.aarch64.rpm pigsty 1.20250815 82.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pguint_17-1.20250815-1PIGSTY.el8.aarch64.rpm
 @ el8.aarch64 17 pguint_17 pguint_17-1.20250815-1PGDG.rhel8.aarch64.rpm pgdg 1.20250815 66.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pguint_17-1.20250815-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 17 pguint_17 pguint_17-1.20231206-2PGDG.rhel8.aarch64.rpm pgdg 1.20231206 65.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pguint_17-1.20231206-2PGDG.rhel8.aarch64.rpm
+@ el9.x86_64 17 pguint_17 pguint_17-1.20250815-3PGDG.rhel9.8.x86_64.rpm pgdg 1.20250815 75.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pguint_17-1.20250815-3PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 17 pguint_17 pguint_17-1.20250815-1PIGSTY.el9.x86_64.rpm pigsty 1.20250815 83.1KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pguint_17-1.20250815-1PIGSTY.el9.x86_64.rpm
-@ el9.x86_64 17 pguint_17 pguint_17-1.20250815-1PGDG.rhel9.x86_64.rpm pgdg 1.20250815 75.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pguint_17-1.20250815-1PGDG.rhel9.x86_64.rpm
-@ el9.x86_64 17 pguint_17 pguint_17-1.20231206-2PGDG.rhel9.x86_64.rpm pgdg 1.20231206 74.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pguint_17-1.20231206-2PGDG.rhel9.x86_64.rpm
+@ el9.aarch64 17 pguint_17 pguint_17-1.20250815-3PGDG.rhel9.8.aarch64.rpm pgdg 1.20250815 70.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pguint_17-1.20250815-3PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 17 pguint_17 pguint_17-1.20250815-1PIGSTY.el9.aarch64.rpm pigsty 1.20250815 77.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pguint_17-1.20250815-1PIGSTY.el9.aarch64.rpm
-@ el9.aarch64 17 pguint_17 pguint_17-1.20250815-1PGDG.rhel9.aarch64.rpm pgdg 1.20250815 70.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pguint_17-1.20250815-1PGDG.rhel9.aarch64.rpm
-@ el9.aarch64 17 pguint_17 pguint_17-1.20231206-2PGDG.rhel9.aarch64.rpm pgdg 1.20231206 69.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pguint_17-1.20231206-2PGDG.rhel9.aarch64.rpm
+@ el10.x86_64 17 pguint_17 pguint_17-1.20250815-3PGDG.rhel10.2.x86_64.rpm pgdg 1.20250815 75.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pguint_17-1.20250815-3PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 17 pguint_17 pguint_17-1.20250815-1PIGSTY.el10.x86_64.rpm pigsty 1.20250815 82.4KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pguint_17-1.20250815-1PIGSTY.el10.x86_64.rpm
-@ el10.x86_64 17 pguint_17 pguint_17-1.20250815-1PGDG.rhel10.x86_64.rpm pgdg 1.20250815 75.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pguint_17-1.20250815-1PGDG.rhel10.x86_64.rpm
-@ el10.x86_64 17 pguint_17 pguint_17-1.20231206-3PGDG.rhel10.x86_64.rpm pgdg 1.20231206 75.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pguint_17-1.20231206-3PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 17 pguint_17 pguint_17-1.20250815-3PGDG.rhel10.2.aarch64.rpm pgdg 1.20250815 71.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pguint_17-1.20250815-3PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 17 pguint_17 pguint_17-1.20250815-1PIGSTY.el10.aarch64.rpm pigsty 1.20250815 78.0KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pguint_17-1.20250815-1PIGSTY.el10.aarch64.rpm
-@ el10.aarch64 17 pguint_17 pguint_17-1.20250815-1PGDG.rhel10.aarch64.rpm pgdg 1.20250815 72.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pguint_17-1.20250815-1PGDG.rhel10.aarch64.rpm
-@ el10.aarch64 17 pguint_17 pguint_17-1.20231206-3PGDG.rhel10.aarch64.rpm pgdg 1.20231206 72.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pguint_17-1.20231206-3PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 17 postgresql-17-pguint postgresql-17-pguint_1.20250815-1PIGSTY~bookworm_amd64.deb pigsty 1.20250815 159.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pguint/postgresql-17-pguint_1.20250815-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 17 postgresql-17-pguint postgresql-17-pguint_1.20250815-1PIGSTY~bookworm_arm64.deb pigsty 1.20250815 156.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pguint/postgresql-17-pguint_1.20250815-1PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 17 postgresql-17-pguint postgresql-17-pguint_1.20250815-1PIGSTY~trixie_amd64.deb pigsty 1.20250815 158.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pguint/postgresql-17-pguint_1.20250815-1PIGSTY~trixie_amd64.deb
@@ -127,20 +123,14 @@ weight: 3730
 @ el8.aarch64 16 pguint_16 pguint_16-1.20250815-1PGDG.rhel8.aarch64.rpm pgdg 1.20250815 66.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pguint_16-1.20250815-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 16 pguint_16 pguint_16-1.20231206-1PGDG.rhel8.aarch64.rpm pgdg 1.20231206 65.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pguint_16-1.20231206-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 16 pguint_16 pguint_16-1.20220601-3.rhel8.1.aarch64.rpm pgdg 1.20220601 64.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pguint_16-1.20220601-3.rhel8.1.aarch64.rpm
+@ el9.x86_64 16 pguint_16 pguint_16-1.20250815-3PGDG.rhel9.8.x86_64.rpm pgdg 1.20250815 75.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pguint_16-1.20250815-3PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 16 pguint_16 pguint_16-1.20250815-1PIGSTY.el9.x86_64.rpm pigsty 1.20250815 83.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pguint_16-1.20250815-1PIGSTY.el9.x86_64.rpm
-@ el9.x86_64 16 pguint_16 pguint_16-1.20250815-1PGDG.rhel9.x86_64.rpm pgdg 1.20250815 75.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pguint_16-1.20250815-1PGDG.rhel9.x86_64.rpm
-@ el9.x86_64 16 pguint_16 pguint_16-1.20231206-1PGDG.rhel9.x86_64.rpm pgdg 1.20231206 74.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pguint_16-1.20231206-1PGDG.rhel9.x86_64.rpm
-@ el9.x86_64 16 pguint_16 pguint_16-1.20220601-3.rhel9.1.x86_64.rpm pgdg 1.20220601 74.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pguint_16-1.20220601-3.rhel9.1.x86_64.rpm
+@ el9.aarch64 16 pguint_16 pguint_16-1.20250815-3PGDG.rhel9.8.aarch64.rpm pgdg 1.20250815 70.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pguint_16-1.20250815-3PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 16 pguint_16 pguint_16-1.20250815-1PIGSTY.el9.aarch64.rpm pigsty 1.20250815 77.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pguint_16-1.20250815-1PIGSTY.el9.aarch64.rpm
-@ el9.aarch64 16 pguint_16 pguint_16-1.20250815-1PGDG.rhel9.aarch64.rpm pgdg 1.20250815 70.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pguint_16-1.20250815-1PGDG.rhel9.aarch64.rpm
-@ el9.aarch64 16 pguint_16 pguint_16-1.20231206-1PGDG.rhel9.aarch64.rpm pgdg 1.20231206 69.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pguint_16-1.20231206-1PGDG.rhel9.aarch64.rpm
-@ el9.aarch64 16 pguint_16 pguint_16-1.20220601-3.rhel9.1.aarch64.rpm pgdg 1.20220601 69.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pguint_16-1.20220601-3.rhel9.1.aarch64.rpm
+@ el10.x86_64 16 pguint_16 pguint_16-1.20250815-3PGDG.rhel10.2.x86_64.rpm pgdg 1.20250815 75.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pguint_16-1.20250815-3PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 16 pguint_16 pguint_16-1.20250815-1PIGSTY.el10.x86_64.rpm pigsty 1.20250815 82.4KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pguint_16-1.20250815-1PIGSTY.el10.x86_64.rpm
-@ el10.x86_64 16 pguint_16 pguint_16-1.20250815-1PGDG.rhel10.x86_64.rpm pgdg 1.20250815 76.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pguint_16-1.20250815-1PGDG.rhel10.x86_64.rpm
-@ el10.x86_64 16 pguint_16 pguint_16-1.20231206-3PGDG.rhel10.x86_64.rpm pgdg 1.20231206 75.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pguint_16-1.20231206-3PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 16 pguint_16 pguint_16-1.20250815-3PGDG.rhel10.2.aarch64.rpm pgdg 1.20250815 72.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pguint_16-1.20250815-3PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 16 pguint_16 pguint_16-1.20250815-1PIGSTY.el10.aarch64.rpm pigsty 1.20250815 77.1KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pguint_16-1.20250815-1PIGSTY.el10.aarch64.rpm
-@ el10.aarch64 16 pguint_16 pguint_16-1.20250815-1PGDG.rhel10.aarch64.rpm pgdg 1.20250815 72.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pguint_16-1.20250815-1PGDG.rhel10.aarch64.rpm
-@ el10.aarch64 16 pguint_16 pguint_16-1.20231206-3PGDG.rhel10.aarch64.rpm pgdg 1.20231206 72.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pguint_16-1.20231206-3PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 16 postgresql-16-pguint postgresql-16-pguint_1.20250815-1PIGSTY~bookworm_amd64.deb pigsty 1.20250815 159.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pguint/postgresql-16-pguint_1.20250815-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 16 postgresql-16-pguint postgresql-16-pguint_1.20250815-1PIGSTY~bookworm_arm64.deb pigsty 1.20250815 155.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pguint/postgresql-16-pguint_1.20250815-1PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 16 postgresql-16-pguint postgresql-16-pguint_1.20250815-1PIGSTY~trixie_amd64.deb pigsty 1.20250815 159.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pguint/postgresql-16-pguint_1.20250815-1PIGSTY~trixie_amd64.deb
@@ -157,18 +147,14 @@ weight: 3730
 @ el8.aarch64 15 pguint_15 pguint_15-1.20250815-1PIGSTY.el8.aarch64.rpm pigsty 1.20250815 82.8KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pguint_15-1.20250815-1PIGSTY.el8.aarch64.rpm
 @ el8.aarch64 15 pguint_15 pguint_15-1.20250815-1PGDG.rhel8.aarch64.rpm pgdg 1.20250815 66.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pguint_15-1.20250815-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 15 pguint_15 pguint_15-1.20231206-1PGDG.rhel8.aarch64.rpm pgdg 1.20231206 65.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pguint_15-1.20231206-1PGDG.rhel8.aarch64.rpm
+@ el9.x86_64 15 pguint_15 pguint_15-1.20250815-3PGDG.rhel9.8.x86_64.rpm pgdg 1.20250815 75.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pguint_15-1.20250815-3PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 15 pguint_15 pguint_15-1.20250815-1PIGSTY.el9.x86_64.rpm pigsty 1.20250815 83.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pguint_15-1.20250815-1PIGSTY.el9.x86_64.rpm
-@ el9.x86_64 15 pguint_15 pguint_15-1.20250815-1PGDG.rhel9.x86_64.rpm pgdg 1.20250815 75.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pguint_15-1.20250815-1PGDG.rhel9.x86_64.rpm
-@ el9.x86_64 15 pguint_15 pguint_15-1.20231206-1PGDG.rhel9.x86_64.rpm pgdg 1.20231206 74.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pguint_15-1.20231206-1PGDG.rhel9.x86_64.rpm
+@ el9.aarch64 15 pguint_15 pguint_15-1.20250815-3PGDG.rhel9.8.aarch64.rpm pgdg 1.20250815 70.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pguint_15-1.20250815-3PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 15 pguint_15 pguint_15-1.20250815-1PIGSTY.el9.aarch64.rpm pigsty 1.20250815 77.1KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pguint_15-1.20250815-1PIGSTY.el9.aarch64.rpm
-@ el9.aarch64 15 pguint_15 pguint_15-1.20250815-1PGDG.rhel9.aarch64.rpm pgdg 1.20250815 70.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pguint_15-1.20250815-1PGDG.rhel9.aarch64.rpm
-@ el9.aarch64 15 pguint_15 pguint_15-1.20231206-1PGDG.rhel9.aarch64.rpm pgdg 1.20231206 69.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pguint_15-1.20231206-1PGDG.rhel9.aarch64.rpm
+@ el10.x86_64 15 pguint_15 pguint_15-1.20250815-3PGDG.rhel10.2.x86_64.rpm pgdg 1.20250815 75.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pguint_15-1.20250815-3PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 15 pguint_15 pguint_15-1.20250815-1PIGSTY.el10.x86_64.rpm pigsty 1.20250815 82.5KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pguint_15-1.20250815-1PIGSTY.el10.x86_64.rpm
-@ el10.x86_64 15 pguint_15 pguint_15-1.20250815-1PGDG.rhel10.x86_64.rpm pgdg 1.20250815 75.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pguint_15-1.20250815-1PGDG.rhel10.x86_64.rpm
-@ el10.x86_64 15 pguint_15 pguint_15-1.20231206-3PGDG.rhel10.x86_64.rpm pgdg 1.20231206 75.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pguint_15-1.20231206-3PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 15 pguint_15 pguint_15-1.20250815-3PGDG.rhel10.2.aarch64.rpm pgdg 1.20250815 71.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pguint_15-1.20250815-3PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 15 pguint_15 pguint_15-1.20250815-1PIGSTY.el10.aarch64.rpm pigsty 1.20250815 78.0KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pguint_15-1.20250815-1PIGSTY.el10.aarch64.rpm
-@ el10.aarch64 15 pguint_15 pguint_15-1.20250815-1PGDG.rhel10.aarch64.rpm pgdg 1.20250815 72.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pguint_15-1.20250815-1PGDG.rhel10.aarch64.rpm
-@ el10.aarch64 15 pguint_15 pguint_15-1.20231206-3PGDG.rhel10.aarch64.rpm pgdg 1.20231206 71.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pguint_15-1.20231206-3PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 15 postgresql-15-pguint postgresql-15-pguint_1.20250815-1PIGSTY~bookworm_amd64.deb pigsty 1.20250815 161.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pguint/postgresql-15-pguint_1.20250815-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 15 postgresql-15-pguint postgresql-15-pguint_1.20250815-1PIGSTY~bookworm_arm64.deb pigsty 1.20250815 157.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pguint/postgresql-15-pguint_1.20250815-1PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 15 postgresql-15-pguint postgresql-15-pguint_1.20250815-1PIGSTY~trixie_amd64.deb pigsty 1.20250815 160.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pguint/postgresql-15-pguint_1.20250815-1PIGSTY~trixie_amd64.deb

@@ -67,8 +67,8 @@ weight: 2910
 | u22.aarch64 | MISS PIGSTY - 0 | FORK PIGSTY 1.7 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
 | u24.x86_64 | MISS PIGSTY - 0 | FORK PIGSTY 1.7 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
 | u24.aarch64 | MISS PIGSTY - 0 | FORK PIGSTY 1.7 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| u26.x86_64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| u26.aarch64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| u26.x86_64 | MISS PIGSTY - 0 | FORK PIGSTY 1.7 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| u26.aarch64 | MISS PIGSTY - 0 | FORK PIGSTY 1.7 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
 @ el8.x86_64 17 orioledb_17 orioledb_17-1.7-beta15PIGSTY.el8.x86_64.rpm pigsty 1.7 495.6KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/orioledb_17-1.7-beta15PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 17 orioledb_17 orioledb_17-1.7-beta15PIGSTY.el8.aarch64.rpm pigsty 1.7 471.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/orioledb_17-1.7-beta15PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 17 orioledb_17 orioledb_17-1.7-beta15PIGSTY.el9.x86_64.rpm pigsty 1.7 468.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/orioledb_17-1.7-beta15PIGSTY.el9.x86_64.rpm
@@ -83,6 +83,8 @@ weight: 2910
 @ u22.aarch64 17 oriolepg-17-orioledb oriolepg-17-orioledb_1.7-0.beta15PIGSTY~jammy_arm64.deb pigsty 1.7 1.7MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/o/oriolepg-17-orioledb/oriolepg-17-orioledb_1.7-0.beta15PIGSTY~jammy_arm64.deb
 @ u24.x86_64 17 oriolepg-17-orioledb oriolepg-17-orioledb_1.7-0.beta15PIGSTY~noble_amd64.deb pigsty 1.7 1.5MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/o/oriolepg-17-orioledb/oriolepg-17-orioledb_1.7-0.beta15PIGSTY~noble_amd64.deb
 @ u24.aarch64 17 oriolepg-17-orioledb oriolepg-17-orioledb_1.7-0.beta15PIGSTY~noble_arm64.deb pigsty 1.7 1.5MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/o/oriolepg-17-orioledb/oriolepg-17-orioledb_1.7-0.beta15PIGSTY~noble_arm64.deb
+@ u26.x86_64 17 oriolepg-17-orioledb oriolepg-17-orioledb_1.7-0.beta15PIGSTY~resolute_amd64.deb pigsty 1.7 1.5MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/o/oriolepg-17-orioledb/oriolepg-17-orioledb_1.7-0.beta15PIGSTY~resolute_amd64.deb
+@ u26.aarch64 17 oriolepg-17-orioledb oriolepg-17-orioledb_1.7-0.beta15PIGSTY~resolute_arm64.deb pigsty 1.7 1.4MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/o/oriolepg-17-orioledb/oriolepg-17-orioledb_1.7-0.beta15PIGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建

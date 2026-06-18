@@ -12,7 +12,7 @@ slug: ddl
 
 | **扩展名** | **扩展包名** | **版本** | **属性** | **描述** |
 |:-----------|:-------------|:--------:|:--------:|:---------|
-| [`pg_task`](/ext/e/pg_task) | [`pg_task`](https://github.com/RekGRpth/pg_task) | `1.0.0` | `--sL---` | 在特定时间点在后台执行SQL命令 |
+| [`pg_task`](/ext/e/pg_task) | [`pg_task`](https://github.com/RekGRpth/pg_task) | `2.1.29` | `--sL---` | 在特定时间点在后台执行SQL命令 |
 | [`plan_filter`](/ext/e/plan_filter) | [`pg_plan_filter`](https://github.com/pgexperts/pg_plan_filter) | `0.0.1` | `--sL---` | 使用执行计划代价过滤阻止特定查询语句 |
 | [`pg_checksums`](/ext/e/pg_checksums) | [`pg_checksums`](https://github.com/credativ/pg_checksums) | `1.3` | `--s---r` | 在离线模式下激活/启用/禁用数据库集群的校验和功能 |
 | [`pg_crash`](/ext/e/pg_crash) | [`pg_crash`](https://github.com/cybertec-postgresql/pg_crash) | `1.0` | `--sL---` | 向数据库进程随机发送信号模拟故障 |

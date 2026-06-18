@@ -52,10 +52,10 @@ weight: 5110
 |:--:|:--:|:--:|:--:|:--:|:--:|
 | el8.x86_64 | AVAIL PGDG 1.3 1 | AVAIL PGDG 1.3 1 | AVAIL PGDG 1.3 2 | AVAIL PGDG 1.3 3 | AVAIL PGDG 1.3 3 |
 | el8.aarch64 | AVAIL PGDG 1.3 1 | AVAIL PGDG 1.3 1 | AVAIL PGDG 1.3 2 | AVAIL PGDG 1.3 3 | AVAIL PGDG 1.3 3 |
-| el9.x86_64 | AVAIL PGDG 1.3 1 | AVAIL PGDG 1.3 1 | AVAIL PGDG 1.3 2 | AVAIL PGDG 1.3 3 | AVAIL PGDG 1.3 3 |
-| el9.aarch64 | AVAIL PGDG 1.3 1 | AVAIL PGDG 1.3 1 | AVAIL PGDG 1.3 2 | AVAIL PGDG 1.3 3 | AVAIL PGDG 1.3 3 |
-| el10.x86_64 | AVAIL PGDG 1.3 1 | AVAIL PGDG 1.3 1 | AVAIL PGDG 1.3 2 | AVAIL PGDG 1.3 2 | AVAIL PGDG 1.3 2 |
-| el10.aarch64 | AVAIL PGDG 1.3 1 | AVAIL PGDG 1.3 1 | AVAIL PGDG 1.3 2 | AVAIL PGDG 1.3 2 | AVAIL PGDG 1.3 2 |
+| el9.x86_64 | AVAIL PGDG 1.3 1 | AVAIL PGDG 1.3 1 | AVAIL PGDG 1.3 1 | AVAIL PGDG 1.3 1 | AVAIL PGDG 1.3 1 |
+| el9.aarch64 | AVAIL PGDG 1.3 1 | AVAIL PGDG 1.3 1 | AVAIL PGDG 1.3 1 | AVAIL PGDG 1.3 1 | AVAIL PGDG 1.3 1 |
+| el10.x86_64 | AVAIL PGDG 1.3 1 | AVAIL PGDG 1.3 1 | AVAIL PGDG 1.3 1 | AVAIL PGDG 1.3 1 | AVAIL PGDG 1.3 1 |
+| el10.aarch64 | AVAIL PGDG 1.3 1 | AVAIL PGDG 1.3 1 | AVAIL PGDG 1.3 1 | AVAIL PGDG 1.3 1 | AVAIL PGDG 1.3 1 |
 | d12.x86_64 | AVAIL PGDG 1.3 1 | AVAIL PGDG 1.3 1 | AVAIL PGDG 1.3 1 | AVAIL PGDG 1.3 1 | AVAIL PGDG 1.3 1 |
 | d12.aarch64 | AVAIL PGDG 1.3 1 | AVAIL PGDG 1.3 1 | AVAIL PGDG 1.3 1 | AVAIL PGDG 1.3 1 | AVAIL PGDG 1.3 1 |
 | d13.x86_64 | AVAIL PGDG 1.3 1 | AVAIL PGDG 1.3 1 | AVAIL PGDG 1.3 1 | AVAIL PGDG 1.3 1 | AVAIL PGDG 1.3 1 |
@@ -68,10 +68,10 @@ weight: 5110
 | u26.aarch64 | AVAIL PGDG 1.3 1 | AVAIL PGDG 1.3 1 | AVAIL PGDG 1.3 1 | AVAIL PGDG 1.3 1 | AVAIL PGDG 1.3 1 |
 @ el8.x86_64 18 pg_checksums_18 pg_checksums_18-1.3-1PGDG.rhel8.x86_64.rpm pgdg 1.3 47.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pg_checksums_18-1.3-1PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 18 pg_checksums_18 pg_checksums_18-1.3-1PGDG.rhel8.aarch64.rpm pgdg 1.3 46.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pg_checksums_18-1.3-1PGDG.rhel8.aarch64.rpm
-@ el9.x86_64 18 pg_checksums_18 pg_checksums_18-1.3-1PGDG.rhel9.x86_64.rpm pgdg 1.3 32.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pg_checksums_18-1.3-1PGDG.rhel9.x86_64.rpm
-@ el9.aarch64 18 pg_checksums_18 pg_checksums_18-1.3-1PGDG.rhel9.aarch64.rpm pgdg 1.3 39.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pg_checksums_18-1.3-1PGDG.rhel9.aarch64.rpm
-@ el10.x86_64 18 pg_checksums_18 pg_checksums_18-1.3-1PGDG.rhel10.x86_64.rpm pgdg 1.3 33.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pg_checksums_18-1.3-1PGDG.rhel10.x86_64.rpm
-@ el10.aarch64 18 pg_checksums_18 pg_checksums_18-1.3-1PGDG.rhel10.aarch64.rpm pgdg 1.3 40.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_checksums_18-1.3-1PGDG.rhel10.aarch64.rpm
+@ el9.x86_64 18 pg_checksums_18 pg_checksums_18-1.3-1PGDG.rhel9.8.x86_64.rpm pgdg 1.3 32.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pg_checksums_18-1.3-1PGDG.rhel9.8.x86_64.rpm
+@ el9.aarch64 18 pg_checksums_18 pg_checksums_18-1.3-1PGDG.rhel9.8.aarch64.rpm pgdg 1.3 39.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pg_checksums_18-1.3-1PGDG.rhel9.8.aarch64.rpm
+@ el10.x86_64 18 pg_checksums_18 pg_checksums_18-1.3-1PGDG.rhel10.2.x86_64.rpm pgdg 1.3 32.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pg_checksums_18-1.3-1PGDG.rhel10.2.x86_64.rpm
+@ el10.aarch64 18 pg_checksums_18 pg_checksums_18-1.3-1PGDG.rhel10.2.aarch64.rpm pgdg 1.3 40.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_checksums_18-1.3-1PGDG.rhel10.2.aarch64.rpm
 @ d12.x86_64 18 postgresql-18-pg-checksums postgresql-18-pg-checksums_1.3-2.pgdg12+1_amd64.deb pgdg 1.3 36.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-checksums/postgresql-18-pg-checksums_1.3-2.pgdg12+1_amd64.deb
 @ d12.aarch64 18 postgresql-18-pg-checksums postgresql-18-pg-checksums_1.3-2.pgdg12+1_arm64.deb pgdg 1.3 35.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-checksums/postgresql-18-pg-checksums_1.3-2.pgdg12+1_arm64.deb
 @ d13.x86_64 18 postgresql-18-pg-checksums postgresql-18-pg-checksums_1.3-2.pgdg13+1_amd64.deb pgdg 1.3 37.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-checksums/postgresql-18-pg-checksums_1.3-2.pgdg13+1_amd64.deb
@@ -84,10 +84,10 @@ weight: 5110
 @ u26.aarch64 18 postgresql-18-pg-checksums postgresql-18-pg-checksums_1.3-2.pgdg26.04+1_arm64.deb pgdg 1.3 36.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-checksums/postgresql-18-pg-checksums_1.3-2.pgdg26.04+1_arm64.deb
 @ el8.x86_64 17 pg_checksums_17 pg_checksums_17-1.3-1PGDG.rhel8.x86_64.rpm pgdg 1.3 47.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pg_checksums_17-1.3-1PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 17 pg_checksums_17 pg_checksums_17-1.3-1PGDG.rhel8.aarch64.rpm pgdg 1.3 47.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pg_checksums_17-1.3-1PGDG.rhel8.aarch64.rpm
-@ el9.x86_64 17 pg_checksums_17 pg_checksums_17-1.3-1PGDG.rhel9.x86_64.rpm pgdg 1.3 31.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_checksums_17-1.3-1PGDG.rhel9.x86_64.rpm
-@ el9.aarch64 17 pg_checksums_17 pg_checksums_17-1.3-1PGDG.rhel9.aarch64.rpm pgdg 1.3 40.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_checksums_17-1.3-1PGDG.rhel9.aarch64.rpm
-@ el10.x86_64 17 pg_checksums_17 pg_checksums_17-1.3-1PGDG.rhel10.x86_64.rpm pgdg 1.3 32.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_checksums_17-1.3-1PGDG.rhel10.x86_64.rpm
-@ el10.aarch64 17 pg_checksums_17 pg_checksums_17-1.3-1PGDG.rhel10.aarch64.rpm pgdg 1.3 40.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_checksums_17-1.3-1PGDG.rhel10.aarch64.rpm
+@ el9.x86_64 17 pg_checksums_17 pg_checksums_17-1.3-1PGDG.rhel9.8.x86_64.rpm pgdg 1.3 31.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_checksums_17-1.3-1PGDG.rhel9.8.x86_64.rpm
+@ el9.aarch64 17 pg_checksums_17 pg_checksums_17-1.3-1PGDG.rhel9.8.aarch64.rpm pgdg 1.3 40.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_checksums_17-1.3-1PGDG.rhel9.8.aarch64.rpm
+@ el10.x86_64 17 pg_checksums_17 pg_checksums_17-1.3-1PGDG.rhel10.2.x86_64.rpm pgdg 1.3 31.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_checksums_17-1.3-1PGDG.rhel10.2.x86_64.rpm
+@ el10.aarch64 17 pg_checksums_17 pg_checksums_17-1.3-1PGDG.rhel10.2.aarch64.rpm pgdg 1.3 40.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_checksums_17-1.3-1PGDG.rhel10.2.aarch64.rpm
 @ d12.x86_64 17 postgresql-17-pg-checksums postgresql-17-pg-checksums_1.3-2.pgdg12+1_amd64.deb pgdg 1.3 36.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-checksums/postgresql-17-pg-checksums_1.3-2.pgdg12+1_amd64.deb
 @ d12.aarch64 17 postgresql-17-pg-checksums postgresql-17-pg-checksums_1.3-2.pgdg12+1_arm64.deb pgdg 1.3 35.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-checksums/postgresql-17-pg-checksums_1.3-2.pgdg12+1_arm64.deb
 @ d13.x86_64 17 postgresql-17-pg-checksums postgresql-17-pg-checksums_1.3-2.pgdg13+1_amd64.deb pgdg 1.3 36.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-checksums/postgresql-17-pg-checksums_1.3-2.pgdg13+1_amd64.deb
@@ -102,14 +102,10 @@ weight: 5110
 @ el8.x86_64 16 pg_checksums_16 pg_checksums_16-1.1-3PGDG.rhel8.x86_64.rpm pgdg 1.1 45.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_checksums_16-1.1-3PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 16 pg_checksums_16 pg_checksums_16-1.3-1PGDG.rhel8.aarch64.rpm pgdg 1.3 44.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pg_checksums_16-1.3-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 16 pg_checksums_16 pg_checksums_16-1.1-3PGDG.rhel8.aarch64.rpm pgdg 1.1 45.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pg_checksums_16-1.1-3PGDG.rhel8.aarch64.rpm
-@ el9.x86_64 16 pg_checksums_16 pg_checksums_16-1.3-1PGDG.rhel9.x86_64.rpm pgdg 1.3 31.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_checksums_16-1.3-1PGDG.rhel9.x86_64.rpm
-@ el9.x86_64 16 pg_checksums_16 pg_checksums_16-1.1-3PGDG.rhel9.x86_64.rpm pgdg 1.1 31.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_checksums_16-1.1-3PGDG.rhel9.x86_64.rpm
-@ el9.aarch64 16 pg_checksums_16 pg_checksums_16-1.3-1PGDG.rhel9.aarch64.rpm pgdg 1.3 39.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_checksums_16-1.3-1PGDG.rhel9.aarch64.rpm
-@ el9.aarch64 16 pg_checksums_16 pg_checksums_16-1.1-3PGDG.rhel9.aarch64.rpm pgdg 1.1 39.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_checksums_16-1.1-3PGDG.rhel9.aarch64.rpm
-@ el10.x86_64 16 pg_checksums_16 pg_checksums_16-1.3-1PGDG.rhel10.x86_64.rpm pgdg 1.3 31.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_checksums_16-1.3-1PGDG.rhel10.x86_64.rpm
-@ el10.x86_64 16 pg_checksums_16 pg_checksums_16-1.2-1PGDG.rhel10.x86_64.rpm pgdg 1.2 31.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_checksums_16-1.2-1PGDG.rhel10.x86_64.rpm
-@ el10.aarch64 16 pg_checksums_16 pg_checksums_16-1.3-1PGDG.rhel10.aarch64.rpm pgdg 1.3 40.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_checksums_16-1.3-1PGDG.rhel10.aarch64.rpm
-@ el10.aarch64 16 pg_checksums_16 pg_checksums_16-1.2-1PGDG.rhel10.aarch64.rpm pgdg 1.2 40.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_checksums_16-1.2-1PGDG.rhel10.aarch64.rpm
+@ el9.x86_64 16 pg_checksums_16 pg_checksums_16-1.3-1PGDG.rhel9.8.x86_64.rpm pgdg 1.3 31.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_checksums_16-1.3-1PGDG.rhel9.8.x86_64.rpm
+@ el9.aarch64 16 pg_checksums_16 pg_checksums_16-1.3-1PGDG.rhel9.8.aarch64.rpm pgdg 1.3 39.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_checksums_16-1.3-1PGDG.rhel9.8.aarch64.rpm
+@ el10.x86_64 16 pg_checksums_16 pg_checksums_16-1.3-1PGDG.rhel10.2.x86_64.rpm pgdg 1.3 31.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_checksums_16-1.3-1PGDG.rhel10.2.x86_64.rpm
+@ el10.aarch64 16 pg_checksums_16 pg_checksums_16-1.3-1PGDG.rhel10.2.aarch64.rpm pgdg 1.3 39.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_checksums_16-1.3-1PGDG.rhel10.2.aarch64.rpm
 @ d12.x86_64 16 postgresql-16-pg-checksums postgresql-16-pg-checksums_1.3-2.pgdg12+1_amd64.deb pgdg 1.3 34.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-checksums/postgresql-16-pg-checksums_1.3-2.pgdg12+1_amd64.deb
 @ d12.aarch64 16 postgresql-16-pg-checksums postgresql-16-pg-checksums_1.3-2.pgdg12+1_arm64.deb pgdg 1.3 33.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-checksums/postgresql-16-pg-checksums_1.3-2.pgdg12+1_arm64.deb
 @ d13.x86_64 16 postgresql-16-pg-checksums postgresql-16-pg-checksums_1.3-2.pgdg13+1_amd64.deb pgdg 1.3 34.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-checksums/postgresql-16-pg-checksums_1.3-2.pgdg13+1_amd64.deb
@@ -126,16 +122,10 @@ weight: 5110
 @ el8.aarch64 15 pg_checksums_15 pg_checksums_15-1.3-1PGDG.rhel8.aarch64.rpm pgdg 1.3 44.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pg_checksums_15-1.3-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 15 pg_checksums_15 pg_checksums_15-1.1-3PGDG.rhel8.aarch64.rpm pgdg 1.1 44.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pg_checksums_15-1.1-3PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 15 pg_checksums_15 pg_checksums_15-1.1-1.rhel8.aarch64.rpm pgdg 1.1 44.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pg_checksums_15-1.1-1.rhel8.aarch64.rpm
-@ el9.x86_64 15 pg_checksums_15 pg_checksums_15-1.3-1PGDG.rhel9.x86_64.rpm pgdg 1.3 31.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_checksums_15-1.3-1PGDG.rhel9.x86_64.rpm
-@ el9.x86_64 15 pg_checksums_15 pg_checksums_15-1.1-3PGDG.rhel9.x86_64.rpm pgdg 1.1 31.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_checksums_15-1.1-3PGDG.rhel9.x86_64.rpm
-@ el9.x86_64 15 pg_checksums_15 pg_checksums_15-1.1-1.rhel9.x86_64.rpm pgdg 1.1 31.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_checksums_15-1.1-1.rhel9.x86_64.rpm
-@ el9.aarch64 15 pg_checksums_15 pg_checksums_15-1.3-1PGDG.rhel9.aarch64.rpm pgdg 1.3 39.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_checksums_15-1.3-1PGDG.rhel9.aarch64.rpm
-@ el9.aarch64 15 pg_checksums_15 pg_checksums_15-1.1-3PGDG.rhel9.aarch64.rpm pgdg 1.1 40.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_checksums_15-1.1-3PGDG.rhel9.aarch64.rpm
-@ el9.aarch64 15 pg_checksums_15 pg_checksums_15-1.1-1.rhel9.aarch64.rpm pgdg 1.1 40.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_checksums_15-1.1-1.rhel9.aarch64.rpm
-@ el10.x86_64 15 pg_checksums_15 pg_checksums_15-1.3-1PGDG.rhel10.x86_64.rpm pgdg 1.3 31.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_checksums_15-1.3-1PGDG.rhel10.x86_64.rpm
-@ el10.x86_64 15 pg_checksums_15 pg_checksums_15-1.2-1PGDG.rhel10.x86_64.rpm pgdg 1.2 31.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_checksums_15-1.2-1PGDG.rhel10.x86_64.rpm
-@ el10.aarch64 15 pg_checksums_15 pg_checksums_15-1.3-1PGDG.rhel10.aarch64.rpm pgdg 1.3 40.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_checksums_15-1.3-1PGDG.rhel10.aarch64.rpm
-@ el10.aarch64 15 pg_checksums_15 pg_checksums_15-1.2-1PGDG.rhel10.aarch64.rpm pgdg 1.2 40.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_checksums_15-1.2-1PGDG.rhel10.aarch64.rpm
+@ el9.x86_64 15 pg_checksums_15 pg_checksums_15-1.3-1PGDG.rhel9.8.x86_64.rpm pgdg 1.3 31.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_checksums_15-1.3-1PGDG.rhel9.8.x86_64.rpm
+@ el9.aarch64 15 pg_checksums_15 pg_checksums_15-1.3-1PGDG.rhel9.8.aarch64.rpm pgdg 1.3 39.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_checksums_15-1.3-1PGDG.rhel9.8.aarch64.rpm
+@ el10.x86_64 15 pg_checksums_15 pg_checksums_15-1.3-1PGDG.rhel10.2.x86_64.rpm pgdg 1.3 31.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_checksums_15-1.3-1PGDG.rhel10.2.x86_64.rpm
+@ el10.aarch64 15 pg_checksums_15 pg_checksums_15-1.3-1PGDG.rhel10.2.aarch64.rpm pgdg 1.3 40.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_checksums_15-1.3-1PGDG.rhel10.2.aarch64.rpm
 @ d12.x86_64 15 postgresql-15-pg-checksums postgresql-15-pg-checksums_1.3-2.pgdg12+1_amd64.deb pgdg 1.3 34.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-checksums/postgresql-15-pg-checksums_1.3-2.pgdg12+1_amd64.deb
 @ d12.aarch64 15 postgresql-15-pg-checksums postgresql-15-pg-checksums_1.3-2.pgdg12+1_arm64.deb pgdg 1.3 33.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-checksums/postgresql-15-pg-checksums_1.3-2.pgdg12+1_arm64.deb
 @ d13.x86_64 15 postgresql-15-pg-checksums postgresql-15-pg-checksums_1.3-2.pgdg13+1_amd64.deb pgdg 1.3 34.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-checksums/postgresql-15-pg-checksums_1.3-2.pgdg13+1_amd64.deb
@@ -152,16 +142,10 @@ weight: 5110
 @ el8.aarch64 14 pg_checksums_14 pg_checksums_14-1.3-1PGDG.rhel8.aarch64.rpm pgdg 1.3 43.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pg_checksums_14-1.3-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 14 pg_checksums_14 pg_checksums_14-1.1-3PGDG.rhel8.aarch64.rpm pgdg 1.1 43.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pg_checksums_14-1.1-3PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 14 pg_checksums_14 pg_checksums_14-1.1-1.rhel8.aarch64.rpm pgdg 1.1 43.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pg_checksums_14-1.1-1.rhel8.aarch64.rpm
-@ el9.x86_64 14 pg_checksums_14 pg_checksums_14-1.3-1PGDG.rhel9.x86_64.rpm pgdg 1.3 30.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_checksums_14-1.3-1PGDG.rhel9.x86_64.rpm
-@ el9.x86_64 14 pg_checksums_14 pg_checksums_14-1.1-3PGDG.rhel9.x86_64.rpm pgdg 1.1 31.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_checksums_14-1.1-3PGDG.rhel9.x86_64.rpm
-@ el9.x86_64 14 pg_checksums_14 pg_checksums_14-1.1-1.rhel9.x86_64.rpm pgdg 1.1 31.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_checksums_14-1.1-1.rhel9.x86_64.rpm
-@ el9.aarch64 14 pg_checksums_14 pg_checksums_14-1.3-1PGDG.rhel9.aarch64.rpm pgdg 1.3 39.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_checksums_14-1.3-1PGDG.rhel9.aarch64.rpm
-@ el9.aarch64 14 pg_checksums_14 pg_checksums_14-1.1-3PGDG.rhel9.aarch64.rpm pgdg 1.1 39.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_checksums_14-1.1-3PGDG.rhel9.aarch64.rpm
-@ el9.aarch64 14 pg_checksums_14 pg_checksums_14-1.1-1.rhel9.aarch64.rpm pgdg 1.1 40.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_checksums_14-1.1-1.rhel9.aarch64.rpm
-@ el10.x86_64 14 pg_checksums_14 pg_checksums_14-1.3-1PGDG.rhel10.x86_64.rpm pgdg 1.3 31.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_checksums_14-1.3-1PGDG.rhel10.x86_64.rpm
-@ el10.x86_64 14 pg_checksums_14 pg_checksums_14-1.2-1PGDG.rhel10.x86_64.rpm pgdg 1.2 31.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_checksums_14-1.2-1PGDG.rhel10.x86_64.rpm
-@ el10.aarch64 14 pg_checksums_14 pg_checksums_14-1.3-1PGDG.rhel10.aarch64.rpm pgdg 1.3 40.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_checksums_14-1.3-1PGDG.rhel10.aarch64.rpm
-@ el10.aarch64 14 pg_checksums_14 pg_checksums_14-1.2-1PGDG.rhel10.aarch64.rpm pgdg 1.2 40.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_checksums_14-1.2-1PGDG.rhel10.aarch64.rpm
+@ el9.x86_64 14 pg_checksums_14 pg_checksums_14-1.3-1PGDG.rhel9.8.x86_64.rpm pgdg 1.3 30.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_checksums_14-1.3-1PGDG.rhel9.8.x86_64.rpm
+@ el9.aarch64 14 pg_checksums_14 pg_checksums_14-1.3-1PGDG.rhel9.8.aarch64.rpm pgdg 1.3 39.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_checksums_14-1.3-1PGDG.rhel9.8.aarch64.rpm
+@ el10.x86_64 14 pg_checksums_14 pg_checksums_14-1.3-1PGDG.rhel10.2.x86_64.rpm pgdg 1.3 31.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_checksums_14-1.3-1PGDG.rhel10.2.x86_64.rpm
+@ el10.aarch64 14 pg_checksums_14 pg_checksums_14-1.3-1PGDG.rhel10.2.aarch64.rpm pgdg 1.3 40.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_checksums_14-1.3-1PGDG.rhel10.2.aarch64.rpm
 @ d12.x86_64 14 postgresql-14-pg-checksums postgresql-14-pg-checksums_1.3-2.pgdg12+1_amd64.deb pgdg 1.3 33.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-checksums/postgresql-14-pg-checksums_1.3-2.pgdg12+1_amd64.deb
 @ d12.aarch64 14 postgresql-14-pg-checksums postgresql-14-pg-checksums_1.3-2.pgdg12+1_arm64.deb pgdg 1.3 33.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-checksums/postgresql-14-pg-checksums_1.3-2.pgdg12+1_arm64.deb
 @ d13.x86_64 14 postgresql-14-pg-checksums postgresql-14-pg-checksums_1.3-2.pgdg13+1_amd64.deb pgdg 1.3 34.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-checksums/postgresql-14-pg-checksums_1.3-2.pgdg13+1_amd64.deb

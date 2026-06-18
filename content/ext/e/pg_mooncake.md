@@ -38,7 +38,7 @@ weight: 2440
 {.ext-table .ext-table--rel}
 
 
-> unpublished release
+> unpublished release; pgrx patched to 0.18.1.
 
 
 ## 版本
@@ -67,8 +67,8 @@ weight: 2440
 | u22.aarch64 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 |
 | u24.x86_64 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 |
 | u24.aarch64 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 |
-| u26.x86_64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| u26.aarch64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| u26.x86_64 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 |
+| u26.aarch64 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 |
 @ el8.x86_64 18 pg_mooncake_18 pg_mooncake_18-0.2.0-1PIGSTY.el8.x86_64.rpm pigsty 0.2.0 11.1MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_mooncake_18-0.2.0-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 18 pg_mooncake_18 pg_mooncake_18-0.2.0-1PIGSTY.el8.aarch64.rpm pigsty 0.2.0 9.8MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_mooncake_18-0.2.0-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 18 pg_mooncake_18 pg_mooncake_18-0.2.0-1PIGSTY.el9.x86_64.rpm pigsty 0.2.0 10.5MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_mooncake_18-0.2.0-1PIGSTY.el9.x86_64.rpm
@@ -83,6 +83,8 @@ weight: 2440
 @ u22.aarch64 18 postgresql-18-pg-mooncake postgresql-18-pg-mooncake_0.2.0-1PIGSTY~jammy_arm64.deb pigsty 0.2.0 9.1MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-mooncake/postgresql-18-pg-mooncake_0.2.0-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 18 postgresql-18-pg-mooncake postgresql-18-pg-mooncake_0.2.0-1PIGSTY~noble_amd64.deb pigsty 0.2.0 9.6MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-mooncake/postgresql-18-pg-mooncake_0.2.0-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 18 postgresql-18-pg-mooncake postgresql-18-pg-mooncake_0.2.0-1PIGSTY~noble_arm64.deb pigsty 0.2.0 9.1MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-mooncake/postgresql-18-pg-mooncake_0.2.0-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 18 postgresql-18-pg-mooncake postgresql-18-pg-mooncake_0.2.0-2PIGSTY~resolute_amd64.deb pigsty 0.2.0 16.1MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-mooncake/postgresql-18-pg-mooncake_0.2.0-2PIGSTY~resolute_amd64.deb
+@ u26.aarch64 18 postgresql-18-pg-mooncake postgresql-18-pg-mooncake_0.2.0-2PIGSTY~resolute_arm64.deb pigsty 0.2.0 15.5MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-mooncake/postgresql-18-pg-mooncake_0.2.0-2PIGSTY~resolute_arm64.deb
 @ el8.x86_64 17 pg_mooncake_17 pg_mooncake_17-0.2.0-1PIGSTY.el8.x86_64.rpm pigsty 0.2.0 11.1MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_mooncake_17-0.2.0-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 17 pg_mooncake_17 pg_mooncake_17-0.2.0-1PIGSTY.el8.aarch64.rpm pigsty 0.2.0 9.8MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_mooncake_17-0.2.0-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 17 pg_mooncake_17 pg_mooncake_17-0.2.0-1PIGSTY.el9.x86_64.rpm pigsty 0.2.0 10.5MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_mooncake_17-0.2.0-1PIGSTY.el9.x86_64.rpm
@@ -97,6 +99,8 @@ weight: 2440
 @ u22.aarch64 17 postgresql-17-pg-mooncake postgresql-17-pg-mooncake_0.2.0-1PIGSTY~jammy_arm64.deb pigsty 0.2.0 9.1MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-mooncake/postgresql-17-pg-mooncake_0.2.0-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 17 postgresql-17-pg-mooncake postgresql-17-pg-mooncake_0.2.0-1PIGSTY~noble_amd64.deb pigsty 0.2.0 9.6MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-mooncake/postgresql-17-pg-mooncake_0.2.0-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 17 postgresql-17-pg-mooncake postgresql-17-pg-mooncake_0.2.0-1PIGSTY~noble_arm64.deb pigsty 0.2.0 9.1MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-mooncake/postgresql-17-pg-mooncake_0.2.0-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 17 postgresql-17-pg-mooncake postgresql-17-pg-mooncake_0.2.0-2PIGSTY~resolute_amd64.deb pigsty 0.2.0 16.1MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-mooncake/postgresql-17-pg-mooncake_0.2.0-2PIGSTY~resolute_amd64.deb
+@ u26.aarch64 17 postgresql-17-pg-mooncake postgresql-17-pg-mooncake_0.2.0-2PIGSTY~resolute_arm64.deb pigsty 0.2.0 15.5MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-mooncake/postgresql-17-pg-mooncake_0.2.0-2PIGSTY~resolute_arm64.deb
 @ el8.x86_64 16 pg_mooncake_16 pg_mooncake_16-0.2.0-1PIGSTY.el8.x86_64.rpm pigsty 0.2.0 11.1MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_mooncake_16-0.2.0-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 16 pg_mooncake_16 pg_mooncake_16-0.2.0-1PIGSTY.el8.aarch64.rpm pigsty 0.2.0 9.8MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_mooncake_16-0.2.0-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 16 pg_mooncake_16 pg_mooncake_16-0.2.0-1PIGSTY.el9.x86_64.rpm pigsty 0.2.0 10.5MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_mooncake_16-0.2.0-1PIGSTY.el9.x86_64.rpm
@@ -111,6 +115,8 @@ weight: 2440
 @ u22.aarch64 16 postgresql-16-pg-mooncake postgresql-16-pg-mooncake_0.2.0-1PIGSTY~jammy_arm64.deb pigsty 0.2.0 9.1MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-mooncake/postgresql-16-pg-mooncake_0.2.0-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 16 postgresql-16-pg-mooncake postgresql-16-pg-mooncake_0.2.0-1PIGSTY~noble_amd64.deb pigsty 0.2.0 9.6MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-mooncake/postgresql-16-pg-mooncake_0.2.0-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 16 postgresql-16-pg-mooncake postgresql-16-pg-mooncake_0.2.0-1PIGSTY~noble_arm64.deb pigsty 0.2.0 9.1MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-mooncake/postgresql-16-pg-mooncake_0.2.0-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 16 postgresql-16-pg-mooncake postgresql-16-pg-mooncake_0.2.0-2PIGSTY~resolute_amd64.deb pigsty 0.2.0 16.1MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-mooncake/postgresql-16-pg-mooncake_0.2.0-2PIGSTY~resolute_amd64.deb
+@ u26.aarch64 16 postgresql-16-pg-mooncake postgresql-16-pg-mooncake_0.2.0-2PIGSTY~resolute_arm64.deb pigsty 0.2.0 15.5MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-mooncake/postgresql-16-pg-mooncake_0.2.0-2PIGSTY~resolute_arm64.deb
 @ el8.x86_64 15 pg_mooncake_15 pg_mooncake_15-0.2.0-1PIGSTY.el8.x86_64.rpm pigsty 0.2.0 11.1MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_mooncake_15-0.2.0-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 15 pg_mooncake_15 pg_mooncake_15-0.2.0-1PIGSTY.el8.aarch64.rpm pigsty 0.2.0 9.8MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_mooncake_15-0.2.0-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 15 pg_mooncake_15 pg_mooncake_15-0.2.0-1PIGSTY.el9.x86_64.rpm pigsty 0.2.0 10.5MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_mooncake_15-0.2.0-1PIGSTY.el9.x86_64.rpm
@@ -125,6 +131,8 @@ weight: 2440
 @ u22.aarch64 15 postgresql-15-pg-mooncake postgresql-15-pg-mooncake_0.2.0-1PIGSTY~jammy_arm64.deb pigsty 0.2.0 9.1MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-mooncake/postgresql-15-pg-mooncake_0.2.0-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 15 postgresql-15-pg-mooncake postgresql-15-pg-mooncake_0.2.0-1PIGSTY~noble_amd64.deb pigsty 0.2.0 9.6MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-mooncake/postgresql-15-pg-mooncake_0.2.0-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 15 postgresql-15-pg-mooncake postgresql-15-pg-mooncake_0.2.0-1PIGSTY~noble_arm64.deb pigsty 0.2.0 9.1MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-mooncake/postgresql-15-pg-mooncake_0.2.0-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 15 postgresql-15-pg-mooncake postgresql-15-pg-mooncake_0.2.0-2PIGSTY~resolute_amd64.deb pigsty 0.2.0 16.1MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-mooncake/postgresql-15-pg-mooncake_0.2.0-2PIGSTY~resolute_amd64.deb
+@ u26.aarch64 15 postgresql-15-pg-mooncake postgresql-15-pg-mooncake_0.2.0-2PIGSTY~resolute_arm64.deb pigsty 0.2.0 15.5MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-mooncake/postgresql-15-pg-mooncake_0.2.0-2PIGSTY~resolute_arm64.deb
 @ el8.x86_64 14 pg_mooncake_14 pg_mooncake_14-0.2.0-1PIGSTY.el8.x86_64.rpm pigsty 0.2.0 11.1MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_mooncake_14-0.2.0-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 14 pg_mooncake_14 pg_mooncake_14-0.2.0-1PIGSTY.el8.aarch64.rpm pigsty 0.2.0 9.8MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_mooncake_14-0.2.0-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 14 pg_mooncake_14 pg_mooncake_14-0.2.0-1PIGSTY.el9.x86_64.rpm pigsty 0.2.0 10.5MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_mooncake_14-0.2.0-1PIGSTY.el9.x86_64.rpm
@@ -139,6 +147,8 @@ weight: 2440
 @ u22.aarch64 14 postgresql-14-pg-mooncake postgresql-14-pg-mooncake_0.2.0-1PIGSTY~jammy_arm64.deb pigsty 0.2.0 9.1MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-mooncake/postgresql-14-pg-mooncake_0.2.0-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 14 postgresql-14-pg-mooncake postgresql-14-pg-mooncake_0.2.0-1PIGSTY~noble_amd64.deb pigsty 0.2.0 9.6MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-mooncake/postgresql-14-pg-mooncake_0.2.0-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 14 postgresql-14-pg-mooncake postgresql-14-pg-mooncake_0.2.0-1PIGSTY~noble_arm64.deb pigsty 0.2.0 9.1MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-mooncake/postgresql-14-pg-mooncake_0.2.0-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 14 postgresql-14-pg-mooncake postgresql-14-pg-mooncake_0.2.0-2PIGSTY~resolute_amd64.deb pigsty 0.2.0 16.1MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-mooncake/postgresql-14-pg-mooncake_0.2.0-2PIGSTY~resolute_amd64.deb
+@ u26.aarch64 14 postgresql-14-pg-mooncake postgresql-14-pg-mooncake_0.2.0-2PIGSTY~resolute_arm64.deb pigsty 0.2.0 15.5MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-mooncake/postgresql-14-pg-mooncake_0.2.0-2PIGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建

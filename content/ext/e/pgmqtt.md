@@ -11,10 +11,10 @@ weight: 9620
     <div class="ext-card__title">RayElg/pgmqtt</div>
     <div class="ext-card__desc">https://github.com/RayElg/pgmqtt</div>
   </a>
-  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pgmqtt-0.1.0.tar.gz">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pgmqtt-0.3.0.tar.gz">
     <div class="ext-card__kicker">源码</div>
-    <div class="ext-card__title">pgmqtt-0.1.0.tar.gz</div>
-    <div class="ext-card__desc">pgmqtt-0.1.0.tar.gz</div>
+    <div class="ext-card__title">pgmqtt-0.3.0.tar.gz</div>
+    <div class="ext-card__desc">pgmqtt-0.3.0.tar.gz</div>
   </a>
 </div>
 
@@ -25,7 +25,7 @@ weight: 9620
 
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
-| [**`pgmqtt`**](/ext/e/pgmqtt) | `0.1.0` | <a class="ext-badge ext-badge--cate etl" href="/ext/cate/etl">ETL</a> | <a class="ext-badge ext-badge--license elv2" href="/ext/license#elv2">ELv2</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> |
+| [**`pgmqtt`**](/ext/e/pgmqtt) | `0.3.0` | <a class="ext-badge ext-badge--cate etl" href="/ext/cate/etl">ETL</a> | <a class="ext-badge ext-badge--license elv2" href="/ext/license#elv2">ELv2</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> |
 {.ext-table}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
@@ -34,112 +34,117 @@ weight: 9620
 {.ext-table}
 
 
-> manually upgraded PGRX from 0.16.1 to 0.17.0 by Vonng; requires wal_level = logical for CDC.
+> requires wal_level = logical for CDC; pgrx patched to 0.18.1.
 
 
 ## 版本
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#etl) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.1.0` | {{< pgvers "18,17,16,15,14" >}} | `pgmqtt` | - |
-| [**RPM**](/ext/rpm#etl) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.1.0` | {{< pgvers "18,17,16,15,14" >}} | `pgmqtt_$v` | - |
-| [**DEB**](/ext/deb#etl) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.1.0` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pgmqtt` | - |
+| [**EXT**](/ext/list#etl) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.3.0` | {{< pgvers "18,17,16,15,14" >}} | `pgmqtt` | - |
+| [**RPM**](/ext/rpm#etl) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.3.0` | {{< pgvers "18,17,16,15,14" >}} | `pgmqtt_$v` | - |
+| [**DEB**](/ext/deb#etl) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.3.0` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pgmqtt` | - |
 {.ext-table}
 
 {{< pgext_matrix >}}
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 |
-| el8.aarch64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 |
-| el9.x86_64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 |
-| el9.aarch64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 |
-| el10.x86_64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 |
-| el10.aarch64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 |
-| d12.x86_64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 |
-| d12.aarch64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 |
-| d13.x86_64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 |
-| d13.aarch64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 |
-| u22.x86_64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 |
-| u22.aarch64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 |
-| u24.x86_64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 |
-| u24.aarch64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 |
-| u26.x86_64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| u26.aarch64 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 |
-@ el8.x86_64 18 pgmqtt_18 pgmqtt_18-0.1.0-1PIGSTY.el8.x86_64.rpm pigsty 0.1.0 1.7MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgmqtt_18-0.1.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 18 pgmqtt_18 pgmqtt_18-0.1.0-1PIGSTY.el8.aarch64.rpm pigsty 0.1.0 1.4MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgmqtt_18-0.1.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 18 pgmqtt_18 pgmqtt_18-0.1.0-1PIGSTY.el9.x86_64.rpm pigsty 0.1.0 1.7MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgmqtt_18-0.1.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 18 pgmqtt_18 pgmqtt_18-0.1.0-1PIGSTY.el9.aarch64.rpm pigsty 0.1.0 1.5MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgmqtt_18-0.1.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 18 pgmqtt_18 pgmqtt_18-0.1.0-1PIGSTY.el10.x86_64.rpm pigsty 0.1.0 1.6MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgmqtt_18-0.1.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 18 pgmqtt_18 pgmqtt_18-0.1.0-1PIGSTY.el10.aarch64.rpm pigsty 0.1.0 1.4MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgmqtt_18-0.1.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 18 postgresql-18-pgmqtt postgresql-18-pgmqtt_0.1.0-1PIGSTY~bookworm_amd64.deb pigsty 0.1.0 1.4MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgmqtt/postgresql-18-pgmqtt_0.1.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 18 postgresql-18-pgmqtt postgresql-18-pgmqtt_0.1.0-1PIGSTY~bookworm_arm64.deb pigsty 0.1.0 1.2MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgmqtt/postgresql-18-pgmqtt_0.1.0-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 18 postgresql-18-pgmqtt postgresql-18-pgmqtt_0.1.0-1PIGSTY~trixie_amd64.deb pigsty 0.1.0 1.4MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgmqtt/postgresql-18-pgmqtt_0.1.0-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 18 postgresql-18-pgmqtt postgresql-18-pgmqtt_0.1.0-1PIGSTY~trixie_arm64.deb pigsty 0.1.0 1.2MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgmqtt/postgresql-18-pgmqtt_0.1.0-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 18 postgresql-18-pgmqtt postgresql-18-pgmqtt_0.1.0-1PIGSTY~jammy_amd64.deb pigsty 0.1.0 1.5MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgmqtt/postgresql-18-pgmqtt_0.1.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 18 postgresql-18-pgmqtt postgresql-18-pgmqtt_0.1.0-1PIGSTY~jammy_arm64.deb pigsty 0.1.0 1.3MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgmqtt/postgresql-18-pgmqtt_0.1.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 18 postgresql-18-pgmqtt postgresql-18-pgmqtt_0.1.0-1PIGSTY~noble_amd64.deb pigsty 0.1.0 1.5MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgmqtt/postgresql-18-pgmqtt_0.1.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 18 postgresql-18-pgmqtt postgresql-18-pgmqtt_0.1.0-1PIGSTY~noble_arm64.deb pigsty 0.1.0 1.3MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgmqtt/postgresql-18-pgmqtt_0.1.0-1PIGSTY~noble_arm64.deb
-@ u26.aarch64 18 postgresql-18-pgmqtt postgresql-18-pgmqtt_0.1.0-2PIGSTY~resolute_arm64.deb pigsty 0.1.0 1.4MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgmqtt/postgresql-18-pgmqtt_0.1.0-2PIGSTY~resolute_arm64.deb
-@ el8.x86_64 17 pgmqtt_17 pgmqtt_17-0.1.0-1PIGSTY.el8.x86_64.rpm pigsty 0.1.0 1.7MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgmqtt_17-0.1.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 17 pgmqtt_17 pgmqtt_17-0.1.0-1PIGSTY.el8.aarch64.rpm pigsty 0.1.0 1.4MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgmqtt_17-0.1.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 17 pgmqtt_17 pgmqtt_17-0.1.0-1PIGSTY.el9.x86_64.rpm pigsty 0.1.0 1.7MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgmqtt_17-0.1.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 17 pgmqtt_17 pgmqtt_17-0.1.0-1PIGSTY.el9.aarch64.rpm pigsty 0.1.0 1.5MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgmqtt_17-0.1.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 17 pgmqtt_17 pgmqtt_17-0.1.0-1PIGSTY.el10.x86_64.rpm pigsty 0.1.0 1.6MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgmqtt_17-0.1.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 17 pgmqtt_17 pgmqtt_17-0.1.0-1PIGSTY.el10.aarch64.rpm pigsty 0.1.0 1.4MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgmqtt_17-0.1.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 17 postgresql-17-pgmqtt postgresql-17-pgmqtt_0.1.0-1PIGSTY~bookworm_amd64.deb pigsty 0.1.0 1.4MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgmqtt/postgresql-17-pgmqtt_0.1.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 17 postgresql-17-pgmqtt postgresql-17-pgmqtt_0.1.0-1PIGSTY~bookworm_arm64.deb pigsty 0.1.0 1.2MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgmqtt/postgresql-17-pgmqtt_0.1.0-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 17 postgresql-17-pgmqtt postgresql-17-pgmqtt_0.1.0-1PIGSTY~trixie_amd64.deb pigsty 0.1.0 1.4MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgmqtt/postgresql-17-pgmqtt_0.1.0-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 17 postgresql-17-pgmqtt postgresql-17-pgmqtt_0.1.0-1PIGSTY~trixie_arm64.deb pigsty 0.1.0 1.2MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgmqtt/postgresql-17-pgmqtt_0.1.0-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 17 postgresql-17-pgmqtt postgresql-17-pgmqtt_0.1.0-1PIGSTY~jammy_amd64.deb pigsty 0.1.0 1.5MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgmqtt/postgresql-17-pgmqtt_0.1.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 17 postgresql-17-pgmqtt postgresql-17-pgmqtt_0.1.0-1PIGSTY~jammy_arm64.deb pigsty 0.1.0 1.3MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgmqtt/postgresql-17-pgmqtt_0.1.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 17 postgresql-17-pgmqtt postgresql-17-pgmqtt_0.1.0-1PIGSTY~noble_amd64.deb pigsty 0.1.0 1.5MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgmqtt/postgresql-17-pgmqtt_0.1.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 17 postgresql-17-pgmqtt postgresql-17-pgmqtt_0.1.0-1PIGSTY~noble_arm64.deb pigsty 0.1.0 1.3MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgmqtt/postgresql-17-pgmqtt_0.1.0-1PIGSTY~noble_arm64.deb
-@ u26.aarch64 17 postgresql-17-pgmqtt postgresql-17-pgmqtt_0.1.0-2PIGSTY~resolute_arm64.deb pigsty 0.1.0 1.4MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgmqtt/postgresql-17-pgmqtt_0.1.0-2PIGSTY~resolute_arm64.deb
-@ el8.x86_64 16 pgmqtt_16 pgmqtt_16-0.1.0-1PIGSTY.el8.x86_64.rpm pigsty 0.1.0 1.7MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgmqtt_16-0.1.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 16 pgmqtt_16 pgmqtt_16-0.1.0-1PIGSTY.el8.aarch64.rpm pigsty 0.1.0 1.4MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgmqtt_16-0.1.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 16 pgmqtt_16 pgmqtt_16-0.1.0-1PIGSTY.el9.x86_64.rpm pigsty 0.1.0 1.7MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgmqtt_16-0.1.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 16 pgmqtt_16 pgmqtt_16-0.1.0-1PIGSTY.el9.aarch64.rpm pigsty 0.1.0 1.5MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgmqtt_16-0.1.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 16 pgmqtt_16 pgmqtt_16-0.1.0-1PIGSTY.el10.x86_64.rpm pigsty 0.1.0 1.6MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgmqtt_16-0.1.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 16 pgmqtt_16 pgmqtt_16-0.1.0-1PIGSTY.el10.aarch64.rpm pigsty 0.1.0 1.4MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgmqtt_16-0.1.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 16 postgresql-16-pgmqtt postgresql-16-pgmqtt_0.1.0-1PIGSTY~bookworm_amd64.deb pigsty 0.1.0 1.4MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgmqtt/postgresql-16-pgmqtt_0.1.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 16 postgresql-16-pgmqtt postgresql-16-pgmqtt_0.1.0-1PIGSTY~bookworm_arm64.deb pigsty 0.1.0 1.2MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgmqtt/postgresql-16-pgmqtt_0.1.0-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 16 postgresql-16-pgmqtt postgresql-16-pgmqtt_0.1.0-1PIGSTY~trixie_amd64.deb pigsty 0.1.0 1.4MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgmqtt/postgresql-16-pgmqtt_0.1.0-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 16 postgresql-16-pgmqtt postgresql-16-pgmqtt_0.1.0-1PIGSTY~trixie_arm64.deb pigsty 0.1.0 1.2MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgmqtt/postgresql-16-pgmqtt_0.1.0-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 16 postgresql-16-pgmqtt postgresql-16-pgmqtt_0.1.0-1PIGSTY~jammy_amd64.deb pigsty 0.1.0 1.5MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgmqtt/postgresql-16-pgmqtt_0.1.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 16 postgresql-16-pgmqtt postgresql-16-pgmqtt_0.1.0-1PIGSTY~jammy_arm64.deb pigsty 0.1.0 1.3MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgmqtt/postgresql-16-pgmqtt_0.1.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 16 postgresql-16-pgmqtt postgresql-16-pgmqtt_0.1.0-1PIGSTY~noble_amd64.deb pigsty 0.1.0 1.5MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgmqtt/postgresql-16-pgmqtt_0.1.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 16 postgresql-16-pgmqtt postgresql-16-pgmqtt_0.1.0-1PIGSTY~noble_arm64.deb pigsty 0.1.0 1.3MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgmqtt/postgresql-16-pgmqtt_0.1.0-1PIGSTY~noble_arm64.deb
-@ u26.aarch64 16 postgresql-16-pgmqtt postgresql-16-pgmqtt_0.1.0-2PIGSTY~resolute_arm64.deb pigsty 0.1.0 1.4MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgmqtt/postgresql-16-pgmqtt_0.1.0-2PIGSTY~resolute_arm64.deb
-@ el8.x86_64 15 pgmqtt_15 pgmqtt_15-0.1.0-1PIGSTY.el8.x86_64.rpm pigsty 0.1.0 1.7MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgmqtt_15-0.1.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 15 pgmqtt_15 pgmqtt_15-0.1.0-1PIGSTY.el8.aarch64.rpm pigsty 0.1.0 1.4MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgmqtt_15-0.1.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 15 pgmqtt_15 pgmqtt_15-0.1.0-1PIGSTY.el9.x86_64.rpm pigsty 0.1.0 1.7MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgmqtt_15-0.1.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 15 pgmqtt_15 pgmqtt_15-0.1.0-1PIGSTY.el9.aarch64.rpm pigsty 0.1.0 1.5MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgmqtt_15-0.1.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 15 pgmqtt_15 pgmqtt_15-0.1.0-1PIGSTY.el10.x86_64.rpm pigsty 0.1.0 1.6MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgmqtt_15-0.1.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 15 pgmqtt_15 pgmqtt_15-0.1.0-1PIGSTY.el10.aarch64.rpm pigsty 0.1.0 1.4MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgmqtt_15-0.1.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 15 postgresql-15-pgmqtt postgresql-15-pgmqtt_0.1.0-1PIGSTY~bookworm_amd64.deb pigsty 0.1.0 1.4MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgmqtt/postgresql-15-pgmqtt_0.1.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 15 postgresql-15-pgmqtt postgresql-15-pgmqtt_0.1.0-1PIGSTY~bookworm_arm64.deb pigsty 0.1.0 1.2MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgmqtt/postgresql-15-pgmqtt_0.1.0-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 15 postgresql-15-pgmqtt postgresql-15-pgmqtt_0.1.0-1PIGSTY~trixie_amd64.deb pigsty 0.1.0 1.4MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgmqtt/postgresql-15-pgmqtt_0.1.0-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 15 postgresql-15-pgmqtt postgresql-15-pgmqtt_0.1.0-1PIGSTY~trixie_arm64.deb pigsty 0.1.0 1.2MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgmqtt/postgresql-15-pgmqtt_0.1.0-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 15 postgresql-15-pgmqtt postgresql-15-pgmqtt_0.1.0-1PIGSTY~jammy_amd64.deb pigsty 0.1.0 1.5MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgmqtt/postgresql-15-pgmqtt_0.1.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 15 postgresql-15-pgmqtt postgresql-15-pgmqtt_0.1.0-1PIGSTY~jammy_arm64.deb pigsty 0.1.0 1.3MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgmqtt/postgresql-15-pgmqtt_0.1.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 15 postgresql-15-pgmqtt postgresql-15-pgmqtt_0.1.0-1PIGSTY~noble_amd64.deb pigsty 0.1.0 1.5MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgmqtt/postgresql-15-pgmqtt_0.1.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 15 postgresql-15-pgmqtt postgresql-15-pgmqtt_0.1.0-1PIGSTY~noble_arm64.deb pigsty 0.1.0 1.3MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgmqtt/postgresql-15-pgmqtt_0.1.0-1PIGSTY~noble_arm64.deb
-@ u26.aarch64 15 postgresql-15-pgmqtt postgresql-15-pgmqtt_0.1.0-2PIGSTY~resolute_arm64.deb pigsty 0.1.0 1.4MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgmqtt/postgresql-15-pgmqtt_0.1.0-2PIGSTY~resolute_arm64.deb
-@ el8.x86_64 14 pgmqtt_14 pgmqtt_14-0.1.0-1PIGSTY.el8.x86_64.rpm pigsty 0.1.0 1.7MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgmqtt_14-0.1.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 14 pgmqtt_14 pgmqtt_14-0.1.0-1PIGSTY.el8.aarch64.rpm pigsty 0.1.0 1.4MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgmqtt_14-0.1.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 14 pgmqtt_14 pgmqtt_14-0.1.0-1PIGSTY.el9.x86_64.rpm pigsty 0.1.0 1.7MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgmqtt_14-0.1.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 14 pgmqtt_14 pgmqtt_14-0.1.0-1PIGSTY.el9.aarch64.rpm pigsty 0.1.0 1.5MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgmqtt_14-0.1.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 14 pgmqtt_14 pgmqtt_14-0.1.0-1PIGSTY.el10.x86_64.rpm pigsty 0.1.0 1.6MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgmqtt_14-0.1.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 14 pgmqtt_14 pgmqtt_14-0.1.0-1PIGSTY.el10.aarch64.rpm pigsty 0.1.0 1.4MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgmqtt_14-0.1.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 14 postgresql-14-pgmqtt postgresql-14-pgmqtt_0.1.0-1PIGSTY~bookworm_amd64.deb pigsty 0.1.0 1.4MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgmqtt/postgresql-14-pgmqtt_0.1.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 14 postgresql-14-pgmqtt postgresql-14-pgmqtt_0.1.0-1PIGSTY~bookworm_arm64.deb pigsty 0.1.0 1.2MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgmqtt/postgresql-14-pgmqtt_0.1.0-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 14 postgresql-14-pgmqtt postgresql-14-pgmqtt_0.1.0-1PIGSTY~trixie_amd64.deb pigsty 0.1.0 1.4MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgmqtt/postgresql-14-pgmqtt_0.1.0-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 14 postgresql-14-pgmqtt postgresql-14-pgmqtt_0.1.0-1PIGSTY~trixie_arm64.deb pigsty 0.1.0 1.2MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgmqtt/postgresql-14-pgmqtt_0.1.0-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 14 postgresql-14-pgmqtt postgresql-14-pgmqtt_0.1.0-1PIGSTY~jammy_amd64.deb pigsty 0.1.0 1.5MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgmqtt/postgresql-14-pgmqtt_0.1.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 14 postgresql-14-pgmqtt postgresql-14-pgmqtt_0.1.0-1PIGSTY~jammy_arm64.deb pigsty 0.1.0 1.3MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgmqtt/postgresql-14-pgmqtt_0.1.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 14 postgresql-14-pgmqtt postgresql-14-pgmqtt_0.1.0-1PIGSTY~noble_amd64.deb pigsty 0.1.0 1.5MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgmqtt/postgresql-14-pgmqtt_0.1.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 14 postgresql-14-pgmqtt postgresql-14-pgmqtt_0.1.0-1PIGSTY~noble_arm64.deb pigsty 0.1.0 1.3MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgmqtt/postgresql-14-pgmqtt_0.1.0-1PIGSTY~noble_arm64.deb
-@ u26.aarch64 14 postgresql-14-pgmqtt postgresql-14-pgmqtt_0.1.0-2PIGSTY~resolute_arm64.deb pigsty 0.1.0 1.4MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgmqtt/postgresql-14-pgmqtt_0.1.0-2PIGSTY~resolute_arm64.deb
+| el8.x86_64 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 |
+| el8.aarch64 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 |
+| el9.x86_64 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 |
+| el9.aarch64 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 |
+| el10.x86_64 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 |
+| el10.aarch64 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 |
+| d12.x86_64 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 |
+| d12.aarch64 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 |
+| d13.x86_64 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 |
+| d13.aarch64 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 |
+| u22.x86_64 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 |
+| u22.aarch64 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 |
+| u24.x86_64 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 |
+| u24.aarch64 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 |
+| u26.x86_64 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 |
+| u26.aarch64 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 |
+@ el8.x86_64 18 pgmqtt_18 pgmqtt_18-0.3.0-1PIGSTY.el8.x86_64.rpm pigsty 0.3.0 3.6MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgmqtt_18-0.3.0-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 18 pgmqtt_18 pgmqtt_18-0.3.0-1PIGSTY.el8.aarch64.rpm pigsty 0.3.0 3.2MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgmqtt_18-0.3.0-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 18 pgmqtt_18 pgmqtt_18-0.3.0-1PIGSTY.el9.x86_64.rpm pigsty 0.3.0 3.5MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgmqtt_18-0.3.0-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 18 pgmqtt_18 pgmqtt_18-0.3.0-1PIGSTY.el9.aarch64.rpm pigsty 0.3.0 3.3MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgmqtt_18-0.3.0-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 18 pgmqtt_18 pgmqtt_18-0.3.0-1PIGSTY.el10.x86_64.rpm pigsty 0.3.0 3.5MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgmqtt_18-0.3.0-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 18 pgmqtt_18 pgmqtt_18-0.3.0-1PIGSTY.el10.aarch64.rpm pigsty 0.3.0 3.3MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgmqtt_18-0.3.0-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-pgmqtt postgresql-18-pgmqtt_0.3.0-1PIGSTY~bookworm_amd64.deb pigsty 0.3.0 2.9MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgmqtt/postgresql-18-pgmqtt_0.3.0-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 18 postgresql-18-pgmqtt postgresql-18-pgmqtt_0.3.0-1PIGSTY~bookworm_arm64.deb pigsty 0.3.0 2.5MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgmqtt/postgresql-18-pgmqtt_0.3.0-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 18 postgresql-18-pgmqtt postgresql-18-pgmqtt_0.3.0-1PIGSTY~trixie_amd64.deb pigsty 0.3.0 2.9MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgmqtt/postgresql-18-pgmqtt_0.3.0-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 18 postgresql-18-pgmqtt postgresql-18-pgmqtt_0.3.0-1PIGSTY~trixie_arm64.deb pigsty 0.3.0 2.5MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgmqtt/postgresql-18-pgmqtt_0.3.0-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 18 postgresql-18-pgmqtt postgresql-18-pgmqtt_0.3.0-1PIGSTY~jammy_amd64.deb pigsty 0.3.0 3.6MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgmqtt/postgresql-18-pgmqtt_0.3.0-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 18 postgresql-18-pgmqtt postgresql-18-pgmqtt_0.3.0-1PIGSTY~jammy_arm64.deb pigsty 0.3.0 2.9MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgmqtt/postgresql-18-pgmqtt_0.3.0-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 18 postgresql-18-pgmqtt postgresql-18-pgmqtt_0.3.0-1PIGSTY~noble_amd64.deb pigsty 0.3.0 3.2MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgmqtt/postgresql-18-pgmqtt_0.3.0-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 18 postgresql-18-pgmqtt postgresql-18-pgmqtt_0.3.0-1PIGSTY~noble_arm64.deb pigsty 0.3.0 2.9MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgmqtt/postgresql-18-pgmqtt_0.3.0-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 18 postgresql-18-pgmqtt postgresql-18-pgmqtt_0.3.0-1PIGSTY~resolute_amd64.deb pigsty 0.3.0 3.2MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgmqtt/postgresql-18-pgmqtt_0.3.0-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 18 postgresql-18-pgmqtt postgresql-18-pgmqtt_0.3.0-1PIGSTY~resolute_arm64.deb pigsty 0.3.0 2.9MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgmqtt/postgresql-18-pgmqtt_0.3.0-1PIGSTY~resolute_arm64.deb
+@ el8.x86_64 17 pgmqtt_17 pgmqtt_17-0.3.0-1PIGSTY.el8.x86_64.rpm pigsty 0.3.0 3.6MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgmqtt_17-0.3.0-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 17 pgmqtt_17 pgmqtt_17-0.3.0-1PIGSTY.el8.aarch64.rpm pigsty 0.3.0 3.2MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgmqtt_17-0.3.0-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 17 pgmqtt_17 pgmqtt_17-0.3.0-1PIGSTY.el9.x86_64.rpm pigsty 0.3.0 3.5MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgmqtt_17-0.3.0-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 17 pgmqtt_17 pgmqtt_17-0.3.0-1PIGSTY.el9.aarch64.rpm pigsty 0.3.0 3.3MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgmqtt_17-0.3.0-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 17 pgmqtt_17 pgmqtt_17-0.3.0-1PIGSTY.el10.x86_64.rpm pigsty 0.3.0 3.5MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgmqtt_17-0.3.0-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 17 pgmqtt_17 pgmqtt_17-0.3.0-1PIGSTY.el10.aarch64.rpm pigsty 0.3.0 3.3MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgmqtt_17-0.3.0-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-pgmqtt postgresql-17-pgmqtt_0.3.0-1PIGSTY~bookworm_amd64.deb pigsty 0.3.0 2.9MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgmqtt/postgresql-17-pgmqtt_0.3.0-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 17 postgresql-17-pgmqtt postgresql-17-pgmqtt_0.3.0-1PIGSTY~bookworm_arm64.deb pigsty 0.3.0 2.5MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgmqtt/postgresql-17-pgmqtt_0.3.0-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 17 postgresql-17-pgmqtt postgresql-17-pgmqtt_0.3.0-1PIGSTY~trixie_amd64.deb pigsty 0.3.0 2.9MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgmqtt/postgresql-17-pgmqtt_0.3.0-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 17 postgresql-17-pgmqtt postgresql-17-pgmqtt_0.3.0-1PIGSTY~trixie_arm64.deb pigsty 0.3.0 2.5MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgmqtt/postgresql-17-pgmqtt_0.3.0-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 17 postgresql-17-pgmqtt postgresql-17-pgmqtt_0.3.0-1PIGSTY~jammy_amd64.deb pigsty 0.3.0 3.6MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgmqtt/postgresql-17-pgmqtt_0.3.0-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 17 postgresql-17-pgmqtt postgresql-17-pgmqtt_0.3.0-1PIGSTY~jammy_arm64.deb pigsty 0.3.0 2.9MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgmqtt/postgresql-17-pgmqtt_0.3.0-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 17 postgresql-17-pgmqtt postgresql-17-pgmqtt_0.3.0-1PIGSTY~noble_amd64.deb pigsty 0.3.0 3.2MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgmqtt/postgresql-17-pgmqtt_0.3.0-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 17 postgresql-17-pgmqtt postgresql-17-pgmqtt_0.3.0-1PIGSTY~noble_arm64.deb pigsty 0.3.0 2.9MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgmqtt/postgresql-17-pgmqtt_0.3.0-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 17 postgresql-17-pgmqtt postgresql-17-pgmqtt_0.3.0-1PIGSTY~resolute_amd64.deb pigsty 0.3.0 3.2MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgmqtt/postgresql-17-pgmqtt_0.3.0-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 17 postgresql-17-pgmqtt postgresql-17-pgmqtt_0.3.0-1PIGSTY~resolute_arm64.deb pigsty 0.3.0 2.9MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgmqtt/postgresql-17-pgmqtt_0.3.0-1PIGSTY~resolute_arm64.deb
+@ el8.x86_64 16 pgmqtt_16 pgmqtt_16-0.3.0-1PIGSTY.el8.x86_64.rpm pigsty 0.3.0 3.6MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgmqtt_16-0.3.0-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 16 pgmqtt_16 pgmqtt_16-0.3.0-1PIGSTY.el8.aarch64.rpm pigsty 0.3.0 3.2MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgmqtt_16-0.3.0-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 16 pgmqtt_16 pgmqtt_16-0.3.0-1PIGSTY.el9.x86_64.rpm pigsty 0.3.0 3.5MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgmqtt_16-0.3.0-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 16 pgmqtt_16 pgmqtt_16-0.3.0-1PIGSTY.el9.aarch64.rpm pigsty 0.3.0 3.3MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgmqtt_16-0.3.0-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 16 pgmqtt_16 pgmqtt_16-0.3.0-1PIGSTY.el10.x86_64.rpm pigsty 0.3.0 3.5MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgmqtt_16-0.3.0-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 16 pgmqtt_16 pgmqtt_16-0.3.0-1PIGSTY.el10.aarch64.rpm pigsty 0.3.0 3.3MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgmqtt_16-0.3.0-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 16 postgresql-16-pgmqtt postgresql-16-pgmqtt_0.3.0-1PIGSTY~bookworm_amd64.deb pigsty 0.3.0 2.9MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgmqtt/postgresql-16-pgmqtt_0.3.0-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 16 postgresql-16-pgmqtt postgresql-16-pgmqtt_0.3.0-1PIGSTY~bookworm_arm64.deb pigsty 0.3.0 2.5MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgmqtt/postgresql-16-pgmqtt_0.3.0-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 16 postgresql-16-pgmqtt postgresql-16-pgmqtt_0.3.0-1PIGSTY~trixie_amd64.deb pigsty 0.3.0 2.9MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgmqtt/postgresql-16-pgmqtt_0.3.0-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 16 postgresql-16-pgmqtt postgresql-16-pgmqtt_0.3.0-1PIGSTY~trixie_arm64.deb pigsty 0.3.0 2.5MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgmqtt/postgresql-16-pgmqtt_0.3.0-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 16 postgresql-16-pgmqtt postgresql-16-pgmqtt_0.3.0-1PIGSTY~jammy_amd64.deb pigsty 0.3.0 3.6MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgmqtt/postgresql-16-pgmqtt_0.3.0-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 16 postgresql-16-pgmqtt postgresql-16-pgmqtt_0.3.0-1PIGSTY~jammy_arm64.deb pigsty 0.3.0 2.9MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgmqtt/postgresql-16-pgmqtt_0.3.0-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 16 postgresql-16-pgmqtt postgresql-16-pgmqtt_0.3.0-1PIGSTY~noble_amd64.deb pigsty 0.3.0 3.2MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgmqtt/postgresql-16-pgmqtt_0.3.0-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 16 postgresql-16-pgmqtt postgresql-16-pgmqtt_0.3.0-1PIGSTY~noble_arm64.deb pigsty 0.3.0 2.9MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgmqtt/postgresql-16-pgmqtt_0.3.0-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 16 postgresql-16-pgmqtt postgresql-16-pgmqtt_0.3.0-1PIGSTY~resolute_amd64.deb pigsty 0.3.0 3.2MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgmqtt/postgresql-16-pgmqtt_0.3.0-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 16 postgresql-16-pgmqtt postgresql-16-pgmqtt_0.3.0-1PIGSTY~resolute_arm64.deb pigsty 0.3.0 2.9MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgmqtt/postgresql-16-pgmqtt_0.3.0-1PIGSTY~resolute_arm64.deb
+@ el8.x86_64 15 pgmqtt_15 pgmqtt_15-0.3.0-1PIGSTY.el8.x86_64.rpm pigsty 0.3.0 3.6MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgmqtt_15-0.3.0-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 15 pgmqtt_15 pgmqtt_15-0.3.0-1PIGSTY.el8.aarch64.rpm pigsty 0.3.0 3.2MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgmqtt_15-0.3.0-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 15 pgmqtt_15 pgmqtt_15-0.3.0-1PIGSTY.el9.x86_64.rpm pigsty 0.3.0 3.5MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgmqtt_15-0.3.0-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 15 pgmqtt_15 pgmqtt_15-0.3.0-1PIGSTY.el9.aarch64.rpm pigsty 0.3.0 3.3MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgmqtt_15-0.3.0-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 15 pgmqtt_15 pgmqtt_15-0.3.0-1PIGSTY.el10.x86_64.rpm pigsty 0.3.0 3.5MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgmqtt_15-0.3.0-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 15 pgmqtt_15 pgmqtt_15-0.3.0-1PIGSTY.el10.aarch64.rpm pigsty 0.3.0 3.3MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgmqtt_15-0.3.0-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 15 postgresql-15-pgmqtt postgresql-15-pgmqtt_0.3.0-1PIGSTY~bookworm_amd64.deb pigsty 0.3.0 2.9MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgmqtt/postgresql-15-pgmqtt_0.3.0-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 15 postgresql-15-pgmqtt postgresql-15-pgmqtt_0.3.0-1PIGSTY~bookworm_arm64.deb pigsty 0.3.0 2.5MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgmqtt/postgresql-15-pgmqtt_0.3.0-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 15 postgresql-15-pgmqtt postgresql-15-pgmqtt_0.3.0-1PIGSTY~trixie_amd64.deb pigsty 0.3.0 2.9MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgmqtt/postgresql-15-pgmqtt_0.3.0-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 15 postgresql-15-pgmqtt postgresql-15-pgmqtt_0.3.0-1PIGSTY~trixie_arm64.deb pigsty 0.3.0 2.5MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgmqtt/postgresql-15-pgmqtt_0.3.0-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 15 postgresql-15-pgmqtt postgresql-15-pgmqtt_0.3.0-1PIGSTY~jammy_amd64.deb pigsty 0.3.0 3.6MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgmqtt/postgresql-15-pgmqtt_0.3.0-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 15 postgresql-15-pgmqtt postgresql-15-pgmqtt_0.3.0-1PIGSTY~jammy_arm64.deb pigsty 0.3.0 2.9MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgmqtt/postgresql-15-pgmqtt_0.3.0-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 15 postgresql-15-pgmqtt postgresql-15-pgmqtt_0.3.0-1PIGSTY~noble_amd64.deb pigsty 0.3.0 3.2MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgmqtt/postgresql-15-pgmqtt_0.3.0-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 15 postgresql-15-pgmqtt postgresql-15-pgmqtt_0.3.0-1PIGSTY~noble_arm64.deb pigsty 0.3.0 2.9MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgmqtt/postgresql-15-pgmqtt_0.3.0-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 15 postgresql-15-pgmqtt postgresql-15-pgmqtt_0.3.0-1PIGSTY~resolute_amd64.deb pigsty 0.3.0 3.2MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgmqtt/postgresql-15-pgmqtt_0.3.0-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 15 postgresql-15-pgmqtt postgresql-15-pgmqtt_0.3.0-1PIGSTY~resolute_arm64.deb pigsty 0.3.0 2.9MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgmqtt/postgresql-15-pgmqtt_0.3.0-1PIGSTY~resolute_arm64.deb
+@ el8.x86_64 14 pgmqtt_14 pgmqtt_14-0.3.0-1PIGSTY.el8.x86_64.rpm pigsty 0.3.0 3.6MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgmqtt_14-0.3.0-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 14 pgmqtt_14 pgmqtt_14-0.3.0-1PIGSTY.el8.aarch64.rpm pigsty 0.3.0 3.1MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgmqtt_14-0.3.0-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 14 pgmqtt_14 pgmqtt_14-0.3.0-1PIGSTY.el9.x86_64.rpm pigsty 0.3.0 3.5MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgmqtt_14-0.3.0-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 14 pgmqtt_14 pgmqtt_14-0.3.0-1PIGSTY.el9.aarch64.rpm pigsty 0.3.0 3.3MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgmqtt_14-0.3.0-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 14 pgmqtt_14 pgmqtt_14-0.3.0-1PIGSTY.el10.x86_64.rpm pigsty 0.3.0 3.5MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgmqtt_14-0.3.0-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 14 pgmqtt_14 pgmqtt_14-0.3.0-1PIGSTY.el10.aarch64.rpm pigsty 0.3.0 3.3MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgmqtt_14-0.3.0-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 14 postgresql-14-pgmqtt postgresql-14-pgmqtt_0.3.0-1PIGSTY~bookworm_amd64.deb pigsty 0.3.0 2.9MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgmqtt/postgresql-14-pgmqtt_0.3.0-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 14 postgresql-14-pgmqtt postgresql-14-pgmqtt_0.3.0-1PIGSTY~bookworm_arm64.deb pigsty 0.3.0 2.5MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgmqtt/postgresql-14-pgmqtt_0.3.0-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 14 postgresql-14-pgmqtt postgresql-14-pgmqtt_0.3.0-1PIGSTY~trixie_amd64.deb pigsty 0.3.0 2.9MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgmqtt/postgresql-14-pgmqtt_0.3.0-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 14 postgresql-14-pgmqtt postgresql-14-pgmqtt_0.3.0-1PIGSTY~trixie_arm64.deb pigsty 0.3.0 2.5MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgmqtt/postgresql-14-pgmqtt_0.3.0-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 14 postgresql-14-pgmqtt postgresql-14-pgmqtt_0.3.0-1PIGSTY~jammy_amd64.deb pigsty 0.3.0 3.6MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgmqtt/postgresql-14-pgmqtt_0.3.0-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 14 postgresql-14-pgmqtt postgresql-14-pgmqtt_0.3.0-1PIGSTY~jammy_arm64.deb pigsty 0.3.0 2.9MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgmqtt/postgresql-14-pgmqtt_0.3.0-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 14 postgresql-14-pgmqtt postgresql-14-pgmqtt_0.3.0-1PIGSTY~noble_amd64.deb pigsty 0.3.0 3.2MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgmqtt/postgresql-14-pgmqtt_0.3.0-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 14 postgresql-14-pgmqtt postgresql-14-pgmqtt_0.3.0-1PIGSTY~noble_arm64.deb pigsty 0.3.0 2.9MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgmqtt/postgresql-14-pgmqtt_0.3.0-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 14 postgresql-14-pgmqtt postgresql-14-pgmqtt_0.3.0-1PIGSTY~resolute_amd64.deb pigsty 0.3.0 3.2MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgmqtt/postgresql-14-pgmqtt_0.3.0-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 14 postgresql-14-pgmqtt postgresql-14-pgmqtt_0.3.0-1PIGSTY~resolute_arm64.deb pigsty 0.3.0 2.9MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgmqtt/postgresql-14-pgmqtt_0.3.0-1PIGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建

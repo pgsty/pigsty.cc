@@ -52,10 +52,10 @@ weight: 3500
 |:--:|:--:|:--:|:--:|:--:|:--:|
 | el8.x86_64 | AVAIL PIGSTY 1.2.11 2 | AVAIL PIGSTY 1.2.11 3 | AVAIL PIGSTY 1.2.11 3 | AVAIL PIGSTY 1.2.11 4 | AVAIL PIGSTY 1.2.11 4 |
 | el8.aarch64 | AVAIL PIGSTY 1.2.11 2 | AVAIL PIGSTY 1.2.11 3 | AVAIL PIGSTY 1.2.11 3 | AVAIL PIGSTY 1.2.11 4 | AVAIL PIGSTY 1.2.11 4 |
-| el9.x86_64 | AVAIL PIGSTY 1.2.11 2 | AVAIL PIGSTY 1.2.11 3 | AVAIL PIGSTY 1.2.11 3 | AVAIL PIGSTY 1.2.11 4 | AVAIL PIGSTY 1.2.11 3 |
-| el9.aarch64 | AVAIL PIGSTY 1.2.11 2 | AVAIL PIGSTY 1.2.11 3 | AVAIL PIGSTY 1.2.11 3 | AVAIL PIGSTY 1.2.11 4 | AVAIL PIGSTY 1.2.11 4 |
-| el10.x86_64 | AVAIL PIGSTY 1.2.11 2 | AVAIL PIGSTY 1.2.11 3 | AVAIL PIGSTY 1.2.11 3 | AVAIL PIGSTY 1.2.11 3 | AVAIL PIGSTY 1.2.11 3 |
-| el10.aarch64 | AVAIL PIGSTY 1.2.11 2 | AVAIL PIGSTY 1.2.11 3 | AVAIL PIGSTY 1.2.11 3 | AVAIL PIGSTY 1.2.11 3 | AVAIL PIGSTY 1.2.11 3 |
+| el9.x86_64 | AVAIL PIGSTY 1.2.11 2 | AVAIL PIGSTY 1.2.11 2 | AVAIL PIGSTY 1.2.11 2 | AVAIL PIGSTY 1.2.11 2 | AVAIL PIGSTY 1.2.11 2 |
+| el9.aarch64 | AVAIL PIGSTY 1.2.11 2 | AVAIL PIGSTY 1.2.11 2 | AVAIL PIGSTY 1.2.11 2 | AVAIL PIGSTY 1.2.11 2 | AVAIL PIGSTY 1.2.11 2 |
+| el10.x86_64 | AVAIL PIGSTY 1.2.11 2 | AVAIL PIGSTY 1.2.11 2 | AVAIL PIGSTY 1.2.11 2 | AVAIL PIGSTY 1.2.11 2 | AVAIL PIGSTY 1.2.11 2 |
+| el10.aarch64 | AVAIL PIGSTY 1.2.11 2 | AVAIL PIGSTY 1.2.11 2 | AVAIL PIGSTY 1.2.11 2 | AVAIL PIGSTY 1.2.11 2 | AVAIL PIGSTY 1.2.11 2 |
 | d12.x86_64 | AVAIL PGDG 1.2.11 2 | AVAIL PGDG 1.2.11 2 | AVAIL PGDG 1.2.11 2 | AVAIL PGDG 1.2.11 2 | AVAIL PGDG 1.2.11 2 |
 | d12.aarch64 | AVAIL PGDG 1.2.11 2 | AVAIL PGDG 1.2.11 2 | AVAIL PGDG 1.2.11 2 | AVAIL PGDG 1.2.11 2 | AVAIL PGDG 1.2.11 2 |
 | d13.x86_64 | AVAIL PGDG 1.2.11 2 | AVAIL PGDG 1.2.11 2 | AVAIL PGDG 1.2.11 2 | AVAIL PGDG 1.2.11 2 | AVAIL PGDG 1.2.11 2 |
@@ -71,13 +71,13 @@ weight: 3500
 @ el8.aarch64 18 prefix_18 prefix_18-1.2.11-1PIGSTY.el8.aarch64.rpm pigsty 1.2.11 28.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/prefix_18-1.2.11-1PIGSTY.el8.aarch64.rpm
 @ el8.aarch64 18 prefix_18 prefix_18-1.2.11-1PGDG.rhel8.10.aarch64.rpm pgdg 1.2.11 28.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/prefix_18-1.2.11-1PGDG.rhel8.10.aarch64.rpm
 @ el9.x86_64 18 prefix_18 prefix_18-1.2.11-1PIGSTY.el9.x86_64.rpm pigsty 1.2.11 27.7KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/prefix_18-1.2.11-1PIGSTY.el9.x86_64.rpm
-@ el9.x86_64 18 prefix_18 prefix_18-1.2.11-1PGDG.rhel9.7.x86_64.rpm pgdg 1.2.11 27.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/prefix_18-1.2.11-1PGDG.rhel9.7.x86_64.rpm
+@ el9.x86_64 18 prefix_18 prefix_18-1.2.11-1PGDG.rhel9.8.x86_64.rpm pgdg 1.2.11 27.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/prefix_18-1.2.11-1PGDG.rhel9.8.x86_64.rpm
 @ el9.aarch64 18 prefix_18 prefix_18-1.2.11-1PIGSTY.el9.aarch64.rpm pigsty 1.2.11 26.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/prefix_18-1.2.11-1PIGSTY.el9.aarch64.rpm
-@ el9.aarch64 18 prefix_18 prefix_18-1.2.11-1PGDG.rhel9.7.aarch64.rpm pgdg 1.2.11 26.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/prefix_18-1.2.11-1PGDG.rhel9.7.aarch64.rpm
+@ el9.aarch64 18 prefix_18 prefix_18-1.2.11-1PGDG.rhel9.8.aarch64.rpm pgdg 1.2.11 26.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/prefix_18-1.2.11-1PGDG.rhel9.8.aarch64.rpm
 @ el10.x86_64 18 prefix_18 prefix_18-1.2.11-1PIGSTY.el10.x86_64.rpm pigsty 1.2.11 28.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/prefix_18-1.2.11-1PIGSTY.el10.x86_64.rpm
-@ el10.x86_64 18 prefix_18 prefix_18-1.2.11-1PGDG.rhel10.1.x86_64.rpm pgdg 1.2.11 28.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/prefix_18-1.2.11-1PGDG.rhel10.1.x86_64.rpm
+@ el10.x86_64 18 prefix_18 prefix_18-1.2.11-1PGDG.rhel10.2.x86_64.rpm pgdg 1.2.11 28.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/prefix_18-1.2.11-1PGDG.rhel10.2.x86_64.rpm
 @ el10.aarch64 18 prefix_18 prefix_18-1.2.11-1PIGSTY.el10.aarch64.rpm pigsty 1.2.11 27.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/prefix_18-1.2.11-1PIGSTY.el10.aarch64.rpm
-@ el10.aarch64 18 prefix_18 prefix_18-1.2.11-1PGDG.rhel10.1.aarch64.rpm pgdg 1.2.11 27.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/prefix_18-1.2.11-1PGDG.rhel10.1.aarch64.rpm
+@ el10.aarch64 18 prefix_18 prefix_18-1.2.11-1PGDG.rhel10.2.aarch64.rpm pgdg 1.2.11 27.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/prefix_18-1.2.11-1PGDG.rhel10.2.aarch64.rpm
 @ d12.x86_64 18 postgresql-18-prefix postgresql-18-prefix_1.2.11-1.pgdg12+1_amd64.deb pgdg 1.2.11 40.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/prefix/postgresql-18-prefix_1.2.11-1.pgdg12+1_amd64.deb
 @ d12.x86_64 18 postgresql-18-prefix postgresql-18-prefix_1.2.10-4.pgdg12+1_amd64.deb pgdg 1.2.10 40.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/prefix/postgresql-18-prefix_1.2.10-4.pgdg12+1_amd64.deb
 @ d12.aarch64 18 postgresql-18-prefix postgresql-18-prefix_1.2.11-1.pgdg12+1_arm64.deb pgdg 1.2.11 39.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/prefix/postgresql-18-prefix_1.2.11-1.pgdg12+1_arm64.deb
@@ -105,17 +105,13 @@ weight: 3500
 @ el8.aarch64 17 prefix_17 prefix_17-1.2.11-1PGDG.rhel8.10.aarch64.rpm pgdg 1.2.11 28.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/prefix_17-1.2.11-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 17 prefix_17 prefix_17-1.2.10-2PGDG.rhel8.aarch64.rpm pgdg 1.2.10 28.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/prefix_17-1.2.10-2PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 17 prefix_17 prefix_17-1.2.11-1PIGSTY.el9.x86_64.rpm pigsty 1.2.11 27.7KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/prefix_17-1.2.11-1PIGSTY.el9.x86_64.rpm
-@ el9.x86_64 17 prefix_17 prefix_17-1.2.11-1PGDG.rhel9.7.x86_64.rpm pgdg 1.2.11 27.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/prefix_17-1.2.11-1PGDG.rhel9.7.x86_64.rpm
-@ el9.x86_64 17 prefix_17 prefix_17-1.2.10-2PGDG.rhel9.x86_64.rpm pgdg 1.2.10 27.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/prefix_17-1.2.10-2PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 17 prefix_17 prefix_17-1.2.11-1PGDG.rhel9.8.x86_64.rpm pgdg 1.2.11 27.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/prefix_17-1.2.11-1PGDG.rhel9.8.x86_64.rpm
 @ el9.aarch64 17 prefix_17 prefix_17-1.2.11-1PIGSTY.el9.aarch64.rpm pigsty 1.2.11 26.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/prefix_17-1.2.11-1PIGSTY.el9.aarch64.rpm
-@ el9.aarch64 17 prefix_17 prefix_17-1.2.11-1PGDG.rhel9.7.aarch64.rpm pgdg 1.2.11 26.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/prefix_17-1.2.11-1PGDG.rhel9.7.aarch64.rpm
-@ el9.aarch64 17 prefix_17 prefix_17-1.2.10-2PGDG.rhel9.aarch64.rpm pgdg 1.2.10 26.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/prefix_17-1.2.10-2PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 17 prefix_17 prefix_17-1.2.11-1PGDG.rhel9.8.aarch64.rpm pgdg 1.2.11 26.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/prefix_17-1.2.11-1PGDG.rhel9.8.aarch64.rpm
 @ el10.x86_64 17 prefix_17 prefix_17-1.2.11-1PIGSTY.el10.x86_64.rpm pigsty 1.2.11 28.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/prefix_17-1.2.11-1PIGSTY.el10.x86_64.rpm
-@ el10.x86_64 17 prefix_17 prefix_17-1.2.11-1PGDG.rhel10.1.x86_64.rpm pgdg 1.2.11 28.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/prefix_17-1.2.11-1PGDG.rhel10.1.x86_64.rpm
-@ el10.x86_64 17 prefix_17 prefix_17-1.2.10-3PGDG.rhel10.x86_64.rpm pgdg 1.2.10 28.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/prefix_17-1.2.10-3PGDG.rhel10.x86_64.rpm
+@ el10.x86_64 17 prefix_17 prefix_17-1.2.11-1PGDG.rhel10.2.x86_64.rpm pgdg 1.2.11 28.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/prefix_17-1.2.11-1PGDG.rhel10.2.x86_64.rpm
 @ el10.aarch64 17 prefix_17 prefix_17-1.2.11-1PIGSTY.el10.aarch64.rpm pigsty 1.2.11 27.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/prefix_17-1.2.11-1PIGSTY.el10.aarch64.rpm
-@ el10.aarch64 17 prefix_17 prefix_17-1.2.11-1PGDG.rhel10.1.aarch64.rpm pgdg 1.2.11 27.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/prefix_17-1.2.11-1PGDG.rhel10.1.aarch64.rpm
-@ el10.aarch64 17 prefix_17 prefix_17-1.2.10-3PGDG.rhel10.aarch64.rpm pgdg 1.2.10 27.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/prefix_17-1.2.10-3PGDG.rhel10.aarch64.rpm
+@ el10.aarch64 17 prefix_17 prefix_17-1.2.11-1PGDG.rhel10.2.aarch64.rpm pgdg 1.2.11 27.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/prefix_17-1.2.11-1PGDG.rhel10.2.aarch64.rpm
 @ d12.x86_64 17 postgresql-17-prefix postgresql-17-prefix_1.2.11-1.pgdg12+1_amd64.deb pgdg 1.2.11 40.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/prefix/postgresql-17-prefix_1.2.11-1.pgdg12+1_amd64.deb
 @ d12.x86_64 17 postgresql-17-prefix postgresql-17-prefix_1.2.10-4.pgdg12+1_amd64.deb pgdg 1.2.10 40.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/prefix/postgresql-17-prefix_1.2.10-4.pgdg12+1_amd64.deb
 @ d12.aarch64 17 postgresql-17-prefix postgresql-17-prefix_1.2.11-1.pgdg12+1_arm64.deb pgdg 1.2.11 39.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/prefix/postgresql-17-prefix_1.2.11-1.pgdg12+1_arm64.deb
@@ -143,17 +139,13 @@ weight: 3500
 @ el8.aarch64 16 prefix_16 prefix_16-1.2.11-1PGDG.rhel8.10.aarch64.rpm pgdg 1.2.11 28.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/prefix_16-1.2.11-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 16 prefix_16 prefix_16-1.2.10-1PGDG.rhel8.aarch64.rpm pgdg 1.2.10 28.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/prefix_16-1.2.10-1PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 16 prefix_16 prefix_16-1.2.11-1PIGSTY.el9.x86_64.rpm pigsty 1.2.11 27.7KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/prefix_16-1.2.11-1PIGSTY.el9.x86_64.rpm
-@ el9.x86_64 16 prefix_16 prefix_16-1.2.11-1PGDG.rhel9.7.x86_64.rpm pgdg 1.2.11 27.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/prefix_16-1.2.11-1PGDG.rhel9.7.x86_64.rpm
-@ el9.x86_64 16 prefix_16 prefix_16-1.2.10-1PGDG.rhel9.x86_64.rpm pgdg 1.2.10 27.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/prefix_16-1.2.10-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 16 prefix_16 prefix_16-1.2.11-1PGDG.rhel9.8.x86_64.rpm pgdg 1.2.11 27.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/prefix_16-1.2.11-1PGDG.rhel9.8.x86_64.rpm
 @ el9.aarch64 16 prefix_16 prefix_16-1.2.11-1PIGSTY.el9.aarch64.rpm pigsty 1.2.11 26.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/prefix_16-1.2.11-1PIGSTY.el9.aarch64.rpm
-@ el9.aarch64 16 prefix_16 prefix_16-1.2.11-1PGDG.rhel9.7.aarch64.rpm pgdg 1.2.11 26.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/prefix_16-1.2.11-1PGDG.rhel9.7.aarch64.rpm
-@ el9.aarch64 16 prefix_16 prefix_16-1.2.10-1PGDG.rhel9.aarch64.rpm pgdg 1.2.10 26.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/prefix_16-1.2.10-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 16 prefix_16 prefix_16-1.2.11-1PGDG.rhel9.8.aarch64.rpm pgdg 1.2.11 26.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/prefix_16-1.2.11-1PGDG.rhel9.8.aarch64.rpm
 @ el10.x86_64 16 prefix_16 prefix_16-1.2.11-1PIGSTY.el10.x86_64.rpm pigsty 1.2.11 28.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/prefix_16-1.2.11-1PIGSTY.el10.x86_64.rpm
-@ el10.x86_64 16 prefix_16 prefix_16-1.2.11-1PGDG.rhel10.1.x86_64.rpm pgdg 1.2.11 28.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/prefix_16-1.2.11-1PGDG.rhel10.1.x86_64.rpm
-@ el10.x86_64 16 prefix_16 prefix_16-1.2.10-3PGDG.rhel10.x86_64.rpm pgdg 1.2.10 28.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/prefix_16-1.2.10-3PGDG.rhel10.x86_64.rpm
+@ el10.x86_64 16 prefix_16 prefix_16-1.2.11-1PGDG.rhel10.2.x86_64.rpm pgdg 1.2.11 28.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/prefix_16-1.2.11-1PGDG.rhel10.2.x86_64.rpm
 @ el10.aarch64 16 prefix_16 prefix_16-1.2.11-1PIGSTY.el10.aarch64.rpm pigsty 1.2.11 27.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/prefix_16-1.2.11-1PIGSTY.el10.aarch64.rpm
-@ el10.aarch64 16 prefix_16 prefix_16-1.2.11-1PGDG.rhel10.1.aarch64.rpm pgdg 1.2.11 27.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/prefix_16-1.2.11-1PGDG.rhel10.1.aarch64.rpm
-@ el10.aarch64 16 prefix_16 prefix_16-1.2.10-3PGDG.rhel10.aarch64.rpm pgdg 1.2.10 27.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/prefix_16-1.2.10-3PGDG.rhel10.aarch64.rpm
+@ el10.aarch64 16 prefix_16 prefix_16-1.2.11-1PGDG.rhel10.2.aarch64.rpm pgdg 1.2.11 27.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/prefix_16-1.2.11-1PGDG.rhel10.2.aarch64.rpm
 @ d12.x86_64 16 postgresql-16-prefix postgresql-16-prefix_1.2.11-1.pgdg12+1_amd64.deb pgdg 1.2.11 40.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/prefix/postgresql-16-prefix_1.2.11-1.pgdg12+1_amd64.deb
 @ d12.x86_64 16 postgresql-16-prefix postgresql-16-prefix_1.2.10-4.pgdg12+1_amd64.deb pgdg 1.2.10 40.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/prefix/postgresql-16-prefix_1.2.10-4.pgdg12+1_amd64.deb
 @ d12.aarch64 16 postgresql-16-prefix postgresql-16-prefix_1.2.11-1.pgdg12+1_arm64.deb pgdg 1.2.11 39.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/prefix/postgresql-16-prefix_1.2.11-1.pgdg12+1_arm64.deb
@@ -183,19 +175,13 @@ weight: 3500
 @ el8.aarch64 15 prefix_15 prefix_15-1.2.10-1PGDG.rhel8.aarch64.rpm pgdg 1.2.10 28.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/prefix_15-1.2.10-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 15 prefix_15 prefix_15-1.2.9-3.rhel8.aarch64.rpm pgdg 1.2.9 49.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/prefix_15-1.2.9-3.rhel8.aarch64.rpm
 @ el9.x86_64 15 prefix_15 prefix_15-1.2.11-1PIGSTY.el9.x86_64.rpm pigsty 1.2.11 27.7KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/prefix_15-1.2.11-1PIGSTY.el9.x86_64.rpm
-@ el9.x86_64 15 prefix_15 prefix_15-1.2.11-1PGDG.rhel9.7.x86_64.rpm pgdg 1.2.11 27.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/prefix_15-1.2.11-1PGDG.rhel9.7.x86_64.rpm
-@ el9.x86_64 15 prefix_15 prefix_15-1.2.10-1PGDG.rhel9.x86_64.rpm pgdg 1.2.10 27.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/prefix_15-1.2.10-1PGDG.rhel9.x86_64.rpm
-@ el9.x86_64 15 prefix_15 prefix_15-1.2.9-3.rhel9.x86_64.rpm pgdg 1.2.9 50.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/prefix_15-1.2.9-3.rhel9.x86_64.rpm
+@ el9.x86_64 15 prefix_15 prefix_15-1.2.11-1PGDG.rhel9.8.x86_64.rpm pgdg 1.2.11 27.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/prefix_15-1.2.11-1PGDG.rhel9.8.x86_64.rpm
 @ el9.aarch64 15 prefix_15 prefix_15-1.2.11-1PIGSTY.el9.aarch64.rpm pigsty 1.2.11 26.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/prefix_15-1.2.11-1PIGSTY.el9.aarch64.rpm
-@ el9.aarch64 15 prefix_15 prefix_15-1.2.11-1PGDG.rhel9.7.aarch64.rpm pgdg 1.2.11 26.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/prefix_15-1.2.11-1PGDG.rhel9.7.aarch64.rpm
-@ el9.aarch64 15 prefix_15 prefix_15-1.2.10-1PGDG.rhel9.aarch64.rpm pgdg 1.2.10 26.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/prefix_15-1.2.10-1PGDG.rhel9.aarch64.rpm
-@ el9.aarch64 15 prefix_15 prefix_15-1.2.9-3.rhel9.aarch64.rpm pgdg 1.2.9 49.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/prefix_15-1.2.9-3.rhel9.aarch64.rpm
+@ el9.aarch64 15 prefix_15 prefix_15-1.2.11-1PGDG.rhel9.8.aarch64.rpm pgdg 1.2.11 26.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/prefix_15-1.2.11-1PGDG.rhel9.8.aarch64.rpm
 @ el10.x86_64 15 prefix_15 prefix_15-1.2.11-1PIGSTY.el10.x86_64.rpm pigsty 1.2.11 28.1KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/prefix_15-1.2.11-1PIGSTY.el10.x86_64.rpm
-@ el10.x86_64 15 prefix_15 prefix_15-1.2.11-1PGDG.rhel10.1.x86_64.rpm pgdg 1.2.11 28.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/prefix_15-1.2.11-1PGDG.rhel10.1.x86_64.rpm
-@ el10.x86_64 15 prefix_15 prefix_15-1.2.10-3PGDG.rhel10.x86_64.rpm pgdg 1.2.10 28.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/prefix_15-1.2.10-3PGDG.rhel10.x86_64.rpm
+@ el10.x86_64 15 prefix_15 prefix_15-1.2.11-1PGDG.rhel10.2.x86_64.rpm pgdg 1.2.11 28.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/prefix_15-1.2.11-1PGDG.rhel10.2.x86_64.rpm
 @ el10.aarch64 15 prefix_15 prefix_15-1.2.11-1PIGSTY.el10.aarch64.rpm pigsty 1.2.11 27.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/prefix_15-1.2.11-1PIGSTY.el10.aarch64.rpm
-@ el10.aarch64 15 prefix_15 prefix_15-1.2.11-1PGDG.rhel10.1.aarch64.rpm pgdg 1.2.11 27.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/prefix_15-1.2.11-1PGDG.rhel10.1.aarch64.rpm
-@ el10.aarch64 15 prefix_15 prefix_15-1.2.10-3PGDG.rhel10.aarch64.rpm pgdg 1.2.10 27.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/prefix_15-1.2.10-3PGDG.rhel10.aarch64.rpm
+@ el10.aarch64 15 prefix_15 prefix_15-1.2.11-1PGDG.rhel10.2.aarch64.rpm pgdg 1.2.11 27.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/prefix_15-1.2.11-1PGDG.rhel10.2.aarch64.rpm
 @ d12.x86_64 15 postgresql-15-prefix postgresql-15-prefix_1.2.11-1.pgdg12+1_amd64.deb pgdg 1.2.11 40.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/prefix/postgresql-15-prefix_1.2.11-1.pgdg12+1_amd64.deb
 @ d12.x86_64 15 postgresql-15-prefix postgresql-15-prefix_1.2.10-4.pgdg12+1_amd64.deb pgdg 1.2.10 40.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/prefix/postgresql-15-prefix_1.2.10-4.pgdg12+1_amd64.deb
 @ d12.aarch64 15 postgresql-15-prefix postgresql-15-prefix_1.2.11-1.pgdg12+1_arm64.deb pgdg 1.2.11 39.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/prefix/postgresql-15-prefix_1.2.11-1.pgdg12+1_arm64.deb
@@ -225,18 +211,13 @@ weight: 3500
 @ el8.aarch64 14 prefix_14 prefix_14-1.2.10-1PGDG.rhel8.aarch64.rpm pgdg 1.2.10 28.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/prefix_14-1.2.10-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 14 prefix_14 prefix_14-1.2.9-3.rhel8.aarch64.rpm pgdg 1.2.9 49.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/prefix_14-1.2.9-3.rhel8.aarch64.rpm
 @ el9.x86_64 14 prefix_14 prefix_14-1.2.11-1PIGSTY.el9.x86_64.rpm pigsty 1.2.11 27.7KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/prefix_14-1.2.11-1PIGSTY.el9.x86_64.rpm
-@ el9.x86_64 14 prefix_14 prefix_14-1.2.11-1PGDG.rhel9.7.x86_64.rpm pgdg 1.2.11 27.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/prefix_14-1.2.11-1PGDG.rhel9.7.x86_64.rpm
-@ el9.x86_64 14 prefix_14 prefix_14-1.2.10-1PGDG.rhel9.x86_64.rpm pgdg 1.2.10 27.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/prefix_14-1.2.10-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 14 prefix_14 prefix_14-1.2.11-1PGDG.rhel9.8.x86_64.rpm pgdg 1.2.11 27.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/prefix_14-1.2.11-1PGDG.rhel9.8.x86_64.rpm
 @ el9.aarch64 14 prefix_14 prefix_14-1.2.11-1PIGSTY.el9.aarch64.rpm pigsty 1.2.11 26.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/prefix_14-1.2.11-1PIGSTY.el9.aarch64.rpm
-@ el9.aarch64 14 prefix_14 prefix_14-1.2.11-1PGDG.rhel9.7.aarch64.rpm pgdg 1.2.11 26.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/prefix_14-1.2.11-1PGDG.rhel9.7.aarch64.rpm
-@ el9.aarch64 14 prefix_14 prefix_14-1.2.10-1PGDG.rhel9.aarch64.rpm pgdg 1.2.10 26.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/prefix_14-1.2.10-1PGDG.rhel9.aarch64.rpm
-@ el9.aarch64 14 prefix_14 prefix_14-1.2.9-3.rhel9.aarch64.rpm pgdg 1.2.9 49.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/prefix_14-1.2.9-3.rhel9.aarch64.rpm
+@ el9.aarch64 14 prefix_14 prefix_14-1.2.11-1PGDG.rhel9.8.aarch64.rpm pgdg 1.2.11 26.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/prefix_14-1.2.11-1PGDG.rhel9.8.aarch64.rpm
 @ el10.x86_64 14 prefix_14 prefix_14-1.2.11-1PIGSTY.el10.x86_64.rpm pigsty 1.2.11 28.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/prefix_14-1.2.11-1PIGSTY.el10.x86_64.rpm
-@ el10.x86_64 14 prefix_14 prefix_14-1.2.11-1PGDG.rhel10.1.x86_64.rpm pgdg 1.2.11 28.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/prefix_14-1.2.11-1PGDG.rhel10.1.x86_64.rpm
-@ el10.x86_64 14 prefix_14 prefix_14-1.2.10-3PGDG.rhel10.x86_64.rpm pgdg 1.2.10 28.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/prefix_14-1.2.10-3PGDG.rhel10.x86_64.rpm
+@ el10.x86_64 14 prefix_14 prefix_14-1.2.11-1PGDG.rhel10.2.x86_64.rpm pgdg 1.2.11 28.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/prefix_14-1.2.11-1PGDG.rhel10.2.x86_64.rpm
 @ el10.aarch64 14 prefix_14 prefix_14-1.2.11-1PIGSTY.el10.aarch64.rpm pigsty 1.2.11 27.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/prefix_14-1.2.11-1PIGSTY.el10.aarch64.rpm
-@ el10.aarch64 14 prefix_14 prefix_14-1.2.11-1PGDG.rhel10.1.aarch64.rpm pgdg 1.2.11 27.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/prefix_14-1.2.11-1PGDG.rhel10.1.aarch64.rpm
-@ el10.aarch64 14 prefix_14 prefix_14-1.2.10-3PGDG.rhel10.aarch64.rpm pgdg 1.2.10 27.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/prefix_14-1.2.10-3PGDG.rhel10.aarch64.rpm
+@ el10.aarch64 14 prefix_14 prefix_14-1.2.11-1PGDG.rhel10.2.aarch64.rpm pgdg 1.2.11 27.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/prefix_14-1.2.11-1PGDG.rhel10.2.aarch64.rpm
 @ d12.x86_64 14 postgresql-14-prefix postgresql-14-prefix_1.2.11-1.pgdg12+1_amd64.deb pgdg 1.2.11 40.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/prefix/postgresql-14-prefix_1.2.11-1.pgdg12+1_amd64.deb
 @ d12.x86_64 14 postgresql-14-prefix postgresql-14-prefix_1.2.10-4.pgdg12+1_amd64.deb pgdg 1.2.10 40.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/prefix/postgresql-14-prefix_1.2.10-4.pgdg12+1_amd64.deb
 @ d12.aarch64 14 postgresql-14-prefix postgresql-14-prefix_1.2.11-1.pgdg12+1_arm64.deb pgdg 1.2.11 39.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/prefix/postgresql-14-prefix_1.2.11-1.pgdg12+1_arm64.deb

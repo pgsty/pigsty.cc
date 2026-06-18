@@ -52,10 +52,10 @@ weight: 2780
 |:--:|:--:|:--:|:--:|:--:|:--:|
 | el8.x86_64 | AVAIL PGDG 1.8.0 1 | AVAIL PGDG 1.7.1 2 | AVAIL PGDG 1.6.2 3 | AVAIL PGDG 1.5.3 3 | AVAIL PGDG 1.4.4 3 |
 | el8.aarch64 | AVAIL PGDG 1.8.0 1 | AVAIL PGDG 1.7.1 2 | AVAIL PGDG 1.6.2 3 | AVAIL PGDG 1.5.3 3 | AVAIL PGDG 1.4.4 3 |
-| el9.x86_64 | AVAIL PGDG 1.8.0 1 | AVAIL PGDG 1.7.1 2 | AVAIL PGDG 1.6.2 3 | AVAIL PGDG 1.5.3 3 | AVAIL PGDG 1.4.4 3 |
-| el9.aarch64 | AVAIL PGDG 1.8.0 1 | AVAIL PGDG 1.7.1 2 | AVAIL PGDG 1.6.2 3 | AVAIL PGDG 1.5.3 3 | AVAIL PGDG 1.4.4 3 |
-| el10.x86_64 | AVAIL PGDG 1.8.0 1 | AVAIL PGDG 1.7.1 2 | AVAIL PGDG 1.6.2 2 | AVAIL PGDG 1.5.3 2 | AVAIL PGDG 1.4.4 2 |
-| el10.aarch64 | AVAIL PGDG 1.8.0 1 | AVAIL PGDG 1.7.1 2 | AVAIL PGDG 1.6.2 2 | AVAIL PGDG 1.5.3 2 | AVAIL PGDG 1.4.4 2 |
+| el9.x86_64 | AVAIL PGDG 1.8.0 1 | AVAIL PGDG 1.7.1 1 | AVAIL PGDG 1.6.2 1 | AVAIL PGDG 1.5.3 1 | AVAIL PGDG 1.4.4 1 |
+| el9.aarch64 | AVAIL PGDG 1.8.0 1 | AVAIL PGDG 1.7.1 1 | AVAIL PGDG 1.6.2 1 | AVAIL PGDG 1.5.3 1 | AVAIL PGDG 1.4.4 1 |
+| el10.x86_64 | AVAIL PGDG 1.8.0 1 | AVAIL PGDG 1.7.1 1 | AVAIL PGDG 1.6.2 1 | AVAIL PGDG 1.5.3 1 | AVAIL PGDG 1.4.4 1 |
+| el10.aarch64 | AVAIL PGDG 1.8.0 1 | AVAIL PGDG 1.7.1 1 | AVAIL PGDG 1.6.2 1 | AVAIL PGDG 1.5.3 1 | AVAIL PGDG 1.4.4 1 |
 | d12.x86_64 | AVAIL PGDG 1.8.0 1 | AVAIL PGDG 1.7.1 1 | AVAIL PGDG 1.6.2 1 | AVAIL PGDG 1.5.3 1 | AVAIL PGDG 1.4.4 1 |
 | d12.aarch64 | AVAIL PGDG 1.8.0 1 | AVAIL PGDG 1.7.1 1 | AVAIL PGDG 1.6.2 1 | AVAIL PGDG 1.5.3 1 | AVAIL PGDG 1.4.4 1 |
 | d13.x86_64 | AVAIL PGDG 1.8.0 1 | AVAIL PGDG 1.7.1 1 | AVAIL PGDG 1.6.2 1 | AVAIL PGDG 1.5.3 1 | AVAIL PGDG 1.4.4 1 |
@@ -68,10 +68,10 @@ weight: 2780
 | u26.aarch64 | AVAIL PGDG 1.8.0 1 | AVAIL PGDG 1.7.1 1 | AVAIL PGDG 1.6.2 1 | AVAIL PGDG 1.5.3 1 | AVAIL PGDG 1.4.4 1 |
 @ el8.x86_64 18 pg_hint_plan_18 pg_hint_plan_18-1.8.0-1PGDG.rhel8.x86_64.rpm pgdg 1.8.0 55.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pg_hint_plan_18-1.8.0-1PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 18 pg_hint_plan_18 pg_hint_plan_18-1.8.0-1PGDG.rhel8.aarch64.rpm pgdg 1.8.0 51.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pg_hint_plan_18-1.8.0-1PGDG.rhel8.aarch64.rpm
-@ el9.x86_64 18 pg_hint_plan_18 pg_hint_plan_18-1.8.0-1PGDG.rhel9.x86_64.rpm pgdg 1.8.0 54.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pg_hint_plan_18-1.8.0-1PGDG.rhel9.x86_64.rpm
-@ el9.aarch64 18 pg_hint_plan_18 pg_hint_plan_18-1.8.0-1PGDG.rhel9.aarch64.rpm pgdg 1.8.0 52.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pg_hint_plan_18-1.8.0-1PGDG.rhel9.aarch64.rpm
-@ el10.x86_64 18 pg_hint_plan_18 pg_hint_plan_18-1.8.0-1PGDG.rhel10.x86_64.rpm pgdg 1.8.0 55.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pg_hint_plan_18-1.8.0-1PGDG.rhel10.x86_64.rpm
-@ el10.aarch64 18 pg_hint_plan_18 pg_hint_plan_18-1.8.0-1PGDG.rhel10.aarch64.rpm pgdg 1.8.0 53.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_hint_plan_18-1.8.0-1PGDG.rhel10.aarch64.rpm
+@ el9.x86_64 18 pg_hint_plan_18 pg_hint_plan_18-1.8.0-5PGDG.rhel9.8.x86_64.rpm pgdg 1.8.0 54.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pg_hint_plan_18-1.8.0-5PGDG.rhel9.8.x86_64.rpm
+@ el9.aarch64 18 pg_hint_plan_18 pg_hint_plan_18-1.8.0-5PGDG.rhel9.8.aarch64.rpm pgdg 1.8.0 53.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pg_hint_plan_18-1.8.0-5PGDG.rhel9.8.aarch64.rpm
+@ el10.x86_64 18 pg_hint_plan_18 pg_hint_plan_18-1.8.0-5PGDG.rhel10.2.x86_64.rpm pgdg 1.8.0 55.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pg_hint_plan_18-1.8.0-5PGDG.rhel10.2.x86_64.rpm
+@ el10.aarch64 18 pg_hint_plan_18 pg_hint_plan_18-1.8.0-5PGDG.rhel10.2.aarch64.rpm pgdg 1.8.0 53.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_hint_plan_18-1.8.0-5PGDG.rhel10.2.aarch64.rpm
 @ d12.x86_64 18 postgresql-18-pg-hint-plan postgresql-18-pg-hint-plan_1.8.0-3.pgdg12+1_amd64.deb pgdg 1.8.0 132.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-hint-plan-18/postgresql-18-pg-hint-plan_1.8.0-3.pgdg12+1_amd64.deb
 @ d12.aarch64 18 postgresql-18-pg-hint-plan postgresql-18-pg-hint-plan_1.8.0-3.pgdg12+1_arm64.deb pgdg 1.8.0 128.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-hint-plan-18/postgresql-18-pg-hint-plan_1.8.0-3.pgdg12+1_arm64.deb
 @ d13.x86_64 18 postgresql-18-pg-hint-plan postgresql-18-pg-hint-plan_1.8.0-3.pgdg13+1_amd64.deb pgdg 1.8.0 133.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-hint-plan-18/postgresql-18-pg-hint-plan_1.8.0-3.pgdg13+1_amd64.deb
@@ -86,14 +86,10 @@ weight: 2780
 @ el8.x86_64 17 pg_hint_plan_17 pg_hint_plan_17-1.7.0-1PGDG.rhel8.x86_64.rpm pgdg 1.7.0 51.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pg_hint_plan_17-1.7.0-1PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 17 pg_hint_plan_17 pg_hint_plan_17-1.7.1-1PGDG.rhel8.aarch64.rpm pgdg 1.7.1 50.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pg_hint_plan_17-1.7.1-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 17 pg_hint_plan_17 pg_hint_plan_17-1.7.0-1PGDG.rhel8.aarch64.rpm pgdg 1.7.0 48.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pg_hint_plan_17-1.7.0-1PGDG.rhel8.aarch64.rpm
-@ el9.x86_64 17 pg_hint_plan_17 pg_hint_plan_17-1.7.1-1PGDG.rhel9.x86_64.rpm pgdg 1.7.1 52.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_hint_plan_17-1.7.1-1PGDG.rhel9.x86_64.rpm
-@ el9.x86_64 17 pg_hint_plan_17 pg_hint_plan_17-1.7.0-1PGDG.rhel9.x86_64.rpm pgdg 1.7.0 50.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_hint_plan_17-1.7.0-1PGDG.rhel9.x86_64.rpm
-@ el9.aarch64 17 pg_hint_plan_17 pg_hint_plan_17-1.7.1-1PGDG.rhel9.aarch64.rpm pgdg 1.7.1 50.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_hint_plan_17-1.7.1-1PGDG.rhel9.aarch64.rpm
-@ el9.aarch64 17 pg_hint_plan_17 pg_hint_plan_17-1.7.0-1PGDG.rhel9.aarch64.rpm pgdg 1.7.0 49.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_hint_plan_17-1.7.0-1PGDG.rhel9.aarch64.rpm
-@ el10.x86_64 17 pg_hint_plan_17 pg_hint_plan_17-1.7.1-1PGDG.rhel10.x86_64.rpm pgdg 1.7.1 53.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_hint_plan_17-1.7.1-1PGDG.rhel10.x86_64.rpm
-@ el10.x86_64 17 pg_hint_plan_17 pg_hint_plan_17-1.7.0-3PGDG.rhel10.x86_64.rpm pgdg 1.7.0 52.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_hint_plan_17-1.7.0-3PGDG.rhel10.x86_64.rpm
-@ el10.aarch64 17 pg_hint_plan_17 pg_hint_plan_17-1.7.1-1PGDG.rhel10.aarch64.rpm pgdg 1.7.1 52.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_hint_plan_17-1.7.1-1PGDG.rhel10.aarch64.rpm
-@ el10.aarch64 17 pg_hint_plan_17 pg_hint_plan_17-1.7.0-3PGDG.rhel10.aarch64.rpm pgdg 1.7.0 50.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_hint_plan_17-1.7.0-3PGDG.rhel10.aarch64.rpm
+@ el9.x86_64 17 pg_hint_plan_17 pg_hint_plan_17-1.7.1-5PGDG.rhel9.8.x86_64.rpm pgdg 1.7.1 52.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_hint_plan_17-1.7.1-5PGDG.rhel9.8.x86_64.rpm
+@ el9.aarch64 17 pg_hint_plan_17 pg_hint_plan_17-1.7.1-5PGDG.rhel9.8.aarch64.rpm pgdg 1.7.1 51.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_hint_plan_17-1.7.1-5PGDG.rhel9.8.aarch64.rpm
+@ el10.x86_64 17 pg_hint_plan_17 pg_hint_plan_17-1.7.1-5PGDG.rhel10.2.x86_64.rpm pgdg 1.7.1 53.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_hint_plan_17-1.7.1-5PGDG.rhel10.2.x86_64.rpm
+@ el10.aarch64 17 pg_hint_plan_17 pg_hint_plan_17-1.7.1-5PGDG.rhel10.2.aarch64.rpm pgdg 1.7.1 52.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_hint_plan_17-1.7.1-5PGDG.rhel10.2.aarch64.rpm
 @ d12.x86_64 17 postgresql-17-pg-hint-plan postgresql-17-pg-hint-plan_1.7.1-1.pgdg12+1_amd64.deb pgdg 1.7.1 128.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-hint-plan-17/postgresql-17-pg-hint-plan_1.7.1-1.pgdg12+1_amd64.deb
 @ d12.aarch64 17 postgresql-17-pg-hint-plan postgresql-17-pg-hint-plan_1.7.1-1.pgdg12+1_arm64.deb pgdg 1.7.1 123.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-hint-plan-17/postgresql-17-pg-hint-plan_1.7.1-1.pgdg12+1_arm64.deb
 @ d13.x86_64 17 postgresql-17-pg-hint-plan postgresql-17-pg-hint-plan_1.7.1-1.pgdg13+1_amd64.deb pgdg 1.7.1 128.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-hint-plan-17/postgresql-17-pg-hint-plan_1.7.1-1.pgdg13+1_amd64.deb
@@ -110,16 +106,10 @@ weight: 2780
 @ el8.aarch64 16 pg_hint_plan_16 pg_hint_plan_16-1.6.2-1PGDG.rhel8.aarch64.rpm pgdg 1.6.2 43.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pg_hint_plan_16-1.6.2-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 16 pg_hint_plan_16 pg_hint_plan_16-1.6.1-1PGDG.rhel8.aarch64.rpm pgdg 1.6.1 41.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pg_hint_plan_16-1.6.1-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 16 pg_hint_plan_16 pg_hint_plan_16-1.6.0-1PGDG.rhel8.aarch64.rpm pgdg 1.6.0 40.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pg_hint_plan_16-1.6.0-1PGDG.rhel8.aarch64.rpm
-@ el9.x86_64 16 pg_hint_plan_16 pg_hint_plan_16-1.6.2-1PGDG.rhel9.x86_64.rpm pgdg 1.6.2 46.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_hint_plan_16-1.6.2-1PGDG.rhel9.x86_64.rpm
-@ el9.x86_64 16 pg_hint_plan_16 pg_hint_plan_16-1.6.1-1PGDG.rhel9.x86_64.rpm pgdg 1.6.1 44.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_hint_plan_16-1.6.1-1PGDG.rhel9.x86_64.rpm
-@ el9.x86_64 16 pg_hint_plan_16 pg_hint_plan_16-1.6.0-1PGDG.rhel9.x86_64.rpm pgdg 1.6.0 43.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_hint_plan_16-1.6.0-1PGDG.rhel9.x86_64.rpm
-@ el9.aarch64 16 pg_hint_plan_16 pg_hint_plan_16-1.6.2-1PGDG.rhel9.aarch64.rpm pgdg 1.6.2 45.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_hint_plan_16-1.6.2-1PGDG.rhel9.aarch64.rpm
-@ el9.aarch64 16 pg_hint_plan_16 pg_hint_plan_16-1.6.1-1PGDG.rhel9.aarch64.rpm pgdg 1.6.1 43.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_hint_plan_16-1.6.1-1PGDG.rhel9.aarch64.rpm
-@ el9.aarch64 16 pg_hint_plan_16 pg_hint_plan_16-1.6.0-1PGDG.rhel9.aarch64.rpm pgdg 1.6.0 41.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_hint_plan_16-1.6.0-1PGDG.rhel9.aarch64.rpm
-@ el10.x86_64 16 pg_hint_plan_16 pg_hint_plan_16-1.6.2-1PGDG.rhel10.x86_64.rpm pgdg 1.6.2 47.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_hint_plan_16-1.6.2-1PGDG.rhel10.x86_64.rpm
-@ el10.x86_64 16 pg_hint_plan_16 pg_hint_plan_16-1.6.1-3PGDG.rhel10.x86_64.rpm pgdg 1.6.1 46.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_hint_plan_16-1.6.1-3PGDG.rhel10.x86_64.rpm
-@ el10.aarch64 16 pg_hint_plan_16 pg_hint_plan_16-1.6.2-1PGDG.rhel10.aarch64.rpm pgdg 1.6.2 46.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_hint_plan_16-1.6.2-1PGDG.rhel10.aarch64.rpm
-@ el10.aarch64 16 pg_hint_plan_16 pg_hint_plan_16-1.6.1-3PGDG.rhel10.aarch64.rpm pgdg 1.6.1 44.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_hint_plan_16-1.6.1-3PGDG.rhel10.aarch64.rpm
+@ el9.x86_64 16 pg_hint_plan_16 pg_hint_plan_16-1.6.2-5PGDG.rhel9.8.x86_64.rpm pgdg 1.6.2 46.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_hint_plan_16-1.6.2-5PGDG.rhel9.8.x86_64.rpm
+@ el9.aarch64 16 pg_hint_plan_16 pg_hint_plan_16-1.6.2-5PGDG.rhel9.8.aarch64.rpm pgdg 1.6.2 45.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_hint_plan_16-1.6.2-5PGDG.rhel9.8.aarch64.rpm
+@ el10.x86_64 16 pg_hint_plan_16 pg_hint_plan_16-1.6.2-5PGDG.rhel10.2.x86_64.rpm pgdg 1.6.2 47.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_hint_plan_16-1.6.2-5PGDG.rhel10.2.x86_64.rpm
+@ el10.aarch64 16 pg_hint_plan_16 pg_hint_plan_16-1.6.2-5PGDG.rhel10.2.aarch64.rpm pgdg 1.6.2 46.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_hint_plan_16-1.6.2-5PGDG.rhel10.2.aarch64.rpm
 @ d12.x86_64 16 postgresql-16-pg-hint-plan postgresql-16-pg-hint-plan_1.6.2-1.pgdg12+1_amd64.deb pgdg 1.6.2 104.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-hint-plan-16/postgresql-16-pg-hint-plan_1.6.2-1.pgdg12+1_amd64.deb
 @ d12.aarch64 16 postgresql-16-pg-hint-plan postgresql-16-pg-hint-plan_1.6.2-1.pgdg12+1_arm64.deb pgdg 1.6.2 101.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-hint-plan-16/postgresql-16-pg-hint-plan_1.6.2-1.pgdg12+1_arm64.deb
 @ d13.x86_64 16 postgresql-16-pg-hint-plan postgresql-16-pg-hint-plan_1.6.2-1.pgdg13+1_amd64.deb pgdg 1.6.2 104.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-hint-plan-16/postgresql-16-pg-hint-plan_1.6.2-1.pgdg13+1_amd64.deb
@@ -136,16 +126,10 @@ weight: 2780
 @ el8.aarch64 15 pg_hint_plan_15 pg_hint_plan_15-1.5.3-1PGDG.rhel8.aarch64.rpm pgdg 1.5.3 43.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pg_hint_plan_15-1.5.3-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 15 pg_hint_plan_15 pg_hint_plan_15-1.5.2-1PGDG.rhel8.aarch64.rpm pgdg 1.5.2 41.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pg_hint_plan_15-1.5.2-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 15 pg_hint_plan_15 pg_hint_plan_15-1.5.1-1PGDG.rhel8.aarch64.rpm pgdg 1.5.1 46.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pg_hint_plan_15-1.5.1-1PGDG.rhel8.aarch64.rpm
-@ el9.x86_64 15 pg_hint_plan_15 pg_hint_plan_15-1.5.3-1PGDG.rhel9.x86_64.rpm pgdg 1.5.3 46.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_hint_plan_15-1.5.3-1PGDG.rhel9.x86_64.rpm
-@ el9.x86_64 15 pg_hint_plan_15 pg_hint_plan_15-1.5.2-1PGDG.rhel9.x86_64.rpm pgdg 1.5.2 44.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_hint_plan_15-1.5.2-1PGDG.rhel9.x86_64.rpm
-@ el9.x86_64 15 pg_hint_plan_15 pg_hint_plan_15-1.5.1-1PGDG.rhel9.x86_64.rpm pgdg 1.5.1 49.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_hint_plan_15-1.5.1-1PGDG.rhel9.x86_64.rpm
-@ el9.aarch64 15 pg_hint_plan_15 pg_hint_plan_15-1.5.3-1PGDG.rhel9.aarch64.rpm pgdg 1.5.3 44.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_hint_plan_15-1.5.3-1PGDG.rhel9.aarch64.rpm
-@ el9.aarch64 15 pg_hint_plan_15 pg_hint_plan_15-1.5.2-1PGDG.rhel9.aarch64.rpm pgdg 1.5.2 43.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_hint_plan_15-1.5.2-1PGDG.rhel9.aarch64.rpm
-@ el9.aarch64 15 pg_hint_plan_15 pg_hint_plan_15-1.5.1-1PGDG.rhel9.aarch64.rpm pgdg 1.5.1 47.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_hint_plan_15-1.5.1-1PGDG.rhel9.aarch64.rpm
-@ el10.x86_64 15 pg_hint_plan_15 pg_hint_plan_15-1.5.3-1PGDG.rhel10.x86_64.rpm pgdg 1.5.3 47.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_hint_plan_15-1.5.3-1PGDG.rhel10.x86_64.rpm
-@ el10.x86_64 15 pg_hint_plan_15 pg_hint_plan_15-1.5.2-3PGDG.rhel10.x86_64.rpm pgdg 1.5.2 46.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_hint_plan_15-1.5.2-3PGDG.rhel10.x86_64.rpm
-@ el10.aarch64 15 pg_hint_plan_15 pg_hint_plan_15-1.5.3-1PGDG.rhel10.aarch64.rpm pgdg 1.5.3 45.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_hint_plan_15-1.5.3-1PGDG.rhel10.aarch64.rpm
-@ el10.aarch64 15 pg_hint_plan_15 pg_hint_plan_15-1.5.2-3PGDG.rhel10.aarch64.rpm pgdg 1.5.2 44.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_hint_plan_15-1.5.2-3PGDG.rhel10.aarch64.rpm
+@ el9.x86_64 15 pg_hint_plan_15 pg_hint_plan_15-1.5.3-5PGDG.rhel9.8.x86_64.rpm pgdg 1.5.3 46.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_hint_plan_15-1.5.3-5PGDG.rhel9.8.x86_64.rpm
+@ el9.aarch64 15 pg_hint_plan_15 pg_hint_plan_15-1.5.3-5PGDG.rhel9.8.aarch64.rpm pgdg 1.5.3 44.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_hint_plan_15-1.5.3-5PGDG.rhel9.8.aarch64.rpm
+@ el10.x86_64 15 pg_hint_plan_15 pg_hint_plan_15-1.5.3-5PGDG.rhel10.2.x86_64.rpm pgdg 1.5.3 47.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_hint_plan_15-1.5.3-5PGDG.rhel10.2.x86_64.rpm
+@ el10.aarch64 15 pg_hint_plan_15 pg_hint_plan_15-1.5.3-5PGDG.rhel10.2.aarch64.rpm pgdg 1.5.3 45.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_hint_plan_15-1.5.3-5PGDG.rhel10.2.aarch64.rpm
 @ d12.x86_64 15 postgresql-15-pg-hint-plan postgresql-15-pg-hint-plan_1.5.3-1.pgdg12+1_amd64.deb pgdg 1.5.3 104.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-hint-plan-15/postgresql-15-pg-hint-plan_1.5.3-1.pgdg12+1_amd64.deb
 @ d12.aarch64 15 postgresql-15-pg-hint-plan postgresql-15-pg-hint-plan_1.5.3-1.pgdg12+1_arm64.deb pgdg 1.5.3 101.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-hint-plan-15/postgresql-15-pg-hint-plan_1.5.3-1.pgdg12+1_arm64.deb
 @ d13.x86_64 15 postgresql-15-pg-hint-plan postgresql-15-pg-hint-plan_1.5.3-1.pgdg13+1_amd64.deb pgdg 1.5.3 104.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-hint-plan-15/postgresql-15-pg-hint-plan_1.5.3-1.pgdg13+1_amd64.deb
@@ -162,16 +146,10 @@ weight: 2780
 @ el8.aarch64 14 pg_hint_plan_14 pg_hint_plan_14-1.4.4-1PGDG.rhel8.aarch64.rpm pgdg 1.4.4 42.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pg_hint_plan_14-1.4.4-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 14 pg_hint_plan_14 pg_hint_plan_14-1.4.3-1PGDG.rhel8.aarch64.rpm pgdg 1.4.3 41.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pg_hint_plan_14-1.4.3-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 14 pg_hint_plan_14 pg_hint_plan_14-1.4.2-1PGDG.rhel8.aarch64.rpm pgdg 1.4.2 39.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pg_hint_plan_14-1.4.2-1PGDG.rhel8.aarch64.rpm
-@ el9.x86_64 14 pg_hint_plan_14 pg_hint_plan_14-1.4.4-1PGDG.rhel9.x86_64.rpm pgdg 1.4.4 45.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_hint_plan_14-1.4.4-1PGDG.rhel9.x86_64.rpm
-@ el9.x86_64 14 pg_hint_plan_14 pg_hint_plan_14-1.4.3-1PGDG.rhel9.x86_64.rpm pgdg 1.4.3 44.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_hint_plan_14-1.4.3-1PGDG.rhel9.x86_64.rpm
-@ el9.x86_64 14 pg_hint_plan_14 pg_hint_plan_14-1.4.2-1PGDG.rhel9.x86_64.rpm pgdg 1.4.2 42.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_hint_plan_14-1.4.2-1PGDG.rhel9.x86_64.rpm
-@ el9.aarch64 14 pg_hint_plan_14 pg_hint_plan_14-1.4.4-1PGDG.rhel9.aarch64.rpm pgdg 1.4.4 43.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_hint_plan_14-1.4.4-1PGDG.rhel9.aarch64.rpm
-@ el9.aarch64 14 pg_hint_plan_14 pg_hint_plan_14-1.4.3-1PGDG.rhel9.aarch64.rpm pgdg 1.4.3 42.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_hint_plan_14-1.4.3-1PGDG.rhel9.aarch64.rpm
-@ el9.aarch64 14 pg_hint_plan_14 pg_hint_plan_14-1.4.2-1PGDG.rhel9.aarch64.rpm pgdg 1.4.2 41.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_hint_plan_14-1.4.2-1PGDG.rhel9.aarch64.rpm
-@ el10.x86_64 14 pg_hint_plan_14 pg_hint_plan_14-1.4.4-1PGDG.rhel10.x86_64.rpm pgdg 1.4.4 46.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_hint_plan_14-1.4.4-1PGDG.rhel10.x86_64.rpm
-@ el10.x86_64 14 pg_hint_plan_14 pg_hint_plan_14-1.4.3-3PGDG.rhel10.x86_64.rpm pgdg 1.4.3 45.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_hint_plan_14-1.4.3-3PGDG.rhel10.x86_64.rpm
-@ el10.aarch64 14 pg_hint_plan_14 pg_hint_plan_14-1.4.4-1PGDG.rhel10.aarch64.rpm pgdg 1.4.4 44.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_hint_plan_14-1.4.4-1PGDG.rhel10.aarch64.rpm
-@ el10.aarch64 14 pg_hint_plan_14 pg_hint_plan_14-1.4.3-3PGDG.rhel10.aarch64.rpm pgdg 1.4.3 43.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_hint_plan_14-1.4.3-3PGDG.rhel10.aarch64.rpm
+@ el9.x86_64 14 pg_hint_plan_14 pg_hint_plan_14-1.4.4-5PGDG.rhel9.8.x86_64.rpm pgdg 1.4.4 45.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_hint_plan_14-1.4.4-5PGDG.rhel9.8.x86_64.rpm
+@ el9.aarch64 14 pg_hint_plan_14 pg_hint_plan_14-1.4.4-5PGDG.rhel9.8.aarch64.rpm pgdg 1.4.4 44.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_hint_plan_14-1.4.4-5PGDG.rhel9.8.aarch64.rpm
+@ el10.x86_64 14 pg_hint_plan_14 pg_hint_plan_14-1.4.4-5PGDG.rhel10.2.x86_64.rpm pgdg 1.4.4 46.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_hint_plan_14-1.4.4-5PGDG.rhel10.2.x86_64.rpm
+@ el10.aarch64 14 pg_hint_plan_14 pg_hint_plan_14-1.4.4-5PGDG.rhel10.2.aarch64.rpm pgdg 1.4.4 44.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_hint_plan_14-1.4.4-5PGDG.rhel10.2.aarch64.rpm
 @ d12.x86_64 14 postgresql-14-pg-hint-plan postgresql-14-pg-hint-plan_1.4.4-1.pgdg12+1_amd64.deb pgdg 1.4.4 104.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-hint-plan-14/postgresql-14-pg-hint-plan_1.4.4-1.pgdg12+1_amd64.deb
 @ d12.aarch64 14 postgresql-14-pg-hint-plan postgresql-14-pg-hint-plan_1.4.4-1.pgdg12+1_arm64.deb pgdg 1.4.4 100.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-hint-plan-14/postgresql-14-pg-hint-plan_1.4.4-1.pgdg12+1_arm64.deb
 @ d13.x86_64 14 postgresql-14-pg-hint-plan postgresql-14-pg-hint-plan_1.4.4-1.pgdg13+1_amd64.deb pgdg 1.4.4 104.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-hint-plan-14/postgresql-14-pg-hint-plan_1.4.4-1.pgdg13+1_amd64.deb

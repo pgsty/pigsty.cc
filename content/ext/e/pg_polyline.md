@@ -38,6 +38,9 @@ weight: 1570
 {.ext-table .ext-table--rel}
 
 
+> pgrx patched to 0.18.1.
+
+
 ## 版本
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
@@ -64,8 +67,8 @@ weight: 1570
 | u22.aarch64 | AVAIL PIGSTY 0.0.1 1 | AVAIL PIGSTY 0.0.1 1 | AVAIL PIGSTY 0.0.1 1 | AVAIL PIGSTY 0.0.1 1 | AVAIL PIGSTY 0.0.1 1 |
 | u24.x86_64 | AVAIL PIGSTY 0.0.1 1 | AVAIL PIGSTY 0.0.1 1 | AVAIL PIGSTY 0.0.1 1 | AVAIL PIGSTY 0.0.1 1 | AVAIL PIGSTY 0.0.1 1 |
 | u24.aarch64 | AVAIL PIGSTY 0.0.1 1 | AVAIL PIGSTY 0.0.1 1 | AVAIL PIGSTY 0.0.1 1 | AVAIL PIGSTY 0.0.1 1 | AVAIL PIGSTY 0.0.1 1 |
-| u26.x86_64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| u26.aarch64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| u26.x86_64 | AVAIL PIGSTY 0.0.1 1 | AVAIL PIGSTY 0.0.1 1 | AVAIL PIGSTY 0.0.1 1 | AVAIL PIGSTY 0.0.1 1 | AVAIL PIGSTY 0.0.1 1 |
+| u26.aarch64 | AVAIL PIGSTY 0.0.1 1 | AVAIL PIGSTY 0.0.1 1 | AVAIL PIGSTY 0.0.1 1 | AVAIL PIGSTY 0.0.1 1 | AVAIL PIGSTY 0.0.1 1 |
 @ el8.x86_64 18 pg_polyline_18 pg_polyline_18-0.0.1-2PIGSTY.el8.x86_64.rpm pigsty 0.0.1 312.0KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_polyline_18-0.0.1-2PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 18 pg_polyline_18 pg_polyline_18-0.0.1-2PIGSTY.el8.aarch64.rpm pigsty 0.0.1 205.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_polyline_18-0.0.1-2PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 18 pg_polyline_18 pg_polyline_18-0.0.1-2PIGSTY.el9.x86_64.rpm pigsty 0.0.1 326.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_polyline_18-0.0.1-2PIGSTY.el9.x86_64.rpm
@@ -80,6 +83,8 @@ weight: 1570
 @ u22.aarch64 18 postgresql-18-pg-polyline postgresql-18-pg-polyline_0.0.1-1PIGSTY~jammy_arm64.deb pigsty 0.0.1 183.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-polyline/postgresql-18-pg-polyline_0.0.1-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 18 postgresql-18-pg-polyline postgresql-18-pg-polyline_0.0.1-1PIGSTY~noble_amd64.deb pigsty 0.0.1 286.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-polyline/postgresql-18-pg-polyline_0.0.1-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 18 postgresql-18-pg-polyline postgresql-18-pg-polyline_0.0.1-1PIGSTY~noble_arm64.deb pigsty 0.0.1 181.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-polyline/postgresql-18-pg-polyline_0.0.1-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 18 postgresql-18-pg-polyline postgresql-18-pg-polyline_0.0.1-2PIGSTY~resolute_amd64.deb pigsty 0.0.1 744.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-polyline/postgresql-18-pg-polyline_0.0.1-2PIGSTY~resolute_amd64.deb
+@ u26.aarch64 18 postgresql-18-pg-polyline postgresql-18-pg-polyline_0.0.1-2PIGSTY~resolute_arm64.deb pigsty 0.0.1 660.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-polyline/postgresql-18-pg-polyline_0.0.1-2PIGSTY~resolute_arm64.deb
 @ el8.x86_64 17 pg_polyline_17 pg_polyline_17-0.0.1-2PIGSTY.el8.x86_64.rpm pigsty 0.0.1 311.9KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_polyline_17-0.0.1-2PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 17 pg_polyline_17 pg_polyline_17-0.0.1-2PIGSTY.el8.aarch64.rpm pigsty 0.0.1 205.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_polyline_17-0.0.1-2PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 17 pg_polyline_17 pg_polyline_17-0.0.1-2PIGSTY.el9.x86_64.rpm pigsty 0.0.1 326.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_polyline_17-0.0.1-2PIGSTY.el9.x86_64.rpm
@@ -94,6 +99,8 @@ weight: 1570
 @ u22.aarch64 17 postgresql-17-pg-polyline postgresql-17-pg-polyline_0.0.1-1PIGSTY~jammy_arm64.deb pigsty 0.0.1 183.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-polyline/postgresql-17-pg-polyline_0.0.1-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 17 postgresql-17-pg-polyline postgresql-17-pg-polyline_0.0.1-1PIGSTY~noble_amd64.deb pigsty 0.0.1 286.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-polyline/postgresql-17-pg-polyline_0.0.1-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 17 postgresql-17-pg-polyline postgresql-17-pg-polyline_0.0.1-1PIGSTY~noble_arm64.deb pigsty 0.0.1 182.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-polyline/postgresql-17-pg-polyline_0.0.1-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 17 postgresql-17-pg-polyline postgresql-17-pg-polyline_0.0.1-2PIGSTY~resolute_amd64.deb pigsty 0.0.1 742.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-polyline/postgresql-17-pg-polyline_0.0.1-2PIGSTY~resolute_amd64.deb
+@ u26.aarch64 17 postgresql-17-pg-polyline postgresql-17-pg-polyline_0.0.1-2PIGSTY~resolute_arm64.deb pigsty 0.0.1 657.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-polyline/postgresql-17-pg-polyline_0.0.1-2PIGSTY~resolute_arm64.deb
 @ el8.x86_64 16 pg_polyline_16 pg_polyline_16-0.0.1-2PIGSTY.el8.x86_64.rpm pigsty 0.0.1 311.9KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_polyline_16-0.0.1-2PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 16 pg_polyline_16 pg_polyline_16-0.0.1-2PIGSTY.el8.aarch64.rpm pigsty 0.0.1 205.1KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_polyline_16-0.0.1-2PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 16 pg_polyline_16 pg_polyline_16-0.0.1-2PIGSTY.el9.x86_64.rpm pigsty 0.0.1 326.7KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_polyline_16-0.0.1-2PIGSTY.el9.x86_64.rpm
@@ -108,6 +115,8 @@ weight: 1570
 @ u22.aarch64 16 postgresql-16-pg-polyline postgresql-16-pg-polyline_0.0.1-1PIGSTY~jammy_arm64.deb pigsty 0.0.1 183.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-polyline/postgresql-16-pg-polyline_0.0.1-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 16 postgresql-16-pg-polyline postgresql-16-pg-polyline_0.0.1-1PIGSTY~noble_amd64.deb pigsty 0.0.1 286.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-polyline/postgresql-16-pg-polyline_0.0.1-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 16 postgresql-16-pg-polyline postgresql-16-pg-polyline_0.0.1-1PIGSTY~noble_arm64.deb pigsty 0.0.1 181.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-polyline/postgresql-16-pg-polyline_0.0.1-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 16 postgresql-16-pg-polyline postgresql-16-pg-polyline_0.0.1-2PIGSTY~resolute_amd64.deb pigsty 0.0.1 742.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-polyline/postgresql-16-pg-polyline_0.0.1-2PIGSTY~resolute_amd64.deb
+@ u26.aarch64 16 postgresql-16-pg-polyline postgresql-16-pg-polyline_0.0.1-2PIGSTY~resolute_arm64.deb pigsty 0.0.1 656.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-polyline/postgresql-16-pg-polyline_0.0.1-2PIGSTY~resolute_arm64.deb
 @ el8.x86_64 15 pg_polyline_15 pg_polyline_15-0.0.1-2PIGSTY.el8.x86_64.rpm pigsty 0.0.1 311.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_polyline_15-0.0.1-2PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 15 pg_polyline_15 pg_polyline_15-0.0.1-2PIGSTY.el8.aarch64.rpm pigsty 0.0.1 205.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_polyline_15-0.0.1-2PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 15 pg_polyline_15 pg_polyline_15-0.0.1-2PIGSTY.el9.x86_64.rpm pigsty 0.0.1 326.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_polyline_15-0.0.1-2PIGSTY.el9.x86_64.rpm
@@ -122,6 +131,8 @@ weight: 1570
 @ u22.aarch64 15 postgresql-15-pg-polyline postgresql-15-pg-polyline_0.0.1-1PIGSTY~jammy_arm64.deb pigsty 0.0.1 183.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-polyline/postgresql-15-pg-polyline_0.0.1-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 15 postgresql-15-pg-polyline postgresql-15-pg-polyline_0.0.1-1PIGSTY~noble_amd64.deb pigsty 0.0.1 286.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-polyline/postgresql-15-pg-polyline_0.0.1-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 15 postgresql-15-pg-polyline postgresql-15-pg-polyline_0.0.1-1PIGSTY~noble_arm64.deb pigsty 0.0.1 182.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-polyline/postgresql-15-pg-polyline_0.0.1-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 15 postgresql-15-pg-polyline postgresql-15-pg-polyline_0.0.1-2PIGSTY~resolute_amd64.deb pigsty 0.0.1 731.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-polyline/postgresql-15-pg-polyline_0.0.1-2PIGSTY~resolute_amd64.deb
+@ u26.aarch64 15 postgresql-15-pg-polyline postgresql-15-pg-polyline_0.0.1-2PIGSTY~resolute_arm64.deb pigsty 0.0.1 651.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-polyline/postgresql-15-pg-polyline_0.0.1-2PIGSTY~resolute_arm64.deb
 @ el8.x86_64 14 pg_polyline_14 pg_polyline_14-0.0.1-2PIGSTY.el8.x86_64.rpm pigsty 0.0.1 311.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_polyline_14-0.0.1-2PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 14 pg_polyline_14 pg_polyline_14-0.0.1-2PIGSTY.el8.aarch64.rpm pigsty 0.0.1 205.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_polyline_14-0.0.1-2PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 14 pg_polyline_14 pg_polyline_14-0.0.1-2PIGSTY.el9.x86_64.rpm pigsty 0.0.1 326.1KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_polyline_14-0.0.1-2PIGSTY.el9.x86_64.rpm
@@ -136,6 +147,8 @@ weight: 1570
 @ u22.aarch64 14 postgresql-14-pg-polyline postgresql-14-pg-polyline_0.0.1-1PIGSTY~jammy_arm64.deb pigsty 0.0.1 183.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-polyline/postgresql-14-pg-polyline_0.0.1-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 14 postgresql-14-pg-polyline postgresql-14-pg-polyline_0.0.1-1PIGSTY~noble_amd64.deb pigsty 0.0.1 286.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-polyline/postgresql-14-pg-polyline_0.0.1-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 14 postgresql-14-pg-polyline postgresql-14-pg-polyline_0.0.1-1PIGSTY~noble_arm64.deb pigsty 0.0.1 182.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-polyline/postgresql-14-pg-polyline_0.0.1-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 14 postgresql-14-pg-polyline postgresql-14-pg-polyline_0.0.1-2PIGSTY~resolute_amd64.deb pigsty 0.0.1 733.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-polyline/postgresql-14-pg-polyline_0.0.1-2PIGSTY~resolute_amd64.deb
+@ u26.aarch64 14 postgresql-14-pg-polyline postgresql-14-pg-polyline_0.0.1-2PIGSTY~resolute_arm64.deb pigsty 0.0.1 649.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-polyline/postgresql-14-pg-polyline_0.0.1-2PIGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建

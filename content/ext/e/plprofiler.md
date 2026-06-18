@@ -47,10 +47,10 @@ weight: 3070
 |:--:|:--:|:--:|:--:|:--:|:--:|
 | el8.x86_64 | AVAIL PGDG 4.2.5 1 | AVAIL PGDG 4.2.5 2 | AVAIL PGDG 4.2.5 2 | AVAIL PGDG 4.2.5 4 | AVAIL PGDG 4.2.5 4 |
 | el8.aarch64 | AVAIL PGDG 4.2.5 1 | AVAIL PGDG 4.2.5 2 | AVAIL PGDG 4.2.5 2 | AVAIL PGDG 4.2.5 4 | AVAIL PGDG 4.2.5 4 |
-| el9.x86_64 | AVAIL PGDG 4.2.5 2 | AVAIL PGDG 4.2.5 2 | AVAIL PGDG 4.2.5 2 | AVAIL PGDG 4.2.5 4 | AVAIL PGDG 4.2.5 4 |
-| el9.aarch64 | AVAIL PGDG 4.2.5 2 | AVAIL PGDG 4.2.5 2 | AVAIL PGDG 4.2.5 2 | AVAIL PGDG 4.2.5 4 | AVAIL PGDG 4.2.5 4 |
-| el10.x86_64 | AVAIL PGDG 4.2.5 2 | AVAIL PGDG 4.2.5 2 | AVAIL PGDG 4.2.5 2 | AVAIL PGDG 4.2.5 2 | AVAIL PGDG 4.2.5 2 |
-| el10.aarch64 | AVAIL PGDG 4.2.5 2 | AVAIL PGDG 4.2.5 1 | AVAIL PGDG 4.2.5 1 | AVAIL PGDG 4.2.5 1 | AVAIL PGDG 4.2.5 1 |
+| el9.x86_64 | AVAIL PGDG 4.2.5 1 | AVAIL PGDG 4.2.5 1 | AVAIL PGDG 4.2.5 1 | AVAIL PGDG 4.2.5 1 | AVAIL PGDG 4.2.5 1 |
+| el9.aarch64 | AVAIL PGDG 4.2.5 1 | AVAIL PGDG 4.2.5 1 | AVAIL PGDG 4.2.5 1 | AVAIL PGDG 4.2.5 1 | AVAIL PGDG 4.2.5 1 |
+| el10.x86_64 | AVAIL PGDG 4.2.5 1 | AVAIL PGDG 4.2.5 1 | AVAIL PGDG 4.2.5 1 | AVAIL PGDG 4.2.5 1 | AVAIL PGDG 4.2.5 1 |
+| el10.aarch64 | AVAIL PGDG 4.2.5 1 | AVAIL PGDG 4.2.5 1 | AVAIL PGDG 4.2.5 1 | AVAIL PGDG 4.2.5 1 | AVAIL PGDG 4.2.5 1 |
 | d12.x86_64 | AVAIL PGDG 4.2.5 1 | AVAIL PGDG 4.2.5 1 | AVAIL PGDG 4.2.5 1 | AVAIL PGDG 4.2.5 1 | AVAIL PGDG 4.2.5 1 |
 | d12.aarch64 | AVAIL PGDG 4.2.5 1 | AVAIL PGDG 4.2.5 1 | AVAIL PGDG 4.2.5 1 | AVAIL PGDG 4.2.5 1 | AVAIL PGDG 4.2.5 1 |
 | d13.x86_64 | AVAIL PGDG 4.2.5 1 | AVAIL PGDG 4.2.5 1 | AVAIL PGDG 4.2.5 1 | AVAIL PGDG 4.2.5 1 | AVAIL PGDG 4.2.5 1 |
@@ -63,14 +63,10 @@ weight: 3070
 | u26.aarch64 | AVAIL PGDG 4.2.5 1 | AVAIL PGDG 4.2.5 1 | AVAIL PGDG 4.2.5 1 | AVAIL PGDG 4.2.5 1 | AVAIL PGDG 4.2.5 1 |
 @ el8.x86_64 18 plprofiler_18 plprofiler_18-4.2.5-5PGDG.rhel8.10.x86_64.rpm pgdg 4.2.5 7.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/plprofiler_18-4.2.5-5PGDG.rhel8.10.x86_64.rpm
 @ el8.aarch64 18 plprofiler_18 plprofiler_18-4.2.5-5PGDG.rhel8.10.aarch64.rpm pgdg 4.2.5 7.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/plprofiler_18-4.2.5-5PGDG.rhel8.10.aarch64.rpm
-@ el9.x86_64 18 plprofiler_18 plprofiler_18-4.2.5-5PGDG.rhel9.7.x86_64.rpm pgdg 4.2.5 6.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/plprofiler_18-4.2.5-5PGDG.rhel9.7.x86_64.rpm
-@ el9.x86_64 18 plprofiler_18 plprofiler_18-4.2.5-2PGDG.rhel9.x86_64.rpm pgdg 4.2.5 6.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/plprofiler_18-4.2.5-2PGDG.rhel9.x86_64.rpm
-@ el9.aarch64 18 plprofiler_18 plprofiler_18-4.2.5-5PGDG.rhel9.7.aarch64.rpm pgdg 4.2.5 6.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/plprofiler_18-4.2.5-5PGDG.rhel9.7.aarch64.rpm
-@ el9.aarch64 18 plprofiler_18 plprofiler_18-4.2.5-2PGDG.rhel9.aarch64.rpm pgdg 4.2.5 6.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/plprofiler_18-4.2.5-2PGDG.rhel9.aarch64.rpm
-@ el10.x86_64 18 plprofiler_18 plprofiler_18-4.2.5-5PGDG.rhel10.1.x86_64.rpm pgdg 4.2.5 7.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/plprofiler_18-4.2.5-5PGDG.rhel10.1.x86_64.rpm
-@ el10.x86_64 18 plprofiler_18 plprofiler_18-4.2.5-2PGDG.rhel10.x86_64.rpm pgdg 4.2.5 7.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/plprofiler_18-4.2.5-2PGDG.rhel10.x86_64.rpm
-@ el10.aarch64 18 plprofiler_18 plprofiler_18-4.2.5-5PGDG.rhel10.1.aarch64.rpm pgdg 4.2.5 7.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/plprofiler_18-4.2.5-5PGDG.rhel10.1.aarch64.rpm
-@ el10.aarch64 18 plprofiler_18 plprofiler_18-4.2.5-2PGDG.rhel10.aarch64.rpm pgdg 4.2.5 7.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/plprofiler_18-4.2.5-2PGDG.rhel10.aarch64.rpm
+@ el9.x86_64 18 plprofiler_18 plprofiler_18-4.2.5-5PGDG.rhel9.8.x86_64.rpm pgdg 4.2.5 6.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/plprofiler_18-4.2.5-5PGDG.rhel9.8.x86_64.rpm
+@ el9.aarch64 18 plprofiler_18 plprofiler_18-4.2.5-5PGDG.rhel9.8.aarch64.rpm pgdg 4.2.5 6.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/plprofiler_18-4.2.5-5PGDG.rhel9.8.aarch64.rpm
+@ el10.x86_64 18 plprofiler_18 plprofiler_18-4.2.5-5PGDG.rhel10.2.x86_64.rpm pgdg 4.2.5 7.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/plprofiler_18-4.2.5-5PGDG.rhel10.2.x86_64.rpm
+@ el10.aarch64 18 plprofiler_18 plprofiler_18-4.2.5-5PGDG.rhel10.2.aarch64.rpm pgdg 4.2.5 7.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/plprofiler_18-4.2.5-5PGDG.rhel10.2.aarch64.rpm
 @ d12.x86_64 18 postgresql-18-plprofiler postgresql-18-plprofiler_4.2.5-4.pgdg12+1_amd64.deb pgdg 4.2.5 45.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plprofiler/postgresql-18-plprofiler_4.2.5-4.pgdg12+1_amd64.deb
 @ d12.aarch64 18 postgresql-18-plprofiler postgresql-18-plprofiler_4.2.5-4.pgdg12+1_arm64.deb pgdg 4.2.5 44.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plprofiler/postgresql-18-plprofiler_4.2.5-4.pgdg12+1_arm64.deb
 @ d13.x86_64 18 postgresql-18-plprofiler postgresql-18-plprofiler_4.2.5-4.pgdg13+1_amd64.deb pgdg 4.2.5 45.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plprofiler/postgresql-18-plprofiler_4.2.5-4.pgdg13+1_amd64.deb
@@ -85,13 +81,10 @@ weight: 3070
 @ el8.x86_64 17 plprofiler_17 plprofiler_17-4.2.5-1PGDG.rhel8.x86_64.rpm pgdg 4.2.5 7.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/plprofiler_17-4.2.5-1PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 17 plprofiler_17 plprofiler_17-4.2.5-5PGDG.rhel8.10.aarch64.rpm pgdg 4.2.5 7.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/plprofiler_17-4.2.5-5PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 17 plprofiler_17 plprofiler_17-4.2.5-1PGDG.rhel8.aarch64.rpm pgdg 4.2.5 7.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/plprofiler_17-4.2.5-1PGDG.rhel8.aarch64.rpm
-@ el9.x86_64 17 plprofiler_17 plprofiler_17-4.2.5-5PGDG.rhel9.7.x86_64.rpm pgdg 4.2.5 6.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/plprofiler_17-4.2.5-5PGDG.rhel9.7.x86_64.rpm
-@ el9.x86_64 17 plprofiler_17 plprofiler_17-4.2.5-1PGDG.rhel9.x86_64.rpm pgdg 4.2.5 7.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/plprofiler_17-4.2.5-1PGDG.rhel9.x86_64.rpm
-@ el9.aarch64 17 plprofiler_17 plprofiler_17-4.2.5-5PGDG.rhel9.7.aarch64.rpm pgdg 4.2.5 6.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/plprofiler_17-4.2.5-5PGDG.rhel9.7.aarch64.rpm
-@ el9.aarch64 17 plprofiler_17 plprofiler_17-4.2.5-1PGDG.rhel9.aarch64.rpm pgdg 4.2.5 7.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/plprofiler_17-4.2.5-1PGDG.rhel9.aarch64.rpm
-@ el10.x86_64 17 plprofiler_17 plprofiler_17-4.2.5-5PGDG.rhel10.1.x86_64.rpm pgdg 4.2.5 7.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/plprofiler_17-4.2.5-5PGDG.rhel10.1.x86_64.rpm
-@ el10.x86_64 17 plprofiler_17 plprofiler_17-4.2.5-2PGDG.rhel10.x86_64.rpm pgdg 4.2.5 7.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/plprofiler_17-4.2.5-2PGDG.rhel10.x86_64.rpm
-@ el10.aarch64 17 plprofiler_17 plprofiler_17-4.2.5-5PGDG.rhel10.1.aarch64.rpm pgdg 4.2.5 7.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/plprofiler_17-4.2.5-5PGDG.rhel10.1.aarch64.rpm
+@ el9.x86_64 17 plprofiler_17 plprofiler_17-4.2.5-5PGDG.rhel9.8.x86_64.rpm pgdg 4.2.5 6.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/plprofiler_17-4.2.5-5PGDG.rhel9.8.x86_64.rpm
+@ el9.aarch64 17 plprofiler_17 plprofiler_17-4.2.5-5PGDG.rhel9.8.aarch64.rpm pgdg 4.2.5 6.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/plprofiler_17-4.2.5-5PGDG.rhel9.8.aarch64.rpm
+@ el10.x86_64 17 plprofiler_17 plprofiler_17-4.2.5-5PGDG.rhel10.2.x86_64.rpm pgdg 4.2.5 7.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/plprofiler_17-4.2.5-5PGDG.rhel10.2.x86_64.rpm
+@ el10.aarch64 17 plprofiler_17 plprofiler_17-4.2.5-5PGDG.rhel10.2.aarch64.rpm pgdg 4.2.5 7.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/plprofiler_17-4.2.5-5PGDG.rhel10.2.aarch64.rpm
 @ d12.x86_64 17 postgresql-17-plprofiler postgresql-17-plprofiler_4.2.5-4.pgdg12+1_amd64.deb pgdg 4.2.5 45.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plprofiler/postgresql-17-plprofiler_4.2.5-4.pgdg12+1_amd64.deb
 @ d12.aarch64 17 postgresql-17-plprofiler postgresql-17-plprofiler_4.2.5-4.pgdg12+1_arm64.deb pgdg 4.2.5 44.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plprofiler/postgresql-17-plprofiler_4.2.5-4.pgdg12+1_arm64.deb
 @ d13.x86_64 17 postgresql-17-plprofiler postgresql-17-plprofiler_4.2.5-4.pgdg13+1_amd64.deb pgdg 4.2.5 45.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plprofiler/postgresql-17-plprofiler_4.2.5-4.pgdg13+1_amd64.deb
@@ -106,13 +99,10 @@ weight: 3070
 @ el8.x86_64 16 plprofiler_16 plprofiler_16-4.2.4-1PGDG.rhel8.x86_64.rpm pgdg 4.2.4 6.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/plprofiler_16-4.2.4-1PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 16 plprofiler_16 plprofiler_16-4.2.5-5PGDG.rhel8.10.aarch64.rpm pgdg 4.2.5 7.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/plprofiler_16-4.2.5-5PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 16 plprofiler_16 plprofiler_16-4.2.4-1PGDG.rhel8.aarch64.rpm pgdg 4.2.4 6.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/plprofiler_16-4.2.4-1PGDG.rhel8.aarch64.rpm
-@ el9.x86_64 16 plprofiler_16 plprofiler_16-4.2.5-5PGDG.rhel9.7.x86_64.rpm pgdg 4.2.5 6.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/plprofiler_16-4.2.5-5PGDG.rhel9.7.x86_64.rpm
-@ el9.x86_64 16 plprofiler_16 plprofiler_16-4.2.4-1PGDG.rhel9.x86_64.rpm pgdg 4.2.4 6.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/plprofiler_16-4.2.4-1PGDG.rhel9.x86_64.rpm
-@ el9.aarch64 16 plprofiler_16 plprofiler_16-4.2.5-5PGDG.rhel9.7.aarch64.rpm pgdg 4.2.5 6.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/plprofiler_16-4.2.5-5PGDG.rhel9.7.aarch64.rpm
-@ el9.aarch64 16 plprofiler_16 plprofiler_16-4.2.4-1PGDG.rhel9.aarch64.rpm pgdg 4.2.4 6.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/plprofiler_16-4.2.4-1PGDG.rhel9.aarch64.rpm
-@ el10.x86_64 16 plprofiler_16 plprofiler_16-4.2.5-5PGDG.rhel10.1.x86_64.rpm pgdg 4.2.5 7.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/plprofiler_16-4.2.5-5PGDG.rhel10.1.x86_64.rpm
-@ el10.x86_64 16 plprofiler_16 plprofiler_16-4.2.5-2PGDG.rhel10.x86_64.rpm pgdg 4.2.5 7.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/plprofiler_16-4.2.5-2PGDG.rhel10.x86_64.rpm
-@ el10.aarch64 16 plprofiler_16 plprofiler_16-4.2.5-5PGDG.rhel10.1.aarch64.rpm pgdg 4.2.5 7.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/plprofiler_16-4.2.5-5PGDG.rhel10.1.aarch64.rpm
+@ el9.x86_64 16 plprofiler_16 plprofiler_16-4.2.5-5PGDG.rhel9.8.x86_64.rpm pgdg 4.2.5 6.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/plprofiler_16-4.2.5-5PGDG.rhel9.8.x86_64.rpm
+@ el9.aarch64 16 plprofiler_16 plprofiler_16-4.2.5-5PGDG.rhel9.8.aarch64.rpm pgdg 4.2.5 6.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/plprofiler_16-4.2.5-5PGDG.rhel9.8.aarch64.rpm
+@ el10.x86_64 16 plprofiler_16 plprofiler_16-4.2.5-5PGDG.rhel10.2.x86_64.rpm pgdg 4.2.5 7.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/plprofiler_16-4.2.5-5PGDG.rhel10.2.x86_64.rpm
+@ el10.aarch64 16 plprofiler_16 plprofiler_16-4.2.5-5PGDG.rhel10.2.aarch64.rpm pgdg 4.2.5 7.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/plprofiler_16-4.2.5-5PGDG.rhel10.2.aarch64.rpm
 @ d12.x86_64 16 postgresql-16-plprofiler postgresql-16-plprofiler_4.2.5-4.pgdg12+1_amd64.deb pgdg 4.2.5 45.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plprofiler/postgresql-16-plprofiler_4.2.5-4.pgdg12+1_amd64.deb
 @ d12.aarch64 16 postgresql-16-plprofiler postgresql-16-plprofiler_4.2.5-4.pgdg12+1_arm64.deb pgdg 4.2.5 44.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plprofiler/postgresql-16-plprofiler_4.2.5-4.pgdg12+1_arm64.deb
 @ d13.x86_64 16 postgresql-16-plprofiler postgresql-16-plprofiler_4.2.5-4.pgdg13+1_amd64.deb pgdg 4.2.5 45.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plprofiler/postgresql-16-plprofiler_4.2.5-4.pgdg13+1_amd64.deb
@@ -131,17 +121,10 @@ weight: 3070
 @ el8.aarch64 15 plprofiler_15 plprofiler_15-4.2.2-1PGDG.rhel8.aarch64.rpm pgdg 4.2.2 6.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/plprofiler_15-4.2.2-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 15 plprofiler_15 plprofiler_15-4.2.1-1.rhel8.aarch64.rpm pgdg 4.2.1 6.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/plprofiler_15-4.2.1-1.rhel8.aarch64.rpm
 @ el8.aarch64 15 plprofiler_15 plprofiler_15-4.2-1.rhel8.aarch64.rpm pgdg 4.2 6.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/plprofiler_15-4.2-1.rhel8.aarch64.rpm
-@ el9.x86_64 15 plprofiler_15 plprofiler_15-4.2.5-5PGDG.rhel9.7.x86_64.rpm pgdg 4.2.5 6.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/plprofiler_15-4.2.5-5PGDG.rhel9.7.x86_64.rpm
-@ el9.x86_64 15 plprofiler_15 plprofiler_15-4.2.2-1PGDG.rhel9.x86_64.rpm pgdg 4.2.2 6.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/plprofiler_15-4.2.2-1PGDG.rhel9.x86_64.rpm
-@ el9.x86_64 15 plprofiler_15 plprofiler_15-4.2.1-1.rhel9.x86_64.rpm pgdg 4.2.1 6.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/plprofiler_15-4.2.1-1.rhel9.x86_64.rpm
-@ el9.x86_64 15 plprofiler_15 plprofiler_15-4.2-1.rhel9.x86_64.rpm pgdg 4.2 6.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/plprofiler_15-4.2-1.rhel9.x86_64.rpm
-@ el9.aarch64 15 plprofiler_15 plprofiler_15-4.2.5-5PGDG.rhel9.7.aarch64.rpm pgdg 4.2.5 6.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/plprofiler_15-4.2.5-5PGDG.rhel9.7.aarch64.rpm
-@ el9.aarch64 15 plprofiler_15 plprofiler_15-4.2.2-1PGDG.rhel9.aarch64.rpm pgdg 4.2.2 6.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/plprofiler_15-4.2.2-1PGDG.rhel9.aarch64.rpm
-@ el9.aarch64 15 plprofiler_15 plprofiler_15-4.2.1-1.rhel9.aarch64.rpm pgdg 4.2.1 6.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/plprofiler_15-4.2.1-1.rhel9.aarch64.rpm
-@ el9.aarch64 15 plprofiler_15 plprofiler_15-4.2-1.rhel9.aarch64.rpm pgdg 4.2 6.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/plprofiler_15-4.2-1.rhel9.aarch64.rpm
-@ el10.x86_64 15 plprofiler_15 plprofiler_15-4.2.5-5PGDG.rhel10.1.x86_64.rpm pgdg 4.2.5 7.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/plprofiler_15-4.2.5-5PGDG.rhel10.1.x86_64.rpm
-@ el10.x86_64 15 plprofiler_15 plprofiler_15-4.2.5-2PGDG.rhel10.x86_64.rpm pgdg 4.2.5 7.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/plprofiler_15-4.2.5-2PGDG.rhel10.x86_64.rpm
-@ el10.aarch64 15 plprofiler_15 plprofiler_15-4.2.5-5PGDG.rhel10.1.aarch64.rpm pgdg 4.2.5 7.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/plprofiler_15-4.2.5-5PGDG.rhel10.1.aarch64.rpm
+@ el9.x86_64 15 plprofiler_15 plprofiler_15-4.2.5-5PGDG.rhel9.8.x86_64.rpm pgdg 4.2.5 6.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/plprofiler_15-4.2.5-5PGDG.rhel9.8.x86_64.rpm
+@ el9.aarch64 15 plprofiler_15 plprofiler_15-4.2.5-5PGDG.rhel9.8.aarch64.rpm pgdg 4.2.5 6.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/plprofiler_15-4.2.5-5PGDG.rhel9.8.aarch64.rpm
+@ el10.x86_64 15 plprofiler_15 plprofiler_15-4.2.5-5PGDG.rhel10.2.x86_64.rpm pgdg 4.2.5 7.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/plprofiler_15-4.2.5-5PGDG.rhel10.2.x86_64.rpm
+@ el10.aarch64 15 plprofiler_15 plprofiler_15-4.2.5-5PGDG.rhel10.2.aarch64.rpm pgdg 4.2.5 7.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/plprofiler_15-4.2.5-5PGDG.rhel10.2.aarch64.rpm
 @ d12.x86_64 15 postgresql-15-plprofiler postgresql-15-plprofiler_4.2.5-4.pgdg12+1_amd64.deb pgdg 4.2.5 45.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plprofiler/postgresql-15-plprofiler_4.2.5-4.pgdg12+1_amd64.deb
 @ d12.aarch64 15 postgresql-15-plprofiler postgresql-15-plprofiler_4.2.5-4.pgdg12+1_arm64.deb pgdg 4.2.5 44.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plprofiler/postgresql-15-plprofiler_4.2.5-4.pgdg12+1_arm64.deb
 @ d13.x86_64 15 postgresql-15-plprofiler postgresql-15-plprofiler_4.2.5-4.pgdg13+1_amd64.deb pgdg 4.2.5 45.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plprofiler/postgresql-15-plprofiler_4.2.5-4.pgdg13+1_amd64.deb
@@ -160,17 +143,10 @@ weight: 3070
 @ el8.aarch64 14 plprofiler_14 plprofiler_14-4.2.2-1PGDG.rhel8.aarch64.rpm pgdg 4.2.2 6.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/plprofiler_14-4.2.2-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 14 plprofiler_14 plprofiler_14-4.2.1-1.rhel8.aarch64.rpm pgdg 4.2.1 6.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/plprofiler_14-4.2.1-1.rhel8.aarch64.rpm
 @ el8.aarch64 14 plprofiler_14 plprofiler_14-4.2-1.rhel8.aarch64.rpm pgdg 4.2 6.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/plprofiler_14-4.2-1.rhel8.aarch64.rpm
-@ el9.x86_64 14 plprofiler_14 plprofiler_14-4.2.5-5PGDG.rhel9.7.x86_64.rpm pgdg 4.2.5 6.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/plprofiler_14-4.2.5-5PGDG.rhel9.7.x86_64.rpm
-@ el9.x86_64 14 plprofiler_14 plprofiler_14-4.2.2-1PGDG.rhel9.x86_64.rpm pgdg 4.2.2 6.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/plprofiler_14-4.2.2-1PGDG.rhel9.x86_64.rpm
-@ el9.x86_64 14 plprofiler_14 plprofiler_14-4.2.1-1.rhel9.x86_64.rpm pgdg 4.2.1 6.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/plprofiler_14-4.2.1-1.rhel9.x86_64.rpm
-@ el9.x86_64 14 plprofiler_14 plprofiler_14-4.2-1.rhel9.x86_64.rpm pgdg 4.2 6.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/plprofiler_14-4.2-1.rhel9.x86_64.rpm
-@ el9.aarch64 14 plprofiler_14 plprofiler_14-4.2.5-5PGDG.rhel9.7.aarch64.rpm pgdg 4.2.5 6.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/plprofiler_14-4.2.5-5PGDG.rhel9.7.aarch64.rpm
-@ el9.aarch64 14 plprofiler_14 plprofiler_14-4.2.2-1PGDG.rhel9.aarch64.rpm pgdg 4.2.2 6.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/plprofiler_14-4.2.2-1PGDG.rhel9.aarch64.rpm
-@ el9.aarch64 14 plprofiler_14 plprofiler_14-4.2.1-1.rhel9.aarch64.rpm pgdg 4.2.1 6.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/plprofiler_14-4.2.1-1.rhel9.aarch64.rpm
-@ el9.aarch64 14 plprofiler_14 plprofiler_14-4.2-1.rhel9.aarch64.rpm pgdg 4.2 6.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/plprofiler_14-4.2-1.rhel9.aarch64.rpm
-@ el10.x86_64 14 plprofiler_14 plprofiler_14-4.2.5-5PGDG.rhel10.1.x86_64.rpm pgdg 4.2.5 7.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/plprofiler_14-4.2.5-5PGDG.rhel10.1.x86_64.rpm
-@ el10.x86_64 14 plprofiler_14 plprofiler_14-4.2.5-2PGDG.rhel10.x86_64.rpm pgdg 4.2.5 7.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/plprofiler_14-4.2.5-2PGDG.rhel10.x86_64.rpm
-@ el10.aarch64 14 plprofiler_14 plprofiler_14-4.2.5-5PGDG.rhel10.1.aarch64.rpm pgdg 4.2.5 7.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/plprofiler_14-4.2.5-5PGDG.rhel10.1.aarch64.rpm
+@ el9.x86_64 14 plprofiler_14 plprofiler_14-4.2.5-5PGDG.rhel9.8.x86_64.rpm pgdg 4.2.5 6.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/plprofiler_14-4.2.5-5PGDG.rhel9.8.x86_64.rpm
+@ el9.aarch64 14 plprofiler_14 plprofiler_14-4.2.5-5PGDG.rhel9.8.aarch64.rpm pgdg 4.2.5 6.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/plprofiler_14-4.2.5-5PGDG.rhel9.8.aarch64.rpm
+@ el10.x86_64 14 plprofiler_14 plprofiler_14-4.2.5-5PGDG.rhel10.2.x86_64.rpm pgdg 4.2.5 7.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/plprofiler_14-4.2.5-5PGDG.rhel10.2.x86_64.rpm
+@ el10.aarch64 14 plprofiler_14 plprofiler_14-4.2.5-5PGDG.rhel10.2.aarch64.rpm pgdg 4.2.5 7.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/plprofiler_14-4.2.5-5PGDG.rhel10.2.aarch64.rpm
 @ d12.x86_64 14 postgresql-14-plprofiler postgresql-14-plprofiler_4.2.5-4.pgdg12+1_amd64.deb pgdg 4.2.5 45.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plprofiler/postgresql-14-plprofiler_4.2.5-4.pgdg12+1_amd64.deb
 @ d12.aarch64 14 postgresql-14-plprofiler postgresql-14-plprofiler_4.2.5-4.pgdg12+1_arm64.deb pgdg 4.2.5 44.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plprofiler/postgresql-14-plprofiler_4.2.5-4.pgdg12+1_arm64.deb
 @ d13.x86_64 14 postgresql-14-plprofiler postgresql-14-plprofiler_4.2.5-4.pgdg13+1_amd64.deb pgdg 4.2.5 45.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plprofiler/postgresql-14-plprofiler_4.2.5-4.pgdg13+1_amd64.deb

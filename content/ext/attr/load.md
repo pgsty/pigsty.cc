@@ -5,7 +5,7 @@ description: "需要动态加载的 PostgreSQL 扩展"
 weight: 10
 ---
 
-以下 **103** 个扩展需要在 [`shared_preload_libraries`](https://www.postgresql.org/docs/current/runtime-config-client.html#GUC-SHARED-PRELOAD-LIBRARIES) 中动态加载，才能正常使用。
+以下 **107** 个扩展需要在 [`shared_preload_libraries`](https://www.postgresql.org/docs/current/runtime-config-client.html#GUC-SHARED-PRELOAD-LIBRARIES) 中动态加载，才能正常使用。
 
 也就是说，您需要修改 PostgreSQL 配置文件 `postgresql.conf` 中的 [`shared_preload_libraries`](https://www.postgresql.org/docs/current/runtime-config-client.html#GUC-SHARED-PRELOAD-LIBRARIES) 参数，将扩展的库名添加进去，然后重启数据库才能生效。
 
@@ -31,13 +31,17 @@ weight: 10
 | [`storage_engine`](/ext/e/storage_engine) | `storage_engine` | 带向量化执行的 colcompress 与 rowcompress 表访问方法 |
 | [`pg_clickhouse`](/ext/e/pg_clickhouse) | `pg_clickhouse` | 从PostgreSQL中查询ClickHouse的接口 |
 | [`pg_parquet`](/ext/e/pg_parquet) | `pg_parquet` | 在PostgreSQL与本地/S3中的Parquet文件复制数据 |
+| [`pg_orca`](/ext/e/pg_orca) | `pg_orca` | PostgreSQL ORCA 查询优化器扩展 |
+| [`pg_sorted_heap`](/ext/e/pg_sorted_heap) | `pg_sorted_heap` | 带 zone map 剪枝和内置向量搜索的有序堆表访问方法 |
 | [`age`](/ext/e/age) | `age` | Apache AGE，图数据库扩展 （Deb可用） |
+| [`pgrdf`](/ext/e/pgrdf) | `pgrdf` | PostgreSQL 内 RDF、SPARQL、SHACL 与 OWL 推理扩展 |
 | [`ulak`](/ext/e/ulak) | `ulak` | 支持可靠异步投递的 PostgreSQL 事务型 Outbox 扩展 |
 | [`pg_ttl_index`](/ext/e/pg_ttl_index) | `pg_ttl_index` | 基于TTL索引的自动数据过期清理 |
 | [`pg_hint_plan`](/ext/e/pg_hint_plan) | `pg_hint_plan` | 添加强制指定执行计划的能力 |
 | [`plan_filter`](/ext/e/plan_filter) | `plan_filter` | 使用执行计划代价过滤阻止特定查询语句 |
 | [`pg_ivm`](/ext/e/pg_ivm) | `pg_ivm` | 增量维护的物化视图 |
 | [`pg_trickle`](/ext/e/pg_trickle) | `pg_trickle` | 为 PostgreSQL 18 提供流式表与差分视图维护 |
+| [`pg_durable`](/ext/e/pg_durable) | `pg_durable` | 在 PostgreSQL 中使用 SQL 定义可持久化、可恢复的长时间运行函数 |
 | [`provsql`](/ext/e/provsql) | `provsql` | PostgreSQL 半环溯源与不确定性管理扩展 |
 | [`orioledb`](/ext/e/orioledb) | `orioledb` | OrioleDB，下一代事务处理引擎 |
 | [`omni`](/ext/e/omni) | `omni--0.2.14.so` | PostgreSQL即平台，Omnigres主扩展与加载器 |

@@ -55,8 +55,8 @@ weight: 1560
 |:--:|:--:|:--:|:--:|:--:|:--:|
 | el8.x86_64 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 2 | AVAIL PIGSTY 0.3.0 2 |
 | el8.aarch64 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 2 | AVAIL PIGSTY 0.3.0 2 |
-| el9.x86_64 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 2 | AVAIL PIGSTY 0.3.0 2 |
-| el9.aarch64 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 2 | AVAIL PIGSTY 0.3.0 2 |
+| el9.x86_64 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 |
+| el9.aarch64 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 |
 | el10.x86_64 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 |
 | el10.aarch64 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 |
 | d12.x86_64 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 |
@@ -122,9 +122,7 @@ weight: 1560
 @ el8.aarch64 15 geoip_15 geoip_15-0.3.0-1PIGSTY.el8.aarch64.rpm pigsty 0.3.0 11.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/geoip_15-0.3.0-1PIGSTY.el8.aarch64.rpm
 @ el8.aarch64 15 geoip_15 geoip_15-0.2.4-3.rhel8.noarch.rpm pgdg 0.2.4 11.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/geoip_15-0.2.4-3.rhel8.noarch.rpm
 @ el9.x86_64 15 geoip_15 geoip_15-0.3.0-1PIGSTY.el9.x86_64.rpm pigsty 0.3.0 11.7KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/geoip_15-0.3.0-1PIGSTY.el9.x86_64.rpm
-@ el9.x86_64 15 geoip_15 geoip_15-0.2.4-3.rhel9.noarch.rpm pgdg 0.2.4 11.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/geoip_15-0.2.4-3.rhel9.noarch.rpm
 @ el9.aarch64 15 geoip_15 geoip_15-0.3.0-1PIGSTY.el9.aarch64.rpm pigsty 0.3.0 11.6KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/geoip_15-0.3.0-1PIGSTY.el9.aarch64.rpm
-@ el9.aarch64 15 geoip_15 geoip_15-0.2.4-3.rhel9.noarch.rpm pgdg 0.2.4 10.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/geoip_15-0.2.4-3.rhel9.noarch.rpm
 @ el10.x86_64 15 geoip_15 geoip_15-0.3.0-1PIGSTY.el10.x86_64.rpm pigsty 0.3.0 11.7KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/geoip_15-0.3.0-1PIGSTY.el10.x86_64.rpm
 @ el10.aarch64 15 geoip_15 geoip_15-0.3.0-1PIGSTY.el10.aarch64.rpm pigsty 0.3.0 11.7KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/geoip_15-0.3.0-1PIGSTY.el10.aarch64.rpm
 @ d12.x86_64 15 postgresql-15-geoip postgresql-15-geoip_0.3.0-1PIGSTY~bookworm_amd64.deb pigsty 0.3.0 6.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/g/geoip/postgresql-15-geoip_0.3.0-1PIGSTY~bookworm_amd64.deb
@@ -142,9 +140,7 @@ weight: 1560
 @ el8.aarch64 14 geoip_14 geoip_14-0.3.0-1PIGSTY.el8.aarch64.rpm pigsty 0.3.0 11.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/geoip_14-0.3.0-1PIGSTY.el8.aarch64.rpm
 @ el8.aarch64 14 geoip_14 geoip_14-0.2.4-3.rhel8.noarch.rpm pgdg 0.2.4 11.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/geoip_14-0.2.4-3.rhel8.noarch.rpm
 @ el9.x86_64 14 geoip_14 geoip_14-0.3.0-1PIGSTY.el9.x86_64.rpm pigsty 0.3.0 11.7KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/geoip_14-0.3.0-1PIGSTY.el9.x86_64.rpm
-@ el9.x86_64 14 geoip_14 geoip_14-0.2.4-3.rhel9.noarch.rpm pgdg 0.2.4 11.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/geoip_14-0.2.4-3.rhel9.noarch.rpm
 @ el9.aarch64 14 geoip_14 geoip_14-0.3.0-1PIGSTY.el9.aarch64.rpm pigsty 0.3.0 11.6KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/geoip_14-0.3.0-1PIGSTY.el9.aarch64.rpm
-@ el9.aarch64 14 geoip_14 geoip_14-0.2.4-3.rhel9.noarch.rpm pgdg 0.2.4 10.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/geoip_14-0.2.4-3.rhel9.noarch.rpm
 @ el10.x86_64 14 geoip_14 geoip_14-0.3.0-1PIGSTY.el10.x86_64.rpm pigsty 0.3.0 11.7KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/geoip_14-0.3.0-1PIGSTY.el10.x86_64.rpm
 @ el10.aarch64 14 geoip_14 geoip_14-0.3.0-1PIGSTY.el10.aarch64.rpm pigsty 0.3.0 11.7KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/geoip_14-0.3.0-1PIGSTY.el10.aarch64.rpm
 @ d12.x86_64 14 postgresql-14-geoip postgresql-14-geoip_0.3.0-1PIGSTY~bookworm_amd64.deb pigsty 0.3.0 6.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/g/geoip/postgresql-14-geoip_0.3.0-1PIGSTY~bookworm_amd64.deb

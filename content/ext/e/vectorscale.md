@@ -38,6 +38,9 @@ weight: 1820
 {.ext-table .ext-table--rel}
 
 
+> pgrx patched to 0.18.1.
+
+
 ## 版本
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
@@ -64,8 +67,8 @@ weight: 1820
 | u22.aarch64 | AVAIL PIGSTY 0.9.0 1 | AVAIL PIGSTY 0.9.0 1 | AVAIL PIGSTY 0.9.0 1 | AVAIL PIGSTY 0.9.0 1 | AVAIL PIGSTY 0.9.0 1 |
 | u24.x86_64 | AVAIL PIGSTY 0.9.0 1 | AVAIL PIGSTY 0.9.0 1 | AVAIL PIGSTY 0.9.0 1 | AVAIL PIGSTY 0.9.0 1 | AVAIL PIGSTY 0.9.0 1 |
 | u24.aarch64 | AVAIL PIGSTY 0.9.0 1 | AVAIL PIGSTY 0.9.0 1 | AVAIL PIGSTY 0.9.0 1 | AVAIL PIGSTY 0.9.0 1 | AVAIL PIGSTY 0.9.0 1 |
-| u26.x86_64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| u26.aarch64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| u26.x86_64 | AVAIL PIGSTY 0.9.0 1 | AVAIL PIGSTY 0.9.0 1 | AVAIL PIGSTY 0.9.0 1 | AVAIL PIGSTY 0.9.0 1 | AVAIL PIGSTY 0.9.0 1 |
+| u26.aarch64 | AVAIL PIGSTY 0.9.0 1 | AVAIL PIGSTY 0.9.0 1 | AVAIL PIGSTY 0.9.0 1 | AVAIL PIGSTY 0.9.0 1 | AVAIL PIGSTY 0.9.0 1 |
 @ el8.x86_64 18 pgvectorscale_18 pgvectorscale_18-0.9.0-1PIGSTY.el8.x86_64.rpm pigsty 0.9.0 525.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgvectorscale_18-0.9.0-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 18 pgvectorscale_18 pgvectorscale_18-0.9.0-1PIGSTY.el8.aarch64.rpm pigsty 0.9.0 391.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgvectorscale_18-0.9.0-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 18 pgvectorscale_18 pgvectorscale_18-0.9.0-1PIGSTY.el9.x86_64.rpm pigsty 0.9.0 543.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgvectorscale_18-0.9.0-1PIGSTY.el9.x86_64.rpm
@@ -80,6 +83,8 @@ weight: 1820
 @ u22.aarch64 18 postgresql-18-pgvectorscale postgresql-18-pgvectorscale_0.9.0-1PIGSTY~jammy_arm64.deb pigsty 0.9.0 353.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgvectorscale/postgresql-18-pgvectorscale_0.9.0-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 18 postgresql-18-pgvectorscale postgresql-18-pgvectorscale_0.9.0-1PIGSTY~noble_amd64.deb pigsty 0.9.0 477.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgvectorscale/postgresql-18-pgvectorscale_0.9.0-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 18 postgresql-18-pgvectorscale postgresql-18-pgvectorscale_0.9.0-1PIGSTY~noble_arm64.deb pigsty 0.9.0 349.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgvectorscale/postgresql-18-pgvectorscale_0.9.0-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 18 postgresql-18-pgvectorscale postgresql-18-pgvectorscale_0.9.0-2PIGSTY~resolute_amd64.deb pigsty 0.9.0 452.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgvectorscale/postgresql-18-pgvectorscale_0.9.0-2PIGSTY~resolute_amd64.deb
+@ u26.aarch64 18 postgresql-18-pgvectorscale postgresql-18-pgvectorscale_0.9.0-2PIGSTY~resolute_arm64.deb pigsty 0.9.0 376.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgvectorscale/postgresql-18-pgvectorscale_0.9.0-2PIGSTY~resolute_arm64.deb
 @ el8.x86_64 17 pgvectorscale_17 pgvectorscale_17-0.9.0-1PIGSTY.el8.x86_64.rpm pigsty 0.9.0 525.6KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgvectorscale_17-0.9.0-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 17 pgvectorscale_17 pgvectorscale_17-0.9.0-1PIGSTY.el8.aarch64.rpm pigsty 0.9.0 390.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgvectorscale_17-0.9.0-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 17 pgvectorscale_17 pgvectorscale_17-0.9.0-1PIGSTY.el9.x86_64.rpm pigsty 0.9.0 543.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgvectorscale_17-0.9.0-1PIGSTY.el9.x86_64.rpm
@@ -94,6 +99,8 @@ weight: 1820
 @ u22.aarch64 17 postgresql-17-pgvectorscale postgresql-17-pgvectorscale_0.9.0-1PIGSTY~jammy_arm64.deb pigsty 0.9.0 354.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgvectorscale/postgresql-17-pgvectorscale_0.9.0-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 17 postgresql-17-pgvectorscale postgresql-17-pgvectorscale_0.9.0-1PIGSTY~noble_amd64.deb pigsty 0.9.0 477.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgvectorscale/postgresql-17-pgvectorscale_0.9.0-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 17 postgresql-17-pgvectorscale postgresql-17-pgvectorscale_0.9.0-1PIGSTY~noble_arm64.deb pigsty 0.9.0 349.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgvectorscale/postgresql-17-pgvectorscale_0.9.0-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 17 postgresql-17-pgvectorscale postgresql-17-pgvectorscale_0.9.0-2PIGSTY~resolute_amd64.deb pigsty 0.9.0 451.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgvectorscale/postgresql-17-pgvectorscale_0.9.0-2PIGSTY~resolute_amd64.deb
+@ u26.aarch64 17 postgresql-17-pgvectorscale postgresql-17-pgvectorscale_0.9.0-2PIGSTY~resolute_arm64.deb pigsty 0.9.0 376.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgvectorscale/postgresql-17-pgvectorscale_0.9.0-2PIGSTY~resolute_arm64.deb
 @ el8.x86_64 16 pgvectorscale_16 pgvectorscale_16-0.9.0-1PIGSTY.el8.x86_64.rpm pigsty 0.9.0 525.4KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgvectorscale_16-0.9.0-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 16 pgvectorscale_16 pgvectorscale_16-0.9.0-1PIGSTY.el8.aarch64.rpm pigsty 0.9.0 390.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgvectorscale_16-0.9.0-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 16 pgvectorscale_16 pgvectorscale_16-0.9.0-1PIGSTY.el9.x86_64.rpm pigsty 0.9.0 543.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgvectorscale_16-0.9.0-1PIGSTY.el9.x86_64.rpm
@@ -108,6 +115,8 @@ weight: 1820
 @ u22.aarch64 16 postgresql-16-pgvectorscale postgresql-16-pgvectorscale_0.9.0-1PIGSTY~jammy_arm64.deb pigsty 0.9.0 353.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgvectorscale/postgresql-16-pgvectorscale_0.9.0-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 16 postgresql-16-pgvectorscale postgresql-16-pgvectorscale_0.9.0-1PIGSTY~noble_amd64.deb pigsty 0.9.0 477.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgvectorscale/postgresql-16-pgvectorscale_0.9.0-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 16 postgresql-16-pgvectorscale postgresql-16-pgvectorscale_0.9.0-1PIGSTY~noble_arm64.deb pigsty 0.9.0 350.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgvectorscale/postgresql-16-pgvectorscale_0.9.0-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 16 postgresql-16-pgvectorscale postgresql-16-pgvectorscale_0.9.0-2PIGSTY~resolute_amd64.deb pigsty 0.9.0 451.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgvectorscale/postgresql-16-pgvectorscale_0.9.0-2PIGSTY~resolute_amd64.deb
+@ u26.aarch64 16 postgresql-16-pgvectorscale postgresql-16-pgvectorscale_0.9.0-2PIGSTY~resolute_arm64.deb pigsty 0.9.0 376.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgvectorscale/postgresql-16-pgvectorscale_0.9.0-2PIGSTY~resolute_arm64.deb
 @ el8.x86_64 15 pgvectorscale_15 pgvectorscale_15-0.9.0-1PIGSTY.el8.x86_64.rpm pigsty 0.9.0 525.1KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgvectorscale_15-0.9.0-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 15 pgvectorscale_15 pgvectorscale_15-0.9.0-1PIGSTY.el8.aarch64.rpm pigsty 0.9.0 390.8KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgvectorscale_15-0.9.0-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 15 pgvectorscale_15 pgvectorscale_15-0.9.0-1PIGSTY.el9.x86_64.rpm pigsty 0.9.0 543.1KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgvectorscale_15-0.9.0-1PIGSTY.el9.x86_64.rpm
@@ -122,6 +131,8 @@ weight: 1820
 @ u22.aarch64 15 postgresql-15-pgvectorscale postgresql-15-pgvectorscale_0.9.0-1PIGSTY~jammy_arm64.deb pigsty 0.9.0 353.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgvectorscale/postgresql-15-pgvectorscale_0.9.0-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 15 postgresql-15-pgvectorscale postgresql-15-pgvectorscale_0.9.0-1PIGSTY~noble_amd64.deb pigsty 0.9.0 477.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgvectorscale/postgresql-15-pgvectorscale_0.9.0-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 15 postgresql-15-pgvectorscale postgresql-15-pgvectorscale_0.9.0-1PIGSTY~noble_arm64.deb pigsty 0.9.0 349.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgvectorscale/postgresql-15-pgvectorscale_0.9.0-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 15 postgresql-15-pgvectorscale postgresql-15-pgvectorscale_0.9.0-2PIGSTY~resolute_amd64.deb pigsty 0.9.0 451.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgvectorscale/postgresql-15-pgvectorscale_0.9.0-2PIGSTY~resolute_amd64.deb
+@ u26.aarch64 15 postgresql-15-pgvectorscale postgresql-15-pgvectorscale_0.9.0-2PIGSTY~resolute_arm64.deb pigsty 0.9.0 376.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgvectorscale/postgresql-15-pgvectorscale_0.9.0-2PIGSTY~resolute_arm64.deb
 @ el8.x86_64 14 pgvectorscale_14 pgvectorscale_14-0.9.0-1PIGSTY.el8.x86_64.rpm pigsty 0.9.0 524.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgvectorscale_14-0.9.0-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 14 pgvectorscale_14 pgvectorscale_14-0.9.0-1PIGSTY.el8.aarch64.rpm pigsty 0.9.0 390.3KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgvectorscale_14-0.9.0-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 14 pgvectorscale_14 pgvectorscale_14-0.9.0-1PIGSTY.el9.x86_64.rpm pigsty 0.9.0 542.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgvectorscale_14-0.9.0-1PIGSTY.el9.x86_64.rpm
@@ -136,6 +147,8 @@ weight: 1820
 @ u22.aarch64 14 postgresql-14-pgvectorscale postgresql-14-pgvectorscale_0.9.0-1PIGSTY~jammy_arm64.deb pigsty 0.9.0 354.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgvectorscale/postgresql-14-pgvectorscale_0.9.0-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 14 postgresql-14-pgvectorscale postgresql-14-pgvectorscale_0.9.0-1PIGSTY~noble_amd64.deb pigsty 0.9.0 476.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgvectorscale/postgresql-14-pgvectorscale_0.9.0-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 14 postgresql-14-pgvectorscale postgresql-14-pgvectorscale_0.9.0-1PIGSTY~noble_arm64.deb pigsty 0.9.0 349.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgvectorscale/postgresql-14-pgvectorscale_0.9.0-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 14 postgresql-14-pgvectorscale postgresql-14-pgvectorscale_0.9.0-2PIGSTY~resolute_amd64.deb pigsty 0.9.0 450.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgvectorscale/postgresql-14-pgvectorscale_0.9.0-2PIGSTY~resolute_amd64.deb
+@ u26.aarch64 14 postgresql-14-pgvectorscale postgresql-14-pgvectorscale_0.9.0-2PIGSTY~resolute_arm64.deb pigsty 0.9.0 375.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgvectorscale/postgresql-14-pgvectorscale_0.9.0-2PIGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建

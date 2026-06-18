@@ -52,8 +52,8 @@ weight: 5820
 |:--:|:--:|:--:|:--:|:--:|:--:|
 | el8.x86_64 | AVAIL PGDG 1.5 1 | AVAIL PGDG 1.5 1 | AVAIL PGDG 1.5 2 | AVAIL PGDG 1.5 2 | AVAIL PGDG 1.5 2 |
 | el8.aarch64 | AVAIL PGDG 1.5 1 | AVAIL PGDG 1.5 1 | AVAIL PGDG 1.5 2 | AVAIL PGDG 1.5 3 | AVAIL PGDG 1.5 3 |
-| el9.x86_64 | AVAIL PGDG 1.5 1 | AVAIL PGDG 1.5 1 | AVAIL PGDG 1.5 2 | AVAIL PGDG 1.5 3 | AVAIL PGDG 1.5 2 |
-| el9.aarch64 | AVAIL PGDG 1.5 1 | AVAIL PGDG 1.5 1 | AVAIL PGDG 1.5 2 | AVAIL PGDG 1.5 3 | AVAIL PGDG 1.5 3 |
+| el9.x86_64 | AVAIL PGDG 1.5 1 | AVAIL PGDG 1.5 1 | AVAIL PGDG 1.5 1 | AVAIL PGDG 1.5 1 | AVAIL PGDG 1.5 1 |
+| el9.aarch64 | AVAIL PGDG 1.5 1 | AVAIL PGDG 1.5 1 | AVAIL PGDG 1.5 1 | AVAIL PGDG 1.5 1 | AVAIL PGDG 1.5 1 |
 | el10.x86_64 | AVAIL PGDG 1.5 1 | AVAIL PGDG 1.5 1 | AVAIL PGDG 1.5 1 | AVAIL PGDG 1.5 1 | AVAIL PGDG 1.5 1 |
 | el10.aarch64 | AVAIL PGDG 1.5 1 | AVAIL PGDG 1.5 1 | AVAIL PGDG 1.5 1 | AVAIL PGDG 1.5 1 | AVAIL PGDG 1.5 1 |
 | d12.x86_64 | AVAIL PIGSTY 1.5 1 | AVAIL PIGSTY 1.5 1 | AVAIL PIGSTY 1.5 1 | AVAIL PIGSTY 1.5 1 | AVAIL PIGSTY 1.5 1 |
@@ -68,10 +68,10 @@ weight: 5820
 | u26.aarch64 | AVAIL PIGSTY 1.5 1 | AVAIL PIGSTY 1.5 1 | AVAIL PIGSTY 1.5 1 | AVAIL PIGSTY 1.5 1 | AVAIL PIGSTY 1.5 1 |
 @ el8.x86_64 18 safeupdate_18 safeupdate_18-1.5-2PGDG.rhel8.x86_64.rpm pgdg 1.5 13.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/safeupdate_18-1.5-2PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 18 safeupdate_18 safeupdate_18-1.5-2PGDG.rhel8.aarch64.rpm pgdg 1.5 13.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/safeupdate_18-1.5-2PGDG.rhel8.aarch64.rpm
-@ el9.x86_64 18 safeupdate_18 safeupdate_18-1.5-2PGDG.rhel9.x86_64.rpm pgdg 1.5 12.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/safeupdate_18-1.5-2PGDG.rhel9.x86_64.rpm
-@ el9.aarch64 18 safeupdate_18 safeupdate_18-1.5-2PGDG.rhel9.aarch64.rpm pgdg 1.5 12.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/safeupdate_18-1.5-2PGDG.rhel9.aarch64.rpm
-@ el10.x86_64 18 safeupdate_18 safeupdate_18-1.5-2PGDG.rhel10.x86_64.rpm pgdg 1.5 13.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/safeupdate_18-1.5-2PGDG.rhel10.x86_64.rpm
-@ el10.aarch64 18 safeupdate_18 safeupdate_18-1.5-2PGDG.rhel10.aarch64.rpm pgdg 1.5 13.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/safeupdate_18-1.5-2PGDG.rhel10.aarch64.rpm
+@ el9.x86_64 18 safeupdate_18 safeupdate_18-1.5-4PGDG.rhel9.8.x86_64.rpm pgdg 1.5 12.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/safeupdate_18-1.5-4PGDG.rhel9.8.x86_64.rpm
+@ el9.aarch64 18 safeupdate_18 safeupdate_18-1.5-4PGDG.rhel9.8.aarch64.rpm pgdg 1.5 12.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/safeupdate_18-1.5-4PGDG.rhel9.8.aarch64.rpm
+@ el10.x86_64 18 safeupdate_18 safeupdate_18-1.5-4PGDG.rhel10.2.x86_64.rpm pgdg 1.5 12.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/safeupdate_18-1.5-4PGDG.rhel10.2.x86_64.rpm
+@ el10.aarch64 18 safeupdate_18 safeupdate_18-1.5-4PGDG.rhel10.2.aarch64.rpm pgdg 1.5 13.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/safeupdate_18-1.5-4PGDG.rhel10.2.aarch64.rpm
 @ d12.x86_64 18 postgresql-18-pg-safeupdate postgresql-18-pg-safeupdate_1.5-2PIGSTY~bookworm_amd64.deb pigsty 1.5 8.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-safeupdate/postgresql-18-pg-safeupdate_1.5-2PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 18 postgresql-18-pg-safeupdate postgresql-18-pg-safeupdate_1.5-2PIGSTY~bookworm_arm64.deb pigsty 1.5 8.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-safeupdate/postgresql-18-pg-safeupdate_1.5-2PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 18 postgresql-18-pg-safeupdate postgresql-18-pg-safeupdate_1.5-2PIGSTY~trixie_amd64.deb pigsty 1.5 8.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-safeupdate/postgresql-18-pg-safeupdate_1.5-2PIGSTY~trixie_amd64.deb
@@ -84,10 +84,10 @@ weight: 5820
 @ u26.aarch64 18 postgresql-18-pg-safeupdate postgresql-18-pg-safeupdate_1.5-2PIGSTY~resolute_arm64.deb pigsty 1.5 9.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-safeupdate/postgresql-18-pg-safeupdate_1.5-2PIGSTY~resolute_arm64.deb
 @ el8.x86_64 17 safeupdate_17 safeupdate_17-1.5-1PGDG.rhel8.x86_64.rpm pgdg 1.5 13.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/safeupdate_17-1.5-1PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 17 safeupdate_17 safeupdate_17-1.5-1PGDG.rhel8.aarch64.rpm pgdg 1.5 13.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/safeupdate_17-1.5-1PGDG.rhel8.aarch64.rpm
-@ el9.x86_64 17 safeupdate_17 safeupdate_17-1.5-1PGDG.rhel9.x86_64.rpm pgdg 1.5 12.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/safeupdate_17-1.5-1PGDG.rhel9.x86_64.rpm
-@ el9.aarch64 17 safeupdate_17 safeupdate_17-1.5-1PGDG.rhel9.aarch64.rpm pgdg 1.5 12.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/safeupdate_17-1.5-1PGDG.rhel9.aarch64.rpm
-@ el10.x86_64 17 safeupdate_17 safeupdate_17-1.5-2PGDG.rhel10.x86_64.rpm pgdg 1.5 13.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/safeupdate_17-1.5-2PGDG.rhel10.x86_64.rpm
-@ el10.aarch64 17 safeupdate_17 safeupdate_17-1.5-2PGDG.rhel10.aarch64.rpm pgdg 1.5 13.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/safeupdate_17-1.5-2PGDG.rhel10.aarch64.rpm
+@ el9.x86_64 17 safeupdate_17 safeupdate_17-1.5-4PGDG.rhel9.8.x86_64.rpm pgdg 1.5 12.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/safeupdate_17-1.5-4PGDG.rhel9.8.x86_64.rpm
+@ el9.aarch64 17 safeupdate_17 safeupdate_17-1.5-4PGDG.rhel9.8.aarch64.rpm pgdg 1.5 12.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/safeupdate_17-1.5-4PGDG.rhel9.8.aarch64.rpm
+@ el10.x86_64 17 safeupdate_17 safeupdate_17-1.5-4PGDG.rhel10.2.x86_64.rpm pgdg 1.5 12.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/safeupdate_17-1.5-4PGDG.rhel10.2.x86_64.rpm
+@ el10.aarch64 17 safeupdate_17 safeupdate_17-1.5-4PGDG.rhel10.2.aarch64.rpm pgdg 1.5 13.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/safeupdate_17-1.5-4PGDG.rhel10.2.aarch64.rpm
 @ d12.x86_64 17 postgresql-17-pg-safeupdate postgresql-17-pg-safeupdate_1.5-2PIGSTY~bookworm_amd64.deb pigsty 1.5 8.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-safeupdate/postgresql-17-pg-safeupdate_1.5-2PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 17 postgresql-17-pg-safeupdate postgresql-17-pg-safeupdate_1.5-2PIGSTY~bookworm_arm64.deb pigsty 1.5 8.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-safeupdate/postgresql-17-pg-safeupdate_1.5-2PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 17 postgresql-17-pg-safeupdate postgresql-17-pg-safeupdate_1.5-2PIGSTY~trixie_amd64.deb pigsty 1.5 8.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-safeupdate/postgresql-17-pg-safeupdate_1.5-2PIGSTY~trixie_amd64.deb
@@ -102,12 +102,10 @@ weight: 5820
 @ el8.x86_64 16 safeupdate_16 safeupdate_16-1.4.2-2PGDG.rhel8.x86_64.rpm pgdg 1.4.2 13.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/safeupdate_16-1.4.2-2PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 16 safeupdate_16 safeupdate_16-1.5-1PGDG.rhel8.aarch64.rpm pgdg 1.5 13.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/safeupdate_16-1.5-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 16 safeupdate_16 safeupdate_16-1.4.2-2PGDG.rhel8.aarch64.rpm pgdg 1.4.2 13.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/safeupdate_16-1.4.2-2PGDG.rhel8.aarch64.rpm
-@ el9.x86_64 16 safeupdate_16 safeupdate_16-1.5-1PGDG.rhel9.x86_64.rpm pgdg 1.5 12.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/safeupdate_16-1.5-1PGDG.rhel9.x86_64.rpm
-@ el9.x86_64 16 safeupdate_16 safeupdate_16-1.4.2-2PGDG.rhel9.x86_64.rpm pgdg 1.4.2 12.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/safeupdate_16-1.4.2-2PGDG.rhel9.x86_64.rpm
-@ el9.aarch64 16 safeupdate_16 safeupdate_16-1.5-1PGDG.rhel9.aarch64.rpm pgdg 1.5 12.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/safeupdate_16-1.5-1PGDG.rhel9.aarch64.rpm
-@ el9.aarch64 16 safeupdate_16 safeupdate_16-1.4.2-2PGDG.rhel9.aarch64.rpm pgdg 1.4.2 12.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/safeupdate_16-1.4.2-2PGDG.rhel9.aarch64.rpm
-@ el10.x86_64 16 safeupdate_16 safeupdate_16-1.5-2PGDG.rhel10.x86_64.rpm pgdg 1.5 13.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/safeupdate_16-1.5-2PGDG.rhel10.x86_64.rpm
-@ el10.aarch64 16 safeupdate_16 safeupdate_16-1.5-2PGDG.rhel10.aarch64.rpm pgdg 1.5 13.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/safeupdate_16-1.5-2PGDG.rhel10.aarch64.rpm
+@ el9.x86_64 16 safeupdate_16 safeupdate_16-1.5-4PGDG.rhel9.8.x86_64.rpm pgdg 1.5 12.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/safeupdate_16-1.5-4PGDG.rhel9.8.x86_64.rpm
+@ el9.aarch64 16 safeupdate_16 safeupdate_16-1.5-4PGDG.rhel9.8.aarch64.rpm pgdg 1.5 12.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/safeupdate_16-1.5-4PGDG.rhel9.8.aarch64.rpm
+@ el10.x86_64 16 safeupdate_16 safeupdate_16-1.5-4PGDG.rhel10.2.x86_64.rpm pgdg 1.5 12.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/safeupdate_16-1.5-4PGDG.rhel10.2.x86_64.rpm
+@ el10.aarch64 16 safeupdate_16 safeupdate_16-1.5-4PGDG.rhel10.2.aarch64.rpm pgdg 1.5 13.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/safeupdate_16-1.5-4PGDG.rhel10.2.aarch64.rpm
 @ d12.x86_64 16 postgresql-16-pg-safeupdate postgresql-16-pg-safeupdate_1.5-2PIGSTY~bookworm_amd64.deb pigsty 1.5 8.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-safeupdate/postgresql-16-pg-safeupdate_1.5-2PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 16 postgresql-16-pg-safeupdate postgresql-16-pg-safeupdate_1.5-2PIGSTY~bookworm_arm64.deb pigsty 1.5 8.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-safeupdate/postgresql-16-pg-safeupdate_1.5-2PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 16 postgresql-16-pg-safeupdate postgresql-16-pg-safeupdate_1.5-2PIGSTY~trixie_amd64.deb pigsty 1.5 8.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-safeupdate/postgresql-16-pg-safeupdate_1.5-2PIGSTY~trixie_amd64.deb
@@ -123,14 +121,10 @@ weight: 5820
 @ el8.aarch64 15 safeupdate_15 safeupdate_15-1.5-1PGDG.rhel8.aarch64.rpm pgdg 1.5 13.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/safeupdate_15-1.5-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 15 safeupdate_15 safeupdate_15-1.4.2-1.rhel8.aarch64.rpm pgdg 1.4.2 13.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/safeupdate_15-1.4.2-1.rhel8.aarch64.rpm
 @ el8.aarch64 15 safeupdate_15 safeupdate_15-1.4-1.rhel8.aarch64.rpm pgdg 1.4 17.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/safeupdate_15-1.4-1.rhel8.aarch64.rpm
-@ el9.x86_64 15 safeupdate_15 safeupdate_15-1.5-1PGDG.rhel9.x86_64.rpm pgdg 1.5 12.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/safeupdate_15-1.5-1PGDG.rhel9.x86_64.rpm
-@ el9.x86_64 15 safeupdate_15 safeupdate_15-1.4.2-1.rhel9.x86_64.rpm pgdg 1.4.2 12.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/safeupdate_15-1.4.2-1.rhel9.x86_64.rpm
-@ el9.x86_64 15 safeupdate_15 safeupdate_15-1.4-1.rhel9.x86_64.rpm pgdg 1.4 17.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/safeupdate_15-1.4-1.rhel9.x86_64.rpm
-@ el9.aarch64 15 safeupdate_15 safeupdate_15-1.5-1PGDG.rhel9.aarch64.rpm pgdg 1.5 12.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/safeupdate_15-1.5-1PGDG.rhel9.aarch64.rpm
-@ el9.aarch64 15 safeupdate_15 safeupdate_15-1.4.2-1.rhel9.aarch64.rpm pgdg 1.4.2 12.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/safeupdate_15-1.4.2-1.rhel9.aarch64.rpm
-@ el9.aarch64 15 safeupdate_15 safeupdate_15-1.4-1.rhel9.aarch64.rpm pgdg 1.4 17.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/safeupdate_15-1.4-1.rhel9.aarch64.rpm
-@ el10.x86_64 15 safeupdate_15 safeupdate_15-1.5-2PGDG.rhel10.x86_64.rpm pgdg 1.5 13.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/safeupdate_15-1.5-2PGDG.rhel10.x86_64.rpm
-@ el10.aarch64 15 safeupdate_15 safeupdate_15-1.5-2PGDG.rhel10.aarch64.rpm pgdg 1.5 13.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/safeupdate_15-1.5-2PGDG.rhel10.aarch64.rpm
+@ el9.x86_64 15 safeupdate_15 safeupdate_15-1.5-4PGDG.rhel9.8.x86_64.rpm pgdg 1.5 12.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/safeupdate_15-1.5-4PGDG.rhel9.8.x86_64.rpm
+@ el9.aarch64 15 safeupdate_15 safeupdate_15-1.5-4PGDG.rhel9.8.aarch64.rpm pgdg 1.5 12.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/safeupdate_15-1.5-4PGDG.rhel9.8.aarch64.rpm
+@ el10.x86_64 15 safeupdate_15 safeupdate_15-1.5-4PGDG.rhel10.2.x86_64.rpm pgdg 1.5 13.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/safeupdate_15-1.5-4PGDG.rhel10.2.x86_64.rpm
+@ el10.aarch64 15 safeupdate_15 safeupdate_15-1.5-4PGDG.rhel10.2.aarch64.rpm pgdg 1.5 13.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/safeupdate_15-1.5-4PGDG.rhel10.2.aarch64.rpm
 @ d12.x86_64 15 postgresql-15-pg-safeupdate postgresql-15-pg-safeupdate_1.5-2PIGSTY~bookworm_amd64.deb pigsty 1.5 8.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-safeupdate/postgresql-15-pg-safeupdate_1.5-2PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 15 postgresql-15-pg-safeupdate postgresql-15-pg-safeupdate_1.5-2PIGSTY~bookworm_arm64.deb pigsty 1.5 8.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-safeupdate/postgresql-15-pg-safeupdate_1.5-2PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 15 postgresql-15-pg-safeupdate postgresql-15-pg-safeupdate_1.5-2PIGSTY~trixie_amd64.deb pigsty 1.5 8.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-safeupdate/postgresql-15-pg-safeupdate_1.5-2PIGSTY~trixie_amd64.deb
@@ -146,13 +140,10 @@ weight: 5820
 @ el8.aarch64 14 safeupdate_14 safeupdate_14-1.5-1PGDG.rhel8.aarch64.rpm pgdg 1.5 13.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/safeupdate_14-1.5-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 14 safeupdate_14 safeupdate_14-1.4.2-1.rhel8.aarch64.rpm pgdg 1.4.2 13.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/safeupdate_14-1.4.2-1.rhel8.aarch64.rpm
 @ el8.aarch64 14 safeupdate_14 safeupdate_14-1.4-1.rhel8.aarch64.rpm pgdg 1.4 17.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/safeupdate_14-1.4-1.rhel8.aarch64.rpm
-@ el9.x86_64 14 safeupdate_14 safeupdate_14-1.5-1PGDG.rhel9.x86_64.rpm pgdg 1.5 12.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/safeupdate_14-1.5-1PGDG.rhel9.x86_64.rpm
-@ el9.x86_64 14 safeupdate_14 safeupdate_14-1.4.2-1.rhel9.x86_64.rpm pgdg 1.4.2 12.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/safeupdate_14-1.4.2-1.rhel9.x86_64.rpm
-@ el9.aarch64 14 safeupdate_14 safeupdate_14-1.5-1PGDG.rhel9.aarch64.rpm pgdg 1.5 12.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/safeupdate_14-1.5-1PGDG.rhel9.aarch64.rpm
-@ el9.aarch64 14 safeupdate_14 safeupdate_14-1.4.2-1.rhel9.aarch64.rpm pgdg 1.4.2 12.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/safeupdate_14-1.4.2-1.rhel9.aarch64.rpm
-@ el9.aarch64 14 safeupdate_14 safeupdate_14-1.4-1.rhel9.aarch64.rpm pgdg 1.4 17.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/safeupdate_14-1.4-1.rhel9.aarch64.rpm
-@ el10.x86_64 14 safeupdate_14 safeupdate_14-1.5-2PGDG.rhel10.x86_64.rpm pgdg 1.5 13.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/safeupdate_14-1.5-2PGDG.rhel10.x86_64.rpm
-@ el10.aarch64 14 safeupdate_14 safeupdate_14-1.5-2PGDG.rhel10.aarch64.rpm pgdg 1.5 13.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/safeupdate_14-1.5-2PGDG.rhel10.aarch64.rpm
+@ el9.x86_64 14 safeupdate_14 safeupdate_14-1.5-4PGDG.rhel9.8.x86_64.rpm pgdg 1.5 12.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/safeupdate_14-1.5-4PGDG.rhel9.8.x86_64.rpm
+@ el9.aarch64 14 safeupdate_14 safeupdate_14-1.5-4PGDG.rhel9.8.aarch64.rpm pgdg 1.5 12.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/safeupdate_14-1.5-4PGDG.rhel9.8.aarch64.rpm
+@ el10.x86_64 14 safeupdate_14 safeupdate_14-1.5-4PGDG.rhel10.2.x86_64.rpm pgdg 1.5 13.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/safeupdate_14-1.5-4PGDG.rhel10.2.x86_64.rpm
+@ el10.aarch64 14 safeupdate_14 safeupdate_14-1.5-4PGDG.rhel10.2.aarch64.rpm pgdg 1.5 13.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/safeupdate_14-1.5-4PGDG.rhel10.2.aarch64.rpm
 @ d12.x86_64 14 postgresql-14-pg-safeupdate postgresql-14-pg-safeupdate_1.5-2PIGSTY~bookworm_amd64.deb pigsty 1.5 8.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-safeupdate/postgresql-14-pg-safeupdate_1.5-2PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 14 postgresql-14-pg-safeupdate postgresql-14-pg-safeupdate_1.5-2PIGSTY~bookworm_arm64.deb pigsty 1.5 8.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-safeupdate/postgresql-14-pg-safeupdate_1.5-2PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 14 postgresql-14-pg-safeupdate postgresql-14-pg-safeupdate_1.5-2PIGSTY~trixie_amd64.deb pigsty 1.5 8.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-safeupdate/postgresql-14-pg-safeupdate_1.5-2PIGSTY~trixie_amd64.deb

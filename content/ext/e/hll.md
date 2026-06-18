@@ -2,7 +2,7 @@
 title: "hll"
 linkTitle: "hll"
 description: "hyperloglog 数据类型"
-weight: 2710
+weight: 2700
 ---
 
 <div class="ext-cards">
@@ -20,12 +20,12 @@ weight: 2710
 
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
-| [**`hll`**](/ext/e/hll) | `2.19` | <a class="ext-badge ext-badge--cate feat" href="/ext/cate/feat">FEAT</a> | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang cpp" href="/ext/language#cpp">C++</a> |
+| [**`hll`**](/ext/e/hll) | `2.21` | <a class="ext-badge ext-badge--cate feat" href="/ext/cate/feat">FEAT</a> | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang cpp" href="/ext/language#cpp">C++</a> |
 {.ext-table}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
 |:-----:|:-------------------------------------------------------------------------|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|:----------|
-| 2710  | [**`hll`**](/ext/e/hll) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | - |
+| 2700  | [**`hll`**](/ext/e/hll) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | - |
 {.ext-table}
 
 | **相关扩展** | [`topn`](/ext/e/topn) [`count_distinct`](/ext/e/count_distinct) [`omnisketch`](/ext/e/omnisketch) [`bloom`](/ext/e/bloom) [`roaringbitmap`](/ext/e/roaringbitmap) [`ddsketch`](/ext/e/ddsketch) [`tdigest`](/ext/e/tdigest) [`citus`](/ext/e/citus) |
@@ -37,116 +37,273 @@ weight: 2710
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#feat) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `2.19` | {{< pgvers "18,17,16,15,14" >}} | `hll` | - |
-| [**RPM**](/ext/rpm#feat) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `2.19` | {{< pgvers "18,17,16,15,14" >}} | `hll_$v` | - |
-| [**DEB**](/ext/deb#feat) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `2.19` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-hll` | - |
+| [**EXT**](/ext/list#feat) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `2.21` | {{< pgvers "18,17,16,15,14" >}} | `hll` | - |
+| [**RPM**](/ext/rpm#feat) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `2.21` | {{< pgvers "18,17,16,15,14" >}} | `hll_$v` | - |
+| [**DEB**](/ext/deb#feat) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `2.20` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-hll` | - |
 {.ext-table}
 
 {{< pgext_matrix >}}
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PGDG 2.19 1 | AVAIL PGDG 2.18 1 | AVAIL PGDG 2.18 1 | AVAIL PGDG 2.18 2 | AVAIL PGDG 2.18 2 |
-| el8.aarch64 | AVAIL PGDG 2.19 1 | AVAIL PGDG 2.18 1 | AVAIL PGDG 2.18 1 | AVAIL PGDG 2.18 2 | AVAIL PGDG 2.18 2 |
-| el9.x86_64 | AVAIL PGDG 2.19 1 | AVAIL PGDG 2.18 1 | AVAIL PGDG 2.18 1 | AVAIL PGDG 2.18 2 | AVAIL PGDG 2.18 1 |
-| el9.aarch64 | AVAIL PGDG 2.19 1 | AVAIL PGDG 2.18 1 | AVAIL PGDG 2.18 1 | AVAIL PGDG 2.18 2 | AVAIL PGDG 2.18 2 |
-| el10.x86_64 | AVAIL PGDG 2.19 1 | AVAIL PGDG 2.18 1 | AVAIL PGDG 2.18 1 | AVAIL PGDG 2.18 1 | AVAIL PGDG 2.18 1 |
-| el10.aarch64 | AVAIL PGDG 2.19 1 | AVAIL PGDG 2.18 1 | AVAIL PGDG 2.18 1 | AVAIL PGDG 2.18 1 | AVAIL PGDG 2.18 1 |
-| d12.x86_64 | AVAIL PGDG 2.19 1 | AVAIL PGDG 2.19 1 | AVAIL PGDG 2.19 1 | AVAIL PGDG 2.19 1 | AVAIL PGDG 2.19 1 |
-| d12.aarch64 | AVAIL PGDG 2.19 1 | AVAIL PGDG 2.19 1 | AVAIL PGDG 2.19 1 | AVAIL PGDG 2.19 1 | AVAIL PGDG 2.19 1 |
-| d13.x86_64 | AVAIL PGDG 2.19 1 | AVAIL PGDG 2.19 1 | AVAIL PGDG 2.19 1 | AVAIL PGDG 2.19 1 | AVAIL PGDG 2.19 1 |
-| d13.aarch64 | AVAIL PGDG 2.19 1 | AVAIL PGDG 2.19 1 | AVAIL PGDG 2.19 1 | AVAIL PGDG 2.19 1 | AVAIL PGDG 2.19 1 |
-| u22.x86_64 | AVAIL PGDG 2.19 1 | AVAIL PGDG 2.19 1 | AVAIL PGDG 2.19 1 | AVAIL PGDG 2.19 1 | AVAIL PGDG 2.19 1 |
-| u22.aarch64 | AVAIL PGDG 2.19 1 | AVAIL PGDG 2.19 1 | AVAIL PGDG 2.19 1 | AVAIL PGDG 2.19 1 | AVAIL PGDG 2.19 1 |
-| u24.x86_64 | AVAIL PGDG 2.19 1 | AVAIL PGDG 2.19 1 | AVAIL PGDG 2.19 1 | AVAIL PGDG 2.19 1 | AVAIL PGDG 2.19 1 |
-| u24.aarch64 | AVAIL PGDG 2.19 1 | AVAIL PGDG 2.19 1 | AVAIL PGDG 2.19 1 | AVAIL PGDG 2.19 1 | AVAIL PGDG 2.19 1 |
-| u26.x86_64 | AVAIL PGDG 2.19 1 | AVAIL PGDG 2.19 1 | AVAIL PGDG 2.19 1 | AVAIL PGDG 2.19 1 | AVAIL PGDG 2.19 1 |
-| u26.aarch64 | AVAIL PGDG 2.19 1 | AVAIL PGDG 2.19 1 | AVAIL PGDG 2.19 1 | AVAIL PGDG 2.19 1 | AVAIL PGDG 2.19 1 |
+| el8.x86_64 | AVAIL PGDG 2.21 3 | AVAIL PGDG 2.21 3 | AVAIL PGDG 2.21 3 | AVAIL PGDG 2.21 4 | AVAIL PGDG 2.21 4 |
+| el8.aarch64 | AVAIL PGDG 2.21 3 | AVAIL PGDG 2.21 3 | AVAIL PGDG 2.21 3 | AVAIL PGDG 2.21 4 | AVAIL PGDG 2.21 4 |
+| el9.x86_64 | AVAIL PGDG 2.21 3 | AVAIL PGDG 2.21 3 | AVAIL PGDG 2.21 3 | AVAIL PGDG 2.21 3 | AVAIL PGDG 2.21 3 |
+| el9.aarch64 | AVAIL PGDG 2.21 3 | AVAIL PGDG 2.21 3 | AVAIL PGDG 2.21 3 | AVAIL PGDG 2.21 3 | AVAIL PGDG 2.21 3 |
+| el10.x86_64 | AVAIL PGDG 2.21 3 | AVAIL PGDG 2.21 3 | AVAIL PGDG 2.21 3 | AVAIL PGDG 2.21 3 | AVAIL PGDG 2.21 3 |
+| el10.aarch64 | AVAIL PGDG 2.21 3 | AVAIL PGDG 2.21 3 | AVAIL PGDG 2.21 3 | AVAIL PGDG 2.21 3 | AVAIL PGDG 2.21 3 |
+| d12.x86_64 | AVAIL PGDG 2.21 3 | AVAIL PGDG 2.21 3 | AVAIL PGDG 2.21 3 | AVAIL PGDG 2.21 3 | AVAIL PGDG 2.21 3 |
+| d12.aarch64 | AVAIL PGDG 2.21 3 | AVAIL PGDG 2.21 3 | AVAIL PGDG 2.21 3 | AVAIL PGDG 2.21 3 | AVAIL PGDG 2.21 3 |
+| d13.x86_64 | AVAIL PGDG 2.21 3 | AVAIL PGDG 2.21 3 | AVAIL PGDG 2.21 3 | AVAIL PGDG 2.21 3 | AVAIL PGDG 2.21 3 |
+| d13.aarch64 | AVAIL PGDG 2.21 3 | AVAIL PGDG 2.21 3 | AVAIL PGDG 2.21 3 | AVAIL PGDG 2.21 3 | AVAIL PGDG 2.21 3 |
+| u22.x86_64 | AVAIL PGDG 2.21 3 | AVAIL PGDG 2.21 3 | AVAIL PGDG 2.21 3 | AVAIL PGDG 2.21 3 | AVAIL PGDG 2.21 3 |
+| u22.aarch64 | AVAIL PGDG 2.21 3 | AVAIL PGDG 2.21 3 | AVAIL PGDG 2.21 3 | AVAIL PGDG 2.21 3 | AVAIL PGDG 2.21 3 |
+| u24.x86_64 | AVAIL PGDG 2.21 3 | AVAIL PGDG 2.21 3 | AVAIL PGDG 2.21 3 | AVAIL PGDG 2.21 3 | AVAIL PGDG 2.21 3 |
+| u24.aarch64 | AVAIL PGDG 2.21 3 | AVAIL PGDG 2.21 3 | AVAIL PGDG 2.21 3 | AVAIL PGDG 2.21 3 | AVAIL PGDG 2.21 3 |
+| u26.x86_64 | AVAIL PGDG 2.21 3 | AVAIL PGDG 2.21 3 | AVAIL PGDG 2.21 3 | AVAIL PGDG 2.21 3 | AVAIL PGDG 2.21 3 |
+| u26.aarch64 | AVAIL PGDG 2.21 3 | AVAIL PGDG 2.21 3 | AVAIL PGDG 2.21 3 | AVAIL PGDG 2.21 3 | AVAIL PGDG 2.21 3 |
+@ el8.x86_64 18 hll_18 hll_18-2.21-1PGDG.rhel8.10.x86_64.rpm pgdg 2.21 43.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/hll_18-2.21-1PGDG.rhel8.10.x86_64.rpm
+@ el8.x86_64 18 hll_18 hll_18-2.20-1PGDG.rhel8.10.x86_64.rpm pgdg 2.20 43.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/hll_18-2.20-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 18 hll_18 hll_18-2.19-1PGDG.rhel8.x86_64.rpm pgdg 2.19 42.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/hll_18-2.19-1PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 18 hll_18 hll_18-2.21-1PGDG.rhel8.10.aarch64.rpm pgdg 2.21 43.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/hll_18-2.21-1PGDG.rhel8.10.aarch64.rpm
+@ el8.aarch64 18 hll_18 hll_18-2.20-1PGDG.rhel8.10.aarch64.rpm pgdg 2.20 42.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/hll_18-2.20-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 18 hll_18 hll_18-2.19-1PGDG.rhel8.aarch64.rpm pgdg 2.19 42.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/hll_18-2.19-1PGDG.rhel8.aarch64.rpm
-@ el9.x86_64 18 hll_18 hll_18-2.19-1PGDG.rhel9.x86_64.rpm pgdg 2.19 42.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/hll_18-2.19-1PGDG.rhel9.x86_64.rpm
-@ el9.aarch64 18 hll_18 hll_18-2.19-1PGDG.rhel9.aarch64.rpm pgdg 2.19 41.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/hll_18-2.19-1PGDG.rhel9.aarch64.rpm
-@ el10.x86_64 18 hll_18 hll_18-2.19-1PGDG.rhel10.x86_64.rpm pgdg 2.19 42.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/hll_18-2.19-1PGDG.rhel10.x86_64.rpm
-@ el10.aarch64 18 hll_18 hll_18-2.19-1PGDG.rhel10.aarch64.rpm pgdg 2.19 41.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/hll_18-2.19-1PGDG.rhel10.aarch64.rpm
+@ el9.x86_64 18 hll_18 hll_18-2.21-1PGDG.rhel9.8.x86_64.rpm pgdg 2.21 43.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/hll_18-2.21-1PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 18 hll_18 hll_18-2.20-1PGDG.rhel9.8.x86_64.rpm pgdg 2.20 42.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/hll_18-2.20-1PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 18 hll_18 hll_18-2.19-1PGDG.rhel9.8.x86_64.rpm pgdg 2.19 42.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/hll_18-2.19-1PGDG.rhel9.8.x86_64.rpm
+@ el9.aarch64 18 hll_18 hll_18-2.21-1PGDG.rhel9.8.aarch64.rpm pgdg 2.21 43.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/hll_18-2.21-1PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 18 hll_18 hll_18-2.20-1PGDG.rhel9.8.aarch64.rpm pgdg 2.20 42.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/hll_18-2.20-1PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 18 hll_18 hll_18-2.19-1PGDG.rhel9.8.aarch64.rpm pgdg 2.19 41.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/hll_18-2.19-1PGDG.rhel9.8.aarch64.rpm
+@ el10.x86_64 18 hll_18 hll_18-2.21-1PGDG.rhel10.2.x86_64.rpm pgdg 2.21 43.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/hll_18-2.21-1PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 18 hll_18 hll_18-2.20-1PGDG.rhel10.2.x86_64.rpm pgdg 2.20 42.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/hll_18-2.20-1PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 18 hll_18 hll_18-2.19-1PGDG.rhel10.2.x86_64.rpm pgdg 2.19 42.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/hll_18-2.19-1PGDG.rhel10.2.x86_64.rpm
+@ el10.aarch64 18 hll_18 hll_18-2.21-1PGDG.rhel10.2.aarch64.rpm pgdg 2.21 42.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/hll_18-2.21-1PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 18 hll_18 hll_18-2.20-1PGDG.rhel10.2.aarch64.rpm pgdg 2.20 42.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/hll_18-2.20-1PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 18 hll_18 hll_18-2.19-1PGDG.rhel10.2.aarch64.rpm pgdg 2.19 41.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/hll_18-2.19-1PGDG.rhel10.2.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-hll postgresql-18-hll_2.21-1.pgdg12+1_amd64.deb pgdg 2.21 78.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-18-hll_2.21-1.pgdg12+1_amd64.deb
+@ d12.x86_64 18 postgresql-18-hll postgresql-18-hll_2.20-1.pgdg12+1_amd64.deb pgdg 2.20 77.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-18-hll_2.20-1.pgdg12+1_amd64.deb
 @ d12.x86_64 18 postgresql-18-hll postgresql-18-hll_2.19-2.pgdg12+2_amd64.deb pgdg 2.19 76.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-18-hll_2.19-2.pgdg12+2_amd64.deb
+@ d12.aarch64 18 postgresql-18-hll postgresql-18-hll_2.21-1.pgdg12+1_arm64.deb pgdg 2.21 77.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-18-hll_2.21-1.pgdg12+1_arm64.deb
+@ d12.aarch64 18 postgresql-18-hll postgresql-18-hll_2.20-1.pgdg12+1_arm64.deb pgdg 2.20 76.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-18-hll_2.20-1.pgdg12+1_arm64.deb
 @ d12.aarch64 18 postgresql-18-hll postgresql-18-hll_2.19-2.pgdg12+2_arm64.deb pgdg 2.19 75.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-18-hll_2.19-2.pgdg12+2_arm64.deb
+@ d13.x86_64 18 postgresql-18-hll postgresql-18-hll_2.21-1.pgdg13+1_amd64.deb pgdg 2.21 78.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-18-hll_2.21-1.pgdg13+1_amd64.deb
+@ d13.x86_64 18 postgresql-18-hll postgresql-18-hll_2.20-1.pgdg13+1_amd64.deb pgdg 2.20 77.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-18-hll_2.20-1.pgdg13+1_amd64.deb
 @ d13.x86_64 18 postgresql-18-hll postgresql-18-hll_2.19-2.pgdg13+2_amd64.deb pgdg 2.19 76.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-18-hll_2.19-2.pgdg13+2_amd64.deb
+@ d13.aarch64 18 postgresql-18-hll postgresql-18-hll_2.21-1.pgdg13+1_arm64.deb pgdg 2.21 77.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-18-hll_2.21-1.pgdg13+1_arm64.deb
+@ d13.aarch64 18 postgresql-18-hll postgresql-18-hll_2.20-1.pgdg13+1_arm64.deb pgdg 2.20 76.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-18-hll_2.20-1.pgdg13+1_arm64.deb
 @ d13.aarch64 18 postgresql-18-hll postgresql-18-hll_2.19-2.pgdg13+2_arm64.deb pgdg 2.19 75.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-18-hll_2.19-2.pgdg13+2_arm64.deb
+@ u22.x86_64 18 postgresql-18-hll postgresql-18-hll_2.21-1.pgdg22.04+1_amd64.deb pgdg 2.21 78.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-18-hll_2.21-1.pgdg22.04+1_amd64.deb
+@ u22.x86_64 18 postgresql-18-hll postgresql-18-hll_2.20-1.pgdg22.04+1_amd64.deb pgdg 2.20 77.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-18-hll_2.20-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 18 postgresql-18-hll postgresql-18-hll_2.19-2.pgdg22.04+2_amd64.deb pgdg 2.19 76.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-18-hll_2.19-2.pgdg22.04+2_amd64.deb
+@ u22.aarch64 18 postgresql-18-hll postgresql-18-hll_2.21-1.pgdg22.04+1_arm64.deb pgdg 2.21 77.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-18-hll_2.21-1.pgdg22.04+1_arm64.deb
+@ u22.aarch64 18 postgresql-18-hll postgresql-18-hll_2.20-1.pgdg22.04+1_arm64.deb pgdg 2.20 76.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-18-hll_2.20-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 18 postgresql-18-hll postgresql-18-hll_2.19-2.pgdg22.04+2_arm64.deb pgdg 2.19 75.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-18-hll_2.19-2.pgdg22.04+2_arm64.deb
+@ u24.x86_64 18 postgresql-18-hll postgresql-18-hll_2.21-1.pgdg24.04+1_amd64.deb pgdg 2.21 76.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-18-hll_2.21-1.pgdg24.04+1_amd64.deb
+@ u24.x86_64 18 postgresql-18-hll postgresql-18-hll_2.20-1.pgdg24.04+1_amd64.deb pgdg 2.20 76.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-18-hll_2.20-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 18 postgresql-18-hll postgresql-18-hll_2.19-2.pgdg24.04+2_amd64.deb pgdg 2.19 75.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-18-hll_2.19-2.pgdg24.04+2_amd64.deb
+@ u24.aarch64 18 postgresql-18-hll postgresql-18-hll_2.21-1.pgdg24.04+1_arm64.deb pgdg 2.21 75.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-18-hll_2.21-1.pgdg24.04+1_arm64.deb
+@ u24.aarch64 18 postgresql-18-hll postgresql-18-hll_2.20-1.pgdg24.04+1_arm64.deb pgdg 2.20 74.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-18-hll_2.20-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 18 postgresql-18-hll postgresql-18-hll_2.19-2.pgdg24.04+2_arm64.deb pgdg 2.19 74.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-18-hll_2.19-2.pgdg24.04+2_arm64.deb
+@ u26.x86_64 18 postgresql-18-hll postgresql-18-hll_2.21-1.pgdg26.04+1_amd64.deb pgdg 2.21 76.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-18-hll_2.21-1.pgdg26.04+1_amd64.deb
+@ u26.x86_64 18 postgresql-18-hll postgresql-18-hll_2.20-1.pgdg26.04+1_amd64.deb pgdg 2.20 75.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-18-hll_2.20-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 18 postgresql-18-hll postgresql-18-hll_2.19-2.pgdg26.04+1_amd64.deb pgdg 2.19 75.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-18-hll_2.19-2.pgdg26.04+1_amd64.deb
+@ u26.aarch64 18 postgresql-18-hll postgresql-18-hll_2.21-1.pgdg26.04+1_arm64.deb pgdg 2.21 75.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-18-hll_2.21-1.pgdg26.04+1_arm64.deb
+@ u26.aarch64 18 postgresql-18-hll postgresql-18-hll_2.20-1.pgdg26.04+1_arm64.deb pgdg 2.20 74.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-18-hll_2.20-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 18 postgresql-18-hll postgresql-18-hll_2.19-2.pgdg26.04+1_arm64.deb pgdg 2.19 74.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-18-hll_2.19-2.pgdg26.04+1_arm64.deb
+@ el8.x86_64 17 hll_17 hll_17-2.21-1PGDG.rhel8.10.x86_64.rpm pgdg 2.21 43.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/hll_17-2.21-1PGDG.rhel8.10.x86_64.rpm
+@ el8.x86_64 17 hll_17 hll_17-2.20-1PGDG.rhel8.10.x86_64.rpm pgdg 2.20 43.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/hll_17-2.20-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 hll_17 hll_17-2.18-2PGDG.rhel8.x86_64.rpm pgdg 2.18 41.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/hll_17-2.18-2PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 17 hll_17 hll_17-2.21-1PGDG.rhel8.10.aarch64.rpm pgdg 2.21 43.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/hll_17-2.21-1PGDG.rhel8.10.aarch64.rpm
+@ el8.aarch64 17 hll_17 hll_17-2.20-1PGDG.rhel8.10.aarch64.rpm pgdg 2.20 42.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/hll_17-2.20-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 17 hll_17 hll_17-2.18-2PGDG.rhel8.aarch64.rpm pgdg 2.18 41.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/hll_17-2.18-2PGDG.rhel8.aarch64.rpm
-@ el9.x86_64 17 hll_17 hll_17-2.18-2PGDG.rhel9.x86_64.rpm pgdg 2.18 41.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/hll_17-2.18-2PGDG.rhel9.x86_64.rpm
-@ el9.aarch64 17 hll_17 hll_17-2.18-2PGDG.rhel9.aarch64.rpm pgdg 2.18 41.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/hll_17-2.18-2PGDG.rhel9.aarch64.rpm
-@ el10.x86_64 17 hll_17 hll_17-2.18-3PGDG.rhel10.x86_64.rpm pgdg 2.18 42.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/hll_17-2.18-3PGDG.rhel10.x86_64.rpm
-@ el10.aarch64 17 hll_17 hll_17-2.18-3PGDG.rhel10.aarch64.rpm pgdg 2.18 41.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/hll_17-2.18-3PGDG.rhel10.aarch64.rpm
+@ el9.x86_64 17 hll_17 hll_17-2.21-1PGDG.rhel9.8.x86_64.rpm pgdg 2.21 43.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/hll_17-2.21-1PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 17 hll_17 hll_17-2.20-1PGDG.rhel9.8.x86_64.rpm pgdg 2.20 42.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/hll_17-2.20-1PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 17 hll_17 hll_17-2.19-1PGDG.rhel9.8.x86_64.rpm pgdg 2.19 42.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/hll_17-2.19-1PGDG.rhel9.8.x86_64.rpm
+@ el9.aarch64 17 hll_17 hll_17-2.21-1PGDG.rhel9.8.aarch64.rpm pgdg 2.21 43.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/hll_17-2.21-1PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 17 hll_17 hll_17-2.20-1PGDG.rhel9.8.aarch64.rpm pgdg 2.20 42.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/hll_17-2.20-1PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 17 hll_17 hll_17-2.19-1PGDG.rhel9.8.aarch64.rpm pgdg 2.19 41.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/hll_17-2.19-1PGDG.rhel9.8.aarch64.rpm
+@ el10.x86_64 17 hll_17 hll_17-2.21-1PGDG.rhel10.2.x86_64.rpm pgdg 2.21 43.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/hll_17-2.21-1PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 17 hll_17 hll_17-2.20-1PGDG.rhel10.2.x86_64.rpm pgdg 2.20 42.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/hll_17-2.20-1PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 17 hll_17 hll_17-2.19-1PGDG.rhel10.2.x86_64.rpm pgdg 2.19 42.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/hll_17-2.19-1PGDG.rhel10.2.x86_64.rpm
+@ el10.aarch64 17 hll_17 hll_17-2.21-1PGDG.rhel10.2.aarch64.rpm pgdg 2.21 42.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/hll_17-2.21-1PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 17 hll_17 hll_17-2.20-1PGDG.rhel10.2.aarch64.rpm pgdg 2.20 42.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/hll_17-2.20-1PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 17 hll_17 hll_17-2.19-1PGDG.rhel10.2.aarch64.rpm pgdg 2.19 41.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/hll_17-2.19-1PGDG.rhel10.2.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-hll postgresql-17-hll_2.21-1.pgdg12+1_amd64.deb pgdg 2.21 78.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-17-hll_2.21-1.pgdg12+1_amd64.deb
+@ d12.x86_64 17 postgresql-17-hll postgresql-17-hll_2.20-1.pgdg12+1_amd64.deb pgdg 2.20 77.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-17-hll_2.20-1.pgdg12+1_amd64.deb
 @ d12.x86_64 17 postgresql-17-hll postgresql-17-hll_2.19-2.pgdg12+2_amd64.deb pgdg 2.19 76.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-17-hll_2.19-2.pgdg12+2_amd64.deb
+@ d12.aarch64 17 postgresql-17-hll postgresql-17-hll_2.21-1.pgdg12+1_arm64.deb pgdg 2.21 77.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-17-hll_2.21-1.pgdg12+1_arm64.deb
+@ d12.aarch64 17 postgresql-17-hll postgresql-17-hll_2.20-1.pgdg12+1_arm64.deb pgdg 2.20 76.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-17-hll_2.20-1.pgdg12+1_arm64.deb
 @ d12.aarch64 17 postgresql-17-hll postgresql-17-hll_2.19-2.pgdg12+2_arm64.deb pgdg 2.19 75.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-17-hll_2.19-2.pgdg12+2_arm64.deb
+@ d13.x86_64 17 postgresql-17-hll postgresql-17-hll_2.21-1.pgdg13+1_amd64.deb pgdg 2.21 78.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-17-hll_2.21-1.pgdg13+1_amd64.deb
+@ d13.x86_64 17 postgresql-17-hll postgresql-17-hll_2.20-1.pgdg13+1_amd64.deb pgdg 2.20 77.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-17-hll_2.20-1.pgdg13+1_amd64.deb
 @ d13.x86_64 17 postgresql-17-hll postgresql-17-hll_2.19-2.pgdg13+2_amd64.deb pgdg 2.19 76.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-17-hll_2.19-2.pgdg13+2_amd64.deb
+@ d13.aarch64 17 postgresql-17-hll postgresql-17-hll_2.21-1.pgdg13+1_arm64.deb pgdg 2.21 77.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-17-hll_2.21-1.pgdg13+1_arm64.deb
+@ d13.aarch64 17 postgresql-17-hll postgresql-17-hll_2.20-1.pgdg13+1_arm64.deb pgdg 2.20 76.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-17-hll_2.20-1.pgdg13+1_arm64.deb
 @ d13.aarch64 17 postgresql-17-hll postgresql-17-hll_2.19-2.pgdg13+2_arm64.deb pgdg 2.19 75.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-17-hll_2.19-2.pgdg13+2_arm64.deb
+@ u22.x86_64 17 postgresql-17-hll postgresql-17-hll_2.21-1.pgdg22.04+1_amd64.deb pgdg 2.21 84.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-17-hll_2.21-1.pgdg22.04+1_amd64.deb
+@ u22.x86_64 17 postgresql-17-hll postgresql-17-hll_2.20-1.pgdg22.04+1_amd64.deb pgdg 2.20 83.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-17-hll_2.20-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 17 postgresql-17-hll postgresql-17-hll_2.19-2.pgdg22.04+2_amd64.deb pgdg 2.19 82.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-17-hll_2.19-2.pgdg22.04+2_amd64.deb
+@ u22.aarch64 17 postgresql-17-hll postgresql-17-hll_2.21-1.pgdg22.04+1_arm64.deb pgdg 2.21 83.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-17-hll_2.21-1.pgdg22.04+1_arm64.deb
+@ u22.aarch64 17 postgresql-17-hll postgresql-17-hll_2.20-1.pgdg22.04+1_arm64.deb pgdg 2.20 82.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-17-hll_2.20-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 17 postgresql-17-hll postgresql-17-hll_2.19-2.pgdg22.04+2_arm64.deb pgdg 2.19 81.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-17-hll_2.19-2.pgdg22.04+2_arm64.deb
+@ u24.x86_64 17 postgresql-17-hll postgresql-17-hll_2.21-1.pgdg24.04+1_amd64.deb pgdg 2.21 76.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-17-hll_2.21-1.pgdg24.04+1_amd64.deb
+@ u24.x86_64 17 postgresql-17-hll postgresql-17-hll_2.20-1.pgdg24.04+1_amd64.deb pgdg 2.20 76.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-17-hll_2.20-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 17 postgresql-17-hll postgresql-17-hll_2.19-2.pgdg24.04+2_amd64.deb pgdg 2.19 75.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-17-hll_2.19-2.pgdg24.04+2_amd64.deb
+@ u24.aarch64 17 postgresql-17-hll postgresql-17-hll_2.21-1.pgdg24.04+1_arm64.deb pgdg 2.21 75.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-17-hll_2.21-1.pgdg24.04+1_arm64.deb
+@ u24.aarch64 17 postgresql-17-hll postgresql-17-hll_2.20-1.pgdg24.04+1_arm64.deb pgdg 2.20 74.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-17-hll_2.20-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 17 postgresql-17-hll postgresql-17-hll_2.19-2.pgdg24.04+2_arm64.deb pgdg 2.19 74.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-17-hll_2.19-2.pgdg24.04+2_arm64.deb
+@ u26.x86_64 17 postgresql-17-hll postgresql-17-hll_2.21-1.pgdg26.04+1_amd64.deb pgdg 2.21 76.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-17-hll_2.21-1.pgdg26.04+1_amd64.deb
+@ u26.x86_64 17 postgresql-17-hll postgresql-17-hll_2.20-1.pgdg26.04+1_amd64.deb pgdg 2.20 75.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-17-hll_2.20-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 17 postgresql-17-hll postgresql-17-hll_2.19-2.pgdg26.04+1_amd64.deb pgdg 2.19 75.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-17-hll_2.19-2.pgdg26.04+1_amd64.deb
+@ u26.aarch64 17 postgresql-17-hll postgresql-17-hll_2.21-1.pgdg26.04+1_arm64.deb pgdg 2.21 75.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-17-hll_2.21-1.pgdg26.04+1_arm64.deb
+@ u26.aarch64 17 postgresql-17-hll postgresql-17-hll_2.20-1.pgdg26.04+1_arm64.deb pgdg 2.20 74.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-17-hll_2.20-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 17 postgresql-17-hll postgresql-17-hll_2.19-2.pgdg26.04+1_arm64.deb pgdg 2.19 74.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-17-hll_2.19-2.pgdg26.04+1_arm64.deb
+@ el8.x86_64 16 hll_16 hll_16-2.21-1PGDG.rhel8.10.x86_64.rpm pgdg 2.21 43.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/hll_16-2.21-1PGDG.rhel8.10.x86_64.rpm
+@ el8.x86_64 16 hll_16 hll_16-2.20-1PGDG.rhel8.10.x86_64.rpm pgdg 2.20 43.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/hll_16-2.20-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 hll_16 hll_16-2.18-1PGDG.rhel8.x86_64.rpm pgdg 2.18 41.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/hll_16-2.18-1PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 16 hll_16 hll_16-2.21-1PGDG.rhel8.10.aarch64.rpm pgdg 2.21 43.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/hll_16-2.21-1PGDG.rhel8.10.aarch64.rpm
+@ el8.aarch64 16 hll_16 hll_16-2.20-1PGDG.rhel8.10.aarch64.rpm pgdg 2.20 42.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/hll_16-2.20-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 16 hll_16 hll_16-2.18-1PGDG.rhel8.aarch64.rpm pgdg 2.18 41.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/hll_16-2.18-1PGDG.rhel8.aarch64.rpm
-@ el9.x86_64 16 hll_16 hll_16-2.18-1PGDG.rhel9.x86_64.rpm pgdg 2.18 41.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/hll_16-2.18-1PGDG.rhel9.x86_64.rpm
-@ el9.aarch64 16 hll_16 hll_16-2.18-1PGDG.rhel9.aarch64.rpm pgdg 2.18 41.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/hll_16-2.18-1PGDG.rhel9.aarch64.rpm
-@ el10.x86_64 16 hll_16 hll_16-2.18-3PGDG.rhel10.x86_64.rpm pgdg 2.18 42.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/hll_16-2.18-3PGDG.rhel10.x86_64.rpm
-@ el10.aarch64 16 hll_16 hll_16-2.18-3PGDG.rhel10.aarch64.rpm pgdg 2.18 41.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/hll_16-2.18-3PGDG.rhel10.aarch64.rpm
+@ el9.x86_64 16 hll_16 hll_16-2.21-1PGDG.rhel9.8.x86_64.rpm pgdg 2.21 43.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/hll_16-2.21-1PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 16 hll_16 hll_16-2.20-1PGDG.rhel9.8.x86_64.rpm pgdg 2.20 42.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/hll_16-2.20-1PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 16 hll_16 hll_16-2.19-1PGDG.rhel9.8.x86_64.rpm pgdg 2.19 42.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/hll_16-2.19-1PGDG.rhel9.8.x86_64.rpm
+@ el9.aarch64 16 hll_16 hll_16-2.21-1PGDG.rhel9.8.aarch64.rpm pgdg 2.21 43.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/hll_16-2.21-1PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 16 hll_16 hll_16-2.20-1PGDG.rhel9.8.aarch64.rpm pgdg 2.20 42.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/hll_16-2.20-1PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 16 hll_16 hll_16-2.19-1PGDG.rhel9.8.aarch64.rpm pgdg 2.19 42.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/hll_16-2.19-1PGDG.rhel9.8.aarch64.rpm
+@ el10.x86_64 16 hll_16 hll_16-2.21-1PGDG.rhel10.2.x86_64.rpm pgdg 2.21 43.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/hll_16-2.21-1PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 16 hll_16 hll_16-2.20-1PGDG.rhel10.2.x86_64.rpm pgdg 2.20 42.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/hll_16-2.20-1PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 16 hll_16 hll_16-2.19-1PGDG.rhel10.2.x86_64.rpm pgdg 2.19 42.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/hll_16-2.19-1PGDG.rhel10.2.x86_64.rpm
+@ el10.aarch64 16 hll_16 hll_16-2.21-1PGDG.rhel10.2.aarch64.rpm pgdg 2.21 42.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/hll_16-2.21-1PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 16 hll_16 hll_16-2.20-1PGDG.rhel10.2.aarch64.rpm pgdg 2.20 42.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/hll_16-2.20-1PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 16 hll_16 hll_16-2.19-1PGDG.rhel10.2.aarch64.rpm pgdg 2.19 41.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/hll_16-2.19-1PGDG.rhel10.2.aarch64.rpm
+@ d12.x86_64 16 postgresql-16-hll postgresql-16-hll_2.21-1.pgdg12+1_amd64.deb pgdg 2.21 78.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-16-hll_2.21-1.pgdg12+1_amd64.deb
+@ d12.x86_64 16 postgresql-16-hll postgresql-16-hll_2.20-1.pgdg12+1_amd64.deb pgdg 2.20 77.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-16-hll_2.20-1.pgdg12+1_amd64.deb
 @ d12.x86_64 16 postgresql-16-hll postgresql-16-hll_2.19-2.pgdg12+2_amd64.deb pgdg 2.19 76.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-16-hll_2.19-2.pgdg12+2_amd64.deb
+@ d12.aarch64 16 postgresql-16-hll postgresql-16-hll_2.21-1.pgdg12+1_arm64.deb pgdg 2.21 77.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-16-hll_2.21-1.pgdg12+1_arm64.deb
+@ d12.aarch64 16 postgresql-16-hll postgresql-16-hll_2.20-1.pgdg12+1_arm64.deb pgdg 2.20 76.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-16-hll_2.20-1.pgdg12+1_arm64.deb
 @ d12.aarch64 16 postgresql-16-hll postgresql-16-hll_2.19-2.pgdg12+2_arm64.deb pgdg 2.19 75.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-16-hll_2.19-2.pgdg12+2_arm64.deb
+@ d13.x86_64 16 postgresql-16-hll postgresql-16-hll_2.21-1.pgdg13+1_amd64.deb pgdg 2.21 78.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-16-hll_2.21-1.pgdg13+1_amd64.deb
+@ d13.x86_64 16 postgresql-16-hll postgresql-16-hll_2.20-1.pgdg13+1_amd64.deb pgdg 2.20 77.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-16-hll_2.20-1.pgdg13+1_amd64.deb
 @ d13.x86_64 16 postgresql-16-hll postgresql-16-hll_2.19-2.pgdg13+2_amd64.deb pgdg 2.19 76.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-16-hll_2.19-2.pgdg13+2_amd64.deb
+@ d13.aarch64 16 postgresql-16-hll postgresql-16-hll_2.21-1.pgdg13+1_arm64.deb pgdg 2.21 77.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-16-hll_2.21-1.pgdg13+1_arm64.deb
+@ d13.aarch64 16 postgresql-16-hll postgresql-16-hll_2.20-1.pgdg13+1_arm64.deb pgdg 2.20 76.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-16-hll_2.20-1.pgdg13+1_arm64.deb
 @ d13.aarch64 16 postgresql-16-hll postgresql-16-hll_2.19-2.pgdg13+2_arm64.deb pgdg 2.19 75.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-16-hll_2.19-2.pgdg13+2_arm64.deb
+@ u22.x86_64 16 postgresql-16-hll postgresql-16-hll_2.21-1.pgdg22.04+1_amd64.deb pgdg 2.21 84.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-16-hll_2.21-1.pgdg22.04+1_amd64.deb
+@ u22.x86_64 16 postgresql-16-hll postgresql-16-hll_2.20-1.pgdg22.04+1_amd64.deb pgdg 2.20 83.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-16-hll_2.20-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 16 postgresql-16-hll postgresql-16-hll_2.19-2.pgdg22.04+2_amd64.deb pgdg 2.19 82.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-16-hll_2.19-2.pgdg22.04+2_amd64.deb
+@ u22.aarch64 16 postgresql-16-hll postgresql-16-hll_2.21-1.pgdg22.04+1_arm64.deb pgdg 2.21 83.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-16-hll_2.21-1.pgdg22.04+1_arm64.deb
+@ u22.aarch64 16 postgresql-16-hll postgresql-16-hll_2.20-1.pgdg22.04+1_arm64.deb pgdg 2.20 81.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-16-hll_2.20-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 16 postgresql-16-hll postgresql-16-hll_2.19-2.pgdg22.04+2_arm64.deb pgdg 2.19 81.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-16-hll_2.19-2.pgdg22.04+2_arm64.deb
+@ u24.x86_64 16 postgresql-16-hll postgresql-16-hll_2.21-1.pgdg24.04+1_amd64.deb pgdg 2.21 76.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-16-hll_2.21-1.pgdg24.04+1_amd64.deb
+@ u24.x86_64 16 postgresql-16-hll postgresql-16-hll_2.20-1.pgdg24.04+1_amd64.deb pgdg 2.20 76.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-16-hll_2.20-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 16 postgresql-16-hll postgresql-16-hll_2.19-2.pgdg24.04+2_amd64.deb pgdg 2.19 75.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-16-hll_2.19-2.pgdg24.04+2_amd64.deb
+@ u24.aarch64 16 postgresql-16-hll postgresql-16-hll_2.21-1.pgdg24.04+1_arm64.deb pgdg 2.21 75.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-16-hll_2.21-1.pgdg24.04+1_arm64.deb
+@ u24.aarch64 16 postgresql-16-hll postgresql-16-hll_2.20-1.pgdg24.04+1_arm64.deb pgdg 2.20 74.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-16-hll_2.20-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 16 postgresql-16-hll postgresql-16-hll_2.19-2.pgdg24.04+2_arm64.deb pgdg 2.19 74.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-16-hll_2.19-2.pgdg24.04+2_arm64.deb
+@ u26.x86_64 16 postgresql-16-hll postgresql-16-hll_2.21-1.pgdg26.04+1_amd64.deb pgdg 2.21 76.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-16-hll_2.21-1.pgdg26.04+1_amd64.deb
+@ u26.x86_64 16 postgresql-16-hll postgresql-16-hll_2.20-1.pgdg26.04+1_amd64.deb pgdg 2.20 75.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-16-hll_2.20-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 16 postgresql-16-hll postgresql-16-hll_2.19-2.pgdg26.04+1_amd64.deb pgdg 2.19 75.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-16-hll_2.19-2.pgdg26.04+1_amd64.deb
+@ u26.aarch64 16 postgresql-16-hll postgresql-16-hll_2.21-1.pgdg26.04+1_arm64.deb pgdg 2.21 75.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-16-hll_2.21-1.pgdg26.04+1_arm64.deb
+@ u26.aarch64 16 postgresql-16-hll postgresql-16-hll_2.20-1.pgdg26.04+1_arm64.deb pgdg 2.20 74.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-16-hll_2.20-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 16 postgresql-16-hll postgresql-16-hll_2.19-2.pgdg26.04+1_arm64.deb pgdg 2.19 74.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-16-hll_2.19-2.pgdg26.04+1_arm64.deb
+@ el8.x86_64 15 hll_15 hll_15-2.21-1PGDG.rhel8.10.x86_64.rpm pgdg 2.21 43.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/hll_15-2.21-1PGDG.rhel8.10.x86_64.rpm
+@ el8.x86_64 15 hll_15 hll_15-2.20-1PGDG.rhel8.10.x86_64.rpm pgdg 2.20 43.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/hll_15-2.20-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 hll_15 hll_15-2.18-1PGDG.rhel8.x86_64.rpm pgdg 2.18 42.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/hll_15-2.18-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 15 hll_15 hll_15-2.17-1.rhel8.x86_64.rpm pgdg 2.17 89.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/hll_15-2.17-1.rhel8.x86_64.rpm
+@ el8.aarch64 15 hll_15 hll_15-2.21-1PGDG.rhel8.10.aarch64.rpm pgdg 2.21 43.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/hll_15-2.21-1PGDG.rhel8.10.aarch64.rpm
+@ el8.aarch64 15 hll_15 hll_15-2.20-1PGDG.rhel8.10.aarch64.rpm pgdg 2.20 42.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/hll_15-2.20-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 15 hll_15 hll_15-2.18-1PGDG.rhel8.aarch64.rpm pgdg 2.18 41.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/hll_15-2.18-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 15 hll_15 hll_15-2.17-1.rhel8.aarch64.rpm pgdg 2.17 89.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/hll_15-2.17-1.rhel8.aarch64.rpm
-@ el9.x86_64 15 hll_15 hll_15-2.18-1PGDG.rhel9.x86_64.rpm pgdg 2.18 41.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/hll_15-2.18-1PGDG.rhel9.x86_64.rpm
-@ el9.x86_64 15 hll_15 hll_15-2.17-1.rhel9.x86_64.rpm pgdg 2.17 90.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/hll_15-2.17-1.rhel9.x86_64.rpm
-@ el9.aarch64 15 hll_15 hll_15-2.18-1PGDG.rhel9.aarch64.rpm pgdg 2.18 41.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/hll_15-2.18-1PGDG.rhel9.aarch64.rpm
-@ el9.aarch64 15 hll_15 hll_15-2.17-1.rhel9.aarch64.rpm pgdg 2.17 91.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/hll_15-2.17-1.rhel9.aarch64.rpm
-@ el10.x86_64 15 hll_15 hll_15-2.18-3PGDG.rhel10.x86_64.rpm pgdg 2.18 43.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/hll_15-2.18-3PGDG.rhel10.x86_64.rpm
-@ el10.aarch64 15 hll_15 hll_15-2.18-3PGDG.rhel10.aarch64.rpm pgdg 2.18 42.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/hll_15-2.18-3PGDG.rhel10.aarch64.rpm
+@ el9.x86_64 15 hll_15 hll_15-2.21-1PGDG.rhel9.8.x86_64.rpm pgdg 2.21 43.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/hll_15-2.21-1PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 15 hll_15 hll_15-2.20-1PGDG.rhel9.8.x86_64.rpm pgdg 2.20 42.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/hll_15-2.20-1PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 15 hll_15 hll_15-2.19-1PGDG.rhel9.8.x86_64.rpm pgdg 2.19 42.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/hll_15-2.19-1PGDG.rhel9.8.x86_64.rpm
+@ el9.aarch64 15 hll_15 hll_15-2.21-1PGDG.rhel9.8.aarch64.rpm pgdg 2.21 43.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/hll_15-2.21-1PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 15 hll_15 hll_15-2.20-1PGDG.rhel9.8.aarch64.rpm pgdg 2.20 42.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/hll_15-2.20-1PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 15 hll_15 hll_15-2.19-1PGDG.rhel9.8.aarch64.rpm pgdg 2.19 42.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/hll_15-2.19-1PGDG.rhel9.8.aarch64.rpm
+@ el10.x86_64 15 hll_15 hll_15-2.21-1PGDG.rhel10.2.x86_64.rpm pgdg 2.21 44.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/hll_15-2.21-1PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 15 hll_15 hll_15-2.20-1PGDG.rhel10.2.x86_64.rpm pgdg 2.20 43.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/hll_15-2.20-1PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 15 hll_15 hll_15-2.19-1PGDG.rhel10.2.x86_64.rpm pgdg 2.19 43.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/hll_15-2.19-1PGDG.rhel10.2.x86_64.rpm
+@ el10.aarch64 15 hll_15 hll_15-2.21-1PGDG.rhel10.2.aarch64.rpm pgdg 2.21 43.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/hll_15-2.21-1PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 15 hll_15 hll_15-2.20-1PGDG.rhel10.2.aarch64.rpm pgdg 2.20 43.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/hll_15-2.20-1PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 15 hll_15 hll_15-2.19-1PGDG.rhel10.2.aarch64.rpm pgdg 2.19 42.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/hll_15-2.19-1PGDG.rhel10.2.aarch64.rpm
+@ d12.x86_64 15 postgresql-15-hll postgresql-15-hll_2.21-1.pgdg12+1_amd64.deb pgdg 2.21 78.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-15-hll_2.21-1.pgdg12+1_amd64.deb
+@ d12.x86_64 15 postgresql-15-hll postgresql-15-hll_2.20-1.pgdg12+1_amd64.deb pgdg 2.20 77.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-15-hll_2.20-1.pgdg12+1_amd64.deb
 @ d12.x86_64 15 postgresql-15-hll postgresql-15-hll_2.19-2.pgdg12+2_amd64.deb pgdg 2.19 77.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-15-hll_2.19-2.pgdg12+2_amd64.deb
+@ d12.aarch64 15 postgresql-15-hll postgresql-15-hll_2.21-1.pgdg12+1_arm64.deb pgdg 2.21 77.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-15-hll_2.21-1.pgdg12+1_arm64.deb
+@ d12.aarch64 15 postgresql-15-hll postgresql-15-hll_2.20-1.pgdg12+1_arm64.deb pgdg 2.20 76.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-15-hll_2.20-1.pgdg12+1_arm64.deb
 @ d12.aarch64 15 postgresql-15-hll postgresql-15-hll_2.19-2.pgdg12+2_arm64.deb pgdg 2.19 76.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-15-hll_2.19-2.pgdg12+2_arm64.deb
+@ d13.x86_64 15 postgresql-15-hll postgresql-15-hll_2.21-1.pgdg13+1_amd64.deb pgdg 2.21 78.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-15-hll_2.21-1.pgdg13+1_amd64.deb
+@ d13.x86_64 15 postgresql-15-hll postgresql-15-hll_2.20-1.pgdg13+1_amd64.deb pgdg 2.20 77.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-15-hll_2.20-1.pgdg13+1_amd64.deb
 @ d13.x86_64 15 postgresql-15-hll postgresql-15-hll_2.19-2.pgdg13+2_amd64.deb pgdg 2.19 77.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-15-hll_2.19-2.pgdg13+2_amd64.deb
+@ d13.aarch64 15 postgresql-15-hll postgresql-15-hll_2.21-1.pgdg13+1_arm64.deb pgdg 2.21 77.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-15-hll_2.21-1.pgdg13+1_arm64.deb
+@ d13.aarch64 15 postgresql-15-hll postgresql-15-hll_2.20-1.pgdg13+1_arm64.deb pgdg 2.20 76.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-15-hll_2.20-1.pgdg13+1_arm64.deb
 @ d13.aarch64 15 postgresql-15-hll postgresql-15-hll_2.19-2.pgdg13+2_arm64.deb pgdg 2.19 76.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-15-hll_2.19-2.pgdg13+2_arm64.deb
+@ u22.x86_64 15 postgresql-15-hll postgresql-15-hll_2.21-1.pgdg22.04+1_amd64.deb pgdg 2.21 85.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-15-hll_2.21-1.pgdg22.04+1_amd64.deb
+@ u22.x86_64 15 postgresql-15-hll postgresql-15-hll_2.20-1.pgdg22.04+1_amd64.deb pgdg 2.20 83.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-15-hll_2.20-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 15 postgresql-15-hll postgresql-15-hll_2.19-2.pgdg22.04+2_amd64.deb pgdg 2.19 83.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-15-hll_2.19-2.pgdg22.04+2_amd64.deb
+@ u22.aarch64 15 postgresql-15-hll postgresql-15-hll_2.21-1.pgdg22.04+1_arm64.deb pgdg 2.21 84.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-15-hll_2.21-1.pgdg22.04+1_arm64.deb
+@ u22.aarch64 15 postgresql-15-hll postgresql-15-hll_2.20-1.pgdg22.04+1_arm64.deb pgdg 2.20 82.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-15-hll_2.20-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 15 postgresql-15-hll postgresql-15-hll_2.19-2.pgdg22.04+2_arm64.deb pgdg 2.19 82.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-15-hll_2.19-2.pgdg22.04+2_arm64.deb
+@ u24.x86_64 15 postgresql-15-hll postgresql-15-hll_2.21-1.pgdg24.04+1_amd64.deb pgdg 2.21 77.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-15-hll_2.21-1.pgdg24.04+1_amd64.deb
+@ u24.x86_64 15 postgresql-15-hll postgresql-15-hll_2.20-1.pgdg24.04+1_amd64.deb pgdg 2.20 77.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-15-hll_2.20-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 15 postgresql-15-hll postgresql-15-hll_2.19-2.pgdg24.04+2_amd64.deb pgdg 2.19 76.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-15-hll_2.19-2.pgdg24.04+2_amd64.deb
+@ u24.aarch64 15 postgresql-15-hll postgresql-15-hll_2.21-1.pgdg24.04+1_arm64.deb pgdg 2.21 77.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-15-hll_2.21-1.pgdg24.04+1_arm64.deb
+@ u24.aarch64 15 postgresql-15-hll postgresql-15-hll_2.20-1.pgdg24.04+1_arm64.deb pgdg 2.20 76.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-15-hll_2.20-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 15 postgresql-15-hll postgresql-15-hll_2.19-2.pgdg24.04+2_arm64.deb pgdg 2.19 75.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-15-hll_2.19-2.pgdg24.04+2_arm64.deb
+@ u26.x86_64 15 postgresql-15-hll postgresql-15-hll_2.21-1.pgdg26.04+1_amd64.deb pgdg 2.21 77.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-15-hll_2.21-1.pgdg26.04+1_amd64.deb
+@ u26.x86_64 15 postgresql-15-hll postgresql-15-hll_2.20-1.pgdg26.04+1_amd64.deb pgdg 2.20 76.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-15-hll_2.20-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 15 postgresql-15-hll postgresql-15-hll_2.19-2.pgdg26.04+1_amd64.deb pgdg 2.19 76.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-15-hll_2.19-2.pgdg26.04+1_amd64.deb
+@ u26.aarch64 15 postgresql-15-hll postgresql-15-hll_2.21-1.pgdg26.04+1_arm64.deb pgdg 2.21 76.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-15-hll_2.21-1.pgdg26.04+1_arm64.deb
+@ u26.aarch64 15 postgresql-15-hll postgresql-15-hll_2.20-1.pgdg26.04+1_arm64.deb pgdg 2.20 75.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-15-hll_2.20-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 15 postgresql-15-hll postgresql-15-hll_2.19-2.pgdg26.04+1_arm64.deb pgdg 2.19 75.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-15-hll_2.19-2.pgdg26.04+1_arm64.deb
+@ el8.x86_64 14 hll_14 hll_14-2.21-1PGDG.rhel8.10.x86_64.rpm pgdg 2.21 43.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/hll_14-2.21-1PGDG.rhel8.10.x86_64.rpm
+@ el8.x86_64 14 hll_14 hll_14-2.20-1PGDG.rhel8.10.x86_64.rpm pgdg 2.20 43.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/hll_14-2.20-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 14 hll_14 hll_14-2.18-1PGDG.rhel8.x86_64.rpm pgdg 2.18 42.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/hll_14-2.18-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 14 hll_14 hll_14-2.16-1.rhel8.x86_64.rpm pgdg 2.16 90.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/hll_14-2.16-1.rhel8.x86_64.rpm
+@ el8.aarch64 14 hll_14 hll_14-2.21-1PGDG.rhel8.10.aarch64.rpm pgdg 2.21 43.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/hll_14-2.21-1PGDG.rhel8.10.aarch64.rpm
+@ el8.aarch64 14 hll_14 hll_14-2.20-1PGDG.rhel8.10.aarch64.rpm pgdg 2.20 42.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/hll_14-2.20-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 14 hll_14 hll_14-2.18-1PGDG.rhel8.aarch64.rpm pgdg 2.18 41.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/hll_14-2.18-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 14 hll_14 hll_14-2.17-1.rhel8.aarch64.rpm pgdg 2.17 89.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/hll_14-2.17-1.rhel8.aarch64.rpm
-@ el9.x86_64 14 hll_14 hll_14-2.18-1PGDG.rhel9.x86_64.rpm pgdg 2.18 41.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/hll_14-2.18-1PGDG.rhel9.x86_64.rpm
-@ el9.aarch64 14 hll_14 hll_14-2.18-1PGDG.rhel9.aarch64.rpm pgdg 2.18 41.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/hll_14-2.18-1PGDG.rhel9.aarch64.rpm
-@ el9.aarch64 14 hll_14 hll_14-2.17-1.rhel9.aarch64.rpm pgdg 2.17 90.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/hll_14-2.17-1.rhel9.aarch64.rpm
-@ el10.x86_64 14 hll_14 hll_14-2.18-3PGDG.rhel10.x86_64.rpm pgdg 2.18 43.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/hll_14-2.18-3PGDG.rhel10.x86_64.rpm
-@ el10.aarch64 14 hll_14 hll_14-2.18-3PGDG.rhel10.aarch64.rpm pgdg 2.18 42.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/hll_14-2.18-3PGDG.rhel10.aarch64.rpm
+@ el9.x86_64 14 hll_14 hll_14-2.21-1PGDG.rhel9.8.x86_64.rpm pgdg 2.21 43.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/hll_14-2.21-1PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 14 hll_14 hll_14-2.20-1PGDG.rhel9.8.x86_64.rpm pgdg 2.20 42.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/hll_14-2.20-1PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 14 hll_14 hll_14-2.19-1PGDG.rhel9.8.x86_64.rpm pgdg 2.19 42.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/hll_14-2.19-1PGDG.rhel9.8.x86_64.rpm
+@ el9.aarch64 14 hll_14 hll_14-2.21-1PGDG.rhel9.8.aarch64.rpm pgdg 2.21 43.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/hll_14-2.21-1PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 14 hll_14 hll_14-2.20-1PGDG.rhel9.8.aarch64.rpm pgdg 2.20 42.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/hll_14-2.20-1PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 14 hll_14 hll_14-2.19-1PGDG.rhel9.8.aarch64.rpm pgdg 2.19 42.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/hll_14-2.19-1PGDG.rhel9.8.aarch64.rpm
+@ el10.x86_64 14 hll_14 hll_14-2.21-1PGDG.rhel10.2.x86_64.rpm pgdg 2.21 44.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/hll_14-2.21-1PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 14 hll_14 hll_14-2.20-1PGDG.rhel10.2.x86_64.rpm pgdg 2.20 43.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/hll_14-2.20-1PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 14 hll_14 hll_14-2.19-1PGDG.rhel10.2.x86_64.rpm pgdg 2.19 43.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/hll_14-2.19-1PGDG.rhel10.2.x86_64.rpm
+@ el10.aarch64 14 hll_14 hll_14-2.21-1PGDG.rhel10.2.aarch64.rpm pgdg 2.21 43.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/hll_14-2.21-1PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 14 hll_14 hll_14-2.20-1PGDG.rhel10.2.aarch64.rpm pgdg 2.20 43.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/hll_14-2.20-1PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 14 hll_14 hll_14-2.19-1PGDG.rhel10.2.aarch64.rpm pgdg 2.19 42.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/hll_14-2.19-1PGDG.rhel10.2.aarch64.rpm
+@ d12.x86_64 14 postgresql-14-hll postgresql-14-hll_2.21-1.pgdg12+1_amd64.deb pgdg 2.21 78.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-14-hll_2.21-1.pgdg12+1_amd64.deb
+@ d12.x86_64 14 postgresql-14-hll postgresql-14-hll_2.20-1.pgdg12+1_amd64.deb pgdg 2.20 77.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-14-hll_2.20-1.pgdg12+1_amd64.deb
 @ d12.x86_64 14 postgresql-14-hll postgresql-14-hll_2.19-2.pgdg12+2_amd64.deb pgdg 2.19 77.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-14-hll_2.19-2.pgdg12+2_amd64.deb
+@ d12.aarch64 14 postgresql-14-hll postgresql-14-hll_2.21-1.pgdg12+1_arm64.deb pgdg 2.21 77.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-14-hll_2.21-1.pgdg12+1_arm64.deb
+@ d12.aarch64 14 postgresql-14-hll postgresql-14-hll_2.20-1.pgdg12+1_arm64.deb pgdg 2.20 76.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-14-hll_2.20-1.pgdg12+1_arm64.deb
 @ d12.aarch64 14 postgresql-14-hll postgresql-14-hll_2.19-2.pgdg12+2_arm64.deb pgdg 2.19 75.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-14-hll_2.19-2.pgdg12+2_arm64.deb
+@ d13.x86_64 14 postgresql-14-hll postgresql-14-hll_2.21-1.pgdg13+1_amd64.deb pgdg 2.21 78.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-14-hll_2.21-1.pgdg13+1_amd64.deb
+@ d13.x86_64 14 postgresql-14-hll postgresql-14-hll_2.20-1.pgdg13+1_amd64.deb pgdg 2.20 77.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-14-hll_2.20-1.pgdg13+1_amd64.deb
 @ d13.x86_64 14 postgresql-14-hll postgresql-14-hll_2.19-2.pgdg13+2_amd64.deb pgdg 2.19 76.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-14-hll_2.19-2.pgdg13+2_amd64.deb
+@ d13.aarch64 14 postgresql-14-hll postgresql-14-hll_2.21-1.pgdg13+1_arm64.deb pgdg 2.21 77.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-14-hll_2.21-1.pgdg13+1_arm64.deb
+@ d13.aarch64 14 postgresql-14-hll postgresql-14-hll_2.20-1.pgdg13+1_arm64.deb pgdg 2.20 76.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-14-hll_2.20-1.pgdg13+1_arm64.deb
 @ d13.aarch64 14 postgresql-14-hll postgresql-14-hll_2.19-2.pgdg13+2_arm64.deb pgdg 2.19 75.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-14-hll_2.19-2.pgdg13+2_arm64.deb
+@ u22.x86_64 14 postgresql-14-hll postgresql-14-hll_2.21-1.pgdg22.04+1_amd64.deb pgdg 2.21 84.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-14-hll_2.21-1.pgdg22.04+1_amd64.deb
+@ u22.x86_64 14 postgresql-14-hll postgresql-14-hll_2.20-1.pgdg22.04+1_amd64.deb pgdg 2.20 83.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-14-hll_2.20-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 14 postgresql-14-hll postgresql-14-hll_2.19-2.pgdg22.04+2_amd64.deb pgdg 2.19 83.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-14-hll_2.19-2.pgdg22.04+2_amd64.deb
+@ u22.aarch64 14 postgresql-14-hll postgresql-14-hll_2.21-1.pgdg22.04+1_arm64.deb pgdg 2.21 84.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-14-hll_2.21-1.pgdg22.04+1_arm64.deb
+@ u22.aarch64 14 postgresql-14-hll postgresql-14-hll_2.20-1.pgdg22.04+1_arm64.deb pgdg 2.20 82.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-14-hll_2.20-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 14 postgresql-14-hll postgresql-14-hll_2.19-2.pgdg22.04+2_arm64.deb pgdg 2.19 82.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-14-hll_2.19-2.pgdg22.04+2_arm64.deb
+@ u24.x86_64 14 postgresql-14-hll postgresql-14-hll_2.21-1.pgdg24.04+1_amd64.deb pgdg 2.21 77.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-14-hll_2.21-1.pgdg24.04+1_amd64.deb
+@ u24.x86_64 14 postgresql-14-hll postgresql-14-hll_2.20-1.pgdg24.04+1_amd64.deb pgdg 2.20 77.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-14-hll_2.20-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 14 postgresql-14-hll postgresql-14-hll_2.19-2.pgdg24.04+2_amd64.deb pgdg 2.19 76.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-14-hll_2.19-2.pgdg24.04+2_amd64.deb
+@ u24.aarch64 14 postgresql-14-hll postgresql-14-hll_2.21-1.pgdg24.04+1_arm64.deb pgdg 2.21 77.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-14-hll_2.21-1.pgdg24.04+1_arm64.deb
+@ u24.aarch64 14 postgresql-14-hll postgresql-14-hll_2.20-1.pgdg24.04+1_arm64.deb pgdg 2.20 76.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-14-hll_2.20-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 14 postgresql-14-hll postgresql-14-hll_2.19-2.pgdg24.04+2_arm64.deb pgdg 2.19 75.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-14-hll_2.19-2.pgdg24.04+2_arm64.deb
+@ u26.x86_64 14 postgresql-14-hll postgresql-14-hll_2.21-1.pgdg26.04+1_amd64.deb pgdg 2.21 77.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-14-hll_2.21-1.pgdg26.04+1_amd64.deb
+@ u26.x86_64 14 postgresql-14-hll postgresql-14-hll_2.20-1.pgdg26.04+1_amd64.deb pgdg 2.20 76.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-14-hll_2.20-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 14 postgresql-14-hll postgresql-14-hll_2.19-2.pgdg26.04+1_amd64.deb pgdg 2.19 76.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-14-hll_2.19-2.pgdg26.04+1_amd64.deb
+@ u26.aarch64 14 postgresql-14-hll postgresql-14-hll_2.21-1.pgdg26.04+1_arm64.deb pgdg 2.21 76.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-14-hll_2.21-1.pgdg26.04+1_arm64.deb
+@ u26.aarch64 14 postgresql-14-hll postgresql-14-hll_2.20-1.pgdg26.04+1_arm64.deb pgdg 2.20 75.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-14-hll_2.20-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 14 postgresql-14-hll postgresql-14-hll_2.19-2.pgdg26.04+1_arm64.deb pgdg 2.19 75.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-hll/postgresql-14-hll_2.19-2.pgdg26.04+1_arm64.deb
 {{< /pgext_matrix >}}
 

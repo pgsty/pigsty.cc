@@ -2,7 +2,7 @@
 title: "pg_jsonschema"
 linkTitle: "pg_jsonschema"
 description: "提供JSON Schema校验能力"
-weight: 2760
+weight: 2750
 ---
 
 <div class="ext-cards">
@@ -30,15 +30,16 @@ weight: 2760
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
 |:-----:|:-------------------------------------------------------------------------|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|:----------|
-| 2760  | [**`pg_jsonschema`**](/ext/e/pg_jsonschema) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | - |
+| 2750  | [**`pg_jsonschema`**](/ext/e/pg_jsonschema) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | - |
 {.ext-table}
 
 | **相关扩展** | [`pg_graphql`](/ext/e/pg_graphql) [`jsquery`](/ext/e/jsquery) [`plv8`](/ext/e/plv8) [`jsonb_plperl`](/ext/e/jsonb_plperl) [`http`](/ext/e/http) [`pg_net`](/ext/e/pg_net) [`pg_summarize`](/ext/e/pg_summarize) [`pg_tiktoken`](/ext/e/pg_tiktoken) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **下游依赖** | [`fsm_core`](/ext/e/fsm_core) |
 {.ext-table .ext-table--rel}
 
 
-> manual update from 0.16.0 by Vonng
+> pgrx patched to 0.18.1.
 
 
 ## 版本
@@ -67,8 +68,8 @@ weight: 2760
 | u22.aarch64 | AVAIL PIGSTY 0.3.4 1 | AVAIL PIGSTY 0.3.4 1 | AVAIL PIGSTY 0.3.4 1 | AVAIL PIGSTY 0.3.4 1 | AVAIL PIGSTY 0.3.4 1 |
 | u24.x86_64 | AVAIL PIGSTY 0.3.4 1 | AVAIL PIGSTY 0.3.4 1 | AVAIL PIGSTY 0.3.4 1 | AVAIL PIGSTY 0.3.4 1 | AVAIL PIGSTY 0.3.4 1 |
 | u24.aarch64 | AVAIL PIGSTY 0.3.4 1 | AVAIL PIGSTY 0.3.4 1 | AVAIL PIGSTY 0.3.4 1 | AVAIL PIGSTY 0.3.4 1 | AVAIL PIGSTY 0.3.4 1 |
-| u26.x86_64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| u26.aarch64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| u26.x86_64 | AVAIL PIGSTY 0.3.4 1 | AVAIL PIGSTY 0.3.4 1 | AVAIL PIGSTY 0.3.4 1 | AVAIL PIGSTY 0.3.4 1 | AVAIL PIGSTY 0.3.4 1 |
+| u26.aarch64 | AVAIL PIGSTY 0.3.4 1 | AVAIL PIGSTY 0.3.4 1 | AVAIL PIGSTY 0.3.4 1 | AVAIL PIGSTY 0.3.4 1 | AVAIL PIGSTY 0.3.4 1 |
 @ el8.x86_64 18 pg_jsonschema_18 pg_jsonschema_18-0.3.4-1PIGSTY.el8.x86_64.rpm pigsty 0.3.4 1.4MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_jsonschema_18-0.3.4-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 18 pg_jsonschema_18 pg_jsonschema_18-0.3.4-1PIGSTY.el8.aarch64.rpm pigsty 0.3.4 1.2MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_jsonschema_18-0.3.4-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 18 pg_jsonschema_18 pg_jsonschema_18-0.3.4-1PIGSTY.el9.x86_64.rpm pigsty 0.3.4 1.4MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_jsonschema_18-0.3.4-1PIGSTY.el9.x86_64.rpm
@@ -83,6 +84,8 @@ weight: 2760
 @ u22.aarch64 18 postgresql-18-pg-jsonschema postgresql-18-pg-jsonschema_0.3.4-1PIGSTY~jammy_arm64.deb pigsty 0.3.4 1.1MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-jsonschema/postgresql-18-pg-jsonschema_0.3.4-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 18 postgresql-18-pg-jsonschema postgresql-18-pg-jsonschema_0.3.4-1PIGSTY~noble_amd64.deb pigsty 0.3.4 1.3MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-jsonschema/postgresql-18-pg-jsonschema_0.3.4-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 18 postgresql-18-pg-jsonschema postgresql-18-pg-jsonschema_0.3.4-1PIGSTY~noble_arm64.deb pigsty 0.3.4 1.1MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-jsonschema/postgresql-18-pg-jsonschema_0.3.4-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 18 postgresql-18-pg-jsonschema postgresql-18-pg-jsonschema_0.3.4-2PIGSTY~resolute_amd64.deb pigsty 0.3.4 1.8MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-jsonschema/postgresql-18-pg-jsonschema_0.3.4-2PIGSTY~resolute_amd64.deb
+@ u26.aarch64 18 postgresql-18-pg-jsonschema postgresql-18-pg-jsonschema_0.3.4-2PIGSTY~resolute_arm64.deb pigsty 0.3.4 1.7MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-jsonschema/postgresql-18-pg-jsonschema_0.3.4-2PIGSTY~resolute_arm64.deb
 @ el8.x86_64 17 pg_jsonschema_17 pg_jsonschema_17-0.3.4-1PIGSTY.el8.x86_64.rpm pigsty 0.3.4 1.4MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_jsonschema_17-0.3.4-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 17 pg_jsonschema_17 pg_jsonschema_17-0.3.4-1PIGSTY.el8.aarch64.rpm pigsty 0.3.4 1.2MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_jsonschema_17-0.3.4-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 17 pg_jsonschema_17 pg_jsonschema_17-0.3.4-1PIGSTY.el9.x86_64.rpm pigsty 0.3.4 1.4MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_jsonschema_17-0.3.4-1PIGSTY.el9.x86_64.rpm
@@ -97,6 +100,8 @@ weight: 2760
 @ u22.aarch64 17 postgresql-17-pg-jsonschema postgresql-17-pg-jsonschema_0.3.4-1PIGSTY~jammy_arm64.deb pigsty 0.3.4 1.1MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-jsonschema/postgresql-17-pg-jsonschema_0.3.4-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 17 postgresql-17-pg-jsonschema postgresql-17-pg-jsonschema_0.3.4-1PIGSTY~noble_amd64.deb pigsty 0.3.4 1.3MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-jsonschema/postgresql-17-pg-jsonschema_0.3.4-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 17 postgresql-17-pg-jsonschema postgresql-17-pg-jsonschema_0.3.4-1PIGSTY~noble_arm64.deb pigsty 0.3.4 1.1MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-jsonschema/postgresql-17-pg-jsonschema_0.3.4-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 17 postgresql-17-pg-jsonschema postgresql-17-pg-jsonschema_0.3.4-2PIGSTY~resolute_amd64.deb pigsty 0.3.4 1.8MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-jsonschema/postgresql-17-pg-jsonschema_0.3.4-2PIGSTY~resolute_amd64.deb
+@ u26.aarch64 17 postgresql-17-pg-jsonschema postgresql-17-pg-jsonschema_0.3.4-2PIGSTY~resolute_arm64.deb pigsty 0.3.4 1.7MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-jsonschema/postgresql-17-pg-jsonschema_0.3.4-2PIGSTY~resolute_arm64.deb
 @ el8.x86_64 16 pg_jsonschema_16 pg_jsonschema_16-0.3.4-1PIGSTY.el8.x86_64.rpm pigsty 0.3.4 1.4MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_jsonschema_16-0.3.4-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 16 pg_jsonschema_16 pg_jsonschema_16-0.3.4-1PIGSTY.el8.aarch64.rpm pigsty 0.3.4 1.2MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_jsonschema_16-0.3.4-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 16 pg_jsonschema_16 pg_jsonschema_16-0.3.4-1PIGSTY.el9.x86_64.rpm pigsty 0.3.4 1.4MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_jsonschema_16-0.3.4-1PIGSTY.el9.x86_64.rpm
@@ -111,6 +116,8 @@ weight: 2760
 @ u22.aarch64 16 postgresql-16-pg-jsonschema postgresql-16-pg-jsonschema_0.3.4-1PIGSTY~jammy_arm64.deb pigsty 0.3.4 1.1MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-jsonschema/postgresql-16-pg-jsonschema_0.3.4-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 16 postgresql-16-pg-jsonschema postgresql-16-pg-jsonschema_0.3.4-1PIGSTY~noble_amd64.deb pigsty 0.3.4 1.3MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-jsonschema/postgresql-16-pg-jsonschema_0.3.4-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 16 postgresql-16-pg-jsonschema postgresql-16-pg-jsonschema_0.3.4-1PIGSTY~noble_arm64.deb pigsty 0.3.4 1.1MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-jsonschema/postgresql-16-pg-jsonschema_0.3.4-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 16 postgresql-16-pg-jsonschema postgresql-16-pg-jsonschema_0.3.4-2PIGSTY~resolute_amd64.deb pigsty 0.3.4 1.8MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-jsonschema/postgresql-16-pg-jsonschema_0.3.4-2PIGSTY~resolute_amd64.deb
+@ u26.aarch64 16 postgresql-16-pg-jsonschema postgresql-16-pg-jsonschema_0.3.4-2PIGSTY~resolute_arm64.deb pigsty 0.3.4 1.7MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-jsonschema/postgresql-16-pg-jsonschema_0.3.4-2PIGSTY~resolute_arm64.deb
 @ el8.x86_64 15 pg_jsonschema_15 pg_jsonschema_15-0.3.4-1PIGSTY.el8.x86_64.rpm pigsty 0.3.4 1.4MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_jsonschema_15-0.3.4-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 15 pg_jsonschema_15 pg_jsonschema_15-0.3.4-1PIGSTY.el8.aarch64.rpm pigsty 0.3.4 1.2MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_jsonschema_15-0.3.4-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 15 pg_jsonschema_15 pg_jsonschema_15-0.3.4-1PIGSTY.el9.x86_64.rpm pigsty 0.3.4 1.4MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_jsonschema_15-0.3.4-1PIGSTY.el9.x86_64.rpm
@@ -125,6 +132,8 @@ weight: 2760
 @ u22.aarch64 15 postgresql-15-pg-jsonschema postgresql-15-pg-jsonschema_0.3.4-1PIGSTY~jammy_arm64.deb pigsty 0.3.4 1.1MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-jsonschema/postgresql-15-pg-jsonschema_0.3.4-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 15 postgresql-15-pg-jsonschema postgresql-15-pg-jsonschema_0.3.4-1PIGSTY~noble_amd64.deb pigsty 0.3.4 1.3MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-jsonschema/postgresql-15-pg-jsonschema_0.3.4-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 15 postgresql-15-pg-jsonschema postgresql-15-pg-jsonschema_0.3.4-1PIGSTY~noble_arm64.deb pigsty 0.3.4 1.1MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-jsonschema/postgresql-15-pg-jsonschema_0.3.4-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 15 postgresql-15-pg-jsonschema postgresql-15-pg-jsonschema_0.3.4-2PIGSTY~resolute_amd64.deb pigsty 0.3.4 1.8MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-jsonschema/postgresql-15-pg-jsonschema_0.3.4-2PIGSTY~resolute_amd64.deb
+@ u26.aarch64 15 postgresql-15-pg-jsonschema postgresql-15-pg-jsonschema_0.3.4-2PIGSTY~resolute_arm64.deb pigsty 0.3.4 1.7MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-jsonschema/postgresql-15-pg-jsonschema_0.3.4-2PIGSTY~resolute_arm64.deb
 @ el8.x86_64 14 pg_jsonschema_14 pg_jsonschema_14-0.3.4-1PIGSTY.el8.x86_64.rpm pigsty 0.3.4 1.4MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_jsonschema_14-0.3.4-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 14 pg_jsonschema_14 pg_jsonschema_14-0.3.4-1PIGSTY.el8.aarch64.rpm pigsty 0.3.4 1.2MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_jsonschema_14-0.3.4-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 14 pg_jsonschema_14 pg_jsonschema_14-0.3.4-1PIGSTY.el9.x86_64.rpm pigsty 0.3.4 1.4MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_jsonschema_14-0.3.4-1PIGSTY.el9.x86_64.rpm
@@ -139,6 +148,8 @@ weight: 2760
 @ u22.aarch64 14 postgresql-14-pg-jsonschema postgresql-14-pg-jsonschema_0.3.4-1PIGSTY~jammy_arm64.deb pigsty 0.3.4 1.1MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-jsonschema/postgresql-14-pg-jsonschema_0.3.4-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 14 postgresql-14-pg-jsonschema postgresql-14-pg-jsonschema_0.3.4-1PIGSTY~noble_amd64.deb pigsty 0.3.4 1.3MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-jsonschema/postgresql-14-pg-jsonschema_0.3.4-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 14 postgresql-14-pg-jsonschema postgresql-14-pg-jsonschema_0.3.4-1PIGSTY~noble_arm64.deb pigsty 0.3.4 1.1MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-jsonschema/postgresql-14-pg-jsonschema_0.3.4-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 14 postgresql-14-pg-jsonschema postgresql-14-pg-jsonschema_0.3.4-2PIGSTY~resolute_amd64.deb pigsty 0.3.4 1.8MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-jsonschema/postgresql-14-pg-jsonschema_0.3.4-2PIGSTY~resolute_amd64.deb
+@ u26.aarch64 14 postgresql-14-pg-jsonschema postgresql-14-pg-jsonschema_0.3.4-2PIGSTY~resolute_arm64.deb pigsty 0.3.4 1.6MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-jsonschema/postgresql-14-pg-jsonschema_0.3.4-2PIGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建

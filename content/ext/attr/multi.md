@@ -218,7 +218,7 @@ weight: 40
 
 | **ID** | **扩展名** | **版本** | **属性** | **模式** | **描述** |
 |:------:|:-----------|:--------:|:--------:|:---------|:---------|
-| 5900 | [**`pgpool_adm`**](/ext/e/pgpool_adm) | `4.7.1` | `----d--` | - | PGPool 管理函数 |
+| 5900 | [**`pgpool_adm`**](/ext/e/pgpool_adm) | `4.7.2` | `----d--` | - | PGPool 管理函数 |
 | 5910 | [`pgpool_recovery`](/ext/e/pgpool_recovery) | `4.7.1` | `----d--` | - | PGPool辅助扩展，从v4.3提供的恢复函数 |
 | 5920 | [`pgpool_regclass`](/ext/e/pgpool_regclass) | `4.7.1` | `----d--` | - | PGPool辅助扩展，RegClass替代 |
 {.ext-table}
@@ -239,10 +239,10 @@ weight: 40
 
 | **ID** | **扩展名** | **版本** | **属性** | **模式** | **描述** |
 |:------:|:-----------|:--------:|:--------:|:---------|:---------|
-| 9000 | [**`documentdb`**](/ext/e/documentdb) | `0.110` | `--sLd--` | - | 微软DocumentDB的API层 |
-| 9010 | [`documentdb_core`](/ext/e/documentdb_core) | `0.110` | `--sLd--` | - | 微软DocumentDB的核心API层实现 |
-| 9020 | [`documentdb_distributed`](/ext/e/documentdb_distributed) | `0.110` | `--sLd--` | - | DocumentDB多节点模式的API层 |
-| 9030 | [`documentdb_extended_rum`](/ext/e/documentdb_extended_rum) | `0.110` | `--sLd-r` | - | DocumentDB扩展RUM索引访问方法 |
+| 9000 | [**`documentdb`**](/ext/e/documentdb) | `0.112` | `--sLd--` | - | 微软DocumentDB的API层 |
+| 9010 | [`documentdb_core`](/ext/e/documentdb_core) | `0.112` | `--sLd--` | - | 微软DocumentDB的核心API层实现 |
+| 9020 | [`documentdb_distributed`](/ext/e/documentdb_distributed) | `0.112` | `--sLd--` | - | DocumentDB多节点模式的API层 |
+| 9030 | [`documentdb_extended_rum`](/ext/e/documentdb_extended_rum) | `0.112` | `--sLd-r` | - | DocumentDB扩展RUM索引访问方法 |
 {.ext-table}
 
 ### ivorysql

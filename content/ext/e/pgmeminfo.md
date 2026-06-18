@@ -55,8 +55,8 @@ weight: 6520
 |:--:|:--:|:--:|:--:|:--:|:--:|
 | el8.x86_64 | AVAIL PGDG 1.0.0 2 | AVAIL PGDG 1.0.0 2 | AVAIL PIGSTY 1.0.0 2 | AVAIL PIGSTY 1.0.0 2 | AVAIL PIGSTY 1.0.0 2 |
 | el8.aarch64 | AVAIL PGDG 1.0.0 2 | AVAIL PGDG 1.0.0 2 | AVAIL PIGSTY 1.0.0 2 | AVAIL PIGSTY 1.0.0 2 | AVAIL PIGSTY 1.0.0 2 |
-| el9.x86_64 | AVAIL PGDG 1.0.0 2 | AVAIL PGDG 1.0.0 2 | AVAIL PIGSTY 1.0.0 2 | AVAIL PIGSTY 1.0.0 2 | AVAIL PIGSTY 1.0.0 2 |
-| el9.aarch64 | AVAIL PGDG 1.0.0 2 | AVAIL PGDG 1.0.0 2 | AVAIL PIGSTY 1.0.0 2 | AVAIL PIGSTY 1.0.0 2 | AVAIL PIGSTY 1.0.0 2 |
+| el9.x86_64 | AVAIL PGDG 1.0.0 2 | AVAIL PGDG 1.0.0 2 | AVAIL PGDG 1.0.0 2 | AVAIL PGDG 1.0.0 2 | AVAIL PGDG 1.0.0 2 |
+| el9.aarch64 | AVAIL PGDG 1.0.0 2 | AVAIL PGDG 1.0.0 2 | AVAIL PGDG 1.0.0 2 | AVAIL PGDG 1.0.0 2 | AVAIL PGDG 1.0.0 2 |
 | el10.x86_64 | AVAIL PGDG 1.0.0 2 | AVAIL PGDG 1.0.0 2 | AVAIL PGDG 1.0.0 2 | AVAIL PGDG 1.0.0 2 | AVAIL PGDG 1.0.0 2 |
 | el10.aarch64 | AVAIL PGDG 1.0.0 2 | AVAIL PGDG 1.0.0 2 | AVAIL PGDG 1.0.0 2 | AVAIL PGDG 1.0.0 2 | AVAIL PGDG 1.0.0 2 |
 | d12.x86_64 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 |
@@ -73,13 +73,13 @@ weight: 6520
 @ el8.x86_64 18 pgmeminfo_18 pgmeminfo_18-1.0.0-1PIGSTY.el8.x86_64.rpm pigsty 1.0.0 14.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgmeminfo_18-1.0.0-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 18 pgmeminfo_18 pgmeminfo_18-1.0.0-3PGDG.rhel8.aarch64.rpm pgdg 1.0.0 15.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pgmeminfo_18-1.0.0-3PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 18 pgmeminfo_18 pgmeminfo_18-1.0.0-1PIGSTY.el8.aarch64.rpm pigsty 1.0.0 15.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgmeminfo_18-1.0.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 18 pgmeminfo_18 pgmeminfo_18-1.0.0-3PGDG.rhel9.x86_64.rpm pgdg 1.0.0 15.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pgmeminfo_18-1.0.0-3PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 18 pgmeminfo_18 pgmeminfo_18-1.0.0-5PGDG.rhel9.8.x86_64.rpm pgdg 1.0.0 15.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pgmeminfo_18-1.0.0-5PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 18 pgmeminfo_18 pgmeminfo_18-1.0.0-1PIGSTY.el9.x86_64.rpm pigsty 1.0.0 14.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgmeminfo_18-1.0.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 18 pgmeminfo_18 pgmeminfo_18-1.0.0-3PGDG.rhel9.aarch64.rpm pgdg 1.0.0 15.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pgmeminfo_18-1.0.0-3PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 18 pgmeminfo_18 pgmeminfo_18-1.0.0-5PGDG.rhel9.8.aarch64.rpm pgdg 1.0.0 15.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pgmeminfo_18-1.0.0-5PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 18 pgmeminfo_18 pgmeminfo_18-1.0.0-1PIGSTY.el9.aarch64.rpm pigsty 1.0.0 14.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgmeminfo_18-1.0.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 18 pgmeminfo_18 pgmeminfo_18-1.0.0-3PGDG.rhel10.x86_64.rpm pgdg 1.0.0 15.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pgmeminfo_18-1.0.0-3PGDG.rhel10.x86_64.rpm
+@ el10.x86_64 18 pgmeminfo_18 pgmeminfo_18-1.0.0-5PGDG.rhel10.2.x86_64.rpm pgdg 1.0.0 15.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pgmeminfo_18-1.0.0-5PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 18 pgmeminfo_18 pgmeminfo_18-1.0.0-1PIGSTY.el10.x86_64.rpm pigsty 1.0.0 15.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgmeminfo_18-1.0.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 18 pgmeminfo_18 pgmeminfo_18-1.0.0-3PGDG.rhel10.aarch64.rpm pgdg 1.0.0 15.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pgmeminfo_18-1.0.0-3PGDG.rhel10.aarch64.rpm
+@ el10.aarch64 18 pgmeminfo_18 pgmeminfo_18-1.0.0-5PGDG.rhel10.2.aarch64.rpm pgdg 1.0.0 15.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pgmeminfo_18-1.0.0-5PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 18 pgmeminfo_18 pgmeminfo_18-1.0.0-1PIGSTY.el10.aarch64.rpm pigsty 1.0.0 15.0KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgmeminfo_18-1.0.0-1PIGSTY.el10.aarch64.rpm
 @ d12.x86_64 18 postgresql-18-pgmeminfo postgresql-18-pgmeminfo_1.0.0-1PIGSTY~bookworm_amd64.deb pigsty 1.0.0 14.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgmeminfo/postgresql-18-pgmeminfo_1.0.0-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 18 postgresql-18-pgmeminfo postgresql-18-pgmeminfo_1.0.0-1PIGSTY~bookworm_arm64.deb pigsty 1.0.0 13.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgmeminfo/postgresql-18-pgmeminfo_1.0.0-1PIGSTY~bookworm_arm64.deb
@@ -95,13 +95,13 @@ weight: 6520
 @ el8.x86_64 17 pgmeminfo_17 pgmeminfo_17-1.0.0-1PIGSTY.el8.x86_64.rpm pigsty 1.0.0 14.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgmeminfo_17-1.0.0-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 17 pgmeminfo_17 pgmeminfo_17-1.0.0-2PGDG.rhel8.aarch64.rpm pgdg 1.0.0 15.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pgmeminfo_17-1.0.0-2PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 17 pgmeminfo_17 pgmeminfo_17-1.0.0-1PIGSTY.el8.aarch64.rpm pigsty 1.0.0 15.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgmeminfo_17-1.0.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 17 pgmeminfo_17 pgmeminfo_17-1.0.0-2PGDG.rhel9.x86_64.rpm pgdg 1.0.0 15.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pgmeminfo_17-1.0.0-2PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 17 pgmeminfo_17 pgmeminfo_17-1.0.0-5PGDG.rhel9.8.x86_64.rpm pgdg 1.0.0 15.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pgmeminfo_17-1.0.0-5PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 17 pgmeminfo_17 pgmeminfo_17-1.0.0-1PIGSTY.el9.x86_64.rpm pigsty 1.0.0 14.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgmeminfo_17-1.0.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 17 pgmeminfo_17 pgmeminfo_17-1.0.0-2PGDG.rhel9.aarch64.rpm pgdg 1.0.0 15.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pgmeminfo_17-1.0.0-2PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 17 pgmeminfo_17 pgmeminfo_17-1.0.0-5PGDG.rhel9.8.aarch64.rpm pgdg 1.0.0 15.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pgmeminfo_17-1.0.0-5PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 17 pgmeminfo_17 pgmeminfo_17-1.0.0-1PIGSTY.el9.aarch64.rpm pigsty 1.0.0 14.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgmeminfo_17-1.0.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 17 pgmeminfo_17 pgmeminfo_17-1.0.0-3PGDG.rhel10.x86_64.rpm pgdg 1.0.0 15.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pgmeminfo_17-1.0.0-3PGDG.rhel10.x86_64.rpm
+@ el10.x86_64 17 pgmeminfo_17 pgmeminfo_17-1.0.0-5PGDG.rhel10.2.x86_64.rpm pgdg 1.0.0 15.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pgmeminfo_17-1.0.0-5PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 17 pgmeminfo_17 pgmeminfo_17-1.0.0-1PIGSTY.el10.x86_64.rpm pigsty 1.0.0 15.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgmeminfo_17-1.0.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 17 pgmeminfo_17 pgmeminfo_17-1.0.0-3PGDG.rhel10.aarch64.rpm pgdg 1.0.0 15.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pgmeminfo_17-1.0.0-3PGDG.rhel10.aarch64.rpm
+@ el10.aarch64 17 pgmeminfo_17 pgmeminfo_17-1.0.0-5PGDG.rhel10.2.aarch64.rpm pgdg 1.0.0 15.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pgmeminfo_17-1.0.0-5PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 17 pgmeminfo_17 pgmeminfo_17-1.0.0-1PIGSTY.el10.aarch64.rpm pigsty 1.0.0 15.0KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgmeminfo_17-1.0.0-1PIGSTY.el10.aarch64.rpm
 @ d12.x86_64 17 postgresql-17-pgmeminfo postgresql-17-pgmeminfo_1.0.0-1PIGSTY~bookworm_amd64.deb pigsty 1.0.0 14.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgmeminfo/postgresql-17-pgmeminfo_1.0.0-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 17 postgresql-17-pgmeminfo postgresql-17-pgmeminfo_1.0.0-1PIGSTY~bookworm_arm64.deb pigsty 1.0.0 14.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgmeminfo/postgresql-17-pgmeminfo_1.0.0-1PIGSTY~bookworm_arm64.deb
@@ -117,13 +117,13 @@ weight: 6520
 @ el8.x86_64 16 pgmeminfo_16 pgmeminfo_16-1.0.0-1PGDG.rhel8.x86_64.rpm pgdg 1.0.0 15.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pgmeminfo_16-1.0.0-1PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 16 pgmeminfo_16 pgmeminfo_16-1.0.0-1PIGSTY.el8.aarch64.rpm pigsty 1.0.0 15.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgmeminfo_16-1.0.0-1PIGSTY.el8.aarch64.rpm
 @ el8.aarch64 16 pgmeminfo_16 pgmeminfo_16-1.0.0-1PGDG.rhel8.aarch64.rpm pgdg 1.0.0 14.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pgmeminfo_16-1.0.0-1PGDG.rhel8.aarch64.rpm
+@ el9.x86_64 16 pgmeminfo_16 pgmeminfo_16-1.0.0-5PGDG.rhel9.8.x86_64.rpm pgdg 1.0.0 15.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pgmeminfo_16-1.0.0-5PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 16 pgmeminfo_16 pgmeminfo_16-1.0.0-1PIGSTY.el9.x86_64.rpm pigsty 1.0.0 14.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgmeminfo_16-1.0.0-1PIGSTY.el9.x86_64.rpm
-@ el9.x86_64 16 pgmeminfo_16 pgmeminfo_16-1.0.0-1PGDG.rhel9.x86_64.rpm pgdg 1.0.0 15.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pgmeminfo_16-1.0.0-1PGDG.rhel9.x86_64.rpm
+@ el9.aarch64 16 pgmeminfo_16 pgmeminfo_16-1.0.0-5PGDG.rhel9.8.aarch64.rpm pgdg 1.0.0 15.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pgmeminfo_16-1.0.0-5PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 16 pgmeminfo_16 pgmeminfo_16-1.0.0-1PIGSTY.el9.aarch64.rpm pigsty 1.0.0 14.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgmeminfo_16-1.0.0-1PIGSTY.el9.aarch64.rpm
-@ el9.aarch64 16 pgmeminfo_16 pgmeminfo_16-1.0.0-1PGDG.rhel9.aarch64.rpm pgdg 1.0.0 14.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pgmeminfo_16-1.0.0-1PGDG.rhel9.aarch64.rpm
-@ el10.x86_64 16 pgmeminfo_16 pgmeminfo_16-1.0.0-3PGDG.rhel10.x86_64.rpm pgdg 1.0.0 15.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pgmeminfo_16-1.0.0-3PGDG.rhel10.x86_64.rpm
+@ el10.x86_64 16 pgmeminfo_16 pgmeminfo_16-1.0.0-5PGDG.rhel10.2.x86_64.rpm pgdg 1.0.0 15.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pgmeminfo_16-1.0.0-5PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 16 pgmeminfo_16 pgmeminfo_16-1.0.0-1PIGSTY.el10.x86_64.rpm pigsty 1.0.0 15.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgmeminfo_16-1.0.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 16 pgmeminfo_16 pgmeminfo_16-1.0.0-3PGDG.rhel10.aarch64.rpm pgdg 1.0.0 15.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pgmeminfo_16-1.0.0-3PGDG.rhel10.aarch64.rpm
+@ el10.aarch64 16 pgmeminfo_16 pgmeminfo_16-1.0.0-5PGDG.rhel10.2.aarch64.rpm pgdg 1.0.0 15.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pgmeminfo_16-1.0.0-5PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 16 pgmeminfo_16 pgmeminfo_16-1.0.0-1PIGSTY.el10.aarch64.rpm pigsty 1.0.0 15.0KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgmeminfo_16-1.0.0-1PIGSTY.el10.aarch64.rpm
 @ d12.x86_64 16 postgresql-16-pgmeminfo postgresql-16-pgmeminfo_1.0.0-1PIGSTY~bookworm_amd64.deb pigsty 1.0.0 14.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgmeminfo/postgresql-16-pgmeminfo_1.0.0-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 16 postgresql-16-pgmeminfo postgresql-16-pgmeminfo_1.0.0-1PIGSTY~bookworm_arm64.deb pigsty 1.0.0 14.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgmeminfo/postgresql-16-pgmeminfo_1.0.0-1PIGSTY~bookworm_arm64.deb
@@ -139,13 +139,13 @@ weight: 6520
 @ el8.x86_64 15 pgmeminfo_15 pgmeminfo_15-1.0.0-1PGDG.rhel8.x86_64.rpm pgdg 1.0.0 15.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pgmeminfo_15-1.0.0-1PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 15 pgmeminfo_15 pgmeminfo_15-1.0.0-1PIGSTY.el8.aarch64.rpm pigsty 1.0.0 15.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgmeminfo_15-1.0.0-1PIGSTY.el8.aarch64.rpm
 @ el8.aarch64 15 pgmeminfo_15 pgmeminfo_15-1.0.0-1PGDG.rhel8.aarch64.rpm pgdg 1.0.0 14.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pgmeminfo_15-1.0.0-1PGDG.rhel8.aarch64.rpm
+@ el9.x86_64 15 pgmeminfo_15 pgmeminfo_15-1.0.0-5PGDG.rhel9.8.x86_64.rpm pgdg 1.0.0 15.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pgmeminfo_15-1.0.0-5PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 15 pgmeminfo_15 pgmeminfo_15-1.0.0-1PIGSTY.el9.x86_64.rpm pigsty 1.0.0 14.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgmeminfo_15-1.0.0-1PIGSTY.el9.x86_64.rpm
-@ el9.x86_64 15 pgmeminfo_15 pgmeminfo_15-1.0.0-1PGDG.rhel9.x86_64.rpm pgdg 1.0.0 15.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pgmeminfo_15-1.0.0-1PGDG.rhel9.x86_64.rpm
+@ el9.aarch64 15 pgmeminfo_15 pgmeminfo_15-1.0.0-5PGDG.rhel9.8.aarch64.rpm pgdg 1.0.0 15.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pgmeminfo_15-1.0.0-5PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 15 pgmeminfo_15 pgmeminfo_15-1.0.0-1PIGSTY.el9.aarch64.rpm pigsty 1.0.0 14.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgmeminfo_15-1.0.0-1PIGSTY.el9.aarch64.rpm
-@ el9.aarch64 15 pgmeminfo_15 pgmeminfo_15-1.0.0-1PGDG.rhel9.aarch64.rpm pgdg 1.0.0 14.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pgmeminfo_15-1.0.0-1PGDG.rhel9.aarch64.rpm
-@ el10.x86_64 15 pgmeminfo_15 pgmeminfo_15-1.0.0-3PGDG.rhel10.x86_64.rpm pgdg 1.0.0 15.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pgmeminfo_15-1.0.0-3PGDG.rhel10.x86_64.rpm
+@ el10.x86_64 15 pgmeminfo_15 pgmeminfo_15-1.0.0-5PGDG.rhel10.2.x86_64.rpm pgdg 1.0.0 15.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pgmeminfo_15-1.0.0-5PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 15 pgmeminfo_15 pgmeminfo_15-1.0.0-1PIGSTY.el10.x86_64.rpm pigsty 1.0.0 15.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgmeminfo_15-1.0.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 15 pgmeminfo_15 pgmeminfo_15-1.0.0-3PGDG.rhel10.aarch64.rpm pgdg 1.0.0 15.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pgmeminfo_15-1.0.0-3PGDG.rhel10.aarch64.rpm
+@ el10.aarch64 15 pgmeminfo_15 pgmeminfo_15-1.0.0-5PGDG.rhel10.2.aarch64.rpm pgdg 1.0.0 15.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pgmeminfo_15-1.0.0-5PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 15 pgmeminfo_15 pgmeminfo_15-1.0.0-1PIGSTY.el10.aarch64.rpm pigsty 1.0.0 15.0KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgmeminfo_15-1.0.0-1PIGSTY.el10.aarch64.rpm
 @ d12.x86_64 15 postgresql-15-pgmeminfo postgresql-15-pgmeminfo_1.0.0-1PIGSTY~bookworm_amd64.deb pigsty 1.0.0 14.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgmeminfo/postgresql-15-pgmeminfo_1.0.0-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 15 postgresql-15-pgmeminfo postgresql-15-pgmeminfo_1.0.0-1PIGSTY~bookworm_arm64.deb pigsty 1.0.0 14.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgmeminfo/postgresql-15-pgmeminfo_1.0.0-1PIGSTY~bookworm_arm64.deb
@@ -161,13 +161,13 @@ weight: 6520
 @ el8.x86_64 14 pgmeminfo_14 pgmeminfo_14-1.0.0-1PGDG.rhel8.x86_64.rpm pgdg 1.0.0 14.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pgmeminfo_14-1.0.0-1PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 14 pgmeminfo_14 pgmeminfo_14-1.0.0-1PIGSTY.el8.aarch64.rpm pigsty 1.0.0 15.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgmeminfo_14-1.0.0-1PIGSTY.el8.aarch64.rpm
 @ el8.aarch64 14 pgmeminfo_14 pgmeminfo_14-1.0.0-1PGDG.rhel8.aarch64.rpm pgdg 1.0.0 14.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pgmeminfo_14-1.0.0-1PGDG.rhel8.aarch64.rpm
+@ el9.x86_64 14 pgmeminfo_14 pgmeminfo_14-1.0.0-5PGDG.rhel9.8.x86_64.rpm pgdg 1.0.0 15.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pgmeminfo_14-1.0.0-5PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 14 pgmeminfo_14 pgmeminfo_14-1.0.0-1PIGSTY.el9.x86_64.rpm pigsty 1.0.0 14.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgmeminfo_14-1.0.0-1PIGSTY.el9.x86_64.rpm
-@ el9.x86_64 14 pgmeminfo_14 pgmeminfo_14-1.0.0-1PGDG.rhel9.x86_64.rpm pgdg 1.0.0 15.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pgmeminfo_14-1.0.0-1PGDG.rhel9.x86_64.rpm
+@ el9.aarch64 14 pgmeminfo_14 pgmeminfo_14-1.0.0-5PGDG.rhel9.8.aarch64.rpm pgdg 1.0.0 15.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pgmeminfo_14-1.0.0-5PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 14 pgmeminfo_14 pgmeminfo_14-1.0.0-1PIGSTY.el9.aarch64.rpm pigsty 1.0.0 14.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgmeminfo_14-1.0.0-1PIGSTY.el9.aarch64.rpm
-@ el9.aarch64 14 pgmeminfo_14 pgmeminfo_14-1.0.0-1PGDG.rhel9.aarch64.rpm pgdg 1.0.0 14.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pgmeminfo_14-1.0.0-1PGDG.rhel9.aarch64.rpm
-@ el10.x86_64 14 pgmeminfo_14 pgmeminfo_14-1.0.0-3PGDG.rhel10.x86_64.rpm pgdg 1.0.0 15.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pgmeminfo_14-1.0.0-3PGDG.rhel10.x86_64.rpm
+@ el10.x86_64 14 pgmeminfo_14 pgmeminfo_14-1.0.0-5PGDG.rhel10.2.x86_64.rpm pgdg 1.0.0 15.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pgmeminfo_14-1.0.0-5PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 14 pgmeminfo_14 pgmeminfo_14-1.0.0-1PIGSTY.el10.x86_64.rpm pigsty 1.0.0 15.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgmeminfo_14-1.0.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 14 pgmeminfo_14 pgmeminfo_14-1.0.0-3PGDG.rhel10.aarch64.rpm pgdg 1.0.0 15.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgmeminfo_14-1.0.0-3PGDG.rhel10.aarch64.rpm
+@ el10.aarch64 14 pgmeminfo_14 pgmeminfo_14-1.0.0-5PGDG.rhel10.2.aarch64.rpm pgdg 1.0.0 15.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgmeminfo_14-1.0.0-5PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 14 pgmeminfo_14 pgmeminfo_14-1.0.0-1PIGSTY.el10.aarch64.rpm pigsty 1.0.0 15.0KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgmeminfo_14-1.0.0-1PIGSTY.el10.aarch64.rpm
 @ d12.x86_64 14 postgresql-14-pgmeminfo postgresql-14-pgmeminfo_1.0.0-1PIGSTY~bookworm_amd64.deb pigsty 1.0.0 14.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgmeminfo/postgresql-14-pgmeminfo_1.0.0-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 14 postgresql-14-pgmeminfo postgresql-14-pgmeminfo_1.0.0-1PIGSTY~bookworm_arm64.deb pigsty 1.0.0 13.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgmeminfo/postgresql-14-pgmeminfo_1.0.0-1PIGSTY~bookworm_arm64.deb

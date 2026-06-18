@@ -11,10 +11,10 @@ weight: 7060
     <div class="ext-card__title">neondatabase/pg_session_jwt</div>
     <div class="ext-card__desc">https://github.com/neondatabase/pg_session_jwt</div>
   </a>
-  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pg_session_jwt-0.4.0.tar.gz">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pg_session_jwt-0.5.0.tar.gz">
     <div class="ext-card__kicker">源码</div>
-    <div class="ext-card__title">pg_session_jwt-0.4.0.tar.gz</div>
-    <div class="ext-card__desc">pg_session_jwt-0.4.0.tar.gz</div>
+    <div class="ext-card__title">pg_session_jwt-0.5.0.tar.gz</div>
+    <div class="ext-card__desc">pg_session_jwt-0.5.0.tar.gz</div>
   </a>
 </div>
 
@@ -25,7 +25,7 @@ weight: 7060
 
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
-| [**`pg_session_jwt`**](/ext/e/pg_session_jwt) | `0.4.0` | <a class="ext-badge ext-badge--cate sec" href="/ext/cate/sec">SEC</a> | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> |
+| [**`pg_session_jwt`**](/ext/e/pg_session_jwt) | `0.5.0` | <a class="ext-badge ext-badge--cate sec" href="/ext/cate/sec">SEC</a> | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> |
 {.ext-table}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
@@ -38,107 +38,117 @@ weight: 7060
 {.ext-table .ext-table--rel}
 
 
-> manual updated pgrx by Vonng
+> pgrx patched to 0.18.1.
 
 
 ## 版本
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#sec) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.4.0` | {{< pgvers "18,17,16,15,14" >}} | `pg_session_jwt` | - |
-| [**RPM**](/ext/rpm#sec) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.4.0` | {{< pgvers "18,17,16,15,14" >}} | `pg_session_jwt_$v` | - |
-| [**DEB**](/ext/deb#sec) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.4.0` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pg-session-jwt` | - |
+| [**EXT**](/ext/list#sec) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.5.0` | {{< pgvers "18,17,16,15,14" >}} | `pg_session_jwt` | - |
+| [**RPM**](/ext/rpm#sec) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.5.0` | {{< pgvers "18,17,16,15,14" >}} | `pg_session_jwt_$v` | - |
+| [**DEB**](/ext/deb#sec) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.5.0` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pg-session-jwt` | - |
 {.ext-table}
 
 {{< pgext_matrix >}}
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 |
-| el8.aarch64 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 |
-| el9.x86_64 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 |
-| el9.aarch64 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 |
-| el10.x86_64 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 |
-| el10.aarch64 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 |
-| d12.x86_64 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 |
-| d12.aarch64 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 |
-| d13.x86_64 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 |
-| d13.aarch64 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 |
-| u22.x86_64 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 |
-| u22.aarch64 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 |
-| u24.x86_64 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 |
-| u24.aarch64 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 |
-| u26.x86_64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| u26.aarch64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-@ el8.x86_64 18 pg_session_jwt_18 pg_session_jwt_18-0.4.0-1PIGSTY.el8.x86_64.rpm pigsty 0.4.0 435.6KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_session_jwt_18-0.4.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 18 pg_session_jwt_18 pg_session_jwt_18-0.4.0-1PIGSTY.el8.aarch64.rpm pigsty 0.4.0 308.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_session_jwt_18-0.4.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 18 pg_session_jwt_18 pg_session_jwt_18-0.4.0-1PIGSTY.el9.x86_64.rpm pigsty 0.4.0 450.7KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_session_jwt_18-0.4.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 18 pg_session_jwt_18 pg_session_jwt_18-0.4.0-1PIGSTY.el9.aarch64.rpm pigsty 0.4.0 327.7KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_session_jwt_18-0.4.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 18 pg_session_jwt_18 pg_session_jwt_18-0.4.0-1PIGSTY.el10.x86_64.rpm pigsty 0.4.0 450.8KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_session_jwt_18-0.4.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 18 pg_session_jwt_18 pg_session_jwt_18-0.4.0-1PIGSTY.el10.aarch64.rpm pigsty 0.4.0 327.8KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_session_jwt_18-0.4.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 18 postgresql-18-pg-session-jwt postgresql-18-pg-session-jwt_0.4.0-1PIGSTY~bookworm_amd64.deb pigsty 0.4.0 364.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-session-jwt/postgresql-18-pg-session-jwt_0.4.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 18 postgresql-18-pg-session-jwt postgresql-18-pg-session-jwt_0.4.0-1PIGSTY~bookworm_arm64.deb pigsty 0.4.0 245.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-session-jwt/postgresql-18-pg-session-jwt_0.4.0-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 18 postgresql-18-pg-session-jwt postgresql-18-pg-session-jwt_0.4.0-1PIGSTY~trixie_amd64.deb pigsty 0.4.0 363.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-session-jwt/postgresql-18-pg-session-jwt_0.4.0-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 18 postgresql-18-pg-session-jwt postgresql-18-pg-session-jwt_0.4.0-1PIGSTY~trixie_arm64.deb pigsty 0.4.0 245.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-session-jwt/postgresql-18-pg-session-jwt_0.4.0-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 18 postgresql-18-pg-session-jwt postgresql-18-pg-session-jwt_0.4.0-1PIGSTY~jammy_amd64.deb pigsty 0.4.0 406.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-session-jwt/postgresql-18-pg-session-jwt_0.4.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 18 postgresql-18-pg-session-jwt postgresql-18-pg-session-jwt_0.4.0-1PIGSTY~jammy_arm64.deb pigsty 0.4.0 284.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-session-jwt/postgresql-18-pg-session-jwt_0.4.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 18 postgresql-18-pg-session-jwt postgresql-18-pg-session-jwt_0.4.0-1PIGSTY~noble_amd64.deb pigsty 0.4.0 403.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-session-jwt/postgresql-18-pg-session-jwt_0.4.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 18 postgresql-18-pg-session-jwt postgresql-18-pg-session-jwt_0.4.0-1PIGSTY~noble_arm64.deb pigsty 0.4.0 281.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-session-jwt/postgresql-18-pg-session-jwt_0.4.0-1PIGSTY~noble_arm64.deb
-@ el8.x86_64 17 pg_session_jwt_17 pg_session_jwt_17-0.4.0-1PIGSTY.el8.x86_64.rpm pigsty 0.4.0 435.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_session_jwt_17-0.4.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 17 pg_session_jwt_17 pg_session_jwt_17-0.4.0-1PIGSTY.el8.aarch64.rpm pigsty 0.4.0 308.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_session_jwt_17-0.4.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 17 pg_session_jwt_17 pg_session_jwt_17-0.4.0-1PIGSTY.el9.x86_64.rpm pigsty 0.4.0 450.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_session_jwt_17-0.4.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 17 pg_session_jwt_17 pg_session_jwt_17-0.4.0-1PIGSTY.el9.aarch64.rpm pigsty 0.4.0 327.8KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_session_jwt_17-0.4.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 17 pg_session_jwt_17 pg_session_jwt_17-0.4.0-1PIGSTY.el10.x86_64.rpm pigsty 0.4.0 451.4KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_session_jwt_17-0.4.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 17 pg_session_jwt_17 pg_session_jwt_17-0.4.0-1PIGSTY.el10.aarch64.rpm pigsty 0.4.0 327.8KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_session_jwt_17-0.4.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 17 postgresql-17-pg-session-jwt postgresql-17-pg-session-jwt_0.4.0-1PIGSTY~bookworm_amd64.deb pigsty 0.4.0 364.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-session-jwt/postgresql-17-pg-session-jwt_0.4.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 17 postgresql-17-pg-session-jwt postgresql-17-pg-session-jwt_0.4.0-1PIGSTY~bookworm_arm64.deb pigsty 0.4.0 245.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-session-jwt/postgresql-17-pg-session-jwt_0.4.0-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 17 postgresql-17-pg-session-jwt postgresql-17-pg-session-jwt_0.4.0-1PIGSTY~trixie_amd64.deb pigsty 0.4.0 364.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-session-jwt/postgresql-17-pg-session-jwt_0.4.0-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 17 postgresql-17-pg-session-jwt postgresql-17-pg-session-jwt_0.4.0-1PIGSTY~trixie_arm64.deb pigsty 0.4.0 245.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-session-jwt/postgresql-17-pg-session-jwt_0.4.0-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 17 postgresql-17-pg-session-jwt postgresql-17-pg-session-jwt_0.4.0-1PIGSTY~jammy_amd64.deb pigsty 0.4.0 407.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-session-jwt/postgresql-17-pg-session-jwt_0.4.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 17 postgresql-17-pg-session-jwt postgresql-17-pg-session-jwt_0.4.0-1PIGSTY~jammy_arm64.deb pigsty 0.4.0 284.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-session-jwt/postgresql-17-pg-session-jwt_0.4.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 17 postgresql-17-pg-session-jwt postgresql-17-pg-session-jwt_0.4.0-1PIGSTY~noble_amd64.deb pigsty 0.4.0 403.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-session-jwt/postgresql-17-pg-session-jwt_0.4.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 17 postgresql-17-pg-session-jwt postgresql-17-pg-session-jwt_0.4.0-1PIGSTY~noble_arm64.deb pigsty 0.4.0 281.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-session-jwt/postgresql-17-pg-session-jwt_0.4.0-1PIGSTY~noble_arm64.deb
-@ el8.x86_64 16 pg_session_jwt_16 pg_session_jwt_16-0.4.0-1PIGSTY.el8.x86_64.rpm pigsty 0.4.0 435.6KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_session_jwt_16-0.4.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 16 pg_session_jwt_16 pg_session_jwt_16-0.4.0-1PIGSTY.el8.aarch64.rpm pigsty 0.4.0 308.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_session_jwt_16-0.4.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 16 pg_session_jwt_16 pg_session_jwt_16-0.4.0-1PIGSTY.el9.x86_64.rpm pigsty 0.4.0 451.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_session_jwt_16-0.4.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 16 pg_session_jwt_16 pg_session_jwt_16-0.4.0-1PIGSTY.el9.aarch64.rpm pigsty 0.4.0 327.7KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_session_jwt_16-0.4.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 16 pg_session_jwt_16 pg_session_jwt_16-0.4.0-1PIGSTY.el10.x86_64.rpm pigsty 0.4.0 451.4KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_session_jwt_16-0.4.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 16 pg_session_jwt_16 pg_session_jwt_16-0.4.0-1PIGSTY.el10.aarch64.rpm pigsty 0.4.0 327.7KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_session_jwt_16-0.4.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 16 postgresql-16-pg-session-jwt postgresql-16-pg-session-jwt_0.4.0-1PIGSTY~bookworm_amd64.deb pigsty 0.4.0 363.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-session-jwt/postgresql-16-pg-session-jwt_0.4.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 16 postgresql-16-pg-session-jwt postgresql-16-pg-session-jwt_0.4.0-1PIGSTY~bookworm_arm64.deb pigsty 0.4.0 245.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-session-jwt/postgresql-16-pg-session-jwt_0.4.0-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 16 postgresql-16-pg-session-jwt postgresql-16-pg-session-jwt_0.4.0-1PIGSTY~trixie_amd64.deb pigsty 0.4.0 364.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-session-jwt/postgresql-16-pg-session-jwt_0.4.0-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 16 postgresql-16-pg-session-jwt postgresql-16-pg-session-jwt_0.4.0-1PIGSTY~trixie_arm64.deb pigsty 0.4.0 245.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-session-jwt/postgresql-16-pg-session-jwt_0.4.0-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 16 postgresql-16-pg-session-jwt postgresql-16-pg-session-jwt_0.4.0-1PIGSTY~jammy_amd64.deb pigsty 0.4.0 407.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-session-jwt/postgresql-16-pg-session-jwt_0.4.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 16 postgresql-16-pg-session-jwt postgresql-16-pg-session-jwt_0.4.0-1PIGSTY~jammy_arm64.deb pigsty 0.4.0 284.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-session-jwt/postgresql-16-pg-session-jwt_0.4.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 16 postgresql-16-pg-session-jwt postgresql-16-pg-session-jwt_0.4.0-1PIGSTY~noble_amd64.deb pigsty 0.4.0 403.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-session-jwt/postgresql-16-pg-session-jwt_0.4.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 16 postgresql-16-pg-session-jwt postgresql-16-pg-session-jwt_0.4.0-1PIGSTY~noble_arm64.deb pigsty 0.4.0 281.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-session-jwt/postgresql-16-pg-session-jwt_0.4.0-1PIGSTY~noble_arm64.deb
-@ el8.x86_64 15 pg_session_jwt_15 pg_session_jwt_15-0.4.0-1PIGSTY.el8.x86_64.rpm pigsty 0.4.0 435.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_session_jwt_15-0.4.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 15 pg_session_jwt_15 pg_session_jwt_15-0.4.0-1PIGSTY.el8.aarch64.rpm pigsty 0.4.0 308.4KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_session_jwt_15-0.4.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 15 pg_session_jwt_15 pg_session_jwt_15-0.4.0-1PIGSTY.el9.x86_64.rpm pigsty 0.4.0 450.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_session_jwt_15-0.4.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 15 pg_session_jwt_15 pg_session_jwt_15-0.4.0-1PIGSTY.el9.aarch64.rpm pigsty 0.4.0 327.7KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_session_jwt_15-0.4.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 15 pg_session_jwt_15 pg_session_jwt_15-0.4.0-1PIGSTY.el10.x86_64.rpm pigsty 0.4.0 451.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_session_jwt_15-0.4.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 15 pg_session_jwt_15 pg_session_jwt_15-0.4.0-1PIGSTY.el10.aarch64.rpm pigsty 0.4.0 327.8KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_session_jwt_15-0.4.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 15 postgresql-15-pg-session-jwt postgresql-15-pg-session-jwt_0.4.0-1PIGSTY~bookworm_amd64.deb pigsty 0.4.0 363.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-session-jwt/postgresql-15-pg-session-jwt_0.4.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 15 postgresql-15-pg-session-jwt postgresql-15-pg-session-jwt_0.4.0-1PIGSTY~bookworm_arm64.deb pigsty 0.4.0 245.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-session-jwt/postgresql-15-pg-session-jwt_0.4.0-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 15 postgresql-15-pg-session-jwt postgresql-15-pg-session-jwt_0.4.0-1PIGSTY~trixie_amd64.deb pigsty 0.4.0 363.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-session-jwt/postgresql-15-pg-session-jwt_0.4.0-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 15 postgresql-15-pg-session-jwt postgresql-15-pg-session-jwt_0.4.0-1PIGSTY~trixie_arm64.deb pigsty 0.4.0 246.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-session-jwt/postgresql-15-pg-session-jwt_0.4.0-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 15 postgresql-15-pg-session-jwt postgresql-15-pg-session-jwt_0.4.0-1PIGSTY~jammy_amd64.deb pigsty 0.4.0 406.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-session-jwt/postgresql-15-pg-session-jwt_0.4.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 15 postgresql-15-pg-session-jwt postgresql-15-pg-session-jwt_0.4.0-1PIGSTY~jammy_arm64.deb pigsty 0.4.0 284.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-session-jwt/postgresql-15-pg-session-jwt_0.4.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 15 postgresql-15-pg-session-jwt postgresql-15-pg-session-jwt_0.4.0-1PIGSTY~noble_amd64.deb pigsty 0.4.0 402.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-session-jwt/postgresql-15-pg-session-jwt_0.4.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 15 postgresql-15-pg-session-jwt postgresql-15-pg-session-jwt_0.4.0-1PIGSTY~noble_arm64.deb pigsty 0.4.0 281.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-session-jwt/postgresql-15-pg-session-jwt_0.4.0-1PIGSTY~noble_arm64.deb
-@ el8.x86_64 14 pg_session_jwt_14 pg_session_jwt_14-0.4.0-1PIGSTY.el8.x86_64.rpm pigsty 0.4.0 435.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_session_jwt_14-0.4.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 14 pg_session_jwt_14 pg_session_jwt_14-0.4.0-1PIGSTY.el8.aarch64.rpm pigsty 0.4.0 308.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_session_jwt_14-0.4.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 14 pg_session_jwt_14 pg_session_jwt_14-0.4.0-1PIGSTY.el9.x86_64.rpm pigsty 0.4.0 451.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_session_jwt_14-0.4.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 14 pg_session_jwt_14 pg_session_jwt_14-0.4.0-1PIGSTY.el9.aarch64.rpm pigsty 0.4.0 327.7KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_session_jwt_14-0.4.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 14 pg_session_jwt_14 pg_session_jwt_14-0.4.0-1PIGSTY.el10.x86_64.rpm pigsty 0.4.0 451.1KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_session_jwt_14-0.4.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 14 pg_session_jwt_14 pg_session_jwt_14-0.4.0-1PIGSTY.el10.aarch64.rpm pigsty 0.4.0 327.7KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_session_jwt_14-0.4.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 14 postgresql-14-pg-session-jwt postgresql-14-pg-session-jwt_0.4.0-1PIGSTY~bookworm_amd64.deb pigsty 0.4.0 363.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-session-jwt/postgresql-14-pg-session-jwt_0.4.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 14 postgresql-14-pg-session-jwt postgresql-14-pg-session-jwt_0.4.0-1PIGSTY~bookworm_arm64.deb pigsty 0.4.0 245.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-session-jwt/postgresql-14-pg-session-jwt_0.4.0-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 14 postgresql-14-pg-session-jwt postgresql-14-pg-session-jwt_0.4.0-1PIGSTY~trixie_amd64.deb pigsty 0.4.0 363.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-session-jwt/postgresql-14-pg-session-jwt_0.4.0-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 14 postgresql-14-pg-session-jwt postgresql-14-pg-session-jwt_0.4.0-1PIGSTY~trixie_arm64.deb pigsty 0.4.0 245.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-session-jwt/postgresql-14-pg-session-jwt_0.4.0-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 14 postgresql-14-pg-session-jwt postgresql-14-pg-session-jwt_0.4.0-1PIGSTY~jammy_amd64.deb pigsty 0.4.0 406.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-session-jwt/postgresql-14-pg-session-jwt_0.4.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 14 postgresql-14-pg-session-jwt postgresql-14-pg-session-jwt_0.4.0-1PIGSTY~jammy_arm64.deb pigsty 0.4.0 284.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-session-jwt/postgresql-14-pg-session-jwt_0.4.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 14 postgresql-14-pg-session-jwt postgresql-14-pg-session-jwt_0.4.0-1PIGSTY~noble_amd64.deb pigsty 0.4.0 403.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-session-jwt/postgresql-14-pg-session-jwt_0.4.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 14 postgresql-14-pg-session-jwt postgresql-14-pg-session-jwt_0.4.0-1PIGSTY~noble_arm64.deb pigsty 0.4.0 281.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-session-jwt/postgresql-14-pg-session-jwt_0.4.0-1PIGSTY~noble_arm64.deb
+| el8.x86_64 | AVAIL PIGSTY 0.5.0 1 | AVAIL PIGSTY 0.5.0 1 | AVAIL PIGSTY 0.5.0 1 | AVAIL PIGSTY 0.5.0 1 | AVAIL PIGSTY 0.5.0 1 |
+| el8.aarch64 | AVAIL PIGSTY 0.5.0 1 | AVAIL PIGSTY 0.5.0 1 | AVAIL PIGSTY 0.5.0 1 | AVAIL PIGSTY 0.5.0 1 | AVAIL PIGSTY 0.5.0 1 |
+| el9.x86_64 | AVAIL PIGSTY 0.5.0 1 | AVAIL PIGSTY 0.5.0 1 | AVAIL PIGSTY 0.5.0 1 | AVAIL PIGSTY 0.5.0 1 | AVAIL PIGSTY 0.5.0 1 |
+| el9.aarch64 | AVAIL PIGSTY 0.5.0 1 | AVAIL PIGSTY 0.5.0 1 | AVAIL PIGSTY 0.5.0 1 | AVAIL PIGSTY 0.5.0 1 | AVAIL PIGSTY 0.5.0 1 |
+| el10.x86_64 | AVAIL PIGSTY 0.5.0 1 | AVAIL PIGSTY 0.5.0 1 | AVAIL PIGSTY 0.5.0 1 | AVAIL PIGSTY 0.5.0 1 | AVAIL PIGSTY 0.5.0 1 |
+| el10.aarch64 | AVAIL PIGSTY 0.5.0 1 | AVAIL PIGSTY 0.5.0 1 | AVAIL PIGSTY 0.5.0 1 | AVAIL PIGSTY 0.5.0 1 | AVAIL PIGSTY 0.5.0 1 |
+| d12.x86_64 | AVAIL PIGSTY 0.5.0 1 | AVAIL PIGSTY 0.5.0 1 | AVAIL PIGSTY 0.5.0 1 | AVAIL PIGSTY 0.5.0 1 | AVAIL PIGSTY 0.5.0 1 |
+| d12.aarch64 | AVAIL PIGSTY 0.5.0 1 | AVAIL PIGSTY 0.5.0 1 | AVAIL PIGSTY 0.5.0 1 | AVAIL PIGSTY 0.5.0 1 | AVAIL PIGSTY 0.5.0 1 |
+| d13.x86_64 | AVAIL PIGSTY 0.5.0 1 | AVAIL PIGSTY 0.5.0 1 | AVAIL PIGSTY 0.5.0 1 | AVAIL PIGSTY 0.5.0 1 | AVAIL PIGSTY 0.5.0 1 |
+| d13.aarch64 | AVAIL PIGSTY 0.5.0 1 | AVAIL PIGSTY 0.5.0 1 | AVAIL PIGSTY 0.5.0 1 | AVAIL PIGSTY 0.5.0 1 | AVAIL PIGSTY 0.5.0 1 |
+| u22.x86_64 | AVAIL PIGSTY 0.5.0 1 | AVAIL PIGSTY 0.5.0 1 | AVAIL PIGSTY 0.5.0 1 | AVAIL PIGSTY 0.5.0 1 | AVAIL PIGSTY 0.5.0 1 |
+| u22.aarch64 | AVAIL PIGSTY 0.5.0 1 | AVAIL PIGSTY 0.5.0 1 | AVAIL PIGSTY 0.5.0 1 | AVAIL PIGSTY 0.5.0 1 | AVAIL PIGSTY 0.5.0 1 |
+| u24.x86_64 | AVAIL PIGSTY 0.5.0 1 | AVAIL PIGSTY 0.5.0 1 | AVAIL PIGSTY 0.5.0 1 | AVAIL PIGSTY 0.5.0 1 | AVAIL PIGSTY 0.5.0 1 |
+| u24.aarch64 | AVAIL PIGSTY 0.5.0 1 | AVAIL PIGSTY 0.5.0 1 | AVAIL PIGSTY 0.5.0 1 | AVAIL PIGSTY 0.5.0 1 | AVAIL PIGSTY 0.5.0 1 |
+| u26.x86_64 | AVAIL PIGSTY 0.5.0 1 | AVAIL PIGSTY 0.5.0 1 | AVAIL PIGSTY 0.5.0 1 | AVAIL PIGSTY 0.5.0 1 | AVAIL PIGSTY 0.5.0 1 |
+| u26.aarch64 | AVAIL PIGSTY 0.5.0 1 | AVAIL PIGSTY 0.5.0 1 | AVAIL PIGSTY 0.5.0 1 | AVAIL PIGSTY 0.5.0 1 | AVAIL PIGSTY 0.5.0 1 |
+@ el8.x86_64 18 pg_session_jwt_18 pg_session_jwt_18-0.5.0-1PIGSTY.el8.x86_64.rpm pigsty 0.5.0 1001.0KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_session_jwt_18-0.5.0-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 18 pg_session_jwt_18 pg_session_jwt_18-0.5.0-1PIGSTY.el8.aarch64.rpm pigsty 0.5.0 923.1KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_session_jwt_18-0.5.0-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 18 pg_session_jwt_18 pg_session_jwt_18-0.5.0-1PIGSTY.el9.x86_64.rpm pigsty 0.5.0 1014.1KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_session_jwt_18-0.5.0-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 18 pg_session_jwt_18 pg_session_jwt_18-0.5.0-1PIGSTY.el9.aarch64.rpm pigsty 0.5.0 981.1KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_session_jwt_18-0.5.0-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 18 pg_session_jwt_18 pg_session_jwt_18-0.5.0-1PIGSTY.el10.x86_64.rpm pigsty 0.5.0 1012.3KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_session_jwt_18-0.5.0-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 18 pg_session_jwt_18 pg_session_jwt_18-0.5.0-1PIGSTY.el10.aarch64.rpm pigsty 0.5.0 960.0KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_session_jwt_18-0.5.0-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-pg-session-jwt postgresql-18-pg-session-jwt_0.5.0-1PIGSTY~bookworm_amd64.deb pigsty 0.5.0 797.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-session-jwt/postgresql-18-pg-session-jwt_0.5.0-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 18 postgresql-18-pg-session-jwt postgresql-18-pg-session-jwt_0.5.0-1PIGSTY~bookworm_arm64.deb pigsty 0.5.0 684.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-session-jwt/postgresql-18-pg-session-jwt_0.5.0-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 18 postgresql-18-pg-session-jwt postgresql-18-pg-session-jwt_0.5.0-1PIGSTY~trixie_amd64.deb pigsty 0.5.0 796.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-session-jwt/postgresql-18-pg-session-jwt_0.5.0-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 18 postgresql-18-pg-session-jwt postgresql-18-pg-session-jwt_0.5.0-1PIGSTY~trixie_arm64.deb pigsty 0.5.0 685.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-session-jwt/postgresql-18-pg-session-jwt_0.5.0-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 18 postgresql-18-pg-session-jwt postgresql-18-pg-session-jwt_0.5.0-1PIGSTY~jammy_amd64.deb pigsty 0.5.0 893.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-session-jwt/postgresql-18-pg-session-jwt_0.5.0-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 18 postgresql-18-pg-session-jwt postgresql-18-pg-session-jwt_0.5.0-1PIGSTY~jammy_arm64.deb pigsty 0.5.0 812.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-session-jwt/postgresql-18-pg-session-jwt_0.5.0-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 18 postgresql-18-pg-session-jwt postgresql-18-pg-session-jwt_0.5.0-1PIGSTY~noble_amd64.deb pigsty 0.5.0 888.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-session-jwt/postgresql-18-pg-session-jwt_0.5.0-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 18 postgresql-18-pg-session-jwt postgresql-18-pg-session-jwt_0.5.0-1PIGSTY~noble_arm64.deb pigsty 0.5.0 802.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-session-jwt/postgresql-18-pg-session-jwt_0.5.0-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 18 postgresql-18-pg-session-jwt postgresql-18-pg-session-jwt_0.5.0-1PIGSTY~resolute_amd64.deb pigsty 0.5.0 879.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-session-jwt/postgresql-18-pg-session-jwt_0.5.0-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 18 postgresql-18-pg-session-jwt postgresql-18-pg-session-jwt_0.5.0-1PIGSTY~resolute_arm64.deb pigsty 0.5.0 801.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-session-jwt/postgresql-18-pg-session-jwt_0.5.0-1PIGSTY~resolute_arm64.deb
+@ el8.x86_64 17 pg_session_jwt_17 pg_session_jwt_17-0.5.0-1PIGSTY.el8.x86_64.rpm pigsty 0.5.0 997.9KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_session_jwt_17-0.5.0-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 17 pg_session_jwt_17 pg_session_jwt_17-0.5.0-1PIGSTY.el8.aarch64.rpm pigsty 0.5.0 919.8KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_session_jwt_17-0.5.0-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 17 pg_session_jwt_17 pg_session_jwt_17-0.5.0-1PIGSTY.el9.x86_64.rpm pigsty 0.5.0 1016.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_session_jwt_17-0.5.0-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 17 pg_session_jwt_17 pg_session_jwt_17-0.5.0-1PIGSTY.el9.aarch64.rpm pigsty 0.5.0 978.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_session_jwt_17-0.5.0-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 17 pg_session_jwt_17 pg_session_jwt_17-0.5.0-1PIGSTY.el10.x86_64.rpm pigsty 0.5.0 1012.4KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_session_jwt_17-0.5.0-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 17 pg_session_jwt_17 pg_session_jwt_17-0.5.0-1PIGSTY.el10.aarch64.rpm pigsty 0.5.0 958.3KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_session_jwt_17-0.5.0-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-pg-session-jwt postgresql-17-pg-session-jwt_0.5.0-1PIGSTY~bookworm_amd64.deb pigsty 0.5.0 796.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-session-jwt/postgresql-17-pg-session-jwt_0.5.0-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 17 postgresql-17-pg-session-jwt postgresql-17-pg-session-jwt_0.5.0-1PIGSTY~bookworm_arm64.deb pigsty 0.5.0 683.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-session-jwt/postgresql-17-pg-session-jwt_0.5.0-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 17 postgresql-17-pg-session-jwt postgresql-17-pg-session-jwt_0.5.0-1PIGSTY~trixie_amd64.deb pigsty 0.5.0 797.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-session-jwt/postgresql-17-pg-session-jwt_0.5.0-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 17 postgresql-17-pg-session-jwt postgresql-17-pg-session-jwt_0.5.0-1PIGSTY~trixie_arm64.deb pigsty 0.5.0 684.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-session-jwt/postgresql-17-pg-session-jwt_0.5.0-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 17 postgresql-17-pg-session-jwt postgresql-17-pg-session-jwt_0.5.0-1PIGSTY~jammy_amd64.deb pigsty 0.5.0 890.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-session-jwt/postgresql-17-pg-session-jwt_0.5.0-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 17 postgresql-17-pg-session-jwt postgresql-17-pg-session-jwt_0.5.0-1PIGSTY~jammy_arm64.deb pigsty 0.5.0 810.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-session-jwt/postgresql-17-pg-session-jwt_0.5.0-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 17 postgresql-17-pg-session-jwt postgresql-17-pg-session-jwt_0.5.0-1PIGSTY~noble_amd64.deb pigsty 0.5.0 887.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-session-jwt/postgresql-17-pg-session-jwt_0.5.0-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 17 postgresql-17-pg-session-jwt postgresql-17-pg-session-jwt_0.5.0-1PIGSTY~noble_arm64.deb pigsty 0.5.0 802.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-session-jwt/postgresql-17-pg-session-jwt_0.5.0-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 17 postgresql-17-pg-session-jwt postgresql-17-pg-session-jwt_0.5.0-1PIGSTY~resolute_amd64.deb pigsty 0.5.0 877.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-session-jwt/postgresql-17-pg-session-jwt_0.5.0-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 17 postgresql-17-pg-session-jwt postgresql-17-pg-session-jwt_0.5.0-1PIGSTY~resolute_arm64.deb pigsty 0.5.0 800.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-session-jwt/postgresql-17-pg-session-jwt_0.5.0-1PIGSTY~resolute_arm64.deb
+@ el8.x86_64 16 pg_session_jwt_16 pg_session_jwt_16-0.5.0-1PIGSTY.el8.x86_64.rpm pigsty 0.5.0 996.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_session_jwt_16-0.5.0-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 16 pg_session_jwt_16 pg_session_jwt_16-0.5.0-1PIGSTY.el8.aarch64.rpm pigsty 0.5.0 918.8KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_session_jwt_16-0.5.0-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 16 pg_session_jwt_16 pg_session_jwt_16-0.5.0-1PIGSTY.el9.x86_64.rpm pigsty 0.5.0 1007.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_session_jwt_16-0.5.0-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 16 pg_session_jwt_16 pg_session_jwt_16-0.5.0-1PIGSTY.el9.aarch64.rpm pigsty 0.5.0 976.7KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_session_jwt_16-0.5.0-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 16 pg_session_jwt_16 pg_session_jwt_16-0.5.0-1PIGSTY.el10.x86_64.rpm pigsty 0.5.0 1009.8KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_session_jwt_16-0.5.0-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 16 pg_session_jwt_16 pg_session_jwt_16-0.5.0-1PIGSTY.el10.aarch64.rpm pigsty 0.5.0 958.3KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_session_jwt_16-0.5.0-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 16 postgresql-16-pg-session-jwt postgresql-16-pg-session-jwt_0.5.0-1PIGSTY~bookworm_amd64.deb pigsty 0.5.0 794.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-session-jwt/postgresql-16-pg-session-jwt_0.5.0-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 16 postgresql-16-pg-session-jwt postgresql-16-pg-session-jwt_0.5.0-1PIGSTY~bookworm_arm64.deb pigsty 0.5.0 683.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-session-jwt/postgresql-16-pg-session-jwt_0.5.0-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 16 postgresql-16-pg-session-jwt postgresql-16-pg-session-jwt_0.5.0-1PIGSTY~trixie_amd64.deb pigsty 0.5.0 796.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-session-jwt/postgresql-16-pg-session-jwt_0.5.0-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 16 postgresql-16-pg-session-jwt postgresql-16-pg-session-jwt_0.5.0-1PIGSTY~trixie_arm64.deb pigsty 0.5.0 683.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-session-jwt/postgresql-16-pg-session-jwt_0.5.0-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 16 postgresql-16-pg-session-jwt postgresql-16-pg-session-jwt_0.5.0-1PIGSTY~jammy_amd64.deb pigsty 0.5.0 888.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-session-jwt/postgresql-16-pg-session-jwt_0.5.0-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 16 postgresql-16-pg-session-jwt postgresql-16-pg-session-jwt_0.5.0-1PIGSTY~jammy_arm64.deb pigsty 0.5.0 809.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-session-jwt/postgresql-16-pg-session-jwt_0.5.0-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 16 postgresql-16-pg-session-jwt postgresql-16-pg-session-jwt_0.5.0-1PIGSTY~noble_amd64.deb pigsty 0.5.0 880.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-session-jwt/postgresql-16-pg-session-jwt_0.5.0-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 16 postgresql-16-pg-session-jwt postgresql-16-pg-session-jwt_0.5.0-1PIGSTY~noble_arm64.deb pigsty 0.5.0 800.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-session-jwt/postgresql-16-pg-session-jwt_0.5.0-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 16 postgresql-16-pg-session-jwt postgresql-16-pg-session-jwt_0.5.0-1PIGSTY~resolute_amd64.deb pigsty 0.5.0 876.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-session-jwt/postgresql-16-pg-session-jwt_0.5.0-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 16 postgresql-16-pg-session-jwt postgresql-16-pg-session-jwt_0.5.0-1PIGSTY~resolute_arm64.deb pigsty 0.5.0 798.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-session-jwt/postgresql-16-pg-session-jwt_0.5.0-1PIGSTY~resolute_arm64.deb
+@ el8.x86_64 15 pg_session_jwt_15 pg_session_jwt_15-0.5.0-1PIGSTY.el8.x86_64.rpm pigsty 0.5.0 988.4KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_session_jwt_15-0.5.0-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 15 pg_session_jwt_15 pg_session_jwt_15-0.5.0-1PIGSTY.el8.aarch64.rpm pigsty 0.5.0 910.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_session_jwt_15-0.5.0-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 15 pg_session_jwt_15 pg_session_jwt_15-0.5.0-1PIGSTY.el9.x86_64.rpm pigsty 0.5.0 1001.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_session_jwt_15-0.5.0-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 15 pg_session_jwt_15 pg_session_jwt_15-0.5.0-1PIGSTY.el9.aarch64.rpm pigsty 0.5.0 966.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_session_jwt_15-0.5.0-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 15 pg_session_jwt_15 pg_session_jwt_15-0.5.0-1PIGSTY.el10.x86_64.rpm pigsty 0.5.0 1001.1KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_session_jwt_15-0.5.0-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 15 pg_session_jwt_15 pg_session_jwt_15-0.5.0-1PIGSTY.el10.aarch64.rpm pigsty 0.5.0 955.1KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_session_jwt_15-0.5.0-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 15 postgresql-15-pg-session-jwt postgresql-15-pg-session-jwt_0.5.0-1PIGSTY~bookworm_amd64.deb pigsty 0.5.0 790.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-session-jwt/postgresql-15-pg-session-jwt_0.5.0-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 15 postgresql-15-pg-session-jwt postgresql-15-pg-session-jwt_0.5.0-1PIGSTY~bookworm_arm64.deb pigsty 0.5.0 677.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-session-jwt/postgresql-15-pg-session-jwt_0.5.0-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 15 postgresql-15-pg-session-jwt postgresql-15-pg-session-jwt_0.5.0-1PIGSTY~trixie_amd64.deb pigsty 0.5.0 789.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-session-jwt/postgresql-15-pg-session-jwt_0.5.0-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 15 postgresql-15-pg-session-jwt postgresql-15-pg-session-jwt_0.5.0-1PIGSTY~trixie_arm64.deb pigsty 0.5.0 678.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-session-jwt/postgresql-15-pg-session-jwt_0.5.0-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 15 postgresql-15-pg-session-jwt postgresql-15-pg-session-jwt_0.5.0-1PIGSTY~jammy_amd64.deb pigsty 0.5.0 884.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-session-jwt/postgresql-15-pg-session-jwt_0.5.0-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 15 postgresql-15-pg-session-jwt postgresql-15-pg-session-jwt_0.5.0-1PIGSTY~jammy_arm64.deb pigsty 0.5.0 806.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-session-jwt/postgresql-15-pg-session-jwt_0.5.0-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 15 postgresql-15-pg-session-jwt postgresql-15-pg-session-jwt_0.5.0-1PIGSTY~noble_amd64.deb pigsty 0.5.0 874.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-session-jwt/postgresql-15-pg-session-jwt_0.5.0-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 15 postgresql-15-pg-session-jwt postgresql-15-pg-session-jwt_0.5.0-1PIGSTY~noble_arm64.deb pigsty 0.5.0 794.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-session-jwt/postgresql-15-pg-session-jwt_0.5.0-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 15 postgresql-15-pg-session-jwt postgresql-15-pg-session-jwt_0.5.0-1PIGSTY~resolute_amd64.deb pigsty 0.5.0 870.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-session-jwt/postgresql-15-pg-session-jwt_0.5.0-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 15 postgresql-15-pg-session-jwt postgresql-15-pg-session-jwt_0.5.0-1PIGSTY~resolute_arm64.deb pigsty 0.5.0 792.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-session-jwt/postgresql-15-pg-session-jwt_0.5.0-1PIGSTY~resolute_arm64.deb
+@ el8.x86_64 14 pg_session_jwt_14 pg_session_jwt_14-0.5.0-1PIGSTY.el8.x86_64.rpm pigsty 0.5.0 983.0KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_session_jwt_14-0.5.0-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 14 pg_session_jwt_14 pg_session_jwt_14-0.5.0-1PIGSTY.el8.aarch64.rpm pigsty 0.5.0 905.3KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_session_jwt_14-0.5.0-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 14 pg_session_jwt_14 pg_session_jwt_14-0.5.0-1PIGSTY.el9.x86_64.rpm pigsty 0.5.0 995.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_session_jwt_14-0.5.0-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 14 pg_session_jwt_14 pg_session_jwt_14-0.5.0-1PIGSTY.el9.aarch64.rpm pigsty 0.5.0 961.2KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_session_jwt_14-0.5.0-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 14 pg_session_jwt_14 pg_session_jwt_14-0.5.0-1PIGSTY.el10.x86_64.rpm pigsty 0.5.0 996.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_session_jwt_14-0.5.0-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 14 pg_session_jwt_14 pg_session_jwt_14-0.5.0-1PIGSTY.el10.aarch64.rpm pigsty 0.5.0 950.8KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_session_jwt_14-0.5.0-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 14 postgresql-14-pg-session-jwt postgresql-14-pg-session-jwt_0.5.0-1PIGSTY~bookworm_amd64.deb pigsty 0.5.0 786.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-session-jwt/postgresql-14-pg-session-jwt_0.5.0-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 14 postgresql-14-pg-session-jwt postgresql-14-pg-session-jwt_0.5.0-1PIGSTY~bookworm_arm64.deb pigsty 0.5.0 673.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-session-jwt/postgresql-14-pg-session-jwt_0.5.0-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 14 postgresql-14-pg-session-jwt postgresql-14-pg-session-jwt_0.5.0-1PIGSTY~trixie_amd64.deb pigsty 0.5.0 786.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-session-jwt/postgresql-14-pg-session-jwt_0.5.0-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 14 postgresql-14-pg-session-jwt postgresql-14-pg-session-jwt_0.5.0-1PIGSTY~trixie_arm64.deb pigsty 0.5.0 674.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-session-jwt/postgresql-14-pg-session-jwt_0.5.0-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 14 postgresql-14-pg-session-jwt postgresql-14-pg-session-jwt_0.5.0-1PIGSTY~jammy_amd64.deb pigsty 0.5.0 879.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-session-jwt/postgresql-14-pg-session-jwt_0.5.0-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 14 postgresql-14-pg-session-jwt postgresql-14-pg-session-jwt_0.5.0-1PIGSTY~jammy_arm64.deb pigsty 0.5.0 799.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-session-jwt/postgresql-14-pg-session-jwt_0.5.0-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 14 postgresql-14-pg-session-jwt postgresql-14-pg-session-jwt_0.5.0-1PIGSTY~noble_amd64.deb pigsty 0.5.0 871.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-session-jwt/postgresql-14-pg-session-jwt_0.5.0-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 14 postgresql-14-pg-session-jwt postgresql-14-pg-session-jwt_0.5.0-1PIGSTY~noble_arm64.deb pigsty 0.5.0 789.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-session-jwt/postgresql-14-pg-session-jwt_0.5.0-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 14 postgresql-14-pg-session-jwt postgresql-14-pg-session-jwt_0.5.0-1PIGSTY~resolute_amd64.deb pigsty 0.5.0 866.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-session-jwt/postgresql-14-pg-session-jwt_0.5.0-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 14 postgresql-14-pg-session-jwt postgresql-14-pg-session-jwt_0.5.0-1PIGSTY~resolute_arm64.deb pigsty 0.5.0 787.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-session-jwt/postgresql-14-pg-session-jwt_0.5.0-1PIGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建

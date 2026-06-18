@@ -46,7 +46,7 @@ weight: 9500
 |:----:|:----:|:----:|:------:|:--------:|:----:|
 | [**EXT**](/ext/list#etl) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `2.4.6` | {{< pgvers "18,17,16,15,14" >}} | `pglogical` | - |
 | [**RPM**](/ext/rpm#etl) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `2.4.6` | {{< pgvers "18,17,16,15,14" >}} | `pglogical_$v` | - |
-| [**DEB**](/ext/deb#etl) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `2.4.6` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pglogical` | - |
+| [**DEB**](/ext/deb#etl) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `2.4.7` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pglogical` | - |
 {.ext-table}
 
 {{< pgext_matrix >}}
@@ -54,87 +54,125 @@ weight: 9500
 |:--:|:--:|:--:|:--:|:--:|:--:|
 | el8.x86_64 | AVAIL PGDG 2.4.6 1 | AVAIL PGDG 2.4.5 1 | AVAIL PGDG 2.4.4 1 | AVAIL PGDG 2.4.3 2 | AVAIL PGDG 2.4.3 4 |
 | el8.aarch64 | AVAIL PGDG 2.4.6 1 | AVAIL PGDG 2.4.5 1 | AVAIL PGDG 2.4.4 1 | AVAIL PGDG 2.4.3 2 | AVAIL PGDG 2.4.3 2 |
-| el9.x86_64 | AVAIL PGDG 2.4.6 1 | AVAIL PGDG 2.4.5 1 | AVAIL PGDG 2.4.4 1 | AVAIL PGDG 2.4.3 2 | AVAIL PGDG 2.4.3 3 |
-| el9.aarch64 | AVAIL PGDG 2.4.6 1 | AVAIL PGDG 2.4.5 1 | AVAIL PGDG 2.4.4 1 | AVAIL PGDG 2.4.3 2 | AVAIL PGDG 2.4.3 2 |
-| el10.x86_64 | AVAIL PGDG 2.4.6 1 | AVAIL PGDG 2.4.5 1 | AVAIL PGDG 2.4.5 1 | AVAIL PGDG 2.4.5 1 | AVAIL PGDG 2.4.5 1 |
-| el10.aarch64 | AVAIL PGDG 2.4.6 1 | AVAIL PGDG 2.4.5 1 | AVAIL PGDG 2.4.5 1 | AVAIL PGDG 2.4.5 1 | AVAIL PGDG 2.4.5 1 |
-| d12.x86_64 | AVAIL PGDG 2.4.6 1 | AVAIL PGDG 2.4.6 1 | AVAIL PGDG 2.4.6 1 | AVAIL PGDG 2.4.6 1 | AVAIL PGDG 2.4.6 1 |
-| d12.aarch64 | AVAIL PGDG 2.4.6 1 | AVAIL PGDG 2.4.6 1 | AVAIL PGDG 2.4.6 1 | AVAIL PGDG 2.4.6 1 | AVAIL PGDG 2.4.6 1 |
-| d13.x86_64 | AVAIL PGDG 2.4.6 1 | AVAIL PGDG 2.4.6 1 | AVAIL PGDG 2.4.6 1 | AVAIL PGDG 2.4.6 1 | AVAIL PGDG 2.4.6 1 |
-| d13.aarch64 | AVAIL PGDG 2.4.6 1 | AVAIL PGDG 2.4.6 1 | AVAIL PGDG 2.4.6 1 | AVAIL PGDG 2.4.6 1 | AVAIL PGDG 2.4.6 1 |
-| u22.x86_64 | AVAIL PGDG 2.4.6 1 | AVAIL PGDG 2.4.6 1 | AVAIL PGDG 2.4.6 1 | AVAIL PGDG 2.4.6 1 | AVAIL PGDG 2.4.6 1 |
-| u22.aarch64 | AVAIL PGDG 2.4.6 1 | AVAIL PGDG 2.4.6 1 | AVAIL PGDG 2.4.6 1 | AVAIL PGDG 2.4.6 1 | AVAIL PGDG 2.4.6 1 |
-| u24.x86_64 | AVAIL PGDG 2.4.6 1 | AVAIL PGDG 2.4.6 1 | AVAIL PGDG 2.4.6 1 | AVAIL PGDG 2.4.6 1 | AVAIL PGDG 2.4.6 1 |
-| u24.aarch64 | AVAIL PGDG 2.4.6 1 | AVAIL PGDG 2.4.6 1 | AVAIL PGDG 2.4.6 1 | AVAIL PGDG 2.4.6 1 | AVAIL PGDG 2.4.6 1 |
-| u26.x86_64 | AVAIL PGDG 2.4.6 1 | AVAIL PGDG 2.4.6 1 | AVAIL PGDG 2.4.6 1 | AVAIL PGDG 2.4.6 1 | AVAIL PGDG 2.4.6 1 |
-| u26.aarch64 | AVAIL PGDG 2.4.6 1 | AVAIL PGDG 2.4.6 1 | AVAIL PGDG 2.4.6 1 | AVAIL PGDG 2.4.6 1 | AVAIL PGDG 2.4.6 1 |
+| el9.x86_64 | AVAIL PGDG 2.4.6 1 | AVAIL PGDG 2.4.6 1 | AVAIL PGDG 2.4.6 1 | AVAIL PGDG 2.4.6 1 | AVAIL PGDG 2.4.6 1 |
+| el9.aarch64 | AVAIL PGDG 2.4.6 1 | AVAIL PGDG 2.4.6 1 | AVAIL PGDG 2.4.6 1 | AVAIL PGDG 2.4.6 1 | AVAIL PGDG 2.4.6 1 |
+| el10.x86_64 | AVAIL PGDG 2.4.6 1 | AVAIL PGDG 2.4.6 1 | AVAIL PGDG 2.4.6 1 | AVAIL PGDG 2.4.6 1 | AVAIL PGDG 2.4.6 1 |
+| el10.aarch64 | AVAIL PGDG 2.4.6 1 | AVAIL PGDG 2.4.6 1 | AVAIL PGDG 2.4.6 1 | AVAIL PGDG 2.4.6 1 | AVAIL PGDG 2.4.6 1 |
+| d12.x86_64 | AVAIL PGDG 2.4.7 2 | AVAIL PGDG 2.4.7 2 | AVAIL PGDG 2.4.7 2 | AVAIL PGDG 2.4.7 2 | AVAIL PGDG 2.4.7 2 |
+| d12.aarch64 | AVAIL PGDG 2.4.7 2 | AVAIL PGDG 2.4.7 2 | AVAIL PGDG 2.4.7 2 | AVAIL PGDG 2.4.7 2 | AVAIL PGDG 2.4.7 2 |
+| d13.x86_64 | AVAIL PGDG 2.4.7 2 | AVAIL PGDG 2.4.7 2 | AVAIL PGDG 2.4.7 2 | AVAIL PGDG 2.4.7 2 | AVAIL PGDG 2.4.7 2 |
+| d13.aarch64 | AVAIL PGDG 2.4.7 2 | AVAIL PGDG 2.4.7 2 | AVAIL PGDG 2.4.7 2 | AVAIL PGDG 2.4.7 2 | AVAIL PGDG 2.4.7 2 |
+| u22.x86_64 | AVAIL PGDG 2.4.7 2 | AVAIL PGDG 2.4.7 2 | AVAIL PGDG 2.4.7 2 | AVAIL PGDG 2.4.7 2 | AVAIL PGDG 2.4.7 2 |
+| u22.aarch64 | AVAIL PGDG 2.4.7 2 | AVAIL PGDG 2.4.7 2 | AVAIL PGDG 2.4.7 2 | AVAIL PGDG 2.4.7 2 | AVAIL PGDG 2.4.7 2 |
+| u24.x86_64 | AVAIL PGDG 2.4.7 2 | AVAIL PGDG 2.4.7 2 | AVAIL PGDG 2.4.7 2 | AVAIL PGDG 2.4.7 2 | AVAIL PGDG 2.4.7 2 |
+| u24.aarch64 | AVAIL PGDG 2.4.7 2 | AVAIL PGDG 2.4.7 2 | AVAIL PGDG 2.4.7 2 | AVAIL PGDG 2.4.7 2 | AVAIL PGDG 2.4.7 2 |
+| u26.x86_64 | AVAIL PGDG 2.4.7 2 | AVAIL PGDG 2.4.7 2 | AVAIL PGDG 2.4.7 2 | AVAIL PGDG 2.4.7 2 | AVAIL PGDG 2.4.7 2 |
+| u26.aarch64 | AVAIL PGDG 2.4.7 2 | AVAIL PGDG 2.4.7 2 | AVAIL PGDG 2.4.7 2 | AVAIL PGDG 2.4.7 2 | AVAIL PGDG 2.4.7 2 |
 @ el8.x86_64 18 pglogical_18 pglogical_18-2.4.6-1PGDG.rhel8.x86_64.rpm pgdg 2.4.6 154.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pglogical_18-2.4.6-1PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 18 pglogical_18 pglogical_18-2.4.6-1PGDG.rhel8.aarch64.rpm pgdg 2.4.6 148.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pglogical_18-2.4.6-1PGDG.rhel8.aarch64.rpm
-@ el9.x86_64 18 pglogical_18 pglogical_18-2.4.6-1PGDG.rhel9.x86_64.rpm pgdg 2.4.6 146.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pglogical_18-2.4.6-1PGDG.rhel9.x86_64.rpm
-@ el9.aarch64 18 pglogical_18 pglogical_18-2.4.6-1PGDG.rhel9.aarch64.rpm pgdg 2.4.6 143.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pglogical_18-2.4.6-1PGDG.rhel9.aarch64.rpm
-@ el10.x86_64 18 pglogical_18 pglogical_18-2.4.6-1PGDG.rhel10.x86_64.rpm pgdg 2.4.6 148.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pglogical_18-2.4.6-1PGDG.rhel10.x86_64.rpm
-@ el10.aarch64 18 pglogical_18 pglogical_18-2.4.6-1PGDG.rhel10.aarch64.rpm pgdg 2.4.6 145.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pglogical_18-2.4.6-1PGDG.rhel10.aarch64.rpm
+@ el9.x86_64 18 pglogical_18 pglogical_18-2.4.6-4PGDG.rhel9.8.x86_64.rpm pgdg 2.4.6 146.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pglogical_18-2.4.6-4PGDG.rhel9.8.x86_64.rpm
+@ el9.aarch64 18 pglogical_18 pglogical_18-2.4.6-4PGDG.rhel9.8.aarch64.rpm pgdg 2.4.6 142.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pglogical_18-2.4.6-4PGDG.rhel9.8.aarch64.rpm
+@ el10.x86_64 18 pglogical_18 pglogical_18-2.4.6-4PGDG.rhel10.2.x86_64.rpm pgdg 2.4.6 148.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pglogical_18-2.4.6-4PGDG.rhel10.2.x86_64.rpm
+@ el10.aarch64 18 pglogical_18 pglogical_18-2.4.6-4PGDG.rhel10.2.aarch64.rpm pgdg 2.4.6 145.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pglogical_18-2.4.6-4PGDG.rhel10.2.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-pglogical postgresql-18-pglogical_2.4.7-1.pgdg12+1_amd64.deb pgdg 2.4.7 360.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pglogical/postgresql-18-pglogical_2.4.7-1.pgdg12+1_amd64.deb
 @ d12.x86_64 18 postgresql-18-pglogical postgresql-18-pglogical_2.4.6-2.pgdg12+1_amd64.deb pgdg 2.4.6 345.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pglogical/postgresql-18-pglogical_2.4.6-2.pgdg12+1_amd64.deb
+@ d12.aarch64 18 postgresql-18-pglogical postgresql-18-pglogical_2.4.7-1.pgdg12+1_arm64.deb pgdg 2.4.7 350.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pglogical/postgresql-18-pglogical_2.4.7-1.pgdg12+1_arm64.deb
 @ d12.aarch64 18 postgresql-18-pglogical postgresql-18-pglogical_2.4.6-2.pgdg12+1_arm64.deb pgdg 2.4.6 336.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pglogical/postgresql-18-pglogical_2.4.6-2.pgdg12+1_arm64.deb
+@ d13.x86_64 18 postgresql-18-pglogical postgresql-18-pglogical_2.4.7-1.pgdg13+1_amd64.deb pgdg 2.4.7 361.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pglogical/postgresql-18-pglogical_2.4.7-1.pgdg13+1_amd64.deb
 @ d13.x86_64 18 postgresql-18-pglogical postgresql-18-pglogical_2.4.6-2.pgdg13+1_amd64.deb pgdg 2.4.6 346.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pglogical/postgresql-18-pglogical_2.4.6-2.pgdg13+1_amd64.deb
+@ d13.aarch64 18 postgresql-18-pglogical postgresql-18-pglogical_2.4.7-1.pgdg13+1_arm64.deb pgdg 2.4.7 352.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pglogical/postgresql-18-pglogical_2.4.7-1.pgdg13+1_arm64.deb
 @ d13.aarch64 18 postgresql-18-pglogical postgresql-18-pglogical_2.4.6-2.pgdg13+1_arm64.deb pgdg 2.4.6 337.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pglogical/postgresql-18-pglogical_2.4.6-2.pgdg13+1_arm64.deb
+@ u22.x86_64 18 postgresql-18-pglogical postgresql-18-pglogical_2.4.7-1.pgdg22.04+1_amd64.deb pgdg 2.4.7 371.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pglogical/postgresql-18-pglogical_2.4.7-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 18 postgresql-18-pglogical postgresql-18-pglogical_2.4.6-2.pgdg22.04+1_amd64.deb pgdg 2.4.6 357.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pglogical/postgresql-18-pglogical_2.4.6-2.pgdg22.04+1_amd64.deb
+@ u22.aarch64 18 postgresql-18-pglogical postgresql-18-pglogical_2.4.7-1.pgdg22.04+1_arm64.deb pgdg 2.4.7 360.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pglogical/postgresql-18-pglogical_2.4.7-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 18 postgresql-18-pglogical postgresql-18-pglogical_2.4.6-2.pgdg22.04+1_arm64.deb pgdg 2.4.6 345.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pglogical/postgresql-18-pglogical_2.4.6-2.pgdg22.04+1_arm64.deb
+@ u24.x86_64 18 postgresql-18-pglogical postgresql-18-pglogical_2.4.7-1.pgdg24.04+1_amd64.deb pgdg 2.4.7 359.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pglogical/postgresql-18-pglogical_2.4.7-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 18 postgresql-18-pglogical postgresql-18-pglogical_2.4.6-2.pgdg24.04+1_amd64.deb pgdg 2.4.6 344.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pglogical/postgresql-18-pglogical_2.4.6-2.pgdg24.04+1_amd64.deb
+@ u24.aarch64 18 postgresql-18-pglogical postgresql-18-pglogical_2.4.7-1.pgdg24.04+1_arm64.deb pgdg 2.4.7 349.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pglogical/postgresql-18-pglogical_2.4.7-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 18 postgresql-18-pglogical postgresql-18-pglogical_2.4.6-2.pgdg24.04+1_arm64.deb pgdg 2.4.6 335.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pglogical/postgresql-18-pglogical_2.4.6-2.pgdg24.04+1_arm64.deb
+@ u26.x86_64 18 postgresql-18-pglogical postgresql-18-pglogical_2.4.7-1.pgdg26.04+1_amd64.deb pgdg 2.4.7 357.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pglogical/postgresql-18-pglogical_2.4.7-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 18 postgresql-18-pglogical postgresql-18-pglogical_2.4.6-2.pgdg26.04+1_amd64.deb pgdg 2.4.6 343.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pglogical/postgresql-18-pglogical_2.4.6-2.pgdg26.04+1_amd64.deb
+@ u26.aarch64 18 postgresql-18-pglogical postgresql-18-pglogical_2.4.7-1.pgdg26.04+1_arm64.deb pgdg 2.4.7 345.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pglogical/postgresql-18-pglogical_2.4.7-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 18 postgresql-18-pglogical postgresql-18-pglogical_2.4.6-2.pgdg26.04+1_arm64.deb pgdg 2.4.6 332.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pglogical/postgresql-18-pglogical_2.4.6-2.pgdg26.04+1_arm64.deb
 @ el8.x86_64 17 pglogical_17 pglogical_17-2.4.5-1PGDG.rhel8.x86_64.rpm pgdg 2.4.5 153.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pglogical_17-2.4.5-1PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 17 pglogical_17 pglogical_17-2.4.5-1PGDG.rhel8.aarch64.rpm pgdg 2.4.5 147.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pglogical_17-2.4.5-1PGDG.rhel8.aarch64.rpm
-@ el9.x86_64 17 pglogical_17 pglogical_17-2.4.5-1PGDG.rhel9.x86_64.rpm pgdg 2.4.5 146.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pglogical_17-2.4.5-1PGDG.rhel9.x86_64.rpm
-@ el9.aarch64 17 pglogical_17 pglogical_17-2.4.5-1PGDG.rhel9.aarch64.rpm pgdg 2.4.5 143.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pglogical_17-2.4.5-1PGDG.rhel9.aarch64.rpm
-@ el10.x86_64 17 pglogical_17 pglogical_17-2.4.5-3PGDG.rhel10.x86_64.rpm pgdg 2.4.5 148.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pglogical_17-2.4.5-3PGDG.rhel10.x86_64.rpm
-@ el10.aarch64 17 pglogical_17 pglogical_17-2.4.5-3PGDG.rhel10.aarch64.rpm pgdg 2.4.5 144.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pglogical_17-2.4.5-3PGDG.rhel10.aarch64.rpm
+@ el9.x86_64 17 pglogical_17 pglogical_17-2.4.6-4PGDG.rhel9.8.x86_64.rpm pgdg 2.4.6 146.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pglogical_17-2.4.6-4PGDG.rhel9.8.x86_64.rpm
+@ el9.aarch64 17 pglogical_17 pglogical_17-2.4.6-4PGDG.rhel9.8.aarch64.rpm pgdg 2.4.6 143.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pglogical_17-2.4.6-4PGDG.rhel9.8.aarch64.rpm
+@ el10.x86_64 17 pglogical_17 pglogical_17-2.4.6-4PGDG.rhel10.2.x86_64.rpm pgdg 2.4.6 148.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pglogical_17-2.4.6-4PGDG.rhel10.2.x86_64.rpm
+@ el10.aarch64 17 pglogical_17 pglogical_17-2.4.6-4PGDG.rhel10.2.aarch64.rpm pgdg 2.4.6 144.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pglogical_17-2.4.6-4PGDG.rhel10.2.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-pglogical postgresql-17-pglogical_2.4.7-1.pgdg12+1_amd64.deb pgdg 2.4.7 360.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pglogical/postgresql-17-pglogical_2.4.7-1.pgdg12+1_amd64.deb
 @ d12.x86_64 17 postgresql-17-pglogical postgresql-17-pglogical_2.4.6-2.pgdg12+1_amd64.deb pgdg 2.4.6 345.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pglogical/postgresql-17-pglogical_2.4.6-2.pgdg12+1_amd64.deb
+@ d12.aarch64 17 postgresql-17-pglogical postgresql-17-pglogical_2.4.7-1.pgdg12+1_arm64.deb pgdg 2.4.7 350.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pglogical/postgresql-17-pglogical_2.4.7-1.pgdg12+1_arm64.deb
 @ d12.aarch64 17 postgresql-17-pglogical postgresql-17-pglogical_2.4.6-2.pgdg12+1_arm64.deb pgdg 2.4.6 336.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pglogical/postgresql-17-pglogical_2.4.6-2.pgdg12+1_arm64.deb
+@ d13.x86_64 17 postgresql-17-pglogical postgresql-17-pglogical_2.4.7-1.pgdg13+1_amd64.deb pgdg 2.4.7 361.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pglogical/postgresql-17-pglogical_2.4.7-1.pgdg13+1_amd64.deb
 @ d13.x86_64 17 postgresql-17-pglogical postgresql-17-pglogical_2.4.6-2.pgdg13+1_amd64.deb pgdg 2.4.6 346.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pglogical/postgresql-17-pglogical_2.4.6-2.pgdg13+1_amd64.deb
+@ d13.aarch64 17 postgresql-17-pglogical postgresql-17-pglogical_2.4.7-1.pgdg13+1_arm64.deb pgdg 2.4.7 351.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pglogical/postgresql-17-pglogical_2.4.7-1.pgdg13+1_arm64.deb
 @ d13.aarch64 17 postgresql-17-pglogical postgresql-17-pglogical_2.4.6-2.pgdg13+1_arm64.deb pgdg 2.4.6 337.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pglogical/postgresql-17-pglogical_2.4.6-2.pgdg13+1_arm64.deb
+@ u22.x86_64 17 postgresql-17-pglogical postgresql-17-pglogical_2.4.7-1.pgdg22.04+1_amd64.deb pgdg 2.4.7 449.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pglogical/postgresql-17-pglogical_2.4.7-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 17 postgresql-17-pglogical postgresql-17-pglogical_2.4.6-2.pgdg22.04+1_amd64.deb pgdg 2.4.6 434.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pglogical/postgresql-17-pglogical_2.4.6-2.pgdg22.04+1_amd64.deb
+@ u22.aarch64 17 postgresql-17-pglogical postgresql-17-pglogical_2.4.7-1.pgdg22.04+1_arm64.deb pgdg 2.4.7 438.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pglogical/postgresql-17-pglogical_2.4.7-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 17 postgresql-17-pglogical postgresql-17-pglogical_2.4.6-2.pgdg22.04+1_arm64.deb pgdg 2.4.6 422.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pglogical/postgresql-17-pglogical_2.4.6-2.pgdg22.04+1_arm64.deb
+@ u24.x86_64 17 postgresql-17-pglogical postgresql-17-pglogical_2.4.7-1.pgdg24.04+1_amd64.deb pgdg 2.4.7 358.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pglogical/postgresql-17-pglogical_2.4.7-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 17 postgresql-17-pglogical postgresql-17-pglogical_2.4.6-2.pgdg24.04+1_amd64.deb pgdg 2.4.6 344.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pglogical/postgresql-17-pglogical_2.4.6-2.pgdg24.04+1_amd64.deb
+@ u24.aarch64 17 postgresql-17-pglogical postgresql-17-pglogical_2.4.7-1.pgdg24.04+1_arm64.deb pgdg 2.4.7 349.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pglogical/postgresql-17-pglogical_2.4.7-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 17 postgresql-17-pglogical postgresql-17-pglogical_2.4.6-2.pgdg24.04+1_arm64.deb pgdg 2.4.6 334.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pglogical/postgresql-17-pglogical_2.4.6-2.pgdg24.04+1_arm64.deb
+@ u26.x86_64 17 postgresql-17-pglogical postgresql-17-pglogical_2.4.7-1.pgdg26.04+1_amd64.deb pgdg 2.4.7 356.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pglogical/postgresql-17-pglogical_2.4.7-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 17 postgresql-17-pglogical postgresql-17-pglogical_2.4.6-2.pgdg26.04+1_amd64.deb pgdg 2.4.6 343.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pglogical/postgresql-17-pglogical_2.4.6-2.pgdg26.04+1_amd64.deb
+@ u26.aarch64 17 postgresql-17-pglogical postgresql-17-pglogical_2.4.7-1.pgdg26.04+1_arm64.deb pgdg 2.4.7 345.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pglogical/postgresql-17-pglogical_2.4.7-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 17 postgresql-17-pglogical postgresql-17-pglogical_2.4.6-2.pgdg26.04+1_arm64.deb pgdg 2.4.6 332.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pglogical/postgresql-17-pglogical_2.4.6-2.pgdg26.04+1_arm64.deb
 @ el8.x86_64 16 pglogical_16 pglogical_16-2.4.4-1PGDG.rhel8.x86_64.rpm pgdg 2.4.4 152.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pglogical_16-2.4.4-1PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 16 pglogical_16 pglogical_16-2.4.4-1PGDG.rhel8.aarch64.rpm pgdg 2.4.4 145.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pglogical_16-2.4.4-1PGDG.rhel8.aarch64.rpm
-@ el9.x86_64 16 pglogical_16 pglogical_16-2.4.4-1PGDG.rhel9.x86_64.rpm pgdg 2.4.4 146.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pglogical_16-2.4.4-1PGDG.rhel9.x86_64.rpm
-@ el9.aarch64 16 pglogical_16 pglogical_16-2.4.4-1PGDG.rhel9.aarch64.rpm pgdg 2.4.4 143.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pglogical_16-2.4.4-1PGDG.rhel9.aarch64.rpm
-@ el10.x86_64 16 pglogical_16 pglogical_16-2.4.5-3PGDG.rhel10.x86_64.rpm pgdg 2.4.5 148.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pglogical_16-2.4.5-3PGDG.rhel10.x86_64.rpm
-@ el10.aarch64 16 pglogical_16 pglogical_16-2.4.5-3PGDG.rhel10.aarch64.rpm pgdg 2.4.5 144.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pglogical_16-2.4.5-3PGDG.rhel10.aarch64.rpm
+@ el9.x86_64 16 pglogical_16 pglogical_16-2.4.6-4PGDG.rhel9.8.x86_64.rpm pgdg 2.4.6 146.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pglogical_16-2.4.6-4PGDG.rhel9.8.x86_64.rpm
+@ el9.aarch64 16 pglogical_16 pglogical_16-2.4.6-4PGDG.rhel9.8.aarch64.rpm pgdg 2.4.6 143.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pglogical_16-2.4.6-4PGDG.rhel9.8.aarch64.rpm
+@ el10.x86_64 16 pglogical_16 pglogical_16-2.4.6-4PGDG.rhel10.2.x86_64.rpm pgdg 2.4.6 148.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pglogical_16-2.4.6-4PGDG.rhel10.2.x86_64.rpm
+@ el10.aarch64 16 pglogical_16 pglogical_16-2.4.6-4PGDG.rhel10.2.aarch64.rpm pgdg 2.4.6 145.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pglogical_16-2.4.6-4PGDG.rhel10.2.aarch64.rpm
+@ d12.x86_64 16 postgresql-16-pglogical postgresql-16-pglogical_2.4.7-1.pgdg12+1_amd64.deb pgdg 2.4.7 359.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pglogical/postgresql-16-pglogical_2.4.7-1.pgdg12+1_amd64.deb
 @ d12.x86_64 16 postgresql-16-pglogical postgresql-16-pglogical_2.4.6-2.pgdg12+1_amd64.deb pgdg 2.4.6 344.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pglogical/postgresql-16-pglogical_2.4.6-2.pgdg12+1_amd64.deb
+@ d12.aarch64 16 postgresql-16-pglogical postgresql-16-pglogical_2.4.7-1.pgdg12+1_arm64.deb pgdg 2.4.7 349.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pglogical/postgresql-16-pglogical_2.4.7-1.pgdg12+1_arm64.deb
 @ d12.aarch64 16 postgresql-16-pglogical postgresql-16-pglogical_2.4.6-2.pgdg12+1_arm64.deb pgdg 2.4.6 334.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pglogical/postgresql-16-pglogical_2.4.6-2.pgdg12+1_arm64.deb
+@ d13.x86_64 16 postgresql-16-pglogical postgresql-16-pglogical_2.4.7-1.pgdg13+1_amd64.deb pgdg 2.4.7 360.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pglogical/postgresql-16-pglogical_2.4.7-1.pgdg13+1_amd64.deb
 @ d13.x86_64 16 postgresql-16-pglogical postgresql-16-pglogical_2.4.6-2.pgdg13+1_amd64.deb pgdg 2.4.6 345.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pglogical/postgresql-16-pglogical_2.4.6-2.pgdg13+1_amd64.deb
+@ d13.aarch64 16 postgresql-16-pglogical postgresql-16-pglogical_2.4.7-1.pgdg13+1_arm64.deb pgdg 2.4.7 350.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pglogical/postgresql-16-pglogical_2.4.7-1.pgdg13+1_arm64.deb
 @ d13.aarch64 16 postgresql-16-pglogical postgresql-16-pglogical_2.4.6-2.pgdg13+1_arm64.deb pgdg 2.4.6 336.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pglogical/postgresql-16-pglogical_2.4.6-2.pgdg13+1_arm64.deb
+@ u22.x86_64 16 postgresql-16-pglogical postgresql-16-pglogical_2.4.7-1.pgdg22.04+1_amd64.deb pgdg 2.4.7 446.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pglogical/postgresql-16-pglogical_2.4.7-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 16 postgresql-16-pglogical postgresql-16-pglogical_2.4.6-2.pgdg22.04+1_amd64.deb pgdg 2.4.6 431.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pglogical/postgresql-16-pglogical_2.4.6-2.pgdg22.04+1_amd64.deb
+@ u22.aarch64 16 postgresql-16-pglogical postgresql-16-pglogical_2.4.7-1.pgdg22.04+1_arm64.deb pgdg 2.4.7 434.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pglogical/postgresql-16-pglogical_2.4.7-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 16 postgresql-16-pglogical postgresql-16-pglogical_2.4.6-2.pgdg22.04+1_arm64.deb pgdg 2.4.6 419.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pglogical/postgresql-16-pglogical_2.4.6-2.pgdg22.04+1_arm64.deb
+@ u24.x86_64 16 postgresql-16-pglogical postgresql-16-pglogical_2.4.7-1.pgdg24.04+1_amd64.deb pgdg 2.4.7 358.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pglogical/postgresql-16-pglogical_2.4.7-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 16 postgresql-16-pglogical postgresql-16-pglogical_2.4.6-2.pgdg24.04+1_amd64.deb pgdg 2.4.6 343.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pglogical/postgresql-16-pglogical_2.4.6-2.pgdg24.04+1_amd64.deb
+@ u24.aarch64 16 postgresql-16-pglogical postgresql-16-pglogical_2.4.7-1.pgdg24.04+1_arm64.deb pgdg 2.4.7 348.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pglogical/postgresql-16-pglogical_2.4.7-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 16 postgresql-16-pglogical postgresql-16-pglogical_2.4.6-2.pgdg24.04+1_arm64.deb pgdg 2.4.6 334.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pglogical/postgresql-16-pglogical_2.4.6-2.pgdg24.04+1_arm64.deb
+@ u26.x86_64 16 postgresql-16-pglogical postgresql-16-pglogical_2.4.7-1.pgdg26.04+1_amd64.deb pgdg 2.4.7 354.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pglogical/postgresql-16-pglogical_2.4.7-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 16 postgresql-16-pglogical postgresql-16-pglogical_2.4.6-2.pgdg26.04+1_amd64.deb pgdg 2.4.6 342.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pglogical/postgresql-16-pglogical_2.4.6-2.pgdg26.04+1_amd64.deb
+@ u26.aarch64 16 postgresql-16-pglogical postgresql-16-pglogical_2.4.7-1.pgdg26.04+1_arm64.deb pgdg 2.4.7 343.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pglogical/postgresql-16-pglogical_2.4.7-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 16 postgresql-16-pglogical postgresql-16-pglogical_2.4.6-2.pgdg26.04+1_arm64.deb pgdg 2.4.6 330.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pglogical/postgresql-16-pglogical_2.4.6-2.pgdg26.04+1_arm64.deb
 @ el8.x86_64 15 pglogical_15 pglogical_15-2.4.3-1.rhel8.x86_64.rpm pgdg 2.4.3 153.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pglogical_15-2.4.3-1.rhel8.x86_64.rpm
 @ el8.x86_64 15 pglogical_15 pglogical_15-2.4.2-1.rhel8.x86_64.rpm pgdg 2.4.2 152.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pglogical_15-2.4.2-1.rhel8.x86_64.rpm
 @ el8.aarch64 15 pglogical_15 pglogical_15-2.4.3-1.rhel8.aarch64.rpm pgdg 2.4.3 146.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pglogical_15-2.4.3-1.rhel8.aarch64.rpm
 @ el8.aarch64 15 pglogical_15 pglogical_15-2.4.2-1.rhel8.aarch64.rpm pgdg 2.4.2 145.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pglogical_15-2.4.2-1.rhel8.aarch64.rpm
-@ el9.x86_64 15 pglogical_15 pglogical_15-2.4.3-1.rhel9.x86_64.rpm pgdg 2.4.3 150.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pglogical_15-2.4.3-1.rhel9.x86_64.rpm
-@ el9.x86_64 15 pglogical_15 pglogical_15-2.4.2-1.rhel9.x86_64.rpm pgdg 2.4.2 150.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pglogical_15-2.4.2-1.rhel9.x86_64.rpm
-@ el9.aarch64 15 pglogical_15 pglogical_15-2.4.3-1.rhel9.aarch64.rpm pgdg 2.4.3 146.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pglogical_15-2.4.3-1.rhel9.aarch64.rpm
-@ el9.aarch64 15 pglogical_15 pglogical_15-2.4.2-1.rhel9.aarch64.rpm pgdg 2.4.2 146.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pglogical_15-2.4.2-1.rhel9.aarch64.rpm
-@ el10.x86_64 15 pglogical_15 pglogical_15-2.4.5-3PGDG.rhel10.x86_64.rpm pgdg 2.4.5 151.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pglogical_15-2.4.5-3PGDG.rhel10.x86_64.rpm
-@ el10.aarch64 15 pglogical_15 pglogical_15-2.4.5-3PGDG.rhel10.aarch64.rpm pgdg 2.4.5 149.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pglogical_15-2.4.5-3PGDG.rhel10.aarch64.rpm
+@ el9.x86_64 15 pglogical_15 pglogical_15-2.4.6-4PGDG.rhel9.8.x86_64.rpm pgdg 2.4.6 151.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pglogical_15-2.4.6-4PGDG.rhel9.8.x86_64.rpm
+@ el9.aarch64 15 pglogical_15 pglogical_15-2.4.6-4PGDG.rhel9.8.aarch64.rpm pgdg 2.4.6 146.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pglogical_15-2.4.6-4PGDG.rhel9.8.aarch64.rpm
+@ el10.x86_64 15 pglogical_15 pglogical_15-2.4.6-4PGDG.rhel10.2.x86_64.rpm pgdg 2.4.6 152.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pglogical_15-2.4.6-4PGDG.rhel10.2.x86_64.rpm
+@ el10.aarch64 15 pglogical_15 pglogical_15-2.4.6-4PGDG.rhel10.2.aarch64.rpm pgdg 2.4.6 149.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pglogical_15-2.4.6-4PGDG.rhel10.2.aarch64.rpm
+@ d12.x86_64 15 postgresql-15-pglogical postgresql-15-pglogical_2.4.7-1.pgdg12+1_amd64.deb pgdg 2.4.7 361.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pglogical/postgresql-15-pglogical_2.4.7-1.pgdg12+1_amd64.deb
 @ d12.x86_64 15 postgresql-15-pglogical postgresql-15-pglogical_2.4.6-2.pgdg12+1_amd64.deb pgdg 2.4.6 346.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pglogical/postgresql-15-pglogical_2.4.6-2.pgdg12+1_amd64.deb
+@ d12.aarch64 15 postgresql-15-pglogical postgresql-15-pglogical_2.4.7-1.pgdg12+1_arm64.deb pgdg 2.4.7 350.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pglogical/postgresql-15-pglogical_2.4.7-1.pgdg12+1_arm64.deb
 @ d12.aarch64 15 postgresql-15-pglogical postgresql-15-pglogical_2.4.6-2.pgdg12+1_arm64.deb pgdg 2.4.6 335.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pglogical/postgresql-15-pglogical_2.4.6-2.pgdg12+1_arm64.deb
+@ d13.x86_64 15 postgresql-15-pglogical postgresql-15-pglogical_2.4.7-1.pgdg13+1_amd64.deb pgdg 2.4.7 362.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pglogical/postgresql-15-pglogical_2.4.7-1.pgdg13+1_amd64.deb
 @ d13.x86_64 15 postgresql-15-pglogical postgresql-15-pglogical_2.4.6-2.pgdg13+1_amd64.deb pgdg 2.4.6 348.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pglogical/postgresql-15-pglogical_2.4.6-2.pgdg13+1_amd64.deb
+@ d13.aarch64 15 postgresql-15-pglogical postgresql-15-pglogical_2.4.7-1.pgdg13+1_arm64.deb pgdg 2.4.7 351.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pglogical/postgresql-15-pglogical_2.4.7-1.pgdg13+1_arm64.deb
 @ d13.aarch64 15 postgresql-15-pglogical postgresql-15-pglogical_2.4.6-2.pgdg13+1_arm64.deb pgdg 2.4.6 336.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pglogical/postgresql-15-pglogical_2.4.6-2.pgdg13+1_arm64.deb
+@ u22.x86_64 15 postgresql-15-pglogical postgresql-15-pglogical_2.4.7-1.pgdg22.04+1_amd64.deb pgdg 2.4.7 451.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pglogical/postgresql-15-pglogical_2.4.7-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 15 postgresql-15-pglogical postgresql-15-pglogical_2.4.6-2.pgdg22.04+1_amd64.deb pgdg 2.4.6 436.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pglogical/postgresql-15-pglogical_2.4.6-2.pgdg22.04+1_amd64.deb
+@ u22.aarch64 15 postgresql-15-pglogical postgresql-15-pglogical_2.4.7-1.pgdg22.04+1_arm64.deb pgdg 2.4.7 439.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pglogical/postgresql-15-pglogical_2.4.7-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 15 postgresql-15-pglogical postgresql-15-pglogical_2.4.6-2.pgdg22.04+1_arm64.deb pgdg 2.4.6 424.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pglogical/postgresql-15-pglogical_2.4.6-2.pgdg22.04+1_arm64.deb
+@ u24.x86_64 15 postgresql-15-pglogical postgresql-15-pglogical_2.4.7-1.pgdg24.04+1_amd64.deb pgdg 2.4.7 361.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pglogical/postgresql-15-pglogical_2.4.7-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 15 postgresql-15-pglogical postgresql-15-pglogical_2.4.6-2.pgdg24.04+1_amd64.deb pgdg 2.4.6 347.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pglogical/postgresql-15-pglogical_2.4.6-2.pgdg24.04+1_amd64.deb
+@ u24.aarch64 15 postgresql-15-pglogical postgresql-15-pglogical_2.4.7-1.pgdg24.04+1_arm64.deb pgdg 2.4.7 351.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pglogical/postgresql-15-pglogical_2.4.7-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 15 postgresql-15-pglogical postgresql-15-pglogical_2.4.6-2.pgdg24.04+1_arm64.deb pgdg 2.4.6 336.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pglogical/postgresql-15-pglogical_2.4.6-2.pgdg24.04+1_arm64.deb
+@ u26.x86_64 15 postgresql-15-pglogical postgresql-15-pglogical_2.4.7-1.pgdg26.04+1_amd64.deb pgdg 2.4.7 358.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pglogical/postgresql-15-pglogical_2.4.7-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 15 postgresql-15-pglogical postgresql-15-pglogical_2.4.6-2.pgdg26.04+1_amd64.deb pgdg 2.4.6 345.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pglogical/postgresql-15-pglogical_2.4.6-2.pgdg26.04+1_amd64.deb
+@ u26.aarch64 15 postgresql-15-pglogical postgresql-15-pglogical_2.4.7-1.pgdg26.04+1_arm64.deb pgdg 2.4.7 346.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pglogical/postgresql-15-pglogical_2.4.7-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 15 postgresql-15-pglogical postgresql-15-pglogical_2.4.6-2.pgdg26.04+1_arm64.deb pgdg 2.4.6 333.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pglogical/postgresql-15-pglogical_2.4.6-2.pgdg26.04+1_arm64.deb
 @ el8.x86_64 14 pglogical_14 pglogical_14-2.4.3-1.rhel8.x86_64.rpm pgdg 2.4.3 151.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pglogical_14-2.4.3-1.rhel8.x86_64.rpm
 @ el8.x86_64 14 pglogical_14 pglogical_14-2.4.2-1.rhel8.x86_64.rpm pgdg 2.4.2 150.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pglogical_14-2.4.2-1.rhel8.x86_64.rpm
@@ -142,22 +180,29 @@ weight: 9500
 @ el8.x86_64 14 pglogical_14 pglogical_14-2.4.0-1.rhel8.x86_64.rpm pgdg 2.4.0 149.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pglogical_14-2.4.0-1.rhel8.x86_64.rpm
 @ el8.aarch64 14 pglogical_14 pglogical_14-2.4.3-1.rhel8.aarch64.rpm pgdg 2.4.3 145.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pglogical_14-2.4.3-1.rhel8.aarch64.rpm
 @ el8.aarch64 14 pglogical_14 pglogical_14-2.4.2-1.rhel8.aarch64.rpm pgdg 2.4.2 144.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pglogical_14-2.4.2-1.rhel8.aarch64.rpm
-@ el9.x86_64 14 pglogical_14 pglogical_14-2.4.3-1.rhel9.x86_64.rpm pgdg 2.4.3 150.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pglogical_14-2.4.3-1.rhel9.x86_64.rpm
-@ el9.x86_64 14 pglogical_14 pglogical_14-2.4.2-1.rhel9.x86_64.rpm pgdg 2.4.2 150.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pglogical_14-2.4.2-1.rhel9.x86_64.rpm
-@ el9.x86_64 14 pglogical_14 pglogical_14-2.4.1-1.rhel9.x86_64.rpm pgdg 2.4.1 149.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pglogical_14-2.4.1-1.rhel9.x86_64.rpm
-@ el9.aarch64 14 pglogical_14 pglogical_14-2.4.3-1.rhel9.aarch64.rpm pgdg 2.4.3 145.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pglogical_14-2.4.3-1.rhel9.aarch64.rpm
-@ el9.aarch64 14 pglogical_14 pglogical_14-2.4.2-1.rhel9.aarch64.rpm pgdg 2.4.2 145.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pglogical_14-2.4.2-1.rhel9.aarch64.rpm
-@ el10.x86_64 14 pglogical_14 pglogical_14-2.4.5-3PGDG.rhel10.x86_64.rpm pgdg 2.4.5 151.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pglogical_14-2.4.5-3PGDG.rhel10.x86_64.rpm
-@ el10.aarch64 14 pglogical_14 pglogical_14-2.4.5-3PGDG.rhel10.aarch64.rpm pgdg 2.4.5 148.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pglogical_14-2.4.5-3PGDG.rhel10.aarch64.rpm
+@ el9.x86_64 14 pglogical_14 pglogical_14-2.4.6-4PGDG.rhel9.8.x86_64.rpm pgdg 2.4.6 150.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pglogical_14-2.4.6-4PGDG.rhel9.8.x86_64.rpm
+@ el9.aarch64 14 pglogical_14 pglogical_14-2.4.6-4PGDG.rhel9.8.aarch64.rpm pgdg 2.4.6 146.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pglogical_14-2.4.6-4PGDG.rhel9.8.aarch64.rpm
+@ el10.x86_64 14 pglogical_14 pglogical_14-2.4.6-4PGDG.rhel10.2.x86_64.rpm pgdg 2.4.6 152.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pglogical_14-2.4.6-4PGDG.rhel10.2.x86_64.rpm
+@ el10.aarch64 14 pglogical_14 pglogical_14-2.4.6-4PGDG.rhel10.2.aarch64.rpm pgdg 2.4.6 149.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pglogical_14-2.4.6-4PGDG.rhel10.2.aarch64.rpm
+@ d12.x86_64 14 postgresql-14-pglogical postgresql-14-pglogical_2.4.7-1.pgdg12+1_amd64.deb pgdg 2.4.7 361.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pglogical/postgresql-14-pglogical_2.4.7-1.pgdg12+1_amd64.deb
 @ d12.x86_64 14 postgresql-14-pglogical postgresql-14-pglogical_2.4.6-2.pgdg12+1_amd64.deb pgdg 2.4.6 347.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pglogical/postgresql-14-pglogical_2.4.6-2.pgdg12+1_amd64.deb
+@ d12.aarch64 14 postgresql-14-pglogical postgresql-14-pglogical_2.4.7-1.pgdg12+1_arm64.deb pgdg 2.4.7 349.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pglogical/postgresql-14-pglogical_2.4.7-1.pgdg12+1_arm64.deb
 @ d12.aarch64 14 postgresql-14-pglogical postgresql-14-pglogical_2.4.6-2.pgdg12+1_arm64.deb pgdg 2.4.6 335.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pglogical/postgresql-14-pglogical_2.4.6-2.pgdg12+1_arm64.deb
+@ d13.x86_64 14 postgresql-14-pglogical postgresql-14-pglogical_2.4.7-1.pgdg13+1_amd64.deb pgdg 2.4.7 361.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pglogical/postgresql-14-pglogical_2.4.7-1.pgdg13+1_amd64.deb
 @ d13.x86_64 14 postgresql-14-pglogical postgresql-14-pglogical_2.4.6-2.pgdg13+1_amd64.deb pgdg 2.4.6 347.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pglogical/postgresql-14-pglogical_2.4.6-2.pgdg13+1_amd64.deb
+@ d13.aarch64 14 postgresql-14-pglogical postgresql-14-pglogical_2.4.7-1.pgdg13+1_arm64.deb pgdg 2.4.7 351.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pglogical/postgresql-14-pglogical_2.4.7-1.pgdg13+1_arm64.deb
 @ d13.aarch64 14 postgresql-14-pglogical postgresql-14-pglogical_2.4.6-2.pgdg13+1_arm64.deb pgdg 2.4.6 336.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pglogical/postgresql-14-pglogical_2.4.6-2.pgdg13+1_arm64.deb
+@ u22.x86_64 14 postgresql-14-pglogical postgresql-14-pglogical_2.4.7-1.pgdg22.04+1_amd64.deb pgdg 2.4.7 450.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pglogical/postgresql-14-pglogical_2.4.7-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 14 postgresql-14-pglogical postgresql-14-pglogical_2.4.6-2.pgdg22.04+1_amd64.deb pgdg 2.4.6 434.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pglogical/postgresql-14-pglogical_2.4.6-2.pgdg22.04+1_amd64.deb
+@ u22.aarch64 14 postgresql-14-pglogical postgresql-14-pglogical_2.4.7-1.pgdg22.04+1_arm64.deb pgdg 2.4.7 438.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pglogical/postgresql-14-pglogical_2.4.7-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 14 postgresql-14-pglogical postgresql-14-pglogical_2.4.6-2.pgdg22.04+1_arm64.deb pgdg 2.4.6 423.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pglogical/postgresql-14-pglogical_2.4.6-2.pgdg22.04+1_arm64.deb
+@ u24.x86_64 14 postgresql-14-pglogical postgresql-14-pglogical_2.4.7-1.pgdg24.04+1_amd64.deb pgdg 2.4.7 361.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pglogical/postgresql-14-pglogical_2.4.7-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 14 postgresql-14-pglogical postgresql-14-pglogical_2.4.6-2.pgdg24.04+1_amd64.deb pgdg 2.4.6 347.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pglogical/postgresql-14-pglogical_2.4.6-2.pgdg24.04+1_amd64.deb
+@ u24.aarch64 14 postgresql-14-pglogical postgresql-14-pglogical_2.4.7-1.pgdg24.04+1_arm64.deb pgdg 2.4.7 351.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pglogical/postgresql-14-pglogical_2.4.7-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 14 postgresql-14-pglogical postgresql-14-pglogical_2.4.6-2.pgdg24.04+1_arm64.deb pgdg 2.4.6 336.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pglogical/postgresql-14-pglogical_2.4.6-2.pgdg24.04+1_arm64.deb
+@ u26.x86_64 14 postgresql-14-pglogical postgresql-14-pglogical_2.4.7-1.pgdg26.04+1_amd64.deb pgdg 2.4.7 357.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pglogical/postgresql-14-pglogical_2.4.7-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 14 postgresql-14-pglogical postgresql-14-pglogical_2.4.6-2.pgdg26.04+1_amd64.deb pgdg 2.4.6 344.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pglogical/postgresql-14-pglogical_2.4.6-2.pgdg26.04+1_amd64.deb
+@ u26.aarch64 14 postgresql-14-pglogical postgresql-14-pglogical_2.4.7-1.pgdg26.04+1_arm64.deb pgdg 2.4.7 346.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pglogical/postgresql-14-pglogical_2.4.7-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 14 postgresql-14-pglogical postgresql-14-pglogical_2.4.6-2.pgdg26.04+1_arm64.deb pgdg 2.4.6 333.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pglogical/postgresql-14-pglogical_2.4.6-2.pgdg26.04+1_arm64.deb
 {{< /pgext_matrix >}}
 

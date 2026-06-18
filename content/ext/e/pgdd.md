@@ -38,7 +38,7 @@ weight: 5130
 {.ext-table .ext-table--rel}
 
 
-> manual updated pgrx by Vonng
+> pgrx patched to 0.18.1.
 
 
 ## 版本
@@ -67,8 +67,8 @@ weight: 5130
 | u22.aarch64 | AVAIL PIGSTY 0.6.1 1 | AVAIL PIGSTY 0.6.1 1 | AVAIL PIGSTY 0.6.1 1 | AVAIL PIGSTY 0.6.1 1 | AVAIL PIGSTY 0.6.1 1 |
 | u24.x86_64 | AVAIL PIGSTY 0.6.1 1 | AVAIL PIGSTY 0.6.1 1 | AVAIL PIGSTY 0.6.1 1 | AVAIL PIGSTY 0.6.1 1 | AVAIL PIGSTY 0.6.1 1 |
 | u24.aarch64 | AVAIL PIGSTY 0.6.1 1 | AVAIL PIGSTY 0.6.1 1 | AVAIL PIGSTY 0.6.1 1 | AVAIL PIGSTY 0.6.1 1 | AVAIL PIGSTY 0.6.1 1 |
-| u26.x86_64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| u26.aarch64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| u26.x86_64 | AVAIL PIGSTY 0.6.1 1 | AVAIL PIGSTY 0.6.1 1 | AVAIL PIGSTY 0.6.1 1 | AVAIL PIGSTY 0.6.1 1 | AVAIL PIGSTY 0.6.1 1 |
+| u26.aarch64 | AVAIL PIGSTY 0.6.1 1 | AVAIL PIGSTY 0.6.1 1 | AVAIL PIGSTY 0.6.1 1 | AVAIL PIGSTY 0.6.1 1 | AVAIL PIGSTY 0.6.1 1 |
 @ el8.x86_64 18 pgdd_18 pgdd_18-0.6.1-1PIGSTY.el8.x86_64.rpm pigsty 0.6.1 285.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgdd_18-0.6.1-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 18 pgdd_18 pgdd_18-0.6.1-1PIGSTY.el8.aarch64.rpm pigsty 0.6.1 182.4KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgdd_18-0.6.1-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 18 pgdd_18 pgdd_18-0.6.1-1PIGSTY.el9.x86_64.rpm pigsty 0.6.1 298.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgdd_18-0.6.1-1PIGSTY.el9.x86_64.rpm
@@ -83,6 +83,8 @@ weight: 5130
 @ u22.aarch64 18 postgresql-18-pgdd postgresql-18-pgdd_0.6.1-1PIGSTY~jammy_arm64.deb pigsty 0.6.1 162.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgdd/postgresql-18-pgdd_0.6.1-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 18 postgresql-18-pgdd postgresql-18-pgdd_0.6.1-1PIGSTY~noble_amd64.deb pigsty 0.6.1 263.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgdd/postgresql-18-pgdd_0.6.1-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 18 postgresql-18-pgdd postgresql-18-pgdd_0.6.1-1PIGSTY~noble_arm64.deb pigsty 0.6.1 161.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgdd/postgresql-18-pgdd_0.6.1-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 18 postgresql-18-pgdd postgresql-18-pgdd_0.6.1-2PIGSTY~resolute_amd64.deb pigsty 0.6.1 731.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgdd/postgresql-18-pgdd_0.6.1-2PIGSTY~resolute_amd64.deb
+@ u26.aarch64 18 postgresql-18-pgdd postgresql-18-pgdd_0.6.1-2PIGSTY~resolute_arm64.deb pigsty 0.6.1 649.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgdd/postgresql-18-pgdd_0.6.1-2PIGSTY~resolute_arm64.deb
 @ el8.x86_64 17 pgdd_17 pgdd_17-0.6.1-1PIGSTY.el8.x86_64.rpm pigsty 0.6.1 285.4KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgdd_17-0.6.1-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 17 pgdd_17 pgdd_17-0.6.1-1PIGSTY.el8.aarch64.rpm pigsty 0.6.1 182.4KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgdd_17-0.6.1-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 17 pgdd_17 pgdd_17-0.6.1-1PIGSTY.el9.x86_64.rpm pigsty 0.6.1 298.7KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgdd_17-0.6.1-1PIGSTY.el9.x86_64.rpm
@@ -97,6 +99,8 @@ weight: 5130
 @ u22.aarch64 17 postgresql-17-pgdd postgresql-17-pgdd_0.6.1-1PIGSTY~jammy_arm64.deb pigsty 0.6.1 163.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgdd/postgresql-17-pgdd_0.6.1-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 17 postgresql-17-pgdd postgresql-17-pgdd_0.6.1-1PIGSTY~noble_amd64.deb pigsty 0.6.1 263.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgdd/postgresql-17-pgdd_0.6.1-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 17 postgresql-17-pgdd postgresql-17-pgdd_0.6.1-1PIGSTY~noble_arm64.deb pigsty 0.6.1 161.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgdd/postgresql-17-pgdd_0.6.1-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 17 postgresql-17-pgdd postgresql-17-pgdd_0.6.1-2PIGSTY~resolute_amd64.deb pigsty 0.6.1 727.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgdd/postgresql-17-pgdd_0.6.1-2PIGSTY~resolute_amd64.deb
+@ u26.aarch64 17 postgresql-17-pgdd postgresql-17-pgdd_0.6.1-2PIGSTY~resolute_arm64.deb pigsty 0.6.1 647.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgdd/postgresql-17-pgdd_0.6.1-2PIGSTY~resolute_arm64.deb
 @ el8.x86_64 16 pgdd_16 pgdd_16-0.6.1-1PIGSTY.el8.x86_64.rpm pigsty 0.6.1 285.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgdd_16-0.6.1-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 16 pgdd_16 pgdd_16-0.6.1-1PIGSTY.el8.aarch64.rpm pigsty 0.6.1 182.4KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgdd_16-0.6.1-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 16 pgdd_16 pgdd_16-0.6.1-1PIGSTY.el9.x86_64.rpm pigsty 0.6.1 298.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgdd_16-0.6.1-1PIGSTY.el9.x86_64.rpm
@@ -111,6 +115,8 @@ weight: 5130
 @ u22.aarch64 16 postgresql-16-pgdd postgresql-16-pgdd_0.6.1-1PIGSTY~jammy_arm64.deb pigsty 0.6.1 162.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgdd/postgresql-16-pgdd_0.6.1-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 16 postgresql-16-pgdd postgresql-16-pgdd_0.6.1-1PIGSTY~noble_amd64.deb pigsty 0.6.1 263.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgdd/postgresql-16-pgdd_0.6.1-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 16 postgresql-16-pgdd postgresql-16-pgdd_0.6.1-1PIGSTY~noble_arm64.deb pigsty 0.6.1 161.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgdd/postgresql-16-pgdd_0.6.1-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 16 postgresql-16-pgdd postgresql-16-pgdd_0.6.1-2PIGSTY~resolute_amd64.deb pigsty 0.6.1 727.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgdd/postgresql-16-pgdd_0.6.1-2PIGSTY~resolute_amd64.deb
+@ u26.aarch64 16 postgresql-16-pgdd postgresql-16-pgdd_0.6.1-2PIGSTY~resolute_arm64.deb pigsty 0.6.1 646.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgdd/postgresql-16-pgdd_0.6.1-2PIGSTY~resolute_arm64.deb
 @ el8.x86_64 15 pgdd_15 pgdd_15-0.6.1-1PIGSTY.el8.x86_64.rpm pigsty 0.6.1 285.1KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgdd_15-0.6.1-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 15 pgdd_15 pgdd_15-0.6.1-1PIGSTY.el8.aarch64.rpm pigsty 0.6.1 182.3KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgdd_15-0.6.1-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 15 pgdd_15 pgdd_15-0.6.1-1PIGSTY.el9.x86_64.rpm pigsty 0.6.1 298.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgdd_15-0.6.1-1PIGSTY.el9.x86_64.rpm
@@ -125,6 +131,8 @@ weight: 5130
 @ u22.aarch64 15 postgresql-15-pgdd postgresql-15-pgdd_0.6.1-1PIGSTY~jammy_arm64.deb pigsty 0.6.1 162.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgdd/postgresql-15-pgdd_0.6.1-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 15 postgresql-15-pgdd postgresql-15-pgdd_0.6.1-1PIGSTY~noble_amd64.deb pigsty 0.6.1 263.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgdd/postgresql-15-pgdd_0.6.1-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 15 postgresql-15-pgdd postgresql-15-pgdd_0.6.1-1PIGSTY~noble_arm64.deb pigsty 0.6.1 161.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgdd/postgresql-15-pgdd_0.6.1-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 15 postgresql-15-pgdd postgresql-15-pgdd_0.6.1-2PIGSTY~resolute_amd64.deb pigsty 0.6.1 721.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgdd/postgresql-15-pgdd_0.6.1-2PIGSTY~resolute_amd64.deb
+@ u26.aarch64 15 postgresql-15-pgdd postgresql-15-pgdd_0.6.1-2PIGSTY~resolute_arm64.deb pigsty 0.6.1 640.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgdd/postgresql-15-pgdd_0.6.1-2PIGSTY~resolute_arm64.deb
 @ el8.x86_64 14 pgdd_14 pgdd_14-0.6.1-1PIGSTY.el8.x86_64.rpm pigsty 0.6.1 284.9KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgdd_14-0.6.1-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 14 pgdd_14 pgdd_14-0.6.1-1PIGSTY.el8.aarch64.rpm pigsty 0.6.1 182.4KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgdd_14-0.6.1-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 14 pgdd_14 pgdd_14-0.6.1-1PIGSTY.el9.x86_64.rpm pigsty 0.6.1 298.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgdd_14-0.6.1-1PIGSTY.el9.x86_64.rpm
@@ -139,6 +147,8 @@ weight: 5130
 @ u22.aarch64 14 postgresql-14-pgdd postgresql-14-pgdd_0.6.1-1PIGSTY~jammy_arm64.deb pigsty 0.6.1 162.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgdd/postgresql-14-pgdd_0.6.1-1PIGSTY~jammy_arm64.deb
 @ u24.x86_64 14 postgresql-14-pgdd postgresql-14-pgdd_0.6.1-1PIGSTY~noble_amd64.deb pigsty 0.6.1 262.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgdd/postgresql-14-pgdd_0.6.1-1PIGSTY~noble_amd64.deb
 @ u24.aarch64 14 postgresql-14-pgdd postgresql-14-pgdd_0.6.1-1PIGSTY~noble_arm64.deb pigsty 0.6.1 161.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgdd/postgresql-14-pgdd_0.6.1-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 14 postgresql-14-pgdd postgresql-14-pgdd_0.6.1-2PIGSTY~resolute_amd64.deb pigsty 0.6.1 719.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgdd/postgresql-14-pgdd_0.6.1-2PIGSTY~resolute_amd64.deb
+@ u26.aarch64 14 postgresql-14-pgdd postgresql-14-pgdd_0.6.1-2PIGSTY~resolute_arm64.deb pigsty 0.6.1 638.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgdd/postgresql-14-pgdd_0.6.1-2PIGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建

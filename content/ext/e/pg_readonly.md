@@ -52,10 +52,10 @@ weight: 5120
 |:--:|:--:|:--:|:--:|:--:|:--:|
 | el8.x86_64 | AVAIL PGDG 1.0.4 2 | AVAIL PGDG 1.0.4 2 | AVAIL PGDG 1.0.4 2 | AVAIL PGDG 1.0.4 3 | AVAIL PGDG 1.0.4 3 |
 | el8.aarch64 | AVAIL PGDG 1.0.4 2 | AVAIL PGDG 1.0.4 2 | AVAIL PGDG 1.0.4 2 | AVAIL PGDG 1.0.4 2 | AVAIL PGDG 1.0.4 2 |
-| el9.x86_64 | AVAIL PGDG 1.0.4 2 | AVAIL PGDG 1.0.4 2 | AVAIL PGDG 1.0.4 2 | AVAIL PGDG 1.0.4 3 | AVAIL PGDG 1.0.4 3 |
-| el9.aarch64 | AVAIL PGDG 1.0.4 2 | AVAIL PGDG 1.0.4 2 | AVAIL PGDG 1.0.4 2 | AVAIL PGDG 1.0.4 2 | AVAIL PGDG 1.0.4 2 |
-| el10.x86_64 | AVAIL PGDG 1.0.4 2 | AVAIL PGDG 1.0.4 2 | AVAIL PGDG 1.0.4 2 | AVAIL PGDG 1.0.4 2 | AVAIL PGDG 1.0.4 2 |
-| el10.aarch64 | AVAIL PGDG 1.0.4 2 | AVAIL PGDG 1.0.4 2 | AVAIL PGDG 1.0.4 2 | AVAIL PGDG 1.0.4 2 | AVAIL PGDG 1.0.4 2 |
+| el9.x86_64 | AVAIL PGDG 1.0.4 1 | AVAIL PGDG 1.0.4 1 | AVAIL PGDG 1.0.4 1 | AVAIL PGDG 1.0.4 1 | AVAIL PGDG 1.0.4 1 |
+| el9.aarch64 | AVAIL PGDG 1.0.4 1 | AVAIL PGDG 1.0.4 1 | AVAIL PGDG 1.0.4 1 | AVAIL PGDG 1.0.4 1 | AVAIL PGDG 1.0.4 1 |
+| el10.x86_64 | AVAIL PGDG 1.0.4 1 | AVAIL PGDG 1.0.4 1 | AVAIL PGDG 1.0.4 1 | AVAIL PGDG 1.0.4 1 | AVAIL PGDG 1.0.4 1 |
+| el10.aarch64 | AVAIL PGDG 1.0.4 1 | AVAIL PGDG 1.0.4 1 | AVAIL PGDG 1.0.4 1 | AVAIL PGDG 1.0.4 1 | AVAIL PGDG 1.0.4 1 |
 | d12.x86_64 | AVAIL PIGSTY 1.0.4 1 | AVAIL PIGSTY 1.0.4 1 | AVAIL PIGSTY 1.0.4 1 | AVAIL PIGSTY 1.0.4 1 | AVAIL PIGSTY 1.0.4 1 |
 | d12.aarch64 | AVAIL PIGSTY 1.0.4 1 | AVAIL PIGSTY 1.0.4 1 | AVAIL PIGSTY 1.0.4 1 | AVAIL PIGSTY 1.0.4 1 | AVAIL PIGSTY 1.0.4 1 |
 | d13.x86_64 | AVAIL PIGSTY 1.0.4 1 | AVAIL PIGSTY 1.0.4 1 | AVAIL PIGSTY 1.0.4 1 | AVAIL PIGSTY 1.0.4 1 | AVAIL PIGSTY 1.0.4 1 |
@@ -70,14 +70,10 @@ weight: 5120
 @ el8.x86_64 18 pg_readonly_18 pg_readonly_18-1.0.3-5PGDG.rhel8.x86_64.rpm pgdg 1.0.3 16.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pg_readonly_18-1.0.3-5PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 18 pg_readonly_18 pg_readonly_18-1.0.4-1PGDG.rhel8.10.aarch64.rpm pgdg 1.0.4 16.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pg_readonly_18-1.0.4-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 18 pg_readonly_18 pg_readonly_18-1.0.3-5PGDG.rhel8.aarch64.rpm pgdg 1.0.3 16.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pg_readonly_18-1.0.3-5PGDG.rhel8.aarch64.rpm
-@ el9.x86_64 18 pg_readonly_18 pg_readonly_18-1.0.4-1PGDG.rhel9.7.x86_64.rpm pgdg 1.0.4 16.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pg_readonly_18-1.0.4-1PGDG.rhel9.7.x86_64.rpm
-@ el9.x86_64 18 pg_readonly_18 pg_readonly_18-1.0.3-5PGDG.rhel9.x86_64.rpm pgdg 1.0.3 16.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pg_readonly_18-1.0.3-5PGDG.rhel9.x86_64.rpm
-@ el9.aarch64 18 pg_readonly_18 pg_readonly_18-1.0.4-1PGDG.rhel9.7.aarch64.rpm pgdg 1.0.4 15.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pg_readonly_18-1.0.4-1PGDG.rhel9.7.aarch64.rpm
-@ el9.aarch64 18 pg_readonly_18 pg_readonly_18-1.0.3-5PGDG.rhel9.aarch64.rpm pgdg 1.0.3 16.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pg_readonly_18-1.0.3-5PGDG.rhel9.aarch64.rpm
-@ el10.x86_64 18 pg_readonly_18 pg_readonly_18-1.0.4-1PGDG.rhel10.1.x86_64.rpm pgdg 1.0.4 16.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pg_readonly_18-1.0.4-1PGDG.rhel10.1.x86_64.rpm
-@ el10.x86_64 18 pg_readonly_18 pg_readonly_18-1.0.3-5PGDG.rhel10.x86_64.rpm pgdg 1.0.3 16.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pg_readonly_18-1.0.3-5PGDG.rhel10.x86_64.rpm
-@ el10.aarch64 18 pg_readonly_18 pg_readonly_18-1.0.4-1PGDG.rhel10.1.aarch64.rpm pgdg 1.0.4 16.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_readonly_18-1.0.4-1PGDG.rhel10.1.aarch64.rpm
-@ el10.aarch64 18 pg_readonly_18 pg_readonly_18-1.0.3-5PGDG.rhel10.aarch64.rpm pgdg 1.0.3 16.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_readonly_18-1.0.3-5PGDG.rhel10.aarch64.rpm
+@ el9.x86_64 18 pg_readonly_18 pg_readonly_18-1.0.4-1PGDG.rhel9.8.x86_64.rpm pgdg 1.0.4 16.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pg_readonly_18-1.0.4-1PGDG.rhel9.8.x86_64.rpm
+@ el9.aarch64 18 pg_readonly_18 pg_readonly_18-1.0.4-1PGDG.rhel9.8.aarch64.rpm pgdg 1.0.4 15.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pg_readonly_18-1.0.4-1PGDG.rhel9.8.aarch64.rpm
+@ el10.x86_64 18 pg_readonly_18 pg_readonly_18-1.0.4-1PGDG.rhel10.2.x86_64.rpm pgdg 1.0.4 16.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pg_readonly_18-1.0.4-1PGDG.rhel10.2.x86_64.rpm
+@ el10.aarch64 18 pg_readonly_18 pg_readonly_18-1.0.4-1PGDG.rhel10.2.aarch64.rpm pgdg 1.0.4 16.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_readonly_18-1.0.4-1PGDG.rhel10.2.aarch64.rpm
 @ d12.x86_64 18 postgresql-18-pg-readonly postgresql-18-pg-readonly_1.0.4-1PIGSTY~bookworm_amd64.deb pigsty 1.0.4 16.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-readonly/postgresql-18-pg-readonly_1.0.4-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 18 postgresql-18-pg-readonly postgresql-18-pg-readonly_1.0.4-1PIGSTY~bookworm_arm64.deb pigsty 1.0.4 16.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-readonly/postgresql-18-pg-readonly_1.0.4-1PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 18 postgresql-18-pg-readonly postgresql-18-pg-readonly_1.0.4-1PIGSTY~trixie_amd64.deb pigsty 1.0.4 16.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-readonly/postgresql-18-pg-readonly_1.0.4-1PIGSTY~trixie_amd64.deb
@@ -92,14 +88,10 @@ weight: 5120
 @ el8.x86_64 17 pg_readonly_17 pg_readonly_17-1.0.3-4PGDG.rhel8.x86_64.rpm pgdg 1.0.3 16.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pg_readonly_17-1.0.3-4PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 17 pg_readonly_17 pg_readonly_17-1.0.4-1PGDG.rhel8.10.aarch64.rpm pgdg 1.0.4 16.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pg_readonly_17-1.0.4-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 17 pg_readonly_17 pg_readonly_17-1.0.3-4PGDG.rhel8.aarch64.rpm pgdg 1.0.3 16.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pg_readonly_17-1.0.3-4PGDG.rhel8.aarch64.rpm
-@ el9.x86_64 17 pg_readonly_17 pg_readonly_17-1.0.4-1PGDG.rhel9.7.x86_64.rpm pgdg 1.0.4 16.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_readonly_17-1.0.4-1PGDG.rhel9.7.x86_64.rpm
-@ el9.x86_64 17 pg_readonly_17 pg_readonly_17-1.0.3-4PGDG.rhel9.x86_64.rpm pgdg 1.0.3 16.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_readonly_17-1.0.3-4PGDG.rhel9.x86_64.rpm
-@ el9.aarch64 17 pg_readonly_17 pg_readonly_17-1.0.4-1PGDG.rhel9.7.aarch64.rpm pgdg 1.0.4 15.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_readonly_17-1.0.4-1PGDG.rhel9.7.aarch64.rpm
-@ el9.aarch64 17 pg_readonly_17 pg_readonly_17-1.0.3-4PGDG.rhel9.aarch64.rpm pgdg 1.0.3 16.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_readonly_17-1.0.3-4PGDG.rhel9.aarch64.rpm
-@ el10.x86_64 17 pg_readonly_17 pg_readonly_17-1.0.4-1PGDG.rhel10.1.x86_64.rpm pgdg 1.0.4 16.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_readonly_17-1.0.4-1PGDG.rhel10.1.x86_64.rpm
-@ el10.x86_64 17 pg_readonly_17 pg_readonly_17-1.0.3-5PGDG.rhel10.x86_64.rpm pgdg 1.0.3 17.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_readonly_17-1.0.3-5PGDG.rhel10.x86_64.rpm
-@ el10.aarch64 17 pg_readonly_17 pg_readonly_17-1.0.4-1PGDG.rhel10.1.aarch64.rpm pgdg 1.0.4 16.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_readonly_17-1.0.4-1PGDG.rhel10.1.aarch64.rpm
-@ el10.aarch64 17 pg_readonly_17 pg_readonly_17-1.0.3-5PGDG.rhel10.aarch64.rpm pgdg 1.0.3 16.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_readonly_17-1.0.3-5PGDG.rhel10.aarch64.rpm
+@ el9.x86_64 17 pg_readonly_17 pg_readonly_17-1.0.4-1PGDG.rhel9.8.x86_64.rpm pgdg 1.0.4 16.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_readonly_17-1.0.4-1PGDG.rhel9.8.x86_64.rpm
+@ el9.aarch64 17 pg_readonly_17 pg_readonly_17-1.0.4-1PGDG.rhel9.8.aarch64.rpm pgdg 1.0.4 15.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_readonly_17-1.0.4-1PGDG.rhel9.8.aarch64.rpm
+@ el10.x86_64 17 pg_readonly_17 pg_readonly_17-1.0.4-1PGDG.rhel10.2.x86_64.rpm pgdg 1.0.4 16.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_readonly_17-1.0.4-1PGDG.rhel10.2.x86_64.rpm
+@ el10.aarch64 17 pg_readonly_17 pg_readonly_17-1.0.4-1PGDG.rhel10.2.aarch64.rpm pgdg 1.0.4 16.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_readonly_17-1.0.4-1PGDG.rhel10.2.aarch64.rpm
 @ d12.x86_64 17 postgresql-17-pg-readonly postgresql-17-pg-readonly_1.0.4-1PIGSTY~bookworm_amd64.deb pigsty 1.0.4 16.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-readonly/postgresql-17-pg-readonly_1.0.4-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 17 postgresql-17-pg-readonly postgresql-17-pg-readonly_1.0.4-1PIGSTY~bookworm_arm64.deb pigsty 1.0.4 16.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-readonly/postgresql-17-pg-readonly_1.0.4-1PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 17 postgresql-17-pg-readonly postgresql-17-pg-readonly_1.0.4-1PIGSTY~trixie_amd64.deb pigsty 1.0.4 16.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-readonly/postgresql-17-pg-readonly_1.0.4-1PIGSTY~trixie_amd64.deb
@@ -114,14 +106,10 @@ weight: 5120
 @ el8.x86_64 16 pg_readonly_16 pg_readonly_16-1.0.3-2.rhel8.1.x86_64.rpm pgdg 1.0.3 16.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_readonly_16-1.0.3-2.rhel8.1.x86_64.rpm
 @ el8.aarch64 16 pg_readonly_16 pg_readonly_16-1.0.4-1PGDG.rhel8.10.aarch64.rpm pgdg 1.0.4 16.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pg_readonly_16-1.0.4-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 16 pg_readonly_16 pg_readonly_16-1.0.3-2.rhel8.1.aarch64.rpm pgdg 1.0.3 16.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pg_readonly_16-1.0.3-2.rhel8.1.aarch64.rpm
-@ el9.x86_64 16 pg_readonly_16 pg_readonly_16-1.0.4-1PGDG.rhel9.7.x86_64.rpm pgdg 1.0.4 16.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_readonly_16-1.0.4-1PGDG.rhel9.7.x86_64.rpm
-@ el9.x86_64 16 pg_readonly_16 pg_readonly_16-1.0.3-2.rhel9.1.x86_64.rpm pgdg 1.0.3 16.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_readonly_16-1.0.3-2.rhel9.1.x86_64.rpm
-@ el9.aarch64 16 pg_readonly_16 pg_readonly_16-1.0.4-1PGDG.rhel9.7.aarch64.rpm pgdg 1.0.4 15.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_readonly_16-1.0.4-1PGDG.rhel9.7.aarch64.rpm
-@ el9.aarch64 16 pg_readonly_16 pg_readonly_16-1.0.3-2.rhel9.1.aarch64.rpm pgdg 1.0.3 16.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_readonly_16-1.0.3-2.rhel9.1.aarch64.rpm
-@ el10.x86_64 16 pg_readonly_16 pg_readonly_16-1.0.4-1PGDG.rhel10.1.x86_64.rpm pgdg 1.0.4 16.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_readonly_16-1.0.4-1PGDG.rhel10.1.x86_64.rpm
-@ el10.x86_64 16 pg_readonly_16 pg_readonly_16-1.0.3-5PGDG.rhel10.x86_64.rpm pgdg 1.0.3 17.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_readonly_16-1.0.3-5PGDG.rhel10.x86_64.rpm
-@ el10.aarch64 16 pg_readonly_16 pg_readonly_16-1.0.4-1PGDG.rhel10.1.aarch64.rpm pgdg 1.0.4 16.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_readonly_16-1.0.4-1PGDG.rhel10.1.aarch64.rpm
-@ el10.aarch64 16 pg_readonly_16 pg_readonly_16-1.0.3-5PGDG.rhel10.aarch64.rpm pgdg 1.0.3 16.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_readonly_16-1.0.3-5PGDG.rhel10.aarch64.rpm
+@ el9.x86_64 16 pg_readonly_16 pg_readonly_16-1.0.4-1PGDG.rhel9.8.x86_64.rpm pgdg 1.0.4 16.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_readonly_16-1.0.4-1PGDG.rhel9.8.x86_64.rpm
+@ el9.aarch64 16 pg_readonly_16 pg_readonly_16-1.0.4-1PGDG.rhel9.8.aarch64.rpm pgdg 1.0.4 15.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_readonly_16-1.0.4-1PGDG.rhel9.8.aarch64.rpm
+@ el10.x86_64 16 pg_readonly_16 pg_readonly_16-1.0.4-1PGDG.rhel10.2.x86_64.rpm pgdg 1.0.4 16.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_readonly_16-1.0.4-1PGDG.rhel10.2.x86_64.rpm
+@ el10.aarch64 16 pg_readonly_16 pg_readonly_16-1.0.4-1PGDG.rhel10.2.aarch64.rpm pgdg 1.0.4 16.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_readonly_16-1.0.4-1PGDG.rhel10.2.aarch64.rpm
 @ d12.x86_64 16 postgresql-16-pg-readonly postgresql-16-pg-readonly_1.0.4-1PIGSTY~bookworm_amd64.deb pigsty 1.0.4 16.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-readonly/postgresql-16-pg-readonly_1.0.4-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 16 postgresql-16-pg-readonly postgresql-16-pg-readonly_1.0.4-1PIGSTY~bookworm_arm64.deb pigsty 1.0.4 16.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-readonly/postgresql-16-pg-readonly_1.0.4-1PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 16 postgresql-16-pg-readonly postgresql-16-pg-readonly_1.0.4-1PIGSTY~trixie_amd64.deb pigsty 1.0.4 16.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-readonly/postgresql-16-pg-readonly_1.0.4-1PIGSTY~trixie_amd64.deb
@@ -137,15 +125,10 @@ weight: 5120
 @ el8.x86_64 15 pg_readonly_15 pg_readonly_15-1.0.1-1.rhel8.x86_64.rpm pgdg 1.0.1 29.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_readonly_15-1.0.1-1.rhel8.x86_64.rpm
 @ el8.aarch64 15 pg_readonly_15 pg_readonly_15-1.0.4-1PGDG.rhel8.10.aarch64.rpm pgdg 1.0.4 16.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pg_readonly_15-1.0.4-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 15 pg_readonly_15 pg_readonly_15-1.0.3-1.rhel8.aarch64.rpm pgdg 1.0.3 30.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pg_readonly_15-1.0.3-1.rhel8.aarch64.rpm
-@ el9.x86_64 15 pg_readonly_15 pg_readonly_15-1.0.4-1PGDG.rhel9.7.x86_64.rpm pgdg 1.0.4 16.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_readonly_15-1.0.4-1PGDG.rhel9.7.x86_64.rpm
-@ el9.x86_64 15 pg_readonly_15 pg_readonly_15-1.0.3-1.rhel9.x86_64.rpm pgdg 1.0.3 31.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_readonly_15-1.0.3-1.rhel9.x86_64.rpm
-@ el9.x86_64 15 pg_readonly_15 pg_readonly_15-1.0.1-1.rhel9.x86_64.rpm pgdg 1.0.1 29.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_readonly_15-1.0.1-1.rhel9.x86_64.rpm
-@ el9.aarch64 15 pg_readonly_15 pg_readonly_15-1.0.4-1PGDG.rhel9.7.aarch64.rpm pgdg 1.0.4 15.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_readonly_15-1.0.4-1PGDG.rhel9.7.aarch64.rpm
-@ el9.aarch64 15 pg_readonly_15 pg_readonly_15-1.0.3-1.rhel9.aarch64.rpm pgdg 1.0.3 31.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_readonly_15-1.0.3-1.rhel9.aarch64.rpm
-@ el10.x86_64 15 pg_readonly_15 pg_readonly_15-1.0.4-1PGDG.rhel10.1.x86_64.rpm pgdg 1.0.4 16.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_readonly_15-1.0.4-1PGDG.rhel10.1.x86_64.rpm
-@ el10.x86_64 15 pg_readonly_15 pg_readonly_15-1.0.3-5PGDG.rhel10.x86_64.rpm pgdg 1.0.3 17.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_readonly_15-1.0.3-5PGDG.rhel10.x86_64.rpm
-@ el10.aarch64 15 pg_readonly_15 pg_readonly_15-1.0.4-1PGDG.rhel10.1.aarch64.rpm pgdg 1.0.4 16.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_readonly_15-1.0.4-1PGDG.rhel10.1.aarch64.rpm
-@ el10.aarch64 15 pg_readonly_15 pg_readonly_15-1.0.3-5PGDG.rhel10.aarch64.rpm pgdg 1.0.3 16.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_readonly_15-1.0.3-5PGDG.rhel10.aarch64.rpm
+@ el9.x86_64 15 pg_readonly_15 pg_readonly_15-1.0.4-1PGDG.rhel9.8.x86_64.rpm pgdg 1.0.4 16.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_readonly_15-1.0.4-1PGDG.rhel9.8.x86_64.rpm
+@ el9.aarch64 15 pg_readonly_15 pg_readonly_15-1.0.4-1PGDG.rhel9.8.aarch64.rpm pgdg 1.0.4 15.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_readonly_15-1.0.4-1PGDG.rhel9.8.aarch64.rpm
+@ el10.x86_64 15 pg_readonly_15 pg_readonly_15-1.0.4-1PGDG.rhel10.2.x86_64.rpm pgdg 1.0.4 16.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_readonly_15-1.0.4-1PGDG.rhel10.2.x86_64.rpm
+@ el10.aarch64 15 pg_readonly_15 pg_readonly_15-1.0.4-1PGDG.rhel10.2.aarch64.rpm pgdg 1.0.4 16.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_readonly_15-1.0.4-1PGDG.rhel10.2.aarch64.rpm
 @ d12.x86_64 15 postgresql-15-pg-readonly postgresql-15-pg-readonly_1.0.4-1PIGSTY~bookworm_amd64.deb pigsty 1.0.4 16.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-readonly/postgresql-15-pg-readonly_1.0.4-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 15 postgresql-15-pg-readonly postgresql-15-pg-readonly_1.0.4-1PIGSTY~bookworm_arm64.deb pigsty 1.0.4 16.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-readonly/postgresql-15-pg-readonly_1.0.4-1PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 15 postgresql-15-pg-readonly postgresql-15-pg-readonly_1.0.4-1PIGSTY~trixie_amd64.deb pigsty 1.0.4 16.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-readonly/postgresql-15-pg-readonly_1.0.4-1PIGSTY~trixie_amd64.deb
@@ -161,15 +144,10 @@ weight: 5120
 @ el8.x86_64 14 pg_readonly_14 pg_readonly_14-1.0.1-1.rhel8.x86_64.rpm pgdg 1.0.1 29.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_readonly_14-1.0.1-1.rhel8.x86_64.rpm
 @ el8.aarch64 14 pg_readonly_14 pg_readonly_14-1.0.4-1PGDG.rhel8.10.aarch64.rpm pgdg 1.0.4 16.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pg_readonly_14-1.0.4-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 14 pg_readonly_14 pg_readonly_14-1.0.3-1.rhel8.aarch64.rpm pgdg 1.0.3 30.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pg_readonly_14-1.0.3-1.rhel8.aarch64.rpm
-@ el9.x86_64 14 pg_readonly_14 pg_readonly_14-1.0.4-1PGDG.rhel9.7.x86_64.rpm pgdg 1.0.4 16.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_readonly_14-1.0.4-1PGDG.rhel9.7.x86_64.rpm
-@ el9.x86_64 14 pg_readonly_14 pg_readonly_14-1.0.3-1.rhel9.x86_64.rpm pgdg 1.0.3 31.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_readonly_14-1.0.3-1.rhel9.x86_64.rpm
-@ el9.x86_64 14 pg_readonly_14 pg_readonly_14-1.0.1-1.rhel9.x86_64.rpm pgdg 1.0.1 29.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_readonly_14-1.0.1-1.rhel9.x86_64.rpm
-@ el9.aarch64 14 pg_readonly_14 pg_readonly_14-1.0.4-1PGDG.rhel9.7.aarch64.rpm pgdg 1.0.4 15.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_readonly_14-1.0.4-1PGDG.rhel9.7.aarch64.rpm
-@ el9.aarch64 14 pg_readonly_14 pg_readonly_14-1.0.3-1.rhel9.aarch64.rpm pgdg 1.0.3 30.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_readonly_14-1.0.3-1.rhel9.aarch64.rpm
-@ el10.x86_64 14 pg_readonly_14 pg_readonly_14-1.0.4-1PGDG.rhel10.1.x86_64.rpm pgdg 1.0.4 16.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_readonly_14-1.0.4-1PGDG.rhel10.1.x86_64.rpm
-@ el10.x86_64 14 pg_readonly_14 pg_readonly_14-1.0.3-5PGDG.rhel10.x86_64.rpm pgdg 1.0.3 16.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_readonly_14-1.0.3-5PGDG.rhel10.x86_64.rpm
-@ el10.aarch64 14 pg_readonly_14 pg_readonly_14-1.0.4-1PGDG.rhel10.1.aarch64.rpm pgdg 1.0.4 16.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_readonly_14-1.0.4-1PGDG.rhel10.1.aarch64.rpm
-@ el10.aarch64 14 pg_readonly_14 pg_readonly_14-1.0.3-5PGDG.rhel10.aarch64.rpm pgdg 1.0.3 16.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_readonly_14-1.0.3-5PGDG.rhel10.aarch64.rpm
+@ el9.x86_64 14 pg_readonly_14 pg_readonly_14-1.0.4-1PGDG.rhel9.8.x86_64.rpm pgdg 1.0.4 16.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_readonly_14-1.0.4-1PGDG.rhel9.8.x86_64.rpm
+@ el9.aarch64 14 pg_readonly_14 pg_readonly_14-1.0.4-1PGDG.rhel9.8.aarch64.rpm pgdg 1.0.4 15.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_readonly_14-1.0.4-1PGDG.rhel9.8.aarch64.rpm
+@ el10.x86_64 14 pg_readonly_14 pg_readonly_14-1.0.4-1PGDG.rhel10.2.x86_64.rpm pgdg 1.0.4 16.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_readonly_14-1.0.4-1PGDG.rhel10.2.x86_64.rpm
+@ el10.aarch64 14 pg_readonly_14 pg_readonly_14-1.0.4-1PGDG.rhel10.2.aarch64.rpm pgdg 1.0.4 16.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_readonly_14-1.0.4-1PGDG.rhel10.2.aarch64.rpm
 @ d12.x86_64 14 postgresql-14-pg-readonly postgresql-14-pg-readonly_1.0.4-1PIGSTY~bookworm_amd64.deb pigsty 1.0.4 16.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-readonly/postgresql-14-pg-readonly_1.0.4-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 14 postgresql-14-pg-readonly postgresql-14-pg-readonly_1.0.4-1PIGSTY~bookworm_arm64.deb pigsty 1.0.4 16.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-readonly/postgresql-14-pg-readonly_1.0.4-1PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 14 postgresql-14-pg-readonly postgresql-14-pg-readonly_1.0.4-1PIGSTY~trixie_amd64.deb pigsty 1.0.4 16.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-readonly/postgresql-14-pg-readonly_1.0.4-1PIGSTY~trixie_amd64.deb
