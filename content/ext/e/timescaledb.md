@@ -50,12 +50,12 @@ weight: 1000
 {{< pgext_matrix >}}
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 2.28.0 16 | AVAIL PIGSTY 2.28.0 35 | AVAIL PIGSTY 2.28.0 41 | AVAIL PIGSTY 2.28.0 39 | AVAIL PGDG 2.19.3 34 |
-| el8.aarch64 | AVAIL PIGSTY 2.28.0 2 | AVAIL PIGSTY 2.28.0 2 | AVAIL PIGSTY 2.28.0 2 | AVAIL PIGSTY 2.28.0 2 | MISS PIGSTY - 0 |
-| el9.x86_64 | AVAIL PIGSTY 2.28.0 16 | AVAIL PIGSTY 2.28.0 34 | AVAIL PIGSTY 2.28.0 40 | AVAIL PIGSTY 2.28.0 48 | AVAIL PGDG 2.19.3 28 |
-| el9.aarch64 | AVAIL PIGSTY 2.28.0 2 | AVAIL PIGSTY 2.28.0 2 | AVAIL PIGSTY 2.28.0 2 | AVAIL PIGSTY 2.28.0 2 | MISS PIGSTY - 0 |
-| el10.x86_64 | AVAIL PIGSTY 2.28.0 16 | AVAIL PIGSTY 2.28.0 25 | AVAIL PIGSTY 2.28.0 25 | AVAIL PIGSTY 2.28.0 25 | MISS PIGSTY - 0 |
-| el10.aarch64 | AVAIL PIGSTY 2.28.0 2 | AVAIL PIGSTY 2.28.0 2 | AVAIL PIGSTY 2.28.0 2 | AVAIL PIGSTY 2.28.0 2 | MISS PIGSTY - 0 |
+| el8.x86_64 | AVAIL PIGSTY 2.28.0 15 | AVAIL PIGSTY 2.28.0 34 | AVAIL PIGSTY 2.28.0 40 | AVAIL PIGSTY 2.28.0 38 | AVAIL PGDG 2.19.3 34 |
+| el8.aarch64 | AVAIL PIGSTY 2.28.0 1 | AVAIL PIGSTY 2.28.0 1 | AVAIL PIGSTY 2.28.0 1 | AVAIL PIGSTY 2.28.0 1 | MISS PIGSTY - 0 |
+| el9.x86_64 | AVAIL PIGSTY 2.28.0 15 | AVAIL PIGSTY 2.28.0 33 | AVAIL PIGSTY 2.28.0 39 | AVAIL PIGSTY 2.28.0 47 | AVAIL PGDG 2.19.3 28 |
+| el9.aarch64 | AVAIL PIGSTY 2.28.0 1 | AVAIL PIGSTY 2.28.0 1 | AVAIL PIGSTY 2.28.0 1 | AVAIL PIGSTY 2.28.0 1 | MISS PIGSTY - 0 |
+| el10.x86_64 | AVAIL PIGSTY 2.28.0 15 | AVAIL PIGSTY 2.28.0 24 | AVAIL PIGSTY 2.28.0 24 | AVAIL PIGSTY 2.28.0 24 | MISS PIGSTY - 0 |
+| el10.aarch64 | AVAIL PIGSTY 2.28.0 1 | AVAIL PIGSTY 2.28.0 1 | AVAIL PIGSTY 2.28.0 1 | AVAIL PIGSTY 2.28.0 1 | MISS PIGSTY - 0 |
 | d12.x86_64 | AVAIL PIGSTY 2.28.0 1 | AVAIL PIGSTY 2.28.0 1 | AVAIL PIGSTY 2.28.0 1 | AVAIL PIGSTY 2.28.0 1 | AVAIL PIGSTY 2.19.3 1 |
 | d12.aarch64 | AVAIL PIGSTY 2.28.0 1 | AVAIL PIGSTY 2.28.0 1 | AVAIL PIGSTY 2.28.0 1 | AVAIL PIGSTY 2.28.0 1 | AVAIL PIGSTY 2.19.3 1 |
 | d13.x86_64 | AVAIL PIGSTY 2.28.0 1 | AVAIL PIGSTY 2.28.0 1 | AVAIL PIGSTY 2.28.0 1 | AVAIL PIGSTY 2.28.0 1 | MISS PIGSTY - 0 |
@@ -68,7 +68,6 @@ weight: 1000
 | u26.aarch64 | AVAIL PIGSTY 2.28.0 1 | AVAIL PIGSTY 2.28.0 1 | AVAIL PIGSTY 2.28.0 1 | AVAIL PIGSTY 2.28.0 1 | MISS PIGSTY - 0 |
 @ el8.x86_64 18 timescaledb-tsl_18 timescaledb-tsl_18-2.28.0-1PIGSTY.el8.x86_64.rpm pigsty 2.28.0 1.4MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/timescaledb-tsl_18-2.28.0-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 18 timescaledb-tsl_18 timescaledb-tsl_18-2.28.0-1PGDG.rhel8.10.x86_64.rpm pgdg 2.28.0 1.3MiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/18/redhat/rhel-8-x86_64/timescaledb-tsl_18-2.28.0-1PGDG.rhel8.10.x86_64.rpm
-@ el8.x86_64 18 timescaledb-tsl_18 timescaledb-tsl_18-2.27.2-1PIGSTY.el8.x86_64.rpm pigsty 2.27.2 842.1KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/timescaledb-tsl_18-2.27.2-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 18 timescaledb-tsl_18 timescaledb-tsl_18-2.27.2-1PGDG.rhel8.10.x86_64.rpm pgdg 2.27.2 770.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/18/redhat/rhel-8-x86_64/timescaledb-tsl_18-2.27.2-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 18 timescaledb-tsl_18 timescaledb-tsl_18-2.27.1-1PGDG.rhel8.10.x86_64.rpm pgdg 2.27.1 769.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/18/redhat/rhel-8-x86_64/timescaledb-tsl_18-2.27.1-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 18 timescaledb-tsl_18 timescaledb-tsl_18-2.27.0-1PGDG.rhel8.10.x86_64.rpm pgdg 2.27.0 768.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/18/redhat/rhel-8-x86_64/timescaledb-tsl_18-2.27.0-1PGDG.rhel8.10.x86_64.rpm
@@ -83,10 +82,8 @@ weight: 1000
 @ el8.x86_64 18 timescaledb-tsl_18 timescaledb-tsl_18-2.23.1-1PGDG.rhel8.x86_64.rpm pgdg 2.23.1 733.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/18/redhat/rhel-8-x86_64/timescaledb-tsl_18-2.23.1-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 18 timescaledb-tsl_18 timescaledb-tsl_18-2.23.0-1PGDG.rhel8.x86_64.rpm pgdg 2.23.0 733.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/18/redhat/rhel-8-x86_64/timescaledb-tsl_18-2.23.0-1PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 18 timescaledb-tsl_18 timescaledb-tsl_18-2.28.0-1PIGSTY.el8.aarch64.rpm pigsty 2.28.0 1.6MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/timescaledb-tsl_18-2.28.0-1PIGSTY.el8.aarch64.rpm
-@ el8.aarch64 18 timescaledb-tsl_18 timescaledb-tsl_18-2.27.2-1PIGSTY.el8.aarch64.rpm pigsty 2.27.2 773.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/timescaledb-tsl_18-2.27.2-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 18 timescaledb-tsl_18 timescaledb-tsl_18-2.28.0-1PIGSTY.el9.x86_64.rpm pigsty 2.28.0 783.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/timescaledb-tsl_18-2.28.0-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 18 timescaledb-tsl_18 timescaledb-tsl_18-2.28.0-1PGDG.rhel9.8.x86_64.rpm pgdg 2.28.0 765.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/18/redhat/rhel-9-x86_64/timescaledb-tsl_18-2.28.0-1PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 18 timescaledb-tsl_18 timescaledb-tsl_18-2.27.2-1PIGSTY.el9.x86_64.rpm pigsty 2.27.2 768.1KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/timescaledb-tsl_18-2.27.2-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 18 timescaledb-tsl_18 timescaledb-tsl_18-2.27.2-1PGDG.rhel9.8.x86_64.rpm pgdg 2.27.2 745.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/18/redhat/rhel-9-x86_64/timescaledb-tsl_18-2.27.2-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 18 timescaledb-tsl_18 timescaledb-tsl_18-2.27.1-1PGDG.rhel9.7.x86_64.rpm pgdg 2.27.1 745.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/18/redhat/rhel-9-x86_64/timescaledb-tsl_18-2.27.1-1PGDG.rhel9.7.x86_64.rpm
 @ el9.x86_64 18 timescaledb-tsl_18 timescaledb-tsl_18-2.27.0-1PGDG.rhel9.7.x86_64.rpm pgdg 2.27.0 746.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/18/redhat/rhel-9-x86_64/timescaledb-tsl_18-2.27.0-1PGDG.rhel9.7.x86_64.rpm
@@ -101,10 +98,8 @@ weight: 1000
 @ el9.x86_64 18 timescaledb-tsl_18 timescaledb-tsl_18-2.23.1-1PGDG.rhel9.x86_64.rpm pgdg 2.23.1 719.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/18/redhat/rhel-9-x86_64/timescaledb-tsl_18-2.23.1-1PGDG.rhel9.x86_64.rpm
 @ el9.x86_64 18 timescaledb-tsl_18 timescaledb-tsl_18-2.23.0-1PGDG.rhel9.x86_64.rpm pgdg 2.23.0 715.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/18/redhat/rhel-9-x86_64/timescaledb-tsl_18-2.23.0-1PGDG.rhel9.x86_64.rpm
 @ el9.aarch64 18 timescaledb-tsl_18 timescaledb-tsl_18-2.28.0-1PIGSTY.el9.aarch64.rpm pigsty 2.28.0 747.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/timescaledb-tsl_18-2.28.0-1PIGSTY.el9.aarch64.rpm
-@ el9.aarch64 18 timescaledb-tsl_18 timescaledb-tsl_18-2.27.2-1PIGSTY.el9.aarch64.rpm pigsty 2.27.2 727.7KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/timescaledb-tsl_18-2.27.2-1PIGSTY.el9.aarch64.rpm
 @ el10.x86_64 18 timescaledb-tsl_18 timescaledb-tsl_18-2.28.0-1PIGSTY.el10.x86_64.rpm pigsty 2.28.0 813.3KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/timescaledb-tsl_18-2.28.0-1PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 18 timescaledb-tsl_18 timescaledb-tsl_18-2.28.0-1PGDG.rhel10.2.x86_64.rpm pgdg 2.28.0 792.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/18/redhat/rhel-10-x86_64/timescaledb-tsl_18-2.28.0-1PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 18 timescaledb-tsl_18 timescaledb-tsl_18-2.27.2-1PIGSTY.el10.x86_64.rpm pigsty 2.27.2 792.5KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/timescaledb-tsl_18-2.27.2-1PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 18 timescaledb-tsl_18 timescaledb-tsl_18-2.27.2-1PGDG.rhel10.2.x86_64.rpm pgdg 2.27.2 778.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/18/redhat/rhel-10-x86_64/timescaledb-tsl_18-2.27.2-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 18 timescaledb-tsl_18 timescaledb-tsl_18-2.27.1-1PGDG.rhel10.1.x86_64.rpm pgdg 2.27.1 773.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/18/redhat/rhel-10-x86_64/timescaledb-tsl_18-2.27.1-1PGDG.rhel10.1.x86_64.rpm
 @ el10.x86_64 18 timescaledb-tsl_18 timescaledb-tsl_18-2.27.0-1PGDG.rhel10.1.x86_64.rpm pgdg 2.27.0 770.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/18/redhat/rhel-10-x86_64/timescaledb-tsl_18-2.27.0-1PGDG.rhel10.1.x86_64.rpm
@@ -119,7 +114,6 @@ weight: 1000
 @ el10.x86_64 18 timescaledb-tsl_18 timescaledb-tsl_18-2.23.1-1PGDG.rhel10.x86_64.rpm pgdg 2.23.1 743.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/18/redhat/rhel-10-x86_64/timescaledb-tsl_18-2.23.1-1PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 18 timescaledb-tsl_18 timescaledb-tsl_18-2.23.0-1PGDG.rhel10.x86_64.rpm pgdg 2.23.0 741.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/18/redhat/rhel-10-x86_64/timescaledb-tsl_18-2.23.0-1PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 18 timescaledb-tsl_18 timescaledb-tsl_18-2.28.0-1PIGSTY.el10.aarch64.rpm pigsty 2.28.0 764.7KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/timescaledb-tsl_18-2.28.0-1PIGSTY.el10.aarch64.rpm
-@ el10.aarch64 18 timescaledb-tsl_18 timescaledb-tsl_18-2.27.2-1PIGSTY.el10.aarch64.rpm pigsty 2.27.2 742.9KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/timescaledb-tsl_18-2.27.2-1PIGSTY.el10.aarch64.rpm
 @ d12.x86_64 18 postgresql-18-timescaledb-tsl postgresql-18-timescaledb-tsl_2.28.0-1PIGSTY~bookworm_amd64.deb pigsty 2.28.0 1.2MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/t/timescaledb-tsl/postgresql-18-timescaledb-tsl_2.28.0-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 18 postgresql-18-timescaledb-tsl postgresql-18-timescaledb-tsl_2.28.0-1PIGSTY~bookworm_arm64.deb pigsty 2.28.0 1.4MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/t/timescaledb-tsl/postgresql-18-timescaledb-tsl_2.28.0-1PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 18 postgresql-18-timescaledb-tsl postgresql-18-timescaledb-tsl_2.28.0-1PIGSTY~trixie_amd64.deb pigsty 2.28.0 1.2MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/t/timescaledb-tsl/postgresql-18-timescaledb-tsl_2.28.0-1PIGSTY~trixie_amd64.deb
@@ -132,7 +126,6 @@ weight: 1000
 @ u26.aarch64 18 postgresql-18-timescaledb-tsl postgresql-18-timescaledb-tsl_2.28.0-1PIGSTY~resolute_arm64.deb pigsty 2.28.0 814.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/t/timescaledb-tsl/postgresql-18-timescaledb-tsl_2.28.0-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 17 timescaledb-tsl_17 timescaledb-tsl_17-2.28.0-1PIGSTY.el8.x86_64.rpm pigsty 2.28.0 1.4MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/timescaledb-tsl_17-2.28.0-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 17 timescaledb-tsl_17 timescaledb-tsl_17-2.28.0-1PGDG.rhel8.10.x86_64.rpm pgdg 2.28.0 1.3MiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/17/redhat/rhel-8-x86_64/timescaledb-tsl_17-2.28.0-1PGDG.rhel8.10.x86_64.rpm
-@ el8.x86_64 17 timescaledb-tsl_17 timescaledb-tsl_17-2.27.2-1PIGSTY.el8.x86_64.rpm pigsty 2.27.2 841.6KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/timescaledb-tsl_17-2.27.2-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 17 timescaledb-tsl_17 timescaledb-tsl_17-2.27.2-1PGDG.rhel8.10.x86_64.rpm pgdg 2.27.2 769.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/17/redhat/rhel-8-x86_64/timescaledb-tsl_17-2.27.2-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 timescaledb-tsl_17 timescaledb-tsl_17-2.27.1-1PGDG.rhel8.10.x86_64.rpm pgdg 2.27.1 769.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/17/redhat/rhel-8-x86_64/timescaledb-tsl_17-2.27.1-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 timescaledb-tsl_17 timescaledb-tsl_17-2.27.0-1PGDG.rhel8.10.x86_64.rpm pgdg 2.27.0 767.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/17/redhat/rhel-8-x86_64/timescaledb-tsl_17-2.27.0-1PGDG.rhel8.10.x86_64.rpm
@@ -166,10 +159,8 @@ weight: 1000
 @ el8.x86_64 17 timescaledb-tsl_17 timescaledb-tsl_17-2.17.1-1PGDG.rhel8.x86_64.rpm pgdg 2.17.1 685.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/17/redhat/rhel-8-x86_64/timescaledb-tsl_17-2.17.1-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 17 timescaledb-tsl_17 timescaledb-tsl_17-2.17.0-1PGDG.rhel8.x86_64.rpm pgdg 2.17.0 683.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/17/redhat/rhel-8-x86_64/timescaledb-tsl_17-2.17.0-1PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 17 timescaledb-tsl_17 timescaledb-tsl_17-2.28.0-1PIGSTY.el8.aarch64.rpm pigsty 2.28.0 1.6MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/timescaledb-tsl_17-2.28.0-1PIGSTY.el8.aarch64.rpm
-@ el8.aarch64 17 timescaledb-tsl_17 timescaledb-tsl_17-2.27.2-1PIGSTY.el8.aarch64.rpm pigsty 2.27.2 772.1KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/timescaledb-tsl_17-2.27.2-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 17 timescaledb-tsl_17 timescaledb-tsl_17-2.28.0-1PIGSTY.el9.x86_64.rpm pigsty 2.28.0 782.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/timescaledb-tsl_17-2.28.0-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 17 timescaledb-tsl_17 timescaledb-tsl_17-2.28.0-1PGDG.rhel9.8.x86_64.rpm pgdg 2.28.0 762.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/17/redhat/rhel-9-x86_64/timescaledb-tsl_17-2.28.0-1PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 17 timescaledb-tsl_17 timescaledb-tsl_17-2.27.2-1PIGSTY.el9.x86_64.rpm pigsty 2.27.2 763.1KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/timescaledb-tsl_17-2.27.2-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 17 timescaledb-tsl_17 timescaledb-tsl_17-2.27.2-1PGDG.rhel9.8.x86_64.rpm pgdg 2.27.2 744.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/17/redhat/rhel-9-x86_64/timescaledb-tsl_17-2.27.2-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 17 timescaledb-tsl_17 timescaledb-tsl_17-2.27.1-1PGDG.rhel9.7.x86_64.rpm pgdg 2.27.1 744.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/17/redhat/rhel-9-x86_64/timescaledb-tsl_17-2.27.1-1PGDG.rhel9.7.x86_64.rpm
 @ el9.x86_64 17 timescaledb-tsl_17 timescaledb-tsl_17-2.27.0-1PGDG.rhel9.7.x86_64.rpm pgdg 2.27.0 742.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/17/redhat/rhel-9-x86_64/timescaledb-tsl_17-2.27.0-1PGDG.rhel9.7.x86_64.rpm
@@ -202,10 +193,8 @@ weight: 1000
 @ el9.x86_64 17 timescaledb-tsl_17 timescaledb-tsl_17-2.17.1-1PGDG.rhel9.x86_64.rpm pgdg 2.17.1 607.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/17/redhat/rhel-9-x86_64/timescaledb-tsl_17-2.17.1-1PGDG.rhel9.x86_64.rpm
 @ el9.x86_64 17 timescaledb-tsl_17 timescaledb-tsl_17-2.17.0-1PGDG.rhel9.x86_64.rpm pgdg 2.17.0 606.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/17/redhat/rhel-9-x86_64/timescaledb-tsl_17-2.17.0-1PGDG.rhel9.x86_64.rpm
 @ el9.aarch64 17 timescaledb-tsl_17 timescaledb-tsl_17-2.28.0-1PIGSTY.el9.aarch64.rpm pigsty 2.28.0 745.2KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/timescaledb-tsl_17-2.28.0-1PIGSTY.el9.aarch64.rpm
-@ el9.aarch64 17 timescaledb-tsl_17 timescaledb-tsl_17-2.27.2-1PIGSTY.el9.aarch64.rpm pigsty 2.27.2 725.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/timescaledb-tsl_17-2.27.2-1PIGSTY.el9.aarch64.rpm
 @ el10.x86_64 17 timescaledb-tsl_17 timescaledb-tsl_17-2.28.0-1PIGSTY.el10.x86_64.rpm pigsty 2.28.0 811.2KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/timescaledb-tsl_17-2.28.0-1PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 17 timescaledb-tsl_17 timescaledb-tsl_17-2.28.0-1PGDG.rhel10.2.x86_64.rpm pgdg 2.28.0 792.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/17/redhat/rhel-10-x86_64/timescaledb-tsl_17-2.28.0-1PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 17 timescaledb-tsl_17 timescaledb-tsl_17-2.27.2-1PIGSTY.el10.x86_64.rpm pigsty 2.27.2 795.2KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/timescaledb-tsl_17-2.27.2-1PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 17 timescaledb-tsl_17 timescaledb-tsl_17-2.27.2-1PGDG.rhel10.2.x86_64.rpm pgdg 2.27.2 772.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/17/redhat/rhel-10-x86_64/timescaledb-tsl_17-2.27.2-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 17 timescaledb-tsl_17 timescaledb-tsl_17-2.27.1-1PGDG.rhel10.1.x86_64.rpm pgdg 2.27.1 772.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/17/redhat/rhel-10-x86_64/timescaledb-tsl_17-2.27.1-1PGDG.rhel10.1.x86_64.rpm
 @ el10.x86_64 17 timescaledb-tsl_17 timescaledb-tsl_17-2.27.0-1PGDG.rhel10.1.x86_64.rpm pgdg 2.27.0 771.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/17/redhat/rhel-10-x86_64/timescaledb-tsl_17-2.27.0-1PGDG.rhel10.1.x86_64.rpm
@@ -229,7 +218,6 @@ weight: 1000
 @ el10.x86_64 17 timescaledb-tsl_17 timescaledb-tsl_17-2.20.2-1PGDG.rhel10.x86_64.rpm pgdg 2.20.2 723.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/17/redhat/rhel-10-x86_64/timescaledb-tsl_17-2.20.2-1PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 17 timescaledb-tsl_17 timescaledb-tsl_17-2.20.1-1PGDG.rhel10.x86_64.rpm pgdg 2.20.1 722.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/17/redhat/rhel-10-x86_64/timescaledb-tsl_17-2.20.1-1PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 17 timescaledb-tsl_17 timescaledb-tsl_17-2.28.0-1PIGSTY.el10.aarch64.rpm pigsty 2.28.0 765.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/timescaledb-tsl_17-2.28.0-1PIGSTY.el10.aarch64.rpm
-@ el10.aarch64 17 timescaledb-tsl_17 timescaledb-tsl_17-2.27.2-1PIGSTY.el10.aarch64.rpm pigsty 2.27.2 743.4KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/timescaledb-tsl_17-2.27.2-1PIGSTY.el10.aarch64.rpm
 @ d12.x86_64 17 postgresql-17-timescaledb-tsl postgresql-17-timescaledb-tsl_2.28.0-1PIGSTY~bookworm_amd64.deb pigsty 2.28.0 1.2MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/t/timescaledb-tsl/postgresql-17-timescaledb-tsl_2.28.0-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 17 postgresql-17-timescaledb-tsl postgresql-17-timescaledb-tsl_2.28.0-1PIGSTY~bookworm_arm64.deb pigsty 2.28.0 1.4MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/t/timescaledb-tsl/postgresql-17-timescaledb-tsl_2.28.0-1PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 17 postgresql-17-timescaledb-tsl postgresql-17-timescaledb-tsl_2.28.0-1PIGSTY~trixie_amd64.deb pigsty 2.28.0 1.2MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/t/timescaledb-tsl/postgresql-17-timescaledb-tsl_2.28.0-1PIGSTY~trixie_amd64.deb
@@ -242,7 +230,6 @@ weight: 1000
 @ u26.aarch64 17 postgresql-17-timescaledb-tsl postgresql-17-timescaledb-tsl_2.28.0-1PIGSTY~resolute_arm64.deb pigsty 2.28.0 814.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/t/timescaledb-tsl/postgresql-17-timescaledb-tsl_2.28.0-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 16 timescaledb-tsl_16 timescaledb-tsl_16-2.28.0-1PIGSTY.el8.x86_64.rpm pigsty 2.28.0 1.4MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/timescaledb-tsl_16-2.28.0-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 16 timescaledb-tsl_16 timescaledb-tsl_16-2.28.0-1PGDG.rhel8.10.x86_64.rpm pgdg 2.28.0 1.3MiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/16/redhat/rhel-8-x86_64/timescaledb-tsl_16-2.28.0-1PGDG.rhel8.10.x86_64.rpm
-@ el8.x86_64 16 timescaledb-tsl_16 timescaledb-tsl_16-2.27.2-1PIGSTY.el8.x86_64.rpm pigsty 2.27.2 841.9KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/timescaledb-tsl_16-2.27.2-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 16 timescaledb-tsl_16 timescaledb-tsl_16-2.27.2-1PGDG.rhel8.10.x86_64.rpm pgdg 2.27.2 769.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/16/redhat/rhel-8-x86_64/timescaledb-tsl_16-2.27.2-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 timescaledb-tsl_16 timescaledb-tsl_16-2.27.1-1PGDG.rhel8.10.x86_64.rpm pgdg 2.27.1 769.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/16/redhat/rhel-8-x86_64/timescaledb-tsl_16-2.27.1-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 timescaledb-tsl_16 timescaledb-tsl_16-2.27.0-1PGDG.rhel8.10.x86_64.rpm pgdg 2.27.0 768.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/16/redhat/rhel-8-x86_64/timescaledb-tsl_16-2.27.0-1PGDG.rhel8.10.x86_64.rpm
@@ -282,10 +269,8 @@ weight: 1000
 @ el8.x86_64 16 timescaledb-tsl_16 timescaledb-tsl_16-2.13.1-1PGDG.rhel8.x86_64.rpm pgdg 2.13.1 758.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/16/redhat/rhel-8-x86_64/timescaledb-tsl_16-2.13.1-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 16 timescaledb-tsl_16 timescaledb-tsl_16-2.13.0-1PGDG.rhel8.x86_64.rpm pgdg 2.13.0 757.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/16/redhat/rhel-8-x86_64/timescaledb-tsl_16-2.13.0-1PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 16 timescaledb-tsl_16 timescaledb-tsl_16-2.28.0-1PIGSTY.el8.aarch64.rpm pigsty 2.28.0 1.6MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/timescaledb-tsl_16-2.28.0-1PIGSTY.el8.aarch64.rpm
-@ el8.aarch64 16 timescaledb-tsl_16 timescaledb-tsl_16-2.27.2-1PIGSTY.el8.aarch64.rpm pigsty 2.27.2 772.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/timescaledb-tsl_16-2.27.2-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 16 timescaledb-tsl_16 timescaledb-tsl_16-2.28.0-1PIGSTY.el9.x86_64.rpm pigsty 2.28.0 783.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/timescaledb-tsl_16-2.28.0-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 16 timescaledb-tsl_16 timescaledb-tsl_16-2.28.0-1PGDG.rhel9.8.x86_64.rpm pgdg 2.28.0 762.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/16/redhat/rhel-9-x86_64/timescaledb-tsl_16-2.28.0-1PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 16 timescaledb-tsl_16 timescaledb-tsl_16-2.27.2-1PIGSTY.el9.x86_64.rpm pigsty 2.27.2 763.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/timescaledb-tsl_16-2.27.2-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 16 timescaledb-tsl_16 timescaledb-tsl_16-2.27.2-1PGDG.rhel9.8.x86_64.rpm pgdg 2.27.2 743.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/16/redhat/rhel-9-x86_64/timescaledb-tsl_16-2.27.2-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 16 timescaledb-tsl_16 timescaledb-tsl_16-2.27.1-1PGDG.rhel9.7.x86_64.rpm pgdg 2.27.1 742.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/16/redhat/rhel-9-x86_64/timescaledb-tsl_16-2.27.1-1PGDG.rhel9.7.x86_64.rpm
 @ el9.x86_64 16 timescaledb-tsl_16 timescaledb-tsl_16-2.27.0-1PGDG.rhel9.7.x86_64.rpm pgdg 2.27.0 741.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/16/redhat/rhel-9-x86_64/timescaledb-tsl_16-2.27.0-1PGDG.rhel9.7.x86_64.rpm
@@ -324,10 +309,8 @@ weight: 1000
 @ el9.x86_64 16 timescaledb-tsl_16 timescaledb-tsl_16-2.13.1-1PGDG.rhel9.x86_64.rpm pgdg 2.13.1 716.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/16/redhat/rhel-9-x86_64/timescaledb-tsl_16-2.13.1-1PGDG.rhel9.x86_64.rpm
 @ el9.x86_64 16 timescaledb-tsl_16 timescaledb-tsl_16-2.13.0-1PGDG.rhel9.x86_64.rpm pgdg 2.13.0 715.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/16/redhat/rhel-9-x86_64/timescaledb-tsl_16-2.13.0-1PGDG.rhel9.x86_64.rpm
 @ el9.aarch64 16 timescaledb-tsl_16 timescaledb-tsl_16-2.28.0-1PIGSTY.el9.aarch64.rpm pigsty 2.28.0 748.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/timescaledb-tsl_16-2.28.0-1PIGSTY.el9.aarch64.rpm
-@ el9.aarch64 16 timescaledb-tsl_16 timescaledb-tsl_16-2.27.2-1PIGSTY.el9.aarch64.rpm pigsty 2.27.2 726.1KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/timescaledb-tsl_16-2.27.2-1PIGSTY.el9.aarch64.rpm
 @ el10.x86_64 16 timescaledb-tsl_16 timescaledb-tsl_16-2.28.0-1PIGSTY.el10.x86_64.rpm pigsty 2.28.0 813.1KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/timescaledb-tsl_16-2.28.0-1PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 16 timescaledb-tsl_16 timescaledb-tsl_16-2.28.0-1PGDG.rhel10.2.x86_64.rpm pgdg 2.28.0 792.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/16/redhat/rhel-10-x86_64/timescaledb-tsl_16-2.28.0-1PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 16 timescaledb-tsl_16 timescaledb-tsl_16-2.27.2-1PIGSTY.el10.x86_64.rpm pigsty 2.27.2 797.1KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/timescaledb-tsl_16-2.27.2-1PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 16 timescaledb-tsl_16 timescaledb-tsl_16-2.27.2-1PGDG.rhel10.2.x86_64.rpm pgdg 2.27.2 772.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/16/redhat/rhel-10-x86_64/timescaledb-tsl_16-2.27.2-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 16 timescaledb-tsl_16 timescaledb-tsl_16-2.27.1-1PGDG.rhel10.1.x86_64.rpm pgdg 2.27.1 772.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/16/redhat/rhel-10-x86_64/timescaledb-tsl_16-2.27.1-1PGDG.rhel10.1.x86_64.rpm
 @ el10.x86_64 16 timescaledb-tsl_16 timescaledb-tsl_16-2.27.0-1PGDG.rhel10.1.x86_64.rpm pgdg 2.27.0 769.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/16/redhat/rhel-10-x86_64/timescaledb-tsl_16-2.27.0-1PGDG.rhel10.1.x86_64.rpm
@@ -351,7 +334,6 @@ weight: 1000
 @ el10.x86_64 16 timescaledb-tsl_16 timescaledb-tsl_16-2.20.2-1PGDG.rhel10.x86_64.rpm pgdg 2.20.2 723.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/16/redhat/rhel-10-x86_64/timescaledb-tsl_16-2.20.2-1PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 16 timescaledb-tsl_16 timescaledb-tsl_16-2.20.1-1PGDG.rhel10.x86_64.rpm pgdg 2.20.1 723.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/16/redhat/rhel-10-x86_64/timescaledb-tsl_16-2.20.1-1PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 16 timescaledb-tsl_16 timescaledb-tsl_16-2.28.0-1PIGSTY.el10.aarch64.rpm pigsty 2.28.0 764.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/timescaledb-tsl_16-2.28.0-1PIGSTY.el10.aarch64.rpm
-@ el10.aarch64 16 timescaledb-tsl_16 timescaledb-tsl_16-2.27.2-1PIGSTY.el10.aarch64.rpm pigsty 2.27.2 743.4KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/timescaledb-tsl_16-2.27.2-1PIGSTY.el10.aarch64.rpm
 @ d12.x86_64 16 postgresql-16-timescaledb-tsl postgresql-16-timescaledb-tsl_2.28.0-1PIGSTY~bookworm_amd64.deb pigsty 2.28.0 1.2MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/t/timescaledb-tsl/postgresql-16-timescaledb-tsl_2.28.0-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 16 postgresql-16-timescaledb-tsl postgresql-16-timescaledb-tsl_2.28.0-1PIGSTY~bookworm_arm64.deb pigsty 2.28.0 1.4MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/t/timescaledb-tsl/postgresql-16-timescaledb-tsl_2.28.0-1PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 16 postgresql-16-timescaledb-tsl postgresql-16-timescaledb-tsl_2.28.0-1PIGSTY~trixie_amd64.deb pigsty 2.28.0 1.2MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/t/timescaledb-tsl/postgresql-16-timescaledb-tsl_2.28.0-1PIGSTY~trixie_amd64.deb
@@ -363,7 +345,6 @@ weight: 1000
 @ u26.x86_64 16 postgresql-16-timescaledb-tsl postgresql-16-timescaledb-tsl_2.28.0-1PIGSTY~resolute_amd64.deb pigsty 2.28.0 815.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/t/timescaledb-tsl/postgresql-16-timescaledb-tsl_2.28.0-1PIGSTY~resolute_amd64.deb
 @ u26.aarch64 16 postgresql-16-timescaledb-tsl postgresql-16-timescaledb-tsl_2.28.0-1PIGSTY~resolute_arm64.deb pigsty 2.28.0 804.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/t/timescaledb-tsl/postgresql-16-timescaledb-tsl_2.28.0-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 15 timescaledb-tsl_15 timescaledb-tsl_15-2.28.0-1PIGSTY.el8.x86_64.rpm pigsty 2.28.0 1.4MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/timescaledb-tsl_15-2.28.0-1PIGSTY.el8.x86_64.rpm
-@ el8.x86_64 15 timescaledb-tsl_15 timescaledb-tsl_15-2.27.2-1PIGSTY.el8.x86_64.rpm pigsty 2.27.2 836.2KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/timescaledb-tsl_15-2.27.2-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 15 timescaledb-tsl_15 timescaledb-tsl_15-2.27.2-1PGDG.rhel8.10.x86_64.rpm pgdg 2.27.2 764.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/15/redhat/rhel-8-x86_64/timescaledb-tsl_15-2.27.2-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 timescaledb-tsl_15 timescaledb-tsl_15-2.27.1-1PGDG.rhel8.10.x86_64.rpm pgdg 2.27.1 763.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/15/redhat/rhel-8-x86_64/timescaledb-tsl_15-2.27.1-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 timescaledb-tsl_15 timescaledb-tsl_15-2.27.0-1PGDG.rhel8.10.x86_64.rpm pgdg 2.27.0 762.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/15/redhat/rhel-8-x86_64/timescaledb-tsl_15-2.27.0-1PGDG.rhel8.10.x86_64.rpm
@@ -402,10 +383,8 @@ weight: 1000
 @ el8.x86_64 15 timescaledb-tsl_15 timescaledb-tsl_15-2.15.0-1PGDG.rhel8.x86_64.rpm pgdg 2.15.0 633.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/15/redhat/rhel-8-x86_64/timescaledb-tsl_15-2.15.0-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 15 timescaledb-tsl_15 timescaledb-tsl_15-2.13.1-1PGDG.rhel8.x86_64.rpm pgdg 2.13.1 768.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/15/redhat/rhel-8-x86_64/timescaledb-tsl_15-2.13.1-1PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 15 timescaledb-tsl_15 timescaledb-tsl_15-2.28.0-1PIGSTY.el8.aarch64.rpm pigsty 2.28.0 1.6MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/timescaledb-tsl_15-2.28.0-1PIGSTY.el8.aarch64.rpm
-@ el8.aarch64 15 timescaledb-tsl_15 timescaledb-tsl_15-2.27.2-1PIGSTY.el8.aarch64.rpm pigsty 2.27.2 766.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/timescaledb-tsl_15-2.27.2-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 15 timescaledb-tsl_15 timescaledb-tsl_15-2.28.0-1PIGSTY.el9.x86_64.rpm pigsty 2.28.0 776.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/timescaledb-tsl_15-2.28.0-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 15 timescaledb-tsl_15 timescaledb-tsl_15-2.28.0-1PGDG.rhel9.8.x86_64.rpm pgdg 2.28.0 756.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/15/redhat/rhel-9-x86_64/timescaledb-tsl_15-2.28.0-1PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 15 timescaledb-tsl_15 timescaledb-tsl_15-2.27.2-1PIGSTY.el9.x86_64.rpm pigsty 2.27.2 758.7KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/timescaledb-tsl_15-2.27.2-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 15 timescaledb-tsl_15 timescaledb-tsl_15-2.27.2-1PGDG.rhel9.8.x86_64.rpm pgdg 2.27.2 735.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/15/redhat/rhel-9-x86_64/timescaledb-tsl_15-2.27.2-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 15 timescaledb-tsl_15 timescaledb-tsl_15-2.27.1-1PGDG.rhel9.7.x86_64.rpm pgdg 2.27.1 735.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/15/redhat/rhel-9-x86_64/timescaledb-tsl_15-2.27.1-1PGDG.rhel9.7.x86_64.rpm
 @ el9.x86_64 15 timescaledb-tsl_15 timescaledb-tsl_15-2.27.0-1PGDG.rhel9.7.x86_64.rpm pgdg 2.27.0 732.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/15/redhat/rhel-9-x86_64/timescaledb-tsl_15-2.27.0-1PGDG.rhel9.7.x86_64.rpm
@@ -452,10 +431,8 @@ weight: 1000
 @ el9.x86_64 15 timescaledb-tsl_15 timescaledb-tsl_15-2.9.2-1.rhel9.x86_64.rpm pgdg 2.9.2 642.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/15/redhat/rhel-9-x86_64/timescaledb-tsl_15-2.9.2-1.rhel9.x86_64.rpm
 @ el9.x86_64 15 timescaledb-tsl_15 timescaledb-tsl_15-2.9.1-1.rhel9.x86_64.rpm pgdg 2.9.1 642.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/15/redhat/rhel-9-x86_64/timescaledb-tsl_15-2.9.1-1.rhel9.x86_64.rpm
 @ el9.aarch64 15 timescaledb-tsl_15 timescaledb-tsl_15-2.28.0-1PIGSTY.el9.aarch64.rpm pigsty 2.28.0 742.2KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/timescaledb-tsl_15-2.28.0-1PIGSTY.el9.aarch64.rpm
-@ el9.aarch64 15 timescaledb-tsl_15 timescaledb-tsl_15-2.27.2-1PIGSTY.el9.aarch64.rpm pigsty 2.27.2 718.7KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/timescaledb-tsl_15-2.27.2-1PIGSTY.el9.aarch64.rpm
 @ el10.x86_64 15 timescaledb-tsl_15 timescaledb-tsl_15-2.28.0-1PIGSTY.el10.x86_64.rpm pigsty 2.28.0 811.1KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/timescaledb-tsl_15-2.28.0-1PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 15 timescaledb-tsl_15 timescaledb-tsl_15-2.28.0-1PGDG.rhel10.2.x86_64.rpm pgdg 2.28.0 787.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/15/redhat/rhel-10-x86_64/timescaledb-tsl_15-2.28.0-1PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 15 timescaledb-tsl_15 timescaledb-tsl_15-2.27.2-1PIGSTY.el10.x86_64.rpm pigsty 2.27.2 786.8KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/timescaledb-tsl_15-2.27.2-1PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 15 timescaledb-tsl_15 timescaledb-tsl_15-2.27.2-1PGDG.rhel10.2.x86_64.rpm pgdg 2.27.2 769.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/15/redhat/rhel-10-x86_64/timescaledb-tsl_15-2.27.2-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 15 timescaledb-tsl_15 timescaledb-tsl_15-2.27.1-1PGDG.rhel10.1.x86_64.rpm pgdg 2.27.1 766.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/15/redhat/rhel-10-x86_64/timescaledb-tsl_15-2.27.1-1PGDG.rhel10.1.x86_64.rpm
 @ el10.x86_64 15 timescaledb-tsl_15 timescaledb-tsl_15-2.27.0-1PGDG.rhel10.1.x86_64.rpm pgdg 2.27.0 763.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/15/redhat/rhel-10-x86_64/timescaledb-tsl_15-2.27.0-1PGDG.rhel10.1.x86_64.rpm
@@ -479,7 +456,6 @@ weight: 1000
 @ el10.x86_64 15 timescaledb-tsl_15 timescaledb-tsl_15-2.20.2-1PGDG.rhel10.x86_64.rpm pgdg 2.20.2 721.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/15/redhat/rhel-10-x86_64/timescaledb-tsl_15-2.20.2-1PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 15 timescaledb-tsl_15 timescaledb-tsl_15-2.20.1-1PGDG.rhel10.x86_64.rpm pgdg 2.20.1 721.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/15/redhat/rhel-10-x86_64/timescaledb-tsl_15-2.20.1-1PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 15 timescaledb-tsl_15 timescaledb-tsl_15-2.28.0-1PIGSTY.el10.aarch64.rpm pigsty 2.28.0 758.4KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/timescaledb-tsl_15-2.28.0-1PIGSTY.el10.aarch64.rpm
-@ el10.aarch64 15 timescaledb-tsl_15 timescaledb-tsl_15-2.27.2-1PIGSTY.el10.aarch64.rpm pigsty 2.27.2 736.1KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/timescaledb-tsl_15-2.27.2-1PIGSTY.el10.aarch64.rpm
 @ d12.x86_64 15 postgresql-15-timescaledb-tsl postgresql-15-timescaledb-tsl_2.28.0-1PIGSTY~bookworm_amd64.deb pigsty 2.28.0 1.1MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/t/timescaledb-tsl/postgresql-15-timescaledb-tsl_2.28.0-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 15 postgresql-15-timescaledb-tsl postgresql-15-timescaledb-tsl_2.28.0-1PIGSTY~bookworm_arm64.deb pigsty 2.28.0 1.4MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/t/timescaledb-tsl/postgresql-15-timescaledb-tsl_2.28.0-1PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 15 postgresql-15-timescaledb-tsl postgresql-15-timescaledb-tsl_2.28.0-1PIGSTY~trixie_amd64.deb pigsty 2.28.0 1.2MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/t/timescaledb-tsl/postgresql-15-timescaledb-tsl_2.28.0-1PIGSTY~trixie_amd64.deb

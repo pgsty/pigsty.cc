@@ -5,11 +5,11 @@ description: "具有扩展依赖关系的 PostgreSQL 扩展"
 weight: 30
 ---
 
-共有 **109** 个扩展依赖其他扩展，**59** 个扩展被其他扩展所依赖。
+共有 **112** 个扩展依赖其他扩展，**60** 个扩展被其他扩展所依赖。
 
 ## 上游依赖
 
-以下 **109** 个扩展需要先安装其他扩展才能使用：
+以下 **112** 个扩展需要先安装其他扩展才能使用：
 
 | **扩展名** | **上游依赖** | **描述** |
 |:-----------|:-------------|:---------|
@@ -116,6 +116,9 @@ weight: 30
 | [`documentdb_extended_rum`](/ext/e/documentdb_extended_rum) | [`documentdb`](/ext/e/documentdb) | DocumentDB扩展RUM索引访问方法 |
 | [`ora_btree_gin`](/ext/e/ora_btree_gin) | [`ivorysql_ora`](/ext/e/ivorysql_ora) | Oracle 数据类型 GIN 索引支持 |
 | [`ora_btree_gist`](/ext/e/ora_btree_gist) | [`ivorysql_ora`](/ext/e/ivorysql_ora) | Oracle 数据类型 GiST 索引支持 |
+| [`db2fce`](/ext/e/db2fce) | [`plpgsql`](/ext/e/plpgsql) | 为 PostgreSQL 提供 DB2 兼容函数、类型、操作符与 SYSIBM.SYSDUMMY1。 |
+| [`plpgsql_wrap`](/ext/e/plpgsql_wrap) | [`plpgsql`](/ext/e/plpgsql) | Oracle WRAP 等价的 PL/pgSQL 语言处理器，以 AES-256-GCM 加密存储过程源码。 |
+| [`pg_dbms_errlog`](/ext/e/pg_dbms_errlog) | [`pg_statement_rollback`](/ext/e/pg_statement_rollback) | 模仿 Oracle DBMS_ERRLOG 模块来记录特定表的DML错误 |
 | [`pg_utl_smtp`](/ext/e/pg_utl_smtp) | [`plperlu`](/ext/e/plperlu) | Oracle UTL_SMTP 兼容扩展（基于 plperlu） |
 | [`babelfishpg_tsql`](/ext/e/babelfishpg_tsql) | [`babelfishpg_common`](/ext/e/babelfishpg_common) [`uuid-ossp`](/ext/e/uuid-ossp) | SQL Server SQL语法兼容性扩展 |
 | [`babelfishpg_tds`](/ext/e/babelfishpg_tds) | [`babelfishpg_tsql`](/ext/e/babelfishpg_tsql) | SQL Server TDS线缆协议兼容扩展 |
@@ -126,7 +129,7 @@ weight: 30
 
 ## 下游依赖
 
-以下 **59** 个扩展被其他扩展所依赖：
+以下 **60** 个扩展被其他扩展所依赖：
 
 | **扩展名** | **下游依赖** | **描述** |
 |:-----------|:-------------|:---------|
@@ -164,7 +167,7 @@ weight: 30
 | [`plluau`](/ext/e/plluau) | [`hstore_plluau`](/ext/e/hstore_plluau) | Lua 程序语言（不受信任的） |
 | [`plperl`](/ext/e/plperl) | [`bool_plperl`](/ext/e/bool_plperl) [`hstore_plperl`](/ext/e/hstore_plperl) [`jsonb_plperl`](/ext/e/jsonb_plperl) [`plperl`](/ext/e/plperl) [`sparql`](/ext/e/sparql) | PL/Perl 存储过程语言 |
 | [`plperlu`](/ext/e/plperlu) | [`bool_plperlu`](/ext/e/bool_plperlu) [`hstore_plperlu`](/ext/e/hstore_plperlu) [`jsonb_plperlu`](/ext/e/jsonb_plperlu) [`plperlu`](/ext/e/plperlu) [`pg_utl_smtp`](/ext/e/pg_utl_smtp) [`sparql`](/ext/e/sparql) | PL/PerlU 存储过程语言（未受信/高权限） |
-| [`plpgsql`](/ext/e/plpgsql) | [`data_historization`](/ext/e/data_historization) [`ddl_historization`](/ext/e/ddl_historization) [`pg4ml`](/ext/e/pg4ml) [`pg_drop_events`](/ext/e/pg_drop_events) [`pg_profile`](/ext/e/pg_profile) [`pg_upless`](/ext/e/pg_upless) [`plpgsql_check`](/ext/e/plpgsql_check) [`powa`](/ext/e/powa) [`table_version`](/ext/e/table_version) [`unit`](/ext/e/unit) [`biscuit`](/ext/e/biscuit) | PL/pgSQL 程序设计语言 |
+| [`plpgsql`](/ext/e/plpgsql) | [`data_historization`](/ext/e/data_historization) [`ddl_historization`](/ext/e/ddl_historization) [`pg4ml`](/ext/e/pg4ml) [`pg_drop_events`](/ext/e/pg_drop_events) [`pg_profile`](/ext/e/pg_profile) [`pg_upless`](/ext/e/pg_upless) [`plpgsql_check`](/ext/e/plpgsql_check) [`powa`](/ext/e/powa) [`table_version`](/ext/e/table_version) [`unit`](/ext/e/unit) [`biscuit`](/ext/e/biscuit) [`db2fce`](/ext/e/db2fce) | PL/pgSQL 程序设计语言 |
 | [`plpython3u`](/ext/e/plpython3u) | [`hstore_plpython3u`](/ext/e/hstore_plpython3u) [`jsonb_plpython3u`](/ext/e/jsonb_plpython3u) [`ltree_plpython3u`](/ext/e/ltree_plpython3u) [`omni_python`](/ext/e/omni_python) [`pg4ml`](/ext/e/pg4ml) | PL/Python3 存储过程语言（未受信/高权限） |
 | [`roaringbitmap`](/ext/e/roaringbitmap) | [`pgfaceting`](/ext/e/pgfaceting) | 支持RoaringBitmap数据类型 |
 | [`pg_xenophile`](/ext/e/pg_xenophile) | [`l10n_table_dependent_extension`](/ext/e/l10n_table_dependent_extension) | PostgreSQL i8n与l10n工具包 |
@@ -185,6 +188,7 @@ weight: 30
 | [`postgres_fdw`](/ext/e/postgres_fdw) | [`omni_schema`](/ext/e/omni_schema) | 用于远程 PostgreSQL 服务器的外部数据包装器 |
 | [`documentdb`](/ext/e/documentdb) | [`documentdb_distributed`](/ext/e/documentdb_distributed) [`documentdb_extended_rum`](/ext/e/documentdb_extended_rum) | 微软DocumentDB的API层 |
 | [`documentdb_core`](/ext/e/documentdb_core) | [`documentdb`](/ext/e/documentdb) [`documentdb_distributed`](/ext/e/documentdb_distributed) | 微软DocumentDB的核心API层实现 |
+| [`pg_statement_rollback`](/ext/e/pg_statement_rollback) | [`pg_statement_rollback`](/ext/e/pg_statement_rollback) | 在服务端提供类似Oracle/DB2的语句级回滚能力 |
 | [`ivorysql_ora`](/ext/e/ivorysql_ora) | [`ora_btree_gin`](/ext/e/ora_btree_gin) [`ora_btree_gist`](/ext/e/ora_btree_gist) | Oracle 兼容扩展 |
 | [`babelfishpg_common`](/ext/e/babelfishpg_common) | [`babelfishpg_tsql`](/ext/e/babelfishpg_tsql) | SQL Server 数据类型兼容扩展 |
 | [`babelfishpg_tsql`](/ext/e/babelfishpg_tsql) | [`babelfishpg_tds`](/ext/e/babelfishpg_tds) | SQL Server SQL语法兼容性扩展 |

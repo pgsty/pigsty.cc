@@ -5,7 +5,7 @@ description: "需要动态加载的 PostgreSQL 扩展"
 weight: 10
 ---
 
-以下 **107** 个扩展需要在 [`shared_preload_libraries`](https://www.postgresql.org/docs/current/runtime-config-client.html#GUC-SHARED-PRELOAD-LIBRARIES) 中动态加载，才能正常使用。
+以下 **112** 个扩展需要在 [`shared_preload_libraries`](https://www.postgresql.org/docs/current/runtime-config-client.html#GUC-SHARED-PRELOAD-LIBRARIES) 中动态加载，才能正常使用。
 
 也就是说，您需要修改 PostgreSQL 配置文件 `postgresql.conf` 中的 [`shared_preload_libraries`](https://www.postgresql.org/docs/current/runtime-config-client.html#GUC-SHARED-PRELOAD-LIBRARIES) 参数，将扩展的库名添加进去，然后重启数据库才能生效。
 
@@ -31,6 +31,7 @@ weight: 10
 | [`storage_engine`](/ext/e/storage_engine) | `storage_engine` | 带向量化执行的 colcompress 与 rowcompress 表访问方法 |
 | [`pg_clickhouse`](/ext/e/pg_clickhouse) | `pg_clickhouse` | 从PostgreSQL中查询ClickHouse的接口 |
 | [`pg_parquet`](/ext/e/pg_parquet) | `pg_parquet` | 在PostgreSQL与本地/S3中的Parquet文件复制数据 |
+| [`pg_ducklake`](/ext/e/pg_ducklake) | `pg_ducklake` | 基于 DuckDB 与 Parquet 的 DuckLake 湖仓一体扩展 |
 | [`pg_orca`](/ext/e/pg_orca) | `pg_orca` | PostgreSQL ORCA 查询优化器扩展 |
 | [`pg_sorted_heap`](/ext/e/pg_sorted_heap) | `pg_sorted_heap` | 带 zone map 剪枝和内置向量搜索的有序堆表访问方法 |
 | [`age`](/ext/e/age) | `age` | Apache AGE，图数据库扩展 （Deb可用） |
@@ -62,11 +63,14 @@ weight: 10
 | [`pg_crash`](/ext/e/pg_crash) | `pg_crash` | 向数据库进程随机发送信号模拟故障 |
 | [`qos`](/ext/e/qos) | `qos` | PostgreSQL QoS 资源治理扩展（会话与查询限流/隔离） |
 | [`pg_pathcheck`](/ext/e/pg_pathcheck) | `pg_pathcheck` | 校验 planner Path 树，诊断已释放或损坏的内存引用 |
+| [`pgdisablelogerror`](/ext/e/pgdisablelogerror) | `$libdir/pgdisablelogerror` | 按 SQLSTATE 错误码禁止部分错误写入 PostgreSQL 服务器日志。 |
 | [`safeupdate`](/ext/e/safeupdate) | `safeupdate` | 强制在 UPDATE 和 DELETE 时提供 Where 条件 |
 | [`pg_strict`](/ext/e/pg_strict) | `pg_strict` | 防止不带WHERE条件的危险UPDATE和DELETE操作 |
 | [`pg_prewarm`](/ext/e/pg_prewarm) | `pg_prewarm` | 预热关系数据 |
 | [`pg_tracing`](/ext/e/pg_tracing) | `pg_tracing` | PostgreSQL分布式Tracing |
 | [`pg_stat_ch`](/ext/e/pg_stat_ch) | `pg_stat_ch` | 将 PostgreSQL 查询遥测实时导出到 ClickHouse |
+| [`pg_stat_log`](/ext/e/pg_stat_log) | `$libdir/pg_stat_log` | 按后端类型、数据库、用户、日志级别与 SQLSTATE 统计 PostgreSQL 日志消息。 |
+| [`pg_stat_plans`](/ext/e/pg_stat_plans) | `$libdir/pg_stat_plans` | 跟踪查询计划级别的调用次数、执行时间与示例 EXPLAIN 文本。 |
 | [`pg_show_plans`](/ext/e/pg_show_plans) | `pg_show_plans` | 打印所有当前正在运行查询的执行计划 |
 | [`pg_stat_kcache`](/ext/e/pg_stat_kcache) | `pg_stat_kcache` | 内核统计信息收集 |
 | [`pg_stat_monitor`](/ext/e/pg_stat_monitor) | `pg_stat_monitor` | 提供查询聚合统计、客户端信息、执行计划详细信息和直方图 |
@@ -86,6 +90,7 @@ weight: 10
 | [`supautils`](/ext/e/supautils) | `supautils` | 用于在云环境中确保数据库集群的安全 |
 | [`pgsodium`](/ext/e/pgsodium) | `pgsodium` | 表数据加密存储 TDE |
 | [`column_encrypt`](/ext/e/column_encrypt) | `column_encrypt` | 透明列级加密扩展，提供 encrypted_text 与 encrypted_bytea 类型 |
+| [`passwordpolicy`](/ext/e/passwordpolicy) | `$libdir/passwordpolicy` | 可动态配置的 PostgreSQL 密码复杂度检查扩展。 |
 | [`anon`](/ext/e/anon) | `anon` | 数据匿名化处理工具 |
 | [`pgaudit`](/ext/e/pgaudit) | `pgaudit` | 提供审计功能 |
 | [`pgauditlogtofile`](/ext/e/pgauditlogtofile) | `pgauditlogtofile` | pgAudit 子扩展，将审计日志写入单独的文件中 |

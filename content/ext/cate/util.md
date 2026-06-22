@@ -12,10 +12,10 @@ icon: fas fa-wrench
 
 | **扩展** | **包** | **版本** | **许可证** | **语言** | **描述** |
 |:---------|:-------|:--------:|:----------:|:--------:|:---------|
-| [`gzip`](/ext/e/gzip) | [`pg_gzip`](https://github.com/pramsey/pgsql-gzip) | `1.0.0` | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 使用SQL执行Gzip压缩与解压缩 |
+| [`gzip`](/ext/e/gzip) | [`pg_gzip`](https://github.com/pramsey/pgsql-gzip) | `1.1.0` | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 使用SQL执行Gzip压缩与解压缩 |
 | [`bzip`](/ext/e/bzip) | [`pg_bzip`](https://github.com/steve-chavez/pg_bzip) | `1.0.0` | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | BZIP压缩解压缩函数包 |
 | [`zstd`](/ext/e/zstd) | [`pg_zstd`](https://github.com/grahamedgecombe/pgzstd) | `1.1.2` | <a class="ext-badge ext-badge--license isc" href="/ext/license#isc">ISC</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | ZSTD压缩解压缩函数包 |
-| [`http`](/ext/e/http) | [`pg_http`](https://github.com/pramsey/pgsql-http) | `1.7.0` | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | HTTP客户端，允许在数据库内收发HTTP请求 (supabase) |
+| [`http`](/ext/e/http) | [`pg_http`](https://github.com/pramsey/pgsql-http) | `1.7.1` | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | HTTP客户端，允许在数据库内收发HTTP请求 (supabase) |
 | [`pg_net`](/ext/e/pg_net) | [`pg_net`](https://github.com/supabase/pg_net) | `0.20.3` | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 用 SQL 进行异步非阻塞HTTP/HTTPS 请求的扩展 (supabase) |
 | [`pg_curl`](/ext/e/pg_curl) | [`pg_curl`](https://github.com/RekGRpth/pg_curl) | `2.4.5` | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 封装CURL，执行各种用URL传输数据的操作 |
 | [`pg_retry`](/ext/e/pg_retry) | [`pg_retry`](https://github.com/Agent-Hellboy/pg_retry) | `1.0.0` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 在临时错误中使用指数退避重试语句 |
@@ -58,13 +58,13 @@ icon: fas fa-wrench
 
 ## gzip {#gzip}
 
-[**`pg_gzip`**](/ext/e/gzip) - `1.0.0` : 使用SQL执行Gzip压缩与解压缩
+[**`pg_gzip`**](/ext/e/gzip) - `1.1.0` : 使用SQL执行Gzip压缩与解压缩
 
 | **条目** | **属性** | **OS** | **x86_64** | **aarch64** |
 |:---:|:---|:---:|:---:|:---:|
 | **扩展名** | [`gzip`](/ext/e/gzip) | **el8** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
 | **扩展包** | [`pg_gzip`](https://github.com/pramsey/pgsql-gzip) | **el9** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
-| **RPM** | `pg_gzip_$v` | **el10** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+| **RPM** | `pgsql_gzip_$v` | **el10** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
 | **DEB** | `postgresql-$v-gzip` | **d12** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
 | **语言** | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | **d13** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
 | **仓库** | <a class="ext-badge ext-badge--repo mixed" href="/ext/repo#mixed">MIXED</a> | **u22** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
@@ -115,16 +115,16 @@ icon: fas fa-wrench
 
 ## http {#http}
 
-[**`pg_http`**](/ext/e/http) - `1.7.0` : HTTP客户端，允许在数据库内收发HTTP请求 (supabase)
+[**`pg_http`**](/ext/e/http) - `1.7.1` : HTTP客户端，允许在数据库内收发HTTP请求 (supabase)
 
 | **条目** | **属性** | **OS** | **x86_64** | **aarch64** |
 |:---:|:---|:---:|:---:|:---:|
 | **扩展名** | [`http`](/ext/e/http) | **el8** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
 | **扩展包** | [`pg_http`](https://github.com/pramsey/pgsql-http) | **el9** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
-| **RPM** | `pg_http_$v` | **el10** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+| **RPM** | `pgsql_http_$v` | **el10** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
 | **DEB** | `postgresql-$v-http` | **d12** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
 | **语言** | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | **d13** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
-| **仓库** | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | **u22** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+| **仓库** | <a class="ext-badge ext-badge--repo mixed" href="/ext/repo#mixed">MIXED</a> | **u22** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
 | **协议** | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | **u24** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
 | | | **u26** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
 {.ext-table .ext-table--cate}

@@ -54,31 +54,41 @@ weight: 3700
 | el9.aarch64 | AVAIL PGDG 1.0.5 1 | AVAIL PGDG 1.0.5 1 | AVAIL PGDG 1.0.5 1 | AVAIL PGDG 1.0.5 1 | AVAIL PGDG 1.0.5 1 |
 | el10.x86_64 | AVAIL PGDG 1.0.5 1 | AVAIL PGDG 1.0.5 1 | AVAIL PGDG 1.0.5 1 | AVAIL PGDG 1.0.5 1 | AVAIL PGDG 1.0.5 1 |
 | el10.aarch64 | AVAIL PGDG 1.0.5 1 | AVAIL PGDG 1.0.5 1 | AVAIL PGDG 1.0.5 1 | AVAIL PGDG 1.0.5 1 | AVAIL PGDG 1.0.5 1 |
-| d12.x86_64 | AVAIL PGDG 1.0.5 1 | AVAIL PGDG 1.0.5 1 | AVAIL PGDG 1.0.5 1 | AVAIL PGDG 1.0.5 1 | AVAIL PGDG 1.0.5 1 |
-| d12.aarch64 | AVAIL PGDG 1.0.5 1 | AVAIL PGDG 1.0.5 1 | AVAIL PGDG 1.0.5 1 | AVAIL PGDG 1.0.5 1 | AVAIL PGDG 1.0.5 1 |
-| d13.x86_64 | AVAIL PGDG 1.0.5 1 | AVAIL PGDG 1.0.5 1 | AVAIL PGDG 1.0.5 1 | AVAIL PGDG 1.0.5 1 | AVAIL PGDG 1.0.5 1 |
-| d13.aarch64 | AVAIL PGDG 1.0.5 1 | AVAIL PGDG 1.0.5 1 | AVAIL PGDG 1.0.5 1 | AVAIL PGDG 1.0.5 1 | AVAIL PGDG 1.0.5 1 |
-| u22.x86_64 | AVAIL PGDG 1.0.5 1 | AVAIL PGDG 1.0.5 1 | AVAIL PGDG 1.0.5 1 | AVAIL PGDG 1.0.5 1 | AVAIL PGDG 1.0.5 1 |
-| u22.aarch64 | AVAIL PGDG 1.0.5 1 | AVAIL PGDG 1.0.5 1 | AVAIL PGDG 1.0.5 1 | AVAIL PGDG 1.0.5 1 | AVAIL PGDG 1.0.5 1 |
-| u24.x86_64 | AVAIL PGDG 1.0.5 1 | AVAIL PGDG 1.0.5 1 | AVAIL PGDG 1.0.5 1 | AVAIL PGDG 1.0.5 1 | AVAIL PGDG 1.0.5 1 |
-| u24.aarch64 | AVAIL PGDG 1.0.5 1 | AVAIL PGDG 1.0.5 1 | AVAIL PGDG 1.0.5 1 | AVAIL PGDG 1.0.5 1 | AVAIL PGDG 1.0.5 1 |
-| u26.x86_64 | AVAIL PGDG 1.0.5 1 | AVAIL PGDG 1.0.5 1 | AVAIL PGDG 1.0.5 1 | AVAIL PGDG 1.0.5 1 | AVAIL PGDG 1.0.5 1 |
-| u26.aarch64 | AVAIL PGDG 1.0.5 1 | AVAIL PGDG 1.0.5 1 | AVAIL PGDG 1.0.5 1 | AVAIL PGDG 1.0.5 1 | AVAIL PGDG 1.0.5 1 |
+| d12.x86_64 | AVAIL PGDG 1.0.5 2 | AVAIL PGDG 1.0.5 2 | AVAIL PGDG 1.0.5 2 | AVAIL PGDG 1.0.5 2 | AVAIL PGDG 1.0.5 2 |
+| d12.aarch64 | AVAIL PGDG 1.0.5 2 | AVAIL PGDG 1.0.5 2 | AVAIL PGDG 1.0.5 2 | AVAIL PGDG 1.0.5 2 | AVAIL PGDG 1.0.5 2 |
+| d13.x86_64 | AVAIL PGDG 1.0.5 2 | AVAIL PGDG 1.0.5 2 | AVAIL PGDG 1.0.5 2 | AVAIL PGDG 1.0.5 2 | AVAIL PGDG 1.0.5 2 |
+| d13.aarch64 | AVAIL PGDG 1.0.5 2 | AVAIL PGDG 1.0.5 2 | AVAIL PGDG 1.0.5 2 | AVAIL PGDG 1.0.5 2 | AVAIL PGDG 1.0.5 2 |
+| u22.x86_64 | AVAIL PGDG 1.0.5 2 | AVAIL PGDG 1.0.5 2 | AVAIL PGDG 1.0.5 2 | AVAIL PGDG 1.0.5 2 | AVAIL PGDG 1.0.5 2 |
+| u22.aarch64 | AVAIL PGDG 1.0.5 2 | AVAIL PGDG 1.0.5 2 | AVAIL PGDG 1.0.5 2 | AVAIL PGDG 1.0.5 2 | AVAIL PGDG 1.0.5 2 |
+| u24.x86_64 | AVAIL PGDG 1.0.5 2 | AVAIL PGDG 1.0.5 2 | AVAIL PGDG 1.0.5 2 | AVAIL PGDG 1.0.5 2 | AVAIL PGDG 1.0.5 2 |
+| u24.aarch64 | AVAIL PGDG 1.0.5 2 | AVAIL PGDG 1.0.5 2 | AVAIL PGDG 1.0.5 2 | AVAIL PGDG 1.0.5 2 | AVAIL PGDG 1.0.5 2 |
+| u26.x86_64 | AVAIL PGDG 1.0.5 2 | AVAIL PGDG 1.0.5 2 | AVAIL PGDG 1.0.5 2 | AVAIL PGDG 1.0.5 2 | AVAIL PGDG 1.0.5 2 |
+| u26.aarch64 | AVAIL PGDG 1.0.5 2 | AVAIL PGDG 1.0.5 2 | AVAIL PGDG 1.0.5 2 | AVAIL PGDG 1.0.5 2 | AVAIL PGDG 1.0.5 2 |
 @ el8.x86_64 18 pgmp_18 pgmp_18-1.0.5-4PGDG.rhel8.x86_64.rpm pgdg 1.0.5 41.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pgmp_18-1.0.5-4PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 18 pgmp_18 pgmp_18-1.0.5-4PGDG.rhel8.aarch64.rpm pgdg 1.0.5 39.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pgmp_18-1.0.5-4PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 18 pgmp_18 pgmp_18-1.0.5-6PGDG.rhel9.8.x86_64.rpm pgdg 1.0.5 42.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pgmp_18-1.0.5-6PGDG.rhel9.8.x86_64.rpm
 @ el9.aarch64 18 pgmp_18 pgmp_18-1.0.5-6PGDG.rhel9.8.aarch64.rpm pgdg 1.0.5 41.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pgmp_18-1.0.5-6PGDG.rhel9.8.aarch64.rpm
 @ el10.x86_64 18 pgmp_18 pgmp_18-1.0.5-6PGDG.rhel10.2.x86_64.rpm pgdg 1.0.5 43.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pgmp_18-1.0.5-6PGDG.rhel10.2.x86_64.rpm
 @ el10.aarch64 18 pgmp_18 pgmp_18-1.0.5-6PGDG.rhel10.2.aarch64.rpm pgdg 1.0.5 42.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pgmp_18-1.0.5-6PGDG.rhel10.2.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-pgmp postgresql-18-pgmp_1.0.5-5.pgdg12+1_amd64.deb pgdg 1.0.5 100.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pgmp/postgresql-18-pgmp_1.0.5-5.pgdg12+1_amd64.deb
 @ d12.x86_64 18 postgresql-18-pgmp postgresql-18-pgmp_1.0.5-4.pgdg12+1_amd64.deb pgdg 1.0.5 100.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pgmp/postgresql-18-pgmp_1.0.5-4.pgdg12+1_amd64.deb
+@ d12.aarch64 18 postgresql-18-pgmp postgresql-18-pgmp_1.0.5-5.pgdg12+1_arm64.deb pgdg 1.0.5 99.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pgmp/postgresql-18-pgmp_1.0.5-5.pgdg12+1_arm64.deb
 @ d12.aarch64 18 postgresql-18-pgmp postgresql-18-pgmp_1.0.5-4.pgdg12+1_arm64.deb pgdg 1.0.5 99.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pgmp/postgresql-18-pgmp_1.0.5-4.pgdg12+1_arm64.deb
+@ d13.x86_64 18 postgresql-18-pgmp postgresql-18-pgmp_1.0.5-5.pgdg13+1_amd64.deb pgdg 1.0.5 100.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pgmp/postgresql-18-pgmp_1.0.5-5.pgdg13+1_amd64.deb
 @ d13.x86_64 18 postgresql-18-pgmp postgresql-18-pgmp_1.0.5-4.pgdg13+1_amd64.deb pgdg 1.0.5 100.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pgmp/postgresql-18-pgmp_1.0.5-4.pgdg13+1_amd64.deb
+@ d13.aarch64 18 postgresql-18-pgmp postgresql-18-pgmp_1.0.5-5.pgdg13+1_arm64.deb pgdg 1.0.5 99.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pgmp/postgresql-18-pgmp_1.0.5-5.pgdg13+1_arm64.deb
 @ d13.aarch64 18 postgresql-18-pgmp postgresql-18-pgmp_1.0.5-4.pgdg13+1_arm64.deb pgdg 1.0.5 99.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pgmp/postgresql-18-pgmp_1.0.5-4.pgdg13+1_arm64.deb
+@ u22.x86_64 18 postgresql-18-pgmp postgresql-18-pgmp_1.0.5-5.pgdg22.04+1_amd64.deb pgdg 1.0.5 102.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pgmp/postgresql-18-pgmp_1.0.5-5.pgdg22.04+1_amd64.deb
 @ u22.x86_64 18 postgresql-18-pgmp postgresql-18-pgmp_1.0.5-4.pgdg22.04+1_amd64.deb pgdg 1.0.5 102.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pgmp/postgresql-18-pgmp_1.0.5-4.pgdg22.04+1_amd64.deb
+@ u22.aarch64 18 postgresql-18-pgmp postgresql-18-pgmp_1.0.5-5.pgdg22.04+1_arm64.deb pgdg 1.0.5 100.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pgmp/postgresql-18-pgmp_1.0.5-5.pgdg22.04+1_arm64.deb
 @ u22.aarch64 18 postgresql-18-pgmp postgresql-18-pgmp_1.0.5-4.pgdg22.04+1_arm64.deb pgdg 1.0.5 100.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pgmp/postgresql-18-pgmp_1.0.5-4.pgdg22.04+1_arm64.deb
+@ u24.x86_64 18 postgresql-18-pgmp postgresql-18-pgmp_1.0.5-5.pgdg24.04+1_amd64.deb pgdg 1.0.5 101.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pgmp/postgresql-18-pgmp_1.0.5-5.pgdg24.04+1_amd64.deb
 @ u24.x86_64 18 postgresql-18-pgmp postgresql-18-pgmp_1.0.5-4.pgdg24.04+1_amd64.deb pgdg 1.0.5 101.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pgmp/postgresql-18-pgmp_1.0.5-4.pgdg24.04+1_amd64.deb
+@ u24.aarch64 18 postgresql-18-pgmp postgresql-18-pgmp_1.0.5-5.pgdg24.04+1_arm64.deb pgdg 1.0.5 99.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pgmp/postgresql-18-pgmp_1.0.5-5.pgdg24.04+1_arm64.deb
 @ u24.aarch64 18 postgresql-18-pgmp postgresql-18-pgmp_1.0.5-4.pgdg24.04+1_arm64.deb pgdg 1.0.5 99.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pgmp/postgresql-18-pgmp_1.0.5-4.pgdg24.04+1_arm64.deb
+@ u26.x86_64 18 postgresql-18-pgmp postgresql-18-pgmp_1.0.5-5.pgdg26.04+1_amd64.deb pgdg 1.0.5 101.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pgmp/postgresql-18-pgmp_1.0.5-5.pgdg26.04+1_amd64.deb
 @ u26.x86_64 18 postgresql-18-pgmp postgresql-18-pgmp_1.0.5-4.pgdg26.04+1_amd64.deb pgdg 1.0.5 101.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pgmp/postgresql-18-pgmp_1.0.5-4.pgdg26.04+1_amd64.deb
+@ u26.aarch64 18 postgresql-18-pgmp postgresql-18-pgmp_1.0.5-5.pgdg26.04+1_arm64.deb pgdg 1.0.5 99.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pgmp/postgresql-18-pgmp_1.0.5-5.pgdg26.04+1_arm64.deb
 @ u26.aarch64 18 postgresql-18-pgmp postgresql-18-pgmp_1.0.5-4.pgdg26.04+1_arm64.deb pgdg 1.0.5 99.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pgmp/postgresql-18-pgmp_1.0.5-4.pgdg26.04+1_arm64.deb
 @ el8.x86_64 17 pgmp_17 pgmp_17-1.0.5-3PGDG.rhel8.x86_64.rpm pgdg 1.0.5 41.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pgmp_17-1.0.5-3PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 17 pgmp_17 pgmp_17-1.0.5-3PGDG.rhel8.aarch64.rpm pgdg 1.0.5 39.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pgmp_17-1.0.5-3PGDG.rhel8.aarch64.rpm
@@ -86,15 +96,25 @@ weight: 3700
 @ el9.aarch64 17 pgmp_17 pgmp_17-1.0.5-6PGDG.rhel9.8.aarch64.rpm pgdg 1.0.5 41.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pgmp_17-1.0.5-6PGDG.rhel9.8.aarch64.rpm
 @ el10.x86_64 17 pgmp_17 pgmp_17-1.0.5-6PGDG.rhel10.2.x86_64.rpm pgdg 1.0.5 43.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pgmp_17-1.0.5-6PGDG.rhel10.2.x86_64.rpm
 @ el10.aarch64 17 pgmp_17 pgmp_17-1.0.5-6PGDG.rhel10.2.aarch64.rpm pgdg 1.0.5 42.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pgmp_17-1.0.5-6PGDG.rhel10.2.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-pgmp postgresql-17-pgmp_1.0.5-5.pgdg12+1_amd64.deb pgdg 1.0.5 100.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pgmp/postgresql-17-pgmp_1.0.5-5.pgdg12+1_amd64.deb
 @ d12.x86_64 17 postgresql-17-pgmp postgresql-17-pgmp_1.0.5-4.pgdg12+1_amd64.deb pgdg 1.0.5 100.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pgmp/postgresql-17-pgmp_1.0.5-4.pgdg12+1_amd64.deb
+@ d12.aarch64 17 postgresql-17-pgmp postgresql-17-pgmp_1.0.5-5.pgdg12+1_arm64.deb pgdg 1.0.5 99.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pgmp/postgresql-17-pgmp_1.0.5-5.pgdg12+1_arm64.deb
 @ d12.aarch64 17 postgresql-17-pgmp postgresql-17-pgmp_1.0.5-4.pgdg12+1_arm64.deb pgdg 1.0.5 99.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pgmp/postgresql-17-pgmp_1.0.5-4.pgdg12+1_arm64.deb
+@ d13.x86_64 17 postgresql-17-pgmp postgresql-17-pgmp_1.0.5-5.pgdg13+1_amd64.deb pgdg 1.0.5 100.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pgmp/postgresql-17-pgmp_1.0.5-5.pgdg13+1_amd64.deb
 @ d13.x86_64 17 postgresql-17-pgmp postgresql-17-pgmp_1.0.5-4.pgdg13+1_amd64.deb pgdg 1.0.5 100.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pgmp/postgresql-17-pgmp_1.0.5-4.pgdg13+1_amd64.deb
+@ d13.aarch64 17 postgresql-17-pgmp postgresql-17-pgmp_1.0.5-5.pgdg13+1_arm64.deb pgdg 1.0.5 99.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pgmp/postgresql-17-pgmp_1.0.5-5.pgdg13+1_arm64.deb
 @ d13.aarch64 17 postgresql-17-pgmp postgresql-17-pgmp_1.0.5-4.pgdg13+1_arm64.deb pgdg 1.0.5 99.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pgmp/postgresql-17-pgmp_1.0.5-4.pgdg13+1_arm64.deb
+@ u22.x86_64 17 postgresql-17-pgmp postgresql-17-pgmp_1.0.5-5.pgdg22.04+1_amd64.deb pgdg 1.0.5 109.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pgmp/postgresql-17-pgmp_1.0.5-5.pgdg22.04+1_amd64.deb
 @ u22.x86_64 17 postgresql-17-pgmp postgresql-17-pgmp_1.0.5-4.pgdg22.04+1_amd64.deb pgdg 1.0.5 109.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pgmp/postgresql-17-pgmp_1.0.5-4.pgdg22.04+1_amd64.deb
+@ u22.aarch64 17 postgresql-17-pgmp postgresql-17-pgmp_1.0.5-5.pgdg22.04+1_arm64.deb pgdg 1.0.5 107.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pgmp/postgresql-17-pgmp_1.0.5-5.pgdg22.04+1_arm64.deb
 @ u22.aarch64 17 postgresql-17-pgmp postgresql-17-pgmp_1.0.5-4.pgdg22.04+1_arm64.deb pgdg 1.0.5 107.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pgmp/postgresql-17-pgmp_1.0.5-4.pgdg22.04+1_arm64.deb
+@ u24.x86_64 17 postgresql-17-pgmp postgresql-17-pgmp_1.0.5-5.pgdg24.04+1_amd64.deb pgdg 1.0.5 101.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pgmp/postgresql-17-pgmp_1.0.5-5.pgdg24.04+1_amd64.deb
 @ u24.x86_64 17 postgresql-17-pgmp postgresql-17-pgmp_1.0.5-4.pgdg24.04+1_amd64.deb pgdg 1.0.5 101.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pgmp/postgresql-17-pgmp_1.0.5-4.pgdg24.04+1_amd64.deb
+@ u24.aarch64 17 postgresql-17-pgmp postgresql-17-pgmp_1.0.5-5.pgdg24.04+1_arm64.deb pgdg 1.0.5 100.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pgmp/postgresql-17-pgmp_1.0.5-5.pgdg24.04+1_arm64.deb
 @ u24.aarch64 17 postgresql-17-pgmp postgresql-17-pgmp_1.0.5-4.pgdg24.04+1_arm64.deb pgdg 1.0.5 100.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pgmp/postgresql-17-pgmp_1.0.5-4.pgdg24.04+1_arm64.deb
+@ u26.x86_64 17 postgresql-17-pgmp postgresql-17-pgmp_1.0.5-5.pgdg26.04+1_amd64.deb pgdg 1.0.5 101.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pgmp/postgresql-17-pgmp_1.0.5-5.pgdg26.04+1_amd64.deb
 @ u26.x86_64 17 postgresql-17-pgmp postgresql-17-pgmp_1.0.5-4.pgdg26.04+1_amd64.deb pgdg 1.0.5 101.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pgmp/postgresql-17-pgmp_1.0.5-4.pgdg26.04+1_amd64.deb
+@ u26.aarch64 17 postgresql-17-pgmp postgresql-17-pgmp_1.0.5-5.pgdg26.04+1_arm64.deb pgdg 1.0.5 99.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pgmp/postgresql-17-pgmp_1.0.5-5.pgdg26.04+1_arm64.deb
 @ u26.aarch64 17 postgresql-17-pgmp postgresql-17-pgmp_1.0.5-4.pgdg26.04+1_arm64.deb pgdg 1.0.5 99.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pgmp/postgresql-17-pgmp_1.0.5-4.pgdg26.04+1_arm64.deb
 @ el8.x86_64 16 pgmp_16 pgmp_16-1.0.5-1PGDG.rhel8.x86_64.rpm pgdg 1.0.5 41.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pgmp_16-1.0.5-1PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 16 pgmp_16 pgmp_16-1.0.5-1PGDG.rhel8.aarch64.rpm pgdg 1.0.5 39.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pgmp_16-1.0.5-1PGDG.rhel8.aarch64.rpm
@@ -102,15 +122,25 @@ weight: 3700
 @ el9.aarch64 16 pgmp_16 pgmp_16-1.0.5-6PGDG.rhel9.8.aarch64.rpm pgdg 1.0.5 41.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pgmp_16-1.0.5-6PGDG.rhel9.8.aarch64.rpm
 @ el10.x86_64 16 pgmp_16 pgmp_16-1.0.5-6PGDG.rhel10.2.x86_64.rpm pgdg 1.0.5 44.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pgmp_16-1.0.5-6PGDG.rhel10.2.x86_64.rpm
 @ el10.aarch64 16 pgmp_16 pgmp_16-1.0.5-6PGDG.rhel10.2.aarch64.rpm pgdg 1.0.5 42.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pgmp_16-1.0.5-6PGDG.rhel10.2.aarch64.rpm
+@ d12.x86_64 16 postgresql-16-pgmp postgresql-16-pgmp_1.0.5-5.pgdg12+1_amd64.deb pgdg 1.0.5 100.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pgmp/postgresql-16-pgmp_1.0.5-5.pgdg12+1_amd64.deb
 @ d12.x86_64 16 postgresql-16-pgmp postgresql-16-pgmp_1.0.5-4.pgdg12+1_amd64.deb pgdg 1.0.5 100.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pgmp/postgresql-16-pgmp_1.0.5-4.pgdg12+1_amd64.deb
+@ d12.aarch64 16 postgresql-16-pgmp postgresql-16-pgmp_1.0.5-5.pgdg12+1_arm64.deb pgdg 1.0.5 99.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pgmp/postgresql-16-pgmp_1.0.5-5.pgdg12+1_arm64.deb
 @ d12.aarch64 16 postgresql-16-pgmp postgresql-16-pgmp_1.0.5-4.pgdg12+1_arm64.deb pgdg 1.0.5 99.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pgmp/postgresql-16-pgmp_1.0.5-4.pgdg12+1_arm64.deb
+@ d13.x86_64 16 postgresql-16-pgmp postgresql-16-pgmp_1.0.5-5.pgdg13+1_amd64.deb pgdg 1.0.5 100.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pgmp/postgresql-16-pgmp_1.0.5-5.pgdg13+1_amd64.deb
 @ d13.x86_64 16 postgresql-16-pgmp postgresql-16-pgmp_1.0.5-4.pgdg13+1_amd64.deb pgdg 1.0.5 100.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pgmp/postgresql-16-pgmp_1.0.5-4.pgdg13+1_amd64.deb
+@ d13.aarch64 16 postgresql-16-pgmp postgresql-16-pgmp_1.0.5-5.pgdg13+1_arm64.deb pgdg 1.0.5 99.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pgmp/postgresql-16-pgmp_1.0.5-5.pgdg13+1_arm64.deb
 @ d13.aarch64 16 postgresql-16-pgmp postgresql-16-pgmp_1.0.5-4.pgdg13+1_arm64.deb pgdg 1.0.5 99.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pgmp/postgresql-16-pgmp_1.0.5-4.pgdg13+1_arm64.deb
+@ u22.x86_64 16 postgresql-16-pgmp postgresql-16-pgmp_1.0.5-5.pgdg22.04+1_amd64.deb pgdg 1.0.5 109.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pgmp/postgresql-16-pgmp_1.0.5-5.pgdg22.04+1_amd64.deb
 @ u22.x86_64 16 postgresql-16-pgmp postgresql-16-pgmp_1.0.5-4.pgdg22.04+1_amd64.deb pgdg 1.0.5 109.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pgmp/postgresql-16-pgmp_1.0.5-4.pgdg22.04+1_amd64.deb
+@ u22.aarch64 16 postgresql-16-pgmp postgresql-16-pgmp_1.0.5-5.pgdg22.04+1_arm64.deb pgdg 1.0.5 107.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pgmp/postgresql-16-pgmp_1.0.5-5.pgdg22.04+1_arm64.deb
 @ u22.aarch64 16 postgresql-16-pgmp postgresql-16-pgmp_1.0.5-4.pgdg22.04+1_arm64.deb pgdg 1.0.5 107.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pgmp/postgresql-16-pgmp_1.0.5-4.pgdg22.04+1_arm64.deb
+@ u24.x86_64 16 postgresql-16-pgmp postgresql-16-pgmp_1.0.5-5.pgdg24.04+1_amd64.deb pgdg 1.0.5 101.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pgmp/postgresql-16-pgmp_1.0.5-5.pgdg24.04+1_amd64.deb
 @ u24.x86_64 16 postgresql-16-pgmp postgresql-16-pgmp_1.0.5-4.pgdg24.04+1_amd64.deb pgdg 1.0.5 101.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pgmp/postgresql-16-pgmp_1.0.5-4.pgdg24.04+1_amd64.deb
+@ u24.aarch64 16 postgresql-16-pgmp postgresql-16-pgmp_1.0.5-5.pgdg24.04+1_arm64.deb pgdg 1.0.5 100.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pgmp/postgresql-16-pgmp_1.0.5-5.pgdg24.04+1_arm64.deb
 @ u24.aarch64 16 postgresql-16-pgmp postgresql-16-pgmp_1.0.5-4.pgdg24.04+1_arm64.deb pgdg 1.0.5 99.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pgmp/postgresql-16-pgmp_1.0.5-4.pgdg24.04+1_arm64.deb
+@ u26.x86_64 16 postgresql-16-pgmp postgresql-16-pgmp_1.0.5-5.pgdg26.04+1_amd64.deb pgdg 1.0.5 100.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pgmp/postgresql-16-pgmp_1.0.5-5.pgdg26.04+1_amd64.deb
 @ u26.x86_64 16 postgresql-16-pgmp postgresql-16-pgmp_1.0.5-4.pgdg26.04+1_amd64.deb pgdg 1.0.5 101.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pgmp/postgresql-16-pgmp_1.0.5-4.pgdg26.04+1_amd64.deb
+@ u26.aarch64 16 postgresql-16-pgmp postgresql-16-pgmp_1.0.5-5.pgdg26.04+1_arm64.deb pgdg 1.0.5 99.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pgmp/postgresql-16-pgmp_1.0.5-5.pgdg26.04+1_arm64.deb
 @ u26.aarch64 16 postgresql-16-pgmp postgresql-16-pgmp_1.0.5-4.pgdg26.04+1_arm64.deb pgdg 1.0.5 99.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pgmp/postgresql-16-pgmp_1.0.5-4.pgdg26.04+1_arm64.deb
 @ el8.x86_64 15 pgmp_15 pgmp_15-1.0.4-4.rhel8.x86_64.rpm pgdg 1.0.4 106.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pgmp_15-1.0.4-4.rhel8.x86_64.rpm
 @ el8.aarch64 15 pgmp_15 pgmp_15-1.0.4-4.rhel8.aarch64.rpm pgdg 1.0.4 104.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pgmp_15-1.0.4-4.rhel8.aarch64.rpm
@@ -118,15 +148,25 @@ weight: 3700
 @ el9.aarch64 15 pgmp_15 pgmp_15-1.0.5-6PGDG.rhel9.8.aarch64.rpm pgdg 1.0.5 41.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pgmp_15-1.0.5-6PGDG.rhel9.8.aarch64.rpm
 @ el10.x86_64 15 pgmp_15 pgmp_15-1.0.5-6PGDG.rhel10.2.x86_64.rpm pgdg 1.0.5 43.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pgmp_15-1.0.5-6PGDG.rhel10.2.x86_64.rpm
 @ el10.aarch64 15 pgmp_15 pgmp_15-1.0.5-6PGDG.rhel10.2.aarch64.rpm pgdg 1.0.5 42.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pgmp_15-1.0.5-6PGDG.rhel10.2.aarch64.rpm
+@ d12.x86_64 15 postgresql-15-pgmp postgresql-15-pgmp_1.0.5-5.pgdg12+1_amd64.deb pgdg 1.0.5 100.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pgmp/postgresql-15-pgmp_1.0.5-5.pgdg12+1_amd64.deb
 @ d12.x86_64 15 postgresql-15-pgmp postgresql-15-pgmp_1.0.5-4.pgdg12+1_amd64.deb pgdg 1.0.5 100.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pgmp/postgresql-15-pgmp_1.0.5-4.pgdg12+1_amd64.deb
+@ d12.aarch64 15 postgresql-15-pgmp postgresql-15-pgmp_1.0.5-5.pgdg12+1_arm64.deb pgdg 1.0.5 99.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pgmp/postgresql-15-pgmp_1.0.5-5.pgdg12+1_arm64.deb
 @ d12.aarch64 15 postgresql-15-pgmp postgresql-15-pgmp_1.0.5-4.pgdg12+1_arm64.deb pgdg 1.0.5 99.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pgmp/postgresql-15-pgmp_1.0.5-4.pgdg12+1_arm64.deb
+@ d13.x86_64 15 postgresql-15-pgmp postgresql-15-pgmp_1.0.5-5.pgdg13+1_amd64.deb pgdg 1.0.5 100.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pgmp/postgresql-15-pgmp_1.0.5-5.pgdg13+1_amd64.deb
 @ d13.x86_64 15 postgresql-15-pgmp postgresql-15-pgmp_1.0.5-4.pgdg13+1_amd64.deb pgdg 1.0.5 100.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pgmp/postgresql-15-pgmp_1.0.5-4.pgdg13+1_amd64.deb
+@ d13.aarch64 15 postgresql-15-pgmp postgresql-15-pgmp_1.0.5-5.pgdg13+1_arm64.deb pgdg 1.0.5 99.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pgmp/postgresql-15-pgmp_1.0.5-5.pgdg13+1_arm64.deb
 @ d13.aarch64 15 postgresql-15-pgmp postgresql-15-pgmp_1.0.5-4.pgdg13+1_arm64.deb pgdg 1.0.5 99.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pgmp/postgresql-15-pgmp_1.0.5-4.pgdg13+1_arm64.deb
+@ u22.x86_64 15 postgresql-15-pgmp postgresql-15-pgmp_1.0.5-5.pgdg22.04+1_amd64.deb pgdg 1.0.5 108.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pgmp/postgresql-15-pgmp_1.0.5-5.pgdg22.04+1_amd64.deb
 @ u22.x86_64 15 postgresql-15-pgmp postgresql-15-pgmp_1.0.5-4.pgdg22.04+1_amd64.deb pgdg 1.0.5 108.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pgmp/postgresql-15-pgmp_1.0.5-4.pgdg22.04+1_amd64.deb
+@ u22.aarch64 15 postgresql-15-pgmp postgresql-15-pgmp_1.0.5-5.pgdg22.04+1_arm64.deb pgdg 1.0.5 107.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pgmp/postgresql-15-pgmp_1.0.5-5.pgdg22.04+1_arm64.deb
 @ u22.aarch64 15 postgresql-15-pgmp postgresql-15-pgmp_1.0.5-4.pgdg22.04+1_arm64.deb pgdg 1.0.5 107.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pgmp/postgresql-15-pgmp_1.0.5-4.pgdg22.04+1_arm64.deb
+@ u24.x86_64 15 postgresql-15-pgmp postgresql-15-pgmp_1.0.5-5.pgdg24.04+1_amd64.deb pgdg 1.0.5 101.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pgmp/postgresql-15-pgmp_1.0.5-5.pgdg24.04+1_amd64.deb
 @ u24.x86_64 15 postgresql-15-pgmp postgresql-15-pgmp_1.0.5-4.pgdg24.04+1_amd64.deb pgdg 1.0.5 100.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pgmp/postgresql-15-pgmp_1.0.5-4.pgdg24.04+1_amd64.deb
+@ u24.aarch64 15 postgresql-15-pgmp postgresql-15-pgmp_1.0.5-5.pgdg24.04+1_arm64.deb pgdg 1.0.5 99.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pgmp/postgresql-15-pgmp_1.0.5-5.pgdg24.04+1_arm64.deb
 @ u24.aarch64 15 postgresql-15-pgmp postgresql-15-pgmp_1.0.5-4.pgdg24.04+1_arm64.deb pgdg 1.0.5 99.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pgmp/postgresql-15-pgmp_1.0.5-4.pgdg24.04+1_arm64.deb
+@ u26.x86_64 15 postgresql-15-pgmp postgresql-15-pgmp_1.0.5-5.pgdg26.04+1_amd64.deb pgdg 1.0.5 100.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pgmp/postgresql-15-pgmp_1.0.5-5.pgdg26.04+1_amd64.deb
 @ u26.x86_64 15 postgresql-15-pgmp postgresql-15-pgmp_1.0.5-4.pgdg26.04+1_amd64.deb pgdg 1.0.5 100.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pgmp/postgresql-15-pgmp_1.0.5-4.pgdg26.04+1_amd64.deb
+@ u26.aarch64 15 postgresql-15-pgmp postgresql-15-pgmp_1.0.5-5.pgdg26.04+1_arm64.deb pgdg 1.0.5 99.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pgmp/postgresql-15-pgmp_1.0.5-5.pgdg26.04+1_arm64.deb
 @ u26.aarch64 15 postgresql-15-pgmp postgresql-15-pgmp_1.0.5-4.pgdg26.04+1_arm64.deb pgdg 1.0.5 99.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pgmp/postgresql-15-pgmp_1.0.5-4.pgdg26.04+1_arm64.deb
 @ el8.x86_64 14 pgmp_14 pgmp_14-1.0.4-4.rhel8.x86_64.rpm pgdg 1.0.4 107.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pgmp_14-1.0.4-4.rhel8.x86_64.rpm
 @ el8.aarch64 14 pgmp_14 pgmp_14-1.0.4-4.rhel8.aarch64.rpm pgdg 1.0.4 104.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pgmp_14-1.0.4-4.rhel8.aarch64.rpm
@@ -134,15 +174,25 @@ weight: 3700
 @ el9.aarch64 14 pgmp_14 pgmp_14-1.0.5-6PGDG.rhel9.8.aarch64.rpm pgdg 1.0.5 41.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pgmp_14-1.0.5-6PGDG.rhel9.8.aarch64.rpm
 @ el10.x86_64 14 pgmp_14 pgmp_14-1.0.5-6PGDG.rhel10.2.x86_64.rpm pgdg 1.0.5 43.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pgmp_14-1.0.5-6PGDG.rhel10.2.x86_64.rpm
 @ el10.aarch64 14 pgmp_14 pgmp_14-1.0.5-6PGDG.rhel10.2.aarch64.rpm pgdg 1.0.5 42.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgmp_14-1.0.5-6PGDG.rhel10.2.aarch64.rpm
+@ d12.x86_64 14 postgresql-14-pgmp postgresql-14-pgmp_1.0.5-5.pgdg12+1_amd64.deb pgdg 1.0.5 100.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pgmp/postgresql-14-pgmp_1.0.5-5.pgdg12+1_amd64.deb
 @ d12.x86_64 14 postgresql-14-pgmp postgresql-14-pgmp_1.0.5-4.pgdg12+1_amd64.deb pgdg 1.0.5 100.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pgmp/postgresql-14-pgmp_1.0.5-4.pgdg12+1_amd64.deb
+@ d12.aarch64 14 postgresql-14-pgmp postgresql-14-pgmp_1.0.5-5.pgdg12+1_arm64.deb pgdg 1.0.5 99.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pgmp/postgresql-14-pgmp_1.0.5-5.pgdg12+1_arm64.deb
 @ d12.aarch64 14 postgresql-14-pgmp postgresql-14-pgmp_1.0.5-4.pgdg12+1_arm64.deb pgdg 1.0.5 99.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pgmp/postgresql-14-pgmp_1.0.5-4.pgdg12+1_arm64.deb
+@ d13.x86_64 14 postgresql-14-pgmp postgresql-14-pgmp_1.0.5-5.pgdg13+1_amd64.deb pgdg 1.0.5 100.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pgmp/postgresql-14-pgmp_1.0.5-5.pgdg13+1_amd64.deb
 @ d13.x86_64 14 postgresql-14-pgmp postgresql-14-pgmp_1.0.5-4.pgdg13+1_amd64.deb pgdg 1.0.5 100.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pgmp/postgresql-14-pgmp_1.0.5-4.pgdg13+1_amd64.deb
+@ d13.aarch64 14 postgresql-14-pgmp postgresql-14-pgmp_1.0.5-5.pgdg13+1_arm64.deb pgdg 1.0.5 99.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pgmp/postgresql-14-pgmp_1.0.5-5.pgdg13+1_arm64.deb
 @ d13.aarch64 14 postgresql-14-pgmp postgresql-14-pgmp_1.0.5-4.pgdg13+1_arm64.deb pgdg 1.0.5 99.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pgmp/postgresql-14-pgmp_1.0.5-4.pgdg13+1_arm64.deb
+@ u22.x86_64 14 postgresql-14-pgmp postgresql-14-pgmp_1.0.5-5.pgdg22.04+1_amd64.deb pgdg 1.0.5 108.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pgmp/postgresql-14-pgmp_1.0.5-5.pgdg22.04+1_amd64.deb
 @ u22.x86_64 14 postgresql-14-pgmp postgresql-14-pgmp_1.0.5-4.pgdg22.04+1_amd64.deb pgdg 1.0.5 108.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pgmp/postgresql-14-pgmp_1.0.5-4.pgdg22.04+1_amd64.deb
+@ u22.aarch64 14 postgresql-14-pgmp postgresql-14-pgmp_1.0.5-5.pgdg22.04+1_arm64.deb pgdg 1.0.5 107.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pgmp/postgresql-14-pgmp_1.0.5-5.pgdg22.04+1_arm64.deb
 @ u22.aarch64 14 postgresql-14-pgmp postgresql-14-pgmp_1.0.5-4.pgdg22.04+1_arm64.deb pgdg 1.0.5 107.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pgmp/postgresql-14-pgmp_1.0.5-4.pgdg22.04+1_arm64.deb
+@ u24.x86_64 14 postgresql-14-pgmp postgresql-14-pgmp_1.0.5-5.pgdg24.04+1_amd64.deb pgdg 1.0.5 101.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pgmp/postgresql-14-pgmp_1.0.5-5.pgdg24.04+1_amd64.deb
 @ u24.x86_64 14 postgresql-14-pgmp postgresql-14-pgmp_1.0.5-4.pgdg24.04+1_amd64.deb pgdg 1.0.5 100.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pgmp/postgresql-14-pgmp_1.0.5-4.pgdg24.04+1_amd64.deb
+@ u24.aarch64 14 postgresql-14-pgmp postgresql-14-pgmp_1.0.5-5.pgdg24.04+1_arm64.deb pgdg 1.0.5 99.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pgmp/postgresql-14-pgmp_1.0.5-5.pgdg24.04+1_arm64.deb
 @ u24.aarch64 14 postgresql-14-pgmp postgresql-14-pgmp_1.0.5-4.pgdg24.04+1_arm64.deb pgdg 1.0.5 99.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pgmp/postgresql-14-pgmp_1.0.5-4.pgdg24.04+1_arm64.deb
+@ u26.x86_64 14 postgresql-14-pgmp postgresql-14-pgmp_1.0.5-5.pgdg26.04+1_amd64.deb pgdg 1.0.5 100.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pgmp/postgresql-14-pgmp_1.0.5-5.pgdg26.04+1_amd64.deb
 @ u26.x86_64 14 postgresql-14-pgmp postgresql-14-pgmp_1.0.5-4.pgdg26.04+1_amd64.deb pgdg 1.0.5 100.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pgmp/postgresql-14-pgmp_1.0.5-4.pgdg26.04+1_amd64.deb
+@ u26.aarch64 14 postgresql-14-pgmp postgresql-14-pgmp_1.0.5-5.pgdg26.04+1_arm64.deb pgdg 1.0.5 99.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pgmp/postgresql-14-pgmp_1.0.5-5.pgdg26.04+1_arm64.deb
 @ u26.aarch64 14 postgresql-14-pgmp postgresql-14-pgmp_1.0.5-4.pgdg26.04+1_arm64.deb pgdg 1.0.5 99.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pgmp/postgresql-14-pgmp_1.0.5-4.pgdg26.04+1_arm64.deb
 {{< /pgext_matrix >}}
 

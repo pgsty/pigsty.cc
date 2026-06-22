@@ -43,19 +43,19 @@ weight: 1020
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
 | [**EXT**](/ext/list#time) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.2.1` | {{< pgvers "18,17,16,15,14" >}} | `pg_timeseries` | `pg_cron`, `pg_partman` |
-| [**RPM**](/ext/rpm#time) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.2.0` | {{< pgvers "18,17,16,15,14" >}} | `pg_timeseries_$v` | `pg_cron_$v`, `pg_partman_$v` |
+| [**RPM**](/ext/rpm#time) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.2.1` | {{< pgvers "18,17,16,15,14" >}} | `pg_timeseries_$v` | `pg_cron_$v`, `pg_partman_$v` |
 | [**DEB**](/ext/deb#time) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.2.1` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pg-timeseries` | `postgresql-$v-cron`, `postgresql-$v-partman` |
 {.ext-table}
 
 {{< pgext_matrix >}}
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 0.2.1 2 | AVAIL PIGSTY 0.2.1 2 | AVAIL PIGSTY 0.2.1 2 | AVAIL PIGSTY 0.2.1 2 | AVAIL PIGSTY 0.2.1 2 |
-| el8.aarch64 | AVAIL PIGSTY 0.2.1 2 | AVAIL PIGSTY 0.2.1 2 | AVAIL PIGSTY 0.2.1 2 | AVAIL PIGSTY 0.2.1 2 | AVAIL PIGSTY 0.2.1 2 |
-| el9.x86_64 | AVAIL PIGSTY 0.2.1 2 | AVAIL PIGSTY 0.2.1 2 | AVAIL PIGSTY 0.2.1 2 | AVAIL PIGSTY 0.2.1 2 | AVAIL PIGSTY 0.2.1 2 |
-| el9.aarch64 | AVAIL PIGSTY 0.2.1 2 | AVAIL PIGSTY 0.2.1 2 | AVAIL PIGSTY 0.2.1 2 | AVAIL PIGSTY 0.2.1 2 | AVAIL PIGSTY 0.2.1 2 |
-| el10.x86_64 | AVAIL PIGSTY 0.2.1 2 | AVAIL PIGSTY 0.2.1 2 | AVAIL PIGSTY 0.2.1 2 | AVAIL PIGSTY 0.2.1 2 | AVAIL PIGSTY 0.2.1 2 |
-| el10.aarch64 | AVAIL PIGSTY 0.2.1 2 | AVAIL PIGSTY 0.2.1 2 | AVAIL PIGSTY 0.2.1 2 | AVAIL PIGSTY 0.2.1 2 | AVAIL PIGSTY 0.2.1 2 |
+| el8.x86_64 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 |
+| el8.aarch64 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 |
+| el9.x86_64 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 |
+| el9.aarch64 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 |
+| el10.x86_64 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 |
+| el10.aarch64 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 |
 | d12.x86_64 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 |
 | d12.aarch64 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 |
 | d13.x86_64 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 |
@@ -67,17 +67,11 @@ weight: 1020
 | u26.x86_64 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 |
 | u26.aarch64 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 |
 @ el8.x86_64 18 pg_timeseries_18 pg_timeseries_18-0.2.1-1PIGSTY.el8.x86_64.rpm pigsty 0.2.1 28.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_timeseries_18-0.2.1-1PIGSTY.el8.x86_64.rpm
-@ el8.x86_64 18 pg_timeseries_18 pg_timeseries_18-0.2.0-1PIGSTY.el8.x86_64.rpm pigsty 0.2.0 28.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_timeseries_18-0.2.0-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 18 pg_timeseries_18 pg_timeseries_18-0.2.1-1PIGSTY.el8.aarch64.rpm pigsty 0.2.1 28.4KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_timeseries_18-0.2.1-1PIGSTY.el8.aarch64.rpm
-@ el8.aarch64 18 pg_timeseries_18 pg_timeseries_18-0.2.0-1PIGSTY.el8.aarch64.rpm pigsty 0.2.0 28.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_timeseries_18-0.2.0-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 18 pg_timeseries_18 pg_timeseries_18-0.2.1-1PIGSTY.el9.x86_64.rpm pigsty 0.2.1 28.1KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_timeseries_18-0.2.1-1PIGSTY.el9.x86_64.rpm
-@ el9.x86_64 18 pg_timeseries_18 pg_timeseries_18-0.2.0-1PIGSTY.el9.x86_64.rpm pigsty 0.2.0 27.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_timeseries_18-0.2.0-1PIGSTY.el9.x86_64.rpm
 @ el9.aarch64 18 pg_timeseries_18 pg_timeseries_18-0.2.1-1PIGSTY.el9.aarch64.rpm pigsty 0.2.1 28.1KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_timeseries_18-0.2.1-1PIGSTY.el9.aarch64.rpm
-@ el9.aarch64 18 pg_timeseries_18 pg_timeseries_18-0.2.0-1PIGSTY.el9.aarch64.rpm pigsty 0.2.0 27.8KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_timeseries_18-0.2.0-1PIGSTY.el9.aarch64.rpm
 @ el10.x86_64 18 pg_timeseries_18 pg_timeseries_18-0.2.1-1PIGSTY.el10.x86_64.rpm pigsty 0.2.1 28.3KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_timeseries_18-0.2.1-1PIGSTY.el10.x86_64.rpm
-@ el10.x86_64 18 pg_timeseries_18 pg_timeseries_18-0.2.0-1PIGSTY.el10.x86_64.rpm pigsty 0.2.0 28.1KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_timeseries_18-0.2.0-1PIGSTY.el10.x86_64.rpm
 @ el10.aarch64 18 pg_timeseries_18 pg_timeseries_18-0.2.1-1PIGSTY.el10.aarch64.rpm pigsty 0.2.1 28.3KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_timeseries_18-0.2.1-1PIGSTY.el10.aarch64.rpm
-@ el10.aarch64 18 pg_timeseries_18 pg_timeseries_18-0.2.0-1PIGSTY.el10.aarch64.rpm pigsty 0.2.0 28.1KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_timeseries_18-0.2.0-1PIGSTY.el10.aarch64.rpm
 @ d12.x86_64 18 postgresql-18-pg-timeseries postgresql-18-pg-timeseries_0.2.1-1PIGSTY~bookworm_amd64.deb pigsty 0.2.1 8.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-timeseries/postgresql-18-pg-timeseries_0.2.1-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 18 postgresql-18-pg-timeseries postgresql-18-pg-timeseries_0.2.1-1PIGSTY~bookworm_arm64.deb pigsty 0.2.1 8.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-timeseries/postgresql-18-pg-timeseries_0.2.1-1PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 18 postgresql-18-pg-timeseries postgresql-18-pg-timeseries_0.2.1-1PIGSTY~trixie_amd64.deb pigsty 0.2.1 8.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-timeseries/postgresql-18-pg-timeseries_0.2.1-1PIGSTY~trixie_amd64.deb
@@ -89,17 +83,11 @@ weight: 1020
 @ u26.x86_64 18 postgresql-18-pg-timeseries postgresql-18-pg-timeseries_0.2.1-1PIGSTY~resolute_amd64.deb pigsty 0.2.1 8.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-timeseries/postgresql-18-pg-timeseries_0.2.1-1PIGSTY~resolute_amd64.deb
 @ u26.aarch64 18 postgresql-18-pg-timeseries postgresql-18-pg-timeseries_0.2.1-1PIGSTY~resolute_arm64.deb pigsty 0.2.1 8.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-timeseries/postgresql-18-pg-timeseries_0.2.1-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 17 pg_timeseries_17 pg_timeseries_17-0.2.1-1PIGSTY.el8.x86_64.rpm pigsty 0.2.1 28.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_timeseries_17-0.2.1-1PIGSTY.el8.x86_64.rpm
-@ el8.x86_64 17 pg_timeseries_17 pg_timeseries_17-0.2.0-1PIGSTY.el8.x86_64.rpm pigsty 0.2.0 28.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_timeseries_17-0.2.0-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 17 pg_timeseries_17 pg_timeseries_17-0.2.1-1PIGSTY.el8.aarch64.rpm pigsty 0.2.1 28.4KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_timeseries_17-0.2.1-1PIGSTY.el8.aarch64.rpm
-@ el8.aarch64 17 pg_timeseries_17 pg_timeseries_17-0.2.0-1PIGSTY.el8.aarch64.rpm pigsty 0.2.0 28.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_timeseries_17-0.2.0-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 17 pg_timeseries_17 pg_timeseries_17-0.2.1-1PIGSTY.el9.x86_64.rpm pigsty 0.2.1 28.1KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_timeseries_17-0.2.1-1PIGSTY.el9.x86_64.rpm
-@ el9.x86_64 17 pg_timeseries_17 pg_timeseries_17-0.2.0-1PIGSTY.el9.x86_64.rpm pigsty 0.2.0 27.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_timeseries_17-0.2.0-1PIGSTY.el9.x86_64.rpm
 @ el9.aarch64 17 pg_timeseries_17 pg_timeseries_17-0.2.1-1PIGSTY.el9.aarch64.rpm pigsty 0.2.1 28.1KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_timeseries_17-0.2.1-1PIGSTY.el9.aarch64.rpm
-@ el9.aarch64 17 pg_timeseries_17 pg_timeseries_17-0.2.0-1PIGSTY.el9.aarch64.rpm pigsty 0.2.0 27.8KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_timeseries_17-0.2.0-1PIGSTY.el9.aarch64.rpm
 @ el10.x86_64 17 pg_timeseries_17 pg_timeseries_17-0.2.1-1PIGSTY.el10.x86_64.rpm pigsty 0.2.1 28.3KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_timeseries_17-0.2.1-1PIGSTY.el10.x86_64.rpm
-@ el10.x86_64 17 pg_timeseries_17 pg_timeseries_17-0.2.0-1PIGSTY.el10.x86_64.rpm pigsty 0.2.0 28.1KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_timeseries_17-0.2.0-1PIGSTY.el10.x86_64.rpm
 @ el10.aarch64 17 pg_timeseries_17 pg_timeseries_17-0.2.1-1PIGSTY.el10.aarch64.rpm pigsty 0.2.1 28.3KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_timeseries_17-0.2.1-1PIGSTY.el10.aarch64.rpm
-@ el10.aarch64 17 pg_timeseries_17 pg_timeseries_17-0.2.0-1PIGSTY.el10.aarch64.rpm pigsty 0.2.0 28.1KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_timeseries_17-0.2.0-1PIGSTY.el10.aarch64.rpm
 @ d12.x86_64 17 postgresql-17-pg-timeseries postgresql-17-pg-timeseries_0.2.1-1PIGSTY~bookworm_amd64.deb pigsty 0.2.1 8.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-timeseries/postgresql-17-pg-timeseries_0.2.1-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 17 postgresql-17-pg-timeseries postgresql-17-pg-timeseries_0.2.1-1PIGSTY~bookworm_arm64.deb pigsty 0.2.1 8.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-timeseries/postgresql-17-pg-timeseries_0.2.1-1PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 17 postgresql-17-pg-timeseries postgresql-17-pg-timeseries_0.2.1-1PIGSTY~trixie_amd64.deb pigsty 0.2.1 8.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-timeseries/postgresql-17-pg-timeseries_0.2.1-1PIGSTY~trixie_amd64.deb
@@ -111,17 +99,11 @@ weight: 1020
 @ u26.x86_64 17 postgresql-17-pg-timeseries postgresql-17-pg-timeseries_0.2.1-1PIGSTY~resolute_amd64.deb pigsty 0.2.1 8.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-timeseries/postgresql-17-pg-timeseries_0.2.1-1PIGSTY~resolute_amd64.deb
 @ u26.aarch64 17 postgresql-17-pg-timeseries postgresql-17-pg-timeseries_0.2.1-1PIGSTY~resolute_arm64.deb pigsty 0.2.1 8.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-timeseries/postgresql-17-pg-timeseries_0.2.1-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 16 pg_timeseries_16 pg_timeseries_16-0.2.1-1PIGSTY.el8.x86_64.rpm pigsty 0.2.1 28.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_timeseries_16-0.2.1-1PIGSTY.el8.x86_64.rpm
-@ el8.x86_64 16 pg_timeseries_16 pg_timeseries_16-0.2.0-1PIGSTY.el8.x86_64.rpm pigsty 0.2.0 28.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_timeseries_16-0.2.0-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 16 pg_timeseries_16 pg_timeseries_16-0.2.1-1PIGSTY.el8.aarch64.rpm pigsty 0.2.1 28.4KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_timeseries_16-0.2.1-1PIGSTY.el8.aarch64.rpm
-@ el8.aarch64 16 pg_timeseries_16 pg_timeseries_16-0.2.0-1PIGSTY.el8.aarch64.rpm pigsty 0.2.0 28.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_timeseries_16-0.2.0-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 16 pg_timeseries_16 pg_timeseries_16-0.2.1-1PIGSTY.el9.x86_64.rpm pigsty 0.2.1 28.1KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_timeseries_16-0.2.1-1PIGSTY.el9.x86_64.rpm
-@ el9.x86_64 16 pg_timeseries_16 pg_timeseries_16-0.2.0-1PIGSTY.el9.x86_64.rpm pigsty 0.2.0 27.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_timeseries_16-0.2.0-1PIGSTY.el9.x86_64.rpm
 @ el9.aarch64 16 pg_timeseries_16 pg_timeseries_16-0.2.1-1PIGSTY.el9.aarch64.rpm pigsty 0.2.1 28.1KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_timeseries_16-0.2.1-1PIGSTY.el9.aarch64.rpm
-@ el9.aarch64 16 pg_timeseries_16 pg_timeseries_16-0.2.0-1PIGSTY.el9.aarch64.rpm pigsty 0.2.0 27.8KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_timeseries_16-0.2.0-1PIGSTY.el9.aarch64.rpm
 @ el10.x86_64 16 pg_timeseries_16 pg_timeseries_16-0.2.1-1PIGSTY.el10.x86_64.rpm pigsty 0.2.1 28.3KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_timeseries_16-0.2.1-1PIGSTY.el10.x86_64.rpm
-@ el10.x86_64 16 pg_timeseries_16 pg_timeseries_16-0.2.0-1PIGSTY.el10.x86_64.rpm pigsty 0.2.0 28.1KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_timeseries_16-0.2.0-1PIGSTY.el10.x86_64.rpm
 @ el10.aarch64 16 pg_timeseries_16 pg_timeseries_16-0.2.1-1PIGSTY.el10.aarch64.rpm pigsty 0.2.1 28.3KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_timeseries_16-0.2.1-1PIGSTY.el10.aarch64.rpm
-@ el10.aarch64 16 pg_timeseries_16 pg_timeseries_16-0.2.0-1PIGSTY.el10.aarch64.rpm pigsty 0.2.0 28.1KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_timeseries_16-0.2.0-1PIGSTY.el10.aarch64.rpm
 @ d12.x86_64 16 postgresql-16-pg-timeseries postgresql-16-pg-timeseries_0.2.1-1PIGSTY~bookworm_amd64.deb pigsty 0.2.1 8.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-timeseries/postgresql-16-pg-timeseries_0.2.1-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 16 postgresql-16-pg-timeseries postgresql-16-pg-timeseries_0.2.1-1PIGSTY~bookworm_arm64.deb pigsty 0.2.1 8.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-timeseries/postgresql-16-pg-timeseries_0.2.1-1PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 16 postgresql-16-pg-timeseries postgresql-16-pg-timeseries_0.2.1-1PIGSTY~trixie_amd64.deb pigsty 0.2.1 8.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-timeseries/postgresql-16-pg-timeseries_0.2.1-1PIGSTY~trixie_amd64.deb
@@ -133,17 +115,11 @@ weight: 1020
 @ u26.x86_64 16 postgresql-16-pg-timeseries postgresql-16-pg-timeseries_0.2.1-1PIGSTY~resolute_amd64.deb pigsty 0.2.1 8.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-timeseries/postgresql-16-pg-timeseries_0.2.1-1PIGSTY~resolute_amd64.deb
 @ u26.aarch64 16 postgresql-16-pg-timeseries postgresql-16-pg-timeseries_0.2.1-1PIGSTY~resolute_arm64.deb pigsty 0.2.1 8.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-timeseries/postgresql-16-pg-timeseries_0.2.1-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 15 pg_timeseries_15 pg_timeseries_15-0.2.1-1PIGSTY.el8.x86_64.rpm pigsty 0.2.1 28.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_timeseries_15-0.2.1-1PIGSTY.el8.x86_64.rpm
-@ el8.x86_64 15 pg_timeseries_15 pg_timeseries_15-0.2.0-1PIGSTY.el8.x86_64.rpm pigsty 0.2.0 28.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_timeseries_15-0.2.0-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 15 pg_timeseries_15 pg_timeseries_15-0.2.1-1PIGSTY.el8.aarch64.rpm pigsty 0.2.1 28.4KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_timeseries_15-0.2.1-1PIGSTY.el8.aarch64.rpm
-@ el8.aarch64 15 pg_timeseries_15 pg_timeseries_15-0.2.0-1PIGSTY.el8.aarch64.rpm pigsty 0.2.0 28.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_timeseries_15-0.2.0-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 15 pg_timeseries_15 pg_timeseries_15-0.2.1-1PIGSTY.el9.x86_64.rpm pigsty 0.2.1 28.1KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_timeseries_15-0.2.1-1PIGSTY.el9.x86_64.rpm
-@ el9.x86_64 15 pg_timeseries_15 pg_timeseries_15-0.2.0-1PIGSTY.el9.x86_64.rpm pigsty 0.2.0 27.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_timeseries_15-0.2.0-1PIGSTY.el9.x86_64.rpm
 @ el9.aarch64 15 pg_timeseries_15 pg_timeseries_15-0.2.1-1PIGSTY.el9.aarch64.rpm pigsty 0.2.1 28.1KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_timeseries_15-0.2.1-1PIGSTY.el9.aarch64.rpm
-@ el9.aarch64 15 pg_timeseries_15 pg_timeseries_15-0.2.0-1PIGSTY.el9.aarch64.rpm pigsty 0.2.0 27.8KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_timeseries_15-0.2.0-1PIGSTY.el9.aarch64.rpm
 @ el10.x86_64 15 pg_timeseries_15 pg_timeseries_15-0.2.1-1PIGSTY.el10.x86_64.rpm pigsty 0.2.1 28.3KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_timeseries_15-0.2.1-1PIGSTY.el10.x86_64.rpm
-@ el10.x86_64 15 pg_timeseries_15 pg_timeseries_15-0.2.0-1PIGSTY.el10.x86_64.rpm pigsty 0.2.0 28.1KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_timeseries_15-0.2.0-1PIGSTY.el10.x86_64.rpm
 @ el10.aarch64 15 pg_timeseries_15 pg_timeseries_15-0.2.1-1PIGSTY.el10.aarch64.rpm pigsty 0.2.1 28.3KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_timeseries_15-0.2.1-1PIGSTY.el10.aarch64.rpm
-@ el10.aarch64 15 pg_timeseries_15 pg_timeseries_15-0.2.0-1PIGSTY.el10.aarch64.rpm pigsty 0.2.0 28.1KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_timeseries_15-0.2.0-1PIGSTY.el10.aarch64.rpm
 @ d12.x86_64 15 postgresql-15-pg-timeseries postgresql-15-pg-timeseries_0.2.1-1PIGSTY~bookworm_amd64.deb pigsty 0.2.1 8.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-timeseries/postgresql-15-pg-timeseries_0.2.1-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 15 postgresql-15-pg-timeseries postgresql-15-pg-timeseries_0.2.1-1PIGSTY~bookworm_arm64.deb pigsty 0.2.1 8.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-timeseries/postgresql-15-pg-timeseries_0.2.1-1PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 15 postgresql-15-pg-timeseries postgresql-15-pg-timeseries_0.2.1-1PIGSTY~trixie_amd64.deb pigsty 0.2.1 8.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-timeseries/postgresql-15-pg-timeseries_0.2.1-1PIGSTY~trixie_amd64.deb
@@ -155,17 +131,11 @@ weight: 1020
 @ u26.x86_64 15 postgresql-15-pg-timeseries postgresql-15-pg-timeseries_0.2.1-1PIGSTY~resolute_amd64.deb pigsty 0.2.1 8.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-timeseries/postgresql-15-pg-timeseries_0.2.1-1PIGSTY~resolute_amd64.deb
 @ u26.aarch64 15 postgresql-15-pg-timeseries postgresql-15-pg-timeseries_0.2.1-1PIGSTY~resolute_arm64.deb pigsty 0.2.1 8.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-timeseries/postgresql-15-pg-timeseries_0.2.1-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 14 pg_timeseries_14 pg_timeseries_14-0.2.1-1PIGSTY.el8.x86_64.rpm pigsty 0.2.1 28.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_timeseries_14-0.2.1-1PIGSTY.el8.x86_64.rpm
-@ el8.x86_64 14 pg_timeseries_14 pg_timeseries_14-0.2.0-1PIGSTY.el8.x86_64.rpm pigsty 0.2.0 28.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_timeseries_14-0.2.0-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 14 pg_timeseries_14 pg_timeseries_14-0.2.1-1PIGSTY.el8.aarch64.rpm pigsty 0.2.1 28.4KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_timeseries_14-0.2.1-1PIGSTY.el8.aarch64.rpm
-@ el8.aarch64 14 pg_timeseries_14 pg_timeseries_14-0.2.0-1PIGSTY.el8.aarch64.rpm pigsty 0.2.0 28.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_timeseries_14-0.2.0-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 14 pg_timeseries_14 pg_timeseries_14-0.2.1-1PIGSTY.el9.x86_64.rpm pigsty 0.2.1 28.1KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_timeseries_14-0.2.1-1PIGSTY.el9.x86_64.rpm
-@ el9.x86_64 14 pg_timeseries_14 pg_timeseries_14-0.2.0-1PIGSTY.el9.x86_64.rpm pigsty 0.2.0 27.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_timeseries_14-0.2.0-1PIGSTY.el9.x86_64.rpm
 @ el9.aarch64 14 pg_timeseries_14 pg_timeseries_14-0.2.1-1PIGSTY.el9.aarch64.rpm pigsty 0.2.1 28.1KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_timeseries_14-0.2.1-1PIGSTY.el9.aarch64.rpm
-@ el9.aarch64 14 pg_timeseries_14 pg_timeseries_14-0.2.0-1PIGSTY.el9.aarch64.rpm pigsty 0.2.0 27.8KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_timeseries_14-0.2.0-1PIGSTY.el9.aarch64.rpm
 @ el10.x86_64 14 pg_timeseries_14 pg_timeseries_14-0.2.1-1PIGSTY.el10.x86_64.rpm pigsty 0.2.1 28.3KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_timeseries_14-0.2.1-1PIGSTY.el10.x86_64.rpm
-@ el10.x86_64 14 pg_timeseries_14 pg_timeseries_14-0.2.0-1PIGSTY.el10.x86_64.rpm pigsty 0.2.0 28.1KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_timeseries_14-0.2.0-1PIGSTY.el10.x86_64.rpm
 @ el10.aarch64 14 pg_timeseries_14 pg_timeseries_14-0.2.1-1PIGSTY.el10.aarch64.rpm pigsty 0.2.1 28.3KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_timeseries_14-0.2.1-1PIGSTY.el10.aarch64.rpm
-@ el10.aarch64 14 pg_timeseries_14 pg_timeseries_14-0.2.0-1PIGSTY.el10.aarch64.rpm pigsty 0.2.0 28.1KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_timeseries_14-0.2.0-1PIGSTY.el10.aarch64.rpm
 @ d12.x86_64 14 postgresql-14-pg-timeseries postgresql-14-pg-timeseries_0.2.1-1PIGSTY~bookworm_amd64.deb pigsty 0.2.1 8.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-timeseries/postgresql-14-pg-timeseries_0.2.1-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 14 postgresql-14-pg-timeseries postgresql-14-pg-timeseries_0.2.1-1PIGSTY~bookworm_arm64.deb pigsty 0.2.1 8.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-timeseries/postgresql-14-pg-timeseries_0.2.1-1PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 14 postgresql-14-pg-timeseries postgresql-14-pg-timeseries_0.2.1-1PIGSTY~trixie_amd64.deb pigsty 0.2.1 8.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-timeseries/postgresql-14-pg-timeseries_0.2.1-1PIGSTY~trixie_amd64.deb

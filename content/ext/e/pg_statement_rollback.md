@@ -35,6 +35,7 @@ weight: 9130
 
 | **相关扩展** | [`oracle_fdw`](/ext/e/oracle_fdw) [`orafce`](/ext/e/orafce) [`pgtt`](/ext/e/pgtt) [`session_variable`](/ext/e/session_variable) [`safeupdate`](/ext/e/safeupdate) [`pg_dbms_metadata`](/ext/e/pg_dbms_metadata) [`pg_dbms_lock`](/ext/e/pg_dbms_lock) [`pg_hint_plan`](/ext/e/pg_hint_plan) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **下游依赖** | [`pg_statement_rollback`](/ext/e/pg_statement_rollback) |
 {.ext-table .ext-table--rel}
 
 

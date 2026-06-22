@@ -11,10 +11,10 @@ weight: 5060
     <div class="ext-card__title">klando/pgfincore</div>
     <div class="ext-card__desc">https://github.com/klando/pgfincore</div>
   </a>
-  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pgfincore-1.3.1.tar.gz">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pgfincore-1.4.0.tar.gz">
     <div class="ext-card__kicker">源码</div>
-    <div class="ext-card__title">pgfincore-1.3.1.tar.gz</div>
-    <div class="ext-card__desc">pgfincore-1.3.1.tar.gz</div>
+    <div class="ext-card__title">pgfincore-1.4.0.tar.gz</div>
+    <div class="ext-card__desc">pgfincore-1.4.0.tar.gz</div>
   </a>
 </div>
 
@@ -25,7 +25,7 @@ weight: 5060
 
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
-| [**`pgfincore`**](/ext/e/pgfincore) | `1.3.1` | <a class="ext-badge ext-badge--cate admin" href="/ext/cate/admin">ADMIN</a> | <a class="ext-badge ext-badge--license bsd 3clause" href="/ext/license#bsd3clause">BSD 3-Clause</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
+| [**`pgfincore`**](/ext/e/pgfincore) | `1.4.0` | <a class="ext-badge ext-badge--cate admin" href="/ext/cate/admin">ADMIN</a> | <a class="ext-badge ext-badge--license bsd 3clause" href="/ext/license#bsd3clause">BSD 3-Clause</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
 {.ext-table}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
@@ -45,123 +45,203 @@ weight: 5060
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#admin) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `1.3.1` | {{< pgvers "18,17,16,15,14" >}} | `pgfincore` | - |
-| [**RPM**](/ext/rpm#admin) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `1.3.1` | {{< pgvers "18,17,16,15,14" >}} | `pgfincore_$v` | - |
-| [**DEB**](/ext/deb#admin) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `1.3.1` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pgfincore` | - |
+| [**EXT**](/ext/list#admin) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `1.4.0` | {{< pgvers "18,17,16,15,14" >}} | `pgfincore` | - |
+| [**RPM**](/ext/rpm#admin) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `1.4.0` | {{< pgvers "18,17,16,15,14" >}} | `pgfincore_$v` | - |
+| [**DEB**](/ext/deb#admin) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `1.4.0` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pgfincore` | - |
 {.ext-table}
 
 {{< pgext_matrix >}}
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 1.3.1 1 | AVAIL PGDG 1.3.1 1 | AVAIL PGDG 1.3.1 1 | AVAIL PGDG 1.3.1 2 | AVAIL PGDG 1.3.1 3 |
-| el8.aarch64 | AVAIL PIGSTY 1.3.1 1 | AVAIL PGDG 1.3.1 1 | AVAIL PGDG 1.3.1 1 | AVAIL PGDG 1.3.1 2 | AVAIL PGDG 1.3.1 2 |
-| el9.x86_64 | AVAIL PIGSTY 1.3.1 1 | AVAIL PGDG 1.3.1 1 | AVAIL PGDG 1.3.1 1 | AVAIL PGDG 1.3.1 1 | AVAIL PGDG 1.3.1 1 |
-| el9.aarch64 | AVAIL PIGSTY 1.3.1 1 | AVAIL PGDG 1.3.1 1 | AVAIL PGDG 1.3.1 1 | AVAIL PGDG 1.3.1 1 | AVAIL PGDG 1.3.1 1 |
-| el10.x86_64 | AVAIL PIGSTY 1.3.1 1 | AVAIL PGDG 1.3.1 1 | AVAIL PGDG 1.3.1 1 | AVAIL PGDG 1.3.1 1 | AVAIL PGDG 1.3.1 1 |
-| el10.aarch64 | AVAIL PIGSTY 1.3.1 1 | AVAIL PGDG 1.3.1 1 | AVAIL PGDG 1.3.1 1 | AVAIL PGDG 1.3.1 1 | AVAIL PGDG 1.3.1 1 |
-| d12.x86_64 | AVAIL PGDG 1.3.1 1 | AVAIL PGDG 1.3.1 1 | AVAIL PGDG 1.3.1 1 | AVAIL PGDG 1.3.1 1 | AVAIL PGDG 1.3.1 1 |
-| d12.aarch64 | AVAIL PGDG 1.3.1 1 | AVAIL PGDG 1.3.1 1 | AVAIL PGDG 1.3.1 1 | AVAIL PGDG 1.3.1 1 | AVAIL PGDG 1.3.1 1 |
-| d13.x86_64 | AVAIL PGDG 1.3.1 1 | AVAIL PGDG 1.3.1 1 | AVAIL PGDG 1.3.1 1 | AVAIL PGDG 1.3.1 1 | AVAIL PGDG 1.3.1 1 |
-| d13.aarch64 | AVAIL PGDG 1.3.1 1 | AVAIL PGDG 1.3.1 1 | AVAIL PGDG 1.3.1 1 | AVAIL PGDG 1.3.1 1 | AVAIL PGDG 1.3.1 1 |
-| u22.x86_64 | AVAIL PGDG 1.3.1 1 | AVAIL PGDG 1.3.1 1 | AVAIL PGDG 1.3.1 1 | AVAIL PGDG 1.3.1 1 | AVAIL PGDG 1.3.1 1 |
-| u22.aarch64 | AVAIL PGDG 1.3.1 1 | AVAIL PGDG 1.3.1 1 | AVAIL PGDG 1.3.1 1 | AVAIL PGDG 1.3.1 1 | AVAIL PGDG 1.3.1 1 |
-| u24.x86_64 | AVAIL PGDG 1.3.1 1 | AVAIL PGDG 1.3.1 1 | AVAIL PGDG 1.3.1 1 | AVAIL PGDG 1.3.1 1 | AVAIL PGDG 1.3.1 1 |
-| u24.aarch64 | AVAIL PGDG 1.3.1 1 | AVAIL PGDG 1.3.1 1 | AVAIL PGDG 1.3.1 1 | AVAIL PGDG 1.3.1 1 | AVAIL PGDG 1.3.1 1 |
-| u26.x86_64 | AVAIL PGDG 1.3.1 2 | AVAIL PGDG 1.3.1 2 | AVAIL PGDG 1.3.1 2 | AVAIL PGDG 1.3.1 2 | AVAIL PGDG 1.3.1 2 |
-| u26.aarch64 | AVAIL PGDG 1.3.1 2 | AVAIL PGDG 1.3.1 2 | AVAIL PGDG 1.3.1 2 | AVAIL PGDG 1.3.1 2 | AVAIL PGDG 1.3.1 2 |
+| el8.x86_64 | AVAIL PIGSTY 1.4.0 2 | AVAIL PIGSTY 1.4.0 2 | AVAIL PIGSTY 1.4.0 2 | AVAIL PIGSTY 1.4.0 3 | AVAIL PIGSTY 1.4.0 4 |
+| el8.aarch64 | AVAIL PIGSTY 1.4.0 2 | AVAIL PIGSTY 1.4.0 2 | AVAIL PIGSTY 1.4.0 2 | AVAIL PIGSTY 1.4.0 3 | AVAIL PIGSTY 1.4.0 3 |
+| el9.x86_64 | AVAIL PIGSTY 1.4.0 2 | AVAIL PIGSTY 1.4.0 2 | AVAIL PIGSTY 1.4.0 2 | AVAIL PIGSTY 1.4.0 2 | AVAIL PIGSTY 1.4.0 2 |
+| el9.aarch64 | AVAIL PIGSTY 1.4.0 2 | AVAIL PIGSTY 1.4.0 2 | AVAIL PIGSTY 1.4.0 2 | AVAIL PIGSTY 1.4.0 2 | AVAIL PIGSTY 1.4.0 2 |
+| el10.x86_64 | AVAIL PIGSTY 1.4.0 2 | AVAIL PIGSTY 1.4.0 2 | AVAIL PIGSTY 1.4.0 2 | AVAIL PIGSTY 1.4.0 2 | AVAIL PIGSTY 1.4.0 2 |
+| el10.aarch64 | AVAIL PIGSTY 1.4.0 2 | AVAIL PIGSTY 1.4.0 2 | AVAIL PIGSTY 1.4.0 2 | AVAIL PIGSTY 1.4.0 2 | AVAIL PIGSTY 1.4.0 2 |
+| d12.x86_64 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 |
+| d12.aarch64 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 |
+| d13.x86_64 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 |
+| d13.aarch64 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 |
+| u22.x86_64 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 |
+| u22.aarch64 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 |
+| u24.x86_64 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 |
+| u24.aarch64 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 |
+| u26.x86_64 | AVAIL PGDG 1.4.0 3 | AVAIL PGDG 1.4.0 3 | AVAIL PGDG 1.4.0 3 | AVAIL PGDG 1.4.0 3 | AVAIL PGDG 1.4.0 3 |
+| u26.aarch64 | AVAIL PGDG 1.4.0 3 | AVAIL PGDG 1.4.0 3 | AVAIL PGDG 1.4.0 3 | AVAIL PGDG 1.4.0 3 | AVAIL PGDG 1.4.0 3 |
+@ el8.x86_64 18 pgfincore_18 pgfincore_18-1.4.0-1PIGSTY.el8.x86_64.rpm pigsty 1.4.0 16.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgfincore_18-1.4.0-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 18 pgfincore_18 pgfincore_18-1.3.1-1PIGSTY.el8.x86_64.rpm pigsty 1.3.1 16.6KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgfincore_18-1.3.1-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 18 pgfincore_18 pgfincore_18-1.4.0-1PIGSTY.el8.aarch64.rpm pigsty 1.4.0 16.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgfincore_18-1.4.0-1PIGSTY.el8.aarch64.rpm
 @ el8.aarch64 18 pgfincore_18 pgfincore_18-1.3.1-1PIGSTY.el8.aarch64.rpm pigsty 1.3.1 16.4KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgfincore_18-1.3.1-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 18 pgfincore_18 pgfincore_18-1.4.0-1PIGSTY.el9.x86_64.rpm pigsty 1.4.0 16.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgfincore_18-1.4.0-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 18 pgfincore_18 pgfincore_18-1.3.1-1PIGSTY.el9.x86_64.rpm pigsty 1.3.1 16.7KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgfincore_18-1.3.1-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 18 pgfincore_18 pgfincore_18-1.4.0-1PIGSTY.el9.aarch64.rpm pigsty 1.4.0 16.6KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgfincore_18-1.4.0-1PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 18 pgfincore_18 pgfincore_18-1.3.1-1PIGSTY.el9.aarch64.rpm pigsty 1.3.1 16.3KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgfincore_18-1.3.1-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 18 pgfincore_18 pgfincore_18-1.4.0-1PIGSTY.el10.x86_64.rpm pigsty 1.4.0 17.1KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgfincore_18-1.4.0-1PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 18 pgfincore_18 pgfincore_18-1.3.1-1PIGSTY.el10.x86_64.rpm pigsty 1.3.1 16.8KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgfincore_18-1.3.1-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 18 pgfincore_18 pgfincore_18-1.4.0-1PIGSTY.el10.aarch64.rpm pigsty 1.4.0 16.8KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgfincore_18-1.4.0-1PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 18 pgfincore_18 pgfincore_18-1.3.1-1PIGSTY.el10.aarch64.rpm pigsty 1.3.1 16.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgfincore_18-1.3.1-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-pgfincore postgresql-18-pgfincore_1.4.0-1.pgdg12+1_amd64.deb pgdg 1.4.0 29.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfincore/postgresql-18-pgfincore_1.4.0-1.pgdg12+1_amd64.deb
 @ d12.x86_64 18 postgresql-18-pgfincore postgresql-18-pgfincore_1.3.1-3.pgdg12+1_amd64.deb pgdg 1.3.1 28.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfincore/postgresql-18-pgfincore_1.3.1-3.pgdg12+1_amd64.deb
+@ d12.aarch64 18 postgresql-18-pgfincore postgresql-18-pgfincore_1.4.0-1.pgdg12+1_arm64.deb pgdg 1.4.0 28.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfincore/postgresql-18-pgfincore_1.4.0-1.pgdg12+1_arm64.deb
 @ d12.aarch64 18 postgresql-18-pgfincore postgresql-18-pgfincore_1.3.1-3.pgdg12+1_arm64.deb pgdg 1.3.1 28.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfincore/postgresql-18-pgfincore_1.3.1-3.pgdg12+1_arm64.deb
+@ d13.x86_64 18 postgresql-18-pgfincore postgresql-18-pgfincore_1.4.0-1.pgdg13+1_amd64.deb pgdg 1.4.0 29.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfincore/postgresql-18-pgfincore_1.4.0-1.pgdg13+1_amd64.deb
 @ d13.x86_64 18 postgresql-18-pgfincore postgresql-18-pgfincore_1.3.1-3.pgdg13+1_amd64.deb pgdg 1.3.1 29.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfincore/postgresql-18-pgfincore_1.3.1-3.pgdg13+1_amd64.deb
+@ d13.aarch64 18 postgresql-18-pgfincore postgresql-18-pgfincore_1.4.0-1.pgdg13+1_arm64.deb pgdg 1.4.0 28.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfincore/postgresql-18-pgfincore_1.4.0-1.pgdg13+1_arm64.deb
 @ d13.aarch64 18 postgresql-18-pgfincore postgresql-18-pgfincore_1.3.1-3.pgdg13+1_arm64.deb pgdg 1.3.1 28.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfincore/postgresql-18-pgfincore_1.3.1-3.pgdg13+1_arm64.deb
+@ u22.x86_64 18 postgresql-18-pgfincore postgresql-18-pgfincore_1.4.0-1.pgdg22.04+1_amd64.deb pgdg 1.4.0 27.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfincore/postgresql-18-pgfincore_1.4.0-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 18 postgresql-18-pgfincore postgresql-18-pgfincore_1.3.1-3.pgdg22.04+1_amd64.deb pgdg 1.3.1 27.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfincore/postgresql-18-pgfincore_1.3.1-3.pgdg22.04+1_amd64.deb
+@ u22.aarch64 18 postgresql-18-pgfincore postgresql-18-pgfincore_1.4.0-1.pgdg22.04+1_arm64.deb pgdg 1.4.0 27.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfincore/postgresql-18-pgfincore_1.4.0-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 18 postgresql-18-pgfincore postgresql-18-pgfincore_1.3.1-3.pgdg22.04+1_arm64.deb pgdg 1.3.1 27.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfincore/postgresql-18-pgfincore_1.3.1-3.pgdg22.04+1_arm64.deb
+@ u24.x86_64 18 postgresql-18-pgfincore postgresql-18-pgfincore_1.4.0-1.pgdg24.04+1_amd64.deb pgdg 1.4.0 27.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfincore/postgresql-18-pgfincore_1.4.0-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 18 postgresql-18-pgfincore postgresql-18-pgfincore_1.3.1-3.pgdg24.04+1_amd64.deb pgdg 1.3.1 27.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfincore/postgresql-18-pgfincore_1.3.1-3.pgdg24.04+1_amd64.deb
+@ u24.aarch64 18 postgresql-18-pgfincore postgresql-18-pgfincore_1.4.0-1.pgdg24.04+1_arm64.deb pgdg 1.4.0 26.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfincore/postgresql-18-pgfincore_1.4.0-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 18 postgresql-18-pgfincore postgresql-18-pgfincore_1.3.1-3.pgdg24.04+1_arm64.deb pgdg 1.3.1 26.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfincore/postgresql-18-pgfincore_1.3.1-3.pgdg24.04+1_arm64.deb
+@ u26.x86_64 18 postgresql-18-pgfincore postgresql-18-pgfincore_1.4.0-1.pgdg26.04+1_amd64.deb pgdg 1.4.0 26.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfincore/postgresql-18-pgfincore_1.4.0-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 18 postgresql-18-pgfincore postgresql-18-pgfincore_1.3.1-3.pgdg26.04+1_amd64.deb pgdg 1.3.1 26.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfincore/postgresql-18-pgfincore_1.3.1-3.pgdg26.04+1_amd64.deb
 @ u26.x86_64 18 postgresql-18-pgfincore postgresql-18-pgfincore_1.3.1-1PIGSTY~resolute_amd64.deb pigsty 1.3.1 26.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgfincore/postgresql-18-pgfincore_1.3.1-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 18 postgresql-18-pgfincore postgresql-18-pgfincore_1.4.0-1.pgdg26.04+1_arm64.deb pgdg 1.4.0 26.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfincore/postgresql-18-pgfincore_1.4.0-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 18 postgresql-18-pgfincore postgresql-18-pgfincore_1.3.1-3.pgdg26.04+1_arm64.deb pgdg 1.3.1 26.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfincore/postgresql-18-pgfincore_1.3.1-3.pgdg26.04+1_arm64.deb
 @ u26.aarch64 18 postgresql-18-pgfincore postgresql-18-pgfincore_1.3.1-1PIGSTY~resolute_arm64.deb pigsty 1.3.1 26.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgfincore/postgresql-18-pgfincore_1.3.1-1PIGSTY~resolute_arm64.deb
+@ el8.x86_64 17 pgfincore_17 pgfincore_17-1.4.0-1PIGSTY.el8.x86_64.rpm pigsty 1.4.0 16.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgfincore_17-1.4.0-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 17 pgfincore_17 pgfincore_17-1.3.1-3PGDG.rhel8.x86_64.rpm pgdg 1.3.1 24.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pgfincore_17-1.3.1-3PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 17 pgfincore_17 pgfincore_17-1.4.0-1PIGSTY.el8.aarch64.rpm pigsty 1.4.0 16.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgfincore_17-1.4.0-1PIGSTY.el8.aarch64.rpm
 @ el8.aarch64 17 pgfincore_17 pgfincore_17-1.3.1-3PGDG.rhel8.aarch64.rpm pgdg 1.3.1 24.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pgfincore_17-1.3.1-3PGDG.rhel8.aarch64.rpm
+@ el9.x86_64 17 pgfincore_17 pgfincore_17-1.4.0-1PIGSTY.el9.x86_64.rpm pigsty 1.4.0 16.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgfincore_17-1.4.0-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 17 pgfincore_17 pgfincore_17-1.3.1-6PGDG.rhel9.8.x86_64.rpm pgdg 1.3.1 23.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pgfincore_17-1.3.1-6PGDG.rhel9.8.x86_64.rpm
+@ el9.aarch64 17 pgfincore_17 pgfincore_17-1.4.0-1PIGSTY.el9.aarch64.rpm pigsty 1.4.0 16.6KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgfincore_17-1.4.0-1PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 17 pgfincore_17 pgfincore_17-1.3.1-6PGDG.rhel9.8.aarch64.rpm pgdg 1.3.1 23.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pgfincore_17-1.3.1-6PGDG.rhel9.8.aarch64.rpm
+@ el10.x86_64 17 pgfincore_17 pgfincore_17-1.4.0-1PIGSTY.el10.x86_64.rpm pigsty 1.4.0 17.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgfincore_17-1.4.0-1PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 17 pgfincore_17 pgfincore_17-1.3.1-6PGDG.rhel10.2.x86_64.rpm pgdg 1.3.1 23.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pgfincore_17-1.3.1-6PGDG.rhel10.2.x86_64.rpm
+@ el10.aarch64 17 pgfincore_17 pgfincore_17-1.4.0-1PIGSTY.el10.aarch64.rpm pigsty 1.4.0 16.8KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgfincore_17-1.4.0-1PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 17 pgfincore_17 pgfincore_17-1.3.1-6PGDG.rhel10.2.aarch64.rpm pgdg 1.3.1 23.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pgfincore_17-1.3.1-6PGDG.rhel10.2.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-pgfincore postgresql-17-pgfincore_1.4.0-1.pgdg12+1_amd64.deb pgdg 1.4.0 28.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfincore/postgresql-17-pgfincore_1.4.0-1.pgdg12+1_amd64.deb
 @ d12.x86_64 17 postgresql-17-pgfincore postgresql-17-pgfincore_1.3.1-3.pgdg12+1_amd64.deb pgdg 1.3.1 28.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfincore/postgresql-17-pgfincore_1.3.1-3.pgdg12+1_amd64.deb
+@ d12.aarch64 17 postgresql-17-pgfincore postgresql-17-pgfincore_1.4.0-1.pgdg12+1_arm64.deb pgdg 1.4.0 28.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfincore/postgresql-17-pgfincore_1.4.0-1.pgdg12+1_arm64.deb
 @ d12.aarch64 17 postgresql-17-pgfincore postgresql-17-pgfincore_1.3.1-3.pgdg12+1_arm64.deb pgdg 1.3.1 28.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfincore/postgresql-17-pgfincore_1.3.1-3.pgdg12+1_arm64.deb
+@ d13.x86_64 17 postgresql-17-pgfincore postgresql-17-pgfincore_1.4.0-1.pgdg13+1_amd64.deb pgdg 1.4.0 28.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfincore/postgresql-17-pgfincore_1.4.0-1.pgdg13+1_amd64.deb
 @ d13.x86_64 17 postgresql-17-pgfincore postgresql-17-pgfincore_1.3.1-3.pgdg13+1_amd64.deb pgdg 1.3.1 28.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfincore/postgresql-17-pgfincore_1.3.1-3.pgdg13+1_amd64.deb
+@ d13.aarch64 17 postgresql-17-pgfincore postgresql-17-pgfincore_1.4.0-1.pgdg13+1_arm64.deb pgdg 1.4.0 28.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfincore/postgresql-17-pgfincore_1.4.0-1.pgdg13+1_arm64.deb
 @ d13.aarch64 17 postgresql-17-pgfincore postgresql-17-pgfincore_1.3.1-3.pgdg13+1_arm64.deb pgdg 1.3.1 28.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfincore/postgresql-17-pgfincore_1.3.1-3.pgdg13+1_arm64.deb
+@ u22.x86_64 17 postgresql-17-pgfincore postgresql-17-pgfincore_1.4.0-1.pgdg22.04+1_amd64.deb pgdg 1.4.0 31.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfincore/postgresql-17-pgfincore_1.4.0-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 17 postgresql-17-pgfincore postgresql-17-pgfincore_1.3.1-3.pgdg22.04+1_amd64.deb pgdg 1.3.1 31.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfincore/postgresql-17-pgfincore_1.3.1-3.pgdg22.04+1_amd64.deb
+@ u22.aarch64 17 postgresql-17-pgfincore postgresql-17-pgfincore_1.4.0-1.pgdg22.04+1_arm64.deb pgdg 1.4.0 31.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfincore/postgresql-17-pgfincore_1.4.0-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 17 postgresql-17-pgfincore postgresql-17-pgfincore_1.3.1-3.pgdg22.04+1_arm64.deb pgdg 1.3.1 31.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfincore/postgresql-17-pgfincore_1.3.1-3.pgdg22.04+1_arm64.deb
+@ u24.x86_64 17 postgresql-17-pgfincore postgresql-17-pgfincore_1.4.0-1.pgdg24.04+1_amd64.deb pgdg 1.4.0 27.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfincore/postgresql-17-pgfincore_1.4.0-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 17 postgresql-17-pgfincore postgresql-17-pgfincore_1.3.1-3.pgdg24.04+1_amd64.deb pgdg 1.3.1 27.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfincore/postgresql-17-pgfincore_1.3.1-3.pgdg24.04+1_amd64.deb
+@ u24.aarch64 17 postgresql-17-pgfincore postgresql-17-pgfincore_1.4.0-1.pgdg24.04+1_arm64.deb pgdg 1.4.0 26.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfincore/postgresql-17-pgfincore_1.4.0-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 17 postgresql-17-pgfincore postgresql-17-pgfincore_1.3.1-3.pgdg24.04+1_arm64.deb pgdg 1.3.1 26.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfincore/postgresql-17-pgfincore_1.3.1-3.pgdg24.04+1_arm64.deb
+@ u26.x86_64 17 postgresql-17-pgfincore postgresql-17-pgfincore_1.4.0-1.pgdg26.04+1_amd64.deb pgdg 1.4.0 26.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfincore/postgresql-17-pgfincore_1.4.0-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 17 postgresql-17-pgfincore postgresql-17-pgfincore_1.3.1-3.pgdg26.04+1_amd64.deb pgdg 1.3.1 26.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfincore/postgresql-17-pgfincore_1.3.1-3.pgdg26.04+1_amd64.deb
 @ u26.x86_64 17 postgresql-17-pgfincore postgresql-17-pgfincore_1.3.1-1PIGSTY~resolute_amd64.deb pigsty 1.3.1 26.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgfincore/postgresql-17-pgfincore_1.3.1-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 17 postgresql-17-pgfincore postgresql-17-pgfincore_1.4.0-1.pgdg26.04+1_arm64.deb pgdg 1.4.0 26.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfincore/postgresql-17-pgfincore_1.4.0-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 17 postgresql-17-pgfincore postgresql-17-pgfincore_1.3.1-3.pgdg26.04+1_arm64.deb pgdg 1.3.1 26.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfincore/postgresql-17-pgfincore_1.3.1-3.pgdg26.04+1_arm64.deb
 @ u26.aarch64 17 postgresql-17-pgfincore postgresql-17-pgfincore_1.3.1-1PIGSTY~resolute_arm64.deb pigsty 1.3.1 26.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgfincore/postgresql-17-pgfincore_1.3.1-1PIGSTY~resolute_arm64.deb
+@ el8.x86_64 16 pgfincore_16 pgfincore_16-1.4.0-1PIGSTY.el8.x86_64.rpm pigsty 1.4.0 16.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgfincore_16-1.4.0-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 16 pgfincore_16 pgfincore_16-1.3.1-1PGDG.rhel8.x86_64.rpm pgdg 1.3.1 24.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pgfincore_16-1.3.1-1PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 16 pgfincore_16 pgfincore_16-1.4.0-1PIGSTY.el8.aarch64.rpm pigsty 1.4.0 16.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgfincore_16-1.4.0-1PIGSTY.el8.aarch64.rpm
 @ el8.aarch64 16 pgfincore_16 pgfincore_16-1.3.1-1PGDG.rhel8.aarch64.rpm pgdg 1.3.1 24.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pgfincore_16-1.3.1-1PGDG.rhel8.aarch64.rpm
+@ el9.x86_64 16 pgfincore_16 pgfincore_16-1.4.0-1PIGSTY.el9.x86_64.rpm pigsty 1.4.0 16.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgfincore_16-1.4.0-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 16 pgfincore_16 pgfincore_16-1.3.1-6PGDG.rhel9.8.x86_64.rpm pgdg 1.3.1 23.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pgfincore_16-1.3.1-6PGDG.rhel9.8.x86_64.rpm
+@ el9.aarch64 16 pgfincore_16 pgfincore_16-1.4.0-1PIGSTY.el9.aarch64.rpm pigsty 1.4.0 16.6KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgfincore_16-1.4.0-1PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 16 pgfincore_16 pgfincore_16-1.3.1-6PGDG.rhel9.8.aarch64.rpm pgdg 1.3.1 23.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pgfincore_16-1.3.1-6PGDG.rhel9.8.aarch64.rpm
+@ el10.x86_64 16 pgfincore_16 pgfincore_16-1.4.0-1PIGSTY.el10.x86_64.rpm pigsty 1.4.0 17.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgfincore_16-1.4.0-1PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 16 pgfincore_16 pgfincore_16-1.3.1-6PGDG.rhel10.2.x86_64.rpm pgdg 1.3.1 23.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pgfincore_16-1.3.1-6PGDG.rhel10.2.x86_64.rpm
+@ el10.aarch64 16 pgfincore_16 pgfincore_16-1.4.0-1PIGSTY.el10.aarch64.rpm pigsty 1.4.0 16.8KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgfincore_16-1.4.0-1PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 16 pgfincore_16 pgfincore_16-1.3.1-6PGDG.rhel10.2.aarch64.rpm pgdg 1.3.1 23.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pgfincore_16-1.3.1-6PGDG.rhel10.2.aarch64.rpm
+@ d12.x86_64 16 postgresql-16-pgfincore postgresql-16-pgfincore_1.4.0-1.pgdg12+1_amd64.deb pgdg 1.4.0 28.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfincore/postgresql-16-pgfincore_1.4.0-1.pgdg12+1_amd64.deb
 @ d12.x86_64 16 postgresql-16-pgfincore postgresql-16-pgfincore_1.3.1-3.pgdg12+1_amd64.deb pgdg 1.3.1 28.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfincore/postgresql-16-pgfincore_1.3.1-3.pgdg12+1_amd64.deb
+@ d12.aarch64 16 postgresql-16-pgfincore postgresql-16-pgfincore_1.4.0-1.pgdg12+1_arm64.deb pgdg 1.4.0 28.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfincore/postgresql-16-pgfincore_1.4.0-1.pgdg12+1_arm64.deb
 @ d12.aarch64 16 postgresql-16-pgfincore postgresql-16-pgfincore_1.3.1-3.pgdg12+1_arm64.deb pgdg 1.3.1 28.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfincore/postgresql-16-pgfincore_1.3.1-3.pgdg12+1_arm64.deb
+@ d13.x86_64 16 postgresql-16-pgfincore postgresql-16-pgfincore_1.4.0-1.pgdg13+1_amd64.deb pgdg 1.4.0 28.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfincore/postgresql-16-pgfincore_1.4.0-1.pgdg13+1_amd64.deb
 @ d13.x86_64 16 postgresql-16-pgfincore postgresql-16-pgfincore_1.3.1-3.pgdg13+1_amd64.deb pgdg 1.3.1 28.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfincore/postgresql-16-pgfincore_1.3.1-3.pgdg13+1_amd64.deb
+@ d13.aarch64 16 postgresql-16-pgfincore postgresql-16-pgfincore_1.4.0-1.pgdg13+1_arm64.deb pgdg 1.4.0 28.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfincore/postgresql-16-pgfincore_1.4.0-1.pgdg13+1_arm64.deb
 @ d13.aarch64 16 postgresql-16-pgfincore postgresql-16-pgfincore_1.3.1-3.pgdg13+1_arm64.deb pgdg 1.3.1 28.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfincore/postgresql-16-pgfincore_1.3.1-3.pgdg13+1_arm64.deb
+@ u22.x86_64 16 postgresql-16-pgfincore postgresql-16-pgfincore_1.4.0-1.pgdg22.04+1_amd64.deb pgdg 1.4.0 31.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfincore/postgresql-16-pgfincore_1.4.0-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 16 postgresql-16-pgfincore postgresql-16-pgfincore_1.3.1-3.pgdg22.04+1_amd64.deb pgdg 1.3.1 31.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfincore/postgresql-16-pgfincore_1.3.1-3.pgdg22.04+1_amd64.deb
+@ u22.aarch64 16 postgresql-16-pgfincore postgresql-16-pgfincore_1.4.0-1.pgdg22.04+1_arm64.deb pgdg 1.4.0 30.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfincore/postgresql-16-pgfincore_1.4.0-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 16 postgresql-16-pgfincore postgresql-16-pgfincore_1.3.1-3.pgdg22.04+1_arm64.deb pgdg 1.3.1 30.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfincore/postgresql-16-pgfincore_1.3.1-3.pgdg22.04+1_arm64.deb
+@ u24.x86_64 16 postgresql-16-pgfincore postgresql-16-pgfincore_1.4.0-1.pgdg24.04+1_amd64.deb pgdg 1.4.0 27.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfincore/postgresql-16-pgfincore_1.4.0-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 16 postgresql-16-pgfincore postgresql-16-pgfincore_1.3.1-3.pgdg24.04+1_amd64.deb pgdg 1.3.1 27.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfincore/postgresql-16-pgfincore_1.3.1-3.pgdg24.04+1_amd64.deb
+@ u24.aarch64 16 postgresql-16-pgfincore postgresql-16-pgfincore_1.4.0-1.pgdg24.04+1_arm64.deb pgdg 1.4.0 26.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfincore/postgresql-16-pgfincore_1.4.0-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 16 postgresql-16-pgfincore postgresql-16-pgfincore_1.3.1-3.pgdg24.04+1_arm64.deb pgdg 1.3.1 26.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfincore/postgresql-16-pgfincore_1.3.1-3.pgdg24.04+1_arm64.deb
+@ u26.x86_64 16 postgresql-16-pgfincore postgresql-16-pgfincore_1.4.0-1.pgdg26.04+1_amd64.deb pgdg 1.4.0 26.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfincore/postgresql-16-pgfincore_1.4.0-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 16 postgresql-16-pgfincore postgresql-16-pgfincore_1.3.1-3.pgdg26.04+1_amd64.deb pgdg 1.3.1 26.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfincore/postgresql-16-pgfincore_1.3.1-3.pgdg26.04+1_amd64.deb
 @ u26.x86_64 16 postgresql-16-pgfincore postgresql-16-pgfincore_1.3.1-1PIGSTY~resolute_amd64.deb pigsty 1.3.1 26.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgfincore/postgresql-16-pgfincore_1.3.1-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 16 postgresql-16-pgfincore postgresql-16-pgfincore_1.4.0-1.pgdg26.04+1_arm64.deb pgdg 1.4.0 26.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfincore/postgresql-16-pgfincore_1.4.0-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 16 postgresql-16-pgfincore postgresql-16-pgfincore_1.3.1-3.pgdg26.04+1_arm64.deb pgdg 1.3.1 26.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfincore/postgresql-16-pgfincore_1.3.1-3.pgdg26.04+1_arm64.deb
 @ u26.aarch64 16 postgresql-16-pgfincore postgresql-16-pgfincore_1.3.1-1PIGSTY~resolute_arm64.deb pigsty 1.3.1 26.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgfincore/postgresql-16-pgfincore_1.3.1-1PIGSTY~resolute_arm64.deb
+@ el8.x86_64 15 pgfincore_15 pgfincore_15-1.4.0-1PIGSTY.el8.x86_64.rpm pigsty 1.4.0 16.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgfincore_15-1.4.0-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 15 pgfincore_15 pgfincore_15-1.3.1-1PGDG.rhel8.x86_64.rpm pgdg 1.3.1 24.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pgfincore_15-1.3.1-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 15 pgfincore_15 pgfincore_15-1.2.4-1.rhel8.x86_64.rpm pgdg 1.2.4 24.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pgfincore_15-1.2.4-1.rhel8.x86_64.rpm
+@ el8.aarch64 15 pgfincore_15 pgfincore_15-1.4.0-1PIGSTY.el8.aarch64.rpm pigsty 1.4.0 16.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgfincore_15-1.4.0-1PIGSTY.el8.aarch64.rpm
 @ el8.aarch64 15 pgfincore_15 pgfincore_15-1.3.1-1PGDG.rhel8.aarch64.rpm pgdg 1.3.1 24.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pgfincore_15-1.3.1-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 15 pgfincore_15 pgfincore_15-1.2.4-1.rhel8.aarch64.rpm pgdg 1.2.4 23.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pgfincore_15-1.2.4-1.rhel8.aarch64.rpm
+@ el9.x86_64 15 pgfincore_15 pgfincore_15-1.4.0-1PIGSTY.el9.x86_64.rpm pigsty 1.4.0 16.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgfincore_15-1.4.0-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 15 pgfincore_15 pgfincore_15-1.3.1-6PGDG.rhel9.8.x86_64.rpm pgdg 1.3.1 23.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pgfincore_15-1.3.1-6PGDG.rhel9.8.x86_64.rpm
+@ el9.aarch64 15 pgfincore_15 pgfincore_15-1.4.0-1PIGSTY.el9.aarch64.rpm pigsty 1.4.0 16.6KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgfincore_15-1.4.0-1PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 15 pgfincore_15 pgfincore_15-1.3.1-6PGDG.rhel9.8.aarch64.rpm pgdg 1.3.1 23.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pgfincore_15-1.3.1-6PGDG.rhel9.8.aarch64.rpm
+@ el10.x86_64 15 pgfincore_15 pgfincore_15-1.4.0-1PIGSTY.el10.x86_64.rpm pigsty 1.4.0 17.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgfincore_15-1.4.0-1PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 15 pgfincore_15 pgfincore_15-1.3.1-6PGDG.rhel10.2.x86_64.rpm pgdg 1.3.1 23.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pgfincore_15-1.3.1-6PGDG.rhel10.2.x86_64.rpm
+@ el10.aarch64 15 pgfincore_15 pgfincore_15-1.4.0-1PIGSTY.el10.aarch64.rpm pigsty 1.4.0 16.8KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgfincore_15-1.4.0-1PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 15 pgfincore_15 pgfincore_15-1.3.1-6PGDG.rhel10.2.aarch64.rpm pgdg 1.3.1 23.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pgfincore_15-1.3.1-6PGDG.rhel10.2.aarch64.rpm
+@ d12.x86_64 15 postgresql-15-pgfincore postgresql-15-pgfincore_1.4.0-1.pgdg12+1_amd64.deb pgdg 1.4.0 28.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfincore/postgresql-15-pgfincore_1.4.0-1.pgdg12+1_amd64.deb
 @ d12.x86_64 15 postgresql-15-pgfincore postgresql-15-pgfincore_1.3.1-3.pgdg12+1_amd64.deb pgdg 1.3.1 28.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfincore/postgresql-15-pgfincore_1.3.1-3.pgdg12+1_amd64.deb
+@ d12.aarch64 15 postgresql-15-pgfincore postgresql-15-pgfincore_1.4.0-1.pgdg12+1_arm64.deb pgdg 1.4.0 28.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfincore/postgresql-15-pgfincore_1.4.0-1.pgdg12+1_arm64.deb
 @ d12.aarch64 15 postgresql-15-pgfincore postgresql-15-pgfincore_1.3.1-3.pgdg12+1_arm64.deb pgdg 1.3.1 28.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfincore/postgresql-15-pgfincore_1.3.1-3.pgdg12+1_arm64.deb
+@ d13.x86_64 15 postgresql-15-pgfincore postgresql-15-pgfincore_1.4.0-1.pgdg13+1_amd64.deb pgdg 1.4.0 28.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfincore/postgresql-15-pgfincore_1.4.0-1.pgdg13+1_amd64.deb
 @ d13.x86_64 15 postgresql-15-pgfincore postgresql-15-pgfincore_1.3.1-3.pgdg13+1_amd64.deb pgdg 1.3.1 28.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfincore/postgresql-15-pgfincore_1.3.1-3.pgdg13+1_amd64.deb
+@ d13.aarch64 15 postgresql-15-pgfincore postgresql-15-pgfincore_1.4.0-1.pgdg13+1_arm64.deb pgdg 1.4.0 28.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfincore/postgresql-15-pgfincore_1.4.0-1.pgdg13+1_arm64.deb
 @ d13.aarch64 15 postgresql-15-pgfincore postgresql-15-pgfincore_1.3.1-3.pgdg13+1_arm64.deb pgdg 1.3.1 28.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfincore/postgresql-15-pgfincore_1.3.1-3.pgdg13+1_arm64.deb
+@ u22.x86_64 15 postgresql-15-pgfincore postgresql-15-pgfincore_1.4.0-1.pgdg22.04+1_amd64.deb pgdg 1.4.0 31.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfincore/postgresql-15-pgfincore_1.4.0-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 15 postgresql-15-pgfincore postgresql-15-pgfincore_1.3.1-3.pgdg22.04+1_amd64.deb pgdg 1.3.1 31.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfincore/postgresql-15-pgfincore_1.3.1-3.pgdg22.04+1_amd64.deb
+@ u22.aarch64 15 postgresql-15-pgfincore postgresql-15-pgfincore_1.4.0-1.pgdg22.04+1_arm64.deb pgdg 1.4.0 30.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfincore/postgresql-15-pgfincore_1.4.0-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 15 postgresql-15-pgfincore postgresql-15-pgfincore_1.3.1-3.pgdg22.04+1_arm64.deb pgdg 1.3.1 30.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfincore/postgresql-15-pgfincore_1.3.1-3.pgdg22.04+1_arm64.deb
+@ u24.x86_64 15 postgresql-15-pgfincore postgresql-15-pgfincore_1.4.0-1.pgdg24.04+1_amd64.deb pgdg 1.4.0 27.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfincore/postgresql-15-pgfincore_1.4.0-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 15 postgresql-15-pgfincore postgresql-15-pgfincore_1.3.1-3.pgdg24.04+1_amd64.deb pgdg 1.3.1 27.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfincore/postgresql-15-pgfincore_1.3.1-3.pgdg24.04+1_amd64.deb
+@ u24.aarch64 15 postgresql-15-pgfincore postgresql-15-pgfincore_1.4.0-1.pgdg24.04+1_arm64.deb pgdg 1.4.0 26.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfincore/postgresql-15-pgfincore_1.4.0-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 15 postgresql-15-pgfincore postgresql-15-pgfincore_1.3.1-3.pgdg24.04+1_arm64.deb pgdg 1.3.1 26.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfincore/postgresql-15-pgfincore_1.3.1-3.pgdg24.04+1_arm64.deb
+@ u26.x86_64 15 postgresql-15-pgfincore postgresql-15-pgfincore_1.4.0-1.pgdg26.04+1_amd64.deb pgdg 1.4.0 26.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfincore/postgresql-15-pgfincore_1.4.0-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 15 postgresql-15-pgfincore postgresql-15-pgfincore_1.3.1-3.pgdg26.04+1_amd64.deb pgdg 1.3.1 26.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfincore/postgresql-15-pgfincore_1.3.1-3.pgdg26.04+1_amd64.deb
 @ u26.x86_64 15 postgresql-15-pgfincore postgresql-15-pgfincore_1.3.1-1PIGSTY~resolute_amd64.deb pigsty 1.3.1 26.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgfincore/postgresql-15-pgfincore_1.3.1-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 15 postgresql-15-pgfincore postgresql-15-pgfincore_1.4.0-1.pgdg26.04+1_arm64.deb pgdg 1.4.0 26.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfincore/postgresql-15-pgfincore_1.4.0-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 15 postgresql-15-pgfincore postgresql-15-pgfincore_1.3.1-3.pgdg26.04+1_arm64.deb pgdg 1.3.1 26.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfincore/postgresql-15-pgfincore_1.3.1-3.pgdg26.04+1_arm64.deb
 @ u26.aarch64 15 postgresql-15-pgfincore postgresql-15-pgfincore_1.3.1-1PIGSTY~resolute_arm64.deb pigsty 1.3.1 26.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgfincore/postgresql-15-pgfincore_1.3.1-1PIGSTY~resolute_arm64.deb
+@ el8.x86_64 14 pgfincore_14 pgfincore_14-1.4.0-1PIGSTY.el8.x86_64.rpm pigsty 1.4.0 16.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgfincore_14-1.4.0-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 14 pgfincore_14 pgfincore_14-1.3.1-1PGDG.rhel8.x86_64.rpm pgdg 1.3.1 24.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pgfincore_14-1.3.1-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 14 pgfincore_14 pgfincore_14-1.2.4-1.rhel8.x86_64.rpm pgdg 1.2.4 24.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pgfincore_14-1.2.4-1.rhel8.x86_64.rpm
 @ el8.x86_64 14 pgfincore_14 pgfincore_14-1.2.2-3.rhel8.x86_64.rpm pgdg 1.2.2 41.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pgfincore_14-1.2.2-3.rhel8.x86_64.rpm
+@ el8.aarch64 14 pgfincore_14 pgfincore_14-1.4.0-1PIGSTY.el8.aarch64.rpm pigsty 1.4.0 16.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgfincore_14-1.4.0-1PIGSTY.el8.aarch64.rpm
 @ el8.aarch64 14 pgfincore_14 pgfincore_14-1.3.1-1PGDG.rhel8.aarch64.rpm pgdg 1.3.1 24.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pgfincore_14-1.3.1-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 14 pgfincore_14 pgfincore_14-1.2.4-1.rhel8.aarch64.rpm pgdg 1.2.4 23.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pgfincore_14-1.2.4-1.rhel8.aarch64.rpm
+@ el9.x86_64 14 pgfincore_14 pgfincore_14-1.4.0-1PIGSTY.el9.x86_64.rpm pigsty 1.4.0 16.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgfincore_14-1.4.0-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 14 pgfincore_14 pgfincore_14-1.3.1-6PGDG.rhel9.8.x86_64.rpm pgdg 1.3.1 23.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pgfincore_14-1.3.1-6PGDG.rhel9.8.x86_64.rpm
+@ el9.aarch64 14 pgfincore_14 pgfincore_14-1.4.0-1PIGSTY.el9.aarch64.rpm pigsty 1.4.0 16.6KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgfincore_14-1.4.0-1PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 14 pgfincore_14 pgfincore_14-1.3.1-6PGDG.rhel9.8.aarch64.rpm pgdg 1.3.1 23.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pgfincore_14-1.3.1-6PGDG.rhel9.8.aarch64.rpm
+@ el10.x86_64 14 pgfincore_14 pgfincore_14-1.4.0-1PIGSTY.el10.x86_64.rpm pigsty 1.4.0 17.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgfincore_14-1.4.0-1PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 14 pgfincore_14 pgfincore_14-1.3.1-6PGDG.rhel10.2.x86_64.rpm pgdg 1.3.1 23.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pgfincore_14-1.3.1-6PGDG.rhel10.2.x86_64.rpm
+@ el10.aarch64 14 pgfincore_14 pgfincore_14-1.4.0-1PIGSTY.el10.aarch64.rpm pigsty 1.4.0 16.8KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgfincore_14-1.4.0-1PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 14 pgfincore_14 pgfincore_14-1.3.1-6PGDG.rhel10.2.aarch64.rpm pgdg 1.3.1 23.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgfincore_14-1.3.1-6PGDG.rhel10.2.aarch64.rpm
+@ d12.x86_64 14 postgresql-14-pgfincore postgresql-14-pgfincore_1.4.0-1.pgdg12+1_amd64.deb pgdg 1.4.0 28.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfincore/postgresql-14-pgfincore_1.4.0-1.pgdg12+1_amd64.deb
 @ d12.x86_64 14 postgresql-14-pgfincore postgresql-14-pgfincore_1.3.1-3.pgdg12+1_amd64.deb pgdg 1.3.1 28.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfincore/postgresql-14-pgfincore_1.3.1-3.pgdg12+1_amd64.deb
+@ d12.aarch64 14 postgresql-14-pgfincore postgresql-14-pgfincore_1.4.0-1.pgdg12+1_arm64.deb pgdg 1.4.0 28.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfincore/postgresql-14-pgfincore_1.4.0-1.pgdg12+1_arm64.deb
 @ d12.aarch64 14 postgresql-14-pgfincore postgresql-14-pgfincore_1.3.1-3.pgdg12+1_arm64.deb pgdg 1.3.1 27.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfincore/postgresql-14-pgfincore_1.3.1-3.pgdg12+1_arm64.deb
+@ d13.x86_64 14 postgresql-14-pgfincore postgresql-14-pgfincore_1.4.0-1.pgdg13+1_amd64.deb pgdg 1.4.0 28.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfincore/postgresql-14-pgfincore_1.4.0-1.pgdg13+1_amd64.deb
 @ d13.x86_64 14 postgresql-14-pgfincore postgresql-14-pgfincore_1.3.1-3.pgdg13+1_amd64.deb pgdg 1.3.1 28.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfincore/postgresql-14-pgfincore_1.3.1-3.pgdg13+1_amd64.deb
+@ d13.aarch64 14 postgresql-14-pgfincore postgresql-14-pgfincore_1.4.0-1.pgdg13+1_arm64.deb pgdg 1.4.0 28.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfincore/postgresql-14-pgfincore_1.4.0-1.pgdg13+1_arm64.deb
 @ d13.aarch64 14 postgresql-14-pgfincore postgresql-14-pgfincore_1.3.1-3.pgdg13+1_arm64.deb pgdg 1.3.1 28.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfincore/postgresql-14-pgfincore_1.3.1-3.pgdg13+1_arm64.deb
+@ u22.x86_64 14 postgresql-14-pgfincore postgresql-14-pgfincore_1.4.0-1.pgdg22.04+1_amd64.deb pgdg 1.4.0 31.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfincore/postgresql-14-pgfincore_1.4.0-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 14 postgresql-14-pgfincore postgresql-14-pgfincore_1.3.1-3.pgdg22.04+1_amd64.deb pgdg 1.3.1 31.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfincore/postgresql-14-pgfincore_1.3.1-3.pgdg22.04+1_amd64.deb
+@ u22.aarch64 14 postgresql-14-pgfincore postgresql-14-pgfincore_1.4.0-1.pgdg22.04+1_arm64.deb pgdg 1.4.0 30.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfincore/postgresql-14-pgfincore_1.4.0-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 14 postgresql-14-pgfincore postgresql-14-pgfincore_1.3.1-3.pgdg22.04+1_arm64.deb pgdg 1.3.1 30.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfincore/postgresql-14-pgfincore_1.3.1-3.pgdg22.04+1_arm64.deb
+@ u24.x86_64 14 postgresql-14-pgfincore postgresql-14-pgfincore_1.4.0-1.pgdg24.04+1_amd64.deb pgdg 1.4.0 27.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfincore/postgresql-14-pgfincore_1.4.0-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 14 postgresql-14-pgfincore postgresql-14-pgfincore_1.3.1-3.pgdg24.04+1_amd64.deb pgdg 1.3.1 27.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfincore/postgresql-14-pgfincore_1.3.1-3.pgdg24.04+1_amd64.deb
+@ u24.aarch64 14 postgresql-14-pgfincore postgresql-14-pgfincore_1.4.0-1.pgdg24.04+1_arm64.deb pgdg 1.4.0 26.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfincore/postgresql-14-pgfincore_1.4.0-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 14 postgresql-14-pgfincore postgresql-14-pgfincore_1.3.1-3.pgdg24.04+1_arm64.deb pgdg 1.3.1 26.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfincore/postgresql-14-pgfincore_1.3.1-3.pgdg24.04+1_arm64.deb
+@ u26.x86_64 14 postgresql-14-pgfincore postgresql-14-pgfincore_1.4.0-1.pgdg26.04+1_amd64.deb pgdg 1.4.0 26.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfincore/postgresql-14-pgfincore_1.4.0-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 14 postgresql-14-pgfincore postgresql-14-pgfincore_1.3.1-3.pgdg26.04+1_amd64.deb pgdg 1.3.1 26.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfincore/postgresql-14-pgfincore_1.3.1-3.pgdg26.04+1_amd64.deb
 @ u26.x86_64 14 postgresql-14-pgfincore postgresql-14-pgfincore_1.3.1-1PIGSTY~resolute_amd64.deb pigsty 1.3.1 26.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgfincore/postgresql-14-pgfincore_1.3.1-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 14 postgresql-14-pgfincore postgresql-14-pgfincore_1.4.0-1.pgdg26.04+1_arm64.deb pgdg 1.4.0 26.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfincore/postgresql-14-pgfincore_1.4.0-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 14 postgresql-14-pgfincore postgresql-14-pgfincore_1.3.1-3.pgdg26.04+1_arm64.deb pgdg 1.3.1 26.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfincore/postgresql-14-pgfincore_1.3.1-3.pgdg26.04+1_arm64.deb
 @ u26.aarch64 14 postgresql-14-pgfincore postgresql-14-pgfincore_1.3.1-1PIGSTY~resolute_arm64.deb pigsty 1.3.1 26.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgfincore/postgresql-14-pgfincore_1.3.1-1PIGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}

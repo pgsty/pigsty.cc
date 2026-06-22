@@ -11,10 +11,10 @@ weight: 2900
     <div class="ext-card__title">PierreSenellart/provsql</div>
     <div class="ext-card__desc">https://github.com/PierreSenellart/provsql</div>
   </a>
-  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/provsql-1.9.0.tar.gz">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/provsql-1.10.0.tar.gz">
     <div class="ext-card__kicker">源码</div>
-    <div class="ext-card__title">provsql-1.9.0.tar.gz</div>
-    <div class="ext-card__desc">provsql-1.9.0.tar.gz</div>
+    <div class="ext-card__title">provsql-1.10.0.tar.gz</div>
+    <div class="ext-card__desc">provsql-1.10.0.tar.gz</div>
   </a>
 </div>
 
@@ -25,7 +25,7 @@ weight: 2900
 
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
-| [**`provsql`**](/ext/e/provsql) | `1.9.0` | <a class="ext-badge ext-badge--cate feat" href="/ext/cate/feat">FEAT</a> | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang cpp" href="/ext/language#cpp">C++</a> |
+| [**`provsql`**](/ext/e/provsql) | `1.10.0` | <a class="ext-badge ext-badge--cate feat" href="/ext/cate/feat">FEAT</a> | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang cpp" href="/ext/language#cpp">C++</a> |
 {.ext-table}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
@@ -42,110 +42,140 @@ weight: 2900
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.9.0` | {{< pgvers "18,17,16,15,14" >}} | `provsql` | `uuid-ossp` |
-| [**RPM**](/ext/rpm#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.9.0` | {{< pgvers "18,17,16,15,14" >}} | `provsql_$v` | - |
-| [**DEB**](/ext/deb#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.9.0` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-provsql` | - |
+| [**EXT**](/ext/list#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.10.0` | {{< pgvers "18,17,16,15,14" >}} | `provsql` | `uuid-ossp` |
+| [**RPM**](/ext/rpm#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.10.0` | {{< pgvers "18,17,16,15,14" >}} | `provsql_$v` | - |
+| [**DEB**](/ext/deb#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.10.0` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-provsql` | - |
 {.ext-table}
 
 {{< pgext_matrix >}}
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 1.9.0 1 | AVAIL PIGSTY 1.9.0 1 | AVAIL PIGSTY 1.9.0 1 | AVAIL PIGSTY 1.9.0 1 | AVAIL PIGSTY 1.9.0 1 |
-| el8.aarch64 | AVAIL PIGSTY 1.9.0 1 | AVAIL PIGSTY 1.9.0 1 | AVAIL PIGSTY 1.9.0 1 | AVAIL PIGSTY 1.9.0 1 | AVAIL PIGSTY 1.9.0 1 |
-| el9.x86_64 | AVAIL PIGSTY 1.9.0 1 | AVAIL PIGSTY 1.9.0 1 | AVAIL PIGSTY 1.9.0 1 | AVAIL PIGSTY 1.9.0 1 | AVAIL PIGSTY 1.9.0 1 |
-| el9.aarch64 | AVAIL PIGSTY 1.9.0 1 | AVAIL PIGSTY 1.9.0 1 | AVAIL PIGSTY 1.9.0 1 | AVAIL PIGSTY 1.9.0 1 | AVAIL PIGSTY 1.9.0 1 |
-| el10.x86_64 | AVAIL PIGSTY 1.9.0 1 | AVAIL PIGSTY 1.9.0 1 | AVAIL PIGSTY 1.9.0 1 | AVAIL PIGSTY 1.9.0 1 | AVAIL PIGSTY 1.9.0 1 |
-| el10.aarch64 | AVAIL PIGSTY 1.9.0 1 | AVAIL PIGSTY 1.9.0 1 | AVAIL PIGSTY 1.9.0 1 | AVAIL PIGSTY 1.9.0 1 | AVAIL PIGSTY 1.9.0 1 |
-| d12.x86_64 | AVAIL PIGSTY 1.9.0 1 | AVAIL PIGSTY 1.9.0 1 | AVAIL PIGSTY 1.9.0 1 | AVAIL PIGSTY 1.9.0 1 | AVAIL PIGSTY 1.9.0 1 |
-| d12.aarch64 | AVAIL PIGSTY 1.9.0 1 | AVAIL PIGSTY 1.9.0 1 | AVAIL PIGSTY 1.9.0 1 | AVAIL PIGSTY 1.9.0 1 | AVAIL PIGSTY 1.9.0 1 |
-| d13.x86_64 | AVAIL PIGSTY 1.9.0 1 | AVAIL PIGSTY 1.9.0 1 | AVAIL PIGSTY 1.9.0 1 | AVAIL PIGSTY 1.9.0 1 | AVAIL PIGSTY 1.9.0 1 |
-| d13.aarch64 | AVAIL PIGSTY 1.9.0 1 | AVAIL PIGSTY 1.9.0 1 | AVAIL PIGSTY 1.9.0 1 | AVAIL PIGSTY 1.9.0 1 | AVAIL PIGSTY 1.9.0 1 |
-| u22.x86_64 | AVAIL PIGSTY 1.9.0 1 | AVAIL PIGSTY 1.9.0 1 | AVAIL PIGSTY 1.9.0 1 | AVAIL PIGSTY 1.9.0 1 | AVAIL PIGSTY 1.9.0 1 |
-| u22.aarch64 | AVAIL PIGSTY 1.9.0 1 | AVAIL PIGSTY 1.9.0 1 | AVAIL PIGSTY 1.9.0 1 | AVAIL PIGSTY 1.9.0 1 | AVAIL PIGSTY 1.9.0 1 |
-| u24.x86_64 | AVAIL PIGSTY 1.9.0 1 | AVAIL PIGSTY 1.9.0 1 | AVAIL PIGSTY 1.9.0 1 | AVAIL PIGSTY 1.9.0 1 | AVAIL PIGSTY 1.9.0 1 |
-| u24.aarch64 | AVAIL PIGSTY 1.9.0 1 | AVAIL PIGSTY 1.9.0 1 | AVAIL PIGSTY 1.9.0 1 | AVAIL PIGSTY 1.9.0 1 | AVAIL PIGSTY 1.9.0 1 |
-| u26.x86_64 | AVAIL PIGSTY 1.9.0 1 | AVAIL PIGSTY 1.9.0 1 | AVAIL PIGSTY 1.9.0 1 | AVAIL PIGSTY 1.9.0 1 | AVAIL PIGSTY 1.9.0 1 |
-| u26.aarch64 | AVAIL PIGSTY 1.9.0 1 | AVAIL PIGSTY 1.9.0 1 | AVAIL PIGSTY 1.9.0 1 | AVAIL PIGSTY 1.9.0 1 | AVAIL PIGSTY 1.9.0 1 |
+| el8.x86_64 | AVAIL PIGSTY 1.10.0 2 | AVAIL PIGSTY 1.10.0 2 | AVAIL PIGSTY 1.10.0 2 | AVAIL PIGSTY 1.10.0 2 | AVAIL PIGSTY 1.10.0 2 |
+| el8.aarch64 | AVAIL PIGSTY 1.10.0 2 | AVAIL PIGSTY 1.10.0 2 | AVAIL PIGSTY 1.10.0 2 | AVAIL PIGSTY 1.10.0 2 | AVAIL PIGSTY 1.10.0 2 |
+| el9.x86_64 | AVAIL PIGSTY 1.10.0 2 | AVAIL PIGSTY 1.10.0 2 | AVAIL PIGSTY 1.10.0 2 | AVAIL PIGSTY 1.10.0 2 | AVAIL PIGSTY 1.10.0 2 |
+| el9.aarch64 | AVAIL PIGSTY 1.10.0 2 | AVAIL PIGSTY 1.10.0 2 | AVAIL PIGSTY 1.10.0 2 | AVAIL PIGSTY 1.10.0 2 | AVAIL PIGSTY 1.10.0 2 |
+| el10.x86_64 | AVAIL PIGSTY 1.10.0 2 | AVAIL PIGSTY 1.10.0 2 | AVAIL PIGSTY 1.10.0 2 | AVAIL PIGSTY 1.10.0 2 | AVAIL PIGSTY 1.10.0 2 |
+| el10.aarch64 | AVAIL PIGSTY 1.10.0 2 | AVAIL PIGSTY 1.10.0 2 | AVAIL PIGSTY 1.10.0 2 | AVAIL PIGSTY 1.10.0 2 | AVAIL PIGSTY 1.10.0 2 |
+| d12.x86_64 | AVAIL PIGSTY 1.10.0 1 | AVAIL PIGSTY 1.10.0 1 | AVAIL PIGSTY 1.10.0 1 | AVAIL PIGSTY 1.10.0 1 | AVAIL PIGSTY 1.10.0 1 |
+| d12.aarch64 | AVAIL PIGSTY 1.10.0 1 | AVAIL PIGSTY 1.10.0 1 | AVAIL PIGSTY 1.10.0 1 | AVAIL PIGSTY 1.10.0 1 | AVAIL PIGSTY 1.10.0 1 |
+| d13.x86_64 | AVAIL PIGSTY 1.10.0 1 | AVAIL PIGSTY 1.10.0 1 | AVAIL PIGSTY 1.10.0 1 | AVAIL PIGSTY 1.10.0 1 | AVAIL PIGSTY 1.10.0 1 |
+| d13.aarch64 | AVAIL PIGSTY 1.10.0 1 | AVAIL PIGSTY 1.10.0 1 | AVAIL PIGSTY 1.10.0 1 | AVAIL PIGSTY 1.10.0 1 | AVAIL PIGSTY 1.10.0 1 |
+| u22.x86_64 | AVAIL PIGSTY 1.10.0 1 | AVAIL PIGSTY 1.10.0 1 | AVAIL PIGSTY 1.10.0 1 | AVAIL PIGSTY 1.10.0 1 | AVAIL PIGSTY 1.10.0 1 |
+| u22.aarch64 | AVAIL PIGSTY 1.10.0 1 | AVAIL PIGSTY 1.10.0 1 | AVAIL PIGSTY 1.10.0 1 | AVAIL PIGSTY 1.10.0 1 | AVAIL PIGSTY 1.10.0 1 |
+| u24.x86_64 | AVAIL PIGSTY 1.10.0 1 | AVAIL PIGSTY 1.10.0 1 | AVAIL PIGSTY 1.10.0 1 | AVAIL PIGSTY 1.10.0 1 | AVAIL PIGSTY 1.10.0 1 |
+| u24.aarch64 | AVAIL PIGSTY 1.10.0 1 | AVAIL PIGSTY 1.10.0 1 | AVAIL PIGSTY 1.10.0 1 | AVAIL PIGSTY 1.10.0 1 | AVAIL PIGSTY 1.10.0 1 |
+| u26.x86_64 | AVAIL PIGSTY 1.10.0 1 | AVAIL PIGSTY 1.10.0 1 | AVAIL PIGSTY 1.10.0 1 | AVAIL PIGSTY 1.10.0 1 | AVAIL PIGSTY 1.10.0 1 |
+| u26.aarch64 | AVAIL PIGSTY 1.10.0 1 | AVAIL PIGSTY 1.10.0 1 | AVAIL PIGSTY 1.10.0 1 | AVAIL PIGSTY 1.10.0 1 | AVAIL PIGSTY 1.10.0 1 |
+@ el8.x86_64 18 provsql_18 provsql_18-1.10.0-1PIGSTY.el8.x86_64.rpm pigsty 1.10.0 1.1MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/provsql_18-1.10.0-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 18 provsql_18 provsql_18-1.9.0-1PIGSTY.el8.x86_64.rpm pigsty 1.9.0 809.2KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/provsql_18-1.9.0-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 18 provsql_18 provsql_18-1.10.0-1PIGSTY.el8.aarch64.rpm pigsty 1.10.0 1012.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/provsql_18-1.10.0-1PIGSTY.el8.aarch64.rpm
 @ el8.aarch64 18 provsql_18 provsql_18-1.9.0-1PIGSTY.el8.aarch64.rpm pigsty 1.9.0 728.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/provsql_18-1.9.0-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 18 provsql_18 provsql_18-1.10.0-1PIGSTY.el9.x86_64.rpm pigsty 1.10.0 1.1MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/provsql_18-1.10.0-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 18 provsql_18 provsql_18-1.9.0-1PIGSTY.el9.x86_64.rpm pigsty 1.9.0 807.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/provsql_18-1.9.0-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 18 provsql_18 provsql_18-1.10.0-1PIGSTY.el9.aarch64.rpm pigsty 1.10.0 1.0MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/provsql_18-1.10.0-1PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 18 provsql_18 provsql_18-1.9.0-1PIGSTY.el9.aarch64.rpm pigsty 1.9.0 769.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/provsql_18-1.9.0-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 18 provsql_18 provsql_18-1.10.0-1PIGSTY.el10.x86_64.rpm pigsty 1.10.0 1.2MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/provsql_18-1.10.0-1PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 18 provsql_18 provsql_18-1.9.0-1PIGSTY.el10.x86_64.rpm pigsty 1.9.0 848.1KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/provsql_18-1.9.0-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 18 provsql_18 provsql_18-1.10.0-1PIGSTY.el10.aarch64.rpm pigsty 1.10.0 1.1MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/provsql_18-1.10.0-1PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 18 provsql_18 provsql_18-1.9.0-1PIGSTY.el10.aarch64.rpm pigsty 1.9.0 776.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/provsql_18-1.9.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 18 postgresql-18-provsql postgresql-18-provsql_1.9.0-1PIGSTY~bookworm_amd64.deb pigsty 1.9.0 737.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/provsql/postgresql-18-provsql_1.9.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 18 postgresql-18-provsql postgresql-18-provsql_1.9.0-1PIGSTY~bookworm_arm64.deb pigsty 1.9.0 651.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/provsql/postgresql-18-provsql_1.9.0-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 18 postgresql-18-provsql postgresql-18-provsql_1.9.0-1PIGSTY~trixie_amd64.deb pigsty 1.9.0 801.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/provsql/postgresql-18-provsql_1.9.0-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 18 postgresql-18-provsql postgresql-18-provsql_1.9.0-1PIGSTY~trixie_arm64.deb pigsty 1.9.0 702.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/provsql/postgresql-18-provsql_1.9.0-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 18 postgresql-18-provsql postgresql-18-provsql_1.9.0-1PIGSTY~jammy_amd64.deb pigsty 1.9.0 748.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/provsql/postgresql-18-provsql_1.9.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 18 postgresql-18-provsql postgresql-18-provsql_1.9.0-1PIGSTY~jammy_arm64.deb pigsty 1.9.0 707.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/provsql/postgresql-18-provsql_1.9.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 18 postgresql-18-provsql postgresql-18-provsql_1.9.0-1PIGSTY~noble_amd64.deb pigsty 1.9.0 776.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/provsql/postgresql-18-provsql_1.9.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 18 postgresql-18-provsql postgresql-18-provsql_1.9.0-1PIGSTY~noble_arm64.deb pigsty 1.9.0 734.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/provsql/postgresql-18-provsql_1.9.0-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 18 postgresql-18-provsql postgresql-18-provsql_1.9.0-1PIGSTY~resolute_amd64.deb pigsty 1.9.0 818.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/provsql/postgresql-18-provsql_1.9.0-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 18 postgresql-18-provsql postgresql-18-provsql_1.9.0-1PIGSTY~resolute_arm64.deb pigsty 1.9.0 759.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/provsql/postgresql-18-provsql_1.9.0-1PIGSTY~resolute_arm64.deb
+@ d12.x86_64 18 postgresql-18-provsql postgresql-18-provsql_1.10.0-1PIGSTY~bookworm_amd64.deb pigsty 1.10.0 1.0MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/provsql/postgresql-18-provsql_1.10.0-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 18 postgresql-18-provsql postgresql-18-provsql_1.10.0-1PIGSTY~bookworm_arm64.deb pigsty 1.10.0 907.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/provsql/postgresql-18-provsql_1.10.0-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 18 postgresql-18-provsql postgresql-18-provsql_1.10.0-1PIGSTY~trixie_amd64.deb pigsty 1.10.0 1.1MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/provsql/postgresql-18-provsql_1.10.0-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 18 postgresql-18-provsql postgresql-18-provsql_1.10.0-1PIGSTY~trixie_arm64.deb pigsty 1.10.0 985.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/provsql/postgresql-18-provsql_1.10.0-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 18 postgresql-18-provsql postgresql-18-provsql_1.10.0-1PIGSTY~jammy_amd64.deb pigsty 1.10.0 1.0MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/provsql/postgresql-18-provsql_1.10.0-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 18 postgresql-18-provsql postgresql-18-provsql_1.10.0-1PIGSTY~jammy_arm64.deb pigsty 1.10.0 997.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/provsql/postgresql-18-provsql_1.10.0-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 18 postgresql-18-provsql postgresql-18-provsql_1.10.0-1PIGSTY~noble_amd64.deb pigsty 1.10.0 1.1MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/provsql/postgresql-18-provsql_1.10.0-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 18 postgresql-18-provsql postgresql-18-provsql_1.10.0-1PIGSTY~noble_arm64.deb pigsty 1.10.0 1.0MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/provsql/postgresql-18-provsql_1.10.0-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 18 postgresql-18-provsql postgresql-18-provsql_1.10.0-1PIGSTY~resolute_amd64.deb pigsty 1.10.0 1.1MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/provsql/postgresql-18-provsql_1.10.0-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 18 postgresql-18-provsql postgresql-18-provsql_1.10.0-1PIGSTY~resolute_arm64.deb pigsty 1.10.0 1.0MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/provsql/postgresql-18-provsql_1.10.0-1PIGSTY~resolute_arm64.deb
+@ el8.x86_64 17 provsql_17 provsql_17-1.10.0-1PIGSTY.el8.x86_64.rpm pigsty 1.10.0 1.1MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/provsql_17-1.10.0-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 17 provsql_17 provsql_17-1.9.0-1PIGSTY.el8.x86_64.rpm pigsty 1.9.0 808.6KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/provsql_17-1.9.0-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 17 provsql_17 provsql_17-1.10.0-1PIGSTY.el8.aarch64.rpm pigsty 1.10.0 1011.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/provsql_17-1.10.0-1PIGSTY.el8.aarch64.rpm
 @ el8.aarch64 17 provsql_17 provsql_17-1.9.0-1PIGSTY.el8.aarch64.rpm pigsty 1.9.0 728.3KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/provsql_17-1.9.0-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 17 provsql_17 provsql_17-1.10.0-1PIGSTY.el9.x86_64.rpm pigsty 1.10.0 1.1MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/provsql_17-1.10.0-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 17 provsql_17 provsql_17-1.9.0-1PIGSTY.el9.x86_64.rpm pigsty 1.9.0 806.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/provsql_17-1.9.0-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 17 provsql_17 provsql_17-1.10.0-1PIGSTY.el9.aarch64.rpm pigsty 1.10.0 1.0MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/provsql_17-1.10.0-1PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 17 provsql_17 provsql_17-1.9.0-1PIGSTY.el9.aarch64.rpm pigsty 1.9.0 767.8KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/provsql_17-1.9.0-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 17 provsql_17 provsql_17-1.10.0-1PIGSTY.el10.x86_64.rpm pigsty 1.10.0 1.2MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/provsql_17-1.10.0-1PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 17 provsql_17 provsql_17-1.9.0-1PIGSTY.el10.x86_64.rpm pigsty 1.9.0 847.4KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/provsql_17-1.9.0-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 17 provsql_17 provsql_17-1.10.0-1PIGSTY.el10.aarch64.rpm pigsty 1.10.0 1.1MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/provsql_17-1.10.0-1PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 17 provsql_17 provsql_17-1.9.0-1PIGSTY.el10.aarch64.rpm pigsty 1.9.0 776.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/provsql_17-1.9.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 17 postgresql-17-provsql postgresql-17-provsql_1.9.0-1PIGSTY~bookworm_amd64.deb pigsty 1.9.0 736.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/provsql/postgresql-17-provsql_1.9.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 17 postgresql-17-provsql postgresql-17-provsql_1.9.0-1PIGSTY~bookworm_arm64.deb pigsty 1.9.0 650.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/provsql/postgresql-17-provsql_1.9.0-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 17 postgresql-17-provsql postgresql-17-provsql_1.9.0-1PIGSTY~trixie_amd64.deb pigsty 1.9.0 801.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/provsql/postgresql-17-provsql_1.9.0-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 17 postgresql-17-provsql postgresql-17-provsql_1.9.0-1PIGSTY~trixie_arm64.deb pigsty 1.9.0 702.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/provsql/postgresql-17-provsql_1.9.0-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 17 postgresql-17-provsql postgresql-17-provsql_1.9.0-1PIGSTY~jammy_amd64.deb pigsty 1.9.0 745.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/provsql/postgresql-17-provsql_1.9.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 17 postgresql-17-provsql postgresql-17-provsql_1.9.0-1PIGSTY~jammy_arm64.deb pigsty 1.9.0 706.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/provsql/postgresql-17-provsql_1.9.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 17 postgresql-17-provsql postgresql-17-provsql_1.9.0-1PIGSTY~noble_amd64.deb pigsty 1.9.0 775.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/provsql/postgresql-17-provsql_1.9.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 17 postgresql-17-provsql postgresql-17-provsql_1.9.0-1PIGSTY~noble_arm64.deb pigsty 1.9.0 734.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/provsql/postgresql-17-provsql_1.9.0-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 17 postgresql-17-provsql postgresql-17-provsql_1.9.0-1PIGSTY~resolute_amd64.deb pigsty 1.9.0 817.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/provsql/postgresql-17-provsql_1.9.0-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 17 postgresql-17-provsql postgresql-17-provsql_1.9.0-1PIGSTY~resolute_arm64.deb pigsty 1.9.0 758.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/provsql/postgresql-17-provsql_1.9.0-1PIGSTY~resolute_arm64.deb
+@ d12.x86_64 17 postgresql-17-provsql postgresql-17-provsql_1.10.0-1PIGSTY~bookworm_amd64.deb pigsty 1.10.0 1.0MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/provsql/postgresql-17-provsql_1.10.0-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 17 postgresql-17-provsql postgresql-17-provsql_1.10.0-1PIGSTY~bookworm_arm64.deb pigsty 1.10.0 906.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/provsql/postgresql-17-provsql_1.10.0-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 17 postgresql-17-provsql postgresql-17-provsql_1.10.0-1PIGSTY~trixie_amd64.deb pigsty 1.10.0 1.1MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/provsql/postgresql-17-provsql_1.10.0-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 17 postgresql-17-provsql postgresql-17-provsql_1.10.0-1PIGSTY~trixie_arm64.deb pigsty 1.10.0 985.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/provsql/postgresql-17-provsql_1.10.0-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 17 postgresql-17-provsql postgresql-17-provsql_1.10.0-1PIGSTY~jammy_amd64.deb pigsty 1.10.0 1.0MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/provsql/postgresql-17-provsql_1.10.0-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 17 postgresql-17-provsql postgresql-17-provsql_1.10.0-1PIGSTY~jammy_arm64.deb pigsty 1.10.0 998.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/provsql/postgresql-17-provsql_1.10.0-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 17 postgresql-17-provsql postgresql-17-provsql_1.10.0-1PIGSTY~noble_amd64.deb pigsty 1.10.0 1.1MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/provsql/postgresql-17-provsql_1.10.0-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 17 postgresql-17-provsql postgresql-17-provsql_1.10.0-1PIGSTY~noble_arm64.deb pigsty 1.10.0 1.0MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/provsql/postgresql-17-provsql_1.10.0-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 17 postgresql-17-provsql postgresql-17-provsql_1.10.0-1PIGSTY~resolute_amd64.deb pigsty 1.10.0 1.1MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/provsql/postgresql-17-provsql_1.10.0-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 17 postgresql-17-provsql postgresql-17-provsql_1.10.0-1PIGSTY~resolute_arm64.deb pigsty 1.10.0 1.0MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/provsql/postgresql-17-provsql_1.10.0-1PIGSTY~resolute_arm64.deb
+@ el8.x86_64 16 provsql_16 provsql_16-1.10.0-1PIGSTY.el8.x86_64.rpm pigsty 1.10.0 1.1MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/provsql_16-1.10.0-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 16 provsql_16 provsql_16-1.9.0-1PIGSTY.el8.x86_64.rpm pigsty 1.9.0 809.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/provsql_16-1.9.0-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 16 provsql_16 provsql_16-1.10.0-1PIGSTY.el8.aarch64.rpm pigsty 1.10.0 1012.4KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/provsql_16-1.10.0-1PIGSTY.el8.aarch64.rpm
 @ el8.aarch64 16 provsql_16 provsql_16-1.9.0-1PIGSTY.el8.aarch64.rpm pigsty 1.9.0 728.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/provsql_16-1.9.0-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 16 provsql_16 provsql_16-1.10.0-1PIGSTY.el9.x86_64.rpm pigsty 1.10.0 1.1MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/provsql_16-1.10.0-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 16 provsql_16 provsql_16-1.9.0-1PIGSTY.el9.x86_64.rpm pigsty 1.9.0 807.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/provsql_16-1.9.0-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 16 provsql_16 provsql_16-1.10.0-1PIGSTY.el9.aarch64.rpm pigsty 1.10.0 1.0MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/provsql_16-1.10.0-1PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 16 provsql_16 provsql_16-1.9.0-1PIGSTY.el9.aarch64.rpm pigsty 1.9.0 769.2KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/provsql_16-1.9.0-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 16 provsql_16 provsql_16-1.10.0-1PIGSTY.el10.x86_64.rpm pigsty 1.10.0 1.2MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/provsql_16-1.10.0-1PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 16 provsql_16 provsql_16-1.9.0-1PIGSTY.el10.x86_64.rpm pigsty 1.9.0 849.4KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/provsql_16-1.9.0-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 16 provsql_16 provsql_16-1.10.0-1PIGSTY.el10.aarch64.rpm pigsty 1.10.0 1.1MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/provsql_16-1.10.0-1PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 16 provsql_16 provsql_16-1.9.0-1PIGSTY.el10.aarch64.rpm pigsty 1.9.0 777.1KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/provsql_16-1.9.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 16 postgresql-16-provsql postgresql-16-provsql_1.9.0-1PIGSTY~bookworm_amd64.deb pigsty 1.9.0 737.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/provsql/postgresql-16-provsql_1.9.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 16 postgresql-16-provsql postgresql-16-provsql_1.9.0-1PIGSTY~bookworm_arm64.deb pigsty 1.9.0 651.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/provsql/postgresql-16-provsql_1.9.0-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 16 postgresql-16-provsql postgresql-16-provsql_1.9.0-1PIGSTY~trixie_amd64.deb pigsty 1.9.0 802.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/provsql/postgresql-16-provsql_1.9.0-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 16 postgresql-16-provsql postgresql-16-provsql_1.9.0-1PIGSTY~trixie_arm64.deb pigsty 1.9.0 702.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/provsql/postgresql-16-provsql_1.9.0-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 16 postgresql-16-provsql postgresql-16-provsql_1.9.0-1PIGSTY~jammy_amd64.deb pigsty 1.9.0 746.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/provsql/postgresql-16-provsql_1.9.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 16 postgresql-16-provsql postgresql-16-provsql_1.9.0-1PIGSTY~jammy_arm64.deb pigsty 1.9.0 707.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/provsql/postgresql-16-provsql_1.9.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 16 postgresql-16-provsql postgresql-16-provsql_1.9.0-1PIGSTY~noble_amd64.deb pigsty 1.9.0 777.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/provsql/postgresql-16-provsql_1.9.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 16 postgresql-16-provsql postgresql-16-provsql_1.9.0-1PIGSTY~noble_arm64.deb pigsty 1.9.0 735.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/provsql/postgresql-16-provsql_1.9.0-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 16 postgresql-16-provsql postgresql-16-provsql_1.9.0-1PIGSTY~resolute_amd64.deb pigsty 1.9.0 818.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/provsql/postgresql-16-provsql_1.9.0-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 16 postgresql-16-provsql postgresql-16-provsql_1.9.0-1PIGSTY~resolute_arm64.deb pigsty 1.9.0 759.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/provsql/postgresql-16-provsql_1.9.0-1PIGSTY~resolute_arm64.deb
+@ d12.x86_64 16 postgresql-16-provsql postgresql-16-provsql_1.10.0-1PIGSTY~bookworm_amd64.deb pigsty 1.10.0 1.0MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/provsql/postgresql-16-provsql_1.10.0-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 16 postgresql-16-provsql postgresql-16-provsql_1.10.0-1PIGSTY~bookworm_arm64.deb pigsty 1.10.0 908.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/provsql/postgresql-16-provsql_1.10.0-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 16 postgresql-16-provsql postgresql-16-provsql_1.10.0-1PIGSTY~trixie_amd64.deb pigsty 1.10.0 1.1MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/provsql/postgresql-16-provsql_1.10.0-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 16 postgresql-16-provsql postgresql-16-provsql_1.10.0-1PIGSTY~trixie_arm64.deb pigsty 1.10.0 985.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/provsql/postgresql-16-provsql_1.10.0-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 16 postgresql-16-provsql postgresql-16-provsql_1.10.0-1PIGSTY~jammy_amd64.deb pigsty 1.10.0 1.0MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/provsql/postgresql-16-provsql_1.10.0-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 16 postgresql-16-provsql postgresql-16-provsql_1.10.0-1PIGSTY~jammy_arm64.deb pigsty 1.10.0 992.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/provsql/postgresql-16-provsql_1.10.0-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 16 postgresql-16-provsql postgresql-16-provsql_1.10.0-1PIGSTY~noble_amd64.deb pigsty 1.10.0 1.1MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/provsql/postgresql-16-provsql_1.10.0-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 16 postgresql-16-provsql postgresql-16-provsql_1.10.0-1PIGSTY~noble_arm64.deb pigsty 1.10.0 1.0MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/provsql/postgresql-16-provsql_1.10.0-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 16 postgresql-16-provsql postgresql-16-provsql_1.10.0-1PIGSTY~resolute_amd64.deb pigsty 1.10.0 1.1MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/provsql/postgresql-16-provsql_1.10.0-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 16 postgresql-16-provsql postgresql-16-provsql_1.10.0-1PIGSTY~resolute_arm64.deb pigsty 1.10.0 1.0MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/provsql/postgresql-16-provsql_1.10.0-1PIGSTY~resolute_arm64.deb
+@ el8.x86_64 15 provsql_15 provsql_15-1.10.0-1PIGSTY.el8.x86_64.rpm pigsty 1.10.0 1.2MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/provsql_15-1.10.0-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 15 provsql_15 provsql_15-1.9.0-1PIGSTY.el8.x86_64.rpm pigsty 1.9.0 856.0KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/provsql_15-1.9.0-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 15 provsql_15 provsql_15-1.10.0-1PIGSTY.el8.aarch64.rpm pigsty 1.10.0 1.0MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/provsql_15-1.10.0-1PIGSTY.el8.aarch64.rpm
 @ el8.aarch64 15 provsql_15 provsql_15-1.9.0-1PIGSTY.el8.aarch64.rpm pigsty 1.9.0 775.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/provsql_15-1.9.0-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 15 provsql_15 provsql_15-1.10.0-1PIGSTY.el9.x86_64.rpm pigsty 1.10.0 1.1MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/provsql_15-1.10.0-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 15 provsql_15 provsql_15-1.9.0-1PIGSTY.el9.x86_64.rpm pigsty 1.9.0 844.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/provsql_15-1.9.0-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 15 provsql_15 provsql_15-1.10.0-1PIGSTY.el9.aarch64.rpm pigsty 1.10.0 1.1MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/provsql_15-1.10.0-1PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 15 provsql_15 provsql_15-1.9.0-1PIGSTY.el9.aarch64.rpm pigsty 1.9.0 805.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/provsql_15-1.9.0-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 15 provsql_15 provsql_15-1.10.0-1PIGSTY.el10.x86_64.rpm pigsty 1.10.0 1.2MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/provsql_15-1.10.0-1PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 15 provsql_15 provsql_15-1.9.0-1PIGSTY.el10.x86_64.rpm pigsty 1.9.0 873.3KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/provsql_15-1.9.0-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 15 provsql_15 provsql_15-1.10.0-1PIGSTY.el10.aarch64.rpm pigsty 1.10.0 1.1MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/provsql_15-1.10.0-1PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 15 provsql_15 provsql_15-1.9.0-1PIGSTY.el10.aarch64.rpm pigsty 1.9.0 801.7KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/provsql_15-1.9.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 15 postgresql-15-provsql postgresql-15-provsql_1.9.0-1PIGSTY~bookworm_amd64.deb pigsty 1.9.0 782.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/provsql/postgresql-15-provsql_1.9.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 15 postgresql-15-provsql postgresql-15-provsql_1.9.0-1PIGSTY~bookworm_arm64.deb pigsty 1.9.0 697.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/provsql/postgresql-15-provsql_1.9.0-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 15 postgresql-15-provsql postgresql-15-provsql_1.9.0-1PIGSTY~trixie_amd64.deb pigsty 1.9.0 845.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/provsql/postgresql-15-provsql_1.9.0-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 15 postgresql-15-provsql postgresql-15-provsql_1.9.0-1PIGSTY~trixie_arm64.deb pigsty 1.9.0 747.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/provsql/postgresql-15-provsql_1.9.0-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 15 postgresql-15-provsql postgresql-15-provsql_1.9.0-1PIGSTY~jammy_amd64.deb pigsty 1.9.0 795.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/provsql/postgresql-15-provsql_1.9.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 15 postgresql-15-provsql postgresql-15-provsql_1.9.0-1PIGSTY~jammy_arm64.deb pigsty 1.9.0 758.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/provsql/postgresql-15-provsql_1.9.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 15 postgresql-15-provsql postgresql-15-provsql_1.9.0-1PIGSTY~noble_amd64.deb pigsty 1.9.0 824.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/provsql/postgresql-15-provsql_1.9.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 15 postgresql-15-provsql postgresql-15-provsql_1.9.0-1PIGSTY~noble_arm64.deb pigsty 1.9.0 784.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/provsql/postgresql-15-provsql_1.9.0-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 15 postgresql-15-provsql postgresql-15-provsql_1.9.0-1PIGSTY~resolute_amd64.deb pigsty 1.9.0 862.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/provsql/postgresql-15-provsql_1.9.0-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 15 postgresql-15-provsql postgresql-15-provsql_1.9.0-1PIGSTY~resolute_arm64.deb pigsty 1.9.0 805.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/provsql/postgresql-15-provsql_1.9.0-1PIGSTY~resolute_arm64.deb
+@ d12.x86_64 15 postgresql-15-provsql postgresql-15-provsql_1.10.0-1PIGSTY~bookworm_amd64.deb pigsty 1.10.0 1.1MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/provsql/postgresql-15-provsql_1.10.0-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 15 postgresql-15-provsql postgresql-15-provsql_1.10.0-1PIGSTY~bookworm_arm64.deb pigsty 1.10.0 958.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/provsql/postgresql-15-provsql_1.10.0-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 15 postgresql-15-provsql postgresql-15-provsql_1.10.0-1PIGSTY~trixie_amd64.deb pigsty 1.10.0 1.2MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/provsql/postgresql-15-provsql_1.10.0-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 15 postgresql-15-provsql postgresql-15-provsql_1.10.0-1PIGSTY~trixie_arm64.deb pigsty 1.10.0 1.0MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/provsql/postgresql-15-provsql_1.10.0-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 15 postgresql-15-provsql postgresql-15-provsql_1.10.0-1PIGSTY~jammy_amd64.deb pigsty 1.10.0 1.1MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/provsql/postgresql-15-provsql_1.10.0-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 15 postgresql-15-provsql postgresql-15-provsql_1.10.0-1PIGSTY~jammy_arm64.deb pigsty 1.10.0 1.0MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/provsql/postgresql-15-provsql_1.10.0-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 15 postgresql-15-provsql postgresql-15-provsql_1.10.0-1PIGSTY~noble_amd64.deb pigsty 1.10.0 1.1MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/provsql/postgresql-15-provsql_1.10.0-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 15 postgresql-15-provsql postgresql-15-provsql_1.10.0-1PIGSTY~noble_arm64.deb pigsty 1.10.0 1.1MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/provsql/postgresql-15-provsql_1.10.0-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 15 postgresql-15-provsql postgresql-15-provsql_1.10.0-1PIGSTY~resolute_amd64.deb pigsty 1.10.0 1.2MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/provsql/postgresql-15-provsql_1.10.0-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 15 postgresql-15-provsql postgresql-15-provsql_1.10.0-1PIGSTY~resolute_arm64.deb pigsty 1.10.0 1.1MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/provsql/postgresql-15-provsql_1.10.0-1PIGSTY~resolute_arm64.deb
+@ el8.x86_64 14 provsql_14 provsql_14-1.10.0-1PIGSTY.el8.x86_64.rpm pigsty 1.10.0 1.2MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/provsql_14-1.10.0-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 14 provsql_14 provsql_14-1.9.0-1PIGSTY.el8.x86_64.rpm pigsty 1.9.0 855.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/provsql_14-1.9.0-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 14 provsql_14 provsql_14-1.10.0-1PIGSTY.el8.aarch64.rpm pigsty 1.10.0 1.0MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/provsql_14-1.10.0-1PIGSTY.el8.aarch64.rpm
 @ el8.aarch64 14 provsql_14 provsql_14-1.9.0-1PIGSTY.el8.aarch64.rpm pigsty 1.9.0 774.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/provsql_14-1.9.0-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 14 provsql_14 provsql_14-1.10.0-1PIGSTY.el9.x86_64.rpm pigsty 1.10.0 1.1MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/provsql_14-1.10.0-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 14 provsql_14 provsql_14-1.9.0-1PIGSTY.el9.x86_64.rpm pigsty 1.9.0 843.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/provsql_14-1.9.0-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 14 provsql_14 provsql_14-1.10.0-1PIGSTY.el9.aarch64.rpm pigsty 1.10.0 1.1MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/provsql_14-1.10.0-1PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 14 provsql_14 provsql_14-1.9.0-1PIGSTY.el9.aarch64.rpm pigsty 1.9.0 804.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/provsql_14-1.9.0-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 14 provsql_14 provsql_14-1.10.0-1PIGSTY.el10.x86_64.rpm pigsty 1.10.0 1.2MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/provsql_14-1.10.0-1PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 14 provsql_14 provsql_14-1.9.0-1PIGSTY.el10.x86_64.rpm pigsty 1.9.0 872.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/provsql_14-1.9.0-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 14 provsql_14 provsql_14-1.10.0-1PIGSTY.el10.aarch64.rpm pigsty 1.10.0 1.1MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/provsql_14-1.10.0-1PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 14 provsql_14 provsql_14-1.9.0-1PIGSTY.el10.aarch64.rpm pigsty 1.9.0 800.8KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/provsql_14-1.9.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 14 postgresql-14-provsql postgresql-14-provsql_1.9.0-1PIGSTY~bookworm_amd64.deb pigsty 1.9.0 780.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/provsql/postgresql-14-provsql_1.9.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 14 postgresql-14-provsql postgresql-14-provsql_1.9.0-1PIGSTY~bookworm_arm64.deb pigsty 1.9.0 697.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/provsql/postgresql-14-provsql_1.9.0-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 14 postgresql-14-provsql postgresql-14-provsql_1.9.0-1PIGSTY~trixie_amd64.deb pigsty 1.9.0 844.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/provsql/postgresql-14-provsql_1.9.0-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 14 postgresql-14-provsql postgresql-14-provsql_1.9.0-1PIGSTY~trixie_arm64.deb pigsty 1.9.0 746.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/provsql/postgresql-14-provsql_1.9.0-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 14 postgresql-14-provsql postgresql-14-provsql_1.9.0-1PIGSTY~jammy_amd64.deb pigsty 1.9.0 795.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/provsql/postgresql-14-provsql_1.9.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 14 postgresql-14-provsql postgresql-14-provsql_1.9.0-1PIGSTY~jammy_arm64.deb pigsty 1.9.0 757.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/provsql/postgresql-14-provsql_1.9.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 14 postgresql-14-provsql postgresql-14-provsql_1.9.0-1PIGSTY~noble_amd64.deb pigsty 1.9.0 823.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/provsql/postgresql-14-provsql_1.9.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 14 postgresql-14-provsql postgresql-14-provsql_1.9.0-1PIGSTY~noble_arm64.deb pigsty 1.9.0 782.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/provsql/postgresql-14-provsql_1.9.0-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 14 postgresql-14-provsql postgresql-14-provsql_1.9.0-1PIGSTY~resolute_amd64.deb pigsty 1.9.0 862.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/provsql/postgresql-14-provsql_1.9.0-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 14 postgresql-14-provsql postgresql-14-provsql_1.9.0-1PIGSTY~resolute_arm64.deb pigsty 1.9.0 805.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/provsql/postgresql-14-provsql_1.9.0-1PIGSTY~resolute_arm64.deb
+@ d12.x86_64 14 postgresql-14-provsql postgresql-14-provsql_1.10.0-1PIGSTY~bookworm_amd64.deb pigsty 1.10.0 1.1MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/provsql/postgresql-14-provsql_1.10.0-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 14 postgresql-14-provsql postgresql-14-provsql_1.10.0-1PIGSTY~bookworm_arm64.deb pigsty 1.10.0 952.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/provsql/postgresql-14-provsql_1.10.0-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 14 postgresql-14-provsql postgresql-14-provsql_1.10.0-1PIGSTY~trixie_amd64.deb pigsty 1.10.0 1.2MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/provsql/postgresql-14-provsql_1.10.0-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 14 postgresql-14-provsql postgresql-14-provsql_1.10.0-1PIGSTY~trixie_arm64.deb pigsty 1.10.0 1.0MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/provsql/postgresql-14-provsql_1.10.0-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 14 postgresql-14-provsql postgresql-14-provsql_1.10.0-1PIGSTY~jammy_amd64.deb pigsty 1.10.0 1.1MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/provsql/postgresql-14-provsql_1.10.0-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 14 postgresql-14-provsql postgresql-14-provsql_1.10.0-1PIGSTY~jammy_arm64.deb pigsty 1.10.0 1.0MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/provsql/postgresql-14-provsql_1.10.0-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 14 postgresql-14-provsql postgresql-14-provsql_1.10.0-1PIGSTY~noble_amd64.deb pigsty 1.10.0 1.1MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/provsql/postgresql-14-provsql_1.10.0-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 14 postgresql-14-provsql postgresql-14-provsql_1.10.0-1PIGSTY~noble_arm64.deb pigsty 1.10.0 1.1MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/provsql/postgresql-14-provsql_1.10.0-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 14 postgresql-14-provsql postgresql-14-provsql_1.10.0-1PIGSTY~resolute_amd64.deb pigsty 1.10.0 1.2MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/provsql/postgresql-14-provsql_1.10.0-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 14 postgresql-14-provsql postgresql-14-provsql_1.10.0-1PIGSTY~resolute_arm64.deb pigsty 1.10.0 1.1MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/provsql/postgresql-14-provsql_1.10.0-1PIGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建

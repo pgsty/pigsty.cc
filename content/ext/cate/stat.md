@@ -8,7 +8,7 @@ icon: fas fa-file-waveform
 
 ## 扩展列表
 
-共有 **38** 个扩展，位于 **37** 个扩展包中。
+共有 **40** 个扩展，位于 **39** 个扩展包中。
 
 | **扩展** | **包** | **版本** | **许可证** | **语言** | **描述** |
 |:---------|:-------|:--------:|:----------:|:--------:|:---------|
@@ -16,6 +16,8 @@ icon: fas fa-file-waveform
 | [`pg_tracing`](/ext/e/pg_tracing) | [`pg_tracing`](https://github.com/DataDog/pg_tracing) | `0.1.3` | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | PostgreSQL分布式Tracing |
 | [`pg_stat_ch`](/ext/e/pg_stat_ch) | [`pg_stat_ch`](https://github.com/ClickHouse/pg_stat_ch) | `0.3.6` | <a class="ext-badge ext-badge--license apache20 and mit and bsd2clause and bsd3clause" href="/ext/license#apache20andmitandbsd2clauseandbsd3clause">Apache-2.0 AND MIT AND BSD-2-Clause AND BSD-3-Clause</a> | <a class="ext-badge ext-badge--lang cpp" href="/ext/language#cpp">C++</a> | 将 PostgreSQL 查询遥测实时导出到 ClickHouse |
 | [`pg_stat_backtrace`](/ext/e/pg_stat_backtrace) | [`pg_stat_backtrace`](https://github.com/Nickyoung0/pg_stat_backtrace) | `1.0.0` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 捕获或记录 PostgreSQL 进程的 C 层调用栈 |
+| [`pg_stat_log`](/ext/e/pg_stat_log) | [`pg_stat_log`](https://github.com/fabriziomello/pg_stat_log) | `0.1` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 按后端类型、数据库、用户、日志级别与 SQLSTATE 统计 PostgreSQL 日志消息。 |
+| [`pg_stat_plans`](/ext/e/pg_stat_plans) | [`pg_stat_plans`](https://github.com/pganalyze/pg_stat_plans) | `2.1.0` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 跟踪查询计划级别的调用次数、执行时间与示例 EXPLAIN 文本。 |
 | [`pg_show_plans`](/ext/e/pg_show_plans) | [`pg_show_plans`](https://github.com/cybertec-postgresql/pg_show_plans) | `2.1.8` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 打印所有当前正在运行查询的执行计划 |
 | [`pg_stat_kcache`](/ext/e/pg_stat_kcache) | [`pg_stat_kcache`](https://github.com/powa-team/pg_stat_kcache) | `2.3.1` | <a class="ext-badge ext-badge--license bsd 3clause" href="/ext/license#bsd3clause">BSD 3-Clause</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 内核统计信息收集 |
 | [`pg_stat_monitor`](/ext/e/pg_stat_monitor) | [`pg_stat_monitor`](https://github.com/percona/pg_stat_monitor) | `2.3.2` | <a class="ext-badge ext-badge--license bsd 3clause" href="/ext/license#bsd3clause">BSD 3-Clause</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 提供查询聚合统计、客户端信息、执行计划详细信息和直方图 |
@@ -37,7 +39,7 @@ icon: fas fa-file-waveform
 | [`explain_ui`](/ext/e/explain_ui) | [`pg_explain_ui`](https://github.com/davidgomes/pg-explain-ui) | `0.0.2` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | 快速跳转至PEV查阅可视化执行计划 |
 | [`pg_relusage`](/ext/e/pg_relusage) | [`pg_relusage`](https://github.com/adept/pg_relusage) | `0.0.1` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 打印查询引用的表与列 |
 | [`pagevis`](/ext/e/pagevis) | [`pagevis`](https://github.com/hollobon/pagevis) | `0.1` | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> | 使用ASCII字符可视化数据库物理页面布局 |
-| [`powa`](/ext/e/powa) | [`powa`](https://github.com/powa-team/powa) | `5.1.1` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang python" href="/ext/language#python">Python</a> | PostgreSQL 工作负载分析器-核心 |
+| [`powa`](/ext/e/powa) | [`powa`](https://github.com/powa-team/powa) | `5.1.2` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang python" href="/ext/language#python">Python</a> | PostgreSQL 工作负载分析器-核心 |
 | [`pg_overexplain`](/ext/e/pg_overexplain) | [`pg_overexplain`](https://www.postgresql.org/docs/devel/pgoverexplain.html) | `1.0` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 允许 EXPLAIN 转储更多详细 |
 | [`pg_logicalinspect`](/ext/e/pg_logicalinspect) | [`pg_logicalinspect`](https://www.postgresql.org/docs/devel/pglogicalinspect.html) | `1.0` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 检视逻辑解码组件详情 |
 | [`pageinspect`](/ext/e/pageinspect) | [`pageinspect`](https://www.postgresql.org/docs/current/pageinspect.html) | `1.12` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 检查数据库页面二进制内容 |
@@ -126,6 +128,44 @@ icon: fas fa-file-waveform
 | **仓库** | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | **u22** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
 | **协议** | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | **u24** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
 | | | **u26** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+{.ext-table .ext-table--cate}
+
+
+---------
+
+## pg_stat_log {#pg_stat_log}
+
+[**`pg_stat_log`**](/ext/e/pg_stat_log) - `0.1` : 按后端类型、数据库、用户、日志级别与 SQLSTATE 统计 PostgreSQL 日志消息。
+
+| **条目** | **属性** | **OS** | **x86_64** | **aarch64** |
+|:---:|:---|:---:|:---:|:---:|
+| **扩展名** | [`pg_stat_log`](/ext/e/pg_stat_log) | **el8** | {{< pgvers "18" >}} | {{< pgvers "18" >}} |
+| **扩展包** | [`pg_stat_log`](https://github.com/fabriziomello/pg_stat_log) | **el9** | {{< pgvers "18" >}} | {{< pgvers "18" >}} |
+| **RPM** | `pg_stat_log_$v` | **el10** | {{< pgvers "18" >}} | {{< pgvers "18" >}} |
+| **DEB** | `postgresql-$v-stat-log` | **d12** | {{< pgvers "18" >}} | {{< pgvers "18" >}} |
+| **语言** | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | **d13** | {{< pgvers "18" >}} | {{< pgvers "18" >}} |
+| **仓库** | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | **u22** | {{< pgvers "18" >}} | {{< pgvers "18" >}} |
+| **协议** | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | **u24** | {{< pgvers "18" >}} | {{< pgvers "18" >}} |
+| | | **u26** | {{< pgvers "18" >}} | {{< pgvers "18" >}} |
+{.ext-table .ext-table--cate}
+
+
+---------
+
+## pg_stat_plans {#pg_stat_plans}
+
+[**`pg_stat_plans`**](/ext/e/pg_stat_plans) - `2.1.0` : 跟踪查询计划级别的调用次数、执行时间与示例 EXPLAIN 文本。
+
+| **条目** | **属性** | **OS** | **x86_64** | **aarch64** |
+|:---:|:---|:---:|:---:|:---:|
+| **扩展名** | [`pg_stat_plans`](/ext/e/pg_stat_plans) | **el8** | {{< pgvers "18,17,16" >}} | {{< pgvers "18,17,16" >}} |
+| **扩展包** | [`pg_stat_plans`](https://github.com/pganalyze/pg_stat_plans) | **el9** | {{< pgvers "18,17,16" >}} | {{< pgvers "18,17,16" >}} |
+| **RPM** | `pg_stat_plans_$v` | **el10** | {{< pgvers "18,17,16" >}} | {{< pgvers "18,17,16" >}} |
+| **DEB** | `postgresql-$v-pg-stat-plans` | **d12** | {{< pgvers "18,17,16" >}} | {{< pgvers "18,17,16" >}} |
+| **语言** | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | **d13** | {{< pgvers "18,17,16" >}} | {{< pgvers "18,17,16" >}} |
+| **仓库** | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | **u22** | {{< pgvers "18,17,16" >}} | {{< pgvers "18,17,16" >}} |
+| **协议** | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | **u24** | {{< pgvers "18,17,16" >}} | {{< pgvers "18,17,16" >}} |
+| | | **u26** | {{< pgvers "18,17,16" >}} | {{< pgvers "18,17,16" >}} |
 {.ext-table .ext-table--cate}
 
 
@@ -532,7 +572,7 @@ icon: fas fa-file-waveform
 
 ## powa {#powa}
 
-[**`powa`**](/ext/e/powa) - `5.1.1` : PostgreSQL 工作负载分析器-核心
+[**`powa`**](/ext/e/powa) - `5.1.2` : PostgreSQL 工作负载分析器-核心
 
 | **条目** | **属性** | **OS** | **x86_64** | **aarch64** |
 |:---:|:---|:---:|:---:|:---:|

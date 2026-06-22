@@ -43,7 +43,8 @@ weight: 8700
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
 | [**EXT**](/ext/list#fdw) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `5.5.3` | {{< pgvers "18,17,16,15,14" >}} | `mongo_fdw` | - |
-| [**RPM**](/ext/rpm#fdw) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `5.5.3` | {{< pgvers "16,15,14" >}} | `mongo_fdw_$v` | - |
+| [**RPM**](/ext/rpm#fdw) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `5.5.3` | {{< pgvers "18,17,16,15,14" >}} | `mongo_fdw_$v` | - |
+| [**DEB**](/ext/deb#fdw) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `5.5.3` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-mongo-fdw` | - |
 {.ext-table}
 
 {{< pgext_matrix >}}
@@ -55,28 +56,48 @@ weight: 8700
 | el9.aarch64 | AVAIL PGDG 5.5.3 1 | AVAIL PGDG 5.5.3 1 | AVAIL PGDG 5.5.3 1 | AVAIL PGDG 5.5.3 1 | AVAIL PGDG 5.5.3 1 |
 | el10.x86_64 | AVAIL PGDG 5.5.3 1 | AVAIL PGDG 5.5.3 1 | AVAIL PGDG 5.5.3 1 | AVAIL PGDG 5.5.3 1 | AVAIL PGDG 5.5.3 1 |
 | el10.aarch64 | AVAIL PGDG 5.5.3 1 | AVAIL PGDG 5.5.3 1 | AVAIL PGDG 5.5.3 1 | AVAIL PGDG 5.5.3 1 | AVAIL PGDG 5.5.3 1 |
-| d12.x86_64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
-| d12.aarch64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
-| d13.x86_64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
-| d13.aarch64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
-| u22.x86_64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
-| u22.aarch64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
-| u24.x86_64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
-| u24.aarch64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
-| u26.x86_64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
-| u26.aarch64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
+| d12.x86_64 | AVAIL PIGSTY 5.5.3 1 | AVAIL PIGSTY 5.5.3 1 | AVAIL PIGSTY 5.5.3 1 | AVAIL PIGSTY 5.5.3 1 | AVAIL PIGSTY 5.5.3 1 |
+| d12.aarch64 | AVAIL PIGSTY 5.5.3 1 | AVAIL PIGSTY 5.5.3 1 | AVAIL PIGSTY 5.5.3 1 | AVAIL PIGSTY 5.5.3 1 | AVAIL PIGSTY 5.5.3 1 |
+| d13.x86_64 | AVAIL PIGSTY 5.5.3 1 | AVAIL PIGSTY 5.5.3 1 | AVAIL PIGSTY 5.5.3 1 | AVAIL PIGSTY 5.5.3 1 | AVAIL PIGSTY 5.5.3 1 |
+| d13.aarch64 | AVAIL PIGSTY 5.5.3 1 | AVAIL PIGSTY 5.5.3 1 | AVAIL PIGSTY 5.5.3 1 | AVAIL PIGSTY 5.5.3 1 | AVAIL PIGSTY 5.5.3 1 |
+| u22.x86_64 | AVAIL PIGSTY 5.5.3 1 | AVAIL PIGSTY 5.5.3 1 | AVAIL PIGSTY 5.5.3 1 | AVAIL PIGSTY 5.5.3 1 | AVAIL PIGSTY 5.5.3 1 |
+| u22.aarch64 | AVAIL PIGSTY 5.5.3 1 | AVAIL PIGSTY 5.5.3 1 | AVAIL PIGSTY 5.5.3 1 | AVAIL PIGSTY 5.5.3 1 | AVAIL PIGSTY 5.5.3 1 |
+| u24.x86_64 | AVAIL PIGSTY 5.5.3 1 | AVAIL PIGSTY 5.5.3 1 | AVAIL PIGSTY 5.5.3 1 | AVAIL PIGSTY 5.5.3 1 | AVAIL PIGSTY 5.5.3 1 |
+| u24.aarch64 | AVAIL PIGSTY 5.5.3 1 | AVAIL PIGSTY 5.5.3 1 | AVAIL PIGSTY 5.5.3 1 | AVAIL PIGSTY 5.5.3 1 | AVAIL PIGSTY 5.5.3 1 |
+| u26.x86_64 | AVAIL PIGSTY 5.5.3 1 | AVAIL PIGSTY 5.5.3 1 | AVAIL PIGSTY 5.5.3 1 | AVAIL PIGSTY 5.5.3 1 | AVAIL PIGSTY 5.5.3 1 |
+| u26.aarch64 | AVAIL PIGSTY 5.5.3 1 | AVAIL PIGSTY 5.5.3 1 | AVAIL PIGSTY 5.5.3 1 | AVAIL PIGSTY 5.5.3 1 | AVAIL PIGSTY 5.5.3 1 |
 @ el8.x86_64 18 mongo_fdw_18 mongo_fdw_18-5.5.3-2PGDG.rhel8.x86_64.rpm pgdg 5.5.3 54.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/mongo_fdw_18-5.5.3-2PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 18 mongo_fdw_18 mongo_fdw_18-5.5.3-2PGDG.rhel8.aarch64.rpm pgdg 5.5.3 52.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/mongo_fdw_18-5.5.3-2PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 18 mongo_fdw_18 mongo_fdw_18-5.5.3-3PGDG.rhel9.8.x86_64.rpm pgdg 5.5.3 52.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/mongo_fdw_18-5.5.3-3PGDG.rhel9.8.x86_64.rpm
 @ el9.aarch64 18 mongo_fdw_18 mongo_fdw_18-5.5.3-3PGDG.rhel9.8.aarch64.rpm pgdg 5.5.3 50.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/mongo_fdw_18-5.5.3-3PGDG.rhel9.8.aarch64.rpm
 @ el10.x86_64 18 mongo_fdw_18 mongo_fdw_18-5.5.3-3PGDG.rhel10.2.x86_64.rpm pgdg 5.5.3 53.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/mongo_fdw_18-5.5.3-3PGDG.rhel10.2.x86_64.rpm
 @ el10.aarch64 18 mongo_fdw_18 mongo_fdw_18-5.5.3-3PGDG.rhel10.2.aarch64.rpm pgdg 5.5.3 52.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/mongo_fdw_18-5.5.3-3PGDG.rhel10.2.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-mongo-fdw postgresql-18-mongo-fdw_5.5.3-1PIGSTY~bookworm_amd64.deb pigsty 5.5.3 112.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/m/mongo-fdw/postgresql-18-mongo-fdw_5.5.3-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 18 postgresql-18-mongo-fdw postgresql-18-mongo-fdw_5.5.3-1PIGSTY~bookworm_arm64.deb pigsty 5.5.3 108.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/m/mongo-fdw/postgresql-18-mongo-fdw_5.5.3-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 18 postgresql-18-mongo-fdw postgresql-18-mongo-fdw_5.5.3-1PIGSTY~trixie_amd64.deb pigsty 5.5.3 113.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/m/mongo-fdw/postgresql-18-mongo-fdw_5.5.3-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 18 postgresql-18-mongo-fdw postgresql-18-mongo-fdw_5.5.3-1PIGSTY~trixie_arm64.deb pigsty 5.5.3 109.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/m/mongo-fdw/postgresql-18-mongo-fdw_5.5.3-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 18 postgresql-18-mongo-fdw postgresql-18-mongo-fdw_5.5.3-1PIGSTY~jammy_amd64.deb pigsty 5.5.3 123.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/m/mongo-fdw/postgresql-18-mongo-fdw_5.5.3-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 18 postgresql-18-mongo-fdw postgresql-18-mongo-fdw_5.5.3-1PIGSTY~jammy_arm64.deb pigsty 5.5.3 121.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/m/mongo-fdw/postgresql-18-mongo-fdw_5.5.3-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 18 postgresql-18-mongo-fdw postgresql-18-mongo-fdw_5.5.3-1PIGSTY~noble_amd64.deb pigsty 5.5.3 117.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/m/mongo-fdw/postgresql-18-mongo-fdw_5.5.3-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 18 postgresql-18-mongo-fdw postgresql-18-mongo-fdw_5.5.3-1PIGSTY~noble_arm64.deb pigsty 5.5.3 115.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/m/mongo-fdw/postgresql-18-mongo-fdw_5.5.3-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 18 postgresql-18-mongo-fdw postgresql-18-mongo-fdw_5.5.3-1PIGSTY~resolute_amd64.deb pigsty 5.5.3 117.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/m/mongo-fdw/postgresql-18-mongo-fdw_5.5.3-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 18 postgresql-18-mongo-fdw postgresql-18-mongo-fdw_5.5.3-1PIGSTY~resolute_arm64.deb pigsty 5.5.3 115.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/m/mongo-fdw/postgresql-18-mongo-fdw_5.5.3-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 17 mongo_fdw_17 mongo_fdw_17-5.5.3-2PGDG.rhel8.x86_64.rpm pgdg 5.5.3 54.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/mongo_fdw_17-5.5.3-2PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 17 mongo_fdw_17 mongo_fdw_17-5.5.3-2PGDG.rhel8.aarch64.rpm pgdg 5.5.3 52.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/mongo_fdw_17-5.5.3-2PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 17 mongo_fdw_17 mongo_fdw_17-5.5.3-3PGDG.rhel9.8.x86_64.rpm pgdg 5.5.3 52.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/mongo_fdw_17-5.5.3-3PGDG.rhel9.8.x86_64.rpm
 @ el9.aarch64 17 mongo_fdw_17 mongo_fdw_17-5.5.3-3PGDG.rhel9.8.aarch64.rpm pgdg 5.5.3 50.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/mongo_fdw_17-5.5.3-3PGDG.rhel9.8.aarch64.rpm
 @ el10.x86_64 17 mongo_fdw_17 mongo_fdw_17-5.5.3-3PGDG.rhel10.2.x86_64.rpm pgdg 5.5.3 53.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/mongo_fdw_17-5.5.3-3PGDG.rhel10.2.x86_64.rpm
 @ el10.aarch64 17 mongo_fdw_17 mongo_fdw_17-5.5.3-3PGDG.rhel10.2.aarch64.rpm pgdg 5.5.3 51.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/mongo_fdw_17-5.5.3-3PGDG.rhel10.2.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-mongo-fdw postgresql-17-mongo-fdw_5.5.3-1PIGSTY~bookworm_amd64.deb pigsty 5.5.3 112.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/m/mongo-fdw/postgresql-17-mongo-fdw_5.5.3-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 17 postgresql-17-mongo-fdw postgresql-17-mongo-fdw_5.5.3-1PIGSTY~bookworm_arm64.deb pigsty 5.5.3 108.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/m/mongo-fdw/postgresql-17-mongo-fdw_5.5.3-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 17 postgresql-17-mongo-fdw postgresql-17-mongo-fdw_5.5.3-1PIGSTY~trixie_amd64.deb pigsty 5.5.3 112.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/m/mongo-fdw/postgresql-17-mongo-fdw_5.5.3-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 17 postgresql-17-mongo-fdw postgresql-17-mongo-fdw_5.5.3-1PIGSTY~trixie_arm64.deb pigsty 5.5.3 109.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/m/mongo-fdw/postgresql-17-mongo-fdw_5.5.3-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 17 postgresql-17-mongo-fdw postgresql-17-mongo-fdw_5.5.3-1PIGSTY~jammy_amd64.deb pigsty 5.5.3 144.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/m/mongo-fdw/postgresql-17-mongo-fdw_5.5.3-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 17 postgresql-17-mongo-fdw postgresql-17-mongo-fdw_5.5.3-1PIGSTY~jammy_arm64.deb pigsty 5.5.3 141.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/m/mongo-fdw/postgresql-17-mongo-fdw_5.5.3-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 17 postgresql-17-mongo-fdw postgresql-17-mongo-fdw_5.5.3-1PIGSTY~noble_amd64.deb pigsty 5.5.3 117.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/m/mongo-fdw/postgresql-17-mongo-fdw_5.5.3-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 17 postgresql-17-mongo-fdw postgresql-17-mongo-fdw_5.5.3-1PIGSTY~noble_arm64.deb pigsty 5.5.3 115.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/m/mongo-fdw/postgresql-17-mongo-fdw_5.5.3-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 17 postgresql-17-mongo-fdw postgresql-17-mongo-fdw_5.5.3-1PIGSTY~resolute_amd64.deb pigsty 5.5.3 117.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/m/mongo-fdw/postgresql-17-mongo-fdw_5.5.3-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 17 postgresql-17-mongo-fdw postgresql-17-mongo-fdw_5.5.3-1PIGSTY~resolute_arm64.deb pigsty 5.5.3 114.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/m/mongo-fdw/postgresql-17-mongo-fdw_5.5.3-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 16 mongo_fdw_16 mongo_fdw_16-5.5.3-2PGDG.rhel8.x86_64.rpm pgdg 5.5.3 54.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/mongo_fdw_16-5.5.3-2PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 16 mongo_fdw_16 mongo_fdw_16-5.5.1-1PGDG.rhel8.x86_64.rpm pgdg 5.5.1 74.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/mongo_fdw_16-5.5.1-1PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 16 mongo_fdw_16 mongo_fdw_16-5.5.3-2PGDG.rhel8.aarch64.rpm pgdg 5.5.3 52.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/mongo_fdw_16-5.5.3-2PGDG.rhel8.aarch64.rpm
@@ -85,6 +106,16 @@ weight: 8700
 @ el9.aarch64 16 mongo_fdw_16 mongo_fdw_16-5.5.3-3PGDG.rhel9.8.aarch64.rpm pgdg 5.5.3 50.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/mongo_fdw_16-5.5.3-3PGDG.rhel9.8.aarch64.rpm
 @ el10.x86_64 16 mongo_fdw_16 mongo_fdw_16-5.5.3-3PGDG.rhel10.2.x86_64.rpm pgdg 5.5.3 53.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/mongo_fdw_16-5.5.3-3PGDG.rhel10.2.x86_64.rpm
 @ el10.aarch64 16 mongo_fdw_16 mongo_fdw_16-5.5.3-3PGDG.rhel10.2.aarch64.rpm pgdg 5.5.3 52.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/mongo_fdw_16-5.5.3-3PGDG.rhel10.2.aarch64.rpm
+@ d12.x86_64 16 postgresql-16-mongo-fdw postgresql-16-mongo-fdw_5.5.3-1PIGSTY~bookworm_amd64.deb pigsty 5.5.3 112.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/m/mongo-fdw/postgresql-16-mongo-fdw_5.5.3-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 16 postgresql-16-mongo-fdw postgresql-16-mongo-fdw_5.5.3-1PIGSTY~bookworm_arm64.deb pigsty 5.5.3 108.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/m/mongo-fdw/postgresql-16-mongo-fdw_5.5.3-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 16 postgresql-16-mongo-fdw postgresql-16-mongo-fdw_5.5.3-1PIGSTY~trixie_amd64.deb pigsty 5.5.3 112.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/m/mongo-fdw/postgresql-16-mongo-fdw_5.5.3-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 16 postgresql-16-mongo-fdw postgresql-16-mongo-fdw_5.5.3-1PIGSTY~trixie_arm64.deb pigsty 5.5.3 109.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/m/mongo-fdw/postgresql-16-mongo-fdw_5.5.3-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 16 postgresql-16-mongo-fdw postgresql-16-mongo-fdw_5.5.3-1PIGSTY~jammy_amd64.deb pigsty 5.5.3 142.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/m/mongo-fdw/postgresql-16-mongo-fdw_5.5.3-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 16 postgresql-16-mongo-fdw postgresql-16-mongo-fdw_5.5.3-1PIGSTY~jammy_arm64.deb pigsty 5.5.3 139.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/m/mongo-fdw/postgresql-16-mongo-fdw_5.5.3-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 16 postgresql-16-mongo-fdw postgresql-16-mongo-fdw_5.5.3-1PIGSTY~noble_amd64.deb pigsty 5.5.3 117.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/m/mongo-fdw/postgresql-16-mongo-fdw_5.5.3-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 16 postgresql-16-mongo-fdw postgresql-16-mongo-fdw_5.5.3-1PIGSTY~noble_arm64.deb pigsty 5.5.3 115.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/m/mongo-fdw/postgresql-16-mongo-fdw_5.5.3-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 16 postgresql-16-mongo-fdw postgresql-16-mongo-fdw_5.5.3-1PIGSTY~resolute_amd64.deb pigsty 5.5.3 116.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/m/mongo-fdw/postgresql-16-mongo-fdw_5.5.3-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 16 postgresql-16-mongo-fdw postgresql-16-mongo-fdw_5.5.3-1PIGSTY~resolute_arm64.deb pigsty 5.5.3 114.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/m/mongo-fdw/postgresql-16-mongo-fdw_5.5.3-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 15 mongo_fdw_15 mongo_fdw_15-5.5.3-2PGDG.rhel8.x86_64.rpm pgdg 5.5.3 56.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/mongo_fdw_15-5.5.3-2PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 15 mongo_fdw_15 mongo_fdw_15-5.5.1-1PGDG.rhel8.x86_64.rpm pgdg 5.5.1 77.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/mongo_fdw_15-5.5.1-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 15 mongo_fdw_15 mongo_fdw_15-5.5.0-1.rhel8.x86_64.rpm pgdg 5.5.0 74.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/mongo_fdw_15-5.5.0-1.rhel8.x86_64.rpm
@@ -95,6 +126,16 @@ weight: 8700
 @ el9.aarch64 15 mongo_fdw_15 mongo_fdw_15-5.5.3-3PGDG.rhel9.8.aarch64.rpm pgdg 5.5.3 53.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/mongo_fdw_15-5.5.3-3PGDG.rhel9.8.aarch64.rpm
 @ el10.x86_64 15 mongo_fdw_15 mongo_fdw_15-5.5.3-3PGDG.rhel10.2.x86_64.rpm pgdg 5.5.3 56.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/mongo_fdw_15-5.5.3-3PGDG.rhel10.2.x86_64.rpm
 @ el10.aarch64 15 mongo_fdw_15 mongo_fdw_15-5.5.3-3PGDG.rhel10.2.aarch64.rpm pgdg 5.5.3 54.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/mongo_fdw_15-5.5.3-3PGDG.rhel10.2.aarch64.rpm
+@ d12.x86_64 15 postgresql-15-mongo-fdw postgresql-15-mongo-fdw_5.5.3-1PIGSTY~bookworm_amd64.deb pigsty 5.5.3 113.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/m/mongo-fdw/postgresql-15-mongo-fdw_5.5.3-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 15 postgresql-15-mongo-fdw postgresql-15-mongo-fdw_5.5.3-1PIGSTY~bookworm_arm64.deb pigsty 5.5.3 109.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/m/mongo-fdw/postgresql-15-mongo-fdw_5.5.3-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 15 postgresql-15-mongo-fdw postgresql-15-mongo-fdw_5.5.3-1PIGSTY~trixie_amd64.deb pigsty 5.5.3 113.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/m/mongo-fdw/postgresql-15-mongo-fdw_5.5.3-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 15 postgresql-15-mongo-fdw postgresql-15-mongo-fdw_5.5.3-1PIGSTY~trixie_arm64.deb pigsty 5.5.3 110.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/m/mongo-fdw/postgresql-15-mongo-fdw_5.5.3-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 15 postgresql-15-mongo-fdw postgresql-15-mongo-fdw_5.5.3-1PIGSTY~jammy_amd64.deb pigsty 5.5.3 144.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/m/mongo-fdw/postgresql-15-mongo-fdw_5.5.3-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 15 postgresql-15-mongo-fdw postgresql-15-mongo-fdw_5.5.3-1PIGSTY~jammy_arm64.deb pigsty 5.5.3 141.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/m/mongo-fdw/postgresql-15-mongo-fdw_5.5.3-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 15 postgresql-15-mongo-fdw postgresql-15-mongo-fdw_5.5.3-1PIGSTY~noble_amd64.deb pigsty 5.5.3 118.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/m/mongo-fdw/postgresql-15-mongo-fdw_5.5.3-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 15 postgresql-15-mongo-fdw postgresql-15-mongo-fdw_5.5.3-1PIGSTY~noble_arm64.deb pigsty 5.5.3 116.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/m/mongo-fdw/postgresql-15-mongo-fdw_5.5.3-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 15 postgresql-15-mongo-fdw postgresql-15-mongo-fdw_5.5.3-1PIGSTY~resolute_amd64.deb pigsty 5.5.3 118.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/m/mongo-fdw/postgresql-15-mongo-fdw_5.5.3-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 15 postgresql-15-mongo-fdw postgresql-15-mongo-fdw_5.5.3-1PIGSTY~resolute_arm64.deb pigsty 5.5.3 116.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/m/mongo-fdw/postgresql-15-mongo-fdw_5.5.3-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 14 mongo_fdw_14 mongo_fdw_14-5.5.3-2PGDG.rhel8.x86_64.rpm pgdg 5.5.3 56.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/mongo_fdw_14-5.5.3-2PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 14 mongo_fdw_14 mongo_fdw_14-5.5.1-1PGDG.rhel8.x86_64.rpm pgdg 5.5.1 77.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/mongo_fdw_14-5.5.1-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 14 mongo_fdw_14 mongo_fdw_14-5.5.0-1.rhel8.x86_64.rpm pgdg 5.5.0 74.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/mongo_fdw_14-5.5.0-1.rhel8.x86_64.rpm
@@ -107,6 +148,16 @@ weight: 8700
 @ el9.aarch64 14 mongo_fdw_14 mongo_fdw_14-5.5.3-3PGDG.rhel9.8.aarch64.rpm pgdg 5.5.3 53.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/mongo_fdw_14-5.5.3-3PGDG.rhel9.8.aarch64.rpm
 @ el10.x86_64 14 mongo_fdw_14 mongo_fdw_14-5.5.3-3PGDG.rhel10.2.x86_64.rpm pgdg 5.5.3 56.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/mongo_fdw_14-5.5.3-3PGDG.rhel10.2.x86_64.rpm
 @ el10.aarch64 14 mongo_fdw_14 mongo_fdw_14-5.5.3-3PGDG.rhel10.2.aarch64.rpm pgdg 5.5.3 54.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/mongo_fdw_14-5.5.3-3PGDG.rhel10.2.aarch64.rpm
+@ d12.x86_64 14 postgresql-14-mongo-fdw postgresql-14-mongo-fdw_5.5.3-1PIGSTY~bookworm_amd64.deb pigsty 5.5.3 113.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/m/mongo-fdw/postgresql-14-mongo-fdw_5.5.3-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 14 postgresql-14-mongo-fdw postgresql-14-mongo-fdw_5.5.3-1PIGSTY~bookworm_arm64.deb pigsty 5.5.3 109.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/m/mongo-fdw/postgresql-14-mongo-fdw_5.5.3-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 14 postgresql-14-mongo-fdw postgresql-14-mongo-fdw_5.5.3-1PIGSTY~trixie_amd64.deb pigsty 5.5.3 114.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/m/mongo-fdw/postgresql-14-mongo-fdw_5.5.3-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 14 postgresql-14-mongo-fdw postgresql-14-mongo-fdw_5.5.3-1PIGSTY~trixie_arm64.deb pigsty 5.5.3 109.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/m/mongo-fdw/postgresql-14-mongo-fdw_5.5.3-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 14 postgresql-14-mongo-fdw postgresql-14-mongo-fdw_5.5.3-1PIGSTY~jammy_amd64.deb pigsty 5.5.3 144.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/m/mongo-fdw/postgresql-14-mongo-fdw_5.5.3-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 14 postgresql-14-mongo-fdw postgresql-14-mongo-fdw_5.5.3-1PIGSTY~jammy_arm64.deb pigsty 5.5.3 141.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/m/mongo-fdw/postgresql-14-mongo-fdw_5.5.3-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 14 postgresql-14-mongo-fdw postgresql-14-mongo-fdw_5.5.3-1PIGSTY~noble_amd64.deb pigsty 5.5.3 118.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/m/mongo-fdw/postgresql-14-mongo-fdw_5.5.3-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 14 postgresql-14-mongo-fdw postgresql-14-mongo-fdw_5.5.3-1PIGSTY~noble_arm64.deb pigsty 5.5.3 116.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/m/mongo-fdw/postgresql-14-mongo-fdw_5.5.3-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 14 postgresql-14-mongo-fdw postgresql-14-mongo-fdw_5.5.3-1PIGSTY~resolute_amd64.deb pigsty 5.5.3 118.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/m/mongo-fdw/postgresql-14-mongo-fdw_5.5.3-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 14 postgresql-14-mongo-fdw postgresql-14-mongo-fdw_5.5.3-1PIGSTY~resolute_arm64.deb pigsty 5.5.3 116.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/m/mongo-fdw/postgresql-14-mongo-fdw_5.5.3-1PIGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 
@@ -142,6 +193,15 @@ dnf install -y mongo_fdw_17       # PG 17
 dnf install -y mongo_fdw_16       # PG 16
 dnf install -y mongo_fdw_15       # PG 15
 dnf install -y mongo_fdw_14       # PG 14
+```
+{{% /tab %}}
+{{% tab header="apt" %}}
+```bash
+apt install -y postgresql-18-mongo-fdw   # PG 18
+apt install -y postgresql-17-mongo-fdw   # PG 17
+apt install -y postgresql-16-mongo-fdw   # PG 16
+apt install -y postgresql-15-mongo-fdw   # PG 15
+apt install -y postgresql-14-mongo-fdw   # PG 14
 ```
 {{% /tab %}}
 {{< /tabpane >}}

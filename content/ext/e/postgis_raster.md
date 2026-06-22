@@ -20,7 +20,7 @@ weight: 1502
 
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
-| [**`postgis`**](/ext/e/postgis) | `3.6.3` | <a class="ext-badge ext-badge--cate gis" href="/ext/cate/gis">GIS</a> | <a class="ext-badge ext-badge--license gpl20" href="/ext/license#gpl20">GPL-2.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
+| [**`postgis`**](/ext/e/postgis) | `3.6.4` | <a class="ext-badge ext-badge--cate gis" href="/ext/cate/gis">GIS</a> | <a class="ext-badge ext-badge--license gpl20" href="/ext/license#gpl20">GPL-2.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
 {.ext-table}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
@@ -44,9 +44,9 @@ weight: 1502
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#gis) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `3.6.3` | {{< pgvers "18,17,16,15,14" >}} | `postgis` | `postgis` |
+| [**EXT**](/ext/list#gis) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `3.6.4` | {{< pgvers "18,17,16,15,14" >}} | `postgis` | `postgis` |
 | [**RPM**](/ext/rpm#gis) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `3.6.3` | {{< pgvers "18,17,16,15,14" >}} | `postgis36_$v` | - |
-| [**DEB**](/ext/deb#gis) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `3.6.3` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-postgis-3` | - |
+| [**DEB**](/ext/deb#gis) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `3.6.4` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-postgis-3` | - |
 {.ext-table}
 
 {{< pgext_matrix >}}
@@ -58,16 +58,16 @@ weight: 1502
 | el9.aarch64 | AVAIL PGDG 3.6.3 1 | AVAIL PGDG 3.6.3 1 | AVAIL PGDG 3.6.3 1 | AVAIL PGDG 3.6.3 1 | AVAIL PGDG 3.6.3 1 |
 | el10.x86_64 | AVAIL PGDG 3.6.3 1 | AVAIL PGDG 3.6.3 1 | AVAIL PGDG 3.6.3 1 | AVAIL PGDG 3.6.3 1 | AVAIL PGDG 3.6.3 1 |
 | el10.aarch64 | AVAIL PGDG 3.6.3 1 | AVAIL PGDG 3.6.3 1 | AVAIL PGDG 3.6.3 1 | AVAIL PGDG 3.6.3 1 | AVAIL PGDG 3.6.3 1 |
-| d12.x86_64 | AVAIL PGDG 3.6.3 2 | AVAIL PGDG 3.6.3 2 | AVAIL PGDG 3.6.3 2 | AVAIL PGDG 3.6.3 2 | AVAIL PGDG 3.6.3 2 |
-| d12.aarch64 | AVAIL PGDG 3.6.3 2 | AVAIL PGDG 3.6.3 2 | AVAIL PGDG 3.6.3 2 | AVAIL PGDG 3.6.3 2 | AVAIL PGDG 3.6.3 2 |
-| d13.x86_64 | AVAIL PGDG 3.6.3 2 | AVAIL PGDG 3.6.3 2 | AVAIL PGDG 3.6.3 2 | AVAIL PGDG 3.6.3 2 | AVAIL PGDG 3.6.3 2 |
-| d13.aarch64 | AVAIL PGDG 3.6.3 2 | AVAIL PGDG 3.6.3 2 | AVAIL PGDG 3.6.3 2 | AVAIL PGDG 3.6.3 2 | AVAIL PGDG 3.6.3 2 |
-| u22.x86_64 | AVAIL PGDG 3.6.3 2 | AVAIL PGDG 3.6.3 2 | AVAIL PGDG 3.6.3 2 | AVAIL PGDG 3.6.3 2 | AVAIL PGDG 3.6.3 2 |
-| u22.aarch64 | AVAIL PGDG 3.6.3 2 | AVAIL PGDG 3.6.3 2 | AVAIL PGDG 3.6.3 2 | AVAIL PGDG 3.6.3 2 | AVAIL PGDG 3.6.3 2 |
-| u24.x86_64 | AVAIL PGDG 3.6.3 2 | AVAIL PGDG 3.6.3 2 | AVAIL PGDG 3.6.3 2 | AVAIL PGDG 3.6.3 2 | AVAIL PGDG 3.6.3 2 |
-| u24.aarch64 | AVAIL PGDG 3.6.3 2 | AVAIL PGDG 3.6.3 2 | AVAIL PGDG 3.6.3 2 | AVAIL PGDG 3.6.3 2 | AVAIL PGDG 3.6.3 2 |
-| u26.x86_64 | AVAIL PGDG 3.6.3 2 | AVAIL PGDG 3.6.3 2 | AVAIL PGDG 3.6.3 2 | AVAIL PGDG 3.6.3 2 | AVAIL PGDG 3.6.3 2 |
-| u26.aarch64 | AVAIL PGDG 3.6.3 2 | AVAIL PGDG 3.6.3 2 | AVAIL PGDG 3.6.3 2 | AVAIL PGDG 3.6.3 2 | AVAIL PGDG 3.6.3 2 |
+| d12.x86_64 | AVAIL PGDG 3.6.4 3 | AVAIL PGDG 3.6.4 3 | AVAIL PGDG 3.6.4 3 | AVAIL PGDG 3.6.4 3 | AVAIL PGDG 3.6.4 3 |
+| d12.aarch64 | AVAIL PGDG 3.6.4 3 | AVAIL PGDG 3.6.4 3 | AVAIL PGDG 3.6.4 3 | AVAIL PGDG 3.6.4 3 | AVAIL PGDG 3.6.4 3 |
+| d13.x86_64 | AVAIL PGDG 3.6.4 3 | AVAIL PGDG 3.6.4 3 | AVAIL PGDG 3.6.4 3 | AVAIL PGDG 3.6.4 3 | AVAIL PGDG 3.6.4 3 |
+| d13.aarch64 | AVAIL PGDG 3.6.4 3 | AVAIL PGDG 3.6.4 3 | AVAIL PGDG 3.6.4 3 | AVAIL PGDG 3.6.4 3 | AVAIL PGDG 3.6.4 3 |
+| u22.x86_64 | AVAIL PGDG 3.6.4 3 | AVAIL PGDG 3.6.4 3 | AVAIL PGDG 3.6.4 3 | AVAIL PGDG 3.6.4 3 | AVAIL PGDG 3.6.4 3 |
+| u22.aarch64 | AVAIL PGDG 3.6.4 3 | AVAIL PGDG 3.6.4 3 | AVAIL PGDG 3.6.4 3 | AVAIL PGDG 3.6.4 3 | AVAIL PGDG 3.6.4 3 |
+| u24.x86_64 | AVAIL PGDG 3.6.4 3 | AVAIL PGDG 3.6.4 3 | AVAIL PGDG 3.6.4 3 | AVAIL PGDG 3.6.4 3 | AVAIL PGDG 3.6.4 3 |
+| u24.aarch64 | AVAIL PGDG 3.6.4 3 | AVAIL PGDG 3.6.4 3 | AVAIL PGDG 3.6.4 3 | AVAIL PGDG 3.6.4 3 | AVAIL PGDG 3.6.4 3 |
+| u26.x86_64 | AVAIL PGDG 3.6.4 3 | AVAIL PGDG 3.6.4 3 | AVAIL PGDG 3.6.4 3 | AVAIL PGDG 3.6.4 3 | AVAIL PGDG 3.6.4 3 |
+| u26.aarch64 | AVAIL PGDG 3.6.4 3 | AVAIL PGDG 3.6.4 3 | AVAIL PGDG 3.6.4 3 | AVAIL PGDG 3.6.4 3 | AVAIL PGDG 3.6.4 3 |
 {{< /pgext_matrix >}}
 
 
