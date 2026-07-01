@@ -12,7 +12,7 @@ categories: [参考]
 ## 概念与实现
 
 JuiceFS 由 **元数据引擎** 与 **数据存储** 两部分组成。
-在 Pigsty v4.1 中，`meta` 会原样透传给 `juicefs` 作为元数据引擎 URL，生产场景通常使用 PostgreSQL。
+当前版本中，`meta` 会原样透传给 `juicefs` 作为元数据引擎 URL，生产场景通常使用 PostgreSQL。
 数据存储通过 `data` 参数传入 `juicefs format` 选项决定。
 
 JUICE 模块执行逻辑与关键命令：
@@ -52,18 +52,18 @@ JUICE 模块仅有两个参数：
 
 `juice_instances` 的每个条目代表一个 JuiceFS 实例：
 
-| 字段 | 必选 | 默认值 | 说明 |
-|:-----|:---:|:------|:-----|
-| `path`  | 是 | - | 挂载点路径，如 `/fs` |
-| `meta`  | 是 | - | 元数据引擎 URL（建议 PostgreSQL） |
-| `data`  | 否 | `''` | `juicefs format` 选项（存储后端） |
-| `unit`  | 否 | `juicefs-<name>` | systemd 服务名 |
-| `mount` | 否 | `''` | `juicefs mount` 额外参数 |
-| `port`  | 否 | `9567` | 指标端口（同节点需唯一） |
-| `owner` | 否 | `root` | 挂载点属主 |
-| `group` | 否 | `root` | 挂载点属组 |
-| `mode`  | 否 | `0755` | 挂载点权限 |
-| `state` | 否 | `create` | `create` / `absent` |
+| 字段      | 必选 | 默认值              | 说明                        |
+|:--------|:--:|:-----------------|:--------------------------|
+| `path`  | 是  | -                | 挂载点路径，如 `/fs`             |
+| `meta`  | 是  | -                | 元数据引擎 URL（建议 PostgreSQL）  |
+| `data`  | 否  | `''`             | `juicefs format` 选项（存储后端） |
+| `unit`  | 否  | `juicefs-<name>` | systemd 服务名               |
+| `mount` | 否  | `''`             | `juicefs mount` 额外参数      |
+| `port`  | 否  | `9567`           | 指标端口（同节点需唯一）              |
+| `owner` | 否  | `root`           | 挂载点属主                     |
+| `group` | 否  | `root`           | 挂载点属组                     |
+| `mode`  | 否  | `0755`           | 挂载点权限                     |
+| `state` | 否  | `create`         | `create` / `absent`       |
 {.full-width}
 
 {{% alert title="重要" color="warning" %}}

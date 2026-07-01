@@ -52,7 +52,7 @@ flowchart LR
 - **PostgreSQL 元数据**：元数据存储于 PostgreSQL，便于管理与备份
 - **多实例**：单节点可挂载多个独立文件系统实例
 - **多种数据后端**：支持 PostgreSQL、MinIO、S3 等
-- **监控集成**每实例暴露 Prometheus / Victoria 指标端口
+- **监控集成**每实例暴露 Prometheus / Victoria 格式指标端口
 - **配置简洁**：以 [**`juice_instances`**](/docs/juice/param#juice_instances) 字典描述实例
 
 --------
