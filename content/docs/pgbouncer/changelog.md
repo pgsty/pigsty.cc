@@ -14,6 +14,18 @@ categories: [参考]
 
 ## PgBouncer 1.25.x
 
+**2026-05-08  -  PgBouncer 1.25.2  -  "Human touch with fresh twist in title race full of uncertainties（充满不确定性的冠军争夺战中，人情味带来新意）"**
+
+- 安全
+  * 修复 CVE-2026-6664：PgBouncer 1.25.2 之前的网络包解析代码存在整数溢出，会绕过边界检查并可能导致崩溃。未经身份验证的远程攻击者可以通过畸形 SCRAM 认证包使 PgBouncer 崩溃。
+  * 修复 CVE-2026-6665：PgBouncer 1.25.2 之前的 SCRAM 代码在构造 SCRAM client-final-message 内容时，未正确检查 `strlcat()` 的返回值。恶意后端发送带有长 nonce 的 SCRAM server-final-message 可触发栈溢出。
+  * 修复 CVE-2026-6666：PgBouncer 1.25.2 之前可能出现空指针引用；如果服务器发送不含 SQLSTATE 字段的错误响应，可能导致崩溃。
+  * 修复 CVE-2026-6667：PgBouncer 1.25.2 之前没有对 `KILL_CLIENT` 管理命令执行适当的授权检查。所有可以访问管理控制台的用户（该访问本身仍需授权）都能执行此命令；正确行为应是仅允许 `admin_users` 参数中列出的用户执行。
+
+- 修复
+  * 澄清 `default_pool_size` 参数的文档说明。
+  * 修正 `client_tls13_ciphers` 与 `server_tls13_ciphers` 的文档说明。
+
 **2025-12-03  -  PgBouncer 1.25.1  -  "Fixing a bunch of bugs before Christmas（圣诞节前修复一堆 Bug）"**
 
 - 安全

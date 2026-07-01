@@ -108,7 +108,7 @@ max_client_conn + (max pool_size * total databases)
 
 ### default_pool_size
 
-每个用户/数据库对允许的服务端连接数。可在每个数据库的配置中覆盖。
+每个用户/数据库对允许的服务端连接数上限。可通过每个数据库与每个用户配置中的 `pool_size` 覆盖；如果某个数据库或用户没有指定具体的 `pool_size`，则使用此默认值。
 
 默认值：20
 
@@ -605,7 +605,7 @@ PgBouncer 用于接受客户端连接的私钥。
 - `default`/`secure`/`fast`/`normal`（均使用系统级 OpenSSL 默认值）
 - `all`（启用所有加密套件，不推荐）
 
-此设置仅影响使用 TLS 1.2 及以下版本的连接。目前没有用于控制 TLS 1.3 连接所使用加密套件的设置。
+此设置仅影响使用 TLS 1.2 及以下版本的连接。TLS 1.3 请参见下方的 `client_tls13_ciphers`。
 
 默认值：`default`
 
@@ -681,7 +681,7 @@ PgBouncer 用于向 PostgreSQL 服务器进行认证的私钥。
 - `default`/`secure`/`fast`/`normal`（均使用系统级 OpenSSL 默认值）
 - `all`（启用所有加密套件，不推荐）
 
-此设置仅影响使用 TLS 1.2 及以下版本的连接。目前没有用于控制 TLS 1.3 连接所使用加密套件的设置。
+此设置仅影响使用 TLS 1.2 及以下版本的连接。TLS 1.3 请参见下方的 `server_tls13_ciphers`。
 
 默认值：`default`
 

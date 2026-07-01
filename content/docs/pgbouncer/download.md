@@ -16,6 +16,7 @@ categories: [参考]
 
 | File                                                                                                |    Date    |     Size     |                                          SHA256                                           |
 |-----------------------------------------------------------------------------------------------------|:----------:|:------------:|:-----------------------------------------------------------------------------------------:|
+| [pgbouncer-1.25.2.tar.gz](https://www.pgbouncer.org/downloads/files/1.25.2/pgbouncer-1.25.2.tar.gz) | 2026-05-08 | 865371 bytes | [sha256](https://www.pgbouncer.org/downloads/files/1.25.2/pgbouncer-1.25.2.tar.gz.sha256) |
 | [pgbouncer-1.25.1.tar.gz](https://www.pgbouncer.org/downloads/files/1.25.1/pgbouncer-1.25.1.tar.gz) | 2025-12-03 | 864801 bytes | [sha256](https://www.pgbouncer.org/downloads/files/1.25.1/pgbouncer-1.25.1.tar.gz.sha256) |
 | [pgbouncer-1.25.0.tar.gz](https://www.pgbouncer.org/downloads/files/1.25.0/pgbouncer-1.25.0.tar.gz) | 2025-11-09 | 863322 bytes | [sha256](https://www.pgbouncer.org/downloads/files/1.25.0/pgbouncer-1.25.0.tar.gz.sha256) |
 
