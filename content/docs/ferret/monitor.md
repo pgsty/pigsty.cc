@@ -52,7 +52,7 @@ FerretDB 通过内置的 Exporter 在 [`mongo_exporter_port`](/docs/ferret/param
 
 ## 告警规则
 
-Pigsty v4.1 默认规则集中未内置专门的 FerretDB 告警规则（`files/victoria/rules/*.yml`）。您可以基于 `ferretdb_up` 指标按需添加自定义告警，例如：
+Pigsty 默认规则集中未内置专门的 FerretDB 告警规则（`files/victoria/rules/*.yml`）。您可以基于 `ferretdb_up` 指标按需添加自定义告警，例如：
 
 ```yaml
 - alert: FerretDBDown

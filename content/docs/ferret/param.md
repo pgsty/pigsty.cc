@@ -142,7 +142,7 @@ mongo 加密连接的 TLS 监听端口。
 
 mongo 指标收集的 Exporter 端口。
 
-默认值为 `9216`。此端口由 FerretDB 内置的指标导出器使用，向 Prometheus 暴露监控指标。
+默认值为 `9216`。此端口由 FerretDB 内置的指标导出器使用，暴露 Prometheus 格式指标，由 VictoriaMetrics 抓取。
 
 
 ----------------

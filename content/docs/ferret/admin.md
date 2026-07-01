@@ -41,7 +41,7 @@ FerretDB 服务配置了失败自动重启（`Restart=on-failure`），为这个
 - 停止 FerretDB 服务
 - 移除 systemd 服务文件
 - 清理配置文件和证书
-- 从 Prometheus 监控中注销
+- 从 VictoriaMetrics 监控目标中注销
 
 
 ----------------
