@@ -96,7 +96,7 @@ export ETCDCTL_CERT=/etc/etcd/server.crt
 export ETCDCTL_KEY=/etc/etcd/server.key
 ```
 
-Pigsty v4.0 默认启用 RBAC 认证，因此还需要配置用户认证：
+Pigsty 自 v4.0 起为 etcd 默认启用 RBAC 认证，当前版本仍需配置用户认证：
 
 ```bash
 export ETCDCTL_USER="root:$(cat /etc/etcd/etcd.pass)"
@@ -117,7 +117,7 @@ e endpoint status                # 查看端点状态
 
 ## RBAC 认证
 
-Pigsty v4.0 默认启用 etcd 的 RBAC（基于角色的访问控制）认证机制。在集群初始化时，`etcd_auth` 任务会自动创建 root 用户并启用认证。
+Pigsty 自 v4.0 起默认启用 etcd 的 RBAC（基于角色的访问控制）认证机制。在集群初始化时，`etcd_auth` 任务会自动创建 root 用户并启用认证。
 
 **root 用户密码**由 [`etcd_root_password`](/docs/etcd/param#etcd_root_password) 参数指定，默认值为 `Etcd.Root`。密码存储在 `/etc/etcd/etcd.pass` 文件中，权限为 `0640`（root 所有，etcd 组可读）。
 
@@ -152,11 +152,11 @@ etcdctl --user root:YourSecurePassword member list
 
 如果 etcd 集群的成员发生变化（添加或移除成员），我们需要刷新对 etcd 服务端点的引用。目前 Pigsty 中有以下几处 etcd 引用需要更新：
 
-| 配置位置 | 配置文件 | 更新方式 |
-|:--------|:--------|:--------|
-| etcd 成员配置 | `/etc/etcd/etcd.conf` | `./etcd.yml -t etcd_conf` |
-| etcdctl 环境变量 | `/etc/profile.d/etcdctl.sh` | `./etcd.yml -t etcd_config` |
-| Patroni DCS 配置 | `/etc/patroni/patroni.yml` | `./pgsql.yml -t pg_conf` |
+| 配置位置           | 配置文件                           | 更新方式                           |
+|:---------------|:-------------------------------|:-------------------------------|
+| etcd 成员配置      | `/etc/etcd/etcd.conf`          | `./etcd.yml -t etcd_conf`      |
+| etcdctl 环境变量   | `/etc/profile.d/etcdctl.sh`    | `./etcd.yml -t etcd_config`    |
+| Patroni DCS 配置 | `/etc/patroni/patroni.yml`     | `./pgsql.yml -t pg_conf`       |
 | VIP-Manager 配置 | `/etc/default/vip-manager.yml` | `./pgsql.yml -t pg_vip_config` |
 {.full-width}
 

@@ -247,7 +247,7 @@ etcdctl member remove <etcd_server_id>       # 从集群中踢出成员
 
 ## 如何配置 etcd RBAC 认证？
 
-Pigsty v4.0 默认启用 etcd 的 RBAC 认证。root 用户密码由 [`etcd_root_password`](/docs/etcd/param#etcd_root_password) 参数控制，默认值为 `Etcd.Root`。
+Pigsty 自 v4.0 起默认启用 etcd 的 RBAC 认证。root 用户密码由 [`etcd_root_password`](/docs/etcd/param#etcd_root_password) 参数控制，默认值为 `Etcd.Root`。
 
 **在生产环境中，强烈建议修改默认密码**：
 

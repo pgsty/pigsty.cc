@@ -67,7 +67,7 @@ etcd:
 
 五节点的 Etcd 集群可以容忍两个节点的故障，适用于大规模生产环境。
 
-例如，Pigsty 的生产仿真模板：[`prod`](/docs/conf/pro) 中就使用了一个五节点的 Etcd 集群：
+例如，Pigsty 的生产仿真模板：[`ha/simu`](/docs/conf/simu) 中就使用了一个五节点的 Etcd 集群：
 
 ```yaml
 etcd:
@@ -115,12 +115,12 @@ ansible all -f 1 -b -a 'systemctl restart vip-manager' # 重启 vip-manager
 
 ## RBAC 认证配置
 
-Pigsty v4.0 默认启用 etcd 的 RBAC 认证机制。相关配置参数：
+Pigsty 自 v4.0 起默认启用 etcd 的 RBAC 认证机制。相关配置参数：
 
-| 参数 | 说明 | 默认值 |
-|:----|:----|:------|
-| [`etcd_root_password`](/docs/etcd/param#etcd_root_password) | etcd root 用户密码 | `Etcd.Root` |
-| [`pg_etcd_password`](/docs/pgsql/param#pg_etcd_password) | Patroni 连接 etcd 的密码 | 空（使用集群名） |
+| 参数                                                          | 说明                  | 默认值         |
+|:------------------------------------------------------------|:--------------------|:------------|
+| [`etcd_root_password`](/docs/etcd/param#etcd_root_password) | etcd root 用户密码      | `Etcd.Root` |
+| [`pg_etcd_password`](/docs/pgsql/param#pg_etcd_password)    | Patroni 连接 etcd 的密码 | 空（使用集群名）    |
 {.full-width}
 
 **生产环境建议**：

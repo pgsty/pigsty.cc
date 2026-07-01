@@ -22,18 +22,18 @@ ETCD 模块的参数列表，共有 **13** 个参数，分为两个部分：
 
 [`ETCD`](#etcd) 参数组用于 etcd 集群的部署与配置，包括实例标识、集群名称、数据目录、端口以及认证密码。
 
-| 参数                                                    |     类型     |  级别  | 说明                         |
-|:------------------------------------------------------|:----------:|:----:|:---------------------------|
-| [`etcd_seq`](#etcd_seq)                               |   `int`    | `I`  | etcd 实例标识符，必填              |
-| [`etcd_cluster`](#etcd_cluster)                       |  `string`  | `C`  | etcd 集群名，默认固定为 etcd        |
-| [`etcd_learner`](#etcd_learner)                       |   `bool`   | `I/A`| 是否以 learner 模式初始化 etcd 实例？ |
-| [`etcd_data`](#etcd_data)                             |   `path`   | `C`  | etcd 数据目录，默认为 /data/etcd   |
-| [`etcd_port`](#etcd_port)                             |   `port`   | `C`  | etcd 客户端端口，默认为 2379        |
-| [`etcd_peer_port`](#etcd_peer_port)                   |   `port`   | `C`  | etcd 同伴端口，默认为 2380         |
-| [`etcd_init`](#etcd_init)                             |   `enum`   | `C`  | etcd 初始集群状态，新建或已存在         |
-| [`etcd_election_timeout`](#etcd_election_timeout)     |   `int`    | `C`  | etcd 选举超时，默认为 1000ms       |
-| [`etcd_heartbeat_interval`](#etcd_heartbeat_interval) |   `int`    | `C`  | etcd 心跳间隔，默认为 100ms        |
-| [`etcd_root_password`](#etcd_root_password)           | `password` | `G`  | etcd root 用户密码，用于 RBAC 认证  |
+| 参数                                                    |     类型     |  级别   | 说明                         |
+|:------------------------------------------------------|:----------:|:-----:|:---------------------------|
+| [`etcd_seq`](#etcd_seq)                               |   `int`    |  `I`  | etcd 实例标识符，必填              |
+| [`etcd_cluster`](#etcd_cluster)                       |  `string`  |  `C`  | etcd 集群名，默认固定为 etcd        |
+| [`etcd_learner`](#etcd_learner)                       |   `bool`   | `I/A` | 是否以 learner 模式初始化 etcd 实例？ |
+| [`etcd_data`](#etcd_data)                             |   `path`   |  `C`  | etcd 数据目录，默认为 /data/etcd   |
+| [`etcd_port`](#etcd_port)                             |   `port`   |  `C`  | etcd 客户端端口，默认为 2379        |
+| [`etcd_peer_port`](#etcd_peer_port)                   |   `port`   |  `C`  | etcd 同伴端口，默认为 2380         |
+| [`etcd_init`](#etcd_init)                             |   `enum`   |  `C`  | etcd 初始集群状态，新建或已存在         |
+| [`etcd_election_timeout`](#etcd_election_timeout)     |   `int`    |  `C`  | etcd 选举超时，默认为 1000ms       |
+| [`etcd_heartbeat_interval`](#etcd_heartbeat_interval) |   `int`    |  `C`  | etcd 心跳间隔，默认为 100ms        |
+| [`etcd_root_password`](#etcd_root_password)           | `password` |  `G`  | etcd root 用户密码，用于 RBAC 认证  |
 {.full-width}
 
 [`ETCD_REMOVE`](#etcd_remove) 参数组控制 etcd 集群的移除行为，包括防误删保险、数据清理以及软件包卸载。
@@ -224,7 +224,7 @@ etcd 心跳间隔，默认为 `100` (毫秒)。
 
 etcd root 用户密码，用于 RBAC 认证，默认值为 `Etcd.Root`。
 
-Pigsty v4.0 默认启用 etcd 的 RBAC（基于角色的访问控制）认证机制。在集群初始化时，`etcd_auth` 任务会自动创建 root 用户并启用认证。
+Pigsty 自 v4.0 起默认启用 etcd 的 RBAC（基于角色的访问控制）认证机制。在集群初始化时，`etcd_auth` 任务会自动创建 root 用户并启用认证。
 
 **密码存储位置**：
 
@@ -314,10 +314,10 @@ etcd_rm_pkg: false                # 移除时是否卸载 etcd 软件包？
 
 **使用场景**：
 
-| 场景 | 建议值 | 说明 |
-|:----|:------|:-----|
-| 彻底移除 | `true`（默认） | 完全清理，释放磁盘空间 |
-| 仅停止服务 | `false` | 保留数据，便于故障排查或恢复 |
+| 场景    | 建议值        | 说明             |
+|:------|:-----------|:---------------|
+| 彻底移除  | `true`（默认） | 完全清理，释放磁盘空间    |
+| 仅停止服务 | `false`    | 保留数据，便于故障排查或恢复 |
 {.full-width}
 
 ```bash
@@ -352,4 +352,3 @@ etcd_rm_pkg: false                # 移除时是否卸载 etcd 软件包？
 {{% alert title="提示" color="info" %}}
 通常不需要卸载 etcd 软件包。保留软件包可以加快后续的重新部署速度，因为不需要重新下载和安装。
 {{% /alert %}}
-
