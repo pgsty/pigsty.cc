@@ -1,5 +1,5 @@
 ---
-title: "PG Exporter 1.2 中文文档"
+title: "PG Exporter 1.3 中文文档"
 linktitle: "pg_exporter 文档"
 weight: 8400
 icon: fas fa-chart-line
@@ -18,7 +18,7 @@ description: 高级 PostgreSQL 与 PgBouncer 监控指标导出器
 
 | 特性        | 描述                                                         |
 |-----------|------------------------------------------------------------|
-| **全指标覆盖** | 监控 PostgreSQL（10-18+）与 pgBouncer（1.8-1.25+），全指标覆盖          |
+| **全指标覆盖** | 监控 PostgreSQL（10-19+）与 pgBouncer（1.8-1.25+），全指标覆盖          |
 | **声明式配置** | 通过 YAML 配置文件定义自定义指标，精细控制超时、缓存和跳过条件                         |
 | **采集器定制** | 使用声明式 YAML 配置定义自己的指标，支持动态查询规划                              |
 | **自动发现**  | 自动发现并监控 PostgreSQL 实例中的多个数据库                               |
@@ -34,8 +34,8 @@ description: 高级 PostgreSQL 与 PgBouncer 监控指标导出器
 
 ## 版本信息
 
-- 当前稳定版本：[`v1.2.2`](https://github.com/pgsty/pg_exporter/releases/tag/v1.2.2)
-- 默认配置支持：PostgreSQL **10-18+**
+- 当前稳定版本：[`v1.3.0`](https://github.com/pgsty/pg_exporter/releases/tag/v1.3.0)
+- 默认配置支持：PostgreSQL **10-19+**
 - Legacy 配置支持：PostgreSQL **9.1-9.6**（使用 `legacy/` 配置包）
 - PgBouncer 支持：**1.8-1.25+**
 
@@ -50,7 +50,7 @@ description: 高级 PostgreSQL 与 PgBouncer 监控指标导出器
 
 - 本地优先连接：未显式指定 URL 时默认使用 `postgresql:///?sslmode=disable`，适配同机部署场景
 - 声明式采集：指标由 YAML 采集器定义驱动，行为可通过 `ttl`、`timeout`、`tags`、`fatal` 精细控制
-- 动态规划：运行时依据版本、角色、扩展与标签自动选择采集器分支
+- 动态规划：运行时依据版本、角色、扩展与标签自动选择合适的采集器分支
 - 可持续运行：默认非阻塞启动，目标不可达时也可先启动 HTTP 端点，待数据库恢复后自动恢复采集
 - 热重载能力：支持 `POST/GET /reload` 与 `SIGHUP` 信号重载（非 Windows 额外支持 `SIGUSR1`）
 - 健康探针分离：健康端点基于后台探测缓存，避免每次探针请求都阻塞数据库
@@ -95,10 +95,11 @@ sudo apt install -y pg-exporter
 {{< /tab >}}
 
 {{< tab header="二进制" lang="bash" >}}
-wget https://github.com/pgsty/pg_exporter/releases/download/v1.2.2/pg_exporter-1.2.2.linux-amd64.tar.gz
-tar -xf pg_exporter-1.2.2.linux-amd64.tar.gz
-sudo install pg_exporter-1.2.2.linux-amd64/pg_exporter /usr/bin/
-sudo install pg_exporter-1.2.2.linux-amd64/pg_exporter.yml /etc/pg_exporter.yml
+VERSION=$(curl -fsSL https://api.github.com/repos/pgsty/pg_exporter/releases/latest | sed -n 's/.*"tag_name": "v\([^"]*\)".*/\1/p')
+wget "https://github.com/pgsty/pg_exporter/releases/download/v${VERSION}/pg_exporter-${VERSION}.linux-amd64.tar.gz"
+tar -xf "pg_exporter-${VERSION}.linux-amd64.tar.gz"
+sudo install "pg_exporter-${VERSION}.linux-amd64/pg_exporter" /usr/bin/
+sudo install "pg_exporter-${VERSION}.linux-amd64/pg_exporter.yml" /etc/pg_exporter.yml
 {{< /tab >}}
 
 {{< tab header="源码" lang="bash" >}}

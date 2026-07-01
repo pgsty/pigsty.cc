@@ -26,25 +26,27 @@ curl -fsSL https://repo.pigsty.io/get | bash; cd ~/pigsty;
 
 您也可以直接从 [GitHub 发布页面](https://github.com/pgsty/pg_exporter/releases/latest) 下载 `pg_exporter` 软件包（`RPM`/`DEB`/Tarball）：
 
-**v1.2.2 发布文件：**
+**v1.3.0 发布文件：**
 
 | 类型                      | 文件                                                                                                                                               |
 |-------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------|
-| DEB (amd64)             | [pg-exporter_1.2.2-1_amd64.deb](https://github.com/pgsty/pg_exporter/releases/download/v1.2.2/pg-exporter_1.2.2-1_amd64.deb)                     |
-| DEB (arm64)             | [pg-exporter_1.2.2-1_arm64.deb](https://github.com/pgsty/pg_exporter/releases/download/v1.2.2/pg-exporter_1.2.2-1_arm64.deb)                     |
-| DEB (ppc64le)           | [pg-exporter_1.2.2-1_ppc64le.deb](https://github.com/pgsty/pg_exporter/releases/download/v1.2.2/pg-exporter_1.2.2-1_ppc64le.deb)                 |
-| RPM (aarch64)           | [pg_exporter-1.2.2-1.aarch64.rpm](https://github.com/pgsty/pg_exporter/releases/download/v1.2.2/pg_exporter-1.2.2-1.aarch64.rpm)                 |
-| RPM (x86_64)            | [pg_exporter-1.2.2-1.x86_64.rpm](https://github.com/pgsty/pg_exporter/releases/download/v1.2.2/pg_exporter-1.2.2-1.x86_64.rpm)                   |
-| RPM (ppc64le)           | [pg_exporter-1.2.2-1.ppc64le.rpm](https://github.com/pgsty/pg_exporter/releases/download/v1.2.2/pg_exporter-1.2.2-1.ppc64le.rpm)                 |
-| Tarball (Linux amd64)   | [pg_exporter-1.2.2.linux-amd64.tar.gz](https://github.com/pgsty/pg_exporter/releases/download/v1.2.2/pg_exporter-1.2.2.linux-amd64.tar.gz)       |
-| Tarball (Linux arm64)   | [pg_exporter-1.2.2.linux-arm64.tar.gz](https://github.com/pgsty/pg_exporter/releases/download/v1.2.2/pg_exporter-1.2.2.linux-arm64.tar.gz)       |
-| Tarball (Linux ppc64le) | [pg_exporter-1.2.2.linux-ppc64le.tar.gz](https://github.com/pgsty/pg_exporter/releases/download/v1.2.2/pg_exporter-1.2.2.linux-ppc64le.tar.gz)   |
-| Tarball (macOS amd64)   | [pg_exporter-1.2.2.darwin-amd64.tar.gz](https://github.com/pgsty/pg_exporter/releases/download/v1.2.2/pg_exporter-1.2.2.darwin-amd64.tar.gz)     |
-| Tarball (macOS arm64)   | [pg_exporter-1.2.2.darwin-arm64.tar.gz](https://github.com/pgsty/pg_exporter/releases/download/v1.2.2/pg_exporter-1.2.2.darwin-arm64.tar.gz)     |
-| Tarball (Windows amd64) | [pg_exporter-1.2.2.windows-amd64.tar.gz](https://github.com/pgsty/pg_exporter/releases/download/v1.2.2/pg_exporter-1.2.2.windows-amd64.tar.gz)   |
+| DEB (amd64)             | [pg-exporter_1.3.0-1_amd64.deb](https://github.com/pgsty/pg_exporter/releases/download/v1.3.0/pg-exporter_1.3.0-1_amd64.deb)                     |
+| DEB (arm64)             | [pg-exporter_1.3.0-1_arm64.deb](https://github.com/pgsty/pg_exporter/releases/download/v1.3.0/pg-exporter_1.3.0-1_arm64.deb)                     |
+| DEB (ppc64le)           | [pg-exporter_1.3.0-1_ppc64le.deb](https://github.com/pgsty/pg_exporter/releases/download/v1.3.0/pg-exporter_1.3.0-1_ppc64le.deb)                 |
+| RPM (aarch64)           | [pg_exporter-1.3.0-1.aarch64.rpm](https://github.com/pgsty/pg_exporter/releases/download/v1.3.0/pg_exporter-1.3.0-1.aarch64.rpm)                 |
+| RPM (x86_64)            | [pg_exporter-1.3.0-1.x86_64.rpm](https://github.com/pgsty/pg_exporter/releases/download/v1.3.0/pg_exporter-1.3.0-1.x86_64.rpm)                   |
+| RPM (ppc64le)           | [pg_exporter-1.3.0-1.ppc64le.rpm](https://github.com/pgsty/pg_exporter/releases/download/v1.3.0/pg_exporter-1.3.0-1.ppc64le.rpm)                 |
+| Tarball (Linux amd64)   | [pg_exporter-1.3.0.linux-amd64.tar.gz](https://github.com/pgsty/pg_exporter/releases/download/v1.3.0/pg_exporter-1.3.0.linux-amd64.tar.gz)       |
+| Tarball (Linux arm64)   | [pg_exporter-1.3.0.linux-arm64.tar.gz](https://github.com/pgsty/pg_exporter/releases/download/v1.3.0/pg_exporter-1.3.0.linux-arm64.tar.gz)       |
+| Tarball (Linux ppc64le) | [pg_exporter-1.3.0.linux-ppc64le.tar.gz](https://github.com/pgsty/pg_exporter/releases/download/v1.3.0/pg_exporter-1.3.0.linux-ppc64le.tar.gz)   |
+| Tarball (macOS amd64)   | [pg_exporter-1.3.0.darwin-amd64.tar.gz](https://github.com/pgsty/pg_exporter/releases/download/v1.3.0/pg_exporter-1.3.0.darwin-amd64.tar.gz)     |
+| Tarball (macOS arm64)   | [pg_exporter-1.3.0.darwin-arm64.tar.gz](https://github.com/pgsty/pg_exporter/releases/download/v1.3.0/pg_exporter-1.3.0.darwin-arm64.tar.gz)     |
+| Tarball (Windows amd64) | [pg_exporter-1.3.0.windows-amd64.tar.gz](https://github.com/pgsty/pg_exporter/releases/download/v1.3.0/pg_exporter-1.3.0.windows-amd64.tar.gz)   |
 {.full-width}
 
 您可以直接使用操作系统的包管理器（`rpm`/`dpkg`）安装，或者将二进制文件放入 `$PATH` 中。当前归档文件还会附带 `pg_exporter.yml`、`package/pg_exporter.default`、`package/pg_exporter.service` 与 `LICENSE`，便于按 tarball 手工部署。
+
+完整 SHA256 校验信息见发布页面中的 `checksums.txt`；具体版本的校验和也会在 [发布注记](/docs/pg_exporter/release/) 中归档。
 
 
 --------
@@ -134,12 +136,12 @@ docker run -d \
 
 ## 兼容性
 
-当前默认配置支持 PostgreSQL 10 及以上版本。
+当前默认配置支持 PostgreSQL 10-19+。
 对于 EOL 旧版本 PostgreSQL，可以使用仓库内置的 `legacy/` 配置包进行兼容监控。
 
 | PostgreSQL 版本 | 支持状态                           |
 |---------------|--------------------------------|
-| 10 ~ 18+      | ✅ 完全支持（默认配置）                   |
+| 10 ~ 19+      | ✅ 完全支持（默认配置）                   |
 | 9.1 ~ 9.6     | ⚠️ 使用 `legacy/pg_exporter.yml` |
 | 9.0 及更早       | ❌ 不支持                          |
 {.full-width}

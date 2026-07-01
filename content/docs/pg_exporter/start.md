@@ -15,7 +15,8 @@ PG Exporter 是一款先进的 PostgreSQL 与 pgBouncer 指标导出器，专为
 
 在开始之前，请确保您具备：
 
-- PostgreSQL 10+ 或 pgBouncer 1.8+ 实例用于监控
+- PostgreSQL 10-19+ 或 pgBouncer 1.8-1.25+ 实例用于监控
+- PostgreSQL 9.1-9.6 旧实例需改用 `legacy/` 配置包
 - 具有适当监控权限的用户账户
 - Prometheus 兼容系统（用于指标抓取）
 - 对 PostgreSQL 连接字符串的基本了解
@@ -23,10 +24,9 @@ PG Exporter 是一款先进的 PostgreSQL 与 pgBouncer 指标导出器，专为
 
 --------
 
-## 版本信息
+## 兼容性
 
-- 当前稳定版本：[`v1.2.2`](https://github.com/pgsty/pg_exporter/releases/tag/v1.2.2)
-- 默认配置支持 PostgreSQL 10-18+；PostgreSQL 9.1-9.6 需使用 `legacy/` 配置包
+- 默认配置支持 PostgreSQL 10-19+；PostgreSQL 9.1-9.6 需使用 `legacy/` 配置包
 - 支持 pgBouncer 1.8-1.25+
 
 
@@ -48,11 +48,12 @@ PG Exporter 是一款先进的 PostgreSQL 与 pgBouncer 指标导出器，专为
 最快速地启动 PG Exporter：
 
 ```bash
-# 示例：Linux amd64 安装（其他平台请替换对应发布文件）
-wget https://github.com/pgsty/pg_exporter/releases/download/v1.2.2/pg_exporter-1.2.2.linux-amd64.tar.gz
-tar -xf pg_exporter-1.2.2.linux-amd64.tar.gz
-sudo install pg_exporter-1.2.2.linux-amd64/pg_exporter /usr/bin/
-sudo install pg_exporter-1.2.2.linux-amd64/pg_exporter.yml /etc/pg_exporter.yml
+# 示例：Linux amd64 安装（其他平台请替换对应平台文件）
+VERSION=$(curl -fsSL https://api.github.com/repos/pgsty/pg_exporter/releases/latest | sed -n 's/.*"tag_name": "v\([^"]*\)".*/\1/p')
+wget "https://github.com/pgsty/pg_exporter/releases/download/v${VERSION}/pg_exporter-${VERSION}.linux-amd64.tar.gz"
+tar -xf "pg_exporter-${VERSION}.linux-amd64.tar.gz"
+sudo install "pg_exporter-${VERSION}.linux-amd64/pg_exporter" /usr/bin/
+sudo install "pg_exporter-${VERSION}.linux-amd64/pg_exporter.yml" /etc/pg_exporter.yml
 
 # 使用默认 URL（本地优先）运行
 pg_exporter

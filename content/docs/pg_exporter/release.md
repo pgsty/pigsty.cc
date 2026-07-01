@@ -5,10 +5,11 @@ icon: fa-solid fa-clipboard-list
 description: PG Exporter 版本发布历史
 ---
 
-`pg_exporter` 的最新稳定版本是 [v1.2.2](https://github.com/pgsty/pg_exporter/releases/tag/v1.2.2)
+`pg_exporter` 的最新稳定版本是 [v1.3.0](https://github.com/pgsty/pg_exporter/releases/tag/v1.3.0)
 
 |       版本        |     日期     | 摘要                                           |                               GitHub                               |
 |:---------------:|:----------:|----------------------------------------------|:------------------------------------------------------------------:|
+| [v1.3.0](#v130) | 2026-06-24 | PostgreSQL 19 支持，新增 PG19 采集器与分支              | [v1.3.0](https://github.com/pgsty/pg_exporter/releases/tag/v1.3.0) |
 | [v1.2.2](#v122) | 2026-04-14 | 例行更新到 Go 1.26.2，无功能改动                        | [v1.2.2](https://github.com/pgsty/pg_exporter/releases/tag/v1.2.2) |
 | [v1.2.1](#v121) | 2026-03-21 | 配置样式统一，Go 1.26.1 更新                          | [v1.2.1](https://github.com/pgsty/pg_exporter/releases/tag/v1.2.1) |
 | [v1.2.0](#v120) | 2026-02-12 | 热重载与非阻塞启动，新增 PG9.1-9.6 legacy 支持             | [v1.2.0](https://github.com/pgsty/pg_exporter/releases/tag/v1.2.0) |
@@ -40,6 +41,51 @@ description: PG Exporter 版本发布历史
 | [v0.0.2](#v002) | 2019-12-09 | 早期测试版本                                       | [v0.0.2](https://github.com/pgsty/pg_exporter/releases/tag/v0.0.2) |
 | [v0.0.1](#v001) | 2019-12-06 | 初始版本，支持 PgBouncer 模式                         | [v0.0.1](https://github.com/pgsty/pg_exporter/releases/tag/v0.0.1) |
 {.full-width}
+
+
+--------
+
+## v1.3.0
+
+`v1.3.0` 提供对 PostgreSQL 19 新指标的支持，同时刷新默认采集器包、构建链和配置覆盖测试。
+
+**变更摘要：**
+
+- 默认支持范围从 **PostgreSQL 10-18+** 扩展到 **10-19+**
+- 默认配置包包含 **57** 个 `config/*.yml` 定义文件
+- 构建依赖更新到 Go `1.26.4`、`lib/pq v1.12.3`、Prometheus client `v1.23.2`、exporter-toolkit `v0.16.0`。
+- `pg_recovery_state`：在恢复节点上采集 `pg_stat_recovery`，暴露提升触发、回放 LSN、时间线、恢复事务时间与暂停状态。
+- `pg_lock_stat`：采集 PG19 `pg_stat_lock`，按 `locktype` 暴露等待次数、等待时间和 fast-path 溢出次数。
+- `pg_vacuum_score`：采集 `pg_stat_autovacuum_scores` 当前数据库摘要，暴露最大 autovacuum 分数和候选表数量。
+- `pg_wal_19`：在 PG19 上暴露 `wal_fpi_bytes`，指标名为 `pg_wal_fpi_bytes`。
+- `pg_sub_19`：基于 `pg_stat_subscription_stats` 适配序列同步与逻辑复制冲突统计，继续提供兼容旧仪表盘的 `sync_error_count`。
+- `pg_recv`：PG13+ WAL receiver 分支识别 PG19 `connecting` 状态。
+- `pg_slot`：识别 PG19 replication slot `idle_timeout` 失效原因。
+- `pg_db_confl`：改为显式列清单，避免未来视图新增列被意外导出。
+- `pg_backup`、`pg_vacuuming`、`pg_clustering` 继续复用现有稳定分支，避免为低价值 PG19 字段改变已有指标面。
+
+
+**校验和**
+
+https://github.com/pgsty/pg_exporter/releases/download/v1.3.0/checksums.txt
+
+```bash
+c88c4ad7cde10531d75ec98fa536b2e7f531639f55c3b3c9866ee76934a4e2b2  checksums.txt
+dfc6d517300687a382557e6d77af1ecb513bdde2e961d01ca46efa008ae15569  pg-exporter_1.3.0-1_amd64.deb
+3d2ff642d0bb3657b28eb7c4b30bacc8ef9e4cbd057c870e6ec6817b47ac8092  pg-exporter_1.3.0-1_arm64.deb
+4cfe043eb193780515a1e00ab93250dd44ca0728b35cb037ed165c70c89b6b5a  pg-exporter_1.3.0-1_ppc64le.deb
+3ae4f8c554242ae52c4ba0fa07a9d95b702f72938ce55e8456dd97242cc46faf  pg_exporter-1.3.0-1.aarch64.rpm
+71a0023383170b4ef3c243d9bf08d530b819fa891fa784e87c74b2a55cb426ec  pg_exporter-1.3.0-1.ppc64le.rpm
+316a97ccb2df9a02de99dda33826857ec32bbd6fd874ffb950625bc064d62496  pg_exporter-1.3.0-1.x86_64.rpm
+4ab312f27f0ded7f0ff5591866a86311d13041fef3a015e92f44fcf4a2284ccd  pg_exporter-1.3.0.darwin-amd64.tar.gz
+2b20eb7b46c0790a8524f1c00a22ab57739bd60fd89ee947f6c2ba14e6a0d6bb  pg_exporter-1.3.0.darwin-arm64.tar.gz
+7a2a8ce818f30260d1e7267d0b9e1fd5b3cbd569d55ad184fc9d6fb3801f3ad7  pg_exporter-1.3.0.linux-amd64.tar.gz
+696619d19efbcf33f4afbae9748e72897289d2b7f772509cd6d465c9e818066d  pg_exporter-1.3.0.linux-arm64.tar.gz
+0c16ac4a912f328be90e973b5123a272c2747759be9f56bacb5542653226475e  pg_exporter-1.3.0.linux-ppc64le.tar.gz
+aa3724f4e8aeb732de18b7cb416283cbc2e94b9f511ec4b94e703792e8e8b10d  pg_exporter-1.3.0.windows-amd64.tar.gz
+```
+
+https://github.com/pgsty/pg_exporter/releases/tag/v1.3.0
 
 
 --------
@@ -245,7 +291,7 @@ https://github.com/pgsty/pg_exporter/releases/tag/v1.1.1
 
 **校验和**
 
-https://github.com/pgsty/pg_exporter/releases/download/v1.0.3/checksums.txt
+https://github.com/pgsty/pg_exporter/releases/download/v1.1.0/checksums.txt
 
 ```bash
 9c65f43e76213bb8a49d1eab2c76a27d9ab694e67bc79f0ad12769ea362b5ca2  pg-exporter_1.1.0-1_amd64.deb
