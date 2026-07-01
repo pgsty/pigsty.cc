@@ -21,10 +21,10 @@ MySQL 模块本身目前仅在 Pigsty 专业版中提供 Beta 试用预览，注
 
 ## 安装
 
-您可以直接使用以下命令，在 Pigsty 管理的节点上，直接从官方软件源安装 MySQL 8.0 (EL 系统)
+您可以直接使用以下命令，在 Pigsty 管理的节点上，从官方软件源安装 MySQL（EL 使用 MySQL 8.4 社区仓库，Debian/Ubuntu 使用 MySQL 8.0 APT 仓库）：
 
 ```bash
-# el 7,8,9
+# el9
 ./node.yml -t node_install -e '{"node_repo_modules":"node,mysql","node_packages":["mysql-community-server,mysql-community-client"]}'
 
 # debian / ubuntu
@@ -101,7 +101,7 @@ mysql_pass     : write mysql password
 mysql_db       : create mysql biz database
 mysql_user     : create mysql biz user
 mysql_exporter : launch mysql exporter
-mysql_register : register mysql service to prometheus
+mysql_register : register mysql service to VictoriaMetrics
 ```
 
 
@@ -182,6 +182,4 @@ mysql_parameters: {}                 # extra parameters for mysqld
 mysql_default_parameters:            # default parameters for mysqld
 
 ```
-
-
 
