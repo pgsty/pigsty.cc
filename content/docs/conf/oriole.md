@@ -16,8 +16,9 @@ categories: [参考]
 - 配置名称： `oriole`
 - 节点数量： 单节点
 - 配置说明：OrioleDB 无膨胀存储引擎配置
+- PostgreSQL 大版本：`16`、`17`、`18`
 - 适用系统：`el8`, `el9`, `el10`, `d12`, `d13`, `u22`, `u24`, `u26`
-- 适用架构：`x86_64`
+- 适用架构：`x86_64`, `aarch64`
 - 相关配置：[`meta`](/docs/conf/meta/)
 
 启用方式：
@@ -71,4 +72,4 @@ CREATE TABLE orders (
 - OrioleDB 支持 PostgreSQL 16、17、18，默认模板使用 PG18，可通过 `./configure -c oriole -v 16/17/18` 指定大版本
 - 需要将 `orioledb` 添加到 `shared_preload_libraries`
 - 部分 PostgreSQL 特性可能不完全支持
-- 不支持 ARM64 架构
+- 请为所选 PostgreSQL 大版本与 OS 架构安装匹配的 OrioleDB 包
