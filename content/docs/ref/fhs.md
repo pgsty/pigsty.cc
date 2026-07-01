@@ -232,13 +232,13 @@ rsync -avz ./ meta-2:~/pigsty
 ## Postgres FHS
 
 
-以下参数与 PostgreSQL 数据库目录结构相关：
+以下参数和内部变量均与 PostgreSQL 数据库目录结构相关：
 
 * [**`pg_dbsu_home`**](/docs/pgsql/param#pg_dbsu_home)： Postgres 默认用户的家目录，默认为`/var/lib/pgsql`
 * [**`pg_bin_dir`**](/docs/pgsql/param#pg_bin_dir)： Postgres 二进制目录，默认为`/usr/pgsql/bin/`
-* [**`pg_data`**](/docs/pgsql/param#pg_data)：Postgres 数据库目录，默认为`/pg/data`
 * [**`pg_fs_main`**](/docs/pgsql/param#pg_fs_main)：Postgres 主数据目录，默认为`/data/postgres`
 * [**`pg_fs_backup`**](/docs/pgsql/param#pg_fs_backup)：Postgres 备份盘挂载点，默认为 `/data/backups`（可选，也可以选择备份到主数据盘上的子目录）
+* [**`pg_data`**](/docs/pgsql/param#pg_data)：内部变量，固定表示 Postgres 数据目录软链 `/pg/data`
 * **`pg_cluster_dir`**：派生变量，`{{ pg_fs_main }}/{{ pg_cluster }}-{{ pg_version }}`
 * **`pg_backup_dir`**：派生变量，`{{ pg_fs_backup }}/{{ pg_cluster }}-{{ pg_version }}`
 

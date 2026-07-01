@@ -37,5 +37,5 @@ categories: [参考]
 
 ## 是否有计划升级到 Valkey 或最新版本？
 
-当前 Pigsty v4.1 仍以 Redis 7.2 BSD 分支作为默认实现，尚未切换到 Redis 新许可证版本或 Valkey 作为默认组件。
+当前 Pigsty v4.x 仍以 Redis 7.2 BSD 分支作为默认实现，尚未切换到 Redis 新许可证版本或 Valkey 作为默认组件。
 不同操作系统渠道里的 Redis 小版本可能不同（例如 APT 渠道可见 7.2.7），请以您实际使用仓库中的包版本为准。
