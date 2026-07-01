@@ -17,7 +17,7 @@ Environment Setup:
   pig build repo                   # init build repo (=repo set, with remove+update)
   pig build tool  [mini|full|...]  # init build toolset
   pig build rust  [-y]             # install Rust toolchain
-  pig build pgrx  [-v <ver>]       # install & init pgrx (0.18.0)
+  pig build pgrx  [-v <ver>]       # install & init pgrx (0.19.1)
   pig build proxy [id@host:port ]  # init build proxy (optional)
 
 Package Building:
@@ -164,7 +164,7 @@ pig build rust -y                # 强制重新安装 Rust 工具链
 安装并初始化 PGRX（Rust 的 PostgreSQL 扩展框架）。
 
 ```bash
-pig build pgrx                   # 安装最新稳定版 (0.18.0)
+pig build pgrx                   # 安装最新稳定版 (0.19.1)
 pig build pgrx -v 0.15.0         # 安装特定版本
 ```
 
@@ -340,16 +340,16 @@ cargo pgrx init
 
 ### 常见构建的扩展
 
-| 扩展 | 类型 | 构建时间 | 复杂度 | 特殊要求 |
-|:---|:---:|:---|:---|:---|
-| pg_repack | C | 快速 | 简单 | 无 |
-| pg_partman | SQL/PLPGSQL | 快速 | 简单 | 无 |
-| citus | C | 中等 | 中等 | 无 |
-| timescaledb | C | 慢 | 复杂 | CMake |
-| postgis | C | 非常慢 | 复杂 | GDAL、GEOS、Proj |
-| pg_duckdb | C++ | 中等 | 中等 | C++17 编译器 |
-| pgroonga | C | 中等 | 中等 | Groonga 库 |
-| pgvector | C | 快速 | 简单 | 无 |
-| plpython3 | C | 中等 | 中等 | Python 开发 |
-| pgrx 扩展 | Rust | 慢 | 复杂 | Rust、PGRX |
+| 扩展          |     类型      | 构建时间 | 复杂度 | 特殊要求           |
+|:------------|:-----------:|:-----|:----|:---------------|
+| pg_repack   |      C      | 快速   | 简单  | 无              |
+| pg_partman  | SQL/PLPGSQL | 快速   | 简单  | 无              |
+| citus       |      C      | 中等   | 中等  | 无              |
+| timescaledb |      C      | 慢    | 复杂  | CMake          |
+| postgis     |      C      | 非常慢  | 复杂  | GDAL、GEOS、Proj |
+| pg_duckdb   |     C++     | 中等   | 中等  | C++17 编译器      |
+| pgroonga    |      C      | 中等   | 中等  | Groonga 库      |
+| pgvector    |      C      | 快速   | 简单  | 无              |
+| plpython3   |      C      | 中等   | 中等  | Python 开发      |
+| pgrx 扩展     |    Rust     | 慢    | 复杂  | Rust、PGRX      |
 {.full-width}

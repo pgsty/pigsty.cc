@@ -44,18 +44,18 @@ $ curl -fsSL https://repo.pigsty.cc/pig | bash
 [INFO] kernel = Linux
 [INFO] machine = x86_64
 [INFO] package = deb
-[INFO] pkg_url = https://repo.pigsty.cc/pkg/pig/v1.4.1/pig_1.4.1-1_amd64.deb
-[INFO] download = /tmp/pig_1.4.1-1_amd64.deb
-[INFO] downloading pig v1.4.1
-curl -fSL https://repo.pigsty.cc/pkg/pig/v1.4.1/pig_1.4.1-1_amd64.deb -o /tmp/pig_1.4.1-1_amd64.deb
+[INFO] pkg_url = https://repo.pigsty.cc/pkg/pig/v1.5.0/pig_1.5.0-1_amd64.deb
+[INFO] download = /tmp/pig_1.5.0-1_amd64.deb
+[INFO] downloading pig v1.5.0
+curl -fSL https://repo.pigsty.cc/pkg/pig/v1.5.0/pig_1.5.0-1_amd64.deb -o /tmp/pig_1.5.0-1_amd64.deb
 ######################################################################## 100.0%
-[INFO] md5sum = 3fe640c3b6678fe4cef527a58dca54285f15d56c8fe0b3c2ed8b6879e1e91d41
-[INFO] installing: dpkg -i /tmp/pig_1.4.1-1_amd64.deb
+[INFO] md5sum = 566e06f6da1fe9d635c41258d20cd9ff10de4e6e74b3b41ba2c6204ba22743c8
+[INFO] installing: dpkg -i /tmp/pig_1.5.0-1_amd64.deb
 (Reading database ... 166001 files and directories currently installed.)
-Preparing to unpack /tmp/pig_1.4.1-1_amd64.deb ...
-Unpacking pig (1.4.1-1) ...
-Setting up pig (1.4.1-1) ...
-[INFO] pig v1.4.1 installed successfully
+Preparing to unpack /tmp/pig_1.5.0-1_amd64.deb ...
+Unpacking pig (1.5.0-1) ...
+Setting up pig (1.5.0-1) ...
+[INFO] pig v1.5.0 installed successfully
 check https://pigsty.io/ext/ for details
 ```
 
@@ -67,7 +67,7 @@ PIG 是一个由 Go 编写的二进制程序，默认安装路径为 `/usr/bin/p
 
 ```bash
 $ pig version
-pig version 1.4.1 linux/amd64
+pig version 1.5.0 linux/amd64
 ```
 
 使用 `pig status` 命令，会打印当前环境的状态，操作系统代码，PG 的安装情况，仓库的可访问性与延迟。
@@ -76,7 +76,7 @@ pig version 1.4.1 linux/amd64
 $ pig status
 
 # [Configuration] ================================
-Pig Version      : 1.4.1
+Pig Version      : 1.5.0
 Pig Config       : /home/vagrant/.pig/config.yml
 Log Level        : info
 Log Path         : stderr
@@ -116,10 +116,10 @@ Latest Pigsty Ver :  v4.3.0
 
 ## 自动化建议
 
-对于生产环境恢复任务，建议先使用 `--dry-run` 预览 PITR 执行计划，再决定是否实际执行：
+对于生产环境恢复任务，建议先使用 `--plan` 预览 PITR 执行计划，再决定是否实际执行：
 
 ```bash
-pig pitr -d --dry-run         # 仅预览恢复步骤，不执行
+pig pitr -d --plan            # 仅预览恢复步骤，不执行
 pig pitr -d -y                # 跳过确认（自动化场景）
 ```
 
@@ -145,7 +145,7 @@ test_decoding                   available  -           ETL    --s--x  PostgreSQL
 pgoutput                        available  -           ETL    --s---  PostgreSQL    CONTRIB  14-18  postgresql-18                         Logical Replication output plugin
 
 
-(510 Rows) (Status: installed, available, not avail | Flags: b = HasBin, d = HasDDL, s = HasLib, l = NeedLoad, t = Trusted, r = Relocatable, x = Unknown)
+(531 Rows) (Status: installed, available, not avail | Flags: b = HasBin, d = HasDDL, s = HasLib, l = NeedLoad, t = Trusted, r = Relocatable, x = Unknown)
 ```
 
 所有的扩展元数据都在一份名为 [`extension.csv`](https://github.com/pgsty/pig/blob/main/cli/ext/assets/extension.csv) 的数据文件中定义，
