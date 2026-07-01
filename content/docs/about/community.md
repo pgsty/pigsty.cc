@@ -18,7 +18,7 @@ categories: [参考]
 
 [![Star History Chart](https://api.star-history.com/svg?repos=pgsty/pigsty&type=Date)](https://star-history.com/#pgsty/pigsty&Date)
 
-请注意，关于 Pigsty 文档的问题，请在 [github.com/Vonng/pigsty.cc](https://github.com/Vonng/pigsty.cc) 仓库中提交 [Issue](https://github.com/Vonng/pigsty.cc/issues)。
+请注意，关于 Pigsty 文档的问题，请在 [github.com/pgsty/pigsty.cc](https://github.com/pgsty/pigsty.cc) 仓库中提交 [Issue](https://github.com/pgsty/pigsty.cc/issues)。
 
 
 ---------------
@@ -126,4 +126,3 @@ journalctl -u <service name>
 **有什么其他信息是我们需要知道的吗？**
 
 > 您提供的信息与上下文越丰富，我们越有可能帮助您解决问题。
-

@@ -53,7 +53,7 @@ Pigsty 的文档与网站（包括但不限于：[**pigsty.cc**](https://pigsty.
 
 以下为 Pigsty 项目所使用或相关的开源软件及其开源协议。
 
-510 个 PostgreSQL 扩展插件的许可证请参考 [**PostgreSQL 扩展许可证清单**](/ext/license/)。
+531 个 PostgreSQL 扩展插件的许可证请参考 [**PostgreSQL 扩展许可证清单**](/ext/license/)。
 
 |    模块    |                               软件名称                                | 许可证                                                                                                       | 必要性，用途与说明                       |  必要性   |
 |:--------:|:-----------------------------------------------------------------:|-----------------------------------------------------------------------------------------------------------|---------------------------------|:------:|
@@ -61,7 +61,7 @@ Pigsty 的文档与网站（包括但不限于：[**pigsty.cc**](https://pigsty.
 |  PGSQL   |       [patroni](https://patroni.readthedocs.io/en/latest/)        | [MIT License](https://github.com/zalando/patroni/blob/master/LICENSE)                                     | 提供 PostgreSQL 高可用能力             | **必选** |
 |   ETCD   |                     [etcd](https://etcd.io/)                      | [Apache License 2.0](https://github.com/etcd-io/etcd/blob/main/LICENSE)                                   | 提供高可用共识与分布式配置存储                 | **必选** |
 |  INFRA   |   [Ansible](https://docs.ansible.com/ansible/latest/index.html)   | [GPLv3](https://github.com/ansible/ansible/blob/devel/COPYING)                                            | 管控工具，执行剧本，发起管控命令                | **必选** |
-|  INFRA   |              [Nginx](https://github.com/nginx/nginx)              | [BSD-2](https://github.com/nginx/nginx/blob/master/LICENSE)                                               | 暴露 Web 系统界面，提供本地软件源               |   建议   |
+|  INFRA   |              [Nginx](https://github.com/nginx/nginx)              | [BSD-2](https://github.com/nginx/nginx/blob/master/LICENSE)                                               | 暴露 Web 系统界面，提供本地软件源             |   建议   |
 |  PGSQL   |               [pgbackrest](https://pgbackrest.org/)               | [MIT License](https://github.com/pgbackrest/pgbackrest/blob/main/LICENSE)                                 | 提供 PITR 备份/恢复管理能力               |   建议   |
 |  PGSQL   |       [pgbouncer](https://www.pgbouncer.org/community.html)       | [ISC License](https://github.com/pgbouncer/pgbouncer/blob/master/COPYRIGHT)                               | 提供 PostgreSQL 连接池化能力            |   建议   |
 |  PGSQL   | [vip-manager](https://github.com/cybertec-postgresql/vip-manager) | [BSD 2-Clause License](https://github.com/cybertec-postgresql/vip-manager/blob/master/LICENSE)            | 提供自动将 L2 VIP 绑定到 PG 集群主库的能力     |   建议   |
@@ -71,14 +71,14 @@ Pigsty 的文档与网站（包括但不限于：[**pigsty.cc**](https://pigsty.
 |  INFRA   |                  [Grafana](https://grafana.com/)                  | [AGPLv3](https://github.com/grafana/grafana/blob/main/LICENSE)                                            | 提供数据库可视化平台                      |   建议   |
 |  INFRA   |          [VictoriaMetrics](https://victoriametrics.com/)          | [Apache License 2.0](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/master/LICENSE)              | 提供监控时序数据库存储，指标采集与监控告警           |   建议   |
 |  INFRA   |           [VictoriaLogs](https://victoriametrics.com/)            | [Apache License 2.0](https://github.com/VictoriaMetrics/VictoriaMetrics/blob/master/LICENSE)              | 提供集中式日志收集存储查询平台                 |   建议   |
-|  INFRA   |       [DNSMASQ](https://thekelleys.org.uk/dnsmasq/doc.html)       | [GPLv2](https://thekelleys.org.uk/dnsmasq/doc.html) / [GPLv3](https://thekelleys.org.uk/dnsmasq/doc.html) | 提供 DNS 解析服务，提供集群名查询能力             |   建议   |
-|  MINIO   |                     [MinIO](https://min.io/)                      | [AGPLv3](https://github.com/minio/minio/blob/master/LICENSE)                                              | 提供 S3 兼容的对象存储服务                   |   可选   |
+|  INFRA   |       [DNSMASQ](https://thekelleys.org.uk/dnsmasq/doc.html)       | [GPLv2](https://thekelleys.org.uk/dnsmasq/doc.html) / [GPLv3](https://thekelleys.org.uk/dnsmasq/doc.html) | 提供 DNS 解析服务，提供集群名查询能力           |   建议   |
+|  MINIO   |                     [MinIO](https://min.io/)                      | [AGPLv3](https://github.com/minio/minio/blob/master/LICENSE)                                              | 提供 S3 兼容的对象存储服务                 |   可选   |
 |   NODE   |             [keepalived](https://www.keepalived.org/)             | [MIT License](https://github.com/umich-arc/keepalived/blob/master/LICENSE)                                | 提供绑定在节点集群上的 VIP                 |   可选   |
-|  REDIS   |                    [Redis](https://redis.io/)                     | [Redis License](https://redis.io/docs/about/license/) (BSD-3)                                             | 搭配 PG 使用的缓存服务，锁死版本 7.2.6          |   可选   |
+|  REDIS   |                    [Redis](https://redis.io/)                     | [Redis License](https://redis.io/docs/about/license/) (BSD-3)                                             | 搭配 PG 使用的缓存服务，锁死版本 7.2.6        |   可选   |
 |  REDIS   |   [Redis Exporter](https://github.com/oliver006/redis_exporter)   | [MIT License](https://github.com/oliver006/redis_exporter/blob/master/LICENSE)                            | 提供 Redis 监控能力                   |   可选   |
-|  MONGO   |               [FerretDB](https://www.ferretdb.io/)                | [Apache License 2.0](https://github.com/FerretDB/FerretDB/blob/main/LICENSE)                              | 提供基于 PG 的 MongoDB 兼容能力              |   可选   |
+|  MONGO   |               [FerretDB](https://www.ferretdb.io/)                | [Apache License 2.0](https://github.com/FerretDB/FerretDB/blob/main/LICENSE)                              | 提供基于 PG 的 MongoDB 兼容能力          |   可选   |
 |  DOCKER  |         [docker-ce](https://github.com/docker/docker-ce)          | [Apache License 2.0](https://github.com/docker/docker-ce/blob/master/LICENSE)                             | 提供容器管理能力                        |   可选   |
-|  CLOUD   |   [SealOS](https://github.com/labring/sealos/blob/main/LICENSE)   | [Apache License 2.0](https://github.com/labring/sealos/blob/main/LICENSE)                                 | 提供快速部署，复制，打包 K8S 集群的能力            |   可选   |
+|  CLOUD   |   [SealOS](https://github.com/labring/sealos/blob/main/LICENSE)   | [Apache License 2.0](https://github.com/labring/sealos/blob/main/LICENSE)                                 | 提供快速部署，复制，打包 K8S 集群的能力          |   可选   |
 |  DUCKDB  |            [DuckDB](https://github.com/duckdb/duckdb)             | [MIT](https://github.com/duckdb/duckdb/blob/main/LICENSE)                                                 | 提供简单易用的高性能分析能力                  |   可选   |
 | External |               [Vagrant](https://www.vagrantup.com/)               | [Business Source License 1.1](https://github.com/hashicorp/vagrant/blob/main/LICENSE)                     | 拉起本地测试环境虚拟机                     |   可选   |
 | External |              [Terraform](https://www.terraform.io/)               | [Business Source License 1.1](https://github.com/hashicorp/terraform/blob/main/LICENSE)                   | 一键申请云资源用于部署                     |   可选   |
