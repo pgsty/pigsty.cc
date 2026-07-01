@@ -56,7 +56,7 @@ MinIO 模块提供了两个内置剧本用于集群管理：
 - `minio-id`：生成 minio 身份参数用于移除操作（启用 `any_errors_fatal`，身份验证失败时立即停止）
 - `minio_safeguard`：安全检查，防止意外删除（默认：`false`）
 - `minio_pause`：暂停 3 秒，允许用户中止操作（Ctrl+C 可取消）
-- `minio_deregister`：从 Victoria/Prometheus 监控中移除目标，清理 DNS 记录
+- `minio_deregister`：从 VictoriaMetrics 监控中移除目标，清理 DNS 记录
 - `minio_svc`：停止并禁用 minio systemd 服务
 - `minio_data`：移除 minio 数据目录（可通过 `minio_rm_data=false` 禁用）
 - `minio_pkg`：卸载 minio 软件包（可通过 `minio_rm_pkg=true` 启用）

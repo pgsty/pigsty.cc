@@ -42,7 +42,7 @@ minio: { hosts: { 10.10.10.10: { minio_seq: 1 } }, vars: { minio_cluster: minio 
 {{% /alert %}}
 
 移除剧本会自动完成以下操作：
-- 从 Victoria/Prometheus 监控系统中注销 MinIO 目标
+- 从 VictoriaMetrics 监控系统中注销 MinIO 目标
 - 从 INFRA 节点的 DNS 服务中移除记录
 - 停止并禁用 MinIO systemd 服务
 - 删除 MinIO 数据目录和配置文件（可选）

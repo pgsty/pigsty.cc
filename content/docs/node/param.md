@@ -48,14 +48,14 @@ categories: [参考]
 
 [`NODE_DNS`](#node_dns) 参数组用于配置节点的 DNS 解析，包括静态 hosts 记录与动态 DNS 服务器。
 
-| 参数                                                  |     类型      |    级别    | 说明                              |
-|:----------------------------------------------------|:-----------:|:--------:|:--------------------------------|
-| [`node_write_etc_hosts`](#node_write_etc_hosts)     |   `bool`    | `G/C/I`  | 是否修改目标节点上的 `/etc/hosts`？        |
-| [`node_default_etc_hosts`](#node_default_etc_hosts) | `string[]`  |   `G`    | /etc/hosts 中的静态 DNS 记录          |
-| [`node_etc_hosts`](#node_etc_hosts)                 | `string[]`  |   `C`    | /etc/hosts 中的额外静态 DNS 记录        |
-| [`node_dns_method`](#node_dns_method)               |   `enum`    |   `C`    | 如何处理现有 DNS 服务器：add,none,overwrite |
-| [`node_dns_servers`](#node_dns_servers)             | `string[]`  |   `C`    | /etc/resolv.conf 中的动态域名服务器列表    |
-| [`node_dns_options`](#node_dns_options)             | `string[]`  |   `C`    | /etc/resolv.conf 中的 DNS 解析选项      |
+| 参数                                                  |     类型     |   级别    | 说明                                |
+|:----------------------------------------------------|:----------:|:-------:|:----------------------------------|
+| [`node_write_etc_hosts`](#node_write_etc_hosts)     |   `bool`   | `G/C/I` | 是否修改目标节点上的 `/etc/hosts`？          |
+| [`node_default_etc_hosts`](#node_default_etc_hosts) | `string[]` |   `G`   | /etc/hosts 中的静态 DNS 记录            |
+| [`node_etc_hosts`](#node_etc_hosts)                 | `string[]` |   `C`   | /etc/hosts 中的额外静态 DNS 记录          |
+| [`node_dns_method`](#node_dns_method)               |   `enum`   |   `C`   | 如何处理现有 DNS 服务器：add,none,overwrite |
+| [`node_dns_servers`](#node_dns_servers)             | `string[]` |   `C`   | /etc/resolv.conf 中的动态域名服务器列表      |
+| [`node_dns_options`](#node_dns_options)             | `string[]` |   `C`   | /etc/resolv.conf 中的 DNS 解析选项      |
 {.full-width}
 
 [`NODE_PACKAGE`](#node_package) 参数组用于配置节点的软件源与软件包安装，以及 uv Python 虚拟环境。
@@ -91,7 +91,7 @@ categories: [参考]
 | 参数                                                        |    类型    | 级别  | 说明                                         |
 |:----------------------------------------------------------|:--------:|:---:|:-------------------------------------------|
 | [`node_selinux_mode`](#node_selinux_mode)                 |  `enum`  | `C` | SELinux 模式：disabled, permissive, enforcing |
-| [`node_firewall_mode`](#node_firewall_mode)               |  `enum`  | `C` | 防火墙模式：zone（默认启用），off（关闭），none（自管）        |
+| [`node_firewall_mode`](#node_firewall_mode)               |  `enum`  | `C` | 防火墙模式：zone（默认启用），off（关闭），none（自管）          |
 | [`node_firewall_intranet`](#node_firewall_intranet)       | `cidr[]` | `C` | 内网 CIDR 列表，用于配置防火墙规则                       |
 | [`node_firewall_public_port`](#node_firewall_public_port) | `port[]` | `C` | 公网开放端口列表，默认为 [22, 80, 443]                 |
 {.full-width}
@@ -108,7 +108,7 @@ categories: [参考]
 | [`node_admin_ssh_exchange`](#node_admin_ssh_exchange) |   `bool`   | `C` | 是否在节点集群之间交换管理员 ssh 密钥                    |
 | [`node_admin_pk_current`](#node_admin_pk_current)     |   `bool`   | `C` | 将当前用户的 ssh 公钥添加到管理员的 authorized_keys 中吗？ |
 | [`node_admin_pk_list`](#node_admin_pk_list)           | `string[]` | `C` | 要添加到管理员用户的 ssh 公钥                        |
-| [`node_aliases`](#node_aliases)                       |   `dict`   | `C` | 配置主机上的 Shell Alias 命令，KV 字典               |
+| [`node_aliases`](#node_aliases)                       |   `dict`   | `C` | 配置主机上的 Shell Alias 命令，KV 字典              |
 {.full-width}
 
 [`NODE_TIME`](#node_time) 参数组用于配置节点的时区、NTP 时间同步与定时任务。
@@ -207,11 +207,11 @@ node_load1{cls="pg-test", ins="pg-test-3", ip="10.10.10.13", job="nodes"}
 
 在执行默认的 PostgreSQL 部署时，因为 Pigsty 默认采用节点独占1:1部署，因此可以通过 [`node_id_from_pg`](#node_id_from_pg) 参数，将数据库实例的身份参数（[`pg_cluster`](/docs/pgsql/param#pg_cluster) 借用至节点的`ins`与`cls`标签上。
 
-|               名称                |    类型    |  层级   | 必要性    | 说明         |
-|:-------------------------------:|:--------:|:-----:|--------|------------|
+|               名称                |    类型    |  层级   | 必要性    | 说明           |
+|:-------------------------------:|:--------:|:-----:|--------|--------------|
 |      `inventory_hostname`       |   `ip`   | **-** | **必选** | **节点 IP 地址** |
-|     [`nodename`](#nodename)     | `string` | **I** | 可选     | **节点名称**   |
-| [`node_cluster`](#node_cluster) | `string` | **C** | 可选     | **节点集群名称** |
+|     [`nodename`](#nodename)     | `string` | **I** | 可选     | **节点名称**     |
+| [`node_cluster`](#node_cluster) | `string` | **C** | 可选     | **节点集群名称**   |
 {.full-width}
 
 
@@ -1423,7 +1423,7 @@ node_exporter_options: '--no-collector.softnet --no-collector.nvme --collector.t
 
 ## `VECTOR`
 
-Vector 是 Pigsty v4.0 使用的日志收集组件，会收集各个模块产生的日志并发送至基础设施节点上的 VictoriaLogs 服务。
+Vector 是 Pigsty 自 v4 起使用的日志收集组件，会收集各个模块产生的日志并发送至基础设施节点上的 VictoriaLogs 服务。
 
 * `INFRA`： 基础设施组件的日志只会在 Infra 节点上收集。
     * `nginx-access`: `/var/log/nginx/access.log`
@@ -1462,7 +1462,7 @@ vector_log_endpoint: [ infra ]    # 日志发送目标端点，默认发送至 i
 
 是否启用 Vector 日志收集服务？默认值为： `true`
 
-Vector 是 Pigsty v4.0 使用的日志收集代理，替代了之前版本使用的 Promtail，用于收集节点和服务的日志并发送至 VictoriaLogs。
+Vector 是 Pigsty 自 v4 起使用的日志收集代理，替代了之前版本使用的 Promtail，用于收集节点和服务的日志并发送至 VictoriaLogs。
 
 
 

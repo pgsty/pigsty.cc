@@ -10,8 +10,10 @@ categories: [参考]
 
 [MinIO](https://min.io/) 是一个兼容 AWS S3 的多云对象存储软件。
 
-MinIO 可以用来存储文档、图片、视频和备份。Pigsty 原生支持部署各种 MinIO 集群，具备原生多节点多磁盘高可用支持，易于扩展、安全且开箱即用，
-并且有过 10PB+ 级别的大规模生产环境部署用例。
+MinIO 可以用来存储文档、图片、视频和备份。Pigsty 原生支持部署各种 MinIO 集群，具备原生多节点多磁盘高可用支持，易于扩展、安全且开箱即用，并且有过 10PB+ 级别的大规模生产环境部署用例。
+
+> [!NOTE]
+> 因为 MinIO 上游仓库 [`minio/minio`](https://github.com/minio/minio) 已经不再维护，Pigsty 现已切换至自己维护的 [`pgsty/minio`](https://github.com/pgsty/minio) 分支
 
 MinIO 是 Pigsty 中的一个 [**可选模块**](/docs/ref/module)。您可以将 MinIO 用作 PostgreSQL [**备份**](/docs/pgsql/backup/repository/) 的可选存储仓库，作为默认本地 POSIX 文件系统仓库的补充。
 如果使用 MinIO 备份仓库，`MINIO` 模块应在任何 [`PGSQL`](/docs/pgsql) 模块之前安装。MinIO 需要受信任的 CA 证书才能工作，因此它依赖 [`NODE`](/docs/node) 模块。
@@ -63,7 +65,6 @@ MinIO 支持三种主要部署模式：
 - **S3 兼容**：完全兼容 AWS S3 API，可与各种 S3 客户端和工具无缝集成
 - **高可用**：原生支持多节点多磁盘部署，容忍节点和磁盘故障
 - **安全**：默认启用 HTTPS 加密传输，支持服务端加密
-- **监控**：开箱即用的 Grafana 监控面板和 Prometheus 告警规则
+- **监控**：开箱即用的 Grafana 监控面板和 VMAlert 告警规则
 - **易用**：预配置的 `mcli` 客户端别名，一键部署和管理
-
 

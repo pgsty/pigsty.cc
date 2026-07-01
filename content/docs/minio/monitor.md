@@ -35,7 +35,7 @@ Pigsty 提供了两个与 [`MINIO`](/docs/minio) 模块有关的监控面板：
 
 [![minio-overview.jpg](/img/dashboard/minio-overview.jpg)](https://demo.pigsty.cc/d/minio-overview)
 
-MinIO 监控指标通过 MinIO 原生的 Prometheus 端点（`/minio/v2/metrics/cluster`）采集，默认由 Victoria Metrics 抓取并存储。
+MinIO 监控指标通过 MinIO 原生的 Prometheus 端点（`/minio/v2/metrics/cluster`）采集，默认由 VictoriaMetrics 抓取并存储。
 
 
 

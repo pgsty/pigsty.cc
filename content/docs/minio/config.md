@@ -285,7 +285,7 @@ node_etc_hosts: ["10.10.10.9 sss.pigsty"] # 其他节点将使用 sss.pigsty 域
 
 ## 专用负载均衡
 
-Pigsty 允许用户使用专用的负载均衡服务器组，而不是集群本身来运行 VIP 与 HAProxy。例如 [`prod`](/docs/conf/pro) 模板中就使用了这种方式。
+Pigsty 允许用户使用专用的负载均衡服务器组，而不是集群本身来运行 VIP 与 HAProxy。例如 [`ha/simu`](/docs/conf/simu) 模板中就使用了这种方式。
 
 ```yaml
 proxy:
