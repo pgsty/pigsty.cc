@@ -521,20 +521,20 @@ pg-meta2:
 
 PITR 支持多种恢复目标类型：
 
-| 目标类型 | 参数示例 | 说明 |
-|:---------|:---------|:-----|
-| 时间点 | `time: "2025-01-10 10:00:00+00"` | 恢复到指定时间戳 |
-| 事务 ID | `xid: "250000"` | 恢复到指定事务之前/之后 |
-| 恢复点 | `name: "before_migration"` | 恢复到命名恢复点 |
-| LSN | `lsn: "0/4001C80"` | 恢复到指定 WAL 位置 |
-| 最新 | `type: "latest"` | 恢复到 WAL 归档末尾 |
+| 目标类型  | 参数示例                             | 说明           |
+|:------|:---------------------------------|:-------------|
+| 时间点   | `time: "2025-01-10 10:00:00+00"` | 恢复到指定时间戳     |
+| 事务 ID | `xid: "250000"`                  | 恢复到指定事务之前/之后 |
+| 恢复点   | `name: "before_migration"`       | 恢复到命名恢复点     |
+| LSN   | `lsn: "0/4001C80"`               | 恢复到指定 WAL 位置 |
+| 最新    | `pg_pitr: {}`                    | 恢复到 WAL 归档末尾 |
 
 {{% alert title="PITR 恢复后处理" color="info" %}}
-恢复后的集群会**禁用** `archive_mode`，以防止意外的 WAL 写入覆盖归档。
-如果恢复后的数据库状态正常，您应当启用归档并执行新的全量备份：
+Pigsty v4.3 的 PITR 默认会保留归档设置（`archive: true`）。如果您显式设置了 `archive: false` 做探索性恢复，确认数据正确后应重置 `archive_mode`、重启集群，并执行新的全量备份：
 
 ```bash
-psql -c 'ALTER SYSTEM RESET archive_mode; SELECT pg_reload_conf();'
+psql -c 'ALTER SYSTEM RESET archive_mode;'
+pg restart <cls>
 pg-backup full    # 执行新的全量备份
 ```
 {{% /alert %}}

@@ -8,7 +8,7 @@ categories: [任务，参考]
 ---
 
 
-Pigsty 内置了一个剧本 [`pgsql-migration.yml`](https://github.com/Vonng/pigsty/blob/main/pgsql-migration.yml)，基于逻辑复制来实现在线数据库迁移。
+Pigsty 内置了一个剧本 [`pgsql-migration.yml`](https://github.com/pgsty/pigsty/blob/main/pgsql-migration.yml)，基于逻辑复制来实现在线数据库迁移。
 
 通过预生成的自动化脚本，应用停机时间可以缩减到几秒内。但请注意，逻辑复制需要 PostgreSQL 10 以上的版本才能工作。
 
@@ -21,7 +21,7 @@ Pigsty 内置了一个剧本 [`pgsql-migration.yml`](https://github.com/Vonng/pi
 
 想要使用 Pigsty 提供的在线迁移剧本，您需要创建一个定义文件，来描述迁移任务的细节。
 
-请查看任务定义文件示例作为参考： [`files/migration/pg-meta.yml`](https://github.com/Vonng/pigsty/blob/main/files/migration/pg-meta.yml)。
+请查看任务定义文件示例作为参考： [`files/migration/pg-meta.yml`](https://github.com/pgsty/pigsty/blob/main/files/migration/pg-meta.yml)。
 
 这个迁移任务要将 `pg-meta.meta` 在线迁移到 `pg-test.test`，前者称为 **源集群（SRC）**， 后者称为 **宿集群（DST）**。
 

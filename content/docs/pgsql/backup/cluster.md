@@ -32,24 +32,24 @@ categories: [任务]
 
 ## PITR 善后工作
 
-当你使用 PITR 恢复一个集群后，这个新集群本身的 PITR 功能是被禁用的。
-因为如果它也尝试去生成备份，归档 WAL，有可能会写脏数据之前集群的备份仓库。
+当你使用 PITR 从其他集群恢复出一个新集群后，备份仓库中的 stanza 仍然可能记录着源集群的 system-id。
+如果直接对新集群做备份，pgBackRest 会拒绝写入，避免污染源集群的备份历史。
 
 因此，当你确认这个 PITR 恢复出来的新集群状态符合预期后，你需要执行以下善后工作。
 
-- 升级备份仓库 Stanza，允许它接纳来自不同集群的新备份（仅当从别的集群恢复时）。
-- 启用 `archive_mode`，允许新集群归档 WAL 日志（需要重启集群）
+- 升级备份仓库 Stanza，允许它接纳新集群的 system-id（仅当从别的集群恢复时）。
+- 如果 PITR 时显式设置了 `archive: false`，重置 `archive_mode` 并重启集群。
 - 执行一个新的全量备份，确保新集群的数据被纳入（可选，也可以等 crontab 定时执行）
 
 ```bash
 pb stanza-upgrade
 psql -c 'ALTER SYSTEM RESET archive_mode;'
+pg restart <cls>       # 仅当 archive_mode 被关闭时需要
 pg-backup full
 ```
 
 通过这些操作，你的新集群将从第一次全量备份开始时，拥有自己的备份历史。
-如果你跳过这些步骤，新集群本身的备份将无法进行，WAL 归档也不会生效。
-意味着你将无法对新集群执行任何备份或 PITR 操作。
+如果你跳过这些步骤，新集群本身的备份可能无法写入目标仓库；如果 PITR 时关闭了归档，也不会产生新的 WAL 归档。
 
 
 
@@ -68,7 +68,7 @@ postgres@pg-test-1:~$ pb backup
 postgres@pg-test-1:~$
 ```
 
-WAL 日志归档被 pgBackrest 关闭了，因此也不会有 WAL 归档。
+在完成 stanza 善后前，新集群的备份无法写入目标仓库；如果 PITR 时关闭了归档，也不会产生新的 WAL 归档。
 
 
 
@@ -113,8 +113,6 @@ pb stanza-create
 
 
 使用这种技术，您不仅可以克隆 `pg-meta` 集群的最新状态，还可以克隆到任意时间点，例如：
-
-
 
 
 

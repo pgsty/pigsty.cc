@@ -21,7 +21,7 @@ IvorySQL 内核支持在 Pigsty 开源版本中提供，您的服务器需要互
 
 ![](/img/pigsty/ivory.jpg)
 
-当前 IvorySQL 的最新版本为 **5.0**，对应的 PostgreSQL 版本为 **18**。请注意，IvorySQL 当前仅在 EL8/EL9 上可用。
+当前 Pigsty 的 `ivorysql` 包别名指向 IvorySQL 5，兼容 PostgreSQL 18。不同发行版的真实包名由 `roles/node_id/vars/` 中的平台变量映射，例如 EL 使用 `ivorysql5`，Debian/Ubuntu 使用 `ivorysql-5`。
 
 > 最后一个支持 EL7 的 IvorySQL 版本为 3.3，对应 PostgreSQL 16.3；最后一个基于 PostgreSQL 17 的版本为 IvorySQL 4.4
 
@@ -48,9 +48,9 @@ IvorySQL 内核支持在 Pigsty 开源版本中提供，您的服务器需要互
 #----------------------------------#
 # Ivory SQL Configuration
 #----------------------------------#
-node_repo_modules: local,node,pgsql,ivory  # add ivorysql upstream repo
+node_repo_modules: node,infra,pgsql       # use Pigsty node/infra/pgsql repos
 pg_mode: ivory                    # IvorySQL Oracle Compatible Mode
-pg_packages: [ 'ivorysql patroni pgbouncer pgbackrest pg_exporter pgbadger vip-manager' ]
+pg_packages: [ ivorysql, pgsql-common ]
 pg_libs: 'liboracle_parser, pg_stat_statements, auto_explain'
 pg_extensions: [ ]                # do not install any vanilla postgresql extensions
 ```
@@ -62,7 +62,7 @@ pg_extensions: [ ]                # do not install any vanilla postgresql extens
 
 ## 客户端访问
 
-IvorySQL 等效于 PostgreSQL 16，任何兼容 PostgreSQL 线缆协议的客户端工具都可以访问 IvorySQL 集群。
+IvorySQL 5 等效于 PostgreSQL 18，任何兼容 PostgreSQL 线缆协议的客户端工具都可以访问 IvorySQL 集群。
 
 --------
 

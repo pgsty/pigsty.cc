@@ -1,7 +1,7 @@
 ---
 title: PostgreSQL
 weight: 2101
-description: 带有 510 扩展的原版 PostgreSQL 内核
+description: 带有 531 扩展的原版 PostgreSQL 内核
 icon: fa-solid fa-database
 module: [PGSQL]
 categories: [概念]
@@ -9,7 +9,7 @@ categories: [概念]
 
 [PostgreSQL](https://www.postgresql.org/) 是世界上最先进和最受欢迎的开源数据库。
 
-Pigsty 支持 PostgreSQL 14 ~ 18，并提供 510 个 PG 扩展。
+默认安装 PostgreSQL 18，支持 PostgreSQL 14 ~ 18，并提供 531 个 PG 扩展。
 
 
 ------
@@ -70,7 +70,6 @@ pg-meta:
 ./configure -c pgsql -v 16      # 使用 postgresql 16
 ./configure -c pgsql -v 15      # 使用 postgresql 15
 ./configure -c pgsql -v 14      # 使用 postgresql 14
-./configure -c pgsql -v 13      # 使用 postgresql 13
 ```
 
 如果 PostgreSQL 集群已经安装，您需要在安装新版本之前卸载它：
@@ -90,7 +89,7 @@ Pigsty 为 PostgreSQL 提供了丰富的扩展生态，包括：
 - **地理类**：postgis, h3, pgrouting
 - **向量类**：pgvector, pgml, vchord
 - **搜索类**：pg_trgm, zhparser, pgroonga
-- **分析类**：citus, pg_duckdb, pg_analytics
+- **分析类**：citus, pg_duckdb, pg_mooncake
 - **特性类**：age, pg_graphql, rum
 - **语言类**：plpython3u, pljava, plv8
 - **类型类**：hstore, ltree, citext

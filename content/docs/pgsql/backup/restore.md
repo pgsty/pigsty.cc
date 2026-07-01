@@ -23,7 +23,7 @@ categories: [任务]
 pg-meta:
   hosts: { 10.10.10.10: { pg_seq: 1, pg_role: primary } }
   vars:
-    pg_cluster: pg-meta2
+    pg_cluster: pg-meta
     pg_pitr: { time: '2025-07-13 10:00:00+00' }  # 从最新备份恢复
 ```
 
@@ -38,11 +38,11 @@ pg-meta:
 
 ## 恢复后处理
 
-恢复后的集群会**禁用** `archive_mode`，以防止意外的 WAL 写入。
-如果恢复后的数据库状态正常，您可以启用 `archive_mode` 并执行全量备份。
+Pigsty v4.3 的 `pgsql-pitr.yml` 默认会保留归档设置（`archive: true`）。如果您做探索性恢复并显式设置了 `archive: false`，恢复后需要重新启用归档并执行全量备份。
 
 ```bash title="postgres @ pg-meta $"
-psql -c 'ALTER SYSTEM RESET archive_mode; SELECT pg_reload_conf();'
+psql -c 'ALTER SYSTEM RESET archive_mode;'
+pg restart pg-meta  # archive_mode 是 postmaster 参数，需要重启
 pg-backup full    # 执行新的全量备份
 ```
 
@@ -59,7 +59,7 @@ pg-backup full    # 执行新的全量备份
 - [`lsn`](https://www.postgresql.org/docs/current/runtime-config-wal.html#RECOVERY-TARGET-LSN)：恢复到特定的 LSN（日志序列号）点
 
 如果指定了上述任何参数，恢复 [`类型`](https://www.postgresql.org/docs/current/runtime-config-wal.html#RECOVERY-TARGET-TYPE) 会相应设置，
-否则将设置为 `latest`（WAL 归档流的末尾）。
+否则不传递 `--type/--target`，恢复到 WAL 归档流末尾（Pigsty 内部类型为 `default`）。
 特殊的 `immediate` 类型可用于指示 pgbackrest 通过在第一个一致点停止来最小化恢复时间。
 
 
@@ -67,7 +67,7 @@ pg-backup full    # 执行新的全量备份
 
 {{< tabpane persist="disabled" >}}
 {{% tab header="恢复目标类型" disabled=true /%}}
-{{< tab header="latest" lang="yaml" >}}
+{{< tab header="default/latest" lang="yaml" >}}
 pg_pitr: { }  # 恢复到最新状态（WAL 归档流末尾）
 {{< /tab >}}
 {{< tab header="time" lang="yaml" >}}
@@ -119,7 +119,7 @@ SELECT pg_create_restore_point('shit_incoming');
 如果您有一个事务意外删除了某些数据，最好的恢复方式是将数据库恢复到该事务之前的状态。
 
 ```bash title="恢复到某事务之前"
-./pgsql-pitr.yml -e '{"pg_pitr": { "xid": "250000", exclusive: true }}'
+./pgsql-pitr.yml -e '{"pg_pitr": { "xid": "250000", "exclusive": true }}'
 ```
 
 您可以从监控仪表盘找到确切的事务 ID，或从 CSVLOG 中的 `TXID` 字段获取。
@@ -138,7 +138,7 @@ PostgreSQL 使用 [LSN](https://www.postgresql.org/docs/current/datatype-pg-lsn.
 您可以在很多地方找到它，比如 Pigsty 仪表盘的 PG LSN 面板。
 
 ```bash title="恢复到指定 LSN"
-./pgsql-pitr.yml -e '{"pg_pitr": { "lsn": "0/4001C80", timeline: "1" }}'
+./pgsql-pitr.yml -e '{"pg_pitr": { "lsn": "0/4001C80", "timeline": "1" }}'
 ```
 
 要恢复到 WAL 流中的确切位置，您还可以指定 [`timeline`](https://www.postgresql.org/docs/current/runtime-config-wal.html#RECOVERY-TARGET-TIMELINE) 参数（默认为 `latest`）
@@ -189,7 +189,7 @@ pg-meta2:
 pg-meta:
   hosts: { 10.10.10.10: { pg_seq: 1, pg_role: primary } }
   vars:
-    pg_cluster: pg-meta2
+    pg_cluster: pg-meta
     pg_pitr: { time: '2025-07-13 10:00:00+00' }  # 从最新备份恢复
 ```
 
@@ -198,7 +198,7 @@ pg-meta:
 ```bash
 ./pgsql-pitr.yml -l pg-meta -t down     # 暂停 patroni 高可用
 ./pgsql-pitr.yml -l pg-meta -t pitr     # 运行 pitr 过程
-./pgsql-pitr.yml -l pg-meta -t up       # 生成 pgbackrest 配置和恢复脚本
+./pgsql-pitr.yml -l pg-meta -t up       # 清理 DCS，启动 postgres/patroni 并恢复高可用
 ```
 
 ```yaml
@@ -238,13 +238,13 @@ pg_pitr:                           # 定义 PITR 任务
     timeline: latest               # 目标时间线，可以是整数，默认为 latest
     exclusive: false               # 是否排除目标点，默认为 false
     action: pause                  # 恢复后操作：pause, promote, shutdown
-    archive: false                 # 是否保留归档设置？默认为 false
+    archive: true                  # 是否保留归档设置？默认为 true
     db_exclude: [ template0, template1 ]
     db_include: []
     link_map:
       pg_wal: '/data/wal'
       pg_xact: '/data/pg_xact'
-    process: 4                     # 并行恢复进程数
+    process: 4                     # 并行恢复进程数，默认使用 node_cpu
     repo: {}                       # 恢复来源仓库
     data: /pg/data                 # 数据恢复位置
     port: 5432                     # 恢复实例的监听端口

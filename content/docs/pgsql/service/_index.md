@@ -130,10 +130,10 @@ Pigsty 允许您定义自己的服务：
 
 - [`pg_default_services`](/docs/pgsql/param#pg_default_services)：所有 PostgreSQL 集群统一对外暴露的服务，默认有四个。
 - [`pg_services`](/docs/pgsql/param#pg_services)：额外的 PostgreSQL 服务，可以视需求在全局或集群级别定义。
-- [`haproxy_servies`](/docs/node/param#haproxy_services)：直接定制 HAProxy 服务内容，可以用于其他组件的接入
+- [`haproxy_services`](/docs/node/param#haproxy_services)：直接定制 HAProxy 服务内容，可以用于其他组件的接入
 
 对于 PostgreSQL 集群来说，通常只需要关注前两者即可。
-每一条服务定义都会在所有相关 HAProxy 实例的配置目录下生成一个新的配置文件：[`/etc/haproxy/<svcname>.cfg`](https://github.com/Vonng/pigsty/blob/main/roles/pgsql/templates/service.j2)
+每一条服务定义都会在所有相关 HAProxy 实例的配置目录下生成一个新的配置文件：[`/etc/haproxy/<pg_cluster>-<service>.cfg`](https://github.com/pgsty/pigsty/blob/main/roles/pgsql/templates/service.cfg)
 下面是一个自定义的服务样例 `standby`：当您想要对外提供没有复制延迟的只读服务时，就可以在  [`pg_services`](/docs/pgsql/param#pg_services) 新增这条记录：
 
 ```yaml
@@ -142,7 +142,7 @@ Pigsty 允许您定义自己的服务：
   ip: "*"                         # 可选，服务绑定的 IP 地址，默认情况下为所有 IP 地址
   selector: "[]"                  # 必选，服务成员选择器，使用 JMESPath 来筛选配置清单
   backup: "[? pg_role == `primary`]"  # 可选，服务成员选择器（备份），也就是当默认选择器选中的实例都宕机后，服务才会由这里选中的实例成员来承载
-  dest: default                   # 可选，目标端口，default|postgres|pgbouncer|<port_number>，默认为 'default'，Default的意思就是使用 pg_default_service_dest 的取值来最终决定
+  dest: default                   # 可选，目标端口，default|postgres|pgbouncer|<port_number>，默认为 'default'，即由 pg_default_service_dest 决定
   check: /sync                    # 可选，健康检查 URL 路径，默认为 /，这里使用 Patroni API：/sync ，只有同步备库和主库才会返回 200 健康状态码 
   maxconn: 5000                   # 可选，允许的前端连接最大数，默认为5000
   balance: roundrobin             # 可选，haproxy 负载均衡算法（默认为 roundrobin，其他选项：leastconn）
@@ -419,7 +419,7 @@ postgres://test@10.10.10.3:6432/test # L2 VIP -> 主连接池 -> 主
 postgres://test@10.10.10.3:5433/test # L2 VIP -> HAProxy -> 主连接池 -> 主
 postgres://test@10.10.10.3:5434/test # L2 VIP -> HAProxy -> 备份连接池 -> 备份
 postgres://dbuser_dba@10.10.10.3:5436/test # L2 VIP -> HAProxy -> 主直接连接 (用于管理员)
-postgres://dbuser_stats@10.10.10.3::5438/test # L2 VIP -> HAProxy -> 离线直接连接 (用于 ETL/个人查询)
+postgres://dbuser_stats@10.10.10.3:5438/test # L2 VIP -> HAProxy -> 离线直接连接 (用于 ETL/个人查询)
 
 # 直接指定任何集群实例名
 postgres://test@pg-test-1:5432/test # DNS -> 数据库实例直接连接 (单例访问)
@@ -435,7 +435,7 @@ postgres://test@10.10.10.11:6432/test # 连接池 -> 数据库
 postgres://test@10.10.10.11:5433/test # HAProxy -> 连接池 -> 数据库读/写
 postgres://test@10.10.10.11:5434/test # HAProxy -> 连接池 -> 数据库只读
 postgres://dbuser_dba@10.10.10.11:5436/test # HAProxy -> 数据库直接连接
-postgres://dbuser_stats@10.10.10.11:5438/test # HAProxy -> 数据库离线读-写
+postgres://dbuser_stats@10.10.10.11:5438/test # HAProxy -> 数据库离线读/写
 
 # 智能客户端：自动进行读写分离
 postgres://test@10.10.10.11:6432,10.10.10.12:6432,10.10.10.13:6432/test?target_session_attrs=primary
@@ -478,4 +478,4 @@ pg_default_services:  [{ name: primary ,port: 10013 ,dest: postgres  ,check: /pr
 
 用户需要确保每个委托服务的端口，在代理集群中都是**唯一**的。
 
-在 43 节点生产环境仿真 [**沙箱**](/docs/deploy/sandbox) 中提供了一个使用专用负载均衡器集群的例子：[prod.yml](https://github.com/Vonng/pigsty/blob/main/conf/prod.yml#L111) 
+在 20 节点生产环境仿真 [**沙箱**](/docs/deploy/sandbox) 中提供了一个使用专用负载均衡器集群的例子：[`conf/ha/simu.yml`](https://github.com/pgsty/pigsty/blob/main/conf/ha/simu.yml)

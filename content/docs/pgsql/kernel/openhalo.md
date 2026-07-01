@@ -9,7 +9,7 @@ categories: [概念]
 
 [OpenHalo](https://www.openhalo.org/) 是一个开源的 PostgreSQL 内核，提供 MySQL 线协议兼容性。
 
-openHalo 基于 PostgreSQL 14.18 内核版本，提供与 MySQL 5.7.32-log / 8.0 版本的线协议兼容性。
+openHalo 基于 PostgreSQL 14.18 内核版本，提供与 MySQL 5.7.32-log / 8.0 版本的线协议兼容性。Pigsty 通过 `pg_mode: mysql` 与 `openhalo` 包别名交付。
 
 Pigsty 在所有支持的 Linux 平台上为 OpenHalo 提供部署支持。
 
@@ -55,7 +55,7 @@ pg-meta:
     # OpenHalo 临时设置
     pg_mode: mysql                    # HaloDB 的 MySQL 兼容模式
     pg_version: 14                    # 当前 HaloDB 兼容 PG 主版本 14
-    pg_packages: [ openhalodb, pgsql-common ]  # 安装 openhalodb 而不是 postgresql 内核
+    pg_packages: [ openhalo, pgsql-common ]    # 安装 openHalo 而不是 PostgreSQL 原生内核
 ```
 
 OpenHalo 提供了一个独有的扩展 `aux_mysql`，它包含了 MySQL 兼容性所需的函数和类型。请确保在 `pg_databases` 配置中为 `postgres` 数据库启用此扩展，以获得完整的 MySQL 兼容功能。
@@ -115,4 +115,3 @@ Pigsty 安装的 [OpenHalo](https://github.com/pgsty/openHalo) 内核基于 [Hal
 请注意，Pigsty 不为使用 OpenHalo 内核提供任何保证。使用此内核时遇到的任何问题或需求应与原始供应商联系。
 
 > **警告**：目前该内核处于 beta1 阶段 - 在生产使用前请自行评估风险。
-

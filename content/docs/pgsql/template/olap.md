@@ -130,7 +130,7 @@ enable_partitionwise_join: on       # 分区表智能 JOIN
 enable_partitionwise_aggregate: on  # 分区表智能聚合
 ```
 
-### IO 配置（PG17+）
+### IO 配置（PG18+）
 
 ```yaml
 io_workers: 50% × cpu (4-32)    # OLTP: 25% (4-16)
@@ -297,4 +297,3 @@ pg-mixed:
 - [**CRIT 模板**](/docs/pgsql/template/crit/)：关键业务模板对比
 - [**TINY 模板**](/docs/pgsql/template/tiny/)：微型实例模板对比
 - [离线从库](/docs/pgsql/config/cluster#离线从库)：专用分析实例
-

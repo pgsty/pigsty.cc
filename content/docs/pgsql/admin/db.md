@@ -335,7 +335,7 @@ SELECT pg_terminate_backend(pid) FROM pg_stat_activity WHERE datname = 'meta';
 CREATE DATABASE meta_dev TEMPLATE meta STRATEGY FILE_COPY;
 ```
 
-**局限性与注意事项**：瞬间克隆仅在支持的文件系统上可用（xfs，brtfs，zfs，apfs）；不要使用 `postgres` 数据库作为模版数据库进行克隆；在高并发环境中使用瞬间克隆需要谨慎，需在克隆窗口（200ms）内清理掉所有连接到模版数据库的连接。
+**局限性与注意事项**：瞬间克隆仅在支持的文件系统上可用（xfs，btrfs，zfs，apfs）；不要使用 `postgres` 数据库作为模版数据库进行克隆；在高并发环境中使用瞬间克隆需要谨慎，需在克隆窗口（200ms）内清理掉所有连接到模版数据库的连接。
 
 
 ----------------

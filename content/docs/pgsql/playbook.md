@@ -43,12 +43,12 @@ categories: [任务]
 
 除了 `pg_safeguard` 外，[`pgsql-rm.yml`](#pgsql-rmyml) 还提供了更细粒度的控制参数：
 
-| 参数 | 默认值 | 说明 |
-|------|--------|------|
-| [`pg_safeguard`](/docs/pgsql/param#pg_safeguard) | `false` | 防误删保险，设为 `true` 时剧本会中止执行 |
-| `pg_rm_data` | `true` | 是否移除 PostgreSQL 数据目录 |
-| `pg_rm_backup` | `true` | 是否移除 pgBackRest 备份数据（仅主库移除时生效） |
-| `pg_rm_pkg` | `true` | 是否卸载 PostgreSQL 软件包 |
+| 参数                                               | 默认值     | 说明                             |
+|--------------------------------------------------|---------|--------------------------------|
+| [`pg_safeguard`](/docs/pgsql/param#pg_safeguard) | `false` | 防误删保险，设为 `true` 时剧本会中止执行       |
+| `pg_rm_data`                                     | `true`  | 是否移除 PostgreSQL 数据目录           |
+| `pg_rm_backup`                                   | `true`  | 是否移除 pgBackRest 备份数据（仅主库移除时生效） |
+| `pg_rm_pkg`                                      | `true`  | 是否卸载 PostgreSQL 软件包            |
 
 这些参数允许你根据实际需求精确控制移除行为：
 
@@ -562,7 +562,7 @@ pg_monitor_password: DBUser.Monitor
 ```yaml
 pg_pitr:                           # 定义 PITR 任务
   cluster: "pg-meta"               # 源集群名称（恢复其他集群的备份时使用）
-  type: latest                     # 恢复目标类型: time, xid, name, lsn, immediate, latest
+  type: default                    # 恢复目标类型: default, time, xid, name, lsn, immediate
   time: "2025-01-01 10:00:00+00"   # 恢复目标：时间点
   name: "some_restore_point"       # 恢复目标：命名还原点
   xid: "100000"                    # 恢复目标：事务 ID
@@ -571,12 +571,12 @@ pg_pitr:                           # 定义 PITR 任务
   timeline: latest                 # 目标时间线，可以是整数，默认 latest
   exclusive: false                 # 是否排除目标点，默认 false
   action: pause                    # 恢复后动作: pause, promote, shutdown
-  archive: false                   # 是否保留归档设置，默认 false
+  archive: true                    # 是否保留归档设置，默认 true；探索性恢复可设为 false
   backup: false                    # 恢复前是否备份现有数据到 /pg/data-backup？默认 false
   db_include: []                   # 仅包含这些数据库
   db_exclude: []                   # 排除这些数据库
   link_map: {}                     # 表空间链接映射
-  process: 4                       # 并行恢复进程数
+  process: 4                       # 并行恢复进程数，默认使用 node_cpu
   repo: {}                         # 恢复源仓库配置
   data: /pg/data                   # 恢复数据目录
   port: 5432                       # 恢复实例监听端口
@@ -610,13 +610,13 @@ pg_pitr:                           # 定义 PITR 任务
 
 **恢复目标类型说明**
 
-| 类型 | 说明 | 示例 |
-|------|------|------|
-| `latest` | 恢复到 WAL 归档流末端（最新状态） | `{"pg_pitr": {}}` |
-| `time` | 恢复到指定时间点 | `{"pg_pitr": {"time": "2025-07-13 10:00:00"}}` |
-| `xid` | 恢复到指定事务 ID | `{"pg_pitr": {"xid": "250000"}}` |
-| `name` | 恢复到命名还原点 | `{"pg_pitr": {"name": "before_ddl"}}` |
-| `lsn` | 恢复到指定 LSN | `{"pg_pitr": {"lsn": "0/4001C80"}}` |
-| `immediate` | 恢复到一致性状态后立即停止 | `{"pg_pitr": {"type": "immediate"}}` |
+| 类型          | 说明                  | 示例                                             |
+|-------------|---------------------|------------------------------------------------|
+| `default`   | 恢复到 WAL 归档流末端（最新状态） | `{"pg_pitr": {}}`                              |
+| `time`      | 恢复到指定时间点            | `{"pg_pitr": {"time": "2025-07-13 10:00:00"}}` |
+| `xid`       | 恢复到指定事务 ID          | `{"pg_pitr": {"xid": "250000"}}`               |
+| `name`      | 恢复到命名还原点            | `{"pg_pitr": {"name": "before_ddl"}}`          |
+| `lsn`       | 恢复到指定 LSN           | `{"pg_pitr": {"lsn": "0/4001C80"}}`            |
+| `immediate` | 恢复到一致性状态后立即停止       | `{"pg_pitr": {"type": "immediate"}}`           |
 
 详情请参考：[备份恢复教程](/docs/pgsql/backup/restore/)

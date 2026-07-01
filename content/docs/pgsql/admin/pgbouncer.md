@@ -13,7 +13,7 @@ categories: [任务]
 
 Pigsty 使用 [**Pgbouncer**](https://www.pgbouncer.org/) 作为 PostgreSQL 的连接池中间件，默认监听 `6432` 端口，代理访问本机 `5432` 端口上的 PostgreSQL 实例。
 
-这是一个 **可选组件**，如果您并没有海量链接，也不需要事务池化与查询监控指标，可以关闭连接池，直连数据库，或者保留但不使用。
+这是一个 **可选组件**，如果您并没有海量连接，也不需要事务池化与查询监控指标，可以关闭连接池，直连数据库，或者保留但不使用。
 
 
 
@@ -57,7 +57,7 @@ pg_users:
 ## 服务管理
 
 在 Pigsty 中，PostgreSQL 集群的 [**Primary 服务**](/docs/pgsql/service#primary服务) 与 Replica 服务默认指向 Pgbouncer 6432 端口，
-如果您想要让这两个服务绕过连接池直接访问 PostgreSQL 实例，可以定制 [**`pg_services`**](/docs/pgsql/param#pg_services)，或将将 [**`pg_default_service_dest`**](/docs/pgsql/param#pg_default_service_dest) 设置为 `postgres`。
+如果您想要让这两个服务绕过连接池直接访问 PostgreSQL 实例，可以定制 [**`pg_services`**](/docs/pgsql/param#pg_services)，或将 [**`pg_default_service_dest`**](/docs/pgsql/param#pg_default_service_dest) 设置为 `postgres`。
 
 
 ----------------
@@ -99,7 +99,7 @@ $ pgb -c "RELOAD;"
 Pgbouncer 使用和 PostgreSQL 相同的 `dbsu` 运行，默认为 `postgres` 操作系统用户。Pigsty 提供了快捷命令 `pgb` 来简化管理操作：
 
 ```bash
-alias pgb="psql -p 6432 -d pgbouncer -U postgres"
+alias pgb='psql -p6432 -dpgbouncer'
 ```
 
 您可以在数据库节点上使用 `pgb` 命令连接到 Pgbouncer 管理控制台，执行管理命令和监控查询。
@@ -332,7 +332,7 @@ RELOAD;               -- 重载配置文件
 ```bash
 $ pgb -c "RELOAD;"              # 通过管理控制台重载
 $ systemctl reload pgbouncer    # 通过 systemd 重载
-$ kill -SIGHUP $(cat /var/run/pgbouncer/pgbouncer.pid)  # 通过信号重载
+$ kill -SIGHUP $(cat /run/postgresql/pgbouncer.pid)  # 通过信号重载
 ```
 
 Pigsty 提供了重载 Pgbouncer 配置的剧本任务：
@@ -416,28 +416,28 @@ $ pgb -c "SHOW DATABASES;"
 
 Pgbouncer 支持通过 Unix 信号进行控制，这在无法连接管理控制台时非常有用：
 
-| 信号        | 等效命令                        | 说明            |
-|-----------|-----------------------------|--------------------|
-| `SIGHUP`  | `RELOAD`                    | 重载配置文件           |
-| `SIGTERM` | `SHUTDOWN WAIT_FOR_CLIENTS` | 优雅关闭，等待客户端断开     |
-| `SIGINT`  | `SHUTDOWN WAIT_FOR_SERVERS` | 优雅关闭，等待服务端释放     |
-| `SIGQUIT` | `SHUTDOWN`                  | 立即关闭             |
-| `SIGUSR1` | `PAUSE`                     | 暂停所有数据库          |
-| `SIGUSR2` | `RESUME`                    | 恢复所有数据库          |
+| 信号        | 等效命令                        | 说明           |
+|-----------|-----------------------------|--------------|
+| `SIGHUP`  | `RELOAD`                    | 重载配置文件       |
+| `SIGTERM` | `SHUTDOWN WAIT_FOR_CLIENTS` | 优雅关闭，等待客户端断开 |
+| `SIGINT`  | `SHUTDOWN WAIT_FOR_SERVERS` | 优雅关闭，等待服务端释放 |
+| `SIGQUIT` | `SHUTDOWN`                  | 立即关闭         |
+| `SIGUSR1` | `PAUSE`                     | 暂停所有数据库      |
+| `SIGUSR2` | `RESUME`                    | 恢复所有数据库      |
 {.full-width}
 
 ```bash
 # 通过信号重载配置
-$ kill -SIGHUP $(cat /var/run/pgbouncer/pgbouncer.pid)
+$ kill -SIGHUP $(cat /run/postgresql/pgbouncer.pid)
 
 # 通过信号优雅关闭
-$ kill -SIGTERM $(cat /var/run/pgbouncer/pgbouncer.pid)
+$ kill -SIGTERM $(cat /run/postgresql/pgbouncer.pid)
 
 # 通过信号暂停
-$ kill -SIGUSR1 $(cat /var/run/pgbouncer/pgbouncer.pid)
+$ kill -SIGUSR1 $(cat /run/postgresql/pgbouncer.pid)
 
 # 通过信号恢复
-$ kill -SIGUSR2 $(cat /var/run/pgbouncer/pgbouncer.pid)
+$ kill -SIGUSR2 $(cat /run/postgresql/pgbouncer.pid)
 ```
 
 

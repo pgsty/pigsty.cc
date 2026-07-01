@@ -361,7 +361,7 @@ Apply these changes? [y/N]: y
 
 ## Citus集群
 
-Pigsty 原生支持 Citus。可以参考 [`files/pigsty/citus.yml`](https://github.com/Vonng/pigsty/blob/main/conf/citus.yml) 与 [`prod.yml`](https://github.com/Vonng/pigsty/blob/main/conf/prod.yml#L298) 作为样例。
+Pigsty 原生支持 Citus。可以参考 [`conf/ha/citus.yml`](https://github.com/pgsty/pigsty/blob/main/conf/ha/citus.yml) 作为完整样例。
 
 要定义一个 citus 集群，您需要指定以下参数：
 
@@ -409,7 +409,6 @@ SELECT create_reference_table('pgbench_branches')         ; SELECT truncate_loca
 SELECT create_reference_table('pgbench_history')          ; SELECT truncate_local_data_after_distributing_table($$public.pgbench_history$$);
 SELECT create_reference_table('pgbench_tellers')          ; SELECT truncate_local_data_after_distributing_table($$public.pgbench_tellers$$);
 ```
-
 
 
 

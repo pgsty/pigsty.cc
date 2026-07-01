@@ -7,7 +7,7 @@ categories: [任务，概念]
 ---
 
 
-备份可以通过内置 [脚本](#脚本) 调用，使用节点 [crontab](#定时备份) 定时执行，
+备份可以通过内置 [脚本](#脚本) 调用，使用 [`pg_crontab`](/docs/pgsql/param#pg_crontab) 定时执行，
 由 [pgbackrest](https://pgbackrest.org/) 管理，存储在备份仓库中，
 仓库可以是本地磁盘文件系统或 MinIO / S3，并支持不同的 [保留](/docs/pgsql/backup/repository#仓库保留策略) 策略。
 
@@ -104,24 +104,24 @@ pg-backup diff   # 执行差异备份         = pgbackrest --stanza=pg-meta --ty
 
 Pigsty 利用 Linux crontab 来调度备份任务。您可以用它定义备份策略。
 
-例如，大多数单节点配置模板都有以下用于备份的 [`node_crontab`](/docs/node/param#node_crontab)：
+例如，大多数单节点配置模板都有以下用于备份的 [`pg_crontab`](/docs/pgsql/param#pg_crontab)：
 
 ```yaml title="每天凌晨1点全量备份"
-node_crontab: [ '00 01 * * * postgres /pg/bin/pg-backup full' ]
+pg_crontab: [ '00 01 * * * /pg/bin/pg-backup full' ]
 ```
 
 您可以使用 crontab 和 `pg-backup` 脚本设计更复杂的备份策略，例如：
 
 ```yaml title="周一全量备份，工作日增量备份"
-node_crontab:  # 周一凌晨1点全量备份，工作日增量备份
-  - '00 01 * * 1 postgres /pg/bin/pg-backup full'
-  - '00 01 * * 2,3,4,5,6,7 postgres /pg/bin/pg-backup'
+pg_crontab:  # 周一凌晨1点全量备份，工作日增量备份
+  - '00 01 * * 1 /pg/bin/pg-backup full'
+  - '00 01 * * 2,3,4,5,6,7 /pg/bin/pg-backup'
 ```
 
-要应用 crontab 变更，使用 [`node.yml`](/docs/node/playbook/#nodeyml) 更新所有节点的 crontab：
+要应用 crontab 变更，使用 [`pgsql.yml`](/docs/pgsql/playbook/#pgsqlyml) 更新数据库超级用户的 crontab：
 
 ```bash title="应用 crontab"
-./node.yml -t node_crontab -l pg-meta    # 将 crontab 变更应用到 pg-meta 组
+./pgsql.yml -t pg_crontab -l pg-meta    # 将 crontab 变更应用到 pg-meta 组
 ```
 
 

@@ -16,12 +16,12 @@ Pigsty 使用**包别名**机制简化扩展的安装与管理。
 
 管理扩展涉及多个层面的名称映射：
 
-| 层面 | 示例 `pgvector` | 示例 `postgis` |
-|:-----|:----------------|:---------------|
-| 扩展名 | `vector` | `postgis`, `postgis_topology`, ... |
-| 包别名 | `pgvector` | `postgis` |
-| RPM 包名 | `pgvector_18` | `postgis36_18*` |
-| DEB 包名 | `postgresql-18-pgvector` | `postgresql-18-postgis-3*` |
+| 层面     | 示例 `pgvector`            | 示例 `postgis`                       |
+|:-------|:-------------------------|:-----------------------------------|
+| 扩展名    | `vector`                 | `postgis`, `postgis_topology`, ... |
+| 包别名    | `pgvector`               | `postgis`                          |
+| RPM 包名 | `pgvector_18`            | `postgis36_18*`                    |
+| DEB 包名 | `postgresql-18-pgvector` | `postgresql-18-postgis-3*`         |
 {.full-width}
 
 Pigsty 提供**包别名**抽象层，让用户无需关心具体的 RPM/DEB 包名：
@@ -56,24 +56,24 @@ pg_extensions: [ pg18-gis, pg18-rag, pg18-fts ]
 
 ## 类别列表
 
-| 类别 | 说明 | 典型扩展 |
-|:----:|:-----|:--------|
-| `time` | 时序类 | timescaledb, pg_cron, periods |
-| `gis` | 地理类 | postgis, h3, pgrouting |
-| `rag` | 向量类 | pgvector, pgml, vchord |
-| `fts` | 搜索类 | pg_trgm, zhparser, pgroonga |
-| `olap` | 分析类 | citus, pg_duckdb, pg_analytics |
-| `feat` | 特性类 | age, pg_graphql, rum |
-| `lang` | 语言类 | plpython3u, pljava, plv8 |
-| `type` | 类型类 | hstore, ltree, citext |
-| `util` | 工具类 | http, pg_net, pgjwt |
-| `func` | 函数类 | pgcrypto, uuid-ossp, pg_uuidv7 |
-| `admin` | 管理类 | pg_repack, pgagent, pg_squeeze |
-| `stat` | 统计类 | pg_stat_statements, pg_qualstats, auto_explain |
-| `sec` | 安全类 | pgaudit, pgcrypto, pgsodium |
-| `fdw` | 外部类 | postgres_fdw, mysql_fdw, oracle_fdw |
-| `sim` | 兼容类 | orafce, babelfishpg_tds |
-| `etl` | 数据类 | pglogical, wal2json, decoderbufs |
+|   类别    | 说明  | 典型扩展                                           |
+|:-------:|:----|:-----------------------------------------------|
+| `time`  | 时序类 | timescaledb, pg_cron, periods                  |
+|  `gis`  | 地理类 | postgis, h3, pgrouting                         |
+|  `rag`  | 向量类 | pgvector, pgml, vchord                         |
+|  `fts`  | 搜索类 | pg_trgm, zhparser, pgroonga                    |
+| `olap`  | 分析类 | citus, pg_duckdb, pg_mooncake                  |
+| `feat`  | 特性类 | age, pg_graphql, rum                           |
+| `lang`  | 语言类 | plpython3u, pljava, plv8                       |
+| `type`  | 类型类 | hstore, ltree, citext                          |
+| `util`  | 工具类 | http, pg_net, pgjwt                            |
+| `func`  | 函数类 | pgcrypto, uuid-ossp, pg_uuidv7                 |
+| `admin` | 管理类 | pg_repack, pgagent, pg_squeeze                 |
+| `stat`  | 统计类 | pg_stat_statements, pg_qualstats, auto_explain |
+|  `sec`  | 安全类 | pgaudit, pgcrypto, pgsodium                    |
+|  `fdw`  | 外部类 | postgres_fdw, mysql_fdw, oracle_fdw            |
+|  `sim`  | 兼容类 | orafce, babelfishpg_tds                        |
+|  `etl`  | 数据类 | pglogical, wal2json, decoderbufs               |
 {.full-width}
 
 
@@ -88,4 +88,3 @@ pg_extensions: [ pg18-gis, pg18-rag, pg18-fts ]
 - 支持的操作系统发行版
 - 安装方式、预加载需求
 - 许可证、来源仓库
-

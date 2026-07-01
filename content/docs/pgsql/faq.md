@@ -122,14 +122,14 @@ Pigsty 在所有实例的 patroni 配置中设置了 `clonefrom: true` 标签，
 如果某个实例有损坏的数据文件，导致创建新副本的时候出错中断，那么你可以设置 `clonefrom: false` 来避免从损坏的实例中拉取数据。具体操作如下
 
 ```bash
-$ vi /pg/bin/patroni.yml
+$ vi /etc/patroni/patroni.yml
 
 tags:
   nofailover: false
   clonefrom: true      # ----------> change to false
   noloadbalance: false
   nosync: false
-  version:  '15'
+  version:  '18'
   spec: '4C.8G.50G'
   conf: 'oltp.yml'
   
@@ -171,4 +171,3 @@ $ systemctl reload patroni    # 重新加载 Patroni 配置
 ```bash
 bin/pgmon-rm <ins>     # 用于从 Victoria 中移除单个实例 'ins' 的监控对象，特别适合移除添加的外部实例
 ```
-

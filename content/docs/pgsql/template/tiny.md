@@ -106,7 +106,7 @@ max_parallel_maintenance_workers: 33% × cpu (最小1)
 
 `max_parallel_workers_per_gather: 0` 确保查询不会启动并行工作进程，避免在低核心环境下争抢资源。
 
-### IO 配置（PG17+）
+### IO 配置（PG18+）
 
 ```yaml
 io_workers: 3   # 固定值，OLTP: 25% cpu (4-16)
@@ -354,4 +354,3 @@ pg-growing:
 - [**OLAP 模板**](/docs/pgsql/template/olap/)：分析处理模板
 - [**CRIT 模板**](/docs/pgsql/template/crit/)：关键业务模板
 - [单机部署](/docs/setup/install#部署)：Pigsty 单机安装指南
-

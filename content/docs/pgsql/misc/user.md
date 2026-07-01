@@ -87,8 +87,8 @@ Pigsty 具有一套内置的，开箱即用的访问控制 / [ACL](/docs/concept
 
 - [`pg_default_roles`](/docs/pgsql/param#pg_default_roles)：系统范围的角色和全局用户
 - [`pg_default_privileges`](/docs/pgsql/param#pg_default_privileges)：新建对象的默认权限
-- [`roles/pgsql/templates/pg-init-role.sql`](https://github.com/Vonng/pigsty/blob/main/roles/pgsql/templates/pg-init-role.sql)：角色创建 SQL 模板
-- [`roles/pgsql/templates/pg-init-template.sql`](https://github.com/Vonng/pigsty/blob/main/roles/pgsql/templates/pg-init-template.sql)：权限 SQL 模板
+- [`roles/pgsql/templates/pg-init-role.sql`](https://github.com/pgsty/pigsty/blob/main/roles/pgsql/templates/pg-init-role.sql)：角色创建 SQL 模板
+- [`roles/pgsql/templates/pg-init-template.sql`](https://github.com/pgsty/pigsty/blob/main/roles/pgsql/templates/pg-init-template.sql)：权限 SQL 模板
 
 
 

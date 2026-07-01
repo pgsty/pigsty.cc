@@ -342,7 +342,7 @@ pg_crontab:
   - '00 04 * * 1 /pg/bin/pg-repack'     # 每周一凌晨4点执行
 ```
 
-您可以通过 Pigsty 的 [**PGCAT Database - Table Bloat**](https://demo.pigsty.cc/d/pgcat-database) 面板确认数据库中的膨胀情况，并选择膨胀率较高的表与索引进行重整。
+您可以通过 Pigsty 的 [**PGCAT Database - Table Bloat**](https://demo.pigsty.cc/ui/d/pgcat-database) 面板确认数据库中的膨胀情况，并选择膨胀率较高的表与索引进行重整。
 
 更多细节请参考：[**关系膨胀的治理**](https://vonng.com/pg/bloat/)
 

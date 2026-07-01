@@ -9,7 +9,7 @@ categories: [教程]
 
 在 Pigsty 中使用扩展需要四个步骤：**下载**、**安装**、**配置**、**启用**。
 
-1. **下载**：将扩展软件包下载到本地仓库（Pigsty 默认已下载主流扩展）
+1. **下载**：将扩展软件包下载到本地仓库（默认本地仓库只保证基础内核与 `pgsql-main` 包集）
 2. **安装**：在集群节点上安装扩展软件包
 3. **配置**：部分扩展需要预加载或配置参数
 4. **启用**：在数据库中执行 `CREATE EXTENSION` 创建扩展
@@ -53,11 +53,11 @@ pg edit-config pg-meta --force -p shared_preload_libraries='timescaledb, pg_stat
 psql -d meta -c 'CREATE EXTENSION vector;'
 ```
 
-也可以使用 [pig](/ext/pig/) 包管理器直接安装：
+也可以使用 [pig](/ext/pig/) 包管理器安装扩展包，然后在数据库内执行 `CREATE EXTENSION`：
 
 ```bash
-pig install pgvector        # 安装扩展包
-pig extension create vector  # 在数据库中启用
+pig install pgvector                         # 安装扩展包
+psql -d meta -c 'CREATE EXTENSION vector;'   # 在数据库中启用
 ```
 
 
@@ -74,4 +74,3 @@ pig extension create vector  # 在数据库中启用
 {.full-width}
 
 > 详细说明请参阅各子章节：[下载](/docs/pgsql/ext/download/)、[安装](/docs/pgsql/ext/install/)、[配置](/docs/pgsql/ext/config/)、[启用](/docs/pgsql/ext/create/)
-

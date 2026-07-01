@@ -36,7 +36,7 @@ Citus 是一个 PostgreSQL [扩展插件](/docs/pgsql/ext/)，可以按照标准
 
 此外，还需要额外的 hba 规则，允许从本地和其他数据节点进行 SSL 访问。
 
-您可以将每个 Citus 集群分别定义为独立的分组，像标准的 PostgreSQL 集群一样，如 [`conf/dbms/citus.yml`](https://github.com/Vonng/pigsty/blob/main/conf/citus.yml) 所示：
+您可以将每个 Citus 集群分别定义为独立的分组，像标准的 PostgreSQL 集群一样；当前完整模板见 [`conf/ha/citus.yml`](https://github.com/pgsty/pigsty/blob/main/conf/ha/citus.yml)：
 
 ```yaml
 all:
@@ -67,7 +67,7 @@ all:
       - { user: 'all' ,db: all  ,addr: intra        ,auth: ssl ,title: 'all user ssl access from intranet'  }
 ```
 
-您也可以在一个分组内指定所有 Citus 集群成员的身份参数，如 [`prod.yml`](https://github.com/Vonng/pigsty/blob/main/conf/prod.yml#L298) 所示：
+您也可以在一个分组内指定所有 Citus 集群成员的身份参数，如 [`conf/ha/citus.yml`](https://github.com/pgsty/pigsty/blob/main/conf/ha/citus.yml) 所示：
 
 ```yaml
 #==========================================================#

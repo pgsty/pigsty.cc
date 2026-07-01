@@ -27,7 +27,7 @@ categories: [任务，概念]
 如果你通过 HAProxy 方式访问数据库集群，那么你需要调整负载均衡配置，将读写流量手工指向主库。
 
 - 编辑  `/etc/haproxy/<pg_cluster>-primary.cfg` 配置文件，其中 `<pg_cluster>` 为你的 PostgreSQL 集群名称，例如 `pg-meta`。
-- 将健康检查配置选项注释，停止进行健康鉴擦好
+- 将健康检查配置选项注释，停止进行健康检查。
 - 将服务器列表中，其他两台故障的机器注释掉，只保留当前主库服务器。
 
 ```ini
@@ -109,14 +109,15 @@ ETCD 集群在法定人数恢复后，将恢复工作，此时可以启动幸存
 Patroni 启动后进入维护模式。
 
 ```bash
-systemctl restart patroni
+sudo systemctl restart patroni
 pg pause <pg_cluster>
 ```
 
 在另外两台实例上以 `postgres` 用户身份创建 `touch /pg/data/standby.signal` 标记文件将其标记为从库，然后拉起 Patroni：
 
 ```bash
-systemctl restart patroni
+sudo -iu postgres touch /pg/data/standby.signal
+sudo systemctl restart patroni
 ```
 
 确认 Patroni 集群身份/角色正常后，退出维护模式：

@@ -201,7 +201,7 @@ ALTER DEFAULT PRIVILEGES FOR ROLE "dbrole_admin" {{ priv }};
 {% endfor %}
 ```
 
-这些内容将会被 PG 集群初始化模板 [`pg-init-template.sql`](https://github.com/Vonng/pigsty/blob/main/roles/pgsql/templates/pg-init-template.sql) 所使用，在集群初始化的过程中渲染并输出至 `/pg/tmp/pg-init-template.sql`。
+这些内容将会被 PG 集群初始化模板 [`pg-init-template.sql`](https://github.com/pgsty/pigsty/blob/main/roles/pgsql/templates/pg-init-template.sql) 所使用，在集群初始化的过程中渲染并输出至 `/pg/tmp/pg-init-template.sql`。
 该命令会在 `template1` 与 `postgres` 数据库中执行，新创建的数据库会通过模板 `template1` 继承这些默认权限配置。
 
 

@@ -66,7 +66,7 @@ pg18-main:   "postgresql18 postgresql18-server postgresql18-libs postgresql18-co
 - [**`pg_extensions`**](/docs/pgsql/param#pg_extensions) - PG 扩展软件包
 - [**`pg_packages`**](/docs/pgsql/param#pg_extensions) - PG 内核/基础工具软件包
 - [**`repo_packages`**](/docs/infra/param#repo_packages) - 软件包下载参数：下载到本地软件仓库的软件包
-- [**`repo_packages_extra`**](/docs/pgsql/param#pg_extensions) - 扩展安装参数：额外下载到本地软件仓库的软件包
+- [**`repo_extra_packages`**](/docs/pgsql/param#pg_extensions) - 扩展安装参数：额外下载到本地软件仓库的软件包
 
 
 --------

@@ -80,27 +80,27 @@ pg-meta:
 
 所有参数中唯一 **必选** 的字段是 `name`，它应该是当前 PostgreSQL 集群中有效且唯一的用户名，其他参数都有合理的默认值，均为可选项。
 
-| 字段                                    | 分类  | 类型       | 属性  | 说明                                 |
-|---------------------------------------|-----|----------|-----|------------------------------------|
-| [**`name`**](#name)                   | 基本  | `string` | 必选  | 用户名，必须是有效且唯一的标识符                   |
-| [**`state`**](#state)                 | 基本  | `enum`   | 可选  | 用户状态：`create`（默认）、`absent`         |
-| [**`password`**](#password)           | 基本  | `string` | 可变  | 用户密码，明文或哈希                         |
-| [**`comment`**](#comment)             | 基本  | `string` | 可变  | 用户备注信息                             |
-| [**`login`**](#login)                 | 权限  | `bool`   | 可变  | 是否允许登录，默认 `true`                   |
-| [**`superuser`**](#superuser)         | 权限  | `bool`   | 可变  | 是否为超级用户，默认 `false`                 |
-| [**`createdb`**](#createdb)           | 权限  | `bool`   | 可变  | 是否可创建数据库，默认 `false`                |
-| [**`createrole`**](#createrole)       | 权限  | `bool`   | 可变  | 是否可创建角色，默认 `false`                 |
-| [**`inherit`**](#inherit)             | 权限  | `bool`   | 可变  | 是否继承所属角色权限，默认 `true`               |
-| [**`replication`**](#replication)     | 权限  | `bool`   | 可变  | 是否可进行复制，默认 `false`                 |
-| [**`bypassrls`**](#bypassrls)         | 权限  | `bool`   | 可变  | 是否可绕过行级安全，默认 `false`               |
-| [**`connlimit`**](#connlimit)         | 权限  | `int`    | 可变  | 连接数限制，`-1` 表示不限制                   |
-| [**`expire_in`**](#expire_in)         | 有效期 | `int`    | 可变  | 从当前日期起 N 天后过期（优先级高于 `expire_at`）   |
-| [**`expire_at`**](#expire_at)         | 有效期 | `string` | 可变  | 过期日期，`YYYY-MM-DD` 格式               |
-| [**`roles`**](#roles)                 | 角色  | `array`  | 增量  | 所属角色数组，支持字符串或对象格式                  |
-| [**`parameters`**](#parameters)       | 参数  | `object` | 可变  | 角色级参数                              |
-| [**`pgbouncer`**](#pgbouncer)         | 连接池 | `bool`   | 可变  | 是否加入连接池，默认 `false`                 |
-| [**`pool_mode`**](#pool_mode)         | 连接池 | `enum`   | 可变  | 池化模式：`transaction`（默认）             |
-| [**`pool_connlimit`**](#pool_connlimit) | 连接池 | `int`    | 可变  | 连接池用户最大连接数                         |
+| 字段                                      | 分类  | 类型       | 属性 | 说明                               |
+|-----------------------------------------|-----|----------|----|----------------------------------|
+| [**`name`**](#name)                     | 基本  | `string` | 必选 | 用户名，必须是有效且唯一的标识符                 |
+| [**`state`**](#state)                   | 基本  | `enum`   | 可选 | 用户状态：`create`（默认）、`absent`       |
+| [**`password`**](#password)             | 基本  | `string` | 可变 | 用户密码，明文或哈希                       |
+| [**`comment`**](#comment)               | 基本  | `string` | 可变 | 用户备注信息                           |
+| [**`login`**](#login)                   | 权限  | `bool`   | 可变 | 是否允许登录，默认 `true`                 |
+| [**`superuser`**](#superuser)           | 权限  | `bool`   | 可变 | 是否为超级用户，默认 `false`               |
+| [**`createdb`**](#createdb)             | 权限  | `bool`   | 可变 | 是否可创建数据库，默认 `false`              |
+| [**`createrole`**](#createrole)         | 权限  | `bool`   | 可变 | 是否可创建角色，默认 `false`               |
+| [**`inherit`**](#inherit)               | 权限  | `bool`   | 可变 | 是否继承所属角色权限，默认 `true`             |
+| [**`replication`**](#replication)       | 权限  | `bool`   | 可变 | 是否可进行复制，默认 `false`               |
+| [**`bypassrls`**](#bypassrls)           | 权限  | `bool`   | 可变 | 是否可绕过行级安全，默认 `false`             |
+| [**`connlimit`**](#connlimit)           | 权限  | `int`    | 可变 | 连接数限制，`-1` 表示不限制                 |
+| [**`expire_in`**](#expire_in)           | 有效期 | `int`    | 可变 | 从当前日期起 N 天后过期（优先级高于 `expire_at`） |
+| [**`expire_at`**](#expire_at)           | 有效期 | `string` | 可变 | 过期日期，`YYYY-MM-DD` 格式             |
+| [**`roles`**](#roles)                   | 角色  | `array`  | 增量 | 所属角色数组，支持字符串或对象格式                |
+| [**`parameters`**](#parameters)         | 参数  | `object` | 可变 | 角色级参数                            |
+| [**`pgbouncer`**](#pgbouncer)           | 连接池 | `bool`   | 可变 | 是否加入连接池，默认 `false`               |
+| [**`pool_mode`**](#pool_mode)           | 连接池 | `enum`   | 可变 | 池化模式：`transaction`（默认）           |
+| [**`pool_connlimit`**](#pool_connlimit) | 连接池 | `int`    | 可变 | 连接池用户最大连接数                       |
 {.full-width}
 
 
@@ -125,10 +125,10 @@ pg-meta:
 
 枚举值，用于指定要对用户执行的操作，可以是 `create` 或 `absent`，默认值为 `create`。
 
-| 状态       | 说明                          |
-|----------|------------------------------|
-| `create` | 默认，创建用户，如果已存在则更新属性 |
-| `absent` | 删除用户，使用 `DROP ROLE`     |
+| 状态       | 说明                  |
+|----------|---------------------|
+| `create` | 默认，创建用户，如果已存在则更新属性  |
+| `absent` | 删除用户，使用 `DROP ROLE` |
 {.full-width}
 
 ```yaml
@@ -608,8 +608,8 @@ pg_users:
 
 - [**`pg_default_roles`**](/docs/pgsql/param#pg_default_roles)：系统范围的角色和全局用户
 - [**`pg_default_privileges`**](/docs/pgsql/param#pg_default_privileges)：新建对象的默认权限
-- [**`pg-init-role.sql`**](https://github.com/Vonng/pigsty/blob/main/roles/pgsql/templates/pg-init-role.sql)：角色创建 SQL 模板
-- [**`pg-init-template.sql`**](https://github.com/Vonng/pigsty/blob/main/roles/pgsql/templates/pg-init-template.sql)：权限 SQL 模板
+- [**`pg-init-role.sql`**](https://github.com/pgsty/pigsty/blob/main/roles/pgsql/templates/pg-init-role.sql)：角色创建 SQL 模板
+- [**`pg-init-template.sql`**](https://github.com/pgsty/pigsty/blob/main/roles/pgsql/templates/pg-init-template.sql)：权限 SQL 模板
 
 
 ----------------
