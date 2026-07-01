@@ -10,6 +10,6 @@ build:
 
 s: sync
 sync:
-	rsync -avz public/ jp:/www/site.cc/
+	rsync -avz public/ jp:/data/web/pigsty.cc/
 
 .PHONY: default d dev b build s sync
