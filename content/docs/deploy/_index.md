@@ -1,14 +1,14 @@
 ---
 title: 部署
 weight: 350
-description: 在严肃生产环境中进行多节点、高可用的 Pigsty 规划、准备与部署工作。
+description: 在生产环境中进行多节点、高可用的 Pigsty 规划、准备与部署工作。
 icon: fas fa-download
 module: [PIGSTY]
 categories: [教程]
 ---
 
 
-与 [**快速上手**](/docs/setup/) 不同，严肃企业生产环境 Pigsty 部署需要更多 [**架构规划**](/docs/deploy/planning) 与 [**准备工作**](/docs/deploy/prepare)。
+与 [**快速上手**](/docs/setup/) 不同，企业生产环境 Pigsty 部署需要更多 [**架构规划**](/docs/deploy/planning) 与 [**准备工作**](/docs/deploy/prepare)。
 
 本章将帮助您理解 Pigsty 的完整部署流程，并提供生产环境部署的最佳实践建议。
 
@@ -21,5 +21,4 @@ categories: [教程]
 
 对于生产环境部署，您通常需要准备至少三个 [**节点**](/docs/deploy/prepare) 以实现高可用。您需要进一步了解 Pigsty 的 [**相关概念**](/docs/concept) 以及常见操作的管理 SOP。
 包括如何通过 [**参数配置**](/docs/setup/config) 进行定制，如何执行 [**Ansible 剧本**](/docs/setup/playbook) 进行部署。以及如何加固部署的 [**安全性**](/docs/deploy/security) 以满足企业合规要求。
-
 

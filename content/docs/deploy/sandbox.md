@@ -108,7 +108,7 @@ Pigsty 提供了开箱即用的模板，您可以使用 [**Vagrant**](/docs/depl
 
 ```bash
 cd ~/pigsty
-make full       # 使用默认 RockyLinux 9 镜像创建 4 节点沙箱
+make full       # 使用默认 Ubuntu 24.04 镜像创建 4 节点沙箱
 make full9      # 使用 RockyLinux 9 创建 4 节点沙箱
 make full12     # 使用 Debian 12 创建 4 节点沙箱
 make full24     # 使用 Ubuntu 24.04 创建 4 节点沙箱

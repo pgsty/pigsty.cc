@@ -58,23 +58,23 @@ make deci       # 10 节点环境
 您可以使用变体别名指定不同的操作系统镜像：
 
 ```bash
-make meta9      # 使用 RockyLinux 9.7 创建单节点
-make full12     # 使用 Debian 12.13 创建 4 节点沙箱
-make simu24     # 使用 Ubuntu 24.04 创建 20 节点仿真环境
-make full26     # 使用 Ubuntu 26.04 创建 4 节点沙箱
+make meta9      # 使用 RockyLinux 9.8 创建单节点
+make full12     # 使用 Debian 12.14 创建 4 节点沙箱
+make simu24     # 使用 Ubuntu 24.04.4 创建 20 节点仿真环境
+make full26     # 使用 Ubuntu 26.04.0 创建 4 节点沙箱
 ```
 
-可用的操作系统后缀：`8`（EL8）、`9`（EL9）、`10`（EL10）、`12`（Debian 12）、`13`（Debian 13）、`22`（Ubuntu 22.04）、`24`（Ubuntu 24.04）、`26`（Ubuntu 26.04）
+可用的操作系统后缀：`8`（EL8）、`9`（EL9）、`10`（EL10）、`12`（Debian 12.14）、`13`（Debian 13.5）、`22`（Ubuntu 22.04.5）、`24`（Ubuntu 24.04.4）、`26`（Ubuntu 26.04.0）
 
 ### 构建环境
 
 您还可以使用以下别名创建 Pigsty 构建环境，这些模板不会替换基础镜像：
 
 ```bash
-make oss        # 3 节点 OSS 构建环境
-make pro        # 5 节点 PRO 构建环境
-make rpm        # 3 节点 EL8/9/10 构建环境
-make deb        # 4 节点 Debian12/13 Ubuntu22/24 构建环境
+make oss        # 4 节点 OSS 构建环境
+make pro        # 6 节点 PRO 构建环境
+make rpm        # 2 节点 EL9/10 构建环境
+make deb        # 5 节点 Debian12/13 Ubuntu22/24/26 构建环境
 make all        # 7 节点全量构建环境
 ```
 
@@ -94,10 +94,10 @@ Pigsty 在 [`vagrant/spec/`](https://github.com/pgsty/pigsty/tree/main/vagrant/s
 |  [deci.rb](https://github.com/pgsty/pigsty/blob/main/vagrant/spec/deci.rb)  | 10 节点 |       混合        |    10 节点环境    |         |
 |  [simu.rb](https://github.com/pgsty/pigsty/blob/main/vagrant/spec/simu.rb)  | 20 节点 |       混合        |  20 节点生产仿真环境  | Simubox |
 | [minio.rb](https://github.com/pgsty/pigsty/blob/main/vagrant/spec/minio.rb) | 4 节点  |  1c2g x 4 + 磁盘  |  MinIO 测试环境   |         |
-|   [oss.rb](https://github.com/pgsty/pigsty/blob/main/vagrant/spec/oss.rb)   | 3 节点  |    1c2g x 3     | 3 节点 OSS 构建环境 |         |
-|   [pro.rb](https://github.com/pgsty/pigsty/blob/main/vagrant/spec/pro.rb)   | 5 节点  |    1c2g x 5     | 5 节点 PRO 构建环境 |         |
-|   [rpm.rb](https://github.com/pgsty/pigsty/blob/main/vagrant/spec/rpm.rb)   | 3 节点  |    1c2g x 3     | 3 节点 EL 构建环境  |         |
-|   [deb.rb](https://github.com/pgsty/pigsty/blob/main/vagrant/spec/deb.rb)   | 4 节点  |    1c2g x 4     | 4 节点 Deb 构建环境 |         |
+|   [oss.rb](https://github.com/pgsty/pigsty/blob/main/vagrant/spec/oss.rb)   | 4 节点  |    1c2g x 4     | 4 节点 OSS 构建环境 |         |
+|   [pro.rb](https://github.com/pgsty/pigsty/blob/main/vagrant/spec/pro.rb)   | 6 节点  |    1c2g x 6     | 6 节点 PRO 构建环境 |         |
+|   [rpm.rb](https://github.com/pgsty/pigsty/blob/main/vagrant/spec/rpm.rb)   | 2 节点  |    1c2g x 2     | 2 节点 EL 构建环境  |         |
+|   [deb.rb](https://github.com/pgsty/pigsty/blob/main/vagrant/spec/deb.rb)   | 5 节点  |    1c2g x 5     | 5 节点 Deb 构建环境 |         |
 |   [all.rb](https://github.com/pgsty/pigsty/blob/main/vagrant/spec/all.rb)   | 7 节点  |    1c2g x 7     |  7 节点全量构建环境   |         |
 {.full-width}
 
@@ -136,30 +136,30 @@ cd ~/pigsty
 vagrant/config [spec] [image] [scale] [provider]
 
 # 示例
-vagrant/config meta u24            # 使用 1 节点规格，Ubuntu 24.04 镜像
-vagrant/config dual el9            # 使用 2 节点规格，RockyLinux 9.7 镜像
-vagrant/config trio d12 2          # 使用 3 节点规格，Debian 12.13 镜像，双倍资源
-vagrant/config full u22 4          # 使用 4 节点规格，Ubuntu 22.04 镜像，4 倍资源
-vagrant/config simu u26 1 libvirt  # 使用 20 节点规格，Ubuntu 26.04 镜像，libvirt 提供商
+vagrant/config meta u24            # 使用 1 节点规格，Ubuntu 24.04.4 镜像
+vagrant/config dual el9            # 使用 2 节点规格，RockyLinux 9.8 镜像
+vagrant/config trio d12 2          # 使用 3 节点规格，Debian 12.14 镜像，双倍资源
+vagrant/config full u22 4          # 使用 4 节点规格，Ubuntu 22.04.5 镜像，4 倍资源
+vagrant/config simu u26 1 libvirt  # 使用 20 节点规格，Ubuntu 26.04.0 镜像，libvirt 提供商
 ```
 
 ### 镜像别名
 
 config 脚本支持多种镜像别名：
 
-| 发行版 | 别名 | Vagrant Box |
-|--------|------|-------------|
-| Rocky 8 | `el8`, `rocky8`, `r8` | `cloud-image/rocky-8` |
-| Rocky 9 | `el9`, `rocky9`, `el`, `r9` | `cloud-image/rocky-9` |
-| Rocky 10 | `el10`, `rocky10`, `r10` | `cloud-image/rocky-10` |
-| Debian 12 | `d12`, `debian12`, `deb12` | `cloud-image/debian-12` |
-| Debian 13 | `d13`, `debian13`, `deb13` | `cloud-image/debian-13` |
-| Ubuntu 22.04 | `u22`, `ubuntu22`, `ubuntu2204` | `cloud-image/ubuntu-22.04` |
-| Ubuntu 24.04 | `u24`, `ubuntu24`, `ubuntu2404`, `ubuntu` | `cloud-image/ubuntu-24.04` |
-| Ubuntu 26.04 | `u26`, `ubuntu26`, `ubuntu2604` | `cloud-image/ubuntu-26.04` |
-| AlmaLinux 8 | `alma8` | `cloud-image/almalinux-8` |
-| AlmaLinux 9 | `alma9` | `cloud-image/almalinux-9` |
-| AlmaLinux 10 | `alma10` | `cloud-image/almalinux-10` |
+| 发行版            | 别名                                        | Vagrant Box                |
+|----------------|-------------------------------------------|----------------------------|
+| Rocky 8        | `el8`, `rocky8`, `r8`                     | `cloud-image/rocky-8`      |
+| Rocky 9        | `el9`, `rocky9`, `el`, `r9`               | `cloud-image/rocky-9`      |
+| Rocky 10       | `el10`, `rocky10`, `r10`                  | `cloud-image/rocky-10`     |
+| Debian 12      | `d12`, `debian12`, `deb12`                | `cloud-image/debian-12`    |
+| Debian 13      | `d13`, `debian13`, `deb13`                | `cloud-image/debian-13`    |
+| Ubuntu 22.04.5 | `u22`, `ubuntu22`, `ubuntu2204`           | `cloud-image/ubuntu-22.04` |
+| Ubuntu 24.04.4 | `u24`, `ubuntu24`, `ubuntu2404`, `ubuntu` | `cloud-image/ubuntu-24.04` |
+| Ubuntu 26.04.0 | `u26`, `ubuntu26`, `ubuntu2604`           | `cloud-image/ubuntu-26.04` |
+| AlmaLinux 8    | `alma8`                                   | `cloud-image/almalinux-8`  |
+| AlmaLinux 9    | `alma9`                                   | `cloud-image/almalinux-9`  |
+| AlmaLinux 10   | `alma10`                                  | `cloud-image/almalinux-10` |
 
 ### 资源缩放
 
@@ -226,38 +226,36 @@ Pigsty v4.3 统一使用 [**Vagrant Cloud**](https://portal.cloud.hashicorp.com/
 
 ### VirtualBox
 
-| 系统 | Vagrant Box | `amd64` 版本 | `arm64` 版本 |
-|------|-------------|:------------:|:------------:|
-| Rocky 8 | [`cloud-image/rocky-8`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/rocky-8) | `8.10.20240528.0` | `8.10.20240528.0` |
-| Rocky 9 | [`cloud-image/rocky-9`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/rocky-9) | `9.7.20251123.2` | `9.7.20251123.2` |
-| Rocky 10 | [`cloud-image/rocky-10`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/rocky-10) | `10.1.20251116.0` | `10.1.20251116.0` |
-| Debian 11 | [`cloud-image/debian-11`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/debian-11) | `20260419.2453.0` | `20260419.2453.0` |
-| Debian 12 | [`cloud-image/debian-12`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/debian-12) | `20260413.2447.0` | `20260413.2447.0` |
-| Debian 13 | [`cloud-image/debian-13`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/debian-13) | `20260413.2447.0` | `20260413.2447.0` |
-| Ubuntu 22.04 | [`cloud-image/ubuntu-22.04`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/ubuntu-22.04) | `20260320.0.0` | `20260320.0.0` |
-| Ubuntu 24.04 | [`cloud-image/ubuntu-24.04`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/ubuntu-24.04) | `20260323.0.0` | `20260323.0.0` |
-| Ubuntu 26.04 | [`cloud-image/ubuntu-26.04`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/ubuntu-26.04) | `20260421.0.0` | `20260421.0.0` |
-| AlmaLinux 8 | [`cloud-image/almalinux-8`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/almalinux-8) | `8.10.20260414` | `8.10.20260414` |
-| AlmaLinux 9 | [`cloud-image/almalinux-9`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/almalinux-9) | `9.7.20260414` | `9.7.20260414` |
-| AlmaLinux 10 | [`cloud-image/almalinux-10`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/almalinux-10) | `10.1.20260414.0` | `10.1.20260414.0` |
+| 系统             | Vagrant Box                                                                                                |    `amd64` 版本     |    `arm64` 版本     |
+|----------------|------------------------------------------------------------------------------------------------------------|:-----------------:|:-----------------:|
+| Rocky 8        | [`cloud-image/rocky-8`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/rocky-8)           | `8.10.20240528.0` | `8.10.20240528.0` |
+| Rocky 9        | [`cloud-image/rocky-9`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/rocky-9)           | `9.8.20260525.0`  | `9.8.20260525.0`  |
+| Rocky 10       | [`cloud-image/rocky-10`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/rocky-10)         | `10.2.20260525.0` | `10.2.20260525.0` |
+| Debian 12      | [`cloud-image/debian-12`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/debian-12)       | `20260615.2510.0` | `20260615.2510.0` |
+| Debian 13      | [`cloud-image/debian-13`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/debian-13)       | `20260623.2518.0` | `20260623.2518.0` |
+| Ubuntu 22.04.5 | [`cloud-image/ubuntu-22.04`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/ubuntu-22.04) |  `20260627.0.0`   |  `20260627.0.0`   |
+| Ubuntu 24.04.4 | [`cloud-image/ubuntu-24.04`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/ubuntu-24.04) |  `20260615.0.0`   |  `20260615.0.0`   |
+| Ubuntu 26.04.0 | [`cloud-image/ubuntu-26.04`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/ubuntu-26.04) |  `20260627.0.0`   |  `20260627.0.0`   |
+| AlmaLinux 8    | [`cloud-image/almalinux-8`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/almalinux-8)   |  `8.10.20260518`  |  `8.10.20260518`  |
+| AlmaLinux 9    | [`cloud-image/almalinux-9`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/almalinux-9)   |  `9.8.20260526`   |  `9.8.20260526`   |
+| AlmaLinux 10   | [`cloud-image/almalinux-10`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/almalinux-10) | `10.2.20260526.0` | `10.2.20260526.0` |
 {.full-width}
 
 ### libvirt
 
-| 系统 | Vagrant Box | `amd64` 版本 | `arm64` 版本 |
-|------|-------------|:------------:|:------------:|
-| Rocky 8 | [`cloud-image/rocky-8`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/rocky-8) | `8.10.20240528.0` | `8.10.20240528.0` |
-| Rocky 9 | [`cloud-image/rocky-9`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/rocky-9) | `9.7.20251123.2` | `9.7.20251123.2` |
-| Rocky 10 | [`cloud-image/rocky-10`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/rocky-10) | `10.1.20251116.0` | `10.1.20251116.0` |
-| Debian 11 | [`cloud-image/debian-11`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/debian-11) | `20260419.2453.0` | `20260419.2453.0` |
-| Debian 12 | [`cloud-image/debian-12`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/debian-12) | `20260413.2447.0` | `20260413.2447.0` |
-| Debian 13 | [`cloud-image/debian-13`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/debian-13) | `20260413.2447.0` | `20260413.2447.0` |
-| Ubuntu 22.04 | [`cloud-image/ubuntu-22.04`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/ubuntu-22.04) | `20260320.0.0` | `20260320.0.0` |
-| Ubuntu 24.04 | [`cloud-image/ubuntu-24.04`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/ubuntu-24.04) | `20260323.0.0` | `20260323.0.0` |
-| Ubuntu 26.04 | [`cloud-image/ubuntu-26.04`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/ubuntu-26.04) | `20260421.0.0` | `20260421.0.0` |
-| AlmaLinux 8 | [`cloud-image/almalinux-8`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/almalinux-8) | `8.10.20260414` | `8.10.20260414` |
-| AlmaLinux 9 | [`cloud-image/almalinux-9`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/almalinux-9) | `9.7.20260414` | `9.7.20260414` |
-| AlmaLinux 10 | [`cloud-image/almalinux-10`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/almalinux-10) | `10.1.20260414.0` | `10.1.20260414.0` |
+| 系统             | Vagrant Box                                                                                                |    `amd64` 版本     |    `arm64` 版本     |
+|----------------|------------------------------------------------------------------------------------------------------------|:-----------------:|:-----------------:|
+| Rocky 8        | [`cloud-image/rocky-8`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/rocky-8)           | `8.10.20240528.0` | `8.10.20240528.0` |
+| Rocky 9        | [`cloud-image/rocky-9`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/rocky-9)           | `9.8.20260525.0`  | `9.8.20260525.0`  |
+| Rocky 10       | [`cloud-image/rocky-10`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/rocky-10)         | `10.2.20260525.0` | `10.2.20260525.0` |
+| Debian 12      | [`cloud-image/debian-12`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/debian-12)       | `20260615.2510.0` | `20260615.2510.0` |
+| Debian 13      | [`cloud-image/debian-13`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/debian-13)       | `20260623.2518.0` | `20260623.2518.0` |
+| Ubuntu 22.04.5 | [`cloud-image/ubuntu-22.04`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/ubuntu-22.04) |  `20260627.0.0`   |  `20260627.0.0`   |
+| Ubuntu 24.04.4 | [`cloud-image/ubuntu-24.04`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/ubuntu-24.04) |  `20260615.0.0`   |  `20260615.0.0`   |
+| Ubuntu 26.04.0 | [`cloud-image/ubuntu-26.04`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/ubuntu-26.04) |  `20260627.0.0`   |  `20260627.0.0`   |
+| AlmaLinux 8    | [`cloud-image/almalinux-8`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/almalinux-8)   |  `8.10.20260518`  |  `8.10.20260518`  |
+| AlmaLinux 9    | [`cloud-image/almalinux-9`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/almalinux-9)   |  `9.8.20260526`   |  `9.8.20260526`   |
+| AlmaLinux 10   | [`cloud-image/almalinux-10`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/almalinux-10) | `10.2.20260526.0` | `10.2.20260526.0` |
 {.full-width}
 
 

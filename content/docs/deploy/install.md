@@ -58,16 +58,16 @@ cd ~/pigsty      # 进入 Pigsty 目录
 
 在生产环境中部署安装 Pigsty 涉及一些 [**准备工作**](/docs/deploy/prepare)，以下为完整检查清单，供您参考。
 
-|                    项目                     | 要求                           |                   项目                    | 要求                                               |
-|:-----------------------------------------:|:-----------------------------|:---------------------------------------:|:-------------------------------------------------|
-|     [**节点**](/docs/deploy/prepare#节点)     | 至少 `1C2G`，上不封顶               |    [**规格**](/docs/deploy/planning#常见方案)    | 多个同质节点，2 / 3 / 4 / 或更多                           |
-|     [**磁盘**](/docs/deploy/prepare#磁盘)     | `/data` 作为默认主挂载点             |   [**FS**](/docs/deploy/prepare#文件系统)   | 推荐使用 `xfs`，按需使用 `ext4` / `zfs`                   |
-|    [**VIP**](/docs/deploy/prepare#vip)    | L2 VIP，可选 （云环境不可用）           |    [**网络**](/docs/deploy/prepare#网络)    | 静态 IPv4 地址，单节点无固定 IP 可使用 `127.0.0.1`             |
-|     [**CA**](/docs/deploy/prepare#ca)     | 可以使用自签名 CA 或指定已有证书           |    [**域名**](/docs/deploy/prepare#域名)    | 本地 / 公网域名，可选，默认 `i.pigsty` 自签名域名                 |
+|                    项目                     | 要求                           |                   项目                    | 要求                                                      |
+|:-----------------------------------------:|:-----------------------------|:---------------------------------------:|:--------------------------------------------------------|
+|     [**节点**](/docs/deploy/prepare#节点)     | 至少 `1C2G`，上不封顶               |  [**规格**](/docs/deploy/planning#常见方案)   | 多个同质节点，2 / 3 / 4 / 或更多                                  |
+|     [**磁盘**](/docs/deploy/prepare#磁盘)     | `/data` 作为默认主挂载点             |   [**FS**](/docs/deploy/prepare#文件系统)   | 推荐使用 `xfs`，按需使用 `ext4` / `zfs`                          |
+|    [**VIP**](/docs/deploy/prepare#vip)    | L2 VIP，可选 （云环境不可用）           |    [**网络**](/docs/deploy/prepare#网络)    | 静态 IPv4 地址，单节点无固定 IP 可使用 `127.0.0.1`                    |
+|     [**CA**](/docs/deploy/prepare#ca)     | 可以使用自签名 CA 或指定已有证书           |    [**域名**](/docs/deploy/prepare#域名)    | 本地 / 公网域名，可选，默认 `i.pigsty` 自签名域名                        |
 |   [**内核**](/docs/deploy/prepare#linux)    | `Linux` `x86_64` / `aarch64` | [**Linux**](/docs/deploy/prepare#linux) | `el8`, `el9`, `el10`, `d12`, `d13`, `u22`, `u24`, `u26` |
-| [**Locale**](/docs/deploy/prepare#locale) | `C.UTF-8` 或 `C`              |    [**防火墙**](/docs/deploy/admin#防火墙)    | 端口：`80` / `443` / `22` / `5432` （可选）             |
-|      [**用户**](/docs/deploy/admin#用户)      | 避免使用 `root` 和 `postgres`     |   [**Sudo**](/docs/deploy/admin#sudo)   | sudo 权限，最好带有 `nopass` 免密选项                       |
-|     [**SSH**](/docs/deploy/admin#ssh)     | 通过公钥 `nopass` SSH 登陆纳管节点     |   [**可达性**](/docs/deploy/admin#验证可达性)   | `ssh <ip\|alias> sudo ls` 无错误                    |
+| [**Locale**](/docs/deploy/prepare#locale) | `C.UTF-8` 或 `C`              |    [**防火墙**](/docs/deploy/admin#防火墙)    | 端口：`80` / `443` / `22` / `5432` （可选）                    |
+|      [**用户**](/docs/deploy/admin#用户)      | 避免使用 `root` 和 `postgres`     |   [**Sudo**](/docs/deploy/admin#sudo)   | sudo 权限，最好带有 `nopass` 免密选项                              |
+|     [**SSH**](/docs/deploy/admin#ssh)     | 通过公钥 `nopass` SSH 登陆纳管节点     |   [**可达性**](/docs/deploy/admin#验证可达性)   | `ssh <ip\|alias> sudo ls` 无错误                           |
 {.full-width}
 
 
@@ -167,13 +167,13 @@ proceed with ./deploy.yml
 
 **配置脚本常用参数**：
 
-| 参数                      | 说明                                                                |
-|:------------------------|:------------------------------------------------------------------|
-| `-c\|--conf`            | 用于指定使用的 [**配置模板**](/docs/conf/)，相对于 `conf/` 目录，不带 `.yml` 后缀的配置名称  |
-| `-v\|--version`         | 用于指定要安装的 PostgreSQL 大版本，如 `13`、`14`、`15`、`16`、`17`、`18`           |
-| `-r\|--region`          | 用于指定上游软件源的区域，加速下载： (`default\|china\|europe`)                     |
-| `-n\|--non-interactive` | 直接使用命令行参数提供首要 IP 地址，跳过交互式向导                                       |
-| `-x\|--proxy`           | 使用当前环境变量配置 [`proxy_env`](/docs/infra/param#proxy_env) 变量          |
+| 参数                      | 说明                                                               |
+|:------------------------|:-----------------------------------------------------------------|
+| `-c\|--conf`            | 用于指定使用的 [**配置模板**](/docs/conf/)，相对于 `conf/` 目录，不带 `.yml` 后缀的配置名称 |
+| `-v\|--version`         | 用于指定要安装的 PostgreSQL 大版本，如 `14`、`15`、`16`、`17`、`18`               |
+| `-r\|--region`          | 用于指定上游软件源的区域，加速下载： (`default\|china\|europe`)                    |
+| `-n\|--non-interactive` | 直接使用命令行参数提供首要 IP 地址，跳过交互式向导                                      |
+| `-x\|--proxy`           | 使用当前环境变量配置 [`proxy_env`](/docs/infra/param#proxy_env) 变量         |
 {.full-width}
 
 如果您的机器网卡绑定了多个 IP 地址，那么需要使用 `-i|--ip <ipaddr>` 显式指定一个当前节点的首要 IP 地址，或在交互式问询中提供。
