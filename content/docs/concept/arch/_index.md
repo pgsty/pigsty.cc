@@ -45,7 +45,7 @@ Pigsty 采用模块化设计，有六个主要的默认模块：[`PGSQL`](/docs/
 ## 单机安装
 
 默认情况下，Pigsty 将在单个 **节点** (物理机/虚拟机) 上安装。[`deploy.yml`](https://github.com/pgsty/pigsty/blob/main/deploy.yml) 剧本将在**当前**节点上安装 [`INFRA`](/docs/infra)、[`ETCD`](/docs/etcd)、[`PGSQL`](/docs/pgsql) 和可选的 [`MINIO`](/docs/minio) 模块，
-这将为你提供一个功能完备的可观测性技术栈全家桶 (Prometheus、Grafana、Loki、AlertManager、PushGateway、BlackboxExporter 等)，以及一个内置的 PostgreSQL 单机实例作为 CMDB，也可以开箱即用。 (集群名 `pg-meta`，库名为 `meta`)。
+这将为你提供一个功能完备的可观测性技术栈全家桶（VictoriaMetrics、VictoriaLogs、VictoriaTraces、Grafana、Alertmanager、Blackbox Exporter 等），以及一个内置的 PostgreSQL 单机实例作为 CMDB，也可以开箱即用。（集群名 `pg-meta`，库名为 `meta`）
 
 这个节点现在会有完整的自我监控系统、可视化工具集，以及一个自动配置有 PITR 的 Postgres 数据库（HA 不可用，因为你只有一个节点）。你可以使用此节点作为开发箱、测试、运行演示以及进行数据可视化和分析。或者，还可以把这个节点当作管理节点，部署纳管更多的节点！
 
@@ -59,7 +59,7 @@ Pigsty 采用模块化设计，有六个主要的默认模块：[`PGSQL`](/docs/
 
 安装的 [单机元节点](#单机安装) 可用作**管理节点**和**监控中心**，以将更多节点和数据库服务器置于其监视和控制之下。
 
-Pigsty 的监控系统可以独立使用，如果你想安装 Prometheus / Grafana 可观测性全家桶，Pigsty 为你提供了最佳实践！
+Pigsty 的监控系统可以独立使用，如果你想安装 VictoriaMetrics / Grafana 可观测性全家桶，Pigsty 为你提供了最佳实践！
 它为 [主机节点](https://demo.pigsty.cc/d/node-overview) 和 [PostgreSQL数据库](https://demo.pigsty.cc/d/pgsql-overview) 提供了丰富的仪表盘。
 无论这些节点或 PostgreSQL 服务器是否由 Pigsty 管理，只需简单的配置，你就可以立即拥有生产级的监控和告警系统，并将现有的主机与 PostgreSQL 纳入监管。
 

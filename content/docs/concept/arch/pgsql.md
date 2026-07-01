@@ -16,15 +16,15 @@ PGSQL 模块在生产环境中以 **集群** 的形式组织，这些 **集群**
 
 [**PGSQL 模块**](/docs/pgsql) 包含下列组件，协同提供生产级 PostgreSQL 高可用集群服务：
 
-| 组件                                                | 简介    | 描述                                       |
-|:--------------------------------------------------|-------|:-----------------------------------------|
-| [**`postgres`**](#postgresql)                     | 数据库   | 世界上最先进的开源关系型数据库，PGSQL 模块的核心。             |
-| [**`patroni`**](#patroni)                         | 高可用   | 托管 PostgreSQL 进程，协调故障转移、选主、配置变更。         |
-| [**`pgbouncer`**](#pgbouncer)                     | 连接池   | 轻量级连接池中间件，复用连接、降低开销、提供额外灵活性。             |
-| [**`pgbackrest`**](#pgbackrest)                   | 备份恢复  | 全量/增量备份与 WAL 归档，支持本地与对象存储。               |
-| [**`pg_exporter`**](#pg_exporter)                 | 指标导出  | 导出 PostgreSQL 监控指标供 Prometheus 抓取。       |
-| [**`pgbouncer_exporter`**](#pgbouncer_exporter)   | 指标导出  | 导出 [**Pgbouncer**](#pgbouncer) 连接池指标。    |
-| [**`pgbackrest_exporter`**](#pgbackrest_exporter) | 指标导出  | 导出 [**pgBackrest**](#pgbackrest) 备份状态指标。 |
+| 组件                                                | 简介     | 描述                                       |
+|:--------------------------------------------------|--------|:-----------------------------------------|
+| [**`postgres`**](#postgresql)                     | 数据库    | 世界上最先进的开源关系型数据库，PGSQL 模块的核心。             |
+| [**`patroni`**](#patroni)                         | 高可用    | 托管 PostgreSQL 进程，协调故障转移、选主、配置变更。         |
+| [**`pgbouncer`**](#pgbouncer)                     | 连接池    | 轻量级连接池中间件，复用连接、降低开销、提供额外灵活性。             |
+| [**`pgbackrest`**](#pgbackrest)                   | 备份恢复   | 全量/增量备份与 WAL 归档，支持本地与对象存储。               |
+| [**`pg_exporter`**](#pg_exporter)                 | 指标导出   | 导出 PostgreSQL 监控指标供 Prometheus 抓取。       |
+| [**`pgbouncer_exporter`**](#pgbouncer_exporter)   | 指标导出   | 导出 [**Pgbouncer**](#pgbouncer) 连接池指标。    |
+| [**`pgbackrest_exporter`**](#pgbackrest_exporter) | 指标导出   | 导出 [**pgBackrest**](#pgbackrest) 备份状态指标。 |
 | [**`vip-manager`**](#vip-manager)                 | VIP 管理 | 将 L2 VIP 绑定到当前主库节点，实现透明漂移。【可选】           |
 {.full-width}
 
@@ -46,12 +46,12 @@ PGSQL 模块在生产环境中以 **集群** 的形式组织，这些 **集群**
 ![](/img/pigsty/motherboard.gif)
 
 
-| 子系统                     | 组件                                                                                                                                        | 功能                 |
-|:------------------------|:------------------------------------------------------------------------------------------------------------------------------------------|:-------------------|
-| [**高可用子系统**](#高可用子系统)   | [Patroni](#patroni) + [etcd](#etcd)                                                                                                       | 故障检测、自动切换、配置管理     |
-| [**接入子系统**](#服务接入子系统)   | [HAProxy](#haproxy) + [Pgbouncer](#pgbouncer) + [vip-manager](#vip-manager)                                                               | 服务暴露、负载均衡、连接池、VIP  |
+| 子系统                     | 组件                                                                                                                                        | 功能                  |
+|:------------------------|:------------------------------------------------------------------------------------------------------------------------------------------|:--------------------|
+| [**高可用子系统**](#高可用子系统)   | [Patroni](#patroni) + [etcd](#etcd)                                                                                                       | 故障检测、自动切换、配置管理      |
+| [**接入子系统**](#服务接入子系统)   | [HAProxy](#haproxy) + [Pgbouncer](#pgbouncer) + [vip-manager](#vip-manager)                                                               | 服务暴露、负载均衡、连接池、VIP   |
 | [**备份恢复子系统**](#备份恢复子系统) | [pgBackRest](#pgbackrest)（+ MinIO）                                                                                                        | 全量/增量备份、WAL 归档、PITR |
-| [**可观测性子系统**](#可观测性子系统) | [pg_exporter](#pg_exporter) / [pgbouncer_exporter](#pgbouncer_exporter) / [pgbackrest_exporter](#pgbackrest_exporter) + [Vector](#vector) | 指标采集、日志收集          |
+| [**可观测性子系统**](#可观测性子系统) | [pg_exporter](#pg_exporter) / [pgbouncer_exporter](#pgbouncer_exporter) / [pgbackrest_exporter](#pgbackrest_exporter) + [Vector](#vector) | 指标采集、日志收集           |
 {.full-width}
 
 
@@ -192,7 +192,7 @@ PGSQL 模块在生产环境中以 **集群** 的形式组织，这些 **集群**
 
 Pigsty 目前支持 PostgreSQL 14 - 18（生命周期内的大版本），使用 [**PGDG 官方仓库**](/docs/repo/pgdg/) 提供的二进制包安装。
 Pigsty 还允许您使用其他的 [**PG 内核分支**](/docs/pgsql/kernel) 替换默认的 PostgreSQL 内核，
-并在 PG 内核上加装多达 [**510**](/docs/pgsql/ext) 个扩展插件。
+并在 PG 内核上加装多达 [**531**](/docs/pgsql/ext) 个扩展插件。
 
 **PostgreSQL** 进程默认由 [**高可用**](/docs/concept/ha) Agent —— [**Patroni**](#patroni) 托管拉起。
 当一个集群中只有一个节点时，该实例即为主库；当集群包含多个节点时，其余实例会自动作为从库加入：

@@ -32,13 +32,15 @@ Pigsty 提供了 [**`configure`**](https://github.com/pgsty/pigsty/blob/main/con
 
 # 使用不同的数据库内核
 ./configure -c pgsql            # 原生 PostgreSQL 内核，基础功能 (14~18)
-./configure -c citus            # Citus 分布式高可用 PostgreSQL (14~17)
 ./configure -c mssql            # Babelfish 内核，兼容 SQL Server 协议 (17)
 ./configure -c polar            # PolarDB PG 内核，Aurora/RAC 风格 (17)
 ./configure -c ivory            # IvorySQL 内核，兼容 Oracle 语法 (18)
 ./configure -c mysql            # OpenHalo 内核，兼容 MySQL (14)
 ./configure -c pgtde            # Percona PostgreSQL Server 透明加密 (18)
-./configure -c oriole           # OrioleDB 内核，OLTP 增强 (17)
+./configure -c oriole           # OrioleDB 内核，OLTP 增强 (16~18)
+./configure -c agens            # AgensGraph 图数据库内核 (16)
+./configure -c pgedge           # pgEdge 分布式数据库内核 (18)
+./configure -c ha/citus         # Citus 分布式高可用 PostgreSQL (14~18)
 ./configure -c supabase         # Supabase 自托管配置 (15~18)
 
 # 使用多节点高可用模板
@@ -69,17 +71,18 @@ Pigsty 提供了 [**`configure`**](https://github.com/pgsty/pigsty/blob/main/con
 
 适用于各类数据库管理系统与内核的模板：
 
-| 模板                                         | 说明                                        |
-|--------------------------------------------|-------------------------------------------|
-| [**`pgsql.yml`**](/docs/conf/pgsql/)       | 原生 PostgreSQL 内核，基础功能 (14~18)             |
-| [**`citus.yml`**](/docs/conf/citus/)       | Citus 分布式高可用 PostgreSQL (14~17)           |
-| [**`mssql.yml`**](/docs/conf/mssql/)       | Babelfish 内核，兼容 SQL Server 协议 (17)        |
-| [**`polar.yml`**](/docs/conf/polar/)       | PolarDB PG 内核，Aurora/RAC 风格 (17)          |
-| [**`ivory.yml`**](/docs/conf/ivory/)       | IvorySQL 内核，兼容 Oracle 语法 (17)             |
-| [**`mysql.yml`**](/docs/conf/mysql/)       | OpenHalo 内核，兼容 MySQL (14)                 |
-| [**`pgtde.yml`**](/docs/conf/pgtde/)       | Percona PostgreSQL Server 透明加密 (17)       |
-| [**`oriole.yml`**](/docs/conf/oriole/)     | OrioleDB 内核，OLTP 增强 (17，Debian 包暂缺)       |
-| [**`supabase.yml`**](/docs/conf/supabase/) | Supabase 自托管配置 (15~17)                    |
+| 模板                                         | 说明                                  |
+|--------------------------------------------|-------------------------------------|
+| [**`pgsql.yml`**](/docs/conf/pgsql/)       | 原生 PostgreSQL 内核，基础功能 (14~18)       |
+| [**`mssql.yml`**](/docs/conf/mssql/)       | Babelfish 内核，兼容 SQL Server 协议 (17)  |
+| [**`polar.yml`**](/docs/conf/polar/)       | PolarDB PG 内核，Aurora/RAC 风格 (17)    |
+| [**`ivory.yml`**](/docs/conf/ivory/)       | IvorySQL 内核，兼容 Oracle 语法 (18)       |
+| [**`mysql.yml`**](/docs/conf/mysql/)       | OpenHalo 内核，兼容 MySQL (14)           |
+| [**`pgtde.yml`**](/docs/conf/pgtde/)       | Percona PostgreSQL Server 透明加密 (18) |
+| [**`oriole.yml`**](/docs/conf/oriole/)     | OrioleDB 内核，OLTP 增强 (16~18)         |
+| [**`agens.yml`**](/docs/conf/agens/)       | AgensGraph 图数据库内核 (16)              |
+| [**`pgedge.yml`**](/docs/conf/pgedge/)     | pgEdge 分布式数据库内核 (18)                |
+| [**`supabase.yml`**](/docs/conf/supabase/) | Supabase 自托管配置 (15~18)              |
 {.full-width}
 
 您可以后续添加更多节点，或使用 [高可用模板](#高可用模板) 在一开始就规划好集群。
@@ -91,13 +94,14 @@ Pigsty 提供了 [**`configure`**](https://github.com/pgsty/pigsty/blob/main/con
 
 您可以配置 Pigsty 在多节点上运行，组成高可用（HA）集群：
 
-| 模板                                 | 说明               |
-|------------------------------------|------------------|
-| [**`dual.yml`**](/docs/conf/dual/) | 2 节点半高可用部署       |
-| [**`trio.yml`**](/docs/conf/trio/) | 3 节点标准高可用部署      |
-| [**`full.yml`**](/docs/conf/full/) | 4 节点标准部署         |
-| [**`safe.yml`**](/docs/conf/safe/) | 4 节点安全增强部署，含延迟从库 |
-| [**`simu.yml`**](/docs/conf/simu/) | 20 节点生产环境模拟      |
+| 模板                                      | 说明                              |
+|-----------------------------------------|---------------------------------|
+| [**`dual.yml`**](/docs/conf/dual/)      | 2 节点半高可用部署                      |
+| [**`trio.yml`**](/docs/conf/trio/)      | 3 节点标准高可用部署                     |
+| [**`full.yml`**](/docs/conf/full/)      | 4 节点标准部署                        |
+| [**`safe.yml`**](/docs/conf/safe/)      | 4 节点安全增强部署，含延迟从库                |
+| [**`simu.yml`**](/docs/conf/simu/)      | 20 节点生产环境模拟                     |
+| [**`ha/citus.yml`**](/docs/conf/citus/) | Citus 分布式高可用 PostgreSQL (14~18) |
 {.full-width}
 
 
@@ -107,12 +111,18 @@ Pigsty 提供了 [**`configure`**](https://github.com/pgsty/pigsty/blob/main/con
 
 您可以使用以下模板运行 Docker 应用/软件：
 
-| 模板                                         | 说明               |
-|--------------------------------------------|------------------|
-| [**`supa.yml`**](/docs/conf/supabase/)     | 启动单节点 Supabase   |
-| [**`odoo.yml`**](/docs/conf/odoo/)         | 启动 Odoo ERP 系统   |
-| [**`dify.yml`**](/docs/conf/dify/)         | 启动 Dify AI 工作流系统 |
-| [**`electric.yml`**](/docs/conf/electric/) | 启动 Electric 同步引擎 |
+| 模板                                             | 说明                 |
+|------------------------------------------------|--------------------|
+| [**`supabase.yml`**](/docs/conf/supabase/)     | 启动单节点 Supabase     |
+| [**`odoo.yml`**](/docs/conf/odoo/)             | 启动 Odoo ERP 系统     |
+| [**`dify.yml`**](/docs/conf/dify/)             | 启动 Dify AI 工作流系统   |
+| [**`electric.yml`**](/docs/conf/electric/)     | 启动 Electric 同步引擎   |
+| [**`insforge.yml`**](/docs/conf/insforge/)     | 启动 Insforge 后端平台   |
+| [**`hindsight.yml`**](/docs/conf/hindsight/)   | 启动 Hindsight 应用    |
+| [**`mattermost.yml`**](/docs/conf/mattermost/) | 启动 Mattermost 协作平台 |
+| [**`teable.yml`**](/docs/conf/teable/)         | 启动 Teable 表格数据库    |
+| [**`maybe.yml`**](/docs/conf/maybe/)           | 启动 Maybe 财务应用      |
+| [**`registry.yml`**](/docs/conf/registry/)     | 启动 Docker Registry |
 {.full-width}
 
 
@@ -130,6 +140,11 @@ Pigsty 提供了 [**`configure`**](https://github.com/pgsty/pigsty/blob/main/con
 | **`redis.yml`**                        | Redis 集群示例配置                                 |
 | [**`minio.yml`**](/docs/conf/minio/)   | 3 节点 MinIO 集群示例配置                            |
 | [**`demo.yml`**](/docs/conf/demo/)     | Pigsty [公开演示站](https://demo.pigsty.cc) 的配置文件 |
+| [**`fat.yml`**](/docs/conf/fat/)       | 含本地软件源与完整功能的单节点配置文件                          |
+| [**`infra.yml`**](/docs/conf/infra/)   | 仅部署基础设施模块                                    |
+| [**`vibe.yml`**](/docs/conf/vibe/)     | Vibe Coding / AI 应用开发模板                      |
+| [**`mongo.yml`**](/docs/conf/mongo/)   | FerretDB / MongoDB 兼容示例                      |
+| [**`docker.yml`**](/docs/conf/docker/) | Docker 应用宿主模板                                |
 {.full-width}
 
 
@@ -139,7 +154,8 @@ Pigsty 提供了 [**`configure`**](https://github.com/pgsty/pigsty/blob/main/con
 
 以下配置模板用于开发和测试目的：
 
-| 模板              | 说明                                             |
-|-----------------|------------------------------------------------|
-| **`build.yml`** | EL 9/10、Debian 12/13、Ubuntu 22.04/24.04/26.04 开源构建配置 |
+| 模板                  | 说明                                                   |
+|---------------------|------------------------------------------------------|
+| **`build/oss.yml`** | EL 9/10、Debian 12/13、Ubuntu 22.04/24.04/26.04 开源构建配置 |
+| **`build/dev.yml`** | 开发测试构建配置                                             |
 {.full-width}

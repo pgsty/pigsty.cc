@@ -75,7 +75,7 @@ pg18-stat, pg18-sec, pg18-fdw, pg18-sim, pg18-etl
 
 ## VIBE 模块组件
 
-VIBE 模块在 v4.2 系列中提供 AI 编程沙箱能力；`vibe.yml` 显式开启 Code-Server 与 Jupyter，并预留 Claude 自定义入口。
+提供 AI 编程沙箱能力；`vibe.yml` 显式开启 Code-Server 与 Jupyter，并预留 Claude 自定义入口。
 
 **Code-Server**：浏览器中的 VS Code
 
@@ -138,7 +138,7 @@ juice_instances:
 
 ```bash
 # 1. 下载 Pigsty
-curl https://repo.pigsty.io/get | bash
+curl -fsSL https://repo.pigsty.cc/get | bash; cd ~/pigsty
 
 # 2. 使用 vibe 配置模板
 ./configure -c vibe

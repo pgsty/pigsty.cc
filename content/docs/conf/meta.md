@@ -59,7 +59,7 @@ categories: [参考]
 **关键特性**：
 - 在线安装模式，不构建本地软件源（`repo_enabled: false`）
 - 默认安装 PostgreSQL 18，带有 `postgis` 和 `pgvector` 扩展
-- 包含完整的监控基础设施（Grafana、Prometheus、Loki 等）
+- 包含完整的可观测基础设施（Grafana、VictoriaMetrics、VictoriaLogs 等）
 - 预置 Docker 与 pgAdmin 应用示例
 - MinIO 备份存储默认禁用，可按需启用
 

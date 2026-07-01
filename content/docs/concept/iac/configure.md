@@ -281,56 +281,69 @@ $ ./configure -g
 
 ### 核心模板
 
-| 模板 | 说明 |
-|:---:|:---|
-| `meta` | **默认模板**：单节点安装，包含 INFRA + NODE + ETCD + PGSQL |
-| `rich` | 功能丰富版：包含几乎所有扩展、MinIO、本地仓库 |
-| `slim` | 精简版：仅 PostgreSQL + ETCD，无监控基础设施 |
-| `fat` | 完整版：rich 基础上安装更多扩展 |
-| `pgsql` | 纯 PostgreSQL 模板 |
-| `infra` | 纯基础设施模板 |
+|    模板    | 说明                                            |
+|:--------:|:----------------------------------------------|
+|  `meta`  | **默认模板**：单节点安装，包含 INFRA + NODE + ETCD + PGSQL |
+|  `rich`  | 功能丰富版：包含几乎所有扩展、MinIO、本地仓库                     |
+|  `slim`  | 精简版：仅 PostgreSQL + ETCD，无监控基础设施               |
+|  `fat`   | 完整版：rich 基础上安装更多扩展                            |
+| `pgsql`  | 纯 PostgreSQL 模板                               |
+| `infra`  | 纯基础设施模板                                       |
 {.full-width}
 
 ### 高可用模板 (`ha/`)
 
-|    模板     | 说明           |
-|:---------:|:-------------|
-| `ha/dual` | 2 节点高可用集群    |
-| `ha/trio` | 3 节点高可用集群    |
-| `ha/full` | 4 节点完整沙箱环境   |
-| `ha/safe` | 安全加固版高可用配置   |
-| `ha/simu` | 42 节点大规模仿真环境 |
+|     模板     | 说明                |
+|:----------:|:------------------|
+| `ha/dual`  | 2 节点高可用集群         |
+| `ha/trio`  | 3 节点高可用集群         |
+| `ha/full`  | 4 节点完整沙箱环境        |
+| `ha/safe`  | 安全加固版高可用配置        |
+| `ha/simu`  | 20 节点生产仿真环境       |
+| `ha/citus` | 13 节点 Citus 分布式集群 |
 {.full-width}
 
 ### 应用模板 (`app/`)
 
-|       模板       | 说明                 |
-|:--------------:|:-------------------|
-|   `supabase`   | Supabase 自托管配置     |
-|   `app/dify`   | Dify AI 平台配置       |
-|   `app/odoo`   | Odoo ERP 配置        |
-|  `app/teable`  | Teable 表格数据库配置     |
-| `app/registry` | Docker Registry 配置 |
+|        模板        | 说明                 |
+|:----------------:|:-------------------|
+|    `supabase`    | Supabase 自托管配置     |
+|    `app/dify`    | Dify AI 平台配置       |
+|    `app/odoo`    | Odoo ERP 配置        |
+|  `app/electric`  | Electric 同步引擎配置    |
+|  `app/insforge`  | Insforge 后端平台配置    |
+| `app/hindsight`  | Hindsight 应用配置     |
+|   `app/teable`   | Teable 表格数据库配置     |
+| `app/mattermost` | Mattermost 协作平台配置  |
+|   `app/maybe`    | Maybe 财务应用配置       |
+|  `app/registry`  | Docker Registry 配置 |
 {.full-width}
 
 ### 特殊内核模板/模式
 
-|    模板    | 说明                                 |
-|:--------:|:-----------------------------------|
-| `ivory`  | IvorySQL：Oracle 兼容 PostgreSQL      |
-| `mssql`  | Babelfish：SQL Server 兼容 PostgreSQL |
-| `polar`  | PolarDB：阿里云开源分布式 PostgreSQL        |
-| `citus`  | Citus：分布式 PostgreSQL               |
-| `oriole` | OrioleDB：新一代存储引擎                   |
+|     模板     | 说明                                 |
+|:----------:|:-----------------------------------|
+|  `ivory`   | IvorySQL：Oracle 兼容 PostgreSQL      |
+|  `mssql`   | Babelfish：SQL Server 兼容 PostgreSQL |
+|  `polar`   | PolarDB：阿里云开源分布式 PostgreSQL        |
+| `ha/citus` | Citus：分布式 PostgreSQL 高可用集群         |
+|  `mysql`   | OpenHalo：MySQL 协议兼容 PostgreSQL     |
+|  `pgtde`   | Percona PostgreSQL Server：透明加密     |
+|  `oriole`  | OrioleDB：新一代存储引擎                   |
+|  `agens`   | AgensGraph：图数据库内核                  |
+|  `pgedge`  | pgEdge：分布式 PostgreSQL 内核           |
+|  `mongo`   | MongoDB 兼容栈模板                      |
 {.full-width}
 
 ### 演示模板 (`demo/`)
 
-|      模板      | 说明         |
-|:------------:|:-----------|
-| `demo/demo`  | 演示环境配置     |
-| `demo/redis` | Redis 集群演示 |
-| `demo/minio` | MinIO 集群演示 |
+|      模板      | 说明                 |
+|:------------:|:-------------------|
+|    `vibe`    | Vibe Coding 开发环境模板 |
+|   `docker`   | Docker 应用宿主模板      |
+| `demo/demo`  | 演示环境配置             |
+| `demo/redis` | Redis 集群演示         |
+| `demo/minio` | MinIO 集群演示         |
 
 
 -----------------
@@ -339,7 +352,7 @@ $ ./configure -g
 
 ```bash
 $ ./configure
-configure pigsty v4.0.0 begin
+configure pigsty v4.3.0 begin
 [ OK ] region = china
 [ OK ] kernel  = Linux
 [ OK ] machine = x86_64

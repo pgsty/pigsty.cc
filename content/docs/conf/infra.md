@@ -6,7 +6,7 @@ icon: fa-solid fa-tower-observation
 categories: [参考]
 ---
 
-`infra` 配置模板仅部署 Pigsty 的可观测性基础设施组件（VictoriaMetrics/Grafana/Loki/Nginx 等），不包含 PostgreSQL 与 etcd。
+`infra` 配置模板仅部署 Pigsty 的可观测性基础设施组件（VictoriaMetrics/Grafana/VictoriaLogs/Nginx 等），不包含 PostgreSQL 与 etcd。
 
 适用于需要独立监控栈的场景，例如监控外部 PostgreSQL/RDS 实例或其他数据源。
 
@@ -77,4 +77,3 @@ pg_exporters:
 - 此模板不会安装任何数据库
 - 如需完整功能，请使用 [`meta`](/docs/conf/meta/) 或 [`rich`](/docs/conf/rich/) 模板
 - 可根据需要添加多个 infra 节点实现高可用
-

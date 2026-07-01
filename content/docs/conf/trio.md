@@ -45,7 +45,7 @@ categories: [参考]
 `ha/trio` 模板是 Pigsty 的 **标准高可用配置**，提供真正的故障自动恢复能力。
 
 **架构说明**：
-- 三节点 INFRA：Prometheus/Grafana/Nginx 分布式部署
+- 三节点 INFRA：VictoriaMetrics/Grafana/Nginx 分布式部署
 - 三节点 ETCD：DCS 多数派选举，容忍单点故障
 - 三节点 PostgreSQL：一主两从，自动故障转移
 - 单节点 MinIO：可按需扩展为多节点
@@ -64,4 +64,3 @@ categories: [参考]
 - 需要更强数据安全性，参考 [`ha/safe`](/docs/conf/safe/) 模板
 - 需要更多演示功能，参考 [`ha/full`](/docs/conf/full/) 模板
 - 生产环境建议启用 `pgbackrest_method: minio` 远程备份
-

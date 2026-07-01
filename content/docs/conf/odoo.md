@@ -60,11 +60,10 @@ categories: [参考]
 
 ```bash
 # Odoo Web 界面
-http://odoo.pigsty:8069
+http://<IP>:8069
+http://odoo.pigsty
 
-# 默认管理员账号
-用户名: admin
-密码: admin (首次登录时设置)
+# 首次进入 Web 页面后按提示创建或设置管理员账号
 ```
 
 **适用场景**：
@@ -77,4 +76,3 @@ http://odoo.pigsty:8069
 - 首次访问时需要创建数据库和设置管理员密码
 - 生产环境建议启用 HTTPS
 - 可通过 `/data/odoo/addons` 安装自定义模块
-

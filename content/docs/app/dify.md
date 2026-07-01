@@ -48,7 +48,7 @@ Dify 启动后，您可以安装各种扩展、配置系统模型并开始使用
 
 自托管 Dify 有很多原因，但主要动机是数据安全。Dify 提供的 DockerCompose 模板使用基本的默认数据库镜像，缺乏企业级功能，如高可用性、灾难恢复、监控、IaC 和 PITR 能力。
 
-Pigsty 为 Dify 优雅地解决了这些问题，基于配置文件使用单个命令部署所有组件，并使用镜像解决中国地区访问挑战。这使得 Dify 部署和交付变得非常顺畅。它一次性处理 PostgreSQL 主数据库、PGVector 向量数据库、MinIO 对象存储、Redis、Prometheus 监控、Grafana 可视化、Nginx 反向代理和免费 HTTPS 证书。
+Pigsty 为 Dify 优雅地解决了这些问题，基于配置文件使用单个命令部署所有组件，并使用镜像解决中国地区访问挑战。这使得 Dify 部署和交付变得非常顺畅。它一次性处理 PostgreSQL 主数据库、PGVector 向量数据库、MinIO 对象存储、Redis、VictoriaMetrics 监控、Grafana 可视化、Nginx 反向代理和免费 HTTPS 证书。
 
 Pigsty 确保所有 Dify 状态都存储在外部管理的服务中，包括 PostgreSQL 中的元数据和文件系统中的其他数据。通过 Docker Compose 启动的 Dify 实例成为可以随时销毁和重建的无状态应用程序，大大简化了运维。
 

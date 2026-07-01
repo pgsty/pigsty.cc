@@ -96,7 +96,7 @@ pg_libs: 'citus, pg_cron, pg_stat_statements'
 
 ```bash
 # 1. 下载 Pigsty
-curl https://repo.pigsty.io/get | bash
+curl -fsSL https://repo.pigsty.cc/get | bash; cd ~/pigsty
 
 # 2. 使用 ha/citus 配置模板
 ./configure -c ha/citus
@@ -182,4 +182,3 @@ SELECT create_reference_table('tenants');
 - **跨分片限制**：外键约束必须包含分布列，部分 DDL 操作有限制
 - **网络要求**：需要配置正确的 `pg_vip_interface`（默认 `eth1`）
 - **架构限制**：Citus 扩展不支持 ARM64 架构
-

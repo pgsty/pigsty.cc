@@ -68,8 +68,7 @@ CREATE TABLE orders (
 ```
 
 **注意事项**：
-- OrioleDB 基于 PostgreSQL 17
+- OrioleDB 支持 PostgreSQL 16、17、18，默认模板使用 PG18，可通过 `./configure -c oriole -v 16/17/18` 指定大版本
 - 需要将 `orioledb` 添加到 `shared_preload_libraries`
 - 部分 PostgreSQL 特性可能不完全支持
 - 不支持 ARM64 架构
-

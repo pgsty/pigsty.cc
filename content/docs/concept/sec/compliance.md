@@ -58,14 +58,14 @@ categories: [概念]
 
 SOC2 的核心是 **安全、可用性、机密性**。以下为常见控制点的概念映射：
 
-| 控制点（SOC2） | 解决的问题 | Pigsty 能力 | 需要流程 |
-|---|---|---|---|
-| CC6 逻辑访问控制 | 未授权访问 | HBA + RBAC + 默认权限 | 权限审批与定期审计 |
-| CC6 认证强度 | 弱口令/复用 | SCRAM + `passwordcheck` | 密码轮换策略 |
-| CC6 传输加密 | 明文传输 | TLS/CA、`ssl`/`cert` | 强制 TLS 政策 |
-| CC7 系统监控 | 异常未发现 | Prometheus/Grafana | 告警处理流程 |
-| CC7 审计追踪 | 无法追责 | 连接/DDL/慢查日志、`pgaudit` | 日志留存与审查 |
-| CC9 业务连续性 | 数据不可恢复 | pgBackRest + PITR | 定期恢复演练 |
+| 控制点（SOC2）  | 解决的问题  | Pigsty 能力               | 需要流程      |
+|------------|--------|-------------------------|-----------|
+| CC6 逻辑访问控制 | 未授权访问  | HBA + RBAC + 默认权限       | 权限审批与定期审计 |
+| CC6 认证强度   | 弱口令/复用 | SCRAM + `passwordcheck` | 密码轮换策略    |
+| CC6 传输加密   | 明文传输   | TLS/CA、`ssl`/`cert`     | 强制 TLS 政策 |
+| CC7 系统监控   | 异常未发现  | VictoriaMetrics/Grafana | 告警处理流程    |
+| CC7 审计追踪   | 无法追责   | 连接/DDL/慢查日志、`pgaudit`   | 日志留存与审查   |
+| CC9 业务连续性  | 数据不可恢复 | pgBackRest + PITR       | 定期恢复演练    |
 {.full-width}
 
 > 以上为概念映射，实际 SOC2 需要配合组织制度与审计证据。

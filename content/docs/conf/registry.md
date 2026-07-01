@@ -56,14 +56,18 @@ categories: [参考]
 
 **配置 Docker 客户端**：
 
-```bash
-# 编辑 /etc/docker/daemon.json
-{
-  "registry-mirrors": ["https://d.pigsty"],
-  "insecure-registries": ["d.pigsty"]
-}
+编辑 `/etc/docker/daemon.json`：
 
-# 重启 Docker
+```json
+{
+  "registry-mirrors": ["http://d.pigsty"],
+  "insecure-registries": ["d.pigsty:5000"]
+}
+```
+
+重启 Docker：
+
+```bash
 sudo systemctl restart docker
 ```
 
@@ -71,7 +75,7 @@ sudo systemctl restart docker
 
 ```bash
 # Registry API
-https://d.pigsty/v2/_catalog
+http://d.pigsty/v2/_catalog
 
 # Web UI
 http://dui.pigsty:5080
@@ -90,4 +94,3 @@ docker pull nginx:latest
 - 需要足够的磁盘空间存储缓存镜像
 - 默认缓存 7 天（`REGISTRY_PROXY_TTL: 168h`）
 - 可配置 HTTPS 证书（通过 certbot）
-

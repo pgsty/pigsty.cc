@@ -8,7 +8,7 @@ categories: [参考]
 
 `supabase` 配置模板提供了自建 Supabase 的参考配置，使用 Pigsty 托管的 PostgreSQL 作为底层存储。
 
-更多细节，请参考 **[Supabase 自建教程](/docs/pgsql/kernel/supabase/)**
+更多细节，请参考 **[Supabase 自建教程](/docs/app/supabase/)**
 
 
 --------
@@ -66,7 +66,7 @@ categories: [参考]
 **部署步骤**：
 
 ```bash
-curl https://repo.pigsty.io/get | bash   # 下载 Pigsty
+curl -fsSL https://repo.pigsty.cc/get | bash; cd ~/pigsty
 ./configure -c supabase                   # 使用 supabase 配置模板
 ./deploy.yml                              # 安装 Pigsty、PostgreSQL、MinIO
 ./docker.yml                              # 安装 Docker
@@ -77,7 +77,8 @@ curl https://repo.pigsty.io/get | bash   # 下载 Pigsty
 
 ```bash
 # Supabase Studio
-https://supa.pigsty   (用户名: supabase, 密码: pigsty)
+http://<IP>:8000
+http://supa.pigsty   (用户名: supabase, 密码: pigsty)
 
 # 直接连接 PostgreSQL
 psql postgres://supabase_admin:DBUser.Supa@10.10.10.10:5432/postgres
@@ -94,4 +95,3 @@ psql postgres://supabase_admin:DBUser.Supa@10.10.10.10:5432/postgres
 - 需要配置正确的域名（`SITE_URL`、`API_EXTERNAL_URL`）
 - 生产环境建议启用 HTTPS（可使用 certbot 自动签发证书）
 - Docker 网络需要能访问 PostgreSQL（已配置 172.17.0.0/16 HBA 规则）
-

@@ -49,7 +49,7 @@ categories: [参考]
 - `pg-mssql`：Babelfish，兼容 PostgreSQL 17
 - `pg-polar`：PolarDB for PostgreSQL，兼容 PostgreSQL 17
 - `pg-tde`：Percona PostgreSQL 18 + `pg_tde`
-- `pg-oriole`：OrioleDB，基于 PostgreSQL 17
+- `pg-oriole`：OrioleDB，支持 PostgreSQL 16、17、18；当前演示配置使用 PG17
 - `pg-mysql`：OpenHalo，兼容 PostgreSQL 14
 - `pg-mongo`：DocumentDB + FerretDB，默认 PostgreSQL 18
 - `pg-agens`：AgensGraph，兼容 PostgreSQL 16
