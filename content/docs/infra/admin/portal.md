@@ -165,7 +165,7 @@ web.cc:
 本地开发时，在 `/etc/hosts` 中添加：
 
 ```
-<your_public_ip_address> i.pigsty g.pigsty p.pigsty a.pigsty
+<your_public_ip_address> i.pigsty
 ```
 
 Pigsty 内置了 dnsmasq 服务，可以通过 [`dns_records`](/docs/infra/param#dns_records) 参数配置内部 DNS 解析。
@@ -285,5 +285,4 @@ infra_portal:
   odoo         : { domain: odoo.pigsty.cc ,endpoint: "127.0.0.1:8069"   ,websocket: true }
   mm           : { domain: mm.pigsty.cc   ,endpoint: "10.10.10.10:8065" ,websocket: true }
 ```
-
 
