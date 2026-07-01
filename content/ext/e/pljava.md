@@ -50,10 +50,10 @@ weight: 3090
 |:--:|:--:|:--:|:--:|:--:|:--:|
 | el8.x86_64 | AVAIL PGDG 1.6.10 1 | AVAIL PGDG 1.6.10 2 | AVAIL PGDG 1.6.10 2 | AVAIL PGDG 1.6.10 2 | AVAIL PGDG 1.6.10 2 |
 | el8.aarch64 | AVAIL PGDG 1.6.10 1 | AVAIL PGDG 1.6.10 2 | AVAIL PGDG 1.6.10 2 | AVAIL PGDG 1.6.10 2 | AVAIL PGDG 1.6.10 2 |
-| el9.x86_64 | AVAIL PGDG 1.6.10 1 | AVAIL PGDG 1.6.10 1 | AVAIL PGDG 1.6.10 1 | AVAIL PGDG 1.6.10 1 | AVAIL PGDG 1.6.10 1 |
-| el9.aarch64 | AVAIL PGDG 1.6.10 1 | AVAIL PGDG 1.6.10 1 | AVAIL PGDG 1.6.10 1 | AVAIL PGDG 1.6.10 1 | AVAIL PGDG 1.6.10 1 |
-| el10.x86_64 | AVAIL PGDG 1.6.10 1 | AVAIL PGDG 1.6.10 1 | AVAIL PGDG 1.6.10 1 | AVAIL PGDG 1.6.10 1 | AVAIL PGDG 1.6.10 1 |
-| el10.aarch64 | AVAIL PGDG 1.6.10 1 | AVAIL PGDG 1.6.10 1 | AVAIL PGDG 1.6.10 1 | AVAIL PGDG 1.6.10 1 | AVAIL PGDG 1.6.10 1 |
+| el9.x86_64 | AVAIL PGDG 1.6.10 2 | AVAIL PGDG 1.6.10 3 | AVAIL PGDG 1.6.10 4 | AVAIL PGDG 1.6.10 4 | AVAIL PGDG 1.6.10 4 |
+| el9.aarch64 | AVAIL PGDG 1.6.10 2 | AVAIL PGDG 1.6.10 3 | AVAIL PGDG 1.6.10 4 | AVAIL PGDG 1.6.10 4 | AVAIL PGDG 1.6.10 4 |
+| el10.x86_64 | AVAIL PGDG 1.6.10 2 | AVAIL PGDG 1.6.10 3 | AVAIL PGDG 1.6.10 3 | AVAIL PGDG 1.6.10 3 | AVAIL PGDG 1.6.10 3 |
+| el10.aarch64 | AVAIL PGDG 1.6.10 2 | AVAIL PGDG 1.6.10 3 | AVAIL PGDG 1.6.10 3 | AVAIL PGDG 1.6.10 3 | AVAIL PGDG 1.6.10 3 |
 | d12.x86_64 | MISS PGDG - 0 | AVAIL PGDG 1.6.9 1 | AVAIL PGDG 1.6.9 1 | AVAIL PGDG 1.6.9 1 | AVAIL PGDG 1.6.9 1 |
 | d12.aarch64 | MISS PGDG - 0 | AVAIL PGDG 1.6.9 1 | AVAIL PGDG 1.6.9 1 | AVAIL PGDG 1.6.9 1 | AVAIL PGDG 1.6.9 1 |
 | d13.x86_64 | MISS PGDG - 0 | AVAIL PGDG 1.6.9 1 | AVAIL PGDG 1.6.9 1 | AVAIL PGDG 1.6.9 1 | AVAIL PGDG 1.6.9 1 |
@@ -67,17 +67,29 @@ weight: 3090
 @ el8.x86_64 18 pljava_18 pljava_18-1.6.10-1PGDG.rhel8.x86_64.rpm pgdg 1.6.10 927.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pljava_18-1.6.10-1PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 18 pljava_18 pljava_18-1.6.10-1PGDG.rhel8.aarch64.rpm pgdg 1.6.10 923.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pljava_18-1.6.10-1PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 18 pljava_18 pljava_18-1.6.10-3PGDG.rhel9.8.x86_64.rpm pgdg 1.6.10 917.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pljava_18-1.6.10-3PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 18 pljava_18 pljava_18-1.6.10-1PGDG.rhel9.x86_64.rpm pgdg 1.6.10 917.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pljava_18-1.6.10-1PGDG.rhel9.x86_64.rpm
 @ el9.aarch64 18 pljava_18 pljava_18-1.6.10-3PGDG.rhel9.8.aarch64.rpm pgdg 1.6.10 914.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pljava_18-1.6.10-3PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 18 pljava_18 pljava_18-1.6.10-1PGDG.rhel9.aarch64.rpm pgdg 1.6.10 914.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pljava_18-1.6.10-1PGDG.rhel9.aarch64.rpm
 @ el10.x86_64 18 pljava_18 pljava_18-1.6.10-3PGDG.rhel10.2.x86_64.rpm pgdg 1.6.10 918.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pljava_18-1.6.10-3PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 18 pljava_18 pljava_18-1.6.10-1PGDG.rhel10.x86_64.rpm pgdg 1.6.10 918.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pljava_18-1.6.10-1PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 18 pljava_18 pljava_18-1.6.10-3PGDG.rhel10.2.aarch64.rpm pgdg 1.6.10 914.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pljava_18-1.6.10-3PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 18 pljava_18 pljava_18-1.6.10-1PGDG.rhel10.aarch64.rpm pgdg 1.6.10 914.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pljava_18-1.6.10-1PGDG.rhel10.aarch64.rpm
 @ el8.x86_64 17 pljava_17 pljava_17-1.6.10-1PGDG.rhel8.x86_64.rpm pgdg 1.6.10 927.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pljava_17-1.6.10-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 17 pljava_17 pljava_17-1.6.8-1PGDG.rhel8.x86_64.rpm pgdg 1.6.8 914.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pljava_17-1.6.8-1PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 17 pljava_17 pljava_17-1.6.10-1PGDG.rhel8.aarch64.rpm pgdg 1.6.10 923.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pljava_17-1.6.10-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 17 pljava_17 pljava_17-1.6.8-1PGDG.rhel8.aarch64.rpm pgdg 1.6.8 910.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pljava_17-1.6.8-1PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 17 pljava_17 pljava_17-1.6.10-3PGDG.rhel9.8.x86_64.rpm pgdg 1.6.10 917.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pljava_17-1.6.10-3PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 17 pljava_17 pljava_17-1.6.10-1PGDG.rhel9.x86_64.rpm pgdg 1.6.10 917.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pljava_17-1.6.10-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 17 pljava_17 pljava_17-1.6.8-1PGDG.rhel9.x86_64.rpm pgdg 1.6.8 895.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pljava_17-1.6.8-1PGDG.rhel9.x86_64.rpm
 @ el9.aarch64 17 pljava_17 pljava_17-1.6.10-3PGDG.rhel9.8.aarch64.rpm pgdg 1.6.10 914.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pljava_17-1.6.10-3PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 17 pljava_17 pljava_17-1.6.10-1PGDG.rhel9.aarch64.rpm pgdg 1.6.10 914.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pljava_17-1.6.10-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 17 pljava_17 pljava_17-1.6.8-1PGDG.rhel9.aarch64.rpm pgdg 1.6.8 892.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pljava_17-1.6.8-1PGDG.rhel9.aarch64.rpm
 @ el10.x86_64 17 pljava_17 pljava_17-1.6.10-3PGDG.rhel10.2.x86_64.rpm pgdg 1.6.10 917.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pljava_17-1.6.10-3PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 17 pljava_17 pljava_17-1.6.10-1PGDG.rhel10.x86_64.rpm pgdg 1.6.10 918.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pljava_17-1.6.10-1PGDG.rhel10.x86_64.rpm
+@ el10.x86_64 17 pljava_17 pljava_17-1.6.9-1PGDG.rhel10.x86_64.rpm pgdg 1.6.9 914.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pljava_17-1.6.9-1PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 17 pljava_17 pljava_17-1.6.10-3PGDG.rhel10.2.aarch64.rpm pgdg 1.6.10 914.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pljava_17-1.6.10-3PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 17 pljava_17 pljava_17-1.6.10-1PGDG.rhel10.aarch64.rpm pgdg 1.6.10 914.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pljava_17-1.6.10-1PGDG.rhel10.aarch64.rpm
+@ el10.aarch64 17 pljava_17 pljava_17-1.6.9-1PGDG.rhel10.aarch64.rpm pgdg 1.6.9 911.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pljava_17-1.6.9-1PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 17 postgresql-17-pljava postgresql-17-pljava_1.6.9-1.pgdg120+1_amd64.deb pgdg 1.6.9 911.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pljava/postgresql-17-pljava_1.6.9-1.pgdg120+1_amd64.deb
 @ d12.aarch64 17 postgresql-17-pljava postgresql-17-pljava_1.6.9-1.pgdg120+1_arm64.deb pgdg 1.6.9 906.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pljava/postgresql-17-pljava_1.6.9-1.pgdg120+1_arm64.deb
 @ d13.x86_64 17 postgresql-17-pljava postgresql-17-pljava_1.6.9-1.pgdg130+1_amd64.deb pgdg 1.6.9 911.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pljava/postgresql-17-pljava_1.6.9-1.pgdg130+1_amd64.deb
@@ -91,9 +103,19 @@ weight: 3090
 @ el8.aarch64 16 pljava_16 pljava_16-1.6.10-1PGDG.rhel8.aarch64.rpm pgdg 1.6.10 923.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pljava_16-1.6.10-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 16 pljava_16 pljava_16-1.6.8-1PGDG.rhel8.aarch64.rpm pgdg 1.6.8 910.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pljava_16-1.6.8-1PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 16 pljava_16 pljava_16-1.6.10-3PGDG.rhel9.8.x86_64.rpm pgdg 1.6.10 917.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pljava_16-1.6.10-3PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 16 pljava_16 pljava_16-1.6.10-1PGDG.rhel9.x86_64.rpm pgdg 1.6.10 917.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pljava_16-1.6.10-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 16 pljava_16 pljava_16-1.6.8-1PGDG.rhel9.x86_64.rpm pgdg 1.6.8 895.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pljava_16-1.6.8-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 16 pljava_16 pljava_16-1.6.6-1PGDG.rhel9.x86_64.rpm pgdg 1.6.6 891.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pljava_16-1.6.6-1PGDG.rhel9.x86_64.rpm
 @ el9.aarch64 16 pljava_16 pljava_16-1.6.10-3PGDG.rhel9.8.aarch64.rpm pgdg 1.6.10 914.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pljava_16-1.6.10-3PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 16 pljava_16 pljava_16-1.6.10-1PGDG.rhel9.aarch64.rpm pgdg 1.6.10 914.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pljava_16-1.6.10-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 16 pljava_16 pljava_16-1.6.8-1PGDG.rhel9.aarch64.rpm pgdg 1.6.8 892.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pljava_16-1.6.8-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 16 pljava_16 pljava_16-1.6.6-1PGDG.rhel9.aarch64.rpm pgdg 1.6.6 888.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pljava_16-1.6.6-1PGDG.rhel9.aarch64.rpm
 @ el10.x86_64 16 pljava_16 pljava_16-1.6.10-3PGDG.rhel10.2.x86_64.rpm pgdg 1.6.10 918.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pljava_16-1.6.10-3PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 16 pljava_16 pljava_16-1.6.10-1PGDG.rhel10.x86_64.rpm pgdg 1.6.10 918.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pljava_16-1.6.10-1PGDG.rhel10.x86_64.rpm
+@ el10.x86_64 16 pljava_16 pljava_16-1.6.9-1PGDG.rhel10.x86_64.rpm pgdg 1.6.9 914.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pljava_16-1.6.9-1PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 16 pljava_16 pljava_16-1.6.10-3PGDG.rhel10.2.aarch64.rpm pgdg 1.6.10 914.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pljava_16-1.6.10-3PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 16 pljava_16 pljava_16-1.6.10-1PGDG.rhel10.aarch64.rpm pgdg 1.6.10 914.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pljava_16-1.6.10-1PGDG.rhel10.aarch64.rpm
+@ el10.aarch64 16 pljava_16 pljava_16-1.6.9-1PGDG.rhel10.aarch64.rpm pgdg 1.6.9 911.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pljava_16-1.6.9-1PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 16 postgresql-16-pljava postgresql-16-pljava_1.6.9-1.pgdg120+1_amd64.deb pgdg 1.6.9 911.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pljava/postgresql-16-pljava_1.6.9-1.pgdg120+1_amd64.deb
 @ d12.aarch64 16 postgresql-16-pljava postgresql-16-pljava_1.6.9-1.pgdg120+1_arm64.deb pgdg 1.6.9 906.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pljava/postgresql-16-pljava_1.6.9-1.pgdg120+1_arm64.deb
 @ d13.x86_64 16 postgresql-16-pljava postgresql-16-pljava_1.6.9-1.pgdg130+1_amd64.deb pgdg 1.6.9 911.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pljava/postgresql-16-pljava_1.6.9-1.pgdg130+1_amd64.deb
@@ -107,9 +129,19 @@ weight: 3090
 @ el8.aarch64 15 pljava_15 pljava_15-1.6.10-1PGDG.rhel8.aarch64.rpm pgdg 1.6.10 923.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pljava_15-1.6.10-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 15 pljava_15 pljava_15-1.6.8-1PGDG.rhel8.aarch64.rpm pgdg 1.6.8 909.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pljava_15-1.6.8-1PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 15 pljava_15 pljava_15-1.6.10-3PGDG.rhel9.8.x86_64.rpm pgdg 1.6.10 917.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pljava_15-1.6.10-3PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 15 pljava_15 pljava_15-1.6.10-1PGDG.rhel9.x86_64.rpm pgdg 1.6.10 917.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pljava_15-1.6.10-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 15 pljava_15 pljava_15-1.6.8-1PGDG.rhel9.x86_64.rpm pgdg 1.6.8 895.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pljava_15-1.6.8-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 15 pljava_15 pljava_15-1.6.6-1PGDG.rhel9.x86_64.rpm pgdg 1.6.6 891.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pljava_15-1.6.6-1PGDG.rhel9.x86_64.rpm
 @ el9.aarch64 15 pljava_15 pljava_15-1.6.10-3PGDG.rhel9.8.aarch64.rpm pgdg 1.6.10 914.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pljava_15-1.6.10-3PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 15 pljava_15 pljava_15-1.6.10-1PGDG.rhel9.aarch64.rpm pgdg 1.6.10 914.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pljava_15-1.6.10-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 15 pljava_15 pljava_15-1.6.8-1PGDG.rhel9.aarch64.rpm pgdg 1.6.8 892.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pljava_15-1.6.8-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 15 pljava_15 pljava_15-1.6.6-1PGDG.rhel9.aarch64.rpm pgdg 1.6.6 887.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pljava_15-1.6.6-1PGDG.rhel9.aarch64.rpm
 @ el10.x86_64 15 pljava_15 pljava_15-1.6.10-3PGDG.rhel10.2.x86_64.rpm pgdg 1.6.10 917.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pljava_15-1.6.10-3PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 15 pljava_15 pljava_15-1.6.10-1PGDG.rhel10.x86_64.rpm pgdg 1.6.10 917.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pljava_15-1.6.10-1PGDG.rhel10.x86_64.rpm
+@ el10.x86_64 15 pljava_15 pljava_15-1.6.9-1PGDG.rhel10.x86_64.rpm pgdg 1.6.9 914.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pljava_15-1.6.9-1PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 15 pljava_15 pljava_15-1.6.10-3PGDG.rhel10.2.aarch64.rpm pgdg 1.6.10 914.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pljava_15-1.6.10-3PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 15 pljava_15 pljava_15-1.6.10-1PGDG.rhel10.aarch64.rpm pgdg 1.6.10 914.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pljava_15-1.6.10-1PGDG.rhel10.aarch64.rpm
+@ el10.aarch64 15 pljava_15 pljava_15-1.6.9-1PGDG.rhel10.aarch64.rpm pgdg 1.6.9 911.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pljava_15-1.6.9-1PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 15 postgresql-15-pljava postgresql-15-pljava_1.6.9-1.pgdg120+1_amd64.deb pgdg 1.6.9 911.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pljava/postgresql-15-pljava_1.6.9-1.pgdg120+1_amd64.deb
 @ d12.aarch64 15 postgresql-15-pljava postgresql-15-pljava_1.6.9-1.pgdg120+1_arm64.deb pgdg 1.6.9 906.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pljava/postgresql-15-pljava_1.6.9-1.pgdg120+1_arm64.deb
 @ d13.x86_64 15 postgresql-15-pljava postgresql-15-pljava_1.6.9-1.pgdg130+1_amd64.deb pgdg 1.6.9 911.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pljava/postgresql-15-pljava_1.6.9-1.pgdg130+1_amd64.deb
@@ -123,9 +155,19 @@ weight: 3090
 @ el8.aarch64 14 pljava_14 pljava_14-1.6.10-1PGDG.rhel8.aarch64.rpm pgdg 1.6.10 923.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pljava_14-1.6.10-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 14 pljava_14 pljava_14-1.6.8-1PGDG.rhel8.aarch64.rpm pgdg 1.6.8 910.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pljava_14-1.6.8-1PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 14 pljava_14 pljava_14-1.6.10-3PGDG.rhel9.8.x86_64.rpm pgdg 1.6.10 917.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pljava_14-1.6.10-3PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 14 pljava_14 pljava_14-1.6.10-1PGDG.rhel9.x86_64.rpm pgdg 1.6.10 917.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pljava_14-1.6.10-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 14 pljava_14 pljava_14-1.6.8-1PGDG.rhel9.x86_64.rpm pgdg 1.6.8 895.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pljava_14-1.6.8-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 14 pljava_14 pljava_14-1.6.6-1PGDG.rhel9.x86_64.rpm pgdg 1.6.6 891.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pljava_14-1.6.6-1PGDG.rhel9.x86_64.rpm
 @ el9.aarch64 14 pljava_14 pljava_14-1.6.10-3PGDG.rhel9.8.aarch64.rpm pgdg 1.6.10 914.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pljava_14-1.6.10-3PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 14 pljava_14 pljava_14-1.6.10-1PGDG.rhel9.aarch64.rpm pgdg 1.6.10 914.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pljava_14-1.6.10-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 14 pljava_14 pljava_14-1.6.8-1PGDG.rhel9.aarch64.rpm pgdg 1.6.8 892.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pljava_14-1.6.8-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 14 pljava_14 pljava_14-1.6.6-1PGDG.rhel9.aarch64.rpm pgdg 1.6.6 887.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pljava_14-1.6.6-1PGDG.rhel9.aarch64.rpm
 @ el10.x86_64 14 pljava_14 pljava_14-1.6.10-3PGDG.rhel10.2.x86_64.rpm pgdg 1.6.10 917.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pljava_14-1.6.10-3PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 14 pljava_14 pljava_14-1.6.10-1PGDG.rhel10.x86_64.rpm pgdg 1.6.10 917.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pljava_14-1.6.10-1PGDG.rhel10.x86_64.rpm
+@ el10.x86_64 14 pljava_14 pljava_14-1.6.9-1PGDG.rhel10.x86_64.rpm pgdg 1.6.9 914.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pljava_14-1.6.9-1PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 14 pljava_14 pljava_14-1.6.10-3PGDG.rhel10.2.aarch64.rpm pgdg 1.6.10 914.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pljava_14-1.6.10-3PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 14 pljava_14 pljava_14-1.6.10-1PGDG.rhel10.aarch64.rpm pgdg 1.6.10 914.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pljava_14-1.6.10-1PGDG.rhel10.aarch64.rpm
+@ el10.aarch64 14 pljava_14 pljava_14-1.6.9-1PGDG.rhel10.aarch64.rpm pgdg 1.6.9 911.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pljava_14-1.6.9-1PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 14 postgresql-14-pljava postgresql-14-pljava_1.6.9-1.pgdg120+1_amd64.deb pgdg 1.6.9 910.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pljava/postgresql-14-pljava_1.6.9-1.pgdg120+1_amd64.deb
 @ d12.aarch64 14 postgresql-14-pljava postgresql-14-pljava_1.6.9-1.pgdg120+1_arm64.deb pgdg 1.6.9 906.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pljava/postgresql-14-pljava_1.6.9-1.pgdg120+1_arm64.deb
 @ d13.x86_64 14 postgresql-14-pljava postgresql-14-pljava_1.6.9-1.pgdg130+1_amd64.deb pgdg 1.6.9 910.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-pljava/postgresql-14-pljava_1.6.9-1.pgdg130+1_amd64.deb

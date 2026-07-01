@@ -52,10 +52,10 @@ weight: 4220
 |:--:|:--:|:--:|:--:|:--:|:--:|
 | el8.x86_64 | AVAIL PIGSTY 2.1.0 2 | AVAIL PIGSTY 2.1.0 3 | AVAIL PIGSTY 2.1.0 4 | AVAIL PIGSTY 2.1.0 4 | AVAIL PIGSTY 2.1.0 4 |
 | el8.aarch64 | AVAIL PIGSTY 2.1.0 2 | AVAIL PIGSTY 2.1.0 3 | AVAIL PIGSTY 2.1.0 4 | AVAIL PIGSTY 2.1.0 4 | AVAIL PIGSTY 2.1.0 4 |
-| el9.x86_64 | AVAIL PIGSTY 2.1.0 2 | AVAIL PIGSTY 2.1.0 2 | AVAIL PIGSTY 2.1.0 2 | AVAIL PIGSTY 2.1.0 2 | AVAIL PIGSTY 2.1.0 2 |
-| el9.aarch64 | AVAIL PIGSTY 2.1.0 2 | AVAIL PIGSTY 2.1.0 2 | AVAIL PIGSTY 2.1.0 2 | AVAIL PIGSTY 2.1.0 2 | AVAIL PIGSTY 2.1.0 2 |
-| el10.x86_64 | AVAIL PIGSTY 2.1.0 2 | AVAIL PIGSTY 2.1.0 2 | AVAIL PIGSTY 2.1.0 2 | AVAIL PIGSTY 2.1.0 2 | AVAIL PIGSTY 2.1.0 2 |
-| el10.aarch64 | AVAIL PIGSTY 2.1.0 2 | AVAIL PIGSTY 2.1.0 2 | AVAIL PIGSTY 2.1.0 2 | AVAIL PIGSTY 2.1.0 2 | AVAIL PIGSTY 2.1.0 2 |
+| el9.x86_64 | AVAIL PIGSTY 2.1.0 3 | AVAIL PIGSTY 2.1.0 4 | AVAIL PIGSTY 2.1.0 5 | AVAIL PIGSTY 2.1.0 5 | AVAIL PIGSTY 2.1.0 5 |
+| el9.aarch64 | AVAIL PIGSTY 2.1.0 3 | AVAIL PIGSTY 2.1.0 4 | AVAIL PIGSTY 2.1.0 5 | AVAIL PIGSTY 2.1.0 5 | AVAIL PIGSTY 2.1.0 5 |
+| el10.x86_64 | AVAIL PIGSTY 2.1.0 3 | AVAIL PIGSTY 2.1.0 3 | AVAIL PIGSTY 2.1.0 3 | AVAIL PIGSTY 2.1.0 3 | AVAIL PIGSTY 2.1.0 3 |
+| el10.aarch64 | AVAIL PIGSTY 2.1.0 3 | AVAIL PIGSTY 2.1.0 3 | AVAIL PIGSTY 2.1.0 3 | AVAIL PIGSTY 2.1.0 3 | AVAIL PIGSTY 2.1.0 3 |
 | d12.x86_64 | AVAIL PIGSTY 2.1.0 1 | AVAIL PIGSTY 2.1.0 1 | AVAIL PIGSTY 2.1.0 1 | AVAIL PIGSTY 2.1.0 1 | AVAIL PIGSTY 2.1.0 1 |
 | d12.aarch64 | AVAIL PIGSTY 2.1.0 1 | AVAIL PIGSTY 2.1.0 1 | AVAIL PIGSTY 2.1.0 1 | AVAIL PIGSTY 2.1.0 1 | AVAIL PIGSTY 2.1.0 1 |
 | d13.x86_64 | AVAIL PIGSTY 2.1.0 1 | AVAIL PIGSTY 2.1.0 1 | AVAIL PIGSTY 2.1.0 1 | AVAIL PIGSTY 2.1.0 1 | AVAIL PIGSTY 2.1.0 1 |
@@ -72,12 +72,16 @@ weight: 4220
 @ el8.aarch64 18 pg_extra_time_18 pg_extra_time_18-2.0.0-1PGDG.rhel8.noarch.rpm pgdg 2.0.0 33.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pg_extra_time_18-2.0.0-1PGDG.rhel8.noarch.rpm
 @ el9.x86_64 18 pg_extra_time_18 pg_extra_time_18-2.1.0-1PIGSTY.el9.x86_64.rpm pigsty 2.1.0 33.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_extra_time_18-2.1.0-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 18 pg_extra_time_18 pg_extra_time_18-2.0.0-1PGDG.rhel9.8.noarch.rpm pgdg 2.0.0 32.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pg_extra_time_18-2.0.0-1PGDG.rhel9.8.noarch.rpm
+@ el9.x86_64 18 pg_extra_time_18 pg_extra_time_18-2.0.0-1PGDG.rhel9.noarch.rpm pgdg 2.0.0 32.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pg_extra_time_18-2.0.0-1PGDG.rhel9.noarch.rpm
 @ el9.aarch64 18 pg_extra_time_18 pg_extra_time_18-2.1.0-1PIGSTY.el9.aarch64.rpm pigsty 2.1.0 33.8KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_extra_time_18-2.1.0-1PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 18 pg_extra_time_18 pg_extra_time_18-2.0.0-1PGDG.rhel9.8.noarch.rpm pgdg 2.0.0 32.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pg_extra_time_18-2.0.0-1PGDG.rhel9.8.noarch.rpm
+@ el9.aarch64 18 pg_extra_time_18 pg_extra_time_18-2.0.0-1PGDG.rhel9.noarch.rpm pgdg 2.0.0 32.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pg_extra_time_18-2.0.0-1PGDG.rhel9.noarch.rpm
 @ el10.x86_64 18 pg_extra_time_18 pg_extra_time_18-2.1.0-1PIGSTY.el10.x86_64.rpm pigsty 2.1.0 34.1KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_extra_time_18-2.1.0-1PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 18 pg_extra_time_18 pg_extra_time_18-2.0.0-1PGDG.rhel10.2.noarch.rpm pgdg 2.0.0 32.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pg_extra_time_18-2.0.0-1PGDG.rhel10.2.noarch.rpm
+@ el10.x86_64 18 pg_extra_time_18 pg_extra_time_18-2.0.0-1PGDG.rhel10.noarch.rpm pgdg 2.0.0 32.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pg_extra_time_18-2.0.0-1PGDG.rhel10.noarch.rpm
 @ el10.aarch64 18 pg_extra_time_18 pg_extra_time_18-2.1.0-1PIGSTY.el10.aarch64.rpm pigsty 2.1.0 34.0KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_extra_time_18-2.1.0-1PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 18 pg_extra_time_18 pg_extra_time_18-2.0.0-1PGDG.rhel10.2.noarch.rpm pgdg 2.0.0 32.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_extra_time_18-2.0.0-1PGDG.rhel10.2.noarch.rpm
+@ el10.aarch64 18 pg_extra_time_18 pg_extra_time_18-2.0.0-1PGDG.rhel10.noarch.rpm pgdg 2.0.0 32.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_extra_time_18-2.0.0-1PGDG.rhel10.noarch.rpm
 @ d12.x86_64 18 postgresql-18-pg-extra-time postgresql-18-pg-extra-time_2.1.0-1PIGSTY~bookworm_amd64.deb pigsty 2.1.0 40.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-extra-time/postgresql-18-pg-extra-time_2.1.0-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 18 postgresql-18-pg-extra-time postgresql-18-pg-extra-time_2.1.0-1PIGSTY~bookworm_arm64.deb pigsty 2.1.0 40.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-extra-time/postgresql-18-pg-extra-time_2.1.0-1PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 18 postgresql-18-pg-extra-time postgresql-18-pg-extra-time_2.1.0-1PIGSTY~trixie_amd64.deb pigsty 2.1.0 40.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-extra-time/postgresql-18-pg-extra-time_2.1.0-1PIGSTY~trixie_amd64.deb
@@ -96,12 +100,18 @@ weight: 4220
 @ el8.aarch64 17 pg_extra_time_17 pg_extra_time_17-1.1.3-1PGDG.rhel8.noarch.rpm pgdg 1.1.3 18.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pg_extra_time_17-1.1.3-1PGDG.rhel8.noarch.rpm
 @ el9.x86_64 17 pg_extra_time_17 pg_extra_time_17-2.1.0-1PIGSTY.el9.x86_64.rpm pigsty 2.1.0 33.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_extra_time_17-2.1.0-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 17 pg_extra_time_17 pg_extra_time_17-2.0.0-1PGDG.rhel9.8.noarch.rpm pgdg 2.0.0 32.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_extra_time_17-2.0.0-1PGDG.rhel9.8.noarch.rpm
+@ el9.x86_64 17 pg_extra_time_17 pg_extra_time_17-2.0.0-1PGDG.rhel9.noarch.rpm pgdg 2.0.0 32.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_extra_time_17-2.0.0-1PGDG.rhel9.noarch.rpm
+@ el9.x86_64 17 pg_extra_time_17 pg_extra_time_17-1.1.3-1PGDG.rhel9.noarch.rpm pgdg 1.1.3 18.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_extra_time_17-1.1.3-1PGDG.rhel9.noarch.rpm
 @ el9.aarch64 17 pg_extra_time_17 pg_extra_time_17-2.1.0-1PIGSTY.el9.aarch64.rpm pigsty 2.1.0 33.8KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_extra_time_17-2.1.0-1PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 17 pg_extra_time_17 pg_extra_time_17-2.0.0-1PGDG.rhel9.8.noarch.rpm pgdg 2.0.0 32.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_extra_time_17-2.0.0-1PGDG.rhel9.8.noarch.rpm
+@ el9.aarch64 17 pg_extra_time_17 pg_extra_time_17-2.0.0-1PGDG.rhel9.noarch.rpm pgdg 2.0.0 32.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_extra_time_17-2.0.0-1PGDG.rhel9.noarch.rpm
+@ el9.aarch64 17 pg_extra_time_17 pg_extra_time_17-1.1.3-1PGDG.rhel9.noarch.rpm pgdg 1.1.3 18.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_extra_time_17-1.1.3-1PGDG.rhel9.noarch.rpm
 @ el10.x86_64 17 pg_extra_time_17 pg_extra_time_17-2.1.0-1PIGSTY.el10.x86_64.rpm pigsty 2.1.0 34.1KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_extra_time_17-2.1.0-1PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 17 pg_extra_time_17 pg_extra_time_17-2.0.0-1PGDG.rhel10.2.noarch.rpm pgdg 2.0.0 32.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_extra_time_17-2.0.0-1PGDG.rhel10.2.noarch.rpm
+@ el10.x86_64 17 pg_extra_time_17 pg_extra_time_17-2.0.0-1PGDG.rhel10.noarch.rpm pgdg 2.0.0 32.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_extra_time_17-2.0.0-1PGDG.rhel10.noarch.rpm
 @ el10.aarch64 17 pg_extra_time_17 pg_extra_time_17-2.1.0-1PIGSTY.el10.aarch64.rpm pigsty 2.1.0 34.0KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_extra_time_17-2.1.0-1PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 17 pg_extra_time_17 pg_extra_time_17-2.0.0-1PGDG.rhel10.2.noarch.rpm pgdg 2.0.0 32.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_extra_time_17-2.0.0-1PGDG.rhel10.2.noarch.rpm
+@ el10.aarch64 17 pg_extra_time_17 pg_extra_time_17-2.0.0-1PGDG.rhel10.noarch.rpm pgdg 2.0.0 32.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_extra_time_17-2.0.0-1PGDG.rhel10.noarch.rpm
 @ d12.x86_64 17 postgresql-17-pg-extra-time postgresql-17-pg-extra-time_2.1.0-1PIGSTY~bookworm_amd64.deb pigsty 2.1.0 40.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-extra-time/postgresql-17-pg-extra-time_2.1.0-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 17 postgresql-17-pg-extra-time postgresql-17-pg-extra-time_2.1.0-1PIGSTY~bookworm_arm64.deb pigsty 2.1.0 40.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-extra-time/postgresql-17-pg-extra-time_2.1.0-1PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 17 postgresql-17-pg-extra-time postgresql-17-pg-extra-time_2.1.0-1PIGSTY~trixie_amd64.deb pigsty 2.1.0 40.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-extra-time/postgresql-17-pg-extra-time_2.1.0-1PIGSTY~trixie_amd64.deb
@@ -122,12 +132,20 @@ weight: 4220
 @ el8.aarch64 16 pg_extra_time_16 pg_extra_time_16-1.1.2-1PGDG.rhel8.noarch.rpm pgdg 1.1.2 18.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pg_extra_time_16-1.1.2-1PGDG.rhel8.noarch.rpm
 @ el9.x86_64 16 pg_extra_time_16 pg_extra_time_16-2.1.0-1PIGSTY.el9.x86_64.rpm pigsty 2.1.0 33.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_extra_time_16-2.1.0-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 16 pg_extra_time_16 pg_extra_time_16-2.0.0-1PGDG.rhel9.8.noarch.rpm pgdg 2.0.0 32.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_extra_time_16-2.0.0-1PGDG.rhel9.8.noarch.rpm
+@ el9.x86_64 16 pg_extra_time_16 pg_extra_time_16-2.0.0-1PGDG.rhel9.noarch.rpm pgdg 2.0.0 32.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_extra_time_16-2.0.0-1PGDG.rhel9.noarch.rpm
+@ el9.x86_64 16 pg_extra_time_16 pg_extra_time_16-1.1.3-1PGDG.rhel9.noarch.rpm pgdg 1.1.3 18.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_extra_time_16-1.1.3-1PGDG.rhel9.noarch.rpm
+@ el9.x86_64 16 pg_extra_time_16 pg_extra_time_16-1.1.2-1PGDG.rhel9.noarch.rpm pgdg 1.1.2 18.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_extra_time_16-1.1.2-1PGDG.rhel9.noarch.rpm
 @ el9.aarch64 16 pg_extra_time_16 pg_extra_time_16-2.1.0-1PIGSTY.el9.aarch64.rpm pigsty 2.1.0 33.8KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_extra_time_16-2.1.0-1PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 16 pg_extra_time_16 pg_extra_time_16-2.0.0-1PGDG.rhel9.8.noarch.rpm pgdg 2.0.0 32.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_extra_time_16-2.0.0-1PGDG.rhel9.8.noarch.rpm
+@ el9.aarch64 16 pg_extra_time_16 pg_extra_time_16-2.0.0-1PGDG.rhel9.noarch.rpm pgdg 2.0.0 32.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_extra_time_16-2.0.0-1PGDG.rhel9.noarch.rpm
+@ el9.aarch64 16 pg_extra_time_16 pg_extra_time_16-1.1.3-1PGDG.rhel9.noarch.rpm pgdg 1.1.3 18.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_extra_time_16-1.1.3-1PGDG.rhel9.noarch.rpm
+@ el9.aarch64 16 pg_extra_time_16 pg_extra_time_16-1.1.2-1PGDG.rhel9.noarch.rpm pgdg 1.1.2 18.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_extra_time_16-1.1.2-1PGDG.rhel9.noarch.rpm
 @ el10.x86_64 16 pg_extra_time_16 pg_extra_time_16-2.1.0-1PIGSTY.el10.x86_64.rpm pigsty 2.1.0 34.1KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_extra_time_16-2.1.0-1PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 16 pg_extra_time_16 pg_extra_time_16-2.0.0-1PGDG.rhel10.2.noarch.rpm pgdg 2.0.0 32.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_extra_time_16-2.0.0-1PGDG.rhel10.2.noarch.rpm
+@ el10.x86_64 16 pg_extra_time_16 pg_extra_time_16-2.0.0-1PGDG.rhel10.noarch.rpm pgdg 2.0.0 32.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_extra_time_16-2.0.0-1PGDG.rhel10.noarch.rpm
 @ el10.aarch64 16 pg_extra_time_16 pg_extra_time_16-2.1.0-1PIGSTY.el10.aarch64.rpm pigsty 2.1.0 34.0KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_extra_time_16-2.1.0-1PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 16 pg_extra_time_16 pg_extra_time_16-2.0.0-1PGDG.rhel10.2.noarch.rpm pgdg 2.0.0 32.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_extra_time_16-2.0.0-1PGDG.rhel10.2.noarch.rpm
+@ el10.aarch64 16 pg_extra_time_16 pg_extra_time_16-2.0.0-1PGDG.rhel10.noarch.rpm pgdg 2.0.0 32.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_extra_time_16-2.0.0-1PGDG.rhel10.noarch.rpm
 @ d12.x86_64 16 postgresql-16-pg-extra-time postgresql-16-pg-extra-time_2.1.0-1PIGSTY~bookworm_amd64.deb pigsty 2.1.0 40.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-extra-time/postgresql-16-pg-extra-time_2.1.0-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 16 postgresql-16-pg-extra-time postgresql-16-pg-extra-time_2.1.0-1PIGSTY~bookworm_arm64.deb pigsty 2.1.0 40.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-extra-time/postgresql-16-pg-extra-time_2.1.0-1PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 16 postgresql-16-pg-extra-time postgresql-16-pg-extra-time_2.1.0-1PIGSTY~trixie_amd64.deb pigsty 2.1.0 40.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-extra-time/postgresql-16-pg-extra-time_2.1.0-1PIGSTY~trixie_amd64.deb
@@ -148,12 +166,20 @@ weight: 4220
 @ el8.aarch64 15 pg_extra_time_15 pg_extra_time_15-1.1.2-1PGDG.rhel8.noarch.rpm pgdg 1.1.2 18.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pg_extra_time_15-1.1.2-1PGDG.rhel8.noarch.rpm
 @ el9.x86_64 15 pg_extra_time_15 pg_extra_time_15-2.1.0-1PIGSTY.el9.x86_64.rpm pigsty 2.1.0 33.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_extra_time_15-2.1.0-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 15 pg_extra_time_15 pg_extra_time_15-2.0.0-1PGDG.rhel9.8.noarch.rpm pgdg 2.0.0 32.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_extra_time_15-2.0.0-1PGDG.rhel9.8.noarch.rpm
+@ el9.x86_64 15 pg_extra_time_15 pg_extra_time_15-2.0.0-1PGDG.rhel9.noarch.rpm pgdg 2.0.0 32.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_extra_time_15-2.0.0-1PGDG.rhel9.noarch.rpm
+@ el9.x86_64 15 pg_extra_time_15 pg_extra_time_15-1.1.3-1PGDG.rhel9.noarch.rpm pgdg 1.1.3 18.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_extra_time_15-1.1.3-1PGDG.rhel9.noarch.rpm
+@ el9.x86_64 15 pg_extra_time_15 pg_extra_time_15-1.1.2-1PGDG.rhel9.noarch.rpm pgdg 1.1.2 18.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_extra_time_15-1.1.2-1PGDG.rhel9.noarch.rpm
 @ el9.aarch64 15 pg_extra_time_15 pg_extra_time_15-2.1.0-1PIGSTY.el9.aarch64.rpm pigsty 2.1.0 33.8KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_extra_time_15-2.1.0-1PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 15 pg_extra_time_15 pg_extra_time_15-2.0.0-1PGDG.rhel9.8.noarch.rpm pgdg 2.0.0 32.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_extra_time_15-2.0.0-1PGDG.rhel9.8.noarch.rpm
+@ el9.aarch64 15 pg_extra_time_15 pg_extra_time_15-2.0.0-1PGDG.rhel9.noarch.rpm pgdg 2.0.0 32.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_extra_time_15-2.0.0-1PGDG.rhel9.noarch.rpm
+@ el9.aarch64 15 pg_extra_time_15 pg_extra_time_15-1.1.3-1PGDG.rhel9.noarch.rpm pgdg 1.1.3 18.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_extra_time_15-1.1.3-1PGDG.rhel9.noarch.rpm
+@ el9.aarch64 15 pg_extra_time_15 pg_extra_time_15-1.1.2-1PGDG.rhel9.noarch.rpm pgdg 1.1.2 18.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_extra_time_15-1.1.2-1PGDG.rhel9.noarch.rpm
 @ el10.x86_64 15 pg_extra_time_15 pg_extra_time_15-2.1.0-1PIGSTY.el10.x86_64.rpm pigsty 2.1.0 34.1KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_extra_time_15-2.1.0-1PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 15 pg_extra_time_15 pg_extra_time_15-2.0.0-1PGDG.rhel10.2.noarch.rpm pgdg 2.0.0 32.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_extra_time_15-2.0.0-1PGDG.rhel10.2.noarch.rpm
+@ el10.x86_64 15 pg_extra_time_15 pg_extra_time_15-2.0.0-1PGDG.rhel10.noarch.rpm pgdg 2.0.0 32.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_extra_time_15-2.0.0-1PGDG.rhel10.noarch.rpm
 @ el10.aarch64 15 pg_extra_time_15 pg_extra_time_15-2.1.0-1PIGSTY.el10.aarch64.rpm pigsty 2.1.0 34.0KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_extra_time_15-2.1.0-1PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 15 pg_extra_time_15 pg_extra_time_15-2.0.0-1PGDG.rhel10.2.noarch.rpm pgdg 2.0.0 32.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_extra_time_15-2.0.0-1PGDG.rhel10.2.noarch.rpm
+@ el10.aarch64 15 pg_extra_time_15 pg_extra_time_15-2.0.0-1PGDG.rhel10.noarch.rpm pgdg 2.0.0 32.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_extra_time_15-2.0.0-1PGDG.rhel10.noarch.rpm
 @ d12.x86_64 15 postgresql-15-pg-extra-time postgresql-15-pg-extra-time_2.1.0-1PIGSTY~bookworm_amd64.deb pigsty 2.1.0 40.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-extra-time/postgresql-15-pg-extra-time_2.1.0-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 15 postgresql-15-pg-extra-time postgresql-15-pg-extra-time_2.1.0-1PIGSTY~bookworm_arm64.deb pigsty 2.1.0 40.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-extra-time/postgresql-15-pg-extra-time_2.1.0-1PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 15 postgresql-15-pg-extra-time postgresql-15-pg-extra-time_2.1.0-1PIGSTY~trixie_amd64.deb pigsty 2.1.0 40.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-extra-time/postgresql-15-pg-extra-time_2.1.0-1PIGSTY~trixie_amd64.deb
@@ -174,12 +200,20 @@ weight: 4220
 @ el8.aarch64 14 pg_extra_time_14 pg_extra_time_14-1.1.2-1PGDG.rhel8.noarch.rpm pgdg 1.1.2 18.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pg_extra_time_14-1.1.2-1PGDG.rhel8.noarch.rpm
 @ el9.x86_64 14 pg_extra_time_14 pg_extra_time_14-2.1.0-1PIGSTY.el9.x86_64.rpm pigsty 2.1.0 33.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_extra_time_14-2.1.0-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 14 pg_extra_time_14 pg_extra_time_14-2.0.0-1PGDG.rhel9.8.noarch.rpm pgdg 2.0.0 32.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_extra_time_14-2.0.0-1PGDG.rhel9.8.noarch.rpm
+@ el9.x86_64 14 pg_extra_time_14 pg_extra_time_14-2.0.0-1PGDG.rhel9.noarch.rpm pgdg 2.0.0 32.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_extra_time_14-2.0.0-1PGDG.rhel9.noarch.rpm
+@ el9.x86_64 14 pg_extra_time_14 pg_extra_time_14-1.1.3-1PGDG.rhel9.noarch.rpm pgdg 1.1.3 18.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_extra_time_14-1.1.3-1PGDG.rhel9.noarch.rpm
+@ el9.x86_64 14 pg_extra_time_14 pg_extra_time_14-1.1.2-1PGDG.rhel9.noarch.rpm pgdg 1.1.2 18.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_extra_time_14-1.1.2-1PGDG.rhel9.noarch.rpm
 @ el9.aarch64 14 pg_extra_time_14 pg_extra_time_14-2.1.0-1PIGSTY.el9.aarch64.rpm pigsty 2.1.0 33.8KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_extra_time_14-2.1.0-1PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 14 pg_extra_time_14 pg_extra_time_14-2.0.0-1PGDG.rhel9.8.noarch.rpm pgdg 2.0.0 32.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_extra_time_14-2.0.0-1PGDG.rhel9.8.noarch.rpm
+@ el9.aarch64 14 pg_extra_time_14 pg_extra_time_14-2.0.0-1PGDG.rhel9.noarch.rpm pgdg 2.0.0 32.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_extra_time_14-2.0.0-1PGDG.rhel9.noarch.rpm
+@ el9.aarch64 14 pg_extra_time_14 pg_extra_time_14-1.1.3-1PGDG.rhel9.noarch.rpm pgdg 1.1.3 18.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_extra_time_14-1.1.3-1PGDG.rhel9.noarch.rpm
+@ el9.aarch64 14 pg_extra_time_14 pg_extra_time_14-1.1.2-1PGDG.rhel9.noarch.rpm pgdg 1.1.2 18.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_extra_time_14-1.1.2-1PGDG.rhel9.noarch.rpm
 @ el10.x86_64 14 pg_extra_time_14 pg_extra_time_14-2.1.0-1PIGSTY.el10.x86_64.rpm pigsty 2.1.0 34.1KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_extra_time_14-2.1.0-1PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 14 pg_extra_time_14 pg_extra_time_14-2.0.0-1PGDG.rhel10.2.noarch.rpm pgdg 2.0.0 32.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_extra_time_14-2.0.0-1PGDG.rhel10.2.noarch.rpm
+@ el10.x86_64 14 pg_extra_time_14 pg_extra_time_14-2.0.0-1PGDG.rhel10.noarch.rpm pgdg 2.0.0 32.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_extra_time_14-2.0.0-1PGDG.rhel10.noarch.rpm
 @ el10.aarch64 14 pg_extra_time_14 pg_extra_time_14-2.1.0-1PIGSTY.el10.aarch64.rpm pigsty 2.1.0 34.0KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_extra_time_14-2.1.0-1PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 14 pg_extra_time_14 pg_extra_time_14-2.0.0-1PGDG.rhel10.2.noarch.rpm pgdg 2.0.0 32.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_extra_time_14-2.0.0-1PGDG.rhel10.2.noarch.rpm
+@ el10.aarch64 14 pg_extra_time_14 pg_extra_time_14-2.0.0-1PGDG.rhel10.noarch.rpm pgdg 2.0.0 32.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_extra_time_14-2.0.0-1PGDG.rhel10.noarch.rpm
 @ d12.x86_64 14 postgresql-14-pg-extra-time postgresql-14-pg-extra-time_2.1.0-1PIGSTY~bookworm_amd64.deb pigsty 2.1.0 40.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-extra-time/postgresql-14-pg-extra-time_2.1.0-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 14 postgresql-14-pg-extra-time postgresql-14-pg-extra-time_2.1.0-1PIGSTY~bookworm_arm64.deb pigsty 2.1.0 40.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-extra-time/postgresql-14-pg-extra-time_2.1.0-1PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 14 postgresql-14-pg-extra-time postgresql-14-pg-extra-time_2.1.0-1PIGSTY~trixie_amd64.deb pigsty 2.1.0 40.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-extra-time/postgresql-14-pg-extra-time_2.1.0-1PIGSTY~trixie_amd64.deb

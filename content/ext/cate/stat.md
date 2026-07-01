@@ -19,9 +19,9 @@ icon: fas fa-file-waveform
 | [`pg_stat_log`](/ext/e/pg_stat_log) | [`pg_stat_log`](https://github.com/fabriziomello/pg_stat_log) | `0.1` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 按后端类型、数据库、用户、日志级别与 SQLSTATE 统计 PostgreSQL 日志消息。 |
 | [`pg_stat_plans`](/ext/e/pg_stat_plans) | [`pg_stat_plans`](https://github.com/pganalyze/pg_stat_plans) | `2.1.0` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 跟踪查询计划级别的调用次数、执行时间与示例 EXPLAIN 文本。 |
 | [`pg_show_plans`](/ext/e/pg_show_plans) | [`pg_show_plans`](https://github.com/cybertec-postgresql/pg_show_plans) | `2.1.8` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 打印所有当前正在运行查询的执行计划 |
-| [`pg_stat_kcache`](/ext/e/pg_stat_kcache) | [`pg_stat_kcache`](https://github.com/powa-team/pg_stat_kcache) | `2.3.1` | <a class="ext-badge ext-badge--license bsd 3clause" href="/ext/license#bsd3clause">BSD 3-Clause</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 内核统计信息收集 |
+| [`pg_stat_kcache`](/ext/e/pg_stat_kcache) | [`pg_stat_kcache`](https://github.com/powa-team/pg_stat_kcache) | `2.3.2` | <a class="ext-badge ext-badge--license bsd 3clause" href="/ext/license#bsd3clause">BSD 3-Clause</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 内核统计信息收集 |
 | [`pg_stat_monitor`](/ext/e/pg_stat_monitor) | [`pg_stat_monitor`](https://github.com/percona/pg_stat_monitor) | `2.3.2` | <a class="ext-badge ext-badge--license bsd 3clause" href="/ext/license#bsd3clause">BSD 3-Clause</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 提供查询聚合统计、客户端信息、执行计划详细信息和直方图 |
-| [`pg_qualstats`](/ext/e/pg_qualstats) | [`pg_qualstats`](https://github.com/powa-team/pg_qualstats) | `2.1.3` | <a class="ext-badge ext-badge--license bsd 3clause" href="/ext/license#bsd3clause">BSD 3-Clause</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 收集有关 quals 的统计信息的扩展 |
+| [`pg_qualstats`](/ext/e/pg_qualstats) | [`pg_qualstats`](https://github.com/powa-team/pg_qualstats) | `2.1.4` | <a class="ext-badge ext-badge--license bsd 3clause" href="/ext/license#bsd3clause">BSD 3-Clause</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 收集有关 quals 的统计信息的扩展 |
 | [`pg_store_plans`](/ext/e/pg_store_plans) | [`pg_store_plans`](https://github.com/ossc-db/pg_store_plans) | `1.10` | <a class="ext-badge ext-badge--license bsd 3clause" href="/ext/license#bsd3clause">BSD 3-Clause</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 跟踪所有执行的 SQL 语句的计划统计信息 |
 | [`pg_track_settings`](/ext/e/pg_track_settings) | [`pg_track_settings`](https://github.com/rjuju/pg_track_settings) | `2.1.2` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> | 跟踪设置更改 |
 | [`pg_track_optimizer`](/ext/e/pg_track_optimizer) | [`pg_track_optimizer`](https://github.com/danolivo/pg_track_optimizer) | `0.9.2` | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 跟踪规划器决策与实际执行的差距 |
@@ -192,7 +192,7 @@ icon: fas fa-file-waveform
 
 ## pg_stat_kcache {#pg_stat_kcache}
 
-[**`pg_stat_kcache`**](/ext/e/pg_stat_kcache) - `2.3.1` : 内核统计信息收集
+[**`pg_stat_kcache`**](/ext/e/pg_stat_kcache) - `2.3.2` : 内核统计信息收集
 
 | **条目** | **属性** | **OS** | **x86_64** | **aarch64** |
 |:---:|:---|:---:|:---:|:---:|
@@ -230,7 +230,7 @@ icon: fas fa-file-waveform
 
 ## pg_qualstats {#pg_qualstats}
 
-[**`pg_qualstats`**](/ext/e/pg_qualstats) - `2.1.3` : 收集有关 quals 的统计信息的扩展
+[**`pg_qualstats`**](/ext/e/pg_qualstats) - `2.1.4` : 收集有关 quals 的统计信息的扩展
 
 | **条目** | **属性** | **OS** | **x86_64** | **aarch64** |
 |:---:|:---|:---:|:---:|:---:|

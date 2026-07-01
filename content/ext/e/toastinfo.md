@@ -52,10 +52,10 @@ weight: 6530
 |:--:|:--:|:--:|:--:|:--:|:--:|
 | el8.x86_64 | AVAIL PIGSTY 1.7 2 | AVAIL PIGSTY 1.7 2 | AVAIL PIGSTY 1.7 2 | AVAIL PIGSTY 1.7 2 | AVAIL PIGSTY 1.7 2 |
 | el8.aarch64 | AVAIL PIGSTY 1.7 2 | AVAIL PIGSTY 1.7 2 | AVAIL PIGSTY 1.7 2 | AVAIL PIGSTY 1.7 2 | AVAIL PIGSTY 1.7 2 |
-| el9.x86_64 | AVAIL PIGSTY 1.7 2 | AVAIL PIGSTY 1.7 2 | AVAIL PIGSTY 1.7 2 | AVAIL PIGSTY 1.7 2 | AVAIL PIGSTY 1.7 2 |
-| el9.aarch64 | AVAIL PIGSTY 1.7 2 | AVAIL PIGSTY 1.7 2 | AVAIL PIGSTY 1.7 2 | AVAIL PIGSTY 1.7 2 | AVAIL PIGSTY 1.7 2 |
-| el10.x86_64 | AVAIL PIGSTY 1.7 2 | AVAIL PIGSTY 1.7 2 | AVAIL PIGSTY 1.7 2 | AVAIL PIGSTY 1.7 2 | AVAIL PIGSTY 1.7 2 |
-| el10.aarch64 | AVAIL PIGSTY 1.7 2 | AVAIL PIGSTY 1.7 2 | AVAIL PIGSTY 1.7 2 | AVAIL PIGSTY 1.7 2 | AVAIL PIGSTY 1.7 2 |
+| el9.x86_64 | AVAIL PIGSTY 1.7 4 | AVAIL PIGSTY 1.7 4 | AVAIL PIGSTY 1.7 4 | AVAIL PIGSTY 1.7 4 | AVAIL PIGSTY 1.7 4 |
+| el9.aarch64 | AVAIL PIGSTY 1.7 4 | AVAIL PIGSTY 1.7 4 | AVAIL PIGSTY 1.7 4 | AVAIL PIGSTY 1.7 4 | AVAIL PIGSTY 1.7 4 |
+| el10.x86_64 | AVAIL PIGSTY 1.7 4 | AVAIL PIGSTY 1.7 4 | AVAIL PIGSTY 1.7 4 | AVAIL PIGSTY 1.7 4 | AVAIL PIGSTY 1.7 4 |
+| el10.aarch64 | AVAIL PIGSTY 1.7 4 | AVAIL PIGSTY 1.7 4 | AVAIL PIGSTY 1.7 4 | AVAIL PIGSTY 1.7 4 | AVAIL PIGSTY 1.7 4 |
 | d12.x86_64 | AVAIL PGDG 1.7 3 | AVAIL PGDG 1.7 3 | AVAIL PGDG 1.7 3 | AVAIL PGDG 1.7 3 | AVAIL PGDG 1.7 3 |
 | d12.aarch64 | AVAIL PGDG 1.7 3 | AVAIL PGDG 1.7 3 | AVAIL PGDG 1.7 3 | AVAIL PGDG 1.7 3 | AVAIL PGDG 1.7 3 |
 | d13.x86_64 | AVAIL PGDG 1.7 3 | AVAIL PGDG 1.7 3 | AVAIL PGDG 1.7 3 | AVAIL PGDG 1.7 3 | AVAIL PGDG 1.7 3 |
@@ -72,12 +72,20 @@ weight: 6530
 @ el8.aarch64 18 toastinfo_18 toastinfo_18-1.6-1PGDG.rhel8.10.aarch64.rpm pgdg 1.6 13.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/toastinfo_18-1.6-1PGDG.rhel8.10.aarch64.rpm
 @ el9.x86_64 18 toastinfo_18 toastinfo_18-1.7-1PIGSTY.el9.x86_64.rpm pigsty 1.7 13.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/toastinfo_18-1.7-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 18 toastinfo_18 toastinfo_18-1.6-1PGDG.rhel9.8.x86_64.rpm pgdg 1.6 13.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/toastinfo_18-1.6-1PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 18 toastinfo_18 toastinfo_18-1.6-1PGDG.rhel9.7.x86_64.rpm pgdg 1.6 13.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/toastinfo_18-1.6-1PGDG.rhel9.7.x86_64.rpm
+@ el9.x86_64 18 toastinfo_18 toastinfo_18-1.6-1PGDG.rhel9.6.x86_64.rpm pgdg 1.6 13.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/toastinfo_18-1.6-1PGDG.rhel9.6.x86_64.rpm
 @ el9.aarch64 18 toastinfo_18 toastinfo_18-1.7-1PIGSTY.el9.aarch64.rpm pigsty 1.7 13.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/toastinfo_18-1.7-1PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 18 toastinfo_18 toastinfo_18-1.6-1PGDG.rhel9.8.aarch64.rpm pgdg 1.6 12.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/toastinfo_18-1.6-1PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 18 toastinfo_18 toastinfo_18-1.6-1PGDG.rhel9.7.aarch64.rpm pgdg 1.6 12.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/toastinfo_18-1.6-1PGDG.rhel9.7.aarch64.rpm
+@ el9.aarch64 18 toastinfo_18 toastinfo_18-1.6-1PGDG.rhel9.6.aarch64.rpm pgdg 1.6 12.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/toastinfo_18-1.6-1PGDG.rhel9.6.aarch64.rpm
 @ el10.x86_64 18 toastinfo_18 toastinfo_18-1.7-1PIGSTY.el10.x86_64.rpm pigsty 1.7 13.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/toastinfo_18-1.7-1PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 18 toastinfo_18 toastinfo_18-1.6-1PGDG.rhel10.2.x86_64.rpm pgdg 1.6 13.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/toastinfo_18-1.6-1PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 18 toastinfo_18 toastinfo_18-1.6-1PGDG.rhel10.1.x86_64.rpm pgdg 1.6 13.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/toastinfo_18-1.6-1PGDG.rhel10.1.x86_64.rpm
+@ el10.x86_64 18 toastinfo_18 toastinfo_18-1.6-1PGDG.rhel10.0.x86_64.rpm pgdg 1.6 13.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/toastinfo_18-1.6-1PGDG.rhel10.0.x86_64.rpm
 @ el10.aarch64 18 toastinfo_18 toastinfo_18-1.7-1PIGSTY.el10.aarch64.rpm pigsty 1.7 13.7KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/toastinfo_18-1.7-1PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 18 toastinfo_18 toastinfo_18-1.6-1PGDG.rhel10.2.aarch64.rpm pgdg 1.6 13.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/toastinfo_18-1.6-1PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 18 toastinfo_18 toastinfo_18-1.6-1PGDG.rhel10.1.aarch64.rpm pgdg 1.6 13.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/toastinfo_18-1.6-1PGDG.rhel10.1.aarch64.rpm
+@ el10.aarch64 18 toastinfo_18 toastinfo_18-1.6-1PGDG.rhel10.0.aarch64.rpm pgdg 1.6 13.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/toastinfo_18-1.6-1PGDG.rhel10.0.aarch64.rpm
 @ d12.x86_64 18 postgresql-18-toastinfo postgresql-18-toastinfo_1.7-1.pgdg12+1_amd64.deb pgdg 1.7 12.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/t/toastinfo/postgresql-18-toastinfo_1.7-1.pgdg12+1_amd64.deb
 @ d12.x86_64 18 postgresql-18-toastinfo postgresql-18-toastinfo_1.6-1.pgdg12+1_amd64.deb pgdg 1.6 12.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/t/toastinfo/postgresql-18-toastinfo_1.6-1.pgdg12+1_amd64.deb
 @ d12.x86_64 18 postgresql-18-toastinfo postgresql-18-toastinfo_1.5-3.pgdg12+1_amd64.deb pgdg 1.5 12.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/t/toastinfo/postgresql-18-toastinfo_1.5-3.pgdg12+1_amd64.deb
@@ -114,12 +122,20 @@ weight: 6530
 @ el8.aarch64 17 toastinfo_17 toastinfo_17-1.6-1PGDG.rhel8.10.aarch64.rpm pgdg 1.6 13.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/toastinfo_17-1.6-1PGDG.rhel8.10.aarch64.rpm
 @ el9.x86_64 17 toastinfo_17 toastinfo_17-1.7-1PIGSTY.el9.x86_64.rpm pigsty 1.7 13.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/toastinfo_17-1.7-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 17 toastinfo_17 toastinfo_17-1.6-1PGDG.rhel9.8.x86_64.rpm pgdg 1.6 13.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/toastinfo_17-1.6-1PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 17 toastinfo_17 toastinfo_17-1.6-1PGDG.rhel9.7.x86_64.rpm pgdg 1.6 13.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/toastinfo_17-1.6-1PGDG.rhel9.7.x86_64.rpm
+@ el9.x86_64 17 toastinfo_17 toastinfo_17-1.6-1PGDG.rhel9.6.x86_64.rpm pgdg 1.6 13.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/toastinfo_17-1.6-1PGDG.rhel9.6.x86_64.rpm
 @ el9.aarch64 17 toastinfo_17 toastinfo_17-1.7-1PIGSTY.el9.aarch64.rpm pigsty 1.7 13.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/toastinfo_17-1.7-1PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 17 toastinfo_17 toastinfo_17-1.6-1PGDG.rhel9.8.aarch64.rpm pgdg 1.6 12.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/toastinfo_17-1.6-1PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 17 toastinfo_17 toastinfo_17-1.6-1PGDG.rhel9.7.aarch64.rpm pgdg 1.6 12.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/toastinfo_17-1.6-1PGDG.rhel9.7.aarch64.rpm
+@ el9.aarch64 17 toastinfo_17 toastinfo_17-1.6-1PGDG.rhel9.6.aarch64.rpm pgdg 1.6 12.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/toastinfo_17-1.6-1PGDG.rhel9.6.aarch64.rpm
 @ el10.x86_64 17 toastinfo_17 toastinfo_17-1.7-1PIGSTY.el10.x86_64.rpm pigsty 1.7 13.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/toastinfo_17-1.7-1PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 17 toastinfo_17 toastinfo_17-1.6-1PGDG.rhel10.2.x86_64.rpm pgdg 1.6 13.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/toastinfo_17-1.6-1PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 17 toastinfo_17 toastinfo_17-1.6-1PGDG.rhel10.1.x86_64.rpm pgdg 1.6 13.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/toastinfo_17-1.6-1PGDG.rhel10.1.x86_64.rpm
+@ el10.x86_64 17 toastinfo_17 toastinfo_17-1.6-1PGDG.rhel10.0.x86_64.rpm pgdg 1.6 13.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/toastinfo_17-1.6-1PGDG.rhel10.0.x86_64.rpm
 @ el10.aarch64 17 toastinfo_17 toastinfo_17-1.7-1PIGSTY.el10.aarch64.rpm pigsty 1.7 13.7KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/toastinfo_17-1.7-1PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 17 toastinfo_17 toastinfo_17-1.6-1PGDG.rhel10.2.aarch64.rpm pgdg 1.6 13.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/toastinfo_17-1.6-1PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 17 toastinfo_17 toastinfo_17-1.6-1PGDG.rhel10.1.aarch64.rpm pgdg 1.6 13.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/toastinfo_17-1.6-1PGDG.rhel10.1.aarch64.rpm
+@ el10.aarch64 17 toastinfo_17 toastinfo_17-1.6-1PGDG.rhel10.0.aarch64.rpm pgdg 1.6 13.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/toastinfo_17-1.6-1PGDG.rhel10.0.aarch64.rpm
 @ d12.x86_64 17 postgresql-17-toastinfo postgresql-17-toastinfo_1.7-1.pgdg12+1_amd64.deb pgdg 1.7 12.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/t/toastinfo/postgresql-17-toastinfo_1.7-1.pgdg12+1_amd64.deb
 @ d12.x86_64 17 postgresql-17-toastinfo postgresql-17-toastinfo_1.6-1.pgdg12+1_amd64.deb pgdg 1.6 12.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/t/toastinfo/postgresql-17-toastinfo_1.6-1.pgdg12+1_amd64.deb
 @ d12.x86_64 17 postgresql-17-toastinfo postgresql-17-toastinfo_1.5-3.pgdg12+1_amd64.deb pgdg 1.5 12.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/t/toastinfo/postgresql-17-toastinfo_1.5-3.pgdg12+1_amd64.deb
@@ -156,12 +172,20 @@ weight: 6530
 @ el8.aarch64 16 toastinfo_16 toastinfo_16-1.6-1PGDG.rhel8.10.aarch64.rpm pgdg 1.6 13.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/toastinfo_16-1.6-1PGDG.rhel8.10.aarch64.rpm
 @ el9.x86_64 16 toastinfo_16 toastinfo_16-1.7-1PIGSTY.el9.x86_64.rpm pigsty 1.7 13.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/toastinfo_16-1.7-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 16 toastinfo_16 toastinfo_16-1.6-1PGDG.rhel9.8.x86_64.rpm pgdg 1.6 13.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/toastinfo_16-1.6-1PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 16 toastinfo_16 toastinfo_16-1.6-1PGDG.rhel9.7.x86_64.rpm pgdg 1.6 13.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/toastinfo_16-1.6-1PGDG.rhel9.7.x86_64.rpm
+@ el9.x86_64 16 toastinfo_16 toastinfo_16-1.6-1PGDG.rhel9.6.x86_64.rpm pgdg 1.6 13.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/toastinfo_16-1.6-1PGDG.rhel9.6.x86_64.rpm
 @ el9.aarch64 16 toastinfo_16 toastinfo_16-1.7-1PIGSTY.el9.aarch64.rpm pigsty 1.7 13.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/toastinfo_16-1.7-1PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 16 toastinfo_16 toastinfo_16-1.6-1PGDG.rhel9.8.aarch64.rpm pgdg 1.6 12.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/toastinfo_16-1.6-1PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 16 toastinfo_16 toastinfo_16-1.6-1PGDG.rhel9.7.aarch64.rpm pgdg 1.6 12.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/toastinfo_16-1.6-1PGDG.rhel9.7.aarch64.rpm
+@ el9.aarch64 16 toastinfo_16 toastinfo_16-1.6-1PGDG.rhel9.6.aarch64.rpm pgdg 1.6 12.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/toastinfo_16-1.6-1PGDG.rhel9.6.aarch64.rpm
 @ el10.x86_64 16 toastinfo_16 toastinfo_16-1.7-1PIGSTY.el10.x86_64.rpm pigsty 1.7 13.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/toastinfo_16-1.7-1PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 16 toastinfo_16 toastinfo_16-1.6-1PGDG.rhel10.2.x86_64.rpm pgdg 1.6 13.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/toastinfo_16-1.6-1PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 16 toastinfo_16 toastinfo_16-1.6-1PGDG.rhel10.1.x86_64.rpm pgdg 1.6 13.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/toastinfo_16-1.6-1PGDG.rhel10.1.x86_64.rpm
+@ el10.x86_64 16 toastinfo_16 toastinfo_16-1.6-1PGDG.rhel10.0.x86_64.rpm pgdg 1.6 13.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/toastinfo_16-1.6-1PGDG.rhel10.0.x86_64.rpm
 @ el10.aarch64 16 toastinfo_16 toastinfo_16-1.7-1PIGSTY.el10.aarch64.rpm pigsty 1.7 13.7KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/toastinfo_16-1.7-1PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 16 toastinfo_16 toastinfo_16-1.6-1PGDG.rhel10.2.aarch64.rpm pgdg 1.6 13.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/toastinfo_16-1.6-1PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 16 toastinfo_16 toastinfo_16-1.6-1PGDG.rhel10.1.aarch64.rpm pgdg 1.6 13.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/toastinfo_16-1.6-1PGDG.rhel10.1.aarch64.rpm
+@ el10.aarch64 16 toastinfo_16 toastinfo_16-1.6-1PGDG.rhel10.0.aarch64.rpm pgdg 1.6 13.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/toastinfo_16-1.6-1PGDG.rhel10.0.aarch64.rpm
 @ d12.x86_64 16 postgresql-16-toastinfo postgresql-16-toastinfo_1.7-1.pgdg12+1_amd64.deb pgdg 1.7 12.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/t/toastinfo/postgresql-16-toastinfo_1.7-1.pgdg12+1_amd64.deb
 @ d12.x86_64 16 postgresql-16-toastinfo postgresql-16-toastinfo_1.6-1.pgdg12+1_amd64.deb pgdg 1.6 12.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/t/toastinfo/postgresql-16-toastinfo_1.6-1.pgdg12+1_amd64.deb
 @ d12.x86_64 16 postgresql-16-toastinfo postgresql-16-toastinfo_1.5-3.pgdg12+1_amd64.deb pgdg 1.5 12.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/t/toastinfo/postgresql-16-toastinfo_1.5-3.pgdg12+1_amd64.deb
@@ -198,12 +222,20 @@ weight: 6530
 @ el8.aarch64 15 toastinfo_15 toastinfo_15-1.6-1PGDG.rhel8.10.aarch64.rpm pgdg 1.6 13.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/toastinfo_15-1.6-1PGDG.rhel8.10.aarch64.rpm
 @ el9.x86_64 15 toastinfo_15 toastinfo_15-1.7-1PIGSTY.el9.x86_64.rpm pigsty 1.7 13.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/toastinfo_15-1.7-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 15 toastinfo_15 toastinfo_15-1.6-1PGDG.rhel9.8.x86_64.rpm pgdg 1.6 13.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/toastinfo_15-1.6-1PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 15 toastinfo_15 toastinfo_15-1.6-1PGDG.rhel9.7.x86_64.rpm pgdg 1.6 13.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/toastinfo_15-1.6-1PGDG.rhel9.7.x86_64.rpm
+@ el9.x86_64 15 toastinfo_15 toastinfo_15-1.6-1PGDG.rhel9.6.x86_64.rpm pgdg 1.6 13.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/toastinfo_15-1.6-1PGDG.rhel9.6.x86_64.rpm
 @ el9.aarch64 15 toastinfo_15 toastinfo_15-1.7-1PIGSTY.el9.aarch64.rpm pigsty 1.7 13.6KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/toastinfo_15-1.7-1PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 15 toastinfo_15 toastinfo_15-1.6-1PGDG.rhel9.8.aarch64.rpm pgdg 1.6 12.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/toastinfo_15-1.6-1PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 15 toastinfo_15 toastinfo_15-1.6-1PGDG.rhel9.7.aarch64.rpm pgdg 1.6 12.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/toastinfo_15-1.6-1PGDG.rhel9.7.aarch64.rpm
+@ el9.aarch64 15 toastinfo_15 toastinfo_15-1.6-1PGDG.rhel9.6.aarch64.rpm pgdg 1.6 13.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/toastinfo_15-1.6-1PGDG.rhel9.6.aarch64.rpm
 @ el10.x86_64 15 toastinfo_15 toastinfo_15-1.7-1PIGSTY.el10.x86_64.rpm pigsty 1.7 13.7KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/toastinfo_15-1.7-1PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 15 toastinfo_15 toastinfo_15-1.6-1PGDG.rhel10.2.x86_64.rpm pgdg 1.6 13.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/toastinfo_15-1.6-1PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 15 toastinfo_15 toastinfo_15-1.6-1PGDG.rhel10.1.x86_64.rpm pgdg 1.6 13.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/toastinfo_15-1.6-1PGDG.rhel10.1.x86_64.rpm
+@ el10.x86_64 15 toastinfo_15 toastinfo_15-1.6-1PGDG.rhel10.0.x86_64.rpm pgdg 1.6 13.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/toastinfo_15-1.6-1PGDG.rhel10.0.x86_64.rpm
 @ el10.aarch64 15 toastinfo_15 toastinfo_15-1.7-1PIGSTY.el10.aarch64.rpm pigsty 1.7 13.8KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/toastinfo_15-1.7-1PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 15 toastinfo_15 toastinfo_15-1.6-1PGDG.rhel10.2.aarch64.rpm pgdg 1.6 13.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/toastinfo_15-1.6-1PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 15 toastinfo_15 toastinfo_15-1.6-1PGDG.rhel10.1.aarch64.rpm pgdg 1.6 13.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/toastinfo_15-1.6-1PGDG.rhel10.1.aarch64.rpm
+@ el10.aarch64 15 toastinfo_15 toastinfo_15-1.6-1PGDG.rhel10.0.aarch64.rpm pgdg 1.6 13.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/toastinfo_15-1.6-1PGDG.rhel10.0.aarch64.rpm
 @ d12.x86_64 15 postgresql-15-toastinfo postgresql-15-toastinfo_1.7-1.pgdg12+1_amd64.deb pgdg 1.7 12.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/t/toastinfo/postgresql-15-toastinfo_1.7-1.pgdg12+1_amd64.deb
 @ d12.x86_64 15 postgresql-15-toastinfo postgresql-15-toastinfo_1.6-1.pgdg12+1_amd64.deb pgdg 1.6 12.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/t/toastinfo/postgresql-15-toastinfo_1.6-1.pgdg12+1_amd64.deb
 @ d12.x86_64 15 postgresql-15-toastinfo postgresql-15-toastinfo_1.5-3.pgdg12+1_amd64.deb pgdg 1.5 12.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/t/toastinfo/postgresql-15-toastinfo_1.5-3.pgdg12+1_amd64.deb
@@ -240,12 +272,20 @@ weight: 6530
 @ el8.aarch64 14 toastinfo_14 toastinfo_14-1.6-1PGDG.rhel8.10.aarch64.rpm pgdg 1.6 13.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/toastinfo_14-1.6-1PGDG.rhel8.10.aarch64.rpm
 @ el9.x86_64 14 toastinfo_14 toastinfo_14-1.7-1PIGSTY.el9.x86_64.rpm pigsty 1.7 13.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/toastinfo_14-1.7-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 14 toastinfo_14 toastinfo_14-1.6-1PGDG.rhel9.8.x86_64.rpm pgdg 1.6 13.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/toastinfo_14-1.6-1PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 14 toastinfo_14 toastinfo_14-1.6-1PGDG.rhel9.7.x86_64.rpm pgdg 1.6 13.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/toastinfo_14-1.6-1PGDG.rhel9.7.x86_64.rpm
+@ el9.x86_64 14 toastinfo_14 toastinfo_14-1.6-1PGDG.rhel9.6.x86_64.rpm pgdg 1.6 13.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/toastinfo_14-1.6-1PGDG.rhel9.6.x86_64.rpm
 @ el9.aarch64 14 toastinfo_14 toastinfo_14-1.7-1PIGSTY.el9.aarch64.rpm pigsty 1.7 13.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/toastinfo_14-1.7-1PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 14 toastinfo_14 toastinfo_14-1.6-1PGDG.rhel9.8.aarch64.rpm pgdg 1.6 12.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/toastinfo_14-1.6-1PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 14 toastinfo_14 toastinfo_14-1.6-1PGDG.rhel9.7.aarch64.rpm pgdg 1.6 12.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/toastinfo_14-1.6-1PGDG.rhel9.7.aarch64.rpm
+@ el9.aarch64 14 toastinfo_14 toastinfo_14-1.6-1PGDG.rhel9.6.aarch64.rpm pgdg 1.6 12.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/toastinfo_14-1.6-1PGDG.rhel9.6.aarch64.rpm
 @ el10.x86_64 14 toastinfo_14 toastinfo_14-1.7-1PIGSTY.el10.x86_64.rpm pigsty 1.7 13.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/toastinfo_14-1.7-1PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 14 toastinfo_14 toastinfo_14-1.6-1PGDG.rhel10.2.x86_64.rpm pgdg 1.6 13.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/toastinfo_14-1.6-1PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 14 toastinfo_14 toastinfo_14-1.6-1PGDG.rhel10.1.x86_64.rpm pgdg 1.6 13.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/toastinfo_14-1.6-1PGDG.rhel10.1.x86_64.rpm
+@ el10.x86_64 14 toastinfo_14 toastinfo_14-1.6-1PGDG.rhel10.0.x86_64.rpm pgdg 1.6 13.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/toastinfo_14-1.6-1PGDG.rhel10.0.x86_64.rpm
 @ el10.aarch64 14 toastinfo_14 toastinfo_14-1.7-1PIGSTY.el10.aarch64.rpm pigsty 1.7 13.7KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/toastinfo_14-1.7-1PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 14 toastinfo_14 toastinfo_14-1.6-1PGDG.rhel10.2.aarch64.rpm pgdg 1.6 13.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/toastinfo_14-1.6-1PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 14 toastinfo_14 toastinfo_14-1.6-1PGDG.rhel10.1.aarch64.rpm pgdg 1.6 13.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/toastinfo_14-1.6-1PGDG.rhel10.1.aarch64.rpm
+@ el10.aarch64 14 toastinfo_14 toastinfo_14-1.6-1PGDG.rhel10.0.aarch64.rpm pgdg 1.6 13.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/toastinfo_14-1.6-1PGDG.rhel10.0.aarch64.rpm
 @ d12.x86_64 14 postgresql-14-toastinfo postgresql-14-toastinfo_1.7-1.pgdg12+1_amd64.deb pgdg 1.7 12.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/t/toastinfo/postgresql-14-toastinfo_1.7-1.pgdg12+1_amd64.deb
 @ d12.x86_64 14 postgresql-14-toastinfo postgresql-14-toastinfo_1.6-1.pgdg12+1_amd64.deb pgdg 1.6 12.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/t/toastinfo/postgresql-14-toastinfo_1.6-1.pgdg12+1_amd64.deb
 @ d12.x86_64 14 postgresql-14-toastinfo postgresql-14-toastinfo_1.5-3.pgdg12+1_amd64.deb pgdg 1.5 12.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/t/toastinfo/postgresql-14-toastinfo_1.5-3.pgdg12+1_amd64.deb

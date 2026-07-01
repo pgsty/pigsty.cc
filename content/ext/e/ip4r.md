@@ -48,10 +48,10 @@ weight: 3770
 |:--:|:--:|:--:|:--:|:--:|:--:|
 | el8.x86_64 | AVAIL PGDG 2.4.3 3 | AVAIL PGDG 2.4.3 3 | AVAIL PGDG 2.4.3 3 | AVAIL PGDG 2.4.3 4 | AVAIL PGDG 2.4.3 4 |
 | el8.aarch64 | AVAIL PGDG 2.4.3 3 | AVAIL PGDG 2.4.3 3 | AVAIL PGDG 2.4.3 3 | AVAIL PGDG 2.4.3 4 | AVAIL PGDG 2.4.3 4 |
-| el9.x86_64 | AVAIL PGDG 2.4.3 3 | AVAIL PGDG 2.4.3 3 | AVAIL PGDG 2.4.3 3 | AVAIL PGDG 2.4.3 3 | AVAIL PGDG 2.4.3 3 |
-| el9.aarch64 | AVAIL PGDG 2.4.3 3 | AVAIL PGDG 2.4.3 3 | AVAIL PGDG 2.4.3 3 | AVAIL PGDG 2.4.3 3 | AVAIL PGDG 2.4.3 3 |
-| el10.x86_64 | AVAIL PGDG 2.4.3 3 | AVAIL PGDG 2.4.3 3 | AVAIL PGDG 2.4.3 3 | AVAIL PGDG 2.4.3 3 | AVAIL PGDG 2.4.3 3 |
-| el10.aarch64 | AVAIL PGDG 2.4.3 3 | AVAIL PGDG 2.4.3 3 | AVAIL PGDG 2.4.3 3 | AVAIL PGDG 2.4.3 3 | AVAIL PGDG 2.4.3 3 |
+| el9.x86_64 | AVAIL PGDG 2.4.3 8 | AVAIL PGDG 2.4.3 8 | AVAIL PGDG 2.4.3 8 | AVAIL PGDG 2.4.3 9 | AVAIL PGDG 2.4.3 8 |
+| el9.aarch64 | AVAIL PGDG 2.4.3 8 | AVAIL PGDG 2.4.3 8 | AVAIL PGDG 2.4.3 8 | AVAIL PGDG 2.4.3 9 | AVAIL PGDG 2.4.3 9 |
+| el10.x86_64 | AVAIL PGDG 2.4.3 8 | AVAIL PGDG 2.4.3 8 | AVAIL PGDG 2.4.3 8 | AVAIL PGDG 2.4.3 8 | AVAIL PGDG 2.4.3 8 |
+| el10.aarch64 | AVAIL PGDG 2.4.3 6 | AVAIL PGDG 2.4.3 6 | AVAIL PGDG 2.4.3 6 | AVAIL PGDG 2.4.3 6 | AVAIL PGDG 2.4.3 6 |
 | d12.x86_64 | AVAIL PGDG 2.4.3 3 | AVAIL PGDG 2.4.3 3 | AVAIL PGDG 2.4.3 3 | AVAIL PGDG 2.4.3 3 | AVAIL PGDG 2.4.3 3 |
 | d12.aarch64 | AVAIL PGDG 2.4.3 3 | AVAIL PGDG 2.4.3 3 | AVAIL PGDG 2.4.3 3 | AVAIL PGDG 2.4.3 3 | AVAIL PGDG 2.4.3 3 |
 | d13.x86_64 | AVAIL PGDG 2.4.3 3 | AVAIL PGDG 2.4.3 3 | AVAIL PGDG 2.4.3 3 | AVAIL PGDG 2.4.3 3 | AVAIL PGDG 2.4.3 3 |
@@ -69,17 +69,35 @@ weight: 3770
 @ el8.aarch64 18 ip4r_18 ip4r_18-2.4.2-6PGDG.rhel8.10.aarch64.rpm pgdg 2.4.2 73.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/ip4r_18-2.4.2-6PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 18 ip4r_18 ip4r_18-2.4.2-3PGDG.rhel8.aarch64.rpm pgdg 2.4.2 73.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/ip4r_18-2.4.2-3PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 18 ip4r_18 ip4r_18-2.4.3-1PGDG.rhel9.8.x86_64.rpm pgdg 2.4.3 77.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/ip4r_18-2.4.3-1PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 18 ip4r_18 ip4r_18-2.4.3-1PGDG.rhel9.7.x86_64.rpm pgdg 2.4.3 77.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/ip4r_18-2.4.3-1PGDG.rhel9.7.x86_64.rpm
+@ el9.x86_64 18 ip4r_18 ip4r_18-2.4.3-1PGDG.rhel9.6.x86_64.rpm pgdg 2.4.3 77.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/ip4r_18-2.4.3-1PGDG.rhel9.6.x86_64.rpm
 @ el9.x86_64 18 ip4r_18 ip4r_18-2.4.2-6PGDG.rhel9.8.x86_64.rpm pgdg 2.4.2 77.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/ip4r_18-2.4.2-6PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 18 ip4r_18 ip4r_18-2.4.2-6PGDG.rhel9.7.x86_64.rpm pgdg 2.4.2 77.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/ip4r_18-2.4.2-6PGDG.rhel9.7.x86_64.rpm
+@ el9.x86_64 18 ip4r_18 ip4r_18-2.4.2-6PGDG.rhel9.6.x86_64.rpm pgdg 2.4.2 77.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/ip4r_18-2.4.2-6PGDG.rhel9.6.x86_64.rpm
 @ el9.x86_64 18 ip4r_18 ip4r_18-2.4.2-5PGDG.rhel9.8.x86_64.rpm pgdg 2.4.2 76.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/ip4r_18-2.4.2-5PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 18 ip4r_18 ip4r_18-2.4.2-3PGDG.rhel9.x86_64.rpm pgdg 2.4.2 76.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/ip4r_18-2.4.2-3PGDG.rhel9.x86_64.rpm
 @ el9.aarch64 18 ip4r_18 ip4r_18-2.4.3-1PGDG.rhel9.8.aarch64.rpm pgdg 2.4.3 73.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/ip4r_18-2.4.3-1PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 18 ip4r_18 ip4r_18-2.4.3-1PGDG.rhel9.7.aarch64.rpm pgdg 2.4.3 73.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/ip4r_18-2.4.3-1PGDG.rhel9.7.aarch64.rpm
+@ el9.aarch64 18 ip4r_18 ip4r_18-2.4.3-1PGDG.rhel9.6.aarch64.rpm pgdg 2.4.3 73.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/ip4r_18-2.4.3-1PGDG.rhel9.6.aarch64.rpm
 @ el9.aarch64 18 ip4r_18 ip4r_18-2.4.2-6PGDG.rhel9.8.aarch64.rpm pgdg 2.4.2 73.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/ip4r_18-2.4.2-6PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 18 ip4r_18 ip4r_18-2.4.2-6PGDG.rhel9.7.aarch64.rpm pgdg 2.4.2 73.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/ip4r_18-2.4.2-6PGDG.rhel9.7.aarch64.rpm
+@ el9.aarch64 18 ip4r_18 ip4r_18-2.4.2-6PGDG.rhel9.6.aarch64.rpm pgdg 2.4.2 73.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/ip4r_18-2.4.2-6PGDG.rhel9.6.aarch64.rpm
 @ el9.aarch64 18 ip4r_18 ip4r_18-2.4.2-5PGDG.rhel9.8.aarch64.rpm pgdg 2.4.2 72.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/ip4r_18-2.4.2-5PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 18 ip4r_18 ip4r_18-2.4.2-3PGDG.rhel9.aarch64.rpm pgdg 2.4.2 72.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/ip4r_18-2.4.2-3PGDG.rhel9.aarch64.rpm
 @ el10.x86_64 18 ip4r_18 ip4r_18-2.4.3-1PGDG.rhel10.2.x86_64.rpm pgdg 2.4.3 79.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/ip4r_18-2.4.3-1PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 18 ip4r_18 ip4r_18-2.4.3-1PGDG.rhel10.1.x86_64.rpm pgdg 2.4.3 79.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/ip4r_18-2.4.3-1PGDG.rhel10.1.x86_64.rpm
+@ el10.x86_64 18 ip4r_18 ip4r_18-2.4.3-1PGDG.rhel10.0.x86_64.rpm pgdg 2.4.3 79.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/ip4r_18-2.4.3-1PGDG.rhel10.0.x86_64.rpm
 @ el10.x86_64 18 ip4r_18 ip4r_18-2.4.2-6PGDG.rhel10.2.x86_64.rpm pgdg 2.4.2 78.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/ip4r_18-2.4.2-6PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 18 ip4r_18 ip4r_18-2.4.2-6PGDG.rhel10.1.x86_64.rpm pgdg 2.4.2 78.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/ip4r_18-2.4.2-6PGDG.rhel10.1.x86_64.rpm
+@ el10.x86_64 18 ip4r_18 ip4r_18-2.4.2-6PGDG.rhel10.0.x86_64.rpm pgdg 2.4.2 79.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/ip4r_18-2.4.2-6PGDG.rhel10.0.x86_64.rpm
 @ el10.x86_64 18 ip4r_18 ip4r_18-2.4.2-5PGDG.rhel10.2.x86_64.rpm pgdg 2.4.2 78.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/ip4r_18-2.4.2-5PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 18 ip4r_18 ip4r_18-2.4.2-3PGDG.rhel10.x86_64.rpm pgdg 2.4.2 79.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/ip4r_18-2.4.2-3PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 18 ip4r_18 ip4r_18-2.4.3-1PGDG.rhel10.2.aarch64.rpm pgdg 2.4.3 74.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/ip4r_18-2.4.3-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 18 ip4r_18 ip4r_18-2.4.2-6PGDG.rhel10.2.aarch64.rpm pgdg 2.4.2 74.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/ip4r_18-2.4.2-6PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 18 ip4r_18 ip4r_18-2.4.2-6PGDG.rhel10.1.aarch64.rpm pgdg 2.4.2 74.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/ip4r_18-2.4.2-6PGDG.rhel10.1.aarch64.rpm
+@ el10.aarch64 18 ip4r_18 ip4r_18-2.4.2-6PGDG.rhel10.0.aarch64.rpm pgdg 2.4.2 74.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/ip4r_18-2.4.2-6PGDG.rhel10.0.aarch64.rpm
 @ el10.aarch64 18 ip4r_18 ip4r_18-2.4.2-5PGDG.rhel10.2.aarch64.rpm pgdg 2.4.2 74.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/ip4r_18-2.4.2-5PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 18 ip4r_18 ip4r_18-2.4.2-3PGDG.rhel10.aarch64.rpm pgdg 2.4.2 74.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/ip4r_18-2.4.2-3PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 18 postgresql-18-ip4r postgresql-18-ip4r_2.4.3-1.pgdg12+1_amd64.deb pgdg 2.4.3 181.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/i/ip4r/postgresql-18-ip4r_2.4.3-1.pgdg12+1_amd64.deb
 @ d12.x86_64 18 postgresql-18-ip4r postgresql-18-ip4r_2.4.2-5.pgdg12+1_amd64.deb pgdg 2.4.2 180.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/i/ip4r/postgresql-18-ip4r_2.4.2-5.pgdg12+1_amd64.deb
 @ d12.x86_64 18 postgresql-18-ip4r postgresql-18-ip4r_2.4.2-4.pgdg12+1_amd64.deb pgdg 2.4.2 180.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/i/ip4r/postgresql-18-ip4r_2.4.2-4.pgdg12+1_amd64.deb
@@ -117,17 +135,35 @@ weight: 3770
 @ el8.aarch64 17 ip4r_17 ip4r_17-2.4.2-6PGDG.rhel8.10.aarch64.rpm pgdg 2.4.2 73.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/ip4r_17-2.4.2-6PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 17 ip4r_17 ip4r_17-2.4.2-2PGDG.rhel8.aarch64.rpm pgdg 2.4.2 73.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/ip4r_17-2.4.2-2PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 17 ip4r_17 ip4r_17-2.4.3-1PGDG.rhel9.8.x86_64.rpm pgdg 2.4.3 77.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/ip4r_17-2.4.3-1PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 17 ip4r_17 ip4r_17-2.4.3-1PGDG.rhel9.7.x86_64.rpm pgdg 2.4.3 77.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/ip4r_17-2.4.3-1PGDG.rhel9.7.x86_64.rpm
+@ el9.x86_64 17 ip4r_17 ip4r_17-2.4.3-1PGDG.rhel9.6.x86_64.rpm pgdg 2.4.3 77.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/ip4r_17-2.4.3-1PGDG.rhel9.6.x86_64.rpm
 @ el9.x86_64 17 ip4r_17 ip4r_17-2.4.2-6PGDG.rhel9.8.x86_64.rpm pgdg 2.4.2 77.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/ip4r_17-2.4.2-6PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 17 ip4r_17 ip4r_17-2.4.2-6PGDG.rhel9.7.x86_64.rpm pgdg 2.4.2 77.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/ip4r_17-2.4.2-6PGDG.rhel9.7.x86_64.rpm
+@ el9.x86_64 17 ip4r_17 ip4r_17-2.4.2-6PGDG.rhel9.6.x86_64.rpm pgdg 2.4.2 77.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/ip4r_17-2.4.2-6PGDG.rhel9.6.x86_64.rpm
 @ el9.x86_64 17 ip4r_17 ip4r_17-2.4.2-5PGDG.rhel9.8.x86_64.rpm pgdg 2.4.2 76.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/ip4r_17-2.4.2-5PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 17 ip4r_17 ip4r_17-2.4.2-2PGDG.rhel9.x86_64.rpm pgdg 2.4.2 76.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/ip4r_17-2.4.2-2PGDG.rhel9.x86_64.rpm
 @ el9.aarch64 17 ip4r_17 ip4r_17-2.4.3-1PGDG.rhel9.8.aarch64.rpm pgdg 2.4.3 73.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/ip4r_17-2.4.3-1PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 17 ip4r_17 ip4r_17-2.4.3-1PGDG.rhel9.7.aarch64.rpm pgdg 2.4.3 73.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/ip4r_17-2.4.3-1PGDG.rhel9.7.aarch64.rpm
+@ el9.aarch64 17 ip4r_17 ip4r_17-2.4.3-1PGDG.rhel9.6.aarch64.rpm pgdg 2.4.3 73.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/ip4r_17-2.4.3-1PGDG.rhel9.6.aarch64.rpm
 @ el9.aarch64 17 ip4r_17 ip4r_17-2.4.2-6PGDG.rhel9.8.aarch64.rpm pgdg 2.4.2 73.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/ip4r_17-2.4.2-6PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 17 ip4r_17 ip4r_17-2.4.2-6PGDG.rhel9.7.aarch64.rpm pgdg 2.4.2 73.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/ip4r_17-2.4.2-6PGDG.rhel9.7.aarch64.rpm
+@ el9.aarch64 17 ip4r_17 ip4r_17-2.4.2-6PGDG.rhel9.6.aarch64.rpm pgdg 2.4.2 73.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/ip4r_17-2.4.2-6PGDG.rhel9.6.aarch64.rpm
 @ el9.aarch64 17 ip4r_17 ip4r_17-2.4.2-5PGDG.rhel9.8.aarch64.rpm pgdg 2.4.2 72.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/ip4r_17-2.4.2-5PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 17 ip4r_17 ip4r_17-2.4.2-2PGDG.rhel9.aarch64.rpm pgdg 2.4.2 72.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/ip4r_17-2.4.2-2PGDG.rhel9.aarch64.rpm
 @ el10.x86_64 17 ip4r_17 ip4r_17-2.4.3-1PGDG.rhel10.2.x86_64.rpm pgdg 2.4.3 79.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/ip4r_17-2.4.3-1PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 17 ip4r_17 ip4r_17-2.4.3-1PGDG.rhel10.1.x86_64.rpm pgdg 2.4.3 79.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/ip4r_17-2.4.3-1PGDG.rhel10.1.x86_64.rpm
+@ el10.x86_64 17 ip4r_17 ip4r_17-2.4.3-1PGDG.rhel10.0.x86_64.rpm pgdg 2.4.3 79.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/ip4r_17-2.4.3-1PGDG.rhel10.0.x86_64.rpm
 @ el10.x86_64 17 ip4r_17 ip4r_17-2.4.2-6PGDG.rhel10.2.x86_64.rpm pgdg 2.4.2 78.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/ip4r_17-2.4.2-6PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 17 ip4r_17 ip4r_17-2.4.2-6PGDG.rhel10.1.x86_64.rpm pgdg 2.4.2 78.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/ip4r_17-2.4.2-6PGDG.rhel10.1.x86_64.rpm
+@ el10.x86_64 17 ip4r_17 ip4r_17-2.4.2-6PGDG.rhel10.0.x86_64.rpm pgdg 2.4.2 79.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/ip4r_17-2.4.2-6PGDG.rhel10.0.x86_64.rpm
 @ el10.x86_64 17 ip4r_17 ip4r_17-2.4.2-5PGDG.rhel10.2.x86_64.rpm pgdg 2.4.2 78.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/ip4r_17-2.4.2-5PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 17 ip4r_17 ip4r_17-2.4.2-3PGDG.rhel10.x86_64.rpm pgdg 2.4.2 79.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/ip4r_17-2.4.2-3PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 17 ip4r_17 ip4r_17-2.4.3-1PGDG.rhel10.2.aarch64.rpm pgdg 2.4.3 74.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/ip4r_17-2.4.3-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 17 ip4r_17 ip4r_17-2.4.2-6PGDG.rhel10.2.aarch64.rpm pgdg 2.4.2 74.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/ip4r_17-2.4.2-6PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 17 ip4r_17 ip4r_17-2.4.2-6PGDG.rhel10.1.aarch64.rpm pgdg 2.4.2 74.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/ip4r_17-2.4.2-6PGDG.rhel10.1.aarch64.rpm
+@ el10.aarch64 17 ip4r_17 ip4r_17-2.4.2-6PGDG.rhel10.0.aarch64.rpm pgdg 2.4.2 74.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/ip4r_17-2.4.2-6PGDG.rhel10.0.aarch64.rpm
 @ el10.aarch64 17 ip4r_17 ip4r_17-2.4.2-5PGDG.rhel10.2.aarch64.rpm pgdg 2.4.2 74.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/ip4r_17-2.4.2-5PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 17 ip4r_17 ip4r_17-2.4.2-3PGDG.rhel10.aarch64.rpm pgdg 2.4.2 74.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/ip4r_17-2.4.2-3PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 17 postgresql-17-ip4r postgresql-17-ip4r_2.4.3-1.pgdg12+1_amd64.deb pgdg 2.4.3 180.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/i/ip4r/postgresql-17-ip4r_2.4.3-1.pgdg12+1_amd64.deb
 @ d12.x86_64 17 postgresql-17-ip4r postgresql-17-ip4r_2.4.2-5.pgdg12+1_amd64.deb pgdg 2.4.2 180.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/i/ip4r/postgresql-17-ip4r_2.4.2-5.pgdg12+1_amd64.deb
 @ d12.x86_64 17 postgresql-17-ip4r postgresql-17-ip4r_2.4.2-4.pgdg12+1_amd64.deb pgdg 2.4.2 180.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/i/ip4r/postgresql-17-ip4r_2.4.2-4.pgdg12+1_amd64.deb
@@ -165,17 +201,35 @@ weight: 3770
 @ el8.aarch64 16 ip4r_16 ip4r_16-2.4.2-6PGDG.rhel8.10.aarch64.rpm pgdg 2.4.2 73.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/ip4r_16-2.4.2-6PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 16 ip4r_16 ip4r_16-2.4.2-1PGDG.rhel8.aarch64.rpm pgdg 2.4.2 73.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/ip4r_16-2.4.2-1PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 16 ip4r_16 ip4r_16-2.4.3-1PGDG.rhel9.8.x86_64.rpm pgdg 2.4.3 77.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/ip4r_16-2.4.3-1PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 16 ip4r_16 ip4r_16-2.4.3-1PGDG.rhel9.7.x86_64.rpm pgdg 2.4.3 77.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/ip4r_16-2.4.3-1PGDG.rhel9.7.x86_64.rpm
+@ el9.x86_64 16 ip4r_16 ip4r_16-2.4.3-1PGDG.rhel9.6.x86_64.rpm pgdg 2.4.3 77.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/ip4r_16-2.4.3-1PGDG.rhel9.6.x86_64.rpm
 @ el9.x86_64 16 ip4r_16 ip4r_16-2.4.2-6PGDG.rhel9.8.x86_64.rpm pgdg 2.4.2 77.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/ip4r_16-2.4.2-6PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 16 ip4r_16 ip4r_16-2.4.2-6PGDG.rhel9.7.x86_64.rpm pgdg 2.4.2 77.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/ip4r_16-2.4.2-6PGDG.rhel9.7.x86_64.rpm
+@ el9.x86_64 16 ip4r_16 ip4r_16-2.4.2-6PGDG.rhel9.6.x86_64.rpm pgdg 2.4.2 77.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/ip4r_16-2.4.2-6PGDG.rhel9.6.x86_64.rpm
 @ el9.x86_64 16 ip4r_16 ip4r_16-2.4.2-5PGDG.rhel9.8.x86_64.rpm pgdg 2.4.2 76.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/ip4r_16-2.4.2-5PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 16 ip4r_16 ip4r_16-2.4.2-1PGDG.rhel9.x86_64.rpm pgdg 2.4.2 76.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/ip4r_16-2.4.2-1PGDG.rhel9.x86_64.rpm
 @ el9.aarch64 16 ip4r_16 ip4r_16-2.4.3-1PGDG.rhel9.8.aarch64.rpm pgdg 2.4.3 73.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/ip4r_16-2.4.3-1PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 16 ip4r_16 ip4r_16-2.4.3-1PGDG.rhel9.7.aarch64.rpm pgdg 2.4.3 73.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/ip4r_16-2.4.3-1PGDG.rhel9.7.aarch64.rpm
+@ el9.aarch64 16 ip4r_16 ip4r_16-2.4.3-1PGDG.rhel9.6.aarch64.rpm pgdg 2.4.3 73.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/ip4r_16-2.4.3-1PGDG.rhel9.6.aarch64.rpm
 @ el9.aarch64 16 ip4r_16 ip4r_16-2.4.2-6PGDG.rhel9.8.aarch64.rpm pgdg 2.4.2 73.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/ip4r_16-2.4.2-6PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 16 ip4r_16 ip4r_16-2.4.2-6PGDG.rhel9.7.aarch64.rpm pgdg 2.4.2 73.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/ip4r_16-2.4.2-6PGDG.rhel9.7.aarch64.rpm
+@ el9.aarch64 16 ip4r_16 ip4r_16-2.4.2-6PGDG.rhel9.6.aarch64.rpm pgdg 2.4.2 73.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/ip4r_16-2.4.2-6PGDG.rhel9.6.aarch64.rpm
 @ el9.aarch64 16 ip4r_16 ip4r_16-2.4.2-5PGDG.rhel9.8.aarch64.rpm pgdg 2.4.2 72.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/ip4r_16-2.4.2-5PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 16 ip4r_16 ip4r_16-2.4.2-1PGDG.rhel9.aarch64.rpm pgdg 2.4.2 72.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/ip4r_16-2.4.2-1PGDG.rhel9.aarch64.rpm
 @ el10.x86_64 16 ip4r_16 ip4r_16-2.4.3-1PGDG.rhel10.2.x86_64.rpm pgdg 2.4.3 79.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/ip4r_16-2.4.3-1PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 16 ip4r_16 ip4r_16-2.4.3-1PGDG.rhel10.1.x86_64.rpm pgdg 2.4.3 79.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/ip4r_16-2.4.3-1PGDG.rhel10.1.x86_64.rpm
+@ el10.x86_64 16 ip4r_16 ip4r_16-2.4.3-1PGDG.rhel10.0.x86_64.rpm pgdg 2.4.3 79.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/ip4r_16-2.4.3-1PGDG.rhel10.0.x86_64.rpm
 @ el10.x86_64 16 ip4r_16 ip4r_16-2.4.2-6PGDG.rhel10.2.x86_64.rpm pgdg 2.4.2 78.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/ip4r_16-2.4.2-6PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 16 ip4r_16 ip4r_16-2.4.2-6PGDG.rhel10.1.x86_64.rpm pgdg 2.4.2 78.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/ip4r_16-2.4.2-6PGDG.rhel10.1.x86_64.rpm
+@ el10.x86_64 16 ip4r_16 ip4r_16-2.4.2-6PGDG.rhel10.0.x86_64.rpm pgdg 2.4.2 79.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/ip4r_16-2.4.2-6PGDG.rhel10.0.x86_64.rpm
 @ el10.x86_64 16 ip4r_16 ip4r_16-2.4.2-5PGDG.rhel10.2.x86_64.rpm pgdg 2.4.2 78.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/ip4r_16-2.4.2-5PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 16 ip4r_16 ip4r_16-2.4.2-3PGDG.rhel10.x86_64.rpm pgdg 2.4.2 78.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/ip4r_16-2.4.2-3PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 16 ip4r_16 ip4r_16-2.4.3-1PGDG.rhel10.2.aarch64.rpm pgdg 2.4.3 74.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/ip4r_16-2.4.3-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 16 ip4r_16 ip4r_16-2.4.2-6PGDG.rhel10.2.aarch64.rpm pgdg 2.4.2 74.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/ip4r_16-2.4.2-6PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 16 ip4r_16 ip4r_16-2.4.2-6PGDG.rhel10.1.aarch64.rpm pgdg 2.4.2 74.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/ip4r_16-2.4.2-6PGDG.rhel10.1.aarch64.rpm
+@ el10.aarch64 16 ip4r_16 ip4r_16-2.4.2-6PGDG.rhel10.0.aarch64.rpm pgdg 2.4.2 74.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/ip4r_16-2.4.2-6PGDG.rhel10.0.aarch64.rpm
 @ el10.aarch64 16 ip4r_16 ip4r_16-2.4.2-5PGDG.rhel10.2.aarch64.rpm pgdg 2.4.2 74.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/ip4r_16-2.4.2-5PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 16 ip4r_16 ip4r_16-2.4.2-3PGDG.rhel10.aarch64.rpm pgdg 2.4.2 74.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/ip4r_16-2.4.2-3PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 16 postgresql-16-ip4r postgresql-16-ip4r_2.4.3-1.pgdg12+1_amd64.deb pgdg 2.4.3 180.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/i/ip4r/postgresql-16-ip4r_2.4.3-1.pgdg12+1_amd64.deb
 @ d12.x86_64 16 postgresql-16-ip4r postgresql-16-ip4r_2.4.2-5.pgdg12+1_amd64.deb pgdg 2.4.2 180.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/i/ip4r/postgresql-16-ip4r_2.4.2-5.pgdg12+1_amd64.deb
 @ d12.x86_64 16 postgresql-16-ip4r postgresql-16-ip4r_2.4.2-4.pgdg12+1_amd64.deb pgdg 2.4.2 180.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/i/ip4r/postgresql-16-ip4r_2.4.2-4.pgdg12+1_amd64.deb
@@ -215,17 +269,37 @@ weight: 3770
 @ el8.aarch64 15 ip4r_15 ip4r_15-2.4.2-1PGDG.rhel8.aarch64.rpm pgdg 2.4.2 72.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/ip4r_15-2.4.2-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 15 ip4r_15 ip4r_15-2.4.1-2.rhel8.aarch64.rpm pgdg 2.4.1 203.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/ip4r_15-2.4.1-2.rhel8.aarch64.rpm
 @ el9.x86_64 15 ip4r_15 ip4r_15-2.4.3-1PGDG.rhel9.8.x86_64.rpm pgdg 2.4.3 76.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/ip4r_15-2.4.3-1PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 15 ip4r_15 ip4r_15-2.4.3-1PGDG.rhel9.7.x86_64.rpm pgdg 2.4.3 76.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/ip4r_15-2.4.3-1PGDG.rhel9.7.x86_64.rpm
+@ el9.x86_64 15 ip4r_15 ip4r_15-2.4.3-1PGDG.rhel9.6.x86_64.rpm pgdg 2.4.3 76.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/ip4r_15-2.4.3-1PGDG.rhel9.6.x86_64.rpm
 @ el9.x86_64 15 ip4r_15 ip4r_15-2.4.2-6PGDG.rhel9.8.x86_64.rpm pgdg 2.4.2 76.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/ip4r_15-2.4.2-6PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 15 ip4r_15 ip4r_15-2.4.2-6PGDG.rhel9.7.x86_64.rpm pgdg 2.4.2 76.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/ip4r_15-2.4.2-6PGDG.rhel9.7.x86_64.rpm
+@ el9.x86_64 15 ip4r_15 ip4r_15-2.4.2-6PGDG.rhel9.6.x86_64.rpm pgdg 2.4.2 76.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/ip4r_15-2.4.2-6PGDG.rhel9.6.x86_64.rpm
 @ el9.x86_64 15 ip4r_15 ip4r_15-2.4.2-5PGDG.rhel9.8.x86_64.rpm pgdg 2.4.2 75.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/ip4r_15-2.4.2-5PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 15 ip4r_15 ip4r_15-2.4.2-1PGDG.rhel9.x86_64.rpm pgdg 2.4.2 75.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/ip4r_15-2.4.2-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 15 ip4r_15 ip4r_15-2.4.1-2.rhel9.x86_64.rpm pgdg 2.4.1 209.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/ip4r_15-2.4.1-2.rhel9.x86_64.rpm
 @ el9.aarch64 15 ip4r_15 ip4r_15-2.4.3-1PGDG.rhel9.8.aarch64.rpm pgdg 2.4.3 72.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/ip4r_15-2.4.3-1PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 15 ip4r_15 ip4r_15-2.4.3-1PGDG.rhel9.7.aarch64.rpm pgdg 2.4.3 72.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/ip4r_15-2.4.3-1PGDG.rhel9.7.aarch64.rpm
+@ el9.aarch64 15 ip4r_15 ip4r_15-2.4.3-1PGDG.rhel9.6.aarch64.rpm pgdg 2.4.3 72.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/ip4r_15-2.4.3-1PGDG.rhel9.6.aarch64.rpm
 @ el9.aarch64 15 ip4r_15 ip4r_15-2.4.2-6PGDG.rhel9.8.aarch64.rpm pgdg 2.4.2 71.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/ip4r_15-2.4.2-6PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 15 ip4r_15 ip4r_15-2.4.2-6PGDG.rhel9.7.aarch64.rpm pgdg 2.4.2 71.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/ip4r_15-2.4.2-6PGDG.rhel9.7.aarch64.rpm
+@ el9.aarch64 15 ip4r_15 ip4r_15-2.4.2-6PGDG.rhel9.6.aarch64.rpm pgdg 2.4.2 72.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/ip4r_15-2.4.2-6PGDG.rhel9.6.aarch64.rpm
 @ el9.aarch64 15 ip4r_15 ip4r_15-2.4.2-5PGDG.rhel9.8.aarch64.rpm pgdg 2.4.2 71.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/ip4r_15-2.4.2-5PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 15 ip4r_15 ip4r_15-2.4.2-1PGDG.rhel9.aarch64.rpm pgdg 2.4.2 71.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/ip4r_15-2.4.2-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 15 ip4r_15 ip4r_15-2.4.1-2.rhel9.aarch64.rpm pgdg 2.4.1 204.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/ip4r_15-2.4.1-2.rhel9.aarch64.rpm
 @ el10.x86_64 15 ip4r_15 ip4r_15-2.4.3-1PGDG.rhel10.2.x86_64.rpm pgdg 2.4.3 78.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/ip4r_15-2.4.3-1PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 15 ip4r_15 ip4r_15-2.4.3-1PGDG.rhel10.1.x86_64.rpm pgdg 2.4.3 78.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/ip4r_15-2.4.3-1PGDG.rhel10.1.x86_64.rpm
+@ el10.x86_64 15 ip4r_15 ip4r_15-2.4.3-1PGDG.rhel10.0.x86_64.rpm pgdg 2.4.3 79.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/ip4r_15-2.4.3-1PGDG.rhel10.0.x86_64.rpm
 @ el10.x86_64 15 ip4r_15 ip4r_15-2.4.2-6PGDG.rhel10.2.x86_64.rpm pgdg 2.4.2 78.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/ip4r_15-2.4.2-6PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 15 ip4r_15 ip4r_15-2.4.2-6PGDG.rhel10.1.x86_64.rpm pgdg 2.4.2 78.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/ip4r_15-2.4.2-6PGDG.rhel10.1.x86_64.rpm
+@ el10.x86_64 15 ip4r_15 ip4r_15-2.4.2-6PGDG.rhel10.0.x86_64.rpm pgdg 2.4.2 78.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/ip4r_15-2.4.2-6PGDG.rhel10.0.x86_64.rpm
 @ el10.x86_64 15 ip4r_15 ip4r_15-2.4.2-5PGDG.rhel10.2.x86_64.rpm pgdg 2.4.2 78.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/ip4r_15-2.4.2-5PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 15 ip4r_15 ip4r_15-2.4.2-3PGDG.rhel10.x86_64.rpm pgdg 2.4.2 78.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/ip4r_15-2.4.2-3PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 15 ip4r_15 ip4r_15-2.4.3-1PGDG.rhel10.2.aarch64.rpm pgdg 2.4.3 74.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/ip4r_15-2.4.3-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 15 ip4r_15 ip4r_15-2.4.2-6PGDG.rhel10.2.aarch64.rpm pgdg 2.4.2 73.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/ip4r_15-2.4.2-6PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 15 ip4r_15 ip4r_15-2.4.2-6PGDG.rhel10.1.aarch64.rpm pgdg 2.4.2 73.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/ip4r_15-2.4.2-6PGDG.rhel10.1.aarch64.rpm
+@ el10.aarch64 15 ip4r_15 ip4r_15-2.4.2-6PGDG.rhel10.0.aarch64.rpm pgdg 2.4.2 73.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/ip4r_15-2.4.2-6PGDG.rhel10.0.aarch64.rpm
 @ el10.aarch64 15 ip4r_15 ip4r_15-2.4.2-5PGDG.rhel10.2.aarch64.rpm pgdg 2.4.2 73.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/ip4r_15-2.4.2-5PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 15 ip4r_15 ip4r_15-2.4.2-3PGDG.rhel10.aarch64.rpm pgdg 2.4.2 73.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/ip4r_15-2.4.2-3PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 15 postgresql-15-ip4r postgresql-15-ip4r_2.4.3-1.pgdg12+1_amd64.deb pgdg 2.4.3 179.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/i/ip4r/postgresql-15-ip4r_2.4.3-1.pgdg12+1_amd64.deb
 @ d12.x86_64 15 postgresql-15-ip4r postgresql-15-ip4r_2.4.2-5.pgdg12+1_amd64.deb pgdg 2.4.2 179.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/i/ip4r/postgresql-15-ip4r_2.4.2-5.pgdg12+1_amd64.deb
 @ d12.x86_64 15 postgresql-15-ip4r postgresql-15-ip4r_2.4.2-4.pgdg12+1_amd64.deb pgdg 2.4.2 179.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/i/ip4r/postgresql-15-ip4r_2.4.2-4.pgdg12+1_amd64.deb
@@ -265,17 +339,36 @@ weight: 3770
 @ el8.aarch64 14 ip4r_14 ip4r_14-2.4.2-1PGDG.rhel8.aarch64.rpm pgdg 2.4.2 71.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/ip4r_14-2.4.2-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 14 ip4r_14 ip4r_14-2.4.1-2.rhel8.aarch64.rpm pgdg 2.4.1 203.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/ip4r_14-2.4.1-2.rhel8.aarch64.rpm
 @ el9.x86_64 14 ip4r_14 ip4r_14-2.4.3-1PGDG.rhel9.8.x86_64.rpm pgdg 2.4.3 76.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/ip4r_14-2.4.3-1PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 14 ip4r_14 ip4r_14-2.4.3-1PGDG.rhel9.7.x86_64.rpm pgdg 2.4.3 76.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/ip4r_14-2.4.3-1PGDG.rhel9.7.x86_64.rpm
+@ el9.x86_64 14 ip4r_14 ip4r_14-2.4.3-1PGDG.rhel9.6.x86_64.rpm pgdg 2.4.3 76.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/ip4r_14-2.4.3-1PGDG.rhel9.6.x86_64.rpm
 @ el9.x86_64 14 ip4r_14 ip4r_14-2.4.2-6PGDG.rhel9.8.x86_64.rpm pgdg 2.4.2 76.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/ip4r_14-2.4.2-6PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 14 ip4r_14 ip4r_14-2.4.2-6PGDG.rhel9.7.x86_64.rpm pgdg 2.4.2 76.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/ip4r_14-2.4.2-6PGDG.rhel9.7.x86_64.rpm
+@ el9.x86_64 14 ip4r_14 ip4r_14-2.4.2-6PGDG.rhel9.6.x86_64.rpm pgdg 2.4.2 76.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/ip4r_14-2.4.2-6PGDG.rhel9.6.x86_64.rpm
 @ el9.x86_64 14 ip4r_14 ip4r_14-2.4.2-5PGDG.rhel9.8.x86_64.rpm pgdg 2.4.2 75.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/ip4r_14-2.4.2-5PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 14 ip4r_14 ip4r_14-2.4.2-1PGDG.rhel9.x86_64.rpm pgdg 2.4.2 75.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/ip4r_14-2.4.2-1PGDG.rhel9.x86_64.rpm
 @ el9.aarch64 14 ip4r_14 ip4r_14-2.4.3-1PGDG.rhel9.8.aarch64.rpm pgdg 2.4.3 72.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/ip4r_14-2.4.3-1PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 14 ip4r_14 ip4r_14-2.4.3-1PGDG.rhel9.7.aarch64.rpm pgdg 2.4.3 72.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/ip4r_14-2.4.3-1PGDG.rhel9.7.aarch64.rpm
+@ el9.aarch64 14 ip4r_14 ip4r_14-2.4.3-1PGDG.rhel9.6.aarch64.rpm pgdg 2.4.3 72.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/ip4r_14-2.4.3-1PGDG.rhel9.6.aarch64.rpm
 @ el9.aarch64 14 ip4r_14 ip4r_14-2.4.2-6PGDG.rhel9.8.aarch64.rpm pgdg 2.4.2 72.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/ip4r_14-2.4.2-6PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 14 ip4r_14 ip4r_14-2.4.2-6PGDG.rhel9.7.aarch64.rpm pgdg 2.4.2 71.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/ip4r_14-2.4.2-6PGDG.rhel9.7.aarch64.rpm
+@ el9.aarch64 14 ip4r_14 ip4r_14-2.4.2-6PGDG.rhel9.6.aarch64.rpm pgdg 2.4.2 72.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/ip4r_14-2.4.2-6PGDG.rhel9.6.aarch64.rpm
 @ el9.aarch64 14 ip4r_14 ip4r_14-2.4.2-5PGDG.rhel9.8.aarch64.rpm pgdg 2.4.2 71.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/ip4r_14-2.4.2-5PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 14 ip4r_14 ip4r_14-2.4.2-1PGDG.rhel9.aarch64.rpm pgdg 2.4.2 71.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/ip4r_14-2.4.2-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 14 ip4r_14 ip4r_14-2.4.1-2.rhel9.aarch64.rpm pgdg 2.4.1 204.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/ip4r_14-2.4.1-2.rhel9.aarch64.rpm
 @ el10.x86_64 14 ip4r_14 ip4r_14-2.4.3-1PGDG.rhel10.2.x86_64.rpm pgdg 2.4.3 78.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/ip4r_14-2.4.3-1PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 14 ip4r_14 ip4r_14-2.4.3-1PGDG.rhel10.1.x86_64.rpm pgdg 2.4.3 78.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/ip4r_14-2.4.3-1PGDG.rhel10.1.x86_64.rpm
+@ el10.x86_64 14 ip4r_14 ip4r_14-2.4.3-1PGDG.rhel10.0.x86_64.rpm pgdg 2.4.3 79.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/ip4r_14-2.4.3-1PGDG.rhel10.0.x86_64.rpm
 @ el10.x86_64 14 ip4r_14 ip4r_14-2.4.2-6PGDG.rhel10.2.x86_64.rpm pgdg 2.4.2 78.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/ip4r_14-2.4.2-6PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 14 ip4r_14 ip4r_14-2.4.2-6PGDG.rhel10.1.x86_64.rpm pgdg 2.4.2 78.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/ip4r_14-2.4.2-6PGDG.rhel10.1.x86_64.rpm
+@ el10.x86_64 14 ip4r_14 ip4r_14-2.4.2-6PGDG.rhel10.0.x86_64.rpm pgdg 2.4.2 79.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/ip4r_14-2.4.2-6PGDG.rhel10.0.x86_64.rpm
 @ el10.x86_64 14 ip4r_14 ip4r_14-2.4.2-5PGDG.rhel10.2.x86_64.rpm pgdg 2.4.2 78.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/ip4r_14-2.4.2-5PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 14 ip4r_14 ip4r_14-2.4.2-3PGDG.rhel10.x86_64.rpm pgdg 2.4.2 78.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/ip4r_14-2.4.2-3PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 14 ip4r_14 ip4r_14-2.4.3-1PGDG.rhel10.2.aarch64.rpm pgdg 2.4.3 74.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/ip4r_14-2.4.3-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 14 ip4r_14 ip4r_14-2.4.2-6PGDG.rhel10.2.aarch64.rpm pgdg 2.4.2 73.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/ip4r_14-2.4.2-6PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 14 ip4r_14 ip4r_14-2.4.2-6PGDG.rhel10.1.aarch64.rpm pgdg 2.4.2 73.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/ip4r_14-2.4.2-6PGDG.rhel10.1.aarch64.rpm
+@ el10.aarch64 14 ip4r_14 ip4r_14-2.4.2-6PGDG.rhel10.0.aarch64.rpm pgdg 2.4.2 73.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/ip4r_14-2.4.2-6PGDG.rhel10.0.aarch64.rpm
 @ el10.aarch64 14 ip4r_14 ip4r_14-2.4.2-5PGDG.rhel10.2.aarch64.rpm pgdg 2.4.2 73.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/ip4r_14-2.4.2-5PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 14 ip4r_14 ip4r_14-2.4.2-3PGDG.rhel10.aarch64.rpm pgdg 2.4.2 73.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/ip4r_14-2.4.2-3PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 14 postgresql-14-ip4r postgresql-14-ip4r_2.4.3-1.pgdg12+1_amd64.deb pgdg 2.4.3 179.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/i/ip4r/postgresql-14-ip4r_2.4.3-1.pgdg12+1_amd64.deb
 @ d12.x86_64 14 postgresql-14-ip4r postgresql-14-ip4r_2.4.2-5.pgdg12+1_amd64.deb pgdg 2.4.2 179.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/i/ip4r/postgresql-14-ip4r_2.4.2-5.pgdg12+1_amd64.deb
 @ d12.x86_64 14 postgresql-14-ip4r postgresql-14-ip4r_2.4.2-4.pgdg12+1_amd64.deb pgdg 2.4.2 179.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/i/ip4r/postgresql-14-ip4r_2.4.2-4.pgdg12+1_amd64.deb

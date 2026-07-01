@@ -47,10 +47,10 @@ weight: 9520
 |:--:|:--:|:--:|:--:|:--:|:--:|
 | el8.x86_64 | MISS PGDG - 0 | AVAIL PGDG 2.2.1 1 | AVAIL PGDG 2.2.1 2 | AVAIL PGDG 2.2.1 2 | AVAIL PGDG 2.2.1 2 |
 | el8.aarch64 | MISS PGDG - 0 | AVAIL PGDG 2.2.1 1 | AVAIL PGDG 2.2.1 2 | AVAIL PGDG 2.2.1 2 | AVAIL PGDG 2.2.1 2 |
-| el9.x86_64 | MISS PGDG - 0 | AVAIL PGDG 2.2.1 1 | AVAIL PGDG 2.2.1 1 | AVAIL PGDG 2.2.1 1 | AVAIL PGDG 2.2.1 1 |
-| el9.aarch64 | MISS PGDG - 0 | AVAIL PGDG 2.2.1 1 | AVAIL PGDG 2.2.1 1 | AVAIL PGDG 2.2.1 1 | AVAIL PGDG 2.2.1 1 |
-| el10.x86_64 | MISS PGDG - 0 | AVAIL PGDG 2.2.1 1 | AVAIL PGDG 2.2.1 1 | AVAIL PGDG 2.2.1 1 | AVAIL PGDG 2.2.1 1 |
-| el10.aarch64 | MISS PGDG - 0 | AVAIL PGDG 2.2.1 1 | AVAIL PGDG 2.2.1 1 | AVAIL PGDG 2.2.1 1 | AVAIL PGDG 2.2.1 1 |
+| el9.x86_64 | MISS PGDG - 0 | AVAIL PGDG 2.2.1 2 | AVAIL PGDG 2.2.1 3 | AVAIL PGDG 2.2.1 2 | AVAIL PGDG 2.2.1 2 |
+| el9.aarch64 | MISS PGDG - 0 | AVAIL PGDG 2.2.1 2 | AVAIL PGDG 2.2.1 3 | AVAIL PGDG 2.2.1 3 | AVAIL PGDG 2.2.1 3 |
+| el10.x86_64 | MISS PGDG - 0 | AVAIL PGDG 2.2.1 2 | AVAIL PGDG 2.2.1 2 | AVAIL PGDG 2.2.1 2 | AVAIL PGDG 2.2.1 2 |
+| el10.aarch64 | MISS PGDG - 0 | AVAIL PGDG 2.2.1 2 | AVAIL PGDG 2.2.1 2 | AVAIL PGDG 2.2.1 2 | AVAIL PGDG 2.2.1 2 |
 | d12.x86_64 | MISS PGDG - 0 | AVAIL PGDG 2.2.1 1 | AVAIL PGDG 2.2.1 1 | AVAIL PGDG 2.2.1 1 | AVAIL PGDG 2.2.1 1 |
 | d12.aarch64 | MISS PGDG - 0 | AVAIL PGDG 2.2.1 1 | AVAIL PGDG 2.2.1 1 | AVAIL PGDG 2.2.1 1 | AVAIL PGDG 2.2.1 1 |
 | d13.x86_64 | MISS PGDG - 0 | AVAIL PGDG 2.2.1 1 | AVAIL PGDG 2.2.1 1 | AVAIL PGDG 2.2.1 1 | AVAIL PGDG 2.2.1 1 |
@@ -64,9 +64,13 @@ weight: 9520
 @ el8.x86_64 17 pgl_ddl_deploy_17 pgl_ddl_deploy_17-2.2.1-2PGDG.rhel8.x86_64.rpm pgdg 2.2.1 39.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pgl_ddl_deploy_17-2.2.1-2PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 17 pgl_ddl_deploy_17 pgl_ddl_deploy_17-2.2.1-2PGDG.rhel8.aarch64.rpm pgdg 2.2.1 39.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pgl_ddl_deploy_17-2.2.1-2PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 17 pgl_ddl_deploy_17 pgl_ddl_deploy_17-2.2.1-5PGDG.rhel9.8.x86_64.rpm pgdg 2.2.1 38.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pgl_ddl_deploy_17-2.2.1-5PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 17 pgl_ddl_deploy_17 pgl_ddl_deploy_17-2.2.1-2PGDG.rhel9.x86_64.rpm pgdg 2.2.1 38.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pgl_ddl_deploy_17-2.2.1-2PGDG.rhel9.x86_64.rpm
 @ el9.aarch64 17 pgl_ddl_deploy_17 pgl_ddl_deploy_17-2.2.1-5PGDG.rhel9.8.aarch64.rpm pgdg 2.2.1 38.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pgl_ddl_deploy_17-2.2.1-5PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 17 pgl_ddl_deploy_17 pgl_ddl_deploy_17-2.2.1-2PGDG.rhel9.aarch64.rpm pgdg 2.2.1 38.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pgl_ddl_deploy_17-2.2.1-2PGDG.rhel9.aarch64.rpm
 @ el10.x86_64 17 pgl_ddl_deploy_17 pgl_ddl_deploy_17-2.2.1-5PGDG.rhel10.2.x86_64.rpm pgdg 2.2.1 38.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pgl_ddl_deploy_17-2.2.1-5PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 17 pgl_ddl_deploy_17 pgl_ddl_deploy_17-2.2.1-3PGDG.rhel10.x86_64.rpm pgdg 2.2.1 38.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pgl_ddl_deploy_17-2.2.1-3PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 17 pgl_ddl_deploy_17 pgl_ddl_deploy_17-2.2.1-5PGDG.rhel10.2.aarch64.rpm pgdg 2.2.1 38.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pgl_ddl_deploy_17-2.2.1-5PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 17 pgl_ddl_deploy_17 pgl_ddl_deploy_17-2.2.1-3PGDG.rhel10.aarch64.rpm pgdg 2.2.1 38.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pgl_ddl_deploy_17-2.2.1-3PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 17 postgresql-17-pgl-ddl-deploy postgresql-17-pgl-ddl-deploy_2.2.1-2.pgdg120+1_amd64.deb pgdg 2.2.1 39.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgl-ddl-deploy/postgresql-17-pgl-ddl-deploy_2.2.1-2.pgdg120+1_amd64.deb
 @ d12.aarch64 17 postgresql-17-pgl-ddl-deploy postgresql-17-pgl-ddl-deploy_2.2.1-2.pgdg120+1_arm64.deb pgdg 2.2.1 39.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgl-ddl-deploy/postgresql-17-pgl-ddl-deploy_2.2.1-2.pgdg120+1_arm64.deb
 @ d13.x86_64 17 postgresql-17-pgl-ddl-deploy postgresql-17-pgl-ddl-deploy_2.2.1-2.pgdg130+2_amd64.deb pgdg 2.2.1 39.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgl-ddl-deploy/postgresql-17-pgl-ddl-deploy_2.2.1-2.pgdg130+2_amd64.deb
@@ -80,9 +84,15 @@ weight: 9520
 @ el8.aarch64 16 pgl_ddl_deploy_16 pgl_ddl_deploy_16-2.2.1-1PGDG.rhel8.aarch64.rpm pgdg 2.2.1 39.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pgl_ddl_deploy_16-2.2.1-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 16 pgl_ddl_deploy_16 pgl_ddl_deploy_16-2.2.0-1PGDG.rhel8.aarch64.rpm pgdg 2.2.0 39.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pgl_ddl_deploy_16-2.2.0-1PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 16 pgl_ddl_deploy_16 pgl_ddl_deploy_16-2.2.1-5PGDG.rhel9.8.x86_64.rpm pgdg 2.2.1 38.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pgl_ddl_deploy_16-2.2.1-5PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 16 pgl_ddl_deploy_16 pgl_ddl_deploy_16-2.2.1-1PGDG.rhel9.x86_64.rpm pgdg 2.2.1 38.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pgl_ddl_deploy_16-2.2.1-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 16 pgl_ddl_deploy_16 pgl_ddl_deploy_16-2.2.0-1PGDG.rhel9.x86_64.rpm pgdg 2.2.0 37.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pgl_ddl_deploy_16-2.2.0-1PGDG.rhel9.x86_64.rpm
 @ el9.aarch64 16 pgl_ddl_deploy_16 pgl_ddl_deploy_16-2.2.1-5PGDG.rhel9.8.aarch64.rpm pgdg 2.2.1 38.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pgl_ddl_deploy_16-2.2.1-5PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 16 pgl_ddl_deploy_16 pgl_ddl_deploy_16-2.2.1-1PGDG.rhel9.aarch64.rpm pgdg 2.2.1 38.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pgl_ddl_deploy_16-2.2.1-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 16 pgl_ddl_deploy_16 pgl_ddl_deploy_16-2.2.0-1PGDG.rhel9.aarch64.rpm pgdg 2.2.0 37.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pgl_ddl_deploy_16-2.2.0-1PGDG.rhel9.aarch64.rpm
 @ el10.x86_64 16 pgl_ddl_deploy_16 pgl_ddl_deploy_16-2.2.1-5PGDG.rhel10.2.x86_64.rpm pgdg 2.2.1 38.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pgl_ddl_deploy_16-2.2.1-5PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 16 pgl_ddl_deploy_16 pgl_ddl_deploy_16-2.2.1-3PGDG.rhel10.x86_64.rpm pgdg 2.2.1 38.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pgl_ddl_deploy_16-2.2.1-3PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 16 pgl_ddl_deploy_16 pgl_ddl_deploy_16-2.2.1-5PGDG.rhel10.2.aarch64.rpm pgdg 2.2.1 38.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pgl_ddl_deploy_16-2.2.1-5PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 16 pgl_ddl_deploy_16 pgl_ddl_deploy_16-2.2.1-3PGDG.rhel10.aarch64.rpm pgdg 2.2.1 38.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pgl_ddl_deploy_16-2.2.1-3PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 16 postgresql-16-pgl-ddl-deploy postgresql-16-pgl-ddl-deploy_2.2.1-2.pgdg120+1_amd64.deb pgdg 2.2.1 39.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgl-ddl-deploy/postgresql-16-pgl-ddl-deploy_2.2.1-2.pgdg120+1_amd64.deb
 @ d12.aarch64 16 postgresql-16-pgl-ddl-deploy postgresql-16-pgl-ddl-deploy_2.2.1-2.pgdg120+1_arm64.deb pgdg 2.2.1 39.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgl-ddl-deploy/postgresql-16-pgl-ddl-deploy_2.2.1-2.pgdg120+1_arm64.deb
 @ d13.x86_64 16 postgresql-16-pgl-ddl-deploy postgresql-16-pgl-ddl-deploy_2.2.1-2.pgdg130+2_amd64.deb pgdg 2.2.1 39.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgl-ddl-deploy/postgresql-16-pgl-ddl-deploy_2.2.1-2.pgdg130+2_amd64.deb
@@ -96,9 +106,14 @@ weight: 9520
 @ el8.aarch64 15 pgl_ddl_deploy_15 pgl_ddl_deploy_15-2.2.1-1PGDG.rhel8.aarch64.rpm pgdg 2.2.1 39.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pgl_ddl_deploy_15-2.2.1-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 15 pgl_ddl_deploy_15 pgl_ddl_deploy_15-2.2.0-1PGDG.rhel8.aarch64.rpm pgdg 2.2.0 39.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pgl_ddl_deploy_15-2.2.0-1PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 15 pgl_ddl_deploy_15 pgl_ddl_deploy_15-2.2.1-5PGDG.rhel9.8.x86_64.rpm pgdg 2.2.1 38.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pgl_ddl_deploy_15-2.2.1-5PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 15 pgl_ddl_deploy_15 pgl_ddl_deploy_15-2.2.0-1PGDG.rhel9.x86_64.rpm pgdg 2.2.0 37.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pgl_ddl_deploy_15-2.2.0-1PGDG.rhel9.x86_64.rpm
 @ el9.aarch64 15 pgl_ddl_deploy_15 pgl_ddl_deploy_15-2.2.1-5PGDG.rhel9.8.aarch64.rpm pgdg 2.2.1 38.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pgl_ddl_deploy_15-2.2.1-5PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 15 pgl_ddl_deploy_15 pgl_ddl_deploy_15-2.2.1-1PGDG.rhel9.aarch64.rpm pgdg 2.2.1 38.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pgl_ddl_deploy_15-2.2.1-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 15 pgl_ddl_deploy_15 pgl_ddl_deploy_15-2.2.0-1PGDG.rhel9.aarch64.rpm pgdg 2.2.0 37.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pgl_ddl_deploy_15-2.2.0-1PGDG.rhel9.aarch64.rpm
 @ el10.x86_64 15 pgl_ddl_deploy_15 pgl_ddl_deploy_15-2.2.1-5PGDG.rhel10.2.x86_64.rpm pgdg 2.2.1 38.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pgl_ddl_deploy_15-2.2.1-5PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 15 pgl_ddl_deploy_15 pgl_ddl_deploy_15-2.2.1-3PGDG.rhel10.x86_64.rpm pgdg 2.2.1 38.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pgl_ddl_deploy_15-2.2.1-3PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 15 pgl_ddl_deploy_15 pgl_ddl_deploy_15-2.2.1-5PGDG.rhel10.2.aarch64.rpm pgdg 2.2.1 38.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pgl_ddl_deploy_15-2.2.1-5PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 15 pgl_ddl_deploy_15 pgl_ddl_deploy_15-2.2.1-3PGDG.rhel10.aarch64.rpm pgdg 2.2.1 38.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pgl_ddl_deploy_15-2.2.1-3PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 15 postgresql-15-pgl-ddl-deploy postgresql-15-pgl-ddl-deploy_2.2.1-2.pgdg120+1_amd64.deb pgdg 2.2.1 39.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgl-ddl-deploy/postgresql-15-pgl-ddl-deploy_2.2.1-2.pgdg120+1_amd64.deb
 @ d12.aarch64 15 postgresql-15-pgl-ddl-deploy postgresql-15-pgl-ddl-deploy_2.2.1-2.pgdg120+1_arm64.deb pgdg 2.2.1 39.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgl-ddl-deploy/postgresql-15-pgl-ddl-deploy_2.2.1-2.pgdg120+1_arm64.deb
 @ d13.x86_64 15 postgresql-15-pgl-ddl-deploy postgresql-15-pgl-ddl-deploy_2.2.1-2.pgdg130+2_amd64.deb pgdg 2.2.1 39.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgl-ddl-deploy/postgresql-15-pgl-ddl-deploy_2.2.1-2.pgdg130+2_amd64.deb
@@ -112,9 +127,14 @@ weight: 9520
 @ el8.aarch64 14 pgl_ddl_deploy_14 pgl_ddl_deploy_14-2.2.1-1PGDG.rhel8.aarch64.rpm pgdg 2.2.1 39.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pgl_ddl_deploy_14-2.2.1-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 14 pgl_ddl_deploy_14 pgl_ddl_deploy_14-2.2.0-1PGDG.rhel8.aarch64.rpm pgdg 2.2.0 39.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pgl_ddl_deploy_14-2.2.0-1PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 14 pgl_ddl_deploy_14 pgl_ddl_deploy_14-2.2.1-5PGDG.rhel9.8.x86_64.rpm pgdg 2.2.1 38.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pgl_ddl_deploy_14-2.2.1-5PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 14 pgl_ddl_deploy_14 pgl_ddl_deploy_14-2.2.0-1PGDG.rhel9.x86_64.rpm pgdg 2.2.0 37.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pgl_ddl_deploy_14-2.2.0-1PGDG.rhel9.x86_64.rpm
 @ el9.aarch64 14 pgl_ddl_deploy_14 pgl_ddl_deploy_14-2.2.1-5PGDG.rhel9.8.aarch64.rpm pgdg 2.2.1 38.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pgl_ddl_deploy_14-2.2.1-5PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 14 pgl_ddl_deploy_14 pgl_ddl_deploy_14-2.2.1-1PGDG.rhel9.aarch64.rpm pgdg 2.2.1 38.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pgl_ddl_deploy_14-2.2.1-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 14 pgl_ddl_deploy_14 pgl_ddl_deploy_14-2.2.0-1PGDG.rhel9.aarch64.rpm pgdg 2.2.0 37.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pgl_ddl_deploy_14-2.2.0-1PGDG.rhel9.aarch64.rpm
 @ el10.x86_64 14 pgl_ddl_deploy_14 pgl_ddl_deploy_14-2.2.1-5PGDG.rhel10.2.x86_64.rpm pgdg 2.2.1 38.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pgl_ddl_deploy_14-2.2.1-5PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 14 pgl_ddl_deploy_14 pgl_ddl_deploy_14-2.2.1-3PGDG.rhel10.x86_64.rpm pgdg 2.2.1 38.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pgl_ddl_deploy_14-2.2.1-3PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 14 pgl_ddl_deploy_14 pgl_ddl_deploy_14-2.2.1-5PGDG.rhel10.2.aarch64.rpm pgdg 2.2.1 38.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgl_ddl_deploy_14-2.2.1-5PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 14 pgl_ddl_deploy_14 pgl_ddl_deploy_14-2.2.1-3PGDG.rhel10.aarch64.rpm pgdg 2.2.1 38.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgl_ddl_deploy_14-2.2.1-3PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 14 postgresql-14-pgl-ddl-deploy postgresql-14-pgl-ddl-deploy_2.2.1-2.pgdg120+1_amd64.deb pgdg 2.2.1 39.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgl-ddl-deploy/postgresql-14-pgl-ddl-deploy_2.2.1-2.pgdg120+1_amd64.deb
 @ d12.aarch64 14 postgresql-14-pgl-ddl-deploy postgresql-14-pgl-ddl-deploy_2.2.1-2.pgdg120+1_arm64.deb pgdg 2.2.1 39.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgl-ddl-deploy/postgresql-14-pgl-ddl-deploy_2.2.1-2.pgdg120+1_arm64.deb
 @ d13.x86_64 14 postgresql-14-pgl-ddl-deploy postgresql-14-pgl-ddl-deploy_2.2.1-2.pgdg130+2_amd64.deb pgdg 2.2.1 38.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgl-ddl-deploy/postgresql-14-pgl-ddl-deploy_2.2.1-2.pgdg130+2_amd64.deb

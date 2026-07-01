@@ -52,10 +52,10 @@ weight: 8600
 |:--:|:--:|:--:|:--:|:--:|:--:|
 | el8.x86_64 | AVAIL PGDG 2.9.3 1 | AVAIL PGDG 2.9.3 2 | AVAIL PGDG 2.9.3 3 | AVAIL PGDG 2.9.3 5 | AVAIL PGDG 2.9.3 7 |
 | el8.aarch64 | AVAIL PGDG 2.9.3 1 | AVAIL PGDG 2.9.3 2 | AVAIL PGDG 2.9.3 3 | AVAIL PGDG 2.9.3 4 | AVAIL PGDG 2.9.3 4 |
-| el9.x86_64 | AVAIL PGDG 2.9.3 1 | AVAIL PGDG 2.9.3 1 | AVAIL PGDG 2.9.3 1 | AVAIL PGDG 2.9.3 1 | AVAIL PGDG 2.9.3 1 |
-| el9.aarch64 | AVAIL PGDG 2.9.3 1 | AVAIL PGDG 2.9.3 1 | AVAIL PGDG 2.9.3 1 | AVAIL PGDG 2.9.3 1 | AVAIL PGDG 2.9.3 1 |
-| el10.x86_64 | AVAIL PGDG 2.9.3 1 | AVAIL PGDG 2.9.3 1 | AVAIL PGDG 2.9.3 1 | AVAIL PGDG 2.9.3 1 | AVAIL PGDG 2.9.3 1 |
-| el10.aarch64 | AVAIL PGDG 2.9.3 1 | AVAIL PGDG 2.9.3 1 | AVAIL PGDG 2.9.3 1 | AVAIL PGDG 2.9.3 1 | AVAIL PGDG 2.9.3 1 |
+| el9.x86_64 | AVAIL PGDG 2.9.3 2 | AVAIL PGDG 2.9.3 3 | AVAIL PGDG 2.9.3 4 | AVAIL PGDG 2.9.3 6 | AVAIL PGDG 2.9.3 7 |
+| el9.aarch64 | AVAIL PGDG 2.9.3 2 | AVAIL PGDG 2.9.3 3 | AVAIL PGDG 2.9.3 4 | AVAIL PGDG 2.9.3 5 | AVAIL PGDG 2.9.3 5 |
+| el10.x86_64 | AVAIL PGDG 2.9.3 2 | AVAIL PGDG 2.9.3 3 | AVAIL PGDG 2.9.3 3 | AVAIL PGDG 2.9.3 3 | AVAIL PGDG 2.9.3 3 |
+| el10.aarch64 | AVAIL PGDG 2.9.3 2 | AVAIL PGDG 2.9.3 3 | AVAIL PGDG 2.9.3 3 | AVAIL PGDG 2.9.3 3 | AVAIL PGDG 2.9.3 3 |
 | d12.x86_64 | AVAIL PGDG 2.9.3 1 | AVAIL PGDG 2.9.3 1 | AVAIL PGDG 2.9.3 1 | AVAIL PGDG 2.9.3 1 | AVAIL PGDG 2.9.3 1 |
 | d12.aarch64 | AVAIL PGDG 2.9.3 1 | AVAIL PGDG 2.9.3 1 | AVAIL PGDG 2.9.3 1 | AVAIL PGDG 2.9.3 1 | AVAIL PGDG 2.9.3 1 |
 | d13.x86_64 | AVAIL PGDG 2.9.3 1 | AVAIL PGDG 2.9.3 1 | AVAIL PGDG 2.9.3 1 | AVAIL PGDG 2.9.3 1 | AVAIL PGDG 2.9.3 1 |
@@ -69,9 +69,13 @@ weight: 8600
 @ el8.x86_64 18 mysql_fdw_18 mysql_fdw_18-2.9.3-3PGDG.rhel8.x86_64.rpm pgdg 2.9.3 135.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/mysql_fdw_18-2.9.3-3PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 18 mysql_fdw_18 mysql_fdw_18-2.9.3-3PGDG.rhel8.aarch64.rpm pgdg 2.9.3 133.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/mysql_fdw_18-2.9.3-3PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 18 mysql_fdw_18 mysql_fdw_18-2.9.3-5PGDG.rhel9.8.x86_64.rpm pgdg 2.9.3 134.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/mysql_fdw_18-2.9.3-5PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 18 mysql_fdw_18 mysql_fdw_18-2.9.3-3PGDG.rhel9.x86_64.rpm pgdg 2.9.3 135.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/mysql_fdw_18-2.9.3-3PGDG.rhel9.x86_64.rpm
 @ el9.aarch64 18 mysql_fdw_18 mysql_fdw_18-2.9.3-5PGDG.rhel9.8.aarch64.rpm pgdg 2.9.3 132.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/mysql_fdw_18-2.9.3-5PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 18 mysql_fdw_18 mysql_fdw_18-2.9.3-3PGDG.rhel9.aarch64.rpm pgdg 2.9.3 133.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/mysql_fdw_18-2.9.3-3PGDG.rhel9.aarch64.rpm
 @ el10.x86_64 18 mysql_fdw_18 mysql_fdw_18-2.9.3-5PGDG.rhel10.2.x86_64.rpm pgdg 2.9.3 135.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/mysql_fdw_18-2.9.3-5PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 18 mysql_fdw_18 mysql_fdw_18-2.9.3-3PGDG.rhel10.x86_64.rpm pgdg 2.9.3 136.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/mysql_fdw_18-2.9.3-3PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 18 mysql_fdw_18 mysql_fdw_18-2.9.3-5PGDG.rhel10.2.aarch64.rpm pgdg 2.9.3 133.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/mysql_fdw_18-2.9.3-5PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 18 mysql_fdw_18 mysql_fdw_18-2.9.3-3PGDG.rhel10.aarch64.rpm pgdg 2.9.3 135.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/mysql_fdw_18-2.9.3-3PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 18 postgresql-18-mysql-fdw postgresql-18-mysql-fdw_2.9.3-2.pgdg12+1_amd64.deb pgdg 2.9.3 124.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-mysql-fdw/postgresql-18-mysql-fdw_2.9.3-2.pgdg12+1_amd64.deb
 @ d12.aarch64 18 postgresql-18-mysql-fdw postgresql-18-mysql-fdw_2.9.3-2.pgdg12+1_arm64.deb pgdg 2.9.3 120.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-mysql-fdw/postgresql-18-mysql-fdw_2.9.3-2.pgdg12+1_arm64.deb
 @ d13.x86_64 18 postgresql-18-mysql-fdw postgresql-18-mysql-fdw_2.9.3-2.pgdg13+1_amd64.deb pgdg 2.9.3 124.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-mysql-fdw/postgresql-18-mysql-fdw_2.9.3-2.pgdg13+1_amd64.deb
@@ -87,9 +91,17 @@ weight: 8600
 @ el8.aarch64 17 mysql_fdw_17 mysql_fdw_17-2.9.3-3PGDG.rhel8.aarch64.rpm pgdg 2.9.3 133.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/mysql_fdw_17-2.9.3-3PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 17 mysql_fdw_17 mysql_fdw_17-2.9.2-2PGDG.rhel8.aarch64.rpm pgdg 2.9.2 137.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/mysql_fdw_17-2.9.2-2PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 17 mysql_fdw_17 mysql_fdw_17-2.9.3-5PGDG.rhel9.8.x86_64.rpm pgdg 2.9.3 134.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/mysql_fdw_17-2.9.3-5PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 17 mysql_fdw_17 mysql_fdw_17-2.9.3-3PGDG.rhel9.x86_64.rpm pgdg 2.9.3 135.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/mysql_fdw_17-2.9.3-3PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 17 mysql_fdw_17 mysql_fdw_17-2.9.2-2PGDG.rhel9.x86_64.rpm pgdg 2.9.2 139.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/mysql_fdw_17-2.9.2-2PGDG.rhel9.x86_64.rpm
 @ el9.aarch64 17 mysql_fdw_17 mysql_fdw_17-2.9.3-5PGDG.rhel9.8.aarch64.rpm pgdg 2.9.3 132.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/mysql_fdw_17-2.9.3-5PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 17 mysql_fdw_17 mysql_fdw_17-2.9.3-3PGDG.rhel9.aarch64.rpm pgdg 2.9.3 133.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/mysql_fdw_17-2.9.3-3PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 17 mysql_fdw_17 mysql_fdw_17-2.9.2-2PGDG.rhel9.aarch64.rpm pgdg 2.9.2 138.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/mysql_fdw_17-2.9.2-2PGDG.rhel9.aarch64.rpm
 @ el10.x86_64 17 mysql_fdw_17 mysql_fdw_17-2.9.3-5PGDG.rhel10.2.x86_64.rpm pgdg 2.9.3 135.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/mysql_fdw_17-2.9.3-5PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 17 mysql_fdw_17 mysql_fdw_17-2.9.3-3PGDG.rhel10.x86_64.rpm pgdg 2.9.3 136.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/mysql_fdw_17-2.9.3-3PGDG.rhel10.x86_64.rpm
+@ el10.x86_64 17 mysql_fdw_17 mysql_fdw_17-2.9.2-3PGDG.rhel10.x86_64.rpm pgdg 2.9.2 136.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/mysql_fdw_17-2.9.2-3PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 17 mysql_fdw_17 mysql_fdw_17-2.9.3-5PGDG.rhel10.2.aarch64.rpm pgdg 2.9.3 133.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/mysql_fdw_17-2.9.3-5PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 17 mysql_fdw_17 mysql_fdw_17-2.9.3-3PGDG.rhel10.aarch64.rpm pgdg 2.9.3 134.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/mysql_fdw_17-2.9.3-3PGDG.rhel10.aarch64.rpm
+@ el10.aarch64 17 mysql_fdw_17 mysql_fdw_17-2.9.2-3PGDG.rhel10.aarch64.rpm pgdg 2.9.2 134.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/mysql_fdw_17-2.9.2-3PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 17 postgresql-17-mysql-fdw postgresql-17-mysql-fdw_2.9.3-2.pgdg12+1_amd64.deb pgdg 2.9.3 123.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-mysql-fdw/postgresql-17-mysql-fdw_2.9.3-2.pgdg12+1_amd64.deb
 @ d12.aarch64 17 postgresql-17-mysql-fdw postgresql-17-mysql-fdw_2.9.3-2.pgdg12+1_arm64.deb pgdg 2.9.3 120.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-mysql-fdw/postgresql-17-mysql-fdw_2.9.3-2.pgdg12+1_arm64.deb
 @ d13.x86_64 17 postgresql-17-mysql-fdw postgresql-17-mysql-fdw_2.9.3-2.pgdg13+1_amd64.deb pgdg 2.9.3 124.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-mysql-fdw/postgresql-17-mysql-fdw_2.9.3-2.pgdg13+1_amd64.deb
@@ -107,9 +119,19 @@ weight: 8600
 @ el8.aarch64 16 mysql_fdw_16 mysql_fdw_16-2.9.2-1PGDG.rhel8.aarch64.rpm pgdg 2.9.2 137.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/mysql_fdw_16-2.9.2-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 16 mysql_fdw_16 mysql_fdw_16-2.9.1-1PGDG.rhel8.aarch64.rpm pgdg 2.9.1 152.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/mysql_fdw_16-2.9.1-1PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 16 mysql_fdw_16 mysql_fdw_16-2.9.3-5PGDG.rhel9.8.x86_64.rpm pgdg 2.9.3 134.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/mysql_fdw_16-2.9.3-5PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 16 mysql_fdw_16 mysql_fdw_16-2.9.3-3PGDG.rhel9.x86_64.rpm pgdg 2.9.3 135.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/mysql_fdw_16-2.9.3-3PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 16 mysql_fdw_16 mysql_fdw_16-2.9.2-1PGDG.rhel9.x86_64.rpm pgdg 2.9.2 139.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/mysql_fdw_16-2.9.2-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 16 mysql_fdw_16 mysql_fdw_16-2.9.1-1PGDG.rhel9.x86_64.rpm pgdg 2.9.1 155.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/mysql_fdw_16-2.9.1-1PGDG.rhel9.x86_64.rpm
 @ el9.aarch64 16 mysql_fdw_16 mysql_fdw_16-2.9.3-5PGDG.rhel9.8.aarch64.rpm pgdg 2.9.3 132.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/mysql_fdw_16-2.9.3-5PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 16 mysql_fdw_16 mysql_fdw_16-2.9.3-3PGDG.rhel9.aarch64.rpm pgdg 2.9.3 133.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/mysql_fdw_16-2.9.3-3PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 16 mysql_fdw_16 mysql_fdw_16-2.9.2-1PGDG.rhel9.aarch64.rpm pgdg 2.9.2 138.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/mysql_fdw_16-2.9.2-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 16 mysql_fdw_16 mysql_fdw_16-2.9.1-1PGDG.rhel9.aarch64.rpm pgdg 2.9.1 154.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/mysql_fdw_16-2.9.1-1PGDG.rhel9.aarch64.rpm
 @ el10.x86_64 16 mysql_fdw_16 mysql_fdw_16-2.9.3-5PGDG.rhel10.2.x86_64.rpm pgdg 2.9.3 135.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/mysql_fdw_16-2.9.3-5PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 16 mysql_fdw_16 mysql_fdw_16-2.9.3-3PGDG.rhel10.x86_64.rpm pgdg 2.9.3 136.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/mysql_fdw_16-2.9.3-3PGDG.rhel10.x86_64.rpm
+@ el10.x86_64 16 mysql_fdw_16 mysql_fdw_16-2.9.2-3PGDG.rhel10.x86_64.rpm pgdg 2.9.2 136.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/mysql_fdw_16-2.9.2-3PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 16 mysql_fdw_16 mysql_fdw_16-2.9.3-5PGDG.rhel10.2.aarch64.rpm pgdg 2.9.3 133.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/mysql_fdw_16-2.9.3-5PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 16 mysql_fdw_16 mysql_fdw_16-2.9.3-3PGDG.rhel10.aarch64.rpm pgdg 2.9.3 134.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/mysql_fdw_16-2.9.3-3PGDG.rhel10.aarch64.rpm
+@ el10.aarch64 16 mysql_fdw_16 mysql_fdw_16-2.9.2-3PGDG.rhel10.aarch64.rpm pgdg 2.9.2 134.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/mysql_fdw_16-2.9.2-3PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 16 postgresql-16-mysql-fdw postgresql-16-mysql-fdw_2.9.3-2.pgdg12+1_amd64.deb pgdg 2.9.3 123.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-mysql-fdw/postgresql-16-mysql-fdw_2.9.3-2.pgdg12+1_amd64.deb
 @ d12.aarch64 16 postgresql-16-mysql-fdw postgresql-16-mysql-fdw_2.9.3-2.pgdg12+1_arm64.deb pgdg 2.9.3 120.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-mysql-fdw/postgresql-16-mysql-fdw_2.9.3-2.pgdg12+1_arm64.deb
 @ d13.x86_64 16 postgresql-16-mysql-fdw postgresql-16-mysql-fdw_2.9.3-2.pgdg13+1_amd64.deb pgdg 2.9.3 124.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-mysql-fdw/postgresql-16-mysql-fdw_2.9.3-2.pgdg13+1_amd64.deb
@@ -130,9 +152,22 @@ weight: 8600
 @ el8.aarch64 15 mysql_fdw_15 mysql_fdw_15-2.9.1-1PGDG.rhel8.aarch64.rpm pgdg 2.9.1 134.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/mysql_fdw_15-2.9.1-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 15 mysql_fdw_15 mysql_fdw_15-2.9.0-1.rhel8.aarch64.rpm pgdg 2.9.0 152.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/mysql_fdw_15-2.9.0-1.rhel8.aarch64.rpm
 @ el9.x86_64 15 mysql_fdw_15 mysql_fdw_15-2.9.3-5PGDG.rhel9.8.x86_64.rpm pgdg 2.9.3 134.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/mysql_fdw_15-2.9.3-5PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 15 mysql_fdw_15 mysql_fdw_15-2.9.3-3PGDG.rhel9.x86_64.rpm pgdg 2.9.3 135.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/mysql_fdw_15-2.9.3-3PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 15 mysql_fdw_15 mysql_fdw_15-2.9.2-1PGDG.rhel9.x86_64.rpm pgdg 2.9.2 140.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/mysql_fdw_15-2.9.2-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 15 mysql_fdw_15 mysql_fdw_15-2.9.1-1PGDG.rhel9.x86_64.rpm pgdg 2.9.1 156.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/mysql_fdw_15-2.9.1-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 15 mysql_fdw_15 mysql_fdw_15-2.9.0-1.rhel9.x86_64.rpm pgdg 2.9.0 156.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/mysql_fdw_15-2.9.0-1.rhel9.x86_64.rpm
+@ el9.x86_64 15 mysql_fdw_15 mysql_fdw_15-2.8.0-2.rhel9.x86_64.rpm pgdg 2.8.0 140.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/mysql_fdw_15-2.8.0-2.rhel9.x86_64.rpm
 @ el9.aarch64 15 mysql_fdw_15 mysql_fdw_15-2.9.3-5PGDG.rhel9.8.aarch64.rpm pgdg 2.9.3 132.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/mysql_fdw_15-2.9.3-5PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 15 mysql_fdw_15 mysql_fdw_15-2.9.3-3PGDG.rhel9.aarch64.rpm pgdg 2.9.3 133.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/mysql_fdw_15-2.9.3-3PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 15 mysql_fdw_15 mysql_fdw_15-2.9.2-1PGDG.rhel9.aarch64.rpm pgdg 2.9.2 138.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/mysql_fdw_15-2.9.2-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 15 mysql_fdw_15 mysql_fdw_15-2.9.1-1PGDG.rhel9.aarch64.rpm pgdg 2.9.1 136.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/mysql_fdw_15-2.9.1-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 15 mysql_fdw_15 mysql_fdw_15-2.9.0-1.rhel9.aarch64.rpm pgdg 2.9.0 154.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/mysql_fdw_15-2.9.0-1.rhel9.aarch64.rpm
 @ el10.x86_64 15 mysql_fdw_15 mysql_fdw_15-2.9.3-5PGDG.rhel10.2.x86_64.rpm pgdg 2.9.3 136.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/mysql_fdw_15-2.9.3-5PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 15 mysql_fdw_15 mysql_fdw_15-2.9.3-3PGDG.rhel10.x86_64.rpm pgdg 2.9.3 137.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/mysql_fdw_15-2.9.3-3PGDG.rhel10.x86_64.rpm
+@ el10.x86_64 15 mysql_fdw_15 mysql_fdw_15-2.9.2-3PGDG.rhel10.x86_64.rpm pgdg 2.9.2 137.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/mysql_fdw_15-2.9.2-3PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 15 mysql_fdw_15 mysql_fdw_15-2.9.3-5PGDG.rhel10.2.aarch64.rpm pgdg 2.9.3 134.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/mysql_fdw_15-2.9.3-5PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 15 mysql_fdw_15 mysql_fdw_15-2.9.3-3PGDG.rhel10.aarch64.rpm pgdg 2.9.3 135.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/mysql_fdw_15-2.9.3-3PGDG.rhel10.aarch64.rpm
+@ el10.aarch64 15 mysql_fdw_15 mysql_fdw_15-2.9.2-3PGDG.rhel10.aarch64.rpm pgdg 2.9.2 135.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/mysql_fdw_15-2.9.2-3PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 15 postgresql-15-mysql-fdw postgresql-15-mysql-fdw_2.9.3-2.pgdg12+1_amd64.deb pgdg 2.9.3 124.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-mysql-fdw/postgresql-15-mysql-fdw_2.9.3-2.pgdg12+1_amd64.deb
 @ d12.aarch64 15 postgresql-15-mysql-fdw postgresql-15-mysql-fdw_2.9.3-2.pgdg12+1_arm64.deb pgdg 2.9.3 120.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-mysql-fdw/postgresql-15-mysql-fdw_2.9.3-2.pgdg12+1_arm64.deb
 @ d13.x86_64 15 postgresql-15-mysql-fdw postgresql-15-mysql-fdw_2.9.3-2.pgdg13+1_amd64.deb pgdg 2.9.3 124.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-mysql-fdw/postgresql-15-mysql-fdw_2.9.3-2.pgdg13+1_amd64.deb
@@ -155,9 +190,23 @@ weight: 8600
 @ el8.aarch64 14 mysql_fdw_14 mysql_fdw_14-2.9.1-1PGDG.rhel8.aarch64.rpm pgdg 2.9.1 135.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/mysql_fdw_14-2.9.1-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 14 mysql_fdw_14 mysql_fdw_14-2.9.0-1.rhel8.aarch64.rpm pgdg 2.9.0 152.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/mysql_fdw_14-2.9.0-1.rhel8.aarch64.rpm
 @ el9.x86_64 14 mysql_fdw_14 mysql_fdw_14-2.9.3-5PGDG.rhel9.8.x86_64.rpm pgdg 2.9.3 135.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/mysql_fdw_14-2.9.3-5PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 14 mysql_fdw_14 mysql_fdw_14-2.9.3-3PGDG.rhel9.x86_64.rpm pgdg 2.9.3 136.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/mysql_fdw_14-2.9.3-3PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 14 mysql_fdw_14 mysql_fdw_14-2.9.2-1PGDG.rhel9.x86_64.rpm pgdg 2.9.2 140.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/mysql_fdw_14-2.9.2-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 14 mysql_fdw_14 mysql_fdw_14-2.9.1-1PGDG.rhel9.x86_64.rpm pgdg 2.9.1 156.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/mysql_fdw_14-2.9.1-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 14 mysql_fdw_14 mysql_fdw_14-2.9.0-1.rhel9.x86_64.rpm pgdg 2.9.0 156.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/mysql_fdw_14-2.9.0-1.rhel9.x86_64.rpm
+@ el9.x86_64 14 mysql_fdw_14 mysql_fdw_14-2.8.0-2.rhel9.x86_64.rpm pgdg 2.8.0 140.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/mysql_fdw_14-2.8.0-2.rhel9.x86_64.rpm
+@ el9.x86_64 14 mysql_fdw_14 mysql_fdw_14-2.7.0-1.rhel9.x86_64.rpm pgdg 2.7.0 130.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/mysql_fdw_14-2.7.0-1.rhel9.x86_64.rpm
 @ el9.aarch64 14 mysql_fdw_14 mysql_fdw_14-2.9.3-5PGDG.rhel9.8.aarch64.rpm pgdg 2.9.3 133.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/mysql_fdw_14-2.9.3-5PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 14 mysql_fdw_14 mysql_fdw_14-2.9.3-3PGDG.rhel9.aarch64.rpm pgdg 2.9.3 134.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/mysql_fdw_14-2.9.3-3PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 14 mysql_fdw_14 mysql_fdw_14-2.9.2-1PGDG.rhel9.aarch64.rpm pgdg 2.9.2 138.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/mysql_fdw_14-2.9.2-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 14 mysql_fdw_14 mysql_fdw_14-2.9.1-1PGDG.rhel9.aarch64.rpm pgdg 2.9.1 136.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/mysql_fdw_14-2.9.1-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 14 mysql_fdw_14 mysql_fdw_14-2.9.0-1.rhel9.aarch64.rpm pgdg 2.9.0 154.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/mysql_fdw_14-2.9.0-1.rhel9.aarch64.rpm
 @ el10.x86_64 14 mysql_fdw_14 mysql_fdw_14-2.9.3-5PGDG.rhel10.2.x86_64.rpm pgdg 2.9.3 136.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/mysql_fdw_14-2.9.3-5PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 14 mysql_fdw_14 mysql_fdw_14-2.9.3-3PGDG.rhel10.x86_64.rpm pgdg 2.9.3 138.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/mysql_fdw_14-2.9.3-3PGDG.rhel10.x86_64.rpm
+@ el10.x86_64 14 mysql_fdw_14 mysql_fdw_14-2.9.2-3PGDG.rhel10.x86_64.rpm pgdg 2.9.2 138.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/mysql_fdw_14-2.9.2-3PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 14 mysql_fdw_14 mysql_fdw_14-2.9.3-5PGDG.rhel10.2.aarch64.rpm pgdg 2.9.3 134.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/mysql_fdw_14-2.9.3-5PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 14 mysql_fdw_14 mysql_fdw_14-2.9.3-3PGDG.rhel10.aarch64.rpm pgdg 2.9.3 135.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/mysql_fdw_14-2.9.3-3PGDG.rhel10.aarch64.rpm
+@ el10.aarch64 14 mysql_fdw_14 mysql_fdw_14-2.9.2-3PGDG.rhel10.aarch64.rpm pgdg 2.9.2 135.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/mysql_fdw_14-2.9.2-3PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 14 postgresql-14-mysql-fdw postgresql-14-mysql-fdw_2.9.3-2.pgdg12+1_amd64.deb pgdg 2.9.3 124.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-mysql-fdw/postgresql-14-mysql-fdw_2.9.3-2.pgdg12+1_amd64.deb
 @ d12.aarch64 14 postgresql-14-mysql-fdw postgresql-14-mysql-fdw_2.9.3-2.pgdg12+1_arm64.deb pgdg 2.9.3 121.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-mysql-fdw/postgresql-14-mysql-fdw_2.9.3-2.pgdg12+1_arm64.deb
 @ d13.x86_64 14 postgresql-14-mysql-fdw postgresql-14-mysql-fdw_2.9.3-2.pgdg13+1_amd64.deb pgdg 2.9.3 125.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-mysql-fdw/postgresql-14-mysql-fdw_2.9.3-2.pgdg13+1_amd64.deb

@@ -47,10 +47,10 @@ weight: 6050
 |:--:|:--:|:--:|:--:|:--:|:--:|
 | el8.x86_64 | AVAIL PGDG 2.1.0 1 | AVAIL PGDG 2.1.0 1 | AVAIL PGDG 2.1.0 1 | MISS PGDG - 0 | MISS PGDG - 0 |
 | el8.aarch64 | AVAIL PGDG 2.1.0 1 | AVAIL PGDG 2.1.0 1 | AVAIL PGDG 2.1.0 1 | MISS PGDG - 0 | MISS PGDG - 0 |
-| el9.x86_64 | AVAIL PGDG 2.1.0 1 | AVAIL PGDG 2.1.0 1 | AVAIL PGDG 2.1.0 1 | MISS PGDG - 0 | MISS PGDG - 0 |
-| el9.aarch64 | AVAIL PGDG 2.1.0 1 | AVAIL PGDG 2.1.0 1 | AVAIL PGDG 2.1.0 1 | MISS PGDG - 0 | MISS PGDG - 0 |
-| el10.x86_64 | AVAIL PGDG 2.1.0 1 | AVAIL PGDG 2.1.0 1 | AVAIL PGDG 2.1.0 1 | MISS PGDG - 0 | MISS PGDG - 0 |
-| el10.aarch64 | AVAIL PGDG 2.1.0 1 | AVAIL PGDG 2.1.0 1 | AVAIL PGDG 2.1.0 1 | MISS PGDG - 0 | MISS PGDG - 0 |
+| el9.x86_64 | AVAIL PGDG 2.1.0 3 | AVAIL PGDG 2.1.0 3 | AVAIL PGDG 2.1.0 3 | MISS PGDG - 0 | MISS PGDG - 0 |
+| el9.aarch64 | AVAIL PGDG 2.1.0 3 | AVAIL PGDG 2.1.0 3 | AVAIL PGDG 2.1.0 3 | MISS PGDG - 0 | MISS PGDG - 0 |
+| el10.x86_64 | AVAIL PGDG 2.1.0 3 | AVAIL PGDG 2.1.0 3 | AVAIL PGDG 2.1.0 3 | MISS PGDG - 0 | MISS PGDG - 0 |
+| el10.aarch64 | AVAIL PGDG 2.1.0 3 | AVAIL PGDG 2.1.0 3 | AVAIL PGDG 2.1.0 3 | MISS PGDG - 0 | MISS PGDG - 0 |
 | d12.x86_64 | AVAIL PGDG 2.1.0 2 | AVAIL PGDG 2.1.0 1 | AVAIL PGDG 2.1.0 1 | MISS PGDG - 0 | MISS PGDG - 0 |
 | d12.aarch64 | AVAIL PGDG 2.1.0 2 | AVAIL PGDG 2.1.0 1 | AVAIL PGDG 2.1.0 1 | MISS PGDG - 0 | MISS PGDG - 0 |
 | d13.x86_64 | AVAIL PGDG 2.1.0 2 | AVAIL PGDG 2.1.0 1 | AVAIL PGDG 2.1.0 1 | MISS PGDG - 0 | MISS PGDG - 0 |
@@ -64,9 +64,17 @@ weight: 6050
 @ el8.x86_64 18 pg_stat_plans_18 pg_stat_plans_18-2.1.0-1PGDG.rhel8.10.x86_64.rpm pgdg 2.1.0 44.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pg_stat_plans_18-2.1.0-1PGDG.rhel8.10.x86_64.rpm
 @ el8.aarch64 18 pg_stat_plans_18 pg_stat_plans_18-2.1.0-1PGDG.rhel8.10.aarch64.rpm pgdg 2.1.0 42.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pg_stat_plans_18-2.1.0-1PGDG.rhel8.10.aarch64.rpm
 @ el9.x86_64 18 pg_stat_plans_18 pg_stat_plans_18-2.1.0-1PGDG.rhel9.8.x86_64.rpm pgdg 2.1.0 42.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pg_stat_plans_18-2.1.0-1PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 18 pg_stat_plans_18 pg_stat_plans_18-2.1.0-1PGDG.rhel9.7.x86_64.rpm pgdg 2.1.0 42.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pg_stat_plans_18-2.1.0-1PGDG.rhel9.7.x86_64.rpm
+@ el9.x86_64 18 pg_stat_plans_18 pg_stat_plans_18-2.1.0-1PGDG.rhel9.6.x86_64.rpm pgdg 2.1.0 42.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pg_stat_plans_18-2.1.0-1PGDG.rhel9.6.x86_64.rpm
 @ el9.aarch64 18 pg_stat_plans_18 pg_stat_plans_18-2.1.0-1PGDG.rhel9.8.aarch64.rpm pgdg 2.1.0 41.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pg_stat_plans_18-2.1.0-1PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 18 pg_stat_plans_18 pg_stat_plans_18-2.1.0-1PGDG.rhel9.7.aarch64.rpm pgdg 2.1.0 41.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pg_stat_plans_18-2.1.0-1PGDG.rhel9.7.aarch64.rpm
+@ el9.aarch64 18 pg_stat_plans_18 pg_stat_plans_18-2.1.0-1PGDG.rhel9.6.aarch64.rpm pgdg 2.1.0 41.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pg_stat_plans_18-2.1.0-1PGDG.rhel9.6.aarch64.rpm
 @ el10.x86_64 18 pg_stat_plans_18 pg_stat_plans_18-2.1.0-1PGDG.rhel10.2.x86_64.rpm pgdg 2.1.0 42.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pg_stat_plans_18-2.1.0-1PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 18 pg_stat_plans_18 pg_stat_plans_18-2.1.0-1PGDG.rhel10.1.x86_64.rpm pgdg 2.1.0 42.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pg_stat_plans_18-2.1.0-1PGDG.rhel10.1.x86_64.rpm
+@ el10.x86_64 18 pg_stat_plans_18 pg_stat_plans_18-2.1.0-1PGDG.rhel10.0.x86_64.rpm pgdg 2.1.0 43.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pg_stat_plans_18-2.1.0-1PGDG.rhel10.0.x86_64.rpm
 @ el10.aarch64 18 pg_stat_plans_18 pg_stat_plans_18-2.1.0-1PGDG.rhel10.2.aarch64.rpm pgdg 2.1.0 42.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_stat_plans_18-2.1.0-1PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 18 pg_stat_plans_18 pg_stat_plans_18-2.1.0-1PGDG.rhel10.1.aarch64.rpm pgdg 2.1.0 42.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_stat_plans_18-2.1.0-1PGDG.rhel10.1.aarch64.rpm
+@ el10.aarch64 18 pg_stat_plans_18 pg_stat_plans_18-2.1.0-1PGDG.rhel10.0.aarch64.rpm pgdg 2.1.0 42.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_stat_plans_18-2.1.0-1PGDG.rhel10.0.aarch64.rpm
 @ d12.x86_64 18 postgresql-18-pg-stat-plans postgresql-18-pg-stat-plans_2.1.0-1.pgdg12+1_amd64.deb pgdg 2.1.0 85.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-stat-plans/postgresql-18-pg-stat-plans_2.1.0-1.pgdg12+1_amd64.deb
 @ d12.x86_64 18 postgresql-18-pg-stat-plans postgresql-18-pg-stat-plans_2.0.0-1.pgdg12+1_amd64.deb pgdg 2.0.0 81.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-stat-plans/postgresql-18-pg-stat-plans_2.0.0-1.pgdg12+1_amd64.deb
 @ d12.aarch64 18 postgresql-18-pg-stat-plans postgresql-18-pg-stat-plans_2.1.0-1.pgdg12+1_arm64.deb pgdg 2.1.0 83.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-stat-plans/postgresql-18-pg-stat-plans_2.1.0-1.pgdg12+1_arm64.deb
@@ -90,9 +98,17 @@ weight: 6050
 @ el8.x86_64 17 pg_stat_plans_17 pg_stat_plans_17-2.1.0-1PGDG.rhel8.10.x86_64.rpm pgdg 2.1.0 47.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pg_stat_plans_17-2.1.0-1PGDG.rhel8.10.x86_64.rpm
 @ el8.aarch64 17 pg_stat_plans_17 pg_stat_plans_17-2.1.0-1PGDG.rhel8.10.aarch64.rpm pgdg 2.1.0 45.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pg_stat_plans_17-2.1.0-1PGDG.rhel8.10.aarch64.rpm
 @ el9.x86_64 17 pg_stat_plans_17 pg_stat_plans_17-2.1.0-1PGDG.rhel9.8.x86_64.rpm pgdg 2.1.0 45.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_stat_plans_17-2.1.0-1PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 17 pg_stat_plans_17 pg_stat_plans_17-2.1.0-1PGDG.rhel9.7.x86_64.rpm pgdg 2.1.0 45.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_stat_plans_17-2.1.0-1PGDG.rhel9.7.x86_64.rpm
+@ el9.x86_64 17 pg_stat_plans_17 pg_stat_plans_17-2.1.0-1PGDG.rhel9.6.x86_64.rpm pgdg 2.1.0 45.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_stat_plans_17-2.1.0-1PGDG.rhel9.6.x86_64.rpm
 @ el9.aarch64 17 pg_stat_plans_17 pg_stat_plans_17-2.1.0-1PGDG.rhel9.8.aarch64.rpm pgdg 2.1.0 43.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_stat_plans_17-2.1.0-1PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 17 pg_stat_plans_17 pg_stat_plans_17-2.1.0-1PGDG.rhel9.7.aarch64.rpm pgdg 2.1.0 43.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_stat_plans_17-2.1.0-1PGDG.rhel9.7.aarch64.rpm
+@ el9.aarch64 17 pg_stat_plans_17 pg_stat_plans_17-2.1.0-1PGDG.rhel9.6.aarch64.rpm pgdg 2.1.0 43.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_stat_plans_17-2.1.0-1PGDG.rhel9.6.aarch64.rpm
 @ el10.x86_64 17 pg_stat_plans_17 pg_stat_plans_17-2.1.0-1PGDG.rhel10.2.x86_64.rpm pgdg 2.1.0 45.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_stat_plans_17-2.1.0-1PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 17 pg_stat_plans_17 pg_stat_plans_17-2.1.0-1PGDG.rhel10.1.x86_64.rpm pgdg 2.1.0 45.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_stat_plans_17-2.1.0-1PGDG.rhel10.1.x86_64.rpm
+@ el10.x86_64 17 pg_stat_plans_17 pg_stat_plans_17-2.1.0-1PGDG.rhel10.0.x86_64.rpm pgdg 2.1.0 45.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_stat_plans_17-2.1.0-1PGDG.rhel10.0.x86_64.rpm
 @ el10.aarch64 17 pg_stat_plans_17 pg_stat_plans_17-2.1.0-1PGDG.rhel10.2.aarch64.rpm pgdg 2.1.0 44.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_stat_plans_17-2.1.0-1PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 17 pg_stat_plans_17 pg_stat_plans_17-2.1.0-1PGDG.rhel10.1.aarch64.rpm pgdg 2.1.0 44.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_stat_plans_17-2.1.0-1PGDG.rhel10.1.aarch64.rpm
+@ el10.aarch64 17 pg_stat_plans_17 pg_stat_plans_17-2.1.0-1PGDG.rhel10.0.aarch64.rpm pgdg 2.1.0 44.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_stat_plans_17-2.1.0-1PGDG.rhel10.0.aarch64.rpm
 @ d12.x86_64 17 postgresql-17-pg-stat-plans postgresql-17-pg-stat-plans_2.1.0-1.pgdg12+1_amd64.deb pgdg 2.1.0 101.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-stat-plans/postgresql-17-pg-stat-plans_2.1.0-1.pgdg12+1_amd64.deb
 @ d12.aarch64 17 postgresql-17-pg-stat-plans postgresql-17-pg-stat-plans_2.1.0-1.pgdg12+1_arm64.deb pgdg 2.1.0 97.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-stat-plans/postgresql-17-pg-stat-plans_2.1.0-1.pgdg12+1_arm64.deb
 @ d13.x86_64 17 postgresql-17-pg-stat-plans postgresql-17-pg-stat-plans_2.1.0-1.pgdg13+1_amd64.deb pgdg 2.1.0 101.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-stat-plans/postgresql-17-pg-stat-plans_2.1.0-1.pgdg13+1_amd64.deb
@@ -106,9 +122,17 @@ weight: 6050
 @ el8.x86_64 16 pg_stat_plans_16 pg_stat_plans_16-2.1.0-1PGDG.rhel8.10.x86_64.rpm pgdg 2.1.0 46.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_stat_plans_16-2.1.0-1PGDG.rhel8.10.x86_64.rpm
 @ el8.aarch64 16 pg_stat_plans_16 pg_stat_plans_16-2.1.0-1PGDG.rhel8.10.aarch64.rpm pgdg 2.1.0 44.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pg_stat_plans_16-2.1.0-1PGDG.rhel8.10.aarch64.rpm
 @ el9.x86_64 16 pg_stat_plans_16 pg_stat_plans_16-2.1.0-1PGDG.rhel9.8.x86_64.rpm pgdg 2.1.0 44.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_stat_plans_16-2.1.0-1PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 16 pg_stat_plans_16 pg_stat_plans_16-2.1.0-1PGDG.rhel9.7.x86_64.rpm pgdg 2.1.0 44.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_stat_plans_16-2.1.0-1PGDG.rhel9.7.x86_64.rpm
+@ el9.x86_64 16 pg_stat_plans_16 pg_stat_plans_16-2.1.0-1PGDG.rhel9.6.x86_64.rpm pgdg 2.1.0 44.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_stat_plans_16-2.1.0-1PGDG.rhel9.6.x86_64.rpm
 @ el9.aarch64 16 pg_stat_plans_16 pg_stat_plans_16-2.1.0-1PGDG.rhel9.8.aarch64.rpm pgdg 2.1.0 43.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_stat_plans_16-2.1.0-1PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 16 pg_stat_plans_16 pg_stat_plans_16-2.1.0-1PGDG.rhel9.7.aarch64.rpm pgdg 2.1.0 43.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_stat_plans_16-2.1.0-1PGDG.rhel9.7.aarch64.rpm
+@ el9.aarch64 16 pg_stat_plans_16 pg_stat_plans_16-2.1.0-1PGDG.rhel9.6.aarch64.rpm pgdg 2.1.0 43.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_stat_plans_16-2.1.0-1PGDG.rhel9.6.aarch64.rpm
 @ el10.x86_64 16 pg_stat_plans_16 pg_stat_plans_16-2.1.0-1PGDG.rhel10.2.x86_64.rpm pgdg 2.1.0 45.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_stat_plans_16-2.1.0-1PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 16 pg_stat_plans_16 pg_stat_plans_16-2.1.0-1PGDG.rhel10.1.x86_64.rpm pgdg 2.1.0 45.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_stat_plans_16-2.1.0-1PGDG.rhel10.1.x86_64.rpm
+@ el10.x86_64 16 pg_stat_plans_16 pg_stat_plans_16-2.1.0-1PGDG.rhel10.0.x86_64.rpm pgdg 2.1.0 45.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_stat_plans_16-2.1.0-1PGDG.rhel10.0.x86_64.rpm
 @ el10.aarch64 16 pg_stat_plans_16 pg_stat_plans_16-2.1.0-1PGDG.rhel10.2.aarch64.rpm pgdg 2.1.0 43.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_stat_plans_16-2.1.0-1PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 16 pg_stat_plans_16 pg_stat_plans_16-2.1.0-1PGDG.rhel10.1.aarch64.rpm pgdg 2.1.0 43.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_stat_plans_16-2.1.0-1PGDG.rhel10.1.aarch64.rpm
+@ el10.aarch64 16 pg_stat_plans_16 pg_stat_plans_16-2.1.0-1PGDG.rhel10.0.aarch64.rpm pgdg 2.1.0 43.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_stat_plans_16-2.1.0-1PGDG.rhel10.0.aarch64.rpm
 @ d12.x86_64 16 postgresql-16-pg-stat-plans postgresql-16-pg-stat-plans_2.1.0-1.pgdg12+1_amd64.deb pgdg 2.1.0 100.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-stat-plans/postgresql-16-pg-stat-plans_2.1.0-1.pgdg12+1_amd64.deb
 @ d12.aarch64 16 postgresql-16-pg-stat-plans postgresql-16-pg-stat-plans_2.1.0-1.pgdg12+1_arm64.deb pgdg 2.1.0 97.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-stat-plans/postgresql-16-pg-stat-plans_2.1.0-1.pgdg12+1_arm64.deb
 @ d13.x86_64 16 postgresql-16-pg-stat-plans postgresql-16-pg-stat-plans_2.1.0-1.pgdg13+1_amd64.deb pgdg 2.1.0 100.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-stat-plans/postgresql-16-pg-stat-plans_2.1.0-1.pgdg13+1_amd64.deb
@@ -120,14 +144,6 @@ weight: 6050
 @ u26.x86_64 16 postgresql-16-pg-stat-plans postgresql-16-pg-stat-plans_2.1.0-1.pgdg26.04+1_amd64.deb pgdg 2.1.0 97.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-stat-plans/postgresql-16-pg-stat-plans_2.1.0-1.pgdg26.04+1_amd64.deb
 @ u26.aarch64 16 postgresql-16-pg-stat-plans postgresql-16-pg-stat-plans_2.1.0-1.pgdg26.04+1_arm64.deb pgdg 2.1.0 94.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-stat-plans/postgresql-16-pg-stat-plans_2.1.0-1.pgdg26.04+1_arm64.deb
 {{< /pgext_matrix >}}
-
-## 构建
-
-您可以使用 `pig build` 命令构建 `pg_stat_plans` 扩展的 RPM / DEB 包：
-
-```bash
-pig build pkg pg_stat_plans         # 构建 RPM / DEB 包
-```
 
 
 ## 安装

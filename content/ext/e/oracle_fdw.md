@@ -25,7 +25,7 @@ weight: 8610
 
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
-| [**`oracle_fdw`**](/ext/e/oracle_fdw) | `2.8.0` | <a class="ext-badge ext-badge--cate fdw" href="/ext/cate/fdw">FDW</a> | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
+| [**`oracle_fdw`**](/ext/e/oracle_fdw) | `2.9.0` | <a class="ext-badge ext-badge--cate fdw" href="/ext/cate/fdw">FDW</a> | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
 {.ext-table}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
@@ -45,9 +45,9 @@ weight: 8610
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#fdw) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `2.8.0` | {{< pgvers "18,17,16,15,14" >}} | `oracle_fdw` | - |
-| [**RPM**](/ext/rpm#fdw) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `2.8.0` | {{< pgvers "18,17,16,15,14" >}} | `oracle_fdw_$v` | - |
-| [**DEB**](/ext/deb#fdw) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `2.8.0` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-oracle-fdw` | - |
+| [**EXT**](/ext/list#fdw) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `2.9.0` | {{< pgvers "18,17,16,15,14" >}} | `oracle_fdw` | - |
+| [**RPM**](/ext/rpm#fdw) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `2.9.0` | {{< pgvers "18,17,16,15,14" >}} | `oracle_fdw_$v` | - |
+| [**DEB**](/ext/deb#fdw) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `2.9.0` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-oracle-fdw` | - |
 {.ext-table}
 
 {{< pgext_matrix >}}
@@ -59,16 +59,16 @@ weight: 8610
 | el9.aarch64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
 | el10.x86_64 | AVAIL PGDG 2.9.0 5 | AVAIL PGDG 2.9.0 5 | AVAIL PGDG 2.9.0 5 | AVAIL PGDG 2.9.0 5 | AVAIL PGDG 2.9.0 5 |
 | el10.aarch64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
-| d12.x86_64 | AVAIL PGDG 2.8.0 1 | AVAIL PGDG 2.8.0 1 | AVAIL PGDG 2.8.0 1 | AVAIL PGDG 2.8.0 1 | AVAIL PGDG 2.8.0 1 |
-| d12.aarch64 | AVAIL PGDG 2.8.0 1 | AVAIL PGDG 2.8.0 1 | AVAIL PGDG 2.8.0 1 | AVAIL PGDG 2.8.0 1 | AVAIL PGDG 2.8.0 1 |
-| d13.x86_64 | AVAIL PGDG 2.8.0 1 | AVAIL PGDG 2.8.0 1 | AVAIL PGDG 2.8.0 1 | AVAIL PGDG 2.8.0 1 | AVAIL PGDG 2.8.0 1 |
-| d13.aarch64 | AVAIL PGDG 2.8.0 1 | AVAIL PGDG 2.8.0 1 | AVAIL PGDG 2.8.0 1 | AVAIL PGDG 2.8.0 1 | AVAIL PGDG 2.8.0 1 |
-| u22.x86_64 | AVAIL PGDG 2.8.0 1 | AVAIL PGDG 2.8.0 1 | AVAIL PGDG 2.8.0 1 | AVAIL PGDG 2.8.0 1 | AVAIL PGDG 2.8.0 1 |
-| u22.aarch64 | AVAIL PGDG 2.8.0 1 | AVAIL PGDG 2.8.0 1 | AVAIL PGDG 2.8.0 1 | AVAIL PGDG 2.8.0 1 | AVAIL PGDG 2.8.0 1 |
-| u24.x86_64 | AVAIL PGDG 2.8.0 1 | AVAIL PGDG 2.8.0 1 | AVAIL PGDG 2.8.0 1 | AVAIL PGDG 2.8.0 1 | AVAIL PGDG 2.8.0 1 |
-| u24.aarch64 | AVAIL PGDG 2.8.0 1 | AVAIL PGDG 2.8.0 1 | AVAIL PGDG 2.8.0 1 | AVAIL PGDG 2.8.0 1 | AVAIL PGDG 2.8.0 1 |
-| u26.x86_64 | AVAIL PGDG 2.8.0 1 | AVAIL PGDG 2.8.0 1 | AVAIL PGDG 2.8.0 1 | AVAIL PGDG 2.8.0 1 | AVAIL PGDG 2.8.0 1 |
-| u26.aarch64 | AVAIL PGDG 2.8.0 1 | AVAIL PGDG 2.8.0 1 | AVAIL PGDG 2.8.0 1 | AVAIL PGDG 2.8.0 1 | AVAIL PGDG 2.8.0 1 |
+| d12.x86_64 | AVAIL PGDG 2.9.0 2 | AVAIL PGDG 2.9.0 2 | AVAIL PGDG 2.9.0 2 | AVAIL PGDG 2.9.0 2 | AVAIL PGDG 2.9.0 2 |
+| d12.aarch64 | AVAIL PGDG 2.9.0 2 | AVAIL PGDG 2.9.0 2 | AVAIL PGDG 2.9.0 2 | AVAIL PGDG 2.9.0 2 | AVAIL PGDG 2.9.0 2 |
+| d13.x86_64 | AVAIL PGDG 2.9.0 2 | AVAIL PGDG 2.9.0 2 | AVAIL PGDG 2.9.0 2 | AVAIL PGDG 2.9.0 2 | AVAIL PGDG 2.9.0 2 |
+| d13.aarch64 | AVAIL PGDG 2.9.0 2 | AVAIL PGDG 2.9.0 2 | AVAIL PGDG 2.9.0 2 | AVAIL PGDG 2.9.0 2 | AVAIL PGDG 2.9.0 2 |
+| u22.x86_64 | AVAIL PGDG 2.9.0 2 | AVAIL PGDG 2.9.0 2 | AVAIL PGDG 2.9.0 2 | AVAIL PGDG 2.9.0 2 | AVAIL PGDG 2.9.0 2 |
+| u22.aarch64 | AVAIL PGDG 2.9.0 2 | AVAIL PGDG 2.9.0 2 | AVAIL PGDG 2.9.0 2 | AVAIL PGDG 2.9.0 2 | AVAIL PGDG 2.9.0 2 |
+| u24.x86_64 | AVAIL PGDG 2.9.0 2 | AVAIL PGDG 2.9.0 2 | AVAIL PGDG 2.9.0 2 | AVAIL PGDG 2.9.0 2 | AVAIL PGDG 2.9.0 2 |
+| u24.aarch64 | AVAIL PGDG 2.9.0 2 | AVAIL PGDG 2.9.0 2 | AVAIL PGDG 2.9.0 2 | AVAIL PGDG 2.9.0 2 | AVAIL PGDG 2.9.0 2 |
+| u26.x86_64 | AVAIL PGDG 2.9.0 2 | AVAIL PGDG 2.9.0 2 | AVAIL PGDG 2.9.0 2 | AVAIL PGDG 2.9.0 2 | AVAIL PGDG 2.9.0 2 |
+| u26.aarch64 | AVAIL PGDG 2.9.0 2 | AVAIL PGDG 2.9.0 2 | AVAIL PGDG 2.9.0 2 | AVAIL PGDG 2.9.0 2 | AVAIL PGDG 2.9.0 2 |
 @ el8.x86_64 18 oracle_fdw_18 oracle_fdw_18-2.9.0-1PGDG.rhel8.10.x86_64.rpm pgdg 2.9.0 88.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/18/redhat/rhel-8-x86_64/oracle_fdw_18-2.9.0-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 18 oracle_fdw_18 oracle_fdw_18-2.8.0-9PGDG.rhel8.10.x86_64.rpm pgdg 2.8.0 88.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/18/redhat/rhel-8-x86_64/oracle_fdw_18-2.8.0-9PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 18 oracle_fdw_18 oracle_fdw_18-2.8.0-8PGDG.rhel8.x86_64.rpm pgdg 2.8.0 87.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/18/redhat/rhel-8-x86_64/oracle_fdw_18-2.8.0-8PGDG.rhel8.x86_64.rpm
@@ -84,15 +84,25 @@ weight: 8610
 @ el10.x86_64 18 oracle_fdw_18 oracle_fdw_18-2.8.0-8PGDG.rhel10.x86_64.rpm pgdg 2.8.0 87.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/18/redhat/rhel-10-x86_64/oracle_fdw_18-2.8.0-8PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 18 oracle_fdw_18 oracle_fdw_18-2.8.0-7PGDG.rhel10.x86_64.rpm pgdg 2.8.0 87.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/18/redhat/rhel-10-x86_64/oracle_fdw_18-2.8.0-7PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 18 oracle_fdw_18 oracle_fdw_18-2.8.0-6PGDG.rhel10.x86_64.rpm pgdg 2.8.0 87.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/18/redhat/rhel-10-x86_64/oracle_fdw_18-2.8.0-6PGDG.rhel10.x86_64.rpm
+@ d12.x86_64 18 postgresql-18-oracle-fdw postgresql-18-oracle-fdw_2.9.0-1.pgdg12+1_amd64.deb pgdg 2.9.0 85.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/oracle-fdw/postgresql-18-oracle-fdw_2.9.0-1.pgdg12+1_amd64.deb
 @ d12.x86_64 18 postgresql-18-oracle-fdw postgresql-18-oracle-fdw_2.8.0-2.pgdg12+1_amd64.deb pgdg 2.8.0 85.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/oracle-fdw/postgresql-18-oracle-fdw_2.8.0-2.pgdg12+1_amd64.deb
+@ d12.aarch64 18 postgresql-18-oracle-fdw postgresql-18-oracle-fdw_2.9.0-1.pgdg12+1_arm64.deb pgdg 2.9.0 79.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/oracle-fdw/postgresql-18-oracle-fdw_2.9.0-1.pgdg12+1_arm64.deb
 @ d12.aarch64 18 postgresql-18-oracle-fdw postgresql-18-oracle-fdw_2.8.0-2.pgdg12+1_arm64.deb pgdg 2.8.0 79.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/oracle-fdw/postgresql-18-oracle-fdw_2.8.0-2.pgdg12+1_arm64.deb
+@ d13.x86_64 18 postgresql-18-oracle-fdw postgresql-18-oracle-fdw_2.9.0-1.pgdg13+1_amd64.deb pgdg 2.9.0 85.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/oracle-fdw/postgresql-18-oracle-fdw_2.9.0-1.pgdg13+1_amd64.deb
 @ d13.x86_64 18 postgresql-18-oracle-fdw postgresql-18-oracle-fdw_2.8.0-2.pgdg13+1_amd64.deb pgdg 2.8.0 85.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/oracle-fdw/postgresql-18-oracle-fdw_2.8.0-2.pgdg13+1_amd64.deb
+@ d13.aarch64 18 postgresql-18-oracle-fdw postgresql-18-oracle-fdw_2.9.0-1.pgdg13+1_arm64.deb pgdg 2.9.0 79.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/oracle-fdw/postgresql-18-oracle-fdw_2.9.0-1.pgdg13+1_arm64.deb
 @ d13.aarch64 18 postgresql-18-oracle-fdw postgresql-18-oracle-fdw_2.8.0-2.pgdg13+1_arm64.deb pgdg 2.8.0 79.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/oracle-fdw/postgresql-18-oracle-fdw_2.8.0-2.pgdg13+1_arm64.deb
+@ u22.x86_64 18 postgresql-18-oracle-fdw postgresql-18-oracle-fdw_2.9.0-1.pgdg22.04+1_amd64.deb pgdg 2.9.0 73.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/oracle-fdw/postgresql-18-oracle-fdw_2.9.0-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 18 postgresql-18-oracle-fdw postgresql-18-oracle-fdw_2.8.0-2.pgdg22.04+1_amd64.deb pgdg 2.8.0 73.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/oracle-fdw/postgresql-18-oracle-fdw_2.8.0-2.pgdg22.04+1_amd64.deb
+@ u22.aarch64 18 postgresql-18-oracle-fdw postgresql-18-oracle-fdw_2.9.0-1.pgdg22.04+1_arm64.deb pgdg 2.9.0 67.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/oracle-fdw/postgresql-18-oracle-fdw_2.9.0-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 18 postgresql-18-oracle-fdw postgresql-18-oracle-fdw_2.8.0-2.pgdg22.04+1_arm64.deb pgdg 2.8.0 67.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/oracle-fdw/postgresql-18-oracle-fdw_2.8.0-2.pgdg22.04+1_arm64.deb
+@ u24.x86_64 18 postgresql-18-oracle-fdw postgresql-18-oracle-fdw_2.9.0-1.pgdg24.04+1_amd64.deb pgdg 2.9.0 73.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/oracle-fdw/postgresql-18-oracle-fdw_2.9.0-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 18 postgresql-18-oracle-fdw postgresql-18-oracle-fdw_2.8.0-2.pgdg24.04+1_amd64.deb pgdg 2.8.0 73.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/oracle-fdw/postgresql-18-oracle-fdw_2.8.0-2.pgdg24.04+1_amd64.deb
+@ u24.aarch64 18 postgresql-18-oracle-fdw postgresql-18-oracle-fdw_2.9.0-1.pgdg24.04+1_arm64.deb pgdg 2.9.0 67.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/oracle-fdw/postgresql-18-oracle-fdw_2.9.0-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 18 postgresql-18-oracle-fdw postgresql-18-oracle-fdw_2.8.0-2.pgdg24.04+1_arm64.deb pgdg 2.8.0 67.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/oracle-fdw/postgresql-18-oracle-fdw_2.8.0-2.pgdg24.04+1_arm64.deb
+@ u26.x86_64 18 postgresql-18-oracle-fdw postgresql-18-oracle-fdw_2.9.0-1.pgdg26.04+1_amd64.deb pgdg 2.9.0 74.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/oracle-fdw/postgresql-18-oracle-fdw_2.9.0-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 18 postgresql-18-oracle-fdw postgresql-18-oracle-fdw_2.8.0-2.pgdg26.04+1_amd64.deb pgdg 2.8.0 74.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/oracle-fdw/postgresql-18-oracle-fdw_2.8.0-2.pgdg26.04+1_amd64.deb
+@ u26.aarch64 18 postgresql-18-oracle-fdw postgresql-18-oracle-fdw_2.9.0-1.pgdg26.04+1_arm64.deb pgdg 2.9.0 67.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/oracle-fdw/postgresql-18-oracle-fdw_2.9.0-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 18 postgresql-18-oracle-fdw postgresql-18-oracle-fdw_2.8.0-2.pgdg26.04+1_arm64.deb pgdg 2.8.0 67.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/oracle-fdw/postgresql-18-oracle-fdw_2.8.0-2.pgdg26.04+1_arm64.deb
 @ el8.x86_64 17 oracle_fdw_17 oracle_fdw_17-2.9.0-1PGDG.rhel8.10.x86_64.rpm pgdg 2.9.0 88.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/17/redhat/rhel-8-x86_64/oracle_fdw_17-2.9.0-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 oracle_fdw_17 oracle_fdw_17-2.8.0-9PGDG.rhel8.10.x86_64.rpm pgdg 2.8.0 88.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/17/redhat/rhel-8-x86_64/oracle_fdw_17-2.8.0-9PGDG.rhel8.10.x86_64.rpm
@@ -116,15 +126,25 @@ weight: 8610
 @ el10.x86_64 17 oracle_fdw_17 oracle_fdw_17-2.8.0-8PGDG.rhel10.x86_64.rpm pgdg 2.8.0 87.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/17/redhat/rhel-10-x86_64/oracle_fdw_17-2.8.0-8PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 17 oracle_fdw_17 oracle_fdw_17-2.8.0-7PGDG.rhel10.x86_64.rpm pgdg 2.8.0 87.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/17/redhat/rhel-10-x86_64/oracle_fdw_17-2.8.0-7PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 17 oracle_fdw_17 oracle_fdw_17-2.8.0-6PGDG.rhel10.x86_64.rpm pgdg 2.8.0 87.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/17/redhat/rhel-10-x86_64/oracle_fdw_17-2.8.0-6PGDG.rhel10.x86_64.rpm
+@ d12.x86_64 17 postgresql-17-oracle-fdw postgresql-17-oracle-fdw_2.9.0-1.pgdg12+1_amd64.deb pgdg 2.9.0 85.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/oracle-fdw/postgresql-17-oracle-fdw_2.9.0-1.pgdg12+1_amd64.deb
 @ d12.x86_64 17 postgresql-17-oracle-fdw postgresql-17-oracle-fdw_2.8.0-2.pgdg12+1_amd64.deb pgdg 2.8.0 85.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/oracle-fdw/postgresql-17-oracle-fdw_2.8.0-2.pgdg12+1_amd64.deb
+@ d12.aarch64 17 postgresql-17-oracle-fdw postgresql-17-oracle-fdw_2.9.0-1.pgdg12+1_arm64.deb pgdg 2.9.0 79.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/oracle-fdw/postgresql-17-oracle-fdw_2.9.0-1.pgdg12+1_arm64.deb
 @ d12.aarch64 17 postgresql-17-oracle-fdw postgresql-17-oracle-fdw_2.8.0-2.pgdg12+1_arm64.deb pgdg 2.8.0 79.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/oracle-fdw/postgresql-17-oracle-fdw_2.8.0-2.pgdg12+1_arm64.deb
+@ d13.x86_64 17 postgresql-17-oracle-fdw postgresql-17-oracle-fdw_2.9.0-1.pgdg13+1_amd64.deb pgdg 2.9.0 85.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/oracle-fdw/postgresql-17-oracle-fdw_2.9.0-1.pgdg13+1_amd64.deb
 @ d13.x86_64 17 postgresql-17-oracle-fdw postgresql-17-oracle-fdw_2.8.0-2.pgdg13+1_amd64.deb pgdg 2.8.0 85.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/oracle-fdw/postgresql-17-oracle-fdw_2.8.0-2.pgdg13+1_amd64.deb
+@ d13.aarch64 17 postgresql-17-oracle-fdw postgresql-17-oracle-fdw_2.9.0-1.pgdg13+1_arm64.deb pgdg 2.9.0 79.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/oracle-fdw/postgresql-17-oracle-fdw_2.9.0-1.pgdg13+1_arm64.deb
 @ d13.aarch64 17 postgresql-17-oracle-fdw postgresql-17-oracle-fdw_2.8.0-2.pgdg13+1_arm64.deb pgdg 2.8.0 79.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/oracle-fdw/postgresql-17-oracle-fdw_2.8.0-2.pgdg13+1_arm64.deb
+@ u22.x86_64 17 postgresql-17-oracle-fdw postgresql-17-oracle-fdw_2.9.0-1.pgdg22.04+1_amd64.deb pgdg 2.9.0 73.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/oracle-fdw/postgresql-17-oracle-fdw_2.9.0-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 17 postgresql-17-oracle-fdw postgresql-17-oracle-fdw_2.8.0-2.pgdg22.04+1_amd64.deb pgdg 2.8.0 73.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/oracle-fdw/postgresql-17-oracle-fdw_2.8.0-2.pgdg22.04+1_amd64.deb
+@ u22.aarch64 17 postgresql-17-oracle-fdw postgresql-17-oracle-fdw_2.9.0-1.pgdg22.04+1_arm64.deb pgdg 2.9.0 67.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/oracle-fdw/postgresql-17-oracle-fdw_2.9.0-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 17 postgresql-17-oracle-fdw postgresql-17-oracle-fdw_2.8.0-2.pgdg22.04+1_arm64.deb pgdg 2.8.0 67.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/oracle-fdw/postgresql-17-oracle-fdw_2.8.0-2.pgdg22.04+1_arm64.deb
+@ u24.x86_64 17 postgresql-17-oracle-fdw postgresql-17-oracle-fdw_2.9.0-1.pgdg24.04+1_amd64.deb pgdg 2.9.0 73.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/oracle-fdw/postgresql-17-oracle-fdw_2.9.0-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 17 postgresql-17-oracle-fdw postgresql-17-oracle-fdw_2.8.0-2.pgdg24.04+1_amd64.deb pgdg 2.8.0 73.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/oracle-fdw/postgresql-17-oracle-fdw_2.8.0-2.pgdg24.04+1_amd64.deb
+@ u24.aarch64 17 postgresql-17-oracle-fdw postgresql-17-oracle-fdw_2.9.0-1.pgdg24.04+1_arm64.deb pgdg 2.9.0 67.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/oracle-fdw/postgresql-17-oracle-fdw_2.9.0-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 17 postgresql-17-oracle-fdw postgresql-17-oracle-fdw_2.8.0-2.pgdg24.04+1_arm64.deb pgdg 2.8.0 67.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/oracle-fdw/postgresql-17-oracle-fdw_2.8.0-2.pgdg24.04+1_arm64.deb
+@ u26.x86_64 17 postgresql-17-oracle-fdw postgresql-17-oracle-fdw_2.9.0-1.pgdg26.04+1_amd64.deb pgdg 2.9.0 74.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/oracle-fdw/postgresql-17-oracle-fdw_2.9.0-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 17 postgresql-17-oracle-fdw postgresql-17-oracle-fdw_2.8.0-2.pgdg26.04+1_amd64.deb pgdg 2.8.0 74.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/oracle-fdw/postgresql-17-oracle-fdw_2.8.0-2.pgdg26.04+1_amd64.deb
+@ u26.aarch64 17 postgresql-17-oracle-fdw postgresql-17-oracle-fdw_2.9.0-1.pgdg26.04+1_arm64.deb pgdg 2.9.0 67.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/oracle-fdw/postgresql-17-oracle-fdw_2.9.0-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 17 postgresql-17-oracle-fdw postgresql-17-oracle-fdw_2.8.0-2.pgdg26.04+1_arm64.deb pgdg 2.8.0 67.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/oracle-fdw/postgresql-17-oracle-fdw_2.8.0-2.pgdg26.04+1_arm64.deb
 @ el8.x86_64 16 oracle_fdw_16 oracle_fdw_16-2.9.0-1PGDG.rhel8.10.x86_64.rpm pgdg 2.9.0 88.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/16/redhat/rhel-8-x86_64/oracle_fdw_16-2.9.0-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 oracle_fdw_16 oracle_fdw_16-2.8.0-9PGDG.rhel8.10.x86_64.rpm pgdg 2.8.0 88.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/16/redhat/rhel-8-x86_64/oracle_fdw_16-2.8.0-9PGDG.rhel8.10.x86_64.rpm
@@ -152,15 +172,25 @@ weight: 8610
 @ el10.x86_64 16 oracle_fdw_16 oracle_fdw_16-2.8.0-8PGDG.rhel10.x86_64.rpm pgdg 2.8.0 87.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/16/redhat/rhel-10-x86_64/oracle_fdw_16-2.8.0-8PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 16 oracle_fdw_16 oracle_fdw_16-2.8.0-7PGDG.rhel10.x86_64.rpm pgdg 2.8.0 87.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/16/redhat/rhel-10-x86_64/oracle_fdw_16-2.8.0-7PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 16 oracle_fdw_16 oracle_fdw_16-2.8.0-6PGDG.rhel10.x86_64.rpm pgdg 2.8.0 87.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/16/redhat/rhel-10-x86_64/oracle_fdw_16-2.8.0-6PGDG.rhel10.x86_64.rpm
+@ d12.x86_64 16 postgresql-16-oracle-fdw postgresql-16-oracle-fdw_2.9.0-1.pgdg12+1_amd64.deb pgdg 2.9.0 85.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/oracle-fdw/postgresql-16-oracle-fdw_2.9.0-1.pgdg12+1_amd64.deb
 @ d12.x86_64 16 postgresql-16-oracle-fdw postgresql-16-oracle-fdw_2.8.0-2.pgdg12+1_amd64.deb pgdg 2.8.0 85.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/oracle-fdw/postgresql-16-oracle-fdw_2.8.0-2.pgdg12+1_amd64.deb
+@ d12.aarch64 16 postgresql-16-oracle-fdw postgresql-16-oracle-fdw_2.9.0-1.pgdg12+1_arm64.deb pgdg 2.9.0 79.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/oracle-fdw/postgresql-16-oracle-fdw_2.9.0-1.pgdg12+1_arm64.deb
 @ d12.aarch64 16 postgresql-16-oracle-fdw postgresql-16-oracle-fdw_2.8.0-2.pgdg12+1_arm64.deb pgdg 2.8.0 79.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/oracle-fdw/postgresql-16-oracle-fdw_2.8.0-2.pgdg12+1_arm64.deb
+@ d13.x86_64 16 postgresql-16-oracle-fdw postgresql-16-oracle-fdw_2.9.0-1.pgdg13+1_amd64.deb pgdg 2.9.0 85.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/oracle-fdw/postgresql-16-oracle-fdw_2.9.0-1.pgdg13+1_amd64.deb
 @ d13.x86_64 16 postgresql-16-oracle-fdw postgresql-16-oracle-fdw_2.8.0-2.pgdg13+1_amd64.deb pgdg 2.8.0 85.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/oracle-fdw/postgresql-16-oracle-fdw_2.8.0-2.pgdg13+1_amd64.deb
+@ d13.aarch64 16 postgresql-16-oracle-fdw postgresql-16-oracle-fdw_2.9.0-1.pgdg13+1_arm64.deb pgdg 2.9.0 79.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/oracle-fdw/postgresql-16-oracle-fdw_2.9.0-1.pgdg13+1_arm64.deb
 @ d13.aarch64 16 postgresql-16-oracle-fdw postgresql-16-oracle-fdw_2.8.0-2.pgdg13+1_arm64.deb pgdg 2.8.0 79.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/oracle-fdw/postgresql-16-oracle-fdw_2.8.0-2.pgdg13+1_arm64.deb
+@ u22.x86_64 16 postgresql-16-oracle-fdw postgresql-16-oracle-fdw_2.9.0-1.pgdg22.04+1_amd64.deb pgdg 2.9.0 73.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/oracle-fdw/postgresql-16-oracle-fdw_2.9.0-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 16 postgresql-16-oracle-fdw postgresql-16-oracle-fdw_2.8.0-2.pgdg22.04+1_amd64.deb pgdg 2.8.0 73.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/oracle-fdw/postgresql-16-oracle-fdw_2.8.0-2.pgdg22.04+1_amd64.deb
+@ u22.aarch64 16 postgresql-16-oracle-fdw postgresql-16-oracle-fdw_2.9.0-1.pgdg22.04+1_arm64.deb pgdg 2.9.0 67.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/oracle-fdw/postgresql-16-oracle-fdw_2.9.0-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 16 postgresql-16-oracle-fdw postgresql-16-oracle-fdw_2.8.0-2.pgdg22.04+1_arm64.deb pgdg 2.8.0 67.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/oracle-fdw/postgresql-16-oracle-fdw_2.8.0-2.pgdg22.04+1_arm64.deb
+@ u24.x86_64 16 postgresql-16-oracle-fdw postgresql-16-oracle-fdw_2.9.0-1.pgdg24.04+1_amd64.deb pgdg 2.9.0 74.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/oracle-fdw/postgresql-16-oracle-fdw_2.9.0-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 16 postgresql-16-oracle-fdw postgresql-16-oracle-fdw_2.8.0-2.pgdg24.04+1_amd64.deb pgdg 2.8.0 73.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/oracle-fdw/postgresql-16-oracle-fdw_2.8.0-2.pgdg24.04+1_amd64.deb
+@ u24.aarch64 16 postgresql-16-oracle-fdw postgresql-16-oracle-fdw_2.9.0-1.pgdg24.04+1_arm64.deb pgdg 2.9.0 67.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/oracle-fdw/postgresql-16-oracle-fdw_2.9.0-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 16 postgresql-16-oracle-fdw postgresql-16-oracle-fdw_2.8.0-2.pgdg24.04+1_arm64.deb pgdg 2.8.0 67.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/oracle-fdw/postgresql-16-oracle-fdw_2.8.0-2.pgdg24.04+1_arm64.deb
+@ u26.x86_64 16 postgresql-16-oracle-fdw postgresql-16-oracle-fdw_2.9.0-1.pgdg26.04+1_amd64.deb pgdg 2.9.0 74.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/oracle-fdw/postgresql-16-oracle-fdw_2.9.0-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 16 postgresql-16-oracle-fdw postgresql-16-oracle-fdw_2.8.0-2.pgdg26.04+1_amd64.deb pgdg 2.8.0 74.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/oracle-fdw/postgresql-16-oracle-fdw_2.8.0-2.pgdg26.04+1_amd64.deb
+@ u26.aarch64 16 postgresql-16-oracle-fdw postgresql-16-oracle-fdw_2.9.0-1.pgdg26.04+1_arm64.deb pgdg 2.9.0 67.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/oracle-fdw/postgresql-16-oracle-fdw_2.9.0-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 16 postgresql-16-oracle-fdw postgresql-16-oracle-fdw_2.8.0-2.pgdg26.04+1_arm64.deb pgdg 2.8.0 67.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/oracle-fdw/postgresql-16-oracle-fdw_2.8.0-2.pgdg26.04+1_arm64.deb
 @ el8.x86_64 15 oracle_fdw_15 oracle_fdw_15-2.9.0-1PGDG.rhel8.10.x86_64.rpm pgdg 2.9.0 88.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/15/redhat/rhel-8-x86_64/oracle_fdw_15-2.9.0-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 oracle_fdw_15 oracle_fdw_15-2.8.0-9PGDG.rhel8.10.x86_64.rpm pgdg 2.8.0 88.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/15/redhat/rhel-8-x86_64/oracle_fdw_15-2.8.0-9PGDG.rhel8.10.x86_64.rpm
@@ -194,15 +224,25 @@ weight: 8610
 @ el10.x86_64 15 oracle_fdw_15 oracle_fdw_15-2.8.0-8PGDG.rhel10.x86_64.rpm pgdg 2.8.0 88.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/15/redhat/rhel-10-x86_64/oracle_fdw_15-2.8.0-8PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 15 oracle_fdw_15 oracle_fdw_15-2.8.0-7PGDG.rhel10.x86_64.rpm pgdg 2.8.0 88.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/15/redhat/rhel-10-x86_64/oracle_fdw_15-2.8.0-7PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 15 oracle_fdw_15 oracle_fdw_15-2.8.0-6PGDG.rhel10.x86_64.rpm pgdg 2.8.0 88.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/15/redhat/rhel-10-x86_64/oracle_fdw_15-2.8.0-6PGDG.rhel10.x86_64.rpm
+@ d12.x86_64 15 postgresql-15-oracle-fdw postgresql-15-oracle-fdw_2.9.0-1.pgdg12+1_amd64.deb pgdg 2.9.0 86.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/oracle-fdw/postgresql-15-oracle-fdw_2.9.0-1.pgdg12+1_amd64.deb
 @ d12.x86_64 15 postgresql-15-oracle-fdw postgresql-15-oracle-fdw_2.8.0-2.pgdg12+1_amd64.deb pgdg 2.8.0 86.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/oracle-fdw/postgresql-15-oracle-fdw_2.8.0-2.pgdg12+1_amd64.deb
+@ d12.aarch64 15 postgresql-15-oracle-fdw postgresql-15-oracle-fdw_2.9.0-1.pgdg12+1_arm64.deb pgdg 2.9.0 79.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/oracle-fdw/postgresql-15-oracle-fdw_2.9.0-1.pgdg12+1_arm64.deb
 @ d12.aarch64 15 postgresql-15-oracle-fdw postgresql-15-oracle-fdw_2.8.0-2.pgdg12+1_arm64.deb pgdg 2.8.0 79.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/oracle-fdw/postgresql-15-oracle-fdw_2.8.0-2.pgdg12+1_arm64.deb
+@ d13.x86_64 15 postgresql-15-oracle-fdw postgresql-15-oracle-fdw_2.9.0-1.pgdg13+1_amd64.deb pgdg 2.9.0 86.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/oracle-fdw/postgresql-15-oracle-fdw_2.9.0-1.pgdg13+1_amd64.deb
 @ d13.x86_64 15 postgresql-15-oracle-fdw postgresql-15-oracle-fdw_2.8.0-2.pgdg13+1_amd64.deb pgdg 2.8.0 86.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/oracle-fdw/postgresql-15-oracle-fdw_2.8.0-2.pgdg13+1_amd64.deb
+@ d13.aarch64 15 postgresql-15-oracle-fdw postgresql-15-oracle-fdw_2.9.0-1.pgdg13+1_arm64.deb pgdg 2.9.0 80.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/oracle-fdw/postgresql-15-oracle-fdw_2.9.0-1.pgdg13+1_arm64.deb
 @ d13.aarch64 15 postgresql-15-oracle-fdw postgresql-15-oracle-fdw_2.8.0-2.pgdg13+1_arm64.deb pgdg 2.8.0 80.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/oracle-fdw/postgresql-15-oracle-fdw_2.8.0-2.pgdg13+1_arm64.deb
+@ u22.x86_64 15 postgresql-15-oracle-fdw postgresql-15-oracle-fdw_2.9.0-1.pgdg22.04+1_amd64.deb pgdg 2.9.0 75.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/oracle-fdw/postgresql-15-oracle-fdw_2.9.0-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 15 postgresql-15-oracle-fdw postgresql-15-oracle-fdw_2.8.0-2.pgdg22.04+1_amd64.deb pgdg 2.8.0 75.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/oracle-fdw/postgresql-15-oracle-fdw_2.8.0-2.pgdg22.04+1_amd64.deb
+@ u22.aarch64 15 postgresql-15-oracle-fdw postgresql-15-oracle-fdw_2.9.0-1.pgdg22.04+1_arm64.deb pgdg 2.9.0 69.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/oracle-fdw/postgresql-15-oracle-fdw_2.9.0-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 15 postgresql-15-oracle-fdw postgresql-15-oracle-fdw_2.8.0-2.pgdg22.04+1_arm64.deb pgdg 2.8.0 69.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/oracle-fdw/postgresql-15-oracle-fdw_2.8.0-2.pgdg22.04+1_arm64.deb
+@ u24.x86_64 15 postgresql-15-oracle-fdw postgresql-15-oracle-fdw_2.9.0-1.pgdg24.04+1_amd64.deb pgdg 2.9.0 75.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/oracle-fdw/postgresql-15-oracle-fdw_2.9.0-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 15 postgresql-15-oracle-fdw postgresql-15-oracle-fdw_2.8.0-2.pgdg24.04+1_amd64.deb pgdg 2.8.0 75.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/oracle-fdw/postgresql-15-oracle-fdw_2.8.0-2.pgdg24.04+1_amd64.deb
+@ u24.aarch64 15 postgresql-15-oracle-fdw postgresql-15-oracle-fdw_2.9.0-1.pgdg24.04+1_arm64.deb pgdg 2.9.0 69.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/oracle-fdw/postgresql-15-oracle-fdw_2.9.0-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 15 postgresql-15-oracle-fdw postgresql-15-oracle-fdw_2.8.0-2.pgdg24.04+1_arm64.deb pgdg 2.8.0 69.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/oracle-fdw/postgresql-15-oracle-fdw_2.8.0-2.pgdg24.04+1_arm64.deb
+@ u26.x86_64 15 postgresql-15-oracle-fdw postgresql-15-oracle-fdw_2.9.0-1.pgdg26.04+1_amd64.deb pgdg 2.9.0 75.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/oracle-fdw/postgresql-15-oracle-fdw_2.9.0-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 15 postgresql-15-oracle-fdw postgresql-15-oracle-fdw_2.8.0-2.pgdg26.04+1_amd64.deb pgdg 2.8.0 76.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/oracle-fdw/postgresql-15-oracle-fdw_2.8.0-2.pgdg26.04+1_amd64.deb
+@ u26.aarch64 15 postgresql-15-oracle-fdw postgresql-15-oracle-fdw_2.9.0-1.pgdg26.04+1_arm64.deb pgdg 2.9.0 69.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/oracle-fdw/postgresql-15-oracle-fdw_2.9.0-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 15 postgresql-15-oracle-fdw postgresql-15-oracle-fdw_2.8.0-2.pgdg26.04+1_arm64.deb pgdg 2.8.0 69.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/oracle-fdw/postgresql-15-oracle-fdw_2.8.0-2.pgdg26.04+1_arm64.deb
 @ el8.x86_64 14 oracle_fdw_14 oracle_fdw_14-2.9.0-1PGDG.rhel8.10.x86_64.rpm pgdg 2.9.0 89.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/14/redhat/rhel-8-x86_64/oracle_fdw_14-2.9.0-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 14 oracle_fdw_14 oracle_fdw_14-2.8.0-9PGDG.rhel8.10.x86_64.rpm pgdg 2.8.0 89.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/14/redhat/rhel-8-x86_64/oracle_fdw_14-2.8.0-9PGDG.rhel8.10.x86_64.rpm
@@ -237,15 +277,25 @@ weight: 8610
 @ el10.x86_64 14 oracle_fdw_14 oracle_fdw_14-2.8.0-8PGDG.rhel10.x86_64.rpm pgdg 2.8.0 88.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/14/redhat/rhel-10-x86_64/oracle_fdw_14-2.8.0-8PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 14 oracle_fdw_14 oracle_fdw_14-2.8.0-7PGDG.rhel10.x86_64.rpm pgdg 2.8.0 88.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/14/redhat/rhel-10-x86_64/oracle_fdw_14-2.8.0-7PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 14 oracle_fdw_14 oracle_fdw_14-2.8.0-6PGDG.rhel10.x86_64.rpm pgdg 2.8.0 88.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/14/redhat/rhel-10-x86_64/oracle_fdw_14-2.8.0-6PGDG.rhel10.x86_64.rpm
+@ d12.x86_64 14 postgresql-14-oracle-fdw postgresql-14-oracle-fdw_2.9.0-1.pgdg12+1_amd64.deb pgdg 2.9.0 86.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/oracle-fdw/postgresql-14-oracle-fdw_2.9.0-1.pgdg12+1_amd64.deb
 @ d12.x86_64 14 postgresql-14-oracle-fdw postgresql-14-oracle-fdw_2.8.0-2.pgdg12+1_amd64.deb pgdg 2.8.0 86.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/oracle-fdw/postgresql-14-oracle-fdw_2.8.0-2.pgdg12+1_amd64.deb
+@ d12.aarch64 14 postgresql-14-oracle-fdw postgresql-14-oracle-fdw_2.9.0-1.pgdg12+1_arm64.deb pgdg 2.9.0 80.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/oracle-fdw/postgresql-14-oracle-fdw_2.9.0-1.pgdg12+1_arm64.deb
 @ d12.aarch64 14 postgresql-14-oracle-fdw postgresql-14-oracle-fdw_2.8.0-2.pgdg12+1_arm64.deb pgdg 2.8.0 80.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/oracle-fdw/postgresql-14-oracle-fdw_2.8.0-2.pgdg12+1_arm64.deb
+@ d13.x86_64 14 postgresql-14-oracle-fdw postgresql-14-oracle-fdw_2.9.0-1.pgdg13+1_amd64.deb pgdg 2.9.0 87.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/oracle-fdw/postgresql-14-oracle-fdw_2.9.0-1.pgdg13+1_amd64.deb
 @ d13.x86_64 14 postgresql-14-oracle-fdw postgresql-14-oracle-fdw_2.8.0-2.pgdg13+1_amd64.deb pgdg 2.8.0 86.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/oracle-fdw/postgresql-14-oracle-fdw_2.8.0-2.pgdg13+1_amd64.deb
+@ d13.aarch64 14 postgresql-14-oracle-fdw postgresql-14-oracle-fdw_2.9.0-1.pgdg13+1_arm64.deb pgdg 2.9.0 80.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/oracle-fdw/postgresql-14-oracle-fdw_2.9.0-1.pgdg13+1_arm64.deb
 @ d13.aarch64 14 postgresql-14-oracle-fdw postgresql-14-oracle-fdw_2.8.0-2.pgdg13+1_arm64.deb pgdg 2.8.0 80.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/oracle-fdw/postgresql-14-oracle-fdw_2.8.0-2.pgdg13+1_arm64.deb
+@ u22.x86_64 14 postgresql-14-oracle-fdw postgresql-14-oracle-fdw_2.9.0-1.pgdg22.04+1_amd64.deb pgdg 2.9.0 75.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/oracle-fdw/postgresql-14-oracle-fdw_2.9.0-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 14 postgresql-14-oracle-fdw postgresql-14-oracle-fdw_2.8.0-2.pgdg22.04+1_amd64.deb pgdg 2.8.0 75.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/oracle-fdw/postgresql-14-oracle-fdw_2.8.0-2.pgdg22.04+1_amd64.deb
+@ u22.aarch64 14 postgresql-14-oracle-fdw postgresql-14-oracle-fdw_2.9.0-1.pgdg22.04+1_arm64.deb pgdg 2.9.0 69.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/oracle-fdw/postgresql-14-oracle-fdw_2.9.0-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 14 postgresql-14-oracle-fdw postgresql-14-oracle-fdw_2.8.0-2.pgdg22.04+1_arm64.deb pgdg 2.8.0 70.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/oracle-fdw/postgresql-14-oracle-fdw_2.8.0-2.pgdg22.04+1_arm64.deb
+@ u24.x86_64 14 postgresql-14-oracle-fdw postgresql-14-oracle-fdw_2.9.0-1.pgdg24.04+1_amd64.deb pgdg 2.9.0 75.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/oracle-fdw/postgresql-14-oracle-fdw_2.9.0-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 14 postgresql-14-oracle-fdw postgresql-14-oracle-fdw_2.8.0-2.pgdg24.04+1_amd64.deb pgdg 2.8.0 75.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/oracle-fdw/postgresql-14-oracle-fdw_2.8.0-2.pgdg24.04+1_amd64.deb
+@ u24.aarch64 14 postgresql-14-oracle-fdw postgresql-14-oracle-fdw_2.9.0-1.pgdg24.04+1_arm64.deb pgdg 2.9.0 69.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/oracle-fdw/postgresql-14-oracle-fdw_2.9.0-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 14 postgresql-14-oracle-fdw postgresql-14-oracle-fdw_2.8.0-2.pgdg24.04+1_arm64.deb pgdg 2.8.0 69.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/oracle-fdw/postgresql-14-oracle-fdw_2.8.0-2.pgdg24.04+1_arm64.deb
+@ u26.x86_64 14 postgresql-14-oracle-fdw postgresql-14-oracle-fdw_2.9.0-1.pgdg26.04+1_amd64.deb pgdg 2.9.0 76.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/oracle-fdw/postgresql-14-oracle-fdw_2.9.0-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 14 postgresql-14-oracle-fdw postgresql-14-oracle-fdw_2.8.0-2.pgdg26.04+1_amd64.deb pgdg 2.8.0 76.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/oracle-fdw/postgresql-14-oracle-fdw_2.8.0-2.pgdg26.04+1_amd64.deb
+@ u26.aarch64 14 postgresql-14-oracle-fdw postgresql-14-oracle-fdw_2.9.0-1.pgdg26.04+1_arm64.deb pgdg 2.9.0 70.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/oracle-fdw/postgresql-14-oracle-fdw_2.9.0-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 14 postgresql-14-oracle-fdw postgresql-14-oracle-fdw_2.8.0-2.pgdg26.04+1_arm64.deb pgdg 2.8.0 69.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/o/oracle-fdw/postgresql-14-oracle-fdw_2.8.0-2.pgdg26.04+1_arm64.deb
 {{< /pgext_matrix >}}
 

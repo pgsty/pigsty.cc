@@ -47,10 +47,10 @@ weight: 5150
 |:--:|:--:|:--:|:--:|:--:|:--:|
 | el8.x86_64 | MISS PGDG - 0 | AVAIL PGDG 2.2 1 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 3 | AVAIL PGDG 2.2 5 |
 | el8.aarch64 | MISS PGDG - 0 | AVAIL PGDG 2.2 1 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 3 | AVAIL PGDG 2.2 3 |
-| el9.x86_64 | MISS PGDG - 0 | AVAIL PGDG 2.2 1 | AVAIL PGDG 2.2 1 | AVAIL PGDG 2.2 1 | AVAIL PGDG 2.2 1 |
-| el9.aarch64 | MISS PGDG - 0 | AVAIL PGDG 2.2 1 | AVAIL PGDG 2.2 1 | AVAIL PGDG 2.2 1 | AVAIL PGDG 2.2 1 |
-| el10.x86_64 | MISS PGDG - 0 | AVAIL PGDG 2.2 1 | AVAIL PGDG 2.2 1 | AVAIL PGDG 2.2 1 | AVAIL PGDG 2.2 1 |
-| el10.aarch64 | MISS PGDG - 0 | AVAIL PGDG 2.2 1 | AVAIL PGDG 2.2 1 | AVAIL PGDG 2.2 1 | AVAIL PGDG 2.2 1 |
+| el9.x86_64 | MISS PGDG - 0 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 3 | AVAIL PGDG 2.2 4 | AVAIL PGDG 2.2 5 |
+| el9.aarch64 | MISS PGDG - 0 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 3 | AVAIL PGDG 2.2 4 | AVAIL PGDG 2.2 4 |
+| el10.x86_64 | MISS PGDG - 0 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 2 |
+| el10.aarch64 | MISS PGDG - 0 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 2 |
 | d12.x86_64 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 2 |
 | d12.aarch64 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 2 |
 | d13.x86_64 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 2 |
@@ -84,9 +84,13 @@ weight: 5150
 @ el8.x86_64 17 pg_auto_failover_17 pg_auto_failover_17-2.2-1PGDG.rhel8.x86_64.rpm pgdg 2.2 812.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pg_auto_failover_17-2.2-1PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 17 pg_auto_failover_17 pg_auto_failover_17-2.2-1PGDG.rhel8.aarch64.rpm pgdg 2.2 809.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pg_auto_failover_17-2.2-1PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 17 pg_auto_failover_17 pg_auto_failover_17-2.2-4PGDG.rhel9.8.x86_64.rpm pgdg 2.2 786.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_auto_failover_17-2.2-4PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 17 pg_auto_failover_17 pg_auto_failover_17-2.2-1PGDG.rhel9.x86_64.rpm pgdg 2.2 786.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_auto_failover_17-2.2-1PGDG.rhel9.x86_64.rpm
 @ el9.aarch64 17 pg_auto_failover_17 pg_auto_failover_17-2.2-4PGDG.rhel9.8.aarch64.rpm pgdg 2.2 789.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_auto_failover_17-2.2-4PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 17 pg_auto_failover_17 pg_auto_failover_17-2.2-1PGDG.rhel9.aarch64.rpm pgdg 2.2 789.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_auto_failover_17-2.2-1PGDG.rhel9.aarch64.rpm
 @ el10.x86_64 17 pg_auto_failover_17 pg_auto_failover_17-2.2-4PGDG.rhel10.2.x86_64.rpm pgdg 2.2 788.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_auto_failover_17-2.2-4PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 17 pg_auto_failover_17 pg_auto_failover_17-2.2-1PGDG.rhel10.x86_64.rpm pgdg 2.2 788.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_auto_failover_17-2.2-1PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 17 pg_auto_failover_17 pg_auto_failover_17-2.2-4PGDG.rhel10.2.aarch64.rpm pgdg 2.2 785.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_auto_failover_17-2.2-4PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 17 pg_auto_failover_17 pg_auto_failover_17-2.2-1PGDG.rhel10.aarch64.rpm pgdg 2.2 785.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_auto_failover_17-2.2-1PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 17 postgresql-17-auto-failover postgresql-17-auto-failover_2.2-4.pgdg12+1_amd64.deb pgdg 2.2 374.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-auto-failover/postgresql-17-auto-failover_2.2-4.pgdg12+1_amd64.deb
 @ d12.x86_64 17 postgresql-17-auto-failover postgresql-17-auto-failover_2.2-3.pgdg12+1_amd64.deb pgdg 2.2 374.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-auto-failover/postgresql-17-auto-failover_2.2-3.pgdg12+1_amd64.deb
 @ d12.aarch64 17 postgresql-17-auto-failover postgresql-17-auto-failover_2.2-4.pgdg12+1_arm64.deb pgdg 2.2 370.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-auto-failover/postgresql-17-auto-failover_2.2-4.pgdg12+1_arm64.deb
@@ -112,9 +116,15 @@ weight: 5150
 @ el8.aarch64 16 pg_auto_failover_16 pg_auto_failover_16-2.2-1PGDG.rhel8.aarch64.rpm pgdg 2.2 809.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pg_auto_failover_16-2.2-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 16 pg_auto_failover_16 pg_auto_failover_16-2.1-1PGDG.rhel8.aarch64.rpm pgdg 2.1 843.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pg_auto_failover_16-2.1-1PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 16 pg_auto_failover_16 pg_auto_failover_16-2.2-4PGDG.rhel9.8.x86_64.rpm pgdg 2.2 786.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_auto_failover_16-2.2-4PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 16 pg_auto_failover_16 pg_auto_failover_16-2.2-1PGDG.rhel9.x86_64.rpm pgdg 2.2 786.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_auto_failover_16-2.2-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 16 pg_auto_failover_16 pg_auto_failover_16-2.1-1PGDG.rhel9.x86_64.rpm pgdg 2.1 807.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_auto_failover_16-2.1-1PGDG.rhel9.x86_64.rpm
 @ el9.aarch64 16 pg_auto_failover_16 pg_auto_failover_16-2.2-4PGDG.rhel9.8.aarch64.rpm pgdg 2.2 789.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_auto_failover_16-2.2-4PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 16 pg_auto_failover_16 pg_auto_failover_16-2.2-1PGDG.rhel9.aarch64.rpm pgdg 2.2 789.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_auto_failover_16-2.2-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 16 pg_auto_failover_16 pg_auto_failover_16-2.1-1PGDG.rhel9.aarch64.rpm pgdg 2.1 817.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_auto_failover_16-2.1-1PGDG.rhel9.aarch64.rpm
 @ el10.x86_64 16 pg_auto_failover_16 pg_auto_failover_16-2.2-4PGDG.rhel10.2.x86_64.rpm pgdg 2.2 787.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_auto_failover_16-2.2-4PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 16 pg_auto_failover_16 pg_auto_failover_16-2.2-1PGDG.rhel10.x86_64.rpm pgdg 2.2 788.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_auto_failover_16-2.2-1PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 16 pg_auto_failover_16 pg_auto_failover_16-2.2-4PGDG.rhel10.2.aarch64.rpm pgdg 2.2 785.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_auto_failover_16-2.2-4PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 16 pg_auto_failover_16 pg_auto_failover_16-2.2-1PGDG.rhel10.aarch64.rpm pgdg 2.2 785.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_auto_failover_16-2.2-1PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 16 postgresql-16-auto-failover postgresql-16-auto-failover_2.2-4.pgdg12+1_amd64.deb pgdg 2.2 368.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-auto-failover/postgresql-16-auto-failover_2.2-4.pgdg12+1_amd64.deb
 @ d12.x86_64 16 postgresql-16-auto-failover postgresql-16-auto-failover_2.2-3.pgdg12+1_amd64.deb pgdg 2.2 368.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-auto-failover/postgresql-16-auto-failover_2.2-3.pgdg12+1_amd64.deb
 @ d12.aarch64 16 postgresql-16-auto-failover postgresql-16-auto-failover_2.2-4.pgdg12+1_arm64.deb pgdg 2.2 364.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-auto-failover/postgresql-16-auto-failover_2.2-4.pgdg12+1_arm64.deb
@@ -142,9 +152,17 @@ weight: 5150
 @ el8.aarch64 15 pg_auto_failover_15 pg_auto_failover_15-2.1-1PGDG.rhel8.aarch64.rpm pgdg 2.1 843.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pg_auto_failover_15-2.1-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 15 pg_auto_failover_15 pg_auto_failover_15-2.0-1.rhel8.aarch64.rpm pgdg 2.0 841.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pg_auto_failover_15-2.0-1.rhel8.aarch64.rpm
 @ el9.x86_64 15 pg_auto_failover_15 pg_auto_failover_15-2.2-4PGDG.rhel9.8.x86_64.rpm pgdg 2.2 789.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_auto_failover_15-2.2-4PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 15 pg_auto_failover_15 pg_auto_failover_15-2.2-1PGDG.rhel9.x86_64.rpm pgdg 2.2 789.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_auto_failover_15-2.2-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 15 pg_auto_failover_15 pg_auto_failover_15-2.1-1PGDG.rhel9.x86_64.rpm pgdg 2.1 811.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_auto_failover_15-2.1-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 15 pg_auto_failover_15 pg_auto_failover_15-2.0-1.rhel9.x86_64.rpm pgdg 2.0 812.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_auto_failover_15-2.0-1.rhel9.x86_64.rpm
 @ el9.aarch64 15 pg_auto_failover_15 pg_auto_failover_15-2.2-4PGDG.rhel9.8.aarch64.rpm pgdg 2.2 792.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_auto_failover_15-2.2-4PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 15 pg_auto_failover_15 pg_auto_failover_15-2.2-1PGDG.rhel9.aarch64.rpm pgdg 2.2 792.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_auto_failover_15-2.2-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 15 pg_auto_failover_15 pg_auto_failover_15-2.1-1PGDG.rhel9.aarch64.rpm pgdg 2.1 820.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_auto_failover_15-2.1-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 15 pg_auto_failover_15 pg_auto_failover_15-2.0-1.rhel9.aarch64.rpm pgdg 2.0 821.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_auto_failover_15-2.0-1.rhel9.aarch64.rpm
 @ el10.x86_64 15 pg_auto_failover_15 pg_auto_failover_15-2.2-4PGDG.rhel10.2.x86_64.rpm pgdg 2.2 791.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_auto_failover_15-2.2-4PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 15 pg_auto_failover_15 pg_auto_failover_15-2.2-1PGDG.rhel10.x86_64.rpm pgdg 2.2 791.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_auto_failover_15-2.2-1PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 15 pg_auto_failover_15 pg_auto_failover_15-2.2-4PGDG.rhel10.2.aarch64.rpm pgdg 2.2 789.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_auto_failover_15-2.2-4PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 15 pg_auto_failover_15 pg_auto_failover_15-2.2-1PGDG.rhel10.aarch64.rpm pgdg 2.2 788.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_auto_failover_15-2.2-1PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 15 postgresql-15-auto-failover postgresql-15-auto-failover_2.2-4.pgdg12+1_amd64.deb pgdg 2.2 368.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-auto-failover/postgresql-15-auto-failover_2.2-4.pgdg12+1_amd64.deb
 @ d12.x86_64 15 postgresql-15-auto-failover postgresql-15-auto-failover_2.2-3.pgdg12+1_amd64.deb pgdg 2.2 368.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-auto-failover/postgresql-15-auto-failover_2.2-3.pgdg12+1_amd64.deb
 @ d12.aarch64 15 postgresql-15-auto-failover postgresql-15-auto-failover_2.2-4.pgdg12+1_arm64.deb pgdg 2.2 365.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-auto-failover/postgresql-15-auto-failover_2.2-4.pgdg12+1_arm64.deb
@@ -174,9 +192,18 @@ weight: 5150
 @ el8.aarch64 14 pg_auto_failover_14 pg_auto_failover_14-2.1-1PGDG.rhel8.aarch64.rpm pgdg 2.1 841.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pg_auto_failover_14-2.1-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 14 pg_auto_failover_14 pg_auto_failover_14-2.0-1.rhel8.aarch64.rpm pgdg 2.0 840.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pg_auto_failover_14-2.0-1.rhel8.aarch64.rpm
 @ el9.x86_64 14 pg_auto_failover_14 pg_auto_failover_14-2.2-4PGDG.rhel9.8.x86_64.rpm pgdg 2.2 789.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_auto_failover_14-2.2-4PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 14 pg_auto_failover_14 pg_auto_failover_14-2.2-1PGDG.rhel9.x86_64.rpm pgdg 2.2 789.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_auto_failover_14-2.2-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 14 pg_auto_failover_14 pg_auto_failover_14-2.1-1PGDG.rhel9.x86_64.rpm pgdg 2.1 811.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_auto_failover_14-2.1-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 14 pg_auto_failover_14 pg_auto_failover_14-2.0-1.rhel9.x86_64.rpm pgdg 2.0 811.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_auto_failover_14-2.0-1.rhel9.x86_64.rpm
+@ el9.x86_64 14 pg_auto_failover_14 pg_auto_failover_14-1.6.4-1.rhel9.x86_64.rpm pgdg 1.6.4 966.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_auto_failover_14-1.6.4-1.rhel9.x86_64.rpm
 @ el9.aarch64 14 pg_auto_failover_14 pg_auto_failover_14-2.2-4PGDG.rhel9.8.aarch64.rpm pgdg 2.2 791.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_auto_failover_14-2.2-4PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 14 pg_auto_failover_14 pg_auto_failover_14-2.2-1PGDG.rhel9.aarch64.rpm pgdg 2.2 792.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_auto_failover_14-2.2-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 14 pg_auto_failover_14 pg_auto_failover_14-2.1-1PGDG.rhel9.aarch64.rpm pgdg 2.1 820.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_auto_failover_14-2.1-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 14 pg_auto_failover_14 pg_auto_failover_14-2.0-1.rhel9.aarch64.rpm pgdg 2.0 821.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_auto_failover_14-2.0-1.rhel9.aarch64.rpm
 @ el10.x86_64 14 pg_auto_failover_14 pg_auto_failover_14-2.2-4PGDG.rhel10.2.x86_64.rpm pgdg 2.2 792.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_auto_failover_14-2.2-4PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 14 pg_auto_failover_14 pg_auto_failover_14-2.2-1PGDG.rhel10.x86_64.rpm pgdg 2.2 792.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_auto_failover_14-2.2-1PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 14 pg_auto_failover_14 pg_auto_failover_14-2.2-4PGDG.rhel10.2.aarch64.rpm pgdg 2.2 789.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_auto_failover_14-2.2-4PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 14 pg_auto_failover_14 pg_auto_failover_14-2.2-1PGDG.rhel10.aarch64.rpm pgdg 2.2 789.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_auto_failover_14-2.2-1PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 14 postgresql-14-auto-failover postgresql-14-auto-failover_2.2-4.pgdg12+1_amd64.deb pgdg 2.2 362.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-auto-failover/postgresql-14-auto-failover_2.2-4.pgdg12+1_amd64.deb
 @ d12.x86_64 14 postgresql-14-auto-failover postgresql-14-auto-failover_2.2-3.pgdg12+1_amd64.deb pgdg 2.2 362.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-auto-failover/postgresql-14-auto-failover_2.2-3.pgdg12+1_amd64.deb
 @ d12.aarch64 14 postgresql-14-auto-failover postgresql-14-auto-failover_2.2-4.pgdg12+1_arm64.deb pgdg 2.2 358.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-auto-failover/postgresql-14-auto-failover_2.2-4.pgdg12+1_arm64.deb

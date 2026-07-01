@@ -55,10 +55,10 @@ weight: 5260
 |:--:|:--:|:--:|:--:|:--:|:--:|
 | el8.x86_64 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 |
 | el8.aarch64 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 |
-| el9.x86_64 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 |
-| el9.aarch64 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 |
-| el10.x86_64 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 |
-| el10.aarch64 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 |
+| el9.x86_64 | AVAIL PGDG 1.0 3 | AVAIL PGDG 1.0 3 | AVAIL PGDG 1.0 3 | AVAIL PGDG 1.0 3 | AVAIL PGDG 1.0 3 |
+| el9.aarch64 | AVAIL PGDG 1.0 3 | AVAIL PGDG 1.0 3 | AVAIL PGDG 1.0 3 | AVAIL PGDG 1.0 3 | AVAIL PGDG 1.0 3 |
+| el10.x86_64 | AVAIL PGDG 1.0 3 | AVAIL PGDG 1.0 3 | AVAIL PGDG 1.0 3 | AVAIL PGDG 1.0 3 | AVAIL PGDG 1.0 3 |
+| el10.aarch64 | AVAIL PGDG 1.0 3 | AVAIL PGDG 1.0 3 | AVAIL PGDG 1.0 3 | AVAIL PGDG 1.0 3 | AVAIL PGDG 1.0 3 |
 | d12.x86_64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 |
 | d12.aarch64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 |
 | d13.x86_64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 |
@@ -72,9 +72,17 @@ weight: 5260
 @ el8.x86_64 18 pgdisablelogerror_18 pgdisablelogerror_18-1.0-1PGDG.rhel8.10.x86_64.rpm pgdg 1.0 13.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pgdisablelogerror_18-1.0-1PGDG.rhel8.10.x86_64.rpm
 @ el8.aarch64 18 pgdisablelogerror_18 pgdisablelogerror_18-1.0-1PGDG.rhel8.10.aarch64.rpm pgdg 1.0 13.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pgdisablelogerror_18-1.0-1PGDG.rhel8.10.aarch64.rpm
 @ el9.x86_64 18 pgdisablelogerror_18 pgdisablelogerror_18-1.0-1PGDG.rhel9.8.x86_64.rpm pgdg 1.0 12.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pgdisablelogerror_18-1.0-1PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 18 pgdisablelogerror_18 pgdisablelogerror_18-1.0-1PGDG.rhel9.7.x86_64.rpm pgdg 1.0 12.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pgdisablelogerror_18-1.0-1PGDG.rhel9.7.x86_64.rpm
+@ el9.x86_64 18 pgdisablelogerror_18 pgdisablelogerror_18-1.0-1PGDG.rhel9.6.x86_64.rpm pgdg 1.0 13.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pgdisablelogerror_18-1.0-1PGDG.rhel9.6.x86_64.rpm
 @ el9.aarch64 18 pgdisablelogerror_18 pgdisablelogerror_18-1.0-1PGDG.rhel9.8.aarch64.rpm pgdg 1.0 12.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pgdisablelogerror_18-1.0-1PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 18 pgdisablelogerror_18 pgdisablelogerror_18-1.0-1PGDG.rhel9.7.aarch64.rpm pgdg 1.0 12.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pgdisablelogerror_18-1.0-1PGDG.rhel9.7.aarch64.rpm
+@ el9.aarch64 18 pgdisablelogerror_18 pgdisablelogerror_18-1.0-1PGDG.rhel9.6.aarch64.rpm pgdg 1.0 12.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pgdisablelogerror_18-1.0-1PGDG.rhel9.6.aarch64.rpm
 @ el10.x86_64 18 pgdisablelogerror_18 pgdisablelogerror_18-1.0-1PGDG.rhel10.2.x86_64.rpm pgdg 1.0 13.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pgdisablelogerror_18-1.0-1PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 18 pgdisablelogerror_18 pgdisablelogerror_18-1.0-1PGDG.rhel10.1.x86_64.rpm pgdg 1.0 13.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pgdisablelogerror_18-1.0-1PGDG.rhel10.1.x86_64.rpm
+@ el10.x86_64 18 pgdisablelogerror_18 pgdisablelogerror_18-1.0-1PGDG.rhel10.0.x86_64.rpm pgdg 1.0 13.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pgdisablelogerror_18-1.0-1PGDG.rhel10.0.x86_64.rpm
 @ el10.aarch64 18 pgdisablelogerror_18 pgdisablelogerror_18-1.0-1PGDG.rhel10.2.aarch64.rpm pgdg 1.0 13.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pgdisablelogerror_18-1.0-1PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 18 pgdisablelogerror_18 pgdisablelogerror_18-1.0-1PGDG.rhel10.1.aarch64.rpm pgdg 1.0 13.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pgdisablelogerror_18-1.0-1PGDG.rhel10.1.aarch64.rpm
+@ el10.aarch64 18 pgdisablelogerror_18 pgdisablelogerror_18-1.0-1PGDG.rhel10.0.aarch64.rpm pgdg 1.0 13.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pgdisablelogerror_18-1.0-1PGDG.rhel10.0.aarch64.rpm
 @ d12.x86_64 18 postgresql-18-pgdisablelogerror postgresql-18-pgdisablelogerror_1.0-1PIGSTY~bookworm_amd64.deb pigsty 1.0 11.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgdisablelogerror/postgresql-18-pgdisablelogerror_1.0-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 18 postgresql-18-pgdisablelogerror postgresql-18-pgdisablelogerror_1.0-1PIGSTY~bookworm_arm64.deb pigsty 1.0 11.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgdisablelogerror/postgresql-18-pgdisablelogerror_1.0-1PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 18 postgresql-18-pgdisablelogerror postgresql-18-pgdisablelogerror_1.0-1PIGSTY~trixie_amd64.deb pigsty 1.0 11.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgdisablelogerror/postgresql-18-pgdisablelogerror_1.0-1PIGSTY~trixie_amd64.deb
@@ -88,9 +96,17 @@ weight: 5260
 @ el8.x86_64 17 pgdisablelogerror_17 pgdisablelogerror_17-1.0-1PGDG.rhel8.10.x86_64.rpm pgdg 1.0 13.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pgdisablelogerror_17-1.0-1PGDG.rhel8.10.x86_64.rpm
 @ el8.aarch64 17 pgdisablelogerror_17 pgdisablelogerror_17-1.0-1PGDG.rhel8.10.aarch64.rpm pgdg 1.0 13.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pgdisablelogerror_17-1.0-1PGDG.rhel8.10.aarch64.rpm
 @ el9.x86_64 17 pgdisablelogerror_17 pgdisablelogerror_17-1.0-1PGDG.rhel9.8.x86_64.rpm pgdg 1.0 13.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pgdisablelogerror_17-1.0-1PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 17 pgdisablelogerror_17 pgdisablelogerror_17-1.0-1PGDG.rhel9.7.x86_64.rpm pgdg 1.0 13.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pgdisablelogerror_17-1.0-1PGDG.rhel9.7.x86_64.rpm
+@ el9.x86_64 17 pgdisablelogerror_17 pgdisablelogerror_17-1.0-1PGDG.rhel9.6.x86_64.rpm pgdg 1.0 13.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pgdisablelogerror_17-1.0-1PGDG.rhel9.6.x86_64.rpm
 @ el9.aarch64 17 pgdisablelogerror_17 pgdisablelogerror_17-1.0-1PGDG.rhel9.8.aarch64.rpm pgdg 1.0 12.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pgdisablelogerror_17-1.0-1PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 17 pgdisablelogerror_17 pgdisablelogerror_17-1.0-1PGDG.rhel9.7.aarch64.rpm pgdg 1.0 12.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pgdisablelogerror_17-1.0-1PGDG.rhel9.7.aarch64.rpm
+@ el9.aarch64 17 pgdisablelogerror_17 pgdisablelogerror_17-1.0-1PGDG.rhel9.6.aarch64.rpm pgdg 1.0 13.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pgdisablelogerror_17-1.0-1PGDG.rhel9.6.aarch64.rpm
 @ el10.x86_64 17 pgdisablelogerror_17 pgdisablelogerror_17-1.0-1PGDG.rhel10.2.x86_64.rpm pgdg 1.0 13.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pgdisablelogerror_17-1.0-1PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 17 pgdisablelogerror_17 pgdisablelogerror_17-1.0-1PGDG.rhel10.1.x86_64.rpm pgdg 1.0 13.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pgdisablelogerror_17-1.0-1PGDG.rhel10.1.x86_64.rpm
+@ el10.x86_64 17 pgdisablelogerror_17 pgdisablelogerror_17-1.0-1PGDG.rhel10.0.x86_64.rpm pgdg 1.0 13.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pgdisablelogerror_17-1.0-1PGDG.rhel10.0.x86_64.rpm
 @ el10.aarch64 17 pgdisablelogerror_17 pgdisablelogerror_17-1.0-1PGDG.rhel10.2.aarch64.rpm pgdg 1.0 13.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pgdisablelogerror_17-1.0-1PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 17 pgdisablelogerror_17 pgdisablelogerror_17-1.0-1PGDG.rhel10.1.aarch64.rpm pgdg 1.0 13.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pgdisablelogerror_17-1.0-1PGDG.rhel10.1.aarch64.rpm
+@ el10.aarch64 17 pgdisablelogerror_17 pgdisablelogerror_17-1.0-1PGDG.rhel10.0.aarch64.rpm pgdg 1.0 13.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pgdisablelogerror_17-1.0-1PGDG.rhel10.0.aarch64.rpm
 @ d12.x86_64 17 postgresql-17-pgdisablelogerror postgresql-17-pgdisablelogerror_1.0-1PIGSTY~bookworm_amd64.deb pigsty 1.0 11.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgdisablelogerror/postgresql-17-pgdisablelogerror_1.0-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 17 postgresql-17-pgdisablelogerror postgresql-17-pgdisablelogerror_1.0-1PIGSTY~bookworm_arm64.deb pigsty 1.0 11.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgdisablelogerror/postgresql-17-pgdisablelogerror_1.0-1PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 17 postgresql-17-pgdisablelogerror postgresql-17-pgdisablelogerror_1.0-1PIGSTY~trixie_amd64.deb pigsty 1.0 11.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgdisablelogerror/postgresql-17-pgdisablelogerror_1.0-1PIGSTY~trixie_amd64.deb
@@ -104,9 +120,17 @@ weight: 5260
 @ el8.x86_64 16 pgdisablelogerror_16 pgdisablelogerror_16-1.0-1PGDG.rhel8.10.x86_64.rpm pgdg 1.0 13.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pgdisablelogerror_16-1.0-1PGDG.rhel8.10.x86_64.rpm
 @ el8.aarch64 16 pgdisablelogerror_16 pgdisablelogerror_16-1.0-1PGDG.rhel8.10.aarch64.rpm pgdg 1.0 13.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pgdisablelogerror_16-1.0-1PGDG.rhel8.10.aarch64.rpm
 @ el9.x86_64 16 pgdisablelogerror_16 pgdisablelogerror_16-1.0-1PGDG.rhel9.8.x86_64.rpm pgdg 1.0 13.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pgdisablelogerror_16-1.0-1PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 16 pgdisablelogerror_16 pgdisablelogerror_16-1.0-1PGDG.rhel9.7.x86_64.rpm pgdg 1.0 13.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pgdisablelogerror_16-1.0-1PGDG.rhel9.7.x86_64.rpm
+@ el9.x86_64 16 pgdisablelogerror_16 pgdisablelogerror_16-1.0-1PGDG.rhel9.6.x86_64.rpm pgdg 1.0 13.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pgdisablelogerror_16-1.0-1PGDG.rhel9.6.x86_64.rpm
 @ el9.aarch64 16 pgdisablelogerror_16 pgdisablelogerror_16-1.0-1PGDG.rhel9.8.aarch64.rpm pgdg 1.0 12.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pgdisablelogerror_16-1.0-1PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 16 pgdisablelogerror_16 pgdisablelogerror_16-1.0-1PGDG.rhel9.7.aarch64.rpm pgdg 1.0 12.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pgdisablelogerror_16-1.0-1PGDG.rhel9.7.aarch64.rpm
+@ el9.aarch64 16 pgdisablelogerror_16 pgdisablelogerror_16-1.0-1PGDG.rhel9.6.aarch64.rpm pgdg 1.0 13.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pgdisablelogerror_16-1.0-1PGDG.rhel9.6.aarch64.rpm
 @ el10.x86_64 16 pgdisablelogerror_16 pgdisablelogerror_16-1.0-1PGDG.rhel10.2.x86_64.rpm pgdg 1.0 13.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pgdisablelogerror_16-1.0-1PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 16 pgdisablelogerror_16 pgdisablelogerror_16-1.0-1PGDG.rhel10.1.x86_64.rpm pgdg 1.0 13.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pgdisablelogerror_16-1.0-1PGDG.rhel10.1.x86_64.rpm
+@ el10.x86_64 16 pgdisablelogerror_16 pgdisablelogerror_16-1.0-1PGDG.rhel10.0.x86_64.rpm pgdg 1.0 13.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pgdisablelogerror_16-1.0-1PGDG.rhel10.0.x86_64.rpm
 @ el10.aarch64 16 pgdisablelogerror_16 pgdisablelogerror_16-1.0-1PGDG.rhel10.2.aarch64.rpm pgdg 1.0 13.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pgdisablelogerror_16-1.0-1PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 16 pgdisablelogerror_16 pgdisablelogerror_16-1.0-1PGDG.rhel10.1.aarch64.rpm pgdg 1.0 13.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pgdisablelogerror_16-1.0-1PGDG.rhel10.1.aarch64.rpm
+@ el10.aarch64 16 pgdisablelogerror_16 pgdisablelogerror_16-1.0-1PGDG.rhel10.0.aarch64.rpm pgdg 1.0 13.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pgdisablelogerror_16-1.0-1PGDG.rhel10.0.aarch64.rpm
 @ d12.x86_64 16 postgresql-16-pgdisablelogerror postgresql-16-pgdisablelogerror_1.0-1PIGSTY~bookworm_amd64.deb pigsty 1.0 11.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgdisablelogerror/postgresql-16-pgdisablelogerror_1.0-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 16 postgresql-16-pgdisablelogerror postgresql-16-pgdisablelogerror_1.0-1PIGSTY~bookworm_arm64.deb pigsty 1.0 11.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgdisablelogerror/postgresql-16-pgdisablelogerror_1.0-1PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 16 postgresql-16-pgdisablelogerror postgresql-16-pgdisablelogerror_1.0-1PIGSTY~trixie_amd64.deb pigsty 1.0 11.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgdisablelogerror/postgresql-16-pgdisablelogerror_1.0-1PIGSTY~trixie_amd64.deb
@@ -120,9 +144,17 @@ weight: 5260
 @ el8.x86_64 15 pgdisablelogerror_15 pgdisablelogerror_15-1.0-1PGDG.rhel8.10.x86_64.rpm pgdg 1.0 13.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pgdisablelogerror_15-1.0-1PGDG.rhel8.10.x86_64.rpm
 @ el8.aarch64 15 pgdisablelogerror_15 pgdisablelogerror_15-1.0-1PGDG.rhel8.10.aarch64.rpm pgdg 1.0 13.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pgdisablelogerror_15-1.0-1PGDG.rhel8.10.aarch64.rpm
 @ el9.x86_64 15 pgdisablelogerror_15 pgdisablelogerror_15-1.0-1PGDG.rhel9.8.x86_64.rpm pgdg 1.0 13.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pgdisablelogerror_15-1.0-1PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 15 pgdisablelogerror_15 pgdisablelogerror_15-1.0-1PGDG.rhel9.7.x86_64.rpm pgdg 1.0 13.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pgdisablelogerror_15-1.0-1PGDG.rhel9.7.x86_64.rpm
+@ el9.x86_64 15 pgdisablelogerror_15 pgdisablelogerror_15-1.0-1PGDG.rhel9.6.x86_64.rpm pgdg 1.0 13.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pgdisablelogerror_15-1.0-1PGDG.rhel9.6.x86_64.rpm
 @ el9.aarch64 15 pgdisablelogerror_15 pgdisablelogerror_15-1.0-1PGDG.rhel9.8.aarch64.rpm pgdg 1.0 12.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pgdisablelogerror_15-1.0-1PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 15 pgdisablelogerror_15 pgdisablelogerror_15-1.0-1PGDG.rhel9.7.aarch64.rpm pgdg 1.0 12.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pgdisablelogerror_15-1.0-1PGDG.rhel9.7.aarch64.rpm
+@ el9.aarch64 15 pgdisablelogerror_15 pgdisablelogerror_15-1.0-1PGDG.rhel9.6.aarch64.rpm pgdg 1.0 13.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pgdisablelogerror_15-1.0-1PGDG.rhel9.6.aarch64.rpm
 @ el10.x86_64 15 pgdisablelogerror_15 pgdisablelogerror_15-1.0-1PGDG.rhel10.2.x86_64.rpm pgdg 1.0 13.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pgdisablelogerror_15-1.0-1PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 15 pgdisablelogerror_15 pgdisablelogerror_15-1.0-1PGDG.rhel10.1.x86_64.rpm pgdg 1.0 13.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pgdisablelogerror_15-1.0-1PGDG.rhel10.1.x86_64.rpm
+@ el10.x86_64 15 pgdisablelogerror_15 pgdisablelogerror_15-1.0-1PGDG.rhel10.0.x86_64.rpm pgdg 1.0 13.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pgdisablelogerror_15-1.0-1PGDG.rhel10.0.x86_64.rpm
 @ el10.aarch64 15 pgdisablelogerror_15 pgdisablelogerror_15-1.0-1PGDG.rhel10.2.aarch64.rpm pgdg 1.0 13.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pgdisablelogerror_15-1.0-1PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 15 pgdisablelogerror_15 pgdisablelogerror_15-1.0-1PGDG.rhel10.1.aarch64.rpm pgdg 1.0 13.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pgdisablelogerror_15-1.0-1PGDG.rhel10.1.aarch64.rpm
+@ el10.aarch64 15 pgdisablelogerror_15 pgdisablelogerror_15-1.0-1PGDG.rhel10.0.aarch64.rpm pgdg 1.0 13.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pgdisablelogerror_15-1.0-1PGDG.rhel10.0.aarch64.rpm
 @ d12.x86_64 15 postgresql-15-pgdisablelogerror postgresql-15-pgdisablelogerror_1.0-1PIGSTY~bookworm_amd64.deb pigsty 1.0 11.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgdisablelogerror/postgresql-15-pgdisablelogerror_1.0-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 15 postgresql-15-pgdisablelogerror postgresql-15-pgdisablelogerror_1.0-1PIGSTY~bookworm_arm64.deb pigsty 1.0 11.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgdisablelogerror/postgresql-15-pgdisablelogerror_1.0-1PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 15 postgresql-15-pgdisablelogerror postgresql-15-pgdisablelogerror_1.0-1PIGSTY~trixie_amd64.deb pigsty 1.0 11.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgdisablelogerror/postgresql-15-pgdisablelogerror_1.0-1PIGSTY~trixie_amd64.deb
@@ -136,9 +168,17 @@ weight: 5260
 @ el8.x86_64 14 pgdisablelogerror_14 pgdisablelogerror_14-1.0-1PGDG.rhel8.10.x86_64.rpm pgdg 1.0 13.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pgdisablelogerror_14-1.0-1PGDG.rhel8.10.x86_64.rpm
 @ el8.aarch64 14 pgdisablelogerror_14 pgdisablelogerror_14-1.0-1PGDG.rhel8.10.aarch64.rpm pgdg 1.0 13.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pgdisablelogerror_14-1.0-1PGDG.rhel8.10.aarch64.rpm
 @ el9.x86_64 14 pgdisablelogerror_14 pgdisablelogerror_14-1.0-1PGDG.rhel9.8.x86_64.rpm pgdg 1.0 13.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pgdisablelogerror_14-1.0-1PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 14 pgdisablelogerror_14 pgdisablelogerror_14-1.0-1PGDG.rhel9.7.x86_64.rpm pgdg 1.0 13.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pgdisablelogerror_14-1.0-1PGDG.rhel9.7.x86_64.rpm
+@ el9.x86_64 14 pgdisablelogerror_14 pgdisablelogerror_14-1.0-1PGDG.rhel9.6.x86_64.rpm pgdg 1.0 13.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pgdisablelogerror_14-1.0-1PGDG.rhel9.6.x86_64.rpm
 @ el9.aarch64 14 pgdisablelogerror_14 pgdisablelogerror_14-1.0-1PGDG.rhel9.8.aarch64.rpm pgdg 1.0 12.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pgdisablelogerror_14-1.0-1PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 14 pgdisablelogerror_14 pgdisablelogerror_14-1.0-1PGDG.rhel9.7.aarch64.rpm pgdg 1.0 12.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pgdisablelogerror_14-1.0-1PGDG.rhel9.7.aarch64.rpm
+@ el9.aarch64 14 pgdisablelogerror_14 pgdisablelogerror_14-1.0-1PGDG.rhel9.6.aarch64.rpm pgdg 1.0 13.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pgdisablelogerror_14-1.0-1PGDG.rhel9.6.aarch64.rpm
 @ el10.x86_64 14 pgdisablelogerror_14 pgdisablelogerror_14-1.0-1PGDG.rhel10.2.x86_64.rpm pgdg 1.0 13.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pgdisablelogerror_14-1.0-1PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 14 pgdisablelogerror_14 pgdisablelogerror_14-1.0-1PGDG.rhel10.1.x86_64.rpm pgdg 1.0 13.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pgdisablelogerror_14-1.0-1PGDG.rhel10.1.x86_64.rpm
+@ el10.x86_64 14 pgdisablelogerror_14 pgdisablelogerror_14-1.0-1PGDG.rhel10.0.x86_64.rpm pgdg 1.0 13.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pgdisablelogerror_14-1.0-1PGDG.rhel10.0.x86_64.rpm
 @ el10.aarch64 14 pgdisablelogerror_14 pgdisablelogerror_14-1.0-1PGDG.rhel10.2.aarch64.rpm pgdg 1.0 13.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgdisablelogerror_14-1.0-1PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 14 pgdisablelogerror_14 pgdisablelogerror_14-1.0-1PGDG.rhel10.1.aarch64.rpm pgdg 1.0 13.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgdisablelogerror_14-1.0-1PGDG.rhel10.1.aarch64.rpm
+@ el10.aarch64 14 pgdisablelogerror_14 pgdisablelogerror_14-1.0-1PGDG.rhel10.0.aarch64.rpm pgdg 1.0 13.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgdisablelogerror_14-1.0-1PGDG.rhel10.0.aarch64.rpm
 @ d12.x86_64 14 postgresql-14-pgdisablelogerror postgresql-14-pgdisablelogerror_1.0-1PIGSTY~bookworm_amd64.deb pigsty 1.0 11.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgdisablelogerror/postgresql-14-pgdisablelogerror_1.0-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 14 postgresql-14-pgdisablelogerror postgresql-14-pgdisablelogerror_1.0-1PIGSTY~bookworm_arm64.deb pigsty 1.0 11.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgdisablelogerror/postgresql-14-pgdisablelogerror_1.0-1PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 14 postgresql-14-pgdisablelogerror postgresql-14-pgdisablelogerror_1.0-1PIGSTY~trixie_amd64.deb pigsty 1.0 11.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgdisablelogerror/postgresql-14-pgdisablelogerror_1.0-1PIGSTY~trixie_amd64.deb
@@ -218,3 +258,45 @@ shared_preload_libraries = '$libdir/pgdisablelogerror';
 ```sql
 CREATE EXTENSION pgdisablelogerror;
 ```
+
+## 用法
+
+来源：[README](https://github.com/fmbiete/pgdisablelogerror/blob/v1.0/README.md)、[v1.0 release](https://github.com/fmbiete/pgdisablelogerror/releases/tag/v1.0)、[control file](https://github.com/fmbiete/pgdisablelogerror/blob/v1.0/pgdisablelogerror.control)
+
+`pgdisablelogerror` 会抑制配置的 SQLSTATE error codes 在 PostgreSQL server log 中的记录。对于 duplicate-key violations 等预期应用错误过于频繁、污染 server log 的场景，它比较有用。
+
+### 启用 Hook
+
+加载 module 并重启 PostgreSQL：
+
+```conf
+shared_preload_libraries = 'pgdisablelogerror'
+```
+
+在 `postgres` 数据库中创建一次扩展：
+
+```sql
+CREATE EXTENSION pgdisablelogerror;
+```
+
+### 配置 SQLSTATE Codes
+
+将 `pgdisablelogerror.sqlerrcode` 设为逗号分隔的 SQLSTATE codes：
+
+```conf
+pgdisablelogerror.sqlerrcode = '23505,23503'
+```
+
+空值或 NULL 会禁用 suppression：
+
+```conf
+pgdisablelogerror.sqlerrcode = ''
+```
+
+要在普通 PostgreSQL 日志中识别 SQLSTATE 值，可以在 `log_line_prefix` 中添加 `%e`。
+
+### 注意事项
+
+- 版本 1.0 支持 PostgreSQL 14-18。
+- 该扩展影响日志，不影响错误行为。客户端仍会收到原始错误。
+- SQLSTATE 列表应尽量窄。抑制过宽的错误类别可能隐藏真实运维问题。

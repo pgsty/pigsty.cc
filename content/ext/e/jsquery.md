@@ -52,10 +52,10 @@ weight: 2770
 |:--:|:--:|:--:|:--:|:--:|:--:|
 | el8.x86_64 | AVAIL PGDG 1.2 1 | AVAIL PGDG 1.2 1 | AVAIL PGDG 1.2 1 | AVAIL PGDG 1.2 1 | AVAIL PGDG 1.2 1 |
 | el8.aarch64 | AVAIL PGDG 1.2 1 | AVAIL PGDG 1.2 1 | AVAIL PGDG 1.2 1 | AVAIL PGDG 1.2 1 | AVAIL PGDG 1.2 1 |
-| el9.x86_64 | AVAIL PGDG 1.2 1 | AVAIL PGDG 1.2 1 | AVAIL PGDG 1.2 1 | AVAIL PGDG 1.2 1 | AVAIL PGDG 1.2 1 |
-| el9.aarch64 | AVAIL PGDG 1.2 1 | AVAIL PGDG 1.2 1 | AVAIL PGDG 1.2 1 | AVAIL PGDG 1.2 1 | AVAIL PGDG 1.2 1 |
-| el10.x86_64 | AVAIL PGDG 1.2 1 | AVAIL PGDG 1.2 1 | AVAIL PGDG 1.2 1 | AVAIL PGDG 1.2 1 | AVAIL PGDG 1.2 1 |
-| el10.aarch64 | AVAIL PGDG 1.2 1 | AVAIL PGDG 1.2 1 | AVAIL PGDG 1.2 1 | AVAIL PGDG 1.2 1 | AVAIL PGDG 1.2 1 |
+| el9.x86_64 | AVAIL PGDG 1.2 2 | AVAIL PGDG 1.2 2 | AVAIL PGDG 1.2 2 | AVAIL PGDG 1.2 2 | AVAIL PGDG 1.2 2 |
+| el9.aarch64 | AVAIL PGDG 1.2 2 | AVAIL PGDG 1.2 2 | AVAIL PGDG 1.2 2 | AVAIL PGDG 1.2 2 | AVAIL PGDG 1.2 2 |
+| el10.x86_64 | AVAIL PGDG 1.2 2 | AVAIL PGDG 1.2 2 | AVAIL PGDG 1.2 2 | AVAIL PGDG 1.2 2 | AVAIL PGDG 1.2 2 |
+| el10.aarch64 | AVAIL PGDG 1.2 2 | AVAIL PGDG 1.2 2 | AVAIL PGDG 1.2 2 | AVAIL PGDG 1.2 2 | AVAIL PGDG 1.2 2 |
 | d12.x86_64 | AVAIL PGDG 1.2 1 | AVAIL PGDG 1.2 1 | AVAIL PGDG 1.2 1 | AVAIL PGDG 1.2 1 | AVAIL PGDG 1.2 1 |
 | d12.aarch64 | AVAIL PGDG 1.2 1 | AVAIL PGDG 1.2 1 | AVAIL PGDG 1.2 1 | AVAIL PGDG 1.2 1 | AVAIL PGDG 1.2 1 |
 | d13.x86_64 | AVAIL PGDG 1.2 1 | AVAIL PGDG 1.2 1 | AVAIL PGDG 1.2 1 | AVAIL PGDG 1.2 1 | AVAIL PGDG 1.2 1 |
@@ -69,9 +69,13 @@ weight: 2770
 @ el8.x86_64 18 jsquery_18 jsquery_18-1.2-4PGDG.rhel8.x86_64.rpm pgdg 1.2 49.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/jsquery_18-1.2-4PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 18 jsquery_18 jsquery_18-1.2-4PGDG.rhel8.aarch64.rpm pgdg 1.2 46.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/jsquery_18-1.2-4PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 18 jsquery_18 jsquery_18-1.2-6PGDG.rhel9.8.x86_64.rpm pgdg 1.2 48.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/jsquery_18-1.2-6PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 18 jsquery_18 jsquery_18-1.2-4PGDG.rhel9.x86_64.rpm pgdg 1.2 48.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/jsquery_18-1.2-4PGDG.rhel9.x86_64.rpm
 @ el9.aarch64 18 jsquery_18 jsquery_18-1.2-6PGDG.rhel9.8.aarch64.rpm pgdg 1.2 47.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/jsquery_18-1.2-6PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 18 jsquery_18 jsquery_18-1.2-4PGDG.rhel9.aarch64.rpm pgdg 1.2 47.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/jsquery_18-1.2-4PGDG.rhel9.aarch64.rpm
 @ el10.x86_64 18 jsquery_18 jsquery_18-1.2-6PGDG.rhel10.2.x86_64.rpm pgdg 1.2 49.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/jsquery_18-1.2-6PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 18 jsquery_18 jsquery_18-1.2-4PGDG.rhel10.x86_64.rpm pgdg 1.2 50.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/jsquery_18-1.2-4PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 18 jsquery_18 jsquery_18-1.2-6PGDG.rhel10.2.aarch64.rpm pgdg 1.2 48.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/jsquery_18-1.2-6PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 18 jsquery_18 jsquery_18-1.2-4PGDG.rhel10.aarch64.rpm pgdg 1.2 48.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/jsquery_18-1.2-4PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 18 postgresql-18-jsquery postgresql-18-jsquery_1.2-3.pgdg12+1_amd64.deb pgdg 1.2 123.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/j/jsquery/postgresql-18-jsquery_1.2-3.pgdg12+1_amd64.deb
 @ d12.aarch64 18 postgresql-18-jsquery postgresql-18-jsquery_1.2-3.pgdg12+1_arm64.deb pgdg 1.2 120.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/j/jsquery/postgresql-18-jsquery_1.2-3.pgdg12+1_arm64.deb
 @ d13.x86_64 18 postgresql-18-jsquery postgresql-18-jsquery_1.2-3.pgdg13+1_amd64.deb pgdg 1.2 123.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/j/jsquery/postgresql-18-jsquery_1.2-3.pgdg13+1_amd64.deb
@@ -85,9 +89,13 @@ weight: 2770
 @ el8.x86_64 17 jsquery_17 jsquery_17-1.2-2PGDG.rhel8.x86_64.rpm pgdg 1.2 49.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/jsquery_17-1.2-2PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 17 jsquery_17 jsquery_17-1.2-2PGDG.rhel8.aarch64.rpm pgdg 1.2 46.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/jsquery_17-1.2-2PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 17 jsquery_17 jsquery_17-1.2-6PGDG.rhel9.8.x86_64.rpm pgdg 1.2 48.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/jsquery_17-1.2-6PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 17 jsquery_17 jsquery_17-1.2-2PGDG.rhel9.x86_64.rpm pgdg 1.2 48.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/jsquery_17-1.2-2PGDG.rhel9.x86_64.rpm
 @ el9.aarch64 17 jsquery_17 jsquery_17-1.2-6PGDG.rhel9.8.aarch64.rpm pgdg 1.2 47.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/jsquery_17-1.2-6PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 17 jsquery_17 jsquery_17-1.2-2PGDG.rhel9.aarch64.rpm pgdg 1.2 47.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/jsquery_17-1.2-2PGDG.rhel9.aarch64.rpm
 @ el10.x86_64 17 jsquery_17 jsquery_17-1.2-6PGDG.rhel10.2.x86_64.rpm pgdg 1.2 49.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/jsquery_17-1.2-6PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 17 jsquery_17 jsquery_17-1.2-4PGDG.rhel10.x86_64.rpm pgdg 1.2 50.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/jsquery_17-1.2-4PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 17 jsquery_17 jsquery_17-1.2-6PGDG.rhel10.2.aarch64.rpm pgdg 1.2 48.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/jsquery_17-1.2-6PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 17 jsquery_17 jsquery_17-1.2-4PGDG.rhel10.aarch64.rpm pgdg 1.2 48.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/jsquery_17-1.2-4PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 17 postgresql-17-jsquery postgresql-17-jsquery_1.2-3.pgdg12+1_amd64.deb pgdg 1.2 123.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/j/jsquery/postgresql-17-jsquery_1.2-3.pgdg12+1_amd64.deb
 @ d12.aarch64 17 postgresql-17-jsquery postgresql-17-jsquery_1.2-3.pgdg12+1_arm64.deb pgdg 1.2 120.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/j/jsquery/postgresql-17-jsquery_1.2-3.pgdg12+1_arm64.deb
 @ d13.x86_64 17 postgresql-17-jsquery postgresql-17-jsquery_1.2-3.pgdg13+1_amd64.deb pgdg 1.2 123.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/j/jsquery/postgresql-17-jsquery_1.2-3.pgdg13+1_amd64.deb
@@ -101,9 +109,13 @@ weight: 2770
 @ el8.x86_64 16 jsquery_16 jsquery_16-1.2-1PGDG.rhel8.x86_64.rpm pgdg 1.2 49.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/jsquery_16-1.2-1PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 16 jsquery_16 jsquery_16-1.2-1PGDG.rhel8.aarch64.rpm pgdg 1.2 46.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/jsquery_16-1.2-1PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 16 jsquery_16 jsquery_16-1.2-6PGDG.rhel9.8.x86_64.rpm pgdg 1.2 48.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/jsquery_16-1.2-6PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 16 jsquery_16 jsquery_16-1.2-1PGDG.rhel9.x86_64.rpm pgdg 1.2 48.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/jsquery_16-1.2-1PGDG.rhel9.x86_64.rpm
 @ el9.aarch64 16 jsquery_16 jsquery_16-1.2-6PGDG.rhel9.8.aarch64.rpm pgdg 1.2 47.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/jsquery_16-1.2-6PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 16 jsquery_16 jsquery_16-1.2-1PGDG.rhel9.aarch64.rpm pgdg 1.2 47.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/jsquery_16-1.2-1PGDG.rhel9.aarch64.rpm
 @ el10.x86_64 16 jsquery_16 jsquery_16-1.2-6PGDG.rhel10.2.x86_64.rpm pgdg 1.2 49.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/jsquery_16-1.2-6PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 16 jsquery_16 jsquery_16-1.2-4PGDG.rhel10.x86_64.rpm pgdg 1.2 49.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/jsquery_16-1.2-4PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 16 jsquery_16 jsquery_16-1.2-6PGDG.rhel10.2.aarch64.rpm pgdg 1.2 48.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/jsquery_16-1.2-6PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 16 jsquery_16 jsquery_16-1.2-4PGDG.rhel10.aarch64.rpm pgdg 1.2 48.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/jsquery_16-1.2-4PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 16 postgresql-16-jsquery postgresql-16-jsquery_1.2-3.pgdg12+1_amd64.deb pgdg 1.2 122.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/j/jsquery/postgresql-16-jsquery_1.2-3.pgdg12+1_amd64.deb
 @ d12.aarch64 16 postgresql-16-jsquery postgresql-16-jsquery_1.2-3.pgdg12+1_arm64.deb pgdg 1.2 119.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/j/jsquery/postgresql-16-jsquery_1.2-3.pgdg12+1_arm64.deb
 @ d13.x86_64 16 postgresql-16-jsquery postgresql-16-jsquery_1.2-3.pgdg13+1_amd64.deb pgdg 1.2 123.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/j/jsquery/postgresql-16-jsquery_1.2-3.pgdg13+1_amd64.deb
@@ -117,9 +129,13 @@ weight: 2770
 @ el8.x86_64 15 jsquery_15 jsquery_15-1.2-1PGDG.rhel8.x86_64.rpm pgdg 1.2 50.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/jsquery_15-1.2-1PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 15 jsquery_15 jsquery_15-1.2-1PGDG.rhel8.aarch64.rpm pgdg 1.2 47.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/jsquery_15-1.2-1PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 15 jsquery_15 jsquery_15-1.2-6PGDG.rhel9.8.x86_64.rpm pgdg 1.2 51.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/jsquery_15-1.2-6PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 15 jsquery_15 jsquery_15-1.2-1PGDG.rhel9.x86_64.rpm pgdg 1.2 51.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/jsquery_15-1.2-1PGDG.rhel9.x86_64.rpm
 @ el9.aarch64 15 jsquery_15 jsquery_15-1.2-6PGDG.rhel9.8.aarch64.rpm pgdg 1.2 50.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/jsquery_15-1.2-6PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 15 jsquery_15 jsquery_15-1.2-1PGDG.rhel9.aarch64.rpm pgdg 1.2 49.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/jsquery_15-1.2-1PGDG.rhel9.aarch64.rpm
 @ el10.x86_64 15 jsquery_15 jsquery_15-1.2-6PGDG.rhel10.2.x86_64.rpm pgdg 1.2 52.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/jsquery_15-1.2-6PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 15 jsquery_15 jsquery_15-1.2-4PGDG.rhel10.x86_64.rpm pgdg 1.2 52.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/jsquery_15-1.2-4PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 15 jsquery_15 jsquery_15-1.2-6PGDG.rhel10.2.aarch64.rpm pgdg 1.2 50.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/jsquery_15-1.2-6PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 15 jsquery_15 jsquery_15-1.2-4PGDG.rhel10.aarch64.rpm pgdg 1.2 50.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/jsquery_15-1.2-4PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 15 postgresql-15-jsquery postgresql-15-jsquery_1.2-3.pgdg12+1_amd64.deb pgdg 1.2 124.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/j/jsquery/postgresql-15-jsquery_1.2-3.pgdg12+1_amd64.deb
 @ d12.aarch64 15 postgresql-15-jsquery postgresql-15-jsquery_1.2-3.pgdg12+1_arm64.deb pgdg 1.2 120.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/j/jsquery/postgresql-15-jsquery_1.2-3.pgdg12+1_arm64.deb
 @ d13.x86_64 15 postgresql-15-jsquery postgresql-15-jsquery_1.2-3.pgdg13+1_amd64.deb pgdg 1.2 124.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/j/jsquery/postgresql-15-jsquery_1.2-3.pgdg13+1_amd64.deb
@@ -133,9 +149,13 @@ weight: 2770
 @ el8.x86_64 14 jsquery_14 jsquery_14-1.2-1PGDG.rhel8.x86_64.rpm pgdg 1.2 50.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/jsquery_14-1.2-1PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 14 jsquery_14 jsquery_14-1.2-1PGDG.rhel8.aarch64.rpm pgdg 1.2 47.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/jsquery_14-1.2-1PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 14 jsquery_14 jsquery_14-1.2-6PGDG.rhel9.8.x86_64.rpm pgdg 1.2 51.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/jsquery_14-1.2-6PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 14 jsquery_14 jsquery_14-1.2-1PGDG.rhel9.x86_64.rpm pgdg 1.2 51.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/jsquery_14-1.2-1PGDG.rhel9.x86_64.rpm
 @ el9.aarch64 14 jsquery_14 jsquery_14-1.2-6PGDG.rhel9.8.aarch64.rpm pgdg 1.2 50.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/jsquery_14-1.2-6PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 14 jsquery_14 jsquery_14-1.2-1PGDG.rhel9.aarch64.rpm pgdg 1.2 49.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/jsquery_14-1.2-1PGDG.rhel9.aarch64.rpm
 @ el10.x86_64 14 jsquery_14 jsquery_14-1.2-6PGDG.rhel10.2.x86_64.rpm pgdg 1.2 52.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/jsquery_14-1.2-6PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 14 jsquery_14 jsquery_14-1.2-4PGDG.rhel10.x86_64.rpm pgdg 1.2 52.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/jsquery_14-1.2-4PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 14 jsquery_14 jsquery_14-1.2-6PGDG.rhel10.2.aarch64.rpm pgdg 1.2 50.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/jsquery_14-1.2-6PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 14 jsquery_14 jsquery_14-1.2-4PGDG.rhel10.aarch64.rpm pgdg 1.2 50.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/jsquery_14-1.2-4PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 14 postgresql-14-jsquery postgresql-14-jsquery_1.2-3.pgdg12+1_amd64.deb pgdg 1.2 124.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/j/jsquery/postgresql-14-jsquery_1.2-3.pgdg12+1_amd64.deb
 @ d12.aarch64 14 postgresql-14-jsquery postgresql-14-jsquery_1.2-3.pgdg12+1_arm64.deb pgdg 1.2 121.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/j/jsquery/postgresql-14-jsquery_1.2-3.pgdg12+1_arm64.deb
 @ d13.x86_64 14 postgresql-14-jsquery postgresql-14-jsquery_1.2-3.pgdg13+1_amd64.deb pgdg 1.2 124.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/j/jsquery/postgresql-14-jsquery_1.2-3.pgdg13+1_amd64.deb

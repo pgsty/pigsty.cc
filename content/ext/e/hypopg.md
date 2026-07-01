@@ -11,11 +11,6 @@ weight: 2790
     <div class="ext-card__title">HypoPG/hypopg</div>
     <div class="ext-card__desc">https://github.com/HypoPG/hypopg</div>
   </a>
-  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/hypopg-1.4.2.tar.gz">
-    <div class="ext-card__kicker">源码</div>
-    <div class="ext-card__title">hypopg-1.4.2.tar.gz</div>
-    <div class="ext-card__desc">hypopg-1.4.2.tar.gz</div>
-  </a>
 </div>
 
 
@@ -25,7 +20,7 @@ weight: 2790
 
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
-| [**`hypopg`**](/ext/e/hypopg) | `1.4.2` | <a class="ext-badge ext-badge--cate feat" href="/ext/cate/feat">FEAT</a> | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
+| [**`hypopg`**](/ext/e/hypopg) | `1.4.3` | <a class="ext-badge ext-badge--cate feat" href="/ext/cate/feat">FEAT</a> | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
 {.ext-table}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
@@ -42,119 +37,229 @@ weight: 2790
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#feat) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `1.4.2` | {{< pgvers "18,17,16,15,14" >}} | `hypopg` | - |
-| [**RPM**](/ext/rpm#feat) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `1.4.2` | {{< pgvers "18,17,16,15,14" >}} | `hypopg_$v` | - |
-| [**DEB**](/ext/deb#feat) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `1.4.2` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-hypopg` | - |
+| [**EXT**](/ext/list#feat) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `1.4.3` | {{< pgvers "18,17,16,15,14" >}} | `hypopg` | - |
+| [**RPM**](/ext/rpm#feat) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `1.4.3` | {{< pgvers "18,17,16,15,14" >}} | `hypopg_$v` | - |
+| [**DEB**](/ext/deb#feat) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `1.4.3` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-hypopg` | - |
 {.ext-table}
 
 {{< pgext_matrix >}}
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PGDG 1.4.2 1 | AVAIL PGDG 1.4.1 1 | AVAIL PGDG 1.4.1 2 | AVAIL PGDG 1.4.1 3 | AVAIL PGDG 1.4.1 3 |
-| el8.aarch64 | AVAIL PGDG 1.4.2 1 | AVAIL PGDG 1.4.1 1 | AVAIL PGDG 1.4.1 2 | AVAIL PGDG 1.4.1 3 | AVAIL PGDG 1.4.1 3 |
-| el9.x86_64 | AVAIL PGDG 1.4.2 1 | AVAIL PGDG 1.4.2 1 | AVAIL PGDG 1.4.2 1 | AVAIL PGDG 1.4.2 1 | AVAIL PGDG 1.4.2 1 |
-| el9.aarch64 | AVAIL PGDG 1.4.2 1 | AVAIL PGDG 1.4.2 1 | AVAIL PGDG 1.4.2 1 | AVAIL PGDG 1.4.2 1 | AVAIL PGDG 1.4.2 1 |
-| el10.x86_64 | AVAIL PGDG 1.4.2 1 | AVAIL PGDG 1.4.2 1 | AVAIL PGDG 1.4.2 1 | AVAIL PGDG 1.4.2 1 | AVAIL PGDG 1.4.2 1 |
-| el10.aarch64 | AVAIL PGDG 1.4.2 1 | AVAIL PGDG 1.4.2 1 | AVAIL PGDG 1.4.2 1 | AVAIL PGDG 1.4.2 1 | AVAIL PGDG 1.4.2 1 |
-| d12.x86_64 | AVAIL PGDG 1.4.2 1 | AVAIL PGDG 1.4.2 1 | AVAIL PGDG 1.4.2 1 | AVAIL PGDG 1.4.2 1 | AVAIL PGDG 1.4.2 1 |
-| d12.aarch64 | AVAIL PGDG 1.4.2 1 | AVAIL PGDG 1.4.2 1 | AVAIL PGDG 1.4.2 1 | AVAIL PGDG 1.4.2 1 | AVAIL PGDG 1.4.2 1 |
-| d13.x86_64 | AVAIL PGDG 1.4.2 1 | AVAIL PGDG 1.4.2 1 | AVAIL PGDG 1.4.2 1 | AVAIL PGDG 1.4.2 1 | AVAIL PGDG 1.4.2 1 |
-| d13.aarch64 | AVAIL PGDG 1.4.2 1 | AVAIL PGDG 1.4.2 1 | AVAIL PGDG 1.4.2 1 | AVAIL PGDG 1.4.2 1 | AVAIL PGDG 1.4.2 1 |
-| u22.x86_64 | AVAIL PGDG 1.4.2 1 | AVAIL PGDG 1.4.2 1 | AVAIL PGDG 1.4.2 1 | AVAIL PGDG 1.4.2 1 | AVAIL PGDG 1.4.2 1 |
-| u22.aarch64 | AVAIL PGDG 1.4.2 1 | AVAIL PGDG 1.4.2 1 | AVAIL PGDG 1.4.2 1 | AVAIL PGDG 1.4.2 1 | AVAIL PGDG 1.4.2 1 |
-| u24.x86_64 | AVAIL PGDG 1.4.2 1 | AVAIL PGDG 1.4.2 1 | AVAIL PGDG 1.4.2 1 | AVAIL PGDG 1.4.2 1 | AVAIL PGDG 1.4.2 1 |
-| u24.aarch64 | AVAIL PGDG 1.4.2 1 | AVAIL PGDG 1.4.2 1 | AVAIL PGDG 1.4.2 1 | AVAIL PGDG 1.4.2 1 | AVAIL PGDG 1.4.2 1 |
-| u26.x86_64 | AVAIL PGDG 1.4.2 1 | AVAIL PGDG 1.4.2 1 | AVAIL PGDG 1.4.2 1 | AVAIL PGDG 1.4.2 1 | AVAIL PGDG 1.4.2 1 |
-| u26.aarch64 | AVAIL PGDG 1.4.2 1 | AVAIL PGDG 1.4.2 1 | AVAIL PGDG 1.4.2 1 | AVAIL PGDG 1.4.2 1 | AVAIL PGDG 1.4.2 1 |
+| el8.x86_64 | AVAIL PGDG 1.4.3 2 | AVAIL PGDG 1.4.3 2 | AVAIL PGDG 1.4.3 3 | AVAIL PGDG 1.4.3 4 | AVAIL PGDG 1.4.3 4 |
+| el8.aarch64 | AVAIL PGDG 1.4.3 2 | AVAIL PGDG 1.4.3 2 | AVAIL PGDG 1.4.3 3 | AVAIL PGDG 1.4.3 4 | AVAIL PGDG 1.4.3 4 |
+| el9.x86_64 | AVAIL PGDG 1.4.3 3 | AVAIL PGDG 1.4.3 3 | AVAIL PGDG 1.4.3 4 | AVAIL PGDG 1.4.3 5 | AVAIL PGDG 1.4.3 5 |
+| el9.aarch64 | AVAIL PGDG 1.4.3 3 | AVAIL PGDG 1.4.3 3 | AVAIL PGDG 1.4.3 4 | AVAIL PGDG 1.4.3 5 | AVAIL PGDG 1.4.3 5 |
+| el10.x86_64 | AVAIL PGDG 1.4.3 3 | AVAIL PGDG 1.4.3 3 | AVAIL PGDG 1.4.3 3 | AVAIL PGDG 1.4.3 3 | AVAIL PGDG 1.4.3 3 |
+| el10.aarch64 | AVAIL PGDG 1.4.3 3 | AVAIL PGDG 1.4.3 3 | AVAIL PGDG 1.4.3 3 | AVAIL PGDG 1.4.3 3 | AVAIL PGDG 1.4.3 3 |
+| d12.x86_64 | AVAIL PGDG 1.4.3 2 | AVAIL PGDG 1.4.3 2 | AVAIL PGDG 1.4.3 2 | AVAIL PGDG 1.4.3 2 | AVAIL PGDG 1.4.3 2 |
+| d12.aarch64 | AVAIL PGDG 1.4.3 2 | AVAIL PGDG 1.4.3 2 | AVAIL PGDG 1.4.3 2 | AVAIL PGDG 1.4.3 2 | AVAIL PGDG 1.4.3 2 |
+| d13.x86_64 | AVAIL PGDG 1.4.3 2 | AVAIL PGDG 1.4.3 2 | AVAIL PGDG 1.4.3 2 | AVAIL PGDG 1.4.3 2 | AVAIL PGDG 1.4.3 2 |
+| d13.aarch64 | AVAIL PGDG 1.4.3 2 | AVAIL PGDG 1.4.3 2 | AVAIL PGDG 1.4.3 2 | AVAIL PGDG 1.4.3 2 | AVAIL PGDG 1.4.3 2 |
+| u22.x86_64 | AVAIL PGDG 1.4.3 2 | AVAIL PGDG 1.4.3 2 | AVAIL PGDG 1.4.3 2 | AVAIL PGDG 1.4.3 2 | AVAIL PGDG 1.4.3 2 |
+| u22.aarch64 | AVAIL PGDG 1.4.3 2 | AVAIL PGDG 1.4.3 2 | AVAIL PGDG 1.4.3 2 | AVAIL PGDG 1.4.3 2 | AVAIL PGDG 1.4.3 2 |
+| u24.x86_64 | AVAIL PGDG 1.4.3 2 | AVAIL PGDG 1.4.3 2 | AVAIL PGDG 1.4.3 2 | AVAIL PGDG 1.4.3 2 | AVAIL PGDG 1.4.3 2 |
+| u24.aarch64 | AVAIL PGDG 1.4.3 2 | AVAIL PGDG 1.4.3 2 | AVAIL PGDG 1.4.3 2 | AVAIL PGDG 1.4.3 2 | AVAIL PGDG 1.4.3 2 |
+| u26.x86_64 | AVAIL PGDG 1.4.3 2 | AVAIL PGDG 1.4.3 2 | AVAIL PGDG 1.4.3 2 | AVAIL PGDG 1.4.3 2 | AVAIL PGDG 1.4.3 2 |
+| u26.aarch64 | AVAIL PGDG 1.4.3 2 | AVAIL PGDG 1.4.3 2 | AVAIL PGDG 1.4.3 2 | AVAIL PGDG 1.4.3 2 | AVAIL PGDG 1.4.3 2 |
+@ el8.x86_64 18 hypopg_18 hypopg_18-1.4.3-1PGDG.rhel8.10.x86_64.rpm pgdg 1.4.3 31.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/hypopg_18-1.4.3-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 18 hypopg_18 hypopg_18-1.4.2-1PGDG.rhel8.x86_64.rpm pgdg 1.4.2 31.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/hypopg_18-1.4.2-1PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 18 hypopg_18 hypopg_18-1.4.3-1PGDG.rhel8.10.aarch64.rpm pgdg 1.4.3 32.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/hypopg_18-1.4.3-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 18 hypopg_18 hypopg_18-1.4.2-1PGDG.rhel8.aarch64.rpm pgdg 1.4.2 31.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/hypopg_18-1.4.2-1PGDG.rhel8.aarch64.rpm
+@ el9.x86_64 18 hypopg_18 hypopg_18-1.4.3-1PGDG.rhel9.8.x86_64.rpm pgdg 1.4.3 30.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/hypopg_18-1.4.3-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 18 hypopg_18 hypopg_18-1.4.2-3PGDG.rhel9.8.x86_64.rpm pgdg 1.4.2 29.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/hypopg_18-1.4.2-3PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 18 hypopg_18 hypopg_18-1.4.2-1PGDG.rhel9.x86_64.rpm pgdg 1.4.2 29.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/hypopg_18-1.4.2-1PGDG.rhel9.x86_64.rpm
+@ el9.aarch64 18 hypopg_18 hypopg_18-1.4.3-1PGDG.rhel9.8.aarch64.rpm pgdg 1.4.3 31.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/hypopg_18-1.4.3-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 18 hypopg_18 hypopg_18-1.4.2-3PGDG.rhel9.8.aarch64.rpm pgdg 1.4.2 31.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/hypopg_18-1.4.2-3PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 18 hypopg_18 hypopg_18-1.4.2-1PGDG.rhel9.aarch64.rpm pgdg 1.4.2 31.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/hypopg_18-1.4.2-1PGDG.rhel9.aarch64.rpm
+@ el10.x86_64 18 hypopg_18 hypopg_18-1.4.3-1PGDG.rhel10.2.x86_64.rpm pgdg 1.4.3 30.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/hypopg_18-1.4.3-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 18 hypopg_18 hypopg_18-1.4.2-3PGDG.rhel10.2.x86_64.rpm pgdg 1.4.2 30.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/hypopg_18-1.4.2-3PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 18 hypopg_18 hypopg_18-1.4.2-1PGDG.rhel10.x86_64.rpm pgdg 1.4.2 30.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/hypopg_18-1.4.2-1PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 18 hypopg_18 hypopg_18-1.4.3-1PGDG.rhel10.2.aarch64.rpm pgdg 1.4.3 32.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/hypopg_18-1.4.3-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 18 hypopg_18 hypopg_18-1.4.2-3PGDG.rhel10.2.aarch64.rpm pgdg 1.4.2 31.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/hypopg_18-1.4.2-3PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 18 hypopg_18 hypopg_18-1.4.2-1PGDG.rhel10.aarch64.rpm pgdg 1.4.2 32.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/hypopg_18-1.4.2-1PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-hypopg postgresql-18-hypopg_1.4.3-1.pgdg12+1_amd64.deb pgdg 1.4.3 57.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-18-hypopg_1.4.3-1.pgdg12+1_amd64.deb
 @ d12.x86_64 18 postgresql-18-hypopg postgresql-18-hypopg_1.4.2-2.pgdg12+1_amd64.deb pgdg 1.4.2 57.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-18-hypopg_1.4.2-2.pgdg12+1_amd64.deb
+@ d12.aarch64 18 postgresql-18-hypopg postgresql-18-hypopg_1.4.3-1.pgdg12+1_arm64.deb pgdg 1.4.3 57.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-18-hypopg_1.4.3-1.pgdg12+1_arm64.deb
 @ d12.aarch64 18 postgresql-18-hypopg postgresql-18-hypopg_1.4.2-2.pgdg12+1_arm64.deb pgdg 1.4.2 57.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-18-hypopg_1.4.2-2.pgdg12+1_arm64.deb
+@ d13.x86_64 18 postgresql-18-hypopg postgresql-18-hypopg_1.4.3-1.pgdg13+1_amd64.deb pgdg 1.4.3 57.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-18-hypopg_1.4.3-1.pgdg13+1_amd64.deb
 @ d13.x86_64 18 postgresql-18-hypopg postgresql-18-hypopg_1.4.2-2.pgdg13+1_amd64.deb pgdg 1.4.2 57.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-18-hypopg_1.4.2-2.pgdg13+1_amd64.deb
+@ d13.aarch64 18 postgresql-18-hypopg postgresql-18-hypopg_1.4.3-1.pgdg13+1_arm64.deb pgdg 1.4.3 58.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-18-hypopg_1.4.3-1.pgdg13+1_arm64.deb
 @ d13.aarch64 18 postgresql-18-hypopg postgresql-18-hypopg_1.4.2-2.pgdg13+1_arm64.deb pgdg 1.4.2 58.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-18-hypopg_1.4.2-2.pgdg13+1_arm64.deb
+@ u22.x86_64 18 postgresql-18-hypopg postgresql-18-hypopg_1.4.3-1.pgdg22.04+1_amd64.deb pgdg 1.4.3 59.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-18-hypopg_1.4.3-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 18 postgresql-18-hypopg postgresql-18-hypopg_1.4.2-2.pgdg22.04+1_amd64.deb pgdg 1.4.2 59.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-18-hypopg_1.4.2-2.pgdg22.04+1_amd64.deb
+@ u22.aarch64 18 postgresql-18-hypopg postgresql-18-hypopg_1.4.3-1.pgdg22.04+1_arm64.deb pgdg 1.4.3 59.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-18-hypopg_1.4.3-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 18 postgresql-18-hypopg postgresql-18-hypopg_1.4.2-2.pgdg22.04+1_arm64.deb pgdg 1.4.2 59.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-18-hypopg_1.4.2-2.pgdg22.04+1_arm64.deb
+@ u24.x86_64 18 postgresql-18-hypopg postgresql-18-hypopg_1.4.3-1.pgdg24.04+1_amd64.deb pgdg 1.4.3 57.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-18-hypopg_1.4.3-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 18 postgresql-18-hypopg postgresql-18-hypopg_1.4.2-2.pgdg24.04+1_amd64.deb pgdg 1.4.2 57.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-18-hypopg_1.4.2-2.pgdg24.04+1_amd64.deb
+@ u24.aarch64 18 postgresql-18-hypopg postgresql-18-hypopg_1.4.3-1.pgdg24.04+1_arm64.deb pgdg 1.4.3 57.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-18-hypopg_1.4.3-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 18 postgresql-18-hypopg postgresql-18-hypopg_1.4.2-2.pgdg24.04+1_arm64.deb pgdg 1.4.2 57.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-18-hypopg_1.4.2-2.pgdg24.04+1_arm64.deb
+@ u26.x86_64 18 postgresql-18-hypopg postgresql-18-hypopg_1.4.3-1.pgdg26.04+1_amd64.deb pgdg 1.4.3 56.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-18-hypopg_1.4.3-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 18 postgresql-18-hypopg postgresql-18-hypopg_1.4.2-2.pgdg26.04+1_amd64.deb pgdg 1.4.2 56.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-18-hypopg_1.4.2-2.pgdg26.04+1_amd64.deb
+@ u26.aarch64 18 postgresql-18-hypopg postgresql-18-hypopg_1.4.3-1.pgdg26.04+1_arm64.deb pgdg 1.4.3 57.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-18-hypopg_1.4.3-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 18 postgresql-18-hypopg postgresql-18-hypopg_1.4.2-2.pgdg26.04+1_arm64.deb pgdg 1.4.2 57.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-18-hypopg_1.4.2-2.pgdg26.04+1_arm64.deb
+@ el8.x86_64 17 hypopg_17 hypopg_17-1.4.3-1PGDG.rhel8.10.x86_64.rpm pgdg 1.4.3 31.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/hypopg_17-1.4.3-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 hypopg_17 hypopg_17-1.4.1-2PGDG.rhel8.x86_64.rpm pgdg 1.4.1 30.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/hypopg_17-1.4.1-2PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 17 hypopg_17 hypopg_17-1.4.3-1PGDG.rhel8.10.aarch64.rpm pgdg 1.4.3 32.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/hypopg_17-1.4.3-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 17 hypopg_17 hypopg_17-1.4.1-2PGDG.rhel8.aarch64.rpm pgdg 1.4.1 30.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/hypopg_17-1.4.1-2PGDG.rhel8.aarch64.rpm
+@ el9.x86_64 17 hypopg_17 hypopg_17-1.4.3-1PGDG.rhel9.8.x86_64.rpm pgdg 1.4.3 30.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/hypopg_17-1.4.3-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 17 hypopg_17 hypopg_17-1.4.2-3PGDG.rhel9.8.x86_64.rpm pgdg 1.4.2 29.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/hypopg_17-1.4.2-3PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 17 hypopg_17 hypopg_17-1.4.1-2PGDG.rhel9.x86_64.rpm pgdg 1.4.1 29.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/hypopg_17-1.4.1-2PGDG.rhel9.x86_64.rpm
+@ el9.aarch64 17 hypopg_17 hypopg_17-1.4.3-1PGDG.rhel9.8.aarch64.rpm pgdg 1.4.3 31.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/hypopg_17-1.4.3-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 17 hypopg_17 hypopg_17-1.4.2-3PGDG.rhel9.8.aarch64.rpm pgdg 1.4.2 31.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/hypopg_17-1.4.2-3PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 17 hypopg_17 hypopg_17-1.4.1-2PGDG.rhel9.aarch64.rpm pgdg 1.4.1 30.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/hypopg_17-1.4.1-2PGDG.rhel9.aarch64.rpm
+@ el10.x86_64 17 hypopg_17 hypopg_17-1.4.3-1PGDG.rhel10.2.x86_64.rpm pgdg 1.4.3 30.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/hypopg_17-1.4.3-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 17 hypopg_17 hypopg_17-1.4.2-3PGDG.rhel10.2.x86_64.rpm pgdg 1.4.2 30.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/hypopg_17-1.4.2-3PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 17 hypopg_17 hypopg_17-1.4.1-3PGDG.rhel10.x86_64.rpm pgdg 1.4.1 30.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/hypopg_17-1.4.1-3PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 17 hypopg_17 hypopg_17-1.4.3-1PGDG.rhel10.2.aarch64.rpm pgdg 1.4.3 32.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/hypopg_17-1.4.3-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 17 hypopg_17 hypopg_17-1.4.2-3PGDG.rhel10.2.aarch64.rpm pgdg 1.4.2 31.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/hypopg_17-1.4.2-3PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 17 hypopg_17 hypopg_17-1.4.1-3PGDG.rhel10.aarch64.rpm pgdg 1.4.1 31.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/hypopg_17-1.4.1-3PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-hypopg postgresql-17-hypopg_1.4.3-1.pgdg12+1_amd64.deb pgdg 1.4.3 57.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-17-hypopg_1.4.3-1.pgdg12+1_amd64.deb
 @ d12.x86_64 17 postgresql-17-hypopg postgresql-17-hypopg_1.4.2-2.pgdg12+1_amd64.deb pgdg 1.4.2 57.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-17-hypopg_1.4.2-2.pgdg12+1_amd64.deb
+@ d12.aarch64 17 postgresql-17-hypopg postgresql-17-hypopg_1.4.3-1.pgdg12+1_arm64.deb pgdg 1.4.3 58.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-17-hypopg_1.4.3-1.pgdg12+1_arm64.deb
 @ d12.aarch64 17 postgresql-17-hypopg postgresql-17-hypopg_1.4.2-2.pgdg12+1_arm64.deb pgdg 1.4.2 57.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-17-hypopg_1.4.2-2.pgdg12+1_arm64.deb
+@ d13.x86_64 17 postgresql-17-hypopg postgresql-17-hypopg_1.4.3-1.pgdg13+1_amd64.deb pgdg 1.4.3 57.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-17-hypopg_1.4.3-1.pgdg13+1_amd64.deb
 @ d13.x86_64 17 postgresql-17-hypopg postgresql-17-hypopg_1.4.2-2.pgdg13+1_amd64.deb pgdg 1.4.2 57.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-17-hypopg_1.4.2-2.pgdg13+1_amd64.deb
+@ d13.aarch64 17 postgresql-17-hypopg postgresql-17-hypopg_1.4.3-1.pgdg13+1_arm64.deb pgdg 1.4.3 58.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-17-hypopg_1.4.3-1.pgdg13+1_arm64.deb
 @ d13.aarch64 17 postgresql-17-hypopg postgresql-17-hypopg_1.4.2-2.pgdg13+1_arm64.deb pgdg 1.4.2 58.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-17-hypopg_1.4.2-2.pgdg13+1_arm64.deb
+@ u22.x86_64 17 postgresql-17-hypopg postgresql-17-hypopg_1.4.3-1.pgdg22.04+1_amd64.deb pgdg 1.4.3 72.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-17-hypopg_1.4.3-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 17 postgresql-17-hypopg postgresql-17-hypopg_1.4.2-2.pgdg22.04+1_amd64.deb pgdg 1.4.2 72.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-17-hypopg_1.4.2-2.pgdg22.04+1_amd64.deb
+@ u22.aarch64 17 postgresql-17-hypopg postgresql-17-hypopg_1.4.3-1.pgdg22.04+1_arm64.deb pgdg 1.4.3 72.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-17-hypopg_1.4.3-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 17 postgresql-17-hypopg postgresql-17-hypopg_1.4.2-2.pgdg22.04+1_arm64.deb pgdg 1.4.2 72.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-17-hypopg_1.4.2-2.pgdg22.04+1_arm64.deb
+@ u24.x86_64 17 postgresql-17-hypopg postgresql-17-hypopg_1.4.3-1.pgdg24.04+1_amd64.deb pgdg 1.4.3 57.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-17-hypopg_1.4.3-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 17 postgresql-17-hypopg postgresql-17-hypopg_1.4.2-2.pgdg24.04+1_amd64.deb pgdg 1.4.2 57.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-17-hypopg_1.4.2-2.pgdg24.04+1_amd64.deb
+@ u24.aarch64 17 postgresql-17-hypopg postgresql-17-hypopg_1.4.3-1.pgdg24.04+1_arm64.deb pgdg 1.4.3 57.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-17-hypopg_1.4.3-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 17 postgresql-17-hypopg postgresql-17-hypopg_1.4.2-2.pgdg24.04+1_arm64.deb pgdg 1.4.2 57.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-17-hypopg_1.4.2-2.pgdg24.04+1_arm64.deb
+@ u26.x86_64 17 postgresql-17-hypopg postgresql-17-hypopg_1.4.3-1.pgdg26.04+1_amd64.deb pgdg 1.4.3 56.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-17-hypopg_1.4.3-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 17 postgresql-17-hypopg postgresql-17-hypopg_1.4.2-2.pgdg26.04+1_amd64.deb pgdg 1.4.2 56.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-17-hypopg_1.4.2-2.pgdg26.04+1_amd64.deb
+@ u26.aarch64 17 postgresql-17-hypopg postgresql-17-hypopg_1.4.3-1.pgdg26.04+1_arm64.deb pgdg 1.4.3 57.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-17-hypopg_1.4.3-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 17 postgresql-17-hypopg postgresql-17-hypopg_1.4.2-2.pgdg26.04+1_arm64.deb pgdg 1.4.2 57.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-17-hypopg_1.4.2-2.pgdg26.04+1_arm64.deb
+@ el8.x86_64 16 hypopg_16 hypopg_16-1.4.3-1PGDG.rhel8.10.x86_64.rpm pgdg 1.4.3 31.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/hypopg_16-1.4.3-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 hypopg_16 hypopg_16-1.4.1-1PGDG.rhel8.x86_64.rpm pgdg 1.4.1 30.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/hypopg_16-1.4.1-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 16 hypopg_16 hypopg_16-1.4.0-2PGDG.rhel8.x86_64.rpm pgdg 1.4.0 29.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/hypopg_16-1.4.0-2PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 16 hypopg_16 hypopg_16-1.4.3-1PGDG.rhel8.10.aarch64.rpm pgdg 1.4.3 32.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/hypopg_16-1.4.3-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 16 hypopg_16 hypopg_16-1.4.1-1PGDG.rhel8.aarch64.rpm pgdg 1.4.1 30.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/hypopg_16-1.4.1-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 16 hypopg_16 hypopg_16-1.4.0-2PGDG.rhel8.aarch64.rpm pgdg 1.4.0 30.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/hypopg_16-1.4.0-2PGDG.rhel8.aarch64.rpm
+@ el9.x86_64 16 hypopg_16 hypopg_16-1.4.3-1PGDG.rhel9.8.x86_64.rpm pgdg 1.4.3 30.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/hypopg_16-1.4.3-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 16 hypopg_16 hypopg_16-1.4.2-3PGDG.rhel9.8.x86_64.rpm pgdg 1.4.2 29.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/hypopg_16-1.4.2-3PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 16 hypopg_16 hypopg_16-1.4.1-1PGDG.rhel9.x86_64.rpm pgdg 1.4.1 28.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/hypopg_16-1.4.1-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 16 hypopg_16 hypopg_16-1.4.0-2PGDG.rhel9.x86_64.rpm pgdg 1.4.0 28.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/hypopg_16-1.4.0-2PGDG.rhel9.x86_64.rpm
+@ el9.aarch64 16 hypopg_16 hypopg_16-1.4.3-1PGDG.rhel9.8.aarch64.rpm pgdg 1.4.3 31.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/hypopg_16-1.4.3-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 16 hypopg_16 hypopg_16-1.4.2-3PGDG.rhel9.8.aarch64.rpm pgdg 1.4.2 31.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/hypopg_16-1.4.2-3PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 16 hypopg_16 hypopg_16-1.4.1-1PGDG.rhel9.aarch64.rpm pgdg 1.4.1 30.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/hypopg_16-1.4.1-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 16 hypopg_16 hypopg_16-1.4.0-2PGDG.rhel9.aarch64.rpm pgdg 1.4.0 29.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/hypopg_16-1.4.0-2PGDG.rhel9.aarch64.rpm
+@ el10.x86_64 16 hypopg_16 hypopg_16-1.4.3-1PGDG.rhel10.2.x86_64.rpm pgdg 1.4.3 30.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/hypopg_16-1.4.3-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 16 hypopg_16 hypopg_16-1.4.2-3PGDG.rhel10.2.x86_64.rpm pgdg 1.4.2 30.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/hypopg_16-1.4.2-3PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 16 hypopg_16 hypopg_16-1.4.1-3PGDG.rhel10.x86_64.rpm pgdg 1.4.1 30.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/hypopg_16-1.4.1-3PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 16 hypopg_16 hypopg_16-1.4.3-1PGDG.rhel10.2.aarch64.rpm pgdg 1.4.3 32.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/hypopg_16-1.4.3-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 16 hypopg_16 hypopg_16-1.4.2-3PGDG.rhel10.2.aarch64.rpm pgdg 1.4.2 31.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/hypopg_16-1.4.2-3PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 16 hypopg_16 hypopg_16-1.4.1-3PGDG.rhel10.aarch64.rpm pgdg 1.4.1 31.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/hypopg_16-1.4.1-3PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 16 postgresql-16-hypopg postgresql-16-hypopg_1.4.3-1.pgdg12+1_amd64.deb pgdg 1.4.3 57.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-16-hypopg_1.4.3-1.pgdg12+1_amd64.deb
 @ d12.x86_64 16 postgresql-16-hypopg postgresql-16-hypopg_1.4.2-2.pgdg12+1_amd64.deb pgdg 1.4.2 57.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-16-hypopg_1.4.2-2.pgdg12+1_amd64.deb
+@ d12.aarch64 16 postgresql-16-hypopg postgresql-16-hypopg_1.4.3-1.pgdg12+1_arm64.deb pgdg 1.4.3 58.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-16-hypopg_1.4.3-1.pgdg12+1_arm64.deb
 @ d12.aarch64 16 postgresql-16-hypopg postgresql-16-hypopg_1.4.2-2.pgdg12+1_arm64.deb pgdg 1.4.2 58.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-16-hypopg_1.4.2-2.pgdg12+1_arm64.deb
+@ d13.x86_64 16 postgresql-16-hypopg postgresql-16-hypopg_1.4.3-1.pgdg13+1_amd64.deb pgdg 1.4.3 57.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-16-hypopg_1.4.3-1.pgdg13+1_amd64.deb
 @ d13.x86_64 16 postgresql-16-hypopg postgresql-16-hypopg_1.4.2-2.pgdg13+1_amd64.deb pgdg 1.4.2 57.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-16-hypopg_1.4.2-2.pgdg13+1_amd64.deb
+@ d13.aarch64 16 postgresql-16-hypopg postgresql-16-hypopg_1.4.3-1.pgdg13+1_arm64.deb pgdg 1.4.3 58.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-16-hypopg_1.4.3-1.pgdg13+1_arm64.deb
 @ d13.aarch64 16 postgresql-16-hypopg postgresql-16-hypopg_1.4.2-2.pgdg13+1_arm64.deb pgdg 1.4.2 58.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-16-hypopg_1.4.2-2.pgdg13+1_arm64.deb
+@ u22.x86_64 16 postgresql-16-hypopg postgresql-16-hypopg_1.4.3-1.pgdg22.04+1_amd64.deb pgdg 1.4.3 72.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-16-hypopg_1.4.3-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 16 postgresql-16-hypopg postgresql-16-hypopg_1.4.2-2.pgdg22.04+1_amd64.deb pgdg 1.4.2 72.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-16-hypopg_1.4.2-2.pgdg22.04+1_amd64.deb
+@ u22.aarch64 16 postgresql-16-hypopg postgresql-16-hypopg_1.4.3-1.pgdg22.04+1_arm64.deb pgdg 1.4.3 72.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-16-hypopg_1.4.3-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 16 postgresql-16-hypopg postgresql-16-hypopg_1.4.2-2.pgdg22.04+1_arm64.deb pgdg 1.4.2 72.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-16-hypopg_1.4.2-2.pgdg22.04+1_arm64.deb
+@ u24.x86_64 16 postgresql-16-hypopg postgresql-16-hypopg_1.4.3-1.pgdg24.04+1_amd64.deb pgdg 1.4.3 57.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-16-hypopg_1.4.3-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 16 postgresql-16-hypopg postgresql-16-hypopg_1.4.2-2.pgdg24.04+1_amd64.deb pgdg 1.4.2 57.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-16-hypopg_1.4.2-2.pgdg24.04+1_amd64.deb
+@ u24.aarch64 16 postgresql-16-hypopg postgresql-16-hypopg_1.4.3-1.pgdg24.04+1_arm64.deb pgdg 1.4.3 57.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-16-hypopg_1.4.3-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 16 postgresql-16-hypopg postgresql-16-hypopg_1.4.2-2.pgdg24.04+1_arm64.deb pgdg 1.4.2 57.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-16-hypopg_1.4.2-2.pgdg24.04+1_arm64.deb
+@ u26.x86_64 16 postgresql-16-hypopg postgresql-16-hypopg_1.4.3-1.pgdg26.04+1_amd64.deb pgdg 1.4.3 56.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-16-hypopg_1.4.3-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 16 postgresql-16-hypopg postgresql-16-hypopg_1.4.2-2.pgdg26.04+1_amd64.deb pgdg 1.4.2 56.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-16-hypopg_1.4.2-2.pgdg26.04+1_amd64.deb
+@ u26.aarch64 16 postgresql-16-hypopg postgresql-16-hypopg_1.4.3-1.pgdg26.04+1_arm64.deb pgdg 1.4.3 57.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-16-hypopg_1.4.3-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 16 postgresql-16-hypopg postgresql-16-hypopg_1.4.2-2.pgdg26.04+1_arm64.deb pgdg 1.4.2 57.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-16-hypopg_1.4.2-2.pgdg26.04+1_arm64.deb
+@ el8.x86_64 15 hypopg_15 hypopg_15-1.4.3-1PGDG.rhel8.10.x86_64.rpm pgdg 1.4.3 32.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/hypopg_15-1.4.3-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 hypopg_15 hypopg_15-1.4.1-1PGDG.rhel8.x86_64.rpm pgdg 1.4.1 30.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/hypopg_15-1.4.1-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 15 hypopg_15 hypopg_15-1.4.0-1.rhel8.x86_64.rpm pgdg 1.4.0 29.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/hypopg_15-1.4.0-1.rhel8.x86_64.rpm
 @ el8.x86_64 15 hypopg_15 hypopg_15-1.3.1-1.rhel8.x86_64.rpm pgdg 1.3.1 74.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/hypopg_15-1.3.1-1.rhel8.x86_64.rpm
+@ el8.aarch64 15 hypopg_15 hypopg_15-1.4.3-1PGDG.rhel8.10.aarch64.rpm pgdg 1.4.3 32.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/hypopg_15-1.4.3-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 15 hypopg_15 hypopg_15-1.4.1-1PGDG.rhel8.aarch64.rpm pgdg 1.4.1 31.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/hypopg_15-1.4.1-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 15 hypopg_15 hypopg_15-1.4.0-1.rhel8.aarch64.rpm pgdg 1.4.0 30.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/hypopg_15-1.4.0-1.rhel8.aarch64.rpm
 @ el8.aarch64 15 hypopg_15 hypopg_15-1.3.1-1.rhel8.aarch64.rpm pgdg 1.3.1 74.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/hypopg_15-1.3.1-1.rhel8.aarch64.rpm
+@ el9.x86_64 15 hypopg_15 hypopg_15-1.4.3-1PGDG.rhel9.8.x86_64.rpm pgdg 1.4.3 30.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/hypopg_15-1.4.3-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 15 hypopg_15 hypopg_15-1.4.2-3PGDG.rhel9.8.x86_64.rpm pgdg 1.4.2 30.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/hypopg_15-1.4.2-3PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 15 hypopg_15 hypopg_15-1.4.1-1PGDG.rhel9.x86_64.rpm pgdg 1.4.1 29.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/hypopg_15-1.4.1-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 15 hypopg_15 hypopg_15-1.4.0-1.rhel9.x86_64.rpm pgdg 1.4.0 29.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/hypopg_15-1.4.0-1.rhel9.x86_64.rpm
+@ el9.x86_64 15 hypopg_15 hypopg_15-1.3.1-1.rhel9.x86_64.rpm pgdg 1.3.1 75.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/hypopg_15-1.3.1-1.rhel9.x86_64.rpm
+@ el9.aarch64 15 hypopg_15 hypopg_15-1.4.3-1PGDG.rhel9.8.aarch64.rpm pgdg 1.4.3 32.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/hypopg_15-1.4.3-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 15 hypopg_15 hypopg_15-1.4.2-3PGDG.rhel9.8.aarch64.rpm pgdg 1.4.2 32.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/hypopg_15-1.4.2-3PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 15 hypopg_15 hypopg_15-1.4.1-1PGDG.rhel9.aarch64.rpm pgdg 1.4.1 31.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/hypopg_15-1.4.1-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 15 hypopg_15 hypopg_15-1.4.0-1.rhel9.aarch64.rpm pgdg 1.4.0 30.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/hypopg_15-1.4.0-1.rhel9.aarch64.rpm
+@ el9.aarch64 15 hypopg_15 hypopg_15-1.3.1-1.rhel9.aarch64.rpm pgdg 1.3.1 76.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/hypopg_15-1.3.1-1.rhel9.aarch64.rpm
+@ el10.x86_64 15 hypopg_15 hypopg_15-1.4.3-1PGDG.rhel10.2.x86_64.rpm pgdg 1.4.3 31.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/hypopg_15-1.4.3-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 15 hypopg_15 hypopg_15-1.4.2-3PGDG.rhel10.2.x86_64.rpm pgdg 1.4.2 31.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/hypopg_15-1.4.2-3PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 15 hypopg_15 hypopg_15-1.4.1-3PGDG.rhel10.x86_64.rpm pgdg 1.4.1 31.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/hypopg_15-1.4.1-3PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 15 hypopg_15 hypopg_15-1.4.3-1PGDG.rhel10.2.aarch64.rpm pgdg 1.4.3 33.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/hypopg_15-1.4.3-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 15 hypopg_15 hypopg_15-1.4.2-3PGDG.rhel10.2.aarch64.rpm pgdg 1.4.2 32.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/hypopg_15-1.4.2-3PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 15 hypopg_15 hypopg_15-1.4.1-3PGDG.rhel10.aarch64.rpm pgdg 1.4.1 32.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/hypopg_15-1.4.1-3PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 15 postgresql-15-hypopg postgresql-15-hypopg_1.4.3-1.pgdg12+1_amd64.deb pgdg 1.4.3 57.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-15-hypopg_1.4.3-1.pgdg12+1_amd64.deb
 @ d12.x86_64 15 postgresql-15-hypopg postgresql-15-hypopg_1.4.2-2.pgdg12+1_amd64.deb pgdg 1.4.2 57.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-15-hypopg_1.4.2-2.pgdg12+1_amd64.deb
+@ d12.aarch64 15 postgresql-15-hypopg postgresql-15-hypopg_1.4.3-1.pgdg12+1_arm64.deb pgdg 1.4.3 58.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-15-hypopg_1.4.3-1.pgdg12+1_arm64.deb
 @ d12.aarch64 15 postgresql-15-hypopg postgresql-15-hypopg_1.4.2-2.pgdg12+1_arm64.deb pgdg 1.4.2 58.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-15-hypopg_1.4.2-2.pgdg12+1_arm64.deb
+@ d13.x86_64 15 postgresql-15-hypopg postgresql-15-hypopg_1.4.3-1.pgdg13+1_amd64.deb pgdg 1.4.3 58.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-15-hypopg_1.4.3-1.pgdg13+1_amd64.deb
 @ d13.x86_64 15 postgresql-15-hypopg postgresql-15-hypopg_1.4.2-2.pgdg13+1_amd64.deb pgdg 1.4.2 58.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-15-hypopg_1.4.2-2.pgdg13+1_amd64.deb
+@ d13.aarch64 15 postgresql-15-hypopg postgresql-15-hypopg_1.4.3-1.pgdg13+1_arm64.deb pgdg 1.4.3 58.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-15-hypopg_1.4.3-1.pgdg13+1_arm64.deb
 @ d13.aarch64 15 postgresql-15-hypopg postgresql-15-hypopg_1.4.2-2.pgdg13+1_arm64.deb pgdg 1.4.2 58.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-15-hypopg_1.4.2-2.pgdg13+1_arm64.deb
+@ u22.x86_64 15 postgresql-15-hypopg postgresql-15-hypopg_1.4.3-1.pgdg22.04+1_amd64.deb pgdg 1.4.3 72.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-15-hypopg_1.4.3-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 15 postgresql-15-hypopg postgresql-15-hypopg_1.4.2-2.pgdg22.04+1_amd64.deb pgdg 1.4.2 72.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-15-hypopg_1.4.2-2.pgdg22.04+1_amd64.deb
+@ u22.aarch64 15 postgresql-15-hypopg postgresql-15-hypopg_1.4.3-1.pgdg22.04+1_arm64.deb pgdg 1.4.3 72.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-15-hypopg_1.4.3-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 15 postgresql-15-hypopg postgresql-15-hypopg_1.4.2-2.pgdg22.04+1_arm64.deb pgdg 1.4.2 72.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-15-hypopg_1.4.2-2.pgdg22.04+1_arm64.deb
+@ u24.x86_64 15 postgresql-15-hypopg postgresql-15-hypopg_1.4.3-1.pgdg24.04+1_amd64.deb pgdg 1.4.3 58.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-15-hypopg_1.4.3-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 15 postgresql-15-hypopg postgresql-15-hypopg_1.4.2-2.pgdg24.04+1_amd64.deb pgdg 1.4.2 57.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-15-hypopg_1.4.2-2.pgdg24.04+1_amd64.deb
+@ u24.aarch64 15 postgresql-15-hypopg postgresql-15-hypopg_1.4.3-1.pgdg24.04+1_arm64.deb pgdg 1.4.3 58.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-15-hypopg_1.4.3-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 15 postgresql-15-hypopg postgresql-15-hypopg_1.4.2-2.pgdg24.04+1_arm64.deb pgdg 1.4.2 58.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-15-hypopg_1.4.2-2.pgdg24.04+1_arm64.deb
+@ u26.x86_64 15 postgresql-15-hypopg postgresql-15-hypopg_1.4.3-1.pgdg26.04+1_amd64.deb pgdg 1.4.3 57.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-15-hypopg_1.4.3-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 15 postgresql-15-hypopg postgresql-15-hypopg_1.4.2-2.pgdg26.04+1_amd64.deb pgdg 1.4.2 57.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-15-hypopg_1.4.2-2.pgdg26.04+1_amd64.deb
+@ u26.aarch64 15 postgresql-15-hypopg postgresql-15-hypopg_1.4.3-1.pgdg26.04+1_arm64.deb pgdg 1.4.3 57.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-15-hypopg_1.4.3-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 15 postgresql-15-hypopg postgresql-15-hypopg_1.4.2-2.pgdg26.04+1_arm64.deb pgdg 1.4.2 57.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-15-hypopg_1.4.2-2.pgdg26.04+1_arm64.deb
+@ el8.x86_64 14 hypopg_14 hypopg_14-1.4.3-1PGDG.rhel8.10.x86_64.rpm pgdg 1.4.3 32.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/hypopg_14-1.4.3-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 14 hypopg_14 hypopg_14-1.4.1-1PGDG.rhel8.x86_64.rpm pgdg 1.4.1 30.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/hypopg_14-1.4.1-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 14 hypopg_14 hypopg_14-1.4.0-1.rhel8.x86_64.rpm pgdg 1.4.0 29.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/hypopg_14-1.4.0-1.rhel8.x86_64.rpm
 @ el8.x86_64 14 hypopg_14 hypopg_14-1.3.1-1.rhel8.x86_64.rpm pgdg 1.3.1 74.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/hypopg_14-1.3.1-1.rhel8.x86_64.rpm
+@ el8.aarch64 14 hypopg_14 hypopg_14-1.4.3-1PGDG.rhel8.10.aarch64.rpm pgdg 1.4.3 32.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/hypopg_14-1.4.3-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 14 hypopg_14 hypopg_14-1.4.1-1PGDG.rhel8.aarch64.rpm pgdg 1.4.1 31.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/hypopg_14-1.4.1-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 14 hypopg_14 hypopg_14-1.4.0-1.rhel8.aarch64.rpm pgdg 1.4.0 30.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/hypopg_14-1.4.0-1.rhel8.aarch64.rpm
 @ el8.aarch64 14 hypopg_14 hypopg_14-1.3.1-1.rhel8.aarch64.rpm pgdg 1.3.1 73.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/hypopg_14-1.3.1-1.rhel8.aarch64.rpm
+@ el9.x86_64 14 hypopg_14 hypopg_14-1.4.3-1PGDG.rhel9.8.x86_64.rpm pgdg 1.4.3 30.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/hypopg_14-1.4.3-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 14 hypopg_14 hypopg_14-1.4.2-3PGDG.rhel9.8.x86_64.rpm pgdg 1.4.2 30.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/hypopg_14-1.4.2-3PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 14 hypopg_14 hypopg_14-1.4.1-1PGDG.rhel9.x86_64.rpm pgdg 1.4.1 29.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/hypopg_14-1.4.1-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 14 hypopg_14 hypopg_14-1.4.0-1.rhel9.x86_64.rpm pgdg 1.4.0 29.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/hypopg_14-1.4.0-1.rhel9.x86_64.rpm
+@ el9.x86_64 14 hypopg_14 hypopg_14-1.3.1-1.rhel9.x86_64.rpm pgdg 1.3.1 74.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/hypopg_14-1.3.1-1.rhel9.x86_64.rpm
+@ el9.aarch64 14 hypopg_14 hypopg_14-1.4.3-1PGDG.rhel9.8.aarch64.rpm pgdg 1.4.3 32.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/hypopg_14-1.4.3-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 14 hypopg_14 hypopg_14-1.4.2-3PGDG.rhel9.8.aarch64.rpm pgdg 1.4.2 32.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/hypopg_14-1.4.2-3PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 14 hypopg_14 hypopg_14-1.4.1-1PGDG.rhel9.aarch64.rpm pgdg 1.4.1 31.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/hypopg_14-1.4.1-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 14 hypopg_14 hypopg_14-1.4.0-1.rhel9.aarch64.rpm pgdg 1.4.0 30.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/hypopg_14-1.4.0-1.rhel9.aarch64.rpm
+@ el9.aarch64 14 hypopg_14 hypopg_14-1.3.1-1.rhel9.aarch64.rpm pgdg 1.3.1 75.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/hypopg_14-1.3.1-1.rhel9.aarch64.rpm
+@ el10.x86_64 14 hypopg_14 hypopg_14-1.4.3-1PGDG.rhel10.2.x86_64.rpm pgdg 1.4.3 31.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/hypopg_14-1.4.3-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 14 hypopg_14 hypopg_14-1.4.2-3PGDG.rhel10.2.x86_64.rpm pgdg 1.4.2 31.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/hypopg_14-1.4.2-3PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 14 hypopg_14 hypopg_14-1.4.1-3PGDG.rhel10.x86_64.rpm pgdg 1.4.1 31.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/hypopg_14-1.4.1-3PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 14 hypopg_14 hypopg_14-1.4.3-1PGDG.rhel10.2.aarch64.rpm pgdg 1.4.3 33.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/hypopg_14-1.4.3-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 14 hypopg_14 hypopg_14-1.4.2-3PGDG.rhel10.2.aarch64.rpm pgdg 1.4.2 32.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/hypopg_14-1.4.2-3PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 14 hypopg_14 hypopg_14-1.4.1-3PGDG.rhel10.aarch64.rpm pgdg 1.4.1 32.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/hypopg_14-1.4.1-3PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 14 postgresql-14-hypopg postgresql-14-hypopg_1.4.3-1.pgdg12+1_amd64.deb pgdg 1.4.3 57.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-14-hypopg_1.4.3-1.pgdg12+1_amd64.deb
 @ d12.x86_64 14 postgresql-14-hypopg postgresql-14-hypopg_1.4.2-2.pgdg12+1_amd64.deb pgdg 1.4.2 57.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-14-hypopg_1.4.2-2.pgdg12+1_amd64.deb
+@ d12.aarch64 14 postgresql-14-hypopg postgresql-14-hypopg_1.4.3-1.pgdg12+1_arm64.deb pgdg 1.4.3 58.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-14-hypopg_1.4.3-1.pgdg12+1_arm64.deb
 @ d12.aarch64 14 postgresql-14-hypopg postgresql-14-hypopg_1.4.2-2.pgdg12+1_arm64.deb pgdg 1.4.2 58.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-14-hypopg_1.4.2-2.pgdg12+1_arm64.deb
+@ d13.x86_64 14 postgresql-14-hypopg postgresql-14-hypopg_1.4.3-1.pgdg13+1_amd64.deb pgdg 1.4.3 58.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-14-hypopg_1.4.3-1.pgdg13+1_amd64.deb
 @ d13.x86_64 14 postgresql-14-hypopg postgresql-14-hypopg_1.4.2-2.pgdg13+1_amd64.deb pgdg 1.4.2 58.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-14-hypopg_1.4.2-2.pgdg13+1_amd64.deb
+@ d13.aarch64 14 postgresql-14-hypopg postgresql-14-hypopg_1.4.3-1.pgdg13+1_arm64.deb pgdg 1.4.3 58.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-14-hypopg_1.4.3-1.pgdg13+1_arm64.deb
 @ d13.aarch64 14 postgresql-14-hypopg postgresql-14-hypopg_1.4.2-2.pgdg13+1_arm64.deb pgdg 1.4.2 58.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-14-hypopg_1.4.2-2.pgdg13+1_arm64.deb
+@ u22.x86_64 14 postgresql-14-hypopg postgresql-14-hypopg_1.4.3-1.pgdg22.04+1_amd64.deb pgdg 1.4.3 71.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-14-hypopg_1.4.3-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 14 postgresql-14-hypopg postgresql-14-hypopg_1.4.2-2.pgdg22.04+1_amd64.deb pgdg 1.4.2 71.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-14-hypopg_1.4.2-2.pgdg22.04+1_amd64.deb
+@ u22.aarch64 14 postgresql-14-hypopg postgresql-14-hypopg_1.4.3-1.pgdg22.04+1_arm64.deb pgdg 1.4.3 71.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-14-hypopg_1.4.3-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 14 postgresql-14-hypopg postgresql-14-hypopg_1.4.2-2.pgdg22.04+1_arm64.deb pgdg 1.4.2 71.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-14-hypopg_1.4.2-2.pgdg22.04+1_arm64.deb
+@ u24.x86_64 14 postgresql-14-hypopg postgresql-14-hypopg_1.4.3-1.pgdg24.04+1_amd64.deb pgdg 1.4.3 58.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-14-hypopg_1.4.3-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 14 postgresql-14-hypopg postgresql-14-hypopg_1.4.2-2.pgdg24.04+1_amd64.deb pgdg 1.4.2 57.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-14-hypopg_1.4.2-2.pgdg24.04+1_amd64.deb
+@ u24.aarch64 14 postgresql-14-hypopg postgresql-14-hypopg_1.4.3-1.pgdg24.04+1_arm64.deb pgdg 1.4.3 58.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-14-hypopg_1.4.3-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 14 postgresql-14-hypopg postgresql-14-hypopg_1.4.2-2.pgdg24.04+1_arm64.deb pgdg 1.4.2 58.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-14-hypopg_1.4.2-2.pgdg24.04+1_arm64.deb
+@ u26.x86_64 14 postgresql-14-hypopg postgresql-14-hypopg_1.4.3-1.pgdg26.04+1_amd64.deb pgdg 1.4.3 57.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-14-hypopg_1.4.3-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 14 postgresql-14-hypopg postgresql-14-hypopg_1.4.2-2.pgdg26.04+1_amd64.deb pgdg 1.4.2 57.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-14-hypopg_1.4.2-2.pgdg26.04+1_amd64.deb
+@ u26.aarch64 14 postgresql-14-hypopg postgresql-14-hypopg_1.4.3-1.pgdg26.04+1_arm64.deb pgdg 1.4.3 57.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-14-hypopg_1.4.3-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 14 postgresql-14-hypopg postgresql-14-hypopg_1.4.2-2.pgdg26.04+1_arm64.deb pgdg 1.4.2 57.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/h/hypopg/postgresql-14-hypopg_1.4.2-2.pgdg26.04+1_arm64.deb
 {{< /pgext_matrix >}}
 

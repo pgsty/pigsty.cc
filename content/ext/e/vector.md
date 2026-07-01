@@ -51,118 +51,178 @@ weight: 1800
 {{< pgext_matrix >}}
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 0.8.3 3 | AVAIL PIGSTY 0.8.3 5 | AVAIL PIGSTY 0.8.3 15 | AVAIL PIGSTY 0.8.3 17 | AVAIL PIGSTY 0.8.3 17 |
-| el8.aarch64 | AVAIL PIGSTY 0.8.3 4 | AVAIL PIGSTY 0.8.3 5 | AVAIL PIGSTY 0.8.3 15 | AVAIL PIGSTY 0.8.3 17 | AVAIL PIGSTY 0.8.3 17 |
-| el9.x86_64 | AVAIL PIGSTY 0.8.3 3 | AVAIL PIGSTY 0.8.3 2 | AVAIL PIGSTY 0.8.3 2 | AVAIL PIGSTY 0.8.3 2 | AVAIL PIGSTY 0.8.3 2 |
-| el9.aarch64 | AVAIL PIGSTY 0.8.3 3 | AVAIL PIGSTY 0.8.3 2 | AVAIL PIGSTY 0.8.3 2 | AVAIL PIGSTY 0.8.3 2 | AVAIL PIGSTY 0.8.3 2 |
-| el10.x86_64 | AVAIL PIGSTY 0.8.3 2 | AVAIL PIGSTY 0.8.3 2 | AVAIL PIGSTY 0.8.3 2 | AVAIL PIGSTY 0.8.3 2 | AVAIL PIGSTY 0.8.3 2 |
-| el10.aarch64 | AVAIL PIGSTY 0.8.3 2 | AVAIL PIGSTY 0.8.3 2 | AVAIL PIGSTY 0.8.3 2 | AVAIL PIGSTY 0.8.3 2 | AVAIL PIGSTY 0.8.3 2 |
-| d12.x86_64 | AVAIL PIGSTY 0.8.3 3 | AVAIL PIGSTY 0.8.3 3 | AVAIL PIGSTY 0.8.3 3 | AVAIL PIGSTY 0.8.3 3 | AVAIL PIGSTY 0.8.3 3 |
-| d12.aarch64 | AVAIL PIGSTY 0.8.3 3 | AVAIL PIGSTY 0.8.3 3 | AVAIL PIGSTY 0.8.3 3 | AVAIL PIGSTY 0.8.3 3 | AVAIL PIGSTY 0.8.3 3 |
-| d13.x86_64 | AVAIL PIGSTY 0.8.3 3 | AVAIL PIGSTY 0.8.3 3 | AVAIL PIGSTY 0.8.3 3 | AVAIL PIGSTY 0.8.3 3 | AVAIL PIGSTY 0.8.3 3 |
-| d13.aarch64 | AVAIL PIGSTY 0.8.3 3 | AVAIL PIGSTY 0.8.3 3 | AVAIL PIGSTY 0.8.3 3 | AVAIL PIGSTY 0.8.3 3 | AVAIL PIGSTY 0.8.3 3 |
-| u22.x86_64 | AVAIL PIGSTY 0.8.3 3 | AVAIL PIGSTY 0.8.3 3 | AVAIL PIGSTY 0.8.3 3 | AVAIL PIGSTY 0.8.3 3 | AVAIL PIGSTY 0.8.3 3 |
-| u22.aarch64 | AVAIL PIGSTY 0.8.3 3 | AVAIL PIGSTY 0.8.3 3 | AVAIL PIGSTY 0.8.3 3 | AVAIL PIGSTY 0.8.3 3 | AVAIL PIGSTY 0.8.3 3 |
-| u24.x86_64 | AVAIL PIGSTY 0.8.3 3 | AVAIL PIGSTY 0.8.3 3 | AVAIL PIGSTY 0.8.3 3 | AVAIL PIGSTY 0.8.3 3 | AVAIL PIGSTY 0.8.3 3 |
-| u24.aarch64 | AVAIL PIGSTY 0.8.3 3 | AVAIL PIGSTY 0.8.3 3 | AVAIL PIGSTY 0.8.3 3 | AVAIL PIGSTY 0.8.3 3 | AVAIL PIGSTY 0.8.3 3 |
-| u26.x86_64 | AVAIL PIGSTY 0.8.3 3 | AVAIL PIGSTY 0.8.3 3 | AVAIL PIGSTY 0.8.3 3 | AVAIL PIGSTY 0.8.3 3 | AVAIL PIGSTY 0.8.3 3 |
-| u26.aarch64 | AVAIL PIGSTY 0.8.3 3 | AVAIL PIGSTY 0.8.3 3 | AVAIL PIGSTY 0.8.3 3 | AVAIL PIGSTY 0.8.3 3 | AVAIL PIGSTY 0.8.3 3 |
+| el8.x86_64 | AVAIL PIGSTY 0.8.3 4 | AVAIL PIGSTY 0.8.3 6 | AVAIL PIGSTY 0.8.3 16 | AVAIL PIGSTY 0.8.3 18 | AVAIL PIGSTY 0.8.3 18 |
+| el8.aarch64 | AVAIL PIGSTY 0.8.3 4 | AVAIL PIGSTY 0.8.3 6 | AVAIL PIGSTY 0.8.3 16 | AVAIL PIGSTY 0.8.3 18 | AVAIL PIGSTY 0.8.3 18 |
+| el9.x86_64 | AVAIL PIGSTY 0.8.3 6 | AVAIL PIGSTY 0.8.3 8 | AVAIL PIGSTY 0.8.3 18 | AVAIL PIGSTY 0.8.3 20 | AVAIL PIGSTY 0.8.3 20 |
+| el9.aarch64 | AVAIL PIGSTY 0.8.3 6 | AVAIL PIGSTY 0.8.3 8 | AVAIL PIGSTY 0.8.3 18 | AVAIL PIGSTY 0.8.3 20 | AVAIL PIGSTY 0.8.3 20 |
+| el10.x86_64 | AVAIL PIGSTY 0.8.3 6 | AVAIL PIGSTY 0.8.3 7 | AVAIL PIGSTY 0.8.3 7 | AVAIL PIGSTY 0.8.3 7 | AVAIL PIGSTY 0.8.3 7 |
+| el10.aarch64 | AVAIL PIGSTY 0.8.3 6 | AVAIL PIGSTY 0.8.3 7 | AVAIL PIGSTY 0.8.3 7 | AVAIL PIGSTY 0.8.3 7 | AVAIL PIGSTY 0.8.3 7 |
+| d12.x86_64 | AVAIL PGDG 0.8.3 4 | AVAIL PGDG 0.8.3 4 | AVAIL PGDG 0.8.3 4 | AVAIL PGDG 0.8.3 4 | AVAIL PGDG 0.8.3 4 |
+| d12.aarch64 | AVAIL PGDG 0.8.3 4 | AVAIL PGDG 0.8.3 4 | AVAIL PGDG 0.8.3 4 | AVAIL PGDG 0.8.3 4 | AVAIL PGDG 0.8.3 4 |
+| d13.x86_64 | AVAIL PGDG 0.8.3 4 | AVAIL PGDG 0.8.3 4 | AVAIL PGDG 0.8.3 4 | AVAIL PGDG 0.8.3 4 | AVAIL PGDG 0.8.3 4 |
+| d13.aarch64 | AVAIL PGDG 0.8.3 4 | AVAIL PGDG 0.8.3 4 | AVAIL PGDG 0.8.3 4 | AVAIL PGDG 0.8.3 4 | AVAIL PGDG 0.8.3 4 |
+| u22.x86_64 | AVAIL PGDG 0.8.3 4 | AVAIL PGDG 0.8.3 4 | AVAIL PGDG 0.8.3 4 | AVAIL PGDG 0.8.3 4 | AVAIL PGDG 0.8.3 4 |
+| u22.aarch64 | AVAIL PGDG 0.8.3 4 | AVAIL PGDG 0.8.3 4 | AVAIL PGDG 0.8.3 4 | AVAIL PGDG 0.8.3 4 | AVAIL PGDG 0.8.3 4 |
+| u24.x86_64 | AVAIL PGDG 0.8.3 4 | AVAIL PGDG 0.8.3 4 | AVAIL PGDG 0.8.3 4 | AVAIL PGDG 0.8.3 4 | AVAIL PGDG 0.8.3 4 |
+| u24.aarch64 | AVAIL PGDG 0.8.3 4 | AVAIL PGDG 0.8.3 4 | AVAIL PGDG 0.8.3 4 | AVAIL PGDG 0.8.3 4 | AVAIL PGDG 0.8.3 4 |
+| u26.x86_64 | AVAIL PGDG 0.8.3 4 | AVAIL PGDG 0.8.3 4 | AVAIL PGDG 0.8.3 4 | AVAIL PGDG 0.8.3 4 | AVAIL PGDG 0.8.3 4 |
+| u26.aarch64 | AVAIL PGDG 0.8.3 4 | AVAIL PGDG 0.8.3 4 | AVAIL PGDG 0.8.3 4 | AVAIL PGDG 0.8.3 4 | AVAIL PGDG 0.8.3 4 |
 @ el8.x86_64 18 pgvector_18 pgvector_18-0.8.3-1PIGSTY.el8.x86_64.rpm pigsty 0.8.3 113.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgvector_18-0.8.3-1PIGSTY.el8.x86_64.rpm
+@ el8.x86_64 18 pgvector_18 pgvector_18-0.8.3-1PGDG.rhel8.10.x86_64.rpm pgdg 0.8.3 108.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pgvector_18-0.8.3-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 18 pgvector_18 pgvector_18-0.8.2-1PGDG.rhel8.10.x86_64.rpm pgdg 0.8.2 107.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pgvector_18-0.8.2-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 18 pgvector_18 pgvector_18-0.8.1-1PGDG.rhel8.x86_64.rpm pgdg 0.8.1 106.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pgvector_18-0.8.1-1PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 18 pgvector_18 pgvector_18-0.8.3-1PIGSTY.el8.aarch64.rpm pigsty 0.8.3 105.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgvector_18-0.8.3-1PIGSTY.el8.aarch64.rpm
+@ el8.aarch64 18 pgvector_18 pgvector_18-0.8.3-1PGDG.rhel8.10.aarch64.rpm pgdg 0.8.3 97.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pgvector_18-0.8.3-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 18 pgvector_18 pgvector_18-0.8.2-1PGDG.rhel8.10.aarch64.rpm pgdg 0.8.2 97.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pgvector_18-0.8.2-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 18 pgvector_18 pgvector_18-0.8.1-1PGDG.rhel8.aarch64.rpm pgdg 0.8.1 96.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pgvector_18-0.8.1-1PGDG.rhel8.aarch64.rpm
-@ el8.aarch64 18 pgvector_18 pgvector_18-0.8.1-1PGDG.el8.aarch64.rpm pigsty 0.8.1 95.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgvector_18-0.8.1-1PGDG.el8.aarch64.rpm
 @ el9.x86_64 18 pgvector_18 pgvector_18-0.8.3-1PIGSTY.el9.x86_64.rpm pigsty 0.8.3 107.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgvector_18-0.8.3-1PIGSTY.el9.x86_64.rpm
+@ el9.x86_64 18 pgvector_18 pgvector_18-0.8.3-1PGDG.rhel9.8.x86_64.rpm pgdg 0.8.3 108.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pgvector_18-0.8.3-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 18 pgvector_18 pgvector_18-0.8.2-1PGDG.rhel9.8.x86_64.rpm pgdg 0.8.2 108.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pgvector_18-0.8.2-1PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 18 pgvector_18 pgvector_18-0.8.1-1PGDG.el9.x86_64.rpm pigsty 0.8.1 103.1KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgvector_18-0.8.1-1PGDG.el9.x86_64.rpm
+@ el9.x86_64 18 pgvector_18 pgvector_18-0.8.2-1PGDG.rhel9.7.x86_64.rpm pgdg 0.8.2 108.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pgvector_18-0.8.2-1PGDG.rhel9.7.x86_64.rpm
+@ el9.x86_64 18 pgvector_18 pgvector_18-0.8.2-1PGDG.rhel9.6.x86_64.rpm pgdg 0.8.2 108.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pgvector_18-0.8.2-1PGDG.rhel9.6.x86_64.rpm
+@ el9.x86_64 18 pgvector_18 pgvector_18-0.8.1-1PGDG.rhel9.x86_64.rpm pgdg 0.8.1 108.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pgvector_18-0.8.1-1PGDG.rhel9.x86_64.rpm
 @ el9.aarch64 18 pgvector_18 pgvector_18-0.8.3-1PIGSTY.el9.aarch64.rpm pigsty 0.8.3 97.3KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgvector_18-0.8.3-1PIGSTY.el9.aarch64.rpm
+@ el9.aarch64 18 pgvector_18 pgvector_18-0.8.3-1PGDG.rhel9.8.aarch64.rpm pgdg 0.8.3 94.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pgvector_18-0.8.3-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 18 pgvector_18 pgvector_18-0.8.2-1PGDG.rhel9.8.aarch64.rpm pgdg 0.8.2 94.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pgvector_18-0.8.2-1PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 18 pgvector_18 pgvector_18-0.8.1-1PGDG.el9.aarch64.rpm pigsty 0.8.1 92.8KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgvector_18-0.8.1-1PGDG.el9.aarch64.rpm
+@ el9.aarch64 18 pgvector_18 pgvector_18-0.8.2-1PGDG.rhel9.7.aarch64.rpm pgdg 0.8.2 94.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pgvector_18-0.8.2-1PGDG.rhel9.7.aarch64.rpm
+@ el9.aarch64 18 pgvector_18 pgvector_18-0.8.2-1PGDG.rhel9.6.aarch64.rpm pgdg 0.8.2 94.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pgvector_18-0.8.2-1PGDG.rhel9.6.aarch64.rpm
+@ el9.aarch64 18 pgvector_18 pgvector_18-0.8.1-1PGDG.rhel9.aarch64.rpm pgdg 0.8.1 94.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pgvector_18-0.8.1-1PGDG.rhel9.aarch64.rpm
 @ el10.x86_64 18 pgvector_18 pgvector_18-0.8.3-1PIGSTY.el10.x86_64.rpm pigsty 0.8.3 108.4KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgvector_18-0.8.3-1PIGSTY.el10.x86_64.rpm
+@ el10.x86_64 18 pgvector_18 pgvector_18-0.8.3-1PGDG.rhel10.2.x86_64.rpm pgdg 0.8.3 105.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pgvector_18-0.8.3-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 18 pgvector_18 pgvector_18-0.8.2-1PGDG.rhel10.2.x86_64.rpm pgdg 0.8.2 105.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pgvector_18-0.8.2-1PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 18 pgvector_18 pgvector_18-0.8.2-1PGDG.rhel10.1.x86_64.rpm pgdg 0.8.2 105.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pgvector_18-0.8.2-1PGDG.rhel10.1.x86_64.rpm
+@ el10.x86_64 18 pgvector_18 pgvector_18-0.8.2-1PGDG.rhel10.0.x86_64.rpm pgdg 0.8.2 105.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pgvector_18-0.8.2-1PGDG.rhel10.0.x86_64.rpm
+@ el10.x86_64 18 pgvector_18 pgvector_18-0.8.1-1PGDG.rhel10.x86_64.rpm pgdg 0.8.1 104.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pgvector_18-0.8.1-1PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 18 pgvector_18 pgvector_18-0.8.3-1PIGSTY.el10.aarch64.rpm pigsty 0.8.3 99.4KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgvector_18-0.8.3-1PIGSTY.el10.aarch64.rpm
+@ el10.aarch64 18 pgvector_18 pgvector_18-0.8.3-1PGDG.rhel10.2.aarch64.rpm pgdg 0.8.3 96.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pgvector_18-0.8.3-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 18 pgvector_18 pgvector_18-0.8.2-1PGDG.rhel10.2.aarch64.rpm pgdg 0.8.2 96.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pgvector_18-0.8.2-1PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 18 pgvector_18 pgvector_18-0.8.2-1PGDG.rhel10.1.aarch64.rpm pgdg 0.8.2 96.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pgvector_18-0.8.2-1PGDG.rhel10.1.aarch64.rpm
+@ el10.aarch64 18 pgvector_18 pgvector_18-0.8.2-1PGDG.rhel10.0.aarch64.rpm pgdg 0.8.2 96.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pgvector_18-0.8.2-1PGDG.rhel10.0.aarch64.rpm
+@ el10.aarch64 18 pgvector_18 pgvector_18-0.8.1-1PGDG.rhel10.aarch64.rpm pgdg 0.8.1 96.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pgvector_18-0.8.1-1PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-pgvector postgresql-18-pgvector_0.8.3-1.pgdg12+1_amd64.deb pgdg 0.8.3 258.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-18-pgvector_0.8.3-1.pgdg12+1_amd64.deb
 @ d12.x86_64 18 postgresql-18-pgvector postgresql-18-pgvector_0.8.3-1PIGSTY~bookworm_amd64.deb pigsty 0.8.3 252.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgvector/postgresql-18-pgvector_0.8.3-1PIGSTY~bookworm_amd64.deb
 @ d12.x86_64 18 postgresql-18-pgvector postgresql-18-pgvector_0.8.2-1.pgdg12+1_amd64.deb pgdg 0.8.2 256.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-18-pgvector_0.8.2-1.pgdg12+1_amd64.deb
 @ d12.x86_64 18 postgresql-18-pgvector postgresql-18-pgvector_0.8.1-2.pgdg12+1_amd64.deb pgdg 0.8.1 256.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-18-pgvector_0.8.1-2.pgdg12+1_amd64.deb
+@ d12.aarch64 18 postgresql-18-pgvector postgresql-18-pgvector_0.8.3-1.pgdg12+1_arm64.deb pgdg 0.8.3 228.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-18-pgvector_0.8.3-1.pgdg12+1_arm64.deb
 @ d12.aarch64 18 postgresql-18-pgvector postgresql-18-pgvector_0.8.3-1PIGSTY~bookworm_arm64.deb pigsty 0.8.3 226.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgvector/postgresql-18-pgvector_0.8.3-1PIGSTY~bookworm_arm64.deb
 @ d12.aarch64 18 postgresql-18-pgvector postgresql-18-pgvector_0.8.2-1.pgdg12+1_arm64.deb pgdg 0.8.2 226.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-18-pgvector_0.8.2-1.pgdg12+1_arm64.deb
 @ d12.aarch64 18 postgresql-18-pgvector postgresql-18-pgvector_0.8.1-2.pgdg12+1_arm64.deb pgdg 0.8.1 226.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-18-pgvector_0.8.1-2.pgdg12+1_arm64.deb
+@ d13.x86_64 18 postgresql-18-pgvector postgresql-18-pgvector_0.8.3-1.pgdg13+1_amd64.deb pgdg 0.8.3 259.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-18-pgvector_0.8.3-1.pgdg13+1_amd64.deb
 @ d13.x86_64 18 postgresql-18-pgvector postgresql-18-pgvector_0.8.3-1PIGSTY~trixie_amd64.deb pigsty 0.8.3 252.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgvector/postgresql-18-pgvector_0.8.3-1PIGSTY~trixie_amd64.deb
 @ d13.x86_64 18 postgresql-18-pgvector postgresql-18-pgvector_0.8.2-1.pgdg13+1_amd64.deb pgdg 0.8.2 257.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-18-pgvector_0.8.2-1.pgdg13+1_amd64.deb
 @ d13.x86_64 18 postgresql-18-pgvector postgresql-18-pgvector_0.8.1-2.pgdg13+1_amd64.deb pgdg 0.8.1 256.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-18-pgvector_0.8.1-2.pgdg13+1_amd64.deb
+@ d13.aarch64 18 postgresql-18-pgvector postgresql-18-pgvector_0.8.3-1.pgdg13+1_arm64.deb pgdg 0.8.3 229.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-18-pgvector_0.8.3-1.pgdg13+1_arm64.deb
 @ d13.aarch64 18 postgresql-18-pgvector postgresql-18-pgvector_0.8.3-1PIGSTY~trixie_arm64.deb pigsty 0.8.3 228.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgvector/postgresql-18-pgvector_0.8.3-1PIGSTY~trixie_arm64.deb
 @ d13.aarch64 18 postgresql-18-pgvector postgresql-18-pgvector_0.8.2-1.pgdg13+1_arm64.deb pgdg 0.8.2 228.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-18-pgvector_0.8.2-1.pgdg13+1_arm64.deb
 @ d13.aarch64 18 postgresql-18-pgvector postgresql-18-pgvector_0.8.1-2.pgdg13+1_arm64.deb pgdg 0.8.1 228.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-18-pgvector_0.8.1-2.pgdg13+1_arm64.deb
+@ u22.x86_64 18 postgresql-18-pgvector postgresql-18-pgvector_0.8.3-1.pgdg22.04+1_amd64.deb pgdg 0.8.3 262.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-18-pgvector_0.8.3-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 18 postgresql-18-pgvector postgresql-18-pgvector_0.8.3-1PIGSTY~jammy_amd64.deb pigsty 0.8.3 270.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgvector/postgresql-18-pgvector_0.8.3-1PIGSTY~jammy_amd64.deb
 @ u22.x86_64 18 postgresql-18-pgvector postgresql-18-pgvector_0.8.2-1.pgdg22.04+1_amd64.deb pgdg 0.8.2 259.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-18-pgvector_0.8.2-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 18 postgresql-18-pgvector postgresql-18-pgvector_0.8.1-2.pgdg22.04+1_amd64.deb pgdg 0.8.1 259.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-18-pgvector_0.8.1-2.pgdg22.04+1_amd64.deb
+@ u22.aarch64 18 postgresql-18-pgvector postgresql-18-pgvector_0.8.3-1.pgdg22.04+1_arm64.deb pgdg 0.8.3 230.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-18-pgvector_0.8.3-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 18 postgresql-18-pgvector postgresql-18-pgvector_0.8.3-1PIGSTY~jammy_arm64.deb pigsty 0.8.3 244.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgvector/postgresql-18-pgvector_0.8.3-1PIGSTY~jammy_arm64.deb
 @ u22.aarch64 18 postgresql-18-pgvector postgresql-18-pgvector_0.8.2-1.pgdg22.04+1_arm64.deb pgdg 0.8.2 227.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-18-pgvector_0.8.2-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 18 postgresql-18-pgvector postgresql-18-pgvector_0.8.1-2.pgdg22.04+1_arm64.deb pgdg 0.8.1 227.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-18-pgvector_0.8.1-2.pgdg22.04+1_arm64.deb
+@ u24.x86_64 18 postgresql-18-pgvector postgresql-18-pgvector_0.8.3-1.pgdg24.04+1_amd64.deb pgdg 0.8.3 255.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-18-pgvector_0.8.3-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 18 postgresql-18-pgvector postgresql-18-pgvector_0.8.3-1PIGSTY~noble_amd64.deb pigsty 0.8.3 259.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgvector/postgresql-18-pgvector_0.8.3-1PIGSTY~noble_amd64.deb
 @ u24.x86_64 18 postgresql-18-pgvector postgresql-18-pgvector_0.8.2-1.pgdg24.04+1_amd64.deb pgdg 0.8.2 252.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-18-pgvector_0.8.2-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 18 postgresql-18-pgvector postgresql-18-pgvector_0.8.1-2.pgdg24.04+1_amd64.deb pgdg 0.8.1 252.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-18-pgvector_0.8.1-2.pgdg24.04+1_amd64.deb
+@ u24.aarch64 18 postgresql-18-pgvector postgresql-18-pgvector_0.8.3-1.pgdg24.04+1_arm64.deb pgdg 0.8.3 225.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-18-pgvector_0.8.3-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 18 postgresql-18-pgvector postgresql-18-pgvector_0.8.3-1PIGSTY~noble_arm64.deb pigsty 0.8.3 237.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgvector/postgresql-18-pgvector_0.8.3-1PIGSTY~noble_arm64.deb
 @ u24.aarch64 18 postgresql-18-pgvector postgresql-18-pgvector_0.8.2-1.pgdg24.04+1_arm64.deb pgdg 0.8.2 223.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-18-pgvector_0.8.2-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 18 postgresql-18-pgvector postgresql-18-pgvector_0.8.1-2.pgdg24.04+1_arm64.deb pgdg 0.8.1 223.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-18-pgvector_0.8.1-2.pgdg24.04+1_arm64.deb
+@ u26.x86_64 18 postgresql-18-pgvector postgresql-18-pgvector_0.8.3-1.pgdg26.04+1_amd64.deb pgdg 0.8.3 253.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-18-pgvector_0.8.3-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 18 postgresql-18-pgvector postgresql-18-pgvector_0.8.3-1PIGSTY~resolute_amd64.deb pigsty 0.8.3 258.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgvector/postgresql-18-pgvector_0.8.3-1PIGSTY~resolute_amd64.deb
 @ u26.x86_64 18 postgresql-18-pgvector postgresql-18-pgvector_0.8.2-1.pgdg26.04+1_amd64.deb pgdg 0.8.2 251.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-18-pgvector_0.8.2-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 18 postgresql-18-pgvector postgresql-18-pgvector_0.8.1-2.pgdg26.04+1_amd64.deb pgdg 0.8.1 251.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-18-pgvector_0.8.1-2.pgdg26.04+1_amd64.deb
+@ u26.aarch64 18 postgresql-18-pgvector postgresql-18-pgvector_0.8.3-1.pgdg26.04+1_arm64.deb pgdg 0.8.3 224.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-18-pgvector_0.8.3-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 18 postgresql-18-pgvector postgresql-18-pgvector_0.8.3-1PIGSTY~resolute_arm64.deb pigsty 0.8.3 236.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgvector/postgresql-18-pgvector_0.8.3-1PIGSTY~resolute_arm64.deb
 @ u26.aarch64 18 postgresql-18-pgvector postgresql-18-pgvector_0.8.2-1.pgdg26.04+1_arm64.deb pgdg 0.8.2 222.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-18-pgvector_0.8.2-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 18 postgresql-18-pgvector postgresql-18-pgvector_0.8.1-2.pgdg26.04+1_arm64.deb pgdg 0.8.1 222.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-18-pgvector_0.8.1-2.pgdg26.04+1_arm64.deb
 @ el8.x86_64 17 pgvector_17 pgvector_17-0.8.3-1PIGSTY.el8.x86_64.rpm pigsty 0.8.3 113.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgvector_17-0.8.3-1PIGSTY.el8.x86_64.rpm
+@ el8.x86_64 17 pgvector_17 pgvector_17-0.8.3-1PGDG.rhel8.10.x86_64.rpm pgdg 0.8.3 108.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pgvector_17-0.8.3-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 pgvector_17 pgvector_17-0.8.2-1PGDG.rhel8.10.x86_64.rpm pgdg 0.8.2 107.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pgvector_17-0.8.2-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 pgvector_17 pgvector_17-0.8.1-1PGDG.rhel8.x86_64.rpm pgdg 0.8.1 106.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pgvector_17-0.8.1-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 17 pgvector_17 pgvector_17-0.8.0-1PGDG.rhel8.x86_64.rpm pgdg 0.8.0 105.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pgvector_17-0.8.0-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 17 pgvector_17 pgvector_17-0.7.4-1PGDG.rhel8.x86_64.rpm pgdg 0.7.4 101.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pgvector_17-0.7.4-1PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 17 pgvector_17 pgvector_17-0.8.3-1PIGSTY.el8.aarch64.rpm pigsty 0.8.3 105.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgvector_17-0.8.3-1PIGSTY.el8.aarch64.rpm
+@ el8.aarch64 17 pgvector_17 pgvector_17-0.8.3-1PGDG.rhel8.10.aarch64.rpm pgdg 0.8.3 97.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pgvector_17-0.8.3-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 17 pgvector_17 pgvector_17-0.8.2-1PGDG.rhel8.10.aarch64.rpm pgdg 0.8.2 97.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pgvector_17-0.8.2-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 17 pgvector_17 pgvector_17-0.8.1-1PGDG.rhel8.aarch64.rpm pgdg 0.8.1 96.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pgvector_17-0.8.1-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 17 pgvector_17 pgvector_17-0.8.0-1PGDG.rhel8.aarch64.rpm pgdg 0.8.0 95.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pgvector_17-0.8.0-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 17 pgvector_17 pgvector_17-0.7.4-1PGDG.rhel8.aarch64.rpm pgdg 0.7.4 91.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pgvector_17-0.7.4-1PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 17 pgvector_17 pgvector_17-0.8.3-1PIGSTY.el9.x86_64.rpm pigsty 0.8.3 107.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgvector_17-0.8.3-1PIGSTY.el9.x86_64.rpm
+@ el9.x86_64 17 pgvector_17 pgvector_17-0.8.3-1PGDG.rhel9.8.x86_64.rpm pgdg 0.8.3 108.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pgvector_17-0.8.3-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 17 pgvector_17 pgvector_17-0.8.2-1PGDG.rhel9.8.x86_64.rpm pgdg 0.8.2 108.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pgvector_17-0.8.2-1PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 17 pgvector_17 pgvector_17-0.8.2-1PGDG.rhel9.7.x86_64.rpm pgdg 0.8.2 108.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pgvector_17-0.8.2-1PGDG.rhel9.7.x86_64.rpm
+@ el9.x86_64 17 pgvector_17 pgvector_17-0.8.2-1PGDG.rhel9.6.x86_64.rpm pgdg 0.8.2 108.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pgvector_17-0.8.2-1PGDG.rhel9.6.x86_64.rpm
+@ el9.x86_64 17 pgvector_17 pgvector_17-0.8.1-1PGDG.rhel9.x86_64.rpm pgdg 0.8.1 108.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pgvector_17-0.8.1-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 17 pgvector_17 pgvector_17-0.8.0-1PGDG.rhel9.x86_64.rpm pgdg 0.8.0 107.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pgvector_17-0.8.0-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 17 pgvector_17 pgvector_17-0.7.4-1PGDG.rhel9.x86_64.rpm pgdg 0.7.4 103.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pgvector_17-0.7.4-1PGDG.rhel9.x86_64.rpm
 @ el9.aarch64 17 pgvector_17 pgvector_17-0.8.3-1PIGSTY.el9.aarch64.rpm pigsty 0.8.3 97.3KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgvector_17-0.8.3-1PIGSTY.el9.aarch64.rpm
+@ el9.aarch64 17 pgvector_17 pgvector_17-0.8.3-1PGDG.rhel9.8.aarch64.rpm pgdg 0.8.3 94.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pgvector_17-0.8.3-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 17 pgvector_17 pgvector_17-0.8.2-1PGDG.rhel9.8.aarch64.rpm pgdg 0.8.2 94.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pgvector_17-0.8.2-1PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 17 pgvector_17 pgvector_17-0.8.2-1PGDG.rhel9.7.aarch64.rpm pgdg 0.8.2 94.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pgvector_17-0.8.2-1PGDG.rhel9.7.aarch64.rpm
+@ el9.aarch64 17 pgvector_17 pgvector_17-0.8.2-1PGDG.rhel9.6.aarch64.rpm pgdg 0.8.2 94.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pgvector_17-0.8.2-1PGDG.rhel9.6.aarch64.rpm
+@ el9.aarch64 17 pgvector_17 pgvector_17-0.8.1-1PGDG.rhel9.aarch64.rpm pgdg 0.8.1 94.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pgvector_17-0.8.1-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 17 pgvector_17 pgvector_17-0.8.0-1PGDG.rhel9.aarch64.rpm pgdg 0.8.0 93.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pgvector_17-0.8.0-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 17 pgvector_17 pgvector_17-0.7.4-1PGDG.rhel9.aarch64.rpm pgdg 0.7.4 89.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pgvector_17-0.7.4-1PGDG.rhel9.aarch64.rpm
 @ el10.x86_64 17 pgvector_17 pgvector_17-0.8.3-1PIGSTY.el10.x86_64.rpm pigsty 0.8.3 108.4KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgvector_17-0.8.3-1PIGSTY.el10.x86_64.rpm
+@ el10.x86_64 17 pgvector_17 pgvector_17-0.8.3-1PGDG.rhel10.2.x86_64.rpm pgdg 0.8.3 105.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pgvector_17-0.8.3-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 17 pgvector_17 pgvector_17-0.8.2-1PGDG.rhel10.2.x86_64.rpm pgdg 0.8.2 105.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pgvector_17-0.8.2-1PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 17 pgvector_17 pgvector_17-0.8.2-1PGDG.rhel10.1.x86_64.rpm pgdg 0.8.2 104.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pgvector_17-0.8.2-1PGDG.rhel10.1.x86_64.rpm
+@ el10.x86_64 17 pgvector_17 pgvector_17-0.8.2-1PGDG.rhel10.0.x86_64.rpm pgdg 0.8.2 105.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pgvector_17-0.8.2-1PGDG.rhel10.0.x86_64.rpm
+@ el10.x86_64 17 pgvector_17 pgvector_17-0.8.1-1PGDG.rhel10.x86_64.rpm pgdg 0.8.1 105.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pgvector_17-0.8.1-1PGDG.rhel10.x86_64.rpm
+@ el10.x86_64 17 pgvector_17 pgvector_17-0.8.0-2PGDG.rhel10.x86_64.rpm pgdg 0.8.0 104.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pgvector_17-0.8.0-2PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 17 pgvector_17 pgvector_17-0.8.3-1PIGSTY.el10.aarch64.rpm pigsty 0.8.3 99.3KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgvector_17-0.8.3-1PIGSTY.el10.aarch64.rpm
+@ el10.aarch64 17 pgvector_17 pgvector_17-0.8.3-1PGDG.rhel10.2.aarch64.rpm pgdg 0.8.3 96.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pgvector_17-0.8.3-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 17 pgvector_17 pgvector_17-0.8.2-1PGDG.rhel10.2.aarch64.rpm pgdg 0.8.2 96.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pgvector_17-0.8.2-1PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 17 pgvector_17 pgvector_17-0.8.2-1PGDG.rhel10.1.aarch64.rpm pgdg 0.8.2 96.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pgvector_17-0.8.2-1PGDG.rhel10.1.aarch64.rpm
+@ el10.aarch64 17 pgvector_17 pgvector_17-0.8.2-1PGDG.rhel10.0.aarch64.rpm pgdg 0.8.2 96.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pgvector_17-0.8.2-1PGDG.rhel10.0.aarch64.rpm
+@ el10.aarch64 17 pgvector_17 pgvector_17-0.8.1-1PGDG.rhel10.aarch64.rpm pgdg 0.8.1 96.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pgvector_17-0.8.1-1PGDG.rhel10.aarch64.rpm
+@ el10.aarch64 17 pgvector_17 pgvector_17-0.8.0-2PGDG.rhel10.aarch64.rpm pgdg 0.8.0 96.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pgvector_17-0.8.0-2PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-pgvector postgresql-17-pgvector_0.8.3-1.pgdg12+1_amd64.deb pgdg 0.8.3 258.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-17-pgvector_0.8.3-1.pgdg12+1_amd64.deb
 @ d12.x86_64 17 postgresql-17-pgvector postgresql-17-pgvector_0.8.3-1PIGSTY~bookworm_amd64.deb pigsty 0.8.3 251.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgvector/postgresql-17-pgvector_0.8.3-1PIGSTY~bookworm_amd64.deb
 @ d12.x86_64 17 postgresql-17-pgvector postgresql-17-pgvector_0.8.2-1.pgdg12+1_amd64.deb pgdg 0.8.2 255.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-17-pgvector_0.8.2-1.pgdg12+1_amd64.deb
 @ d12.x86_64 17 postgresql-17-pgvector postgresql-17-pgvector_0.8.1-2.pgdg12+1_amd64.deb pgdg 0.8.1 255.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-17-pgvector_0.8.1-2.pgdg12+1_amd64.deb
+@ d12.aarch64 17 postgresql-17-pgvector postgresql-17-pgvector_0.8.3-1.pgdg12+1_arm64.deb pgdg 0.8.3 228.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-17-pgvector_0.8.3-1.pgdg12+1_arm64.deb
 @ d12.aarch64 17 postgresql-17-pgvector postgresql-17-pgvector_0.8.3-1PIGSTY~bookworm_arm64.deb pigsty 0.8.3 226.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgvector/postgresql-17-pgvector_0.8.3-1PIGSTY~bookworm_arm64.deb
 @ d12.aarch64 17 postgresql-17-pgvector postgresql-17-pgvector_0.8.2-1.pgdg12+1_arm64.deb pgdg 0.8.2 226.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-17-pgvector_0.8.2-1.pgdg12+1_arm64.deb
 @ d12.aarch64 17 postgresql-17-pgvector postgresql-17-pgvector_0.8.1-2.pgdg12+1_arm64.deb pgdg 0.8.1 226.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-17-pgvector_0.8.1-2.pgdg12+1_arm64.deb
+@ d13.x86_64 17 postgresql-17-pgvector postgresql-17-pgvector_0.8.3-1.pgdg13+1_amd64.deb pgdg 0.8.3 258.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-17-pgvector_0.8.3-1.pgdg13+1_amd64.deb
 @ d13.x86_64 17 postgresql-17-pgvector postgresql-17-pgvector_0.8.3-1PIGSTY~trixie_amd64.deb pigsty 0.8.3 252.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgvector/postgresql-17-pgvector_0.8.3-1PIGSTY~trixie_amd64.deb
 @ d13.x86_64 17 postgresql-17-pgvector postgresql-17-pgvector_0.8.2-1.pgdg13+1_amd64.deb pgdg 0.8.2 256.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-17-pgvector_0.8.2-1.pgdg13+1_amd64.deb
 @ d13.x86_64 17 postgresql-17-pgvector postgresql-17-pgvector_0.8.1-2.pgdg13+1_amd64.deb pgdg 0.8.1 256.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-17-pgvector_0.8.1-2.pgdg13+1_amd64.deb
+@ d13.aarch64 17 postgresql-17-pgvector postgresql-17-pgvector_0.8.3-1.pgdg13+1_arm64.deb pgdg 0.8.3 229.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-17-pgvector_0.8.3-1.pgdg13+1_arm64.deb
 @ d13.aarch64 17 postgresql-17-pgvector postgresql-17-pgvector_0.8.3-1PIGSTY~trixie_arm64.deb pigsty 0.8.3 227.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgvector/postgresql-17-pgvector_0.8.3-1PIGSTY~trixie_arm64.deb
 @ d13.aarch64 17 postgresql-17-pgvector postgresql-17-pgvector_0.8.2-1.pgdg13+1_arm64.deb pgdg 0.8.2 227.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-17-pgvector_0.8.2-1.pgdg13+1_arm64.deb
 @ d13.aarch64 17 postgresql-17-pgvector postgresql-17-pgvector_0.8.1-2.pgdg13+1_arm64.deb pgdg 0.8.1 227.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-17-pgvector_0.8.1-2.pgdg13+1_arm64.deb
+@ u22.x86_64 17 postgresql-17-pgvector postgresql-17-pgvector_0.8.3-1.pgdg22.04+1_amd64.deb pgdg 0.8.3 301.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-17-pgvector_0.8.3-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 17 postgresql-17-pgvector postgresql-17-pgvector_0.8.3-1PIGSTY~jammy_amd64.deb pigsty 0.8.3 309.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgvector/postgresql-17-pgvector_0.8.3-1PIGSTY~jammy_amd64.deb
 @ u22.x86_64 17 postgresql-17-pgvector postgresql-17-pgvector_0.8.2-1.pgdg22.04+1_amd64.deb pgdg 0.8.2 299.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-17-pgvector_0.8.2-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 17 postgresql-17-pgvector postgresql-17-pgvector_0.8.1-2.pgdg22.04+1_amd64.deb pgdg 0.8.1 298.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-17-pgvector_0.8.1-2.pgdg22.04+1_amd64.deb
+@ u22.aarch64 17 postgresql-17-pgvector postgresql-17-pgvector_0.8.3-1.pgdg22.04+1_arm64.deb pgdg 0.8.3 268.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-17-pgvector_0.8.3-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 17 postgresql-17-pgvector postgresql-17-pgvector_0.8.3-1PIGSTY~jammy_arm64.deb pigsty 0.8.3 283.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgvector/postgresql-17-pgvector_0.8.3-1PIGSTY~jammy_arm64.deb
 @ u22.aarch64 17 postgresql-17-pgvector postgresql-17-pgvector_0.8.2-1.pgdg22.04+1_arm64.deb pgdg 0.8.2 265.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-17-pgvector_0.8.2-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 17 postgresql-17-pgvector postgresql-17-pgvector_0.8.1-2.pgdg22.04+1_arm64.deb pgdg 0.8.1 265.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-17-pgvector_0.8.1-2.pgdg22.04+1_arm64.deb
+@ u24.x86_64 17 postgresql-17-pgvector postgresql-17-pgvector_0.8.3-1.pgdg24.04+1_amd64.deb pgdg 0.8.3 254.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-17-pgvector_0.8.3-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 17 postgresql-17-pgvector postgresql-17-pgvector_0.8.3-1PIGSTY~noble_amd64.deb pigsty 0.8.3 259.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgvector/postgresql-17-pgvector_0.8.3-1PIGSTY~noble_amd64.deb
 @ u24.x86_64 17 postgresql-17-pgvector postgresql-17-pgvector_0.8.2-1.pgdg24.04+1_amd64.deb pgdg 0.8.2 252.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-17-pgvector_0.8.2-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 17 postgresql-17-pgvector postgresql-17-pgvector_0.8.1-2.pgdg24.04+1_amd64.deb pgdg 0.8.1 252.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-17-pgvector_0.8.1-2.pgdg24.04+1_amd64.deb
+@ u24.aarch64 17 postgresql-17-pgvector postgresql-17-pgvector_0.8.3-1.pgdg24.04+1_arm64.deb pgdg 0.8.3 224.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-17-pgvector_0.8.3-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 17 postgresql-17-pgvector postgresql-17-pgvector_0.8.3-1PIGSTY~noble_arm64.deb pigsty 0.8.3 237.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgvector/postgresql-17-pgvector_0.8.3-1PIGSTY~noble_arm64.deb
 @ u24.aarch64 17 postgresql-17-pgvector postgresql-17-pgvector_0.8.2-1.pgdg24.04+1_arm64.deb pgdg 0.8.2 223.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-17-pgvector_0.8.2-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 17 postgresql-17-pgvector postgresql-17-pgvector_0.8.1-2.pgdg24.04+1_arm64.deb pgdg 0.8.1 222.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-17-pgvector_0.8.1-2.pgdg24.04+1_arm64.deb
+@ u26.x86_64 17 postgresql-17-pgvector postgresql-17-pgvector_0.8.3-1.pgdg26.04+1_amd64.deb pgdg 0.8.3 253.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-17-pgvector_0.8.3-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 17 postgresql-17-pgvector postgresql-17-pgvector_0.8.3-1PIGSTY~resolute_amd64.deb pigsty 0.8.3 258.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgvector/postgresql-17-pgvector_0.8.3-1PIGSTY~resolute_amd64.deb
 @ u26.x86_64 17 postgresql-17-pgvector postgresql-17-pgvector_0.8.2-1.pgdg26.04+1_amd64.deb pgdg 0.8.2 251.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-17-pgvector_0.8.2-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 17 postgresql-17-pgvector postgresql-17-pgvector_0.8.1-2.pgdg26.04+1_amd64.deb pgdg 0.8.1 251.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-17-pgvector_0.8.1-2.pgdg26.04+1_amd64.deb
+@ u26.aarch64 17 postgresql-17-pgvector postgresql-17-pgvector_0.8.3-1.pgdg26.04+1_arm64.deb pgdg 0.8.3 224.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-17-pgvector_0.8.3-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 17 postgresql-17-pgvector postgresql-17-pgvector_0.8.3-1PIGSTY~resolute_arm64.deb pigsty 0.8.3 236.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgvector/postgresql-17-pgvector_0.8.3-1PIGSTY~resolute_arm64.deb
 @ u26.aarch64 17 postgresql-17-pgvector postgresql-17-pgvector_0.8.2-1.pgdg26.04+1_arm64.deb pgdg 0.8.2 222.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-17-pgvector_0.8.2-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 17 postgresql-17-pgvector postgresql-17-pgvector_0.8.1-2.pgdg26.04+1_arm64.deb pgdg 0.8.1 222.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-17-pgvector_0.8.1-2.pgdg26.04+1_arm64.deb
 @ el8.x86_64 16 pgvector_16 pgvector_16-0.8.3-1PIGSTY.el8.x86_64.rpm pigsty 0.8.3 113.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgvector_16-0.8.3-1PIGSTY.el8.x86_64.rpm
+@ el8.x86_64 16 pgvector_16 pgvector_16-0.8.3-1PGDG.rhel8.10.x86_64.rpm pgdg 0.8.3 108.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pgvector_16-0.8.3-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 pgvector_16 pgvector_16-0.8.2-1PGDG.rhel8.10.x86_64.rpm pgdg 0.8.2 107.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pgvector_16-0.8.2-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 pgvector_16 pgvector_16-0.8.1-1PGDG.rhel8.x86_64.rpm pgdg 0.8.1 106.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pgvector_16-0.8.1-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 16 pgvector_16 pgvector_16-0.8.0-1PGDG.rhel8.x86_64.rpm pgdg 0.8.0 105.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pgvector_16-0.8.0-1PGDG.rhel8.x86_64.rpm
@@ -178,6 +238,7 @@ weight: 1800
 @ el8.x86_64 16 pgvector_16 pgvector_16-0.5.1-1PGDG.rhel8.x86_64.rpm pgdg 0.5.1 62.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pgvector_16-0.5.1-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 16 pgvector_16 pgvector_16-0.5.0-1PGDG.rhel8.x86_64.rpm pgdg 0.5.0 62.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pgvector_16-0.5.0-1PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 16 pgvector_16 pgvector_16-0.8.3-1PIGSTY.el8.aarch64.rpm pigsty 0.8.3 105.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgvector_16-0.8.3-1PIGSTY.el8.aarch64.rpm
+@ el8.aarch64 16 pgvector_16 pgvector_16-0.8.3-1PGDG.rhel8.10.aarch64.rpm pgdg 0.8.3 97.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pgvector_16-0.8.3-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 16 pgvector_16 pgvector_16-0.8.2-1PGDG.rhel8.10.aarch64.rpm pgdg 0.8.2 97.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pgvector_16-0.8.2-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 16 pgvector_16 pgvector_16-0.8.1-1PGDG.rhel8.aarch64.rpm pgdg 0.8.1 96.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pgvector_16-0.8.1-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 16 pgvector_16 pgvector_16-0.8.0-1PGDG.rhel8.aarch64.rpm pgdg 0.8.0 95.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pgvector_16-0.8.0-1PGDG.rhel8.aarch64.rpm
@@ -193,44 +254,97 @@ weight: 1800
 @ el8.aarch64 16 pgvector_16 pgvector_16-0.5.1-1PGDG.rhel8.aarch64.rpm pgdg 0.5.1 58.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pgvector_16-0.5.1-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 16 pgvector_16 pgvector_16-0.5.0-1PGDG.rhel8.aarch64.rpm pgdg 0.5.0 58.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pgvector_16-0.5.0-1PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 16 pgvector_16 pgvector_16-0.8.3-1PIGSTY.el9.x86_64.rpm pigsty 0.8.3 107.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgvector_16-0.8.3-1PIGSTY.el9.x86_64.rpm
+@ el9.x86_64 16 pgvector_16 pgvector_16-0.8.3-1PGDG.rhel9.8.x86_64.rpm pgdg 0.8.3 108.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pgvector_16-0.8.3-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 16 pgvector_16 pgvector_16-0.8.2-1PGDG.rhel9.8.x86_64.rpm pgdg 0.8.2 108.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pgvector_16-0.8.2-1PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 16 pgvector_16 pgvector_16-0.8.2-1PGDG.rhel9.7.x86_64.rpm pgdg 0.8.2 108.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pgvector_16-0.8.2-1PGDG.rhel9.7.x86_64.rpm
+@ el9.x86_64 16 pgvector_16 pgvector_16-0.8.2-1PGDG.rhel9.6.x86_64.rpm pgdg 0.8.2 108.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pgvector_16-0.8.2-1PGDG.rhel9.6.x86_64.rpm
+@ el9.x86_64 16 pgvector_16 pgvector_16-0.8.1-1PGDG.rhel9.x86_64.rpm pgdg 0.8.1 108.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pgvector_16-0.8.1-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 16 pgvector_16 pgvector_16-0.8.0-1PGDG.rhel9.x86_64.rpm pgdg 0.8.0 107.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pgvector_16-0.8.0-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 16 pgvector_16 pgvector_16-0.7.4-1PGDG.rhel9.x86_64.rpm pgdg 0.7.4 103.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pgvector_16-0.7.4-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 16 pgvector_16 pgvector_16-0.7.3-1PGDG.rhel9.x86_64.rpm pgdg 0.7.3 103.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pgvector_16-0.7.3-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 16 pgvector_16 pgvector_16-0.7.2-1PGDG.rhel9.x86_64.rpm pgdg 0.7.2 102.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pgvector_16-0.7.2-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 16 pgvector_16 pgvector_16-0.7.1-1PGDG.rhel9.x86_64.rpm pgdg 0.7.1 102.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pgvector_16-0.7.1-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 16 pgvector_16 pgvector_16-0.7.0-1PGDG.rhel9.x86_64.rpm pgdg 0.7.0 101.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pgvector_16-0.7.0-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 16 pgvector_16 pgvector_16-0.6.2-2PGDG.rhel9.x86_64.rpm pgdg 0.6.2 72.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pgvector_16-0.6.2-2PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 16 pgvector_16 pgvector_16-0.6.2-1PGDG.rhel9.x86_64.rpm pgdg 0.6.2 73.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pgvector_16-0.6.2-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 16 pgvector_16 pgvector_16-0.6.1-1PGDG.rhel9.x86_64.rpm pgdg 0.6.1 72.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pgvector_16-0.6.1-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 16 pgvector_16 pgvector_16-0.6.0-1PGDG.rhel9.x86_64.rpm pgdg 0.6.0 72.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pgvector_16-0.6.0-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 16 pgvector_16 pgvector_16-0.5.1-1PGDG.rhel9.x86_64.rpm pgdg 0.5.1 64.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pgvector_16-0.5.1-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 16 pgvector_16 pgvector_16-0.5.0-1PGDG.rhel9.x86_64.rpm pgdg 0.5.0 64.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pgvector_16-0.5.0-1PGDG.rhel9.x86_64.rpm
 @ el9.aarch64 16 pgvector_16 pgvector_16-0.8.3-1PIGSTY.el9.aarch64.rpm pigsty 0.8.3 97.1KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgvector_16-0.8.3-1PIGSTY.el9.aarch64.rpm
+@ el9.aarch64 16 pgvector_16 pgvector_16-0.8.3-1PGDG.rhel9.8.aarch64.rpm pgdg 0.8.3 94.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pgvector_16-0.8.3-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 16 pgvector_16 pgvector_16-0.8.2-1PGDG.rhel9.8.aarch64.rpm pgdg 0.8.2 94.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pgvector_16-0.8.2-1PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 16 pgvector_16 pgvector_16-0.8.2-1PGDG.rhel9.7.aarch64.rpm pgdg 0.8.2 94.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pgvector_16-0.8.2-1PGDG.rhel9.7.aarch64.rpm
+@ el9.aarch64 16 pgvector_16 pgvector_16-0.8.2-1PGDG.rhel9.6.aarch64.rpm pgdg 0.8.2 94.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pgvector_16-0.8.2-1PGDG.rhel9.6.aarch64.rpm
+@ el9.aarch64 16 pgvector_16 pgvector_16-0.8.1-1PGDG.rhel9.aarch64.rpm pgdg 0.8.1 93.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pgvector_16-0.8.1-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 16 pgvector_16 pgvector_16-0.8.0-1PGDG.rhel9.aarch64.rpm pgdg 0.8.0 93.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pgvector_16-0.8.0-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 16 pgvector_16 pgvector_16-0.7.4-1PGDG.rhel9.aarch64.rpm pgdg 0.7.4 89.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pgvector_16-0.7.4-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 16 pgvector_16 pgvector_16-0.7.3-1PGDG.rhel9.aarch64.rpm pgdg 0.7.3 89.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pgvector_16-0.7.3-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 16 pgvector_16 pgvector_16-0.7.2-1PGDG.rhel9.aarch64.rpm pgdg 0.7.2 88.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pgvector_16-0.7.2-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 16 pgvector_16 pgvector_16-0.7.1-1PGDG.rhel9.aarch64.rpm pgdg 0.7.1 88.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pgvector_16-0.7.1-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 16 pgvector_16 pgvector_16-0.7.0-1PGDG.rhel9.aarch64.rpm pgdg 0.7.0 87.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pgvector_16-0.7.0-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 16 pgvector_16 pgvector_16-0.6.2-2PGDG.rhel9.aarch64.rpm pgdg 0.6.2 69.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pgvector_16-0.6.2-2PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 16 pgvector_16 pgvector_16-0.6.2-1PGDG.rhel9.aarch64.rpm pgdg 0.6.2 68.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pgvector_16-0.6.2-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 16 pgvector_16 pgvector_16-0.6.1-1PGDG.rhel9.aarch64.rpm pgdg 0.6.1 67.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pgvector_16-0.6.1-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 16 pgvector_16 pgvector_16-0.6.0-1PGDG.rhel9.aarch64.rpm pgdg 0.6.0 67.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pgvector_16-0.6.0-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 16 pgvector_16 pgvector_16-0.5.1-1PGDG.rhel9.aarch64.rpm pgdg 0.5.1 59.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pgvector_16-0.5.1-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 16 pgvector_16 pgvector_16-0.5.0-1PGDG.rhel9.aarch64.rpm pgdg 0.5.0 59.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pgvector_16-0.5.0-1PGDG.rhel9.aarch64.rpm
 @ el10.x86_64 16 pgvector_16 pgvector_16-0.8.3-1PIGSTY.el10.x86_64.rpm pigsty 0.8.3 108.3KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgvector_16-0.8.3-1PIGSTY.el10.x86_64.rpm
+@ el10.x86_64 16 pgvector_16 pgvector_16-0.8.3-1PGDG.rhel10.2.x86_64.rpm pgdg 0.8.3 105.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pgvector_16-0.8.3-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 16 pgvector_16 pgvector_16-0.8.2-1PGDG.rhel10.2.x86_64.rpm pgdg 0.8.2 104.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pgvector_16-0.8.2-1PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 16 pgvector_16 pgvector_16-0.8.2-1PGDG.rhel10.1.x86_64.rpm pgdg 0.8.2 104.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pgvector_16-0.8.2-1PGDG.rhel10.1.x86_64.rpm
+@ el10.x86_64 16 pgvector_16 pgvector_16-0.8.2-1PGDG.rhel10.0.x86_64.rpm pgdg 0.8.2 105.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pgvector_16-0.8.2-1PGDG.rhel10.0.x86_64.rpm
+@ el10.x86_64 16 pgvector_16 pgvector_16-0.8.1-1PGDG.rhel10.x86_64.rpm pgdg 0.8.1 104.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pgvector_16-0.8.1-1PGDG.rhel10.x86_64.rpm
+@ el10.x86_64 16 pgvector_16 pgvector_16-0.8.0-2PGDG.rhel10.x86_64.rpm pgdg 0.8.0 104.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pgvector_16-0.8.0-2PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 16 pgvector_16 pgvector_16-0.8.3-1PIGSTY.el10.aarch64.rpm pigsty 0.8.3 99.0KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgvector_16-0.8.3-1PIGSTY.el10.aarch64.rpm
+@ el10.aarch64 16 pgvector_16 pgvector_16-0.8.3-1PGDG.rhel10.2.aarch64.rpm pgdg 0.8.3 96.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pgvector_16-0.8.3-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 16 pgvector_16 pgvector_16-0.8.2-1PGDG.rhel10.2.aarch64.rpm pgdg 0.8.2 96.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pgvector_16-0.8.2-1PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 16 pgvector_16 pgvector_16-0.8.2-1PGDG.rhel10.1.aarch64.rpm pgdg 0.8.2 96.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pgvector_16-0.8.2-1PGDG.rhel10.1.aarch64.rpm
+@ el10.aarch64 16 pgvector_16 pgvector_16-0.8.2-1PGDG.rhel10.0.aarch64.rpm pgdg 0.8.2 96.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pgvector_16-0.8.2-1PGDG.rhel10.0.aarch64.rpm
+@ el10.aarch64 16 pgvector_16 pgvector_16-0.8.1-1PGDG.rhel10.aarch64.rpm pgdg 0.8.1 96.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pgvector_16-0.8.1-1PGDG.rhel10.aarch64.rpm
+@ el10.aarch64 16 pgvector_16 pgvector_16-0.8.0-2PGDG.rhel10.aarch64.rpm pgdg 0.8.0 95.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pgvector_16-0.8.0-2PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 16 postgresql-16-pgvector postgresql-16-pgvector_0.8.3-1.pgdg12+1_amd64.deb pgdg 0.8.3 258.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-16-pgvector_0.8.3-1.pgdg12+1_amd64.deb
 @ d12.x86_64 16 postgresql-16-pgvector postgresql-16-pgvector_0.8.3-1PIGSTY~bookworm_amd64.deb pigsty 0.8.3 251.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgvector/postgresql-16-pgvector_0.8.3-1PIGSTY~bookworm_amd64.deb
 @ d12.x86_64 16 postgresql-16-pgvector postgresql-16-pgvector_0.8.2-1.pgdg12+1_amd64.deb pgdg 0.8.2 256.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-16-pgvector_0.8.2-1.pgdg12+1_amd64.deb
 @ d12.x86_64 16 postgresql-16-pgvector postgresql-16-pgvector_0.8.1-2.pgdg12+1_amd64.deb pgdg 0.8.1 255.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-16-pgvector_0.8.1-2.pgdg12+1_amd64.deb
+@ d12.aarch64 16 postgresql-16-pgvector postgresql-16-pgvector_0.8.3-1.pgdg12+1_arm64.deb pgdg 0.8.3 228.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-16-pgvector_0.8.3-1.pgdg12+1_arm64.deb
 @ d12.aarch64 16 postgresql-16-pgvector postgresql-16-pgvector_0.8.3-1PIGSTY~bookworm_arm64.deb pigsty 0.8.3 226.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgvector/postgresql-16-pgvector_0.8.3-1PIGSTY~bookworm_arm64.deb
 @ d12.aarch64 16 postgresql-16-pgvector postgresql-16-pgvector_0.8.2-1.pgdg12+1_arm64.deb pgdg 0.8.2 226.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-16-pgvector_0.8.2-1.pgdg12+1_arm64.deb
 @ d12.aarch64 16 postgresql-16-pgvector postgresql-16-pgvector_0.8.1-2.pgdg12+1_arm64.deb pgdg 0.8.1 226.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-16-pgvector_0.8.1-2.pgdg12+1_arm64.deb
+@ d13.x86_64 16 postgresql-16-pgvector postgresql-16-pgvector_0.8.3-1.pgdg13+1_amd64.deb pgdg 0.8.3 258.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-16-pgvector_0.8.3-1.pgdg13+1_amd64.deb
 @ d13.x86_64 16 postgresql-16-pgvector postgresql-16-pgvector_0.8.3-1PIGSTY~trixie_amd64.deb pigsty 0.8.3 251.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgvector/postgresql-16-pgvector_0.8.3-1PIGSTY~trixie_amd64.deb
 @ d13.x86_64 16 postgresql-16-pgvector postgresql-16-pgvector_0.8.2-1.pgdg13+1_amd64.deb pgdg 0.8.2 256.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-16-pgvector_0.8.2-1.pgdg13+1_amd64.deb
 @ d13.x86_64 16 postgresql-16-pgvector postgresql-16-pgvector_0.8.1-2.pgdg13+1_amd64.deb pgdg 0.8.1 256.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-16-pgvector_0.8.1-2.pgdg13+1_amd64.deb
+@ d13.aarch64 16 postgresql-16-pgvector postgresql-16-pgvector_0.8.3-1.pgdg13+1_arm64.deb pgdg 0.8.3 229.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-16-pgvector_0.8.3-1.pgdg13+1_arm64.deb
 @ d13.aarch64 16 postgresql-16-pgvector postgresql-16-pgvector_0.8.3-1PIGSTY~trixie_arm64.deb pigsty 0.8.3 228.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgvector/postgresql-16-pgvector_0.8.3-1PIGSTY~trixie_arm64.deb
 @ d13.aarch64 16 postgresql-16-pgvector postgresql-16-pgvector_0.8.2-1.pgdg13+1_arm64.deb pgdg 0.8.2 227.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-16-pgvector_0.8.2-1.pgdg13+1_arm64.deb
 @ d13.aarch64 16 postgresql-16-pgvector postgresql-16-pgvector_0.8.1-2.pgdg13+1_arm64.deb pgdg 0.8.1 227.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-16-pgvector_0.8.1-2.pgdg13+1_arm64.deb
+@ u22.x86_64 16 postgresql-16-pgvector postgresql-16-pgvector_0.8.3-1.pgdg22.04+1_amd64.deb pgdg 0.8.3 292.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-16-pgvector_0.8.3-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 16 postgresql-16-pgvector postgresql-16-pgvector_0.8.3-1PIGSTY~jammy_amd64.deb pigsty 0.8.3 300.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgvector/postgresql-16-pgvector_0.8.3-1PIGSTY~jammy_amd64.deb
 @ u22.x86_64 16 postgresql-16-pgvector postgresql-16-pgvector_0.8.2-1.pgdg22.04+1_amd64.deb pgdg 0.8.2 289.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-16-pgvector_0.8.2-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 16 postgresql-16-pgvector postgresql-16-pgvector_0.8.1-2.pgdg22.04+1_amd64.deb pgdg 0.8.1 288.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-16-pgvector_0.8.1-2.pgdg22.04+1_amd64.deb
+@ u22.aarch64 16 postgresql-16-pgvector postgresql-16-pgvector_0.8.3-1.pgdg22.04+1_arm64.deb pgdg 0.8.3 258.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-16-pgvector_0.8.3-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 16 postgresql-16-pgvector postgresql-16-pgvector_0.8.3-1PIGSTY~jammy_arm64.deb pigsty 0.8.3 273.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgvector/postgresql-16-pgvector_0.8.3-1PIGSTY~jammy_arm64.deb
 @ u22.aarch64 16 postgresql-16-pgvector postgresql-16-pgvector_0.8.2-1.pgdg22.04+1_arm64.deb pgdg 0.8.2 257.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-16-pgvector_0.8.2-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 16 postgresql-16-pgvector postgresql-16-pgvector_0.8.1-2.pgdg22.04+1_arm64.deb pgdg 0.8.1 256.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-16-pgvector_0.8.1-2.pgdg22.04+1_arm64.deb
+@ u24.x86_64 16 postgresql-16-pgvector postgresql-16-pgvector_0.8.3-1.pgdg24.04+1_amd64.deb pgdg 0.8.3 254.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-16-pgvector_0.8.3-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 16 postgresql-16-pgvector postgresql-16-pgvector_0.8.3-1PIGSTY~noble_amd64.deb pigsty 0.8.3 258.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgvector/postgresql-16-pgvector_0.8.3-1PIGSTY~noble_amd64.deb
 @ u24.x86_64 16 postgresql-16-pgvector postgresql-16-pgvector_0.8.2-1.pgdg24.04+1_amd64.deb pgdg 0.8.2 252.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-16-pgvector_0.8.2-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 16 postgresql-16-pgvector postgresql-16-pgvector_0.8.1-2.pgdg24.04+1_amd64.deb pgdg 0.8.1 251.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-16-pgvector_0.8.1-2.pgdg24.04+1_amd64.deb
+@ u24.aarch64 16 postgresql-16-pgvector postgresql-16-pgvector_0.8.3-1.pgdg24.04+1_arm64.deb pgdg 0.8.3 224.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-16-pgvector_0.8.3-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 16 postgresql-16-pgvector postgresql-16-pgvector_0.8.3-1PIGSTY~noble_arm64.deb pigsty 0.8.3 236.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgvector/postgresql-16-pgvector_0.8.3-1PIGSTY~noble_arm64.deb
 @ u24.aarch64 16 postgresql-16-pgvector postgresql-16-pgvector_0.8.2-1.pgdg24.04+1_arm64.deb pgdg 0.8.2 222.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-16-pgvector_0.8.2-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 16 postgresql-16-pgvector postgresql-16-pgvector_0.8.1-2.pgdg24.04+1_arm64.deb pgdg 0.8.1 222.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-16-pgvector_0.8.1-2.pgdg24.04+1_arm64.deb
+@ u26.x86_64 16 postgresql-16-pgvector postgresql-16-pgvector_0.8.3-1.pgdg26.04+1_amd64.deb pgdg 0.8.3 252.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-16-pgvector_0.8.3-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 16 postgresql-16-pgvector postgresql-16-pgvector_0.8.3-1PIGSTY~resolute_amd64.deb pigsty 0.8.3 257.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgvector/postgresql-16-pgvector_0.8.3-1PIGSTY~resolute_amd64.deb
 @ u26.x86_64 16 postgresql-16-pgvector postgresql-16-pgvector_0.8.2-1.pgdg26.04+1_amd64.deb pgdg 0.8.2 250.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-16-pgvector_0.8.2-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 16 postgresql-16-pgvector postgresql-16-pgvector_0.8.1-2.pgdg26.04+1_amd64.deb pgdg 0.8.1 250.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-16-pgvector_0.8.1-2.pgdg26.04+1_amd64.deb
+@ u26.aarch64 16 postgresql-16-pgvector postgresql-16-pgvector_0.8.3-1.pgdg26.04+1_arm64.deb pgdg 0.8.3 224.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-16-pgvector_0.8.3-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 16 postgresql-16-pgvector postgresql-16-pgvector_0.8.3-1PIGSTY~resolute_arm64.deb pigsty 0.8.3 235.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgvector/postgresql-16-pgvector_0.8.3-1PIGSTY~resolute_arm64.deb
 @ u26.aarch64 16 postgresql-16-pgvector postgresql-16-pgvector_0.8.2-1.pgdg26.04+1_arm64.deb pgdg 0.8.2 222.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-16-pgvector_0.8.2-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 16 postgresql-16-pgvector postgresql-16-pgvector_0.8.1-2.pgdg26.04+1_arm64.deb pgdg 0.8.1 221.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-16-pgvector_0.8.1-2.pgdg26.04+1_arm64.deb
 @ el8.x86_64 15 pgvector_15 pgvector_15-0.8.3-1PIGSTY.el8.x86_64.rpm pigsty 0.8.3 114.6KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgvector_15-0.8.3-1PIGSTY.el8.x86_64.rpm
+@ el8.x86_64 15 pgvector_15 pgvector_15-0.8.3-1PGDG.rhel8.10.x86_64.rpm pgdg 0.8.3 109.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pgvector_15-0.8.3-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 pgvector_15 pgvector_15-0.8.2-1PGDG.rhel8.10.x86_64.rpm pgdg 0.8.2 108.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pgvector_15-0.8.2-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 pgvector_15 pgvector_15-0.8.1-1PGDG.rhel8.x86_64.rpm pgdg 0.8.1 107.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pgvector_15-0.8.1-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 15 pgvector_15 pgvector_15-0.8.0-1PGDG.rhel8.x86_64.rpm pgdg 0.8.0 106.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pgvector_15-0.8.0-1PGDG.rhel8.x86_64.rpm
@@ -248,6 +362,7 @@ weight: 1800
 @ el8.x86_64 15 pgvector_15 pgvector_15-0.4.4-1.rhel8.x86_64.rpm pgdg 0.4.4 44.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pgvector_15-0.4.4-1.rhel8.x86_64.rpm
 @ el8.x86_64 15 pgvector_15 pgvector_15-0.4.1-1.rhel8.x86_64.rpm pgdg 0.4.1 41.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pgvector_15-0.4.1-1.rhel8.x86_64.rpm
 @ el8.aarch64 15 pgvector_15 pgvector_15-0.8.3-1PIGSTY.el8.aarch64.rpm pigsty 0.8.3 106.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgvector_15-0.8.3-1PIGSTY.el8.aarch64.rpm
+@ el8.aarch64 15 pgvector_15 pgvector_15-0.8.3-1PGDG.rhel8.10.aarch64.rpm pgdg 0.8.3 98.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pgvector_15-0.8.3-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 15 pgvector_15 pgvector_15-0.8.2-1PGDG.rhel8.10.aarch64.rpm pgdg 0.8.2 97.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pgvector_15-0.8.2-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 15 pgvector_15 pgvector_15-0.8.1-1PGDG.rhel8.aarch64.rpm pgdg 0.8.1 97.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pgvector_15-0.8.1-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 15 pgvector_15 pgvector_15-0.8.0-1PGDG.rhel8.aarch64.rpm pgdg 0.8.0 96.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pgvector_15-0.8.0-1PGDG.rhel8.aarch64.rpm
@@ -265,44 +380,101 @@ weight: 1800
 @ el8.aarch64 15 pgvector_15 pgvector_15-0.4.4-1.rhel8.aarch64.rpm pgdg 0.4.4 42.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pgvector_15-0.4.4-1.rhel8.aarch64.rpm
 @ el8.aarch64 15 pgvector_15 pgvector_15-0.4.1-1.rhel8.aarch64.rpm pgdg 0.4.1 39.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pgvector_15-0.4.1-1.rhel8.aarch64.rpm
 @ el9.x86_64 15 pgvector_15 pgvector_15-0.8.3-1PIGSTY.el9.x86_64.rpm pigsty 0.8.3 111.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgvector_15-0.8.3-1PIGSTY.el9.x86_64.rpm
+@ el9.x86_64 15 pgvector_15 pgvector_15-0.8.3-1PGDG.rhel9.8.x86_64.rpm pgdg 0.8.3 113.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pgvector_15-0.8.3-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 15 pgvector_15 pgvector_15-0.8.2-1PGDG.rhel9.8.x86_64.rpm pgdg 0.8.2 113.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pgvector_15-0.8.2-1PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 15 pgvector_15 pgvector_15-0.8.2-1PGDG.rhel9.7.x86_64.rpm pgdg 0.8.2 113.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pgvector_15-0.8.2-1PGDG.rhel9.7.x86_64.rpm
+@ el9.x86_64 15 pgvector_15 pgvector_15-0.8.2-1PGDG.rhel9.6.x86_64.rpm pgdg 0.8.2 113.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pgvector_15-0.8.2-1PGDG.rhel9.6.x86_64.rpm
+@ el9.x86_64 15 pgvector_15 pgvector_15-0.8.1-1PGDG.rhel9.x86_64.rpm pgdg 0.8.1 112.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pgvector_15-0.8.1-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 15 pgvector_15 pgvector_15-0.8.0-1PGDG.rhel9.x86_64.rpm pgdg 0.8.0 112.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pgvector_15-0.8.0-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 15 pgvector_15 pgvector_15-0.7.4-1PGDG.rhel9.x86_64.rpm pgdg 0.7.4 107.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pgvector_15-0.7.4-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 15 pgvector_15 pgvector_15-0.7.3-1PGDG.rhel9.x86_64.rpm pgdg 0.7.3 107.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pgvector_15-0.7.3-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 15 pgvector_15 pgvector_15-0.7.2-1PGDG.rhel9.x86_64.rpm pgdg 0.7.2 106.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pgvector_15-0.7.2-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 15 pgvector_15 pgvector_15-0.7.1-1PGDG.rhel9.x86_64.rpm pgdg 0.7.1 106.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pgvector_15-0.7.1-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 15 pgvector_15 pgvector_15-0.7.0-1PGDG.rhel9.x86_64.rpm pgdg 0.7.0 106.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pgvector_15-0.7.0-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 15 pgvector_15 pgvector_15-0.6.2-2PGDG.rhel9.x86_64.rpm pgdg 0.6.2 76.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pgvector_15-0.6.2-2PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 15 pgvector_15 pgvector_15-0.6.2-1PGDG.rhel9.x86_64.rpm pgdg 0.6.2 78.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pgvector_15-0.6.2-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 15 pgvector_15 pgvector_15-0.6.1-1PGDG.rhel9.x86_64.rpm pgdg 0.6.1 77.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pgvector_15-0.6.1-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 15 pgvector_15 pgvector_15-0.6.0-1PGDG.rhel9.x86_64.rpm pgdg 0.6.0 76.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pgvector_15-0.6.0-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 15 pgvector_15 pgvector_15-0.5.1-1PGDG.rhel9.x86_64.rpm pgdg 0.5.1 66.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pgvector_15-0.5.1-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 15 pgvector_15 pgvector_15-0.5.0-1PGDG.rhel9.x86_64.rpm pgdg 0.5.0 65.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pgvector_15-0.5.0-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 15 pgvector_15 pgvector_15-0.4.4-1.rhel9.x86_64.rpm pgdg 0.4.4 45.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pgvector_15-0.4.4-1.rhel9.x86_64.rpm
+@ el9.x86_64 15 pgvector_15 pgvector_15-0.4.1-1.rhel9.x86_64.rpm pgdg 0.4.1 43.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pgvector_15-0.4.1-1.rhel9.x86_64.rpm
 @ el9.aarch64 15 pgvector_15 pgvector_15-0.8.3-1PIGSTY.el9.aarch64.rpm pigsty 0.8.3 101.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgvector_15-0.8.3-1PIGSTY.el9.aarch64.rpm
+@ el9.aarch64 15 pgvector_15 pgvector_15-0.8.3-1PGDG.rhel9.8.aarch64.rpm pgdg 0.8.3 99.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pgvector_15-0.8.3-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 15 pgvector_15 pgvector_15-0.8.2-1PGDG.rhel9.8.aarch64.rpm pgdg 0.8.2 99.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pgvector_15-0.8.2-1PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 15 pgvector_15 pgvector_15-0.8.2-1PGDG.rhel9.7.aarch64.rpm pgdg 0.8.2 99.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pgvector_15-0.8.2-1PGDG.rhel9.7.aarch64.rpm
+@ el9.aarch64 15 pgvector_15 pgvector_15-0.8.2-1PGDG.rhel9.6.aarch64.rpm pgdg 0.8.2 99.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pgvector_15-0.8.2-1PGDG.rhel9.6.aarch64.rpm
+@ el9.aarch64 15 pgvector_15 pgvector_15-0.8.1-1PGDG.rhel9.aarch64.rpm pgdg 0.8.1 98.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pgvector_15-0.8.1-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 15 pgvector_15 pgvector_15-0.8.0-1PGDG.rhel9.aarch64.rpm pgdg 0.8.0 98.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pgvector_15-0.8.0-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 15 pgvector_15 pgvector_15-0.7.4-1PGDG.rhel9.aarch64.rpm pgdg 0.7.4 94.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pgvector_15-0.7.4-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 15 pgvector_15 pgvector_15-0.7.3-1PGDG.rhel9.aarch64.rpm pgdg 0.7.3 93.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pgvector_15-0.7.3-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 15 pgvector_15 pgvector_15-0.7.2-1PGDG.rhel9.aarch64.rpm pgdg 0.7.2 93.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pgvector_15-0.7.2-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 15 pgvector_15 pgvector_15-0.7.1-1PGDG.rhel9.aarch64.rpm pgdg 0.7.1 93.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pgvector_15-0.7.1-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 15 pgvector_15 pgvector_15-0.7.0-1PGDG.rhel9.aarch64.rpm pgdg 0.7.0 92.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pgvector_15-0.7.0-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 15 pgvector_15 pgvector_15-0.6.2-2PGDG.rhel9.aarch64.rpm pgdg 0.6.2 73.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pgvector_15-0.6.2-2PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 15 pgvector_15 pgvector_15-0.6.2-1PGDG.rhel9.aarch64.rpm pgdg 0.6.2 73.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pgvector_15-0.6.2-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 15 pgvector_15 pgvector_15-0.6.1-1PGDG.rhel9.aarch64.rpm pgdg 0.6.1 72.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pgvector_15-0.6.1-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 15 pgvector_15 pgvector_15-0.6.0-1PGDG.rhel9.aarch64.rpm pgdg 0.6.0 71.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pgvector_15-0.6.0-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 15 pgvector_15 pgvector_15-0.5.1-1PGDG.rhel9.aarch64.rpm pgdg 0.5.1 61.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pgvector_15-0.5.1-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 15 pgvector_15 pgvector_15-0.5.0-1PGDG.rhel9.aarch64.rpm pgdg 0.5.0 60.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pgvector_15-0.5.0-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 15 pgvector_15 pgvector_15-0.4.4-1.rhel9.aarch64.rpm pgdg 0.4.4 43.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pgvector_15-0.4.4-1.rhel9.aarch64.rpm
+@ el9.aarch64 15 pgvector_15 pgvector_15-0.4.1-1.rhel9.aarch64.rpm pgdg 0.4.1 40.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pgvector_15-0.4.1-1.rhel9.aarch64.rpm
 @ el10.x86_64 15 pgvector_15 pgvector_15-0.8.3-1PIGSTY.el10.x86_64.rpm pigsty 0.8.3 112.7KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgvector_15-0.8.3-1PIGSTY.el10.x86_64.rpm
+@ el10.x86_64 15 pgvector_15 pgvector_15-0.8.3-1PGDG.rhel10.2.x86_64.rpm pgdg 0.8.3 109.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pgvector_15-0.8.3-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 15 pgvector_15 pgvector_15-0.8.2-1PGDG.rhel10.2.x86_64.rpm pgdg 0.8.2 108.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pgvector_15-0.8.2-1PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 15 pgvector_15 pgvector_15-0.8.2-1PGDG.rhel10.1.x86_64.rpm pgdg 0.8.2 108.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pgvector_15-0.8.2-1PGDG.rhel10.1.x86_64.rpm
+@ el10.x86_64 15 pgvector_15 pgvector_15-0.8.2-1PGDG.rhel10.0.x86_64.rpm pgdg 0.8.2 109.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pgvector_15-0.8.2-1PGDG.rhel10.0.x86_64.rpm
+@ el10.x86_64 15 pgvector_15 pgvector_15-0.8.1-1PGDG.rhel10.x86_64.rpm pgdg 0.8.1 108.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pgvector_15-0.8.1-1PGDG.rhel10.x86_64.rpm
+@ el10.x86_64 15 pgvector_15 pgvector_15-0.8.0-2PGDG.rhel10.x86_64.rpm pgdg 0.8.0 108.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pgvector_15-0.8.0-2PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 15 pgvector_15 pgvector_15-0.8.3-1PIGSTY.el10.aarch64.rpm pigsty 0.8.3 103.8KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgvector_15-0.8.3-1PIGSTY.el10.aarch64.rpm
+@ el10.aarch64 15 pgvector_15 pgvector_15-0.8.3-1PGDG.rhel10.2.aarch64.rpm pgdg 0.8.3 101.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pgvector_15-0.8.3-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 15 pgvector_15 pgvector_15-0.8.2-1PGDG.rhel10.2.aarch64.rpm pgdg 0.8.2 101.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pgvector_15-0.8.2-1PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 15 pgvector_15 pgvector_15-0.8.2-1PGDG.rhel10.1.aarch64.rpm pgdg 0.8.2 101.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pgvector_15-0.8.2-1PGDG.rhel10.1.aarch64.rpm
+@ el10.aarch64 15 pgvector_15 pgvector_15-0.8.2-1PGDG.rhel10.0.aarch64.rpm pgdg 0.8.2 101.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pgvector_15-0.8.2-1PGDG.rhel10.0.aarch64.rpm
+@ el10.aarch64 15 pgvector_15 pgvector_15-0.8.1-1PGDG.rhel10.aarch64.rpm pgdg 0.8.1 101.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pgvector_15-0.8.1-1PGDG.rhel10.aarch64.rpm
+@ el10.aarch64 15 pgvector_15 pgvector_15-0.8.0-2PGDG.rhel10.aarch64.rpm pgdg 0.8.0 100.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pgvector_15-0.8.0-2PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 15 postgresql-15-pgvector postgresql-15-pgvector_0.8.3-1.pgdg12+1_amd64.deb pgdg 0.8.3 259.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-15-pgvector_0.8.3-1.pgdg12+1_amd64.deb
 @ d12.x86_64 15 postgresql-15-pgvector postgresql-15-pgvector_0.8.3-1PIGSTY~bookworm_amd64.deb pigsty 0.8.3 252.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgvector/postgresql-15-pgvector_0.8.3-1PIGSTY~bookworm_amd64.deb
 @ d12.x86_64 15 postgresql-15-pgvector postgresql-15-pgvector_0.8.2-1.pgdg12+1_amd64.deb pgdg 0.8.2 256.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-15-pgvector_0.8.2-1.pgdg12+1_amd64.deb
 @ d12.x86_64 15 postgresql-15-pgvector postgresql-15-pgvector_0.8.1-2.pgdg12+1_amd64.deb pgdg 0.8.1 256.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-15-pgvector_0.8.1-2.pgdg12+1_amd64.deb
+@ d12.aarch64 15 postgresql-15-pgvector postgresql-15-pgvector_0.8.3-1.pgdg12+1_arm64.deb pgdg 0.8.3 230.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-15-pgvector_0.8.3-1.pgdg12+1_arm64.deb
 @ d12.aarch64 15 postgresql-15-pgvector postgresql-15-pgvector_0.8.3-1PIGSTY~bookworm_arm64.deb pigsty 0.8.3 227.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgvector/postgresql-15-pgvector_0.8.3-1PIGSTY~bookworm_arm64.deb
 @ d12.aarch64 15 postgresql-15-pgvector postgresql-15-pgvector_0.8.2-1.pgdg12+1_arm64.deb pgdg 0.8.2 227.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-15-pgvector_0.8.2-1.pgdg12+1_arm64.deb
 @ d12.aarch64 15 postgresql-15-pgvector postgresql-15-pgvector_0.8.1-2.pgdg12+1_arm64.deb pgdg 0.8.1 227.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-15-pgvector_0.8.1-2.pgdg12+1_arm64.deb
+@ d13.x86_64 15 postgresql-15-pgvector postgresql-15-pgvector_0.8.3-1.pgdg13+1_amd64.deb pgdg 0.8.3 260.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-15-pgvector_0.8.3-1.pgdg13+1_amd64.deb
 @ d13.x86_64 15 postgresql-15-pgvector postgresql-15-pgvector_0.8.3-1PIGSTY~trixie_amd64.deb pigsty 0.8.3 252.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgvector/postgresql-15-pgvector_0.8.3-1PIGSTY~trixie_amd64.deb
 @ d13.x86_64 15 postgresql-15-pgvector postgresql-15-pgvector_0.8.2-1.pgdg13+1_amd64.deb pgdg 0.8.2 258.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-15-pgvector_0.8.2-1.pgdg13+1_amd64.deb
 @ d13.x86_64 15 postgresql-15-pgvector postgresql-15-pgvector_0.8.1-2.pgdg13+1_amd64.deb pgdg 0.8.1 257.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-15-pgvector_0.8.1-2.pgdg13+1_amd64.deb
+@ d13.aarch64 15 postgresql-15-pgvector postgresql-15-pgvector_0.8.3-1.pgdg13+1_arm64.deb pgdg 0.8.3 231.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-15-pgvector_0.8.3-1.pgdg13+1_arm64.deb
 @ d13.aarch64 15 postgresql-15-pgvector postgresql-15-pgvector_0.8.3-1PIGSTY~trixie_arm64.deb pigsty 0.8.3 229.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgvector/postgresql-15-pgvector_0.8.3-1PIGSTY~trixie_arm64.deb
 @ d13.aarch64 15 postgresql-15-pgvector postgresql-15-pgvector_0.8.2-1.pgdg13+1_arm64.deb pgdg 0.8.2 228.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-15-pgvector_0.8.2-1.pgdg13+1_arm64.deb
 @ d13.aarch64 15 postgresql-15-pgvector postgresql-15-pgvector_0.8.1-2.pgdg13+1_arm64.deb pgdg 0.8.1 228.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-15-pgvector_0.8.1-2.pgdg13+1_arm64.deb
+@ u22.x86_64 15 postgresql-15-pgvector postgresql-15-pgvector_0.8.3-1.pgdg22.04+1_amd64.deb pgdg 0.8.3 294.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-15-pgvector_0.8.3-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 15 postgresql-15-pgvector postgresql-15-pgvector_0.8.3-1PIGSTY~jammy_amd64.deb pigsty 0.8.3 303.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgvector/postgresql-15-pgvector_0.8.3-1PIGSTY~jammy_amd64.deb
 @ u22.x86_64 15 postgresql-15-pgvector postgresql-15-pgvector_0.8.2-1.pgdg22.04+1_amd64.deb pgdg 0.8.2 292.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-15-pgvector_0.8.2-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 15 postgresql-15-pgvector postgresql-15-pgvector_0.8.1-2.pgdg22.04+1_amd64.deb pgdg 0.8.1 291.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-15-pgvector_0.8.1-2.pgdg22.04+1_amd64.deb
+@ u22.aarch64 15 postgresql-15-pgvector postgresql-15-pgvector_0.8.3-1.pgdg22.04+1_arm64.deb pgdg 0.8.3 262.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-15-pgvector_0.8.3-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 15 postgresql-15-pgvector postgresql-15-pgvector_0.8.3-1PIGSTY~jammy_arm64.deb pigsty 0.8.3 278.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgvector/postgresql-15-pgvector_0.8.3-1PIGSTY~jammy_arm64.deb
 @ u22.aarch64 15 postgresql-15-pgvector postgresql-15-pgvector_0.8.2-1.pgdg22.04+1_arm64.deb pgdg 0.8.2 260.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-15-pgvector_0.8.2-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 15 postgresql-15-pgvector postgresql-15-pgvector_0.8.1-2.pgdg22.04+1_arm64.deb pgdg 0.8.1 259.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-15-pgvector_0.8.1-2.pgdg22.04+1_arm64.deb
+@ u24.x86_64 15 postgresql-15-pgvector postgresql-15-pgvector_0.8.3-1.pgdg24.04+1_amd64.deb pgdg 0.8.3 256.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-15-pgvector_0.8.3-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 15 postgresql-15-pgvector postgresql-15-pgvector_0.8.3-1PIGSTY~noble_amd64.deb pigsty 0.8.3 261.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgvector/postgresql-15-pgvector_0.8.3-1PIGSTY~noble_amd64.deb
 @ u24.x86_64 15 postgresql-15-pgvector postgresql-15-pgvector_0.8.2-1.pgdg24.04+1_amd64.deb pgdg 0.8.2 254.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-15-pgvector_0.8.2-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 15 postgresql-15-pgvector postgresql-15-pgvector_0.8.1-2.pgdg24.04+1_amd64.deb pgdg 0.8.1 254.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-15-pgvector_0.8.1-2.pgdg24.04+1_amd64.deb
+@ u24.aarch64 15 postgresql-15-pgvector postgresql-15-pgvector_0.8.3-1.pgdg24.04+1_arm64.deb pgdg 0.8.3 228.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-15-pgvector_0.8.3-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 15 postgresql-15-pgvector postgresql-15-pgvector_0.8.3-1PIGSTY~noble_arm64.deb pigsty 0.8.3 240.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgvector/postgresql-15-pgvector_0.8.3-1PIGSTY~noble_arm64.deb
 @ u24.aarch64 15 postgresql-15-pgvector postgresql-15-pgvector_0.8.2-1.pgdg24.04+1_arm64.deb pgdg 0.8.2 226.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-15-pgvector_0.8.2-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 15 postgresql-15-pgvector postgresql-15-pgvector_0.8.1-2.pgdg24.04+1_arm64.deb pgdg 0.8.1 226.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-15-pgvector_0.8.1-2.pgdg24.04+1_arm64.deb
+@ u26.x86_64 15 postgresql-15-pgvector postgresql-15-pgvector_0.8.3-1.pgdg26.04+1_amd64.deb pgdg 0.8.3 255.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-15-pgvector_0.8.3-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 15 postgresql-15-pgvector postgresql-15-pgvector_0.8.3-1PIGSTY~resolute_amd64.deb pigsty 0.8.3 261.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgvector/postgresql-15-pgvector_0.8.3-1PIGSTY~resolute_amd64.deb
 @ u26.x86_64 15 postgresql-15-pgvector postgresql-15-pgvector_0.8.2-1.pgdg26.04+1_amd64.deb pgdg 0.8.2 253.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-15-pgvector_0.8.2-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 15 postgresql-15-pgvector postgresql-15-pgvector_0.8.1-2.pgdg26.04+1_amd64.deb pgdg 0.8.1 253.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-15-pgvector_0.8.1-2.pgdg26.04+1_amd64.deb
+@ u26.aarch64 15 postgresql-15-pgvector postgresql-15-pgvector_0.8.3-1.pgdg26.04+1_arm64.deb pgdg 0.8.3 227.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-15-pgvector_0.8.3-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 15 postgresql-15-pgvector postgresql-15-pgvector_0.8.3-1PIGSTY~resolute_arm64.deb pigsty 0.8.3 240.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgvector/postgresql-15-pgvector_0.8.3-1PIGSTY~resolute_arm64.deb
 @ u26.aarch64 15 postgresql-15-pgvector postgresql-15-pgvector_0.8.2-1.pgdg26.04+1_arm64.deb pgdg 0.8.2 225.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-15-pgvector_0.8.2-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 15 postgresql-15-pgvector postgresql-15-pgvector_0.8.1-2.pgdg26.04+1_arm64.deb pgdg 0.8.1 225.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-15-pgvector_0.8.1-2.pgdg26.04+1_arm64.deb
 @ el8.x86_64 14 pgvector_14 pgvector_14-0.8.3-1PIGSTY.el8.x86_64.rpm pigsty 0.8.3 114.6KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgvector_14-0.8.3-1PIGSTY.el8.x86_64.rpm
+@ el8.x86_64 14 pgvector_14 pgvector_14-0.8.3-1PGDG.rhel8.10.x86_64.rpm pgdg 0.8.3 109.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pgvector_14-0.8.3-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 14 pgvector_14 pgvector_14-0.8.2-1PGDG.rhel8.10.x86_64.rpm pgdg 0.8.2 108.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pgvector_14-0.8.2-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 14 pgvector_14 pgvector_14-0.8.1-1PGDG.rhel8.x86_64.rpm pgdg 0.8.1 107.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pgvector_14-0.8.1-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 14 pgvector_14 pgvector_14-0.8.0-1PGDG.rhel8.x86_64.rpm pgdg 0.8.0 106.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pgvector_14-0.8.0-1PGDG.rhel8.x86_64.rpm
@@ -320,6 +492,7 @@ weight: 1800
 @ el8.x86_64 14 pgvector_14 pgvector_14-0.4.4-1.rhel8.x86_64.rpm pgdg 0.4.4 44.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pgvector_14-0.4.4-1.rhel8.x86_64.rpm
 @ el8.x86_64 14 pgvector_14 pgvector_14-0.4.1-1.rhel8.x86_64.rpm pgdg 0.4.1 41.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pgvector_14-0.4.1-1.rhel8.x86_64.rpm
 @ el8.aarch64 14 pgvector_14 pgvector_14-0.8.3-1PIGSTY.el8.aarch64.rpm pigsty 0.8.3 106.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgvector_14-0.8.3-1PIGSTY.el8.aarch64.rpm
+@ el8.aarch64 14 pgvector_14 pgvector_14-0.8.3-1PGDG.rhel8.10.aarch64.rpm pgdg 0.8.3 98.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pgvector_14-0.8.3-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 14 pgvector_14 pgvector_14-0.8.2-1PGDG.rhel8.10.aarch64.rpm pgdg 0.8.2 97.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pgvector_14-0.8.2-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 14 pgvector_14 pgvector_14-0.8.1-1PGDG.rhel8.aarch64.rpm pgdg 0.8.1 97.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pgvector_14-0.8.1-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 14 pgvector_14 pgvector_14-0.8.0-1PGDG.rhel8.aarch64.rpm pgdg 0.8.0 96.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pgvector_14-0.8.0-1PGDG.rhel8.aarch64.rpm
@@ -337,40 +510,96 @@ weight: 1800
 @ el8.aarch64 14 pgvector_14 pgvector_14-0.4.4-1.rhel8.aarch64.rpm pgdg 0.4.4 42.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pgvector_14-0.4.4-1.rhel8.aarch64.rpm
 @ el8.aarch64 14 pgvector_14 pgvector_14-0.4.1-1.rhel8.aarch64.rpm pgdg 0.4.1 39.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pgvector_14-0.4.1-1.rhel8.aarch64.rpm
 @ el9.x86_64 14 pgvector_14 pgvector_14-0.8.3-1PIGSTY.el9.x86_64.rpm pigsty 0.8.3 111.7KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgvector_14-0.8.3-1PIGSTY.el9.x86_64.rpm
+@ el9.x86_64 14 pgvector_14 pgvector_14-0.8.3-1PGDG.rhel9.8.x86_64.rpm pgdg 0.8.3 112.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pgvector_14-0.8.3-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 14 pgvector_14 pgvector_14-0.8.2-1PGDG.rhel9.8.x86_64.rpm pgdg 0.8.2 112.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pgvector_14-0.8.2-1PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 14 pgvector_14 pgvector_14-0.8.2-1PGDG.rhel9.7.x86_64.rpm pgdg 0.8.2 112.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pgvector_14-0.8.2-1PGDG.rhel9.7.x86_64.rpm
+@ el9.x86_64 14 pgvector_14 pgvector_14-0.8.2-1PGDG.rhel9.6.x86_64.rpm pgdg 0.8.2 113.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pgvector_14-0.8.2-1PGDG.rhel9.6.x86_64.rpm
+@ el9.x86_64 14 pgvector_14 pgvector_14-0.8.1-1PGDG.rhel9.x86_64.rpm pgdg 0.8.1 112.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pgvector_14-0.8.1-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 14 pgvector_14 pgvector_14-0.8.0-1PGDG.rhel9.x86_64.rpm pgdg 0.8.0 111.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pgvector_14-0.8.0-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 14 pgvector_14 pgvector_14-0.7.4-1PGDG.rhel9.x86_64.rpm pgdg 0.7.4 107.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pgvector_14-0.7.4-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 14 pgvector_14 pgvector_14-0.7.3-1PGDG.rhel9.x86_64.rpm pgdg 0.7.3 107.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pgvector_14-0.7.3-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 14 pgvector_14 pgvector_14-0.7.2-1PGDG.rhel9.x86_64.rpm pgdg 0.7.2 107.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pgvector_14-0.7.2-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 14 pgvector_14 pgvector_14-0.7.1-1PGDG.rhel9.x86_64.rpm pgdg 0.7.1 106.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pgvector_14-0.7.1-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 14 pgvector_14 pgvector_14-0.7.0-1PGDG.rhel9.x86_64.rpm pgdg 0.7.0 106.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pgvector_14-0.7.0-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 14 pgvector_14 pgvector_14-0.6.2-2PGDG.rhel9.x86_64.rpm pgdg 0.6.2 76.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pgvector_14-0.6.2-2PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 14 pgvector_14 pgvector_14-0.6.2-1PGDG.rhel9.x86_64.rpm pgdg 0.6.2 78.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pgvector_14-0.6.2-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 14 pgvector_14 pgvector_14-0.6.1-1PGDG.rhel9.x86_64.rpm pgdg 0.6.1 77.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pgvector_14-0.6.1-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 14 pgvector_14 pgvector_14-0.6.0-1PGDG.rhel9.x86_64.rpm pgdg 0.6.0 76.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pgvector_14-0.6.0-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 14 pgvector_14 pgvector_14-0.5.1-1PGDG.rhel9.x86_64.rpm pgdg 0.5.1 65.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pgvector_14-0.5.1-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 14 pgvector_14 pgvector_14-0.5.0-1PGDG.rhel9.x86_64.rpm pgdg 0.5.0 65.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pgvector_14-0.5.0-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 14 pgvector_14 pgvector_14-0.4.4-1.rhel9.x86_64.rpm pgdg 0.4.4 45.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pgvector_14-0.4.4-1.rhel9.x86_64.rpm
+@ el9.x86_64 14 pgvector_14 pgvector_14-0.4.1-1.rhel9.x86_64.rpm pgdg 0.4.1 42.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pgvector_14-0.4.1-1.rhel9.x86_64.rpm
 @ el9.aarch64 14 pgvector_14 pgvector_14-0.8.3-1PIGSTY.el9.aarch64.rpm pigsty 0.8.3 101.7KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgvector_14-0.8.3-1PIGSTY.el9.aarch64.rpm
+@ el9.aarch64 14 pgvector_14 pgvector_14-0.8.3-1PGDG.rhel9.8.aarch64.rpm pgdg 0.8.3 99.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pgvector_14-0.8.3-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 14 pgvector_14 pgvector_14-0.8.2-1PGDG.rhel9.8.aarch64.rpm pgdg 0.8.2 99.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pgvector_14-0.8.2-1PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 14 pgvector_14 pgvector_14-0.8.2-1PGDG.rhel9.7.aarch64.rpm pgdg 0.8.2 99.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pgvector_14-0.8.2-1PGDG.rhel9.7.aarch64.rpm
+@ el9.aarch64 14 pgvector_14 pgvector_14-0.8.2-1PGDG.rhel9.6.aarch64.rpm pgdg 0.8.2 99.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pgvector_14-0.8.2-1PGDG.rhel9.6.aarch64.rpm
+@ el9.aarch64 14 pgvector_14 pgvector_14-0.8.1-1PGDG.rhel9.aarch64.rpm pgdg 0.8.1 98.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pgvector_14-0.8.1-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 14 pgvector_14 pgvector_14-0.8.0-1PGDG.rhel9.aarch64.rpm pgdg 0.8.0 98.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pgvector_14-0.8.0-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 14 pgvector_14 pgvector_14-0.7.4-1PGDG.rhel9.aarch64.rpm pgdg 0.7.4 94.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pgvector_14-0.7.4-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 14 pgvector_14 pgvector_14-0.7.3-1PGDG.rhel9.aarch64.rpm pgdg 0.7.3 93.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pgvector_14-0.7.3-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 14 pgvector_14 pgvector_14-0.7.2-1PGDG.rhel9.aarch64.rpm pgdg 0.7.2 93.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pgvector_14-0.7.2-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 14 pgvector_14 pgvector_14-0.7.1-1PGDG.rhel9.aarch64.rpm pgdg 0.7.1 93.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pgvector_14-0.7.1-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 14 pgvector_14 pgvector_14-0.7.0-1PGDG.rhel9.aarch64.rpm pgdg 0.7.0 92.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pgvector_14-0.7.0-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 14 pgvector_14 pgvector_14-0.6.2-2PGDG.rhel9.aarch64.rpm pgdg 0.6.2 73.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pgvector_14-0.6.2-2PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 14 pgvector_14 pgvector_14-0.6.2-1PGDG.rhel9.aarch64.rpm pgdg 0.6.2 73.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pgvector_14-0.6.2-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 14 pgvector_14 pgvector_14-0.6.1-1PGDG.rhel9.aarch64.rpm pgdg 0.6.1 72.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pgvector_14-0.6.1-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 14 pgvector_14 pgvector_14-0.6.0-1PGDG.rhel9.aarch64.rpm pgdg 0.6.0 71.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pgvector_14-0.6.0-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 14 pgvector_14 pgvector_14-0.5.1-1PGDG.rhel9.aarch64.rpm pgdg 0.5.1 61.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pgvector_14-0.5.1-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 14 pgvector_14 pgvector_14-0.5.0-1PGDG.rhel9.aarch64.rpm pgdg 0.5.0 60.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pgvector_14-0.5.0-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 14 pgvector_14 pgvector_14-0.4.4-1.rhel9.aarch64.rpm pgdg 0.4.4 43.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pgvector_14-0.4.4-1.rhel9.aarch64.rpm
+@ el9.aarch64 14 pgvector_14 pgvector_14-0.4.1-1.rhel9.aarch64.rpm pgdg 0.4.1 40.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pgvector_14-0.4.1-1.rhel9.aarch64.rpm
 @ el10.x86_64 14 pgvector_14 pgvector_14-0.8.3-1PIGSTY.el10.x86_64.rpm pigsty 0.8.3 112.4KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgvector_14-0.8.3-1PIGSTY.el10.x86_64.rpm
+@ el10.x86_64 14 pgvector_14 pgvector_14-0.8.3-1PGDG.rhel10.2.x86_64.rpm pgdg 0.8.3 109.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pgvector_14-0.8.3-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 14 pgvector_14 pgvector_14-0.8.2-1PGDG.rhel10.2.x86_64.rpm pgdg 0.8.2 108.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pgvector_14-0.8.2-1PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 14 pgvector_14 pgvector_14-0.8.2-1PGDG.rhel10.1.x86_64.rpm pgdg 0.8.2 109.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pgvector_14-0.8.2-1PGDG.rhel10.1.x86_64.rpm
+@ el10.x86_64 14 pgvector_14 pgvector_14-0.8.2-1PGDG.rhel10.0.x86_64.rpm pgdg 0.8.2 109.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pgvector_14-0.8.2-1PGDG.rhel10.0.x86_64.rpm
+@ el10.x86_64 14 pgvector_14 pgvector_14-0.8.1-1PGDG.rhel10.x86_64.rpm pgdg 0.8.1 108.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pgvector_14-0.8.1-1PGDG.rhel10.x86_64.rpm
+@ el10.x86_64 14 pgvector_14 pgvector_14-0.8.0-2PGDG.rhel10.x86_64.rpm pgdg 0.8.0 108.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pgvector_14-0.8.0-2PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 14 pgvector_14 pgvector_14-0.8.3-1PIGSTY.el10.aarch64.rpm pigsty 0.8.3 103.7KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgvector_14-0.8.3-1PIGSTY.el10.aarch64.rpm
+@ el10.aarch64 14 pgvector_14 pgvector_14-0.8.3-1PGDG.rhel10.2.aarch64.rpm pgdg 0.8.3 101.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgvector_14-0.8.3-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 14 pgvector_14 pgvector_14-0.8.2-1PGDG.rhel10.2.aarch64.rpm pgdg 0.8.2 101.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgvector_14-0.8.2-1PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 14 pgvector_14 pgvector_14-0.8.2-1PGDG.rhel10.1.aarch64.rpm pgdg 0.8.2 101.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgvector_14-0.8.2-1PGDG.rhel10.1.aarch64.rpm
+@ el10.aarch64 14 pgvector_14 pgvector_14-0.8.2-1PGDG.rhel10.0.aarch64.rpm pgdg 0.8.2 101.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgvector_14-0.8.2-1PGDG.rhel10.0.aarch64.rpm
+@ el10.aarch64 14 pgvector_14 pgvector_14-0.8.1-1PGDG.rhel10.aarch64.rpm pgdg 0.8.1 101.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgvector_14-0.8.1-1PGDG.rhel10.aarch64.rpm
+@ el10.aarch64 14 pgvector_14 pgvector_14-0.8.0-2PGDG.rhel10.aarch64.rpm pgdg 0.8.0 100.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgvector_14-0.8.0-2PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 14 postgresql-14-pgvector postgresql-14-pgvector_0.8.3-1.pgdg12+1_amd64.deb pgdg 0.8.3 259.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-14-pgvector_0.8.3-1.pgdg12+1_amd64.deb
 @ d12.x86_64 14 postgresql-14-pgvector postgresql-14-pgvector_0.8.3-1PIGSTY~bookworm_amd64.deb pigsty 0.8.3 252.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgvector/postgresql-14-pgvector_0.8.3-1PIGSTY~bookworm_amd64.deb
 @ d12.x86_64 14 postgresql-14-pgvector postgresql-14-pgvector_0.8.2-1.pgdg12+1_amd64.deb pgdg 0.8.2 257.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-14-pgvector_0.8.2-1.pgdg12+1_amd64.deb
 @ d12.x86_64 14 postgresql-14-pgvector postgresql-14-pgvector_0.8.1-2.pgdg12+1_amd64.deb pgdg 0.8.1 256.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-14-pgvector_0.8.1-2.pgdg12+1_amd64.deb
+@ d12.aarch64 14 postgresql-14-pgvector postgresql-14-pgvector_0.8.3-1.pgdg12+1_arm64.deb pgdg 0.8.3 229.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-14-pgvector_0.8.3-1.pgdg12+1_arm64.deb
 @ d12.aarch64 14 postgresql-14-pgvector postgresql-14-pgvector_0.8.3-1PIGSTY~bookworm_arm64.deb pigsty 0.8.3 228.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgvector/postgresql-14-pgvector_0.8.3-1PIGSTY~bookworm_arm64.deb
 @ d12.aarch64 14 postgresql-14-pgvector postgresql-14-pgvector_0.8.2-1.pgdg12+1_arm64.deb pgdg 0.8.2 228.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-14-pgvector_0.8.2-1.pgdg12+1_arm64.deb
 @ d12.aarch64 14 postgresql-14-pgvector postgresql-14-pgvector_0.8.1-2.pgdg12+1_arm64.deb pgdg 0.8.1 227.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-14-pgvector_0.8.1-2.pgdg12+1_arm64.deb
+@ d13.x86_64 14 postgresql-14-pgvector postgresql-14-pgvector_0.8.3-1.pgdg13+1_amd64.deb pgdg 0.8.3 260.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-14-pgvector_0.8.3-1.pgdg13+1_amd64.deb
 @ d13.x86_64 14 postgresql-14-pgvector postgresql-14-pgvector_0.8.3-1PIGSTY~trixie_amd64.deb pigsty 0.8.3 252.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgvector/postgresql-14-pgvector_0.8.3-1PIGSTY~trixie_amd64.deb
 @ d13.x86_64 14 postgresql-14-pgvector postgresql-14-pgvector_0.8.2-1.pgdg13+1_amd64.deb pgdg 0.8.2 258.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-14-pgvector_0.8.2-1.pgdg13+1_amd64.deb
 @ d13.x86_64 14 postgresql-14-pgvector postgresql-14-pgvector_0.8.1-2.pgdg13+1_amd64.deb pgdg 0.8.1 257.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-14-pgvector_0.8.1-2.pgdg13+1_amd64.deb
+@ d13.aarch64 14 postgresql-14-pgvector postgresql-14-pgvector_0.8.3-1.pgdg13+1_arm64.deb pgdg 0.8.3 230.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-14-pgvector_0.8.3-1.pgdg13+1_arm64.deb
 @ d13.aarch64 14 postgresql-14-pgvector postgresql-14-pgvector_0.8.3-1PIGSTY~trixie_arm64.deb pigsty 0.8.3 229.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgvector/postgresql-14-pgvector_0.8.3-1PIGSTY~trixie_arm64.deb
 @ d13.aarch64 14 postgresql-14-pgvector postgresql-14-pgvector_0.8.2-1.pgdg13+1_arm64.deb pgdg 0.8.2 229.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-14-pgvector_0.8.2-1.pgdg13+1_arm64.deb
 @ d13.aarch64 14 postgresql-14-pgvector postgresql-14-pgvector_0.8.1-2.pgdg13+1_arm64.deb pgdg 0.8.1 228.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-14-pgvector_0.8.1-2.pgdg13+1_arm64.deb
+@ u22.x86_64 14 postgresql-14-pgvector postgresql-14-pgvector_0.8.3-1.pgdg22.04+1_amd64.deb pgdg 0.8.3 293.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-14-pgvector_0.8.3-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 14 postgresql-14-pgvector postgresql-14-pgvector_0.8.3-1PIGSTY~jammy_amd64.deb pigsty 0.8.3 302.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgvector/postgresql-14-pgvector_0.8.3-1PIGSTY~jammy_amd64.deb
 @ u22.x86_64 14 postgresql-14-pgvector postgresql-14-pgvector_0.8.2-1.pgdg22.04+1_amd64.deb pgdg 0.8.2 290.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-14-pgvector_0.8.2-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 14 postgresql-14-pgvector postgresql-14-pgvector_0.8.1-2.pgdg22.04+1_amd64.deb pgdg 0.8.1 289.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-14-pgvector_0.8.1-2.pgdg22.04+1_amd64.deb
+@ u22.aarch64 14 postgresql-14-pgvector postgresql-14-pgvector_0.8.3-1.pgdg22.04+1_arm64.deb pgdg 0.8.3 260.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-14-pgvector_0.8.3-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 14 postgresql-14-pgvector postgresql-14-pgvector_0.8.3-1PIGSTY~jammy_arm64.deb pigsty 0.8.3 276.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgvector/postgresql-14-pgvector_0.8.3-1PIGSTY~jammy_arm64.deb
 @ u22.aarch64 14 postgresql-14-pgvector postgresql-14-pgvector_0.8.2-1.pgdg22.04+1_arm64.deb pgdg 0.8.2 258.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-14-pgvector_0.8.2-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 14 postgresql-14-pgvector postgresql-14-pgvector_0.8.1-2.pgdg22.04+1_arm64.deb pgdg 0.8.1 258.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-14-pgvector_0.8.1-2.pgdg22.04+1_arm64.deb
+@ u24.x86_64 14 postgresql-14-pgvector postgresql-14-pgvector_0.8.3-1.pgdg24.04+1_amd64.deb pgdg 0.8.3 256.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-14-pgvector_0.8.3-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 14 postgresql-14-pgvector postgresql-14-pgvector_0.8.3-1PIGSTY~noble_amd64.deb pigsty 0.8.3 261.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgvector/postgresql-14-pgvector_0.8.3-1PIGSTY~noble_amd64.deb
 @ u24.x86_64 14 postgresql-14-pgvector postgresql-14-pgvector_0.8.2-1.pgdg24.04+1_amd64.deb pgdg 0.8.2 254.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-14-pgvector_0.8.2-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 14 postgresql-14-pgvector postgresql-14-pgvector_0.8.1-2.pgdg24.04+1_amd64.deb pgdg 0.8.1 254.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-14-pgvector_0.8.1-2.pgdg24.04+1_amd64.deb
+@ u24.aarch64 14 postgresql-14-pgvector postgresql-14-pgvector_0.8.3-1.pgdg24.04+1_arm64.deb pgdg 0.8.3 228.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-14-pgvector_0.8.3-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 14 postgresql-14-pgvector postgresql-14-pgvector_0.8.3-1PIGSTY~noble_arm64.deb pigsty 0.8.3 240.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgvector/postgresql-14-pgvector_0.8.3-1PIGSTY~noble_arm64.deb
 @ u24.aarch64 14 postgresql-14-pgvector postgresql-14-pgvector_0.8.2-1.pgdg24.04+1_arm64.deb pgdg 0.8.2 226.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-14-pgvector_0.8.2-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 14 postgresql-14-pgvector postgresql-14-pgvector_0.8.1-2.pgdg24.04+1_arm64.deb pgdg 0.8.1 225.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-14-pgvector_0.8.1-2.pgdg24.04+1_arm64.deb
+@ u26.x86_64 14 postgresql-14-pgvector postgresql-14-pgvector_0.8.3-1.pgdg26.04+1_amd64.deb pgdg 0.8.3 255.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-14-pgvector_0.8.3-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 14 postgresql-14-pgvector postgresql-14-pgvector_0.8.3-1PIGSTY~resolute_amd64.deb pigsty 0.8.3 261.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgvector/postgresql-14-pgvector_0.8.3-1PIGSTY~resolute_amd64.deb
 @ u26.x86_64 14 postgresql-14-pgvector postgresql-14-pgvector_0.8.2-1.pgdg26.04+1_amd64.deb pgdg 0.8.2 253.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-14-pgvector_0.8.2-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 14 postgresql-14-pgvector postgresql-14-pgvector_0.8.1-2.pgdg26.04+1_amd64.deb pgdg 0.8.1 253.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-14-pgvector_0.8.1-2.pgdg26.04+1_amd64.deb
+@ u26.aarch64 14 postgresql-14-pgvector postgresql-14-pgvector_0.8.3-1.pgdg26.04+1_arm64.deb pgdg 0.8.3 227.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-14-pgvector_0.8.3-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 14 postgresql-14-pgvector postgresql-14-pgvector_0.8.3-1PIGSTY~resolute_arm64.deb pigsty 0.8.3 239.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgvector/postgresql-14-pgvector_0.8.3-1PIGSTY~resolute_arm64.deb
 @ u26.aarch64 14 postgresql-14-pgvector postgresql-14-pgvector_0.8.2-1.pgdg26.04+1_arm64.deb pgdg 0.8.2 225.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-14-pgvector_0.8.2-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 14 postgresql-14-pgvector postgresql-14-pgvector_0.8.1-2.pgdg26.04+1_arm64.deb pgdg 0.8.1 224.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgvector/postgresql-14-pgvector_0.8.1-2.pgdg26.04+1_arm64.deb
@@ -441,6 +670,8 @@ CREATE EXTENSION vector;
 
 ## 用法
 
+来源：[README](https://github.com/pgvector/pgvector/blob/v0.8.3/README.md)、[CHANGELOG](https://github.com/pgvector/pgvector/blob/v0.8.3/CHANGELOG.md)
+
 适用于 PostgreSQL 的开源向量相似性搜索扩展。将向量与其他数据存储在一起，支持：
 
 - 精确与近似最近邻搜索
@@ -449,6 +680,10 @@ CREATE EXTENSION vector;
 - 任何具有 PostgreSQL 客户端的[编程语言](https://github.com/pgvector/pgvector#languages)
 
 此外还具备 [ACID](https://en.wikipedia.org/wiki/ACID) 合规性、时间点恢复（PITR）、JOIN 以及 PostgreSQL 的所有其他[优秀特性](https://www.postgresql.org/about/)
+
+### 版本说明
+
+`pgvector` 0.8.3 修复 vacuum 期间可能发生的 HNSW index corruption，并修复 PostgreSQL 18 下 Hamming 和 Jaccard distance 的 performance regression。iterative index scans、`halfvec`、`sparsevec`、binary vectors、HNSW 与 IVFFlat 等既有 0.8.x SQL 功能仍是主要用户可见接口。
 
 ### 快速上手
 
@@ -601,7 +836,7 @@ SELECT category_id, AVG(embedding) FROM items GROUP BY category_id;
 
 --------
 
-## 索引
+### 索引
 
 默认情况下，pgvector 执行精确最近邻搜索，提供完美的召回率。
 
@@ -953,7 +1188,7 @@ SET ivfflat.max_probes = 100;
 
 --------
 
-## 向量类型
+### 向量类型
 
 ### 半精度向量
 
@@ -1074,7 +1309,7 @@ SELECT * FROM (
 
 --------
 
-## 性能
+### 性能
 
 ### 调优
 
@@ -1187,7 +1422,7 @@ pgvector 的扩展方式与 PostgreSQL 相同。
 
 --------
 
-## 语言支持
+### 语言支持
 
 可以从任何具有 PostgreSQL 客户端的编程语言中使用 pgvector。甚至可以在一种语言中生成和存储向量，在另一种语言中进行查询。
 
@@ -1232,7 +1467,7 @@ Zig | [pgvector-zig](https://github.com/pgvector/pgvector-zig)
 
 --------
 
-## 常见问题
+### 常见问题
 
 ### 单张表最多能存储多少向量？
 
@@ -1306,7 +1541,7 @@ SELECT pg_size_pretty(pg_relation_size('index_name'));
 
 --------
 
-## 故障排查
+### 故障排查
 
 ### 为什么查询没有使用索引？
 
@@ -1370,7 +1605,7 @@ DROP INDEX index_name;
 
 --------
 
-## 参考
+### 参考
 
 ### Vector 类型
 
@@ -1493,7 +1728,7 @@ l2_normalize(sparsevec) → sparsevec | 欧氏范数归一化 | 0.7.0
 
 --------
 
-## 安装
+### 安装
 
 ### Linux 与 Mac
 

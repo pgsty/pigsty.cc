@@ -52,10 +52,10 @@ weight: 1030
 |:--:|:--:|:--:|:--:|:--:|:--:|
 | el8.x86_64 | AVAIL PIGSTY 1.2.3 1 | AVAIL PIGSTY 1.2.3 2 | AVAIL PIGSTY 1.2.3 2 | AVAIL PIGSTY 1.2.3 3 | AVAIL PIGSTY 1.2.3 3 |
 | el8.aarch64 | AVAIL PIGSTY 1.2.3 1 | AVAIL PIGSTY 1.2.3 2 | AVAIL PIGSTY 1.2.3 2 | AVAIL PIGSTY 1.2.3 3 | AVAIL PIGSTY 1.2.3 3 |
-| el9.x86_64 | AVAIL PIGSTY 1.2.3 1 | AVAIL PIGSTY 1.2.3 2 | AVAIL PIGSTY 1.2.3 2 | AVAIL PIGSTY 1.2.3 2 | AVAIL PIGSTY 1.2.3 2 |
-| el9.aarch64 | AVAIL PIGSTY 1.2.3 1 | AVAIL PIGSTY 1.2.3 2 | AVAIL PIGSTY 1.2.3 2 | AVAIL PIGSTY 1.2.3 2 | AVAIL PIGSTY 1.2.3 2 |
-| el10.x86_64 | AVAIL PIGSTY 1.2.3 1 | AVAIL PIGSTY 1.2.3 2 | AVAIL PIGSTY 1.2.3 2 | AVAIL PIGSTY 1.2.3 2 | AVAIL PIGSTY 1.2.3 2 |
-| el10.aarch64 | AVAIL PIGSTY 1.2.3 1 | AVAIL PIGSTY 1.2.3 2 | AVAIL PIGSTY 1.2.3 2 | AVAIL PIGSTY 1.2.3 2 | AVAIL PIGSTY 1.2.3 2 |
+| el9.x86_64 | AVAIL PIGSTY 1.2.3 1 | AVAIL PIGSTY 1.2.3 3 | AVAIL PIGSTY 1.2.3 3 | AVAIL PIGSTY 1.2.3 4 | AVAIL PIGSTY 1.2.3 3 |
+| el9.aarch64 | AVAIL PIGSTY 1.2.3 1 | AVAIL PIGSTY 1.2.3 3 | AVAIL PIGSTY 1.2.3 3 | AVAIL PIGSTY 1.2.3 4 | AVAIL PIGSTY 1.2.3 4 |
+| el10.x86_64 | AVAIL PIGSTY 1.2.3 1 | AVAIL PIGSTY 1.2.3 3 | AVAIL PIGSTY 1.2.3 3 | AVAIL PIGSTY 1.2.3 3 | AVAIL PIGSTY 1.2.3 3 |
+| el10.aarch64 | AVAIL PIGSTY 1.2.3 1 | AVAIL PIGSTY 1.2.3 3 | AVAIL PIGSTY 1.2.3 3 | AVAIL PIGSTY 1.2.3 3 | AVAIL PIGSTY 1.2.3 3 |
 | d12.x86_64 | AVAIL PGDG 1.2.3 1 | AVAIL PGDG 1.2.3 1 | AVAIL PGDG 1.2.3 1 | AVAIL PGDG 1.2.3 1 | AVAIL PGDG 1.2.3 1 |
 | d12.aarch64 | AVAIL PGDG 1.2.3 1 | AVAIL PGDG 1.2.3 1 | AVAIL PGDG 1.2.3 1 | AVAIL PGDG 1.2.3 1 | AVAIL PGDG 1.2.3 1 |
 | d13.x86_64 | AVAIL PGDG 1.2.3 1 | AVAIL PGDG 1.2.3 1 | AVAIL PGDG 1.2.3 1 | AVAIL PGDG 1.2.3 1 | AVAIL PGDG 1.2.3 1 |
@@ -88,12 +88,16 @@ weight: 1030
 @ el8.aarch64 17 periods_17 periods_17-1.2.2-3PGDG.rhel8.aarch64.rpm pgdg 1.2.2 44.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/periods_17-1.2.2-3PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 17 periods_17 periods_17-1.2.3-1PIGSTY.el9.x86_64.rpm pigsty 1.2.3 42.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/periods_17-1.2.3-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 17 periods_17 periods_17-1.2.2-6PGDG.rhel9.8.x86_64.rpm pgdg 1.2.2 42.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/periods_17-1.2.2-6PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 17 periods_17 periods_17-1.2.2-3PGDG.rhel9.x86_64.rpm pgdg 1.2.2 42.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/periods_17-1.2.2-3PGDG.rhel9.x86_64.rpm
 @ el9.aarch64 17 periods_17 periods_17-1.2.3-1PIGSTY.el9.aarch64.rpm pigsty 1.2.3 41.8KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/periods_17-1.2.3-1PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 17 periods_17 periods_17-1.2.2-6PGDG.rhel9.8.aarch64.rpm pgdg 1.2.2 42.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/periods_17-1.2.2-6PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 17 periods_17 periods_17-1.2.2-3PGDG.rhel9.aarch64.rpm pgdg 1.2.2 42.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/periods_17-1.2.2-3PGDG.rhel9.aarch64.rpm
 @ el10.x86_64 17 periods_17 periods_17-1.2.3-1PIGSTY.el10.x86_64.rpm pigsty 1.2.3 42.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/periods_17-1.2.3-1PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 17 periods_17 periods_17-1.2.2-6PGDG.rhel10.2.x86_64.rpm pgdg 1.2.2 42.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/periods_17-1.2.2-6PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 17 periods_17 periods_17-1.2.2-4PGDG.rhel10.x86_64.rpm pgdg 1.2.2 42.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/periods_17-1.2.2-4PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 17 periods_17 periods_17-1.2.3-1PIGSTY.el10.aarch64.rpm pigsty 1.2.3 42.0KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/periods_17-1.2.3-1PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 17 periods_17 periods_17-1.2.2-6PGDG.rhel10.2.aarch64.rpm pgdg 1.2.2 42.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/periods_17-1.2.2-6PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 17 periods_17 periods_17-1.2.2-4PGDG.rhel10.aarch64.rpm pgdg 1.2.2 42.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/periods_17-1.2.2-4PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 17 postgresql-17-periods postgresql-17-periods_1.2.3-2.pgdg12+1_amd64.deb pgdg 1.2.3 47.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-periods/postgresql-17-periods_1.2.3-2.pgdg12+1_amd64.deb
 @ d12.aarch64 17 postgresql-17-periods postgresql-17-periods_1.2.3-2.pgdg12+1_arm64.deb pgdg 1.2.3 46.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-periods/postgresql-17-periods_1.2.3-2.pgdg12+1_arm64.deb
 @ d13.x86_64 17 postgresql-17-periods postgresql-17-periods_1.2.3-2.pgdg13+1_amd64.deb pgdg 1.2.3 47.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-periods/postgresql-17-periods_1.2.3-2.pgdg13+1_amd64.deb
@@ -110,12 +114,16 @@ weight: 1030
 @ el8.aarch64 16 periods_16 periods_16-1.2.2-1.rhel8.1.aarch64.rpm pgdg 1.2.2 43.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/periods_16-1.2.2-1.rhel8.1.aarch64.rpm
 @ el9.x86_64 16 periods_16 periods_16-1.2.3-1PIGSTY.el9.x86_64.rpm pigsty 1.2.3 41.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/periods_16-1.2.3-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 16 periods_16 periods_16-1.2.2-6PGDG.rhel9.8.x86_64.rpm pgdg 1.2.2 42.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/periods_16-1.2.2-6PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 16 periods_16 periods_16-1.2.2-1.rhel9.1.x86_64.rpm pgdg 1.2.2 42.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/periods_16-1.2.2-1.rhel9.1.x86_64.rpm
 @ el9.aarch64 16 periods_16 periods_16-1.2.3-1PIGSTY.el9.aarch64.rpm pigsty 1.2.3 41.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/periods_16-1.2.3-1PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 16 periods_16 periods_16-1.2.2-6PGDG.rhel9.8.aarch64.rpm pgdg 1.2.2 42.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/periods_16-1.2.2-6PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 16 periods_16 periods_16-1.2.2-1.rhel9.1.aarch64.rpm pgdg 1.2.2 41.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/periods_16-1.2.2-1.rhel9.1.aarch64.rpm
 @ el10.x86_64 16 periods_16 periods_16-1.2.3-1PIGSTY.el10.x86_64.rpm pigsty 1.2.3 42.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/periods_16-1.2.3-1PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 16 periods_16 periods_16-1.2.2-6PGDG.rhel10.2.x86_64.rpm pgdg 1.2.2 42.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/periods_16-1.2.2-6PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 16 periods_16 periods_16-1.2.2-4PGDG.rhel10.x86_64.rpm pgdg 1.2.2 42.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/periods_16-1.2.2-4PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 16 periods_16 periods_16-1.2.3-1PIGSTY.el10.aarch64.rpm pigsty 1.2.3 42.0KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/periods_16-1.2.3-1PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 16 periods_16 periods_16-1.2.2-6PGDG.rhel10.2.aarch64.rpm pgdg 1.2.2 42.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/periods_16-1.2.2-6PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 16 periods_16 periods_16-1.2.2-4PGDG.rhel10.aarch64.rpm pgdg 1.2.2 42.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/periods_16-1.2.2-4PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 16 postgresql-16-periods postgresql-16-periods_1.2.3-2.pgdg12+1_amd64.deb pgdg 1.2.3 47.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-periods/postgresql-16-periods_1.2.3-2.pgdg12+1_amd64.deb
 @ d12.aarch64 16 postgresql-16-periods postgresql-16-periods_1.2.3-2.pgdg12+1_arm64.deb pgdg 1.2.3 46.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-periods/postgresql-16-periods_1.2.3-2.pgdg12+1_arm64.deb
 @ d13.x86_64 16 postgresql-16-periods postgresql-16-periods_1.2.3-2.pgdg13+1_amd64.deb pgdg 1.2.3 47.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-periods/postgresql-16-periods_1.2.3-2.pgdg13+1_amd64.deb
@@ -134,12 +142,18 @@ weight: 1030
 @ el8.aarch64 15 periods_15 periods_15-1.2-2.rhel8.aarch64.rpm pgdg 1.2 60.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/periods_15-1.2-2.rhel8.aarch64.rpm
 @ el9.x86_64 15 periods_15 periods_15-1.2.3-1PIGSTY.el9.x86_64.rpm pigsty 1.2.3 42.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/periods_15-1.2.3-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 15 periods_15 periods_15-1.2.2-6PGDG.rhel9.8.x86_64.rpm pgdg 1.2.2 42.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/periods_15-1.2.2-6PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 15 periods_15 periods_15-1.2.2-1.rhel9.x86_64.rpm pgdg 1.2.2 42.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/periods_15-1.2.2-1.rhel9.x86_64.rpm
+@ el9.x86_64 15 periods_15 periods_15-1.2-2.rhel9.x86_64.rpm pgdg 1.2 59.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/periods_15-1.2-2.rhel9.x86_64.rpm
 @ el9.aarch64 15 periods_15 periods_15-1.2.3-1PIGSTY.el9.aarch64.rpm pigsty 1.2.3 41.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/periods_15-1.2.3-1PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 15 periods_15 periods_15-1.2.2-6PGDG.rhel9.8.aarch64.rpm pgdg 1.2.2 42.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/periods_15-1.2.2-6PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 15 periods_15 periods_15-1.2.2-1.rhel9.aarch64.rpm pgdg 1.2.2 41.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/periods_15-1.2.2-1.rhel9.aarch64.rpm
+@ el9.aarch64 15 periods_15 periods_15-1.2-2.rhel9.aarch64.rpm pgdg 1.2 59.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/periods_15-1.2-2.rhel9.aarch64.rpm
 @ el10.x86_64 15 periods_15 periods_15-1.2.3-1PIGSTY.el10.x86_64.rpm pigsty 1.2.3 42.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/periods_15-1.2.3-1PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 15 periods_15 periods_15-1.2.2-6PGDG.rhel10.2.x86_64.rpm pgdg 1.2.2 42.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/periods_15-1.2.2-6PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 15 periods_15 periods_15-1.2.2-4PGDG.rhel10.x86_64.rpm pgdg 1.2.2 42.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/periods_15-1.2.2-4PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 15 periods_15 periods_15-1.2.3-1PIGSTY.el10.aarch64.rpm pigsty 1.2.3 42.0KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/periods_15-1.2.3-1PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 15 periods_15 periods_15-1.2.2-6PGDG.rhel10.2.aarch64.rpm pgdg 1.2.2 42.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/periods_15-1.2.2-6PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 15 periods_15 periods_15-1.2.2-4PGDG.rhel10.aarch64.rpm pgdg 1.2.2 42.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/periods_15-1.2.2-4PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 15 postgresql-15-periods postgresql-15-periods_1.2.3-2.pgdg12+1_amd64.deb pgdg 1.2.3 46.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-periods/postgresql-15-periods_1.2.3-2.pgdg12+1_amd64.deb
 @ d12.aarch64 15 postgresql-15-periods postgresql-15-periods_1.2.3-2.pgdg12+1_arm64.deb pgdg 1.2.3 46.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-periods/postgresql-15-periods_1.2.3-2.pgdg12+1_arm64.deb
 @ d13.x86_64 15 postgresql-15-periods postgresql-15-periods_1.2.3-2.pgdg13+1_amd64.deb pgdg 1.2.3 47.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-periods/postgresql-15-periods_1.2.3-2.pgdg13+1_amd64.deb
@@ -158,12 +172,17 @@ weight: 1030
 @ el8.aarch64 14 periods_14 periods_14-1.2-2.rhel8.aarch64.rpm pgdg 1.2 60.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/periods_14-1.2-2.rhel8.aarch64.rpm
 @ el9.x86_64 14 periods_14 periods_14-1.2.3-1PIGSTY.el9.x86_64.rpm pigsty 1.2.3 42.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/periods_14-1.2.3-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 14 periods_14 periods_14-1.2.2-6PGDG.rhel9.8.x86_64.rpm pgdg 1.2.2 42.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/periods_14-1.2.2-6PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 14 periods_14 periods_14-1.2.2-1.rhel9.x86_64.rpm pgdg 1.2.2 42.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/periods_14-1.2.2-1.rhel9.x86_64.rpm
 @ el9.aarch64 14 periods_14 periods_14-1.2.3-1PIGSTY.el9.aarch64.rpm pigsty 1.2.3 41.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/periods_14-1.2.3-1PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 14 periods_14 periods_14-1.2.2-6PGDG.rhel9.8.aarch64.rpm pgdg 1.2.2 42.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/periods_14-1.2.2-6PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 14 periods_14 periods_14-1.2.2-1.rhel9.aarch64.rpm pgdg 1.2.2 41.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/periods_14-1.2.2-1.rhel9.aarch64.rpm
+@ el9.aarch64 14 periods_14 periods_14-1.2-2.rhel9.aarch64.rpm pgdg 1.2 59.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/periods_14-1.2-2.rhel9.aarch64.rpm
 @ el10.x86_64 14 periods_14 periods_14-1.2.3-1PIGSTY.el10.x86_64.rpm pigsty 1.2.3 42.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/periods_14-1.2.3-1PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 14 periods_14 periods_14-1.2.2-6PGDG.rhel10.2.x86_64.rpm pgdg 1.2.2 42.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/periods_14-1.2.2-6PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 14 periods_14 periods_14-1.2.2-4PGDG.rhel10.x86_64.rpm pgdg 1.2.2 42.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/periods_14-1.2.2-4PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 14 periods_14 periods_14-1.2.3-1PIGSTY.el10.aarch64.rpm pigsty 1.2.3 42.0KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/periods_14-1.2.3-1PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 14 periods_14 periods_14-1.2.2-6PGDG.rhel10.2.aarch64.rpm pgdg 1.2.2 42.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/periods_14-1.2.2-6PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 14 periods_14 periods_14-1.2.2-4PGDG.rhel10.aarch64.rpm pgdg 1.2.2 42.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/periods_14-1.2.2-4PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 14 postgresql-14-periods postgresql-14-periods_1.2.3-2.pgdg12+1_amd64.deb pgdg 1.2.3 46.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-periods/postgresql-14-periods_1.2.3-2.pgdg12+1_amd64.deb
 @ d12.aarch64 14 postgresql-14-periods postgresql-14-periods_1.2.3-2.pgdg12+1_arm64.deb pgdg 1.2.3 46.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-periods/postgresql-14-periods_1.2.3-2.pgdg12+1_arm64.deb
 @ d13.x86_64 14 postgresql-14-periods postgresql-14-periods_1.2.3-2.pgdg13+1_amd64.deb pgdg 1.2.3 47.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-periods/postgresql-14-periods_1.2.3-2.pgdg13+1_amd64.deb

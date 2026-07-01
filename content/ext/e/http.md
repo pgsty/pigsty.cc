@@ -52,10 +52,10 @@ weight: 4070
 |:--:|:--:|:--:|:--:|:--:|:--:|
 | el8.x86_64 | AVAIL PIGSTY 1.7.1 2 | AVAIL PIGSTY 1.7.1 5 | AVAIL PIGSTY 1.7.1 6 | AVAIL PIGSTY 1.7.1 6 | AVAIL PIGSTY 1.7.1 6 |
 | el8.aarch64 | AVAIL PIGSTY 1.7.1 2 | AVAIL PIGSTY 1.7.1 5 | AVAIL PIGSTY 1.7.1 6 | AVAIL PIGSTY 1.7.1 6 | AVAIL PIGSTY 1.7.1 6 |
-| el9.x86_64 | AVAIL PIGSTY 1.7.1 2 | AVAIL PIGSTY 1.7.1 2 | AVAIL PIGSTY 1.7.1 2 | AVAIL PIGSTY 1.7.1 2 | AVAIL PIGSTY 1.7.1 2 |
-| el9.aarch64 | AVAIL PIGSTY 1.7.1 2 | AVAIL PIGSTY 1.7.1 2 | AVAIL PIGSTY 1.7.1 2 | AVAIL PIGSTY 1.7.1 2 | AVAIL PIGSTY 1.7.1 2 |
-| el10.x86_64 | AVAIL PIGSTY 1.7.1 2 | AVAIL PIGSTY 1.7.1 2 | AVAIL PIGSTY 1.7.1 2 | AVAIL PIGSTY 1.7.1 2 | AVAIL PIGSTY 1.7.1 2 |
-| el10.aarch64 | AVAIL PIGSTY 1.7.1 2 | AVAIL PIGSTY 1.7.1 2 | AVAIL PIGSTY 1.7.1 2 | AVAIL PIGSTY 1.7.1 2 | AVAIL PIGSTY 1.7.1 2 |
+| el9.x86_64 | AVAIL PIGSTY 1.7.1 3 | AVAIL PIGSTY 1.7.1 6 | AVAIL PIGSTY 1.7.1 7 | AVAIL PIGSTY 1.7.1 7 | AVAIL PIGSTY 1.7.1 7 |
+| el9.aarch64 | AVAIL PIGSTY 1.7.1 3 | AVAIL PIGSTY 1.7.1 6 | AVAIL PIGSTY 1.7.1 7 | AVAIL PIGSTY 1.7.1 7 | AVAIL PIGSTY 1.7.1 7 |
+| el10.x86_64 | AVAIL PIGSTY 1.7.1 3 | AVAIL PIGSTY 1.7.1 4 | AVAIL PIGSTY 1.7.1 4 | AVAIL PIGSTY 1.7.1 4 | AVAIL PIGSTY 1.7.1 4 |
+| el10.aarch64 | AVAIL PIGSTY 1.7.1 3 | AVAIL PIGSTY 1.7.1 4 | AVAIL PIGSTY 1.7.1 4 | AVAIL PIGSTY 1.7.1 4 | AVAIL PIGSTY 1.7.1 4 |
 | d12.x86_64 | AVAIL PGDG 1.7.1 3 | AVAIL PGDG 1.7.1 3 | AVAIL PGDG 1.7.1 3 | AVAIL PGDG 1.7.1 3 | AVAIL PGDG 1.7.1 3 |
 | d12.aarch64 | AVAIL PGDG 1.7.1 3 | AVAIL PGDG 1.7.1 3 | AVAIL PGDG 1.7.1 3 | AVAIL PGDG 1.7.1 3 | AVAIL PGDG 1.7.1 3 |
 | d13.x86_64 | AVAIL PGDG 1.7.1 3 | AVAIL PGDG 1.7.1 3 | AVAIL PGDG 1.7.1 3 | AVAIL PGDG 1.7.1 3 | AVAIL PGDG 1.7.1 3 |
@@ -72,12 +72,16 @@ weight: 4070
 @ el8.aarch64 18 pgsql_http_18 pgsql_http_18-1.7.0-1PGDG.rhel8.aarch64.rpm pgdg 1.7.0 23.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pgsql_http_18-1.7.0-1PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 18 pgsql_http_18 pgsql_http_18-1.7.1-1PIGSTY.el9.x86_64.rpm pigsty 1.7.1 29.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgsql_http_18-1.7.1-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 18 pgsql_http_18 pgsql_http_18-1.7.0-3PGDG.rhel9.8.x86_64.rpm pgdg 1.7.0 25.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pgsql_http_18-1.7.0-3PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 18 pgsql_http_18 pgsql_http_18-1.7.0-1PGDG.rhel9.x86_64.rpm pgdg 1.7.0 25.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pgsql_http_18-1.7.0-1PGDG.rhel9.x86_64.rpm
 @ el9.aarch64 18 pgsql_http_18 pgsql_http_18-1.7.1-1PIGSTY.el9.aarch64.rpm pigsty 1.7.1 28.6KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgsql_http_18-1.7.1-1PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 18 pgsql_http_18 pgsql_http_18-1.7.0-3PGDG.rhel9.8.aarch64.rpm pgdg 1.7.0 23.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pgsql_http_18-1.7.0-3PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 18 pgsql_http_18 pgsql_http_18-1.7.0-1PGDG.rhel9.aarch64.rpm pgdg 1.7.0 23.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pgsql_http_18-1.7.0-1PGDG.rhel9.aarch64.rpm
 @ el10.x86_64 18 pgsql_http_18 pgsql_http_18-1.7.1-1PIGSTY.el10.x86_64.rpm pigsty 1.7.1 30.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgsql_http_18-1.7.1-1PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 18 pgsql_http_18 pgsql_http_18-1.7.0-3PGDG.rhel10.2.x86_64.rpm pgdg 1.7.0 25.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pgsql_http_18-1.7.0-3PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 18 pgsql_http_18 pgsql_http_18-1.7.0-1PGDG.rhel10.x86_64.rpm pgdg 1.7.0 25.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pgsql_http_18-1.7.0-1PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 18 pgsql_http_18 pgsql_http_18-1.7.1-1PIGSTY.el10.aarch64.rpm pigsty 1.7.1 28.8KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgsql_http_18-1.7.1-1PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 18 pgsql_http_18 pgsql_http_18-1.7.0-3PGDG.rhel10.2.aarch64.rpm pgdg 1.7.0 24.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pgsql_http_18-1.7.0-3PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 18 pgsql_http_18 pgsql_http_18-1.7.0-1PGDG.rhel10.aarch64.rpm pgdg 1.7.0 24.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pgsql_http_18-1.7.0-1PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 18 postgresql-18-http postgresql-18-http_1.7.1-1.pgdg12+1_amd64.deb pgdg 1.7.1 45.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsql-http/postgresql-18-http_1.7.1-1.pgdg12+1_amd64.deb
 @ d12.x86_64 18 postgresql-18-http postgresql-18-http_1.7.1-1PIGSTY~bookworm_amd64.deb pigsty 1.7.1 44.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgsql-http/postgresql-18-http_1.7.1-1PIGSTY~bookworm_amd64.deb
 @ d12.x86_64 18 postgresql-18-http postgresql-18-http_1.7.0-3.pgdg12+1_amd64.deb pgdg 1.7.0 44.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsql-http/postgresql-18-http_1.7.0-3.pgdg12+1_amd64.deb
@@ -120,12 +124,24 @@ weight: 4070
 @ el8.aarch64 17 pgsql_http_17 pgsql_http_17-1.6.0-2PGDG.rhel8.aarch64.rpm pgdg 1.6.0 22.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pgsql_http_17-1.6.0-2PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 17 pgsql_http_17 pgsql_http_17-1.7.1-1PIGSTY.el9.x86_64.rpm pigsty 1.7.1 29.7KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgsql_http_17-1.7.1-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 17 pgsql_http_17 pgsql_http_17-1.7.0-3PGDG.rhel9.8.x86_64.rpm pgdg 1.7.0 25.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pgsql_http_17-1.7.0-3PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 17 pgsql_http_17 pgsql_http_17-1.7.0-1PGDG.rhel9.x86_64.rpm pgdg 1.7.0 25.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pgsql_http_17-1.7.0-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 17 pgsql_http_17 pgsql_http_17-1.6.3-1PGDG.rhel9.x86_64.rpm pgdg 1.6.3 24.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pgsql_http_17-1.6.3-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 17 pgsql_http_17 pgsql_http_17-1.6.2-1PGDG.rhel9.x86_64.rpm pgdg 1.6.2 24.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pgsql_http_17-1.6.2-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 17 pgsql_http_17 pgsql_http_17-1.6.0-2PGDG.rhel9.x86_64.rpm pgdg 1.6.0 23.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pgsql_http_17-1.6.0-2PGDG.rhel9.x86_64.rpm
 @ el9.aarch64 17 pgsql_http_17 pgsql_http_17-1.7.1-1PIGSTY.el9.aarch64.rpm pigsty 1.7.1 28.7KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgsql_http_17-1.7.1-1PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 17 pgsql_http_17 pgsql_http_17-1.7.0-3PGDG.rhel9.8.aarch64.rpm pgdg 1.7.0 24.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pgsql_http_17-1.7.0-3PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 17 pgsql_http_17 pgsql_http_17-1.7.0-1PGDG.rhel9.aarch64.rpm pgdg 1.7.0 23.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pgsql_http_17-1.7.0-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 17 pgsql_http_17 pgsql_http_17-1.6.3-1PGDG.rhel9.aarch64.rpm pgdg 1.6.3 22.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pgsql_http_17-1.6.3-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 17 pgsql_http_17 pgsql_http_17-1.6.2-1PGDG.rhel9.aarch64.rpm pgdg 1.6.2 23.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pgsql_http_17-1.6.2-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 17 pgsql_http_17 pgsql_http_17-1.6.0-2PGDG.rhel9.aarch64.rpm pgdg 1.6.0 22.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pgsql_http_17-1.6.0-2PGDG.rhel9.aarch64.rpm
 @ el10.x86_64 17 pgsql_http_17 pgsql_http_17-1.7.1-1PIGSTY.el10.x86_64.rpm pigsty 1.7.1 30.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgsql_http_17-1.7.1-1PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 17 pgsql_http_17 pgsql_http_17-1.7.0-3PGDG.rhel10.2.x86_64.rpm pgdg 1.7.0 25.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pgsql_http_17-1.7.0-3PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 17 pgsql_http_17 pgsql_http_17-1.7.0-1PGDG.rhel10.x86_64.rpm pgdg 1.7.0 26.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pgsql_http_17-1.7.0-1PGDG.rhel10.x86_64.rpm
+@ el10.x86_64 17 pgsql_http_17 pgsql_http_17-1.6.3-2PGDG.rhel10.x86_64.rpm pgdg 1.6.3 25.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pgsql_http_17-1.6.3-2PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 17 pgsql_http_17 pgsql_http_17-1.7.1-1PIGSTY.el10.aarch64.rpm pigsty 1.7.1 28.9KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgsql_http_17-1.7.1-1PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 17 pgsql_http_17 pgsql_http_17-1.7.0-3PGDG.rhel10.2.aarch64.rpm pgdg 1.7.0 24.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pgsql_http_17-1.7.0-3PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 17 pgsql_http_17 pgsql_http_17-1.7.0-1PGDG.rhel10.aarch64.rpm pgdg 1.7.0 24.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pgsql_http_17-1.7.0-1PGDG.rhel10.aarch64.rpm
+@ el10.aarch64 17 pgsql_http_17 pgsql_http_17-1.6.3-2PGDG.rhel10.aarch64.rpm pgdg 1.6.3 23.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pgsql_http_17-1.6.3-2PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 17 postgresql-17-http postgresql-17-http_1.7.1-1.pgdg12+1_amd64.deb pgdg 1.7.1 44.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsql-http/postgresql-17-http_1.7.1-1.pgdg12+1_amd64.deb
 @ d12.x86_64 17 postgresql-17-http postgresql-17-http_1.7.1-1PIGSTY~bookworm_amd64.deb pigsty 1.7.1 44.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgsql-http/postgresql-17-http_1.7.1-1PIGSTY~bookworm_amd64.deb
 @ d12.x86_64 17 postgresql-17-http postgresql-17-http_1.7.0-3.pgdg12+1_amd64.deb pgdg 1.7.0 44.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsql-http/postgresql-17-http_1.7.0-3.pgdg12+1_amd64.deb
@@ -170,12 +186,26 @@ weight: 4070
 @ el8.aarch64 16 pgsql_http_16 pgsql_http_16-1.6.0-1PGDG.rhel8.aarch64.rpm pgdg 1.6.0 21.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pgsql_http_16-1.6.0-1PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 16 pgsql_http_16 pgsql_http_16-1.7.1-1PIGSTY.el9.x86_64.rpm pigsty 1.7.1 29.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgsql_http_16-1.7.1-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 16 pgsql_http_16 pgsql_http_16-1.7.0-3PGDG.rhel9.8.x86_64.rpm pgdg 1.7.0 25.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pgsql_http_16-1.7.0-3PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 16 pgsql_http_16 pgsql_http_16-1.7.0-1PGDG.rhel9.x86_64.rpm pgdg 1.7.0 25.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pgsql_http_16-1.7.0-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 16 pgsql_http_16 pgsql_http_16-1.6.3-1PGDG.rhel9.x86_64.rpm pgdg 1.6.3 24.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pgsql_http_16-1.6.3-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 16 pgsql_http_16 pgsql_http_16-1.6.2-1PGDG.rhel9.x86_64.rpm pgdg 1.6.2 24.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pgsql_http_16-1.6.2-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 16 pgsql_http_16 pgsql_http_16-1.6.0-2PGDG.rhel9.x86_64.rpm pgdg 1.6.0 23.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pgsql_http_16-1.6.0-2PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 16 pgsql_http_16 pgsql_http_16-1.6.0-1PGDG.rhel9.x86_64.rpm pgdg 1.6.0 23.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pgsql_http_16-1.6.0-1PGDG.rhel9.x86_64.rpm
 @ el9.aarch64 16 pgsql_http_16 pgsql_http_16-1.7.1-1PIGSTY.el9.aarch64.rpm pigsty 1.7.1 28.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgsql_http_16-1.7.1-1PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 16 pgsql_http_16 pgsql_http_16-1.7.0-3PGDG.rhel9.8.aarch64.rpm pgdg 1.7.0 23.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pgsql_http_16-1.7.0-3PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 16 pgsql_http_16 pgsql_http_16-1.7.0-1PGDG.rhel9.aarch64.rpm pgdg 1.7.0 23.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pgsql_http_16-1.7.0-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 16 pgsql_http_16 pgsql_http_16-1.6.3-1PGDG.rhel9.aarch64.rpm pgdg 1.6.3 22.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pgsql_http_16-1.6.3-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 16 pgsql_http_16 pgsql_http_16-1.6.2-1PGDG.rhel9.aarch64.rpm pgdg 1.6.2 23.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pgsql_http_16-1.6.2-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 16 pgsql_http_16 pgsql_http_16-1.6.0-2PGDG.rhel9.aarch64.rpm pgdg 1.6.0 22.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pgsql_http_16-1.6.0-2PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 16 pgsql_http_16 pgsql_http_16-1.6.0-1PGDG.rhel9.aarch64.rpm pgdg 1.6.0 22.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pgsql_http_16-1.6.0-1PGDG.rhel9.aarch64.rpm
 @ el10.x86_64 16 pgsql_http_16 pgsql_http_16-1.7.1-1PIGSTY.el10.x86_64.rpm pigsty 1.7.1 30.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgsql_http_16-1.7.1-1PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 16 pgsql_http_16 pgsql_http_16-1.7.0-3PGDG.rhel10.2.x86_64.rpm pgdg 1.7.0 25.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pgsql_http_16-1.7.0-3PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 16 pgsql_http_16 pgsql_http_16-1.7.0-1PGDG.rhel10.x86_64.rpm pgdg 1.7.0 25.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pgsql_http_16-1.7.0-1PGDG.rhel10.x86_64.rpm
+@ el10.x86_64 16 pgsql_http_16 pgsql_http_16-1.6.3-2PGDG.rhel10.x86_64.rpm pgdg 1.6.3 25.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pgsql_http_16-1.6.3-2PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 16 pgsql_http_16 pgsql_http_16-1.7.1-1PIGSTY.el10.aarch64.rpm pigsty 1.7.1 28.8KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgsql_http_16-1.7.1-1PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 16 pgsql_http_16 pgsql_http_16-1.7.0-3PGDG.rhel10.2.aarch64.rpm pgdg 1.7.0 24.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pgsql_http_16-1.7.0-3PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 16 pgsql_http_16 pgsql_http_16-1.7.0-1PGDG.rhel10.aarch64.rpm pgdg 1.7.0 24.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pgsql_http_16-1.7.0-1PGDG.rhel10.aarch64.rpm
+@ el10.aarch64 16 pgsql_http_16 pgsql_http_16-1.6.3-2PGDG.rhel10.aarch64.rpm pgdg 1.6.3 23.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pgsql_http_16-1.6.3-2PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 16 postgresql-16-http postgresql-16-http_1.7.1-1.pgdg12+1_amd64.deb pgdg 1.7.1 44.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsql-http/postgresql-16-http_1.7.1-1.pgdg12+1_amd64.deb
 @ d12.x86_64 16 postgresql-16-http postgresql-16-http_1.7.1-1PIGSTY~bookworm_amd64.deb pigsty 1.7.1 43.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgsql-http/postgresql-16-http_1.7.1-1PIGSTY~bookworm_amd64.deb
 @ d12.x86_64 16 postgresql-16-http postgresql-16-http_1.7.0-3.pgdg12+1_amd64.deb pgdg 1.7.0 44.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsql-http/postgresql-16-http_1.7.0-3.pgdg12+1_amd64.deb
@@ -220,12 +250,26 @@ weight: 4070
 @ el8.aarch64 15 pgsql_http_15 pgsql_http_15-1.6.0-1PGDG.rhel8.aarch64.rpm pgdg 1.6.0 22.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pgsql_http_15-1.6.0-1PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 15 pgsql_http_15 pgsql_http_15-1.7.1-1PIGSTY.el9.x86_64.rpm pigsty 1.7.1 29.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgsql_http_15-1.7.1-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 15 pgsql_http_15 pgsql_http_15-1.7.0-3PGDG.rhel9.8.x86_64.rpm pgdg 1.7.0 25.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pgsql_http_15-1.7.0-3PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 15 pgsql_http_15 pgsql_http_15-1.7.0-1PGDG.rhel9.x86_64.rpm pgdg 1.7.0 25.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pgsql_http_15-1.7.0-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 15 pgsql_http_15 pgsql_http_15-1.6.3-1PGDG.rhel9.x86_64.rpm pgdg 1.6.3 24.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pgsql_http_15-1.6.3-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 15 pgsql_http_15 pgsql_http_15-1.6.2-1PGDG.rhel9.x86_64.rpm pgdg 1.6.2 24.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pgsql_http_15-1.6.2-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 15 pgsql_http_15 pgsql_http_15-1.6.0-2PGDG.rhel9.x86_64.rpm pgdg 1.6.0 24.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pgsql_http_15-1.6.0-2PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 15 pgsql_http_15 pgsql_http_15-1.6.0-1PGDG.rhel9.x86_64.rpm pgdg 1.6.0 23.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pgsql_http_15-1.6.0-1PGDG.rhel9.x86_64.rpm
 @ el9.aarch64 15 pgsql_http_15 pgsql_http_15-1.7.1-1PIGSTY.el9.aarch64.rpm pigsty 1.7.1 28.8KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgsql_http_15-1.7.1-1PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 15 pgsql_http_15 pgsql_http_15-1.7.0-3PGDG.rhel9.8.aarch64.rpm pgdg 1.7.0 24.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pgsql_http_15-1.7.0-3PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 15 pgsql_http_15 pgsql_http_15-1.7.0-1PGDG.rhel9.aarch64.rpm pgdg 1.7.0 23.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pgsql_http_15-1.7.0-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 15 pgsql_http_15 pgsql_http_15-1.6.3-1PGDG.rhel9.aarch64.rpm pgdg 1.6.3 23.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pgsql_http_15-1.6.3-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 15 pgsql_http_15 pgsql_http_15-1.6.2-1PGDG.rhel9.aarch64.rpm pgdg 1.6.2 23.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pgsql_http_15-1.6.2-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 15 pgsql_http_15 pgsql_http_15-1.6.0-2PGDG.rhel9.aarch64.rpm pgdg 1.6.0 23.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pgsql_http_15-1.6.0-2PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 15 pgsql_http_15 pgsql_http_15-1.6.0-1PGDG.rhel9.aarch64.rpm pgdg 1.6.0 22.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pgsql_http_15-1.6.0-1PGDG.rhel9.aarch64.rpm
 @ el10.x86_64 15 pgsql_http_15 pgsql_http_15-1.7.1-1PIGSTY.el10.x86_64.rpm pigsty 1.7.1 30.3KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgsql_http_15-1.7.1-1PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 15 pgsql_http_15 pgsql_http_15-1.7.0-3PGDG.rhel10.2.x86_64.rpm pgdg 1.7.0 26.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pgsql_http_15-1.7.0-3PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 15 pgsql_http_15 pgsql_http_15-1.7.0-1PGDG.rhel10.x86_64.rpm pgdg 1.7.0 26.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pgsql_http_15-1.7.0-1PGDG.rhel10.x86_64.rpm
+@ el10.x86_64 15 pgsql_http_15 pgsql_http_15-1.6.3-2PGDG.rhel10.x86_64.rpm pgdg 1.6.3 25.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pgsql_http_15-1.6.3-2PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 15 pgsql_http_15 pgsql_http_15-1.7.1-1PIGSTY.el10.aarch64.rpm pigsty 1.7.1 29.1KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgsql_http_15-1.7.1-1PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 15 pgsql_http_15 pgsql_http_15-1.7.0-3PGDG.rhel10.2.aarch64.rpm pgdg 1.7.0 24.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pgsql_http_15-1.7.0-3PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 15 pgsql_http_15 pgsql_http_15-1.7.0-1PGDG.rhel10.aarch64.rpm pgdg 1.7.0 24.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pgsql_http_15-1.7.0-1PGDG.rhel10.aarch64.rpm
+@ el10.aarch64 15 pgsql_http_15 pgsql_http_15-1.6.3-2PGDG.rhel10.aarch64.rpm pgdg 1.6.3 23.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pgsql_http_15-1.6.3-2PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 15 postgresql-15-http postgresql-15-http_1.7.1-1.pgdg12+1_amd64.deb pgdg 1.7.1 45.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsql-http/postgresql-15-http_1.7.1-1.pgdg12+1_amd64.deb
 @ d12.x86_64 15 postgresql-15-http postgresql-15-http_1.7.1-1PIGSTY~bookworm_amd64.deb pigsty 1.7.1 44.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgsql-http/postgresql-15-http_1.7.1-1PIGSTY~bookworm_amd64.deb
 @ d12.x86_64 15 postgresql-15-http postgresql-15-http_1.7.0-3.pgdg12+1_amd64.deb pgdg 1.7.0 45.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsql-http/postgresql-15-http_1.7.0-3.pgdg12+1_amd64.deb
@@ -270,12 +314,26 @@ weight: 4070
 @ el8.aarch64 14 pgsql_http_14 pgsql_http_14-1.6.0-1PGDG.rhel8.aarch64.rpm pgdg 1.6.0 22.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pgsql_http_14-1.6.0-1PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 14 pgsql_http_14 pgsql_http_14-1.7.1-1PIGSTY.el9.x86_64.rpm pigsty 1.7.1 29.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgsql_http_14-1.7.1-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 14 pgsql_http_14 pgsql_http_14-1.7.0-3PGDG.rhel9.8.x86_64.rpm pgdg 1.7.0 25.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pgsql_http_14-1.7.0-3PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 14 pgsql_http_14 pgsql_http_14-1.7.0-1PGDG.rhel9.x86_64.rpm pgdg 1.7.0 25.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pgsql_http_14-1.7.0-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 14 pgsql_http_14 pgsql_http_14-1.6.3-1PGDG.rhel9.x86_64.rpm pgdg 1.6.3 24.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pgsql_http_14-1.6.3-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 14 pgsql_http_14 pgsql_http_14-1.6.2-1PGDG.rhel9.x86_64.rpm pgdg 1.6.2 24.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pgsql_http_14-1.6.2-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 14 pgsql_http_14 pgsql_http_14-1.6.0-2PGDG.rhel9.x86_64.rpm pgdg 1.6.0 24.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pgsql_http_14-1.6.0-2PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 14 pgsql_http_14 pgsql_http_14-1.6.0-1PGDG.rhel9.x86_64.rpm pgdg 1.6.0 23.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pgsql_http_14-1.6.0-1PGDG.rhel9.x86_64.rpm
 @ el9.aarch64 14 pgsql_http_14 pgsql_http_14-1.7.1-1PIGSTY.el9.aarch64.rpm pigsty 1.7.1 28.8KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgsql_http_14-1.7.1-1PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 14 pgsql_http_14 pgsql_http_14-1.7.0-3PGDG.rhel9.8.aarch64.rpm pgdg 1.7.0 24.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pgsql_http_14-1.7.0-3PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 14 pgsql_http_14 pgsql_http_14-1.7.0-1PGDG.rhel9.aarch64.rpm pgdg 1.7.0 23.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pgsql_http_14-1.7.0-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 14 pgsql_http_14 pgsql_http_14-1.6.3-1PGDG.rhel9.aarch64.rpm pgdg 1.6.3 23.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pgsql_http_14-1.6.3-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 14 pgsql_http_14 pgsql_http_14-1.6.2-1PGDG.rhel9.aarch64.rpm pgdg 1.6.2 23.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pgsql_http_14-1.6.2-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 14 pgsql_http_14 pgsql_http_14-1.6.0-2PGDG.rhel9.aarch64.rpm pgdg 1.6.0 23.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pgsql_http_14-1.6.0-2PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 14 pgsql_http_14 pgsql_http_14-1.6.0-1PGDG.rhel9.aarch64.rpm pgdg 1.6.0 22.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pgsql_http_14-1.6.0-1PGDG.rhel9.aarch64.rpm
 @ el10.x86_64 14 pgsql_http_14 pgsql_http_14-1.7.1-1PIGSTY.el10.x86_64.rpm pigsty 1.7.1 30.3KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgsql_http_14-1.7.1-1PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 14 pgsql_http_14 pgsql_http_14-1.7.0-3PGDG.rhel10.2.x86_64.rpm pgdg 1.7.0 26.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pgsql_http_14-1.7.0-3PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 14 pgsql_http_14 pgsql_http_14-1.7.0-1PGDG.rhel10.x86_64.rpm pgdg 1.7.0 26.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pgsql_http_14-1.7.0-1PGDG.rhel10.x86_64.rpm
+@ el10.x86_64 14 pgsql_http_14 pgsql_http_14-1.6.3-2PGDG.rhel10.x86_64.rpm pgdg 1.6.3 25.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pgsql_http_14-1.6.3-2PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 14 pgsql_http_14 pgsql_http_14-1.7.1-1PIGSTY.el10.aarch64.rpm pigsty 1.7.1 29.1KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgsql_http_14-1.7.1-1PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 14 pgsql_http_14 pgsql_http_14-1.7.0-3PGDG.rhel10.2.aarch64.rpm pgdg 1.7.0 24.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgsql_http_14-1.7.0-3PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 14 pgsql_http_14 pgsql_http_14-1.7.0-1PGDG.rhel10.aarch64.rpm pgdg 1.7.0 24.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgsql_http_14-1.7.0-1PGDG.rhel10.aarch64.rpm
+@ el10.aarch64 14 pgsql_http_14 pgsql_http_14-1.6.3-2PGDG.rhel10.aarch64.rpm pgdg 1.6.3 23.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgsql_http_14-1.6.3-2PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 14 postgresql-14-http postgresql-14-http_1.7.1-1.pgdg12+1_amd64.deb pgdg 1.7.1 45.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsql-http/postgresql-14-http_1.7.1-1.pgdg12+1_amd64.deb
 @ d12.x86_64 14 postgresql-14-http postgresql-14-http_1.7.1-1PIGSTY~bookworm_amd64.deb pigsty 1.7.1 44.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgsql-http/postgresql-14-http_1.7.1-1PIGSTY~bookworm_amd64.deb
 @ d12.x86_64 14 postgresql-14-http postgresql-14-http_1.7.0-3.pgdg12+1_amd64.deb pgdg 1.7.0 45.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgsql-http/postgresql-14-http_1.7.0-3.pgdg12+1_amd64.deb
@@ -369,85 +427,80 @@ apt install -y postgresql-14-http   # PG 14
 CREATE EXTENSION http;
 ```
 
-
 ## 用法
 
-https://github.com/pramsey/pgsql-http
+来源：[README](https://github.com/pramsey/pgsql-http/blob/v1.7.1/README.md)、[v1.7.1 release](https://github.com/pramsey/pgsql-http/releases/tag/v1.7.1)
 
-请求 / 响应结构定义：
-
-```
-     Composite type "public.http_request"
-    Column    |       Type        | Modifiers
---------------+-------------------+-----------
- method       | http_method       |
- uri          | character varying |
- headers      | http_header[]     |
- content_type | character varying |
- content      | character varying |
-
-    Composite type "public.http_response"
-    Column    |       Type        | Modifiers
---------------+-------------------+-----------
- status       | integer           |
- content_type | character varying |
- headers      | http_header[]     |
- content      | character varying |
-```
-
-
-### 示例
-
-使用 SQL 发送 HTTP GET 请求
+`http` 允许 SQL 代码通过 libcurl 发起 HTTP 请求。它适合受控的集成点，例如触发器通知外部服务、SQL job 拉取小型远程 payload，或数据库侧 webhook 调用。
 
 ```sql
 CREATE EXTENSION http;
-
--- 获取响应内容
-SELECT content FROM http_get('http://httpbun.com/');
-
--- 获取状态码和内容类型
-SELECT status, content_type FROM http_get('http://httpbun.com/');
-
---  status |       content_type
--- --------+--------------------------
---     200 | text/html; charset=utf-8
-
--- 获取响应头
-SELECT (unnest(headers)).* FROM http_get('http://httpbun.com/');
-
---             field           |                      value
---  ---------------------------+--------------------------------------------------
---  Location                  | https://httpbun.com/
---  Date                      | Mon, 04 Nov 2024 09:00:36 GMT
---  Content-Length            | 0
---  Connection                | close
---  alt-svc                   | h3=":443"; ma=2592000
---  content-security-policy   | frame-ancestors 'none'
---  content-type              | text/html
---  date                      | Mon, 04 Nov 2024 09:00:37 GMT
---  strict-transport-security | max-age=31536000; includeSubDomains; preload
---  x-content-type-options    | nosniff
---  x-powered-by              | httpbun/af040d24038613575a85f74c2283ae79f8169927
---  (11 rows)
 ```
 
+### 请求与响应类型
 
-```sql
-SELECT status, content::json->'form' AS form FROM http_post('http://httpbun.com/post', jsonb_build_object('myvar','myval','foo','bar'));
+每个请求使用 `http_request`，并返回 `http_response`：
+
+```text
+http_request(method http_method, uri varchar, headers http_header[], content_type varchar, content varchar)
+http_response(status integer, content_type varchar, headers http_header[], content varchar)
 ```
 
-发送 HTTP PUT 请求：
+便捷包装函数最终调用同一个底层 `http(http_request)` 函数：
+
+- `http_get(uri varchar)`
+- `http_get(uri varchar, data jsonb)`
+- `http_post(uri varchar, content varchar, content_type varchar)`
+- `http_post(uri varchar, data jsonb)`
+- `http_put(uri varchar, content varchar, content_type varchar)`
+- `http_patch(uri varchar, content varchar, content_type varchar)`
+- `http_delete(uri varchar)`
+- `http_head(uri varchar)`
+
+### 示例
 
 ```sql
+SELECT status, content_type, content
+FROM http_get('https://httpbun.com/ip');
+
+SELECT content::json->'headers'->>'Authorization'
+FROM http((
+  'GET',
+  'https://httpbun.com/headers',
+  http_headers('Authorization', 'Bearer token'),
+  NULL,
+  NULL
+)::http_request);
+
+SELECT status, content::json->'form' AS form
+FROM http_post(
+  'https://httpbun.com/post',
+  jsonb_build_object('myvar', 'myval', 'foo', 'bar')
+);
+
 SELECT status, content_type, content::json->>'data' AS data
-  FROM http_put('http://httpbun.com/put', 'some text', 'text/plain');
-
-
---  status |   content_type   |   data
--- --------+------------------+-----------
---  200 | application/json | some text
+FROM http_put('https://httpbun.com/put', 'some text', 'text/plain');
 ```
 
-发送 HTTP POST 请求：
+通过展开 `headers` 数组检查响应头：
 
+```sql
+SELECT (unnest(headers)).*
+FROM http_get('https://httpbun.com/');
+```
+
+### 二进制内容
+
+README 提醒，`varchar::bytea` 对二进制响应体不安全，因为它会在零值字节处停止。读取响应内容时使用 `text_to_bytea(content)`，发送二进制请求体时使用 `bytea_to_text(bytea)`。
+
+```sql
+WITH http AS (
+  SELECT * FROM http_get('https://httpbingo.org/image/png')
+)
+SELECT content_type, length(text_to_bytea(content)) AS bytes
+FROM http;
+```
+
+### 超时与版本说明
+
+`pg_http` 1.7.1 是兼容性和文档版本：增加 timeout examples，增加 PostgreSQL 17 wait-event hooks，并包含 PostgreSQL 19 support fixes。用户可见 SQL API 仍是上面的 README surface。

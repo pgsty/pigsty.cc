@@ -52,10 +52,10 @@ weight: 4090
 |:--:|:--:|:--:|:--:|:--:|:--:|
 | el8.x86_64 | AVAIL PIGSTY 2.4.5 2 | AVAIL PIGSTY 2.4.5 3 | AVAIL PIGSTY 2.4.5 3 | AVAIL PIGSTY 2.4.5 3 | AVAIL PIGSTY 2.4.5 3 |
 | el8.aarch64 | AVAIL PIGSTY 2.4.5 2 | AVAIL PIGSTY 2.4.5 3 | AVAIL PIGSTY 2.4.5 3 | AVAIL PIGSTY 2.4.5 3 | AVAIL PIGSTY 2.4.5 3 |
-| el9.x86_64 | AVAIL PIGSTY 2.4.5 2 | AVAIL PIGSTY 2.4.5 2 | AVAIL PIGSTY 2.4.5 2 | AVAIL PIGSTY 2.4.5 2 | AVAIL PIGSTY 2.4.5 2 |
-| el9.aarch64 | AVAIL PIGSTY 2.4.5 2 | AVAIL PIGSTY 2.4.5 2 | AVAIL PIGSTY 2.4.5 2 | AVAIL PIGSTY 2.4.5 2 | AVAIL PIGSTY 2.4.5 2 |
-| el10.x86_64 | AVAIL PIGSTY 2.4.5 2 | AVAIL PIGSTY 2.4.5 2 | AVAIL PIGSTY 2.4.5 2 | AVAIL PIGSTY 2.4.5 2 | AVAIL PIGSTY 2.4.5 2 |
-| el10.aarch64 | AVAIL PIGSTY 2.4.5 2 | AVAIL PIGSTY 2.4.5 2 | AVAIL PIGSTY 2.4.5 2 | AVAIL PIGSTY 2.4.5 2 | AVAIL PIGSTY 2.4.5 2 |
+| el9.x86_64 | AVAIL PIGSTY 2.4.5 3 | AVAIL PIGSTY 2.4.5 4 | AVAIL PIGSTY 2.4.5 4 | AVAIL PIGSTY 2.4.5 4 | AVAIL PIGSTY 2.4.5 4 |
+| el9.aarch64 | AVAIL PIGSTY 2.4.5 3 | AVAIL PIGSTY 2.4.5 4 | AVAIL PIGSTY 2.4.5 4 | AVAIL PIGSTY 2.4.5 4 | AVAIL PIGSTY 2.4.5 4 |
+| el10.x86_64 | AVAIL PIGSTY 2.4.5 3 | AVAIL PIGSTY 2.4.5 4 | AVAIL PIGSTY 2.4.5 4 | AVAIL PIGSTY 2.4.5 4 | AVAIL PIGSTY 2.4.5 4 |
+| el10.aarch64 | AVAIL PIGSTY 2.4.5 3 | AVAIL PIGSTY 2.4.5 4 | AVAIL PIGSTY 2.4.5 4 | AVAIL PIGSTY 2.4.5 4 | AVAIL PIGSTY 2.4.5 4 |
 | d12.x86_64 | AVAIL PIGSTY 2.4.5 1 | AVAIL PIGSTY 2.4.5 1 | AVAIL PIGSTY 2.4.5 1 | AVAIL PIGSTY 2.4.5 1 | AVAIL PIGSTY 2.4.5 1 |
 | d12.aarch64 | AVAIL PIGSTY 2.4.5 1 | AVAIL PIGSTY 2.4.5 1 | AVAIL PIGSTY 2.4.5 1 | AVAIL PIGSTY 2.4.5 1 | AVAIL PIGSTY 2.4.5 1 |
 | d13.x86_64 | AVAIL PIGSTY 2.4.5 1 | AVAIL PIGSTY 2.4.5 1 | AVAIL PIGSTY 2.4.5 1 | AVAIL PIGSTY 2.4.5 1 | AVAIL PIGSTY 2.4.5 1 |
@@ -72,12 +72,16 @@ weight: 4090
 @ el8.aarch64 18 pg_curl_18 pg_curl_18-2.4.4-1PGDG.rhel8.aarch64.rpm pgdg 2.4.4 42.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pg_curl_18-2.4.4-1PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 18 pg_curl_18 pg_curl_18-2.4.5-2PIGSTY.el9.x86_64.rpm pigsty 2.4.5 54.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_curl_18-2.4.5-2PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 18 pg_curl_18 pg_curl_18-2.4.4-3PGDG.rhel9.8.x86_64.rpm pgdg 2.4.4 45.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pg_curl_18-2.4.4-3PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 18 pg_curl_18 pg_curl_18-2.4.4-1PGDG.rhel9.x86_64.rpm pgdg 2.4.4 45.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pg_curl_18-2.4.4-1PGDG.rhel9.x86_64.rpm
 @ el9.aarch64 18 pg_curl_18 pg_curl_18-2.4.5-2PIGSTY.el9.aarch64.rpm pigsty 2.4.5 53.2KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_curl_18-2.4.5-2PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 18 pg_curl_18 pg_curl_18-2.4.4-3PGDG.rhel9.8.aarch64.rpm pgdg 2.4.4 44.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pg_curl_18-2.4.4-3PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 18 pg_curl_18 pg_curl_18-2.4.4-1PGDG.rhel9.aarch64.rpm pgdg 2.4.4 44.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pg_curl_18-2.4.4-1PGDG.rhel9.aarch64.rpm
 @ el10.x86_64 18 pg_curl_18 pg_curl_18-2.4.5-2PIGSTY.el10.x86_64.rpm pigsty 2.4.5 54.5KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_curl_18-2.4.5-2PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 18 pg_curl_18 pg_curl_18-2.4.4-3PGDG.rhel10.2.x86_64.rpm pgdg 2.4.4 46.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pg_curl_18-2.4.4-3PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 18 pg_curl_18 pg_curl_18-2.4.4-1PGDG.rhel10.x86_64.rpm pgdg 2.4.4 46.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pg_curl_18-2.4.4-1PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 18 pg_curl_18 pg_curl_18-2.4.5-2PIGSTY.el10.aarch64.rpm pigsty 2.4.5 54.1KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_curl_18-2.4.5-2PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 18 pg_curl_18 pg_curl_18-2.4.4-3PGDG.rhel10.2.aarch64.rpm pgdg 2.4.4 45.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_curl_18-2.4.4-3PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 18 pg_curl_18 pg_curl_18-2.4.4-1PGDG.rhel10.aarch64.rpm pgdg 2.4.4 45.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_curl_18-2.4.4-1PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 18 postgresql-18-pg-curl postgresql-18-pg-curl_2.4.5-1PIGSTY~bookworm_amd64.deb pigsty 2.4.5 99.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-curl/postgresql-18-pg-curl_2.4.5-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 18 postgresql-18-pg-curl postgresql-18-pg-curl_2.4.5-1PIGSTY~bookworm_arm64.deb pigsty 2.4.5 98.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-curl/postgresql-18-pg-curl_2.4.5-1PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 18 postgresql-18-pg-curl postgresql-18-pg-curl_2.4.5-1PIGSTY~trixie_amd64.deb pigsty 2.4.5 100.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-curl/postgresql-18-pg-curl_2.4.5-1PIGSTY~trixie_amd64.deb
@@ -96,12 +100,20 @@ weight: 4090
 @ el8.aarch64 17 pg_curl_17 pg_curl_17-2.4.3-1PGDG.rhel8.aarch64.rpm pgdg 2.4.3 41.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pg_curl_17-2.4.3-1PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 17 pg_curl_17 pg_curl_17-2.4.5-2PIGSTY.el9.x86_64.rpm pigsty 2.4.5 54.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_curl_17-2.4.5-2PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 17 pg_curl_17 pg_curl_17-2.4.4-3PGDG.rhel9.8.x86_64.rpm pgdg 2.4.4 45.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_curl_17-2.4.4-3PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 17 pg_curl_17 pg_curl_17-2.4.4-1PGDG.rhel9.x86_64.rpm pgdg 2.4.4 45.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_curl_17-2.4.4-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 17 pg_curl_17 pg_curl_17-2.4.3-1PGDG.rhel9.x86_64.rpm pgdg 2.4.3 45.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_curl_17-2.4.3-1PGDG.rhel9.x86_64.rpm
 @ el9.aarch64 17 pg_curl_17 pg_curl_17-2.4.5-2PIGSTY.el9.aarch64.rpm pigsty 2.4.5 53.1KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_curl_17-2.4.5-2PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 17 pg_curl_17 pg_curl_17-2.4.4-3PGDG.rhel9.8.aarch64.rpm pgdg 2.4.4 44.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_curl_17-2.4.4-3PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 17 pg_curl_17 pg_curl_17-2.4.4-1PGDG.rhel9.aarch64.rpm pgdg 2.4.4 43.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_curl_17-2.4.4-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 17 pg_curl_17 pg_curl_17-2.4.3-1PGDG.rhel9.aarch64.rpm pgdg 2.4.3 44.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_curl_17-2.4.3-1PGDG.rhel9.aarch64.rpm
 @ el10.x86_64 17 pg_curl_17 pg_curl_17-2.4.5-2PIGSTY.el10.x86_64.rpm pigsty 2.4.5 54.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_curl_17-2.4.5-2PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 17 pg_curl_17 pg_curl_17-2.4.4-3PGDG.rhel10.2.x86_64.rpm pgdg 2.4.4 46.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_curl_17-2.4.4-3PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 17 pg_curl_17 pg_curl_17-2.4.4-1PGDG.rhel10.x86_64.rpm pgdg 2.4.4 46.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_curl_17-2.4.4-1PGDG.rhel10.x86_64.rpm
+@ el10.x86_64 17 pg_curl_17 pg_curl_17-2.4.3-2PGDG.rhel10.x86_64.rpm pgdg 2.4.3 46.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_curl_17-2.4.3-2PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 17 pg_curl_17 pg_curl_17-2.4.5-2PIGSTY.el10.aarch64.rpm pigsty 2.4.5 54.1KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_curl_17-2.4.5-2PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 17 pg_curl_17 pg_curl_17-2.4.4-3PGDG.rhel10.2.aarch64.rpm pgdg 2.4.4 45.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_curl_17-2.4.4-3PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 17 pg_curl_17 pg_curl_17-2.4.4-1PGDG.rhel10.aarch64.rpm pgdg 2.4.4 45.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_curl_17-2.4.4-1PGDG.rhel10.aarch64.rpm
+@ el10.aarch64 17 pg_curl_17 pg_curl_17-2.4.3-2PGDG.rhel10.aarch64.rpm pgdg 2.4.3 45.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_curl_17-2.4.3-2PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 17 postgresql-17-pg-curl postgresql-17-pg-curl_2.4.5-1PIGSTY~bookworm_amd64.deb pigsty 2.4.5 99.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-curl/postgresql-17-pg-curl_2.4.5-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 17 postgresql-17-pg-curl postgresql-17-pg-curl_2.4.5-1PIGSTY~bookworm_arm64.deb pigsty 2.4.5 98.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-curl/postgresql-17-pg-curl_2.4.5-1PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 17 postgresql-17-pg-curl postgresql-17-pg-curl_2.4.5-1PIGSTY~trixie_amd64.deb pigsty 2.4.5 100.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-curl/postgresql-17-pg-curl_2.4.5-1PIGSTY~trixie_amd64.deb
@@ -120,12 +132,20 @@ weight: 4090
 @ el8.aarch64 16 pg_curl_16 pg_curl_16-2.4.3-1PGDG.rhel8.aarch64.rpm pgdg 2.4.3 41.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pg_curl_16-2.4.3-1PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 16 pg_curl_16 pg_curl_16-2.4.5-2PIGSTY.el9.x86_64.rpm pigsty 2.4.5 54.7KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_curl_16-2.4.5-2PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 16 pg_curl_16 pg_curl_16-2.4.4-3PGDG.rhel9.8.x86_64.rpm pgdg 2.4.4 45.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_curl_16-2.4.4-3PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 16 pg_curl_16 pg_curl_16-2.4.4-1PGDG.rhel9.x86_64.rpm pgdg 2.4.4 45.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_curl_16-2.4.4-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 16 pg_curl_16 pg_curl_16-2.4.3-1PGDG.rhel9.x86_64.rpm pgdg 2.4.3 45.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_curl_16-2.4.3-1PGDG.rhel9.x86_64.rpm
 @ el9.aarch64 16 pg_curl_16 pg_curl_16-2.4.5-2PIGSTY.el9.aarch64.rpm pigsty 2.4.5 53.1KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_curl_16-2.4.5-2PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 16 pg_curl_16 pg_curl_16-2.4.4-3PGDG.rhel9.8.aarch64.rpm pgdg 2.4.4 44.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_curl_16-2.4.4-3PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 16 pg_curl_16 pg_curl_16-2.4.4-1PGDG.rhel9.aarch64.rpm pgdg 2.4.4 44.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_curl_16-2.4.4-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 16 pg_curl_16 pg_curl_16-2.4.3-1PGDG.rhel9.aarch64.rpm pgdg 2.4.3 44.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_curl_16-2.4.3-1PGDG.rhel9.aarch64.rpm
 @ el10.x86_64 16 pg_curl_16 pg_curl_16-2.4.5-2PIGSTY.el10.x86_64.rpm pigsty 2.4.5 54.7KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_curl_16-2.4.5-2PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 16 pg_curl_16 pg_curl_16-2.4.4-3PGDG.rhel10.2.x86_64.rpm pgdg 2.4.4 46.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_curl_16-2.4.4-3PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 16 pg_curl_16 pg_curl_16-2.4.4-1PGDG.rhel10.x86_64.rpm pgdg 2.4.4 46.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_curl_16-2.4.4-1PGDG.rhel10.x86_64.rpm
+@ el10.x86_64 16 pg_curl_16 pg_curl_16-2.4.3-2PGDG.rhel10.x86_64.rpm pgdg 2.4.3 46.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_curl_16-2.4.3-2PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 16 pg_curl_16 pg_curl_16-2.4.5-2PIGSTY.el10.aarch64.rpm pigsty 2.4.5 54.1KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_curl_16-2.4.5-2PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 16 pg_curl_16 pg_curl_16-2.4.4-3PGDG.rhel10.2.aarch64.rpm pgdg 2.4.4 45.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_curl_16-2.4.4-3PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 16 pg_curl_16 pg_curl_16-2.4.4-1PGDG.rhel10.aarch64.rpm pgdg 2.4.4 45.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_curl_16-2.4.4-1PGDG.rhel10.aarch64.rpm
+@ el10.aarch64 16 pg_curl_16 pg_curl_16-2.4.3-2PGDG.rhel10.aarch64.rpm pgdg 2.4.3 45.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_curl_16-2.4.3-2PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 16 postgresql-16-pg-curl postgresql-16-pg-curl_2.4.5-1PIGSTY~bookworm_amd64.deb pigsty 2.4.5 99.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-curl/postgresql-16-pg-curl_2.4.5-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 16 postgresql-16-pg-curl postgresql-16-pg-curl_2.4.5-1PIGSTY~bookworm_arm64.deb pigsty 2.4.5 98.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-curl/postgresql-16-pg-curl_2.4.5-1PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 16 postgresql-16-pg-curl postgresql-16-pg-curl_2.4.5-1PIGSTY~trixie_amd64.deb pigsty 2.4.5 100.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-curl/postgresql-16-pg-curl_2.4.5-1PIGSTY~trixie_amd64.deb
@@ -144,12 +164,20 @@ weight: 4090
 @ el8.aarch64 15 pg_curl_15 pg_curl_15-2.4.3-1PGDG.rhel8.aarch64.rpm pgdg 2.4.3 41.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pg_curl_15-2.4.3-1PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 15 pg_curl_15 pg_curl_15-2.4.5-2PIGSTY.el9.x86_64.rpm pigsty 2.4.5 54.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_curl_15-2.4.5-2PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 15 pg_curl_15 pg_curl_15-2.4.4-3PGDG.rhel9.8.x86_64.rpm pgdg 2.4.4 45.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_curl_15-2.4.4-3PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 15 pg_curl_15 pg_curl_15-2.4.4-1PGDG.rhel9.x86_64.rpm pgdg 2.4.4 45.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_curl_15-2.4.4-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 15 pg_curl_15 pg_curl_15-2.4.3-1PGDG.rhel9.x86_64.rpm pgdg 2.4.3 45.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_curl_15-2.4.3-1PGDG.rhel9.x86_64.rpm
 @ el9.aarch64 15 pg_curl_15 pg_curl_15-2.4.5-2PIGSTY.el9.aarch64.rpm pigsty 2.4.5 53.1KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_curl_15-2.4.5-2PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 15 pg_curl_15 pg_curl_15-2.4.4-3PGDG.rhel9.8.aarch64.rpm pgdg 2.4.4 44.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_curl_15-2.4.4-3PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 15 pg_curl_15 pg_curl_15-2.4.4-1PGDG.rhel9.aarch64.rpm pgdg 2.4.4 44.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_curl_15-2.4.4-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 15 pg_curl_15 pg_curl_15-2.4.3-1PGDG.rhel9.aarch64.rpm pgdg 2.4.3 44.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_curl_15-2.4.3-1PGDG.rhel9.aarch64.rpm
 @ el10.x86_64 15 pg_curl_15 pg_curl_15-2.4.5-2PIGSTY.el10.x86_64.rpm pigsty 2.4.5 55.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_curl_15-2.4.5-2PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 15 pg_curl_15 pg_curl_15-2.4.4-3PGDG.rhel10.2.x86_64.rpm pgdg 2.4.4 46.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_curl_15-2.4.4-3PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 15 pg_curl_15 pg_curl_15-2.4.4-1PGDG.rhel10.x86_64.rpm pgdg 2.4.4 46.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_curl_15-2.4.4-1PGDG.rhel10.x86_64.rpm
+@ el10.x86_64 15 pg_curl_15 pg_curl_15-2.4.3-2PGDG.rhel10.x86_64.rpm pgdg 2.4.3 46.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_curl_15-2.4.3-2PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 15 pg_curl_15 pg_curl_15-2.4.5-2PIGSTY.el10.aarch64.rpm pigsty 2.4.5 53.7KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_curl_15-2.4.5-2PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 15 pg_curl_15 pg_curl_15-2.4.4-3PGDG.rhel10.2.aarch64.rpm pgdg 2.4.4 45.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_curl_15-2.4.4-3PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 15 pg_curl_15 pg_curl_15-2.4.4-1PGDG.rhel10.aarch64.rpm pgdg 2.4.4 45.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_curl_15-2.4.4-1PGDG.rhel10.aarch64.rpm
+@ el10.aarch64 15 pg_curl_15 pg_curl_15-2.4.3-2PGDG.rhel10.aarch64.rpm pgdg 2.4.3 45.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_curl_15-2.4.3-2PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 15 postgresql-15-pg-curl postgresql-15-pg-curl_2.4.5-1PIGSTY~bookworm_amd64.deb pigsty 2.4.5 99.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-curl/postgresql-15-pg-curl_2.4.5-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 15 postgresql-15-pg-curl postgresql-15-pg-curl_2.4.5-1PIGSTY~bookworm_arm64.deb pigsty 2.4.5 98.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-curl/postgresql-15-pg-curl_2.4.5-1PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 15 postgresql-15-pg-curl postgresql-15-pg-curl_2.4.5-1PIGSTY~trixie_amd64.deb pigsty 2.4.5 99.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-curl/postgresql-15-pg-curl_2.4.5-1PIGSTY~trixie_amd64.deb
@@ -168,12 +196,20 @@ weight: 4090
 @ el8.aarch64 14 pg_curl_14 pg_curl_14-2.4.3-1PGDG.rhel8.aarch64.rpm pgdg 2.4.3 41.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pg_curl_14-2.4.3-1PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 14 pg_curl_14 pg_curl_14-2.4.5-2PIGSTY.el9.x86_64.rpm pigsty 2.4.5 54.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_curl_14-2.4.5-2PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 14 pg_curl_14 pg_curl_14-2.4.4-3PGDG.rhel9.8.x86_64.rpm pgdg 2.4.4 45.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_curl_14-2.4.4-3PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 14 pg_curl_14 pg_curl_14-2.4.4-1PGDG.rhel9.x86_64.rpm pgdg 2.4.4 45.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_curl_14-2.4.4-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 14 pg_curl_14 pg_curl_14-2.4.3-1PGDG.rhel9.x86_64.rpm pgdg 2.4.3 45.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_curl_14-2.4.3-1PGDG.rhel9.x86_64.rpm
 @ el9.aarch64 14 pg_curl_14 pg_curl_14-2.4.5-2PIGSTY.el9.aarch64.rpm pigsty 2.4.5 53.1KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_curl_14-2.4.5-2PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 14 pg_curl_14 pg_curl_14-2.4.4-3PGDG.rhel9.8.aarch64.rpm pgdg 2.4.4 44.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_curl_14-2.4.4-3PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 14 pg_curl_14 pg_curl_14-2.4.4-1PGDG.rhel9.aarch64.rpm pgdg 2.4.4 43.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_curl_14-2.4.4-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 14 pg_curl_14 pg_curl_14-2.4.3-1PGDG.rhel9.aarch64.rpm pgdg 2.4.3 44.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_curl_14-2.4.3-1PGDG.rhel9.aarch64.rpm
 @ el10.x86_64 14 pg_curl_14 pg_curl_14-2.4.5-2PIGSTY.el10.x86_64.rpm pigsty 2.4.5 55.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_curl_14-2.4.5-2PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 14 pg_curl_14 pg_curl_14-2.4.4-3PGDG.rhel10.2.x86_64.rpm pgdg 2.4.4 46.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_curl_14-2.4.4-3PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 14 pg_curl_14 pg_curl_14-2.4.4-1PGDG.rhel10.x86_64.rpm pgdg 2.4.4 46.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_curl_14-2.4.4-1PGDG.rhel10.x86_64.rpm
+@ el10.x86_64 14 pg_curl_14 pg_curl_14-2.4.3-2PGDG.rhel10.x86_64.rpm pgdg 2.4.3 46.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_curl_14-2.4.3-2PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 14 pg_curl_14 pg_curl_14-2.4.5-2PIGSTY.el10.aarch64.rpm pigsty 2.4.5 54.1KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_curl_14-2.4.5-2PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 14 pg_curl_14 pg_curl_14-2.4.4-3PGDG.rhel10.2.aarch64.rpm pgdg 2.4.4 45.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_curl_14-2.4.4-3PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 14 pg_curl_14 pg_curl_14-2.4.4-1PGDG.rhel10.aarch64.rpm pgdg 2.4.4 45.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_curl_14-2.4.4-1PGDG.rhel10.aarch64.rpm
+@ el10.aarch64 14 pg_curl_14 pg_curl_14-2.4.3-2PGDG.rhel10.aarch64.rpm pgdg 2.4.3 45.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_curl_14-2.4.3-2PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 14 postgresql-14-pg-curl postgresql-14-pg-curl_2.4.5-1PIGSTY~bookworm_amd64.deb pigsty 2.4.5 99.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-curl/postgresql-14-pg-curl_2.4.5-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 14 postgresql-14-pg-curl postgresql-14-pg-curl_2.4.5-1PIGSTY~bookworm_arm64.deb pigsty 2.4.5 97.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-curl/postgresql-14-pg-curl_2.4.5-1PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 14 postgresql-14-pg-curl postgresql-14-pg-curl_2.4.5-1PIGSTY~trixie_amd64.deb pigsty 2.4.5 100.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-curl/postgresql-14-pg-curl_2.4.5-1PIGSTY~trixie_amd64.deb

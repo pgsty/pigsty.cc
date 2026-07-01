@@ -55,10 +55,10 @@ weight: 3000
 |:--:|:--:|:--:|:--:|:--:|:--:|
 | el8.x86_64 | AVAIL PIGSTY 1.5.2 2 | AVAIL PIGSTY 1.5.2 4 | AVAIL PIGSTY 1.5.2 4 | AVAIL PIGSTY 1.5.2 4 | AVAIL PIGSTY 1.5.2 4 |
 | el8.aarch64 | AVAIL PIGSTY 1.5.2 2 | AVAIL PIGSTY 1.5.2 4 | AVAIL PIGSTY 1.5.2 4 | AVAIL PIGSTY 1.5.2 4 | AVAIL PIGSTY 1.5.2 4 |
-| el9.x86_64 | AVAIL PGDG 1.5.2 2 | AVAIL PGDG 1.5.2 2 | AVAIL PGDG 1.5.2 2 | AVAIL PGDG 1.5.2 2 | AVAIL PGDG 1.5.2 2 |
-| el9.aarch64 | AVAIL PGDG 1.5.2 2 | AVAIL PGDG 1.5.2 2 | AVAIL PGDG 1.5.2 2 | AVAIL PGDG 1.5.2 2 | AVAIL PGDG 1.5.2 2 |
-| el10.x86_64 | AVAIL PGDG 1.5.2 2 | AVAIL PGDG 1.5.2 2 | AVAIL PGDG 1.5.2 2 | AVAIL PGDG 1.5.2 2 | AVAIL PGDG 1.5.2 2 |
-| el10.aarch64 | AVAIL PGDG 1.5.2 2 | AVAIL PGDG 1.5.2 2 | AVAIL PGDG 1.5.2 2 | AVAIL PGDG 1.5.2 2 | AVAIL PGDG 1.5.2 2 |
+| el9.x86_64 | AVAIL PGDG 1.5.2 3 | AVAIL PGDG 1.5.2 5 | AVAIL PGDG 1.5.2 5 | AVAIL PGDG 1.5.2 5 | AVAIL PGDG 1.5.2 5 |
+| el9.aarch64 | AVAIL PGDG 1.5.2 3 | AVAIL PGDG 1.5.2 5 | AVAIL PGDG 1.5.2 5 | AVAIL PGDG 1.5.2 5 | AVAIL PGDG 1.5.2 5 |
+| el10.x86_64 | AVAIL PGDG 1.5.2 3 | AVAIL PGDG 1.5.2 3 | AVAIL PGDG 1.5.2 3 | AVAIL PGDG 1.5.2 3 | AVAIL PGDG 1.5.2 3 |
+| el10.aarch64 | AVAIL PGDG 1.5.2 3 | AVAIL PGDG 1.5.2 3 | AVAIL PGDG 1.5.2 3 | AVAIL PGDG 1.5.2 3 | AVAIL PGDG 1.5.2 3 |
 | d12.x86_64 | AVAIL PIGSTY 1.5.2 1 | AVAIL PIGSTY 1.5.2 1 | AVAIL PIGSTY 1.5.2 1 | AVAIL PIGSTY 1.5.2 1 | AVAIL PIGSTY 1.5.2 1 |
 | d12.aarch64 | AVAIL PIGSTY 1.5.2 1 | AVAIL PIGSTY 1.5.2 1 | AVAIL PIGSTY 1.5.2 1 | AVAIL PIGSTY 1.5.2 1 | AVAIL PIGSTY 1.5.2 1 |
 | d13.x86_64 | AVAIL PIGSTY 1.5.2 1 | AVAIL PIGSTY 1.5.2 1 | AVAIL PIGSTY 1.5.2 1 | AVAIL PIGSTY 1.5.2 1 | AVAIL PIGSTY 1.5.2 1 |
@@ -75,12 +75,16 @@ weight: 3000
 @ el8.aarch64 18 pg_tle_18 pg_tle_18-1.5.2-1PGDG.rhel8.aarch64.rpm pgdg 1.5.2 65.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pg_tle_18-1.5.2-1PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 18 pg_tle_18 pg_tle_18-1.5.2-3PGDG.rhel9.8.x86_64.rpm pgdg 1.5.2 65.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pg_tle_18-1.5.2-3PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 18 pg_tle_18 pg_tle_18-1.5.2-1PIGSTY.el9.x86_64.rpm pigsty 1.5.2 63.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_tle_18-1.5.2-1PIGSTY.el9.x86_64.rpm
+@ el9.x86_64 18 pg_tle_18 pg_tle_18-1.5.2-1PGDG.rhel9.x86_64.rpm pgdg 1.5.2 65.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pg_tle_18-1.5.2-1PGDG.rhel9.x86_64.rpm
 @ el9.aarch64 18 pg_tle_18 pg_tle_18-1.5.2-3PGDG.rhel9.8.aarch64.rpm pgdg 1.5.2 62.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pg_tle_18-1.5.2-3PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 18 pg_tle_18 pg_tle_18-1.5.2-1PIGSTY.el9.aarch64.rpm pigsty 1.5.2 59.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_tle_18-1.5.2-1PIGSTY.el9.aarch64.rpm
+@ el9.aarch64 18 pg_tle_18 pg_tle_18-1.5.2-1PGDG.rhel9.aarch64.rpm pgdg 1.5.2 62.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pg_tle_18-1.5.2-1PGDG.rhel9.aarch64.rpm
 @ el10.x86_64 18 pg_tle_18 pg_tle_18-1.5.2-3PGDG.rhel10.2.x86_64.rpm pgdg 1.5.2 65.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pg_tle_18-1.5.2-3PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 18 pg_tle_18 pg_tle_18-1.5.2-1PIGSTY.el10.x86_64.rpm pigsty 1.5.2 63.3KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_tle_18-1.5.2-1PIGSTY.el10.x86_64.rpm
+@ el10.x86_64 18 pg_tle_18 pg_tle_18-1.5.2-1PGDG.rhel10.x86_64.rpm pgdg 1.5.2 65.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pg_tle_18-1.5.2-1PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 18 pg_tle_18 pg_tle_18-1.5.2-3PGDG.rhel10.2.aarch64.rpm pgdg 1.5.2 63.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_tle_18-1.5.2-3PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 18 pg_tle_18 pg_tle_18-1.5.2-1PIGSTY.el10.aarch64.rpm pigsty 1.5.2 60.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_tle_18-1.5.2-1PIGSTY.el10.aarch64.rpm
+@ el10.aarch64 18 pg_tle_18 pg_tle_18-1.5.2-1PGDG.rhel10.aarch64.rpm pgdg 1.5.2 63.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_tle_18-1.5.2-1PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 18 postgresql-18-pg-tle postgresql-18-pg-tle_1.5.2-1PIGSTY~bookworm_amd64.deb pigsty 1.5.2 159.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-tle/postgresql-18-pg-tle_1.5.2-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 18 postgresql-18-pg-tle postgresql-18-pg-tle_1.5.2-1PIGSTY~bookworm_arm64.deb pigsty 1.5.2 155.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-tle/postgresql-18-pg-tle_1.5.2-1PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 18 postgresql-18-pg-tle postgresql-18-pg-tle_1.5.2-1PIGSTY~trixie_amd64.deb pigsty 1.5.2 160.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-tle/postgresql-18-pg-tle_1.5.2-1PIGSTY~trixie_amd64.deb
@@ -101,12 +105,20 @@ weight: 3000
 @ el8.aarch64 17 pg_tle_17 pg_tle_17-1.2.0-2PGDG.rhel8.aarch64.rpm pgdg 1.2.0 59.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pg_tle_17-1.2.0-2PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 17 pg_tle_17 pg_tle_17-1.5.2-3PGDG.rhel9.8.x86_64.rpm pgdg 1.5.2 65.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_tle_17-1.5.2-3PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 17 pg_tle_17 pg_tle_17-1.5.2-1PIGSTY.el9.x86_64.rpm pigsty 1.5.2 63.1KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_tle_17-1.5.2-1PIGSTY.el9.x86_64.rpm
+@ el9.x86_64 17 pg_tle_17 pg_tle_17-1.5.1-1PGDG.rhel9.x86_64.rpm pgdg 1.5.1 64.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_tle_17-1.5.1-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 17 pg_tle_17 pg_tle_17-1.5.0-1PGDG.rhel9.x86_64.rpm pgdg 1.5.0 64.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_tle_17-1.5.0-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 17 pg_tle_17 pg_tle_17-1.2.0-2PGDG.rhel9.x86_64.rpm pgdg 1.2.0 59.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_tle_17-1.2.0-2PGDG.rhel9.x86_64.rpm
 @ el9.aarch64 17 pg_tle_17 pg_tle_17-1.5.2-3PGDG.rhel9.8.aarch64.rpm pgdg 1.5.2 62.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_tle_17-1.5.2-3PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 17 pg_tle_17 pg_tle_17-1.5.2-1PIGSTY.el9.aarch64.rpm pigsty 1.5.2 60.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_tle_17-1.5.2-1PIGSTY.el9.aarch64.rpm
+@ el9.aarch64 17 pg_tle_17 pg_tle_17-1.5.1-1PGDG.rhel9.aarch64.rpm pgdg 1.5.1 61.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_tle_17-1.5.1-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 17 pg_tle_17 pg_tle_17-1.5.0-1PGDG.rhel9.aarch64.rpm pgdg 1.5.0 61.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_tle_17-1.5.0-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 17 pg_tle_17 pg_tle_17-1.2.0-2PGDG.rhel9.aarch64.rpm pgdg 1.2.0 56.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_tle_17-1.2.0-2PGDG.rhel9.aarch64.rpm
 @ el10.x86_64 17 pg_tle_17 pg_tle_17-1.5.2-3PGDG.rhel10.2.x86_64.rpm pgdg 1.5.2 65.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_tle_17-1.5.2-3PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 17 pg_tle_17 pg_tle_17-1.5.2-1PIGSTY.el10.x86_64.rpm pigsty 1.5.2 63.2KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_tle_17-1.5.2-1PIGSTY.el10.x86_64.rpm
+@ el10.x86_64 17 pg_tle_17 pg_tle_17-1.5.1-1PGDG.rhel10.x86_64.rpm pgdg 1.5.1 65.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_tle_17-1.5.1-1PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 17 pg_tle_17 pg_tle_17-1.5.2-3PGDG.rhel10.2.aarch64.rpm pgdg 1.5.2 63.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_tle_17-1.5.2-3PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 17 pg_tle_17 pg_tle_17-1.5.2-1PIGSTY.el10.aarch64.rpm pigsty 1.5.2 60.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_tle_17-1.5.2-1PIGSTY.el10.aarch64.rpm
+@ el10.aarch64 17 pg_tle_17 pg_tle_17-1.5.1-1PGDG.rhel10.aarch64.rpm pgdg 1.5.1 62.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_tle_17-1.5.1-1PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 17 postgresql-17-pg-tle postgresql-17-pg-tle_1.5.2-1PIGSTY~bookworm_amd64.deb pigsty 1.5.2 159.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-tle/postgresql-17-pg-tle_1.5.2-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 17 postgresql-17-pg-tle postgresql-17-pg-tle_1.5.2-1PIGSTY~bookworm_arm64.deb pigsty 1.5.2 154.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-tle/postgresql-17-pg-tle_1.5.2-1PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 17 postgresql-17-pg-tle postgresql-17-pg-tle_1.5.2-1PIGSTY~trixie_amd64.deb pigsty 1.5.2 159.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-tle/postgresql-17-pg-tle_1.5.2-1PIGSTY~trixie_amd64.deb
@@ -127,12 +139,20 @@ weight: 3000
 @ el8.aarch64 16 pg_tle_16 pg_tle_16-1.2.0-1PGDG.rhel8.aarch64.rpm pgdg 1.2.0 59.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pg_tle_16-1.2.0-1PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 16 pg_tle_16 pg_tle_16-1.5.2-3PGDG.rhel9.8.x86_64.rpm pgdg 1.5.2 65.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_tle_16-1.5.2-3PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 16 pg_tle_16 pg_tle_16-1.5.2-1PIGSTY.el9.x86_64.rpm pigsty 1.5.2 63.1KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_tle_16-1.5.2-1PIGSTY.el9.x86_64.rpm
+@ el9.x86_64 16 pg_tle_16 pg_tle_16-1.5.1-1PGDG.rhel9.x86_64.rpm pgdg 1.5.1 64.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_tle_16-1.5.1-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 16 pg_tle_16 pg_tle_16-1.5.0-1PGDG.rhel9.x86_64.rpm pgdg 1.5.0 64.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_tle_16-1.5.0-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 16 pg_tle_16 pg_tle_16-1.2.0-1PGDG.rhel9.x86_64.rpm pgdg 1.2.0 59.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_tle_16-1.2.0-1PGDG.rhel9.x86_64.rpm
 @ el9.aarch64 16 pg_tle_16 pg_tle_16-1.5.2-3PGDG.rhel9.8.aarch64.rpm pgdg 1.5.2 62.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_tle_16-1.5.2-3PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 16 pg_tle_16 pg_tle_16-1.5.2-1PIGSTY.el9.aarch64.rpm pigsty 1.5.2 60.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_tle_16-1.5.2-1PIGSTY.el9.aarch64.rpm
+@ el9.aarch64 16 pg_tle_16 pg_tle_16-1.5.1-1PGDG.rhel9.aarch64.rpm pgdg 1.5.1 61.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_tle_16-1.5.1-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 16 pg_tle_16 pg_tle_16-1.5.0-1PGDG.rhel9.aarch64.rpm pgdg 1.5.0 61.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_tle_16-1.5.0-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 16 pg_tle_16 pg_tle_16-1.2.0-1PGDG.rhel9.aarch64.rpm pgdg 1.2.0 56.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_tle_16-1.2.0-1PGDG.rhel9.aarch64.rpm
 @ el10.x86_64 16 pg_tle_16 pg_tle_16-1.5.2-3PGDG.rhel10.2.x86_64.rpm pgdg 1.5.2 65.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_tle_16-1.5.2-3PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 16 pg_tle_16 pg_tle_16-1.5.2-1PIGSTY.el10.x86_64.rpm pigsty 1.5.2 63.7KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_tle_16-1.5.2-1PIGSTY.el10.x86_64.rpm
+@ el10.x86_64 16 pg_tle_16 pg_tle_16-1.5.1-1PGDG.rhel10.x86_64.rpm pgdg 1.5.1 65.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_tle_16-1.5.1-1PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 16 pg_tle_16 pg_tle_16-1.5.2-3PGDG.rhel10.2.aarch64.rpm pgdg 1.5.2 63.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_tle_16-1.5.2-3PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 16 pg_tle_16 pg_tle_16-1.5.2-1PIGSTY.el10.aarch64.rpm pigsty 1.5.2 60.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_tle_16-1.5.2-1PIGSTY.el10.aarch64.rpm
+@ el10.aarch64 16 pg_tle_16 pg_tle_16-1.5.1-1PGDG.rhel10.aarch64.rpm pgdg 1.5.1 62.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_tle_16-1.5.1-1PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 16 postgresql-16-pg-tle postgresql-16-pg-tle_1.5.2-1PIGSTY~bookworm_amd64.deb pigsty 1.5.2 159.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-tle/postgresql-16-pg-tle_1.5.2-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 16 postgresql-16-pg-tle postgresql-16-pg-tle_1.5.2-1PIGSTY~bookworm_arm64.deb pigsty 1.5.2 155.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-tle/postgresql-16-pg-tle_1.5.2-1PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 16 postgresql-16-pg-tle postgresql-16-pg-tle_1.5.2-1PIGSTY~trixie_amd64.deb pigsty 1.5.2 160.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-tle/postgresql-16-pg-tle_1.5.2-1PIGSTY~trixie_amd64.deb
@@ -153,12 +173,20 @@ weight: 3000
 @ el8.aarch64 15 pg_tle_15 pg_tle_15-1.2.0-1PGDG.rhel8.aarch64.rpm pgdg 1.2.0 60.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pg_tle_15-1.2.0-1PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 15 pg_tle_15 pg_tle_15-1.5.2-3PGDG.rhel9.8.x86_64.rpm pgdg 1.5.2 71.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_tle_15-1.5.2-3PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 15 pg_tle_15 pg_tle_15-1.5.2-1PIGSTY.el9.x86_64.rpm pigsty 1.5.2 69.1KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_tle_15-1.5.2-1PIGSTY.el9.x86_64.rpm
+@ el9.x86_64 15 pg_tle_15 pg_tle_15-1.5.1-1PGDG.rhel9.x86_64.rpm pgdg 1.5.1 70.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_tle_15-1.5.1-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 15 pg_tle_15 pg_tle_15-1.5.0-1PGDG.rhel9.x86_64.rpm pgdg 1.5.0 70.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_tle_15-1.5.0-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 15 pg_tle_15 pg_tle_15-1.2.0-1PGDG.rhel9.x86_64.rpm pgdg 1.2.0 65.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_tle_15-1.2.0-1PGDG.rhel9.x86_64.rpm
 @ el9.aarch64 15 pg_tle_15 pg_tle_15-1.5.2-3PGDG.rhel9.8.aarch64.rpm pgdg 1.5.2 68.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_tle_15-1.5.2-3PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 15 pg_tle_15 pg_tle_15-1.5.2-1PIGSTY.el9.aarch64.rpm pigsty 1.5.2 66.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_tle_15-1.5.2-1PIGSTY.el9.aarch64.rpm
+@ el9.aarch64 15 pg_tle_15 pg_tle_15-1.5.1-1PGDG.rhel9.aarch64.rpm pgdg 1.5.1 68.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_tle_15-1.5.1-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 15 pg_tle_15 pg_tle_15-1.5.0-1PGDG.rhel9.aarch64.rpm pgdg 1.5.0 67.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_tle_15-1.5.0-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 15 pg_tle_15 pg_tle_15-1.2.0-1PGDG.rhel9.aarch64.rpm pgdg 1.2.0 62.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_tle_15-1.2.0-1PGDG.rhel9.aarch64.rpm
 @ el10.x86_64 15 pg_tle_15 pg_tle_15-1.5.2-3PGDG.rhel10.2.x86_64.rpm pgdg 1.5.2 72.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_tle_15-1.5.2-3PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 15 pg_tle_15 pg_tle_15-1.5.2-1PIGSTY.el10.x86_64.rpm pigsty 1.5.2 69.8KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_tle_15-1.5.2-1PIGSTY.el10.x86_64.rpm
+@ el10.x86_64 15 pg_tle_15 pg_tle_15-1.5.1-1PGDG.rhel10.x86_64.rpm pgdg 1.5.1 71.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_tle_15-1.5.1-1PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 15 pg_tle_15 pg_tle_15-1.5.2-3PGDG.rhel10.2.aarch64.rpm pgdg 1.5.2 69.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_tle_15-1.5.2-3PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 15 pg_tle_15 pg_tle_15-1.5.2-1PIGSTY.el10.aarch64.rpm pigsty 1.5.2 67.0KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_tle_15-1.5.2-1PIGSTY.el10.aarch64.rpm
+@ el10.aarch64 15 pg_tle_15 pg_tle_15-1.5.1-1PGDG.rhel10.aarch64.rpm pgdg 1.5.1 68.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_tle_15-1.5.1-1PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 15 postgresql-15-pg-tle postgresql-15-pg-tle_1.5.2-1PIGSTY~bookworm_amd64.deb pigsty 1.5.2 161.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-tle/postgresql-15-pg-tle_1.5.2-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 15 postgresql-15-pg-tle postgresql-15-pg-tle_1.5.2-1PIGSTY~bookworm_arm64.deb pigsty 1.5.2 156.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-tle/postgresql-15-pg-tle_1.5.2-1PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 15 postgresql-15-pg-tle postgresql-15-pg-tle_1.5.2-1PIGSTY~trixie_amd64.deb pigsty 1.5.2 161.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-tle/postgresql-15-pg-tle_1.5.2-1PIGSTY~trixie_amd64.deb
@@ -179,12 +207,20 @@ weight: 3000
 @ el8.aarch64 14 pg_tle_14 pg_tle_14-1.2.0-1PGDG.rhel8.aarch64.rpm pgdg 1.2.0 60.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pg_tle_14-1.2.0-1PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 14 pg_tle_14 pg_tle_14-1.5.2-3PGDG.rhel9.8.x86_64.rpm pgdg 1.5.2 71.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_tle_14-1.5.2-3PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 14 pg_tle_14 pg_tle_14-1.5.2-1PIGSTY.el9.x86_64.rpm pigsty 1.5.2 69.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_tle_14-1.5.2-1PIGSTY.el9.x86_64.rpm
+@ el9.x86_64 14 pg_tle_14 pg_tle_14-1.5.1-1PGDG.rhel9.x86_64.rpm pgdg 1.5.1 70.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_tle_14-1.5.1-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 14 pg_tle_14 pg_tle_14-1.5.0-1PGDG.rhel9.x86_64.rpm pgdg 1.5.0 70.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_tle_14-1.5.0-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 14 pg_tle_14 pg_tle_14-1.2.0-1PGDG.rhel9.x86_64.rpm pgdg 1.2.0 65.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_tle_14-1.2.0-1PGDG.rhel9.x86_64.rpm
 @ el9.aarch64 14 pg_tle_14 pg_tle_14-1.5.2-3PGDG.rhel9.8.aarch64.rpm pgdg 1.5.2 68.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_tle_14-1.5.2-3PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 14 pg_tle_14 pg_tle_14-1.5.2-1PIGSTY.el9.aarch64.rpm pigsty 1.5.2 66.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_tle_14-1.5.2-1PIGSTY.el9.aarch64.rpm
+@ el9.aarch64 14 pg_tle_14 pg_tle_14-1.5.1-1PGDG.rhel9.aarch64.rpm pgdg 1.5.1 68.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_tle_14-1.5.1-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 14 pg_tle_14 pg_tle_14-1.5.0-1PGDG.rhel9.aarch64.rpm pgdg 1.5.0 68.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_tle_14-1.5.0-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 14 pg_tle_14 pg_tle_14-1.2.0-1PGDG.rhel9.aarch64.rpm pgdg 1.2.0 62.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_tle_14-1.2.0-1PGDG.rhel9.aarch64.rpm
 @ el10.x86_64 14 pg_tle_14 pg_tle_14-1.5.2-3PGDG.rhel10.2.x86_64.rpm pgdg 1.5.2 72.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_tle_14-1.5.2-3PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 14 pg_tle_14 pg_tle_14-1.5.2-1PIGSTY.el10.x86_64.rpm pigsty 1.5.2 70.2KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_tle_14-1.5.2-1PIGSTY.el10.x86_64.rpm
+@ el10.x86_64 14 pg_tle_14 pg_tle_14-1.5.1-1PGDG.rhel10.x86_64.rpm pgdg 1.5.1 71.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_tle_14-1.5.1-1PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 14 pg_tle_14 pg_tle_14-1.5.2-3PGDG.rhel10.2.aarch64.rpm pgdg 1.5.2 69.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_tle_14-1.5.2-3PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 14 pg_tle_14 pg_tle_14-1.5.2-1PIGSTY.el10.aarch64.rpm pigsty 1.5.2 67.1KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_tle_14-1.5.2-1PIGSTY.el10.aarch64.rpm
+@ el10.aarch64 14 pg_tle_14 pg_tle_14-1.5.1-1PGDG.rhel10.aarch64.rpm pgdg 1.5.1 69.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_tle_14-1.5.1-1PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 14 postgresql-14-pg-tle postgresql-14-pg-tle_1.5.2-1PIGSTY~bookworm_amd64.deb pigsty 1.5.2 162.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-tle/postgresql-14-pg-tle_1.5.2-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 14 postgresql-14-pg-tle postgresql-14-pg-tle_1.5.2-1PIGSTY~bookworm_arm64.deb pigsty 1.5.2 156.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-tle/postgresql-14-pg-tle_1.5.2-1PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 14 postgresql-14-pg-tle postgresql-14-pg-tle_1.5.2-1PIGSTY~trixie_amd64.deb pigsty 1.5.2 162.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-tle/postgresql-14-pg-tle_1.5.2-1PIGSTY~trixie_amd64.deb

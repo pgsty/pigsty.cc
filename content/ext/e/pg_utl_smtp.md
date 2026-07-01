@@ -55,10 +55,10 @@ weight: 9290
 |:--:|:--:|:--:|:--:|:--:|:--:|
 | el8.x86_64 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 |
 | el8.aarch64 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 |
-| el9.x86_64 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 |
-| el9.aarch64 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 |
-| el10.x86_64 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 |
-| el10.aarch64 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 |
+| el9.x86_64 | AVAIL PGDG 1.0 3 | AVAIL PGDG 1.0 3 | AVAIL PGDG 1.0 3 | AVAIL PGDG 1.0 3 | AVAIL PGDG 1.0 3 |
+| el9.aarch64 | AVAIL PGDG 1.0 3 | AVAIL PGDG 1.0 3 | AVAIL PGDG 1.0 3 | AVAIL PGDG 1.0 3 | AVAIL PGDG 1.0 3 |
+| el10.x86_64 | AVAIL PGDG 1.0 3 | AVAIL PGDG 1.0 3 | AVAIL PGDG 1.0 3 | AVAIL PGDG 1.0 3 | AVAIL PGDG 1.0 3 |
+| el10.aarch64 | AVAIL PGDG 1.0 3 | AVAIL PGDG 1.0 3 | AVAIL PGDG 1.0 3 | AVAIL PGDG 1.0 3 | AVAIL PGDG 1.0 3 |
 | d12.x86_64 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 |
 | d12.aarch64 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 |
 | d13.x86_64 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 |
@@ -72,9 +72,17 @@ weight: 9290
 @ el8.x86_64 18 pg_utl_smtp_18 pg_utl_smtp_18-1.0-2PGDG.rhel8.10.noarch.rpm pgdg 1.0 12.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pg_utl_smtp_18-1.0-2PGDG.rhel8.10.noarch.rpm
 @ el8.aarch64 18 pg_utl_smtp_18 pg_utl_smtp_18-1.0-2PGDG.rhel8.10.noarch.rpm pgdg 1.0 12.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pg_utl_smtp_18-1.0-2PGDG.rhel8.10.noarch.rpm
 @ el9.x86_64 18 pg_utl_smtp_18 pg_utl_smtp_18-1.0-2PGDG.rhel9.8.noarch.rpm pgdg 1.0 12.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pg_utl_smtp_18-1.0-2PGDG.rhel9.8.noarch.rpm
+@ el9.x86_64 18 pg_utl_smtp_18 pg_utl_smtp_18-1.0-2PGDG.rhel9.7.noarch.rpm pgdg 1.0 12.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pg_utl_smtp_18-1.0-2PGDG.rhel9.7.noarch.rpm
+@ el9.x86_64 18 pg_utl_smtp_18 pg_utl_smtp_18-1.0-2PGDG.rhel9.6.noarch.rpm pgdg 1.0 12.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pg_utl_smtp_18-1.0-2PGDG.rhel9.6.noarch.rpm
 @ el9.aarch64 18 pg_utl_smtp_18 pg_utl_smtp_18-1.0-2PGDG.rhel9.8.noarch.rpm pgdg 1.0 12.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pg_utl_smtp_18-1.0-2PGDG.rhel9.8.noarch.rpm
+@ el9.aarch64 18 pg_utl_smtp_18 pg_utl_smtp_18-1.0-2PGDG.rhel9.7.noarch.rpm pgdg 1.0 12.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pg_utl_smtp_18-1.0-2PGDG.rhel9.7.noarch.rpm
+@ el9.aarch64 18 pg_utl_smtp_18 pg_utl_smtp_18-1.0-2PGDG.rhel9.6.noarch.rpm pgdg 1.0 12.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pg_utl_smtp_18-1.0-2PGDG.rhel9.6.noarch.rpm
 @ el10.x86_64 18 pg_utl_smtp_18 pg_utl_smtp_18-1.0-2PGDG.rhel10.2.noarch.rpm pgdg 1.0 12.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pg_utl_smtp_18-1.0-2PGDG.rhel10.2.noarch.rpm
+@ el10.x86_64 18 pg_utl_smtp_18 pg_utl_smtp_18-1.0-2PGDG.rhel10.1.noarch.rpm pgdg 1.0 12.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pg_utl_smtp_18-1.0-2PGDG.rhel10.1.noarch.rpm
+@ el10.x86_64 18 pg_utl_smtp_18 pg_utl_smtp_18-1.0-2PGDG.rhel10.0.noarch.rpm pgdg 1.0 12.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pg_utl_smtp_18-1.0-2PGDG.rhel10.0.noarch.rpm
 @ el10.aarch64 18 pg_utl_smtp_18 pg_utl_smtp_18-1.0-2PGDG.rhel10.2.noarch.rpm pgdg 1.0 12.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_utl_smtp_18-1.0-2PGDG.rhel10.2.noarch.rpm
+@ el10.aarch64 18 pg_utl_smtp_18 pg_utl_smtp_18-1.0-2PGDG.rhel10.1.noarch.rpm pgdg 1.0 12.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_utl_smtp_18-1.0-2PGDG.rhel10.1.noarch.rpm
+@ el10.aarch64 18 pg_utl_smtp_18 pg_utl_smtp_18-1.0-2PGDG.rhel10.0.noarch.rpm pgdg 1.0 12.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_utl_smtp_18-1.0-2PGDG.rhel10.0.noarch.rpm
 @ d12.x86_64 18 postgresql-18-utl-smtp postgresql-18-utl-smtp_1.0.0-2PIGSTY~bookworm_amd64.deb pigsty 1.0.0 7.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-utl-smtp/postgresql-18-utl-smtp_1.0.0-2PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 18 postgresql-18-utl-smtp postgresql-18-utl-smtp_1.0.0-2PIGSTY~bookworm_arm64.deb pigsty 1.0.0 7.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-utl-smtp/postgresql-18-utl-smtp_1.0.0-2PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 18 postgresql-18-utl-smtp postgresql-18-utl-smtp_1.0.0-2PIGSTY~trixie_amd64.deb pigsty 1.0.0 7.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-utl-smtp/postgresql-18-utl-smtp_1.0.0-2PIGSTY~trixie_amd64.deb
@@ -88,9 +96,17 @@ weight: 9290
 @ el8.x86_64 17 pg_utl_smtp_17 pg_utl_smtp_17-1.0-2PGDG.rhel8.10.noarch.rpm pgdg 1.0 12.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pg_utl_smtp_17-1.0-2PGDG.rhel8.10.noarch.rpm
 @ el8.aarch64 17 pg_utl_smtp_17 pg_utl_smtp_17-1.0-2PGDG.rhel8.10.noarch.rpm pgdg 1.0 12.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pg_utl_smtp_17-1.0-2PGDG.rhel8.10.noarch.rpm
 @ el9.x86_64 17 pg_utl_smtp_17 pg_utl_smtp_17-1.0-2PGDG.rhel9.8.noarch.rpm pgdg 1.0 12.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_utl_smtp_17-1.0-2PGDG.rhel9.8.noarch.rpm
+@ el9.x86_64 17 pg_utl_smtp_17 pg_utl_smtp_17-1.0-2PGDG.rhel9.7.noarch.rpm pgdg 1.0 12.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_utl_smtp_17-1.0-2PGDG.rhel9.7.noarch.rpm
+@ el9.x86_64 17 pg_utl_smtp_17 pg_utl_smtp_17-1.0-2PGDG.rhel9.6.noarch.rpm pgdg 1.0 12.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_utl_smtp_17-1.0-2PGDG.rhel9.6.noarch.rpm
 @ el9.aarch64 17 pg_utl_smtp_17 pg_utl_smtp_17-1.0-2PGDG.rhel9.8.noarch.rpm pgdg 1.0 12.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_utl_smtp_17-1.0-2PGDG.rhel9.8.noarch.rpm
+@ el9.aarch64 17 pg_utl_smtp_17 pg_utl_smtp_17-1.0-2PGDG.rhel9.7.noarch.rpm pgdg 1.0 12.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_utl_smtp_17-1.0-2PGDG.rhel9.7.noarch.rpm
+@ el9.aarch64 17 pg_utl_smtp_17 pg_utl_smtp_17-1.0-2PGDG.rhel9.6.noarch.rpm pgdg 1.0 12.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_utl_smtp_17-1.0-2PGDG.rhel9.6.noarch.rpm
 @ el10.x86_64 17 pg_utl_smtp_17 pg_utl_smtp_17-1.0-2PGDG.rhel10.2.noarch.rpm pgdg 1.0 12.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_utl_smtp_17-1.0-2PGDG.rhel10.2.noarch.rpm
+@ el10.x86_64 17 pg_utl_smtp_17 pg_utl_smtp_17-1.0-2PGDG.rhel10.1.noarch.rpm pgdg 1.0 12.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_utl_smtp_17-1.0-2PGDG.rhel10.1.noarch.rpm
+@ el10.x86_64 17 pg_utl_smtp_17 pg_utl_smtp_17-1.0-2PGDG.rhel10.0.noarch.rpm pgdg 1.0 12.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_utl_smtp_17-1.0-2PGDG.rhel10.0.noarch.rpm
 @ el10.aarch64 17 pg_utl_smtp_17 pg_utl_smtp_17-1.0-2PGDG.rhel10.2.noarch.rpm pgdg 1.0 12.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_utl_smtp_17-1.0-2PGDG.rhel10.2.noarch.rpm
+@ el10.aarch64 17 pg_utl_smtp_17 pg_utl_smtp_17-1.0-2PGDG.rhel10.1.noarch.rpm pgdg 1.0 12.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_utl_smtp_17-1.0-2PGDG.rhel10.1.noarch.rpm
+@ el10.aarch64 17 pg_utl_smtp_17 pg_utl_smtp_17-1.0-2PGDG.rhel10.0.noarch.rpm pgdg 1.0 12.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_utl_smtp_17-1.0-2PGDG.rhel10.0.noarch.rpm
 @ d12.x86_64 17 postgresql-17-utl-smtp postgresql-17-utl-smtp_1.0.0-2PIGSTY~bookworm_amd64.deb pigsty 1.0.0 7.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-utl-smtp/postgresql-17-utl-smtp_1.0.0-2PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 17 postgresql-17-utl-smtp postgresql-17-utl-smtp_1.0.0-2PIGSTY~bookworm_arm64.deb pigsty 1.0.0 7.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-utl-smtp/postgresql-17-utl-smtp_1.0.0-2PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 17 postgresql-17-utl-smtp postgresql-17-utl-smtp_1.0.0-2PIGSTY~trixie_amd64.deb pigsty 1.0.0 7.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-utl-smtp/postgresql-17-utl-smtp_1.0.0-2PIGSTY~trixie_amd64.deb
@@ -104,9 +120,17 @@ weight: 9290
 @ el8.x86_64 16 pg_utl_smtp_16 pg_utl_smtp_16-1.0-2PGDG.rhel8.10.noarch.rpm pgdg 1.0 12.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_utl_smtp_16-1.0-2PGDG.rhel8.10.noarch.rpm
 @ el8.aarch64 16 pg_utl_smtp_16 pg_utl_smtp_16-1.0-2PGDG.rhel8.10.noarch.rpm pgdg 1.0 12.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pg_utl_smtp_16-1.0-2PGDG.rhel8.10.noarch.rpm
 @ el9.x86_64 16 pg_utl_smtp_16 pg_utl_smtp_16-1.0-2PGDG.rhel9.8.noarch.rpm pgdg 1.0 12.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_utl_smtp_16-1.0-2PGDG.rhel9.8.noarch.rpm
+@ el9.x86_64 16 pg_utl_smtp_16 pg_utl_smtp_16-1.0-2PGDG.rhel9.7.noarch.rpm pgdg 1.0 12.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_utl_smtp_16-1.0-2PGDG.rhel9.7.noarch.rpm
+@ el9.x86_64 16 pg_utl_smtp_16 pg_utl_smtp_16-1.0-2PGDG.rhel9.6.noarch.rpm pgdg 1.0 12.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_utl_smtp_16-1.0-2PGDG.rhel9.6.noarch.rpm
 @ el9.aarch64 16 pg_utl_smtp_16 pg_utl_smtp_16-1.0-2PGDG.rhel9.8.noarch.rpm pgdg 1.0 12.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_utl_smtp_16-1.0-2PGDG.rhel9.8.noarch.rpm
+@ el9.aarch64 16 pg_utl_smtp_16 pg_utl_smtp_16-1.0-2PGDG.rhel9.7.noarch.rpm pgdg 1.0 12.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_utl_smtp_16-1.0-2PGDG.rhel9.7.noarch.rpm
+@ el9.aarch64 16 pg_utl_smtp_16 pg_utl_smtp_16-1.0-2PGDG.rhel9.6.noarch.rpm pgdg 1.0 12.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_utl_smtp_16-1.0-2PGDG.rhel9.6.noarch.rpm
 @ el10.x86_64 16 pg_utl_smtp_16 pg_utl_smtp_16-1.0-2PGDG.rhel10.2.noarch.rpm pgdg 1.0 12.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_utl_smtp_16-1.0-2PGDG.rhel10.2.noarch.rpm
+@ el10.x86_64 16 pg_utl_smtp_16 pg_utl_smtp_16-1.0-2PGDG.rhel10.1.noarch.rpm pgdg 1.0 12.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_utl_smtp_16-1.0-2PGDG.rhel10.1.noarch.rpm
+@ el10.x86_64 16 pg_utl_smtp_16 pg_utl_smtp_16-1.0-2PGDG.rhel10.0.noarch.rpm pgdg 1.0 12.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_utl_smtp_16-1.0-2PGDG.rhel10.0.noarch.rpm
 @ el10.aarch64 16 pg_utl_smtp_16 pg_utl_smtp_16-1.0-2PGDG.rhel10.2.noarch.rpm pgdg 1.0 12.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_utl_smtp_16-1.0-2PGDG.rhel10.2.noarch.rpm
+@ el10.aarch64 16 pg_utl_smtp_16 pg_utl_smtp_16-1.0-2PGDG.rhel10.1.noarch.rpm pgdg 1.0 12.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_utl_smtp_16-1.0-2PGDG.rhel10.1.noarch.rpm
+@ el10.aarch64 16 pg_utl_smtp_16 pg_utl_smtp_16-1.0-2PGDG.rhel10.0.noarch.rpm pgdg 1.0 12.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_utl_smtp_16-1.0-2PGDG.rhel10.0.noarch.rpm
 @ d12.x86_64 16 postgresql-16-utl-smtp postgresql-16-utl-smtp_1.0.0-2PIGSTY~bookworm_amd64.deb pigsty 1.0.0 7.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-utl-smtp/postgresql-16-utl-smtp_1.0.0-2PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 16 postgresql-16-utl-smtp postgresql-16-utl-smtp_1.0.0-2PIGSTY~bookworm_arm64.deb pigsty 1.0.0 7.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-utl-smtp/postgresql-16-utl-smtp_1.0.0-2PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 16 postgresql-16-utl-smtp postgresql-16-utl-smtp_1.0.0-2PIGSTY~trixie_amd64.deb pigsty 1.0.0 7.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-utl-smtp/postgresql-16-utl-smtp_1.0.0-2PIGSTY~trixie_amd64.deb
@@ -120,9 +144,17 @@ weight: 9290
 @ el8.x86_64 15 pg_utl_smtp_15 pg_utl_smtp_15-1.0-2PGDG.rhel8.10.noarch.rpm pgdg 1.0 12.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_utl_smtp_15-1.0-2PGDG.rhel8.10.noarch.rpm
 @ el8.aarch64 15 pg_utl_smtp_15 pg_utl_smtp_15-1.0-2PGDG.rhel8.10.noarch.rpm pgdg 1.0 12.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pg_utl_smtp_15-1.0-2PGDG.rhel8.10.noarch.rpm
 @ el9.x86_64 15 pg_utl_smtp_15 pg_utl_smtp_15-1.0-2PGDG.rhel9.8.noarch.rpm pgdg 1.0 12.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_utl_smtp_15-1.0-2PGDG.rhel9.8.noarch.rpm
+@ el9.x86_64 15 pg_utl_smtp_15 pg_utl_smtp_15-1.0-2PGDG.rhel9.7.noarch.rpm pgdg 1.0 12.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_utl_smtp_15-1.0-2PGDG.rhel9.7.noarch.rpm
+@ el9.x86_64 15 pg_utl_smtp_15 pg_utl_smtp_15-1.0-2PGDG.rhel9.6.noarch.rpm pgdg 1.0 12.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_utl_smtp_15-1.0-2PGDG.rhel9.6.noarch.rpm
 @ el9.aarch64 15 pg_utl_smtp_15 pg_utl_smtp_15-1.0-2PGDG.rhel9.8.noarch.rpm pgdg 1.0 12.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_utl_smtp_15-1.0-2PGDG.rhel9.8.noarch.rpm
+@ el9.aarch64 15 pg_utl_smtp_15 pg_utl_smtp_15-1.0-2PGDG.rhel9.7.noarch.rpm pgdg 1.0 12.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_utl_smtp_15-1.0-2PGDG.rhel9.7.noarch.rpm
+@ el9.aarch64 15 pg_utl_smtp_15 pg_utl_smtp_15-1.0-2PGDG.rhel9.6.noarch.rpm pgdg 1.0 12.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_utl_smtp_15-1.0-2PGDG.rhel9.6.noarch.rpm
 @ el10.x86_64 15 pg_utl_smtp_15 pg_utl_smtp_15-1.0-2PGDG.rhel10.2.noarch.rpm pgdg 1.0 12.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_utl_smtp_15-1.0-2PGDG.rhel10.2.noarch.rpm
+@ el10.x86_64 15 pg_utl_smtp_15 pg_utl_smtp_15-1.0-2PGDG.rhel10.1.noarch.rpm pgdg 1.0 12.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_utl_smtp_15-1.0-2PGDG.rhel10.1.noarch.rpm
+@ el10.x86_64 15 pg_utl_smtp_15 pg_utl_smtp_15-1.0-2PGDG.rhel10.0.noarch.rpm pgdg 1.0 12.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_utl_smtp_15-1.0-2PGDG.rhel10.0.noarch.rpm
 @ el10.aarch64 15 pg_utl_smtp_15 pg_utl_smtp_15-1.0-2PGDG.rhel10.2.noarch.rpm pgdg 1.0 12.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_utl_smtp_15-1.0-2PGDG.rhel10.2.noarch.rpm
+@ el10.aarch64 15 pg_utl_smtp_15 pg_utl_smtp_15-1.0-2PGDG.rhel10.1.noarch.rpm pgdg 1.0 12.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_utl_smtp_15-1.0-2PGDG.rhel10.1.noarch.rpm
+@ el10.aarch64 15 pg_utl_smtp_15 pg_utl_smtp_15-1.0-2PGDG.rhel10.0.noarch.rpm pgdg 1.0 12.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_utl_smtp_15-1.0-2PGDG.rhel10.0.noarch.rpm
 @ d12.x86_64 15 postgresql-15-utl-smtp postgresql-15-utl-smtp_1.0.0-2PIGSTY~bookworm_amd64.deb pigsty 1.0.0 7.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-utl-smtp/postgresql-15-utl-smtp_1.0.0-2PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 15 postgresql-15-utl-smtp postgresql-15-utl-smtp_1.0.0-2PIGSTY~bookworm_arm64.deb pigsty 1.0.0 7.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-utl-smtp/postgresql-15-utl-smtp_1.0.0-2PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 15 postgresql-15-utl-smtp postgresql-15-utl-smtp_1.0.0-2PIGSTY~trixie_amd64.deb pigsty 1.0.0 7.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-utl-smtp/postgresql-15-utl-smtp_1.0.0-2PIGSTY~trixie_amd64.deb
@@ -136,9 +168,17 @@ weight: 9290
 @ el8.x86_64 14 pg_utl_smtp_14 pg_utl_smtp_14-1.0-2PGDG.rhel8.10.noarch.rpm pgdg 1.0 12.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_utl_smtp_14-1.0-2PGDG.rhel8.10.noarch.rpm
 @ el8.aarch64 14 pg_utl_smtp_14 pg_utl_smtp_14-1.0-2PGDG.rhel8.10.noarch.rpm pgdg 1.0 12.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pg_utl_smtp_14-1.0-2PGDG.rhel8.10.noarch.rpm
 @ el9.x86_64 14 pg_utl_smtp_14 pg_utl_smtp_14-1.0-2PGDG.rhel9.8.noarch.rpm pgdg 1.0 12.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_utl_smtp_14-1.0-2PGDG.rhel9.8.noarch.rpm
+@ el9.x86_64 14 pg_utl_smtp_14 pg_utl_smtp_14-1.0-2PGDG.rhel9.7.noarch.rpm pgdg 1.0 12.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_utl_smtp_14-1.0-2PGDG.rhel9.7.noarch.rpm
+@ el9.x86_64 14 pg_utl_smtp_14 pg_utl_smtp_14-1.0-2PGDG.rhel9.6.noarch.rpm pgdg 1.0 12.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_utl_smtp_14-1.0-2PGDG.rhel9.6.noarch.rpm
 @ el9.aarch64 14 pg_utl_smtp_14 pg_utl_smtp_14-1.0-2PGDG.rhel9.8.noarch.rpm pgdg 1.0 12.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_utl_smtp_14-1.0-2PGDG.rhel9.8.noarch.rpm
+@ el9.aarch64 14 pg_utl_smtp_14 pg_utl_smtp_14-1.0-2PGDG.rhel9.7.noarch.rpm pgdg 1.0 12.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_utl_smtp_14-1.0-2PGDG.rhel9.7.noarch.rpm
+@ el9.aarch64 14 pg_utl_smtp_14 pg_utl_smtp_14-1.0-2PGDG.rhel9.6.noarch.rpm pgdg 1.0 12.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_utl_smtp_14-1.0-2PGDG.rhel9.6.noarch.rpm
 @ el10.x86_64 14 pg_utl_smtp_14 pg_utl_smtp_14-1.0-2PGDG.rhel10.2.noarch.rpm pgdg 1.0 12.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_utl_smtp_14-1.0-2PGDG.rhel10.2.noarch.rpm
+@ el10.x86_64 14 pg_utl_smtp_14 pg_utl_smtp_14-1.0-2PGDG.rhel10.1.noarch.rpm pgdg 1.0 12.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_utl_smtp_14-1.0-2PGDG.rhel10.1.noarch.rpm
+@ el10.x86_64 14 pg_utl_smtp_14 pg_utl_smtp_14-1.0-2PGDG.rhel10.0.noarch.rpm pgdg 1.0 12.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_utl_smtp_14-1.0-2PGDG.rhel10.0.noarch.rpm
 @ el10.aarch64 14 pg_utl_smtp_14 pg_utl_smtp_14-1.0-2PGDG.rhel10.2.noarch.rpm pgdg 1.0 12.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_utl_smtp_14-1.0-2PGDG.rhel10.2.noarch.rpm
+@ el10.aarch64 14 pg_utl_smtp_14 pg_utl_smtp_14-1.0-2PGDG.rhel10.1.noarch.rpm pgdg 1.0 12.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_utl_smtp_14-1.0-2PGDG.rhel10.1.noarch.rpm
+@ el10.aarch64 14 pg_utl_smtp_14 pg_utl_smtp_14-1.0-2PGDG.rhel10.0.noarch.rpm pgdg 1.0 12.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_utl_smtp_14-1.0-2PGDG.rhel10.0.noarch.rpm
 @ d12.x86_64 14 postgresql-14-utl-smtp postgresql-14-utl-smtp_1.0.0-2PIGSTY~bookworm_amd64.deb pigsty 1.0.0 7.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-utl-smtp/postgresql-14-utl-smtp_1.0.0-2PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 14 postgresql-14-utl-smtp postgresql-14-utl-smtp_1.0.0-2PIGSTY~bookworm_arm64.deb pigsty 1.0.0 7.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-utl-smtp/postgresql-14-utl-smtp_1.0.0-2PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 14 postgresql-14-utl-smtp postgresql-14-utl-smtp_1.0.0-2PIGSTY~trixie_amd64.deb pigsty 1.0.0 7.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-utl-smtp/postgresql-14-utl-smtp_1.0.0-2PIGSTY~trixie_amd64.deb

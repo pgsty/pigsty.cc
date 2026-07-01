@@ -52,8 +52,8 @@ weight: 8750
 |:--:|:--:|:--:|:--:|:--:|:--:|
 | el8.x86_64 | AVAIL PIGSTY 1.4.2 1 | AVAIL PIGSTY 1.4.2 1 | AVAIL PIGSTY 1.4.2 1 | AVAIL PIGSTY 1.4.2 1 | AVAIL PIGSTY 1.4.2 4 |
 | el8.aarch64 | AVAIL PIGSTY 1.4.2 1 | AVAIL PIGSTY 1.4.2 1 | AVAIL PIGSTY 1.4.2 1 | AVAIL PIGSTY 1.4.2 2 | AVAIL PIGSTY 1.4.2 2 |
-| el9.x86_64 | AVAIL PIGSTY 1.4.2 3 | AVAIL PIGSTY 1.4.2 3 | AVAIL PIGSTY 1.4.2 3 | AVAIL PIGSTY 1.4.2 3 | AVAIL PIGSTY 1.4.2 3 |
-| el9.aarch64 | AVAIL PIGSTY 1.4.2 3 | AVAIL PIGSTY 1.4.2 3 | AVAIL PIGSTY 1.4.2 3 | AVAIL PIGSTY 1.4.2 3 | AVAIL PIGSTY 1.4.2 3 |
+| el9.x86_64 | AVAIL PIGSTY 1.4.2 8 | AVAIL PIGSTY 1.4.2 8 | AVAIL PIGSTY 1.4.2 8 | AVAIL PIGSTY 1.4.2 8 | AVAIL PIGSTY 1.4.2 10 |
+| el9.aarch64 | AVAIL PIGSTY 1.4.2 8 | AVAIL PIGSTY 1.4.2 8 | AVAIL PIGSTY 1.4.2 9 | AVAIL PIGSTY 1.4.2 9 | AVAIL PIGSTY 1.4.2 10 |
 | el10.x86_64 | AVAIL PIGSTY 1.4.2 3 | AVAIL PIGSTY 1.4.2 3 | AVAIL PIGSTY 1.4.2 3 | AVAIL PIGSTY 1.4.2 3 | AVAIL PIGSTY 1.4.2 3 |
 | el10.aarch64 | AVAIL PIGSTY 1.4.2 3 | AVAIL PIGSTY 1.4.2 3 | AVAIL PIGSTY 1.4.2 3 | AVAIL PIGSTY 1.4.2 3 | AVAIL PIGSTY 1.4.2 3 |
 | d12.x86_64 | AVAIL PIGSTY 1.4.2 1 | AVAIL PIGSTY 1.4.2 1 | AVAIL PIGSTY 1.4.2 1 | AVAIL PIGSTY 1.4.2 1 | AVAIL PIGSTY 1.4.2 1 |
@@ -70,10 +70,20 @@ weight: 8750
 @ el8.aarch64 18 firebird_fdw_18 firebird_fdw_18-1.4.2-1PIGSTY.el8.aarch64.rpm pigsty 1.4.2 51.8KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/firebird_fdw_18-1.4.2-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 18 firebird_fdw_18 firebird_fdw_18-1.4.2-1PIGSTY.el9.x86_64.rpm pigsty 1.4.2 53.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/firebird_fdw_18-1.4.2-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 18 firebird_fdw_18 firebird_fdw_18-1.4.2-1PGDG.rhel9.8.x86_64.rpm pgdg 1.4.2 52.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/firebird_fdw_18-1.4.2-1PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 18 firebird_fdw_18 firebird_fdw_18-1.4.2-1PGDG.rhel9.7.x86_64.rpm pgdg 1.4.2 52.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/firebird_fdw_18-1.4.2-1PGDG.rhel9.7.x86_64.rpm
+@ el9.x86_64 18 firebird_fdw_18 firebird_fdw_18-1.4.2-1PGDG.rhel9.6.x86_64.rpm pgdg 1.4.2 52.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/firebird_fdw_18-1.4.2-1PGDG.rhel9.6.x86_64.rpm
 @ el9.x86_64 18 firebird_fdw_18 firebird_fdw_18-1.4.1-3PGDG.rhel9.8.x86_64.rpm pgdg 1.4.1 52.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/firebird_fdw_18-1.4.1-3PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 18 firebird_fdw_18 firebird_fdw_18-1.4.1-3PGDG.rhel9.7.x86_64.rpm pgdg 1.4.1 52.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/firebird_fdw_18-1.4.1-3PGDG.rhel9.7.x86_64.rpm
+@ el9.x86_64 18 firebird_fdw_18 firebird_fdw_18-1.4.1-3PGDG.rhel9.6.x86_64.rpm pgdg 1.4.1 52.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/firebird_fdw_18-1.4.1-3PGDG.rhel9.6.x86_64.rpm
+@ el9.x86_64 18 firebird_fdw_18 firebird_fdw_18-1.4.1-1PGDG.rhel9.x86_64.rpm pgdg 1.4.1 52.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/firebird_fdw_18-1.4.1-1PGDG.rhel9.x86_64.rpm
 @ el9.aarch64 18 firebird_fdw_18 firebird_fdw_18-1.4.2-1PIGSTY.el9.aarch64.rpm pigsty 1.4.2 52.3KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/firebird_fdw_18-1.4.2-1PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 18 firebird_fdw_18 firebird_fdw_18-1.4.2-1PGDG.rhel9.8.aarch64.rpm pgdg 1.4.2 51.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/firebird_fdw_18-1.4.2-1PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 18 firebird_fdw_18 firebird_fdw_18-1.4.2-1PGDG.rhel9.7.aarch64.rpm pgdg 1.4.2 51.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/firebird_fdw_18-1.4.2-1PGDG.rhel9.7.aarch64.rpm
+@ el9.aarch64 18 firebird_fdw_18 firebird_fdw_18-1.4.2-1PGDG.rhel9.6.aarch64.rpm pgdg 1.4.2 51.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/firebird_fdw_18-1.4.2-1PGDG.rhel9.6.aarch64.rpm
 @ el9.aarch64 18 firebird_fdw_18 firebird_fdw_18-1.4.1-3PGDG.rhel9.8.aarch64.rpm pgdg 1.4.1 51.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/firebird_fdw_18-1.4.1-3PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 18 firebird_fdw_18 firebird_fdw_18-1.4.1-3PGDG.rhel9.7.aarch64.rpm pgdg 1.4.1 51.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/firebird_fdw_18-1.4.1-3PGDG.rhel9.7.aarch64.rpm
+@ el9.aarch64 18 firebird_fdw_18 firebird_fdw_18-1.4.1-3PGDG.rhel9.6.aarch64.rpm pgdg 1.4.1 51.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/firebird_fdw_18-1.4.1-3PGDG.rhel9.6.aarch64.rpm
+@ el9.aarch64 18 firebird_fdw_18 firebird_fdw_18-1.4.1-1PGDG.rhel9.aarch64.rpm pgdg 1.4.1 51.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/firebird_fdw_18-1.4.1-1PGDG.rhel9.aarch64.rpm
 @ el10.x86_64 18 firebird_fdw_18 firebird_fdw_18-1.4.2-1PIGSTY.el10.x86_64.rpm pigsty 1.4.2 54.2KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/firebird_fdw_18-1.4.2-1PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 18 firebird_fdw_18 firebird_fdw_18-1.4.2-1PGDG.rhel10.2.x86_64.rpm pgdg 1.4.2 53.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/firebird_fdw_18-1.4.2-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 18 firebird_fdw_18 firebird_fdw_18-1.4.1-3PGDG.rhel10.2.x86_64.rpm pgdg 1.4.1 53.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/firebird_fdw_18-1.4.1-3PGDG.rhel10.2.x86_64.rpm
@@ -94,10 +104,20 @@ weight: 8750
 @ el8.aarch64 17 firebird_fdw_17 firebird_fdw_17-1.4.2-1PIGSTY.el8.aarch64.rpm pigsty 1.4.2 51.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/firebird_fdw_17-1.4.2-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 17 firebird_fdw_17 firebird_fdw_17-1.4.2-1PIGSTY.el9.x86_64.rpm pigsty 1.4.2 53.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/firebird_fdw_17-1.4.2-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 17 firebird_fdw_17 firebird_fdw_17-1.4.2-1PGDG.rhel9.8.x86_64.rpm pgdg 1.4.2 52.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/firebird_fdw_17-1.4.2-1PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 17 firebird_fdw_17 firebird_fdw_17-1.4.2-1PGDG.rhel9.7.x86_64.rpm pgdg 1.4.2 52.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/firebird_fdw_17-1.4.2-1PGDG.rhel9.7.x86_64.rpm
+@ el9.x86_64 17 firebird_fdw_17 firebird_fdw_17-1.4.2-1PGDG.rhel9.6.x86_64.rpm pgdg 1.4.2 52.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/firebird_fdw_17-1.4.2-1PGDG.rhel9.6.x86_64.rpm
 @ el9.x86_64 17 firebird_fdw_17 firebird_fdw_17-1.4.1-3PGDG.rhel9.8.x86_64.rpm pgdg 1.4.1 52.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/firebird_fdw_17-1.4.1-3PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 17 firebird_fdw_17 firebird_fdw_17-1.4.1-3PGDG.rhel9.7.x86_64.rpm pgdg 1.4.1 52.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/firebird_fdw_17-1.4.1-3PGDG.rhel9.7.x86_64.rpm
+@ el9.x86_64 17 firebird_fdw_17 firebird_fdw_17-1.4.1-3PGDG.rhel9.6.x86_64.rpm pgdg 1.4.1 52.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/firebird_fdw_17-1.4.1-3PGDG.rhel9.6.x86_64.rpm
+@ el9.x86_64 17 firebird_fdw_17 firebird_fdw_17-1.4.0-3PGDG.rhel9.x86_64.rpm pgdg 1.4.0 52.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/firebird_fdw_17-1.4.0-3PGDG.rhel9.x86_64.rpm
 @ el9.aarch64 17 firebird_fdw_17 firebird_fdw_17-1.4.2-1PIGSTY.el9.aarch64.rpm pigsty 1.4.2 52.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/firebird_fdw_17-1.4.2-1PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 17 firebird_fdw_17 firebird_fdw_17-1.4.2-1PGDG.rhel9.8.aarch64.rpm pgdg 1.4.2 51.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/firebird_fdw_17-1.4.2-1PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 17 firebird_fdw_17 firebird_fdw_17-1.4.2-1PGDG.rhel9.7.aarch64.rpm pgdg 1.4.2 51.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/firebird_fdw_17-1.4.2-1PGDG.rhel9.7.aarch64.rpm
+@ el9.aarch64 17 firebird_fdw_17 firebird_fdw_17-1.4.2-1PGDG.rhel9.6.aarch64.rpm pgdg 1.4.2 51.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/firebird_fdw_17-1.4.2-1PGDG.rhel9.6.aarch64.rpm
 @ el9.aarch64 17 firebird_fdw_17 firebird_fdw_17-1.4.1-3PGDG.rhel9.8.aarch64.rpm pgdg 1.4.1 51.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/firebird_fdw_17-1.4.1-3PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 17 firebird_fdw_17 firebird_fdw_17-1.4.1-3PGDG.rhel9.7.aarch64.rpm pgdg 1.4.1 51.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/firebird_fdw_17-1.4.1-3PGDG.rhel9.7.aarch64.rpm
+@ el9.aarch64 17 firebird_fdw_17 firebird_fdw_17-1.4.1-3PGDG.rhel9.6.aarch64.rpm pgdg 1.4.1 51.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/firebird_fdw_17-1.4.1-3PGDG.rhel9.6.aarch64.rpm
+@ el9.aarch64 17 firebird_fdw_17 firebird_fdw_17-1.4.0-3PGDG.rhel9.aarch64.rpm pgdg 1.4.0 51.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/firebird_fdw_17-1.4.0-3PGDG.rhel9.aarch64.rpm
 @ el10.x86_64 17 firebird_fdw_17 firebird_fdw_17-1.4.2-1PIGSTY.el10.x86_64.rpm pigsty 1.4.2 54.1KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/firebird_fdw_17-1.4.2-1PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 17 firebird_fdw_17 firebird_fdw_17-1.4.2-1PGDG.rhel10.2.x86_64.rpm pgdg 1.4.2 53.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/firebird_fdw_17-1.4.2-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 17 firebird_fdw_17 firebird_fdw_17-1.4.1-3PGDG.rhel10.2.x86_64.rpm pgdg 1.4.1 53.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/firebird_fdw_17-1.4.1-3PGDG.rhel10.2.x86_64.rpm
@@ -118,10 +138,21 @@ weight: 8750
 @ el8.aarch64 16 firebird_fdw_16 firebird_fdw_16-1.4.2-1PIGSTY.el8.aarch64.rpm pigsty 1.4.2 51.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/firebird_fdw_16-1.4.2-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 16 firebird_fdw_16 firebird_fdw_16-1.4.2-1PIGSTY.el9.x86_64.rpm pigsty 1.4.2 53.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/firebird_fdw_16-1.4.2-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 16 firebird_fdw_16 firebird_fdw_16-1.4.2-1PGDG.rhel9.8.x86_64.rpm pgdg 1.4.2 52.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/firebird_fdw_16-1.4.2-1PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 16 firebird_fdw_16 firebird_fdw_16-1.4.2-1PGDG.rhel9.7.x86_64.rpm pgdg 1.4.2 52.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/firebird_fdw_16-1.4.2-1PGDG.rhel9.7.x86_64.rpm
+@ el9.x86_64 16 firebird_fdw_16 firebird_fdw_16-1.4.2-1PGDG.rhel9.6.x86_64.rpm pgdg 1.4.2 52.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/firebird_fdw_16-1.4.2-1PGDG.rhel9.6.x86_64.rpm
 @ el9.x86_64 16 firebird_fdw_16 firebird_fdw_16-1.4.1-3PGDG.rhel9.8.x86_64.rpm pgdg 1.4.1 52.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/firebird_fdw_16-1.4.1-3PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 16 firebird_fdw_16 firebird_fdw_16-1.4.1-3PGDG.rhel9.7.x86_64.rpm pgdg 1.4.1 52.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/firebird_fdw_16-1.4.1-3PGDG.rhel9.7.x86_64.rpm
+@ el9.x86_64 16 firebird_fdw_16 firebird_fdw_16-1.4.1-3PGDG.rhel9.6.x86_64.rpm pgdg 1.4.1 52.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/firebird_fdw_16-1.4.1-3PGDG.rhel9.6.x86_64.rpm
+@ el9.x86_64 16 firebird_fdw_16 firebird_fdw_16-1.3.1-1PGDG.rhel9.x86_64.rpm pgdg 1.3.1 51.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/firebird_fdw_16-1.3.1-1PGDG.rhel9.x86_64.rpm
 @ el9.aarch64 16 firebird_fdw_16 firebird_fdw_16-1.4.2-1PIGSTY.el9.aarch64.rpm pigsty 1.4.2 52.3KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/firebird_fdw_16-1.4.2-1PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 16 firebird_fdw_16 firebird_fdw_16-1.4.2-1PGDG.rhel9.8.aarch64.rpm pgdg 1.4.2 51.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/firebird_fdw_16-1.4.2-1PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 16 firebird_fdw_16 firebird_fdw_16-1.4.2-1PGDG.rhel9.7.aarch64.rpm pgdg 1.4.2 51.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/firebird_fdw_16-1.4.2-1PGDG.rhel9.7.aarch64.rpm
+@ el9.aarch64 16 firebird_fdw_16 firebird_fdw_16-1.4.2-1PGDG.rhel9.6.aarch64.rpm pgdg 1.4.2 51.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/firebird_fdw_16-1.4.2-1PGDG.rhel9.6.aarch64.rpm
 @ el9.aarch64 16 firebird_fdw_16 firebird_fdw_16-1.4.1-3PGDG.rhel9.8.aarch64.rpm pgdg 1.4.1 51.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/firebird_fdw_16-1.4.1-3PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 16 firebird_fdw_16 firebird_fdw_16-1.4.1-3PGDG.rhel9.7.aarch64.rpm pgdg 1.4.1 51.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/firebird_fdw_16-1.4.1-3PGDG.rhel9.7.aarch64.rpm
+@ el9.aarch64 16 firebird_fdw_16 firebird_fdw_16-1.4.1-3PGDG.rhel9.6.aarch64.rpm pgdg 1.4.1 51.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/firebird_fdw_16-1.4.1-3PGDG.rhel9.6.aarch64.rpm
+@ el9.aarch64 16 firebird_fdw_16 firebird_fdw_16-1.4.0-1PGDG.rhel9.aarch64.rpm pgdg 1.4.0 51.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/firebird_fdw_16-1.4.0-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 16 firebird_fdw_16 firebird_fdw_16-1.3.1-1PGDG.rhel9.aarch64.rpm pgdg 1.3.1 49.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/firebird_fdw_16-1.3.1-1PGDG.rhel9.aarch64.rpm
 @ el10.x86_64 16 firebird_fdw_16 firebird_fdw_16-1.4.2-1PIGSTY.el10.x86_64.rpm pigsty 1.4.2 54.1KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/firebird_fdw_16-1.4.2-1PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 16 firebird_fdw_16 firebird_fdw_16-1.4.2-1PGDG.rhel10.2.x86_64.rpm pgdg 1.4.2 53.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/firebird_fdw_16-1.4.2-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 16 firebird_fdw_16 firebird_fdw_16-1.4.1-3PGDG.rhel10.2.x86_64.rpm pgdg 1.4.1 53.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/firebird_fdw_16-1.4.1-3PGDG.rhel10.2.x86_64.rpm
@@ -143,10 +174,21 @@ weight: 8750
 @ el8.aarch64 15 firebird_fdw_15 firebird_fdw_15-1.3.0-1.rhel8.aarch64.rpm pgdg 1.3.0 49.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/firebird_fdw_15-1.3.0-1.rhel8.aarch64.rpm
 @ el9.x86_64 15 firebird_fdw_15 firebird_fdw_15-1.4.2-1PIGSTY.el9.x86_64.rpm pigsty 1.4.2 54.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/firebird_fdw_15-1.4.2-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 15 firebird_fdw_15 firebird_fdw_15-1.4.2-1PGDG.rhel9.8.x86_64.rpm pgdg 1.4.2 53.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/firebird_fdw_15-1.4.2-1PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 15 firebird_fdw_15 firebird_fdw_15-1.4.2-1PGDG.rhel9.7.x86_64.rpm pgdg 1.4.2 53.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/firebird_fdw_15-1.4.2-1PGDG.rhel9.7.x86_64.rpm
+@ el9.x86_64 15 firebird_fdw_15 firebird_fdw_15-1.4.2-1PGDG.rhel9.6.x86_64.rpm pgdg 1.4.2 53.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/firebird_fdw_15-1.4.2-1PGDG.rhel9.6.x86_64.rpm
 @ el9.x86_64 15 firebird_fdw_15 firebird_fdw_15-1.4.1-3PGDG.rhel9.8.x86_64.rpm pgdg 1.4.1 53.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/firebird_fdw_15-1.4.1-3PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 15 firebird_fdw_15 firebird_fdw_15-1.4.1-3PGDG.rhel9.7.x86_64.rpm pgdg 1.4.1 53.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/firebird_fdw_15-1.4.1-3PGDG.rhel9.7.x86_64.rpm
+@ el9.x86_64 15 firebird_fdw_15 firebird_fdw_15-1.4.1-3PGDG.rhel9.6.x86_64.rpm pgdg 1.4.1 53.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/firebird_fdw_15-1.4.1-3PGDG.rhel9.6.x86_64.rpm
+@ el9.x86_64 15 firebird_fdw_15 firebird_fdw_15-1.3.0-1.rhel9.x86_64.rpm pgdg 1.3.0 52.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/firebird_fdw_15-1.3.0-1.rhel9.x86_64.rpm
 @ el9.aarch64 15 firebird_fdw_15 firebird_fdw_15-1.4.2-1PIGSTY.el9.aarch64.rpm pigsty 1.4.2 53.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/firebird_fdw_15-1.4.2-1PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 15 firebird_fdw_15 firebird_fdw_15-1.4.2-1PGDG.rhel9.8.aarch64.rpm pgdg 1.4.2 52.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/firebird_fdw_15-1.4.2-1PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 15 firebird_fdw_15 firebird_fdw_15-1.4.2-1PGDG.rhel9.7.aarch64.rpm pgdg 1.4.2 52.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/firebird_fdw_15-1.4.2-1PGDG.rhel9.7.aarch64.rpm
+@ el9.aarch64 15 firebird_fdw_15 firebird_fdw_15-1.4.2-1PGDG.rhel9.6.aarch64.rpm pgdg 1.4.2 52.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/firebird_fdw_15-1.4.2-1PGDG.rhel9.6.aarch64.rpm
 @ el9.aarch64 15 firebird_fdw_15 firebird_fdw_15-1.4.1-3PGDG.rhel9.8.aarch64.rpm pgdg 1.4.1 52.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/firebird_fdw_15-1.4.1-3PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 15 firebird_fdw_15 firebird_fdw_15-1.4.1-3PGDG.rhel9.7.aarch64.rpm pgdg 1.4.1 52.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/firebird_fdw_15-1.4.1-3PGDG.rhel9.7.aarch64.rpm
+@ el9.aarch64 15 firebird_fdw_15 firebird_fdw_15-1.4.1-3PGDG.rhel9.6.aarch64.rpm pgdg 1.4.1 52.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/firebird_fdw_15-1.4.1-3PGDG.rhel9.6.aarch64.rpm
+@ el9.aarch64 15 firebird_fdw_15 firebird_fdw_15-1.4.0-1PGDG.rhel9.aarch64.rpm pgdg 1.4.0 52.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/firebird_fdw_15-1.4.0-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 15 firebird_fdw_15 firebird_fdw_15-1.3.0-1.rhel9.aarch64.rpm pgdg 1.3.0 51.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/firebird_fdw_15-1.3.0-1.rhel9.aarch64.rpm
 @ el10.x86_64 15 firebird_fdw_15 firebird_fdw_15-1.4.2-1PIGSTY.el10.x86_64.rpm pigsty 1.4.2 55.2KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/firebird_fdw_15-1.4.2-1PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 15 firebird_fdw_15 firebird_fdw_15-1.4.2-1PGDG.rhel10.2.x86_64.rpm pgdg 1.4.2 53.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/firebird_fdw_15-1.4.2-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 15 firebird_fdw_15 firebird_fdw_15-1.4.1-3PGDG.rhel10.2.x86_64.rpm pgdg 1.4.1 54.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/firebird_fdw_15-1.4.1-3PGDG.rhel10.2.x86_64.rpm
@@ -171,10 +213,24 @@ weight: 8750
 @ el8.aarch64 14 firebird_fdw_14 firebird_fdw_14-1.3.0-1.rhel8.aarch64.rpm pgdg 1.3.0 49.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/firebird_fdw_14-1.3.0-1.rhel8.aarch64.rpm
 @ el9.x86_64 14 firebird_fdw_14 firebird_fdw_14-1.4.2-1PIGSTY.el9.x86_64.rpm pigsty 1.4.2 55.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/firebird_fdw_14-1.4.2-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 14 firebird_fdw_14 firebird_fdw_14-1.4.2-1PGDG.rhel9.8.x86_64.rpm pgdg 1.4.2 53.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/firebird_fdw_14-1.4.2-1PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 14 firebird_fdw_14 firebird_fdw_14-1.4.2-1PGDG.rhel9.7.x86_64.rpm pgdg 1.4.2 53.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/firebird_fdw_14-1.4.2-1PGDG.rhel9.7.x86_64.rpm
+@ el9.x86_64 14 firebird_fdw_14 firebird_fdw_14-1.4.2-1PGDG.rhel9.6.x86_64.rpm pgdg 1.4.2 53.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/firebird_fdw_14-1.4.2-1PGDG.rhel9.6.x86_64.rpm
 @ el9.x86_64 14 firebird_fdw_14 firebird_fdw_14-1.4.1-3PGDG.rhel9.8.x86_64.rpm pgdg 1.4.1 53.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/firebird_fdw_14-1.4.1-3PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 14 firebird_fdw_14 firebird_fdw_14-1.4.1-3PGDG.rhel9.7.x86_64.rpm pgdg 1.4.1 53.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/firebird_fdw_14-1.4.1-3PGDG.rhel9.7.x86_64.rpm
+@ el9.x86_64 14 firebird_fdw_14 firebird_fdw_14-1.4.1-3PGDG.rhel9.6.x86_64.rpm pgdg 1.4.1 53.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/firebird_fdw_14-1.4.1-3PGDG.rhel9.6.x86_64.rpm
+@ el9.x86_64 14 firebird_fdw_14 firebird_fdw_14-1.3.0-1.rhel9.x86_64.rpm pgdg 1.3.0 52.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/firebird_fdw_14-1.3.0-1.rhel9.x86_64.rpm
+@ el9.x86_64 14 firebird_fdw_14 firebird_fdw_14-1.2.3-2.rhel9.x86_64.rpm pgdg 1.2.3 153.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/firebird_fdw_14-1.2.3-2.rhel9.x86_64.rpm
+@ el9.x86_64 14 firebird_fdw_14 firebird_fdw_14-1.2.3-1.rhel9.x86_64.rpm pgdg 1.2.3 153.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/firebird_fdw_14-1.2.3-1.rhel9.x86_64.rpm
 @ el9.aarch64 14 firebird_fdw_14 firebird_fdw_14-1.4.2-1PIGSTY.el9.aarch64.rpm pigsty 1.4.2 54.1KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/firebird_fdw_14-1.4.2-1PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 14 firebird_fdw_14 firebird_fdw_14-1.4.2-1PGDG.rhel9.8.aarch64.rpm pgdg 1.4.2 52.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/firebird_fdw_14-1.4.2-1PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 14 firebird_fdw_14 firebird_fdw_14-1.4.2-1PGDG.rhel9.7.aarch64.rpm pgdg 1.4.2 52.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/firebird_fdw_14-1.4.2-1PGDG.rhel9.7.aarch64.rpm
+@ el9.aarch64 14 firebird_fdw_14 firebird_fdw_14-1.4.2-1PGDG.rhel9.6.aarch64.rpm pgdg 1.4.2 52.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/firebird_fdw_14-1.4.2-1PGDG.rhel9.6.aarch64.rpm
 @ el9.aarch64 14 firebird_fdw_14 firebird_fdw_14-1.4.1-3PGDG.rhel9.8.aarch64.rpm pgdg 1.4.1 52.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/firebird_fdw_14-1.4.1-3PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 14 firebird_fdw_14 firebird_fdw_14-1.4.1-3PGDG.rhel9.7.aarch64.rpm pgdg 1.4.1 52.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/firebird_fdw_14-1.4.1-3PGDG.rhel9.7.aarch64.rpm
+@ el9.aarch64 14 firebird_fdw_14 firebird_fdw_14-1.4.1-3PGDG.rhel9.6.aarch64.rpm pgdg 1.4.1 52.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/firebird_fdw_14-1.4.1-3PGDG.rhel9.6.aarch64.rpm
+@ el9.aarch64 14 firebird_fdw_14 firebird_fdw_14-1.4.0-1PGDG.rhel9.aarch64.rpm pgdg 1.4.0 52.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/firebird_fdw_14-1.4.0-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 14 firebird_fdw_14 firebird_fdw_14-1.3.0-1.rhel9.aarch64.rpm pgdg 1.3.0 51.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/firebird_fdw_14-1.3.0-1.rhel9.aarch64.rpm
+@ el9.aarch64 14 firebird_fdw_14 firebird_fdw_14-1.2.3-3.rhel9.aarch64.rpm pgdg 1.2.3 152.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/firebird_fdw_14-1.2.3-3.rhel9.aarch64.rpm
 @ el10.x86_64 14 firebird_fdw_14 firebird_fdw_14-1.4.2-1PIGSTY.el10.x86_64.rpm pigsty 1.4.2 55.8KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/firebird_fdw_14-1.4.2-1PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 14 firebird_fdw_14 firebird_fdw_14-1.4.2-1PGDG.rhel10.2.x86_64.rpm pgdg 1.4.2 54.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/firebird_fdw_14-1.4.2-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 14 firebird_fdw_14 firebird_fdw_14-1.4.1-3PGDG.rhel10.2.x86_64.rpm pgdg 1.4.1 54.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/firebird_fdw_14-1.4.1-3PGDG.rhel10.2.x86_64.rpm

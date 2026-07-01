@@ -55,10 +55,10 @@ weight: 7040
 |:--:|:--:|:--:|:--:|:--:|:--:|
 | el8.x86_64 | AVAIL PGDG 2.0.5 1 | AVAIL PGDG 2.0.5 1 | AVAIL PGDG 2.0.5 1 | AVAIL PGDG 2.0.5 1 | AVAIL PGDG 2.0.5 1 |
 | el8.aarch64 | AVAIL PGDG 2.0.5 1 | AVAIL PGDG 2.0.5 1 | AVAIL PGDG 2.0.5 1 | AVAIL PGDG 2.0.5 1 | AVAIL PGDG 2.0.5 1 |
-| el9.x86_64 | AVAIL PGDG 2.0.5 1 | AVAIL PGDG 2.0.5 1 | AVAIL PGDG 2.0.5 1 | AVAIL PGDG 2.0.5 1 | AVAIL PGDG 2.0.5 1 |
-| el9.aarch64 | AVAIL PGDG 2.0.5 1 | AVAIL PGDG 2.0.5 1 | AVAIL PGDG 2.0.5 1 | AVAIL PGDG 2.0.5 1 | AVAIL PGDG 2.0.5 1 |
-| el10.x86_64 | AVAIL PGDG 2.0.5 1 | AVAIL PGDG 2.0.5 1 | AVAIL PGDG 2.0.5 1 | AVAIL PGDG 2.0.5 1 | AVAIL PGDG 2.0.5 1 |
-| el10.aarch64 | AVAIL PGDG 2.0.5 1 | AVAIL PGDG 2.0.5 1 | AVAIL PGDG 2.0.5 1 | AVAIL PGDG 2.0.5 1 | AVAIL PGDG 2.0.5 1 |
+| el9.x86_64 | AVAIL PGDG 2.0.5 3 | AVAIL PGDG 2.0.5 3 | AVAIL PGDG 2.0.5 3 | AVAIL PGDG 2.0.5 3 | AVAIL PGDG 2.0.5 3 |
+| el9.aarch64 | AVAIL PGDG 2.0.5 3 | AVAIL PGDG 2.0.5 3 | AVAIL PGDG 2.0.5 3 | AVAIL PGDG 2.0.5 3 | AVAIL PGDG 2.0.5 3 |
+| el10.x86_64 | AVAIL PGDG 2.0.5 3 | AVAIL PGDG 2.0.5 3 | AVAIL PGDG 2.0.5 3 | AVAIL PGDG 2.0.5 3 | AVAIL PGDG 2.0.5 3 |
+| el10.aarch64 | AVAIL PGDG 2.0.5 3 | AVAIL PGDG 2.0.5 3 | AVAIL PGDG 2.0.5 3 | AVAIL PGDG 2.0.5 3 | AVAIL PGDG 2.0.5 3 |
 | d12.x86_64 | AVAIL PIGSTY 2.0.5 1 | AVAIL PIGSTY 2.0.5 1 | AVAIL PIGSTY 2.0.5 1 | AVAIL PIGSTY 2.0.5 1 | AVAIL PIGSTY 2.0.5 1 |
 | d12.aarch64 | AVAIL PIGSTY 2.0.5 1 | AVAIL PIGSTY 2.0.5 1 | AVAIL PIGSTY 2.0.5 1 | AVAIL PIGSTY 2.0.5 1 | AVAIL PIGSTY 2.0.5 1 |
 | d13.x86_64 | AVAIL PIGSTY 2.0.5 1 | AVAIL PIGSTY 2.0.5 1 | AVAIL PIGSTY 2.0.5 1 | AVAIL PIGSTY 2.0.5 1 | AVAIL PIGSTY 2.0.5 1 |
@@ -72,9 +72,17 @@ weight: 7040
 @ el8.x86_64 18 passwordpolicy_18 passwordpolicy_18-2.0.5-1PGDG.rhel8.10.x86_64.rpm pgdg 2.0.5 27.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/passwordpolicy_18-2.0.5-1PGDG.rhel8.10.x86_64.rpm
 @ el8.aarch64 18 passwordpolicy_18 passwordpolicy_18-2.0.5-1PGDG.rhel8.10.aarch64.rpm pgdg 2.0.5 27.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/passwordpolicy_18-2.0.5-1PGDG.rhel8.10.aarch64.rpm
 @ el9.x86_64 18 passwordpolicy_18 passwordpolicy_18-2.0.5-1PGDG.rhel9.8.x86_64.rpm pgdg 2.0.5 27.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/passwordpolicy_18-2.0.5-1PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 18 passwordpolicy_18 passwordpolicy_18-2.0.5-1PGDG.rhel9.7.x86_64.rpm pgdg 2.0.5 27.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/passwordpolicy_18-2.0.5-1PGDG.rhel9.7.x86_64.rpm
+@ el9.x86_64 18 passwordpolicy_18 passwordpolicy_18-2.0.5-1PGDG.rhel9.6.x86_64.rpm pgdg 2.0.5 27.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/passwordpolicy_18-2.0.5-1PGDG.rhel9.6.x86_64.rpm
 @ el9.aarch64 18 passwordpolicy_18 passwordpolicy_18-2.0.5-1PGDG.rhel9.8.aarch64.rpm pgdg 2.0.5 27.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/passwordpolicy_18-2.0.5-1PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 18 passwordpolicy_18 passwordpolicy_18-2.0.5-1PGDG.rhel9.7.aarch64.rpm pgdg 2.0.5 27.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/passwordpolicy_18-2.0.5-1PGDG.rhel9.7.aarch64.rpm
+@ el9.aarch64 18 passwordpolicy_18 passwordpolicy_18-2.0.5-1PGDG.rhel9.6.aarch64.rpm pgdg 2.0.5 27.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/passwordpolicy_18-2.0.5-1PGDG.rhel9.6.aarch64.rpm
 @ el10.x86_64 18 passwordpolicy_18 passwordpolicy_18-2.0.5-1PGDG.rhel10.2.x86_64.rpm pgdg 2.0.5 27.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/passwordpolicy_18-2.0.5-1PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 18 passwordpolicy_18 passwordpolicy_18-2.0.5-1PGDG.rhel10.1.x86_64.rpm pgdg 2.0.5 27.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/passwordpolicy_18-2.0.5-1PGDG.rhel10.1.x86_64.rpm
+@ el10.x86_64 18 passwordpolicy_18 passwordpolicy_18-2.0.5-1PGDG.rhel10.0.x86_64.rpm pgdg 2.0.5 28.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/passwordpolicy_18-2.0.5-1PGDG.rhel10.0.x86_64.rpm
 @ el10.aarch64 18 passwordpolicy_18 passwordpolicy_18-2.0.5-1PGDG.rhel10.2.aarch64.rpm pgdg 2.0.5 27.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/passwordpolicy_18-2.0.5-1PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 18 passwordpolicy_18 passwordpolicy_18-2.0.5-1PGDG.rhel10.1.aarch64.rpm pgdg 2.0.5 27.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/passwordpolicy_18-2.0.5-1PGDG.rhel10.1.aarch64.rpm
+@ el10.aarch64 18 passwordpolicy_18 passwordpolicy_18-2.0.5-1PGDG.rhel10.0.aarch64.rpm pgdg 2.0.5 27.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/passwordpolicy_18-2.0.5-1PGDG.rhel10.0.aarch64.rpm
 @ d12.x86_64 18 postgresql-18-passwordpolicy postgresql-18-passwordpolicy_2.0.5-1PIGSTY~bookworm_amd64.deb pigsty 2.0.5 51.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/passwordpolicy/postgresql-18-passwordpolicy_2.0.5-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 18 postgresql-18-passwordpolicy postgresql-18-passwordpolicy_2.0.5-1PIGSTY~bookworm_arm64.deb pigsty 2.0.5 51.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/passwordpolicy/postgresql-18-passwordpolicy_2.0.5-1PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 18 postgresql-18-passwordpolicy postgresql-18-passwordpolicy_2.0.5-1PIGSTY~trixie_amd64.deb pigsty 2.0.5 51.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/passwordpolicy/postgresql-18-passwordpolicy_2.0.5-1PIGSTY~trixie_amd64.deb
@@ -88,9 +96,17 @@ weight: 7040
 @ el8.x86_64 17 passwordpolicy_17 passwordpolicy_17-2.0.5-1PGDG.rhel8.10.x86_64.rpm pgdg 2.0.5 27.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/passwordpolicy_17-2.0.5-1PGDG.rhel8.10.x86_64.rpm
 @ el8.aarch64 17 passwordpolicy_17 passwordpolicy_17-2.0.5-1PGDG.rhel8.10.aarch64.rpm pgdg 2.0.5 27.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/passwordpolicy_17-2.0.5-1PGDG.rhel8.10.aarch64.rpm
 @ el9.x86_64 17 passwordpolicy_17 passwordpolicy_17-2.0.5-1PGDG.rhel9.8.x86_64.rpm pgdg 2.0.5 27.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/passwordpolicy_17-2.0.5-1PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 17 passwordpolicy_17 passwordpolicy_17-2.0.5-1PGDG.rhel9.7.x86_64.rpm pgdg 2.0.5 27.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/passwordpolicy_17-2.0.5-1PGDG.rhel9.7.x86_64.rpm
+@ el9.x86_64 17 passwordpolicy_17 passwordpolicy_17-2.0.5-1PGDG.rhel9.6.x86_64.rpm pgdg 2.0.5 27.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/passwordpolicy_17-2.0.5-1PGDG.rhel9.6.x86_64.rpm
 @ el9.aarch64 17 passwordpolicy_17 passwordpolicy_17-2.0.5-1PGDG.rhel9.8.aarch64.rpm pgdg 2.0.5 27.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/passwordpolicy_17-2.0.5-1PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 17 passwordpolicy_17 passwordpolicy_17-2.0.5-1PGDG.rhel9.7.aarch64.rpm pgdg 2.0.5 27.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/passwordpolicy_17-2.0.5-1PGDG.rhel9.7.aarch64.rpm
+@ el9.aarch64 17 passwordpolicy_17 passwordpolicy_17-2.0.5-1PGDG.rhel9.6.aarch64.rpm pgdg 2.0.5 27.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/passwordpolicy_17-2.0.5-1PGDG.rhel9.6.aarch64.rpm
 @ el10.x86_64 17 passwordpolicy_17 passwordpolicy_17-2.0.5-1PGDG.rhel10.2.x86_64.rpm pgdg 2.0.5 27.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/passwordpolicy_17-2.0.5-1PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 17 passwordpolicy_17 passwordpolicy_17-2.0.5-1PGDG.rhel10.1.x86_64.rpm pgdg 2.0.5 27.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/passwordpolicy_17-2.0.5-1PGDG.rhel10.1.x86_64.rpm
+@ el10.x86_64 17 passwordpolicy_17 passwordpolicy_17-2.0.5-1PGDG.rhel10.0.x86_64.rpm pgdg 2.0.5 28.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/passwordpolicy_17-2.0.5-1PGDG.rhel10.0.x86_64.rpm
 @ el10.aarch64 17 passwordpolicy_17 passwordpolicy_17-2.0.5-1PGDG.rhel10.2.aarch64.rpm pgdg 2.0.5 27.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/passwordpolicy_17-2.0.5-1PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 17 passwordpolicy_17 passwordpolicy_17-2.0.5-1PGDG.rhel10.1.aarch64.rpm pgdg 2.0.5 27.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/passwordpolicy_17-2.0.5-1PGDG.rhel10.1.aarch64.rpm
+@ el10.aarch64 17 passwordpolicy_17 passwordpolicy_17-2.0.5-1PGDG.rhel10.0.aarch64.rpm pgdg 2.0.5 27.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/passwordpolicy_17-2.0.5-1PGDG.rhel10.0.aarch64.rpm
 @ d12.x86_64 17 postgresql-17-passwordpolicy postgresql-17-passwordpolicy_2.0.5-1PIGSTY~bookworm_amd64.deb pigsty 2.0.5 51.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/passwordpolicy/postgresql-17-passwordpolicy_2.0.5-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 17 postgresql-17-passwordpolicy postgresql-17-passwordpolicy_2.0.5-1PIGSTY~bookworm_arm64.deb pigsty 2.0.5 51.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/passwordpolicy/postgresql-17-passwordpolicy_2.0.5-1PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 17 postgresql-17-passwordpolicy postgresql-17-passwordpolicy_2.0.5-1PIGSTY~trixie_amd64.deb pigsty 2.0.5 51.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/passwordpolicy/postgresql-17-passwordpolicy_2.0.5-1PIGSTY~trixie_amd64.deb
@@ -104,9 +120,17 @@ weight: 7040
 @ el8.x86_64 16 passwordpolicy_16 passwordpolicy_16-2.0.5-1PGDG.rhel8.10.x86_64.rpm pgdg 2.0.5 27.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/passwordpolicy_16-2.0.5-1PGDG.rhel8.10.x86_64.rpm
 @ el8.aarch64 16 passwordpolicy_16 passwordpolicy_16-2.0.5-1PGDG.rhel8.10.aarch64.rpm pgdg 2.0.5 27.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/passwordpolicy_16-2.0.5-1PGDG.rhel8.10.aarch64.rpm
 @ el9.x86_64 16 passwordpolicy_16 passwordpolicy_16-2.0.5-1PGDG.rhel9.8.x86_64.rpm pgdg 2.0.5 27.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/passwordpolicy_16-2.0.5-1PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 16 passwordpolicy_16 passwordpolicy_16-2.0.5-1PGDG.rhel9.7.x86_64.rpm pgdg 2.0.5 27.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/passwordpolicy_16-2.0.5-1PGDG.rhel9.7.x86_64.rpm
+@ el9.x86_64 16 passwordpolicy_16 passwordpolicy_16-2.0.5-1PGDG.rhel9.6.x86_64.rpm pgdg 2.0.5 27.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/passwordpolicy_16-2.0.5-1PGDG.rhel9.6.x86_64.rpm
 @ el9.aarch64 16 passwordpolicy_16 passwordpolicy_16-2.0.5-1PGDG.rhel9.8.aarch64.rpm pgdg 2.0.5 27.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/passwordpolicy_16-2.0.5-1PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 16 passwordpolicy_16 passwordpolicy_16-2.0.5-1PGDG.rhel9.7.aarch64.rpm pgdg 2.0.5 27.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/passwordpolicy_16-2.0.5-1PGDG.rhel9.7.aarch64.rpm
+@ el9.aarch64 16 passwordpolicy_16 passwordpolicy_16-2.0.5-1PGDG.rhel9.6.aarch64.rpm pgdg 2.0.5 27.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/passwordpolicy_16-2.0.5-1PGDG.rhel9.6.aarch64.rpm
 @ el10.x86_64 16 passwordpolicy_16 passwordpolicy_16-2.0.5-1PGDG.rhel10.2.x86_64.rpm pgdg 2.0.5 27.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/passwordpolicy_16-2.0.5-1PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 16 passwordpolicy_16 passwordpolicy_16-2.0.5-1PGDG.rhel10.1.x86_64.rpm pgdg 2.0.5 27.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/passwordpolicy_16-2.0.5-1PGDG.rhel10.1.x86_64.rpm
+@ el10.x86_64 16 passwordpolicy_16 passwordpolicy_16-2.0.5-1PGDG.rhel10.0.x86_64.rpm pgdg 2.0.5 28.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/passwordpolicy_16-2.0.5-1PGDG.rhel10.0.x86_64.rpm
 @ el10.aarch64 16 passwordpolicy_16 passwordpolicy_16-2.0.5-1PGDG.rhel10.2.aarch64.rpm pgdg 2.0.5 27.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/passwordpolicy_16-2.0.5-1PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 16 passwordpolicy_16 passwordpolicy_16-2.0.5-1PGDG.rhel10.1.aarch64.rpm pgdg 2.0.5 27.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/passwordpolicy_16-2.0.5-1PGDG.rhel10.1.aarch64.rpm
+@ el10.aarch64 16 passwordpolicy_16 passwordpolicy_16-2.0.5-1PGDG.rhel10.0.aarch64.rpm pgdg 2.0.5 27.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/passwordpolicy_16-2.0.5-1PGDG.rhel10.0.aarch64.rpm
 @ d12.x86_64 16 postgresql-16-passwordpolicy postgresql-16-passwordpolicy_2.0.5-1PIGSTY~bookworm_amd64.deb pigsty 2.0.5 51.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/passwordpolicy/postgresql-16-passwordpolicy_2.0.5-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 16 postgresql-16-passwordpolicy postgresql-16-passwordpolicy_2.0.5-1PIGSTY~bookworm_arm64.deb pigsty 2.0.5 51.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/passwordpolicy/postgresql-16-passwordpolicy_2.0.5-1PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 16 postgresql-16-passwordpolicy postgresql-16-passwordpolicy_2.0.5-1PIGSTY~trixie_amd64.deb pigsty 2.0.5 51.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/passwordpolicy/postgresql-16-passwordpolicy_2.0.5-1PIGSTY~trixie_amd64.deb
@@ -120,9 +144,17 @@ weight: 7040
 @ el8.x86_64 15 passwordpolicy_15 passwordpolicy_15-2.0.5-1PGDG.rhel8.10.x86_64.rpm pgdg 2.0.5 27.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/passwordpolicy_15-2.0.5-1PGDG.rhel8.10.x86_64.rpm
 @ el8.aarch64 15 passwordpolicy_15 passwordpolicy_15-2.0.5-1PGDG.rhel8.10.aarch64.rpm pgdg 2.0.5 27.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/passwordpolicy_15-2.0.5-1PGDG.rhel8.10.aarch64.rpm
 @ el9.x86_64 15 passwordpolicy_15 passwordpolicy_15-2.0.5-1PGDG.rhel9.8.x86_64.rpm pgdg 2.0.5 28.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/passwordpolicy_15-2.0.5-1PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 15 passwordpolicy_15 passwordpolicy_15-2.0.5-1PGDG.rhel9.7.x86_64.rpm pgdg 2.0.5 28.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/passwordpolicy_15-2.0.5-1PGDG.rhel9.7.x86_64.rpm
+@ el9.x86_64 15 passwordpolicy_15 passwordpolicy_15-2.0.5-1PGDG.rhel9.6.x86_64.rpm pgdg 2.0.5 28.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/passwordpolicy_15-2.0.5-1PGDG.rhel9.6.x86_64.rpm
 @ el9.aarch64 15 passwordpolicy_15 passwordpolicy_15-2.0.5-1PGDG.rhel9.8.aarch64.rpm pgdg 2.0.5 28.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/passwordpolicy_15-2.0.5-1PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 15 passwordpolicy_15 passwordpolicy_15-2.0.5-1PGDG.rhel9.7.aarch64.rpm pgdg 2.0.5 28.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/passwordpolicy_15-2.0.5-1PGDG.rhel9.7.aarch64.rpm
+@ el9.aarch64 15 passwordpolicy_15 passwordpolicy_15-2.0.5-1PGDG.rhel9.6.aarch64.rpm pgdg 2.0.5 28.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/passwordpolicy_15-2.0.5-1PGDG.rhel9.6.aarch64.rpm
 @ el10.x86_64 15 passwordpolicy_15 passwordpolicy_15-2.0.5-1PGDG.rhel10.2.x86_64.rpm pgdg 2.0.5 28.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/passwordpolicy_15-2.0.5-1PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 15 passwordpolicy_15 passwordpolicy_15-2.0.5-1PGDG.rhel10.1.x86_64.rpm pgdg 2.0.5 28.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/passwordpolicy_15-2.0.5-1PGDG.rhel10.1.x86_64.rpm
+@ el10.x86_64 15 passwordpolicy_15 passwordpolicy_15-2.0.5-1PGDG.rhel10.0.x86_64.rpm pgdg 2.0.5 28.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/passwordpolicy_15-2.0.5-1PGDG.rhel10.0.x86_64.rpm
 @ el10.aarch64 15 passwordpolicy_15 passwordpolicy_15-2.0.5-1PGDG.rhel10.2.aarch64.rpm pgdg 2.0.5 28.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/passwordpolicy_15-2.0.5-1PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 15 passwordpolicy_15 passwordpolicy_15-2.0.5-1PGDG.rhel10.1.aarch64.rpm pgdg 2.0.5 28.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/passwordpolicy_15-2.0.5-1PGDG.rhel10.1.aarch64.rpm
+@ el10.aarch64 15 passwordpolicy_15 passwordpolicy_15-2.0.5-1PGDG.rhel10.0.aarch64.rpm pgdg 2.0.5 28.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/passwordpolicy_15-2.0.5-1PGDG.rhel10.0.aarch64.rpm
 @ d12.x86_64 15 postgresql-15-passwordpolicy postgresql-15-passwordpolicy_2.0.5-1PIGSTY~bookworm_amd64.deb pigsty 2.0.5 52.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/passwordpolicy/postgresql-15-passwordpolicy_2.0.5-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 15 postgresql-15-passwordpolicy postgresql-15-passwordpolicy_2.0.5-1PIGSTY~bookworm_arm64.deb pigsty 2.0.5 51.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/passwordpolicy/postgresql-15-passwordpolicy_2.0.5-1PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 15 postgresql-15-passwordpolicy postgresql-15-passwordpolicy_2.0.5-1PIGSTY~trixie_amd64.deb pigsty 2.0.5 52.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/passwordpolicy/postgresql-15-passwordpolicy_2.0.5-1PIGSTY~trixie_amd64.deb
@@ -136,9 +168,17 @@ weight: 7040
 @ el8.x86_64 14 passwordpolicy_14 passwordpolicy_14-2.0.5-1PGDG.rhel8.10.x86_64.rpm pgdg 2.0.5 27.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/passwordpolicy_14-2.0.5-1PGDG.rhel8.10.x86_64.rpm
 @ el8.aarch64 14 passwordpolicy_14 passwordpolicy_14-2.0.5-1PGDG.rhel8.10.aarch64.rpm pgdg 2.0.5 27.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/passwordpolicy_14-2.0.5-1PGDG.rhel8.10.aarch64.rpm
 @ el9.x86_64 14 passwordpolicy_14 passwordpolicy_14-2.0.5-1PGDG.rhel9.8.x86_64.rpm pgdg 2.0.5 28.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/passwordpolicy_14-2.0.5-1PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 14 passwordpolicy_14 passwordpolicy_14-2.0.5-1PGDG.rhel9.7.x86_64.rpm pgdg 2.0.5 28.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/passwordpolicy_14-2.0.5-1PGDG.rhel9.7.x86_64.rpm
+@ el9.x86_64 14 passwordpolicy_14 passwordpolicy_14-2.0.5-1PGDG.rhel9.6.x86_64.rpm pgdg 2.0.5 28.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/passwordpolicy_14-2.0.5-1PGDG.rhel9.6.x86_64.rpm
 @ el9.aarch64 14 passwordpolicy_14 passwordpolicy_14-2.0.5-1PGDG.rhel9.8.aarch64.rpm pgdg 2.0.5 28.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/passwordpolicy_14-2.0.5-1PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 14 passwordpolicy_14 passwordpolicy_14-2.0.5-1PGDG.rhel9.7.aarch64.rpm pgdg 2.0.5 28.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/passwordpolicy_14-2.0.5-1PGDG.rhel9.7.aarch64.rpm
+@ el9.aarch64 14 passwordpolicy_14 passwordpolicy_14-2.0.5-1PGDG.rhel9.6.aarch64.rpm pgdg 2.0.5 28.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/passwordpolicy_14-2.0.5-1PGDG.rhel9.6.aarch64.rpm
 @ el10.x86_64 14 passwordpolicy_14 passwordpolicy_14-2.0.5-1PGDG.rhel10.2.x86_64.rpm pgdg 2.0.5 28.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/passwordpolicy_14-2.0.5-1PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 14 passwordpolicy_14 passwordpolicy_14-2.0.5-1PGDG.rhel10.1.x86_64.rpm pgdg 2.0.5 28.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/passwordpolicy_14-2.0.5-1PGDG.rhel10.1.x86_64.rpm
+@ el10.x86_64 14 passwordpolicy_14 passwordpolicy_14-2.0.5-1PGDG.rhel10.0.x86_64.rpm pgdg 2.0.5 28.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/passwordpolicy_14-2.0.5-1PGDG.rhel10.0.x86_64.rpm
 @ el10.aarch64 14 passwordpolicy_14 passwordpolicy_14-2.0.5-1PGDG.rhel10.2.aarch64.rpm pgdg 2.0.5 28.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/passwordpolicy_14-2.0.5-1PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 14 passwordpolicy_14 passwordpolicy_14-2.0.5-1PGDG.rhel10.1.aarch64.rpm pgdg 2.0.5 28.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/passwordpolicy_14-2.0.5-1PGDG.rhel10.1.aarch64.rpm
+@ el10.aarch64 14 passwordpolicy_14 passwordpolicy_14-2.0.5-1PGDG.rhel10.0.aarch64.rpm pgdg 2.0.5 28.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/passwordpolicy_14-2.0.5-1PGDG.rhel10.0.aarch64.rpm
 @ d12.x86_64 14 postgresql-14-passwordpolicy postgresql-14-passwordpolicy_2.0.5-1PIGSTY~bookworm_amd64.deb pigsty 2.0.5 52.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/passwordpolicy/postgresql-14-passwordpolicy_2.0.5-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 14 postgresql-14-passwordpolicy postgresql-14-passwordpolicy_2.0.5-1PIGSTY~bookworm_arm64.deb pigsty 2.0.5 51.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/passwordpolicy/postgresql-14-passwordpolicy_2.0.5-1PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 14 postgresql-14-passwordpolicy postgresql-14-passwordpolicy_2.0.5-1PIGSTY~trixie_amd64.deb pigsty 2.0.5 52.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/passwordpolicy/postgresql-14-passwordpolicy_2.0.5-1PIGSTY~trixie_amd64.deb
@@ -218,3 +258,80 @@ shared_preload_libraries = '$libdir/passwordpolicy';
 ```sql
 CREATE EXTENSION passwordpolicy;
 ```
+
+## 用法
+
+来源：[README](https://github.com/fmbiete/passwordpolicy/blob/v2.0.5/README.md)、[v2.0.5 release](https://github.com/fmbiete/passwordpolicy/releases/tag/v2.0.5)、[control file](https://github.com/fmbiete/passwordpolicy/blob/v2.0.5/passwordpolicy.control)
+
+`passwordpolicy` 是 PostgreSQL `passwordcheck` module 的可配置替代方案。它会在 `CREATE ROLE` 和 `ALTER ROLE` 时检查密码，可以强制执行 password history 和 validity rules，也能在重复登录失败后模拟 soft account lock。
+
+### 启用 Hook
+
+在其他 password-check modules 前加载该 module，然后重启 PostgreSQL：
+
+```conf
+shared_preload_libraries = 'passwordpolicy'
+```
+
+使用 account soft-lock 或 password-history 功能时，在 `postgres` 数据库中安装 SQL 扩展：
+
+```sql
+CREATE EXTENSION passwordpolicy;
+```
+
+### 密码复杂度
+
+配置项是动态的，但新值只对新 session 生效：
+
+```conf
+password_policy.min_password_len = 15
+password_policy.min_special_chars = 1
+password_policy.min_numbers = 1
+password_policy.min_uppercase_letter = 1
+password_policy.min_lowercase_letter = 1
+password_policy.require_validuntil = off
+```
+
+只有创建 dictionary file 之后，才启用 CrackLib dictionary checks：
+
+```conf
+password_policy.cracklib_dictpath = '/var/cache/cracklib/postgresql_dict'
+password_policy.enable_dictionary_check = on
+```
+
+### Soft Account Lock
+
+Soft-locking 会跟踪登录失败次数，并在超过阈值后延迟或拒绝响应：
+
+```conf
+password_policy_lock.number_failures = 5
+password_policy_lock.failure_delay = 5
+password_policy_lock.auto_unlock = on
+password_policy_lock.auto_unlock_after = 0
+password_policy_lock.max_number_accounts = 100
+```
+
+查看并重置 lock state：
+
+```sql
+SELECT * FROM passwordpolicy.accounts_locked() ORDER BY usename;
+SELECT passwordpolicy.account_locked_reset('app_user');
+```
+
+如果 `password_policy_lock.include_all = false`，只有列在 `passwordpolicy.accounts_lockable` 中的 roles 才参与 soft-lock。
+
+### 密码历史
+
+Password history 会在 `postgres` 数据库中存储最近的 password hashes，并检查新密码是否复用：
+
+```conf
+password_policy_history.max_password_history = 5
+password_policy_history.max_number_accounts = 100
+```
+
+### 注意事项
+
+- 版本 2.0.5 支持 PostgreSQL 14-18。
+- 该 module 必须 preload；修改 `shared_preload_libraries` 需要重启。
+- PostgreSQL 无法在认证发生前真正阻止认证，因此 soft-lock 通过延迟和返回错误来模拟 lock。它不能缓解 authentication DoS attacks。
+- 合理设置 `password_policy_lock.max_number_accounts` 和 `password_policy_history.max_number_accounts`，避免浪费内存或漏掉账号。

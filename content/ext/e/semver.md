@@ -52,10 +52,10 @@ weight: 3510
 |:--:|:--:|:--:|:--:|:--:|:--:|
 | el8.x86_64 | AVAIL PIGSTY 0.41.0 3 | AVAIL PIGSTY 0.41.0 3 | AVAIL PIGSTY 0.41.0 3 | AVAIL PIGSTY 0.41.0 5 | AVAIL PIGSTY 0.41.0 6 |
 | el8.aarch64 | AVAIL PIGSTY 0.41.0 3 | AVAIL PIGSTY 0.41.0 3 | AVAIL PIGSTY 0.41.0 3 | AVAIL PIGSTY 0.41.0 4 | AVAIL PIGSTY 0.41.0 4 |
-| el9.x86_64 | AVAIL PIGSTY 0.41.0 2 | AVAIL PIGSTY 0.41.0 2 | AVAIL PIGSTY 0.41.0 2 | AVAIL PIGSTY 0.41.0 2 | AVAIL PIGSTY 0.41.0 2 |
-| el9.aarch64 | AVAIL PIGSTY 0.41.0 2 | AVAIL PIGSTY 0.41.0 2 | AVAIL PIGSTY 0.41.0 2 | AVAIL PIGSTY 0.41.0 2 | AVAIL PIGSTY 0.41.0 2 |
-| el10.x86_64 | AVAIL PIGSTY 0.41.0 2 | AVAIL PIGSTY 0.41.0 2 | AVAIL PIGSTY 0.41.0 2 | AVAIL PIGSTY 0.41.0 2 | AVAIL PIGSTY 0.41.0 2 |
-| el10.aarch64 | AVAIL PIGSTY 0.41.0 2 | AVAIL PIGSTY 0.41.0 2 | AVAIL PIGSTY 0.41.0 2 | AVAIL PIGSTY 0.41.0 2 | AVAIL PIGSTY 0.41.0 2 |
+| el9.x86_64 | AVAIL PIGSTY 0.41.0 5 | AVAIL PIGSTY 0.41.0 5 | AVAIL PIGSTY 0.41.0 5 | AVAIL PIGSTY 0.41.0 7 | AVAIL PIGSTY 0.41.0 6 |
+| el9.aarch64 | AVAIL PIGSTY 0.41.0 5 | AVAIL PIGSTY 0.41.0 5 | AVAIL PIGSTY 0.41.0 5 | AVAIL PIGSTY 0.41.0 6 | AVAIL PIGSTY 0.41.0 6 |
+| el10.x86_64 | AVAIL PIGSTY 0.41.0 5 | AVAIL PIGSTY 0.41.0 5 | AVAIL PIGSTY 0.41.0 5 | AVAIL PIGSTY 0.41.0 5 | AVAIL PIGSTY 0.41.0 5 |
+| el10.aarch64 | AVAIL PIGSTY 0.41.0 5 | AVAIL PIGSTY 0.41.0 5 | AVAIL PIGSTY 0.41.0 5 | AVAIL PIGSTY 0.41.0 5 | AVAIL PIGSTY 0.41.0 5 |
 | d12.x86_64 | AVAIL PGDG 0.41.0 1 | AVAIL PGDG 0.41.0 1 | AVAIL PGDG 0.41.0 1 | AVAIL PGDG 0.41.0 1 | AVAIL PGDG 0.41.0 1 |
 | d12.aarch64 | AVAIL PGDG 0.41.0 1 | AVAIL PGDG 0.41.0 1 | AVAIL PGDG 0.41.0 1 | AVAIL PGDG 0.41.0 1 | AVAIL PGDG 0.41.0 1 |
 | d13.x86_64 | AVAIL PGDG 0.41.0 1 | AVAIL PGDG 0.41.0 1 | AVAIL PGDG 0.41.0 1 | AVAIL PGDG 0.41.0 1 | AVAIL PGDG 0.41.0 1 |
@@ -74,12 +74,24 @@ weight: 3510
 @ el8.aarch64 18 semver_18 semver_18-0.40.0-1PGDG.rhel8.aarch64.rpm pgdg 0.40.0 27.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/semver_18-0.40.0-1PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 18 semver_18 semver_18-0.41.0-1PIGSTY.el9.x86_64.rpm pigsty 0.41.0 26.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/semver_18-0.41.0-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 18 semver_18 semver_18-0.41.0-1PGDG.rhel9.8.x86_64.rpm pgdg 0.41.0 27.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/semver_18-0.41.0-1PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 18 semver_18 semver_18-0.41.0-1PGDG.rhel9.7.x86_64.rpm pgdg 0.41.0 27.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/semver_18-0.41.0-1PGDG.rhel9.7.x86_64.rpm
+@ el9.x86_64 18 semver_18 semver_18-0.41.0-1PGDG.rhel9.6.x86_64.rpm pgdg 0.41.0 27.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/semver_18-0.41.0-1PGDG.rhel9.6.x86_64.rpm
+@ el9.x86_64 18 semver_18 semver_18-0.40.0-1PGDG.rhel9.x86_64.rpm pgdg 0.40.0 26.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/semver_18-0.40.0-1PGDG.rhel9.x86_64.rpm
 @ el9.aarch64 18 semver_18 semver_18-0.41.0-1PIGSTY.el9.aarch64.rpm pigsty 0.41.0 26.7KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/semver_18-0.41.0-1PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 18 semver_18 semver_18-0.41.0-1PGDG.rhel9.8.aarch64.rpm pgdg 0.41.0 26.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/semver_18-0.41.0-1PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 18 semver_18 semver_18-0.41.0-1PGDG.rhel9.7.aarch64.rpm pgdg 0.41.0 26.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/semver_18-0.41.0-1PGDG.rhel9.7.aarch64.rpm
+@ el9.aarch64 18 semver_18 semver_18-0.41.0-1PGDG.rhel9.6.aarch64.rpm pgdg 0.41.0 26.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/semver_18-0.41.0-1PGDG.rhel9.6.aarch64.rpm
+@ el9.aarch64 18 semver_18 semver_18-0.40.0-1PGDG.rhel9.aarch64.rpm pgdg 0.40.0 26.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/semver_18-0.40.0-1PGDG.rhel9.aarch64.rpm
 @ el10.x86_64 18 semver_18 semver_18-0.41.0-1PIGSTY.el10.x86_64.rpm pigsty 0.41.0 27.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/semver_18-0.41.0-1PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 18 semver_18 semver_18-0.41.0-1PGDG.rhel10.2.x86_64.rpm pgdg 0.41.0 27.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/semver_18-0.41.0-1PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 18 semver_18 semver_18-0.41.0-1PGDG.rhel10.1.x86_64.rpm pgdg 0.41.0 27.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/semver_18-0.41.0-1PGDG.rhel10.1.x86_64.rpm
+@ el10.x86_64 18 semver_18 semver_18-0.41.0-1PGDG.rhel10.0.x86_64.rpm pgdg 0.41.0 27.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/semver_18-0.41.0-1PGDG.rhel10.0.x86_64.rpm
+@ el10.x86_64 18 semver_18 semver_18-0.40.0-1PGDG.rhel10.x86_64.rpm pgdg 0.40.0 27.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/semver_18-0.40.0-1PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 18 semver_18 semver_18-0.41.0-1PIGSTY.el10.aarch64.rpm pigsty 0.41.0 27.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/semver_18-0.41.0-1PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 18 semver_18 semver_18-0.41.0-1PGDG.rhel10.2.aarch64.rpm pgdg 0.41.0 27.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/semver_18-0.41.0-1PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 18 semver_18 semver_18-0.41.0-1PGDG.rhel10.1.aarch64.rpm pgdg 0.41.0 27.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/semver_18-0.41.0-1PGDG.rhel10.1.aarch64.rpm
+@ el10.aarch64 18 semver_18 semver_18-0.41.0-1PGDG.rhel10.0.aarch64.rpm pgdg 0.41.0 27.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/semver_18-0.41.0-1PGDG.rhel10.0.aarch64.rpm
+@ el10.aarch64 18 semver_18 semver_18-0.40.0-1PGDG.rhel10.aarch64.rpm pgdg 0.40.0 27.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/semver_18-0.40.0-1PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 18 postgresql-18-semver postgresql-18-semver_0.41.0-1.pgdg12+1_amd64.deb pgdg 0.41.0 39.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-18-semver_0.41.0-1.pgdg12+1_amd64.deb
 @ d12.aarch64 18 postgresql-18-semver postgresql-18-semver_0.41.0-1.pgdg12+1_arm64.deb pgdg 0.41.0 38.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-18-semver_0.41.0-1.pgdg12+1_arm64.deb
 @ d13.x86_64 18 postgresql-18-semver postgresql-18-semver_0.41.0-1.pgdg13+1_amd64.deb pgdg 0.41.0 38.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-18-semver_0.41.0-1.pgdg13+1_amd64.deb
@@ -98,12 +110,24 @@ weight: 3510
 @ el8.aarch64 17 semver_17 semver_17-0.32.1-1PGDG.rhel8.aarch64.rpm pgdg 0.32.1 26.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/semver_17-0.32.1-1PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 17 semver_17 semver_17-0.41.0-1PIGSTY.el9.x86_64.rpm pigsty 0.41.0 26.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/semver_17-0.41.0-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 17 semver_17 semver_17-0.41.0-1PGDG.rhel9.8.x86_64.rpm pgdg 0.41.0 27.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/semver_17-0.41.0-1PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 17 semver_17 semver_17-0.41.0-1PGDG.rhel9.7.x86_64.rpm pgdg 0.41.0 27.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/semver_17-0.41.0-1PGDG.rhel9.7.x86_64.rpm
+@ el9.x86_64 17 semver_17 semver_17-0.41.0-1PGDG.rhel9.6.x86_64.rpm pgdg 0.41.0 27.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/semver_17-0.41.0-1PGDG.rhel9.6.x86_64.rpm
+@ el9.x86_64 17 semver_17 semver_17-0.32.1-1PGDG.rhel9.x86_64.rpm pgdg 0.32.1 26.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/semver_17-0.32.1-1PGDG.rhel9.x86_64.rpm
 @ el9.aarch64 17 semver_17 semver_17-0.41.0-1PIGSTY.el9.aarch64.rpm pigsty 0.41.0 26.6KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/semver_17-0.41.0-1PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 17 semver_17 semver_17-0.41.0-1PGDG.rhel9.8.aarch64.rpm pgdg 0.41.0 26.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/semver_17-0.41.0-1PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 17 semver_17 semver_17-0.41.0-1PGDG.rhel9.7.aarch64.rpm pgdg 0.41.0 26.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/semver_17-0.41.0-1PGDG.rhel9.7.aarch64.rpm
+@ el9.aarch64 17 semver_17 semver_17-0.41.0-1PGDG.rhel9.6.aarch64.rpm pgdg 0.41.0 26.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/semver_17-0.41.0-1PGDG.rhel9.6.aarch64.rpm
+@ el9.aarch64 17 semver_17 semver_17-0.32.1-1PGDG.rhel9.aarch64.rpm pgdg 0.32.1 26.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/semver_17-0.32.1-1PGDG.rhel9.aarch64.rpm
 @ el10.x86_64 17 semver_17 semver_17-0.41.0-1PIGSTY.el10.x86_64.rpm pigsty 0.41.0 26.9KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/semver_17-0.41.0-1PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 17 semver_17 semver_17-0.41.0-1PGDG.rhel10.2.x86_64.rpm pgdg 0.41.0 27.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/semver_17-0.41.0-1PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 17 semver_17 semver_17-0.41.0-1PGDG.rhel10.1.x86_64.rpm pgdg 0.41.0 27.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/semver_17-0.41.0-1PGDG.rhel10.1.x86_64.rpm
+@ el10.x86_64 17 semver_17 semver_17-0.41.0-1PGDG.rhel10.0.x86_64.rpm pgdg 0.41.0 27.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/semver_17-0.41.0-1PGDG.rhel10.0.x86_64.rpm
+@ el10.x86_64 17 semver_17 semver_17-0.40.0-1PGDG.rhel10.x86_64.rpm pgdg 0.40.0 27.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/semver_17-0.40.0-1PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 17 semver_17 semver_17-0.41.0-1PIGSTY.el10.aarch64.rpm pigsty 0.41.0 27.1KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/semver_17-0.41.0-1PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 17 semver_17 semver_17-0.41.0-1PGDG.rhel10.2.aarch64.rpm pgdg 0.41.0 27.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/semver_17-0.41.0-1PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 17 semver_17 semver_17-0.41.0-1PGDG.rhel10.1.aarch64.rpm pgdg 0.41.0 27.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/semver_17-0.41.0-1PGDG.rhel10.1.aarch64.rpm
+@ el10.aarch64 17 semver_17 semver_17-0.41.0-1PGDG.rhel10.0.aarch64.rpm pgdg 0.41.0 27.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/semver_17-0.41.0-1PGDG.rhel10.0.aarch64.rpm
+@ el10.aarch64 17 semver_17 semver_17-0.40.0-1PGDG.rhel10.aarch64.rpm pgdg 0.40.0 27.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/semver_17-0.40.0-1PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 17 postgresql-17-semver postgresql-17-semver_0.41.0-1.pgdg12+1_amd64.deb pgdg 0.41.0 38.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-17-semver_0.41.0-1.pgdg12+1_amd64.deb
 @ d12.aarch64 17 postgresql-17-semver postgresql-17-semver_0.41.0-1.pgdg12+1_arm64.deb pgdg 0.41.0 38.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-17-semver_0.41.0-1.pgdg12+1_arm64.deb
 @ d13.x86_64 17 postgresql-17-semver postgresql-17-semver_0.41.0-1.pgdg13+1_amd64.deb pgdg 0.41.0 38.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-17-semver_0.41.0-1.pgdg13+1_amd64.deb
@@ -122,12 +146,24 @@ weight: 3510
 @ el8.aarch64 16 semver_16 semver_16-0.32.1-1PGDG.rhel8.aarch64.rpm pgdg 0.32.1 26.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/semver_16-0.32.1-1PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 16 semver_16 semver_16-0.41.0-1PIGSTY.el9.x86_64.rpm pigsty 0.41.0 26.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/semver_16-0.41.0-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 16 semver_16 semver_16-0.41.0-1PGDG.rhel9.8.x86_64.rpm pgdg 0.41.0 27.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/semver_16-0.41.0-1PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 16 semver_16 semver_16-0.41.0-1PGDG.rhel9.7.x86_64.rpm pgdg 0.41.0 27.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/semver_16-0.41.0-1PGDG.rhel9.7.x86_64.rpm
+@ el9.x86_64 16 semver_16 semver_16-0.41.0-1PGDG.rhel9.6.x86_64.rpm pgdg 0.41.0 27.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/semver_16-0.41.0-1PGDG.rhel9.6.x86_64.rpm
+@ el9.x86_64 16 semver_16 semver_16-0.32.1-1PGDG.rhel9.x86_64.rpm pgdg 0.32.1 26.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/semver_16-0.32.1-1PGDG.rhel9.x86_64.rpm
 @ el9.aarch64 16 semver_16 semver_16-0.41.0-1PIGSTY.el9.aarch64.rpm pigsty 0.41.0 26.6KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/semver_16-0.41.0-1PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 16 semver_16 semver_16-0.41.0-1PGDG.rhel9.8.aarch64.rpm pgdg 0.41.0 26.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/semver_16-0.41.0-1PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 16 semver_16 semver_16-0.41.0-1PGDG.rhel9.7.aarch64.rpm pgdg 0.41.0 26.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/semver_16-0.41.0-1PGDG.rhel9.7.aarch64.rpm
+@ el9.aarch64 16 semver_16 semver_16-0.41.0-1PGDG.rhel9.6.aarch64.rpm pgdg 0.41.0 26.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/semver_16-0.41.0-1PGDG.rhel9.6.aarch64.rpm
+@ el9.aarch64 16 semver_16 semver_16-0.32.1-1PGDG.rhel9.aarch64.rpm pgdg 0.32.1 25.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/semver_16-0.32.1-1PGDG.rhel9.aarch64.rpm
 @ el10.x86_64 16 semver_16 semver_16-0.41.0-1PIGSTY.el10.x86_64.rpm pigsty 0.41.0 26.9KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/semver_16-0.41.0-1PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 16 semver_16 semver_16-0.41.0-1PGDG.rhel10.2.x86_64.rpm pgdg 0.41.0 27.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/semver_16-0.41.0-1PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 16 semver_16 semver_16-0.41.0-1PGDG.rhel10.1.x86_64.rpm pgdg 0.41.0 27.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/semver_16-0.41.0-1PGDG.rhel10.1.x86_64.rpm
+@ el10.x86_64 16 semver_16 semver_16-0.41.0-1PGDG.rhel10.0.x86_64.rpm pgdg 0.41.0 27.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/semver_16-0.41.0-1PGDG.rhel10.0.x86_64.rpm
+@ el10.x86_64 16 semver_16 semver_16-0.40.0-1PGDG.rhel10.x86_64.rpm pgdg 0.40.0 27.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/semver_16-0.40.0-1PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 16 semver_16 semver_16-0.41.0-1PIGSTY.el10.aarch64.rpm pigsty 0.41.0 27.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/semver_16-0.41.0-1PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 16 semver_16 semver_16-0.41.0-1PGDG.rhel10.2.aarch64.rpm pgdg 0.41.0 27.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/semver_16-0.41.0-1PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 16 semver_16 semver_16-0.41.0-1PGDG.rhel10.1.aarch64.rpm pgdg 0.41.0 27.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/semver_16-0.41.0-1PGDG.rhel10.1.aarch64.rpm
+@ el10.aarch64 16 semver_16 semver_16-0.41.0-1PGDG.rhel10.0.aarch64.rpm pgdg 0.41.0 27.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/semver_16-0.41.0-1PGDG.rhel10.0.aarch64.rpm
+@ el10.aarch64 16 semver_16 semver_16-0.40.0-1PGDG.rhel10.aarch64.rpm pgdg 0.40.0 27.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/semver_16-0.40.0-1PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 16 postgresql-16-semver postgresql-16-semver_0.41.0-1.pgdg12+1_amd64.deb pgdg 0.41.0 38.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-16-semver_0.41.0-1.pgdg12+1_amd64.deb
 @ d12.aarch64 16 postgresql-16-semver postgresql-16-semver_0.41.0-1.pgdg12+1_arm64.deb pgdg 0.41.0 38.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-16-semver_0.41.0-1.pgdg12+1_arm64.deb
 @ d13.x86_64 16 postgresql-16-semver postgresql-16-semver_0.41.0-1.pgdg13+1_amd64.deb pgdg 0.41.0 38.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-16-semver_0.41.0-1.pgdg13+1_amd64.deb
@@ -149,12 +185,27 @@ weight: 3510
 @ el8.aarch64 15 semver_15 semver_15-0.32.0-1.rhel8.aarch64.rpm pgdg 0.32.0 41.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/semver_15-0.32.0-1.rhel8.aarch64.rpm
 @ el9.x86_64 15 semver_15 semver_15-0.41.0-1PIGSTY.el9.x86_64.rpm pigsty 0.41.0 27.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/semver_15-0.41.0-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 15 semver_15 semver_15-0.41.0-1PGDG.rhel9.8.x86_64.rpm pgdg 0.41.0 27.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/semver_15-0.41.0-1PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 15 semver_15 semver_15-0.41.0-1PGDG.rhel9.7.x86_64.rpm pgdg 0.41.0 27.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/semver_15-0.41.0-1PGDG.rhel9.7.x86_64.rpm
+@ el9.x86_64 15 semver_15 semver_15-0.41.0-1PGDG.rhel9.6.x86_64.rpm pgdg 0.41.0 27.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/semver_15-0.41.0-1PGDG.rhel9.6.x86_64.rpm
+@ el9.x86_64 15 semver_15 semver_15-0.32.1-1PGDG.rhel9.x86_64.rpm pgdg 0.32.1 26.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/semver_15-0.32.1-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 15 semver_15 semver_15-0.32.0-1.rhel9.x86_64.rpm pgdg 0.32.0 42.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/semver_15-0.32.0-1.rhel9.x86_64.rpm
+@ el9.x86_64 15 semver_15 semver_15-0.31.2-1.rhel9.x86_64.rpm pgdg 0.31.2 40.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/semver_15-0.31.2-1.rhel9.x86_64.rpm
 @ el9.aarch64 15 semver_15 semver_15-0.41.0-1PIGSTY.el9.aarch64.rpm pigsty 0.41.0 27.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/semver_15-0.41.0-1PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 15 semver_15 semver_15-0.41.0-1PGDG.rhel9.8.aarch64.rpm pgdg 0.41.0 27.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/semver_15-0.41.0-1PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 15 semver_15 semver_15-0.41.0-1PGDG.rhel9.7.aarch64.rpm pgdg 0.41.0 27.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/semver_15-0.41.0-1PGDG.rhel9.7.aarch64.rpm
+@ el9.aarch64 15 semver_15 semver_15-0.41.0-1PGDG.rhel9.6.aarch64.rpm pgdg 0.41.0 27.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/semver_15-0.41.0-1PGDG.rhel9.6.aarch64.rpm
+@ el9.aarch64 15 semver_15 semver_15-0.32.1-1PGDG.rhel9.aarch64.rpm pgdg 0.32.1 26.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/semver_15-0.32.1-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 15 semver_15 semver_15-0.32.0-1.rhel9.aarch64.rpm pgdg 0.32.0 41.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/semver_15-0.32.0-1.rhel9.aarch64.rpm
 @ el10.x86_64 15 semver_15 semver_15-0.41.0-1PIGSTY.el10.x86_64.rpm pigsty 0.41.0 27.4KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/semver_15-0.41.0-1PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 15 semver_15 semver_15-0.41.0-1PGDG.rhel10.2.x86_64.rpm pgdg 0.41.0 27.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/semver_15-0.41.0-1PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 15 semver_15 semver_15-0.41.0-1PGDG.rhel10.1.x86_64.rpm pgdg 0.41.0 27.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/semver_15-0.41.0-1PGDG.rhel10.1.x86_64.rpm
+@ el10.x86_64 15 semver_15 semver_15-0.41.0-1PGDG.rhel10.0.x86_64.rpm pgdg 0.41.0 28.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/semver_15-0.41.0-1PGDG.rhel10.0.x86_64.rpm
+@ el10.x86_64 15 semver_15 semver_15-0.40.0-1PGDG.rhel10.x86_64.rpm pgdg 0.40.0 27.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/semver_15-0.40.0-1PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 15 semver_15 semver_15-0.41.0-1PIGSTY.el10.aarch64.rpm pigsty 0.41.0 27.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/semver_15-0.41.0-1PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 15 semver_15 semver_15-0.41.0-1PGDG.rhel10.2.aarch64.rpm pgdg 0.41.0 27.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/semver_15-0.41.0-1PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 15 semver_15 semver_15-0.41.0-1PGDG.rhel10.1.aarch64.rpm pgdg 0.41.0 27.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/semver_15-0.41.0-1PGDG.rhel10.1.aarch64.rpm
+@ el10.aarch64 15 semver_15 semver_15-0.41.0-1PGDG.rhel10.0.aarch64.rpm pgdg 0.41.0 27.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/semver_15-0.41.0-1PGDG.rhel10.0.aarch64.rpm
+@ el10.aarch64 15 semver_15 semver_15-0.40.0-1PGDG.rhel10.aarch64.rpm pgdg 0.40.0 27.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/semver_15-0.40.0-1PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 15 postgresql-15-semver postgresql-15-semver_0.41.0-1.pgdg12+1_amd64.deb pgdg 0.41.0 38.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-15-semver_0.41.0-1.pgdg12+1_amd64.deb
 @ d12.aarch64 15 postgresql-15-semver postgresql-15-semver_0.41.0-1.pgdg12+1_arm64.deb pgdg 0.41.0 38.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-15-semver_0.41.0-1.pgdg12+1_arm64.deb
 @ d13.x86_64 15 postgresql-15-semver postgresql-15-semver_0.41.0-1.pgdg13+1_amd64.deb pgdg 0.41.0 38.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-15-semver_0.41.0-1.pgdg13+1_amd64.deb
@@ -177,12 +228,26 @@ weight: 3510
 @ el8.aarch64 14 semver_14 semver_14-0.32.0-1.rhel8.aarch64.rpm pgdg 0.32.0 41.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/semver_14-0.32.0-1.rhel8.aarch64.rpm
 @ el9.x86_64 14 semver_14 semver_14-0.41.0-1PIGSTY.el9.x86_64.rpm pigsty 0.41.0 27.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/semver_14-0.41.0-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 14 semver_14 semver_14-0.41.0-1PGDG.rhel9.8.x86_64.rpm pgdg 0.41.0 27.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/semver_14-0.41.0-1PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 14 semver_14 semver_14-0.41.0-1PGDG.rhel9.7.x86_64.rpm pgdg 0.41.0 27.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/semver_14-0.41.0-1PGDG.rhel9.7.x86_64.rpm
+@ el9.x86_64 14 semver_14 semver_14-0.41.0-1PGDG.rhel9.6.x86_64.rpm pgdg 0.41.0 27.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/semver_14-0.41.0-1PGDG.rhel9.6.x86_64.rpm
+@ el9.x86_64 14 semver_14 semver_14-0.32.1-1PGDG.rhel9.x86_64.rpm pgdg 0.32.1 26.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/semver_14-0.32.1-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 14 semver_14 semver_14-0.32.0-1.rhel9.x86_64.rpm pgdg 0.32.0 42.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/semver_14-0.32.0-1.rhel9.x86_64.rpm
 @ el9.aarch64 14 semver_14 semver_14-0.41.0-1PIGSTY.el9.aarch64.rpm pigsty 0.41.0 27.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/semver_14-0.41.0-1PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 14 semver_14 semver_14-0.41.0-1PGDG.rhel9.8.aarch64.rpm pgdg 0.41.0 27.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/semver_14-0.41.0-1PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 14 semver_14 semver_14-0.41.0-1PGDG.rhel9.7.aarch64.rpm pgdg 0.41.0 27.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/semver_14-0.41.0-1PGDG.rhel9.7.aarch64.rpm
+@ el9.aarch64 14 semver_14 semver_14-0.41.0-1PGDG.rhel9.6.aarch64.rpm pgdg 0.41.0 27.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/semver_14-0.41.0-1PGDG.rhel9.6.aarch64.rpm
+@ el9.aarch64 14 semver_14 semver_14-0.32.1-1PGDG.rhel9.aarch64.rpm pgdg 0.32.1 26.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/semver_14-0.32.1-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 14 semver_14 semver_14-0.32.0-1.rhel9.aarch64.rpm pgdg 0.32.0 41.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/semver_14-0.32.0-1.rhel9.aarch64.rpm
 @ el10.x86_64 14 semver_14 semver_14-0.41.0-1PIGSTY.el10.x86_64.rpm pigsty 0.41.0 27.4KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/semver_14-0.41.0-1PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 14 semver_14 semver_14-0.41.0-1PGDG.rhel10.2.x86_64.rpm pgdg 0.41.0 27.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/semver_14-0.41.0-1PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 14 semver_14 semver_14-0.41.0-1PGDG.rhel10.1.x86_64.rpm pgdg 0.41.0 27.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/semver_14-0.41.0-1PGDG.rhel10.1.x86_64.rpm
+@ el10.x86_64 14 semver_14 semver_14-0.41.0-1PGDG.rhel10.0.x86_64.rpm pgdg 0.41.0 28.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/semver_14-0.41.0-1PGDG.rhel10.0.x86_64.rpm
+@ el10.x86_64 14 semver_14 semver_14-0.40.0-1PGDG.rhel10.x86_64.rpm pgdg 0.40.0 27.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/semver_14-0.40.0-1PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 14 semver_14 semver_14-0.41.0-1PIGSTY.el10.aarch64.rpm pigsty 0.41.0 27.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/semver_14-0.41.0-1PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 14 semver_14 semver_14-0.41.0-1PGDG.rhel10.2.aarch64.rpm pgdg 0.41.0 27.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/semver_14-0.41.0-1PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 14 semver_14 semver_14-0.41.0-1PGDG.rhel10.1.aarch64.rpm pgdg 0.41.0 27.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/semver_14-0.41.0-1PGDG.rhel10.1.aarch64.rpm
+@ el10.aarch64 14 semver_14 semver_14-0.41.0-1PGDG.rhel10.0.aarch64.rpm pgdg 0.41.0 27.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/semver_14-0.41.0-1PGDG.rhel10.0.aarch64.rpm
+@ el10.aarch64 14 semver_14 semver_14-0.40.0-1PGDG.rhel10.aarch64.rpm pgdg 0.40.0 27.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/semver_14-0.40.0-1PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 14 postgresql-14-semver postgresql-14-semver_0.41.0-1.pgdg12+1_amd64.deb pgdg 0.41.0 38.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-14-semver_0.41.0-1.pgdg12+1_amd64.deb
 @ d12.aarch64 14 postgresql-14-semver postgresql-14-semver_0.41.0-1.pgdg12+1_arm64.deb pgdg 0.41.0 38.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-14-semver_0.41.0-1.pgdg12+1_arm64.deb
 @ d13.x86_64 14 postgresql-14-semver postgresql-14-semver_0.41.0-1.pgdg13+1_amd64.deb pgdg 0.41.0 38.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-semver/postgresql-14-semver_0.41.0-1.pgdg13+1_amd64.deb

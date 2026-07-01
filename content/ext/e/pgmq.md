@@ -53,10 +53,10 @@ weight: 2660
 |:--:|:--:|:--:|:--:|:--:|:--:|
 | el8.x86_64 | AVAIL PIGSTY 1.11.1 3 | AVAIL PIGSTY 1.11.1 3 | AVAIL PIGSTY 1.11.1 3 | AVAIL PIGSTY 1.11.1 3 | AVAIL PIGSTY 1.11.1 3 |
 | el8.aarch64 | AVAIL PIGSTY 1.11.1 3 | AVAIL PIGSTY 1.11.1 3 | AVAIL PIGSTY 1.11.1 3 | AVAIL PIGSTY 1.11.1 3 | AVAIL PIGSTY 1.11.1 3 |
-| el9.x86_64 | AVAIL PIGSTY 1.11.1 2 | AVAIL PIGSTY 1.11.1 2 | AVAIL PIGSTY 1.11.1 2 | AVAIL PIGSTY 1.11.1 2 | AVAIL PIGSTY 1.11.1 2 |
-| el9.aarch64 | AVAIL PIGSTY 1.11.1 2 | AVAIL PIGSTY 1.11.1 2 | AVAIL PIGSTY 1.11.1 2 | AVAIL PIGSTY 1.11.1 2 | AVAIL PIGSTY 1.11.1 2 |
-| el10.x86_64 | AVAIL PIGSTY 1.11.1 2 | AVAIL PIGSTY 1.11.1 2 | AVAIL PIGSTY 1.11.1 2 | AVAIL PIGSTY 1.11.1 2 | AVAIL PIGSTY 1.11.1 2 |
-| el10.aarch64 | AVAIL PIGSTY 1.11.1 2 | AVAIL PIGSTY 1.11.1 2 | AVAIL PIGSTY 1.11.1 2 | AVAIL PIGSTY 1.11.1 2 | AVAIL PIGSTY 1.11.1 2 |
+| el9.x86_64 | AVAIL PIGSTY 1.11.1 6 | AVAIL PIGSTY 1.11.1 6 | AVAIL PIGSTY 1.11.1 6 | AVAIL PIGSTY 1.11.1 6 | AVAIL PIGSTY 1.11.1 6 |
+| el9.aarch64 | AVAIL PIGSTY 1.11.1 6 | AVAIL PIGSTY 1.11.1 6 | AVAIL PIGSTY 1.11.1 6 | AVAIL PIGSTY 1.11.1 6 | AVAIL PIGSTY 1.11.1 6 |
+| el10.x86_64 | AVAIL PIGSTY 1.11.1 6 | AVAIL PIGSTY 1.11.1 6 | AVAIL PIGSTY 1.11.1 6 | AVAIL PIGSTY 1.11.1 6 | AVAIL PIGSTY 1.11.1 6 |
+| el10.aarch64 | AVAIL PIGSTY 1.11.1 6 | AVAIL PIGSTY 1.11.1 6 | AVAIL PIGSTY 1.11.1 6 | AVAIL PIGSTY 1.11.1 6 | AVAIL PIGSTY 1.11.1 6 |
 | d12.x86_64 | AVAIL PIGSTY 1.11.1 1 | AVAIL PIGSTY 1.11.1 1 | AVAIL PIGSTY 1.11.1 1 | AVAIL PIGSTY 1.11.1 1 | AVAIL PIGSTY 1.11.1 1 |
 | d12.aarch64 | AVAIL PIGSTY 1.11.1 1 | AVAIL PIGSTY 1.11.1 1 | AVAIL PIGSTY 1.11.1 1 | AVAIL PIGSTY 1.11.1 1 | AVAIL PIGSTY 1.11.1 1 |
 | d13.x86_64 | AVAIL PIGSTY 1.11.1 1 | AVAIL PIGSTY 1.11.1 1 | AVAIL PIGSTY 1.11.1 1 | AVAIL PIGSTY 1.11.1 1 | AVAIL PIGSTY 1.11.1 1 |
@@ -75,12 +75,28 @@ weight: 2660
 @ el8.aarch64 18 pgmq_18 pgmq_18-1.10.1-1PGDG.rhel8.10.noarch.rpm pgdg 1.10.1 44.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pgmq_18-1.10.1-1PGDG.rhel8.10.noarch.rpm
 @ el9.x86_64 18 pgmq_18 pgmq_18-1.11.1-1PIGSTY.el9.x86_64.rpm pigsty 1.11.1 40.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgmq_18-1.11.1-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 18 pgmq_18 pgmq_18-1.11.1-1PGDG.rhel9.8.noarch.rpm pgdg 1.11.1 52.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pgmq_18-1.11.1-1PGDG.rhel9.8.noarch.rpm
+@ el9.x86_64 18 pgmq_18 pgmq_18-1.11.0-1PGDG.rhel9.7.noarch.rpm pgdg 1.11.0 51.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pgmq_18-1.11.0-1PGDG.rhel9.7.noarch.rpm
+@ el9.x86_64 18 pgmq_18 pgmq_18-1.11.0-1PGDG.rhel9.6.noarch.rpm pgdg 1.11.0 51.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pgmq_18-1.11.0-1PGDG.rhel9.6.noarch.rpm
+@ el9.x86_64 18 pgmq_18 pgmq_18-1.10.1-1PGDG.rhel9.7.noarch.rpm pgdg 1.10.1 42.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pgmq_18-1.10.1-1PGDG.rhel9.7.noarch.rpm
+@ el9.x86_64 18 pgmq_18 pgmq_18-1.10.1-1PGDG.rhel9.6.noarch.rpm pgdg 1.10.1 42.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pgmq_18-1.10.1-1PGDG.rhel9.6.noarch.rpm
 @ el9.aarch64 18 pgmq_18 pgmq_18-1.11.1-1PIGSTY.el9.aarch64.rpm pigsty 1.11.1 40.7KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgmq_18-1.11.1-1PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 18 pgmq_18 pgmq_18-1.11.1-1PGDG.rhel9.8.noarch.rpm pgdg 1.11.1 52.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pgmq_18-1.11.1-1PGDG.rhel9.8.noarch.rpm
+@ el9.aarch64 18 pgmq_18 pgmq_18-1.11.0-1PGDG.rhel9.7.noarch.rpm pgdg 1.11.0 51.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pgmq_18-1.11.0-1PGDG.rhel9.7.noarch.rpm
+@ el9.aarch64 18 pgmq_18 pgmq_18-1.11.0-1PGDG.rhel9.6.noarch.rpm pgdg 1.11.0 51.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pgmq_18-1.11.0-1PGDG.rhel9.6.noarch.rpm
+@ el9.aarch64 18 pgmq_18 pgmq_18-1.10.1-1PGDG.rhel9.7.noarch.rpm pgdg 1.10.1 42.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pgmq_18-1.10.1-1PGDG.rhel9.7.noarch.rpm
+@ el9.aarch64 18 pgmq_18 pgmq_18-1.10.1-1PGDG.rhel9.6.noarch.rpm pgdg 1.10.1 42.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pgmq_18-1.10.1-1PGDG.rhel9.6.noarch.rpm
 @ el10.x86_64 18 pgmq_18 pgmq_18-1.11.1-1PIGSTY.el10.x86_64.rpm pigsty 1.11.1 40.9KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgmq_18-1.11.1-1PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 18 pgmq_18 pgmq_18-1.11.1-1PGDG.rhel10.2.noarch.rpm pgdg 1.11.1 52.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pgmq_18-1.11.1-1PGDG.rhel10.2.noarch.rpm
+@ el10.x86_64 18 pgmq_18 pgmq_18-1.11.0-1PGDG.rhel10.1.noarch.rpm pgdg 1.11.0 51.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pgmq_18-1.11.0-1PGDG.rhel10.1.noarch.rpm
+@ el10.x86_64 18 pgmq_18 pgmq_18-1.11.0-1PGDG.rhel10.0.noarch.rpm pgdg 1.11.0 51.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pgmq_18-1.11.0-1PGDG.rhel10.0.noarch.rpm
+@ el10.x86_64 18 pgmq_18 pgmq_18-1.10.1-1PGDG.rhel10.1.noarch.rpm pgdg 1.10.1 42.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pgmq_18-1.10.1-1PGDG.rhel10.1.noarch.rpm
+@ el10.x86_64 18 pgmq_18 pgmq_18-1.10.1-1PGDG.rhel10.0.noarch.rpm pgdg 1.10.1 43.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pgmq_18-1.10.1-1PGDG.rhel10.0.noarch.rpm
 @ el10.aarch64 18 pgmq_18 pgmq_18-1.11.1-1PIGSTY.el10.aarch64.rpm pigsty 1.11.1 40.8KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgmq_18-1.11.1-1PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 18 pgmq_18 pgmq_18-1.11.1-1PGDG.rhel10.2.noarch.rpm pgdg 1.11.1 52.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pgmq_18-1.11.1-1PGDG.rhel10.2.noarch.rpm
+@ el10.aarch64 18 pgmq_18 pgmq_18-1.11.0-1PGDG.rhel10.1.noarch.rpm pgdg 1.11.0 51.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pgmq_18-1.11.0-1PGDG.rhel10.1.noarch.rpm
+@ el10.aarch64 18 pgmq_18 pgmq_18-1.11.0-1PGDG.rhel10.0.noarch.rpm pgdg 1.11.0 51.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pgmq_18-1.11.0-1PGDG.rhel10.0.noarch.rpm
+@ el10.aarch64 18 pgmq_18 pgmq_18-1.10.1-1PGDG.rhel10.1.noarch.rpm pgdg 1.10.1 42.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pgmq_18-1.10.1-1PGDG.rhel10.1.noarch.rpm
+@ el10.aarch64 18 pgmq_18 pgmq_18-1.10.1-1PGDG.rhel10.0.noarch.rpm pgdg 1.10.1 42.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pgmq_18-1.10.1-1PGDG.rhel10.0.noarch.rpm
 @ d12.x86_64 18 postgresql-18-pgmq postgresql-18-pgmq_1.11.1-1PIGSTY~bookworm_amd64.deb pigsty 1.11.1 26.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgmq/postgresql-18-pgmq_1.11.1-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 18 postgresql-18-pgmq postgresql-18-pgmq_1.11.1-1PIGSTY~bookworm_arm64.deb pigsty 1.11.1 26.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgmq/postgresql-18-pgmq_1.11.1-1PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 18 postgresql-18-pgmq postgresql-18-pgmq_1.11.1-1PIGSTY~trixie_amd64.deb pigsty 1.11.1 26.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgmq/postgresql-18-pgmq_1.11.1-1PIGSTY~trixie_amd64.deb
@@ -99,12 +115,28 @@ weight: 2660
 @ el8.aarch64 17 pgmq_17 pgmq_17-1.10.1-1PGDG.rhel8.10.noarch.rpm pgdg 1.10.1 44.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pgmq_17-1.10.1-1PGDG.rhel8.10.noarch.rpm
 @ el9.x86_64 17 pgmq_17 pgmq_17-1.11.1-1PIGSTY.el9.x86_64.rpm pigsty 1.11.1 40.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgmq_17-1.11.1-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 17 pgmq_17 pgmq_17-1.11.1-1PGDG.rhel9.8.noarch.rpm pgdg 1.11.1 52.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pgmq_17-1.11.1-1PGDG.rhel9.8.noarch.rpm
+@ el9.x86_64 17 pgmq_17 pgmq_17-1.11.0-1PGDG.rhel9.7.noarch.rpm pgdg 1.11.0 51.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pgmq_17-1.11.0-1PGDG.rhel9.7.noarch.rpm
+@ el9.x86_64 17 pgmq_17 pgmq_17-1.11.0-1PGDG.rhel9.6.noarch.rpm pgdg 1.11.0 51.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pgmq_17-1.11.0-1PGDG.rhel9.6.noarch.rpm
+@ el9.x86_64 17 pgmq_17 pgmq_17-1.10.1-1PGDG.rhel9.7.noarch.rpm pgdg 1.10.1 42.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pgmq_17-1.10.1-1PGDG.rhel9.7.noarch.rpm
+@ el9.x86_64 17 pgmq_17 pgmq_17-1.10.1-1PGDG.rhel9.6.noarch.rpm pgdg 1.10.1 42.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pgmq_17-1.10.1-1PGDG.rhel9.6.noarch.rpm
 @ el9.aarch64 17 pgmq_17 pgmq_17-1.11.1-1PIGSTY.el9.aarch64.rpm pigsty 1.11.1 40.7KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgmq_17-1.11.1-1PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 17 pgmq_17 pgmq_17-1.11.1-1PGDG.rhel9.8.noarch.rpm pgdg 1.11.1 52.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pgmq_17-1.11.1-1PGDG.rhel9.8.noarch.rpm
+@ el9.aarch64 17 pgmq_17 pgmq_17-1.11.0-1PGDG.rhel9.7.noarch.rpm pgdg 1.11.0 51.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pgmq_17-1.11.0-1PGDG.rhel9.7.noarch.rpm
+@ el9.aarch64 17 pgmq_17 pgmq_17-1.11.0-1PGDG.rhel9.6.noarch.rpm pgdg 1.11.0 51.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pgmq_17-1.11.0-1PGDG.rhel9.6.noarch.rpm
+@ el9.aarch64 17 pgmq_17 pgmq_17-1.10.1-1PGDG.rhel9.7.noarch.rpm pgdg 1.10.1 42.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pgmq_17-1.10.1-1PGDG.rhel9.7.noarch.rpm
+@ el9.aarch64 17 pgmq_17 pgmq_17-1.10.1-1PGDG.rhel9.6.noarch.rpm pgdg 1.10.1 42.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pgmq_17-1.10.1-1PGDG.rhel9.6.noarch.rpm
 @ el10.x86_64 17 pgmq_17 pgmq_17-1.11.1-1PIGSTY.el10.x86_64.rpm pigsty 1.11.1 40.9KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgmq_17-1.11.1-1PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 17 pgmq_17 pgmq_17-1.11.1-1PGDG.rhel10.2.noarch.rpm pgdg 1.11.1 52.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pgmq_17-1.11.1-1PGDG.rhel10.2.noarch.rpm
+@ el10.x86_64 17 pgmq_17 pgmq_17-1.11.0-1PGDG.rhel10.1.noarch.rpm pgdg 1.11.0 51.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pgmq_17-1.11.0-1PGDG.rhel10.1.noarch.rpm
+@ el10.x86_64 17 pgmq_17 pgmq_17-1.11.0-1PGDG.rhel10.0.noarch.rpm pgdg 1.11.0 51.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pgmq_17-1.11.0-1PGDG.rhel10.0.noarch.rpm
+@ el10.x86_64 17 pgmq_17 pgmq_17-1.10.1-1PGDG.rhel10.1.noarch.rpm pgdg 1.10.1 42.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pgmq_17-1.10.1-1PGDG.rhel10.1.noarch.rpm
+@ el10.x86_64 17 pgmq_17 pgmq_17-1.10.1-1PGDG.rhel10.0.noarch.rpm pgdg 1.10.1 43.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pgmq_17-1.10.1-1PGDG.rhel10.0.noarch.rpm
 @ el10.aarch64 17 pgmq_17 pgmq_17-1.11.1-1PIGSTY.el10.aarch64.rpm pigsty 1.11.1 40.8KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgmq_17-1.11.1-1PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 17 pgmq_17 pgmq_17-1.11.1-1PGDG.rhel10.2.noarch.rpm pgdg 1.11.1 52.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pgmq_17-1.11.1-1PGDG.rhel10.2.noarch.rpm
+@ el10.aarch64 17 pgmq_17 pgmq_17-1.11.0-1PGDG.rhel10.1.noarch.rpm pgdg 1.11.0 51.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pgmq_17-1.11.0-1PGDG.rhel10.1.noarch.rpm
+@ el10.aarch64 17 pgmq_17 pgmq_17-1.11.0-1PGDG.rhel10.0.noarch.rpm pgdg 1.11.0 51.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pgmq_17-1.11.0-1PGDG.rhel10.0.noarch.rpm
+@ el10.aarch64 17 pgmq_17 pgmq_17-1.10.1-1PGDG.rhel10.1.noarch.rpm pgdg 1.10.1 42.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pgmq_17-1.10.1-1PGDG.rhel10.1.noarch.rpm
+@ el10.aarch64 17 pgmq_17 pgmq_17-1.10.1-1PGDG.rhel10.0.noarch.rpm pgdg 1.10.1 42.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pgmq_17-1.10.1-1PGDG.rhel10.0.noarch.rpm
 @ d12.x86_64 17 postgresql-17-pgmq postgresql-17-pgmq_1.11.1-1PIGSTY~bookworm_amd64.deb pigsty 1.11.1 26.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgmq/postgresql-17-pgmq_1.11.1-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 17 postgresql-17-pgmq postgresql-17-pgmq_1.11.1-1PIGSTY~bookworm_arm64.deb pigsty 1.11.1 26.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgmq/postgresql-17-pgmq_1.11.1-1PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 17 postgresql-17-pgmq postgresql-17-pgmq_1.11.1-1PIGSTY~trixie_amd64.deb pigsty 1.11.1 26.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgmq/postgresql-17-pgmq_1.11.1-1PIGSTY~trixie_amd64.deb
@@ -123,12 +155,28 @@ weight: 2660
 @ el8.aarch64 16 pgmq_16 pgmq_16-1.10.1-1PGDG.rhel8.10.noarch.rpm pgdg 1.10.1 44.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pgmq_16-1.10.1-1PGDG.rhel8.10.noarch.rpm
 @ el9.x86_64 16 pgmq_16 pgmq_16-1.11.1-1PIGSTY.el9.x86_64.rpm pigsty 1.11.1 40.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgmq_16-1.11.1-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 16 pgmq_16 pgmq_16-1.11.1-1PGDG.rhel9.8.noarch.rpm pgdg 1.11.1 52.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pgmq_16-1.11.1-1PGDG.rhel9.8.noarch.rpm
+@ el9.x86_64 16 pgmq_16 pgmq_16-1.11.0-1PGDG.rhel9.7.noarch.rpm pgdg 1.11.0 51.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pgmq_16-1.11.0-1PGDG.rhel9.7.noarch.rpm
+@ el9.x86_64 16 pgmq_16 pgmq_16-1.11.0-1PGDG.rhel9.6.noarch.rpm pgdg 1.11.0 51.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pgmq_16-1.11.0-1PGDG.rhel9.6.noarch.rpm
+@ el9.x86_64 16 pgmq_16 pgmq_16-1.10.1-1PGDG.rhel9.7.noarch.rpm pgdg 1.10.1 42.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pgmq_16-1.10.1-1PGDG.rhel9.7.noarch.rpm
+@ el9.x86_64 16 pgmq_16 pgmq_16-1.10.1-1PGDG.rhel9.6.noarch.rpm pgdg 1.10.1 42.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pgmq_16-1.10.1-1PGDG.rhel9.6.noarch.rpm
 @ el9.aarch64 16 pgmq_16 pgmq_16-1.11.1-1PIGSTY.el9.aarch64.rpm pigsty 1.11.1 40.7KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgmq_16-1.11.1-1PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 16 pgmq_16 pgmq_16-1.11.1-1PGDG.rhel9.8.noarch.rpm pgdg 1.11.1 52.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pgmq_16-1.11.1-1PGDG.rhel9.8.noarch.rpm
+@ el9.aarch64 16 pgmq_16 pgmq_16-1.11.0-1PGDG.rhel9.7.noarch.rpm pgdg 1.11.0 51.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pgmq_16-1.11.0-1PGDG.rhel9.7.noarch.rpm
+@ el9.aarch64 16 pgmq_16 pgmq_16-1.11.0-1PGDG.rhel9.6.noarch.rpm pgdg 1.11.0 51.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pgmq_16-1.11.0-1PGDG.rhel9.6.noarch.rpm
+@ el9.aarch64 16 pgmq_16 pgmq_16-1.10.1-1PGDG.rhel9.7.noarch.rpm pgdg 1.10.1 42.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pgmq_16-1.10.1-1PGDG.rhel9.7.noarch.rpm
+@ el9.aarch64 16 pgmq_16 pgmq_16-1.10.1-1PGDG.rhel9.6.noarch.rpm pgdg 1.10.1 42.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pgmq_16-1.10.1-1PGDG.rhel9.6.noarch.rpm
 @ el10.x86_64 16 pgmq_16 pgmq_16-1.11.1-1PIGSTY.el10.x86_64.rpm pigsty 1.11.1 40.9KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgmq_16-1.11.1-1PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 16 pgmq_16 pgmq_16-1.11.1-1PGDG.rhel10.2.noarch.rpm pgdg 1.11.1 52.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pgmq_16-1.11.1-1PGDG.rhel10.2.noarch.rpm
+@ el10.x86_64 16 pgmq_16 pgmq_16-1.11.0-1PGDG.rhel10.1.noarch.rpm pgdg 1.11.0 51.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pgmq_16-1.11.0-1PGDG.rhel10.1.noarch.rpm
+@ el10.x86_64 16 pgmq_16 pgmq_16-1.11.0-1PGDG.rhel10.0.noarch.rpm pgdg 1.11.0 51.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pgmq_16-1.11.0-1PGDG.rhel10.0.noarch.rpm
+@ el10.x86_64 16 pgmq_16 pgmq_16-1.10.1-1PGDG.rhel10.1.noarch.rpm pgdg 1.10.1 42.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pgmq_16-1.10.1-1PGDG.rhel10.1.noarch.rpm
+@ el10.x86_64 16 pgmq_16 pgmq_16-1.10.1-1PGDG.rhel10.0.noarch.rpm pgdg 1.10.1 43.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pgmq_16-1.10.1-1PGDG.rhel10.0.noarch.rpm
 @ el10.aarch64 16 pgmq_16 pgmq_16-1.11.1-1PIGSTY.el10.aarch64.rpm pigsty 1.11.1 40.8KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgmq_16-1.11.1-1PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 16 pgmq_16 pgmq_16-1.11.1-1PGDG.rhel10.2.noarch.rpm pgdg 1.11.1 52.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pgmq_16-1.11.1-1PGDG.rhel10.2.noarch.rpm
+@ el10.aarch64 16 pgmq_16 pgmq_16-1.11.0-1PGDG.rhel10.1.noarch.rpm pgdg 1.11.0 51.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pgmq_16-1.11.0-1PGDG.rhel10.1.noarch.rpm
+@ el10.aarch64 16 pgmq_16 pgmq_16-1.11.0-1PGDG.rhel10.0.noarch.rpm pgdg 1.11.0 51.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pgmq_16-1.11.0-1PGDG.rhel10.0.noarch.rpm
+@ el10.aarch64 16 pgmq_16 pgmq_16-1.10.1-1PGDG.rhel10.1.noarch.rpm pgdg 1.10.1 42.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pgmq_16-1.10.1-1PGDG.rhel10.1.noarch.rpm
+@ el10.aarch64 16 pgmq_16 pgmq_16-1.10.1-1PGDG.rhel10.0.noarch.rpm pgdg 1.10.1 42.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pgmq_16-1.10.1-1PGDG.rhel10.0.noarch.rpm
 @ d12.x86_64 16 postgresql-16-pgmq postgresql-16-pgmq_1.11.1-1PIGSTY~bookworm_amd64.deb pigsty 1.11.1 26.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgmq/postgresql-16-pgmq_1.11.1-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 16 postgresql-16-pgmq postgresql-16-pgmq_1.11.1-1PIGSTY~bookworm_arm64.deb pigsty 1.11.1 26.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgmq/postgresql-16-pgmq_1.11.1-1PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 16 postgresql-16-pgmq postgresql-16-pgmq_1.11.1-1PIGSTY~trixie_amd64.deb pigsty 1.11.1 26.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgmq/postgresql-16-pgmq_1.11.1-1PIGSTY~trixie_amd64.deb
@@ -147,12 +195,28 @@ weight: 2660
 @ el8.aarch64 15 pgmq_15 pgmq_15-1.10.1-1PGDG.rhel8.10.noarch.rpm pgdg 1.10.1 44.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pgmq_15-1.10.1-1PGDG.rhel8.10.noarch.rpm
 @ el9.x86_64 15 pgmq_15 pgmq_15-1.11.1-1PIGSTY.el9.x86_64.rpm pigsty 1.11.1 40.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgmq_15-1.11.1-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 15 pgmq_15 pgmq_15-1.11.1-1PGDG.rhel9.8.noarch.rpm pgdg 1.11.1 52.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pgmq_15-1.11.1-1PGDG.rhel9.8.noarch.rpm
+@ el9.x86_64 15 pgmq_15 pgmq_15-1.11.0-1PGDG.rhel9.7.noarch.rpm pgdg 1.11.0 51.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pgmq_15-1.11.0-1PGDG.rhel9.7.noarch.rpm
+@ el9.x86_64 15 pgmq_15 pgmq_15-1.11.0-1PGDG.rhel9.6.noarch.rpm pgdg 1.11.0 51.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pgmq_15-1.11.0-1PGDG.rhel9.6.noarch.rpm
+@ el9.x86_64 15 pgmq_15 pgmq_15-1.10.1-1PGDG.rhel9.7.noarch.rpm pgdg 1.10.1 42.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pgmq_15-1.10.1-1PGDG.rhel9.7.noarch.rpm
+@ el9.x86_64 15 pgmq_15 pgmq_15-1.10.1-1PGDG.rhel9.6.noarch.rpm pgdg 1.10.1 42.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pgmq_15-1.10.1-1PGDG.rhel9.6.noarch.rpm
 @ el9.aarch64 15 pgmq_15 pgmq_15-1.11.1-1PIGSTY.el9.aarch64.rpm pigsty 1.11.1 40.7KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgmq_15-1.11.1-1PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 15 pgmq_15 pgmq_15-1.11.1-1PGDG.rhel9.8.noarch.rpm pgdg 1.11.1 52.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pgmq_15-1.11.1-1PGDG.rhel9.8.noarch.rpm
+@ el9.aarch64 15 pgmq_15 pgmq_15-1.11.0-1PGDG.rhel9.7.noarch.rpm pgdg 1.11.0 51.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pgmq_15-1.11.0-1PGDG.rhel9.7.noarch.rpm
+@ el9.aarch64 15 pgmq_15 pgmq_15-1.11.0-1PGDG.rhel9.6.noarch.rpm pgdg 1.11.0 51.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pgmq_15-1.11.0-1PGDG.rhel9.6.noarch.rpm
+@ el9.aarch64 15 pgmq_15 pgmq_15-1.10.1-1PGDG.rhel9.7.noarch.rpm pgdg 1.10.1 42.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pgmq_15-1.10.1-1PGDG.rhel9.7.noarch.rpm
+@ el9.aarch64 15 pgmq_15 pgmq_15-1.10.1-1PGDG.rhel9.6.noarch.rpm pgdg 1.10.1 42.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pgmq_15-1.10.1-1PGDG.rhel9.6.noarch.rpm
 @ el10.x86_64 15 pgmq_15 pgmq_15-1.11.1-1PIGSTY.el10.x86_64.rpm pigsty 1.11.1 40.9KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgmq_15-1.11.1-1PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 15 pgmq_15 pgmq_15-1.11.1-1PGDG.rhel10.2.noarch.rpm pgdg 1.11.1 52.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pgmq_15-1.11.1-1PGDG.rhel10.2.noarch.rpm
+@ el10.x86_64 15 pgmq_15 pgmq_15-1.11.0-1PGDG.rhel10.1.noarch.rpm pgdg 1.11.0 51.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pgmq_15-1.11.0-1PGDG.rhel10.1.noarch.rpm
+@ el10.x86_64 15 pgmq_15 pgmq_15-1.11.0-1PGDG.rhel10.0.noarch.rpm pgdg 1.11.0 51.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pgmq_15-1.11.0-1PGDG.rhel10.0.noarch.rpm
+@ el10.x86_64 15 pgmq_15 pgmq_15-1.10.1-1PGDG.rhel10.1.noarch.rpm pgdg 1.10.1 42.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pgmq_15-1.10.1-1PGDG.rhel10.1.noarch.rpm
+@ el10.x86_64 15 pgmq_15 pgmq_15-1.10.1-1PGDG.rhel10.0.noarch.rpm pgdg 1.10.1 43.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pgmq_15-1.10.1-1PGDG.rhel10.0.noarch.rpm
 @ el10.aarch64 15 pgmq_15 pgmq_15-1.11.1-1PIGSTY.el10.aarch64.rpm pigsty 1.11.1 40.8KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgmq_15-1.11.1-1PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 15 pgmq_15 pgmq_15-1.11.1-1PGDG.rhel10.2.noarch.rpm pgdg 1.11.1 52.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pgmq_15-1.11.1-1PGDG.rhel10.2.noarch.rpm
+@ el10.aarch64 15 pgmq_15 pgmq_15-1.11.0-1PGDG.rhel10.1.noarch.rpm pgdg 1.11.0 51.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pgmq_15-1.11.0-1PGDG.rhel10.1.noarch.rpm
+@ el10.aarch64 15 pgmq_15 pgmq_15-1.11.0-1PGDG.rhel10.0.noarch.rpm pgdg 1.11.0 51.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pgmq_15-1.11.0-1PGDG.rhel10.0.noarch.rpm
+@ el10.aarch64 15 pgmq_15 pgmq_15-1.10.1-1PGDG.rhel10.1.noarch.rpm pgdg 1.10.1 42.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pgmq_15-1.10.1-1PGDG.rhel10.1.noarch.rpm
+@ el10.aarch64 15 pgmq_15 pgmq_15-1.10.1-1PGDG.rhel10.0.noarch.rpm pgdg 1.10.1 42.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pgmq_15-1.10.1-1PGDG.rhel10.0.noarch.rpm
 @ d12.x86_64 15 postgresql-15-pgmq postgresql-15-pgmq_1.11.1-1PIGSTY~bookworm_amd64.deb pigsty 1.11.1 26.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgmq/postgresql-15-pgmq_1.11.1-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 15 postgresql-15-pgmq postgresql-15-pgmq_1.11.1-1PIGSTY~bookworm_arm64.deb pigsty 1.11.1 26.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgmq/postgresql-15-pgmq_1.11.1-1PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 15 postgresql-15-pgmq postgresql-15-pgmq_1.11.1-1PIGSTY~trixie_amd64.deb pigsty 1.11.1 26.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgmq/postgresql-15-pgmq_1.11.1-1PIGSTY~trixie_amd64.deb
@@ -171,12 +235,28 @@ weight: 2660
 @ el8.aarch64 14 pgmq_14 pgmq_14-1.10.1-1PGDG.rhel8.10.noarch.rpm pgdg 1.10.1 44.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pgmq_14-1.10.1-1PGDG.rhel8.10.noarch.rpm
 @ el9.x86_64 14 pgmq_14 pgmq_14-1.11.1-1PIGSTY.el9.x86_64.rpm pigsty 1.11.1 40.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgmq_14-1.11.1-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 14 pgmq_14 pgmq_14-1.11.1-1PGDG.rhel9.8.noarch.rpm pgdg 1.11.1 52.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pgmq_14-1.11.1-1PGDG.rhel9.8.noarch.rpm
+@ el9.x86_64 14 pgmq_14 pgmq_14-1.11.0-1PGDG.rhel9.7.noarch.rpm pgdg 1.11.0 51.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pgmq_14-1.11.0-1PGDG.rhel9.7.noarch.rpm
+@ el9.x86_64 14 pgmq_14 pgmq_14-1.11.0-1PGDG.rhel9.6.noarch.rpm pgdg 1.11.0 51.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pgmq_14-1.11.0-1PGDG.rhel9.6.noarch.rpm
+@ el9.x86_64 14 pgmq_14 pgmq_14-1.10.1-1PGDG.rhel9.7.noarch.rpm pgdg 1.10.1 42.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pgmq_14-1.10.1-1PGDG.rhel9.7.noarch.rpm
+@ el9.x86_64 14 pgmq_14 pgmq_14-1.10.1-1PGDG.rhel9.6.noarch.rpm pgdg 1.10.1 42.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pgmq_14-1.10.1-1PGDG.rhel9.6.noarch.rpm
 @ el9.aarch64 14 pgmq_14 pgmq_14-1.11.1-1PIGSTY.el9.aarch64.rpm pigsty 1.11.1 40.7KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgmq_14-1.11.1-1PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 14 pgmq_14 pgmq_14-1.11.1-1PGDG.rhel9.8.noarch.rpm pgdg 1.11.1 52.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pgmq_14-1.11.1-1PGDG.rhel9.8.noarch.rpm
+@ el9.aarch64 14 pgmq_14 pgmq_14-1.11.0-1PGDG.rhel9.7.noarch.rpm pgdg 1.11.0 51.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pgmq_14-1.11.0-1PGDG.rhel9.7.noarch.rpm
+@ el9.aarch64 14 pgmq_14 pgmq_14-1.11.0-1PGDG.rhel9.6.noarch.rpm pgdg 1.11.0 51.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pgmq_14-1.11.0-1PGDG.rhel9.6.noarch.rpm
+@ el9.aarch64 14 pgmq_14 pgmq_14-1.10.1-1PGDG.rhel9.7.noarch.rpm pgdg 1.10.1 42.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pgmq_14-1.10.1-1PGDG.rhel9.7.noarch.rpm
+@ el9.aarch64 14 pgmq_14 pgmq_14-1.10.1-1PGDG.rhel9.6.noarch.rpm pgdg 1.10.1 42.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pgmq_14-1.10.1-1PGDG.rhel9.6.noarch.rpm
 @ el10.x86_64 14 pgmq_14 pgmq_14-1.11.1-1PIGSTY.el10.x86_64.rpm pigsty 1.11.1 40.9KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgmq_14-1.11.1-1PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 14 pgmq_14 pgmq_14-1.11.1-1PGDG.rhel10.2.noarch.rpm pgdg 1.11.1 52.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pgmq_14-1.11.1-1PGDG.rhel10.2.noarch.rpm
+@ el10.x86_64 14 pgmq_14 pgmq_14-1.11.0-1PGDG.rhel10.1.noarch.rpm pgdg 1.11.0 51.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pgmq_14-1.11.0-1PGDG.rhel10.1.noarch.rpm
+@ el10.x86_64 14 pgmq_14 pgmq_14-1.11.0-1PGDG.rhel10.0.noarch.rpm pgdg 1.11.0 51.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pgmq_14-1.11.0-1PGDG.rhel10.0.noarch.rpm
+@ el10.x86_64 14 pgmq_14 pgmq_14-1.10.1-1PGDG.rhel10.1.noarch.rpm pgdg 1.10.1 42.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pgmq_14-1.10.1-1PGDG.rhel10.1.noarch.rpm
+@ el10.x86_64 14 pgmq_14 pgmq_14-1.10.1-1PGDG.rhel10.0.noarch.rpm pgdg 1.10.1 43.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pgmq_14-1.10.1-1PGDG.rhel10.0.noarch.rpm
 @ el10.aarch64 14 pgmq_14 pgmq_14-1.11.1-1PIGSTY.el10.aarch64.rpm pigsty 1.11.1 40.8KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgmq_14-1.11.1-1PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 14 pgmq_14 pgmq_14-1.11.1-1PGDG.rhel10.2.noarch.rpm pgdg 1.11.1 52.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgmq_14-1.11.1-1PGDG.rhel10.2.noarch.rpm
+@ el10.aarch64 14 pgmq_14 pgmq_14-1.11.0-1PGDG.rhel10.1.noarch.rpm pgdg 1.11.0 51.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgmq_14-1.11.0-1PGDG.rhel10.1.noarch.rpm
+@ el10.aarch64 14 pgmq_14 pgmq_14-1.11.0-1PGDG.rhel10.0.noarch.rpm pgdg 1.11.0 51.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgmq_14-1.11.0-1PGDG.rhel10.0.noarch.rpm
+@ el10.aarch64 14 pgmq_14 pgmq_14-1.10.1-1PGDG.rhel10.1.noarch.rpm pgdg 1.10.1 42.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgmq_14-1.10.1-1PGDG.rhel10.1.noarch.rpm
+@ el10.aarch64 14 pgmq_14 pgmq_14-1.10.1-1PGDG.rhel10.0.noarch.rpm pgdg 1.10.1 42.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgmq_14-1.10.1-1PGDG.rhel10.0.noarch.rpm
 @ d12.x86_64 14 postgresql-14-pgmq postgresql-14-pgmq_1.11.1-1PIGSTY~bookworm_amd64.deb pigsty 1.11.1 26.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgmq/postgresql-14-pgmq_1.11.1-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 14 postgresql-14-pgmq postgresql-14-pgmq_1.11.1-1PIGSTY~bookworm_arm64.deb pigsty 1.11.1 26.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgmq/postgresql-14-pgmq_1.11.1-1PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 14 postgresql-14-pgmq postgresql-14-pgmq_1.11.1-1PIGSTY~trixie_amd64.deb pigsty 1.11.1 26.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgmq/postgresql-14-pgmq_1.11.1-1PIGSTY~trixie_amd64.deb

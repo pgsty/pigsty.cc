@@ -51,11 +51,11 @@ weight: 4010
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
 | el8.x86_64 | AVAIL PIGSTY 1.1.0 2 | AVAIL PIGSTY 1.1.0 2 | AVAIL PIGSTY 1.1.0 2 | AVAIL PIGSTY 1.1.0 2 | AVAIL PIGSTY 1.1.0 2 |
-| el8.aarch64 | AVAIL PIGSTY 1.1.0 2 | AVAIL PIGSTY 1.1.0 3 | AVAIL PIGSTY 1.1.0 3 | AVAIL PIGSTY 1.1.0 3 | AVAIL PIGSTY 1.1.0 3 |
-| el9.x86_64 | AVAIL PIGSTY 1.1.0 2 | AVAIL PIGSTY 1.1.0 2 | AVAIL PIGSTY 1.1.0 2 | AVAIL PIGSTY 1.1.0 2 | AVAIL PIGSTY 1.1.0 2 |
-| el9.aarch64 | AVAIL PIGSTY 1.1.0 2 | AVAIL PIGSTY 1.1.0 3 | AVAIL PIGSTY 1.1.0 3 | AVAIL PIGSTY 1.1.0 3 | AVAIL PIGSTY 1.1.0 3 |
-| el10.x86_64 | AVAIL PIGSTY 1.1.0 2 | AVAIL PIGSTY 1.1.0 2 | AVAIL PIGSTY 1.1.0 2 | AVAIL PIGSTY 1.1.0 2 | AVAIL PIGSTY 1.1.0 2 |
-| el10.aarch64 | AVAIL PIGSTY 1.1.0 2 | AVAIL PIGSTY 1.1.0 2 | AVAIL PIGSTY 1.1.0 2 | AVAIL PIGSTY 1.1.0 2 | AVAIL PIGSTY 1.1.0 2 |
+| el8.aarch64 | AVAIL PIGSTY 1.1.0 2 | AVAIL PIGSTY 1.1.0 2 | AVAIL PIGSTY 1.1.0 2 | AVAIL PIGSTY 1.1.0 2 | AVAIL PIGSTY 1.1.0 2 |
+| el9.x86_64 | AVAIL PIGSTY 1.1.0 3 | AVAIL PIGSTY 1.1.0 3 | AVAIL PIGSTY 1.1.0 3 | AVAIL PIGSTY 1.1.0 3 | AVAIL PIGSTY 1.1.0 3 |
+| el9.aarch64 | AVAIL PIGSTY 1.1.0 5 | AVAIL PIGSTY 1.1.0 5 | AVAIL PIGSTY 1.1.0 5 | AVAIL PIGSTY 1.1.0 5 | AVAIL PIGSTY 1.1.0 5 |
+| el10.x86_64 | AVAIL PIGSTY 1.1.0 3 | AVAIL PIGSTY 1.1.0 3 | AVAIL PIGSTY 1.1.0 3 | AVAIL PIGSTY 1.1.0 3 | AVAIL PIGSTY 1.1.0 3 |
+| el10.aarch64 | AVAIL PIGSTY 1.1.0 3 | AVAIL PIGSTY 1.1.0 3 | AVAIL PIGSTY 1.1.0 3 | AVAIL PIGSTY 1.1.0 3 | AVAIL PIGSTY 1.1.0 3 |
 | d12.x86_64 | AVAIL PIGSTY 1.1.0 1 | AVAIL PIGSTY 1.1.0 1 | AVAIL PIGSTY 1.1.0 1 | AVAIL PIGSTY 1.1.0 1 | AVAIL PIGSTY 1.1.0 1 |
 | d12.aarch64 | AVAIL PIGSTY 1.1.0 1 | AVAIL PIGSTY 1.1.0 1 | AVAIL PIGSTY 1.1.0 1 | AVAIL PIGSTY 1.1.0 1 | AVAIL PIGSTY 1.1.0 1 |
 | d13.x86_64 | AVAIL PIGSTY 1.1.0 1 | AVAIL PIGSTY 1.1.0 1 | AVAIL PIGSTY 1.1.0 1 | AVAIL PIGSTY 1.1.0 1 | AVAIL PIGSTY 1.1.0 1 |
@@ -72,12 +72,18 @@ weight: 4010
 @ el8.aarch64 18 pgsql_gzip_18 pgsql_gzip_18-1.0.0-6PGDG.rhel8.aarch64.rpm pgdg 1.0.0 12.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pgsql_gzip_18-1.0.0-6PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 18 pgsql_gzip_18 pgsql_gzip_18-1.1.0-1PIGSTY.el9.x86_64.rpm pigsty 1.1.0 14.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgsql_gzip_18-1.1.0-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 18 pgsql_gzip_18 pgsql_gzip_18-1.0.0-8PGDG.rhel9.8.x86_64.rpm pgdg 1.0.0 13.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pgsql_gzip_18-1.0.0-8PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 18 pgsql_gzip_18 pgsql_gzip_18-1.0.0-6PGDG.rhel9.x86_64.rpm pgdg 1.0.0 12.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pgsql_gzip_18-1.0.0-6PGDG.rhel9.x86_64.rpm
 @ el9.aarch64 18 pgsql_gzip_18 pgsql_gzip_18-1.1.0-1PIGSTY.el9.aarch64.rpm pigsty 1.1.0 13.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgsql_gzip_18-1.1.0-1PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 18 pgsql_gzip_18 pgsql_gzip_18-1.0.0-8PGDG.rhel9.8.aarch64.rpm pgdg 1.0.0 12.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pgsql_gzip_18-1.0.0-8PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 18 pgsql_gzip_18 pgsql_gzip_18-1.0.0-8PGDG.rhel9.7.aarch64.rpm pgdg 1.0.0 12.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pgsql_gzip_18-1.0.0-8PGDG.rhel9.7.aarch64.rpm
+@ el9.aarch64 18 pgsql_gzip_18 pgsql_gzip_18-1.0.0-8PGDG.rhel9.6.aarch64.rpm pgdg 1.0.0 12.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pgsql_gzip_18-1.0.0-8PGDG.rhel9.6.aarch64.rpm
+@ el9.aarch64 18 pgsql_gzip_18 pgsql_gzip_18-1.0.0-6PGDG.rhel9.aarch64.rpm pgdg 1.0.0 12.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pgsql_gzip_18-1.0.0-6PGDG.rhel9.aarch64.rpm
 @ el10.x86_64 18 pgsql_gzip_18 pgsql_gzip_18-1.1.0-1PIGSTY.el10.x86_64.rpm pigsty 1.1.0 14.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgsql_gzip_18-1.1.0-1PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 18 pgsql_gzip_18 pgsql_gzip_18-1.0.0-8PGDG.rhel10.2.x86_64.rpm pgdg 1.0.0 13.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pgsql_gzip_18-1.0.0-8PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 18 pgsql_gzip_18 pgsql_gzip_18-1.0.0-6PGDG.rhel10.x86_64.rpm pgdg 1.0.0 13.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pgsql_gzip_18-1.0.0-6PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 18 pgsql_gzip_18 pgsql_gzip_18-1.1.0-1PIGSTY.el10.aarch64.rpm pigsty 1.1.0 14.1KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgsql_gzip_18-1.1.0-1PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 18 pgsql_gzip_18 pgsql_gzip_18-1.0.0-8PGDG.rhel10.2.aarch64.rpm pgdg 1.0.0 13.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pgsql_gzip_18-1.0.0-8PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 18 pgsql_gzip_18 pgsql_gzip_18-1.0.0-6PGDG.rhel10.aarch64.rpm pgdg 1.0.0 13.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pgsql_gzip_18-1.0.0-6PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 18 postgresql-18-gzip postgresql-18-gzip_1.1.0-1PIGSTY~bookworm_amd64.deb pigsty 1.1.0 12.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgsql-gzip/postgresql-18-gzip_1.1.0-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 18 postgresql-18-gzip postgresql-18-gzip_1.1.0-1PIGSTY~bookworm_arm64.deb pigsty 1.1.0 12.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgsql-gzip/postgresql-18-gzip_1.1.0-1PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 18 postgresql-18-gzip postgresql-18-gzip_1.1.0-1PIGSTY~trixie_amd64.deb pigsty 1.1.0 12.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgsql-gzip/postgresql-18-gzip_1.1.0-1PIGSTY~trixie_amd64.deb
@@ -91,17 +97,21 @@ weight: 4010
 @ el8.x86_64 17 pgsql_gzip_17 pgsql_gzip_17-1.1.0-1PIGSTY.el8.x86_64.rpm pigsty 1.1.0 14.1KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgsql_gzip_17-1.1.0-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 17 pgsql_gzip_17 pgsql_gzip_17-1.0.0-3PGDG.rhel8.x86_64.rpm pgdg 1.0.0 12.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pgsql_gzip_17-1.0.0-3PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 17 pgsql_gzip_17 pgsql_gzip_17-1.1.0-1PIGSTY.el8.aarch64.rpm pigsty 1.1.0 14.3KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgsql_gzip_17-1.1.0-1PIGSTY.el8.aarch64.rpm
-@ el8.aarch64 17 pgsql_gzip_17 pgsql_gzip_17-1.0.0-9PIGSTY.el8.aarch64.rpm pigsty 1.0.0 13.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgsql_gzip_17-1.0.0-9PIGSTY.el8.aarch64.rpm
 @ el8.aarch64 17 pgsql_gzip_17 pgsql_gzip_17-1.0.0-3PGDG.rhel8.aarch64.rpm pgdg 1.0.0 12.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pgsql_gzip_17-1.0.0-3PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 17 pgsql_gzip_17 pgsql_gzip_17-1.1.0-1PIGSTY.el9.x86_64.rpm pigsty 1.1.0 13.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgsql_gzip_17-1.1.0-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 17 pgsql_gzip_17 pgsql_gzip_17-1.0.0-8PGDG.rhel9.8.x86_64.rpm pgdg 1.0.0 13.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pgsql_gzip_17-1.0.0-8PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 17 pgsql_gzip_17 pgsql_gzip_17-1.0.0-3PGDG.rhel9.x86_64.rpm pgdg 1.0.0 12.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pgsql_gzip_17-1.0.0-3PGDG.rhel9.x86_64.rpm
 @ el9.aarch64 17 pgsql_gzip_17 pgsql_gzip_17-1.1.0-1PIGSTY.el9.aarch64.rpm pigsty 1.1.0 13.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgsql_gzip_17-1.1.0-1PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 17 pgsql_gzip_17 pgsql_gzip_17-1.0.0-8PGDG.rhel9.8.aarch64.rpm pgdg 1.0.0 12.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pgsql_gzip_17-1.0.0-8PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 17 pgsql_gzip_17 pgsql_gzip_17-1.0.0-4PIGSTY.el9.aarch64.rpm pigsty 1.0.0 13.7KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgsql_gzip_17-1.0.0-4PIGSTY.el9.aarch64.rpm
+@ el9.aarch64 17 pgsql_gzip_17 pgsql_gzip_17-1.0.0-8PGDG.rhel9.7.aarch64.rpm pgdg 1.0.0 12.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pgsql_gzip_17-1.0.0-8PGDG.rhel9.7.aarch64.rpm
+@ el9.aarch64 17 pgsql_gzip_17 pgsql_gzip_17-1.0.0-8PGDG.rhel9.6.aarch64.rpm pgdg 1.0.0 12.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pgsql_gzip_17-1.0.0-8PGDG.rhel9.6.aarch64.rpm
+@ el9.aarch64 17 pgsql_gzip_17 pgsql_gzip_17-1.0.0-3PGDG.rhel9.aarch64.rpm pgdg 1.0.0 12.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pgsql_gzip_17-1.0.0-3PGDG.rhel9.aarch64.rpm
 @ el10.x86_64 17 pgsql_gzip_17 pgsql_gzip_17-1.1.0-1PIGSTY.el10.x86_64.rpm pigsty 1.1.0 14.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgsql_gzip_17-1.1.0-1PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 17 pgsql_gzip_17 pgsql_gzip_17-1.0.0-8PGDG.rhel10.2.x86_64.rpm pgdg 1.0.0 13.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pgsql_gzip_17-1.0.0-8PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 17 pgsql_gzip_17 pgsql_gzip_17-1.0.0-6PGDG.rhel10.x86_64.rpm pgdg 1.0.0 13.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pgsql_gzip_17-1.0.0-6PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 17 pgsql_gzip_17 pgsql_gzip_17-1.1.0-1PIGSTY.el10.aarch64.rpm pigsty 1.1.0 14.1KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgsql_gzip_17-1.1.0-1PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 17 pgsql_gzip_17 pgsql_gzip_17-1.0.0-8PGDG.rhel10.2.aarch64.rpm pgdg 1.0.0 13.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pgsql_gzip_17-1.0.0-8PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 17 pgsql_gzip_17 pgsql_gzip_17-1.0.0-6PGDG.rhel10.aarch64.rpm pgdg 1.0.0 13.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pgsql_gzip_17-1.0.0-6PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 17 postgresql-17-gzip postgresql-17-gzip_1.1.0-1PIGSTY~bookworm_amd64.deb pigsty 1.1.0 12.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgsql-gzip/postgresql-17-gzip_1.1.0-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 17 postgresql-17-gzip postgresql-17-gzip_1.1.0-1PIGSTY~bookworm_arm64.deb pigsty 1.1.0 12.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgsql-gzip/postgresql-17-gzip_1.1.0-1PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 17 postgresql-17-gzip postgresql-17-gzip_1.1.0-1PIGSTY~trixie_amd64.deb pigsty 1.1.0 12.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgsql-gzip/postgresql-17-gzip_1.1.0-1PIGSTY~trixie_amd64.deb
@@ -115,17 +125,21 @@ weight: 4010
 @ el8.x86_64 16 pgsql_gzip_16 pgsql_gzip_16-1.1.0-1PIGSTY.el8.x86_64.rpm pigsty 1.1.0 14.1KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgsql_gzip_16-1.1.0-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 16 pgsql_gzip_16 pgsql_gzip_16-1.0.0-2PGDG.rhel8.x86_64.rpm pgdg 1.0.0 12.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pgsql_gzip_16-1.0.0-2PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 16 pgsql_gzip_16 pgsql_gzip_16-1.1.0-1PIGSTY.el8.aarch64.rpm pigsty 1.1.0 14.3KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgsql_gzip_16-1.1.0-1PIGSTY.el8.aarch64.rpm
-@ el8.aarch64 16 pgsql_gzip_16 pgsql_gzip_16-1.0.0-9PIGSTY.el8.aarch64.rpm pigsty 1.0.0 13.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgsql_gzip_16-1.0.0-9PIGSTY.el8.aarch64.rpm
 @ el8.aarch64 16 pgsql_gzip_16 pgsql_gzip_16-1.0.0-1PGDG.rhel8.aarch64.rpm pgdg 1.0.0 12.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pgsql_gzip_16-1.0.0-1PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 16 pgsql_gzip_16 pgsql_gzip_16-1.1.0-1PIGSTY.el9.x86_64.rpm pigsty 1.1.0 14.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgsql_gzip_16-1.1.0-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 16 pgsql_gzip_16 pgsql_gzip_16-1.0.0-8PGDG.rhel9.8.x86_64.rpm pgdg 1.0.0 13.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pgsql_gzip_16-1.0.0-8PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 16 pgsql_gzip_16 pgsql_gzip_16-1.0.0-2PGDG.rhel9.x86_64.rpm pgdg 1.0.0 12.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pgsql_gzip_16-1.0.0-2PGDG.rhel9.x86_64.rpm
 @ el9.aarch64 16 pgsql_gzip_16 pgsql_gzip_16-1.1.0-1PIGSTY.el9.aarch64.rpm pigsty 1.1.0 13.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgsql_gzip_16-1.1.0-1PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 16 pgsql_gzip_16 pgsql_gzip_16-1.0.0-8PGDG.rhel9.8.aarch64.rpm pgdg 1.0.0 12.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pgsql_gzip_16-1.0.0-8PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 16 pgsql_gzip_16 pgsql_gzip_16-1.0.0-4PIGSTY.el9.aarch64.rpm pigsty 1.0.0 13.7KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgsql_gzip_16-1.0.0-4PIGSTY.el9.aarch64.rpm
+@ el9.aarch64 16 pgsql_gzip_16 pgsql_gzip_16-1.0.0-8PGDG.rhel9.7.aarch64.rpm pgdg 1.0.0 12.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pgsql_gzip_16-1.0.0-8PGDG.rhel9.7.aarch64.rpm
+@ el9.aarch64 16 pgsql_gzip_16 pgsql_gzip_16-1.0.0-8PGDG.rhel9.6.aarch64.rpm pgdg 1.0.0 12.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pgsql_gzip_16-1.0.0-8PGDG.rhel9.6.aarch64.rpm
+@ el9.aarch64 16 pgsql_gzip_16 pgsql_gzip_16-1.0.0-1PGDG.rhel9.aarch64.rpm pgdg 1.0.0 12.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pgsql_gzip_16-1.0.0-1PGDG.rhel9.aarch64.rpm
 @ el10.x86_64 16 pgsql_gzip_16 pgsql_gzip_16-1.1.0-1PIGSTY.el10.x86_64.rpm pigsty 1.1.0 14.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgsql_gzip_16-1.1.0-1PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 16 pgsql_gzip_16 pgsql_gzip_16-1.0.0-8PGDG.rhel10.2.x86_64.rpm pgdg 1.0.0 13.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pgsql_gzip_16-1.0.0-8PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 16 pgsql_gzip_16 pgsql_gzip_16-1.0.0-6PGDG.rhel10.x86_64.rpm pgdg 1.0.0 13.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pgsql_gzip_16-1.0.0-6PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 16 pgsql_gzip_16 pgsql_gzip_16-1.1.0-1PIGSTY.el10.aarch64.rpm pigsty 1.1.0 14.1KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgsql_gzip_16-1.1.0-1PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 16 pgsql_gzip_16 pgsql_gzip_16-1.0.0-8PGDG.rhel10.2.aarch64.rpm pgdg 1.0.0 13.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pgsql_gzip_16-1.0.0-8PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 16 pgsql_gzip_16 pgsql_gzip_16-1.0.0-6PGDG.rhel10.aarch64.rpm pgdg 1.0.0 13.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pgsql_gzip_16-1.0.0-6PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 16 postgresql-16-gzip postgresql-16-gzip_1.1.0-1PIGSTY~bookworm_amd64.deb pigsty 1.1.0 12.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgsql-gzip/postgresql-16-gzip_1.1.0-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 16 postgresql-16-gzip postgresql-16-gzip_1.1.0-1PIGSTY~bookworm_arm64.deb pigsty 1.1.0 12.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgsql-gzip/postgresql-16-gzip_1.1.0-1PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 16 postgresql-16-gzip postgresql-16-gzip_1.1.0-1PIGSTY~trixie_amd64.deb pigsty 1.1.0 12.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgsql-gzip/postgresql-16-gzip_1.1.0-1PIGSTY~trixie_amd64.deb
@@ -139,17 +153,21 @@ weight: 4010
 @ el8.x86_64 15 pgsql_gzip_15 pgsql_gzip_15-1.1.0-1PIGSTY.el8.x86_64.rpm pigsty 1.1.0 14.1KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgsql_gzip_15-1.1.0-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 15 pgsql_gzip_15 pgsql_gzip_15-1.0.0-2PGDG.rhel8.x86_64.rpm pgdg 1.0.0 12.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pgsql_gzip_15-1.0.0-2PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 15 pgsql_gzip_15 pgsql_gzip_15-1.1.0-1PIGSTY.el8.aarch64.rpm pigsty 1.1.0 14.3KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgsql_gzip_15-1.1.0-1PIGSTY.el8.aarch64.rpm
-@ el8.aarch64 15 pgsql_gzip_15 pgsql_gzip_15-1.0.0-9PIGSTY.el8.aarch64.rpm pigsty 1.0.0 13.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgsql_gzip_15-1.0.0-9PIGSTY.el8.aarch64.rpm
 @ el8.aarch64 15 pgsql_gzip_15 pgsql_gzip_15-1.0.0-1PGDG.rhel8.aarch64.rpm pgdg 1.0.0 12.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pgsql_gzip_15-1.0.0-1PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 15 pgsql_gzip_15 pgsql_gzip_15-1.1.0-1PIGSTY.el9.x86_64.rpm pigsty 1.1.0 14.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgsql_gzip_15-1.1.0-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 15 pgsql_gzip_15 pgsql_gzip_15-1.0.0-8PGDG.rhel9.8.x86_64.rpm pgdg 1.0.0 13.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pgsql_gzip_15-1.0.0-8PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 15 pgsql_gzip_15 pgsql_gzip_15-1.0.0-2PGDG.rhel9.x86_64.rpm pgdg 1.0.0 12.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pgsql_gzip_15-1.0.0-2PGDG.rhel9.x86_64.rpm
 @ el9.aarch64 15 pgsql_gzip_15 pgsql_gzip_15-1.1.0-1PIGSTY.el9.aarch64.rpm pigsty 1.1.0 13.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgsql_gzip_15-1.1.0-1PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 15 pgsql_gzip_15 pgsql_gzip_15-1.0.0-8PGDG.rhel9.8.aarch64.rpm pgdg 1.0.0 12.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pgsql_gzip_15-1.0.0-8PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 15 pgsql_gzip_15 pgsql_gzip_15-1.0.0-4PIGSTY.el9.aarch64.rpm pigsty 1.0.0 13.7KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgsql_gzip_15-1.0.0-4PIGSTY.el9.aarch64.rpm
+@ el9.aarch64 15 pgsql_gzip_15 pgsql_gzip_15-1.0.0-8PGDG.rhel9.7.aarch64.rpm pgdg 1.0.0 12.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pgsql_gzip_15-1.0.0-8PGDG.rhel9.7.aarch64.rpm
+@ el9.aarch64 15 pgsql_gzip_15 pgsql_gzip_15-1.0.0-8PGDG.rhel9.6.aarch64.rpm pgdg 1.0.0 12.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pgsql_gzip_15-1.0.0-8PGDG.rhel9.6.aarch64.rpm
+@ el9.aarch64 15 pgsql_gzip_15 pgsql_gzip_15-1.0.0-1PGDG.rhel9.aarch64.rpm pgdg 1.0.0 12.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pgsql_gzip_15-1.0.0-1PGDG.rhel9.aarch64.rpm
 @ el10.x86_64 15 pgsql_gzip_15 pgsql_gzip_15-1.1.0-1PIGSTY.el10.x86_64.rpm pigsty 1.1.0 14.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgsql_gzip_15-1.1.0-1PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 15 pgsql_gzip_15 pgsql_gzip_15-1.0.0-8PGDG.rhel10.2.x86_64.rpm pgdg 1.0.0 13.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pgsql_gzip_15-1.0.0-8PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 15 pgsql_gzip_15 pgsql_gzip_15-1.0.0-6PGDG.rhel10.x86_64.rpm pgdg 1.0.0 13.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pgsql_gzip_15-1.0.0-6PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 15 pgsql_gzip_15 pgsql_gzip_15-1.1.0-1PIGSTY.el10.aarch64.rpm pigsty 1.1.0 14.1KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgsql_gzip_15-1.1.0-1PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 15 pgsql_gzip_15 pgsql_gzip_15-1.0.0-8PGDG.rhel10.2.aarch64.rpm pgdg 1.0.0 13.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pgsql_gzip_15-1.0.0-8PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 15 pgsql_gzip_15 pgsql_gzip_15-1.0.0-6PGDG.rhel10.aarch64.rpm pgdg 1.0.0 13.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pgsql_gzip_15-1.0.0-6PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 15 postgresql-15-gzip postgresql-15-gzip_1.1.0-1PIGSTY~bookworm_amd64.deb pigsty 1.1.0 12.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgsql-gzip/postgresql-15-gzip_1.1.0-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 15 postgresql-15-gzip postgresql-15-gzip_1.1.0-1PIGSTY~bookworm_arm64.deb pigsty 1.1.0 12.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgsql-gzip/postgresql-15-gzip_1.1.0-1PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 15 postgresql-15-gzip postgresql-15-gzip_1.1.0-1PIGSTY~trixie_amd64.deb pigsty 1.1.0 12.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgsql-gzip/postgresql-15-gzip_1.1.0-1PIGSTY~trixie_amd64.deb
@@ -163,17 +181,21 @@ weight: 4010
 @ el8.x86_64 14 pgsql_gzip_14 pgsql_gzip_14-1.1.0-1PIGSTY.el8.x86_64.rpm pigsty 1.1.0 14.1KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgsql_gzip_14-1.1.0-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 14 pgsql_gzip_14 pgsql_gzip_14-1.0.0-2PGDG.rhel8.x86_64.rpm pgdg 1.0.0 12.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pgsql_gzip_14-1.0.0-2PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 14 pgsql_gzip_14 pgsql_gzip_14-1.1.0-1PIGSTY.el8.aarch64.rpm pigsty 1.1.0 14.3KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgsql_gzip_14-1.1.0-1PIGSTY.el8.aarch64.rpm
-@ el8.aarch64 14 pgsql_gzip_14 pgsql_gzip_14-1.0.0-9PIGSTY.el8.aarch64.rpm pigsty 1.0.0 13.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgsql_gzip_14-1.0.0-9PIGSTY.el8.aarch64.rpm
 @ el8.aarch64 14 pgsql_gzip_14 pgsql_gzip_14-1.0.0-1PGDG.rhel8.aarch64.rpm pgdg 1.0.0 12.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pgsql_gzip_14-1.0.0-1PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 14 pgsql_gzip_14 pgsql_gzip_14-1.1.0-1PIGSTY.el9.x86_64.rpm pigsty 1.1.0 13.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgsql_gzip_14-1.1.0-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 14 pgsql_gzip_14 pgsql_gzip_14-1.0.0-8PGDG.rhel9.8.x86_64.rpm pgdg 1.0.0 13.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pgsql_gzip_14-1.0.0-8PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 14 pgsql_gzip_14 pgsql_gzip_14-1.0.0-2PGDG.rhel9.x86_64.rpm pgdg 1.0.0 12.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pgsql_gzip_14-1.0.0-2PGDG.rhel9.x86_64.rpm
 @ el9.aarch64 14 pgsql_gzip_14 pgsql_gzip_14-1.1.0-1PIGSTY.el9.aarch64.rpm pigsty 1.1.0 13.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgsql_gzip_14-1.1.0-1PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 14 pgsql_gzip_14 pgsql_gzip_14-1.0.0-8PGDG.rhel9.8.aarch64.rpm pgdg 1.0.0 12.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pgsql_gzip_14-1.0.0-8PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 14 pgsql_gzip_14 pgsql_gzip_14-1.0.0-4PIGSTY.el9.aarch64.rpm pigsty 1.0.0 13.7KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgsql_gzip_14-1.0.0-4PIGSTY.el9.aarch64.rpm
+@ el9.aarch64 14 pgsql_gzip_14 pgsql_gzip_14-1.0.0-8PGDG.rhel9.7.aarch64.rpm pgdg 1.0.0 12.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pgsql_gzip_14-1.0.0-8PGDG.rhel9.7.aarch64.rpm
+@ el9.aarch64 14 pgsql_gzip_14 pgsql_gzip_14-1.0.0-8PGDG.rhel9.6.aarch64.rpm pgdg 1.0.0 12.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pgsql_gzip_14-1.0.0-8PGDG.rhel9.6.aarch64.rpm
+@ el9.aarch64 14 pgsql_gzip_14 pgsql_gzip_14-1.0.0-1PGDG.rhel9.aarch64.rpm pgdg 1.0.0 12.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pgsql_gzip_14-1.0.0-1PGDG.rhel9.aarch64.rpm
 @ el10.x86_64 14 pgsql_gzip_14 pgsql_gzip_14-1.1.0-1PIGSTY.el10.x86_64.rpm pigsty 1.1.0 14.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgsql_gzip_14-1.1.0-1PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 14 pgsql_gzip_14 pgsql_gzip_14-1.0.0-8PGDG.rhel10.2.x86_64.rpm pgdg 1.0.0 13.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pgsql_gzip_14-1.0.0-8PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 14 pgsql_gzip_14 pgsql_gzip_14-1.0.0-6PGDG.rhel10.x86_64.rpm pgdg 1.0.0 13.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pgsql_gzip_14-1.0.0-6PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 14 pgsql_gzip_14 pgsql_gzip_14-1.1.0-1PIGSTY.el10.aarch64.rpm pigsty 1.1.0 14.1KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgsql_gzip_14-1.1.0-1PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 14 pgsql_gzip_14 pgsql_gzip_14-1.0.0-8PGDG.rhel10.2.aarch64.rpm pgdg 1.0.0 13.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgsql_gzip_14-1.0.0-8PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 14 pgsql_gzip_14 pgsql_gzip_14-1.0.0-6PGDG.rhel10.aarch64.rpm pgdg 1.0.0 13.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgsql_gzip_14-1.0.0-6PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 14 postgresql-14-gzip postgresql-14-gzip_1.1.0-1PIGSTY~bookworm_amd64.deb pigsty 1.1.0 12.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgsql-gzip/postgresql-14-gzip_1.1.0-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 14 postgresql-14-gzip postgresql-14-gzip_1.1.0-1PIGSTY~bookworm_arm64.deb pigsty 1.1.0 12.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgsql-gzip/postgresql-14-gzip_1.1.0-1PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 14 postgresql-14-gzip postgresql-14-gzip_1.1.0-1PIGSTY~trixie_amd64.deb pigsty 1.1.0 12.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgsql-gzip/postgresql-14-gzip_1.1.0-1PIGSTY~trixie_amd64.deb
@@ -251,6 +273,8 @@ CREATE EXTENSION gzip;
 
 ## 用法
 
+来源：[README](https://github.com/pramsey/pgsql-gzip/blob/v1.1.0/README.md)、[v1.1.0 release](https://github.com/pramsey/pgsql-gzip/releases/tag/v1.1.0)
+
 有时需要在将 `bytea` 对象返回给客户端之前对其进行压缩。
 
 有时从客户端接收到压缩过的 `bytea`，需要先解压才能进行处理。
@@ -264,6 +288,9 @@ CREATE EXTENSION gzip;
 * `gzip(uncompressed TEXT, [compression_level INTEGER])` 返回 `BYTEA`
 * `gunzip(compressed BYTEA)` 返回 `BYTEA`
 
+### 版本说明
+
+`pg_gzip` 1.1.0 保持相同 SQL API，改进 Docker/package build 行为，在 `gunzip` 中使用 `Z_SYNC_FLUSH`，并修复包依赖，使其使用目标 PostgreSQL 版本而不是固定版本。
 
 ### 示例
 

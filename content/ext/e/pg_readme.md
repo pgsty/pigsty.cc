@@ -53,10 +53,10 @@ weight: 4300
 |:--:|:--:|:--:|:--:|:--:|:--:|
 | el8.x86_64 | AVAIL PGDG 0.7.0 1 | AVAIL PGDG 0.7.0 1 | AVAIL PGDG 0.7.0 1 | AVAIL PGDG 0.7.0 1 | AVAIL PGDG 0.7.0 1 |
 | el8.aarch64 | AVAIL PGDG 0.7.0 1 | AVAIL PGDG 0.7.0 1 | AVAIL PGDG 0.7.0 1 | AVAIL PGDG 0.7.0 1 | AVAIL PGDG 0.7.0 1 |
-| el9.x86_64 | AVAIL PGDG 0.7.0 1 | AVAIL PGDG 0.7.0 1 | AVAIL PGDG 0.7.0 1 | AVAIL PGDG 0.7.0 1 | AVAIL PGDG 0.7.0 1 |
-| el9.aarch64 | AVAIL PGDG 0.7.0 1 | AVAIL PGDG 0.7.0 1 | AVAIL PGDG 0.7.0 1 | AVAIL PGDG 0.7.0 1 | AVAIL PGDG 0.7.0 1 |
-| el10.x86_64 | AVAIL PGDG 0.7.0 1 | AVAIL PGDG 0.7.0 1 | AVAIL PGDG 0.7.0 1 | AVAIL PGDG 0.7.0 1 | AVAIL PGDG 0.7.0 1 |
-| el10.aarch64 | AVAIL PGDG 0.7.0 1 | AVAIL PGDG 0.7.0 1 | AVAIL PGDG 0.7.0 1 | AVAIL PGDG 0.7.0 1 | AVAIL PGDG 0.7.0 1 |
+| el9.x86_64 | AVAIL PGDG 0.7.0 2 | AVAIL PGDG 0.7.0 2 | AVAIL PGDG 0.7.0 2 | AVAIL PGDG 0.7.0 2 | AVAIL PGDG 0.7.0 2 |
+| el9.aarch64 | AVAIL PGDG 0.7.0 2 | AVAIL PGDG 0.7.0 2 | AVAIL PGDG 0.7.0 2 | AVAIL PGDG 0.7.0 2 | AVAIL PGDG 0.7.0 2 |
+| el10.x86_64 | AVAIL PGDG 0.7.0 2 | AVAIL PGDG 0.7.0 2 | AVAIL PGDG 0.7.0 2 | AVAIL PGDG 0.7.0 2 | AVAIL PGDG 0.7.0 2 |
+| el10.aarch64 | AVAIL PGDG 0.7.0 2 | AVAIL PGDG 0.7.0 2 | AVAIL PGDG 0.7.0 2 | AVAIL PGDG 0.7.0 2 | AVAIL PGDG 0.7.0 2 |
 | d12.x86_64 | AVAIL PIGSTY 0.7.0 1 | AVAIL PIGSTY 0.7.0 1 | AVAIL PIGSTY 0.7.0 1 | AVAIL PIGSTY 0.7.0 1 | AVAIL PIGSTY 0.7.0 1 |
 | d12.aarch64 | AVAIL PIGSTY 0.7.0 1 | AVAIL PIGSTY 0.7.0 1 | AVAIL PIGSTY 0.7.0 1 | AVAIL PIGSTY 0.7.0 1 | AVAIL PIGSTY 0.7.0 1 |
 | d13.x86_64 | AVAIL PIGSTY 0.7.0 1 | AVAIL PIGSTY 0.7.0 1 | AVAIL PIGSTY 0.7.0 1 | AVAIL PIGSTY 0.7.0 1 | AVAIL PIGSTY 0.7.0 1 |
@@ -70,9 +70,13 @@ weight: 4300
 @ el8.x86_64 18 pg_readme_18 pg_readme_18-0.7.0-1PGDG.rhel8.noarch.rpm pgdg 0.7.0 31.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pg_readme_18-0.7.0-1PGDG.rhel8.noarch.rpm
 @ el8.aarch64 18 pg_readme_18 pg_readme_18-0.7.0-1PGDG.rhel8.noarch.rpm pgdg 0.7.0 31.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pg_readme_18-0.7.0-1PGDG.rhel8.noarch.rpm
 @ el9.x86_64 18 pg_readme_18 pg_readme_18-0.7.0-1PGDG.rhel9.8.noarch.rpm pgdg 0.7.0 30.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pg_readme_18-0.7.0-1PGDG.rhel9.8.noarch.rpm
+@ el9.x86_64 18 pg_readme_18 pg_readme_18-0.7.0-1PGDG.rhel9.noarch.rpm pgdg 0.7.0 30.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pg_readme_18-0.7.0-1PGDG.rhel9.noarch.rpm
 @ el9.aarch64 18 pg_readme_18 pg_readme_18-0.7.0-1PGDG.rhel9.8.noarch.rpm pgdg 0.7.0 30.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pg_readme_18-0.7.0-1PGDG.rhel9.8.noarch.rpm
+@ el9.aarch64 18 pg_readme_18 pg_readme_18-0.7.0-1PGDG.rhel9.noarch.rpm pgdg 0.7.0 30.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pg_readme_18-0.7.0-1PGDG.rhel9.noarch.rpm
 @ el10.x86_64 18 pg_readme_18 pg_readme_18-0.7.0-1PGDG.rhel10.2.noarch.rpm pgdg 0.7.0 31.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pg_readme_18-0.7.0-1PGDG.rhel10.2.noarch.rpm
+@ el10.x86_64 18 pg_readme_18 pg_readme_18-0.7.0-1PGDG.rhel10.noarch.rpm pgdg 0.7.0 31.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pg_readme_18-0.7.0-1PGDG.rhel10.noarch.rpm
 @ el10.aarch64 18 pg_readme_18 pg_readme_18-0.7.0-1PGDG.rhel10.2.noarch.rpm pgdg 0.7.0 31.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_readme_18-0.7.0-1PGDG.rhel10.2.noarch.rpm
+@ el10.aarch64 18 pg_readme_18 pg_readme_18-0.7.0-1PGDG.rhel10.noarch.rpm pgdg 0.7.0 31.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_readme_18-0.7.0-1PGDG.rhel10.noarch.rpm
 @ d12.x86_64 18 postgresql-18-pg-readme postgresql-18-pg-readme_0.7.0-1PIGSTY~bookworm_amd64.deb pigsty 0.7.0 18.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-readme/postgresql-18-pg-readme_0.7.0-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 18 postgresql-18-pg-readme postgresql-18-pg-readme_0.7.0-1PIGSTY~bookworm_arm64.deb pigsty 0.7.0 18.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-readme/postgresql-18-pg-readme_0.7.0-1PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 18 postgresql-18-pg-readme postgresql-18-pg-readme_0.7.0-1PIGSTY~trixie_amd64.deb pigsty 0.7.0 18.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-readme/postgresql-18-pg-readme_0.7.0-1PIGSTY~trixie_amd64.deb
@@ -86,9 +90,13 @@ weight: 4300
 @ el8.x86_64 17 pg_readme_17 pg_readme_17-0.7.0-1PGDG.rhel8.noarch.rpm pgdg 0.7.0 31.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pg_readme_17-0.7.0-1PGDG.rhel8.noarch.rpm
 @ el8.aarch64 17 pg_readme_17 pg_readme_17-0.7.0-1PGDG.rhel8.noarch.rpm pgdg 0.7.0 31.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pg_readme_17-0.7.0-1PGDG.rhel8.noarch.rpm
 @ el9.x86_64 17 pg_readme_17 pg_readme_17-0.7.0-1PGDG.rhel9.8.noarch.rpm pgdg 0.7.0 30.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_readme_17-0.7.0-1PGDG.rhel9.8.noarch.rpm
+@ el9.x86_64 17 pg_readme_17 pg_readme_17-0.7.0-1PGDG.rhel9.noarch.rpm pgdg 0.7.0 30.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_readme_17-0.7.0-1PGDG.rhel9.noarch.rpm
 @ el9.aarch64 17 pg_readme_17 pg_readme_17-0.7.0-1PGDG.rhel9.8.noarch.rpm pgdg 0.7.0 30.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_readme_17-0.7.0-1PGDG.rhel9.8.noarch.rpm
+@ el9.aarch64 17 pg_readme_17 pg_readme_17-0.7.0-1PGDG.rhel9.noarch.rpm pgdg 0.7.0 30.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_readme_17-0.7.0-1PGDG.rhel9.noarch.rpm
 @ el10.x86_64 17 pg_readme_17 pg_readme_17-0.7.0-1PGDG.rhel10.2.noarch.rpm pgdg 0.7.0 31.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_readme_17-0.7.0-1PGDG.rhel10.2.noarch.rpm
+@ el10.x86_64 17 pg_readme_17 pg_readme_17-0.7.0-1PGDG.rhel10.noarch.rpm pgdg 0.7.0 31.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_readme_17-0.7.0-1PGDG.rhel10.noarch.rpm
 @ el10.aarch64 17 pg_readme_17 pg_readme_17-0.7.0-1PGDG.rhel10.2.noarch.rpm pgdg 0.7.0 31.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_readme_17-0.7.0-1PGDG.rhel10.2.noarch.rpm
+@ el10.aarch64 17 pg_readme_17 pg_readme_17-0.7.0-1PGDG.rhel10.noarch.rpm pgdg 0.7.0 31.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_readme_17-0.7.0-1PGDG.rhel10.noarch.rpm
 @ d12.x86_64 17 postgresql-17-pg-readme postgresql-17-pg-readme_0.7.0-1PIGSTY~bookworm_amd64.deb pigsty 0.7.0 18.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-readme/postgresql-17-pg-readme_0.7.0-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 17 postgresql-17-pg-readme postgresql-17-pg-readme_0.7.0-1PIGSTY~bookworm_arm64.deb pigsty 0.7.0 18.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-readme/postgresql-17-pg-readme_0.7.0-1PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 17 postgresql-17-pg-readme postgresql-17-pg-readme_0.7.0-1PIGSTY~trixie_amd64.deb pigsty 0.7.0 18.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-readme/postgresql-17-pg-readme_0.7.0-1PIGSTY~trixie_amd64.deb
@@ -102,9 +110,13 @@ weight: 4300
 @ el8.x86_64 16 pg_readme_16 pg_readme_16-0.7.0-1PGDG.rhel8.noarch.rpm pgdg 0.7.0 31.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_readme_16-0.7.0-1PGDG.rhel8.noarch.rpm
 @ el8.aarch64 16 pg_readme_16 pg_readme_16-0.7.0-1PGDG.rhel8.noarch.rpm pgdg 0.7.0 31.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pg_readme_16-0.7.0-1PGDG.rhel8.noarch.rpm
 @ el9.x86_64 16 pg_readme_16 pg_readme_16-0.7.0-1PGDG.rhel9.8.noarch.rpm pgdg 0.7.0 30.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_readme_16-0.7.0-1PGDG.rhel9.8.noarch.rpm
+@ el9.x86_64 16 pg_readme_16 pg_readme_16-0.7.0-1PGDG.rhel9.noarch.rpm pgdg 0.7.0 30.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_readme_16-0.7.0-1PGDG.rhel9.noarch.rpm
 @ el9.aarch64 16 pg_readme_16 pg_readme_16-0.7.0-1PGDG.rhel9.8.noarch.rpm pgdg 0.7.0 30.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_readme_16-0.7.0-1PGDG.rhel9.8.noarch.rpm
+@ el9.aarch64 16 pg_readme_16 pg_readme_16-0.7.0-1PGDG.rhel9.noarch.rpm pgdg 0.7.0 30.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_readme_16-0.7.0-1PGDG.rhel9.noarch.rpm
 @ el10.x86_64 16 pg_readme_16 pg_readme_16-0.7.0-1PGDG.rhel10.2.noarch.rpm pgdg 0.7.0 31.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_readme_16-0.7.0-1PGDG.rhel10.2.noarch.rpm
+@ el10.x86_64 16 pg_readme_16 pg_readme_16-0.7.0-1PGDG.rhel10.noarch.rpm pgdg 0.7.0 31.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_readme_16-0.7.0-1PGDG.rhel10.noarch.rpm
 @ el10.aarch64 16 pg_readme_16 pg_readme_16-0.7.0-1PGDG.rhel10.2.noarch.rpm pgdg 0.7.0 31.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_readme_16-0.7.0-1PGDG.rhel10.2.noarch.rpm
+@ el10.aarch64 16 pg_readme_16 pg_readme_16-0.7.0-1PGDG.rhel10.noarch.rpm pgdg 0.7.0 31.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_readme_16-0.7.0-1PGDG.rhel10.noarch.rpm
 @ d12.x86_64 16 postgresql-16-pg-readme postgresql-16-pg-readme_0.7.0-1PIGSTY~bookworm_amd64.deb pigsty 0.7.0 18.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-readme/postgresql-16-pg-readme_0.7.0-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 16 postgresql-16-pg-readme postgresql-16-pg-readme_0.7.0-1PIGSTY~bookworm_arm64.deb pigsty 0.7.0 18.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-readme/postgresql-16-pg-readme_0.7.0-1PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 16 postgresql-16-pg-readme postgresql-16-pg-readme_0.7.0-1PIGSTY~trixie_amd64.deb pigsty 0.7.0 18.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-readme/postgresql-16-pg-readme_0.7.0-1PIGSTY~trixie_amd64.deb
@@ -118,9 +130,13 @@ weight: 4300
 @ el8.x86_64 15 pg_readme_15 pg_readme_15-0.7.0-1PGDG.rhel8.noarch.rpm pgdg 0.7.0 31.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_readme_15-0.7.0-1PGDG.rhel8.noarch.rpm
 @ el8.aarch64 15 pg_readme_15 pg_readme_15-0.7.0-1PGDG.rhel8.noarch.rpm pgdg 0.7.0 31.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pg_readme_15-0.7.0-1PGDG.rhel8.noarch.rpm
 @ el9.x86_64 15 pg_readme_15 pg_readme_15-0.7.0-1PGDG.rhel9.8.noarch.rpm pgdg 0.7.0 30.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_readme_15-0.7.0-1PGDG.rhel9.8.noarch.rpm
+@ el9.x86_64 15 pg_readme_15 pg_readme_15-0.7.0-1PGDG.rhel9.noarch.rpm pgdg 0.7.0 30.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_readme_15-0.7.0-1PGDG.rhel9.noarch.rpm
 @ el9.aarch64 15 pg_readme_15 pg_readme_15-0.7.0-1PGDG.rhel9.8.noarch.rpm pgdg 0.7.0 30.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_readme_15-0.7.0-1PGDG.rhel9.8.noarch.rpm
+@ el9.aarch64 15 pg_readme_15 pg_readme_15-0.7.0-1PGDG.rhel9.noarch.rpm pgdg 0.7.0 30.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_readme_15-0.7.0-1PGDG.rhel9.noarch.rpm
 @ el10.x86_64 15 pg_readme_15 pg_readme_15-0.7.0-1PGDG.rhel10.2.noarch.rpm pgdg 0.7.0 31.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_readme_15-0.7.0-1PGDG.rhel10.2.noarch.rpm
+@ el10.x86_64 15 pg_readme_15 pg_readme_15-0.7.0-1PGDG.rhel10.noarch.rpm pgdg 0.7.0 31.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_readme_15-0.7.0-1PGDG.rhel10.noarch.rpm
 @ el10.aarch64 15 pg_readme_15 pg_readme_15-0.7.0-1PGDG.rhel10.2.noarch.rpm pgdg 0.7.0 31.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_readme_15-0.7.0-1PGDG.rhel10.2.noarch.rpm
+@ el10.aarch64 15 pg_readme_15 pg_readme_15-0.7.0-1PGDG.rhel10.noarch.rpm pgdg 0.7.0 31.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_readme_15-0.7.0-1PGDG.rhel10.noarch.rpm
 @ d12.x86_64 15 postgresql-15-pg-readme postgresql-15-pg-readme_0.7.0-1PIGSTY~bookworm_amd64.deb pigsty 0.7.0 18.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-readme/postgresql-15-pg-readme_0.7.0-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 15 postgresql-15-pg-readme postgresql-15-pg-readme_0.7.0-1PIGSTY~bookworm_arm64.deb pigsty 0.7.0 18.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-readme/postgresql-15-pg-readme_0.7.0-1PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 15 postgresql-15-pg-readme postgresql-15-pg-readme_0.7.0-1PIGSTY~trixie_amd64.deb pigsty 0.7.0 18.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-readme/postgresql-15-pg-readme_0.7.0-1PIGSTY~trixie_amd64.deb
@@ -134,9 +150,13 @@ weight: 4300
 @ el8.x86_64 14 pg_readme_14 pg_readme_14-0.7.0-1PGDG.rhel8.noarch.rpm pgdg 0.7.0 31.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_readme_14-0.7.0-1PGDG.rhel8.noarch.rpm
 @ el8.aarch64 14 pg_readme_14 pg_readme_14-0.7.0-1PGDG.rhel8.noarch.rpm pgdg 0.7.0 31.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pg_readme_14-0.7.0-1PGDG.rhel8.noarch.rpm
 @ el9.x86_64 14 pg_readme_14 pg_readme_14-0.7.0-1PGDG.rhel9.8.noarch.rpm pgdg 0.7.0 30.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_readme_14-0.7.0-1PGDG.rhel9.8.noarch.rpm
+@ el9.x86_64 14 pg_readme_14 pg_readme_14-0.7.0-1PGDG.rhel9.noarch.rpm pgdg 0.7.0 30.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_readme_14-0.7.0-1PGDG.rhel9.noarch.rpm
 @ el9.aarch64 14 pg_readme_14 pg_readme_14-0.7.0-1PGDG.rhel9.8.noarch.rpm pgdg 0.7.0 30.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_readme_14-0.7.0-1PGDG.rhel9.8.noarch.rpm
+@ el9.aarch64 14 pg_readme_14 pg_readme_14-0.7.0-1PGDG.rhel9.noarch.rpm pgdg 0.7.0 30.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_readme_14-0.7.0-1PGDG.rhel9.noarch.rpm
 @ el10.x86_64 14 pg_readme_14 pg_readme_14-0.7.0-1PGDG.rhel10.2.noarch.rpm pgdg 0.7.0 31.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_readme_14-0.7.0-1PGDG.rhel10.2.noarch.rpm
+@ el10.x86_64 14 pg_readme_14 pg_readme_14-0.7.0-1PGDG.rhel10.noarch.rpm pgdg 0.7.0 31.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_readme_14-0.7.0-1PGDG.rhel10.noarch.rpm
 @ el10.aarch64 14 pg_readme_14 pg_readme_14-0.7.0-1PGDG.rhel10.2.noarch.rpm pgdg 0.7.0 31.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_readme_14-0.7.0-1PGDG.rhel10.2.noarch.rpm
+@ el10.aarch64 14 pg_readme_14 pg_readme_14-0.7.0-1PGDG.rhel10.noarch.rpm pgdg 0.7.0 31.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_readme_14-0.7.0-1PGDG.rhel10.noarch.rpm
 @ d12.x86_64 14 postgresql-14-pg-readme postgresql-14-pg-readme_0.7.0-1PIGSTY~bookworm_amd64.deb pigsty 0.7.0 18.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-readme/postgresql-14-pg-readme_0.7.0-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 14 postgresql-14-pg-readme postgresql-14-pg-readme_0.7.0-1PIGSTY~bookworm_arm64.deb pigsty 0.7.0 18.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-readme/postgresql-14-pg-readme_0.7.0-1PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 14 postgresql-14-pg-readme postgresql-14-pg-readme_0.7.0-1PIGSTY~trixie_amd64.deb pigsty 0.7.0 18.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-readme/postgresql-14-pg-readme_0.7.0-1PIGSTY~trixie_amd64.deb

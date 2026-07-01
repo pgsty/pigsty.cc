@@ -52,10 +52,10 @@ weight: 7160
 |:--:|:--:|:--:|:--:|:--:|:--:|
 | el8.x86_64 | AVAIL PGDG 1.4.1 1 | AVAIL PGDG 1.4.1 1 | AVAIL PGDG 1.4.1 1 | AVAIL PGDG 1.4.1 1 | AVAIL PGDG 1.4.1 1 |
 | el8.aarch64 | AVAIL PGDG 1.4.1 1 | AVAIL PGDG 1.4.1 1 | AVAIL PGDG 1.4.1 1 | AVAIL PGDG 1.4.1 1 | AVAIL PGDG 1.4.1 1 |
-| el9.x86_64 | AVAIL PGDG 1.4.1 1 | AVAIL PGDG 1.4.1 1 | AVAIL PGDG 1.4.1 1 | AVAIL PGDG 1.4.1 1 | AVAIL PGDG 1.4.1 1 |
-| el9.aarch64 | AVAIL PGDG 1.4.1 1 | AVAIL PGDG 1.4.1 1 | AVAIL PGDG 1.4.1 1 | AVAIL PGDG 1.4.1 1 | AVAIL PGDG 1.4.1 1 |
-| el10.x86_64 | AVAIL PGDG 1.4.1 1 | AVAIL PGDG 1.4.1 1 | AVAIL PGDG 1.4.1 1 | AVAIL PGDG 1.4.1 1 | AVAIL PGDG 1.4.1 1 |
-| el10.aarch64 | AVAIL PGDG 1.4.1 1 | AVAIL PGDG 1.4.1 1 | AVAIL PGDG 1.4.1 1 | AVAIL PGDG 1.4.1 1 | AVAIL PGDG 1.4.1 1 |
+| el9.x86_64 | AVAIL PGDG 1.4.1 2 | AVAIL PGDG 1.4.1 2 | AVAIL PGDG 1.4.1 2 | AVAIL PGDG 1.4.1 2 | AVAIL PGDG 1.4.1 2 |
+| el9.aarch64 | AVAIL PGDG 1.4.1 2 | AVAIL PGDG 1.4.1 2 | AVAIL PGDG 1.4.1 2 | AVAIL PGDG 1.4.1 2 | AVAIL PGDG 1.4.1 2 |
+| el10.x86_64 | AVAIL PGDG 1.4.1 2 | AVAIL PGDG 1.4.1 2 | AVAIL PGDG 1.4.1 2 | AVAIL PGDG 1.4.1 2 | AVAIL PGDG 1.4.1 2 |
+| el10.aarch64 | AVAIL PGDG 1.4.1 2 | AVAIL PGDG 1.4.1 2 | AVAIL PGDG 1.4.1 2 | AVAIL PGDG 1.4.1 2 | AVAIL PGDG 1.4.1 2 |
 | d12.x86_64 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 |
 | d12.aarch64 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 |
 | d13.x86_64 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 |
@@ -69,9 +69,13 @@ weight: 7160
 @ el8.x86_64 18 pg_jobmon_18 pg_jobmon_18-1.4.1-5PGDG.rhel8.noarch.rpm pgdg 1.4.1 31.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pg_jobmon_18-1.4.1-5PGDG.rhel8.noarch.rpm
 @ el8.aarch64 18 pg_jobmon_18 pg_jobmon_18-1.4.1-5PGDG.rhel8.noarch.rpm pgdg 1.4.1 31.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pg_jobmon_18-1.4.1-5PGDG.rhel8.noarch.rpm
 @ el9.x86_64 18 pg_jobmon_18 pg_jobmon_18-1.4.1-5PGDG.rhel9.8.noarch.rpm pgdg 1.4.1 29.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pg_jobmon_18-1.4.1-5PGDG.rhel9.8.noarch.rpm
+@ el9.x86_64 18 pg_jobmon_18 pg_jobmon_18-1.4.1-5PGDG.rhel9.noarch.rpm pgdg 1.4.1 29.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pg_jobmon_18-1.4.1-5PGDG.rhel9.noarch.rpm
 @ el9.aarch64 18 pg_jobmon_18 pg_jobmon_18-1.4.1-5PGDG.rhel9.8.noarch.rpm pgdg 1.4.1 29.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pg_jobmon_18-1.4.1-5PGDG.rhel9.8.noarch.rpm
+@ el9.aarch64 18 pg_jobmon_18 pg_jobmon_18-1.4.1-5PGDG.rhel9.noarch.rpm pgdg 1.4.1 29.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pg_jobmon_18-1.4.1-5PGDG.rhel9.noarch.rpm
 @ el10.x86_64 18 pg_jobmon_18 pg_jobmon_18-1.4.1-5PGDG.rhel10.2.noarch.rpm pgdg 1.4.1 29.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pg_jobmon_18-1.4.1-5PGDG.rhel10.2.noarch.rpm
+@ el10.x86_64 18 pg_jobmon_18 pg_jobmon_18-1.4.1-5PGDG.rhel10.noarch.rpm pgdg 1.4.1 30.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pg_jobmon_18-1.4.1-5PGDG.rhel10.noarch.rpm
 @ el10.aarch64 18 pg_jobmon_18 pg_jobmon_18-1.4.1-5PGDG.rhel10.2.noarch.rpm pgdg 1.4.1 29.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_jobmon_18-1.4.1-5PGDG.rhel10.2.noarch.rpm
+@ el10.aarch64 18 pg_jobmon_18 pg_jobmon_18-1.4.1-5PGDG.rhel10.noarch.rpm pgdg 1.4.1 30.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_jobmon_18-1.4.1-5PGDG.rhel10.noarch.rpm
 @ d12.x86_64 18 postgresql-18-pg-jobmon postgresql-18-pg-jobmon_1.4.1-1PIGSTY~bookworm_amd64.deb pigsty 1.4.1 26.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-jobmon/postgresql-18-pg-jobmon_1.4.1-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 18 postgresql-18-pg-jobmon postgresql-18-pg-jobmon_1.4.1-1PIGSTY~bookworm_arm64.deb pigsty 1.4.1 26.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-jobmon/postgresql-18-pg-jobmon_1.4.1-1PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 18 postgresql-18-pg-jobmon postgresql-18-pg-jobmon_1.4.1-1PIGSTY~trixie_amd64.deb pigsty 1.4.1 26.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-jobmon/postgresql-18-pg-jobmon_1.4.1-1PIGSTY~trixie_amd64.deb
@@ -85,9 +89,13 @@ weight: 7160
 @ el8.x86_64 17 pg_jobmon_17 pg_jobmon_17-1.4.1-4PGDG.rhel8.noarch.rpm pgdg 1.4.1 31.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pg_jobmon_17-1.4.1-4PGDG.rhel8.noarch.rpm
 @ el8.aarch64 17 pg_jobmon_17 pg_jobmon_17-1.4.1-4PGDG.rhel8.noarch.rpm pgdg 1.4.1 31.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pg_jobmon_17-1.4.1-4PGDG.rhel8.noarch.rpm
 @ el9.x86_64 17 pg_jobmon_17 pg_jobmon_17-1.4.1-5PGDG.rhel9.8.noarch.rpm pgdg 1.4.1 29.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_jobmon_17-1.4.1-5PGDG.rhel9.8.noarch.rpm
+@ el9.x86_64 17 pg_jobmon_17 pg_jobmon_17-1.4.1-4PGDG.rhel9.noarch.rpm pgdg 1.4.1 29.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_jobmon_17-1.4.1-4PGDG.rhel9.noarch.rpm
 @ el9.aarch64 17 pg_jobmon_17 pg_jobmon_17-1.4.1-5PGDG.rhel9.8.noarch.rpm pgdg 1.4.1 29.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_jobmon_17-1.4.1-5PGDG.rhel9.8.noarch.rpm
+@ el9.aarch64 17 pg_jobmon_17 pg_jobmon_17-1.4.1-4PGDG.rhel9.noarch.rpm pgdg 1.4.1 29.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_jobmon_17-1.4.1-4PGDG.rhel9.noarch.rpm
 @ el10.x86_64 17 pg_jobmon_17 pg_jobmon_17-1.4.1-5PGDG.rhel10.2.noarch.rpm pgdg 1.4.1 29.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_jobmon_17-1.4.1-5PGDG.rhel10.2.noarch.rpm
+@ el10.x86_64 17 pg_jobmon_17 pg_jobmon_17-1.4.1-5PGDG.rhel10.noarch.rpm pgdg 1.4.1 30.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_jobmon_17-1.4.1-5PGDG.rhel10.noarch.rpm
 @ el10.aarch64 17 pg_jobmon_17 pg_jobmon_17-1.4.1-5PGDG.rhel10.2.noarch.rpm pgdg 1.4.1 29.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_jobmon_17-1.4.1-5PGDG.rhel10.2.noarch.rpm
+@ el10.aarch64 17 pg_jobmon_17 pg_jobmon_17-1.4.1-5PGDG.rhel10.noarch.rpm pgdg 1.4.1 30.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_jobmon_17-1.4.1-5PGDG.rhel10.noarch.rpm
 @ d12.x86_64 17 postgresql-17-pg-jobmon postgresql-17-pg-jobmon_1.4.1-1PIGSTY~bookworm_amd64.deb pigsty 1.4.1 26.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-jobmon/postgresql-17-pg-jobmon_1.4.1-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 17 postgresql-17-pg-jobmon postgresql-17-pg-jobmon_1.4.1-1PIGSTY~bookworm_arm64.deb pigsty 1.4.1 26.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-jobmon/postgresql-17-pg-jobmon_1.4.1-1PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 17 postgresql-17-pg-jobmon postgresql-17-pg-jobmon_1.4.1-1PIGSTY~trixie_amd64.deb pigsty 1.4.1 26.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-jobmon/postgresql-17-pg-jobmon_1.4.1-1PIGSTY~trixie_amd64.deb
@@ -101,9 +109,13 @@ weight: 7160
 @ el8.x86_64 16 pg_jobmon_16 pg_jobmon_16-1.4.1-2.rhel8.noarch.rpm pgdg 1.4.1 31.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_jobmon_16-1.4.1-2.rhel8.noarch.rpm
 @ el8.aarch64 16 pg_jobmon_16 pg_jobmon_16-1.4.1-2.rhel8.noarch.rpm pgdg 1.4.1 31.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pg_jobmon_16-1.4.1-2.rhel8.noarch.rpm
 @ el9.x86_64 16 pg_jobmon_16 pg_jobmon_16-1.4.1-5PGDG.rhel9.8.noarch.rpm pgdg 1.4.1 29.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_jobmon_16-1.4.1-5PGDG.rhel9.8.noarch.rpm
+@ el9.x86_64 16 pg_jobmon_16 pg_jobmon_16-1.4.1-2.rhel9.noarch.rpm pgdg 1.4.1 29.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_jobmon_16-1.4.1-2.rhel9.noarch.rpm
 @ el9.aarch64 16 pg_jobmon_16 pg_jobmon_16-1.4.1-5PGDG.rhel9.8.noarch.rpm pgdg 1.4.1 29.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_jobmon_16-1.4.1-5PGDG.rhel9.8.noarch.rpm
+@ el9.aarch64 16 pg_jobmon_16 pg_jobmon_16-1.4.1-2.rhel9.noarch.rpm pgdg 1.4.1 29.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_jobmon_16-1.4.1-2.rhel9.noarch.rpm
 @ el10.x86_64 16 pg_jobmon_16 pg_jobmon_16-1.4.1-5PGDG.rhel10.2.noarch.rpm pgdg 1.4.1 29.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_jobmon_16-1.4.1-5PGDG.rhel10.2.noarch.rpm
+@ el10.x86_64 16 pg_jobmon_16 pg_jobmon_16-1.4.1-5PGDG.rhel10.noarch.rpm pgdg 1.4.1 30.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_jobmon_16-1.4.1-5PGDG.rhel10.noarch.rpm
 @ el10.aarch64 16 pg_jobmon_16 pg_jobmon_16-1.4.1-5PGDG.rhel10.2.noarch.rpm pgdg 1.4.1 29.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_jobmon_16-1.4.1-5PGDG.rhel10.2.noarch.rpm
+@ el10.aarch64 16 pg_jobmon_16 pg_jobmon_16-1.4.1-5PGDG.rhel10.noarch.rpm pgdg 1.4.1 30.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_jobmon_16-1.4.1-5PGDG.rhel10.noarch.rpm
 @ d12.x86_64 16 postgresql-16-pg-jobmon postgresql-16-pg-jobmon_1.4.1-1PIGSTY~bookworm_amd64.deb pigsty 1.4.1 26.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-jobmon/postgresql-16-pg-jobmon_1.4.1-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 16 postgresql-16-pg-jobmon postgresql-16-pg-jobmon_1.4.1-1PIGSTY~bookworm_arm64.deb pigsty 1.4.1 26.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-jobmon/postgresql-16-pg-jobmon_1.4.1-1PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 16 postgresql-16-pg-jobmon postgresql-16-pg-jobmon_1.4.1-1PIGSTY~trixie_amd64.deb pigsty 1.4.1 26.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-jobmon/postgresql-16-pg-jobmon_1.4.1-1PIGSTY~trixie_amd64.deb
@@ -117,9 +129,13 @@ weight: 7160
 @ el8.x86_64 15 pg_jobmon_15 pg_jobmon_15-1.4.1-1.rhel8.noarch.rpm pgdg 1.4.1 31.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_jobmon_15-1.4.1-1.rhel8.noarch.rpm
 @ el8.aarch64 15 pg_jobmon_15 pg_jobmon_15-1.4.1-1.rhel8.noarch.rpm pgdg 1.4.1 31.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pg_jobmon_15-1.4.1-1.rhel8.noarch.rpm
 @ el9.x86_64 15 pg_jobmon_15 pg_jobmon_15-1.4.1-5PGDG.rhel9.8.noarch.rpm pgdg 1.4.1 29.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_jobmon_15-1.4.1-5PGDG.rhel9.8.noarch.rpm
+@ el9.x86_64 15 pg_jobmon_15 pg_jobmon_15-1.4.1-1.rhel9.noarch.rpm pgdg 1.4.1 29.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_jobmon_15-1.4.1-1.rhel9.noarch.rpm
 @ el9.aarch64 15 pg_jobmon_15 pg_jobmon_15-1.4.1-5PGDG.rhel9.8.noarch.rpm pgdg 1.4.1 29.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_jobmon_15-1.4.1-5PGDG.rhel9.8.noarch.rpm
+@ el9.aarch64 15 pg_jobmon_15 pg_jobmon_15-1.4.1-1.rhel9.noarch.rpm pgdg 1.4.1 29.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_jobmon_15-1.4.1-1.rhel9.noarch.rpm
 @ el10.x86_64 15 pg_jobmon_15 pg_jobmon_15-1.4.1-5PGDG.rhel10.2.noarch.rpm pgdg 1.4.1 29.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_jobmon_15-1.4.1-5PGDG.rhel10.2.noarch.rpm
+@ el10.x86_64 15 pg_jobmon_15 pg_jobmon_15-1.4.1-5PGDG.rhel10.noarch.rpm pgdg 1.4.1 30.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_jobmon_15-1.4.1-5PGDG.rhel10.noarch.rpm
 @ el10.aarch64 15 pg_jobmon_15 pg_jobmon_15-1.4.1-5PGDG.rhel10.2.noarch.rpm pgdg 1.4.1 29.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_jobmon_15-1.4.1-5PGDG.rhel10.2.noarch.rpm
+@ el10.aarch64 15 pg_jobmon_15 pg_jobmon_15-1.4.1-5PGDG.rhel10.noarch.rpm pgdg 1.4.1 30.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_jobmon_15-1.4.1-5PGDG.rhel10.noarch.rpm
 @ d12.x86_64 15 postgresql-15-pg-jobmon postgresql-15-pg-jobmon_1.4.1-1PIGSTY~bookworm_amd64.deb pigsty 1.4.1 26.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-jobmon/postgresql-15-pg-jobmon_1.4.1-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 15 postgresql-15-pg-jobmon postgresql-15-pg-jobmon_1.4.1-1PIGSTY~bookworm_arm64.deb pigsty 1.4.1 26.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-jobmon/postgresql-15-pg-jobmon_1.4.1-1PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 15 postgresql-15-pg-jobmon postgresql-15-pg-jobmon_1.4.1-1PIGSTY~trixie_amd64.deb pigsty 1.4.1 26.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-jobmon/postgresql-15-pg-jobmon_1.4.1-1PIGSTY~trixie_amd64.deb
@@ -133,9 +149,13 @@ weight: 7160
 @ el8.x86_64 14 pg_jobmon_14 pg_jobmon_14-1.4.1-1.rhel8.noarch.rpm pgdg 1.4.1 31.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_jobmon_14-1.4.1-1.rhel8.noarch.rpm
 @ el8.aarch64 14 pg_jobmon_14 pg_jobmon_14-1.4.1-1.rhel8.noarch.rpm pgdg 1.4.1 31.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pg_jobmon_14-1.4.1-1.rhel8.noarch.rpm
 @ el9.x86_64 14 pg_jobmon_14 pg_jobmon_14-1.4.1-5PGDG.rhel9.8.noarch.rpm pgdg 1.4.1 29.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_jobmon_14-1.4.1-5PGDG.rhel9.8.noarch.rpm
+@ el9.x86_64 14 pg_jobmon_14 pg_jobmon_14-1.4.1-1.rhel9.noarch.rpm pgdg 1.4.1 29.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_jobmon_14-1.4.1-1.rhel9.noarch.rpm
 @ el9.aarch64 14 pg_jobmon_14 pg_jobmon_14-1.4.1-5PGDG.rhel9.8.noarch.rpm pgdg 1.4.1 29.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_jobmon_14-1.4.1-5PGDG.rhel9.8.noarch.rpm
+@ el9.aarch64 14 pg_jobmon_14 pg_jobmon_14-1.4.1-1.rhel9.noarch.rpm pgdg 1.4.1 29.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_jobmon_14-1.4.1-1.rhel9.noarch.rpm
 @ el10.x86_64 14 pg_jobmon_14 pg_jobmon_14-1.4.1-5PGDG.rhel10.2.noarch.rpm pgdg 1.4.1 29.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_jobmon_14-1.4.1-5PGDG.rhel10.2.noarch.rpm
+@ el10.x86_64 14 pg_jobmon_14 pg_jobmon_14-1.4.1-5PGDG.rhel10.noarch.rpm pgdg 1.4.1 30.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_jobmon_14-1.4.1-5PGDG.rhel10.noarch.rpm
 @ el10.aarch64 14 pg_jobmon_14 pg_jobmon_14-1.4.1-5PGDG.rhel10.2.noarch.rpm pgdg 1.4.1 29.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_jobmon_14-1.4.1-5PGDG.rhel10.2.noarch.rpm
+@ el10.aarch64 14 pg_jobmon_14 pg_jobmon_14-1.4.1-5PGDG.rhel10.noarch.rpm pgdg 1.4.1 30.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_jobmon_14-1.4.1-5PGDG.rhel10.noarch.rpm
 @ d12.x86_64 14 postgresql-14-pg-jobmon postgresql-14-pg-jobmon_1.4.1-1PIGSTY~bookworm_amd64.deb pigsty 1.4.1 26.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-jobmon/postgresql-14-pg-jobmon_1.4.1-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 14 postgresql-14-pg-jobmon postgresql-14-pg-jobmon_1.4.1-1PIGSTY~bookworm_arm64.deb pigsty 1.4.1 26.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-jobmon/postgresql-14-pg-jobmon_1.4.1-1PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 14 postgresql-14-pg-jobmon postgresql-14-pg-jobmon_1.4.1-1PIGSTY~trixie_amd64.deb pigsty 1.4.1 26.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-jobmon/postgresql-14-pg-jobmon_1.4.1-1PIGSTY~trixie_amd64.deb

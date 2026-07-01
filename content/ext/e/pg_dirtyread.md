@@ -52,10 +52,10 @@ weight: 5050
 |:--:|:--:|:--:|:--:|:--:|:--:|
 | el8.x86_64 | AVAIL PIGSTY 2.8 2 | AVAIL PIGSTY 2.8 2 | AVAIL PIGSTY 2.8 2 | AVAIL PIGSTY 2.8 2 | AVAIL PIGSTY 2.8 2 |
 | el8.aarch64 | AVAIL PIGSTY 2.8 2 | AVAIL PIGSTY 2.8 2 | AVAIL PIGSTY 2.8 2 | AVAIL PIGSTY 2.8 2 | AVAIL PIGSTY 2.8 2 |
-| el9.x86_64 | AVAIL PIGSTY 2.8 2 | AVAIL PIGSTY 2.8 2 | AVAIL PIGSTY 2.8 2 | AVAIL PIGSTY 2.8 2 | AVAIL PIGSTY 2.8 2 |
-| el9.aarch64 | AVAIL PIGSTY 2.8 2 | AVAIL PIGSTY 2.8 2 | AVAIL PIGSTY 2.8 2 | AVAIL PIGSTY 2.8 2 | AVAIL PIGSTY 2.8 2 |
-| el10.x86_64 | AVAIL PIGSTY 2.8 2 | AVAIL PIGSTY 2.8 2 | AVAIL PIGSTY 2.8 2 | AVAIL PIGSTY 2.8 2 | AVAIL PIGSTY 2.8 2 |
-| el10.aarch64 | AVAIL PIGSTY 2.8 2 | AVAIL PIGSTY 2.8 2 | AVAIL PIGSTY 2.8 2 | AVAIL PIGSTY 2.8 2 | AVAIL PIGSTY 2.8 2 |
+| el9.x86_64 | AVAIL PIGSTY 2.8 3 | AVAIL PIGSTY 2.8 3 | AVAIL PIGSTY 2.8 3 | AVAIL PIGSTY 2.8 3 | AVAIL PIGSTY 2.8 3 |
+| el9.aarch64 | AVAIL PIGSTY 2.8 3 | AVAIL PIGSTY 2.8 3 | AVAIL PIGSTY 2.8 3 | AVAIL PIGSTY 2.8 3 | AVAIL PIGSTY 2.8 3 |
+| el10.x86_64 | AVAIL PIGSTY 2.8 3 | AVAIL PIGSTY 2.8 3 | AVAIL PIGSTY 2.8 3 | AVAIL PIGSTY 2.8 3 | AVAIL PIGSTY 2.8 3 |
+| el10.aarch64 | AVAIL PIGSTY 2.8 3 | AVAIL PIGSTY 2.8 3 | AVAIL PIGSTY 2.8 3 | AVAIL PIGSTY 2.8 3 | AVAIL PIGSTY 2.8 3 |
 | d12.x86_64 | AVAIL PGDG 2.8 2 | AVAIL PGDG 2.8 2 | AVAIL PGDG 2.8 2 | AVAIL PGDG 2.8 2 | AVAIL PGDG 2.8 2 |
 | d12.aarch64 | AVAIL PGDG 2.8 2 | AVAIL PGDG 2.8 2 | AVAIL PGDG 2.8 2 | AVAIL PGDG 2.8 2 | AVAIL PGDG 2.8 2 |
 | d13.x86_64 | AVAIL PGDG 2.8 2 | AVAIL PGDG 2.8 2 | AVAIL PGDG 2.8 2 | AVAIL PGDG 2.8 2 | AVAIL PGDG 2.8 2 |
@@ -72,12 +72,16 @@ weight: 5050
 @ el8.aarch64 18 pg_dirtyread_18 pg_dirtyread_18-2.7-4PGDG.rhel8.aarch64.rpm pgdg 2.7 16.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pg_dirtyread_18-2.7-4PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 18 pg_dirtyread_18 pg_dirtyread_18-2.8-1PIGSTY.el9.x86_64.rpm pigsty 2.8 17.1KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_dirtyread_18-2.8-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 18 pg_dirtyread_18 pg_dirtyread_18-2.7-6PGDG.rhel9.8.x86_64.rpm pgdg 2.7 17.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pg_dirtyread_18-2.7-6PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 18 pg_dirtyread_18 pg_dirtyread_18-2.7-4PGDG.rhel9.x86_64.rpm pgdg 2.7 17.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pg_dirtyread_18-2.7-4PGDG.rhel9.x86_64.rpm
 @ el9.aarch64 18 pg_dirtyread_18 pg_dirtyread_18-2.8-1PIGSTY.el9.aarch64.rpm pigsty 2.8 16.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_dirtyread_18-2.8-1PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 18 pg_dirtyread_18 pg_dirtyread_18-2.7-6PGDG.rhel9.8.aarch64.rpm pgdg 2.7 16.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pg_dirtyread_18-2.7-6PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 18 pg_dirtyread_18 pg_dirtyread_18-2.7-4PGDG.rhel9.aarch64.rpm pgdg 2.7 16.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pg_dirtyread_18-2.7-4PGDG.rhel9.aarch64.rpm
 @ el10.x86_64 18 pg_dirtyread_18 pg_dirtyread_18-2.8-1PIGSTY.el10.x86_64.rpm pigsty 2.8 17.3KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_dirtyread_18-2.8-1PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 18 pg_dirtyread_18 pg_dirtyread_18-2.7-6PGDG.rhel10.2.x86_64.rpm pgdg 2.7 17.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pg_dirtyread_18-2.7-6PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 18 pg_dirtyread_18 pg_dirtyread_18-2.7-4PGDG.rhel10.x86_64.rpm pgdg 2.7 17.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pg_dirtyread_18-2.7-4PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 18 pg_dirtyread_18 pg_dirtyread_18-2.8-1PIGSTY.el10.aarch64.rpm pigsty 2.8 17.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_dirtyread_18-2.8-1PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 18 pg_dirtyread_18 pg_dirtyread_18-2.7-6PGDG.rhel10.2.aarch64.rpm pgdg 2.7 17.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_dirtyread_18-2.7-6PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 18 pg_dirtyread_18 pg_dirtyread_18-2.7-4PGDG.rhel10.aarch64.rpm pgdg 2.7 17.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_dirtyread_18-2.7-4PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 18 postgresql-18-dirtyread postgresql-18-dirtyread_2.8-1.pgdg12+1_amd64.deb pgdg 2.8 21.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-18-dirtyread_2.8-1.pgdg12+1_amd64.deb
 @ d12.x86_64 18 postgresql-18-dirtyread postgresql-18-dirtyread_2.7-3.pgdg12+1_amd64.deb pgdg 2.7 21.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-18-dirtyread_2.7-3.pgdg12+1_amd64.deb
 @ d12.aarch64 18 postgresql-18-dirtyread postgresql-18-dirtyread_2.8-1.pgdg12+1_arm64.deb pgdg 2.8 20.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-18-dirtyread_2.8-1.pgdg12+1_arm64.deb
@@ -104,12 +108,16 @@ weight: 5050
 @ el8.aarch64 17 pg_dirtyread_17 pg_dirtyread_17-2.7-2PGDG.rhel8.aarch64.rpm pgdg 2.7 16.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pg_dirtyread_17-2.7-2PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 17 pg_dirtyread_17 pg_dirtyread_17-2.8-1PIGSTY.el9.x86_64.rpm pigsty 2.8 17.1KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_dirtyread_17-2.8-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 17 pg_dirtyread_17 pg_dirtyread_17-2.7-6PGDG.rhel9.8.x86_64.rpm pgdg 2.7 17.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_dirtyread_17-2.7-6PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 17 pg_dirtyread_17 pg_dirtyread_17-2.7-2PGDG.rhel9.x86_64.rpm pgdg 2.7 17.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_dirtyread_17-2.7-2PGDG.rhel9.x86_64.rpm
 @ el9.aarch64 17 pg_dirtyread_17 pg_dirtyread_17-2.8-1PIGSTY.el9.aarch64.rpm pigsty 2.8 16.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_dirtyread_17-2.8-1PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 17 pg_dirtyread_17 pg_dirtyread_17-2.7-6PGDG.rhel9.8.aarch64.rpm pgdg 2.7 16.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_dirtyread_17-2.7-6PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 17 pg_dirtyread_17 pg_dirtyread_17-2.7-2PGDG.rhel9.aarch64.rpm pgdg 2.7 16.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_dirtyread_17-2.7-2PGDG.rhel9.aarch64.rpm
 @ el10.x86_64 17 pg_dirtyread_17 pg_dirtyread_17-2.8-1PIGSTY.el10.x86_64.rpm pigsty 2.8 17.3KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_dirtyread_17-2.8-1PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 17 pg_dirtyread_17 pg_dirtyread_17-2.7-6PGDG.rhel10.2.x86_64.rpm pgdg 2.7 17.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_dirtyread_17-2.7-6PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 17 pg_dirtyread_17 pg_dirtyread_17-2.7-4PGDG.rhel10.x86_64.rpm pgdg 2.7 17.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_dirtyread_17-2.7-4PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 17 pg_dirtyread_17 pg_dirtyread_17-2.8-1PIGSTY.el10.aarch64.rpm pigsty 2.8 17.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_dirtyread_17-2.8-1PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 17 pg_dirtyread_17 pg_dirtyread_17-2.7-6PGDG.rhel10.2.aarch64.rpm pgdg 2.7 17.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_dirtyread_17-2.7-6PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 17 pg_dirtyread_17 pg_dirtyread_17-2.7-4PGDG.rhel10.aarch64.rpm pgdg 2.7 17.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_dirtyread_17-2.7-4PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 17 postgresql-17-dirtyread postgresql-17-dirtyread_2.8-1.pgdg12+1_amd64.deb pgdg 2.8 21.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-17-dirtyread_2.8-1.pgdg12+1_amd64.deb
 @ d12.x86_64 17 postgresql-17-dirtyread postgresql-17-dirtyread_2.7-3.pgdg12+1_amd64.deb pgdg 2.7 20.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-17-dirtyread_2.7-3.pgdg12+1_amd64.deb
 @ d12.aarch64 17 postgresql-17-dirtyread postgresql-17-dirtyread_2.8-1.pgdg12+1_arm64.deb pgdg 2.8 20.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-17-dirtyread_2.8-1.pgdg12+1_arm64.deb
@@ -136,12 +144,16 @@ weight: 5050
 @ el8.aarch64 16 pg_dirtyread_16 pg_dirtyread_16-2.7-1PGDG.rhel8.aarch64.rpm pgdg 2.7 16.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pg_dirtyread_16-2.7-1PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 16 pg_dirtyread_16 pg_dirtyread_16-2.8-1PIGSTY.el9.x86_64.rpm pigsty 2.8 17.1KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_dirtyread_16-2.8-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 16 pg_dirtyread_16 pg_dirtyread_16-2.7-6PGDG.rhel9.8.x86_64.rpm pgdg 2.7 17.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_dirtyread_16-2.7-6PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 16 pg_dirtyread_16 pg_dirtyread_16-2.7-1PGDG.rhel9.x86_64.rpm pgdg 2.7 16.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_dirtyread_16-2.7-1PGDG.rhel9.x86_64.rpm
 @ el9.aarch64 16 pg_dirtyread_16 pg_dirtyread_16-2.8-1PIGSTY.el9.aarch64.rpm pigsty 2.8 16.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_dirtyread_16-2.8-1PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 16 pg_dirtyread_16 pg_dirtyread_16-2.7-6PGDG.rhel9.8.aarch64.rpm pgdg 2.7 16.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_dirtyread_16-2.7-6PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 16 pg_dirtyread_16 pg_dirtyread_16-2.7-1PGDG.rhel9.aarch64.rpm pgdg 2.7 16.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_dirtyread_16-2.7-1PGDG.rhel9.aarch64.rpm
 @ el10.x86_64 16 pg_dirtyread_16 pg_dirtyread_16-2.8-1PIGSTY.el10.x86_64.rpm pigsty 2.8 17.3KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_dirtyread_16-2.8-1PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 16 pg_dirtyread_16 pg_dirtyread_16-2.7-6PGDG.rhel10.2.x86_64.rpm pgdg 2.7 17.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_dirtyread_16-2.7-6PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 16 pg_dirtyread_16 pg_dirtyread_16-2.7-4PGDG.rhel10.x86_64.rpm pgdg 2.7 17.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_dirtyread_16-2.7-4PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 16 pg_dirtyread_16 pg_dirtyread_16-2.8-1PIGSTY.el10.aarch64.rpm pigsty 2.8 17.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_dirtyread_16-2.8-1PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 16 pg_dirtyread_16 pg_dirtyread_16-2.7-6PGDG.rhel10.2.aarch64.rpm pgdg 2.7 17.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_dirtyread_16-2.7-6PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 16 pg_dirtyread_16 pg_dirtyread_16-2.7-4PGDG.rhel10.aarch64.rpm pgdg 2.7 17.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_dirtyread_16-2.7-4PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 16 postgresql-16-dirtyread postgresql-16-dirtyread_2.8-1.pgdg12+1_amd64.deb pgdg 2.8 21.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-16-dirtyread_2.8-1.pgdg12+1_amd64.deb
 @ d12.x86_64 16 postgresql-16-dirtyread postgresql-16-dirtyread_2.7-3.pgdg12+1_amd64.deb pgdg 2.7 20.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-16-dirtyread_2.7-3.pgdg12+1_amd64.deb
 @ d12.aarch64 16 postgresql-16-dirtyread postgresql-16-dirtyread_2.8-1.pgdg12+1_arm64.deb pgdg 2.8 20.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-16-dirtyread_2.8-1.pgdg12+1_arm64.deb
@@ -168,12 +180,16 @@ weight: 5050
 @ el8.aarch64 15 pg_dirtyread_15 pg_dirtyread_15-2.7-1PGDG.rhel8.aarch64.rpm pgdg 2.7 16.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pg_dirtyread_15-2.7-1PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 15 pg_dirtyread_15 pg_dirtyread_15-2.8-1PIGSTY.el9.x86_64.rpm pigsty 2.8 17.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_dirtyread_15-2.8-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 15 pg_dirtyread_15 pg_dirtyread_15-2.7-6PGDG.rhel9.8.x86_64.rpm pgdg 2.7 17.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_dirtyread_15-2.7-6PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 15 pg_dirtyread_15 pg_dirtyread_15-2.7-1PGDG.rhel9.x86_64.rpm pgdg 2.7 17.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_dirtyread_15-2.7-1PGDG.rhel9.x86_64.rpm
 @ el9.aarch64 15 pg_dirtyread_15 pg_dirtyread_15-2.8-1PIGSTY.el9.aarch64.rpm pigsty 2.8 17.2KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_dirtyread_15-2.8-1PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 15 pg_dirtyread_15 pg_dirtyread_15-2.7-6PGDG.rhel9.8.aarch64.rpm pgdg 2.7 17.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_dirtyread_15-2.7-6PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 15 pg_dirtyread_15 pg_dirtyread_15-2.7-1PGDG.rhel9.aarch64.rpm pgdg 2.7 16.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_dirtyread_15-2.7-1PGDG.rhel9.aarch64.rpm
 @ el10.x86_64 15 pg_dirtyread_15 pg_dirtyread_15-2.8-1PIGSTY.el10.x86_64.rpm pigsty 2.8 17.5KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_dirtyread_15-2.8-1PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 15 pg_dirtyread_15 pg_dirtyread_15-2.7-6PGDG.rhel10.2.x86_64.rpm pgdg 2.7 17.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_dirtyread_15-2.7-6PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 15 pg_dirtyread_15 pg_dirtyread_15-2.7-4PGDG.rhel10.x86_64.rpm pgdg 2.7 17.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_dirtyread_15-2.7-4PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 15 pg_dirtyread_15 pg_dirtyread_15-2.8-1PIGSTY.el10.aarch64.rpm pigsty 2.8 17.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_dirtyread_15-2.8-1PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 15 pg_dirtyread_15 pg_dirtyread_15-2.7-6PGDG.rhel10.2.aarch64.rpm pgdg 2.7 17.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_dirtyread_15-2.7-6PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 15 pg_dirtyread_15 pg_dirtyread_15-2.7-4PGDG.rhel10.aarch64.rpm pgdg 2.7 17.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_dirtyread_15-2.7-4PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 15 postgresql-15-dirtyread postgresql-15-dirtyread_2.8-1.pgdg12+1_amd64.deb pgdg 2.8 21.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-15-dirtyread_2.8-1.pgdg12+1_amd64.deb
 @ d12.x86_64 15 postgresql-15-dirtyread postgresql-15-dirtyread_2.7-3.pgdg12+1_amd64.deb pgdg 2.7 21.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-15-dirtyread_2.7-3.pgdg12+1_amd64.deb
 @ d12.aarch64 15 postgresql-15-dirtyread postgresql-15-dirtyread_2.8-1.pgdg12+1_arm64.deb pgdg 2.8 20.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-15-dirtyread_2.8-1.pgdg12+1_arm64.deb
@@ -200,12 +216,16 @@ weight: 5050
 @ el8.aarch64 14 pg_dirtyread_14 pg_dirtyread_14-2.7-1PGDG.rhel8.aarch64.rpm pgdg 2.7 16.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pg_dirtyread_14-2.7-1PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 14 pg_dirtyread_14 pg_dirtyread_14-2.8-1PIGSTY.el9.x86_64.rpm pigsty 2.8 17.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_dirtyread_14-2.8-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 14 pg_dirtyread_14 pg_dirtyread_14-2.7-6PGDG.rhel9.8.x86_64.rpm pgdg 2.7 17.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_dirtyread_14-2.7-6PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 14 pg_dirtyread_14 pg_dirtyread_14-2.7-1PGDG.rhel9.x86_64.rpm pgdg 2.7 17.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_dirtyread_14-2.7-1PGDG.rhel9.x86_64.rpm
 @ el9.aarch64 14 pg_dirtyread_14 pg_dirtyread_14-2.8-1PIGSTY.el9.aarch64.rpm pigsty 2.8 17.2KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_dirtyread_14-2.8-1PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 14 pg_dirtyread_14 pg_dirtyread_14-2.7-6PGDG.rhel9.8.aarch64.rpm pgdg 2.7 17.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_dirtyread_14-2.7-6PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 14 pg_dirtyread_14 pg_dirtyread_14-2.7-1PGDG.rhel9.aarch64.rpm pgdg 2.7 16.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_dirtyread_14-2.7-1PGDG.rhel9.aarch64.rpm
 @ el10.x86_64 14 pg_dirtyread_14 pg_dirtyread_14-2.8-1PIGSTY.el10.x86_64.rpm pigsty 2.8 17.4KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_dirtyread_14-2.8-1PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 14 pg_dirtyread_14 pg_dirtyread_14-2.7-6PGDG.rhel10.2.x86_64.rpm pgdg 2.7 17.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_dirtyread_14-2.7-6PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 14 pg_dirtyread_14 pg_dirtyread_14-2.7-4PGDG.rhel10.x86_64.rpm pgdg 2.7 17.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_dirtyread_14-2.7-4PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 14 pg_dirtyread_14 pg_dirtyread_14-2.8-1PIGSTY.el10.aarch64.rpm pigsty 2.8 17.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_dirtyread_14-2.8-1PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 14 pg_dirtyread_14 pg_dirtyread_14-2.7-6PGDG.rhel10.2.aarch64.rpm pgdg 2.7 17.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_dirtyread_14-2.7-6PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 14 pg_dirtyread_14 pg_dirtyread_14-2.7-4PGDG.rhel10.aarch64.rpm pgdg 2.7 17.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_dirtyread_14-2.7-4PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 14 postgresql-14-dirtyread postgresql-14-dirtyread_2.8-1.pgdg12+1_amd64.deb pgdg 2.8 21.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-14-dirtyread_2.8-1.pgdg12+1_amd64.deb
 @ d12.x86_64 14 postgresql-14-dirtyread postgresql-14-dirtyread_2.7-3.pgdg12+1_amd64.deb pgdg 2.7 21.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-14-dirtyread_2.7-3.pgdg12+1_amd64.deb
 @ d12.aarch64 14 postgresql-14-dirtyread postgresql-14-dirtyread_2.8-1.pgdg12+1_arm64.deb pgdg 2.8 20.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-dirtyread/postgresql-14-dirtyread_2.8-1.pgdg12+1_arm64.deb

@@ -55,10 +55,10 @@ weight: 1050
 |:--:|:--:|:--:|:--:|:--:|:--:|
 | el8.x86_64 | AVAIL PGDG 4.7.1 1 | AVAIL PGDG 4.7.1 4 | AVAIL PGDG 4.7.1 9 | AVAIL PGDG 4.7.1 10 | AVAIL PGDG 4.7.1 10 |
 | el8.aarch64 | AVAIL PGDG 4.7.1 1 | AVAIL PGDG 4.7.1 4 | AVAIL PGDG 4.7.1 9 | AVAIL PGDG 4.7.1 10 | AVAIL PGDG 4.7.1 10 |
-| el9.x86_64 | AVAIL PGDG 4.7.1 1 | AVAIL PGDG 4.7.1 1 | AVAIL PGDG 4.7.1 1 | AVAIL PGDG 4.7.1 1 | AVAIL PGDG 4.7.1 1 |
-| el9.aarch64 | AVAIL PGDG 4.7.1 1 | AVAIL PGDG 4.7.1 1 | AVAIL PGDG 4.7.1 1 | AVAIL PGDG 4.7.1 1 | AVAIL PGDG 4.7.1 1 |
-| el10.x86_64 | AVAIL PGDG 4.7.1 1 | AVAIL PGDG 4.7.1 1 | AVAIL PGDG 4.7.1 1 | AVAIL PGDG 4.7.1 1 | AVAIL PGDG 4.7.1 1 |
-| el10.aarch64 | AVAIL PGDG 4.7.1 1 | AVAIL PGDG 4.7.1 1 | AVAIL PGDG 4.7.1 1 | AVAIL PGDG 4.7.1 1 | AVAIL PGDG 4.7.1 1 |
+| el9.x86_64 | AVAIL PGDG 4.7.1 2 | AVAIL PGDG 4.7.1 5 | AVAIL PGDG 4.7.1 10 | AVAIL PGDG 4.7.1 11 | AVAIL PGDG 4.7.1 11 |
+| el9.aarch64 | AVAIL PGDG 4.7.1 2 | AVAIL PGDG 4.7.1 5 | AVAIL PGDG 4.7.1 10 | AVAIL PGDG 4.7.1 11 | AVAIL PGDG 4.7.1 11 |
+| el10.x86_64 | AVAIL PGDG 4.7.1 2 | AVAIL PGDG 4.7.1 4 | AVAIL PGDG 4.7.1 4 | AVAIL PGDG 4.7.1 4 | AVAIL PGDG 4.7.1 4 |
+| el10.aarch64 | AVAIL PGDG 4.7.1 2 | AVAIL PGDG 4.7.1 4 | AVAIL PGDG 4.7.1 4 | AVAIL PGDG 4.7.1 4 | AVAIL PGDG 4.7.1 4 |
 | d12.x86_64 | AVAIL PIGSTY 4.7.1 1 | AVAIL PIGSTY 4.7.1 1 | AVAIL PIGSTY 4.7.1 1 | AVAIL PIGSTY 4.7.1 1 | AVAIL PIGSTY 4.7.1 1 |
 | d12.aarch64 | AVAIL PIGSTY 4.7.1 1 | AVAIL PIGSTY 4.7.1 1 | AVAIL PIGSTY 4.7.1 1 | AVAIL PIGSTY 4.7.1 1 | AVAIL PIGSTY 4.7.1 1 |
 | d13.x86_64 | AVAIL PIGSTY 4.7.1 1 | AVAIL PIGSTY 4.7.1 1 | AVAIL PIGSTY 4.7.1 1 | AVAIL PIGSTY 4.7.1 1 | AVAIL PIGSTY 4.7.1 1 |
@@ -72,9 +72,13 @@ weight: 1050
 @ el8.x86_64 18 e-maj_18 e-maj_18-4.7.1-1PGDG.rhel8.noarch.rpm pgdg 4.7.1 5.3MiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/e-maj_18-4.7.1-1PGDG.rhel8.noarch.rpm
 @ el8.aarch64 18 e-maj_18 e-maj_18-4.7.1-1PGDG.rhel8.noarch.rpm pgdg 4.7.1 5.3MiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/e-maj_18-4.7.1-1PGDG.rhel8.noarch.rpm
 @ el9.x86_64 18 e-maj_18 e-maj_18-4.7.1-2PGDG.rhel9.8.noarch.rpm pgdg 4.7.1 5.1MiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/e-maj_18-4.7.1-2PGDG.rhel9.8.noarch.rpm
+@ el9.x86_64 18 e-maj_18 e-maj_18-4.7.1-1PGDG.rhel9.noarch.rpm pgdg 4.7.1 5.1MiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/e-maj_18-4.7.1-1PGDG.rhel9.noarch.rpm
 @ el9.aarch64 18 e-maj_18 e-maj_18-4.7.1-2PGDG.rhel9.8.noarch.rpm pgdg 4.7.1 5.1MiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/e-maj_18-4.7.1-2PGDG.rhel9.8.noarch.rpm
+@ el9.aarch64 18 e-maj_18 e-maj_18-4.7.1-1PGDG.rhel9.noarch.rpm pgdg 4.7.1 5.1MiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/e-maj_18-4.7.1-1PGDG.rhel9.noarch.rpm
 @ el10.x86_64 18 e-maj_18 e-maj_18-4.7.1-2PGDG.rhel10.2.noarch.rpm pgdg 4.7.1 5.1MiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/e-maj_18-4.7.1-2PGDG.rhel10.2.noarch.rpm
+@ el10.x86_64 18 e-maj_18 e-maj_18-4.7.1-1PGDG.rhel10.noarch.rpm pgdg 4.7.1 5.1MiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/e-maj_18-4.7.1-1PGDG.rhel10.noarch.rpm
 @ el10.aarch64 18 e-maj_18 e-maj_18-4.7.1-2PGDG.rhel10.2.noarch.rpm pgdg 4.7.1 5.1MiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/e-maj_18-4.7.1-2PGDG.rhel10.2.noarch.rpm
+@ el10.aarch64 18 e-maj_18 e-maj_18-4.7.1-1PGDG.rhel10.noarch.rpm pgdg 4.7.1 5.1MiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/e-maj_18-4.7.1-1PGDG.rhel10.noarch.rpm
 @ d12.x86_64 18 postgresql-18-emaj postgresql-18-emaj_4.7.1-1PIGSTY~bookworm_amd64.deb pigsty 4.7.1 213.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/e/emaj/postgresql-18-emaj_4.7.1-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 18 postgresql-18-emaj postgresql-18-emaj_4.7.1-1PIGSTY~bookworm_arm64.deb pigsty 4.7.1 213.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/e/emaj/postgresql-18-emaj_4.7.1-1PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 18 postgresql-18-emaj postgresql-18-emaj_4.7.1-1PIGSTY~trixie_amd64.deb pigsty 4.7.1 213.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/e/emaj/postgresql-18-emaj_4.7.1-1PIGSTY~trixie_amd64.deb
@@ -94,9 +98,23 @@ weight: 1050
 @ el8.aarch64 17 e-maj_17 e-maj_17-4.6.0-1PGDG.rhel8.noarch.rpm pgdg 4.6.0 4.6MiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/e-maj_17-4.6.0-1PGDG.rhel8.noarch.rpm
 @ el8.aarch64 17 e-maj_17 e-maj_17-4.5.0-1PGDG.rhel8.noarch.rpm pgdg 4.5.0 5.2MiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/e-maj_17-4.5.0-1PGDG.rhel8.noarch.rpm
 @ el9.x86_64 17 e-maj_17 e-maj_17-4.7.1-2PGDG.rhel9.8.noarch.rpm pgdg 4.7.1 5.1MiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/e-maj_17-4.7.1-2PGDG.rhel9.8.noarch.rpm
+@ el9.x86_64 17 e-maj_17 e-maj_17-4.7.1-1PGDG.rhel9.noarch.rpm pgdg 4.7.1 5.1MiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/e-maj_17-4.7.1-1PGDG.rhel9.noarch.rpm
+@ el9.x86_64 17 e-maj_17 e-maj_17-4.7.0-1PGDG.rhel9.noarch.rpm pgdg 4.7.0 5.1MiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/e-maj_17-4.7.0-1PGDG.rhel9.noarch.rpm
+@ el9.x86_64 17 e-maj_17 e-maj_17-4.6.0-1PGDG.rhel9.noarch.rpm pgdg 4.6.0 4.4MiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/e-maj_17-4.6.0-1PGDG.rhel9.noarch.rpm
+@ el9.x86_64 17 e-maj_17 e-maj_17-4.5.0-1PGDG.rhel9.noarch.rpm pgdg 4.5.0 4.7MiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/e-maj_17-4.5.0-1PGDG.rhel9.noarch.rpm
 @ el9.aarch64 17 e-maj_17 e-maj_17-4.7.1-2PGDG.rhel9.8.noarch.rpm pgdg 4.7.1 5.1MiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/e-maj_17-4.7.1-2PGDG.rhel9.8.noarch.rpm
+@ el9.aarch64 17 e-maj_17 e-maj_17-4.7.1-1PGDG.rhel9.noarch.rpm pgdg 4.7.1 5.1MiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/e-maj_17-4.7.1-1PGDG.rhel9.noarch.rpm
+@ el9.aarch64 17 e-maj_17 e-maj_17-4.7.0-1PGDG.rhel9.noarch.rpm pgdg 4.7.0 5.1MiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/e-maj_17-4.7.0-1PGDG.rhel9.noarch.rpm
+@ el9.aarch64 17 e-maj_17 e-maj_17-4.6.0-1PGDG.rhel9.noarch.rpm pgdg 4.6.0 4.4MiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/e-maj_17-4.6.0-1PGDG.rhel9.noarch.rpm
+@ el9.aarch64 17 e-maj_17 e-maj_17-4.5.0-1PGDG.rhel9.noarch.rpm pgdg 4.5.0 4.7MiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/e-maj_17-4.5.0-1PGDG.rhel9.noarch.rpm
 @ el10.x86_64 17 e-maj_17 e-maj_17-4.7.1-2PGDG.rhel10.2.noarch.rpm pgdg 4.7.1 5.1MiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/e-maj_17-4.7.1-2PGDG.rhel10.2.noarch.rpm
+@ el10.x86_64 17 e-maj_17 e-maj_17-4.7.1-1PGDG.rhel10.noarch.rpm pgdg 4.7.1 5.1MiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/e-maj_17-4.7.1-1PGDG.rhel10.noarch.rpm
+@ el10.x86_64 17 e-maj_17 e-maj_17-4.7.0-1PGDG.rhel10.noarch.rpm pgdg 4.7.0 5.1MiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/e-maj_17-4.7.0-1PGDG.rhel10.noarch.rpm
+@ el10.x86_64 17 e-maj_17 e-maj_17-4.6.0-1PGDG.rhel10.noarch.rpm pgdg 4.6.0 4.4MiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/e-maj_17-4.6.0-1PGDG.rhel10.noarch.rpm
 @ el10.aarch64 17 e-maj_17 e-maj_17-4.7.1-2PGDG.rhel10.2.noarch.rpm pgdg 4.7.1 5.1MiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/e-maj_17-4.7.1-2PGDG.rhel10.2.noarch.rpm
+@ el10.aarch64 17 e-maj_17 e-maj_17-4.7.1-1PGDG.rhel10.noarch.rpm pgdg 4.7.1 5.1MiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/e-maj_17-4.7.1-1PGDG.rhel10.noarch.rpm
+@ el10.aarch64 17 e-maj_17 e-maj_17-4.7.0-1PGDG.rhel10.noarch.rpm pgdg 4.7.0 5.1MiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/e-maj_17-4.7.0-1PGDG.rhel10.noarch.rpm
+@ el10.aarch64 17 e-maj_17 e-maj_17-4.6.0-1PGDG.rhel10.noarch.rpm pgdg 4.6.0 4.4MiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/e-maj_17-4.6.0-1PGDG.rhel10.noarch.rpm
 @ d12.x86_64 17 postgresql-17-emaj postgresql-17-emaj_4.7.1-1PIGSTY~bookworm_amd64.deb pigsty 4.7.1 214.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/e/emaj/postgresql-17-emaj_4.7.1-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 17 postgresql-17-emaj postgresql-17-emaj_4.7.1-1PIGSTY~bookworm_arm64.deb pigsty 4.7.1 214.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/e/emaj/postgresql-17-emaj_4.7.1-1PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 17 postgresql-17-emaj postgresql-17-emaj_4.7.1-1PIGSTY~trixie_amd64.deb pigsty 4.7.1 214.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/e/emaj/postgresql-17-emaj_4.7.1-1PIGSTY~trixie_amd64.deb
@@ -126,9 +144,33 @@ weight: 1050
 @ el8.aarch64 16 e-maj_16 e-maj_16-4.3.0-1PGDG.rhel8.aarch64.rpm pgdg 4.3.0 4.6MiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/e-maj_16-4.3.0-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 16 e-maj_16 e-maj_16-4.2.0-1.rhel8.aarch64.rpm pgdg 4.2.0 4.5MiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/e-maj_16-4.2.0-1.rhel8.aarch64.rpm
 @ el9.x86_64 16 e-maj_16 e-maj_16-4.7.1-2PGDG.rhel9.8.noarch.rpm pgdg 4.7.1 5.1MiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/e-maj_16-4.7.1-2PGDG.rhel9.8.noarch.rpm
+@ el9.x86_64 16 e-maj_16 e-maj_16-4.7.1-1PGDG.rhel9.noarch.rpm pgdg 4.7.1 5.1MiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/e-maj_16-4.7.1-1PGDG.rhel9.noarch.rpm
+@ el9.x86_64 16 e-maj_16 e-maj_16-4.7.0-1PGDG.rhel9.noarch.rpm pgdg 4.7.0 5.1MiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/e-maj_16-4.7.0-1PGDG.rhel9.noarch.rpm
+@ el9.x86_64 16 e-maj_16 e-maj_16-4.6.0-1PGDG.rhel9.noarch.rpm pgdg 4.6.0 4.4MiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/e-maj_16-4.6.0-1PGDG.rhel9.noarch.rpm
+@ el9.x86_64 16 e-maj_16 e-maj_16-4.5.0-1PGDG.rhel9.noarch.rpm pgdg 4.5.0 4.7MiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/e-maj_16-4.5.0-1PGDG.rhel9.noarch.rpm
+@ el9.x86_64 16 e-maj_16 e-maj_16-4.4.0-1PGDG.rhel9.noarch.rpm pgdg 4.4.0 4.7MiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/e-maj_16-4.4.0-1PGDG.rhel9.noarch.rpm
+@ el9.x86_64 16 e-maj_16 e-maj_16-4.3.1-1PGDG.rhel9.noarch.rpm pgdg 4.3.1 4.2MiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/e-maj_16-4.3.1-1PGDG.rhel9.noarch.rpm
+@ el9.x86_64 16 e-maj_16 e-maj_16-4.3.0-1PGDG.rhel9.x86_64.rpm pgdg 4.3.0 4.2MiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/e-maj_16-4.3.0-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 16 e-maj_16 e-maj_16-4.3.0-1PGDG.rhel9.noarch.rpm pgdg 4.3.0 4.2MiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/e-maj_16-4.3.0-1PGDG.rhel9.noarch.rpm
+@ el9.x86_64 16 e-maj_16 e-maj_16-4.2.0-1.rhel9.x86_64.rpm pgdg 4.2.0 4.1MiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/e-maj_16-4.2.0-1.rhel9.x86_64.rpm
 @ el9.aarch64 16 e-maj_16 e-maj_16-4.7.1-2PGDG.rhel9.8.noarch.rpm pgdg 4.7.1 5.1MiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/e-maj_16-4.7.1-2PGDG.rhel9.8.noarch.rpm
+@ el9.aarch64 16 e-maj_16 e-maj_16-4.7.1-1PGDG.rhel9.noarch.rpm pgdg 4.7.1 5.1MiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/e-maj_16-4.7.1-1PGDG.rhel9.noarch.rpm
+@ el9.aarch64 16 e-maj_16 e-maj_16-4.7.0-1PGDG.rhel9.noarch.rpm pgdg 4.7.0 5.1MiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/e-maj_16-4.7.0-1PGDG.rhel9.noarch.rpm
+@ el9.aarch64 16 e-maj_16 e-maj_16-4.6.0-1PGDG.rhel9.noarch.rpm pgdg 4.6.0 4.4MiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/e-maj_16-4.6.0-1PGDG.rhel9.noarch.rpm
+@ el9.aarch64 16 e-maj_16 e-maj_16-4.5.0-1PGDG.rhel9.noarch.rpm pgdg 4.5.0 4.7MiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/e-maj_16-4.5.0-1PGDG.rhel9.noarch.rpm
+@ el9.aarch64 16 e-maj_16 e-maj_16-4.4.0-1PGDG.rhel9.noarch.rpm pgdg 4.4.0 4.7MiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/e-maj_16-4.4.0-1PGDG.rhel9.noarch.rpm
+@ el9.aarch64 16 e-maj_16 e-maj_16-4.3.1-1PGDG.rhel9.noarch.rpm pgdg 4.3.1 4.2MiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/e-maj_16-4.3.1-1PGDG.rhel9.noarch.rpm
+@ el9.aarch64 16 e-maj_16 e-maj_16-4.3.0-1PGDG.rhel9.noarch.rpm pgdg 4.3.0 4.2MiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/e-maj_16-4.3.0-1PGDG.rhel9.noarch.rpm
+@ el9.aarch64 16 e-maj_16 e-maj_16-4.3.0-1PGDG.rhel9.aarch64.rpm pgdg 4.3.0 4.2MiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/e-maj_16-4.3.0-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 16 e-maj_16 e-maj_16-4.2.0-1.rhel9.aarch64.rpm pgdg 4.2.0 4.1MiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/e-maj_16-4.2.0-1.rhel9.aarch64.rpm
 @ el10.x86_64 16 e-maj_16 e-maj_16-4.7.1-2PGDG.rhel10.2.noarch.rpm pgdg 4.7.1 5.1MiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/e-maj_16-4.7.1-2PGDG.rhel10.2.noarch.rpm
+@ el10.x86_64 16 e-maj_16 e-maj_16-4.7.1-1PGDG.rhel10.noarch.rpm pgdg 4.7.1 5.1MiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/e-maj_16-4.7.1-1PGDG.rhel10.noarch.rpm
+@ el10.x86_64 16 e-maj_16 e-maj_16-4.7.0-1PGDG.rhel10.noarch.rpm pgdg 4.7.0 5.1MiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/e-maj_16-4.7.0-1PGDG.rhel10.noarch.rpm
+@ el10.x86_64 16 e-maj_16 e-maj_16-4.6.0-1PGDG.rhel10.noarch.rpm pgdg 4.6.0 4.4MiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/e-maj_16-4.6.0-1PGDG.rhel10.noarch.rpm
 @ el10.aarch64 16 e-maj_16 e-maj_16-4.7.1-2PGDG.rhel10.2.noarch.rpm pgdg 4.7.1 5.1MiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/e-maj_16-4.7.1-2PGDG.rhel10.2.noarch.rpm
+@ el10.aarch64 16 e-maj_16 e-maj_16-4.7.1-1PGDG.rhel10.noarch.rpm pgdg 4.7.1 5.1MiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/e-maj_16-4.7.1-1PGDG.rhel10.noarch.rpm
+@ el10.aarch64 16 e-maj_16 e-maj_16-4.7.0-1PGDG.rhel10.noarch.rpm pgdg 4.7.0 5.1MiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/e-maj_16-4.7.0-1PGDG.rhel10.noarch.rpm
+@ el10.aarch64 16 e-maj_16 e-maj_16-4.6.0-1PGDG.rhel10.noarch.rpm pgdg 4.6.0 4.4MiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/e-maj_16-4.6.0-1PGDG.rhel10.noarch.rpm
 @ d12.x86_64 16 postgresql-16-emaj postgresql-16-emaj_4.7.1-1PIGSTY~bookworm_amd64.deb pigsty 4.7.1 214.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/e/emaj/postgresql-16-emaj_4.7.1-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 16 postgresql-16-emaj postgresql-16-emaj_4.7.1-1PIGSTY~bookworm_arm64.deb pigsty 4.7.1 214.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/e/emaj/postgresql-16-emaj_4.7.1-1PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 16 postgresql-16-emaj postgresql-16-emaj_4.7.1-1PIGSTY~trixie_amd64.deb pigsty 4.7.1 214.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/e/emaj/postgresql-16-emaj_4.7.1-1PIGSTY~trixie_amd64.deb
@@ -160,9 +202,35 @@ weight: 1050
 @ el8.aarch64 15 e-maj_15 e-maj_15-4.2.0-1.rhel8.aarch64.rpm pgdg 4.2.0 4.5MiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/e-maj_15-4.2.0-1.rhel8.aarch64.rpm
 @ el8.aarch64 15 e-maj_15 e-maj_15-4.1.0-1.rhel8.aarch64.rpm pgdg 4.1.0 4.6MiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/e-maj_15-4.1.0-1.rhel8.aarch64.rpm
 @ el9.x86_64 15 e-maj_15 e-maj_15-4.7.1-2PGDG.rhel9.8.noarch.rpm pgdg 4.7.1 5.1MiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/e-maj_15-4.7.1-2PGDG.rhel9.8.noarch.rpm
+@ el9.x86_64 15 e-maj_15 e-maj_15-4.7.1-1PGDG.rhel9.noarch.rpm pgdg 4.7.1 5.1MiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/e-maj_15-4.7.1-1PGDG.rhel9.noarch.rpm
+@ el9.x86_64 15 e-maj_15 e-maj_15-4.7.0-1PGDG.rhel9.noarch.rpm pgdg 4.7.0 5.1MiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/e-maj_15-4.7.0-1PGDG.rhel9.noarch.rpm
+@ el9.x86_64 15 e-maj_15 e-maj_15-4.6.0-1PGDG.rhel9.noarch.rpm pgdg 4.6.0 4.4MiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/e-maj_15-4.6.0-1PGDG.rhel9.noarch.rpm
+@ el9.x86_64 15 e-maj_15 e-maj_15-4.5.0-1PGDG.rhel9.noarch.rpm pgdg 4.5.0 4.7MiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/e-maj_15-4.5.0-1PGDG.rhel9.noarch.rpm
+@ el9.x86_64 15 e-maj_15 e-maj_15-4.4.0-1PGDG.rhel9.noarch.rpm pgdg 4.4.0 4.7MiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/e-maj_15-4.4.0-1PGDG.rhel9.noarch.rpm
+@ el9.x86_64 15 e-maj_15 e-maj_15-4.3.1-1PGDG.rhel9.noarch.rpm pgdg 4.3.1 4.2MiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/e-maj_15-4.3.1-1PGDG.rhel9.noarch.rpm
+@ el9.x86_64 15 e-maj_15 e-maj_15-4.3.0-1PGDG.rhel9.x86_64.rpm pgdg 4.3.0 4.2MiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/e-maj_15-4.3.0-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 15 e-maj_15 e-maj_15-4.3.0-1PGDG.rhel9.noarch.rpm pgdg 4.3.0 4.2MiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/e-maj_15-4.3.0-1PGDG.rhel9.noarch.rpm
+@ el9.x86_64 15 e-maj_15 e-maj_15-4.2.0-1.rhel9.x86_64.rpm pgdg 4.2.0 4.1MiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/e-maj_15-4.2.0-1.rhel9.x86_64.rpm
+@ el9.x86_64 15 e-maj_15 e-maj_15-4.1.0-1.rhel9.x86_64.rpm pgdg 4.1.0 4.2MiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/e-maj_15-4.1.0-1.rhel9.x86_64.rpm
 @ el9.aarch64 15 e-maj_15 e-maj_15-4.7.1-2PGDG.rhel9.8.noarch.rpm pgdg 4.7.1 5.1MiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/e-maj_15-4.7.1-2PGDG.rhel9.8.noarch.rpm
+@ el9.aarch64 15 e-maj_15 e-maj_15-4.7.1-1PGDG.rhel9.noarch.rpm pgdg 4.7.1 5.1MiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/e-maj_15-4.7.1-1PGDG.rhel9.noarch.rpm
+@ el9.aarch64 15 e-maj_15 e-maj_15-4.7.0-1PGDG.rhel9.noarch.rpm pgdg 4.7.0 5.1MiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/e-maj_15-4.7.0-1PGDG.rhel9.noarch.rpm
+@ el9.aarch64 15 e-maj_15 e-maj_15-4.6.0-1PGDG.rhel9.noarch.rpm pgdg 4.6.0 4.4MiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/e-maj_15-4.6.0-1PGDG.rhel9.noarch.rpm
+@ el9.aarch64 15 e-maj_15 e-maj_15-4.5.0-1PGDG.rhel9.noarch.rpm pgdg 4.5.0 4.7MiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/e-maj_15-4.5.0-1PGDG.rhel9.noarch.rpm
+@ el9.aarch64 15 e-maj_15 e-maj_15-4.4.0-1PGDG.rhel9.noarch.rpm pgdg 4.4.0 4.7MiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/e-maj_15-4.4.0-1PGDG.rhel9.noarch.rpm
+@ el9.aarch64 15 e-maj_15 e-maj_15-4.3.1-1PGDG.rhel9.noarch.rpm pgdg 4.3.1 4.2MiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/e-maj_15-4.3.1-1PGDG.rhel9.noarch.rpm
+@ el9.aarch64 15 e-maj_15 e-maj_15-4.3.0-1PGDG.rhel9.noarch.rpm pgdg 4.3.0 4.2MiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/e-maj_15-4.3.0-1PGDG.rhel9.noarch.rpm
+@ el9.aarch64 15 e-maj_15 e-maj_15-4.3.0-1PGDG.rhel9.aarch64.rpm pgdg 4.3.0 4.2MiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/e-maj_15-4.3.0-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 15 e-maj_15 e-maj_15-4.2.0-1.rhel9.aarch64.rpm pgdg 4.2.0 4.1MiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/e-maj_15-4.2.0-1.rhel9.aarch64.rpm
+@ el9.aarch64 15 e-maj_15 e-maj_15-4.1.0-1.rhel9.aarch64.rpm pgdg 4.1.0 4.2MiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/e-maj_15-4.1.0-1.rhel9.aarch64.rpm
 @ el10.x86_64 15 e-maj_15 e-maj_15-4.7.1-2PGDG.rhel10.2.noarch.rpm pgdg 4.7.1 5.1MiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/e-maj_15-4.7.1-2PGDG.rhel10.2.noarch.rpm
+@ el10.x86_64 15 e-maj_15 e-maj_15-4.7.1-1PGDG.rhel10.noarch.rpm pgdg 4.7.1 5.1MiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/e-maj_15-4.7.1-1PGDG.rhel10.noarch.rpm
+@ el10.x86_64 15 e-maj_15 e-maj_15-4.7.0-1PGDG.rhel10.noarch.rpm pgdg 4.7.0 5.1MiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/e-maj_15-4.7.0-1PGDG.rhel10.noarch.rpm
+@ el10.x86_64 15 e-maj_15 e-maj_15-4.6.0-1PGDG.rhel10.noarch.rpm pgdg 4.6.0 4.4MiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/e-maj_15-4.6.0-1PGDG.rhel10.noarch.rpm
 @ el10.aarch64 15 e-maj_15 e-maj_15-4.7.1-2PGDG.rhel10.2.noarch.rpm pgdg 4.7.1 5.1MiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/e-maj_15-4.7.1-2PGDG.rhel10.2.noarch.rpm
+@ el10.aarch64 15 e-maj_15 e-maj_15-4.7.1-1PGDG.rhel10.noarch.rpm pgdg 4.7.1 5.1MiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/e-maj_15-4.7.1-1PGDG.rhel10.noarch.rpm
+@ el10.aarch64 15 e-maj_15 e-maj_15-4.7.0-1PGDG.rhel10.noarch.rpm pgdg 4.7.0 5.1MiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/e-maj_15-4.7.0-1PGDG.rhel10.noarch.rpm
+@ el10.aarch64 15 e-maj_15 e-maj_15-4.6.0-1PGDG.rhel10.noarch.rpm pgdg 4.6.0 4.4MiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/e-maj_15-4.6.0-1PGDG.rhel10.noarch.rpm
 @ d12.x86_64 15 postgresql-15-emaj postgresql-15-emaj_4.7.1-1PIGSTY~bookworm_amd64.deb pigsty 4.7.1 213.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/e/emaj/postgresql-15-emaj_4.7.1-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 15 postgresql-15-emaj postgresql-15-emaj_4.7.1-1PIGSTY~bookworm_arm64.deb pigsty 4.7.1 213.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/e/emaj/postgresql-15-emaj_4.7.1-1PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 15 postgresql-15-emaj postgresql-15-emaj_4.7.1-1PIGSTY~trixie_amd64.deb pigsty 4.7.1 213.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/e/emaj/postgresql-15-emaj_4.7.1-1PIGSTY~trixie_amd64.deb
@@ -194,9 +262,35 @@ weight: 1050
 @ el8.aarch64 14 e-maj_14 e-maj_14-4.2.0-1.rhel8.aarch64.rpm pgdg 4.2.0 4.5MiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/e-maj_14-4.2.0-1.rhel8.aarch64.rpm
 @ el8.aarch64 14 e-maj_14 e-maj_14-4.1.0-1.rhel8.aarch64.rpm pgdg 4.1.0 4.6MiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/e-maj_14-4.1.0-1.rhel8.aarch64.rpm
 @ el9.x86_64 14 e-maj_14 e-maj_14-4.7.1-2PGDG.rhel9.8.noarch.rpm pgdg 4.7.1 5.1MiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/e-maj_14-4.7.1-2PGDG.rhel9.8.noarch.rpm
+@ el9.x86_64 14 e-maj_14 e-maj_14-4.7.1-1PGDG.rhel9.noarch.rpm pgdg 4.7.1 5.1MiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/e-maj_14-4.7.1-1PGDG.rhel9.noarch.rpm
+@ el9.x86_64 14 e-maj_14 e-maj_14-4.7.0-1PGDG.rhel9.noarch.rpm pgdg 4.7.0 5.1MiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/e-maj_14-4.7.0-1PGDG.rhel9.noarch.rpm
+@ el9.x86_64 14 e-maj_14 e-maj_14-4.6.0-1PGDG.rhel9.noarch.rpm pgdg 4.6.0 4.4MiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/e-maj_14-4.6.0-1PGDG.rhel9.noarch.rpm
+@ el9.x86_64 14 e-maj_14 e-maj_14-4.5.0-1PGDG.rhel9.noarch.rpm pgdg 4.5.0 4.7MiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/e-maj_14-4.5.0-1PGDG.rhel9.noarch.rpm
+@ el9.x86_64 14 e-maj_14 e-maj_14-4.4.0-1PGDG.rhel9.noarch.rpm pgdg 4.4.0 4.7MiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/e-maj_14-4.4.0-1PGDG.rhel9.noarch.rpm
+@ el9.x86_64 14 e-maj_14 e-maj_14-4.3.1-1PGDG.rhel9.noarch.rpm pgdg 4.3.1 4.2MiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/e-maj_14-4.3.1-1PGDG.rhel9.noarch.rpm
+@ el9.x86_64 14 e-maj_14 e-maj_14-4.3.0-1PGDG.rhel9.x86_64.rpm pgdg 4.3.0 4.2MiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/e-maj_14-4.3.0-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 14 e-maj_14 e-maj_14-4.3.0-1PGDG.rhel9.noarch.rpm pgdg 4.3.0 4.2MiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/e-maj_14-4.3.0-1PGDG.rhel9.noarch.rpm
+@ el9.x86_64 14 e-maj_14 e-maj_14-4.2.0-1.rhel9.x86_64.rpm pgdg 4.2.0 4.1MiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/e-maj_14-4.2.0-1.rhel9.x86_64.rpm
+@ el9.x86_64 14 e-maj_14 e-maj_14-4.1.0-1.rhel9.x86_64.rpm pgdg 4.1.0 4.2MiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/e-maj_14-4.1.0-1.rhel9.x86_64.rpm
 @ el9.aarch64 14 e-maj_14 e-maj_14-4.7.1-2PGDG.rhel9.8.noarch.rpm pgdg 4.7.1 5.1MiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/e-maj_14-4.7.1-2PGDG.rhel9.8.noarch.rpm
+@ el9.aarch64 14 e-maj_14 e-maj_14-4.7.1-1PGDG.rhel9.noarch.rpm pgdg 4.7.1 5.1MiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/e-maj_14-4.7.1-1PGDG.rhel9.noarch.rpm
+@ el9.aarch64 14 e-maj_14 e-maj_14-4.7.0-1PGDG.rhel9.noarch.rpm pgdg 4.7.0 5.1MiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/e-maj_14-4.7.0-1PGDG.rhel9.noarch.rpm
+@ el9.aarch64 14 e-maj_14 e-maj_14-4.6.0-1PGDG.rhel9.noarch.rpm pgdg 4.6.0 4.4MiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/e-maj_14-4.6.0-1PGDG.rhel9.noarch.rpm
+@ el9.aarch64 14 e-maj_14 e-maj_14-4.5.0-1PGDG.rhel9.noarch.rpm pgdg 4.5.0 4.7MiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/e-maj_14-4.5.0-1PGDG.rhel9.noarch.rpm
+@ el9.aarch64 14 e-maj_14 e-maj_14-4.4.0-1PGDG.rhel9.noarch.rpm pgdg 4.4.0 4.7MiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/e-maj_14-4.4.0-1PGDG.rhel9.noarch.rpm
+@ el9.aarch64 14 e-maj_14 e-maj_14-4.3.1-1PGDG.rhel9.noarch.rpm pgdg 4.3.1 4.2MiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/e-maj_14-4.3.1-1PGDG.rhel9.noarch.rpm
+@ el9.aarch64 14 e-maj_14 e-maj_14-4.3.0-1PGDG.rhel9.noarch.rpm pgdg 4.3.0 4.2MiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/e-maj_14-4.3.0-1PGDG.rhel9.noarch.rpm
+@ el9.aarch64 14 e-maj_14 e-maj_14-4.3.0-1PGDG.rhel9.aarch64.rpm pgdg 4.3.0 4.2MiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/e-maj_14-4.3.0-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 14 e-maj_14 e-maj_14-4.2.0-1.rhel9.aarch64.rpm pgdg 4.2.0 4.1MiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/e-maj_14-4.2.0-1.rhel9.aarch64.rpm
+@ el9.aarch64 14 e-maj_14 e-maj_14-4.1.0-1.rhel9.aarch64.rpm pgdg 4.1.0 4.2MiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/e-maj_14-4.1.0-1.rhel9.aarch64.rpm
 @ el10.x86_64 14 e-maj_14 e-maj_14-4.7.1-2PGDG.rhel10.2.noarch.rpm pgdg 4.7.1 5.1MiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/e-maj_14-4.7.1-2PGDG.rhel10.2.noarch.rpm
+@ el10.x86_64 14 e-maj_14 e-maj_14-4.7.1-1PGDG.rhel10.noarch.rpm pgdg 4.7.1 5.1MiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/e-maj_14-4.7.1-1PGDG.rhel10.noarch.rpm
+@ el10.x86_64 14 e-maj_14 e-maj_14-4.7.0-1PGDG.rhel10.noarch.rpm pgdg 4.7.0 5.1MiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/e-maj_14-4.7.0-1PGDG.rhel10.noarch.rpm
+@ el10.x86_64 14 e-maj_14 e-maj_14-4.6.0-1PGDG.rhel10.noarch.rpm pgdg 4.6.0 4.4MiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/e-maj_14-4.6.0-1PGDG.rhel10.noarch.rpm
 @ el10.aarch64 14 e-maj_14 e-maj_14-4.7.1-2PGDG.rhel10.2.noarch.rpm pgdg 4.7.1 5.1MiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/e-maj_14-4.7.1-2PGDG.rhel10.2.noarch.rpm
+@ el10.aarch64 14 e-maj_14 e-maj_14-4.7.1-1PGDG.rhel10.noarch.rpm pgdg 4.7.1 5.1MiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/e-maj_14-4.7.1-1PGDG.rhel10.noarch.rpm
+@ el10.aarch64 14 e-maj_14 e-maj_14-4.7.0-1PGDG.rhel10.noarch.rpm pgdg 4.7.0 5.1MiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/e-maj_14-4.7.0-1PGDG.rhel10.noarch.rpm
+@ el10.aarch64 14 e-maj_14 e-maj_14-4.6.0-1PGDG.rhel10.noarch.rpm pgdg 4.6.0 4.4MiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/e-maj_14-4.6.0-1PGDG.rhel10.noarch.rpm
 @ d12.x86_64 14 postgresql-14-emaj postgresql-14-emaj_4.7.1-1PIGSTY~bookworm_amd64.deb pigsty 4.7.1 214.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/e/emaj/postgresql-14-emaj_4.7.1-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 14 postgresql-14-emaj postgresql-14-emaj_4.7.1-1PIGSTY~bookworm_arm64.deb pigsty 4.7.1 214.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/e/emaj/postgresql-14-emaj_4.7.1-1PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 14 postgresql-14-emaj postgresql-14-emaj_4.7.1-1PIGSTY~trixie_amd64.deb pigsty 4.7.1 214.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/e/emaj/postgresql-14-emaj_4.7.1-1PIGSTY~trixie_amd64.deb

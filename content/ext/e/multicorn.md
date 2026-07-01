@@ -52,10 +52,10 @@ weight: 8510
 |:--:|:--:|:--:|:--:|:--:|:--:|
 | el8.x86_64 | AVAIL PGDG 3.2 2 | AVAIL PGDG 3.2 3 | AVAIL PGDG 3.2 3 | AVAIL PGDG 3.2 5 | AVAIL PGDG 3.2 6 |
 | el8.aarch64 | AVAIL PGDG 3.2 2 | AVAIL PGDG 3.2 3 | AVAIL PGDG 3.2 3 | AVAIL PGDG 3.2 5 | AVAIL PGDG 3.2 6 |
-| el9.x86_64 | AVAIL PGDG 3.2 1 | AVAIL PGDG 3.2 1 | AVAIL PGDG 3.2 1 | AVAIL PGDG 3.2 1 | AVAIL PGDG 3.2 1 |
-| el9.aarch64 | AVAIL PGDG 3.2 1 | AVAIL PGDG 3.2 1 | AVAIL PGDG 3.2 1 | AVAIL PGDG 3.2 1 | AVAIL PGDG 3.2 1 |
-| el10.x86_64 | AVAIL PGDG 3.2 1 | AVAIL PGDG 3.2 1 | AVAIL PGDG 3.2 1 | AVAIL PGDG 3.2 1 | AVAIL PGDG 3.2 1 |
-| el10.aarch64 | AVAIL PGDG 3.2 1 | AVAIL PGDG 3.2 1 | AVAIL PGDG 3.2 1 | AVAIL PGDG 3.2 1 | AVAIL PGDG 3.2 1 |
+| el9.x86_64 | AVAIL PGDG 3.2 3 | AVAIL PGDG 3.2 4 | AVAIL PGDG 3.2 4 | AVAIL PGDG 3.2 6 | AVAIL PGDG 3.2 7 |
+| el9.aarch64 | AVAIL PGDG 3.2 3 | AVAIL PGDG 3.2 4 | AVAIL PGDG 3.2 4 | AVAIL PGDG 3.2 6 | AVAIL PGDG 3.2 7 |
+| el10.x86_64 | AVAIL PGDG 3.2 3 | AVAIL PGDG 3.2 4 | AVAIL PGDG 3.2 4 | AVAIL PGDG 3.2 4 | AVAIL PGDG 3.2 4 |
+| el10.aarch64 | AVAIL PGDG 3.2 3 | AVAIL PGDG 3.2 4 | AVAIL PGDG 3.2 4 | AVAIL PGDG 3.2 4 | AVAIL PGDG 3.2 4 |
 | d12.x86_64 | AVAIL PIGSTY 3.2 1 | AVAIL PIGSTY 3.2 1 | AVAIL PIGSTY 3.2 1 | AVAIL PIGSTY 3.2 1 | AVAIL PIGSTY 3.2 1 |
 | d12.aarch64 | AVAIL PIGSTY 3.2 1 | AVAIL PIGSTY 3.2 1 | AVAIL PIGSTY 3.2 1 | AVAIL PIGSTY 3.2 1 | AVAIL PIGSTY 3.2 1 |
 | d13.x86_64 | AVAIL PIGSTY 3.2 1 | AVAIL PIGSTY 3.2 1 | AVAIL PIGSTY 3.2 1 | AVAIL PIGSTY 3.2 1 | AVAIL PIGSTY 3.2 1 |
@@ -71,9 +71,17 @@ weight: 8510
 @ el8.aarch64 18 multicorn2_18 multicorn2_18-3.2-1PGDG.rhel8.aarch64.rpm pgdg 3.2 136.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/multicorn2_18-3.2-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 18 multicorn2_18 multicorn2_18-3.1-1PGDG.rhel8.aarch64.rpm pgdg 3.1 133.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/multicorn2_18-3.1-1PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 18 multicorn2_18 multicorn2_18-3.2-3PGDG.rhel9.8.x86_64.rpm pgdg 3.2 134.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/multicorn2_18-3.2-3PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 18 multicorn2_18 multicorn2_18-3.2-1PGDG.rhel9.x86_64.rpm pgdg 3.2 134.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/multicorn2_18-3.2-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 18 multicorn2_18 multicorn2_18-3.1-1PGDG.rhel9.x86_64.rpm pgdg 3.1 111.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/multicorn2_18-3.1-1PGDG.rhel9.x86_64.rpm
 @ el9.aarch64 18 multicorn2_18 multicorn2_18-3.2-3PGDG.rhel9.8.aarch64.rpm pgdg 3.2 133.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/multicorn2_18-3.2-3PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 18 multicorn2_18 multicorn2_18-3.2-1PGDG.rhel9.aarch64.rpm pgdg 3.2 133.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/multicorn2_18-3.2-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 18 multicorn2_18 multicorn2_18-3.1-1PGDG.rhel9.aarch64.rpm pgdg 3.1 110.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/multicorn2_18-3.1-1PGDG.rhel9.aarch64.rpm
 @ el10.x86_64 18 multicorn2_18 multicorn2_18-3.2-3PGDG.rhel10.2.x86_64.rpm pgdg 3.2 135.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/multicorn2_18-3.2-3PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 18 multicorn2_18 multicorn2_18-3.2-1PGDG.rhel10.x86_64.rpm pgdg 3.2 135.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/multicorn2_18-3.2-1PGDG.rhel10.x86_64.rpm
+@ el10.x86_64 18 multicorn2_18 multicorn2_18-3.1-1PGDG.rhel10.x86_64.rpm pgdg 3.1 133.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/multicorn2_18-3.1-1PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 18 multicorn2_18 multicorn2_18-3.2-3PGDG.rhel10.2.aarch64.rpm pgdg 3.2 134.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/multicorn2_18-3.2-3PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 18 multicorn2_18 multicorn2_18-3.2-1PGDG.rhel10.aarch64.rpm pgdg 3.2 134.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/multicorn2_18-3.2-1PGDG.rhel10.aarch64.rpm
+@ el10.aarch64 18 multicorn2_18 multicorn2_18-3.1-1PGDG.rhel10.aarch64.rpm pgdg 3.1 131.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/multicorn2_18-3.1-1PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 18 postgresql-18-multicorn postgresql-18-multicorn_3.2-1PIGSTY~bookworm_amd64.deb pigsty 3.2 81.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/m/multicorn/postgresql-18-multicorn_3.2-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 18 postgresql-18-multicorn postgresql-18-multicorn_3.2-1PIGSTY~bookworm_arm64.deb pigsty 3.2 79.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/m/multicorn/postgresql-18-multicorn_3.2-1PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 18 postgresql-18-multicorn postgresql-18-multicorn_3.2-1PIGSTY~trixie_amd64.deb pigsty 3.2 82.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/m/multicorn/postgresql-18-multicorn_3.2-1PIGSTY~trixie_amd64.deb
@@ -91,9 +99,21 @@ weight: 8510
 @ el8.aarch64 17 multicorn2_17 multicorn2_17-3.1-1PGDG.rhel8.aarch64.rpm pgdg 3.1 133.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/multicorn2_17-3.1-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 17 multicorn2_17 multicorn2_17-3.0-1PGDG.rhel8.aarch64.rpm pgdg 3.0 113.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/multicorn2_17-3.0-1PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 17 multicorn2_17 multicorn2_17-3.2-3PGDG.rhel9.8.x86_64.rpm pgdg 3.2 134.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/multicorn2_17-3.2-3PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 17 multicorn2_17 multicorn2_17-3.2-1PGDG.rhel9.x86_64.rpm pgdg 3.2 134.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/multicorn2_17-3.2-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 17 multicorn2_17 multicorn2_17-3.1-1PGDG.rhel9.x86_64.rpm pgdg 3.1 111.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/multicorn2_17-3.1-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 17 multicorn2_17 multicorn2_17-3.0-1PGDG.rhel9.x86_64.rpm pgdg 3.0 110.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/multicorn2_17-3.0-1PGDG.rhel9.x86_64.rpm
 @ el9.aarch64 17 multicorn2_17 multicorn2_17-3.2-3PGDG.rhel9.8.aarch64.rpm pgdg 3.2 133.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/multicorn2_17-3.2-3PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 17 multicorn2_17 multicorn2_17-3.2-1PGDG.rhel9.aarch64.rpm pgdg 3.2 133.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/multicorn2_17-3.2-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 17 multicorn2_17 multicorn2_17-3.1-1PGDG.rhel9.aarch64.rpm pgdg 3.1 109.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/multicorn2_17-3.1-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 17 multicorn2_17 multicorn2_17-3.0-1PGDG.rhel9.aarch64.rpm pgdg 3.0 109.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/multicorn2_17-3.0-1PGDG.rhel9.aarch64.rpm
 @ el10.x86_64 17 multicorn2_17 multicorn2_17-3.2-3PGDG.rhel10.2.x86_64.rpm pgdg 3.2 135.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/multicorn2_17-3.2-3PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 17 multicorn2_17 multicorn2_17-3.2-1PGDG.rhel10.x86_64.rpm pgdg 3.2 135.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/multicorn2_17-3.2-1PGDG.rhel10.x86_64.rpm
+@ el10.x86_64 17 multicorn2_17 multicorn2_17-3.1-1PGDG.rhel10.x86_64.rpm pgdg 3.1 132.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/multicorn2_17-3.1-1PGDG.rhel10.x86_64.rpm
+@ el10.x86_64 17 multicorn2_17 multicorn2_17-3.0-2PGDG.rhel10.x86_64.rpm pgdg 3.0 132.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/multicorn2_17-3.0-2PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 17 multicorn2_17 multicorn2_17-3.2-3PGDG.rhel10.2.aarch64.rpm pgdg 3.2 134.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/multicorn2_17-3.2-3PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 17 multicorn2_17 multicorn2_17-3.2-1PGDG.rhel10.aarch64.rpm pgdg 3.2 134.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/multicorn2_17-3.2-1PGDG.rhel10.aarch64.rpm
+@ el10.aarch64 17 multicorn2_17 multicorn2_17-3.1-1PGDG.rhel10.aarch64.rpm pgdg 3.1 132.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/multicorn2_17-3.1-1PGDG.rhel10.aarch64.rpm
+@ el10.aarch64 17 multicorn2_17 multicorn2_17-3.0-2PGDG.rhel10.aarch64.rpm pgdg 3.0 131.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/multicorn2_17-3.0-2PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 17 postgresql-17-multicorn postgresql-17-multicorn_3.2-1PIGSTY~bookworm_amd64.deb pigsty 3.2 81.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/m/multicorn/postgresql-17-multicorn_3.2-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 17 postgresql-17-multicorn postgresql-17-multicorn_3.2-1PIGSTY~bookworm_arm64.deb pigsty 3.2 79.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/m/multicorn/postgresql-17-multicorn_3.2-1PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 17 postgresql-17-multicorn postgresql-17-multicorn_3.2-1PIGSTY~trixie_amd64.deb pigsty 3.2 82.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/m/multicorn/postgresql-17-multicorn_3.2-1PIGSTY~trixie_amd64.deb
@@ -111,9 +131,21 @@ weight: 8510
 @ el8.aarch64 16 multicorn2_16 multicorn2_16-3.1-1PGDG.rhel8.aarch64.rpm pgdg 3.1 134.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/multicorn2_16-3.1-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 16 multicorn2_16 multicorn2_16-3.0-1PGDG.rhel8.aarch64.rpm pgdg 3.0 113.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/multicorn2_16-3.0-1PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 16 multicorn2_16 multicorn2_16-3.2-3PGDG.rhel9.8.x86_64.rpm pgdg 3.2 134.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/multicorn2_16-3.2-3PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 16 multicorn2_16 multicorn2_16-3.2-1PGDG.rhel9.x86_64.rpm pgdg 3.2 134.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/multicorn2_16-3.2-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 16 multicorn2_16 multicorn2_16-3.1-1PGDG.rhel9.x86_64.rpm pgdg 3.1 111.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/multicorn2_16-3.1-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 16 multicorn2_16 multicorn2_16-3.0-1PGDG.rhel9.x86_64.rpm pgdg 3.0 110.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/multicorn2_16-3.0-1PGDG.rhel9.x86_64.rpm
 @ el9.aarch64 16 multicorn2_16 multicorn2_16-3.2-3PGDG.rhel9.8.aarch64.rpm pgdg 3.2 133.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/multicorn2_16-3.2-3PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 16 multicorn2_16 multicorn2_16-3.2-1PGDG.rhel9.aarch64.rpm pgdg 3.2 133.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/multicorn2_16-3.2-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 16 multicorn2_16 multicorn2_16-3.1-1PGDG.rhel9.aarch64.rpm pgdg 3.1 110.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/multicorn2_16-3.1-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 16 multicorn2_16 multicorn2_16-3.0-1PGDG.rhel9.aarch64.rpm pgdg 3.0 109.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/multicorn2_16-3.0-1PGDG.rhel9.aarch64.rpm
 @ el10.x86_64 16 multicorn2_16 multicorn2_16-3.2-3PGDG.rhel10.2.x86_64.rpm pgdg 3.2 135.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/multicorn2_16-3.2-3PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 16 multicorn2_16 multicorn2_16-3.2-1PGDG.rhel10.x86_64.rpm pgdg 3.2 135.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/multicorn2_16-3.2-1PGDG.rhel10.x86_64.rpm
+@ el10.x86_64 16 multicorn2_16 multicorn2_16-3.1-1PGDG.rhel10.x86_64.rpm pgdg 3.1 133.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/multicorn2_16-3.1-1PGDG.rhel10.x86_64.rpm
+@ el10.x86_64 16 multicorn2_16 multicorn2_16-3.0-2PGDG.rhel10.x86_64.rpm pgdg 3.0 132.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/multicorn2_16-3.0-2PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 16 multicorn2_16 multicorn2_16-3.2-3PGDG.rhel10.2.aarch64.rpm pgdg 3.2 134.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/multicorn2_16-3.2-3PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 16 multicorn2_16 multicorn2_16-3.2-1PGDG.rhel10.aarch64.rpm pgdg 3.2 134.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/multicorn2_16-3.2-1PGDG.rhel10.aarch64.rpm
+@ el10.aarch64 16 multicorn2_16 multicorn2_16-3.1-1PGDG.rhel10.aarch64.rpm pgdg 3.1 132.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/multicorn2_16-3.1-1PGDG.rhel10.aarch64.rpm
+@ el10.aarch64 16 multicorn2_16 multicorn2_16-3.0-2PGDG.rhel10.aarch64.rpm pgdg 3.0 131.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/multicorn2_16-3.0-2PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 16 postgresql-16-multicorn postgresql-16-multicorn_3.2-1PIGSTY~bookworm_amd64.deb pigsty 3.2 81.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/m/multicorn/postgresql-16-multicorn_3.2-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 16 postgresql-16-multicorn postgresql-16-multicorn_3.2-1PIGSTY~bookworm_arm64.deb pigsty 3.2 79.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/m/multicorn/postgresql-16-multicorn_3.2-1PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 16 postgresql-16-multicorn postgresql-16-multicorn_3.2-1PIGSTY~trixie_amd64.deb pigsty 3.2 82.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/m/multicorn/postgresql-16-multicorn_3.2-1PIGSTY~trixie_amd64.deb
@@ -135,9 +167,25 @@ weight: 8510
 @ el8.aarch64 15 multicorn2_15 multicorn2_15-2.4-2.rhel8.aarch64.rpm pgdg 2.4 110.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/multicorn2_15-2.4-2.rhel8.aarch64.rpm
 @ el8.aarch64 15 multicorn2_15 multicorn2_15-2.4-1.rhel8.aarch64.rpm pgdg 2.4 35.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/multicorn2_15-2.4-1.rhel8.aarch64.rpm
 @ el9.x86_64 15 multicorn2_15 multicorn2_15-3.2-3PGDG.rhel9.8.x86_64.rpm pgdg 3.2 138.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/multicorn2_15-3.2-3PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 15 multicorn2_15 multicorn2_15-3.2-1PGDG.rhel9.x86_64.rpm pgdg 3.2 138.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/multicorn2_15-3.2-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 15 multicorn2_15 multicorn2_15-3.1-1PGDG.rhel9.x86_64.rpm pgdg 3.1 114.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/multicorn2_15-3.1-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 15 multicorn2_15 multicorn2_15-3.0-1PGDG.rhel9.x86_64.rpm pgdg 3.0 114.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/multicorn2_15-3.0-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 15 multicorn2_15 multicorn2_15-2.4-2.rhel9.x86_64.rpm pgdg 2.4 109.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/multicorn2_15-2.4-2.rhel9.x86_64.rpm
+@ el9.x86_64 15 multicorn2_15 multicorn2_15-2.4-1.rhel9.x86_64.rpm pgdg 2.4 37.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/multicorn2_15-2.4-1.rhel9.x86_64.rpm
 @ el9.aarch64 15 multicorn2_15 multicorn2_15-3.2-3PGDG.rhel9.8.aarch64.rpm pgdg 3.2 136.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/multicorn2_15-3.2-3PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 15 multicorn2_15 multicorn2_15-3.2-1PGDG.rhel9.aarch64.rpm pgdg 3.2 136.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/multicorn2_15-3.2-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 15 multicorn2_15 multicorn2_15-3.1-1PGDG.rhel9.aarch64.rpm pgdg 3.1 113.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/multicorn2_15-3.1-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 15 multicorn2_15 multicorn2_15-3.0-1PGDG.rhel9.aarch64.rpm pgdg 3.0 112.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/multicorn2_15-3.0-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 15 multicorn2_15 multicorn2_15-2.4-2.rhel9.aarch64.rpm pgdg 2.4 108.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/multicorn2_15-2.4-2.rhel9.aarch64.rpm
+@ el9.aarch64 15 multicorn2_15 multicorn2_15-2.4-1.rhel9.aarch64.rpm pgdg 2.4 35.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/multicorn2_15-2.4-1.rhel9.aarch64.rpm
 @ el10.x86_64 15 multicorn2_15 multicorn2_15-3.2-3PGDG.rhel10.2.x86_64.rpm pgdg 3.2 139.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/multicorn2_15-3.2-3PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 15 multicorn2_15 multicorn2_15-3.2-1PGDG.rhel10.x86_64.rpm pgdg 3.2 139.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/multicorn2_15-3.2-1PGDG.rhel10.x86_64.rpm
+@ el10.x86_64 15 multicorn2_15 multicorn2_15-3.1-1PGDG.rhel10.x86_64.rpm pgdg 3.1 136.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/multicorn2_15-3.1-1PGDG.rhel10.x86_64.rpm
+@ el10.x86_64 15 multicorn2_15 multicorn2_15-3.0-2PGDG.rhel10.x86_64.rpm pgdg 3.0 135.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/multicorn2_15-3.0-2PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 15 multicorn2_15 multicorn2_15-3.2-3PGDG.rhel10.2.aarch64.rpm pgdg 3.2 137.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/multicorn2_15-3.2-3PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 15 multicorn2_15 multicorn2_15-3.2-1PGDG.rhel10.aarch64.rpm pgdg 3.2 137.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/multicorn2_15-3.2-1PGDG.rhel10.aarch64.rpm
+@ el10.aarch64 15 multicorn2_15 multicorn2_15-3.1-1PGDG.rhel10.aarch64.rpm pgdg 3.1 135.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/multicorn2_15-3.1-1PGDG.rhel10.aarch64.rpm
+@ el10.aarch64 15 multicorn2_15 multicorn2_15-3.0-2PGDG.rhel10.aarch64.rpm pgdg 3.0 134.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/multicorn2_15-3.0-2PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 15 postgresql-15-multicorn postgresql-15-multicorn_3.2-1PIGSTY~bookworm_amd64.deb pigsty 3.2 82.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/m/multicorn/postgresql-15-multicorn_3.2-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 15 postgresql-15-multicorn postgresql-15-multicorn_3.2-1PIGSTY~bookworm_arm64.deb pigsty 3.2 80.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/m/multicorn/postgresql-15-multicorn_3.2-1PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 15 postgresql-15-multicorn postgresql-15-multicorn_3.2-1PIGSTY~trixie_amd64.deb pigsty 3.2 83.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/m/multicorn/postgresql-15-multicorn_3.2-1PIGSTY~trixie_amd64.deb
@@ -161,9 +209,27 @@ weight: 8510
 @ el8.aarch64 14 multicorn2_14 multicorn2_14-2.4-1.rhel8.aarch64.rpm pgdg 2.4 35.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/multicorn2_14-2.4-1.rhel8.aarch64.rpm
 @ el8.aarch64 14 multicorn2_14 multicorn2_14-2.3-1.rhel8.aarch64.rpm pgdg 2.3 113.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/multicorn2_14-2.3-1.rhel8.aarch64.rpm
 @ el9.x86_64 14 multicorn2_14 multicorn2_14-3.2-3PGDG.rhel9.8.x86_64.rpm pgdg 3.2 138.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/multicorn2_14-3.2-3PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 14 multicorn2_14 multicorn2_14-3.2-1PGDG.rhel9.x86_64.rpm pgdg 3.2 138.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/multicorn2_14-3.2-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 14 multicorn2_14 multicorn2_14-3.1-1PGDG.rhel9.x86_64.rpm pgdg 3.1 114.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/multicorn2_14-3.1-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 14 multicorn2_14 multicorn2_14-3.0-1PGDG.rhel9.x86_64.rpm pgdg 3.0 114.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/multicorn2_14-3.0-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 14 multicorn2_14 multicorn2_14-2.4-2.rhel9.x86_64.rpm pgdg 2.4 109.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/multicorn2_14-2.4-2.rhel9.x86_64.rpm
+@ el9.x86_64 14 multicorn2_14 multicorn2_14-2.4-1.rhel9.x86_64.rpm pgdg 2.4 37.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/multicorn2_14-2.4-1.rhel9.x86_64.rpm
+@ el9.x86_64 14 multicorn2_14 multicorn2_14-2.3-1.rhel9.x86_64.rpm pgdg 2.3 114.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/multicorn2_14-2.3-1.rhel9.x86_64.rpm
 @ el9.aarch64 14 multicorn2_14 multicorn2_14-3.2-3PGDG.rhel9.8.aarch64.rpm pgdg 3.2 136.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/multicorn2_14-3.2-3PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 14 multicorn2_14 multicorn2_14-3.2-1PGDG.rhel9.aarch64.rpm pgdg 3.2 136.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/multicorn2_14-3.2-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 14 multicorn2_14 multicorn2_14-3.1-1PGDG.rhel9.aarch64.rpm pgdg 3.1 113.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/multicorn2_14-3.1-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 14 multicorn2_14 multicorn2_14-3.0-1PGDG.rhel9.aarch64.rpm pgdg 3.0 112.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/multicorn2_14-3.0-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 14 multicorn2_14 multicorn2_14-2.4-2.rhel9.aarch64.rpm pgdg 2.4 108.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/multicorn2_14-2.4-2.rhel9.aarch64.rpm
+@ el9.aarch64 14 multicorn2_14 multicorn2_14-2.4-1.rhel9.aarch64.rpm pgdg 2.4 35.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/multicorn2_14-2.4-1.rhel9.aarch64.rpm
+@ el9.aarch64 14 multicorn2_14 multicorn2_14-2.3-1.rhel9.aarch64.rpm pgdg 2.3 113.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/multicorn2_14-2.3-1.rhel9.aarch64.rpm
 @ el10.x86_64 14 multicorn2_14 multicorn2_14-3.2-3PGDG.rhel10.2.x86_64.rpm pgdg 3.2 139.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/multicorn2_14-3.2-3PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 14 multicorn2_14 multicorn2_14-3.2-1PGDG.rhel10.x86_64.rpm pgdg 3.2 139.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/multicorn2_14-3.2-1PGDG.rhel10.x86_64.rpm
+@ el10.x86_64 14 multicorn2_14 multicorn2_14-3.1-1PGDG.rhel10.x86_64.rpm pgdg 3.1 136.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/multicorn2_14-3.1-1PGDG.rhel10.x86_64.rpm
+@ el10.x86_64 14 multicorn2_14 multicorn2_14-3.0-2PGDG.rhel10.x86_64.rpm pgdg 3.0 136.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/multicorn2_14-3.0-2PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 14 multicorn2_14 multicorn2_14-3.2-3PGDG.rhel10.2.aarch64.rpm pgdg 3.2 137.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/multicorn2_14-3.2-3PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 14 multicorn2_14 multicorn2_14-3.2-1PGDG.rhel10.aarch64.rpm pgdg 3.2 137.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/multicorn2_14-3.2-1PGDG.rhel10.aarch64.rpm
+@ el10.aarch64 14 multicorn2_14 multicorn2_14-3.1-1PGDG.rhel10.aarch64.rpm pgdg 3.1 135.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/multicorn2_14-3.1-1PGDG.rhel10.aarch64.rpm
+@ el10.aarch64 14 multicorn2_14 multicorn2_14-3.0-2PGDG.rhel10.aarch64.rpm pgdg 3.0 134.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/multicorn2_14-3.0-2PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 14 postgresql-14-multicorn postgresql-14-multicorn_3.2-1PIGSTY~bookworm_amd64.deb pigsty 3.2 82.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/m/multicorn/postgresql-14-multicorn_3.2-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 14 postgresql-14-multicorn postgresql-14-multicorn_3.2-1PIGSTY~bookworm_arm64.deb pigsty 3.2 80.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/m/multicorn/postgresql-14-multicorn_3.2-1PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 14 postgresql-14-multicorn postgresql-14-multicorn_3.2-1PIGSTY~trixie_amd64.deb pigsty 3.2 83.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/m/multicorn/postgresql-14-multicorn_3.2-1PIGSTY~trixie_amd64.deb
@@ -233,9 +299,9 @@ CREATE EXTENSION multicorn;
 
 ## 用法
 
-> [multicorn: 在 PostgreSQL 服务器中使用 Python 获取外部数据](https://github.com/pgsql-io/multicorn2)
+来源：[README](https://github.com/pgsql-io/multicorn2/blob/v3.2/README.md)、[CHANGELOG](https://github.com/pgsql-io/multicorn2/blob/v3.2/CHANGELOG)
 
-Multicorn2 允许您用 Python 编写外部数据包装器。您需要实现一个继承自 `multicorn.ForeignDataWrapper` 的 Python 类，Multicorn 负责将其桥接到 PostgreSQL 的 FDW 接口。
+Multicorn2 允许您用 Python 编写外部数据包装器。您需要实现一个继承自 `multicorn.ForeignDataWrapper` 的 Python 类，Multicorn 负责将其桥接到 PostgreSQL 的 FDW 接口。版本 3.2 已使用 PostgreSQL 14-18 和 Python 3.9-3.13 测试，不过上游建议近期待发行版兼容性优先使用 Python 3.10-3.12。
 
 ### 定义 Python FDW 类
 
@@ -314,3 +380,11 @@ OPTIONS (
   delimiter ','
 );
 ```
+
+### 版本说明
+
+Multicorn 3.2 增加基本 OFFSET/LIMIT pushdown 和 LDAP paging support，并修复 LDAP right-parenthesis escaping。上游 3.1 增加 PostgreSQL 18 和 Python 3.13 支持，同时停止支持 PostgreSQL 14 之前的版本。
+
+### 注意事项
+
+由于 CPython 限制，Multicorn2 和 PL/Python 在 Python 3.12 上不能在同一个 PostgreSQL 数据库中共存。它们可以安装在同一系统上，但避免在同一个数据库里同时启用。

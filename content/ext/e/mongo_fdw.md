@@ -52,10 +52,10 @@ weight: 8700
 |:--:|:--:|:--:|:--:|:--:|:--:|
 | el8.x86_64 | AVAIL PGDG 5.5.3 1 | AVAIL PGDG 5.5.3 1 | AVAIL PGDG 5.5.3 2 | AVAIL PGDG 5.5.3 4 | AVAIL PGDG 5.5.3 6 |
 | el8.aarch64 | AVAIL PGDG 5.5.3 1 | AVAIL PGDG 5.5.3 1 | AVAIL PGDG 5.5.3 2 | AVAIL PGDG 5.5.3 2 | AVAIL PGDG 5.5.3 2 |
-| el9.x86_64 | AVAIL PGDG 5.5.3 1 | AVAIL PGDG 5.5.3 1 | AVAIL PGDG 5.5.3 1 | AVAIL PGDG 5.5.3 1 | AVAIL PGDG 5.5.3 1 |
-| el9.aarch64 | AVAIL PGDG 5.5.3 1 | AVAIL PGDG 5.5.3 1 | AVAIL PGDG 5.5.3 1 | AVAIL PGDG 5.5.3 1 | AVAIL PGDG 5.5.3 1 |
-| el10.x86_64 | AVAIL PGDG 5.5.3 1 | AVAIL PGDG 5.5.3 1 | AVAIL PGDG 5.5.3 1 | AVAIL PGDG 5.5.3 1 | AVAIL PGDG 5.5.3 1 |
-| el10.aarch64 | AVAIL PGDG 5.5.3 1 | AVAIL PGDG 5.5.3 1 | AVAIL PGDG 5.5.3 1 | AVAIL PGDG 5.5.3 1 | AVAIL PGDG 5.5.3 1 |
+| el9.x86_64 | AVAIL PGDG 5.5.3 2 | AVAIL PGDG 5.5.3 2 | AVAIL PGDG 5.5.3 3 | AVAIL PGDG 5.5.3 5 | AVAIL PGDG 5.5.3 6 |
+| el9.aarch64 | AVAIL PGDG 5.5.3 2 | AVAIL PGDG 5.5.3 2 | AVAIL PGDG 5.5.3 3 | AVAIL PGDG 5.5.3 3 | AVAIL PGDG 5.5.3 3 |
+| el10.x86_64 | AVAIL PGDG 5.5.3 2 | AVAIL PGDG 5.5.3 2 | AVAIL PGDG 5.5.3 2 | AVAIL PGDG 5.5.3 2 | AVAIL PGDG 5.5.3 2 |
+| el10.aarch64 | AVAIL PGDG 5.5.3 2 | AVAIL PGDG 5.5.3 2 | AVAIL PGDG 5.5.3 2 | AVAIL PGDG 5.5.3 2 | AVAIL PGDG 5.5.3 2 |
 | d12.x86_64 | AVAIL PIGSTY 5.5.3 1 | AVAIL PIGSTY 5.5.3 1 | AVAIL PIGSTY 5.5.3 1 | AVAIL PIGSTY 5.5.3 1 | AVAIL PIGSTY 5.5.3 1 |
 | d12.aarch64 | AVAIL PIGSTY 5.5.3 1 | AVAIL PIGSTY 5.5.3 1 | AVAIL PIGSTY 5.5.3 1 | AVAIL PIGSTY 5.5.3 1 | AVAIL PIGSTY 5.5.3 1 |
 | d13.x86_64 | AVAIL PIGSTY 5.5.3 1 | AVAIL PIGSTY 5.5.3 1 | AVAIL PIGSTY 5.5.3 1 | AVAIL PIGSTY 5.5.3 1 | AVAIL PIGSTY 5.5.3 1 |
@@ -69,9 +69,13 @@ weight: 8700
 @ el8.x86_64 18 mongo_fdw_18 mongo_fdw_18-5.5.3-2PGDG.rhel8.x86_64.rpm pgdg 5.5.3 54.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/mongo_fdw_18-5.5.3-2PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 18 mongo_fdw_18 mongo_fdw_18-5.5.3-2PGDG.rhel8.aarch64.rpm pgdg 5.5.3 52.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/mongo_fdw_18-5.5.3-2PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 18 mongo_fdw_18 mongo_fdw_18-5.5.3-3PGDG.rhel9.8.x86_64.rpm pgdg 5.5.3 52.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/mongo_fdw_18-5.5.3-3PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 18 mongo_fdw_18 mongo_fdw_18-5.5.3-2PGDG.rhel9.x86_64.rpm pgdg 5.5.3 52.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/mongo_fdw_18-5.5.3-2PGDG.rhel9.x86_64.rpm
 @ el9.aarch64 18 mongo_fdw_18 mongo_fdw_18-5.5.3-3PGDG.rhel9.8.aarch64.rpm pgdg 5.5.3 50.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/mongo_fdw_18-5.5.3-3PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 18 mongo_fdw_18 mongo_fdw_18-5.5.3-2PGDG.rhel9.aarch64.rpm pgdg 5.5.3 50.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/mongo_fdw_18-5.5.3-2PGDG.rhel9.aarch64.rpm
 @ el10.x86_64 18 mongo_fdw_18 mongo_fdw_18-5.5.3-3PGDG.rhel10.2.x86_64.rpm pgdg 5.5.3 53.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/mongo_fdw_18-5.5.3-3PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 18 mongo_fdw_18 mongo_fdw_18-5.5.3-2PGDG.rhel10.x86_64.rpm pgdg 5.5.3 53.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/mongo_fdw_18-5.5.3-2PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 18 mongo_fdw_18 mongo_fdw_18-5.5.3-3PGDG.rhel10.2.aarch64.rpm pgdg 5.5.3 52.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/mongo_fdw_18-5.5.3-3PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 18 mongo_fdw_18 mongo_fdw_18-5.5.3-2PGDG.rhel10.aarch64.rpm pgdg 5.5.3 52.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/mongo_fdw_18-5.5.3-2PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 18 postgresql-18-mongo-fdw postgresql-18-mongo-fdw_5.5.3-1PIGSTY~bookworm_amd64.deb pigsty 5.5.3 112.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/m/mongo-fdw/postgresql-18-mongo-fdw_5.5.3-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 18 postgresql-18-mongo-fdw postgresql-18-mongo-fdw_5.5.3-1PIGSTY~bookworm_arm64.deb pigsty 5.5.3 108.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/m/mongo-fdw/postgresql-18-mongo-fdw_5.5.3-1PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 18 postgresql-18-mongo-fdw postgresql-18-mongo-fdw_5.5.3-1PIGSTY~trixie_amd64.deb pigsty 5.5.3 113.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/m/mongo-fdw/postgresql-18-mongo-fdw_5.5.3-1PIGSTY~trixie_amd64.deb
@@ -85,9 +89,13 @@ weight: 8700
 @ el8.x86_64 17 mongo_fdw_17 mongo_fdw_17-5.5.3-2PGDG.rhel8.x86_64.rpm pgdg 5.5.3 54.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/mongo_fdw_17-5.5.3-2PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 17 mongo_fdw_17 mongo_fdw_17-5.5.3-2PGDG.rhel8.aarch64.rpm pgdg 5.5.3 52.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/mongo_fdw_17-5.5.3-2PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 17 mongo_fdw_17 mongo_fdw_17-5.5.3-3PGDG.rhel9.8.x86_64.rpm pgdg 5.5.3 52.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/mongo_fdw_17-5.5.3-3PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 17 mongo_fdw_17 mongo_fdw_17-5.5.3-2PGDG.rhel9.x86_64.rpm pgdg 5.5.3 52.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/mongo_fdw_17-5.5.3-2PGDG.rhel9.x86_64.rpm
 @ el9.aarch64 17 mongo_fdw_17 mongo_fdw_17-5.5.3-3PGDG.rhel9.8.aarch64.rpm pgdg 5.5.3 50.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/mongo_fdw_17-5.5.3-3PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 17 mongo_fdw_17 mongo_fdw_17-5.5.3-2PGDG.rhel9.aarch64.rpm pgdg 5.5.3 50.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/mongo_fdw_17-5.5.3-2PGDG.rhel9.aarch64.rpm
 @ el10.x86_64 17 mongo_fdw_17 mongo_fdw_17-5.5.3-3PGDG.rhel10.2.x86_64.rpm pgdg 5.5.3 53.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/mongo_fdw_17-5.5.3-3PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 17 mongo_fdw_17 mongo_fdw_17-5.5.3-2PGDG.rhel10.x86_64.rpm pgdg 5.5.3 53.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/mongo_fdw_17-5.5.3-2PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 17 mongo_fdw_17 mongo_fdw_17-5.5.3-3PGDG.rhel10.2.aarch64.rpm pgdg 5.5.3 51.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/mongo_fdw_17-5.5.3-3PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 17 mongo_fdw_17 mongo_fdw_17-5.5.3-2PGDG.rhel10.aarch64.rpm pgdg 5.5.3 52.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/mongo_fdw_17-5.5.3-2PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 17 postgresql-17-mongo-fdw postgresql-17-mongo-fdw_5.5.3-1PIGSTY~bookworm_amd64.deb pigsty 5.5.3 112.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/m/mongo-fdw/postgresql-17-mongo-fdw_5.5.3-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 17 postgresql-17-mongo-fdw postgresql-17-mongo-fdw_5.5.3-1PIGSTY~bookworm_arm64.deb pigsty 5.5.3 108.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/m/mongo-fdw/postgresql-17-mongo-fdw_5.5.3-1PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 17 postgresql-17-mongo-fdw postgresql-17-mongo-fdw_5.5.3-1PIGSTY~trixie_amd64.deb pigsty 5.5.3 112.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/m/mongo-fdw/postgresql-17-mongo-fdw_5.5.3-1PIGSTY~trixie_amd64.deb
@@ -103,9 +111,15 @@ weight: 8700
 @ el8.aarch64 16 mongo_fdw_16 mongo_fdw_16-5.5.3-2PGDG.rhel8.aarch64.rpm pgdg 5.5.3 52.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/mongo_fdw_16-5.5.3-2PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 16 mongo_fdw_16 mongo_fdw_16-5.5.1-1PGDG.rhel8.aarch64.rpm pgdg 5.5.1 70.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/mongo_fdw_16-5.5.1-1PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 16 mongo_fdw_16 mongo_fdw_16-5.5.3-3PGDG.rhel9.8.x86_64.rpm pgdg 5.5.3 52.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/mongo_fdw_16-5.5.3-3PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 16 mongo_fdw_16 mongo_fdw_16-5.5.3-2PGDG.rhel9.x86_64.rpm pgdg 5.5.3 52.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/mongo_fdw_16-5.5.3-2PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 16 mongo_fdw_16 mongo_fdw_16-5.5.1-1PGDG.rhel9.x86_64.rpm pgdg 5.5.1 65.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/mongo_fdw_16-5.5.1-1PGDG.rhel9.x86_64.rpm
 @ el9.aarch64 16 mongo_fdw_16 mongo_fdw_16-5.5.3-3PGDG.rhel9.8.aarch64.rpm pgdg 5.5.3 50.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/mongo_fdw_16-5.5.3-3PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 16 mongo_fdw_16 mongo_fdw_16-5.5.3-2PGDG.rhel9.aarch64.rpm pgdg 5.5.3 50.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/mongo_fdw_16-5.5.3-2PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 16 mongo_fdw_16 mongo_fdw_16-5.5.1-1PGDG.rhel9.aarch64.rpm pgdg 5.5.1 63.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/mongo_fdw_16-5.5.1-1PGDG.rhel9.aarch64.rpm
 @ el10.x86_64 16 mongo_fdw_16 mongo_fdw_16-5.5.3-3PGDG.rhel10.2.x86_64.rpm pgdg 5.5.3 53.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/mongo_fdw_16-5.5.3-3PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 16 mongo_fdw_16 mongo_fdw_16-5.5.3-2PGDG.rhel10.x86_64.rpm pgdg 5.5.3 53.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/mongo_fdw_16-5.5.3-2PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 16 mongo_fdw_16 mongo_fdw_16-5.5.3-3PGDG.rhel10.2.aarch64.rpm pgdg 5.5.3 52.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/mongo_fdw_16-5.5.3-3PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 16 mongo_fdw_16 mongo_fdw_16-5.5.3-2PGDG.rhel10.aarch64.rpm pgdg 5.5.3 52.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/mongo_fdw_16-5.5.3-2PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 16 postgresql-16-mongo-fdw postgresql-16-mongo-fdw_5.5.3-1PIGSTY~bookworm_amd64.deb pigsty 5.5.3 112.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/m/mongo-fdw/postgresql-16-mongo-fdw_5.5.3-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 16 postgresql-16-mongo-fdw postgresql-16-mongo-fdw_5.5.3-1PIGSTY~bookworm_arm64.deb pigsty 5.5.3 108.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/m/mongo-fdw/postgresql-16-mongo-fdw_5.5.3-1PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 16 postgresql-16-mongo-fdw postgresql-16-mongo-fdw_5.5.3-1PIGSTY~trixie_amd64.deb pigsty 5.5.3 112.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/m/mongo-fdw/postgresql-16-mongo-fdw_5.5.3-1PIGSTY~trixie_amd64.deb
@@ -123,9 +137,17 @@ weight: 8700
 @ el8.aarch64 15 mongo_fdw_15 mongo_fdw_15-5.5.3-2PGDG.rhel8.aarch64.rpm pgdg 5.5.3 53.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/mongo_fdw_15-5.5.3-2PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 15 mongo_fdw_15 mongo_fdw_15-5.5.1-1PGDG.rhel8.aarch64.rpm pgdg 5.5.1 73.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/mongo_fdw_15-5.5.1-1PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 15 mongo_fdw_15 mongo_fdw_15-5.5.3-3PGDG.rhel9.8.x86_64.rpm pgdg 5.5.3 55.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/mongo_fdw_15-5.5.3-3PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 15 mongo_fdw_15 mongo_fdw_15-5.5.3-2PGDG.rhel9.x86_64.rpm pgdg 5.5.3 55.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/mongo_fdw_15-5.5.3-2PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 15 mongo_fdw_15 mongo_fdw_15-5.5.1-1PGDG.rhel9.x86_64.rpm pgdg 5.5.1 79.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/mongo_fdw_15-5.5.1-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 15 mongo_fdw_15 mongo_fdw_15-5.5.0-1.rhel9.x86_64.rpm pgdg 5.5.0 75.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/mongo_fdw_15-5.5.0-1.rhel9.x86_64.rpm
+@ el9.x86_64 15 mongo_fdw_15 mongo_fdw_15-5.4.0-1.rhel9.x86_64.rpm pgdg 5.4.0 76.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/mongo_fdw_15-5.4.0-1.rhel9.x86_64.rpm
 @ el9.aarch64 15 mongo_fdw_15 mongo_fdw_15-5.5.3-3PGDG.rhel9.8.aarch64.rpm pgdg 5.5.3 53.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/mongo_fdw_15-5.5.3-3PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 15 mongo_fdw_15 mongo_fdw_15-5.5.3-2PGDG.rhel9.aarch64.rpm pgdg 5.5.3 53.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/mongo_fdw_15-5.5.3-2PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 15 mongo_fdw_15 mongo_fdw_15-5.5.1-1PGDG.rhel9.aarch64.rpm pgdg 5.5.1 75.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/mongo_fdw_15-5.5.1-1PGDG.rhel9.aarch64.rpm
 @ el10.x86_64 15 mongo_fdw_15 mongo_fdw_15-5.5.3-3PGDG.rhel10.2.x86_64.rpm pgdg 5.5.3 56.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/mongo_fdw_15-5.5.3-3PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 15 mongo_fdw_15 mongo_fdw_15-5.5.3-2PGDG.rhel10.x86_64.rpm pgdg 5.5.3 56.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/mongo_fdw_15-5.5.3-2PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 15 mongo_fdw_15 mongo_fdw_15-5.5.3-3PGDG.rhel10.2.aarch64.rpm pgdg 5.5.3 54.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/mongo_fdw_15-5.5.3-3PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 15 mongo_fdw_15 mongo_fdw_15-5.5.3-2PGDG.rhel10.aarch64.rpm pgdg 5.5.3 54.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/mongo_fdw_15-5.5.3-2PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 15 postgresql-15-mongo-fdw postgresql-15-mongo-fdw_5.5.3-1PIGSTY~bookworm_amd64.deb pigsty 5.5.3 113.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/m/mongo-fdw/postgresql-15-mongo-fdw_5.5.3-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 15 postgresql-15-mongo-fdw postgresql-15-mongo-fdw_5.5.3-1PIGSTY~bookworm_arm64.deb pigsty 5.5.3 109.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/m/mongo-fdw/postgresql-15-mongo-fdw_5.5.3-1PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 15 postgresql-15-mongo-fdw postgresql-15-mongo-fdw_5.5.3-1PIGSTY~trixie_amd64.deb pigsty 5.5.3 113.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/m/mongo-fdw/postgresql-15-mongo-fdw_5.5.3-1PIGSTY~trixie_amd64.deb
@@ -145,9 +167,18 @@ weight: 8700
 @ el8.aarch64 14 mongo_fdw_14 mongo_fdw_14-5.5.3-2PGDG.rhel8.aarch64.rpm pgdg 5.5.3 53.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/mongo_fdw_14-5.5.3-2PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 14 mongo_fdw_14 mongo_fdw_14-5.5.1-1PGDG.rhel8.aarch64.rpm pgdg 5.5.1 73.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/mongo_fdw_14-5.5.1-1PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 14 mongo_fdw_14 mongo_fdw_14-5.5.3-3PGDG.rhel9.8.x86_64.rpm pgdg 5.5.3 55.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/mongo_fdw_14-5.5.3-3PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 14 mongo_fdw_14 mongo_fdw_14-5.5.3-2PGDG.rhel9.x86_64.rpm pgdg 5.5.3 55.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/mongo_fdw_14-5.5.3-2PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 14 mongo_fdw_14 mongo_fdw_14-5.5.1-1PGDG.rhel9.x86_64.rpm pgdg 5.5.1 79.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/mongo_fdw_14-5.5.1-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 14 mongo_fdw_14 mongo_fdw_14-5.5.0-1.rhel9.x86_64.rpm pgdg 5.5.0 75.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/mongo_fdw_14-5.5.0-1.rhel9.x86_64.rpm
+@ el9.x86_64 14 mongo_fdw_14 mongo_fdw_14-5.4.0-1.rhel9.x86_64.rpm pgdg 5.4.0 76.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/mongo_fdw_14-5.4.0-1.rhel9.x86_64.rpm
+@ el9.x86_64 14 mongo_fdw_14 mongo_fdw_14-5.3.0-1.rhel9.x86_64.rpm pgdg 5.3.0 72.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/mongo_fdw_14-5.3.0-1.rhel9.x86_64.rpm
 @ el9.aarch64 14 mongo_fdw_14 mongo_fdw_14-5.5.3-3PGDG.rhel9.8.aarch64.rpm pgdg 5.5.3 53.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/mongo_fdw_14-5.5.3-3PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 14 mongo_fdw_14 mongo_fdw_14-5.5.3-2PGDG.rhel9.aarch64.rpm pgdg 5.5.3 53.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/mongo_fdw_14-5.5.3-2PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 14 mongo_fdw_14 mongo_fdw_14-5.5.1-1PGDG.rhel9.aarch64.rpm pgdg 5.5.1 75.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/mongo_fdw_14-5.5.1-1PGDG.rhel9.aarch64.rpm
 @ el10.x86_64 14 mongo_fdw_14 mongo_fdw_14-5.5.3-3PGDG.rhel10.2.x86_64.rpm pgdg 5.5.3 56.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/mongo_fdw_14-5.5.3-3PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 14 mongo_fdw_14 mongo_fdw_14-5.5.3-2PGDG.rhel10.x86_64.rpm pgdg 5.5.3 56.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/mongo_fdw_14-5.5.3-2PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 14 mongo_fdw_14 mongo_fdw_14-5.5.3-3PGDG.rhel10.2.aarch64.rpm pgdg 5.5.3 54.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/mongo_fdw_14-5.5.3-3PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 14 mongo_fdw_14 mongo_fdw_14-5.5.3-2PGDG.rhel10.aarch64.rpm pgdg 5.5.3 54.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/mongo_fdw_14-5.5.3-2PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 14 postgresql-14-mongo-fdw postgresql-14-mongo-fdw_5.5.3-1PIGSTY~bookworm_amd64.deb pigsty 5.5.3 113.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/m/mongo-fdw/postgresql-14-mongo-fdw_5.5.3-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 14 postgresql-14-mongo-fdw postgresql-14-mongo-fdw_5.5.3-1PIGSTY~bookworm_arm64.deb pigsty 5.5.3 109.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/m/mongo-fdw/postgresql-14-mongo-fdw_5.5.3-1PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 14 postgresql-14-mongo-fdw postgresql-14-mongo-fdw_5.5.3-1PIGSTY~trixie_amd64.deb pigsty 5.5.3 114.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/m/mongo-fdw/postgresql-14-mongo-fdw_5.5.3-1PIGSTY~trixie_amd64.deb
@@ -217,7 +248,7 @@ CREATE EXTENSION mongo_fdw;
 
 ## 用法
 
-> [mongo_fdw: 访问 MongoDB 的外部数据包装器](https://github.com/EnterpriseDB/mongo_fdw)
+来源：[README](https://github.com/EnterpriseDB/mongo_fdw/blob/REL-5_5_3/README.md)、[REL-5_5_3 release](https://github.com/EnterpriseDB/mongo_fdw/releases/tag/REL-5_5_3)
 
 ### 创建服务器
 
@@ -265,7 +296,11 @@ DELETE FROM warehouse WHERE warehouse_id = 100;
 
 ### 下推特性
 
-mongo_fdw 将 WHERE 子句、同一服务器上外部表之间的 JOIN、聚合函数和 ORDER BY 下推到 MongoDB，以实现高效查询执行。
+mongo_fdw 将 WHERE 子句、同一服务器上外部表之间的 JOIN、聚合函数、ORDER BY、LIMIT 和 OFFSET 下推到 MongoDB，以实现高效查询执行。诊断远端执行计划时，可使用 `mongo_fdw.enable_join_pushdown`、`mongo_fdw.enable_aggregate_pushdown`、`mongo_fdw.enable_order_by_pushdown` 和 `mongo_fdw.log_remote_query` GUC。
+
+### 版本说明
+
+`mongo_fdw` 5.5.3，上游 tag 为 `REL-5_5_3`，增加 PostgreSQL 18 支持，为 MongoDB 8 更新 bundled `mongoc-driver` 和 `json-c` libraries，增加 `mongo_fdw.log_remote_query` debug GUC，并修复 nested-field、WHERE、ORDER BY 和 unsafe join-pushdown 场景。本线中上游已停止 PostgreSQL 12 支持。
 
 ### 注意事项
 

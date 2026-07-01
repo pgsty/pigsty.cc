@@ -55,10 +55,10 @@ weight: 9210
 |:--:|:--:|:--:|:--:|:--:|:--:|
 | el8.x86_64 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 |
 | el8.aarch64 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 |
-| el9.x86_64 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 |
-| el9.aarch64 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 |
-| el10.x86_64 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 |
-| el10.aarch64 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 |
+| el9.x86_64 | AVAIL PGDG 1.0 3 | AVAIL PGDG 1.0 3 | AVAIL PGDG 1.0 3 | AVAIL PGDG 1.0 3 | AVAIL PGDG 1.0 3 |
+| el9.aarch64 | AVAIL PGDG 1.0 3 | AVAIL PGDG 1.0 3 | AVAIL PGDG 1.0 3 | AVAIL PGDG 1.0 3 | AVAIL PGDG 1.0 3 |
+| el10.x86_64 | AVAIL PGDG 1.0 3 | AVAIL PGDG 1.0 3 | AVAIL PGDG 1.0 3 | AVAIL PGDG 1.0 3 | AVAIL PGDG 1.0 3 |
+| el10.aarch64 | AVAIL PGDG 1.0 3 | AVAIL PGDG 1.0 3 | AVAIL PGDG 1.0 3 | AVAIL PGDG 1.0 3 | AVAIL PGDG 1.0 3 |
 | d12.x86_64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 |
 | d12.aarch64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 |
 | d13.x86_64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 |
@@ -72,9 +72,17 @@ weight: 9210
 @ el8.x86_64 18 plpgsql_wrap_18 plpgsql_wrap_18-1.0-2PGDG.rhel8.10.x86_64.rpm pgdg 1.0 22.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/plpgsql_wrap_18-1.0-2PGDG.rhel8.10.x86_64.rpm
 @ el8.aarch64 18 plpgsql_wrap_18 plpgsql_wrap_18-1.0-2PGDG.rhel8.10.aarch64.rpm pgdg 1.0 22.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/plpgsql_wrap_18-1.0-2PGDG.rhel8.10.aarch64.rpm
 @ el9.x86_64 18 plpgsql_wrap_18 plpgsql_wrap_18-1.0-2PGDG.rhel9.8.x86_64.rpm pgdg 1.0 23.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/plpgsql_wrap_18-1.0-2PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 18 plpgsql_wrap_18 plpgsql_wrap_18-1.0-2PGDG.rhel9.7.x86_64.rpm pgdg 1.0 23.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/plpgsql_wrap_18-1.0-2PGDG.rhel9.7.x86_64.rpm
+@ el9.x86_64 18 plpgsql_wrap_18 plpgsql_wrap_18-1.0-2PGDG.rhel9.6.x86_64.rpm pgdg 1.0 23.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/plpgsql_wrap_18-1.0-2PGDG.rhel9.6.x86_64.rpm
 @ el9.aarch64 18 plpgsql_wrap_18 plpgsql_wrap_18-1.0-2PGDG.rhel9.8.aarch64.rpm pgdg 1.0 22.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/plpgsql_wrap_18-1.0-2PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 18 plpgsql_wrap_18 plpgsql_wrap_18-1.0-2PGDG.rhel9.7.aarch64.rpm pgdg 1.0 22.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/plpgsql_wrap_18-1.0-2PGDG.rhel9.7.aarch64.rpm
+@ el9.aarch64 18 plpgsql_wrap_18 plpgsql_wrap_18-1.0-2PGDG.rhel9.6.aarch64.rpm pgdg 1.0 22.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/plpgsql_wrap_18-1.0-2PGDG.rhel9.6.aarch64.rpm
 @ el10.x86_64 18 plpgsql_wrap_18 plpgsql_wrap_18-1.0-2PGDG.rhel10.2.x86_64.rpm pgdg 1.0 23.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/plpgsql_wrap_18-1.0-2PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 18 plpgsql_wrap_18 plpgsql_wrap_18-1.0-2PGDG.rhel10.1.x86_64.rpm pgdg 1.0 23.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/plpgsql_wrap_18-1.0-2PGDG.rhel10.1.x86_64.rpm
+@ el10.x86_64 18 plpgsql_wrap_18 plpgsql_wrap_18-1.0-2PGDG.rhel10.0.x86_64.rpm pgdg 1.0 23.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/plpgsql_wrap_18-1.0-2PGDG.rhel10.0.x86_64.rpm
 @ el10.aarch64 18 plpgsql_wrap_18 plpgsql_wrap_18-1.0-2PGDG.rhel10.2.aarch64.rpm pgdg 1.0 22.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/plpgsql_wrap_18-1.0-2PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 18 plpgsql_wrap_18 plpgsql_wrap_18-1.0-2PGDG.rhel10.1.aarch64.rpm pgdg 1.0 22.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/plpgsql_wrap_18-1.0-2PGDG.rhel10.1.aarch64.rpm
+@ el10.aarch64 18 plpgsql_wrap_18 plpgsql_wrap_18-1.0-2PGDG.rhel10.0.aarch64.rpm pgdg 1.0 22.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/plpgsql_wrap_18-1.0-2PGDG.rhel10.0.aarch64.rpm
 @ d12.x86_64 18 postgresql-18-plpgsql-wrap postgresql-18-plpgsql-wrap_1.0-1PIGSTY~bookworm_amd64.deb pigsty 1.0 31.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/plpgsql-wrap/postgresql-18-plpgsql-wrap_1.0-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 18 postgresql-18-plpgsql-wrap postgresql-18-plpgsql-wrap_1.0-1PIGSTY~bookworm_arm64.deb pigsty 1.0 30.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/plpgsql-wrap/postgresql-18-plpgsql-wrap_1.0-1PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 18 postgresql-18-plpgsql-wrap postgresql-18-plpgsql-wrap_1.0-1PIGSTY~trixie_amd64.deb pigsty 1.0 30.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/plpgsql-wrap/postgresql-18-plpgsql-wrap_1.0-1PIGSTY~trixie_amd64.deb
@@ -88,9 +96,17 @@ weight: 9210
 @ el8.x86_64 17 plpgsql_wrap_17 plpgsql_wrap_17-1.0-2PGDG.rhel8.10.x86_64.rpm pgdg 1.0 22.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/plpgsql_wrap_17-1.0-2PGDG.rhel8.10.x86_64.rpm
 @ el8.aarch64 17 plpgsql_wrap_17 plpgsql_wrap_17-1.0-2PGDG.rhel8.10.aarch64.rpm pgdg 1.0 22.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/plpgsql_wrap_17-1.0-2PGDG.rhel8.10.aarch64.rpm
 @ el9.x86_64 17 plpgsql_wrap_17 plpgsql_wrap_17-1.0-2PGDG.rhel9.8.x86_64.rpm pgdg 1.0 23.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/plpgsql_wrap_17-1.0-2PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 17 plpgsql_wrap_17 plpgsql_wrap_17-1.0-2PGDG.rhel9.7.x86_64.rpm pgdg 1.0 23.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/plpgsql_wrap_17-1.0-2PGDG.rhel9.7.x86_64.rpm
+@ el9.x86_64 17 plpgsql_wrap_17 plpgsql_wrap_17-1.0-2PGDG.rhel9.6.x86_64.rpm pgdg 1.0 23.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/plpgsql_wrap_17-1.0-2PGDG.rhel9.6.x86_64.rpm
 @ el9.aarch64 17 plpgsql_wrap_17 plpgsql_wrap_17-1.0-2PGDG.rhel9.8.aarch64.rpm pgdg 1.0 22.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/plpgsql_wrap_17-1.0-2PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 17 plpgsql_wrap_17 plpgsql_wrap_17-1.0-2PGDG.rhel9.7.aarch64.rpm pgdg 1.0 22.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/plpgsql_wrap_17-1.0-2PGDG.rhel9.7.aarch64.rpm
+@ el9.aarch64 17 plpgsql_wrap_17 plpgsql_wrap_17-1.0-2PGDG.rhel9.6.aarch64.rpm pgdg 1.0 22.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/plpgsql_wrap_17-1.0-2PGDG.rhel9.6.aarch64.rpm
 @ el10.x86_64 17 plpgsql_wrap_17 plpgsql_wrap_17-1.0-2PGDG.rhel10.2.x86_64.rpm pgdg 1.0 23.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/plpgsql_wrap_17-1.0-2PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 17 plpgsql_wrap_17 plpgsql_wrap_17-1.0-2PGDG.rhel10.1.x86_64.rpm pgdg 1.0 23.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/plpgsql_wrap_17-1.0-2PGDG.rhel10.1.x86_64.rpm
+@ el10.x86_64 17 plpgsql_wrap_17 plpgsql_wrap_17-1.0-2PGDG.rhel10.0.x86_64.rpm pgdg 1.0 23.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/plpgsql_wrap_17-1.0-2PGDG.rhel10.0.x86_64.rpm
 @ el10.aarch64 17 plpgsql_wrap_17 plpgsql_wrap_17-1.0-2PGDG.rhel10.2.aarch64.rpm pgdg 1.0 22.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/plpgsql_wrap_17-1.0-2PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 17 plpgsql_wrap_17 plpgsql_wrap_17-1.0-2PGDG.rhel10.1.aarch64.rpm pgdg 1.0 22.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/plpgsql_wrap_17-1.0-2PGDG.rhel10.1.aarch64.rpm
+@ el10.aarch64 17 plpgsql_wrap_17 plpgsql_wrap_17-1.0-2PGDG.rhel10.0.aarch64.rpm pgdg 1.0 22.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/plpgsql_wrap_17-1.0-2PGDG.rhel10.0.aarch64.rpm
 @ d12.x86_64 17 postgresql-17-plpgsql-wrap postgresql-17-plpgsql-wrap_1.0-1PIGSTY~bookworm_amd64.deb pigsty 1.0 31.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/plpgsql-wrap/postgresql-17-plpgsql-wrap_1.0-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 17 postgresql-17-plpgsql-wrap postgresql-17-plpgsql-wrap_1.0-1PIGSTY~bookworm_arm64.deb pigsty 1.0 30.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/plpgsql-wrap/postgresql-17-plpgsql-wrap_1.0-1PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 17 postgresql-17-plpgsql-wrap postgresql-17-plpgsql-wrap_1.0-1PIGSTY~trixie_amd64.deb pigsty 1.0 30.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/plpgsql-wrap/postgresql-17-plpgsql-wrap_1.0-1PIGSTY~trixie_amd64.deb
@@ -104,9 +120,17 @@ weight: 9210
 @ el8.x86_64 16 plpgsql_wrap_16 plpgsql_wrap_16-1.0-2PGDG.rhel8.10.x86_64.rpm pgdg 1.0 22.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/plpgsql_wrap_16-1.0-2PGDG.rhel8.10.x86_64.rpm
 @ el8.aarch64 16 plpgsql_wrap_16 plpgsql_wrap_16-1.0-2PGDG.rhel8.10.aarch64.rpm pgdg 1.0 22.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/plpgsql_wrap_16-1.0-2PGDG.rhel8.10.aarch64.rpm
 @ el9.x86_64 16 plpgsql_wrap_16 plpgsql_wrap_16-1.0-2PGDG.rhel9.8.x86_64.rpm pgdg 1.0 23.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/plpgsql_wrap_16-1.0-2PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 16 plpgsql_wrap_16 plpgsql_wrap_16-1.0-2PGDG.rhel9.7.x86_64.rpm pgdg 1.0 23.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/plpgsql_wrap_16-1.0-2PGDG.rhel9.7.x86_64.rpm
+@ el9.x86_64 16 plpgsql_wrap_16 plpgsql_wrap_16-1.0-2PGDG.rhel9.6.x86_64.rpm pgdg 1.0 23.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/plpgsql_wrap_16-1.0-2PGDG.rhel9.6.x86_64.rpm
 @ el9.aarch64 16 plpgsql_wrap_16 plpgsql_wrap_16-1.0-2PGDG.rhel9.8.aarch64.rpm pgdg 1.0 22.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/plpgsql_wrap_16-1.0-2PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 16 plpgsql_wrap_16 plpgsql_wrap_16-1.0-2PGDG.rhel9.7.aarch64.rpm pgdg 1.0 22.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/plpgsql_wrap_16-1.0-2PGDG.rhel9.7.aarch64.rpm
+@ el9.aarch64 16 plpgsql_wrap_16 plpgsql_wrap_16-1.0-2PGDG.rhel9.6.aarch64.rpm pgdg 1.0 22.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/plpgsql_wrap_16-1.0-2PGDG.rhel9.6.aarch64.rpm
 @ el10.x86_64 16 plpgsql_wrap_16 plpgsql_wrap_16-1.0-2PGDG.rhel10.2.x86_64.rpm pgdg 1.0 23.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/plpgsql_wrap_16-1.0-2PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 16 plpgsql_wrap_16 plpgsql_wrap_16-1.0-2PGDG.rhel10.1.x86_64.rpm pgdg 1.0 23.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/plpgsql_wrap_16-1.0-2PGDG.rhel10.1.x86_64.rpm
+@ el10.x86_64 16 plpgsql_wrap_16 plpgsql_wrap_16-1.0-2PGDG.rhel10.0.x86_64.rpm pgdg 1.0 23.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/plpgsql_wrap_16-1.0-2PGDG.rhel10.0.x86_64.rpm
 @ el10.aarch64 16 plpgsql_wrap_16 plpgsql_wrap_16-1.0-2PGDG.rhel10.2.aarch64.rpm pgdg 1.0 22.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/plpgsql_wrap_16-1.0-2PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 16 plpgsql_wrap_16 plpgsql_wrap_16-1.0-2PGDG.rhel10.1.aarch64.rpm pgdg 1.0 22.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/plpgsql_wrap_16-1.0-2PGDG.rhel10.1.aarch64.rpm
+@ el10.aarch64 16 plpgsql_wrap_16 plpgsql_wrap_16-1.0-2PGDG.rhel10.0.aarch64.rpm pgdg 1.0 22.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/plpgsql_wrap_16-1.0-2PGDG.rhel10.0.aarch64.rpm
 @ d12.x86_64 16 postgresql-16-plpgsql-wrap postgresql-16-plpgsql-wrap_1.0-1PIGSTY~bookworm_amd64.deb pigsty 1.0 31.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/plpgsql-wrap/postgresql-16-plpgsql-wrap_1.0-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 16 postgresql-16-plpgsql-wrap postgresql-16-plpgsql-wrap_1.0-1PIGSTY~bookworm_arm64.deb pigsty 1.0 30.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/plpgsql-wrap/postgresql-16-plpgsql-wrap_1.0-1PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 16 postgresql-16-plpgsql-wrap postgresql-16-plpgsql-wrap_1.0-1PIGSTY~trixie_amd64.deb pigsty 1.0 30.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/plpgsql-wrap/postgresql-16-plpgsql-wrap_1.0-1PIGSTY~trixie_amd64.deb
@@ -120,9 +144,17 @@ weight: 9210
 @ el8.x86_64 15 plpgsql_wrap_15 plpgsql_wrap_15-1.0-2PGDG.rhel8.10.x86_64.rpm pgdg 1.0 22.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/plpgsql_wrap_15-1.0-2PGDG.rhel8.10.x86_64.rpm
 @ el8.aarch64 15 plpgsql_wrap_15 plpgsql_wrap_15-1.0-2PGDG.rhel8.10.aarch64.rpm pgdg 1.0 22.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/plpgsql_wrap_15-1.0-2PGDG.rhel8.10.aarch64.rpm
 @ el9.x86_64 15 plpgsql_wrap_15 plpgsql_wrap_15-1.0-2PGDG.rhel9.8.x86_64.rpm pgdg 1.0 23.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/plpgsql_wrap_15-1.0-2PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 15 plpgsql_wrap_15 plpgsql_wrap_15-1.0-2PGDG.rhel9.7.x86_64.rpm pgdg 1.0 23.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/plpgsql_wrap_15-1.0-2PGDG.rhel9.7.x86_64.rpm
+@ el9.x86_64 15 plpgsql_wrap_15 plpgsql_wrap_15-1.0-2PGDG.rhel9.6.x86_64.rpm pgdg 1.0 23.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/plpgsql_wrap_15-1.0-2PGDG.rhel9.6.x86_64.rpm
 @ el9.aarch64 15 plpgsql_wrap_15 plpgsql_wrap_15-1.0-2PGDG.rhel9.8.aarch64.rpm pgdg 1.0 22.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/plpgsql_wrap_15-1.0-2PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 15 plpgsql_wrap_15 plpgsql_wrap_15-1.0-2PGDG.rhel9.7.aarch64.rpm pgdg 1.0 22.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/plpgsql_wrap_15-1.0-2PGDG.rhel9.7.aarch64.rpm
+@ el9.aarch64 15 plpgsql_wrap_15 plpgsql_wrap_15-1.0-2PGDG.rhel9.6.aarch64.rpm pgdg 1.0 22.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/plpgsql_wrap_15-1.0-2PGDG.rhel9.6.aarch64.rpm
 @ el10.x86_64 15 plpgsql_wrap_15 plpgsql_wrap_15-1.0-2PGDG.rhel10.2.x86_64.rpm pgdg 1.0 23.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/plpgsql_wrap_15-1.0-2PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 15 plpgsql_wrap_15 plpgsql_wrap_15-1.0-2PGDG.rhel10.1.x86_64.rpm pgdg 1.0 23.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/plpgsql_wrap_15-1.0-2PGDG.rhel10.1.x86_64.rpm
+@ el10.x86_64 15 plpgsql_wrap_15 plpgsql_wrap_15-1.0-2PGDG.rhel10.0.x86_64.rpm pgdg 1.0 23.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/plpgsql_wrap_15-1.0-2PGDG.rhel10.0.x86_64.rpm
 @ el10.aarch64 15 plpgsql_wrap_15 plpgsql_wrap_15-1.0-2PGDG.rhel10.2.aarch64.rpm pgdg 1.0 22.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/plpgsql_wrap_15-1.0-2PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 15 plpgsql_wrap_15 plpgsql_wrap_15-1.0-2PGDG.rhel10.1.aarch64.rpm pgdg 1.0 22.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/plpgsql_wrap_15-1.0-2PGDG.rhel10.1.aarch64.rpm
+@ el10.aarch64 15 plpgsql_wrap_15 plpgsql_wrap_15-1.0-2PGDG.rhel10.0.aarch64.rpm pgdg 1.0 22.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/plpgsql_wrap_15-1.0-2PGDG.rhel10.0.aarch64.rpm
 @ d12.x86_64 15 postgresql-15-plpgsql-wrap postgresql-15-plpgsql-wrap_1.0-1PIGSTY~bookworm_amd64.deb pigsty 1.0 31.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/plpgsql-wrap/postgresql-15-plpgsql-wrap_1.0-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 15 postgresql-15-plpgsql-wrap postgresql-15-plpgsql-wrap_1.0-1PIGSTY~bookworm_arm64.deb pigsty 1.0 30.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/plpgsql-wrap/postgresql-15-plpgsql-wrap_1.0-1PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 15 postgresql-15-plpgsql-wrap postgresql-15-plpgsql-wrap_1.0-1PIGSTY~trixie_amd64.deb pigsty 1.0 30.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/plpgsql-wrap/postgresql-15-plpgsql-wrap_1.0-1PIGSTY~trixie_amd64.deb
@@ -136,9 +168,17 @@ weight: 9210
 @ el8.x86_64 14 plpgsql_wrap_14 plpgsql_wrap_14-1.0-2PGDG.rhel8.10.x86_64.rpm pgdg 1.0 22.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/plpgsql_wrap_14-1.0-2PGDG.rhel8.10.x86_64.rpm
 @ el8.aarch64 14 plpgsql_wrap_14 plpgsql_wrap_14-1.0-2PGDG.rhel8.10.aarch64.rpm pgdg 1.0 22.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/plpgsql_wrap_14-1.0-2PGDG.rhel8.10.aarch64.rpm
 @ el9.x86_64 14 plpgsql_wrap_14 plpgsql_wrap_14-1.0-2PGDG.rhel9.8.x86_64.rpm pgdg 1.0 23.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/plpgsql_wrap_14-1.0-2PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 14 plpgsql_wrap_14 plpgsql_wrap_14-1.0-2PGDG.rhel9.7.x86_64.rpm pgdg 1.0 23.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/plpgsql_wrap_14-1.0-2PGDG.rhel9.7.x86_64.rpm
+@ el9.x86_64 14 plpgsql_wrap_14 plpgsql_wrap_14-1.0-2PGDG.rhel9.6.x86_64.rpm pgdg 1.0 23.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/plpgsql_wrap_14-1.0-2PGDG.rhel9.6.x86_64.rpm
 @ el9.aarch64 14 plpgsql_wrap_14 plpgsql_wrap_14-1.0-2PGDG.rhel9.8.aarch64.rpm pgdg 1.0 22.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/plpgsql_wrap_14-1.0-2PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 14 plpgsql_wrap_14 plpgsql_wrap_14-1.0-2PGDG.rhel9.7.aarch64.rpm pgdg 1.0 22.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/plpgsql_wrap_14-1.0-2PGDG.rhel9.7.aarch64.rpm
+@ el9.aarch64 14 plpgsql_wrap_14 plpgsql_wrap_14-1.0-2PGDG.rhel9.6.aarch64.rpm pgdg 1.0 22.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/plpgsql_wrap_14-1.0-2PGDG.rhel9.6.aarch64.rpm
 @ el10.x86_64 14 plpgsql_wrap_14 plpgsql_wrap_14-1.0-2PGDG.rhel10.2.x86_64.rpm pgdg 1.0 23.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/plpgsql_wrap_14-1.0-2PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 14 plpgsql_wrap_14 plpgsql_wrap_14-1.0-2PGDG.rhel10.1.x86_64.rpm pgdg 1.0 23.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/plpgsql_wrap_14-1.0-2PGDG.rhel10.1.x86_64.rpm
+@ el10.x86_64 14 plpgsql_wrap_14 plpgsql_wrap_14-1.0-2PGDG.rhel10.0.x86_64.rpm pgdg 1.0 23.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/plpgsql_wrap_14-1.0-2PGDG.rhel10.0.x86_64.rpm
 @ el10.aarch64 14 plpgsql_wrap_14 plpgsql_wrap_14-1.0-2PGDG.rhel10.2.aarch64.rpm pgdg 1.0 22.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/plpgsql_wrap_14-1.0-2PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 14 plpgsql_wrap_14 plpgsql_wrap_14-1.0-2PGDG.rhel10.1.aarch64.rpm pgdg 1.0 22.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/plpgsql_wrap_14-1.0-2PGDG.rhel10.1.aarch64.rpm
+@ el10.aarch64 14 plpgsql_wrap_14 plpgsql_wrap_14-1.0-2PGDG.rhel10.0.aarch64.rpm pgdg 1.0 22.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/plpgsql_wrap_14-1.0-2PGDG.rhel10.0.aarch64.rpm
 @ d12.x86_64 14 postgresql-14-plpgsql-wrap postgresql-14-plpgsql-wrap_1.0-1PIGSTY~bookworm_amd64.deb pigsty 1.0 30.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/plpgsql-wrap/postgresql-14-plpgsql-wrap_1.0-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 14 postgresql-14-plpgsql-wrap postgresql-14-plpgsql-wrap_1.0-1PIGSTY~bookworm_arm64.deb pigsty 1.0 30.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/plpgsql-wrap/postgresql-14-plpgsql-wrap_1.0-1PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 14 postgresql-14-plpgsql-wrap postgresql-14-plpgsql-wrap_1.0-1PIGSTY~trixie_amd64.deb pigsty 1.0 30.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/plpgsql-wrap/postgresql-14-plpgsql-wrap_1.0-1PIGSTY~trixie_amd64.deb
@@ -211,3 +251,75 @@ apt install -y postgresql-14-plpgsql-wrap   # PG 14
 ```sql
 CREATE EXTENSION plpgsql_wrap CASCADE;  -- 依赖: plpgsql
 ```
+
+## 用法
+
+来源：[README](https://github.com/HexaCluster/plpgsql_wrap/blob/v1.0/README.md)、[v1.0 release](https://github.com/HexaCluster/plpgsql_wrap/releases/tag/v1.0)、[control file](https://github.com/HexaCluster/plpgsql_wrap/blob/v1.0/plpgsql_wrap.control)
+
+`plpgsql_wrap` 为 PostgreSQL 提供 Oracle WRAP 风格的 procedural language。使用 `LANGUAGE plpgsql_wrap` 编写的函数会先按 PL/pgSQL 校验，然后以 `PLPGSQLWRAP:1:<hex>` 形式加密存储在 `pg_proc.prosrc` 中。
+
+### 带 Key 安装
+
+使用 32-byte AES-256-GCM key 构建扩展：
+
+```bash
+export WRAP_KEY_HEX=$(openssl rand -hex 32)
+make WRAP_KEY_HEX=$WRAP_KEY_HEX
+sudo make install
+```
+
+备份该 key。只有正确的 compiled key 可用时，wrapped functions 才能安全 unwrap 或 restore。
+
+在每个需要该 language 的数据库中安装扩展：
+
+```sql
+CREATE EXTENSION plpgsql_wrap; -- requires plpgsql
+```
+
+### 创建 Wrapped Functions
+
+使用普通 PL/pgSQL 语法，只是 language name 不同：
+
+```sql
+CREATE OR REPLACE FUNCTION public.calculate_bonus(emp_id int, yr int)
+RETURNS numeric
+LANGUAGE plpgsql_wrap
+AS $$
+DECLARE
+  v_salary numeric;
+BEGIN
+  SELECT salary INTO v_salary FROM employees WHERE id = emp_id;
+  RETURN v_salary * 0.15;
+END;
+$$;
+```
+
+存储的函数体不可读：
+
+```sql
+SELECT substring(prosrc, 1, 32) AS wrapped_code
+FROM pg_proc
+WHERE proname = 'calculate_bonus';
+```
+
+### Dump、Restore 与 Unwrap
+
+`pg_dump` 会输出加密后的 `PLPGSQLWRAP:1:` blob。在具有相同 compiled key 的服务器上 restore 可以正常工作。不同 key 会保留 blob，但调用时如果 validator/authentication path 无法认证它，就会失败。
+
+superuser 知道 key 时，可以永久 unwrap 一个函数：
+
+```sql
+SELECT plpgsql_wrap.unwrap_procedure(
+  'myhexkey',
+  'public',
+  'calculate_bonus',
+  'emp_id int, yr int'
+);
+```
+
+### 注意事项
+
+- 版本 1.0 支持 PostgreSQL 14-18。
+- Control file 要求 `plpgsql`，并且需要 superuser installation。
+- 这可以防止随意查看源码和 dumps，但 compiled key 是关键 secret。应相应保护 package artifacts 和 build logs。
+- 语法会在加密前校验，因此普通 PL/pgSQL syntax errors 会在写入 encrypted storage 前中止 `CREATE FUNCTION`。

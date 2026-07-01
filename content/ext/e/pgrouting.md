@@ -47,10 +47,10 @@ weight: 1510
 |:--:|:--:|:--:|:--:|:--:|:--:|
 | el8.x86_64 | AVAIL PGDG 4.0.1 2 | AVAIL PGDG 4.0.1 7 | AVAIL PGDG 4.0.1 8 | AVAIL PGDG 4.0.1 15 | AVAIL PGDG 4.0.1 19 |
 | el8.aarch64 | AVAIL PGDG 4.0.1 2 | AVAIL PGDG 4.0.1 7 | AVAIL PGDG 4.0.1 8 | AVAIL PGDG 4.0.1 13 | AVAIL PGDG 4.0.1 15 |
-| el9.x86_64 | AVAIL PGDG 4.0.1 1 | AVAIL PGDG 4.0.1 1 | AVAIL PGDG 4.0.1 1 | AVAIL PGDG 4.0.1 1 | AVAIL PGDG 4.0.1 1 |
-| el9.aarch64 | AVAIL PGDG 4.0.1 1 | AVAIL PGDG 4.0.1 1 | AVAIL PGDG 4.0.1 1 | AVAIL PGDG 4.0.1 1 | AVAIL PGDG 4.0.1 1 |
-| el10.x86_64 | AVAIL PGDG 4.0.1 1 | AVAIL PGDG 4.0.1 1 | AVAIL PGDG 4.0.1 1 | AVAIL PGDG 4.0.1 1 | AVAIL PGDG 4.0.1 1 |
-| el10.aarch64 | AVAIL PGDG 4.0.1 1 | AVAIL PGDG 4.0.1 1 | AVAIL PGDG 4.0.1 1 | AVAIL PGDG 4.0.1 1 | AVAIL PGDG 4.0.1 1 |
+| el9.x86_64 | AVAIL PGDG 4.0.1 4 | AVAIL PGDG 4.0.1 9 | AVAIL PGDG 4.0.1 10 | AVAIL PGDG 4.0.1 17 | AVAIL PGDG 4.0.1 17 |
+| el9.aarch64 | AVAIL PGDG 4.0.1 4 | AVAIL PGDG 4.0.1 9 | AVAIL PGDG 4.0.1 10 | AVAIL PGDG 4.0.1 15 | AVAIL PGDG 4.0.1 17 |
+| el10.x86_64 | AVAIL PGDG 4.0.1 4 | AVAIL PGDG 4.0.1 4 | AVAIL PGDG 4.0.1 4 | AVAIL PGDG 4.0.1 4 | AVAIL PGDG 4.0.1 4 |
+| el10.aarch64 | AVAIL PGDG 4.0.1 4 | AVAIL PGDG 4.0.1 4 | AVAIL PGDG 4.0.1 4 | AVAIL PGDG 4.0.1 4 | AVAIL PGDG 4.0.1 4 |
 | d12.x86_64 | AVAIL PGDG 4.0.1 1 | AVAIL PGDG 4.0.1 1 | AVAIL PGDG 4.0.1 1 | AVAIL PGDG 4.0.1 1 | AVAIL PGDG 4.0.1 1 |
 | d12.aarch64 | AVAIL PGDG 4.0.1 1 | AVAIL PGDG 4.0.1 1 | AVAIL PGDG 4.0.1 1 | AVAIL PGDG 4.0.1 1 | AVAIL PGDG 4.0.1 1 |
 | d13.x86_64 | AVAIL PGDG 4.0.1 1 | AVAIL PGDG 4.0.1 1 | AVAIL PGDG 4.0.1 1 | AVAIL PGDG 4.0.1 1 | AVAIL PGDG 4.0.1 1 |
@@ -66,9 +66,21 @@ weight: 1510
 @ el8.aarch64 18 pgrouting_18 pgrouting_18-4.0.1-1PGDG.rhel8.10.aarch64.rpm pgdg 4.0.1 797.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pgrouting_18-4.0.1-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 18 pgrouting_18 pgrouting_18-3.8.0-1PGDG.rhel8.aarch64.rpm pgdg 3.8.0 830.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pgrouting_18-3.8.0-1PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 18 pgrouting_18 pgrouting_18-4.0.1-3PGDG.rhel9.8.x86_64.rpm pgdg 4.0.1 696.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pgrouting_18-4.0.1-3PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 18 pgrouting_18 pgrouting_18-4.0.1-1PGDG.rhel9.7.x86_64.rpm pgdg 4.0.1 696.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pgrouting_18-4.0.1-1PGDG.rhel9.7.x86_64.rpm
+@ el9.x86_64 18 pgrouting_18 pgrouting_18-4.0.1-1PGDG.rhel9.6.x86_64.rpm pgdg 4.0.1 696.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pgrouting_18-4.0.1-1PGDG.rhel9.6.x86_64.rpm
+@ el9.x86_64 18 pgrouting_18 pgrouting_18-3.8.0-1PGDG.rhel9.x86_64.rpm pgdg 3.8.0 741.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pgrouting_18-3.8.0-1PGDG.rhel9.x86_64.rpm
 @ el9.aarch64 18 pgrouting_18 pgrouting_18-4.0.1-3PGDG.rhel9.8.aarch64.rpm pgdg 4.0.1 648.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pgrouting_18-4.0.1-3PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 18 pgrouting_18 pgrouting_18-4.0.1-1PGDG.rhel9.7.aarch64.rpm pgdg 4.0.1 648.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pgrouting_18-4.0.1-1PGDG.rhel9.7.aarch64.rpm
+@ el9.aarch64 18 pgrouting_18 pgrouting_18-4.0.1-1PGDG.rhel9.6.aarch64.rpm pgdg 4.0.1 648.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pgrouting_18-4.0.1-1PGDG.rhel9.6.aarch64.rpm
+@ el9.aarch64 18 pgrouting_18 pgrouting_18-3.8.0-1PGDG.rhel9.aarch64.rpm pgdg 3.8.0 693.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pgrouting_18-3.8.0-1PGDG.rhel9.aarch64.rpm
 @ el10.x86_64 18 pgrouting_18 pgrouting_18-4.0.1-3PGDG.rhel10.2.x86_64.rpm pgdg 4.0.1 728.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pgrouting_18-4.0.1-3PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 18 pgrouting_18 pgrouting_18-4.0.1-1PGDG.rhel10.1.x86_64.rpm pgdg 4.0.1 727.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pgrouting_18-4.0.1-1PGDG.rhel10.1.x86_64.rpm
+@ el10.x86_64 18 pgrouting_18 pgrouting_18-4.0.1-1PGDG.rhel10.0.x86_64.rpm pgdg 4.0.1 727.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pgrouting_18-4.0.1-1PGDG.rhel10.0.x86_64.rpm
+@ el10.x86_64 18 pgrouting_18 pgrouting_18-3.8.0-1PGDG.rhel10.x86_64.rpm pgdg 3.8.0 773.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pgrouting_18-3.8.0-1PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 18 pgrouting_18 pgrouting_18-4.0.1-3PGDG.rhel10.2.aarch64.rpm pgdg 4.0.1 672.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pgrouting_18-4.0.1-3PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 18 pgrouting_18 pgrouting_18-4.0.1-1PGDG.rhel10.1.aarch64.rpm pgdg 4.0.1 670.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pgrouting_18-4.0.1-1PGDG.rhel10.1.aarch64.rpm
+@ el10.aarch64 18 pgrouting_18 pgrouting_18-4.0.1-1PGDG.rhel10.0.aarch64.rpm pgdg 4.0.1 671.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pgrouting_18-4.0.1-1PGDG.rhel10.0.aarch64.rpm
+@ el10.aarch64 18 pgrouting_18 pgrouting_18-3.8.0-1PGDG.rhel10.aarch64.rpm pgdg 3.8.0 718.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pgrouting_18-3.8.0-1PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 18 postgresql-18-pgrouting postgresql-18-pgrouting_4.0.1-1.pgdg12+1_amd64.deb pgdg 4.0.1 813.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-18-pgrouting_4.0.1-1.pgdg12+1_amd64.deb
 @ d12.aarch64 18 postgresql-18-pgrouting postgresql-18-pgrouting_4.0.1-1.pgdg12+1_arm64.deb pgdg 4.0.1 695.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-18-pgrouting_4.0.1-1.pgdg12+1_arm64.deb
 @ d13.x86_64 18 postgresql-18-pgrouting postgresql-18-pgrouting_4.0.1-1.pgdg13+1_amd64.deb pgdg 4.0.1 902.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-18-pgrouting_4.0.1-1.pgdg13+1_amd64.deb
@@ -94,9 +106,31 @@ weight: 1510
 @ el8.aarch64 17 pgrouting_17 pgrouting_17-3.6.3-1PGDG.rhel8.aarch64.rpm pgdg 3.6.3 840.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pgrouting_17-3.6.3-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 17 pgrouting_17 pgrouting_17-3.6.2-2PGDG.rhel8.aarch64.rpm pgdg 3.6.2 839.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pgrouting_17-3.6.2-2PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 17 pgrouting_17 pgrouting_17-4.0.1-3PGDG.rhel9.8.x86_64.rpm pgdg 4.0.1 696.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pgrouting_17-4.0.1-3PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 17 pgrouting_17 pgrouting_17-4.0.1-1PGDG.rhel9.7.x86_64.rpm pgdg 4.0.1 696.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pgrouting_17-4.0.1-1PGDG.rhel9.7.x86_64.rpm
+@ el9.x86_64 17 pgrouting_17 pgrouting_17-4.0.1-1PGDG.rhel9.6.x86_64.rpm pgdg 4.0.1 696.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pgrouting_17-4.0.1-1PGDG.rhel9.6.x86_64.rpm
+@ el9.x86_64 17 pgrouting_17 pgrouting_17-3.8.0-1PGDG.rhel9.x86_64.rpm pgdg 3.8.0 741.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pgrouting_17-3.8.0-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 17 pgrouting_17 pgrouting_17-3.7.3-1PGDG.rhel9.x86_64.rpm pgdg 3.7.3 719.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pgrouting_17-3.7.3-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 17 pgrouting_17 pgrouting_17-3.7.1-1PGDG.rhel9.x86_64.rpm pgdg 3.7.1 748.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pgrouting_17-3.7.1-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 17 pgrouting_17 pgrouting_17-3.7.0-1PGDG.rhel9.x86_64.rpm pgdg 3.7.0 752.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pgrouting_17-3.7.0-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 17 pgrouting_17 pgrouting_17-3.6.3-1PGDG.rhel9.x86_64.rpm pgdg 3.6.3 738.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pgrouting_17-3.6.3-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 17 pgrouting_17 pgrouting_17-3.6.2-2PGDG.rhel9.x86_64.rpm pgdg 3.6.2 737.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pgrouting_17-3.6.2-2PGDG.rhel9.x86_64.rpm
 @ el9.aarch64 17 pgrouting_17 pgrouting_17-4.0.1-3PGDG.rhel9.8.aarch64.rpm pgdg 4.0.1 648.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pgrouting_17-4.0.1-3PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 17 pgrouting_17 pgrouting_17-4.0.1-1PGDG.rhel9.7.aarch64.rpm pgdg 4.0.1 648.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pgrouting_17-4.0.1-1PGDG.rhel9.7.aarch64.rpm
+@ el9.aarch64 17 pgrouting_17 pgrouting_17-4.0.1-1PGDG.rhel9.6.aarch64.rpm pgdg 4.0.1 648.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pgrouting_17-4.0.1-1PGDG.rhel9.6.aarch64.rpm
+@ el9.aarch64 17 pgrouting_17 pgrouting_17-3.8.0-1PGDG.rhel9.aarch64.rpm pgdg 3.8.0 693.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pgrouting_17-3.8.0-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 17 pgrouting_17 pgrouting_17-3.7.3-1PGDG.rhel9.aarch64.rpm pgdg 3.7.3 671.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pgrouting_17-3.7.3-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 17 pgrouting_17 pgrouting_17-3.7.1-1PGDG.rhel9.aarch64.rpm pgdg 3.7.1 699.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pgrouting_17-3.7.1-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 17 pgrouting_17 pgrouting_17-3.7.0-1PGDG.rhel9.aarch64.rpm pgdg 3.7.0 701.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pgrouting_17-3.7.0-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 17 pgrouting_17 pgrouting_17-3.6.3-1PGDG.rhel9.aarch64.rpm pgdg 3.6.3 688.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pgrouting_17-3.6.3-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 17 pgrouting_17 pgrouting_17-3.6.2-2PGDG.rhel9.aarch64.rpm pgdg 3.6.2 688.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pgrouting_17-3.6.2-2PGDG.rhel9.aarch64.rpm
 @ el10.x86_64 17 pgrouting_17 pgrouting_17-4.0.1-3PGDG.rhel10.2.x86_64.rpm pgdg 4.0.1 727.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pgrouting_17-4.0.1-3PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 17 pgrouting_17 pgrouting_17-4.0.1-1PGDG.rhel10.1.x86_64.rpm pgdg 4.0.1 726.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pgrouting_17-4.0.1-1PGDG.rhel10.1.x86_64.rpm
+@ el10.x86_64 17 pgrouting_17 pgrouting_17-4.0.1-1PGDG.rhel10.0.x86_64.rpm pgdg 4.0.1 728.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pgrouting_17-4.0.1-1PGDG.rhel10.0.x86_64.rpm
+@ el10.x86_64 17 pgrouting_17 pgrouting_17-3.8.0-1PGDG.rhel10.x86_64.rpm pgdg 3.8.0 772.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pgrouting_17-3.8.0-1PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 17 pgrouting_17 pgrouting_17-4.0.1-3PGDG.rhel10.2.aarch64.rpm pgdg 4.0.1 672.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pgrouting_17-4.0.1-3PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 17 pgrouting_17 pgrouting_17-4.0.1-1PGDG.rhel10.1.aarch64.rpm pgdg 4.0.1 670.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pgrouting_17-4.0.1-1PGDG.rhel10.1.aarch64.rpm
+@ el10.aarch64 17 pgrouting_17 pgrouting_17-4.0.1-1PGDG.rhel10.0.aarch64.rpm pgdg 4.0.1 671.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pgrouting_17-4.0.1-1PGDG.rhel10.0.aarch64.rpm
+@ el10.aarch64 17 pgrouting_17 pgrouting_17-3.8.0-1PGDG.rhel10.aarch64.rpm pgdg 3.8.0 719.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pgrouting_17-3.8.0-1PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 17 postgresql-17-pgrouting postgresql-17-pgrouting_4.0.1-1.pgdg12+1_amd64.deb pgdg 4.0.1 813.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-17-pgrouting_4.0.1-1.pgdg12+1_amd64.deb
 @ d12.aarch64 17 postgresql-17-pgrouting postgresql-17-pgrouting_4.0.1-1.pgdg12+1_arm64.deb pgdg 4.0.1 695.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-17-pgrouting_4.0.1-1.pgdg12+1_arm64.deb
 @ d13.x86_64 17 postgresql-17-pgrouting postgresql-17-pgrouting_4.0.1-1.pgdg13+1_amd64.deb pgdg 4.0.1 902.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-17-pgrouting_4.0.1-1.pgdg13+1_amd64.deb
@@ -124,9 +158,33 @@ weight: 1510
 @ el8.aarch64 16 pgrouting_16 pgrouting_16-3.6.0-1PGDG.rhel8.aarch64.rpm pgdg 3.6.0 837.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pgrouting_16-3.6.0-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 16 pgrouting_16 pgrouting_16-3.5.0-1.rhel8.aarch64.rpm pgdg 3.5.0 818.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pgrouting_16-3.5.0-1.rhel8.aarch64.rpm
 @ el9.x86_64 16 pgrouting_16 pgrouting_16-4.0.1-3PGDG.rhel9.8.x86_64.rpm pgdg 4.0.1 696.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pgrouting_16-4.0.1-3PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 16 pgrouting_16 pgrouting_16-4.0.1-1PGDG.rhel9.7.x86_64.rpm pgdg 4.0.1 696.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pgrouting_16-4.0.1-1PGDG.rhel9.7.x86_64.rpm
+@ el9.x86_64 16 pgrouting_16 pgrouting_16-4.0.1-1PGDG.rhel9.6.x86_64.rpm pgdg 4.0.1 696.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pgrouting_16-4.0.1-1PGDG.rhel9.6.x86_64.rpm
+@ el9.x86_64 16 pgrouting_16 pgrouting_16-3.8.0-1PGDG.rhel9.x86_64.rpm pgdg 3.8.0 741.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pgrouting_16-3.8.0-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 16 pgrouting_16 pgrouting_16-3.7.3-1PGDG.rhel9.x86_64.rpm pgdg 3.7.3 719.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pgrouting_16-3.7.3-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 16 pgrouting_16 pgrouting_16-3.7.1-1PGDG.rhel9.x86_64.rpm pgdg 3.7.1 749.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pgrouting_16-3.7.1-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 16 pgrouting_16 pgrouting_16-3.7.0-1PGDG.rhel9.x86_64.rpm pgdg 3.7.0 752.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pgrouting_16-3.7.0-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 16 pgrouting_16 pgrouting_16-3.6.3-1PGDG.rhel9.x86_64.rpm pgdg 3.6.3 738.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pgrouting_16-3.6.3-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 16 pgrouting_16 pgrouting_16-3.6.0-1PGDG.rhel9.x86_64.rpm pgdg 3.6.0 736.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pgrouting_16-3.6.0-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 16 pgrouting_16 pgrouting_16-3.5.0-1.rhel9.x86_64.rpm pgdg 3.5.0 732.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pgrouting_16-3.5.0-1.rhel9.x86_64.rpm
 @ el9.aarch64 16 pgrouting_16 pgrouting_16-4.0.1-3PGDG.rhel9.8.aarch64.rpm pgdg 4.0.1 648.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pgrouting_16-4.0.1-3PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 16 pgrouting_16 pgrouting_16-4.0.1-1PGDG.rhel9.7.aarch64.rpm pgdg 4.0.1 648.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pgrouting_16-4.0.1-1PGDG.rhel9.7.aarch64.rpm
+@ el9.aarch64 16 pgrouting_16 pgrouting_16-4.0.1-1PGDG.rhel9.6.aarch64.rpm pgdg 4.0.1 648.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pgrouting_16-4.0.1-1PGDG.rhel9.6.aarch64.rpm
+@ el9.aarch64 16 pgrouting_16 pgrouting_16-3.8.0-1PGDG.rhel9.aarch64.rpm pgdg 3.8.0 693.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pgrouting_16-3.8.0-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 16 pgrouting_16 pgrouting_16-3.7.3-1PGDG.rhel9.aarch64.rpm pgdg 3.7.3 671.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pgrouting_16-3.7.3-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 16 pgrouting_16 pgrouting_16-3.7.1-1PGDG.rhel9.aarch64.rpm pgdg 3.7.1 698.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pgrouting_16-3.7.1-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 16 pgrouting_16 pgrouting_16-3.7.0-1PGDG.rhel9.aarch64.rpm pgdg 3.7.0 702.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pgrouting_16-3.7.0-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 16 pgrouting_16 pgrouting_16-3.6.3-1PGDG.rhel9.aarch64.rpm pgdg 3.6.3 688.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pgrouting_16-3.6.3-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 16 pgrouting_16 pgrouting_16-3.6.0-1PGDG.rhel9.aarch64.rpm pgdg 3.6.0 688.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pgrouting_16-3.6.0-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 16 pgrouting_16 pgrouting_16-3.5.0-1.rhel9.aarch64.rpm pgdg 3.5.0 688.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pgrouting_16-3.5.0-1.rhel9.aarch64.rpm
 @ el10.x86_64 16 pgrouting_16 pgrouting_16-4.0.1-3PGDG.rhel10.2.x86_64.rpm pgdg 4.0.1 727.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pgrouting_16-4.0.1-3PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 16 pgrouting_16 pgrouting_16-4.0.1-1PGDG.rhel10.1.x86_64.rpm pgdg 4.0.1 726.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pgrouting_16-4.0.1-1PGDG.rhel10.1.x86_64.rpm
+@ el10.x86_64 16 pgrouting_16 pgrouting_16-4.0.1-1PGDG.rhel10.0.x86_64.rpm pgdg 4.0.1 727.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pgrouting_16-4.0.1-1PGDG.rhel10.0.x86_64.rpm
+@ el10.x86_64 16 pgrouting_16 pgrouting_16-3.8.0-1PGDG.rhel10.x86_64.rpm pgdg 3.8.0 772.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pgrouting_16-3.8.0-1PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 16 pgrouting_16 pgrouting_16-4.0.1-3PGDG.rhel10.2.aarch64.rpm pgdg 4.0.1 672.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pgrouting_16-4.0.1-3PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 16 pgrouting_16 pgrouting_16-4.0.1-1PGDG.rhel10.1.aarch64.rpm pgdg 4.0.1 670.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pgrouting_16-4.0.1-1PGDG.rhel10.1.aarch64.rpm
+@ el10.aarch64 16 pgrouting_16 pgrouting_16-4.0.1-1PGDG.rhel10.0.aarch64.rpm pgdg 4.0.1 671.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pgrouting_16-4.0.1-1PGDG.rhel10.0.aarch64.rpm
+@ el10.aarch64 16 pgrouting_16 pgrouting_16-3.8.0-1PGDG.rhel10.aarch64.rpm pgdg 3.8.0 718.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pgrouting_16-3.8.0-1PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 16 postgresql-16-pgrouting postgresql-16-pgrouting_4.0.1-1.pgdg12+1_amd64.deb pgdg 4.0.1 813.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-16-pgrouting_4.0.1-1.pgdg12+1_amd64.deb
 @ d12.aarch64 16 postgresql-16-pgrouting postgresql-16-pgrouting_4.0.1-1.pgdg12+1_arm64.deb pgdg 4.0.1 695.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-16-pgrouting_4.0.1-1.pgdg12+1_arm64.deb
 @ d13.x86_64 16 postgresql-16-pgrouting postgresql-16-pgrouting_4.0.1-1.pgdg13+1_amd64.deb pgdg 4.0.1 902.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-16-pgrouting_4.0.1-1.pgdg13+1_amd64.deb
@@ -166,9 +224,45 @@ weight: 1510
 @ el8.aarch64 15 pgrouting_15 pgrouting_15-3.3.4-1.rhel8.aarch64.rpm pgdg 3.3.4 775.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pgrouting_15-3.3.4-1.rhel8.aarch64.rpm
 @ el8.aarch64 15 pgrouting_15 pgrouting_15-3.1.4-1.rhel8.aarch64.rpm pgdg 3.1.4 710.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pgrouting_15-3.1.4-1.rhel8.aarch64.rpm
 @ el9.x86_64 15 pgrouting_15 pgrouting_15-4.0.1-3PGDG.rhel9.8.x86_64.rpm pgdg 4.0.1 696.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pgrouting_15-4.0.1-3PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 15 pgrouting_15 pgrouting_15-4.0.1-1PGDG.rhel9.7.x86_64.rpm pgdg 4.0.1 696.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pgrouting_15-4.0.1-1PGDG.rhel9.7.x86_64.rpm
+@ el9.x86_64 15 pgrouting_15 pgrouting_15-4.0.1-1PGDG.rhel9.6.x86_64.rpm pgdg 4.0.1 697.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pgrouting_15-4.0.1-1PGDG.rhel9.6.x86_64.rpm
+@ el9.x86_64 15 pgrouting_15 pgrouting_15-3.8.0-1PGDG.rhel9.x86_64.rpm pgdg 3.8.0 741.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pgrouting_15-3.8.0-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 15 pgrouting_15 pgrouting_15-3.7.3-1PGDG.rhel9.x86_64.rpm pgdg 3.7.3 719.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pgrouting_15-3.7.3-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 15 pgrouting_15 pgrouting_15-3.7.1-1PGDG.rhel9.x86_64.rpm pgdg 3.7.1 749.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pgrouting_15-3.7.1-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 15 pgrouting_15 pgrouting_15-3.7.0-1PGDG.rhel9.x86_64.rpm pgdg 3.7.0 752.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pgrouting_15-3.7.0-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 15 pgrouting_15 pgrouting_15-3.6.3-1PGDG.rhel9.x86_64.rpm pgdg 3.6.3 738.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pgrouting_15-3.6.3-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 15 pgrouting_15 pgrouting_15-3.6.0-1PGDG.rhel9.x86_64.rpm pgdg 3.6.0 736.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pgrouting_15-3.6.0-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 15 pgrouting_15 pgrouting_15-3.5.0-1.rhel9.x86_64.rpm pgdg 3.5.0 732.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pgrouting_15-3.5.0-1.rhel9.x86_64.rpm
+@ el9.x86_64 15 pgrouting_15 pgrouting_15-3.4.2-2.rhel9.x86_64.rpm pgdg 3.4.2 733.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pgrouting_15-3.4.2-2.rhel9.x86_64.rpm
+@ el9.x86_64 15 pgrouting_15 pgrouting_15-3.4.1-1.rhel9.x86_64.rpm pgdg 3.4.1 732.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pgrouting_15-3.4.1-1.rhel9.x86_64.rpm
+@ el9.x86_64 15 pgrouting_15 pgrouting_15-3.4.0-1.rhel9.x86_64.rpm pgdg 3.4.0 729.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pgrouting_15-3.4.0-1.rhel9.x86_64.rpm
+@ el9.x86_64 15 pgrouting_15 pgrouting_15-3.3.4-1.rhel9.x86_64.rpm pgdg 3.3.4 698.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pgrouting_15-3.3.4-1.rhel9.x86_64.rpm
+@ el9.x86_64 15 pgrouting_15 pgrouting_15-3.3.3-1.rhel9.x86_64.rpm pgdg 3.3.3 698.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pgrouting_15-3.3.3-1.rhel9.x86_64.rpm
+@ el9.x86_64 15 pgrouting_15 pgrouting_15-3.2.2-1.rhel9.x86_64.rpm pgdg 3.2.2 684.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pgrouting_15-3.2.2-1.rhel9.x86_64.rpm
+@ el9.x86_64 15 pgrouting_15 pgrouting_15-3.1.4-1.rhel9.x86_64.rpm pgdg 3.1.4 654.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pgrouting_15-3.1.4-1.rhel9.x86_64.rpm
 @ el9.aarch64 15 pgrouting_15 pgrouting_15-4.0.1-3PGDG.rhel9.8.aarch64.rpm pgdg 4.0.1 648.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pgrouting_15-4.0.1-3PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 15 pgrouting_15 pgrouting_15-4.0.1-1PGDG.rhel9.7.aarch64.rpm pgdg 4.0.1 648.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pgrouting_15-4.0.1-1PGDG.rhel9.7.aarch64.rpm
+@ el9.aarch64 15 pgrouting_15 pgrouting_15-4.0.1-1PGDG.rhel9.6.aarch64.rpm pgdg 4.0.1 648.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pgrouting_15-4.0.1-1PGDG.rhel9.6.aarch64.rpm
+@ el9.aarch64 15 pgrouting_15 pgrouting_15-3.8.0-1PGDG.rhel9.aarch64.rpm pgdg 3.8.0 693.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pgrouting_15-3.8.0-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 15 pgrouting_15 pgrouting_15-3.7.3-1PGDG.rhel9.aarch64.rpm pgdg 3.7.3 671.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pgrouting_15-3.7.3-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 15 pgrouting_15 pgrouting_15-3.7.1-1PGDG.rhel9.aarch64.rpm pgdg 3.7.1 698.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pgrouting_15-3.7.1-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 15 pgrouting_15 pgrouting_15-3.7.0-1PGDG.rhel9.aarch64.rpm pgdg 3.7.0 701.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pgrouting_15-3.7.0-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 15 pgrouting_15 pgrouting_15-3.6.3-1PGDG.rhel9.aarch64.rpm pgdg 3.6.3 688.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pgrouting_15-3.6.3-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 15 pgrouting_15 pgrouting_15-3.6.0-1PGDG.rhel9.aarch64.rpm pgdg 3.6.0 689.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pgrouting_15-3.6.0-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 15 pgrouting_15 pgrouting_15-3.5.0-1.rhel9.aarch64.rpm pgdg 3.5.0 688.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pgrouting_15-3.5.0-1.rhel9.aarch64.rpm
+@ el9.aarch64 15 pgrouting_15 pgrouting_15-3.4.2-2.rhel9.aarch64.rpm pgdg 3.4.2 686.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pgrouting_15-3.4.2-2.rhel9.aarch64.rpm
+@ el9.aarch64 15 pgrouting_15 pgrouting_15-3.4.1-1.rhel9.aarch64.rpm pgdg 3.4.1 688.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pgrouting_15-3.4.1-1.rhel9.aarch64.rpm
+@ el9.aarch64 15 pgrouting_15 pgrouting_15-3.4.0-1.rhel9.aarch64.rpm pgdg 3.4.0 683.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pgrouting_15-3.4.0-1.rhel9.aarch64.rpm
+@ el9.aarch64 15 pgrouting_15 pgrouting_15-3.3.4-1.rhel9.aarch64.rpm pgdg 3.3.4 654.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pgrouting_15-3.3.4-1.rhel9.aarch64.rpm
+@ el9.aarch64 15 pgrouting_15 pgrouting_15-3.1.4-1.rhel9.aarch64.rpm pgdg 3.1.4 613.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pgrouting_15-3.1.4-1.rhel9.aarch64.rpm
 @ el10.x86_64 15 pgrouting_15 pgrouting_15-4.0.1-3PGDG.rhel10.2.x86_64.rpm pgdg 4.0.1 728.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pgrouting_15-4.0.1-3PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 15 pgrouting_15 pgrouting_15-4.0.1-1PGDG.rhel10.1.x86_64.rpm pgdg 4.0.1 726.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pgrouting_15-4.0.1-1PGDG.rhel10.1.x86_64.rpm
+@ el10.x86_64 15 pgrouting_15 pgrouting_15-4.0.1-1PGDG.rhel10.0.x86_64.rpm pgdg 4.0.1 727.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pgrouting_15-4.0.1-1PGDG.rhel10.0.x86_64.rpm
+@ el10.x86_64 15 pgrouting_15 pgrouting_15-3.8.0-1PGDG.rhel10.x86_64.rpm pgdg 3.8.0 772.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pgrouting_15-3.8.0-1PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 15 pgrouting_15 pgrouting_15-4.0.1-3PGDG.rhel10.2.aarch64.rpm pgdg 4.0.1 671.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pgrouting_15-4.0.1-3PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 15 pgrouting_15 pgrouting_15-4.0.1-1PGDG.rhel10.1.aarch64.rpm pgdg 4.0.1 670.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pgrouting_15-4.0.1-1PGDG.rhel10.1.aarch64.rpm
+@ el10.aarch64 15 pgrouting_15 pgrouting_15-4.0.1-1PGDG.rhel10.0.aarch64.rpm pgdg 4.0.1 671.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pgrouting_15-4.0.1-1PGDG.rhel10.0.aarch64.rpm
+@ el10.aarch64 15 pgrouting_15 pgrouting_15-3.8.0-1PGDG.rhel10.aarch64.rpm pgdg 3.8.0 718.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pgrouting_15-3.8.0-1PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 15 postgresql-15-pgrouting postgresql-15-pgrouting_4.0.1-1.pgdg12+1_amd64.deb pgdg 4.0.1 813.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-15-pgrouting_4.0.1-1.pgdg12+1_amd64.deb
 @ d12.aarch64 15 postgresql-15-pgrouting postgresql-15-pgrouting_4.0.1-1.pgdg12+1_arm64.deb pgdg 4.0.1 695.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-15-pgrouting_4.0.1-1.pgdg12+1_arm64.deb
 @ d13.x86_64 15 postgresql-15-pgrouting postgresql-15-pgrouting_4.0.1-1.pgdg13+1_amd64.deb pgdg 4.0.1 902.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-15-pgrouting_4.0.1-1.pgdg13+1_amd64.deb
@@ -214,9 +308,47 @@ weight: 1510
 @ el8.aarch64 14 pgrouting_14 pgrouting_14-3.1.4-1.rhel8.aarch64.rpm pgdg 3.1.4 710.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pgrouting_14-3.1.4-1.rhel8.aarch64.rpm
 @ el8.aarch64 14 pgrouting_14 pgrouting_14-3.0.6-1.rhel8.aarch64.rpm pgdg 3.0.6 702.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pgrouting_14-3.0.6-1.rhel8.aarch64.rpm
 @ el9.x86_64 14 pgrouting_14 pgrouting_14-4.0.1-3PGDG.rhel9.8.x86_64.rpm pgdg 4.0.1 696.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pgrouting_14-4.0.1-3PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 14 pgrouting_14 pgrouting_14-4.0.1-1PGDG.rhel9.7.x86_64.rpm pgdg 4.0.1 696.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pgrouting_14-4.0.1-1PGDG.rhel9.7.x86_64.rpm
+@ el9.x86_64 14 pgrouting_14 pgrouting_14-4.0.1-1PGDG.rhel9.6.x86_64.rpm pgdg 4.0.1 696.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pgrouting_14-4.0.1-1PGDG.rhel9.6.x86_64.rpm
+@ el9.x86_64 14 pgrouting_14 pgrouting_14-3.8.0-1PGDG.rhel9.x86_64.rpm pgdg 3.8.0 741.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pgrouting_14-3.8.0-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 14 pgrouting_14 pgrouting_14-3.7.3-1PGDG.rhel9.x86_64.rpm pgdg 3.7.3 719.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pgrouting_14-3.7.3-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 14 pgrouting_14 pgrouting_14-3.7.1-1PGDG.rhel9.x86_64.rpm pgdg 3.7.1 748.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pgrouting_14-3.7.1-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 14 pgrouting_14 pgrouting_14-3.7.0-1PGDG.rhel9.x86_64.rpm pgdg 3.7.0 752.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pgrouting_14-3.7.0-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 14 pgrouting_14 pgrouting_14-3.6.3-1PGDG.rhel9.x86_64.rpm pgdg 3.6.3 738.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pgrouting_14-3.6.3-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 14 pgrouting_14 pgrouting_14-3.6.0-1PGDG.rhel9.x86_64.rpm pgdg 3.6.0 736.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pgrouting_14-3.6.0-1PGDG.rhel9.x86_64.rpm
+@ el9.x86_64 14 pgrouting_14 pgrouting_14-3.5.0-1.rhel9.x86_64.rpm pgdg 3.5.0 732.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pgrouting_14-3.5.0-1.rhel9.x86_64.rpm
+@ el9.x86_64 14 pgrouting_14 pgrouting_14-3.4.2-2.rhel9.x86_64.rpm pgdg 3.4.2 733.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pgrouting_14-3.4.2-2.rhel9.x86_64.rpm
+@ el9.x86_64 14 pgrouting_14 pgrouting_14-3.4.1-1.rhel9.x86_64.rpm pgdg 3.4.1 732.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pgrouting_14-3.4.1-1.rhel9.x86_64.rpm
+@ el9.x86_64 14 pgrouting_14 pgrouting_14-3.4.0-1.rhel9.x86_64.rpm pgdg 3.4.0 729.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pgrouting_14-3.4.0-1.rhel9.x86_64.rpm
+@ el9.x86_64 14 pgrouting_14 pgrouting_14-3.3.4-1.rhel9.x86_64.rpm pgdg 3.3.4 697.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pgrouting_14-3.3.4-1.rhel9.x86_64.rpm
+@ el9.x86_64 14 pgrouting_14 pgrouting_14-3.3.3-1.rhel9.x86_64.rpm pgdg 3.3.3 697.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pgrouting_14-3.3.3-1.rhel9.x86_64.rpm
+@ el9.x86_64 14 pgrouting_14 pgrouting_14-3.3.2-1.rhel9.x86_64.rpm pgdg 3.3.2 697.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pgrouting_14-3.3.2-1.rhel9.x86_64.rpm
+@ el9.x86_64 14 pgrouting_14 pgrouting_14-3.3.1-1.rhel9.x86_64.rpm pgdg 3.3.1 699.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pgrouting_14-3.3.1-1.rhel9.x86_64.rpm
 @ el9.aarch64 14 pgrouting_14 pgrouting_14-4.0.1-3PGDG.rhel9.8.aarch64.rpm pgdg 4.0.1 648.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pgrouting_14-4.0.1-3PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 14 pgrouting_14 pgrouting_14-4.0.1-1PGDG.rhel9.7.aarch64.rpm pgdg 4.0.1 648.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pgrouting_14-4.0.1-1PGDG.rhel9.7.aarch64.rpm
+@ el9.aarch64 14 pgrouting_14 pgrouting_14-4.0.1-1PGDG.rhel9.6.aarch64.rpm pgdg 4.0.1 648.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pgrouting_14-4.0.1-1PGDG.rhel9.6.aarch64.rpm
+@ el9.aarch64 14 pgrouting_14 pgrouting_14-3.8.0-1PGDG.rhel9.aarch64.rpm pgdg 3.8.0 693.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pgrouting_14-3.8.0-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 14 pgrouting_14 pgrouting_14-3.7.3-1PGDG.rhel9.aarch64.rpm pgdg 3.7.3 671.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pgrouting_14-3.7.3-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 14 pgrouting_14 pgrouting_14-3.7.1-1PGDG.rhel9.aarch64.rpm pgdg 3.7.1 699.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pgrouting_14-3.7.1-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 14 pgrouting_14 pgrouting_14-3.7.0-1PGDG.rhel9.aarch64.rpm pgdg 3.7.0 701.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pgrouting_14-3.7.0-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 14 pgrouting_14 pgrouting_14-3.6.3-1PGDG.rhel9.aarch64.rpm pgdg 3.6.3 688.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pgrouting_14-3.6.3-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 14 pgrouting_14 pgrouting_14-3.6.0-1PGDG.rhel9.aarch64.rpm pgdg 3.6.0 689.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pgrouting_14-3.6.0-1PGDG.rhel9.aarch64.rpm
+@ el9.aarch64 14 pgrouting_14 pgrouting_14-3.5.0-1.rhel9.aarch64.rpm pgdg 3.5.0 688.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pgrouting_14-3.5.0-1.rhel9.aarch64.rpm
+@ el9.aarch64 14 pgrouting_14 pgrouting_14-3.4.2-2.rhel9.aarch64.rpm pgdg 3.4.2 687.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pgrouting_14-3.4.2-2.rhel9.aarch64.rpm
+@ el9.aarch64 14 pgrouting_14 pgrouting_14-3.4.1-1.rhel9.aarch64.rpm pgdg 3.4.1 688.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pgrouting_14-3.4.1-1.rhel9.aarch64.rpm
+@ el9.aarch64 14 pgrouting_14 pgrouting_14-3.4.0-1.rhel9.aarch64.rpm pgdg 3.4.0 684.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pgrouting_14-3.4.0-1.rhel9.aarch64.rpm
+@ el9.aarch64 14 pgrouting_14 pgrouting_14-3.3.4-1.rhel9.aarch64.rpm pgdg 3.3.4 654.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pgrouting_14-3.3.4-1.rhel9.aarch64.rpm
+@ el9.aarch64 14 pgrouting_14 pgrouting_14-3.2.2-1.rhel9.aarch64.rpm pgdg 3.2.2 642.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pgrouting_14-3.2.2-1.rhel9.aarch64.rpm
+@ el9.aarch64 14 pgrouting_14 pgrouting_14-3.1.4-1.rhel9.aarch64.rpm pgdg 3.1.4 613.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pgrouting_14-3.1.4-1.rhel9.aarch64.rpm
+@ el9.aarch64 14 pgrouting_14 pgrouting_14-3.0.6-1.rhel9.aarch64.rpm pgdg 3.0.6 607.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pgrouting_14-3.0.6-1.rhel9.aarch64.rpm
 @ el10.x86_64 14 pgrouting_14 pgrouting_14-4.0.1-3PGDG.rhel10.2.x86_64.rpm pgdg 4.0.1 727.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pgrouting_14-4.0.1-3PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 14 pgrouting_14 pgrouting_14-4.0.1-1PGDG.rhel10.1.x86_64.rpm pgdg 4.0.1 726.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pgrouting_14-4.0.1-1PGDG.rhel10.1.x86_64.rpm
+@ el10.x86_64 14 pgrouting_14 pgrouting_14-4.0.1-1PGDG.rhel10.0.x86_64.rpm pgdg 4.0.1 727.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pgrouting_14-4.0.1-1PGDG.rhel10.0.x86_64.rpm
+@ el10.x86_64 14 pgrouting_14 pgrouting_14-3.8.0-1PGDG.rhel10.x86_64.rpm pgdg 3.8.0 773.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pgrouting_14-3.8.0-1PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 14 pgrouting_14 pgrouting_14-4.0.1-3PGDG.rhel10.2.aarch64.rpm pgdg 4.0.1 672.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgrouting_14-4.0.1-3PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 14 pgrouting_14 pgrouting_14-4.0.1-1PGDG.rhel10.1.aarch64.rpm pgdg 4.0.1 670.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgrouting_14-4.0.1-1PGDG.rhel10.1.aarch64.rpm
+@ el10.aarch64 14 pgrouting_14 pgrouting_14-4.0.1-1PGDG.rhel10.0.aarch64.rpm pgdg 4.0.1 671.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgrouting_14-4.0.1-1PGDG.rhel10.0.aarch64.rpm
+@ el10.aarch64 14 pgrouting_14 pgrouting_14-3.8.0-1PGDG.rhel10.aarch64.rpm pgdg 3.8.0 718.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgrouting_14-3.8.0-1PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 14 postgresql-14-pgrouting postgresql-14-pgrouting_4.0.1-1.pgdg12+1_amd64.deb pgdg 4.0.1 813.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-14-pgrouting_4.0.1-1.pgdg12+1_amd64.deb
 @ d12.aarch64 14 postgresql-14-pgrouting postgresql-14-pgrouting_4.0.1-1.pgdg12+1_arm64.deb pgdg 4.0.1 695.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-14-pgrouting_4.0.1-1.pgdg12+1_arm64.deb
 @ d13.x86_64 14 postgresql-14-pgrouting postgresql-14-pgrouting_4.0.1-1.pgdg13+1_amd64.deb pgdg 4.0.1 902.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgrouting/postgresql-14-pgrouting_4.0.1-1.pgdg13+1_amd64.deb

@@ -52,10 +52,10 @@ weight: 4230
 |:--:|:--:|:--:|:--:|:--:|:--:|
 | el8.x86_64 | AVAIL PGDG 0.20190509 2 | AVAIL PIGSTY 0.20190509 2 | AVAIL PIGSTY 0.20190509 2 | AVAIL PIGSTY 0.20190509 2 | AVAIL PIGSTY 0.20190509 2 |
 | el8.aarch64 | AVAIL PGDG 0.20190509 2 | AVAIL PIGSTY 0.20190509 2 | AVAIL PIGSTY 0.20190509 2 | AVAIL PIGSTY 0.20190509 2 | AVAIL PIGSTY 0.20190509 2 |
-| el9.x86_64 | AVAIL PGDG 0.20190509 2 | AVAIL PGDG 0.20190509 2 | AVAIL PGDG 0.20190509 2 | AVAIL PGDG 0.20190509 2 | AVAIL PGDG 0.20190509 2 |
-| el9.aarch64 | AVAIL PGDG 0.20190509 2 | AVAIL PGDG 0.20190509 2 | AVAIL PGDG 0.20190509 2 | AVAIL PGDG 0.20190509 2 | AVAIL PGDG 0.20190509 2 |
-| el10.x86_64 | AVAIL PGDG 0.20190509 1 | AVAIL PGDG 0.20190509 1 | AVAIL PGDG 0.20190509 1 | AVAIL PGDG 0.20190509 1 | AVAIL PGDG 0.20190509 1 |
-| el10.aarch64 | AVAIL PGDG 0.20190509 1 | AVAIL PGDG 0.20190509 1 | AVAIL PGDG 0.20190509 1 | AVAIL PGDG 0.20190509 1 | AVAIL PGDG 0.20190509 1 |
+| el9.x86_64 | AVAIL PGDG 0.20190509 3 | AVAIL PGDG 0.20190509 3 | AVAIL PGDG 0.20190509 3 | AVAIL PGDG 0.20190509 3 | AVAIL PGDG 0.20190509 3 |
+| el9.aarch64 | AVAIL PGDG 0.20190509 3 | AVAIL PGDG 0.20190509 3 | AVAIL PGDG 0.20190509 3 | AVAIL PGDG 0.20190509 3 | AVAIL PGDG 0.20190509 3 |
+| el10.x86_64 | AVAIL PGDG 0.20190509 3 | AVAIL PGDG 0.20190509 4 | AVAIL PGDG 0.20190509 4 | AVAIL PGDG 0.20190509 4 | AVAIL PGDG 0.20190509 4 |
+| el10.aarch64 | AVAIL PGDG 0.20190509 3 | AVAIL PGDG 0.20190509 4 | AVAIL PGDG 0.20190509 4 | AVAIL PGDG 0.20190509 4 | AVAIL PGDG 0.20190509 4 |
 | d12.x86_64 | AVAIL PGDG 0.20190509 1 | AVAIL PGDG 0.20190509 1 | AVAIL PGDG 0.20190509 1 | AVAIL PGDG 0.20190509 1 | AVAIL PGDG 0.20190509 1 |
 | d12.aarch64 | AVAIL PGDG 0.20190509 1 | AVAIL PGDG 0.20190509 1 | AVAIL PGDG 0.20190509 1 | AVAIL PGDG 0.20190509 1 | AVAIL PGDG 0.20190509 1 |
 | d13.x86_64 | AVAIL PGDG 0.20190509 1 | AVAIL PGDG 0.20190509 1 | AVAIL PGDG 0.20190509 1 | AVAIL PGDG 0.20190509 1 | AVAIL PGDG 0.20190509 1 |
@@ -71,11 +71,17 @@ weight: 4230
 @ el8.aarch64 18 pgpcre_18 pgpcre_18-0.20190509-3PGDG.rhel8.aarch64.rpm pgdg 0.20190509 17.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pgpcre_18-0.20190509-3PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 18 pgpcre_18 pgpcre_18-0.20190509-1PIGSTY.el8.aarch64.rpm pigsty 0.20190509 16.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgpcre_18-0.20190509-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 18 pgpcre_18 pgpcre_18-0.20190509-6PGDG.rhel9.8.x86_64.rpm pgdg 0.20190509 17.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pgpcre_18-0.20190509-6PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 18 pgpcre_18 pgpcre_18-0.20190509-3PGDG.rhel9.x86_64.rpm pgdg 0.20190509 17.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pgpcre_18-0.20190509-3PGDG.rhel9.x86_64.rpm
 @ el9.x86_64 18 pgpcre_18 pgpcre_18-0.20190509-1PIGSTY.el9.x86_64.rpm pigsty 0.20190509 16.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgpcre_18-0.20190509-1PIGSTY.el9.x86_64.rpm
 @ el9.aarch64 18 pgpcre_18 pgpcre_18-0.20190509-6PGDG.rhel9.8.aarch64.rpm pgdg 0.20190509 17.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pgpcre_18-0.20190509-6PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 18 pgpcre_18 pgpcre_18-0.20190509-3PGDG.rhel9.aarch64.rpm pgdg 0.20190509 17.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pgpcre_18-0.20190509-3PGDG.rhel9.aarch64.rpm
 @ el9.aarch64 18 pgpcre_18 pgpcre_18-0.20190509-1PIGSTY.el9.aarch64.rpm pigsty 0.20190509 16.2KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgpcre_18-0.20190509-1PIGSTY.el9.aarch64.rpm
 @ el10.x86_64 18 pgpcre_18 pgpcre_18-0.20190509-6PGDG.rhel10.2.x86_64.rpm pgdg 0.20190509 18.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pgpcre_18-0.20190509-6PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 18 pgpcre_18 pgpcre_18-0.20190509-4PGDG.rhel10.x86_64.rpm pgdg 0.20190509 18.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pgpcre_18-0.20190509-4PGDG.rhel10.x86_64.rpm
+@ el10.x86_64 18 pgpcre_18 pgpcre_18-0.20190509-3PGDG.rhel10.x86_64.rpm pgdg 0.20190509 18.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pgpcre_18-0.20190509-3PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 18 pgpcre_18 pgpcre_18-0.20190509-6PGDG.rhel10.2.aarch64.rpm pgdg 0.20190509 18.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pgpcre_18-0.20190509-6PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 18 pgpcre_18 pgpcre_18-0.20190509-4PGDG.rhel10.aarch64.rpm pgdg 0.20190509 18.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pgpcre_18-0.20190509-4PGDG.rhel10.aarch64.rpm
+@ el10.aarch64 18 pgpcre_18 pgpcre_18-0.20190509-3PGDG.rhel10.aarch64.rpm pgdg 0.20190509 17.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pgpcre_18-0.20190509-3PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 18 postgresql-18-pgpcre postgresql-18-pgpcre_0.20190509-9.pgdg12+1_amd64.deb pgdg 0.20190509 18.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgpcre/postgresql-18-pgpcre_0.20190509-9.pgdg12+1_amd64.deb
 @ d12.aarch64 18 postgresql-18-pgpcre postgresql-18-pgpcre_0.20190509-9.pgdg12+1_arm64.deb pgdg 0.20190509 18.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgpcre/postgresql-18-pgpcre_0.20190509-9.pgdg12+1_arm64.deb
 @ d13.x86_64 18 postgresql-18-pgpcre postgresql-18-pgpcre_0.20190509-9.pgdg13+1_amd64.deb pgdg 0.20190509 18.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgpcre/postgresql-18-pgpcre_0.20190509-9.pgdg13+1_amd64.deb
@@ -92,10 +98,18 @@ weight: 4230
 @ el8.aarch64 17 pgpcre_17 pgpcre_17-0.20190509-1PGDG.rhel8.aarch64.rpm pgdg 0.20190509 17.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pgpcre_17-0.20190509-1PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 17 pgpcre_17 pgpcre_17-0.20190509-6PGDG.rhel9.8.x86_64.rpm pgdg 0.20190509 17.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pgpcre_17-0.20190509-6PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 17 pgpcre_17 pgpcre_17-0.20190509-1PIGSTY.el9.x86_64.rpm pigsty 0.20190509 16.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgpcre_17-0.20190509-1PIGSTY.el9.x86_64.rpm
+@ el9.x86_64 17 pgpcre_17 pgpcre_17-0.20190509-1PGDG.rhel9.x86_64.rpm pgdg 0.20190509 17.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pgpcre_17-0.20190509-1PGDG.rhel9.x86_64.rpm
 @ el9.aarch64 17 pgpcre_17 pgpcre_17-0.20190509-6PGDG.rhel9.8.aarch64.rpm pgdg 0.20190509 17.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pgpcre_17-0.20190509-6PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 17 pgpcre_17 pgpcre_17-0.20190509-1PIGSTY.el9.aarch64.rpm pigsty 0.20190509 16.2KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgpcre_17-0.20190509-1PIGSTY.el9.aarch64.rpm
+@ el9.aarch64 17 pgpcre_17 pgpcre_17-0.20190509-1PGDG.rhel9.aarch64.rpm pgdg 0.20190509 17.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pgpcre_17-0.20190509-1PGDG.rhel9.aarch64.rpm
 @ el10.x86_64 17 pgpcre_17 pgpcre_17-0.20190509-6PGDG.rhel10.2.x86_64.rpm pgdg 0.20190509 18.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pgpcre_17-0.20190509-6PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 17 pgpcre_17 pgpcre_17-0.20190509-4PGDG.rhel10.x86_64.rpm pgdg 0.20190509 18.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pgpcre_17-0.20190509-4PGDG.rhel10.x86_64.rpm
+@ el10.x86_64 17 pgpcre_17 pgpcre_17-0.20190509-3PGDG.rhel10.x86_64.rpm pgdg 0.20190509 18.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pgpcre_17-0.20190509-3PGDG.rhel10.x86_64.rpm
+@ el10.x86_64 17 pgpcre_17 pgpcre_17-0.20190509-2PGDG.rhel10.x86_64.rpm pgdg 0.20190509 18.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pgpcre_17-0.20190509-2PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 17 pgpcre_17 pgpcre_17-0.20190509-6PGDG.rhel10.2.aarch64.rpm pgdg 0.20190509 18.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pgpcre_17-0.20190509-6PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 17 pgpcre_17 pgpcre_17-0.20190509-4PGDG.rhel10.aarch64.rpm pgdg 0.20190509 18.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pgpcre_17-0.20190509-4PGDG.rhel10.aarch64.rpm
+@ el10.aarch64 17 pgpcre_17 pgpcre_17-0.20190509-3PGDG.rhel10.aarch64.rpm pgdg 0.20190509 17.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pgpcre_17-0.20190509-3PGDG.rhel10.aarch64.rpm
+@ el10.aarch64 17 pgpcre_17 pgpcre_17-0.20190509-2PGDG.rhel10.aarch64.rpm pgdg 0.20190509 17.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pgpcre_17-0.20190509-2PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 17 postgresql-17-pgpcre postgresql-17-pgpcre_0.20190509-9.pgdg12+1_amd64.deb pgdg 0.20190509 18.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgpcre/postgresql-17-pgpcre_0.20190509-9.pgdg12+1_amd64.deb
 @ d12.aarch64 17 postgresql-17-pgpcre postgresql-17-pgpcre_0.20190509-9.pgdg12+1_arm64.deb pgdg 0.20190509 18.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgpcre/postgresql-17-pgpcre_0.20190509-9.pgdg12+1_arm64.deb
 @ d13.x86_64 17 postgresql-17-pgpcre postgresql-17-pgpcre_0.20190509-9.pgdg13+1_amd64.deb pgdg 0.20190509 18.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgpcre/postgresql-17-pgpcre_0.20190509-9.pgdg13+1_amd64.deb
@@ -112,10 +126,18 @@ weight: 4230
 @ el8.aarch64 16 pgpcre_16 pgpcre_16-0.20190509-1PGDG.rhel8.aarch64.rpm pgdg 0.20190509 17.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pgpcre_16-0.20190509-1PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 16 pgpcre_16 pgpcre_16-0.20190509-6PGDG.rhel9.8.x86_64.rpm pgdg 0.20190509 17.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pgpcre_16-0.20190509-6PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 16 pgpcre_16 pgpcre_16-0.20190509-1PIGSTY.el9.x86_64.rpm pigsty 0.20190509 16.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgpcre_16-0.20190509-1PIGSTY.el9.x86_64.rpm
+@ el9.x86_64 16 pgpcre_16 pgpcre_16-0.20190509-1PGDG.rhel9.x86_64.rpm pgdg 0.20190509 17.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pgpcre_16-0.20190509-1PGDG.rhel9.x86_64.rpm
 @ el9.aarch64 16 pgpcre_16 pgpcre_16-0.20190509-6PGDG.rhel9.8.aarch64.rpm pgdg 0.20190509 17.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pgpcre_16-0.20190509-6PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 16 pgpcre_16 pgpcre_16-0.20190509-1PIGSTY.el9.aarch64.rpm pigsty 0.20190509 16.2KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgpcre_16-0.20190509-1PIGSTY.el9.aarch64.rpm
+@ el9.aarch64 16 pgpcre_16 pgpcre_16-0.20190509-1PGDG.rhel9.aarch64.rpm pgdg 0.20190509 17.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pgpcre_16-0.20190509-1PGDG.rhel9.aarch64.rpm
 @ el10.x86_64 16 pgpcre_16 pgpcre_16-0.20190509-6PGDG.rhel10.2.x86_64.rpm pgdg 0.20190509 18.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pgpcre_16-0.20190509-6PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 16 pgpcre_16 pgpcre_16-0.20190509-4PGDG.rhel10.x86_64.rpm pgdg 0.20190509 18.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pgpcre_16-0.20190509-4PGDG.rhel10.x86_64.rpm
+@ el10.x86_64 16 pgpcre_16 pgpcre_16-0.20190509-3PGDG.rhel10.x86_64.rpm pgdg 0.20190509 17.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pgpcre_16-0.20190509-3PGDG.rhel10.x86_64.rpm
+@ el10.x86_64 16 pgpcre_16 pgpcre_16-0.20190509-2PGDG.rhel10.x86_64.rpm pgdg 0.20190509 17.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pgpcre_16-0.20190509-2PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 16 pgpcre_16 pgpcre_16-0.20190509-6PGDG.rhel10.2.aarch64.rpm pgdg 0.20190509 18.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pgpcre_16-0.20190509-6PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 16 pgpcre_16 pgpcre_16-0.20190509-4PGDG.rhel10.aarch64.rpm pgdg 0.20190509 18.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pgpcre_16-0.20190509-4PGDG.rhel10.aarch64.rpm
+@ el10.aarch64 16 pgpcre_16 pgpcre_16-0.20190509-3PGDG.rhel10.aarch64.rpm pgdg 0.20190509 17.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pgpcre_16-0.20190509-3PGDG.rhel10.aarch64.rpm
+@ el10.aarch64 16 pgpcre_16 pgpcre_16-0.20190509-2PGDG.rhel10.aarch64.rpm pgdg 0.20190509 17.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pgpcre_16-0.20190509-2PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 16 postgresql-16-pgpcre postgresql-16-pgpcre_0.20190509-9.pgdg12+1_amd64.deb pgdg 0.20190509 18.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgpcre/postgresql-16-pgpcre_0.20190509-9.pgdg12+1_amd64.deb
 @ d12.aarch64 16 postgresql-16-pgpcre postgresql-16-pgpcre_0.20190509-9.pgdg12+1_arm64.deb pgdg 0.20190509 18.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgpcre/postgresql-16-pgpcre_0.20190509-9.pgdg12+1_arm64.deb
 @ d13.x86_64 16 postgresql-16-pgpcre postgresql-16-pgpcre_0.20190509-9.pgdg13+1_amd64.deb pgdg 0.20190509 18.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgpcre/postgresql-16-pgpcre_0.20190509-9.pgdg13+1_amd64.deb
@@ -132,10 +154,18 @@ weight: 4230
 @ el8.aarch64 15 pgpcre_15 pgpcre_15-0.20190509-1PGDG.rhel8.aarch64.rpm pgdg 0.20190509 17.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pgpcre_15-0.20190509-1PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 15 pgpcre_15 pgpcre_15-0.20190509-6PGDG.rhel9.8.x86_64.rpm pgdg 0.20190509 17.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pgpcre_15-0.20190509-6PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 15 pgpcre_15 pgpcre_15-0.20190509-1PIGSTY.el9.x86_64.rpm pigsty 0.20190509 16.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgpcre_15-0.20190509-1PIGSTY.el9.x86_64.rpm
+@ el9.x86_64 15 pgpcre_15 pgpcre_15-0.20190509-1PGDG.rhel9.x86_64.rpm pgdg 0.20190509 17.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pgpcre_15-0.20190509-1PGDG.rhel9.x86_64.rpm
 @ el9.aarch64 15 pgpcre_15 pgpcre_15-0.20190509-6PGDG.rhel9.8.aarch64.rpm pgdg 0.20190509 17.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pgpcre_15-0.20190509-6PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 15 pgpcre_15 pgpcre_15-0.20190509-1PIGSTY.el9.aarch64.rpm pigsty 0.20190509 16.3KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgpcre_15-0.20190509-1PIGSTY.el9.aarch64.rpm
+@ el9.aarch64 15 pgpcre_15 pgpcre_15-0.20190509-1PGDG.rhel9.aarch64.rpm pgdg 0.20190509 17.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pgpcre_15-0.20190509-1PGDG.rhel9.aarch64.rpm
 @ el10.x86_64 15 pgpcre_15 pgpcre_15-0.20190509-6PGDG.rhel10.2.x86_64.rpm pgdg 0.20190509 18.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pgpcre_15-0.20190509-6PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 15 pgpcre_15 pgpcre_15-0.20190509-4PGDG.rhel10.x86_64.rpm pgdg 0.20190509 18.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pgpcre_15-0.20190509-4PGDG.rhel10.x86_64.rpm
+@ el10.x86_64 15 pgpcre_15 pgpcre_15-0.20190509-3PGDG.rhel10.x86_64.rpm pgdg 0.20190509 18.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pgpcre_15-0.20190509-3PGDG.rhel10.x86_64.rpm
+@ el10.x86_64 15 pgpcre_15 pgpcre_15-0.20190509-2PGDG.rhel10.x86_64.rpm pgdg 0.20190509 18.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pgpcre_15-0.20190509-2PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 15 pgpcre_15 pgpcre_15-0.20190509-6PGDG.rhel10.2.aarch64.rpm pgdg 0.20190509 18.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pgpcre_15-0.20190509-6PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 15 pgpcre_15 pgpcre_15-0.20190509-4PGDG.rhel10.aarch64.rpm pgdg 0.20190509 18.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pgpcre_15-0.20190509-4PGDG.rhel10.aarch64.rpm
+@ el10.aarch64 15 pgpcre_15 pgpcre_15-0.20190509-3PGDG.rhel10.aarch64.rpm pgdg 0.20190509 17.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pgpcre_15-0.20190509-3PGDG.rhel10.aarch64.rpm
+@ el10.aarch64 15 pgpcre_15 pgpcre_15-0.20190509-2PGDG.rhel10.aarch64.rpm pgdg 0.20190509 17.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pgpcre_15-0.20190509-2PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 15 postgresql-15-pgpcre postgresql-15-pgpcre_0.20190509-9.pgdg12+1_amd64.deb pgdg 0.20190509 18.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgpcre/postgresql-15-pgpcre_0.20190509-9.pgdg12+1_amd64.deb
 @ d12.aarch64 15 postgresql-15-pgpcre postgresql-15-pgpcre_0.20190509-9.pgdg12+1_arm64.deb pgdg 0.20190509 18.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgpcre/postgresql-15-pgpcre_0.20190509-9.pgdg12+1_arm64.deb
 @ d13.x86_64 15 postgresql-15-pgpcre postgresql-15-pgpcre_0.20190509-9.pgdg13+1_amd64.deb pgdg 0.20190509 18.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgpcre/postgresql-15-pgpcre_0.20190509-9.pgdg13+1_amd64.deb
@@ -152,10 +182,18 @@ weight: 4230
 @ el8.aarch64 14 pgpcre_14 pgpcre_14-0.20190509-1PGDG.rhel8.aarch64.rpm pgdg 0.20190509 17.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pgpcre_14-0.20190509-1PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 14 pgpcre_14 pgpcre_14-0.20190509-6PGDG.rhel9.8.x86_64.rpm pgdg 0.20190509 17.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pgpcre_14-0.20190509-6PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 14 pgpcre_14 pgpcre_14-0.20190509-1PIGSTY.el9.x86_64.rpm pigsty 0.20190509 16.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgpcre_14-0.20190509-1PIGSTY.el9.x86_64.rpm
+@ el9.x86_64 14 pgpcre_14 pgpcre_14-0.20190509-1PGDG.rhel9.x86_64.rpm pgdg 0.20190509 17.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pgpcre_14-0.20190509-1PGDG.rhel9.x86_64.rpm
 @ el9.aarch64 14 pgpcre_14 pgpcre_14-0.20190509-6PGDG.rhel9.8.aarch64.rpm pgdg 0.20190509 17.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pgpcre_14-0.20190509-6PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 14 pgpcre_14 pgpcre_14-0.20190509-1PIGSTY.el9.aarch64.rpm pigsty 0.20190509 16.2KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgpcre_14-0.20190509-1PIGSTY.el9.aarch64.rpm
+@ el9.aarch64 14 pgpcre_14 pgpcre_14-0.20190509-1PGDG.rhel9.aarch64.rpm pgdg 0.20190509 17.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pgpcre_14-0.20190509-1PGDG.rhel9.aarch64.rpm
 @ el10.x86_64 14 pgpcre_14 pgpcre_14-0.20190509-6PGDG.rhel10.2.x86_64.rpm pgdg 0.20190509 18.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pgpcre_14-0.20190509-6PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 14 pgpcre_14 pgpcre_14-0.20190509-4PGDG.rhel10.x86_64.rpm pgdg 0.20190509 18.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pgpcre_14-0.20190509-4PGDG.rhel10.x86_64.rpm
+@ el10.x86_64 14 pgpcre_14 pgpcre_14-0.20190509-3PGDG.rhel10.x86_64.rpm pgdg 0.20190509 17.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pgpcre_14-0.20190509-3PGDG.rhel10.x86_64.rpm
+@ el10.x86_64 14 pgpcre_14 pgpcre_14-0.20190509-2PGDG.rhel10.x86_64.rpm pgdg 0.20190509 17.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pgpcre_14-0.20190509-2PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 14 pgpcre_14 pgpcre_14-0.20190509-6PGDG.rhel10.2.aarch64.rpm pgdg 0.20190509 18.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgpcre_14-0.20190509-6PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 14 pgpcre_14 pgpcre_14-0.20190509-4PGDG.rhel10.aarch64.rpm pgdg 0.20190509 18.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgpcre_14-0.20190509-4PGDG.rhel10.aarch64.rpm
+@ el10.aarch64 14 pgpcre_14 pgpcre_14-0.20190509-3PGDG.rhel10.aarch64.rpm pgdg 0.20190509 17.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgpcre_14-0.20190509-3PGDG.rhel10.aarch64.rpm
+@ el10.aarch64 14 pgpcre_14 pgpcre_14-0.20190509-2PGDG.rhel10.aarch64.rpm pgdg 0.20190509 17.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgpcre_14-0.20190509-2PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 14 postgresql-14-pgpcre postgresql-14-pgpcre_0.20190509-9.pgdg12+1_amd64.deb pgdg 0.20190509 18.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgpcre/postgresql-14-pgpcre_0.20190509-9.pgdg12+1_amd64.deb
 @ d12.aarch64 14 postgresql-14-pgpcre postgresql-14-pgpcre_0.20190509-9.pgdg12+1_arm64.deb pgdg 0.20190509 18.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgpcre/postgresql-14-pgpcre_0.20190509-9.pgdg12+1_arm64.deb
 @ d13.x86_64 14 postgresql-14-pgpcre postgresql-14-pgpcre_0.20190509-9.pgdg13+1_amd64.deb pgdg 0.20190509 18.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgpcre/postgresql-14-pgpcre_0.20190509-9.pgdg13+1_amd64.deb

@@ -52,10 +52,10 @@ weight: 7150
 |:--:|:--:|:--:|:--:|:--:|:--:|
 | el8.x86_64 | AVAIL PGDG 3.0 1 | AVAIL PGDG 3.0 1 | AVAIL PGDG 2.0 1 | AVAIL PGDG 2.0 2 | AVAIL PGDG 2.0 2 |
 | el8.aarch64 | AVAIL PGDG 3.0 1 | AVAIL PGDG 3.0 1 | AVAIL PGDG 2.0 1 | AVAIL PGDG 2.0 2 | AVAIL PGDG 2.0 2 |
-| el9.x86_64 | AVAIL PGDG 3.0 1 | AVAIL PGDG 3.0 1 | AVAIL PGDG 3.0 1 | AVAIL PGDG 3.0 1 | AVAIL PGDG 3.0 1 |
-| el9.aarch64 | AVAIL PGDG 3.0 1 | AVAIL PGDG 3.0 1 | AVAIL PGDG 3.0 1 | AVAIL PGDG 3.0 1 | AVAIL PGDG 3.0 1 |
-| el10.x86_64 | AVAIL PGDG 3.0 1 | AVAIL PGDG 3.0 1 | AVAIL PGDG 3.0 1 | AVAIL PGDG 3.0 1 | AVAIL PGDG 3.0 1 |
-| el10.aarch64 | AVAIL PGDG 3.0 1 | AVAIL PGDG 3.0 1 | AVAIL PGDG 3.0 1 | AVAIL PGDG 3.0 1 | AVAIL PGDG 3.0 1 |
+| el9.x86_64 | AVAIL PGDG 3.0 2 | AVAIL PGDG 3.0 2 | AVAIL PGDG 3.0 2 | AVAIL PGDG 3.0 3 | AVAIL PGDG 3.0 2 |
+| el9.aarch64 | AVAIL PGDG 3.0 2 | AVAIL PGDG 3.0 2 | AVAIL PGDG 3.0 2 | AVAIL PGDG 3.0 3 | AVAIL PGDG 3.0 3 |
+| el10.x86_64 | AVAIL PGDG 3.0 2 | AVAIL PGDG 3.0 2 | AVAIL PGDG 3.0 2 | AVAIL PGDG 3.0 2 | AVAIL PGDG 3.0 2 |
+| el10.aarch64 | AVAIL PGDG 3.0 2 | AVAIL PGDG 3.0 2 | AVAIL PGDG 3.0 2 | AVAIL PGDG 3.0 2 | AVAIL PGDG 3.0 2 |
 | d12.x86_64 | AVAIL PIGSTY 3.0 1 | AVAIL PIGSTY 3.0 1 | AVAIL PIGSTY 3.0 1 | AVAIL PIGSTY 3.0 1 | AVAIL PIGSTY 3.0 1 |
 | d12.aarch64 | AVAIL PIGSTY 3.0 1 | AVAIL PIGSTY 3.0 1 | AVAIL PIGSTY 3.0 1 | AVAIL PIGSTY 3.0 1 | AVAIL PIGSTY 3.0 1 |
 | d13.x86_64 | AVAIL PIGSTY 3.0 1 | AVAIL PIGSTY 3.0 1 | AVAIL PIGSTY 3.0 1 | AVAIL PIGSTY 3.0 1 | AVAIL PIGSTY 3.0 1 |
@@ -69,9 +69,13 @@ weight: 7150
 @ el8.x86_64 18 pg_auth_mon_18 pg_auth_mon_18-3.0-3PGDG.rhel8.x86_64.rpm pgdg 3.0 16.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pg_auth_mon_18-3.0-3PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 18 pg_auth_mon_18 pg_auth_mon_18-3.0-3PGDG.rhel8.aarch64.rpm pgdg 3.0 17.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pg_auth_mon_18-3.0-3PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 18 pg_auth_mon_18 pg_auth_mon_18-3.0-6PGDG.rhel9.8.x86_64.rpm pgdg 3.0 17.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pg_auth_mon_18-3.0-6PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 18 pg_auth_mon_18 pg_auth_mon_18-3.0-3PGDG.rhel9.x86_64.rpm pgdg 3.0 16.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pg_auth_mon_18-3.0-3PGDG.rhel9.x86_64.rpm
 @ el9.aarch64 18 pg_auth_mon_18 pg_auth_mon_18-3.0-6PGDG.rhel9.8.aarch64.rpm pgdg 3.0 17.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pg_auth_mon_18-3.0-6PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 18 pg_auth_mon_18 pg_auth_mon_18-3.0-3PGDG.rhel9.aarch64.rpm pgdg 3.0 16.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pg_auth_mon_18-3.0-3PGDG.rhel9.aarch64.rpm
 @ el10.x86_64 18 pg_auth_mon_18 pg_auth_mon_18-3.0-6PGDG.rhel10.2.x86_64.rpm pgdg 3.0 17.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pg_auth_mon_18-3.0-6PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 18 pg_auth_mon_18 pg_auth_mon_18-3.0-3PGDG.rhel10.x86_64.rpm pgdg 3.0 17.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pg_auth_mon_18-3.0-3PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 18 pg_auth_mon_18 pg_auth_mon_18-3.0-6PGDG.rhel10.2.aarch64.rpm pgdg 3.0 17.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_auth_mon_18-3.0-6PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 18 pg_auth_mon_18 pg_auth_mon_18-3.0-3PGDG.rhel10.aarch64.rpm pgdg 3.0 17.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_auth_mon_18-3.0-3PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 18 postgresql-18-pg-auth-mon postgresql-18-pg-auth-mon_3.0-3PIGSTY~bookworm_amd64.deb pigsty 3.0 16.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-auth-mon/postgresql-18-pg-auth-mon_3.0-3PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 18 postgresql-18-pg-auth-mon postgresql-18-pg-auth-mon_3.0-3PIGSTY~bookworm_arm64.deb pigsty 3.0 16.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-auth-mon/postgresql-18-pg-auth-mon_3.0-3PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 18 postgresql-18-pg-auth-mon postgresql-18-pg-auth-mon_3.0-3PIGSTY~trixie_amd64.deb pigsty 3.0 16.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-auth-mon/postgresql-18-pg-auth-mon_3.0-3PIGSTY~trixie_amd64.deb
@@ -85,9 +89,13 @@ weight: 7150
 @ el8.x86_64 17 pg_auth_mon_17 pg_auth_mon_17-3.0-1PGDG.rhel8.x86_64.rpm pgdg 3.0 16.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pg_auth_mon_17-3.0-1PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 17 pg_auth_mon_17 pg_auth_mon_17-3.0-1PGDG.rhel8.aarch64.rpm pgdg 3.0 16.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pg_auth_mon_17-3.0-1PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 17 pg_auth_mon_17 pg_auth_mon_17-3.0-6PGDG.rhel9.8.x86_64.rpm pgdg 3.0 17.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_auth_mon_17-3.0-6PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 17 pg_auth_mon_17 pg_auth_mon_17-3.0-1PGDG.rhel9.x86_64.rpm pgdg 3.0 16.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_auth_mon_17-3.0-1PGDG.rhel9.x86_64.rpm
 @ el9.aarch64 17 pg_auth_mon_17 pg_auth_mon_17-3.0-6PGDG.rhel9.8.aarch64.rpm pgdg 3.0 17.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_auth_mon_17-3.0-6PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 17 pg_auth_mon_17 pg_auth_mon_17-3.0-1PGDG.rhel9.aarch64.rpm pgdg 3.0 16.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_auth_mon_17-3.0-1PGDG.rhel9.aarch64.rpm
 @ el10.x86_64 17 pg_auth_mon_17 pg_auth_mon_17-3.0-6PGDG.rhel10.2.x86_64.rpm pgdg 3.0 17.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_auth_mon_17-3.0-6PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 17 pg_auth_mon_17 pg_auth_mon_17-3.0-3PGDG.rhel10.x86_64.rpm pgdg 3.0 17.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_auth_mon_17-3.0-3PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 17 pg_auth_mon_17 pg_auth_mon_17-3.0-6PGDG.rhel10.2.aarch64.rpm pgdg 3.0 17.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_auth_mon_17-3.0-6PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 17 pg_auth_mon_17 pg_auth_mon_17-3.0-3PGDG.rhel10.aarch64.rpm pgdg 3.0 17.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_auth_mon_17-3.0-3PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 17 postgresql-17-pg-auth-mon postgresql-17-pg-auth-mon_3.0-3PIGSTY~bookworm_amd64.deb pigsty 3.0 16.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-auth-mon/postgresql-17-pg-auth-mon_3.0-3PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 17 postgresql-17-pg-auth-mon postgresql-17-pg-auth-mon_3.0-3PIGSTY~bookworm_arm64.deb pigsty 3.0 16.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-auth-mon/postgresql-17-pg-auth-mon_3.0-3PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 17 postgresql-17-pg-auth-mon postgresql-17-pg-auth-mon_3.0-3PIGSTY~trixie_amd64.deb pigsty 3.0 16.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-auth-mon/postgresql-17-pg-auth-mon_3.0-3PIGSTY~trixie_amd64.deb
@@ -101,9 +109,13 @@ weight: 7150
 @ el8.x86_64 16 pg_auth_mon_16 pg_auth_mon_16-2.0-1.rhel8.x86_64.rpm pgdg 2.0 16.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_auth_mon_16-2.0-1.rhel8.x86_64.rpm
 @ el8.aarch64 16 pg_auth_mon_16 pg_auth_mon_16-2.0-1.rhel8.aarch64.rpm pgdg 2.0 16.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pg_auth_mon_16-2.0-1.rhel8.aarch64.rpm
 @ el9.x86_64 16 pg_auth_mon_16 pg_auth_mon_16-3.0-6PGDG.rhel9.8.x86_64.rpm pgdg 3.0 17.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_auth_mon_16-3.0-6PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 16 pg_auth_mon_16 pg_auth_mon_16-2.0-1.rhel9.x86_64.rpm pgdg 2.0 16.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_auth_mon_16-2.0-1.rhel9.x86_64.rpm
 @ el9.aarch64 16 pg_auth_mon_16 pg_auth_mon_16-3.0-6PGDG.rhel9.8.aarch64.rpm pgdg 3.0 17.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_auth_mon_16-3.0-6PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 16 pg_auth_mon_16 pg_auth_mon_16-2.0-1.rhel9.aarch64.rpm pgdg 2.0 16.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_auth_mon_16-2.0-1.rhel9.aarch64.rpm
 @ el10.x86_64 16 pg_auth_mon_16 pg_auth_mon_16-3.0-6PGDG.rhel10.2.x86_64.rpm pgdg 3.0 17.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_auth_mon_16-3.0-6PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 16 pg_auth_mon_16 pg_auth_mon_16-3.0-3PGDG.rhel10.x86_64.rpm pgdg 3.0 17.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_auth_mon_16-3.0-3PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 16 pg_auth_mon_16 pg_auth_mon_16-3.0-6PGDG.rhel10.2.aarch64.rpm pgdg 3.0 17.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_auth_mon_16-3.0-6PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 16 pg_auth_mon_16 pg_auth_mon_16-3.0-3PGDG.rhel10.aarch64.rpm pgdg 3.0 17.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_auth_mon_16-3.0-3PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 16 postgresql-16-pg-auth-mon postgresql-16-pg-auth-mon_3.0-3PIGSTY~bookworm_amd64.deb pigsty 3.0 16.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-auth-mon/postgresql-16-pg-auth-mon_3.0-3PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 16 postgresql-16-pg-auth-mon postgresql-16-pg-auth-mon_3.0-3PIGSTY~bookworm_arm64.deb pigsty 3.0 16.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-auth-mon/postgresql-16-pg-auth-mon_3.0-3PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 16 postgresql-16-pg-auth-mon postgresql-16-pg-auth-mon_3.0-3PIGSTY~trixie_amd64.deb pigsty 3.0 16.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-auth-mon/postgresql-16-pg-auth-mon_3.0-3PIGSTY~trixie_amd64.deb
@@ -119,9 +131,15 @@ weight: 7150
 @ el8.aarch64 15 pg_auth_mon_15 pg_auth_mon_15-2.0-1.rhel8.aarch64.rpm pgdg 2.0 16.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pg_auth_mon_15-2.0-1.rhel8.aarch64.rpm
 @ el8.aarch64 15 pg_auth_mon_15 pg_auth_mon_15-1.0-1.rhel8.aarch64.rpm pgdg 1.0 23.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pg_auth_mon_15-1.0-1.rhel8.aarch64.rpm
 @ el9.x86_64 15 pg_auth_mon_15 pg_auth_mon_15-3.0-6PGDG.rhel9.8.x86_64.rpm pgdg 3.0 17.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_auth_mon_15-3.0-6PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 15 pg_auth_mon_15 pg_auth_mon_15-2.0-1.rhel9.x86_64.rpm pgdg 2.0 16.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_auth_mon_15-2.0-1.rhel9.x86_64.rpm
+@ el9.x86_64 15 pg_auth_mon_15 pg_auth_mon_15-1.0-1.rhel9.x86_64.rpm pgdg 1.0 23.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_auth_mon_15-1.0-1.rhel9.x86_64.rpm
 @ el9.aarch64 15 pg_auth_mon_15 pg_auth_mon_15-3.0-6PGDG.rhel9.8.aarch64.rpm pgdg 3.0 17.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_auth_mon_15-3.0-6PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 15 pg_auth_mon_15 pg_auth_mon_15-2.0-1.rhel9.aarch64.rpm pgdg 2.0 16.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_auth_mon_15-2.0-1.rhel9.aarch64.rpm
+@ el9.aarch64 15 pg_auth_mon_15 pg_auth_mon_15-1.0-1.rhel9.aarch64.rpm pgdg 1.0 23.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_auth_mon_15-1.0-1.rhel9.aarch64.rpm
 @ el10.x86_64 15 pg_auth_mon_15 pg_auth_mon_15-3.0-6PGDG.rhel10.2.x86_64.rpm pgdg 3.0 17.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_auth_mon_15-3.0-6PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 15 pg_auth_mon_15 pg_auth_mon_15-3.0-3PGDG.rhel10.x86_64.rpm pgdg 3.0 17.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_auth_mon_15-3.0-3PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 15 pg_auth_mon_15 pg_auth_mon_15-3.0-6PGDG.rhel10.2.aarch64.rpm pgdg 3.0 17.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_auth_mon_15-3.0-6PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 15 pg_auth_mon_15 pg_auth_mon_15-3.0-3PGDG.rhel10.aarch64.rpm pgdg 3.0 17.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_auth_mon_15-3.0-3PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 15 postgresql-15-pg-auth-mon postgresql-15-pg-auth-mon_3.0-3PIGSTY~bookworm_amd64.deb pigsty 3.0 16.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-auth-mon/postgresql-15-pg-auth-mon_3.0-3PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 15 postgresql-15-pg-auth-mon postgresql-15-pg-auth-mon_3.0-3PIGSTY~bookworm_arm64.deb pigsty 3.0 16.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-auth-mon/postgresql-15-pg-auth-mon_3.0-3PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 15 postgresql-15-pg-auth-mon postgresql-15-pg-auth-mon_3.0-3PIGSTY~trixie_amd64.deb pigsty 3.0 16.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-auth-mon/postgresql-15-pg-auth-mon_3.0-3PIGSTY~trixie_amd64.deb
@@ -137,9 +155,14 @@ weight: 7150
 @ el8.aarch64 14 pg_auth_mon_14 pg_auth_mon_14-2.0-1.rhel8.aarch64.rpm pgdg 2.0 16.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pg_auth_mon_14-2.0-1.rhel8.aarch64.rpm
 @ el8.aarch64 14 pg_auth_mon_14 pg_auth_mon_14-1.0-1.rhel8.aarch64.rpm pgdg 1.0 23.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pg_auth_mon_14-1.0-1.rhel8.aarch64.rpm
 @ el9.x86_64 14 pg_auth_mon_14 pg_auth_mon_14-3.0-6PGDG.rhel9.8.x86_64.rpm pgdg 3.0 17.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_auth_mon_14-3.0-6PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 14 pg_auth_mon_14 pg_auth_mon_14-2.0-1.rhel9.x86_64.rpm pgdg 2.0 16.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_auth_mon_14-2.0-1.rhel9.x86_64.rpm
 @ el9.aarch64 14 pg_auth_mon_14 pg_auth_mon_14-3.0-6PGDG.rhel9.8.aarch64.rpm pgdg 3.0 17.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_auth_mon_14-3.0-6PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 14 pg_auth_mon_14 pg_auth_mon_14-2.0-1.rhel9.aarch64.rpm pgdg 2.0 16.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_auth_mon_14-2.0-1.rhel9.aarch64.rpm
+@ el9.aarch64 14 pg_auth_mon_14 pg_auth_mon_14-1.0-1.rhel9.aarch64.rpm pgdg 1.0 23.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_auth_mon_14-1.0-1.rhel9.aarch64.rpm
 @ el10.x86_64 14 pg_auth_mon_14 pg_auth_mon_14-3.0-6PGDG.rhel10.2.x86_64.rpm pgdg 3.0 17.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_auth_mon_14-3.0-6PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 14 pg_auth_mon_14 pg_auth_mon_14-3.0-3PGDG.rhel10.x86_64.rpm pgdg 3.0 17.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_auth_mon_14-3.0-3PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 14 pg_auth_mon_14 pg_auth_mon_14-3.0-6PGDG.rhel10.2.aarch64.rpm pgdg 3.0 17.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_auth_mon_14-3.0-6PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 14 pg_auth_mon_14 pg_auth_mon_14-3.0-3PGDG.rhel10.aarch64.rpm pgdg 3.0 17.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_auth_mon_14-3.0-3PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 14 postgresql-14-pg-auth-mon postgresql-14-pg-auth-mon_3.0-3PIGSTY~bookworm_amd64.deb pigsty 3.0 16.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-auth-mon/postgresql-14-pg-auth-mon_3.0-3PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 14 postgresql-14-pg-auth-mon postgresql-14-pg-auth-mon_3.0-3PIGSTY~bookworm_arm64.deb pigsty 3.0 16.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-auth-mon/postgresql-14-pg-auth-mon_3.0-3PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 14 postgresql-14-pg-auth-mon postgresql-14-pg-auth-mon_3.0-3PIGSTY~trixie_amd64.deb pigsty 3.0 16.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-auth-mon/postgresql-14-pg-auth-mon_3.0-3PIGSTY~trixie_amd64.deb
