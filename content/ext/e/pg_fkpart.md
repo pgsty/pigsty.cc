@@ -247,6 +247,7 @@ CREATE EXTENSION pg_fkpart;
 
 
 
+
 ## 用法
 
 > [pg_fkpart: 基于外键的表分区工具](https://github.com/lemoineat/pg_fkpart)

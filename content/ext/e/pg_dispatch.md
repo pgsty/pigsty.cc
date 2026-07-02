@@ -212,6 +212,9 @@ apt install -y postgresql-14-pg-dispatch   # PG 14
 CREATE EXTENSION pg_dispatch CASCADE;  -- 依赖: pgcrypto, pg_cron
 ```
 
+
+
+
 ## 用法
 
 来源：[README](https://github.com/Snehil-Shah/pg_dispatch/blob/master/README.md)，[database.dev page](https://database.dev/Snehil_Shah/pg_dispatch)

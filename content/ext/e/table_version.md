@@ -266,6 +266,7 @@ CREATE EXTENSION table_version CASCADE;  -- 依赖: plpgsql
 
 
 
+
 ## 用法
 
 > [table_version: PostgreSQL 表版本控制扩展](https://github.com/linz/postgresql-tableversion)

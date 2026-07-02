@@ -234,6 +234,7 @@ shared_preload_libraries = '$libdir/passwordcheck_cracklib';
 
 
 
+
 ## 用法
 
 > [passwordcheck_cracklib: 使用 cracklib 加强 PostgreSQL 用户密码检查](https://github.com/devrimgunduz/passwordcheck_cracklib)

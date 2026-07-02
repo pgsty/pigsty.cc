@@ -220,6 +220,8 @@ CREATE EXTENSION pg_mooncake CASCADE;  -- 依赖: pg_duckdb
 ```
 
 
+
+
 ## 用法
 
 [`pg_mooncake`](https://github.com/Mooncake-Labs/pg_mooncake) 是一个 Postgres 扩展，能够为表创建 Iceberg 格式的列存镜像，设计为 `pg_duckdb` 的子扩展。

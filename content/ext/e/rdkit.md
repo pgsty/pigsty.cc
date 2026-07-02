@@ -204,6 +204,9 @@ apt install -y postgresql-14-rdkit   # PG 14
 CREATE EXTENSION rdkit;
 ```
 
+
+
+
 ## 用法
 
 - 来源：[project README](https://github.com/rdkit/rdkit/blob/master/README.md)，[cartridge docs](https://www.rdkit.org/docs/Cartridge.html)，[2025.03.6 release](https://github.com/rdkit/rdkit/releases/tag/Release_2025.03.6)

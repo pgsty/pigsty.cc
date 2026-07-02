@@ -208,6 +208,9 @@ apt install -y postgresql-14-external-file   # PG 14
 CREATE EXTENSION external_file;
 ```
 
+
+
+
 ## 用法
 
 来源：[README](https://github.com/darold/external_file/blob/master/README.md)，[Release v1.2](https://github.com/darold/external_file/releases/tag/v1.2)

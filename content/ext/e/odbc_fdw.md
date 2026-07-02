@@ -146,6 +146,7 @@ CREATE EXTENSION odbc_fdw;
 
 
 
+
 ## 用法
 
 > [odbc_fdw: 通过 ODBC 访问远程数据库的外部数据包装器](https://github.com/CartoDB/odbc_fdw)

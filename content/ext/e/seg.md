@@ -51,6 +51,7 @@ CREATE EXTENSION seg;
 
 
 
+
 ## 用法
 
 > [seg: 线段/浮点区间数据类型](https://www.postgresql.org/docs/current/seg.html)

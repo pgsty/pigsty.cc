@@ -208,6 +208,9 @@ apt install -y postgresql-14-pg-stat-backtrace   # PG 14
 CREATE EXTENSION pg_stat_backtrace;
 ```
 
+
+
+
 ## 用法
 
 > 来源：[pg_stat_backtrace upstream README](https://github.com/Nickyoung0/pg_stat_backtrace)、[upstream changelog](https://github.com/Nickyoung0/pg_stat_backtrace/blob/main/CHANGELOG.md)、[local metadata](../db/extension.csv)、本地源码归档 `pg_stat_backtrace-1.0.0.tar.gz`。

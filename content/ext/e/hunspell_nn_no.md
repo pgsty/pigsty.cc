@@ -211,6 +211,7 @@ CREATE EXTENSION hunspell_nn_no;
 
 
 
+
 ## 用法
 
 > [hunspell_nn_no: PostgreSQL 的挪威语（尼诺斯克） Hunspell 词典](https://github.com/postgrespro/hunspell_dicts)

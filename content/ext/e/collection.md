@@ -211,6 +211,7 @@ CREATE EXTENSION collection;
 
 
 
+
 ## 用法
 
 > [collection: 用于 PL/pgSQL 的键值集合数据类型](https://github.com/aws/pgcollection)

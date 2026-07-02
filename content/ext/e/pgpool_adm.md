@@ -757,6 +757,7 @@ CREATE EXTENSION pgpool_adm;
 
 
 
+
 ## 用法
 
 > [pgpool_adm: Pgpool 管理函数](https://pgpool.net/)

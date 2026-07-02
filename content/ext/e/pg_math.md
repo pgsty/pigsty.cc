@@ -211,6 +211,7 @@ CREATE EXTENSION pg_math;
 
 
 
+
 ## 用法
 
 > [pg_math: 使用 GSL 的 PostgreSQL 统计分布函数](https://github.com/chanukyasds/pg_math)

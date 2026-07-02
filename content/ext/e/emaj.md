@@ -366,6 +366,7 @@ CREATE EXTENSION emaj CASCADE;  -- 依赖: dblink, btree_gist
 
 
 
+
 ## 用法
 
 > [E-Maj: 记录并回滚表内容变更](https://github.com/dalibo/emaj)

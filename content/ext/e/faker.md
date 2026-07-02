@@ -160,6 +160,7 @@ CREATE EXTENSION faker;
 
 
 
+
 ## 用法
 
 > [faker: Python Faker 库的包装器](https://github.com/anpandu/postgresql_faker)

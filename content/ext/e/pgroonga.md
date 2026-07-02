@@ -214,6 +214,8 @@ CREATE EXTENSION pgroonga;
 ```
 
 
+
+
 ## 用法
 
 - https://pgroonga.github.io/

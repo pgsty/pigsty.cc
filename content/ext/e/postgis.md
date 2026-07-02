@@ -498,6 +498,9 @@ apt install -y postgresql-14-postgis-3   # PG 14
 CREATE EXTENSION postgis;
 ```
 
+
+
+
 ## 用法
 
 来源：[Official manual](https://postgis.net/documentation/manual/)，[current manual HTML](https://postgis.net/docs/postgis-en.html)，[release notes](https://postgis.net/docs/release_notes.html)，[patch release announcement](https://postgis.net/2026/04/PostGIS-Patch-Releases/)

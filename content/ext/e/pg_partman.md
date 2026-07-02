@@ -704,6 +704,7 @@ CREATE EXTENSION pg_partman CASCADE;  -- 依赖: plpgsql
 
 
 
+
 ## 用法
 
 > [pg_partman: 按时间或 ID 管理分区表的扩展](https://github.com/pgpartman/pg_partman)

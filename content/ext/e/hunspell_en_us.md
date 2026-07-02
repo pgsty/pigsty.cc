@@ -211,6 +211,7 @@ CREATE EXTENSION hunspell_en_us;
 
 
 
+
 ## 用法
 
 > [hunspell_en_us: PostgreSQL 的英语（美国） Hunspell 词典](https://github.com/postgrespro/hunspell_dicts)

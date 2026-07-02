@@ -288,6 +288,8 @@ CREATE EXTENSION pg_extra_time;
 ```
 
 
+
+
 ## 用法
 
 > 来源：[pg_extra_time upstream README](https://github.com/bigsmoke/pg_extra_time)、[PGXN pg_extra_time](https://pgxn.org/dist/pg_extra_time/)、[local metadata](../db/extension.csv)。

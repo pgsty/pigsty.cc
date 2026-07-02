@@ -221,6 +221,7 @@ CREATE EXTENSION vchord CASCADE;  -- 依赖: vector
 
 
 
+
 ## 用法
 
 - https://github.com/tensorchord/VectorChord

@@ -51,6 +51,7 @@ CREATE EXTENSION adminpack;
 
 
 
+
 ## 用法
 
 > [adminpack: PostgreSQL 管理函数](https://www.postgresql.org/docs/16/adminpack.html)

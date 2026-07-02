@@ -51,6 +51,7 @@ CREATE EXTENSION citext;
 
 
 
+
 ## 用法
 
 > [citext: 大小写不敏感的字符串类型](https://www.postgresql.org/docs/current/citext.html)

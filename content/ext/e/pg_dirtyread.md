@@ -309,6 +309,9 @@ apt install -y postgresql-14-dirtyread   # PG 14
 CREATE EXTENSION pg_dirtyread;
 ```
 
+
+
+
 ## 用法
 
 来源：[upstream README](https://github.com/df7cb/pg_dirtyread)、[Debian changelog](https://github.com/df7cb/pg_dirtyread/blob/master/debian/changelog)、[tags](https://github.com/df7cb/pg_dirtyread/tags)。

@@ -134,6 +134,7 @@ CREATE EXTENSION aux_mysql;
 
 
 
+
 ## 用法
 
 > [aux_mysql: MySQL 补充扩展](https://github.com/HaloTech-Co-Ltd/openHalo)

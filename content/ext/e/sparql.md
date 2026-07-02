@@ -211,6 +211,7 @@ CREATE EXTENSION sparql CASCADE;  -- 依赖: plperl, plperlu
 
 
 
+
 ## 用法
 
 > [sparql: PostgreSQL 的 SPARQL 查询支持](https://github.com/lacanoid/pgsparql)

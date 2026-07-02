@@ -209,6 +209,9 @@ apt install -y postgresql-14-pgxicor   # PG 14
 CREATE EXTENSION xicor;
 ```
 
+
+
+
 ## 用法
 
 来源：[README](https://github.com/Florents-Tselai/pgxicor/blob/main/README.md), [release 0.1.1](https://github.com/Florents-Tselai/pgxicor/releases/tag/v0.1.1)

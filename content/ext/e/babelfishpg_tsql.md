@@ -126,6 +126,7 @@ CREATE EXTENSION babelfishpg_tsql CASCADE;  -- 依赖: babelfishpg_common, uuid-
 
 
 
+
 ## 用法
 
 > [babelfishpg_tsql: SQL Server Transact SQL 兼容性](https://babelfishpg.org/)

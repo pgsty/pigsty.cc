@@ -132,6 +132,7 @@ CREATE EXTENSION l10n_table_dependent_extension CASCADE;  -- 依赖: pg_xenophil
 
 
 
+
 ## 用法
 
 > [l10n_table_dependent_extension: pg_xenophile 的本地化表依赖扩展](https://github.com/bigsmoke/pg_xenophile)

@@ -51,6 +51,7 @@ CREATE EXTENSION isn;
 
 
 
+
 ## 用法
 
 > [isn: ISBN、ISSN、EAN、UPC 产品编号类型](https://www.postgresql.org/docs/current/isn.html)

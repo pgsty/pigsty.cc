@@ -211,6 +211,7 @@ CREATE EXTENSION schedoc CASCADE;  -- 依赖: ddl_historization
 
 
 
+
 ## 用法
 
 > [schedoc: 通过 PostgreSQL 对象的 COMMENT 实现模式文档化](https://github.com/ZeroGachis/pg_schedoc)

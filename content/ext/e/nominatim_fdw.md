@@ -395,6 +395,9 @@ apt install -y postgresql-14-nominatim-fdw   # PG 14
 CREATE EXTENSION nominatim_fdw;
 ```
 
+
+
+
 ## 用法
 
 来源：[README](https://github.com/jimjonesbr/nominatim_fdw/blob/master/README.md)，[Nominatim API](https://nominatim.org/)

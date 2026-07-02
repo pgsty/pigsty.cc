@@ -209,6 +209,7 @@ CREATE EXTENSION pglogical_ticker CASCADE;  -- 依赖: pglogical
 
 
 
+
 ## 用法
 
 > [pglogical_ticker: 准确查看 pglogical 复制延迟](https://github.com/enova/pglogical_ticker)

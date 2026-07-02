@@ -197,6 +197,7 @@ CREATE EXTENSION pgl_ddl_deploy CASCADE;  -- 依赖: pglogical
 
 
 
+
 ## 用法
 
 > [pgl_ddl_deploy: 使用 pglogical 自动化 DDL 部署](https://github.com/enova/pgl_ddl_deploy)

@@ -211,6 +211,7 @@ CREATE EXTENSION shacrypt;
 
 
 
+
 ## 用法
 
 > [shacrypt: PostgreSQL 的 SHA-crypt 密码哈希](https://github.com/dverite/postgres-shacrypt)

@@ -85,8 +85,8 @@ weight: 40
 
 | **ID** | **扩展名** | **版本** | **属性** | **模式** | **描述** |
 |:------:|:-----------|:--------:|:--------:|:---------|:---------|
-| 2400 | [**`citus`**](/ext/e/citus) | `14.0.0` | `--sLd--` | `pg_catalog` | Citus 分布式数据库 |
-| 2401 | [`citus_columnar`](/ext/e/citus_columnar) | `14.0.0` | `--s-d--` | `pg_catalog` | Citus 列式存储引擎 |
+| 2400 | [**`citus`**](/ext/e/citus) | `14.1.0` | `--sLd--` | `pg_catalog` | Citus 分布式数据库 |
+| 2401 | [`citus_columnar`](/ext/e/citus_columnar) | `14.1.0` | `--s-d--` | `pg_catalog` | Citus 列式存储引擎 |
 {.ext-table}
 
 ### omnigres

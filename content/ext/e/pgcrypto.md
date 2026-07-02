@@ -52,6 +52,7 @@ CREATE EXTENSION pgcrypto;
 
 
 
+
 ## 用法
 
 > [pgcrypto: PostgreSQL 加密函数](https://www.postgresql.org/docs/current/pgcrypto.html)

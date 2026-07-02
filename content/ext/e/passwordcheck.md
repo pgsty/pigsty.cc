@@ -53,6 +53,7 @@ weight: 7990
 
 
 
+
 ## 用法
 
 > [passwordcheck: 在 CREATE/ALTER ROLE 时检查密码强度](https://www.postgresql.org/docs/current/passwordcheck.html)

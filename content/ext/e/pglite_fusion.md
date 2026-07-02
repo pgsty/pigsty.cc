@@ -221,6 +221,7 @@ CREATE EXTENSION pglite_fusion;
 
 
 
+
 ## 用法
 
 > https://github.com/frectonz/pglite-fusion/blob/main/README.md

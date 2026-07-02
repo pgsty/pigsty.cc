@@ -51,6 +51,7 @@ CREATE EXTENSION tsm_system_time;
 
 
 
+
 ## 用法
 
 > [tsm_system_time: 基于时间的 TABLESAMPLE 采样方法](https://www.postgresql.org/docs/current/tsm-system-time.html)

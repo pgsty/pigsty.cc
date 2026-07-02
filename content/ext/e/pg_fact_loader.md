@@ -219,6 +219,7 @@ CREATE EXTENSION pg_fact_loader;
 
 
 
+
 ## 用法
 
 > [pg_fact_loader: 使用 Postgres 构建事实表](https://github.com/enova/pg_fact_loader)

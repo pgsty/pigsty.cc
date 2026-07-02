@@ -210,6 +210,9 @@ apt install -y postgresql-14-ddl-historization   # PG 14
 CREATE EXTENSION ddl_historization CASCADE;  -- 依赖: plpgsql
 ```
 
+
+
+
 ## 用法
 
 来源：[README](https://github.com/rodo/pg_ddl_historization/blob/master/README.md)，[releases](https://github.com/rodo/pg_ddl_historization/releases)

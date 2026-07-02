@@ -170,6 +170,7 @@ Pigsty 当前文档对应版本为 [**v4.3.0**](#v430)。
 | `pgsql_tweaks`        | `1.0.2`      | `1.0.3`      | PG 14-18                         |
 | `pgfincore`           | `1.3.1`      | `1.4.0`      | PG 14-18，RPM only                |
 | `toastinfo`           | `1.5`        | `1.7`        | PG 14-18，RPM only                |
+| `pg_ivm`              | `1.14`       | `1.15`       | PG 14-18，DEB only                |
 | `timeseries`          | `0.2.0`      | `0.2.1`      | PG 14-18                         |
 {.stretch-last}
 

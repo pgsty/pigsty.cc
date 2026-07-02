@@ -814,6 +814,9 @@ apt install -y postgresql-14-pg-background   # PG 14
 CREATE EXTENSION pg_background;
 ```
 
+
+
+
 ## 用法
 
 来源：[official README](https://github.com/vibhorkum/pg_background/blob/master/README.md)、[v2.0 release notes](https://github.com/vibhorkum/pg_background/releases/tag/v2.0)、[migration guide](https://github.com/vibhorkum/pg_background/blob/v2.0/docs/MIGRATION.md)。

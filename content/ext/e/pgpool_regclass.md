@@ -120,6 +120,7 @@ CREATE EXTENSION pgpool_regclass;
 
 
 
+
 ## 用法
 
 > [pgpool_regclass: regclass 的替代实现](https://pgpool.net/)

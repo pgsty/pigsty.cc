@@ -235,6 +235,7 @@ CREATE EXTENSION pg_catcheck;
 
 
 
+
 ## 用法
 
 > [pg_catcheck: 诊断系统目录损坏](https://github.com/EnterpriseDB/pg_catcheck)

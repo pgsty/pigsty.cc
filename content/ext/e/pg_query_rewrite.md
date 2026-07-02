@@ -215,6 +215,9 @@ shared_preload_libraries = 'pg_query_rewrite';
 CREATE EXTENSION pg_query_rewrite;
 ```
 
+
+
+
 ## 用法
 
 来源：[README](https://github.com/pierreforstmann/pg_query_rewrite/blob/master/README.md)

@@ -200,6 +200,9 @@ shared_preload_libraries = 'pg_command_fw';
 CREATE EXTENSION pg_command_fw;
 ```
 
+
+
+
 ## 用法
 
 - 来源：[README](https://github.com/rustwizard/pg_command_fw/blob/master/README.md)

@@ -476,6 +476,9 @@ apt install -y postgresql-14-pgsql-tweaks   # PG 14
 CREATE EXTENSION pgsql_tweaks;
 ```
 
+
+
+
 ## 用法
 
 来源：[Codeberg README](https://codeberg.org/pgsql_tweaks/pgsql_tweaks)、[documentation site](https://rtfm.pgsql-tweaks.org)、[Codeberg tags](https://codeberg.org/pgsql_tweaks/pgsql_tweaks/tags)。

@@ -214,6 +214,7 @@ CREATE EXTENSION pg_tiktoken;
 
 
 
+
 ## 用法
 
 > [pg_tiktoken](https://github.com/kelvich/pg_tiktoken)：用于 PostgreSQL 中 OpenAI 模型的 tiktoken 分词器。

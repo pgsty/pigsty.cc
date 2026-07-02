@@ -211,6 +211,7 @@ CREATE EXTENSION pg_cooldown;
 
 
 
+
 ## 用法
 
 > [pg_cooldown: 从共享缓冲区中移除特定关系的缓存页](https://github.com/rbergm/pg_cooldown)

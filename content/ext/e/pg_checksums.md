@@ -244,6 +244,7 @@ apt install -y postgresql-14-pg-checksums   # PG 14
 
 
 
+
 ## 用法
 
 > [pg_checksums: 在离线 Postgres 集群中激活/停用/验证校验和](https://github.com/credativ/pg_checksums)

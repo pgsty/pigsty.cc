@@ -275,6 +275,7 @@ CREATE EXTENSION pointcloud;
 
 
 
+
 ## 用法
 
 > [pgpointcloud/pointcloud: 用于存储点云（LIDAR）数据的 PostgreSQL 扩展](https://github.com/pgpointcloud/pointcloud)

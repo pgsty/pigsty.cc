@@ -221,6 +221,7 @@ CREATE EXTENSION vchord_bm25;
 
 
 
+
 ## 用法
 
 > [GitHub: tensorchord/VectorChord-bm25](https://github.com/tensorchord/VectorChord-bm25)

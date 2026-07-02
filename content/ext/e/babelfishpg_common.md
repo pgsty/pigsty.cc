@@ -142,6 +142,7 @@ CREATE EXTENSION babelfishpg_common;
 
 
 
+
 ## 用法
 
 > [babelfishpg_common: SQL Server Transact SQL 数据类型支持](https://babelfishpg.org/)

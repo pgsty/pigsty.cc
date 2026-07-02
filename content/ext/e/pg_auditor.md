@@ -214,6 +214,7 @@ CREATE EXTENSION pg_auditor CASCADE;  -- 依赖: hstore
 
 
 
+
 ## 用法
 
 > [pg_auditor: 带闪回功能的数据变更审计](https://github.com/kouber/pg_auditor)

@@ -113,6 +113,7 @@ CREATE EXTENSION jdbc_fdw;
 
 
 
+
 ## 用法
 
 > [jdbc_fdw: 通过 JDBC 访问远程服务器的外部数据包装器](https://github.com/pgspider/jdbc_fdw)

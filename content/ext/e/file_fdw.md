@@ -52,6 +52,7 @@ CREATE EXTENSION file_fdw;
 
 
 
+
 ## 用法
 
 > [file_fdw: 平面文件访问的外部数据包装器](https://www.postgresql.org/docs/current/file-fdw.html)

@@ -221,6 +221,7 @@ CREATE EXTENSION pg_tokenizer;
 
 
 
+
 ## 用法
 
 > [GitHub: tensorchord/pg_tokenizer.rs](https://github.com/tensorchord/pg_tokenizer.rs)

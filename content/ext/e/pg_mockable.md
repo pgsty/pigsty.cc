@@ -205,6 +205,9 @@ apt install -y postgresql-14-pg-mockable   # PG 14
 CREATE EXTENSION pg_mockable;
 ```
 
+
+
+
 ## 用法
 
 > 来源：[pg_mockable upstream README](https://github.com/bigsmoke/pg_mockable/blob/v1.1.0/README.md)、[v1.1.0 tag](https://github.com/bigsmoke/pg_mockable/tree/v1.1.0)、[PGXN pg_mockable](https://pgxn.org/dist/pg_mockable/)、[local metadata](../db/extension.csv)、本地源码归档 `pg_mockable-1.1.0.tar.gz`。

@@ -258,6 +258,7 @@ CREATE EXTENSION periods CASCADE;  -- 依赖: btree_gist
 
 
 
+
 ## 用法
 
 > [periods: PostgreSQL 的时间段与系统版本控制](https://github.com/xocolatl/periods)

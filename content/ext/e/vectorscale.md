@@ -213,6 +213,8 @@ CREATE EXTENSION vectorscale CASCADE;  -- 依赖: vector
 ```
 
 
+
+
 ## 用法
 
 ```sql

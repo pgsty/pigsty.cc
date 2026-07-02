@@ -114,6 +114,7 @@ CREATE EXTENSION hstore_plluau CASCADE;  -- 依赖: hstore, plluau
 
 
 
+
 ## 用法
 
 > [hstore_plluau: 不可信 PL/Lua 的 hstore 转换支持](https://github.com/pllua/pllua)

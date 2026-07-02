@@ -200,6 +200,9 @@ shared_preload_libraries = 'pg_datasentinel';
 CREATE EXTENSION pg_datasentinel;
 ```
 
+
+
+
 ## 用法
 
 来源：[README](https://github.com/datasentinel/pg_datasentinel/blob/main/README.md)，[Release 1.0](https://github.com/datasentinel/pg_datasentinel/releases/tag/1.0)

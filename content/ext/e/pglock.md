@@ -212,6 +212,9 @@ apt install -y postgresql-14-pglock   # PG 14
 CREATE EXTENSION pglock CASCADE;  -- 依赖: pg_cron
 ```
 
+
+
+
 ## 用法
 
 - 来源：[README](https://github.com/fraruiz/pglock/blob/master/README.md)

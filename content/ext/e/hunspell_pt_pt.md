@@ -188,6 +188,7 @@ CREATE EXTENSION hunspell_pt_pt;
 
 
 
+
 ## 用法
 
 > [hunspell_pt_pt: PostgreSQL 的葡萄牙语 Hunspell 词典](https://github.com/postgrespro/hunspell_dicts)

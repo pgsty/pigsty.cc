@@ -211,6 +211,7 @@ CREATE EXTENSION currency CASCADE;  -- 依赖: plpgsql
 
 
 
+
 ## 用法
 
 > [currency: ISO 4217 货币代码类型](https://github.com/adjust/pg-currency)

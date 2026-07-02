@@ -52,6 +52,7 @@ CREATE EXTENSION ltree;
 
 
 
+
 ## 用法
 
 > [ltree: 层次树状标签数据类型](https://www.postgresql.org/docs/current/ltree.html)

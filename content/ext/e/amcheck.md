@@ -51,6 +51,7 @@ CREATE EXTENSION amcheck;
 
 
 
+
 ## 用法
 
 > [amcheck: 验证关系完整性的函数](https://www.postgresql.org/docs/current/amcheck.html)

@@ -212,6 +212,9 @@ apt install -y postgresql-14-pg-uuid-v8   # PG 14
 CREATE EXTENSION pg_uuid_v8;
 ```
 
+
+
+
 ## 用法
 
 - 来源：[pg_uuid_v8 README](https://github.com/ineron/pg_uuid_v8)，[SQL definitions](https://github.com/ineron/pg_uuid_v8/blob/main/pg_uuid_v8--1.0.sql)，[control file](https://github.com/ineron/pg_uuid_v8/blob/main/pg_uuid_v8.control)

@@ -288,6 +288,7 @@ CREATE EXTENSION pgautofailover CASCADE;  -- 依赖: btree_gist
 
 
 
+
 ## 用法
 
 > [pgautofailover: PostgreSQL 自动故障转移](https://github.com/hapostgres/pg_auto_failover)

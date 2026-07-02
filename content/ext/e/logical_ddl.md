@@ -208,6 +208,9 @@ apt install -y postgresql-14-logical-ddl   # PG 14
 CREATE EXTENSION logical_ddl;
 ```
 
+
+
+
 ## 用法
 
 来源：[README](https://github.com/samedyildirim/logical_ddl/blob/master/README.md)

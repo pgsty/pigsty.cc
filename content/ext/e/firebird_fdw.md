@@ -310,6 +310,9 @@ apt install -y postgresql-14-firebird-fdw   # PG 14
 CREATE EXTENSION firebird_fdw;
 ```
 
+
+
+
 ## 用法
 
 来源：[upstream README](https://github.com/ibarwick/firebird_fdw)、[1.4.2 README](https://github.com/ibarwick/firebird_fdw/blob/REL_1_4_STABLE/README.md)、[1.4.2 tag](https://github.com/ibarwick/firebird_fdw/tree/1.4.2)。

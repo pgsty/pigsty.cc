@@ -211,6 +211,7 @@ CREATE EXTENSION pg_upless CASCADE;  -- 依赖: plpgsql
 
 
 
+
 ## 用法
 
 > [pg_upless: 检测无效 UPDATE](https://github.com/rodo/pg_upless)

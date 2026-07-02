@@ -232,6 +232,7 @@ CREATE EXTENSION pg_readme CASCADE;  -- 依赖: hstore
 
 
 
+
 ## 用法
 
 > [pg_readme: 从 PostgreSQL COMMENT 对象自动生成 README 文档](https://github.com/bigsmoke/pg_readme)

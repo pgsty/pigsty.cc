@@ -245,6 +245,7 @@ CREATE EXTENSION pg_similarity;
 
 
 
+
 ## 用法
 
 > [pg_similarity](https://github.com/eulerto/pg_similarity)：PostgreSQL 相似度查询支持。

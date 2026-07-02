@@ -389,6 +389,9 @@ apt install -y postgresql-14-icu-ext   # PG 14
 CREATE EXTENSION icu_ext;
 ```
 
+
+
+
 ## 用法
 
 > 来源：[README](https://github.com/dverite/icu_ext/blob/master/README.md), [datetime docs](https://github.com/dverite/icu_ext/blob/master/README-datetime.md), [v1.10.0 release](https://github.com/dverite/icu_ext/releases/tag/v1.10.0)

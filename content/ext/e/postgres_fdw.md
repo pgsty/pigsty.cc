@@ -52,6 +52,7 @@ CREATE EXTENSION postgres_fdw;
 
 
 
+
 ## 用法
 
 > [postgres_fdw: 远程 PostgreSQL 服务器的外部数据包装器](https://www.postgresql.org/docs/current/postgres-fdw.html)
