@@ -86,7 +86,6 @@ all:
         vip_enabled: true
         vip_address: 10.10.10.20
         vip_vrid: 20
-        vip_interface: eth1
         haproxy_services:      # expose minio service : sss.pigsty:9000
           - name: minio        # [REQUIRED] service name, unique
             port: 9000         # [REQUIRED] service port, unique
@@ -111,7 +110,6 @@ all:
         pg_cluster: pg-meta
         pg_vip_enabled: true
         pg_vip_address: 10.10.10.2/24
-        pg_vip_interface: eth1
         pg_users:
           - {name: dbuser_meta     ,password: DBUser.Meta     ,pgbouncer: true ,roles: [dbrole_admin]    ,comment: pigsty admin user }
           - {name: dbuser_view     ,password: DBUser.Viewer   ,pgbouncer: true ,roles: [dbrole_readonly] ,comment: read-only viewer for meta database }
@@ -144,7 +142,6 @@ all:
         pg_cluster: pg-src
         pg_vip_enabled: true
         pg_vip_address: 10.10.10.3/24
-        pg_vip_interface: eth1
         pg_users:  [{ name: test , password: test , pgbouncer: true , roles: [ dbrole_admin ] }]
         pg_databases: [{ name: src }]
 
@@ -162,7 +159,6 @@ all:
         pg_cluster: pg-dst
         pg_vip_enabled: true
         pg_vip_address: 10.10.10.4/24
-        pg_vip_interface: eth1
         pg_users: [ { name: test , password: test , pgbouncer: true , roles: [ dbrole_admin ] } ]
         pg_databases: [ { name: dst } ]
 
@@ -281,7 +277,7 @@ all:
     #==========================================================#
     # INFRA
     #==========================================================#
-    version: v4.3.0                   # pigsty version string
+    version: v4.4.0                   # pigsty version string
     admin_ip: 10.10.10.10             # admin node ip address
     region: default                   # upstream mirror region: default|china|europe
     infra_portal:                     # infra services exposed via portal
@@ -352,7 +348,7 @@ all:
     # Repo
     #==========================================================#
     repo_packages: [
-      node-bootstrap, infra-package, infra-addons, node-package1, node-package2, pgsql-utility, extra-modules,
+      node-bootstrap, infra-package, infra-addons, node-package1, node-package2, node-package3, pgsql-utility, extra-modules,
       pg18-core ,pg18-time ,pg18-gis ,pg18-rag ,pg18-fts ,pg18-olap ,pg18-feat ,pg18-lang ,pg18-type ,pg18-util ,pg18-func ,pg18-admin ,pg18-stat ,pg18-sec ,pg18-fdw ,pg18-sim ,pg18-etl
     ]
 

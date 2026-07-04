@@ -91,14 +91,13 @@ all:
           - { user: 'all' ,db: all  ,addr: 127.0.0.1/32  ,auth: ssl ,title: 'all user ssl access from localhost' }
           - { user: 'all' ,db: all  ,addr: intra         ,auth: ssl ,title: 'all user ssl access from intranet'  }
         pg_vip_enabled: true
-        pg_vip_interface: eth1
         pg_crontab: [ '00 01 * * * /pg/bin/pg-backup full' ] # make a full backup every day 1am
 
   vars:
     #----------------------------------------------#
     # INFRA : https://pigsty.io/docs/infra/param
     #----------------------------------------------#
-    version: v4.3.0
+    version: v4.4.0
     admin_ip: 10.10.10.10
     region: default
     infra_portal:
