@@ -21,7 +21,7 @@ Cluster Operations (via patronictl):
   pig pt pause                     pause automatic failover
   pig pt resume                    resume automatic failover
   pig pt switchover                perform planned switchover
-  pig pt failover                  perform manual failover
+  pig pt failover [candidate]      perform manual failover
   pig pt config <action>           manage cluster config (edit|show|set|pg)
 
 Service Management (via systemctl):
@@ -222,7 +222,7 @@ pig pt reinit pg-test-1 --plan   # 预览执行计划
 
 ### pt switchover
 
-通过 Patroni 执行计划内的主从切换。（命令简写：`pt so`）
+通过 Patroni 执行计划内的主从切换。（命令别名：`sw`）
 
 ```bash
 pig pt switchover                 # 交互式切换
@@ -230,7 +230,7 @@ pig pt switchover -y              # 跳过确认
 pig pt switchover -l pg-1 -c pg-2 # 指定当前主库和新主库
 pig pt switchover -s "2026-07-01T12:00:00"  # 定时切换
 pig pt switchover --plan          # 预览执行计划
-pig pt so -c pg-test-1 -y         # 无需确认直接切换至 pg-test-1 实例
+pig pt sw -c pg-test-1 -y         # 无需确认直接切换至 pg-test-1 实例
 ```
 
 **选项：**
@@ -245,21 +245,21 @@ pig pt so -c pg-test-1 -y         # 无需确认直接切换至 pg-test-1 实例
 {.full-width}
 
 相比 `patronictl` 命令行，pig 会从 `/etc/patroni/patroni.yml` 中解析并填充集群 scope，避免用户手动输入集群名称。
-如果未指定 `--candidate`，pig 不会自行挑选实例，而是将候选选择交给 `patronictl` / Patroni；如果没有适格副本，Patroni 会拒绝切换。需要指定新主实例时，使用 `--candidate/-c`。
+执行或确认前，pig 会读取当前拓扑：集群名、当前 Leader、候选从库以及 pause 状态。如果集群已经 pause，命令会拒绝执行并提示先运行 `pig pt resume`。
 
-
-
+如果未指定 `--candidate`，pig 不会自行挑选实例，而是将候选选择交给 `patronictl` / Patroni；确认提示会说明“将 leadership 转移给 Patroni 选择的最适格从库”，并列出当前观察到的候选成员。需要指定新主实例时，使用 `--candidate/-c`。
 
 
 
 ### pt failover
 
-执行手动故障切换。用于主库不可用时强制切换。（命令简写：`pt fo`）
+执行手动故障切换。用于主库不可用时强制切换。（命令别名：`fo`）
 
-与 `switchover` 不同，`failover` 不要求当前主库可用，但您 **必须** 指定一个候选新主库。
+与 `switchover` 不同，`failover` 不要求当前主库可用，但您 **必须** 指定一个候选新主库。候选可以通过 `--candidate/-c` 指定，也可以作为唯一位置参数传入：`pig pt failover <member>`。
 
 ```bash
 pig pt failover --candidate pg-2          # 交互式故障切换
+pig pt failover pg-2                      # 位置参数形式，等效于 -c pg-2
 pig pt failover -c pg-2 -y                # 跳过确认
 pig pt failover -c pg-2 --plan            # 预览执行计划
 pig pt fo pg-test-2 -y                    # 简写 + 确认
@@ -270,9 +270,11 @@ pig pt fo pg-test-2 -y                    # 简写 + 确认
 | 参数            | 简写   | 说明      |
 |:--------------|:-----|:--------|
 | `--yes`       | `-y` | 跳过确认    |
-| `--candidate` | `-c` | 指定候选新主库 |
+| `--candidate` | `-c` | 指定候选新主库；也可使用位置参数 |
 | `--plan`      |      | 仅显示执行计划 |
 {.full-width}
+
+执行或确认前，pig 会读取当前拓扑并检查 pause 状态。如果集群已经 pause，命令会拒绝执行并提示先运行 `pig pt resume`。确认提示会包含集群名、当前 Leader、指定候选新主库以及当前观察到的候选成员，并保留故障切换可能丢数据的警告。
 
 
 ### pt pause
@@ -282,7 +284,7 @@ pig pt fo pg-test-2 -y                    # 简写 + 确认
 
 ```bash
 pig pt pause                      # 暂停自动故障切换
-pig pt pause --wait               # 等待确认
+pig pt pause -w                   # 等待确认
 ```
 
 **选项：**
@@ -303,7 +305,7 @@ pig pt pause --wait               # 等待确认
 
 ```bash
 pig pt resume                     # 恢复自动故障切换
-pig pt resume --wait              # 等待确认
+pig pt resume -w                  # 等待确认
 ```
 
 **选项：**
@@ -439,13 +441,13 @@ pig pt log -f -n 200           # 显示最近 200 行并持续跟踪
 | `--lines`  | `-n` | 50    | 显示的日志行数  |
 {.full-width}
 
-pig 的工作假设是 Patroni 由 Pigsty 设置，日志打印在 `/pg/log/patroni/patroni.log`。
+日志由 `journalctl -u patroni` 读取；文本模式直接输出 journalctl 结果，JSONL 模式使用 `journalctl -o cat` 读取消息后再包装为 JSONL。
 
 
 
 ## pt svc 子命令
 
-`pt service`（也可简写作 `svc`/`s`）提供与顶层服务命令相同的功能，用于明确操作的是 Patroni 守护进程：
+`pt svc`（也可写作 `pt service`）提供与顶层服务命令相同的功能，用于明确操作的是 Patroni 守护进程：
 
 ```bash
 pig pt svc start                 # 启动 Patroni 服务
