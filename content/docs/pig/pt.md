@@ -10,8 +10,7 @@ categories: [参考]
 `pig patroni` 命令（别名 `pig pt`）用于管理 Patroni 服务和 PostgreSQL HA 集群。它封装了常用的 `patronictl` 和 `systemctl` 操作，提供简化的集群管理体验。
 
 ```bash
-pig pt - Low-level Patroni primitives (patronictl + systemd unit patroni).
-         Orchestrated point-in-time recovery lives in "pig pitr".
+pig pt - Manage Patroni cluster using patronictl commands.
 
 Cluster Operations (via patronictl):
   pig pt list [cluster]            list cluster members
@@ -51,7 +50,7 @@ Logs:
 
 以下命令用于通过 Patroni 管理 PostgreSQL 集群。
 
-| 命令              | 别名   | 描述               | 实现方式                                   |
+| 命令              | 缩写   | 描述               | 实现方式                                   |
 |:----------------|:-----|:-----------------|:---------------------------------------|
 | `pt list`       | `ls` | 列出集群成员           | `patronictl list -e -t`                |
 | `pt restart`    | `rs` | 重启 PostgreSQL 实例 | `patronictl restart`                   |
@@ -64,30 +63,31 @@ Logs:
 | `pt config`     | `c`  | 查看或修改集群配置        | `patronictl show-config / edit-config` |
 {.full-width}
 
+**服务子命令**（`pt service`，封装 `systemctl`）：
+
+以下命令通过 `systemctl` 管理 Patroni 服务本身。
+
+| 命令                   | 缩写          | 描述            |
+|:---------------------|:------------|:--------------|
+| `pt service start`   | `pt svc up` | 启动 Patroni 服务 |
+| `pt service stop`    | `pt svc dn` | 停止 Patroni 服务 |
+| `pt service restart` | `pt svc rs` | 重启 Patroni 服务 |
+| `pt service reload`  | `pt svc rl` | 重载 Patroni 服务 |
+| `pt service status`  | `pt svc st` | 显示服务状态        |
+{.full-width}
+
 **服务管理**（`systemctl` 封装）：
 
 以下顶层命令用于直接查看或管理 Patroni 服务；其中 `pt start` / `pt stop` 是隐藏快捷入口。
 
-| 命令          | 别名   | 描述            | 实现方式                                  |
-|:------------|:-----|:--------------|:--------------------------------------|
-| `pt start`  | `up` | 启动 Patroni 服务 | `systemctl start patroni`             |
-| `pt stop`   | `dn` | 停止 Patroni 服务 | `systemctl stop patroni`              |
+| 命令          | 缩写   | 描述            | 实现方式                                          |
+|:------------|:-----|:--------------|:----------------------------------------------|
+| `pt start`  | `up` | 启动 Patroni 服务 | `systemctl start patroni`                     |
+| `pt stop`   | `dn` | 停止 Patroni 服务 | `systemctl stop patroni`                      |
 | `pt status` | `st` | 显示综合状态        | `systemctl status` + `ps` + `patronictl list` |
-| `pt log`    | `l`  | 查看 Patroni 日志 | `journalctl -u patroni`               |
+| `pt log`    | `l`  | 查看 Patroni 日志 | `journalctl -u patroni`                       |
 {.full-width}
 
-**服务子命令**（`pt svc`）：
-
-以下命令通过 `systemctl` 管理 Patroni 服务本身。
-
-| 命令               | 别名   | 描述            |
-|:-----------------|:-----|:--------------|
-| `pt svc start`   | `up` | 启动 Patroni 服务 |
-| `pt svc stop`    | `dn` | 停止 Patroni 服务 |
-| `pt svc restart` | `rs` | 重启 Patroni 服务 |
-| `pt svc reload`  | `rl` | 重载 Patroni 服务 |
-| `pt svc status`  | `st` | 显示服务状态        |
-{.full-width}
 
 
 ## 快速入门
@@ -267,11 +267,11 @@ pig pt fo pg-test-2 -y                    # 简写 + 确认
 
 **选项：**
 
-| 参数            | 简写   | 说明      |
-|:--------------|:-----|:--------|
-| `--yes`       | `-y` | 跳过确认    |
+| 参数            | 简写   | 说明               |
+|:--------------|:-----|:-----------------|
+| `--yes`       | `-y` | 跳过确认             |
 | `--candidate` | `-c` | 指定候选新主库；也可使用位置参数 |
-| `--plan`      |      | 仅显示执行计划 |
+| `--plan`      |      | 仅显示执行计划          |
 {.full-width}
 
 执行或确认前，pig 会读取当前拓扑并检查 pause 状态。如果集群已经 pause，命令会拒绝执行并提示先运行 `pig pt resume`。确认提示会包含集群名、当前 Leader、指定候选新主库以及当前观察到的候选成员，并保留故障切换可能丢数据的警告。
@@ -441,7 +441,6 @@ pig pt log -f -n 200           # 显示最近 200 行并持续跟踪
 | `--lines`  | `-n` | 50    | 显示的日志行数  |
 {.full-width}
 
-日志由 `journalctl -u patroni` 读取；文本模式直接输出 journalctl 结果，JSONL 模式使用 `journalctl -o cat` 读取消息后再包装为 JSONL。
 
 
 

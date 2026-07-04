@@ -7,7 +7,8 @@ module: [PIG]
 categories: [参考]
 ---
 
-`pig pgbackrest` 命令（别名 `pig pb`）用于管理 pgBackRest 备份和时间点恢复（PITR）。它封装了常用的 `pgbackrest` 操作，提供简化的备份管理体验。所有命令均以数据库超级用户身份（默认 `postgres`）执行。
+`pig pgbackrest` 命令（别名 `pig pb`）用于管理 pgBackRest 备份和时间点恢复（PITR）。
+它封装了常用的 `pgbackrest` 操作，提供简化的备份管理体验。所有命令均以数据库超级用户身份（默认 `postgres`）执行。
 
 ```bash
 pig pb - Manage pgBackRest backup and point-in-time recovery.
@@ -50,40 +51,38 @@ Examples:
 
 **信息查询**：
 
-| 命令             | 描述          | 实现方式               |
-|:---------------|:------------|:-------------------|
-| `pb info`      | 显示备份仓库信息    | `pgbackrest info`  |
-| `pb ls`        | 列出备份集       | `pgbackrest info`  |
-| `pb ls repo`   | 列出配置的仓库     | 解析 pgbackrest.conf |
-| `pb ls stanza` | 列出所有 stanza | 解析 pgbackrest.conf |
+| 命令        | 缩写   | 描述              | 实现方式              |
+|:----------|------|:----------------|:------------------|
+| `pb info` | `i`  | 显示备份仓库信息        | `pgbackrest info` |
+| `pb list` | `ls` | 列出备份集，仓库，Stanza | `pgbackrest info` |
 {.full-width}
 
 **备份与恢复**：
 
-| 命令           | 描述          | 实现方式                 |
-|:-------------|:------------|:---------------------|
-| `pb backup`  | 创建备份        | `pgbackrest backup`  |
-| `pb restore` | 从备份恢复（PITR） | `pgbackrest restore` |
-| `pb expire`  | 清理过期备份      | `pgbackrest expire`  |
+| 命令           | 缩写  | 描述          | 实现方式                 |
+|:-------------|-----|:------------|:---------------------|
+| `pb backup`  | `b` | 创建备份        | `pgbackrest backup`  |
+| `pb restore` | `r` | 从备份恢复（PITR） | `pgbackrest restore` |
+| `pb expire`  | `e` | 清理过期备份      | `pgbackrest expire`  |
 {.full-width}
 
 **Stanza 管理**：
 
-| 命令           | 描述                   | 实现方式                        |
-|:-------------|:---------------------|:----------------------------|
-| `pb create`  | 创建 stanza（首次设置）      | `pgbackrest stanza-create`  |
-| `pb upgrade` | 升级 stanza（PG 大版本升级后） | `pgbackrest stanza-upgrade` |
-| `pb delete`  | 删除 stanza（危险操作！）     | `pgbackrest stanza-delete`  |
+| 命令           | 缩写  | 描述                   | 实现方式                        |
+|:-------------|-----|:---------------------|:----------------------------|
+| `pb create`  | `c` | 创建 stanza（首次设置）      | `pgbackrest stanza-create`  |
+| `pb upgrade` | `u` | 升级 stanza（PG 大版本升级后） | `pgbackrest stanza-upgrade` |
+| `pb delete`  | `d` | 删除 stanza（危险操作！）     | `pgbackrest stanza-delete`  |
 {.full-width}
 
 **控制命令**：
 
-| 命令         | 别名      | 描述               | 实现方式               |
-|:-----------|:--------|:-----------------|:-------------------|
-| `pb check` |         | 验证备份仓库完整性        | `pgbackrest check` |
-| `pb start` |         | 启用 pgBackRest 操作 | `pgbackrest start` |
-| `pb stop`  |         | 禁用 pgBackRest 操作 | `pgbackrest stop`  |
-| `pb log`   | `l, lg` | 查看日志             | 最新日志快照 / tail      |
+| 命令         | 别名   | 描述               | 实现方式               |
+|:-----------|:-----|:-----------------|:-------------------|
+| `pb check` | `ck` | 验证备份仓库完整性        | `pgbackrest check` |
+| `pb start` | `up` | 启用 pgBackRest 操作 | `pgbackrest start` |
+| `pb stop`  | `dw` | 禁用 pgBackRest 操作 | `pgbackrest stop`  |
+| `pb log`   | `l`  | 查看日志             | 最新日志快照 / tail      |
 {.full-width}
 
 
@@ -232,6 +231,8 @@ pig pb backup --force                # 跳过主库角色检查
 **主库检查：**
 
 执行备份前，命令会自动检查当前实例是否为主库。如果是备库，命令会报错退出。使用 `--force` 可跳过此检查。
+
+
 
 
 ### pb expire
