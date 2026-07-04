@@ -35,6 +35,7 @@ Logs:
   pig pt log [-f] [-n 50]          view patroni logs
   pig pt log tail [-n 50]          follow patroni logs
   pig pt log show [-n 50]          show patroni log snapshot
+  pig pt log grep <pattern>        search patroni logs
 ```
 
 `pt start` / `pt stop` 是 `pt svc start` / `pt svc stop` 的隐藏快捷入口；`pt svc` 是显式的 Patroni 守护进程管理入口。
@@ -85,7 +86,7 @@ Logs:
 | `pt start`  | `up` | 启动 Patroni 服务 | `systemctl start patroni`                     |
 | `pt stop`   | `dn` | 停止 Patroni 服务 | `systemctl stop patroni`                      |
 | `pt status` | `st` | 显示综合状态        | `systemctl status` + `ps` + `patronictl list` |
-| `pt log`    | `l`  | 查看 Patroni 日志 | `journalctl -u patroni`                       |
+| `pt log`    | `l`  | 查看 Patroni 日志 | 读取 Patroni 日志目录中的日志文件                         |
 {.full-width}
 
 
@@ -121,6 +122,7 @@ pig pt stop                    # 隐藏快捷入口：等价于 pig pt svc stop
 pig pt svc start               # 启动服务
 pig pt svc stop                # 停止服务
 pig pt log -f                  # 实时查看日志
+pig pt log grep ERROR          # 搜索日志
 ```
 
 
@@ -414,31 +416,34 @@ pig pt status
 
 ### pt log
 
-查看 Patroni 服务日志。只有 `pt log` 与 `pt log show` 支持 `-o json` 输出 JSONL；日志快照不支持 `yaml` 与 `json-pretty`，follow/tail 不支持结构化输出。
+查看 Patroni 服务日志。日志目录默认从 `/etc/patroni/patroni.yml` 的 `log.dir` 读取，未配置时回退到 `/pg/log/patroni`；也可用 `--log-dir` 显式指定。只有 `pt log` 与 `pt log show` 支持 `-o json` 输出 JSONL；日志快照不支持 `yaml` 与 `json-pretty`，follow/tail/grep 不支持结构化输出。
 
 ```bash
 pig pt log                     # 显示最近 50 行日志
 pig pt log -f                  # 实时跟踪日志输出
 pig pt log show                # 显示最近日志
 pig pt log tail                # 跟踪日志
+pig pt log grep ERROR          # 搜索日志
 pig pt log -n 100              # 显示最近 100 行日志
 pig pt log -f -n 200           # 显示最近 200 行并持续跟踪
 ```
 
 **子命令：**
 
-| 子命令    | 别名  | 说明              |
-|:-------|:----|:----------------|
-| `show` | `s` | 输出最近 Patroni 日志 |
-| `tail` | `t` | 持续跟踪 Patroni 日志 |
+| 子命令    | 别名             | 说明              |
+|:-------|:---------------|:----------------|
+| `show` | `cat, c, s`    | 输出最近 Patroni 日志 |
+| `tail` | `t, f, follow` | 持续跟踪 Patroni 日志 |
+| `grep` | `g, search`    | 搜索 Patroni 日志   |
 {.full-width}
 
 **选项：**
 
-| 参数         | 简写   | 默认值   | 说明       |
-|:-----------|:-----|:------|:---------|
-| `--follow` | `-f` | false | 实时跟踪日志输出 |
-| `--lines`  | `-n` | 50    | 显示的日志行数  |
+| 参数          | 简写   | 默认值   | 说明       |
+|:------------|:-----|:------|:---------|
+| `--follow`  | `-f` | false | 实时跟踪日志输出 |
+| `--lines`   | `-n` | 50    | 显示的日志行数  |
+| `--log-dir` |      | 自动解析  | 日志目录     |
 {.full-width}
 
 
@@ -481,14 +486,15 @@ pig pt svc status                # 显示服务状态
 - 集群管理：`restart`、`reload`、`reinit`、`switchover`、`failover`、`pause`、`resume`
 - 配置修改：`config set`、`config pg`、`config edit`
 - 服务管理命令（start/stop/restart/reload/status）调用 `systemctl`
-- `log` 命令调用 `journalctl`
+- `log` 命令读取 Patroni 日志目录中的日志文件
 
 **默认配置路径：**
 
-| 配置项          | 默认值                        |
-|:-------------|:---------------------------|
-| Patroni 配置文件 | `/etc/patroni/patroni.yml` |
-| 服务名称         | `patroni`                  |
+| 配置项          | 默认值                                 |
+|:-------------|:------------------------------------|
+| Patroni 配置文件 | `/etc/patroni/patroni.yml`          |
+| 日志目录         | 配置文件 `log.dir`，回退 `/pg/log/patroni` |
+| 服务名称         | `patroni`                           |
 {.full-width}
 
 **权限处理：**
@@ -499,4 +505,4 @@ pig pt svc status                # 显示服务状态
 
 **平台支持：**
 
-此命令专为 Linux 系统设计，依赖 `systemctl` 和 `journalctl`。
+此命令专为 Linux 系统设计，服务管理依赖 `systemctl`，日志功能依赖可读取的 Patroni 日志文件。

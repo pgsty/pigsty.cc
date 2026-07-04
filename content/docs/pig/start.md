@@ -37,7 +37,7 @@ curl -fsSL https://repo.pigsty.io/pig | bash
 
 
 
-PIG 二进制包大约 4 MB，在 Linux 上会自动使用 `rpm` 或 `dpkg` 安装最新可用版本：
+PIG 二进制包大约 5 MB，在 Linux 上会自动使用 `rpm` 或 `dpkg` 安装最新可用版本：
 
 ```bash
 $ curl -fsSL https://repo.pigsty.cc/pig | bash
@@ -49,14 +49,14 @@ $ curl -fsSL https://repo.pigsty.cc/pig | bash
 [INFO] downloading pig v1.5.0
 curl -fSL https://repo.pigsty.cc/pkg/pig/v1.5.0/pig_1.5.0-1_amd64.deb -o /tmp/pig_1.5.0-1_amd64.deb
 ######################################################################## 100.0%
-[INFO] md5sum = 566e06f6da1fe9d635c41258d20cd9ff10de4e6e74b3b41ba2c6204ba22743c8
+[INFO] md5sum = b7d18865090df8c03523c79ec2744e91
 [INFO] installing: dpkg -i /tmp/pig_1.5.0-1_amd64.deb
 (Reading database ... 166001 files and directories currently installed.)
 Preparing to unpack /tmp/pig_1.5.0-1_amd64.deb ...
 Unpacking pig (1.5.0-1) ...
 Setting up pig (1.5.0-1) ...
 [INFO] pig v1.5.0 installed successfully
-check https://pigsty.io/ext/ for details
+check https://pgext.cloud for details
 ```
 
 
@@ -74,7 +74,6 @@ pig version 1.5.0 linux/amd64
 
 ```bash
 $ pig status
-
 # [Configuration] ================================
 Pig Version      : 1.5.0
 Pig Config       : /home/vagrant/.pig/config.yml
@@ -82,21 +81,21 @@ Log Level        : info
 Log Path         : stderr
 
 # [OS Environment] ===============================
-OS Distro Code   : u24
+OS Distro Code   : u26
 OS OSArch        : arm64
 OS Package Type  : deb
 OS Vendor ID     : ubuntu
-OS Version       : 24
-OS Version Full  : 24.04
-OS Version Code  : noble
+OS Version       : 26
+OS Version Full  : 26.04
+OS Version Code  : resolute
 
 # [PG Environment] ===============================
 Installed:
-- PostgreSQL 18.1 (Ubuntu 18.1-1.pgdg24.04+2)  398 Extensions
+* PostgreSQL 18.4 (Ubuntu 18.4-1.pgdg26.04+1)  72  Extensions
 
 Active:
-PG Version      :  PostgreSQL 18.1 (Ubuntu 18.1-1.pgdg24.04+2)
-Config Path     :  /usr/bin/pg_config
+PG Version      :  PostgreSQL 18.4 (Ubuntu 18.4-1.pgdg26.04+1)
+Config Path     :  /usr/lib/postgresql/18/bin/pg_config
 Binary Path     :  /usr/lib/postgresql/18/bin
 Library Path    :  /usr/lib/postgresql/18/lib
 Extension Path  :  /usr/share/postgresql/18/extension
@@ -106,12 +105,12 @@ Inventory Path   : Not Found
 Pigsty Home      : Not Found
 
 # [Network Conditions] ===========================
-pigsty.cc  ping ok: 802 ms
-pigsty.io  ping ok: 1410 ms
+pigsty.cc  ping ok: 376 ms
+pigsty.io  ping ok: 1270 ms
 Internet Access   :  true
 Pigsty Repo       :  pigsty.io
 Inferred Region   :  china
-Latest Pigsty Ver :  v4.3.0
+Latest Pigsty Ver :  v4.4.0
 ```
 
 ## 自动化建议
@@ -130,22 +129,19 @@ pig pitr -d -y                # 跳过确认（自动化场景）
 
 ```bash
 $ pig ext list
+✓ Found 531 extensions
+Name                Status     Version     Cate   Flags   License         Repo     PGVer  Package                               Description
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+timescaledb         available  2.28.2      TIME   -dslt-  Timescale       PIGSTY   15-18  postgresql-18-timescaledb-tsl         Enables scalable inserts and complex queries for time-series dat
+timescaledb_toolkit available  1.23.0      TIME   -ds---  Timescale       PIGSTY   15-18  postgresql-18-timescaledb-toolkit     Library of analytical hyperfunctions, time-series pipelining, an
+timeseries          available  0.2.1       TIME   -d----  PostgreSQL      PIGSTY   14-18  postgresql-18-pg-timeseries           Convenience API for time series stack
+periods             available  1.2.3       TIME   -ds---  PostgreSQL      PGDG     14-18  postgresql-18-periods                 Provide Standard SQL functionality for PERIODs and SYSTEM VERSIO
+........
+pg_bulkload         available  3.1.23      ETL    bds---  BSD 3-Clause    PIGSTY   14-18  postgresql-18-pg-bulkload             pg_bulkload is a high speed data loading utility for PostgreSQL
+test_decoding       available  -           ETL    --s--x  PostgreSQL      CONTRIB  14-18  postgresql-18                         SQL-based test/example module for WAL logical decoding
+pgoutput            available  -           ETL    --s---  PostgreSQL      CONTRIB  14-18  postgresql-18                         Logical Replication output plugin
 
-Name                            Status              Version     Cate   Flags   License       Repo     PGVer  Package                               Description
-----                            ------              -------     ----   ------  -------       ------   -----  ------------                          ---------------------
-timescaledb                     installed  2.24.0      TIME   -dsl--  Timescale     PIGSTY   15-18  postgresql-18-timescaledb-tsl         Enables scalable inserts and complex queries for time-series dat
-timescaledb_toolkit             installed  1.22.0      TIME   -ds-t-  Timescale     PIGSTY   15-18  postgresql-18-timescaledb-toolkit     Library of analytical hyperfunctions, time-series pipelining, an
-timeseries                      installed  0.2.0       TIME   -d----  PostgreSQL    PIGSTY   14-18  postgresql-18-pg-timeseries           Convenience API for time series stack
-periods                         installed  1.2.3       TIME   -ds---  PostgreSQL    PGDG     14-18  postgresql-18-periods                 Provide Standard SQL functionality for PERIODs and SYSTEM VERSIO
-temporal_tables                 installed  1.2.2       TIME   -ds--r  BSD 2-Clause  PIGSTY   14-18  postgresql-18-temporal-tables         temporal tables
-.........
-pg_fact_loader                  not avail  2.0.1       ETL    -ds--x  MIT           PGDG     13-17  postgresql-18-pg-fact-loader          build fact tables with Postgres
-pg_bulkload                     installed  3.1.23      ETL    bds---  BSD 3-Clause  PIGSTY   14-18  postgresql-18-pg-bulkload             pg_bulkload is a high speed data loading utility for PostgreSQL
-test_decoding                   available  -           ETL    --s--x  PostgreSQL    CONTRIB  14-18  postgresql-18                         SQL-based test/example module for WAL logical decoding
-pgoutput                        available  -           ETL    --s---  PostgreSQL    CONTRIB  14-18  postgresql-18                         Logical Replication output plugin
-
-
-(531 Rows) (Status: installed, available, not avail | Flags: b = HasBin, d = HasDDL, s = HasLib, l = NeedLoad, t = Trusted, r = Relocatable, x = Unknown)
+(531 Rows)
 ```
 
 所有的扩展元数据都在一份名为 [`extension.csv`](https://github.com/pgsty/pig/blob/main/cli/ext/assets/extension.csv) 的数据文件中定义，
@@ -326,29 +322,18 @@ pig ext add pg16=16.5            # install PostgreSQL 16 with a specific minor v
 ```bash
 $ pig ext status
 
-Installed:
-- PostgreSQL 18.1 (Ubuntu 18.1-1.pgdg24.04+2)  398 Extensions
+✓ PostgreSQL 18: 72 extensions installed (3 shown)
+PostgreSQL 18: PostgreSQL 18.4 (Ubuntu 18.4-1.pgdg26.04+1)
+  Binary: /usr/lib/postgresql/18/bin
+  Extension: /usr/share/postgresql/18/extension
 
-Active:
-PG Version      :  PostgreSQL 18.1 (Ubuntu 18.1-1.pgdg24.04+2)
-Config Path     :  /usr/bin/pg_config
-Binary Path     :  /usr/lib/postgresql/18/bin
-Library Path    :  /usr/lib/postgresql/18/lib
-Extension Path  :  /usr/share/postgresql/18/extension
-Extension Stat  :  329 Installed (PIGSTY 234, PGDG 95) + 69 CONTRIB = 398 Total
+Extension Stat: 3 Installed (PGDG 3, PIGSTY 0) + 69 CONTRIB = 72 Total
 
-Name                          Version  Cate  Flags   License     Repo    Package                               Description
-----                          -------  ----  ------  -------     ------  ------------                          ---------------------
-timescaledb                   2.24.0   TIME  -dsl--  Timescale   PIGSTY  postgresql-18-timescaledb-tsl         Enables scalable inserts and complex queries for time-series dat
-timescaledb_toolkit           1.22.0   TIME  -ds-t-  Timescale   PIGSTY  postgresql-18-timescaledb-toolkit     Library of analytical hyperfunctions, time-series pipelining, an
-timeseries                    0.2.0    TIME  -d----  PostgreSQL  PIGSTY  postgresql-18-pg-timeseries           Convenience API for time series stack
-periods                       1.2.3    TIME  -ds---  PostgreSQL  PGDG    postgresql-18-periods                 Provide Standard SQL functionality for PERIODs and SYSTEM VERSIO
-temporal_tables               1.2.2    TIME  -ds--r  BSD 2-Clause PIGSTY postgresql-18-temporal-tables         temporal tables
-postgis                       3.6.1    GIS   -ds---  GPL-2.0     PGDG    postgresql-18-postgis-3               PostGIS geometry and geography spatial types and functions
-postgis_topology              3.6.1    GIS   -ds---  GPL-2.0     PGDG    postgresql-18-postgis-3               PostGIS topology spatial types and functions
-postgis_raster                3.6.1    GIS   -ds---  GPL-2.0     PGDG    postgresql-18-postgis-3               PostGIS raster types and functions
-vector                        0.8.1    RAG   -ds--r  PostgreSQL  PGDG    postgresql-18-pgvector                vector data type and ivfflat and hnsw access methods
-pg_duckdb                     1.1.0    OLAP  -dsl--  MIT         PIGSTY  postgresql-18-pg-duckdb               DuckDB Embedded in Postgres
+Name       Version  Cate   Flags   License       Repo  Package                 Description
+───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+pg_repack  1.5.3    ADMIN  bds---  PostgreSQL    PGDG  postgresql-18-repack    Reorganize tables in PostgreSQL databases with minimal locks
+vector     0.8.4    RAG    -ds--r  PostgreSQL    PGDG  postgresql-18-pgvector  vector data type and ivfflat and hnsw access methods
+wal2json   2.6      ETL    --s--x  BSD 3-Clause  PGDG  postgresql-18-wal2json  Changing data capture in JSON format
 ```
 
 如果您的当前系统路径中找不到 PostgreSQL（以 `PATH` 中的 `pg_config` 为准），建议显式通过 `-v|-p` 指定 PG 大版本号或 `pg_config` 路径，以避免版本探测歧义。

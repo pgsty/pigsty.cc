@@ -37,6 +37,14 @@ Backup and Target Options:
 Use --no-restart with --target-action=shutdown because PostgreSQL exits
 after reaching the recovery target.
 
+Custom -D side restores require --no-restart. The custom directory must
+already exist, be owned by the configured DBSU (postgres by default), and
+be writable by that user. Pig does not create this directory automatically.
+
+Additional pgBackRest arguments:
+  Put raw pgBackRest restore arguments after -- so Cobra stops parsing them.
+  Example: pig pitr -d -- --delta
+
 Time Format:
   - Full: "2025-01-01 12:00:00+08"
   - Date only: "2025-01-01" (defaults to 00:00:00)
@@ -100,6 +108,7 @@ pig pitr -d -b 20251225-120000F
 pig pitr -d --no-restart
 
 # side restore：恢复到自定义目录，不触碰 Patroni 与 /pg/data
+install -d -m 700 -o postgres -g postgres /tmp/pg-restore
 pig pitr -d -D /tmp/pg-restore --no-restart
 
 # 额外 pgBackRest restore 参数写在 -- 之后
@@ -177,7 +186,12 @@ pig pitr -d -- --delta
 
 托管 PostgreSQL 数据目录来自有效 pgBackRest 配置中的 `pg1-path` 与命令参数，而不是硬编码 `/pg/data`。例如托管 PGDATA 是 `/var/lib/pgsql/18/data` 时，仍然按托管恢复处理。路径比较会在需要时以数据库超级用户解析软链接，因此指向托管 PGDATA 的软链接不会被误判为 side restore。
 
-显式 `-D/--data` 且解析后不同于托管目录时，才是 side restore。side restore 必须使用 `--no-restart`，不会停止 Patroni，也不会管理默认 PostgreSQL 服务；恢复后请手工使用类似 `pg_ctl -D <dir> -o "-p 5433" start`、`pg_ctl -D <dir> status` 和 `pgbackrest --pg1-path=<dir> stanza-create` 的命令处理。side restore 目录必须已存在且归属 DBSU；与托管 PGDATA 不同，它不要求预先包含 `PG_VERSION` 初始化标记。
+显式 `-D/--data` 且解析后不同于托管目录时，才是 side restore。side restore 必须使用 `--no-restart`，不会停止 Patroni，也不会管理默认 PostgreSQL 服务；恢复后请手工使用类似 `pg_ctl -D <dir> -o "-p 5433" start`、`pg_ctl -D <dir> status` 和 `pgbackrest --pg1-path=<dir> stanza-create` 的命令处理。side restore 目录必须已存在且归属 DBSU；与托管 PGDATA 不同，它不要求预先包含 `PG_VERSION` 初始化标记。Pig 不会自动创建该目录，因为命令需要在 destructive restore 前完成路径归类、owner 检查和安全提示。
+
+```bash
+install -d -m 700 -o postgres -g postgres /tmp/pg-restore
+pig pitr -d -D /tmp/pg-restore --no-restart
+```
 
 对于非 `/pg/data` 的托管 PGDATA，恢复后的 runbook 命令会显式带上有效数据目录，例如：
 
@@ -262,17 +276,18 @@ pig pitr -I
 ```bash
 pig pitr -d --no-restart
 
-# 手动检查目录或日志后再启动
+# PostgreSQL 与 Patroni 都保持停止；手动检查目录或日志后再启动
 pig pg start
 ```
 
 ### 场景五：自定义目录 side restore
 
 ```bash
+install -d -m 700 -o postgres -g postgres /tmp/pg-restore
 pig pitr -d -D /tmp/pg-restore --no-restart
 
 # 使用空闲端口手动启动 side restore
-pg_ctl -D /tmp/pg-restore -o "-p 15432" start
+pg_ctl -D /tmp/pg-restore -o "-p 5433" start
 ```
 
 
@@ -336,6 +351,8 @@ pig pb create
 
 **Side restore 边界：** 自定义 `-D` side restore 必须使用 `--no-restart`，因为恢复出来的 PostgreSQL 配置仍使用原端口；side restore 不管理 Patroni 或默认 PostgreSQL 服务。
 
+**失败边界：** 如果 restore 在 Patroni 已停止后失败，Patroni 会保持停止，目标数据目录可能已经部分恢复。修复底层问题后应重新执行 PITR，或先验证恢复状态；不要在未确认前启动 Patroni。如果 restore 已执行但 PostgreSQL 启动失败，同样应先检查 PostgreSQL/pgBackRest 日志并验证数据目录，再决定是否恢复 Patroni 管理。
+
 **结构化输出：** 结构化执行需要 `--yes`；`--plan` 是预览路径。成功执行后的结构化 PITR 结果会把恢复后操作放在 Result envelope 的 `next_actions`，而不是 `data` 内部。`data` 包含 `requested_data_dir`、`effective_data_dir`、`managed_data_dir` 与 `side_restore`，便于自动化区分用户输入和实际恢复目标。
 
 
@@ -354,4 +371,4 @@ pig pb create
 
 **平台支持：**
 
-此命令专为 Linux 系统设计，依赖 pgBackRest、systemd 与 Pigsty 默认目录约定。
+此命令专为 Linux 系统设计，依赖 pgBackRest、systemd（托管服务场景）以及 DBSU 可访问的数据目录与日志路径。

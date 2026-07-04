@@ -14,7 +14,7 @@ pig build - Build Postgres Extension
 
 Environment Setup:
   pig build spec                   # init build spec and directory (~ext)
-  pig build repo                   # init build repo (=repo set, with remove+update)
+  pig build repo                   # init build repo (=repo set -ru)
   pig build tool  [mini|full|...]  # init build toolset
   pig build rust  [-y]             # install Rust toolchain
   pig build pgrx  [-v <ver>]       # install & init pgrx (0.19.1)
@@ -31,18 +31,18 @@ Quick Start:
   pig build pkg citus              # build citus extension
 ```
 
-| 命令 | 描述 | 备注 |
-|:---|:---|:---|
-| `build spec` | 初始化构建规范仓库 | |
-| `build repo` | 初始化所需仓库 | 需要 sudo 或 root 权限 |
-| `build tool` | 初始化构建工具 | 需要 sudo 或 root 权限 |
-| `build rust` | 安装 Rust 工具链 | 需要 sudo 或 root 权限 |
-| `build pgrx` | 安装并初始化 pgrx | 需要 sudo 或 root 权限 |
-| `build proxy` | 初始化构建代理 | |
-| `build get` | 下载源代码 tarball | |
-| `build dep` | 安装扩展构建依赖 | 需要 sudo 或 root 权限 |
-| `build ext` | 构建扩展包 | 需要 sudo 或 root 权限 |
-| `build pkg` | 完整构建流程：get、dep、ext | 需要 sudo 或 root 权限 |
+| 命令            | 描述                 | 备注                |
+|:--------------|:-------------------|:------------------|
+| `build spec`  | 初始化构建规范目录          |                   |
+| `build repo`  | 初始化所需仓库            | 需要 sudo 或 root 权限 |
+| `build tool`  | 初始化构建工具            | 需要 sudo 或 root 权限 |
+| `build rust`  | 安装 Rust 工具链        | 需要 sudo 或 root 权限 |
+| `build pgrx`  | 安装并初始化 pgrx        | 需要 sudo 或 root 权限 |
+| `build proxy` | 初始化构建代理            |                   |
+| `build get`   | 下载源代码 tarball      |                   |
+| `build dep`   | 安装扩展构建依赖           | 需要 sudo 或 root 权限 |
+| `build ext`   | 构建扩展包              | 需要 sudo 或 root 权限 |
+| `build pkg`   | 完整构建流程：get、dep、ext | 需要 sudo 或 root 权限 |
 {.full-width}
 
 
@@ -58,8 +58,8 @@ pig build spec
 pig build pkg citus
 
 # 构建的包将位于：
-# - EL: ~/rpmbuild/RPMS/
-# - Debian: ~/
+# - EL: ~/ext/pkg/（同时可从 ~/rpmbuild/RPMS/ 访问）
+# - Debian: ~/ext/pkg/（同时可从 ~/debbuild/DEBS/ 访问）
 ```
 
 更精细的控制方式：
@@ -85,37 +85,49 @@ pig build pkg citus              # get + dep + ext
 ### 目录结构
 
 ```
-~/ext/                           # 默认构建规范目录
-├── Makefile                     # 主构建 makefile
-├── <extension>/                 # 每个扩展的目录
-│   ├── Makefile                # 扩展特定的 makefile
-│   ├── <extension>.spec        # RPM 规范文件（EL）
-│   └── debian/                 # Debian 打包文件
-│       ├── control
-│       ├── rules
-│       └── ...
+~/ext/                           # 真实工作目录
+├── pkg/                         # 构建产物输出目录
+├── src/                         # 源码 tarball 下载目录
+├── log/                         # 构建日志目录
+└── tmp/                         # 临时目录
+
+~/rpmbuild/                      # EL 构建目录
+├── RPMS -> ~/ext/pkg            # RPM 产物软链接
+├── SOURCES -> ~/ext/src         # 源码软链接
+├── SPECS/
+├── BUILD/
+├── BUILDROOT/
+└── SRPMS/
+
+~/debbuild/                      # Debian / Ubuntu 构建目录
+├── DEBS -> ~/ext/pkg            # DEB 产物软链接
+├── SOURCES -> ~/ext/src         # 源码软链接
+├── SPECS/
+└── BUILD/
 ```
 
 **构建输出位置：**
-- **EL 系统**：`~/rpmbuild/RPMS/<arch>/`
-- **Debian 系统**：`~/`（deb 文件）
+- **EL 系统**：`~/ext/pkg/`，并通过 `~/rpmbuild/RPMS/` 软链接访问
+- **Debian 系统**：`~/ext/pkg/`，并通过 `~/debbuild/DEBS/` 软链接访问
 
 
 ## build spec
 
-设置构建规范仓库和目录结构。
+设置构建规范与目录结构。
 
 ```bash
 pig build spec                   # 在默认位置初始化 ~/ext
+pig build spec -f                # 强制重新下载构建规范 tarball
+pig build spec -m                # 优先使用 pigsty.cc 中国镜像
 ```
 
 **功能：**
-1. 克隆或更新扩展构建规范仓库
-2. 创建必要的目录结构
-3. 设置 makefile 和构建脚本
-4. 准备平台特定的打包文件
+1. 下载 RPM 或 DEB 构建规范 tarball
+2. 创建 `~/ext/{pkg,src,log,tmp}` 与平台构建目录
+3. 将 `RPMS/DEBS` 与 `SOURCES` 软链接到 `~/ext/pkg` 和 `~/ext/src`
+4. 通过增量 `rsync` 同步 makefile、spec 与 Debian 打包文件
 
-**仓库位置：** 默认 `~/ext/`，包含 100+ 扩展的构建规范。
+**工作目录：** 默认使用 `~/ext/` 保存源码、产物、日志与临时文件；平台打包目录为 `~/rpmbuild/` 或 `~/debbuild/`。
 
 
 ## build repo
@@ -123,10 +135,10 @@ pig build spec                   # 在默认位置初始化 ~/ext
 初始化构建扩展所需的包仓库。
 
 ```bash
-pig build repo                   # 等同于：pig repo set（内部执行 remove+update）
+pig build repo                   # 等同于：pig repo set -ru
 ```
 
-**功能：** 移除现有仓库、添加所有必需仓库（pgdg、pigsty、node）、更新包缓存。
+**功能：** 以 `pig repo set -ru` 初始化构建所需仓库：移除旧仓库、添加所需仓库并更新包缓存。
 
 
 ## build tool
@@ -165,7 +177,9 @@ pig build rust -y                # 强制重新安装 Rust 工具链
 
 ```bash
 pig build pgrx                   # 安装最新稳定版 (0.19.1)
-pig build pgrx -v 0.15.0         # 安装特定版本
+pig build pgrx -v 0.19.1         # 安装特定版本
+pig build pgrx --pg 18,17,16     # 为指定 PG 版本初始化 pgrx
+pig build pgrx --pg init         # 只执行 cargo pgrx init，不传 PG 参数
 ```
 
 **前提条件：** 必须先安装 Rust 工具链、PostgreSQL 开发头文件。
@@ -177,8 +191,8 @@ pig build pgrx -v 0.15.0         # 安装特定版本
 
 ```bash
 pig build proxy                  # 交互式设置
-pig build proxy user@host:8080   # 直接配置
-pig build proxy http://proxy.company.com:3128
+pig build proxy user@host:8080   # 使用默认本地端口 127.0.0.1:12345
+pig build proxy user@host:8080 127.0.0.1:1080
 ```
 
 
@@ -189,20 +203,23 @@ pig build proxy http://proxy.company.com:3128
 ```bash
 pig build get citus              # 单个扩展
 pig build get citus pgvector     # 多个扩展
-pig build get all                # 所有可用扩展
-pig build get std                # 标准扩展
 pig build get pdu pgdog          # 使用内置源码 alias
+pig build get citus -f           # 已存在时仍重新下载
+pig build get citus -m           # 优先使用 pigsty.cc 中国镜像
 ```
 
-一些源码包并不直接对应扩展名，`pig build get` 内置了少量特殊 alias 以便直接下载源码。`v1.3.2` 新增了 `pdu` 与 `pgdog` 两个 alias。
+`pig build get` 的参数是扩展名、包名或源码文件名；未知名称会按源码文件名处理。它不会把 `all` 或 `std` 展开为内置集合。需要批量下载时，请显式列出目标包名。
+
+一些源码包并不直接对应扩展名，`pig build get` 内置了特殊 alias 以便直接下载源码。
 
 ```bash
 pig build get pdu                # 下载 pdu-3.0.25.12.tar.gz
 pig build get pgdog              # 下载 pgdog-0.1.32.tar.gz
 pig build get pgedge             # 同时下载 PostgreSQL 与 spock 源码
+pig build get onesparse          # 同时下载 onesparse、graphblas、lagraph
 ```
 
-当前常见的特殊源码 alias 包括：`babelfishpg` / `babelfish`、`agensgraph` / `agens`、`pgedge`、`pdu`、`pgdog`。
+当前常见的特殊源码 alias 包括：`babelfishpg` / `babelfish`、`agensgraph` / `agentsgraph`、`oriolepg` / `orioledb`、`cloudberry`、`pgedge`、`pdu`、`pgdog`、`rdkit`、`onesparse`、`libfepgutils`。
 
 
 ## build dep
@@ -214,6 +231,10 @@ pig build dep citus              # 单个扩展
 pig build dep citus pgvector     # 多个扩展
 pig build dep citus --pg 17,16   # 为特定 PG 版本
 ```
+
+**选项：**
+
+- `--pg`：指定一个或多个 PostgreSQL 大版本；未指定时按扩展元数据或本机安装自动推断
 
 
 ## build ext
@@ -227,6 +248,11 @@ pig build ext citus --pg 17      # 为特定 PG 版本
 pig build ext citus -s           # 包含调试符号（仅 RPM）
 ```
 
+**选项：**
+
+- `--pg`：指定一个或多个 PostgreSQL 大版本
+- `-s|--symbol`：构建调试符号包（仅 RPM）
+
 
 ## build pkg
 
@@ -237,7 +263,14 @@ pig build pkg citus              # 构建单个扩展
 pig build pkg citus pgvector     # 构建多个
 pig build pkg citus --pg 17,16   # 为多个 PG 版本
 pig build pkg citus -s           # 包含调试符号
+pig build pkg citus -m           # 优先使用 pigsty.cc 中国镜像下载源码
 ```
+
+**选项：**
+
+- `--pg`：指定一个或多个 PostgreSQL 大版本
+- `-s|--symbol`：构建调试符号包（仅 RPM）
+- `-m|--mirror`：下载源码时优先使用 `pigsty.cc` 镜像
 
 
 ## 常见工作流
@@ -254,8 +287,8 @@ pig build tool
 pig build pkg pg_partman
 
 # 3. 安装构建的包
-sudo rpm -ivh ~/rpmbuild/RPMS/x86_64/pg_partman*.rpm  # EL
-sudo dpkg -i ~/pg_partman*.deb                         # Debian
+sudo rpm -ivh ~/ext/pkg/pg_partman*.rpm  # EL
+sudo dpkg -i ~/ext/pkg/*partman*.deb     # Debian
 ```
 
 ### 工作流 2：构建 Rust 扩展
@@ -329,7 +362,7 @@ export PG_CONFIG=/usr/pgsql-18/bin/pg_config
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 # 更新 PGRX
-cargo install cargo-pgrx --force
+cargo install --locked cargo-pgrx@0.19.1
 
 # 重新初始化 PGRX
 cargo pgrx init

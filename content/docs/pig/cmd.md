@@ -12,11 +12,13 @@ categories: [参考]
 - [**pig repo**](/docs/pig/repo/)：管理软件仓库
 - [**pig ext**](/docs/pig/ext/)：管理 PostgreSQL 扩展
 - [**pig build**](/docs/pig/build/)：从源码构建扩展
+- **pig install**：使用原生包管理器安装包，并对 PostgreSQL 别名做翻译
 - [**pig sty**](/docs/pig/sty/)：管理 Pigsty 安装
 - [**pig pg**](/docs/pig/pg/)：管理本地 PostgreSQL 服务器
 - [**pig pt**](/docs/pig/pt/)：管理 Patroni HA 集群
 - [**pig pb**](/docs/pig/pb/)：管理 pgBackRest 备份与恢复
-- [**pig pitr**](/docs/pig/pb/)：进行完整 PITR 工作流
+- [**pig pitr**](/docs/pig/pitr/)：进行完整 PITR 工作流
+- **pig context**：输出面向人工和 Agent 的环境上下文快照
 
 
 
@@ -44,12 +46,13 @@ PostgreSQL Extension Manager
 
 Pigsty Management Commands
   do          运行管理任务
-  patroni     使用 patronictl 管理 Patroni 集群
-  pg_exporter 管理 pg_exporter 与监控指标
-  pgbackrest  管理 pgBackRest 备份与恢复
+  pg          管理本地 PostgreSQL 服务器与数据库
+  pt          使用 patronictl 管理 Patroni 集群
+  pb          管理 pgBackRest 备份与恢复
+  pe          管理 pg_exporter 与监控指标
   pitr        编排式时间点恢复
-  postgres    管理本地 PostgreSQL 服务器与数据库
   sty         管理 Pigsty 安装
+  context     显示环境上下文快照
 
 Additional Commands:
   completion  生成指定 shell 的自动补全脚本
@@ -64,9 +67,9 @@ Flags:
   -h, --help               获取帮助信息
   -H, --home string        Pigsty 主目录路径
   -i, --inventory string   配置清单路径
-  -t, --toggle             帮助信息中的占位参数
       --log-level string   日志级别: debug, info, warn, error, fatal, panic (默认 "info")
       --log-path string    日志文件路径，默认为终端输出
+  -o, --output string      输出格式：text, yaml, json, json-pretty（默认 "text"）
 
 使用 "pig [command] --help" 获取命令的详细信息。
 ```
@@ -131,6 +134,20 @@ pig build ext citus              # 构建包
 ```
 
 
+## pig install
+
+使用系统原生包管理器安装软件包，并对 PostgreSQL 内核、扩展及常用别名做包名翻译。需要直接传递系统包名时，可使用 `-n/--no-translation`。
+
+```bash
+pig install pg_duckdb            # 安装扩展并自动翻译包名
+pig install pg18                 # 安装 PostgreSQL 18 内核包组
+pig install nginx htop vim       # 安装多个系统包
+pig install unknown-package -n   # 禁用翻译，按原始包名安装
+pig install pg18 --plan          # 预览安装计划
+pig install pg_vector -y         # 自动确认安装
+```
+
+
 ## pig sty
 
 安装 Pigsty 发行版，详情请参考 [`pig sty`](/docs/pig/sty/)
@@ -140,6 +157,18 @@ pig sty init                     # 安装 Pigsty 到 ~/pigsty
 pig sty boot                     # 安装 Ansible 依赖
 pig sty conf                     # 生成配置
 pig sty deploy                   # 运行部署 playbook
+```
+
+
+## pig context
+
+输出环境上下文快照，覆盖主机、PostgreSQL、Patroni、pgBackRest 与已安装扩展。该命令适合排障和自动化脚本快速了解当前节点状态。
+
+```bash
+pig context                      # 文本输出
+pig context -o json              # JSON 输出
+pig context -m postgres          # 只输出 PostgreSQL 模块（默认包含 host）
+pig context -m postgres,!host    # 排除 host 模块
 ```
 
 

@@ -7,13 +7,13 @@ module: [PIG]
 categories: [参考]
 ---
 
-`pig pg` 命令（别名 `pig postgres`）用于管理本地 PostgreSQL 服务器和数据库。它封装了 `pg_ctl`、`psql`、`vacuumdb` 等原生工具，提供简化的服务器管理体验。
+`pig pg` 命令（别名 `pig postgres`）用于管理本地 PostgreSQL 服务器和数据库。它封装了 `pg_ctl`、`psql`、`vacuumdb` 等本地原语；集群级 Patroni 操作请使用 `pig pt`，编排式 PITR 请使用 `pig pitr`。
 
 ```bash
-pig pg - Manage local PostgreSQL server and databases.
+pig pg - Local PostgreSQL primitives (pg_ctl / psql / local files).
 
 Server Control (via pg_ctl):
-  pig pg init     [-D datadir] [-v ver]     initialize data directory
+  pig pg init     [-v ver] [-D datadir]     initialize data directory
   pig pg start    [-D datadir]              start PostgreSQL server
   pig pg stop     [-D datadir] [-m fast]    stop PostgreSQL server
   pig pg restart  [-D datadir] [-m fast]    restart PostgreSQL server
@@ -33,7 +33,7 @@ Connection & Query:
   pig pg psql     [db] [-c cmd]             connect to database via psql
   pig pg ps       [-a] [-u user]            show current connections
   pig pg kill     [-x] [-u user]            terminate connections (dry-run by default)
-  pig pg clone    <src> [dst]               clone database with FILE_COPY
+  pig pg clone    <src> [dst]               clone database with CREATE DATABASE TEMPLATE
 
 Database Maintenance:
   pig pg vacuum   [db] [-a] [-t table]      vacuum tables
@@ -45,12 +45,12 @@ Tuning:
   pig pg tune     [-p profile]              generate optimized parameters
 
 Instance Fork:
-  pig pg fork init <name> [-s]              create local physical fork
-  pig pg fork list                          list managed /pg/data-* forks
-  pig pg fork start|stop|rm <name>          manage an existing fork
+  pig pg fork init <name> [-D datadir]      fork PGDATA into /pg/data-<name>
+  pig pg fork list                          list managed forks
+  pig pg fork start|stop|rm <name>          manage fork lifecycle
 
 Utilities:
-  pig pg log <list|tail|show|less|grep>     view PostgreSQL logs
+  pig pg log <list|tail|cat|less|grep>      view PostgreSQL logs
 ```
 
 ## 命令概览
@@ -98,14 +98,14 @@ Utilities:
 
 **实例 Fork**：
 
-| 命令              | 别名               | 描述                | 备注                   |
-|:----------------|:-----------------|:------------------|:---------------------|
-| `pg fork`       |                  | `fork init` 的便捷写法 | 默认创建托管 fork，不自动启动    |
-| `pg fork init`  | `create`         | 创建本地一次性物理副本       | 默认 `/pg/data-<name>` |
-| `pg fork list`  |                  | 列出托管 fork         | 扫描 `/pg/data-*`      |
-| `pg fork start` |                  | 启动已有 fork         | 支持托管名或 `-d` 非托管目录    |
-| `pg fork stop`  |                  | 停止已有 fork         | 支持 shutdown mode     |
-| `pg fork rm`    | `remove, delete` | 删除 fork           | 运行中的 fork 需 `--stop` |
+| 命令              | 别名               | 描述                | 备注                        |
+|:----------------|:-----------------|:------------------|:--------------------------|
+| `pg fork`       |                  | `fork init` 的便捷写法 | 默认创建托管 fork，不自动启动         |
+| `pg fork init`  | `create`         | 创建本地一次性物理副本       | 默认 `/pg/data-<name>`      |
+| `pg fork list`  |                  | 列出托管 fork         | 扫描 `/pg/data-*`           |
+| `pg fork start` |                  | 启动已有 fork         | 支持托管名或 `--dst-data` 非托管目录 |
+| `pg fork stop`  |                  | 停止已有 fork         | 支持 shutdown mode          |
+| `pg fork rm`    | `remove, delete` | 删除 fork           | 运行中的 fork 需 `--stop`      |
 {.full-width}
 
 **日志工具**：
@@ -163,7 +163,7 @@ pig pg tune -c 8 -m 32768 -d 500  # 手工覆盖 CPU / 内存 / 磁盘
 # 实例 Fork
 pig pg fork dev                   # 创建 /pg/data-dev
 pig pg fork init dev --start      # 创建并启动 fork，自动分配高位端口
-pig pg fork init dev -s -p 15433  # 创建并在指定端口启动
+pig pg fork init dev -s --dst-port 15433  # 创建并在指定端口启动
 pig pg fork list                  # 列出 /pg/data-* fork
 
 # 日志查看
@@ -197,7 +197,7 @@ pig pg log grep ERROR             # 搜索日志
 
 初始化 PostgreSQL 数据目录，封装 `initdb` 命令。
 
-- 校验和默认打开，除非使用 `-K|--no-data-checksum` 显式关闭
+- 校验和默认打开，除非使用 `-K|--no-data-checksums` 显式关闭
 - 优先使用平台无关的 C.UTF-8 内置 Locale （PG 17 及以上版本），如果不支持则优先使用系统的 C.UTF-8 / C Locale，都不满足时使用系统默认 Locale。
 - 如果数据目录已存在，命令会拒绝执行，除非使用 `-f|--force` 强制覆盖。如果数据目录上有 PostgreSQL 正在运行，即使使用 `-f|--force`，命令也会拒绝执行，以防止数据丢失
 - 您可以使用 `--` 追加额外参数给 `initdb`，例如 `--waldir=/wal` 指定 WAL 日志目录。但如果要覆盖 Locale / Encoding 等参数，建议直接使用 `initdb` 命令。
@@ -215,10 +215,9 @@ pig pg init -- --waldir=/wal      # 传递额外参数给 initdb
 
 | 参数                   | 简写   | 默认值   | 说明                |
 |:---------------------|:-----|:------|:------------------|
-| `--encoding`         | `-E` | UTF8  | 数据库编码             |
-| `--locale`           |      | C     | 区域设置              |
-| `--no-data-checksum` | `-K` | false | 禁用数据校验和           |
-| `--force`            | `-f` | false | 强制初始化，删除已有数据（危险！） |
+| `--no-data-checksums` | `-K` | false | 禁用数据校验和                 |
+| `--force`             | `-f` | false | 强制初始化，删除已有数据（危险！）       |
+| `--yes`               | `-y` | false | 与 `--force` 配合时跳过覆盖确认提示 |
 {.full-width}
 
 
@@ -236,8 +235,8 @@ pig pg start                      # 使用默认设置启动
 pig pg up                         # 别名
 pig pg start -D /data/pg18        # 指定数据目录
 pig pg start -l /pg/log/pg.log    # 重定向输出到日志文件
-pig pg start -o "-p 5433"         # 传递参数给 postgres
-pig pg start -y                   # 强制启动（跳过运行检查）
+pig pg start -O "-p 5433"         # 传递参数给 postgres
+pig pg start -o json              # 结构化输出 JSON
 ```
 
 **选项：**
@@ -246,9 +245,8 @@ pig pg start -y                   # 强制启动（跳过运行检查）
 |:------------|:-----|:------------------------|
 | `--log`     | `-l` | 重定向 stdout/stderr 到日志文件 |
 | `--timeout` | `-t` | 等待超时（秒）                 |
-| `--no-wait` | `-W` | 不等待启动完成                 |
-| `--options` | `-o` | 传递给 postgres 的选项        |
-| `--yes`     | `-y` | 强制启动（即使已运行）             |
+| `--no-wait` |      | 不等待启动完成                 |
+| `--options` | `-O` | 传递给 postgres 的选项        |
 {.full-width}
 
 如果 PostgreSQL 已经运行，命令会提示，并打印现有 Postmaster 进程 PID，不会报错。
@@ -280,7 +278,7 @@ pig pg stop --plan                # 预览停止计划
 |:------------|:-----|:------|:---------------------------|
 | `--mode`    | `-m` | fast  | 关闭模式：smart/fast/immediate  |
 | `--timeout` | `-t` | 60    | 等待超时（秒）                    |
-| `--no-wait` | `-W` | false | 不等待关闭完成                    |
+| `--no-wait` |      | false | 不等待关闭完成                    |
 | `--plan`    |      | false | 只预览本地 `pg_ctl stop` 计划，不执行 |
 {.full-width}
 
@@ -309,11 +307,11 @@ pig pg stop --plan                # 预览停止计划
 pig pg restart                    # 快速重启
 pig pg reboot                     # 别名
 pig pg restart -m immediate       # 立即重启
-pig pg restart -o "-p 5433"       # 使用新选项重启
+pig pg restart -O "-p 5433"       # 使用新选项重启
 pig pg restart --plan             # 预览重启计划
 ```
 
-**选项：** 与 `pg stop` 相同，另外支持 `--options`（`-o`）传递给 postgres。
+**选项：** 与 `pg stop` 相同，另外支持 `--options`（`-O`）传递给 postgres。
 
 
 
@@ -359,6 +357,8 @@ pig pg status -D /data/pg18       # 指定数据目录
 ```bash
 pig pg promote                    # 提升备库
 pig pg promote -D /data/pg18      # 指定数据目录
+pig pg promote --plan             # 预览提升计划
+pig pg promote -y                 # 跳过确认提示
 ```
 
 **选项：**
@@ -366,7 +366,9 @@ pig pg promote -D /data/pg18      # 指定数据目录
 | 参数          | 简写   | 说明      |
 |:------------|:-----|:--------|
 | `--timeout` | `-t` | 等待超时（秒） |
-| `--no-wait` | `-W` | 不等待提升完成 |
+| `--no-wait` |      | 不等待提升完成 |
+| `--plan`    |      | 仅预览提升计划 |
+| `--yes`     | `-y` | 跳过确认提示   |
 {.full-width}
 
 
@@ -461,7 +463,7 @@ pig pg kill -u admin -x           # 终止指定用户的连接
 pig pg kill -d mydb -x            # 终止指定数据库的连接
 pig pg kill -s idle -x            # 终止空闲连接
 pig pg kill --cancel -x           # 取消查询而非终止连接
-pig pg kill -w 5 -x               # 每 5 秒重复执行
+pig pg kill --watch 5 -x           # 每 5 秒重复执行
 pig pg kill --plan                # 预览终止连接计划
 ```
 
@@ -477,7 +479,7 @@ pig pg kill --plan                # 预览终止连接计划
 | `--query` | `-q` | 按查询模式筛选 |
 | `--all` | `-a` | 包括复制连接 |
 | `--cancel` | `-c` | 取消查询而非终止连接 |
-| `--watch` | `-w` | 每 N 秒重复执行 |
+| `--watch` | | 每 N 秒重复执行 |
 | `--plan` | | 预览执行计划，不终止连接 |
 {.full-width}
 
@@ -496,7 +498,7 @@ pig pg kill --plan                # 预览终止连接计划
 pig pg clone meta                       # 克隆 meta 为 meta_1/meta_2/...
 pig pg clone meta meta_fork             # 克隆为指定数据库名
 pig pg clone meta meta_fork --owner dba # 尝试修改新库 owner
-pig pg clone meta meta_fork -p 5433     # 连接指定本地端口
+pig pg clone meta meta_fork --port 5433 # 连接指定本地端口
 pig pg clone meta meta_fork --plan      # 预览克隆计划
 ```
 
@@ -504,7 +506,7 @@ pig pg clone meta meta_fork --plan      # 预览克隆计划
 
 | 参数             | 简写   | 说明                                                      |
 |:---------------|:-----|:--------------------------------------------------------|
-| `--port`       | `-p` | PostgreSQL 端口（默认 `5432` 或 `$PG_PORT`）                   |
+| `--port`       |      | PostgreSQL 端口（默认 `5432` 或 `$PG_PORT`）                   |
 | `--conn-db`    |      | 执行 `CREATE DATABASE` 的连接库，克隆 `postgres` 时默认 `template1` |
 | `--owner`      |      | 克隆后尝试修改新库 owner                                         |
 | `--conn-limit` |      | 新库连接数限制（`-1` 无限制，`0` 禁止连接）                              |
@@ -667,14 +669,14 @@ pig pg tune -o yaml               # 结构化输出 YAML
 
 ### pg fork
 
-创建一个本地一次性 PostgreSQL 物理副本，适合临时分析、排障、恢复验证和开发测试。托管 fork 默认写入 `/pg/data-<name>`，不会注册到 Pigsty、systemd 或 Patroni；显式指定 `-d|--dst-data` 时会创建非托管 fork，不会被 `fork list` 枚举。
+创建一个本地一次性 PostgreSQL 物理副本，适合临时分析、排障、恢复验证和开发测试。托管 fork 默认写入 `/pg/data-<name>`，不会注册到 Pigsty、systemd 或 Patroni；显式指定 `--dst-data` 时会创建非托管 fork，不会被 `fork list` 枚举。
 
 ```bash
 pig pg fork dev                       # 创建 /pg/data-dev，不启动
 pig pg fork init dev --start          # 创建后启动，端口从 15432 开始自动探测
-pig pg fork init dev -s -p 15433      # 创建后在指定端口启动
-pig pg fork init dev -D /pg/data2 -P 15431  # 指定源目录与源端口
-pig pg fork init dev -d /tmp/dev      # 创建非托管 fork
+pig pg fork init dev -s --dst-port 15433    # 创建后在指定端口启动
+pig pg fork init dev -D /pg/data2 --src-port 15431  # 指定源目录与源端口
+pig pg fork init dev --dst-data /tmp/dev    # 创建非托管 fork
 pig pg fork list                      # 列出托管 fork
 pig pg fork start dev                 # 启动已有托管 fork
 pig pg fork stop dev                  # 停止已有托管 fork
@@ -686,13 +688,12 @@ pig pg fork init dev --plan           # 仅显示执行计划
 
 | 参数           | 简写   | 默认值                     | 说明                            |
 |:-------------|:-----|:------------------------|:------------------------------|
-| `--dst-data` | `-d` | `/pg/data-<name>`       | 非托管目标数据目录                     |
-| `--dst-port` | `-p` | 自动探测                    | 目标端口，从 15432 起寻找空闲端口          |
+| `--dst-data` |      | `/pg/data-<name>`       | 非托管目标数据目录                     |
+| `--dst-port` |      | 自动探测                    | 目标端口，从 15432 起寻找空闲端口          |
 | `--src-data` |      | `/pg/data` 或 `$PG_DATA` | 源数据目录；也可用全局 `pg -D/--data` 设置 |
-| `--src-port` | `-P` | `5432` 或 `$PG_PORT`     | 源端口                           |
+| `--src-port` |      | `5432` 或 `$PG_PORT`     | 源端口                           |
 | `--start`    | `-s` | false                   | 创建后启动 fork                    |
 | `--force`    | `-f` | false                   | 覆盖已有且已停止的目标目录，并跳过确认           |
-| `--list`     |      | false                   | 列出 `/pg/data-*` fork          |
 | `--timeout`  | `-t` | 60                      | 启动等待超时（秒）                     |
 | `--yes`      | `-y` | false                   | 跳过确认提示                        |
 | `--plan`     |      | false                   | 只显示执行计划，不执行                   |
@@ -703,9 +704,9 @@ pig pg fork init dev --plan           # 仅显示执行计划
 | 命令                                     | 常用参数                                                                                       | 说明                           |
 |:---------------------------------------|:-------------------------------------------------------------------------------------------|:-----------------------------|
 | `pig pg fork list`                     | `--plan`, `-o json/yaml`                                                                   | 列出托管 fork                    |
-| `pig pg fork start <name> or -d <dir>` | `-d/--dst-data`, `-p/--dst-port`, `-t/--timeout`, `--plan`                                 | 启动已有 fork                    |
-| `pig pg fork stop <name> or -d <dir>`  | `-d/--dst-data`, `-m/--mode`, `-t/--timeout`, `--plan`                                     | 停止已有 fork                    |
-| `pig pg fork rm <name> or -d <dir>`    | `-d/--dst-data`, `--stop`, `-m/--mode`, `-t/--timeout`, `-f/--force`, `-y/--yes`, `--plan` | 删除 fork；运行中的 fork 需 `--stop` |
+| `pig pg fork start <name> or --dst-data <dir>` | `--dst-data`, `--dst-port`, `-t/--timeout`, `--plan`                                | 启动已有 fork                    |
+| `pig pg fork stop <name> or --dst-data <dir>`  | `--dst-data`, `-m/--mode`, `-t/--timeout`, `--plan`                                   | 停止已有 fork                    |
+| `pig pg fork rm <name> or --dst-data <dir>`    | `--dst-data`, `--stop`, `-m/--mode`, `-t/--timeout`, `-f/--force`, `-y/--yes`, `--plan` | 删除 fork；运行中的 fork 需 `--stop` |
 {.full-width}
 
 **行为说明：**
@@ -714,7 +715,7 @@ pig pg fork init dev --plan           # 仅显示执行计划
 - 命令会优先使用 CoW/reflink；如果只能普通复制，会在交互模式中提示空间风险并等待确认。
 - 为避免误删源数据，目标目录不能是 `/`、`/pg`、源 PGDATA、自身父目录或子目录；软链接会先解析到真实路径再判断。
 - 复制完成后会清理 fork 中的运行态与复制状态，并写入 `fork.json`。只有指定 `-s|--start` 时才会启动新实例。
-- 托管 fork 必须通过名称管理；非托管 fork 需要通过 `-d|--dst-data` 指定目录来启动、停止或删除。
+- 托管 fork 必须通过名称管理；非托管 fork 需要通过 `--dst-data` 指定目录来启动、停止或删除。
 
 **列出 fork：**
 

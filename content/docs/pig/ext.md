@@ -174,13 +174,14 @@ pig ext scan [-v version]
 
 ## ext add
 
-安装一个或多个 PostgreSQL 扩展。也可以使用别名 `pig install`。
+安装一个或多个 PostgreSQL 扩展。`pig ext add` 的同级别名包括 `pig ext install`、`pig ext ins` 与 `pig ext a`。顶层 [`pig install`](/docs/pig/cmd/#install) 是另一个原生包管理器包装命令，也支持 PostgreSQL 与扩展包 alias 翻译。
 
 ```bash
 pig ext add pg_duckdb            # 安装 pg_duckdb
 pig ext add pg_duckdb -v 18      # 为 PG 18 安装
 pig ext add pg_duckdb -y         # 自动确认安装
 pig ext add vector postgis       # 安装多个扩展
+pig ext add postgis --plan       # 预览安装计划，不执行
 
 # 使用别名
 pig install pg_duckdb
@@ -198,6 +199,7 @@ pig ext install pg14-main -y     # 安装 pg 14 + 常用扩展（vector, repack,
 
 - `-v|--version`：指定 PG 大版本
 - `-y|--yes`：自动确认安装
+- `--plan`：预览安装计划，不执行包管理器命令
 
 
 ## ext rm
@@ -208,19 +210,31 @@ pig ext install pg14-main -y     # 安装 pg 14 + 常用扩展（vector, repack,
 pig ext rm pg_duckdb             # 移除 pg_duckdb
 pig ext rm pg_duckdb -v 18       # 移除 PG 18 版本
 pig ext rm pgvector -y           # 自动确认移除
+pig ext rm pgvector --plan       # 预览移除计划，不执行
 ```
+
+**选项：**
+
+- `-v|--version`：指定 PG 大版本
+- `-y|--yes`：自动确认移除
+- `--plan`：预览移除计划，不执行包管理器命令
 
 
 ## ext update
 
-将已安装扩展更新到最新版。
+将指定的已安装扩展更新到最新版。出于安全考虑，无参数 `pig ext update` 不会更新所有扩展，而是 no-op；必须显式写出要更新的目标。
 
 ```bash
-pig ext update                   # 更新所有已安装扩展
+pig ext update                   # no-op：必须显式指定目标
 pig ext update pg_duckdb         # 更新特定扩展
 pig ext update postgis timescaledb  # 更新多个扩展
-pig ext update -y                # 自动确认更新
+pig ext update pg_duckdb -y      # 自动确认更新
 ```
+
+**选项：**
+
+- `-v|--version`：指定 PG 大版本
+- `-y|--yes`：自动确认更新
 
 
 ## ext import
@@ -249,6 +263,7 @@ pig ext link 18                  # 链接 PG 18 到 PATH
 pig ext link 16                  # 链接 PG 16 到 /usr/pgsql
 pig ext link /usr/pgsql-16       # 从指定路径链接到 /usr/pgsql
 pig ext link null                # 取消当前 PostgreSQL 链接
+pig ext link none                # null / none / nil / nop / no 均可取消链接
 ```
 
 该命令会创建 `/usr/pgsql` 软链接，并写入 `/etc/profile.d/pgsql.sh`。
@@ -256,7 +271,7 @@ pig ext link null                # 取消当前 PostgreSQL 链接
 
 ## ext reload
 
-从 GitHub 刷新扩展元数据。
+刷新扩展元数据。
 
 ```bash
 pig ext reload                   # 刷新扩展目录

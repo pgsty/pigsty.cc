@@ -15,7 +15,7 @@ pig sty - Init (Download), Bootstrap, Configure, and Deploy Pigsty
 
   pig sty init    [-pfvd]         # install pigsty (~/pigsty by default)
   pig sty boot    [-rpk]          # install ansible and prepare offline pkg
-  pig sty conf    [-cvrsoxnpg]    # configure pigsty and generate config
+  pig sty conf    [-cvrsoxnpg --raw] # configure pigsty and generate config
   pig sty deploy                  # use pigsty to deploy everything (CAUTION!)
   pig sty get                     # download pigsty source tarball
   pig sty list                    # list available pigsty versions
@@ -104,20 +104,22 @@ pig sty conf -c supabase           # 使用 conf/supabase.yml 模板（自托管
 pig sty conf -v 18 -c rich         # 使用 conf/rich.yml 模板，PostgreSQL 18
 pig sty conf -r china -s           # 使用中国区镜像源，跳过 IP 探测
 pig sty conf -x                    # 从环境变量写入代理配置到配置文件
-pig sty conf -c full -g -o ha.yml  # 完整 HA 模板，随机密码输出到 ha.yml
+pig sty conf -c full -g -O ha.yml  # 完整 HA 模板，随机密码输出到 ha.yml
+pig sty conf --raw                 # 使用旧版 shell configure 工作流
 ```
 
 **选项：**
 - `-c|--conf`：配置模板名称（meta/rich/slim/full/supabase/...）
 - `--ip`：主节点 IP 地址
-- `-v|--version`：PostgreSQL 主版本（18/17/16/15/14/13）
+- `-v|--version`：PostgreSQL 主版本（18/17/16/15/14；19 beta 可显式指定）
 - `-r|--region`：上游仓库区域（default/china/europe）
-- `-o|--output`：输出配置文件路径（默认：pigsty.yml）
+- `-O|--output-file`：输出配置文件路径（默认：pigsty.yml）
 - `-s|--skip`：跳过 IP 探测
 - `-p|--port`：SSH 端口
 - `-x|--proxy`：从环境变量写入代理配置
 - `-n|--non-interactive`：非交互模式
 - `-g|--generate`：生成随机默认密码（推荐！）
+- `--raw`：使用旧版 shell configure 工作流
 
 详见：https://pigsty.io/docs/setup/install/#configure
 
