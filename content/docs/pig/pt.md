@@ -57,7 +57,7 @@ Logs:
 | `pt restart`    | `rs` | 重启 PostgreSQL 实例 | `patronictl restart`                   |
 | `pt reload`     | `rl` | 重载 PostgreSQL 配置 | `patronictl reload`                    |
 | `pt reinit`     | `ri` | 重新初始化成员          | `patronictl reinit`                    |
-| `pt switchover` | `sw` | 计划内主从切换          | `patronictl switchover`                |
+| `pt switchover` | `so` | 计划内主从切换          | `patronictl switchover`                |
 | `pt failover`   | `fo` | 手动故障切换           | `patronictl failover`                  |
 | `pt pause`      | `p`  | 暂停自动故障切换         | `patronictl pause`                     |
 | `pt resume`     | `r`  | 恢复自动故障切换         | `patronictl resume`                    |
@@ -222,7 +222,7 @@ pig pt reinit pg-test-1 --plan   # 预览执行计划
 
 ### pt switchover
 
-通过 Patroni 执行计划内的主从切换。（命令别名：`sw`）
+通过 Patroni 执行计划内的主从切换。（命令别名：`so`）
 
 ```bash
 pig pt switchover                 # 交互式切换
@@ -230,7 +230,7 @@ pig pt switchover -y              # 跳过确认
 pig pt switchover -l pg-1 -c pg-2 # 指定当前主库和新主库
 pig pt switchover -s "2026-07-01T12:00:00"  # 定时切换
 pig pt switchover --plan          # 预览执行计划
-pig pt sw -c pg-test-1 -y         # 无需确认直接切换至 pg-test-1 实例
+pig pt so -c pg-test-1 -y         # 无需确认直接切换至 pg-test-1 实例
 ```
 
 **选项：**
