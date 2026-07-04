@@ -27,14 +27,14 @@ Examples:
   pig sty deploy               # run the deploy.yml playbook
 ```
 
-| 命令 | 描述 | 备注 |
-|:---|:---|:---|
-| `sty init` | 安装 Pigsty | |
-| `sty boot` | 安装 Ansible 依赖 | 需要 sudo 或 root 权限 |
-| `sty conf` | 生成配置 | |
-| `sty deploy` | 运行部署 playbook | |
-| `sty list` | 列出可用 Pigsty 版本 | |
-| `sty get` | 下载 Pigsty 源码压缩包 | |
+| 命令           | 描述              | 备注                |
+|:-------------|:----------------|:------------------|
+| `sty init`   | 安装 Pigsty       |                   |
+| `sty boot`   | 安装 Ansible 依赖   | 需要 sudo 或 root 权限 |
+| `sty conf`   | 生成配置            |                   |
+| `sty deploy` | 运行部署 playbook   |                   |
+| `sty list`   | 列出可用 Pigsty 版本  |                   |
+| `sty get`    | 下载 Pigsty 源码压缩包 |                   |
 {.full-width}
 
 

@@ -9,47 +9,96 @@ categories: [参考]
 
 最新稳定版本是 [v1.4.2](https://github.com/pgsty/pig/releases/tag/v1.4.2)。
 
-|       版本        |     日期     | 摘要                                       |                                                     GitHub |
-|:---------------:|:----------:|------------------------------------------|-----------------------------------------------------------:|
-| [v1.4.2](#v142) | 2026-06-18 | 524 个扩展，PG19 beta，pgrx 0.18.1，Patroni 修复 | [v1.4.2](https://github.com/pgsty/pig/releases/tag/v1.4.2) |
-| [v1.4.1](#v141) | 2026-05-01 | 510 个扩展，支持 Ubuntu 26.04，仓库校准             | [v1.4.1](https://github.com/pgsty/pig/releases/tag/v1.4.1) |
-| [v1.4.0](#v140) | 2026-04-19 | 510 个扩展，pgrx 0.18.0，更多构建规格               | [v1.4.0](https://github.com/pgsty/pig/releases/tag/v1.4.0) |
-| [v1.3.4](#v134) | 2026-04-14 | 504 扩展更新与发布产物校验和刷新                       | [v1.3.4](https://github.com/pgsty/pig/releases/tag/v1.3.4) |
-| [v1.3.3](#v133) | 2026-04-10 | 481 扩展与 Go 1.26.2 更新                     | [v1.3.3](https://github.com/pgsty/pig/releases/tag/v1.3.3) |
-| [v1.3.2](#v132) | 2026-03-23 | 例行元数据更新，新增 `pg tune` 与构建别名               | [v1.3.2](https://github.com/pgsty/pig/releases/tag/v1.3.2) |
-| [v1.3.1](#v131) | 2026-03-05 | PG13 退役，支持窗口统一为 PG14-18，扩展增至 464         | [v1.3.1](https://github.com/pgsty/pig/releases/tag/v1.3.1) |
-| [v1.3.0](#v130) | 2026-02-27 | 构建链路强化，扩展增至 461，新内核支持                    | [v1.3.0](https://github.com/pgsty/pig/releases/tag/v1.3.0) |
-| [v1.2.0](#v120) | 2026-02-23 | 统一别名，例行更新，计划模式，仓库修复                      | [v1.2.0](https://github.com/pgsty/pig/releases/tag/v1.2.0) |
-| [v1.1.0](#v110) | 2026-02-12 | 451 扩展，Agent-Native CLI 框架               | [v1.1.0](https://github.com/pgsty/pig/releases/tag/v1.1.0) |
-| [v1.0.0](#v100) | 2026-01-26 | 444, 新增 pg/pt/pb/pitr 子命令，可用性矩阵          | [v1.0.0](https://github.com/pgsty/pig/releases/tag/v1.0.0) |
-| [v0.8.0](#v080) | 2025-12-26 | 440 extensions，移除 sysupdate 仓库           | [v0.8.0](https://github.com/pgsty/pig/releases/tag/v0.8.0) |
-| [v0.7.5](#v075) | 2025-12-12 | 常规扩展更新，使用修复后的阿里云镜像                       | [v0.7.5](https://github.com/pgsty/pig/releases/tag/v0.7.5) |
-| [v0.7.4](#v074) | 2025-12-01 | 更新 ivory/pgtde 内核与 pgdg extras 仓库        | [v0.7.4](https://github.com/pgsty/pig/releases/tag/v0.7.4) |
-| [v0.7.3](#v073) | 2025-11-24 | 修复 el10 & debian13 仓库配置                  | [v0.7.3](https://github.com/pgsty/pig/releases/tag/v0.7.3) |
-| [v0.7.2](#v072) | 2025-11-20 | 437 个扩展，修复 pig build 的一些问题               | [v0.7.2](https://github.com/pgsty/pig/releases/tag/v0.7.2) |
-| [v0.7.1](#v071) | 2025-11-10 | 新网站，改进容器内的使用体验                           | [v0.7.1](https://github.com/pgsty/pig/releases/tag/v0.7.1) |
-| [v0.7.0](#v070) | 2025-11-05 | 强化 build 能力，大批量包更新                       | [v0.7.0](https://github.com/pgsty/pig/releases/tag/v0.7.0) |
-| [v0.6.2](#v062) | 2025-10-03 | 正式提供 PG 18 支持                            | [v0.6.2](https://github.com/pgsty/pig/releases/tag/v0.6.2) |
-| [v0.6.1](#v061) | 2025-08-14 | CI/CD, el10 存根，PGDG 中国镜像                 | [v0.6.1](https://github.com/pgsty/pig/releases/tag/v0.6.1) |
-| [v0.6.0](#v060) | 2025-07-17 | 423 个扩展，percona pg_tde，mcp 工具箱           | [v0.6.0](https://github.com/pgsty/pig/releases/tag/v0.6.0) |
-| [v0.5.0](#v050) | 2025-06-30 | 422 个扩展，新的扩展目录                           | [v0.5.0](https://github.com/pgsty/pig/releases/tag/v0.5.0) |
-| [v0.4.2](#v042) | 2025-05-27 | 421 个扩展，halo 和 oriole deb                | [v0.4.2](https://github.com/pgsty/pig/releases/tag/v0.4.2) |
-| [v0.4.1](#v041) | 2025-05-07 | 414 个扩展，pg18 别名支持                        | [v0.4.1](https://github.com/pgsty/pig/releases/tag/v0.4.1) |
-| [v0.4.0](#v040) | 2025-05-01 | do 和 pt 子命令，halo 和 orioledb              | [v0.4.0](https://github.com/pgsty/pig/releases/tag/v0.4.0) |
-| [v0.3.4](#v034) | 2025-04-05 | 常规更新                                     | [v0.3.4](https://github.com/pgsty/pig/releases/tag/v0.3.4) |
-| [v0.3.3](#v033) | 2025-03-25 | 别名、仓库、依赖                                 | [v0.3.3](https://github.com/pgsty/pig/releases/tag/v0.3.3) |
-| [v0.3.2](#v032) | 2025-03-21 | 新扩展                                      | [v0.3.2](https://github.com/pgsty/pig/releases/tag/v0.3.2) |
-| [v0.3.1](#v031) | 2025-03-19 | 轻微错误修复                                   | [v0.3.1](https://github.com/pgsty/pig/releases/tag/v0.3.1) |
-| [v0.3.0](#v030) | 2025-02-24 | 新主页和扩展目录                                 | [v0.3.0](https://github.com/pgsty/pig/releases/tag/v0.3.0) |
-| [v0.2.2](#v022) | 2025-02-22 | 404 个扩展                                  | [v0.2.2](https://github.com/pgsty/pig/releases/tag/v0.2.2) |
-| [v0.2.0](#v020) | 2025-02-14 | 400 个扩展                                  | [v0.2.0](https://github.com/pgsty/pig/releases/tag/v0.2.0) |
-| [v0.1.4](#v014) | 2025-02-12 | 常规错误修复                                   | [v0.1.4](https://github.com/pgsty/pig/releases/tag/v0.1.4) |
-| [v0.1.3](#v013) | 2025-01-23 | 390 个扩展                                  | [v0.1.3](https://github.com/pgsty/pig/releases/tag/v0.1.3) |
-| [v0.1.2](#v012) | 2025-01-12 | anon 扩展和其他 350 个扩展                       | [v0.1.2](https://github.com/pgsty/pig/releases/tag/v0.1.2) |
-| [v0.1.1](#v011) | 2025-01-09 | 更新扩展列表                                   | [v0.1.1](https://github.com/pgsty/pig/releases/tag/v0.1.1) |
-| [v0.1.0](#v010) | 2024-12-29 | repo、ext、sty 和自更新                        | [v0.1.0](https://github.com/pgsty/pig/releases/tag/v0.1.0) |
-| [v0.0.1](#v001) | 2024-12-23 | 创世发布                                     | [v0.0.1](https://github.com/pgsty/pig/releases/tag/v0.0.1) |
+|       版本        |     日期     | 摘要                                               |                                                     GitHub |
+|:---------------:|:----------:|--------------------------------------------------|-----------------------------------------------------------:|
+| [v1.5.0](#v150) | 2026-07-05 | pig 1.5.0，Pigsty 4.4.0，531 个扩展，clone/fork 与 PITR | [v1.5.0](https://github.com/pgsty/pig/releases/tag/v1.5.0) |
+| [v1.4.2](#v142) | 2026-06-18 | 524 个扩展，PG19 beta，pgrx 0.18.1，Patroni 修复         | [v1.4.2](https://github.com/pgsty/pig/releases/tag/v1.4.2) |
+| [v1.4.1](#v141) | 2026-05-01 | 510 个扩展，支持 Ubuntu 26.04，仓库校准                     | [v1.4.1](https://github.com/pgsty/pig/releases/tag/v1.4.1) |
+| [v1.4.0](#v140) | 2026-04-19 | 510 个扩展，pgrx 0.18.0，更多构建规格                       | [v1.4.0](https://github.com/pgsty/pig/releases/tag/v1.4.0) |
+| [v1.3.4](#v134) | 2026-04-14 | 504 扩展更新与发布产物校验和刷新                               | [v1.3.4](https://github.com/pgsty/pig/releases/tag/v1.3.4) |
+| [v1.3.3](#v133) | 2026-04-10 | 481 扩展与 Go 1.26.2 更新                             | [v1.3.3](https://github.com/pgsty/pig/releases/tag/v1.3.3) |
+| [v1.3.2](#v132) | 2026-03-23 | 例行元数据更新，新增 `pg tune` 与构建别名                       | [v1.3.2](https://github.com/pgsty/pig/releases/tag/v1.3.2) |
+| [v1.3.1](#v131) | 2026-03-05 | PG13 退役，支持窗口统一为 PG14-18，扩展增至 464                 | [v1.3.1](https://github.com/pgsty/pig/releases/tag/v1.3.1) |
+| [v1.3.0](#v130) | 2026-02-27 | 构建链路强化，扩展增至 461，新内核支持                            | [v1.3.0](https://github.com/pgsty/pig/releases/tag/v1.3.0) |
+| [v1.2.0](#v120) | 2026-02-23 | 统一别名，例行更新，计划模式，仓库修复                              | [v1.2.0](https://github.com/pgsty/pig/releases/tag/v1.2.0) |
+| [v1.1.0](#v110) | 2026-02-12 | 451 扩展，Agent-Native CLI 框架                       | [v1.1.0](https://github.com/pgsty/pig/releases/tag/v1.1.0) |
+| [v1.0.0](#v100) | 2026-01-26 | 444, 新增 pg/pt/pb/pitr 子命令，可用性矩阵                  | [v1.0.0](https://github.com/pgsty/pig/releases/tag/v1.0.0) |
+| [v0.8.0](#v080) | 2025-12-26 | 440 extensions，移除 sysupdate 仓库                   | [v0.8.0](https://github.com/pgsty/pig/releases/tag/v0.8.0) |
+| [v0.7.5](#v075) | 2025-12-12 | 常规扩展更新，使用修复后的阿里云镜像                               | [v0.7.5](https://github.com/pgsty/pig/releases/tag/v0.7.5) |
+| [v0.7.4](#v074) | 2025-12-01 | 更新 ivory/pgtde 内核与 pgdg extras 仓库                | [v0.7.4](https://github.com/pgsty/pig/releases/tag/v0.7.4) |
+| [v0.7.3](#v073) | 2025-11-24 | 修复 el10 & debian13 仓库配置                          | [v0.7.3](https://github.com/pgsty/pig/releases/tag/v0.7.3) |
+| [v0.7.2](#v072) | 2025-11-20 | 437 个扩展，修复 pig build 的一些问题                       | [v0.7.2](https://github.com/pgsty/pig/releases/tag/v0.7.2) |
+| [v0.7.1](#v071) | 2025-11-10 | 新网站，改进容器内的使用体验                                   | [v0.7.1](https://github.com/pgsty/pig/releases/tag/v0.7.1) |
+| [v0.7.0](#v070) | 2025-11-05 | 强化 build 能力，大批量包更新                               | [v0.7.0](https://github.com/pgsty/pig/releases/tag/v0.7.0) |
+| [v0.6.2](#v062) | 2025-10-03 | 正式提供 PG 18 支持                                    | [v0.6.2](https://github.com/pgsty/pig/releases/tag/v0.6.2) |
+| [v0.6.1](#v061) | 2025-08-14 | CI/CD, el10 存根，PGDG 中国镜像                         | [v0.6.1](https://github.com/pgsty/pig/releases/tag/v0.6.1) |
+| [v0.6.0](#v060) | 2025-07-17 | 423 个扩展，percona pg_tde，mcp 工具箱                   | [v0.6.0](https://github.com/pgsty/pig/releases/tag/v0.6.0) |
+| [v0.5.0](#v050) | 2025-06-30 | 422 个扩展，新的扩展目录                                   | [v0.5.0](https://github.com/pgsty/pig/releases/tag/v0.5.0) |
+| [v0.4.2](#v042) | 2025-05-27 | 421 个扩展，halo 和 oriole deb                        | [v0.4.2](https://github.com/pgsty/pig/releases/tag/v0.4.2) |
+| [v0.4.1](#v041) | 2025-05-07 | 414 个扩展，pg18 别名支持                                | [v0.4.1](https://github.com/pgsty/pig/releases/tag/v0.4.1) |
+| [v0.4.0](#v040) | 2025-05-01 | do 和 pt 子命令，halo 和 orioledb                      | [v0.4.0](https://github.com/pgsty/pig/releases/tag/v0.4.0) |
+| [v0.3.4](#v034) | 2025-04-05 | 常规更新                                             | [v0.3.4](https://github.com/pgsty/pig/releases/tag/v0.3.4) |
+| [v0.3.3](#v033) | 2025-03-25 | 别名、仓库、依赖                                         | [v0.3.3](https://github.com/pgsty/pig/releases/tag/v0.3.3) |
+| [v0.3.2](#v032) | 2025-03-21 | 新扩展                                              | [v0.3.2](https://github.com/pgsty/pig/releases/tag/v0.3.2) |
+| [v0.3.1](#v031) | 2025-03-19 | 轻微错误修复                                           | [v0.3.1](https://github.com/pgsty/pig/releases/tag/v0.3.1) |
+| [v0.3.0](#v030) | 2025-02-24 | 新主页和扩展目录                                         | [v0.3.0](https://github.com/pgsty/pig/releases/tag/v0.3.0) |
+| [v0.2.2](#v022) | 2025-02-22 | 404 个扩展                                          | [v0.2.2](https://github.com/pgsty/pig/releases/tag/v0.2.2) |
+| [v0.2.0](#v020) | 2025-02-14 | 400 个扩展                                          | [v0.2.0](https://github.com/pgsty/pig/releases/tag/v0.2.0) |
+| [v0.1.4](#v014) | 2025-02-12 | 常规错误修复                                           | [v0.1.4](https://github.com/pgsty/pig/releases/tag/v0.1.4) |
+| [v0.1.3](#v013) | 2025-01-23 | 390 个扩展                                          | [v0.1.3](https://github.com/pgsty/pig/releases/tag/v0.1.3) |
+| [v0.1.2](#v012) | 2025-01-12 | anon 扩展和其他 350 个扩展                               | [v0.1.2](https://github.com/pgsty/pig/releases/tag/v0.1.2) |
+| [v0.1.1](#v011) | 2025-01-09 | 更新扩展列表                                           | [v0.1.1](https://github.com/pgsty/pig/releases/tag/v0.1.1) |
+| [v0.1.0](#v010) | 2024-12-29 | repo、ext、sty 和自更新                                | [v0.1.0](https://github.com/pgsty/pig/releases/tag/v0.1.0) |
+| [v0.0.1](#v001) | 2024-12-23 | 创世发布                                             | [v0.0.1](https://github.com/pgsty/pig/releases/tag/v0.0.1) |
 {.full-width}
+
+
+--------
+
+## v1.5.0 (WIP)
+
+Pig `v1.5.0` 是一次面向 PostgreSQL 运维能力的版本，重点是更安全的本地工作流、更清晰的命令边界，以及更新后的扩展目录。它新增数据库 clone / fork 工作流，强化备份恢复边界，并让自动化脚本更不容易误触破坏性操作。
+
+**主要变化**
+
+- 新增本地数据库工作流：`pig pg clone` 用于快速创建数据库级副本，`pig pg fork` 用于创建一次性的物理实例分叉，方便隔离实验与演练。
+- 恢复流程更克制：`pig pitr` 是 Patroni 受管集群的引导式恢复入口，`pig pb restore` 则保持为更低层的 pgBackRest 原语，并收紧恢复目标校验。
+- 高风险操作更容易预览，也更适合自动化：plan 输出与结构化结果更一致，破坏性命令必须显式确认，不再因为使用结构化输出而被隐式执行。
+- PostgreSQL、Patroni、pgBackRest 与 PITR 的职责边界更清楚，分别对应本地实例操作、HA 操作、备份原语与完整恢复编排。
+- 日志与运维输出更适合脚本和故障现场使用，默认查看最新日志，按场景支持 JSONL，并提供更清晰的操作后指引。
+- 更新构建与发布默认值：`pgrx` 默认版本为 `0.19.1`，内置 Pigsty 为 `4.4.0`，Pig 为 `1.5.0`，`go-toml/v2` 更新到 `2.4.2`。
+
+**扩展目录**
+
+- 可用扩展数量：**524 -> 531**，没有移除项。
+- 新增扩展：`pg_ducklake`、`pgdisablelogerror`、`pg_stat_log`、`pg_stat_plans`、`passwordpolicy`、`db2fce`、`plpgsql_wrap`。
+- 刷新 38 个已有条目的元数据，代表性更新包括 `postgis 3.6.4`、`vector 0.8.3`、`biscuit 2.4.0`、`orioledb 1.8`、`documentdb 0.113`、`credcheck 5.0`、`pgtt 4.5`。
+- OrioleDB alias 改为使用请求的 PostgreSQL 主版本（`$v`），不再固定在 PG17，因此 `orioledb` 可在 RPM 与 DEB 系统上正确解析到 PG16 / PG18 等目标版本。
+- EL9 ARM64 Patroni alias 改为 `patroni.noarch` / `patroni-etcd.noarch`。
+
+**兼容性提醒**
+
+- 自动化执行破坏性操作时请使用 `-y/--yes`。结构化输出不再等同于隐式确认，`--force` 也不再作为 Patroni 操作或 `pig pb delete` 的确认参数。
+- 恢复命令现在需要一个明确的恢复目标；旧的 promote 快捷参数改为 `--target-action=promote`，Patroni 受管恢复应使用 `pig pitr`。
+- 若干容易混淆的短参数已改用长参数，主要涉及恢复目标、Patroni 目标选择，以及维护 / 日志命令。
+- `pig pg start` / `pig pg stop` 现在是幂等操作；`pig pg kill --pid` 默认只预览，必须显式请求执行才会终止连接。
+- 日志命令使用 `-o json` 输出 JSONL；YAML 与 pretty JSON 不用于流式日志。
+
+**校验和**
+
+```bash
+5020401cbecadaa6ebe5de82985c2d93a01b3f40affcfad080fdd840bcc61add  pig-1.5.0-1.aarch64.rpm
+f95a39adf10cd35f0972bb9a4dfa98bb52ecbc0eb7651b683b85dcee8cfea9ed  pig-1.5.0-1.x86_64.rpm
+dd2da59b6b8f753cccd7c83d6d1cc55fbe6670a39e1d6b95364567b31d51f58c  pig-v1.5.0.darwin-amd64.tar.gz
+f2b033cb322c7de965b2bf801cfd376d06614bc56e8599d72defaa243115f93c  pig-v1.5.0.darwin-arm64.tar.gz
+5a438ca8792871108f742c0d1b5077fef15602c10359a57ca4222fa59ca55f00  pig-v1.5.0.linux-amd64.tar.gz
+440e84847b452132c38daf86bfd46555b32c2720edc891d5810f0c20a84cef5c  pig-v1.5.0.linux-arm64.tar.gz
+6b7ca96f8d52e341a2266e0aa121910429f94b80bf11db3dc34e33ef31f7b0f1  pig_1.5.0-1_amd64.deb
+6716339e1d502ebbf4ebbcee3635645307ca1ae02065d36a0deb476ca761184a  pig_1.5.0-1_arm64.deb
+```
+
+发布：https://github.com/pgsty/pig/releases/tag/v1.5.0
+
 
 
 

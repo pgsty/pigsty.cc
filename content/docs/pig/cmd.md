@@ -16,6 +16,9 @@ categories: [参考]
 - [**pig pg**](/docs/pig/pg/)：管理本地 PostgreSQL 服务器
 - [**pig pt**](/docs/pig/pt/)：管理 Patroni HA 集群
 - [**pig pb**](/docs/pig/pb/)：管理 pgBackRest 备份与恢复
+- [**pig pitr**](/docs/pig/pb/)：进行完整 PITR 工作流
+
+
 
 ## 概览
 
@@ -193,7 +196,7 @@ pig pb log tail                  # 实时查看日志
 
 ```bash
 pig pitr -d                      # 恢复到最新数据
-pig pitr -t "2025-01-01 12:00"   # 恢复到指定时间
+pig pitr -t "2025-01-01 12:00:00+08"  # 恢复到指定时间
 pig pitr -I                      # 恢复到备份一致性点
 pig pitr -d --plan               # 显示执行计划（不实际执行）
 pig pitr -d -y                   # 跳过确认（自动化）

@@ -30,19 +30,19 @@ Examples:
   pig ext reload               # reload the latest extension catalog data
 ```
 
-| 命令 | 描述 | 备注 |
-|:---|:---|:---|
-| `ext list` | 搜索扩展 | |
-| `ext info` | 显示扩展详细信息 | |
-| `ext avail` | 显示扩展可用性矩阵 | |
-| `ext status` | 显示已安装的扩展 | |
-| `ext scan` | 扫描已安装的扩展 | |
-| `ext add` | 安装扩展 | 需要 sudo 或 root 权限 |
-| `ext rm` | 移除扩展 | 需要 sudo 或 root 权限 |
-| `ext update` | 更新扩展 | 需要 sudo 或 root 权限 |
-| `ext import` | 下载扩展以供离线使用 | 需要 sudo 或 root 权限 |
-| `ext link` | 链接 PG 版本到 PATH | 需要 sudo 或 root 权限 |
-| `ext reload` | 刷新扩展目录 | |
+| 命令           | 描述             | 备注                |
+|:-------------|:---------------|:------------------|
+| `ext list`   | 搜索扩展           |                   |
+| `ext info`   | 显示扩展详细信息       |                   |
+| `ext avail`  | 显示扩展可用性矩阵      |                   |
+| `ext status` | 显示已安装的扩展       |                   |
+| `ext scan`   | 扫描已安装的扩展       |                   |
+| `ext add`    | 安装扩展           | 需要 sudo 或 root 权限 |
+| `ext rm`     | 移除扩展           | 需要 sudo 或 root 权限 |
+| `ext update` | 更新扩展           | 需要 sudo 或 root 权限 |
+| `ext import` | 下载扩展以供离线使用     | 需要 sudo 或 root 权限 |
+| `ext link`   | 链接 PG 版本到 PATH | 需要 sudo 或 root 权限 |
+| `ext reload` | 刷新扩展目录         |                   |
 {.full-width}
 
 

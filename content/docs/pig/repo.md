@@ -168,9 +168,9 @@ pig repo add pgdg --region=china # 使用中国镜像
 - `-u|--update`：添加仓库后运行包缓存更新
 - `--region <region>`：使用区域镜像仓库（`default` / `china` / `europe`）
 
-| 平台 | 模块位置 |
-|:---:|:---|
-| EL | `/etc/yum.repos.d/<module>.repo` |
+|   平台   | 模块位置                                    |
+|:------:|:----------------------------------------|
+|   EL   | `/etc/yum.repos.d/<module>.repo`        |
 | Debian | `/etc/apt/sources.list.d/<module>.list` |
 {.full-width}
 

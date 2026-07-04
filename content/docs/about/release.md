@@ -93,8 +93,15 @@ Pigsty 当前文档对应版本为 [**v4.3.0**](#v430)。
 - 现在检测到 `/www` 目录已经存在时，bootstrap 和 repo 任务会直接使用现有目录，而非创建软连接。[#753](https://github.com/pgsty/pigsty/issues/753)
 - 修复 Redis Sentinel 密码拼接逻辑 [#748](https://github.com/pgsty/pigsty/issues/748)
 - 扩展 pg_http, pg_gzip, apache-age 的 RPM 包名现在与 PGDG 保持一致。 [#750](https://github.com/pgsty/pigsty/issues/750)
-- 修复了 Debian/Ubuntu 没有正确阻止 vector 日志收集器自动启动的问题。
+- 修复了 Debian/Ubuntu 没有正确阻止 vector 日志收集器自动启动的问题（`policy-rc.d`）。
 - 改进了 el9.aarch64 PGDG patroni 包名特殊处理逻辑，不再写死特定版本。
+- 修复了本地 vagrant / virtualbox 默认网卡的设置策略。
+
+**设计变动**
+
+- Patroni 日志现在从默认的 syslog 收集改回本地 `/pg/log/patroni` 目录文件。
+- 现在 dbsu 的有限 sudo 权限额外授予查询所属组件 journalctl 日志的能力。
+- 更新了 Supabase 自建模板至最新版本。
 
 **PostgreSQL 与扩展包变更汇总**
 

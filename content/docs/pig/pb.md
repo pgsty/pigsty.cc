@@ -78,12 +78,12 @@ Examples:
 
 **控制命令**：
 
-| 命令         | 别名     | 描述               | 实现方式               |
-|:-----------|:-------|:-----------------|:-------------------|
-| `pb check` |        | 验证备份仓库完整性        | `pgbackrest check` |
-| `pb start` |        | 启用 pgBackRest 操作 | `pgbackrest start` |
-| `pb stop`  |        | 禁用 pgBackRest 操作 | `pgbackrest stop`  |
-| `pb log`   | `l, lg` | 查看日志             | `tail/cat` 日志文件    |
+| 命令         | 别名      | 描述               | 实现方式               |
+|:-----------|:--------|:-----------------|:-------------------|
+| `pb check` |         | 验证备份仓库完整性        | `pgbackrest check` |
+| `pb start` |         | 启用 pgBackRest 操作 | `pgbackrest start` |
+| `pb stop`  |         | 禁用 pgBackRest 操作 | `pgbackrest stop`  |
+| `pb log`   | `l, lg` | 查看日志             | 最新日志快照 / tail      |
 {.full-width}
 
 
@@ -92,7 +92,7 @@ Examples:
 ```bash
 # 查看备份信息
 pig pb info                          # 显示所有备份信息
-pig pb info --raw --raw-output json  # 原始 JSON 输出
+pig pb info -o json                  # 原始 JSON 输出
 pig pb ls                            # 列出所有备份
 pig pb ls repo                       # 列出配置的仓库
 pig pb ls stanza                     # 列出所有 stanza
@@ -107,7 +107,7 @@ pig pb backup incr                   # 增量备份
 pig pb restore -d                    # 恢复到最新（WAL 流末尾）
 pig pb restore -I                    # 恢复到备份一致性点
 pig pb restore -t "2025-01-01 12:00:00+08"  # 恢复到指定时间
-pig pb restore -n savepoint          # 恢复到命名还原点
+pig pb restore --name savepoint      # 恢复到命名还原点
 
 # Stanza 管理
 pig pb create                        # 初始化 stanza
@@ -167,11 +167,11 @@ pig pb info --set 20250101-120000F   # 显示特定备份集详情
 
 **选项：**
 
-| 参数       | 简写   | 说明             |
-|:---------|:-----|:---------------|
-| `--raw`    | `-R` | 原始输出模式（透传 pgBackRest 输出） |
+| 参数             | 简写   | 说明                             |
+|:---------------|:-----|:-------------------------------|
+| `--raw`        | `-R` | 原始输出模式（透传 pgBackRest 输出）       |
 | `--raw-output` | `-O` | 原始输出格式：text、json（仅 `--raw` 模式） |
-| `--set`    |      | 显示特定备份集详情      |
+| `--set`        |      | 显示特定备份集详情                      |
 {.full-width}
 
 
@@ -185,15 +185,16 @@ pig pb ls backup                     # 列出所有备份（显式）
 pig pb ls repo                       # 列出配置的仓库
 pig pb ls stanza                     # 列出所有 stanza
 pig pb ls cluster                    # stanza 的别名
+pig pb ls cls                        # stanza 的别名
 ```
 
 **类型说明：**
 
-| 类型      | 描述           | 数据来源              |
-|:--------|:-------------|:------------------|
-| backup  | 列出所有备份集（默认）  | pgbackrest info   |
-| repo    | 列出配置的仓库      | 解析 pgbackrest.conf |
-| stanza  | 列出所有 stanza  | 解析 pgbackrest.conf |
+| 类型     | 描述                             | 数据来源               |
+|:-------|:-------------------------------|:-------------------|
+| backup | 列出所有备份集（默认）                    | pgbackrest info    |
+| repo   | 列出配置的仓库                        | 解析 pgbackrest.conf |
+| stanza | 列出所有 stanza；别名：`cluster`、`cls` | 解析 pgbackrest.conf |
 {.full-width}
 
 
@@ -213,19 +214,19 @@ pig pb backup --force                # 跳过主库角色检查
 
 **选项：**
 
-| 参数       | 简写   | 说明                  |
-|:---------|:-----|:--------------------|
-| `--force` | `-f` | 跳过主库角色检查            |
+| 参数        | 简写   | 说明       |
+|:----------|:-----|:---------|
+| `--force` | `-f` | 跳过主库角色检查 |
 {.full-width}
 
 **备份类型：**
 
-| 类型     | 说明                      |
-|:-------|:------------------------|
-| (空)    | 自动模式：无备份则全量，否则增量       |
-| full   | 全量备份：备份所有数据             |
-| diff   | 差异备份：自上次全量备份以来的变更       |
-| incr   | 增量备份：自上次任意备份以来的变更       |
+| 类型   | 说明                |
+|:-----|:------------------|
+| (空)  | 自动模式：无备份则全量，否则增量  |
+| full | 全量备份：备份所有数据       |
+| diff | 差异备份：自上次全量备份以来的变更 |
+| incr | 增量备份：自上次任意备份以来的变更 |
 {.full-width}
 
 **主库检查：**
@@ -245,9 +246,9 @@ pig pb expire --plan                 # 仅预览清理计划，不删除
 
 **选项：**
 
-| 参数         | 说明           |
-|:-----------|:-------------|
-| `--set`    | 删除特定备份集      |
+| 参数       | 说明            |
+|:---------|:--------------|
+| `--set`  | 删除特定备份集       |
 | `--plan` | 仅预览清理计划，不删除备份 |
 {.full-width}
 
@@ -277,20 +278,21 @@ pig pb restore -I                    # 恢复到备份一致性点
 pig pb restore -t "2025-01-01 12:00:00+08"  # 恢复到指定时间
 pig pb restore -t "2025-01-01"       # 恢复到日期（当天 00:00:00）
 pig pb restore -t "12:00:00"         # 恢复到时间（今天）
-pig pb restore -n my-savepoint       # 恢复到命名还原点
-pig pb restore -l "0/7C82CB8"        # 恢复到 LSN
-pig pb restore -x 12345              # 恢复到事务 ID
+pig pb restore --name my-savepoint   # 恢复到命名还原点
+pig pb restore --lsn "0/7C82CB8"     # 恢复到 LSN
+pig pb restore --xid 12345           # 恢复到事务 ID
 
-# 备份集选择（可与恢复目标组合）
-pig pb restore -b 20251225-120000F   # 从特定备份集恢复
+# 备份集选择（必须与恢复目标组合）
+pig pb restore -b 20251225-120000F -d  # 从特定备份集恢复到最新
 
 # 其他选项
 pig pb restore -t "..." -X           # 排他模式（在目标前停止）
-pig pb restore -t "..." -P           # 恢复后自动提升
+pig pb restore -t "..." --target-action=promote  # 到达目标后提升
 pig pb restore -t "..." -T current   # 沿当前时间线恢复
 pig pb restore -d --target-action=pause  # 到达目标后暂停
 pig pb restore -d --plan             # 仅预览恢复计划
-pig pb restore -y                    # 跳过确认倒计时
+pig pb restore -d -y                 # 跳过 y/yes 交互确认
+pig pb restore -d -- --delta         # 在 -- 后透传 pgBackRest restore 参数
 ```
 
 **恢复目标选项：**
@@ -300,24 +302,28 @@ pig pb restore -y                    # 跳过确认倒计时
 | `--default`   | `-d` | 恢复到 WAL 流末尾（最新数据） |
 | `--immediate` | `-I` | 恢复到备份一致性点         |
 | `--time`      | `-t` | 恢复到指定时间戳          |
-| `--name`      | `-n` | 恢复到命名还原点          |
-| `--lsn`       | `-l` | 恢复到指定 LSN         |
-| `--xid`       | `-x` | 恢复到指定事务 ID        |
+| `--name`      |      | 恢复到命名还原点          |
+| `--lsn`       |      | 恢复到指定 LSN         |
+| `--xid`       |      | 恢复到指定事务 ID        |
 {.full-width}
 
 **备份集和其他选项：**
 
-| 参数                  | 简写   | 说明                                |
-|:--------------------|:-----|:----------------------------------|
-| `--set`             | `-b` | 从特定备份集恢复（可与目标组合）                  |
-| `--data`            | `-D` | 目标数据目录                            |
-| `--exclusive`       | `-X` | 排他模式：在目标前停止                       |
-| `--promote`         | `-P` | 恢复后自动提升为主库                        |
-| `--target-action`   |      | 到达恢复目标后的动作：pause/promote/shutdown |
-| `--target-timeline` | `-T` | 恢复时间线：latest/current/N/0xN        |
-| `--plan`            |      | 仅预览恢复计划，不执行                       |
-| `--yes`             | `-y` | 跳过确认和倒计时                          |
+| 参数                  | 简写   | 说明                                       |
+|:--------------------|:-----|:-----------------------------------------|
+| `--set`             | `-b` | 从特定备份集恢复（可与目标组合）                         |
+| `--data`            | `-D` | 目标数据目录                                   |
+| `--exclusive`       | `-X` | 排他模式：在目标前停止                              |
+| `--target-action`   |      | 到达恢复目标后的动作：pause/promote/shutdown        |
+| `--target-timeline` | `-T` | 恢复时间线：latest/current/N/0xN               |
+| `--plan`            |      | 仅预览恢复计划，不执行                              |
+| `--yes`             | `-y` | 跳过交互式 y/yes 确认                           |
+| `--` 后的原生参数         |      | 透传 pgBackRest restore 参数，例如 `-- --delta` |
 {.full-width}
+
+**组合规则：** `--target-action` 不能与 `--default` 同时使用，因为 `--default` 已表示恢复到 WAL 末尾。`--exclusive/-X` 必须配合明确的停止目标使用：`--time`、`--lsn` 或 `--xid`。
+
+`--` 后的原生 pgBackRest restore 参数不能覆盖 Pig 已管理的恢复目标、生命周期、数据目录、仓库、配置和选择参数；请使用 Pig 的一等参数设置这些语义。表空间/链接迁移类参数（如 `--tablespace-map`、`--link-map`、`--link-all`）仍可透传。
 
 **时间格式：**
 
@@ -334,7 +340,7 @@ pig pb restore -y                    # 跳过确认倒计时
 
 1. 验证参数和环境
 2. 检查 PostgreSQL 已停止
-3. 显示恢复计划，等待确认（5 秒倒计时）
+3. 显示恢复计划，等待交互式 `y`/`yes` 确认
 4. 执行 pgbackrest restore
 5. 提供恢复后的操作指引
 
@@ -394,24 +400,25 @@ pig pb upgrade --no-online           # PostgreSQL 未运行时升级
 删除 stanza 及其所有备份。
 
 ```bash
-pig pb delete --force                # 删除 stanza（需要 --force）
-pig pb delete --force --yes          # 跳过倒计时确认
+pig pb delete                        # 删除 stanza（交互式 y/N 确认）
+pig pb delete --yes                  # 跳过 y/yes 交互确认
+pig pb delete --plan                 # 预览删除计划
 ```
 
 **选项：**
 
-| 参数        | 简写   | 说明       |
-|:----------|:-----|:---------|
-| `--force` | `-f` | 确认删除（必需） |
-| `--yes`   | `-y` | 跳过倒计时确认  |
+| 参数       | 简写   | 说明             |
+|:---------|:-----|:---------------|
+| `--plan` |      | 仅预览删除计划，不执行    |
+| `--yes`  | `-y` | 跳过交互式 y/yes 确认 |
 {.full-width}
 
 **警告：** 这是一个**破坏性且不可逆**的操作！所有备份将被永久删除。
 
 命令包含多重安全机制：
-1. 必须提供 `--force` 参数
-2. 5 秒倒计时确认（可按 Ctrl+C 取消）
-3. 使用 `--yes` 可跳过倒计时
+1. 文本模式下要求交互式 `y`/`yes` 确认，除非指定 `--yes`
+2. 结构化输出模式必须显式指定 `--yes`
+3. 配置文件存在多个 stanza 且未显式 `--stanza` 时，拒绝自动选择删除目标
 
 
 ## 控制命令
@@ -452,9 +459,9 @@ pig pb stop --force                  # 终止正在运行的操作
 
 **选项：**
 
-| 参数       | 简写   | 说明          |
-|:---------|:-----|:------------|
-| `--force` | `-f` | 终止正在运行的操作   |
+| 参数        | 简写   | 说明        |
+|:----------|:-----|:----------|
+| `--force` | `-f` | 终止正在运行的操作 |
 {.full-width}
 
 **使用场景：**
@@ -466,16 +473,16 @@ pig pb stop --force                  # 终止正在运行的操作
 
 ### pb log
 
-查看 pgBackRest 日志文件。日志目录为 `/pg/log/pgbackrest/`。
+查看 pgBackRest 日志文件。日志目录优先读取 pgBackRest 配置中的 `log-path`，未配置时使用 `/pg/log/pgbackrest/`。父命令默认显示最新日志快照，实时跟踪请使用 `tail` 或 `-f`。只有 `pb log` 与 `pb log show` 支持 `-o json` 输出 JSONL；日志快照不支持 `yaml` 与 `json-pretty`，follow/tail 不支持结构化输出。
 
 ```bash
-pig pb log                           # 列出日志文件
+pig pb log                           # 显示最新日志行
 pig pb log list                      # 列出日志文件
 pig pb log tail                      # 实时查看最新日志
 pig pb log tail -n 100               # 显示最后 100 行并跟踪
-pig pb log cat                       # 显示最新日志内容
-pig pb log cat -n 50                 # 显示最后 50 行
-pig pb log cat pg-meta-backup.log    # 显示指定日志文件
+pig pb log show                      # 显示最新日志内容
+pig pb log show -n 50                # 显示最后 50 行
+pig pb log cat                       # show 的别名
 ```
 
 **子命令：**
@@ -483,15 +490,16 @@ pig pb log cat pg-meta-backup.log    # 显示指定日志文件
 | 子命令    | 别名             | 说明           |
 |:-------|:---------------|:-------------|
 | list   | ls             | 列出日志文件       |
-| tail   | follow, f      | 实时跟踪最新日志     |
-| cat    | show           | 显示日志内容       |
+| show   | cat, c         | 显示最新日志内容     |
+| tail   | t, f, follow   | 实时跟踪最新日志     |
 {.full-width}
 
 **选项：**
 
-| 参数        | 简写   | 默认值 | 说明    |
-|:----------|:-----|:----|:------|
-| `--lines` | `-n` | 50  | 显示的行数 |
+| 参数         | 简写   | 默认值   | 说明                                                         |
+|:-----------|:-----|:------|:-----------------------------------------------------------|
+| `--lines`  | `-n` | 50    | 显示的行数                                                      |
+| `--follow` | `-f` | false | 父命令 `pb log` 使用该参数进入跟踪；`pb log tail` 中为 no-op，因为 tail 总是跟踪 |
 {.full-width}
 
 **权限处理：**
@@ -516,7 +524,7 @@ pig pb log cat pg-meta-backup.log    # 显示指定日志文件
 
 - 自动检测 stanza 名称，无需每次指定
 - 备份前自动检查主库角色
-- 恢复时显示计划并要求确认
+- 恢复时显示计划并要求交互式 `y`/`yes` 确认
 - 提供人性化的时间格式输入
 - 恢复后提供操作指引
 
@@ -533,10 +541,10 @@ pig pb log cat pg-meta-backup.log    # 显示指定日志文件
 
 **安全考虑：**
 
-- `pb delete` 需要 `--force` 确认，并有 5 秒倒计时
-- `pb restore` 显示恢复计划，有 5 秒倒计时确认
+- `pb delete` 在没有 `--yes` 时要求交互式 `y`/`yes` 确认，多 stanza 配置下必须显式指定 `--stanza`
+- `pb restore` 需要显式恢复目标，校验 `--time`，并在没有 `--yes` 时要求交互式 `y`/`yes` 确认
 - `pb backup` 默认检查主库角色，防止在备库执行
-- 日志命令的文件名参数会过滤路径，防止路径遍历攻击
+- `pb log tail` 不支持结构化输出；需要 JSONL 快照时使用 `pb log show -n N -o json`
 
 **平台支持：**
 
