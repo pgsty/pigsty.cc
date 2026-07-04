@@ -138,6 +138,7 @@ Debian 11 已经于 2024-07 进入 EOL。如需在老旧操作系统上获得扩
 | Rocky 10.2     | `rockylinux_10_2_x64`  |
 | Ubuntu 22.04.5 | `ubuntu_22_04_x64_20G` |
 | Ubuntu 24.04.4 | `ubuntu_24_04_x64_20G` |
+| Ubuntu 26.04.0 | `ubuntu_26_04_x64_20G` |
 | Debian 12.14   | `debian_12_14_x64`     |
 | Debian 13.5    | `debian_13_5_x64`      |
 {.full-width}
@@ -150,6 +151,7 @@ Debian 11 已经于 2024-07 进入 EOL。如需在老旧操作系统上获得扩
 | Rocky 10.2     | `rockylinux_10_2_arm64`  |
 | Ubuntu 22.04.5 | `ubuntu_22_04_arm64_20G` |
 | Ubuntu 24.04.4 | `ubuntu_24_04_arm64_20G` |
+| Ubuntu 26.04.0 | `ubuntu_26_04_arm64_20G` |
 | Debian 12.14   | `debian_12_14_arm64`     |
 | Debian 13.5    | `debian_13_5_arm64`      |
 {.full-width}

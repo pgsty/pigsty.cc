@@ -86,15 +86,15 @@ terraform destroy
 
 Pigsty 在 [`terraform/spec/`](https://github.com/pgsty/pigsty/tree/main/terraform/spec) 目录下提供了多种预定义的云资源模板：
 
-| 模板文件 | 云厂商 | 说明 |
-|---------|-------|------|
-| [`aliyun.tf`](https://github.com/pgsty/pigsty/tree/main/terraform/spec/aliyun.tf) | 阿里云 | 单节点元节点模板，支持所有发行版和 AMD/ARM（默认） |
-| [`aliyun-s3.tf`](https://github.com/pgsty/pigsty/tree/main/terraform/spec/aliyun-s3.tf) | 阿里云 | 单节点模板 + OSS 存储桶，用于 PITR 备份 |
-| [`aliyun-full.tf`](https://github.com/pgsty/pigsty/tree/main/terraform/spec/aliyun-full.tf) | 阿里云 | 4 节点沙箱模板，支持所有发行版和 AMD/ARM |
-| [`aliyun-oss.tf`](https://github.com/pgsty/pigsty/tree/main/terraform/spec/aliyun-oss.tf) | 阿里云 | 5 节点构建模板，支持所有发行版和 AMD/ARM |
-| [`aliyun-pro.tf`](https://github.com/pgsty/pigsty/tree/main/terraform/spec/aliyun-pro.tf) | 阿里云 | 多发行版测试模板，用于跨操作系统测试 |
-| [`aws-cn.tf`](https://github.com/pgsty/pigsty/tree/main/terraform/spec/aws-cn.tf) | AWS | AWS 中国区单节点环境 |
-| [`qcloud.tf`](https://github.com/pgsty/pigsty/tree/main/terraform/spec/qcloud.tf) | 腾讯云 | 腾讯云单节点环境 |
+| 模板文件                                                                                        | 云厂商 | 说明                            |
+|---------------------------------------------------------------------------------------------|-----|-------------------------------|
+| [`aliyun.tf`](https://github.com/pgsty/pigsty/tree/main/terraform/spec/aliyun.tf)           | 阿里云 | 单节点元节点模板，支持所有发行版和 AMD/ARM（默认） |
+| [`aliyun-s3.tf`](https://github.com/pgsty/pigsty/tree/main/terraform/spec/aliyun-s3.tf)     | 阿里云 | 单节点模板 + OSS 存储桶，用于 PITR 备份    |
+| [`aliyun-full.tf`](https://github.com/pgsty/pigsty/tree/main/terraform/spec/aliyun-full.tf) | 阿里云 | 4 节点沙箱模板，支持所有发行版和 AMD/ARM     |
+| [`aliyun-oss.tf`](https://github.com/pgsty/pigsty/tree/main/terraform/spec/aliyun-oss.tf)   | 阿里云 | 6 节点构建模板，支持所有发行版和 AMD/ARM     |
+| [`aliyun-pro.tf`](https://github.com/pgsty/pigsty/tree/main/terraform/spec/aliyun-pro.tf)   | 阿里云 | 7 节点多发行版测试模板，用于跨操作系统测试        |
+| [`aws-cn.tf`](https://github.com/pgsty/pigsty/tree/main/terraform/spec/aws-cn.tf)           | AWS | AWS 中国区单节点环境                  |
+| [`qcloud.tf`](https://github.com/pgsty/pigsty/tree/main/terraform/spec/qcloud.tf)           | 腾讯云 | 腾讯云单节点环境                      |
 {.full-width}
 
 使用模板时，将模板文件复制为 `terraform.tf`：
@@ -123,7 +123,7 @@ variable "architecture" {
 }
 
 variable "distro" {
-  description = "发行版代码 (el8,el9,el10,u22,u24,d12,d13)"
+  description = "发行版代码 (el8,el9,el10,u22,u24,u26,d12,d13)"
   type        = string
   default     = "el9"       # 默认使用 Rocky Linux 9
 }
@@ -172,6 +172,7 @@ export ALICLOUD_REGION="cn-shanghai"
 | Debian 13.5           | `d13`  | `debian_13_5_x64`                 | `debian_13_5_arm64`                 |
 | Ubuntu 22.04.5 LTS    | `u22`  | `ubuntu_22_04_x64_20G`            | `ubuntu_22_04_arm64_20G`            |
 | Ubuntu 24.04.4 LTS    | `u24`  | `ubuntu_24_04_x64_20G`            | `ubuntu_24_04_arm64_20G`            |
+| Ubuntu 26.04.0 LTS    | `u26`  | `ubuntu_26_04_x64_20G`            | `ubuntu_26_04_arm64_20G`            |
 | Anolis 8.10           | `an8`  | `anolisos_8_10_x64`               | `anolisos_8_10_arm64`               |
 | Alibaba Cloud Linux 3 | `al3`  | `aliyun_3_x64_20G_alibase_[0-9]+` | `aliyun_3_arm64_20G_alibase_[0-9]+` |
 {.full-width}
