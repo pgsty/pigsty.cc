@@ -38,7 +38,7 @@ Pigsty 提供了 [**`configure`**](https://github.com/pgsty/pigsty/blob/main/con
 ./configure -c mysql            # OpenHalo 内核，兼容 MySQL (14)
 ./configure -c pgtde            # Percona PostgreSQL Server 透明加密 (18)
 ./configure -c oriole           # OrioleDB 内核，OLTP 增强 (16~18)
-./configure -c agens            # AgensGraph 图数据库内核 (16)
+./configure -c agens            # AgensGraph 图数据库内核 (17)
 ./configure -c pgedge           # pgEdge 分布式数据库内核 (18)
 ./configure -c ha/citus         # Citus 分布式高可用 PostgreSQL (14~18)
 ./configure -c supabase         # Supabase 自托管配置 (15~18)
@@ -80,7 +80,7 @@ Pigsty 提供了 [**`configure`**](https://github.com/pgsty/pigsty/blob/main/con
 | [**`mysql.yml`**](/docs/conf/mysql/)       | OpenHalo 内核，兼容 MySQL (14)           |
 | [**`pgtde.yml`**](/docs/conf/pgtde/)       | Percona PostgreSQL Server 透明加密 (18) |
 | [**`oriole.yml`**](/docs/conf/oriole/)     | OrioleDB 内核，OLTP 增强 (16~18)         |
-| [**`agens.yml`**](/docs/conf/agens/)       | AgensGraph 图数据库内核 (16)              |
+| [**`agens.yml`**](/docs/conf/agens/)       | AgensGraph 图数据库内核 (17)              |
 | [**`pgedge.yml`**](/docs/conf/pgedge/)     | pgEdge 分布式数据库内核 (18)                |
 | [**`supabase.yml`**](/docs/conf/supabase/) | Supabase 自托管配置 (15~18)              |
 {.full-width}

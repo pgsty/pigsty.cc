@@ -52,7 +52,7 @@ categories: [参考]
 - `pg-oriole`：OrioleDB，支持 PostgreSQL 16、17、18；当前演示配置默认使用 PG18
 - `pg-mysql`：OpenHalo，兼容 PostgreSQL 14
 - `pg-mongo`：DocumentDB + FerretDB，默认 PostgreSQL 18
-- `pg-agens`：AgensGraph，兼容 PostgreSQL 16
+- `pg-agens`：AgensGraph，兼容 PostgreSQL 17
 - `pg-edge`：pgEdge，兼容 PostgreSQL 18
 
 **注意事项**：
