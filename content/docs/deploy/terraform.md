@@ -165,8 +165,8 @@ export ALICLOUD_REGION="cn-shanghai"
 |-----------------------|--------|-----------------------------------|-------------------------------------|
 | CentOS 7.9            | `el7`  | `centos_7_9_x64`                  | -                                   |
 | Rocky 8.10            | `el8`  | `rockylinux_8_10_x64`             | `rockylinux_8_10_arm64`             |
-| Rocky 9.8             | `el9`  | `rockylinux_9_8_x64`              | `rockylinux_9_8_arm64`              |
-| Rocky 10.2            | `el10` | `rockylinux_10_2_x64`             | `rockylinux_10_2_arm64`             |
+| Rocky 9.7             | `el9`  | `rockylinux_9_7_x64`              | `rockylinux_9_7_arm64`              |
+| Rocky 10.1            | `el10` | `rockylinux_10_1_x64`             | `rockylinux_10_1_arm64`             |
 | Debian 11.11          | `d11`  | `debian_11_11_x64`                | -                                   |
 | Debian 12.14          | `d12`  | `debian_12_14_x64`                | `debian_12_14_arm64`                |
 | Debian 13.5           | `d13`  | `debian_13_5_x64`                 | `debian_13_5_arm64`                 |

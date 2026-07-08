@@ -84,7 +84,7 @@ Pigsty 当前文档对应版本为 [**v4.3.0**](#v430)。
 - 添加自动检测 VIP 网卡的能力
 - 新增约 21 个 PostgreSQL 扩展，总可用数量达到 531 个，完善 Ubuntu 26 可用扩展。
 - PG WAL 默认启用 lz4 压缩，pgBackRest 默认使用 zstd 替代 lz4 进行压缩。 [#744](https://github.com/pgsty/pigsty/issues/744)
-- 更新对最新 EL 操作系统小版本的支持：EL 9.8 / 10.2，并更新相应的 terraform/vagrant 模板
+- 将 EL 操作系统小版本基线回滚至 EL 9.7 / 10.1，并更新相应的 terraform/vagrant 模板
 - 默认为 Codex 而非 Claude Code/OpenCode 提供 Agent Runtime 环境（AGENTS.md）。
 
 **问题修复**
