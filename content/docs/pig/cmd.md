@@ -14,11 +14,14 @@ categories: [参考]
 - [**pig build**](/docs/pig/build/)：从源码构建扩展
 - **pig install**：使用原生包管理器安装包，并对 PostgreSQL 别名做翻译
 - [**pig sty**](/docs/pig/sty/)：管理 Pigsty 安装
+- **pig do**：执行 Pigsty 管理 playbook 任务
+- **pig pe**：访问 pg_exporter 指标与配置
 - [**pig pg**](/docs/pig/pg/)：管理本地 PostgreSQL 服务器
 - [**pig pt**](/docs/pig/pt/)：管理 Patroni HA 集群
 - [**pig pb**](/docs/pig/pb/)：管理 pgBackRest 备份与恢复
 - [**pig pitr**](/docs/pig/pitr/)：进行完整 PITR 工作流
 - **pig context**：输出面向人工和 Agent 的环境上下文快照
+- **pig status / update / version**：查看环境、升级 pig、打印版本信息
 
 
 
@@ -122,9 +125,13 @@ pig ext reload                   # 刷新扩展目录
 # 环境设置
 pig build spec                   # 初始化构建规格
 pig build repo                   # 设置仓库
+pig build repo --beta            # 设置仓库，并额外启用 PostgreSQL 19 beta 仓库
 pig build tool                   # 安装构建工具
+pig build tool --beta            # 安装构建工具，并额外安装 PG19 beta 构建包
 pig build rust -y                # 强制重装 Rust（默认不重装）
+pig build rust -m                # 使用中国镜像安装 Rust，并写入 Cargo 镜像配置
 pig build pgrx                   # 安装 PGRX 框架
+pig build pgrx -b                # 自动探测时包含 PostgreSQL 19 beta pg_config
 
 # 构建扩展
 pig build pkg citus              # 完整构建流程 = get + dep + ext
@@ -157,6 +164,33 @@ pig sty init                     # 安装 Pigsty 到 ~/pigsty
 pig sty boot                     # 安装 Ansible 依赖
 pig sty conf                     # 生成配置
 pig sty deploy                   # 运行部署 playbook
+```
+
+
+## pig do
+
+执行 Pigsty 管理任务，底层调用对应的 Ansible playbook。
+
+```bash
+pig do pgsql-add  <cls> [ip...]       # 添加集群或实例
+pig do pgsql-rm   <cls> [ip...]       # 移除集群或实例
+pig do pgsql-db   <cls> <dbname>      # 创建或更新数据库
+pig do pgsql-user <cls> <username>    # 创建或更新用户
+pig do pgsql-ext  <cls> [ext...]      # 安装扩展
+pig do node-pkg   <sel> [pkg...]      # 安装节点软件包
+```
+
+
+## pig pe
+
+访问 pg_exporter 暴露的 PostgreSQL 监控指标，默认连接 `127.0.0.1:9630`。
+
+```bash
+pig pe list                    # 列出可用指标类型
+pig pe get                     # 获取所有 pg_ 前缀指标
+pig pe stat                    # 查看 exporter 统计信息
+pig pe reload                  # 重载 pg_exporter 配置
+pig pe --host 127.0.0.1 -p 9630 get
 ```
 
 
@@ -229,4 +263,17 @@ pig pitr -t "2025-01-01 12:00:00+08"  # 恢复到指定时间
 pig pitr -I                      # 恢复到备份一致性点
 pig pitr -d --plan               # 显示执行计划（不实际执行）
 pig pitr -d -y                   # 跳过确认（自动化）
+```
+
+
+## 辅助命令
+
+```bash
+pig status                       # 显示当前环境状态
+pig status -o json               # 结构化状态输出
+pig update                       # 将 pig 自身升级到最新版
+pig update -m                    # 使用 pigsty.cc 镜像升级
+pig update -v 1.5.1              # 升级到指定版本
+pig version                      # 显示 pig 版本信息
+pig version -o json              # 结构化版本输出
 ```

@@ -44,18 +44,18 @@ $ curl -fsSL https://repo.pigsty.cc/pig | bash
 [INFO] kernel = Linux
 [INFO] machine = x86_64
 [INFO] package = deb
-[INFO] pkg_url = https://repo.pigsty.cc/pkg/pig/v1.5.0/pig_1.5.0-1_amd64.deb
-[INFO] download = /tmp/pig_1.5.0-1_amd64.deb
-[INFO] downloading pig v1.5.0
-curl -fSL https://repo.pigsty.cc/pkg/pig/v1.5.0/pig_1.5.0-1_amd64.deb -o /tmp/pig_1.5.0-1_amd64.deb
+[INFO] pkg_url = https://repo.pigsty.cc/pkg/pig/v1.5.1/pig_1.5.1-1_amd64.deb
+[INFO] download = /tmp/pig_1.5.1-1_amd64.deb
+[INFO] downloading pig v1.5.1
+curl -fSL https://repo.pigsty.cc/pkg/pig/v1.5.1/pig_1.5.1-1_amd64.deb -o /tmp/pig_1.5.1-1_amd64.deb
 ######################################################################## 100.0%
-[INFO] md5sum = b7d18865090df8c03523c79ec2744e91
-[INFO] installing: dpkg -i /tmp/pig_1.5.0-1_amd64.deb
+[INFO] md5sum = bbb9188284765db916a7539e13167289
+[INFO] installing: dpkg -i /tmp/pig_1.5.1-1_amd64.deb
 (Reading database ... 166001 files and directories currently installed.)
-Preparing to unpack /tmp/pig_1.5.0-1_amd64.deb ...
-Unpacking pig (1.5.0-1) ...
-Setting up pig (1.5.0-1) ...
-[INFO] pig v1.5.0 installed successfully
+Preparing to unpack /tmp/pig_1.5.1-1_amd64.deb ...
+Unpacking pig (1.5.1-1) ...
+Setting up pig (1.5.1-1) ...
+[INFO] pig v1.5.1 installed successfully
 check https://pgext.cloud for details
 ```
 
@@ -67,7 +67,7 @@ PIG 是一个由 Go 编写的二进制程序，默认安装路径为 `/usr/bin/p
 
 ```bash
 $ pig version
-pig version 1.5.0 linux/amd64
+pig version 1.5.1 linux/amd64
 ```
 
 使用 `pig status` 命令，会打印当前环境的状态，操作系统代码，PG 的安装情况，仓库的可访问性与延迟。
@@ -75,7 +75,7 @@ pig version 1.5.0 linux/amd64
 ```bash
 $ pig status
 # [Configuration] ================================
-Pig Version      : 1.5.0
+Pig Version      : 1.5.1
 Pig Config       : /home/vagrant/.pig/config.yml
 Log Level        : info
 Log Path         : stderr
@@ -173,10 +173,12 @@ pig repo update              # 更新缓存：apt update / yum makecache
 ```
 
 PIG 会检测您的网络环境，并选择使用 Cloudflare 全球 CDN，或者中国境内云 CDN，但您可以通过 `--region` 参数强制指定区域。
+在中国网络环境中，也可以使用 `-m|--mirror` 作为快捷镜像模式，优先选择 `pigsty.cc` 与国内 PostgreSQL 镜像/代理源。
 
 ```bash
 pig repo set      --region=china              # 使用中国区域镜像仓库加速下载
 pig repo add pgdg --region=default --update   # 强制指定使用 PGDG 上游仓库
+pig repo set -m                                # 使用镜像/代理模式覆盖式设置仓库
 ```
 
 PIG 本身不支持离线安装，您可以自行下载 RPM/DEB 包，拷贝到网络隔离的生产服务器安装。

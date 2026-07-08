@@ -229,12 +229,14 @@ pig ext update                   # no-op：必须显式指定目标
 pig ext update pg_duckdb         # 更新特定扩展
 pig ext update postgis timescaledb  # 更新多个扩展
 pig ext update pg_duckdb -y      # 自动确认更新
+pig ext update pg_duckdb -m      # 使用 pigsty.cc 镜像/代理源
 ```
 
 **选项：**
 
 - `-v|--version`：指定 PG 大版本
 - `-y|--yes`：自动确认更新
+- `-m|--mirror`：优先使用 `pigsty.cc` 镜像作为更新来源
 
 
 ## ext import
@@ -260,8 +262,11 @@ pig ext import -d /www/pigsty postgis # 指定路径导入
 
 ```bash
 pig ext link 18                  # 链接 PG 18 到 PATH
+pig ext link pg17                # pg 前缀会被剥离，链接 PG 17
 pig ext link 16                  # 链接 PG 16 到 /usr/pgsql
 pig ext link /usr/pgsql-16       # 从指定路径链接到 /usr/pgsql
+pig ext link polar               # 链接 PolarDB / PolarPG 安装
+pig ext link /usr/polar-17       # 从指定 PolarDB 路径链接
 pig ext link null                # 取消当前 PostgreSQL 链接
 pig ext link none                # null / none / nil / nop / no 均可取消链接
 ```
