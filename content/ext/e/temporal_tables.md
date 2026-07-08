@@ -58,7 +58,7 @@ weight: 1040
 | el9.x86_64 | AVAIL PIGSTY 1.2.2 1 | AVAIL PGDG 1.2.2 3 | AVAIL PGDG 1.2.2 3 | AVAIL PGDG 1.2.2 3 | AVAIL PGDG 1.2.2 3 |
 | el9.aarch64 | AVAIL PIGSTY 1.2.2 1 | AVAIL PGDG 1.2.2 3 | AVAIL PGDG 1.2.2 3 | AVAIL PGDG 1.2.2 3 | AVAIL PGDG 1.2.2 3 |
 | el10.x86_64 | AVAIL PIGSTY 1.2.2 1 | AVAIL PGDG 1.2.2 3 | AVAIL PGDG 1.2.2 3 | AVAIL PGDG 1.2.2 3 | AVAIL PGDG 1.2.2 3 |
-| el10.aarch64 | AVAIL PIGSTY 1.2.2 1 | AVAIL PGDG 1.2.2 3 | AVAIL PGDG 1.2.2 3 | AVAIL PGDG 1.2.2 3 | AVAIL PGDG 1.2.2 3 |
+| el10.aarch64 | AVAIL PIGSTY 1.2.2 1 | AVAIL PGDG 1.2.2 3 | AVAIL PGDG 1.2.2 3 | AVAIL PGDG 1.2.2 3 | AVAIL PGDG 1.2.2 2 |
 | d12.x86_64 | AVAIL PIGSTY 1.2.2 1 | AVAIL PIGSTY 1.2.2 1 | AVAIL PIGSTY 1.2.2 1 | AVAIL PIGSTY 1.2.2 1 | AVAIL PIGSTY 1.2.2 1 |
 | d12.aarch64 | AVAIL PIGSTY 1.2.2 1 | AVAIL PIGSTY 1.2.2 1 | AVAIL PIGSTY 1.2.2 1 | AVAIL PIGSTY 1.2.2 1 | AVAIL PIGSTY 1.2.2 1 |
 | d13.x86_64 | AVAIL PIGSTY 1.2.2 1 | AVAIL PIGSTY 1.2.2 1 | AVAIL PIGSTY 1.2.2 1 | AVAIL PIGSTY 1.2.2 1 | AVAIL PIGSTY 1.2.2 1 |
@@ -174,7 +174,6 @@ weight: 1040
 @ el10.x86_64 14 temporal_tables_14 temporal_tables_14-1.2.2-7PGDG.rhel10.2.x86_64.rpm pgdg 1.2.2 24.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/temporal_tables_14-1.2.2-7PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 14 temporal_tables_14 temporal_tables_14-1.2.2-5PGDG.rhel10.x86_64.rpm pgdg 1.2.2 24.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/temporal_tables_14-1.2.2-5PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 14 temporal_tables_14 temporal_tables_14-1.2.2-1PIGSTY.el10.x86_64.rpm pigsty 1.2.2 18.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/temporal_tables_14-1.2.2-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 14 temporal_tables_14 temporal_tables_14-1.2.2-7PGDG.rhel10.2.aarch64.rpm pgdg 1.2.2 23.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/temporal_tables_14-1.2.2-7PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 14 temporal_tables_14 temporal_tables_14-1.2.2-5PGDG.rhel10.aarch64.rpm pgdg 1.2.2 24.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/temporal_tables_14-1.2.2-5PGDG.rhel10.aarch64.rpm
 @ el10.aarch64 14 temporal_tables_14 temporal_tables_14-1.2.2-1PIGSTY.el10.aarch64.rpm pigsty 1.2.2 18.3KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/temporal_tables_14-1.2.2-1PIGSTY.el10.aarch64.rpm
 @ d12.x86_64 14 postgresql-14-temporal-tables postgresql-14-temporal-tables_1.2.2-1PIGSTY~bookworm_amd64.deb pigsty 1.2.2 24.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/t/temporal-tables/postgresql-14-temporal-tables_1.2.2-1PIGSTY~bookworm_amd64.deb

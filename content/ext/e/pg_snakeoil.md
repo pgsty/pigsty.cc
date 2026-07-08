@@ -58,7 +58,7 @@ weight: 7380
 | el9.x86_64 | AVAIL PGDG 1.4 3 | AVAIL PGDG 1.4 3 | AVAIL PGDG 1.4 3 | AVAIL PGDG 1.4 3 | AVAIL PGDG 1.4 3 |
 | el9.aarch64 | AVAIL PGDG 1.4 3 | AVAIL PGDG 1.4 3 | AVAIL PGDG 1.4 3 | AVAIL PGDG 1.4 3 | AVAIL PGDG 1.4 3 |
 | el10.x86_64 | AVAIL PGDG 1.4 2 | AVAIL PGDG 1.4 3 | AVAIL PGDG 1.4 3 | AVAIL PGDG 1.4 3 | AVAIL PGDG 1.4 3 |
-| el10.aarch64 | AVAIL PGDG 1.4 2 | AVAIL PGDG 1.4 3 | AVAIL PGDG 1.4 3 | AVAIL PGDG 1.4 3 | AVAIL PGDG 1.4 3 |
+| el10.aarch64 | AVAIL PGDG 1.4 2 | AVAIL PGDG 1.4 3 | AVAIL PGDG 1.4 3 | AVAIL PGDG 1.4 3 | AVAIL PIGSTY 1.4 2 |
 | d12.x86_64 | AVAIL PGDG 1.4 1 | AVAIL PGDG 1.4 1 | AVAIL PGDG 1.4 1 | AVAIL PGDG 1.4 1 | AVAIL PGDG 1.4 1 |
 | d12.aarch64 | AVAIL PGDG 1.4 1 | AVAIL PGDG 1.4 1 | AVAIL PGDG 1.4 1 | AVAIL PGDG 1.4 1 | AVAIL PGDG 1.4 1 |
 | d13.x86_64 | AVAIL PGDG 1.4 1 | AVAIL PGDG 1.4 1 | AVAIL PGDG 1.4 1 | AVAIL PGDG 1.4 1 | AVAIL PGDG 1.4 1 |
@@ -184,7 +184,6 @@ weight: 7380
 @ el10.x86_64 14 pg_snakeoil_14 pg_snakeoil_14-1.4-3PGDG.rhel10.2.x86_64.rpm pgdg 1.4 16.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_snakeoil_14-1.4-3PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 14 pg_snakeoil_14 pg_snakeoil_14-1.4-1PIGSTY.el10.x86_64.rpm pigsty 1.4 16.3KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_snakeoil_14-1.4-1PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 14 pg_snakeoil_14 pg_snakeoil_14-1.4-1PGDG.rhel10.x86_64.rpm pgdg 1.4 16.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_snakeoil_14-1.4-1PGDG.rhel10.x86_64.rpm
-@ el10.aarch64 14 pg_snakeoil_14 pg_snakeoil_14-1.4-3PGDG.rhel10.2.aarch64.rpm pgdg 1.4 15.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_snakeoil_14-1.4-3PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 14 pg_snakeoil_14 pg_snakeoil_14-1.4-1PIGSTY.el10.aarch64.rpm pigsty 1.4 16.4KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_snakeoil_14-1.4-1PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 14 pg_snakeoil_14 pg_snakeoil_14-1.4-1PGDG.rhel10.aarch64.rpm pgdg 1.4 16.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_snakeoil_14-1.4-1PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 14 postgresql-14-snakeoil postgresql-14-snakeoil_1.4-3.pgdg12+2_amd64.deb pgdg 1.4 17.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-snakeoil/postgresql-14-snakeoil_1.4-3.pgdg12+2_amd64.deb

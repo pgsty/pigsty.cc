@@ -56,7 +56,7 @@ weight: 2510
 | el9.x86_64 | AVAIL PGDG 5.4.3 12 | AVAIL PGDG 5.4.3 17 | AVAIL PGDG 5.4.3 21 | AVAIL PGDG 5.4.3 25 | AVAIL PGDG 5.4.3 27 |
 | el9.aarch64 | AVAIL PGDG 5.4.3 12 | AVAIL PGDG 5.4.3 17 | AVAIL PGDG 5.4.3 21 | AVAIL PGDG 5.4.3 24 | AVAIL PGDG 5.4.3 24 |
 | el10.x86_64 | AVAIL PGDG 5.4.3 12 | AVAIL PGDG 5.4.3 12 | AVAIL PGDG 5.4.3 12 | AVAIL PGDG 5.4.3 12 | AVAIL PGDG 5.4.3 12 |
-| el10.aarch64 | AVAIL PGDG 5.4.3 12 | AVAIL PGDG 5.4.3 12 | AVAIL PGDG 5.4.3 12 | AVAIL PGDG 5.4.3 12 | AVAIL PGDG 5.4.3 12 |
+| el10.aarch64 | AVAIL PGDG 5.4.3 12 | AVAIL PGDG 5.4.3 12 | AVAIL PGDG 5.4.3 12 | AVAIL PGDG 5.4.3 12 | AVAIL PGDG 5.4.3 11 |
 | d12.x86_64 | AVAIL PGDG 5.4.3 2 | AVAIL PGDG 5.4.3 2 | AVAIL PGDG 5.4.3 2 | AVAIL PGDG 5.4.3 2 | AVAIL PGDG 5.4.3 2 |
 | d12.aarch64 | AVAIL PGDG 5.4.3 2 | AVAIL PGDG 5.4.3 2 | AVAIL PGDG 5.4.3 2 | AVAIL PGDG 5.4.3 2 | AVAIL PGDG 5.4.3 2 |
 | d13.x86_64 | AVAIL PGDG 5.4.3 2 | AVAIL PGDG 5.4.3 2 | AVAIL PGDG 5.4.3 2 | AVAIL PGDG 5.4.3 2 | AVAIL PGDG 5.4.3 2 |
@@ -607,7 +607,6 @@ weight: 2510
 @ el10.x86_64 14 pg_partman_14 pg_partman_14-5.3.1-1PGDG.rhel10.x86_64.rpm pgdg 5.3.1 216.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_partman_14-5.3.1-1PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 14 pg_partman_14 pg_partman_14-5.3.0-1PGDG.rhel10.x86_64.rpm pgdg 5.3.0 215.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_partman_14-5.3.0-1PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 14 pg_partman_14 pg_partman_14-5.2.4-2PGDG.rhel10.x86_64.rpm pgdg 5.2.4 210.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_partman_14-5.2.4-2PGDG.rhel10.x86_64.rpm
-@ el10.aarch64 14 pg_partman_14 pg_partman_14-5.4.3-1PGDG.rhel10.2.aarch64.rpm pgdg 5.4.3 220.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_partman_14-5.4.3-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 14 pg_partman_14 pg_partman_14-5.4.3-1PGDG.rhel10.1.aarch64.rpm pgdg 5.4.3 220.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_partman_14-5.4.3-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 14 pg_partman_14 pg_partman_14-5.4.3-1PGDG.rhel10.0.aarch64.rpm pgdg 5.4.3 220.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_partman_14-5.4.3-1PGDG.rhel10.0.aarch64.rpm
 @ el10.aarch64 14 pg_partman_14 pg_partman_14-5.4.2-1PGDG.rhel10.1.aarch64.rpm pgdg 5.4.2 220.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_partman_14-5.4.2-1PGDG.rhel10.1.aarch64.rpm

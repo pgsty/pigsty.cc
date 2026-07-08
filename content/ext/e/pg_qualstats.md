@@ -50,7 +50,7 @@ weight: 6240
 | el9.x86_64 | AVAIL PGDG 2.1.4 3 | AVAIL PGDG 2.1.4 3 | AVAIL PGDG 2.1.4 5 | AVAIL PGDG 2.1.4 5 | AVAIL PGDG 2.1.4 5 |
 | el9.aarch64 | AVAIL PGDG 2.1.4 3 | AVAIL PGDG 2.1.4 3 | AVAIL PGDG 2.1.4 5 | AVAIL PGDG 2.1.4 5 | AVAIL PGDG 2.1.4 5 |
 | el10.x86_64 | AVAIL PGDG 2.1.4 3 | AVAIL PGDG 2.1.4 3 | AVAIL PGDG 2.1.4 3 | AVAIL PGDG 2.1.4 3 | AVAIL PGDG 2.1.4 3 |
-| el10.aarch64 | AVAIL PGDG 2.1.4 3 | AVAIL PGDG 2.1.4 3 | AVAIL PGDG 2.1.4 3 | AVAIL PGDG 2.1.4 3 | AVAIL PGDG 2.1.4 3 |
+| el10.aarch64 | AVAIL PGDG 2.1.4 3 | AVAIL PGDG 2.1.4 3 | AVAIL PGDG 2.1.4 3 | AVAIL PGDG 2.1.4 3 | AVAIL PGDG 2.1.4 2 |
 | d12.x86_64 | AVAIL PGDG 2.1.4 2 | AVAIL PGDG 2.1.4 2 | AVAIL PGDG 2.1.4 2 | AVAIL PGDG 2.1.4 2 | AVAIL PGDG 2.1.4 2 |
 | d12.aarch64 | AVAIL PGDG 2.1.4 2 | AVAIL PGDG 2.1.4 2 | AVAIL PGDG 2.1.4 2 | AVAIL PGDG 2.1.4 2 | AVAIL PGDG 2.1.4 2 |
 | d13.x86_64 | AVAIL PGDG 2.1.4 2 | AVAIL PGDG 2.1.4 2 | AVAIL PGDG 2.1.4 2 | AVAIL PGDG 2.1.4 2 | AVAIL PGDG 2.1.4 2 |
@@ -243,8 +243,7 @@ weight: 6240
 @ el10.x86_64 14 pg_qualstats_14 pg_qualstats_14-2.1.4-1PGDG.rhel10.2.x86_64.rpm pgdg 2.1.4 37.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_qualstats_14-2.1.4-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 14 pg_qualstats_14 pg_qualstats_14-2.1.3-1PGDG.rhel10.2.x86_64.rpm pgdg 2.1.3 37.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_qualstats_14-2.1.3-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 14 pg_qualstats_14 pg_qualstats_14-2.1.1-2PGDG.rhel10.x86_64.rpm pgdg 2.1.1 36.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_qualstats_14-2.1.1-2PGDG.rhel10.x86_64.rpm
-@ el10.aarch64 14 pg_qualstats_14 pg_qualstats_14-2.1.4-1PGDG.rhel10.2.aarch64.rpm pgdg 2.1.4 37.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_qualstats_14-2.1.4-1PGDG.rhel10.2.aarch64.rpm
-@ el10.aarch64 14 pg_qualstats_14 pg_qualstats_14-2.1.3-1PGDG.rhel10.2.aarch64.rpm pgdg 2.1.3 36.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_qualstats_14-2.1.3-1PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 14 pg_qualstats_14 pg_qualstats_14-2.1.4-1PGDG.rhel10.1.aarch64.rpm pgdg 2.1.4 37.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_qualstats_14-2.1.4-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 14 pg_qualstats_14 pg_qualstats_14-2.1.1-2PGDG.rhel10.aarch64.rpm pgdg 2.1.1 36.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_qualstats_14-2.1.1-2PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 14 postgresql-14-pg-qualstats postgresql-14-pg-qualstats_2.1.4-1.pgdg12+1_amd64.deb pgdg 2.1.4 57.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-qualstats/postgresql-14-pg-qualstats_2.1.4-1.pgdg12+1_amd64.deb
 @ d12.x86_64 14 postgresql-14-pg-qualstats postgresql-14-pg-qualstats_2.1.3-1.pgdg12+1_amd64.deb pgdg 2.1.3 57.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-qualstats/postgresql-14-pg-qualstats_2.1.3-1.pgdg12+1_amd64.deb

@@ -55,7 +55,7 @@ weight: 6210
 | el9.x86_64 | AVAIL PGDG 2.1.8 5 | AVAIL PGDG 2.1.8 7 | AVAIL PGDG 2.1.8 8 | AVAIL PGDG 2.1.8 8 | AVAIL PGDG 2.1.8 8 |
 | el9.aarch64 | AVAIL PGDG 2.1.8 5 | AVAIL PGDG 2.1.8 7 | AVAIL PGDG 2.1.8 8 | AVAIL PGDG 2.1.8 8 | AVAIL PGDG 2.1.8 8 |
 | el10.x86_64 | AVAIL PGDG 2.1.8 5 | AVAIL PGDG 2.1.8 6 | AVAIL PGDG 2.1.8 6 | AVAIL PGDG 2.1.8 6 | AVAIL PGDG 2.1.8 6 |
-| el10.aarch64 | AVAIL PGDG 2.1.8 5 | AVAIL PGDG 2.1.8 6 | AVAIL PGDG 2.1.8 6 | AVAIL PGDG 2.1.8 6 | AVAIL PGDG 2.1.8 6 |
+| el10.aarch64 | AVAIL PGDG 2.1.8 5 | AVAIL PGDG 2.1.8 6 | AVAIL PGDG 2.1.8 6 | AVAIL PGDG 2.1.8 6 | AVAIL PGDG 2.1.8 4 |
 | d12.x86_64 | AVAIL PGDG 2.1.8 2 | AVAIL PGDG 2.1.8 2 | AVAIL PGDG 2.1.8 2 | AVAIL PGDG 2.1.8 2 | AVAIL PGDG 2.1.8 2 |
 | d12.aarch64 | AVAIL PGDG 2.1.8 2 | AVAIL PGDG 2.1.8 2 | AVAIL PGDG 2.1.8 2 | AVAIL PGDG 2.1.8 2 | AVAIL PGDG 2.1.8 2 |
 | d13.x86_64 | AVAIL PGDG 2.1.8 2 | AVAIL PGDG 2.1.8 2 | AVAIL PGDG 2.1.8 2 | AVAIL PGDG 2.1.8 2 | AVAIL PGDG 2.1.8 2 |
@@ -312,10 +312,8 @@ weight: 6210
 @ el10.x86_64 14 pg_show_plans_14 pg_show_plans_14-2.1.6-3PGDG.rhel10.2.x86_64.rpm pgdg 2.1.6 19.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_show_plans_14-2.1.6-3PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 14 pg_show_plans_14 pg_show_plans_14-2.1.6-1PGDG.rhel10.x86_64.rpm pgdg 2.1.6 20.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_show_plans_14-2.1.6-1PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 14 pg_show_plans_14 pg_show_plans_14-2.1.3-1PGDG.rhel10.x86_64.rpm pgdg 2.1.3 19.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_show_plans_14-2.1.3-1PGDG.rhel10.x86_64.rpm
-@ el10.aarch64 14 pg_show_plans_14 pg_show_plans_14-2.1.8-1PGDG.rhel10.2.aarch64.rpm pgdg 2.1.8 20.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_show_plans_14-2.1.8-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 14 pg_show_plans_14 pg_show_plans_14-2.1.8-1PGDG.rhel10.1.aarch64.rpm pgdg 2.1.8 20.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_show_plans_14-2.1.8-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 14 pg_show_plans_14 pg_show_plans_14-2.1.8-1PGDG.rhel10.0.aarch64.rpm pgdg 2.1.8 20.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_show_plans_14-2.1.8-1PGDG.rhel10.0.aarch64.rpm
-@ el10.aarch64 14 pg_show_plans_14 pg_show_plans_14-2.1.6-3PGDG.rhel10.2.aarch64.rpm pgdg 2.1.6 19.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_show_plans_14-2.1.6-3PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 14 pg_show_plans_14 pg_show_plans_14-2.1.6-1PGDG.rhel10.aarch64.rpm pgdg 2.1.6 20.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_show_plans_14-2.1.6-1PGDG.rhel10.aarch64.rpm
 @ el10.aarch64 14 pg_show_plans_14 pg_show_plans_14-2.1.3-1PGDG.rhel10.aarch64.rpm pgdg 2.1.3 19.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_show_plans_14-2.1.3-1PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 14 postgresql-14-show-plans postgresql-14-show-plans_2.1.8-1.pgdg12+1_amd64.deb pgdg 2.1.8 23.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-show-plans/postgresql-14-show-plans_2.1.8-1.pgdg12+1_amd64.deb

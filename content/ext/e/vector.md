@@ -56,7 +56,7 @@ weight: 1800
 | el9.x86_64 | AVAIL PIGSTY 0.8.4 7 | AVAIL PIGSTY 0.8.4 9 | AVAIL PIGSTY 0.8.4 19 | AVAIL PIGSTY 0.8.4 21 | AVAIL PIGSTY 0.8.4 21 |
 | el9.aarch64 | AVAIL PIGSTY 0.8.4 7 | AVAIL PIGSTY 0.8.4 9 | AVAIL PIGSTY 0.8.4 19 | AVAIL PIGSTY 0.8.4 21 | AVAIL PIGSTY 0.8.4 21 |
 | el10.x86_64 | AVAIL PIGSTY 0.8.4 7 | AVAIL PIGSTY 0.8.4 8 | AVAIL PIGSTY 0.8.4 8 | AVAIL PIGSTY 0.8.4 8 | AVAIL PIGSTY 0.8.4 8 |
-| el10.aarch64 | AVAIL PIGSTY 0.8.4 7 | AVAIL PIGSTY 0.8.4 8 | AVAIL PIGSTY 0.8.4 8 | AVAIL PIGSTY 0.8.4 8 | AVAIL PIGSTY 0.8.4 8 |
+| el10.aarch64 | AVAIL PIGSTY 0.8.4 7 | AVAIL PIGSTY 0.8.4 8 | AVAIL PIGSTY 0.8.4 8 | AVAIL PIGSTY 0.8.4 8 | AVAIL PIGSTY 0.8.4 7 |
 | d12.x86_64 | AVAIL PGDG 0.8.4 4 | AVAIL PGDG 0.8.4 4 | AVAIL PGDG 0.8.4 4 | AVAIL PGDG 0.8.4 4 | AVAIL PGDG 0.8.4 4 |
 | d12.aarch64 | AVAIL PGDG 0.8.4 4 | AVAIL PGDG 0.8.4 4 | AVAIL PGDG 0.8.4 4 | AVAIL PGDG 0.8.4 4 | AVAIL PGDG 0.8.4 4 |
 | d13.x86_64 | AVAIL PGDG 0.8.4 4 | AVAIL PGDG 0.8.4 4 | AVAIL PGDG 0.8.4 4 | AVAIL PGDG 0.8.4 4 | AVAIL PGDG 0.8.4 4 |
@@ -586,9 +586,8 @@ weight: 1800
 @ el10.x86_64 14 pgvector_14 pgvector_14-0.8.1-1PGDG.rhel10.x86_64.rpm pgdg 0.8.1 108.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pgvector_14-0.8.1-1PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 14 pgvector_14 pgvector_14-0.8.0-2PGDG.rhel10.x86_64.rpm pgdg 0.8.0 108.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pgvector_14-0.8.0-2PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 14 pgvector_14 pgvector_14-0.8.4-1PIGSTY.el10.aarch64.rpm pigsty 0.8.4 104.4KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgvector_14-0.8.4-1PIGSTY.el10.aarch64.rpm
-@ el10.aarch64 14 pgvector_14 pgvector_14-0.8.4-1PGDG.rhel10.2.aarch64.rpm pgdg 0.8.4 102.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgvector_14-0.8.4-1PGDG.rhel10.2.aarch64.rpm
-@ el10.aarch64 14 pgvector_14 pgvector_14-0.8.3-1PGDG.rhel10.2.aarch64.rpm pgdg 0.8.3 101.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgvector_14-0.8.3-1PGDG.rhel10.2.aarch64.rpm
-@ el10.aarch64 14 pgvector_14 pgvector_14-0.8.2-1PGDG.rhel10.2.aarch64.rpm pgdg 0.8.2 101.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgvector_14-0.8.2-1PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 14 pgvector_14 pgvector_14-0.8.4-1PGDG.rhel10.1.aarch64.rpm pgdg 0.8.4 102.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgvector_14-0.8.4-1PGDG.rhel10.1.aarch64.rpm
+@ el10.aarch64 14 pgvector_14 pgvector_14-0.8.3-1PGDG.rhel10.1.aarch64.rpm pgdg 0.8.3 101.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgvector_14-0.8.3-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 14 pgvector_14 pgvector_14-0.8.2-1PGDG.rhel10.1.aarch64.rpm pgdg 0.8.2 101.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgvector_14-0.8.2-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 14 pgvector_14 pgvector_14-0.8.2-1PGDG.rhel10.0.aarch64.rpm pgdg 0.8.2 101.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgvector_14-0.8.2-1PGDG.rhel10.0.aarch64.rpm
 @ el10.aarch64 14 pgvector_14 pgvector_14-0.8.1-1PGDG.rhel10.aarch64.rpm pgdg 0.8.1 101.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgvector_14-0.8.1-1PGDG.rhel10.aarch64.rpm

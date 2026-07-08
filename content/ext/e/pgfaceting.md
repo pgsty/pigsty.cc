@@ -55,7 +55,7 @@ weight: 3640
 | el9.x86_64 | AVAIL PIGSTY 0.2.0 3 | AVAIL PIGSTY 0.2.0 3 | AVAIL PIGSTY 0.2.0 3 | AVAIL PIGSTY 0.2.0 3 | AVAIL PIGSTY 0.2.0 3 |
 | el9.aarch64 | AVAIL PIGSTY 0.2.0 3 | AVAIL PIGSTY 0.2.0 3 | AVAIL PIGSTY 0.2.0 3 | AVAIL PIGSTY 0.2.0 3 | AVAIL PIGSTY 0.2.0 3 |
 | el10.x86_64 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 2 |
-| el10.aarch64 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 2 |
+| el10.aarch64 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 2 | AVAIL PGDG 0.2.0 1 |
 | d12.x86_64 | AVAIL PGDG 0.2.0 1 | AVAIL PGDG 0.2.0 1 | AVAIL PGDG 0.2.0 1 | AVAIL PGDG 0.2.0 1 | AVAIL PGDG 0.2.0 1 |
 | d12.aarch64 | AVAIL PGDG 0.2.0 1 | AVAIL PGDG 0.2.0 1 | AVAIL PGDG 0.2.0 1 | AVAIL PGDG 0.2.0 1 | AVAIL PGDG 0.2.0 1 |
 | d13.x86_64 | AVAIL PGDG 0.2.0 1 | AVAIL PGDG 0.2.0 1 | AVAIL PGDG 0.2.0 1 | AVAIL PGDG 0.2.0 1 | AVAIL PGDG 0.2.0 1 |
@@ -174,7 +174,6 @@ weight: 3640
 @ el9.aarch64 14 pgfaceting_14 pgfaceting_14-0.2.0-1PGDG.rhel9.noarch.rpm pgdg 0.2.0 15.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pgfaceting_14-0.2.0-1PGDG.rhel9.noarch.rpm
 @ el10.x86_64 14 pgfaceting_14 pgfaceting_14-0.2.0-1PGDG.rhel10.2.noarch.rpm pgdg 0.2.0 15.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pgfaceting_14-0.2.0-1PGDG.rhel10.2.noarch.rpm
 @ el10.x86_64 14 pgfaceting_14 pgfaceting_14-0.2.0-1PGDG.rhel10.noarch.rpm pgdg 0.2.0 15.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pgfaceting_14-0.2.0-1PGDG.rhel10.noarch.rpm
-@ el10.aarch64 14 pgfaceting_14 pgfaceting_14-0.2.0-1PGDG.rhel10.2.noarch.rpm pgdg 0.2.0 15.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgfaceting_14-0.2.0-1PGDG.rhel10.2.noarch.rpm
 @ el10.aarch64 14 pgfaceting_14 pgfaceting_14-0.2.0-1PGDG.rhel10.noarch.rpm pgdg 0.2.0 15.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgfaceting_14-0.2.0-1PGDG.rhel10.noarch.rpm
 @ d12.x86_64 14 postgresql-14-pgfaceting postgresql-14-pgfaceting_0.2.0-5.pgdg12+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-14-pgfaceting_0.2.0-5.pgdg12+1_all.deb
 @ d12.aarch64 14 postgresql-14-pgfaceting postgresql-14-pgfaceting_0.2.0-5.pgdg12+1_all.deb pgdg 0.2.0 9.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfaceting/postgresql-14-pgfaceting_0.2.0-5.pgdg12+1_all.deb

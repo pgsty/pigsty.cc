@@ -265,8 +265,8 @@ weight: 40
 
 | **ID** | **扩展名** | **版本** | **属性** | **模式** | **描述** |
 |:------:|:-----------|:--------:|:--------:|:---------|:---------|
-| 9300 | [**`babelfishpg_common`**](/ext/e/babelfishpg_common) | `5.5.0` | `--s-d-r` | - | SQL Server 数据类型兼容扩展 |
-| 9310 | [`babelfishpg_tsql`](/ext/e/babelfishpg_tsql) | `5.5.0` | `--s-d-r` | - | SQL Server SQL语法兼容性扩展 |
+| 9300 | [**`babelfishpg_common`**](/ext/e/babelfishpg_common) | `5.4.0` | `--s-d-r` | - | SQL Server 数据类型兼容扩展 |
+| 9310 | [`babelfishpg_tsql`](/ext/e/babelfishpg_tsql) | `5.4.0` | `--s-d-r` | - | SQL Server SQL语法兼容性扩展 |
 | 9320 | [`babelfishpg_tds`](/ext/e/babelfishpg_tds) | `1.0.0` | `--sLd-r` | - | SQL Server TDS线缆协议兼容扩展 |
 | 9330 | [`babelfishpg_money`](/ext/e/babelfishpg_money) | `1.1.0` | `--s-dt-` | - | SQL Server 货币数据类型兼容扩展 |
 {.ext-table}

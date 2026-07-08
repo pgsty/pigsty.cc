@@ -50,7 +50,7 @@ weight: 5140
 | el9.x86_64 | AVAIL PGDG 1.4 3 | AVAIL PGDG 1.4 4 | AVAIL PGDG 1.4 6 | AVAIL PGDG 1.4 6 | AVAIL PGDG 1.4 6 |
 | el9.aarch64 | AVAIL PGDG 1.4 3 | AVAIL PGDG 1.4 4 | AVAIL PGDG 1.4 6 | AVAIL PGDG 1.4 6 | AVAIL PGDG 1.4 6 |
 | el10.x86_64 | AVAIL PGDG 1.4 3 | AVAIL PGDG 1.4 4 | AVAIL PGDG 1.4 4 | AVAIL PGDG 1.4 4 | AVAIL PGDG 1.4 4 |
-| el10.aarch64 | AVAIL PGDG 1.4 3 | AVAIL PGDG 1.4 4 | AVAIL PGDG 1.4 4 | AVAIL PGDG 1.4 4 | AVAIL PGDG 1.4 4 |
+| el10.aarch64 | AVAIL PGDG 1.4 3 | AVAIL PGDG 1.4 4 | AVAIL PGDG 1.4 4 | AVAIL PGDG 1.4 4 | AVAIL PGDG 1.4.1 3 |
 | d12.x86_64 | AVAIL PGDG 1.4 2 | AVAIL PGDG 1.4 3 | AVAIL PGDG 1.4 3 | AVAIL PGDG 1.4 3 | AVAIL PGDG 1.4 3 |
 | d12.aarch64 | AVAIL PGDG 1.4 2 | AVAIL PGDG 1.4 3 | AVAIL PGDG 1.4 3 | AVAIL PGDG 1.4 3 | AVAIL PGDG 1.4 3 |
 | d13.x86_64 | AVAIL PGDG 1.4 2 | AVAIL PGDG 1.4 2 | AVAIL PGDG 1.4 2 | AVAIL PGDG 1.4 2 | AVAIL PGDG 1.4 2 |
@@ -291,8 +291,7 @@ weight: 5140
 @ el10.x86_64 14 pg_permissions_14 pg_permissions_14-1.4.1-1PGDG.rhel10.2.noarch.rpm pgdg 1.4.1 13.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_permissions_14-1.4.1-1PGDG.rhel10.2.noarch.rpm
 @ el10.x86_64 14 pg_permissions_14 pg_permissions_14-1.4-1PGDG.rhel10.noarch.rpm pgdg 1.4 13.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_permissions_14-1.4-1PGDG.rhel10.noarch.rpm
 @ el10.x86_64 14 pg_permissions_14 pg_permissions_14-1.3-2PGDG.rhel10.noarch.rpm pgdg 1.3 13.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_permissions_14-1.3-2PGDG.rhel10.noarch.rpm
-@ el10.aarch64 14 pg_permissions_14 pg_permissions_14-1.4-2PGDG.rhel10.2.noarch.rpm pgdg 1.4 13.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_permissions_14-1.4-2PGDG.rhel10.2.noarch.rpm
-@ el10.aarch64 14 pg_permissions_14 pg_permissions_14-1.4.1-1PGDG.rhel10.2.noarch.rpm pgdg 1.4.1 13.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_permissions_14-1.4.1-1PGDG.rhel10.2.noarch.rpm
+@ el10.aarch64 14 pg_permissions_14 pg_permissions_14-1.4.1-1PGDG.rhel10.1.noarch.rpm pgdg 1.4.1 13.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_permissions_14-1.4.1-1PGDG.rhel10.1.noarch.rpm
 @ el10.aarch64 14 pg_permissions_14 pg_permissions_14-1.4-1PGDG.rhel10.noarch.rpm pgdg 1.4 13.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_permissions_14-1.4-1PGDG.rhel10.noarch.rpm
 @ el10.aarch64 14 pg_permissions_14 pg_permissions_14-1.3-2PGDG.rhel10.noarch.rpm pgdg 1.3 13.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_permissions_14-1.3-2PGDG.rhel10.noarch.rpm
 @ d12.x86_64 14 postgresql-14-pg-permissions postgresql-14-pg-permissions_1.4-2.pgdg12+1_all.deb pgdg 1.4 8.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-permissions/postgresql-14-pg-permissions_1.4-2.pgdg12+1_all.deb

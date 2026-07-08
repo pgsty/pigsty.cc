@@ -50,7 +50,7 @@ weight: 2650
 | el9.x86_64 | AVAIL PGDG 3.5.1 2 | AVAIL PGDG 3.5.1 2 | AVAIL PGDG 3.5.1 2 | AVAIL PGDG 3.5.1 3 | AVAIL PGDG 3.5.1 4 |
 | el9.aarch64 | AVAIL PGDG 3.5.1 2 | AVAIL PGDG 3.5.1 2 | AVAIL PGDG 3.5.1 2 | AVAIL PGDG 3.5.1 3 | AVAIL PGDG 3.5.1 3 |
 | el10.x86_64 | AVAIL PGDG 3.5.1 2 | AVAIL PGDG 3.5.1 2 | AVAIL PGDG 3.5.1 2 | AVAIL PGDG 3.5.1 2 | AVAIL PGDG 3.5.1 2 |
-| el10.aarch64 | AVAIL PGDG 3.5.1 2 | AVAIL PGDG 3.5.1 2 | AVAIL PGDG 3.5.1 2 | AVAIL PGDG 3.5.1 2 | AVAIL PGDG 3.5.1 2 |
+| el10.aarch64 | AVAIL PGDG 3.5.1 2 | AVAIL PGDG 3.5.1 2 | AVAIL PGDG 3.5.1 2 | AVAIL PGDG 3.5.1 2 | AVAIL PGDG 3.5.1 1 |
 | d12.x86_64 | AVAIL PGDG 3.5.1 1 | AVAIL PGDG 3.5.1 1 | AVAIL PGDG 3.5.1 1 | AVAIL PGDG 3.5.1 1 | AVAIL PGDG 3.5.1 1 |
 | d12.aarch64 | AVAIL PGDG 3.5.1 1 | AVAIL PGDG 3.5.1 1 | AVAIL PGDG 3.5.1 1 | AVAIL PGDG 3.5.1 1 | AVAIL PGDG 3.5.1 1 |
 | d13.x86_64 | AVAIL PGDG 3.5.1 1 | AVAIL PGDG 3.5.1 1 | AVAIL PGDG 3.5.1 1 | AVAIL PGDG 3.5.1 1 | AVAIL PGDG 3.5.1 1 |
@@ -160,7 +160,6 @@ weight: 2650
 @ el9.aarch64 14 pgq_14 pgq_14-3.5-1.rhel9.aarch64.rpm pgdg 3.5 53.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pgq_14-3.5-1.rhel9.aarch64.rpm
 @ el10.x86_64 14 pgq_14 pgq_14-3.5.1-6PGDG.rhel10.2.x86_64.rpm pgdg 3.5.1 52.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pgq_14-3.5.1-6PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 14 pgq_14 pgq_14-3.5.1-4PGDG.rhel10.x86_64.rpm pgdg 3.5.1 53.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pgq_14-3.5.1-4PGDG.rhel10.x86_64.rpm
-@ el10.aarch64 14 pgq_14 pgq_14-3.5.1-6PGDG.rhel10.2.aarch64.rpm pgdg 3.5.1 52.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgq_14-3.5.1-6PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 14 pgq_14 pgq_14-3.5.1-4PGDG.rhel10.aarch64.rpm pgdg 3.5.1 52.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgq_14-3.5.1-4PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 14 postgresql-14-pgq3 postgresql-14-pgq3_3.5.1-2.pgdg12+1_amd64.deb pgdg 3.5.1 124.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgq/postgresql-14-pgq3_3.5.1-2.pgdg12+1_amd64.deb
 @ d12.aarch64 14 postgresql-14-pgq3 postgresql-14-pgq3_3.5.1-2.pgdg12+1_arm64.deb pgdg 3.5.1 123.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgq/postgresql-14-pgq3_3.5.1-2.pgdg12+1_arm64.deb

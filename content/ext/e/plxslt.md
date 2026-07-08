@@ -55,7 +55,7 @@ weight: 3110
 | el9.x86_64 | AVAIL PGDG 0.20140221 2 | AVAIL PGDG 0.20140221 2 | AVAIL PGDG 0.20140221 2 | AVAIL PGDG 0.20140221 2 | AVAIL PGDG 0.20140221 2 |
 | el9.aarch64 | AVAIL PGDG 0.20140221 2 | AVAIL PGDG 0.20140221 2 | AVAIL PGDG 0.20140221 2 | AVAIL PGDG 0.20140221 2 | AVAIL PGDG 0.20140221 2 |
 | el10.x86_64 | AVAIL PGDG 0.20140221 2 | AVAIL PGDG 0.20140221 2 | AVAIL PGDG 0.20140221 2 | AVAIL PGDG 0.20140221 2 | AVAIL PGDG 0.20140221 2 |
-| el10.aarch64 | AVAIL PGDG 0.20140221 2 | AVAIL PGDG 0.20140221 2 | AVAIL PGDG 0.20140221 2 | AVAIL PGDG 0.20140221 2 | AVAIL PGDG 0.20140221 2 |
+| el10.aarch64 | AVAIL PGDG 0.20140221 2 | AVAIL PGDG 0.20140221 2 | AVAIL PGDG 0.20140221 2 | AVAIL PGDG 0.20140221 2 | AVAIL PGDG 0.20140221 1 |
 | d12.x86_64 | AVAIL PIGSTY 0.20140221 1 | AVAIL PIGSTY 0.20140221 1 | AVAIL PIGSTY 0.20140221 1 | AVAIL PIGSTY 0.20140221 1 | AVAIL PIGSTY 0.20140221 1 |
 | d12.aarch64 | AVAIL PIGSTY 0.20140221 1 | AVAIL PIGSTY 0.20140221 1 | AVAIL PIGSTY 0.20140221 1 | AVAIL PIGSTY 0.20140221 1 | AVAIL PIGSTY 0.20140221 1 |
 | d13.x86_64 | AVAIL PIGSTY 0.20140221 1 | AVAIL PIGSTY 0.20140221 1 | AVAIL PIGSTY 0.20140221 1 | AVAIL PIGSTY 0.20140221 1 | AVAIL PIGSTY 0.20140221 1 |
@@ -154,7 +154,6 @@ weight: 3110
 @ el9.aarch64 14 plxslt_14 plxslt_14-0.20140221-1PGDG.rhel9.aarch64.rpm pgdg 0.20140221 14.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/plxslt_14-0.20140221-1PGDG.rhel9.aarch64.rpm
 @ el10.x86_64 14 plxslt_14 plxslt_14-0.20140221-3PGDG.rhel10.2.x86_64.rpm pgdg 0.20140221 15.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/plxslt_14-0.20140221-3PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 14 plxslt_14 plxslt_14-0.20140221-1PGDG.rhel10.x86_64.rpm pgdg 0.20140221 15.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/plxslt_14-0.20140221-1PGDG.rhel10.x86_64.rpm
-@ el10.aarch64 14 plxslt_14 plxslt_14-0.20140221-3PGDG.rhel10.2.aarch64.rpm pgdg 0.20140221 15.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/plxslt_14-0.20140221-3PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 14 plxslt_14 plxslt_14-0.20140221-1PGDG.rhel10.aarch64.rpm pgdg 0.20140221 15.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/plxslt_14-0.20140221-1PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 14 postgresql-14-plxslt postgresql-14-plxslt_0.20140221-1PIGSTY~bookworm_amd64.deb pigsty 0.20140221 12.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/plxslt/postgresql-14-plxslt_0.20140221-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 14 postgresql-14-plxslt postgresql-14-plxslt_0.20140221-1PIGSTY~bookworm_arm64.deb pigsty 0.20140221 12.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/plxslt/postgresql-14-plxslt_0.20140221-1PIGSTY~bookworm_arm64.deb

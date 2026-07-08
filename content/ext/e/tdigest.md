@@ -50,7 +50,7 @@ weight: 4700
 | el9.x86_64 | AVAIL PGDG 1.4.2 2 | AVAIL PGDG 1.4.2 3 | AVAIL PGDG 1.4.2 2 | AVAIL PGDG 1.4.2 3 | AVAIL PGDG 1.4.2 3 |
 | el9.aarch64 | AVAIL PGDG 1.4.2 2 | AVAIL PGDG 1.4.2 3 | AVAIL PGDG 1.4.2 2 | AVAIL PGDG 1.4.2 3 | AVAIL PGDG 1.4.2 3 |
 | el10.x86_64 | AVAIL PGDG 1.4.2 2 | AVAIL PGDG 1.4.2 2 | AVAIL PGDG 1.4.2 2 | AVAIL PGDG 1.4.2 2 | AVAIL PGDG 1.4.2 2 |
-| el10.aarch64 | AVAIL PGDG 1.4.2 2 | AVAIL PGDG 1.4.2 2 | AVAIL PGDG 1.4.2 2 | AVAIL PGDG 1.4.2 2 | AVAIL PGDG 1.4.2 2 |
+| el10.aarch64 | AVAIL PGDG 1.4.2 2 | AVAIL PGDG 1.4.2 2 | AVAIL PGDG 1.4.2 2 | AVAIL PGDG 1.4.2 2 | AVAIL PGDG 1.4.2 1 |
 | d12.x86_64 | AVAIL PGDG 1.4.3 1 | AVAIL PGDG 1.4.3 1 | AVAIL PGDG 1.4.3 1 | AVAIL PGDG 1.4.3 1 | AVAIL PGDG 1.4.3 1 |
 | d12.aarch64 | AVAIL PGDG 1.4.3 1 | AVAIL PGDG 1.4.3 1 | AVAIL PGDG 1.4.3 1 | AVAIL PGDG 1.4.3 1 | AVAIL PGDG 1.4.3 1 |
 | d13.x86_64 | AVAIL PGDG 1.4.3 1 | AVAIL PGDG 1.4.3 1 | AVAIL PGDG 1.4.3 1 | AVAIL PGDG 1.4.3 1 | AVAIL PGDG 1.4.3 1 |
@@ -161,7 +161,6 @@ weight: 4700
 @ el9.aarch64 14 tdigest_14 tdigest_14-1.4.0-1.rhel9.aarch64.rpm pgdg 1.4.0 70.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/tdigest_14-1.4.0-1.rhel9.aarch64.rpm
 @ el10.x86_64 14 tdigest_14 tdigest_14-1.4.2-4PGDG.rhel10.2.x86_64.rpm pgdg 1.4.2 33.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/tdigest_14-1.4.2-4PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 14 tdigest_14 tdigest_14-1.4.2-2PGDG.rhel10.x86_64.rpm pgdg 1.4.2 33.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/tdigest_14-1.4.2-2PGDG.rhel10.x86_64.rpm
-@ el10.aarch64 14 tdigest_14 tdigest_14-1.4.2-4PGDG.rhel10.2.aarch64.rpm pgdg 1.4.2 32.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/tdigest_14-1.4.2-4PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 14 tdigest_14 tdigest_14-1.4.2-2PGDG.rhel10.aarch64.rpm pgdg 1.4.2 33.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/tdigest_14-1.4.2-2PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 14 postgresql-14-tdigest postgresql-14-tdigest_1.4.3-2.pgdg12+1_amd64.deb pgdg 1.4.3 57.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/t/tdigest/postgresql-14-tdigest_1.4.3-2.pgdg12+1_amd64.deb
 @ d12.aarch64 14 postgresql-14-tdigest postgresql-14-tdigest_1.4.3-2.pgdg12+1_arm64.deb pgdg 1.4.3 56.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/t/tdigest/postgresql-14-tdigest_1.4.3-2.pgdg12+1_arm64.deb

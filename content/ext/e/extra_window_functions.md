@@ -53,7 +53,7 @@ weight: 4720
 | el9.x86_64 | AVAIL PGDG 1.0 2 | AVAIL PGDG 1.0 2 | AVAIL PGDG 1.0 2 | AVAIL PGDG 1.0 2 | AVAIL PGDG 1.0 1 |
 | el9.aarch64 | AVAIL PGDG 1.0 2 | AVAIL PGDG 1.0 2 | AVAIL PGDG 1.0 2 | AVAIL PGDG 1.0 2 | AVAIL PGDG 1.0 2 |
 | el10.x86_64 | AVAIL PGDG 1.0 2 | AVAIL PGDG 1.0 2 | AVAIL PGDG 1.0 2 | AVAIL PGDG 1.0 2 | AVAIL PGDG 1.0 2 |
-| el10.aarch64 | AVAIL PGDG 1.0 2 | AVAIL PGDG 1.0 2 | AVAIL PGDG 1.0 2 | AVAIL PGDG 1.0 2 | AVAIL PGDG 1.0 2 |
+| el10.aarch64 | AVAIL PGDG 1.0 2 | AVAIL PGDG 1.0 2 | AVAIL PGDG 1.0 2 | AVAIL PGDG 1.0 2 | AVAIL PGDG 1.0 1 |
 | d12.x86_64 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 |
 | d12.aarch64 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 |
 | d13.x86_64 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 | AVAIL PGDG 1.0 1 |
@@ -151,7 +151,6 @@ weight: 4720
 @ el9.aarch64 14 extra_window_functions_14 extra_window_functions_14-1.0-2.rhel9.aarch64.rpm pgdg 1.0 24.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/extra_window_functions_14-1.0-2.rhel9.aarch64.rpm
 @ el10.x86_64 14 extra_window_functions_14 extra_window_functions_14-1.0-8PGDG.rhel10.2.x86_64.rpm pgdg 1.0 24.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/extra_window_functions_14-1.0-8PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 14 extra_window_functions_14 extra_window_functions_14-1.0-6PGDG.rhel10.x86_64.rpm pgdg 1.0 25.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/extra_window_functions_14-1.0-6PGDG.rhel10.x86_64.rpm
-@ el10.aarch64 14 extra_window_functions_14 extra_window_functions_14-1.0-8PGDG.rhel10.2.aarch64.rpm pgdg 1.0 24.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/extra_window_functions_14-1.0-8PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 14 extra_window_functions_14 extra_window_functions_14-1.0-6PGDG.rhel10.aarch64.rpm pgdg 1.0 25.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/extra_window_functions_14-1.0-6PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 14 postgresql-14-extra-window-functions postgresql-14-extra-window-functions_1.0-7.pgdg12+1_amd64.deb pgdg 1.0 15.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/e/extra-window-functions/postgresql-14-extra-window-functions_1.0-7.pgdg12+1_amd64.deb
 @ d12.aarch64 14 postgresql-14-extra-window-functions postgresql-14-extra-window-functions_1.0-7.pgdg12+1_arm64.deb pgdg 1.0 15.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/e/extra-window-functions/postgresql-14-extra-window-functions_1.0-7.pgdg12+1_arm64.deb

@@ -52,7 +52,7 @@ weight: 5900
 | el9.x86_64 | AVAIL PGDG 4.7.2 13 | AVAIL PGDG 4.7.2 18 | AVAIL PGDG 4.7.2 21 | AVAIL PGDG 4.7.2 24 | AVAIL PGDG 4.7.2 26 |
 | el9.aarch64 | AVAIL PGDG 4.7.2 13 | AVAIL PGDG 4.7.2 18 | AVAIL PGDG 4.7.2 21 | AVAIL PGDG 4.7.2 24 | AVAIL PGDG 4.7.2 24 |
 | el10.x86_64 | AVAIL PGDG 4.7.2 13 | AVAIL PGDG 4.7.2 16 | AVAIL PGDG 4.7.2 16 | AVAIL PGDG 4.7.2 16 | AVAIL PGDG 4.7.2 16 |
-| el10.aarch64 | AVAIL PGDG 4.7.2 13 | AVAIL PGDG 4.7.2 16 | AVAIL PGDG 4.7.2 16 | AVAIL PGDG 4.7.2 16 | AVAIL PGDG 4.7.2 16 |
+| el10.aarch64 | AVAIL PGDG 4.7.2 13 | AVAIL PGDG 4.7.2 16 | AVAIL PGDG 4.7.2 16 | AVAIL PGDG 4.7.2 16 | AVAIL PGDG 4.7.2 14 |
 | d12.x86_64 | AVAIL PGDG 4.7.2 3 | AVAIL PGDG 4.7.2 3 | AVAIL PGDG 4.7.2 3 | AVAIL PGDG 4.7.2 3 | AVAIL PGDG 4.7.2 3 |
 | d12.aarch64 | AVAIL PGDG 4.7.2 3 | AVAIL PGDG 4.7.2 3 | AVAIL PGDG 4.7.2 3 | AVAIL PGDG 4.7.2 3 | AVAIL PGDG 4.7.2 3 |
 | d13.x86_64 | AVAIL PGDG 4.7.2 3 | AVAIL PGDG 4.7.2 3 | AVAIL PGDG 4.7.2 3 | AVAIL PGDG 4.7.2 3 | AVAIL PGDG 4.7.2 3 |
@@ -654,10 +654,8 @@ weight: 5900
 @ el10.x86_64 14 pgpool-II-pg14-extensions pgpool-II-pg14-extensions-4.6.2-1PGDG.rhel10.x86_64.rpm pgdg 4.6.2 31.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pgpool-II-pg14-extensions-4.6.2-1PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 14 pgpool-II-pg14-extensions pgpool-II-pg14-extensions-4.6.1-1PGDG.rhel10.x86_64.rpm pgdg 4.6.1 30.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pgpool-II-pg14-extensions-4.6.1-1PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 14 pgpool-II-pg14-extensions pgpool-II-pg14-extensions-4.6.0-1PGDG.rhel10.x86_64.rpm pgdg 4.6.0 30.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pgpool-II-pg14-extensions-4.6.0-1PGDG.rhel10.x86_64.rpm
-@ el10.aarch64 14 pgpool-II-pg14-extensions pgpool-II-pg14-extensions-4.7.2-1PGDG.rhel10.2.aarch64.rpm pgdg 4.7.2 32.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgpool-II-pg14-extensions-4.7.2-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 14 pgpool-II-pg14-extensions pgpool-II-pg14-extensions-4.7.2-1PGDG.rhel10.1.aarch64.rpm pgdg 4.7.2 32.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgpool-II-pg14-extensions-4.7.2-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 14 pgpool-II-pg14-extensions pgpool-II-pg14-extensions-4.7.2-1PGDG.rhel10.0.aarch64.rpm pgdg 4.7.2 32.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgpool-II-pg14-extensions-4.7.2-1PGDG.rhel10.0.aarch64.rpm
-@ el10.aarch64 14 pgpool-II-pg14-extensions pgpool-II-pg14-extensions-4.7.1-2PGDG.rhel10.2.aarch64.rpm pgdg 4.7.1 32.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgpool-II-pg14-extensions-4.7.1-2PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 14 pgpool-II-pg14-extensions pgpool-II-pg14-extensions-4.7.1-1PGDG.rhel10.1.aarch64.rpm pgdg 4.7.1 32.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgpool-II-pg14-extensions-4.7.1-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 14 pgpool-II-pg14-extensions pgpool-II-pg14-extensions-4.7.1-1PGDG.rhel10.0.aarch64.rpm pgdg 4.7.1 32.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgpool-II-pg14-extensions-4.7.1-1PGDG.rhel10.0.aarch64.rpm
 @ el10.aarch64 14 pgpool-II-pg14-extensions pgpool-II-pg14-extensions-4.7.0-1PGDG.rhel10.1.aarch64.rpm pgdg 4.7.0 32.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgpool-II-pg14-extensions-4.7.0-1PGDG.rhel10.1.aarch64.rpm

@@ -49,7 +49,7 @@ weight: 8520
 | el9.x86_64 | MISS PGDG - 0 | AVAIL PGDG 0.5.1 2 | AVAIL PGDG 0.5.1 2 | AVAIL PGDG 0.5.1 2 | AVAIL PGDG 0.5.1 2 |
 | el9.aarch64 | MISS PGDG - 0 | AVAIL PGDG 0.5.1 2 | AVAIL PGDG 0.5.1 2 | AVAIL PGDG 0.5.1 2 | AVAIL PGDG 0.5.1 2 |
 | el10.x86_64 | MISS PGDG - 0 | AVAIL PGDG 0.5.1 2 | AVAIL PGDG 0.5.1 2 | AVAIL PGDG 0.5.1 2 | AVAIL PGDG 0.5.1 2 |
-| el10.aarch64 | MISS PGDG - 0 | AVAIL PGDG 0.5.1 2 | AVAIL PGDG 0.5.1 2 | AVAIL PGDG 0.5.1 2 | AVAIL PGDG 0.5.1 2 |
+| el10.aarch64 | MISS PGDG - 0 | AVAIL PGDG 0.5.1 2 | AVAIL PGDG 0.5.1 2 | AVAIL PGDG 0.5.1 2 | AVAIL PGDG 0.5.1 1 |
 | d12.x86_64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
 | d12.aarch64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
 | d13.x86_64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
@@ -98,7 +98,6 @@ weight: 8520
 @ el9.aarch64 14 odbc_fdw_14 odbc_fdw_14-0.5.1-1PGDG.rhel9.aarch64.rpm pgdg 0.5.1 25.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/odbc_fdw_14-0.5.1-1PGDG.rhel9.aarch64.rpm
 @ el10.x86_64 14 odbc_fdw_14 odbc_fdw_14-0.5.1-5PGDG.rhel10.2.x86_64.rpm pgdg 0.5.1 27.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/odbc_fdw_14-0.5.1-5PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 14 odbc_fdw_14 odbc_fdw_14-0.5.1-3PGDG.rhel10.x86_64.rpm pgdg 0.5.1 27.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/odbc_fdw_14-0.5.1-3PGDG.rhel10.x86_64.rpm
-@ el10.aarch64 14 odbc_fdw_14 odbc_fdw_14-0.5.1-5PGDG.rhel10.2.aarch64.rpm pgdg 0.5.1 26.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/odbc_fdw_14-0.5.1-5PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 14 odbc_fdw_14 odbc_fdw_14-0.5.1-3PGDG.rhel10.aarch64.rpm pgdg 0.5.1 26.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/odbc_fdw_14-0.5.1-3PGDG.rhel10.aarch64.rpm
 {{< /pgext_matrix >}}
 

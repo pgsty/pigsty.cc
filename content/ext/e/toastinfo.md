@@ -55,7 +55,7 @@ weight: 6530
 | el9.x86_64 | AVAIL PIGSTY 1.7 4 | AVAIL PIGSTY 1.7 4 | AVAIL PIGSTY 1.7 4 | AVAIL PIGSTY 1.7 4 | AVAIL PIGSTY 1.7 4 |
 | el9.aarch64 | AVAIL PIGSTY 1.7 4 | AVAIL PIGSTY 1.7 4 | AVAIL PIGSTY 1.7 4 | AVAIL PIGSTY 1.7 4 | AVAIL PIGSTY 1.7 4 |
 | el10.x86_64 | AVAIL PIGSTY 1.7 4 | AVAIL PIGSTY 1.7 4 | AVAIL PIGSTY 1.7 4 | AVAIL PIGSTY 1.7 4 | AVAIL PIGSTY 1.7 4 |
-| el10.aarch64 | AVAIL PIGSTY 1.7 4 | AVAIL PIGSTY 1.7 4 | AVAIL PIGSTY 1.7 4 | AVAIL PIGSTY 1.7 4 | AVAIL PIGSTY 1.7 4 |
+| el10.aarch64 | AVAIL PIGSTY 1.7 4 | AVAIL PIGSTY 1.7 4 | AVAIL PIGSTY 1.7 4 | AVAIL PIGSTY 1.7 4 | AVAIL PIGSTY 1.7 3 |
 | d12.x86_64 | AVAIL PGDG 1.7 3 | AVAIL PGDG 1.7 3 | AVAIL PGDG 1.7 3 | AVAIL PGDG 1.7 3 | AVAIL PGDG 1.7 3 |
 | d12.aarch64 | AVAIL PGDG 1.7 3 | AVAIL PGDG 1.7 3 | AVAIL PGDG 1.7 3 | AVAIL PGDG 1.7 3 | AVAIL PGDG 1.7 3 |
 | d13.x86_64 | AVAIL PGDG 1.7 3 | AVAIL PGDG 1.7 3 | AVAIL PGDG 1.7 3 | AVAIL PGDG 1.7 3 | AVAIL PGDG 1.7 3 |
@@ -283,7 +283,6 @@ weight: 6530
 @ el10.x86_64 14 toastinfo_14 toastinfo_14-1.6-1PGDG.rhel10.1.x86_64.rpm pgdg 1.6 13.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/toastinfo_14-1.6-1PGDG.rhel10.1.x86_64.rpm
 @ el10.x86_64 14 toastinfo_14 toastinfo_14-1.6-1PGDG.rhel10.0.x86_64.rpm pgdg 1.6 13.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/toastinfo_14-1.6-1PGDG.rhel10.0.x86_64.rpm
 @ el10.aarch64 14 toastinfo_14 toastinfo_14-1.7-1PIGSTY.el10.aarch64.rpm pigsty 1.7 13.7KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/toastinfo_14-1.7-1PIGSTY.el10.aarch64.rpm
-@ el10.aarch64 14 toastinfo_14 toastinfo_14-1.6-1PGDG.rhel10.2.aarch64.rpm pgdg 1.6 13.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/toastinfo_14-1.6-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 14 toastinfo_14 toastinfo_14-1.6-1PGDG.rhel10.1.aarch64.rpm pgdg 1.6 13.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/toastinfo_14-1.6-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 14 toastinfo_14 toastinfo_14-1.6-1PGDG.rhel10.0.aarch64.rpm pgdg 1.6 13.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/toastinfo_14-1.6-1PGDG.rhel10.0.aarch64.rpm
 @ d12.x86_64 14 postgresql-14-toastinfo postgresql-14-toastinfo_1.7-1.pgdg12+1_amd64.deb pgdg 1.7 12.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/t/toastinfo/postgresql-14-toastinfo_1.7-1.pgdg12+1_amd64.deb

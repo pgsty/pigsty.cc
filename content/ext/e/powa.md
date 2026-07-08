@@ -53,7 +53,7 @@ weight: 6870
 | el9.x86_64 | AVAIL PGDG 5.1.0 4 | AVAIL PGDG 5.1.0 4 | AVAIL PGDG 5.1.0 7 | AVAIL PGDG 5.1.0 8 | AVAIL PGDG 5.1.0 9 |
 | el9.aarch64 | AVAIL PGDG 5.1.0 4 | AVAIL PGDG 5.1.0 4 | AVAIL PGDG 5.1.0 7 | AVAIL PGDG 5.1.0 8 | AVAIL PGDG 5.1.0 8 |
 | el10.x86_64 | AVAIL PGDG 5.1.0 4 | AVAIL PGDG 5.1.0 3 | AVAIL PGDG 5.1.0 4 | AVAIL PGDG 5.1.0 4 | AVAIL PGDG 5.1.0 4 |
-| el10.aarch64 | AVAIL PGDG 5.1.0 4 | AVAIL PGDG 5.1.0 3 | AVAIL PGDG 5.1.0 4 | AVAIL PGDG 5.1.0 4 | AVAIL PGDG 5.1.0 4 |
+| el10.aarch64 | AVAIL PGDG 5.1.0 4 | AVAIL PGDG 5.1.0 3 | AVAIL PGDG 5.1.0 4 | AVAIL PGDG 5.1.0 4 | AVAIL PGDG 5.1.0 3 |
 | d12.x86_64 | AVAIL PGDG 5.1.2 2 | AVAIL PGDG 5.1.2 2 | AVAIL PGDG 5.1.2 2 | AVAIL PGDG 5.1.2 2 | AVAIL PGDG 5.1.2 2 |
 | d12.aarch64 | AVAIL PGDG 5.1.2 2 | AVAIL PGDG 5.1.2 2 | AVAIL PGDG 5.1.2 2 | AVAIL PGDG 5.1.2 2 | AVAIL PGDG 5.1.2 2 |
 | d13.x86_64 | AVAIL PGDG 5.1.2 2 | AVAIL PGDG 5.1.2 2 | AVAIL PGDG 5.1.2 2 | AVAIL PGDG 5.1.2 2 | AVAIL PGDG 5.1.2 2 |
@@ -287,7 +287,6 @@ weight: 6870
 @ el10.x86_64 14 powa_14 powa_14-5.0.1-1PGDG.rhel10.x86_64.rpm pgdg 5.0.1 7.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/powa_14-5.0.1-1PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 14 powa_14 powa_14-5.1.0-1PGDGrhel10.1.aarch64.rpm pgdg 5.1.0 6.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/powa_14-5.1.0-1PGDGrhel10.1.aarch64.rpm
 @ el10.aarch64 14 powa_14 powa_14-5.1.0-1PGDGrhel10.0.aarch64.rpm pgdg 5.1.0 6.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/powa_14-5.1.0-1PGDGrhel10.0.aarch64.rpm
-@ el10.aarch64 14 powa_14 powa_14-5.1.0-1PGDG.rhel10.2.aarch64.rpm pgdg 5.1.0 6.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/powa_14-5.1.0-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 14 powa_14 powa_14-5.0.1-1PGDG.rhel10.aarch64.rpm pgdg 5.0.1 7.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/powa_14-5.0.1-1PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 14 postgresql-14-powa postgresql-14-powa_5.1.2-1.pgdg12+1_amd64.deb pgdg 5.1.2 67.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-14-powa_5.1.2-1.pgdg12+1_amd64.deb
 @ d12.x86_64 14 postgresql-14-powa postgresql-14-powa_5.1.1-1.pgdg12+1_amd64.deb pgdg 5.1.1 65.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/powa-archivist/postgresql-14-powa_5.1.1-1.pgdg12+1_amd64.deb

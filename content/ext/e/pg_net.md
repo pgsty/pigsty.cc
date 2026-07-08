@@ -58,8 +58,8 @@ weight: 4080
 | el8.aarch64 | AVAIL PIGSTY 0.9.2 1 | AVAIL PIGSTY 0.9.2 1 | AVAIL PIGSTY 0.9.2 3 | AVAIL PIGSTY 0.9.2 3 | AVAIL PIGSTY 0.9.2 3 |
 | el9.x86_64 | AVAIL PIGSTY 0.9.2 1 | AVAIL PIGSTY 0.9.2 1 | AVAIL PIGSTY 0.9.2 3 | AVAIL PIGSTY 0.9.2 3 | AVAIL PIGSTY 0.9.2 3 |
 | el9.aarch64 | AVAIL PIGSTY 0.9.2 1 | AVAIL PIGSTY 0.9.2 1 | AVAIL PIGSTY 0.9.2 3 | AVAIL PIGSTY 0.9.2 3 | AVAIL PIGSTY 0.9.2 3 |
-| el10.x86_64 | AVAIL PIGSTY 0.20.3 6 | AVAIL PIGSTY 0.20.3 14 | AVAIL PIGSTY 0.20.3 14 | AVAIL PIGSTY 0.20.3 14 | AVAIL PIGSTY 0.20.3 14 |
-| el10.aarch64 | AVAIL PIGSTY 0.20.3 5 | AVAIL PIGSTY 0.20.3 13 | AVAIL PIGSTY 0.20.3 13 | AVAIL PIGSTY 0.20.3 13 | AVAIL PIGSTY 0.20.3 13 |
+| el10.x86_64 | AVAIL PGDG 0.20.4 7 | AVAIL PGDG 0.20.4 15 | AVAIL PGDG 0.20.4 15 | AVAIL PGDG 0.20.4 15 | AVAIL PGDG 0.20.4 15 |
+| el10.aarch64 | AVAIL PGDG 0.20.4 6 | AVAIL PGDG 0.20.4 14 | AVAIL PGDG 0.20.4 14 | AVAIL PGDG 0.20.4 14 | AVAIL PGDG 0.20.4 14 |
 | d12.x86_64 | AVAIL PIGSTY 0.20.3 1 | AVAIL PIGSTY 0.20.3 1 | AVAIL PIGSTY 0.20.3 1 | AVAIL PIGSTY 0.20.3 1 | AVAIL PIGSTY 0.20.3 1 |
 | d12.aarch64 | AVAIL PIGSTY 0.20.3 1 | AVAIL PIGSTY 0.20.3 1 | AVAIL PIGSTY 0.20.3 1 | AVAIL PIGSTY 0.20.3 1 | AVAIL PIGSTY 0.20.3 1 |
 | d13.x86_64 | AVAIL PIGSTY 0.20.3 1 | AVAIL PIGSTY 0.20.3 1 | AVAIL PIGSTY 0.20.3 1 | AVAIL PIGSTY 0.20.3 1 | AVAIL PIGSTY 0.20.3 1 |
@@ -74,12 +74,14 @@ weight: 4080
 @ el8.aarch64 18 pg_net_18 pg_net_18-0.9.2-2PIGSTY.el8.aarch64.rpm pigsty 0.9.2 26.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_net_18-0.9.2-2PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 18 pg_net_18 pg_net_18-0.9.2-2PIGSTY.el9.x86_64.rpm pigsty 0.9.2 26.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_net_18-0.9.2-2PIGSTY.el9.x86_64.rpm
 @ el9.aarch64 18 pg_net_18 pg_net_18-0.9.2-2PIGSTY.el9.aarch64.rpm pigsty 0.9.2 26.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_net_18-0.9.2-2PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 18 pg_net_18 pg_net_18-0.20.4-1PGDG.rhel10.2.x86_64.rpm pgdg 0.20.4 34.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pg_net_18-0.20.4-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 18 pg_net_18 pg_net_18-0.20.3-1PIGSTY.el10.x86_64.rpm pigsty 0.20.3 36.4KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_net_18-0.20.3-1PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 18 pg_net_18 pg_net_18-0.20.3-1PGDG.rhel10.2.x86_64.rpm pgdg 0.20.3 34.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pg_net_18-0.20.3-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 18 pg_net_18 pg_net_18-0.20.3-1PGDG.rhel10.1.x86_64.rpm pgdg 0.20.3 34.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pg_net_18-0.20.3-1PGDG.rhel10.1.x86_64.rpm
 @ el10.x86_64 18 pg_net_18 pg_net_18-0.20.3-1PGDG.rhel10.0.x86_64.rpm pgdg 0.20.3 34.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pg_net_18-0.20.3-1PGDG.rhel10.0.x86_64.rpm
 @ el10.x86_64 18 pg_net_18 pg_net_18-0.20.0-1PGDG.rhel10.x86_64.rpm pgdg 0.20.0 33.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pg_net_18-0.20.0-1PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 18 pg_net_18 pg_net_18-0.19.7-1PGDG.rhel10.x86_64.rpm pgdg 0.19.7 33.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pg_net_18-0.19.7-1PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 18 pg_net_18 pg_net_18-0.20.4-1PGDG.rhel10.2.aarch64.rpm pgdg 0.20.4 34.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_net_18-0.20.4-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 18 pg_net_18 pg_net_18-0.20.3-1PIGSTY.el10.aarch64.rpm pigsty 0.20.3 36.7KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_net_18-0.20.3-1PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 18 pg_net_18 pg_net_18-0.20.3-1PGDG.rhel10.1.aarch64.rpm pgdg 0.20.3 33.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_net_18-0.20.3-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 18 pg_net_18 pg_net_18-0.20.3-1PGDG.rhel10.0.aarch64.rpm pgdg 0.20.3 33.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_net_18-0.20.3-1PGDG.rhel10.0.aarch64.rpm
@@ -99,6 +101,7 @@ weight: 4080
 @ el8.aarch64 17 pg_net_17 pg_net_17-0.9.2-2PIGSTY.el8.aarch64.rpm pigsty 0.9.2 26.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_net_17-0.9.2-2PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 17 pg_net_17 pg_net_17-0.9.2-2PIGSTY.el9.x86_64.rpm pigsty 0.9.2 26.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_net_17-0.9.2-2PIGSTY.el9.x86_64.rpm
 @ el9.aarch64 17 pg_net_17 pg_net_17-0.9.2-2PIGSTY.el9.aarch64.rpm pigsty 0.9.2 26.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_net_17-0.9.2-2PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 17 pg_net_17 pg_net_17-0.20.4-1PGDG.rhel10.2.x86_64.rpm pgdg 0.20.4 34.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_net_17-0.20.4-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 17 pg_net_17 pg_net_17-0.20.3-1PIGSTY.el10.x86_64.rpm pigsty 0.20.3 36.3KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_net_17-0.20.3-1PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 17 pg_net_17 pg_net_17-0.20.3-1PGDG.rhel10.2.x86_64.rpm pgdg 0.20.3 34.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_net_17-0.20.3-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 17 pg_net_17 pg_net_17-0.20.3-1PGDG.rhel10.1.x86_64.rpm pgdg 0.20.3 34.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_net_17-0.20.3-1PGDG.rhel10.1.x86_64.rpm
@@ -113,6 +116,7 @@ weight: 4080
 @ el10.x86_64 17 pg_net_17 pg_net_17-0.19.0-1PGDG.rhel10.x86_64.rpm pgdg 0.19.0 30.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_net_17-0.19.0-1PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 17 pg_net_17 pg_net_17-0.16.0-1PGDG.rhel10.x86_64.rpm pgdg 0.16.0 28.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_net_17-0.16.0-1PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 17 pg_net_17 pg_net_17-0.15.1-1PGDG.rhel10.x86_64.rpm pgdg 0.15.1 28.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_net_17-0.15.1-1PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 17 pg_net_17 pg_net_17-0.20.4-1PGDG.rhel10.2.aarch64.rpm pgdg 0.20.4 34.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_net_17-0.20.4-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 17 pg_net_17 pg_net_17-0.20.3-1PIGSTY.el10.aarch64.rpm pigsty 0.20.3 36.7KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_net_17-0.20.3-1PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 17 pg_net_17 pg_net_17-0.20.3-1PGDG.rhel10.1.aarch64.rpm pgdg 0.20.3 33.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_net_17-0.20.3-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 17 pg_net_17 pg_net_17-0.20.3-1PGDG.rhel10.0.aarch64.rpm pgdg 0.20.3 33.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_net_17-0.20.3-1PGDG.rhel10.0.aarch64.rpm
@@ -148,6 +152,7 @@ weight: 4080
 @ el9.aarch64 16 pg_net_16 pg_net_16-0.9.2-2PIGSTY.el9.aarch64.rpm pigsty 0.9.2 26.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_net_16-0.9.2-2PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 16 pg_net_16 pg_net_16-0.9.2-1PGDG.rhel9.aarch64.rpm pgdg 0.9.2 21.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_net_16-0.9.2-1PGDG.rhel9.aarch64.rpm
 @ el9.aarch64 16 pg_net_16 pg_net_16-0.9.1-1PGDG.rhel9.aarch64.rpm pgdg 0.9.1 20.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_net_16-0.9.1-1PGDG.rhel9.aarch64.rpm
+@ el10.x86_64 16 pg_net_16 pg_net_16-0.20.4-1PGDG.rhel10.2.x86_64.rpm pgdg 0.20.4 34.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_net_16-0.20.4-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 16 pg_net_16 pg_net_16-0.20.3-1PIGSTY.el10.x86_64.rpm pigsty 0.20.3 36.4KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_net_16-0.20.3-1PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 16 pg_net_16 pg_net_16-0.20.3-1PGDG.rhel10.2.x86_64.rpm pgdg 0.20.3 34.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_net_16-0.20.3-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 16 pg_net_16 pg_net_16-0.20.3-1PGDG.rhel10.1.x86_64.rpm pgdg 0.20.3 34.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_net_16-0.20.3-1PGDG.rhel10.1.x86_64.rpm
@@ -162,6 +167,7 @@ weight: 4080
 @ el10.x86_64 16 pg_net_16 pg_net_16-0.19.0-1PGDG.rhel10.x86_64.rpm pgdg 0.19.0 30.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_net_16-0.19.0-1PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 16 pg_net_16 pg_net_16-0.16.0-1PGDG.rhel10.x86_64.rpm pgdg 0.16.0 28.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_net_16-0.16.0-1PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 16 pg_net_16 pg_net_16-0.15.1-1PGDG.rhel10.x86_64.rpm pgdg 0.15.1 28.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_net_16-0.15.1-1PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 16 pg_net_16 pg_net_16-0.20.4-1PGDG.rhel10.2.aarch64.rpm pgdg 0.20.4 34.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_net_16-0.20.4-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 16 pg_net_16 pg_net_16-0.20.3-1PIGSTY.el10.aarch64.rpm pigsty 0.20.3 36.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_net_16-0.20.3-1PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 16 pg_net_16 pg_net_16-0.20.3-1PGDG.rhel10.1.aarch64.rpm pgdg 0.20.3 33.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_net_16-0.20.3-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 16 pg_net_16 pg_net_16-0.20.3-1PGDG.rhel10.0.aarch64.rpm pgdg 0.20.3 33.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_net_16-0.20.3-1PGDG.rhel10.0.aarch64.rpm
@@ -197,6 +203,7 @@ weight: 4080
 @ el9.aarch64 15 pg_net_15 pg_net_15-0.9.2-2PIGSTY.el9.aarch64.rpm pigsty 0.9.2 26.8KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_net_15-0.9.2-2PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 15 pg_net_15 pg_net_15-0.9.2-1PGDG.rhel9.aarch64.rpm pgdg 0.9.2 21.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_net_15-0.9.2-1PGDG.rhel9.aarch64.rpm
 @ el9.aarch64 15 pg_net_15 pg_net_15-0.9.1-1PGDG.rhel9.aarch64.rpm pgdg 0.9.1 20.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_net_15-0.9.1-1PGDG.rhel9.aarch64.rpm
+@ el10.x86_64 15 pg_net_15 pg_net_15-0.20.4-1PGDG.rhel10.2.x86_64.rpm pgdg 0.20.4 36.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_net_15-0.20.4-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 15 pg_net_15 pg_net_15-0.20.3-1PIGSTY.el10.x86_64.rpm pigsty 0.20.3 37.8KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_net_15-0.20.3-1PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 15 pg_net_15 pg_net_15-0.20.3-1PGDG.rhel10.2.x86_64.rpm pgdg 0.20.3 35.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_net_15-0.20.3-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 15 pg_net_15 pg_net_15-0.20.3-1PGDG.rhel10.1.x86_64.rpm pgdg 0.20.3 35.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_net_15-0.20.3-1PGDG.rhel10.1.x86_64.rpm
@@ -211,6 +218,7 @@ weight: 4080
 @ el10.x86_64 15 pg_net_15 pg_net_15-0.19.0-1PGDG.rhel10.x86_64.rpm pgdg 0.19.0 31.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_net_15-0.19.0-1PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 15 pg_net_15 pg_net_15-0.16.0-1PGDG.rhel10.x86_64.rpm pgdg 0.16.0 29.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_net_15-0.16.0-1PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 15 pg_net_15 pg_net_15-0.15.1-1PGDG.rhel10.x86_64.rpm pgdg 0.15.1 29.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_net_15-0.15.1-1PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 15 pg_net_15 pg_net_15-0.20.4-1PGDG.rhel10.2.aarch64.rpm pgdg 0.20.4 35.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_net_15-0.20.4-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 15 pg_net_15 pg_net_15-0.20.3-1PIGSTY.el10.aarch64.rpm pigsty 0.20.3 37.8KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_net_15-0.20.3-1PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 15 pg_net_15 pg_net_15-0.20.3-1PGDG.rhel10.1.aarch64.rpm pgdg 0.20.3 35.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_net_15-0.20.3-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 15 pg_net_15 pg_net_15-0.20.3-1PGDG.rhel10.0.aarch64.rpm pgdg 0.20.3 35.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_net_15-0.20.3-1PGDG.rhel10.0.aarch64.rpm
@@ -246,6 +254,7 @@ weight: 4080
 @ el9.aarch64 14 pg_net_14 pg_net_14-0.9.2-2PIGSTY.el9.aarch64.rpm pigsty 0.9.2 26.7KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_net_14-0.9.2-2PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 14 pg_net_14 pg_net_14-0.9.2-1PGDG.rhel9.aarch64.rpm pgdg 0.9.2 21.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_net_14-0.9.2-1PGDG.rhel9.aarch64.rpm
 @ el9.aarch64 14 pg_net_14 pg_net_14-0.9.1-1PGDG.rhel9.aarch64.rpm pgdg 0.9.1 20.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_net_14-0.9.1-1PGDG.rhel9.aarch64.rpm
+@ el10.x86_64 14 pg_net_14 pg_net_14-0.20.4-1PGDG.rhel10.2.x86_64.rpm pgdg 0.20.4 36.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_net_14-0.20.4-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 14 pg_net_14 pg_net_14-0.20.3-1PIGSTY.el10.x86_64.rpm pigsty 0.20.3 37.8KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_net_14-0.20.3-1PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 14 pg_net_14 pg_net_14-0.20.3-1PGDG.rhel10.2.x86_64.rpm pgdg 0.20.3 35.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_net_14-0.20.3-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 14 pg_net_14 pg_net_14-0.20.3-1PGDG.rhel10.1.x86_64.rpm pgdg 0.20.3 35.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_net_14-0.20.3-1PGDG.rhel10.1.x86_64.rpm
@@ -260,6 +269,7 @@ weight: 4080
 @ el10.x86_64 14 pg_net_14 pg_net_14-0.19.0-1PGDG.rhel10.x86_64.rpm pgdg 0.19.0 31.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_net_14-0.19.0-1PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 14 pg_net_14 pg_net_14-0.16.0-1PGDG.rhel10.x86_64.rpm pgdg 0.16.0 29.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_net_14-0.16.0-1PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 14 pg_net_14 pg_net_14-0.15.1-1PGDG.rhel10.x86_64.rpm pgdg 0.15.1 29.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_net_14-0.15.1-1PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 14 pg_net_14 pg_net_14-0.20.4-1PGDG.rhel10.1.aarch64.rpm pgdg 0.20.4 35.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_net_14-0.20.4-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 14 pg_net_14 pg_net_14-0.20.3-1PIGSTY.el10.aarch64.rpm pigsty 0.20.3 37.7KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_net_14-0.20.3-1PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 14 pg_net_14 pg_net_14-0.20.3-1PGDG.rhel10.1.aarch64.rpm pgdg 0.20.3 34.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_net_14-0.20.3-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 14 pg_net_14 pg_net_14-0.20.3-1PGDG.rhel10.0.aarch64.rpm pgdg 0.20.3 34.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_net_14-0.20.3-1PGDG.rhel10.0.aarch64.rpm

@@ -55,7 +55,7 @@ weight: 2520
 | el9.x86_64 | AVAIL PGDG 2.11.0 3 | AVAIL PGDG 2.11.0 3 | AVAIL PGDG 2.11.0 2 | AVAIL PGDG 2.11.0 4 | AVAIL PGDG 2.11.0 3 |
 | el9.aarch64 | AVAIL PGDG 2.11.0 3 | AVAIL PGDG 2.11.0 3 | AVAIL PGDG 2.11.0 2 | AVAIL PGDG 2.11.0 4 | AVAIL PGDG 2.11.0 4 |
 | el10.x86_64 | AVAIL PGDG 2.11.0 2 | AVAIL PGDG 2.11.0 2 | AVAIL PGDG 2.11.0 2 | AVAIL PGDG 2.11.0 2 | AVAIL PGDG 2.11.0 2 |
-| el10.aarch64 | AVAIL PGDG 2.11.0 2 | AVAIL PGDG 2.11.0 2 | AVAIL PGDG 2.11.0 2 | AVAIL PGDG 2.11.0 2 | AVAIL PGDG 2.11.0 2 |
+| el10.aarch64 | AVAIL PGDG 2.11.0 2 | AVAIL PGDG 2.11.0 2 | AVAIL PGDG 2.11.0 2 | AVAIL PGDG 2.11.0 2 | AVAIL PGDG 2.11.0 1 |
 | d12.x86_64 | AVAIL PGDG 2.11.0 1 | AVAIL PGDG 2.11.0 1 | AVAIL PGDG 2.11.0 1 | AVAIL PGDG 2.11.0 1 | AVAIL PGDG 2.11.0 1 |
 | d12.aarch64 | AVAIL PGDG 2.11.0 1 | AVAIL PGDG 2.11.0 1 | AVAIL PGDG 2.11.0 1 | AVAIL PGDG 2.11.0 1 | AVAIL PGDG 2.11.0 1 |
 | d13.x86_64 | AVAIL PGDG 2.11.0 1 | AVAIL PGDG 2.11.0 1 | AVAIL PGDG 2.11.0 1 | AVAIL PGDG 2.11.0 1 | AVAIL PGDG 2.11.0 1 |
@@ -177,7 +177,6 @@ weight: 2520
 @ el9.aarch64 14 plproxy_14 plproxy_14-2.10.0-3.rhel9.aarch64.rpm pgdg 2.10.0 142.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/plproxy_14-2.10.0-3.rhel9.aarch64.rpm
 @ el10.x86_64 14 plproxy_14 plproxy_14-2.11.0-6PGDG.rhel10.2.x86_64.rpm pgdg 2.11.0 49.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/plproxy_14-2.11.0-6PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 14 plproxy_14 plproxy_14-2.11.0-4PGDG.rhel10.x86_64.rpm pgdg 2.11.0 49.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/plproxy_14-2.11.0-4PGDG.rhel10.x86_64.rpm
-@ el10.aarch64 14 plproxy_14 plproxy_14-2.11.0-6PGDG.rhel10.2.aarch64.rpm pgdg 2.11.0 47.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/plproxy_14-2.11.0-6PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 14 plproxy_14 plproxy_14-2.11.0-4PGDG.rhel10.aarch64.rpm pgdg 2.11.0 48.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/plproxy_14-2.11.0-4PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 14 postgresql-14-plproxy postgresql-14-plproxy_2.11.0-13.pgdg12+1_amd64.deb pgdg 2.11.0 134.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-plproxy/postgresql-14-plproxy_2.11.0-13.pgdg12+1_amd64.deb
 @ d12.aarch64 14 postgresql-14-plproxy postgresql-14-plproxy_2.11.0-13.pgdg12+1_arm64.deb pgdg 2.11.0 130.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-plproxy/postgresql-14-plproxy_2.11.0-13.pgdg12+1_arm64.deb

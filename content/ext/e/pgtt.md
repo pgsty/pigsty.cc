@@ -50,7 +50,7 @@ weight: 9110
 | el9.x86_64 | AVAIL PGDG 4.5 3 | AVAIL PGDG 4.5 6 | AVAIL PGDG 4.5 8 | AVAIL PGDG 4.5 10 | AVAIL PGDG 4.5 11 |
 | el9.aarch64 | AVAIL PGDG 4.5 3 | AVAIL PGDG 4.5 6 | AVAIL PGDG 4.5 8 | AVAIL PGDG 4.5 10 | AVAIL PGDG 4.5 10 |
 | el10.x86_64 | AVAIL PGDG 4.5 3 | AVAIL PGDG 4.5 5 | AVAIL PGDG 4.5 5 | AVAIL PGDG 4.5 5 | AVAIL PGDG 4.5 5 |
-| el10.aarch64 | AVAIL PGDG 4.5 3 | AVAIL PGDG 4.5 5 | AVAIL PGDG 4.5 5 | AVAIL PGDG 4.5 5 | AVAIL PGDG 4.5 5 |
+| el10.aarch64 | AVAIL PGDG 4.5 3 | AVAIL PGDG 4.5 5 | AVAIL PGDG 4.5 5 | AVAIL PGDG 4.5 5 | AVAIL PGDG 4.5 4 |
 | d12.x86_64 | AVAIL PGDG 4.5 2 | AVAIL PGDG 4.5 3 | AVAIL PGDG 4.5 3 | AVAIL PGDG 4.5 3 | AVAIL PGDG 4.5 3 |
 | d12.aarch64 | AVAIL PGDG 4.5 2 | AVAIL PGDG 4.5 3 | AVAIL PGDG 4.5 3 | AVAIL PGDG 4.5 3 | AVAIL PGDG 4.5 3 |
 | d13.x86_64 | AVAIL PGDG 4.5 2 | AVAIL PGDG 4.5 2 | AVAIL PGDG 4.5 2 | AVAIL PGDG 4.5 2 | AVAIL PGDG 4.5 2 |
@@ -349,8 +349,7 @@ weight: 9110
 @ el10.x86_64 14 pgtt_14 pgtt_14-4.4-1PGDG.rhel10.x86_64.rpm pgdg 4.4 38.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pgtt_14-4.4-1PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 14 pgtt_14 pgtt_14-4.3-1PGDG.rhel10.x86_64.rpm pgdg 4.3 38.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pgtt_14-4.3-1PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 14 pgtt_14 pgtt_14-4.1-1PGDG.rhel10.x86_64.rpm pgdg 4.1 37.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pgtt_14-4.1-1PGDG.rhel10.x86_64.rpm
-@ el10.aarch64 14 pgtt_14 pgtt_14-4.5-1PGDG.rhel10.2.aarch64.rpm pgdg 4.5 37.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgtt_14-4.5-1PGDG.rhel10.2.aarch64.rpm
-@ el10.aarch64 14 pgtt_14 pgtt_14-4.4-3PGDG.rhel10.2.aarch64.rpm pgdg 4.4 37.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgtt_14-4.4-3PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 14 pgtt_14 pgtt_14-4.5-1PGDG.rhel10.1.aarch64.rpm pgdg 4.5 37.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgtt_14-4.5-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 14 pgtt_14 pgtt_14-4.4-1PGDG.rhel10.aarch64.rpm pgdg 4.4 37.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgtt_14-4.4-1PGDG.rhel10.aarch64.rpm
 @ el10.aarch64 14 pgtt_14 pgtt_14-4.3-1PGDG.rhel10.aarch64.rpm pgdg 4.3 37.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgtt_14-4.3-1PGDG.rhel10.aarch64.rpm
 @ el10.aarch64 14 pgtt_14 pgtt_14-4.1-1PGDG.rhel10.aarch64.rpm pgdg 4.1 36.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgtt_14-4.1-1PGDG.rhel10.aarch64.rpm

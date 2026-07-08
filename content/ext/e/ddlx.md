@@ -55,7 +55,7 @@ weight: 5080
 | el9.x86_64 | AVAIL PGDG 0.30 2 | AVAIL PGDG 0.30 4 | AVAIL PGDG 0.30 7 | AVAIL PGDG 0.30 9 | AVAIL PGDG 0.30 9 |
 | el9.aarch64 | AVAIL PGDG 0.30 2 | AVAIL PGDG 0.30 4 | AVAIL PGDG 0.30 7 | AVAIL PGDG 0.30 9 | AVAIL PGDG 0.30 9 |
 | el10.x86_64 | AVAIL PGDG 0.30 2 | AVAIL PGDG 0.30 3 | AVAIL PGDG 0.30 3 | AVAIL PGDG 0.30 3 | AVAIL PGDG 0.30 3 |
-| el10.aarch64 | AVAIL PGDG 0.30 2 | AVAIL PGDG 0.30 3 | AVAIL PGDG 0.30 3 | AVAIL PGDG 0.30 3 | AVAIL PGDG 0.30 3 |
+| el10.aarch64 | AVAIL PGDG 0.30 2 | AVAIL PGDG 0.30 3 | AVAIL PGDG 0.30 3 | AVAIL PGDG 0.30 3 | AVAIL PGDG 0.30 2 |
 | d12.x86_64 | AVAIL PIGSTY 0.30 1 | AVAIL PIGSTY 0.30 1 | AVAIL PIGSTY 0.30 1 | AVAIL PIGSTY 0.30 1 | AVAIL PIGSTY 0.30 1 |
 | d12.aarch64 | AVAIL PIGSTY 0.30 1 | AVAIL PIGSTY 0.30 1 | AVAIL PIGSTY 0.30 1 | AVAIL PIGSTY 0.30 1 | AVAIL PIGSTY 0.30 1 |
 | d13.x86_64 | AVAIL PIGSTY 0.30 1 | AVAIL PIGSTY 0.30 1 | AVAIL PIGSTY 0.30 1 | AVAIL PIGSTY 0.30 1 | AVAIL PIGSTY 0.30 1 |
@@ -245,7 +245,6 @@ weight: 5080
 @ el10.x86_64 14 ddlx_14 ddlx_14-0.30-2PGDG.rhel10.2.noarch.rpm pgdg 0.30 31.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/ddlx_14-0.30-2PGDG.rhel10.2.noarch.rpm
 @ el10.x86_64 14 ddlx_14 ddlx_14-0.30-1PGDG.rhel10.noarch.rpm pgdg 0.30 32.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/ddlx_14-0.30-1PGDG.rhel10.noarch.rpm
 @ el10.x86_64 14 ddlx_14 ddlx_14-0.29-1PGDG.rhel10.noarch.rpm pgdg 0.29 31.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/ddlx_14-0.29-1PGDG.rhel10.noarch.rpm
-@ el10.aarch64 14 ddlx_14 ddlx_14-0.30-2PGDG.rhel10.2.noarch.rpm pgdg 0.30 31.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/ddlx_14-0.30-2PGDG.rhel10.2.noarch.rpm
 @ el10.aarch64 14 ddlx_14 ddlx_14-0.30-1PGDG.rhel10.noarch.rpm pgdg 0.30 31.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/ddlx_14-0.30-1PGDG.rhel10.noarch.rpm
 @ el10.aarch64 14 ddlx_14 ddlx_14-0.29-1PGDG.rhel10.noarch.rpm pgdg 0.29 31.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/ddlx_14-0.29-1PGDG.rhel10.noarch.rpm
 @ d12.x86_64 14 postgresql-14-ddlx postgresql-14-ddlx_0.30-1PIGSTY~bookworm_amd64.deb pigsty 0.30 28.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/d/ddlx/postgresql-14-ddlx_0.30-1PIGSTY~bookworm_amd64.deb

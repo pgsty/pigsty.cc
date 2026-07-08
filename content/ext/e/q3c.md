@@ -55,7 +55,7 @@ weight: 1540
 | el9.x86_64 | AVAIL PGDG 2.0.3 9 | AVAIL PGDG 2.0.3 9 | AVAIL PGDG 2.0.3 9 | AVAIL PGDG 2.0.3 9 | AVAIL PGDG 2.0.3 9 |
 | el9.aarch64 | AVAIL PGDG 2.0.3 9 | AVAIL PGDG 2.0.3 9 | AVAIL PGDG 2.0.3 9 | AVAIL PGDG 2.0.3 9 | AVAIL PGDG 2.0.3 9 |
 | el10.x86_64 | AVAIL PGDG 2.0.3 9 | AVAIL PGDG 2.0.3 9 | AVAIL PGDG 2.0.3 9 | AVAIL PGDG 2.0.3 9 | AVAIL PGDG 2.0.3 9 |
-| el10.aarch64 | AVAIL PGDG 2.0.3 9 | AVAIL PGDG 2.0.3 9 | AVAIL PGDG 2.0.3 9 | AVAIL PGDG 2.0.3 9 | AVAIL PGDG 2.0.3 9 |
+| el10.aarch64 | AVAIL PGDG 2.0.3 9 | AVAIL PGDG 2.0.3 9 | AVAIL PGDG 2.0.3 9 | AVAIL PGDG 2.0.3 9 | AVAIL PGDG 2.0.3 7 |
 | d12.x86_64 | AVAIL PGDG 2.0.3 2 | AVAIL PGDG 2.0.3 2 | AVAIL PGDG 2.0.3 2 | AVAIL PGDG 2.0.3 2 | AVAIL PGDG 2.0.3 2 |
 | d12.aarch64 | AVAIL PGDG 2.0.3 2 | AVAIL PGDG 2.0.3 2 | AVAIL PGDG 2.0.3 2 | AVAIL PGDG 2.0.3 2 | AVAIL PGDG 2.0.3 2 |
 | d13.x86_64 | AVAIL PGDG 2.0.3 2 | AVAIL PGDG 2.0.3 2 | AVAIL PGDG 2.0.3 2 | AVAIL PGDG 2.0.3 2 | AVAIL PGDG 2.0.3 2 |
@@ -367,12 +367,10 @@ weight: 1540
 @ el10.x86_64 14 q3c_14 q3c_14-2.0.2-1PGDG.rhel10.1.x86_64.rpm pgdg 2.0.2 112.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/q3c_14-2.0.2-1PGDG.rhel10.1.x86_64.rpm
 @ el10.x86_64 14 q3c_14 q3c_14-2.0.2-1PGDG.rhel10.0.x86_64.rpm pgdg 2.0.2 112.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/q3c_14-2.0.2-1PGDG.rhel10.0.x86_64.rpm
 @ el10.x86_64 14 q3c_14 q3c_14-2.0.1-1PGDG.rhel10.x86_64.rpm pgdg 2.0.1 92.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/q3c_14-2.0.1-1PGDG.rhel10.x86_64.rpm
-@ el10.aarch64 14 q3c_14 q3c_14-2.0.3-2PGDG.rhel10.2.aarch64.rpm pgdg 2.0.3 101.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/q3c_14-2.0.3-2PGDG.rhel10.2.aarch64.rpm
-@ el10.aarch64 14 q3c_14 q3c_14-2.0.3-1PGDG.rhel10.2.aarch64.rpm pgdg 2.0.3 101.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/q3c_14-2.0.3-1PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 14 q3c_14 q3c_14-2.0.3-2PGDG.rhel10.1.aarch64.rpm pgdg 2.0.3 101.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/q3c_14-2.0.3-2PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 14 q3c_14 q3c_14-2.0.3-1PGDG.rhel10.1.aarch64.rpm pgdg 2.0.3 101.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/q3c_14-2.0.3-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 14 q3c_14 q3c_14-2.0.3-1PGDG.rhel10.0.aarch64.rpm pgdg 2.0.3 101.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/q3c_14-2.0.3-1PGDG.rhel10.0.aarch64.rpm
 @ el10.aarch64 14 q3c_14 q3c_14-2.0.2-1PIGSTY.el10.aarch64.rpm pigsty 2.0.2 127.1KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/q3c_14-2.0.2-1PIGSTY.el10.aarch64.rpm
-@ el10.aarch64 14 q3c_14 q3c_14-2.0.2-1PGDG.rhel10.2.aarch64.rpm pgdg 2.0.2 115.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/q3c_14-2.0.2-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 14 q3c_14 q3c_14-2.0.2-1PGDG.rhel10.1.aarch64.rpm pgdg 2.0.2 115.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/q3c_14-2.0.2-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 14 q3c_14 q3c_14-2.0.2-1PGDG.rhel10.0.aarch64.rpm pgdg 2.0.2 115.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/q3c_14-2.0.2-1PGDG.rhel10.0.aarch64.rpm
 @ el10.aarch64 14 q3c_14 q3c_14-2.0.1-1PGDG.rhel10.aarch64.rpm pgdg 2.0.1 104.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/q3c_14-2.0.1-1PGDG.rhel10.aarch64.rpm

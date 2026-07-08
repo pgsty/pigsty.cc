@@ -49,7 +49,7 @@ weight: 3220
 | el9.x86_64 | AVAIL PGDG 0.61.7 2 | AVAIL PGDG 0.61.7 3 | AVAIL PGDG 0.61.7 5 | AVAIL PGDG 0.61.7 9 | AVAIL PGDG 0.61.7 8 |
 | el9.aarch64 | AVAIL PGDG 0.61.7 2 | AVAIL PGDG 0.61.7 3 | AVAIL PGDG 0.61.7 5 | AVAIL PGDG 0.61.7 9 | AVAIL PGDG 0.61.7 9 |
 | el10.x86_64 | AVAIL PGDG 0.61.7 2 | AVAIL PGDG 0.61.7 3 | AVAIL PGDG 0.61.7 3 | AVAIL PGDG 0.61.7 3 | AVAIL PGDG 0.61.7 3 |
-| el10.aarch64 | AVAIL PGDG 0.61.7 2 | AVAIL PGDG 0.61.7 3 | AVAIL PGDG 0.61.7 3 | AVAIL PGDG 0.61.7 3 | AVAIL PGDG 0.61.7 3 |
+| el10.aarch64 | AVAIL PGDG 0.61.7 2 | AVAIL PGDG 0.61.7 3 | AVAIL PGDG 0.61.7 3 | AVAIL PGDG 0.61.7 3 | AVAIL PGDG 0.61.7 2 |
 | d12.x86_64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
 | d12.aarch64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
 | d13.x86_64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
@@ -161,7 +161,6 @@ weight: 3220
 @ el10.x86_64 14 dbt2-pg14-extensions dbt2-pg14-extensions-0.61.7-5PGDG.rhel10.2.x86_64.rpm pgdg 0.61.7 30.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/dbt2-pg14-extensions-0.61.7-5PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 14 dbt2-pg14-extensions dbt2-pg14-extensions-0.61.7-1PGDG.rhel10.x86_64.rpm pgdg 0.61.7 30.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/dbt2-pg14-extensions-0.61.7-1PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 14 dbt2-pg14-extensions dbt2-pg14-extensions-0.61.6-2PGDG.rhel10.x86_64.rpm pgdg 0.61.6 30.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/dbt2-pg14-extensions-0.61.6-2PGDG.rhel10.x86_64.rpm
-@ el10.aarch64 14 dbt2-pg14-extensions dbt2-pg14-extensions-0.61.7-5PGDG.rhel10.2.aarch64.rpm pgdg 0.61.7 30.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/dbt2-pg14-extensions-0.61.7-5PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 14 dbt2-pg14-extensions dbt2-pg14-extensions-0.61.7-1PGDG.rhel10.aarch64.rpm pgdg 0.61.7 30.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/dbt2-pg14-extensions-0.61.7-1PGDG.rhel10.aarch64.rpm
 @ el10.aarch64 14 dbt2-pg14-extensions dbt2-pg14-extensions-0.61.6-2PGDG.rhel10.aarch64.rpm pgdg 0.61.6 30.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/dbt2-pg14-extensions-0.61.6-2PGDG.rhel10.aarch64.rpm
 {{< /pgext_matrix >}}

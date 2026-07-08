@@ -58,7 +58,7 @@ weight: 5060
 | el9.x86_64 | AVAIL PIGSTY 1.4.0 1 | AVAIL PIGSTY 1.4.0 4 | AVAIL PIGSTY 1.4.0 4 | AVAIL PIGSTY 1.4.0 4 | AVAIL PIGSTY 1.4.0 4 |
 | el9.aarch64 | AVAIL PIGSTY 1.4.0 1 | AVAIL PIGSTY 1.4.0 4 | AVAIL PIGSTY 1.4.0 4 | AVAIL PIGSTY 1.4.0 4 | AVAIL PIGSTY 1.4.0 4 |
 | el10.x86_64 | AVAIL PIGSTY 1.4.0 1 | AVAIL PIGSTY 1.4.0 4 | AVAIL PIGSTY 1.4.0 4 | AVAIL PIGSTY 1.4.0 4 | AVAIL PIGSTY 1.4.0 4 |
-| el10.aarch64 | AVAIL PIGSTY 1.4.0 1 | AVAIL PIGSTY 1.4.0 4 | AVAIL PIGSTY 1.4.0 4 | AVAIL PIGSTY 1.4.0 4 | AVAIL PIGSTY 1.4.0 4 |
+| el10.aarch64 | AVAIL PIGSTY 1.4.0 1 | AVAIL PIGSTY 1.4.0 4 | AVAIL PIGSTY 1.4.0 4 | AVAIL PIGSTY 1.4.0 4 | AVAIL PIGSTY 1.4.0 3 |
 | d12.x86_64 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 |
 | d12.aarch64 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 |
 | d13.x86_64 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 2 |
@@ -253,8 +253,7 @@ weight: 5060
 @ el10.x86_64 14 pgfincore_14 pgfincore_14-1.3.1-6PGDG.rhel10.2.x86_64.rpm pgdg 1.3.1 23.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pgfincore_14-1.3.1-6PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 14 pgfincore_14 pgfincore_14-1.3.1-4PGDG.rhel10.x86_64.rpm pgdg 1.3.1 24.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pgfincore_14-1.3.1-4PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 14 pgfincore_14 pgfincore_14-1.4.0-1PIGSTY.el10.aarch64.rpm pigsty 1.4.0 16.8KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgfincore_14-1.4.0-1PIGSTY.el10.aarch64.rpm
-@ el10.aarch64 14 pgfincore_14 pgfincore_14-1.4.0-1PGDG.rhel10.2.aarch64.rpm pgdg 1.4.0 23.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgfincore_14-1.4.0-1PGDG.rhel10.2.aarch64.rpm
-@ el10.aarch64 14 pgfincore_14 pgfincore_14-1.3.1-6PGDG.rhel10.2.aarch64.rpm pgdg 1.3.1 23.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgfincore_14-1.3.1-6PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 14 pgfincore_14 pgfincore_14-1.4.0-1PGDG.rhel10.1.aarch64.rpm pgdg 1.4.0 23.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgfincore_14-1.4.0-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 14 pgfincore_14 pgfincore_14-1.3.1-4PGDG.rhel10.aarch64.rpm pgdg 1.3.1 23.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgfincore_14-1.3.1-4PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 14 postgresql-14-pgfincore postgresql-14-pgfincore_1.4.0-1.pgdg12+1_amd64.deb pgdg 1.4.0 28.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfincore/postgresql-14-pgfincore_1.4.0-1.pgdg12+1_amd64.deb
 @ d12.x86_64 14 postgresql-14-pgfincore postgresql-14-pgfincore_1.3.1-3.pgdg12+1_amd64.deb pgdg 1.3.1 28.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgfincore/postgresql-14-pgfincore_1.3.1-3.pgdg12+1_amd64.deb

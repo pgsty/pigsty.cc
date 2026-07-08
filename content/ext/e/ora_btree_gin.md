@@ -11,6 +11,11 @@ weight: 9150
     <div class="ext-card__title">contrib/ora_btree_gin</div>
     <div class="ext-card__desc">https://github.com/IvorySQL/IvorySQL/tree/master/contrib/ora_btree_gin</div>
   </a>
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/ivorysql-5.4.tar.gz">
+    <div class="ext-card__kicker">源码</div>
+    <div class="ext-card__title">ivorysql-5.4.tar.gz</div>
+    <div class="ext-card__desc">ivorysql-5.4.tar.gz</div>
+  </a>
 </div>
 
 
@@ -46,8 +51,8 @@ weight: 9150
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
 | [**EXT**](/ext/list#sim) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.0` | {{< pgvers "18" >}} | `ivorysql` | `ivorysql_ora` |
-| [**RPM**](/ext/rpm#sim) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `5.1` | {{< pgvers "18" >}} | `ivorysql5` | - |
-| [**DEB**](/ext/deb#sim) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `5.1` | {{< pgvers "18" >}} | `ivorysql-5` | - |
+| [**RPM**](/ext/rpm#sim) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `5.4` | {{< pgvers "18" >}} | `ivorysql5` | - |
+| [**DEB**](/ext/deb#sim) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `5.4` | {{< pgvers "18" >}} | `ivorysql-5` | - |
 {.ext-table}
 
 {{< pgext_matrix >}}
@@ -70,6 +75,14 @@ weight: 9150
 | u26.x86_64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
 | u26.aarch64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
 {{< /pgext_matrix >}}
+
+## 构建
+
+您可以使用 `pig build` 命令构建 `ivorysql` 扩展的 RPM / DEB 包：
+
+```bash
+pig build pkg ivorysql         # 构建 RPM / DEB 包
+```
 
 
 ## 安装

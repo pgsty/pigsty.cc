@@ -50,7 +50,7 @@ weight: 3080
 | el9.x86_64 | AVAIL PGDG 1.20220917 2 | AVAIL PGDG 1.20220917 2 | AVAIL PGDG 1.20220917 2 | AVAIL PGDG 1.20220917 2 | AVAIL PGDG 1.20220917 2 |
 | el9.aarch64 | AVAIL PGDG 1.20220917 2 | AVAIL PGDG 1.20220917 2 | AVAIL PGDG 1.20220917 2 | AVAIL PGDG 1.20220917 2 | AVAIL PGDG 1.20220917 2 |
 | el10.x86_64 | AVAIL PGDG 1.20220917 2 | AVAIL PGDG 1.20220917 2 | AVAIL PGDG 1.20220917 2 | AVAIL PGDG 1.20220917 2 | AVAIL PGDG 1.20220917 2 |
-| el10.aarch64 | AVAIL PGDG 1.20220917 2 | AVAIL PGDG 1.20220917 2 | AVAIL PGDG 1.20220917 2 | AVAIL PGDG 1.20220917 2 | AVAIL PGDG 1.20220917 2 |
+| el10.aarch64 | AVAIL PGDG 1.20220917 2 | AVAIL PGDG 1.20220917 2 | AVAIL PGDG 1.20220917 2 | AVAIL PGDG 1.20220917 2 | AVAIL PGDG 1.20220917 1 |
 | d12.x86_64 | AVAIL PGDG 1.20220917 1 | AVAIL PGDG 1.20220917 1 | AVAIL PGDG 1.20220917 1 | AVAIL PGDG 1.20220917 1 | AVAIL PGDG 1.20220917 1 |
 | d12.aarch64 | AVAIL PGDG 1.20220917 1 | AVAIL PGDG 1.20220917 1 | AVAIL PGDG 1.20220917 1 | AVAIL PGDG 1.20220917 1 | AVAIL PGDG 1.20220917 1 |
 | d13.x86_64 | AVAIL PGDG 1.20220917 1 | AVAIL PGDG 1.20220917 1 | AVAIL PGDG 1.20220917 1 | AVAIL PGDG 1.20220917 1 | AVAIL PGDG 1.20220917 1 |
@@ -150,7 +150,6 @@ weight: 3080
 @ el9.aarch64 14 plsh_14 plsh_14-1.20220917-1.rhel9.aarch64.rpm pgdg 1.20220917 20.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/plsh_14-1.20220917-1.rhel9.aarch64.rpm
 @ el10.x86_64 14 plsh_14 plsh_14-1.20220917-9PGDG.rhel10.2.x86_64.rpm pgdg 1.20220917 21.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/plsh_14-1.20220917-9PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 14 plsh_14 plsh_14-1.20220917-7PGDG.rhel10.x86_64.rpm pgdg 1.20220917 21.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/plsh_14-1.20220917-7PGDG.rhel10.x86_64.rpm
-@ el10.aarch64 14 plsh_14 plsh_14-1.20220917-9PGDG.rhel10.2.aarch64.rpm pgdg 1.20220917 21.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/plsh_14-1.20220917-9PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 14 plsh_14 plsh_14-1.20220917-7PGDG.rhel10.aarch64.rpm pgdg 1.20220917 21.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/plsh_14-1.20220917-7PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 14 postgresql-14-plsh postgresql-14-plsh_1.20220917-4.pgdg12+1_amd64.deb pgdg 1.20220917 27.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-plsh/postgresql-14-plsh_1.20220917-4.pgdg12+1_amd64.deb
 @ d12.aarch64 14 postgresql-14-plsh postgresql-14-plsh_1.20220917-4.pgdg12+1_arm64.deb pgdg 1.20220917 26.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-plsh/postgresql-14-plsh_1.20220917-4.pgdg12+1_arm64.deb

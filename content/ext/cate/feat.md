@@ -649,8 +649,8 @@ icon: fas fa-icons
 |:---:|:---|:---:|:---:|:---:|
 | **扩展名** | [`orioledb`](/ext/e/orioledb) | **el8** | {{< pgvers "18,17,16" >}} | {{< pgvers "18,17,16" >}} |
 | **扩展包** | [`orioledb`](https://github.com/orioledb/orioledb) | **el9** | {{< pgvers "18,17,16" >}} | {{< pgvers "18,17,16" >}} |
-| **RPM** | `orioledb_$v` | **el10** | {{< pgvers "18,17,16" >}} | {{< pgvers "18,17,16" >}} |
-| **DEB** | `oriolepg-$v-orioledb` | **d12** | {{< pgvers "18,17,16" >}} | {{< pgvers "18,17,16" >}} |
+| **RPM** | `orioledb-$v` | **el10** | {{< pgvers "18,17,16" >}} | {{< pgvers "18,17,16" >}} |
+| **DEB** | `orioledb-$v` | **d12** | {{< pgvers "18,17,16" >}} | {{< pgvers "18,17,16" >}} |
 | **语言** | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | **d13** | {{< pgvers "18,17,16" >}} | {{< pgvers "18,17,16" >}} |
 | **仓库** | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | **u22** | {{< pgvers "18,17,16" >}} | {{< pgvers "18,17,16" >}} |
 | **协议** | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | **u24** | {{< pgvers "18,17,16" >}} | {{< pgvers "18,17,16" >}} |

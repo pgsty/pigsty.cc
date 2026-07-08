@@ -55,7 +55,7 @@ weight: 5120
 | el9.x86_64 | AVAIL PGDG 1.0.5 5 | AVAIL PGDG 1.0.5 5 | AVAIL PGDG 1.0.5 5 | AVAIL PGDG 1.0.5 6 | AVAIL PGDG 1.0.5 6 |
 | el9.aarch64 | AVAIL PGDG 1.0.5 5 | AVAIL PGDG 1.0.5 5 | AVAIL PGDG 1.0.5 5 | AVAIL PGDG 1.0.5 5 | AVAIL PGDG 1.0.5 5 |
 | el10.x86_64 | AVAIL PGDG 1.0.5 5 | AVAIL PGDG 1.0.5 5 | AVAIL PGDG 1.0.5 5 | AVAIL PGDG 1.0.5 5 | AVAIL PGDG 1.0.5 5 |
-| el10.aarch64 | AVAIL PGDG 1.0.5 5 | AVAIL PGDG 1.0.5 5 | AVAIL PGDG 1.0.5 5 | AVAIL PGDG 1.0.5 5 | AVAIL PGDG 1.0.5 5 |
+| el10.aarch64 | AVAIL PGDG 1.0.5 5 | AVAIL PGDG 1.0.5 5 | AVAIL PGDG 1.0.5 5 | AVAIL PGDG 1.0.5 5 | AVAIL PGDG 1.0.5 4 |
 | d12.x86_64 | AVAIL PIGSTY 1.0.5 1 | AVAIL PIGSTY 1.0.5 1 | AVAIL PIGSTY 1.0.5 1 | AVAIL PIGSTY 1.0.5 1 | AVAIL PIGSTY 1.0.5 1 |
 | d12.aarch64 | AVAIL PIGSTY 1.0.5 1 | AVAIL PIGSTY 1.0.5 1 | AVAIL PIGSTY 1.0.5 1 | AVAIL PIGSTY 1.0.5 1 | AVAIL PIGSTY 1.0.5 1 |
 | d13.x86_64 | AVAIL PIGSTY 1.0.5 1 | AVAIL PIGSTY 1.0.5 1 | AVAIL PIGSTY 1.0.5 1 | AVAIL PIGSTY 1.0.5 1 | AVAIL PIGSTY 1.0.5 1 |
@@ -235,8 +235,7 @@ weight: 5120
 @ el10.x86_64 14 pg_readonly_14 pg_readonly_14-1.0.4-1PGDG.rhel10.1.x86_64.rpm pgdg 1.0.4 16.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_readonly_14-1.0.4-1PGDG.rhel10.1.x86_64.rpm
 @ el10.x86_64 14 pg_readonly_14 pg_readonly_14-1.0.4-1PGDG.rhel10.0.x86_64.rpm pgdg 1.0.4 16.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_readonly_14-1.0.4-1PGDG.rhel10.0.x86_64.rpm
 @ el10.x86_64 14 pg_readonly_14 pg_readonly_14-1.0.3-5PGDG.rhel10.x86_64.rpm pgdg 1.0.3 16.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_readonly_14-1.0.3-5PGDG.rhel10.x86_64.rpm
-@ el10.aarch64 14 pg_readonly_14 pg_readonly_14-1.0.5-1PGDG.rhel10.2.aarch64.rpm pgdg 1.0.5 17.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_readonly_14-1.0.5-1PGDG.rhel10.2.aarch64.rpm
-@ el10.aarch64 14 pg_readonly_14 pg_readonly_14-1.0.4-1PGDG.rhel10.2.aarch64.rpm pgdg 1.0.4 16.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_readonly_14-1.0.4-1PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 14 pg_readonly_14 pg_readonly_14-1.0.5-1PGDG.rhel10.1.aarch64.rpm pgdg 1.0.5 17.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_readonly_14-1.0.5-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 14 pg_readonly_14 pg_readonly_14-1.0.4-1PGDG.rhel10.1.aarch64.rpm pgdg 1.0.4 16.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_readonly_14-1.0.4-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 14 pg_readonly_14 pg_readonly_14-1.0.4-1PGDG.rhel10.0.aarch64.rpm pgdg 1.0.4 16.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_readonly_14-1.0.4-1PGDG.rhel10.0.aarch64.rpm
 @ el10.aarch64 14 pg_readonly_14 pg_readonly_14-1.0.3-5PGDG.rhel10.aarch64.rpm pgdg 1.0.3 16.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_readonly_14-1.0.3-5PGDG.rhel10.aarch64.rpm
