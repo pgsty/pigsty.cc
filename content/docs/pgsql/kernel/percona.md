@@ -61,26 +61,26 @@ pg-meta:
 
 ------
 
-## 扩展
+## 可用扩展
 
-Percona 提供了 80 个可用的扩展，包括 `pg_tde`, `pgvector`, `postgis`, `pgaudit`, `set_user`, `pg_stat_monitor` 等实用三方扩展。
+Percona Postgres 内核共有 **73** 个可用扩展，去除 PG Contrib 自带扩展之后，还有以下额外扩展：
 
-| 扩展名             | 版本    | 说明                          |
-|-----------------|-------|-----------------------------|
-| pg_tde          | 2.1   | Percona 透明数据加密访问方法          |
-| vector          | 0.8.1 | 向量数据类型及 ivfflat 和 hnsw 访问方法 |
-| postgis         | 3.5.4 | PostGIS 几何和地理空间类型及函数        |
-| pgaudit         | 18.0  | 提供审计功能                      |
-| pg_stat_monitor | 2.3   | PostgreSQL 查询性能监控工具         |
-| set_user        | 4.2.0 | 类似 SET ROLE 但带有额外日志记录       |
-| pg_repack       | 1.5.3 | 以最小锁定重组 PostgreSQL 数据库中的表   |
-| hstore          | 1.8   | 用于存储（键，值）对集合的数据类型           |
-| ltree           | 1.3   | 用于层次树状结构的数据类型               |
-| pg_trgm         | 1.6   | 基于三元组的文本相似度测量和索引搜索          |
+| 扩展名                                                                 | 版本号     | 说明                                                                                                                                                                                                                                                        |
+|:--------------------------------------------------------------------|:--------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [address_standardizer](/ext/e/address_standardizer)                 | `3.5.6` | Used to parse an address into constituent elements. Generally used to support geocoding address normalization step.                                                                                                                                       |
+| [address_standardizer_data_us](/ext/e/address_standardizer_data_us) | `3.5.6` | Address Standardizer US dataset example                                                                                                                                                                                                                   |
+| [pg_repack](/ext/e/pg_repack)                                       | `1.5.3` | Reorganize tables in PostgreSQL databases with minimal locks                                                                                                                                                                                              |
+| [pg_stat_monitor](/ext/e/pg_stat_monitor)                           | `2.3`   | The pg_stat_monitor is a PostgreSQL Query Performance Monitoring tool, based on PostgreSQL contrib module pg_stat_statements. pg_stat_monitor provides aggregated statistics, client information, plan details including plan, and histogram information. |
+| [pg_tde](/ext/e/pg_tde)                                             | `2.2`   | pg_tde access method                                                                                                                                                                                                                                      |
+| [pgaudit](/ext/e/pgaudit)                                           | `18.0`  | provides auditing functionality                                                                                                                                                                                                                           |
+| [postgis](/ext/e/postgis)                                           | `3.5.6` | PostGIS geometry and geography spatial types and functions                                                                                                                                                                                                |
+| [postgis_raster](/ext/e/postgis_raster)                             | `3.5.6` | PostGIS raster types and functions                                                                                                                                                                                                                        |
+| [postgis_sfcgal](/ext/e/postgis_sfcgal)                             | `3.5.6` | PostGIS SFCGAL functions                                                                                                                                                                                                                                  |
+| [postgis_tiger_geocoder](/ext/e/postgis_tiger_geocoder)             | `3.5.6` | PostGIS tiger geocoder and reverse geocoder                                                                                                                                                                                                               |
+| [postgis_topology](/ext/e/postgis_topology)                         | `3.5.6` | PostGIS topology spatial types and functions                                                                                                                                                                                                              |
+| [set_user](/ext/e/set_user)                                         | `4.2.0` | similar to SET ROLE but with added logging                                                                                                                                                                                                                |
+| [vector](/ext/e/vector)                                             | `0.8.2` | vector data type and ivfflat and hnsw access methods                                                                                                                                                                                                      |
 {.full-width}
-
-完整的 80 个扩展列表请参考 [Percona Postgres 官方文档](https://docs.percona.com/postgresql/18/extensions.html)。
-
 
 ------
 
@@ -92,4 +92,3 @@ Percona 提供了 80 个可用的扩展，包括 `pg_tde`, `pgvector`, `postgis`
 - **完整生态**：支持 pgvector、PostGIS 等流行扩展
 
 > **注意**：目前处于稳定阶段 - 在生产使用前请彻底评估。
-

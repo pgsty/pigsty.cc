@@ -9,10 +9,10 @@ categories: [概念]
 
 [OrioleDB](https://orioledb.com/) 是一个 PostgreSQL 存储引擎扩展，声称能够提供 4 倍 OLTP 性能，没有 xid 环绕和表膨胀问题，并具有"云原生"（数据存储在 S3）能力。
 
-OrioleDB 当前在 Pigsty 中支持 PostgreSQL 16、17、18 三个兼容系，安装对应大版本的补丁版 PostgreSQL 内核与 `orioledb` 扩展。
-当前 Pigsty 包线为 OrioleDB 1.8 beta16。
+OrioleDB 当前在 Pigsty 中支持 PostgreSQL 16、17、18 三个兼容系，当前基线版本为 OrioleDB 1.8 beta16。
 
-您可以使用 Pigsty 将 OrioleDB 作为 RDS 运行。`oriole` 包别名会按 `pg_version` 解析为对应的版本化内核与扩展包，例如 EL 平台的 `oriolepg_$v`、`orioledb_$v`，以及 Debian/Ubuntu 平台的 `oriolepg-$v`、`oriolepg-$v-orioledb`。
+您可以使用 Pigsty 将 OrioleDB 作为 RDS 运行。`pg_mode` 仍使用 `oriole` 选择 `/usr/oriole-$v` 安装路径，
+`orioledb` 包别名会按 `pg_version` 解析为版本化内核包，例如 `orioledb-16`、`orioledb-17`、`orioledb-18`。
 
 
 ------
@@ -53,7 +53,7 @@ pg-meta:
     # OrioleDB 临时设置
     pg_mode: oriole                                         # oriole 兼容模式
     pg_version: 18                                          # OrioleDB 支持 PG 16、17、18
-    pg_packages: [ oriole, pgsql-common ]                   # 安装 OrioleDB 内核
+    pg_packages: [ orioledb, pgsql-common ]                 # 安装 OrioleDB 内核
     pg_libs: 'orioledb, pg_stat_statements, auto_explain'   # 加载 OrioleDB 扩展
 ```
 
@@ -61,7 +61,7 @@ pg-meta:
 
 ## 使用
 
-要使用 OrioleDB，请安装 `oriole` 包别名；Pigsty 会按平台与 `pg_version` 解析为对应的 PG16、PG17 或 PG18 内核与扩展包。
+要使用 OrioleDB，请安装 `orioledb` 包别名；Pigsty 会按平台与 `pg_version` 解析为对应的 PG16、PG17 或 PG18 内核包。
 
 使用 `pgbench` 初始化类似 TPC-B 的表，包含 100 个仓库：
 
@@ -108,3 +108,15 @@ ALTER TABLE pgbench_tellers_o RENAME TO pgbench_tellers;
 - **改进性能**：更好的空间利用率和查询性能
 
 > **注意**：OrioleDB 仍处于快速迭代阶段，生产使用前请按目标版本单独评估。
+
+
+--------
+
+## 可用扩展
+
+OrioleDB 内核共有 **53** 个可用扩展，去除 PG Contrib 自带扩展之后，还有以下额外扩展：
+
+| 扩展名                         | 版本号   | 说明                                                   |
+|:----------------------------|:------|:-----------------------------------------------------|
+| [orioledb](/ext/e/orioledb) | `1.8` | OrioleDB -- the next generation transactional engine |
+{.full-width}

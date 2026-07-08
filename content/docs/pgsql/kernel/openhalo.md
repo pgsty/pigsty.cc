@@ -115,3 +115,21 @@ Pigsty 安装的 [OpenHalo](https://github.com/pgsty/openHalo) 内核基于 [Hal
 请注意，Pigsty 不为使用 OpenHalo 内核提供任何保证。使用此内核时遇到的任何问题或需求应与原始供应商联系。
 
 > **警告**：目前该内核处于 beta1 阶段 - 在生产使用前请自行评估风险。
+
+
+--------
+
+## 可用扩展
+
+OpenHalo 内核共有 **59** 个可用扩展，去除 PG Contrib 自带扩展之后，还有以下额外扩展：
+
+| 扩展名 | 版本号 | 说明 |
+|:-------|:------|:-----|
+| [aux_mysql](/ext/e/aux_mysql) | `1.5` | MySQL Supplementary Extension |
+| hstore_plpython2u | `1.0` | transform between hstore and plpython2u |
+| hstore_plpythonu | `1.0` | transform between hstore and plpythonu |
+| jsonb_plpython2u | `1.0` | transform between jsonb and plpython2u |
+| jsonb_plpythonu | `1.0` | transform between jsonb and plpythonu |
+| ltree_plpython2u | `1.0` | transform between ltree and plpython2u |
+| ltree_plpythonu | `1.0` | transform between ltree and plpythonu |
+{.full-width}

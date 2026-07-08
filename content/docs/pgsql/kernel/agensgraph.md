@@ -132,3 +132,15 @@ FROM cypher('g', $$ MATCH (v:person) RETURN v.name $$) AS (name agtype);
 - AgensGraph 官方手册：<https://tech.skaiworldwide.com/docs/en/agensgraph/latest/>
 - AgensGraph 官方 Quick Guide：<https://tech.skaiworldwide.com/docs/en/agensgraph/17/quick_guide/index.html>
 - AgensGraph 2.17.0 Release Notes：<https://tech.skaiworldwide.com/docs/en/agensgraph/latest/release_notes/agensgraph_release_notes_2_17_0.html>
+
+
+--------
+
+## 可用扩展
+
+AgensGraph 内核共有 **60** 个可用扩展，去除 PG Contrib 自带扩展之后，还有以下额外扩展：
+
+| 扩展名                 | 版本号   | 说明                               |
+|:--------------------|:------|:---------------------------------|
+| [meta](/ext/e/meta) | `1.0` | Utility functions for agensgraph |
+{.full-width}

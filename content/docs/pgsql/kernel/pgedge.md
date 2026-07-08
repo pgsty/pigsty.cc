@@ -1,7 +1,7 @@
 ---
 title: pgEdge
 weight: 2116
-description: 在 Pigsty 中使用 pgEdge（PG18）内核，借助 Spock 多主逻辑复制构建面向边缘场景的分布式 PostgreSQL。
+description: 在 Pigsty 中使用 pgEdge（PG15~18）内核，借助 Spock 多主逻辑复制构建面向边缘场景的分布式 PostgreSQL。
 icon: fa-solid fa-network-wired
 module: [PGSQL]
 categories: [概念]
@@ -16,12 +16,13 @@ categories: [概念]
 
 Pigsty 通过 `pg_mode: pgedge` 接入 pgEdge，并用标准 PG 集群编排流程交付其核心组件：
 
-- `pgedge`：PG18 兼容内核
+- `pgedge`：PG15、PG16、PG17、PG18 兼容内核，模板默认使用 PG18
 - [`spock`](/ext/e/spock/)：多主（active-active）逻辑复制
 - [`snowflake`](/ext/e/snowflake/)：分布式唯一序列
 - [`lolor`](/ext/e/lolor/)：大对象逻辑复制兼容层
 
-当前 Pigsty 仓库中，pgEdge PG18 对应包为 `pgedge-18 18.3`，并同时提供 `spock 5.0.6`、`snowflake 2.4` 与 `lolor 1.2.2`。PG17 包仍可作为过渡版本保留，但 `pgedge` 配置模板已经默认使用 `pg_version: 18`。
+当前 Pigsty 仓库中提供 `pgedge-15`、`pgedge-16`、`pgedge-17`、`pgedge-18` 四个版本化内核包，模板默认使用 `pg_version: 18`。
+`spock`、`snowflake` 与 `lolor` 的控制文件、SQL 文件和动态库随 `pgedge-$v` 内核包一起交付，不再作为独立 `pg_extensions` 包安装项。
 对客户端来说，pgEdge 仍然是 PostgreSQL 线缆协议，`psql`、JDBC/ODBC、DBeaver 等工具都可以直接接入。
 
 Pigsty 提供的是“先验证单节点内核，再扩展到多节点复制拓扑”的交付路径：
@@ -59,7 +60,6 @@ psql -d meta -c "SELECT extname, extversion FROM pg_extension WHERE extname IN (
 pg_mode: pgedge
 pg_version: 18
 pg_packages: [ pgedge, pgsql-common ]
-pg_extensions: [ spock, snowflake, lolor ]
 pg_libs: 'spock, lolor, pg_stat_statements, auto_explain'
 pg_databases:
   - { name: meta ,baseline: cmdb.sql ,comment: pigsty meta database ,schemas: [pigsty] ,extensions: [spock, snowflake, lolor] }
@@ -121,3 +121,17 @@ CREATE EXTENSION IF NOT EXISTS lolor;
 - [pgEdge 官方文档首页](https://docs.pgedge.com/)
 - [Spock Limitations](https://docs.pgedge.com/spock-v5/development/limitations/)
 - [Snowflake Sequences](https://docs.pgedge.com/platform/snowflake)
+
+
+--------
+
+## 可用扩展
+
+pgEdge 内核共有 **63** 个可用扩展，去除 PG Contrib 自带扩展之后，还有以下额外扩展：
+
+| 扩展名                           | 版本号      | 说明                                            |
+|:------------------------------|:---------|:----------------------------------------------|
+| [lolor](/ext/e/lolor)         | `1.2.2`  | Large Objects support for logical replication |
+| [snowflake](/ext/e/snowflake) | `2.5.0`  | Snowflake style IDs for PostgreSQL            |
+| [spock](/ext/e/spock)         | `5.0.10` | PostgreSQL Logical Replication                |
+{.full-width}

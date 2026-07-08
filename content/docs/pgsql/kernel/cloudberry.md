@@ -19,14 +19,14 @@ categories: [概念]
 - 内核包名：`cloudberry`
 - 模式标识：`pg_mode: gpsql`
 - 角色标识：`gp_role: master | segment`
-- 当前仓库版本：`Cloudberry 2.0.0`
-- 当前版本字符串：`PostgreSQL 14.4 (Apache Cloudberry 2.0.0-incubating build 1)`
-- 默认二进制目录：`/usr/local/cloudberry`
+- 当前仓库版本：`Cloudberry 2.1.0`
+- 当前主包版本：`2.1.0-2PIGSTY`
+- 默认二进制目录：`/usr/cloudberry`
 
 需要特别说明的是，Pigsty 当前对 Cloudberry 的支持重点在于：软件包交付、节点管理、监控纳管、访问控制与配置编排。
 对于 MPP 集群初始化、扩容、重平衡和上游专有运维动作，仍建议使用 Cloudberry 官方工具链完成。
 
-> 根据当前发布说明，Cloudberry 目前在 Pigsty 仓库中为 **仅 RPM 构建** 的内核。
+> 当前 Pigsty 仓库同时提供 DEB 与 RPM 的 `cloudberry`、`cloudberry-backup`、`cloudberry-pxf` 包。
 
 
 --------
