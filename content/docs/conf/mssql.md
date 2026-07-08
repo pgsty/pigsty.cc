@@ -1,12 +1,12 @@
 ---
 title: mssql
 weight: 420
-description: Babelfish（PG17）内核模板，提供 Microsoft SQL Server 协议与 T-SQL 兼容能力
+description: Babelfish（PG17/18）内核模板，提供 Microsoft SQL Server 协议与 T-SQL 兼容能力
 icon: fa-brands fa-windows
 categories: [参考]
 ---
 
-`mssql` 配置模板使用 **Babelfish（PG17）** 内核替代原生 PostgreSQL，提供 Microsoft SQL Server 线缆协议（TDS）与 T-SQL 语法兼容能力。
+`mssql` 配置模板使用 **Babelfish（PG17/18）** 内核替代原生 PostgreSQL，提供 Microsoft SQL Server 线缆协议（TDS）与 T-SQL 语法兼容能力。模板默认 `pg_version: 17`，也可以通过 `./configure -c mssql -v 18` 选择 PG18。
 
 从 Pigsty v4.2 以来，Babelfish 由 Pigsty 直接构建，不再使用 WiltonDB 仓库，可在所有 [支持的 Linux 平台](/docs/ref/linux) 上使用。
 
@@ -19,7 +19,7 @@ categories: [参考]
 
 - 配置名称： `mssql`
 - 节点数量： 单节点
-- 配置说明：Babelfish（PG17）配置模板，提供 SQL Server 协议兼容
+- 配置说明：Babelfish（PG17/18）配置模板，提供 SQL Server 协议兼容
 - 适用系统：`el8`, `el9`, `el10`, `d12`, `d13`, `u22`, `u24`, `u26`
 - 适用架构：`x86_64`, `aarch64`
 - 相关配置：[`meta`](/docs/conf/meta/)
@@ -27,7 +27,7 @@ categories: [参考]
 启用方式：
 
 ```bash
-./configure -c mssql [-i <primary_ip>]
+./configure -c mssql [-v 17/18] [-i <primary_ip>]
 ```
 
 
@@ -49,7 +49,7 @@ categories: [参考]
 **关键特性**：
 - 使用 TDS 协议（端口 1433），兼容 SQL Server 客户端
 - 支持 T-SQL 语法，迁移成本低
-- 保留 PostgreSQL 的 ACID 特性和扩展生态（底层为 PG17）
+- 保留 PostgreSQL 的 ACID 特性和扩展生态（底层为 PG17/18，默认 PG17）
 - 支持 `multi-db` 和 `single-db` 两种迁移模式
 - 默认包组为 `babelfish + pgsql-common + sqlcmd`
 - 默认创建扩展：`uuid-ossp`、`babelfishpg_common`、`babelfishpg_tsql`、`babelfishpg_tds`、`babelfishpg_money`、`pg_hint_plan`、`system_stats`、`tds_fdw`
@@ -74,7 +74,7 @@ sqlcmd -S 10.10.10.10,1433 -U dbuser_mssql -P DBUser.MSSQL -d mssql
 - 希望利用 PostgreSQL 生态同时保持 T-SQL 兼容性
 
 **注意事项**：
-- Babelfish 内核基于 PostgreSQL 17，不支持 PG18+ 专有特性
+- Babelfish 内核可选择 PostgreSQL 17 或 18；生产使用前请按目标大版本单独验证 T-SQL 兼容性
 - 默认迁移模式为 `multi-db`（`babelfishpg_tsql.migration_mode`），可按需改为 `single-db`
 - 部分 T-SQL 语法可能存在兼容性差异，请参考 Babelfish 兼容性文档
 - 需要使用 `md5` 认证方式（而非 `scram-sha-256`）

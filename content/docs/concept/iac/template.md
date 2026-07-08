@@ -32,14 +32,14 @@ Pigsty 提供了 [**`configure`**](https://github.com/pgsty/pigsty/blob/main/con
 
 # 使用不同的数据库内核
 ./configure -c pgsql            # 原生 PostgreSQL 内核，基础功能 (14~18)
-./configure -c mssql            # Babelfish 内核，兼容 SQL Server 协议 (17)
+./configure -c mssql            # Babelfish 内核，兼容 SQL Server 协议 (17/18)
 ./configure -c polar            # PolarDB PG 内核，Aurora/RAC 风格 (17)
 ./configure -c ivory            # IvorySQL 内核，兼容 Oracle 语法 (18)
 ./configure -c mysql            # OpenHalo 内核，兼容 MySQL (14)
 ./configure -c pgtde            # Percona PostgreSQL Server 透明加密 (18)
 ./configure -c oriole           # OrioleDB 内核，OLTP 增强 (16~18)
 ./configure -c agens            # AgensGraph 图数据库内核 (17)
-./configure -c pgedge           # pgEdge 分布式数据库内核 (18)
+./configure -c pgedge           # pgEdge 分布式数据库内核 (15~18，默认 18)
 ./configure -c ha/citus         # Citus 分布式高可用 PostgreSQL (14~18)
 ./configure -c supabase         # Supabase 自托管配置 (15~18)
 
@@ -74,14 +74,14 @@ Pigsty 提供了 [**`configure`**](https://github.com/pgsty/pigsty/blob/main/con
 | 模板                                         | 说明                                  |
 |--------------------------------------------|-------------------------------------|
 | [**`pgsql.yml`**](/docs/conf/pgsql/)       | 原生 PostgreSQL 内核，基础功能 (14~18)       |
-| [**`mssql.yml`**](/docs/conf/mssql/)       | Babelfish 内核，兼容 SQL Server 协议 (17)  |
+| [**`mssql.yml`**](/docs/conf/mssql/)       | Babelfish 内核，兼容 SQL Server 协议 (17/18) |
 | [**`polar.yml`**](/docs/conf/polar/)       | PolarDB PG 内核，Aurora/RAC 风格 (17)    |
 | [**`ivory.yml`**](/docs/conf/ivory/)       | IvorySQL 内核，兼容 Oracle 语法 (18)       |
 | [**`mysql.yml`**](/docs/conf/mysql/)       | OpenHalo 内核，兼容 MySQL (14)           |
 | [**`pgtde.yml`**](/docs/conf/pgtde/)       | Percona PostgreSQL Server 透明加密 (18) |
 | [**`oriole.yml`**](/docs/conf/oriole/)     | OrioleDB 内核，OLTP 增强 (16~18)         |
 | [**`agens.yml`**](/docs/conf/agens/)       | AgensGraph 图数据库内核 (17)              |
-| [**`pgedge.yml`**](/docs/conf/pgedge/)     | pgEdge 分布式数据库内核 (18)                |
+| [**`pgedge.yml`**](/docs/conf/pgedge/)     | pgEdge 分布式数据库内核 (15~18，默认 18)      |
 | [**`supabase.yml`**](/docs/conf/supabase/) | Supabase 自托管配置 (15~18)              |
 {.full-width}
 

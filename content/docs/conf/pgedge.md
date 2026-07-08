@@ -45,8 +45,8 @@ categories: [参考]
 `pgedge` 模板在 `pg-meta` 集群中启用 `pg_mode: pgedge`，并预装 pgEdge 核心扩展用于逻辑复制与边缘分布式场景。
 
 **关键特性**：
-- 使用 `pgedge` 内核包替代标准 PostgreSQL（兼容 PG18）
-- 默认安装 [`spock`](/ext/e/spock/)、[`snowflake`](/ext/e/snowflake/)、[`lolor`](/ext/e/lolor/) 扩展
+- 使用 `pgedge` 内核包替代标准 PostgreSQL（兼容 PG15/16/17/18，默认 PG18）
+- `spock`、`snowflake`、`lolor` 随 `pgedge-$v` 内核包交付，并在 `meta` 数据库中默认创建
 - 默认预加载 [`spock`](/ext/e/spock/) 与 [`lolor`](/ext/e/lolor/)，便于后续多主复制配置
 - 保留 Pigsty 的标准备份、监控与运维能力
 
