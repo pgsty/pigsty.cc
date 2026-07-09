@@ -1,14 +1,14 @@
 ---
 title: Hindsight：AI 长期记忆
 weight: 567
-description: 使用 Pigsty v4.3 自建 Hindsight，并使用外部 PostgreSQL 存储长期记忆。
+description: 使用 Pigsty 自建 Hindsight，并使用外部 PostgreSQL 存储长期记忆。
 module: [SOFTWARE]
 categories: [参考]
 ---
 
 [**Hindsight**](https://github.com/vectorize-io/hindsight) 是面向 AI Agent 的 PostgreSQL-native 长期记忆服务。
 
-Pigsty v4.3 提供 `app/hindsight` 配置模板（`conf/app/hindsight.yml`），默认使用 Pigsty 托管的 PostgreSQL，而不是 Hindsight 内置的开发数据库。
+Pigsty 提供 `app/hindsight` 配置模板（`conf/app/hindsight.yml`），默认使用 Pigsty 托管的 PostgreSQL，而不是 Hindsight 内置的开发数据库。
 
 ## 快速开始
 
