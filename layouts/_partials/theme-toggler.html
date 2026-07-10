@@ -1,0 +1,58 @@
+{{- /*
+  Pigsty 三态循环主题按钮：Auto → Dark → Light → Auto
+  取代 Docsy 默认的下拉选单。存储键沿用 Docsy 的 `td-color-theme`，
+  与 head.html 首绘脚本及 Docsy dark-mode.js 的系统主题监听保持兼容
+  （dark-mode.js 因找不到 #bd-theme 与 [data-bs-theme-value] 而自动闲置）。
+*/ -}}
+<button type="button" class="btn nav-link pg-theme-cycle" id="pg-theme-cycle" aria-label="切换主题">
+  <i class="fa-solid fa-circle-half-stroke" data-mode="auto"></i>
+  <i class="fa-solid fa-moon d-none" data-mode="dark"></i>
+  <i class="fa-solid fa-sun d-none" data-mode="light"></i>
+</button>
+<script>
+  (function () {
+    var KEY = 'td-color-theme';
+    var ORDER = ['auto', 'dark', 'light'];
+    var LABEL = { auto: '主题：自动（点击切换暗色）', dark: '主题：暗色（点击切换亮色）', light: '主题：亮色（点击切换自动）' };
+    var btn = document.getElementById('pg-theme-cycle');
+    if (!btn) return;
+
+    function stored() {
+      try {
+        var v = localStorage.getItem(KEY);
+        return ORDER.indexOf(v) >= 0 ? v : 'auto';
+      } catch (e) { return 'auto'; }
+    }
+
+    function resolved(mode) {
+      if (mode !== 'auto') return mode;
+      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+
+    function render(mode) {
+      btn.querySelectorAll('i[data-mode]').forEach(function (icon) {
+        icon.classList.toggle('d-none', icon.getAttribute('data-mode') !== mode);
+      });
+      btn.setAttribute('title', LABEL[mode]);
+      btn.setAttribute('aria-label', LABEL[mode]);
+    }
+
+    function apply(mode) {
+      document.documentElement.setAttribute('data-bs-theme', resolved(mode));
+      render(mode);
+    }
+
+    btn.addEventListener('click', function () {
+      var next = ORDER[(ORDER.indexOf(stored()) + 1) % ORDER.length];
+      try { localStorage.setItem(KEY, next); } catch (e) { /* ignore */ }
+      apply(next);
+    });
+
+    // Auto 模式下跟随操作系统主题
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function () {
+      if (stored() === 'auto') apply('auto');
+    });
+
+    apply(stored());
+  })();
+</script>

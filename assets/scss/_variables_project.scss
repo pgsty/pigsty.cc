@@ -1,5 +1,44 @@
-$primary: #3E668F;
-$secondary: #F0AD4E;
-$td-navbar-bg-color: $primary;
-//$td-enable-google-fonts: false;
-//$td-enable-google-fonts: false;
+// ============================================================
+// Pigsty「通电主板」— SCSS 编译期变量
+// 品牌六色：P #2f6793 · I #419edb · G #ffa269 · S #6f747c · T #de372c · Y #53ac79
+// 运行时（明暗主题）令牌见 _styles_project.scss 末尾
+// ============================================================
+
+// 品牌色
+$primary: #2f6793; // P 蓝：按钮 / 链接 / 强调
+$secondary: #b4762e; // 铜色丝印：次级强调
+$info: #419edb; // I 蓝
+$success: #53ac79; // Y 绿
+$danger: #de372c; // T 红
+$warning: #ffa269; // G 橙
+
+// 字体：中文交给系统栈（PingFang / 雅黑 / Noto CJK），代码用本地 IBM Plex Mono
+$font-family-sans-serif:
+  -apple-system,
+  BlinkMacSystemFont,
+  'PingFang SC',
+  'Hiragino Sans GB',
+  'Microsoft YaHei',
+  'Segoe UI',
+  Roboto,
+  'Helvetica Neue',
+  Arial,
+  'Noto Sans SC',
+  sans-serif,
+  'Apple Color Emoji',
+  'Segoe UI Emoji';
+$font-family-monospace:
+  'IBM Plex Mono',
+  ui-monospace,
+  SFMono-Regular,
+  Menlo,
+  Consolas,
+  'Liberation Mono',
+  monospace;
+
+// 中文正文行高放宽，标题加重
+$line-height-base: 1.7;
+$headings-font-weight: 700;
+
+// 导航栏底色交由 _styles_project.scss 按主题设置
+$td-navbar-bg-color: transparent;

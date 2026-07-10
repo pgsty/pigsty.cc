@@ -71,15 +71,16 @@
   var player = null;
 
   // Detect current theme from Docsy (data-bs-theme) or system preference
+  // pigsty / pigsty-light are custom terminal themes defined in _styles_project.scss
   function detectTheme() {
     var htmlTheme = document.documentElement.getAttribute("data-bs-theme");
-    if (htmlTheme === "dark") return "solarized-dark";
-    if (htmlTheme === "light") return "solarized-light";
+    if (htmlTheme === "dark") return "pigsty";
+    if (htmlTheme === "light") return "pigsty-light";
     // Auto: follow system preference
     if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
-      return "solarized-dark";
+      return "pigsty";
     }
-    return "solarized-light";
+    return "pigsty-light";
   }
 
   function getTheme() {
@@ -145,8 +146,29 @@
     player = AsciinemaPlayer.create(castURL, container, opts);
   }
 
+  // Defensive loader: the Scratch guard above can skip re-emitting the
+  // <script> tag on hugo server rebuilds, and classic scripts may not be
+  // ready yet — inject / wait as needed before creating the player.
+  function whenPlayerReady(cb) {
+    if (window.AsciinemaPlayer) { cb(); return; }
+    var src = "/js/asciinema-player.min.js";
+    var s = document.querySelector('script[src="' + src + '"]');
+    if (!s) {
+      if (!document.querySelector('link[href="/css/asciinema-player.css"]')) {
+        var l = document.createElement("link");
+        l.rel = "stylesheet";
+        l.href = "/css/asciinema-player.css";
+        document.head.appendChild(l);
+      }
+      s = document.createElement("script");
+      s.src = src;
+      document.head.appendChild(s);
+    }
+    s.addEventListener("load", cb);
+  }
+
   // Create initial player
-  createPlayer();
+  whenPlayerReady(createPlayer);
 
   // Watch for theme changes if using auto theme
   if (configuredTheme === "auto") {

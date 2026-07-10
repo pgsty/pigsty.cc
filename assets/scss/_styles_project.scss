@@ -1080,3 +1080,627 @@ a {
     text-decoration: none !important;
   }
 }
+
+// ============================================================
+// Pigsty「通电主板」主题 —— 与首页 landing-v3 同一套设计令牌
+// 暗色 = 通电电路板（蓝黑阻焊 + 铜色丝印），亮色 = 印刷工程图纸
+// 此段追加于文件末尾，晚于 Bootstrap / Docsy 编译，天然胜出级联
+// ============================================================
+
+// ---- 本地字体（零外部请求） ----------------------------------
+@font-face {
+  font-family: 'Chakra Petch';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/chakra-petch-700-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+2000-206F;
+}
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/ibm-plex-mono-400-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+2000-206F;
+}
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/ibm-plex-mono-italic-400-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+2000-206F;
+}
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('/fonts/ibm-plex-mono-600-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+2000-206F;
+}
+
+// ---- 主题令牌 --------------------------------------------------
+// 亮色：印刷图纸
+:root,
+[data-bs-theme='light'] {
+  --bs-body-bg: #f1f4f8;
+  --bs-body-bg-rgb: 241, 244, 248;
+  --bs-body-color: #16222e;
+  --bs-body-color-rgb: 22, 34, 46;
+  --bs-emphasis-color: #0d161f;
+  --bs-emphasis-color-rgb: 13, 22, 31;
+  --bs-secondary-color: #3d4e61; // ink-soft
+  --bs-secondary-color-rgb: 61, 78, 97;
+  --bs-tertiary-color: #66788c; // ink-mute
+  --bs-tertiary-color-rgb: 102, 120, 140;
+  --bs-secondary-bg: #e9eef4;
+  --bs-secondary-bg-rgb: 233, 238, 244;
+  --bs-tertiary-bg: #f6f9fc;
+  --bs-tertiary-bg-rgb: 246, 249, 252;
+  --bs-border-color: rgba(48, 74, 105, 0.14);
+  --bs-border-color-translucent: rgba(48, 74, 105, 0.14);
+  --bs-link-color: #2b6ca3;
+  --bs-link-color-rgb: 43, 108, 163;
+  --bs-link-hover-color: #1d588c;
+  --bs-link-hover-color-rgb: 29, 88, 140;
+  --bs-code-color: #b4762e; // 行内代码 → 铜色
+
+  // Pigsty 专用令牌
+  --pg-elev: #ffffff; // 卡片 / 浮层
+  --pg-silk: #5d7189; // 丝印文字
+  --pg-copper: #b4762e; // 铜
+  --pg-copper-dim: rgba(180, 118, 46, 0.6);
+  --pg-line-strong: rgba(48, 74, 105, 0.3);
+  --pg-header-bg: rgba(241, 244, 248, 0.88);
+  --pg-grid-line: rgba(47, 103, 147, 0.05);
+}
+
+// 暗色：通电板卡
+[data-bs-theme='dark'] {
+  --bs-body-bg: #0b1119;
+  --bs-body-bg-rgb: 11, 17, 25;
+  --bs-body-color: #e8eef6;
+  --bs-body-color-rgb: 232, 238, 246;
+  --bs-emphasis-color: #f4f8fc;
+  --bs-emphasis-color-rgb: 244, 248, 252;
+  --bs-secondary-color: #b6c2d2; // ink-soft
+  --bs-secondary-color-rgb: 182, 194, 210;
+  --bs-tertiary-color: #7f8da1; // ink-mute
+  --bs-tertiary-color-rgb: 127, 141, 161;
+  --bs-secondary-bg: #121c29;
+  --bs-secondary-bg-rgb: 18, 28, 41;
+  --bs-tertiary-bg: #182435;
+  --bs-tertiary-bg-rgb: 24, 36, 53;
+  --bs-border-color: rgba(148, 176, 210, 0.16);
+  --bs-border-color-translucent: rgba(148, 176, 210, 0.16);
+  --bs-link-color: #5da2dd;
+  --bs-link-color-rgb: 93, 162, 221;
+  --bs-link-hover-color: #7fb8e8;
+  --bs-link-hover-color-rgb: 127, 184, 232;
+  --bs-code-color: #e0a35c;
+  --td-pre-bg: #0a0f16; // 终端底色（与首页命令框一致）
+
+  --pg-elev: #121c29;
+  --pg-silk: #93a3b8;
+  --pg-copper: #e0a35c;
+  --pg-copper-dim: rgba(224, 163, 92, 0.55);
+  --pg-line-strong: rgba(148, 176, 210, 0.32);
+  --pg-header-bg: rgba(11, 17, 25, 0.92);
+  --pg-grid-line: rgba(120, 150, 190, 0.045);
+}
+
+// 全页低噪点覆铜网格（首页同款，克制的 44px 格点）
+body.td-section,
+body.td-page,
+body.td-home,
+body.td-taxonomy,
+body.td-404 {
+  background-image:
+    linear-gradient(var(--pg-grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--pg-grid-line) 1px, transparent 1px);
+  background-size: 44px 44px;
+  background-attachment: fixed;
+}
+
+// ---- 导航栏：毛玻璃电路板顶盖 ----------------------------------
+.td-navbar {
+  --td-navbar-bg-color: var(--pg-header-bg);
+  --td-navbar-backdrop-filter: blur(14px);
+  --td-navbar-border-bottom: 1px solid var(--bs-border-color);
+  -webkit-backdrop-filter: blur(14px);
+
+  .navbar-brand {
+    &__name {
+      font-family: 'Chakra Petch', var(--bs-font-sans-serif);
+      font-weight: 700;
+      font-size: 1.3rem;
+      letter-spacing: 0.16em;
+      color: var(--bs-body-color);
+    }
+
+    svg {
+      height: 1.9rem;
+    }
+  }
+
+  .nav-link {
+    padding: 0.45rem 0.75rem;
+    border-radius: 6px;
+    color: var(--bs-secondary-color);
+    transition: color 150ms ease, background 150ms ease;
+
+    &:hover {
+      color: var(--bs-body-color);
+      background: var(--pg-elev);
+    }
+
+    &.active,
+    &.active:hover {
+      color: var(--bs-link-color);
+      background: transparent;
+      text-decoration: underline;
+      text-decoration-color: var(--pg-copper);
+      text-decoration-thickness: 2px;
+      text-underline-offset: 0.5em;
+    }
+  }
+
+  // 搜索框：药丸形，随主题
+  .td-search__input,
+  .form-control {
+    background: var(--pg-elev);
+    border: 1px solid var(--bs-border-color);
+    border-radius: 999px;
+    color: var(--bs-body-color);
+
+    &::placeholder {
+      color: var(--bs-tertiary-color);
+    }
+
+    &:focus {
+      border-color: var(--bs-link-color);
+      box-shadow: 0 0 0 3px rgba(var(--bs-link-color-rgb), 0.15);
+      background: var(--pg-elev);
+      color: var(--bs-body-color);
+    }
+  }
+
+  .td-search {
+    background: transparent;
+
+    &__icon,
+    .fa-magnifying-glass,
+    .fa-search {
+      color: var(--bs-tertiary-color);
+    }
+  }
+
+  // 三态主题循环按钮：固定宽度避免图标切换时抖动
+  .pg-theme-cycle {
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+
+    i {
+      display: inline-block;
+      width: 1.15em;
+      text-align: center;
+    }
+
+    i.d-none {
+      display: none;
+    }
+  }
+}
+
+// ---- 左侧边栏：目录树 ------------------------------------------
+.td-sidebar {
+  background: transparent;
+
+  @include media-breakpoint-up(md) {
+    border-right: 1px solid var(--bs-border-color);
+    padding-top: 1rem;
+  }
+
+  .td-sidebar__search .td-search__input {
+    background: var(--pg-elev);
+    border: 1px solid var(--bs-border-color);
+    border-radius: 8px;
+    color: var(--bs-body-color);
+
+    &:focus {
+      border-color: var(--bs-link-color);
+      box-shadow: 0 0 0 3px rgba(var(--bs-link-color-rgb), 0.12);
+    }
+  }
+}
+
+.td-sidebar-nav {
+  a.td-sidebar-link {
+    color: var(--bs-secondary-color);
+    transition: color 120ms ease;
+
+    &:hover {
+      color: var(--bs-body-color);
+    }
+
+    // 当前页：加粗 + PG 蓝 + 左侧铜色小竖轨（无背景板，不动排版）
+    &.active,
+    &.active:hover {
+      position: relative;
+      color: var(--bs-link-color);
+      font-weight: 700;
+      background: transparent;
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: -0.7rem;
+        top: 0.18em;
+        height: 1.05em;
+        width: 3px;
+        border-radius: 2px;
+        background: var(--pg-copper);
+      }
+    }
+  }
+
+  // 章节标题（一级条目）
+  &__section-title > a.td-sidebar-link {
+    color: var(--bs-body-color);
+    font-weight: 600;
+  }
+
+  .foldable > input:checked ~ label > a {
+    color: var(--bs-body-color);
+  }
+}
+
+// 侧边栏分区丝印（既有 divider 机制，换成等宽丝印体 + 铜色圆点）
+.td-sidebar-link__divider {
+  font-family: var(--bs-font-monospace) !important;
+  font-size: 0.68rem !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.16em !important;
+  color: var(--pg-silk) !important;
+
+  &::before {
+    background: linear-gradient(to right, var(--pg-copper-dim), transparent 85%) !important;
+    height: 1px;
+    opacity: 0.6;
+  }
+
+  &:hover {
+    color: var(--pg-silk) !important;
+  }
+}
+
+// ---- 右侧 TOC 与页面元信息 --------------------------------------
+.td-toc {
+  border-left: 1px solid var(--bs-border-color);
+
+  #TableOfContents {
+    a {
+      color: var(--bs-tertiary-color);
+      transition: color 120ms ease;
+
+      &:hover {
+        color: var(--bs-link-color);
+      }
+    }
+  }
+}
+
+.td-page-meta a {
+  color: var(--bs-secondary-color);
+
+  &:hover {
+    color: var(--bs-link-color);
+  }
+}
+
+// ---- 正文排版 ---------------------------------------------------
+.td-content {
+  // 标题：加重 + 收紧字距（中文黑体更精神）
+  h1 {
+    font-weight: 800;
+    letter-spacing: 0.01em;
+  }
+
+  // 二级标题带发丝线，datasheet 分节感
+  h2 {
+    font-weight: 700;
+    padding-bottom: 0.35rem;
+    border-bottom: 1px solid var(--bs-border-color);
+    margin-top: 2.5rem;
+  }
+
+  h3,
+  h4 {
+    font-weight: 700;
+    margin-top: 2rem;
+  }
+
+  // 亮色代码块：浅色纸面 + 细边（暗色规则在上文既有段落）
+  .highlight {
+    border-radius: 0.6rem;
+    overflow: hidden;
+  }
+
+  // 行内代码：铜色微底
+  p code,
+  li > code,
+  table code {
+    padding: 0.12em 0.35em;
+    border-radius: 5px;
+    background: rgba(var(--bs-link-color-rgb), 0.06);
+    border: 1px solid var(--bs-border-color);
+  }
+
+  // 引用块：铜色左轨（与首页 module-value 同款语言）
+  // 首末子元素外边距收掉，避免块内上下留白失衡
+  blockquote {
+    border-left: 2px solid var(--pg-copper);
+    background: linear-gradient(90deg, rgba(224, 163, 92, 0.07), transparent 80%);
+    margin: 1.25rem 0;
+    padding: 0.7rem 1.1rem;
+    color: var(--bs-secondary-color);
+    border-radius: 0 6px 6px 0;
+
+    > :first-child { margin-top: 0; }
+    > :last-child { margin-bottom: 0; }
+  }
+
+  // 告警块（Docsy alert shortcode）：标题是 h4.alert-heading，
+  // 不能吃通用标题的 margin-top，否则块内上方大片留白
+  .alert {
+    margin: 1.5rem 0;
+
+    .alert-heading,
+    > :first-child { margin-top: 0 !important; }
+    > :last-child { margin-bottom: 0; }
+  }
+
+  // 表格
+  table {
+    border-color: var(--bs-border-color);
+
+    thead th,
+    thead td {
+      background: var(--bs-tertiary-bg);
+      border-bottom: 1px solid var(--pg-line-strong);
+    }
+  }
+}
+
+// 亮色代码块表面
+[data-bs-theme='light'] .td-content {
+  .highlight,
+  pre {
+    background: #f6f9fc;
+    border: 1px solid var(--bs-border-color);
+  }
+
+  .highlight pre {
+    border: 0;
+    background: transparent;
+  }
+}
+
+// ---- Asciinema Player：通电主板终端配色 --------------------------
+// 播放器内部结构也用 <pre>，必须豁免上面的代码块皮肤，
+// 底色交还给播放器自己的 --term-color-background
+.td-content .asciinema-container {
+  pre,
+  .ap-terminal {
+    background: var(--term-color-background);
+    border: 0;
+    box-shadow: none;
+  }
+
+  // 统一的外框：与代码块同款圆角细边
+  .ap-player {
+    border-radius: 0.6rem;
+    border: 1px solid var(--bs-border-color);
+    overflow: hidden;
+  }
+}
+
+// 自定义终端主题（asciinema-player v3 以 CSS 变量定义主题类）
+// 注意：播放器 CSS 由 shortcode 在正文中延迟加载，晚于 main.css，
+// 因此这里用 .ap-player 提高特异性，压过其默认的黑底变量
+// 暗色：landing 命令框同款 #0a0f16 底 + 板卡调 ANSI 色
+.ap-player.asciinema-player-theme-pigsty {
+  --term-color-foreground: #dbe7f5;
+  --term-color-background: #0a0f16;
+  --term-color-0: #1c2736;
+  --term-color-1: #e06c6c;
+  --term-color-2: #55c98a;
+  --term-color-3: #e0a35c;
+  --term-color-4: #5da2dd;
+  --term-color-5: #c792ea;
+  --term-color-6: #6cd5e0;
+  --term-color-7: #dbe7f5;
+  --term-color-8: #64748b;
+  --term-color-9: #f08a8a;
+  --term-color-10: #7fe0aa;
+  --term-color-11: #ffc98c;
+  --term-color-12: #7fb8e8;
+  --term-color-13: #d9b3f0;
+  --term-color-14: #93e5ee;
+  --term-color-15: #ffffff;
+}
+
+// 亮色：图纸纸面 + 同族加深 ANSI 色
+.ap-player.asciinema-player-theme-pigsty-light {
+  --term-color-foreground: #16222e;
+  --term-color-background: #f6f9fc;
+  --term-color-0: #16222e;
+  --term-color-1: #c2403a;
+  --term-color-2: #178a53;
+  --term-color-3: #b4762e;
+  --term-color-4: #2b6ca3;
+  --term-color-5: #8f4e9e;
+  --term-color-6: #0e7f8a;
+  --term-color-7: #5d7189;
+  --term-color-8: #66788c;
+  --term-color-9: #de5b52;
+  --term-color-10: #2aa06a;
+  --term-color-11: #d08f43;
+  --term-color-12: #4a8ec2;
+  --term-color-13: #a86ab8;
+  --term-color-14: #2a9aa6;
+  --term-color-15: #0d161f;
+}
+
+// ---- 面包屑 -----------------------------------------------------
+.td-breadcrumbs {
+  .breadcrumb-item {
+    a {
+      color: var(--bs-tertiary-color);
+
+      &:hover {
+        color: var(--bs-link-color);
+      }
+    }
+
+    &.active {
+      color: var(--bs-secondary-color);
+    }
+  }
+}
+
+// ---- 分页 / 反馈 / 最后修改 --------------------------------------
+.td-content .td-page-meta__lastmod,
+.td-page-meta--child {
+  color: var(--bs-tertiary-color);
+}
+
+// ---- 页脚：landing 同款（pg-footer 全自定义，见 footer.html） -----
+.pg-footer {
+  margin-top: 3rem;
+  border-top: 1px solid var(--bs-border-color);
+  background: var(--bs-secondary-bg);
+  font-size: 0.9rem;
+
+  a {
+    color: var(--bs-secondary-color);
+    transition: color 150ms ease;
+
+    &:hover {
+      color: var(--bs-link-hover-color);
+    }
+  }
+
+  &__container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: clamp(2.5rem, 4vw, 3.5rem) 1.75rem 1.5rem;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 2.2fr repeat(4, 1fr);
+    gap: 2rem 1.5rem;
+    margin-bottom: 2.25rem;
+  }
+
+  &__logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 0.8rem;
+
+    svg {
+      height: 1.75rem;
+      width: auto;
+    }
+
+    span {
+      font-family: 'Chakra Petch', var(--bs-font-sans-serif);
+      font-weight: 700;
+      font-size: 1.05rem;
+      letter-spacing: 0.18em;
+      color: var(--bs-body-color);
+    }
+  }
+
+  &__tagline {
+    margin: 0 0 0.4rem;
+    line-height: 1.8;
+    color: var(--bs-secondary-color);
+
+    .ini-p { color: #2f6793; font-weight: 700; }
+    .ini-i { color: #419edb; font-weight: 700; }
+    .ini-g { color: #ffa269; font-weight: 700; }
+    .ini-s { color: #6f747c; font-weight: 700; }
+    .ini-t { color: #de372c; font-weight: 700; }
+    .ini-y { color: #53ac79; font-weight: 700; }
+  }
+
+  &__slogan {
+    margin: 0;
+    color: var(--bs-tertiary-color);
+
+    .hl-good { color: var(--pg-copper); font-weight: 700; }
+    .hl-use { color: var(--bs-link-hover-color); font-weight: 700; }
+  }
+
+  &__title {
+    margin: 0 0 0.85rem;
+    font-family: var(--bs-font-monospace);
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--pg-silk);
+  }
+
+  &__links {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      margin-bottom: 0.55rem;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem 1.5rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--bs-border-color);
+    font-size: 0.8rem;
+    color: var(--bs-tertiary-color);
+  }
+
+  &__lang {
+    display: flex;
+    gap: 0.9rem;
+  }
+
+  @include media-breakpoint-down(lg) {
+    &__grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    &__brand {
+      grid-column: 1 / -1;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    &__bottom {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+}
+
+// 隐藏 Docsy 默认 td-footer 的暗盒样式残留（我们完全接管 footer）
