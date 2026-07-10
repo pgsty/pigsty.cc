@@ -222,7 +222,7 @@ ssh-keygen -t rsa -b 2048 -N '' -f ~/.ssh/id_rsa -q
 
 ## 支持的镜像
 
-Pigsty v4.3 统一使用 [**Vagrant Cloud**](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image) 上的 `cloud-image/*` Box，VirtualBox 与 libvirt 均提供 `amd64` / `arm64` 架构版本。
+Pigsty 统一使用 [**Vagrant Cloud**](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image) 上的 `cloud-image/*` Box，VirtualBox 与 libvirt 均提供 `amd64` / `arm64` 架构版本。
 
 ### VirtualBox
 

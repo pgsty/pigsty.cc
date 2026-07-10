@@ -9,7 +9,7 @@ categories: [概念]
 
 [Percona Postgres](https://www.percona.com/postgresql/software/postgresql-distribution) 是一个带有 [`pg_tde`](https://docs.percona.com/pg-tde/index.html)（透明数据加密）扩展的补丁 Postgres 内核。
 
-Pigsty v4.3.0 的 `percona-main` 包集使用 Percona PostgreSQL 18，并额外安装 `pg_tde`、PostGIS、pgvector、wal2json、pg_repack、pgaudit、pg_stat_monitor 等常用组件。
+Pigsty v4.4.0 的 `percona-main` 包集使用 Percona PostgreSQL 18，并额外安装 `pg_tde`、PostGIS、pgvector、wal2json、pg_repack、pgaudit、pg_stat_monitor 等常用组件。
 
 - [Percona 透明数据加密（TDE）性能测试](https://andreas.scherbaum.la/post/2025-06-30_performance-test-for-percona-transparent-data-encryption-tde/)
 

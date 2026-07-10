@@ -12,6 +12,10 @@ categories: [参考]
 
 ## 最近新闻
 
+- **2026-07-10**: **Pigsty v4.4.0 正式发布！支持 PG19 Beta，扩展总数达到 531**
+  - 发布说明：[v4.4.0](/docs/about/release#v440)
+  - 主要变化：PostgreSQL 18.4 / 19 beta 支持、531 个扩展、内核与软件包更新，以及 Pig CLI 改进。
+
 - **2026-05-01**: **Pigsty v4.3.0 正式发布！510 扩展，Ubuntu 26 支持**
   - 发布说明：[v4.3.0](/docs/about/release#v430)
   - 主要变化：Infra / PGSQL / 内核包批量更新，Ubuntu 26.04 离线包补齐，扩展总数达到 510。

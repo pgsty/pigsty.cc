@@ -38,7 +38,7 @@ pg-meta:
 
 ## 恢复后处理
 
-Pigsty v4.3 的 `pgsql-pitr.yml` 默认会保留归档设置（`archive: true`）。如果您做探索性恢复并显式设置了 `archive: false`，恢复后需要重新启用归档并执行全量备份。
+Pigsty v4.4 的 `pgsql-pitr.yml` 默认会保留归档设置（`archive: true`）。如果您做探索性恢复并显式设置了 `archive: false`，恢复后需要重新启用归档并执行全量备份。
 
 ```bash title="postgres @ pg-meta $"
 psql -c 'ALTER SYSTEM RESET archive_mode;'

@@ -530,7 +530,7 @@ PITR 支持多种恢复目标类型：
 | 最新    | `pg_pitr: {}`                    | 恢复到 WAL 归档末尾 |
 
 {{% alert title="PITR 恢复后处理" color="info" %}}
-Pigsty v4.3 的 PITR 默认会保留归档设置（`archive: true`）。如果您显式设置了 `archive: false` 做探索性恢复，确认数据正确后应重置 `archive_mode`、重启集群，并执行新的全量备份：
+Pigsty v4.4 的 PITR 默认会保留归档设置（`archive: true`）。如果您显式设置了 `archive: false` 做探索性恢复，确认数据正确后应重置 `archive_mode`、重启集群，并执行新的全量备份：
 
 ```bash
 psql -c 'ALTER SYSTEM RESET archive_mode;'
