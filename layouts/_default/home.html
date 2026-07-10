@@ -12,8 +12,8 @@
   <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
   <link rel="apple-touch-icon" href="/img/logo/logo.png">
 
-  <!-- Safari/iOS theme color - default light theme -->
-  <meta name="theme-color" content="#edf3fb">
+  <!-- Theme color (updated by JS on theme switch) -->
+  <meta name="theme-color" content="#0b1119">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
   <!-- Open Graph -->
@@ -21,24 +21,53 @@
   <meta property="og:description" content="{{ .Description | default .Site.Params.description }}">
   <meta property="og:type" content="website">
   <meta property="og:url" content="{{ .Permalink }}">
-  <meta property="og:image" content="{{ .Site.BaseURL }}img/pigsty/banner.zh.jpg">
+  <meta property="og:image" content="{{ .Site.BaseURL }}img/pigsty/banner.png">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="{{ .Title }}">
   <meta name="twitter:description" content="{{ .Description | default .Site.Params.description }}">
 
-  <!-- Fonts -->
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Pigsty",
+    "applicationCategory": "DeveloperApplication",
+    "operatingSystem": "Linux",
+    "url": "https://pigsty.cc",
+    "softwareVersion": "{{ .Site.Params.version }}",
+    "license": "https://www.apache.org/licenses/LICENSE-2.0",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CNY" },
+    "description": "{{ .Site.Params.description }}"
+  }
+  </script>
+
+  <!-- Apply stored / preferred theme before first paint -->
+  <script>
+    (function () {
+      var t = null;
+      try { t = window.localStorage.getItem('pigsty-landing-theme'); } catch (e) {}
+      if (t !== 'light' && t !== 'dark') {
+        t = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+      }
+      document.documentElement.setAttribute('data-theme', t);
+      document.documentElement.classList.remove('no-js');
+      document.documentElement.classList.add('js');
+    })();
+  </script>
+
+  <!-- Fonts: Chakra Petch (display) / IBM Plex Mono (silkscreen & code) / Noto Sans SC (body) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700;800;900&family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
 
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <!-- Landing Page CSS -->
-  <link rel="stylesheet" href="/css/landing.css">
-  <link rel="stylesheet" href="/css/landing-v2.css">
+  <link rel="stylesheet" href="/css/landing-v3.css">
 
   <!-- Analytics -->
   {{ with .Site.Config.Services.GoogleAnalytics.ID }}
@@ -51,39 +80,141 @@
   </script>
   {{ end }}
 </head>
-<body class="landing-page landing-theme-light" data-theme="light">
+<body class="landing-page">
 
   <!-- ============================================
-       Navigation Header
+       Navigation
        ============================================ -->
   <header class="landing-header">
     <div class="landing-container">
-      <nav class="landing-nav">
+      <nav class="landing-nav" aria-label="主导航">
         <a href="/" class="nav-brand">
           <img src="/img/logo/logo.svg" alt="Pigsty" class="nav-logo">
           <span class="nav-title">PIGSTY</span>
         </a>
 
         <div class="nav-links">
-          <a href="/docs/" class="nav-link">文档</a>
-          <a href="/ext/" class="nav-link">扩展</a>
-          <a href="/blog/" class="nav-link">博客</a>
+          <div class="nav-item">
+            <a href="/docs/" class="nav-link">文档 <i class="fas fa-chevron-down nav-caret" aria-hidden="true"></i></a>
+            <div class="nav-dropdown nav-dropdown--docs" role="menu" aria-label="文档菜单">
+              <div class="dropdown-group">
+                <p class="dropdown-group-title silkscreen">文档</p>
+                <div class="dropdown-cols">
+                  <ul class="dropdown-col">
+                    <li><a href="/docs/"><i class="fas fa-book"></i>Pigsty v4.4</a></li>
+                    <li><a href="https://doc.pgsty.com" target="_blank" rel="noopener"><i class="fas fa-book-open"></i>Pigsty v3.7</a></li>
+                    <li><a href="/docs/pig/"><i class="fas fa-piggy-bank"></i>PIG 命令行</a></li>
+                    <li><a href="/docs/piglet/"><i class="fas fa-dharmachakra"></i>Piglet.Run</a></li>
+                    <li><a href="/docs/pgsql/kernel/"><i class="fas fa-heart"></i>PG 内核分支</a></li>
+                  </ul>
+                  <ul class="dropdown-col">
+                    <li><a href="https://pg.center/docs/18/index.html" target="_blank" rel="noopener"><i class="fas fa-republican"></i>PostgreSQL</a></li>
+                    <li><a href="/docs/pgbouncer/"><i class="fas fa-baseball"></i>PgBouncer</a></li>
+                    <li><a href="/docs/patroni/"><i class="fas fa-yin-yang"></i>Patroni</a></li>
+                    <li><a href="/docs/pgbackrest/"><i class="fas fa-couch"></i>pgBackRest</a></li>
+                    <li><a href="/docs/pg_exporter/"><i class="fas fa-chart-line"></i>pg_exporter</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="dropdown-sep" aria-hidden="true"></div>
+              <div class="dropdown-group">
+                <p class="dropdown-group-title silkscreen">模块</p>
+                <div class="dropdown-cols">
+                  <ul class="dropdown-col">
+                    <li><a href="/docs/pgsql/"><i class="fas fa-database"></i>PGSQL</a></li>
+                    <li><a href="/docs/infra/"><i class="fas fa-bank"></i>INFRA</a></li>
+                    <li><a href="/docs/node/"><i class="fas fa-server"></i>NODE</a></li>
+                    <li><a href="/docs/etcd/"><i class="fas fa-gears"></i>ETCD</a></li>
+                    <li><a href="/docs/minio/"><i class="fas fa-boxes-stacked"></i>MINIO</a></li>
+                  </ul>
+                  <ul class="dropdown-col">
+                    <li><a href="/docs/redis/"><i class="fas fa-layer-group"></i>REDIS</a></li>
+                    <li><a href="/docs/ferret/"><i class="fas fa-leaf"></i>FERRET</a></li>
+                    <li><a href="/docs/docker/"><i class="fa-brands fa-docker"></i>DOCKER</a></li>
+                    <li><a href="/docs/juice/"><i class="fas fa-folder-tree"></i>JUICE</a></li>
+                    <li><a href="/docs/vibe/"><i class="fas fa-laptop-code"></i>VIBE</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="nav-item">
+            <a href="/ext/" class="nav-link">扩展 <i class="fas fa-chevron-down nav-caret" aria-hidden="true"></i></a>
+            <div class="nav-dropdown nav-dropdown--ext" role="menu" aria-label="扩展菜单">
+              <div class="dropdown-group">
+                <p class="dropdown-group-title silkscreen">扩展</p>
+                <div class="dropdown-cols">
+                  <ul class="dropdown-col">
+                    <li><a href="/ext/list/"><i class="fas fa-puzzle-piece"></i>扩展列表</a></li>
+                    <li><a href="/ext/rpm/"><i class="fa-brands fa-redhat"></i>RPM 列表</a></li>
+                    <li><a href="/ext/deb/"><i class="fa-brands fa-debian"></i>DEB 列表</a></li>
+                    <li><a href="/ext/repo/"><i class="fas fa-warehouse"></i>归属仓库</a></li>
+                    <li><a href="/ext/language/"><i class="fas fa-code"></i>编程语言</a></li>
+                    <li><a href="/ext/license/"><i class="fas fa-scale-balanced"></i>开源协议</a></li>
+                    <li><a href="/docs/ref/linux/"><i class="fa-brands fa-linux"></i>操作系统</a></li>
+                    <li><a href="/docs/repo/"><i class="fas fa-clipboard-list"></i>更新日志</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="dropdown-sep" aria-hidden="true"></div>
+              <div class="dropdown-group">
+                <p class="dropdown-group-title silkscreen">分类</p>
+                <div class="dropdown-cols">
+                  <ul class="dropdown-col">
+                    <li><a href="/ext/cate/time/"><i class="fas fa-clock"></i>TIME</a></li>
+                    <li><a href="/ext/cate/gis/"><i class="fas fa-globe"></i>GIS</a></li>
+                    <li><a href="/ext/cate/rag/"><i class="fas fa-brain"></i>RAG</a></li>
+                    <li><a href="/ext/cate/fts/"><i class="fas fa-magnifying-glass"></i>FTS</a></li>
+                    <li><a href="/ext/cate/olap/"><i class="fas fa-chart-line"></i>OLAP</a></li>
+                    <li><a href="/ext/cate/feat/"><i class="fas fa-icons"></i>FEAT</a></li>
+                    <li><a href="/ext/cate/lang/"><i class="fas fa-language"></i>LANG</a></li>
+                    <li><a href="/ext/cate/type/"><i class="fas fa-cubes"></i>TYPE</a></li>
+                  </ul>
+                  <ul class="dropdown-col">
+                    <li><a href="/ext/cate/util/"><i class="fas fa-wrench"></i>UTIL</a></li>
+                    <li><a href="/ext/cate/func/"><i class="fas fa-square-root-variable"></i>FUNC</a></li>
+                    <li><a href="/ext/cate/admin/"><i class="fas fa-bank"></i>ADMIN</a></li>
+                    <li><a href="/ext/cate/stat/"><i class="fas fa-file-waveform"></i>STAT</a></li>
+                    <li><a href="/ext/cate/sec/"><i class="fas fa-shield-halved"></i>SEC</a></li>
+                    <li><a href="/ext/cate/fdw/"><i class="fas fa-file-import"></i>FDW</a></li>
+                    <li><a href="/ext/cate/sim/"><i class="fas fa-user-ninja"></i>SIM</a></li>
+                    <li><a href="/ext/cate/etl/"><i class="fas fa-truck"></i>ETL</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="nav-item">
+            <a href="/blog/" class="nav-link">博客 <i class="fas fa-chevron-down nav-caret" aria-hidden="true"></i></a>
+            <div class="nav-dropdown nav-dropdown--blog" role="menu" aria-label="博客菜单">
+              <div class="dropdown-group">
+                <div class="dropdown-cols">
+                  <ul class="dropdown-col">
+                    <li><a href="/blog/pigsty/"><i class="fas fa-newspaper"></i>Pigsty</a></li>
+                    <li><a href="/blog/pg/"><i class="fas fa-republican"></i>PostgreSQL</a></li>
+                    <li><a href="/blog/cloud/"><i class="fas fa-cloud"></i>云计算</a></li>
+                    <li><a href="/blog/db/"><i class="fas fa-database"></i>数据库</a></li>
+                    <li><a href="/blog/ai/"><i class="fas fa-robot"></i>AI Agent</a></li>
+                    <li><a href="https://vonng.com" target="_blank" rel="noopener"><i class="fas fa-blog"></i>Vonng 博客</a></li>
+                    <li><a href="/img/pigsty/addvon.jpg" target="_blank"><i class="fab fa-weixin"></i>老冯云数</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
           <a href="/price/" class="nav-link">服务</a>
-          <button type="button" class="nav-theme-toggle nav-util-icon" data-theme-toggle title="切换亮暗模式" aria-label="切换亮暗模式">
-            <i class="fas fa-sun"></i>
+          <button type="button" class="nav-util" data-theme-toggle title="切换亮暗模式" aria-label="切换亮暗模式">
+            <i class="fas fa-moon"></i>
           </button>
-          <a href="https://pigsty.io" class="nav-lang-switch nav-util-icon" title="切换到英文站" aria-label="切换到英文站">
-            <i class="fas fa-language"></i>
-          </a>
-          <a href="https://github.com/Vonng/pigsty" class="nav-link nav-link--icon" target="_blank" title="GitHub">
+          <a href="https://pigsty.io" class="nav-util" title="English Site" aria-label="切换到英文站"><i class="fas fa-language"></i></a>
+          <a href="https://github.com/pgsty/pigsty" class="nav-github" target="_blank" rel="noopener" title="GitHub">
             <i class="fab fa-github"></i>
+            <span class="nav-star"><i class="fas fa-star"></i> 5.2k</span>
           </a>
         </div>
 
-        <button class="mobile-menu-toggle" aria-label="Menu">
-          <span></span>
-          <span></span>
-          <span></span>
+        <button class="mobile-menu-toggle" aria-label="打开菜单" aria-expanded="false">
+          <span></span><span></span><span></span>
         </button>
       </nav>
     </div>
@@ -94,188 +225,225 @@
     <a href="/docs/" class="mobile-menu-link">文档</a>
     <a href="/ext/" class="mobile-menu-link">扩展</a>
     <a href="/blog/" class="mobile-menu-link">博客</a>
-    <a href="/price" class="mobile-menu-link">服务</a>
+    <a href="/price/" class="mobile-menu-link">服务</a>
     <a href="https://pigsty.io" class="mobile-menu-link"><i class="fas fa-language"></i> English</a>
-    <button type="button" class="mobile-menu-link mobile-menu-link--btn nav-theme-toggle" data-theme-toggle title="切换亮暗模式" aria-label="切换亮暗模式">
-      <i class="fas fa-sun"></i> 亮暗切换
+    <button type="button" class="mobile-menu-link mobile-menu-link--btn" data-theme-toggle>
+      <i class="fas fa-moon"></i> 亮暗切换
     </button>
-    <a href="https://github.com/Vonng/pigsty" class="mobile-menu-link" target="_blank">
+    <a href="https://github.com/pgsty/pigsty" class="mobile-menu-link" target="_blank" rel="noopener">
       <i class="fab fa-github"></i> GitHub
     </a>
   </div>
 
+  <main>
 
   <!-- ============================================
-       Section 1: Hero (Cinematic Layout)
+       Section 1: Hero — The Powered Board
        ============================================ -->
   <section class="hero" id="hero">
-    <div class="hero-container hero-container--split">
-      <div class="hero-content">
-        <div class="hero-head">
-          <h1 class="hero-title animate-fade-in-up">
-            <span class="hero-title-line hero-title-line--top">
-              <span class="hero-initial hero-initial--p">P</span>ostgreSQL
-            </span>
-            <span class="hero-title-line hero-title-line--bottom">
-              <span class="hero-initial hero-initial--i">I</span>n
-              <span class="hero-initial hero-initial--g">G</span>reat
-              <span class="hero-initial hero-initial--s">S</span><span class="hero-initial hero-initial--t">T</span><span class="hero-initial hero-initial--y">Y</span>le
-            </span>
-          </h1>
-        </div>
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="landing-container">
+      <div class="hero-grid">
 
-        <div class="hero-body">
-          <p class="hero-description animate-fade-in-up animate-delay-200">
-            <span class="hero-description-line">开箱即用的企业级开源 PostgreSQL 数据库发行版</span>
-            <span class="hero-description-line">自带高可用，PITR，IaC，监控，及 530+ PG 扩展</span>
+        <div class="hero-copy">
+          <p class="hero-eyebrow anim" style="--d:0">
+            <span class="eyebrow-mark"></span>
+            <span class="eyebrow-en">OPEN-SOURCE POSTGRESQL DISTRIBUTION</span>
+            <span class="eyebrow-zh">开源免费 · 本地优先 · 开箱即用 · 自主可控</span>
           </p>
 
-          <div class="hero-buttons animate-fade-in-up animate-delay-300">
-            <a href="/docs/setup/install/" class="btn btn-primary">
-              <i class="fas fa-rocket"></i> 立即安装
-            </a>
-            <a href="https://demo.pigsty.cc" class="btn btn-secondary" target="_blank">
-              <i class="fas fa-play"></i> 在线演示
-            </a>
+          <h1 class="hero-title anim" style="--d:1">
+            <span class="hero-title-line"><b class="ini ini-p">P</b>ostgreSQL</span>
+            <span class="hero-title-line"><b class="ini ini-i">I</b>n <b class="ini ini-g">G</b>reat <b class="ini ini-s">S</b><b class="ini ini-t">T</b><b class="ini ini-y">Y</b>le</span>
+          </h1>
+
+          <p class="hero-sub anim" style="--d:2">
+            <span>开箱即用的企业级开源 PostgreSQL 数据库发行版</span>
+            <span>自带高可用，PITR，IaC，监控，及 <a href="/ext/" class="hero-sub-link">530+ PG 扩展</a></span>
+          </p>
+
+          <div class="hero-ctas anim" style="--d:3">
+            <a href="/docs/setup/install/" class="btn btn-primary"><i class="fas fa-rocket"></i> 立即安装</a>
+            <a href="https://demo.pigsty.cc" class="btn btn-ghost" target="_blank" rel="noopener"><i class="fas fa-gauge-high"></i> 在线演示</a>
           </div>
 
-          <div class="command-box animate-fade-in-up animate-delay-400">
+          <div class="command-box anim" style="--d:4">
             <span class="command-prompt">$</span>
             <code class="command-text">curl -fsSL https://repo.pigsty.cc/get | bash</code>
-            <button class="command-copy" title="复制命令">
+            <button class="command-copy" data-copy-text="curl -fsSL https://repo.pigsty.cc/get | bash" title="复制安装命令" aria-label="复制安装命令">
               <i class="fas fa-copy"></i>
             </button>
           </div>
         </div>
-      </div>
 
-      <div class="hero-media-wrap animate-fade-in-up animate-delay-500">
-        <div class="hero-media">
-          <img src="/img/pigsty/motherboard.gif" alt="Pigsty Architecture" class="hero-image">
+        <div class="hero-board anim" style="--d:2">
+          <figure class="board-stage" data-board>
+            <img src="/img/pigsty/motherboard.gif" alt="Pigsty 架构主板：PostgreSQL 内核、etcd、Grafana、扩展与备份组件" class="board-img" fetchpriority="high">
+
+            <a class="board-pin" data-pin="ext" style="--x:20.2%; --y:52%; --i:0" href="/ext/" aria-label="531 扩展 · 即插即用">
+              <span class="pin-dot"></span>
+              <span class="pin-tip"><b>531 扩展</b><i>即插即用</i></span>
+            </a>
+            <a class="board-pin" data-pin="grafana" style="--x:31.9%; --y:33%; --i:1" href="https://demo.pigsty.cc" target="_blank" rel="noopener" aria-label="Grafana 观测 · 3000+ 监控指标">
+              <span class="pin-dot"></span>
+              <span class="pin-tip"><b>Grafana 观测</b><i>3000+ 监控指标</i></span>
+            </a>
+            <a class="board-pin" data-pin="victoria" style="--x:43%; --y:19.5%; --i:2" href="/docs/infra/" aria-label="Victoria 遥测 · VictoriaMetrics 与 VictoriaLogs">
+              <span class="pin-dot"></span>
+              <span class="pin-tip"><b>Victoria 遥测</b><i>Metrics · Logs 时序底座</i></span>
+            </a>
+            <a class="board-pin" data-pin="minio" style="--x:44.6%; --y:59%; --i:3" href="/docs/minio/" aria-label="MinIO 仓储 · 备份安全落盘">
+              <span class="pin-dot"></span>
+              <span class="pin-tip"><b>MinIO 仓储</b><i>备份安全落盘</i></span>
+            </a>
+            <a class="board-pin" data-pin="ansible" style="--x:40.2%; --y:79.4%; --i:4" href="/docs/concept/iac/" aria-label="Ansible 控制 · IaC 幂等剧本引擎">
+              <span class="pin-dot"></span>
+              <span class="pin-tip"><b>Ansible 控制</b><i>IaC 幂等剧本引擎</i></span>
+            </a>
+            <a class="board-pin" data-pin="backrest" style="--x:49%; --y:71.9%; --i:5" href="/docs/pgbackrest/" aria-label="pgBackRest 备份 · PITR 时间点恢复">
+              <span class="pin-dot"></span>
+              <span class="pin-tip"><b>pgBackRest 备份</b><i>PITR 时间点恢复</i></span>
+            </a>
+            <a class="board-pin" data-pin="patroni" style="--x:56%; --y:46.4%; --i:6" href="/docs/patroni/" aria-label="Patroni 守护 · 自动故障切换">
+              <span class="pin-dot"></span>
+              <span class="pin-tip"><b>Patroni 守护</b><i>自动故障切换</i></span>
+            </a>
+            <a class="board-pin" data-pin="pgbouncer" style="--x:58%; --y:63.5%; --i:7" href="/docs/pgbouncer/" aria-label="PgBouncer 池化 · 高性能连接池">
+              <span class="pin-dot"></span>
+              <span class="pin-tip"><b>PgBouncer 池化</b><i>高性能连接池</i></span>
+            </a>
+            <a class="board-pin" data-pin="pg" style="--x:63%; --y:37%; --i:8" href="/docs/pgsql/kernel/" aria-label="PostgreSQL 内核 · 12+ 可替换内核分支">
+              <span class="pin-dot"></span>
+              <span class="pin-tip"><b>PostgreSQL 内核</b><i>12+ 可替换内核分支</i></span>
+            </a>
+            <a class="board-pin" data-pin="nginx" style="--x:73.8%; --y:24%; --i:9" href="/docs/infra/" aria-label="Nginx 门户 · Web 服务统一入口">
+              <span class="pin-dot"></span>
+              <span class="pin-tip"><b>Nginx 门户</b><i>Web 服务统一入口</i></span>
+            </a>
+            <a class="board-pin" data-pin="haproxy" style="--x:79.4%; --y:27.8%; --i:10" href="/docs/node/" aria-label="HAProxy 接入 · 服务流量负载均衡">
+              <span class="pin-dot"></span>
+              <span class="pin-tip"><b>HAProxy 接入</b><i>服务流量负载均衡</i></span>
+            </a>
+            <a class="board-pin" data-pin="etcd" style="--x:78%; --y:48.5%; --i:11" href="/docs/etcd/" aria-label="Etcd 仲裁 · 高可用的基石">
+              <span class="pin-dot"></span>
+              <span class="pin-tip"><b>Etcd 仲裁</b><i>高可用的基石</i></span>
+            </a>
+          </figure>
+
+          <div class="board-legend">
+            <a class="legend-chip" data-for="pg" href="/docs/pgsql/kernel/"><span class="legend-dot"></span>PG 内核</a>
+            <a class="legend-chip" data-for="ext" href="/ext/"><span class="legend-dot"></span>531 扩展</a>
+            <a class="legend-chip" data-for="etcd" href="/docs/etcd/"><span class="legend-dot"></span>Etcd 仲裁</a>
+            <a class="legend-chip" data-for="grafana" href="https://demo.pigsty.cc" target="_blank" rel="noopener"><span class="legend-dot"></span>Grafana 呈现</a>
+            <a class="legend-chip" data-for="minio" href="/docs/minio/"><span class="legend-dot"></span>MinIO 备份</a>
+            <a class="legend-chip" data-for="victoria" href="/docs/infra/"><span class="legend-dot"></span>Victoria 遥测</a>
+          </div>
         </div>
+
       </div>
     </div>
   </section>
 
-
   <!-- ============================================
-       Section 2: Core Features (Zigzag)
+       Section 3: Core Modules (Zigzag)
        ============================================ -->
-  <section class="landing-section features-zigzag" id="features">
+  <section class="landing-section modules" id="features">
     <div class="landing-container">
-      <div class="section-header section-header--feature" data-reveal>
+      <div class="section-head" data-reveal>
+        <p class="section-eyebrow"><span class="silkscreen">FEATURES · 核心特性</span><span class="eyebrow-trace" aria-hidden="true"></span></p>
         <h2 class="section-title">像专家一样自建 PostgreSQL</h2>
-        <p class="section-subtitle">Pigsty 为您提供自建企业级 PostgreSQL 服务所需的一切，开源免费</p>
+        <p class="section-subtitle">Pigsty 为您提供自建企业级 PostgreSQL 服务所需的一切，开源免费，自主可控</p>
       </div>
 
-      <!-- Feature 1: High Availability -->
-      <div class="feature-row" data-reveal>
-        <div class="feature-content">
-          <h3 class="feature-title">
-            <a href="/docs/concept/ha/" class="feature-title-link">
-              高可用标杆架构
-            </a>
-          </h3>
-          <p class="feature-subtitle"><span class="feature-sub-icon"><i class="fas fa-shield-halved"></i></span>故障自愈，高枕无忧</p>
-          <ul class="feature-list">
+      <!-- MOD-01 High Availability -->
+      <div class="module-row" data-reveal>
+        <div class="module-content">
+          <p class="module-ref silkscreen">01 · HIGH AVAILABILITY</p>
+          <h3 class="module-title"><a href="/docs/concept/ha/">高可用标杆架构</a></h3>
+          <p class="module-motto"><i class="fas fa-shield-halved"></i> 故障自愈，高枕无忧</p>
+          <ul class="module-list">
             <li>基于 <strong>Patroni + Etcd</strong> 自动故障切换，HAProxy 流量自动均衡</li>
             <li>预置 <strong>pgBackRest PITR</strong> 时间点恢复，删库跑路也能找回数据</li>
             <li>内置 <strong>SSL/TLS</strong> 加密与访问控制模型，SELinux 防火墙全搞定</li>
           </ul>
-          <div class="feature-cta">
-            <span class="feature-value">告别半夜故障值班 OnCall，硬件故障睡醒起来再修复</span>
-          </div>
+          <p class="module-value">告别半夜故障值班 OnCall，硬件故障睡醒起来再修复</p>
         </div>
-        <div class="feature-visual">
-          <a href="/docs/concept/ha/" class="feature-image-link">
-            <img src="/img/pigsty/ha.png" alt="Pigsty HA Architecture" class="feature-image">
+        <div class="module-visual">
+          <a href="/docs/concept/ha/" class="module-img">
+            <img src="/img/pigsty/ha.png" alt="Pigsty 高可用架构：Patroni、etcd、HAProxy、pgBackRest" loading="lazy">
           </a>
         </div>
       </div>
 
-      <!-- Feature 2: Infrastructure as Code -->
-      <div class="feature-row feature-row--reverse" data-reveal>
-        <div class="feature-content">
-          <h3 class="feature-title">
-            <a href="/docs/concept/iac" class="feature-title-link">
-              基础设施即代码
-            </a>
-          </h3>
-          <p class="feature-subtitle"><span class="feature-sub-icon"><i class="fas fa-code-branch"></i></span>言出法随，一键部署</p>
-          <ul class="feature-list">
-            <li>用配置声明你想要的状态，Pigsty 帮你实现，无需操心复杂细节</li>
-            <li>海量可选定制选项，生产开发测试共享一套架构，仅有配置不同</li>
-            <li>Ansible 幂等剧本，无需 K8s 与 Docker，<strong>裸机</strong>也能玩转云原生</li>
+      <!-- MOD-02 Infrastructure as Code -->
+      <div class="module-row module-row--reverse" data-reveal>
+        <div class="module-content">
+          <p class="module-ref silkscreen">02 · INFRA AS CODE</p>
+          <h3 class="module-title"><a href="/docs/concept/iac/">基础设施即代码</a></h3>
+          <p class="module-motto"><i class="fas fa-code-branch"></i> 言出法随，一键部署</p>
+          <ul class="module-list">
+            <li>声明式配置，幂等性执行，Pigsty 式 IaC，无需操心细节</li>
+            <li>海量可定制项，生产开发测试共享一套架构，仅配置不同</li>
+            <li>Ansible 幂等剧本，无需 K8s & Docker，<strong>裸机</strong>玩转云原生</li>
           </ul>
-          <div class="feature-cta">
-            <span class="feature-value">一键复刻完整生产环境，单枪匹马管理海量集群</span>
-          </div>
+          <p class="module-value">一键复刻完整生产环境，单枪匹马管理海量集群</p>
         </div>
-        <div class="feature-visual">
-          <a href="/docs/concept/iac" class="feature-image-link">
-            <pre class="feature-code"><span class="comment"># pigsty.yml - 定义一个3节点HA集群</span>
-<span class="key">pg-test</span>:
-  <span class="key">hosts</span>:
-    <span class="value">10.10.10.11</span>: { <span class="key">pg_role</span>: <span class="string">primary</span> }
-    <span class="value">10.10.10.12</span>: { <span class="key">pg_role</span>: <span class="string">replica</span> }
-    <span class="value">10.10.10.13</span>: { <span class="key">pg_role</span>: <span class="string">replica</span> }
-  <span class="key">vars</span>:
-    <span class="key">pg_cluster</span>: <span class="string">pg-test</span>
-    <span class="key">pg_version</span>: <span class="value">18</span>
-    <span class="key">pg_users</span>:
-      - { <span class="key">name</span>: <span class="string">dbuser_app</span>, <span class="key">password</span>: <span class="string">DBUser.App</span> }
-    <span class="key">pg_databases</span>:
-      - { <span class="key">name</span>: <span class="string">app</span>, <span class="key">extensions</span>: [ <span class="string">vector</span> ]}</pre>
+        <div class="module-visual">
+          <a href="/docs/concept/iac/" class="code-plate">
+            <span class="code-plate-head"><span class="code-dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="code-file">pigsty.yml</span></span>
+            <pre class="code-body"><span class="c"># 定义一个 3 节点高可用集群</span>
+<span class="k">pg-test</span>:
+  <span class="k">hosts</span>:
+    <span class="v">10.10.10.11</span>: { <span class="k">pg_role</span>: <span class="s">primary</span> }
+    <span class="v">10.10.10.12</span>: { <span class="k">pg_role</span>: <span class="s">replica</span> }
+    <span class="v">10.10.10.13</span>: { <span class="k">pg_role</span>: <span class="s">replica</span> }
+  <span class="k">vars</span>:
+    <span class="k">pg_cluster</span>: <span class="s">pg-test</span>
+    <span class="k">pg_version</span>: <span class="v">18</span>
+    <span class="k">pg_users</span>:
+      - { <span class="k">name</span>: <span class="s">dbuser_app</span>, <span class="k">password</span>: <span class="s">DBUser.App</span> }
+    <span class="k">pg_databases</span>:
+      - { <span class="k">name</span>: <span class="s">app</span>, <span class="k">extensions</span>: [ <span class="s">vector</span> ]}</pre>
           </a>
         </div>
       </div>
 
-      <!-- Feature 3: Observability -->
-      <div class="feature-row" data-reveal>
-        <div class="feature-content">
-          <h3 class="feature-title">
-            <a href="https://demo.pigsty.cc" class="feature-title-link" target="_blank">
-              可观测性技术栈
-            </a>
-          </h3>
-          <p class="feature-subtitle"><span class="feature-sub-icon"><i class="fas fa-chart-line"></i></span>洞若观火，尽在掌握</p>
-          <ul class="feature-list">
-            <li>基于 <strong>Grafana + Victoria </strong> 的 SOTA 可观测性技术栈</li>
+      <!-- MOD-03 Observability -->
+      <div class="module-row" data-reveal>
+        <div class="module-content">
+          <p class="module-ref silkscreen">03 · OBSERVABILITY</p>
+          <h3 class="module-title"><a href="https://demo.pigsty.cc" target="_blank" rel="noopener">可观测性技术栈</a></h3>
+          <p class="module-motto"><i class="fas fa-chart-line"></i> 洞若观火，尽在掌握</p>
+          <ul class="module-list">
+            <li>基于 <strong>Grafana + Victoria</strong> 的 SOTA 可观测性技术栈</li>
             <li><strong>3000+</strong> 监控指标，<strong>40+</strong> 精调仪表盘，免配置开箱即用</li>
             <li>可独立部署使用，监控现有 RDS / PostgreSQL 实例</li>
           </ul>
-          <div class="feature-cta">
-            <span class="feature-value">快速定位问题，数据驱动决策，告别空对空无效扯皮</span>
-          </div>
+          <p class="module-value">快速定位问题，数据驱动决策，告别空对空无效扯皮</p>
         </div>
-        <div class="feature-visual">
-          <a href="https://demo.pigsty.cc/ui/d/pigsty" class="feature-image-link" target="_blank">
-            <img src="/img/pigsty/dashboards.webp" alt="Pigsty Monitoring Dashboard" class="feature-image">
+        <div class="module-visual">
+          <a href="https://demo.pigsty.cc/ui/d/pigsty" class="module-img" target="_blank" rel="noopener">
+            <img src="/img/pigsty/dashboards.webp" alt="Pigsty 监控仪表盘全家福" loading="lazy">
           </a>
         </div>
       </div>
 
-      <!-- Feature 4: Extensions -->
-      <div class="feature-row feature-row--reverse" data-reveal>
-        <div class="feature-content">
-          <h3 class="feature-title">
-            <a href="/ext/" class="feature-title-link">
-              数据库扩展生态
-            </a>
-          </h3>
-          <p class="feature-subtitle"><span class="feature-sub-icon"><i class="fas fa-cubes"></i></span>海纳百川，开箱即用</p>
-          <ul class="feature-list">
-            <li><strong>530+</strong> PostgreSQL 扩展，覆盖 <strong>14</strong> 大 Linux 发行版，即装即用</li>
-            <li><strong>12 种 PG 内核</strong>：兼容 Oracle、MySQL、SQL Server、Mongo… </li>
+      <!-- MOD-04 Extensions -->
+      <div class="module-row module-row--reverse" data-reveal>
+        <div class="module-content">
+          <p class="module-ref silkscreen">04 · EXTENSIONS</p>
+          <h3 class="module-title"><a href="/ext/">数据库扩展生态</a></h3>
+          <p class="module-motto"><i class="fas fa-cubes"></i> 海纳百川，开箱即用</p>
+          <ul class="module-list">
+            <li><strong>531</strong> 个 PostgreSQL 扩展，覆盖 <strong>16</strong> 个 Linux 系统，即装即用</li>
+            <li><strong>12 种 PG 内核</strong>：兼容 Oracle, SQL Server, MySQL, Mongo…</li>
             <li>功能模块：MinIO、Redis、Ferret、Docker、Supabase 自建</li>
           </ul>
-          <div class="feature-cta">
-            <span class="feature-value">灵活组合搭配，自由按需拼接，完全自主可控</span>
-          </div>
+          <p class="module-value">灵活组合搭配，自由按需拼接，完全自主可控</p>
         </div>
-        <div class="feature-visual">
-          <a href="/ext/" class="feature-image-link">
-            <img src="/img/pigsty/hero-ecosystem.webp" alt="PostgreSQL Extension Ecosystem" class="feature-image">
+        <div class="module-visual">
+          <a href="/ext/" class="module-img">
+            <img src="/img/pigsty/ecosystem.png" alt="PostgreSQL 扩展生态全景图" loading="lazy" data-theme-src-light="/img/pigsty/hero-ecosystem.webp" data-theme-src-dark="/img/pigsty/ecosystem.png">
           </a>
         </div>
       </div>
@@ -283,87 +451,88 @@
     </div>
   </section>
 
-
   <!-- ============================================
-       Section 3: Extensions & Kernels Combined
+       Section 4: Kernels & Extension Bus
        ============================================ -->
-  <section class="landing-section ecosystem-section" id="ecosystem">
+  <section class="landing-section ecosystem" id="ecosystem">
     <div class="landing-container">
-      <div class="section-header" data-reveal>
+      <div class="section-head" data-reveal>
+        <p class="section-eyebrow"><span class="silkscreen">SOCKETS · 内核与扩展</span><span class="eyebrow-trace" aria-hidden="true"></span></p>
         <h2 class="section-title">12+ 内核分支，531 扩展插件</h2>
-        <p class="section-subtitle">Pigsty 为您解锁 PostgreSQL RDS 的无限可能</p>
+        <p class="section-subtitle">Pigsty 为您解锁 PostgreSQL 与数据基础设施的无限可能</p>
         <div class="section-links">
           <a href="/docs/pgsql/kernel/"><i class="fas fa-microchip"></i> 内核分支 <i class="fas fa-arrow-right"></i></a>
-          <a href="/ext/"><i class="fas fa-puzzle-piece"></i> 扩展目录 <i class="fas fa-external-link-alt"></i></a>
+          <a href="/ext/"><i class="fas fa-puzzle-piece"></i> 扩展目录 <i class="fas fa-arrow-up-right-from-square"></i></a>
+          <a href="/docs/ref/module/"><i class="fas fa-cubes-stacked"></i> 功能模块 <i class="fas fa-arrow-right"></i></a>
         </div>
       </div>
 
-      <!-- Kernels Grid -->
-      <div class="kernels-grid-new" data-reveal>
-        <a href="/docs/pgsql/kernel/supabase/" class="kernel-card-new">
-          <span class="kernel-icon-new"><img src="/img/icon/supabase.svg" alt="Supabase"></span>
-          <span class="kernel-name-new">Supabase</span>
-          <span class="kernel-desc-new">后端即服务</span>
+      <div class="kernel-grid" data-reveal>
+        <a href="/docs/pgsql/kernel/supabase/" class="kernel-card">
+          <span class="kernel-icon"><img src="/img/icon/supabase.svg" alt="Supabase" loading="lazy"></span>
+          <span class="kernel-name">Supabase</span>
+          <span class="kernel-desc">后端即服务</span>
         </a>
-        <a href="/docs/pgsql/kernel/citus/" class="kernel-card-new">
-          <span class="kernel-icon-new"><img src="/img/icon/citus.svg" alt="Citus"></span>
-          <span class="kernel-name-new">Citus</span>
-          <span class="kernel-desc-new">水平分布式</span>
+        <a href="/docs/pgsql/kernel/citus/" class="kernel-card">
+          <span class="kernel-icon"><img src="/img/icon/citus.svg" alt="Citus" loading="lazy"></span>
+          <span class="kernel-name">Citus</span>
+          <span class="kernel-desc">水平分布式</span>
         </a>
-        <a href="/docs/pgsql/kernel/babelfish/" class="kernel-card-new">
-          <span class="kernel-icon-new"><img src="/img/icon/babelfish.svg" alt="Babelfish"></span>
-          <span class="kernel-name-new">Babelfish</span>
-          <span class="kernel-desc-new">SQL Server 兼容</span>
+        <a href="/docs/pgsql/kernel/babelfish/" class="kernel-card">
+          <span class="kernel-icon"><img src="/img/icon/babelfish.svg" alt="Babelfish" loading="lazy"></span>
+          <span class="kernel-name">Babelfish</span>
+          <span class="kernel-desc">SQL Server 兼容</span>
         </a>
-        <a href="/docs/pgsql/kernel/ivorysql/" class="kernel-card-new">
-          <span class="kernel-icon-new"><img src="/img/icon/ivorysql.svg" alt="IvorySQL"></span>
-          <span class="kernel-name-new">IvorySQL</span>
-          <span class="kernel-desc-new">Oracle 兼容</span>
+        <a href="/docs/pgsql/kernel/ivorysql/" class="kernel-card">
+          <span class="kernel-icon"><img src="/img/icon/ivorysql.svg" alt="IvorySQL" loading="lazy"></span>
+          <span class="kernel-name">IvorySQL</span>
+          <span class="kernel-desc">Oracle 兼容</span>
         </a>
-        <a href="/docs/pgsql/kernel/openhalo/" class="kernel-card-new">
-          <span class="kernel-icon-new"><img src="/img/icon/halo.png" alt="OpenHalo"></span>
-          <span class="kernel-name-new">OpenHalo</span>
-          <span class="kernel-desc-new">MySQL 兼容</span>
+        <a href="/docs/pgsql/kernel/openhalo/" class="kernel-card">
+          <span class="kernel-icon"><img src="/img/icon/halo.png" alt="OpenHalo" loading="lazy"></span>
+          <span class="kernel-name">OpenHalo</span>
+          <span class="kernel-desc">MySQL 兼容</span>
         </a>
-        <a href="/docs/ferret/" class="kernel-card-new">
-          <span class="kernel-icon-new"><img src="/img/icon/ferretdb.svg" alt="FerretDB"></span>
-          <span class="kernel-name-new">FerretDB</span>
-          <span class="kernel-desc-new">MongoDB 兼容</span>
+        <a href="/docs/ferret/" class="kernel-card">
+          <span class="kernel-icon"><img src="/img/icon/ferretdb.svg" alt="FerretDB" loading="lazy"></span>
+          <span class="kernel-name">FerretDB</span>
+          <span class="kernel-desc">MongoDB 兼容</span>
         </a>
-        <a href="/docs/pgsql/kernel/orioledb/" class="kernel-card-new">
-          <span class="kernel-icon-new"><img src="/img/icon/oriole.png" alt="OrioleDB"></span>
-          <span class="kernel-name-new">OrioleDB</span>
-          <span class="kernel-desc-new">OLTP 优化</span>
+        <a href="/docs/pgsql/kernel/orioledb/" class="kernel-card">
+          <span class="kernel-icon"><img src="/img/icon/oriole.png" alt="OrioleDB" loading="lazy"></span>
+          <span class="kernel-name">OrioleDB</span>
+          <span class="kernel-desc">OLTP 优化</span>
         </a>
-        <a href="/docs/pgsql/kernel/pgedge/" class="kernel-card-new">
-          <span class="kernel-icon-new"><img src="/img/icon/pgedge.svg" alt="pgEdge"></span>
-          <span class="kernel-name-new">pgEdge</span>
-          <span class="kernel-desc-new">多写地理分布</span>
+        <a href="/docs/pgsql/kernel/pgedge/" class="kernel-card">
+          <span class="kernel-icon"><img src="/img/icon/pgedge.svg" alt="pgEdge" loading="lazy"></span>
+          <span class="kernel-name">pgEdge</span>
+          <span class="kernel-desc">多写地理分布</span>
         </a>
-        <a href="/docs/pgsql/kernel/percona/" class="kernel-card-new">
-          <span class="kernel-icon-new"><img src="/img/icon/percona.svg" alt="Percona"></span>
-          <span class="kernel-name-new">Percona</span>
-          <span class="kernel-desc-new">透明数据加密</span>
+        <a href="/docs/pgsql/kernel/percona/" class="kernel-card">
+          <span class="kernel-icon"><img src="/img/icon/percona.svg" alt="Percona" loading="lazy"></span>
+          <span class="kernel-name">Percona</span>
+          <span class="kernel-desc">透明数据加密</span>
         </a>
-        <a href="/docs/pgsql/kernel/polardb/" class="kernel-card-new">
-          <span class="kernel-icon-new"><img src="/img/icon/polardb.svg" alt="PolarDB"></span>
-          <span class="kernel-name-new">PolarDB PG</span>
-          <span class="kernel-desc-new">云原生 RAC</span>
+        <a href="/docs/pgsql/kernel/polardb/" class="kernel-card">
+          <span class="kernel-icon"><img src="/img/icon/polardb.svg" alt="PolarDB" loading="lazy"></span>
+          <span class="kernel-name">PolarDB PG</span>
+          <span class="kernel-desc">云原生 RAC</span>
         </a>
-        <a href="/docs/pgsql/kernel/agensgraph/" class="kernel-card-new">
-          <span class="kernel-icon-new"><img src="/img/icon/agensgraph.svg" alt="AgensGraph"></span>
-          <span class="kernel-name-new">AgensGraph</span>
-          <span class="kernel-desc-new">图数据库内核</span>
+        <a href="/docs/pgsql/kernel/agensgraph/" class="kernel-card">
+          <span class="kernel-icon"><img src="/img/icon/agensgraph.svg" alt="AgensGraph" loading="lazy"></span>
+          <span class="kernel-name">AgensGraph</span>
+          <span class="kernel-desc">图数据库内核</span>
         </a>
-        <a href="/docs/pgsql/kernel/cloudberry/" class="kernel-card-new">
-          <span class="kernel-icon-new"><img src="/img/icon/cloudberry.svg" alt="Cloudberry"></span>
-          <span class="kernel-name-new">Cloudberry</span>
-          <span class="kernel-desc-new">PG MPP 数仓</span>
+        <a href="/docs/pgsql/kernel/cloudberry/" class="kernel-card">
+          <span class="kernel-icon"><img src="/img/icon/cloudberry.svg" alt="Cloudberry" loading="lazy"></span>
+          <span class="kernel-name">Cloudberry</span>
+          <span class="kernel-desc">PG MPP 数仓</span>
         </a>
       </div>
 
-      <!-- Scrolling Extensions Marquee -->
+      <div class="extbus-head silkscreen" data-reveal>EXTENSION BUS · 531 PIN</div>
       <div class="extensions-marquee" data-reveal>
+
         <!-- Row 1: Scroll Left -->
         <div class="marquee-row" data-direction="left">
           <div class="marquee-content">
@@ -1160,192 +1329,197 @@
           </div>
         </div>
       </div>
-
-    </div>
-  </section>
-
-
-  <!-- ============================================
-       Dashboard Gallery: Slow scrolling showcase
-       ============================================ -->
-  <section class="dashboard-gallery-section">
-    <div class="dashboard-gallery-marquee">
-      <div class="dashboard-gallery-track">
-        <div class="dashboard-gallery-slide" data-src="/img/panel/pigsty.webp" data-alt="Pigsty Overview"></div>
-        <div class="dashboard-gallery-slide" data-src="/img/panel/pgsql-overview.webp" data-alt="PGSQL Overview"></div>
-        <div class="dashboard-gallery-slide" data-src="/img/panel/pgsql-cluster.webp" data-alt="PGSQL Cluster"></div>
-        <div class="dashboard-gallery-slide" data-src="/img/panel/pgsql-instance.webp" data-alt="PGSQL Instance"></div>
-        <div class="dashboard-gallery-slide" data-src="/img/panel/pgsql-database.webp" data-alt="PGSQL Database"></div>
-        <div class="dashboard-gallery-slide" data-src="/img/panel/pgsql-query.webp" data-alt="PGSQL Query"></div>
-        <div class="dashboard-gallery-slide" data-src="/img/panel/pgsql-session.webp" data-alt="PGSQL Session"></div>
-        <div class="dashboard-gallery-slide" data-src="/img/panel/pgsql-replication.webp" data-alt="PGSQL Replication"></div>
-        <div class="dashboard-gallery-slide" data-src="/img/panel/pgsql-persist.webp" data-alt="PGSQL Persist"></div>
-        <div class="dashboard-gallery-slide" data-src="/img/panel/pgsql-proxy.webp" data-alt="PGSQL Proxy"></div>
-        <div class="dashboard-gallery-slide" data-src="/img/panel/pgsql-pgbouncer.webp" data-alt="PGSQL PgBouncer"></div>
-        <div class="dashboard-gallery-slide" data-src="/img/panel/pgsql-xacts.webp" data-alt="PGSQL Transactions"></div>
-        <div class="dashboard-gallery-slide" data-src="/img/panel/pgsql-activity.webp" data-alt="PGSQL Activity"></div>
-        <div class="dashboard-gallery-slide" data-src="/img/panel/pgsql-table.webp" data-alt="PGSQL Table"></div>
-        <div class="dashboard-gallery-slide" data-src="/img/panel/pgsql-tables.webp" data-alt="PGSQL Tables"></div>
-        <div class="dashboard-gallery-slide" data-src="/img/panel/pgsql-patroni.webp" data-alt="PGSQL Patroni"></div>
-        <div class="dashboard-gallery-slide" data-src="/img/panel/pgsql-service.webp" data-alt="PGSQL Service"></div>
-        <div class="dashboard-gallery-slide" data-src="/img/panel/pgsql-pitr.webp" data-alt="PGSQL PITR"></div>
-        <div class="dashboard-gallery-slide" data-src="/img/panel/pgcat-table.webp" data-alt="PGCat Table"></div>
-        <div class="dashboard-gallery-slide" data-src="/img/panel/pgcat-query.webp" data-alt="PGCat Query"></div>
-        <div class="dashboard-gallery-slide" data-src="/img/panel/pgcat-database.webp" data-alt="PGCat Database"></div>
-        <div class="dashboard-gallery-slide" data-src="/img/panel/pgcat-instance.webp" data-alt="PGCat Instance"></div>
-        <div class="dashboard-gallery-slide" data-src="/img/panel/pgcat-schema.webp" data-alt="PGCat Schema"></div>
-        <div class="dashboard-gallery-slide" data-src="/img/panel/pgcat-locks.webp" data-alt="PGCat Locks"></div>
-        <div class="dashboard-gallery-slide" data-src="/img/panel/node-overview.webp" data-alt="Node Overview"></div>
-        <div class="dashboard-gallery-slide" data-src="/img/panel/node-instance.webp" data-alt="Node Instance"></div>
-        <div class="dashboard-gallery-slide" data-src="/img/panel/node-cluster.webp" data-alt="Node Cluster"></div>
-        <div class="dashboard-gallery-slide" data-src="/img/panel/node-haproxy.webp" data-alt="Node HAProxy"></div>
-        <div class="dashboard-gallery-slide" data-src="/img/panel/infra-overview.webp" data-alt="Infra Overview"></div>
-        <div class="dashboard-gallery-slide" data-src="/img/panel/etcd-overview.webp" data-alt="ETCD Overview"></div>
-        <div class="dashboard-gallery-slide" data-src="/img/panel/minio-overview.webp" data-alt="MinIO Overview"></div>
-        <div class="dashboard-gallery-slide" data-src="/img/panel/redis-cluster.webp" data-alt="Redis Cluster"></div>
-        <div class="dashboard-gallery-slide" data-src="/img/panel/redis-instance.webp" data-alt="Redis Instance"></div>
-        <!-- Duplicate for seamless loop -->
-        <div class="dashboard-gallery-slide" data-src="/img/panel/pigsty.webp" data-alt="Pigsty Overview"></div>
-        <div class="dashboard-gallery-slide" data-src="/img/panel/pgsql-overview.webp" data-alt="PGSQL Overview"></div>
-        <div class="dashboard-gallery-slide" data-src="/img/panel/pgsql-cluster.webp" data-alt="PGSQL Cluster"></div>
-        <div class="dashboard-gallery-slide" data-src="/img/panel/pgsql-instance.webp" data-alt="PGSQL Instance"></div>
-        <div class="dashboard-gallery-slide" data-src="/img/panel/pgsql-database.webp" data-alt="PGSQL Database"></div>
-        <div class="dashboard-gallery-slide" data-src="/img/panel/pgsql-query.webp" data-alt="PGSQL Query"></div>
-        <div class="dashboard-gallery-slide" data-src="/img/panel/pgsql-session.webp" data-alt="PGSQL Session"></div>
-        <div class="dashboard-gallery-slide" data-src="/img/panel/pgsql-replication.webp" data-alt="PGSQL Replication"></div>
-        <div class="dashboard-gallery-slide" data-src="/img/panel/pgsql-persist.webp" data-alt="PGSQL Persist"></div>
-        <div class="dashboard-gallery-slide" data-src="/img/panel/pgsql-proxy.webp" data-alt="PGSQL Proxy"></div>
-        <div class="dashboard-gallery-slide" data-src="/img/panel/pgsql-pgbouncer.webp" data-alt="PGSQL PgBouncer"></div>
-        <div class="dashboard-gallery-slide" data-src="/img/panel/pgsql-xacts.webp" data-alt="PGSQL Transactions"></div>
-        <div class="dashboard-gallery-slide" data-src="/img/panel/pgsql-activity.webp" data-alt="PGSQL Activity"></div>
-        <div class="dashboard-gallery-slide" data-src="/img/panel/pgsql-table.webp" data-alt="PGSQL Table"></div>
-        <div class="dashboard-gallery-slide" data-src="/img/panel/pgsql-tables.webp" data-alt="PGSQL Tables"></div>
-        <div class="dashboard-gallery-slide" data-src="/img/panel/pgsql-patroni.webp" data-alt="PGSQL Patroni"></div>
-        <div class="dashboard-gallery-slide" data-src="/img/panel/pgsql-service.webp" data-alt="PGSQL Service"></div>
-        <div class="dashboard-gallery-slide" data-src="/img/panel/pgsql-pitr.webp" data-alt="PGSQL PITR"></div>
-        <div class="dashboard-gallery-slide" data-src="/img/panel/pgcat-table.webp" data-alt="PGCat Table"></div>
-        <div class="dashboard-gallery-slide" data-src="/img/panel/pgcat-query.webp" data-alt="PGCat Query"></div>
-        <div class="dashboard-gallery-slide" data-src="/img/panel/pgcat-database.webp" data-alt="PGCat Database"></div>
-        <div class="dashboard-gallery-slide" data-src="/img/panel/pgcat-instance.webp" data-alt="PGCat Instance"></div>
-        <div class="dashboard-gallery-slide" data-src="/img/panel/pgcat-schema.webp" data-alt="PGCat Schema"></div>
-        <div class="dashboard-gallery-slide" data-src="/img/panel/pgcat-locks.webp" data-alt="PGCat Locks"></div>
-        <div class="dashboard-gallery-slide" data-src="/img/panel/node-overview.webp" data-alt="Node Overview"></div>
-        <div class="dashboard-gallery-slide" data-src="/img/panel/node-instance.webp" data-alt="Node Instance"></div>
-        <div class="dashboard-gallery-slide" data-src="/img/panel/node-cluster.webp" data-alt="Node Cluster"></div>
-        <div class="dashboard-gallery-slide" data-src="/img/panel/node-haproxy.webp" data-alt="Node HAProxy"></div>
-        <div class="dashboard-gallery-slide" data-src="/img/panel/infra-overview.webp" data-alt="Infra Overview"></div>
-        <div class="dashboard-gallery-slide" data-src="/img/panel/etcd-overview.webp" data-alt="ETCD Overview"></div>
-        <div class="dashboard-gallery-slide" data-src="/img/panel/minio-overview.webp" data-alt="MinIO Overview"></div>
-        <div class="dashboard-gallery-slide" data-src="/img/panel/redis-cluster.webp" data-alt="Redis Cluster"></div>
-        <div class="dashboard-gallery-slide" data-src="/img/panel/redis-instance.webp" data-alt="Redis Instance"></div>
+      <div class="extbus-cta" data-reveal>
+        <a href="/ext/" class="btn btn-line">检索全部 531 个扩展 <i class="fas fa-arrow-right"></i></a>
       </div>
     </div>
   </section>
 
+  <!-- ============================================
+       Section 5: Dashboard Wall
+       ============================================ -->
+  <section class="dashwall" aria-label="监控仪表盘画廊">
+    <div class="landing-container">
+      <div class="dashwall-head" data-reveal>
+        <p class="section-eyebrow"><span class="silkscreen">SIGNAL OUT · 观测输出</span><span class="eyebrow-trace" aria-hidden="true"></span></p>
+        <h2 class="section-title section-title--sm">40+ 精调仪表盘，实时呈现每一个细节</h2>
+        <a href="https://demo.pigsty.cc/ui/d/pigsty" class="dashwall-link" target="_blank" rel="noopener">打开在线演示 <i class="fas fa-arrow-up-right-from-square"></i></a>
+      </div>
+    </div>
+    <div class="dashboard-gallery-marquee" data-reveal>
+      <div class="dashboard-gallery-track">
 
+        <a class="dashboard-gallery-slide" href="https://demo.pigsty.cc/ui/d/pigsty" target="_blank" rel="noopener" data-src="/img/panel/pigsty.webp" data-alt="Pigsty Overview"></a>
+        <a class="dashboard-gallery-slide" href="https://demo.pigsty.cc/ui/d/pgsql-overview" target="_blank" rel="noopener" data-src="/img/panel/pgsql-overview.webp" data-alt="PGSQL Overview"></a>
+        <a class="dashboard-gallery-slide" href="https://demo.pigsty.cc/ui/d/pgsql-cluster" target="_blank" rel="noopener" data-src="/img/panel/pgsql-cluster.webp" data-alt="PGSQL Cluster"></a>
+        <a class="dashboard-gallery-slide" href="https://demo.pigsty.cc/ui/d/pgsql-instance" target="_blank" rel="noopener" data-src="/img/panel/pgsql-instance.webp" data-alt="PGSQL Instance"></a>
+        <a class="dashboard-gallery-slide" href="https://demo.pigsty.cc/ui/d/pgsql-database" target="_blank" rel="noopener" data-src="/img/panel/pgsql-database.webp" data-alt="PGSQL Database"></a>
+        <a class="dashboard-gallery-slide" href="https://demo.pigsty.cc/ui/d/pgsql-query" target="_blank" rel="noopener" data-src="/img/panel/pgsql-query.webp" data-alt="PGSQL Query"></a>
+        <a class="dashboard-gallery-slide" href="https://demo.pigsty.cc/ui/d/pgsql-session" target="_blank" rel="noopener" data-src="/img/panel/pgsql-session.webp" data-alt="PGSQL Session"></a>
+        <a class="dashboard-gallery-slide" href="https://demo.pigsty.cc/ui/d/pgsql-replication" target="_blank" rel="noopener" data-src="/img/panel/pgsql-replication.webp" data-alt="PGSQL Replication"></a>
+        <a class="dashboard-gallery-slide" href="https://demo.pigsty.cc/ui/d/pgsql-persist" target="_blank" rel="noopener" data-src="/img/panel/pgsql-persist.webp" data-alt="PGSQL Persist"></a>
+        <a class="dashboard-gallery-slide" href="https://demo.pigsty.cc/ui/d/pgsql-proxy" target="_blank" rel="noopener" data-src="/img/panel/pgsql-proxy.webp" data-alt="PGSQL Proxy"></a>
+        <a class="dashboard-gallery-slide" href="https://demo.pigsty.cc/ui/d/pgsql-pgbouncer" target="_blank" rel="noopener" data-src="/img/panel/pgsql-pgbouncer.webp" data-alt="PGSQL PgBouncer"></a>
+        <a class="dashboard-gallery-slide" href="https://demo.pigsty.cc/ui/d/pgsql-xacts" target="_blank" rel="noopener" data-src="/img/panel/pgsql-xacts.webp" data-alt="PGSQL Transactions"></a>
+        <a class="dashboard-gallery-slide" href="https://demo.pigsty.cc/ui/d/pgsql-activity" target="_blank" rel="noopener" data-src="/img/panel/pgsql-activity.webp" data-alt="PGSQL Activity"></a>
+        <a class="dashboard-gallery-slide" href="https://demo.pigsty.cc/ui/d/pgsql-table" target="_blank" rel="noopener" data-src="/img/panel/pgsql-table.webp" data-alt="PGSQL Table"></a>
+        <a class="dashboard-gallery-slide" href="https://demo.pigsty.cc/ui/d/pgsql-tables" target="_blank" rel="noopener" data-src="/img/panel/pgsql-tables.webp" data-alt="PGSQL Tables"></a>
+        <a class="dashboard-gallery-slide" href="https://demo.pigsty.cc/ui/d/pgsql-patroni" target="_blank" rel="noopener" data-src="/img/panel/pgsql-patroni.webp" data-alt="PGSQL Patroni"></a>
+        <a class="dashboard-gallery-slide" href="https://demo.pigsty.cc/ui/d/pgsql-service" target="_blank" rel="noopener" data-src="/img/panel/pgsql-service.webp" data-alt="PGSQL Service"></a>
+        <a class="dashboard-gallery-slide" href="https://demo.pigsty.cc/ui/d/pgsql-pitr" target="_blank" rel="noopener" data-src="/img/panel/pgsql-pitr.webp" data-alt="PGSQL PITR"></a>
+        <a class="dashboard-gallery-slide" href="https://demo.pigsty.cc/ui/d/pgcat-table" target="_blank" rel="noopener" data-src="/img/panel/pgcat-table.webp" data-alt="PGCat Table"></a>
+        <a class="dashboard-gallery-slide" href="https://demo.pigsty.cc/ui/d/pgcat-query" target="_blank" rel="noopener" data-src="/img/panel/pgcat-query.webp" data-alt="PGCat Query"></a>
+        <a class="dashboard-gallery-slide" href="https://demo.pigsty.cc/ui/d/pgcat-database" target="_blank" rel="noopener" data-src="/img/panel/pgcat-database.webp" data-alt="PGCat Database"></a>
+        <a class="dashboard-gallery-slide" href="https://demo.pigsty.cc/ui/d/pgcat-instance" target="_blank" rel="noopener" data-src="/img/panel/pgcat-instance.webp" data-alt="PGCat Instance"></a>
+        <a class="dashboard-gallery-slide" href="https://demo.pigsty.cc/ui/d/pgcat-schema" target="_blank" rel="noopener" data-src="/img/panel/pgcat-schema.webp" data-alt="PGCat Schema"></a>
+        <a class="dashboard-gallery-slide" href="https://demo.pigsty.cc/ui/d/pgcat-locks" target="_blank" rel="noopener" data-src="/img/panel/pgcat-locks.webp" data-alt="PGCat Locks"></a>
+        <a class="dashboard-gallery-slide" href="https://demo.pigsty.cc/ui/d/node-overview" target="_blank" rel="noopener" data-src="/img/panel/node-overview.webp" data-alt="Node Overview"></a>
+        <a class="dashboard-gallery-slide" href="https://demo.pigsty.cc/ui/d/node-instance" target="_blank" rel="noopener" data-src="/img/panel/node-instance.webp" data-alt="Node Instance"></a>
+        <a class="dashboard-gallery-slide" href="https://demo.pigsty.cc/ui/d/node-cluster" target="_blank" rel="noopener" data-src="/img/panel/node-cluster.webp" data-alt="Node Cluster"></a>
+        <a class="dashboard-gallery-slide" href="https://demo.pigsty.cc/ui/d/node-haproxy" target="_blank" rel="noopener" data-src="/img/panel/node-haproxy.webp" data-alt="Node HAProxy"></a>
+        <a class="dashboard-gallery-slide" href="https://demo.pigsty.cc/ui/d/infra-overview" target="_blank" rel="noopener" data-src="/img/panel/infra-overview.webp" data-alt="Infra Overview"></a>
+        <a class="dashboard-gallery-slide" href="https://demo.pigsty.cc/ui/d/etcd-overview" target="_blank" rel="noopener" data-src="/img/panel/etcd-overview.webp" data-alt="ETCD Overview"></a>
+        <a class="dashboard-gallery-slide" href="https://demo.pigsty.cc/ui/d/minio-overview" target="_blank" rel="noopener" data-src="/img/panel/minio-overview.webp" data-alt="MinIO Overview"></a>
+        <a class="dashboard-gallery-slide" href="https://demo.pigsty.cc/ui/d/redis-cluster" target="_blank" rel="noopener" data-src="/img/panel/redis-cluster.webp" data-alt="Redis Cluster"></a>
+        <a class="dashboard-gallery-slide" href="https://demo.pigsty.cc/ui/d/redis-instance" target="_blank" rel="noopener" data-src="/img/panel/redis-instance.webp" data-alt="Redis Instance"></a>
+        <!-- Duplicate for seamless loop -->
+        <a class="dashboard-gallery-slide" href="https://demo.pigsty.cc/ui/d/pigsty" target="_blank" rel="noopener" data-src="/img/panel/pigsty.webp" data-alt="Pigsty Overview"></a>
+        <a class="dashboard-gallery-slide" href="https://demo.pigsty.cc/ui/d/pgsql-overview" target="_blank" rel="noopener" data-src="/img/panel/pgsql-overview.webp" data-alt="PGSQL Overview"></a>
+        <a class="dashboard-gallery-slide" href="https://demo.pigsty.cc/ui/d/pgsql-cluster" target="_blank" rel="noopener" data-src="/img/panel/pgsql-cluster.webp" data-alt="PGSQL Cluster"></a>
+        <a class="dashboard-gallery-slide" href="https://demo.pigsty.cc/ui/d/pgsql-instance" target="_blank" rel="noopener" data-src="/img/panel/pgsql-instance.webp" data-alt="PGSQL Instance"></a>
+        <a class="dashboard-gallery-slide" href="https://demo.pigsty.cc/ui/d/pgsql-database" target="_blank" rel="noopener" data-src="/img/panel/pgsql-database.webp" data-alt="PGSQL Database"></a>
+        <a class="dashboard-gallery-slide" href="https://demo.pigsty.cc/ui/d/pgsql-query" target="_blank" rel="noopener" data-src="/img/panel/pgsql-query.webp" data-alt="PGSQL Query"></a>
+        <a class="dashboard-gallery-slide" href="https://demo.pigsty.cc/ui/d/pgsql-session" target="_blank" rel="noopener" data-src="/img/panel/pgsql-session.webp" data-alt="PGSQL Session"></a>
+        <a class="dashboard-gallery-slide" href="https://demo.pigsty.cc/ui/d/pgsql-replication" target="_blank" rel="noopener" data-src="/img/panel/pgsql-replication.webp" data-alt="PGSQL Replication"></a>
+        <a class="dashboard-gallery-slide" href="https://demo.pigsty.cc/ui/d/pgsql-persist" target="_blank" rel="noopener" data-src="/img/panel/pgsql-persist.webp" data-alt="PGSQL Persist"></a>
+        <a class="dashboard-gallery-slide" href="https://demo.pigsty.cc/ui/d/pgsql-proxy" target="_blank" rel="noopener" data-src="/img/panel/pgsql-proxy.webp" data-alt="PGSQL Proxy"></a>
+        <a class="dashboard-gallery-slide" href="https://demo.pigsty.cc/ui/d/pgsql-pgbouncer" target="_blank" rel="noopener" data-src="/img/panel/pgsql-pgbouncer.webp" data-alt="PGSQL PgBouncer"></a>
+        <a class="dashboard-gallery-slide" href="https://demo.pigsty.cc/ui/d/pgsql-xacts" target="_blank" rel="noopener" data-src="/img/panel/pgsql-xacts.webp" data-alt="PGSQL Transactions"></a>
+        <a class="dashboard-gallery-slide" href="https://demo.pigsty.cc/ui/d/pgsql-activity" target="_blank" rel="noopener" data-src="/img/panel/pgsql-activity.webp" data-alt="PGSQL Activity"></a>
+        <a class="dashboard-gallery-slide" href="https://demo.pigsty.cc/ui/d/pgsql-table" target="_blank" rel="noopener" data-src="/img/panel/pgsql-table.webp" data-alt="PGSQL Table"></a>
+        <a class="dashboard-gallery-slide" href="https://demo.pigsty.cc/ui/d/pgsql-tables" target="_blank" rel="noopener" data-src="/img/panel/pgsql-tables.webp" data-alt="PGSQL Tables"></a>
+        <a class="dashboard-gallery-slide" href="https://demo.pigsty.cc/ui/d/pgsql-patroni" target="_blank" rel="noopener" data-src="/img/panel/pgsql-patroni.webp" data-alt="PGSQL Patroni"></a>
+        <a class="dashboard-gallery-slide" href="https://demo.pigsty.cc/ui/d/pgsql-service" target="_blank" rel="noopener" data-src="/img/panel/pgsql-service.webp" data-alt="PGSQL Service"></a>
+        <a class="dashboard-gallery-slide" href="https://demo.pigsty.cc/ui/d/pgsql-pitr" target="_blank" rel="noopener" data-src="/img/panel/pgsql-pitr.webp" data-alt="PGSQL PITR"></a>
+        <a class="dashboard-gallery-slide" href="https://demo.pigsty.cc/ui/d/pgcat-table" target="_blank" rel="noopener" data-src="/img/panel/pgcat-table.webp" data-alt="PGCat Table"></a>
+        <a class="dashboard-gallery-slide" href="https://demo.pigsty.cc/ui/d/pgcat-query" target="_blank" rel="noopener" data-src="/img/panel/pgcat-query.webp" data-alt="PGCat Query"></a>
+        <a class="dashboard-gallery-slide" href="https://demo.pigsty.cc/ui/d/pgcat-database" target="_blank" rel="noopener" data-src="/img/panel/pgcat-database.webp" data-alt="PGCat Database"></a>
+        <a class="dashboard-gallery-slide" href="https://demo.pigsty.cc/ui/d/pgcat-instance" target="_blank" rel="noopener" data-src="/img/panel/pgcat-instance.webp" data-alt="PGCat Instance"></a>
+        <a class="dashboard-gallery-slide" href="https://demo.pigsty.cc/ui/d/pgcat-schema" target="_blank" rel="noopener" data-src="/img/panel/pgcat-schema.webp" data-alt="PGCat Schema"></a>
+        <a class="dashboard-gallery-slide" href="https://demo.pigsty.cc/ui/d/pgcat-locks" target="_blank" rel="noopener" data-src="/img/panel/pgcat-locks.webp" data-alt="PGCat Locks"></a>
+        <a class="dashboard-gallery-slide" href="https://demo.pigsty.cc/ui/d/node-overview" target="_blank" rel="noopener" data-src="/img/panel/node-overview.webp" data-alt="Node Overview"></a>
+        <a class="dashboard-gallery-slide" href="https://demo.pigsty.cc/ui/d/node-instance" target="_blank" rel="noopener" data-src="/img/panel/node-instance.webp" data-alt="Node Instance"></a>
+        <a class="dashboard-gallery-slide" href="https://demo.pigsty.cc/ui/d/node-cluster" target="_blank" rel="noopener" data-src="/img/panel/node-cluster.webp" data-alt="Node Cluster"></a>
+        <a class="dashboard-gallery-slide" href="https://demo.pigsty.cc/ui/d/node-haproxy" target="_blank" rel="noopener" data-src="/img/panel/node-haproxy.webp" data-alt="Node HAProxy"></a>
+        <a class="dashboard-gallery-slide" href="https://demo.pigsty.cc/ui/d/infra-overview" target="_blank" rel="noopener" data-src="/img/panel/infra-overview.webp" data-alt="Infra Overview"></a>
+        <a class="dashboard-gallery-slide" href="https://demo.pigsty.cc/ui/d/etcd-overview" target="_blank" rel="noopener" data-src="/img/panel/etcd-overview.webp" data-alt="ETCD Overview"></a>
+        <a class="dashboard-gallery-slide" href="https://demo.pigsty.cc/ui/d/minio-overview" target="_blank" rel="noopener" data-src="/img/panel/minio-overview.webp" data-alt="MinIO Overview"></a>
+        <a class="dashboard-gallery-slide" href="https://demo.pigsty.cc/ui/d/redis-cluster" target="_blank" rel="noopener" data-src="/img/panel/redis-cluster.webp" data-alt="Redis Cluster"></a>
+        <a class="dashboard-gallery-slide" href="https://demo.pigsty.cc/ui/d/redis-instance" target="_blank" rel="noopener" data-src="/img/panel/redis-instance.webp" data-alt="Redis Instance"></a>
+      
+      </div>
+    </div>
+  </section>
 
   <!-- ============================================
        Section 6: Social Proof
        ============================================ -->
-  <section class="landing-section social-proof" id="users">
+  <section class="landing-section proof" id="users">
     <div class="landing-container">
-      <div class="section-header" data-reveal>
+      <div class="section-head" data-reveal>
+        <p class="section-eyebrow"><span class="silkscreen">FIELD PROVEN · 生产验证</span><span class="eyebrow-trace" aria-hidden="true"></span></p>
         <h2 class="section-title">为各行各业所信赖</h2>
       </div>
 
-      <!-- Logo Marquee -->
       <div class="logos-marquee" data-reveal>
         <div class="logos-marquee-row" data-direction="left">
           <div class="logos-marquee-content">
-            <div class="logo-item"><img src="/img/user/tantan.png" alt="探探"></div>
-            <div class="logo-item"><img src="/img/user/bilibili.png" alt="Bilibili"></div>
-            <div class="logo-item"><img src="/img/user/airwallex.png" alt="Airwallex"></div>
-            <div class="logo-item"><img src="/img/user/momenta.png" alt="Momenta"></div>
-            <div class="logo-item"><img src="/img/user/meitu.png" alt="美图"></div>
-            <div class="logo-item"><img src="/img/user/polardb.png" alt="PolarDB"></div>
-            <div class="logo-item"><img src="/img/user/bitdeer.png" alt="Bitdeer"></div>
-            <div class="logo-item"><img src="/img/user/oci.png" alt="OCI"></div>
-            <div class="logo-item"><img src="/img/user/huafon.png" alt="华峰"></div>
-            <div class="logo-item"><img src="/img/user/linkfog.png" alt="Linkfog"></div>
-            <div class="logo-item"><img src="/img/user/motphys.png" alt="Motphys"></div>
-            <div class="logo-item"><img src="/img/user/yingshijufeng.png" alt="影视飓风"></div>
+
+            <a class="logo-item" href="#case"><img src="/img/user/tantan.png" alt="探探"></a>
+            <a class="logo-item" href="#case"><img src="/img/user/bilibili.png" alt="Bilibili"></a>
+            <a class="logo-item" href="#case"><img src="/img/user/airwallex.png" alt="Airwallex"></a>
+            <a class="logo-item" href="#case"><img src="/img/user/momenta.png" alt="Momenta"></a>
+            <a class="logo-item" href="#case"><img src="/img/user/meitu.png" alt="美图"></a>
+            <a class="logo-item" href="#case"><img src="/img/user/polardb.png" alt="PolarDB"></a>
+            <a class="logo-item" href="#case"><img src="/img/user/bitdeer.png" alt="Bitdeer"></a>
+            <a class="logo-item" href="#case"><img src="/img/user/oci.png" alt="OCI"></a>
+            <a class="logo-item" href="#case"><img src="/img/user/huafon.png" alt="华峰"></a>
+            <a class="logo-item" href="#case"><img src="/img/user/linkfog.png" alt="Linkfog"></a>
+            <a class="logo-item" href="#case"><img src="/img/user/motphys.png" alt="Motphys"></a>
+            <a class="logo-item" href="#case"><img src="/img/user/yingshijufeng.png" alt="影视飓风"></a>
             <!-- Duplicate for seamless loop -->
-            <div class="logo-item"><img src="/img/user/tantan.png" alt="探探"></div>
-            <div class="logo-item"><img src="/img/user/bilibili.png" alt="Bilibili"></div>
-            <div class="logo-item"><img src="/img/user/airwallex.png" alt="Airwallex"></div>
-            <div class="logo-item"><img src="/img/user/momenta.png" alt="Momenta"></div>
-            <div class="logo-item"><img src="/img/user/meitu.png" alt="美图"></div>
-            <div class="logo-item"><img src="/img/user/polardb.png" alt="PolarDB"></div>
-            <div class="logo-item"><img src="/img/user/bitdeer.png" alt="Bitdeer"></div>
-            <div class="logo-item"><img src="/img/user/oci.png" alt="OCI"></div>
-            <div class="logo-item"><img src="/img/user/huafon.png" alt="华峰"></div>
-            <div class="logo-item"><img src="/img/user/linkfog.png" alt="Linkfog"></div>
-            <div class="logo-item"><img src="/img/user/motphys.png" alt="Motphys"></div>
-            <div class="logo-item"><img src="/img/user/yingshijufeng.png" alt="影视飓风"></div>
+            <a class="logo-item" href="#case"><img src="/img/user/tantan.png" alt="探探"></a>
+            <a class="logo-item" href="#case"><img src="/img/user/bilibili.png" alt="Bilibili"></a>
+            <a class="logo-item" href="#case"><img src="/img/user/airwallex.png" alt="Airwallex"></a>
+            <a class="logo-item" href="#case"><img src="/img/user/momenta.png" alt="Momenta"></a>
+            <a class="logo-item" href="#case"><img src="/img/user/meitu.png" alt="美图"></a>
+            <a class="logo-item" href="#case"><img src="/img/user/polardb.png" alt="PolarDB"></a>
+            <a class="logo-item" href="#case"><img src="/img/user/bitdeer.png" alt="Bitdeer"></a>
+            <a class="logo-item" href="#case"><img src="/img/user/oci.png" alt="OCI"></a>
+            <a class="logo-item" href="#case"><img src="/img/user/huafon.png" alt="华峰"></a>
+            <a class="logo-item" href="#case"><img src="/img/user/linkfog.png" alt="Linkfog"></a>
+            <a class="logo-item" href="#case"><img src="/img/user/motphys.png" alt="Motphys"></a>
+            <a class="logo-item" href="#case"><img src="/img/user/yingshijufeng.png" alt="影视飓风"></a>
           </div>
         </div>
       </div>
 
-      <div class="testimonial" data-reveal>
-        <blockquote class="testimonial-quote">
-          我们用 Pigsty 管理了上百套 PostgreSQL 集群，250 万 PG QPS<br>
-          只用了 1.5 个 DBA，总 TCO 成本是公有云的 5% —— 探探
+      <figure class="fieldreport" id="case" data-reveal>
+        <div class="fieldreport-stats">
+          <div class="fr-stat"><span class="fr-num">100<em>+</em></span><span class="fr-label">PG 集群</span></div>
+          <div class="fr-stat"><span class="fr-num">250<em>万</em></span><span class="fr-label">峰值 QPS</span></div>
+          <div class="fr-stat"><span class="fr-num">1.5</span><span class="fr-label">位 DBA</span></div>
+          <div class="fr-stat"><span class="fr-num">5<em>%</em></span><span class="fr-label">公有云 TCO</span></div>
+        </div>
+        <blockquote class="fieldreport-quote">
+          「我们用 Pigsty 管理了上百套 PostgreSQL 集群，250 万 PG QPS，<br class="br-wide">俩 DBA，总 TCO 成本是公有云的 5%。」
         </blockquote>
-      </div>
+        <figcaption class="fieldreport-source silkscreen">—— 探探 · 生产环境实录</figcaption>
+      </figure>
 
       <div class="stats-grid" data-reveal>
-        <a href="https://github.com/pgsty/pigsty/stargazers" target="_blank" class="stat-item" style="text-decoration: none; color: inherit;">
-          <div class="stat-value" data-count="5200">5200</div>
-          <div class="stat-label">GitHub Stars</div>
+        <a href="https://github.com/pgsty/pigsty/stargazers" target="_blank" rel="noopener" class="stat-item">
+          <span class="stat-value" data-count="5200">5200</span>
+          <span class="stat-label">GitHub Stars</span>
         </a>
         <div class="stat-item">
-          <div class="stat-value">100+</div>
-          <div class="stat-label">集群规模验证</div>
+          <span class="stat-value" data-count="25000">25000</span>
+          <span class="stat-label">vCPU 规模验证</span>
         </div>
-        <a href="/docs/about/release/" class="stat-item" style="text-decoration: none; color: inherit;">
-          <div class="stat-value">6+</div>
-          <div class="stat-label">年持续迭代</div>
+        <a href="/docs/about/release/" class="stat-item">
+          <span class="stat-value">6+</span>
+          <span class="stat-label">年持续迭代</span>
         </a>
-        <a href="/docs/about/compare/impact/" class="stat-item" style="text-decoration: none; color: inherit;">
-          <div class="stat-value">#1</div>
-          <div class="stat-label">中国 PG 生态影响力</div>
+        <a href="/docs/about/compare/impact/" class="stat-item">
+          <span class="stat-value">#1</span>
+          <span class="stat-label">中国 PG 生态影响力</span>
         </a>
       </div>
     </div>
   </section>
 
-
   <!-- ============================================
-       Section 7: Join the Community
+       Section 7: Community Voices
        ============================================ -->
-  <section class="landing-section community-section" id="community">
+  <section class="landing-section voices" id="community">
     <div class="landing-container">
-      <div class="section-header" data-reveal>
+      <div class="section-head" data-reveal>
+        <p class="section-eyebrow"><span class="silkscreen">COMMUNITY · 社区之声</span><span class="eyebrow-trace" aria-hidden="true"></span></p>
         <h2 class="section-title">加入社区</h2>
         <p class="section-subtitle">看看大家怎么说</p>
       </div>
 
-      <!-- Community Links -->
       <div class="community-buttons" data-reveal>
-        <a href="/img/pigsty/pigsty-cc.jpg" class="community-btn" target="_blank">
-          <i class="fab fa-weixin"></i> 微信群组
-        </a>
-        <a href="/img/pigsty/pigsty-qq.jpg" class="community-btn" target="_blank">
-          <i class="fab fa-qq"></i> QQ 群组
-        </a>
-        <a href="https://github.com/orgs/pgsty/discussions" class="community-btn" target="_blank">
-          <i class="fab fa-github"></i> GitHub
-        </a>
-        <a href="https://discord.gg/wDzt5VyWEz" class="community-btn" target="_blank">
-          <i class="fab fa-discord"></i> Discord
-        </a>
-        <a href="https://t.me/joinchat/gV9zfZraNPM3YjFh" class="community-btn" target="_blank">
-          <i class="fab fa-telegram"></i> Telegram
-        </a>
+        <a href="/img/pigsty/pigsty-cc.jpg" class="community-btn" target="_blank"><i class="fab fa-weixin"></i> 微信群组</a>
+        <a href="/img/pigsty/pigsty-qq.jpg" class="community-btn" target="_blank"><i class="fab fa-qq"></i> QQ 群组</a>
+        <a href="https://github.com/orgs/pgsty/discussions" class="community-btn" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
+        <a href="https://discord.gg/wDzt5VyWEz" class="community-btn" target="_blank" rel="noopener"><i class="fab fa-discord"></i> Discord</a>
+        <a href="https://t.me/joinchat/gV9zfZraNPM3YjFh" class="community-btn" target="_blank" rel="noopener"><i class="fab fa-telegram"></i> Telegram</a>
       </div>
+    </div>
 
-      <!-- Testimonials Marquee -->
-      <div class="testimonials-marquee" data-reveal>
+    <div class="testimonials-marquee" data-reveal>
+
         <!-- Row 1: Scroll Left -->
         <div class="testimonials-row" data-direction="left">
           <div class="testimonials-content">
@@ -1786,120 +1960,92 @@
             </div>
           </div>
         </div>
-      </div>
     </div>
   </section>
 
-
   <!-- ============================================
-       Section 8: Quick Start (CTA)
+       Section 8: Quick Start
        ============================================ -->
-  <section class="landing-section quickstart-section" id="quickstart">
+  <section class="landing-section quickstart" id="quickstart">
     <div class="landing-container">
-      <div class="section-header" data-reveal>
-        <h2 class="section-title"><i class="fas fa-bolt"></i> 轻松交付，立等可取</h2>
+      <div class="section-head" data-reveal>
+        <p class="section-eyebrow"><span class="silkscreen">GET STARTED · 快速开始</span><span class="eyebrow-trace" aria-hidden="true"></span></p>
+        <h2 class="section-title">轻松交付，立等可取</h2>
+        <p class="section-subtitle">三条命令，十分钟交付一套企业级 PostgreSQL</p>
       </div>
 
-      <div class="quickstart-actions" id="cta" data-reveal>
-        <div class="final-cta-buttons">
-          <a href="/docs/setup/install/" class="btn btn-primary">
-            <i class="fas fa-rocket"></i> 立即安装
-          </a>
-          <a href="https://demo.pigsty.cc" class="btn btn-secondary" target="_blank">
-            <i class="fas fa-play"></i> 在线演示
-          </a>
-          <a href="/price/" class="btn btn-outline">
-            <i class="fas fa-headset"></i> 商业服务
-          </a>
-        </div>
-      </div>
-
-      <!-- Three Steps -->
-      <div class="steps-grid-new" data-reveal>
-        <!-- Step 1: Download -->
-        <div class="step-card-new">
-          <div class="step-header">
-            <span class="step-number-new">1</span>
-            <a href="/docs/setup/install/" class="step-title-new">下载安装</a>
+      <div class="steps-rail" data-reveal>
+        <div class="step-card">
+          <div class="step-head">
+            <span class="step-num">1</span>
+            <a href="/docs/setup/install/" class="step-title">下载安装</a>
           </div>
           <div class="step-cmd">
             <code class="step-cmd-text" data-copy="curl -fsSL https://repo.pigsty.cc/get | bash">curl https://pigsty.cc/get | bash</code>
-            <button class="step-cmd-copy" title="复制命令"><i class="fas fa-copy"></i></button>
+            <button class="step-cmd-copy" title="复制命令" aria-label="复制命令"><i class="fas fa-copy"></i></button>
           </div>
         </div>
-
-        <!-- Step 2: Configure -->
-        <div class="step-card-new">
-          <div class="step-header">
-            <span class="step-number-new">2</span>
-            <a href="/docs/setup/install#配置" class="step-title-new">编辑配置</a>
+        <div class="step-card">
+          <div class="step-head">
+            <span class="step-num">2</span>
+            <a href="/docs/setup/install/#配置" class="step-title">编辑配置</a>
           </div>
           <div class="step-cmd">
-            <code class="step-cmd-text" data-copy="cd ~/pigsty; ./configure -g; vi .pigsty.yml">./configure</code>
-            <button class="step-cmd-copy" title="复制命令"><i class="fas fa-copy"></i></button>
+            <code class="step-cmd-text" data-copy="cd ~/pigsty; ./configure -g">./configure</code>
+            <button class="step-cmd-copy" title="复制命令" aria-label="复制命令"><i class="fas fa-copy"></i></button>
           </div>
         </div>
-
-        <!-- Step 3: Deploy -->
-        <div class="step-card-new">
-          <div class="step-header">
-            <span class="step-number-new">3</span>
-            <a href="/docs/setup/install/#部署" class="step-title-new">一键部署</a>
+        <div class="step-card">
+          <div class="step-head">
+            <span class="step-num">3</span>
+            <a href="/docs/setup/install/#部署" class="step-title">一键部署</a>
           </div>
           <div class="step-cmd">
             <code class="step-cmd-text">./deploy.yml</code>
-            <button class="step-cmd-copy" title="复制命令"><i class="fas fa-copy"></i></button>
+            <button class="step-cmd-copy" title="复制命令" aria-label="复制命令"><i class="fas fa-copy"></i></button>
           </div>
         </div>
       </div>
 
-      <!-- Asciinema Player -->
       <div class="asciinema-container" data-reveal>
         <div id="asciinema-player"></div>
       </div>
 
-      <!-- Installation Options -->
       <div class="install-options" data-reveal>
         <a href="/docs/setup/install/" class="install-option">
-          <div class="install-option-icon"><i class="fas fa-rocket"></i></div>
-          <div class="install-option-content">
-            <h4 class="install-option-title">单机安装</h4>
-            <p class="install-option-desc">联网在线安装最新版本</p>
-          </div>
+          <span class="install-option-icon"><i class="fas fa-rocket"></i></span>
+          <span class="install-option-text"><b>单机安装</b><i>联网在线安装最新版本</i></span>
         </a>
-
         <a href="/docs/setup/offline/" class="install-option">
-          <div class="install-option-icon"><i class="fas fa-box"></i></div>
-          <div class="install-option-content">
-            <h4 class="install-option-title">离线安装</h4>
-            <p class="install-option-desc">无网从离线包中冷启动</p>
-          </div>
+          <span class="install-option-icon"><i class="fas fa-box"></i></span>
+          <span class="install-option-text"><b>离线安装</b><i>无网从离线包中冷启动</i></span>
         </a>
-
         <a href="/docs/setup/slim/" class="install-option">
-          <div class="install-option-icon"><i class="fas fa-feather"></i></div>
-          <div class="install-option-content">
-            <h4 class="install-option-title">精简安装</h4>
-            <p class="install-option-desc">只要纯净的 PostgreSQL</p>
-          </div>
+          <span class="install-option-icon"><i class="fas fa-feather"></i></span>
+          <span class="install-option-text"><b>精简安装</b><i>只要纯净的 PostgreSQL</i></span>
         </a>
       </div>
 
-      <!-- Platform Support -->
-      <div class="platforms" data-reveal>
-        <strong>支持系统：</strong>
-        Linux x86_64 / Arm64 · EL 8 / 9 / 10 · Ubuntu 22 / 24 / 26 · Debian 12 / 13
-      </div>
+      <p class="platforms silkscreen" data-reveal>
+        支持系统：Linux x86_64 / Arm64 · EL 8 / 9 / 10 · Ubuntu 22 / 24 / 26 · Debian 12 / 13
+      </p>
 
+      <div class="final-cta" data-reveal>
+        <a href="/docs/setup/install/" class="btn btn-primary btn-lg"><i class="fas fa-rocket"></i> 立即安装</a>
+        <a href="https://demo.pigsty.cc" class="btn btn-ghost btn-lg" target="_blank" rel="noopener"><i class="fas fa-gauge-high"></i> 在线演示</a>
+        <a href="/price/" class="btn btn-line btn-lg"><i class="fas fa-headset"></i> 商业服务</a>
+      </div>
     </div>
   </section>
+
+  </main>
 
   <!-- Asciinema Player (v3.13.5 local) -->
   <link rel="stylesheet" type="text/css" href="/css/asciinema-player.css" />
   <script src="/js/asciinema-player.min.js"></script>
 
   <!-- ============================================
-       Section 9: Footer
+       Footer
        ============================================ -->
   <footer class="landing-footer">
     <div class="landing-container">
@@ -1910,26 +2056,24 @@
             PIGSTY
           </a>
           <p class="footer-tagline">
-            <span class="hl-p">P</span>ostgreSQL <span class="hl-i">I</span>n <span class="hl-g">G</span>reat <span class="hl-s">S</span><span class="hl-t">T</span><span class="hl-y">Y</span>le —<br>
+            <b class="ini-p">P</b>ostgreSQL <b class="ini-i">I</b>n <b class="ini-g">G</b>reat <b class="ini-s">S</b><b class="ini-t">T</b><b class="ini-y">Y</b>le —<br>
             开箱即用的 PostgreSQL 发行版
           </p>
-          <p class="footer-slogan">
-            助您用 <span class="hl-good">好数据库</span>，<span class="hl-use">用好</span>数据库
-          </p>
+          <p class="footer-slogan">助您用<span class="hl-good">好数据库</span>，<span class="hl-use">用好</span>数据库</p>
         </div>
 
         <div class="footer-column">
-          <h4 class="footer-column-title">产品</h4>
+          <h4 class="footer-column-title silkscreen">产品</h4>
           <ul class="footer-links">
             <li><a href="/docs/about/feature/">特性介绍</a></li>
             <li><a href="/docs/ref/module/">功能模块</a></li>
-            <li><a href="https://demo.pigsty.cc" target="_blank">在线演示</a></li>
+            <li><a href="https://demo.pigsty.cc" target="_blank" rel="noopener">在线演示</a></li>
             <li><a href="/price/">服务定价</a></li>
           </ul>
         </div>
 
         <div class="footer-column">
-          <h4 class="footer-column-title">资源</h4>
+          <h4 class="footer-column-title silkscreen">资源</h4>
           <ul class="footer-links">
             <li><a href="/docs/">中文文档</a></li>
             <li><a href="/ext/">扩展目录</a></li>
@@ -1939,19 +2083,19 @@
         </div>
 
         <div class="footer-column">
-          <h4 class="footer-column-title">社区</h4>
+          <h4 class="footer-column-title silkscreen">社区</h4>
           <ul class="footer-links">
-            <li><a href="https://github.com/orgs/pgsty/discussions" target="_blank">GitHub</a></li>
-            <li><a href="https://discord.gg/wDzt5VyWEz" target="_blank">Discord</a></li>
-            <li><a href="https://t.me/joinchat/gV9zfZraNPM3YjFh" target="_blank">Telegram</a></li>
+            <li><a href="https://github.com/orgs/pgsty/discussions" target="_blank" rel="noopener">GitHub</a></li>
+            <li><a href="https://discord.gg/wDzt5VyWEz" target="_blank" rel="noopener">Discord</a></li>
+            <li><a href="https://t.me/joinchat/gV9zfZraNPM3YjFh" target="_blank" rel="noopener">Telegram</a></li>
             <li><a href="/img/pigsty/pigsty-cc.jpg">微信群组</a></li>
           </ul>
         </div>
 
         <div class="footer-column">
-          <h4 class="footer-column-title">关于</h4>
+          <h4 class="footer-column-title silkscreen">关于</h4>
           <ul class="footer-links">
-            <li><a href="https://vonng.com" target="_blank">作者博客</a></li>
+            <li><a href="https://vonng.com" target="_blank" rel="noopener">作者博客</a></li>
             <li><a href="/docs/about/license/">开源协议</a></li>
             <li><a href="/docs/about/privacy/">隐私政策</a></li>
             <li><a href="mailto:rh@vonng.com">联系我们</a></li>
@@ -1960,20 +2104,19 @@
       </div>
 
       <div class="footer-bottom">
-        <div class="footer-copyright">© 2018-2026 <a href="https://vonng.com" target="_blank">冯若航</a> (<a href="https://github.com/Vonng" target="_blank">Vonng</a>)</div>
+        <div class="footer-copyright">© 2018-2026 <a href="https://vonng.com" target="_blank" rel="noopener">冯若航</a> (<a href="https://github.com/Vonng" target="_blank" rel="noopener">Vonng</a>)</div>
         <div class="footer-icp">
           <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener">浙ICP备15016890号-2</a>
         </div>
         <div class="footer-lang-switch">
-          <a href="https://pigsty.io" target="_blank">English</a>
+          <a href="https://pigsty.io" target="_blank" rel="noopener">English</a>
           <a href="/">中文</a>
         </div>
       </div>
     </div>
   </footer>
 
-
-<script src="/js/landing.js"></script>
+<script src="/js/landing-v3.js"></script>
 
 </body>
 </html>
