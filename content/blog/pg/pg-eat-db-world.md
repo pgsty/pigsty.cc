@@ -5,7 +5,7 @@ author: 冯若航
 images: ['/img/hero/pg/pg-eat-db-world.jpg']
 summary: >
   PostgreSQL 并不是一个简单的关系型数据库，而是一个数据管理的抽象框架，具有吞噬整个数据库世界的力量。"一切皆用 Postgres"已经成为主流视野的最佳实践。
-tags: [PostgreSQL, PG 生态，扩展]
+tags: [PostgreSQL, PG 生态, 扩展]
 ---
 
 PostgreSQL 并不是一个简单的关系型数据库，而是一个数据管理的抽象框架，具有吞噬整个数据库世界的力量。而这也是正在发生的事情 —— “一切皆用 Postgres” 已经不再是少数精英团队的前沿探索，而是成为了一种进入主流视野的最佳实践。
