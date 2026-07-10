@@ -55,7 +55,7 @@ weight: 5110
 | el9.x86_64 | AVAIL PGDG 1.3 2 | AVAIL PGDG 1.3 2 | AVAIL PGDG 1.3 3 | AVAIL PGDG 1.3 4 | AVAIL PGDG 1.3 4 |
 | el9.aarch64 | AVAIL PGDG 1.3 2 | AVAIL PGDG 1.3 2 | AVAIL PGDG 1.3 3 | AVAIL PGDG 1.3 4 | AVAIL PGDG 1.3 4 |
 | el10.x86_64 | AVAIL PGDG 1.3 2 | AVAIL PGDG 1.3 2 | AVAIL PGDG 1.3 3 | AVAIL PGDG 1.3 3 | AVAIL PGDG 1.3 3 |
-| el10.aarch64 | AVAIL PGDG 1.3 2 | AVAIL PGDG 1.3 2 | AVAIL PGDG 1.3 3 | AVAIL PGDG 1.3 3 | AVAIL PGDG 1.3 2 |
+| el10.aarch64 | AVAIL PGDG 1.3 2 | AVAIL PGDG 1.3 2 | AVAIL PGDG 1.3 3 | AVAIL PGDG 1.3 3 | AVAIL PGDG 1.3 3 |
 | d12.x86_64 | AVAIL PGDG 1.3 1 | AVAIL PGDG 1.3 1 | AVAIL PGDG 1.3 1 | AVAIL PGDG 1.3 1 | AVAIL PGDG 1.3 1 |
 | d12.aarch64 | AVAIL PGDG 1.3 1 | AVAIL PGDG 1.3 1 | AVAIL PGDG 1.3 1 | AVAIL PGDG 1.3 1 | AVAIL PGDG 1.3 1 |
 | d13.x86_64 | AVAIL PGDG 1.3 1 | AVAIL PGDG 1.3 1 | AVAIL PGDG 1.3 1 | AVAIL PGDG 1.3 1 | AVAIL PGDG 1.3 1 |
@@ -179,6 +179,7 @@ weight: 5110
 @ el10.x86_64 14 pg_checksums_14 pg_checksums_14-1.3-1PGDG.rhel10.2.x86_64.rpm pgdg 1.3 31.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_checksums_14-1.3-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 14 pg_checksums_14 pg_checksums_14-1.3-1PGDG.rhel10.x86_64.rpm pgdg 1.3 31.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_checksums_14-1.3-1PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 14 pg_checksums_14 pg_checksums_14-1.2-1PGDG.rhel10.x86_64.rpm pgdg 1.2 31.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_checksums_14-1.2-1PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 14 pg_checksums_14 pg_checksums_14-1.3-1PGDG.rhel10.2.aarch64.rpm pgdg 1.3 40.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_checksums_14-1.3-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 14 pg_checksums_14 pg_checksums_14-1.3-1PGDG.rhel10.aarch64.rpm pgdg 1.3 40.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_checksums_14-1.3-1PGDG.rhel10.aarch64.rpm
 @ el10.aarch64 14 pg_checksums_14 pg_checksums_14-1.2-1PGDG.rhel10.aarch64.rpm pgdg 1.2 40.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_checksums_14-1.2-1PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 14 postgresql-14-pg-checksums postgresql-14-pg-checksums_1.3-2.pgdg12+1_amd64.deb pgdg 1.3 33.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-checksums/postgresql-14-pg-checksums_1.3-2.pgdg12+1_amd64.deb

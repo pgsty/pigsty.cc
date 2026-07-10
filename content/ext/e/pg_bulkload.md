@@ -58,7 +58,7 @@ weight: 9830
 | el9.x86_64 | AVAIL PIGSTY 3.1.23 4 | AVAIL PIGSTY 3.1.23 2 | AVAIL PIGSTY 3.1.23 3 | AVAIL PIGSTY 3.1.23 3 | AVAIL PIGSTY 3.1.23 3 |
 | el9.aarch64 | AVAIL PIGSTY 3.1.23 4 | AVAIL PIGSTY 3.1.23 2 | AVAIL PIGSTY 3.1.23 3 | AVAIL PIGSTY 3.1.23 4 | AVAIL PIGSTY 3.1.23 5 |
 | el10.x86_64 | AVAIL PIGSTY 3.1.23 4 | AVAIL PIGSTY 3.1.23 3 | AVAIL PIGSTY 3.1.23 3 | AVAIL PIGSTY 3.1.23 3 | AVAIL PIGSTY 3.1.23 3 |
-| el10.aarch64 | AVAIL PIGSTY 3.1.23 4 | AVAIL PIGSTY 3.1.23 3 | AVAIL PIGSTY 3.1.23 3 | AVAIL PIGSTY 3.1.23 3 | AVAIL PIGSTY 3.1.23 2 |
+| el10.aarch64 | AVAIL PIGSTY 3.1.23 4 | AVAIL PIGSTY 3.1.23 3 | AVAIL PIGSTY 3.1.23 3 | AVAIL PIGSTY 3.1.23 3 | AVAIL PIGSTY 3.1.23 3 |
 | d12.x86_64 | AVAIL PIGSTY 3.1.23 1 | AVAIL PIGSTY 3.1.23 1 | AVAIL PIGSTY 3.1.23 1 | AVAIL PIGSTY 3.1.23 1 | AVAIL PIGSTY 3.1.23 1 |
 | d12.aarch64 | AVAIL PIGSTY 3.1.23 1 | AVAIL PIGSTY 3.1.23 1 | AVAIL PIGSTY 3.1.23 1 | AVAIL PIGSTY 3.1.23 1 | AVAIL PIGSTY 3.1.23 1 |
 | d13.x86_64 | AVAIL PIGSTY 3.1.23 1 | AVAIL PIGSTY 3.1.23 1 | AVAIL PIGSTY 3.1.23 1 | AVAIL PIGSTY 3.1.23 1 | AVAIL PIGSTY 3.1.23 1 |
@@ -196,6 +196,7 @@ weight: 9830
 @ el10.x86_64 14 pg_bulkload_14 pg_bulkload_14-3.1.23-1PGDG.rhel10.2.x86_64.rpm pgdg 3.1.23 63.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_bulkload_14-3.1.23-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 14 pg_bulkload_14 pg_bulkload_14-3.1.22-2PGDG.rhel10.x86_64.rpm pgdg 3.1.22 63.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_bulkload_14-3.1.22-2PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 14 pg_bulkload_14 pg_bulkload_14-3.1.23-1PIGSTY.el10.aarch64.rpm pigsty 3.1.23 59.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_bulkload_14-3.1.23-1PIGSTY.el10.aarch64.rpm
+@ el10.aarch64 14 pg_bulkload_14 pg_bulkload_14-3.1.23-1PGDG.rhel10.2.aarch64.rpm pgdg 3.1.23 60.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_bulkload_14-3.1.23-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 14 pg_bulkload_14 pg_bulkload_14-3.1.22-2PGDG.rhel10.aarch64.rpm pgdg 3.1.22 60.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_bulkload_14-3.1.22-2PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 14 postgresql-14-pg-bulkload postgresql-14-pg-bulkload_3.1.23-1PIGSTY~bookworm_amd64.deb pigsty 3.1.23 238.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-bulkload/postgresql-14-pg-bulkload_3.1.23-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 14 postgresql-14-pg-bulkload postgresql-14-pg-bulkload_3.1.23-1PIGSTY~bookworm_arm64.deb pigsty 3.1.23 230.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-bulkload/postgresql-14-pg-bulkload_3.1.23-1PIGSTY~bookworm_arm64.deb

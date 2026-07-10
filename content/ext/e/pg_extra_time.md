@@ -55,7 +55,7 @@ weight: 4220
 | el9.x86_64 | AVAIL PIGSTY 2.1.0 3 | AVAIL PIGSTY 2.1.0 4 | AVAIL PIGSTY 2.1.0 5 | AVAIL PIGSTY 2.1.0 5 | AVAIL PIGSTY 2.1.0 5 |
 | el9.aarch64 | AVAIL PIGSTY 2.1.0 3 | AVAIL PIGSTY 2.1.0 4 | AVAIL PIGSTY 2.1.0 5 | AVAIL PIGSTY 2.1.0 5 | AVAIL PIGSTY 2.1.0 5 |
 | el10.x86_64 | AVAIL PIGSTY 2.1.0 3 | AVAIL PIGSTY 2.1.0 3 | AVAIL PIGSTY 2.1.0 3 | AVAIL PIGSTY 2.1.0 3 | AVAIL PIGSTY 2.1.0 3 |
-| el10.aarch64 | AVAIL PIGSTY 2.1.0 3 | AVAIL PIGSTY 2.1.0 3 | AVAIL PIGSTY 2.1.0 3 | AVAIL PIGSTY 2.1.0 3 | AVAIL PIGSTY 2.1.0 2 |
+| el10.aarch64 | AVAIL PIGSTY 2.1.0 3 | AVAIL PIGSTY 2.1.0 3 | AVAIL PIGSTY 2.1.0 3 | AVAIL PIGSTY 2.1.0 3 | AVAIL PIGSTY 2.1.0 3 |
 | d12.x86_64 | AVAIL PIGSTY 2.1.0 1 | AVAIL PIGSTY 2.1.0 1 | AVAIL PIGSTY 2.1.0 1 | AVAIL PIGSTY 2.1.0 1 | AVAIL PIGSTY 2.1.0 1 |
 | d12.aarch64 | AVAIL PIGSTY 2.1.0 1 | AVAIL PIGSTY 2.1.0 1 | AVAIL PIGSTY 2.1.0 1 | AVAIL PIGSTY 2.1.0 1 | AVAIL PIGSTY 2.1.0 1 |
 | d13.x86_64 | AVAIL PIGSTY 2.1.0 1 | AVAIL PIGSTY 2.1.0 1 | AVAIL PIGSTY 2.1.0 1 | AVAIL PIGSTY 2.1.0 1 | AVAIL PIGSTY 2.1.0 1 |
@@ -212,6 +212,7 @@ weight: 4220
 @ el10.x86_64 14 pg_extra_time_14 pg_extra_time_14-2.0.0-1PGDG.rhel10.2.noarch.rpm pgdg 2.0.0 32.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_extra_time_14-2.0.0-1PGDG.rhel10.2.noarch.rpm
 @ el10.x86_64 14 pg_extra_time_14 pg_extra_time_14-2.0.0-1PGDG.rhel10.noarch.rpm pgdg 2.0.0 32.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_extra_time_14-2.0.0-1PGDG.rhel10.noarch.rpm
 @ el10.aarch64 14 pg_extra_time_14 pg_extra_time_14-2.1.0-1PIGSTY.el10.aarch64.rpm pigsty 2.1.0 34.0KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_extra_time_14-2.1.0-1PIGSTY.el10.aarch64.rpm
+@ el10.aarch64 14 pg_extra_time_14 pg_extra_time_14-2.0.0-1PGDG.rhel10.2.noarch.rpm pgdg 2.0.0 32.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_extra_time_14-2.0.0-1PGDG.rhel10.2.noarch.rpm
 @ el10.aarch64 14 pg_extra_time_14 pg_extra_time_14-2.0.0-1PGDG.rhel10.noarch.rpm pgdg 2.0.0 32.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_extra_time_14-2.0.0-1PGDG.rhel10.noarch.rpm
 @ d12.x86_64 14 postgresql-14-pg-extra-time postgresql-14-pg-extra-time_2.1.0-1PIGSTY~bookworm_amd64.deb pigsty 2.1.0 40.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-extra-time/postgresql-14-pg-extra-time_2.1.0-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 14 postgresql-14-pg-extra-time postgresql-14-pg-extra-time_2.1.0-1PIGSTY~bookworm_arm64.deb pigsty 2.1.0 40.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-extra-time/postgresql-14-pg-extra-time_2.1.0-1PIGSTY~bookworm_arm64.deb
@@ -291,7 +292,7 @@ CREATE EXTENSION pg_extra_time;
 
 ## 用法
 
-> 来源：[pg_extra_time upstream README](https://github.com/bigsmoke/pg_extra_time)、[PGXN pg_extra_time](https://pgxn.org/dist/pg_extra_time/)、[local metadata](../db/extension.csv)。
+> 来源：[pg_extra_time upstream README](https://github.com/bigsmoke/pg_extra_time)、[PGXN pg_extra_time](https://pgxn.org/dist/pg_extra_time/)。
 
 `pg_extra_time` 提供一组小型 SQL 函数和类型转换，用于处理 PostgreSQL 核心函数本身不太方便表达的日期/时间、interval 和 range 计算。
 

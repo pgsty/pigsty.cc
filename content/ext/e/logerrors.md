@@ -55,7 +55,7 @@ weight: 7140
 | el9.x86_64 | AVAIL PGDG 2.1.5 2 | AVAIL PGDG 2.1.5 3 | AVAIL PGDG 2.1.5 4 | AVAIL PGDG 2.1.5 8 | AVAIL PGDG 2.1.5 7 |
 | el9.aarch64 | AVAIL PGDG 2.1.5 2 | AVAIL PGDG 2.1.5 3 | AVAIL PGDG 2.1.5 4 | AVAIL PGDG 2.1.5 8 | AVAIL PGDG 2.1.5 8 |
 | el10.x86_64 | AVAIL PGDG 2.1.5 2 | AVAIL PGDG 2.1.5 3 | AVAIL PGDG 2.1.5 3 | AVAIL PGDG 2.1.5 3 | AVAIL PGDG 2.1.5 3 |
-| el10.aarch64 | AVAIL PGDG 2.1.5 2 | AVAIL PGDG 2.1.5 3 | AVAIL PGDG 2.1.5 3 | AVAIL PGDG 2.1.5 3 | AVAIL PGDG 2.1.5 2 |
+| el10.aarch64 | AVAIL PGDG 2.1.5 2 | AVAIL PGDG 2.1.5 3 | AVAIL PGDG 2.1.5 3 | AVAIL PGDG 2.1.5 3 | AVAIL PGDG 2.1.5 3 |
 | d12.x86_64 | AVAIL PIGSTY 2.1.5 1 | AVAIL PIGSTY 2.1.5 1 | AVAIL PIGSTY 2.1.5 1 | AVAIL PIGSTY 2.1.5 1 | AVAIL PIGSTY 2.1.5 1 |
 | d12.aarch64 | AVAIL PIGSTY 2.1.5 1 | AVAIL PIGSTY 2.1.5 1 | AVAIL PIGSTY 2.1.5 1 | AVAIL PIGSTY 2.1.5 1 | AVAIL PIGSTY 2.1.5 1 |
 | d13.x86_64 | AVAIL PIGSTY 2.1.5 1 | AVAIL PIGSTY 2.1.5 1 | AVAIL PIGSTY 2.1.5 1 | AVAIL PIGSTY 2.1.5 1 | AVAIL PIGSTY 2.1.5 1 |
@@ -220,6 +220,7 @@ weight: 7140
 @ el10.x86_64 14 logerrors_14 logerrors_14-2.1.5-3PGDG.rhel10.2.x86_64.rpm pgdg 2.1.5 23.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/logerrors_14-2.1.5-3PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 14 logerrors_14 logerrors_14-2.1.5-1PGDG.rhel10.x86_64.rpm pgdg 2.1.5 23.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/logerrors_14-2.1.5-1PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 14 logerrors_14 logerrors_14-2.1.3-2PGDG.rhel10.x86_64.rpm pgdg 2.1.3 23.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/logerrors_14-2.1.3-2PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 14 logerrors_14 logerrors_14-2.1.5-3PGDG.rhel10.2.aarch64.rpm pgdg 2.1.5 23.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/logerrors_14-2.1.5-3PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 14 logerrors_14 logerrors_14-2.1.5-1PGDG.rhel10.aarch64.rpm pgdg 2.1.5 23.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/logerrors_14-2.1.5-1PGDG.rhel10.aarch64.rpm
 @ el10.aarch64 14 logerrors_14 logerrors_14-2.1.3-2PGDG.rhel10.aarch64.rpm pgdg 2.1.3 24.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/logerrors_14-2.1.3-2PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 14 postgresql-14-logerrors postgresql-14-logerrors_2.1.5-1PIGSTY~bookworm_amd64.deb pigsty 2.1.5 30.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/l/logerrors/postgresql-14-logerrors_2.1.5-1PIGSTY~bookworm_amd64.deb

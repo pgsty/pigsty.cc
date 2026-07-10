@@ -49,7 +49,7 @@ weight: 9250
 | el9.x86_64 | AVAIL PGDG 2.0 3 | AVAIL PGDG 2.0 3 | AVAIL PGDG 2.0 3 | AVAIL PGDG 2.0 3 | AVAIL PGDG 2.0 3 |
 | el9.aarch64 | AVAIL PGDG 2.0 3 | AVAIL PGDG 2.0 3 | AVAIL PGDG 2.0 3 | AVAIL PGDG 2.0 3 | AVAIL PGDG 2.0 3 |
 | el10.x86_64 | AVAIL PGDG 2.0 3 | AVAIL PGDG 2.0 3 | AVAIL PGDG 2.0 3 | AVAIL PGDG 2.0 3 | AVAIL PGDG 2.0 3 |
-| el10.aarch64 | AVAIL PGDG 2.0 3 | AVAIL PGDG 2.0 3 | AVAIL PGDG 2.0 3 | AVAIL PGDG 2.0 3 | AVAIL PGDG 2.0 2 |
+| el10.aarch64 | AVAIL PGDG 2.0 3 | AVAIL PGDG 2.0 3 | AVAIL PGDG 2.0 3 | AVAIL PGDG 2.0 3 | AVAIL PGDG 2.0 3 |
 | d12.x86_64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
 | d12.aarch64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
 | d13.x86_64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
@@ -137,7 +137,8 @@ weight: 9250
 @ el10.x86_64 14 pg_dbms_lock_14 pg_dbms_lock_14-2.0-1PGDG.rhel10.2.noarch.rpm pgdg 2.0 13.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_dbms_lock_14-2.0-1PGDG.rhel10.2.noarch.rpm
 @ el10.x86_64 14 pg_dbms_lock_14 pg_dbms_lock_14-1.0-3PGDG.rhel10.2.noarch.rpm pgdg 1.0 12.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_dbms_lock_14-1.0-3PGDG.rhel10.2.noarch.rpm
 @ el10.x86_64 14 pg_dbms_lock_14 pg_dbms_lock_14-1.0-2PGDG.rhel10.noarch.rpm pgdg 1.0 13.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_dbms_lock_14-1.0-2PGDG.rhel10.noarch.rpm
-@ el10.aarch64 14 pg_dbms_lock_14 pg_dbms_lock_14-2.0-1PGDG.rhel10.1.noarch.rpm pgdg 2.0 13.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_dbms_lock_14-2.0-1PGDG.rhel10.1.noarch.rpm
+@ el10.aarch64 14 pg_dbms_lock_14 pg_dbms_lock_14-2.0-1PGDG.rhel10.2.noarch.rpm pgdg 2.0 13.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_dbms_lock_14-2.0-1PGDG.rhel10.2.noarch.rpm
+@ el10.aarch64 14 pg_dbms_lock_14 pg_dbms_lock_14-1.0-3PGDG.rhel10.2.noarch.rpm pgdg 1.0 12.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_dbms_lock_14-1.0-3PGDG.rhel10.2.noarch.rpm
 @ el10.aarch64 14 pg_dbms_lock_14 pg_dbms_lock_14-1.0-2PGDG.rhel10.noarch.rpm pgdg 1.0 13.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_dbms_lock_14-1.0-2PGDG.rhel10.noarch.rpm
 {{< /pgext_matrix >}}
 

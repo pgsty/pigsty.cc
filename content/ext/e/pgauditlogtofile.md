@@ -50,7 +50,7 @@ weight: 7120
 | el9.x86_64 | AVAIL PGDG 1.8.4 16 | AVAIL PGDG 1.8.4 21 | AVAIL PGDG 1.8.4 23 | AVAIL PGDG 1.8.4 23 | AVAIL PGDG 1.8.4 25 |
 | el9.aarch64 | AVAIL PGDG 1.8.4 17 | AVAIL PGDG 1.8.4 22 | AVAIL PGDG 1.8.4 24 | AVAIL PGDG 1.8.4 23 | AVAIL PGDG 1.8.4 23 |
 | el10.x86_64 | AVAIL PGDG 1.8.4 17 | AVAIL PGDG 1.8.4 20 | AVAIL PGDG 1.8.4 20 | AVAIL PGDG 1.8.4 18 | AVAIL PGDG 1.8.4 18 |
-| el10.aarch64 | AVAIL PGDG 1.8.4 17 | AVAIL PGDG 1.8.4 20 | AVAIL PGDG 1.8.4 19 | AVAIL PGDG 1.8.4 18 | AVAIL PGDG 1.8.4 17 |
+| el10.aarch64 | AVAIL PGDG 1.8.4 17 | AVAIL PGDG 1.8.4 20 | AVAIL PGDG 1.8.4 19 | AVAIL PGDG 1.8.4 18 | AVAIL PGDG 1.8.4 18 |
 | d12.x86_64 | AVAIL PGDG 1.8.5 3 | AVAIL PGDG 1.8.5 3 | AVAIL PGDG 1.8.5 3 | AVAIL PGDG 1.8.5 3 | AVAIL PGDG 1.8.5 3 |
 | d12.aarch64 | AVAIL PGDG 1.8.5 3 | AVAIL PGDG 1.8.5 3 | AVAIL PGDG 1.8.5 3 | AVAIL PGDG 1.8.5 3 | AVAIL PGDG 1.8.5 3 |
 | d13.x86_64 | AVAIL PGDG 1.8.5 3 | AVAIL PGDG 1.8.5 3 | AVAIL PGDG 1.8.5 3 | AVAIL PGDG 1.8.5 3 | AVAIL PGDG 1.8.5 3 |
@@ -705,6 +705,7 @@ weight: 7120
 @ el10.x86_64 14 pgauditlogtofile_14 pgauditlogtofile_14-1.7.3-1PGDG.rhel10.x86_64.rpm pgdg 1.7.3 26.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pgauditlogtofile_14-1.7.3-1PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 14 pgauditlogtofile_14 pgauditlogtofile_14-1.7.1-1PGDG.rhel10.x86_64.rpm pgdg 1.7.1 26.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pgauditlogtofile_14-1.7.1-1PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 14 pgauditlogtofile_14 pgauditlogtofile_14-1.6.4-3PGDG.rhel10.x86_64.rpm pgdg 1.6.4 23.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pgauditlogtofile_14-1.6.4-3PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 14 pgauditlogtofile_14 pgauditlogtofile_14-1.8.4-1PGDG.rhel10.2.aarch64.rpm pgdg 1.8.4 33.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgauditlogtofile_14-1.8.4-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 14 pgauditlogtofile_14 pgauditlogtofile_14-1.8.4-1PGDG.rhel10.1.aarch64.rpm pgdg 1.8.4 33.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgauditlogtofile_14-1.8.4-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 14 pgauditlogtofile_14 pgauditlogtofile_14-1.8.4-1PGDG.rhel10.0.aarch64.rpm pgdg 1.8.4 33.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgauditlogtofile_14-1.8.4-1PGDG.rhel10.0.aarch64.rpm
 @ el10.aarch64 14 pgauditlogtofile_14 pgauditlogtofile_14-1.8.3-1PGDG.rhel10.1.aarch64.rpm pgdg 1.8.3 32.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgauditlogtofile_14-1.8.3-1PGDG.rhel10.1.aarch64.rpm

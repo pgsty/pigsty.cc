@@ -55,7 +55,7 @@ weight: 6420
 | el9.x86_64 | AVAIL PGDG 4.1 8 | AVAIL PGDG 4.1 8 | AVAIL PGDG 4.1 9 | AVAIL PGDG 4.1 10 | AVAIL PGDG 4.1 9 |
 | el9.aarch64 | AVAIL PGDG 4.1 8 | AVAIL PGDG 4.1 8 | AVAIL PGDG 4.1 9 | AVAIL PGDG 4.1 10 | AVAIL PGDG 4.1 10 |
 | el10.x86_64 | AVAIL PGDG 4.1 8 | AVAIL PGDG 4.1 8 | AVAIL PGDG 4.1 8 | AVAIL PGDG 4.1 8 | AVAIL PGDG 4.1 8 |
-| el10.aarch64 | AVAIL PGDG 4.1 8 | AVAIL PGDG 4.1 8 | AVAIL PGDG 4.1 8 | AVAIL PGDG 4.1 8 | AVAIL PGDG 4.1 7 |
+| el10.aarch64 | AVAIL PGDG 4.1 8 | AVAIL PGDG 4.1 8 | AVAIL PGDG 4.1 8 | AVAIL PGDG 4.1 8 | AVAIL PGDG 4.1 8 |
 | d12.x86_64 | AVAIL PIGSTY 4.0 1 | AVAIL PIGSTY 4.0 1 | AVAIL PIGSTY 4.0 1 | AVAIL PIGSTY 4.0 1 | AVAIL PIGSTY 4.0 1 |
 | d12.aarch64 | AVAIL PIGSTY 4.0 1 | AVAIL PIGSTY 4.0 1 | AVAIL PIGSTY 4.0 1 | AVAIL PIGSTY 4.0 1 | AVAIL PIGSTY 4.0 1 |
 | d13.x86_64 | AVAIL PIGSTY 4.0 1 | AVAIL PIGSTY 4.0 1 | AVAIL PIGSTY 4.0 1 | AVAIL PIGSTY 4.0 1 | AVAIL PIGSTY 4.0 1 |
@@ -317,6 +317,7 @@ weight: 6420
 @ el10.x86_64 14 system_stats_14 system_stats_14-3.2-2PGDG.rhel10.x86_64.rpm pgdg 3.2 31.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/system_stats_14-3.2-2PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 14 system_stats_14 system_stats_14-3.2.1-1PGDG.rhel10.1.x86_64.rpm pgdg 3.2.1 32.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/system_stats_14-3.2.1-1PGDG.rhel10.1.x86_64.rpm
 @ el10.x86_64 14 system_stats_14 system_stats_14-3.2.1-1PGDG.rhel10.0.x86_64.rpm pgdg 3.2.1 32.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/system_stats_14-3.2.1-1PGDG.rhel10.0.x86_64.rpm
+@ el10.aarch64 14 system_stats_14 system_stats_14-4.1-1PGDG.rhel10.2.aarch64.rpm pgdg 4.1 33.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/system_stats_14-4.1-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 14 system_stats_14 system_stats_14-4.1-1PGDG.rhel10.1.aarch64.rpm pgdg 4.1 33.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/system_stats_14-4.1-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 14 system_stats_14 system_stats_14-4.1-1PGDG.rhel10.0.aarch64.rpm pgdg 4.1 33.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/system_stats_14-4.1-1PGDG.rhel10.0.aarch64.rpm
 @ el10.aarch64 14 system_stats_14 system_stats_14-4.0-1PGDG.rhel10.1.aarch64.rpm pgdg 4.0 33.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/system_stats_14-4.0-1PGDG.rhel10.1.aarch64.rpm

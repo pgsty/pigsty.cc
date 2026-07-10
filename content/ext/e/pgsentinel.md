@@ -55,7 +55,7 @@ weight: 6410
 | el9.x86_64 | AVAIL PIGSTY 1.4.1 6 | AVAIL PIGSTY 1.4.1 7 | AVAIL PIGSTY 1.4.1 7 | AVAIL PIGSTY 1.4.1 7 | AVAIL PIGSTY 1.4.1 7 |
 | el9.aarch64 | AVAIL PIGSTY 1.4.1 6 | AVAIL PIGSTY 1.4.1 7 | AVAIL PIGSTY 1.4.1 7 | AVAIL PIGSTY 1.4.1 7 | AVAIL PIGSTY 1.4.1 7 |
 | el10.x86_64 | AVAIL PIGSTY 1.4.1 6 | AVAIL PIGSTY 1.4.1 7 | AVAIL PIGSTY 1.4.1 7 | AVAIL PIGSTY 1.4.1 7 | AVAIL PIGSTY 1.4.1 7 |
-| el10.aarch64 | AVAIL PIGSTY 1.4.1 6 | AVAIL PIGSTY 1.4.1 7 | AVAIL PIGSTY 1.4.1 7 | AVAIL PIGSTY 1.4.1 7 | AVAIL PIGSTY 1.4.1 6 |
+| el10.aarch64 | AVAIL PIGSTY 1.4.1 6 | AVAIL PIGSTY 1.4.1 7 | AVAIL PIGSTY 1.4.1 7 | AVAIL PIGSTY 1.4.1 7 | AVAIL PIGSTY 1.4.1 7 |
 | d12.x86_64 | AVAIL PGDG 1.4.1 3 | AVAIL PGDG 1.4.1 3 | AVAIL PGDG 1.4.1 3 | AVAIL PGDG 1.4.1 3 | AVAIL PGDG 1.4.1 3 |
 | d12.aarch64 | AVAIL PGDG 1.4.1 3 | AVAIL PGDG 1.4.1 3 | AVAIL PGDG 1.4.1 3 | AVAIL PGDG 1.4.1 3 | AVAIL PGDG 1.4.1 3 |
 | d13.x86_64 | AVAIL PGDG 1.4.1 3 | AVAIL PGDG 1.4.1 3 | AVAIL PGDG 1.4.1 3 | AVAIL PGDG 1.4.1 3 | AVAIL PGDG 1.4.1 3 |
@@ -354,6 +354,7 @@ weight: 6410
 @ el10.x86_64 14 pgsentinel_14 pgsentinel_14-1.3.1-1PGDG.rhel10.0.x86_64.rpm pgdg 1.3.1 25.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pgsentinel_14-1.3.1-1PGDG.rhel10.0.x86_64.rpm
 @ el10.x86_64 14 pgsentinel_14 pgsentinel_14-1.2.0-1PGDG.rhel10.x86_64.rpm pgdg 1.2.0 24.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pgsentinel_14-1.2.0-1PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 14 pgsentinel_14 pgsentinel_14-1.4.1-1PIGSTY.el10.aarch64.rpm pigsty 1.4.1 23.3KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgsentinel_14-1.4.1-1PIGSTY.el10.aarch64.rpm
+@ el10.aarch64 14 pgsentinel_14 pgsentinel_14-1.4.1-1PGDG.rhel10.2.aarch64.rpm pgdg 1.4.1 24.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgsentinel_14-1.4.1-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 14 pgsentinel_14 pgsentinel_14-1.4.0-1PGDG.rhel10.1.aarch64.rpm pgdg 1.4.0 24.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgsentinel_14-1.4.0-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 14 pgsentinel_14 pgsentinel_14-1.4.0-1PGDG.rhel10.0.aarch64.rpm pgdg 1.4.0 24.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgsentinel_14-1.4.0-1PGDG.rhel10.0.aarch64.rpm
 @ el10.aarch64 14 pgsentinel_14 pgsentinel_14-1.3.1-1PGDG.rhel10.1.aarch64.rpm pgdg 1.3.1 24.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgsentinel_14-1.3.1-1PGDG.rhel10.1.aarch64.rpm

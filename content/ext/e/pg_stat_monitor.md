@@ -55,7 +55,7 @@ weight: 6230
 | el9.x86_64 | AVAIL PGDG 2.3.2 6 | AVAIL PGDG 2.3.2 9 | AVAIL PGDG 2.3.2 11 | AVAIL PGDG 2.3.2 12 | AVAIL PGDG 2.3.2 15 |
 | el9.aarch64 | AVAIL PGDG 2.3.2 6 | AVAIL PGDG 2.3.2 9 | AVAIL PGDG 2.3.2 11 | AVAIL PGDG 2.3.2 12 | AVAIL PGDG 2.3.2 12 |
 | el10.x86_64 | AVAIL PGDG 2.3.2 6 | AVAIL PGDG 2.3.2 8 | AVAIL PGDG 2.3.2 8 | AVAIL PGDG 2.3.2 8 | AVAIL PGDG 2.3.2 8 |
-| el10.aarch64 | AVAIL PGDG 2.3.2 6 | AVAIL PGDG 2.3.2 8 | AVAIL PGDG 2.3.2 8 | AVAIL PGDG 2.3.2 8 | AVAIL PGDG 2.3.2 7 |
+| el10.aarch64 | AVAIL PGDG 2.3.2 6 | AVAIL PGDG 2.3.2 8 | AVAIL PGDG 2.3.2 8 | AVAIL PGDG 2.3.2 8 | AVAIL PGDG 2.3.2 8 |
 | d12.x86_64 | AVAIL PIGSTY 2.3.2 1 | AVAIL PIGSTY 2.3.2 1 | AVAIL PIGSTY 2.3.2 1 | AVAIL PIGSTY 2.3.2 1 | AVAIL PIGSTY 2.3.2 1 |
 | d12.aarch64 | AVAIL PIGSTY 2.3.2 1 | AVAIL PIGSTY 2.3.2 1 | AVAIL PIGSTY 2.3.2 1 | AVAIL PIGSTY 2.3.2 1 | AVAIL PIGSTY 2.3.2 1 |
 | d13.x86_64 | AVAIL PIGSTY 2.3.2 1 | AVAIL PIGSTY 2.3.2 1 | AVAIL PIGSTY 2.3.2 1 | AVAIL PIGSTY 2.3.2 1 | AVAIL PIGSTY 2.3.2 1 |
@@ -351,6 +351,7 @@ weight: 6230
 @ el10.x86_64 14 pg_stat_monitor_14 pg_stat_monitor_14-2.3.1-1PGDGrhel10.0.x86_64.rpm pgdg 2.3.1 44.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_stat_monitor_14-2.3.1-1PGDGrhel10.0.x86_64.rpm
 @ el10.x86_64 14 pg_stat_monitor_14 pg_stat_monitor_14-2.2.0-1PGDG.rhel10.x86_64.rpm pgdg 2.2.0 42.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_stat_monitor_14-2.2.0-1PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 14 pg_stat_monitor_14 pg_stat_monitor_14-2.1.1-1PGDG.rhel10.x86_64.rpm pgdg 2.1.1 42.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_stat_monitor_14-2.1.1-1PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 14 pg_stat_monitor_14 pg_stat_monitor_14-2.3.2-1PGDG.rhel10.2.aarch64.rpm pgdg 2.3.2 43.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_stat_monitor_14-2.3.2-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 14 pg_stat_monitor_14 pg_stat_monitor_14-2.3.2-1PGDG.rhel10.1.aarch64.rpm pgdg 2.3.2 43.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_stat_monitor_14-2.3.2-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 14 pg_stat_monitor_14 pg_stat_monitor_14-2.3.2-1PGDG.rhel10.0.aarch64.rpm pgdg 2.3.2 43.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_stat_monitor_14-2.3.2-1PGDG.rhel10.0.aarch64.rpm
 @ el10.aarch64 14 pg_stat_monitor_14 pg_stat_monitor_14-2.3.1-1PIGSTY.el10.aarch64.rpm pigsty 2.3.1 43.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_stat_monitor_14-2.3.1-1PIGSTY.el10.aarch64.rpm

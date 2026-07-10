@@ -55,7 +55,7 @@ weight: 9630
 | el9.x86_64 | AVAIL PGDG 2.6 3 | AVAIL PGDG 2.6 2 | AVAIL PGDG 2.6 2 | AVAIL PGDG 2.6 2 | AVAIL PGDG 2.6 2 |
 | el9.aarch64 | AVAIL PGDG 2.6 3 | AVAIL PGDG 2.6 2 | AVAIL PGDG 2.6 3 | AVAIL PGDG 2.6 4 | AVAIL PGDG 2.6 4 |
 | el10.x86_64 | AVAIL PGDG 2.6 2 | AVAIL PGDG 2.6 2 | AVAIL PGDG 2.6 2 | AVAIL PGDG 2.6 2 | AVAIL PGDG 2.6 2 |
-| el10.aarch64 | AVAIL PGDG 2.6 2 | AVAIL PGDG 2.6 2 | AVAIL PGDG 2.6 2 | AVAIL PGDG 2.6 2 | AVAIL PGDG 2.6 1 |
+| el10.aarch64 | AVAIL PGDG 2.6 2 | AVAIL PGDG 2.6 2 | AVAIL PGDG 2.6 2 | AVAIL PGDG 2.6 2 | AVAIL PGDG 2.6 2 |
 | d12.x86_64 | AVAIL PGDG 2.6 1 | AVAIL PGDG 2.6 1 | AVAIL PGDG 2.6 1 | AVAIL PGDG 2.6 1 | AVAIL PGDG 2.6 1 |
 | d12.aarch64 | AVAIL PGDG 2.6 1 | AVAIL PGDG 2.6 1 | AVAIL PGDG 2.6 1 | AVAIL PGDG 2.6 1 | AVAIL PGDG 2.6 1 |
 | d13.x86_64 | AVAIL PGDG 2.6 1 | AVAIL PGDG 2.6 1 | AVAIL PGDG 2.6 1 | AVAIL PGDG 2.6 1 | AVAIL PGDG 2.6 1 |
@@ -172,6 +172,7 @@ weight: 9630
 @ el9.aarch64 14 wal2json_14 wal2json_14-2.5-1.rhel9.aarch64.rpm pgdg 2.5 30.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/wal2json_14-2.5-1.rhel9.aarch64.rpm
 @ el10.x86_64 14 wal2json_14 wal2json_14-2.6-5PGDG.rhel10.2.x86_64.rpm pgdg 2.6 32.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/wal2json_14-2.6-5PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 14 wal2json_14 wal2json_14-2.6-3PGDG.rhel10.x86_64.rpm pgdg 2.6 32.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/wal2json_14-2.6-3PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 14 wal2json_14 wal2json_14-2.6-5PGDG.rhel10.2.aarch64.rpm pgdg 2.6 31.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/wal2json_14-2.6-5PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 14 wal2json_14 wal2json_14-2.6-3PGDG.rhel10.aarch64.rpm pgdg 2.6 31.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/wal2json_14-2.6-3PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 14 postgresql-14-wal2json postgresql-14-wal2json_2.6-3.pgdg12+1_amd64.deb pgdg 2.6 56.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-14-wal2json_2.6-3.pgdg12+1_amd64.deb
 @ d12.aarch64 14 postgresql-14-wal2json postgresql-14-wal2json_2.6-3.pgdg12+1_arm64.deb pgdg 2.6 53.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/w/wal2json/postgresql-14-wal2json_2.6-3.pgdg12+1_arm64.deb

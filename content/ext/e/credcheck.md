@@ -50,7 +50,7 @@ weight: 7310
 | el9.x86_64 | AVAIL PGDG 4.7 14 | AVAIL PGDG 4.7 15 | AVAIL PGDG 4.7 18 | AVAIL PGDG 4.7 23 | AVAIL PGDG 4.7 22 |
 | el9.aarch64 | AVAIL PGDG 4.7 14 | AVAIL PGDG 4.7 15 | AVAIL PGDG 4.7 18 | AVAIL PGDG 4.7 23 | AVAIL PGDG 4.7 23 |
 | el10.x86_64 | AVAIL PGDG 4.7 13 | AVAIL PGDG 4.7 13 | AVAIL PGDG 4.7 13 | AVAIL PGDG 4.7 13 | AVAIL PGDG 4.7 13 |
-| el10.aarch64 | AVAIL PGDG 4.7 14 | AVAIL PGDG 4.7 14 | AVAIL PGDG 4.7 14 | AVAIL PGDG 4.7 14 | AVAIL PGDG 4.7 13 |
+| el10.aarch64 | AVAIL PGDG 4.7 14 | AVAIL PGDG 4.7 14 | AVAIL PGDG 4.7 14 | AVAIL PGDG 4.7 14 | AVAIL PGDG 4.7 14 |
 | d12.x86_64 | AVAIL PGDG 5.0 3 | AVAIL PGDG 5.0 3 | AVAIL PGDG 5.0 3 | AVAIL PGDG 5.0 3 | AVAIL PGDG 5.0 3 |
 | d12.aarch64 | AVAIL PGDG 5.0 3 | AVAIL PGDG 5.0 3 | AVAIL PGDG 5.0 3 | AVAIL PGDG 5.0 3 | AVAIL PGDG 5.0 3 |
 | d13.x86_64 | AVAIL PGDG 5.0 3 | AVAIL PGDG 5.0 3 | AVAIL PGDG 5.0 3 | AVAIL PGDG 5.0 3 | AVAIL PGDG 5.0 3 |
@@ -613,6 +613,7 @@ weight: 7310
 @ el10.x86_64 14 credcheck_14 credcheck_14-4.2-1PGDG.rhel10.x86_64.rpm pgdg 4.2 40.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/credcheck_14-4.2-1PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 14 credcheck_14 credcheck_14-4.1-1PGDG.rhel10.x86_64.rpm pgdg 4.1 39.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/credcheck_14-4.1-1PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 14 credcheck_14 credcheck_14-3.0-2PGDG.rhel10.x86_64.rpm pgdg 3.0 36.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/credcheck_14-3.0-2PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 14 credcheck_14 credcheck_14-4.7-1PGDG.rhel10.2.aarch64.rpm pgdg 4.7 41.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/credcheck_14-4.7-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 14 credcheck_14 credcheck_14-4.7-1PGDG.rhel10.1.aarch64.rpm pgdg 4.7 41.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/credcheck_14-4.7-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 14 credcheck_14 credcheck_14-4.7-1PGDG.rhel10.0.aarch64.rpm pgdg 4.7 41.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/credcheck_14-4.7-1PGDG.rhel10.0.aarch64.rpm
 @ el10.aarch64 14 credcheck_14 credcheck_14-4.6-1PGDG.rhel10.1.aarch64.rpm pgdg 4.6 40.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/credcheck_14-4.6-1PGDG.rhel10.1.aarch64.rpm

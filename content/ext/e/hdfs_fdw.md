@@ -49,7 +49,7 @@ weight: 8740
 | el9.x86_64 | AVAIL PGDG 2.3.3 2 | AVAIL PGDG 2.3.3 3 | AVAIL PGDG 2.3.3 3 | AVAIL PGDG 2.3.3 6 | AVAIL PGDG 2.3.3 7 |
 | el9.aarch64 | AVAIL PGDG 2.3.3 2 | AVAIL PGDG 2.3.3 3 | AVAIL PGDG 2.3.3 3 | AVAIL PGDG 2.3.3 6 | AVAIL PGDG 2.3.3 6 |
 | el10.x86_64 | AVAIL PGDG 2.3.3 2 | AVAIL PGDG 2.3.3 3 | AVAIL PGDG 2.3.3 3 | AVAIL PGDG 2.3.3 3 | AVAIL PGDG 2.3.3 3 |
-| el10.aarch64 | AVAIL PGDG 2.3.3 2 | AVAIL PGDG 2.3.3 3 | AVAIL PGDG 2.3.3 3 | AVAIL PGDG 2.3.3 3 | AVAIL PGDG 2.3.3 2 |
+| el10.aarch64 | AVAIL PGDG 2.3.3 2 | AVAIL PGDG 2.3.3 3 | AVAIL PGDG 2.3.3 3 | AVAIL PGDG 2.3.3 3 | AVAIL PGDG 2.3.3 3 |
 | d12.x86_64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
 | d12.aarch64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
 | d13.x86_64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
@@ -156,6 +156,7 @@ weight: 8740
 @ el10.x86_64 14 hdfs_fdw_14 hdfs_fdw_14-2.3.3-3PGDG.rhel10.2.x86_64.rpm pgdg 2.3.3 115.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/hdfs_fdw_14-2.3.3-3PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 14 hdfs_fdw_14 hdfs_fdw_14-2.3.3-1PGDG.rhel10.x86_64.rpm pgdg 2.3.3 117.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/hdfs_fdw_14-2.3.3-1PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 14 hdfs_fdw_14 hdfs_fdw_14-2.3.2-5PGDG.rhel10.x86_64.rpm pgdg 2.3.2 115.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/hdfs_fdw_14-2.3.2-5PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 14 hdfs_fdw_14 hdfs_fdw_14-2.3.3-3PGDG.rhel10.2.aarch64.rpm pgdg 2.3.3 114.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/hdfs_fdw_14-2.3.3-3PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 14 hdfs_fdw_14 hdfs_fdw_14-2.3.3-1PGDG.rhel10.aarch64.rpm pgdg 2.3.3 115.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/hdfs_fdw_14-2.3.3-1PGDG.rhel10.aarch64.rpm
 @ el10.aarch64 14 hdfs_fdw_14 hdfs_fdw_14-2.3.2-5PGDG.rhel10.aarch64.rpm pgdg 2.3.2 114.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/hdfs_fdw_14-2.3.2-5PGDG.rhel10.aarch64.rpm
 {{< /pgext_matrix >}}

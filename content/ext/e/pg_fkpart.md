@@ -55,7 +55,7 @@ weight: 2500
 | el9.x86_64 | AVAIL PGDG 1.7.0 2 | AVAIL PGDG 1.7.0 3 | AVAIL PGDG 1.7.0 3 | AVAIL PGDG 1.7.0 3 | AVAIL PGDG 1.7.0 3 |
 | el9.aarch64 | AVAIL PGDG 1.7.0 2 | AVAIL PGDG 1.7.0 3 | AVAIL PGDG 1.7.0 3 | AVAIL PGDG 1.7.0 3 | AVAIL PGDG 1.7.0 3 |
 | el10.x86_64 | AVAIL PGDG 1.7.0 2 | AVAIL PGDG 1.7.0 2 | AVAIL PGDG 1.7.0 2 | AVAIL PGDG 1.7.0 2 | AVAIL PGDG 1.7.0 2 |
-| el10.aarch64 | AVAIL PGDG 1.7.0 2 | AVAIL PGDG 1.7.0 2 | AVAIL PGDG 1.7.0 2 | AVAIL PGDG 1.7.0 2 | AVAIL PGDG 1.7.0 1 |
+| el10.aarch64 | AVAIL PGDG 1.7.0 2 | AVAIL PGDG 1.7.0 2 | AVAIL PGDG 1.7.0 2 | AVAIL PGDG 1.7.0 2 | AVAIL PGDG 1.7.0 2 |
 | d12.x86_64 | AVAIL PIGSTY 1.7.0 1 | AVAIL PIGSTY 1.7.0 1 | AVAIL PIGSTY 1.7.0 1 | AVAIL PIGSTY 1.7.0 1 | AVAIL PIGSTY 1.7.0 1 |
 | d12.aarch64 | AVAIL PIGSTY 1.7.0 1 | AVAIL PIGSTY 1.7.0 1 | AVAIL PIGSTY 1.7.0 1 | AVAIL PIGSTY 1.7.0 1 | AVAIL PIGSTY 1.7.0 1 |
 | d13.x86_64 | AVAIL PIGSTY 1.7.0 1 | AVAIL PIGSTY 1.7.0 1 | AVAIL PIGSTY 1.7.0 1 | AVAIL PIGSTY 1.7.0 1 | AVAIL PIGSTY 1.7.0 1 |
@@ -170,6 +170,7 @@ weight: 2500
 @ el9.aarch64 14 pg_fkpart_14 pg_fkpart_14-1.7.0-1PIGSTY.el9.aarch64.rpm pigsty 1.7.0 22.6KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_fkpart_14-1.7.0-1PIGSTY.el9.aarch64.rpm
 @ el10.x86_64 14 pg_fkpart_14 pg_fkpart_14-1.7.0-6PGDG.rhel10.2.noarch.rpm pgdg 1.7.0 23.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_fkpart_14-1.7.0-6PGDG.rhel10.2.noarch.rpm
 @ el10.x86_64 14 pg_fkpart_14 pg_fkpart_14-1.7.0-6PGDG.rhel10.noarch.rpm pgdg 1.7.0 23.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_fkpart_14-1.7.0-6PGDG.rhel10.noarch.rpm
+@ el10.aarch64 14 pg_fkpart_14 pg_fkpart_14-1.7.0-6PGDG.rhel10.2.noarch.rpm pgdg 1.7.0 23.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_fkpart_14-1.7.0-6PGDG.rhel10.2.noarch.rpm
 @ el10.aarch64 14 pg_fkpart_14 pg_fkpart_14-1.7.0-6PGDG.rhel10.noarch.rpm pgdg 1.7.0 23.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_fkpart_14-1.7.0-6PGDG.rhel10.noarch.rpm
 @ d12.x86_64 14 postgresql-14-pg-fkpart postgresql-14-pg-fkpart_1.7.0-1PIGSTY~bookworm_amd64.deb pigsty 1.7.0 15.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-fkpart/postgresql-14-pg-fkpart_1.7.0-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 14 postgresql-14-pg-fkpart postgresql-14-pg-fkpart_1.7.0-1PIGSTY~bookworm_arm64.deb pigsty 1.7.0 15.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-fkpart/postgresql-14-pg-fkpart_1.7.0-1PIGSTY~bookworm_arm64.deb

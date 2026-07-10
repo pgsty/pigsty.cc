@@ -49,7 +49,7 @@ weight: 9260
 | el9.x86_64 | AVAIL PGDG 2.0 4 | AVAIL PGDG 2.0 4 | AVAIL PGDG 2.0 4 | AVAIL PGDG 2.0 4 | AVAIL PGDG 2.0 6 |
 | el9.aarch64 | AVAIL PGDG 2.0 4 | AVAIL PGDG 2.0 4 | AVAIL PGDG 2.0 4 | AVAIL PGDG 2.0 4 | AVAIL PGDG 2.0 4 |
 | el10.x86_64 | AVAIL PGDG 2.0 4 | AVAIL PGDG 2.0 4 | AVAIL PGDG 2.0 4 | AVAIL PGDG 2.0 4 | AVAIL PGDG 2.0 4 |
-| el10.aarch64 | AVAIL PGDG 2.0 4 | AVAIL PGDG 2.0 4 | AVAIL PGDG 2.0 4 | AVAIL PGDG 2.0 4 | AVAIL PGDG 2.0 3 |
+| el10.aarch64 | AVAIL PGDG 2.0 4 | AVAIL PGDG 2.0 4 | AVAIL PGDG 2.0 4 | AVAIL PGDG 2.0 4 | AVAIL PGDG 2.0 4 |
 | d12.x86_64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
 | d12.aarch64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
 | d13.x86_64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
@@ -160,6 +160,7 @@ weight: 9260
 @ el10.x86_64 14 pg_dbms_job_14 pg_dbms_job_14-2.0-1PGDG.rhel10.1.x86_64.rpm pgdg 2.0 31.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_dbms_job_14-2.0-1PGDG.rhel10.1.x86_64.rpm
 @ el10.x86_64 14 pg_dbms_job_14 pg_dbms_job_14-2.0-1PGDG.rhel10.0.x86_64.rpm pgdg 2.0 31.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_dbms_job_14-2.0-1PGDG.rhel10.0.x86_64.rpm
 @ el10.x86_64 14 pg_dbms_job_14 pg_dbms_job_14-1.5-5PGDG.rhel10.x86_64.rpm pgdg 1.5 26.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_dbms_job_14-1.5-5PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 14 pg_dbms_job_14 pg_dbms_job_14-2.0-1PGDG.rhel10.2.aarch64.rpm pgdg 2.0 30.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_dbms_job_14-2.0-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 14 pg_dbms_job_14 pg_dbms_job_14-2.0-1PGDG.rhel10.1.aarch64.rpm pgdg 2.0 30.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_dbms_job_14-2.0-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 14 pg_dbms_job_14 pg_dbms_job_14-2.0-1PGDG.rhel10.0.aarch64.rpm pgdg 2.0 30.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_dbms_job_14-2.0-1PGDG.rhel10.0.aarch64.rpm
 @ el10.aarch64 14 pg_dbms_job_14 pg_dbms_job_14-1.5-5PGDG.rhel10.aarch64.rpm pgdg 1.5 26.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_dbms_job_14-1.5-5PGDG.rhel10.aarch64.rpm

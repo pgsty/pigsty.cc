@@ -8,7 +8,7 @@ icon: fas fa-warehouse
 
 | **仓库** | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | <a class="ext-badge ext-badge--repo mixed" href="/ext/repo#mixed">MIXED</a> | <a class="ext-badge ext-badge--repo contrib" href="/ext/repo#contrib">CONTRIB</a> | **总计** |
 |:------:|:------:|:------:|:------:|:------:|:------:|
-| **扩展数量** | 114 | 295 | 51 | 71 | **531** |
+| **扩展数量** | 117 | 295 | 48 | 71 | **531** |
 {.ext-table}
 
 
@@ -16,7 +16,7 @@ icon: fas fa-warehouse
 
 ## PGDG 仓库 {#pgdg}
 
-PostgreSQL 全球开发组提供的二进制制成品仓库，包括 114 个扩展。
+PostgreSQL 全球开发组提供的二进制制成品仓库，包括 117 个扩展。
 
 | **扩展** | **RPM仓库** | **RPM包** | **RPM版本** | **DEB仓库** | **DEB包** | **DEB版本** |
 |:---------|:----------:|:---------|:----------:|:----------:|:---------|:----------:|
@@ -35,10 +35,10 @@ PostgreSQL 全球开发组提供的二进制制成品仓库，包括 114 个扩�
 | [`h3`](/ext/e/h3) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `h3-pg_$v` | `4.2.3` | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `postgresql-$v-h3` | `4.2.3` |
 | [`h3_postgis`](/ext/e/h3_postgis) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `h3-pg_$v` | `4.2.3` | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `postgresql-$v-h3` | `4.2.3` |
 | [`q3c`](/ext/e/q3c) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `q3c_$v` | `2.0.3` | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `postgresql-$v-q3c` | `2.0.3` |
-| [`ogr_fdw`](/ext/e/ogr_fdw) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `ogr_fdw_$v` | `1.1.7` | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `postgresql-$v-ogr-fdw` | `1.1.8` |
+| [`ogr_fdw`](/ext/e/ogr_fdw) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `ogr_fdw_$v` | `1.1.9` | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `postgresql-$v-ogr-fdw` | `1.1.8` |
 | [`mobilitydb`](/ext/e/mobilitydb) | - | - | - | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `postgresql-$v-mobilitydb` | `1.3.0` |
 | [`mobilitydb_datagen`](/ext/e/mobilitydb_datagen) | - | - | - | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `postgresql-$v-mobilitydb` | `1.3.0` |
-| [`vector`](/ext/e/vector) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `pgvector_$v` | `0.8.4` | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `postgresql-$v-pgvector` | `0.8.4` |
+| [`vector`](/ext/e/vector) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `pgvector_$v` | `0.8.5` | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `postgresql-$v-pgvector` | `0.8.4` |
 | [`pg_partman`](/ext/e/pg_partman) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `pg_partman_$v` | `5.4.3` | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `postgresql-$v-partman` | `5.4.3` |
 | [`plproxy`](/ext/e/plproxy) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `plproxy_$v` | `2.11.0` | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `postgresql-$v-plproxy` | `2.11.0` |
 | [`pg_strom`](/ext/e/pg_strom) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `pg_strom_$v` | `6.1` | - | - | - |
@@ -52,6 +52,7 @@ PostgreSQL 全球开发组提供的二进制制成品仓库，包括 114 个扩�
 | [`plluau`](/ext/e/plluau) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `pllua_$v` | `2.0.12` | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `postgresql-$v-pllua` | `2.0.12` |
 | [`hstore_plluau`](/ext/e/hstore_plluau) | - | - | - | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `postgresql-$v-pllua` | `2.0.12` |
 | [`pldbgapi`](/ext/e/pldbgapi) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `pldebugger_$v` | `1.10` | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `postgresql-$v-pldebugger` | `1.10` |
+| [`plpgsql_check`](/ext/e/plpgsql_check) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `plpgsql_check_$v` | `2.9.3` | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `postgresql-$v-plpgsql-check` | `2.9.2` |
 | [`plprofiler`](/ext/e/plprofiler) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `plprofiler_$v` | `4.2.5` | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `postgresql-$v-plprofiler` | `4.2.5` |
 | [`plsh`](/ext/e/plsh) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `plsh_$v` | `1.20220917` | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `postgresql-$v-plsh` | `1.20220917` |
 | [`pljava`](/ext/e/pljava) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `pljava_$v` | `1.6.10` | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `postgresql-$v-pljava` | `1.6.9` |
@@ -67,9 +68,10 @@ PostgreSQL 全球开发组提供的二进制制成品仓库，包括 114 个扩�
 | [`pgmp`](/ext/e/pgmp) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `pgmp_$v` | `1.0.5` | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `postgresql-$v-pgmp` | `1.0.5` |
 | [`ip4r`](/ext/e/ip4r) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `ip4r_$v` | `2.4.3` | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `postgresql-$v-ip4r` | `2.4.3` |
 | [`debversion`](/ext/e/debversion) | - | - | - | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `postgresql-$v-debversion` | `1.2.0` |
+| [`http`](/ext/e/http) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `pgsql_http_$v` | `1.7.2` | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `postgresql-$v-http` | `1.7.1` |
 | [`icu_ext`](/ext/e/icu_ext) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `icu_ext_$v` | `1.11.0` | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `postgresql-$v-icu-ext` | `1.11.0` |
 | [`topn`](/ext/e/topn) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `topn_$v` | `2.7.0` | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `postgresql-$v-topn` | `2.7.0` |
-| [`tdigest`](/ext/e/tdigest) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `tdigest_$v` | `1.4.2` | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `postgresql-$v-tdigest` | `1.4.3` |
+| [`tdigest`](/ext/e/tdigest) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `tdigest_$v` | `1.4.4` | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `postgresql-$v-tdigest` | `1.4.3` |
 | [`extra_window_functions`](/ext/e/extra_window_functions) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `extra_window_functions_$v` | `1.0` | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `postgresql-$v-extra-window-functions` | `1.0` |
 | [`pg_csv`](/ext/e/pg_csv) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `pg_csv_$v` | `1.0.1` | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `postgresql-$v-pg-csv` | `1.0.1` |
 | [`pg_repack`](/ext/e/pg_repack) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `pg_repack_$v` | `1.5.3` | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `postgresql-$v-repack` | `1.5.3` |
@@ -103,8 +105,9 @@ PostgreSQL 全球开发组提供的二进制制成品仓库，包括 114 个扩�
 | [`credcheck`](/ext/e/credcheck) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `credcheck_$v` | `4.7` | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `postgresql-$v-credcheck` | `5.0` |
 | [`pg_pwhash`](/ext/e/pg_pwhash) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `pg_pwhash_$v` | `1.0` | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `postgresql-$v-pg-pwhash` | `1.0` |
 | [`set_user`](/ext/e/set_user) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `set_user_$v` | `4.2.0` | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `postgresql-$v-set-user` | `4.2.0` |
+| [`pgextwlist`](/ext/e/pgextwlist) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `pgextwlist_$v` | `1.20` | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `postgresql-$v-pgextwlist` | `1.20` |
 | [`multicorn`](/ext/e/multicorn) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `multicorn2_$v` | `3.2` | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `postgresql-$v-multicorn` | `3.2` |
-| [`odbc_fdw`](/ext/e/odbc_fdw) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `odbc_fdw_$v` | `0.5.1` | - | - | - |
+| [`odbc_fdw`](/ext/e/odbc_fdw) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `odbc_fdw_$v` | `0.6.1` | - | - | - |
 | [`jdbc_fdw`](/ext/e/jdbc_fdw) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `jdbc_fdw_$v` | `0.4.0` | - | - | - |
 | [`pgspider_ext`](/ext/e/pgspider_ext) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `pgspider_ext_$v` | `1.3.0` | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `postgresql-$v-pgspider-ext` | `1.3.0` |
 | [`mysql_fdw`](/ext/e/mysql_fdw) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `mysql_fdw_$v` | `2.9.3` | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `postgresql-$v-mysql-fdw` | `2.9.3` |
@@ -447,7 +450,7 @@ Pigsty 扩展仓库在 PGDG 仓库的基础上，额外提供了 295 个扩展�
 
 ## 两者皆有 {#mixed}
 
-有一些扩展在 PIGSTY 和 PGDG 仓库中同时提供（51 个）。
+有一些扩展在 PIGSTY 和 PGDG 仓库中同时提供（48 个）。
 
 | **扩展** | **RPM仓库** | **RPM包** | **RPM版本** | **DEB仓库** | **DEB包** | **DEB版本** |
 |:---------|:----------:|:---------|:----------:|:----------:|:---------|:----------:|
@@ -461,7 +464,6 @@ Pigsty 扩展仓库在 PGDG 仓库的基础上，额外提供了 295 个扩展�
 | [`pg_ivm`](/ext/e/pg_ivm) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `pg_ivm_$v` | `1.15` | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `postgresql-$v-pg-ivm` | `1.15` |
 | [`rdkit`](/ext/e/rdkit) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `rdkit_$v` | `202503.6` | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `postgresql-$v-rdkit` | `202503.6` |
 | [`pljs`](/ext/e/pljs) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `pljs_$v` | `1.0.5` | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `postgresql-$v-pljs` | `1.0.5` |
-| [`plpgsql_check`](/ext/e/plpgsql_check) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `plpgsql_check_$v` | `2.9.2` | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `postgresql-$v-plpgsql-check` | `2.9.2` |
 | [`asn1oid`](/ext/e/asn1oid) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `asn1oid_$v` | `1.6` | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `postgresql-$v-asn1oid` | `1.6` |
 | [`pgfaceting`](/ext/e/pgfaceting) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `pgfaceting_$v` | `0.2.0` | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `postgresql-$v-pgfaceting` | `0.2.0` |
 | [`pg_sphere`](/ext/e/pg_sphere) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `pgsphere_$v` | `1.5.2` | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `postgresql-$v-pgsphere` | `1.5.2` |
@@ -471,7 +473,6 @@ Pigsty 扩展仓库在 PGDG 仓库的基础上，额外提供了 295 个扩展�
 | [`pg_rrule`](/ext/e/pg_rrule) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `pg_rrule_$v` | `0.3.0` | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `postgresql-$v-pg-rrule` | `0.3.0` |
 | [`timestamp9`](/ext/e/timestamp9) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `timestamp9_$v` | `1.4.0` | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `postgresql-$v-timestamp9` | `1.4.0` |
 | [`gzip`](/ext/e/gzip) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `pgsql_gzip_$v` | `1.1.0` | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `postgresql-$v-gzip` | `1.1.0` |
-| [`http`](/ext/e/http) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `pgsql_http_$v` | `1.7.1` | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `postgresql-$v-http` | `1.7.1` |
 | [`pgpcre`](/ext/e/pgpcre) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `pgpcre_$v` | `0.20190509` | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `postgresql-$v-pgpcre` | `0.20190509` |
 | [`pg_readme`](/ext/e/pg_readme) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `pg_readme_$v` | `0.7.0` | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `postgresql-$v-pg-readme` | `0.7.0` |
 | [`pg_readme_test_extension`](/ext/e/pg_readme_test_extension) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `pg_readme_$v` | `0.7.0` | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `postgresql-$v-pg-readme` | `0.7.0` |
@@ -498,8 +499,7 @@ Pigsty 扩展仓库在 PGDG 仓库的基础上，额外提供了 295 个扩展�
 | [`pgcryptokey`](/ext/e/pgcryptokey) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `pgcryptokey_$v` | `0.85` | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `postgresql-$v-pgcryptokey` | `0.85` |
 | [`login_hook`](/ext/e/login_hook) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `login_hook_$v` | `1.7` | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `postgresql-$v-login-hook` | `1.7` |
 | [`pg_snakeoil`](/ext/e/pg_snakeoil) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `pg_snakeoil_$v` | `1.4` | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `postgresql-$v-snakeoil` | `1.4` |
-| [`pgextwlist`](/ext/e/pgextwlist) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `pgextwlist_$v` | `1.19` | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `postgresql-$v-pgextwlist` | `1.19` |
-| [`pg_statement_rollback`](/ext/e/pg_statement_rollback) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `pg_statement_rollback_$v` | `1.5` | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `postgresql-$v-pg-statement-rollback` | `1.5` |
+| [`pg_statement_rollback`](/ext/e/pg_statement_rollback) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `pg_statement_rollback_$v` | `1.6` | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `postgresql-$v-pg-statement-rollback` | `1.5` |
 | [`db2fce`](/ext/e/db2fce) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `db2fce_$v` | `0.0.17` | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `postgresql-$v-db2fce` | `0.0.17` |
 | [`mimeo`](/ext/e/mimeo) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `mimeo_$v` | `1.5.1` | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `postgresql-$v-mimeo` | `1.5.1` |
 {.ext-table}

@@ -58,7 +58,7 @@ weight: 2840
 | el9.x86_64 | AVAIL PGDG 1.15 7 | AVAIL PGDG 1.15 9 | AVAIL PGDG 1.15 10 | AVAIL PGDG 1.15 15 | AVAIL PGDG 1.15 18 |
 | el9.aarch64 | AVAIL PGDG 1.15 7 | AVAIL PGDG 1.15 9 | AVAIL PGDG 1.15 10 | AVAIL PGDG 1.15 15 | AVAIL PGDG 1.15 15 |
 | el10.x86_64 | AVAIL PGDG 1.15 7 | AVAIL PGDG 1.15 8 | AVAIL PGDG 1.15 8 | AVAIL PGDG 1.15 8 | AVAIL PGDG 1.15 8 |
-| el10.aarch64 | AVAIL PGDG 1.15 7 | AVAIL PGDG 1.15 8 | AVAIL PGDG 1.15 8 | AVAIL PGDG 1.15 8 | AVAIL PGDG 1.15 7 |
+| el10.aarch64 | AVAIL PGDG 1.15 7 | AVAIL PGDG 1.15 8 | AVAIL PGDG 1.15 8 | AVAIL PGDG 1.15 8 | AVAIL PGDG 1.15 8 |
 | d12.x86_64 | AVAIL PIGSTY 1.15 2 | AVAIL PIGSTY 1.15 2 | AVAIL PIGSTY 1.15 2 | AVAIL PIGSTY 1.15 2 | AVAIL PIGSTY 1.15 2 |
 | d12.aarch64 | AVAIL PIGSTY 1.15 2 | AVAIL PIGSTY 1.15 2 | AVAIL PIGSTY 1.15 2 | AVAIL PIGSTY 1.15 2 | AVAIL PIGSTY 1.15 2 |
 | d13.x86_64 | AVAIL PIGSTY 1.15 2 | AVAIL PIGSTY 1.15 2 | AVAIL PIGSTY 1.15 2 | AVAIL PIGSTY 1.15 2 | AVAIL PIGSTY 1.15 2 |
@@ -430,8 +430,9 @@ weight: 2840
 @ el10.x86_64 14 pg_ivm_14 pg_ivm_14-1.13-1PGDG.rhel10.x86_64.rpm pgdg 1.13 80.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_ivm_14-1.13-1PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 14 pg_ivm_14 pg_ivm_14-1.11-1PGDG.rhel10.x86_64.rpm pgdg 1.11 74.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_ivm_14-1.11-1PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 14 pg_ivm_14 pg_ivm_14-1.10-1PGDG.rhel10.x86_64.rpm pgdg 1.10 74.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_ivm_14-1.10-1PGDG.rhel10.x86_64.rpm
-@ el10.aarch64 14 pg_ivm_14 pg_ivm_14-1.15-1PGDG.rhel10.1.aarch64.rpm pgdg 1.15 81.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_ivm_14-1.15-1PGDG.rhel10.1.aarch64.rpm
+@ el10.aarch64 14 pg_ivm_14 pg_ivm_14-1.15-1PGDG.rhel10.2.aarch64.rpm pgdg 1.15 81.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_ivm_14-1.15-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 14 pg_ivm_14 pg_ivm_14-1.14-1PIGSTY.el10.aarch64.rpm pigsty 1.14 86.9KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_ivm_14-1.14-1PIGSTY.el10.aarch64.rpm
+@ el10.aarch64 14 pg_ivm_14 pg_ivm_14-1.14-1PGDG.rhel10.2.aarch64.rpm pgdg 1.14 78.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_ivm_14-1.14-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 14 pg_ivm_14 pg_ivm_14-1.14-1PGDG.rhel10.1.aarch64.rpm pgdg 1.14 78.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_ivm_14-1.14-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 14 pg_ivm_14 pg_ivm_14-1.14-1PGDG.rhel10.0.aarch64.rpm pgdg 1.14 78.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_ivm_14-1.14-1PGDG.rhel10.0.aarch64.rpm
 @ el10.aarch64 14 pg_ivm_14 pg_ivm_14-1.13-1PGDG.rhel10.aarch64.rpm pgdg 1.13 79.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_ivm_14-1.13-1PGDG.rhel10.aarch64.rpm

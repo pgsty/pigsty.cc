@@ -50,7 +50,7 @@ weight: 9650
 | el9.x86_64 | AVAIL PGDG 3.5.0 7 | AVAIL PGDG 3.5.0 9 | AVAIL PGDG 3.5.0 13 | AVAIL PGDG 3.5.0 13 | AVAIL PGDG 3.5.0 17 |
 | el9.aarch64 | AVAIL PGDG 3.5.0 7 | AVAIL PGDG 3.5.0 9 | AVAIL PGDG 3.5.0 13 | AVAIL PGDG 3.5.0 13 | AVAIL PGDG 3.5.0 17 |
 | el10.x86_64 | AVAIL PGDG 3.5.0 7 | AVAIL PGDG 3.5.0 9 | AVAIL PGDG 3.5.0 9 | AVAIL PGDG 3.5.0 9 | AVAIL PGDG 3.5.0 9 |
-| el10.aarch64 | AVAIL PGDG 3.5.0 7 | AVAIL PGDG 3.5.0 9 | AVAIL PGDG 3.5.0 9 | AVAIL PGDG 3.5.0 9 | AVAIL PGDG 3.5.0 8 |
+| el10.aarch64 | AVAIL PGDG 3.5.0 7 | AVAIL PGDG 3.5.0 9 | AVAIL PGDG 3.5.0 9 | AVAIL PGDG 3.5.0 9 | AVAIL PGDG 3.5.0 9 |
 | d12.x86_64 | AVAIL PGDG 3.6.0 3 | AVAIL PGDG 3.6.0 3 | AVAIL PGDG 3.6.0 3 | AVAIL PGDG 3.6.0 3 | AVAIL PGDG 3.6.0 3 |
 | d12.aarch64 | AVAIL PGDG 3.6.0 3 | AVAIL PGDG 3.6.0 3 | AVAIL PGDG 3.6.0 3 | AVAIL PGDG 3.6.0 3 | AVAIL PGDG 3.6.0 3 |
 | d13.x86_64 | AVAIL PGDG 3.6.0 3 | AVAIL PGDG 3.6.0 3 | AVAIL PGDG 3.6.0 3 | AVAIL PGDG 3.6.0 3 | AVAIL PGDG 3.6.0 3 |
@@ -465,6 +465,7 @@ weight: 9650
 @ el10.x86_64 14 postgres-decoderbufs_14 postgres-decoderbufs_14-3.2.0-1PGDG.rhel10.x86_64.rpm pgdg 3.2.0 24.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/postgres-decoderbufs_14-3.2.0-1PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 14 postgres-decoderbufs_14 postgres-decoderbufs_14-3.1.1-1PGDG.rhel10.x86_64.rpm pgdg 3.1.1 24.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/postgres-decoderbufs_14-3.1.1-1PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 14 postgres-decoderbufs_14 postgres-decoderbufs_14-3.0.2-1PGDG.rhel10.x86_64.rpm pgdg 3.0.2 24.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/postgres-decoderbufs_14-3.0.2-1PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 14 postgres-decoderbufs_14 postgres-decoderbufs_14-3.5.0-1PGDG.rhel10.2.aarch64.rpm pgdg 3.5.0 24.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/postgres-decoderbufs_14-3.5.0-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 14 postgres-decoderbufs_14 postgres-decoderbufs_14-3.5.0-1PGDG.rhel10.1.aarch64.rpm pgdg 3.5.0 24.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/postgres-decoderbufs_14-3.5.0-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 14 postgres-decoderbufs_14 postgres-decoderbufs_14-3.5.0-1PGDG.rhel10.0.aarch64.rpm pgdg 3.5.0 24.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/postgres-decoderbufs_14-3.5.0-1PGDG.rhel10.0.aarch64.rpm
 @ el10.aarch64 14 postgres-decoderbufs_14 postgres-decoderbufs_14-3.4.1-1PGDG.rhel10.1.aarch64.rpm pgdg 3.4.1 24.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/postgres-decoderbufs_14-3.4.1-1PGDG.rhel10.1.aarch64.rpm

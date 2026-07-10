@@ -54,7 +54,7 @@ weight: 1070
 | el9.x86_64 | AVAIL PGDG 1.6.7 2 | AVAIL PGDG 1.6.7 4 | AVAIL PGDG 1.6.7 8 | AVAIL PGDG 1.6.7 11 | AVAIL PGDG 1.6.7 11 |
 | el9.aarch64 | AVAIL PGDG 1.6.7 2 | AVAIL PGDG 1.6.7 4 | AVAIL PGDG 1.6.7 8 | AVAIL PGDG 1.6.7 11 | AVAIL PGDG 1.6.7 11 |
 | el10.x86_64 | AVAIL PGDG 1.6.7 2 | AVAIL PGDG 1.6.7 3 | AVAIL PGDG 1.6.7 3 | AVAIL PGDG 1.6.7 3 | AVAIL PGDG 1.6.7 3 |
-| el10.aarch64 | AVAIL PGDG 1.6.7 2 | AVAIL PGDG 1.6.7 3 | AVAIL PGDG 1.6.7 3 | AVAIL PGDG 1.6.7 3 | AVAIL PGDG 1.6.7 2 |
+| el10.aarch64 | AVAIL PGDG 1.6.7 2 | AVAIL PGDG 1.6.7 3 | AVAIL PGDG 1.6.7 3 | AVAIL PGDG 1.6.7 3 | AVAIL PGDG 1.6.7 3 |
 | d12.x86_64 | AVAIL PGDG 1.6.7 2 | AVAIL PGDG 1.6.7 2 | AVAIL PGDG 1.6.7 2 | AVAIL PGDG 1.6.7 2 | AVAIL PGDG 1.6.7 2 |
 | d12.aarch64 | AVAIL PGDG 1.6.7 2 | AVAIL PGDG 1.6.7 2 | AVAIL PGDG 1.6.7 2 | AVAIL PGDG 1.6.7 2 | AVAIL PGDG 1.6.7 2 |
 | d13.x86_64 | AVAIL PGDG 1.6.7 2 | AVAIL PGDG 1.6.7 2 | AVAIL PGDG 1.6.7 2 | AVAIL PGDG 1.6.7 2 | AVAIL PGDG 1.6.7 2 |
@@ -306,6 +306,7 @@ weight: 1070
 @ el10.x86_64 14 pg_cron_14 pg_cron_14-1.6.7-5PGDG.rhel10.2.x86_64.rpm pgdg 1.6.7 45.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_cron_14-1.6.7-5PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 14 pg_cron_14 pg_cron_14-1.6.7-1PGDG.rhel10.x86_64.rpm pgdg 1.6.7 46.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_cron_14-1.6.7-1PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 14 pg_cron_14 pg_cron_14-1.6.5-1PGDG.rhel10.x86_64.rpm pgdg 1.6.5 46.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_cron_14-1.6.5-1PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 14 pg_cron_14 pg_cron_14-1.6.7-5PGDG.rhel10.2.aarch64.rpm pgdg 1.6.7 44.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_cron_14-1.6.7-5PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 14 pg_cron_14 pg_cron_14-1.6.7-1PGDG.rhel10.aarch64.rpm pgdg 1.6.7 45.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_cron_14-1.6.7-1PGDG.rhel10.aarch64.rpm
 @ el10.aarch64 14 pg_cron_14 pg_cron_14-1.6.5-1PGDG.rhel10.aarch64.rpm pgdg 1.6.5 45.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_cron_14-1.6.5-1PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 14 postgresql-14-cron postgresql-14-cron_1.6.7-3.pgdg12+1_amd64.deb pgdg 1.6.7 91.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-cron/postgresql-14-cron_1.6.7-3.pgdg12+1_amd64.deb

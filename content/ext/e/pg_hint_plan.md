@@ -55,7 +55,7 @@ weight: 2780
 | el9.x86_64 | AVAIL PGDG 1.8.0 2 | AVAIL PGDG 1.7.1 3 | AVAIL PGDG 1.6.2 4 | AVAIL PGDG 1.5.3 4 | AVAIL PGDG 1.4.4 4 |
 | el9.aarch64 | AVAIL PGDG 1.8.0 2 | AVAIL PGDG 1.7.1 3 | AVAIL PGDG 1.6.2 4 | AVAIL PGDG 1.5.3 4 | AVAIL PGDG 1.4.4 4 |
 | el10.x86_64 | AVAIL PGDG 1.8.0 2 | AVAIL PGDG 1.7.1 3 | AVAIL PGDG 1.6.2 3 | AVAIL PGDG 1.5.3 3 | AVAIL PGDG 1.4.4 3 |
-| el10.aarch64 | AVAIL PGDG 1.8.0 2 | AVAIL PGDG 1.7.1 3 | AVAIL PGDG 1.6.2 3 | AVAIL PGDG 1.5.3 3 | AVAIL PGDG 1.4.4 2 |
+| el10.aarch64 | AVAIL PGDG 1.8.0 2 | AVAIL PGDG 1.7.1 3 | AVAIL PGDG 1.6.2 3 | AVAIL PGDG 1.5.3 3 | AVAIL PGDG 1.4.4 3 |
 | d12.x86_64 | AVAIL PGDG 1.8.0 1 | AVAIL PGDG 1.7.1 1 | AVAIL PGDG 1.6.2 1 | AVAIL PGDG 1.5.3 1 | AVAIL PGDG 1.4.4 1 |
 | d12.aarch64 | AVAIL PGDG 1.8.0 1 | AVAIL PGDG 1.7.1 1 | AVAIL PGDG 1.6.2 1 | AVAIL PGDG 1.5.3 1 | AVAIL PGDG 1.4.4 1 |
 | d13.x86_64 | AVAIL PGDG 1.8.0 1 | AVAIL PGDG 1.7.1 1 | AVAIL PGDG 1.6.2 1 | AVAIL PGDG 1.5.3 1 | AVAIL PGDG 1.4.4 1 |
@@ -189,6 +189,7 @@ weight: 2780
 @ el10.x86_64 14 pg_hint_plan_14 pg_hint_plan_14-1.4.4-5PGDG.rhel10.2.x86_64.rpm pgdg 1.4.4 46.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_hint_plan_14-1.4.4-5PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 14 pg_hint_plan_14 pg_hint_plan_14-1.4.4-1PGDG.rhel10.x86_64.rpm pgdg 1.4.4 46.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_hint_plan_14-1.4.4-1PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 14 pg_hint_plan_14 pg_hint_plan_14-1.4.3-3PGDG.rhel10.x86_64.rpm pgdg 1.4.3 45.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_hint_plan_14-1.4.3-3PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 14 pg_hint_plan_14 pg_hint_plan_14-1.4.4-5PGDG.rhel10.2.aarch64.rpm pgdg 1.4.4 44.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_hint_plan_14-1.4.4-5PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 14 pg_hint_plan_14 pg_hint_plan_14-1.4.4-1PGDG.rhel10.aarch64.rpm pgdg 1.4.4 44.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_hint_plan_14-1.4.4-1PGDG.rhel10.aarch64.rpm
 @ el10.aarch64 14 pg_hint_plan_14 pg_hint_plan_14-1.4.3-3PGDG.rhel10.aarch64.rpm pgdg 1.4.3 43.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_hint_plan_14-1.4.3-3PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 14 postgresql-14-pg-hint-plan postgresql-14-pg-hint-plan_1.4.4-1.pgdg12+1_amd64.deb pgdg 1.4.4 104.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-hint-plan-14/postgresql-14-pg-hint-plan_1.4.4-1.pgdg12+1_amd64.deb

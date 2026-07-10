@@ -50,7 +50,7 @@ weight: 7370
 | el9.x86_64 | AVAIL PGDG 4.2.0 2 | AVAIL PGDG 4.2.0 2 | AVAIL PGDG 4.2.0 3 | AVAIL PGDG 4.2.0 4 | AVAIL PGDG 4.2.0 4 |
 | el9.aarch64 | AVAIL PGDG 4.2.0 2 | AVAIL PGDG 4.2.0 2 | AVAIL PGDG 4.2.0 3 | AVAIL PGDG 4.2.0 4 | AVAIL PGDG 4.2.0 5 |
 | el10.x86_64 | AVAIL PGDG 4.2.0 2 | AVAIL PGDG 4.2.0 2 | AVAIL PGDG 4.2.0 2 | AVAIL PGDG 4.2.0 2 | AVAIL PGDG 4.2.0 2 |
-| el10.aarch64 | AVAIL PGDG 4.2.0 2 | AVAIL PGDG 4.2.0 2 | AVAIL PGDG 4.2.0 2 | AVAIL PGDG 4.2.0 2 | AVAIL PGDG 4.1.0 1 |
+| el10.aarch64 | AVAIL PGDG 4.2.0 2 | AVAIL PGDG 4.2.0 2 | AVAIL PGDG 4.2.0 2 | AVAIL PGDG 4.2.0 2 | AVAIL PGDG 4.2.0 2 |
 | d12.x86_64 | AVAIL PGDG 4.2.0 1 | AVAIL PGDG 4.2.0 1 | AVAIL PGDG 4.2.0 1 | AVAIL PGDG 4.2.0 1 | AVAIL PGDG 4.2.0 1 |
 | d12.aarch64 | AVAIL PGDG 4.2.0 1 | AVAIL PGDG 4.2.0 1 | AVAIL PGDG 4.2.0 1 | AVAIL PGDG 4.2.0 1 | AVAIL PGDG 4.2.0 1 |
 | d13.x86_64 | AVAIL PGDG 4.2.0 1 | AVAIL PGDG 4.2.0 1 | AVAIL PGDG 4.2.0 1 | AVAIL PGDG 4.2.0 1 | AVAIL PGDG 4.2.0 1 |
@@ -172,6 +172,7 @@ weight: 7370
 @ el9.aarch64 14 set_user_14 set_user_14-3.0.0-1.rhel9.aarch64.rpm pgdg 3.0.0 25.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/set_user_14-3.0.0-1.rhel9.aarch64.rpm
 @ el10.x86_64 14 set_user_14 set_user_14-4.2.0-3PGDG.rhel10.2.x86_64.rpm pgdg 4.2.0 26.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/set_user_14-4.2.0-3PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 14 set_user_14 set_user_14-4.1.0-2PGDG.rhel10.x86_64.rpm pgdg 4.1.0 26.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/set_user_14-4.1.0-2PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 14 set_user_14 set_user_14-4.2.0-3PGDG.rhel10.2.aarch64.rpm pgdg 4.2.0 26.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/set_user_14-4.2.0-3PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 14 set_user_14 set_user_14-4.1.0-2PGDG.rhel10.aarch64.rpm pgdg 4.1.0 26.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/set_user_14-4.1.0-2PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 14 postgresql-14-set-user postgresql-14-set-user_4.2.0-1.pgdg12+1_amd64.deb pgdg 4.2.0 34.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-set-user/postgresql-14-set-user_4.2.0-1.pgdg12+1_amd64.deb
 @ d12.aarch64 14 postgresql-14-set-user postgresql-14-set-user_4.2.0-1.pgdg12+1_arm64.deb pgdg 4.2.0 34.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-set-user/postgresql-14-set-user_4.2.0-1.pgdg12+1_arm64.deb

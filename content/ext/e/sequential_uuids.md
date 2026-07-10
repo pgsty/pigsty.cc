@@ -55,7 +55,7 @@ weight: 4570
 | el9.x86_64 | AVAIL PGDG 1.0.3 3 | AVAIL PGDG 1.0.3 3 | AVAIL PGDG 1.0.3 3 | AVAIL PGDG 1.0.3 3 | AVAIL PGDG 1.0.3 3 |
 | el9.aarch64 | AVAIL PGDG 1.0.3 3 | AVAIL PGDG 1.0.3 3 | AVAIL PGDG 1.0.3 3 | AVAIL PGDG 1.0.3 3 | AVAIL PGDG 1.0.3 3 |
 | el10.x86_64 | AVAIL PGDG 1.0.3 3 | AVAIL PGDG 1.0.3 3 | AVAIL PGDG 1.0.3 3 | AVAIL PGDG 1.0.3 3 | AVAIL PGDG 1.0.3 3 |
-| el10.aarch64 | AVAIL PGDG 1.0.3 3 | AVAIL PGDG 1.0.3 3 | AVAIL PGDG 1.0.3 3 | AVAIL PGDG 1.0.3 3 | AVAIL PIGSTY 1.0.3 2 |
+| el10.aarch64 | AVAIL PGDG 1.0.3 3 | AVAIL PGDG 1.0.3 3 | AVAIL PGDG 1.0.3 3 | AVAIL PGDG 1.0.3 3 | AVAIL PGDG 1.0.3 3 |
 | d12.x86_64 | AVAIL PIGSTY 1.0.3 1 | AVAIL PIGSTY 1.0.3 1 | AVAIL PIGSTY 1.0.3 1 | AVAIL PIGSTY 1.0.3 1 | AVAIL PIGSTY 1.0.3 1 |
 | d12.aarch64 | AVAIL PIGSTY 1.0.3 1 | AVAIL PIGSTY 1.0.3 1 | AVAIL PIGSTY 1.0.3 1 | AVAIL PIGSTY 1.0.3 1 | AVAIL PIGSTY 1.0.3 1 |
 | d13.x86_64 | AVAIL PIGSTY 1.0.3 1 | AVAIL PIGSTY 1.0.3 1 | AVAIL PIGSTY 1.0.3 1 | AVAIL PIGSTY 1.0.3 1 | AVAIL PIGSTY 1.0.3 1 |
@@ -176,6 +176,7 @@ weight: 4570
 @ el10.x86_64 14 sequential_uuids_14 sequential_uuids_14-1.0.3-4PGDG.rhel10.2.x86_64.rpm pgdg 1.0.3 16.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/sequential_uuids_14-1.0.3-4PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 14 sequential_uuids_14 sequential_uuids_14-1.0.3-2PIGSTY.el10.x86_64.rpm pigsty 1.0.3 12.5KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/sequential_uuids_14-1.0.3-2PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 14 sequential_uuids_14 sequential_uuids_14-1.0.3-2PGDG.rhel10.x86_64.rpm pgdg 1.0.3 16.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/sequential_uuids_14-1.0.3-2PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 14 sequential_uuids_14 sequential_uuids_14-1.0.3-4PGDG.rhel10.2.aarch64.rpm pgdg 1.0.3 16.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/sequential_uuids_14-1.0.3-4PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 14 sequential_uuids_14 sequential_uuids_14-1.0.3-2PIGSTY.el10.aarch64.rpm pigsty 1.0.3 12.7KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/sequential_uuids_14-1.0.3-2PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 14 sequential_uuids_14 sequential_uuids_14-1.0.3-2PGDG.rhel10.aarch64.rpm pgdg 1.0.3 16.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/sequential_uuids_14-1.0.3-2PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 14 postgresql-14-sequential-uuids postgresql-14-sequential-uuids_1.0.3-1PIGSTY~bookworm_amd64.deb pigsty 1.0.3 12.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/s/sequential-uuids/postgresql-14-sequential-uuids_1.0.3-1PIGSTY~bookworm_amd64.deb

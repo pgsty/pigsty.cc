@@ -55,7 +55,7 @@ weight: 8750
 | el9.x86_64 | AVAIL PIGSTY 1.4.2 8 | AVAIL PIGSTY 1.4.2 8 | AVAIL PIGSTY 1.4.2 8 | AVAIL PIGSTY 1.4.2 8 | AVAIL PIGSTY 1.4.2 10 |
 | el9.aarch64 | AVAIL PIGSTY 1.4.2 8 | AVAIL PIGSTY 1.4.2 8 | AVAIL PIGSTY 1.4.2 9 | AVAIL PIGSTY 1.4.2 9 | AVAIL PIGSTY 1.4.2 10 |
 | el10.x86_64 | AVAIL PIGSTY 1.4.2 3 | AVAIL PIGSTY 1.4.2 3 | AVAIL PIGSTY 1.4.2 3 | AVAIL PIGSTY 1.4.2 3 | AVAIL PIGSTY 1.4.2 3 |
-| el10.aarch64 | AVAIL PIGSTY 1.4.2 3 | AVAIL PIGSTY 1.4.2 3 | AVAIL PIGSTY 1.4.2 3 | AVAIL PIGSTY 1.4.2 3 | AVAIL PIGSTY 1.4.2 1 |
+| el10.aarch64 | AVAIL PIGSTY 1.4.2 3 | AVAIL PIGSTY 1.4.2 3 | AVAIL PIGSTY 1.4.2 3 | AVAIL PIGSTY 1.4.2 3 | AVAIL PIGSTY 1.4.2 3 |
 | d12.x86_64 | AVAIL PIGSTY 1.4.2 1 | AVAIL PIGSTY 1.4.2 1 | AVAIL PIGSTY 1.4.2 1 | AVAIL PIGSTY 1.4.2 1 | AVAIL PIGSTY 1.4.2 1 |
 | d12.aarch64 | AVAIL PIGSTY 1.4.2 1 | AVAIL PIGSTY 1.4.2 1 | AVAIL PIGSTY 1.4.2 1 | AVAIL PIGSTY 1.4.2 1 | AVAIL PIGSTY 1.4.2 1 |
 | d13.x86_64 | AVAIL PIGSTY 1.4.2 1 | AVAIL PIGSTY 1.4.2 1 | AVAIL PIGSTY 1.4.2 1 | AVAIL PIGSTY 1.4.2 1 | AVAIL PIGSTY 1.4.2 1 |
@@ -235,6 +235,8 @@ weight: 8750
 @ el10.x86_64 14 firebird_fdw_14 firebird_fdw_14-1.4.2-1PGDG.rhel10.2.x86_64.rpm pgdg 1.4.2 54.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/firebird_fdw_14-1.4.2-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 14 firebird_fdw_14 firebird_fdw_14-1.4.1-3PGDG.rhel10.2.x86_64.rpm pgdg 1.4.1 54.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/firebird_fdw_14-1.4.1-3PGDG.rhel10.2.x86_64.rpm
 @ el10.aarch64 14 firebird_fdw_14 firebird_fdw_14-1.4.2-2PIGSTY.el10.aarch64.rpm pigsty 1.4.2 54.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/firebird_fdw_14-1.4.2-2PIGSTY.el10.aarch64.rpm
+@ el10.aarch64 14 firebird_fdw_14 firebird_fdw_14-1.4.2-1PGDG.rhel10.2.aarch64.rpm pgdg 1.4.2 53.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/firebird_fdw_14-1.4.2-1PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 14 firebird_fdw_14 firebird_fdw_14-1.4.1-3PGDG.rhel10.2.aarch64.rpm pgdg 1.4.1 53.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/firebird_fdw_14-1.4.1-3PGDG.rhel10.2.aarch64.rpm
 @ d12.x86_64 14 postgresql-14-firebird-fdw postgresql-14-firebird-fdw_1.4.2-2PIGSTY~bookworm_amd64.deb pigsty 1.4.2 141.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/f/firebird-fdw/postgresql-14-firebird-fdw_1.4.2-2PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 14 postgresql-14-firebird-fdw postgresql-14-firebird-fdw_1.4.2-2PIGSTY~bookworm_arm64.deb pigsty 1.4.2 138.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/f/firebird-fdw/postgresql-14-firebird-fdw_1.4.2-2PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 14 postgresql-14-firebird-fdw postgresql-14-firebird-fdw_1.4.2-2PIGSTY~trixie_amd64.deb pigsty 1.4.2 141.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/f/firebird-fdw/postgresql-14-firebird-fdw_1.4.2-2PIGSTY~trixie_amd64.deb

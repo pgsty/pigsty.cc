@@ -50,7 +50,7 @@ weight: 9820
 | el9.x86_64 | AVAIL PGDG 2.0.1 2 | AVAIL PGDG 2.0.1 3 | AVAIL PGDG 2.0.1 3 | AVAIL PGDG 2.0.1 3 | AVAIL PGDG 2.0.1 3 |
 | el9.aarch64 | AVAIL PGDG 2.0.1 2 | AVAIL PGDG 2.0.1 3 | AVAIL PGDG 2.0.1 3 | AVAIL PGDG 2.0.1 3 | AVAIL PGDG 2.0.1 3 |
 | el10.x86_64 | AVAIL PGDG 2.0.1 2 | AVAIL PGDG 2.0.1 2 | AVAIL PGDG 2.0.1 2 | AVAIL PGDG 2.0.1 2 | AVAIL PGDG 2.0.1 2 |
-| el10.aarch64 | AVAIL PGDG 2.0.1 2 | AVAIL PGDG 2.0.1 2 | AVAIL PGDG 2.0.1 2 | AVAIL PGDG 2.0.1 2 | AVAIL PGDG 2.0.1 1 |
+| el10.aarch64 | AVAIL PGDG 2.0.1 2 | AVAIL PGDG 2.0.1 2 | AVAIL PGDG 2.0.1 2 | AVAIL PGDG 2.0.1 2 | AVAIL PGDG 2.0.1 2 |
 | d12.x86_64 | MISS PGDG - 0 | AVAIL PGDG 2.0.1 1 | AVAIL PGDG 2.0.1 1 | AVAIL PGDG 2.0.1 1 | AVAIL PGDG 2.0.1 1 |
 | d12.aarch64 | MISS PGDG - 0 | AVAIL PGDG 2.0.1 1 | AVAIL PGDG 2.0.1 1 | AVAIL PGDG 2.0.1 1 | AVAIL PGDG 2.0.1 1 |
 | d13.x86_64 | MISS PGDG - 0 | AVAIL PGDG 2.0.1 1 | AVAIL PGDG 2.0.1 1 | AVAIL PGDG 2.0.1 1 | AVAIL PGDG 2.0.1 1 |
@@ -152,6 +152,7 @@ weight: 9820
 @ el9.aarch64 14 pg_fact_loader_14 pg_fact_loader_14-2.0.1-2PGDG.rhel9.noarch.rpm pgdg 2.0.1 34.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_fact_loader_14-2.0.1-2PGDG.rhel9.noarch.rpm
 @ el10.x86_64 14 pg_fact_loader_14 pg_fact_loader_14-2.0.1-3PGDG.rhel10.2.noarch.rpm pgdg 2.0.1 34.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_fact_loader_14-2.0.1-3PGDG.rhel10.2.noarch.rpm
 @ el10.x86_64 14 pg_fact_loader_14 pg_fact_loader_14-2.0.1-3PGDG.rhel10.noarch.rpm pgdg 2.0.1 35.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_fact_loader_14-2.0.1-3PGDG.rhel10.noarch.rpm
+@ el10.aarch64 14 pg_fact_loader_14 pg_fact_loader_14-2.0.1-3PGDG.rhel10.2.noarch.rpm pgdg 2.0.1 34.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_fact_loader_14-2.0.1-3PGDG.rhel10.2.noarch.rpm
 @ el10.aarch64 14 pg_fact_loader_14 pg_fact_loader_14-2.0.1-3PGDG.rhel10.noarch.rpm pgdg 2.0.1 35.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_fact_loader_14-2.0.1-3PGDG.rhel10.noarch.rpm
 @ d12.x86_64 14 postgresql-14-pg-fact-loader postgresql-14-pg-fact-loader_2.0.1-5.pgdg120+1_amd64.deb pgdg 2.0.1 40.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-fact-loader/postgresql-14-pg-fact-loader_2.0.1-5.pgdg120+1_amd64.deb
 @ d12.aarch64 14 postgresql-14-pg-fact-loader postgresql-14-pg-fact-loader_2.0.1-5.pgdg120+1_arm64.deb pgdg 2.0.1 40.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-fact-loader/postgresql-14-pg-fact-loader_2.0.1-5.pgdg120+1_arm64.deb

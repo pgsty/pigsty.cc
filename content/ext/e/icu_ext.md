@@ -55,7 +55,7 @@ weight: 4240
 | el9.x86_64 | AVAIL PGDG 1.11.0 4 | AVAIL PGDG 1.11.0 4 | AVAIL PGDG 1.11.0 4 | AVAIL PGDG 1.11.0 4 | AVAIL PGDG 1.11.0 4 |
 | el9.aarch64 | AVAIL PGDG 1.11.0 4 | AVAIL PGDG 1.11.0 4 | AVAIL PGDG 1.11.0 4 | AVAIL PGDG 1.11.0 4 | AVAIL PGDG 1.11.0 4 |
 | el10.x86_64 | AVAIL PGDG 1.11.0 4 | AVAIL PGDG 1.11.0 4 | AVAIL PGDG 1.11.0 4 | AVAIL PGDG 1.11.0 4 | AVAIL PGDG 1.11.0 4 |
-| el10.aarch64 | AVAIL PGDG 1.11.0 4 | AVAIL PGDG 1.11.0 4 | AVAIL PGDG 1.11.0 4 | AVAIL PGDG 1.11.0 4 | AVAIL PGDG 1.11.0 3 |
+| el10.aarch64 | AVAIL PGDG 1.11.0 4 | AVAIL PGDG 1.11.0 4 | AVAIL PGDG 1.11.0 4 | AVAIL PGDG 1.11.0 4 | AVAIL PGDG 1.11.0 4 |
 | d12.x86_64 | AVAIL PGDG 1.11.0 3 | AVAIL PGDG 1.11.0 3 | AVAIL PGDG 1.11.0 3 | AVAIL PGDG 1.11.0 3 | AVAIL PGDG 1.11.0 3 |
 | d12.aarch64 | AVAIL PGDG 1.11.0 3 | AVAIL PGDG 1.11.0 3 | AVAIL PGDG 1.11.0 3 | AVAIL PGDG 1.11.0 3 | AVAIL PGDG 1.11.0 3 |
 | d13.x86_64 | AVAIL PGDG 1.11.0 3 | AVAIL PGDG 1.11.0 3 | AVAIL PGDG 1.11.0 3 | AVAIL PGDG 1.11.0 3 | AVAIL PGDG 1.11.0 3 |
@@ -292,7 +292,8 @@ weight: 4240
 @ el10.x86_64 14 icu_ext_14 icu_ext_14-1.10.0-3PGDG.rhel10.2.x86_64.rpm pgdg 1.10.0 49.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/icu_ext_14-1.10.0-3PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 14 icu_ext_14 icu_ext_14-1.10.0-1PIGSTY.el10.x86_64.rpm pigsty 1.10.0 49.9KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/icu_ext_14-1.10.0-1PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 14 icu_ext_14 icu_ext_14-1.9.0-1PGDG.rhel10.x86_64.rpm pgdg 1.9.0 48.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/icu_ext_14-1.9.0-1PGDG.rhel10.x86_64.rpm
-@ el10.aarch64 14 icu_ext_14 icu_ext_14-1.11.0-1PGDG.rhel10.1.aarch64.rpm pgdg 1.11.0 47.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/icu_ext_14-1.11.0-1PGDG.rhel10.1.aarch64.rpm
+@ el10.aarch64 14 icu_ext_14 icu_ext_14-1.11.0-1PGDG.rhel10.2.aarch64.rpm pgdg 1.11.0 48.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/icu_ext_14-1.11.0-1PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 14 icu_ext_14 icu_ext_14-1.10.0-3PGDG.rhel10.2.aarch64.rpm pgdg 1.10.0 47.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/icu_ext_14-1.10.0-3PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 14 icu_ext_14 icu_ext_14-1.10.0-1PIGSTY.el10.aarch64.rpm pigsty 1.10.0 48.4KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/icu_ext_14-1.10.0-1PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 14 icu_ext_14 icu_ext_14-1.9.0-1PGDG.rhel10.aarch64.rpm pgdg 1.9.0 46.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/icu_ext_14-1.9.0-1PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 14 postgresql-14-icu-ext postgresql-14-icu-ext_1.11.0-1.pgdg12+1_amd64.deb pgdg 1.11.0 94.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/i/icu-ext/postgresql-14-icu-ext_1.11.0-1.pgdg12+1_amd64.deb

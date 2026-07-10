@@ -53,7 +53,7 @@ weight: 9100
 | el9.x86_64 | AVAIL PGDG 4.16.7 10 | AVAIL PGDG 4.16.7 18 | AVAIL PGDG 4.16.7 27 | AVAIL PGDG 4.16.7 27 | AVAIL PGDG 4.16.7 27 |
 | el9.aarch64 | AVAIL PGDG 4.16.7 10 | AVAIL PGDG 4.16.7 18 | AVAIL PGDG 4.16.7 27 | AVAIL PGDG 4.16.7 27 | AVAIL PGDG 4.16.7 27 |
 | el10.x86_64 | AVAIL PGDG 4.16.7 10 | AVAIL PGDG 4.16.7 11 | AVAIL PGDG 4.16.7 11 | AVAIL PGDG 4.16.7 11 | AVAIL PGDG 4.16.7 11 |
-| el10.aarch64 | AVAIL PGDG 4.16.7 10 | AVAIL PGDG 4.16.7 11 | AVAIL PGDG 4.16.7 11 | AVAIL PGDG 4.16.7 11 | AVAIL PGDG 4.16.7 9 |
+| el10.aarch64 | AVAIL PGDG 4.16.7 10 | AVAIL PGDG 4.16.7 11 | AVAIL PGDG 4.16.7 11 | AVAIL PGDG 4.16.7 11 | AVAIL PGDG 4.16.7 11 |
 | d12.x86_64 | AVAIL PGDG 4.16.7 3 | AVAIL PGDG 4.16.7 3 | AVAIL PGDG 4.16.7 3 | AVAIL PGDG 4.16.7 3 | AVAIL PGDG 4.16.7 3 |
 | d12.aarch64 | AVAIL PGDG 4.16.7 3 | AVAIL PGDG 4.16.7 3 | AVAIL PGDG 4.16.7 3 | AVAIL PGDG 4.16.7 3 | AVAIL PGDG 4.16.7 3 |
 | d13.x86_64 | AVAIL PGDG 4.16.7 3 | AVAIL PGDG 4.16.7 3 | AVAIL PGDG 4.16.7 3 | AVAIL PGDG 4.16.7 3 | AVAIL PGDG 4.16.7 3 |
@@ -667,8 +667,10 @@ weight: 9100
 @ el10.x86_64 14 orafce_14 orafce_14-4.14.6-1PGDG.rhel10.x86_64.rpm pgdg 4.14.6 151.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/orafce_14-4.14.6-1PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 14 orafce_14 orafce_14-4.14.4-1PGDG.rhel10.x86_64.rpm pgdg 4.14.4 151.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/orafce_14-4.14.4-1PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 14 orafce_14 orafce_14-4.14.3-2PGDG.rhel10.x86_64.rpm pgdg 4.14.3 151.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/orafce_14-4.14.3-2PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 14 orafce_14 orafce_14-4.16.7-1PGDG.rhel10.2.aarch64.rpm pgdg 4.16.7 149.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/orafce_14-4.16.7-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 14 orafce_14 orafce_14-4.16.7-1PGDG.rhel10.1.aarch64.rpm pgdg 4.16.7 149.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/orafce_14-4.16.7-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 14 orafce_14 orafce_14-4.16.7-1PGDG.rhel10.0.aarch64.rpm pgdg 4.16.7 149.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/orafce_14-4.16.7-1PGDG.rhel10.0.aarch64.rpm
+@ el10.aarch64 14 orafce_14 orafce_14-4.16.5-1PGDG.rhel10.2.aarch64.rpm pgdg 4.16.5 150.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/orafce_14-4.16.5-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 14 orafce_14 orafce_14-4.16.5-1PGDG.rhel10.1.aarch64.rpm pgdg 4.16.5 150.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/orafce_14-4.16.5-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 14 orafce_14 orafce_14-4.16.5-1PGDG.rhel10.0.aarch64.rpm pgdg 4.16.5 150.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/orafce_14-4.16.5-1PGDG.rhel10.0.aarch64.rpm
 @ el10.aarch64 14 orafce_14 orafce_14-4.16.2-2PGDG.rhel10.aarch64.rpm pgdg 4.16.2 150.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/orafce_14-4.16.2-2PGDG.rhel10.aarch64.rpm

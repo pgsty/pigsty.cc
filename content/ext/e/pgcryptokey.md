@@ -58,7 +58,7 @@ weight: 7320
 | el9.x86_64 | AVAIL PIGSTY 0.85 1 | AVAIL PGDG 0.85 3 | AVAIL PGDG 0.85 3 | AVAIL PGDG 0.85 3 | AVAIL PGDG 0.85 2 |
 | el9.aarch64 | AVAIL PIGSTY 0.85 1 | AVAIL PGDG 0.85 3 | AVAIL PGDG 0.85 3 | AVAIL PGDG 0.85 3 | AVAIL PGDG 0.85 3 |
 | el10.x86_64 | AVAIL PIGSTY 0.85 1 | AVAIL PGDG 0.85 3 | AVAIL PGDG 0.85 3 | AVAIL PGDG 0.85 3 | AVAIL PGDG 0.85 3 |
-| el10.aarch64 | AVAIL PIGSTY 0.85 1 | AVAIL PGDG 0.85 3 | AVAIL PGDG 0.85 3 | AVAIL PGDG 0.85 3 | AVAIL PGDG 0.85 2 |
+| el10.aarch64 | AVAIL PIGSTY 0.85 1 | AVAIL PGDG 0.85 3 | AVAIL PGDG 0.85 3 | AVAIL PGDG 0.85 3 | AVAIL PGDG 0.85 3 |
 | d12.x86_64 | AVAIL PIGSTY 0.85 1 | AVAIL PIGSTY 0.85 1 | AVAIL PIGSTY 0.85 1 | AVAIL PIGSTY 0.85 1 | AVAIL PIGSTY 0.85 1 |
 | d12.aarch64 | AVAIL PIGSTY 0.85 1 | AVAIL PIGSTY 0.85 1 | AVAIL PIGSTY 0.85 1 | AVAIL PIGSTY 0.85 1 | AVAIL PIGSTY 0.85 1 |
 | d13.x86_64 | AVAIL PIGSTY 0.85 1 | AVAIL PIGSTY 0.85 1 | AVAIL PIGSTY 0.85 1 | AVAIL PIGSTY 0.85 1 | AVAIL PIGSTY 0.85 1 |
@@ -175,6 +175,7 @@ weight: 7320
 @ el10.x86_64 14 pgcryptokey_14 pgcryptokey_14-0.85-10PGDG.rhel10.2.x86_64.rpm pgdg 0.85 17.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pgcryptokey_14-0.85-10PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 14 pgcryptokey_14 pgcryptokey_14-0.85-8PGDG.rhel10.x86_64.rpm pgdg 0.85 17.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pgcryptokey_14-0.85-8PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 14 pgcryptokey_14 pgcryptokey_14-0.85-1PIGSTY.el10.x86_64.rpm pigsty 0.85 16.8KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgcryptokey_14-0.85-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 14 pgcryptokey_14 pgcryptokey_14-0.85-10PGDG.rhel10.2.aarch64.rpm pgdg 0.85 17.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgcryptokey_14-0.85-10PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 14 pgcryptokey_14 pgcryptokey_14-0.85-8PGDG.rhel10.aarch64.rpm pgdg 0.85 17.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgcryptokey_14-0.85-8PGDG.rhel10.aarch64.rpm
 @ el10.aarch64 14 pgcryptokey_14 pgcryptokey_14-0.85-1PIGSTY.el10.aarch64.rpm pigsty 0.85 17.0KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgcryptokey_14-0.85-1PIGSTY.el10.aarch64.rpm
 @ d12.x86_64 14 postgresql-14-pgcryptokey postgresql-14-pgcryptokey_0.85-1PIGSTY~bookworm_amd64.deb pigsty 0.85 11.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgcryptokey/postgresql-14-pgcryptokey_0.85-1PIGSTY~bookworm_amd64.deb

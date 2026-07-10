@@ -55,7 +55,7 @@ weight: 1060
 | el9.x86_64 | AVAIL PGDG 1.11.1 3 | AVAIL PGDG 1.11.1 4 | AVAIL PGDG 1.11.1 3 | AVAIL PGDG 1.11.1 3 | AVAIL PGDG 1.11.1 3 |
 | el9.aarch64 | AVAIL PGDG 1.11.1 3 | AVAIL PGDG 1.11.1 4 | AVAIL PGDG 1.11.1 3 | AVAIL PGDG 1.11.1 3 | AVAIL PGDG 1.11.1 3 |
 | el10.x86_64 | AVAIL PGDG 1.11.1 3 | AVAIL PGDG 1.11.1 3 | AVAIL PGDG 1.11.1 3 | AVAIL PGDG 1.11.1 3 | AVAIL PGDG 1.11.1 3 |
-| el10.aarch64 | AVAIL PGDG 1.11.1 3 | AVAIL PGDG 1.11.1 3 | AVAIL PGDG 1.11.1 3 | AVAIL PGDG 1.11.1 3 | AVAIL PGDG 1.11.1 2 |
+| el10.aarch64 | AVAIL PGDG 1.11.1 3 | AVAIL PGDG 1.11.1 3 | AVAIL PGDG 1.11.1 3 | AVAIL PGDG 1.11.1 3 | AVAIL PGDG 1.11.1 3 |
 | d12.x86_64 | AVAIL PIGSTY 1.11.1 1 | AVAIL PIGSTY 1.11.1 1 | AVAIL PIGSTY 1.11.1 1 | AVAIL PIGSTY 1.11.1 1 | AVAIL PIGSTY 1.11.1 1 |
 | d12.aarch64 | AVAIL PIGSTY 1.11.1 1 | AVAIL PIGSTY 1.11.1 1 | AVAIL PIGSTY 1.11.1 1 | AVAIL PIGSTY 1.11.1 1 | AVAIL PIGSTY 1.11.1 1 |
 | d13.x86_64 | AVAIL PIGSTY 1.11.1 1 | AVAIL PIGSTY 1.11.1 1 | AVAIL PIGSTY 1.11.1 1 | AVAIL PIGSTY 1.11.1 1 | AVAIL PIGSTY 1.11.1 1 |
@@ -188,6 +188,7 @@ weight: 1060
 @ el10.x86_64 14 table_version_14 table_version_14-1.11.1-2PGDG.rhel10.2.noarch.rpm pgdg 1.11.1 30.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/table_version_14-1.11.1-2PGDG.rhel10.2.noarch.rpm
 @ el10.x86_64 14 table_version_14 table_version_14-1.11.1-2PGDG.rhel10.noarch.rpm pgdg 1.11.1 30.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/table_version_14-1.11.1-2PGDG.rhel10.noarch.rpm
 @ el10.x86_64 14 table_version_14 table_version_14-1.11.1-1PIGSTY.el10.x86_64.rpm pigsty 1.11.1 31.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/table_version_14-1.11.1-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 14 table_version_14 table_version_14-1.11.1-2PGDG.rhel10.2.noarch.rpm pgdg 1.11.1 30.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/table_version_14-1.11.1-2PGDG.rhel10.2.noarch.rpm
 @ el10.aarch64 14 table_version_14 table_version_14-1.11.1-2PGDG.rhel10.noarch.rpm pgdg 1.11.1 30.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/table_version_14-1.11.1-2PGDG.rhel10.noarch.rpm
 @ el10.aarch64 14 table_version_14 table_version_14-1.11.1-1PIGSTY.el10.aarch64.rpm pigsty 1.11.1 30.9KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/table_version_14-1.11.1-1PIGSTY.el10.aarch64.rpm
 @ d12.x86_64 14 postgresql-14-table-version postgresql-14-table-version_1.11.1-1PIGSTY~bookworm_amd64.deb pigsty 1.11.1 28.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/t/table-version/postgresql-14-table-version_1.11.1-1PIGSTY~bookworm_amd64.deb

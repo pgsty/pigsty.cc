@@ -50,7 +50,7 @@ weight: 5160
 | el9.x86_64 | AVAIL PGDG 1.6.0 2 | AVAIL PGDG 1.6.0 3 | AVAIL PGDG 1.6.0 3 | AVAIL PGDG 1.6.0 3 | AVAIL PGDG 1.6.0 3 |
 | el9.aarch64 | AVAIL PGDG 1.6.0 2 | AVAIL PGDG 1.6.0 3 | AVAIL PGDG 1.6.0 3 | AVAIL PGDG 1.6.0 3 | AVAIL PGDG 1.6.0 3 |
 | el10.x86_64 | AVAIL PGDG 1.6.0 2 | AVAIL PGDG 1.6.0 2 | AVAIL PGDG 1.6.0 2 | AVAIL PGDG 1.6.0 2 | AVAIL PGDG 1.6.0 2 |
-| el10.aarch64 | AVAIL PGDG 1.6.0 2 | AVAIL PGDG 1.6.0 2 | AVAIL PGDG 1.6.0 2 | AVAIL PGDG 1.6.0 2 | AVAIL PGDG 1.6.0 1 |
+| el10.aarch64 | AVAIL PGDG 1.6.0 2 | AVAIL PGDG 1.6.0 2 | AVAIL PGDG 1.6.0 2 | AVAIL PGDG 1.6.0 2 | AVAIL PGDG 1.6.0 2 |
 | d12.x86_64 | AVAIL PGDG 1.6.0 1 | AVAIL PGDG 1.6.0 1 | AVAIL PGDG 1.6.0 1 | AVAIL PGDG 1.6.0 1 | AVAIL PGDG 1.6.0 1 |
 | d12.aarch64 | AVAIL PGDG 1.6.0 1 | AVAIL PGDG 1.6.0 1 | AVAIL PGDG 1.6.0 1 | AVAIL PGDG 1.6.0 1 | AVAIL PGDG 1.6.0 1 |
 | d13.x86_64 | AVAIL PGDG 1.6.0 1 | AVAIL PGDG 1.6.0 1 | AVAIL PGDG 1.6.0 1 | AVAIL PGDG 1.6.0 1 | AVAIL PGDG 1.6.0 1 |
@@ -166,6 +166,7 @@ weight: 5160
 @ el9.aarch64 14 pg_catcheck_14 pg_catcheck_14-1.3.0-1.rhel9.aarch64.rpm pgdg 1.3.0 37.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_catcheck_14-1.3.0-1.rhel9.aarch64.rpm
 @ el10.x86_64 14 pg_catcheck_14 pg_catcheck_14-1.6.0-4PGDG.rhel10.2.x86_64.rpm pgdg 1.6.0 38.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_catcheck_14-1.6.0-4PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 14 pg_catcheck_14 pg_catcheck_14-1.6.0-3PGDG.rhel10.x86_64.rpm pgdg 1.6.0 38.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_catcheck_14-1.6.0-3PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 14 pg_catcheck_14 pg_catcheck_14-1.6.0-4PGDG.rhel10.2.aarch64.rpm pgdg 1.6.0 37.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_catcheck_14-1.6.0-4PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 14 pg_catcheck_14 pg_catcheck_14-1.6.0-3PGDG.rhel10.aarch64.rpm pgdg 1.6.0 38.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_catcheck_14-1.6.0-3PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 14 postgresql-14-pg-catcheck postgresql-14-pg-catcheck_1.6.0-2.pgdg12+1_amd64.deb pgdg 1.6.0 33.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-catcheck/postgresql-14-pg-catcheck_1.6.0-2.pgdg12+1_amd64.deb
 @ d12.aarch64 14 postgresql-14-pg-catcheck postgresql-14-pg-catcheck_1.6.0-2.pgdg12+1_arm64.deb pgdg 1.6.0 32.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-catcheck/postgresql-14-pg-catcheck_1.6.0-2.pgdg12+1_arm64.deb

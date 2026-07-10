@@ -53,7 +53,7 @@ weight: 7100
 | el9.x86_64 | AVAIL PGDG 18.0 2 | AVAIL PGDG 17.1 3 | AVAIL PGDG 16.1 3 | AVAIL PGDG 1.7.1 4 | AVAIL PGDG 1.6.3 3 |
 | el9.aarch64 | AVAIL PGDG 18.0 2 | AVAIL PGDG 17.1 3 | AVAIL PGDG 16.1 3 | AVAIL PGDG 1.7.1 3 | AVAIL PGDG 1.6.3 3 |
 | el10.x86_64 | AVAIL PGDG 18.0 2 | AVAIL PGDG 17.1 2 | AVAIL PGDG 16.1 2 | AVAIL PGDG 1.7.1 2 | AVAIL PGDG 1.6.3 2 |
-| el10.aarch64 | AVAIL PGDG 18.0 2 | AVAIL PGDG 17.1 2 | AVAIL PGDG 16.1 2 | AVAIL PGDG 1.7.1 2 | AVAIL PGDG 1.6.3 1 |
+| el10.aarch64 | AVAIL PGDG 18.0 2 | AVAIL PGDG 17.1 2 | AVAIL PGDG 16.1 2 | AVAIL PGDG 1.7.1 2 | AVAIL PGDG 1.6.3 2 |
 | d12.x86_64 | AVAIL PGDG 18.0 2 | AVAIL PGDG 17.1 1 | AVAIL PGDG 16.1 1 | AVAIL PGDG 1.7.1 1 | AVAIL PGDG 1.6.3 1 |
 | d12.aarch64 | AVAIL PGDG 18.0 2 | AVAIL PGDG 17.1 1 | AVAIL PGDG 16.1 1 | AVAIL PGDG 1.7.1 1 | AVAIL PGDG 1.6.3 1 |
 | d13.x86_64 | AVAIL PGDG 18.0 2 | AVAIL PGDG 17.1 1 | AVAIL PGDG 16.1 1 | AVAIL PGDG 1.7.1 1 | AVAIL PGDG 1.6.3 1 |
@@ -182,6 +182,7 @@ weight: 7100
 @ el9.aarch64 14 pgaudit16_14 pgaudit16_14-1.6.2-1.rhel9.aarch64.rpm pgdg 1.6.2 55.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pgaudit16_14-1.6.2-1.rhel9.aarch64.rpm
 @ el10.x86_64 14 pgaudit16_14 pgaudit16_14-1.6.3-5PGDG.rhel10.2.x86_64.rpm pgdg 1.6.3 28.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pgaudit16_14-1.6.3-5PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 14 pgaudit16_14 pgaudit16_14-1.6.3-1PGDG.rhel10.x86_64.rpm pgdg 1.6.3 28.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pgaudit16_14-1.6.3-1PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 14 pgaudit16_14 pgaudit16_14-1.6.3-5PGDG.rhel10.2.aarch64.rpm pgdg 1.6.3 28.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgaudit16_14-1.6.3-5PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 14 pgaudit16_14 pgaudit16_14-1.6.3-1PGDG.rhel10.aarch64.rpm pgdg 1.6.3 28.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgaudit16_14-1.6.3-1PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 14 postgresql-14-pgaudit postgresql-14-pgaudit_1.6.3-2.pgdg12+1_amd64.deb pgdg 1.6.3 44.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgaudit-1.6/postgresql-14-pgaudit_1.6.3-2.pgdg12+1_amd64.deb
 @ d12.aarch64 14 postgresql-14-pgaudit postgresql-14-pgaudit_1.6.3-2.pgdg12+1_arm64.deb pgdg 1.6.3 43.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgaudit-1.6/postgresql-14-pgaudit_1.6.3-2.pgdg12+1_arm64.deb

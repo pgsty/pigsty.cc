@@ -20,7 +20,7 @@ weight: 8520
 
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
-| [**`odbc_fdw`**](/ext/e/odbc_fdw) | `0.5.1` | <a class="ext-badge ext-badge--cate fdw" href="/ext/cate/fdw">FDW</a> | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
+| [**`odbc_fdw`**](/ext/e/odbc_fdw) | `0.6.1` | <a class="ext-badge ext-badge--cate fdw" href="/ext/cate/fdw">FDW</a> | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
 {.ext-table}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
@@ -37,19 +37,19 @@ weight: 8520
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#fdw) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `0.5.1` | {{< pgvers "17,16,15,14" >}} | `odbc_fdw` | - |
-| [**RPM**](/ext/rpm#fdw) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `0.5.1` | {{< pgvers "17,16,15,14" >}} | `odbc_fdw_$v` | `unixODBC` |
+| [**EXT**](/ext/list#fdw) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `0.6.1` | {{< pgvers "18,17,16,15,14" >}} | `odbc_fdw` | - |
+| [**RPM**](/ext/rpm#fdw) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `0.6.1` | {{< pgvers "18,17,16,15,14" >}} | `odbc_fdw_$v` | `unixODBC` |
 {.ext-table}
 
 {{< pgext_matrix >}}
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | MISS PGDG - 0 | AVAIL PGDG 0.5.1 1 | AVAIL PGDG 0.5.1 1 | AVAIL PGDG 0.5.1 1 | AVAIL PGDG 0.5.1 1 |
-| el8.aarch64 | MISS PGDG - 0 | AVAIL PGDG 0.5.1 1 | AVAIL PGDG 0.5.1 1 | AVAIL PGDG 0.5.1 1 | AVAIL PGDG 0.5.1 1 |
-| el9.x86_64 | MISS PGDG - 0 | AVAIL PGDG 0.5.1 2 | AVAIL PGDG 0.5.1 2 | AVAIL PGDG 0.5.1 2 | AVAIL PGDG 0.5.1 2 |
-| el9.aarch64 | MISS PGDG - 0 | AVAIL PGDG 0.5.1 2 | AVAIL PGDG 0.5.1 2 | AVAIL PGDG 0.5.1 2 | AVAIL PGDG 0.5.1 2 |
-| el10.x86_64 | MISS PGDG - 0 | AVAIL PGDG 0.5.1 2 | AVAIL PGDG 0.5.1 2 | AVAIL PGDG 0.5.1 2 | AVAIL PGDG 0.5.1 2 |
-| el10.aarch64 | MISS PGDG - 0 | AVAIL PGDG 0.5.1 2 | AVAIL PGDG 0.5.1 2 | AVAIL PGDG 0.5.1 2 | AVAIL PGDG 0.5.1 1 |
+| el8.x86_64 | AVAIL PGDG 0.6.1 1 | AVAIL PGDG 0.6.1 2 | AVAIL PGDG 0.6.1 2 | AVAIL PGDG 0.6.1 2 | AVAIL PGDG 0.6.1 2 |
+| el8.aarch64 | AVAIL PGDG 0.6.1 1 | AVAIL PGDG 0.6.1 2 | AVAIL PGDG 0.6.1 2 | AVAIL PGDG 0.6.1 2 | AVAIL PGDG 0.6.1 2 |
+| el9.x86_64 | AVAIL PGDG 0.6.1 1 | AVAIL PGDG 0.6.1 3 | AVAIL PGDG 0.6.1 3 | AVAIL PGDG 0.6.1 3 | AVAIL PGDG 0.6.1 3 |
+| el9.aarch64 | AVAIL PGDG 0.6.1 1 | AVAIL PGDG 0.6.1 3 | AVAIL PGDG 0.6.1 3 | AVAIL PGDG 0.6.1 3 | AVAIL PGDG 0.6.1 3 |
+| el10.x86_64 | AVAIL PGDG 0.6.1 1 | AVAIL PGDG 0.6.1 3 | AVAIL PGDG 0.6.1 3 | AVAIL PGDG 0.6.1 3 | AVAIL PGDG 0.6.1 3 |
+| el10.aarch64 | AVAIL PGDG 0.6.1 1 | AVAIL PGDG 0.6.1 3 | AVAIL PGDG 0.6.1 3 | AVAIL PGDG 0.6.1 3 | AVAIL PGDG 0.6.1 3 |
 | d12.x86_64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
 | d12.aarch64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
 | d13.x86_64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
@@ -60,44 +60,75 @@ weight: 8520
 | u24.aarch64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
 | u26.x86_64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
 | u26.aarch64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
+@ el8.x86_64 18 odbc_fdw_18 odbc_fdw_18-0.6.1-1PGDG.rhel8.10.x86_64.rpm pgdg 0.6.1 28.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/odbc_fdw_18-0.6.1-1PGDG.rhel8.10.x86_64.rpm
+@ el8.aarch64 18 odbc_fdw_18 odbc_fdw_18-0.6.1-1PGDG.rhel8.10.aarch64.rpm pgdg 0.6.1 28.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/odbc_fdw_18-0.6.1-1PGDG.rhel8.10.aarch64.rpm
+@ el9.x86_64 18 odbc_fdw_18 odbc_fdw_18-0.6.1-1PGDG.rhel9.8.x86_64.rpm pgdg 0.6.1 29.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/odbc_fdw_18-0.6.1-1PGDG.rhel9.8.x86_64.rpm
+@ el9.aarch64 18 odbc_fdw_18 odbc_fdw_18-0.6.1-1PGDG.rhel9.8.aarch64.rpm pgdg 0.6.1 28.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/odbc_fdw_18-0.6.1-1PGDG.rhel9.8.aarch64.rpm
+@ el10.x86_64 18 odbc_fdw_18 odbc_fdw_18-0.6.1-1PGDG.rhel10.2.x86_64.rpm pgdg 0.6.1 30.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/odbc_fdw_18-0.6.1-1PGDG.rhel10.2.x86_64.rpm
+@ el10.aarch64 18 odbc_fdw_18 odbc_fdw_18-0.6.1-1PGDG.rhel10.2.aarch64.rpm pgdg 0.6.1 28.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/odbc_fdw_18-0.6.1-1PGDG.rhel10.2.aarch64.rpm
+@ el8.x86_64 17 odbc_fdw_17 odbc_fdw_17-0.6.1-1PGDG.rhel8.10.x86_64.rpm pgdg 0.6.1 28.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/odbc_fdw_17-0.6.1-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 odbc_fdw_17 odbc_fdw_17-0.5.1-2PGDG.rhel8.x86_64.rpm pgdg 0.5.1 26.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/odbc_fdw_17-0.5.1-2PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 17 odbc_fdw_17 odbc_fdw_17-0.6.1-1PGDG.rhel8.10.aarch64.rpm pgdg 0.6.1 28.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/odbc_fdw_17-0.6.1-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 17 odbc_fdw_17 odbc_fdw_17-0.5.1-2PGDG.rhel8.aarch64.rpm pgdg 0.5.1 25.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/odbc_fdw_17-0.5.1-2PGDG.rhel8.aarch64.rpm
+@ el9.x86_64 17 odbc_fdw_17 odbc_fdw_17-0.6.1-1PGDG.rhel9.8.x86_64.rpm pgdg 0.6.1 29.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/odbc_fdw_17-0.6.1-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 17 odbc_fdw_17 odbc_fdw_17-0.5.1-5PGDG.rhel9.8.x86_64.rpm pgdg 0.5.1 26.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/odbc_fdw_17-0.5.1-5PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 17 odbc_fdw_17 odbc_fdw_17-0.5.1-2PGDG.rhel9.x86_64.rpm pgdg 0.5.1 26.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/odbc_fdw_17-0.5.1-2PGDG.rhel9.x86_64.rpm
+@ el9.aarch64 17 odbc_fdw_17 odbc_fdw_17-0.6.1-1PGDG.rhel9.8.aarch64.rpm pgdg 0.6.1 28.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/odbc_fdw_17-0.6.1-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 17 odbc_fdw_17 odbc_fdw_17-0.5.1-5PGDG.rhel9.8.aarch64.rpm pgdg 0.5.1 26.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/odbc_fdw_17-0.5.1-5PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 17 odbc_fdw_17 odbc_fdw_17-0.5.1-2PGDG.rhel9.aarch64.rpm pgdg 0.5.1 25.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/odbc_fdw_17-0.5.1-2PGDG.rhel9.aarch64.rpm
+@ el10.x86_64 17 odbc_fdw_17 odbc_fdw_17-0.6.1-1PGDG.rhel10.2.x86_64.rpm pgdg 0.6.1 30.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/odbc_fdw_17-0.6.1-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 17 odbc_fdw_17 odbc_fdw_17-0.5.1-5PGDG.rhel10.2.x86_64.rpm pgdg 0.5.1 27.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/odbc_fdw_17-0.5.1-5PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 17 odbc_fdw_17 odbc_fdw_17-0.5.1-3PGDG.rhel10.x86_64.rpm pgdg 0.5.1 27.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/odbc_fdw_17-0.5.1-3PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 17 odbc_fdw_17 odbc_fdw_17-0.6.1-1PGDG.rhel10.2.aarch64.rpm pgdg 0.6.1 28.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/odbc_fdw_17-0.6.1-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 17 odbc_fdw_17 odbc_fdw_17-0.5.1-5PGDG.rhel10.2.aarch64.rpm pgdg 0.5.1 26.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/odbc_fdw_17-0.5.1-5PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 17 odbc_fdw_17 odbc_fdw_17-0.5.1-3PGDG.rhel10.aarch64.rpm pgdg 0.5.1 26.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/odbc_fdw_17-0.5.1-3PGDG.rhel10.aarch64.rpm
+@ el8.x86_64 16 odbc_fdw_16 odbc_fdw_16-0.6.1-1PGDG.rhel8.10.x86_64.rpm pgdg 0.6.1 28.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/odbc_fdw_16-0.6.1-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 odbc_fdw_16 odbc_fdw_16-0.5.1-1PGDG.rhel8.x86_64.rpm pgdg 0.5.1 26.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/odbc_fdw_16-0.5.1-1PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 16 odbc_fdw_16 odbc_fdw_16-0.6.1-1PGDG.rhel8.10.aarch64.rpm pgdg 0.6.1 28.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/odbc_fdw_16-0.6.1-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 16 odbc_fdw_16 odbc_fdw_16-0.5.1-1PGDG.rhel8.aarch64.rpm pgdg 0.5.1 25.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/odbc_fdw_16-0.5.1-1PGDG.rhel8.aarch64.rpm
+@ el9.x86_64 16 odbc_fdw_16 odbc_fdw_16-0.6.1-1PGDG.rhel9.8.x86_64.rpm pgdg 0.6.1 29.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/odbc_fdw_16-0.6.1-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 16 odbc_fdw_16 odbc_fdw_16-0.5.1-5PGDG.rhel9.8.x86_64.rpm pgdg 0.5.1 26.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/odbc_fdw_16-0.5.1-5PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 16 odbc_fdw_16 odbc_fdw_16-0.5.1-1PGDG.rhel9.x86_64.rpm pgdg 0.5.1 26.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/odbc_fdw_16-0.5.1-1PGDG.rhel9.x86_64.rpm
+@ el9.aarch64 16 odbc_fdw_16 odbc_fdw_16-0.6.1-1PGDG.rhel9.8.aarch64.rpm pgdg 0.6.1 28.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/odbc_fdw_16-0.6.1-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 16 odbc_fdw_16 odbc_fdw_16-0.5.1-5PGDG.rhel9.8.aarch64.rpm pgdg 0.5.1 26.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/odbc_fdw_16-0.5.1-5PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 16 odbc_fdw_16 odbc_fdw_16-0.5.1-1PGDG.rhel9.aarch64.rpm pgdg 0.5.1 25.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/odbc_fdw_16-0.5.1-1PGDG.rhel9.aarch64.rpm
+@ el10.x86_64 16 odbc_fdw_16 odbc_fdw_16-0.6.1-1PGDG.rhel10.2.x86_64.rpm pgdg 0.6.1 30.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/odbc_fdw_16-0.6.1-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 16 odbc_fdw_16 odbc_fdw_16-0.5.1-5PGDG.rhel10.2.x86_64.rpm pgdg 0.5.1 27.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/odbc_fdw_16-0.5.1-5PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 16 odbc_fdw_16 odbc_fdw_16-0.5.1-3PGDG.rhel10.x86_64.rpm pgdg 0.5.1 27.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/odbc_fdw_16-0.5.1-3PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 16 odbc_fdw_16 odbc_fdw_16-0.6.1-1PGDG.rhel10.2.aarch64.rpm pgdg 0.6.1 28.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/odbc_fdw_16-0.6.1-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 16 odbc_fdw_16 odbc_fdw_16-0.5.1-5PGDG.rhel10.2.aarch64.rpm pgdg 0.5.1 26.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/odbc_fdw_16-0.5.1-5PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 16 odbc_fdw_16 odbc_fdw_16-0.5.1-3PGDG.rhel10.aarch64.rpm pgdg 0.5.1 26.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/odbc_fdw_16-0.5.1-3PGDG.rhel10.aarch64.rpm
+@ el8.x86_64 15 odbc_fdw_15 odbc_fdw_15-0.6.1-1PGDG.rhel8.10.x86_64.rpm pgdg 0.6.1 28.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/odbc_fdw_15-0.6.1-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 odbc_fdw_15 odbc_fdw_15-0.5.1-1PGDG.rhel8.x86_64.rpm pgdg 0.5.1 26.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/odbc_fdw_15-0.5.1-1PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 15 odbc_fdw_15 odbc_fdw_15-0.6.1-1PGDG.rhel8.10.aarch64.rpm pgdg 0.6.1 28.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/odbc_fdw_15-0.6.1-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 15 odbc_fdw_15 odbc_fdw_15-0.5.1-1PGDG.rhel8.aarch64.rpm pgdg 0.5.1 25.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/odbc_fdw_15-0.5.1-1PGDG.rhel8.aarch64.rpm
+@ el9.x86_64 15 odbc_fdw_15 odbc_fdw_15-0.6.1-1PGDG.rhel9.8.x86_64.rpm pgdg 0.6.1 29.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/odbc_fdw_15-0.6.1-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 15 odbc_fdw_15 odbc_fdw_15-0.5.1-5PGDG.rhel9.8.x86_64.rpm pgdg 0.5.1 26.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/odbc_fdw_15-0.5.1-5PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 15 odbc_fdw_15 odbc_fdw_15-0.5.1-1PGDG.rhel9.x86_64.rpm pgdg 0.5.1 26.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/odbc_fdw_15-0.5.1-1PGDG.rhel9.x86_64.rpm
+@ el9.aarch64 15 odbc_fdw_15 odbc_fdw_15-0.6.1-1PGDG.rhel9.8.aarch64.rpm pgdg 0.6.1 28.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/odbc_fdw_15-0.6.1-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 15 odbc_fdw_15 odbc_fdw_15-0.5.1-5PGDG.rhel9.8.aarch64.rpm pgdg 0.5.1 26.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/odbc_fdw_15-0.5.1-5PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 15 odbc_fdw_15 odbc_fdw_15-0.5.1-1PGDG.rhel9.aarch64.rpm pgdg 0.5.1 25.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/odbc_fdw_15-0.5.1-1PGDG.rhel9.aarch64.rpm
+@ el10.x86_64 15 odbc_fdw_15 odbc_fdw_15-0.6.1-1PGDG.rhel10.2.x86_64.rpm pgdg 0.6.1 30.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/odbc_fdw_15-0.6.1-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 15 odbc_fdw_15 odbc_fdw_15-0.5.1-5PGDG.rhel10.2.x86_64.rpm pgdg 0.5.1 27.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/odbc_fdw_15-0.5.1-5PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 15 odbc_fdw_15 odbc_fdw_15-0.5.1-3PGDG.rhel10.x86_64.rpm pgdg 0.5.1 27.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/odbc_fdw_15-0.5.1-3PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 15 odbc_fdw_15 odbc_fdw_15-0.6.1-1PGDG.rhel10.2.aarch64.rpm pgdg 0.6.1 28.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/odbc_fdw_15-0.6.1-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 15 odbc_fdw_15 odbc_fdw_15-0.5.1-5PGDG.rhel10.2.aarch64.rpm pgdg 0.5.1 26.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/odbc_fdw_15-0.5.1-5PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 15 odbc_fdw_15 odbc_fdw_15-0.5.1-3PGDG.rhel10.aarch64.rpm pgdg 0.5.1 26.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/odbc_fdw_15-0.5.1-3PGDG.rhel10.aarch64.rpm
+@ el8.x86_64 14 odbc_fdw_14 odbc_fdw_14-0.6.1-1PGDG.rhel8.10.x86_64.rpm pgdg 0.6.1 28.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/odbc_fdw_14-0.6.1-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 14 odbc_fdw_14 odbc_fdw_14-0.5.1-1PGDG.rhel8.x86_64.rpm pgdg 0.5.1 26.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/odbc_fdw_14-0.5.1-1PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 14 odbc_fdw_14 odbc_fdw_14-0.6.1-1PGDG.rhel8.10.aarch64.rpm pgdg 0.6.1 28.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/odbc_fdw_14-0.6.1-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 14 odbc_fdw_14 odbc_fdw_14-0.5.1-1PGDG.rhel8.aarch64.rpm pgdg 0.5.1 25.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/odbc_fdw_14-0.5.1-1PGDG.rhel8.aarch64.rpm
+@ el9.x86_64 14 odbc_fdw_14 odbc_fdw_14-0.6.1-1PGDG.rhel9.8.x86_64.rpm pgdg 0.6.1 29.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/odbc_fdw_14-0.6.1-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 14 odbc_fdw_14 odbc_fdw_14-0.5.1-5PGDG.rhel9.8.x86_64.rpm pgdg 0.5.1 26.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/odbc_fdw_14-0.5.1-5PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 14 odbc_fdw_14 odbc_fdw_14-0.5.1-1PGDG.rhel9.x86_64.rpm pgdg 0.5.1 26.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/odbc_fdw_14-0.5.1-1PGDG.rhel9.x86_64.rpm
+@ el9.aarch64 14 odbc_fdw_14 odbc_fdw_14-0.6.1-1PGDG.rhel9.8.aarch64.rpm pgdg 0.6.1 28.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/odbc_fdw_14-0.6.1-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 14 odbc_fdw_14 odbc_fdw_14-0.5.1-5PGDG.rhel9.8.aarch64.rpm pgdg 0.5.1 26.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/odbc_fdw_14-0.5.1-5PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 14 odbc_fdw_14 odbc_fdw_14-0.5.1-1PGDG.rhel9.aarch64.rpm pgdg 0.5.1 25.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/odbc_fdw_14-0.5.1-1PGDG.rhel9.aarch64.rpm
+@ el10.x86_64 14 odbc_fdw_14 odbc_fdw_14-0.6.1-1PGDG.rhel10.2.x86_64.rpm pgdg 0.6.1 30.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/odbc_fdw_14-0.6.1-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 14 odbc_fdw_14 odbc_fdw_14-0.5.1-5PGDG.rhel10.2.x86_64.rpm pgdg 0.5.1 27.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/odbc_fdw_14-0.5.1-5PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 14 odbc_fdw_14 odbc_fdw_14-0.5.1-3PGDG.rhel10.x86_64.rpm pgdg 0.5.1 27.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/odbc_fdw_14-0.5.1-3PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 14 odbc_fdw_14 odbc_fdw_14-0.6.1-1PGDG.rhel10.2.aarch64.rpm pgdg 0.6.1 28.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/odbc_fdw_14-0.6.1-1PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 14 odbc_fdw_14 odbc_fdw_14-0.5.1-5PGDG.rhel10.2.aarch64.rpm pgdg 0.5.1 26.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/odbc_fdw_14-0.5.1-5PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 14 odbc_fdw_14 odbc_fdw_14-0.5.1-3PGDG.rhel10.aarch64.rpm pgdg 0.5.1 26.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/odbc_fdw_14-0.5.1-3PGDG.rhel10.aarch64.rpm
 {{< /pgext_matrix >}}
 
@@ -120,6 +151,7 @@ pig install odbc_fdw;          # 当前活跃 PG 版本安装
 {{% /tab %}}
 {{% tab header="pig" %}}
 ```bash
+pig ext install -y odbc_fdw -v 18  # PG 18
 pig ext install -y odbc_fdw -v 17  # PG 17
 pig ext install -y odbc_fdw -v 16  # PG 16
 pig ext install -y odbc_fdw -v 15  # PG 15
@@ -128,6 +160,7 @@ pig ext install -y odbc_fdw -v 14  # PG 14
 {{% /tab %}}
 {{% tab header="dnf" %}}
 ```bash
+dnf install -y odbc_fdw_18       # PG 18
 dnf install -y odbc_fdw_17       # PG 17
 dnf install -y odbc_fdw_16       # PG 16
 dnf install -y odbc_fdw_15       # PG 15

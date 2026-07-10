@@ -55,7 +55,7 @@ weight: 1030
 | el9.x86_64 | AVAIL PIGSTY 1.2.3 1 | AVAIL PIGSTY 1.2.3 3 | AVAIL PIGSTY 1.2.3 3 | AVAIL PIGSTY 1.2.3 4 | AVAIL PIGSTY 1.2.3 3 |
 | el9.aarch64 | AVAIL PIGSTY 1.2.3 1 | AVAIL PIGSTY 1.2.3 3 | AVAIL PIGSTY 1.2.3 3 | AVAIL PIGSTY 1.2.3 4 | AVAIL PIGSTY 1.2.3 4 |
 | el10.x86_64 | AVAIL PIGSTY 1.2.3 1 | AVAIL PIGSTY 1.2.3 3 | AVAIL PIGSTY 1.2.3 3 | AVAIL PIGSTY 1.2.3 3 | AVAIL PIGSTY 1.2.3 3 |
-| el10.aarch64 | AVAIL PIGSTY 1.2.3 1 | AVAIL PIGSTY 1.2.3 3 | AVAIL PIGSTY 1.2.3 3 | AVAIL PIGSTY 1.2.3 3 | AVAIL PIGSTY 1.2.3 2 |
+| el10.aarch64 | AVAIL PIGSTY 1.2.3 1 | AVAIL PIGSTY 1.2.3 3 | AVAIL PIGSTY 1.2.3 3 | AVAIL PIGSTY 1.2.3 3 | AVAIL PIGSTY 1.2.3 3 |
 | d12.x86_64 | AVAIL PGDG 1.2.3 1 | AVAIL PGDG 1.2.3 1 | AVAIL PGDG 1.2.3 1 | AVAIL PGDG 1.2.3 1 | AVAIL PGDG 1.2.3 1 |
 | d12.aarch64 | AVAIL PGDG 1.2.3 1 | AVAIL PGDG 1.2.3 1 | AVAIL PGDG 1.2.3 1 | AVAIL PGDG 1.2.3 1 | AVAIL PGDG 1.2.3 1 |
 | d13.x86_64 | AVAIL PGDG 1.2.3 1 | AVAIL PGDG 1.2.3 1 | AVAIL PGDG 1.2.3 1 | AVAIL PGDG 1.2.3 1 | AVAIL PGDG 1.2.3 1 |
@@ -181,6 +181,7 @@ weight: 1030
 @ el10.x86_64 14 periods_14 periods_14-1.2.2-6PGDG.rhel10.2.x86_64.rpm pgdg 1.2.2 42.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/periods_14-1.2.2-6PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 14 periods_14 periods_14-1.2.2-4PGDG.rhel10.x86_64.rpm pgdg 1.2.2 42.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/periods_14-1.2.2-4PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 14 periods_14 periods_14-1.2.3-1PIGSTY.el10.aarch64.rpm pigsty 1.2.3 42.0KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/periods_14-1.2.3-1PIGSTY.el10.aarch64.rpm
+@ el10.aarch64 14 periods_14 periods_14-1.2.2-6PGDG.rhel10.2.aarch64.rpm pgdg 1.2.2 42.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/periods_14-1.2.2-6PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 14 periods_14 periods_14-1.2.2-4PGDG.rhel10.aarch64.rpm pgdg 1.2.2 42.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/periods_14-1.2.2-4PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 14 postgresql-14-periods postgresql-14-periods_1.2.3-2.pgdg12+1_amd64.deb pgdg 1.2.3 46.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-periods/postgresql-14-periods_1.2.3-2.pgdg12+1_amd64.deb
 @ d12.aarch64 14 postgresql-14-periods postgresql-14-periods_1.2.3-2.pgdg12+1_arm64.deb pgdg 1.2.3 46.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-periods/postgresql-14-periods_1.2.3-2.pgdg12+1_arm64.deb

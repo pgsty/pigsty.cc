@@ -55,7 +55,7 @@ weight: 9640
 | el9.x86_64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | AVAIL PGDG 1.0.7 2 | AVAIL PGDG 1.0.7 2 | AVAIL PGDG 1.0.7 2 |
 | el9.aarch64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | AVAIL PGDG 1.0.7 2 | AVAIL PGDG 1.0.7 2 | AVAIL PGDG 1.0.7 2 |
 | el10.x86_64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | AVAIL PGDG 1.0.7 2 | AVAIL PGDG 1.0.7 2 | AVAIL PGDG 1.0.7 2 |
-| el10.aarch64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | AVAIL PGDG 1.0.7 2 | AVAIL PGDG 1.0.7 2 | AVAIL PGDG 1.0.7 1 |
+| el10.aarch64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | AVAIL PGDG 1.0.7 2 | AVAIL PGDG 1.0.7 2 | AVAIL PGDG 1.0.7 2 |
 | d12.x86_64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | AVAIL PIGSTY 1.0.7 1 | AVAIL PIGSTY 1.0.7 1 | AVAIL PIGSTY 1.0.7 1 |
 | d12.aarch64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | AVAIL PIGSTY 1.0.7 1 | AVAIL PIGSTY 1.0.7 1 | AVAIL PIGSTY 1.0.7 1 |
 | d13.x86_64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | AVAIL PIGSTY 1.0.7 1 | AVAIL PIGSTY 1.0.7 1 | AVAIL PIGSTY 1.0.7 1 |
@@ -114,6 +114,7 @@ weight: 9640
 @ el9.aarch64 14 wal2mongo_14 wal2mongo_14-1.0.7-1PGDG.rhel9.aarch64.rpm pgdg 1.0.7 19.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/wal2mongo_14-1.0.7-1PGDG.rhel9.aarch64.rpm
 @ el10.x86_64 14 wal2mongo_14 wal2mongo_14-1.0.7-5PGDG.rhel10.2.x86_64.rpm pgdg 1.0.7 20.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/wal2mongo_14-1.0.7-5PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 14 wal2mongo_14 wal2mongo_14-1.0.7-3PGDG.rhel10.x86_64.rpm pgdg 1.0.7 20.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/wal2mongo_14-1.0.7-3PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 14 wal2mongo_14 wal2mongo_14-1.0.7-5PGDG.rhel10.2.aarch64.rpm pgdg 1.0.7 20.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/wal2mongo_14-1.0.7-5PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 14 wal2mongo_14 wal2mongo_14-1.0.7-3PGDG.rhel10.aarch64.rpm pgdg 1.0.7 20.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/wal2mongo_14-1.0.7-3PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 14 postgresql-14-wal2mongo postgresql-14-wal2mongo_1.0.7-1PIGSTY~bookworm_amd64.deb pigsty 1.0.7 34.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/w/wal2mongo/postgresql-14-wal2mongo_1.0.7-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 14 postgresql-14-wal2mongo postgresql-14-wal2mongo_1.0.7-1PIGSTY~bookworm_arm64.deb pigsty 1.0.7 33.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/w/wal2mongo/postgresql-14-wal2mongo_1.0.7-1PIGSTY~bookworm_arm64.deb

@@ -53,7 +53,7 @@ weight: 3200
 | el9.x86_64 | AVAIL PGDG 1.3.4 3 | AVAIL PGDG 1.3.4 3 | AVAIL PGDG 1.3.4 3 | AVAIL PGDG 1.3.4 3 | AVAIL PGDG 1.3.4 3 |
 | el9.aarch64 | AVAIL PGDG 1.3.4 3 | AVAIL PGDG 1.3.4 3 | AVAIL PGDG 1.3.4 4 | AVAIL PGDG 1.3.4 4 | AVAIL PGDG 1.3.4 4 |
 | el10.x86_64 | AVAIL PGDG 1.3.4 3 | AVAIL PGDG 1.3.4 3 | AVAIL PGDG 1.3.4 3 | AVAIL PGDG 1.3.4 3 | AVAIL PGDG 1.3.4 3 |
-| el10.aarch64 | AVAIL PGDG 1.3.4 3 | AVAIL PGDG 1.3.4 3 | AVAIL PGDG 1.3.4 3 | AVAIL PGDG 1.3.4 3 | AVAIL PGDG 1.3.4 2 |
+| el10.aarch64 | AVAIL PGDG 1.3.4 3 | AVAIL PGDG 1.3.4 3 | AVAIL PGDG 1.3.4 3 | AVAIL PGDG 1.3.4 3 | AVAIL PGDG 1.3.4 3 |
 | d12.x86_64 | AVAIL PGDG 1.3.4 1 | AVAIL PGDG 1.3.4 1 | AVAIL PGDG 1.3.4 1 | AVAIL PGDG 1.3.4 1 | AVAIL PGDG 1.3.4 1 |
 | d12.aarch64 | AVAIL PGDG 1.3.4 1 | AVAIL PGDG 1.3.4 1 | AVAIL PGDG 1.3.4 1 | AVAIL PGDG 1.3.4 1 | AVAIL PGDG 1.3.4 1 |
 | d13.x86_64 | AVAIL PGDG 1.3.4 1 | AVAIL PGDG 1.3.4 1 | AVAIL PGDG 1.3.4 1 | AVAIL PGDG 1.3.4 1 | AVAIL PGDG 1.3.4 1 |
@@ -183,6 +183,7 @@ weight: 3200
 @ el10.x86_64 14 pgtap_14 pgtap_14-1.3.4-1PGDG.rhel10.2.noarch.rpm pgdg 1.3.4 106.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pgtap_14-1.3.4-1PGDG.rhel10.2.noarch.rpm
 @ el10.x86_64 14 pgtap_14 pgtap_14-1.3.4-1PGDG.rhel10.noarch.rpm pgdg 1.3.4 107.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pgtap_14-1.3.4-1PGDG.rhel10.noarch.rpm
 @ el10.x86_64 14 pgtap_14 pgtap_14-1.3.3-1PGDG.rhel10.noarch.rpm pgdg 1.3.3 107.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pgtap_14-1.3.3-1PGDG.rhel10.noarch.rpm
+@ el10.aarch64 14 pgtap_14 pgtap_14-1.3.4-1PGDG.rhel10.2.noarch.rpm pgdg 1.3.4 106.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgtap_14-1.3.4-1PGDG.rhel10.2.noarch.rpm
 @ el10.aarch64 14 pgtap_14 pgtap_14-1.3.4-1PGDG.rhel10.noarch.rpm pgdg 1.3.4 107.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgtap_14-1.3.4-1PGDG.rhel10.noarch.rpm
 @ el10.aarch64 14 pgtap_14 pgtap_14-1.3.3-1PGDG.rhel10.noarch.rpm pgdg 1.3.3 106.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgtap_14-1.3.3-1PGDG.rhel10.noarch.rpm
 @ d12.x86_64 14 postgresql-14-pgtap postgresql-14-pgtap_1.3.4-1.pgdg12+1_all.deb pgdg 1.3.4 62.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgtap/postgresql-14-pgtap_1.3.4-1.pgdg12+1_all.deb

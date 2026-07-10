@@ -59,7 +59,7 @@ weight: 7020
 | el9.x86_64 | AVAIL PGDG 3.1.9 3 | AVAIL PGDG 3.1.9 3 | AVAIL PGDG 3.1.9 4 | AVAIL PGDG 3.1.9 12 | AVAIL PGDG 3.1.9 13 |
 | el9.aarch64 | AVAIL PGDG 3.1.9 3 | AVAIL PGDG 3.1.9 3 | AVAIL PGDG 3.1.9 4 | AVAIL PGDG 3.1.9 12 | AVAIL PGDG 3.1.9 12 |
 | el10.x86_64 | AVAIL PGDG 3.1.11 6 | AVAIL PGDG 3.1.11 6 | AVAIL PGDG 3.1.11 6 | AVAIL PGDG 3.1.11 6 | AVAIL PGDG 3.1.11 6 |
-| el10.aarch64 | AVAIL PGDG 3.1.11 4 | AVAIL PGDG 3.1.11 4 | AVAIL PGDG 3.1.11 4 | AVAIL PGDG 3.1.11 4 | AVAIL PGDG 3.1.11 3 |
+| el10.aarch64 | AVAIL PGDG 3.1.11 4 | AVAIL PGDG 3.1.11 4 | AVAIL PGDG 3.1.11 4 | AVAIL PGDG 3.1.11 4 | AVAIL PGDG 3.1.11 4 |
 | d12.x86_64 | AVAIL PIGSTY 3.1.9 1 | AVAIL PIGSTY 3.1.9 1 | AVAIL PIGSTY 3.1.9 1 | AVAIL PIGSTY 3.1.9 1 | AVAIL PIGSTY 3.1.9 1 |
 | d12.aarch64 | AVAIL PIGSTY 3.1.9 1 | AVAIL PIGSTY 3.1.9 1 | AVAIL PIGSTY 3.1.9 1 | AVAIL PIGSTY 3.1.9 1 | AVAIL PIGSTY 3.1.9 1 |
 | d13.x86_64 | AVAIL PIGSTY 3.1.9 1 | AVAIL PIGSTY 3.1.9 1 | AVAIL PIGSTY 3.1.9 1 | AVAIL PIGSTY 3.1.9 1 | AVAIL PIGSTY 3.1.9 1 |
@@ -288,7 +288,8 @@ weight: 7020
 @ el10.x86_64 14 pgsodium_14 pgsodium_14-3.1.9-6PGDG.rhel10.2.x86_64.rpm pgdg 3.1.9 68.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pgsodium_14-3.1.9-6PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 14 pgsodium_14 pgsodium_14-3.1.9-4PGDG.rhel10.x86_64.rpm pgdg 3.1.9 69.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pgsodium_14-3.1.9-4PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 14 pgsodium_14 pgsodium_14-3.1.9-1PIGSTY.el10.x86_64.rpm pigsty 3.1.9 55.2KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgsodium_14-3.1.9-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 14 pgsodium_14 pgsodium_14-3.1.11-1PGDG.rhel10.1.aarch64.rpm pgdg 3.1.11 72.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgsodium_14-3.1.11-1PGDG.rhel10.1.aarch64.rpm
+@ el10.aarch64 14 pgsodium_14 pgsodium_14-3.1.11-1PGDG.rhel10.2.aarch64.rpm pgdg 3.1.11 72.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgsodium_14-3.1.11-1PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 14 pgsodium_14 pgsodium_14-3.1.9-6PGDG.rhel10.2.aarch64.rpm pgdg 3.1.9 66.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgsodium_14-3.1.9-6PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 14 pgsodium_14 pgsodium_14-3.1.9-4PGDG.rhel10.aarch64.rpm pgdg 3.1.9 66.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgsodium_14-3.1.9-4PGDG.rhel10.aarch64.rpm
 @ el10.aarch64 14 pgsodium_14 pgsodium_14-3.1.9-1PIGSTY.el10.aarch64.rpm pigsty 3.1.9 52.9KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgsodium_14-3.1.9-1PIGSTY.el10.aarch64.rpm
 @ d12.x86_64 14 postgresql-14-pgsodium postgresql-14-pgsodium_3.1.9-1PIGSTY~bookworm_amd64.deb pigsty 3.1.9 172.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgsodium/postgresql-14-pgsodium_3.1.9-1PIGSTY~bookworm_amd64.deb
