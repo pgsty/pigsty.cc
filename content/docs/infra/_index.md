@@ -158,7 +158,7 @@ Pigsty 默认会在元节点上安装 Ansible，Ansible 是一个流行的运维
 
 DNSMASQ 提供环境内的 DNS**解析**服务，其他模块的域名将会注册到 INFRA 节点上的 DNSMASQ 服务中。
 
-DNS 记录默认放置于所有 INFRA 节点的 `/etc/hosts.d/` 目录中。
+DNS 记录默认放置于所有 INFRA 节点的 `/etc/dnsmasq.d/pigsty/` 目录中。
 
 DNSMASQ 相关配置参数位于：[配置：INFRA - DNS](/docs/infra/param#dns)
 

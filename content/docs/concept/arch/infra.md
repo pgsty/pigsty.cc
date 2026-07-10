@@ -275,7 +275,7 @@ Pigsty 在安装时会自动在管理节点（Infra 节点）上安装 **Ansible
 
 **DNSMASQ** 在 [**INFRA节点**](/docs/concept/arch/node#infra节点) 上提供环境内的 DNS 解析服务，将域名解析到对应 IP 地址。
 
-DNSMASQ 默认监听 `53` 端口（UDP/TCP），为环境内所有节点提供 DNS 解析服务，解析记录位于 的 `/infra/hosts` 目录中。
+DNSMASQ 默认监听 `53` 端口（UDP/TCP），为环境内所有节点提供 DNS 解析服务，解析记录位于 `/etc/dnsmasq.d/pigsty` 目录中。
 
 其他模块在部署时会自动将域名注册到 INFRA 节点的 **DNSMASQ** 服务中，您可以按需使用。
 DNS 是完全可选的模块，**Pigsty 本身不依赖它即可正常运行**。

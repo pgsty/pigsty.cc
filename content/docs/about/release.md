@@ -1,4 +1,4 @@
-``---
+---
 title: 发布注记
 weight: 160
 description: Pigsty 历史版本发布说明
@@ -1142,7 +1142,7 @@ MinIO 开始使用 [pgsty/minio](https://github.com/pgsty/minio) fork RPM/DEB
 - 在 Infra 节点上，设置固定的 `/infra` 软连接指向 Infra 数据目录 `/data/infra`
 - 现在 Infra 的数据默认放置于 `/data/infra` 目录下，这使得在容器中使用更为便利
 - 本地软件仓库现在放置于 `/data/nginx/pigsty`，`/www` 现在作为软链接指向 `/data/nginx` 确保兼容
-- DNS 解析记录现在放置于 `/infra/hosts` 目录下，解决了 Ansible SELinux 竞态问题
+- DNS 解析记录现放置于 dnsmasq 专属的 `/etc/dnsmasq.d/pigsty` 目录，并保留原子发布，兼容 SELinux 与 AppArmor
 - 默认首页域名从 `h.pigsty` 更名为 `i.pigsty`，新增中文首页支持
 - 新增了 `/pg/bin/pg-fork` 脚本，用于快速创建 CoW 副本数据库实例
 - 调整 `/pg/bin/pg-pitr` 脚本，现在可以用于实例级别的 PITR 恢复，支持恢复前自动备份

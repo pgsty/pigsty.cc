@@ -12,8 +12,8 @@
   <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
   <link rel="apple-touch-icon" href="/img/logo/logo.png">
 
-  <!-- Safari/iOS theme color - default light theme -->
-  <meta name="theme-color" content="#edf3fb">
+  <!-- Theme color (updated by JS on theme switch) -->
+  <meta name="theme-color" content="#0b1119">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
   <!-- Open Graph -->
@@ -21,25 +21,38 @@
   <meta property="og:description" content="{{ .Description | default .Site.Params.description }}">
   <meta property="og:type" content="website">
   <meta property="og:url" content="{{ .Permalink }}">
-  <meta property="og:image" content="{{ .Site.BaseURL }}img/pigsty/banner.zh.jpg">
+  <meta property="og:image" content="{{ .Site.BaseURL }}img/pigsty/banner.png">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="{{ .Title }}">
   <meta name="twitter:description" content="{{ .Description | default .Site.Params.description }}">
 
-  <!-- Fonts -->
+  <!-- Apply stored / preferred theme before first paint -->
+  <script>
+    (function () {
+      var t = null;
+      try { t = window.localStorage.getItem('pigsty-landing-theme'); } catch (e) {}
+      if (t !== 'light' && t !== 'dark') {
+        t = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+      }
+      document.documentElement.setAttribute('data-theme', t);
+      document.documentElement.classList.remove('no-js');
+      document.documentElement.classList.add('js');
+    })();
+  </script>
+
+  <!-- Fonts: Chakra Petch (display) / IBM Plex Mono (silkscreen & code) / Noto Sans SC (body) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700;800;900&family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
 
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <!-- Landing Page CSS -->
-  <link rel="stylesheet" href="/css/landing.css">
-  <link rel="stylesheet" href="/css/landing-v2.css">
-  <link rel="stylesheet" href="/css/price.css">
+  <link rel="stylesheet" href="/css/landing-v3.css">
+  <link rel="stylesheet" href="/css/price-v3.css">
 
   <!-- Analytics -->
   {{ with .Site.Config.Services.GoogleAnalytics.ID }}
@@ -52,39 +65,138 @@
   </script>
   {{ end }}
 </head>
-<body class="landing-page price-page landing-theme-light" data-theme="light">
+<body class="landing-page price-page">
 
-  <!-- ============================================
-       Navigation Header
-       ============================================ -->
   <header class="landing-header">
     <div class="landing-container">
-      <nav class="landing-nav">
+      <nav class="landing-nav" aria-label="主导航">
         <a href="/" class="nav-brand">
           <img src="/img/logo/logo.svg" alt="Pigsty" class="nav-logo">
           <span class="nav-title">PIGSTY</span>
         </a>
 
         <div class="nav-links">
-          <a href="/docs/" class="nav-link">文档</a>
-          <a href="/ext/" class="nav-link">扩展</a>
-          <a href="/blog/" class="nav-link">博客</a>
+          <div class="nav-item">
+            <a href="/docs/" class="nav-link">文档 <i class="fas fa-chevron-down nav-caret" aria-hidden="true"></i></a>
+            <div class="nav-dropdown nav-dropdown--docs" role="menu" aria-label="文档菜单">
+              <div class="dropdown-group">
+                <p class="dropdown-group-title silkscreen">文档</p>
+                <div class="dropdown-cols">
+                  <ul class="dropdown-col">
+                    <li><a href="/docs/"><i class="fas fa-book"></i>Pigsty v4.4</a></li>
+                    <li><a href="https://doc.pgsty.com" target="_blank" rel="noopener"><i class="fas fa-book-open"></i>Pigsty v3.7</a></li>
+                    <li><a href="/docs/pig/"><i class="fas fa-piggy-bank"></i>PIG 命令行</a></li>
+                    <li><a href="/docs/piglet/"><i class="fas fa-dharmachakra"></i>Piglet.Run</a></li>
+                    <li><a href="/docs/pgsql/kernel/"><i class="fas fa-heart"></i>PG 内核分支</a></li>
+                  </ul>
+                  <ul class="dropdown-col">
+                    <li><a href="https://pg.center/docs/18/index.html" target="_blank" rel="noopener"><i class="fas fa-republican"></i>PostgreSQL</a></li>
+                    <li><a href="/docs/pgbouncer/"><i class="fas fa-baseball"></i>PgBouncer</a></li>
+                    <li><a href="/docs/patroni/"><i class="fas fa-yin-yang"></i>Patroni</a></li>
+                    <li><a href="/docs/pgbackrest/"><i class="fas fa-couch"></i>pgBackRest</a></li>
+                    <li><a href="/docs/pg_exporter/"><i class="fas fa-chart-line"></i>pg_exporter</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="dropdown-sep" aria-hidden="true"></div>
+              <div class="dropdown-group">
+                <p class="dropdown-group-title silkscreen">模块</p>
+                <div class="dropdown-cols">
+                  <ul class="dropdown-col">
+                    <li><a href="/docs/pgsql/"><i class="fas fa-database"></i>PGSQL</a></li>
+                    <li><a href="/docs/infra/"><i class="fas fa-bank"></i>INFRA</a></li>
+                    <li><a href="/docs/node/"><i class="fas fa-server"></i>NODE</a></li>
+                    <li><a href="/docs/etcd/"><i class="fas fa-gears"></i>ETCD</a></li>
+                    <li><a href="/docs/minio/"><i class="fas fa-boxes-stacked"></i>MINIO</a></li>
+                  </ul>
+                  <ul class="dropdown-col">
+                    <li><a href="/docs/redis/"><i class="fas fa-layer-group"></i>REDIS</a></li>
+                    <li><a href="/docs/ferret/"><i class="fas fa-leaf"></i>FERRET</a></li>
+                    <li><a href="/docs/docker/"><i class="fa-brands fa-docker"></i>DOCKER</a></li>
+                    <li><a href="/docs/juice/"><i class="fas fa-folder-tree"></i>JUICE</a></li>
+                    <li><a href="/docs/vibe/"><i class="fas fa-laptop-code"></i>VIBE</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="nav-item">
+            <a href="/ext/" class="nav-link">扩展 <i class="fas fa-chevron-down nav-caret" aria-hidden="true"></i></a>
+            <div class="nav-dropdown nav-dropdown--ext" role="menu" aria-label="扩展菜单">
+              <div class="dropdown-group">
+                <p class="dropdown-group-title silkscreen">扩展</p>
+                <div class="dropdown-cols">
+                  <ul class="dropdown-col">
+                    <li><a href="/ext/list/"><i class="fas fa-puzzle-piece"></i>扩展列表</a></li>
+                    <li><a href="/ext/rpm/"><i class="fa-brands fa-redhat"></i>RPM 列表</a></li>
+                    <li><a href="/ext/deb/"><i class="fa-brands fa-debian"></i>DEB 列表</a></li>
+                    <li><a href="/ext/repo/"><i class="fas fa-warehouse"></i>归属仓库</a></li>
+                    <li><a href="/ext/language/"><i class="fas fa-code"></i>编程语言</a></li>
+                    <li><a href="/ext/license/"><i class="fas fa-scale-balanced"></i>开源协议</a></li>
+                    <li><a href="/docs/ref/linux/"><i class="fa-brands fa-linux"></i>操作系统</a></li>
+                    <li><a href="/docs/repo/"><i class="fas fa-clipboard-list"></i>更新日志</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="dropdown-sep" aria-hidden="true"></div>
+              <div class="dropdown-group">
+                <p class="dropdown-group-title silkscreen">分类</p>
+                <div class="dropdown-cols">
+                  <ul class="dropdown-col">
+                    <li><a href="/ext/cate/time/"><i class="fas fa-clock"></i>TIME</a></li>
+                    <li><a href="/ext/cate/gis/"><i class="fas fa-globe"></i>GIS</a></li>
+                    <li><a href="/ext/cate/rag/"><i class="fas fa-brain"></i>RAG</a></li>
+                    <li><a href="/ext/cate/fts/"><i class="fas fa-magnifying-glass"></i>FTS</a></li>
+                    <li><a href="/ext/cate/olap/"><i class="fas fa-chart-line"></i>OLAP</a></li>
+                    <li><a href="/ext/cate/feat/"><i class="fas fa-icons"></i>FEAT</a></li>
+                    <li><a href="/ext/cate/lang/"><i class="fas fa-language"></i>LANG</a></li>
+                    <li><a href="/ext/cate/type/"><i class="fas fa-cubes"></i>TYPE</a></li>
+                  </ul>
+                  <ul class="dropdown-col">
+                    <li><a href="/ext/cate/util/"><i class="fas fa-wrench"></i>UTIL</a></li>
+                    <li><a href="/ext/cate/func/"><i class="fas fa-square-root-variable"></i>FUNC</a></li>
+                    <li><a href="/ext/cate/admin/"><i class="fas fa-bank"></i>ADMIN</a></li>
+                    <li><a href="/ext/cate/stat/"><i class="fas fa-file-waveform"></i>STAT</a></li>
+                    <li><a href="/ext/cate/sec/"><i class="fas fa-shield-halved"></i>SEC</a></li>
+                    <li><a href="/ext/cate/fdw/"><i class="fas fa-file-import"></i>FDW</a></li>
+                    <li><a href="/ext/cate/sim/"><i class="fas fa-user-ninja"></i>SIM</a></li>
+                    <li><a href="/ext/cate/etl/"><i class="fas fa-truck"></i>ETL</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="nav-item">
+            <a href="/blog/" class="nav-link">博客 <i class="fas fa-chevron-down nav-caret" aria-hidden="true"></i></a>
+            <div class="nav-dropdown nav-dropdown--blog" role="menu" aria-label="博客菜单">
+              <div class="dropdown-group">
+                <div class="dropdown-cols">
+                  <ul class="dropdown-col">
+                    <li><a href="/blog/pigsty/"><i class="fas fa-newspaper"></i>Pigsty</a></li>
+                    <li><a href="/blog/pg/"><i class="fas fa-republican"></i>PostgreSQL</a></li>
+                    <li><a href="/blog/cloud/"><i class="fas fa-cloud"></i>云计算</a></li>
+                    <li><a href="/blog/db/"><i class="fas fa-database"></i>数据库</a></li>
+                    <li><a href="/blog/ai/"><i class="fas fa-robot"></i>AI Agent</a></li>
+                    <li><a href="https://vonng.com" target="_blank" rel="noopener"><i class="fas fa-blog"></i>Vonng 博客</a></li>
+                    <li><a href="/img/pigsty/addvon.jpg" target="_blank"><i class="fab fa-weixin"></i>老冯云数</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
           <a href="/price/" class="nav-link nav-link--active">服务</a>
-          <button type="button" class="nav-theme-toggle nav-util-icon" data-theme-toggle title="切换亮暗模式" aria-label="切换亮暗模式">
-            <i class="fas fa-sun"></i>
+          <button type="button" class="nav-util" data-theme-toggle title="切换亮暗模式" aria-label="切换亮暗模式">
+            <i class="fas fa-moon"></i>
           </button>
-          <a href="https://pigsty.io/price" class="nav-lang-switch nav-util-icon" title="切换到英文站" aria-label="切换到英文站">
-            <i class="fas fa-language"></i>
-          </a>
-          <a href="https://github.com/Vonng/pigsty" class="nav-link nav-link--icon" target="_blank" title="GitHub">
+          <a href="https://pigsty.io/price" class="nav-util" title="English Site" aria-label="切换到英文站"><i class="fas fa-language"></i></a>
+          <a href="https://github.com/pgsty/pigsty" class="nav-github" target="_blank" rel="noopener" title="GitHub">
             <i class="fab fa-github"></i>
+            <span class="nav-star"><i class="fas fa-star"></i> 5.2k</span>
           </a>
         </div>
 
-        <button class="mobile-menu-toggle" aria-label="Menu">
-          <span></span>
-          <span></span>
-          <span></span>
+        <button class="mobile-menu-toggle" aria-label="打开菜单" aria-expanded="false">
+          <span></span><span></span><span></span>
         </button>
       </nav>
     </div>
@@ -97,32 +209,29 @@
     <a href="/blog/" class="mobile-menu-link">博客</a>
     <a href="/price/" class="mobile-menu-link mobile-menu-link--active">服务</a>
     <a href="https://pigsty.io/price" class="mobile-menu-link"><i class="fas fa-language"></i> English</a>
-    <button type="button" class="mobile-menu-link mobile-menu-link--btn nav-theme-toggle" data-theme-toggle title="切换亮暗模式" aria-label="切换亮暗模式">
-      <i class="fas fa-sun"></i> 亮暗切换
+    <button type="button" class="mobile-menu-link mobile-menu-link--btn" data-theme-toggle>
+      <i class="fas fa-moon"></i> 亮暗切换
     </button>
-    <a href="https://github.com/Vonng/pigsty" class="mobile-menu-link" target="_blank">
+    <a href="https://github.com/pgsty/pigsty" class="mobile-menu-link" target="_blank" rel="noopener">
       <i class="fab fa-github"></i> GitHub
     </a>
   </div>
 
+  <main>
 
   <!-- ============================================
-       Hero Section
+       Hero — Pricing
        ============================================ -->
   <section class="price-hero">
-    <div class="price-hero-bg">
-      <div class="price-hero-glow"></div>
-      <div class="price-hero-grid"></div>
-    </div>
+    <div class="hero-bg" aria-hidden="true"></div>
     <div class="landing-container">
-      <div class="price-hero-content">
-        <p class="price-hero-kicker animate-fade-in-up">Pigsty 服务定价</p>
-        <h1 class="price-hero-title animate-fade-in-up animate-delay-100">简单透明的价格方案</h1>
-        <p class="price-hero-subtitle animate-fade-in-up animate-delay-200">Pigsty 提供多种服务档次，从免费开源到企业级支持</p>
+      <div class="section-head section-head--hero">
+        <p class="section-eyebrow anim" style="--d:0"><span class="silkscreen">PRICING · 服务定价</span><span class="eyebrow-trace" aria-hidden="true"></span></p>
+        <h1 class="section-title anim" style="--d:1">简单透明的价格方案</h1>
+        <p class="section-subtitle anim" style="--d:2">Pigsty 提供多种服务档次，从免费开源到企业级支持</p>
       </div>
     </div>
   </section>
-
 
   <!-- ============================================
        Pricing Cards Section
@@ -241,9 +350,10 @@
   <!-- ============================================
        Feature Comparison Table
        ============================================ -->
-  <section class="comparison-section">
+  <section class="landing-section comparison-section">
     <div class="landing-container">
-      <div class="section-header" data-reveal>
+      <div class="section-head" data-reveal>
+        <p class="section-eyebrow"><span class="silkscreen">DATASHEET · 规格对照</span><span class="eyebrow-trace" aria-hidden="true"></span></p>
         <h2 class="section-title">功能对比</h2>
         <p class="section-subtitle">详细了解各方案的功能差异</p>
       </div>
@@ -384,9 +494,10 @@
   <!-- ============================================
        Additional Services
        ============================================ -->
-  <section class="services-section">
+  <section class="landing-section services-section">
     <div class="landing-container">
-      <div class="section-header" data-reveal>
+      <div class="section-head" data-reveal>
+        <p class="section-eyebrow"><span class="silkscreen">ON DEMAND · 按需服务</span><span class="eyebrow-trace" aria-hidden="true"></span></p>
         <h2 class="section-title">增值服务</h2>
         <p class="section-subtitle">按需付费的专业服务</p>
       </div>
@@ -435,9 +546,10 @@
   <!-- ============================================
        FAQ Section
        ============================================ -->
-  <section class="faq-section">
+  <section class="landing-section faq-section">
     <div class="landing-container">
-      <div class="section-header" data-reveal>
+      <div class="section-head" data-reveal>
+        <p class="section-eyebrow"><span class="silkscreen">FAQ · 常见问题</span><span class="eyebrow-trace" aria-hidden="true"></span></p>
         <h2 class="section-title">常见问题</h2>
       </div>
 
@@ -488,10 +600,10 @@
           <a href="mailto:rh@vonng.com" class="btn btn-primary">
             <i class="fas fa-envelope"></i> 发送邮件
           </a>
-          <a href="/img/pigsty/pigsty-cc.jpg" class="btn btn-secondary" target="_blank">
+          <a href="/img/pigsty/pigsty-cc.jpg" class="btn btn-ghost" target="_blank">
             <i class="fab fa-weixin"></i> 微信咨询
           </a>
-          <a href="/docs/about/service/" class="btn btn-outline">
+          <a href="/docs/about/service/" class="btn btn-line">
             <i class="fas fa-book"></i> 了解更多
           </a>
         </div>
@@ -499,6 +611,7 @@
     </div>
   </section>
 
+  </main>
 
   <!-- ============================================
        Footer
@@ -512,26 +625,24 @@
             PIGSTY
           </a>
           <p class="footer-tagline">
-            <span class="hl-p">P</span>ostgreSQL <span class="hl-i">I</span>n <span class="hl-g">G</span>reat <span class="hl-s">S</span><span class="hl-t">T</span><span class="hl-y">Y</span>le —<br>
+            <b class="ini-p">P</b>ostgreSQL <b class="ini-i">I</b>n <b class="ini-g">G</b>reat <b class="ini-s">S</b><b class="ini-t">T</b><b class="ini-y">Y</b>le —<br>
             开箱即用的 PostgreSQL 发行版
           </p>
-          <p class="footer-slogan">
-            助您用 <span class="hl-good">好数据库</span>，<span class="hl-use">用好</span>数据库
-          </p>
+          <p class="footer-slogan">助您用<span class="hl-good">好数据库</span>，<span class="hl-use">用好</span>数据库</p>
         </div>
 
         <div class="footer-column">
-          <h4 class="footer-column-title">产品</h4>
+          <h4 class="footer-column-title silkscreen">产品</h4>
           <ul class="footer-links">
             <li><a href="/docs/about/feature/">特性介绍</a></li>
             <li><a href="/docs/ref/module/">功能模块</a></li>
-            <li><a href="https://demo.pigsty.cc" target="_blank">在线演示</a></li>
+            <li><a href="https://demo.pigsty.cc" target="_blank" rel="noopener">在线演示</a></li>
             <li><a href="/price/">服务定价</a></li>
           </ul>
         </div>
 
         <div class="footer-column">
-          <h4 class="footer-column-title">资源</h4>
+          <h4 class="footer-column-title silkscreen">资源</h4>
           <ul class="footer-links">
             <li><a href="/docs/">中文文档</a></li>
             <li><a href="/ext/">扩展目录</a></li>
@@ -541,19 +652,19 @@
         </div>
 
         <div class="footer-column">
-          <h4 class="footer-column-title">社区</h4>
+          <h4 class="footer-column-title silkscreen">社区</h4>
           <ul class="footer-links">
-            <li><a href="https://github.com/orgs/pgsty/discussions" target="_blank">GitHub</a></li>
-            <li><a href="https://discord.gg/wDzt5VyWEz" target="_blank">Discord</a></li>
-            <li><a href="https://t.me/joinchat/gV9zfZraNPM3YjFh" target="_blank">Telegram</a></li>
+            <li><a href="https://github.com/orgs/pgsty/discussions" target="_blank" rel="noopener">GitHub</a></li>
+            <li><a href="https://discord.gg/wDzt5VyWEz" target="_blank" rel="noopener">Discord</a></li>
+            <li><a href="https://t.me/joinchat/gV9zfZraNPM3YjFh" target="_blank" rel="noopener">Telegram</a></li>
             <li><a href="/img/pigsty/pigsty-cc.jpg">微信群组</a></li>
           </ul>
         </div>
 
         <div class="footer-column">
-          <h4 class="footer-column-title">关于</h4>
+          <h4 class="footer-column-title silkscreen">关于</h4>
           <ul class="footer-links">
-            <li><a href="https://vonng.com" target="_blank">作者博客</a></li>
+            <li><a href="https://vonng.com" target="_blank" rel="noopener">作者博客</a></li>
             <li><a href="/docs/about/license/">开源协议</a></li>
             <li><a href="/docs/about/privacy/">隐私政策</a></li>
             <li><a href="mailto:rh@vonng.com">联系我们</a></li>
@@ -562,19 +673,19 @@
       </div>
 
       <div class="footer-bottom">
-        <div class="footer-copyright">© 2018-2026 <a href="https://vonng.com" target="_blank">冯若航</a> (<a href="https://github.com/Vonng" target="_blank">Vonng</a>)</div>
+        <div class="footer-copyright">© 2018-2026 <a href="https://vonng.com" target="_blank" rel="noopener">冯若航</a> (<a href="https://github.com/Vonng" target="_blank" rel="noopener">Vonng</a>)</div>
         <div class="footer-icp">
           <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener">浙ICP备15016890号-2</a>
         </div>
         <div class="footer-lang-switch">
-          <a href="https://pigsty.io/price" target="_blank">English</a>
+          <a href="https://pigsty.io/price" target="_blank" rel="noopener">English</a>
           <a href="/price/">中文</a>
         </div>
       </div>
     </div>
   </footer>
 
-<script src="/js/landing.js"></script>
+<script src="/js/landing-v3.js"></script>
 
 </body>
 </html>
