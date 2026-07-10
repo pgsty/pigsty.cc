@@ -352,7 +352,7 @@ $ ./configure -g
 
 ```bash
 $ ./configure
-configure pigsty v4.3.0 begin
+configure pigsty v4.4.0 begin
 [ OK ] region = china
 [ OK ] kernel  = Linux
 [ OK ] machine = x86_64

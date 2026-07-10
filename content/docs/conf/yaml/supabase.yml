@@ -3,7 +3,7 @@
 # File      :   supabase.yml
 # Desc      :   Pigsty configuration for self-hosting supabase
 # Ctime     :   2023-09-19
-# Mtime     :   2026-06-30
+# Mtime     :   2026-07-09
 # Docs      :   https://pigsty.io/docs/conf/supabase
 # License   :   Apache-2.0 @ https://pigsty.io/docs/about/license/
 # Copyright :   2018-2026  Ruohang Feng / Vonng (rh@vonng.com)
@@ -82,7 +82,7 @@ all:
             baseline: supabase.sql
             owner: supabase_admin
             comment: supabase postgres database
-            schemas: [ extensions ,auth ,realtime ,storage ,graphql_public ,supabase_functions ,_analytics ,_realtime ]
+            schemas: [ extensions ,auth ,realtime ,storage ,graphql_public ,supabase_functions ,_realtime ]
             extensions:
               - { name: pgcrypto         ,schema: extensions } # cryptographic functions
               - { name: pg_net           ,schema: extensions } # async HTTP
@@ -98,6 +98,12 @@ all:
               - { name: pg_tle           ,schema: extensions } # pg_tle: Trusted Language Extensions for PostgreSQL
               - { name: vector           ,schema: extensions } # pgvector: the vector similarity search
               - { name: pgmq             ,schema: extensions } # pgmq: A lightweight message queue like AWS SQS and RSMQ
+          - name: _supabase
+            owner: supabase_admin
+            comment: supabase internal analytics database
+            schemas: [ _analytics ]
+            extensions:
+              - { name: pgcrypto         ,schema: extensions } # cryptographic functions
         # supabase required extensions
         pg_libs: 'timescaledb, pgsodium, plpgsql, plpgsql_check, pg_cron, pg_net, pg_stat_statements, auto_explain, pg_wait_sampling, pg_tle, plan_filter'
         pg_extensions: [ pg18-main ,pg18-time ,pg18-gis ,pg18-rag ,pg18-fts ,pg18-olap ,pg18-feat ,pg18-lang ,pg18-type ,pg18-util ,pg18-func ,pg18-admin ,pg18-stat ,pg18-sec ,pg18-fdw ,pg18-sim ,pg18-etl]
@@ -105,6 +111,8 @@ all:
         pg_hba_rules: # supabase hba rules, require access from docker network
           - { user: all ,db: postgres  ,addr: intra         ,auth: pwd ,title: 'allow supabase access from intranet'    ,order: 50 }
           - { user: all ,db: postgres  ,addr: 172.17.0.0/16 ,auth: pwd ,title: 'allow access from local docker network' ,order: 50 }
+          - { user: all ,db: _supabase ,addr: intra         ,auth: pwd ,title: 'allow supabase internal access from intranet'    ,order: 50 }
+          - { user: all ,db: _supabase ,addr: 172.17.0.0/16 ,auth: pwd ,title: 'allow internal access from local docker network' ,order: 50 }
         pg_crontab:
           - '00 01 * * * /pg/bin/pg-backup full'  # make a full backup every 1am
           - '*  *  * * * /pg/bin/supa-kick'       # kick supabase _analytics lag per minute: https://github.com/pgsty/pigsty/issues/581
@@ -140,6 +148,7 @@ all:
               SERVICE_ROLE_KEY_ASYMMETRIC: ""
               PG_META_CRYPTO_KEY: your-encryption-key-32-chars-min
               SECRET_KEY_BASE: UpNVntn3cDxHJpq99YMc1T1AQgQpc8kfYTuRgBiYa15BLrx8etQoXz3gZv1/u2oq
+              REALTIME_DB_ENC_KEY: supabaserealtime
 
               DASHBOARD_USERNAME: supabase
               DASHBOARD_PASSWORD: pigsty
@@ -147,6 +156,8 @@ all:
               # 32~64 random characters string for logflare
               LOGFLARE_PUBLIC_ACCESS_TOKEN: 1234567890abcdef1234567890abcdef
               LOGFLARE_PRIVATE_ACCESS_TOKEN: fedcba0987654321fedcba0987654321
+              LOGFLARE_DB: _supabase
+              LOGFLARE_SCHEMA: _analytics
 
               # postgres connection string (use the correct ip and port)
               POSTGRES_HOST: 10.10.10.10      # point to the local postgres node
@@ -155,9 +166,9 @@ all:
               POSTGRES_PASSWORD: DBUser.Supa  # password for supabase_admin and multiple supabase users
 
               # expose supabase via domain name
-              SITE_URL: https://supa.pigsty                # <------- Change This to your external domain name
-              API_EXTERNAL_URL: https://supa.pigsty        # <------- Otherwise the storage api may not work!
-              SUPABASE_PUBLIC_URL: https://supa.pigsty     # <------- DO NOT FORGET TO PUT IT IN infra_portal!
+              SITE_URL: https://supa.pigsty                 # <------- Change This to your external site URL
+              API_EXTERNAL_URL: https://supa.pigsty/auth/v1 # <------- Auth service external URL, keep /auth/v1 suffix
+              SUPABASE_PUBLIC_URL: https://supa.pigsty      # <------- DO NOT FORGET TO PUT IT IN infra_portal!
 
               # if using s3/minio as file storage
               S3_BUCKET: data
@@ -173,7 +184,7 @@ all:
               S3_PROTOCOL_ACCESS_KEY_ID: s3user_data
               S3_PROTOCOL_ACCESS_KEY_SECRET: S3User.Data
               MINIO_DOMAIN_IP: 10.10.10.10  # sss.pigsty domain name will resolve to this ip statically
-              PGRST_DB_SCHEMAS: public,storage,graphql_public
+              PGRST_DB_SCHEMAS: public,graphql_public
               PGRST_DB_MAX_ROWS: 1000
               PGRST_DB_EXTRA_SEARCH_PATH: public
               IMGPROXY_AUTO_WEBP: true

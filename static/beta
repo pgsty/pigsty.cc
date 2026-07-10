@@ -4,9 +4,9 @@
 # File      :   beta
 # Desc      :   download & install pigsty beta
 # Ctime     :   2022-10-30
-# Mtime     :   2026-07-04
-# Path      :   https://repo.pigsty.cc/beta
-# Usage     :   curl -fsSL https://repo.pigsty.cc/beta | bash
+# Mtime     :   2026-07-10
+# Path      :   https://pigsty.cc/beta
+# Usage     :   curl -fsSL https://pigsty.cc/beta | bash
 # Docs      :   https://pgsty.com/docs/install/start
 # Deps      :   curl
 # Author    :   Ruohang Feng (rh@vonng.com)
@@ -15,10 +15,10 @@
 DEFAULT_VERSION=v4.4.0
 
 # To install the latest version of pigsty (v4.4.0):
-# curl -fsSL https://repo.pigsty.cc/beta | bash
+# curl -fsSL https://pigsty.cc/beta | bash
 
 # To install a specific version of pigsty (e.g. v4.4.0)
-# curl -fsSL https://repo.pigsty.cc/beta | bash -s v4.4.0
+# curl -fsSL https://pigsty.cc/beta | bash -s v4.4.0
 
 
 #--------------------------------------------------------------#
