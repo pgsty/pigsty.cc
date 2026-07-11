@@ -75,19 +75,31 @@ nginx -t
 
 ### CLI 找不到命令
 
-先检查 `nodejs_pkg` 是否完成（默认会安装 `@anthropic-ai/claude-code`）：
+先检查 `claude_install` 是否完成：
 
 ```bash
 which claude
 npm list -g --depth=0 | grep '@anthropic-ai/claude-code'
-./vibe.yml -l <host> -t nodejs_pkg
+./vibe.yml -l <host> -t claude_install
 ```
 
-如果你禁用了 `nodejs_enabled` 或覆盖了 `npm_packages`，可手工安装：
+如果你禁用了 `claude_enabled`，可手工安装：
 
 ```bash
 npm install -g @anthropic-ai/claude-code
 ```
+
+需要替换 npm 包时，可通过 `claude_package` 指定。
+
+### Codex CLI 找不到命令
+
+```bash
+which codex
+npm list -g --depth=0 | grep '@openai/codex'
+./vibe.yml -l <host> -t codex_install
+```
+
+确认 `codex_enabled: true`。VIBE 仅安装 Codex CLI，不负责生成 Codex 配置。
 
 ### API Key 未配置
 

@@ -60,5 +60,4 @@ categories: [参考]
 - IvorySQL 5 基于 PostgreSQL 18
 - 使用 `liboracle_parser` 需要加载到 `shared_preload_libraries`
 - `pgbackrest` 在 Oracle 兼容模式下可能存在校验问题，PITR 能力受限
-- 主要支持 EL8/EL9 系统，其他系统支持程度请参考官方文档
-
+- 当前软件包矩阵覆盖 EL8/9/10、Debian 12/13、Ubuntu 22/24/26 与双架构；

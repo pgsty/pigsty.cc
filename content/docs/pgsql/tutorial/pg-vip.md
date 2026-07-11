@@ -35,13 +35,14 @@ pg-test:
     # 启用 L2 VIP
     pg_vip_enabled: true
     pg_vip_address: 10.10.10.3/24
-    pg_vip_interface: eth1
+    #pg_vip_interface: auto
 ```
 
 请注意，[`pg_vip_address`](/docs/pgsql/param#pg_vip_address) 必须是一个合法的 IP 地址，带有网段，且在当前二层网络中可用。
 
-请注意，[`pg_vip_interface`](/docs/pgsql/param#pg_vip_interface) 必须是一个合法的网络接口名，并且应当是与 inventory 中使用 IPv4 地址一致的网卡。
-如果集群成员的网卡名不一样，用户应当为每个实例显式指定 `pg_vip_interface` 参数，例如：
+[`pg_vip_interface`](/docs/pgsql/param#pg_vip_interface) 默认为 `auto`，
+此时 Pigsty 会根据 inventory 中的 IPv4 地址自动探测各实例使用的网卡。
+如果自动探测不适用于非标准路由或策略路由环境，可以为每个实例显式指定合法的网卡名称，例如：
 
 ```yaml
 pg-test:
@@ -57,7 +58,6 @@ pg-test:
     # 启用 L2 VIP
     pg_vip_enabled: true
     pg_vip_address: 10.10.10.3/24
-    #pg_vip_interface: eth1
 ```
 
 使用以下命令，刷新 PG 的 vip-manager 配置并重启生效：

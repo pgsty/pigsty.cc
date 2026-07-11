@@ -49,7 +49,8 @@ vi pigsty.yml                 # 修改密码、域名、IP、密钥
 
 ## 轻量 Compose 应用
 
-对于 `bytebase`、`ferretdb`、`gitea`、`jupyter`、`kong`、`metabase`、`minio`、`nocodb`、`pgadmin`、`pgweb`、`postgrest`、`pg_exporter`、`wiki` 等应用，也可直接使用对应目录下的 Compose 模板：
+对于 `bytebase`、`gitea`、`jupyter`、`kong`、`metabase`、`minio`、`nocodb`、`pgadmin`、`pgweb`、`postgrest`、`pg_exporter`、`wiki` 等应用，也可直接使用对应目录下的 Compose 模板。
+FerretDB Compose 模板已经移除；请使用 [`FERRET` 模块](/docs/ferret/)与 [`mongo` 配置模板](/docs/conf/mongo/)部署：
 
 ```bash
 cd ~/pigsty/app/<name>

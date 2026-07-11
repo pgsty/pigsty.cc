@@ -87,6 +87,7 @@ Pigsty v4.4.0 是一个维护版本，重点涵盖 PostgreSQL 18.4、PostgreSQL 
 - **Pig 1.5.1 与更安全的运维**：新增克隆、分叉与 PITR 工作流，并引入 VIP 网卡自动发现、pgBackRest Zstandard 压缩和独立的 Patroni 日志采集。
 - **安全、应用与工具**：加固敏感配置处理与仓库安全自动化，增加应用模板，重新设计基础设施门户，并提供可选的 Codex 支持。
 - **平台验证**：七个操作系统基线在 `x86_64` 与 `aarch64` 上的 14 组离线部署测试全部通过。
+- **离线制品**：社区版在 GitHub 公开发布 Debian 13、EL 10、Ubuntu 24.04 的双架构离线包，共 6 个；其余已验证基线的预制离线包通过商业版提供。
 
 **兼容性变化**
 
@@ -274,7 +275,7 @@ Pigsty v4.4.0 是一个维护版本，重点涵盖 PostgreSQL 18.4、PostgreSQL 
 
 覆盖 EL9/10、Debian 12/13 与 Ubuntu 22/24/26，横跨 `x86_64` 和 `aarch64` 的 14 组离线部署测试全部完成，结果均为 `failed=0`、`unreachable=0`；EL8 仅继续支持在线安装。
 
-以下 MD5 与最终发布清单一致；GitHub 也会为每个已上传制品记录 SHA-256 摘要。
+以下 MD5 覆盖全部 14 个已验证制品，其中 6 个社区版制品上传至 GitHub，其余 8 个通过商业版交付；GitHub 会为已上传的社区版制品记录 SHA-256 摘要。
 
 ```bash
 7de8b932412f1863fd9c033a7be355d7  pigsty-pkg-v4.4.0.d12.aarch64.tgz

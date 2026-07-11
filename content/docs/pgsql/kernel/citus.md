@@ -91,7 +91,7 @@ pg-citus: # citus group
     pg_primary_db: test               # primary database used by citus
     pg_dbsu_password: DBUser.Postgres # all dbsu password access for citus cluster
     pg_vip_enabled: true
-    pg_vip_interface: eth1
+    pg_vip_interface: auto
     pg_extensions: [ 'citus postgis timescaledb pgvector' ]
     pg_libs: 'citus, timescaledb, pg_stat_statements, auto_explain' # citus will be added by patroni automatically
     pg_users: [ { name: test ,password: test ,pgbouncer: true ,roles: [ dbrole_admin ] } ]

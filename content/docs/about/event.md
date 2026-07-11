@@ -113,6 +113,7 @@ categories: [参考]
 
 | 版本                                 |    发布时间    | 摘要                                                         | 地址                                                                                        |
 |:-----------------------------------|:----------:|------------------------------------------------------------|-------------------------------------------------------------------------------------------|
+| [v4.4.0](/docs/about/release#v440) | 2026-07-10 | PG19 Beta，531 个扩展，内核与软件包更新，Pig CLI 改进                      | [v4.4.0](https://github.com/pgsty/pigsty/releases/tag/v4.4.0)                             |
 | [v4.3.0](/docs/about/release#v430) | 2026-05-01 | 510 扩展，Infra / PGSQL / 内核包批量更新，Ubuntu 26 支持                | [v4.3.0](https://github.com/pgsty/pigsty/releases/tag/v4.3.0)                             |
 | [v4.2.2](/docs/about/release#v422) | 2026-03-23 | Insforge 应用自建，Infra 包批量更新，新增 pdu，pgdog                     | [v4.2.2](https://github.com/pgsty/pigsty/releases/tag/v4.2.2)                             |
 | [v4.2.1](/docs/about/release#v421) | 2026-03-06 | 弃用 PG 13 支持，464 扩展                                         | [v4.2.1](https://github.com/pgsty/pigsty/releases/tag/v4.2.1)                             |

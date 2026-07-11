@@ -122,8 +122,7 @@ systemctl restart jupyter
 
 ## Claude Code
 
-`claude_config` 子任务仅写入配置文件。
-Claude CLI 默认由 `nodejs_pkg` 根据 `npm_packages` 全局安装（默认包含 `@anthropic-ai/claude-code`）。
+`claude_install` 子任务安装 Claude CLI，`claude_config` 子任务写入配置文件。
 
 ```bash
 which claude
@@ -144,9 +143,23 @@ claude --version
 重装/补装 Claude CLI：
 
 ```bash
-./vibe.yml -l <host> -t nodejs_pkg
+./vibe.yml -l <host> -t claude_install
 # 或手工安装
 npm install -g @anthropic-ai/claude-code
+```
+
+需要使用其他 npm 包时，可覆盖 `claude_package`。
+
+--------
+
+## Codex CLI
+
+VIBE 通过 `codex_install` 安装 `@openai/codex`，但不托管 Codex 配置：
+
+```bash
+which codex
+codex --version
+./vibe.yml -l <host> -t codex_install
 ```
 
 如果需要配置到其他用户，请使用对应的远程登录用户执行或手动拷贝配置文件。
@@ -155,14 +168,14 @@ npm install -g @anthropic-ai/claude-code
 
 ## 文件位置速查
 
-| 组件 | 关键文件 |
-|:-----|:--------|
-| Code-Server | `/data/code/code-server/config.yaml` |
-| Code-Server | `/etc/default/code` |
-| Code-Server | `/etc/systemd/system/code-server.service` |
-| JupyterLab | `/data/jupyter/jupyter_config.py` |
-| JupyterLab | `/etc/default/jupyter` |
-| JupyterLab | `/etc/systemd/system/jupyter.service` |
+| 组件          | 关键文件                                         |
+|:------------|:---------------------------------------------|
+| Code-Server | `/data/code/code-server/config.yaml`         |
+| Code-Server | `/etc/default/code`                          |
+| Code-Server | `/etc/systemd/system/code-server.service`    |
+| JupyterLab  | `/data/jupyter/jupyter_config.py`            |
+| JupyterLab  | `/etc/default/jupyter`                       |
+| JupyterLab  | `/etc/systemd/system/jupyter.service`        |
 | Claude Code | `~/.claude.json` / `~/.claude/settings.json` |
 {.full-width}
 

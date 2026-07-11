@@ -16,7 +16,7 @@ categories: [参考]
 
 因此，我们选择了全球份额第一的亚马逊云 [AWS RDS for PostgreSQL](https://aws.amazon.com/cn/rds/postgresql/)，以及中国市场份额第一的阿里云 [RDS for PostgreSQL](https://www.alibabacloud.com/zh/product/apsaradb-for-rds-postgresql) 作为参照对象。
 
-阿里云 RDS 与 AWS RDS 均为闭源云数据库服务，通过租赁模式，仅在公有云上对外提供。以下云厂商信息是 2024 年 2 月的存档，基于当时的 PostgreSQL 16 主干版本；Pigsty 列按当前 v4.4.0 口径维护。
+阿里云 RDS 与 AWS RDS 均为闭源云数据库服务，通过租赁模式，仅在公有云上对外提供。以下云厂商信息是 2024 年 2 月的存档，基于当时的 PostgreSQL 16 主干版本；“功能特性”表中的 Pigsty 列按当前口径维护，后续“重要扩展”版本表整体保留为同期历史快照。
 
 
 -----------

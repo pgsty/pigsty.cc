@@ -14,9 +14,8 @@ categories: [概念]
 
 ## 概览
 
-IvorySQL 内核支持在 Pigsty 开源版本中提供，您的服务器需要互联网访问，直接从 IvorySQL 的官方仓库下载相关软件包。
-
-请注意，直接将 IvorySQL 加入 Pigsty 默认软件仓库中会影响原生 PostgreSQL 内核的安装。Pigsty 专业版提供包括 IvorySQL 内核在内的离线安装解决方案。
+Pigsty PGSQL 仓库直接提供 IvorySQL 5.4 软件包，兼容 PostgreSQL 18.4，并覆盖当前支持的 EL、Debian、Ubuntu 与双架构平台。
+在线安装使用 Pigsty 的 `pgsql` 仓库；商业版同时提供对应平台的离线交付方案。
 
 
 ![](/img/pigsty/ivory.jpg)
@@ -31,10 +30,11 @@ IvorySQL 内核支持在 Pigsty 开源版本中提供，您的服务器需要互
 
 ## 安装
 
-如果您的环境有互联网访问，您可以使用以下方式，直接将 IvorySQL 仓库加入到节点上，然后执行 PGSQL 剧本进行安装
+使用 Pigsty 内置的 `ivory` 配置模板安装：
 
 ```bash
-./node.yml -t node_repo -e '{"node_repo_modules":"local,node,pgsql,ivory"}'
+./configure -c ivory
+./deploy.yml
 ```
 
 

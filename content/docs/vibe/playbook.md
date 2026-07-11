@@ -7,7 +7,7 @@ module: [VIBE]
 categories: [剧本]
 ---
 
-VIBE 模块提供 `vibe.yml` 剧本，用于部署 Code-Server、JupyterLab、Node.js 与 Claude Code 配置。
+VIBE 模块提供 `vibe.yml` 剧本，用于部署 Code-Server、JupyterLab、Node.js、Claude Code 与 Codex CLI。
 
 > `vibe.yml` 只包含 `node_id` 与 `vibe` 角色，不包含 `node/infra`。
 > 建议先执行 [`deploy.yml`](/docs/deploy/) 或显式运行 [`node.yml`](/docs/node/playbook) 与 [`infra.yml`](/docs/infra/playbook)。
@@ -45,19 +45,23 @@ vibe
 │   ├── jupyter_dir
 │   ├── jupyter_config
 │   └── jupyter_launch
-├── nodejs            # Node.js Runtime
+├── nodejs            # Node.js Runtime 与额外 npm 包
 │   ├── nodejs_install
 │   ├── nodejs_config
 │   └── nodejs_pkg
-└── claude            # Claude Code 配置
+├── codex             # Codex CLI
+│   └── codex_install
+└── claude            # Claude Code
+    ├── claude_install
     └── claude_config
 ```
 
 说明：
 
 - `jupyter_install` 使用 `uv pip`，不会创建 venv
-- `claude_config` 仅写入 `~/.claude` 配置
-- Claude CLI 默认由 `nodejs_pkg` 按 `npm_packages` 安装（默认包含 `@anthropic-ai/claude-code`）
+- `nodejs_pkg` 只安装 `npm_packages` 中声明的额外包，默认列表为空
+- `claude_install` 使用 `claude_package` 安装 Claude CLI，`claude_config` 写入 `~/.claude` 配置
+- `codex_install` 安装 `@openai/codex`，不托管 Codex 配置
 
 --------
 
@@ -76,6 +80,7 @@ vibe
 ./vibe.yml -l <host> -t jupyter
 ./vibe.yml -l <host> -t nodejs
 ./vibe.yml -l <host> -t claude
+./vibe.yml -l <host> -t codex
 ```
 
 配置更新：
@@ -93,6 +98,7 @@ vibe
 ./vibe.yml -l <host> -e jupyter_enabled=false
 ./vibe.yml -l <host> -e nodejs_enabled=false
 ./vibe.yml -l <host> -e claude_enabled=false
+./vibe.yml -l <host> -e codex_enabled=false
 ```
 
 --------

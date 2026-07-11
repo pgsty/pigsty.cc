@@ -9,7 +9,7 @@ Pigsty PGSQL 仓库旨在与 PostgreSQL [PGDG 官方仓库](https://www.postgres
 
 Pigsty 依赖 PGDG 仓库中原生的 PostgreSQL 内核软件包，在此基础上提供了额外的 340+ 扩展插件。
 
-> PGDG Pigsty 镜像仓库最后同步于：2025-12-29 12:00:00
+> PGDG 镜像持续滚动同步，实际状态以各仓库的 `InRelease` 或 `repomd.xml` 元数据为准。
 
 
 ---------
@@ -34,7 +34,7 @@ pig repo add -u                           # all = node + pgsql (pgdg + pigsty) +
 
 2025年5月中旬，PGDG 关闭了 rsync/ftp 同步渠道，导致全球几乎所有 PGDG 镜像站失去同步。根据观察，目前只有 YANDEX，XTOM，PIGSTY 提供定期同步。
 
-Pigsty 在中国区域提供了 PGDG 镜像的子集，更新频率约为一周一更新。对于 EL 7-10，Debian 11-13，Ubuntu 22.04 - 26.04 提供 x86_64 与 arm64 架构的镜像仓库。覆盖范围为所有生命周期内的 PG 大版本（PG14 - 19alpha）。
+Pigsty 在中国区域提供了 PGDG 镜像的子集，更新频率约为一周一更新。对于 EL 7-10，Debian 11-13，Ubuntu 22.04 - 26.04 提供 x86_64 与 arm64 架构的镜像仓库。稳定仓库覆盖生命周期内的 PG14 - PG18，`beta` 模块额外提供 PostgreSQL 19 Beta。
 
 {{% alert title="2025-11 更新通知：阿里云/清华TUNA 恢复更新" color="info" %}}
 目前阿里云/清华 TUNA 镜像站已经恢复 PGDG 仓库的同步。

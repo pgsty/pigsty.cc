@@ -40,7 +40,7 @@ pg-citus:
     pg_shard: pg-citus                        # citus shard name: pg-citus
     pg_primary_db: citus                      # primary database used by citus
     pg_vip_enabled: true                      # enable vip for citus cluster
-    pg_vip_interface: eth1                    # vip interface for all members
+    pg_vip_interface: auto                    # auto detect vip interface for every member
     pg_dbsu_password: DBUser.Postgres         # all dbsu password access for citus cluster
     pg_extensions: [ citus, postgis, pgvector, topn, pg_cron, hll ]  # install these extensions
     pg_libs: 'citus, pg_cron, pg_stat_statements' # citus will be added by patroni automatically
@@ -216,7 +216,7 @@ pg-citus: # citus group
     pg_shard: pg-citus                        # citus shard name: pg-citus
     pg_primary_db: citus                      # primary database used by citus
     pg_vip_enabled: true                      # enable vip for citus cluster
-    pg_vip_interface: eth1                    # vip interface for all members
+    pg_vip_interface: auto                    # auto detect vip interface for every member
     pg_dbsu_password: DBUser.Postgres         # enable dbsu password access for citus
     pg_extensions: [ citus, postgis, pgvector, topn, pg_cron, hll ]  # install these extensions
     pg_libs: 'citus, pg_cron, pg_stat_statements' # citus will be added by patroni automatically

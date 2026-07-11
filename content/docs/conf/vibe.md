@@ -1,12 +1,12 @@
 ---
 title: vibe
 weight: 260
-description: VIBE AI 编程沙箱配置模板，集成 Code-Server、JupyterLab、Claude Code 与 JuiceFS 的 Web 开发环境
+description: VIBE AI 编程沙箱配置模板，集成 Code-Server、JupyterLab、Claude Code、Codex CLI 与 JuiceFS 的 Web 开发环境
 icon: fa-solid fa-laptop-code
 categories: [参考]
 ---
 
-`vibe` 配置模板提供了一个开箱即用的 **AI 编程沙箱**，集成了 Code-Server（Web VS Code）、JupyterLab、Claude Code 可观测能力、JuiceFS 分布式文件系统，以及功能丰富的 PostgreSQL 数据库。
+`vibe` 配置模板提供了一个开箱即用的 **AI 编程沙箱**，集成了 Code-Server（Web VS Code）、JupyterLab、Claude Code 可观测能力、Codex CLI、JuiceFS 分布式文件系统，以及功能丰富的 PostgreSQL 数据库。
 
 
 --------
@@ -15,7 +15,7 @@ categories: [参考]
 
 - 配置名称： `vibe`
 - 节点数量： 单节点
-- 配置说明：VIBE AI 编程沙箱，Code-Server + JupyterLab + Claude Code + JuiceFS + PostgreSQL
+- 配置说明：VIBE AI 编程沙箱，Code-Server + JupyterLab + Claude Code + Codex CLI + JuiceFS + PostgreSQL
 - 适用系统：`el8`, `el9`, `el10`, `d12`, `d13`, `u22`, `u24`, `u26`
 - 适用架构：`x86_64`, `aarch64`
 - 相关配置：[`meta`](/docs/conf/meta/)
@@ -44,13 +44,14 @@ categories: [参考]
 
 **核心组件**：
 
-| 组件 | 说明 | 访问方式 |
-|------|------|---------|
-| **Code-Server** | VS Code 的 Web 版本，功能完整的代码编辑器 | `http://<ip>/code` |
-| **JupyterLab** | 交互式数据科学笔记本，支持 Python/SQL | `http://<ip>/jupyter` |
-| **Claude Code** | AI 编程助手运行环境与可观测性入口（可通过 `claude_env` 定制） | 终端 / 仪表盘 |
-| **JuiceFS** | 基于 PostgreSQL 的分布式文件系统 | 挂载点 `/fs` |
-| **PostgreSQL 18** | 功能丰富的数据库，安装 `pg18-main` + 全类别扩展包组 | `5432` 端口 |
+| 组件                | 说明                                      | 访问方式                  |
+|-------------------|-----------------------------------------|-----------------------|
+| **Code-Server**   | VS Code 的 Web 版本，功能完整的代码编辑器             | `http://<ip>/code`    |
+| **JupyterLab**    | 交互式数据科学笔记本，支持 Python/SQL                | `http://<ip>/jupyter` |
+| **Claude Code**   | AI 编程助手运行环境与可观测性入口（可通过 `claude_env` 定制） | 终端 / 仪表盘              |
+| **Codex CLI**     | OpenAI 代理编程 CLI；VIBE 只负责安装，不托管配置        | 终端                    |
+| **JuiceFS**       | 基于 PostgreSQL 的分布式文件系统                  | 挂载点 `/fs`             |
+| **PostgreSQL 18** | 功能丰富的数据库，安装 `pg18-main` + 全类别扩展包组       | `5432` 端口             |
 
 **模板显式安装的节点工具**（`node_packages`）：
 
@@ -75,7 +76,7 @@ pg18-stat, pg18-sec, pg18-fdw, pg18-sim, pg18-etl
 
 ## VIBE 模块组件
 
-提供 AI 编程沙箱能力；`vibe.yml` 显式开启 Code-Server 与 Jupyter，并预留 Claude 自定义入口。
+提供 AI 编程沙箱能力；`vibe.yml` 显式开启 Code-Server 与 Jupyter，默认安装 Claude Code 与 Codex CLI。
 
 **Code-Server**：浏览器中的 VS Code
 
@@ -98,6 +99,11 @@ pg18-stat, pg18-sec, pg18-fdw, pg18-sim, pg18-etl
 - 使用模块默认行为完成 Claude 运行环境配置
 - 可通过 `claude_env` 覆盖模型端点与 API 密钥
 - 提供 `claude-code` 仪表盘监控使用情况
+
+**Codex CLI**：AI 编程助手
+
+- 由 `codex_enabled` 控制，默认启用
+- VIBE 仅安装 `@openai/codex`，不写入 Codex 配置，也不接入 Claude Code 仪表盘
 
 
 --------
@@ -153,7 +159,7 @@ vi pigsty.yml
 # 5. 部署 JuiceFS 文件系统
 ./juice.yml
 
-# 6. 部署 VIBE 模块（Code-Server、JupyterLab、Claude Code）
+# 6. 部署 VIBE 模块（Code-Server、JupyterLab、Claude Code、Codex CLI）
 ./vibe.yml
 ```
 

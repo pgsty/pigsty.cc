@@ -1,42 +1,45 @@
 ---
 title: 参数列表
 weight: 4820
-description: VIBE 模块参数详解（共 16 项）。
+description: VIBE 模块参数详解（共 18 项）。
 icon: fas fa-cog
 module: [VIBE]
 categories: [参数]
 ---
 
-VIBE 模块共有 **16** 个参数，分为：
+VIBE 模块共有 **18** 个参数，分为：
 
 - 通用参数
 - Code-Server 参数
 - JupyterLab 参数
 - Node.js 参数
 - Claude Code 参数
+- Codex CLI 参数
 
 --------
 
 ## 参数概览
 
-| 参数 | 类型 | 级别 | 默认值 | 说明 |
-|:-----|:----:|:----:|:------|:-----|
-| [`vibe_data`](#vibe_data) | `path` | `C` | `/fs` | 工作目录 |
-| [`code_enabled`](#code_enabled) | `bool` | `C` | `true` | 启用 Code-Server |
-| [`code_port`](#code_port) | `port` | `C` | `8443` | Code-Server 端口 |
-| [`code_data`](#code_data) | `path` | `C` | `/data/code` | Code-Server 数据目录 |
-| [`code_password`](#code_password) | `string` | `C` | `Vibe.Coding` | Code-Server 密码 |
-| [`code_gallery`](#code_gallery) | `enum` | `C` | `openvsx` | 扩展市场 |
-| [`jupyter_enabled`](#jupyter_enabled) | `bool` | `C` | `false` | 启用 JupyterLab |
-| [`jupyter_port`](#jupyter_port) | `port` | `C` | `8888` | JupyterLab 端口 |
-| [`jupyter_data`](#jupyter_data) | `path` | `C` | `/data/jupyter` | JupyterLab 数据目录 |
-| [`jupyter_password`](#jupyter_password) | `string` | `C` | `Vibe.Coding` | JupyterLab Token |
-| [`jupyter_venv`](#jupyter_venv) | `path` | `C` | `/data/venv` | Python venv 路径 |
-| [`nodejs_enabled`](#nodejs_enabled) | `bool` | `C` | `true` | 启用 Node.js |
-| [`nodejs_registry`](#nodejs_registry) | `url` | `C` | `''` | npm 镜像地址 |
-| [`npm_packages`](#npm_packages) | `string[]` | `C` | `['@anthropic-ai/claude-code','happy-coder']` | 全局 npm 包 |
-| [`claude_enabled`](#claude_enabled) | `bool` | `C` | `true` | 启用 Claude 配置 |
-| [`claude_env`](#claude_env) | `dict` | `C` | `{}` | Claude 环境变量 |
+| 参数                                      |     类型     | 级别  | 默认值                         | 说明                |
+|:----------------------------------------|:----------:|:---:|:----------------------------|:------------------|
+| [`vibe_data`](#vibe_data)               |   `path`   | `C` | `/fs`                       | 工作目录              |
+| [`code_enabled`](#code_enabled)         |   `bool`   | `C` | `true`                      | 启用 Code-Server    |
+| [`code_port`](#code_port)               |   `port`   | `C` | `8443`                      | Code-Server 端口    |
+| [`code_data`](#code_data)               |   `path`   | `C` | `/data/code`                | Code-Server 数据目录  |
+| [`code_password`](#code_password)       |  `string`  | `C` | `Vibe.Coding`               | Code-Server 密码    |
+| [`code_gallery`](#code_gallery)         |   `enum`   | `C` | `openvsx`                   | 扩展市场              |
+| [`jupyter_enabled`](#jupyter_enabled)   |   `bool`   | `C` | `false`                     | 启用 JupyterLab     |
+| [`jupyter_port`](#jupyter_port)         |   `port`   | `C` | `8888`                      | JupyterLab 端口     |
+| [`jupyter_data`](#jupyter_data)         |   `path`   | `C` | `/data/jupyter`             | JupyterLab 数据目录   |
+| [`jupyter_password`](#jupyter_password) |  `string`  | `C` | `Vibe.Coding`               | JupyterLab Token  |
+| [`jupyter_venv`](#jupyter_venv)         |   `path`   | `C` | `/data/venv`                | Python venv 路径    |
+| [`nodejs_enabled`](#nodejs_enabled)     |   `bool`   | `C` | `true`                      | 启用 Node.js        |
+| [`nodejs_registry`](#nodejs_registry)   |   `url`    | `C` | `''`                        | npm 镜像地址          |
+| [`npm_packages`](#npm_packages)         | `string[]` | `C` | `[]`                        | 额外全局 npm 包        |
+| [`claude_enabled`](#claude_enabled)     |   `bool`   | `C` | `true`                      | 安装并配置 Claude Code |
+| [`claude_package`](#claude_package)     |  `string`  | `C` | `@anthropic-ai/claude-code` | Claude Code npm 包 |
+| [`claude_env`](#claude_env)             |   `dict`   | `C` | `{}`                        | Claude 环境变量       |
+| [`codex_enabled`](#codex_enabled)       |   `bool`   | `C` | `true`                      | 安装 Codex CLI      |
 {.full-width}
 
 --------
@@ -62,10 +65,13 @@ jupyter_venv: /data/venv
 
 nodejs_enabled: true
 nodejs_registry: ''
-npm_packages: [ '@anthropic-ai/claude-code' , 'happy-coder' ]
+npm_packages: []
 
 claude_enabled: true
+claude_package: '@anthropic-ai/claude-code'
 claude_env: {}
+
+codex_enabled: true
 ```
 
 --------
@@ -140,8 +146,8 @@ npm 镜像地址，`region=china` 且为空时自动使用 `https://registry.npm
 
 ### `npm_packages`
 
-全局安装的 npm 包列表，对应标签 `nodejs_pkg`。
-默认包含 `@anthropic-ai/claude-code` 与 `happy-coder`。
+额外全局安装的 npm 包列表，对应标签 `nodejs_pkg`，默认为空。
+Claude Code 与 Codex CLI 由各自的独立任务安装，不需要加入此列表。
 
 --------
 
@@ -149,8 +155,11 @@ npm 镜像地址，`region=china` 且为空时自动使用 `https://registry.npm
 
 ### `claude_enabled`
 
-启用 Claude Code 配置任务（`claude_config`）。
-Claude CLI 默认由 `nodejs_pkg` 根据 `npm_packages` 安装。
+启用 Claude Code 安装与配置任务。`claude_install` 安装 CLI，`claude_config` 写入配置。
+
+### `claude_package`
+
+Claude Code 使用的 npm 包，默认为 `@anthropic-ai/claude-code`。
 
 ### `claude_env`
 
@@ -159,8 +168,19 @@ Claude CLI 默认由 `nodejs_pkg` 根据 `npm_packages` 安装。
 默认环境变量包括：
 
 - `CLAUDE_CODE_ENABLE_TELEMETRY=1`
-- `CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1`
 - `OTEL_METRICS_EXPORTER=otlp`
 - `OTEL_LOGS_EXPORTER=otlp`
+- `OTEL_EXPORTER_OTLP_METRICS_PROTOCOL=http/protobuf`
+- `OTEL_EXPORTER_OTLP_LOGS_PROTOCOL=http/protobuf`
 - `OTEL_EXPORTER_OTLP_METRICS_ENDPOINT=http://127.0.0.1:8428/opentelemetry/v1/metrics`
 - `OTEL_EXPORTER_OTLP_LOGS_ENDPOINT=http://127.0.0.1:9428/insert/opentelemetry/v1/logs`
+- `OTEL_RESOURCE_ATTRIBUTES=ip=<inventory_hostname>,job=claude`
+
+--------
+
+## Codex CLI
+
+### `codex_enabled`
+
+是否安装 Codex CLI，默认为 `true`。启用后，`codex_install` 任务执行 `npm install -g @openai/codex`。
+VIBE 只负责安装 Codex CLI，不托管 Codex 配置，也不为其配置 OpenTelemetry。

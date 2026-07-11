@@ -61,7 +61,7 @@ pg-backup full
 
 ```bash
 postgres@pg-test-1:~$ pb backup
-2025-12-27 10:20:29.336 P00   INFO: backup command begin 2.57.0: --annotation=pg_cluster=pg-test --compress-type=lz4 --delta --exec-id=21034-171fb30b --expire-auto --log-level-console=info --log-level-file=info --log-path=/pg/log/pgbackrest --pg1-path=/pg/data --pg1-port=5432 --repo1-block --repo1-bundle --repo1-bundle-limit=20MiB --repo1-bundle-size=128MiB --repo1-cipher-pass=<redacted> --repo1-cipher-type=aes-256-cbc --repo1-path=/pgbackrest --repo1-retention-full=14 --repo1-retention-full-type=time --repo1-s3-bucket=pgsql --repo1-s3-endpoint=sss.pigsty --repo1-s3-key=<redacted> --repo1-s3-key-secret=<redacted> --repo1-s3-region=us-east-1 --repo1-s3-uri-style=path --repo1-storage-ca-file=/etc/pki/ca.crt --repo1-storage-port=9000 --repo1-type=s3 --stanza=pg-test --start-fast
+2025-12-27 10:20:29.336 P00   INFO: backup command begin 2.57.0: --annotation=pg_cluster=pg-test --compress-type=zst --delta --exec-id=21034-171fb30b --expire-auto --log-level-console=info --log-level-file=info --log-path=/pg/log/pgbackrest --pg1-path=/pg/data --pg1-port=5432 --repo1-block --repo1-bundle --repo1-bundle-limit=20MiB --repo1-bundle-size=128MiB --repo1-cipher-pass=<redacted> --repo1-cipher-type=aes-256-cbc --repo1-path=/pgbackrest --repo1-retention-full=14 --repo1-retention-full-type=time --repo1-s3-bucket=pgsql --repo1-s3-endpoint=sss.pigsty --repo1-s3-key=<redacted> --repo1-s3-key-secret=<redacted> --repo1-s3-region=us-east-1 --repo1-s3-uri-style=path --repo1-storage-ca-file=/etc/pki/ca.crt --repo1-storage-port=9000 --repo1-type=s3 --stanza=pg-test --start-fast
 2025-12-27 10:20:29.357 P00  ERROR: [051]: PostgreSQL version 18, system-id 7588470953413201282 do not match stanza version 18, system-id 7588470974940466058
                                     HINT: is this the correct stanza?
 2025-12-27 10:20:29.357 P00   INFO: backup command end: aborted with exception [051]
@@ -113,7 +113,6 @@ pb stanza-create
 
 
 使用这种技术，您不仅可以克隆 `pg-meta` 集群的最新状态，还可以克隆到任意时间点，例如：
-
 
 
 

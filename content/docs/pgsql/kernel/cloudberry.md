@@ -20,7 +20,7 @@ categories: [概念]
 - 模式标识：`pg_mode: gpsql`
 - 角色标识：`gp_role: master | segment`
 - 当前仓库版本：`Cloudberry 2.1.0`
-- 当前主包版本：`2.1.0-2PIGSTY`
+- 当前主包版本：DEB `2.1.0-2PIGSTY`，RPM `2.1.0-3PIGSTY`
 - 默认二进制目录：`/usr/cloudberry`
 
 需要特别说明的是，Pigsty 当前对 Cloudberry 的支持重点在于：软件包交付、节点管理、监控纳管、访问控制与配置编排。

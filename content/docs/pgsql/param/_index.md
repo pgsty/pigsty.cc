@@ -190,7 +190,7 @@ categories: [参考]
 | [`pg_default_services`](#pg_default_services)         | `service[]` | `G/C` | postgres 默认服务定义列表，全局共用。                             |
 | [`pg_vip_enabled`](#pg_vip_enabled)                   |   `bool`    |  `C`  | 是否为 pgsql 主节点启用 L2 VIP？默认不启用                        |
 | [`pg_vip_address`](#pg_vip_address)                   |   `cidr4`   |  `C`  | vip 地址的格式为 `<ipv4>/<mask>`，启用 vip 时为必选参数            |
-| [`pg_vip_interface`](#pg_vip_interface)               |  `string`   | `C/I` | 监听的 vip 网络接口，默认为 eth0                               |
+| [`pg_vip_interface`](#pg_vip_interface)               |  `string`   | `C/I` | 监听的 vip 网络接口，默认为 auto                               |
 | [`pg_dns_suffix`](#pg_dns_suffix)                     |  `string`   |  `C`  | pgsql dns 后缀，默认为空                                   |
 | [`pg_dns_target`](#pg_dns_target)                     |   `enum`    |  `C`  | PG DNS 解析到哪里？auto、primary、vip、none 或者特定的 IP 地址      |
 {.full-width}
@@ -2147,7 +2147,7 @@ pg_default_services:              # postgres default service definitions
   - { name: offline ,port: 5438 ,dest: postgres ,check: /replica   ,selector: "[? pg_role == `offline` || pg_offline_query ]" , backup: "[? pg_role == `replica` && !pg_offline_query]"}
 pg_vip_enabled: false             # enable a l2 vip for pgsql primary? false by default
 pg_vip_address: 127.0.0.1/24      # vip address in `<ipv4>/<mask>` format, require if vip is enabled
-pg_vip_interface: eth0            # vip network interface to listen, eth0 by default
+pg_vip_interface: auto            # vip network interface to listen, auto by default
 pg_dns_suffix: ''                 # pgsql dns suffix, '' by default
 pg_dns_target: auto               # auto, primary, vip, none, or ad hoc ip
 ```
@@ -2355,13 +2355,13 @@ L2 VIP 只能在相同的 L2 网络中使用，这可能会对您的网络拓扑
 
 参数名称： `pg_vip_interface`， 类型： `string`， 层次：`C/I`
 
-vip network interface to listen, `eth0` by default.
+vip network interface to listen, `auto` by default.
 
-L2 VIP 监听的网卡接口，默认为 `eth0`。
+L2 VIP 监听的网卡接口，默认为 `auto`。Pigsty 会根据 inventory 中的实例 IP 自动探测对应网卡。
 
 它应该是您节点的首要网卡名，即您在配置清单中使用的 IP 地址。
 
-如果您的节点有多块名称不同的网卡，您可以在实例变量上进行覆盖：
+自动探测不适用于非标准路由、策略路由等特殊网络环境时，您可以在实例变量上显式覆盖：
 
 ```yaml
 pg-test:

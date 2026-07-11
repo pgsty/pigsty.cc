@@ -1,13 +1,13 @@
 ---
 title: 模块：VIBE
 weight: 4800
-description: 使用 Pigsty 部署 AI 编程沙箱：Code-Server、JupyterLab、Node.js 与 Claude Code。
+description: 使用 Pigsty 部署 AI 编程沙箱：Code-Server、JupyterLab、Node.js、Claude Code 与 Codex CLI。
 icon: fas fa-laptop-code
 module: [VIBE]
 categories: [参考]
 ---
 
-VIBE 模块提供一套 **浏览器化开发环境**，包含 Code-Server、JupyterLab、Node.js 与 Claude Code 的协同配置，
+VIBE 模块提供一套 **浏览器化开发环境**，包含 Code-Server、JupyterLab、Node.js、Claude Code 与 Codex CLI，
 并可与 [`JUICE`](/docs/juice) 共享存储和 [`PGSQL`](/docs/pgsql) 数据库能力配合使用。
 
 VIBE 依赖 [`NODE`](/docs/node) 与 [`INFRA`](/docs/infra)：
@@ -19,12 +19,13 @@ VIBE 依赖 [`NODE`](/docs/node) 与 [`INFRA`](/docs/infra)：
 
 ## 组件一览
 
-| 组件 | 说明 | 本地端口 | 访问路径 |
-|:-----|:-----|:--------:|:---------|
-| Code-Server | VS Code 浏览器版 | 8443 | `/code/` |
-| JupyterLab | 交互式 Notebook | 8888 | `/jupyter/` |
-| Node.js | 运行时与 npm | - | CLI |
-| Claude Code | CLI + 可观测性配置 | - | CLI / Grafana |
+| 组件          | 说明           | 本地端口 | 访问路径          |
+|:------------|:-------------|:----:|:--------------|
+| Code-Server | VS Code 浏览器版 | 8443 | `/code/`      |
+| JupyterLab  | 交互式 Notebook | 8888 | `/jupyter/`   |
+| Node.js     | 运行时与 npm     |  -   | CLI           |
+| Claude Code | CLI + 可观测性配置 |  -   | CLI / Grafana |
+| Codex CLI   | CLI 安装，不托管配置 |  -   | CLI           |
 {.full-width}
 
 说明：
@@ -57,7 +58,7 @@ VIBE 依赖 [`NODE`](/docs/node) 与 [`INFRA`](/docs/infra)：
 - **统一工作区**：`vibe_data` 作为 Code-Server 与 Jupyter 的根目录
 - **可选共享存储**：配合 `JUICE` 实现多节点共享
 - **可观测性**：Claude Code OpenTelemetry 默认对接 VictoriaMetrics/VictoriaLogs
-- **可组件化**：Code/Jupyter/Node.js/Claude 可按需启用
+- **可组件化**：Code/Jupyter/Node.js/Claude/Codex 可按需启用
 
 --------
 

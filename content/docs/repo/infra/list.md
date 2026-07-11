@@ -112,14 +112,14 @@ allow_loading_unsigned_plugins = victoriametrics-logs-datasource,victoriametrics
 
 PostgreSQL 相关工具、数据库管理系统和其他实用程序
 
-| 名称                                                          | 版本       | 许可证                                                                                | 备注                          |
-|-------------------------------------------------------------|----------|------------------------------------------------------------------------------------|-----------------------------|
-| [`etcd`](https://github.com/etcd-io/etcd)                   | `3.6.13` | [Apache-2.0](https://github.com/etcd-io/etcd/blob/main/LICENSE)                    | 容错分布式协调服务                  |
-| [`kafka`](https://github.com/apache/kafka)                  | `4.3.1`  | [Apache-2.0](https://github.com/apache/kafka/blob/trunk/LICENSE)                   | 消息队列                        |
-| [`duckdb`](https://github.com/duckdb/duckdb)                | `1.5.4`  | [MIT](https://github.com/duckdb/duckdb/blob/main/LICENSE)                          | 嵌入式 OLAP                    |
-| [`ferretdb`](https://github.com/FerretDB/FerretDB)          | `2.7.0`  | [Apache-2.0](https://github.com/FerretDB/FerretDB/blob/main/LICENSE)               | 基于 PG 的 MongoDB             |
-| [`tigerbeetle`](https://github.com/tigerbeetle/tigerbeetle) | `0.17.9` | [Apache-2.0](https://github.com/tigerbeetle/tigerbeetle/blob/main/LICENSE)         | 金融 OLTP                     |
-| [`ivorysql`](https://github.com/IvorySQL/IvorySQL)          | `5.3`    | [Apache-2.0](https://github.com/IvorySQL/IvorySQL/blob/IVORY_REL_5_STABLE/LICENSE) | Oracle 兼容的 PG 18.1          |
+| 名称                                                          | 版本       | 许可证                                                                                | 备注                 |
+|-------------------------------------------------------------|----------|------------------------------------------------------------------------------------|--------------------|
+| [`etcd`](https://github.com/etcd-io/etcd)                   | `3.6.13` | [Apache-2.0](https://github.com/etcd-io/etcd/blob/main/LICENSE)                    | 容错分布式协调服务          |
+| [`kafka`](https://github.com/apache/kafka)                  | `4.3.1`  | [Apache-2.0](https://github.com/apache/kafka/blob/trunk/LICENSE)                   | 消息队列               |
+| [`duckdb`](https://github.com/duckdb/duckdb)                | `1.5.4`  | [MIT](https://github.com/duckdb/duckdb/blob/main/LICENSE)                          | 嵌入式 OLAP           |
+| [`ferretdb`](https://github.com/FerretDB/FerretDB)          | `2.7.0`  | [Apache-2.0](https://github.com/FerretDB/FerretDB/blob/main/LICENSE)               | 基于 PG 的 MongoDB    |
+| [`tigerbeetle`](https://github.com/tigerbeetle/tigerbeetle) | `0.17.9` | [Apache-2.0](https://github.com/tigerbeetle/tigerbeetle/blob/main/LICENSE)         | 金融 OLTP            |
+| [`ivorysql`](https://github.com/IvorySQL/IvorySQL)          | `5.4`    | [Apache-2.0](https://github.com/IvorySQL/IvorySQL/blob/IVORY_REL_5_STABLE/LICENSE) | Oracle 兼容的 PG 18.4 |
 {.stretch-last}
 
 
@@ -133,7 +133,7 @@ Pig 包管理器、PostgreSQL 工具和其他数据库相关实用程序
 |-----------------------------------------------------------------------------------------|------------|-----------------------------------------------------------------------------------------|-------------------------------|
 | [`pig`](https://github.com/pgsty/pig)                                                   | `1.5.1`    | [Apache-2.0](https://github.com/pgsty/pig/blob/main/LICENSE)                            | PG 包管理器                       |
 | [`vip-manager`](https://github.com/cybertec-postgresql/vip-manager)                     | `4.2.0`    | [BSD-2](https://github.com/cybertec-postgresql/vip-manager/blob/master/LICENSE)         | 将 L2 VIP 绑定到 PG 主节点           |
-| [`pg-hardstorage`](https://github.com/cybertec-postgresql/pg_hardstorage)                | `1.0.8`    | [Apache-2.0](https://github.com/cybertec-postgresql/pg_hardstorage/blob/main/LICENSE)   | 基于连续 WAL 流的 PostgreSQL 备份工具   |
+| [`pg-hardstorage`](https://github.com/cybertec-postgresql/pg_hardstorage)               | `1.0.8`    | [Apache-2.0](https://github.com/cybertec-postgresql/pg_hardstorage/blob/main/LICENSE)   | 基于连续 WAL 流的 PostgreSQL 备份工具   |
 | [`pgschema`](https://github.com/pgplex/pgschema)                                        | `1.12.0`   | [Apache-2.0](https://github.com/pgplex/pgschema/blob/main/LICENSE)                      | Terraform 风格的声明式 PG 模式迁移 CLI  |
 | [`pgstream`](https://github.com/xataio/pgstream)                                        | `1.1.1`    | [Apache-2.0](https://github.com/xataio/pgstream/blob/main/LICENSE)                      | PostgreSQL 复制与 DDL 变更同步       |
 | [`pg_timetable`](https://github.com/cybertec-postgresql/pg_timetable)                   | `6.3.0`    | [PostgreSQL](https://github.com/cybertec-postgresql/pg_timetable/blob/master/LICENSE)   | PostgreSQL 高级调度               |

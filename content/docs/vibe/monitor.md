@@ -19,12 +19,11 @@ VIBE 在 `~/.claude/settings.json` 中写入默认 OpenTelemetry 环境变量：
 ```json
 {
   "env": {
-    "CLAUDE_CODE_ENABLE_TELEMETRY": 1,
-    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": 1,
-    "OTEL_LOG_USER_PROMPTS": 1,
+    "CLAUDE_CODE_ENABLE_TELEMETRY": "1",
     "OTEL_METRICS_EXPORTER": "otlp",
     "OTEL_LOGS_EXPORTER": "otlp",
-    "OTEL_EXPORTER_OTLP_PROTOCOL": "http/protobuf",
+    "OTEL_EXPORTER_OTLP_METRICS_PROTOCOL": "http/protobuf",
+    "OTEL_EXPORTER_OTLP_LOGS_PROTOCOL": "http/protobuf",
     "OTEL_EXPORTER_OTLP_METRICS_ENDPOINT": "http://127.0.0.1:8428/opentelemetry/v1/metrics",
     "OTEL_EXPORTER_OTLP_LOGS_ENDPOINT": "http://127.0.0.1:9428/insert/opentelemetry/v1/logs",
     "OTEL_RESOURCE_ATTRIBUTES": "ip=<host>,job=claude"
