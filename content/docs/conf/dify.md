@@ -42,7 +42,7 @@ categories: [参考]
 
 ## 配置解读
 
-`app/dify` 模板提供了 Dify AI 应用开发平台的一键部署方案。
+`app/dify` 模板提供了 Dify AI 应用开发平台的一键部署方案，当前模板已按 Dify v1.15.0 验证。
 
 **Dify 是什么**：
 - 开源的 LLM 应用开发平台
@@ -53,14 +53,15 @@ categories: [参考]
 **关键特性**：
 - 使用 Pigsty 管理的 PostgreSQL 替代 Dify 自带的数据库
 - 使用 pgvector 作为向量存储（替代 Weaviate/Qdrant）
+- 启用 `collaboration` Compose Profile 与 WebSocket 边车
 - 支持 HTTPS 和自定义域名
 - 数据持久化到独立目录 `/data/dify`
 
 **访问方式**：
 
 ```bash
-# Dify Web 界面
-http://dify.pigsty:5001
+# 直接访问 Dify Web 界面
+http://<IP>:5001
 
 # 或通过 Nginx 代理
 https://dify.pigsty
@@ -75,6 +76,5 @@ https://dify.pigsty
 **注意事项**：
 - 必须修改 `SECRET_KEY`，使用 `openssl rand -base64 42` 生成
 - 需要配置 LLM API 密钥（如 OpenAI API Key）
-- Docker 网络需要能访问 PostgreSQL（已配置 172.17.0.0/16 HBA 规则）
+- Docker 网络需要能访问 PostgreSQL（模板已为本机 Docker 网段配置 `172.16.0.0/12` HBA 规则）
 - 建议配置代理以加速 Python 包下载
-

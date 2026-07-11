@@ -49,6 +49,7 @@ categories: [参考]
 - 支持镜像缓存和本地存储
 
 **关键特性**：
+- 默认固定 `registry:3.1.1` 与 `joxit/docker-registry-ui:2.6.0` 镜像
 - 作为 Docker Hub 的代理缓存，加速镜像拉取
 - 缓存镜像到本地存储 `/data/registry`
 - 提供 Web UI 界面查看缓存的镜像

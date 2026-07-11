@@ -44,11 +44,13 @@ categories: [参考]
 
 `app/insforge` 模板默认部署：
 
-- InsForge 主服务：`ghcr.io/insforge/insforge-oss:v2.0.1`，端口 `7130`
+- InsForge 主服务：`ghcr.io/insforge/insforge-oss:v2.2.6`，端口 `7130`
 - PostgREST：`postgrest/postgrest:v12.2.12`，端口 `5430`
 - Deno Runtime：端口 `7133`
 - PostgreSQL 数据库：`insforge`
 - 扩展：`pgcrypto`、`http`、`pg_cron`
+- PostgreSQL 18，并为 `project_admin` 开启 `BYPASSRLS`
+- 本机 Docker 网段 HBA：`172.16.0.0/12`
 - Nginx 入口：`isf.pigsty` -> `10.10.10.10:7130`
 
 **访问方式**：
@@ -58,4 +60,4 @@ http://<IP>:7130
 http://isf.pigsty
 ```
 
-默认管理员账号为 `admin@example.com` / `pigsty`，生产环境必须修改 `JWT_SECRET`、`ADMIN_PASSWORD` 与数据库密码。
+默认管理员账号为 `admin@example.com` / `pigsty`。生产环境必须修改 `JWT_SECRET`、`ENCRYPTION_KEY`、`ROOT_ADMIN_PASSWORD` 与数据库密码；这些值还要与 `pg_parameters` 中的加密及授权设置保持一致。

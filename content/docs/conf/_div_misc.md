@@ -1,5 +1,5 @@
 ---
-title: "其他模版"
+title: "其他模板"
 weight: 1000
 sidebar_divider: true
 toc_hide: false

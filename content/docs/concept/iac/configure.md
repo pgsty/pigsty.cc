@@ -30,13 +30,13 @@ cd ~/pigsty
 
 ## 功能说明
 
-**`configure`** 脚本会根据环境与输入执行以下调整，并在当前目录下生成 `pigsty.yml` 配置文件。
+**`configure`** 脚本会根据环境与输入执行以下调整，并默认在 Pigsty 目录下生成 `pigsty.yml` 配置文件。
 
 - 检测当前节点 IP 地址，如果有多个 IP，则要求用户输入一个 **首要的 IP 地址** 作为当前节点的身份标识
 - 使用 IP 地址替换配置模板中的占位符 **`10.10.10.10`**，并将其配置为 [**`admin_ip`**](/docs/infra/param#admin_ip) 参数的值。
 - 检测当前区域，将 [**`region`**](/docs/infra/param#region) 设置为 **`default`** （全球默认仓库）或 **`china`** （使用中国镜像仓库）
 - 针对小微实例（vCPU < 4），为 [**`node_tune`**](/docs/node/param#node_tune) 和 [**`pg_conf`**](/docs/pgsql/param#pg_conf) 参数使用 **`tiny`** 参数模板，优化资源使用。
-- 如果指定了 **`-v`** PG 大版本，将 [**`pg_version`**](/docs/pgsql/param#pg_version) 以及所有 PG 别名参数设置为对应大版本。
+- 如果指定了 **`-v`** PG 大版本，将 [**`pg_version`**](/docs/pgsql/param#pg_version) 与模板中的 `pg18-*` 包组别名切换到对应大版本；`mssql`、`polar`、`pg19` 是固定内核模板，不执行该替换。
 - 如果指定了 **`-g`** 参数，将所有默认密码替换为随机生成的强密码，提升安全性。（**强烈推荐**）
 - 当 PG 大版本 ≥ 17 时优先使用内置的 **`C.UTF-8`** Locale，次选由操作系统支持的 **`C.UTF-8`**。
 - 检测当前环境中，用于执行部署的核心依赖 **`ansible`** 是否可用
@@ -59,12 +59,14 @@ cd ~/pigsty
 ./configure -c slim               # 使用精简模板（仅 PGSQL + ETCD）
 ./configure -c ha/full            # 使用 4 节点高可用沙箱模板
 ./configure -c ha/trio            # 使用 3 节点高可用模板
-./configure -c app/supa           # 使用 Supabase 自托管模板
+./configure -c supabase           # 使用 Supabase 自托管模板
+./configure -c app/immich         # 使用 Immich 相册模板
 
 # 指定 PostgreSQL 版本
 ./configure -v 18                 # 使用 PostgreSQL 18（默认）
 ./configure -v 16                 # 使用 PostgreSQL 16
 ./configure -c rich -v 15         # rich 模板 + PG 15
+./configure -c pg19               # 使用专用 PostgreSQL 19 Beta 模板
 
 # 区域与代理
 ./configure -r china              # 使用中国镜像源
@@ -94,7 +96,7 @@ cd ~/pigsty
 ./configure
     [-c|--conf <template>]      # 配置模板名称（meta|rich|slim|ha/full|...）
     [-i|--ip <ipaddr>]          # 指定主 IP 地址
-    [-v|--version <pgver>]      # PostgreSQL 大版本号（14|15|16|17|18）
+    [-v|--version <pgver>]      # PostgreSQL 大版本号（14|15|16|17|18|19）
     [-r|--region <region>]      # 上游软件仓库区域（default|china|europe）
     [-o|--output <file>]        # 输出配置文件路径（默认：pigsty.yml）
     [-s|--skip]                 # 跳过 IP 地址探测与替换
@@ -111,13 +113,13 @@ cd ~/pigsty
 |:------------------------|:------------------------------------------------------------------|
 | `-c, --conf`            | 从 `conf/<template>.yml` 生成配置文件，支持子目录如 `ha/full`                   |
 | `-i, --ip`              | 用指定 IP 替换配置模板中的占位符 `10.10.10.10`                                  |
-| `-v, --version`         | 指定 PostgreSQL 大版本号（14-18），不指定时保持模板默认值                             |
+| `-v, --version`         | 指定 PostgreSQL 大版本号（14-19）；PG19 为 Beta，建议直接使用 `pg19` 模板                |
 | `-r, --region`          | 设置软件仓库镜像区域：`default`（默认）、`china`（中国镜像）、`europe`（欧洲镜像）             |
-| `-o, --output`          | 指定输出文件路径，默认为 `pigsty.yml`                                         |
-| `-s, --skip`            | 跳过 IP 地址探测与替换，保留模板中的 `10.10.10.10` 占位符                            |
+| `-o, --output`          | 指定输出文件路径，默认为 `pigsty.yml`；相对路径基于 Pigsty 目录，绝对路径原样使用             |
+| `-s, --skip`            | 跳过 IP 探测、目标节点 SSH/Sudo 检查与实质 IP 替换，保留 `10.10.10.10` 占位符             |
 | `-x, --proxy`           | 将当前环境的代理变量（`HTTP_PROXY`、`HTTPS_PROXY`、`ALL_PROXY`、`NO_PROXY`）写入配置 |
-| `-n, --non-interactive` | 非交互模式，不询问任何问题（需配合 `-i` 指定 IP）                                     |
-| `-p, --port`            | 指定 SSH 端口（非默认 22 端口时使用）                                           |
+| `-n, --non-interactive` | 非交互模式；单 IP 或演示 IP 可自动选择，多 IP 歧义时需配合 `-i`                           |
+| `-p, --port`            | 指定环境检查所用 SSH 端口；不会自动把 `ansible_port` 写入输出配置                         |
 | `-g, --generate`        | **为配置文件中的密码生成随机值，提高安全性（强烈推荐）**                                    |
 {.full-width}
 
@@ -150,7 +152,7 @@ cd ~/pigsty
 │         ↓                                                   │
 │  8. check_ssh             检测免密 SSH 到本机                   │
 │         ↓                                                   │
-│  9. check_proxy           处理代理环境变量                      │
+│  9. check_proxy_env       处理代理环境变量                      │
 │         ↓                                                   │
 │ 10. check_ipaddr          探测/输入主 IP 地址                   │
 │         ↓                                                   │
@@ -177,12 +179,13 @@ cd ~/pigsty
 脚本会自动检测网络环境，判断是否在中国大陆（GFW 内）：
 
 ```bash
-# 通过访问 Google 判断网络环境
-curl -I -s --connect-timeout 1 www.google.com
+# 实际检测使用 HTTPS 与 2 秒总超时
+curl -I -s --max-time 2 https://www.google.com
 ```
 
-- 如果无法访问 Google，自动设置 `region: china` 使用国内镜像
-- 如果可以访问，使用 `region: default` 默认镜像
+- 如果可以访问 Google，使用 `region: default` 默认镜像
+- 如果 Google 不可达但 `https://pigsty.cc` 可达，设置 `region: china` 使用国内镜像
+- 如果两者都不可达，回退到 `region: default` 并给出网络不可达警告
 - 可通过 `-r` 参数手动指定区域
 
 
@@ -206,7 +209,7 @@ curl -I -s --connect-timeout 1 www.google.com
 
 ### 低端硬件优化
 
-当检测到 CPU 核心数 ≤ 4 时，脚本会自动调整配置：
+当检测到 CPU 核心数小于 4（即 1～3 核）时，脚本会自动调整配置：
 
 ```bash
 [WARN] replace oltp template with tiny due to cpu < 4
@@ -262,6 +265,8 @@ pg_lc_ctype: C.UTF-8
 - `S3User.Backup` → 随机密码
 - `S3User.Meta` → 随机密码
 - `S3User.Data` → 随机密码
+- `DBUser.Supa` → 随机密码
+- `Vibe.Coding` → 随机密码
 
 ```bash
 $ ./configure -g
@@ -277,7 +282,7 @@ $ ./configure -g
 
 ## 配置模板
 
-脚本从 `conf/` 目录读取配置模板，支持以下模板：
+脚本从 `conf/` 目录读取配置模板。`-c` 的值是相对于 `conf/`、不带 `.yml` 后缀的路径，例如 `ha/full`、`app/immich`。
 
 ### 核心模板
 
@@ -288,6 +293,7 @@ $ ./configure -g
 |  `slim`  | 精简版：仅 PostgreSQL + ETCD，无监控基础设施               |
 |  `fat`   | 完整版：rich 基础上安装更多扩展                            |
 | `pgsql`  | 纯 PostgreSQL 模板                               |
+|  `pg19`  | PostgreSQL 19 Beta 单节点试用模板                    |
 | `infra`  | 纯基础设施模板                                       |
 {.full-width}
 
@@ -303,7 +309,7 @@ $ ./configure -g
 | `ha/citus` | 13 节点 Citus 分布式集群 |
 {.full-width}
 
-### 应用模板 (`app/`)
+### 应用模板
 
 |        模板        | 说明                 |
 |:----------------:|:-------------------|
@@ -317,6 +323,8 @@ $ ./configure -g
 | `app/mattermost` | Mattermost 协作平台配置  |
 |   `app/maybe`    | Maybe 财务应用配置       |
 |  `app/registry`  | Docker Registry 配置 |
+|  `app/immich`    | Immich 相册与视频管理配置   |
+| `app/jumpserver` | JumpServer 堡垒机配置    |
 {.full-width}
 
 ### 特殊内核模板/模式
@@ -335,15 +343,25 @@ $ ./configure -g
 |  `mongo`   | MongoDB 兼容栈模板                      |
 {.full-width}
 
-### 演示模板 (`demo/`)
+### 演示与构建模板
 
-|      模板      | 说明                 |
-|:------------:|:-------------------|
-|    `vibe`    | Vibe Coding 开发环境模板 |
-|   `docker`   | Docker 应用宿主模板      |
-| `demo/demo`  | 演示环境配置             |
-| `demo/redis` | Redis 集群演示         |
-| `demo/minio` | MinIO 集群演示         |
+|       模板       | 说明                     |
+|:--------------:|:-----------------------|
+|     `vibe`     | Vibe Coding 开发环境模板     |
+|    `docker`    | Docker 容器内运行模板         |
+|  `demo/bare`   | 最小可读单节点配置示例           |
+|   `demo/el`    | EL 系发行版完整参数示例          |
+| `demo/debian`  | Debian/Ubuntu 完整参数示例    |
+|  `demo/demo`   | 多模块演示环境配置              |
+| `demo/kernel`  | 十节点数据库内核矩阵             |
+| `demo/redis`   | Redis 主从、哨兵与原生集群演示     |
+| `demo/minio`   | MinIO 多节点多盘集群演示        |
+| `demo/remote`  | 远程 PostgreSQL/RDS 监控示例  |
+|  `demo/saas`   | 传统单节点 SaaS 组件组合示例      |
+|  `demo/wool`   | 中国区低配云主机示例             |
+|  `build/oss`   | 跨发行版开源软件包构建环境         |
+|  `build/dev`   | 三节点开发与构建环境             |
+{.full-width}
 
 
 -----------------

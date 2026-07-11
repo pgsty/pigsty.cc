@@ -1,6 +1,6 @@
 ---
 title: supabase
-weight: 510
+weight: 805
 description: 使用 Pigsty 托管的 PostgreSQL 自建 Supabase 开源 Firebase 替代方案
 icon: fa-solid fa-bolt
 categories: [参考]
@@ -60,6 +60,7 @@ categories: [参考]
 - 使用 Pigsty 管理的 PostgreSQL 替代 Supabase 自带的数据库容器
 - 支持 PostgreSQL 高可用（可扩展为三节点集群）
 - 安装全部 Supabase 所需扩展（pg_net、pgjwt、pg_graphql、vector 等）
+- 使用独立的 `_supabase` 数据库存储内部日志分析数据，并由 `supa-kick` 定时推进处理
 - 集成 MinIO 对象存储用于文件上传和备份
 - 支持 HTTPS 和 Let's Encrypt 自动证书
 

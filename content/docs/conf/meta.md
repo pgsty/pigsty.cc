@@ -31,7 +31,7 @@ categories: [参考]
 例如，如果您想要安装 PG 16，而非默认的 PostgreSQL 18，可以在 `configure` 中使用 `-v` 参数：
 
 ```bash
-./configure -v 16   # or 17,15,14,13....
+./configure -v 16   # 也可使用 17、15、14；PG19 Beta 请改用 pg19 模板
 ```
 
 
