@@ -1,119 +1,125 @@
 ---
 title: 克隆数据库集群
-weight: 1707
-description: 如何利用 PITR 创建一个新的 PostgreSQL 集群，并恢复到指定时间点？
-icon: fa-solid fa-rotate-left
+weight: 1706
+description: 用 PITR 把一个集群的历史状态恢复到另一个集群：找回误删数据、执行恢复演练，以及必不可少的 Stanza 善后。
+icon: fa-solid fa-clone
 categories: [任务]
 ---
 
+克隆是恢复能力最有价值的用法：**不动生产集群**，把它的历史状态恢复到另一套集群上。
+误删数据后从克隆库中导回、定期演练验证备份可用性、审计取证查看历史状态、把测试环境重置为生产某刻的快照 ——
+这些场景的操作方式完全相同，本页给出完整流程。
 
-## 快速上手
-
-- 利用 Standby Cluster 创建现有集群的在线副本
-- 利用 PITR 创建现有集群的时间点快照
-- 在 PITR 完成后进行善后，确保新集群的备份流程正常运行
-
-您可以使用 PG PITR 机制克隆整个数据库集群。
+前提条件只有一个：目标集群能访问源集群的备份仓库。使用集中式仓库（[**MinIO / S3**](/docs/pgsql/backup/repository/)）时天然满足 ——
+仓库中以 [**stanza**](/docs/pgsql/backup/mechanism/#stanza集群的备份身份) 隔离的各集群备份，对共享仓库的所有集群可见。
 
 
+--------
 
-## 重置一个集群的状态
+## 克隆现有集群
 
-您也可以考虑创建一个全新的空集群，然后利用 PITR，将其重置为 `pg-meta` 集群的特定状态。
-
-利用这种技术，您可以将现有集群 `pg-meta` 的任意时间点（备份保留期内）状态克隆到一个新的集群中。
-
-我们依然以 Pigsty 4 节点沙箱环境为例，使用以下命令将 `pg-test` 集群重置为 `pg-meta` 集群的最新状态：
+假设四节点沙箱中有 `pg-meta` 与 `pg-test` 两套集群，共享 MinIO 备份仓库。
+要把 `pg-test` 重置为 `pg-meta` 的 **最新状态**，只需在 [**`pg_pitr`**](/docs/pgsql/backup/restore/#pitr-参数定义)
+中把恢复来源指向 `pg-meta` 的 stanza：
 
 ```bash
 ./pgsql-pitr.yml -l pg-test -e '{"pg_pitr": { "cluster": "pg-meta" }}'
 ```
 
-
-## PITR 善后工作
-
-当你使用 PITR 从其他集群恢复出一个新集群后，备份仓库中的 stanza 仍然可能记录着源集群的 system-id。
-如果直接对新集群做备份，pgBackRest 会拒绝写入，避免污染源集群的备份历史。
-
-因此，当你确认这个 PITR 恢复出来的新集群状态符合预期后，你需要执行以下善后工作。
-
-- 升级备份仓库 Stanza，允许它接纳新集群的 system-id（仅当从别的集群恢复时）。
-- 如果 PITR 时显式设置了 `archive: false`，重置 `archive_mode` 并重启集群。
-- 执行一个新的全量备份，确保新集群的数据被纳入（可选，也可以等 crontab 定时执行）
+配合恢复目标，可以克隆到备份保留期内的 **任意时间点** —— 例如把 `pg-test` 重置为 `pg-meta`
+在 2025 年 12 月 26 日 15:30 的状态：
 
 ```bash
-pb stanza-upgrade
-psql -c 'ALTER SYSTEM RESET archive_mode;'
-pg restart <cls>       # 仅当 archive_mode 被关闭时需要
-pg-backup full
+./pgsql-pitr.yml -l pg-test -e '{"pg_pitr": { "cluster": "pg-meta", "time": "2025-12-26 15:30:00+08" }}'
 ```
 
-通过这些操作，你的新集群将从第一次全量备份开始时，拥有自己的备份历史。
-如果你跳过这些步骤，新集群本身的备份可能无法写入目标仓库；如果 PITR 时关闭了归档，也不会产生新的 WAL 归档。
+目标集群也可以是全新创建的空集群：先用标准流程 [**创建集群**](/docs/pgsql/admin/cluster)（如 `pg-meta2`），
+再对它执行跨集群 PITR，即完成了"从备份仓库引导新集群"。
+
+pgBackRest 的还原是增量的（`delta`）：只重写与备份不一致的文件。
+因此对反复执行的演练、或已通过 [**备份集群**](/docs/pgsql/config/cluster#备份集群)（Standby Cluster）
+物理复制拉齐过数据的目标集群，克隆速度会显著快于首次全量还原。
+
+误删数据的典型找回流程到这里只剩最后一步：在克隆集群中验证数据无误后，
+用 `pg_dump` 导出受影响的表/库，导回生产集群。全库原地回滚是最后手段，而不是第一反应。
 
 
+--------
 
-## 不善后的后果
+## 克隆善后
 
-假设您在 `pg-test` 集群上执行了 PITR 恢复，使用了另外一个集群 `pg-meta` 的数据，但没有进行善后工作。
+克隆出的新集群带着 **源集群的数据**，但备份仓库中它自己的 stanza 仍记录着 **原来的身份**（system-id）。
+pgBackRest 写入备份前会核对身份，不一致即拒绝 —— 这个保护机制防止新集群的备份污染源集群的备份历史。
 
-那么在下一次例行备份的时候，你会看到下面的错误：
+因此，确认克隆结果符合预期后，必须执行三步善后，新集群的备份链路才能恢复正常：
+
+```bash
+pb stanza-upgrade                          # 1. 升级 stanza，接纳新集群的 system-id（仅跨集群克隆需要）
+psql -c 'ALTER SYSTEM RESET archive_mode;' # 2. 恢复归档（仅当 PITR 时设置了 archive: false）
+pg restart pg-test                         #    archive_mode 为 postmaster 参数，重启生效
+pg-backup full                             # 3. 全量备份，让新集群从此刻起拥有自己的备份历史
+```
+
+跳过善后的后果是可预期的：下一次例行备份会因身份核对失败而报错，
+在此期间新集群 **没有备份保护**（如果关闭了归档，也不会产生新的 WAL 归档）：
 
 ```bash
 postgres@pg-test-1:~$ pb backup
-2025-12-27 10:20:29.336 P00   INFO: backup command begin 2.57.0: --annotation=pg_cluster=pg-test --compress-type=zst --delta --exec-id=21034-171fb30b --expire-auto --log-level-console=info --log-level-file=info --log-path=/pg/log/pgbackrest --pg1-path=/pg/data --pg1-port=5432 --repo1-block --repo1-bundle --repo1-bundle-limit=20MiB --repo1-bundle-size=128MiB --repo1-cipher-pass=<redacted> --repo1-cipher-type=aes-256-cbc --repo1-path=/pgbackrest --repo1-retention-full=14 --repo1-retention-full-type=time --repo1-s3-bucket=pgsql --repo1-s3-endpoint=sss.pigsty --repo1-s3-key=<redacted> --repo1-s3-key-secret=<redacted> --repo1-s3-region=us-east-1 --repo1-s3-uri-style=path --repo1-storage-ca-file=/etc/pki/ca.crt --repo1-storage-port=9000 --repo1-type=s3 --stanza=pg-test --start-fast
-2025-12-27 10:20:29.357 P00  ERROR: [051]: PostgreSQL version 18, system-id 7588470953413201282 do not match stanza version 18, system-id 7588470974940466058
-                                    HINT: is this the correct stanza?
-2025-12-27 10:20:29.357 P00   INFO: backup command end: aborted with exception [051]
-postgres@pg-test-1:~$
+INFO: backup command begin 2.57.0: --annotation=pg_cluster=pg-test ... --stanza=pg-test --start-fast
+ERROR: [051]: PostgreSQL version 18, system-id 7588470953413201282 do not match stanza version 18, system-id 7588470974940466058
+       HINT: is this the correct stanza?
+INFO: backup command end: aborted with exception [051]
 ```
 
-在完成 stanza 善后前，新集群的备份无法写入目标仓库；如果 PITR 时关闭了归档，也不会产生新的 WAL 归档。
 
+--------
 
+## 重建备份身份
 
-
-
-
-
-
-## 克隆一个新集群
-
-例如，假设您有一个集群 `pg-meta`，现在你想要从 `pg-meta` 克隆一个 `pg-meta2` 的新集群。
-
-您可以考虑使用 [**备份集群**](/docs/pgsql/config/cluster#备份集群) 的方式创建一个新的集群 `pg-meta2`。
-
-pgBackrest 支持增量备份/还原，因此如果您已经通过物理复制拉取了 `pg-meta` 的数据，通常增量 PITR 还原会非常快。
-
+`stanza-upgrade` 让新集群沿用原 stanza 继续写备份。如果您希望新集群拥有 **全新的备份历史**
+（例如克隆出的集群将长期独立演化），也可以选择彻底重建其备份配置 —— 声明式方式：
 
 ```bash
-
-pb stop --force
-pb stanza-delete --force
-pb start
-pb stanza-create
+./pgsql-rm.yml -t pg_backup -l pg-test -e pg_rm_backup=true   # 删除 pg-test 的 stanza 与旧备份
+./pgsql.yml    -t pg_backup -l pg-test                        # 重新配置 pgbackrest，创建全新 stanza
+pg-backup full                                                # 建立第一个恢复点
 ```
 
+或者用 [**pgbackrest 原语**](/docs/pgsql/backup/admin/#stanza-管理) 手动完成同样的事情：
 
 ```bash
-./pgsql-rm.yml -t pg_backup -l pg-test -e pg_rm_backup=true
-./pgsql.yml    -t pg_backup -l pg-test
+pb stop --force            # 暂停 pgbackrest 操作
+pb stanza-delete --force   # 删除 stanza 及其备份（危险操作，确认无误再执行）
+pb start                   # 恢复 pgbackrest 操作
+pb stanza-create           # 以当前集群身份重建 stanza
+pg-backup full             # 建立第一个恢复点
 ```
 
 
-如果您想要将 `pg-test` 集群重置为 `pg-meta` 集群在 2025 年 12 月 26 日 15:30 的状态，可以使用以下命令：
+--------
 
-```bash
-./pgsql-pitr.yml -l pg-test -e '{"pg_pitr": { "cluster": "pg-meta", "time": "2025-12-27 17:50:00+08" ,archive: true }}'
-```
+## 在线副本：备份集群
 
+克隆得到的是 **静态的时间点快照**。如果需要的是持续跟随源集群的 **在线副本**，
+应使用 [**备份集群**](/docs/pgsql/config/cluster#备份集群)（Standby Cluster，基于流复制）；
+需要"一直落后一小时"的快速反悔窗口，则使用 [**延迟集群**](/docs/pgsql/config/cluster#延迟集群)。
 
-当然，您也可以直接创建一个全新的集群，然后使用 `pgsql-pitr.yml` 剧本从 `pg-meta` 恢复数据到新集群 `pg-meta2` 并顶替新集群的数据目录。
-
-
-
-使用这种技术，您不仅可以克隆 `pg-meta` 集群的最新状态，还可以克隆到任意时间点，例如：
+三者互为补充：备份集群提供实时副本，延迟集群提供固定延迟的反悔窗口，
+PITR 克隆提供保留期内任意时刻的快照 —— 且不需要提前准备。
 
 
+--------
 
+## 恢复演练
 
+克隆是 **零风险的恢复演练**：全程不触碰生产集群，却端到端验证了备份系统的每个环节。
+建议将以下演练纳入例行运维（每季度，或每次重大变更后）：
+
+1. 选定演练目标：生产集群恢复窗口内的某个时间点；
+2. 向演练集群执行跨集群 PITR，**记录耗时** —— 这就是实测的 PITR RTO；
+3. 验证数据完整性：行数抽查、关键业务表校验、应用连通测试；
+4. 执行 [**克隆善后**](#克隆善后)，确认演练集群自身备份恢复正常（验证善后流程本身也是演练的一部分）；
+5. 记录结果：恢复耗时、发现的问题、文档与实际操作的出入。
+
+沙箱环境中使用 pgbackrest 原语手工执行恢复的完整教程，参阅 [**手工恢复**](/docs/pgsql/tutorial/pitr)；
+在同一台机器上用 XFS 快照快速 Fork 实例的进阶技巧，参阅 [**Fork 实例**](/docs/pgsql/tutorial/pg-fork)。

@@ -1,69 +1,63 @@
 ---
 title: 恢复操作
 weight: 1705
-description: 从备份恢复 PostgreSQL
+description: 执行时间点恢复：pgsql-pitr.yml 剧本、pig pitr 命令与 pig pb restore 原语，恢复目标、分步执行与完整参数参考。
 icon: fa-solid fa-rotate-left
 categories: [任务]
 ---
 
+Pigsty 提供三个层次的恢复入口，共用 [**同一套参数语义**](/docs/pgsql/backup/mechanism/#参数如何映射)，按场景选用：
 
-您可以使用预配置的 pgbackrest 在 Pigsty 中执行时间点恢复（PITR）。
+| 入口                                           | 适用场景            | 特点                              |
+|:---------------------------------------------|:----------------|:--------------------------------|
+| [**`pgsql-pitr.yml`**](#快速上手) 剧本             | 生产集群恢复          | 编排整个集群：HA 暂停、多节点、etcd 清理、恢复验证   |
+| [**`pig pitr`**](#单实例pig-pitr) 命令            | 单节点集群 / 节点本机操作  | 无需管理节点，在数据库节点上直接编排执行            |
+| [**`pig pb restore`**](#原语pig-pb-restore) 原语 | 非 Patroni 托管的实例 | pgbackrest restore 的直接封装，最精细的控制 |
+{.full-width}
 
-- [**剧本方式**](#快速上手)：使用 `pgsql-pitr.yml` 剧本自动执行 PITR
-- [**手动方式**](/docs/pgsql/tutorial/pg-fork#pg-pitr)：使用 `pg-pitr` 脚本手动执行 PITR
+手把手的沙箱演练教程请参阅 [**手工恢复**](/docs/pgsql/tutorial/pitr)；
+用恢复克隆出新集群（不影响生产的推荐姿势）请参阅 [**克隆数据库集群**](/docs/pgsql/backup/cluster/)。
+
 
 --------
 
-
 ## 快速上手
 
-如果您想将 `pg-meta` 集群回滚到之前的时间点，添加 `pg_pitr` 参数：
+要将 `pg-meta` 集群回滚到之前的时间点，声明 [**`pg_pitr`**](#pitr-参数定义) 参数并运行剧本：
 
 ```yaml
 pg-meta:
   hosts: { 10.10.10.10: { pg_seq: 1, pg_role: primary } }
   vars:
     pg_cluster: pg-meta
-    pg_pitr: { time: '2025-07-13 10:00:00+00' }  # 从最新备份恢复
+    pg_pitr: { time: '2025-07-13 10:00:00+00' }   # 恢复到该时间点
 ```
-
-然后运行 `pgsql-pitr.yml` 剧本，它将把 `pg-meta` 集群回滚到指定时间点。
 
 ```bash
 ./pgsql-pitr.yml -l pg-meta
 ```
 
+参数也可以通过命令行临时传入，两种方式等价：
 
---------
-
-## 恢复后处理
-
-Pigsty v4.4 的 `pgsql-pitr.yml` 默认会保留归档设置（`archive: true`）。如果您做探索性恢复并显式设置了 `archive: false`，恢复后需要重新启用归档并执行全量备份。
-
-```bash title="postgres @ pg-meta $"
-psql -c 'ALTER SYSTEM RESET archive_mode;'
-pg restart pg-meta  # archive_mode 是 postmaster 参数，需要重启
-pg-backup full    # 执行新的全量备份
+```bash
+./pgsql-pitr.yml -l pg-meta -e '{"pg_pitr": { "time": "2025-07-13 10:00:00+00" }}'
 ```
+
+{{% alert color="info" title="命令行传参请使用合法 JSON" %}}
+`-e` 传入的参数必须是合法 JSON：键与字符串值都要加双引号，例如 `{"pg_pitr": {"time": "...", "archive": true}}`。
+布尔值不加引号，字符串必须加 —— 引号缺失会导致参数解析失败或静默取错值。
+{{% /alert %}}
+
+剧本会依次执行：暂停 Patroni 高可用 → 停止集群进程 → 执行 pgbackrest 增量还原 → 启动重放至目标点 →
+用 `pg_controldata` 验证恢复位点 → 清理 etcd 元数据 → 重新拉起集群与高可用。
+执行过程的第一步会打印完整的恢复计划（源集群、目标、还原命令），供您最后确认。
 
 
 --------
 
 ## 恢复目标
 
-您可以在 `pg_pitr` 中指定不同类型的恢复目标，但它们是互斥的：
-
-- [`time`](https://www.postgresql.org/docs/current/runtime-config-wal.html#RECOVERY-TARGET-TIME)：恢复到哪个时间点？
-- [`name`](https://www.postgresql.org/docs/current/runtime-config-wal.html#RECOVERY-TARGET-NAME)：恢复到命名的恢复点（由 `pg_create_restore_point` 创建）
-- [`xid`](https://www.postgresql.org/docs/current/runtime-config-wal.html#RECOVERY-TARGET-XID)：恢复到特定的事务 ID（TXID/XID）
-- [`lsn`](https://www.postgresql.org/docs/current/runtime-config-wal.html#RECOVERY-TARGET-LSN)：恢复到特定的 LSN（日志序列号）点
-
-如果指定了上述任何参数，恢复 [`类型`](https://www.postgresql.org/docs/current/runtime-config-wal.html#RECOVERY-TARGET-TYPE) 会相应设置，
-否则不传递 `--type/--target`，恢复到 WAL 归档流末尾（Pigsty 内部类型为 `default`）。
-特殊的 `immediate` 类型可用于指示 pgbackrest 通过在第一个一致点停止来最小化恢复时间。
-
-
-### 目标类型
+`pg_pitr` 支持 [**六类恢复目标**](/docs/concept/pitr/mechanism/#目标恢复到哪一刻)，其中四类目标值互斥，只能指定一个：
 
 {{< tabpane persist="disabled" >}}
 {{% tab header="恢复目标类型" disabled=true /%}}
@@ -87,93 +81,67 @@ pg_pitr: { type: "immediate" }
 {{< /tab >}}
 {{< /tabpane >}}
 
+未指定任何目标时，重放全部 WAL 归档恢复到最新状态（内部类型 `default`）；
+`immediate` 类型在到达第一个一致点后立即停止，用于最快恢复出可用实例（例如验证备份）。
 
 ### 按时间恢复
 
-最常用的目标是时间点；您可以指定要恢复到的时间点：
+最常用的目标。时间应为合法的 PostgreSQL [`TIMESTAMP`](https://www.postgresql.org/docs/current/datatype-datetime.html#DATATYPE-DATETIME-INPUT-TIME-STAMPS) 格式，建议带时区：`YYYY-MM-DD HH:MM:SS+TZ`：
 
-```bash title="恢复到指定时间点"
-./pgsql-pitr.yml -l pg-meta -e '{"pg_pitr": { "time": "2025-12-27 15:50:00+00" }}'
+```bash
+./pgsql-pitr.yml -l pg-meta -e '{"pg_pitr": { "time": "2025-07-13 10:00:00+00" }}'
 ```
-
-时间应该是有效的 PostgreSQL [`TIMESTAMP`](https://www.postgresql.org/docs/current/datatype-datetime.html#DATATYPE-DATETIME-INPUT-TIME-STAMPS) 格式，建议使用 `YYYY-MM-DD HH:MM:SS+TZ`。
-
 
 ### 按名称恢复
 
-您可以使用 [`pg_create_restore_point`](https://www.postgresql.org/docs/current/functions-admin.html#id-1.5.8.34.5.5.2.2.1.1.1.1) 创建命名恢复点：
+在高危变更前用 [`pg_create_restore_point`](https://www.postgresql.org/docs/current/functions-admin.html#id-1.5.8.34.5.5.2.2.1.1.1.1) 打点，恢复时便有了无歧义的目标：
 
 ```sql
-SELECT pg_create_restore_point('shit_incoming');
+SELECT pg_create_restore_point('before_migration');
 ```
-
-然后在 PITR 中使用该命名恢复点：
 
 ```bash
-./pgsql-pitr.yml -l pg-meta -e '{"pg_pitr": { "name": "shit_incoming" }}'
+./pgsql-pitr.yml -l pg-meta -e '{"pg_pitr": { "name": "before_migration" }}'
 ```
 
+### 按事务 ID 恢复
 
-### 按 XID 恢复
+如果误删数据的事务号已知（从监控仪表盘或 CSVLOG 的 `TXID` 字段获取），
+配合 `exclusive` 精确停在该事务 **之前**，一条数据都不多丢：
 
-如果您有一个事务意外删除了某些数据，最好的恢复方式是将数据库恢复到该事务之前的状态。
-
-```bash title="恢复到某事务之前"
-./pgsql-pitr.yml -e '{"pg_pitr": { "xid": "250000", "exclusive": true }}'
+```bash
+./pgsql-pitr.yml -l pg-meta -e '{"pg_pitr": { "xid": "250000", "exclusive": true }}'
 ```
-
-您可以从监控仪表盘找到确切的事务 ID，或从 CSVLOG 中的 `TXID` 字段获取。
-
-{{% alert color="info" title="包含与排除" %}}
-目标参数默认是"包含"的，这意味着恢复会包含目标点。
-`exclusive` 标志会排除该确切目标，例如 xid 24999 将是最后一个被重放的事务。
-
-这仅适用于 `time`、`xid`、`lsn` 恢复目标，详情请参阅 [`recovery_target_inclusive`](https://www.postgresql.org/docs/current/runtime-config-wal.html#RECOVERY-TARGET-INCLUSIVE)。
-{{% /alert %}}
-
 
 ### 按 LSN 恢复
 
-PostgreSQL 使用 [LSN](https://www.postgresql.org/docs/current/datatype-pg-lsn.html)（日志序列号）来标识 WAL 记录的位置。
-您可以在很多地方找到它，比如 Pigsty 仪表盘的 PG LSN 面板。
+[LSN](https://www.postgresql.org/docs/current/datatype-pg-lsn.html)（日志序列号）标识 WAL 流中的精确位置，
+可从 Pigsty 仪表盘的 PG LSN 面板获取；需要时可以用 `timeline` 指定目标时间线（默认 `latest`）：
 
-```bash title="恢复到指定 LSN"
-./pgsql-pitr.yml -e '{"pg_pitr": { "lsn": "0/4001C80", "timeline": "1" }}'
+```bash
+./pgsql-pitr.yml -l pg-meta -e '{"pg_pitr": { "lsn": "0/4001C80", "timeline": "1" }}'
 ```
 
-要恢复到 WAL 流中的确切位置，您还可以指定 [`timeline`](https://www.postgresql.org/docs/current/runtime-config-wal.html#RECOVERY-TARGET-TIMELINE) 参数（默认为 `latest`）
+{{% alert color="info" title="包含与排除" %}}
+恢复目标默认是"包含"（inclusive）的：目标点上的事务会被重放。
+`exclusive: true` 排除目标点本身 —— 例如 `xid: 250000, exclusive: true` 时，最后被重放的是 249999 号之前已提交的事务。
+仅适用于 `time`、`xid`、`lsn` 目标，对应 PostgreSQL 的 [`recovery_target_inclusive`](https://www.postgresql.org/docs/current/runtime-config-wal.html#RECOVERY-TARGET-INCLUSIVE)。
+{{% /alert %}}
 
 
 --------
 
 ## 恢复来源
 
-- `cluster`：从哪个集群恢复？默认使用当前的 `pg_cluster`，您可以使用同一 pgbackrest 仓库中的任何其他集群
-- `repo`：覆盖备份仓库，使用与 `pgbackrest_repo` 相同的格式
-- `set`：默认使用 `latest` 备份集，但您可以通过标签指定特定的 pgbackrest 备份
+默认从本集群自己的备份恢复，三个字段可以改变恢复来源：
 
-Pigsty 将从 pgbackrest 备份仓库恢复。如果您使用集中式备份仓库（如 MinIO/S3），
-可以指定另一个 "stanza"（另一个集群的备份目录）作为恢复来源。
-
-```yaml
-pg-meta2:
-  hosts: { 10.10.10.11: { pg_seq: 1, pg_role: primary } }
-  vars:
-    pg_cluster: pg-meta2
-    pg_pitr: { cluster: pg-meta }  # 从 pg-meta 集群备份恢复
-```
-
-上述配置将标记 PITR 过程使用 `pg-meta` stanza。
-您也可以通过 CLI 参数传递 `pg_pitr` 参数：
-
-```bash title="使用 pg-meta 备份恢复 pg-meta2"
-./pgsql-pitr.yml -l pg-meta2 -e '{"pg_pitr": { "cluster": "pg-meta" }}'
-```
-
-从另一个集群 PITR 时也可以使用这些目标：
+- `cluster`：源 stanza —— 使用共享仓库中 **其他集群** 的备份恢复（[**克隆集群**](/docs/pgsql/backup/cluster/) 的基础）
+- `repo`：临时指定备份仓库定义（格式同 [**`pgbackrest_repo`**](/docs/pgsql/param#pgbackrest_repo) 的仓库条目），例如从旧仓库或异地仓库恢复
+- `set`：从指定的 [**备份标签**](/docs/pgsql/backup/mechanism/#备份链与备份标签) 开始还原（默认自动选择目标点前最近的备份集，用 `pb info` 查看可用标签）
 
 ```bash
-./pgsql-pitr.yml -l pg-meta2 -e '{"pg_pitr": { "cluster": "pg-meta", "time": "2025-07-14 08:00:00+00" }}'
+./pgsql-pitr.yml -l pg-meta2 -e '{"pg_pitr": { "cluster": "pg-meta" }}'                                  # 用 pg-meta 的备份恢复 pg-meta2
+./pgsql-pitr.yml -l pg-meta2 -e '{"pg_pitr": { "cluster": "pg-meta", "time": "2025-07-14 08:00:00+00" }}' # 并指定时间点
 ```
 
 
@@ -181,24 +149,12 @@ pg-meta2:
 
 ## 分步执行
 
-这种方式是半自动的，您将参与 PITR 过程以做出关键决策。
-
-例如，此配置将把 `pg-meta` 集群本身恢复到指定时间点：
-
-```yaml
-pg-meta:
-  hosts: { 10.10.10.10: { pg_seq: 1, pg_role: primary } }
-  vars:
-    pg_cluster: pg-meta
-    pg_pitr: { time: '2025-07-13 10:00:00+00' }  # 从最新备份恢复
-```
-
-让我们逐步执行：
+一步到位固然方便，但在生产事故中，您可能希望亲手控制每个阶段。剧本的任务树支持用 tags 三步走：
 
 ```bash
-./pgsql-pitr.yml -l pg-meta -t down     # 暂停 patroni 高可用
-./pgsql-pitr.yml -l pg-meta -t pitr     # 运行 pitr 过程
-./pgsql-pitr.yml -l pg-meta -t up       # 清理 DCS，启动 postgres/patroni 并恢复高可用
+./pgsql-pitr.yml -l pg-meta -t down     # 第一步：暂停 HA，停止 patroni 与 postgres
+./pgsql-pitr.yml -l pg-meta -t pitr     # 第二步：执行还原与重放，验证恢复位点
+./pgsql-pitr.yml -l pg-meta -t up       # 第三步：清理 etcd，拉起集群，恢复 HA
 ```
 
 ```yaml
@@ -220,32 +176,111 @@ pg-meta:
 #   - resume           : # 恢复 patroni 自动故障切换
 ```
 
+每步之间您可以检查状态：`down` 之后确认进程已停，`pitr` 之后用 `pg_controldata /pg/data` 核对恢复位点、
+连库抽查数据，确认无误再 `up`。如果发现恢复目标选错了，在 `up` 之前调整 `pg_pitr` 重跑 `pitr` 阶段即可。
+
 
 --------
 
 ## PITR 参数定义
 
-`pg_pitr` 参数还有更多可用选项：
+`pg_pitr` 的完整字段如下，除恢复目标外均有合理默认值：
 
 ```yaml
-pg_pitr:                           # 定义 PITR 任务
-    cluster: "some_pg_cls_name"    # 源集群名称
-    type: default                   # 恢复目标类型：time, xid, name, lsn, immediate, default
-    time: "2025-01-01 10:00:00+00" # 恢复目标：时间，与 xid, name, lsn 互斥
-    name: "some_restore_point"     # 恢复目标：命名恢复点，与 time, xid, lsn 互斥
-    xid:  "100000"                 # 恢复目标：事务 ID，与 time, name, lsn 互斥
-    lsn:  "0/3000000"              # 恢复目标：日志序列号，与 time, name, xid 互斥
-    timeline: latest               # 目标时间线，可以是整数，默认为 latest
-    exclusive: false               # 是否排除目标点，默认为 false
-    action: pause                  # 恢复后操作：pause, promote, shutdown
-    archive: true                  # 是否保留归档设置？默认为 true
-    db_exclude: [ template0, template1 ]
-    db_include: []
-    link_map:
-      pg_wal: '/data/wal'
-      pg_xact: '/data/pg_xact'
-    process: 4                     # 并行恢复进程数，默认使用 node_cpu
-    repo: {}                       # 恢复来源仓库
-    data: /pg/data                 # 数据恢复位置
-    port: 5432                     # 恢复实例的监听端口
+pg_pitr:                         # 定义 PITR 恢复任务
+  cluster: pg-meta               # 恢复来源集群（源 stanza），默认为本集群 pg_cluster
+  type: default                  # 目标类型：default | time | xid | name | lsn | immediate
+  time: "2025-07-13 10:00:00+00" # 恢复目标：时间点（与 xid / name / lsn 互斥）
+  name: "some_restore_point"     # 恢复目标：命名恢复点（与 time / xid / lsn 互斥）
+  xid: "250000"                  # 恢复目标：事务 ID（与 time / name / lsn 互斥）
+  lsn: "0/4001C80"               # 恢复目标：日志序列号（与 time / xid / name 互斥）
+  exclusive: false               # 排除目标点本身，默认包含（仅 time / xid / lsn 有效）
+  timeline: latest               # 目标时间线，可为整数，默认 latest
+  set: latest                    # 从哪个备份标签开始还原，默认自动选择
+  action: promote                # 到达目标后动作：pause / promote / shutdown
+                                 # 未指定时按角色决定：主库 promote，从库 pause
+  archive: true                  # 保留原归档配置；探索性恢复设为 false（archive-mode=off）
+  backup: false                  # 恢复前将原数据目录搬到 /pg/data-backup 备作后悔药
+  db_exclude: [ template0, template1 ]  # 排除的数据库（选择性恢复）
+  db_include: []                 # 只恢复指定数据库（选择性恢复）
+  link_map:                      # 目录软链接映射（表空间 / WAL 分盘）
+    pg_wal: '/data/wal'
+    pg_xact: '/data/pg_xact'
+  process: 4                     # 恢复并行进程数，默认为节点 CPU 核数
+  repo: {}                       # 临时指定恢复来源仓库（格式同 pgbackrest_repo 条目）
+  data: /pg/data                 # 恢复到的数据目录
+  port: 5432                     # 恢复实例的监听端口
 ```
+
+每个字段与 pgbackrest 选项的对应关系，见 [**参数映射表**](/docs/pgsql/backup/mechanism/#参数如何映射)。
+
+
+--------
+
+## 单实例：pig pitr
+
+在数据库节点上，[**`pig pitr`**](/docs/pig/pitr) 无需 Ansible 环境即可完成同等的恢复编排：
+预检（校验目标、stanza 与备份存在性）→ 停止 Patroni 与 PostgreSQL → 执行还原 → 拉起实例 → 恢复后指引。
+
+```bash
+pig pitr -t "2025-07-13 10:00:00+00"    # 恢复到时间点
+pig pitr --xid 250000 -X                # 恢复到事务 250000 之前（-X = --exclusive）
+pig pitr --name before_migration        # 恢复到命名还原点
+pig pitr -d                             # 恢复到 WAL 归档末尾（--default）
+pig pitr -I --no-restart                # 恢复到一致点即停，不启动实例（--immediate）
+pig pitr -t "..." --plan                # 只显示执行计划，不实际执行
+```
+
+常用选项：`-b/--set` 指定备份集，`-T/--target-timeline` 指定时间线，`--target-action` 指定到达目标后的动作，
+`-D/--data` 恢复到其他数据目录（此时必须配合 `--no-restart`）。
+默认只用安全的 fast 模式停库，失败即中止 —— 除非显式给出 `--force-stop`，才允许升级为强制停库。
+完整选项参阅 [**pig pitr 命令手册**](/docs/pig/pitr)。
+
+
+--------
+
+## 原语：pig pb restore
+
+对于 **不由 Patroni 托管** 的实例（或已明确停管的场景），可以使用最底层的恢复原语 ——
+它是 [**`pgbackrest restore`**](/docs/pgbackrest/command/restore) 的直接封装，自动处理 stanza、DBSU 与时间格式，
+执行前显示恢复计划并要求确认：
+
+```bash
+pig pb restore --time "2025-07-13 10:00"     # 时间可省略时区与秒，自动按本地时区规范化
+pig pb restore --set 20250715-013657F        # 从指定备份集恢复
+pig pb restore -d                            # 恢复到归档末尾
+```
+
+两道内置的安全边界值得了解：
+
+- **Patroni 托管实例会被硬拒绝**：若 Patroni 服务活跃且目标是其托管的数据目录，`pig pb restore` 直接报错退出 ——
+  因为 Patroni 会立刻把恢复到一半的实例重新拉起。托管实例请使用 `pig pitr` 或 `pgsql-pitr.yml`。
+- **PostgreSQL 必须已停止**：实例仍在运行时拒绝执行。
+
+`--` 之后可透传原生 pgbackrest 选项（如 `--tablespace-map`、`--link-all`），
+但恢复目标、stanza、仓库等关键选项已被封装接管，不允许透传覆盖。详见 [**pig pb 命令手册**](/docs/pig/pb)。
+
+
+--------
+
+## 恢复后处理
+
+恢复完成后，剧本已自动验证恢复位点并重建高可用，但仍有三件事需要确认：
+
+1. **核对数据**：恢复位点（LSN / 时间线 / 事务号）已由剧本用 `pg_controldata` 打印，
+   业务数据是否正确只有您能判断 —— 提升开启新时间线之前，这是最后的检查机会。
+2. **重建备份**：如果是从其他集群克隆恢复，需要执行 [**stanza 善后**](/docs/pgsql/backup/cluster/#克隆善后)；
+   无论何种恢复，都建议尽快执行一次全量备份，在新时间线上重建恢复起点：
+
+   ```bash
+   pg-backup full
+   ```
+
+3. **恢复归档**：探索性恢复若设置了 `archive: false`，归档已被关闭，验证完成后必须恢复
+   （`archive_mode` 是 postmaster 参数，需要重启生效）：
+
+   ```bash
+   psql -c 'ALTER SYSTEM RESET archive_mode;'
+   pg restart pg-meta   # 重启集群使归档配置生效
+   pg-backup full       # 执行新的全量备份
+   ```

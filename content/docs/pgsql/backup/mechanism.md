@@ -1,28 +1,110 @@
 ---
 title: 备份机制
-weight: 1702
-description: 备份脚本、定时任务、备份仓库与基础设施
+weight: 1701
+description: pgBackRest 的概念体系（stanza、仓库、备份链、保留策略、时间线）与 Pigsty 封装层的参数映射：理解每条命令背后发生了什么。
 icon: fa-solid fa-gears
-categories: [任务，概念]
+categories: [任务]
 ---
 
-
-备份可以通过内置 [脚本](#脚本) 调用，使用 [`pg_crontab`](/docs/pgsql/param#pg_crontab) 定时执行，
-由 [pgbackrest](https://pgbackrest.org/) 管理，存储在备份仓库中，
-仓库可以是本地磁盘文件系统或 MinIO / S3，并支持不同的 [保留](/docs/pgsql/backup/repository#仓库保留策略) 策略。
+Pigsty 的备份恢复功能，最终都会落实为 [**pgBackRest**](/docs/pgbackrest/) 命令的执行。
+所以要真正掌握这套系统，需要理解两件事：**pgBackRest 本身的概念体系**（stanza、仓库、备份链、保留、时间线），
+以及 **Pigsty 各层封装如何映射到它**（参数如何变成命令行选项）。本页依次讲清这两部分。
 
 
 --------
 
-## 脚本
+## pgBackRest 核心概念
 
-您可以使用 [`pg_dbsu`](/docs/pgsql/param#pg_dbsu) 用户（默认为 `postgres`）执行 `pgbackrest` 命令创建备份：
+### Stanza：集群的备份身份
+
+**Stanza**（节）是 pgBackRest 中一套 PostgreSQL 集群备份配置的名称，也是仓库内隔离不同集群的命名空间。
+Pigsty 将 stanza 直接映射为集群名 [**`pg_cluster`**](/docs/pgsql/param#pg_cluster)：
+集群 `pg-meta` 的备份就存储在仓库的 `backup/pg-meta/` 与 `archive/pg-meta/` 目录下，
+多套集群可以安全共享同一个仓库。
+
+Stanza 记录着源集群的 system-id 与主版本号，写入备份前会核对身份 —— 这正是
+[**克隆集群**](/docs/pgsql/backup/cluster) 后需要 `stanza-upgrade` 善后的原因。
+Stanza 由 [**`stanza-create`**](/docs/pgbackrest/command/stanza-create) 创建（Pigsty 在集群初始化时自动完成），
+版本升级后用 [**`stanza-upgrade`**](/docs/pgbackrest/command/stanza-upgrade) 更新。
+
+### 仓库：备份存放在哪里
+
+**仓库**（Repository）是备份与 WAL 归档的存储后端，在配置中以 `repo1-*` 系列选项定义：
+`repo1-type` 决定类型（POSIX 文件系统、S3、Azure、GCS、SFTP），`repo1-path` 决定路径，
+`repo1-cipher-*` 决定加密，`repo1-retention-*` 决定保留策略。
+Pigsty 通过 [**`pgbackrest_repo`**](/docs/pgsql/param#pgbackrest_repo) 参数生成这些配置，详见 [**备份仓库**](/docs/pgsql/backup/repository)。
+
+### 备份链与备份标签
+
+pgBackRest 支持三种备份类型，后两种依赖前面的备份构成 **备份链**：
+
+| 类型         | 内容                  | 标签后缀 |
+|:-----------|:--------------------|:----:|
+| 全量备份（full） | 完整复制数据库集群           | `F`  |
+| 差异备份（diff） | 相对最近一次 **全量** 的变化   | `D`  |
+| 增量备份（incr） | 相对最近一次 **任意备份** 的变化 | `I`  |
+{.full-width}
+
+每个备份都有唯一的 **备份标签**（label），命名规则本身就描述了备份链：
+`20250715-013657F` 是一个全量备份，`20250715-013657F_20250715-013724D` 是基于它的差异备份，
+`20250715-013657F_20250715-013730I` 是增量备份 —— 下划线前的部分标识它所依附的全量备份。
+恢复时用 `--set` 指定从哪个备份集开始还原，默认自动选择目标时间点前最近的一个。
+
+### 保留策略：仓库如何不被撑爆
+
+**保留策略**（Retention）决定旧备份何时被清除。`repo1-retention-full` 配合
+`repo1-retention-full-type`（`count` 按份数 / `time` 按天数）控制全量备份的保留；
+全量备份过期时，依附它的差异/增量备份与对应的 WAL 归档一并清除。
+Pigsty 默认启用 `expire-auto`，每次备份完成后自动执行过期清理，也可用
+[**`expire`**](/docs/pgbackrest/command/expire) 命令手动触发。
+
+### WAL 归档：连续的历史
+
+PostgreSQL 的 `archive_command` 在每个 WAL 段写满（或 `archive_timeout` 超时）后触发，
+Pigsty 将其配置为 [**`archive-push`**](/docs/pgbackrest/command/archive-push)，把 WAL 推入仓库；
+恢复时则由 `restore_command` 调用 [**`archive-get`**](/docs/pgbackrest/command/archive-get) 按需拉取。
+Pigsty 启用了异步归档（`archive-async=y`），经由 `/pg/spool` 假脱机目录批量推送，避免归档拖慢主库。
+
+### 时间线：分叉的历史
+
+每次恢复提升（或故障切换）都会开启一条新的 **时间线**（Timeline），旧时间线的 WAL 仍保留在仓库中。
+恢复时可用 `--target-timeline` 指定沿哪条时间线重放（默认 `latest`），
+这使得"恢复错了再恢复一次"成为可能。完整心智模型见概念层 [**工作原理**](/docs/concept/pitr/mechanism/#时间线)。
+
+### 恢复机制：restore 命令做了什么
+
+理解 [**`restore`**](/docs/pgbackrest/command/restore) 命令的行为，就理解了 PITR 的执行过程。它做两件事：
+
+1. **重建数据目录**：从备份集还原数据文件。带 `--delta` 选项（Pigsty 默认启用）时执行增量还原 ——
+   校验现有文件，只重写与备份不一致的部分，大幅缩短大库的还原时间。
+2. **写入恢复配置**：生成 `recovery.signal` 标记与恢复参数（`restore_command`、`recovery_target_*`），
+   使 PostgreSQL 下次启动时进入恢复模式，从仓库拉取 WAL 重放至目标点。
+
+因此 `restore` 命令返回成功只是完成了一半：真正的恢复发生在 PostgreSQL 启动之后的 WAL 重放阶段。
+重放到达目标后的行为由 `--target-action` 决定：`pause` 暂停等待检查、`promote` 提升开启新时间线、`shutdown` 停机。
+
+恢复目标的参数组合是固定句式：`--type` 指定目标类型，`--target` 给出目标值，
+可选的 `--target-exclusive` 控制边界、`--target-timeline` 选择时间线、`--set` 指定起点备份：
+
+```bash
+pgbackrest --stanza=pg-meta restore                                        # 恢复到 WAL 归档末尾
+pgbackrest --stanza=pg-meta --type=immediate restore                       # 恢复到最近一致点
+pgbackrest --stanza=pg-meta --type=time --target='2025-07-13 10:00:00+00' restore
+pgbackrest --stanza=pg-meta --type=xid  --target='250000' --target-exclusive restore
+pgbackrest --stanza=pg-meta --type=name --target='my-restore-point' restore
+pgbackrest --stanza=pg-meta --type=lsn  --target='0/4001C80' --target-action=promote restore
+```
+
+
+--------
+
+## 实际观察
+
+您可以使用 [**`pg_dbsu`**](/docs/pgsql/param#pg_dbsu) 用户（默认 `postgres`）直接执行 pgbackrest 命令，
+观察上述概念的实际形态 —— 注意备份标签的命名、备份大小的差异，以及 `info` 输出中的备份链引用关系：
 
 {{< tabpane persist="disabled" >}}
 {{% tab header="备份命令" disabled=true /%}}
-{{< tab header="backup" lang="bash" >}}
-pgbackrest --stanza=pg-meta --type=full backup   # 为集群 pg-meta 创建全量备份
-{{< /tab >}}
 {{< tab header="full" lang="bash" >}}
 $ pgbackrest --stanza=pg-meta --type=full backup
 2025-07-15 01:36:57.007 P00   INFO: backup command begin 2.54.2: --annotation=pg_cluster=pg-meta ...
@@ -77,206 +159,140 @@ stanza: pg-meta
 {{< /tab >}}
 {{< /tabpane >}}
 
-这里的 `stanza` 是数据库集群名称：[`pg_cluster`](/docs/pgsql/param#pg_cluster)，在默认配置中为 `pg-meta`。
 
-Pigsty 提供了 `pb` 别名和 `pg-backup` 包装脚本，会自动填充当前集群名称作为 stanza：
+--------
 
-```bash title="别名"
+## Pigsty 的封装层次
+
+在原生命令之上，Pigsty 提供了逐层升高的封装，每一层都只是对下一层的参数化调用，没有黑魔法：
+
+| 层次   | 接口                                                   | 它实际做什么                                                                       |
+|:-----|:-----------------------------------------------------|:-----------------------------------------------------------------------------|
+| 集群编排 | `pg_pitr` + `pgsql-pitr.yml`                         | 编排整个集群的恢复：暂停 HA → 停库 → 渲染配置并调用 `pgbackrest restore` → 重放验证 → 清理 etcd → 拉起 HA |
+| 实例编排 | [**`pig pitr`**](/docs/pig/pitr)                     | 单节点上的同等编排：预检 → 停 Patroni/PG → 调用 `pgbackrest restore` → 拉起 → 指引              |
+| 命令原语 | [**`pig pb`**](/docs/pig/pb) / `pb` 别名 / `pg-backup` | 自动填充 `--stanza` 与 DBSU 身份，转发给 pgbackrest 对应子命令                               |
+| 底层引擎 | [**`pgbackrest`**](/docs/pgbackrest/)                | 读取 `/etc/pgbackrest/pgbackrest.conf`，实际执行备份/归档/恢复                            |
+{.full-width}
+
+### 命令原语层
+
+`pb` 是登录 shell 内置的别名函数：从配置文件解析出 stanza 后转发，让您少敲一个参数：
+
+```bash
 function pb() {
     local stanza=$(grep -o '\[[^][]*]' /etc/pgbackrest/pgbackrest.conf | head -n1 | sed 's/.*\[\([^]]*\)].*/\1/')
     pgbackrest --stanza=$stanza $@
 }
-pb ...    # pgbackrest --stanza=pg-meta ...
-pb info   # pgbackrest --stanza=pg-meta info
-pb backup # pgbackrest --stanza=pg-meta backup
+pb info     # = pgbackrest --stanza=pg-meta info
+pb backup   # = pgbackrest --stanza=pg-meta backup
 ```
 
-```bash title="脚本"
-pg-backup full   # 执行全量备份         = pgbackrest --stanza=pg-meta --type=full backup
-pg-backup incr   # 执行增量备份         = pgbackrest --stanza=pg-meta --type=incr backup
-pg-backup diff   # 执行差异备份         = pgbackrest --stanza=pg-meta --type=diff backup
+`pg-backup` 脚本在此基础上增加了 **角色检查**（只在主库执行，从库直接退出），供 crontab 安全调用：
+
+```bash
+pg-backup full   # = pgbackrest --stanza=pg-meta --type=full backup（仅主库执行）
+pg-backup diff   # = pgbackrest --stanza=pg-meta --type=diff backup
+pg-backup incr   # = pgbackrest --stanza=pg-meta --type=incr backup（默认，无全量时自动升级为全量）
 ```
+
+[**`pig pb`**](/docs/pig/pb) 提供了更完善的封装：自动检测 stanza、自动以 DBSU 身份执行（root 下 `su`、普通用户 `sudo`）、
+备份前检查主库角色、恢复前显示执行计划并要求确认。完整子命令表见 [**管理命令**](/docs/pgsql/backup/admin/#命令一览)。
+
+### 参数如何映射
+
+Pigsty 恢复接口的每个参数，都对应一个 pgbackrest 选项 —— 三层接口共用同一套语义：
+
+| `pg_pitr` 字段                       | `pig pitr` 选项                     | pgbackrest 选项                   | 含义                               |
+|:-----------------------------------|:----------------------------------|:--------------------------------|:---------------------------------|
+| `cluster`                          | `--stanza`                        | `--stanza`                      | 从哪个集群的备份恢复（源 stanza）             |
+| `type` + `time`/`xid`/`lsn`/`name` | `--time`/`--xid`/`--lsn`/`--name` | `--type` + `--target`           | 恢复目标                             |
+| （type: default）                    | `--default`                       | 不传 `--type`/`--target`          | 重放到 WAL 归档末尾                     |
+| （type: immediate）                  | `--immediate`                     | `--type=immediate`              | 恢复到最近一致点                         |
+| `exclusive`                        | `--exclusive` / `-X`              | `--target-exclusive`            | 停在目标之前（排除目标点）                    |
+| `action`                           | `--target-action`                 | `--target-action`               | 到达目标后：pause / promote / shutdown |
+| `timeline`                         | `--target-timeline` / `-T`        | `--target-timeline`             | 目标时间线，默认 latest                  |
+| `set`                              | `--set` / `-b`                    | `--set`                         | 从哪个备份集开始还原                       |
+| `db_include` / `db_exclude`        | —                                 | `--db-include` / `--db-exclude` | 选择性恢复部分数据库                       |
+| `link_map`                         | —                                 | `--link-map`                    | 表空间/目录软链接映射                      |
+| `process`                          | —                                 | `process-max`                   | 恢复并行进程数                          |
+| `data`                             | `--data` / `-D`                   | `--pg1-path`                    | 恢复到哪个数据目录                        |
+| `repo`                             | `--repo`                          | `repo1-*`（渲染临时配置）               | 覆盖备份仓库定义                         |
+{.full-width}
+
+### 配置如何渲染
+
+[**`pgbackrest_repo`**](/docs/pgsql/param#pgbackrest_repo) 中被 [**`pgbackrest_method`**](/docs/pgsql/param#pgbackrest_method)
+选中的仓库定义，会按简单规则渲染进 `/etc/pgbackrest/pgbackrest.conf`：
+键名的下划线替换为连字符，加上 `repo1-` 前缀 —— 因此 [**pgBackRest 支持的任何配置项**](/docs/pgbackrest/configuration)
+都可以直接写入参数：
+
+```yaml
+pgbackrest_repo:
+  minio:
+    type: s3                  # ----> repo1-type=s3
+    s3_endpoint: sss.pigsty   # ----> repo1-s3-endpoint=sss.pigsty
+    cipher_type: aes-256-cbc  # ----> repo1-cipher-type=aes-256-cbc
+    retention_full: 14        # ----> repo1-retention-full=14
+```
+
+执行 PITR 时，Pigsty 会另行渲染一份临时配置 `/pg/conf/pitr.conf`（避免污染常规配置），
+恢复期间的 PostgreSQL 日志写入 `/pg/tmp/recovery.log`。
 
 
 --------
 
 ## 定时备份
 
-Pigsty 利用 Linux crontab 来调度备份任务。您可以用它定义备份策略。
-
-例如，大多数单节点配置模板都有以下用于备份的 [`pg_crontab`](/docs/pgsql/param#pg_crontab)：
+Pigsty 使用 Linux crontab 调度备份任务：[**`pg_crontab`**](/docs/pgsql/param#pg_crontab) 参数中的条目
+会写入 `postgres` 用户的 crontab。因为 `pg-backup` 自带角色检查，同一份 crontab 可以安全地下发到集群所有节点 ——
+故障切换后新主库的定时备份自动生效。
 
 ```yaml title="每天凌晨1点全量备份"
 pg_crontab: [ '00 01 * * * /pg/bin/pg-backup full' ]
 ```
 
-您可以使用 crontab 和 `pg-backup` 脚本设计更复杂的备份策略，例如：
-
-```yaml title="周一全量备份，工作日增量备份"
-pg_crontab:  # 周一凌晨1点全量备份，工作日增量备份
+```yaml title="周一全量备份，其余每日增量"
+pg_crontab:
   - '00 01 * * 1 /pg/bin/pg-backup full'
   - '00 01 * * 2,3,4,5,6,7 /pg/bin/pg-backup'
 ```
 
-要应用 crontab 变更，使用 [`pgsql.yml`](/docs/pgsql/playbook/#pgsqlyml) 更新数据库超级用户的 crontab：
+修改后用剧本应用变更：
 
-```bash title="应用 crontab"
-./pgsql.yml -t pg_crontab -l pg-meta    # 将 crontab 变更应用到 pg-meta 组
+```bash
+./pgsql.yml -t pg_crontab -l pg-meta    # 更新 pg-meta 集群的 crontab
 ```
+
+如何选择备份频率与保留策略，请参阅 [**备份策略**](/docs/pgsql/backup/policy)。
 
 
 --------
 
-## pgbackrest
+## 部署细节
 
-以下是 Pigsty 对 pgbackrest 的配置细节：
+pgBackRest 组件在 [**`pgsql.yml`**](/docs/pgsql/playbook/#pgsqlyml) 剧本中完成安装与配置：
 
-- pgbackrest 备份工具默认已启用并配置（[`pgbackrest_enabled`](/docs/pgsql/param/#pgbackrest_enabled)）
-- 在 [`pgsql.yml`](/docs/pgsql/playbook/#pgsqlyml) 剧本的 `pg_install` 任务中安装，定义在 [`pg_packages`](/docs/pgsql/param/#pg_packages)
-- 在 [`pgsql.yml`](/docs/pgsql/playbook/#pgsqlyml) 剧本的 `pg_backup` 任务中配置，参见 [参数：PG_BACKUP](/docs/pgsql/param/#pg_backup)
-- 在 `pgbackrest_init` 任务中初始化备份仓库，如果仓库已存在会失败（错误可忽略）
-- 在 `pgbackrest_backup` 任务中创建初始备份，由 [`pgbackrest_init_backup`](/docs/pgsql/param/#pgbackrest_init_backup) 控制
+- 随 [**`pg_packages`**](/docs/pgsql/param#pg_packages) 中的 `pgsql-common` 组安装，二进制位于 `/usr/bin/pgbackrest`
+- `pg_backup` 子任务负责渲染配置、创建 stanza；由 [**`pgbackrest_enabled`**](/docs/pgsql/param#pgbackrest_enabled) 控制（默认启用）
+- 集群初始化后自动执行一次 **初始全量备份**，留下 `/etc/pgbackrest/initial.done` 标记防止重复；
+  由 [**`pgbackrest_init_backup`**](/docs/pgsql/param#pgbackrest_init_backup) 控制
 
-### 文件层次结构
+### 文件层次
 
-- bin：`/usr/bin/pgbackrest`，来自 PGDG 的 `pgbackrest` 包，在组别名 `pgsql-common` 中。
-- conf：`/etc/pgbackrest`，主配置文件是 [`/etc/pgbackrest/pgbackrest.conf`](https://github.com/pgsty/pigsty/blob/main/roles/pgsql/templates/pgbackrest.conf)。
-- logs：`/pg/log/pgbackrest/*`，由 [`pgbackrest_log_dir`](/docs/pgsql/param/#pgbackrest_log_dir) 控制
-- tmp：`/pg/spool` 用作 pgbackrest 的临时 spool 目录
-- data：`/pg/backup` 用于存储数据（当选择默认的 `local` 文件系统备份仓库时）
-
-此外，在 [PITR 恢复](/docs/pgsql/backup/restore) 过程中，Pigsty 会创建临时的 `/pg/conf/pitr.conf` pgbackrest 配置文件，
-并将 postgres 恢复日志写入 `/pg/tmp/recovery.log` 文件。
+| 路径                                | 用途                                                                          |
+|:----------------------------------|:----------------------------------------------------------------------------|
+| `/usr/bin/pgbackrest`             | 二进制，来自 PGDG 仓库的 `pgbackrest` 包                                              |
+| `/etc/pgbackrest/pgbackrest.conf` | 主配置文件（stanza + 仓库定义）                                                        |
+| `/pg/backup`                      | 本地仓库数据目录（`local` 仓库时使用）                                                     |
+| `/pg/spool`                       | 异步归档的假脱机目录                                                                  |
+| `/pg/log/pgbackrest/`             | 备份/归档/恢复日志，[**`pgbackrest_log_dir`**](/docs/pgsql/param#pgbackrest_log_dir) |
+| `/pg/conf/pitr.conf`              | PITR 过程中的临时 pgbackrest 配置                                                   |
+| `/pg/tmp/recovery.log`            | PITR 过程中的 PostgreSQL 恢复日志                                                   |
+{.full-width}
 
 ### 监控
 
-有一个 `pgbackrest_exporter` 服务运行在 [`pgbackrest_exporter_port`](/docs/pgsql/param/#pgbackrest_exporter_port)（`9854`）端口上，用于导出 pgbackrest 指标。
-您可以通过 [`pgbackrest_exporter_options`](/docs/pgsql/param/#pgbackrest_exporter_options) 自定义它，
-或将 [`pgbackrest_exporter_enabled`](/docs/pgsql/param/#pgbackrest_exporter_enabled) 设置为 `false` 来禁用它。
-
-### 初始备份
-
-当创建 postgres 集群时，Pigsty 会自动创建初始备份。
-由于新集群几乎为空，这是一个很小的备份。
-它会留下一个 `/etc/pgbackrest/initial.done` 标记文件，以避免重复创建初始备份。
-如果不需要初始备份，请将 [`pgbackrest_init_backup`](/docs/pgsql/param/#pgbackrest_init_backup) 设置为 `false`。
-
-
---------
-
-## 管理
-
-### 启用备份
-
-如果数据库集群创建时 [`pgbackrest_enabled`](/docs/pgsql/param/#pgbackrest_enabled) 设置为 `true`，备份将自动启用。
-
-如果创建时该值为 `false`，您可以使用以下命令启用 pgbackrest 组件：
-
-```bash
-./pgsql.yml -t pg_backup    # 运行 pgbackrest 子任务
-```
-
-### 删除备份
-
-当移除主实例（[`pg_role`](/docs/pgsql/param/#pg_role) = `primary`）时，Pigsty 会删除 pgbackrest 备份 stanza。
-
-```bash
-./pgsql-rm.yml
-./pgsql-rm.yml -e pg_rm_backup=false   # 保留备份
-./pgsql-rm.yml -t pg_backup            # 仅删除备份
-```
-
-使用 `pg_backup` 子任务仅删除备份，使用 [`pg_rm_backup`](/docs/pgsql/param/#pg_rm_backup) 参数（设为 `false`）保留备份。
-
-如果您的备份仓库被**锁定**（例如 S3 / MinIO 有锁定选项），此操作将失败。
-
-{{% alert color="warning" title="备份删除" %}}
-删除备份可能导致永久性数据丢失，这是一个危险操作，请务必谨慎。
-{{% /alert %}}
-
-
-### 列出备份
-
-此命令将列出 pgbackrest 仓库中的所有备份（所有集群共享）
-
-```bash
-pgbackrest info
-````
-
-### 手动备份
-
-Pigsty 提供了内置脚本 `/pg/bin/pg-backup`，封装了 `pgbackrest` 备份命令。
-
-```bash
-pg-backup        # 执行增量备份
-pg-backup full   # 执行全量备份
-pg-backup incr   # 执行增量备份
-pg-backup diff   # 执行差异备份
-```
-
-### 基础备份
-
-Pigsty 提供了一个替代备份脚本 `/pg/bin/pg-basebackup`，它不依赖 `pgbackrest`，直接提供数据库集群的物理副本。
-默认备份目录为 `/pg/backup`。
-
-{{< tabpane persist="disabled" >}}
-{{% tab header="pg-basebackup" disabled=true /%}}
-{{< tab header="help" lang="bash" >}}
-NAME
-  pg-basebackup  -- make base backup from PostgreSQL instance
-
-SYNOPSIS
-  pg-basebackup -sdfeukr
-  pg-basebackup --src postgres:/// --dst . --file backup.tar.lz4
-
-DESCRIPTION
--s, --src, --url     备份源 URL，可选，默认为 "postgres:///"，如需密码应在 url、ENV 或 .pgpass 中提供
--d, --dst, --dir     备份文件存放位置，默认为 "/pg/backup"
--f, --file           覆盖默认备份文件名，"backup_${tag}_${date}.tar.lz4"
--r, --remove         删除 n 分钟前的 .lz4 文件，默认 1200（20小时）
--t, --tag            备份文件标签，未设置时使用目标集群名或本地 IP 地址，也用于默认文件名
--k, --key            指定 --encrypt 时的加密密钥，默认密钥为 ${tag}
--u, --upload         上传备份文件到云存储（需自行实现）
--e, --encryption     使用 OpenSSL RC4 加密，未指定密钥时使用 tag 作为密钥
--h, --help           打印此帮助信息
-{{< /tab >}}
-{{< tab header="backup" lang="bash" >}}
-postgres@pg-meta-1:~$ pg-basebackup
-[2025-07-13 06:16:05][INFO] ================================================================
-[2025-07-13 06:16:05][INFO] [INIT] pg-basebackup begin, checking parameters
-[2025-07-13 06:16:05][DEBUG] [INIT] filename  (-f)    :   backup_pg-meta_20250713.tar.lz4
-[2025-07-13 06:16:05][DEBUG] [INIT] src       (-s)    :   postgres:///
-[2025-07-13 06:16:05][DEBUG] [INIT] dst       (-d)    :   /pg/backup
-[2025-07-13 06:16:05][INFO] [LOCK] lock acquired success on /tmp/backup.lock, pid=107417
-[2025-07-13 06:16:05][INFO] [BKUP] backup begin, from postgres:/// to /pg/backup/backup_pg-meta_20250713.tar.lz4
-pg_basebackup: initiating base backup, waiting for checkpoint to complete
-pg_basebackup: checkpoint completed
-pg_basebackup: write-ahead log start point: 0/7000028 on timeline 1
-pg_basebackup: write-ahead log end point: 0/7000FD8
-pg_basebackup: syncing data to disk ...
-pg_basebackup: base backup completed
-[2025-07-13 06:16:06][INFO] [BKUP] backup complete!
-[2025-07-13 06:16:06][INFO] [DONE] backup procedure complete!
-[2025-07-13 06:16:06][INFO] ================================================================
-{{< /tab >}}
-{{< /tabpane >}}
-
-备份使用 `lz4` 压缩。您可以使用以下命令解压并提取 tarball：
-
-```bash
-mkdir -p /tmp/data   # 将备份提取到此目录
-cat /pg/backup/backup_pg-meta_20250713.tar.lz4 | unlz4 -d -c | tar -xC /tmp/data
-```
-
-### 逻辑备份
-
-您也可以使用 `pg_dump` 命令执行逻辑备份。
-
-逻辑备份不能用于 PITR（时间点恢复），但对于在不同主版本之间迁移数据或实现灵活的数据导出逻辑非常有用。
-
-
-### 从仓库引导
-
-假设您有一个现有集群 `pg-meta`，想要将其**克隆**为 `pg-meta2`：
-
-您需要创建新的 `pg-meta2` 集群分支，然后在其上运行 `pitr`。
+每个节点运行 `pgbackrest_exporter` 服务（端口 [**`pgbackrest_exporter_port`**](/docs/pgsql/param#pgbackrest_exporter_port)：`9854`），
+将备份状态导出为监控指标（参见 [**pgBackRest 监控指标**](/docs/pgbackrest/metric)）。
+可通过 [**`pgbackrest_exporter_options`**](/docs/pgsql/param#pgbackrest_exporter_options) 定制，
+或将 [**`pgbackrest_exporter_enabled`**](/docs/pgsql/param#pgbackrest_exporter_enabled) 设为 `false` 禁用。
