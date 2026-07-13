@@ -55,7 +55,7 @@ curl -fsSL https://repo.pigsty.cc/get | bash; cd ~/pigsty
 | Claude 监控     | [`http://10.10.10.10/ui/d/claude-code`](http://10.10.10.10/ui/d/claude-code) |
 {.full-width}
 
-> 提示，如果你在公网云服务器上部署，最好看一眼 [**安全建议**](/docs/setup/security)，把密码改了（`configure -g` 即可），[**防火墙打开**](/docs/node/param#node_firewall_mode)。
+> 若部署在公网云服务器上，请先阅读 [**安全建议**](/docs/setup/security)：运行 `configure -g` 后继续核对未覆盖的凭据，并启用 [**防火墙**](/docs/node/param#node_firewall_mode)。
 
 
 

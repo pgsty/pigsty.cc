@@ -182,7 +182,7 @@ proceed with ./deploy.yml
 配置过程生成的配置文件默认位于：`~/pigsty/pigsty.yml`，您可以在安装前进行检查与修改定制。
 
 {{% alert title="修改默认密码！" color="danger" %}}
-我们强烈建议您在安装前，事先修改配置文件中使用的默认密码与凭据，详情参考 [**安全加固**](/docs/setup/security/#密码)。
+安装前应修改配置文件中的默认密码与凭据，详见 [**安全建议**](/docs/setup/security#密码)。
 {{% /alert %}}
 
 

@@ -1,107 +1,79 @@
 ---
 title: 安全建议
 weight: 290
-description: 单机部署，快速上手时的三点安全加固建议
+description: 快速上手和单机部署的基本安全检查。
 icon: fas fa-shield-halved
 module: [PIGSTY]
 categories: [教程]
 ---
 
-对于单机部署的 Demo/Dev 场景，只要您 [**修改了默认密码**](#密码)，Pigsty 的默认配置已经足够安全。
+默认配置适用于本地演示和受信内网中的开发测试。只要部署可能被其他主机访问，就应至少完成凭据、网络和关键文件三项检查。
 
-如果您的部署对互联网开放，可以考虑添加 [**防火墙**](#防火墙) 规则，限制端口访问与来源 IP，进一步加固安全性。
-
-除此之外，我们建议您保护好 Pigsty 的 [**关键文件**](#文件)（配置文件与 CA 私钥）防止未授权访问并定期备份。
-
-对于有着严格安全要求的企业级生产环境，请参考 [**部署-安全加固**](/docs/deploy/security/) 文档进行进阶配置。
+生产环境还应参考 [**安全模型**](/docs/concept/sec/level)、[**合规实践**](/docs/concept/sec/compliance) 和 [**安全考量**](/docs/deploy/security/)。
 
 
 ----------------
 
 ## 密码
 
-Pigsty 是一个开源项目，**默认密码众所周知**。如果您的部署面向互联网或者办公网开放，请务必修改所有默认密码！
+Pigsty 的默认凭据公开记录在源码和文档中，不能直接用于生产。
 
-|             模块             | 参数                                                                         | 默认值                 |
-|:--------------------------:|----------------------------------------------------------------------------|---------------------|
-| [**`INFRA`**](/docs/infra) | [**`grafana_admin_password`**](/docs/infra/param#grafana_admin_password)   | `pigsty`            |
-| [**`INFRA`**](/docs/infra) | [**`grafana_view_password`**](/docs/infra/param#grafana_view_password)     | `DBUser.Viewer`     |
-| [**`PGSQL`**](/docs/pgsql) | [**`pg_admin_password`**](/docs/pgsql/param#pg_admin_password)             | `DBUser.DBA`        |
-| [**`PGSQL`**](/docs/pgsql) | [**`pg_monitor_password`**](/docs/pgsql/param#pg_monitor_password)         | `DBUser.Monitor`    |
-| [**`PGSQL`**](/docs/pgsql) | [**`pg_replication_password`**](/docs/pgsql/param#pg_replication_password) | `DBUser.Replicator` |
-| [**`PGSQL`**](/docs/pgsql) | [**`patroni_password`**](/docs/pgsql/param#patroni_password)               | `Patroni.API`       |
-|  [**`NODE`**](/docs/node)  | [**`haproxy_admin_password`**](/docs/node/param#haproxy_admin_password)    | `pigsty`            |
-| [**`MINIO`**](/docs/minio) | [**`minio_secret_key`**](/docs/minio/param#minio_secret_key)               | `S3User.MinIO`      |
-|  [**`ETCD`**](/docs/etcd)  | [**`etcd_root_password`**](/docs/etcd/param#etcd_root_password)            | `Etcd.Root`         |
-{.full-width}
-
-为了避免手动修改密码的繁琐，Pigsty 的 **配置向导** 提供了自动生成随机强密码的功能，使用 `configure` 的 `-g` 参数即可。
+配置向导可以随机化其识别的内置参数和示例凭据：
 
 ```bash
-$ ./configure -g
-configure pigsty v4.4.0 begin
-[ OK ] region = china
-[WARN] kernel  = Darwin, can be used as admin node only
-[ OK ] machine = arm64
-[ OK ] package = brew (macOS)
-[WARN] primary_ip = default placeholder 10.10.10.10 (macOS)
-[ OK ] mode = meta (unknown distro)
-[ OK ] locale  = C.UTF-8
-[ OK ] generating random passwords...
-    grafana_admin_password   : CdG0bDcfm3HFT9H2cvFuv9w7
-    pg_admin_password        : 86WqSGdokjol7WAU9fUxY8IG
-    pg_monitor_password      : 0X7PtgMmLxuCd2FveaaqBuX9
-    pg_replication_password  : 4iAjjXgEY32hbRGVUMeFH460
-    patroni_password         : DsD38QLTSq36xejzEbKwEqBK
-    haproxy_admin_password   : uhdWhepXrQBrFeAhK9sCSUDo
-    minio_secret_key         : z6zrYUN1SbdApQTmfRZlyWMT
-    etcd_root_password       : Bmny8op1li1wKlzcaAmvPiWc
-    DBUser.Meta              : U5v3CmeXICcMdhMNzP9JN3KY
-    DBUser.Viewer            : 9cGQF1QMNCtV3KlDn44AEzpw
-    S3User.Backup            : 2gjgSCFYNmDs5tOAiviCqM2X
-    S3User.Meta              : XfqkAKY6lBtuDMJ2GZezA15T
-    S3User.Data              : OygorcpCbV7DpDmqKe3G6UOj
-[ OK ] random passwords generated, check and save them
-[ OK ] ansible = ready
-[ OK ] pigsty configured
-[WARN] don't forget to check it and change passwords!
-proceed with ./deploy.yml
+./configure -g
 ```
 
-我们建议在规划部署之前，就修改所有默认密码，确保部署完成后系统即处于安全状态。事后修改密码是一个繁琐的工作：
+`configure -g` 不会替换以下内容：
 
-- [**管理 PostgreSQL 默认用户密码**](/docs/pgsql/admin/user/#管理默认用户密码)
-- [**管理 Grafana 密码**](/docs/infra/admin/sop#管理-grafana-密码)
-- [**管理 Haproxy 密码**](/docs/node/admin#管理-haproxy-密码)
-- [**管理 Etcd 密码**](/docs/etcd/admin#管理-etcd-密码)
-- [**管理 MinIO 密码**](/docs/minio/admin#管理-minio-密码)
+- pgBackRest 的 `cipher_pass`；
+- `ha/safe` 中的 MinIO 用户和部分示例口令；
+- 用户自行添加的数据库、对象存储或应用凭据。
+
+生成完成后，应检查 `pigsty.yml`，逐项替换未覆盖的凭据。配置向导会在终端输出生成的密码，因此终端记录和自动化日志也应按敏感信息保护。
+
+完整范围见 [**默认凭据**](/docs/concept/sec/compliance#默认凭据)。
+
 
 ----------------
 
 ## 防火墙
 
-在互联网或者办公网开放的部署场景中，强烈建议配置 **防火墙规则**，限制访问 IP 范围与端口。
+[**`node_firewall_mode`**](/docs/node/param#node_firewall_mode) 默认为 `zone`，信任 [**`node_firewall_intranet`**](/docs/node/param#node_firewall_intranet) 定义的内网，并限制公网放行端口。
 
-您可以使用云厂商提供的安全组功能，或者使用 Linux 发行版自带的防火墙服务（如 `firewalld`、`ufw`、`iptables` 等）来实现。
-
-| 方向: | 协议  | 端口       | 服务         | 说明                |
-|:---:|:---:|----------|------------|-------------------|
-| 入站  | TCP | **22**   | SSH        | 允许 ssh 登陆管理       |
-| 入站  | TCP | **80**   | Nginx      | 允许 Nginx HTTP 访问  |
-| 入站  | TCP | **443**  | Nginx      | 允许 Nginx HTTPS 访问 |
-| 入站  | TCP | **5432** | PostgreSQL | 远程公网访问数据库，按需启用    |
+| 端口 | 服务 | 默认公网状态 |
+|:---:|:---|:---|
+| `22` | SSH | 放行 |
+| `80` | Nginx HTTP | 放行 |
+| `443` | Nginx HTTPS | 放行 |
+| `5432` | PostgreSQL | 基础默认值不放行；演示配置 `pigsty.yml` 额外放行 |
 {.full-width}
 
-Pigsty 默认支持配置防火墙规则，允许 22/80/443/5432 从外部网络访问，但这并非默认启用。
+生产部署通常应从演示配置中移除 `5432`。如果业务需要直接连接数据库，应在云安全组、防火墙和 HBA 中同时限制来源地址。
+
+还应检查内网定义是否符合实际信任边界。默认 RFC 1918 地址段可能覆盖范围过大，办公网、容器网段和其他租户网络不应自动视为可信。
 
 
 ----------------
 
 ## 文件
 
-在 Pigsty 中，您需要特别保护以下文件：
+以下文件和目录包含高敏感信息：
 
-- **`pigsty.yml`**：Pigsty 主配置文件，包含所有节点的访问信息与密码
-- **`files/pki/ca/ca.key`**：Pigsty 自签名 CA 的私钥，用于签发部署中所有的 SSL 证书（部署时自动生成）
+- `pigsty.yml`：系统与业务凭据、节点和服务配置；
+- `files/pki/ca/ca.key`：本地 CA 私钥；
+- 管理用户 SSH 私钥：用于访问纳管节点；
+- `files/pki/misc/*.key`：客户端证书私钥；
+- `/pg/tmp/pg-user-*.sql`：用户创建过程中生成的明文口令 SQL。
 
-我们建议您严格控制这两个文件的访问权限，并定期进行备份，将它们存储在一个安全的位置。
+应限制管理节点和配置仓库访问，避免将完整配置或私钥提交到公开仓库，并为 CA 私钥和必要配置建立受控备份。
+
+
+----------------
+
+## 相关文档
+
+- [**安全与合规**](/docs/concept/sec/)：安全章节入口
+- [**身份认证**](/docs/concept/sec/auth)：HBA、密码与客户端证书
+- [**加密通信**](/docs/concept/sec/ca)：CA、TLS 与服务端验证
+- [**生产安全考量**](/docs/deploy/security/)：完整上线检查

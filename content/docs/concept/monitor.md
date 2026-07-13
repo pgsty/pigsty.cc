@@ -9,7 +9,7 @@ toc_hide: True
 hide_summary: True
 ---
 
-Pigsty 监控系统由指标、日志与告警三部分组成，默认随部署开箱可用。
+Pigsty 监控系统由指标、日志与告警三部分组成，默认随部署开箱可用；其中日志与告警也是 [**审计与追溯**](/docs/concept/sec/data#审计与追溯) 的重要输入。
 它既可以监控由 Pigsty 托管的数据库集群，也可以监控已有 PostgreSQL 集群与外部 RDS 服务。
 
 
@@ -29,13 +29,13 @@ Pigsty 监控覆盖的核心对象包括：
 
 ## 技术栈
 
-| 组件 | 作用 |
-|:-----|:-----|
-| [**Grafana**](/docs/infra/admin/grafana/) | 可视化监控面板、统一入口、告警视图 |
-| [**VictoriaMetrics**](/docs/infra/) | 时序指标采集、存储与查询 |
-| [**VictoriaLogs**](/docs/infra/) | 结构化日志采集、索引与检索 |
-| [**VMAlert + Alertmanager**](/docs/infra/monitor/) | 告警规则执行与消息通知 |
-| [**Exporter / Agent**](/docs/pgsql/monitor/) | 业务与系统指标暴露、日志转发 |
+| 组件                                                 | 作用                |
+|:---------------------------------------------------|:------------------|
+| [**Grafana**](/docs/infra/admin/grafana/)          | 可视化监控面板、统一入口、告警视图 |
+| [**VictoriaMetrics**](/docs/infra/)                | 时序指标采集、存储与查询      |
+| [**VictoriaLogs**](/docs/infra/)                   | 结构化日志采集、索引与检索     |
+| [**VMAlert + Alertmanager**](/docs/infra/monitor/) | 告警规则执行与消息通知       |
+| [**Exporter / Agent**](/docs/pgsql/monitor/)       | 业务与系统指标暴露、日志转发    |
 {.full-width}
 
 
@@ -45,11 +45,11 @@ Pigsty 监控覆盖的核心对象包括：
 
 Pigsty 支持三种监控纳管方式：
 
-| 模式 | 适用场景 | 入口 |
-|:-----|:---------|:-----|
-| `FULL` | 数据库由 Pigsty 直接部署与托管 | [PGSQL 监控系统](/docs/pgsql/monitor/) |
+| 模式        | 适用场景                        | 入口                                    |
+|:----------|:----------------------------|:--------------------------------------|
+| `FULL`    | 数据库由 Pigsty 直接部署与托管         | [PGSQL 监控系统](/docs/pgsql/monitor/)    |
 | `MANAGED` | 现有 PostgreSQL 集群，节点可 SSH 管理 | [监控现有集群](/docs/pgsql/monitor/#监控现有集群) |
-| `RDS` | 仅能通过连接串访问的云数据库 | [监控 RDS](/docs/pgsql/monitor/#监控rds) |
+| `RDS`     | 仅能通过连接串访问的云数据库              | [监控 RDS](/docs/pgsql/monitor/#监控rds)  |
 {.full-width}
 
 

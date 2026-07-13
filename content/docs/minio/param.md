@@ -308,7 +308,7 @@ MinIO 控制台端口，默认为 `9001`。
 {{% alert title="安全警告：请务必修改默认密码！" color="danger" %}}
 使用默认密码是高危行为！请务必在您的生产环境部署中修改此密码。
 
-提示：执行 `./configure` 或 `./configure -g` 时，会自动修改配置文件模板中的这些默认密码。
+提示：执行 `./configure -g` 时，会随机化配置向导识别的默认密码；完整范围见 [**默认凭证清单**](/docs/concept/sec/compliance#默认凭证清单)。
 {{% /alert %}}
 
 
@@ -496,4 +496,3 @@ minio_safeguard: true   # 启用后，minio-rm.yml 将拒绝执行
 移除时是否卸载 MinIO 软件包？默认值为 `false`。
 
 当启用时，[`minio-rm.yml`](/docs/minio/playbook/#minio-rmyml) 剧本将在集群移除过程中卸载 MinIO 软件包。默认禁用此选项，以便保留 MinIO 安装供将来可能的使用。
-

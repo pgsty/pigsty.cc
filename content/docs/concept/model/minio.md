@@ -161,6 +161,8 @@ MinIO 集群部署后，Pigsty 会自动创建以下资源（由 [**`minio_provi
 | `s3user_data` | `S3User.Data`   | `data`  | 访问 `data` 存储桶     |
 {.full-width}
 
+这些密码属于文档公开的 [**默认凭据**](/docs/concept/sec/compliance#默认凭证清单)，仅供演示与本地开发使用，生产部署前必须替换。
+
 `pgbackrest` 是 PostgreSQL 集群备份时使用的用户，`s3user_meta` 和 `s3user_data` 是未实际使用的保留用户。
 
 
@@ -181,5 +183,4 @@ minio_up{cls="minio", ins="minio-4", ip="10.10.10.13", job="minio"}
 例如，上面的 `cls`，`ins`，`ip` 三个标签，分别对应集群名、实例名与节点 IP，这三个核心实体的标识符。
 它们与 `job` 标签，在 **所有** [**VictoriaMetrics**](/docs/concept/arch/infra#victoriametrics) 采集的 MinIO 监控指标中都会出现并可用。
 采集 MinIO 指标的 `job` 名固定为 `minio`。
-
 

@@ -76,12 +76,12 @@ pg-meta:
 
 **ACL 系统**
 
-Pigsty 具有一套内置的，开箱即用的访问控制 / [ACL](/docs/concept/sec/ac/#默认角色与系统用户) 系统，您只需将以下四个默认角色分配给业务用户即可轻松使用：
+Pigsty 提供一套内置的访问控制 / [ACL](/docs/concept/sec/ac#角色体系) 模型，可以将默认业务角色分配给用户：
 
 - `dbrole_readwrite`：全局读写访问的角色（主属业务使用的生产账号应当具有数据库读写权限）
 - `dbrole_readonly`：全局只读访问的角色（如果别的业务想要只读访问，可以使用此角色）
 - `dbrole_admin`：拥有 DDL 权限的角色 （业务管理员，需要在应用中建表的场景）
-- `dbrole_offline`：受限的只读访问角色（只能访问 [offline](/docs/pgsql/config/cluster#离线从库) 实例，通常是个人用户）
+- `dbrole_offline`：独立的只读角色，通常用于个人查询、ETL 和分析任务；实例范围需要通过 HBA 显式限制
 
 如果您希望重新设计您自己的 ACL 系统，可以考虑定制以下参数和模板：
 

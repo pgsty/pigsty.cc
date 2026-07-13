@@ -53,9 +53,9 @@ Pigsty 为您提供：
 
   采用模块化 [**架构**](/docs/concept/arch) 设计，可自由组合以适应不同场景。除了核心的 PostgreSQL 模块外，还提供 Redis、MinIO、Etcd、FerretDB 等可选模块，以及对多种 PG 兼容内核的支持。
 
-- **扎实的安全最佳实践**
+- [**扎实的安全最佳实践**](/docs/concept/sec/)
 
-  采用业界领先的安全最佳实践：自签名 CA 签发证书加密通信，AES 加密备份，scram-sha-256 加密密码，开箱即用的 ACL 模型，遵循最小权限原则的 HBA 规则集，确保数据安全。
+  采用业界领先的安全最佳实践：[**自签名 CA**](/docs/concept/sec/ca) 签发证书加密通信，AES 加密备份，SCRAM-SHA-256 口令哈希，开箱即用的 [**ACL 模型**](/docs/concept/sec/ac)，遵循最小权限原则的 [**HBA 规则集**](/docs/concept/sec/auth)，确保数据安全。
 
 - **简单易用的部署方案**
 

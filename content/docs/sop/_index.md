@@ -55,7 +55,7 @@ categories: [教程, 参考]
 | 升级 PostgreSQL    | [**版本升级**](/docs/pgsql/admin/upgrade/)                                                                 | [**内核版本**](/docs/pgsql/config/kernel/)                                             |
 | 安装或启用扩展          | [**扩展插件**](/docs/pgsql/ext/)                                                                           | [**扩展管理**](/docs/pgsql/admin/ext/)                                                 |
 | 迁移已有数据库          | [**数据迁移**](/docs/pgsql/migration/)                                                                     | [**迁移剧本**](/docs/pgsql/playbook/#pgsql-migrationyml)                               |
-| 做安全加固            | [**安全考量**](/docs/deploy/security/)                                                                     | [**访问控制**](/docs/pgsql/security/)，[**CA 与证书**](/docs/infra/admin/cert/)            |
+| 做安全加固            | [**安全考量**](/docs/deploy/security/)                                                                     | [**访问控制**](/docs/concept/sec/ac)，[**CA 与证书**](/docs/concept/sec/ca)                 |
 | 管理域名与 Web 入口     | [**域名管理**](/docs/infra/admin/domain/)                                                                  | [**Nginx 管理**](/docs/infra/admin/portal/)                                          |
 | 维护基础设施           | [**INFRA 管理预案**](/docs/infra/admin/)                                                                   | `infra.yml`，`infra-rm.yml`                                                         |
 | 维护 Etcd          | [**ETCD 配置**](/docs/etcd/config/)                                                                      | [**ETCD 管理**](/docs/etcd/admin/)，[**ETCD FAQ**](/docs/etcd/faq/)                   |
@@ -83,7 +83,7 @@ categories: [教程, 参考]
 
 `pg_cluster` 是 Pigsty 管理 PostgreSQL 集群的顶层名字，会影响实例名、服务名、备份 stanza、监控标签和很多文件路径。它不是一个可以随手改的显示名。命名规则看 [**PGSQL 集群模型**](/docs/concept/model/pgsql/)；不同实例角色看 [**集群实例配置**](/docs/pgsql/config/cluster/)；服务名和连接入口看 [**服务/接入**](/docs/pgsql/service/)。
 
-数据库名和用户名是 PostgreSQL 里的逻辑对象。库名看 [**数据库配置**](/docs/pgsql/config/db/) 和 [**数据库管理**](/docs/pgsql/admin/db/)；用户和角色看 [**用户/角色配置**](/docs/pgsql/config/user/) 和 [**用户管理**](/docs/pgsql/admin/user/)；权限模型看 [**访问控制**](/docs/pgsql/security/) 与 [**ACL 配置**](/docs/pgsql/config/acl/)。
+数据库名和用户名是 PostgreSQL 里的逻辑对象。库名看 [**数据库配置**](/docs/pgsql/config/db/) 和 [**数据库管理**](/docs/pgsql/admin/db/)；用户和角色看 [**用户/角色配置**](/docs/pgsql/config/user/) 和 [**用户管理**](/docs/pgsql/admin/user/)；权限模型看 [**访问控制**](/docs/concept/sec/ac) 与 [**ACL 配置**](/docs/pgsql/config/acl/)。
 
 经验上，集群名用小写字母、数字、短横线，例如 `pg-meta`、`pg-test`、`pg-user-prod`。数据库对象名用 `snake_case`，别用中文、空格、大小写混用和 SQL 关键字。更完整的命名背景可以读 [**数据库集群管理概念与实体命名规范**](https://vonng.com/pg/entity-and-naming/) 和 [**PostgreSQL 规约（2024版）**](https://vonng.com/pg/pg-convention/)。
 
@@ -172,7 +172,7 @@ PostgreSQL 通用排障文章：[**PG 服务器日志常规配置**](https://von
 
 ## 安全与入口
 
-部署安全先看 [**安全考量**](/docs/deploy/security/)，安全模型看 [**安全合规**](/docs/concept/sec/)。PostgreSQL 权限看 [**访问控制**](/docs/pgsql/security/) 和 [**ACL 配置**](/docs/pgsql/config/acl/)；认证规则看 [**HBA 配置**](/docs/pgsql/config/hba/) 和 [**HBA 管理**](/docs/pgsql/admin/hba/)。
+部署安全先看 [**安全考量**](/docs/deploy/security/)，安全模型看 [**安全与合规**](/docs/concept/sec/)。PostgreSQL 权限看 [**访问控制**](/docs/concept/sec/ac) 和 [**ACL 配置**](/docs/pgsql/config/acl/)；认证规则看 [**身份认证**](/docs/concept/sec/auth)、[**HBA 配置**](/docs/pgsql/config/hba/) 和 [**HBA 管理**](/docs/pgsql/admin/hba/)。
 
 证书看 [**CA 与证书**](/docs/infra/admin/cert/)。域名、Nginx、Web 入口看 [**域名管理**](/docs/infra/admin/domain/) 和 [**Nginx 管理**](/docs/infra/admin/portal/)。
 
@@ -219,4 +219,3 @@ PostgreSQL 通用排障文章：[**PG 服务器日志常规配置**](https://von
 | 查询与负载           | [**PostgreSQL 宏观查询优化之 `pg_stat_statements`**](https://vonng.com/pg/pgss/)，[**PostgreSQL 的 KPI**](https://vonng.com/pg/pg-load/) |
 | 日志与故障           | [**PG 服务器日志常规配置**](https://vonng.com/pg/logging/)，[**故障档案：PostgreSQL 事务号回卷**](https://vonng.com/pg/xid-wrap-around/)            |
 | 生态与扩展           | [**PostgreSQL 正在吞噬数据库世界**](https://vonng.com/pg/pg-eat-db-world/)，[**小猪骑大象：PG内核与扩展包管理神器**](https://vonng.com/pg/pig/)           |
-

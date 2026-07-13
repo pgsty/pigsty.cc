@@ -3,7 +3,7 @@ title: 管理 PostgreSQL HBA 认证规则
 linkTitle: HBA 管理
 weight: 50
 draft: true
-description: HBA 管理：刷新规则、验证配置、故障排查、Pgbouncer HBA
+description: HBA 管理：刷新规则、验证配置、故障排查、PgBouncer HBA
 icon: fa-solid fa-key
 module: [PGSQL]
 categories: [任务]
@@ -47,15 +47,15 @@ bin/pgsql-hba pg-meta 10.10.10.11 10.10.10.12  # 刷新多个实例
 {{% /tab %}}
 {{< /tabpane >}}
 
-关于 HBA 规则定义参数的完整参考，请查阅 [**HBA 配置**](/docs/pgsql/config/hba)。关于访问控制的整体设计，请参考 [**安全与合规**](/docs/concept/sec/)。
+关于规则语法，请查阅 [**HBA 配置**](/docs/pgsql/config/hba)；关于认证方法、默认边界与凭据管理，请参考 [**身份认证**](/docs/concept/sec/auth)。
 
-| 操作                          | 说明                      | 风险  |
-|:----------------------------|:------------------------|:---:|
-| [**刷新 HBA 规则**](#刷新-hba-规则) | 重新渲染配置文件并重载服务           | 低   |
-| [**验证 HBA 规则**](#验证-hba-规则) | 查看当前生效规则，测试连接认证         | 只读  |
-| [**常见管理场景**](#常见管理场景)       | 添加规则、封禁 IP、角色区分、扩容刷新    | 低   |
-| [**故障排查**](#故障排查)           | 连接被拒绝、认证失败、规则未生效        | -   |
-| [**Pgbouncer HBA**](#pgbouncer-hba) | Pgbouncer 连接池的 HBA 管理 | 低   |
+| 操作                                  | 说明                    | 风险 |
+|:------------------------------------|:----------------------|:--:|
+| [**刷新 HBA 规则**](#刷新-hba-规则)         | 重新渲染配置文件并重载服务         | 低  |
+| [**验证 HBA 规则**](#验证-hba-规则)         | 查看当前生效规则，测试连接认证       | 只读 |
+| [**常见管理场景**](#常见管理场景)               | 添加规则、封禁 IP、角色区分、扩容刷新  | 低  |
+| [**故障排查**](#故障排查)                   | 连接被拒绝、认证失败、规则未生效      | -  |
+| [**Pgbouncer HBA**](#pgbouncer-hba) | Pgbouncer 连接池的 HBA 管理 | 低  |
 {.full-width}
 
 
@@ -309,11 +309,11 @@ Pgbouncer 的 HBA 管理与 PostgreSQL 类似，但有一些差异。
 
 **配置差异**
 
-| 差异点   | PostgreSQL               | Pgbouncer                 |
-|:------|:-------------------------|:--------------------------|
-| 配置文件  | `/pg/data/pg_hba.conf`   | `/etc/pgbouncer/pgb_hba.conf` |
-| 复制连接  | 支持 `db: replication`    | 不支持                       |
-| 本地认证  | 使用 `ident`              | 使用 `peer`                 |
+| 差异点  | PostgreSQL             | Pgbouncer                     |
+|:-----|:-----------------------|:------------------------------|
+| 配置文件 | `/pg/data/pg_hba.conf` | `/etc/pgbouncer/pgb_hba.conf` |
+| 复制连接 | 支持 `db: replication`   | 不支持                           |
+| 本地认证 | 使用 `ident`             | 使用 `peer`                     |
 {.full-width}
 
 **刷新 Pgbouncer HBA**
@@ -357,5 +357,5 @@ cat /etc/pgbouncer/pgb_hba.conf    # 查看 Pgbouncer HBA 规则
 - [**HBA 配置**](/docs/pgsql/config/hba/)：HBA 规则的配置语法与参数详解
 - [**用户管理**](/docs/pgsql/admin/user/)：用户与角色的管理操作
 - [**访问控制**](/docs/pgsql/config/acl/)：角色体系与权限模型
-- [**安全与合规**](/docs/concept/sec/)：PostgreSQL 集群的安全特性
-
+- [**身份认证**](/docs/concept/sec/auth)：认证方法、默认边界与凭据管理
+- [**加密通信**](/docs/concept/sec/ca)：TLS 与客户端证书验证

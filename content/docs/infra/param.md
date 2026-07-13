@@ -335,7 +335,7 @@ openssl x509 -text -in /etc/pki/ca.crt
 
 签发证书的有效期，默认为 20 年，对绝大多数场景都足够了。默认值为： `7300d`
 
-此参数影响由 Pigsty CA 签发的所有证书的有效期，包括：
+此参数影响由 [**Pigsty CA**](/docs/concept/sec/ca) 签发的所有证书的有效期，包括：
 
 - PostgreSQL 服务器证书
 - Patroni API 证书

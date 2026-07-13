@@ -88,7 +88,7 @@ ETCD 模块不会为主机节点赋予额外的身份标识，节点使用其原
 | **2380** | [**`etcd_peer_port`**](/docs/etcd/param#etcd_peer_port) | 节点间通信端口，用于 Raft 共识协议               |
 {.full-width}
 
-ETCD 集群默认启用 TLS 加密通信，并使用 RBAC 认证机制。客户端需要使用正确的证书和密码才能访问 ETCD 服务。
+ETCD 集群默认启用 [**TLS 加密通信**](/docs/concept/sec/ca)，并使用 RBAC 认证机制。客户端需要使用正确的证书和密码才能访问 ETCD 服务。
 
 
 ----------------
@@ -123,5 +123,4 @@ etcd_up{cls="etcd", ins="etcd-3", ip="10.10.10.12", job="etcd"}
 例如，上面的 `cls`，`ins`，`ip` 三个标签，分别对应集群名、实例名与节点 IP，这三个核心实体的标识符。
 它们与 `job` 标签，在 **所有** [**VictoriaMetrics**](/docs/concept/arch/infra#victoriametrics) 采集的 ETCD 监控指标中都会出现并可用。
 采集 ETCD 指标的 `job` 名固定为 `etcd`。
-
 

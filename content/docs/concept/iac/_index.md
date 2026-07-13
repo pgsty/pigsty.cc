@@ -94,7 +94,7 @@ bin/pgsql-add pg-test   # 创建 pg-test 集群
 
 ## 定制集群内容
 
-您不仅可以使用声明式的方式定义集群，还可以定义集群中的数据库、用户、服务、HBA 规则等内容，例如，下面的配置文件对默认的 `pg-meta` 单节点数据库集群的内容进行了深度定制： 
+您不仅可以使用声明式的方式定义集群，还可以定义集群中的数据库、用户、服务、[**HBA 规则**](/docs/concept/sec/auth) 等内容，例如，下面的配置文件对默认的 `pg-meta` 单节点数据库集群的内容进行了深度定制：
 
 包括：声明了六个业务数据库与七个业务用户，添加了一个额外的 `standby` 服务（同步备库，提供无复制延迟的读取能力），定义了一些额外的 `pg_hba` 规则，一个指向集群主库的 L2 VIP 地址，与自定义的备份策略。
 
@@ -190,12 +190,12 @@ pg-meta:
 
 ## 声明访问控制
 
-您还可以通过声明式的配置，深度定制 Pigsty 的访问控制能力。例如下面的配置文件对 `pg-meta` 集群进行了深度安全定制：
+您还可以通过声明式的配置，深度定制 Pigsty 的 [**访问控制**](/docs/concept/sec/ac) 能力。例如下面的配置文件对 `pg-meta` 集群进行了深度安全定制：
 
 使用三节点核心集群模板：`crit.yml`，确保数据一致性有限，故障切换数据零丢失。
 启用了 L2 VIP，并将数据库与连接池的监听地址限制在了本地环回 IP + 内网 IP + VIP 三个特定地址。
-模板强制启用了 Patroni 的 SSL API，与 Pgbouncer 的 SSL，并在 HBA 规则中强制要求使用 SSL 访问数据库集群。
-同时还在 `pg_libs` 中启用了 `$libdir/passwordcheck` 扩展，来强制执行密码强度安全策略。
+模板强制启用了 Patroni API 与 Pgbouncer 的 [**SSL**](/docs/concept/sec/ca)，并在 HBA 规则中强制要求使用 SSL 访问数据库集群。
+同时还在 `pg_libs` 中启用了 `$libdir/passwordcheck` 扩展，来强制执行 [**密码强度策略**](/docs/concept/sec/auth#密码策略)。
 
 最后，还单独声明了一个 `pg-meta-delay` 集群，作为 `pg-meta` 在一个小时前的延迟镜像从库，用于紧急数据误删恢复。
 
@@ -375,5 +375,3 @@ minio:
           - { name: minio-2 ,ip: 10.10.10.11 , port: 9000 , options: 'check-ssl ca-file /etc/pki/ca.crt check port 9000' }
           - { name: minio-3 ,ip: 10.10.10.12 , port: 9000 , options: 'check-ssl ca-file /etc/pki/ca.crt check port 9000' }
 ```
-
-
