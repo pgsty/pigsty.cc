@@ -1,9 +1,9 @@
 ---
-title: "Patroni 4.1 中文文档"
+title: "Patroni 4.1.4 中文文档"
 linkTitle: patroni 文档
 weight: 8050
 icon: fas fa-yin-yang
-description: "Patroni PostgreSQL 高可用模板，v4.1 中文文档"
+description: "Patroni PostgreSQL 高可用模板，v4.1.4 中文文档"
 sidebar_root_for: self
 module: [PATRONI]
 categories: [概念]

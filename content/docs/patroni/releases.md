@@ -13,6 +13,48 @@ categories: [参考]
 
 --------
 
+## Version 4.1.4
+
+发布于 2026-07-07
+
+**错误修复**
+
+- 使用 **`systemd`** 软件包前检查 **`NOTIFY_SOCKET`** 环境变量（Polina Bungina）
+
+  仅当 **`NOTIFY_SOCKET`** 环境变量已设置时，才尝试导入并使用该软件包，以免触发 **`FileNotFoundError: [Errno 2] No such file or directory`** 异常。
+
+- 统一 **`pg_replication_slots`** 查询（Polina Bungina）
+
+  此前对 **`failover`** 和 **`synced`** 值的处理不正确，在删除异常逻辑复制槽时会触发 **`KeyError`** 异常。
+
+- 生成配置时考虑不同版本适用的认证参数（Polina Bungina）
+
+  **`patroni --generate-config`** 命令现在会根据从 PostgreSQL 连接中获取的版本，移除从环境变量意外带入但并不适用的认证参数。
+
+- 处理 PostgreSQL 实例以备库身份启动期间的 **`pg_rewind`**（Alexander Kukushkin）
+
+  当 PostgreSQL 实例正在运行、但尚未接受连接时，回退使用 **`pg_controldata`** 提供的信息。
+
+- 修正 **`patroni_postgres_timeline`** Prometheus 指标类型（Huseyin Demir）
+
+  将 **`patroni_postgres_timeline`** 指标声明为 **`gauge`** 而非 **`counter`**，因为该指标并不总是单调递增（例如 PostgreSQL 实例未运行时，它可能重置为 0）。
+
+- 在客户端后端进程完全停止前不要停止 watchdog（Alexander Kukushkin）
+
+  此前，如果 **`primary_stop_timeout`** 小于 watchdog 的最短超时时间，且停止操作确实发生超时，Patroni 会在所有客户端后端进程退出前禁用 watchdog。
+
+- 处理监控查询的语句超时错误（Alexander Kukushkin）
+
+  监控查询发生语句超时时，使用缓存的角色作为后备信息，避免错误地降级主节点。此外，强制将该查询的 **`pg_stat_statements.track`** 设置为 **`none`**，避免触发代价高昂的 **`pg_stat_statements`** 垃圾回收。
+
+- 删除 **`wal_status=lost`** 的 Patroni 托管复制槽（Alexander Kukushkin）
+
+  **`wal_status=lost`** 的复制槽已无法继续使用。Patroni 现在会删除这类复制槽，并在需要时重新创建。
+
+- 修正 patronictl 成员校验错误中的角色表示（Polina Bungina）
+
+  确保异常消息使用正确的字符串表示，避免错误被格式化为 **`Error: No CtlPostgresqlRole.REPLICA among provided members`**。
+
 ## Version 4.1.0
 
 发布于 2025-09-23
