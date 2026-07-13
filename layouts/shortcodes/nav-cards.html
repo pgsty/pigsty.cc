@@ -1,0 +1,8 @@
+{{- /*
+  nav-cards：文档导航卡片网格容器，与 nav-card 配套使用。
+  参数：cols（可选，默认 2，可取 2/3/4，决定桌面端列数）
+*/ -}}
+{{- $cols := .Get "cols" | default "2" -}}
+<div class="docs-nav docs-nav--cols-{{ $cols }}">
+{{- .Inner -}}
+</div>

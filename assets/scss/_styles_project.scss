@@ -1326,24 +1326,12 @@ body.td-404 {
       color: var(--bs-body-color);
     }
 
-    // 当前页：加粗 + PG 蓝 + 左侧铜色小竖轨（无背景板，不动排版）
+    // 当前页：加粗 + PG 蓝（无背景板，不动排版）
     &.active,
     &.active:hover {
-      position: relative;
       color: var(--bs-link-color);
       font-weight: 700;
       background: transparent;
-
-      &::before {
-        content: '';
-        position: absolute;
-        left: -0.7rem;
-        top: 0.18em;
-        height: 1.05em;
-        width: 3px;
-        border-radius: 2px;
-        background: var(--pg-copper);
-      }
     }
   }
 
@@ -1704,3 +1692,175 @@ body.td-404 {
 }
 
 // 隐藏 Docsy 默认 td-footer 的暗盒样式残留（我们完全接管 footer）
+
+// ---- 文档首页导航（eyebrow 铭牌 + nav-cards / nav-card 短代码）--
+// 克制的图纸风：纯平卡片 + 发丝线描边，图标与标题内联；
+// 必选模块以铜色丝印与微铜描边区分（通电轨道），可选模块用丝印灰。
+
+.docs-eyebrow {
+  margin: 3.2rem 0 0;
+}
+
+.docs-eyebrow__label {
+  font-family: 'IBM Plex Mono', var(--bs-font-monospace);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--pg-silk);
+
+  &::before {
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin-right: 10px;
+    border: 1.5px solid var(--pg-copper);
+    border-radius: 50%;
+  }
+}
+
+.docs-eyebrow + h2 {
+  margin-top: 0.4rem;
+}
+
+.docs-nav {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.85rem;
+  margin: 1.1rem 0 2.2rem;
+
+  &.docs-nav--cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  @include media-breakpoint-down(lg) {
+    &.docs-nav--cols-3 {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  @include media-breakpoint-down(md) {
+    grid-template-columns: 1fr;
+
+    &.docs-nav--cols-3 {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+.docs-nav__card {
+  --nav-accent: var(--bs-link-color);
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  padding: 1.05rem 1.2rem;
+  background: var(--pg-elev);
+  border: 1px solid var(--bs-border-color);
+  border-radius: 0.5rem;
+  transition: border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+
+  &:hover {
+    transform: translateY(-1px);
+    border-color: color-mix(in srgb, var(--nav-accent) 45%, var(--bs-border-color));
+    box-shadow: 0 12px 28px -16px rgba(22, 34, 46, 0.35);
+  }
+}
+
+[data-bs-theme='dark'] .docs-nav__card:hover {
+  box-shadow: 0 12px 30px -14px rgba(0, 0, 0, 0.6);
+}
+
+.docs-nav__card--copper {
+  --nav-accent: var(--pg-copper);
+  border-color: color-mix(in srgb, var(--pg-copper) 24%, var(--bs-border-color));
+}
+
+.docs-nav__card--gray {
+  --nav-accent: var(--pg-silk);
+}
+
+.docs-nav__head {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.docs-nav__icon {
+  flex: none;
+  width: 1.1rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--nav-accent);
+  opacity: 0.9;
+}
+
+.docs-nav__title {
+  font-family: 'Chakra Petch', var(--bs-font-sans-serif);
+  font-weight: 700;
+  font-size: 1.05rem;
+  letter-spacing: 0.04em;
+  color: var(--bs-emphasis-color);
+  text-decoration: none;
+
+  // 撑满整卡的点击热区（底部快捷链接以更高 z-index 覆盖其上）
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+  }
+
+  &:hover,
+  &:focus {
+    color: var(--nav-accent);
+    text-decoration: none;
+  }
+}
+
+.docs-nav__badge {
+  margin-left: auto;
+  margin-right: -0.25em; // 抵消 CJK 末字符的字距留白
+  font-family: 'IBM Plex Mono', var(--bs-font-monospace);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  color: var(--nav-accent);
+  opacity: 0.8;
+}
+
+.docs-nav__desc {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: var(--bs-secondary-color);
+}
+
+.docs-nav__links {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  margin-top: auto;
+  padding-top: 0.3rem;
+
+  a {
+    padding: 0.08rem 0.55rem;
+    border-radius: 0.3rem;
+    font-size: 0.78rem;
+    color: var(--bs-secondary-color);
+    border: 1px solid color-mix(in srgb, var(--bs-border-color) 85%, transparent);
+    text-decoration: none;
+    transition: color 120ms ease, border-color 120ms ease, background-color 120ms ease;
+
+    &:hover,
+    &:focus {
+      color: var(--nav-accent);
+      border-color: color-mix(in srgb, var(--nav-accent) 45%, transparent);
+      background: color-mix(in srgb, var(--nav-accent) 7%, transparent);
+      text-decoration: none;
+    }
+  }
+}

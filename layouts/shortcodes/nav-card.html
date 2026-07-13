@@ -1,0 +1,26 @@
+{{- /*
+  nav-card：单张导航卡片，须置于 nav-cards 之内。
+  参数：
+    title  卡片标题（必填）
+    link   目标链接（必填，整卡可点击）
+    icon   Font Awesome 图标类名（可选，内联于标题之前）
+    desc   描述文本，支持 Markdown 行内语法（可选）
+    accent 强调色变体：copper（必选模块）/ gray（可选模块），默认跟随链接色
+    badge  右上角丝印徽标文本，如「必选」「可选」（可选）
+  内部内容：Markdown 链接列表，渲染为卡片底部的快捷导航链接。
+*/ -}}
+{{- $title := .Get "title" -}}
+{{- $link := .Get "link" -}}
+{{- $icon := .Get "icon" -}}
+{{- $desc := .Get "desc" -}}
+{{- $accent := .Get "accent" -}}
+{{- $badge := .Get "badge" -}}
+<div class="docs-nav__card{{ with $accent }} docs-nav__card--{{ . }}{{ end }}">
+  <div class="docs-nav__head">
+    {{- with $icon }}<i class="{{ . }} docs-nav__icon" aria-hidden="true"></i>{{ end -}}
+    <a class="docs-nav__title" href="{{ $link }}">{{ $title }}</a>
+    {{- with $badge }}<span class="docs-nav__badge">{{ . }}</span>{{ end -}}
+  </div>
+  {{- with $desc }}<p class="docs-nav__desc">{{ . | markdownify }}</p>{{ end -}}
+  {{- with trim .Inner " \r\n" }}<div class="docs-nav__links">{{ . | $.Page.RenderString }}</div>{{ end -}}
+</div>

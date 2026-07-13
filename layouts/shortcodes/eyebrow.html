@@ -1,0 +1,5 @@
+{{- /*
+  eyebrow：章节丝印铭牌，置于 ## 标题上方一行。
+  用法：传入一个位置参数，如 "01 · GETTING STARTED"
+*/ -}}
+<p class="docs-eyebrow"><span class="docs-eyebrow__label">{{ .Get 0 }}</span></p>
