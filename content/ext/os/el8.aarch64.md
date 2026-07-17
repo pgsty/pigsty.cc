@@ -292,7 +292,7 @@ icon: fa-brands fa-redhat fa-flip-vertical
 | [`pg_store_plans`](/ext/e/pg_store_plans) | AVAIL PIGSTY 1.10 2 | AVAIL PIGSTY 1.10 2 | AVAIL PIGSTY 1.10 3 | AVAIL PIGSTY 1.10 4 | AVAIL PIGSTY 1.10 1 |
 | [`pg_track_settings`](/ext/e/pg_track_settings) | AVAIL PGDG 2.1.2 1 | AVAIL PGDG 2.1.2 1 | AVAIL PGDG 2.1.2 1 | AVAIL PGDG 2.1.2 2 | AVAIL PGDG 2.1.2 2 |
 | [`pg_track_optimizer`](/ext/e/pg_track_optimizer) | AVAIL PIGSTY 0.9.2 1 | AVAIL PIGSTY 0.9.2 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| [`pg_wait_sampling`](/ext/e/pg_wait_sampling) | AVAIL PGDG 1.1.9 1 | AVAIL PGDG 1.1.9 4 | AVAIL PGDG 1.1.9 5 | AVAIL PGDG 1.1.9 5 | AVAIL PGDG 1.1.9 5 |
+| [`pg_wait_sampling`](/ext/e/pg_wait_sampling) | AVAIL PGDG 1.1.11 2 | AVAIL PGDG 1.1.11 5 | AVAIL PGDG 1.1.11 6 | AVAIL PGDG 1.1.11 6 | AVAIL PGDG 1.1.11 6 |
 | [`pg_datasentinel`](/ext/e/pg_datasentinel) | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | MISS PIGSTY - 0 |
 | [`pgsentinel`](/ext/e/pgsentinel) | AVAIL PIGSTY 1.4.1 3 | AVAIL PIGSTY 1.4.1 4 | AVAIL PIGSTY 1.4.1 4 | AVAIL PIGSTY 1.4.1 4 | AVAIL PIGSTY 1.4.1 4 |
 | [`system_stats`](/ext/e/system_stats) | AVAIL PGDG 4.1 4 | AVAIL PGDG 4.1 4 | AVAIL PGDG 4.1 5 | AVAIL PGDG 4.1 6 | AVAIL PGDG 4.1 6 |
