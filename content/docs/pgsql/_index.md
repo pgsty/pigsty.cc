@@ -2,10 +2,11 @@
 title: 模块：PGSQL
 weight: 1000
 description: "如何使用 Pigsty 部署并管理世界上最先进的开源关系型数据库 —— PostgreSQL，按需定制，开箱即用！"
-icon: fas fa-database fa-bounce
+icon: fas fa-database # fa-bounce
 module: [PGSQL]
 categories: [参考]
-sidebar_root_for: self
+hide_feedback: true
+#sidebar_root_for: self
 ---
 
 
@@ -30,7 +31,7 @@ sidebar_root_for: self
 - [认证/HBA](/docs/pgsql/config/hba)
 - [访问控制](/docs/concept/sec/ac/)
 - [管理预案](/docs/pgsql/admin)
-- [备份恢复](/docs/pgsql/tutorial/pitr)
+- [备份恢复](/docs/pgsql/backup/)
 - [监控接入](/docs/pgsql/monitor)
 - [集群迁移](/docs/pgsql/migration)
 - [仪表盘](/docs/pgsql/monitor)
@@ -97,17 +98,17 @@ sidebar_root_for: self
 
 在 Pigsty 中共有 26 个与 PostgreSQL 相关的监控面板：
 
-|                            总览                             |                               集群                                |                             实例                              |                            数据库                            |
-|:---------------------------------------------------------:|:---------------------------------------------------------------:|:-----------------------------------------------------------:|:---------------------------------------------------------:|
+|                              总览                              |                                 集群                                 |                               实例                               |                             数据库                              |
+|:------------------------------------------------------------:|:------------------------------------------------------------------:|:--------------------------------------------------------------:|:------------------------------------------------------------:|
 | [PGSQL Overview](https://demo.pigsty.cc/ui/d/pgsql-overview) |     [PGSQL Cluster](https://demo.pigsty.cc/ui/d/pgsql-cluster)     |  [PGSQL Instance](https://demo.pigsty.cc/ui/d/pgsql-instance)  | [PGSQL Database](https://demo.pigsty.cc/ui/d/pgsql-database) |
 |    [PGSQL Alert](https://demo.pigsty.cc/ui/d/pgsql-alert)    |     [PGRDS Cluster](https://demo.pigsty.cc/ui/d/pgrds-cluster)     |  [PGRDS Instance](https://demo.pigsty.cc/ui/d/pgrds-instance)  | [PGCAT Database](https://demo.pigsty.cc/ui/d/pgcat-database) |
 |    [PGSQL Shard](https://demo.pigsty.cc/ui/d/pgsql-shard)    |    [PGSQL Activity](https://demo.pigsty.cc/ui/d/pgsql-activity)    |  [PGCAT Instance](https://demo.pigsty.cc/ui/d/pgcat-instance)  |   [PGSQL Tables](https://demo.pigsty.cc/ui/d/pgsql-tables)   |
-|                                                           | [PGSQL Replication](https://demo.pigsty.cc/ui/d/pgsql-replication) |   [PGSQL Persist](https://demo.pigsty.cc/ui/d/pgsql-persist)   |    [PGSQL Table](https://demo.pigsty.cc/ui/d/pgsql-table)    |
-|                                                           |     [PGSQL Service](https://demo.pigsty.cc/ui/d/pgsql-service)     |     [PGSQL Proxy](https://demo.pigsty.cc/ui/d/pgsql-proxy)     |    [PGCAT Table](https://demo.pigsty.cc/ui/d/pgcat-table)    |
-|                                                           |   [PGSQL Databases](https://demo.pigsty.cc/ui/d/pgsql-databases)   | [PGSQL Pgbouncer](https://demo.pigsty.cc/ui/d/pgsql-pgbouncer) |    [PGSQL Query](https://demo.pigsty.cc/ui/d/pgsql-query)    |
-|                                                           |     [PGSQL Patroni](https://demo.pigsty.cc/ui/d/pgsql-patroni)     |   [PGSQL Session](https://demo.pigsty.cc/ui/d/pgsql-session)   |    [PGCAT Query](https://demo.pigsty.cc/ui/d/pgcat-query)    |
-|                                                           |        [PGSQL PITR](https://demo.pigsty.cc/ui/d/pgsql-pitr)        |     [PGSQL Xacts](https://demo.pigsty.cc/ui/d/pgsql-xacts)     |    [PGCAT Locks](https://demo.pigsty.cc/ui/d/pgcat-locks)    |
-|                                                           |                                                                 |  [PGSQL Exporter](https://demo.pigsty.cc/ui/d/pgsql-exporter)  |   [PGCAT Schema](https://demo.pigsty.cc/ui/d/pgcat-schema)   |
+|                                                              | [PGSQL Replication](https://demo.pigsty.cc/ui/d/pgsql-replication) |   [PGSQL Persist](https://demo.pigsty.cc/ui/d/pgsql-persist)   |    [PGSQL Table](https://demo.pigsty.cc/ui/d/pgsql-table)    |
+|                                                              |     [PGSQL Service](https://demo.pigsty.cc/ui/d/pgsql-service)     |     [PGSQL Proxy](https://demo.pigsty.cc/ui/d/pgsql-proxy)     |    [PGCAT Table](https://demo.pigsty.cc/ui/d/pgcat-table)    |
+|                                                              |   [PGSQL Databases](https://demo.pigsty.cc/ui/d/pgsql-databases)   | [PGSQL Pgbouncer](https://demo.pigsty.cc/ui/d/pgsql-pgbouncer) |    [PGSQL Query](https://demo.pigsty.cc/ui/d/pgsql-query)    |
+|                                                              |     [PGSQL Patroni](https://demo.pigsty.cc/ui/d/pgsql-patroni)     |   [PGSQL Session](https://demo.pigsty.cc/ui/d/pgsql-session)   |    [PGCAT Query](https://demo.pigsty.cc/ui/d/pgcat-query)    |
+|                                                              |        [PGSQL PITR](https://demo.pigsty.cc/ui/d/pgsql-pitr)        |     [PGSQL Xacts](https://demo.pigsty.cc/ui/d/pgsql-xacts)     |    [PGCAT Locks](https://demo.pigsty.cc/ui/d/pgcat-locks)    |
+|                                                              |                                                                    |  [PGSQL Exporter](https://demo.pigsty.cc/ui/d/pgsql-exporter)  |   [PGCAT Schema](https://demo.pigsty.cc/ui/d/pgcat-schema)   |
 
 
 ----------------

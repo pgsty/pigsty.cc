@@ -50,7 +50,7 @@ Pigsty 默认启用 [**pgBackRest**](/docs/concept/arch/pgsql#pgbackrest)（[`pg
 - [**延迟从库**](/docs/pgsql/config/cluster#延迟集群)：为关键集群声明一个 `pg_delay: 1h` 的延迟副本。在错误操作尚未回放前，可以暂停复制并提取数据。延迟副本最终仍会追上主库，不能代替备份。
 - **移除保护**：[`pg_safeguard`](/docs/pgsql/param#pg_safeguard) 与 [`etcd_safeguard`](/docs/etcd/param#etcd_safeguard) 开启后，对应的移除剧本会拒绝执行，降低误删集群的风险。
 
-备份的存在不等于恢复的能力。恢复演练应当成为例行工作，具体机制与操作见 [**备份恢复**](/docs/concept/pitr/)。
+备份的存在不等于恢复的能力。恢复演练应当成为例行工作：原理与决策见 [**时间点恢复**](/docs/concept/pitr/)，配置与操作见 [**PGSQL 备份恢复**](/docs/pgsql/backup/)。
 
 
 ---------------------

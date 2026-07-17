@@ -110,4 +110,4 @@ pg-meta:
 - 🔑 [**HBA 规则**](/docs/pgsql/config/hba)：PGSQL 模块 HBA 配置详解
 - 👤 [**访问控制**](/docs/pgsql/config/acl)：角色与权限参数参考
 - ♾️ [**高可用**](/docs/concept/ha/)：业务连续性保障
-- ⏰ [**备份恢复**](/docs/concept/pitr/)：PITR 与灾难恢复
+- ⏰ [**时间点恢复**](/docs/concept/pitr/)：PITR 原理与灾难恢复；操作见 [**PGSQL 备份恢复**](/docs/pgsql/backup/)
