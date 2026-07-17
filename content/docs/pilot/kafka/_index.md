@@ -1,6 +1,6 @@
 ---
 title: 模块：Kafka
-weight: 5040
+weight: 5000
 description: 使用 Pigsty 部署、保护与监控 Apache Kafka 4.x dynamic KRaft 集群。
 icon: fas fa-share-nodes
 module: [KAFKA]
@@ -10,8 +10,9 @@ categories: [参考]
 
 [Kafka](https://kafka.apache.org/) 是一个分布式事件流平台。Pigsty 的 [`KAFKA`](/docs/pilot/kafka) 模块使用 RPM/DEB 软件包，在纳管节点上部署 **Apache Kafka 4.x dynamic KRaft** 集群，并统一管理安全、资源、生命周期与可观测性。
 
-{{% alert title="当前状态：生产基线" color="info" %}}
-当前角色已经实现生产级 v1 合约，而不是早期的静态 KRaft 原型：包括 dynamic KRaft、严格滚动、TLS/SCRAM/ACL、声明式 Topic/User、凭据与证书轮换，以及完整监控链路。默认 `kafka_security: plaintext` 仅适合开发或可信隔离网络；生产部署应显式使用 `kafka_security: scram`，并完成容量、故障、升级与恢复演练。
+{{% alert title="当前状态：Beta 模块" color="info" %}}
+当前 Kafka 模块仍然处于 Pilot / Beta 状态。用于严肃生产环境前请务必充分测试，确保满足业务需求。
+包括 dynamic KRaft、严格滚动、TLS/SCRAM/ACL、声明式 Topic/User、凭据与证书轮换，以及完整监控链路。
 {{% /alert %}}
 
 
@@ -58,23 +59,23 @@ flowchart LR
     style grafana fill:#F29C64,stroke:#c77845,color:#fff
 ```
 
-每个启用 JMX 的 Kafka JVM 都注册为 `job=kafka`。协议型 `kafka_exporter` 只在按 `kafka_seq` 排序后的前两个 Broker-capable 节点运行；单 Broker 集群只运行一个，纯 Controller 不运行。它们返回的是同一逻辑集群视图，Recording Rule 会先去重再聚合。
+每个 Kafka JVM 都注入 JMX Exporter 并注册为 `job=kafka`。协议型 `kafka_exporter` 只在按 `kafka_seq` 排序后的前两个 Broker-capable 节点运行；单 Broker 集群只运行一个，纯 Controller 不运行。它们返回的是同一逻辑集群视图，Recording Rule 会先去重再聚合。
 
 
 --------
 
 ## 文档导航
 
-| 文档 | 内容 |
-|:---|:---|
-| [快速上手](/docs/pilot/kafka/start) | 从单节点到三节点安全集群、客户端接入、参数修改与上线检查 |
-| [集群配置](/docs/pilot/kafka/config) | 拓扑、dynamic KRaft、网络、存储、安全与资源声明 |
-| [参数参考](/docs/pilot/kafka/param) | 16 项持久公开参数及临时运维变量 |
-| [日常管理](/docs/pilot/kafka/admin) | 状态检查、Topic、消息、Consumer Group 与拓扑变更 |
-| [预置剧本](/docs/pilot/kafka/playbook) | `kafka.yml` 生命周期、任务标签、轮换与清理保护 |
-| [监控告警](/docs/pilot/kafka/monitor) | 指标链路、Dashboard、日志查询与告警规则 |
-| [指标定义](/docs/pilot/kafka/metric) | JMX、协议 Exporter 与 Recording Rule 指标字典 |
-| [常见问题](/docs/pilot/kafka/faq) | 角色、身份、安全、Exporter 与扩缩容答疑 |
+| 文档                                 | 内容                                    |
+|:-----------------------------------|:--------------------------------------|
+| [快速上手](/docs/pilot/kafka/start)    | 从单节点到三节点安全集群、客户端接入、参数修改与上线检查          |
+| [集群配置](/docs/pilot/kafka/config)   | 拓扑、dynamic KRaft、网络、存储、安全与资源声明        |
+| [参数参考](/docs/pilot/kafka/param)    | 15 项持久公开参数及临时运维变量                     |
+| [日常管理](/docs/pilot/kafka/admin)    | 状态检查、Topic、消息、Consumer Group 与拓扑变更    |
+| [预置剧本](/docs/pilot/kafka/playbook) | `kafka.yml` 生命周期、任务标签、轮换与清理保护         |
+| [监控告警](/docs/pilot/kafka/monitor)  | 指标链路、Dashboard、日志查询与告警规则              |
+| [指标定义](/docs/pilot/kafka/metric)   | JMX、协议 Exporter 与 Recording Rule 指标字典 |
+| [常见问题](/docs/pilot/kafka/faq)      | 角色、身份、安全、Exporter 与扩缩容答疑              |
 {.full-width}
 
 
@@ -97,15 +98,15 @@ flowchart LR
 
 ## 默认端口
 
-| 端口 | 服务 | 部署范围 | `plaintext` | `scram` |
-|:---:|:---|:---|:---|:---|
-| `9092` | Kafka Broker | Broker-capable 节点 | PLAINTEXT | SASL_SSL + SCRAM-SHA-512 |
-| `9095` | KRaft Controller | Controller-capable 节点 | PLAINTEXT | 双向 TLS |
-| `9308` | kafka_exporter | 最多两个 Broker-capable 节点 | HTTP 指标 | HTTP 指标，后端使用 TLS/SCRAM |
-| `9404` | JMX Exporter | 所有启用 JMX 的 Kafka 节点 | HTTP 指标 | HTTP 指标 |
+|   端口   | 服务               | 部署范围                   | `plaintext` | `scram`                  |
+|:------:|:-----------------|:-----------------------|:------------|:-------------------------|
+| `9092` | Kafka Broker     | Broker-capable 节点      | PLAINTEXT   | SASL_SSL + SCRAM-SHA-512 |
+| `9093` | KRaft Controller | Controller-capable 节点  | PLAINTEXT   | 双向 TLS                   |
+| `9308` | kafka_exporter   | 最多两个 Broker-capable 节点 | HTTP 指标     | HTTP 指标，后端使用 TLS/SCRAM   |
+| `9404` | JMX Exporter     | 所有 Kafka 节点            | HTTP 指标     | HTTP 指标                  |
 {.full-width}
 
-四个端口必须彼此不同。目标节点同时属于 `infra` 分组时，角色还会阻止 Controller 端口与 `alertmanager_port` 冲突。JMX 与协议 Exporter 的 HTTP 端口仍应通过防火墙限制在监控网络内。
+四个端口必须彼此不同。注意 `9093` 与 Pigsty Infra 节点上 Alertmanager 的默认端口相同：若 Kafka 与 Infra 复用节点，请调整 [`kafka_controller_port`](/docs/pilot/kafka/param#kafka_controller_port)。JMX 与协议 Exporter 的 HTTP 端口仍应通过防火墙限制在监控网络内。
 
 
 --------

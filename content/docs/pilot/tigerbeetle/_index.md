@@ -1,5 +1,5 @@
 ---
-title: 模块：TigerBeetle
+title: TigerBeetle
 weight: 5060
 description: 使用 Pigsty 部署 TigerBeetle，金融会计事务专用数据库。
 icon: fas fa-bug

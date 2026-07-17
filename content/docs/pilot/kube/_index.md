@@ -1,6 +1,7 @@
 ---
 title: 模块：Kubernetes
-weight: 5070
+linkTitle: "模块：KUBE"
+weight: 5020
 description: 使用 Pigsty 安装 Kubernetes，生产级无状态容器调度编排私有云平台
 icon: fas fa-dharmachakra
 module: [PILOT]

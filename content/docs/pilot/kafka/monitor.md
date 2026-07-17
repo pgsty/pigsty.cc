@@ -19,27 +19,28 @@ KAFKA 模块使用两个互补的 Exporter：
 
 | 采集面 | 服务/方式 | Job | 节点范围 | 主要内容 |
 |:---|:---|:---|:---|:---|
-| JVM 与 Kafka 内部 | JMX Exporter Java Agent `:9404` | `kafka` | 所有 Kafka 节点 | JVM、Broker 吞吐、复制、请求路径、KRaft、Controller |
-| Kafka 协议视角 | `kafka_exporter :9308` | `kafka_exporter` | `kafka_seq` 最小的至多两个 Broker-capable 节点 | Broker、Topic、Partition、Offset、Consumer Group、Lag |
+| JVM 与 Kafka 内部 | JMX Exporter Java Agent `:9404` | `kafka`（带 `role` 标签） | 所有 Kafka 节点 | JVM、Broker 吞吐、复制、请求路径、KRaft、Controller |
+| Kafka 协议视角 | `kafka_exporter :9308` | `kafka`（无 `role` 标签） | `kafka_seq` 最小的至多两个 Broker-capable 节点 | Broker、Topic、Partition、Offset、Consumer Group、Lag |
 | 主机资源 | node_exporter | `node` | 纳管节点 | CPU、内存、磁盘、网络、文件系统 |
 | 日志 | Journald → Vector → VictoriaLogs | `syslog` | 所有 Kafka 节点 | Kafka 与 Exporter 结构化检索日志 |
 {.full-width}
 
-角色在每一个 Infra 节点生成文件发现目标：
+角色在每一个 Infra 节点为每个实例生成一个文件发现目标，JMX 目标与（被选中节点的）协议 Exporter 目标都在同一文件、同一 `kafka` 采集任务下：
 
 ```text
 /infra/targets/kafka/<kafka_instance>.yml
-/infra/targets/kafka_exporter/<kafka_instance>.yml
 ```
 
-单 Broker 集群只运行一个协议 Exporter；多 Broker 集群最多运行两个。纯 Controller 只注册第一类 JMX 目标；未被选择的 Broker 与纯 Controller 都没有协议 Exporter 目标，这是预期行为。角色会停止落选节点的 Unit，并清理环境文件、CA 副本与 stale Target。
+单 Broker 集群只运行一个协议 Exporter；多 Broker 集群最多运行两个。纯 Controller 只注册 JMX 目标；未被选择的 Broker 与纯 Controller 都没有协议 Exporter 目标，这是预期行为。Target 文件每次完整运行按当前放置刷新；实例 Target 的删除由 `kafka-rm.yml` 的注销步骤完成。
 
 
 --------
 
 ## 标签模型
 
-### `job=kafka`
+两类目标都注册在同一 `job=kafka` 采集任务下，通过有无 `role` 标签区分。
+
+### JMX 目标
 
 | 标签 | 含义 | 示例 |
 |:---|:---|:---|
@@ -52,9 +53,11 @@ KAFKA 模块使用两个互补的 Exporter：
 | `node_id` | KRaft 节点号 | `1` |
 {.full-width}
 
-### `job=kafka_exporter`
+### 协议 Exporter 目标
 
-协议 Exporter 目标包含 `cls`、`ins`、`ip` 与 `instance`。它从 Broker 查询整个 Kafka 集群，因此同一集群的两个 Exporter 可能返回相同 Topic/Partition/Consumer Group 视图。集群级 Recording Rule 会先在 Exporter 实例间去重，再汇总逻辑集群速率。`scram` 模式下，Exporter 连接 Kafka 所需的 TLS/SCRAM 参数由角色自有监控身份自动生成。
+协议 Exporter 目标只包含 `cls`、`ins`、`ip` 与 `instance`（`10.10.10.11:9308`），没有 `role`/`node_id` 标签。vmagent 端的记录规则据此区分两类可用性：`kafka_up` 为 `up{job="kafka",role=~".+"}`，`kafka_exporter_up` 为 `up{job="kafka",role=""}`。
+
+Exporter 从 Broker 查询整个 Kafka 集群，因此同一集群的两个 Exporter 可能返回相同 Topic/Partition/Consumer Group 视图。集群级 Recording Rule 会先在 Exporter 实例间去重，再汇总逻辑集群速率。`scram` 模式下，Exporter 连接 Kafka 所需的 TLS/SCRAM 参数由角色自有监控身份自动生成。
 
 
 --------
@@ -123,7 +126,7 @@ Pigsty 提供三个互补 Dashboard：
 | 某个 Broker 是否过载？ | Kafka Node | 请求路径 → JVM → Node 资源 |
 | KRaft Controller 是否健康？ | Kafka Node | KRaft Metadata Plane → Controller Health |
 | 是否存在 Leaderless/URP/ISR 问题？ | Kafka Overview | Cluster → Kafka Node |
-| Exporter 缺数还是 Kafka 本身异常？ | Instance + Node | 对比 `up{job="kafka_exporter"}` 与 `up{job="kafka"}` |
+| Exporter 缺数还是 Kafka 本身异常？ | Instance + Node | 对比 `kafka_exporter_up` 与 `kafka_up` |
 {.full-width}
 
 
@@ -158,7 +161,7 @@ Kafka 规则文件位于 `/infra/rules/kafka.yml`。主要记录指标如下：
 
 | 告警 | 条件 | 持续时间 | 级别 | 首选下钻 |
 |:---|:---|:---:|:---:|:---|
-| `KafkaDown` | `kafka_up < 1` | 1m | CRIT | Kafka Node / `ins` |
+| `KafkaDown` | `up{job="kafka"} < 1` | 1m | CRIT | Kafka Node / `ins` |
 | `KafkaExporterDown` | `up{job="kafka_exporter"} < 1` | 1m | CRIT | Kafka Instance / `ins` |
 | `KafkaJmxScrapeError` | `jmx_scrape_error > 0` | 3m | WARN | Kafka Node / JMX Collector |
 | `KafkaJvmHeapHigh` | Heap 使用率 > 90% | 15m | WARN | Kafka Node / JVM Memory |
@@ -184,7 +187,8 @@ Kafka 规则文件位于 `/infra/rules/kafka.yml`。主要记录指标如下：
 
 ```promql
 kafka_up
-up{job="kafka_exporter"}
+kafka_exporter_up
+up{job="kafka"}
 ```
 
 检查某集群复制健康：
@@ -198,7 +202,7 @@ max by (cls) (kafka_controller_offline_partition_count{job="kafka"})
 检查 Consumer Lag：
 
 ```promql
-topk(20, kafka_consumergroup_lag_sum{job="kafka_exporter",cls="kf-main"})
+topk(20, kafka_consumergroup_lag_sum{cls="kf-main"})
 ```
 
 检查请求饱和与延迟：
@@ -238,13 +242,13 @@ curl -fsS http://<kafka-ip>:9404/metrics | grep '^jmx_scrape_error'
 curl -fsS http://127.0.0.1:9308/metrics | grep '^kafka_brokers'
 ```
 
-在 Infra 节点检查文件发现：
+在 Infra 节点检查文件发现（每实例一个文件，被选中节点的文件含 JMX 与协议 Exporter 两个目标）：
 
 ```bash
 ls -l /infra/targets/kafka/
-ls -l /infra/targets/kafka_exporter/
+cat /infra/targets/kafka/kf-main-1.yml
 ```
 
-然后在 VictoriaMetrics 查询 `up{job="kafka"}` 与 `up{job="kafka_exporter"}`。自定义 exporter 指标在抓取失败后可能短暂保留旧样本，端点存活应以 Prometheus 原生 `up` 为准。若原始端点正常但记录指标缺失，依次检查文件发现、VictoriaMetrics Target、网络可达性、规则加载与标签；若 JMX HTTP 正常但 `jmx_scrape_error` 为 `1`，检查 Kafka 日志和 `/etc/kafka/jmx_exporter.yml` 的 MBean 匹配情况。
+然后在 VictoriaMetrics 查询 `up{job="kafka"}`（或记录指标 `kafka_up` 与 `kafka_exporter_up`）。自定义 exporter 指标在抓取失败后可能短暂保留旧样本，端点存活应以 Prometheus 原生 `up` 为准。若原始端点正常但记录指标缺失，依次检查文件发现、VictoriaMetrics Target、网络可达性、规则加载与标签；若 JMX HTTP 正常但 `jmx_scrape_error` 为 `1`，检查 Kafka 日志和 `/etc/kafka/jmx_exporter.yml` 的 MBean 匹配情况。
 
 完整指标语义参阅 [指标定义](/docs/pilot/kafka/metric)。
