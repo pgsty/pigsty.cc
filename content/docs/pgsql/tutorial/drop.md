@@ -30,7 +30,7 @@ SELECT * FROM pg_dirtyread('tablename') AS t(col1 type1, col2 type2, ...);
 1. 确认此数据是否可以通过业务系统或其他数据系统找回，如果可以，直接从业务侧修复。
 2. 确认是否有延迟从库，如果有，推进延迟从库至误删时间点，查询出来恢复。
 3. 如果数据已经确认删除，确认备份信息，恢复范围是否覆盖误删时间点，如果覆盖，开始 PITR
-4. 确认是整集群原地 [PITR 回滚](/docs/pgsql/backup/restore)，还是新开服务器重放，还是用从库来重放，并执行恢复策略
+4. 确认是整集群原地 [PITR 回滚](/docs/pgsql/backup/restore)，还是先 [克隆新集群](/docs/pgsql/backup/cluster/) 验证数据，还是用从库来重放，并执行恢复策略
 
 
 ## 误删集群
@@ -41,4 +41,3 @@ SELECT * FROM pg_dirtyread('tablename') AS t(col1 type1, col2 type2, ...);
 > **警告**：在这种情况，您的数据将无法找回！**请务必三思而后行！**
 
 建议：对于生产环境，您可以在配置清单中全局配置此参数为 `false`，在移除集群时保留备份。
-

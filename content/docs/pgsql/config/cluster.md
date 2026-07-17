@@ -352,7 +352,7 @@ Apply these changes? [y/N]: y
 
 当某些元组和表格被意外删除时，你可以通过修改此参数的方式，将此延迟集群推进到适当的时间点，并从中读取数据，快速修复原始集群。
 
-延迟集群需要额外的资源，但比起 [PITR](/docs/concept/pitr#恢复) 要快得多，并且对系统的影响也小得多，对于非常关键的集群，可以考虑搭建延迟集群。
+延迟集群需要额外的资源，但比起 [PITR](/docs/concept/pitr/restore/) 要快得多，并且对系统的影响也小得多，对于非常关键的集群，可以考虑搭建延迟集群。
 
 
 
@@ -409,6 +409,5 @@ SELECT create_reference_table('pgbench_branches')         ; SELECT truncate_loca
 SELECT create_reference_table('pgbench_history')          ; SELECT truncate_local_data_after_distributing_table($$public.pgbench_history$$);
 SELECT create_reference_table('pgbench_tellers')          ; SELECT truncate_local_data_after_distributing_table($$public.pgbench_tellers$$);
 ```
-
 
 

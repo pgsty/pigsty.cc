@@ -64,14 +64,14 @@ pgbackrest_repo:                  # 仓库定义：https://pgbackrest.org/config
     s3_endpoint: sss.pigsty       # MinIO 服务端点（负载均衡域名）
     s3_bucket: pgsql              # 桶名称
     s3_key: pgbackrest            # 访问密钥
-    s3_key_secret: S3User.Backup  # 私钥，生产环境务必修改！
+    s3_key_secret: S3User.Backup  # MinIO 用户密钥
     storage_ca_file: /etc/pki/ca.crt  # 使用 Pigsty 自签名 CA 验证 HTTPS
     block: y                      # 启用块级增量备份
     bundle: y                     # 小文件打包存储
     cipher_type: aes-256-cbc      # 仓库加密：AES-256-CBC
-    cipher_pass: pgBackRest       # 加密密码，生产环境务必修改！
+    cipher_pass: pgBackRest       # 仓库加密密码
     retention_full_type: time     # 按时间保留全量备份
-    retention_full: 14            # 保留过去 14 天的备份
+    retention_full: 14            # 按时间保留 14 天
 ```
 
 注意两套预置仓库的策略差异：**本地仓库** 追求简单直接 —— 不加密、不打包、按份数保留；
@@ -112,10 +112,10 @@ WAL 归档链路在集群初始化时自动接通：只要 [**`pgbackrest_enable
 
 基础备份的生产则有两个入口：
 
-* **初始备份**：集群初始化完成后，Pigsty 自动在主库上执行一次全量备份（留下 `/etc/pgbackrest/initial.done` 标记，避免重复），
-  从第一天起就具备 PITR 能力。可通过 [**`pgbackrest_init_backup`**](/docs/pgsql/param#pgbackrest_init_backup) 关闭。
+* **初始备份**：集群初始化完成后，Pigsty 默认在主库上尝试执行一次全量备份（留下 `/etc/pgbackrest/initial.done` 标记，避免重复）。
+  可通过 [**`pgbackrest_init_backup`**](/docs/pgsql/param#pgbackrest_init_backup) 关闭。
 * **定时备份**：[**`pg_crontab`**](/docs/pgsql/param#pg_crontab) 参数声明备份计划，写入 `postgres` 用户的 crontab。
-  Pigsty 内置配置模板默认声明每天凌晨一点的全量备份：
+  Pigsty 随附的标准集群配置声明每天凌晨一点的全量备份；角色参数本身的默认值为空列表：
 
 ```yaml
 pg_crontab: [ '00 01 * * * /pg/bin/pg-backup full' ]
@@ -128,16 +128,16 @@ pg_crontab: [ '00 01 * * * /pg/bin/pg-backup full' ]
 
 ## 备份跟随主库
 
-pgBackRest 安装在集群的 **所有** 节点上，但任何时刻只有 **主库** 实际执行备份与归档：
+pgBackRest 安装在集群的 **所有** 节点上，但任何时刻只有 **当前主库** 实际执行备份与归档：
 `pg-backup` 在运行前检查节点角色，从库上直接退出。这个看似简单的设计带来一个重要性质 —— **备份链路与高可用拓扑解耦**：
 
 * 所有节点的备份配置完全相同，crontab 也完全相同；
-* [**故障切换**](/docs/concept/ha) 后，新主库的定时任务自然开始生效，备份与归档无缝接续，无需任何人工干预；
-* 备份仓库始终只有一份权威数据流，不存在双写冲突。
+* [**故障切换**](/docs/concept/ha) 后，新主库自动接续后续备份与 WAL 归档，无需人工干预；
+* 备份仓库只有一份由当前主库写入的权威数据流，不存在双写冲突。
 
-仓库在另一个方向上也参与高可用：当使用远程仓库时，Pigsty 将 pgBackRest 注册为 Patroni 的副本创建方式
-（`create_replica_methods`）。新从库可以直接从备份仓库拉取数据（`pgbackrest --delta restore`），
-而不必从主库全量复制 —— 造从库的流量压力从主库转移到了备份仓库。
+仓库在另一个方向上也参与高可用：当使用远程仓库时，Pigsty 将 pgBackRest 注册为 Patroni 的备用副本创建方式
+（`create_replica_methods`）。默认仍先尝试 `basebackup`，失败后才使用 `pgbackrest --delta restore` 从仓库拉取数据；
+走到这一后备路径时，造从库的流量压力会从主库转移到备份仓库。
 
 
 ----------------
@@ -146,20 +146,18 @@ pgBackRest 安装在集群的 **所有** 节点上，但任何时刻只有 **主
 
 出厂配置中还有几处针对性能的预置判断，体现同一个原则：**备份为生产让路，恢复全力以赴**。
 
-| 配置 | 默认值 | 考量 |
-|:---|:---|:---|
-| 压缩算法 | `zstd` | 高压缩比与高吞吐的平衡点，备份体积通常远小于原库 |
-| 备份/归档并行度 | 约 1/4 核数（2～4 进程） | 备份不与生产负载争抢 CPU |
-| 恢复并行度 | 核数（至多 8 进程） | 恢复时争分夺秒，资源全开 |
-| 异步归档 | `archive-async=y` | 经 `/pg/spool` 假脱机批量推送，归档不阻塞写入 |
-| 归档队列上限 | 4 GiB | 仓库长时间不可用时丢弃归档保护主库磁盘 —— 宁可牺牲 PITR 窗口，不让主库停摆 |
-| 快速启动 | `start-fast=y` | 备份开始时立即执行检查点，不等常规检查点周期 |
-| 增量恢复 | `delta=y` | 恢复时复用数据目录中未变化的文件，大幅缩短 RTO |
+| 配置       | 默认值               | 考量                            |
+|:---------|:------------------|:------------------------------|
+| 压缩算法     | `zstd`            | 高压缩比与高吞吐的平衡点，备份体积通常远小于原库      |
+| 备份/归档并行度 | 约 1/4 核数（2～4 进程）  | 备份不与生产负载争抢 CPU                |
+| 恢复并行度    | 核数（至多 8 进程）       | 恢复时争分夺秒，资源全开                  |
+| 异步归档     | `archive-async=y` | 经 `/pg/spool` 假脱机批量推送，归档不阻塞写入 |
+| 归档队列上限   | 4 GiB             | 未归档 WAL 积压超限时丢弃归档，保护主库磁盘不被写满 |
+| 快速启动     | `start-fast=y`    | 备份开始时立即执行检查点，不等常规检查点周期        |
+| 增量恢复     | `delta=y`         | 恢复时复用数据目录中未变化的文件，大幅缩短 RTO     |
 {.full-width}
 
-最后一行值得强调：归档队列上限是一个经过深思的取舍。WAL 归档失败时 PostgreSQL 默认会无限堆积 WAL，
-最终写满磁盘拖垮主库 —— Pigsty 的配置选择在积压超过 4 GiB 时丢弃归档，用"恢复窗口出现缺口"换取"主库绝不停摆"。
-备份仓库的可用性因此需要被监控告警覆盖，而非默默假设它永远在线。
+归档队列上限的具体故障行为见 [**工作原理**](/docs/concept/pitr/mechanism/#历史wal-归档)。
 
 
 ----------------
@@ -170,11 +168,11 @@ pgBackRest 安装在集群的 **所有** 节点上，但任何时刻只有 **主
 将仓库中的备份状态导出为监控指标：最近一次备份的时刻、类型、大小、持续时间、错误状态 ——
 Grafana 监控面板与告警规则开箱即用。此外还有几个便捷入口：
 
-| 入口 | 说明 |
-|:---|:---|
-| `pb info` | `pgbackrest info` 的别名封装，查看仓库中的备份列表 |
-| `/pg/log/pgbackrest/` | 备份、归档、恢复的详细日志 |
-| `pg-backup` | 手动触发备份：`full` / `diff` / `incr` |
+| 入口                    | 说明                                 |
+|:----------------------|:-----------------------------------|
+| `pb info`             | `pgbackrest info` 的别名封装，查看仓库中的备份列表 |
+| `/pg/log/pgbackrest/` | 备份、归档、恢复的详细日志                      |
+| `pg-backup`           | 手动触发备份：`full` / `diff` / `incr`    |
 {.full-width}
 
 关于备份的日常管理命令，请参阅 [**管理命令**](/docs/pgsql/backup/admin/)；

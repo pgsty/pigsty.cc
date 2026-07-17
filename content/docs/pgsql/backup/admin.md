@@ -46,7 +46,7 @@ categories: [任务]
 ./pgsql.yml -t pg_backup -l pg-meta   # 配置 pgbackrest，创建 stanza
 ```
 
-集群初始化后 Pigsty 会自动执行一次初始全量备份（标记文件 `/etc/pgbackrest/initial.done`）；
+集群初始化后 Pigsty 会自动尝试执行一次初始全量备份（标记文件 `/etc/pgbackrest/initial.done`）；该任务会忽略失败，标记也不能证明备份成功，应以 `pb info` 为准。
 定时备份计划通过 [**`pg_crontab`**](/docs/pgsql/param#pg_crontab) 声明，详见 [**备份策略**](/docs/pgsql/backup/policy/)。
 
 
@@ -63,7 +63,8 @@ categories: [任务]
 ```
 
 使用 [**`pg_rm_backup`**](/docs/pgsql/param/#pg_rm_backup)（设为 `false`）保留备份，使用 `pg_backup` 子任务只删备份。
-如果备份仓库启用了 [**对象锁定**](/docs/pgsql/backup/repository/#仓库锁定)，删除操作将失败 —— 这正是锁定的设计目的。
+如果备份仓库为对象版本配置了 [**对象锁定保留期**](/docs/pgsql/backup/repository/#仓库锁定)，
+删除可能只写入 Delete Marker，被锁定的历史版本会继续占用空间，直到保留期结束。
 
 {{% alert color="warning" title="备份删除" %}}
 删除备份可能导致永久性数据丢失，这是一个危险操作，请务必谨慎。
@@ -102,8 +103,8 @@ pig pb list      # 列出仓库中所有 stanza
 
 输出解读的关键是 [**备份标签**](/docs/pgsql/backup/mechanism/#备份链与备份标签)：
 `20250715-013657F` 为全量备份（`F`），`..._20250715-013724D` 为差异备份（`D`），`..._20250715-013730I` 为增量备份（`I`）——
-下划线前的部分标识备份链所依附的全量备份。`wal archive min/max` 显示归档的连续范围，
-它与最早的全量备份共同决定了 [**恢复窗口**](/docs/concept/pitr/mechanism/#恢复窗口)。
+下划线前的部分标识备份链所依附的全量备份。`wal archive min/max` 显示 WAL 归档范围，
+它与最早的全量备份共同描述 [**恢复窗口**](/docs/concept/pitr/mechanism/#恢复窗口)。
 
 监控系统同样提供备份状态的持续观测：`pgbackrest_exporter`（端口 `9854`）导出的
 [**指标**](/docs/pgbackrest/metric) 覆盖最近备份时间、类型、大小与错误状态，可直接用于告警。
@@ -162,7 +163,7 @@ pig pb log tail      # 跟踪最新日志
 ls /pg/log/pgbackrest/   # 日志目录：备份、归档、恢复各有独立日志文件
 ```
 
-PITR 过程中 PostgreSQL 的恢复日志位于 `/pg/tmp/recovery.log`。
+使用 `pgsql-pitr.yml` 时，PostgreSQL 的恢复日志位于 `/pg/tmp/recovery.log`。
 
 
 --------

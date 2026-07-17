@@ -129,7 +129,7 @@ PostgreSQL 例行维护的背景文章可以看 [**PostgreSQL 例行维护**](ht
 
 ## 备份与恢复
 
-PITR 先读 [**时间点恢复**](/docs/concept/pitr/)，再读 [**工作原理**](/docs/concept/pitr/mechanism/)、[**实现架构**](/docs/concept/pitr/arch/)、[**策略权衡**](/docs/concept/pitr/tradeoff/) 和 [**典型场景**](/docs/concept/pitr/scenarios/)。
+PITR 先读 [**时间点恢复**](/docs/concept/pitr/)，再读 [**工作原理**](/docs/concept/pitr/mechanism/)、[**实现架构**](/docs/concept/pitr/arch/)、[**策略权衡**](/docs/concept/pitr/tradeoff/)、[**声明式恢复**](/docs/concept/pitr/restore/) 和 [**典型场景**](/docs/concept/pitr/scenarios/)。
 
 配置和维护看 [**备份恢复**](/docs/pgsql/backup/)、[**备份策略**](/docs/pgsql/backup/policy/)、[**备份机制**](/docs/pgsql/backup/mechanism/)、[**备份仓库**](/docs/pgsql/backup/repository/) 和 [**备份管理命令**](/docs/pgsql/backup/admin/)。
 

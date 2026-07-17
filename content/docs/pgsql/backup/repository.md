@@ -46,7 +46,7 @@ pgbackrest_repo:                  # pgbackrest 仓库配置: https://pgbackrest.
     cipher_type: aes-256-cbc      # 为远程备份仓库启用 AES 加密
     cipher_pass: pgBackRest       # AES 加密密码，默认为 'pgBackRest'
     retention_full_type: time     # 按时间保留全量备份
-    retention_full: 14            # 保留最近 14 天的全量备份
+    retention_full: 14            # 按时间保留 14 天
 ```
 
 两套仓库的预置策略有意不同：`local` 不加密、不打包、按份数保留，追求简单与恢复速度；
@@ -54,7 +54,8 @@ pgbackrest_repo:                  # pgbackrest 仓库配置: https://pgbackrest.
 
 {{% alert color="warning" title="生产环境请修改默认密码" %}}
 使用远程仓库时，请务必修改默认的 `cipher_pass` 加密密码与 `s3_key_secret` 访问密钥。
-加密密码一旦遗失，仓库中的备份将无法解密恢复 —— 请妥善保管。
+示例中的 `pgBackRest` 与 `S3User.Backup` 是公开默认值，不能直接用于生产环境。
+加密密码一旦遗失，仓库中的备份将无法解密恢复 —— 请与备份分开妥善保管，具体要求参阅 [**部署安全**](/docs/deploy/security/#备份与恢复)。
 {{% /alert %}}
 
 
@@ -66,7 +67,7 @@ pgbackrest_repo:                  # pgbackrest 仓库配置: https://pgbackrest.
 （全量备份过期时，依附它的差异/增量备份与对应 WAL 归档一并清除）：
 
 - `retention_full_type: count` + `retention_full: 2`：按份数保留 —— 保留最近 2 个全量备份（新备份完成前短暂存在第 3 个）
-- `retention_full_type: time` + `retention_full: 14`：按时间保留 —— 保留最近 14 天内的全量备份
+- `retention_full_type: time` + `retention_full: 14`：按时间保留 —— 至少留下一份年龄达到 14 天的全量备份后，才会删除更老的备份
 
 保留策略与恢复窗口、空间占用的量化关系，请参阅 [**备份策略**](/docs/pgsql/backup/policy/)；
 手动清理过期备份的方法，请参阅 [**管理命令**](/docs/pgsql/backup/admin/#清理过期备份)。
@@ -87,8 +88,8 @@ all:
     minio: { hosts: { 10.10.10.10: { minio_seq: 1 }} ,vars: { minio_cluster: minio }}
 ```
 
-注意：pgbackrest 只支持通过 **HTTPS 与域名** 访问对象存储，因此 MinIO 必须以域名（默认 `sss.pigsty`）
-和 HTTPS 端点提供服务 —— Pigsty 的默认配置已用自签名 CA（`/etc/pki/ca.crt`）打通这条链路。
+Pigsty 的 MinIO 仓库预设通过域名（默认 `sss.pigsty`）和 HTTPS 端点访问对象存储，
+并使用自签名 CA（`/etc/pki/ca.crt`）验证这条链路。
 默认的 `pgsql` 桶与 `pgbackrest` 访问用户在 MinIO 集群初始化时自动创建。
 
 对于严肃的生产部署，建议使用多节点 MinIO 集群（MNMD，纠删码容错），参阅 [**MinIO 配置**](/docs/minio)。
@@ -118,9 +119,9 @@ pgbackrest_repo:                  # pgbackrest 仓库配置: https://pgbackrest.
     bundle_limit: 20MiB           # 文件包大小限制，对象存储建议 20MiB
     bundle_size: 128MiB           # 文件包目标大小，对象存储建议 128MiB
     cipher_type: aes-256-cbc      # 为远程备份仓库启用 AES 加密
-    cipher_pass: pgBackRest       # AES 加密密码，务必修改！
+    cipher_pass: pgBackRest       # AES 加密密码
     retention_full_type: time     # 按时间保留全量备份
-    retention_full: 14            # 保留最近 14 天的全量备份
+    retention_full: 14            # 按时间保留 14 天
 
   local:                          # 保留默认本地仓库定义，便于随时切换
     path: /pg/backup
@@ -150,7 +151,8 @@ pgbackrest_repo:                  # pgbackrest 仓库配置: https://pgbackrest.
 
 ## 仓库版本控制
 
-对象存储的 **版本控制**（Versioning）为仓库提供了"备份的备份"：即使备份文件被覆盖或删除，历史版本仍可找回。
+对象存储的 **版本控制**（Versioning）为仓库提供同一存储系统内的版本保护：即使备份文件被覆盖或删除，历史版本仍有机会找回。
+它与当前仓库共享同一故障域和管理平面，不能替代独立的异地或离线副本。
 您可以在 [**`minio_buckets`**](/docs/minio/param#minio_buckets) 中为桶添加 `versioning` 标志启用：
 
 ```yaml
@@ -168,13 +170,14 @@ minio_buckets:
 
 ## 仓库锁定
 
-部分对象存储（S3、MinIO 等）支持 **对象锁定**（Object Lock / WORM）：写入后在保留期内不可修改、不可删除 ——
-即使攻击者拿到了数据库主机与备份凭据的完整权限，也无法销毁已有备份。这是对抗勒索攻击的关键防线。
+部分对象存储（S3、MinIO 等）支持 **对象锁定**（Object Lock / WORM）：对对象版本配置保留模式与期限后，
+锁定版本在保留期内不可修改、不可永久删除。这是对抗勒索攻击的重要防线，但普通删除仍可能写入 Delete Marker，
+暂时隐藏当前对象；恢复时需要保留版本与版本管理能力。
 
 - [MinIO 对象锁定](https://min.io/docs/minio/linux/administration/object-management/object-retention.html)
 - [AWS S3：使用 Object Lock 锁定对象](https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-lock.html)
 
-在 [**`minio_buckets`**](/docs/minio/param#minio_buckets) 中添加 `lock` 标志即可启用 MinIO 锁定：
+在 [**`minio_buckets`**](/docs/minio/param#minio_buckets) 中添加 `lock` 标志，只会在创建桶时启用对象锁定能力与版本控制：
 
 ```yaml
 minio_buckets:
@@ -183,8 +186,13 @@ minio_buckets:
   - { name: data }
 ```
 
-注意：锁定的仓库同样会拒绝 **您自己** 的删除操作 —— [**移除集群备份**](/docs/pgsql/backup/admin/#移除备份)
-在锁定仓库上会失败，这正是它的设计目的。
+这一步还没有给新对象设置 WORM 保留期。您还需要在 MinIO 中使用 `mcli retention set` 或控制台配置默认的
+`GOVERNANCE` / `COMPLIANCE` 模式与期限，并用 `mcli retention info` 验证。`GOVERNANCE` 可以被拥有 bypass 权限的主体绕过；
+`COMPLIANCE` 在期限内连 root 用户也不能解除。
+
+锁定会改变 [**过期清理**](/docs/pgsql/backup/admin/#清理过期备份) 与 [**移除集群备份**](/docs/pgsql/backup/admin/#移除备份)
+的行为：pgBackRest 可以让对象在逻辑上过期，但被锁定的历史版本仍会占用空间，直到保留期结束。上线前应在测试桶中验证
+备份、expire、删除标记清理和版本恢复的完整流程。
 
 
 --------

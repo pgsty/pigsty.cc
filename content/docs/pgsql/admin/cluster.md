@@ -401,12 +401,12 @@ ansible pg-test -b -a 'systemctl reload patroni'    # 重载 Patroni 服务
 ## 克隆集群
 
 有两种克隆集群的方式：使用 [**备份集群**](/docs/pgsql/config/cluster#备份集群) 功能，或者使用 [**时间点恢复**](/docs/pgsql/backup/restore#快速上手) 功能。
-前者配置简单，无需依赖，但只能克隆指定集群的最新状态；后者依赖集中式的 [**备份仓库**](/docs/pgsql/backup/repository)（例如 MinIO），但可以克隆到备份保留期内的任意时间点。
+前者配置简单，无需依赖，但只能克隆指定集群的最新状态；后者依赖集中式的 [**备份仓库**](/docs/pgsql/backup/repository)（例如 MinIO），可以克隆到恢复窗口内的任意时间点。
 
 | 方式   | 优点        | 缺点        | 适用场景       |
 |:-----|:----------|:----------|:-----------|
 | 备份集群 | 配置简单，无需依赖 | 只能克隆最新状态  | 灾备，读写分离，迁移 |
-| PITR | 可恢复到任意时间点 | 依赖集中式备份仓库 | 误操作恢复，数据审计 |
+| PITR | 可恢复到窗口内任意时点 | 依赖集中式备份仓库 | 误操作恢复，数据审计 |
 
 
 ### 使用备份集群克隆
@@ -487,7 +487,7 @@ Apply these changes? [y/N]: y
 
 ### 使用 PITR 克隆
 
-[**时间点恢复**](/docs/pgsql/backup/restore)（PITR）允许您将集群恢复到备份保留期内的任意时间点。
+[**时间点恢复**](/docs/pgsql/backup/restore)（PITR）允许您将集群恢复到恢复窗口内的任意时间点。
 此方式依赖集中式的 [**备份仓库**](/docs/pgsql/backup/repository)（如 MinIO/S3），但功能更加强大。
 
 要使用 PITR 克隆集群，在配置中添加 [**`pg_pitr`**](/docs/pgsql/backup/restore#pitr-参数定义) 参数指定恢复目标：
@@ -501,6 +501,8 @@ pg-meta2:
     pg_pitr:
       cluster: pg-meta                    # 从 pg-meta 的备份恢复
       time: '2025-01-10 10:00:00+00'      # 恢复到指定时间点
+      archive: false                       # 独立恢复阶段禁用归档
+      action: promote                      # 完成重放后提升并启动集群
 ```
 
 使用 `pgsql-pitr.yml` 剧本执行克隆：
@@ -508,13 +510,13 @@ pg-meta2:
 {{< tabpane text=true persist=header >}}
 {{% tab header="剧本" %}}
 ```bash
-./pgsql-pitr.yml -l pg-meta2    # 从 pg-meta 备份克隆 pg-meta2
+./pgsql-pitr.yml -l pg-meta2    # 使用上面显式声明的 action: promote
 ```
 {{% /tab %}}
 {{% tab header="命令行" %}}
 ```bash
 # 也可以通过命令行参数指定 PITR 选项
-./pgsql-pitr.yml -l pg-meta2 -e '{"pg_pitr": {"cluster": "pg-meta", "time": "2025-01-10 10:00:00+00"}}'
+./pgsql-pitr.yml -l pg-meta2 -e '{"pg_pitr": {"cluster": "pg-meta", "time": "2025-01-10 10:00:00+00", "archive": false, "action": "promote"}}'
 ```
 {{% /tab %}}
 {{< /tabpane >}}
@@ -530,13 +532,7 @@ PITR 支持多种恢复目标类型：
 | 最新    | `pg_pitr: {}`                    | 恢复到 WAL 归档末尾 |
 
 {{% alert title="PITR 恢复后处理" color="info" %}}
-Pigsty v4.4 的 PITR 默认会保留归档设置（`archive: true`）。如果您显式设置了 `archive: false` 做探索性恢复，确认数据正确后应重置 `archive_mode`、重启集群，并执行新的全量备份：
-
-```bash
-psql -c 'ALTER SYSTEM RESET archive_mode;'
-pg restart <cls>
-pg-backup full    # 执行新的全量备份
-```
+跨集群恢复完成后，按 [**克隆善后**](/docs/pgsql/backup/cluster/#克隆善后) 处理归档与 stanza。
 {{% /alert %}}
 
-更多 PITR 的详细用法，请参考 [**恢复操作**](/docs/pgsql/backup/restore) 文档。
+更多 PITR 的详细用法，请参考 [**恢复操作**](/docs/pgsql/backup/restore)；跨集群恢复后的归档与 stanza 处理见 [**克隆数据库集群**](/docs/pgsql/backup/cluster/)。

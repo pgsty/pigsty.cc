@@ -66,8 +66,8 @@ stanza: pg-meta
             repo1: backup size: 8.4MB
 ```
 
-备份完成于 `2025-07-13 02:27:33+00`，这是您可以恢复到的最早时间。
-由于 WAL 归档处于活动状态，您可以恢复到备份之后的任何时间点，直到 WAL 结束（即现在）。
+这份备份从 `2025-07-13 02:27:31+00` 开始、于 `02:27:33+00` 完成，这是这条备份链的恢复起点。
+您可以恢复到此后的任意时间点，最晚抵达最新归档的 WAL。
 
 
 -------
@@ -119,13 +119,19 @@ progress: 2.0 s, 69.1 tps, lat 6.296 ms stddev 1.983, 0 failed, lag 1.397 ms
 ## PITR 手册
 
 现在让我们选择一个恢复时间点，比如 `2025-07-13 03:03:03+00`，这是初始备份（和心跳）之后的一个时间点。
-要执行手动 PITR，使用 `pg-pitr` 工具：
+可以先用 `pg-pitr` 脚本的检查模式生成并核对底层恢复命令：
 
 ```bash
-$ pg-pitr -t "2025-07-13 03:03:00+00"
+$ pg-pitr -c -t "2025-07-13 03:03:00+00"   # -c / --check / --dry-run：只检查并打印命令
 ```
 
-它会为您生成执行恢复的指令，通常需要四个步骤：
+{{% alert color="warning" title="pg-pitr 会执行恢复" %}}
+不带 `-c` 时，`pg-pitr` 会在预检后直接执行 `pgbackrest restore`，覆盖目标数据目录；交互终端只有可中断的倒计时，并没有 `y/N` 确认，非交互环境连倒计时也会跳过。
+它不会替您暂停 Patroni、启动 PostgreSQL、验证数据或恢复 HA。这里的 Shell 脚本 `pg-pitr` 也不同于
+[**`pig pitr`**](/docs/pig/pitr/) 命令，后者会保守地编排单节点 Patroni/PostgreSQL 生命周期。
+{{% /alert %}}
+
+完整的手工集群恢复通常需要四个阶段；下面是操作清单，不是 `pg-pitr` 的命令输出：
 
 ```bash
 Perform time PITR on pg-meta
@@ -139,7 +145,7 @@ Perform time PITR on pg-meta
 
 [2. Perform PITR] ===========================================
    2.1 Restore Backup
-       $ pgbackrest --stanza=pg-meta --type=time --target='2025-07-13 03:03:00+00' restore
+       $ pgbackrest --stanza=pg-meta --delta --force --type=time --target='2025-07-13 03:03:00+00' restore
    2.2 Start PG to Replay WAL
        $ pg-start        # pg_ctl -D /pg/data start
    2.3 Validate and Promote
@@ -149,24 +155,25 @@ Perform time PITR on pg-meta
 
 ```bash
 [3. Restore Primary] ===========================================
-   3.1 Enable Archive Mode (Restart Required)
-       $ psql -c 'ALTER SYSTEM SET archive_mode = on;'
-   3.1 Restart Postgres to Apply Changes
-       $ pg-restart      # pg_ctl -D /pg/data restart
-   3.3 Restart Patroni
-       $ pt-restart      # sudo systemctl restart patroni
+   3.1 Check Archive Mode (Reset Only If Disabled)
+       $ psql -Atqc 'show archive_mode'
+       $ psql -c 'ALTER SYSTEM RESET archive_mode;'  # 仅当恢复时显式关闭过归档
+   3.2 Stop the manually started Postgres
+       $ pg-stop         # Patroni will start PostgreSQL again with the corrected setting
+   3.3 Remove stale DCS metadata (all Patroni instances must remain stopped)
+       $ pg remove pg-meta
+   3.4 Start Patroni
+       $ pt-start        # sudo systemctl start patroni
 
 [4. Restore Cluster] ===========================================
    4.1 Re-Init All [**REPLICAS**] (if any)
        - 4.1.1 option 1: restore replicas with same pgbackrest cmd (require central backup repo)
-           $ pgbackrest --stanza=pg-meta --type=time --target='2025-07-13 03:03:00+00' restore
+           $ pgbackrest --stanza=pg-meta --delta --force --type=time --target='2025-07-13 03:03:00+00' restore
        - 4.1.2 option 2: nuke the replica data dir and restart patroni (may take long time to restore)
            $ rm -rf /pg/data/*; pt-restart
-       - 4.1.3 option 3: reinit with patroni, which may fail if primary lsn < replica lsn
+       - 4.1.3 option 3: reinit with patroni; verify the rebuilt cluster and DCS state afterward
            $ pg reinit pg-meta
-   4.2 Resume Patroni
-       $ pg resume pg-meta
-   4.3 Full Backup (optional)
+   4.2 Full Backup (recommended)
        $ pg-backup full      # 建议在 PITR 后执行新的全量备份
 ```
 
@@ -207,10 +214,10 @@ postgres  35510  35480  0 03:01 pts/2    S+     0:00 /bin/bash /pg/bin/pg-heartb
 {{< tabpane persist="disabled" >}}
 {{% tab header="恢复备份" disabled=true /%}}
 {{< tab header="restore" lang="bash" >}}
-pgbackrest --stanza=pg-meta --type=time --target='2025-07-13 03:03:00+00' restore
+pgbackrest --stanza=pg-meta --delta --force --type=time --target='2025-07-13 03:03:00+00' restore
 {{< /tab >}}
 {{< tab header="output" lang="bash" >}}
-postgres@pg-meta-1:~$ pgbackrest --stanza=pg-meta --type=time --target='2025-07-13 03:03:00+00' restore
+postgres@pg-meta-1:~$ pgbackrest --stanza=pg-meta --delta --force --type=time --target='2025-07-13 03:03:00+00' restore
 2025-07-13 03:17:07.443 P00   INFO: restore command begin 2.54.2: ...
 2025-07-13 03:17:07.470 P00   INFO: repo1: restore backup set 20250713-022731F, recovery will start at 2025-07-13 02:27:31
 2025-07-13 03:17:07.471 P00   INFO: remove invalid files/links/paths from '/pg/data'
@@ -237,7 +244,13 @@ server started
 {{< /tab >}}
 {{< /tabpane >}}
 
-现在您可以检查数据，看看是否处于您想要的时间点。
+先确认 WAL 已重放到目标并暂停，再检查数据是否处于您想要的时间点：
+
+```bash
+psql -Atqc 'SELECT pg_is_in_recovery(), pg_is_wal_replay_paused(), pg_last_xact_replay_timestamp()'
+# 预期仍在恢复、且回放已暂停：t|t|<目标附近的时间>
+```
+
 您可以通过检查业务表中的最新时间戳来验证，或者在本例中通过心跳表检查。
 
 ```bash title="检查数据"
@@ -249,7 +262,7 @@ postgres@pg-meta-1:~$ psql -c 'table monitor.heartbeat'
 
 时间戳正好在我们指定的时间点之前！（`2025-07-13 03:03:00+00`）。
 如果这不是您想要的时间点，可以使用不同的时间点重复恢复。
-由于恢复是以增量和并行方式执行的，速度非常快。
+重复前必须再次停止 PostgreSQL。由于恢复是以增量和并行方式执行的，速度通常很快。
 可以重试直到找到正确的时间点。
 
 
@@ -297,28 +310,16 @@ psql -c 'SELECT pg_is_in_recovery()'   # 'f' 表示已提升为主库
 
 最后，不仅需要恢复数据，还需要恢复集群状态，例如：
 
-- patroni 接管
 - 归档模式
+- patroni 接管
 - 备份集
 - 从库
 
-#### Patroni 接管
-
-您的 postgres 是直接启动的，要恢复 HA 接管，您需要启动 patroni 服务：
-
-{{< tabpane persist="disabled" >}}
-{{% tab header="Patroni 接管" disabled=true /%}}
-{{< tab header="launch patroni" lang="bash" >}}
-pt-start   # sudo systemctl start patroni
-{{< /tab >}}
-{{< tab header="resume patroni" lang="bash" >}}
-pg resume pg-meta      # 恢复 patroni 自动故障切换（如果之前暂停过）
-{{< /tab >}}
-{{< /tabpane >}}
-
 #### 归档模式
 
-如果使用 `pgsql-pitr.yml`，Pigsty v4.4 默认会保留归档设置。手工 `pgbackrest restore` 或使用旧脚本时，恢复结果可能会在 `postgresql.auto.conf` 中写入 `archive_mode = off`；如果您希望新领导者的写入归档到备份仓库，需要检查并重置该配置。
+Pigsty v4.4 的 `pgsql-pitr.yml` 默认使用 `archive: true`，裸 `pgbackrest restore` 也默认保留原归档设置。
+只有显式使用 `archive: false` 或 `--archive-mode=off` 时，恢复结果才会在 `postgresql.auto.conf` 中写入 `archive_mode = off`。
+交还 Patroni 前检查该值；若恢复时关闭过归档，重置后再由 Patroni 重启 PostgreSQL。
 
 {{< tabpane persist="disabled" >}}
 {{% tab header="归档模式" disabled=true /%}}
@@ -327,17 +328,34 @@ psql -c 'show archive_mode'
 
  archive_mode
 --------------
- off
+ on
 {{< /tab >}}
 {{< tab header="reset archive_mode" lang="bash" >}}
 psql -c 'ALTER SYSTEM RESET archive_mode;'
-pg-restart   # archive_mode 是 postmaster 参数，需要重启
-psql -c 'show archive_mode'
+# 仅当上一步显示 off 时需要；archive_mode 是 postmaster 参数，由下面的 Patroni 重启生效
 {{< /tab >}}
 {{< tab header="edit directly" lang="bash" >}}
-# 您也可以直接编辑 postgresql.auto.conf 并重启 PostgreSQL
+# 若显式关闭过归档，也可以直接编辑 postgresql.auto.conf；下面由 Patroni 重新启动 PostgreSQL
 sed -i '/archive_mode/d' /pg/data/postgresql.auto.conf
-pg-restart
+{{< /tab >}}
+{{< /tabpane >}}
+
+#### Patroni 接管
+
+您的 postgres 是直接启动的。恢复 HA 接管前，应确保所有 Patroni 实例仍处于停止状态，停止手工启动的 PostgreSQL，
+并清理恢复前留下的 DCS 元数据；否则旧时间线上的集群状态可能干扰重新接管。然后再启动主库上的 Patroni：
+
+{{< tabpane persist="disabled" >}}
+{{% tab header="Patroni 接管" disabled=true /%}}
+{{< tab header="stop postgres" lang="bash" >}}
+pg-stop  # 停止手工启动的 PostgreSQL；所有 Patroni 实例仍须保持停止
+{{< /tab >}}
+{{< tab header="clean dcs" lang="bash" >}}
+pg remove pg-meta  # 交互式清除该集群的 DCS 元数据
+{{< /tab >}}
+{{< tab header="launch patroni" lang="bash" >}}
+pt-start   # sudo systemctl start patroni
+psql -c 'show archive_mode'
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -347,13 +365,5 @@ pg-restart
 
 #### 从库
 
-如果您的 postgres 集群有从库，您也需要在每个从库上执行 PITR。
-或者，更简单的方法是删除从库数据目录并重启 patroni，这将从主库重新初始化从库。
-我们将在下一个多节点集群示例中介绍这种情况。
-
-
---------
-
-## 多节点示例
-
-现在让我们以三节点 `pg-test` 集群作为 PITR 示例。
+多节点生产集群优先使用 [`pgsql-pitr.yml`](/docs/pgsql/backup/restore/) 编排。若坚持手工恢复，旧时间线上的从库不能直接重新加入；
+应在新主库与 DCS 状态确认无误后，清空从库数据目录并逐台重启 Patroni，或使用 `pg reinit <cls>` 重新初始化，再检查复制状态。
