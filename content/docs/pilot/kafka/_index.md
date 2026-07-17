@@ -1,226 +1,126 @@
 ---
 title: 模块：Kafka
 weight: 5040
-description: 使用 Pigsty 拉起 Kafka Kraft 集群，一个开源的分布式流处理平台。
+description: 使用 Pigsty 部署、保护与监控 Apache Kafka 4.x dynamic KRaft 集群。
 icon: fas fa-share-nodes
 module: [KAFKA]
 categories: [参考]
 ---
 
 
-> [Kafka](https://kafka.apache.org/) 是一个开源的分布式流处理平台：[安装](#安装) | [配置](#配置) | [管理](#管理) | [剧本](#剧本) | [监控](#监控) | [参数](#参数) | [资源](#资源)
+[Kafka](https://kafka.apache.org/) 是一个分布式事件流平台。Pigsty 的 [`KAFKA`](/docs/pilot/kafka) 模块使用 RPM/DEB 软件包，在纳管节点上部署 **Apache Kafka 4.x dynamic KRaft** 集群，并统一管理安全、资源、生命周期与可观测性。
+
+{{% alert title="当前状态：生产基线" color="info" %}}
+当前角色已经实现生产级 v1 合约，而不是早期的静态 KRaft 原型：包括 dynamic KRaft、严格滚动、TLS/SCRAM/ACL、声明式 Topic/User、凭据与证书轮换，以及完整监控链路。默认 `kafka_security: plaintext` 仅适合开发或可信隔离网络；生产部署应显式使用 `kafka_security: scram`，并完成容量、故障、升级与恢复演练。
+{{% /alert %}}
 
 
 --------
 
-## 概览
+## 模块能力
 
-Kafka 模块本身目前仅在 Pigsty 专业版中提供 Beta 试用预览。
+KAFKA 模块当前提供：
 
-
---------
-
-## 安装
-
-如果您使用开源版 Pigsty，可以使用以下命令，在指定节点上安装 Kafka 及其 Java 依赖。
-
-Pigsty 在官方 Infra 仓库中提供了 Kafka 3.8.0 的 RPM 与 DEB 安装包，如果需要使用，可以直接下载安装。
-
-```bash
-./node.yml -t node_install  -e '{"node_repo_modules":"infra","node_packages":["kafka"]}'
-```
-
-Kafka 依赖 Java 运行环境，因此在安装 Kafka 时，需要安装可用的 JDK （默认使用 OpenJDK 17，但其他 JDK 与版本，例如 8，11 都可以使用）
-
-```bash
-# EL9 / EL10 (使用 OpenJDK 17)
-./node.yml -t node_install  -e '{"node_repo_modules":"node","node_packages":["java-17-openjdk-headless"]}'
-
-# Debian / Ubuntu (使用 OpenJDK 17)
-./node.yml -t node_install  -e '{"node_repo_modules":"node","node_packages":["openjdk-17-jdk"]}'
-```
+- 使用原生 dynamic KRaft，不安装 ZooKeeper，也不渲染静态 `controller.quorum.voters`
+- 支持 `combined`、`broker`、`controller` 三种原生角色和复合/分离拓扑
+- 为新集群随机生成 Cluster ID 与 Controller Directory ID，并以最小 Bootstrap Manifest 保护身份
+- 根据实时健康状态选择冷启动/修复、纯 Broker 串行准入或严格单节点滚动路径
+- 在滚动前后检查 Controller 多数派与 Voter 追平、Offline Partition、Under Min ISR 与 ISR 追平
+- 提供 `plaintext` 与生产 `scram` 两种安全档位；后者启用 TLS、SCRAM-SHA-512、Controller mTLS、ACL 与默认拒绝授权
+- 声明式收敛 Topic、用户凭据、ACL 与 Quota，不隐式删除业务 Topic
+- 保护性轮换内部凭据与证书，并在失败时保留当前有效材料
+- 采集 JMX、Broker、请求、复制、KRaft、Topic、Partition 与 Consumer Group 指标
+- 将 Kafka 与 Exporter 日志接入 VictoriaLogs，并提供三个 Grafana Dashboard 与配套告警
 
 
 --------
 
-## 配置
+## 模块架构
 
-单节点 Kafka 配置样例。当前 Alertmanager 默认监听 `9059`，不再占用 Kafka 常用的 `9093` 端口；如本机已有其他服务使用 `9093`，可调整 `kafka_peer_port`。
+KAFKA 模块依赖 [`NODE`](/docs/node) 完成节点纳管、仓库与基础监控，依赖 [`INFRA`](/docs/infra) 提供 VictoriaMetrics、VictoriaLogs、Grafana 与 Alertmanager。
 
-```yaml
-kf-main:
-  hosts:
-    10.10.10.10: { kafka_seq: 1, kafka_role: controller }
-  vars:
-    kafka_cluster: kf-main
-    kafka_data: /data/kafka
-    kafka_peer_port: 9093     # 如有端口冲突可改为 9095 等其他端口
+```mermaid
+flowchart LR
+    admin["Pigsty 管理节点"] -->|"kafka.yml / exact cluster"| kafka["Kafka 4.x / dynamic KRaft"]
+    kafka --> jmx["每个 Kafka JVM / JMX :9404"]
+    kafka --> exporter["最多两个 Broker / kafka_exporter :9308"]
+    kafka --> journal["Journald"]
+    jmx --> vm["VictoriaMetrics"]
+    exporter --> vm
+    journal --> vector["Vector"] --> vl["VictoriaLogs"]
+    vm --> grafana["Grafana"]
+    vl --> grafana
+    vm --> alert["Alertmanager"]
+
+    style kafka fill:#70C1B3,stroke:#4f968b,color:#fff
+    style vm fill:#E66B7A,stroke:#b84e5c,color:#fff
+    style vl fill:#C98367,stroke:#9e634e,color:#fff
+    style grafana fill:#F29C64,stroke:#c77845,color:#fff
 ```
 
-三节点 Kraft 模式 Kafka 集群配置样例：
-
-```yaml
-kf-test:
-  hosts:
-    10.10.10.11: { kafka_seq: 1, kafka_role: controller   }
-    10.10.10.12: { kafka_seq: 2, kafka_role: controller   }
-    10.10.10.13: { kafka_seq: 3, kafka_role: controller   }
-  vars:
-    kafka_cluster: kf-test
-```
-
-
-
----------
-
-## 管理 
-
-以下是基本的 Kafka 集群基本管理操作：
-
-使用 `kafka.yml` 创建 Kafka 集群：
-
-```bash
-./kafka.yml -l kf-main
-./kafka.yml -l kf-test
-```
-
-创建一个名为 `test` 的 Topic：
-
-```bash
-kafka-topics.sh --create --topic test --partitions 1 --replication-factor 1 --bootstrap-server localhost:9092
-```
-
-这里 `--replication-factor 1` 表示每个数据只会复制一次，`--partitions 1` 表示只创建一个分区。
-
-
-使用以下命令，查看 Kafka 中的 Topic 列表：
-
-```bash
-kafka-topics.sh --bootstrap-server localhost:9092 --list
-```
-
-使用 Kafka 自带的消息生产者，向 `test` Topic 发送消息：
-
-```bash
-kafka-console-producer.sh --topic test --bootstrap-server localhost:9092
->haha
->xixi
->hoho
->hello
->world
-> ^D
-```
-
-使用 Kafka 自带的消费者，从 `test` Topic 中读取消息：
-
-```bash
-kafka-console-consumer.sh --topic test --from-beginning --bootstrap-server localhost:9092
-```
-
-
-
-
-
-----------------
-
-## 剧本
-
-Pigsty 提供了两个与 KAFKA 模块相关的剧本，分别用于纳管与移除节点。
-
-* [`node.yml`](/docs/node/playbook#nodeyml)：纳管节点，并调整节点到期望的状态
-* [`node-rm.yml`](/docs/node/playbook#node-rmyml)：从 pigsty 中移除纳管节点
-
-此外， Pigsty 还提供了两个包装命令工具：`node-add` 与 `node-rm`，用于快速调用剧本。
-
-
-----------------
-
-### `kafka.yml`
-
-用于部署 Kafka KRaft 模式集群的 [`kafka.yml`](https://github.com/pgsty/pigsty/blob/main/node.yml) 剧本包含以下子任务：
-
-```bash
-kafka-id       : generate kafka instance identity
-kafka_clean    : remove existing kafka instance (DANGEROUS)
-kafka_user     : create os user kafka
-kafka_pkg      : install kafka rpm/deb packages
-kafka_link     : create symlink to /usr/kafka
-kafka_path     : add kafka bin path to /etc/profile.d
-kafka_svc      : install kafka systemd service
-kafka_dir      : create kafka data & conf dir
-kafka_config   : generate kafka config file
-kafka_boot     : bootstrap kafka cluster
-kafka_launch   : launch kafka service
-kafka_exporter : launch kafka exporter
-kafka_register : register kafka service to prometheus
-```
-
-
-
-
-
-
-----------------
-
-## 监控
-
-Pigsty 提供了两个与 [`KAFKA`](/docs/pilot/kafka) 模块有关的监控面板：
-
-[KAFKA Overview](https://demo.pigsty.cc/d/kafka-overview) 展示了 Kafka 集群的整体监控指标。
-
-[KAFKA Instance](https://demo.pigsty.cc/d/kafka-instance) 展示了单个 Kafka 实例的监控指标详情
-
-
-
+每个启用 JMX 的 Kafka JVM 都注册为 `job=kafka`。协议型 `kafka_exporter` 只在按 `kafka_seq` 排序后的前两个 Broker-capable 节点运行；单 Broker 集群只运行一个，纯 Controller 不运行。它们返回的是同一逻辑集群视图，Recording Rule 会先去重再聚合。
 
 
 --------
 
-## 参数
+## 文档导航
 
-Kafka 的可用配置项：
-
-```yaml
-#kafka_cluster:           #CLUSTER  # kafka cluster name, required identity parameter
-#kafka_role: controller   #INSTANCE # kafka role, controller, broker, or controller-only
-#kafka_seq: 0             #INSTANCE # kafka instance seq number, required identity parameter
-kafka_clean: false                  # cleanup kafka during init? false by default
-kafka_data: /data/kafka             # kafka data directory, `/data/kafka` by default
-kafka_version: 3.8.0                # kafka version string
-scala_version: 2.13                 # kafka binary scala version
-kafka_port: 9092                    # kafka broker listen port
-kafka_peer_port: 9093               # kafka broker peer listen port, 9093 by default
-kafka_exporter_port: 9308           # kafka exporter listen port, 9308 by default
-kafka_parameters:                   # kafka parameters to be added to server.properties
-  num.network.threads: 3
-  num.io.threads: 8
-  socket.send.buffer.bytes: 102400
-  socket.receive.buffer.bytes: 102400
-  socket.request.max.bytes: 104857600
-  num.partitions: 1
-  num.recovery.threads.per.data.dir: 1
-  offsets.topic.replication.factor: 1
-  transaction.state.log.replication.factor: 1
-  transaction.state.log.min.isr: 1
-  log.retention.hours: 168
-  log.segment.bytes: 1073741824
-  log.retention.check.interval.ms: 300000
-  #log.retention.bytes: 1073741824
-  #log.flush.interval.ms: 1000
-  #log.flush.interval.messages: 10000
-
-```
-
+| 文档 | 内容 |
+|:---|:---|
+| [快速上手](/docs/pilot/kafka/start) | 从单节点到三节点安全集群、客户端接入、参数修改与上线检查 |
+| [集群配置](/docs/pilot/kafka/config) | 拓扑、dynamic KRaft、网络、存储、安全与资源声明 |
+| [参数参考](/docs/pilot/kafka/param) | 16 项持久公开参数及临时运维变量 |
+| [日常管理](/docs/pilot/kafka/admin) | 状态检查、Topic、消息、Consumer Group 与拓扑变更 |
+| [预置剧本](/docs/pilot/kafka/playbook) | `kafka.yml` 生命周期、任务标签、轮换与清理保护 |
+| [监控告警](/docs/pilot/kafka/monitor) | 指标链路、Dashboard、日志查询与告警规则 |
+| [指标定义](/docs/pilot/kafka/metric) | JMX、协议 Exporter 与 Recording Rule 指标字典 |
+| [常见问题](/docs/pilot/kafka/faq) | 角色、身份、安全、Exporter 与扩缩容答疑 |
+{.full-width}
 
 
 --------
 
-## 资源
+## 第一次使用
 
-Pigsty 为 PostgreSQL 提供了一些 Kafka 相关的扩展插件：
+[快速上手](/docs/pilot/kafka/start) 提供一条从零开始、由浅入深的完整路径：
 
-- [**`kafka_fdw`**](/docs/pgsql/ext/)，一个有趣的 FDW，允许用户直接从 PostgreSQL 中读写 Kafka Topic 数据
-- [**`wal2json`**](/docs/pgsql/ext/)，用于从 PostgreSQL 中逻辑解码 WAL 日志，生成 JSON 格式的变更数据
-- [**`wal2mongo`**](/docs/pgsql/ext/)，用于从 PostgreSQL 中逻辑解码 WAL 日志，生成 BSON 格式的变更数据
-- [**`decoder_raw`**](/docs/pgsql/ext/)，用于从 PostgreSQL 中逻辑解码 WAL 日志，生成 SQL 格式的变更数据
-- [**`test_decoding`**](/docs/pgsql/ext/)，用于从 PostgreSQL 中逻辑解码 WAL 日志，生成 RAW 格式的变更数据
+1. 部署一个 combined 单节点开发集群，完成 Topic 与消息读写；
+2. 部署独立的三节点 dynamic KRaft 集群，启用 TLS/SCRAM/ACL；
+3. 创建应用 Principal、Topic、Quota，并从外部客户端安全接入；
+4. 修改 Heap、Broker 与 Topic 参数，观察在线收敛和严格滚动；
+5. 按 Quorum、ISR、网络、安全、监控和运行手册完成上线检查。
+
+如果您已经熟悉 Kafka/Pigsty，可以直接进入 [集群配置](/docs/pilot/kafka/config) 或 [参数参考](/docs/pilot/kafka/param)。
+
+
+--------
+
+## 默认端口
+
+| 端口 | 服务 | 部署范围 | `plaintext` | `scram` |
+|:---:|:---|:---|:---|:---|
+| `9092` | Kafka Broker | Broker-capable 节点 | PLAINTEXT | SASL_SSL + SCRAM-SHA-512 |
+| `9095` | KRaft Controller | Controller-capable 节点 | PLAINTEXT | 双向 TLS |
+| `9308` | kafka_exporter | 最多两个 Broker-capable 节点 | HTTP 指标 | HTTP 指标，后端使用 TLS/SCRAM |
+| `9404` | JMX Exporter | 所有启用 JMX 的 Kafka 节点 | HTTP 指标 | HTTP 指标 |
+{.full-width}
+
+四个端口必须彼此不同。目标节点同时属于 `infra` 分组时，角色还会阻止 Controller 端口与 `alertmanager_port` 冲突。JMX 与协议 Exporter 的 HTTP 端口仍应通过防火墙限制在监控网络内。
+
+
+--------
+
+## 当前边界
+
+当前角色提供的是 Kafka 核心生产基线，不替代完整的流平台或托管服务。下列能力仍需显式运行手册或独立组件：
+
+- Controller 增删/替换：集群使用 dynamic quorum，但成员变更必须显式执行格式化、追平与 `add-controller`/`remove-controller` 流程；修改清单本身不会加入或移除 Voter
+- Broker 扩容后的既有 Partition Reassignment、Broker 退役与副本再均衡
+- 扩容后提升冻结的 `default.replication.factor`：Kafka 4.3 需要显式数据迁移与静态配置维护窗口
+- 已有 Topic 的副本因子变更、Topic 删除与用户删除
+- 已格式化集群从 `plaintext` 在线迁移到 `scram`
+- Kafka 版本升级、Feature Level 终结、数据备份、恢复与灾难演练
+- 多 Listener、NAT/公网地址、同一 Broker 多客户端网络、Tiered Storage
+- Kafka Connect、Schema Registry、MirrorMaker 2、Cruise Control 与 Web UI
+
+这些边界应在生产方案、审批流程与演练中明确记录，不能用普通清单重跑代替。
