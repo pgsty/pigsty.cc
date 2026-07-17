@@ -87,9 +87,9 @@ Pigsty 由多个 [**模块**](/docs/ref/module) 组成。其中 `PGSQL` / `INFRA
 {{< nav-card title="FERRET" link="/docs/ferret/" icon="fa-solid fa-leaf" accent="gray" badge="可选" desc="基于 PostgreSQL 提供 MongoDB 协议兼容能力。" />}}
 {{< nav-card title="JUICE" link="/docs/juice/" icon="fa-solid fa-folder-tree" accent="gray" badge="可选" desc="JuiceFS 分布式文件系统，将 PostgreSQL 挂载为文件系统" />}}
 {{< nav-card title="VIBE" link="/docs/vibe/" icon="fa-solid fa-laptop-code" accent="gray" badge="可选" desc="AI 编程沙箱，Claude/Codex 开发环境，Agent 运行时" />}}
+{{< nav-card title="KAFKA" link="/docs/kafka/" icon="fa-solid fa-share-nodes" accent="gray" badge="可选" desc="Apache Kafka 4.x dynamic KRaft 消息队列集群，安全与监控齐备。" />}}
+{{< nav-card title="PILOT" link="/docs/pilot/" icon="fa-solid fa-flask-vial" accent="gray" badge="试点" desc="试点功能模组：Kubernetes、DuckDB、MySQL、TigerBeetle……供尝鲜探索。" />}}
 {{< /nav-cards >}}
-
-还有试点性质的 [**PILOT**](/docs/pilot/) 模组（Kafka、Kubernetes、DuckDB、MySQL、TigerBeetle……），供尝鲜探索。
 
 
 ## 参考信息

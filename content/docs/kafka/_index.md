@@ -1,17 +1,18 @@
 ---
 title: 模块：Kafka
-weight: 5000
+weight: 4900
 description: 使用 Pigsty 部署、保护与监控 Apache Kafka 4.x dynamic KRaft 集群。
 icon: fas fa-share-nodes
 module: [KAFKA]
 categories: [参考]
+aliases: [/docs/pilot/kafka]
 ---
 
 
-[Kafka](https://kafka.apache.org/) 是一个分布式事件流平台。Pigsty 的 [`KAFKA`](/docs/pilot/kafka) 模块使用 RPM/DEB 软件包，在纳管节点上部署 **Apache Kafka 4.x dynamic KRaft** 集群，并统一管理安全、资源、生命周期与可观测性。
+[Kafka](https://kafka.apache.org/) 是一个分布式事件流平台。Pigsty 的 [`KAFKA`](/docs/kafka) 模块使用 RPM/DEB 软件包，在纳管节点上部署 **Apache Kafka 4.x dynamic KRaft** 集群，并统一管理安全、资源、生命周期与可观测性。
 
 {{% alert title="当前状态：Beta 模块" color="info" %}}
-当前 Kafka 模块仍然处于 Pilot / Beta 状态。用于严肃生产环境前请务必充分测试，确保满足业务需求。
+当前 Kafka 模块处于 Beta 状态。用于严肃生产环境前请务必充分测试，确保满足业务需求。
 包括 dynamic KRaft、严格滚动、TLS/SCRAM/ACL、声明式 Topic/User、凭据与证书轮换，以及完整监控链路。
 {{% /alert %}}
 
@@ -68,14 +69,14 @@ flowchart LR
 
 | 文档                                 | 内容                                    |
 |:-----------------------------------|:--------------------------------------|
-| [快速上手](/docs/pilot/kafka/start)    | 从单节点到三节点安全集群、客户端接入、参数修改与上线检查          |
-| [集群配置](/docs/pilot/kafka/config)   | 拓扑、dynamic KRaft、网络、存储、安全与资源声明        |
-| [参数参考](/docs/pilot/kafka/param)    | 15 项持久公开参数及临时运维变量                     |
-| [日常管理](/docs/pilot/kafka/admin)    | 状态检查、Topic、消息、Consumer Group 与拓扑变更    |
-| [预置剧本](/docs/pilot/kafka/playbook) | `kafka.yml` 生命周期、任务标签、轮换与清理保护         |
-| [监控告警](/docs/pilot/kafka/monitor)  | 指标链路、Dashboard、日志查询与告警规则              |
-| [指标定义](/docs/pilot/kafka/metric)   | JMX、协议 Exporter 与 Recording Rule 指标字典 |
-| [常见问题](/docs/pilot/kafka/faq)      | 角色、身份、安全、Exporter 与扩缩容答疑              |
+| [快速上手](/docs/kafka/start)    | 从单节点到三节点安全集群、客户端接入、参数修改与上线检查          |
+| [集群配置](/docs/kafka/config)   | 拓扑、dynamic KRaft、网络、存储、安全与资源声明        |
+| [参数参考](/docs/kafka/param)    | 15 项持久公开参数及临时运维变量                     |
+| [日常管理](/docs/kafka/admin)    | 状态检查、Topic、消息、Consumer Group 与拓扑变更    |
+| [预置剧本](/docs/kafka/playbook) | `kafka.yml` 生命周期、任务标签、轮换与清理保护         |
+| [监控告警](/docs/kafka/monitor)  | 指标链路、Dashboard、日志查询与告警规则              |
+| [指标定义](/docs/kafka/metric)   | JMX、协议 Exporter 与 Recording Rule 指标字典 |
+| [常见问题](/docs/kafka/faq)      | 角色、身份、安全、Exporter 与扩缩容答疑              |
 {.full-width}
 
 
@@ -83,7 +84,7 @@ flowchart LR
 
 ## 第一次使用
 
-[快速上手](/docs/pilot/kafka/start) 提供一条从零开始、由浅入深的完整路径：
+[快速上手](/docs/kafka/start) 提供一条从零开始、由浅入深的完整路径：
 
 1. 部署一个 combined 单节点开发集群，完成 Topic 与消息读写；
 2. 部署独立的三节点 dynamic KRaft 集群，启用 TLS/SCRAM/ACL；
@@ -91,7 +92,7 @@ flowchart LR
 4. 修改 Heap、Broker 与 Topic 参数，观察在线收敛和严格滚动；
 5. 按 Quorum、ISR、网络、安全、监控和运行手册完成上线检查。
 
-如果您已经熟悉 Kafka/Pigsty，可以直接进入 [集群配置](/docs/pilot/kafka/config) 或 [参数参考](/docs/pilot/kafka/param)。
+如果您已经熟悉 Kafka/Pigsty，可以直接进入 [集群配置](/docs/kafka/config) 或 [参数参考](/docs/kafka/param)。
 
 
 --------
@@ -106,7 +107,7 @@ flowchart LR
 | `9404` | JMX Exporter     | 所有 Kafka 节点            | HTTP 指标     | HTTP 指标                  |
 {.full-width}
 
-四个端口必须彼此不同。注意 `9093` 与 Pigsty Infra 节点上 Alertmanager 的默认端口相同：若 Kafka 与 Infra 复用节点，请调整 [`kafka_controller_port`](/docs/pilot/kafka/param#kafka_controller_port)。JMX 与协议 Exporter 的 HTTP 端口仍应通过防火墙限制在监控网络内。
+四个端口必须彼此不同，均可通过参数调整。JMX 与协议 Exporter 的 HTTP 端口仍应通过防火墙限制在监控网络内。
 
 
 --------

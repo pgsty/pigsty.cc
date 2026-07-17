@@ -5,6 +5,7 @@ description: Pigsty Kafka 4.x dynamic KRaft 模块常见问题与故障排查。
 icon: fa-solid fa-circle-question
 module: [KAFKA]
 categories: [参考]
+aliases: [/docs/pilot/kafka/faq]
 ---
 
 
@@ -39,7 +40,7 @@ categories: [参考]
 
 ## Controller 端口 9093 会和 Alertmanager 冲突吗？
 
-Controller 默认使用 Kafka KRaft 的惯例端口 `9093`。Pigsty Infra 节点上的 Alertmanager 默认也使用 `9093`：两者只有在 Kafka 与 Infra 复用同一节点时才会冲突。此时请为该集群调整 [`kafka_controller_port`](/docs/pilot/kafka/param#kafka_controller_port)；角色只强制 `9092`、`9093`、`9308`、`9404` 四个 Kafka 端口彼此不同，不会自动检测与其他服务的端口冲突。
+Controller 默认使用 Kafka KRaft 的惯例端口 `9093`。Pigsty Infra 节点上的 Alertmanager 默认也使用 `9093`：两者只有在 Kafka 与 Infra 复用同一节点时才会冲突。此时请为该集群调整 [`kafka_controller_port`](/docs/kafka/param#kafka_controller_port)；角色只强制 `9092`、`9093`、`9308`、`9404` 四个 Kafka 端口彼此不同，不会自动检测与其他服务的端口冲突。
 
 
 --------
@@ -200,7 +201,7 @@ curl -fsS http://<kafka-ip>:9404/metrics | head -n 40
 
 一个 VIP 或通用 TCP LB 既不理解 Partition Leader，也不会改写 Kafka 元数据中的 Broker 地址；把它放在数据面通常只会增加长连接状态、额外故障点和排障复杂度。若企业平台强制要求统一发现入口，DNS 或 TCP LB 可以仅承担 bootstrap，但 `advertised.listeners` 仍要返回每个 Broker 的客户端可达地址，LB 不能成为唯一网络路径。
 
-跨 NAT、公网、多网络或 Kubernetes 暴露通常需要每 Broker 独立外部地址与额外 Listener。当前模块固定宣告清单地址，不支持这类映射。参见[快速上手：为什么应用应直连多个 Broker](/docs/pilot/kafka/start#3-为什么应用应直连多个-broker)与[集群配置：网络与监听器](/docs/pilot/kafka/config#网络与监听器)。
+跨 NAT、公网、多网络或 Kubernetes 暴露通常需要每 Broker 独立外部地址与额外 Listener。当前模块固定宣告清单地址，不支持这类映射。参见[快速上手：为什么应用应直连多个 Broker](/docs/kafka/start#3-为什么应用应直连多个-broker)与[集群配置：网络与监听器](/docs/kafka/config#网络与监听器)。
 
 
 --------
@@ -241,4 +242,4 @@ curl -fsS http://<kafka-ip>:9404/metrics | head -n 40
 
 `kafka.yml` 永远不执行清理；集群下线使用独立的 `kafka-rm.yml` 剧本。它默认（`kafka_rm_data=true`）会永久删除数据/KRaft 元数据、节点安全状态、监控 Target 与管理节点上的 Manifest/Secret/PKI 缓存；`kafka_safeguard=true` 可强制中止一切删除。
 
-该剧本没有确认字符串等额外闸门，执行前必须人工确认精确 `-l` 目标、可恢复备份或明确重建意图与业务停用状态。完整语义见 [预置剧本：集群下线](/docs/pilot/kafka/playbook#集群下线)。
+该剧本没有确认字符串等额外闸门，执行前必须人工确认精确 `-l` 目标、可恢复备份或明确重建意图与业务停用状态。完整语义见 [预置剧本：集群下线](/docs/kafka/playbook#集群下线)。

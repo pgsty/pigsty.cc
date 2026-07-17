@@ -92,7 +92,7 @@ all:
         mongo_cluster: pg-mongo
         mongo_pgurl: 'postgres://dbuser_meta:DBUser.Meta@10.10.10.10:5432/grafana'
 
-    # Kafka is a pilot module, see: https://pigsty.io/docs/pilot/kafka
+    # Kafka is a pilot module, see: https://pigsty.io/docs/kafka
     kf-main:
       hosts: { 10.10.10.10: { kafka_seq: 1, kafka_role: controller } }
       vars:
