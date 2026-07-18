@@ -6,7 +6,7 @@ description: 如何下载和安装 PG Exporter
 categories: [任务]
 ---
 
-PG Exporter 提供多种安装方式以适应不同的部署场景。本指南涵盖了各平台的所有可用安装选项及详细说明。
+`pg_exporter` 可以通过 Pigsty、YUM/APT 仓库、GitHub 发布包（RPM/DEB/Tarball）、Docker 镜像或源码构建安装，按你的基础设施任选一种即可。
 
 
 --------
@@ -123,13 +123,6 @@ docker run -d \
 {{% alert title="注意" color="warning" %}}
 当前 Docker 镜像基于 `scratch`。如果您使用 `sslmode=verify-ca` 或 `verify-full` 连接远程 PostgreSQL，请显式挂载 CA 证书（例如 `sslrootcert` 或系统 CA bundle），否则 TLS 校验可能无法完成。
 {{% /alert %}}
-
-
---------
-
-## 二进制安装
-
-`pg_exporter` 可以作为独立的二进制文件安装。从发布页面下载适合您平台的 tarball，解压后将二进制文件放入 `$PATH` 即可使用。
 
 
 --------

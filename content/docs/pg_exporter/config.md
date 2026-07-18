@@ -6,25 +6,9 @@ description: PG Exporter 的配置选项与采集器定义
 categories: [参考]
 ---
 
-PG Exporter 使用强大而灵活的配置系统，允许您定义自定义指标、控制采集行为并优化性能。本指南涵盖了从基础设置到高级自定义的所有配置方面。
+`pg_exporter` 的所有业务指标都由 YAML **采集器**（Collector）定义驱动：每个采集器就是一条 SQL 查询，外加它的执行条件（版本、角色、标签、谓词）与运行控制（缓存、超时）。本页是采集器定义的完整参考。
 
-
---------
-
-## 指标采集器
-
-PG Exporter 使用声明式的 YAML 配置系统，为指标采集提供极大的灵活性和控制能力。本指南涵盖了为您的特定监控需求配置 PG Exporter 的所有方面。
-
-
---------
-
-## 配置概述
-
-PG Exporter 的配置以 **采集器** 为核心 —— 每个采集器是一个独立的指标查询及其关联元数据。配置可以是：
-
-- 单一的 YAML 文件（`pg_exporter.yml`）
-- 包含多个 YAML 文件的目录（按字母顺序合并）
-- 通过命令行或环境变量指定的自定义路径
+配置可以是单个 YAML 文件（如默认的 `pg_exporter.yml`），也可以是包含多个 YAML 文件的目录——官方默认配置包正是由 [`config/`](https://github.com/pgsty/pg_exporter/tree/main/config) 目录下 58 个定义文件合并而来。
 
 
 --------
@@ -224,6 +208,16 @@ max_version: 140000  # 低于 PostgreSQL 14.0
 - `190000` 表示 19.0
 - `90600` 表示 9.6（Legacy 配置场景）
 
+
+--------
+
+## 执行模型
+
+理解一个采集器从定义到产出指标的完整路径，有助于回答"为什么这个指标没出来"：
+
+1. **规划**（建立连接或热重载时）：对每个采集器分支依次检查——目标类型（PostgreSQL / pgBouncer）、`min_version` / `max_version` 版本门槛、`tags` 与服务器角色及 exporter 标签的匹配、`skip` 开关。未通过的分支不会安装到该目标上。`curl localhost:9630/explain` 展示的正是这一步的裁决结果。
+2. **抓取**（每次 `/metrics` 请求）：对已安装的采集器——缓存在 `ttl` 内则直接返回缓存结果；否则先执行 `predicate_queries`（任一返回假则本轮跳过，`pg_exporter_query_scrape_predicate_skip_count` 计数），再在 `timeout` 限制下执行主查询，结果转为指标并写入缓存。
+3. **失败语义**：普通采集器失败只影响自身（`pg_exporter_query_scrape_error_count` 上升，本轮缺失该组指标）；标记 `fatal: true` 的采集器失败会使整次服务器抓取被判定为失败。
 
 --------
 
@@ -524,11 +518,11 @@ partition_metrics:
 检查采集器执行统计：
 
 ```bash
-# 查看采集器统计
+# 查看采集器统计（命中/错误/跳过计数与耗时）
 curl http://localhost:9630/stat
 
-# 检查哪些采集器较慢
-curl http://localhost:9630/metrics | grep pg_exporter_collector_duration
+# 按 datname/query 维度查看每个采集器的耗时与错误
+curl -s http://localhost:9630/metrics | grep -E 'pg_exporter_query_scrape_(duration|error_count)'
 ```
 
 

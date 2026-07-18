@@ -6,25 +6,22 @@ description: PG Exporter 的 HTTP API 端点参考
 categories: [参考]
 ---
 
-PG Exporter 提供全面的 REST API，用于指标采集、健康检查、流量路由和运维控制。所有端点都通过配置的端口（默认：9630）以 HTTP/HTTPS 方式暴露。
+`pg_exporter` 在监听端口（默认 `:9630`）上暴露四类 HTTP 端点：指标、健康检查、流量路由与运维管理。全部端点如下：
 
-
---------
-
-## 端点概览
-
-| 端点                         | 方法       | 描述              |
-|----------------------------|----------|-----------------|
-| [`/metrics`](#get-metrics) | GET      | Prometheus 指标端点 |
-| [`/up`](#健康检查)             | GET      | 基本存活检查          |
-| [`/health`](#健康检查)         | GET      | `/up` 别名        |
-| [`/primary`](#流量路由)        | GET      | 主库服务器检查         |
-| [`/replica`](#流量路由)        | GET      | 从库服务器检查         |
-| [`/read`](#流量路由)           | GET      | 读流量路由           |
-| [`/reload`](#运维端点)         | GET/POST | 重新加载配置          |
-| [`/explain`](#运维端点)        | GET      | 解释查询规划          |
-| [`/stat`](#运维端点)           | GET      | 运行时统计           |
+| 端点                         | 方法       | 描述                                          |
+|----------------------------|----------|---------------------------------------------|
+| [`/metrics`](#get-metrics) | GET      | Prometheus 指标端点（路径可经 `--web.telemetry-path` 修改） |
+| [`/up`](#健康检查)             | GET      | 存活检查；别名 `/health`、`/liveness`、`/readiness`、`/read` |
+| [`/primary`](#流量路由)        | GET      | 主库检查；别名 `/leader`、`/master`、`/read-write`、`/rw` |
+| [`/replica`](#流量路由)        | GET      | 从库检查；别名 `/standby`、`/slave`、`/read-only`、`/ro` |
+| [`/reload`](#运维端点)         | GET/POST | 热重载采集器配置                                    |
+| [`/explain`](#运维端点)        | GET      | 展示各采集器的规划裁决结果                               |
+| [`/stat`](#运维端点)           | GET      | 各采集器的运行统计（命中/错误/耗时）                         |
+| `/version`                 | GET      | 版本与构建信息（文本）                                 |
+| `/`                        | GET      | 落地页，链接到指标端点                                 |
 {.full-width}
+
+健康与路由端点的判定基于后台探测缓存的角色状态（`primary` / `replica` / `down` / `starting` / `unknown`），不会在每次 HTTP 请求时同步查询数据库——探针风暴不会穿透到数据库。
 
 
 --------
@@ -73,6 +70,31 @@ pg_exporter_build_info{version="v1.4.0",branch="main",revision="<git-sha>",build
 <metric_name>{<label_name>="<label_value>",...} <value> <timestamp>
 ```
 
+#### 自监控指标
+
+除 YAML 采集器定义的业务指标外，`/metrics` 还暴露 exporter 自身的运行指标（可用 `--disable-intro` 关闭 `pg_exporter_*` 部分；前缀随 `--namespace` 变化，pgBouncer 模式下为 `pgbouncer_`）：
+
+| 指标 | 标签 | 描述 |
+|------|------|------|
+| `pg_up` | — | 能连上目标库为 1，否则为 0 |
+| `pg_version` | — | `server_version_num` 格式的服务器版本号 |
+| `pg_in_recovery` | — | 处于恢复模式（从库）为 1 |
+| `pg_exporter_build_info` | version, revision, ... | 恒为 1，构建信息在标签中 |
+| `pg_exporter_up` | — | exporter 存活即为 1 |
+| `pg_exporter_uptime` | — | exporter 启动以来的秒数 |
+| `pg_exporter_scrape_total_count` / `_error_count` | — | 累计抓取次数 / 失败次数 |
+| `pg_exporter_scrape_duration` | — | 最近一次抓取耗时（秒） |
+| `pg_exporter_last_scrape_time` | — | 最近一次抓取的时间戳 |
+| `pg_exporter_server_scrape_*` | datname | 每个目标库的抓取耗时与成败计数 |
+| `pg_exporter_query_scrape_duration` | datname, query | 每个采集器的最近执行耗时 |
+| `pg_exporter_query_scrape_total_count` / `_error_count` | datname, query | 每个采集器的执行 / 失败计数 |
+| `pg_exporter_query_scrape_hit_count` / `_metric_count` | datname, query | 每个采集器返回的行数 / 产出的指标数 |
+| `pg_exporter_query_scrape_predicate_skip_count` | datname, query | 因谓词不满足而跳过的次数 |
+| `pg_exporter_query_cache_ttl` | datname, query | 采集器结果缓存的 TTL |
+{.full-width}
+
+用 `pg_exporter_query_scrape_duration` 与 `_error_count` 可以直接定位慢采集器与故障采集器，等价于 `/stat` 的机器可读版本。
+
 
 --------
 
@@ -110,33 +132,22 @@ Content-Type: text/plain; charset=utf-8
 curl http://localhost:9630/health
 ```
 
-### GET /liveness
+### GET /liveness 与 GET /readiness
 
-Kubernetes 存活探针端点。
+为 Kubernetes 探针习惯提供的路径别名，行为与 `/up` 完全一致（同一处理器）：
 
 ```yaml
-# 存活探针配置
 livenessProbe:
-  httpGet:
-    path: /liveness
-    port: 9630
+  httpGet: { path: /liveness, port: 9630 }
   initialDelaySeconds: 30
   periodSeconds: 10
-```
-
-### GET /readiness
-
-Kubernetes 就绪探针端点。
-
-```yaml
-# 就绪探针配置
 readinessProbe:
-  httpGet:
-    path: /readiness
-    port: 9630
+  httpGet: { path: /readiness, port: 9630 }
   initialDelaySeconds: 5
   periodSeconds: 5
 ```
+
+注意二者语义相同：目标数据库不可达时都会返回 503。若不希望"数据库宕机导致 exporter Pod 被重启"，liveness 探针可以改用 TCP 探测监听端口。
 
 
 --------
@@ -377,25 +388,6 @@ backend pg_read
   server pg3 10.0.0.3:5432 check port 9630 inter 3000 fall 2 rise 2
 ```
 
-### Nginx 配置示例
+### 关于 Nginx
 
-```nginx
-upstream pg_primary {
-    server 10.0.0.1:5432;
-    server 10.0.0.2:5432 backup;
-}
-
-upstream pg_replicas {
-    server 10.0.0.2:5432;
-    server 10.0.0.3:5432;
-}
-
-server {
-    listen 5432;
-
-    location / {
-        proxy_pass http://pg_primary;
-        health_check uri=/primary port=9630;
-    }
-}
-```
+Nginx 开源版不支持基于旁路端口的主动 HTTP 健康检查（`health_check` 指令是 NGINX Plus 功能），且代理 PostgreSQL 流量需要 `stream` 模块而非 `http` 代理。按角色路由 PostgreSQL 流量请优先使用上面的 HAProxy 方案，或 Patroni + vip-manager 等方案。
