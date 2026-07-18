@@ -1,5 +1,5 @@
 ---
-title: "PG Exporter 1.3 中文文档"
+title: "PG Exporter 1.4 中文文档"
 linktitle: "pg_exporter 文档"
 weight: 8400
 icon: fas fa-chart-line
@@ -27,6 +27,7 @@ description: 高级 PostgreSQL 与 PgBouncer 监控指标导出器
 | **健康检查**  | 提供全面的 HTTP 端点用于服务健康检查和流量路由，支持主从检测                          |
 | **智能缓存**  | 内置缓存机制，可配置 TTL，减少数据库负载并提升性能                                |
 | **扩展感知**  | 原生支持 pg_stat_statements、pg_wait_sampling、citus、timescaledb |
+| **快照直方图** | `HISTOGRAM` 列类型将 SQL 快照聚合为经典 Prometheus 直方图分布              |
 {.full-width}
 
 
@@ -34,7 +35,7 @@ description: 高级 PostgreSQL 与 PgBouncer 监控指标导出器
 
 ## 版本信息
 
-- 当前稳定版本：[`v1.3.0`](https://github.com/pgsty/pg_exporter/releases/tag/v1.3.0)
+- 当前稳定版本：[`v1.4.0`](https://github.com/pgsty/pg_exporter/releases/tag/v1.4.0)
 - 默认配置支持：PostgreSQL **10-19+**
 - Legacy 配置支持：PostgreSQL **9.1-9.6**（使用 `legacy/` 配置包）
 - PgBouncer 支持：**1.8-1.25+**

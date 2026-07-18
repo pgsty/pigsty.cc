@@ -28,7 +28,7 @@ pg_exporter 本身可以通过以下方式配置：
 `pg_exporter` 在生产环境中的关键设计取舍如下：
 
 - 本地优先：默认 URL 为 `postgresql:///?sslmode=disable`，适配同机部署
-- 默认配置包：随附 57 个采集器定义文件，默认覆盖 PostgreSQL 10-19+ 与 pgBouncer 1.8-1.25+
+- 默认配置包：随附 58 个采集器定义文件，默认覆盖 PostgreSQL 10-19+ 与 pgBouncer 1.8-1.25+
 - 先可观测后可连接：默认非阻塞启动，目标库暂时不可达时也先暴露 HTTP 端点
 - 可控失败策略：设置 `--fail-fast` 后，启动阶段目标不可达会直接失败退出
 - 在线变更：支持 `POST/GET /reload` 与 `SIGHUP` 触发热重载（非 Windows 额外支持 `SIGUSR1`）
@@ -218,7 +218,7 @@ WantedBy=multi-user.target
 环境文件 `/etc/default/pg_exporter`：
 
 ```bash
-PG_EXPORTER_URL='postgres://:5432/?sslmode=disable'
+PG_EXPORTER_URL='postgres://:5432/postgres?sslmode=disable'
 PG_EXPORTER_CONFIG=/etc/pg_exporter.yml
 PG_EXPORTER_LABEL=""
 PG_EXPORTER_TAG=""

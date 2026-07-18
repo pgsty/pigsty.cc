@@ -82,20 +82,22 @@ collector_branch_name:           # 此采集器的唯一标识符
   # 指标定义
   metrics:
     - column_name:
-        usage: GAUGE             # GAUGE、COUNTER、LABEL 或 DISCARD
+        usage: GAUGE             # GAUGE、COUNTER、HISTOGRAM、LABEL 或 DISCARD
         rename: metric_name      # 可选：重命名指标
         description: "帮助文本"   # 指标描述
         default: 0               # NULL 时的默认值
         scale: 1000              # 值的缩放因子
+        bucket: [1, 10, 100]     # HISTOGRAM 列的桶上界（严格递增，自动追加 +Inf）
 ```
 
 配置校验约束：
 
 - 每个 `metrics` 列表项必须且只能定义一个列映射
-- 每个采集器至少要有一个 `GAUGE` 或 `COUNTER` 列
-- `usage` 仅支持 `GAUGE` / `COUNTER` / `LABEL` / `DISCARD`
+- 每个采集器至少要有一个 `GAUGE` / `COUNTER` / `HISTOGRAM` 列
+- `usage` 仅支持 `GAUGE` / `COUNTER` / `HISTOGRAM` / `LABEL` / `DISCARD`
+- `HISTOGRAM` 列必须定义 `bucket`：有限、严格递增的桶上界列表，`+Inf` 桶自动追加
 - 指标名、标签名会在加载阶段进行 Prometheus 规则校验，非法配置会直接报错
-- 常量标签会在加载阶段检查冲突；它们不能与查询标签重名，也不能与内置动态标签 `datname` / `query` 冲突
+- 常量标签会在加载阶段检查冲突；它们不能与查询标签重名，也不能与内置动态标签 `datname` / `query` 冲突；配置了 `HISTOGRAM` 采集器时，`le` 为保留标签，不能用作常量标签
 - 如果使用单行内联 `metrics` 写法，`description` 建议始终使用双引号包裹，避免 YAML 歧义
 
 
@@ -133,13 +135,48 @@ query: |
 
 查询结果中的每一列必须映射到一个指标类型：
 
-| 用途        | 描述               | 示例    |
-|-----------|------------------|-------|
-| `GAUGE`   | 可上下波动的瞬时值        | 当前连接数 |
-| `COUNTER` | 只增不减的累计值         | 总事务数  |
-| `LABEL`   | 用作 Prometheus 标签 | 数据库名称 |
-| `DISCARD` | 忽略此列             | 内部值   |
+| 用途          | 描述                                        | 示例     |
+|-------------|-------------------------------------------|--------|
+| `GAUGE`     | 可上下波动的瞬时值                                 | 当前连接数  |
+| `COUNTER`   | 只增不减的累计值                                  | 总事务数   |
+| `HISTOGRAM` | 快照直方图，派生 `_bucket` / `_count` / `_sum` 序列 | 事务年龄分布 |
+| `LABEL`     | 用作 Prometheus 标签                          | 数据库名称  |
+| `DISCARD`   | 忽略此列                                      | 内部值    |
 {.full-width}
+
+### 直方图列（HISTOGRAM）
+
+`v1.4.0` 引入 `HISTOGRAM` 列类型：查询返回的每一行都作为一次观测，按标签组聚合为经典
+Prometheus 直方图快照，派生 `<name>_bucket`（含 `le` 标签与 `+Inf` 桶）、`<name>_count`、
+`<name>_sum` 三族序列：
+
+```yaml
+pg_xact_age:
+  name: pg_xact_age
+  desc: "开放事务年龄分布直方图"
+  query: |
+    SELECT datname,
+           greatest(0, extract(epoch FROM now() - xact_start)) AS seconds
+    FROM pg_stat_activity
+    WHERE pid <> pg_backend_pid() AND backend_type = 'client backend'
+      AND datname IS NOT NULL AND xact_start IS NOT NULL;
+  ttl: 10
+  tags: [cluster]
+  metrics:
+    - datname: {usage: LABEL, description: "数据库名称"}
+    - seconds:
+        usage: HISTOGRAM
+        bucket: [1, 3, 10, 30, 100, 300, 1000, 3000, 10000, 30000, 100000]
+        description: "开放事务年龄快照（秒）"
+```
+
+使用注意：
+
+- 这是**快照**直方图：每次抓取重建整个分布，桶计数可增可减，语义上更接近 Gauge。
+  `histogram_quantile()` 可以直接使用，但对 `_count` / `_sum` 使用 `rate()` / `increase()` 没有意义
+- SQL `NULL` 默认忽略不计入观测；显式配置 `default` 时按默认值计入
+- `scale` 在分桶前应用于观测值；与标量列一致，时间戳与布尔值不受 `scale` 影响
+- 默认配置包中的 [`pg_xact_age`](https://github.com/pgsty/pg_exporter/blob/main/config/0450-pg_xact_age.yml) 采集器即为参考实现
 
 ### 缓存控制（TTL）
 
@@ -511,12 +548,12 @@ pg_exporter --explain
 
 ### 常见问题
 
-| 问题 | 解决方案 |
-|------|----------|
-| 指标缺失 | 检查标签和版本兼容性 |
-| 抓取缓慢 | 增加 TTL、添加超时、禁用昂贵查询 |
-| 内存使用高 | 减少结果集大小，使用 LIMIT |
-| 权限错误 | 验证监控用户的查询权限 |
+| 问题    | 解决方案               |
+|-------|--------------------|
+| 指标缺失  | 检查标签和版本兼容性         |
+| 抓取缓慢  | 增加 TTL、添加超时、禁用昂贵查询 |
+| 内存使用高 | 减少结果集大小，使用 LIMIT   |
+| 权限错误  | 验证监控用户的查询权限        |
 {.full-width}
 
 ### 调试日志

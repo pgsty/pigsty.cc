@@ -5,10 +5,11 @@ icon: fa-solid fa-clipboard-list
 description: PG Exporter 版本发布历史
 ---
 
-`pg_exporter` 的最新稳定版本是 [v1.3.0](https://github.com/pgsty/pg_exporter/releases/tag/v1.3.0)
+`pg_exporter` 的最新稳定版本是 [v1.4.0](https://github.com/pgsty/pg_exporter/releases/tag/v1.4.0)
 
 |       版本        |     日期     | 摘要                                           |                               GitHub                               |
 |:---------------:|:----------:|----------------------------------------------|:------------------------------------------------------------------:|
+| [v1.4.0](#v140) | 2026-07-18 | 快照直方图支持，新增 pg_xact_age 采集器，HTTP 路由加固         | [v1.4.0](https://github.com/pgsty/pg_exporter/releases/tag/v1.4.0) |
 | [v1.3.0](#v130) | 2026-06-24 | PostgreSQL 19 支持，新增 PG19 采集器与分支              | [v1.3.0](https://github.com/pgsty/pg_exporter/releases/tag/v1.3.0) |
 | [v1.2.2](#v122) | 2026-04-14 | 例行更新到 Go 1.26.2，无功能改动                        | [v1.2.2](https://github.com/pgsty/pg_exporter/releases/tag/v1.2.2) |
 | [v1.2.1](#v121) | 2026-03-21 | 配置样式统一，Go 1.26.1 更新                          | [v1.2.1](https://github.com/pgsty/pg_exporter/releases/tag/v1.2.1) |
@@ -41,6 +42,66 @@ description: PG Exporter 版本发布历史
 | [v0.0.2](#v002) | 2019-12-09 | 早期测试版本                                       | [v0.0.2](https://github.com/pgsty/pg_exporter/releases/tag/v0.0.2) |
 | [v0.0.1](#v001) | 2019-12-06 | 初始版本，支持 PgBouncer 模式                         | [v0.0.1](https://github.com/pgsty/pg_exporter/releases/tag/v0.0.1) |
 {.full-width}
+
+
+--------
+
+## v1.4.0
+
+`v1.4.0` 引入快照直方图（Snapshot Histogram）指标类型与新的 `pg_xact_age` 事务年龄采集器，并对 HTTP 路由、打包与构建链进行了一轮系统性加固。
+
+**新功能：**
+
+- 新增 `HISTOGRAM` 列类型：SQL 查询快照可按标签组直接聚合为经典 Prometheus 直方图，派生 `_bucket` / `_count` / `_sum` 三族序列；桶边界在配置加载阶段严格校验（有限、严格递增，自动追加 `+Inf`），`le` 成为保留标签，热重载安全
+- 新增 `pg_xact_age` 采集器：以直方图暴露开放事务年龄（`pg_xact_age_seconds`）与事务中空闲年龄（`pg_xact_age_idle_seconds`）的分布，集群级采集，仅统计客户端后端，TTL 10 秒
+- 默认配置包从 **57** 个定义文件增加到 **58** 个；`pg_xact_age` 编号 `0450`，原 `pg_lock` / `pg_lock_stat` / `pg_query` 顺延为 `0460` / `0470` / `0480`（内容不变）
+
+**修复与改进：**
+
+- HTTP 路由注册隔离到私有 ServeMux，不再使用全局 `DefaultServeMux`，杜绝第三方库注册的端点被意外暴露
+- `--web.telemetry-path` 启动时严格校验：空路径、不以 `/` 开头、含 `?` `#` `{` `}`、与内置端点冲突、以及 `//metrics` 这类注册后永远无法命中的非规范路径，一律启动即报错退出
+- 落地页对 telemetry path 进行 HTML 转义
+- `--fail-fast` 预检失败退出时正确关闭主连接池
+- RPM / DEB 打包修复（[#105](https://github.com/pgsty/pg_exporter/issues/105)）：`prometheus` 系统用户 HOME 指向 `/var/lib/prometheus`（libpq 查找 `~/.pgpass` 的惯例位置），打包默认连接串补上 `/postgres` 数据库名，避免回退到以用户名命名的库
+- 版本串统一为 `v` 前缀：官方发布二进制的 `--version` 输出、`/version` 端点与 `pg_exporter_build_info{version=...}` 标签现在为 `v1.4.0`（此前 GoReleaser 产物为无前缀的 `1.3.0`）；产物文件名、包版本号与 Docker 镜像 tag 命名规则不变
+- 直方图值转换与标量路径语义对齐：时间戳与布尔列不应用 `scale` 缩放
+- 修正 GoReleaser 内嵌包元数据：支持范围描述更新为 PostgreSQL `9.x - 19+` 与 pgBouncer `1.8 - 1.25+`
+- `make docker` 恢复 `GOPROXY` / `GOSUMDB` 构建参数透传
+
+**工程与构建：**
+
+- 构建链更新到 Go `1.26.5`、exporter-toolkit `v0.17.1`、prometheus/common `v0.70.0`
+- 新增常规 CI 验证工作流：模块 tidy 校验、生成配置漂移校验（`make conf` 结果与 `config/*.yml` 强一致）、race 测试与六平台交叉编译
+- Docker 构建工具链整合：移除 `docker/` 目录脚本与 `make docker-release`，多架构发布镜像统一由 GoReleaser 构建
+- 配置覆盖测试泛化：测试不再假设特定采集器必然存在于配置目录中，便于裁剪自定义配置包
+
+**升级提示：**
+
+- 若此前使用了非规范的 telemetry path（如 `//metrics`），升级后进程将拒绝启动——此前虽能启动，但指标端点实际上不可达
+- 解析 `pg_exporter_build_info` 的 `version` 标签或 `--version` 输出的自动化脚本，需要适配 `v` 前缀
+- 配置了 `HISTOGRAM` 采集器时，`le` 不可再用作常量标签
+
+**校验和**
+
+https://github.com/pgsty/pg_exporter/releases/download/v1.4.0/checksums.txt
+
+```bash
+9874191591567ede87ae1d5820f06e781f27c664a7f4a6365211f9e042fd8199  checksums.txt
+c6af4ae62e13f518539a6d0b3ce86ff9f7acdb567a4f0f86c6f47563574da724  pg-exporter_1.4.0-1_amd64.deb
+ff0360f61982ed627d1b1f93281a0ba66da9d077672f0c214e19522df01e40d6  pg-exporter_1.4.0-1_arm64.deb
+4fbadd4e9d918c9bc8e63975378e49375b0ff897d6b8a0f78799538b13dd68a1  pg-exporter_1.4.0-1_ppc64le.deb
+5ce106d27fffa77c39fea9bf7cbc60f4328df3d926fef025bfdd082eb6d743fd  pg_exporter-1.4.0-1.aarch64.rpm
+870b434e802e0039f10e1e3583c28a1fd83db4363a4608e1fab7f375f6d30600  pg_exporter-1.4.0-1.ppc64le.rpm
+c550d16ce3f9276948a4d44174e11716fc5e85e31e8788ea106a57cfbabd8488  pg_exporter-1.4.0-1.x86_64.rpm
+11a34e531ac5d6d378b91e768f575525389141a6860afabd0cc9f2d853f06749  pg_exporter-1.4.0.darwin-amd64.tar.gz
+49d8d3a5932602f433c4ef681ed12007da1cbc11b5ee0f9d7b4dc2d0dff8e26e  pg_exporter-1.4.0.darwin-arm64.tar.gz
+113dfe70d4f780a456c05ca6b731f96c1013bf35ecb87d75c443fe2bac7e333b  pg_exporter-1.4.0.linux-amd64.tar.gz
+68b4630ab39943658a8aff135990896a5ccf56c8a992e5982d572c78ef822e18  pg_exporter-1.4.0.linux-arm64.tar.gz
+72710625e5658c941b48f7becba9a86491852cea5469240328292838d9ed0979  pg_exporter-1.4.0.linux-ppc64le.tar.gz
+14a0cf6ffa04c7e54c1d5aa5b37fe4bea1429c1d1e7cce89e9dd805c4a29db0b  pg_exporter-1.4.0.windows-amd64.tar.gz
+```
+
+https://github.com/pgsty/pg_exporter/releases/tag/v1.4.0
 
 
 --------
