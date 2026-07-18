@@ -133,19 +133,18 @@ kf-main:
 - 每个节点显式使用 `--initial-controllers` 或 `--no-initial-controllers` 格式化模式；
 - 启动后角色等待 dynamic quorum 选出 Leader，并校验每个初始 Controller 的 Directory ID 都在现场 quorum 中。
 
-Bootstrap-only 事实保存在管理节点缓存：
+Bootstrap-only 事实保存在每个集群成员节点上：
 
 ```text
-files/kafka/<kafka_cluster>/manifest.yml
+/etc/kafka/manifest.yml
 ```
 
-同时每个集群成员都保留一份权威副本 `/etc/kafka/manifest.yml`（`scram` 集群还有 `/etc/kafka/secrets.yml`）。Manifest 只记录集群身份、初始 Controller Identity、安全模式和初始 RF/minISR。活集群始终是运行事实权威：
+`scram` 集群的每个成员还持有 `/etc/kafka/secrets.yml`。管理节点不保存任何 Kafka 状态：Manifest 与 Secret 在每次运行时从任一成员副本解析，签发的节点证书放在共享 PKI 树 `files/pki/kafka/`（CSR 在 `files/pki/csr/`），丢失时直接用 Pigsty CA 重签。Manifest 只记录集群身份、初始 Controller Identity、安全模式和初始 RF/minISR。活集群始终是运行事实权威：
 
 - Manifest 与现场身份或安全模式冲突时，普通剧本失败关闭；
 - 旧 Manifest 存在但全部数据盘为空时拒绝复活旧集群；
-- 管理节点缓存丢失时，可以从任一成员的节点副本自动恢复，不会重新格式化；
-- 管理节点与所有成员都找不到 Manifest 而存储已格式化时，失败关闭并提示先恢复 Manifest；
-- 已格式化的 `scram` 集群在管理节点与所有成员都没有 Secret 材料时同样失败关闭。
+- 所有成员都找不到 Manifest 副本而存储已格式化时，失败关闭并提示先在任一成员上恢复该文件；
+- 已格式化的 `scram` 集群在所有成员都没有 Secret 副本时同样失败关闭。
 
 增加、替换或删除 Controller 不是普通清单操作。新 Controller 必须针对现有集群显式格式化、启动并追平，然后执行 Kafka `add-controller`；删除则需要对应的 `remove-controller` 流程。角色会拒绝把未登记的新 Controller 仅凭 inventory 自动加入 Voter 集合。
 
@@ -354,7 +353,7 @@ kafka_topics:
 | `/etc/kafka/pki/kafka.pem` | `scram` 节点 PEM 私钥与证书；信任锚使用系统 `/etc/pki/ca.crt` |
 | `${kafka_data}/data/` | Topic 日志数据 |
 | `${kafka_data}/metadata/` | KRaft 元数据与 `meta.properties` |
-| `files/kafka/<cluster>/` | 管理节点上的 Manifest/Secret/PKI 缓存 |
+| `files/pki/kafka/` | 管理节点上签发的节点证书（`<cluster>-<seq>.key/.crt`，CSR 在 `files/pki/csr/`） |
 {.full-width}
 
 这些文件由角色管理。持久意图应写入 `pigsty.yml`，不要在节点上直接编辑生成文件，也不要把密码、私钥或角色自有 Secret 内容复制到清单、日志或工单。

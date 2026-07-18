@@ -86,7 +86,7 @@ kafka_cluster: kf-main
 kafka_cluster_id: MkU3OEVBNTcwNTJENDM2Qk
 ```
 
-普通新建集群不要设置。角色会随机生成 Cluster ID，并写入 `files/kafka/<kafka_cluster>/manifest.yml`。该参数不会重新标记现有数据；与 Manifest 或 `meta.properties` 冲突时会失败关闭。
+普通新建集群不要设置。角色会随机生成 Cluster ID，并写入每个成员的 `/etc/kafka/manifest.yml`。该参数不会重新标记现有数据；与 Manifest 或 `meta.properties` 冲突时会失败关闭。
 
 
 ### `kafka_rack`
@@ -293,4 +293,4 @@ kafka_topics:
 | 下线集群   | `kafka-rm.yml` | `kafka_rm_data`（默认 `true`）、`kafka_rm_pkg`（默认 `false`）、`kafka_safeguard`（默认 `false`） | `kafka_safeguard=true` 时中止一切删除 |
 {.full-width}
 
-两种轮换动作互斥，且必须以精确完整集群为目标。`kafka-rm.yml` 默认删除数据目录与管理节点上的 Manifest/Secret/PKI 缓存，执行前必须显式确认目标集群与备份/重建意图。命令与完整语义见 [预置剧本](/docs/kafka/playbook)。
+两种轮换动作互斥，且必须以精确完整集群为目标。`kafka-rm.yml` 默认删除数据目录与节点上的 `/etc/kafka` 恢复状态；`kafka_rm_data=false` 会同时保留二者。执行前必须显式确认目标集群与备份/重建意图，命令与完整语义见 [预置剧本](/docs/kafka/playbook)。

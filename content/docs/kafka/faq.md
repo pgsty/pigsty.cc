@@ -1,7 +1,7 @@
 ---
 title: 常见问题
 weight: 5048
-description: Pigsty Kafka 4.x dynamic KRaft 模块常见问题与故障排查。
+description: Pigsty Kafka 4.1+ dynamic KRaft 模块常见问题与故障排查。
 icon: fa-solid fa-circle-question
 module: [KAFKA]
 categories: [参考]
@@ -20,7 +20,7 @@ aliases: [/docs/pilot/kafka/faq]
 
 ## 为什么没有 ZooKeeper，也没有 `controller.quorum.voters`？
 
-本模块面向 Kafka 4.x，使用原生 dynamic KRaft，不安装 ZooKeeper，也不创建静态 quorum。所有成员渲染 `controller.quorum.bootstrap.servers`；新集群显式使用 `--initial-controllers`/`--no-initial-controllers` 格式化，启动后角色会校验初始 Controller 的 Directory ID 已进入现场 quorum。
+本模块面向 Kafka 4.1+，使用原生 dynamic KRaft，不安装 ZooKeeper，也不创建静态 quorum。所有成员渲染 `controller.quorum.bootstrap.servers`；新集群显式使用 `--initial-controllers`/`--no-initial-controllers` 格式化，启动后角色会校验初始 Controller 的 Directory ID 已进入现场 quorum。
 
 初始 Controller Identity 写入 Bootstrap Manifest。后续 Controller 增删仍必须执行显式 `add-controller`/`remove-controller` 管理流程，不能只编辑 inventory。
 
@@ -79,7 +79,7 @@ getent hosts <inventory-hostname>
 
 ## Manifest 丢失或只剩旧 Manifest 会怎样？
 
-每个集群成员都保留一份 Manifest 权威副本 `/etc/kafka/manifest.yml`（`scram` 集群另有 `/etc/kafka/secrets.yml`）。管理节点的 `files/kafka/<cluster>/` 缓存丢失时，角色会自动从任一成员的节点副本恢复，不会重新格式化。只有当管理节点与所有成员的副本都丢失、而存储已经格式化时，角色才失败关闭并提示先恢复 Manifest；已格式化的 `scram` 集群在两边都找不到 Secret 材料时同样失败关闭。
+每个集群成员都保留一份 Manifest 权威副本 `/etc/kafka/manifest.yml`（`scram` 集群另有 `/etc/kafka/secrets.yml`），管理节点不保存任何 Kafka 状态，每次运行时从任一成员副本解析，因此换管理节点或丢失本地检出都不影响集群管理。只有当所有成员的副本都丢失、而存储已经格式化时，角色才失败关闭并提示先在任一成员上恢复该文件；已格式化的 `scram` 集群在所有成员都找不到 Secret 副本时同样失败关闭。签发的节点证书缓存在 `files/pki/kafka/`，丢失时直接由 Pigsty CA 重签。
 
 反过来，如果 Manifest 存在而全部 Kafka 数据盘为空，角色会失败关闭，避免用旧身份意外复活已消失的集群。确实要重建时必须先执行 `kafka-rm.yml` 和明确的重建流程。
 
@@ -240,6 +240,6 @@ curl -fsS http://<kafka-ip>:9404/metrics | head -n 40
 
 ## 如何安全清空 Kafka 数据？
 
-`kafka.yml` 永远不执行清理；集群下线使用独立的 `kafka-rm.yml` 剧本。它默认（`kafka_rm_data=true`）会永久删除数据/KRaft 元数据、节点安全状态、监控 Target 与管理节点上的 Manifest/Secret/PKI 缓存；`kafka_safeguard=true` 可强制中止一切删除。
+`kafka.yml` 永远不执行清理；集群下线使用独立的 `kafka-rm.yml` 剧本。它默认（`kafka_rm_data=true`）会永久删除数据/KRaft 元数据、节点上的 `/etc/kafka` 恢复状态与监控 Target；设为 `false` 则保留数据和恢复状态。`kafka_safeguard=true` 可强制中止一切删除。
 
 该剧本没有确认字符串等额外闸门，执行前必须人工确认精确 `-l` 目标、可恢复备份或明确重建意图与业务停用状态。完整语义见 [预置剧本：集群下线](/docs/kafka/playbook#集群下线)。

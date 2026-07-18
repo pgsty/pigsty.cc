@@ -23,7 +23,7 @@ aliases: [/docs/pilot/kafka/start]
 | 阶段 | 目标 | 最终结果 |
 |:---:|:---|:---|
 | 1 | 部署单节点开发集群 | 1 个 combined 节点、PLAINTEXT、RF=1 Topic、CLI 读写 |
-| 2 | 部署三节点生产基线 | 3 个 combined 节点、dynamic KRaft、TLS/SCRAM/ACL、RF=3/minISR=2 |
+| 2 | 部署三节点安全 HA 演示基线 | 3 个 combined 节点、dynamic KRaft、TLS/SCRAM/ACL、RF=3/minISR=2 |
 | 3 | 接入应用客户端 | 使用应用 Principal、Pigsty CA 与 SASL_SSL 生产/消费 |
 | 4 | 修改核心参数 | 演示 Heap、Broker 参数、Topic Partition/保留和安全滚动 |
 | 5 | 上线验收 | 检查 Quorum、ISR、端到端读写、监控、容量与运行手册 |
@@ -191,7 +191,7 @@ sudo -u kafka /usr/local/bin/pigsty-kafka-health cluster \
 
 --------
 
-## 二、部署三节点生产基线
+## 二、部署三节点安全 HA 演示基线
 
 三节点示例是一套全新的 `kf-main` 集群，使用三个 combined 节点。它可以容忍一个 Controller 故障；业务 Topic 使用 RF=3/minISR=2，并启用 `scram` 生产安全档位。
 
