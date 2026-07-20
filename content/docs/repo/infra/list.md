@@ -109,6 +109,17 @@ allow_loading_unsigned_plugins = victoriametrics-logs-datasource,victoriametrics
 
 --------
 
+## Kubernetes
+
+| 名称                                                                                              | 版本       | 许可证                                                                                              | 备注                                    |
+|-------------------------------------------------------------------------------------------------|----------|--------------------------------------------------------------------------------------------------|---------------------------------------|
+| [`k3s`](https://github.com/k3s-io/k3s)                                                           | `1.36.2` | [Apache-2.0](https://github.com/k3s-io/k3s/blob/master/LICENSE)                                   | 轻量级 Kubernetes，上游 `v1.36.2+k3s1`    |
+| [`k3s-images`](https://github.com/k3s-io/k3s/releases/tag/v1.36.2%2Bk3s1)                        | `1.36.2` | 多种许可证                                                                                            | 与 `k3s` 精确匹配的双架构离线系统镜像包              |
+{.stretch-last}
+
+
+--------
+
 ## 数据库
 
 PostgreSQL 相关工具、数据库管理系统和其他实用程序
