@@ -11,10 +11,10 @@ weight: 4590
     <div class="ext-card__title">pgEdge/snowflake</div>
     <div class="ext-card__desc">https://github.com/pgEdge/snowflake</div>
   </a>
-  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/snowflake-2.5.tar.gz">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/snowflake-2.5.0.tar.gz">
     <div class="ext-card__kicker">源码</div>
-    <div class="ext-card__title">snowflake-2.5.tar.gz</div>
-    <div class="ext-card__desc">snowflake-2.5.tar.gz</div>
+    <div class="ext-card__title">snowflake-2.5.0.tar.gz</div>
+    <div class="ext-card__desc">snowflake-2.5.0.tar.gz</div>
   </a>
 </div>
 
@@ -46,29 +46,29 @@ weight: 4590
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
 | [**EXT**](/ext/list#func) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `2.5.0` | {{< pgvers "18,17,16,15" >}} | `snowflake` | - |
-| [**RPM**](/ext/rpm#func) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `2.5.0` | {{< pgvers "18,17,16,15" >}} | `pgedge-$v` | - |
-| [**DEB**](/ext/deb#func) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `2.5.0` | {{< pgvers "18,17,16,15" >}} | `pgedge-$v` | - |
+| [**RPM**](/ext/rpm#func) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `18.4` | {{< pgvers "18,17,16,15" >}} | `pgedge-$v` | - |
+| [**DEB**](/ext/deb#func) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `18.4` | {{< pgvers "18,17,16,15" >}} | `pgedge-$v` | - |
 {.ext-table}
 
 {{< pgext_matrix >}}
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | FORK PIGSTY 18.4 1 | FORK PIGSTY 17.10 1 | FORK PIGSTY 16.14 1 | FORK PIGSTY 15.18 1 | MISS PIGSTY - 0 |
-| el8.aarch64 | FORK PIGSTY 18.4 1 | FORK PIGSTY 17.10 1 | FORK PIGSTY 16.14 1 | FORK PIGSTY 15.18 1 | MISS PIGSTY - 0 |
-| el9.x86_64 | FORK PIGSTY 18.4 1 | FORK PIGSTY 17.10 1 | FORK PIGSTY 16.14 1 | FORK PIGSTY 15.18 1 | MISS PIGSTY - 0 |
-| el9.aarch64 | FORK PIGSTY 18.4 1 | FORK PIGSTY 17.10 1 | FORK PIGSTY 16.14 1 | FORK PIGSTY 15.18 1 | MISS PIGSTY - 0 |
-| el10.x86_64 | FORK PIGSTY 18.4 1 | FORK PIGSTY 17.10 1 | FORK PIGSTY 16.14 1 | FORK PIGSTY 15.18 1 | MISS PIGSTY - 0 |
-| el10.aarch64 | FORK PIGSTY 18.4 1 | FORK PIGSTY 17.10 1 | FORK PIGSTY 16.14 1 | FORK PIGSTY 15.18 1 | MISS PIGSTY - 0 |
-| d12.x86_64 | FORK PIGSTY 18.4 1 | FORK PIGSTY 17.10 1 | FORK PIGSTY 16.14 1 | FORK PIGSTY 15.18 1 | MISS PIGSTY - 0 |
-| d12.aarch64 | FORK PIGSTY 18.4 1 | FORK PIGSTY 17.10 1 | FORK PIGSTY 16.14 1 | FORK PIGSTY 15.18 1 | MISS PIGSTY - 0 |
-| d13.x86_64 | FORK PIGSTY 18.4 1 | FORK PIGSTY 17.10 1 | FORK PIGSTY 16.14 1 | FORK PIGSTY 15.18 1 | MISS PIGSTY - 0 |
-| d13.aarch64 | FORK PIGSTY 18.4 1 | FORK PIGSTY 17.10 1 | FORK PIGSTY 16.14 1 | FORK PIGSTY 15.18 1 | MISS PIGSTY - 0 |
-| u22.x86_64 | FORK PIGSTY 18.4 1 | FORK PIGSTY 17.10 1 | FORK PIGSTY 16.14 1 | FORK PIGSTY 15.18 1 | MISS PIGSTY - 0 |
-| u22.aarch64 | FORK PIGSTY 18.4 1 | FORK PIGSTY 17.10 1 | FORK PIGSTY 16.14 1 | FORK PIGSTY 15.18 1 | MISS PIGSTY - 0 |
-| u24.x86_64 | FORK PIGSTY 18.4 1 | FORK PIGSTY 17.10 1 | FORK PIGSTY 16.14 1 | FORK PIGSTY 15.18 1 | MISS PIGSTY - 0 |
-| u24.aarch64 | FORK PIGSTY 18.4 1 | FORK PIGSTY 17.10 1 | FORK PIGSTY 16.14 1 | FORK PIGSTY 15.18 1 | MISS PIGSTY - 0 |
-| u26.x86_64 | FORK PIGSTY 18.4 1 | FORK PIGSTY 17.10 1 | FORK PIGSTY 16.14 1 | FORK PIGSTY 15.18 1 | MISS PIGSTY - 0 |
-| u26.aarch64 | FORK PIGSTY 18.4 1 | FORK PIGSTY 17.10 1 | FORK PIGSTY 16.14 1 | FORK PIGSTY 15.18 1 | MISS PIGSTY - 0 |
+| el8.x86_64 | AVAIL PIGSTY 18.4 1 | AVAIL PIGSTY 17.10 1 | AVAIL PIGSTY 16.14 1 | AVAIL PIGSTY 15.18 1 | N/A PIGSTY - 0 |
+| el8.aarch64 | AVAIL PIGSTY 18.4 1 | AVAIL PIGSTY 17.10 1 | AVAIL PIGSTY 16.14 1 | AVAIL PIGSTY 15.18 1 | N/A PIGSTY - 0 |
+| el9.x86_64 | AVAIL PIGSTY 18.4 1 | AVAIL PIGSTY 17.10 1 | AVAIL PIGSTY 16.14 1 | AVAIL PIGSTY 15.18 1 | N/A PIGSTY - 0 |
+| el9.aarch64 | AVAIL PIGSTY 18.4 1 | AVAIL PIGSTY 17.10 1 | AVAIL PIGSTY 16.14 1 | AVAIL PIGSTY 15.18 1 | N/A PIGSTY - 0 |
+| el10.x86_64 | AVAIL PIGSTY 18.4 1 | AVAIL PIGSTY 17.10 1 | AVAIL PIGSTY 16.14 1 | AVAIL PIGSTY 15.18 1 | N/A PIGSTY - 0 |
+| el10.aarch64 | AVAIL PIGSTY 18.4 1 | AVAIL PIGSTY 17.10 1 | AVAIL PIGSTY 16.14 1 | AVAIL PIGSTY 15.18 1 | N/A PIGSTY - 0 |
+| d12.x86_64 | AVAIL PIGSTY 18.4 1 | AVAIL PIGSTY 17.10 1 | AVAIL PIGSTY 16.14 1 | AVAIL PIGSTY 15.18 1 | N/A PIGSTY - 0 |
+| d12.aarch64 | AVAIL PIGSTY 18.4 1 | AVAIL PIGSTY 17.10 1 | AVAIL PIGSTY 16.14 1 | AVAIL PIGSTY 15.18 1 | N/A PIGSTY - 0 |
+| d13.x86_64 | AVAIL PIGSTY 18.4 1 | AVAIL PIGSTY 17.10 1 | AVAIL PIGSTY 16.14 1 | AVAIL PIGSTY 15.18 1 | N/A PIGSTY - 0 |
+| d13.aarch64 | AVAIL PIGSTY 18.4 1 | AVAIL PIGSTY 17.10 1 | AVAIL PIGSTY 16.14 1 | AVAIL PIGSTY 15.18 1 | N/A PIGSTY - 0 |
+| u22.x86_64 | AVAIL PIGSTY 18.4 1 | AVAIL PIGSTY 17.10 1 | AVAIL PIGSTY 16.14 1 | AVAIL PIGSTY 15.18 1 | N/A PIGSTY - 0 |
+| u22.aarch64 | AVAIL PIGSTY 18.4 1 | AVAIL PIGSTY 17.10 1 | AVAIL PIGSTY 16.14 1 | AVAIL PIGSTY 15.18 1 | N/A PIGSTY - 0 |
+| u24.x86_64 | AVAIL PIGSTY 18.4 1 | AVAIL PIGSTY 17.10 1 | AVAIL PIGSTY 16.14 1 | AVAIL PIGSTY 15.18 1 | N/A PIGSTY - 0 |
+| u24.aarch64 | AVAIL PIGSTY 18.4 1 | AVAIL PIGSTY 17.10 1 | AVAIL PIGSTY 16.14 1 | AVAIL PIGSTY 15.18 1 | N/A PIGSTY - 0 |
+| u26.x86_64 | AVAIL PIGSTY 18.4 1 | AVAIL PIGSTY 17.10 1 | AVAIL PIGSTY 16.14 1 | AVAIL PIGSTY 15.18 1 | N/A PIGSTY - 0 |
+| u26.aarch64 | AVAIL PIGSTY 18.4 1 | AVAIL PIGSTY 17.10 1 | AVAIL PIGSTY 16.14 1 | AVAIL PIGSTY 15.18 1 | N/A PIGSTY - 0 |
 @ el8.x86_64 18 pgedge-18 pgedge-18-18.4-1PIGSTY.el8.x86_64.rpm pigsty 18.4 13.2MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgedge-18-18.4-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 18 pgedge-18 pgedge-18-18.4-1PIGSTY.el8.aarch64.rpm pigsty 18.4 12.8MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgedge-18-18.4-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 18 pgedge-18 pgedge-18-18.4-1PIGSTY.el9.x86_64.rpm pigsty 18.4 12.1MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgedge-18-18.4-1PIGSTY.el9.x86_64.rpm
@@ -193,14 +193,17 @@ apt install -y pgedge-15   # PG 15
 CREATE EXTENSION snowflake;
 ```
 
-
-
-
 ## 用法
 
-> [snowflake: PostgreSQL 的 Snowflake ID 序列](https://github.com/pgEdge/snowflake)
+来源：
 
-提供基于 `int8` 和 `sequence` 的唯一 ID 生成，使用 Snowflake 格式，适用于分布式系统。
+- [snowflake v2.5.0 README](https://github.com/pgEdge/snowflake/blob/v2.5.0/README.md)
+- [创建 Snowflake 序列](https://github.com/pgEdge/snowflake/blob/v2.5.0/docs/creating.md)
+- [转换 PostgreSQL 序列](https://github.com/pgEdge/snowflake/blob/v2.5.0/docs/converting.md)
+- [函数参考](https://github.com/pgEdge/snowflake/blob/v2.5.0/docs/snowflake_functions.md)
+- [v2.5.0 更新日志](https://github.com/pgEdge/snowflake/blob/v2.5.0/docs/changelog.md)
+
+`snowflake` 生成分布式 `bigint` 标识符，从时间戳、节点标识符和毫秒计数器中产生。现有的 PostgreSQL 序列可以被转换，使得表的默认值继续使用 `nextval(...)` 同时生产 Snowflake ID。
 
 ```sql
 CREATE EXTENSION snowflake;
@@ -208,35 +211,54 @@ CREATE EXTENSION snowflake;
 
 ### 配置
 
-在 `postgresql.conf` 中设置节点标识符（必需，值为 1-1023）：
+在 `postgresql.conf` 中为每个可写的节点分配一个唯一的标识符，然后重新加载 PostgreSQL：
 
 ```ini
 snowflake.node = 1
+```
+
+在同一时间可以写入的服务器上重复使用节点标识符可能会生成重复的 ID。
+
+### 转换一个序列
+
+创建一个普通的 PostgreSQL 序列，然后转换其定义。引用列中的现有值不会被重写。
+
+```sql
+CREATE TABLE orders (
+  id bigint GENERATED BY DEFAULT AS IDENTITY PRIMARY KEY,
+  payload jsonb NOT NULL
+);
+
+SELECT snowflake.convert_sequence_to_snowflake(
+  pg_get_serial_sequence('orders', 'id')::regclass
+);
+
+INSERT INTO orders (payload) VALUES ('{"status":"new"}');
+SELECT id, snowflake.format(id) FROM orders;
 ```
 
 ### 函数
 
 | 函数 | 描述 |
 |---|---|
-| `snowflake.nextval([sequence regclass])` | 生成下一个 Snowflake ID（未指定序列时使用内部序列） |
+| `snowflake.nextval([sequence regclass])` | 生成下一个 Snowflake ID（如果没有指定序列，则使用内部序列） |
 | `snowflake.currval([sequence regclass])` | 返回序列的当前值 |
-| `snowflake.get_epoch(snowflake int8)` | 提取时间戳（自 2023-01-01 起的秒数） |
-| `snowflake.get_count(snowflake int8)` | 提取计数部分（每毫秒重置） |
+| `snowflake.get_epoch(snowflake int8)` | 提取时间戳为纪元（自2023-01-01以来的秒数） |
+| `snowflake.get_count(snowflake int8)` | 提取计数值部分（每毫秒重置） |
 | `snowflake.get_node(snowflake int8)` | 提取节点标识符 |
 | `snowflake.format(snowflake int8)` | 返回包含 `node`、`ts` 和 `count` 字段的 JSONB |
 
 ### 示例
 
 ```sql
--- 生成一个 Snowflake ID
+-- Generate a snowflake ID
 SELECT snowflake.nextval();
 -- 136169504773242881
 
--- 配合命名序列使用
-CREATE SEQUENCE orders_id_seq;
+-- Use an already converted named sequence
 SELECT snowflake.nextval('orders_id_seq'::regclass);
 
--- 提取各组成部分
+-- Extract components
 SELECT snowflake.get_epoch(136169504773242881);
 -- 1704996539.845
 
@@ -249,9 +271,28 @@ SELECT snowflake.get_node(136169504773242881);
 SELECT snowflake.format(136169504773242881);
 -- {"id": 1, "ts": "2024-01-11 13:08:59.845-05", "count": 0}
 
--- 用作默认列值
-CREATE TABLE orders (
+-- Use as default column
+CREATE TABLE direct_ids (
   id int8 DEFAULT snowflake.nextval() PRIMARY KEY,
   data text
 );
 ```
+
+### 审查与升级
+
+使用 `psql \d+` 或 PostgreSQL 系统目录审查转换后的表默认值。它们应该调用 `snowflake.nextval(...)` 而不是原来的 `nextval(...)`
+
+```sql
+SELECT table_schema, table_name, column_name, column_default
+FROM information_schema.columns
+WHERE column_default LIKE 'snowflake.nextval(%';
+```
+
+版本 `2.5.0` 修复了导出/恢复被转换序列的 `MAXVALUE` 设置为正常 `bigint` 最大值的问题。它还修复了受影响序列的转换 SQL 并增加了对 PostgreSQL 18 的支持。
+
+### 注意事项
+
+- 转换会改变序列定义，而不是已经存储在表行中的 ID。
+- Snowflake 生成器每毫秒最多可以发出 4096 个计数值。不要将序列增量配置为超过 4096。
+- 保持节点标识符在整个并发写入的生命周期内稳定且唯一；将其作为集群规划和故障转移流程的一部分进行记录。
+- 在逻辑复制或涉及转换后序列定义的滚动更改之前，在每个节点上安装相同的扩展版本。

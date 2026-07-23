@@ -38,16 +38,16 @@ weight: 2760
 {.ext-table .ext-table--rel}
 
 
-> Distinct from Supabase pg_jsonschema; pgrx patched to 0.18.1.
+> Distinct from Supabase pg_jsonschema.
 
 
 ## 版本
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.1.9` | {{< pgvers "14,15,16,17,18" >}} | `jsonschema` | - |
-| [**RPM**](/ext/rpm#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.1.9` | {{< pgvers "14,15,16,17,18" >}} | `jsonschema_$v` | - |
-| [**DEB**](/ext/deb#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.1.9` | {{< pgvers "14,15,16,17,18" >}} | `postgresql-$v-jsonschema` | - |
+| [**EXT**](/ext/list#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.1.9` | {{< pgvers "18,17,16,15,14" >}} | `jsonschema` | - |
+| [**RPM**](/ext/rpm#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.1.9` | {{< pgvers "18,17,16,15,14" >}} | `jsonschema_$v` | - |
+| [**DEB**](/ext/deb#feat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.1.9` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-jsonschema` | - |
 {.ext-table}
 
 {{< pgext_matrix >}}
@@ -69,86 +69,86 @@ weight: 2760
 | u24.aarch64 | AVAIL PIGSTY 0.1.9 1 | AVAIL PIGSTY 0.1.9 1 | AVAIL PIGSTY 0.1.9 1 | AVAIL PIGSTY 0.1.9 1 | AVAIL PIGSTY 0.1.9 1 |
 | u26.x86_64 | AVAIL PIGSTY 0.1.9 1 | AVAIL PIGSTY 0.1.9 1 | AVAIL PIGSTY 0.1.9 1 | AVAIL PIGSTY 0.1.9 1 | AVAIL PIGSTY 0.1.9 1 |
 | u26.aarch64 | AVAIL PIGSTY 0.1.9 1 | AVAIL PIGSTY 0.1.9 1 | AVAIL PIGSTY 0.1.9 1 | AVAIL PIGSTY 0.1.9 1 | AVAIL PIGSTY 0.1.9 1 |
-@ el8.x86_64 18 jsonschema_18 jsonschema_18-0.1.9-1PIGSTY.el8.x86_64.rpm pigsty 0.1.9 924.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/jsonschema_18-0.1.9-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 18 jsonschema_18 jsonschema_18-0.1.9-1PIGSTY.el8.aarch64.rpm pigsty 0.1.9 806.8KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/jsonschema_18-0.1.9-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 18 jsonschema_18 jsonschema_18-0.1.9-1PIGSTY.el9.x86_64.rpm pigsty 0.1.9 936.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/jsonschema_18-0.1.9-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 18 jsonschema_18 jsonschema_18-0.1.9-1PIGSTY.el9.aarch64.rpm pigsty 0.1.9 875.2KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/jsonschema_18-0.1.9-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 18 jsonschema_18 jsonschema_18-0.1.9-1PIGSTY.el10.x86_64.rpm pigsty 0.1.9 933.5KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/jsonschema_18-0.1.9-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 18 jsonschema_18 jsonschema_18-0.1.9-1PIGSTY.el10.aarch64.rpm pigsty 0.1.9 875.7KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/jsonschema_18-0.1.9-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 18 postgresql-18-jsonschema postgresql-18-jsonschema_0.1.9-1PIGSTY~bookworm_amd64.deb pigsty 0.1.9 785.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/j/jsonschema/postgresql-18-jsonschema_0.1.9-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 18 postgresql-18-jsonschema postgresql-18-jsonschema_0.1.9-1PIGSTY~bookworm_arm64.deb pigsty 0.1.9 664.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/j/jsonschema/postgresql-18-jsonschema_0.1.9-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 18 postgresql-18-jsonschema postgresql-18-jsonschema_0.1.9-1PIGSTY~trixie_amd64.deb pigsty 0.1.9 786.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/j/jsonschema/postgresql-18-jsonschema_0.1.9-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 18 postgresql-18-jsonschema postgresql-18-jsonschema_0.1.9-1PIGSTY~trixie_arm64.deb pigsty 0.1.9 664.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/j/jsonschema/postgresql-18-jsonschema_0.1.9-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 18 postgresql-18-jsonschema postgresql-18-jsonschema_0.1.9-1PIGSTY~jammy_amd64.deb pigsty 0.1.9 873.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/j/jsonschema/postgresql-18-jsonschema_0.1.9-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 18 postgresql-18-jsonschema postgresql-18-jsonschema_0.1.9-1PIGSTY~jammy_arm64.deb pigsty 0.1.9 797.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/j/jsonschema/postgresql-18-jsonschema_0.1.9-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 18 postgresql-18-jsonschema postgresql-18-jsonschema_0.1.9-1PIGSTY~noble_amd64.deb pigsty 0.1.9 862.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/j/jsonschema/postgresql-18-jsonschema_0.1.9-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 18 postgresql-18-jsonschema postgresql-18-jsonschema_0.1.9-1PIGSTY~noble_arm64.deb pigsty 0.1.9 782.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/j/jsonschema/postgresql-18-jsonschema_0.1.9-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 18 postgresql-18-jsonschema postgresql-18-jsonschema_0.1.9-2PIGSTY~resolute_amd64.deb pigsty 0.1.9 1.5MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/j/jsonschema/postgresql-18-jsonschema_0.1.9-2PIGSTY~resolute_amd64.deb
-@ u26.aarch64 18 postgresql-18-jsonschema postgresql-18-jsonschema_0.1.9-2PIGSTY~resolute_arm64.deb pigsty 0.1.9 1.4MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/j/jsonschema/postgresql-18-jsonschema_0.1.9-2PIGSTY~resolute_arm64.deb
-@ el8.x86_64 17 jsonschema_17 jsonschema_17-0.1.9-1PIGSTY.el8.x86_64.rpm pigsty 0.1.9 924.9KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/jsonschema_17-0.1.9-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 17 jsonschema_17 jsonschema_17-0.1.9-1PIGSTY.el8.aarch64.rpm pigsty 0.1.9 806.8KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/jsonschema_17-0.1.9-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 17 jsonschema_17 jsonschema_17-0.1.9-1PIGSTY.el9.x86_64.rpm pigsty 0.1.9 936.7KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/jsonschema_17-0.1.9-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 17 jsonschema_17 jsonschema_17-0.1.9-1PIGSTY.el9.aarch64.rpm pigsty 0.1.9 875.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/jsonschema_17-0.1.9-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 17 jsonschema_17 jsonschema_17-0.1.9-1PIGSTY.el10.x86_64.rpm pigsty 0.1.9 940.4KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/jsonschema_17-0.1.9-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 17 jsonschema_17 jsonschema_17-0.1.9-1PIGSTY.el10.aarch64.rpm pigsty 0.1.9 875.3KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/jsonschema_17-0.1.9-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 17 postgresql-17-jsonschema postgresql-17-jsonschema_0.1.9-1PIGSTY~bookworm_amd64.deb pigsty 0.1.9 787.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/j/jsonschema/postgresql-17-jsonschema_0.1.9-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 17 postgresql-17-jsonschema postgresql-17-jsonschema_0.1.9-1PIGSTY~bookworm_arm64.deb pigsty 0.1.9 664.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/j/jsonschema/postgresql-17-jsonschema_0.1.9-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 17 postgresql-17-jsonschema postgresql-17-jsonschema_0.1.9-1PIGSTY~trixie_amd64.deb pigsty 0.1.9 786.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/j/jsonschema/postgresql-17-jsonschema_0.1.9-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 17 postgresql-17-jsonschema postgresql-17-jsonschema_0.1.9-1PIGSTY~trixie_arm64.deb pigsty 0.1.9 664.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/j/jsonschema/postgresql-17-jsonschema_0.1.9-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 17 postgresql-17-jsonschema postgresql-17-jsonschema_0.1.9-1PIGSTY~jammy_amd64.deb pigsty 0.1.9 873.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/j/jsonschema/postgresql-17-jsonschema_0.1.9-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 17 postgresql-17-jsonschema postgresql-17-jsonschema_0.1.9-1PIGSTY~jammy_arm64.deb pigsty 0.1.9 792.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/j/jsonschema/postgresql-17-jsonschema_0.1.9-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 17 postgresql-17-jsonschema postgresql-17-jsonschema_0.1.9-1PIGSTY~noble_amd64.deb pigsty 0.1.9 866.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/j/jsonschema/postgresql-17-jsonschema_0.1.9-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 17 postgresql-17-jsonschema postgresql-17-jsonschema_0.1.9-1PIGSTY~noble_arm64.deb pigsty 0.1.9 787.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/j/jsonschema/postgresql-17-jsonschema_0.1.9-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 17 postgresql-17-jsonschema postgresql-17-jsonschema_0.1.9-2PIGSTY~resolute_amd64.deb pigsty 0.1.9 1.5MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/j/jsonschema/postgresql-17-jsonschema_0.1.9-2PIGSTY~resolute_amd64.deb
-@ u26.aarch64 17 postgresql-17-jsonschema postgresql-17-jsonschema_0.1.9-2PIGSTY~resolute_arm64.deb pigsty 0.1.9 1.4MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/j/jsonschema/postgresql-17-jsonschema_0.1.9-2PIGSTY~resolute_arm64.deb
-@ el8.x86_64 16 jsonschema_16 jsonschema_16-0.1.9-1PIGSTY.el8.x86_64.rpm pigsty 0.1.9 924.9KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/jsonschema_16-0.1.9-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 16 jsonschema_16 jsonschema_16-0.1.9-1PIGSTY.el8.aarch64.rpm pigsty 0.1.9 806.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/jsonschema_16-0.1.9-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 16 jsonschema_16 jsonschema_16-0.1.9-1PIGSTY.el9.x86_64.rpm pigsty 0.1.9 936.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/jsonschema_16-0.1.9-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 16 jsonschema_16 jsonschema_16-0.1.9-1PIGSTY.el9.aarch64.rpm pigsty 0.1.9 875.2KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/jsonschema_16-0.1.9-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 16 jsonschema_16 jsonschema_16-0.1.9-1PIGSTY.el10.x86_64.rpm pigsty 0.1.9 936.4KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/jsonschema_16-0.1.9-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 16 jsonschema_16 jsonschema_16-0.1.9-1PIGSTY.el10.aarch64.rpm pigsty 0.1.9 875.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/jsonschema_16-0.1.9-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 16 postgresql-16-jsonschema postgresql-16-jsonschema_0.1.9-1PIGSTY~bookworm_amd64.deb pigsty 0.1.9 786.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/j/jsonschema/postgresql-16-jsonschema_0.1.9-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 16 postgresql-16-jsonschema postgresql-16-jsonschema_0.1.9-1PIGSTY~bookworm_arm64.deb pigsty 0.1.9 664.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/j/jsonschema/postgresql-16-jsonschema_0.1.9-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 16 postgresql-16-jsonschema postgresql-16-jsonschema_0.1.9-1PIGSTY~trixie_amd64.deb pigsty 0.1.9 785.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/j/jsonschema/postgresql-16-jsonschema_0.1.9-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 16 postgresql-16-jsonschema postgresql-16-jsonschema_0.1.9-1PIGSTY~trixie_arm64.deb pigsty 0.1.9 664.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/j/jsonschema/postgresql-16-jsonschema_0.1.9-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 16 postgresql-16-jsonschema postgresql-16-jsonschema_0.1.9-1PIGSTY~jammy_amd64.deb pigsty 0.1.9 873.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/j/jsonschema/postgresql-16-jsonschema_0.1.9-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 16 postgresql-16-jsonschema postgresql-16-jsonschema_0.1.9-1PIGSTY~jammy_arm64.deb pigsty 0.1.9 792.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/j/jsonschema/postgresql-16-jsonschema_0.1.9-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 16 postgresql-16-jsonschema postgresql-16-jsonschema_0.1.9-1PIGSTY~noble_amd64.deb pigsty 0.1.9 866.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/j/jsonschema/postgresql-16-jsonschema_0.1.9-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 16 postgresql-16-jsonschema postgresql-16-jsonschema_0.1.9-1PIGSTY~noble_arm64.deb pigsty 0.1.9 782.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/j/jsonschema/postgresql-16-jsonschema_0.1.9-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 16 postgresql-16-jsonschema postgresql-16-jsonschema_0.1.9-2PIGSTY~resolute_amd64.deb pigsty 0.1.9 1.5MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/j/jsonschema/postgresql-16-jsonschema_0.1.9-2PIGSTY~resolute_amd64.deb
-@ u26.aarch64 16 postgresql-16-jsonschema postgresql-16-jsonschema_0.1.9-2PIGSTY~resolute_arm64.deb pigsty 0.1.9 1.4MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/j/jsonschema/postgresql-16-jsonschema_0.1.9-2PIGSTY~resolute_arm64.deb
-@ el8.x86_64 15 jsonschema_15 jsonschema_15-0.1.9-1PIGSTY.el8.x86_64.rpm pigsty 0.1.9 924.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/jsonschema_15-0.1.9-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 15 jsonschema_15 jsonschema_15-0.1.9-1PIGSTY.el8.aarch64.rpm pigsty 0.1.9 807.1KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/jsonschema_15-0.1.9-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 15 jsonschema_15 jsonschema_15-0.1.9-1PIGSTY.el9.x86_64.rpm pigsty 0.1.9 937.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/jsonschema_15-0.1.9-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 15 jsonschema_15 jsonschema_15-0.1.9-1PIGSTY.el9.aarch64.rpm pigsty 0.1.9 875.2KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/jsonschema_15-0.1.9-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 15 jsonschema_15 jsonschema_15-0.1.9-1PIGSTY.el10.x86_64.rpm pigsty 0.1.9 936.1KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/jsonschema_15-0.1.9-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 15 jsonschema_15 jsonschema_15-0.1.9-1PIGSTY.el10.aarch64.rpm pigsty 0.1.9 875.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/jsonschema_15-0.1.9-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 15 postgresql-15-jsonschema postgresql-15-jsonschema_0.1.9-1PIGSTY~bookworm_amd64.deb pigsty 0.1.9 786.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/j/jsonschema/postgresql-15-jsonschema_0.1.9-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 15 postgresql-15-jsonschema postgresql-15-jsonschema_0.1.9-1PIGSTY~bookworm_arm64.deb pigsty 0.1.9 665.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/j/jsonschema/postgresql-15-jsonschema_0.1.9-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 15 postgresql-15-jsonschema postgresql-15-jsonschema_0.1.9-1PIGSTY~trixie_amd64.deb pigsty 0.1.9 786.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/j/jsonschema/postgresql-15-jsonschema_0.1.9-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 15 postgresql-15-jsonschema postgresql-15-jsonschema_0.1.9-1PIGSTY~trixie_arm64.deb pigsty 0.1.9 665.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/j/jsonschema/postgresql-15-jsonschema_0.1.9-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 15 postgresql-15-jsonschema postgresql-15-jsonschema_0.1.9-1PIGSTY~jammy_amd64.deb pigsty 0.1.9 873.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/j/jsonschema/postgresql-15-jsonschema_0.1.9-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 15 postgresql-15-jsonschema postgresql-15-jsonschema_0.1.9-1PIGSTY~jammy_arm64.deb pigsty 0.1.9 797.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/j/jsonschema/postgresql-15-jsonschema_0.1.9-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 15 postgresql-15-jsonschema postgresql-15-jsonschema_0.1.9-1PIGSTY~noble_amd64.deb pigsty 0.1.9 864.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/j/jsonschema/postgresql-15-jsonschema_0.1.9-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 15 postgresql-15-jsonschema postgresql-15-jsonschema_0.1.9-1PIGSTY~noble_arm64.deb pigsty 0.1.9 786.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/j/jsonschema/postgresql-15-jsonschema_0.1.9-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 15 postgresql-15-jsonschema postgresql-15-jsonschema_0.1.9-2PIGSTY~resolute_amd64.deb pigsty 0.1.9 1.5MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/j/jsonschema/postgresql-15-jsonschema_0.1.9-2PIGSTY~resolute_amd64.deb
-@ u26.aarch64 15 postgresql-15-jsonschema postgresql-15-jsonschema_0.1.9-2PIGSTY~resolute_arm64.deb pigsty 0.1.9 1.4MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/j/jsonschema/postgresql-15-jsonschema_0.1.9-2PIGSTY~resolute_arm64.deb
-@ el8.x86_64 14 jsonschema_14 jsonschema_14-0.1.9-1PIGSTY.el8.x86_64.rpm pigsty 0.1.9 924.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/jsonschema_14-0.1.9-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 14 jsonschema_14 jsonschema_14-0.1.9-1PIGSTY.el8.aarch64.rpm pigsty 0.1.9 807.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/jsonschema_14-0.1.9-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 14 jsonschema_14 jsonschema_14-0.1.9-1PIGSTY.el9.x86_64.rpm pigsty 0.1.9 940.1KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/jsonschema_14-0.1.9-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 14 jsonschema_14 jsonschema_14-0.1.9-1PIGSTY.el9.aarch64.rpm pigsty 0.1.9 875.6KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/jsonschema_14-0.1.9-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 14 jsonschema_14 jsonschema_14-0.1.9-1PIGSTY.el10.x86_64.rpm pigsty 0.1.9 939.9KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/jsonschema_14-0.1.9-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 14 jsonschema_14 jsonschema_14-0.1.9-1PIGSTY.el10.aarch64.rpm pigsty 0.1.9 875.7KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/jsonschema_14-0.1.9-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 14 postgresql-14-jsonschema postgresql-14-jsonschema_0.1.9-1PIGSTY~bookworm_amd64.deb pigsty 0.1.9 787.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/j/jsonschema/postgresql-14-jsonschema_0.1.9-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 14 postgresql-14-jsonschema postgresql-14-jsonschema_0.1.9-1PIGSTY~bookworm_arm64.deb pigsty 0.1.9 665.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/j/jsonschema/postgresql-14-jsonschema_0.1.9-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 14 postgresql-14-jsonschema postgresql-14-jsonschema_0.1.9-1PIGSTY~trixie_amd64.deb pigsty 0.1.9 786.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/j/jsonschema/postgresql-14-jsonschema_0.1.9-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 14 postgresql-14-jsonschema postgresql-14-jsonschema_0.1.9-1PIGSTY~trixie_arm64.deb pigsty 0.1.9 664.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/j/jsonschema/postgresql-14-jsonschema_0.1.9-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 14 postgresql-14-jsonschema postgresql-14-jsonschema_0.1.9-1PIGSTY~jammy_amd64.deb pigsty 0.1.9 872.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/j/jsonschema/postgresql-14-jsonschema_0.1.9-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 14 postgresql-14-jsonschema postgresql-14-jsonschema_0.1.9-1PIGSTY~jammy_arm64.deb pigsty 0.1.9 796.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/j/jsonschema/postgresql-14-jsonschema_0.1.9-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 14 postgresql-14-jsonschema postgresql-14-jsonschema_0.1.9-1PIGSTY~noble_amd64.deb pigsty 0.1.9 860.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/j/jsonschema/postgresql-14-jsonschema_0.1.9-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 14 postgresql-14-jsonschema postgresql-14-jsonschema_0.1.9-1PIGSTY~noble_arm64.deb pigsty 0.1.9 782.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/j/jsonschema/postgresql-14-jsonschema_0.1.9-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 14 postgresql-14-jsonschema postgresql-14-jsonschema_0.1.9-2PIGSTY~resolute_amd64.deb pigsty 0.1.9 1.5MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/j/jsonschema/postgresql-14-jsonschema_0.1.9-2PIGSTY~resolute_amd64.deb
-@ u26.aarch64 14 postgresql-14-jsonschema postgresql-14-jsonschema_0.1.9-2PIGSTY~resolute_arm64.deb pigsty 0.1.9 1.4MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/j/jsonschema/postgresql-14-jsonschema_0.1.9-2PIGSTY~resolute_arm64.deb
+@ el8.x86_64 18 jsonschema_18 jsonschema_18-0.1.9-3PIGSTY.el8.x86_64.rpm pigsty 0.1.9 1.7MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/jsonschema_18-0.1.9-3PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 18 jsonschema_18 jsonschema_18-0.1.9-3PIGSTY.el8.aarch64.rpm pigsty 0.1.9 1.6MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/jsonschema_18-0.1.9-3PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 18 jsonschema_18 jsonschema_18-0.1.9-3PIGSTY.el9.x86_64.rpm pigsty 0.1.9 1.7MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/jsonschema_18-0.1.9-3PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 18 jsonschema_18 jsonschema_18-0.1.9-3PIGSTY.el9.aarch64.rpm pigsty 0.1.9 1.7MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/jsonschema_18-0.1.9-3PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 18 jsonschema_18 jsonschema_18-0.1.9-3PIGSTY.el10.x86_64.rpm pigsty 0.1.9 1.7MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/jsonschema_18-0.1.9-3PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 18 jsonschema_18 jsonschema_18-0.1.9-3PIGSTY.el10.aarch64.rpm pigsty 0.1.9 1.7MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/jsonschema_18-0.1.9-3PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-jsonschema postgresql-18-jsonschema_0.1.9-3PIGSTY~bookworm_amd64.deb pigsty 0.1.9 1.4MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/j/jsonschema/postgresql-18-jsonschema_0.1.9-3PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 18 postgresql-18-jsonschema postgresql-18-jsonschema_0.1.9-3PIGSTY~bookworm_arm64.deb pigsty 0.1.9 1.2MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/j/jsonschema/postgresql-18-jsonschema_0.1.9-3PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 18 postgresql-18-jsonschema postgresql-18-jsonschema_0.1.9-3PIGSTY~trixie_amd64.deb pigsty 0.1.9 1.4MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/j/jsonschema/postgresql-18-jsonschema_0.1.9-3PIGSTY~trixie_amd64.deb
+@ d13.aarch64 18 postgresql-18-jsonschema postgresql-18-jsonschema_0.1.9-3PIGSTY~trixie_arm64.deb pigsty 0.1.9 1.2MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/j/jsonschema/postgresql-18-jsonschema_0.1.9-3PIGSTY~trixie_arm64.deb
+@ u22.x86_64 18 postgresql-18-jsonschema postgresql-18-jsonschema_0.1.9-3PIGSTY~jammy_amd64.deb pigsty 0.1.9 1.5MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/j/jsonschema/postgresql-18-jsonschema_0.1.9-3PIGSTY~jammy_amd64.deb
+@ u22.aarch64 18 postgresql-18-jsonschema postgresql-18-jsonschema_0.1.9-3PIGSTY~jammy_arm64.deb pigsty 0.1.9 1.4MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/j/jsonschema/postgresql-18-jsonschema_0.1.9-3PIGSTY~jammy_arm64.deb
+@ u24.x86_64 18 postgresql-18-jsonschema postgresql-18-jsonschema_0.1.9-3PIGSTY~noble_amd64.deb pigsty 0.1.9 1.5MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/j/jsonschema/postgresql-18-jsonschema_0.1.9-3PIGSTY~noble_amd64.deb
+@ u24.aarch64 18 postgresql-18-jsonschema postgresql-18-jsonschema_0.1.9-3PIGSTY~noble_arm64.deb pigsty 0.1.9 1.4MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/j/jsonschema/postgresql-18-jsonschema_0.1.9-3PIGSTY~noble_arm64.deb
+@ u26.x86_64 18 postgresql-18-jsonschema postgresql-18-jsonschema_0.1.9-3PIGSTY~resolute_amd64.deb pigsty 0.1.9 1.5MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/j/jsonschema/postgresql-18-jsonschema_0.1.9-3PIGSTY~resolute_amd64.deb
+@ u26.aarch64 18 postgresql-18-jsonschema postgresql-18-jsonschema_0.1.9-3PIGSTY~resolute_arm64.deb pigsty 0.1.9 1.4MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/j/jsonschema/postgresql-18-jsonschema_0.1.9-3PIGSTY~resolute_arm64.deb
+@ el8.x86_64 17 jsonschema_17 jsonschema_17-0.1.9-3PIGSTY.el8.x86_64.rpm pigsty 0.1.9 1.7MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/jsonschema_17-0.1.9-3PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 17 jsonschema_17 jsonschema_17-0.1.9-3PIGSTY.el8.aarch64.rpm pigsty 0.1.9 1.6MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/jsonschema_17-0.1.9-3PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 17 jsonschema_17 jsonschema_17-0.1.9-3PIGSTY.el9.x86_64.rpm pigsty 0.1.9 1.7MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/jsonschema_17-0.1.9-3PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 17 jsonschema_17 jsonschema_17-0.1.9-3PIGSTY.el9.aarch64.rpm pigsty 0.1.9 1.7MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/jsonschema_17-0.1.9-3PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 17 jsonschema_17 jsonschema_17-0.1.9-3PIGSTY.el10.x86_64.rpm pigsty 0.1.9 1.7MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/jsonschema_17-0.1.9-3PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 17 jsonschema_17 jsonschema_17-0.1.9-3PIGSTY.el10.aarch64.rpm pigsty 0.1.9 1.7MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/jsonschema_17-0.1.9-3PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-jsonschema postgresql-17-jsonschema_0.1.9-3PIGSTY~bookworm_amd64.deb pigsty 0.1.9 1.4MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/j/jsonschema/postgresql-17-jsonschema_0.1.9-3PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 17 postgresql-17-jsonschema postgresql-17-jsonschema_0.1.9-3PIGSTY~bookworm_arm64.deb pigsty 0.1.9 1.2MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/j/jsonschema/postgresql-17-jsonschema_0.1.9-3PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 17 postgresql-17-jsonschema postgresql-17-jsonschema_0.1.9-3PIGSTY~trixie_amd64.deb pigsty 0.1.9 1.4MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/j/jsonschema/postgresql-17-jsonschema_0.1.9-3PIGSTY~trixie_amd64.deb
+@ d13.aarch64 17 postgresql-17-jsonschema postgresql-17-jsonschema_0.1.9-3PIGSTY~trixie_arm64.deb pigsty 0.1.9 1.2MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/j/jsonschema/postgresql-17-jsonschema_0.1.9-3PIGSTY~trixie_arm64.deb
+@ u22.x86_64 17 postgresql-17-jsonschema postgresql-17-jsonschema_0.1.9-3PIGSTY~jammy_amd64.deb pigsty 0.1.9 1.5MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/j/jsonschema/postgresql-17-jsonschema_0.1.9-3PIGSTY~jammy_amd64.deb
+@ u22.aarch64 17 postgresql-17-jsonschema postgresql-17-jsonschema_0.1.9-3PIGSTY~jammy_arm64.deb pigsty 0.1.9 1.4MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/j/jsonschema/postgresql-17-jsonschema_0.1.9-3PIGSTY~jammy_arm64.deb
+@ u24.x86_64 17 postgresql-17-jsonschema postgresql-17-jsonschema_0.1.9-3PIGSTY~noble_amd64.deb pigsty 0.1.9 1.5MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/j/jsonschema/postgresql-17-jsonschema_0.1.9-3PIGSTY~noble_amd64.deb
+@ u24.aarch64 17 postgresql-17-jsonschema postgresql-17-jsonschema_0.1.9-3PIGSTY~noble_arm64.deb pigsty 0.1.9 1.4MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/j/jsonschema/postgresql-17-jsonschema_0.1.9-3PIGSTY~noble_arm64.deb
+@ u26.x86_64 17 postgresql-17-jsonschema postgresql-17-jsonschema_0.1.9-3PIGSTY~resolute_amd64.deb pigsty 0.1.9 1.5MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/j/jsonschema/postgresql-17-jsonschema_0.1.9-3PIGSTY~resolute_amd64.deb
+@ u26.aarch64 17 postgresql-17-jsonschema postgresql-17-jsonschema_0.1.9-3PIGSTY~resolute_arm64.deb pigsty 0.1.9 1.4MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/j/jsonschema/postgresql-17-jsonschema_0.1.9-3PIGSTY~resolute_arm64.deb
+@ el8.x86_64 16 jsonschema_16 jsonschema_16-0.1.9-3PIGSTY.el8.x86_64.rpm pigsty 0.1.9 1.7MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/jsonschema_16-0.1.9-3PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 16 jsonschema_16 jsonschema_16-0.1.9-3PIGSTY.el8.aarch64.rpm pigsty 0.1.9 1.6MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/jsonschema_16-0.1.9-3PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 16 jsonschema_16 jsonschema_16-0.1.9-3PIGSTY.el9.x86_64.rpm pigsty 0.1.9 1.7MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/jsonschema_16-0.1.9-3PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 16 jsonschema_16 jsonschema_16-0.1.9-3PIGSTY.el9.aarch64.rpm pigsty 0.1.9 1.7MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/jsonschema_16-0.1.9-3PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 16 jsonschema_16 jsonschema_16-0.1.9-3PIGSTY.el10.x86_64.rpm pigsty 0.1.9 1.7MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/jsonschema_16-0.1.9-3PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 16 jsonschema_16 jsonschema_16-0.1.9-3PIGSTY.el10.aarch64.rpm pigsty 0.1.9 1.7MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/jsonschema_16-0.1.9-3PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 16 postgresql-16-jsonschema postgresql-16-jsonschema_0.1.9-3PIGSTY~bookworm_amd64.deb pigsty 0.1.9 1.4MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/j/jsonschema/postgresql-16-jsonschema_0.1.9-3PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 16 postgresql-16-jsonschema postgresql-16-jsonschema_0.1.9-3PIGSTY~bookworm_arm64.deb pigsty 0.1.9 1.2MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/j/jsonschema/postgresql-16-jsonschema_0.1.9-3PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 16 postgresql-16-jsonschema postgresql-16-jsonschema_0.1.9-3PIGSTY~trixie_amd64.deb pigsty 0.1.9 1.4MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/j/jsonschema/postgresql-16-jsonschema_0.1.9-3PIGSTY~trixie_amd64.deb
+@ d13.aarch64 16 postgresql-16-jsonschema postgresql-16-jsonschema_0.1.9-3PIGSTY~trixie_arm64.deb pigsty 0.1.9 1.2MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/j/jsonschema/postgresql-16-jsonschema_0.1.9-3PIGSTY~trixie_arm64.deb
+@ u22.x86_64 16 postgresql-16-jsonschema postgresql-16-jsonschema_0.1.9-3PIGSTY~jammy_amd64.deb pigsty 0.1.9 1.5MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/j/jsonschema/postgresql-16-jsonschema_0.1.9-3PIGSTY~jammy_amd64.deb
+@ u22.aarch64 16 postgresql-16-jsonschema postgresql-16-jsonschema_0.1.9-3PIGSTY~jammy_arm64.deb pigsty 0.1.9 1.4MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/j/jsonschema/postgresql-16-jsonschema_0.1.9-3PIGSTY~jammy_arm64.deb
+@ u24.x86_64 16 postgresql-16-jsonschema postgresql-16-jsonschema_0.1.9-3PIGSTY~noble_amd64.deb pigsty 0.1.9 1.5MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/j/jsonschema/postgresql-16-jsonschema_0.1.9-3PIGSTY~noble_amd64.deb
+@ u24.aarch64 16 postgresql-16-jsonschema postgresql-16-jsonschema_0.1.9-3PIGSTY~noble_arm64.deb pigsty 0.1.9 1.4MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/j/jsonschema/postgresql-16-jsonschema_0.1.9-3PIGSTY~noble_arm64.deb
+@ u26.x86_64 16 postgresql-16-jsonschema postgresql-16-jsonschema_0.1.9-3PIGSTY~resolute_amd64.deb pigsty 0.1.9 1.5MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/j/jsonschema/postgresql-16-jsonschema_0.1.9-3PIGSTY~resolute_amd64.deb
+@ u26.aarch64 16 postgresql-16-jsonschema postgresql-16-jsonschema_0.1.9-3PIGSTY~resolute_arm64.deb pigsty 0.1.9 1.4MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/j/jsonschema/postgresql-16-jsonschema_0.1.9-3PIGSTY~resolute_arm64.deb
+@ el8.x86_64 15 jsonschema_15 jsonschema_15-0.1.9-3PIGSTY.el8.x86_64.rpm pigsty 0.1.9 1.7MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/jsonschema_15-0.1.9-3PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 15 jsonschema_15 jsonschema_15-0.1.9-3PIGSTY.el8.aarch64.rpm pigsty 0.1.9 1.6MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/jsonschema_15-0.1.9-3PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 15 jsonschema_15 jsonschema_15-0.1.9-3PIGSTY.el9.x86_64.rpm pigsty 0.1.9 1.7MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/jsonschema_15-0.1.9-3PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 15 jsonschema_15 jsonschema_15-0.1.9-3PIGSTY.el9.aarch64.rpm pigsty 0.1.9 1.7MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/jsonschema_15-0.1.9-3PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 15 jsonschema_15 jsonschema_15-0.1.9-3PIGSTY.el10.x86_64.rpm pigsty 0.1.9 1.7MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/jsonschema_15-0.1.9-3PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 15 jsonschema_15 jsonschema_15-0.1.9-3PIGSTY.el10.aarch64.rpm pigsty 0.1.9 1.7MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/jsonschema_15-0.1.9-3PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 15 postgresql-15-jsonschema postgresql-15-jsonschema_0.1.9-3PIGSTY~bookworm_amd64.deb pigsty 0.1.9 1.4MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/j/jsonschema/postgresql-15-jsonschema_0.1.9-3PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 15 postgresql-15-jsonschema postgresql-15-jsonschema_0.1.9-3PIGSTY~bookworm_arm64.deb pigsty 0.1.9 1.2MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/j/jsonschema/postgresql-15-jsonschema_0.1.9-3PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 15 postgresql-15-jsonschema postgresql-15-jsonschema_0.1.9-3PIGSTY~trixie_amd64.deb pigsty 0.1.9 1.4MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/j/jsonschema/postgresql-15-jsonschema_0.1.9-3PIGSTY~trixie_amd64.deb
+@ d13.aarch64 15 postgresql-15-jsonschema postgresql-15-jsonschema_0.1.9-3PIGSTY~trixie_arm64.deb pigsty 0.1.9 1.2MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/j/jsonschema/postgresql-15-jsonschema_0.1.9-3PIGSTY~trixie_arm64.deb
+@ u22.x86_64 15 postgresql-15-jsonschema postgresql-15-jsonschema_0.1.9-3PIGSTY~jammy_amd64.deb pigsty 0.1.9 1.5MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/j/jsonschema/postgresql-15-jsonschema_0.1.9-3PIGSTY~jammy_amd64.deb
+@ u22.aarch64 15 postgresql-15-jsonschema postgresql-15-jsonschema_0.1.9-3PIGSTY~jammy_arm64.deb pigsty 0.1.9 1.4MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/j/jsonschema/postgresql-15-jsonschema_0.1.9-3PIGSTY~jammy_arm64.deb
+@ u24.x86_64 15 postgresql-15-jsonschema postgresql-15-jsonschema_0.1.9-3PIGSTY~noble_amd64.deb pigsty 0.1.9 1.5MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/j/jsonschema/postgresql-15-jsonschema_0.1.9-3PIGSTY~noble_amd64.deb
+@ u24.aarch64 15 postgresql-15-jsonschema postgresql-15-jsonschema_0.1.9-3PIGSTY~noble_arm64.deb pigsty 0.1.9 1.4MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/j/jsonschema/postgresql-15-jsonschema_0.1.9-3PIGSTY~noble_arm64.deb
+@ u26.x86_64 15 postgresql-15-jsonschema postgresql-15-jsonschema_0.1.9-3PIGSTY~resolute_amd64.deb pigsty 0.1.9 1.5MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/j/jsonschema/postgresql-15-jsonschema_0.1.9-3PIGSTY~resolute_amd64.deb
+@ u26.aarch64 15 postgresql-15-jsonschema postgresql-15-jsonschema_0.1.9-3PIGSTY~resolute_arm64.deb pigsty 0.1.9 1.4MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/j/jsonschema/postgresql-15-jsonschema_0.1.9-3PIGSTY~resolute_arm64.deb
+@ el8.x86_64 14 jsonschema_14 jsonschema_14-0.1.9-3PIGSTY.el8.x86_64.rpm pigsty 0.1.9 1.7MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/jsonschema_14-0.1.9-3PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 14 jsonschema_14 jsonschema_14-0.1.9-3PIGSTY.el8.aarch64.rpm pigsty 0.1.9 1.6MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/jsonschema_14-0.1.9-3PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 14 jsonschema_14 jsonschema_14-0.1.9-3PIGSTY.el9.x86_64.rpm pigsty 0.1.9 1.7MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/jsonschema_14-0.1.9-3PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 14 jsonschema_14 jsonschema_14-0.1.9-3PIGSTY.el9.aarch64.rpm pigsty 0.1.9 1.7MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/jsonschema_14-0.1.9-3PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 14 jsonschema_14 jsonschema_14-0.1.9-3PIGSTY.el10.x86_64.rpm pigsty 0.1.9 1.7MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/jsonschema_14-0.1.9-3PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 14 jsonschema_14 jsonschema_14-0.1.9-3PIGSTY.el10.aarch64.rpm pigsty 0.1.9 1.7MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/jsonschema_14-0.1.9-3PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 14 postgresql-14-jsonschema postgresql-14-jsonschema_0.1.9-3PIGSTY~bookworm_amd64.deb pigsty 0.1.9 1.4MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/j/jsonschema/postgresql-14-jsonschema_0.1.9-3PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 14 postgresql-14-jsonschema postgresql-14-jsonschema_0.1.9-3PIGSTY~bookworm_arm64.deb pigsty 0.1.9 1.2MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/j/jsonschema/postgresql-14-jsonschema_0.1.9-3PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 14 postgresql-14-jsonschema postgresql-14-jsonschema_0.1.9-3PIGSTY~trixie_amd64.deb pigsty 0.1.9 1.4MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/j/jsonschema/postgresql-14-jsonschema_0.1.9-3PIGSTY~trixie_amd64.deb
+@ d13.aarch64 14 postgresql-14-jsonschema postgresql-14-jsonschema_0.1.9-3PIGSTY~trixie_arm64.deb pigsty 0.1.9 1.2MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/j/jsonschema/postgresql-14-jsonschema_0.1.9-3PIGSTY~trixie_arm64.deb
+@ u22.x86_64 14 postgresql-14-jsonschema postgresql-14-jsonschema_0.1.9-3PIGSTY~jammy_amd64.deb pigsty 0.1.9 1.5MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/j/jsonschema/postgresql-14-jsonschema_0.1.9-3PIGSTY~jammy_amd64.deb
+@ u22.aarch64 14 postgresql-14-jsonschema postgresql-14-jsonschema_0.1.9-3PIGSTY~jammy_arm64.deb pigsty 0.1.9 1.4MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/j/jsonschema/postgresql-14-jsonschema_0.1.9-3PIGSTY~jammy_arm64.deb
+@ u24.x86_64 14 postgresql-14-jsonschema postgresql-14-jsonschema_0.1.9-3PIGSTY~noble_amd64.deb pigsty 0.1.9 1.5MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/j/jsonschema/postgresql-14-jsonschema_0.1.9-3PIGSTY~noble_amd64.deb
+@ u24.aarch64 14 postgresql-14-jsonschema postgresql-14-jsonschema_0.1.9-3PIGSTY~noble_arm64.deb pigsty 0.1.9 1.4MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/j/jsonschema/postgresql-14-jsonschema_0.1.9-3PIGSTY~noble_arm64.deb
+@ u26.x86_64 14 postgresql-14-jsonschema postgresql-14-jsonschema_0.1.9-3PIGSTY~resolute_amd64.deb pigsty 0.1.9 1.5MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/j/jsonschema/postgresql-14-jsonschema_0.1.9-3PIGSTY~resolute_amd64.deb
+@ u26.aarch64 14 postgresql-14-jsonschema postgresql-14-jsonschema_0.1.9-3PIGSTY~resolute_arm64.deb pigsty 0.1.9 1.4MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/j/jsonschema/postgresql-14-jsonschema_0.1.9-3PIGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建

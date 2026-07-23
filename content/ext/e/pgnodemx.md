@@ -11,10 +11,10 @@ weight: 6440
     <div class="ext-card__title">CrunchyData/pgnodemx</div>
     <div class="ext-card__desc">https://github.com/CrunchyData/pgnodemx</div>
   </a>
-  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pgnodemx-1.7.tar.gz">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pgnodemx-2.0.1.tar.gz">
     <div class="ext-card__kicker">源码</div>
-    <div class="ext-card__title">pgnodemx-1.7.tar.gz</div>
-    <div class="ext-card__desc">pgnodemx-1.7.tar.gz</div>
+    <div class="ext-card__title">pgnodemx-2.0.1.tar.gz</div>
+    <div class="ext-card__desc">pgnodemx-2.0.1.tar.gz</div>
   </a>
 </div>
 
@@ -25,7 +25,7 @@ weight: 6440
 
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
-| [**`pgnodemx`**](/ext/e/pgnodemx) | `1.7` | <a class="ext-badge ext-badge--cate stat" href="/ext/cate/stat">STAT</a> | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
+| [**`pgnodemx`**](/ext/e/pgnodemx) | `2.0.1` | <a class="ext-badge ext-badge--cate stat" href="/ext/cate/stat">STAT</a> | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
 {.ext-table}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
@@ -39,24 +39,27 @@ weight: 6440
 {.ext-table .ext-table--rel}
 
 
+> Package/source version 2.0.1 ships SQL/control version 2.0. PIGSTY RPM and PGDG DEB cover PostgreSQL 14-18 and also ship the pg_proctab compatibility stub; the release tarball reports pgnodemx_version() as none. shared_preload_libraries=pgnodemx is required.
+
+
 ## 版本
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#stat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.7` | {{< pgvers "18,17,16,15,14" >}} | `pgnodemx` | - |
-| [**RPM**](/ext/rpm#stat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.7` | {{< pgvers "18,17,16,15,14" >}} | `pgnodemx_$v` | - |
-| [**DEB**](/ext/deb#stat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.7` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pgnodemx` | - |
+| [**EXT**](/ext/list#stat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `2.0.1` | {{< pgvers "18,17,16,15,14" >}} | `pgnodemx` | - |
+| [**RPM**](/ext/rpm#stat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `2.0.1` | {{< pgvers "18,17,16,15,14" >}} | `pgnodemx_$v` | - |
+| [**DEB**](/ext/deb#stat) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `2.0.1` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pgnodemx` | - |
 {.ext-table}
 
 {{< pgext_matrix >}}
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 1.7 2 | AVAIL PIGSTY 1.7 2 | AVAIL PIGSTY 1.7 2 | AVAIL PIGSTY 1.7 2 | AVAIL PIGSTY 1.7 2 |
-| el8.aarch64 | AVAIL PIGSTY 1.7 2 | AVAIL PIGSTY 1.7 2 | AVAIL PIGSTY 1.7 2 | AVAIL PIGSTY 1.7 2 | AVAIL PIGSTY 1.7 2 |
-| el9.x86_64 | AVAIL PGDG 1.7 3 | AVAIL PGDG 1.7 3 | AVAIL PGDG 1.7 3 | AVAIL PGDG 1.7 3 | AVAIL PGDG 1.7 3 |
-| el9.aarch64 | AVAIL PGDG 1.7 3 | AVAIL PGDG 1.7 3 | AVAIL PGDG 1.7 3 | AVAIL PGDG 1.7 3 | AVAIL PGDG 1.7 3 |
-| el10.x86_64 | AVAIL PGDG 1.7 3 | AVAIL PGDG 1.7 3 | AVAIL PGDG 1.7 3 | AVAIL PGDG 1.7 3 | AVAIL PGDG 1.7 3 |
-| el10.aarch64 | AVAIL PGDG 1.7 3 | AVAIL PGDG 1.7 3 | AVAIL PGDG 1.7 3 | AVAIL PGDG 1.7 3 | AVAIL PGDG 1.7 3 |
+| el8.x86_64 | AVAIL PIGSTY 2.0.1 2 | AVAIL PIGSTY 2.0.1 2 | AVAIL PIGSTY 2.0.1 2 | AVAIL PIGSTY 2.0.1 2 | AVAIL PIGSTY 2.0.1 2 |
+| el8.aarch64 | AVAIL PIGSTY 2.0.1 2 | AVAIL PIGSTY 2.0.1 2 | AVAIL PIGSTY 2.0.1 2 | AVAIL PIGSTY 2.0.1 2 | AVAIL PIGSTY 2.0.1 2 |
+| el9.x86_64 | AVAIL PIGSTY 2.0.1 3 | AVAIL PIGSTY 2.0.1 3 | AVAIL PIGSTY 2.0.1 3 | AVAIL PIGSTY 2.0.1 3 | AVAIL PIGSTY 2.0.1 3 |
+| el9.aarch64 | AVAIL PIGSTY 2.0.1 3 | AVAIL PIGSTY 2.0.1 3 | AVAIL PIGSTY 2.0.1 3 | AVAIL PIGSTY 2.0.1 3 | AVAIL PIGSTY 2.0.1 3 |
+| el10.x86_64 | AVAIL PIGSTY 2.0.1 3 | AVAIL PIGSTY 2.0.1 3 | AVAIL PIGSTY 2.0.1 3 | AVAIL PIGSTY 2.0.1 3 | AVAIL PIGSTY 2.0.1 3 |
+| el10.aarch64 | AVAIL PIGSTY 2.0.1 3 | AVAIL PIGSTY 2.0.1 3 | AVAIL PIGSTY 2.0.1 3 | AVAIL PIGSTY 2.0.1 3 | AVAIL PIGSTY 2.0.1 3 |
 | d12.x86_64 | AVAIL PGDG 2.0.1 3 | AVAIL PGDG 2.0.1 3 | AVAIL PGDG 2.0.1 3 | AVAIL PGDG 2.0.1 3 | AVAIL PGDG 2.0.1 3 |
 | d12.aarch64 | AVAIL PGDG 2.0.1 3 | AVAIL PGDG 2.0.1 3 | AVAIL PGDG 2.0.1 3 | AVAIL PGDG 2.0.1 3 | AVAIL PGDG 2.0.1 3 |
 | d13.x86_64 | AVAIL PGDG 2.0.1 3 | AVAIL PGDG 2.0.1 3 | AVAIL PGDG 2.0.1 3 | AVAIL PGDG 2.0.1 3 | AVAIL PGDG 2.0.1 3 |
@@ -67,21 +70,21 @@ weight: 6440
 | u24.aarch64 | AVAIL PGDG 2.0.1 3 | AVAIL PGDG 2.0.1 3 | AVAIL PGDG 2.0.1 3 | AVAIL PGDG 2.0.1 3 | AVAIL PGDG 2.0.1 3 |
 | u26.x86_64 | AVAIL PGDG 2.0.1 3 | AVAIL PGDG 2.0.1 3 | AVAIL PGDG 2.0.1 3 | AVAIL PGDG 2.0.1 3 | AVAIL PGDG 2.0.1 3 |
 | u26.aarch64 | AVAIL PGDG 2.0.1 3 | AVAIL PGDG 2.0.1 3 | AVAIL PGDG 2.0.1 3 | AVAIL PGDG 2.0.1 3 | AVAIL PGDG 2.0.1 3 |
-@ el8.x86_64 18 pgnodemx_18 pgnodemx_18-1.7-1PIGSTY.el8.x86_64.rpm pigsty 1.7 37.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgnodemx_18-1.7-1PIGSTY.el8.x86_64.rpm
+@ el8.x86_64 18 pgnodemx_18 pgnodemx_18-2.0.1-1PIGSTY.el8.x86_64.rpm pigsty 2.0.1 45.2KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgnodemx_18-2.0.1-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 18 pgnodemx_18 pgnodemx_18-1.7-1PGDG.rhel8.x86_64.rpm pgdg 1.7 41.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pgnodemx_18-1.7-1PGDG.rhel8.x86_64.rpm
-@ el8.aarch64 18 pgnodemx_18 pgnodemx_18-1.7-1PIGSTY.el8.aarch64.rpm pigsty 1.7 37.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgnodemx_18-1.7-1PIGSTY.el8.aarch64.rpm
+@ el8.aarch64 18 pgnodemx_18 pgnodemx_18-2.0.1-1PIGSTY.el8.aarch64.rpm pigsty 2.0.1 44.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgnodemx_18-2.0.1-1PIGSTY.el8.aarch64.rpm
 @ el8.aarch64 18 pgnodemx_18 pgnodemx_18-1.7-1PGDG.rhel8.aarch64.rpm pgdg 1.7 41.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pgnodemx_18-1.7-1PGDG.rhel8.aarch64.rpm
+@ el9.x86_64 18 pgnodemx_18 pgnodemx_18-2.0.1-1PIGSTY.el9.x86_64.rpm pigsty 2.0.1 43.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgnodemx_18-2.0.1-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 18 pgnodemx_18 pgnodemx_18-1.7-3PGDG.rhel9.8.x86_64.rpm pgdg 1.7 41.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pgnodemx_18-1.7-3PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 18 pgnodemx_18 pgnodemx_18-1.7-1PIGSTY.el9.x86_64.rpm pigsty 1.7 35.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgnodemx_18-1.7-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 18 pgnodemx_18 pgnodemx_18-1.7-1PGDG.rhel9.x86_64.rpm pgdg 1.7 41.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pgnodemx_18-1.7-1PGDG.rhel9.x86_64.rpm
+@ el9.aarch64 18 pgnodemx_18 pgnodemx_18-2.0.1-1PIGSTY.el9.aarch64.rpm pigsty 2.0.1 43.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgnodemx_18-2.0.1-1PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 18 pgnodemx_18 pgnodemx_18-1.7-3PGDG.rhel9.8.aarch64.rpm pgdg 1.7 41.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pgnodemx_18-1.7-3PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 18 pgnodemx_18 pgnodemx_18-1.7-1PIGSTY.el9.aarch64.rpm pigsty 1.7 35.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgnodemx_18-1.7-1PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 18 pgnodemx_18 pgnodemx_18-1.7-1PGDG.rhel9.aarch64.rpm pgdg 1.7 41.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pgnodemx_18-1.7-1PGDG.rhel9.aarch64.rpm
+@ el10.x86_64 18 pgnodemx_18 pgnodemx_18-2.0.1-1PIGSTY.el10.x86_64.rpm pigsty 2.0.1 43.2KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgnodemx_18-2.0.1-1PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 18 pgnodemx_18 pgnodemx_18-1.7-3PGDG.rhel10.2.x86_64.rpm pgdg 1.7 42.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pgnodemx_18-1.7-3PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 18 pgnodemx_18 pgnodemx_18-1.7-1PIGSTY.el10.x86_64.rpm pigsty 1.7 36.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgnodemx_18-1.7-1PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 18 pgnodemx_18 pgnodemx_18-1.7-1PGDG.rhel10.x86_64.rpm pgdg 1.7 42.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pgnodemx_18-1.7-1PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 18 pgnodemx_18 pgnodemx_18-2.0.1-1PIGSTY.el10.aarch64.rpm pigsty 2.0.1 42.9KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgnodemx_18-2.0.1-1PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 18 pgnodemx_18 pgnodemx_18-1.7-3PGDG.rhel10.2.aarch64.rpm pgdg 1.7 41.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pgnodemx_18-1.7-3PGDG.rhel10.2.aarch64.rpm
-@ el10.aarch64 18 pgnodemx_18 pgnodemx_18-1.7-1PIGSTY.el10.aarch64.rpm pigsty 1.7 35.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgnodemx_18-1.7-1PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 18 pgnodemx_18 pgnodemx_18-1.7-1PGDG.rhel10.aarch64.rpm pgdg 1.7 41.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pgnodemx_18-1.7-1PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 18 postgresql-18-pgnodemx postgresql-18-pgnodemx_2.0.1-1.pgdg12+1_amd64.deb pgdg 2.0.1 95.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgnodemx/postgresql-18-pgnodemx_2.0.1-1.pgdg12+1_amd64.deb
 @ d12.x86_64 18 postgresql-18-pgnodemx postgresql-18-pgnodemx_1.7-2.pgdg12+1_amd64.deb pgdg 1.7 82.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgnodemx/postgresql-18-pgnodemx_1.7-2.pgdg12+1_amd64.deb
@@ -113,21 +116,21 @@ weight: 6440
 @ u26.aarch64 18 postgresql-18-pgnodemx postgresql-18-pgnodemx_2.0.1-1.pgdg26.04+1_arm64.deb pgdg 2.0.1 93.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgnodemx/postgresql-18-pgnodemx_2.0.1-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 18 postgresql-18-pgnodemx postgresql-18-pgnodemx_1.7-2.pgdg26.04+1_arm64.deb pgdg 1.7 80.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgnodemx/postgresql-18-pgnodemx_1.7-2.pgdg26.04+1_arm64.deb
 @ u26.aarch64 18 postgresql-18-pgnodemx postgresql-18-pgnodemx_1.7-1PIGSTY~resolute_arm64.deb pigsty 1.7 87.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgnodemx/postgresql-18-pgnodemx_1.7-1PIGSTY~resolute_arm64.deb
-@ el8.x86_64 17 pgnodemx_17 pgnodemx_17-1.7-1PIGSTY.el8.x86_64.rpm pigsty 1.7 37.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgnodemx_17-1.7-1PIGSTY.el8.x86_64.rpm
+@ el8.x86_64 17 pgnodemx_17 pgnodemx_17-2.0.1-1PIGSTY.el8.x86_64.rpm pigsty 2.0.1 45.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgnodemx_17-2.0.1-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 17 pgnodemx_17 pgnodemx_17-1.7-1PGDG.rhel8.x86_64.rpm pgdg 1.7 41.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pgnodemx_17-1.7-1PGDG.rhel8.x86_64.rpm
-@ el8.aarch64 17 pgnodemx_17 pgnodemx_17-1.7-1PIGSTY.el8.aarch64.rpm pigsty 1.7 37.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgnodemx_17-1.7-1PIGSTY.el8.aarch64.rpm
+@ el8.aarch64 17 pgnodemx_17 pgnodemx_17-2.0.1-1PIGSTY.el8.aarch64.rpm pigsty 2.0.1 44.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgnodemx_17-2.0.1-1PIGSTY.el8.aarch64.rpm
 @ el8.aarch64 17 pgnodemx_17 pgnodemx_17-1.7-1PGDG.rhel8.aarch64.rpm pgdg 1.7 41.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pgnodemx_17-1.7-1PGDG.rhel8.aarch64.rpm
+@ el9.x86_64 17 pgnodemx_17 pgnodemx_17-2.0.1-1PIGSTY.el9.x86_64.rpm pigsty 2.0.1 43.1KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgnodemx_17-2.0.1-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 17 pgnodemx_17 pgnodemx_17-1.7-3PGDG.rhel9.8.x86_64.rpm pgdg 1.7 41.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pgnodemx_17-1.7-3PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 17 pgnodemx_17 pgnodemx_17-1.7-1PIGSTY.el9.x86_64.rpm pigsty 1.7 35.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgnodemx_17-1.7-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 17 pgnodemx_17 pgnodemx_17-1.7-1PGDG.rhel9.x86_64.rpm pgdg 1.7 41.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pgnodemx_17-1.7-1PGDG.rhel9.x86_64.rpm
+@ el9.aarch64 17 pgnodemx_17 pgnodemx_17-2.0.1-1PIGSTY.el9.aarch64.rpm pigsty 2.0.1 43.1KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgnodemx_17-2.0.1-1PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 17 pgnodemx_17 pgnodemx_17-1.7-3PGDG.rhel9.8.aarch64.rpm pgdg 1.7 41.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pgnodemx_17-1.7-3PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 17 pgnodemx_17 pgnodemx_17-1.7-1PIGSTY.el9.aarch64.rpm pigsty 1.7 35.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgnodemx_17-1.7-1PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 17 pgnodemx_17 pgnodemx_17-1.7-1PGDG.rhel9.aarch64.rpm pgdg 1.7 41.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pgnodemx_17-1.7-1PGDG.rhel9.aarch64.rpm
+@ el10.x86_64 17 pgnodemx_17 pgnodemx_17-2.0.1-1PIGSTY.el10.x86_64.rpm pigsty 2.0.1 43.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgnodemx_17-2.0.1-1PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 17 pgnodemx_17 pgnodemx_17-1.7-3PGDG.rhel10.2.x86_64.rpm pgdg 1.7 42.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pgnodemx_17-1.7-3PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 17 pgnodemx_17 pgnodemx_17-1.7-1PIGSTY.el10.x86_64.rpm pigsty 1.7 36.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgnodemx_17-1.7-1PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 17 pgnodemx_17 pgnodemx_17-1.7-1PGDG.rhel10.x86_64.rpm pgdg 1.7 42.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pgnodemx_17-1.7-1PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 17 pgnodemx_17 pgnodemx_17-2.0.1-1PIGSTY.el10.aarch64.rpm pigsty 2.0.1 42.9KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgnodemx_17-2.0.1-1PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 17 pgnodemx_17 pgnodemx_17-1.7-3PGDG.rhel10.2.aarch64.rpm pgdg 1.7 41.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pgnodemx_17-1.7-3PGDG.rhel10.2.aarch64.rpm
-@ el10.aarch64 17 pgnodemx_17 pgnodemx_17-1.7-1PIGSTY.el10.aarch64.rpm pigsty 1.7 35.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgnodemx_17-1.7-1PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 17 pgnodemx_17 pgnodemx_17-1.7-1PGDG.rhel10.aarch64.rpm pgdg 1.7 41.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pgnodemx_17-1.7-1PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 17 postgresql-17-pgnodemx postgresql-17-pgnodemx_2.0.1-1.pgdg12+1_amd64.deb pgdg 2.0.1 95.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgnodemx/postgresql-17-pgnodemx_2.0.1-1.pgdg12+1_amd64.deb
 @ d12.x86_64 17 postgresql-17-pgnodemx postgresql-17-pgnodemx_1.7-2.pgdg12+1_amd64.deb pgdg 1.7 82.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgnodemx/postgresql-17-pgnodemx_1.7-2.pgdg12+1_amd64.deb
@@ -159,21 +162,21 @@ weight: 6440
 @ u26.aarch64 17 postgresql-17-pgnodemx postgresql-17-pgnodemx_2.0.1-1.pgdg26.04+1_arm64.deb pgdg 2.0.1 93.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgnodemx/postgresql-17-pgnodemx_2.0.1-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 17 postgresql-17-pgnodemx postgresql-17-pgnodemx_1.7-2.pgdg26.04+1_arm64.deb pgdg 1.7 80.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgnodemx/postgresql-17-pgnodemx_1.7-2.pgdg26.04+1_arm64.deb
 @ u26.aarch64 17 postgresql-17-pgnodemx postgresql-17-pgnodemx_1.7-1PIGSTY~resolute_arm64.deb pigsty 1.7 87.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgnodemx/postgresql-17-pgnodemx_1.7-1PIGSTY~resolute_arm64.deb
-@ el8.x86_64 16 pgnodemx_16 pgnodemx_16-1.7-1PIGSTY.el8.x86_64.rpm pigsty 1.7 37.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgnodemx_16-1.7-1PIGSTY.el8.x86_64.rpm
+@ el8.x86_64 16 pgnodemx_16 pgnodemx_16-2.0.1-1PIGSTY.el8.x86_64.rpm pigsty 2.0.1 45.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgnodemx_16-2.0.1-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 16 pgnodemx_16 pgnodemx_16-1.7-1PGDG.rhel8.x86_64.rpm pgdg 1.7 41.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pgnodemx_16-1.7-1PGDG.rhel8.x86_64.rpm
-@ el8.aarch64 16 pgnodemx_16 pgnodemx_16-1.7-1PIGSTY.el8.aarch64.rpm pigsty 1.7 37.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgnodemx_16-1.7-1PIGSTY.el8.aarch64.rpm
+@ el8.aarch64 16 pgnodemx_16 pgnodemx_16-2.0.1-1PIGSTY.el8.aarch64.rpm pigsty 2.0.1 44.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgnodemx_16-2.0.1-1PIGSTY.el8.aarch64.rpm
 @ el8.aarch64 16 pgnodemx_16 pgnodemx_16-1.7-1PGDG.rhel8.aarch64.rpm pgdg 1.7 41.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pgnodemx_16-1.7-1PGDG.rhel8.aarch64.rpm
+@ el9.x86_64 16 pgnodemx_16 pgnodemx_16-2.0.1-1PIGSTY.el9.x86_64.rpm pigsty 2.0.1 43.1KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgnodemx_16-2.0.1-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 16 pgnodemx_16 pgnodemx_16-1.7-3PGDG.rhel9.8.x86_64.rpm pgdg 1.7 41.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pgnodemx_16-1.7-3PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 16 pgnodemx_16 pgnodemx_16-1.7-1PIGSTY.el9.x86_64.rpm pigsty 1.7 35.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgnodemx_16-1.7-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 16 pgnodemx_16 pgnodemx_16-1.7-1PGDG.rhel9.x86_64.rpm pgdg 1.7 41.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pgnodemx_16-1.7-1PGDG.rhel9.x86_64.rpm
+@ el9.aarch64 16 pgnodemx_16 pgnodemx_16-2.0.1-1PIGSTY.el9.aarch64.rpm pigsty 2.0.1 43.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgnodemx_16-2.0.1-1PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 16 pgnodemx_16 pgnodemx_16-1.7-3PGDG.rhel9.8.aarch64.rpm pgdg 1.7 41.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pgnodemx_16-1.7-3PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 16 pgnodemx_16 pgnodemx_16-1.7-1PIGSTY.el9.aarch64.rpm pigsty 1.7 35.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgnodemx_16-1.7-1PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 16 pgnodemx_16 pgnodemx_16-1.7-1PGDG.rhel9.aarch64.rpm pgdg 1.7 41.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pgnodemx_16-1.7-1PGDG.rhel9.aarch64.rpm
+@ el10.x86_64 16 pgnodemx_16 pgnodemx_16-2.0.1-1PIGSTY.el10.x86_64.rpm pigsty 2.0.1 43.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgnodemx_16-2.0.1-1PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 16 pgnodemx_16 pgnodemx_16-1.7-3PGDG.rhel10.2.x86_64.rpm pgdg 1.7 42.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pgnodemx_16-1.7-3PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 16 pgnodemx_16 pgnodemx_16-1.7-1PIGSTY.el10.x86_64.rpm pigsty 1.7 36.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgnodemx_16-1.7-1PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 16 pgnodemx_16 pgnodemx_16-1.7-1PGDG.rhel10.x86_64.rpm pgdg 1.7 42.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pgnodemx_16-1.7-1PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 16 pgnodemx_16 pgnodemx_16-2.0.1-1PIGSTY.el10.aarch64.rpm pigsty 2.0.1 42.9KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgnodemx_16-2.0.1-1PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 16 pgnodemx_16 pgnodemx_16-1.7-3PGDG.rhel10.2.aarch64.rpm pgdg 1.7 41.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pgnodemx_16-1.7-3PGDG.rhel10.2.aarch64.rpm
-@ el10.aarch64 16 pgnodemx_16 pgnodemx_16-1.7-1PIGSTY.el10.aarch64.rpm pigsty 1.7 35.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgnodemx_16-1.7-1PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 16 pgnodemx_16 pgnodemx_16-1.7-1PGDG.rhel10.aarch64.rpm pgdg 1.7 41.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pgnodemx_16-1.7-1PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 16 postgresql-16-pgnodemx postgresql-16-pgnodemx_2.0.1-1.pgdg12+1_amd64.deb pgdg 2.0.1 95.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgnodemx/postgresql-16-pgnodemx_2.0.1-1.pgdg12+1_amd64.deb
 @ d12.x86_64 16 postgresql-16-pgnodemx postgresql-16-pgnodemx_1.7-2.pgdg12+1_amd64.deb pgdg 1.7 82.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgnodemx/postgresql-16-pgnodemx_1.7-2.pgdg12+1_amd64.deb
@@ -205,21 +208,21 @@ weight: 6440
 @ u26.aarch64 16 postgresql-16-pgnodemx postgresql-16-pgnodemx_2.0.1-1.pgdg26.04+1_arm64.deb pgdg 2.0.1 93.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgnodemx/postgresql-16-pgnodemx_2.0.1-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 16 postgresql-16-pgnodemx postgresql-16-pgnodemx_1.7-2.pgdg26.04+1_arm64.deb pgdg 1.7 80.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgnodemx/postgresql-16-pgnodemx_1.7-2.pgdg26.04+1_arm64.deb
 @ u26.aarch64 16 postgresql-16-pgnodemx postgresql-16-pgnodemx_1.7-1PIGSTY~resolute_arm64.deb pigsty 1.7 87.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgnodemx/postgresql-16-pgnodemx_1.7-1PIGSTY~resolute_arm64.deb
-@ el8.x86_64 15 pgnodemx_15 pgnodemx_15-1.7-1PIGSTY.el8.x86_64.rpm pigsty 1.7 38.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgnodemx_15-1.7-1PIGSTY.el8.x86_64.rpm
+@ el8.x86_64 15 pgnodemx_15 pgnodemx_15-2.0.1-1PIGSTY.el8.x86_64.rpm pigsty 2.0.1 46.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgnodemx_15-2.0.1-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 15 pgnodemx_15 pgnodemx_15-1.7-1PGDG.rhel8.x86_64.rpm pgdg 1.7 43.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pgnodemx_15-1.7-1PGDG.rhel8.x86_64.rpm
-@ el8.aarch64 15 pgnodemx_15 pgnodemx_15-1.7-1PIGSTY.el8.aarch64.rpm pigsty 1.7 38.1KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgnodemx_15-1.7-1PIGSTY.el8.aarch64.rpm
+@ el8.aarch64 15 pgnodemx_15 pgnodemx_15-2.0.1-1PIGSTY.el8.aarch64.rpm pigsty 2.0.1 45.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgnodemx_15-2.0.1-1PIGSTY.el8.aarch64.rpm
 @ el8.aarch64 15 pgnodemx_15 pgnodemx_15-1.7-1PGDG.rhel8.aarch64.rpm pgdg 1.7 42.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pgnodemx_15-1.7-1PGDG.rhel8.aarch64.rpm
+@ el9.x86_64 15 pgnodemx_15 pgnodemx_15-2.0.1-1PIGSTY.el9.x86_64.rpm pigsty 2.0.1 45.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgnodemx_15-2.0.1-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 15 pgnodemx_15 pgnodemx_15-1.7-3PGDG.rhel9.8.x86_64.rpm pgdg 1.7 44.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pgnodemx_15-1.7-3PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 15 pgnodemx_15 pgnodemx_15-1.7-1PIGSTY.el9.x86_64.rpm pigsty 1.7 38.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgnodemx_15-1.7-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 15 pgnodemx_15 pgnodemx_15-1.7-1PGDG.rhel9.x86_64.rpm pgdg 1.7 43.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pgnodemx_15-1.7-1PGDG.rhel9.x86_64.rpm
+@ el9.aarch64 15 pgnodemx_15 pgnodemx_15-2.0.1-1PIGSTY.el9.aarch64.rpm pigsty 2.0.1 45.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgnodemx_15-2.0.1-1PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 15 pgnodemx_15 pgnodemx_15-1.7-3PGDG.rhel9.8.aarch64.rpm pgdg 1.7 43.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pgnodemx_15-1.7-3PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 15 pgnodemx_15 pgnodemx_15-1.7-1PIGSTY.el9.aarch64.rpm pigsty 1.7 37.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgnodemx_15-1.7-1PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 15 pgnodemx_15 pgnodemx_15-1.7-1PGDG.rhel9.aarch64.rpm pgdg 1.7 43.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pgnodemx_15-1.7-1PGDG.rhel9.aarch64.rpm
+@ el10.x86_64 15 pgnodemx_15 pgnodemx_15-2.0.1-1PIGSTY.el10.x86_64.rpm pigsty 2.0.1 45.4KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgnodemx_15-2.0.1-1PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 15 pgnodemx_15 pgnodemx_15-1.7-3PGDG.rhel10.2.x86_64.rpm pgdg 1.7 44.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pgnodemx_15-1.7-3PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 15 pgnodemx_15 pgnodemx_15-1.7-1PIGSTY.el10.x86_64.rpm pigsty 1.7 38.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgnodemx_15-1.7-1PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 15 pgnodemx_15 pgnodemx_15-1.7-1PGDG.rhel10.x86_64.rpm pgdg 1.7 44.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pgnodemx_15-1.7-1PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 15 pgnodemx_15 pgnodemx_15-2.0.1-1PIGSTY.el10.aarch64.rpm pigsty 2.0.1 45.4KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgnodemx_15-2.0.1-1PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 15 pgnodemx_15 pgnodemx_15-1.7-3PGDG.rhel10.2.aarch64.rpm pgdg 1.7 44.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pgnodemx_15-1.7-3PGDG.rhel10.2.aarch64.rpm
-@ el10.aarch64 15 pgnodemx_15 pgnodemx_15-1.7-1PIGSTY.el10.aarch64.rpm pigsty 1.7 37.7KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgnodemx_15-1.7-1PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 15 pgnodemx_15 pgnodemx_15-1.7-1PGDG.rhel10.aarch64.rpm pgdg 1.7 44.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pgnodemx_15-1.7-1PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 15 postgresql-15-pgnodemx postgresql-15-pgnodemx_2.0.1-1.pgdg12+1_amd64.deb pgdg 2.0.1 96.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgnodemx/postgresql-15-pgnodemx_2.0.1-1.pgdg12+1_amd64.deb
 @ d12.x86_64 15 postgresql-15-pgnodemx postgresql-15-pgnodemx_1.7-2.pgdg12+1_amd64.deb pgdg 1.7 83.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgnodemx/postgresql-15-pgnodemx_1.7-2.pgdg12+1_amd64.deb
@@ -251,21 +254,21 @@ weight: 6440
 @ u26.aarch64 15 postgresql-15-pgnodemx postgresql-15-pgnodemx_2.0.1-1.pgdg26.04+1_arm64.deb pgdg 2.0.1 95.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgnodemx/postgresql-15-pgnodemx_2.0.1-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 15 postgresql-15-pgnodemx postgresql-15-pgnodemx_1.7-2.pgdg26.04+1_arm64.deb pgdg 1.7 82.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgnodemx/postgresql-15-pgnodemx_1.7-2.pgdg26.04+1_arm64.deb
 @ u26.aarch64 15 postgresql-15-pgnodemx postgresql-15-pgnodemx_1.7-1PIGSTY~resolute_arm64.deb pigsty 1.7 89.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgnodemx/postgresql-15-pgnodemx_1.7-1PIGSTY~resolute_arm64.deb
-@ el8.x86_64 14 pgnodemx_14 pgnodemx_14-1.7-1PIGSTY.el8.x86_64.rpm pigsty 1.7 38.6KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgnodemx_14-1.7-1PIGSTY.el8.x86_64.rpm
+@ el8.x86_64 14 pgnodemx_14 pgnodemx_14-2.0.1-1PIGSTY.el8.x86_64.rpm pigsty 2.0.1 46.2KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgnodemx_14-2.0.1-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 14 pgnodemx_14 pgnodemx_14-1.7-1PGDG.rhel8.x86_64.rpm pgdg 1.7 43.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pgnodemx_14-1.7-1PGDG.rhel8.x86_64.rpm
-@ el8.aarch64 14 pgnodemx_14 pgnodemx_14-1.7-1PIGSTY.el8.aarch64.rpm pigsty 1.7 38.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgnodemx_14-1.7-1PIGSTY.el8.aarch64.rpm
+@ el8.aarch64 14 pgnodemx_14 pgnodemx_14-2.0.1-1PIGSTY.el8.aarch64.rpm pigsty 2.0.1 45.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgnodemx_14-2.0.1-1PIGSTY.el8.aarch64.rpm
 @ el8.aarch64 14 pgnodemx_14 pgnodemx_14-1.7-1PGDG.rhel8.aarch64.rpm pgdg 1.7 42.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pgnodemx_14-1.7-1PGDG.rhel8.aarch64.rpm
+@ el9.x86_64 14 pgnodemx_14 pgnodemx_14-2.0.1-1PIGSTY.el9.x86_64.rpm pigsty 2.0.1 44.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgnodemx_14-2.0.1-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 14 pgnodemx_14 pgnodemx_14-1.7-3PGDG.rhel9.8.x86_64.rpm pgdg 1.7 43.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pgnodemx_14-1.7-3PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 14 pgnodemx_14 pgnodemx_14-1.7-1PIGSTY.el9.x86_64.rpm pigsty 1.7 37.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgnodemx_14-1.7-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 14 pgnodemx_14 pgnodemx_14-1.7-1PGDG.rhel9.x86_64.rpm pgdg 1.7 43.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pgnodemx_14-1.7-1PGDG.rhel9.x86_64.rpm
+@ el9.aarch64 14 pgnodemx_14 pgnodemx_14-2.0.1-1PIGSTY.el9.aarch64.rpm pigsty 2.0.1 45.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgnodemx_14-2.0.1-1PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 14 pgnodemx_14 pgnodemx_14-1.7-3PGDG.rhel9.8.aarch64.rpm pgdg 1.7 43.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pgnodemx_14-1.7-3PGDG.rhel9.8.aarch64.rpm
-@ el9.aarch64 14 pgnodemx_14 pgnodemx_14-1.7-1PIGSTY.el9.aarch64.rpm pigsty 1.7 37.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgnodemx_14-1.7-1PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 14 pgnodemx_14 pgnodemx_14-1.7-1PGDG.rhel9.aarch64.rpm pgdg 1.7 43.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pgnodemx_14-1.7-1PGDG.rhel9.aarch64.rpm
+@ el10.x86_64 14 pgnodemx_14 pgnodemx_14-2.0.1-1PIGSTY.el10.x86_64.rpm pigsty 2.0.1 44.9KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgnodemx_14-2.0.1-1PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 14 pgnodemx_14 pgnodemx_14-1.7-3PGDG.rhel10.2.x86_64.rpm pgdg 1.7 44.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pgnodemx_14-1.7-3PGDG.rhel10.2.x86_64.rpm
-@ el10.x86_64 14 pgnodemx_14 pgnodemx_14-1.7-1PIGSTY.el10.x86_64.rpm pigsty 1.7 37.9KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgnodemx_14-1.7-1PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 14 pgnodemx_14 pgnodemx_14-1.7-1PGDG.rhel10.x86_64.rpm pgdg 1.7 44.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pgnodemx_14-1.7-1PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 14 pgnodemx_14 pgnodemx_14-2.0.1-1PIGSTY.el10.aarch64.rpm pigsty 2.0.1 45.1KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgnodemx_14-2.0.1-1PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 14 pgnodemx_14 pgnodemx_14-1.7-3PGDG.rhel10.2.aarch64.rpm pgdg 1.7 43.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgnodemx_14-1.7-3PGDG.rhel10.2.aarch64.rpm
-@ el10.aarch64 14 pgnodemx_14 pgnodemx_14-1.7-1PIGSTY.el10.aarch64.rpm pigsty 1.7 37.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgnodemx_14-1.7-1PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 14 pgnodemx_14 pgnodemx_14-1.7-1PGDG.rhel10.aarch64.rpm pgdg 1.7 44.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgnodemx_14-1.7-1PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 14 postgresql-14-pgnodemx postgresql-14-pgnodemx_2.0.1-1.pgdg12+1_amd64.deb pgdg 2.0.1 95.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgnodemx/postgresql-14-pgnodemx_2.0.1-1.pgdg12+1_amd64.deb
 @ d12.x86_64 14 postgresql-14-pgnodemx postgresql-14-pgnodemx_1.7-2.pgdg12+1_amd64.deb pgdg 1.7 83.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgnodemx/postgresql-14-pgnodemx_1.7-2.pgdg12+1_amd64.deb

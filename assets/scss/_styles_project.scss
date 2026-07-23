@@ -614,10 +614,7 @@
   .ext-avail-cell--contrib { --ext-avail-accent: #64748b; }
   .ext-avail-cell--other   { --ext-avail-accent: #0ea5e9; }
   .ext-avail-cell--miss    { --ext-avail-accent: #dc2626; border-style: dashed; opacity: 0.85; }
-  .ext-avail-cell--hide    { --ext-avail-accent: #94a3b8; border-style: dashed; opacity: 0.5; }
-  .ext-avail-cell--throw   { --ext-avail-accent: #7c3aed; }
-  .ext-avail-cell--break   { --ext-avail-accent: #d97706; }
-  .ext-avail-cell--fork    { --ext-avail-accent: #a855f7; }
+  .ext-avail-cell--na      { --ext-avail-accent: #94a3b8; border-style: dashed; opacity: 0.5; }
 
   .ext-matrix-os { white-space: nowrap; text-align: center; }
 
@@ -939,9 +936,7 @@
   .ext-badge--lang { letter-spacing: 0.01em; }
   .ext-badge--avail { --ext-accent: #2563eb; }
   .ext-badge--miss  { --ext-accent: #94a3b8; border-style: dashed; opacity: 0.7; }
-  .ext-badge--hide  { --ext-accent: #94a3b8; border-style: dashed; opacity: 0.5; }
-  .ext-badge--throw { --ext-accent: #7c3aed; }
-  .ext-badge--break { --ext-accent: #d97706; }
+  .ext-badge--na    { --ext-accent: #94a3b8; border-style: dashed; opacity: 0.5; }
 
   // Category (function group): TIME / GIS / RAG / ...
   .ext-cate--time,  .ext-badge--cate.time  { --ext-accent: #0ea5e9; }

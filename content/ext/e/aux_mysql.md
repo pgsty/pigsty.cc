@@ -49,22 +49,22 @@ weight: 9420
 {{< pgext_matrix >}}
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | FORK PIGSTY 1.0 1 |
-| el8.aarch64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | FORK PIGSTY 1.0 1 |
-| el9.x86_64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | FORK PIGSTY 1.0 1 |
-| el9.aarch64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | FORK PIGSTY 1.0 1 |
-| el10.x86_64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | FORK PIGSTY 1.0 1 |
-| el10.aarch64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | FORK PIGSTY 1.0 1 |
-| d12.x86_64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | FORK PIGSTY 1.0 1 |
-| d12.aarch64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | FORK PIGSTY 1.0 1 |
-| d13.x86_64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | FORK PIGSTY 1.0 1 |
-| d13.aarch64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | FORK PIGSTY 1.0 1 |
-| u22.x86_64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | FORK PIGSTY 1.0 1 |
-| u22.aarch64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | FORK PIGSTY 1.0 1 |
-| u24.x86_64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | FORK PIGSTY 1.0 1 |
-| u24.aarch64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | FORK PIGSTY 1.0 1 |
-| u26.x86_64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | FORK PIGSTY 1.0 1 |
-| u26.aarch64 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | MISS PIGSTY - 0 | FORK PIGSTY 1.0 1 |
+| el8.x86_64 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.0 1 |
+| el8.aarch64 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.0 1 |
+| el9.x86_64 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.0 1 |
+| el9.aarch64 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.0 1 |
+| el10.x86_64 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.0 1 |
+| el10.aarch64 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.0 1 |
+| d12.x86_64 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.0 1 |
+| d12.aarch64 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.0 1 |
+| d13.x86_64 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.0 1 |
+| d13.aarch64 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.0 1 |
+| u22.x86_64 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.0 1 |
+| u22.aarch64 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.0 1 |
+| u24.x86_64 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.0 1 |
+| u24.aarch64 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.0 1 |
+| u26.x86_64 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.0 1 |
+| u26.aarch64 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.0 1 |
 @ el8.x86_64 14 openhalodb-14 openhalodb-14-1.0-2PIGSTY.el8.x86_64.rpm pigsty 1.0 10.2MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/openhalodb-14-1.0-2PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 14 openhalodb-14 openhalodb-14-1.0-2PIGSTY.el8.aarch64.rpm pigsty 1.0 9.8MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/openhalodb-14-1.0-2PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 14 openhalodb-14 openhalodb-14-1.0-2PIGSTY.el9.x86_64.rpm pigsty 1.0 9.9MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/openhalodb-14-1.0-2PIGSTY.el9.x86_64.rpm

@@ -38,19 +38,19 @@ weight: 5150
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
 | [**EXT**](/ext/list#admin) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `2.2` | {{< pgvers "18,17,16,15,14" >}} | `pgautofailover` | `btree_gist` |
-| [**RPM**](/ext/rpm#admin) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `2.2` | {{< pgvers "17,16,15,14" >}} | `pg_auto_failover_$v` | - |
+| [**RPM**](/ext/rpm#admin) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `2.2` | {{< pgvers "18,17,16,15,14" >}} | `pg_auto_failover_$v` | - |
 | [**DEB**](/ext/deb#admin) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `2.2` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-auto-failover` | - |
 {.ext-table}
 
 {{< pgext_matrix >}}
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | MISS PGDG - 0 | AVAIL PGDG 2.2 1 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 3 | AVAIL PGDG 2.2 5 |
-| el8.aarch64 | MISS PGDG - 0 | AVAIL PGDG 2.2 1 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 3 | AVAIL PGDG 2.2 3 |
-| el9.x86_64 | MISS PGDG - 0 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 3 | AVAIL PGDG 2.2 4 | AVAIL PGDG 2.2 5 |
-| el9.aarch64 | MISS PGDG - 0 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 3 | AVAIL PGDG 2.2 4 | AVAIL PGDG 2.2 4 |
-| el10.x86_64 | MISS PGDG - 0 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 2 |
-| el10.aarch64 | MISS PGDG - 0 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 2 |
+| el8.x86_64 | AVAIL PIGSTY 2.2 1 | AVAIL PGDG 2.2 1 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 3 | AVAIL PGDG 2.2 5 |
+| el8.aarch64 | AVAIL PIGSTY 2.2 1 | AVAIL PGDG 2.2 1 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 3 | AVAIL PGDG 2.2 3 |
+| el9.x86_64 | AVAIL PIGSTY 2.2 1 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 3 | AVAIL PGDG 2.2 4 | AVAIL PGDG 2.2 5 |
+| el9.aarch64 | AVAIL PIGSTY 2.2 1 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 3 | AVAIL PGDG 2.2 4 | AVAIL PGDG 2.2 4 |
+| el10.x86_64 | AVAIL PIGSTY 2.2 1 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 2 |
+| el10.aarch64 | AVAIL PIGSTY 2.2 1 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 2 |
 | d12.x86_64 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 2 |
 | d12.aarch64 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 2 |
 | d13.x86_64 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 2 |
@@ -61,6 +61,12 @@ weight: 5150
 | u24.aarch64 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 2 |
 | u26.x86_64 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 2 |
 | u26.aarch64 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 2 |
+@ el8.x86_64 18 pg_auto_failover_18 pg_auto_failover_18-2.2-5PIGSTY.el8.x86_64.rpm pigsty 2.2 837.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_auto_failover_18-2.2-5PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 18 pg_auto_failover_18 pg_auto_failover_18-2.2-5PIGSTY.el8.aarch64.rpm pigsty 2.2 837.3KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_auto_failover_18-2.2-5PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 18 pg_auto_failover_18 pg_auto_failover_18-2.2-5PIGSTY.el9.x86_64.rpm pigsty 2.2 789.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_auto_failover_18-2.2-5PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 18 pg_auto_failover_18 pg_auto_failover_18-2.2-5PIGSTY.el9.aarch64.rpm pigsty 2.2 792.8KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_auto_failover_18-2.2-5PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 18 pg_auto_failover_18 pg_auto_failover_18-2.2-5PIGSTY.el10.x86_64.rpm pigsty 2.2 791.4KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_auto_failover_18-2.2-5PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 18 pg_auto_failover_18 pg_auto_failover_18-2.2-5PIGSTY.el10.aarch64.rpm pigsty 2.2 789.1KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_auto_failover_18-2.2-5PIGSTY.el10.aarch64.rpm
 @ d12.x86_64 18 postgresql-18-auto-failover postgresql-18-auto-failover_2.2-4.pgdg12+1_amd64.deb pgdg 2.2 378.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-auto-failover/postgresql-18-auto-failover_2.2-4.pgdg12+1_amd64.deb
 @ d12.x86_64 18 postgresql-18-auto-failover postgresql-18-auto-failover_2.2-3.pgdg12+1_amd64.deb pgdg 2.2 377.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-auto-failover/postgresql-18-auto-failover_2.2-3.pgdg12+1_amd64.deb
 @ d12.aarch64 18 postgresql-18-auto-failover postgresql-18-auto-failover_2.2-4.pgdg12+1_arm64.deb pgdg 2.2 373.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-auto-failover/postgresql-18-auto-failover_2.2-4.pgdg12+1_arm64.deb

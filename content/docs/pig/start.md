@@ -129,7 +129,7 @@ pig pitr -d -y                # 跳过确认（自动化场景）
 
 ```bash
 $ pig ext list
-✓ Found 531 extensions
+✓ Found 555 extensions
 Name                Status     Version     Cate   Flags   License         Repo     PGVer  Package                               Description
 ────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
 timescaledb         available  2.28.2      TIME   -dslt-  Timescale       PIGSTY   15-18  postgresql-18-timescaledb-tsl         Enables scalable inserts and complex queries for time-series dat
@@ -141,7 +141,7 @@ pg_bulkload         available  3.1.23      ETL    bds---  BSD 3-Clause    PIGSTY
 test_decoding       available  -           ETL    --s--x  PostgreSQL      CONTRIB  14-18  postgresql-18                         SQL-based test/example module for WAL logical decoding
 pgoutput            available  -           ETL    --s---  PostgreSQL      CONTRIB  14-18  postgresql-18                         Logical Replication output plugin
 
-(531 Rows)
+(555 Rows)
 ```
 
 所有的扩展元数据都在一份名为 [`extension.csv`](https://github.com/pgsty/pig/blob/main/cli/ext/assets/extension.csv) 的数据文件中定义，

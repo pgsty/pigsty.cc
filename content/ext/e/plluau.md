@@ -37,27 +37,24 @@ weight: 3030
 {.ext-table .ext-table--rel}
 
 
-> missing pg12-15 on el.aarch64
-
-
 ## 版本
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#lang) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `2.0.12` | {{< pgvers "18,17,16,15,14" >}} | `pllua` | - |
-| [**RPM**](/ext/rpm#lang) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `2.0.12` | {{< pgvers "17,16,15,14" >}} | `pllua_$v` | - |
+| [**EXT**](/ext/list#lang) | <a class="ext-badge ext-badge--repo mixed" href="/ext/repo#mixed">MIXED</a> | `2.0.12` | {{< pgvers "18,17,16,15,14" >}} | `pllua` | - |
+| [**RPM**](/ext/rpm#lang) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `2.0.12` | {{< pgvers "18,17,16,15,14" >}} | `pllua_$v` | - |
 | [**DEB**](/ext/deb#lang) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `2.0.12` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pllua` | - |
 {.ext-table}
 
 {{< pgext_matrix >}}
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | MISS PGDG - 0 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.11 2 | AVAIL PGDG 2.0.11 2 |
-| el8.aarch64 | MISS PGDG - 0 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 | MISS PGDG - 0 | MISS PGDG - 0 |
-| el9.x86_64 | MISS PGDG - 0 | AVAIL PGDG 2.0.12 2 | AVAIL PGDG 2.0.12 2 | AVAIL PGDG 2.0.12 3 | AVAIL PGDG 2.0.12 2 |
-| el9.aarch64 | MISS PGDG - 0 | AVAIL PGDG 2.0.12 2 | AVAIL PGDG 2.0.12 2 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 |
-| el10.x86_64 | MISS PGDG - 0 | AVAIL PGDG 2.0.12 2 | AVAIL PGDG 2.0.12 2 | AVAIL PGDG 2.0.12 2 | AVAIL PGDG 2.0.12 2 |
-| el10.aarch64 | MISS PGDG - 0 | AVAIL PGDG 2.0.12 2 | AVAIL PGDG 2.0.12 2 | AVAIL PGDG 2.0.12 2 | AVAIL PGDG 2.0.12 2 |
+| el8.x86_64 | AVAIL PIGSTY 2.0.12 1 | AVAIL PIGSTY 2.0.12 2 | AVAIL PIGSTY 2.0.12 2 | AVAIL PIGSTY 2.0.12 3 | AVAIL PIGSTY 2.0.12 3 |
+| el8.aarch64 | AVAIL PIGSTY 2.0.12 1 | AVAIL PIGSTY 2.0.12 2 | AVAIL PIGSTY 2.0.12 2 | AVAIL PIGSTY 2.0.12 1 | AVAIL PIGSTY 2.0.12 1 |
+| el9.x86_64 | AVAIL PIGSTY 2.0.12 1 | AVAIL PIGSTY 2.0.12 3 | AVAIL PIGSTY 2.0.12 3 | AVAIL PIGSTY 2.0.12 4 | AVAIL PIGSTY 2.0.12 3 |
+| el9.aarch64 | AVAIL PIGSTY 2.0.12 1 | AVAIL PIGSTY 2.0.12 3 | AVAIL PIGSTY 2.0.12 3 | AVAIL PIGSTY 2.0.12 2 | AVAIL PIGSTY 2.0.12 2 |
+| el10.x86_64 | AVAIL PIGSTY 2.0.12 1 | AVAIL PIGSTY 2.0.12 3 | AVAIL PIGSTY 2.0.12 3 | AVAIL PIGSTY 2.0.12 3 | AVAIL PIGSTY 2.0.12 3 |
+| el10.aarch64 | AVAIL PIGSTY 2.0.12 1 | AVAIL PIGSTY 2.0.12 3 | AVAIL PIGSTY 2.0.12 3 | AVAIL PIGSTY 2.0.12 3 | AVAIL PIGSTY 2.0.12 3 |
 | d12.x86_64 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 |
 | d12.aarch64 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 |
 | d13.x86_64 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 | AVAIL PGDG 2.0.12 1 |
@@ -73,10 +70,10 @@ weight: 3030
 
 ## 安装
 
-您可以直接安装 `pllua` 扩展包的预置二进制包，首先确保 [**PGDG**](/docs/repo/pgdg) 仓库已经添加并启用：
+您可以直接安装 `pllua` 扩展包的预置二进制包，首先确保 [**PGDG**](/docs/repo/pgdg) 和 [**PIGSTY**](/docs/repo/pgsql) 仓库已经添加并启用：
 
 ```bash
-pig repo add pgdg -u          # 添加 PGDG 仓库并更新缓存
+pig repo add pgsql -u          # 添加仓库并更新缓存
 ```
 
 使用 [**pig**](/docs/pig) 或者是 `apt/yum/dnf` 安装扩展：

@@ -11,6 +11,11 @@ weight: 9820
     <div class="ext-card__title">enova/pg_fact_loader</div>
     <div class="ext-card__desc">https://github.com/enova/pg_fact_loader</div>
   </a>
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pg_fact_loader-2.0.1.tar.gz">
+    <div class="ext-card__kicker">源码</div>
+    <div class="ext-card__title">pg_fact_loader-2.0.1.tar.gz</div>
+    <div class="ext-card__desc">pg_fact_loader-2.0.1.tar.gz</div>
+  </a>
 </div>
 
 
@@ -33,13 +38,16 @@ weight: 9820
 {.ext-table .ext-table--rel}
 
 
+> PGDG provides the regular DEB channel; Pigsty fills the missing PostgreSQL 18 packages on Debian/Ubuntu and builds PG14-18 for Ubuntu 26.04 (Resolute).
+
+
 ## 版本
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
 | [**EXT**](/ext/list#etl) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `2.0.1` | {{< pgvers "18,17,16,15,14" >}} | `pg_fact_loader` | - |
 | [**RPM**](/ext/rpm#etl) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `2.0.1` | {{< pgvers "18,17,16,15,14" >}} | `pg_fact_loader_$v` | - |
-| [**DEB**](/ext/deb#etl) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `2.0.1` | {{< pgvers "17,16,15,14" >}} | `postgresql-$v-pg-fact-loader` | - |
+| [**DEB**](/ext/deb#etl) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `2.0.1` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pg-fact-loader` | - |
 {.ext-table}
 
 {{< pgext_matrix >}}
@@ -181,6 +189,14 @@ weight: 9820
 @ u26.x86_64 14 postgresql-14-pg-fact-loader postgresql-14-pg-fact-loader_2.0.1-2PIGSTY~resolute_amd64.deb pigsty 2.0.1 40.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-fact-loader/postgresql-14-pg-fact-loader_2.0.1-2PIGSTY~resolute_amd64.deb
 @ u26.aarch64 14 postgresql-14-pg-fact-loader postgresql-14-pg-fact-loader_2.0.1-2PIGSTY~resolute_arm64.deb pigsty 2.0.1 40.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-fact-loader/postgresql-14-pg-fact-loader_2.0.1-2PIGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
+
+## 构建
+
+您可以使用 `pig build` 命令构建 `pg_fact_loader` 扩展的 DEB 包：
+
+```bash
+pig build pkg pg_fact_loader         # 构建 DEB 包
+```
 
 
 ## 安装

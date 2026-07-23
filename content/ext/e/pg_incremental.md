@@ -53,22 +53,22 @@ weight: 2850
 {{< pgext_matrix >}}
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 1.5.0 2 | AVAIL PIGSTY 1.5.0 2 | AVAIL PIGSTY 1.5.0 2 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| el8.aarch64 | AVAIL PIGSTY 1.5.0 2 | AVAIL PIGSTY 1.5.0 2 | AVAIL PIGSTY 1.5.0 2 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| el9.x86_64 | AVAIL PIGSTY 1.5.0 3 | AVAIL PIGSTY 1.5.0 3 | AVAIL PIGSTY 1.5.0 3 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| el9.aarch64 | AVAIL PIGSTY 1.5.0 3 | AVAIL PIGSTY 1.5.0 3 | AVAIL PIGSTY 1.5.0 3 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| el10.x86_64 | AVAIL PIGSTY 1.5.0 3 | AVAIL PIGSTY 1.5.0 3 | AVAIL PIGSTY 1.5.0 3 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| el10.aarch64 | AVAIL PIGSTY 1.5.0 3 | AVAIL PIGSTY 1.5.0 3 | AVAIL PIGSTY 1.5.0 3 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| d12.x86_64 | AVAIL PIGSTY 1.5.0 1 | AVAIL PIGSTY 1.5.0 1 | AVAIL PIGSTY 1.5.0 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| d12.aarch64 | AVAIL PIGSTY 1.5.0 1 | AVAIL PIGSTY 1.5.0 1 | AVAIL PIGSTY 1.5.0 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| d13.x86_64 | AVAIL PIGSTY 1.5.0 1 | AVAIL PIGSTY 1.5.0 1 | AVAIL PIGSTY 1.5.0 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| d13.aarch64 | AVAIL PIGSTY 1.5.0 1 | AVAIL PIGSTY 1.5.0 1 | AVAIL PIGSTY 1.5.0 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| u22.x86_64 | AVAIL PIGSTY 1.5.0 1 | AVAIL PIGSTY 1.5.0 1 | AVAIL PIGSTY 1.5.0 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| u22.aarch64 | AVAIL PIGSTY 1.5.0 1 | AVAIL PIGSTY 1.5.0 1 | AVAIL PIGSTY 1.5.0 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| u24.x86_64 | AVAIL PIGSTY 1.5.0 1 | AVAIL PIGSTY 1.5.0 1 | AVAIL PIGSTY 1.5.0 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| u24.aarch64 | AVAIL PIGSTY 1.5.0 1 | AVAIL PIGSTY 1.5.0 1 | AVAIL PIGSTY 1.5.0 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| u26.x86_64 | AVAIL PIGSTY 1.5.0 1 | AVAIL PIGSTY 1.5.0 1 | AVAIL PIGSTY 1.5.0 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| u26.aarch64 | AVAIL PIGSTY 1.5.0 1 | AVAIL PIGSTY 1.5.0 1 | AVAIL PIGSTY 1.5.0 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
+| el8.x86_64 | AVAIL PIGSTY 1.5.0 2 | AVAIL PIGSTY 1.5.0 2 | AVAIL PIGSTY 1.5.0 2 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| el8.aarch64 | AVAIL PIGSTY 1.5.0 2 | AVAIL PIGSTY 1.5.0 2 | AVAIL PIGSTY 1.5.0 2 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| el9.x86_64 | AVAIL PIGSTY 1.5.0 3 | AVAIL PIGSTY 1.5.0 3 | AVAIL PIGSTY 1.5.0 3 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| el9.aarch64 | AVAIL PIGSTY 1.5.0 3 | AVAIL PIGSTY 1.5.0 3 | AVAIL PIGSTY 1.5.0 3 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| el10.x86_64 | AVAIL PIGSTY 1.5.0 3 | AVAIL PIGSTY 1.5.0 3 | AVAIL PIGSTY 1.5.0 3 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| el10.aarch64 | AVAIL PIGSTY 1.5.0 3 | AVAIL PIGSTY 1.5.0 3 | AVAIL PIGSTY 1.5.0 3 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| d12.x86_64 | AVAIL PIGSTY 1.5.0 1 | AVAIL PIGSTY 1.5.0 1 | AVAIL PIGSTY 1.5.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| d12.aarch64 | AVAIL PIGSTY 1.5.0 1 | AVAIL PIGSTY 1.5.0 1 | AVAIL PIGSTY 1.5.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| d13.x86_64 | AVAIL PIGSTY 1.5.0 1 | AVAIL PIGSTY 1.5.0 1 | AVAIL PIGSTY 1.5.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| d13.aarch64 | AVAIL PIGSTY 1.5.0 1 | AVAIL PIGSTY 1.5.0 1 | AVAIL PIGSTY 1.5.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| u22.x86_64 | AVAIL PIGSTY 1.5.0 1 | AVAIL PIGSTY 1.5.0 1 | AVAIL PIGSTY 1.5.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| u22.aarch64 | AVAIL PIGSTY 1.5.0 1 | AVAIL PIGSTY 1.5.0 1 | AVAIL PIGSTY 1.5.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| u24.x86_64 | AVAIL PIGSTY 1.5.0 1 | AVAIL PIGSTY 1.5.0 1 | AVAIL PIGSTY 1.5.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| u24.aarch64 | AVAIL PIGSTY 1.5.0 1 | AVAIL PIGSTY 1.5.0 1 | AVAIL PIGSTY 1.5.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| u26.x86_64 | AVAIL PIGSTY 1.5.0 1 | AVAIL PIGSTY 1.5.0 1 | AVAIL PIGSTY 1.5.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| u26.aarch64 | AVAIL PIGSTY 1.5.0 1 | AVAIL PIGSTY 1.5.0 1 | AVAIL PIGSTY 1.5.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
 @ el8.x86_64 18 pg_incremental_18 pg_incremental_18-1.5.0-1PIGSTY.el8.x86_64.rpm pigsty 1.5.0 33.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_incremental_18-1.5.0-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 18 pg_incremental_18 pg_incremental_18-1.0.0-1PGDG.rhel8.x86_64.rpm pgdg 1.0.0 26.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pg_incremental_18-1.0.0-1PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 18 pg_incremental_18 pg_incremental_18-1.5.0-1PIGSTY.el8.aarch64.rpm pigsty 1.5.0 33.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_incremental_18-1.5.0-1PIGSTY.el8.aarch64.rpm
@@ -209,9 +209,9 @@ CREATE EXTENSION pg_incremental;
 
 ## 用法
 
-- 来源：[README](https://github.com/CrunchyData/pg_incremental/blob/main/README.md)，[v1.5.0 release](https://github.com/CrunchyData/pg_incremental/releases/tag/v1.5.0)
+- 来源：[README](https://github.com/CrunchyData/pg_incremental/blob/main/README.md)，[v1.5.0 版本](https://github.com/CrunchyData/pg_incremental/releases/tag/v1.5.0)
 
-`pg_incremental` 为 append-only table 和 file feed 定义 exactly-once 增量流水线。上游文档记录了三类 pipeline：sequence、time-interval 和 file-list。
+`pg_incremental` 为只追加表和文件数据源定义恰好一次语义的增量流水线。上游文档记录了三类流水线：序列、时间区间和文件列表。
 
 ### 安装与调度模型
 
@@ -221,11 +221,11 @@ CREATE EXTENSION pg_incremental;
 CREATE EXTENSION pg_incremental CASCADE;
 ```
 
-除非显式指定 `execute_immediately := false`，否则 pipeline 会在创建时立刻运行一次，之后继续按 `pg_cron` 调度执行。README 还说明，即使没有新数据，每次调度执行也会出现在 `cron.job_run_details` 中。
+除非显式指定 `execute_immediately := false`，否则流水线会在创建时立刻运行一次，之后继续按 `pg_cron` 调度执行。README 还说明，即使没有新数据，每次调度执行也会出现在 `cron.job_run_details` 中。
 
-### Sequence Pipelines
+### 序列流水线
 
-sequence pipeline 用于处理可安全消费的序列值范围：
+序列流水线用于处理可安全消费的序列值范围：
 
 ```sql
 SELECT incremental.create_sequence_pipeline('event-aggregation', 'events', $$
@@ -239,9 +239,9 @@ SELECT incremental.create_sequence_pipeline('event-aggregation', 'events', $$
 $$);
 ```
 
-README 记录了 `max_batch_size`，可用于限制每次运行处理的 sequence ID 数量。
+README 记录了 `max_batch_size`，可用于限制每次运行处理的序列 ID 数量。
 
-### Time-Interval Pipelines
+### 时间区间流水线
 
 当命令希望把 `$1` 和 `$2` 作为时间区间边界接收时，可以使用时间窗口：
 
@@ -257,9 +257,9 @@ $$);
 
 对于导出类任务，README 记录了 `batched := false`，这样每个时间区间都会单独执行。
 
-### File-List Pipelines
+### 文件列表流水线
 
-file-list pipeline 用于处理新发现的文件：
+文件列表流水线用于处理新发现的文件：
 
 ```sql
 SELECT incremental.create_file_list_pipeline('event-import', 's3://mybucket/events/*.csv', $$
@@ -267,7 +267,7 @@ SELECT incremental.create_file_list_pipeline('event-import', 's3://mybucket/even
 $$);
 ```
 
-v1.5.0 release 为 file-list pipeline 增加了 `max_batches_per_run`。README 还记录了 `incremental.skip_file()`，可将坏文件永久标记为已处理。
+v1.5.0 为文件列表流水线增加了 `max_batches_per_run`。README 还记录了 `incremental.skip_file()`，可将坏文件永久标记为已处理。
 
 ### 运维与监控
 
@@ -275,7 +275,7 @@ README 记录了以下接口：
 
 - `CALL incremental.execute_pipeline(name)`：若存在新工作则执行一次。
 - `SELECT incremental.reset_pipeline(name)`：重置进度。
-- `SELECT incremental.drop_pipeline(name)`：删除 pipeline。
+- `SELECT incremental.drop_pipeline(name)`：删除流水线。
 - `incremental.sequence_pipelines`、`incremental.time_interval_pipelines`、`incremental.file_list_pipelines` 与 `incremental.processed_files` 等视图和表。
 
-v1.5.0 release note 还提到修复了在未安装 `pg_cron` 环境下的 `DROP EXTENSION` 问题。
+v1.5.0 版本说明还提到修复了在未安装 `pg_cron` 环境下的 `DROP EXTENSION` 问题。

@@ -11,10 +11,10 @@ weight: 9570
     <div class="ext-card__title">pgEdge/spock</div>
     <div class="ext-card__desc">https://github.com/pgEdge/spock</div>
   </a>
-  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/spock-5.0.6.tar.gz">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/spock-5.0.10.tar.gz">
     <div class="ext-card__kicker">源码</div>
-    <div class="ext-card__title">spock-5.0.6.tar.gz</div>
-    <div class="ext-card__desc">spock-5.0.6.tar.gz</div>
+    <div class="ext-card__title">spock-5.0.10.tar.gz</div>
+    <div class="ext-card__desc">spock-5.0.10.tar.gz</div>
   </a>
 </div>
 
@@ -46,29 +46,29 @@ weight: 9570
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
 | [**EXT**](/ext/list#etl) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `5.0.10` | {{< pgvers "18,17,16,15" >}} | `spock` | - |
-| [**RPM**](/ext/rpm#etl) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `5.0.10` | {{< pgvers "18,17,16,15" >}} | `pgedge-$v` | - |
-| [**DEB**](/ext/deb#etl) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `5.0.10` | {{< pgvers "18,17,16,15" >}} | `pgedge-$v` | - |
+| [**RPM**](/ext/rpm#etl) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `18.4` | {{< pgvers "18,17,16,15" >}} | `pgedge-$v` | - |
+| [**DEB**](/ext/deb#etl) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `18.4` | {{< pgvers "18,17,16,15" >}} | `pgedge-$v` | - |
 {.ext-table}
 
 {{< pgext_matrix >}}
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | FORK PIGSTY 18.4 1 | FORK PIGSTY 17.10 1 | FORK PIGSTY 16.14 1 | FORK PIGSTY 15.18 1 | MISS PIGSTY - 0 |
-| el8.aarch64 | FORK PIGSTY 18.4 1 | FORK PIGSTY 17.10 1 | FORK PIGSTY 16.14 1 | FORK PIGSTY 15.18 1 | MISS PIGSTY - 0 |
-| el9.x86_64 | FORK PIGSTY 18.4 1 | FORK PIGSTY 17.10 1 | FORK PIGSTY 16.14 1 | FORK PIGSTY 15.18 1 | MISS PIGSTY - 0 |
-| el9.aarch64 | FORK PIGSTY 18.4 1 | FORK PIGSTY 17.10 1 | FORK PIGSTY 16.14 1 | FORK PIGSTY 15.18 1 | MISS PIGSTY - 0 |
-| el10.x86_64 | FORK PIGSTY 18.4 1 | FORK PIGSTY 17.10 1 | FORK PIGSTY 16.14 1 | FORK PIGSTY 15.18 1 | MISS PIGSTY - 0 |
-| el10.aarch64 | FORK PIGSTY 18.4 1 | FORK PIGSTY 17.10 1 | FORK PIGSTY 16.14 1 | FORK PIGSTY 15.18 1 | MISS PIGSTY - 0 |
-| d12.x86_64 | FORK PIGSTY 18.4 1 | FORK PIGSTY 17.10 1 | FORK PIGSTY 16.14 1 | FORK PIGSTY 15.18 1 | MISS PIGSTY - 0 |
-| d12.aarch64 | FORK PIGSTY 18.4 1 | FORK PIGSTY 17.10 1 | FORK PIGSTY 16.14 1 | FORK PIGSTY 15.18 1 | MISS PIGSTY - 0 |
-| d13.x86_64 | FORK PIGSTY 18.4 1 | FORK PIGSTY 17.10 1 | FORK PIGSTY 16.14 1 | FORK PIGSTY 15.18 1 | MISS PIGSTY - 0 |
-| d13.aarch64 | FORK PIGSTY 18.4 1 | FORK PIGSTY 17.10 1 | FORK PIGSTY 16.14 1 | FORK PIGSTY 15.18 1 | MISS PIGSTY - 0 |
-| u22.x86_64 | FORK PIGSTY 18.4 1 | FORK PIGSTY 17.10 1 | FORK PIGSTY 16.14 1 | FORK PIGSTY 15.18 1 | MISS PIGSTY - 0 |
-| u22.aarch64 | FORK PIGSTY 18.4 1 | FORK PIGSTY 17.10 1 | FORK PIGSTY 16.14 1 | FORK PIGSTY 15.18 1 | MISS PIGSTY - 0 |
-| u24.x86_64 | FORK PIGSTY 18.4 1 | FORK PIGSTY 17.10 1 | FORK PIGSTY 16.14 1 | FORK PIGSTY 15.18 1 | MISS PIGSTY - 0 |
-| u24.aarch64 | FORK PIGSTY 18.4 1 | FORK PIGSTY 17.10 1 | FORK PIGSTY 16.14 1 | FORK PIGSTY 15.18 1 | MISS PIGSTY - 0 |
-| u26.x86_64 | FORK PIGSTY 18.4 1 | FORK PIGSTY 17.10 1 | FORK PIGSTY 16.14 1 | FORK PIGSTY 15.18 1 | MISS PIGSTY - 0 |
-| u26.aarch64 | FORK PIGSTY 18.4 1 | FORK PIGSTY 17.10 1 | FORK PIGSTY 16.14 1 | FORK PIGSTY 15.18 1 | MISS PIGSTY - 0 |
+| el8.x86_64 | AVAIL PIGSTY 18.4 1 | AVAIL PIGSTY 17.10 1 | AVAIL PIGSTY 16.14 1 | AVAIL PIGSTY 15.18 1 | N/A PIGSTY - 0 |
+| el8.aarch64 | AVAIL PIGSTY 18.4 1 | AVAIL PIGSTY 17.10 1 | AVAIL PIGSTY 16.14 1 | AVAIL PIGSTY 15.18 1 | N/A PIGSTY - 0 |
+| el9.x86_64 | AVAIL PIGSTY 18.4 1 | AVAIL PIGSTY 17.10 1 | AVAIL PIGSTY 16.14 1 | AVAIL PIGSTY 15.18 1 | N/A PIGSTY - 0 |
+| el9.aarch64 | AVAIL PIGSTY 18.4 1 | AVAIL PIGSTY 17.10 1 | AVAIL PIGSTY 16.14 1 | AVAIL PIGSTY 15.18 1 | N/A PIGSTY - 0 |
+| el10.x86_64 | AVAIL PIGSTY 18.4 1 | AVAIL PIGSTY 17.10 1 | AVAIL PIGSTY 16.14 1 | AVAIL PIGSTY 15.18 1 | N/A PIGSTY - 0 |
+| el10.aarch64 | AVAIL PIGSTY 18.4 1 | AVAIL PIGSTY 17.10 1 | AVAIL PIGSTY 16.14 1 | AVAIL PIGSTY 15.18 1 | N/A PIGSTY - 0 |
+| d12.x86_64 | AVAIL PIGSTY 18.4 1 | AVAIL PIGSTY 17.10 1 | AVAIL PIGSTY 16.14 1 | AVAIL PIGSTY 15.18 1 | N/A PIGSTY - 0 |
+| d12.aarch64 | AVAIL PIGSTY 18.4 1 | AVAIL PIGSTY 17.10 1 | AVAIL PIGSTY 16.14 1 | AVAIL PIGSTY 15.18 1 | N/A PIGSTY - 0 |
+| d13.x86_64 | AVAIL PIGSTY 18.4 1 | AVAIL PIGSTY 17.10 1 | AVAIL PIGSTY 16.14 1 | AVAIL PIGSTY 15.18 1 | N/A PIGSTY - 0 |
+| d13.aarch64 | AVAIL PIGSTY 18.4 1 | AVAIL PIGSTY 17.10 1 | AVAIL PIGSTY 16.14 1 | AVAIL PIGSTY 15.18 1 | N/A PIGSTY - 0 |
+| u22.x86_64 | AVAIL PIGSTY 18.4 1 | AVAIL PIGSTY 17.10 1 | AVAIL PIGSTY 16.14 1 | AVAIL PIGSTY 15.18 1 | N/A PIGSTY - 0 |
+| u22.aarch64 | AVAIL PIGSTY 18.4 1 | AVAIL PIGSTY 17.10 1 | AVAIL PIGSTY 16.14 1 | AVAIL PIGSTY 15.18 1 | N/A PIGSTY - 0 |
+| u24.x86_64 | AVAIL PIGSTY 18.4 1 | AVAIL PIGSTY 17.10 1 | AVAIL PIGSTY 16.14 1 | AVAIL PIGSTY 15.18 1 | N/A PIGSTY - 0 |
+| u24.aarch64 | AVAIL PIGSTY 18.4 1 | AVAIL PIGSTY 17.10 1 | AVAIL PIGSTY 16.14 1 | AVAIL PIGSTY 15.18 1 | N/A PIGSTY - 0 |
+| u26.x86_64 | AVAIL PIGSTY 18.4 1 | AVAIL PIGSTY 17.10 1 | AVAIL PIGSTY 16.14 1 | AVAIL PIGSTY 15.18 1 | N/A PIGSTY - 0 |
+| u26.aarch64 | AVAIL PIGSTY 18.4 1 | AVAIL PIGSTY 17.10 1 | AVAIL PIGSTY 16.14 1 | AVAIL PIGSTY 15.18 1 | N/A PIGSTY - 0 |
 @ el8.x86_64 18 pgedge-18 pgedge-18-18.4-1PIGSTY.el8.x86_64.rpm pigsty 18.4 13.2MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgedge-18-18.4-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 18 pgedge-18 pgedge-18-18.4-1PIGSTY.el8.aarch64.rpm pigsty 18.4 12.8MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgedge-18-18.4-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 18 pgedge-18 pgedge-18-18.4-1PIGSTY.el9.x86_64.rpm pigsty 18.4 12.1MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgedge-18-18.4-1PIGSTY.el9.x86_64.rpm
@@ -200,14 +200,17 @@ shared_preload_libraries = 'spock';
 CREATE EXTENSION spock;
 ```
 
-
-
-
 ## 用法
 
-> [spock: PostgreSQL 多主逻辑复制扩展](https://github.com/pgEdge/spock)
+来源：
 
-PostgreSQL 15+ 的多主逻辑复制。每个节点同时充当发布者和订阅者。
+- [Spock v5.0.10 README](https://github.com/pgEdge/spock/blob/v5.0.10/README.md)
+- [Getting started](https://github.com/pgEdge/spock/blob/v5.0.10/docs/getting_started.md)
+- [Configuration reference](https://github.com/pgEdge/spock/blob/v5.0.10/docs/configuring.md)
+- [Limitations](https://github.com/pgEdge/spock/blob/v5.0.10/docs/limitations.md)
+- [Release notes](https://github.com/pgEdge/spock/blob/v5.0.10/docs/spock_release_notes.md)
+
+`spock` 为 PostgreSQL 15 至 18 提供了主动-主动逻辑复制。每个参与的数据库都是一个 Spock 节点；通过在节点之间创建有向订阅，形成一个多主拓扑结构。
 
 ### 配置
 
@@ -235,13 +238,13 @@ CREATE EXTENSION spock;
 在每个节点上创建节点身份：
 
 ```sql
--- 节点 1
+-- Node 1
 SELECT spock.node_create(
     node_name := 'n1',
     dsn := 'host=10.0.0.5 port=5432 dbname=mydb'
 );
 
--- 节点 2
+-- Node 2
 SELECT spock.node_create(
     node_name := 'n2',
     dsn := 'host=10.0.0.7 port=5432 dbname=mydb'
@@ -250,16 +253,16 @@ SELECT spock.node_create(
 
 ### 创建订阅
 
-对于多主，每个节点订阅其他所有节点：
+对于多主模式，每个节点订阅其他所有节点：
 
 ```sql
--- 在 n1 上：订阅 n2
+-- On n1: subscribe to n2
 SELECT spock.sub_create(
     subscription_name := 'sub_n1n2',
     provider_dsn := 'host=10.0.0.7 port=5432 dbname=mydb'
 );
 
--- 在 n2 上：订阅 n1
+-- On n2: subscribe to n1
 SELECT spock.sub_create(
     subscription_name := 'sub_n2n1',
     provider_dsn := 'host=10.0.0.5 port=5432 dbname=mydb'
@@ -269,21 +272,34 @@ SELECT spock.sub_create(
 ### 复制集管理
 
 ```sql
--- 将表添加到复制
+-- Add table to replication
 SELECT spock.repset_add_table('default', 'my_table');
 
--- 从复制中移除表
+-- Remove table from replication
 SELECT spock.repset_remove_table('default', 'my_table');
 
--- 添加模式中的所有表
+-- Add all tables in a schema
 SELECT spock.repset_add_all_tables('default', '{public}');
 ```
 
-### 关键特性
+### 关键功能
 
-- 多主（双活）复制
+- 多主（主动-主动）复制
 - 自动 DDL 复制
 - 使用提交时间戳进行冲突检测和解决
 - 行和列过滤
 - 支持 PostgreSQL 15、16、17 和 18
-- 表必须有主键且跨节点模式匹配
+- 表必须在所有节点上具有主键且模式匹配
+
+### 操作与注意事项
+
+- 在创建节点或订阅之前，在每个参与的服务器上安装 `spock` 并将其添加到 `shared_preload_libraries` 中。
+- 确保各节点上的表定义、数据类型、主键和相关唯一索引一致。即使启用了 DDL 复制，也要协调 DDL 操作。
+- 被复制的表需要具有主键或其他可用的副本标识符。临时表和未记录表不是复制目标。
+- Spock 是按数据库操作的。对于每个参与的数据库，重复扩展名和拓扑结构设置。
+- 主动-主动冲突处理依赖于提交时间戳和策略。在生产使用前，请测试同时插入和更新操作，特别是空值唯一键。
+- 上游文档中在 README 中列出了平台/构建要求；请验证每个节点上使用的 PostgreSQL 构建和 Spock 包是兼容的。
+
+### 版本 5.0.10
+
+`5.0.10` 是 5.0 系列的一个补丁版本。其发布说明包括修复了包含 `NULL` 的唯一索引、`NULLS NOT DISTINCT` 冲突处理、在索引删除后刷新缓存的索引元数据、异常路径内存处理以及用于滚动补丁升级期间使用的数值版本检查。将每个节点升级到兼容的补丁级别，并在滚动更改后验证订阅。

@@ -5,10 +5,8 @@
   Download line format: @ OS PG PKG FILENAME REPO VERSION SIZE URL
 
   Color mapping (state → badge color):
-    AVAIL + PGDG    → PG blue      AVAIL + PIGSTY  → green
-    AVAIL + CONTRIB → gray         MISS            → red (dashed)
-    HIDE            → gray (dim)   THROW           → purple
-    BREAK           → amber        FORK            → violet
+    AVAIL + PGDG   → PG blue      AVAIL + PIGSTY → green
+    MISS           → red          N/A             → gray / masked
 */}}
 {{ $lines := split .Inner "\n" }}
 
@@ -79,21 +77,22 @@
             {{ $repo  := index $parts 1 -}}
             {{ $ver   := index $parts 2 -}}
             {{/* Determine badge CSS class */}}
-            {{ $cls := "ext-avail-cell--hide" -}}
+            {{ $cls := "ext-avail-cell--na" -}}
             {{ if eq $state "AVAIL" -}}
               {{ if eq $repo "PGDG"    }}{{ $cls = "ext-avail-cell--pgdg"    }}{{ end -}}
               {{ if eq $repo "PIGSTY"  }}{{ $cls = "ext-avail-cell--pigsty"  }}{{ end -}}
               {{ if eq $repo "CONTRIB" }}{{ $cls = "ext-avail-cell--contrib" }}{{ end -}}
-            {{ else if eq $state "MISS"  }}{{ $cls = "ext-avail-cell--miss"  -}}
-            {{ else if eq $state "HIDE"  }}{{ $cls = "ext-avail-cell--hide"  -}}
-            {{ else if eq $state "THROW" }}{{ $cls = "ext-avail-cell--throw" -}}
-            {{ else if eq $state "BREAK" }}{{ $cls = "ext-avail-cell--break" -}}
-            {{ else if eq $state "FORK"  }}{{ $cls = "ext-avail-cell--fork"  -}}
+            {{ else if eq $state "MISS" }}{{ $cls = "ext-avail-cell--miss" -}}
+            {{ else if eq $state "N/A"  }}{{ $cls = "ext-avail-cell--na"   -}}
             {{ end -}}
             {{/* Version display */}}
             {{ $verDisplay := $ver -}}
-            {{ if or (eq $ver "-") (eq $ver "") -}}
+            {{ if eq $state "MISS" -}}
               {{ $verDisplay = "MISS" -}}
+            {{ else if eq $state "N/A" -}}
+              {{ $verDisplay = "N/A" -}}
+            {{ else if or (eq $ver "-") (eq $ver "") -}}
+              {{ $verDisplay = "AVAIL" -}}
             {{ end -}}
             {{/* O(1) lookup for matching downloads */}}
             {{ $cellDL := slice -}}
@@ -109,7 +108,7 @@
             {{/* Render cell — with popover if downloads exist */}}
             {{ if gt (len $cellDL) 0 -}}
             <td><div class="ext-pop-wrap">
-              <span class="ext-avail-cell {{ $cls }}">{{ $repo }}&nbsp;{{ $verDisplay }}</span>
+              <span class="ext-avail-cell {{ $cls }}">{{ if eq $state "AVAIL" }}{{ $repo }}&nbsp;{{ end }}{{ $verDisplay }}</span>
               <div class="ext-pop">
                 {{ $firstDL := findRE `\S+` (index $cellDL 0) -}}
                 <div class="ext-pop__hd">{{ $os }}.pg{{ index $pgVersions (sub $ci 2) }} : {{ index $firstDL 3 }}</div>
@@ -127,7 +126,7 @@
               </div>
             </div></td>
             {{ else -}}
-            <td><span class="ext-avail-cell {{ $cls }}">{{ $repo }}&nbsp;{{ $verDisplay }}</span></td>
+            <td><span class="ext-avail-cell {{ $cls }}">{{ if eq $state "AVAIL" }}{{ $repo }}&nbsp;{{ end }}{{ $verDisplay }}</span></td>
             {{ end -}}
           {{ else -}}
             <td>{{ $cell }}</td>

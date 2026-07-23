@@ -16,7 +16,7 @@ categories: [参考]
 
 Pigsty 默认会把基础 PostgreSQL 18 内核包下载到本地软件仓库。默认额外下载集为 `repo_extra_packages_default: [ pgsql-main ]`，包含 PostgreSQL 内核、客户端、过程语言，以及 `pg_repack`、`wal2json`、`pgvector` 等基础扩展包。
 
-如果需要 531 个扩展目录中的其他扩展，请显式加入 [`repo_extra_packages`](/docs/infra/param#repo_extra_packages)；Pigsty 不会在默认安装时把全部扩展都下载到本地。
+如果需要 555 个扩展目录中的其他扩展，请显式加入 [`repo_extra_packages`](/docs/infra/param#repo_extra_packages)；Pigsty 不会在默认安装时把全部扩展都下载到本地。
 
 使用本地仓库的优势：
 - 加速安装，避免重复下载

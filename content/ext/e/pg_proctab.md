@@ -11,10 +11,10 @@ weight: 6450
     <div class="ext-card__title">markwkm/pg_proctab</div>
     <div class="ext-card__desc">https://github.com/markwkm/pg_proctab</div>
   </a>
-  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pgnodemx-1.7.tar.gz">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pgnodemx-2.0.1.tar.gz">
     <div class="ext-card__kicker">源码</div>
-    <div class="ext-card__title">pgnodemx-1.7.tar.gz</div>
-    <div class="ext-card__desc">pgnodemx-1.7.tar.gz</div>
+    <div class="ext-card__title">pgnodemx-2.0.1.tar.gz</div>
+    <div class="ext-card__desc">pgnodemx-2.0.1.tar.gz</div>
   </a>
 </div>
 
@@ -25,7 +25,7 @@ weight: 6450
 
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
-| [**`pgnodemx`**](/ext/e/pgnodemx) | `1.7` | <a class="ext-badge ext-badge--cate stat" href="/ext/cate/stat">STAT</a> | <a class="ext-badge ext-badge--license bsd 3clause" href="/ext/license#bsd3clause">BSD 3-Clause</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
+| [**`pgnodemx`**](/ext/e/pgnodemx) | `2.0.1` | <a class="ext-badge ext-badge--cate stat" href="/ext/cate/stat">STAT</a> | <a class="ext-badge ext-badge--license bsd3clause" href="/ext/license#bsd3clause">BSD-3-Clause</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
 {.ext-table}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
@@ -39,27 +39,27 @@ weight: 6450
 {.ext-table .ext-table--rel}
 
 
-> from pgnodemx
+> Bundled with pgnodemx package/source 2.0.1 for PostgreSQL 14-18; this package ships pg_proctab as a compatibility stub backed by pgnodemx.
 
 
 ## 版本
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#stat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.7` | {{< pgvers "18,17,16,15,14" >}} | `pgnodemx` | - |
-| [**RPM**](/ext/rpm#stat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.7` | {{< pgvers "18,17,16,15,14" >}} | `pgnodemx_$v` | - |
-| [**DEB**](/ext/deb#stat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.7` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pgnodemx` | - |
+| [**EXT**](/ext/list#stat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `2.0.1` | {{< pgvers "18,17,16,15,14" >}} | `pgnodemx` | - |
+| [**RPM**](/ext/rpm#stat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `2.0.1` | {{< pgvers "18,17,16,15,14" >}} | `pgnodemx_$v` | - |
+| [**DEB**](/ext/deb#stat) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `2.0.1` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pgnodemx` | - |
 {.ext-table}
 
 {{< pgext_matrix >}}
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 1.7 2 | AVAIL PIGSTY 1.7 2 | AVAIL PIGSTY 1.7 2 | AVAIL PIGSTY 1.7 2 | AVAIL PIGSTY 1.7 2 |
-| el8.aarch64 | AVAIL PIGSTY 1.7 2 | AVAIL PIGSTY 1.7 2 | AVAIL PIGSTY 1.7 2 | AVAIL PIGSTY 1.7 2 | AVAIL PIGSTY 1.7 2 |
-| el9.x86_64 | AVAIL PGDG 1.7 3 | AVAIL PGDG 1.7 3 | AVAIL PGDG 1.7 3 | AVAIL PGDG 1.7 3 | AVAIL PGDG 1.7 3 |
-| el9.aarch64 | AVAIL PGDG 1.7 3 | AVAIL PGDG 1.7 3 | AVAIL PGDG 1.7 3 | AVAIL PGDG 1.7 3 | AVAIL PGDG 1.7 3 |
-| el10.x86_64 | AVAIL PGDG 1.7 3 | AVAIL PGDG 1.7 3 | AVAIL PGDG 1.7 3 | AVAIL PGDG 1.7 3 | AVAIL PGDG 1.7 3 |
-| el10.aarch64 | AVAIL PGDG 1.7 3 | AVAIL PGDG 1.7 3 | AVAIL PGDG 1.7 3 | AVAIL PGDG 1.7 3 | AVAIL PGDG 1.7 3 |
+| el8.x86_64 | AVAIL PIGSTY 2.0.1 2 | AVAIL PIGSTY 2.0.1 2 | AVAIL PIGSTY 2.0.1 2 | AVAIL PIGSTY 2.0.1 2 | AVAIL PIGSTY 2.0.1 2 |
+| el8.aarch64 | AVAIL PIGSTY 2.0.1 2 | AVAIL PIGSTY 2.0.1 2 | AVAIL PIGSTY 2.0.1 2 | AVAIL PIGSTY 2.0.1 2 | AVAIL PIGSTY 2.0.1 2 |
+| el9.x86_64 | AVAIL PIGSTY 2.0.1 3 | AVAIL PIGSTY 2.0.1 3 | AVAIL PIGSTY 2.0.1 3 | AVAIL PIGSTY 2.0.1 3 | AVAIL PIGSTY 2.0.1 3 |
+| el9.aarch64 | AVAIL PIGSTY 2.0.1 3 | AVAIL PIGSTY 2.0.1 3 | AVAIL PIGSTY 2.0.1 3 | AVAIL PIGSTY 2.0.1 3 | AVAIL PIGSTY 2.0.1 3 |
+| el10.x86_64 | AVAIL PIGSTY 2.0.1 3 | AVAIL PIGSTY 2.0.1 3 | AVAIL PIGSTY 2.0.1 3 | AVAIL PIGSTY 2.0.1 3 | AVAIL PIGSTY 2.0.1 3 |
+| el10.aarch64 | AVAIL PIGSTY 2.0.1 3 | AVAIL PIGSTY 2.0.1 3 | AVAIL PIGSTY 2.0.1 3 | AVAIL PIGSTY 2.0.1 3 | AVAIL PIGSTY 2.0.1 3 |
 | d12.x86_64 | AVAIL PGDG 2.0.1 3 | AVAIL PGDG 2.0.1 3 | AVAIL PGDG 2.0.1 3 | AVAIL PGDG 2.0.1 3 | AVAIL PGDG 2.0.1 3 |
 | d12.aarch64 | AVAIL PGDG 2.0.1 3 | AVAIL PGDG 2.0.1 3 | AVAIL PGDG 2.0.1 3 | AVAIL PGDG 2.0.1 3 | AVAIL PGDG 2.0.1 3 |
 | d13.x86_64 | AVAIL PGDG 2.0.1 3 | AVAIL PGDG 2.0.1 3 | AVAIL PGDG 2.0.1 3 | AVAIL PGDG 2.0.1 3 | AVAIL PGDG 2.0.1 3 |

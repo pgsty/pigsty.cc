@@ -6,7 +6,7 @@ weight: 20
 slug: ddl
 ---
 
-以下 **26** 个扩展不需要执行 `CREATE EXTENSION` 即可使用。
+以下 **29** 个扩展不需要执行 `CREATE EXTENSION` 即可使用。
 
 这些扩展通常以共享库（Hook）或独立工具的形式存在，安装后直接通过配置参数启用或自动生效，无需在数据库中显式创建扩展对象。
 
@@ -26,7 +26,10 @@ slug: ddl
 | [`auto_explain`](/ext/e/auto_explain) | [`auto_explain`](https://www.postgresql.org/docs/current/auto-explain.html) | `-` | `c-sL---` | 提供一种自动记录执行计划的手段 |
 | [`passwordcheck_cracklib`](/ext/e/passwordcheck_cracklib) | [`passwordcheck_cracklib`](https://github.com/devrimgunduz/passwordcheck_cracklib) | `3.1.0` | `--sL---` | 使用cracklib加固PG用户密码 |
 | [`supautils`](/ext/e/supautils) | [`supautils`](https://github.com/supabase/supautils) | `3.2.1` | `--sL---` | 用于在云环境中确保数据库集群的安全 |
+| [`pg_oidc_validator`](/ext/e/pg_oidc_validator) | [`pg_oidc_validator`](https://github.com/percona/pg_oidc_validator) | `0.2` | `--sL---` | PostgreSQL 18 OAuth 与 OIDC 令牌验证模块 |
+| [`oidc_validator`](/ext/e/oidc_validator) | [`pg_oidc_validator_rust`](https://github.com/UnAfraid/pg_oidc_validator_rust) | `0.1.0` | `--sL---` | 使用 Rust 与 pgrx 编写的 PostgreSQL 18 OIDC Bearer 令牌验证模块 |
 | [`pgextwlist`](/ext/e/pgextwlist) | [`pgextwlist`](https://github.com/dimitri/pgextwlist) | `1.20` | `--sL---` | PostgreSQL扩展白名单功能 |
+| [`pg_kpart`](/ext/e/pg_kpart) | [`pg_kpart`](https://github.com/hexacluster/pg_kpart) | `1.0` | `--sL--r` | 拒绝未使用分区键的全分区扫描查询 |
 | [`sepgsql`](/ext/e/sepgsql) | [`sepgsql`](https://www.postgresql.org/docs/current/sepgsql.html) | `-` | `c-sL---` | 基于SELinux标签的强制访问控制 |
 | [`auth_delay`](/ext/e/auth_delay) | [`auth_delay`](https://www.postgresql.org/docs/current/auth-delay.html) | `-` | `c-sL---` | 在返回认证失败前暂停一会，避免爆破 |
 | [`passwordcheck`](/ext/e/passwordcheck) | [`passwordcheck`](https://www.postgresql.org/docs/current/passwordcheck.html) | `-` | `c-sL---` | 用于强制拒绝修改弱密码的扩展 |

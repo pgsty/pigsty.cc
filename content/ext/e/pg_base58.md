@@ -38,9 +38,6 @@ weight: 4830
 {.ext-table .ext-table--rel}
 
 
-> pgrx patched to 0.18.1.
-
-
 ## 版本
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
@@ -69,86 +66,86 @@ weight: 4830
 | u24.aarch64 | AVAIL PIGSTY 0.0.1 1 | AVAIL PIGSTY 0.0.1 1 | AVAIL PIGSTY 0.0.1 1 | AVAIL PIGSTY 0.0.1 1 | AVAIL PIGSTY 0.0.1 1 |
 | u26.x86_64 | AVAIL PIGSTY 0.0.1 1 | AVAIL PIGSTY 0.0.1 1 | AVAIL PIGSTY 0.0.1 1 | AVAIL PIGSTY 0.0.1 1 | AVAIL PIGSTY 0.0.1 1 |
 | u26.aarch64 | AVAIL PIGSTY 0.0.1 1 | AVAIL PIGSTY 0.0.1 1 | AVAIL PIGSTY 0.0.1 1 | AVAIL PIGSTY 0.0.1 1 | AVAIL PIGSTY 0.0.1 1 |
-@ el8.x86_64 18 pg_base58_18 pg_base58_18-0.0.1-2PIGSTY.el8.x86_64.rpm pigsty 0.0.1 288.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_base58_18-0.0.1-2PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 18 pg_base58_18 pg_base58_18-0.0.1-2PIGSTY.el8.aarch64.rpm pigsty 0.0.1 184.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_base58_18-0.0.1-2PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 18 pg_base58_18 pg_base58_18-0.0.1-2PIGSTY.el9.x86_64.rpm pigsty 0.0.1 303.1KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_base58_18-0.0.1-2PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 18 pg_base58_18 pg_base58_18-0.0.1-2PIGSTY.el9.aarch64.rpm pigsty 0.0.1 197.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_base58_18-0.0.1-2PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 18 pg_base58_18 pg_base58_18-0.0.1-2PIGSTY.el10.x86_64.rpm pigsty 0.0.1 303.1KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_base58_18-0.0.1-2PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 18 pg_base58_18 pg_base58_18-0.0.1-2PIGSTY.el10.aarch64.rpm pigsty 0.0.1 196.7KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_base58_18-0.0.1-2PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 18 postgresql-18-pg-base58 postgresql-18-pg-base58_0.0.1-3PIGSTY~bookworm_amd64.deb pigsty 0.0.1 236.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-base58/postgresql-18-pg-base58_0.0.1-3PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 18 postgresql-18-pg-base58 postgresql-18-pg-base58_0.0.1-3PIGSTY~bookworm_arm64.deb pigsty 0.0.1 141.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-base58/postgresql-18-pg-base58_0.0.1-3PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 18 postgresql-18-pg-base58 postgresql-18-pg-base58_0.0.1-3PIGSTY~trixie_amd64.deb pigsty 0.0.1 236.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-base58/postgresql-18-pg-base58_0.0.1-3PIGSTY~trixie_amd64.deb
-@ d13.aarch64 18 postgresql-18-pg-base58 postgresql-18-pg-base58_0.0.1-3PIGSTY~trixie_arm64.deb pigsty 0.0.1 141.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-base58/postgresql-18-pg-base58_0.0.1-3PIGSTY~trixie_arm64.deb
-@ u22.x86_64 18 postgresql-18-pg-base58 postgresql-18-pg-base58_0.0.1-3PIGSTY~jammy_amd64.deb pigsty 0.0.1 267.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-base58/postgresql-18-pg-base58_0.0.1-3PIGSTY~jammy_amd64.deb
-@ u22.aarch64 18 postgresql-18-pg-base58 postgresql-18-pg-base58_0.0.1-3PIGSTY~jammy_arm64.deb pigsty 0.0.1 163.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-base58/postgresql-18-pg-base58_0.0.1-3PIGSTY~jammy_arm64.deb
-@ u24.x86_64 18 postgresql-18-pg-base58 postgresql-18-pg-base58_0.0.1-3PIGSTY~noble_amd64.deb pigsty 0.0.1 265.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-base58/postgresql-18-pg-base58_0.0.1-3PIGSTY~noble_amd64.deb
-@ u24.aarch64 18 postgresql-18-pg-base58 postgresql-18-pg-base58_0.0.1-3PIGSTY~noble_arm64.deb pigsty 0.0.1 162.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-base58/postgresql-18-pg-base58_0.0.1-3PIGSTY~noble_arm64.deb
-@ u26.x86_64 18 postgresql-18-pg-base58 postgresql-18-pg-base58_0.0.1-4PIGSTY~resolute_amd64.deb pigsty 0.0.1 740.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-base58/postgresql-18-pg-base58_0.0.1-4PIGSTY~resolute_amd64.deb
-@ u26.aarch64 18 postgresql-18-pg-base58 postgresql-18-pg-base58_0.0.1-4PIGSTY~resolute_arm64.deb pigsty 0.0.1 656.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-base58/postgresql-18-pg-base58_0.0.1-4PIGSTY~resolute_arm64.deb
-@ el8.x86_64 17 pg_base58_17 pg_base58_17-0.0.1-2PIGSTY.el8.x86_64.rpm pigsty 0.0.1 288.0KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_base58_17-0.0.1-2PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 17 pg_base58_17 pg_base58_17-0.0.1-2PIGSTY.el8.aarch64.rpm pigsty 0.0.1 184.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_base58_17-0.0.1-2PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 17 pg_base58_17 pg_base58_17-0.0.1-2PIGSTY.el9.x86_64.rpm pigsty 0.0.1 302.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_base58_17-0.0.1-2PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 17 pg_base58_17 pg_base58_17-0.0.1-2PIGSTY.el9.aarch64.rpm pigsty 0.0.1 197.1KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_base58_17-0.0.1-2PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 17 pg_base58_17 pg_base58_17-0.0.1-2PIGSTY.el10.x86_64.rpm pigsty 0.0.1 303.1KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_base58_17-0.0.1-2PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 17 pg_base58_17 pg_base58_17-0.0.1-2PIGSTY.el10.aarch64.rpm pigsty 0.0.1 196.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_base58_17-0.0.1-2PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 17 postgresql-17-pg-base58 postgresql-17-pg-base58_0.0.1-3PIGSTY~bookworm_amd64.deb pigsty 0.0.1 236.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-base58/postgresql-17-pg-base58_0.0.1-3PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 17 postgresql-17-pg-base58 postgresql-17-pg-base58_0.0.1-3PIGSTY~bookworm_arm64.deb pigsty 0.0.1 141.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-base58/postgresql-17-pg-base58_0.0.1-3PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 17 postgresql-17-pg-base58 postgresql-17-pg-base58_0.0.1-3PIGSTY~trixie_amd64.deb pigsty 0.0.1 236.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-base58/postgresql-17-pg-base58_0.0.1-3PIGSTY~trixie_amd64.deb
-@ d13.aarch64 17 postgresql-17-pg-base58 postgresql-17-pg-base58_0.0.1-3PIGSTY~trixie_arm64.deb pigsty 0.0.1 141.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-base58/postgresql-17-pg-base58_0.0.1-3PIGSTY~trixie_arm64.deb
-@ u22.x86_64 17 postgresql-17-pg-base58 postgresql-17-pg-base58_0.0.1-3PIGSTY~jammy_amd64.deb pigsty 0.0.1 267.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-base58/postgresql-17-pg-base58_0.0.1-3PIGSTY~jammy_amd64.deb
-@ u22.aarch64 17 postgresql-17-pg-base58 postgresql-17-pg-base58_0.0.1-3PIGSTY~jammy_arm64.deb pigsty 0.0.1 163.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-base58/postgresql-17-pg-base58_0.0.1-3PIGSTY~jammy_arm64.deb
-@ u24.x86_64 17 postgresql-17-pg-base58 postgresql-17-pg-base58_0.0.1-3PIGSTY~noble_amd64.deb pigsty 0.0.1 264.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-base58/postgresql-17-pg-base58_0.0.1-3PIGSTY~noble_amd64.deb
-@ u24.aarch64 17 postgresql-17-pg-base58 postgresql-17-pg-base58_0.0.1-3PIGSTY~noble_arm64.deb pigsty 0.0.1 162.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-base58/postgresql-17-pg-base58_0.0.1-3PIGSTY~noble_arm64.deb
-@ u26.x86_64 17 postgresql-17-pg-base58 postgresql-17-pg-base58_0.0.1-4PIGSTY~resolute_amd64.deb pigsty 0.0.1 737.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-base58/postgresql-17-pg-base58_0.0.1-4PIGSTY~resolute_amd64.deb
-@ u26.aarch64 17 postgresql-17-pg-base58 postgresql-17-pg-base58_0.0.1-4PIGSTY~resolute_arm64.deb pigsty 0.0.1 653.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-base58/postgresql-17-pg-base58_0.0.1-4PIGSTY~resolute_arm64.deb
-@ el8.x86_64 16 pg_base58_16 pg_base58_16-0.0.1-2PIGSTY.el8.x86_64.rpm pigsty 0.0.1 288.0KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_base58_16-0.0.1-2PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 16 pg_base58_16 pg_base58_16-0.0.1-2PIGSTY.el8.aarch64.rpm pigsty 0.0.1 184.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_base58_16-0.0.1-2PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 16 pg_base58_16 pg_base58_16-0.0.1-2PIGSTY.el9.x86_64.rpm pigsty 0.0.1 302.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_base58_16-0.0.1-2PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 16 pg_base58_16 pg_base58_16-0.0.1-2PIGSTY.el9.aarch64.rpm pigsty 0.0.1 197.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_base58_16-0.0.1-2PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 16 pg_base58_16 pg_base58_16-0.0.1-2PIGSTY.el10.x86_64.rpm pigsty 0.0.1 303.2KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_base58_16-0.0.1-2PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 16 pg_base58_16 pg_base58_16-0.0.1-2PIGSTY.el10.aarch64.rpm pigsty 0.0.1 196.7KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_base58_16-0.0.1-2PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 16 postgresql-16-pg-base58 postgresql-16-pg-base58_0.0.1-3PIGSTY~bookworm_amd64.deb pigsty 0.0.1 236.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-base58/postgresql-16-pg-base58_0.0.1-3PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 16 postgresql-16-pg-base58 postgresql-16-pg-base58_0.0.1-3PIGSTY~bookworm_arm64.deb pigsty 0.0.1 141.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-base58/postgresql-16-pg-base58_0.0.1-3PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 16 postgresql-16-pg-base58 postgresql-16-pg-base58_0.0.1-3PIGSTY~trixie_amd64.deb pigsty 0.0.1 236.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-base58/postgresql-16-pg-base58_0.0.1-3PIGSTY~trixie_amd64.deb
-@ d13.aarch64 16 postgresql-16-pg-base58 postgresql-16-pg-base58_0.0.1-3PIGSTY~trixie_arm64.deb pigsty 0.0.1 141.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-base58/postgresql-16-pg-base58_0.0.1-3PIGSTY~trixie_arm64.deb
-@ u22.x86_64 16 postgresql-16-pg-base58 postgresql-16-pg-base58_0.0.1-3PIGSTY~jammy_amd64.deb pigsty 0.0.1 267.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-base58/postgresql-16-pg-base58_0.0.1-3PIGSTY~jammy_amd64.deb
-@ u22.aarch64 16 postgresql-16-pg-base58 postgresql-16-pg-base58_0.0.1-3PIGSTY~jammy_arm64.deb pigsty 0.0.1 164.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-base58/postgresql-16-pg-base58_0.0.1-3PIGSTY~jammy_arm64.deb
-@ u24.x86_64 16 postgresql-16-pg-base58 postgresql-16-pg-base58_0.0.1-3PIGSTY~noble_amd64.deb pigsty 0.0.1 265.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-base58/postgresql-16-pg-base58_0.0.1-3PIGSTY~noble_amd64.deb
-@ u24.aarch64 16 postgresql-16-pg-base58 postgresql-16-pg-base58_0.0.1-3PIGSTY~noble_arm64.deb pigsty 0.0.1 163.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-base58/postgresql-16-pg-base58_0.0.1-3PIGSTY~noble_arm64.deb
-@ u26.x86_64 16 postgresql-16-pg-base58 postgresql-16-pg-base58_0.0.1-4PIGSTY~resolute_amd64.deb pigsty 0.0.1 737.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-base58/postgresql-16-pg-base58_0.0.1-4PIGSTY~resolute_amd64.deb
-@ u26.aarch64 16 postgresql-16-pg-base58 postgresql-16-pg-base58_0.0.1-4PIGSTY~resolute_arm64.deb pigsty 0.0.1 653.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-base58/postgresql-16-pg-base58_0.0.1-4PIGSTY~resolute_arm64.deb
-@ el8.x86_64 15 pg_base58_15 pg_base58_15-0.0.1-2PIGSTY.el8.x86_64.rpm pigsty 0.0.1 287.9KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_base58_15-0.0.1-2PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 15 pg_base58_15 pg_base58_15-0.0.1-2PIGSTY.el8.aarch64.rpm pigsty 0.0.1 184.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_base58_15-0.0.1-2PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 15 pg_base58_15 pg_base58_15-0.0.1-2PIGSTY.el9.x86_64.rpm pigsty 0.0.1 302.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_base58_15-0.0.1-2PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 15 pg_base58_15 pg_base58_15-0.0.1-2PIGSTY.el9.aarch64.rpm pigsty 0.0.1 197.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_base58_15-0.0.1-2PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 15 pg_base58_15 pg_base58_15-0.0.1-2PIGSTY.el10.x86_64.rpm pigsty 0.0.1 302.7KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_base58_15-0.0.1-2PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 15 pg_base58_15 pg_base58_15-0.0.1-2PIGSTY.el10.aarch64.rpm pigsty 0.0.1 196.7KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_base58_15-0.0.1-2PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 15 postgresql-15-pg-base58 postgresql-15-pg-base58_0.0.1-3PIGSTY~bookworm_amd64.deb pigsty 0.0.1 236.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-base58/postgresql-15-pg-base58_0.0.1-3PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 15 postgresql-15-pg-base58 postgresql-15-pg-base58_0.0.1-3PIGSTY~bookworm_arm64.deb pigsty 0.0.1 141.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-base58/postgresql-15-pg-base58_0.0.1-3PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 15 postgresql-15-pg-base58 postgresql-15-pg-base58_0.0.1-3PIGSTY~trixie_amd64.deb pigsty 0.0.1 236.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-base58/postgresql-15-pg-base58_0.0.1-3PIGSTY~trixie_amd64.deb
-@ d13.aarch64 15 postgresql-15-pg-base58 postgresql-15-pg-base58_0.0.1-3PIGSTY~trixie_arm64.deb pigsty 0.0.1 141.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-base58/postgresql-15-pg-base58_0.0.1-3PIGSTY~trixie_arm64.deb
-@ u22.x86_64 15 postgresql-15-pg-base58 postgresql-15-pg-base58_0.0.1-3PIGSTY~jammy_amd64.deb pigsty 0.0.1 267.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-base58/postgresql-15-pg-base58_0.0.1-3PIGSTY~jammy_amd64.deb
-@ u22.aarch64 15 postgresql-15-pg-base58 postgresql-15-pg-base58_0.0.1-3PIGSTY~jammy_arm64.deb pigsty 0.0.1 163.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-base58/postgresql-15-pg-base58_0.0.1-3PIGSTY~jammy_arm64.deb
-@ u24.x86_64 15 postgresql-15-pg-base58 postgresql-15-pg-base58_0.0.1-3PIGSTY~noble_amd64.deb pigsty 0.0.1 264.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-base58/postgresql-15-pg-base58_0.0.1-3PIGSTY~noble_amd64.deb
-@ u24.aarch64 15 postgresql-15-pg-base58 postgresql-15-pg-base58_0.0.1-3PIGSTY~noble_arm64.deb pigsty 0.0.1 163.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-base58/postgresql-15-pg-base58_0.0.1-3PIGSTY~noble_arm64.deb
-@ u26.x86_64 15 postgresql-15-pg-base58 postgresql-15-pg-base58_0.0.1-4PIGSTY~resolute_amd64.deb pigsty 0.0.1 730.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-base58/postgresql-15-pg-base58_0.0.1-4PIGSTY~resolute_amd64.deb
-@ u26.aarch64 15 postgresql-15-pg-base58 postgresql-15-pg-base58_0.0.1-4PIGSTY~resolute_arm64.deb pigsty 0.0.1 646.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-base58/postgresql-15-pg-base58_0.0.1-4PIGSTY~resolute_arm64.deb
-@ el8.x86_64 14 pg_base58_14 pg_base58_14-0.0.1-2PIGSTY.el8.x86_64.rpm pigsty 0.0.1 287.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_base58_14-0.0.1-2PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 14 pg_base58_14 pg_base58_14-0.0.1-2PIGSTY.el8.aarch64.rpm pigsty 0.0.1 184.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_base58_14-0.0.1-2PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 14 pg_base58_14 pg_base58_14-0.0.1-2PIGSTY.el9.x86_64.rpm pigsty 0.0.1 302.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_base58_14-0.0.1-2PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 14 pg_base58_14 pg_base58_14-0.0.1-2PIGSTY.el9.aarch64.rpm pigsty 0.0.1 196.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_base58_14-0.0.1-2PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 14 pg_base58_14 pg_base58_14-0.0.1-2PIGSTY.el10.x86_64.rpm pigsty 0.0.1 302.8KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_base58_14-0.0.1-2PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 14 pg_base58_14 pg_base58_14-0.0.1-2PIGSTY.el10.aarch64.rpm pigsty 0.0.1 196.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_base58_14-0.0.1-2PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 14 postgresql-14-pg-base58 postgresql-14-pg-base58_0.0.1-3PIGSTY~bookworm_amd64.deb pigsty 0.0.1 236.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-base58/postgresql-14-pg-base58_0.0.1-3PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 14 postgresql-14-pg-base58 postgresql-14-pg-base58_0.0.1-3PIGSTY~bookworm_arm64.deb pigsty 0.0.1 141.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-base58/postgresql-14-pg-base58_0.0.1-3PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 14 postgresql-14-pg-base58 postgresql-14-pg-base58_0.0.1-3PIGSTY~trixie_amd64.deb pigsty 0.0.1 236.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-base58/postgresql-14-pg-base58_0.0.1-3PIGSTY~trixie_amd64.deb
-@ d13.aarch64 14 postgresql-14-pg-base58 postgresql-14-pg-base58_0.0.1-3PIGSTY~trixie_arm64.deb pigsty 0.0.1 141.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-base58/postgresql-14-pg-base58_0.0.1-3PIGSTY~trixie_arm64.deb
-@ u22.x86_64 14 postgresql-14-pg-base58 postgresql-14-pg-base58_0.0.1-3PIGSTY~jammy_amd64.deb pigsty 0.0.1 267.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-base58/postgresql-14-pg-base58_0.0.1-3PIGSTY~jammy_amd64.deb
-@ u22.aarch64 14 postgresql-14-pg-base58 postgresql-14-pg-base58_0.0.1-3PIGSTY~jammy_arm64.deb pigsty 0.0.1 163.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-base58/postgresql-14-pg-base58_0.0.1-3PIGSTY~jammy_arm64.deb
-@ u24.x86_64 14 postgresql-14-pg-base58 postgresql-14-pg-base58_0.0.1-3PIGSTY~noble_amd64.deb pigsty 0.0.1 265.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-base58/postgresql-14-pg-base58_0.0.1-3PIGSTY~noble_amd64.deb
-@ u24.aarch64 14 postgresql-14-pg-base58 postgresql-14-pg-base58_0.0.1-3PIGSTY~noble_arm64.deb pigsty 0.0.1 162.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-base58/postgresql-14-pg-base58_0.0.1-3PIGSTY~noble_arm64.deb
-@ u26.x86_64 14 postgresql-14-pg-base58 postgresql-14-pg-base58_0.0.1-4PIGSTY~resolute_amd64.deb pigsty 0.0.1 726.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-base58/postgresql-14-pg-base58_0.0.1-4PIGSTY~resolute_amd64.deb
-@ u26.aarch64 14 postgresql-14-pg-base58 postgresql-14-pg-base58_0.0.1-4PIGSTY~resolute_arm64.deb pigsty 0.0.1 645.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-base58/postgresql-14-pg-base58_0.0.1-4PIGSTY~resolute_arm64.deb
+@ el8.x86_64 18 pg_base58_18 pg_base58_18-0.0.1-4PIGSTY.el8.x86_64.rpm pigsty 0.0.1 850.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_base58_18-0.0.1-4PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 18 pg_base58_18 pg_base58_18-0.0.1-4PIGSTY.el8.aarch64.rpm pigsty 0.0.1 763.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_base58_18-0.0.1-4PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 18 pg_base58_18 pg_base58_18-0.0.1-4PIGSTY.el9.x86_64.rpm pigsty 0.0.1 860.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_base58_18-0.0.1-4PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 18 pg_base58_18 pg_base58_18-0.0.1-4PIGSTY.el9.aarch64.rpm pigsty 0.0.1 809.2KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_base58_18-0.0.1-4PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 18 pg_base58_18 pg_base58_18-0.0.1-4PIGSTY.el10.x86_64.rpm pigsty 0.0.1 859.9KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_base58_18-0.0.1-4PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 18 pg_base58_18 pg_base58_18-0.0.1-4PIGSTY.el10.aarch64.rpm pigsty 0.0.1 786.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_base58_18-0.0.1-4PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-pg-base58 postgresql-18-pg-base58_0.0.1-5PIGSTY~bookworm_amd64.deb pigsty 0.0.1 681.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-base58/postgresql-18-pg-base58_0.0.1-5PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 18 postgresql-18-pg-base58 postgresql-18-pg-base58_0.0.1-5PIGSTY~bookworm_arm64.deb pigsty 0.0.1 567.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-base58/postgresql-18-pg-base58_0.0.1-5PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 18 postgresql-18-pg-base58 postgresql-18-pg-base58_0.0.1-5PIGSTY~trixie_amd64.deb pigsty 0.0.1 680.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-base58/postgresql-18-pg-base58_0.0.1-5PIGSTY~trixie_amd64.deb
+@ d13.aarch64 18 postgresql-18-pg-base58 postgresql-18-pg-base58_0.0.1-5PIGSTY~trixie_arm64.deb pigsty 0.0.1 568.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-base58/postgresql-18-pg-base58_0.0.1-5PIGSTY~trixie_arm64.deb
+@ u22.x86_64 18 postgresql-18-pg-base58 postgresql-18-pg-base58_0.0.1-5PIGSTY~jammy_amd64.deb pigsty 0.0.1 758.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-base58/postgresql-18-pg-base58_0.0.1-5PIGSTY~jammy_amd64.deb
+@ u22.aarch64 18 postgresql-18-pg-base58 postgresql-18-pg-base58_0.0.1-5PIGSTY~jammy_arm64.deb pigsty 0.0.1 672.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-base58/postgresql-18-pg-base58_0.0.1-5PIGSTY~jammy_arm64.deb
+@ u24.x86_64 18 postgresql-18-pg-base58 postgresql-18-pg-base58_0.0.1-5PIGSTY~noble_amd64.deb pigsty 0.0.1 748.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-base58/postgresql-18-pg-base58_0.0.1-5PIGSTY~noble_amd64.deb
+@ u24.aarch64 18 postgresql-18-pg-base58 postgresql-18-pg-base58_0.0.1-5PIGSTY~noble_arm64.deb pigsty 0.0.1 661.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-base58/postgresql-18-pg-base58_0.0.1-5PIGSTY~noble_arm64.deb
+@ u26.x86_64 18 postgresql-18-pg-base58 postgresql-18-pg-base58_0.0.1-5PIGSTY~resolute_amd64.deb pigsty 0.0.1 744.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-base58/postgresql-18-pg-base58_0.0.1-5PIGSTY~resolute_amd64.deb
+@ u26.aarch64 18 postgresql-18-pg-base58 postgresql-18-pg-base58_0.0.1-5PIGSTY~resolute_arm64.deb pigsty 0.0.1 660.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-base58/postgresql-18-pg-base58_0.0.1-5PIGSTY~resolute_arm64.deb
+@ el8.x86_64 17 pg_base58_17 pg_base58_17-0.0.1-4PIGSTY.el8.x86_64.rpm pigsty 0.0.1 847.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_base58_17-0.0.1-4PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 17 pg_base58_17 pg_base58_17-0.0.1-4PIGSTY.el8.aarch64.rpm pigsty 0.0.1 760.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_base58_17-0.0.1-4PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 17 pg_base58_17 pg_base58_17-0.0.1-4PIGSTY.el9.x86_64.rpm pigsty 0.0.1 857.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_base58_17-0.0.1-4PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 17 pg_base58_17 pg_base58_17-0.0.1-4PIGSTY.el9.aarch64.rpm pigsty 0.0.1 806.6KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_base58_17-0.0.1-4PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 17 pg_base58_17 pg_base58_17-0.0.1-4PIGSTY.el10.x86_64.rpm pigsty 0.0.1 857.7KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_base58_17-0.0.1-4PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 17 pg_base58_17 pg_base58_17-0.0.1-4PIGSTY.el10.aarch64.rpm pigsty 0.0.1 786.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_base58_17-0.0.1-4PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-pg-base58 postgresql-17-pg-base58_0.0.1-5PIGSTY~bookworm_amd64.deb pigsty 0.0.1 679.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-base58/postgresql-17-pg-base58_0.0.1-5PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 17 postgresql-17-pg-base58 postgresql-17-pg-base58_0.0.1-5PIGSTY~bookworm_arm64.deb pigsty 0.0.1 566.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-base58/postgresql-17-pg-base58_0.0.1-5PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 17 postgresql-17-pg-base58 postgresql-17-pg-base58_0.0.1-5PIGSTY~trixie_amd64.deb pigsty 0.0.1 678.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-base58/postgresql-17-pg-base58_0.0.1-5PIGSTY~trixie_amd64.deb
+@ d13.aarch64 17 postgresql-17-pg-base58 postgresql-17-pg-base58_0.0.1-5PIGSTY~trixie_arm64.deb pigsty 0.0.1 566.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-base58/postgresql-17-pg-base58_0.0.1-5PIGSTY~trixie_arm64.deb
+@ u22.x86_64 17 postgresql-17-pg-base58 postgresql-17-pg-base58_0.0.1-5PIGSTY~jammy_amd64.deb pigsty 0.0.1 755.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-base58/postgresql-17-pg-base58_0.0.1-5PIGSTY~jammy_amd64.deb
+@ u22.aarch64 17 postgresql-17-pg-base58 postgresql-17-pg-base58_0.0.1-5PIGSTY~jammy_arm64.deb pigsty 0.0.1 669.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-base58/postgresql-17-pg-base58_0.0.1-5PIGSTY~jammy_arm64.deb
+@ u24.x86_64 17 postgresql-17-pg-base58 postgresql-17-pg-base58_0.0.1-5PIGSTY~noble_amd64.deb pigsty 0.0.1 747.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-base58/postgresql-17-pg-base58_0.0.1-5PIGSTY~noble_amd64.deb
+@ u24.aarch64 17 postgresql-17-pg-base58 postgresql-17-pg-base58_0.0.1-5PIGSTY~noble_arm64.deb pigsty 0.0.1 659.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-base58/postgresql-17-pg-base58_0.0.1-5PIGSTY~noble_arm64.deb
+@ u26.x86_64 17 postgresql-17-pg-base58 postgresql-17-pg-base58_0.0.1-5PIGSTY~resolute_amd64.deb pigsty 0.0.1 743.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-base58/postgresql-17-pg-base58_0.0.1-5PIGSTY~resolute_amd64.deb
+@ u26.aarch64 17 postgresql-17-pg-base58 postgresql-17-pg-base58_0.0.1-5PIGSTY~resolute_arm64.deb pigsty 0.0.1 658.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-base58/postgresql-17-pg-base58_0.0.1-5PIGSTY~resolute_arm64.deb
+@ el8.x86_64 16 pg_base58_16 pg_base58_16-0.0.1-4PIGSTY.el8.x86_64.rpm pigsty 0.0.1 846.0KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_base58_16-0.0.1-4PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 16 pg_base58_16 pg_base58_16-0.0.1-4PIGSTY.el8.aarch64.rpm pigsty 0.0.1 758.4KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_base58_16-0.0.1-4PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 16 pg_base58_16 pg_base58_16-0.0.1-4PIGSTY.el9.x86_64.rpm pigsty 0.0.1 855.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_base58_16-0.0.1-4PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 16 pg_base58_16 pg_base58_16-0.0.1-4PIGSTY.el9.aarch64.rpm pigsty 0.0.1 804.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_base58_16-0.0.1-4PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 16 pg_base58_16 pg_base58_16-0.0.1-4PIGSTY.el10.x86_64.rpm pigsty 0.0.1 854.8KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_base58_16-0.0.1-4PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 16 pg_base58_16 pg_base58_16-0.0.1-4PIGSTY.el10.aarch64.rpm pigsty 0.0.1 785.3KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_base58_16-0.0.1-4PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 16 postgresql-16-pg-base58 postgresql-16-pg-base58_0.0.1-5PIGSTY~bookworm_amd64.deb pigsty 0.0.1 678.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-base58/postgresql-16-pg-base58_0.0.1-5PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 16 postgresql-16-pg-base58 postgresql-16-pg-base58_0.0.1-5PIGSTY~bookworm_arm64.deb pigsty 0.0.1 566.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-base58/postgresql-16-pg-base58_0.0.1-5PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 16 postgresql-16-pg-base58 postgresql-16-pg-base58_0.0.1-5PIGSTY~trixie_amd64.deb pigsty 0.0.1 678.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-base58/postgresql-16-pg-base58_0.0.1-5PIGSTY~trixie_amd64.deb
+@ d13.aarch64 16 postgresql-16-pg-base58 postgresql-16-pg-base58_0.0.1-5PIGSTY~trixie_arm64.deb pigsty 0.0.1 566.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-base58/postgresql-16-pg-base58_0.0.1-5PIGSTY~trixie_arm64.deb
+@ u22.x86_64 16 postgresql-16-pg-base58 postgresql-16-pg-base58_0.0.1-5PIGSTY~jammy_amd64.deb pigsty 0.0.1 753.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-base58/postgresql-16-pg-base58_0.0.1-5PIGSTY~jammy_amd64.deb
+@ u22.aarch64 16 postgresql-16-pg-base58 postgresql-16-pg-base58_0.0.1-5PIGSTY~jammy_arm64.deb pigsty 0.0.1 668.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-base58/postgresql-16-pg-base58_0.0.1-5PIGSTY~jammy_arm64.deb
+@ u24.x86_64 16 postgresql-16-pg-base58 postgresql-16-pg-base58_0.0.1-5PIGSTY~noble_amd64.deb pigsty 0.0.1 745.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-base58/postgresql-16-pg-base58_0.0.1-5PIGSTY~noble_amd64.deb
+@ u24.aarch64 16 postgresql-16-pg-base58 postgresql-16-pg-base58_0.0.1-5PIGSTY~noble_arm64.deb pigsty 0.0.1 658.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-base58/postgresql-16-pg-base58_0.0.1-5PIGSTY~noble_arm64.deb
+@ u26.x86_64 16 postgresql-16-pg-base58 postgresql-16-pg-base58_0.0.1-5PIGSTY~resolute_amd64.deb pigsty 0.0.1 742.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-base58/postgresql-16-pg-base58_0.0.1-5PIGSTY~resolute_amd64.deb
+@ u26.aarch64 16 postgresql-16-pg-base58 postgresql-16-pg-base58_0.0.1-5PIGSTY~resolute_arm64.deb pigsty 0.0.1 656.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-base58/postgresql-16-pg-base58_0.0.1-5PIGSTY~resolute_arm64.deb
+@ el8.x86_64 15 pg_base58_15 pg_base58_15-0.0.1-4PIGSTY.el8.x86_64.rpm pigsty 0.0.1 836.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_base58_15-0.0.1-4PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 15 pg_base58_15 pg_base58_15-0.0.1-4PIGSTY.el8.aarch64.rpm pigsty 0.0.1 749.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_base58_15-0.0.1-4PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 15 pg_base58_15 pg_base58_15-0.0.1-4PIGSTY.el9.x86_64.rpm pigsty 0.0.1 846.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_base58_15-0.0.1-4PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 15 pg_base58_15 pg_base58_15-0.0.1-4PIGSTY.el9.aarch64.rpm pigsty 0.0.1 792.7KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_base58_15-0.0.1-4PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 15 pg_base58_15 pg_base58_15-0.0.1-4PIGSTY.el10.x86_64.rpm pigsty 0.0.1 847.2KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_base58_15-0.0.1-4PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 15 pg_base58_15 pg_base58_15-0.0.1-4PIGSTY.el10.aarch64.rpm pigsty 0.0.1 783.3KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_base58_15-0.0.1-4PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 15 postgresql-15-pg-base58 postgresql-15-pg-base58_0.0.1-5PIGSTY~bookworm_amd64.deb pigsty 0.0.1 671.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-base58/postgresql-15-pg-base58_0.0.1-5PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 15 postgresql-15-pg-base58 postgresql-15-pg-base58_0.0.1-5PIGSTY~bookworm_arm64.deb pigsty 0.0.1 561.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-base58/postgresql-15-pg-base58_0.0.1-5PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 15 postgresql-15-pg-base58 postgresql-15-pg-base58_0.0.1-5PIGSTY~trixie_amd64.deb pigsty 0.0.1 672.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-base58/postgresql-15-pg-base58_0.0.1-5PIGSTY~trixie_amd64.deb
+@ d13.aarch64 15 postgresql-15-pg-base58 postgresql-15-pg-base58_0.0.1-5PIGSTY~trixie_arm64.deb pigsty 0.0.1 561.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-base58/postgresql-15-pg-base58_0.0.1-5PIGSTY~trixie_arm64.deb
+@ u22.x86_64 15 postgresql-15-pg-base58 postgresql-15-pg-base58_0.0.1-5PIGSTY~jammy_amd64.deb pigsty 0.0.1 749.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-base58/postgresql-15-pg-base58_0.0.1-5PIGSTY~jammy_amd64.deb
+@ u22.aarch64 15 postgresql-15-pg-base58 postgresql-15-pg-base58_0.0.1-5PIGSTY~jammy_arm64.deb pigsty 0.0.1 661.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-base58/postgresql-15-pg-base58_0.0.1-5PIGSTY~jammy_arm64.deb
+@ u24.x86_64 15 postgresql-15-pg-base58 postgresql-15-pg-base58_0.0.1-5PIGSTY~noble_amd64.deb pigsty 0.0.1 740.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-base58/postgresql-15-pg-base58_0.0.1-5PIGSTY~noble_amd64.deb
+@ u24.aarch64 15 postgresql-15-pg-base58 postgresql-15-pg-base58_0.0.1-5PIGSTY~noble_arm64.deb pigsty 0.0.1 652.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-base58/postgresql-15-pg-base58_0.0.1-5PIGSTY~noble_arm64.deb
+@ u26.x86_64 15 postgresql-15-pg-base58 postgresql-15-pg-base58_0.0.1-5PIGSTY~resolute_amd64.deb pigsty 0.0.1 735.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-base58/postgresql-15-pg-base58_0.0.1-5PIGSTY~resolute_amd64.deb
+@ u26.aarch64 15 postgresql-15-pg-base58 postgresql-15-pg-base58_0.0.1-5PIGSTY~resolute_arm64.deb pigsty 0.0.1 650.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-base58/postgresql-15-pg-base58_0.0.1-5PIGSTY~resolute_arm64.deb
+@ el8.x86_64 14 pg_base58_14 pg_base58_14-0.0.1-4PIGSTY.el8.x86_64.rpm pigsty 0.0.1 833.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_base58_14-0.0.1-4PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 14 pg_base58_14 pg_base58_14-0.0.1-4PIGSTY.el8.aarch64.rpm pigsty 0.0.1 747.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_base58_14-0.0.1-4PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 14 pg_base58_14 pg_base58_14-0.0.1-4PIGSTY.el9.x86_64.rpm pigsty 0.0.1 843.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_base58_14-0.0.1-4PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 14 pg_base58_14 pg_base58_14-0.0.1-4PIGSTY.el9.aarch64.rpm pigsty 0.0.1 792.1KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_base58_14-0.0.1-4PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 14 pg_base58_14 pg_base58_14-0.0.1-4PIGSTY.el10.x86_64.rpm pigsty 0.0.1 844.1KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_base58_14-0.0.1-4PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 14 pg_base58_14 pg_base58_14-0.0.1-4PIGSTY.el10.aarch64.rpm pigsty 0.0.1 782.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_base58_14-0.0.1-4PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 14 postgresql-14-pg-base58 postgresql-14-pg-base58_0.0.1-5PIGSTY~bookworm_amd64.deb pigsty 0.0.1 669.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-base58/postgresql-14-pg-base58_0.0.1-5PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 14 postgresql-14-pg-base58 postgresql-14-pg-base58_0.0.1-5PIGSTY~bookworm_arm64.deb pigsty 0.0.1 559.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-base58/postgresql-14-pg-base58_0.0.1-5PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 14 postgresql-14-pg-base58 postgresql-14-pg-base58_0.0.1-5PIGSTY~trixie_amd64.deb pigsty 0.0.1 670.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-base58/postgresql-14-pg-base58_0.0.1-5PIGSTY~trixie_amd64.deb
+@ d13.aarch64 14 postgresql-14-pg-base58 postgresql-14-pg-base58_0.0.1-5PIGSTY~trixie_arm64.deb pigsty 0.0.1 560.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-base58/postgresql-14-pg-base58_0.0.1-5PIGSTY~trixie_arm64.deb
+@ u22.x86_64 14 postgresql-14-pg-base58 postgresql-14-pg-base58_0.0.1-5PIGSTY~jammy_amd64.deb pigsty 0.0.1 747.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-base58/postgresql-14-pg-base58_0.0.1-5PIGSTY~jammy_amd64.deb
+@ u22.aarch64 14 postgresql-14-pg-base58 postgresql-14-pg-base58_0.0.1-5PIGSTY~jammy_arm64.deb pigsty 0.0.1 660.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-base58/postgresql-14-pg-base58_0.0.1-5PIGSTY~jammy_arm64.deb
+@ u24.x86_64 14 postgresql-14-pg-base58 postgresql-14-pg-base58_0.0.1-5PIGSTY~noble_amd64.deb pigsty 0.0.1 737.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-base58/postgresql-14-pg-base58_0.0.1-5PIGSTY~noble_amd64.deb
+@ u24.aarch64 14 postgresql-14-pg-base58 postgresql-14-pg-base58_0.0.1-5PIGSTY~noble_arm64.deb pigsty 0.0.1 650.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-base58/postgresql-14-pg-base58_0.0.1-5PIGSTY~noble_arm64.deb
+@ u26.x86_64 14 postgresql-14-pg-base58 postgresql-14-pg-base58_0.0.1-5PIGSTY~resolute_amd64.deb pigsty 0.0.1 734.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-base58/postgresql-14-pg-base58_0.0.1-5PIGSTY~resolute_amd64.deb
+@ u26.aarch64 14 postgresql-14-pg-base58 postgresql-14-pg-base58_0.0.1-5PIGSTY~resolute_arm64.deb pigsty 0.0.1 649.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-base58/postgresql-14-pg-base58_0.0.1-5PIGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建

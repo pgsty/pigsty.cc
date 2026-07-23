@@ -41,7 +41,7 @@ weight: 5900
 |:----:|:----:|:----:|:------:|:--------:|:----:|
 | [**EXT**](/ext/list#admin) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `4.7.2` | {{< pgvers "18,17,16,15,14" >}} | `pgpool` | - |
 | [**RPM**](/ext/rpm#admin) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `4.7.2` | {{< pgvers "18,17,16,15,14" >}} | `pgpool-II-pg$v-extensions` | - |
-| [**DEB**](/ext/deb#admin) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `4.7.1` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pgpool2` | - |
+| [**DEB**](/ext/deb#admin) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `4.7.2` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pgpool2` | - |
 {.ext-table}
 
 {{< pgext_matrix >}}

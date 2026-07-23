@@ -11,6 +11,11 @@ weight: 5020
     <div class="ext-card__title">cybertec-postgresql/pg_rewrite</div>
     <div class="ext-card__desc">https://github.com/cybertec-postgresql/pg_rewrite</div>
   </a>
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pg_rewrite-REL2_2.tar.gz">
+    <div class="ext-card__kicker">源码</div>
+    <div class="ext-card__title">pg_rewrite-REL2_2.tar.gz</div>
+    <div class="ext-card__desc">pg_rewrite-REL2_2.tar.gz</div>
+  </a>
 </div>
 
 
@@ -20,7 +25,7 @@ weight: 5020
 
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
-| [**`pg_rewrite`**](/ext/e/pg_rewrite) | `2.1.0` | <a class="ext-badge ext-badge--cate admin" href="/ext/cate/admin">ADMIN</a> | <a class="ext-badge ext-badge--license bsd 3clause" href="/ext/license#bsd3clause">BSD 3-Clause</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
+| [**`pg_rewrite`**](/ext/e/pg_rewrite) | `2.2` | <a class="ext-badge ext-badge--cate admin" href="/ext/cate/admin">ADMIN</a> | <a class="ext-badge ext-badge--license bsd3clause" href="/ext/license#bsd3clause">BSD-3-Clause</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
 {.ext-table}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
@@ -33,215 +38,302 @@ weight: 5020
 {.ext-table .ext-table--rel}
 
 
+> PIGSTY RPM and PGDG DEB are aligned at 2.2 for PostgreSQL 14-18; shared_preload_libraries=pg_rewrite and wal_level=logical are required.
+
+
 ## 版本
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#admin) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `2.1.0` | {{< pgvers "18,17,16,15,14" >}} | `pg_rewrite` | - |
-| [**RPM**](/ext/rpm#admin) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `2.1.0` | {{< pgvers "18,17,16,15,14" >}} | `pg_rewrite_$v` | - |
-| [**DEB**](/ext/deb#admin) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `2.1.0` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pg-rewrite` | - |
+| [**EXT**](/ext/list#admin) | <a class="ext-badge ext-badge--repo mixed" href="/ext/repo#mixed">MIXED</a> | `2.2` | {{< pgvers "18,17,16,15,14" >}} | `pg_rewrite` | - |
+| [**RPM**](/ext/rpm#admin) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `2.2` | {{< pgvers "18,17,16,15,14" >}} | `pg_rewrite_$v` | - |
+| [**DEB**](/ext/deb#admin) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `2.2` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pg-rewrite` | - |
 {.ext-table}
 
 {{< pgext_matrix >}}
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PGDG 2.1.0 2 | AVAIL PGDG 2.1.0 3 | AVAIL PGDG 2.1.0 3 | AVAIL PGDG 2.1.0 3 | AVAIL PGDG 2.1.0 3 |
-| el8.aarch64 | AVAIL PGDG 2.1.0 2 | AVAIL PGDG 2.1.0 3 | AVAIL PGDG 2.1.0 3 | AVAIL PGDG 2.1.0 3 | AVAIL PGDG 2.1.0 3 |
-| el9.x86_64 | AVAIL PGDG 2.1.0 4 | AVAIL PGDG 2.1.0 5 | AVAIL PGDG 2.1.0 5 | AVAIL PGDG 2.1.0 5 | AVAIL PGDG 2.1.0 5 |
-| el9.aarch64 | AVAIL PGDG 2.1.0 4 | AVAIL PGDG 2.1.0 5 | AVAIL PGDG 2.1.0 5 | AVAIL PGDG 2.1.0 5 | AVAIL PGDG 2.1.0 5 |
-| el10.x86_64 | AVAIL PGDG 2.1.0 4 | AVAIL PGDG 2.1.0 4 | AVAIL PGDG 2.1.0 5 | AVAIL PGDG 2.1.0 5 | AVAIL PGDG 2.1.0 5 |
-| el10.aarch64 | AVAIL PGDG 2.1.0 4 | AVAIL PGDG 2.1.0 4 | AVAIL PGDG 2.1.0 5 | AVAIL PGDG 2.1.0 5 | AVAIL PGDG 2.1.0 5 |
-| d12.x86_64 | AVAIL PGDG 2.1.0 1 | AVAIL PGDG 2.1.0 1 | AVAIL PGDG 2.1.0 1 | AVAIL PGDG 2.1.0 1 | AVAIL PGDG 2.1.0 1 |
-| d12.aarch64 | AVAIL PGDG 2.1.0 1 | AVAIL PGDG 2.1.0 1 | AVAIL PGDG 2.1.0 1 | AVAIL PGDG 2.1.0 1 | AVAIL PGDG 2.1.0 1 |
-| d13.x86_64 | AVAIL PGDG 2.1.0 1 | AVAIL PGDG 2.1.0 1 | AVAIL PGDG 2.1.0 1 | AVAIL PGDG 2.1.0 1 | AVAIL PGDG 2.1.0 1 |
-| d13.aarch64 | AVAIL PGDG 2.1.0 1 | AVAIL PGDG 2.1.0 1 | AVAIL PGDG 2.1.0 1 | AVAIL PGDG 2.1.0 1 | AVAIL PGDG 2.1.0 1 |
-| u22.x86_64 | AVAIL PGDG 2.1.0 1 | AVAIL PGDG 2.1.0 1 | AVAIL PGDG 2.1.0 1 | AVAIL PGDG 2.1.0 1 | AVAIL PGDG 2.1.0 1 |
-| u22.aarch64 | AVAIL PGDG 2.1.0 1 | AVAIL PGDG 2.1.0 1 | AVAIL PGDG 2.1.0 1 | AVAIL PGDG 2.1.0 1 | AVAIL PGDG 2.1.0 1 |
-| u24.x86_64 | AVAIL PGDG 2.1.0 1 | AVAIL PGDG 2.1.0 1 | AVAIL PGDG 2.1.0 1 | AVAIL PGDG 2.1.0 1 | AVAIL PGDG 2.1.0 1 |
-| u24.aarch64 | AVAIL PGDG 2.1.0 1 | AVAIL PGDG 2.1.0 1 | AVAIL PGDG 2.1.0 1 | AVAIL PGDG 2.1.0 1 | AVAIL PGDG 2.1.0 1 |
-| u26.x86_64 | AVAIL PGDG 2.1.0 1 | AVAIL PGDG 2.1.0 1 | AVAIL PGDG 2.1.0 1 | AVAIL PGDG 2.1.0 1 | AVAIL PGDG 2.1.0 1 |
-| u26.aarch64 | AVAIL PGDG 2.1.0 1 | AVAIL PGDG 2.1.0 1 | AVAIL PGDG 2.1.0 1 | AVAIL PGDG 2.1.0 1 | AVAIL PGDG 2.1.0 1 |
+| el8.x86_64 | AVAIL PIGSTY 2.2 3 | AVAIL PIGSTY 2.2 3 | AVAIL PIGSTY 2.2 4 | AVAIL PIGSTY 2.2 4 | AVAIL PIGSTY 2.2 4 |
+| el8.aarch64 | AVAIL PIGSTY 2.2 3 | AVAIL PIGSTY 2.2 3 | AVAIL PIGSTY 2.2 4 | AVAIL PIGSTY 2.2 4 | AVAIL PIGSTY 2.2 4 |
+| el9.x86_64 | AVAIL PIGSTY 2.2 5 | AVAIL PIGSTY 2.2 5 | AVAIL PIGSTY 2.2 6 | AVAIL PIGSTY 2.2 6 | AVAIL PIGSTY 2.2 6 |
+| el9.aarch64 | AVAIL PIGSTY 2.2 5 | AVAIL PIGSTY 2.2 5 | AVAIL PIGSTY 2.2 6 | AVAIL PIGSTY 2.2 6 | AVAIL PIGSTY 2.2 6 |
+| el10.x86_64 | AVAIL PIGSTY 2.2 5 | AVAIL PIGSTY 2.2 5 | AVAIL PIGSTY 2.2 6 | AVAIL PIGSTY 2.2 6 | AVAIL PIGSTY 2.2 6 |
+| el10.aarch64 | AVAIL PIGSTY 2.2 5 | AVAIL PIGSTY 2.2 5 | AVAIL PIGSTY 2.2 6 | AVAIL PIGSTY 2.2 6 | AVAIL PIGSTY 2.2 6 |
+| d12.x86_64 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 2 |
+| d12.aarch64 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 2 |
+| d13.x86_64 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 2 |
+| d13.aarch64 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 2 |
+| u22.x86_64 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 2 |
+| u22.aarch64 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 2 |
+| u24.x86_64 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 2 |
+| u24.aarch64 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 2 |
+| u26.x86_64 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 2 |
+| u26.aarch64 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 2 | AVAIL PGDG 2.2 2 |
+@ el8.x86_64 18 pg_rewrite_18 pg_rewrite_18-2.2-1PIGSTY.el8.x86_64.rpm pigsty 2.2 39.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_rewrite_18-2.2-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 18 pg_rewrite_18 pg_rewrite_18-2.1.0-1PGDG.rhel8.10.x86_64.rpm pgdg 2.1.0 38.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pg_rewrite_18-2.1.0-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 18 pg_rewrite_18 pg_rewrite_18-2.0.0-1PGDG.rhel8.x86_64.rpm pgdg 2.0.0 37.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pg_rewrite_18-2.0.0-1PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 18 pg_rewrite_18 pg_rewrite_18-2.2-1PIGSTY.el8.aarch64.rpm pigsty 2.2 37.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_rewrite_18-2.2-1PIGSTY.el8.aarch64.rpm
 @ el8.aarch64 18 pg_rewrite_18 pg_rewrite_18-2.1.0-1PGDG.rhel8.10.aarch64.rpm pgdg 2.1.0 36.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pg_rewrite_18-2.1.0-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 18 pg_rewrite_18 pg_rewrite_18-2.0.0-1PGDG.rhel8.aarch64.rpm pgdg 2.0.0 35.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pg_rewrite_18-2.0.0-1PGDG.rhel8.aarch64.rpm
+@ el9.x86_64 18 pg_rewrite_18 pg_rewrite_18-2.2-1PIGSTY.el9.x86_64.rpm pigsty 2.2 39.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_rewrite_18-2.2-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 18 pg_rewrite_18 pg_rewrite_18-2.1.0-1PGDG.rhel9.8.x86_64.rpm pgdg 2.1.0 38.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pg_rewrite_18-2.1.0-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 18 pg_rewrite_18 pg_rewrite_18-2.1.0-1PGDG.rhel9.7.x86_64.rpm pgdg 2.1.0 38.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pg_rewrite_18-2.1.0-1PGDG.rhel9.7.x86_64.rpm
 @ el9.x86_64 18 pg_rewrite_18 pg_rewrite_18-2.1.0-1PGDG.rhel9.6.x86_64.rpm pgdg 2.1.0 38.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pg_rewrite_18-2.1.0-1PGDG.rhel9.6.x86_64.rpm
 @ el9.x86_64 18 pg_rewrite_18 pg_rewrite_18-2.0.0-1PGDG.rhel9.x86_64.rpm pgdg 2.0.0 38.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pg_rewrite_18-2.0.0-1PGDG.rhel9.x86_64.rpm
+@ el9.aarch64 18 pg_rewrite_18 pg_rewrite_18-2.2-1PIGSTY.el9.aarch64.rpm pigsty 2.2 38.1KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_rewrite_18-2.2-1PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 18 pg_rewrite_18 pg_rewrite_18-2.1.0-1PGDG.rhel9.8.aarch64.rpm pgdg 2.1.0 37.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pg_rewrite_18-2.1.0-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 18 pg_rewrite_18 pg_rewrite_18-2.1.0-1PGDG.rhel9.7.aarch64.rpm pgdg 2.1.0 37.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pg_rewrite_18-2.1.0-1PGDG.rhel9.7.aarch64.rpm
 @ el9.aarch64 18 pg_rewrite_18 pg_rewrite_18-2.1.0-1PGDG.rhel9.6.aarch64.rpm pgdg 2.1.0 37.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pg_rewrite_18-2.1.0-1PGDG.rhel9.6.aarch64.rpm
 @ el9.aarch64 18 pg_rewrite_18 pg_rewrite_18-2.0.0-1PGDG.rhel9.aarch64.rpm pgdg 2.0.0 36.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pg_rewrite_18-2.0.0-1PGDG.rhel9.aarch64.rpm
+@ el10.x86_64 18 pg_rewrite_18 pg_rewrite_18-2.2-1PIGSTY.el10.x86_64.rpm pigsty 2.2 40.5KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_rewrite_18-2.2-1PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 18 pg_rewrite_18 pg_rewrite_18-2.1.0-1PGDG.rhel10.2.x86_64.rpm pgdg 2.1.0 39.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pg_rewrite_18-2.1.0-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 18 pg_rewrite_18 pg_rewrite_18-2.1.0-1PGDG.rhel10.1.x86_64.rpm pgdg 2.1.0 39.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pg_rewrite_18-2.1.0-1PGDG.rhel10.1.x86_64.rpm
 @ el10.x86_64 18 pg_rewrite_18 pg_rewrite_18-2.1.0-1PGDG.rhel10.0.x86_64.rpm pgdg 2.1.0 39.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pg_rewrite_18-2.1.0-1PGDG.rhel10.0.x86_64.rpm
 @ el10.x86_64 18 pg_rewrite_18 pg_rewrite_18-2.0.0-1PGDG.rhel10.x86_64.rpm pgdg 2.0.0 39.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pg_rewrite_18-2.0.0-1PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 18 pg_rewrite_18 pg_rewrite_18-2.2-1PIGSTY.el10.aarch64.rpm pigsty 2.2 38.3KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_rewrite_18-2.2-1PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 18 pg_rewrite_18 pg_rewrite_18-2.1.0-1PGDG.rhel10.2.aarch64.rpm pgdg 2.1.0 37.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_rewrite_18-2.1.0-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 18 pg_rewrite_18 pg_rewrite_18-2.1.0-1PGDG.rhel10.1.aarch64.rpm pgdg 2.1.0 37.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_rewrite_18-2.1.0-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 18 pg_rewrite_18 pg_rewrite_18-2.1.0-1PGDG.rhel10.0.aarch64.rpm pgdg 2.1.0 37.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_rewrite_18-2.1.0-1PGDG.rhel10.0.aarch64.rpm
 @ el10.aarch64 18 pg_rewrite_18 pg_rewrite_18-2.0.0-1PGDG.rhel10.aarch64.rpm pgdg 2.0.0 37.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_rewrite_18-2.0.0-1PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-pg-rewrite postgresql-18-pg-rewrite_2.2-1.pgdg12+1_amd64.deb pgdg 2.2 76.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rewrite/postgresql-18-pg-rewrite_2.2-1.pgdg12+1_amd64.deb
 @ d12.x86_64 18 postgresql-18-pg-rewrite postgresql-18-pg-rewrite_2.1.0-1.pgdg12+1_amd64.deb pgdg 2.1.0 76.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rewrite/postgresql-18-pg-rewrite_2.1.0-1.pgdg12+1_amd64.deb
+@ d12.aarch64 18 postgresql-18-pg-rewrite postgresql-18-pg-rewrite_2.2-1.pgdg12+1_arm64.deb pgdg 2.2 72.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rewrite/postgresql-18-pg-rewrite_2.2-1.pgdg12+1_arm64.deb
 @ d12.aarch64 18 postgresql-18-pg-rewrite postgresql-18-pg-rewrite_2.1.0-1.pgdg12+1_arm64.deb pgdg 2.1.0 71.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rewrite/postgresql-18-pg-rewrite_2.1.0-1.pgdg12+1_arm64.deb
+@ d13.x86_64 18 postgresql-18-pg-rewrite postgresql-18-pg-rewrite_2.2-1.pgdg13+1_amd64.deb pgdg 2.2 76.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rewrite/postgresql-18-pg-rewrite_2.2-1.pgdg13+1_amd64.deb
 @ d13.x86_64 18 postgresql-18-pg-rewrite postgresql-18-pg-rewrite_2.1.0-1.pgdg13+1_amd64.deb pgdg 2.1.0 76.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rewrite/postgresql-18-pg-rewrite_2.1.0-1.pgdg13+1_amd64.deb
+@ d13.aarch64 18 postgresql-18-pg-rewrite postgresql-18-pg-rewrite_2.2-1.pgdg13+1_arm64.deb pgdg 2.2 71.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rewrite/postgresql-18-pg-rewrite_2.2-1.pgdg13+1_arm64.deb
 @ d13.aarch64 18 postgresql-18-pg-rewrite postgresql-18-pg-rewrite_2.1.0-1.pgdg13+1_arm64.deb pgdg 2.1.0 71.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rewrite/postgresql-18-pg-rewrite_2.1.0-1.pgdg13+1_arm64.deb
+@ u22.x86_64 18 postgresql-18-pg-rewrite postgresql-18-pg-rewrite_2.2-1.pgdg22.04+1_amd64.deb pgdg 2.2 79.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rewrite/postgresql-18-pg-rewrite_2.2-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 18 postgresql-18-pg-rewrite postgresql-18-pg-rewrite_2.1.0-1.pgdg22.04+1_amd64.deb pgdg 2.1.0 79.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rewrite/postgresql-18-pg-rewrite_2.1.0-1.pgdg22.04+1_amd64.deb
+@ u22.aarch64 18 postgresql-18-pg-rewrite postgresql-18-pg-rewrite_2.2-1.pgdg22.04+1_arm64.deb pgdg 2.2 74.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rewrite/postgresql-18-pg-rewrite_2.2-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 18 postgresql-18-pg-rewrite postgresql-18-pg-rewrite_2.1.0-1.pgdg22.04+1_arm64.deb pgdg 2.1.0 74.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rewrite/postgresql-18-pg-rewrite_2.1.0-1.pgdg22.04+1_arm64.deb
+@ u24.x86_64 18 postgresql-18-pg-rewrite postgresql-18-pg-rewrite_2.2-1.pgdg24.04+1_amd64.deb pgdg 2.2 76.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rewrite/postgresql-18-pg-rewrite_2.2-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 18 postgresql-18-pg-rewrite postgresql-18-pg-rewrite_2.1.0-1.pgdg24.04+1_amd64.deb pgdg 2.1.0 76.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rewrite/postgresql-18-pg-rewrite_2.1.0-1.pgdg24.04+1_amd64.deb
+@ u24.aarch64 18 postgresql-18-pg-rewrite postgresql-18-pg-rewrite_2.2-1.pgdg24.04+1_arm64.deb pgdg 2.2 71.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rewrite/postgresql-18-pg-rewrite_2.2-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 18 postgresql-18-pg-rewrite postgresql-18-pg-rewrite_2.1.0-1.pgdg24.04+1_arm64.deb pgdg 2.1.0 71.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rewrite/postgresql-18-pg-rewrite_2.1.0-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 18 postgresql-18-pg-rewrite postgresql-18-pg-rewrite_2.2-1.pgdg26.04+1_amd64.deb pgdg 2.2 75.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rewrite/postgresql-18-pg-rewrite_2.2-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 18 postgresql-18-pg-rewrite postgresql-18-pg-rewrite_2.1.0-1.pgdg26.04+1_amd64.deb pgdg 2.1.0 75.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rewrite/postgresql-18-pg-rewrite_2.1.0-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 18 postgresql-18-pg-rewrite postgresql-18-pg-rewrite_2.2-1.pgdg26.04+1_arm64.deb pgdg 2.2 71.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rewrite/postgresql-18-pg-rewrite_2.2-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 18 postgresql-18-pg-rewrite postgresql-18-pg-rewrite_2.1.0-1.pgdg26.04+1_arm64.deb pgdg 2.1.0 71.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rewrite/postgresql-18-pg-rewrite_2.1.0-1.pgdg26.04+1_arm64.deb
+@ el8.x86_64 17 pg_rewrite_17 pg_rewrite_17-2.2-1PIGSTY.el8.x86_64.rpm pigsty 2.2 39.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_rewrite_17-2.2-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 17 pg_rewrite_17 pg_rewrite_17-2.1.0-1PGDG.rhel8.10.x86_64.rpm pgdg 2.1.0 37.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pg_rewrite_17-2.1.0-1PGDG.rhel8.10.x86_64.rpm
-@ el8.x86_64 17 pg_rewrite_17 pg_rewrite_17-2.0.0-1PIGSTY.el8.x86_64.rpm pigsty 2.0.0 37.0KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_rewrite_17-2.0.0-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 17 pg_rewrite_17 pg_rewrite_17-2.0.0-1PGDG.rhel8.x86_64.rpm pgdg 2.0.0 37.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pg_rewrite_17-2.0.0-1PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 17 pg_rewrite_17 pg_rewrite_17-2.2-1PIGSTY.el8.aarch64.rpm pigsty 2.2 37.3KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_rewrite_17-2.2-1PIGSTY.el8.aarch64.rpm
 @ el8.aarch64 17 pg_rewrite_17 pg_rewrite_17-2.1.0-1PGDG.rhel8.10.aarch64.rpm pgdg 2.1.0 35.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pg_rewrite_17-2.1.0-1PGDG.rhel8.10.aarch64.rpm
-@ el8.aarch64 17 pg_rewrite_17 pg_rewrite_17-2.0.0-1PIGSTY.el8.aarch64.rpm pigsty 2.0.0 35.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_rewrite_17-2.0.0-1PIGSTY.el8.aarch64.rpm
 @ el8.aarch64 17 pg_rewrite_17 pg_rewrite_17-2.0.0-1PGDG.rhel8.aarch64.rpm pgdg 2.0.0 35.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pg_rewrite_17-2.0.0-1PGDG.rhel8.aarch64.rpm
+@ el9.x86_64 17 pg_rewrite_17 pg_rewrite_17-2.2-1PIGSTY.el9.x86_64.rpm pigsty 2.2 39.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_rewrite_17-2.2-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 17 pg_rewrite_17 pg_rewrite_17-2.1.0-1PGDG.rhel9.8.x86_64.rpm pgdg 2.1.0 38.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_rewrite_17-2.1.0-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 17 pg_rewrite_17 pg_rewrite_17-2.1.0-1PGDG.rhel9.7.x86_64.rpm pgdg 2.1.0 38.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_rewrite_17-2.1.0-1PGDG.rhel9.7.x86_64.rpm
 @ el9.x86_64 17 pg_rewrite_17 pg_rewrite_17-2.1.0-1PGDG.rhel9.6.x86_64.rpm pgdg 2.1.0 38.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_rewrite_17-2.1.0-1PGDG.rhel9.6.x86_64.rpm
-@ el9.x86_64 17 pg_rewrite_17 pg_rewrite_17-2.0.0-1PIGSTY.el9.x86_64.rpm pigsty 2.0.0 37.7KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_rewrite_17-2.0.0-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 17 pg_rewrite_17 pg_rewrite_17-2.0.0-1PGDG.rhel9.x86_64.rpm pgdg 2.0.0 37.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_rewrite_17-2.0.0-1PGDG.rhel9.x86_64.rpm
+@ el9.aarch64 17 pg_rewrite_17 pg_rewrite_17-2.2-1PIGSTY.el9.aarch64.rpm pigsty 2.2 37.8KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_rewrite_17-2.2-1PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 17 pg_rewrite_17 pg_rewrite_17-2.1.0-1PGDG.rhel9.8.aarch64.rpm pgdg 2.1.0 36.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_rewrite_17-2.1.0-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 17 pg_rewrite_17 pg_rewrite_17-2.1.0-1PGDG.rhel9.7.aarch64.rpm pgdg 2.1.0 36.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_rewrite_17-2.1.0-1PGDG.rhel9.7.aarch64.rpm
 @ el9.aarch64 17 pg_rewrite_17 pg_rewrite_17-2.1.0-1PGDG.rhel9.6.aarch64.rpm pgdg 2.1.0 37.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_rewrite_17-2.1.0-1PGDG.rhel9.6.aarch64.rpm
-@ el9.aarch64 17 pg_rewrite_17 pg_rewrite_17-2.0.0-1PIGSTY.el9.aarch64.rpm pigsty 2.0.0 36.1KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_rewrite_17-2.0.0-1PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 17 pg_rewrite_17 pg_rewrite_17-2.0.0-1PGDG.rhel9.aarch64.rpm pgdg 2.0.0 36.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_rewrite_17-2.0.0-1PGDG.rhel9.aarch64.rpm
+@ el10.x86_64 17 pg_rewrite_17 pg_rewrite_17-2.2-1PIGSTY.el10.x86_64.rpm pigsty 2.2 40.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_rewrite_17-2.2-1PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 17 pg_rewrite_17 pg_rewrite_17-2.1.0-1PGDG.rhel10.2.x86_64.rpm pgdg 2.1.0 39.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_rewrite_17-2.1.0-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 17 pg_rewrite_17 pg_rewrite_17-2.1.0-1PGDG.rhel10.1.x86_64.rpm pgdg 2.1.0 39.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_rewrite_17-2.1.0-1PGDG.rhel10.1.x86_64.rpm
 @ el10.x86_64 17 pg_rewrite_17 pg_rewrite_17-2.1.0-1PGDG.rhel10.0.x86_64.rpm pgdg 2.1.0 39.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_rewrite_17-2.1.0-1PGDG.rhel10.0.x86_64.rpm
 @ el10.x86_64 17 pg_rewrite_17 pg_rewrite_17-2.0.0-1PGDG.rhel10.x86_64.rpm pgdg 2.0.0 38.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_rewrite_17-2.0.0-1PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 17 pg_rewrite_17 pg_rewrite_17-2.2-1PIGSTY.el10.aarch64.rpm pigsty 2.2 38.4KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_rewrite_17-2.2-1PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 17 pg_rewrite_17 pg_rewrite_17-2.1.0-1PGDG.rhel10.2.aarch64.rpm pgdg 2.1.0 37.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_rewrite_17-2.1.0-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 17 pg_rewrite_17 pg_rewrite_17-2.1.0-1PGDG.rhel10.1.aarch64.rpm pgdg 2.1.0 37.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_rewrite_17-2.1.0-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 17 pg_rewrite_17 pg_rewrite_17-2.1.0-1PGDG.rhel10.0.aarch64.rpm pgdg 2.1.0 37.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_rewrite_17-2.1.0-1PGDG.rhel10.0.aarch64.rpm
 @ el10.aarch64 17 pg_rewrite_17 pg_rewrite_17-2.0.0-1PGDG.rhel10.aarch64.rpm pgdg 2.0.0 37.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_rewrite_17-2.0.0-1PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-pg-rewrite postgresql-17-pg-rewrite_2.2-1.pgdg12+1_amd64.deb pgdg 2.2 75.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rewrite/postgresql-17-pg-rewrite_2.2-1.pgdg12+1_amd64.deb
 @ d12.x86_64 17 postgresql-17-pg-rewrite postgresql-17-pg-rewrite_2.1.0-1.pgdg12+1_amd64.deb pgdg 2.1.0 75.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rewrite/postgresql-17-pg-rewrite_2.1.0-1.pgdg12+1_amd64.deb
+@ d12.aarch64 17 postgresql-17-pg-rewrite postgresql-17-pg-rewrite_2.2-1.pgdg12+1_arm64.deb pgdg 2.2 71.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rewrite/postgresql-17-pg-rewrite_2.2-1.pgdg12+1_arm64.deb
 @ d12.aarch64 17 postgresql-17-pg-rewrite postgresql-17-pg-rewrite_2.1.0-1.pgdg12+1_arm64.deb pgdg 2.1.0 71.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rewrite/postgresql-17-pg-rewrite_2.1.0-1.pgdg12+1_arm64.deb
+@ d13.x86_64 17 postgresql-17-pg-rewrite postgresql-17-pg-rewrite_2.2-1.pgdg13+1_amd64.deb pgdg 2.2 76.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rewrite/postgresql-17-pg-rewrite_2.2-1.pgdg13+1_amd64.deb
 @ d13.x86_64 17 postgresql-17-pg-rewrite postgresql-17-pg-rewrite_2.1.0-1.pgdg13+1_amd64.deb pgdg 2.1.0 75.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rewrite/postgresql-17-pg-rewrite_2.1.0-1.pgdg13+1_amd64.deb
+@ d13.aarch64 17 postgresql-17-pg-rewrite postgresql-17-pg-rewrite_2.2-1.pgdg13+1_arm64.deb pgdg 2.2 71.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rewrite/postgresql-17-pg-rewrite_2.2-1.pgdg13+1_arm64.deb
 @ d13.aarch64 17 postgresql-17-pg-rewrite postgresql-17-pg-rewrite_2.1.0-1.pgdg13+1_arm64.deb pgdg 2.1.0 71.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rewrite/postgresql-17-pg-rewrite_2.1.0-1.pgdg13+1_arm64.deb
+@ u22.x86_64 17 postgresql-17-pg-rewrite postgresql-17-pg-rewrite_2.2-1.pgdg22.04+1_amd64.deb pgdg 2.2 90.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rewrite/postgresql-17-pg-rewrite_2.2-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 17 postgresql-17-pg-rewrite postgresql-17-pg-rewrite_2.1.0-1.pgdg22.04+1_amd64.deb pgdg 2.1.0 90.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rewrite/postgresql-17-pg-rewrite_2.1.0-1.pgdg22.04+1_amd64.deb
+@ u22.aarch64 17 postgresql-17-pg-rewrite postgresql-17-pg-rewrite_2.2-1.pgdg22.04+1_arm64.deb pgdg 2.2 86.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rewrite/postgresql-17-pg-rewrite_2.2-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 17 postgresql-17-pg-rewrite postgresql-17-pg-rewrite_2.1.0-1.pgdg22.04+1_arm64.deb pgdg 2.1.0 85.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rewrite/postgresql-17-pg-rewrite_2.1.0-1.pgdg22.04+1_arm64.deb
+@ u24.x86_64 17 postgresql-17-pg-rewrite postgresql-17-pg-rewrite_2.2-1.pgdg24.04+1_amd64.deb pgdg 2.2 75.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rewrite/postgresql-17-pg-rewrite_2.2-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 17 postgresql-17-pg-rewrite postgresql-17-pg-rewrite_2.1.0-1.pgdg24.04+1_amd64.deb pgdg 2.1.0 75.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rewrite/postgresql-17-pg-rewrite_2.1.0-1.pgdg24.04+1_amd64.deb
+@ u24.aarch64 17 postgresql-17-pg-rewrite postgresql-17-pg-rewrite_2.2-1.pgdg24.04+1_arm64.deb pgdg 2.2 71.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rewrite/postgresql-17-pg-rewrite_2.2-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 17 postgresql-17-pg-rewrite postgresql-17-pg-rewrite_2.1.0-1.pgdg24.04+1_arm64.deb pgdg 2.1.0 70.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rewrite/postgresql-17-pg-rewrite_2.1.0-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 17 postgresql-17-pg-rewrite postgresql-17-pg-rewrite_2.2-1.pgdg26.04+1_amd64.deb pgdg 2.2 74.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rewrite/postgresql-17-pg-rewrite_2.2-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 17 postgresql-17-pg-rewrite postgresql-17-pg-rewrite_2.1.0-1.pgdg26.04+1_amd64.deb pgdg 2.1.0 74.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rewrite/postgresql-17-pg-rewrite_2.1.0-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 17 postgresql-17-pg-rewrite postgresql-17-pg-rewrite_2.2-1.pgdg26.04+1_arm64.deb pgdg 2.2 70.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rewrite/postgresql-17-pg-rewrite_2.2-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 17 postgresql-17-pg-rewrite postgresql-17-pg-rewrite_2.1.0-1.pgdg26.04+1_arm64.deb pgdg 2.1.0 70.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rewrite/postgresql-17-pg-rewrite_2.1.0-1.pgdg26.04+1_arm64.deb
+@ el8.x86_64 16 pg_rewrite_16 pg_rewrite_16-2.2-1PIGSTY.el8.x86_64.rpm pigsty 2.2 39.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_rewrite_16-2.2-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 16 pg_rewrite_16 pg_rewrite_16-2.1.0-1PGDG.rhel8.10.x86_64.rpm pgdg 2.1.0 37.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_rewrite_16-2.1.0-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 pg_rewrite_16 pg_rewrite_16-2.0.0-1PGDG.rhel8.x86_64.rpm pgdg 2.0.0 37.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_rewrite_16-2.0.0-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 16 pg_rewrite_16 pg_rewrite_16-1.1.0-1PGDG.rhel8.x86_64.rpm pgdg 1.1.0 36.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_rewrite_16-1.1.0-1PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 16 pg_rewrite_16 pg_rewrite_16-2.2-1PIGSTY.el8.aarch64.rpm pigsty 2.2 37.3KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_rewrite_16-2.2-1PIGSTY.el8.aarch64.rpm
 @ el8.aarch64 16 pg_rewrite_16 pg_rewrite_16-2.1.0-1PGDG.rhel8.10.aarch64.rpm pgdg 2.1.0 35.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pg_rewrite_16-2.1.0-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 16 pg_rewrite_16 pg_rewrite_16-2.0.0-1PGDG.rhel8.aarch64.rpm pgdg 2.0.0 35.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pg_rewrite_16-2.0.0-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 16 pg_rewrite_16 pg_rewrite_16-1.1.0-1PGDG.rhel8.aarch64.rpm pgdg 1.1.0 34.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pg_rewrite_16-1.1.0-1PGDG.rhel8.aarch64.rpm
+@ el9.x86_64 16 pg_rewrite_16 pg_rewrite_16-2.2-1PIGSTY.el9.x86_64.rpm pigsty 2.2 39.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_rewrite_16-2.2-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 16 pg_rewrite_16 pg_rewrite_16-2.1.0-1PGDG.rhel9.8.x86_64.rpm pgdg 2.1.0 38.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_rewrite_16-2.1.0-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 16 pg_rewrite_16 pg_rewrite_16-2.1.0-1PGDG.rhel9.7.x86_64.rpm pgdg 2.1.0 38.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_rewrite_16-2.1.0-1PGDG.rhel9.7.x86_64.rpm
 @ el9.x86_64 16 pg_rewrite_16 pg_rewrite_16-2.1.0-1PGDG.rhel9.6.x86_64.rpm pgdg 2.1.0 38.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_rewrite_16-2.1.0-1PGDG.rhel9.6.x86_64.rpm
 @ el9.x86_64 16 pg_rewrite_16 pg_rewrite_16-2.0.0-1PGDG.rhel9.x86_64.rpm pgdg 2.0.0 37.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_rewrite_16-2.0.0-1PGDG.rhel9.x86_64.rpm
 @ el9.x86_64 16 pg_rewrite_16 pg_rewrite_16-1.1.0-1PGDG.rhel9.x86_64.rpm pgdg 1.1.0 36.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_rewrite_16-1.1.0-1PGDG.rhel9.x86_64.rpm
+@ el9.aarch64 16 pg_rewrite_16 pg_rewrite_16-2.2-1PIGSTY.el9.aarch64.rpm pigsty 2.2 37.8KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_rewrite_16-2.2-1PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 16 pg_rewrite_16 pg_rewrite_16-2.1.0-1PGDG.rhel9.8.aarch64.rpm pgdg 2.1.0 37.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_rewrite_16-2.1.0-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 16 pg_rewrite_16 pg_rewrite_16-2.1.0-1PGDG.rhel9.7.aarch64.rpm pgdg 2.1.0 36.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_rewrite_16-2.1.0-1PGDG.rhel9.7.aarch64.rpm
 @ el9.aarch64 16 pg_rewrite_16 pg_rewrite_16-2.1.0-1PGDG.rhel9.6.aarch64.rpm pgdg 2.1.0 37.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_rewrite_16-2.1.0-1PGDG.rhel9.6.aarch64.rpm
 @ el9.aarch64 16 pg_rewrite_16 pg_rewrite_16-2.0.0-1PGDG.rhel9.aarch64.rpm pgdg 2.0.0 36.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_rewrite_16-2.0.0-1PGDG.rhel9.aarch64.rpm
 @ el9.aarch64 16 pg_rewrite_16 pg_rewrite_16-1.1.0-1PGDG.rhel9.aarch64.rpm pgdg 1.1.0 34.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_rewrite_16-1.1.0-1PGDG.rhel9.aarch64.rpm
+@ el10.x86_64 16 pg_rewrite_16 pg_rewrite_16-2.2-1PIGSTY.el10.x86_64.rpm pigsty 2.2 40.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_rewrite_16-2.2-1PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 16 pg_rewrite_16 pg_rewrite_16-2.1.0-1PGDG.rhel10.2.x86_64.rpm pgdg 2.1.0 39.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_rewrite_16-2.1.0-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 16 pg_rewrite_16 pg_rewrite_16-2.1.0-1PGDG.rhel10.1.x86_64.rpm pgdg 2.1.0 39.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_rewrite_16-2.1.0-1PGDG.rhel10.1.x86_64.rpm
 @ el10.x86_64 16 pg_rewrite_16 pg_rewrite_16-2.1.0-1PGDG.rhel10.0.x86_64.rpm pgdg 2.1.0 39.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_rewrite_16-2.1.0-1PGDG.rhel10.0.x86_64.rpm
 @ el10.x86_64 16 pg_rewrite_16 pg_rewrite_16-2.0.0-1PGDG.rhel10.x86_64.rpm pgdg 2.0.0 38.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_rewrite_16-2.0.0-1PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 16 pg_rewrite_16 pg_rewrite_16-1.1.0-1PGDG.rhel10.x86_64.rpm pgdg 1.1.0 37.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_rewrite_16-1.1.0-1PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 16 pg_rewrite_16 pg_rewrite_16-2.2-1PIGSTY.el10.aarch64.rpm pigsty 2.2 38.4KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_rewrite_16-2.2-1PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 16 pg_rewrite_16 pg_rewrite_16-2.1.0-1PGDG.rhel10.2.aarch64.rpm pgdg 2.1.0 37.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_rewrite_16-2.1.0-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 16 pg_rewrite_16 pg_rewrite_16-2.1.0-1PGDG.rhel10.1.aarch64.rpm pgdg 2.1.0 37.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_rewrite_16-2.1.0-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 16 pg_rewrite_16 pg_rewrite_16-2.1.0-1PGDG.rhel10.0.aarch64.rpm pgdg 2.1.0 37.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_rewrite_16-2.1.0-1PGDG.rhel10.0.aarch64.rpm
 @ el10.aarch64 16 pg_rewrite_16 pg_rewrite_16-2.0.0-1PGDG.rhel10.aarch64.rpm pgdg 2.0.0 37.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_rewrite_16-2.0.0-1PGDG.rhel10.aarch64.rpm
 @ el10.aarch64 16 pg_rewrite_16 pg_rewrite_16-1.1.0-1PGDG.rhel10.aarch64.rpm pgdg 1.1.0 35.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_rewrite_16-1.1.0-1PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 16 postgresql-16-pg-rewrite postgresql-16-pg-rewrite_2.2-1.pgdg12+1_amd64.deb pgdg 2.2 75.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rewrite/postgresql-16-pg-rewrite_2.2-1.pgdg12+1_amd64.deb
 @ d12.x86_64 16 postgresql-16-pg-rewrite postgresql-16-pg-rewrite_2.1.0-1.pgdg12+1_amd64.deb pgdg 2.1.0 75.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rewrite/postgresql-16-pg-rewrite_2.1.0-1.pgdg12+1_amd64.deb
+@ d12.aarch64 16 postgresql-16-pg-rewrite postgresql-16-pg-rewrite_2.2-1.pgdg12+1_arm64.deb pgdg 2.2 71.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rewrite/postgresql-16-pg-rewrite_2.2-1.pgdg12+1_arm64.deb
 @ d12.aarch64 16 postgresql-16-pg-rewrite postgresql-16-pg-rewrite_2.1.0-1.pgdg12+1_arm64.deb pgdg 2.1.0 71.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rewrite/postgresql-16-pg-rewrite_2.1.0-1.pgdg12+1_arm64.deb
+@ d13.x86_64 16 postgresql-16-pg-rewrite postgresql-16-pg-rewrite_2.2-1.pgdg13+1_amd64.deb pgdg 2.2 75.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rewrite/postgresql-16-pg-rewrite_2.2-1.pgdg13+1_amd64.deb
 @ d13.x86_64 16 postgresql-16-pg-rewrite postgresql-16-pg-rewrite_2.1.0-1.pgdg13+1_amd64.deb pgdg 2.1.0 75.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rewrite/postgresql-16-pg-rewrite_2.1.0-1.pgdg13+1_amd64.deb
+@ d13.aarch64 16 postgresql-16-pg-rewrite postgresql-16-pg-rewrite_2.2-1.pgdg13+1_arm64.deb pgdg 2.2 71.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rewrite/postgresql-16-pg-rewrite_2.2-1.pgdg13+1_arm64.deb
 @ d13.aarch64 16 postgresql-16-pg-rewrite postgresql-16-pg-rewrite_2.1.0-1.pgdg13+1_arm64.deb pgdg 2.1.0 71.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rewrite/postgresql-16-pg-rewrite_2.1.0-1.pgdg13+1_arm64.deb
+@ u22.x86_64 16 postgresql-16-pg-rewrite postgresql-16-pg-rewrite_2.2-1.pgdg22.04+1_amd64.deb pgdg 2.2 89.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rewrite/postgresql-16-pg-rewrite_2.2-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 16 postgresql-16-pg-rewrite postgresql-16-pg-rewrite_2.1.0-1.pgdg22.04+1_amd64.deb pgdg 2.1.0 89.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rewrite/postgresql-16-pg-rewrite_2.1.0-1.pgdg22.04+1_amd64.deb
+@ u22.aarch64 16 postgresql-16-pg-rewrite postgresql-16-pg-rewrite_2.2-1.pgdg22.04+1_arm64.deb pgdg 2.2 84.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rewrite/postgresql-16-pg-rewrite_2.2-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 16 postgresql-16-pg-rewrite postgresql-16-pg-rewrite_2.1.0-1.pgdg22.04+1_arm64.deb pgdg 2.1.0 85.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rewrite/postgresql-16-pg-rewrite_2.1.0-1.pgdg22.04+1_arm64.deb
+@ u24.x86_64 16 postgresql-16-pg-rewrite postgresql-16-pg-rewrite_2.2-1.pgdg24.04+1_amd64.deb pgdg 2.2 75.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rewrite/postgresql-16-pg-rewrite_2.2-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 16 postgresql-16-pg-rewrite postgresql-16-pg-rewrite_2.1.0-1.pgdg24.04+1_amd64.deb pgdg 2.1.0 75.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rewrite/postgresql-16-pg-rewrite_2.1.0-1.pgdg24.04+1_amd64.deb
+@ u24.aarch64 16 postgresql-16-pg-rewrite postgresql-16-pg-rewrite_2.2-1.pgdg24.04+1_arm64.deb pgdg 2.2 70.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rewrite/postgresql-16-pg-rewrite_2.2-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 16 postgresql-16-pg-rewrite postgresql-16-pg-rewrite_2.1.0-1.pgdg24.04+1_arm64.deb pgdg 2.1.0 70.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rewrite/postgresql-16-pg-rewrite_2.1.0-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 16 postgresql-16-pg-rewrite postgresql-16-pg-rewrite_2.2-1.pgdg26.04+1_amd64.deb pgdg 2.2 74.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rewrite/postgresql-16-pg-rewrite_2.2-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 16 postgresql-16-pg-rewrite postgresql-16-pg-rewrite_2.1.0-1.pgdg26.04+1_amd64.deb pgdg 2.1.0 74.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rewrite/postgresql-16-pg-rewrite_2.1.0-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 16 postgresql-16-pg-rewrite postgresql-16-pg-rewrite_2.2-1.pgdg26.04+1_arm64.deb pgdg 2.2 70.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rewrite/postgresql-16-pg-rewrite_2.2-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 16 postgresql-16-pg-rewrite postgresql-16-pg-rewrite_2.1.0-1.pgdg26.04+1_arm64.deb pgdg 2.1.0 70.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rewrite/postgresql-16-pg-rewrite_2.1.0-1.pgdg26.04+1_arm64.deb
+@ el8.x86_64 15 pg_rewrite_15 pg_rewrite_15-2.2-1PIGSTY.el8.x86_64.rpm pigsty 2.2 39.4KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_rewrite_15-2.2-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 15 pg_rewrite_15 pg_rewrite_15-2.1.0-1PGDG.rhel8.10.x86_64.rpm pgdg 2.1.0 38.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_rewrite_15-2.1.0-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 pg_rewrite_15 pg_rewrite_15-2.0.0-1PGDG.rhel8.x86_64.rpm pgdg 2.0.0 37.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_rewrite_15-2.0.0-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 15 pg_rewrite_15 pg_rewrite_15-1.1.0-1PGDG.rhel8.x86_64.rpm pgdg 1.1.0 36.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_rewrite_15-1.1.0-1PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 15 pg_rewrite_15 pg_rewrite_15-2.2-1PIGSTY.el8.aarch64.rpm pigsty 2.2 37.3KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_rewrite_15-2.2-1PIGSTY.el8.aarch64.rpm
 @ el8.aarch64 15 pg_rewrite_15 pg_rewrite_15-2.1.0-1PGDG.rhel8.10.aarch64.rpm pgdg 2.1.0 35.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pg_rewrite_15-2.1.0-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 15 pg_rewrite_15 pg_rewrite_15-2.0.0-1PGDG.rhel8.aarch64.rpm pgdg 2.0.0 35.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pg_rewrite_15-2.0.0-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 15 pg_rewrite_15 pg_rewrite_15-1.1.0-1PGDG.rhel8.aarch64.rpm pgdg 1.1.0 34.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pg_rewrite_15-1.1.0-1PGDG.rhel8.aarch64.rpm
+@ el9.x86_64 15 pg_rewrite_15 pg_rewrite_15-2.2-1PIGSTY.el9.x86_64.rpm pigsty 2.2 39.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_rewrite_15-2.2-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 15 pg_rewrite_15 pg_rewrite_15-2.1.0-1PGDG.rhel9.8.x86_64.rpm pgdg 2.1.0 38.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_rewrite_15-2.1.0-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 15 pg_rewrite_15 pg_rewrite_15-2.1.0-1PGDG.rhel9.7.x86_64.rpm pgdg 2.1.0 38.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_rewrite_15-2.1.0-1PGDG.rhel9.7.x86_64.rpm
 @ el9.x86_64 15 pg_rewrite_15 pg_rewrite_15-2.1.0-1PGDG.rhel9.6.x86_64.rpm pgdg 2.1.0 38.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_rewrite_15-2.1.0-1PGDG.rhel9.6.x86_64.rpm
 @ el9.x86_64 15 pg_rewrite_15 pg_rewrite_15-2.0.0-1PGDG.rhel9.x86_64.rpm pgdg 2.0.0 38.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_rewrite_15-2.0.0-1PGDG.rhel9.x86_64.rpm
 @ el9.x86_64 15 pg_rewrite_15 pg_rewrite_15-1.1.0-1PGDG.rhel9.x86_64.rpm pgdg 1.1.0 36.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_rewrite_15-1.1.0-1PGDG.rhel9.x86_64.rpm
+@ el9.aarch64 15 pg_rewrite_15 pg_rewrite_15-2.2-1PIGSTY.el9.aarch64.rpm pigsty 2.2 37.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_rewrite_15-2.2-1PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 15 pg_rewrite_15 pg_rewrite_15-2.1.0-1PGDG.rhel9.8.aarch64.rpm pgdg 2.1.0 36.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_rewrite_15-2.1.0-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 15 pg_rewrite_15 pg_rewrite_15-2.1.0-1PGDG.rhel9.7.aarch64.rpm pgdg 2.1.0 36.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_rewrite_15-2.1.0-1PGDG.rhel9.7.aarch64.rpm
 @ el9.aarch64 15 pg_rewrite_15 pg_rewrite_15-2.1.0-1PGDG.rhel9.6.aarch64.rpm pgdg 2.1.0 37.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_rewrite_15-2.1.0-1PGDG.rhel9.6.aarch64.rpm
 @ el9.aarch64 15 pg_rewrite_15 pg_rewrite_15-2.0.0-1PGDG.rhel9.aarch64.rpm pgdg 2.0.0 36.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_rewrite_15-2.0.0-1PGDG.rhel9.aarch64.rpm
 @ el9.aarch64 15 pg_rewrite_15 pg_rewrite_15-1.1.0-1PGDG.rhel9.aarch64.rpm pgdg 1.1.0 34.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_rewrite_15-1.1.0-1PGDG.rhel9.aarch64.rpm
+@ el10.x86_64 15 pg_rewrite_15 pg_rewrite_15-2.2-1PIGSTY.el10.x86_64.rpm pigsty 2.2 39.8KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_rewrite_15-2.2-1PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 15 pg_rewrite_15 pg_rewrite_15-2.1.0-1PGDG.rhel10.2.x86_64.rpm pgdg 2.1.0 38.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_rewrite_15-2.1.0-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 15 pg_rewrite_15 pg_rewrite_15-2.1.0-1PGDG.rhel10.1.x86_64.rpm pgdg 2.1.0 38.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_rewrite_15-2.1.0-1PGDG.rhel10.1.x86_64.rpm
 @ el10.x86_64 15 pg_rewrite_15 pg_rewrite_15-2.1.0-1PGDG.rhel10.0.x86_64.rpm pgdg 2.1.0 39.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_rewrite_15-2.1.0-1PGDG.rhel10.0.x86_64.rpm
 @ el10.x86_64 15 pg_rewrite_15 pg_rewrite_15-2.0.0-1PGDG.rhel10.x86_64.rpm pgdg 2.0.0 38.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_rewrite_15-2.0.0-1PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 15 pg_rewrite_15 pg_rewrite_15-1.1.0-1PGDG.rhel10.x86_64.rpm pgdg 1.1.0 37.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_rewrite_15-1.1.0-1PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 15 pg_rewrite_15 pg_rewrite_15-2.2-1PIGSTY.el10.aarch64.rpm pigsty 2.2 38.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_rewrite_15-2.2-1PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 15 pg_rewrite_15 pg_rewrite_15-2.1.0-1PGDG.rhel10.2.aarch64.rpm pgdg 2.1.0 37.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_rewrite_15-2.1.0-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 15 pg_rewrite_15 pg_rewrite_15-2.1.0-1PGDG.rhel10.1.aarch64.rpm pgdg 2.1.0 37.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_rewrite_15-2.1.0-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 15 pg_rewrite_15 pg_rewrite_15-2.1.0-1PGDG.rhel10.0.aarch64.rpm pgdg 2.1.0 37.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_rewrite_15-2.1.0-1PGDG.rhel10.0.aarch64.rpm
 @ el10.aarch64 15 pg_rewrite_15 pg_rewrite_15-2.0.0-1PGDG.rhel10.aarch64.rpm pgdg 2.0.0 37.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_rewrite_15-2.0.0-1PGDG.rhel10.aarch64.rpm
 @ el10.aarch64 15 pg_rewrite_15 pg_rewrite_15-1.1.0-1PGDG.rhel10.aarch64.rpm pgdg 1.1.0 36.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_rewrite_15-1.1.0-1PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 15 postgresql-15-pg-rewrite postgresql-15-pg-rewrite_2.2-1.pgdg12+1_amd64.deb pgdg 2.2 75.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rewrite/postgresql-15-pg-rewrite_2.2-1.pgdg12+1_amd64.deb
 @ d12.x86_64 15 postgresql-15-pg-rewrite postgresql-15-pg-rewrite_2.1.0-1.pgdg12+1_amd64.deb pgdg 2.1.0 75.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rewrite/postgresql-15-pg-rewrite_2.1.0-1.pgdg12+1_amd64.deb
+@ d12.aarch64 15 postgresql-15-pg-rewrite postgresql-15-pg-rewrite_2.2-1.pgdg12+1_arm64.deb pgdg 2.2 70.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rewrite/postgresql-15-pg-rewrite_2.2-1.pgdg12+1_arm64.deb
 @ d12.aarch64 15 postgresql-15-pg-rewrite postgresql-15-pg-rewrite_2.1.0-1.pgdg12+1_arm64.deb pgdg 2.1.0 70.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rewrite/postgresql-15-pg-rewrite_2.1.0-1.pgdg12+1_arm64.deb
+@ d13.x86_64 15 postgresql-15-pg-rewrite postgresql-15-pg-rewrite_2.2-1.pgdg13+1_amd64.deb pgdg 2.2 75.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rewrite/postgresql-15-pg-rewrite_2.2-1.pgdg13+1_amd64.deb
 @ d13.x86_64 15 postgresql-15-pg-rewrite postgresql-15-pg-rewrite_2.1.0-1.pgdg13+1_amd64.deb pgdg 2.1.0 75.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rewrite/postgresql-15-pg-rewrite_2.1.0-1.pgdg13+1_amd64.deb
+@ d13.aarch64 15 postgresql-15-pg-rewrite postgresql-15-pg-rewrite_2.2-1.pgdg13+1_arm64.deb pgdg 2.2 70.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rewrite/postgresql-15-pg-rewrite_2.2-1.pgdg13+1_arm64.deb
 @ d13.aarch64 15 postgresql-15-pg-rewrite postgresql-15-pg-rewrite_2.1.0-1.pgdg13+1_arm64.deb pgdg 2.1.0 70.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rewrite/postgresql-15-pg-rewrite_2.1.0-1.pgdg13+1_arm64.deb
+@ u22.x86_64 15 postgresql-15-pg-rewrite postgresql-15-pg-rewrite_2.2-1.pgdg22.04+1_amd64.deb pgdg 2.2 89.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rewrite/postgresql-15-pg-rewrite_2.2-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 15 postgresql-15-pg-rewrite postgresql-15-pg-rewrite_2.1.0-1.pgdg22.04+1_amd64.deb pgdg 2.1.0 89.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rewrite/postgresql-15-pg-rewrite_2.1.0-1.pgdg22.04+1_amd64.deb
+@ u22.aarch64 15 postgresql-15-pg-rewrite postgresql-15-pg-rewrite_2.2-1.pgdg22.04+1_arm64.deb pgdg 2.2 84.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rewrite/postgresql-15-pg-rewrite_2.2-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 15 postgresql-15-pg-rewrite postgresql-15-pg-rewrite_2.1.0-1.pgdg22.04+1_arm64.deb pgdg 2.1.0 84.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rewrite/postgresql-15-pg-rewrite_2.1.0-1.pgdg22.04+1_arm64.deb
+@ u24.x86_64 15 postgresql-15-pg-rewrite postgresql-15-pg-rewrite_2.2-1.pgdg24.04+1_amd64.deb pgdg 2.2 75.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rewrite/postgresql-15-pg-rewrite_2.2-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 15 postgresql-15-pg-rewrite postgresql-15-pg-rewrite_2.1.0-1.pgdg24.04+1_amd64.deb pgdg 2.1.0 75.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rewrite/postgresql-15-pg-rewrite_2.1.0-1.pgdg24.04+1_amd64.deb
+@ u24.aarch64 15 postgresql-15-pg-rewrite postgresql-15-pg-rewrite_2.2-1.pgdg24.04+1_arm64.deb pgdg 2.2 70.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rewrite/postgresql-15-pg-rewrite_2.2-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 15 postgresql-15-pg-rewrite postgresql-15-pg-rewrite_2.1.0-1.pgdg24.04+1_arm64.deb pgdg 2.1.0 70.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rewrite/postgresql-15-pg-rewrite_2.1.0-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 15 postgresql-15-pg-rewrite postgresql-15-pg-rewrite_2.2-1.pgdg26.04+1_amd64.deb pgdg 2.2 74.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rewrite/postgresql-15-pg-rewrite_2.2-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 15 postgresql-15-pg-rewrite postgresql-15-pg-rewrite_2.1.0-1.pgdg26.04+1_amd64.deb pgdg 2.1.0 74.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rewrite/postgresql-15-pg-rewrite_2.1.0-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 15 postgresql-15-pg-rewrite postgresql-15-pg-rewrite_2.2-1.pgdg26.04+1_arm64.deb pgdg 2.2 70.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rewrite/postgresql-15-pg-rewrite_2.2-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 15 postgresql-15-pg-rewrite postgresql-15-pg-rewrite_2.1.0-1.pgdg26.04+1_arm64.deb pgdg 2.1.0 70.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rewrite/postgresql-15-pg-rewrite_2.1.0-1.pgdg26.04+1_arm64.deb
+@ el8.x86_64 14 pg_rewrite_14 pg_rewrite_14-2.2-1PIGSTY.el8.x86_64.rpm pigsty 2.2 39.6KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_rewrite_14-2.2-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 14 pg_rewrite_14 pg_rewrite_14-2.1.0-1PGDG.rhel8.10.x86_64.rpm pgdg 2.1.0 38.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_rewrite_14-2.1.0-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 14 pg_rewrite_14 pg_rewrite_14-2.0.0-1PGDG.rhel8.x86_64.rpm pgdg 2.0.0 37.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_rewrite_14-2.0.0-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 14 pg_rewrite_14 pg_rewrite_14-1.1.0-1PGDG.rhel8.x86_64.rpm pgdg 1.1.0 36.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_rewrite_14-1.1.0-1PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 14 pg_rewrite_14 pg_rewrite_14-2.2-1PIGSTY.el8.aarch64.rpm pigsty 2.2 37.4KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_rewrite_14-2.2-1PIGSTY.el8.aarch64.rpm
 @ el8.aarch64 14 pg_rewrite_14 pg_rewrite_14-2.1.0-1PGDG.rhel8.10.aarch64.rpm pgdg 2.1.0 35.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pg_rewrite_14-2.1.0-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 14 pg_rewrite_14 pg_rewrite_14-2.0.0-1PGDG.rhel8.aarch64.rpm pgdg 2.0.0 35.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pg_rewrite_14-2.0.0-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 14 pg_rewrite_14 pg_rewrite_14-1.1.0-1PGDG.rhel8.aarch64.rpm pgdg 1.1.0 34.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pg_rewrite_14-1.1.0-1PGDG.rhel8.aarch64.rpm
+@ el9.x86_64 14 pg_rewrite_14 pg_rewrite_14-2.2-1PIGSTY.el9.x86_64.rpm pigsty 2.2 39.7KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_rewrite_14-2.2-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 14 pg_rewrite_14 pg_rewrite_14-2.1.0-1PGDG.rhel9.8.x86_64.rpm pgdg 2.1.0 38.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_rewrite_14-2.1.0-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 14 pg_rewrite_14 pg_rewrite_14-2.1.0-1PGDG.rhel9.7.x86_64.rpm pgdg 2.1.0 38.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_rewrite_14-2.1.0-1PGDG.rhel9.7.x86_64.rpm
 @ el9.x86_64 14 pg_rewrite_14 pg_rewrite_14-2.1.0-1PGDG.rhel9.6.x86_64.rpm pgdg 2.1.0 38.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_rewrite_14-2.1.0-1PGDG.rhel9.6.x86_64.rpm
 @ el9.x86_64 14 pg_rewrite_14 pg_rewrite_14-2.0.0-1PGDG.rhel9.x86_64.rpm pgdg 2.0.0 38.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_rewrite_14-2.0.0-1PGDG.rhel9.x86_64.rpm
 @ el9.x86_64 14 pg_rewrite_14 pg_rewrite_14-1.1.0-1PGDG.rhel9.x86_64.rpm pgdg 1.1.0 36.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_rewrite_14-1.1.0-1PGDG.rhel9.x86_64.rpm
+@ el9.aarch64 14 pg_rewrite_14 pg_rewrite_14-2.2-1PIGSTY.el9.aarch64.rpm pigsty 2.2 38.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_rewrite_14-2.2-1PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 14 pg_rewrite_14 pg_rewrite_14-2.1.0-1PGDG.rhel9.8.aarch64.rpm pgdg 2.1.0 37.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_rewrite_14-2.1.0-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 14 pg_rewrite_14 pg_rewrite_14-2.1.0-1PGDG.rhel9.7.aarch64.rpm pgdg 2.1.0 37.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_rewrite_14-2.1.0-1PGDG.rhel9.7.aarch64.rpm
 @ el9.aarch64 14 pg_rewrite_14 pg_rewrite_14-2.1.0-1PGDG.rhel9.6.aarch64.rpm pgdg 2.1.0 37.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_rewrite_14-2.1.0-1PGDG.rhel9.6.aarch64.rpm
 @ el9.aarch64 14 pg_rewrite_14 pg_rewrite_14-2.0.0-1PGDG.rhel9.aarch64.rpm pgdg 2.0.0 36.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_rewrite_14-2.0.0-1PGDG.rhel9.aarch64.rpm
 @ el9.aarch64 14 pg_rewrite_14 pg_rewrite_14-1.1.0-1PGDG.rhel9.aarch64.rpm pgdg 1.1.0 35.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_rewrite_14-1.1.0-1PGDG.rhel9.aarch64.rpm
+@ el10.x86_64 14 pg_rewrite_14 pg_rewrite_14-2.2-1PIGSTY.el10.x86_64.rpm pigsty 2.2 40.1KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_rewrite_14-2.2-1PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 14 pg_rewrite_14 pg_rewrite_14-2.1.0-1PGDG.rhel10.2.x86_64.rpm pgdg 2.1.0 39.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_rewrite_14-2.1.0-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 14 pg_rewrite_14 pg_rewrite_14-2.1.0-1PGDG.rhel10.1.x86_64.rpm pgdg 2.1.0 39.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_rewrite_14-2.1.0-1PGDG.rhel10.1.x86_64.rpm
 @ el10.x86_64 14 pg_rewrite_14 pg_rewrite_14-2.1.0-1PGDG.rhel10.0.x86_64.rpm pgdg 2.1.0 39.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_rewrite_14-2.1.0-1PGDG.rhel10.0.x86_64.rpm
 @ el10.x86_64 14 pg_rewrite_14 pg_rewrite_14-2.0.0-1PGDG.rhel10.x86_64.rpm pgdg 2.0.0 39.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_rewrite_14-2.0.0-1PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 14 pg_rewrite_14 pg_rewrite_14-1.1.0-1PGDG.rhel10.x86_64.rpm pgdg 1.1.0 37.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_rewrite_14-1.1.0-1PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 14 pg_rewrite_14 pg_rewrite_14-2.2-1PIGSTY.el10.aarch64.rpm pigsty 2.2 38.4KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_rewrite_14-2.2-1PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 14 pg_rewrite_14 pg_rewrite_14-2.1.0-1PGDG.rhel10.2.aarch64.rpm pgdg 2.1.0 37.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_rewrite_14-2.1.0-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 14 pg_rewrite_14 pg_rewrite_14-2.1.0-1PGDG.rhel10.1.aarch64.rpm pgdg 2.1.0 37.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_rewrite_14-2.1.0-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 14 pg_rewrite_14 pg_rewrite_14-2.1.0-1PGDG.rhel10.0.aarch64.rpm pgdg 2.1.0 37.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_rewrite_14-2.1.0-1PGDG.rhel10.0.aarch64.rpm
 @ el10.aarch64 14 pg_rewrite_14 pg_rewrite_14-2.0.0-1PGDG.rhel10.aarch64.rpm pgdg 2.0.0 37.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_rewrite_14-2.0.0-1PGDG.rhel10.aarch64.rpm
 @ el10.aarch64 14 pg_rewrite_14 pg_rewrite_14-1.1.0-1PGDG.rhel10.aarch64.rpm pgdg 1.1.0 36.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_rewrite_14-1.1.0-1PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 14 postgresql-14-pg-rewrite postgresql-14-pg-rewrite_2.2-1.pgdg12+1_amd64.deb pgdg 2.2 76.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rewrite/postgresql-14-pg-rewrite_2.2-1.pgdg12+1_amd64.deb
 @ d12.x86_64 14 postgresql-14-pg-rewrite postgresql-14-pg-rewrite_2.1.0-1.pgdg12+1_amd64.deb pgdg 2.1.0 75.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rewrite/postgresql-14-pg-rewrite_2.1.0-1.pgdg12+1_amd64.deb
+@ d12.aarch64 14 postgresql-14-pg-rewrite postgresql-14-pg-rewrite_2.2-1.pgdg12+1_arm64.deb pgdg 2.2 71.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rewrite/postgresql-14-pg-rewrite_2.2-1.pgdg12+1_arm64.deb
 @ d12.aarch64 14 postgresql-14-pg-rewrite postgresql-14-pg-rewrite_2.1.0-1.pgdg12+1_arm64.deb pgdg 2.1.0 71.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rewrite/postgresql-14-pg-rewrite_2.1.0-1.pgdg12+1_arm64.deb
+@ d13.x86_64 14 postgresql-14-pg-rewrite postgresql-14-pg-rewrite_2.2-1.pgdg13+1_amd64.deb pgdg 2.2 75.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rewrite/postgresql-14-pg-rewrite_2.2-1.pgdg13+1_amd64.deb
 @ d13.x86_64 14 postgresql-14-pg-rewrite postgresql-14-pg-rewrite_2.1.0-1.pgdg13+1_amd64.deb pgdg 2.1.0 75.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rewrite/postgresql-14-pg-rewrite_2.1.0-1.pgdg13+1_amd64.deb
+@ d13.aarch64 14 postgresql-14-pg-rewrite postgresql-14-pg-rewrite_2.2-1.pgdg13+1_arm64.deb pgdg 2.2 71.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rewrite/postgresql-14-pg-rewrite_2.2-1.pgdg13+1_arm64.deb
 @ d13.aarch64 14 postgresql-14-pg-rewrite postgresql-14-pg-rewrite_2.1.0-1.pgdg13+1_arm64.deb pgdg 2.1.0 70.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rewrite/postgresql-14-pg-rewrite_2.1.0-1.pgdg13+1_arm64.deb
+@ u22.x86_64 14 postgresql-14-pg-rewrite postgresql-14-pg-rewrite_2.2-1.pgdg22.04+1_amd64.deb pgdg 2.2 89.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rewrite/postgresql-14-pg-rewrite_2.2-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 14 postgresql-14-pg-rewrite postgresql-14-pg-rewrite_2.1.0-1.pgdg22.04+1_amd64.deb pgdg 2.1.0 89.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rewrite/postgresql-14-pg-rewrite_2.1.0-1.pgdg22.04+1_amd64.deb
+@ u22.aarch64 14 postgresql-14-pg-rewrite postgresql-14-pg-rewrite_2.2-1.pgdg22.04+1_arm64.deb pgdg 2.2 84.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rewrite/postgresql-14-pg-rewrite_2.2-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 14 postgresql-14-pg-rewrite postgresql-14-pg-rewrite_2.1.0-1.pgdg22.04+1_arm64.deb pgdg 2.1.0 84.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rewrite/postgresql-14-pg-rewrite_2.1.0-1.pgdg22.04+1_arm64.deb
+@ u24.x86_64 14 postgresql-14-pg-rewrite postgresql-14-pg-rewrite_2.2-1.pgdg24.04+1_amd64.deb pgdg 2.2 75.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rewrite/postgresql-14-pg-rewrite_2.2-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 14 postgresql-14-pg-rewrite postgresql-14-pg-rewrite_2.1.0-1.pgdg24.04+1_amd64.deb pgdg 2.1.0 75.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rewrite/postgresql-14-pg-rewrite_2.1.0-1.pgdg24.04+1_amd64.deb
+@ u24.aarch64 14 postgresql-14-pg-rewrite postgresql-14-pg-rewrite_2.2-1.pgdg24.04+1_arm64.deb pgdg 2.2 71.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rewrite/postgresql-14-pg-rewrite_2.2-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 14 postgresql-14-pg-rewrite postgresql-14-pg-rewrite_2.1.0-1.pgdg24.04+1_arm64.deb pgdg 2.1.0 71.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rewrite/postgresql-14-pg-rewrite_2.1.0-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 14 postgresql-14-pg-rewrite postgresql-14-pg-rewrite_2.2-1.pgdg26.04+1_amd64.deb pgdg 2.2 74.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rewrite/postgresql-14-pg-rewrite_2.2-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 14 postgresql-14-pg-rewrite postgresql-14-pg-rewrite_2.1.0-1.pgdg26.04+1_amd64.deb pgdg 2.1.0 74.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rewrite/postgresql-14-pg-rewrite_2.1.0-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 14 postgresql-14-pg-rewrite postgresql-14-pg-rewrite_2.2-1.pgdg26.04+1_arm64.deb pgdg 2.2 70.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rewrite/postgresql-14-pg-rewrite_2.2-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 14 postgresql-14-pg-rewrite postgresql-14-pg-rewrite_2.1.0-1.pgdg26.04+1_arm64.deb pgdg 2.1.0 70.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-rewrite/postgresql-14-pg-rewrite_2.1.0-1.pgdg26.04+1_arm64.deb
 {{< /pgext_matrix >}}
+
+## 构建
+
+您可以使用 `pig build` 命令构建 `pg_rewrite` 扩展的 RPM 包：
+
+```bash
+pig build pkg pg_rewrite         # 构建 RPM 包
+```
 
 
 ## 安装
 
-您可以直接安装 `pg_rewrite` 扩展包的预置二进制包，首先确保 [**PGDG**](/docs/repo/pgdg) 仓库已经添加并启用：
+您可以直接安装 `pg_rewrite` 扩展包的预置二进制包，首先确保 [**PGDG**](/docs/repo/pgdg) 和 [**PIGSTY**](/docs/repo/pgsql) 仓库已经添加并启用：
 
 ```bash
-pig repo add pgdg -u          # 添加 PGDG 仓库并更新缓存
+pig repo add pgsql -u          # 添加仓库并更新缓存
 ```
 
 使用 [**pig**](/docs/pig) 或者是 `apt/yum/dnf` 安装扩展：

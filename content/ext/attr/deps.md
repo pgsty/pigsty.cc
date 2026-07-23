@@ -5,11 +5,11 @@ description: "具有扩展依赖关系的 PostgreSQL 扩展"
 weight: 30
 ---
 
-共有 **112** 个扩展依赖其他扩展，**60** 个扩展被其他扩展所依赖。
+共有 **122** 个扩展依赖其他扩展，**72** 个扩展被其他扩展所依赖。
 
 ## 上游依赖
 
-以下 **112** 个扩展需要先安装其他扩展才能使用：
+以下 **122** 个扩展需要先安装其他扩展才能使用：
 
 | **扩展名** | **上游依赖** | **描述** |
 |:-----------|:-------------|:---------|
@@ -46,6 +46,12 @@ weight: 30
 | [`biscuit`](/ext/e/biscuit) | [`plpgsql`](/ext/e/plpgsql) | 使用IAM的高性能文本模式匹配 |
 | [`pg_mooncake`](/ext/e/pg_mooncake) | [`pg_duckdb`](/ext/e/pg_duckdb) | PostgreSQL列式存储表 |
 | [`pg_partman`](/ext/e/pg_partman) | [`plpgsql`](/ext/e/plpgsql) | 用于按时间或 ID 管理分区表的扩展 |
+| [`pg_lake`](/ext/e/pg_lake) | [`pg_lake_copy`](/ext/e/pg_lake_copy) [`pg_lake_table`](/ext/e/pg_lake_table) | Snowflake 开源的 PostgreSQL 数据湖与 Iceberg 集成扩展 |
+| [`pg_extension_updater`](/ext/e/pg_extension_updater) | [`pg_extension_base`](/ext/e/pg_extension_base) | 在数据库启动时自动执行 ALTER EXTENSION UPDATE 的扩展更新器 |
+| [`pg_lake_engine`](/ext/e/pg_lake_engine) | [`pg_extension_base`](/ext/e/pg_extension_base) [`pg_map`](/ext/e/pg_map) | 用于数据湖查询的查询引擎 |
+| [`pg_lake_iceberg`](/ext/e/pg_lake_iceberg) | [`pg_lake_engine`](/ext/e/pg_lake_engine) [`plpgsql`](/ext/e/plpgsql) | PostgreSQL 中的 Iceberg 实现 |
+| [`pg_lake_table`](/ext/e/pg_lake_table) | [`btree_gist`](/ext/e/btree_gist) [`pg_lake_engine`](/ext/e/pg_lake_engine) [`pg_lake_iceberg`](/ext/e/pg_lake_iceberg) | 数据湖表和 Iceberg 表 |
+| [`pg_lake_copy`](/ext/e/pg_lake_copy) | [`pg_lake_engine`](/ext/e/pg_lake_engine) [`pg_lake_iceberg`](/ext/e/pg_lake_iceberg) [`pg_lake_table`](/ext/e/pg_lake_table) | 在 PostgreSQL 与对象存储数据湖文件之间执行 COPY 的扩展 |
 | [`pgmb`](/ext/e/pgmb) | [`pg_cron`](/ext/e/pg_cron) [`http`](/ext/e/http) | 一个简单的PostgreSQL消息代理系统 |
 | [`fsm_core`](/ext/e/fsm_core) | [`ltree`](/ext/e/ltree) [`pgmq`](/ext/e/pgmq) [`pg_jsonschema`](/ext/e/pg_jsonschema) | PostgreSQL 有限状态机工具包 |
 | [`index_advisor`](/ext/e/index_advisor) | [`hypopg`](/ext/e/hypopg) | 查询索引建议器 |
@@ -69,12 +75,12 @@ weight: 30
 | [`hstore_pllua`](/ext/e/hstore_pllua) | [`hstore`](/ext/e/hstore) [`pllua`](/ext/e/pllua) | Lua 程序语言的Hstore适配扩展 |
 | [`hstore_plluau`](/ext/e/hstore_plluau) | [`hstore`](/ext/e/hstore) [`plluau`](/ext/e/plluau) | Lua 程序语言的Hstore适配扩展（不受信任的） |
 | [`plpgsql_check`](/ext/e/plpgsql_check) | [`plpgsql`](/ext/e/plpgsql) | 对 plpgsql 函数进行扩展检查 |
+| [`pgsqlmock`](/ext/e/pgsqlmock) | [`plpgsql`](/ext/e/plpgsql) [`pgtap`](/ext/e/pgtap) | 为 PostgreSQL 单元测试提供函数 Mock、表和视图伪造能力 |
 | [`pgtap`](/ext/e/pgtap) | [`plpgsql`](/ext/e/plpgsql) | PostgreSQL单元测试框架 |
-| [`plperl`](/ext/e/plperl) | [`plperl`](/ext/e/plperl) | PL/Perl 存储过程语言 |
+| [`faker`](/ext/e/faker) | [`plpython3u`](/ext/e/plpython3u) | 插入生成的测试伪造数据，Python库的包装 |
 | [`bool_plperl`](/ext/e/bool_plperl) | [`plperl`](/ext/e/plperl) | 在 bool 和 plperl 之间转换 |
 | [`hstore_plperl`](/ext/e/hstore_plperl) | [`hstore`](/ext/e/hstore) [`plperl`](/ext/e/plperl) | 在 hstore 和 plperl 之间转换适配类型 |
 | [`jsonb_plperl`](/ext/e/jsonb_plperl) | [`plperl`](/ext/e/plperl) | 在 jsonb 和 plperl 之间转换 |
-| [`plperlu`](/ext/e/plperlu) | [`plperlu`](/ext/e/plperlu) | PL/PerlU 存储过程语言（未受信/高权限） |
 | [`bool_plperlu`](/ext/e/bool_plperlu) | [`plperlu`](/ext/e/plperlu) | 在 bool 和 plperlu 之间转换 |
 | [`jsonb_plperlu`](/ext/e/jsonb_plperlu) | [`plperlu`](/ext/e/plperlu) | 在 jsonb 和 plperlu 之间转换 |
 | [`hstore_plperlu`](/ext/e/hstore_plperlu) | [`hstore`](/ext/e/hstore) [`plperlu`](/ext/e/plperlu) | 在 hstore 和 plperlu 之间转换适配类型 |
@@ -95,6 +101,7 @@ weight: 30
 | [`data_historization`](/ext/e/data_historization) | [`plpgsql`](/ext/e/plpgsql) | 用SQL将数据变更历史保存到分区表中 |
 | [`schedoc`](/ext/e/schedoc) | [`ddl_historization`](/ext/e/ddl_historization) | 在Django与DBT之间通过注释文档交换元数据 |
 | [`sparql`](/ext/e/sparql) | [`plperl`](/ext/e/plperl) [`plperlu`](/ext/e/plperlu) | 使用SQL查询SPARQL数据源 |
+| [`fbsql`](/ext/e/fbsql) | [`plr`](/ext/e/plr) | 在 SQL 中保持关系闭包的公式化统计建模扩展 |
 | [`pg_accumulator`](/ext/e/pg_accumulator) | [`plpgsql`](/ext/e/plpgsql) | PostgreSQL 中用于余额与周转跟踪的累积寄存器 |
 | [`pgautofailover`](/ext/e/pgautofailover) | [`btree_gist`](/ext/e/btree_gist) | PG 自动故障迁移 |
 | [`pg_upless`](/ext/e/pg_upless) | [`plpgsql`](/ext/e/plpgsql) | 检测表上的无用UPDATE |
@@ -102,6 +109,8 @@ weight: 30
 | [`pg_drop_events`](/ext/e/pg_drop_events) | [`plpgsql`](/ext/e/plpgsql) | 记录删表删列删视图的事务号，辅助PITR确定时间点 |
 | [`pgelog`](/ext/e/pgelog) | [`dblink`](/ext/e/dblink) [`pg_variables`](/ext/e/pg_variables) | 通过伪自治事务实现扩展日志记录 |
 | [`pg_profile`](/ext/e/pg_profile) | [`dblink`](/ext/e/dblink) [`plpgsql`](/ext/e/plpgsql) | PostgreSQL 数据库负载记录与AWR报表工具 |
+| [`pgfr_record`](/ext/e/pgfr_record) | [`pg_cron`](/ext/e/pg_cron) | 基于 pg_cron 的服务端 PostgreSQL 性能飞行记录器 |
+| [`pgfr_analyze`](/ext/e/pgfr_analyze) | [`pgfr_record`](/ext/e/pgfr_record) | pgfr_record 采集数据的报告与性能分析函数 |
 | [`pg_stat_kcache`](/ext/e/pg_stat_kcache) | [`pg_stat_statements`](/ext/e/pg_stat_statements) | 内核统计信息收集 |
 | [`pg_sqlog`](/ext/e/pg_sqlog) | [`file_fdw`](/ext/e/file_fdw) | 提供访问PostgreSQL日志的SQL接口 |
 | [`powa`](/ext/e/powa) | [`plpgsql`](/ext/e/plpgsql) [`pg_stat_statements`](/ext/e/pg_stat_statements) [`btree_gist`](/ext/e/btree_gist) | PostgreSQL 工作负载分析器-核心 |
@@ -118,6 +127,7 @@ weight: 30
 | [`ora_btree_gist`](/ext/e/ora_btree_gist) | [`ivorysql_ora`](/ext/e/ivorysql_ora) | Oracle 数据类型 GiST 索引支持 |
 | [`db2fce`](/ext/e/db2fce) | [`plpgsql`](/ext/e/plpgsql) | 为 PostgreSQL 提供 DB2 兼容函数、类型、操作符与 SYSIBM.SYSDUMMY1。 |
 | [`plpgsql_wrap`](/ext/e/plpgsql_wrap) | [`plpgsql`](/ext/e/plpgsql) | Oracle WRAP 等价的 PL/pgSQL 语言处理器，以 AES-256-GCM 加密存储过程源码。 |
+| [`pg_dbms_lock`](/ext/e/pg_dbms_lock) | [`pg_background`](/ext/e/pg_background) | 为PG添加对 Oracle DBMS_LOCK 的完整兼容性支持 |
 | [`pg_dbms_errlog`](/ext/e/pg_dbms_errlog) | [`pg_statement_rollback`](/ext/e/pg_statement_rollback) | 模仿 Oracle DBMS_ERRLOG 模块来记录特定表的DML错误 |
 | [`pg_utl_smtp`](/ext/e/pg_utl_smtp) | [`plperlu`](/ext/e/plperlu) | Oracle UTL_SMTP 兼容扩展（基于 plperlu） |
 | [`babelfishpg_tsql`](/ext/e/babelfishpg_tsql) | [`babelfishpg_common`](/ext/e/babelfishpg_common) [`uuid-ossp`](/ext/e/uuid-ossp) | SQL Server SQL语法兼容性扩展 |
@@ -129,25 +139,34 @@ weight: 30
 
 ## 下游依赖
 
-以下 **60** 个扩展被其他扩展所依赖：
+以下 **72** 个扩展被其他扩展所依赖：
 
 | **扩展名** | **下游依赖** | **描述** |
 |:-----------|:-------------|:---------|
-| [`pg_cron`](/ext/e/pg_cron) | [`documentdb`](/ext/e/documentdb) [`pg_incremental`](/ext/e/pg_incremental) [`timeseries`](/ext/e/timeseries) [`vectorize`](/ext/e/vectorize) [`pgmb`](/ext/e/pgmb) | 定时任务调度器 |
-| [`postgis`](/ext/e/postgis) | [`documentdb`](/ext/e/documentdb) [`h3_postgis`](/ext/e/h3_postgis) [`mobilitydb`](/ext/e/mobilitydb) [`pgrouting`](/ext/e/pgrouting) [`pointcloud_postgis`](/ext/e/pointcloud_postgis) [`postgis_raster`](/ext/e/postgis_raster) [`postgis_sfcgal`](/ext/e/postgis_sfcgal) [`postgis_tiger_geocoder`](/ext/e/postgis_tiger_geocoder) [`postgis_topology`](/ext/e/postgis_topology) [`pg_eviltransform`](/ext/e/pg_eviltransform) | PostGIS 几何和地理空间扩展 |
-| [`postgis_raster`](/ext/e/postgis_raster) | [`h3_postgis`](/ext/e/h3_postgis) | PostGIS 光栅类型和函数 |
+| [`pg_cron`](/ext/e/pg_cron) | [`documentdb`](/ext/e/documentdb) [`pg_dispatch`](/ext/e/pg_dispatch) [`pglock`](/ext/e/pglock) [`pgmb`](/ext/e/pgmb) [`timeseries`](/ext/e/timeseries) [`vectorize`](/ext/e/vectorize) | 定时任务调度器 |
+| [`postgis`](/ext/e/postgis) | [`documentdb`](/ext/e/documentdb) [`h3_postgis`](/ext/e/h3_postgis) [`mobilitydb`](/ext/e/mobilitydb) [`pg_eviltransform`](/ext/e/pg_eviltransform) [`pgh_consistency`](/ext/e/pgh_consistency) [`pgh_hgm`](/ext/e/pgh_hgm) [`pgh_output`](/ext/e/pgh_output) [`pgh_output_en_au`](/ext/e/pgh_output_en_au) [`pgh_output_pt_br`](/ext/e/pgh_output_pt_br) [`pgh_raster`](/ext/e/pgh_raster) [`pghydro`](/ext/e/pghydro) [`pgrouting`](/ext/e/pgrouting) [`pointcloud_postgis`](/ext/e/pointcloud_postgis) [`postgis_raster`](/ext/e/postgis_raster) [`postgis_sfcgal`](/ext/e/postgis_sfcgal) [`postgis_tiger_geocoder`](/ext/e/postgis_tiger_geocoder) [`postgis_topology`](/ext/e/postgis_topology) | PostGIS 几何和地理空间扩展 |
+| [`postgis_raster`](/ext/e/postgis_raster) | [`h3_postgis`](/ext/e/h3_postgis) [`pgh_hgm`](/ext/e/pgh_hgm) [`pgh_raster`](/ext/e/pgh_raster) | PostGIS 光栅类型和函数 |
 | [`pointcloud`](/ext/e/pointcloud) | [`pointcloud_postgis`](/ext/e/pointcloud_postgis) | 提供激光雷达点云数据类型支持 |
 | [`h3`](/ext/e/h3) | [`h3_postgis`](/ext/e/h3_postgis) | H3六边形层级索引支持 |
+| [`pghydro`](/ext/e/pghydro) | [`pgh_consistency`](/ext/e/pgh_consistency) [`pgh_hgm`](/ext/e/pgh_hgm) [`pgh_output`](/ext/e/pgh_output) [`pgh_output_en_au`](/ext/e/pgh_output_en_au) [`pgh_output_pt_br`](/ext/e/pgh_output_pt_br) [`pgh_raster`](/ext/e/pgh_raster) | PostgreSQL/PostGIS 排水网络分析核心扩展 |
+| [`pgh_raster`](/ext/e/pgh_raster) | [`pgh_hgm`](/ext/e/pgh_hgm) | PgHydro 栅格水文分析扩展 |
 | [`mobilitydb`](/ext/e/mobilitydb) | [`mobilitydb_datagen`](/ext/e/mobilitydb_datagen) | MobilityDB地理空间投影数据管理分析平台 |
 | [`vector`](/ext/e/vector) | [`documentdb`](/ext/e/documentdb) [`pgmnemo`](/ext/e/pgmnemo) [`vchord`](/ext/e/vchord) [`vectorize`](/ext/e/vectorize) [`vectorscale`](/ext/e/vectorscale) | 向量数据类型和 ivfflat / hnsw 访问方法 |
 | [`fuzzystrmatch`](/ext/e/fuzzystrmatch) | [`postgis_tiger_geocoder`](/ext/e/postgis_tiger_geocoder) | 确定字符串之间的相似性和距离 |
 | [`citus`](/ext/e/citus) | [`documentdb_distributed`](/ext/e/documentdb_distributed) | Citus 分布式数据库 |
 | [`pg_duckdb`](/ext/e/pg_duckdb) | [`pg_mooncake`](/ext/e/pg_mooncake) | 在PostgreSQL中的嵌入式DuckDB扩展 |
 | [`pg_partman`](/ext/e/pg_partman) | [`timeseries`](/ext/e/timeseries) | 用于按时间或 ID 管理分区表的扩展 |
+| [`pg_extension_base`](/ext/e/pg_extension_base) | [`pg_extension_updater`](/ext/e/pg_extension_updater) [`pg_lake_engine`](/ext/e/pg_lake_engine) | Snowflake 提供的 PostgreSQL 扩展开发基础设施，支持库预加载、扩展生命周期后台工作进程和依赖管理 |
+| [`pg_map`](/ext/e/pg_map) | [`pg_lake_engine`](/ext/e/pg_lake_engine) | pg_lake 内置并依赖的 PostgreSQL Map 数据类型。 |
+| [`pg_lake_engine`](/ext/e/pg_lake_engine) | [`pg_lake_copy`](/ext/e/pg_lake_copy) [`pg_lake_iceberg`](/ext/e/pg_lake_iceberg) [`pg_lake_table`](/ext/e/pg_lake_table) | 用于数据湖查询的查询引擎 |
+| [`pg_lake_iceberg`](/ext/e/pg_lake_iceberg) | [`pg_lake_copy`](/ext/e/pg_lake_copy) [`pg_lake_table`](/ext/e/pg_lake_table) | PostgreSQL 中的 Iceberg 实现 |
+| [`pg_lake_table`](/ext/e/pg_lake_table) | [`pg_lake`](/ext/e/pg_lake) [`pg_lake_copy`](/ext/e/pg_lake_copy) | 数据湖表和 Iceberg 表 |
+| [`pg_lake_copy`](/ext/e/pg_lake_copy) | [`pg_lake`](/ext/e/pg_lake) | 在 PostgreSQL 与对象存储数据湖文件之间执行 COPY 的扩展 |
 | [`tablefunc`](/ext/e/tablefunc) | [`pg4ml`](/ext/e/pg4ml) | 交叉表函数 |
 | [`pgmq`](/ext/e/pgmq) | [`fsm_core`](/ext/e/fsm_core) [`pg_later`](/ext/e/pg_later) [`vectorize`](/ext/e/vectorize) | 基于Postgres实现类似AWS SQS/RSMQ的消息队列 |
-| [`rum`](/ext/e/rum) | [`documentdb`](/ext/e/documentdb) | RUM 索引访问方法 |
 | [`pg_jsonschema`](/ext/e/pg_jsonschema) | [`fsm_core`](/ext/e/fsm_core) | 提供JSON Schema校验能力 |
+| [`hypopg`](/ext/e/hypopg) | [`index_advisor`](/ext/e/index_advisor) | 假设索引，用于创建一个虚拟索引检验执行计划 |
+| [`pg_variables`](/ext/e/pg_variables) | [`pgelog`](/ext/e/pgelog) | 提供标量、数组和记录类型的会话变量 |
 | [`omni_cloudevents`](/ext/e/omni_cloudevents) | [`omni_email`](/ext/e/omni_email) [`omni_schema`](/ext/e/omni_schema) [`omni_test`](/ext/e/omni_test) | Omnigres CloudEvents 支持 |
 | [`omni_http`](/ext/e/omni_http) | [`omni_httpc`](/ext/e/omni_httpc) [`omni_httpd`](/ext/e/omni_httpd) | Omnigres 基本HTTP类型 |
 | [`omni_httpc`](/ext/e/omni_httpc) | [`omni_aws`](/ext/e/omni_aws) [`omni_containers`](/ext/e/omni_containers) [`omni_kube`](/ext/e/omni_kube) | Omnigres HTTP客户端 |
@@ -165,30 +184,33 @@ weight: 30
 | [`omni_yaml`](/ext/e/omni_yaml) | [`omni_kube`](/ext/e/omni_kube) [`omni_schema`](/ext/e/omni_schema) | Omnigres YAML工具包 |
 | [`pllua`](/ext/e/pllua) | [`hstore_pllua`](/ext/e/hstore_pllua) | Lua 程序语言 |
 | [`plluau`](/ext/e/plluau) | [`hstore_plluau`](/ext/e/hstore_plluau) | Lua 程序语言（不受信任的） |
-| [`plperl`](/ext/e/plperl) | [`bool_plperl`](/ext/e/bool_plperl) [`hstore_plperl`](/ext/e/hstore_plperl) [`jsonb_plperl`](/ext/e/jsonb_plperl) [`plperl`](/ext/e/plperl) [`sparql`](/ext/e/sparql) | PL/Perl 存储过程语言 |
-| [`plperlu`](/ext/e/plperlu) | [`bool_plperlu`](/ext/e/bool_plperlu) [`hstore_plperlu`](/ext/e/hstore_plperlu) [`jsonb_plperlu`](/ext/e/jsonb_plperlu) [`plperlu`](/ext/e/plperlu) [`pg_utl_smtp`](/ext/e/pg_utl_smtp) [`sparql`](/ext/e/sparql) | PL/PerlU 存储过程语言（未受信/高权限） |
-| [`plpgsql`](/ext/e/plpgsql) | [`data_historization`](/ext/e/data_historization) [`ddl_historization`](/ext/e/ddl_historization) [`pg4ml`](/ext/e/pg4ml) [`pg_drop_events`](/ext/e/pg_drop_events) [`pg_profile`](/ext/e/pg_profile) [`pg_upless`](/ext/e/pg_upless) [`plpgsql_check`](/ext/e/plpgsql_check) [`powa`](/ext/e/powa) [`table_version`](/ext/e/table_version) [`unit`](/ext/e/unit) [`biscuit`](/ext/e/biscuit) [`db2fce`](/ext/e/db2fce) | PL/pgSQL 程序设计语言 |
+| [`plperl`](/ext/e/plperl) | [`bool_plperl`](/ext/e/bool_plperl) [`hstore_plperl`](/ext/e/hstore_plperl) [`jsonb_plperl`](/ext/e/jsonb_plperl) [`sparql`](/ext/e/sparql) | PL/Perl 存储过程语言 |
+| [`plperlu`](/ext/e/plperlu) | [`bool_plperlu`](/ext/e/bool_plperlu) [`hstore_plperlu`](/ext/e/hstore_plperlu) [`jsonb_plperlu`](/ext/e/jsonb_plperlu) [`pg_utl_smtp`](/ext/e/pg_utl_smtp) [`sparql`](/ext/e/sparql) | PL/PerlU 存储过程语言（未受信/高权限） |
+| [`plpgsql`](/ext/e/plpgsql) | [`biscuit`](/ext/e/biscuit) [`currency`](/ext/e/currency) [`data_historization`](/ext/e/data_historization) [`db2fce`](/ext/e/db2fce) [`ddl_historization`](/ext/e/ddl_historization) [`pg4ml`](/ext/e/pg4ml) [`pg_accumulator`](/ext/e/pg_accumulator) [`pg_drop_events`](/ext/e/pg_drop_events) [`pg_fsql`](/ext/e/pg_fsql) [`pg_lake_iceberg`](/ext/e/pg_lake_iceberg) [`pg_partman`](/ext/e/pg_partman) [`pg_profile`](/ext/e/pg_profile) [`pg_upless`](/ext/e/pg_upless) [`pgh_consistency`](/ext/e/pgh_consistency) [`pgh_hgm`](/ext/e/pgh_hgm) [`pgh_output`](/ext/e/pgh_output) [`pgh_output_en_au`](/ext/e/pgh_output_en_au) [`pgh_output_pt_br`](/ext/e/pgh_output_pt_br) [`pgh_raster`](/ext/e/pgh_raster) [`pghydro`](/ext/e/pghydro) [`pgrouting`](/ext/e/pgrouting) [`pgtap`](/ext/e/pgtap) [`plpgsql_check`](/ext/e/plpgsql_check) [`plpgsql_wrap`](/ext/e/plpgsql_wrap) [`powa`](/ext/e/powa) [`table_version`](/ext/e/table_version) [`unit`](/ext/e/unit) | PL/pgSQL 程序设计语言 |
 | [`plpython3u`](/ext/e/plpython3u) | [`hstore_plpython3u`](/ext/e/hstore_plpython3u) [`jsonb_plpython3u`](/ext/e/jsonb_plpython3u) [`ltree_plpython3u`](/ext/e/ltree_plpython3u) [`omni_python`](/ext/e/omni_python) [`pg4ml`](/ext/e/pg4ml) | PL/Python3 存储过程语言（未受信/高权限） |
 | [`roaringbitmap`](/ext/e/roaringbitmap) | [`pgfaceting`](/ext/e/pgfaceting) | 支持RoaringBitmap数据类型 |
 | [`pg_xenophile`](/ext/e/pg_xenophile) | [`l10n_table_dependent_extension`](/ext/e/l10n_table_dependent_extension) | PostgreSQL i8n与l10n工具包 |
 | [`ip4r`](/ext/e/ip4r) | [`geoip`](/ext/e/geoip) | PostgreSQL 的 IPv4/v6 和 IPv4/v6 范围索引类型 |
 | [`cube`](/ext/e/cube) | [`earthdistance`](/ext/e/earthdistance) [`pg4ml`](/ext/e/pg4ml) | 用于存储多维立方体的数据类型 |
 | [`ltree`](/ext/e/ltree) | [`fsm_core`](/ext/e/fsm_core) [`ltree_plpython3u`](/ext/e/ltree_plpython3u) | 用于表示分层树状结构的数据类型 |
-| [`hstore`](/ext/e/hstore) | [`hstore_pllua`](/ext/e/hstore_pllua) [`hstore_plluau`](/ext/e/hstore_plluau) [`hstore_plpython3u`](/ext/e/hstore_plpython3u) [`pg_readme`](/ext/e/pg_readme) [`pg_readme_test_extension`](/ext/e/pg_readme_test_extension) | 用于存储（键，值）对集合的数据类型 |
-| [`pg_net`](/ext/e/pg_net) | [`pgmb`](/ext/e/pgmb) | 用 SQL 进行异步非阻塞HTTP/HTTPS 请求的扩展 (supabase) |
+| [`hstore`](/ext/e/hstore) | [`hstore_pllua`](/ext/e/hstore_pllua) [`hstore_plluau`](/ext/e/hstore_plluau) [`hstore_plperl`](/ext/e/hstore_plperl) [`hstore_plperlu`](/ext/e/hstore_plperlu) [`hstore_plpython3u`](/ext/e/hstore_plpython3u) [`pg_auditor`](/ext/e/pg_auditor) [`pg_readme`](/ext/e/pg_readme) [`pg_readme_test_extension`](/ext/e/pg_readme_test_extension) [`pg_xenophile`](/ext/e/pg_xenophile) | 用于存储（键，值）对集合的数据类型 |
+| [`http`](/ext/e/http) | [`pgmb`](/ext/e/pgmb) | HTTP客户端，允许在数据库内收发HTTP请求 (supabase) |
 | [`ddl_historization`](/ext/e/ddl_historization) | [`schedoc`](/ext/e/schedoc) | 用SQL将所有DDL变更写入到数据库表中 |
 | [`tsm_system_rows`](/ext/e/tsm_system_rows) | [`documentdb`](/ext/e/documentdb) | 接受行数限制的 TABLESAMPLE 方法 |
 | [`uuid-ossp`](/ext/e/uuid-ossp) | [`babelfishpg_tsql`](/ext/e/babelfishpg_tsql) [`provsql`](/ext/e/provsql) | 生成通用唯一标识符（UUIDs） |
-| [`btree_gist`](/ext/e/btree_gist) | [`emaj`](/ext/e/emaj) [`omni_auth`](/ext/e/omni_auth) [`periods`](/ext/e/periods) [`pgautofailover`](/ext/e/pgautofailover) [`powa`](/ext/e/powa) | 用GiST索引常见数据类型 |
+| [`btree_gist`](/ext/e/btree_gist) | [`emaj`](/ext/e/emaj) [`omni_auth`](/ext/e/omni_auth) [`periods`](/ext/e/periods) [`pg_lake_table`](/ext/e/pg_lake_table) [`pgautofailover`](/ext/e/pgautofailover) [`powa`](/ext/e/powa) | 用GiST索引常见数据类型 |
+| [`pg_prewarm`](/ext/e/pg_prewarm) | [`pgcozy`](/ext/e/pgcozy) | 预热关系数据 |
+| [`pgfr_record`](/ext/e/pgfr_record) | [`pgfr_analyze`](/ext/e/pgfr_analyze) | 基于 pg_cron 的服务端 PostgreSQL 性能飞行记录器 |
+| [`pg_buffercache`](/ext/e/pg_buffercache) | [`pgcozy`](/ext/e/pgcozy) | 检查共享缓冲区缓存 |
 | [`pg_stat_statements`](/ext/e/pg_stat_statements) | [`pg_stat_kcache`](/ext/e/pg_stat_kcache) [`powa`](/ext/e/powa) | 跟踪所有执行的 SQL 语句的计划和执行统计信息 |
 | [`pgsodium`](/ext/e/pgsodium) | [`supabase_vault`](/ext/e/supabase_vault) | 表数据加密存储 TDE |
-| [`pgcrypto`](/ext/e/pgcrypto) | [`omni_auth`](/ext/e/omni_auth) [`omni_aws`](/ext/e/omni_aws) [`omni_credentials`](/ext/e/omni_credentials) [`omni_rest`](/ext/e/omni_rest) [`pgcryptokey`](/ext/e/pgcryptokey) [`pgjwt`](/ext/e/pgjwt) | 实用加解密函数 |
-| [`dblink`](/ext/e/dblink) | [`emaj`](/ext/e/emaj) [`mimeo`](/ext/e/mimeo) [`omni_schema`](/ext/e/omni_schema) [`omni_test`](/ext/e/omni_test) [`omni_vfs`](/ext/e/omni_vfs) [`pg_jobmon`](/ext/e/pg_jobmon) [`pg_profile`](/ext/e/pg_profile) | 从数据库内连接到其他 PostgreSQL 数据库 |
+| [`pgcrypto`](/ext/e/pgcrypto) | [`column_encrypt`](/ext/e/column_encrypt) [`omni_auth`](/ext/e/omni_auth) [`omni_aws`](/ext/e/omni_aws) [`omni_credentials`](/ext/e/omni_credentials) [`omni_rest`](/ext/e/omni_rest) [`pg_dispatch`](/ext/e/pg_dispatch) [`pgcryptokey`](/ext/e/pgcryptokey) [`pgjwt`](/ext/e/pgjwt) | 实用加解密函数 |
+| [`dblink`](/ext/e/dblink) | [`emaj`](/ext/e/emaj) [`mimeo`](/ext/e/mimeo) [`omni_schema`](/ext/e/omni_schema) [`omni_test`](/ext/e/omni_test) [`omni_vfs`](/ext/e/omni_vfs) [`pg_jobmon`](/ext/e/pg_jobmon) [`pg_profile`](/ext/e/pg_profile) [`pgbouncer_fdw`](/ext/e/pgbouncer_fdw) [`pgelog`](/ext/e/pgelog) | 从数据库内连接到其他 PostgreSQL 数据库 |
 | [`file_fdw`](/ext/e/file_fdw) | [`pg_sqlog`](/ext/e/pg_sqlog) | 访问外部文件的外部数据包装器 |
 | [`postgres_fdw`](/ext/e/postgres_fdw) | [`omni_schema`](/ext/e/omni_schema) | 用于远程 PostgreSQL 服务器的外部数据包装器 |
 | [`documentdb`](/ext/e/documentdb) | [`documentdb_distributed`](/ext/e/documentdb_distributed) [`documentdb_extended_rum`](/ext/e/documentdb_extended_rum) | 微软DocumentDB的API层 |
 | [`documentdb_core`](/ext/e/documentdb_core) | [`documentdb`](/ext/e/documentdb) [`documentdb_distributed`](/ext/e/documentdb_distributed) | 微软DocumentDB的核心API层实现 |
-| [`pg_statement_rollback`](/ext/e/pg_statement_rollback) | [`pg_statement_rollback`](/ext/e/pg_statement_rollback) | 在服务端提供类似Oracle/DB2的语句级回滚能力 |
+| [`pg_statement_rollback`](/ext/e/pg_statement_rollback) | [`pg_dbms_errlog`](/ext/e/pg_dbms_errlog) | 在服务端提供类似Oracle/DB2的语句级回滚能力 |
 | [`ivorysql_ora`](/ext/e/ivorysql_ora) | [`ora_btree_gin`](/ext/e/ora_btree_gin) [`ora_btree_gist`](/ext/e/ora_btree_gist) | Oracle 兼容扩展 |
 | [`babelfishpg_common`](/ext/e/babelfishpg_common) | [`babelfishpg_tsql`](/ext/e/babelfishpg_tsql) | SQL Server 数据类型兼容扩展 |
 | [`babelfishpg_tsql`](/ext/e/babelfishpg_tsql) | [`babelfishpg_tds`](/ext/e/babelfishpg_tds) | SQL Server SQL语法兼容性扩展 |

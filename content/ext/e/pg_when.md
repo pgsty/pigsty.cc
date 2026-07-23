@@ -34,9 +34,6 @@ weight: 1120
 {.ext-table}
 
 
-> pgrx patched to 0.18.1.
-
-
 ## 版本
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
@@ -65,86 +62,86 @@ weight: 1120
 | u24.aarch64 | AVAIL PIGSTY 0.1.9 1 | AVAIL PIGSTY 0.1.9 1 | AVAIL PIGSTY 0.1.9 1 | AVAIL PIGSTY 0.1.9 1 | AVAIL PIGSTY 0.1.9 1 |
 | u26.x86_64 | AVAIL PIGSTY 0.1.9 1 | AVAIL PIGSTY 0.1.9 1 | AVAIL PIGSTY 0.1.9 1 | AVAIL PIGSTY 0.1.9 1 | AVAIL PIGSTY 0.1.9 1 |
 | u26.aarch64 | AVAIL PIGSTY 0.1.9 1 | AVAIL PIGSTY 0.1.9 1 | AVAIL PIGSTY 0.1.9 1 | AVAIL PIGSTY 0.1.9 1 | AVAIL PIGSTY 0.1.9 1 |
-@ el8.x86_64 18 pg_when_18 pg_when_18-0.1.9-1PIGSTY.el8.x86_64.rpm pigsty 0.1.9 439.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_when_18-0.1.9-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 18 pg_when_18 pg_when_18-0.1.9-1PIGSTY.el8.aarch64.rpm pigsty 0.1.9 328.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_when_18-0.1.9-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 18 pg_when_18 pg_when_18-0.1.9-1PIGSTY.el9.x86_64.rpm pigsty 0.1.9 456.1KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_when_18-0.1.9-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 18 pg_when_18 pg_when_18-0.1.9-1PIGSTY.el9.aarch64.rpm pigsty 0.1.9 347.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_when_18-0.1.9-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 18 pg_when_18 pg_when_18-0.1.9-1PIGSTY.el10.x86_64.rpm pigsty 0.1.9 456.2KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_when_18-0.1.9-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 18 pg_when_18 pg_when_18-0.1.9-1PIGSTY.el10.aarch64.rpm pigsty 0.1.9 347.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_when_18-0.1.9-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 18 postgresql-18-pg-when postgresql-18-pg-when_0.1.9-1PIGSTY~bookworm_amd64.deb pigsty 0.1.9 364.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-when/postgresql-18-pg-when_0.1.9-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 18 postgresql-18-pg-when postgresql-18-pg-when_0.1.9-1PIGSTY~bookworm_arm64.deb pigsty 0.1.9 259.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-when/postgresql-18-pg-when_0.1.9-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 18 postgresql-18-pg-when postgresql-18-pg-when_0.1.9-1PIGSTY~trixie_amd64.deb pigsty 0.1.9 364.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-when/postgresql-18-pg-when_0.1.9-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 18 postgresql-18-pg-when postgresql-18-pg-when_0.1.9-1PIGSTY~trixie_arm64.deb pigsty 0.1.9 259.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-when/postgresql-18-pg-when_0.1.9-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 18 postgresql-18-pg-when postgresql-18-pg-when_0.1.9-1PIGSTY~jammy_amd64.deb pigsty 0.1.9 406.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-when/postgresql-18-pg-when_0.1.9-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 18 postgresql-18-pg-when postgresql-18-pg-when_0.1.9-1PIGSTY~jammy_arm64.deb pigsty 0.1.9 298.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-when/postgresql-18-pg-when_0.1.9-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 18 postgresql-18-pg-when postgresql-18-pg-when_0.1.9-1PIGSTY~noble_amd64.deb pigsty 0.1.9 403.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-when/postgresql-18-pg-when_0.1.9-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 18 postgresql-18-pg-when postgresql-18-pg-when_0.1.9-1PIGSTY~noble_arm64.deb pigsty 0.1.9 296.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-when/postgresql-18-pg-when_0.1.9-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 18 postgresql-18-pg-when postgresql-18-pg-when_0.1.9-2PIGSTY~resolute_amd64.deb pigsty 0.1.9 955.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-when/postgresql-18-pg-when_0.1.9-2PIGSTY~resolute_amd64.deb
-@ u26.aarch64 18 postgresql-18-pg-when postgresql-18-pg-when_0.1.9-2PIGSTY~resolute_arm64.deb pigsty 0.1.9 864.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-when/postgresql-18-pg-when_0.1.9-2PIGSTY~resolute_arm64.deb
-@ el8.x86_64 17 pg_when_17 pg_when_17-0.1.9-1PIGSTY.el8.x86_64.rpm pigsty 0.1.9 439.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_when_17-0.1.9-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 17 pg_when_17 pg_when_17-0.1.9-1PIGSTY.el8.aarch64.rpm pigsty 0.1.9 328.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_when_17-0.1.9-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 17 pg_when_17 pg_when_17-0.1.9-1PIGSTY.el9.x86_64.rpm pigsty 0.1.9 456.1KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_when_17-0.1.9-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 17 pg_when_17 pg_when_17-0.1.9-1PIGSTY.el9.aarch64.rpm pigsty 0.1.9 348.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_when_17-0.1.9-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 17 pg_when_17 pg_when_17-0.1.9-1PIGSTY.el10.x86_64.rpm pigsty 0.1.9 456.3KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_when_17-0.1.9-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 17 pg_when_17 pg_when_17-0.1.9-1PIGSTY.el10.aarch64.rpm pigsty 0.1.9 347.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_when_17-0.1.9-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 17 postgresql-17-pg-when postgresql-17-pg-when_0.1.9-1PIGSTY~bookworm_amd64.deb pigsty 0.1.9 364.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-when/postgresql-17-pg-when_0.1.9-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 17 postgresql-17-pg-when postgresql-17-pg-when_0.1.9-1PIGSTY~bookworm_arm64.deb pigsty 0.1.9 259.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-when/postgresql-17-pg-when_0.1.9-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 17 postgresql-17-pg-when postgresql-17-pg-when_0.1.9-1PIGSTY~trixie_amd64.deb pigsty 0.1.9 364.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-when/postgresql-17-pg-when_0.1.9-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 17 postgresql-17-pg-when postgresql-17-pg-when_0.1.9-1PIGSTY~trixie_arm64.deb pigsty 0.1.9 259.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-when/postgresql-17-pg-when_0.1.9-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 17 postgresql-17-pg-when postgresql-17-pg-when_0.1.9-1PIGSTY~jammy_amd64.deb pigsty 0.1.9 406.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-when/postgresql-17-pg-when_0.1.9-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 17 postgresql-17-pg-when postgresql-17-pg-when_0.1.9-1PIGSTY~jammy_arm64.deb pigsty 0.1.9 298.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-when/postgresql-17-pg-when_0.1.9-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 17 postgresql-17-pg-when postgresql-17-pg-when_0.1.9-1PIGSTY~noble_amd64.deb pigsty 0.1.9 403.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-when/postgresql-17-pg-when_0.1.9-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 17 postgresql-17-pg-when postgresql-17-pg-when_0.1.9-1PIGSTY~noble_arm64.deb pigsty 0.1.9 296.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-when/postgresql-17-pg-when_0.1.9-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 17 postgresql-17-pg-when postgresql-17-pg-when_0.1.9-2PIGSTY~resolute_amd64.deb pigsty 0.1.9 953.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-when/postgresql-17-pg-when_0.1.9-2PIGSTY~resolute_amd64.deb
-@ u26.aarch64 17 postgresql-17-pg-when postgresql-17-pg-when_0.1.9-2PIGSTY~resolute_arm64.deb pigsty 0.1.9 863.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-when/postgresql-17-pg-when_0.1.9-2PIGSTY~resolute_arm64.deb
-@ el8.x86_64 16 pg_when_16 pg_when_16-0.1.9-1PIGSTY.el8.x86_64.rpm pigsty 0.1.9 439.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_when_16-0.1.9-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 16 pg_when_16 pg_when_16-0.1.9-1PIGSTY.el8.aarch64.rpm pigsty 0.1.9 328.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_when_16-0.1.9-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 16 pg_when_16 pg_when_16-0.1.9-1PIGSTY.el9.x86_64.rpm pigsty 0.1.9 456.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_when_16-0.1.9-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 16 pg_when_16 pg_when_16-0.1.9-1PIGSTY.el9.aarch64.rpm pigsty 0.1.9 348.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_when_16-0.1.9-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 16 pg_when_16 pg_when_16-0.1.9-1PIGSTY.el10.x86_64.rpm pigsty 0.1.9 456.4KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_when_16-0.1.9-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 16 pg_when_16 pg_when_16-0.1.9-1PIGSTY.el10.aarch64.rpm pigsty 0.1.9 347.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_when_16-0.1.9-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 16 postgresql-16-pg-when postgresql-16-pg-when_0.1.9-1PIGSTY~bookworm_amd64.deb pigsty 0.1.9 363.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-when/postgresql-16-pg-when_0.1.9-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 16 postgresql-16-pg-when postgresql-16-pg-when_0.1.9-1PIGSTY~bookworm_arm64.deb pigsty 0.1.9 259.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-when/postgresql-16-pg-when_0.1.9-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 16 postgresql-16-pg-when postgresql-16-pg-when_0.1.9-1PIGSTY~trixie_amd64.deb pigsty 0.1.9 364.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-when/postgresql-16-pg-when_0.1.9-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 16 postgresql-16-pg-when postgresql-16-pg-when_0.1.9-1PIGSTY~trixie_arm64.deb pigsty 0.1.9 259.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-when/postgresql-16-pg-when_0.1.9-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 16 postgresql-16-pg-when postgresql-16-pg-when_0.1.9-1PIGSTY~jammy_amd64.deb pigsty 0.1.9 406.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-when/postgresql-16-pg-when_0.1.9-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 16 postgresql-16-pg-when postgresql-16-pg-when_0.1.9-1PIGSTY~jammy_arm64.deb pigsty 0.1.9 298.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-when/postgresql-16-pg-when_0.1.9-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 16 postgresql-16-pg-when postgresql-16-pg-when_0.1.9-1PIGSTY~noble_amd64.deb pigsty 0.1.9 403.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-when/postgresql-16-pg-when_0.1.9-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 16 postgresql-16-pg-when postgresql-16-pg-when_0.1.9-1PIGSTY~noble_arm64.deb pigsty 0.1.9 296.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-when/postgresql-16-pg-when_0.1.9-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 16 postgresql-16-pg-when postgresql-16-pg-when_0.1.9-2PIGSTY~resolute_amd64.deb pigsty 0.1.9 952.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-when/postgresql-16-pg-when_0.1.9-2PIGSTY~resolute_amd64.deb
-@ u26.aarch64 16 postgresql-16-pg-when postgresql-16-pg-when_0.1.9-2PIGSTY~resolute_arm64.deb pigsty 0.1.9 861.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-when/postgresql-16-pg-when_0.1.9-2PIGSTY~resolute_arm64.deb
-@ el8.x86_64 15 pg_when_15 pg_when_15-0.1.9-1PIGSTY.el8.x86_64.rpm pigsty 0.1.9 439.2KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_when_15-0.1.9-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 15 pg_when_15 pg_when_15-0.1.9-1PIGSTY.el8.aarch64.rpm pigsty 0.1.9 328.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_when_15-0.1.9-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 15 pg_when_15 pg_when_15-0.1.9-1PIGSTY.el9.x86_64.rpm pigsty 0.1.9 456.1KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_when_15-0.1.9-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 15 pg_when_15 pg_when_15-0.1.9-1PIGSTY.el9.aarch64.rpm pigsty 0.1.9 348.3KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_when_15-0.1.9-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 15 pg_when_15 pg_when_15-0.1.9-1PIGSTY.el10.x86_64.rpm pigsty 0.1.9 456.2KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_when_15-0.1.9-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 15 pg_when_15 pg_when_15-0.1.9-1PIGSTY.el10.aarch64.rpm pigsty 0.1.9 347.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_when_15-0.1.9-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 15 postgresql-15-pg-when postgresql-15-pg-when_0.1.9-1PIGSTY~bookworm_amd64.deb pigsty 0.1.9 364.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-when/postgresql-15-pg-when_0.1.9-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 15 postgresql-15-pg-when postgresql-15-pg-when_0.1.9-1PIGSTY~bookworm_arm64.deb pigsty 0.1.9 259.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-when/postgresql-15-pg-when_0.1.9-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 15 postgresql-15-pg-when postgresql-15-pg-when_0.1.9-1PIGSTY~trixie_amd64.deb pigsty 0.1.9 363.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-when/postgresql-15-pg-when_0.1.9-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 15 postgresql-15-pg-when postgresql-15-pg-when_0.1.9-1PIGSTY~trixie_arm64.deb pigsty 0.1.9 259.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-when/postgresql-15-pg-when_0.1.9-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 15 postgresql-15-pg-when postgresql-15-pg-when_0.1.9-1PIGSTY~jammy_amd64.deb pigsty 0.1.9 406.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-when/postgresql-15-pg-when_0.1.9-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 15 postgresql-15-pg-when postgresql-15-pg-when_0.1.9-1PIGSTY~jammy_arm64.deb pigsty 0.1.9 298.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-when/postgresql-15-pg-when_0.1.9-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 15 postgresql-15-pg-when postgresql-15-pg-when_0.1.9-1PIGSTY~noble_amd64.deb pigsty 0.1.9 403.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-when/postgresql-15-pg-when_0.1.9-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 15 postgresql-15-pg-when postgresql-15-pg-when_0.1.9-1PIGSTY~noble_arm64.deb pigsty 0.1.9 296.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-when/postgresql-15-pg-when_0.1.9-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 15 postgresql-15-pg-when postgresql-15-pg-when_0.1.9-2PIGSTY~resolute_amd64.deb pigsty 0.1.9 946.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-when/postgresql-15-pg-when_0.1.9-2PIGSTY~resolute_amd64.deb
-@ u26.aarch64 15 postgresql-15-pg-when postgresql-15-pg-when_0.1.9-2PIGSTY~resolute_arm64.deb pigsty 0.1.9 856.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-when/postgresql-15-pg-when_0.1.9-2PIGSTY~resolute_arm64.deb
-@ el8.x86_64 14 pg_when_14 pg_when_14-0.1.9-1PIGSTY.el8.x86_64.rpm pigsty 0.1.9 439.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_when_14-0.1.9-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 14 pg_when_14 pg_when_14-0.1.9-1PIGSTY.el8.aarch64.rpm pigsty 0.1.9 328.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_when_14-0.1.9-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 14 pg_when_14 pg_when_14-0.1.9-1PIGSTY.el9.x86_64.rpm pigsty 0.1.9 455.7KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_when_14-0.1.9-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 14 pg_when_14 pg_when_14-0.1.9-1PIGSTY.el9.aarch64.rpm pigsty 0.1.9 348.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_when_14-0.1.9-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 14 pg_when_14 pg_when_14-0.1.9-1PIGSTY.el10.x86_64.rpm pigsty 0.1.9 456.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_when_14-0.1.9-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 14 pg_when_14 pg_when_14-0.1.9-1PIGSTY.el10.aarch64.rpm pigsty 0.1.9 347.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_when_14-0.1.9-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 14 postgresql-14-pg-when postgresql-14-pg-when_0.1.9-1PIGSTY~bookworm_amd64.deb pigsty 0.1.9 364.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-when/postgresql-14-pg-when_0.1.9-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 14 postgresql-14-pg-when postgresql-14-pg-when_0.1.9-1PIGSTY~bookworm_arm64.deb pigsty 0.1.9 259.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-when/postgresql-14-pg-when_0.1.9-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 14 postgresql-14-pg-when postgresql-14-pg-when_0.1.9-1PIGSTY~trixie_amd64.deb pigsty 0.1.9 364.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-when/postgresql-14-pg-when_0.1.9-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 14 postgresql-14-pg-when postgresql-14-pg-when_0.1.9-1PIGSTY~trixie_arm64.deb pigsty 0.1.9 259.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-when/postgresql-14-pg-when_0.1.9-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 14 postgresql-14-pg-when postgresql-14-pg-when_0.1.9-1PIGSTY~jammy_amd64.deb pigsty 0.1.9 406.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-when/postgresql-14-pg-when_0.1.9-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 14 postgresql-14-pg-when postgresql-14-pg-when_0.1.9-1PIGSTY~jammy_arm64.deb pigsty 0.1.9 298.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-when/postgresql-14-pg-when_0.1.9-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 14 postgresql-14-pg-when postgresql-14-pg-when_0.1.9-1PIGSTY~noble_amd64.deb pigsty 0.1.9 403.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-when/postgresql-14-pg-when_0.1.9-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 14 postgresql-14-pg-when postgresql-14-pg-when_0.1.9-1PIGSTY~noble_arm64.deb pigsty 0.1.9 296.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-when/postgresql-14-pg-when_0.1.9-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 14 postgresql-14-pg-when postgresql-14-pg-when_0.1.9-2PIGSTY~resolute_amd64.deb pigsty 0.1.9 943.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-when/postgresql-14-pg-when_0.1.9-2PIGSTY~resolute_amd64.deb
-@ u26.aarch64 14 postgresql-14-pg-when postgresql-14-pg-when_0.1.9-2PIGSTY~resolute_arm64.deb pigsty 0.1.9 854.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-when/postgresql-14-pg-when_0.1.9-2PIGSTY~resolute_arm64.deb
+@ el8.x86_64 18 pg_when_18 pg_when_18-0.1.9-3PIGSTY.el8.x86_64.rpm pigsty 0.1.9 1.1MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_when_18-0.1.9-3PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 18 pg_when_18 pg_when_18-0.1.9-3PIGSTY.el8.aarch64.rpm pigsty 0.1.9 981.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_when_18-0.1.9-3PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 18 pg_when_18 pg_when_18-0.1.9-3PIGSTY.el9.x86_64.rpm pigsty 0.1.9 1.1MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_when_18-0.1.9-3PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 18 pg_when_18 pg_when_18-0.1.9-3PIGSTY.el9.aarch64.rpm pigsty 0.1.9 1.0MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_when_18-0.1.9-3PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 18 pg_when_18 pg_when_18-0.1.9-3PIGSTY.el10.x86_64.rpm pigsty 0.1.9 1.1MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_when_18-0.1.9-3PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 18 pg_when_18 pg_when_18-0.1.9-3PIGSTY.el10.aarch64.rpm pigsty 0.1.9 1017.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_when_18-0.1.9-3PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-pg-when postgresql-18-pg-when_0.1.9-3PIGSTY~bookworm_amd64.deb pigsty 0.1.9 872.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-when/postgresql-18-pg-when_0.1.9-3PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 18 postgresql-18-pg-when postgresql-18-pg-when_0.1.9-3PIGSTY~bookworm_arm64.deb pigsty 0.1.9 744.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-when/postgresql-18-pg-when_0.1.9-3PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 18 postgresql-18-pg-when postgresql-18-pg-when_0.1.9-3PIGSTY~trixie_amd64.deb pigsty 0.1.9 873.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-when/postgresql-18-pg-when_0.1.9-3PIGSTY~trixie_amd64.deb
+@ d13.aarch64 18 postgresql-18-pg-when postgresql-18-pg-when_0.1.9-3PIGSTY~trixie_arm64.deb pigsty 0.1.9 744.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-when/postgresql-18-pg-when_0.1.9-3PIGSTY~trixie_arm64.deb
+@ u22.x86_64 18 postgresql-18-pg-when postgresql-18-pg-when_0.1.9-3PIGSTY~jammy_amd64.deb pigsty 0.1.9 964.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-when/postgresql-18-pg-when_0.1.9-3PIGSTY~jammy_amd64.deb
+@ u22.aarch64 18 postgresql-18-pg-when postgresql-18-pg-when_0.1.9-3PIGSTY~jammy_arm64.deb pigsty 0.1.9 873.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-when/postgresql-18-pg-when_0.1.9-3PIGSTY~jammy_arm64.deb
+@ u24.x86_64 18 postgresql-18-pg-when postgresql-18-pg-when_0.1.9-3PIGSTY~noble_amd64.deb pigsty 0.1.9 956.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-when/postgresql-18-pg-when_0.1.9-3PIGSTY~noble_amd64.deb
+@ u24.aarch64 18 postgresql-18-pg-when postgresql-18-pg-when_0.1.9-3PIGSTY~noble_arm64.deb pigsty 0.1.9 863.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-when/postgresql-18-pg-when_0.1.9-3PIGSTY~noble_arm64.deb
+@ u26.x86_64 18 postgresql-18-pg-when postgresql-18-pg-when_0.1.9-3PIGSTY~resolute_amd64.deb pigsty 0.1.9 952.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-when/postgresql-18-pg-when_0.1.9-3PIGSTY~resolute_amd64.deb
+@ u26.aarch64 18 postgresql-18-pg-when postgresql-18-pg-when_0.1.9-3PIGSTY~resolute_arm64.deb pigsty 0.1.9 861.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-when/postgresql-18-pg-when_0.1.9-3PIGSTY~resolute_arm64.deb
+@ el8.x86_64 17 pg_when_17 pg_when_17-0.1.9-3PIGSTY.el8.x86_64.rpm pigsty 0.1.9 1.1MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_when_17-0.1.9-3PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 17 pg_when_17 pg_when_17-0.1.9-3PIGSTY.el8.aarch64.rpm pigsty 0.1.9 978.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_when_17-0.1.9-3PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 17 pg_when_17 pg_when_17-0.1.9-3PIGSTY.el9.x86_64.rpm pigsty 0.1.9 1.1MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_when_17-0.1.9-3PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 17 pg_when_17 pg_when_17-0.1.9-3PIGSTY.el9.aarch64.rpm pigsty 0.1.9 1.0MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_when_17-0.1.9-3PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 17 pg_when_17 pg_when_17-0.1.9-3PIGSTY.el10.x86_64.rpm pigsty 0.1.9 1.1MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_when_17-0.1.9-3PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 17 pg_when_17 pg_when_17-0.1.9-3PIGSTY.el10.aarch64.rpm pigsty 0.1.9 1017.3KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_when_17-0.1.9-3PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-pg-when postgresql-17-pg-when_0.1.9-3PIGSTY~bookworm_amd64.deb pigsty 0.1.9 870.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-when/postgresql-17-pg-when_0.1.9-3PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 17 postgresql-17-pg-when postgresql-17-pg-when_0.1.9-3PIGSTY~bookworm_arm64.deb pigsty 0.1.9 743.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-when/postgresql-17-pg-when_0.1.9-3PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 17 postgresql-17-pg-when postgresql-17-pg-when_0.1.9-3PIGSTY~trixie_amd64.deb pigsty 0.1.9 870.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-when/postgresql-17-pg-when_0.1.9-3PIGSTY~trixie_amd64.deb
+@ d13.aarch64 17 postgresql-17-pg-when postgresql-17-pg-when_0.1.9-3PIGSTY~trixie_arm64.deb pigsty 0.1.9 742.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-when/postgresql-17-pg-when_0.1.9-3PIGSTY~trixie_arm64.deb
+@ u22.x86_64 17 postgresql-17-pg-when postgresql-17-pg-when_0.1.9-3PIGSTY~jammy_amd64.deb pigsty 0.1.9 963.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-when/postgresql-17-pg-when_0.1.9-3PIGSTY~jammy_amd64.deb
+@ u22.aarch64 17 postgresql-17-pg-when postgresql-17-pg-when_0.1.9-3PIGSTY~jammy_arm64.deb pigsty 0.1.9 871.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-when/postgresql-17-pg-when_0.1.9-3PIGSTY~jammy_arm64.deb
+@ u24.x86_64 17 postgresql-17-pg-when postgresql-17-pg-when_0.1.9-3PIGSTY~noble_amd64.deb pigsty 0.1.9 954.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-when/postgresql-17-pg-when_0.1.9-3PIGSTY~noble_amd64.deb
+@ u24.aarch64 17 postgresql-17-pg-when postgresql-17-pg-when_0.1.9-3PIGSTY~noble_arm64.deb pigsty 0.1.9 861.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-when/postgresql-17-pg-when_0.1.9-3PIGSTY~noble_arm64.deb
+@ u26.x86_64 17 postgresql-17-pg-when postgresql-17-pg-when_0.1.9-3PIGSTY~resolute_amd64.deb pigsty 0.1.9 950.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-when/postgresql-17-pg-when_0.1.9-3PIGSTY~resolute_amd64.deb
+@ u26.aarch64 17 postgresql-17-pg-when postgresql-17-pg-when_0.1.9-3PIGSTY~resolute_arm64.deb pigsty 0.1.9 859.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-when/postgresql-17-pg-when_0.1.9-3PIGSTY~resolute_arm64.deb
+@ el8.x86_64 16 pg_when_16 pg_when_16-0.1.9-3PIGSTY.el8.x86_64.rpm pigsty 0.1.9 1.1MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_when_16-0.1.9-3PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 16 pg_when_16 pg_when_16-0.1.9-3PIGSTY.el8.aarch64.rpm pigsty 0.1.9 976.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_when_16-0.1.9-3PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 16 pg_when_16 pg_when_16-0.1.9-3PIGSTY.el9.x86_64.rpm pigsty 0.1.9 1.1MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_when_16-0.1.9-3PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 16 pg_when_16 pg_when_16-0.1.9-3PIGSTY.el9.aarch64.rpm pigsty 0.1.9 1.0MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_when_16-0.1.9-3PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 16 pg_when_16 pg_when_16-0.1.9-3PIGSTY.el10.x86_64.rpm pigsty 0.1.9 1.1MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_when_16-0.1.9-3PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 16 pg_when_16 pg_when_16-0.1.9-3PIGSTY.el10.aarch64.rpm pigsty 0.1.9 1016.9KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_when_16-0.1.9-3PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 16 postgresql-16-pg-when postgresql-16-pg-when_0.1.9-3PIGSTY~bookworm_amd64.deb pigsty 0.1.9 869.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-when/postgresql-16-pg-when_0.1.9-3PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 16 postgresql-16-pg-when postgresql-16-pg-when_0.1.9-3PIGSTY~bookworm_arm64.deb pigsty 0.1.9 742.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-when/postgresql-16-pg-when_0.1.9-3PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 16 postgresql-16-pg-when postgresql-16-pg-when_0.1.9-3PIGSTY~trixie_amd64.deb pigsty 0.1.9 869.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-when/postgresql-16-pg-when_0.1.9-3PIGSTY~trixie_amd64.deb
+@ d13.aarch64 16 postgresql-16-pg-when postgresql-16-pg-when_0.1.9-3PIGSTY~trixie_arm64.deb pigsty 0.1.9 742.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-when/postgresql-16-pg-when_0.1.9-3PIGSTY~trixie_arm64.deb
+@ u22.x86_64 16 postgresql-16-pg-when postgresql-16-pg-when_0.1.9-3PIGSTY~jammy_amd64.deb pigsty 0.1.9 962.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-when/postgresql-16-pg-when_0.1.9-3PIGSTY~jammy_amd64.deb
+@ u22.aarch64 16 postgresql-16-pg-when postgresql-16-pg-when_0.1.9-3PIGSTY~jammy_arm64.deb pigsty 0.1.9 870.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-when/postgresql-16-pg-when_0.1.9-3PIGSTY~jammy_arm64.deb
+@ u24.x86_64 16 postgresql-16-pg-when postgresql-16-pg-when_0.1.9-3PIGSTY~noble_amd64.deb pigsty 0.1.9 953.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-when/postgresql-16-pg-when_0.1.9-3PIGSTY~noble_amd64.deb
+@ u24.aarch64 16 postgresql-16-pg-when postgresql-16-pg-when_0.1.9-3PIGSTY~noble_arm64.deb pigsty 0.1.9 860.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-when/postgresql-16-pg-when_0.1.9-3PIGSTY~noble_arm64.deb
+@ u26.x86_64 16 postgresql-16-pg-when postgresql-16-pg-when_0.1.9-3PIGSTY~resolute_amd64.deb pigsty 0.1.9 948.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-when/postgresql-16-pg-when_0.1.9-3PIGSTY~resolute_amd64.deb
+@ u26.aarch64 16 postgresql-16-pg-when postgresql-16-pg-when_0.1.9-3PIGSTY~resolute_arm64.deb pigsty 0.1.9 858.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-when/postgresql-16-pg-when_0.1.9-3PIGSTY~resolute_arm64.deb
+@ el8.x86_64 15 pg_when_15 pg_when_15-0.1.9-3PIGSTY.el8.x86_64.rpm pigsty 0.1.9 1.0MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_when_15-0.1.9-3PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 15 pg_when_15 pg_when_15-0.1.9-3PIGSTY.el8.aarch64.rpm pigsty 0.1.9 968.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_when_15-0.1.9-3PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 15 pg_when_15 pg_when_15-0.1.9-3PIGSTY.el9.x86_64.rpm pigsty 0.1.9 1.0MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_when_15-0.1.9-3PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 15 pg_when_15 pg_when_15-0.1.9-3PIGSTY.el9.aarch64.rpm pigsty 0.1.9 1.0MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_when_15-0.1.9-3PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 15 pg_when_15 pg_when_15-0.1.9-3PIGSTY.el10.x86_64.rpm pigsty 0.1.9 1.0MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_when_15-0.1.9-3PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 15 pg_when_15 pg_when_15-0.1.9-3PIGSTY.el10.aarch64.rpm pigsty 0.1.9 1013.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_when_15-0.1.9-3PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 15 postgresql-15-pg-when postgresql-15-pg-when_0.1.9-3PIGSTY~bookworm_amd64.deb pigsty 0.1.9 864.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-when/postgresql-15-pg-when_0.1.9-3PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 15 postgresql-15-pg-when postgresql-15-pg-when_0.1.9-3PIGSTY~bookworm_arm64.deb pigsty 0.1.9 737.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-when/postgresql-15-pg-when_0.1.9-3PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 15 postgresql-15-pg-when postgresql-15-pg-when_0.1.9-3PIGSTY~trixie_amd64.deb pigsty 0.1.9 864.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-when/postgresql-15-pg-when_0.1.9-3PIGSTY~trixie_amd64.deb
+@ d13.aarch64 15 postgresql-15-pg-when postgresql-15-pg-when_0.1.9-3PIGSTY~trixie_arm64.deb pigsty 0.1.9 737.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-when/postgresql-15-pg-when_0.1.9-3PIGSTY~trixie_arm64.deb
+@ u22.x86_64 15 postgresql-15-pg-when postgresql-15-pg-when_0.1.9-3PIGSTY~jammy_amd64.deb pigsty 0.1.9 954.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-when/postgresql-15-pg-when_0.1.9-3PIGSTY~jammy_amd64.deb
+@ u22.aarch64 15 postgresql-15-pg-when postgresql-15-pg-when_0.1.9-3PIGSTY~jammy_arm64.deb pigsty 0.1.9 866.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-when/postgresql-15-pg-when_0.1.9-3PIGSTY~jammy_arm64.deb
+@ u24.x86_64 15 postgresql-15-pg-when postgresql-15-pg-when_0.1.9-3PIGSTY~noble_amd64.deb pigsty 0.1.9 945.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-when/postgresql-15-pg-when_0.1.9-3PIGSTY~noble_amd64.deb
+@ u24.aarch64 15 postgresql-15-pg-when postgresql-15-pg-when_0.1.9-3PIGSTY~noble_arm64.deb pigsty 0.1.9 854.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-when/postgresql-15-pg-when_0.1.9-3PIGSTY~noble_arm64.deb
+@ u26.x86_64 15 postgresql-15-pg-when postgresql-15-pg-when_0.1.9-3PIGSTY~resolute_amd64.deb pigsty 0.1.9 941.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-when/postgresql-15-pg-when_0.1.9-3PIGSTY~resolute_amd64.deb
+@ u26.aarch64 15 postgresql-15-pg-when postgresql-15-pg-when_0.1.9-3PIGSTY~resolute_arm64.deb pigsty 0.1.9 853.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-when/postgresql-15-pg-when_0.1.9-3PIGSTY~resolute_arm64.deb
+@ el8.x86_64 14 pg_when_14 pg_when_14-0.1.9-3PIGSTY.el8.x86_64.rpm pigsty 0.1.9 1.0MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_when_14-0.1.9-3PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 14 pg_when_14 pg_when_14-0.1.9-3PIGSTY.el8.aarch64.rpm pigsty 0.1.9 965.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_when_14-0.1.9-3PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 14 pg_when_14 pg_when_14-0.1.9-3PIGSTY.el9.x86_64.rpm pigsty 0.1.9 1.0MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_when_14-0.1.9-3PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 14 pg_when_14 pg_when_14-0.1.9-3PIGSTY.el9.aarch64.rpm pigsty 0.1.9 1021.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_when_14-0.1.9-3PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 14 pg_when_14 pg_when_14-0.1.9-3PIGSTY.el10.x86_64.rpm pigsty 0.1.9 1.0MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_when_14-0.1.9-3PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 14 pg_when_14 pg_when_14-0.1.9-3PIGSTY.el10.aarch64.rpm pigsty 0.1.9 1011.0KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_when_14-0.1.9-3PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 14 postgresql-14-pg-when postgresql-14-pg-when_0.1.9-3PIGSTY~bookworm_amd64.deb pigsty 0.1.9 862.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-when/postgresql-14-pg-when_0.1.9-3PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 14 postgresql-14-pg-when postgresql-14-pg-when_0.1.9-3PIGSTY~bookworm_arm64.deb pigsty 0.1.9 735.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-when/postgresql-14-pg-when_0.1.9-3PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 14 postgresql-14-pg-when postgresql-14-pg-when_0.1.9-3PIGSTY~trixie_amd64.deb pigsty 0.1.9 862.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-when/postgresql-14-pg-when_0.1.9-3PIGSTY~trixie_amd64.deb
+@ d13.aarch64 14 postgresql-14-pg-when postgresql-14-pg-when_0.1.9-3PIGSTY~trixie_arm64.deb pigsty 0.1.9 736.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-when/postgresql-14-pg-when_0.1.9-3PIGSTY~trixie_arm64.deb
+@ u22.x86_64 14 postgresql-14-pg-when postgresql-14-pg-when_0.1.9-3PIGSTY~jammy_amd64.deb pigsty 0.1.9 952.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-when/postgresql-14-pg-when_0.1.9-3PIGSTY~jammy_amd64.deb
+@ u22.aarch64 14 postgresql-14-pg-when postgresql-14-pg-when_0.1.9-3PIGSTY~jammy_arm64.deb pigsty 0.1.9 863.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-when/postgresql-14-pg-when_0.1.9-3PIGSTY~jammy_arm64.deb
+@ u24.x86_64 14 postgresql-14-pg-when postgresql-14-pg-when_0.1.9-3PIGSTY~noble_amd64.deb pigsty 0.1.9 943.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-when/postgresql-14-pg-when_0.1.9-3PIGSTY~noble_amd64.deb
+@ u24.aarch64 14 postgresql-14-pg-when postgresql-14-pg-when_0.1.9-3PIGSTY~noble_arm64.deb pigsty 0.1.9 854.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-when/postgresql-14-pg-when_0.1.9-3PIGSTY~noble_arm64.deb
+@ u26.x86_64 14 postgresql-14-pg-when postgresql-14-pg-when_0.1.9-3PIGSTY~resolute_amd64.deb pigsty 0.1.9 939.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-when/postgresql-14-pg-when_0.1.9-3PIGSTY~resolute_amd64.deb
+@ u26.aarch64 14 postgresql-14-pg-when postgresql-14-pg-when_0.1.9-3PIGSTY~resolute_arm64.deb pigsty 0.1.9 850.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-when/postgresql-14-pg-when_0.1.9-3PIGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建

@@ -30,6 +30,7 @@ weight: 6930
 
 | **相关扩展** | [`pg_repack`](/ext/e/pg_repack) [`pgfincore`](/ext/e/pgfincore) [`pgcozy`](/ext/e/pgcozy) [`pg_prewarm`](/ext/e/pg_prewarm) [`pgmeminfo`](/ext/e/pgmeminfo) [`pg_squeeze`](/ext/e/pg_squeeze) [`old_snapshot`](/ext/e/old_snapshot) [`system_stats`](/ext/e/system_stats) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **下游依赖** | [`pgcozy`](/ext/e/pgcozy) |
 {.ext-table .ext-table--rel}
 
 

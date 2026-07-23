@@ -39,7 +39,7 @@ weight: 2700
 |:----:|:----:|:----:|:------:|:--------:|:----:|
 | [**EXT**](/ext/list#feat) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `2.21` | {{< pgvers "18,17,16,15,14" >}} | `hll` | - |
 | [**RPM**](/ext/rpm#feat) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `2.21` | {{< pgvers "18,17,16,15,14" >}} | `hll_$v` | - |
-| [**DEB**](/ext/deb#feat) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `2.20` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-hll` | - |
+| [**DEB**](/ext/deb#feat) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `2.21` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-hll` | - |
 {.ext-table}
 
 {{< pgext_matrix >}}

@@ -49,7 +49,7 @@ weight: 1531
 {{< pgext_matrix >}}
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | MISS PGDG - 0 | MISS PGDG - 0 | AVAIL PGDG 4.1.3 1 | AVAIL PGDG 4.1.3 1 | AVAIL PGDG 4.1.3 1 |
+| el8.x86_64 | AVAIL PIGSTY 4.2.3 1 | AVAIL PIGSTY 4.2.3 1 | AVAIL PGDG 4.1.3 1 | AVAIL PGDG 4.1.3 1 | AVAIL PGDG 4.1.3 1 |
 | el8.aarch64 | AVAIL PGDG 4.2.3 1 | AVAIL PGDG 4.1.3 1 | AVAIL PGDG 4.1.3 1 | AVAIL PGDG 4.1.3 1 | AVAIL PGDG 4.1.3 1 |
 | el9.x86_64 | AVAIL PGDG 4.2.3 2 | AVAIL PGDG 4.2.3 2 | AVAIL PGDG 4.2.3 2 | AVAIL PGDG 4.2.3 2 | AVAIL PGDG 4.2.3 2 |
 | el9.aarch64 | AVAIL PGDG 4.2.3 2 | AVAIL PGDG 4.2.3 2 | AVAIL PGDG 4.2.3 2 | AVAIL PGDG 4.2.3 2 | AVAIL PGDG 4.2.3 2 |

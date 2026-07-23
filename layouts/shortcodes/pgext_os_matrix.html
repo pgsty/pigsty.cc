@@ -32,22 +32,23 @@
             {{ $state := index $parts 0 -}}
             {{ $repo  := index $parts 1 -}}
             {{ $ver   := index $parts 2 -}}
-            {{ $cls := "ext-avail-cell--hide" -}}
+            {{ $cls := "ext-avail-cell--na" -}}
             {{ if eq $state "AVAIL" -}}
               {{ if eq $repo "PGDG"    }}{{ $cls = "ext-avail-cell--pgdg"    }}{{ end -}}
               {{ if eq $repo "PIGSTY"  }}{{ $cls = "ext-avail-cell--pigsty"  }}{{ end -}}
               {{ if eq $repo "CONTRIB" }}{{ $cls = "ext-avail-cell--contrib" }}{{ end -}}
-            {{ else if eq $state "MISS"  }}{{ $cls = "ext-avail-cell--miss"  -}}
-            {{ else if eq $state "HIDE"  }}{{ $cls = "ext-avail-cell--hide"  -}}
-            {{ else if eq $state "THROW" }}{{ $cls = "ext-avail-cell--throw" -}}
-            {{ else if eq $state "BREAK" }}{{ $cls = "ext-avail-cell--break" -}}
-            {{ else if eq $state "FORK"  }}{{ $cls = "ext-avail-cell--fork"  -}}
+            {{ else if eq $state "MISS" }}{{ $cls = "ext-avail-cell--miss" -}}
+            {{ else if eq $state "N/A"  }}{{ $cls = "ext-avail-cell--na"   -}}
             {{ end -}}
             {{ $verDisplay := $ver -}}
-            {{ if or (eq $ver "-") (eq $ver "") -}}
+            {{ if eq $state "MISS" -}}
               {{ $verDisplay = "MISS" -}}
+            {{ else if eq $state "N/A" -}}
+              {{ $verDisplay = "N/A" -}}
+            {{ else if or (eq $ver "-") (eq $ver "") -}}
+              {{ $verDisplay = "AVAIL" -}}
             {{ end -}}
-            <td><span class="ext-avail-cell {{ $cls }}">{{ $repo }}&nbsp;{{ $verDisplay }}</span></td>
+            <td><span class="ext-avail-cell {{ $cls }}">{{ if eq $state "AVAIL" }}{{ $repo }}&nbsp;{{ end }}{{ $verDisplay }}</span></td>
           {{ else -}}
             <td>{{ $cell }}</td>
           {{ end -}}

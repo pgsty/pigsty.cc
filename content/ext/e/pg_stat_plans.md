@@ -45,22 +45,22 @@ weight: 6050
 {{< pgext_matrix >}}
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PGDG 2.1.0 1 | AVAIL PGDG 2.1.0 1 | AVAIL PGDG 2.1.0 1 | MISS PGDG - 0 | MISS PGDG - 0 |
-| el8.aarch64 | AVAIL PGDG 2.1.0 1 | AVAIL PGDG 2.1.0 1 | AVAIL PGDG 2.1.0 1 | MISS PGDG - 0 | MISS PGDG - 0 |
-| el9.x86_64 | AVAIL PGDG 2.1.0 3 | AVAIL PGDG 2.1.0 3 | AVAIL PGDG 2.1.0 3 | MISS PGDG - 0 | MISS PGDG - 0 |
-| el9.aarch64 | AVAIL PGDG 2.1.0 3 | AVAIL PGDG 2.1.0 3 | AVAIL PGDG 2.1.0 3 | MISS PGDG - 0 | MISS PGDG - 0 |
-| el10.x86_64 | AVAIL PGDG 2.1.0 3 | AVAIL PGDG 2.1.0 3 | AVAIL PGDG 2.1.0 3 | MISS PGDG - 0 | MISS PGDG - 0 |
-| el10.aarch64 | AVAIL PGDG 2.1.0 3 | AVAIL PGDG 2.1.0 3 | AVAIL PGDG 2.1.0 3 | MISS PGDG - 0 | MISS PGDG - 0 |
-| d12.x86_64 | AVAIL PGDG 2.1.0 2 | AVAIL PGDG 2.1.0 1 | AVAIL PGDG 2.1.0 1 | MISS PGDG - 0 | MISS PGDG - 0 |
-| d12.aarch64 | AVAIL PGDG 2.1.0 2 | AVAIL PGDG 2.1.0 1 | AVAIL PGDG 2.1.0 1 | MISS PGDG - 0 | MISS PGDG - 0 |
-| d13.x86_64 | AVAIL PGDG 2.1.0 2 | AVAIL PGDG 2.1.0 1 | AVAIL PGDG 2.1.0 1 | MISS PGDG - 0 | MISS PGDG - 0 |
-| d13.aarch64 | AVAIL PGDG 2.1.0 2 | AVAIL PGDG 2.1.0 1 | AVAIL PGDG 2.1.0 1 | MISS PGDG - 0 | MISS PGDG - 0 |
-| u22.x86_64 | AVAIL PGDG 2.1.0 2 | AVAIL PGDG 2.1.0 1 | AVAIL PGDG 2.1.0 1 | MISS PGDG - 0 | MISS PGDG - 0 |
-| u22.aarch64 | AVAIL PGDG 2.1.0 2 | AVAIL PGDG 2.1.0 1 | AVAIL PGDG 2.1.0 1 | MISS PGDG - 0 | MISS PGDG - 0 |
-| u24.x86_64 | AVAIL PGDG 2.1.0 2 | AVAIL PGDG 2.1.0 1 | AVAIL PGDG 2.1.0 1 | MISS PGDG - 0 | MISS PGDG - 0 |
-| u24.aarch64 | AVAIL PGDG 2.1.0 2 | AVAIL PGDG 2.1.0 1 | AVAIL PGDG 2.1.0 1 | MISS PGDG - 0 | MISS PGDG - 0 |
-| u26.x86_64 | AVAIL PGDG 2.1.0 2 | AVAIL PGDG 2.1.0 1 | AVAIL PGDG 2.1.0 1 | MISS PGDG - 0 | MISS PGDG - 0 |
-| u26.aarch64 | AVAIL PGDG 2.1.0 2 | AVAIL PGDG 2.1.0 1 | AVAIL PGDG 2.1.0 1 | MISS PGDG - 0 | MISS PGDG - 0 |
+| el8.x86_64 | AVAIL PGDG 2.1.0 1 | AVAIL PGDG 2.1.0 1 | AVAIL PGDG 2.1.0 1 | N/A PGDG - 0 | N/A PGDG - 0 |
+| el8.aarch64 | AVAIL PGDG 2.1.0 1 | AVAIL PGDG 2.1.0 1 | AVAIL PGDG 2.1.0 1 | N/A PGDG - 0 | N/A PGDG - 0 |
+| el9.x86_64 | AVAIL PGDG 2.1.0 3 | AVAIL PGDG 2.1.0 3 | AVAIL PGDG 2.1.0 3 | N/A PGDG - 0 | N/A PGDG - 0 |
+| el9.aarch64 | AVAIL PGDG 2.1.0 3 | AVAIL PGDG 2.1.0 3 | AVAIL PGDG 2.1.0 3 | N/A PGDG - 0 | N/A PGDG - 0 |
+| el10.x86_64 | AVAIL PGDG 2.1.0 3 | AVAIL PGDG 2.1.0 3 | AVAIL PGDG 2.1.0 3 | N/A PGDG - 0 | N/A PGDG - 0 |
+| el10.aarch64 | AVAIL PGDG 2.1.0 3 | AVAIL PGDG 2.1.0 3 | AVAIL PGDG 2.1.0 3 | N/A PGDG - 0 | N/A PGDG - 0 |
+| d12.x86_64 | AVAIL PGDG 2.1.0 2 | AVAIL PGDG 2.1.0 1 | AVAIL PGDG 2.1.0 1 | N/A PGDG - 0 | N/A PGDG - 0 |
+| d12.aarch64 | AVAIL PGDG 2.1.0 2 | AVAIL PGDG 2.1.0 1 | AVAIL PGDG 2.1.0 1 | N/A PGDG - 0 | N/A PGDG - 0 |
+| d13.x86_64 | AVAIL PGDG 2.1.0 2 | AVAIL PGDG 2.1.0 1 | AVAIL PGDG 2.1.0 1 | N/A PGDG - 0 | N/A PGDG - 0 |
+| d13.aarch64 | AVAIL PGDG 2.1.0 2 | AVAIL PGDG 2.1.0 1 | AVAIL PGDG 2.1.0 1 | N/A PGDG - 0 | N/A PGDG - 0 |
+| u22.x86_64 | AVAIL PGDG 2.1.0 2 | AVAIL PGDG 2.1.0 1 | AVAIL PGDG 2.1.0 1 | N/A PGDG - 0 | N/A PGDG - 0 |
+| u22.aarch64 | AVAIL PGDG 2.1.0 2 | AVAIL PGDG 2.1.0 1 | AVAIL PGDG 2.1.0 1 | N/A PGDG - 0 | N/A PGDG - 0 |
+| u24.x86_64 | AVAIL PGDG 2.1.0 2 | AVAIL PGDG 2.1.0 1 | AVAIL PGDG 2.1.0 1 | N/A PGDG - 0 | N/A PGDG - 0 |
+| u24.aarch64 | AVAIL PGDG 2.1.0 2 | AVAIL PGDG 2.1.0 1 | AVAIL PGDG 2.1.0 1 | N/A PGDG - 0 | N/A PGDG - 0 |
+| u26.x86_64 | AVAIL PGDG 2.1.0 2 | AVAIL PGDG 2.1.0 1 | AVAIL PGDG 2.1.0 1 | N/A PGDG - 0 | N/A PGDG - 0 |
+| u26.aarch64 | AVAIL PGDG 2.1.0 2 | AVAIL PGDG 2.1.0 1 | AVAIL PGDG 2.1.0 1 | N/A PGDG - 0 | N/A PGDG - 0 |
 @ el8.x86_64 18 pg_stat_plans_18 pg_stat_plans_18-2.1.0-1PGDG.rhel8.10.x86_64.rpm pgdg 2.1.0 44.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pg_stat_plans_18-2.1.0-1PGDG.rhel8.10.x86_64.rpm
 @ el8.aarch64 18 pg_stat_plans_18 pg_stat_plans_18-2.1.0-1PGDG.rhel8.10.aarch64.rpm pgdg 2.1.0 42.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pg_stat_plans_18-2.1.0-1PGDG.rhel8.10.aarch64.rpm
 @ el9.x86_64 18 pg_stat_plans_18 pg_stat_plans_18-2.1.0-1PGDG.rhel9.8.x86_64.rpm pgdg 2.1.0 42.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pg_stat_plans_18-2.1.0-1PGDG.rhel9.8.x86_64.rpm

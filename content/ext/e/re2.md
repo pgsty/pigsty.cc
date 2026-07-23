@@ -11,10 +11,10 @@ weight: 4235
     <div class="ext-card__title">ClickHouse/pg_re2</div>
     <div class="ext-card__desc">https://github.com/ClickHouse/pg_re2</div>
   </a>
-  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/re2-0.4.0.tar.gz">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/re2-0.4.1.tar.gz">
     <div class="ext-card__kicker">源码</div>
-    <div class="ext-card__title">re2-0.4.0.tar.gz</div>
-    <div class="ext-card__desc">re2-0.4.0.tar.gz</div>
+    <div class="ext-card__title">re2-0.4.1.tar.gz</div>
+    <div class="ext-card__desc">re2-0.4.1.tar.gz</div>
   </a>
 </div>
 
@@ -25,7 +25,7 @@ weight: 4235
 
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
-| [**`re2`**](/ext/e/re2) | `0.4.0` | <a class="ext-badge ext-badge--cate util" href="/ext/cate/util">UTIL</a> | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang cpp" href="/ext/language#cpp">C++</a> |
+| [**`re2`**](/ext/e/re2) | `0.4.1` | <a class="ext-badge ext-badge--cate util" href="/ext/cate/util">UTIL</a> | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang cpp" href="/ext/language#cpp">C++</a> |
 {.ext-table}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
@@ -34,85 +34,85 @@ weight: 4235
 {.ext-table}
 
 
-> release 0.3.0; SQL v0.3
+> Stable PGXN and PIGSTY package release 0.4.1 for PostgreSQL 16 through 18.
 
 
 ## 版本
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#util) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.4.0` | {{< pgvers "18,17,16" >}} | `re2` | - |
-| [**RPM**](/ext/rpm#util) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.4.0` | {{< pgvers "18,17,16" >}} | `re2_$v` | - |
-| [**DEB**](/ext/deb#util) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.4.0` | {{< pgvers "18,17,16" >}} | `postgresql-$v-re2` | - |
+| [**EXT**](/ext/list#util) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.4.1` | {{< pgvers "18,17,16" >}} | `re2` | - |
+| [**RPM**](/ext/rpm#util) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.4.1` | {{< pgvers "18,17,16" >}} | `re2_$v` | - |
+| [**DEB**](/ext/deb#util) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.4.1` | {{< pgvers "18,17,16" >}} | `postgresql-$v-re2` | - |
 {.ext-table}
 
 {{< pgext_matrix >}}
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| el8.aarch64 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| el9.x86_64 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| el9.aarch64 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| el10.x86_64 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| el10.aarch64 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| d12.x86_64 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| d12.aarch64 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| d13.x86_64 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| d13.aarch64 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| u22.x86_64 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| u22.aarch64 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| u24.x86_64 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| u24.aarch64 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| u26.x86_64 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-| u26.aarch64 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | AVAIL PIGSTY 0.4.0 1 | MISS PIGSTY - 0 | MISS PIGSTY - 0 |
-@ el8.x86_64 18 re2_18 re2_18-0.4.0-1PIGSTY.el8.x86_64.rpm pigsty 0.4.0 39.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/re2_18-0.4.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 18 re2_18 re2_18-0.4.0-1PIGSTY.el8.aarch64.rpm pigsty 0.4.0 37.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/re2_18-0.4.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 18 re2_18 re2_18-0.4.0-1PIGSTY.el9.x86_64.rpm pigsty 0.4.0 39.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/re2_18-0.4.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 18 re2_18 re2_18-0.4.0-1PIGSTY.el9.aarch64.rpm pigsty 0.4.0 38.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/re2_18-0.4.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 18 re2_18 re2_18-0.4.0-1PIGSTY.el10.x86_64.rpm pigsty 0.4.0 40.2KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/re2_18-0.4.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 18 re2_18 re2_18-0.4.0-1PIGSTY.el10.aarch64.rpm pigsty 0.4.0 38.7KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/re2_18-0.4.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 18 postgresql-18-re2 postgresql-18-re2_0.4.0-1PIGSTY~bookworm_amd64.deb pigsty 0.4.0 66.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/r/re2/postgresql-18-re2_0.4.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 18 postgresql-18-re2 postgresql-18-re2_0.4.0-1PIGSTY~bookworm_arm64.deb pigsty 0.4.0 65.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/r/re2/postgresql-18-re2_0.4.0-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 18 postgresql-18-re2 postgresql-18-re2_0.4.0-1PIGSTY~trixie_amd64.deb pigsty 0.4.0 68.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/r/re2/postgresql-18-re2_0.4.0-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 18 postgresql-18-re2 postgresql-18-re2_0.4.0-1PIGSTY~trixie_arm64.deb pigsty 0.4.0 67.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/r/re2/postgresql-18-re2_0.4.0-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 18 postgresql-18-re2 postgresql-18-re2_0.4.0-1PIGSTY~jammy_amd64.deb pigsty 0.4.0 69.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/r/re2/postgresql-18-re2_0.4.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 18 postgresql-18-re2 postgresql-18-re2_0.4.0-1PIGSTY~jammy_arm64.deb pigsty 0.4.0 67.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/r/re2/postgresql-18-re2_0.4.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 18 postgresql-18-re2 postgresql-18-re2_0.4.0-1PIGSTY~noble_amd64.deb pigsty 0.4.0 67.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/r/re2/postgresql-18-re2_0.4.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 18 postgresql-18-re2 postgresql-18-re2_0.4.0-1PIGSTY~noble_arm64.deb pigsty 0.4.0 66.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/r/re2/postgresql-18-re2_0.4.0-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 18 postgresql-18-re2 postgresql-18-re2_0.4.0-1PIGSTY~resolute_amd64.deb pigsty 0.4.0 67.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/r/re2/postgresql-18-re2_0.4.0-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 18 postgresql-18-re2 postgresql-18-re2_0.4.0-1PIGSTY~resolute_arm64.deb pigsty 0.4.0 66.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/r/re2/postgresql-18-re2_0.4.0-1PIGSTY~resolute_arm64.deb
-@ el8.x86_64 17 re2_17 re2_17-0.4.0-1PIGSTY.el8.x86_64.rpm pigsty 0.4.0 39.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/re2_17-0.4.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 17 re2_17 re2_17-0.4.0-1PIGSTY.el8.aarch64.rpm pigsty 0.4.0 37.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/re2_17-0.4.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 17 re2_17 re2_17-0.4.0-1PIGSTY.el9.x86_64.rpm pigsty 0.4.0 39.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/re2_17-0.4.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 17 re2_17 re2_17-0.4.0-1PIGSTY.el9.aarch64.rpm pigsty 0.4.0 38.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/re2_17-0.4.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 17 re2_17 re2_17-0.4.0-1PIGSTY.el10.x86_64.rpm pigsty 0.4.0 40.1KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/re2_17-0.4.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 17 re2_17 re2_17-0.4.0-1PIGSTY.el10.aarch64.rpm pigsty 0.4.0 38.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/re2_17-0.4.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 17 postgresql-17-re2 postgresql-17-re2_0.4.0-1PIGSTY~bookworm_amd64.deb pigsty 0.4.0 66.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/r/re2/postgresql-17-re2_0.4.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 17 postgresql-17-re2 postgresql-17-re2_0.4.0-1PIGSTY~bookworm_arm64.deb pigsty 0.4.0 65.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/r/re2/postgresql-17-re2_0.4.0-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 17 postgresql-17-re2 postgresql-17-re2_0.4.0-1PIGSTY~trixie_amd64.deb pigsty 0.4.0 68.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/r/re2/postgresql-17-re2_0.4.0-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 17 postgresql-17-re2 postgresql-17-re2_0.4.0-1PIGSTY~trixie_arm64.deb pigsty 0.4.0 67.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/r/re2/postgresql-17-re2_0.4.0-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 17 postgresql-17-re2 postgresql-17-re2_0.4.0-1PIGSTY~jammy_amd64.deb pigsty 0.4.0 74.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/r/re2/postgresql-17-re2_0.4.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 17 postgresql-17-re2 postgresql-17-re2_0.4.0-1PIGSTY~jammy_arm64.deb pigsty 0.4.0 73.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/r/re2/postgresql-17-re2_0.4.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 17 postgresql-17-re2 postgresql-17-re2_0.4.0-1PIGSTY~noble_amd64.deb pigsty 0.4.0 66.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/r/re2/postgresql-17-re2_0.4.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 17 postgresql-17-re2 postgresql-17-re2_0.4.0-1PIGSTY~noble_arm64.deb pigsty 0.4.0 66.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/r/re2/postgresql-17-re2_0.4.0-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 17 postgresql-17-re2 postgresql-17-re2_0.4.0-1PIGSTY~resolute_amd64.deb pigsty 0.4.0 67.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/r/re2/postgresql-17-re2_0.4.0-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 17 postgresql-17-re2 postgresql-17-re2_0.4.0-1PIGSTY~resolute_arm64.deb pigsty 0.4.0 66.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/r/re2/postgresql-17-re2_0.4.0-1PIGSTY~resolute_arm64.deb
-@ el8.x86_64 16 re2_16 re2_16-0.4.0-1PIGSTY.el8.x86_64.rpm pigsty 0.4.0 39.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/re2_16-0.4.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 16 re2_16 re2_16-0.4.0-1PIGSTY.el8.aarch64.rpm pigsty 0.4.0 37.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/re2_16-0.4.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 16 re2_16 re2_16-0.4.0-1PIGSTY.el9.x86_64.rpm pigsty 0.4.0 39.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/re2_16-0.4.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 16 re2_16 re2_16-0.4.0-1PIGSTY.el9.aarch64.rpm pigsty 0.4.0 38.3KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/re2_16-0.4.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 16 re2_16 re2_16-0.4.0-1PIGSTY.el10.x86_64.rpm pigsty 0.4.0 40.1KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/re2_16-0.4.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 16 re2_16 re2_16-0.4.0-1PIGSTY.el10.aarch64.rpm pigsty 0.4.0 38.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/re2_16-0.4.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 16 postgresql-16-re2 postgresql-16-re2_0.4.0-1PIGSTY~bookworm_amd64.deb pigsty 0.4.0 66.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/r/re2/postgresql-16-re2_0.4.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 16 postgresql-16-re2 postgresql-16-re2_0.4.0-1PIGSTY~bookworm_arm64.deb pigsty 0.4.0 65.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/r/re2/postgresql-16-re2_0.4.0-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 16 postgresql-16-re2 postgresql-16-re2_0.4.0-1PIGSTY~trixie_amd64.deb pigsty 0.4.0 68.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/r/re2/postgresql-16-re2_0.4.0-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 16 postgresql-16-re2 postgresql-16-re2_0.4.0-1PIGSTY~trixie_arm64.deb pigsty 0.4.0 66.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/r/re2/postgresql-16-re2_0.4.0-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 16 postgresql-16-re2 postgresql-16-re2_0.4.0-1PIGSTY~jammy_amd64.deb pigsty 0.4.0 74.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/r/re2/postgresql-16-re2_0.4.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 16 postgresql-16-re2 postgresql-16-re2_0.4.0-1PIGSTY~jammy_arm64.deb pigsty 0.4.0 73.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/r/re2/postgresql-16-re2_0.4.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 16 postgresql-16-re2 postgresql-16-re2_0.4.0-1PIGSTY~noble_amd64.deb pigsty 0.4.0 66.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/r/re2/postgresql-16-re2_0.4.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 16 postgresql-16-re2 postgresql-16-re2_0.4.0-1PIGSTY~noble_arm64.deb pigsty 0.4.0 66.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/r/re2/postgresql-16-re2_0.4.0-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 16 postgresql-16-re2 postgresql-16-re2_0.4.0-1PIGSTY~resolute_amd64.deb pigsty 0.4.0 67.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/r/re2/postgresql-16-re2_0.4.0-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 16 postgresql-16-re2 postgresql-16-re2_0.4.0-1PIGSTY~resolute_arm64.deb pigsty 0.4.0 66.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/r/re2/postgresql-16-re2_0.4.0-1PIGSTY~resolute_arm64.deb
+| el8.x86_64 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| el8.aarch64 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| el9.x86_64 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| el9.aarch64 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| el10.x86_64 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| el10.aarch64 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| d12.x86_64 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| d12.aarch64 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| d13.x86_64 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| d13.aarch64 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| u22.x86_64 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| u22.aarch64 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| u24.x86_64 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| u24.aarch64 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| u26.x86_64 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+| u26.aarch64 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | AVAIL PIGSTY 0.4.1 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
+@ el8.x86_64 18 re2_18 re2_18-0.4.1-1PIGSTY.el8.x86_64.rpm pigsty 0.4.1 41.9KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/re2_18-0.4.1-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 18 re2_18 re2_18-0.4.1-1PIGSTY.el8.aarch64.rpm pigsty 0.4.1 39.8KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/re2_18-0.4.1-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 18 re2_18 re2_18-0.4.1-1PIGSTY.el9.x86_64.rpm pigsty 0.4.1 41.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/re2_18-0.4.1-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 18 re2_18 re2_18-0.4.1-1PIGSTY.el9.aarch64.rpm pigsty 0.4.1 40.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/re2_18-0.4.1-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 18 re2_18 re2_18-0.4.1-1PIGSTY.el10.x86_64.rpm pigsty 0.4.1 42.8KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/re2_18-0.4.1-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 18 re2_18 re2_18-0.4.1-1PIGSTY.el10.aarch64.rpm pigsty 0.4.1 40.8KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/re2_18-0.4.1-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-re2 postgresql-18-re2_0.4.1-1PIGSTY~bookworm_amd64.deb pigsty 0.4.1 74.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/r/re2/postgresql-18-re2_0.4.1-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 18 postgresql-18-re2 postgresql-18-re2_0.4.1-1PIGSTY~bookworm_arm64.deb pigsty 0.4.1 72.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/r/re2/postgresql-18-re2_0.4.1-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 18 postgresql-18-re2 postgresql-18-re2_0.4.1-1PIGSTY~trixie_amd64.deb pigsty 0.4.1 76.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/r/re2/postgresql-18-re2_0.4.1-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 18 postgresql-18-re2 postgresql-18-re2_0.4.1-1PIGSTY~trixie_arm64.deb pigsty 0.4.1 74.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/r/re2/postgresql-18-re2_0.4.1-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 18 postgresql-18-re2 postgresql-18-re2_0.4.1-1PIGSTY~jammy_amd64.deb pigsty 0.4.1 77.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/r/re2/postgresql-18-re2_0.4.1-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 18 postgresql-18-re2 postgresql-18-re2_0.4.1-1PIGSTY~jammy_arm64.deb pigsty 0.4.1 74.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/r/re2/postgresql-18-re2_0.4.1-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 18 postgresql-18-re2 postgresql-18-re2_0.4.1-1PIGSTY~noble_amd64.deb pigsty 0.4.1 74.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/r/re2/postgresql-18-re2_0.4.1-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 18 postgresql-18-re2 postgresql-18-re2_0.4.1-1PIGSTY~noble_arm64.deb pigsty 0.4.1 74.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/r/re2/postgresql-18-re2_0.4.1-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 18 postgresql-18-re2 postgresql-18-re2_0.4.1-1PIGSTY~resolute_amd64.deb pigsty 0.4.1 76.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/r/re2/postgresql-18-re2_0.4.1-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 18 postgresql-18-re2 postgresql-18-re2_0.4.1-1PIGSTY~resolute_arm64.deb pigsty 0.4.1 74.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/r/re2/postgresql-18-re2_0.4.1-1PIGSTY~resolute_arm64.deb
+@ el8.x86_64 17 re2_17 re2_17-0.4.1-1PIGSTY.el8.x86_64.rpm pigsty 0.4.1 41.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/re2_17-0.4.1-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 17 re2_17 re2_17-0.4.1-1PIGSTY.el8.aarch64.rpm pigsty 0.4.1 39.8KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/re2_17-0.4.1-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 17 re2_17 re2_17-0.4.1-1PIGSTY.el9.x86_64.rpm pigsty 0.4.1 41.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/re2_17-0.4.1-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 17 re2_17 re2_17-0.4.1-1PIGSTY.el9.aarch64.rpm pigsty 0.4.1 40.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/re2_17-0.4.1-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 17 re2_17 re2_17-0.4.1-1PIGSTY.el10.x86_64.rpm pigsty 0.4.1 42.9KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/re2_17-0.4.1-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 17 re2_17 re2_17-0.4.1-1PIGSTY.el10.aarch64.rpm pigsty 0.4.1 40.7KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/re2_17-0.4.1-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-re2 postgresql-17-re2_0.4.1-1PIGSTY~bookworm_amd64.deb pigsty 0.4.1 74.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/r/re2/postgresql-17-re2_0.4.1-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 17 postgresql-17-re2 postgresql-17-re2_0.4.1-1PIGSTY~bookworm_arm64.deb pigsty 0.4.1 72.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/r/re2/postgresql-17-re2_0.4.1-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 17 postgresql-17-re2 postgresql-17-re2_0.4.1-1PIGSTY~trixie_amd64.deb pigsty 0.4.1 76.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/r/re2/postgresql-17-re2_0.4.1-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 17 postgresql-17-re2 postgresql-17-re2_0.4.1-1PIGSTY~trixie_arm64.deb pigsty 0.4.1 74.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/r/re2/postgresql-17-re2_0.4.1-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 17 postgresql-17-re2 postgresql-17-re2_0.4.1-1PIGSTY~jammy_amd64.deb pigsty 0.4.1 83.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/r/re2/postgresql-17-re2_0.4.1-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 17 postgresql-17-re2 postgresql-17-re2_0.4.1-1PIGSTY~jammy_arm64.deb pigsty 0.4.1 81.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/r/re2/postgresql-17-re2_0.4.1-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 17 postgresql-17-re2 postgresql-17-re2_0.4.1-1PIGSTY~noble_amd64.deb pigsty 0.4.1 74.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/r/re2/postgresql-17-re2_0.4.1-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 17 postgresql-17-re2 postgresql-17-re2_0.4.1-1PIGSTY~noble_arm64.deb pigsty 0.4.1 73.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/r/re2/postgresql-17-re2_0.4.1-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 17 postgresql-17-re2 postgresql-17-re2_0.4.1-1PIGSTY~resolute_amd64.deb pigsty 0.4.1 76.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/r/re2/postgresql-17-re2_0.4.1-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 17 postgresql-17-re2 postgresql-17-re2_0.4.1-1PIGSTY~resolute_arm64.deb pigsty 0.4.1 74.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/r/re2/postgresql-17-re2_0.4.1-1PIGSTY~resolute_arm64.deb
+@ el8.x86_64 16 re2_16 re2_16-0.4.1-1PIGSTY.el8.x86_64.rpm pigsty 0.4.1 41.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/re2_16-0.4.1-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 16 re2_16 re2_16-0.4.1-1PIGSTY.el8.aarch64.rpm pigsty 0.4.1 39.8KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/re2_16-0.4.1-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 16 re2_16 re2_16-0.4.1-1PIGSTY.el9.x86_64.rpm pigsty 0.4.1 41.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/re2_16-0.4.1-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 16 re2_16 re2_16-0.4.1-1PIGSTY.el9.aarch64.rpm pigsty 0.4.1 40.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/re2_16-0.4.1-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 16 re2_16 re2_16-0.4.1-1PIGSTY.el10.x86_64.rpm pigsty 0.4.1 42.9KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/re2_16-0.4.1-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 16 re2_16 re2_16-0.4.1-1PIGSTY.el10.aarch64.rpm pigsty 0.4.1 40.7KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/re2_16-0.4.1-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 16 postgresql-16-re2 postgresql-16-re2_0.4.1-1PIGSTY~bookworm_amd64.deb pigsty 0.4.1 74.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/r/re2/postgresql-16-re2_0.4.1-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 16 postgresql-16-re2 postgresql-16-re2_0.4.1-1PIGSTY~bookworm_arm64.deb pigsty 0.4.1 72.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/r/re2/postgresql-16-re2_0.4.1-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 16 postgresql-16-re2 postgresql-16-re2_0.4.1-1PIGSTY~trixie_amd64.deb pigsty 0.4.1 76.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/r/re2/postgresql-16-re2_0.4.1-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 16 postgresql-16-re2 postgresql-16-re2_0.4.1-1PIGSTY~trixie_arm64.deb pigsty 0.4.1 74.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/r/re2/postgresql-16-re2_0.4.1-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 16 postgresql-16-re2 postgresql-16-re2_0.4.1-1PIGSTY~jammy_amd64.deb pigsty 0.4.1 83.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/r/re2/postgresql-16-re2_0.4.1-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 16 postgresql-16-re2 postgresql-16-re2_0.4.1-1PIGSTY~jammy_arm64.deb pigsty 0.4.1 80.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/r/re2/postgresql-16-re2_0.4.1-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 16 postgresql-16-re2 postgresql-16-re2_0.4.1-1PIGSTY~noble_amd64.deb pigsty 0.4.1 74.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/r/re2/postgresql-16-re2_0.4.1-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 16 postgresql-16-re2 postgresql-16-re2_0.4.1-1PIGSTY~noble_arm64.deb pigsty 0.4.1 73.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/r/re2/postgresql-16-re2_0.4.1-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 16 postgresql-16-re2 postgresql-16-re2_0.4.1-1PIGSTY~resolute_amd64.deb pigsty 0.4.1 76.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/r/re2/postgresql-16-re2_0.4.1-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 16 postgresql-16-re2 postgresql-16-re2_0.4.1-1PIGSTY~resolute_arm64.deb pigsty 0.4.1 74.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/r/re2/postgresql-16-re2_0.4.1-1PIGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建
@@ -170,14 +170,16 @@ apt install -y postgresql-16-re2   # PG 16
 CREATE EXTENSION re2;
 ```
 
-
-
-
 ## 用法
 
-来源：[official README](https://github.com/ClickHouse/pg_re2/blob/main/README.md)、[official reference doc](https://github.com/ClickHouse/pg_re2/blob/main/doc/re2.md)、[v0.3.0 release](https://github.com/ClickHouse/pg_re2/releases/tag/v0.3.0)
+来源：
 
-`re2` 提供由 Google RE2 引擎驱动、与 ClickHouse 兼容的正则表达式函数。它同时暴露 `text` 和 `bytea` 重载，因此也可以搜索包含 `\\0` 字节的二进制数据。Pigsty 为 PostgreSQL 16-18 打包版本 `0.3.0`，而上游文档说明支持 PostgreSQL 13+。
+- [pg_re2 v0.4.1 README](https://github.com/ClickHouse/pg_re2/blob/v0.4.1/README.md)
+- [SQL 参考](https://github.com/ClickHouse/pg_re2/blob/v0.4.1/doc/re2.md)
+- [v0.4.0 发行说明](https://github.com/ClickHouse/pg_re2/releases/tag/v0.4.0)
+- [v0.4.1 发行说明](https://github.com/ClickHouse/pg_re2/releases/tag/v0.4.1)
+
+`re2` 提供与 ClickHouse 兼容、由 Google RE2 引擎实现的正则表达式函数。它同时提供 `text` 与 `bytea` 重载，因此也能搜索包含 `\\0` 字节的二进制数据。版本 `0.4.1` 还增加了索引辅助匹配，并可报告所链接的 RE2 版本。
 
 ```sql
 CREATE EXTENSION re2;
@@ -185,6 +187,7 @@ CREATE EXTENSION re2;
 SELECT re2match('hello world', 'h.*o');
 SELECT re2extract('Order #123', '(\\d+)');
 SELECT re2countmatches('a1 b2 c3', '\\d');
+SELECT re2_version();
 ```
 
 ### 核心函数
@@ -200,7 +203,7 @@ SELECT re2countmatches('a1 b2 c3', '\\d');
 - `re2splitbyregexp(pattern, haystack, max_substrings default 0) -> text[]|bytea[]`
 - `re2replaceregexpone(haystack, pattern, replacement) -> text|bytea`
 - `re2replaceregexpall(haystack, pattern, replacement) -> text|bytea`
-- `re2countmatches(...)` 和 `re2countmatchescaseinsensitive(...)`
+- `re2countmatches(...)` 与 `re2countmatchescaseinsensitive(...)`
 
 ```sql
 SELECT re2extractallgroupsvertical('a=1 b=2', '(\\w)=(\\d)');
@@ -210,7 +213,7 @@ SELECT re2splitbyregexp('\\s+', 'one two three', 2);
 
 ### 多模式匹配
 
-`re2multimatch*` 系列既接受多个 pattern 参数，也接受 `VARIADIC` 数组：
+`re2multimatch*` 函数族既可接受多个模式参数，也可接受 `VARIADIC` 数组：
 
 ```sql
 SELECT re2multimatchany('error: timeout', 'timeout', 'denied');
@@ -218,15 +221,32 @@ SELECT re2multimatchanyindex('error: timeout', VARIADIC ARRAY['timeout', 'denied
 SELECT re2multimatchallindices('error: timeout', 'error', 'timeout', 'panic');
 ```
 
+### 索引支持
+
+版本 `0.4.0` 增加两种互补的索引路径：
+
+```sql
+-- Anchored constant patterns can use a normal btree prefix scan.
+CREATE INDEX docs_body_btree ON docs (body);
+SELECT * FROM docs WHERE re2match(body, '^order_2025');
+
+-- The @~ operator can use the extension's GIN operator class.
+CREATE INDEX docs_body_re2_gin ON docs USING gin (body gin_re2_ops);
+SELECT * FROM docs WHERE body @~ 'timeout|denied';
+```
+
+扩展还为 RE2 谓词提供选择率估算。在 btree、GIN 与顺序扫描之间做选择前，请用代表性数据检查 `EXPLAIN`。
+
 ### 匹配语义
 
-- 为了匹配 ClickHouse 行为，`.` 默认会匹配换行。
-- 如果希望 `.` 不跨越换行，请在 pattern 前加上 `(?-s)`。
-- 替换字符串支持 `\\0` 到 `\\9` 反向引用。
+- 为匹配 ClickHouse 行为，`.` 默认可以匹配换行符。
+- 如果不希望 `.` 跨越换行，请在模式前添加 `(?-s)`。
+- 替换字符串支持 `\\0` 到 `\\9` 的反向引用。
 
 ### 注意事项
 
-- 上游要求构建/安装时系统中有 `re2` 库。
-- Release `v0.3.0` 使用 SQL version `0.3`；从更早 minor release 替换扩展二进制后，执行 `ALTER EXTENSION re2 UPDATE TO '0.3'`。
-- `re2splitbyregexp` 在 `v0.3.0` 中将参数顺序改为 `pattern, haystack[, max_substrings]`，与 ClickHouse 一致。早期 `0.2.0` build 使用的是 `haystack, pattern`。
-- 上游将 patch releases 视为 binary-only，但 minor releases 可能需要 SQL upgrade scripts。
+- 上游要求在构建/安装时存在系统 `re2` 库。
+- `v0.4.x` 二进制使用 SQL 扩展版本 `0.4`；替换旧二进制后，如有待处理的升级，请运行 `ALTER EXTENSION re2 UPDATE TO '0.4'`。
+- `v0.4.1` 修复了与缓存相关的释放后使用问题，并改善稳定模式与多模式匹配性能；应使用它而不是 `v0.4.0`。
+- `re2splitbyregexp` 的参数顺序是 `pattern, haystack[, max_substrings]`；早于 `0.3.0` 的构建使用相反顺序。
+- RE2 有意不支持模式中的反向引用和环视断言等功能；它的有界时间行为与 PostgreSQL 原生正则表达式引擎不同。

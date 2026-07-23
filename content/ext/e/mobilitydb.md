@@ -11,6 +11,11 @@ weight: 1650
     <div class="ext-card__title">MobilityDB/MobilityDB</div>
     <div class="ext-card__desc">https://github.com/MobilityDB/MobilityDB</div>
   </a>
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/mobilitydb-1.3.0.tar.gz">
+    <div class="ext-card__kicker">源码</div>
+    <div class="ext-card__title">mobilitydb-1.3.0.tar.gz</div>
+    <div class="ext-card__desc">mobilitydb-1.3.0.tar.gz</div>
+  </a>
 </div>
 
 
@@ -20,12 +25,12 @@ weight: 1650
 
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
-| [**`mobilitydb`**](/ext/e/mobilitydb) | `1.3.0` | <a class="ext-badge ext-badge--cate gis" href="/ext/cate/gis">GIS</a> | <a class="ext-badge ext-badge--license gpl30" href="/ext/license#gpl30">GPL-3.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
+| [**`mobilitydb`**](/ext/e/mobilitydb) | `1.3.0` | <a class="ext-badge ext-badge--cate gis" href="/ext/cate/gis">GIS</a> | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
 {.ext-table}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
 |:-----:|:-------------------------------------------------------------------------|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|:----------|
-| 1650  | [**`mobilitydb`**](/ext/e/mobilitydb) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
+| 1650  | [**`mobilitydb`**](/ext/e/mobilitydb) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | - |
 | 1651  | [**`mobilitydb_datagen`**](/ext/e/mobilitydb_datagen) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
 {.ext-table}
 
@@ -35,36 +40,40 @@ weight: 1650
 {.ext-table .ext-table--rel}
 
 
-> need another schema
-
-
 ## 版本
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#gis) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `1.3.0` | {{< pgvers "18,17,16,15,14" >}} | `mobilitydb` | `postgis` |
-| [**DEB**](/ext/deb#gis) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `1.3.0` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-mobilitydb` | - |
+| [**EXT**](/ext/list#gis) | <a class="ext-badge ext-badge--repo mixed" href="/ext/repo#mixed">MIXED</a> | `1.3.0` | {{< pgvers "18,17,16,15,14" >}} | `mobilitydb` | `postgis` |
+| [**RPM**](/ext/rpm#gis) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.3.0` | {{< pgvers "18,17,16,15,14" >}} | `mobilitydb_$v` | `postgis36_$v` |
+| [**DEB**](/ext/deb#gis) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `1.3.0` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-mobilitydb` | `postgresql-$v-postgis-3` |
 {.ext-table}
 
 {{< pgext_matrix >}}
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
-| el8.aarch64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
-| el9.x86_64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
-| el9.aarch64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
-| el10.x86_64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
-| el10.aarch64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
+| el8.x86_64 | AVAIL PIGSTY 1.3.0 1 | AVAIL PIGSTY 1.3.0 1 | AVAIL PIGSTY 1.3.0 1 | AVAIL PIGSTY 1.3.0 1 | AVAIL PIGSTY 1.3.0 1 |
+| el8.aarch64 | AVAIL PIGSTY 1.3.0 1 | AVAIL PIGSTY 1.3.0 1 | AVAIL PIGSTY 1.3.0 1 | AVAIL PIGSTY 1.3.0 1 | AVAIL PIGSTY 1.3.0 1 |
+| el9.x86_64 | AVAIL PIGSTY 1.3.0 1 | AVAIL PIGSTY 1.3.0 1 | AVAIL PIGSTY 1.3.0 1 | AVAIL PIGSTY 1.3.0 1 | AVAIL PIGSTY 1.3.0 1 |
+| el9.aarch64 | AVAIL PIGSTY 1.3.0 1 | AVAIL PIGSTY 1.3.0 1 | AVAIL PIGSTY 1.3.0 1 | AVAIL PIGSTY 1.3.0 1 | AVAIL PIGSTY 1.3.0 1 |
+| el10.x86_64 | AVAIL PIGSTY 1.3.0 1 | AVAIL PIGSTY 1.3.0 1 | AVAIL PIGSTY 1.3.0 1 | AVAIL PIGSTY 1.3.0 1 | AVAIL PIGSTY 1.3.0 1 |
+| el10.aarch64 | AVAIL PIGSTY 1.3.0 1 | AVAIL PIGSTY 1.3.0 1 | AVAIL PIGSTY 1.3.0 1 | AVAIL PIGSTY 1.3.0 1 | AVAIL PIGSTY 1.3.0 1 |
 | d12.x86_64 | AVAIL PGDG 1.3.0 3 | AVAIL PGDG 1.3.0 3 | AVAIL PGDG 1.3.0 3 | AVAIL PGDG 1.3.0 3 | AVAIL PGDG 1.3.0 3 |
 | d12.aarch64 | AVAIL PGDG 1.3.0 3 | AVAIL PGDG 1.3.0 3 | AVAIL PGDG 1.3.0 3 | AVAIL PGDG 1.3.0 3 | AVAIL PGDG 1.3.0 3 |
 | d13.x86_64 | AVAIL PGDG 1.3.0 3 | AVAIL PGDG 1.3.0 3 | AVAIL PGDG 1.3.0 3 | AVAIL PGDG 1.3.0 3 | AVAIL PGDG 1.3.0 3 |
 | d13.aarch64 | AVAIL PGDG 1.3.0 3 | AVAIL PGDG 1.3.0 3 | AVAIL PGDG 1.3.0 3 | AVAIL PGDG 1.3.0 3 | AVAIL PGDG 1.3.0 3 |
-| u22.x86_64 | MISS PGDG - 0 | AVAIL PGDG 1.2.0 1 | AVAIL PGDG 1.2.0 1 | AVAIL PGDG 1.2.0 1 | AVAIL PGDG 1.2.0 1 |
-| u22.aarch64 | MISS PGDG - 0 | AVAIL PGDG 1.2.0 1 | AVAIL PGDG 1.2.0 1 | AVAIL PGDG 1.2.0 1 | AVAIL PGDG 1.2.0 1 |
+| u22.x86_64 | AVAIL PIGSTY 1.3.0 1 | AVAIL PGDG 1.2.0 1 | AVAIL PGDG 1.2.0 1 | AVAIL PGDG 1.2.0 1 | AVAIL PGDG 1.2.0 1 |
+| u22.aarch64 | AVAIL PIGSTY 1.3.0 1 | AVAIL PGDG 1.2.0 1 | AVAIL PGDG 1.2.0 1 | AVAIL PGDG 1.2.0 1 | AVAIL PGDG 1.2.0 1 |
 | u24.x86_64 | AVAIL PGDG 1.3.0 3 | AVAIL PGDG 1.3.0 3 | AVAIL PGDG 1.3.0 3 | AVAIL PGDG 1.3.0 3 | AVAIL PGDG 1.3.0 3 |
 | u24.aarch64 | AVAIL PGDG 1.3.0 3 | AVAIL PGDG 1.3.0 3 | AVAIL PGDG 1.3.0 3 | AVAIL PGDG 1.3.0 3 | AVAIL PGDG 1.3.0 3 |
 | u26.x86_64 | AVAIL PGDG 1.3.0 3 | AVAIL PGDG 1.3.0 3 | AVAIL PGDG 1.3.0 3 | AVAIL PGDG 1.3.0 3 | AVAIL PGDG 1.3.0 3 |
 | u26.aarch64 | AVAIL PGDG 1.3.0 3 | AVAIL PGDG 1.3.0 3 | AVAIL PGDG 1.3.0 3 | AVAIL PGDG 1.3.0 3 | AVAIL PGDG 1.3.0 3 |
+@ el8.x86_64 18 mobilitydb_18 mobilitydb_18-1.3.0-1PIGSTY.el8.x86_64.rpm pigsty 1.3.0 807.2KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/mobilitydb_18-1.3.0-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 18 mobilitydb_18 mobilitydb_18-1.3.0-1PIGSTY.el8.aarch64.rpm pigsty 1.3.0 751.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/mobilitydb_18-1.3.0-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 18 mobilitydb_18 mobilitydb_18-1.3.0-1PIGSTY.el9.x86_64.rpm pigsty 1.3.0 809.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/mobilitydb_18-1.3.0-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 18 mobilitydb_18 mobilitydb_18-1.3.0-1PIGSTY.el9.aarch64.rpm pigsty 1.3.0 771.8KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/mobilitydb_18-1.3.0-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 18 mobilitydb_18 mobilitydb_18-1.3.0-1PIGSTY.el10.x86_64.rpm pigsty 1.3.0 734.4KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/mobilitydb_18-1.3.0-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 18 mobilitydb_18 mobilitydb_18-1.3.0-1PIGSTY.el10.aarch64.rpm pigsty 1.3.0 708.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/mobilitydb_18-1.3.0-1PIGSTY.el10.aarch64.rpm
 @ d12.x86_64 18 postgresql-18-mobilitydb postgresql-18-mobilitydb_1.3.0-1.pgdg12+1_amd64.deb pgdg 1.3.0 715.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/m/mobilitydb/postgresql-18-mobilitydb_1.3.0-1.pgdg12+1_amd64.deb
 @ d12.x86_64 18 postgresql-18-mobilitydb postgresql-18-mobilitydb_1.3.0~rc1-1.pgdg12+1_amd64.deb pgdg 1.3.0 715.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/m/mobilitydb/postgresql-18-mobilitydb_1.3.0~rc1-1.pgdg12+1_amd64.deb
 @ d12.x86_64 18 postgresql-18-mobilitydb postgresql-18-mobilitydb_1.3.0~alpha-3.pgdg12+1_amd64.deb pgdg 1.3.0 709.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/m/mobilitydb/postgresql-18-mobilitydb_1.3.0~alpha-3.pgdg12+1_amd64.deb
@@ -77,6 +86,8 @@ weight: 1650
 @ d13.aarch64 18 postgresql-18-mobilitydb postgresql-18-mobilitydb_1.3.0-1.pgdg13+1_arm64.deb pgdg 1.3.0 658.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/m/mobilitydb/postgresql-18-mobilitydb_1.3.0-1.pgdg13+1_arm64.deb
 @ d13.aarch64 18 postgresql-18-mobilitydb postgresql-18-mobilitydb_1.3.0~rc1-1.pgdg13+1_arm64.deb pgdg 1.3.0 657.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/m/mobilitydb/postgresql-18-mobilitydb_1.3.0~rc1-1.pgdg13+1_arm64.deb
 @ d13.aarch64 18 postgresql-18-mobilitydb postgresql-18-mobilitydb_1.3.0~alpha-3.pgdg13+1_arm64.deb pgdg 1.3.0 651.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/m/mobilitydb/postgresql-18-mobilitydb_1.3.0~alpha-3.pgdg13+1_arm64.deb
+@ u22.x86_64 18 postgresql-18-mobilitydb postgresql-18-mobilitydb_1.3.0-2PIGSTY~jammy_amd64.deb pigsty 1.3.0 666.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/m/mobilitydb/postgresql-18-mobilitydb_1.3.0-2PIGSTY~jammy_amd64.deb
+@ u22.aarch64 18 postgresql-18-mobilitydb postgresql-18-mobilitydb_1.3.0-2PIGSTY~jammy_arm64.deb pigsty 1.3.0 655.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/m/mobilitydb/postgresql-18-mobilitydb_1.3.0-2PIGSTY~jammy_arm64.deb
 @ u24.x86_64 18 postgresql-18-mobilitydb postgresql-18-mobilitydb_1.3.0-1.pgdg24.04+1_amd64.deb pgdg 1.3.0 618.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/m/mobilitydb/postgresql-18-mobilitydb_1.3.0-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 18 postgresql-18-mobilitydb postgresql-18-mobilitydb_1.3.0~rc1-1.pgdg24.04+1_amd64.deb pgdg 1.3.0 618.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/m/mobilitydb/postgresql-18-mobilitydb_1.3.0~rc1-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 18 postgresql-18-mobilitydb postgresql-18-mobilitydb_1.3.0~alpha-3.pgdg24.04+1_amd64.deb pgdg 1.3.0 609.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/m/mobilitydb/postgresql-18-mobilitydb_1.3.0~alpha-3.pgdg24.04+1_amd64.deb
@@ -89,6 +100,12 @@ weight: 1650
 @ u26.aarch64 18 postgresql-18-mobilitydb postgresql-18-mobilitydb_1.3.0-1.pgdg26.04+1_arm64.deb pgdg 1.3.0 580.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/m/mobilitydb/postgresql-18-mobilitydb_1.3.0-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 18 postgresql-18-mobilitydb postgresql-18-mobilitydb_1.3.0~rc1-1.pgdg26.04+1_arm64.deb pgdg 1.3.0 580.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/m/mobilitydb/postgresql-18-mobilitydb_1.3.0~rc1-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 18 postgresql-18-mobilitydb postgresql-18-mobilitydb_1.3.0~alpha-3.pgdg26.04+1_arm64.deb pgdg 1.3.0 572.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/m/mobilitydb/postgresql-18-mobilitydb_1.3.0~alpha-3.pgdg26.04+1_arm64.deb
+@ el8.x86_64 17 mobilitydb_17 mobilitydb_17-1.3.0-1PIGSTY.el8.x86_64.rpm pigsty 1.3.0 807.4KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/mobilitydb_17-1.3.0-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 17 mobilitydb_17 mobilitydb_17-1.3.0-1PIGSTY.el8.aarch64.rpm pigsty 1.3.0 751.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/mobilitydb_17-1.3.0-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 17 mobilitydb_17 mobilitydb_17-1.3.0-1PIGSTY.el9.x86_64.rpm pigsty 1.3.0 809.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/mobilitydb_17-1.3.0-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 17 mobilitydb_17 mobilitydb_17-1.3.0-1PIGSTY.el9.aarch64.rpm pigsty 1.3.0 772.8KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/mobilitydb_17-1.3.0-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 17 mobilitydb_17 mobilitydb_17-1.3.0-1PIGSTY.el10.x86_64.rpm pigsty 1.3.0 733.9KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/mobilitydb_17-1.3.0-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 17 mobilitydb_17 mobilitydb_17-1.3.0-1PIGSTY.el10.aarch64.rpm pigsty 1.3.0 708.1KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/mobilitydb_17-1.3.0-1PIGSTY.el10.aarch64.rpm
 @ d12.x86_64 17 postgresql-17-mobilitydb postgresql-17-mobilitydb_1.3.0-1.pgdg12+1_amd64.deb pgdg 1.3.0 715.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/m/mobilitydb/postgresql-17-mobilitydb_1.3.0-1.pgdg12+1_amd64.deb
 @ d12.x86_64 17 postgresql-17-mobilitydb postgresql-17-mobilitydb_1.3.0~rc1-1.pgdg12+1_amd64.deb pgdg 1.3.0 716.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/m/mobilitydb/postgresql-17-mobilitydb_1.3.0~rc1-1.pgdg12+1_amd64.deb
 @ d12.x86_64 17 postgresql-17-mobilitydb postgresql-17-mobilitydb_1.3.0~alpha-3.pgdg12+1_amd64.deb pgdg 1.3.0 709.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/m/mobilitydb/postgresql-17-mobilitydb_1.3.0~alpha-3.pgdg12+1_amd64.deb
@@ -115,6 +132,12 @@ weight: 1650
 @ u26.aarch64 17 postgresql-17-mobilitydb postgresql-17-mobilitydb_1.3.0-1.pgdg26.04+1_arm64.deb pgdg 1.3.0 580.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/m/mobilitydb/postgresql-17-mobilitydb_1.3.0-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 17 postgresql-17-mobilitydb postgresql-17-mobilitydb_1.3.0~rc1-1.pgdg26.04+1_arm64.deb pgdg 1.3.0 580.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/m/mobilitydb/postgresql-17-mobilitydb_1.3.0~rc1-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 17 postgresql-17-mobilitydb postgresql-17-mobilitydb_1.3.0~alpha-3.pgdg26.04+1_arm64.deb pgdg 1.3.0 572.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/m/mobilitydb/postgresql-17-mobilitydb_1.3.0~alpha-3.pgdg26.04+1_arm64.deb
+@ el8.x86_64 16 mobilitydb_16 mobilitydb_16-1.3.0-1PIGSTY.el8.x86_64.rpm pigsty 1.3.0 807.1KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/mobilitydb_16-1.3.0-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 16 mobilitydb_16 mobilitydb_16-1.3.0-1PIGSTY.el8.aarch64.rpm pigsty 1.3.0 751.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/mobilitydb_16-1.3.0-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 16 mobilitydb_16 mobilitydb_16-1.3.0-1PIGSTY.el9.x86_64.rpm pigsty 1.3.0 809.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/mobilitydb_16-1.3.0-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 16 mobilitydb_16 mobilitydb_16-1.3.0-1PIGSTY.el9.aarch64.rpm pigsty 1.3.0 771.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/mobilitydb_16-1.3.0-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 16 mobilitydb_16 mobilitydb_16-1.3.0-1PIGSTY.el10.x86_64.rpm pigsty 1.3.0 734.1KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/mobilitydb_16-1.3.0-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 16 mobilitydb_16 mobilitydb_16-1.3.0-1PIGSTY.el10.aarch64.rpm pigsty 1.3.0 708.3KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/mobilitydb_16-1.3.0-1PIGSTY.el10.aarch64.rpm
 @ d12.x86_64 16 postgresql-16-mobilitydb postgresql-16-mobilitydb_1.3.0-1.pgdg12+1_amd64.deb pgdg 1.3.0 715.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/m/mobilitydb/postgresql-16-mobilitydb_1.3.0-1.pgdg12+1_amd64.deb
 @ d12.x86_64 16 postgresql-16-mobilitydb postgresql-16-mobilitydb_1.3.0~rc1-1.pgdg12+1_amd64.deb pgdg 1.3.0 715.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/m/mobilitydb/postgresql-16-mobilitydb_1.3.0~rc1-1.pgdg12+1_amd64.deb
 @ d12.x86_64 16 postgresql-16-mobilitydb postgresql-16-mobilitydb_1.3.0~alpha-3.pgdg12+1_amd64.deb pgdg 1.3.0 708.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/m/mobilitydb/postgresql-16-mobilitydb_1.3.0~alpha-3.pgdg12+1_amd64.deb
@@ -141,6 +164,12 @@ weight: 1650
 @ u26.aarch64 16 postgresql-16-mobilitydb postgresql-16-mobilitydb_1.3.0-1.pgdg26.04+1_arm64.deb pgdg 1.3.0 580.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/m/mobilitydb/postgresql-16-mobilitydb_1.3.0-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 16 postgresql-16-mobilitydb postgresql-16-mobilitydb_1.3.0~rc1-1.pgdg26.04+1_arm64.deb pgdg 1.3.0 580.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/m/mobilitydb/postgresql-16-mobilitydb_1.3.0~rc1-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 16 postgresql-16-mobilitydb postgresql-16-mobilitydb_1.3.0~alpha-3.pgdg26.04+1_arm64.deb pgdg 1.3.0 572.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/m/mobilitydb/postgresql-16-mobilitydb_1.3.0~alpha-3.pgdg26.04+1_arm64.deb
+@ el8.x86_64 15 mobilitydb_15 mobilitydb_15-1.3.0-1PIGSTY.el8.x86_64.rpm pigsty 1.3.0 806.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/mobilitydb_15-1.3.0-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 15 mobilitydb_15 mobilitydb_15-1.3.0-1PIGSTY.el8.aarch64.rpm pigsty 1.3.0 750.8KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/mobilitydb_15-1.3.0-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 15 mobilitydb_15 mobilitydb_15-1.3.0-1PIGSTY.el9.x86_64.rpm pigsty 1.3.0 808.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/mobilitydb_15-1.3.0-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 15 mobilitydb_15 mobilitydb_15-1.3.0-1PIGSTY.el9.aarch64.rpm pigsty 1.3.0 771.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/mobilitydb_15-1.3.0-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 15 mobilitydb_15 mobilitydb_15-1.3.0-1PIGSTY.el10.x86_64.rpm pigsty 1.3.0 733.4KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/mobilitydb_15-1.3.0-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 15 mobilitydb_15 mobilitydb_15-1.3.0-1PIGSTY.el10.aarch64.rpm pigsty 1.3.0 707.8KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/mobilitydb_15-1.3.0-1PIGSTY.el10.aarch64.rpm
 @ d12.x86_64 15 postgresql-15-mobilitydb postgresql-15-mobilitydb_1.3.0-1.pgdg12+1_amd64.deb pgdg 1.3.0 715.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/m/mobilitydb/postgresql-15-mobilitydb_1.3.0-1.pgdg12+1_amd64.deb
 @ d12.x86_64 15 postgresql-15-mobilitydb postgresql-15-mobilitydb_1.3.0~rc1-1.pgdg12+1_amd64.deb pgdg 1.3.0 715.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/m/mobilitydb/postgresql-15-mobilitydb_1.3.0~rc1-1.pgdg12+1_amd64.deb
 @ d12.x86_64 15 postgresql-15-mobilitydb postgresql-15-mobilitydb_1.3.0~alpha-3.pgdg12+1_amd64.deb pgdg 1.3.0 708.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/m/mobilitydb/postgresql-15-mobilitydb_1.3.0~alpha-3.pgdg12+1_amd64.deb
@@ -167,6 +196,12 @@ weight: 1650
 @ u26.aarch64 15 postgresql-15-mobilitydb postgresql-15-mobilitydb_1.3.0-1.pgdg26.04+1_arm64.deb pgdg 1.3.0 580.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/m/mobilitydb/postgresql-15-mobilitydb_1.3.0-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 15 postgresql-15-mobilitydb postgresql-15-mobilitydb_1.3.0~rc1-1.pgdg26.04+1_arm64.deb pgdg 1.3.0 580.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/m/mobilitydb/postgresql-15-mobilitydb_1.3.0~rc1-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 15 postgresql-15-mobilitydb postgresql-15-mobilitydb_1.3.0~alpha-3.pgdg26.04+1_arm64.deb pgdg 1.3.0 572.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/m/mobilitydb/postgresql-15-mobilitydb_1.3.0~alpha-3.pgdg26.04+1_arm64.deb
+@ el8.x86_64 14 mobilitydb_14 mobilitydb_14-1.3.0-1PIGSTY.el8.x86_64.rpm pigsty 1.3.0 806.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/mobilitydb_14-1.3.0-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 14 mobilitydb_14 mobilitydb_14-1.3.0-1PIGSTY.el8.aarch64.rpm pigsty 1.3.0 751.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/mobilitydb_14-1.3.0-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 14 mobilitydb_14 mobilitydb_14-1.3.0-1PIGSTY.el9.x86_64.rpm pigsty 1.3.0 809.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/mobilitydb_14-1.3.0-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 14 mobilitydb_14 mobilitydb_14-1.3.0-1PIGSTY.el9.aarch64.rpm pigsty 1.3.0 772.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/mobilitydb_14-1.3.0-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 14 mobilitydb_14 mobilitydb_14-1.3.0-1PIGSTY.el10.x86_64.rpm pigsty 1.3.0 733.1KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/mobilitydb_14-1.3.0-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 14 mobilitydb_14 mobilitydb_14-1.3.0-1PIGSTY.el10.aarch64.rpm pigsty 1.3.0 708.1KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/mobilitydb_14-1.3.0-1PIGSTY.el10.aarch64.rpm
 @ d12.x86_64 14 postgresql-14-mobilitydb postgresql-14-mobilitydb_1.3.0-1.pgdg12+1_amd64.deb pgdg 1.3.0 716.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/m/mobilitydb/postgresql-14-mobilitydb_1.3.0-1.pgdg12+1_amd64.deb
 @ d12.x86_64 14 postgresql-14-mobilitydb postgresql-14-mobilitydb_1.3.0~rc1-1.pgdg12+1_amd64.deb pgdg 1.3.0 716.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/m/mobilitydb/postgresql-14-mobilitydb_1.3.0~rc1-1.pgdg12+1_amd64.deb
 @ d12.x86_64 14 postgresql-14-mobilitydb postgresql-14-mobilitydb_1.3.0~alpha-3.pgdg12+1_amd64.deb pgdg 1.3.0 708.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/m/mobilitydb/postgresql-14-mobilitydb_1.3.0~alpha-3.pgdg12+1_amd64.deb
@@ -195,13 +230,21 @@ weight: 1650
 @ u26.aarch64 14 postgresql-14-mobilitydb postgresql-14-mobilitydb_1.3.0~alpha-3.pgdg26.04+1_arm64.deb pgdg 1.3.0 572.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/m/mobilitydb/postgresql-14-mobilitydb_1.3.0~alpha-3.pgdg26.04+1_arm64.deb
 {{< /pgext_matrix >}}
 
+## 构建
+
+您可以使用 `pig build` 命令构建 `mobilitydb` 扩展的 RPM 包：
+
+```bash
+pig build pkg mobilitydb         # 构建 RPM 包
+```
+
 
 ## 安装
 
-您可以直接安装 `mobilitydb` 扩展包的预置二进制包，首先确保 [**PGDG**](/docs/repo/pgdg) 仓库已经添加并启用：
+您可以直接安装 `mobilitydb` 扩展包的预置二进制包，首先确保 [**PGDG**](/docs/repo/pgdg) 和 [**PIGSTY**](/docs/repo/pgsql) 仓库已经添加并启用：
 
 ```bash
-pig repo add pgdg -u          # 添加 PGDG 仓库并更新缓存
+pig repo add pgsql -u          # 添加仓库并更新缓存
 ```
 
 使用 [**pig**](/docs/pig) 或者是 `apt/yum/dnf` 安装扩展：
@@ -221,6 +264,15 @@ pig ext install -y mobilitydb -v 15  # PG 15
 pig ext install -y mobilitydb -v 14  # PG 14
 ```
 {{% /tab %}}
+{{% tab header="dnf" %}}
+```bash
+dnf install -y mobilitydb_18       # PG 18
+dnf install -y mobilitydb_17       # PG 17
+dnf install -y mobilitydb_16       # PG 16
+dnf install -y mobilitydb_15       # PG 15
+dnf install -y mobilitydb_14       # PG 14
+```
+{{% /tab %}}
 {{% tab header="apt" %}}
 ```bash
 apt install -y postgresql-18-mobilitydb   # PG 18
@@ -231,6 +283,13 @@ apt install -y postgresql-14-mobilitydb   # PG 14
 ```
 {{% /tab %}}
 {{< /tabpane >}}
+
+
+**预加载配置**：
+
+```bash
+shared_preload_libraries = 'postgis-3';
+```
 
 
 **创建扩展**：
@@ -244,20 +303,20 @@ CREATE EXTENSION mobilitydb CASCADE;  -- 依赖: postgis
 
 ## 用法
 
-来源：[repo README](https://github.com/MobilityDB/MobilityDB), [MobilityDB 1.3 manual](https://mobilitydb.github.io/MobilityDB/master/), [v1.3.0 release](https://github.com/MobilityDB/MobilityDB/releases/tag/v1.3.0)
+来源：[仓库 README](https://github.com/MobilityDB/MobilityDB)、[MobilityDB 1.3 手册](https://mobilitydb.github.io/MobilityDB/master/)、[v1.3.0 版本](https://github.com/MobilityDB/MobilityDB/releases/tag/v1.3.0)
 
-MobilityDB 使用 temporal 和 spatio-temporal 数据类型扩展 PostgreSQL 与 PostGIS，使车辆轨迹、传感器读数和随时间变化属性等 moving object data 能够高效存储、索引和查询。
+MobilityDB 使用时态和时空数据类型扩展 PostgreSQL 与 PostGIS，使车辆轨迹、传感器读数和随时间变化属性等移动对象数据能够高效存储、索引和查询。
 
 **关键文档：**
 
-- [MobilityDB Manual](https://mobilitydb.github.io/MobilityDB/master/)
-- [Temporal Types](https://mobilitydb.github.io/MobilityDB/master/ch04.html)
-- [Spatial-Temporal Types](https://mobilitydb.github.io/MobilityDB/master/ch07.html)
-- [Temporal Poses](https://mobilitydb.github.io/MobilityDB/master/ch11.html)
-- [Temporal Circular Buffers](https://mobilitydb.github.io/MobilityDB/master/ch13.html)
-- [Indexing](https://mobilitydb.github.io/MobilityDB/master/ch10s02.html)
-- [MobilityDB Workshop](https://mobilitydb.com/documentation/)
-- [API Reference](https://mobilitydb.github.io/MobilityDB/master/)
+- [MobilityDB 手册](https://mobilitydb.github.io/MobilityDB/master/)
+- [时态类型](https://mobilitydb.github.io/MobilityDB/master/ch04.html)
+- [时空类型](https://mobilitydb.github.io/MobilityDB/master/ch07.html)
+- [时态姿态](https://mobilitydb.github.io/MobilityDB/master/ch11.html)
+- [时态圆形缓冲区](https://mobilitydb.github.io/MobilityDB/master/ch13.html)
+- [索引](https://mobilitydb.github.io/MobilityDB/master/ch10s02.html)
+- [MobilityDB 教程](https://mobilitydb.com/documentation/)
+- [API 参考](https://mobilitydb.github.io/MobilityDB/master/)
 
 ### 入门
 
@@ -268,61 +327,61 @@ CREATE EXTENSION postgis;
 CREATE EXTENSION mobilitydb;
 ```
 
-### Temporal 类型
+### 时态类型
 
-MobilityDB 为基础类型提供 temporal variants：
+MobilityDB 为基础类型提供对应的时态变体：
 
-| Temporal Type | Base Type | Description |
+| 时态类型 | 基础类型 | 说明 |
 |---------------|-----------|-------------|
-| `tbool`       | `boolean` | Time-varying boolean |
-| `tint`        | `integer` | Time-varying integer |
-| `tfloat`      | `float`   | Time-varying float |
-| `ttext`       | `text`    | Time-varying text |
-| `tgeometry`   | `geometry` | Time-varying arbitrary geometry |
-| `tgeography`  | `geography` | Time-varying arbitrary geography |
-| `tgeompoint`  | `geometry(Point)` | Time-varying geometric point |
-| `tgeogpoint`  | `geography(Point)` | Time-varying geographic point |
-| `tnpoint`     | network point | Time-varying network point |
-| `tcbuffer`    | circular buffer | Time-varying circular buffer |
-| `tpose`       | pose | Time-varying point position and orientation |
-| `trgeometry`  | rigid geometry | Time-varying rigid geometry |
+| `tbool`       | `boolean` | 随时间变化的布尔值 |
+| `tint`        | `integer` | 随时间变化的整数 |
+| `tfloat`      | `float`   | 随时间变化的浮点数 |
+| `ttext`       | `text`    | 随时间变化的文本 |
+| `tgeometry`   | `geometry` | 随时间变化的任意几何对象 |
+| `tgeography`  | `geography` | 随时间变化的任意地理对象 |
+| `tgeompoint`  | `geometry(Point)` | 随时间变化的几何点 |
+| `tgeogpoint`  | `geography(Point)` | 随时间变化的地理点 |
+| `tnpoint`     | 网络点 | 随时间变化的网络点 |
+| `tcbuffer`    | 圆形缓冲区 | 随时间变化的圆形缓冲区 |
+| `tpose`       | 姿态 | 随时间变化的点位置和方向 |
+| `trgeometry`  | 刚性几何对象 | 随时间变化的刚性几何对象 |
 
-MobilityDB 1.3 增加了 `tgeometry`、`tgeography`、`tcbuffer`、`tpose` 和 `trgeometry`。`tgeometry` 与 `tgeography` 支持 discrete 或 step interpolation，不支持任意几何的 linear interpolation。1.3 release notes 将 `tcbuffer`、`tpose` 和 `trgeometry` 标记为 experimental。
+MobilityDB 1.3 增加了 `tgeometry`、`tgeography`、`tcbuffer`、`tpose` 和 `trgeometry`。`tgeometry` 与 `tgeography` 支持离散插值或阶梯插值，不支持任意几何对象的线性插值。1.3 版本说明将 `tcbuffer`、`tpose` 和 `trgeometry` 标记为实验性功能。
 
-### Temporal 子类型
+### 时态子类型
 
-每种 temporal type 可按值如何随时间变化表示为不同子类型：
+每种时态类型都可根据值随时间变化的方式表示为不同子类型：
 
-| Subtype | Description | Example |
+| 子类型 | 说明 | 示例 |
 |---------|-------------|---------|
 | **Instant** | 单个时间戳上的单个值 | `'25.5@2025-01-01 08:00'` |
 | **Sequence** | 一个时间区间上的连续值 | `'[25.5@08:00, 28.1@09:00, 30.0@10:00]'` |
-| **SequenceSet** | 一组互不重叠的 sequences | `'{[25.5@08:00, 28.1@09:00], [30.0@11:00, 31.2@12:00]}'` |
+| **SequenceSet** | 一组互不重叠的序列 | `'{[25.5@08:00, 28.1@09:00], [30.0@11:00, 31.2@12:00]}'` |
 
-Sequences 使用方括号表示包含 `[` 或排除 `(` 边界，就像 PostgreSQL range types 一样。
+序列使用方括号表示包含边界 `[`，使用圆括号表示排除边界 `(`，与 PostgreSQL 范围类型相同。
 
-### 创建 Temporal 值
+### 创建时态值
 
-**Instant values：**
+**瞬时值：**
 
 ```sql
 SELECT tfloat '25.5@2025-06-01 08:00:00+00';
 SELECT tgeompoint 'SRID=4326;Point(2.3522 48.8566)@2025-06-01 08:00:00+00';
 ```
 
-**Sequence values（continuous interpolation）：**
+**序列值（连续插值）：**
 
 ```sql
 SELECT tfloat '[20.0@2025-06-01 08:00, 25.5@2025-06-01 09:00, 22.0@2025-06-01 10:00]';
 ```
 
-**Discrete sequences（stepwise interpolation）：**
+**离散序列（阶梯插值）：**
 
 ```sql
 SELECT tint 'Interp=Step;[10@2025-06-01 08:00, 20@2025-06-01 09:00, 15@2025-06-01 10:00]';
 ```
 
-**SequenceSet values：**
+**序列集值：**
 
 ```sql
 SELECT tfloat '{[20.0@08:00, 25.5@09:00], [22.0@11:00, 28.0@12:00]}';
@@ -339,7 +398,7 @@ SELECT tgeompoint_seq(ARRAY[
 ]);
 ```
 
-### Temporal 操作
+### 时态操作
 
 **提取指定时间的值：**
 
@@ -356,14 +415,14 @@ SELECT atTime(trip, tstzspan '[2025-06-01 08:00, 2025-06-01 09:00]')
 FROM trips;
 ```
 
-**获取 temporal value 的时间跨度：**
+**获取时态值的时间跨度：**
 
 ```sql
 SELECT duration(trip), startTimestamp(trip), endTimestamp(trip)
 FROM trips;
 ```
 
-**Temporal comparisons：**
+**时态比较：**
 
 ```sql
 -- Time periods when temperature exceeded 30 degrees
@@ -371,9 +430,9 @@ SELECT atValue(temperature, true)
 FROM (SELECT tfloat '[20@08:00, 35@09:00, 25@10:00]' #> 30.0 AS temperature) t;
 ```
 
-### Spatial-Temporal 操作
+### 时空操作
 
-**Trajectory：提取空间路径为 geometry：**
+**轨迹：将空间路径提取为几何对象：**
 
 ```sql
 SELECT ST_AsText(trajectory(trip))
@@ -398,7 +457,7 @@ FROM trips
 WHERE vehicle_id = 42;
 ```
 
-**Space-time bounding box（stbox）：**
+**时空边界框（stbox）：**
 
 ```sql
 -- Get the space-time bounding box
@@ -420,7 +479,7 @@ SELECT atGeometry(trip, ST_Buffer(ST_Point(2.35, 48.86, 4326), 0.01))
 FROM trips;
 ```
 
-**两个 temporal points 之间的距离：**
+**两个时态点之间的距离：**
 
 ```sql
 SELECT distance(t1.trip, t2.trip)
@@ -439,21 +498,21 @@ WHERE t1.vehicle_id = 1 AND t2.vehicle_id = 2;
 
 ### 索引
 
-MobilityDB 支持 GiST 和 SP-GiST indexes，用于高效 temporal 与 spatio-temporal 查询。
+MobilityDB 支持 GiST 和 SP-GiST 索引，用于高效执行时态与时空查询。
 
-**Temporal types（time dimension）的 SP-GiST index：**
+**时态类型（时间维度）的 SP-GiST 索引：**
 
 ```sql
 CREATE INDEX ON measurements USING spgist(temperature);
 ```
 
-**Spatio-temporal types（space + time）的 GiST index：**
+**时空类型（空间与时间）的 GiST 索引：**
 
 ```sql
 CREATE INDEX ON trips USING gist(trip);
 ```
 
-这些索引可加速 bounding box 查询、temporal overlap 检查和 spatial-temporal intersection：
+这些索引可加速边界框查询、时态重叠检查和时空相交查询：
 
 ```sql
 -- Uses GiST index for space-time filtering
@@ -514,9 +573,9 @@ SELECT ST_AsGeoJSON(trajectory(trip))
 FROM trips WHERE vehicle_id = 1 AND trip_date = '2025-06-01';
 ```
 
-### 示例：Spatio-Temporal Intersection 查询
+### 示例：时空相交查询
 
-查找在给定时间窗口内经过特定区域的所有 trips：
+查找在给定时间窗口内经过特定区域的所有行程：
 
 ```sql
 -- Define area of interest: a circle around the Eiffel Tower
@@ -538,7 +597,7 @@ ORDER BY t.trip_date;
 
 ### 聚合函数
 
-MobilityDB 提供 temporal aggregates：
+MobilityDB 提供时态聚合函数：
 
 ```sql
 -- Time-weighted average of a temporal float
@@ -553,7 +612,7 @@ SELECT tCentroid(trip) FROM trips WHERE trip_date = '2025-06-01';
 
 ### 注意事项
 
-- catalog package 和 extension 都是 `mobilitydb`，版本 `1.3.0`；打包矩阵面向 PostgreSQL 14 到 18，并要求 `postgis`。
-- v1.3.0 release 增加 PostgreSQL 18 和 PostGIS 3.6 支持，但 migration note 说明二进制格式相较 MobilityDB 1.2 已改变，因此从 1.2 升级需要 backup and restore。
+- 目录中的软件包名和扩展名都是 `mobilitydb`，版本为 `1.3.0`；打包矩阵面向 PostgreSQL 14 到 18，并要求 `postgis`。
+- v1.3.0 增加 PostgreSQL 18 和 PostGIS 3.6 支持，但迁移说明指出二进制格式相较 MobilityDB 1.2 已改变，因此从 1.2 升级需要备份并恢复。
 - 上游源码构建说明展示了在加载 MobilityDB 前设置 `shared_preload_libraries = 'postgis-3'` 和 `max_locks_per_transaction = 128`。对于未使用打包默认值的集群，请验证这些设置。
-- 本地 package metadata 仍带有 curation comment `need another schema`；上游文档未确认必须使用单独 schema，因此在该备注解决前应避免给出 schema-specific guidance。
+- 本地软件包元数据仍带有整理备注 `need another schema`；上游文档未确认必须使用单独模式，因此在该备注解决前应避免给出特定模式的指导。

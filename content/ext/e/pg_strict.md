@@ -38,9 +38,6 @@ weight: 5830
 {.ext-table .ext-table--rel}
 
 
-> pgrx patched to 0.18.1.
-
-
 ## 版本
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
@@ -69,86 +66,86 @@ weight: 5830
 | u24.aarch64 | AVAIL PIGSTY 1.0.5 1 | AVAIL PIGSTY 1.0.5 1 | AVAIL PIGSTY 1.0.5 1 | AVAIL PIGSTY 1.0.5 1 | AVAIL PIGSTY 1.0.5 1 |
 | u26.x86_64 | AVAIL PIGSTY 1.0.5 1 | AVAIL PIGSTY 1.0.5 1 | AVAIL PIGSTY 1.0.5 1 | AVAIL PIGSTY 1.0.5 1 | AVAIL PIGSTY 1.0.5 1 |
 | u26.aarch64 | AVAIL PIGSTY 1.0.5 1 | AVAIL PIGSTY 1.0.5 1 | AVAIL PIGSTY 1.0.5 1 | AVAIL PIGSTY 1.0.5 1 | AVAIL PIGSTY 1.0.5 1 |
-@ el8.x86_64 18 pg_strict_18 pg_strict_18-1.0.5-1PIGSTY.el8.x86_64.rpm pigsty 1.0.5 328.1KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_strict_18-1.0.5-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 18 pg_strict_18 pg_strict_18-1.0.5-1PIGSTY.el8.aarch64.rpm pigsty 1.0.5 220.8KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_strict_18-1.0.5-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 18 pg_strict_18 pg_strict_18-1.0.5-1PIGSTY.el9.x86_64.rpm pigsty 1.0.5 344.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_strict_18-1.0.5-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 18 pg_strict_18 pg_strict_18-1.0.5-1PIGSTY.el9.aarch64.rpm pigsty 1.0.5 236.3KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_strict_18-1.0.5-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 18 pg_strict_18 pg_strict_18-1.0.5-1PIGSTY.el10.x86_64.rpm pigsty 1.0.5 344.4KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_strict_18-1.0.5-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 18 pg_strict_18 pg_strict_18-1.0.5-1PIGSTY.el10.aarch64.rpm pigsty 1.0.5 236.1KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_strict_18-1.0.5-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 18 postgresql-18-pg-strict postgresql-18-pg-strict_1.0.5-1PIGSTY~bookworm_amd64.deb pigsty 1.0.5 269.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-strict/postgresql-18-pg-strict_1.0.5-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 18 postgresql-18-pg-strict postgresql-18-pg-strict_1.0.5-1PIGSTY~bookworm_arm64.deb pigsty 1.0.5 170.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-strict/postgresql-18-pg-strict_1.0.5-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 18 postgresql-18-pg-strict postgresql-18-pg-strict_1.0.5-1PIGSTY~trixie_amd64.deb pigsty 1.0.5 270.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-strict/postgresql-18-pg-strict_1.0.5-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 18 postgresql-18-pg-strict postgresql-18-pg-strict_1.0.5-1PIGSTY~trixie_arm64.deb pigsty 1.0.5 170.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-strict/postgresql-18-pg-strict_1.0.5-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 18 postgresql-18-pg-strict postgresql-18-pg-strict_1.0.5-1PIGSTY~jammy_amd64.deb pigsty 1.0.5 306.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-strict/postgresql-18-pg-strict_1.0.5-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 18 postgresql-18-pg-strict postgresql-18-pg-strict_1.0.5-1PIGSTY~jammy_arm64.deb pigsty 1.0.5 198.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-strict/postgresql-18-pg-strict_1.0.5-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 18 postgresql-18-pg-strict postgresql-18-pg-strict_1.0.5-1PIGSTY~noble_amd64.deb pigsty 1.0.5 303.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-strict/postgresql-18-pg-strict_1.0.5-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 18 postgresql-18-pg-strict postgresql-18-pg-strict_1.0.5-1PIGSTY~noble_arm64.deb pigsty 1.0.5 196.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-strict/postgresql-18-pg-strict_1.0.5-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 18 postgresql-18-pg-strict postgresql-18-pg-strict_1.0.5-2PIGSTY~resolute_amd64.deb pigsty 1.0.5 747.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-strict/postgresql-18-pg-strict_1.0.5-2PIGSTY~resolute_amd64.deb
-@ u26.aarch64 18 postgresql-18-pg-strict postgresql-18-pg-strict_1.0.5-2PIGSTY~resolute_arm64.deb pigsty 1.0.5 665.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-strict/postgresql-18-pg-strict_1.0.5-2PIGSTY~resolute_arm64.deb
-@ el8.x86_64 17 pg_strict_17 pg_strict_17-1.0.5-1PIGSTY.el8.x86_64.rpm pigsty 1.0.5 328.1KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_strict_17-1.0.5-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 17 pg_strict_17 pg_strict_17-1.0.5-1PIGSTY.el8.aarch64.rpm pigsty 1.0.5 220.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_strict_17-1.0.5-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 17 pg_strict_17 pg_strict_17-1.0.5-1PIGSTY.el9.x86_64.rpm pigsty 1.0.5 344.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_strict_17-1.0.5-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 17 pg_strict_17 pg_strict_17-1.0.5-1PIGSTY.el9.aarch64.rpm pigsty 1.0.5 236.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_strict_17-1.0.5-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 17 pg_strict_17 pg_strict_17-1.0.5-1PIGSTY.el10.x86_64.rpm pigsty 1.0.5 344.4KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_strict_17-1.0.5-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 17 pg_strict_17 pg_strict_17-1.0.5-1PIGSTY.el10.aarch64.rpm pigsty 1.0.5 236.0KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_strict_17-1.0.5-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 17 postgresql-17-pg-strict postgresql-17-pg-strict_1.0.5-1PIGSTY~bookworm_amd64.deb pigsty 1.0.5 269.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-strict/postgresql-17-pg-strict_1.0.5-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 17 postgresql-17-pg-strict postgresql-17-pg-strict_1.0.5-1PIGSTY~bookworm_arm64.deb pigsty 1.0.5 170.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-strict/postgresql-17-pg-strict_1.0.5-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 17 postgresql-17-pg-strict postgresql-17-pg-strict_1.0.5-1PIGSTY~trixie_amd64.deb pigsty 1.0.5 269.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-strict/postgresql-17-pg-strict_1.0.5-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 17 postgresql-17-pg-strict postgresql-17-pg-strict_1.0.5-1PIGSTY~trixie_arm64.deb pigsty 1.0.5 170.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-strict/postgresql-17-pg-strict_1.0.5-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 17 postgresql-17-pg-strict postgresql-17-pg-strict_1.0.5-1PIGSTY~jammy_amd64.deb pigsty 1.0.5 306.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-strict/postgresql-17-pg-strict_1.0.5-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 17 postgresql-17-pg-strict postgresql-17-pg-strict_1.0.5-1PIGSTY~jammy_arm64.deb pigsty 1.0.5 198.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-strict/postgresql-17-pg-strict_1.0.5-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 17 postgresql-17-pg-strict postgresql-17-pg-strict_1.0.5-1PIGSTY~noble_amd64.deb pigsty 1.0.5 303.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-strict/postgresql-17-pg-strict_1.0.5-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 17 postgresql-17-pg-strict postgresql-17-pg-strict_1.0.5-1PIGSTY~noble_arm64.deb pigsty 1.0.5 197.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-strict/postgresql-17-pg-strict_1.0.5-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 17 postgresql-17-pg-strict postgresql-17-pg-strict_1.0.5-2PIGSTY~resolute_amd64.deb pigsty 1.0.5 747.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-strict/postgresql-17-pg-strict_1.0.5-2PIGSTY~resolute_amd64.deb
-@ u26.aarch64 17 postgresql-17-pg-strict postgresql-17-pg-strict_1.0.5-2PIGSTY~resolute_arm64.deb pigsty 1.0.5 663.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-strict/postgresql-17-pg-strict_1.0.5-2PIGSTY~resolute_arm64.deb
-@ el8.x86_64 16 pg_strict_16 pg_strict_16-1.0.5-1PIGSTY.el8.x86_64.rpm pigsty 1.0.5 328.1KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_strict_16-1.0.5-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 16 pg_strict_16 pg_strict_16-1.0.5-1PIGSTY.el8.aarch64.rpm pigsty 1.0.5 220.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_strict_16-1.0.5-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 16 pg_strict_16 pg_strict_16-1.0.5-1PIGSTY.el9.x86_64.rpm pigsty 1.0.5 344.1KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_strict_16-1.0.5-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 16 pg_strict_16 pg_strict_16-1.0.5-1PIGSTY.el9.aarch64.rpm pigsty 1.0.5 236.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_strict_16-1.0.5-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 16 pg_strict_16 pg_strict_16-1.0.5-1PIGSTY.el10.x86_64.rpm pigsty 1.0.5 344.4KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_strict_16-1.0.5-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 16 pg_strict_16 pg_strict_16-1.0.5-1PIGSTY.el10.aarch64.rpm pigsty 1.0.5 236.0KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_strict_16-1.0.5-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 16 postgresql-16-pg-strict postgresql-16-pg-strict_1.0.5-1PIGSTY~bookworm_amd64.deb pigsty 1.0.5 269.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-strict/postgresql-16-pg-strict_1.0.5-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 16 postgresql-16-pg-strict postgresql-16-pg-strict_1.0.5-1PIGSTY~bookworm_arm64.deb pigsty 1.0.5 170.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-strict/postgresql-16-pg-strict_1.0.5-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 16 postgresql-16-pg-strict postgresql-16-pg-strict_1.0.5-1PIGSTY~trixie_amd64.deb pigsty 1.0.5 269.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-strict/postgresql-16-pg-strict_1.0.5-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 16 postgresql-16-pg-strict postgresql-16-pg-strict_1.0.5-1PIGSTY~trixie_arm64.deb pigsty 1.0.5 170.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-strict/postgresql-16-pg-strict_1.0.5-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 16 postgresql-16-pg-strict postgresql-16-pg-strict_1.0.5-1PIGSTY~jammy_amd64.deb pigsty 1.0.5 306.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-strict/postgresql-16-pg-strict_1.0.5-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 16 postgresql-16-pg-strict postgresql-16-pg-strict_1.0.5-1PIGSTY~jammy_arm64.deb pigsty 1.0.5 198.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-strict/postgresql-16-pg-strict_1.0.5-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 16 postgresql-16-pg-strict postgresql-16-pg-strict_1.0.5-1PIGSTY~noble_amd64.deb pigsty 1.0.5 303.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-strict/postgresql-16-pg-strict_1.0.5-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 16 postgresql-16-pg-strict postgresql-16-pg-strict_1.0.5-1PIGSTY~noble_arm64.deb pigsty 1.0.5 196.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-strict/postgresql-16-pg-strict_1.0.5-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 16 postgresql-16-pg-strict postgresql-16-pg-strict_1.0.5-2PIGSTY~resolute_amd64.deb pigsty 1.0.5 747.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-strict/postgresql-16-pg-strict_1.0.5-2PIGSTY~resolute_amd64.deb
-@ u26.aarch64 16 postgresql-16-pg-strict postgresql-16-pg-strict_1.0.5-2PIGSTY~resolute_arm64.deb pigsty 1.0.5 662.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-strict/postgresql-16-pg-strict_1.0.5-2PIGSTY~resolute_arm64.deb
-@ el8.x86_64 15 pg_strict_15 pg_strict_15-1.0.5-1PIGSTY.el8.x86_64.rpm pigsty 1.0.5 327.9KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_strict_15-1.0.5-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 15 pg_strict_15 pg_strict_15-1.0.5-1PIGSTY.el8.aarch64.rpm pigsty 1.0.5 220.8KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_strict_15-1.0.5-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 15 pg_strict_15 pg_strict_15-1.0.5-1PIGSTY.el9.x86_64.rpm pigsty 1.0.5 344.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_strict_15-1.0.5-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 15 pg_strict_15 pg_strict_15-1.0.5-1PIGSTY.el9.aarch64.rpm pigsty 1.0.5 236.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_strict_15-1.0.5-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 15 pg_strict_15 pg_strict_15-1.0.5-1PIGSTY.el10.x86_64.rpm pigsty 1.0.5 344.3KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_strict_15-1.0.5-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 15 pg_strict_15 pg_strict_15-1.0.5-1PIGSTY.el10.aarch64.rpm pigsty 1.0.5 236.3KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_strict_15-1.0.5-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 15 postgresql-15-pg-strict postgresql-15-pg-strict_1.0.5-1PIGSTY~bookworm_amd64.deb pigsty 1.0.5 269.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-strict/postgresql-15-pg-strict_1.0.5-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 15 postgresql-15-pg-strict postgresql-15-pg-strict_1.0.5-1PIGSTY~bookworm_arm64.deb pigsty 1.0.5 170.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-strict/postgresql-15-pg-strict_1.0.5-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 15 postgresql-15-pg-strict postgresql-15-pg-strict_1.0.5-1PIGSTY~trixie_amd64.deb pigsty 1.0.5 270.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-strict/postgresql-15-pg-strict_1.0.5-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 15 postgresql-15-pg-strict postgresql-15-pg-strict_1.0.5-1PIGSTY~trixie_arm64.deb pigsty 1.0.5 170.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-strict/postgresql-15-pg-strict_1.0.5-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 15 postgresql-15-pg-strict postgresql-15-pg-strict_1.0.5-1PIGSTY~jammy_amd64.deb pigsty 1.0.5 306.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-strict/postgresql-15-pg-strict_1.0.5-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 15 postgresql-15-pg-strict postgresql-15-pg-strict_1.0.5-1PIGSTY~jammy_arm64.deb pigsty 1.0.5 198.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-strict/postgresql-15-pg-strict_1.0.5-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 15 postgresql-15-pg-strict postgresql-15-pg-strict_1.0.5-1PIGSTY~noble_amd64.deb pigsty 1.0.5 303.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-strict/postgresql-15-pg-strict_1.0.5-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 15 postgresql-15-pg-strict postgresql-15-pg-strict_1.0.5-1PIGSTY~noble_arm64.deb pigsty 1.0.5 197.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-strict/postgresql-15-pg-strict_1.0.5-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 15 postgresql-15-pg-strict postgresql-15-pg-strict_1.0.5-2PIGSTY~resolute_amd64.deb pigsty 1.0.5 740.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-strict/postgresql-15-pg-strict_1.0.5-2PIGSTY~resolute_amd64.deb
-@ u26.aarch64 15 postgresql-15-pg-strict postgresql-15-pg-strict_1.0.5-2PIGSTY~resolute_arm64.deb pigsty 1.0.5 657.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-strict/postgresql-15-pg-strict_1.0.5-2PIGSTY~resolute_arm64.deb
-@ el8.x86_64 14 pg_strict_14 pg_strict_14-1.0.5-1PIGSTY.el8.x86_64.rpm pigsty 1.0.5 327.9KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_strict_14-1.0.5-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 14 pg_strict_14 pg_strict_14-1.0.5-1PIGSTY.el8.aarch64.rpm pigsty 1.0.5 220.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_strict_14-1.0.5-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 14 pg_strict_14 pg_strict_14-1.0.5-1PIGSTY.el9.x86_64.rpm pigsty 1.0.5 344.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_strict_14-1.0.5-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 14 pg_strict_14 pg_strict_14-1.0.5-1PIGSTY.el9.aarch64.rpm pigsty 1.0.5 236.2KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_strict_14-1.0.5-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 14 pg_strict_14 pg_strict_14-1.0.5-1PIGSTY.el10.x86_64.rpm pigsty 1.0.5 344.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_strict_14-1.0.5-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 14 pg_strict_14 pg_strict_14-1.0.5-1PIGSTY.el10.aarch64.rpm pigsty 1.0.5 236.3KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_strict_14-1.0.5-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 14 postgresql-14-pg-strict postgresql-14-pg-strict_1.0.5-1PIGSTY~bookworm_amd64.deb pigsty 1.0.5 270.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-strict/postgresql-14-pg-strict_1.0.5-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 14 postgresql-14-pg-strict postgresql-14-pg-strict_1.0.5-1PIGSTY~bookworm_arm64.deb pigsty 1.0.5 170.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-strict/postgresql-14-pg-strict_1.0.5-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 14 postgresql-14-pg-strict postgresql-14-pg-strict_1.0.5-1PIGSTY~trixie_amd64.deb pigsty 1.0.5 270.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-strict/postgresql-14-pg-strict_1.0.5-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 14 postgresql-14-pg-strict postgresql-14-pg-strict_1.0.5-1PIGSTY~trixie_arm64.deb pigsty 1.0.5 170.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-strict/postgresql-14-pg-strict_1.0.5-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 14 postgresql-14-pg-strict postgresql-14-pg-strict_1.0.5-1PIGSTY~jammy_amd64.deb pigsty 1.0.5 306.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-strict/postgresql-14-pg-strict_1.0.5-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 14 postgresql-14-pg-strict postgresql-14-pg-strict_1.0.5-1PIGSTY~jammy_arm64.deb pigsty 1.0.5 198.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-strict/postgresql-14-pg-strict_1.0.5-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 14 postgresql-14-pg-strict postgresql-14-pg-strict_1.0.5-1PIGSTY~noble_amd64.deb pigsty 1.0.5 303.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-strict/postgresql-14-pg-strict_1.0.5-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 14 postgresql-14-pg-strict postgresql-14-pg-strict_1.0.5-1PIGSTY~noble_arm64.deb pigsty 1.0.5 197.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-strict/postgresql-14-pg-strict_1.0.5-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 14 postgresql-14-pg-strict postgresql-14-pg-strict_1.0.5-2PIGSTY~resolute_amd64.deb pigsty 1.0.5 735.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-strict/postgresql-14-pg-strict_1.0.5-2PIGSTY~resolute_amd64.deb
-@ u26.aarch64 14 postgresql-14-pg-strict postgresql-14-pg-strict_1.0.5-2PIGSTY~resolute_arm64.deb pigsty 1.0.5 655.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-strict/postgresql-14-pg-strict_1.0.5-2PIGSTY~resolute_arm64.deb
+@ el8.x86_64 18 pg_strict_18 pg_strict_18-1.0.5-3PIGSTY.el8.x86_64.rpm pigsty 1.0.5 863.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_strict_18-1.0.5-3PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 18 pg_strict_18 pg_strict_18-1.0.5-3PIGSTY.el8.aarch64.rpm pigsty 1.0.5 776.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_strict_18-1.0.5-3PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 18 pg_strict_18 pg_strict_18-1.0.5-3PIGSTY.el9.x86_64.rpm pigsty 1.0.5 872.1KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_strict_18-1.0.5-3PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 18 pg_strict_18 pg_strict_18-1.0.5-3PIGSTY.el9.aarch64.rpm pigsty 1.0.5 822.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_strict_18-1.0.5-3PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 18 pg_strict_18 pg_strict_18-1.0.5-3PIGSTY.el10.x86_64.rpm pigsty 1.0.5 872.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_strict_18-1.0.5-3PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 18 pg_strict_18 pg_strict_18-1.0.5-3PIGSTY.el10.aarch64.rpm pigsty 1.0.5 801.3KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_strict_18-1.0.5-3PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-pg-strict postgresql-18-pg-strict_1.0.5-3PIGSTY~bookworm_amd64.deb pigsty 1.0.5 689.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-strict/postgresql-18-pg-strict_1.0.5-3PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 18 postgresql-18-pg-strict postgresql-18-pg-strict_1.0.5-3PIGSTY~bookworm_arm64.deb pigsty 1.0.5 575.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-strict/postgresql-18-pg-strict_1.0.5-3PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 18 postgresql-18-pg-strict postgresql-18-pg-strict_1.0.5-3PIGSTY~trixie_amd64.deb pigsty 1.0.5 689.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-strict/postgresql-18-pg-strict_1.0.5-3PIGSTY~trixie_amd64.deb
+@ d13.aarch64 18 postgresql-18-pg-strict postgresql-18-pg-strict_1.0.5-3PIGSTY~trixie_arm64.deb pigsty 1.0.5 576.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-strict/postgresql-18-pg-strict_1.0.5-3PIGSTY~trixie_arm64.deb
+@ u22.x86_64 18 postgresql-18-pg-strict postgresql-18-pg-strict_1.0.5-3PIGSTY~jammy_amd64.deb pigsty 1.0.5 769.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-strict/postgresql-18-pg-strict_1.0.5-3PIGSTY~jammy_amd64.deb
+@ u22.aarch64 18 postgresql-18-pg-strict postgresql-18-pg-strict_1.0.5-3PIGSTY~jammy_arm64.deb pigsty 1.0.5 678.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-strict/postgresql-18-pg-strict_1.0.5-3PIGSTY~jammy_arm64.deb
+@ u24.x86_64 18 postgresql-18-pg-strict postgresql-18-pg-strict_1.0.5-3PIGSTY~noble_amd64.deb pigsty 1.0.5 760.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-strict/postgresql-18-pg-strict_1.0.5-3PIGSTY~noble_amd64.deb
+@ u24.aarch64 18 postgresql-18-pg-strict postgresql-18-pg-strict_1.0.5-3PIGSTY~noble_arm64.deb pigsty 1.0.5 671.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-strict/postgresql-18-pg-strict_1.0.5-3PIGSTY~noble_arm64.deb
+@ u26.x86_64 18 postgresql-18-pg-strict postgresql-18-pg-strict_1.0.5-3PIGSTY~resolute_amd64.deb pigsty 1.0.5 754.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-strict/postgresql-18-pg-strict_1.0.5-3PIGSTY~resolute_amd64.deb
+@ u26.aarch64 18 postgresql-18-pg-strict postgresql-18-pg-strict_1.0.5-3PIGSTY~resolute_arm64.deb pigsty 1.0.5 670.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-strict/postgresql-18-pg-strict_1.0.5-3PIGSTY~resolute_arm64.deb
+@ el8.x86_64 17 pg_strict_17 pg_strict_17-1.0.5-3PIGSTY.el8.x86_64.rpm pigsty 1.0.5 860.9KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_strict_17-1.0.5-3PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 17 pg_strict_17 pg_strict_17-1.0.5-3PIGSTY.el8.aarch64.rpm pigsty 1.0.5 773.1KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_strict_17-1.0.5-3PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 17 pg_strict_17 pg_strict_17-1.0.5-3PIGSTY.el9.x86_64.rpm pigsty 1.0.5 869.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_strict_17-1.0.5-3PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 17 pg_strict_17 pg_strict_17-1.0.5-3PIGSTY.el9.aarch64.rpm pigsty 1.0.5 819.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_strict_17-1.0.5-3PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 17 pg_strict_17 pg_strict_17-1.0.5-3PIGSTY.el10.x86_64.rpm pigsty 1.0.5 871.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_strict_17-1.0.5-3PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 17 pg_strict_17 pg_strict_17-1.0.5-3PIGSTY.el10.aarch64.rpm pigsty 1.0.5 800.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_strict_17-1.0.5-3PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-pg-strict postgresql-17-pg-strict_1.0.5-3PIGSTY~bookworm_amd64.deb pigsty 1.0.5 687.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-strict/postgresql-17-pg-strict_1.0.5-3PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 17 postgresql-17-pg-strict postgresql-17-pg-strict_1.0.5-3PIGSTY~bookworm_arm64.deb pigsty 1.0.5 574.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-strict/postgresql-17-pg-strict_1.0.5-3PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 17 postgresql-17-pg-strict postgresql-17-pg-strict_1.0.5-3PIGSTY~trixie_amd64.deb pigsty 1.0.5 687.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-strict/postgresql-17-pg-strict_1.0.5-3PIGSTY~trixie_amd64.deb
+@ d13.aarch64 17 postgresql-17-pg-strict postgresql-17-pg-strict_1.0.5-3PIGSTY~trixie_arm64.deb pigsty 1.0.5 574.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-strict/postgresql-17-pg-strict_1.0.5-3PIGSTY~trixie_arm64.deb
+@ u22.x86_64 17 postgresql-17-pg-strict postgresql-17-pg-strict_1.0.5-3PIGSTY~jammy_amd64.deb pigsty 1.0.5 768.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-strict/postgresql-17-pg-strict_1.0.5-3PIGSTY~jammy_amd64.deb
+@ u22.aarch64 17 postgresql-17-pg-strict postgresql-17-pg-strict_1.0.5-3PIGSTY~jammy_arm64.deb pigsty 1.0.5 678.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-strict/postgresql-17-pg-strict_1.0.5-3PIGSTY~jammy_arm64.deb
+@ u24.x86_64 17 postgresql-17-pg-strict postgresql-17-pg-strict_1.0.5-3PIGSTY~noble_amd64.deb pigsty 1.0.5 758.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-strict/postgresql-17-pg-strict_1.0.5-3PIGSTY~noble_amd64.deb
+@ u24.aarch64 17 postgresql-17-pg-strict postgresql-17-pg-strict_1.0.5-3PIGSTY~noble_arm64.deb pigsty 1.0.5 670.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-strict/postgresql-17-pg-strict_1.0.5-3PIGSTY~noble_arm64.deb
+@ u26.x86_64 17 postgresql-17-pg-strict postgresql-17-pg-strict_1.0.5-3PIGSTY~resolute_amd64.deb pigsty 1.0.5 753.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-strict/postgresql-17-pg-strict_1.0.5-3PIGSTY~resolute_amd64.deb
+@ u26.aarch64 17 postgresql-17-pg-strict postgresql-17-pg-strict_1.0.5-3PIGSTY~resolute_arm64.deb pigsty 1.0.5 668.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-strict/postgresql-17-pg-strict_1.0.5-3PIGSTY~resolute_arm64.deb
+@ el8.x86_64 16 pg_strict_16 pg_strict_16-1.0.5-3PIGSTY.el8.x86_64.rpm pigsty 1.0.5 859.5KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_strict_16-1.0.5-3PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 16 pg_strict_16 pg_strict_16-1.0.5-3PIGSTY.el8.aarch64.rpm pigsty 1.0.5 771.1KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_strict_16-1.0.5-3PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 16 pg_strict_16 pg_strict_16-1.0.5-3PIGSTY.el9.x86_64.rpm pigsty 1.0.5 864.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_strict_16-1.0.5-3PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 16 pg_strict_16 pg_strict_16-1.0.5-3PIGSTY.el9.aarch64.rpm pigsty 1.0.5 817.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_strict_16-1.0.5-3PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 16 pg_strict_16 pg_strict_16-1.0.5-3PIGSTY.el10.x86_64.rpm pigsty 1.0.5 869.2KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_strict_16-1.0.5-3PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 16 pg_strict_16 pg_strict_16-1.0.5-3PIGSTY.el10.aarch64.rpm pigsty 1.0.5 800.1KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_strict_16-1.0.5-3PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 16 postgresql-16-pg-strict postgresql-16-pg-strict_1.0.5-3PIGSTY~bookworm_amd64.deb pigsty 1.0.5 686.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-strict/postgresql-16-pg-strict_1.0.5-3PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 16 postgresql-16-pg-strict postgresql-16-pg-strict_1.0.5-3PIGSTY~bookworm_arm64.deb pigsty 1.0.5 573.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-strict/postgresql-16-pg-strict_1.0.5-3PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 16 postgresql-16-pg-strict postgresql-16-pg-strict_1.0.5-3PIGSTY~trixie_amd64.deb pigsty 1.0.5 687.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-strict/postgresql-16-pg-strict_1.0.5-3PIGSTY~trixie_amd64.deb
+@ d13.aarch64 16 postgresql-16-pg-strict postgresql-16-pg-strict_1.0.5-3PIGSTY~trixie_arm64.deb pigsty 1.0.5 573.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-strict/postgresql-16-pg-strict_1.0.5-3PIGSTY~trixie_arm64.deb
+@ u22.x86_64 16 postgresql-16-pg-strict postgresql-16-pg-strict_1.0.5-3PIGSTY~jammy_amd64.deb pigsty 1.0.5 765.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-strict/postgresql-16-pg-strict_1.0.5-3PIGSTY~jammy_amd64.deb
+@ u22.aarch64 16 postgresql-16-pg-strict postgresql-16-pg-strict_1.0.5-3PIGSTY~jammy_arm64.deb pigsty 1.0.5 676.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-strict/postgresql-16-pg-strict_1.0.5-3PIGSTY~jammy_arm64.deb
+@ u24.x86_64 16 postgresql-16-pg-strict postgresql-16-pg-strict_1.0.5-3PIGSTY~noble_amd64.deb pigsty 1.0.5 757.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-strict/postgresql-16-pg-strict_1.0.5-3PIGSTY~noble_amd64.deb
+@ u24.aarch64 16 postgresql-16-pg-strict postgresql-16-pg-strict_1.0.5-3PIGSTY~noble_arm64.deb pigsty 1.0.5 668.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-strict/postgresql-16-pg-strict_1.0.5-3PIGSTY~noble_arm64.deb
+@ u26.x86_64 16 postgresql-16-pg-strict postgresql-16-pg-strict_1.0.5-3PIGSTY~resolute_amd64.deb pigsty 1.0.5 752.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-strict/postgresql-16-pg-strict_1.0.5-3PIGSTY~resolute_amd64.deb
+@ u26.aarch64 16 postgresql-16-pg-strict postgresql-16-pg-strict_1.0.5-3PIGSTY~resolute_arm64.deb pigsty 1.0.5 667.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-strict/postgresql-16-pg-strict_1.0.5-3PIGSTY~resolute_arm64.deb
+@ el8.x86_64 15 pg_strict_15 pg_strict_15-1.0.5-3PIGSTY.el8.x86_64.rpm pigsty 1.0.5 850.0KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_strict_15-1.0.5-3PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 15 pg_strict_15 pg_strict_15-1.0.5-3PIGSTY.el8.aarch64.rpm pigsty 1.0.5 762.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_strict_15-1.0.5-3PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 15 pg_strict_15 pg_strict_15-1.0.5-3PIGSTY.el9.x86_64.rpm pigsty 1.0.5 858.7KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_strict_15-1.0.5-3PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 15 pg_strict_15 pg_strict_15-1.0.5-3PIGSTY.el9.aarch64.rpm pigsty 1.0.5 807.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_strict_15-1.0.5-3PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 15 pg_strict_15 pg_strict_15-1.0.5-3PIGSTY.el10.x86_64.rpm pigsty 1.0.5 858.7KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_strict_15-1.0.5-3PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 15 pg_strict_15 pg_strict_15-1.0.5-3PIGSTY.el10.aarch64.rpm pigsty 1.0.5 796.8KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_strict_15-1.0.5-3PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 15 postgresql-15-pg-strict postgresql-15-pg-strict_1.0.5-3PIGSTY~bookworm_amd64.deb pigsty 1.0.5 680.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-strict/postgresql-15-pg-strict_1.0.5-3PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 15 postgresql-15-pg-strict postgresql-15-pg-strict_1.0.5-3PIGSTY~bookworm_arm64.deb pigsty 1.0.5 569.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-strict/postgresql-15-pg-strict_1.0.5-3PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 15 postgresql-15-pg-strict postgresql-15-pg-strict_1.0.5-3PIGSTY~trixie_amd64.deb pigsty 1.0.5 680.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-strict/postgresql-15-pg-strict_1.0.5-3PIGSTY~trixie_amd64.deb
+@ d13.aarch64 15 postgresql-15-pg-strict postgresql-15-pg-strict_1.0.5-3PIGSTY~trixie_arm64.deb pigsty 1.0.5 569.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-strict/postgresql-15-pg-strict_1.0.5-3PIGSTY~trixie_arm64.deb
+@ u22.x86_64 15 postgresql-15-pg-strict postgresql-15-pg-strict_1.0.5-3PIGSTY~jammy_amd64.deb pigsty 1.0.5 757.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-strict/postgresql-15-pg-strict_1.0.5-3PIGSTY~jammy_amd64.deb
+@ u22.aarch64 15 postgresql-15-pg-strict postgresql-15-pg-strict_1.0.5-3PIGSTY~jammy_arm64.deb pigsty 1.0.5 669.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-strict/postgresql-15-pg-strict_1.0.5-3PIGSTY~jammy_arm64.deb
+@ u24.x86_64 15 postgresql-15-pg-strict postgresql-15-pg-strict_1.0.5-3PIGSTY~noble_amd64.deb pigsty 1.0.5 749.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-strict/postgresql-15-pg-strict_1.0.5-3PIGSTY~noble_amd64.deb
+@ u24.aarch64 15 postgresql-15-pg-strict postgresql-15-pg-strict_1.0.5-3PIGSTY~noble_arm64.deb pigsty 1.0.5 663.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-strict/postgresql-15-pg-strict_1.0.5-3PIGSTY~noble_arm64.deb
+@ u26.x86_64 15 postgresql-15-pg-strict postgresql-15-pg-strict_1.0.5-3PIGSTY~resolute_amd64.deb pigsty 1.0.5 745.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-strict/postgresql-15-pg-strict_1.0.5-3PIGSTY~resolute_amd64.deb
+@ u26.aarch64 15 postgresql-15-pg-strict postgresql-15-pg-strict_1.0.5-3PIGSTY~resolute_arm64.deb pigsty 1.0.5 661.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-strict/postgresql-15-pg-strict_1.0.5-3PIGSTY~resolute_arm64.deb
+@ el8.x86_64 14 pg_strict_14 pg_strict_14-1.0.5-3PIGSTY.el8.x86_64.rpm pigsty 1.0.5 847.9KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_strict_14-1.0.5-3PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 14 pg_strict_14 pg_strict_14-1.0.5-3PIGSTY.el8.aarch64.rpm pigsty 1.0.5 759.4KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_strict_14-1.0.5-3PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 14 pg_strict_14 pg_strict_14-1.0.5-3PIGSTY.el9.x86_64.rpm pigsty 1.0.5 856.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_strict_14-1.0.5-3PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 14 pg_strict_14 pg_strict_14-1.0.5-3PIGSTY.el9.aarch64.rpm pigsty 1.0.5 805.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_strict_14-1.0.5-3PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 14 pg_strict_14 pg_strict_14-1.0.5-3PIGSTY.el10.x86_64.rpm pigsty 1.0.5 856.2KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_strict_14-1.0.5-3PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 14 pg_strict_14 pg_strict_14-1.0.5-3PIGSTY.el10.aarch64.rpm pigsty 1.0.5 794.4KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_strict_14-1.0.5-3PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 14 postgresql-14-pg-strict postgresql-14-pg-strict_1.0.5-3PIGSTY~bookworm_amd64.deb pigsty 1.0.5 678.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-strict/postgresql-14-pg-strict_1.0.5-3PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 14 postgresql-14-pg-strict postgresql-14-pg-strict_1.0.5-3PIGSTY~bookworm_arm64.deb pigsty 1.0.5 567.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-strict/postgresql-14-pg-strict_1.0.5-3PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 14 postgresql-14-pg-strict postgresql-14-pg-strict_1.0.5-3PIGSTY~trixie_amd64.deb pigsty 1.0.5 678.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-strict/postgresql-14-pg-strict_1.0.5-3PIGSTY~trixie_amd64.deb
+@ d13.aarch64 14 postgresql-14-pg-strict postgresql-14-pg-strict_1.0.5-3PIGSTY~trixie_arm64.deb pigsty 1.0.5 567.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-strict/postgresql-14-pg-strict_1.0.5-3PIGSTY~trixie_arm64.deb
+@ u22.x86_64 14 postgresql-14-pg-strict postgresql-14-pg-strict_1.0.5-3PIGSTY~jammy_amd64.deb pigsty 1.0.5 755.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-strict/postgresql-14-pg-strict_1.0.5-3PIGSTY~jammy_amd64.deb
+@ u22.aarch64 14 postgresql-14-pg-strict postgresql-14-pg-strict_1.0.5-3PIGSTY~jammy_arm64.deb pigsty 1.0.5 667.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-strict/postgresql-14-pg-strict_1.0.5-3PIGSTY~jammy_arm64.deb
+@ u24.x86_64 14 postgresql-14-pg-strict postgresql-14-pg-strict_1.0.5-3PIGSTY~noble_amd64.deb pigsty 1.0.5 748.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-strict/postgresql-14-pg-strict_1.0.5-3PIGSTY~noble_amd64.deb
+@ u24.aarch64 14 postgresql-14-pg-strict postgresql-14-pg-strict_1.0.5-3PIGSTY~noble_arm64.deb pigsty 1.0.5 661.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-strict/postgresql-14-pg-strict_1.0.5-3PIGSTY~noble_arm64.deb
+@ u26.x86_64 14 postgresql-14-pg-strict postgresql-14-pg-strict_1.0.5-3PIGSTY~resolute_amd64.deb pigsty 1.0.5 743.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-strict/postgresql-14-pg-strict_1.0.5-3PIGSTY~resolute_amd64.deb
+@ u26.aarch64 14 postgresql-14-pg-strict postgresql-14-pg-strict_1.0.5-3PIGSTY~resolute_arm64.deb pigsty 1.0.5 658.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-strict/postgresql-14-pg-strict_1.0.5-3PIGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建

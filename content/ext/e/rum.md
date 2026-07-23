@@ -35,7 +35,6 @@ weight: 2710
 
 | **相关扩展** | [`pg_trgm`](/ext/e/pg_trgm) [`btree_gist`](/ext/e/btree_gist) [`btree_gin`](/ext/e/btree_gin) [`pg_search`](/ext/e/pg_search) [`pgroonga`](/ext/e/pgroonga) [`pg_bigm`](/ext/e/pg_bigm) [`zhparser`](/ext/e/zhparser) [`pgroonga_database`](/ext/e/pgroonga_database) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **下游依赖** | [`documentdb`](/ext/e/documentdb) |
 {.ext-table .ext-table--rel}
 
 

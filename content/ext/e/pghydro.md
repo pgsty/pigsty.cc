@@ -41,6 +41,7 @@ weight: 1600
 
 | **相关扩展** | [`plpgsql`](/ext/e/plpgsql) [`postgis`](/ext/e/postgis) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **下游依赖** | [`pgh_consistency`](/ext/e/pgh_consistency) [`pgh_hgm`](/ext/e/pgh_hgm) [`pgh_output`](/ext/e/pgh_output) [`pgh_output_en_au`](/ext/e/pgh_output_en_au) [`pgh_output_pt_br`](/ext/e/pgh_output_pt_br) [`pgh_raster`](/ext/e/pgh_raster) |
 {.ext-table .ext-table--rel}
 
 

@@ -30,7 +30,7 @@ weight: 1070
 
 | **相关扩展** | [`timescaledb_toolkit`](/ext/e/timescaledb_toolkit) [`timescaledb`](/ext/e/timescaledb) [`periods`](/ext/e/periods) [`temporal_tables`](/ext/e/temporal_tables) [`pg_task`](/ext/e/pg_task) [`pg_later`](/ext/e/pg_later) [`emaj`](/ext/e/emaj) [`table_version`](/ext/e/table_version) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **下游依赖** | [`documentdb`](/ext/e/documentdb) [`pg_incremental`](/ext/e/pg_incremental) [`timeseries`](/ext/e/timeseries) [`vectorize`](/ext/e/vectorize) [`pgmb`](/ext/e/pgmb) |
+| **下游依赖** | [`documentdb`](/ext/e/documentdb) [`pg_dispatch`](/ext/e/pg_dispatch) [`pglock`](/ext/e/pglock) [`pgmb`](/ext/e/pgmb) [`timeseries`](/ext/e/timeseries) [`vectorize`](/ext/e/vectorize) |
 {.ext-table .ext-table--rel}
 
 

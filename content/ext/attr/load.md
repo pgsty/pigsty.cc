@@ -5,7 +5,7 @@ description: "需要动态加载的 PostgreSQL 扩展"
 weight: 10
 ---
 
-以下 **112** 个扩展需要在 [`shared_preload_libraries`](https://www.postgresql.org/docs/current/runtime-config-client.html#GUC-SHARED-PRELOAD-LIBRARIES) 中动态加载，才能正常使用。
+以下 **125** 个扩展需要在 [`shared_preload_libraries`](https://www.postgresql.org/docs/current/runtime-config-client.html#GUC-SHARED-PRELOAD-LIBRARIES) 中动态加载，才能正常使用。
 
 也就是说，您需要修改 PostgreSQL 配置文件 `postgresql.conf` 中的 [`shared_preload_libraries`](https://www.postgresql.org/docs/current/runtime-config-client.html#GUC-SHARED-PRELOAD-LIBRARIES) 参数，将扩展的库名添加进去，然后重启数据库才能生效。
 
@@ -15,6 +15,7 @@ weight: 10
 | [`pg_cron`](/ext/e/pg_cron) | `pg_cron` | 定时任务调度器 |
 | [`pg_task`](/ext/e/pg_task) | `pg_task` | 在特定时间点在后台执行SQL命令 |
 | [`pg_later`](/ext/e/pg_later) | `pg_later` | 执行查询，并在稍后异步获取查询结果 |
+| [`mobilitydb`](/ext/e/mobilitydb) | `postgis-3` | MobilityDB地理空间投影数据管理分析平台 |
 | [`vchord`](/ext/e/vchord) | `vchord` | 使用Rust重写的高性能向量扩展 |
 | [`vectorize`](/ext/e/vectorize) | `vectorize` | 在PostgreSQL中封装RAG向量检索服务 |
 | [`pgml`](/ext/e/pgml) | `pgml` | PostgresML：用SQL运行机器学习算法并训练模型 |
@@ -25,7 +26,6 @@ weight: 10
 | [`pg_tokenizer`](/ext/e/pg_tokenizer) | `pg_tokenizer` | 用于全文检索的分词器 |
 | [`pg_textsearch`](/ext/e/pg_textsearch) | `pg_textsearch` | 带有BM25排序的全文搜索扩展 |
 | [`citus`](/ext/e/citus) | `citus` | Citus 分布式数据库 |
-| [`pg_analytics`](/ext/e/pg_analytics) | `pg_analytics` | 由 DuckDB 驱动的数据分析引擎 |
 | [`pg_duckdb`](/ext/e/pg_duckdb) | `pg_duckdb` | 在PostgreSQL中的嵌入式DuckDB扩展 |
 | [`pg_mooncake`](/ext/e/pg_mooncake) | `pg_mooncake` | PostgreSQL列式存储表 |
 | [`storage_engine`](/ext/e/storage_engine) | `storage_engine` | 带向量化执行的 colcompress 与 rowcompress 表访问方法 |
@@ -34,6 +34,12 @@ weight: 10
 | [`pg_ducklake`](/ext/e/pg_ducklake) | `pg_ducklake` | 基于 DuckDB 与 Parquet 的 DuckLake 湖仓一体扩展 |
 | [`pg_orca`](/ext/e/pg_orca) | `pg_orca` | PostgreSQL ORCA 查询优化器扩展 |
 | [`pg_sorted_heap`](/ext/e/pg_sorted_heap) | `pg_sorted_heap` | 带 zone map 剪枝和内置向量搜索的有序堆表访问方法 |
+| [`pg_lake`](/ext/e/pg_lake) | `pg_extension_base` | Snowflake 开源的 PostgreSQL 数据湖与 Iceberg 集成扩展 |
+| [`pg_extension_base`](/ext/e/pg_extension_base) | `pg_extension_base` | Snowflake 提供的 PostgreSQL 扩展开发基础设施，支持库预加载、扩展生命周期后台工作进程和依赖管理 |
+| [`pg_extension_updater`](/ext/e/pg_extension_updater) | `pg_extension_base` | 在数据库启动时自动执行 ALTER EXTENSION UPDATE 的扩展更新器 |
+| [`pg_lake_engine`](/ext/e/pg_lake_engine) | `pg_extension_base` | 用于数据湖查询的查询引擎 |
+| [`pg_lake_table`](/ext/e/pg_lake_table) | `pg_extension_base` | 数据湖表和 Iceberg 表 |
+| [`pg_lake_copy`](/ext/e/pg_lake_copy) | `pg_extension_base` | 在 PostgreSQL 与对象存储数据湖文件之间执行 COPY 的扩展 |
 | [`age`](/ext/e/age) | `age` | Apache AGE，图数据库扩展 （Deb可用） |
 | [`pgrdf`](/ext/e/pgrdf) | `pgrdf` | PostgreSQL 内 RDF、SPARQL、SHACL 与 OWL 推理扩展 |
 | [`ulak`](/ext/e/ulak) | `ulak` | 支持可靠异步投递的 PostgreSQL 事务型 Outbox 扩展 |
@@ -47,7 +53,7 @@ weight: 10
 | [`orioledb`](/ext/e/orioledb) | `orioledb` | OrioleDB，下一代事务处理引擎 |
 | [`omni`](/ext/e/omni) | `omni--0.2.14.so` | PostgreSQL即平台，Omnigres主扩展与加载器 |
 | [`pg_tle`](/ext/e/pg_tle) | `pg_tle` | AWS 可信语言扩展 |
-| [`pldbgapi`](/ext/e/pldbgapi) | `pldbgapi` | 用于调试 PL/pgSQL 函数的服务器端支持 |
+| [`pldbgapi`](/ext/e/pldbgapi) | `$libdir/plugin_debugger` | 用于调试 PL/pgSQL 函数的服务器端支持 |
 | [`plpgsql_check`](/ext/e/plpgsql_check) | `plpgsql_check` | 对 plpgsql 函数进行扩展检查 |
 | [`plprofiler`](/ext/e/plprofiler) | `plprofiler` | 剖析 PL/pgSQL 函数 |
 | [`pg_regresql`](/ext/e/pg_regresql) | `pg_regresql` | 用 pg_class 统计信息替代物理文件大小参与查询规划 |
@@ -64,6 +70,7 @@ weight: 10
 | [`qos`](/ext/e/qos) | `qos` | PostgreSQL QoS 资源治理扩展（会话与查询限流/隔离） |
 | [`pg_pathcheck`](/ext/e/pg_pathcheck) | `pg_pathcheck` | 校验 planner Path 树，诊断已释放或损坏的内存引用 |
 | [`pgdisablelogerror`](/ext/e/pgdisablelogerror) | `$libdir/pgdisablelogerror` | 按 SQLSTATE 错误码禁止部分错误写入 PostgreSQL 服务器日志。 |
+| [`online_advisor`](/ext/e/online_advisor) | `online_advisor` | 在线建议缺失索引、扩展统计信息与预备语句 |
 | [`safeupdate`](/ext/e/safeupdate) | `safeupdate` | 强制在 UPDATE 和 DELETE 时提供 Where 条件 |
 | [`pg_strict`](/ext/e/pg_strict) | `pg_strict` | 防止不带WHERE条件的危险UPDATE和DELETE操作 |
 | [`pg_prewarm`](/ext/e/pg_prewarm) | `pg_prewarm` | 预热关系数据 |
@@ -71,6 +78,7 @@ weight: 10
 | [`pg_stat_ch`](/ext/e/pg_stat_ch) | `pg_stat_ch` | 将 PostgreSQL 查询遥测实时导出到 ClickHouse |
 | [`pg_stat_log`](/ext/e/pg_stat_log) | `$libdir/pg_stat_log` | 按后端类型、数据库、用户、日志级别与 SQLSTATE 统计 PostgreSQL 日志消息。 |
 | [`pg_stat_plans`](/ext/e/pg_stat_plans) | `$libdir/pg_stat_plans` | 跟踪查询计划级别的调用次数、执行时间与示例 EXPLAIN 文本。 |
+| [`pgmonitor`](/ext/e/pgmonitor) | `pgmonitor_bgw` | 面向外部采集器的指标视图与后台刷新工作进程 |
 | [`pg_show_plans`](/ext/e/pg_show_plans) | `pg_show_plans` | 打印所有当前正在运行查询的执行计划 |
 | [`pg_stat_kcache`](/ext/e/pg_stat_kcache) | `pg_stat_kcache` | 内核统计信息收集 |
 | [`pg_stat_monitor`](/ext/e/pg_stat_monitor) | `pg_stat_monitor` | 提供查询聚合统计、客户端信息、执行计划详细信息和直方图 |
@@ -94,16 +102,20 @@ weight: 10
 | [`anon`](/ext/e/anon) | `anon` | 数据匿名化处理工具 |
 | [`pgaudit`](/ext/e/pgaudit) | `pgaudit` | 提供审计功能 |
 | [`pgauditlogtofile`](/ext/e/pgauditlogtofile) | `pgauditlogtofile` | pgAudit 子扩展，将审计日志写入单独的文件中 |
+| [`pg_roast`](/ext/e/pg_roast) | `pg_roast` | 覆盖模式设计、安全配置、运行健康与查询行为的数据库审计器 |
 | [`logerrors`](/ext/e/logerrors) | `logerrors` | 用于收集日志文件中消息统计信息的函数 |
 | [`pg_auth_mon`](/ext/e/pg_auth_mon) | `pg_auth_mon` | 监控每个用户的连接尝试 |
+| [`pg_oidc_validator`](/ext/e/pg_oidc_validator) | `pg_oidc_validator` | PostgreSQL 18 OAuth 与 OIDC 令牌验证模块 |
+| [`oidc_validator`](/ext/e/oidc_validator) | `oidc_validator` | 使用 Rust 与 pgrx 编写的 PostgreSQL 18 OIDC Bearer 令牌验证模块 |
 | [`credcheck`](/ext/e/credcheck) | `credcheck` | 明文凭证检查器 |
 | [`set_user`](/ext/e/set_user) | `set_user` | 增加了日志记录的 SET ROLE |
 | [`pg_snakeoil`](/ext/e/pg_snakeoil) | `pg_snakeoil` | PostgreSQL动态链接库反病毒功能 |
 | [`pgextwlist`](/ext/e/pgextwlist) | `pgextwlist` | PostgreSQL扩展白名单功能 |
 | [`pg_command_fw`](/ext/e/pg_command_fw) | `pg_command_fw` | PostgreSQL 的 DDL 与 utility 命令防火墙 |
-| [`block_copy_command`](/ext/e/block_copy_command) | `block_copy_command` | 通过可配置的 ProcessUtility hook 阻止 COPY 命令 |
 | [`noset`](/ext/e/noset) | `noset` | 阻止非超级用户使用SET/RESET设置变量 |
-| [`pg_tde`](/ext/e/pg_tde) | `pg_tde` | Percona加密存储引擎 |
+| [`block_copy_command`](/ext/e/block_copy_command) | `block_copy_command` | 通过可配置的 ProcessUtility hook 阻止 COPY 命令 |
+| [`pg_kpart`](/ext/e/pg_kpart) | `pg_kpart` | 拒绝未使用分区键的全分区扫描查询 |
+| [`pg_tde`](/ext/e/pg_tde) | `pg_tde` | Percona 透明加密存储引擎 |
 | [`sepgsql`](/ext/e/sepgsql) | `sepgsql` | 基于SELinux标签的强制访问控制 |
 | [`auth_delay`](/ext/e/auth_delay) | `auth_delay` | 在返回认证失败前暂停一会，避免爆破 |
 | [`passwordcheck`](/ext/e/passwordcheck) | `$libdir/passwordcheck` | 用于强制拒绝修改弱密码的扩展 |
@@ -113,6 +125,7 @@ weight: 10
 | [`documentdb_extended_rum`](/ext/e/documentdb_extended_rum) | `pg_documentdb_extended_rum` | DocumentDB扩展RUM索引访问方法 |
 | [`pgtt`](/ext/e/pgtt) | `pgtt` | 类似Oracle的全局临时表功能 |
 | [`pg_statement_rollback`](/ext/e/pg_statement_rollback) | `pg_statement_rollback` | 在服务端提供类似Oracle/DB2的语句级回滚能力 |
+| [`pg_dbms_job`](/ext/e/pg_dbms_job) | `pg_dbms_job` | 添加 Oracle DBMS_JOB 兼容性支持的扩展 |
 | [`pg_dbms_errlog`](/ext/e/pg_dbms_errlog) | `pg_dbms_errlog` | 模仿 Oracle DBMS_ERRLOG 模块来记录特定表的DML错误 |
 | [`babelfishpg_tds`](/ext/e/babelfishpg_tds) | `babelfishpg_tds` | SQL Server TDS线缆协议兼容扩展 |
 | [`pglogical`](/ext/e/pglogical) | `pglogical` | PostgreSQL逻辑复制：三方扩展实现 |

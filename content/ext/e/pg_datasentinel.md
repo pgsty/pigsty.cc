@@ -25,7 +25,7 @@ weight: 6400
 
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
-| [**`pg_datasentinel`**](/ext/e/pg_datasentinel) | `1.0` | <a class="ext-badge ext-badge--cate stat" href="/ext/cate/stat">STAT</a> | <a class="ext-badge ext-badge--license bsd 3clause" href="/ext/license#bsd3clause">BSD 3-Clause</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
+| [**`pg_datasentinel`**](/ext/e/pg_datasentinel) | `1.0` | <a class="ext-badge ext-badge--cate stat" href="/ext/cate/stat">STAT</a> | <a class="ext-badge ext-badge--license bsd3clause" href="/ext/license#bsd3clause">BSD-3-Clause</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
 {.ext-table}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
@@ -53,22 +53,22 @@ weight: 6400
 {{< pgext_matrix >}}
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | MISS PIGSTY - 0 |
-| el8.aarch64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | MISS PIGSTY - 0 |
-| el9.x86_64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | MISS PIGSTY - 0 |
-| el9.aarch64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | MISS PIGSTY - 0 |
-| el10.x86_64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | MISS PIGSTY - 0 |
-| el10.aarch64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | MISS PIGSTY - 0 |
-| d12.x86_64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | MISS PIGSTY - 0 |
-| d12.aarch64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | MISS PIGSTY - 0 |
-| d13.x86_64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | MISS PIGSTY - 0 |
-| d13.aarch64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | MISS PIGSTY - 0 |
-| u22.x86_64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | MISS PIGSTY - 0 |
-| u22.aarch64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | MISS PIGSTY - 0 |
-| u24.x86_64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | MISS PIGSTY - 0 |
-| u24.aarch64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | MISS PIGSTY - 0 |
-| u26.x86_64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | MISS PIGSTY - 0 |
-| u26.aarch64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | MISS PIGSTY - 0 |
+| el8.x86_64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | N/A PIGSTY - 0 |
+| el8.aarch64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | N/A PIGSTY - 0 |
+| el9.x86_64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | N/A PIGSTY - 0 |
+| el9.aarch64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | N/A PIGSTY - 0 |
+| el10.x86_64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | N/A PIGSTY - 0 |
+| el10.aarch64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | N/A PIGSTY - 0 |
+| d12.x86_64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | N/A PIGSTY - 0 |
+| d12.aarch64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | N/A PIGSTY - 0 |
+| d13.x86_64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | N/A PIGSTY - 0 |
+| d13.aarch64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | N/A PIGSTY - 0 |
+| u22.x86_64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | N/A PIGSTY - 0 |
+| u22.aarch64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | N/A PIGSTY - 0 |
+| u24.x86_64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | N/A PIGSTY - 0 |
+| u24.aarch64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | N/A PIGSTY - 0 |
+| u26.x86_64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | N/A PIGSTY - 0 |
+| u26.aarch64 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | N/A PIGSTY - 0 |
 @ el8.x86_64 18 pg_datasentinel_18 pg_datasentinel_18-1.0-1PIGSTY.el8.x86_64.rpm pigsty 1.0 34.6KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_datasentinel_18-1.0-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 18 pg_datasentinel_18 pg_datasentinel_18-1.0-1PIGSTY.el8.aarch64.rpm pigsty 1.0 34.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_datasentinel_18-1.0-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 18 pg_datasentinel_18 pg_datasentinel_18-1.0-1PIGSTY.el9.x86_64.rpm pigsty 1.0 34.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_datasentinel_18-1.0-1PIGSTY.el9.x86_64.rpm
@@ -205,9 +205,9 @@ CREATE EXTENSION pg_datasentinel;
 
 ## 用法
 
-来源：[README](https://github.com/datasentinel/pg_datasentinel/blob/main/README.md)，[Release 1.0](https://github.com/datasentinel/pg_datasentinel/releases/tag/1.0)
+来源：[README](https://github.com/datasentinel/pg_datasentinel/blob/main/README.md)，[1.0 发行版](https://github.com/datasentinel/pg_datasentinel/releases/tag/1.0)
 
-`pg_datasentinel` 在 PostgreSQL 的 activity、maintenance、temporary-file、checkpoint、wraparound 与 container resource 数据之上提供可观测性视图。由于它会分配共享内存并挂接 activity logging，因此必须预加载。
+`pg_datasentinel` 在 PostgreSQL 的活动、维护、临时文件、检查点、事务回卷与容器资源数据之上提供可观测性视图。由于它会分配共享内存并挂接活动日志记录，因此必须预加载。
 
 ### 所需设置
 
@@ -223,24 +223,24 @@ CREATE EXTENSION pg_datasentinel;
 
 ### 主要视图
 
-- `ds_stat_activity`：在 `pg_stat_activity` 基础上扩展 backend RSS、可选 PSS、temp-file bytes，以及 PostgreSQL 18+ 上的 `plan_id`。
+- `ds_stat_activity`：在 `pg_stat_activity` 基础上扩展后端 RSS、可选 PSS、临时文件字节数，以及 PostgreSQL 18+ 上的 `plan_id`。
 - `ds_container_resources`：报告 cgroup CPU 与内存限制，以及当前使用量。
-- `ds_wraparound_risk`：基于每小时快照估算到 aggressive vacuum 与 wraparound 的 XID、MXID ETA。
+- `ds_wraparound_risk`：基于每小时快照估算距离激进清理与事务回卷的 XID、MXID 预计时间。
 - `ds_xid_snapshots`：`ds_wraparound_risk` 使用的原始快照历史。
-- `ds_vacuum_activity`、`ds_analyze_activity`、`ds_tempfile_activity`、`ds_checkpoint_activity`：用于维护与 checkpoint 事件的共享内存 ring buffer。
-- `ds_activity_summary`：返回 ring buffer 占用和时间戳的一行汇总。
+- `ds_vacuum_activity`、`ds_analyze_activity`、`ds_tempfile_activity`、`ds_checkpoint_activity`：用于维护与检查点事件的共享内存环形缓冲区。
+- `ds_activity_summary`：返回环形缓冲区占用和时间戳的一行汇总。
 
 ### 常用 GUCs
 
 - `pg_datasentinel.enabled`：启用或禁用采集。
-- `pg_datasentinel.max_entries`：每类 activity stream 的 ring buffer 容量；修改后需要重启。
+- `pg_datasentinel.max_entries`：每类活动流的环形缓冲区容量；修改后需要重启。
 - `pg_datasentinel.maintenance_force_verbose`：为手工 `VACUUM` 与 `ANALYZE` 添加 `VERBOSE`，以便被捕获。
 - `pg_datasentinel.ignore_system_schemas`：抑制 `pg_catalog` 与 `information_schema` 噪声。
-- `pg_datasentinel.enable_pss_memory`：读取 `/proc/*/smaps_rollup` 以获取每个 backend 的 PSS。
+- `pg_datasentinel.enable_pss_memory`：读取 `/proc/*/smaps_rollup` 以获取每个后端的 PSS。
 
 ### 注意事项
 
 - 上游要求 PostgreSQL 15+。
-- 内存与 temp-file 增强信息依赖 Linux `/proc`；container 指标依赖 cgroups。
-- `VACUUM` 与 `ANALYZE` 的解析依赖英文日志关键字，因此不完全支持已翻译的 server message locale。
-- `plan_id` 仅在 PostgreSQL 18+ 上填充，并且与 README 中链接的官方 `pg_store_plans` fork 搭配时最有价值。
+- 内存与临时文件增强信息依赖 Linux `/proc`；容器指标依赖 cgroups。
+- VACUUM 与 ANALYZE 的解析依赖英文日志关键字，因此不完全支持已翻译的服务器消息区域设置。
+- `plan_id` 仅在 PostgreSQL 18+ 上填充，并且与 README 中链接的官方 `pg_store_plans` 分支搭配时最有价值。

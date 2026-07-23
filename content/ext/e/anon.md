@@ -11,10 +11,10 @@ weight: 7070
     <div class="ext-card__title">https://gitlab.com/dalibo/postgresql_anonymizer/</div>
     <div class="ext-card__desc">https://gitlab.com/dalibo/postgresql_anonymizer/</div>
   </a>
-  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/postgresql_anonymizer-3.1.1.tar.gz">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/postgresql_anonymizer-3.1.3.tar.gz">
     <div class="ext-card__kicker">源码</div>
-    <div class="ext-card__title">postgresql_anonymizer-3.1.1.tar.gz</div>
-    <div class="ext-card__desc">postgresql_anonymizer-3.1.1.tar.gz</div>
+    <div class="ext-card__title">postgresql_anonymizer-3.1.3.tar.gz</div>
+    <div class="ext-card__desc">postgresql_anonymizer-3.1.3.tar.gz</div>
   </a>
 </div>
 
@@ -25,7 +25,7 @@ weight: 7070
 
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
-| [**`pg_anon`**](/ext/e/anon) | `3.1.1` | <a class="ext-badge ext-badge--cate sec" href="/ext/cate/sec">SEC</a> | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> |
+| [**`pg_anon`**](/ext/e/anon) | `3.1.3` | <a class="ext-badge ext-badge--cate sec" href="/ext/cate/sec">SEC</a> | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> |
 {.ext-table}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
@@ -38,117 +38,114 @@ weight: 7070
 {.ext-table .ext-table--rel}
 
 
-> pgrx patched to 0.18.1.
-
-
 ## 版本
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#sec) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `3.1.1` | {{< pgvers "18,17,16,15,14" >}} | `pg_anon` | - |
-| [**RPM**](/ext/rpm#sec) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `3.1.1` | {{< pgvers "18,17,16,15,14" >}} | `pg_anon_$v` | - |
-| [**DEB**](/ext/deb#sec) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `3.1.1` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pg-anon` | - |
+| [**EXT**](/ext/list#sec) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `3.1.3` | {{< pgvers "18,17,16,15,14" >}} | `pg_anon` | - |
+| [**RPM**](/ext/rpm#sec) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `3.1.3` | {{< pgvers "18,17,16,15,14" >}} | `pg_anon_$v` | - |
+| [**DEB**](/ext/deb#sec) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `3.1.3` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pg-anon` | - |
 {.ext-table}
 
 {{< pgext_matrix >}}
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 3.1.1 1 | AVAIL PIGSTY 3.1.1 1 | AVAIL PIGSTY 3.1.1 1 | AVAIL PIGSTY 3.1.1 1 | AVAIL PIGSTY 3.1.1 1 |
-| el8.aarch64 | AVAIL PIGSTY 3.1.1 1 | AVAIL PIGSTY 3.1.1 1 | AVAIL PIGSTY 3.1.1 1 | AVAIL PIGSTY 3.1.1 1 | AVAIL PIGSTY 3.1.1 1 |
-| el9.x86_64 | AVAIL PIGSTY 3.1.1 1 | AVAIL PIGSTY 3.1.1 1 | AVAIL PIGSTY 3.1.1 1 | AVAIL PIGSTY 3.1.1 1 | AVAIL PIGSTY 3.1.1 1 |
-| el9.aarch64 | AVAIL PIGSTY 3.1.1 1 | AVAIL PIGSTY 3.1.1 1 | AVAIL PIGSTY 3.1.1 1 | AVAIL PIGSTY 3.1.1 1 | AVAIL PIGSTY 3.1.1 1 |
-| el10.x86_64 | AVAIL PIGSTY 3.1.1 1 | AVAIL PIGSTY 3.1.1 1 | AVAIL PIGSTY 3.1.1 1 | AVAIL PIGSTY 3.1.1 1 | AVAIL PIGSTY 3.1.1 1 |
-| el10.aarch64 | AVAIL PIGSTY 3.1.1 1 | AVAIL PIGSTY 3.1.1 1 | AVAIL PIGSTY 3.1.1 1 | AVAIL PIGSTY 3.1.1 1 | AVAIL PIGSTY 3.1.1 1 |
-| d12.x86_64 | AVAIL PIGSTY 3.1.1 1 | AVAIL PIGSTY 3.1.1 1 | AVAIL PIGSTY 3.1.1 1 | AVAIL PIGSTY 3.1.1 1 | AVAIL PIGSTY 3.1.1 1 |
-| d12.aarch64 | AVAIL PIGSTY 3.1.1 1 | AVAIL PIGSTY 3.1.1 1 | AVAIL PIGSTY 3.1.1 1 | AVAIL PIGSTY 3.1.1 1 | AVAIL PIGSTY 3.1.1 1 |
-| d13.x86_64 | AVAIL PIGSTY 3.1.1 1 | AVAIL PIGSTY 3.1.1 1 | AVAIL PIGSTY 3.1.1 1 | AVAIL PIGSTY 3.1.1 1 | AVAIL PIGSTY 3.1.1 1 |
-| d13.aarch64 | AVAIL PIGSTY 3.1.1 1 | AVAIL PIGSTY 3.1.1 1 | AVAIL PIGSTY 3.1.1 1 | AVAIL PIGSTY 3.1.1 1 | AVAIL PIGSTY 3.1.1 1 |
-| u22.x86_64 | AVAIL PIGSTY 3.1.1 1 | AVAIL PIGSTY 3.1.1 1 | AVAIL PIGSTY 3.1.1 1 | AVAIL PIGSTY 3.1.1 1 | AVAIL PIGSTY 3.1.1 1 |
-| u22.aarch64 | AVAIL PIGSTY 3.1.1 1 | AVAIL PIGSTY 3.1.1 1 | AVAIL PIGSTY 3.1.1 1 | AVAIL PIGSTY 3.1.1 1 | AVAIL PIGSTY 3.1.1 1 |
-| u24.x86_64 | AVAIL PIGSTY 3.1.1 1 | AVAIL PIGSTY 3.1.1 1 | AVAIL PIGSTY 3.1.1 1 | AVAIL PIGSTY 3.1.1 1 | AVAIL PIGSTY 3.1.1 1 |
-| u24.aarch64 | AVAIL PIGSTY 3.1.1 1 | AVAIL PIGSTY 3.1.1 1 | AVAIL PIGSTY 3.1.1 1 | AVAIL PIGSTY 3.1.1 1 | AVAIL PIGSTY 3.1.1 1 |
-| u26.x86_64 | AVAIL PIGSTY 3.1.1 1 | AVAIL PIGSTY 3.1.1 1 | AVAIL PIGSTY 3.1.1 1 | AVAIL PIGSTY 3.1.1 1 | AVAIL PIGSTY 3.1.1 1 |
-| u26.aarch64 | AVAIL PIGSTY 3.1.1 1 | AVAIL PIGSTY 3.1.1 1 | AVAIL PIGSTY 3.1.1 1 | AVAIL PIGSTY 3.1.1 1 | AVAIL PIGSTY 3.1.1 1 |
-@ el8.x86_64 18 pg_anon_18 pg_anon_18-3.1.1-1PIGSTY.el8.x86_64.rpm pigsty 3.1.1 3.0MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_anon_18-3.1.1-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 18 pg_anon_18 pg_anon_18-3.1.1-1PIGSTY.el8.aarch64.rpm pigsty 3.1.1 2.7MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_anon_18-3.1.1-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 18 pg_anon_18 pg_anon_18-3.1.1-1PIGSTY.el9.x86_64.rpm pigsty 3.1.1 2.9MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_anon_18-3.1.1-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 18 pg_anon_18 pg_anon_18-3.1.1-1PIGSTY.el9.aarch64.rpm pigsty 3.1.1 2.8MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_anon_18-3.1.1-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 18 pg_anon_18 pg_anon_18-3.1.1-1PIGSTY.el10.x86_64.rpm pigsty 3.1.1 3.0MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_anon_18-3.1.1-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 18 pg_anon_18 pg_anon_18-3.1.1-1PIGSTY.el10.aarch64.rpm pigsty 3.1.1 2.8MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_anon_18-3.1.1-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 18 postgresql-18-pg-anon postgresql-18-pg-anon_3.1.1-1PIGSTY~bookworm_amd64.deb pigsty 3.1.1 2.5MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-anon/postgresql-18-pg-anon_3.1.1-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 18 postgresql-18-pg-anon postgresql-18-pg-anon_3.1.1-1PIGSTY~bookworm_arm64.deb pigsty 3.1.1 2.3MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-anon/postgresql-18-pg-anon_3.1.1-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 18 postgresql-18-pg-anon postgresql-18-pg-anon_3.1.1-1PIGSTY~trixie_amd64.deb pigsty 3.1.1 2.5MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-anon/postgresql-18-pg-anon_3.1.1-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 18 postgresql-18-pg-anon postgresql-18-pg-anon_3.1.1-1PIGSTY~trixie_arm64.deb pigsty 3.1.1 2.3MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-anon/postgresql-18-pg-anon_3.1.1-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 18 postgresql-18-pg-anon postgresql-18-pg-anon_3.1.1-1PIGSTY~jammy_amd64.deb pigsty 3.1.1 2.8MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-anon/postgresql-18-pg-anon_3.1.1-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 18 postgresql-18-pg-anon postgresql-18-pg-anon_3.1.1-1PIGSTY~jammy_arm64.deb pigsty 3.1.1 2.7MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-anon/postgresql-18-pg-anon_3.1.1-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 18 postgresql-18-pg-anon postgresql-18-pg-anon_3.1.1-1PIGSTY~noble_amd64.deb pigsty 3.1.1 2.8MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-anon/postgresql-18-pg-anon_3.1.1-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 18 postgresql-18-pg-anon postgresql-18-pg-anon_3.1.1-1PIGSTY~noble_arm64.deb pigsty 3.1.1 2.6MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-anon/postgresql-18-pg-anon_3.1.1-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 18 postgresql-18-pg-anon postgresql-18-pg-anon_3.1.1-1PIGSTY~resolute_amd64.deb pigsty 3.1.1 2.8MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-anon/postgresql-18-pg-anon_3.1.1-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 18 postgresql-18-pg-anon postgresql-18-pg-anon_3.1.1-1PIGSTY~resolute_arm64.deb pigsty 3.1.1 2.6MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-anon/postgresql-18-pg-anon_3.1.1-1PIGSTY~resolute_arm64.deb
-@ el8.x86_64 17 pg_anon_17 pg_anon_17-3.1.1-1PIGSTY.el8.x86_64.rpm pigsty 3.1.1 3.0MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_anon_17-3.1.1-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 17 pg_anon_17 pg_anon_17-3.1.1-1PIGSTY.el8.aarch64.rpm pigsty 3.1.1 2.7MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_anon_17-3.1.1-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 17 pg_anon_17 pg_anon_17-3.1.1-1PIGSTY.el9.x86_64.rpm pigsty 3.1.1 2.9MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_anon_17-3.1.1-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 17 pg_anon_17 pg_anon_17-3.1.1-1PIGSTY.el9.aarch64.rpm pigsty 3.1.1 2.8MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_anon_17-3.1.1-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 17 pg_anon_17 pg_anon_17-3.1.1-1PIGSTY.el10.x86_64.rpm pigsty 3.1.1 2.9MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_anon_17-3.1.1-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 17 pg_anon_17 pg_anon_17-3.1.1-1PIGSTY.el10.aarch64.rpm pigsty 3.1.1 2.8MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_anon_17-3.1.1-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 17 postgresql-17-pg-anon postgresql-17-pg-anon_3.1.1-1PIGSTY~bookworm_amd64.deb pigsty 3.1.1 2.5MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-anon/postgresql-17-pg-anon_3.1.1-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 17 postgresql-17-pg-anon postgresql-17-pg-anon_3.1.1-1PIGSTY~bookworm_arm64.deb pigsty 3.1.1 2.3MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-anon/postgresql-17-pg-anon_3.1.1-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 17 postgresql-17-pg-anon postgresql-17-pg-anon_3.1.1-1PIGSTY~trixie_amd64.deb pigsty 3.1.1 2.5MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-anon/postgresql-17-pg-anon_3.1.1-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 17 postgresql-17-pg-anon postgresql-17-pg-anon_3.1.1-1PIGSTY~trixie_arm64.deb pigsty 3.1.1 2.3MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-anon/postgresql-17-pg-anon_3.1.1-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 17 postgresql-17-pg-anon postgresql-17-pg-anon_3.1.1-1PIGSTY~jammy_amd64.deb pigsty 3.1.1 2.8MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-anon/postgresql-17-pg-anon_3.1.1-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 17 postgresql-17-pg-anon postgresql-17-pg-anon_3.1.1-1PIGSTY~jammy_arm64.deb pigsty 3.1.1 2.7MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-anon/postgresql-17-pg-anon_3.1.1-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 17 postgresql-17-pg-anon postgresql-17-pg-anon_3.1.1-1PIGSTY~noble_amd64.deb pigsty 3.1.1 2.8MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-anon/postgresql-17-pg-anon_3.1.1-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 17 postgresql-17-pg-anon postgresql-17-pg-anon_3.1.1-1PIGSTY~noble_arm64.deb pigsty 3.1.1 2.6MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-anon/postgresql-17-pg-anon_3.1.1-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 17 postgresql-17-pg-anon postgresql-17-pg-anon_3.1.1-1PIGSTY~resolute_amd64.deb pigsty 3.1.1 2.8MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-anon/postgresql-17-pg-anon_3.1.1-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 17 postgresql-17-pg-anon postgresql-17-pg-anon_3.1.1-1PIGSTY~resolute_arm64.deb pigsty 3.1.1 2.6MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-anon/postgresql-17-pg-anon_3.1.1-1PIGSTY~resolute_arm64.deb
-@ el8.x86_64 16 pg_anon_16 pg_anon_16-3.1.1-1PIGSTY.el8.x86_64.rpm pigsty 3.1.1 3.0MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_anon_16-3.1.1-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 16 pg_anon_16 pg_anon_16-3.1.1-1PIGSTY.el8.aarch64.rpm pigsty 3.1.1 2.7MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_anon_16-3.1.1-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 16 pg_anon_16 pg_anon_16-3.1.1-1PIGSTY.el9.x86_64.rpm pigsty 3.1.1 3.0MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_anon_16-3.1.1-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 16 pg_anon_16 pg_anon_16-3.1.1-1PIGSTY.el9.aarch64.rpm pigsty 3.1.1 2.8MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_anon_16-3.1.1-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 16 pg_anon_16 pg_anon_16-3.1.1-1PIGSTY.el10.x86_64.rpm pigsty 3.1.1 2.9MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_anon_16-3.1.1-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 16 pg_anon_16 pg_anon_16-3.1.1-1PIGSTY.el10.aarch64.rpm pigsty 3.1.1 2.8MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_anon_16-3.1.1-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 16 postgresql-16-pg-anon postgresql-16-pg-anon_3.1.1-1PIGSTY~bookworm_amd64.deb pigsty 3.1.1 2.5MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-anon/postgresql-16-pg-anon_3.1.1-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 16 postgresql-16-pg-anon postgresql-16-pg-anon_3.1.1-1PIGSTY~bookworm_arm64.deb pigsty 3.1.1 2.3MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-anon/postgresql-16-pg-anon_3.1.1-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 16 postgresql-16-pg-anon postgresql-16-pg-anon_3.1.1-1PIGSTY~trixie_amd64.deb pigsty 3.1.1 2.5MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-anon/postgresql-16-pg-anon_3.1.1-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 16 postgresql-16-pg-anon postgresql-16-pg-anon_3.1.1-1PIGSTY~trixie_arm64.deb pigsty 3.1.1 2.3MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-anon/postgresql-16-pg-anon_3.1.1-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 16 postgresql-16-pg-anon postgresql-16-pg-anon_3.1.1-1PIGSTY~jammy_amd64.deb pigsty 3.1.1 2.8MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-anon/postgresql-16-pg-anon_3.1.1-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 16 postgresql-16-pg-anon postgresql-16-pg-anon_3.1.1-1PIGSTY~jammy_arm64.deb pigsty 3.1.1 2.7MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-anon/postgresql-16-pg-anon_3.1.1-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 16 postgresql-16-pg-anon postgresql-16-pg-anon_3.1.1-1PIGSTY~noble_amd64.deb pigsty 3.1.1 2.8MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-anon/postgresql-16-pg-anon_3.1.1-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 16 postgresql-16-pg-anon postgresql-16-pg-anon_3.1.1-1PIGSTY~noble_arm64.deb pigsty 3.1.1 2.6MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-anon/postgresql-16-pg-anon_3.1.1-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 16 postgresql-16-pg-anon postgresql-16-pg-anon_3.1.1-1PIGSTY~resolute_amd64.deb pigsty 3.1.1 2.8MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-anon/postgresql-16-pg-anon_3.1.1-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 16 postgresql-16-pg-anon postgresql-16-pg-anon_3.1.1-1PIGSTY~resolute_arm64.deb pigsty 3.1.1 2.6MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-anon/postgresql-16-pg-anon_3.1.1-1PIGSTY~resolute_arm64.deb
-@ el8.x86_64 15 pg_anon_15 pg_anon_15-3.1.1-1PIGSTY.el8.x86_64.rpm pigsty 3.1.1 3.0MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_anon_15-3.1.1-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 15 pg_anon_15 pg_anon_15-3.1.1-1PIGSTY.el8.aarch64.rpm pigsty 3.1.1 2.7MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_anon_15-3.1.1-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 15 pg_anon_15 pg_anon_15-3.1.1-1PIGSTY.el9.x86_64.rpm pigsty 3.1.1 2.9MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_anon_15-3.1.1-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 15 pg_anon_15 pg_anon_15-3.1.1-1PIGSTY.el9.aarch64.rpm pigsty 3.1.1 2.8MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_anon_15-3.1.1-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 15 pg_anon_15 pg_anon_15-3.1.1-1PIGSTY.el10.x86_64.rpm pigsty 3.1.1 2.9MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_anon_15-3.1.1-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 15 pg_anon_15 pg_anon_15-3.1.1-1PIGSTY.el10.aarch64.rpm pigsty 3.1.1 2.8MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_anon_15-3.1.1-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 15 postgresql-15-pg-anon postgresql-15-pg-anon_3.1.1-1PIGSTY~bookworm_amd64.deb pigsty 3.1.1 2.5MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-anon/postgresql-15-pg-anon_3.1.1-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 15 postgresql-15-pg-anon postgresql-15-pg-anon_3.1.1-1PIGSTY~bookworm_arm64.deb pigsty 3.1.1 2.3MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-anon/postgresql-15-pg-anon_3.1.1-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 15 postgresql-15-pg-anon postgresql-15-pg-anon_3.1.1-1PIGSTY~trixie_amd64.deb pigsty 3.1.1 2.5MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-anon/postgresql-15-pg-anon_3.1.1-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 15 postgresql-15-pg-anon postgresql-15-pg-anon_3.1.1-1PIGSTY~trixie_arm64.deb pigsty 3.1.1 2.3MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-anon/postgresql-15-pg-anon_3.1.1-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 15 postgresql-15-pg-anon postgresql-15-pg-anon_3.1.1-1PIGSTY~jammy_amd64.deb pigsty 3.1.1 2.8MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-anon/postgresql-15-pg-anon_3.1.1-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 15 postgresql-15-pg-anon postgresql-15-pg-anon_3.1.1-1PIGSTY~jammy_arm64.deb pigsty 3.1.1 2.7MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-anon/postgresql-15-pg-anon_3.1.1-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 15 postgresql-15-pg-anon postgresql-15-pg-anon_3.1.1-1PIGSTY~noble_amd64.deb pigsty 3.1.1 2.8MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-anon/postgresql-15-pg-anon_3.1.1-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 15 postgresql-15-pg-anon postgresql-15-pg-anon_3.1.1-1PIGSTY~noble_arm64.deb pigsty 3.1.1 2.6MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-anon/postgresql-15-pg-anon_3.1.1-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 15 postgresql-15-pg-anon postgresql-15-pg-anon_3.1.1-1PIGSTY~resolute_amd64.deb pigsty 3.1.1 2.8MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-anon/postgresql-15-pg-anon_3.1.1-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 15 postgresql-15-pg-anon postgresql-15-pg-anon_3.1.1-1PIGSTY~resolute_arm64.deb pigsty 3.1.1 2.6MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-anon/postgresql-15-pg-anon_3.1.1-1PIGSTY~resolute_arm64.deb
-@ el8.x86_64 14 pg_anon_14 pg_anon_14-3.1.1-1PIGSTY.el8.x86_64.rpm pigsty 3.1.1 3.0MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_anon_14-3.1.1-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 14 pg_anon_14 pg_anon_14-3.1.1-1PIGSTY.el8.aarch64.rpm pigsty 3.1.1 2.7MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_anon_14-3.1.1-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 14 pg_anon_14 pg_anon_14-3.1.1-1PIGSTY.el9.x86_64.rpm pigsty 3.1.1 2.9MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_anon_14-3.1.1-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 14 pg_anon_14 pg_anon_14-3.1.1-1PIGSTY.el9.aarch64.rpm pigsty 3.1.1 2.8MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_anon_14-3.1.1-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 14 pg_anon_14 pg_anon_14-3.1.1-1PIGSTY.el10.x86_64.rpm pigsty 3.1.1 3.0MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_anon_14-3.1.1-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 14 pg_anon_14 pg_anon_14-3.1.1-1PIGSTY.el10.aarch64.rpm pigsty 3.1.1 2.8MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_anon_14-3.1.1-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 14 postgresql-14-pg-anon postgresql-14-pg-anon_3.1.1-1PIGSTY~bookworm_amd64.deb pigsty 3.1.1 2.5MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-anon/postgresql-14-pg-anon_3.1.1-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 14 postgresql-14-pg-anon postgresql-14-pg-anon_3.1.1-1PIGSTY~bookworm_arm64.deb pigsty 3.1.1 2.3MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-anon/postgresql-14-pg-anon_3.1.1-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 14 postgresql-14-pg-anon postgresql-14-pg-anon_3.1.1-1PIGSTY~trixie_amd64.deb pigsty 3.1.1 2.5MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-anon/postgresql-14-pg-anon_3.1.1-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 14 postgresql-14-pg-anon postgresql-14-pg-anon_3.1.1-1PIGSTY~trixie_arm64.deb pigsty 3.1.1 2.3MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-anon/postgresql-14-pg-anon_3.1.1-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 14 postgresql-14-pg-anon postgresql-14-pg-anon_3.1.1-1PIGSTY~jammy_amd64.deb pigsty 3.1.1 2.8MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-anon/postgresql-14-pg-anon_3.1.1-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 14 postgresql-14-pg-anon postgresql-14-pg-anon_3.1.1-1PIGSTY~jammy_arm64.deb pigsty 3.1.1 2.7MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-anon/postgresql-14-pg-anon_3.1.1-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 14 postgresql-14-pg-anon postgresql-14-pg-anon_3.1.1-1PIGSTY~noble_amd64.deb pigsty 3.1.1 2.8MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-anon/postgresql-14-pg-anon_3.1.1-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 14 postgresql-14-pg-anon postgresql-14-pg-anon_3.1.1-1PIGSTY~noble_arm64.deb pigsty 3.1.1 2.6MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-anon/postgresql-14-pg-anon_3.1.1-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 14 postgresql-14-pg-anon postgresql-14-pg-anon_3.1.1-1PIGSTY~resolute_amd64.deb pigsty 3.1.1 2.8MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-anon/postgresql-14-pg-anon_3.1.1-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 14 postgresql-14-pg-anon postgresql-14-pg-anon_3.1.1-1PIGSTY~resolute_arm64.deb pigsty 3.1.1 2.6MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-anon/postgresql-14-pg-anon_3.1.1-1PIGSTY~resolute_arm64.deb
+| el8.x86_64 | AVAIL PIGSTY 3.1.3 1 | AVAIL PIGSTY 3.1.3 1 | AVAIL PIGSTY 3.1.3 1 | AVAIL PIGSTY 3.1.3 1 | AVAIL PIGSTY 3.1.3 1 |
+| el8.aarch64 | AVAIL PIGSTY 3.1.3 1 | AVAIL PIGSTY 3.1.3 1 | AVAIL PIGSTY 3.1.3 1 | AVAIL PIGSTY 3.1.3 1 | AVAIL PIGSTY 3.1.3 1 |
+| el9.x86_64 | AVAIL PIGSTY 3.1.3 1 | AVAIL PIGSTY 3.1.3 1 | AVAIL PIGSTY 3.1.3 1 | AVAIL PIGSTY 3.1.3 1 | AVAIL PIGSTY 3.1.3 1 |
+| el9.aarch64 | AVAIL PIGSTY 3.1.3 1 | AVAIL PIGSTY 3.1.3 1 | AVAIL PIGSTY 3.1.3 1 | AVAIL PIGSTY 3.1.3 1 | AVAIL PIGSTY 3.1.3 1 |
+| el10.x86_64 | AVAIL PIGSTY 3.1.3 1 | AVAIL PIGSTY 3.1.3 1 | AVAIL PIGSTY 3.1.3 1 | AVAIL PIGSTY 3.1.3 1 | AVAIL PIGSTY 3.1.3 1 |
+| el10.aarch64 | AVAIL PIGSTY 3.1.3 1 | AVAIL PIGSTY 3.1.3 1 | AVAIL PIGSTY 3.1.3 1 | AVAIL PIGSTY 3.1.3 1 | AVAIL PIGSTY 3.1.3 1 |
+| d12.x86_64 | AVAIL PIGSTY 3.1.3 1 | AVAIL PIGSTY 3.1.3 1 | AVAIL PIGSTY 3.1.3 1 | AVAIL PIGSTY 3.1.3 1 | AVAIL PIGSTY 3.1.3 1 |
+| d12.aarch64 | AVAIL PIGSTY 3.1.3 1 | AVAIL PIGSTY 3.1.3 1 | AVAIL PIGSTY 3.1.3 1 | AVAIL PIGSTY 3.1.3 1 | AVAIL PIGSTY 3.1.3 1 |
+| d13.x86_64 | AVAIL PIGSTY 3.1.3 1 | AVAIL PIGSTY 3.1.3 1 | AVAIL PIGSTY 3.1.3 1 | AVAIL PIGSTY 3.1.3 1 | AVAIL PIGSTY 3.1.3 1 |
+| d13.aarch64 | AVAIL PIGSTY 3.1.3 1 | AVAIL PIGSTY 3.1.3 1 | AVAIL PIGSTY 3.1.3 1 | AVAIL PIGSTY 3.1.3 1 | AVAIL PIGSTY 3.1.3 1 |
+| u22.x86_64 | AVAIL PIGSTY 3.1.3 1 | AVAIL PIGSTY 3.1.3 1 | AVAIL PIGSTY 3.1.3 1 | AVAIL PIGSTY 3.1.3 1 | AVAIL PIGSTY 3.1.3 1 |
+| u22.aarch64 | AVAIL PIGSTY 3.1.3 1 | AVAIL PIGSTY 3.1.3 1 | AVAIL PIGSTY 3.1.3 1 | AVAIL PIGSTY 3.1.3 1 | AVAIL PIGSTY 3.1.3 1 |
+| u24.x86_64 | AVAIL PIGSTY 3.1.3 1 | AVAIL PIGSTY 3.1.3 1 | AVAIL PIGSTY 3.1.3 1 | AVAIL PIGSTY 3.1.3 1 | AVAIL PIGSTY 3.1.3 1 |
+| u24.aarch64 | AVAIL PIGSTY 3.1.3 1 | AVAIL PIGSTY 3.1.3 1 | AVAIL PIGSTY 3.1.3 1 | AVAIL PIGSTY 3.1.3 1 | AVAIL PIGSTY 3.1.3 1 |
+| u26.x86_64 | AVAIL PIGSTY 3.1.3 1 | AVAIL PIGSTY 3.1.3 1 | AVAIL PIGSTY 3.1.3 1 | AVAIL PIGSTY 3.1.3 1 | AVAIL PIGSTY 3.1.3 1 |
+| u26.aarch64 | AVAIL PIGSTY 3.1.3 1 | AVAIL PIGSTY 3.1.3 1 | AVAIL PIGSTY 3.1.3 1 | AVAIL PIGSTY 3.1.3 1 | AVAIL PIGSTY 3.1.3 1 |
+@ el8.x86_64 18 pg_anon_18 pg_anon_18-3.1.3-2PIGSTY.el8.x86_64.rpm pigsty 3.1.3 3.3MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_anon_18-3.1.3-2PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 18 pg_anon_18 pg_anon_18-3.1.3-2PIGSTY.el8.aarch64.rpm pigsty 3.1.3 2.9MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_anon_18-3.1.3-2PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 18 pg_anon_18 pg_anon_18-3.1.3-2PIGSTY.el9.x86_64.rpm pigsty 3.1.3 3.1MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_anon_18-3.1.3-2PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 18 pg_anon_18 pg_anon_18-3.1.3-2PIGSTY.el9.aarch64.rpm pigsty 3.1.3 3.0MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_anon_18-3.1.3-2PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 18 pg_anon_18 pg_anon_18-3.1.3-2PIGSTY.el10.x86_64.rpm pigsty 3.1.3 3.1MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_anon_18-3.1.3-2PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 18 pg_anon_18 pg_anon_18-3.1.3-2PIGSTY.el10.aarch64.rpm pigsty 3.1.3 3.0MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_anon_18-3.1.3-2PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-pg-anon postgresql-18-pg-anon_3.1.3-1PIGSTY~bookworm_amd64.deb pigsty 3.1.3 2.7MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-anon/postgresql-18-pg-anon_3.1.3-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 18 postgresql-18-pg-anon postgresql-18-pg-anon_3.1.3-1PIGSTY~bookworm_arm64.deb pigsty 3.1.3 2.4MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-anon/postgresql-18-pg-anon_3.1.3-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 18 postgresql-18-pg-anon postgresql-18-pg-anon_3.1.3-1PIGSTY~trixie_amd64.deb pigsty 3.1.3 2.7MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-anon/postgresql-18-pg-anon_3.1.3-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 18 postgresql-18-pg-anon postgresql-18-pg-anon_3.1.3-1PIGSTY~trixie_arm64.deb pigsty 3.1.3 2.4MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-anon/postgresql-18-pg-anon_3.1.3-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 18 postgresql-18-pg-anon postgresql-18-pg-anon_3.1.3-1PIGSTY~jammy_amd64.deb pigsty 3.1.3 3.0MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-anon/postgresql-18-pg-anon_3.1.3-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 18 postgresql-18-pg-anon postgresql-18-pg-anon_3.1.3-1PIGSTY~jammy_arm64.deb pigsty 3.1.3 2.8MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-anon/postgresql-18-pg-anon_3.1.3-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 18 postgresql-18-pg-anon postgresql-18-pg-anon_3.1.3-1PIGSTY~noble_amd64.deb pigsty 3.1.3 2.9MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-anon/postgresql-18-pg-anon_3.1.3-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 18 postgresql-18-pg-anon postgresql-18-pg-anon_3.1.3-1PIGSTY~noble_arm64.deb pigsty 3.1.3 2.7MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-anon/postgresql-18-pg-anon_3.1.3-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 18 postgresql-18-pg-anon postgresql-18-pg-anon_3.1.3-1PIGSTY~resolute_amd64.deb pigsty 3.1.3 2.9MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-anon/postgresql-18-pg-anon_3.1.3-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 18 postgresql-18-pg-anon postgresql-18-pg-anon_3.1.3-1PIGSTY~resolute_arm64.deb pigsty 3.1.3 2.7MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-anon/postgresql-18-pg-anon_3.1.3-1PIGSTY~resolute_arm64.deb
+@ el8.x86_64 17 pg_anon_17 pg_anon_17-3.1.3-2PIGSTY.el8.x86_64.rpm pigsty 3.1.3 3.3MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_anon_17-3.1.3-2PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 17 pg_anon_17 pg_anon_17-3.1.3-2PIGSTY.el8.aarch64.rpm pigsty 3.1.3 2.9MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_anon_17-3.1.3-2PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 17 pg_anon_17 pg_anon_17-3.1.3-2PIGSTY.el9.x86_64.rpm pigsty 3.1.3 3.1MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_anon_17-3.1.3-2PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 17 pg_anon_17 pg_anon_17-3.1.3-2PIGSTY.el9.aarch64.rpm pigsty 3.1.3 3.0MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_anon_17-3.1.3-2PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 17 pg_anon_17 pg_anon_17-3.1.3-2PIGSTY.el10.x86_64.rpm pigsty 3.1.3 3.1MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_anon_17-3.1.3-2PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 17 pg_anon_17 pg_anon_17-3.1.3-2PIGSTY.el10.aarch64.rpm pigsty 3.1.3 2.9MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_anon_17-3.1.3-2PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-pg-anon postgresql-17-pg-anon_3.1.3-1PIGSTY~bookworm_amd64.deb pigsty 3.1.3 2.7MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-anon/postgresql-17-pg-anon_3.1.3-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 17 postgresql-17-pg-anon postgresql-17-pg-anon_3.1.3-1PIGSTY~bookworm_arm64.deb pigsty 3.1.3 2.4MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-anon/postgresql-17-pg-anon_3.1.3-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 17 postgresql-17-pg-anon postgresql-17-pg-anon_3.1.3-1PIGSTY~trixie_amd64.deb pigsty 3.1.3 2.7MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-anon/postgresql-17-pg-anon_3.1.3-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 17 postgresql-17-pg-anon postgresql-17-pg-anon_3.1.3-1PIGSTY~trixie_arm64.deb pigsty 3.1.3 2.4MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-anon/postgresql-17-pg-anon_3.1.3-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 17 postgresql-17-pg-anon postgresql-17-pg-anon_3.1.3-1PIGSTY~jammy_amd64.deb pigsty 3.1.3 3.0MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-anon/postgresql-17-pg-anon_3.1.3-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 17 postgresql-17-pg-anon postgresql-17-pg-anon_3.1.3-1PIGSTY~jammy_arm64.deb pigsty 3.1.3 2.8MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-anon/postgresql-17-pg-anon_3.1.3-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 17 postgresql-17-pg-anon postgresql-17-pg-anon_3.1.3-1PIGSTY~noble_amd64.deb pigsty 3.1.3 2.9MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-anon/postgresql-17-pg-anon_3.1.3-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 17 postgresql-17-pg-anon postgresql-17-pg-anon_3.1.3-1PIGSTY~noble_arm64.deb pigsty 3.1.3 2.7MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-anon/postgresql-17-pg-anon_3.1.3-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 17 postgresql-17-pg-anon postgresql-17-pg-anon_3.1.3-1PIGSTY~resolute_amd64.deb pigsty 3.1.3 2.9MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-anon/postgresql-17-pg-anon_3.1.3-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 17 postgresql-17-pg-anon postgresql-17-pg-anon_3.1.3-1PIGSTY~resolute_arm64.deb pigsty 3.1.3 2.7MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-anon/postgresql-17-pg-anon_3.1.3-1PIGSTY~resolute_arm64.deb
+@ el8.x86_64 16 pg_anon_16 pg_anon_16-3.1.3-2PIGSTY.el8.x86_64.rpm pigsty 3.1.3 3.3MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_anon_16-3.1.3-2PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 16 pg_anon_16 pg_anon_16-3.1.3-2PIGSTY.el8.aarch64.rpm pigsty 3.1.3 2.9MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_anon_16-3.1.3-2PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 16 pg_anon_16 pg_anon_16-3.1.3-2PIGSTY.el9.x86_64.rpm pigsty 3.1.3 3.1MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_anon_16-3.1.3-2PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 16 pg_anon_16 pg_anon_16-3.1.3-2PIGSTY.el9.aarch64.rpm pigsty 3.1.3 3.0MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_anon_16-3.1.3-2PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 16 pg_anon_16 pg_anon_16-3.1.3-2PIGSTY.el10.x86_64.rpm pigsty 3.1.3 3.1MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_anon_16-3.1.3-2PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 16 pg_anon_16 pg_anon_16-3.1.3-2PIGSTY.el10.aarch64.rpm pigsty 3.1.3 3.0MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_anon_16-3.1.3-2PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 16 postgresql-16-pg-anon postgresql-16-pg-anon_3.1.3-1PIGSTY~bookworm_amd64.deb pigsty 3.1.3 2.7MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-anon/postgresql-16-pg-anon_3.1.3-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 16 postgresql-16-pg-anon postgresql-16-pg-anon_3.1.3-1PIGSTY~bookworm_arm64.deb pigsty 3.1.3 2.4MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-anon/postgresql-16-pg-anon_3.1.3-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 16 postgresql-16-pg-anon postgresql-16-pg-anon_3.1.3-1PIGSTY~trixie_amd64.deb pigsty 3.1.3 2.7MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-anon/postgresql-16-pg-anon_3.1.3-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 16 postgresql-16-pg-anon postgresql-16-pg-anon_3.1.3-1PIGSTY~trixie_arm64.deb pigsty 3.1.3 2.4MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-anon/postgresql-16-pg-anon_3.1.3-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 16 postgresql-16-pg-anon postgresql-16-pg-anon_3.1.3-1PIGSTY~jammy_amd64.deb pigsty 3.1.3 3.0MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-anon/postgresql-16-pg-anon_3.1.3-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 16 postgresql-16-pg-anon postgresql-16-pg-anon_3.1.3-1PIGSTY~jammy_arm64.deb pigsty 3.1.3 2.8MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-anon/postgresql-16-pg-anon_3.1.3-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 16 postgresql-16-pg-anon postgresql-16-pg-anon_3.1.3-1PIGSTY~noble_amd64.deb pigsty 3.1.3 2.9MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-anon/postgresql-16-pg-anon_3.1.3-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 16 postgresql-16-pg-anon postgresql-16-pg-anon_3.1.3-1PIGSTY~noble_arm64.deb pigsty 3.1.3 2.7MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-anon/postgresql-16-pg-anon_3.1.3-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 16 postgresql-16-pg-anon postgresql-16-pg-anon_3.1.3-1PIGSTY~resolute_amd64.deb pigsty 3.1.3 2.9MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-anon/postgresql-16-pg-anon_3.1.3-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 16 postgresql-16-pg-anon postgresql-16-pg-anon_3.1.3-1PIGSTY~resolute_arm64.deb pigsty 3.1.3 2.7MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-anon/postgresql-16-pg-anon_3.1.3-1PIGSTY~resolute_arm64.deb
+@ el8.x86_64 15 pg_anon_15 pg_anon_15-3.1.3-2PIGSTY.el8.x86_64.rpm pigsty 3.1.3 3.3MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_anon_15-3.1.3-2PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 15 pg_anon_15 pg_anon_15-3.1.3-2PIGSTY.el8.aarch64.rpm pigsty 3.1.3 2.9MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_anon_15-3.1.3-2PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 15 pg_anon_15 pg_anon_15-3.1.3-2PIGSTY.el9.x86_64.rpm pigsty 3.1.3 3.1MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_anon_15-3.1.3-2PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 15 pg_anon_15 pg_anon_15-3.1.3-2PIGSTY.el9.aarch64.rpm pigsty 3.1.3 3.0MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_anon_15-3.1.3-2PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 15 pg_anon_15 pg_anon_15-3.1.3-2PIGSTY.el10.x86_64.rpm pigsty 3.1.3 3.1MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_anon_15-3.1.3-2PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 15 pg_anon_15 pg_anon_15-3.1.3-2PIGSTY.el10.aarch64.rpm pigsty 3.1.3 2.9MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_anon_15-3.1.3-2PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 15 postgresql-15-pg-anon postgresql-15-pg-anon_3.1.3-1PIGSTY~bookworm_amd64.deb pigsty 3.1.3 2.7MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-anon/postgresql-15-pg-anon_3.1.3-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 15 postgresql-15-pg-anon postgresql-15-pg-anon_3.1.3-1PIGSTY~bookworm_arm64.deb pigsty 3.1.3 2.4MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-anon/postgresql-15-pg-anon_3.1.3-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 15 postgresql-15-pg-anon postgresql-15-pg-anon_3.1.3-1PIGSTY~trixie_amd64.deb pigsty 3.1.3 2.7MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-anon/postgresql-15-pg-anon_3.1.3-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 15 postgresql-15-pg-anon postgresql-15-pg-anon_3.1.3-1PIGSTY~trixie_arm64.deb pigsty 3.1.3 2.3MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-anon/postgresql-15-pg-anon_3.1.3-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 15 postgresql-15-pg-anon postgresql-15-pg-anon_3.1.3-1PIGSTY~jammy_amd64.deb pigsty 3.1.3 3.0MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-anon/postgresql-15-pg-anon_3.1.3-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 15 postgresql-15-pg-anon postgresql-15-pg-anon_3.1.3-1PIGSTY~jammy_arm64.deb pigsty 3.1.3 2.8MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-anon/postgresql-15-pg-anon_3.1.3-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 15 postgresql-15-pg-anon postgresql-15-pg-anon_3.1.3-1PIGSTY~noble_amd64.deb pigsty 3.1.3 2.9MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-anon/postgresql-15-pg-anon_3.1.3-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 15 postgresql-15-pg-anon postgresql-15-pg-anon_3.1.3-1PIGSTY~noble_arm64.deb pigsty 3.1.3 2.7MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-anon/postgresql-15-pg-anon_3.1.3-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 15 postgresql-15-pg-anon postgresql-15-pg-anon_3.1.3-1PIGSTY~resolute_amd64.deb pigsty 3.1.3 2.9MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-anon/postgresql-15-pg-anon_3.1.3-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 15 postgresql-15-pg-anon postgresql-15-pg-anon_3.1.3-1PIGSTY~resolute_arm64.deb pigsty 3.1.3 2.7MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-anon/postgresql-15-pg-anon_3.1.3-1PIGSTY~resolute_arm64.deb
+@ el8.x86_64 14 pg_anon_14 pg_anon_14-3.1.3-2PIGSTY.el8.x86_64.rpm pigsty 3.1.3 3.3MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_anon_14-3.1.3-2PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 14 pg_anon_14 pg_anon_14-3.1.3-2PIGSTY.el8.aarch64.rpm pigsty 3.1.3 2.9MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_anon_14-3.1.3-2PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 14 pg_anon_14 pg_anon_14-3.1.3-2PIGSTY.el9.x86_64.rpm pigsty 3.1.3 3.1MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_anon_14-3.1.3-2PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 14 pg_anon_14 pg_anon_14-3.1.3-2PIGSTY.el9.aarch64.rpm pigsty 3.1.3 3.0MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_anon_14-3.1.3-2PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 14 pg_anon_14 pg_anon_14-3.1.3-2PIGSTY.el10.x86_64.rpm pigsty 3.1.3 3.1MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_anon_14-3.1.3-2PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 14 pg_anon_14 pg_anon_14-3.1.3-2PIGSTY.el10.aarch64.rpm pigsty 3.1.3 3.0MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_anon_14-3.1.3-2PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 14 postgresql-14-pg-anon postgresql-14-pg-anon_3.1.3-1PIGSTY~bookworm_amd64.deb pigsty 3.1.3 2.7MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-anon/postgresql-14-pg-anon_3.1.3-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 14 postgresql-14-pg-anon postgresql-14-pg-anon_3.1.3-1PIGSTY~bookworm_arm64.deb pigsty 3.1.3 2.4MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-anon/postgresql-14-pg-anon_3.1.3-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 14 postgresql-14-pg-anon postgresql-14-pg-anon_3.1.3-1PIGSTY~trixie_amd64.deb pigsty 3.1.3 2.7MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-anon/postgresql-14-pg-anon_3.1.3-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 14 postgresql-14-pg-anon postgresql-14-pg-anon_3.1.3-1PIGSTY~trixie_arm64.deb pigsty 3.1.3 2.3MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-anon/postgresql-14-pg-anon_3.1.3-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 14 postgresql-14-pg-anon postgresql-14-pg-anon_3.1.3-1PIGSTY~jammy_amd64.deb pigsty 3.1.3 3.0MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-anon/postgresql-14-pg-anon_3.1.3-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 14 postgresql-14-pg-anon postgresql-14-pg-anon_3.1.3-1PIGSTY~jammy_arm64.deb pigsty 3.1.3 2.8MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-anon/postgresql-14-pg-anon_3.1.3-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 14 postgresql-14-pg-anon postgresql-14-pg-anon_3.1.3-1PIGSTY~noble_amd64.deb pigsty 3.1.3 2.9MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-anon/postgresql-14-pg-anon_3.1.3-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 14 postgresql-14-pg-anon postgresql-14-pg-anon_3.1.3-1PIGSTY~noble_arm64.deb pigsty 3.1.3 2.7MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-anon/postgresql-14-pg-anon_3.1.3-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 14 postgresql-14-pg-anon postgresql-14-pg-anon_3.1.3-1PIGSTY~resolute_amd64.deb pigsty 3.1.3 2.9MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-anon/postgresql-14-pg-anon_3.1.3-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 14 postgresql-14-pg-anon postgresql-14-pg-anon_3.1.3-1PIGSTY~resolute_arm64.deb pigsty 3.1.3 2.7MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-anon/postgresql-14-pg-anon_3.1.3-1PIGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建
@@ -219,87 +216,62 @@ shared_preload_libraries = 'anon';
 CREATE EXTENSION anon;
 ```
 
-
-
-
 ## 用法
 
-> 来源：[overview](https://postgresql-anonymizer.readthedocs.io/en/stable/)、[static masking](https://postgresql-anonymizer.readthedocs.io/en/stable/static_masking/)、[dynamic masking](https://postgresql-anonymizer.readthedocs.io/en/stable/dynamic_masking/)、[anonymous dumps](https://postgresql-anonymizer.readthedocs.io/en/stable/anonymous_dumps/)、[masking functions](https://postgresql-anonymizer.readthedocs.io/en/stable/masking_functions/)、[release 3.1.1](https://gitlab.com/dalibo/postgresql_anonymizer/-/releases/3.1.1)
+来源：
 
-`anon` 使用 `SECURITY LABEL FOR anon` 声明脱敏规则。官方文档描述了六种脱敏方法：anonymous dumps、static masking、dynamic masking、replica masking、masking views 和 masking data wrappers。
+- [PostgreSQL Anonymizer 3.1.3 README](https://gitlab.com/dalibo/postgresql_anonymizer/-/blob/3.1.3/README.md)
+- [Masking functions](https://gitlab.com/dalibo/postgresql_anonymizer/-/blob/3.1.3/docs/masking_functions.md)
+- [3.1.3 changelog](https://gitlab.com/dalibo/postgresql_anonymizer/-/blob/3.1.3/CHANGELOG.md)
+- [Official documentation](https://postgresql-anonymizer.readthedocs.io/en/stable/)
 
-### 初始化与声明规则
+`anon` 是 PostgreSQL Anonymizer，它应用声明式的遮掩规则以实现受保护查询的访问，并生成匿名化数据集。同时提供伪名化和随机响应辅助功能。在必须保持现实数据有用性而不暴露原始敏感值时使用它；将遮掩策略、角色授权以及未遮掩数据库的访问视为安全边界的一部分。
+
+### 核心工作流程
+
+在目标数据库会话中加载 `anon`，安装扩展并启用透明动态遮掩。新连接会自动获取数据库级别的设置。
 
 ```sql
-CREATE EXTENSION IF NOT EXISTS anon CASCADE;
-SELECT anon.init();
+ALTER DATABASE app SET session_preload_libraries = 'anon';
 
-SECURITY LABEL FOR anon ON COLUMN customer.full_name
-IS 'MASKED WITH FUNCTION anon.dummy_name()';
+\connect app
+CREATE EXTENSION anon;
+ALTER DATABASE app SET anon.transparent_dynamic_masking = true;
+```
 
-SECURITY LABEL FOR anon ON COLUMN customer.employer
-IS 'MASKED WITH FUNCTION anon.dummy_company_name()';
+将登录标记为被遮掩，并将遮掩规则附加到敏感列上：
 
+```sql
+CREATE ROLE reporting LOGIN;
+SECURITY LABEL FOR anon ON ROLE reporting IS 'MASKED';
+GRANT pg_read_all_data TO reporting;
+
+SECURITY LABEL FOR anon ON COLUMN customer.last_name
+  IS 'MASKED WITH FUNCTION anon.dummy_last_name()';
 SECURITY LABEL FOR anon ON COLUMN customer.phone
-IS 'MASKED WITH FUNCTION anon.partial(phone, 2, $$******$$, 2)';
+  IS 'MASKED WITH FUNCTION anon.partial(phone, 2, $$******$$, 2)';
 ```
 
-### 静态脱敏
+以 `reporting` 身份执行的查询会看到变换后的值。特权用户仍然可以看到原始值，因此不要授予被遮掩的角色绕过策略的路径。
 
-静态脱敏会原地改写已存储的数据：
+### 遮掩策略
 
-```sql
-SELECT anon.anonymize_database();
--- See also: anon.anonymize_table(), anon.anonymize_column()
--- For larger databases: anon.anonymize_database_parallel(worker_count)
-```
+- **动态遮掩** 对标记为 `MASKED` 的角色转换结果而无需重写表。
+- **静态遮掩** 永久性地重写选定的数据，并适用于一次性开发或测试副本。
+- **匿名导出和复制体** 生成经过净化的导出或下游副本。
+- **遮掩视图和数据包装器** 展示一个故意减少或转换后的投影。
+- **伪名化** 在必须保持一致性的连接或重复值时使用确定性变换。
 
-静态脱敏文档还覆盖 shuffling、噪声注入，以及面向较大数据集的并行脱敏。并行静态脱敏受 `anon.max_bg_workers` 和服务器 `max_worker_processes` 限制。
+### 关键对象
 
-### 动态脱敏
+- `anon.dummy_*`、`anon.random_*` 和 `anon.partial(...)` 生成或部分遮掩值。
+- `anon.hash(text)` 和 `anon.digest(text, text, text)` 提供确定性转换。在 3.1.2 版本中，它们被标记为 `RESTRICTED` 以限制暴力破解暴露。
+- `anon.ldp_grrm(value, epsilon, max_v)` 和 `anon.ldp_grrm_pttt(value, truth_probability, max_v)` 实现了局部差分隐私的通用随机响应。
+- `anon.ldp_truth_probability(...)` 和 `anon.ldp_lie_probability(...)` 用于检查随机响应概率。
+- 角色和列上的安全标签定义谁被遮掩以及每个值如何转换。
 
-动态脱敏只对标记为 masked 的角色隐藏值：
+### 运营注意事项
 
-```sql
-ALTER DATABASE demo SET session_preload_libraries = 'anon';
-ALTER DATABASE demo SET anon.transparent_dynamic_masking TO true;
+`anon` 是超级用户安装且不可重定位的。使用与预期消费者相同的授权和连接路径测试每项策略。随机化不是自动确定性的；当需要稳定相等时，请使用确认的伪名化函数。静态匿名化是破坏性的，因此在副本上运行它并在之后验证约束条件和应用程序行为。
 
-CREATE ROLE skynet LOGIN;
-SECURITY LABEL FOR anon ON ROLE skynet IS 'MASKED';
-GRANT pg_read_all_data TO skynet;
-
-SECURITY LABEL FOR anon ON COLUMN people.lastname
-IS 'MASKED WITH FUNCTION anon.dummy_last_name()';
-```
-
-当 `skynet` 查询该表时，会返回脱敏值而不是原始值。
-
-### 匿名导出与伪名化
-
-当前文档推荐通过 masked role 和 `pg_dump` 做透明匿名导出。较早的辅助工具 `pg_dump_anon.sh` 和 `pg_dump_anon` 已明确标记为 deprecated。
-
-对于 PostgreSQL 17 及之后版本，导出示例使用 `--exclude-extension="anon"` 搭配 `--no-security-labels`；较旧的 `pg_dump` 版本需要另一种 extension 选择方式，例如 `--extension plpgsql`。
-
-对于导出中的稳定键重映射，文档列出了：
-
-- `anon.pseudo_shift(bigint)`
-- `anon.pseudo_xor(bigint)`
-- `anon.set_shift()`
-
-### 常用函数与注意事项
-
-函数目录中的常用脱敏辅助函数包括：
-
-- `anon.dummy_first_name()`
-- `anon.dummy_last_name()`
-- `anon.dummy_company_name()`
-- `anon.random_zip()`
-- `anon.random_date_between(date, date)`
-- `anon.partial(value, prefix, mask, suffix)`
-
-官方文档中的注意事项：
-
-- dynamic masking 需要在 masked role 会话使用前完成 preload/configuration
-- static masking 会破坏原始值
-- pseudonymization 不等同于 anonymization
-- 版本 3.1.1 是针对 CVE-2026-11945 的 security release，并从 import/export 行为中移除 conditional randomization；应尽快从 3.0.x 升级。
+版本 3.1.3 重新运行缺失的 ARM 构建并更改发布元数据，没有新的 SQL 工作流。自 3.1.1 版本以来的主要差异在于对 `anon.hash` 和 `anon.digest` 的 3.1.2 安全强化；使用这些函数的部署应升级而不是依赖旧标签。

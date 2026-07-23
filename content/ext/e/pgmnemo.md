@@ -2,7 +2,7 @@
 title: "pgmnemo"
 linkTitle: "pgmnemo"
 description: "面向 LLM 代理的 PostgreSQL 溯源向量记忆扩展"
-weight: 1900
+weight: 1950
 ---
 
 <div class="ext-cards">
@@ -11,10 +11,10 @@ weight: 1900
     <div class="ext-card__title">pgmnemo/pgmnemo</div>
     <div class="ext-card__desc">https://github.com/pgmnemo/pgmnemo</div>
   </a>
-  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pgmnemo-0.12.1.tar.gz">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pgmnemo-0.13.0.tar.gz">
     <div class="ext-card__kicker">源码</div>
-    <div class="ext-card__title">pgmnemo-0.12.1.tar.gz</div>
-    <div class="ext-card__desc">pgmnemo-0.12.1.tar.gz</div>
+    <div class="ext-card__title">pgmnemo-0.13.0.tar.gz</div>
+    <div class="ext-card__desc">pgmnemo-0.13.0.tar.gz</div>
   </a>
 </div>
 
@@ -25,12 +25,12 @@ weight: 1900
 
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
-| [**`pgmnemo`**](/ext/e/pgmnemo) | `0.12.1` | <a class="ext-badge ext-badge--cate rag" href="/ext/cate/rag">RAG</a> | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> |
+| [**`pgmnemo`**](/ext/e/pgmnemo) | `0.13.0` | <a class="ext-badge ext-badge--cate rag" href="/ext/cate/rag">RAG</a> | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> |
 {.ext-table}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
 |:-----:|:-------------------------------------------------------------------------|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|:----------|
-| 1900  | [**`pgmnemo`**](/ext/e/pgmnemo) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | `pgmnemo` |
+| 1950  | [**`pgmnemo`**](/ext/e/pgmnemo) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | `pgmnemo` |
 {.ext-table}
 
 | **相关扩展** | [`vector`](/ext/e/vector) [`vector`](/ext/e/vector) [`pg_search`](/ext/e/pg_search) [`pg_ai_query`](/ext/e/pg_ai_query) [`pg_later`](/ext/e/pg_later) |
@@ -38,69 +38,69 @@ weight: 1900
 {.ext-table .ext-table--rel}
 
 
-> SQL-only extension; requires pgvector.
+> SQL-only extension requiring pgvector 0.7.0 or newer; upstream 0.13.0 and PIGSTY packages support PostgreSQL 17 and 18.
 
 
 ## 版本
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#rag) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.12.1` | {{< pgvers "14,15,16,17,18" >}} | `pgmnemo` | `vector` |
-| [**RPM**](/ext/rpm#rag) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.12.1` | {{< pgvers "14,15,16,17,18" >}} | `pgmnemo_$v` | `pgvector` |
-| [**DEB**](/ext/deb#rag) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.12.1` | {{< pgvers "14,15,16,17,18" >}} | `postgresql-$v-pgmnemo` | `pgvector` |
+| [**EXT**](/ext/list#rag) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.13.0` | {{< pgvers "18,17" >}} | `pgmnemo` | `vector` |
+| [**RPM**](/ext/rpm#rag) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.13.0` | {{< pgvers "18,17" >}} | `pgmnemo_$v` | `pgvector_$v` |
+| [**DEB**](/ext/deb#rag) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.13.0` | {{< pgvers "18,17" >}} | `postgresql-$v-pgmnemo` | `postgresql-$v-pgvector` |
 {.ext-table}
 
 {{< pgext_matrix >}}
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 |
-| el8.aarch64 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 |
-| el9.x86_64 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 |
-| el9.aarch64 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 |
-| el10.x86_64 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 |
-| el10.aarch64 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 |
-| d12.x86_64 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 |
-| d12.aarch64 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 |
-| d13.x86_64 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 |
-| d13.aarch64 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 |
-| u22.x86_64 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 |
-| u22.aarch64 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 |
-| u24.x86_64 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 |
-| u24.aarch64 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 |
-| u26.x86_64 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 |
-| u26.aarch64 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 |
-@ el8.x86_64 18 pgmnemo_18 pgmnemo_18-0.12.1-1PIGSTY.el8.x86_64.rpm pigsty 0.12.1 158.4KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgmnemo_18-0.12.1-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 18 pgmnemo_18 pgmnemo_18-0.12.1-1PIGSTY.el8.aarch64.rpm pigsty 0.12.1 158.4KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgmnemo_18-0.12.1-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 18 pgmnemo_18 pgmnemo_18-0.12.1-1PIGSTY.el9.x86_64.rpm pigsty 0.12.1 133.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgmnemo_18-0.12.1-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 18 pgmnemo_18 pgmnemo_18-0.12.1-1PIGSTY.el9.aarch64.rpm pigsty 0.12.1 133.8KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgmnemo_18-0.12.1-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 18 pgmnemo_18 pgmnemo_18-0.12.1-1PIGSTY.el10.x86_64.rpm pigsty 0.12.1 134.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgmnemo_18-0.12.1-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 18 pgmnemo_18 pgmnemo_18-0.12.1-1PIGSTY.el10.aarch64.rpm pigsty 0.12.1 133.9KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgmnemo_18-0.12.1-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 18 postgresql-18-pgmnemo postgresql-18-pgmnemo_0.12.1-1PIGSTY~bookworm_all.deb pigsty 0.12.1 124.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgmnemo/postgresql-18-pgmnemo_0.12.1-1PIGSTY~bookworm_all.deb
-@ d12.aarch64 18 postgresql-18-pgmnemo postgresql-18-pgmnemo_0.12.1-1PIGSTY~bookworm_all.deb pigsty 0.12.1 124.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgmnemo/postgresql-18-pgmnemo_0.12.1-1PIGSTY~bookworm_all.deb
-@ d13.x86_64 18 postgresql-18-pgmnemo postgresql-18-pgmnemo_0.12.1-1PIGSTY~trixie_all.deb pigsty 0.12.1 124.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgmnemo/postgresql-18-pgmnemo_0.12.1-1PIGSTY~trixie_all.deb
-@ d13.aarch64 18 postgresql-18-pgmnemo postgresql-18-pgmnemo_0.12.1-1PIGSTY~trixie_all.deb pigsty 0.12.1 124.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgmnemo/postgresql-18-pgmnemo_0.12.1-1PIGSTY~trixie_all.deb
-@ u22.x86_64 18 postgresql-18-pgmnemo postgresql-18-pgmnemo_0.12.1-1PIGSTY~jammy_all.deb pigsty 0.12.1 125.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgmnemo/postgresql-18-pgmnemo_0.12.1-1PIGSTY~jammy_all.deb
-@ u22.aarch64 18 postgresql-18-pgmnemo postgresql-18-pgmnemo_0.12.1-1PIGSTY~jammy_all.deb pigsty 0.12.1 125.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgmnemo/postgresql-18-pgmnemo_0.12.1-1PIGSTY~jammy_all.deb
-@ u24.x86_64 18 postgresql-18-pgmnemo postgresql-18-pgmnemo_0.12.1-1PIGSTY~noble_all.deb pigsty 0.12.1 124.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgmnemo/postgresql-18-pgmnemo_0.12.1-1PIGSTY~noble_all.deb
-@ u24.aarch64 18 postgresql-18-pgmnemo postgresql-18-pgmnemo_0.12.1-1PIGSTY~noble_all.deb pigsty 0.12.1 124.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgmnemo/postgresql-18-pgmnemo_0.12.1-1PIGSTY~noble_all.deb
-@ u26.x86_64 18 postgresql-18-pgmnemo postgresql-18-pgmnemo_0.12.1-1PIGSTY~resolute_all.deb pigsty 0.12.1 124.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgmnemo/postgresql-18-pgmnemo_0.12.1-1PIGSTY~resolute_all.deb
-@ u26.aarch64 18 postgresql-18-pgmnemo postgresql-18-pgmnemo_0.12.1-1PIGSTY~resolute_all.deb pigsty 0.12.1 124.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgmnemo/postgresql-18-pgmnemo_0.12.1-1PIGSTY~resolute_all.deb
-@ el8.x86_64 17 pgmnemo_17 pgmnemo_17-0.12.1-1PIGSTY.el8.x86_64.rpm pigsty 0.12.1 158.4KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgmnemo_17-0.12.1-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 17 pgmnemo_17 pgmnemo_17-0.12.1-1PIGSTY.el8.aarch64.rpm pigsty 0.12.1 158.4KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgmnemo_17-0.12.1-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 17 pgmnemo_17 pgmnemo_17-0.12.1-1PIGSTY.el9.x86_64.rpm pigsty 0.12.1 133.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgmnemo_17-0.12.1-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 17 pgmnemo_17 pgmnemo_17-0.12.1-1PIGSTY.el9.aarch64.rpm pigsty 0.12.1 133.8KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgmnemo_17-0.12.1-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 17 pgmnemo_17 pgmnemo_17-0.12.1-1PIGSTY.el10.x86_64.rpm pigsty 0.12.1 134.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgmnemo_17-0.12.1-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 17 pgmnemo_17 pgmnemo_17-0.12.1-1PIGSTY.el10.aarch64.rpm pigsty 0.12.1 133.9KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgmnemo_17-0.12.1-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 17 postgresql-17-pgmnemo postgresql-17-pgmnemo_0.12.1-1PIGSTY~bookworm_all.deb pigsty 0.12.1 124.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgmnemo/postgresql-17-pgmnemo_0.12.1-1PIGSTY~bookworm_all.deb
-@ d12.aarch64 17 postgresql-17-pgmnemo postgresql-17-pgmnemo_0.12.1-1PIGSTY~bookworm_all.deb pigsty 0.12.1 124.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgmnemo/postgresql-17-pgmnemo_0.12.1-1PIGSTY~bookworm_all.deb
-@ d13.x86_64 17 postgresql-17-pgmnemo postgresql-17-pgmnemo_0.12.1-1PIGSTY~trixie_all.deb pigsty 0.12.1 124.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgmnemo/postgresql-17-pgmnemo_0.12.1-1PIGSTY~trixie_all.deb
-@ d13.aarch64 17 postgresql-17-pgmnemo postgresql-17-pgmnemo_0.12.1-1PIGSTY~trixie_all.deb pigsty 0.12.1 124.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgmnemo/postgresql-17-pgmnemo_0.12.1-1PIGSTY~trixie_all.deb
-@ u22.x86_64 17 postgresql-17-pgmnemo postgresql-17-pgmnemo_0.12.1-1PIGSTY~jammy_all.deb pigsty 0.12.1 125.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgmnemo/postgresql-17-pgmnemo_0.12.1-1PIGSTY~jammy_all.deb
-@ u22.aarch64 17 postgresql-17-pgmnemo postgresql-17-pgmnemo_0.12.1-1PIGSTY~jammy_all.deb pigsty 0.12.1 125.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgmnemo/postgresql-17-pgmnemo_0.12.1-1PIGSTY~jammy_all.deb
-@ u24.x86_64 17 postgresql-17-pgmnemo postgresql-17-pgmnemo_0.12.1-1PIGSTY~noble_all.deb pigsty 0.12.1 124.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgmnemo/postgresql-17-pgmnemo_0.12.1-1PIGSTY~noble_all.deb
-@ u24.aarch64 17 postgresql-17-pgmnemo postgresql-17-pgmnemo_0.12.1-1PIGSTY~noble_all.deb pigsty 0.12.1 124.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgmnemo/postgresql-17-pgmnemo_0.12.1-1PIGSTY~noble_all.deb
-@ u26.x86_64 17 postgresql-17-pgmnemo postgresql-17-pgmnemo_0.12.1-1PIGSTY~resolute_all.deb pigsty 0.12.1 124.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgmnemo/postgresql-17-pgmnemo_0.12.1-1PIGSTY~resolute_all.deb
-@ u26.aarch64 17 postgresql-17-pgmnemo postgresql-17-pgmnemo_0.12.1-1PIGSTY~resolute_all.deb pigsty 0.12.1 124.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgmnemo/postgresql-17-pgmnemo_0.12.1-1PIGSTY~resolute_all.deb
+| el8.x86_64 | AVAIL PIGSTY 0.13.0 1 | AVAIL PIGSTY 0.13.0 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 |
+| el8.aarch64 | AVAIL PIGSTY 0.13.0 1 | AVAIL PIGSTY 0.13.0 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 |
+| el9.x86_64 | AVAIL PIGSTY 0.13.0 1 | AVAIL PIGSTY 0.13.0 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 |
+| el9.aarch64 | AVAIL PIGSTY 0.13.0 1 | AVAIL PIGSTY 0.13.0 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 |
+| el10.x86_64 | AVAIL PIGSTY 0.13.0 1 | AVAIL PIGSTY 0.13.0 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 |
+| el10.aarch64 | AVAIL PIGSTY 0.13.0 1 | AVAIL PIGSTY 0.13.0 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 |
+| d12.x86_64 | AVAIL PIGSTY 0.13.0 1 | AVAIL PIGSTY 0.13.0 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 |
+| d12.aarch64 | AVAIL PIGSTY 0.13.0 1 | AVAIL PIGSTY 0.13.0 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 |
+| d13.x86_64 | AVAIL PIGSTY 0.13.0 1 | AVAIL PIGSTY 0.13.0 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 |
+| d13.aarch64 | AVAIL PIGSTY 0.13.0 1 | AVAIL PIGSTY 0.13.0 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 |
+| u22.x86_64 | AVAIL PIGSTY 0.13.0 1 | AVAIL PIGSTY 0.13.0 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 |
+| u22.aarch64 | AVAIL PIGSTY 0.13.0 1 | AVAIL PIGSTY 0.13.0 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 |
+| u24.x86_64 | AVAIL PIGSTY 0.13.0 1 | AVAIL PIGSTY 0.13.0 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 |
+| u24.aarch64 | AVAIL PIGSTY 0.13.0 1 | AVAIL PIGSTY 0.13.0 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 |
+| u26.x86_64 | AVAIL PIGSTY 0.13.0 1 | AVAIL PIGSTY 0.13.0 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 |
+| u26.aarch64 | AVAIL PIGSTY 0.13.0 1 | AVAIL PIGSTY 0.13.0 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 |
+@ el8.x86_64 18 pgmnemo_18 pgmnemo_18-0.13.0-1PIGSTY.el8.x86_64.rpm pigsty 0.13.0 166.4KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgmnemo_18-0.13.0-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 18 pgmnemo_18 pgmnemo_18-0.13.0-1PIGSTY.el8.aarch64.rpm pigsty 0.13.0 166.4KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgmnemo_18-0.13.0-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 18 pgmnemo_18 pgmnemo_18-0.13.0-1PIGSTY.el9.x86_64.rpm pigsty 0.13.0 141.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgmnemo_18-0.13.0-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 18 pgmnemo_18 pgmnemo_18-0.13.0-1PIGSTY.el9.aarch64.rpm pigsty 0.13.0 141.6KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgmnemo_18-0.13.0-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 18 pgmnemo_18 pgmnemo_18-0.13.0-1PIGSTY.el10.x86_64.rpm pigsty 0.13.0 141.8KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgmnemo_18-0.13.0-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 18 pgmnemo_18 pgmnemo_18-0.13.0-1PIGSTY.el10.aarch64.rpm pigsty 0.13.0 141.8KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgmnemo_18-0.13.0-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-pgmnemo postgresql-18-pgmnemo_0.13.0-1PIGSTY~bookworm_all.deb pigsty 0.13.0 131.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgmnemo/postgresql-18-pgmnemo_0.13.0-1PIGSTY~bookworm_all.deb
+@ d12.aarch64 18 postgresql-18-pgmnemo postgresql-18-pgmnemo_0.13.0-1PIGSTY~bookworm_all.deb pigsty 0.13.0 131.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgmnemo/postgresql-18-pgmnemo_0.13.0-1PIGSTY~bookworm_all.deb
+@ d13.x86_64 18 postgresql-18-pgmnemo postgresql-18-pgmnemo_0.13.0-1PIGSTY~trixie_all.deb pigsty 0.13.0 131.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgmnemo/postgresql-18-pgmnemo_0.13.0-1PIGSTY~trixie_all.deb
+@ d13.aarch64 18 postgresql-18-pgmnemo postgresql-18-pgmnemo_0.13.0-1PIGSTY~trixie_all.deb pigsty 0.13.0 131.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgmnemo/postgresql-18-pgmnemo_0.13.0-1PIGSTY~trixie_all.deb
+@ u22.x86_64 18 postgresql-18-pgmnemo postgresql-18-pgmnemo_0.13.0-1PIGSTY~jammy_all.deb pigsty 0.13.0 132.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgmnemo/postgresql-18-pgmnemo_0.13.0-1PIGSTY~jammy_all.deb
+@ u22.aarch64 18 postgresql-18-pgmnemo postgresql-18-pgmnemo_0.13.0-1PIGSTY~jammy_all.deb pigsty 0.13.0 132.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgmnemo/postgresql-18-pgmnemo_0.13.0-1PIGSTY~jammy_all.deb
+@ u24.x86_64 18 postgresql-18-pgmnemo postgresql-18-pgmnemo_0.13.0-1PIGSTY~noble_all.deb pigsty 0.13.0 132.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgmnemo/postgresql-18-pgmnemo_0.13.0-1PIGSTY~noble_all.deb
+@ u24.aarch64 18 postgresql-18-pgmnemo postgresql-18-pgmnemo_0.13.0-1PIGSTY~noble_all.deb pigsty 0.13.0 132.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgmnemo/postgresql-18-pgmnemo_0.13.0-1PIGSTY~noble_all.deb
+@ u26.x86_64 18 postgresql-18-pgmnemo postgresql-18-pgmnemo_0.13.0-1PIGSTY~resolute_all.deb pigsty 0.13.0 132.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgmnemo/postgresql-18-pgmnemo_0.13.0-1PIGSTY~resolute_all.deb
+@ u26.aarch64 18 postgresql-18-pgmnemo postgresql-18-pgmnemo_0.13.0-1PIGSTY~resolute_all.deb pigsty 0.13.0 132.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgmnemo/postgresql-18-pgmnemo_0.13.0-1PIGSTY~resolute_all.deb
+@ el8.x86_64 17 pgmnemo_17 pgmnemo_17-0.13.0-1PIGSTY.el8.x86_64.rpm pigsty 0.13.0 166.4KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgmnemo_17-0.13.0-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 17 pgmnemo_17 pgmnemo_17-0.13.0-1PIGSTY.el8.aarch64.rpm pigsty 0.13.0 166.4KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgmnemo_17-0.13.0-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 17 pgmnemo_17 pgmnemo_17-0.13.0-1PIGSTY.el9.x86_64.rpm pigsty 0.13.0 141.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgmnemo_17-0.13.0-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 17 pgmnemo_17 pgmnemo_17-0.13.0-1PIGSTY.el9.aarch64.rpm pigsty 0.13.0 141.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgmnemo_17-0.13.0-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 17 pgmnemo_17 pgmnemo_17-0.13.0-1PIGSTY.el10.x86_64.rpm pigsty 0.13.0 141.8KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgmnemo_17-0.13.0-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 17 pgmnemo_17 pgmnemo_17-0.13.0-1PIGSTY.el10.aarch64.rpm pigsty 0.13.0 141.8KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgmnemo_17-0.13.0-1PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-pgmnemo postgresql-17-pgmnemo_0.13.0-1PIGSTY~bookworm_all.deb pigsty 0.13.0 131.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgmnemo/postgresql-17-pgmnemo_0.13.0-1PIGSTY~bookworm_all.deb
+@ d12.aarch64 17 postgresql-17-pgmnemo postgresql-17-pgmnemo_0.13.0-1PIGSTY~bookworm_all.deb pigsty 0.13.0 131.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgmnemo/postgresql-17-pgmnemo_0.13.0-1PIGSTY~bookworm_all.deb
+@ d13.x86_64 17 postgresql-17-pgmnemo postgresql-17-pgmnemo_0.13.0-1PIGSTY~trixie_all.deb pigsty 0.13.0 131.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgmnemo/postgresql-17-pgmnemo_0.13.0-1PIGSTY~trixie_all.deb
+@ d13.aarch64 17 postgresql-17-pgmnemo postgresql-17-pgmnemo_0.13.0-1PIGSTY~trixie_all.deb pigsty 0.13.0 131.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgmnemo/postgresql-17-pgmnemo_0.13.0-1PIGSTY~trixie_all.deb
+@ u22.x86_64 17 postgresql-17-pgmnemo postgresql-17-pgmnemo_0.13.0-1PIGSTY~jammy_all.deb pigsty 0.13.0 132.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgmnemo/postgresql-17-pgmnemo_0.13.0-1PIGSTY~jammy_all.deb
+@ u22.aarch64 17 postgresql-17-pgmnemo postgresql-17-pgmnemo_0.13.0-1PIGSTY~jammy_all.deb pigsty 0.13.0 132.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgmnemo/postgresql-17-pgmnemo_0.13.0-1PIGSTY~jammy_all.deb
+@ u24.x86_64 17 postgresql-17-pgmnemo postgresql-17-pgmnemo_0.13.0-1PIGSTY~noble_all.deb pigsty 0.13.0 132.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgmnemo/postgresql-17-pgmnemo_0.13.0-1PIGSTY~noble_all.deb
+@ u24.aarch64 17 postgresql-17-pgmnemo postgresql-17-pgmnemo_0.13.0-1PIGSTY~noble_all.deb pigsty 0.13.0 132.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgmnemo/postgresql-17-pgmnemo_0.13.0-1PIGSTY~noble_all.deb
+@ u26.x86_64 17 postgresql-17-pgmnemo postgresql-17-pgmnemo_0.13.0-1PIGSTY~resolute_all.deb pigsty 0.13.0 132.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgmnemo/postgresql-17-pgmnemo_0.13.0-1PIGSTY~resolute_all.deb
+@ u26.aarch64 17 postgresql-17-pgmnemo postgresql-17-pgmnemo_0.13.0-1PIGSTY~resolute_all.deb pigsty 0.13.0 132.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgmnemo/postgresql-17-pgmnemo_0.13.0-1PIGSTY~resolute_all.deb
 @ el8.x86_64 16 pgmnemo_16 pgmnemo_16-0.12.1-1PIGSTY.el8.x86_64.rpm pigsty 0.12.1 158.4KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgmnemo_16-0.12.1-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 16 pgmnemo_16 pgmnemo_16-0.12.1-1PIGSTY.el8.aarch64.rpm pigsty 0.12.1 158.4KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgmnemo_16-0.12.1-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 16 pgmnemo_16 pgmnemo_16-0.12.1-1PIGSTY.el9.x86_64.rpm pigsty 0.12.1 133.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgmnemo_16-0.12.1-1PIGSTY.el9.x86_64.rpm
@@ -180,27 +180,18 @@ pig install pgmnemo;          # 当前活跃 PG 版本安装
 ```bash
 pig ext install -y pgmnemo -v 18  # PG 18
 pig ext install -y pgmnemo -v 17  # PG 17
-pig ext install -y pgmnemo -v 16  # PG 16
-pig ext install -y pgmnemo -v 15  # PG 15
-pig ext install -y pgmnemo -v 14  # PG 14
 ```
 {{% /tab %}}
 {{% tab header="dnf" %}}
 ```bash
 dnf install -y pgmnemo_18       # PG 18
 dnf install -y pgmnemo_17       # PG 17
-dnf install -y pgmnemo_16       # PG 16
-dnf install -y pgmnemo_15       # PG 15
-dnf install -y pgmnemo_14       # PG 14
 ```
 {{% /tab %}}
 {{% tab header="apt" %}}
 ```bash
 apt install -y postgresql-18-pgmnemo   # PG 18
 apt install -y postgresql-17-pgmnemo   # PG 17
-apt install -y postgresql-16-pgmnemo   # PG 16
-apt install -y postgresql-15-pgmnemo   # PG 15
-apt install -y postgresql-14-pgmnemo   # PG 14
 ```
 {{% /tab %}}
 {{< /tabpane >}}
@@ -212,192 +203,107 @@ apt install -y postgresql-14-pgmnemo   # PG 14
 CREATE EXTENSION pgmnemo CASCADE;  -- 依赖: vector
 ```
 
-
-
-
 ## 用法
 
 来源：
 
-- [PGXN pgmnemo 0.12.1](https://pgxn.org/dist/pgmnemo/0.12.1/)
-- [pgmnemo README](https://github.com/pgmnemo/pgmnemo/blob/v0.12.1/README.md)
-- [pgmnemo CHANGELOG](https://github.com/pgmnemo/pgmnemo/blob/v0.12.1/CHANGELOG.md)
-- [pgmnemo control file](https://github.com/pgmnemo/pgmnemo/blob/v0.12.1/extension/pgmnemo.control)
+- [pgmnemo v0.13.0 README](https://github.com/pgmnemo/pgmnemo/blob/v0.13.0/README.md)
+- [pgmnemo v0.13.0 使用指南](https://github.com/pgmnemo/pgmnemo/blob/v0.13.0/docs/USAGE.md)
+- [pgmnemo v0.13.0 SQL 参考](https://github.com/pgmnemo/pgmnemo/blob/v0.13.0/docs/SQL_REFERENCE.md)
+- [pgmnemo v0.13.0 发行说明](https://github.com/pgmnemo/pgmnemo/releases/tag/v0.13.0)
+- [pgmnemo v0.13.0 控制文件](https://github.com/pgmnemo/pgmnemo/blob/v0.13.0/extension/pgmnemo.control)
 
-`pgmnemo` 在 PostgreSQL 中存储 agent memory，并通过一个多模态计划结合 pgvector HNSW 搜索、BM25 风格文本匹配、图边邻近度、JSONB 元数据过滤、时间过滤和 outcome confidence 进行检索。它是 SQL-only 扩展，依赖 `vector`，安装到 `pgmnemo` schema；v0.12.1 control 文件中标记为 trusted，且不需要 superuser 权限。
+pgmnemo 将代理内存存储在 PostgreSQL 中，并通过向量、BM25 样式的文本、图、元数据、时间序列、来源和置信度结果信号检索。它安装到 pgmnemo 模式中，需要 vector 扩展，并且当前 SQL API 需要 1024 维嵌入。
 
-v0.12.1 保留 v0.12.0 的 typed write API，并调整 `guard_no_test_project()`：项目 ID 下限检查改为通过 `pgmnemo.test_project_floor` 显式开启；默认值 `0` 表示禁用该检查。
+v0.13.0 版本默认将置信度转换为贝叶斯后验概率，记录召回的记忆是否实际被使用，并添加了最小置信度过滤器以进行召回。
 
 ### 安装
 
-```sql
-CREATE EXTENSION IF NOT EXISTS vector;
-CREATE EXTENSION IF NOT EXISTS pgmnemo CASCADE;
+    CREATE EXTENSION IF NOT EXISTS vector;
+    CREATE EXTENSION IF NOT EXISTS pgmnemo CASCADE;
 
-SELECT pgmnemo.version();
-SELECT * FROM pgmnemo.stats();
-```
+    SELECT pgmnemo.version();
+    SELECT * FROM pgmnemo.stats();
 
-### 摄入 Lessons
+v0.13.0 控制文件在所需 vector 扩展可用时将 pgmnemo 标记为受信任且非超级用户可安装。
 
-```sql
-SELECT pgmnemo.ingest(
-  p_role        := 'developer',
-  p_project_id  := 1,
-  p_topic       := 'security',
-  p_lesson_text := 'Rotate JWT signing keys after a key-compromise incident.',
-  p_importance  := 4,
-  p_embedding   := NULL,
-  p_commit_sha  := 'abc1234',
-  p_metadata    := '{"source":"incident-runbook"}'::jsonb
-);
-```
+### 载入一课
 
-`pgmnemo.ingest()` 是基础写入路径。它会应用 provenance gate，在提供 embedding 时校验 1024 维度，按 `pgmnemo.max_query_text_chars` 截断过长 lesson 文本，并在存在来源信息时写入 `verified_at`。
+    SELECT pgmnemo.ingest(
+      p_role        := 'developer',
+      p_project_id  := 1,
+      p_topic       := 'security',
+      p_lesson_text := 'Rotate signing keys after a compromise.',
+      p_importance  := 4,
+      p_embedding   := NULL,
+      p_commit_sha  := 'abc1234',
+      p_metadata    := '{"source":"incident-runbook"}'::jsonb
+    );
 
-### Provenance Gate
+当 pgmnemo.gate_strict 强制执行时，需要 commit_sha 或 artifact_hash 来源。warn 允许带有审计警告的未验证写入；off 禁用此门。
 
-```sql
-SHOW pgmnemo.gate_strict;
+### 带置信度过滤器的召回
 
-SET pgmnemo.gate_strict = 'enforce';
-SET pgmnemo.gate_strict = 'warn';
-SET pgmnemo.gate_strict = 'off';
-```
+混合召回结合嵌入和文本信号：
 
-当 `pgmnemo.gate_strict = 'enforce'` 时，缺少 `commit_sha` 和 `artifact_hash` 的写入会被拒绝。`warn` 会接受写入但产生审计警告，`off` 则关闭 gate。
+    SELECT lesson_id, topic, score, match_confidence
+    FROM pgmnemo.recall_hybrid(
+      '<1024 维向量字面量>'::vector(1024),
+      'JWT 旋转密钥泄露',
+      10,
+      'developer',
+      1,
+      0.4,
+      0.4,
+      60,
+      'dag-2026-abc',
+      ARRAY['note', 'fact'],
+      0.40
+    );
 
-v0.12.1 的 test-project guard 需要显式开启：
+最后的 p_min_score 参数在应用 LIMIT 之前移除匹配置信度低于阈值的候选者。NULL 保留 v0.13.0 之前的默认行为。发行说明建议将 0.40 作为起点，而不是通用值；根据嵌入模型和反馈质量进行校准。
 
-```sql
-SHOW pgmnemo.test_project_floor;  -- default 0
-SET pgmnemo.test_project_floor = '1000000';
-```
+此相同的 p_min_score 概念在 recall_fast、recall_lessons 和聚合召回入口点中可用。recall_lessons 在同时提供文本和嵌入且 pgmnemo.disable_hybrid 关闭时路由到混合召回。
 
-默认 `0` 表示禁用生产项目下限检查。测试框架如果保留低 project ID，可设置为正数。
+### 记录结果
 
-### 召回
+    SELECT pgmnemo.reinforce(1001, 'success', true);
+    SELECT pgmnemo.reinforce(
+      ARRAY[1001, 1002]::bigint[],
+      'failure',
+      false
+    );
 
-```sql
-SELECT lesson_id, topic, lesson_text, score
-FROM pgmnemo.recall_fast(
-  '<1024-dimensional vector literal>'::vector(1024),
-  10,
-  'developer',
-  1,
-  'dag-2026-abc',
-  ARRAY['note', 'fact']
-);
+第三个 p_used 参数记录召回的记忆是否实际被使用。true 或 NULL 增加 use_count；false 记录结果而不计入使用次数。请明确指定以使分析能够区分忽略的建议和已使用的建议。
 
-SELECT lesson_id, topic, score, vec_score, bm25_score, rrf_score, match_confidence
-FROM pgmnemo.recall_hybrid(
-  '<1024-dimensional vector literal>'::vector(1024),
-  'JWT rotation key compromise',
-  10,
-  'developer',
-  1,
-  0.4,
-  0.4,
-  60,
-  'dag-2026-abc',
-  ARRAY['note', 'fact']
-);
-```
+在默认后验模式下，匹配置信度为：
 
-当同时提供文本和 embedding，且 `pgmnemo.disable_hybrid` 为 false 时，`recall_lessons()` 会路由到 hybrid recall。`exclude_dag_id` 用于避免召回同一 workflow run 产生的记录，`p_content_types` 则过滤 typed memories。
+    (success_count + alpha)
+    / (success_count + failure_count + alpha + beta)
 
-召回函数默认会更新 `last_recalled_at` 并递增 `recall_count`。只读分析时可以关闭该副作用：
+默认 Beta 先验参数为 alpha 1 和 beta 1。当需要其他先验时，在 0.01 到 100 之间设置 pgmnemo.confidence_prior_alpha 和 pgmnemo.confidence_prior_beta。
 
-```sql
-SET pgmnemo.track_recall_recency = 'off';
-```
+### 类型化记忆和导航
 
-### Locate 与 Expand
+重要的写入辅助函数包括 remember_fact、remember_event、remember_relation、add_edge、reembed 和 recompute_content。remember_fact 覆盖实体/属性对的活跃事实；事件保持追加导向；关系也填充图表面。
 
-```sql
-SELECT *
-FROM pgmnemo.navigate_locate(
-  NULL::vector(1024),
-  'JWT rotation',
-  2000,
-  '{"topic":"security"}'::jsonb,
-  1
-);
+使用 navigate_locate 或 navigate_locate_dispatch 选择字符预算内的候选 ID，然后使用 navigate_expand_typed 获取内容和邻近的图边。
 
-SELECT *
-FROM pgmnemo.navigate_locate_dispatch(
-  query_text            := 'JWT rotation',
-  content_type_dispatch := 'entity',
-  project_id_filter     := 1,
-  token_budget_chars    := 2000
-);
+### 配置索引
 
-SELECT *
-FROM pgmnemo.navigate_expand_typed(
-  ARRAY[1001, 1002]::bigint[],
-  graph_expand_depth := 1,
-  relation_types     := ARRAY['CAUSED_BY', 'DERIVED_FROM']
-);
-```
+- pgmnemo.confidence_mode：默认为后验概率；additive 保留了遗留计算。
+- pgmnemo.confidence_prior_alpha 和 pgmnemo.confidence_prior_beta：贝叶斯先验参数。
+- pgmnemo.confidence_boost_weight：置信度对排名的贡献；默认值为 0，因此除非启用否则置信度不会影响排名。
+- pgmnemo.gate_strict 和 pgmnemo.include_unverified：来源验证和检索。
+- pgmnemo.disable_hybrid 和 pgmnemo.ef_search：召回策略和 HNSW 搜索宽度。
+- pgmnemo.track_recall_recency：是否更新 recall_last_recalled_at 和 recall_count。
+- pgmnemo.max_query_text_chars、pgmnemo.tenant_id 和 pgmnemo.test_project_floor：文本、租户控制以及可选测试项目控制。
 
-用 `navigate_locate()` 在字符预算内找候选 ID，再用 expand 函数只获取被选中 ID 的完整内容和图邻居。
-
-### Typed Writes
-
-```sql
-SELECT pgmnemo.canonical_slug('concept', 'JWT Rotation');
-
-SELECT *
-FROM pgmnemo.remember_fact(
-  p_role            := 'developer',
-  p_entity_key      := 'concept:jwt_rotation',
-  p_property        := 'runbook',
-  p_value           := 'Rotate signing secrets within 24 hours after compromise.',
-  p_confidence      := 0.82,
-  p_has_contact_pii := false,
-  p_source_type     := 'agent_authored',
-  p_project_id      := 1,
-  p_commit_sha      := 'abc1234'
-);
-
-SELECT pgmnemo.remember_event(
-  p_role        := 'developer',
-  p_entity_key  := 'concept:jwt_rotation',
-  p_event_label := 'incident_response',
-  p_event_body  := 'Rotation procedure validated during the July drill.',
-  p_project_id  := 1,
-  p_commit_sha  := 'abc1234'
-);
-
-SELECT pgmnemo.remember_relation(
-  p_role          := 'developer',
-  p_from_key      := 'concept:jwt_rotation',
-  p_to_key        := 'concept:key_compromise',
-  p_relation_type := 'MITIGATES',
-  p_project_id    := 1,
-  p_commit_sha    := 'abc1234'
-);
-```
-
-`remember_fact()` 会替换同一 entity/property 的旧 active fact，`remember_event()` 是 append-only，`remember_relation()` 写入关系记忆和图边。
-
-### 图边、强化与维护
-
-```sql
-SELECT pgmnemo.add_edge(1001, 1002, 'CAUSED_BY', 0.85, '{"run_id":7320}'::jsonb);
-
-SELECT pgmnemo.reinforce(1001, 'success');
-SELECT pgmnemo.reinforce(ARRAY[1001, 1002]::bigint[], 'failure');
-
-SELECT pgmnemo.reembed(1001, '<1024-dimensional vector literal>'::vector(1024));
-SELECT pgmnemo.recompute_content(1001, 'Updated lesson text.');
-```
-
-常用设置包括 `pgmnemo.gate_strict`、`pgmnemo.include_unverified`、`pgmnemo.ef_search`、`pgmnemo.disable_hybrid`、`pgmnemo.recency_weight`、`pgmnemo.importance_weight`、`pgmnemo.graph_proximity_weight`、`pgmnemo.temporal_boost`、`pgmnemo.confidence_boost_weight`、`pgmnemo.track_recall_recency`、`pgmnemo.max_query_text_chars`、`pgmnemo.tenant_id` 和 `pgmnemo.test_project_floor`。
+较旧的置信度差值设置在后验模式下已弃用并被忽略。
 
 ### 注意事项
 
-- PGXN 元数据声明 `pgmnemo` 依赖 `vector >= 0.7.0`。
-- 当前 SQL 定义中的 embedding 预期为 1024 维。
-- 默认 provenance gate 是有意设计。迁移旧 memory 行时优先使用 `warn`，不要直接长期使用 `off`。
-- 召回函数可能写入 recency 元数据；只读诊断时应关闭 `pgmnemo.track_recall_recency`。
+- 召回可以写入最近性元数据。禁用 pgmnemo.track_recall_recency 以进行只读分析。
+- 置信度模型仅在其强化反馈评估后才可靠。避免将后验值视为经过校准的概率。
+- HNSW、文本、图和元数据索引增加了写入和维护成本。
+- 默认置信度增强权重为 0，这意味着 p_min_score 可以过滤结果而置信度对排名没有任何贡献。

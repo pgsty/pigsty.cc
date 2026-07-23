@@ -31,9 +31,9 @@ weight: 3260
 | 3263  | [**`jsonb_plperl`**](/ext/e/jsonb_plperl) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | - |
 {.ext-table}
 
-| **相关扩展** | [`plperl`](/ext/e/plperl) [`plperlu`](/ext/e/plperlu) [`bool_plperlu`](/ext/e/bool_plperlu) [`jsonb_plperlu`](/ext/e/jsonb_plperlu) [`hstore_plperlu`](/ext/e/hstore_plperlu) [`plpgsql`](/ext/e/plpgsql) [`pg_tle`](/ext/e/pg_tle) [`plv8`](/ext/e/plv8) [`pllua`](/ext/e/pllua) |
+| **相关扩展** | [`plperlu`](/ext/e/plperlu) [`bool_plperlu`](/ext/e/bool_plperlu) [`jsonb_plperlu`](/ext/e/jsonb_plperlu) [`hstore_plperlu`](/ext/e/hstore_plperlu) [`plpgsql`](/ext/e/plpgsql) [`pg_tle`](/ext/e/pg_tle) [`plv8`](/ext/e/plv8) [`pllua`](/ext/e/pllua) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **下游依赖** | [`bool_plperl`](/ext/e/bool_plperl) [`hstore_plperl`](/ext/e/hstore_plperl) [`jsonb_plperl`](/ext/e/jsonb_plperl) [`plperl`](/ext/e/plperl) [`sparql`](/ext/e/sparql) |
+| **下游依赖** | [`bool_plperl`](/ext/e/bool_plperl) [`hstore_plperl`](/ext/e/hstore_plperl) [`jsonb_plperl`](/ext/e/jsonb_plperl) [`sparql`](/ext/e/sparql) |
 {.ext-table .ext-table--rel}
 
 

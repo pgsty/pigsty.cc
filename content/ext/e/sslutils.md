@@ -53,8 +53,8 @@ weight: 7410
 {{< pgext_matrix >}}
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | MISS PIGSTY - 0 | AVAIL PIGSTY 1.4 2 | AVAIL PIGSTY 1.4 2 | AVAIL PIGSTY 1.4 2 | AVAIL PIGSTY 1.4 2 |
-| el8.aarch64 | MISS PIGSTY - 0 | AVAIL PIGSTY 1.4 2 | AVAIL PIGSTY 1.4 2 | AVAIL PIGSTY 1.4 1 | AVAIL PIGSTY 1.4 1 |
+| el8.x86_64 | AVAIL PIGSTY 1.4 1 | AVAIL PIGSTY 1.4 2 | AVAIL PIGSTY 1.4 2 | AVAIL PIGSTY 1.4 2 | AVAIL PIGSTY 1.4 2 |
+| el8.aarch64 | AVAIL PIGSTY 1.4 1 | AVAIL PIGSTY 1.4 2 | AVAIL PIGSTY 1.4 2 | AVAIL PIGSTY 1.4 1 | AVAIL PIGSTY 1.4 1 |
 | el9.x86_64 | AVAIL PGDG 1.4 3 | AVAIL PGDG 1.4 3 | AVAIL PGDG 1.4 3 | AVAIL PGDG 1.4 2 | AVAIL PGDG 1.4 2 |
 | el9.aarch64 | AVAIL PGDG 1.4 3 | AVAIL PGDG 1.4 3 | AVAIL PGDG 1.4 3 | AVAIL PGDG 1.4 2 | AVAIL PGDG 1.4 2 |
 | el10.x86_64 | AVAIL PGDG 1.4 3 | AVAIL PGDG 1.4 3 | AVAIL PGDG 1.4 3 | AVAIL PGDG 1.4 3 | AVAIL PGDG 1.4 3 |
@@ -69,6 +69,8 @@ weight: 7410
 | u24.aarch64 | AVAIL PIGSTY 1.4 1 | AVAIL PIGSTY 1.4 1 | AVAIL PIGSTY 1.4 1 | AVAIL PIGSTY 1.4 1 | AVAIL PIGSTY 1.4 1 |
 | u26.x86_64 | AVAIL PIGSTY 1.4 1 | AVAIL PIGSTY 1.4 1 | AVAIL PIGSTY 1.4 1 | AVAIL PIGSTY 1.4 1 | AVAIL PIGSTY 1.4 1 |
 | u26.aarch64 | AVAIL PIGSTY 1.4 1 | AVAIL PIGSTY 1.4 1 | AVAIL PIGSTY 1.4 1 | AVAIL PIGSTY 1.4 1 | AVAIL PIGSTY 1.4 1 |
+@ el8.x86_64 18 sslutils_18 sslutils_18-1.4-3PIGSTY.el8.x86_64.rpm pigsty 1.4 24.6KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/sslutils_18-1.4-3PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 18 sslutils_18 sslutils_18-1.4-3PIGSTY.el8.aarch64.rpm pigsty 1.4 23.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/sslutils_18-1.4-3PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 18 sslutils_18 sslutils_18-1.4-4PGDG.rhel9.8.x86_64.rpm pgdg 1.4 24.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/sslutils_18-1.4-4PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 18 sslutils_18 sslutils_18-1.4-2PIGSTY.el9.x86_64.rpm pigsty 1.4 24.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/sslutils_18-1.4-2PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 18 sslutils_18 sslutils_18-1.4-2PGDG.rhel9.x86_64.rpm pgdg 1.4 24.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/sslutils_18-1.4-2PGDG.rhel9.x86_64.rpm

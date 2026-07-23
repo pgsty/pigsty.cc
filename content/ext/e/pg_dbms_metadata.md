@@ -11,6 +11,11 @@ weight: 9240
     <div class="ext-card__title">HexaCluster/pg_dbms_metadata</div>
     <div class="ext-card__desc">https://github.com/HexaCluster/pg_dbms_metadata</div>
   </a>
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pg_dbms_metadata-1.0.0.tar.gz">
+    <div class="ext-card__kicker">源码</div>
+    <div class="ext-card__title">pg_dbms_metadata-1.0.0.tar.gz</div>
+    <div class="ext-card__desc">pg_dbms_metadata-1.0.0.tar.gz</div>
+  </a>
 </div>
 
 
@@ -25,7 +30,7 @@ weight: 9240
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
 |:-----:|:-------------------------------------------------------------------------|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|:----------|
-| 9240  | [**`pg_dbms_metadata`**](/ext/e/pg_dbms_metadata) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `dbms_metadata` |
+| 9240  | [**`pg_dbms_metadata`**](/ext/e/pg_dbms_metadata) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `dbms_metadata` |
 {.ext-table}
 
 | **相关扩展** | [`orafce`](/ext/e/orafce) [`pgtt`](/ext/e/pgtt) [`pg_dbms_lock`](/ext/e/pg_dbms_lock) [`pg_dbms_job`](/ext/e/pg_dbms_job) [`oracle_fdw`](/ext/e/oracle_fdw) [`session_variable`](/ext/e/session_variable) [`pg_statement_rollback`](/ext/e/pg_statement_rollback) [`ddlx`](/ext/e/ddlx) |
@@ -33,36 +38,37 @@ weight: 9240
 {.ext-table .ext-table--rel}
 
 
-> pgdg missing el8.aarch64.pg15
+> PGDG RPM lacks PG15 on EL8 aarch64; PIGSTY DEB covers PG14-18 on amd64 and arm64.
 
 
 ## 版本
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#sim) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `1.0.0` | {{< pgvers "18,17,16,15,14" >}} | `pg_dbms_metadata` | - |
+| [**EXT**](/ext/list#sim) | <a class="ext-badge ext-badge--repo mixed" href="/ext/repo#mixed">MIXED</a> | `1.0.0` | {{< pgvers "18,17,16,15,14" >}} | `pg_dbms_metadata` | - |
 | [**RPM**](/ext/rpm#sim) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `1.0.0` | {{< pgvers "18,17,16,15,14" >}} | `pg_dbms_metadata_$v` | - |
+| [**DEB**](/ext/deb#sim) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.0.0` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pg-dbms-metadata` | - |
 {.ext-table}
 
 {{< pgext_matrix >}}
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
 | el8.x86_64 | AVAIL PGDG 1.0.0 1 | AVAIL PGDG 1.0.0 1 | AVAIL PGDG 1.0.0 1 | AVAIL PGDG 1.0.0 1 | AVAIL PGDG 1.0.0 1 |
-| el8.aarch64 | AVAIL PGDG 1.0.0 1 | AVAIL PGDG 1.0.0 1 | AVAIL PGDG 1.0.0 1 | MISS PGDG - 0 | AVAIL PGDG 1.0.0 1 |
+| el8.aarch64 | AVAIL PGDG 1.0.0 1 | AVAIL PGDG 1.0.0 1 | AVAIL PGDG 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PGDG 1.0.0 1 |
 | el9.x86_64 | AVAIL PGDG 1.0.0 2 | AVAIL PGDG 1.0.0 2 | AVAIL PGDG 1.0.0 2 | AVAIL PGDG 1.0.0 2 | AVAIL PGDG 1.0.0 2 |
 | el9.aarch64 | AVAIL PGDG 1.0.0 2 | AVAIL PGDG 1.0.0 2 | AVAIL PGDG 1.0.0 2 | AVAIL PGDG 1.0.0 2 | AVAIL PGDG 1.0.0 2 |
 | el10.x86_64 | AVAIL PGDG 1.0.0 2 | AVAIL PGDG 1.0.0 2 | AVAIL PGDG 1.0.0 2 | AVAIL PGDG 1.0.0 2 | AVAIL PGDG 1.0.0 2 |
 | el10.aarch64 | AVAIL PGDG 1.0.0 2 | AVAIL PGDG 1.0.0 2 | AVAIL PGDG 1.0.0 2 | AVAIL PGDG 1.0.0 2 | AVAIL PGDG 1.0.0 2 |
-| d12.x86_64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
-| d12.aarch64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
-| d13.x86_64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
-| d13.aarch64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
-| u22.x86_64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
-| u22.aarch64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
-| u24.x86_64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
-| u24.aarch64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
-| u26.x86_64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
-| u26.aarch64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
+| d12.x86_64 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 |
+| d12.aarch64 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 |
+| d13.x86_64 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 |
+| d13.aarch64 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 |
+| u22.x86_64 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 |
+| u22.aarch64 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 |
+| u24.x86_64 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 |
+| u24.aarch64 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 |
+| u26.x86_64 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 |
+| u26.aarch64 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 |
 @ el8.x86_64 18 pg_dbms_metadata_18 pg_dbms_metadata_18-1.0.0-2PGDG.rhel8.noarch.rpm pgdg 1.0.0 17.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pg_dbms_metadata_18-1.0.0-2PGDG.rhel8.noarch.rpm
 @ el8.aarch64 18 pg_dbms_metadata_18 pg_dbms_metadata_18-1.0.0-2PGDG.rhel8.noarch.rpm pgdg 1.0.0 17.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pg_dbms_metadata_18-1.0.0-2PGDG.rhel8.noarch.rpm
 @ el9.x86_64 18 pg_dbms_metadata_18 pg_dbms_metadata_18-1.0.0-2PGDG.rhel9.8.noarch.rpm pgdg 1.0.0 17.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pg_dbms_metadata_18-1.0.0-2PGDG.rhel9.8.noarch.rpm
@@ -73,6 +79,16 @@ weight: 9240
 @ el10.x86_64 18 pg_dbms_metadata_18 pg_dbms_metadata_18-1.0.0-2PGDG.rhel10.noarch.rpm pgdg 1.0.0 17.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pg_dbms_metadata_18-1.0.0-2PGDG.rhel10.noarch.rpm
 @ el10.aarch64 18 pg_dbms_metadata_18 pg_dbms_metadata_18-1.0.0-2PGDG.rhel10.2.noarch.rpm pgdg 1.0.0 17.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_dbms_metadata_18-1.0.0-2PGDG.rhel10.2.noarch.rpm
 @ el10.aarch64 18 pg_dbms_metadata_18 pg_dbms_metadata_18-1.0.0-2PGDG.rhel10.noarch.rpm pgdg 1.0.0 17.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_dbms_metadata_18-1.0.0-2PGDG.rhel10.noarch.rpm
+@ d12.x86_64 18 postgresql-18-pg-dbms-metadata postgresql-18-pg-dbms-metadata_1.0.0-1PIGSTY~bookworm_all.deb pigsty 1.0.0 13.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-dbms-metadata/postgresql-18-pg-dbms-metadata_1.0.0-1PIGSTY~bookworm_all.deb
+@ d12.aarch64 18 postgresql-18-pg-dbms-metadata postgresql-18-pg-dbms-metadata_1.0.0-1PIGSTY~bookworm_all.deb pigsty 1.0.0 13.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-dbms-metadata/postgresql-18-pg-dbms-metadata_1.0.0-1PIGSTY~bookworm_all.deb
+@ d13.x86_64 18 postgresql-18-pg-dbms-metadata postgresql-18-pg-dbms-metadata_1.0.0-1PIGSTY~trixie_all.deb pigsty 1.0.0 13.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-dbms-metadata/postgresql-18-pg-dbms-metadata_1.0.0-1PIGSTY~trixie_all.deb
+@ d13.aarch64 18 postgresql-18-pg-dbms-metadata postgresql-18-pg-dbms-metadata_1.0.0-1PIGSTY~trixie_all.deb pigsty 1.0.0 13.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-dbms-metadata/postgresql-18-pg-dbms-metadata_1.0.0-1PIGSTY~trixie_all.deb
+@ u22.x86_64 18 postgresql-18-pg-dbms-metadata postgresql-18-pg-dbms-metadata_1.0.0-1PIGSTY~jammy_all.deb pigsty 1.0.0 13.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-dbms-metadata/postgresql-18-pg-dbms-metadata_1.0.0-1PIGSTY~jammy_all.deb
+@ u22.aarch64 18 postgresql-18-pg-dbms-metadata postgresql-18-pg-dbms-metadata_1.0.0-1PIGSTY~jammy_all.deb pigsty 1.0.0 13.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-dbms-metadata/postgresql-18-pg-dbms-metadata_1.0.0-1PIGSTY~jammy_all.deb
+@ u24.x86_64 18 postgresql-18-pg-dbms-metadata postgresql-18-pg-dbms-metadata_1.0.0-1PIGSTY~noble_all.deb pigsty 1.0.0 13.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-dbms-metadata/postgresql-18-pg-dbms-metadata_1.0.0-1PIGSTY~noble_all.deb
+@ u24.aarch64 18 postgresql-18-pg-dbms-metadata postgresql-18-pg-dbms-metadata_1.0.0-1PIGSTY~noble_all.deb pigsty 1.0.0 13.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-dbms-metadata/postgresql-18-pg-dbms-metadata_1.0.0-1PIGSTY~noble_all.deb
+@ u26.x86_64 18 postgresql-18-pg-dbms-metadata postgresql-18-pg-dbms-metadata_1.0.0-1PIGSTY~resolute_all.deb pigsty 1.0.0 13.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-dbms-metadata/postgresql-18-pg-dbms-metadata_1.0.0-1PIGSTY~resolute_all.deb
+@ u26.aarch64 18 postgresql-18-pg-dbms-metadata postgresql-18-pg-dbms-metadata_1.0.0-1PIGSTY~resolute_all.deb pigsty 1.0.0 13.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-dbms-metadata/postgresql-18-pg-dbms-metadata_1.0.0-1PIGSTY~resolute_all.deb
 @ el8.x86_64 17 pg_dbms_metadata_17 pg_dbms_metadata_17-1.0.0-1PGDG.rhel8.noarch.rpm pgdg 1.0.0 17.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pg_dbms_metadata_17-1.0.0-1PGDG.rhel8.noarch.rpm
 @ el8.aarch64 17 pg_dbms_metadata_17 pg_dbms_metadata_17-1.0.0-1PGDG.rhel8.noarch.rpm pgdg 1.0.0 17.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pg_dbms_metadata_17-1.0.0-1PGDG.rhel8.noarch.rpm
 @ el9.x86_64 17 pg_dbms_metadata_17 pg_dbms_metadata_17-1.0.0-2PGDG.rhel9.8.noarch.rpm pgdg 1.0.0 17.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_dbms_metadata_17-1.0.0-2PGDG.rhel9.8.noarch.rpm
@@ -83,6 +99,16 @@ weight: 9240
 @ el10.x86_64 17 pg_dbms_metadata_17 pg_dbms_metadata_17-1.0.0-2PGDG.rhel10.noarch.rpm pgdg 1.0.0 17.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_dbms_metadata_17-1.0.0-2PGDG.rhel10.noarch.rpm
 @ el10.aarch64 17 pg_dbms_metadata_17 pg_dbms_metadata_17-1.0.0-2PGDG.rhel10.2.noarch.rpm pgdg 1.0.0 17.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_dbms_metadata_17-1.0.0-2PGDG.rhel10.2.noarch.rpm
 @ el10.aarch64 17 pg_dbms_metadata_17 pg_dbms_metadata_17-1.0.0-2PGDG.rhel10.noarch.rpm pgdg 1.0.0 17.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_dbms_metadata_17-1.0.0-2PGDG.rhel10.noarch.rpm
+@ d12.x86_64 17 postgresql-17-pg-dbms-metadata postgresql-17-pg-dbms-metadata_1.0.0-1PIGSTY~bookworm_all.deb pigsty 1.0.0 13.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-dbms-metadata/postgresql-17-pg-dbms-metadata_1.0.0-1PIGSTY~bookworm_all.deb
+@ d12.aarch64 17 postgresql-17-pg-dbms-metadata postgresql-17-pg-dbms-metadata_1.0.0-1PIGSTY~bookworm_all.deb pigsty 1.0.0 13.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-dbms-metadata/postgresql-17-pg-dbms-metadata_1.0.0-1PIGSTY~bookworm_all.deb
+@ d13.x86_64 17 postgresql-17-pg-dbms-metadata postgresql-17-pg-dbms-metadata_1.0.0-1PIGSTY~trixie_all.deb pigsty 1.0.0 13.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-dbms-metadata/postgresql-17-pg-dbms-metadata_1.0.0-1PIGSTY~trixie_all.deb
+@ d13.aarch64 17 postgresql-17-pg-dbms-metadata postgresql-17-pg-dbms-metadata_1.0.0-1PIGSTY~trixie_all.deb pigsty 1.0.0 13.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-dbms-metadata/postgresql-17-pg-dbms-metadata_1.0.0-1PIGSTY~trixie_all.deb
+@ u22.x86_64 17 postgresql-17-pg-dbms-metadata postgresql-17-pg-dbms-metadata_1.0.0-1PIGSTY~jammy_all.deb pigsty 1.0.0 13.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-dbms-metadata/postgresql-17-pg-dbms-metadata_1.0.0-1PIGSTY~jammy_all.deb
+@ u22.aarch64 17 postgresql-17-pg-dbms-metadata postgresql-17-pg-dbms-metadata_1.0.0-1PIGSTY~jammy_all.deb pigsty 1.0.0 13.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-dbms-metadata/postgresql-17-pg-dbms-metadata_1.0.0-1PIGSTY~jammy_all.deb
+@ u24.x86_64 17 postgresql-17-pg-dbms-metadata postgresql-17-pg-dbms-metadata_1.0.0-1PIGSTY~noble_all.deb pigsty 1.0.0 13.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-dbms-metadata/postgresql-17-pg-dbms-metadata_1.0.0-1PIGSTY~noble_all.deb
+@ u24.aarch64 17 postgresql-17-pg-dbms-metadata postgresql-17-pg-dbms-metadata_1.0.0-1PIGSTY~noble_all.deb pigsty 1.0.0 13.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-dbms-metadata/postgresql-17-pg-dbms-metadata_1.0.0-1PIGSTY~noble_all.deb
+@ u26.x86_64 17 postgresql-17-pg-dbms-metadata postgresql-17-pg-dbms-metadata_1.0.0-1PIGSTY~resolute_all.deb pigsty 1.0.0 13.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-dbms-metadata/postgresql-17-pg-dbms-metadata_1.0.0-1PIGSTY~resolute_all.deb
+@ u26.aarch64 17 postgresql-17-pg-dbms-metadata postgresql-17-pg-dbms-metadata_1.0.0-1PIGSTY~resolute_all.deb pigsty 1.0.0 13.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-dbms-metadata/postgresql-17-pg-dbms-metadata_1.0.0-1PIGSTY~resolute_all.deb
 @ el8.x86_64 16 pg_dbms_metadata_16 pg_dbms_metadata_16-1.0.0-1PGDG.rhel8.noarch.rpm pgdg 1.0.0 17.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_dbms_metadata_16-1.0.0-1PGDG.rhel8.noarch.rpm
 @ el8.aarch64 16 pg_dbms_metadata_16 pg_dbms_metadata_16-1.0.0-1PGDG.rhel8.noarch.rpm pgdg 1.0.0 17.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pg_dbms_metadata_16-1.0.0-1PGDG.rhel8.noarch.rpm
 @ el9.x86_64 16 pg_dbms_metadata_16 pg_dbms_metadata_16-1.0.0-2PGDG.rhel9.8.noarch.rpm pgdg 1.0.0 17.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_dbms_metadata_16-1.0.0-2PGDG.rhel9.8.noarch.rpm
@@ -93,7 +119,18 @@ weight: 9240
 @ el10.x86_64 16 pg_dbms_metadata_16 pg_dbms_metadata_16-1.0.0-2PGDG.rhel10.noarch.rpm pgdg 1.0.0 17.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_dbms_metadata_16-1.0.0-2PGDG.rhel10.noarch.rpm
 @ el10.aarch64 16 pg_dbms_metadata_16 pg_dbms_metadata_16-1.0.0-2PGDG.rhel10.2.noarch.rpm pgdg 1.0.0 17.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_dbms_metadata_16-1.0.0-2PGDG.rhel10.2.noarch.rpm
 @ el10.aarch64 16 pg_dbms_metadata_16 pg_dbms_metadata_16-1.0.0-2PGDG.rhel10.noarch.rpm pgdg 1.0.0 17.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_dbms_metadata_16-1.0.0-2PGDG.rhel10.noarch.rpm
+@ d12.x86_64 16 postgresql-16-pg-dbms-metadata postgresql-16-pg-dbms-metadata_1.0.0-1PIGSTY~bookworm_all.deb pigsty 1.0.0 13.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-dbms-metadata/postgresql-16-pg-dbms-metadata_1.0.0-1PIGSTY~bookworm_all.deb
+@ d12.aarch64 16 postgresql-16-pg-dbms-metadata postgresql-16-pg-dbms-metadata_1.0.0-1PIGSTY~bookworm_all.deb pigsty 1.0.0 13.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-dbms-metadata/postgresql-16-pg-dbms-metadata_1.0.0-1PIGSTY~bookworm_all.deb
+@ d13.x86_64 16 postgresql-16-pg-dbms-metadata postgresql-16-pg-dbms-metadata_1.0.0-1PIGSTY~trixie_all.deb pigsty 1.0.0 13.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-dbms-metadata/postgresql-16-pg-dbms-metadata_1.0.0-1PIGSTY~trixie_all.deb
+@ d13.aarch64 16 postgresql-16-pg-dbms-metadata postgresql-16-pg-dbms-metadata_1.0.0-1PIGSTY~trixie_all.deb pigsty 1.0.0 13.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-dbms-metadata/postgresql-16-pg-dbms-metadata_1.0.0-1PIGSTY~trixie_all.deb
+@ u22.x86_64 16 postgresql-16-pg-dbms-metadata postgresql-16-pg-dbms-metadata_1.0.0-1PIGSTY~jammy_all.deb pigsty 1.0.0 13.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-dbms-metadata/postgresql-16-pg-dbms-metadata_1.0.0-1PIGSTY~jammy_all.deb
+@ u22.aarch64 16 postgresql-16-pg-dbms-metadata postgresql-16-pg-dbms-metadata_1.0.0-1PIGSTY~jammy_all.deb pigsty 1.0.0 13.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-dbms-metadata/postgresql-16-pg-dbms-metadata_1.0.0-1PIGSTY~jammy_all.deb
+@ u24.x86_64 16 postgresql-16-pg-dbms-metadata postgresql-16-pg-dbms-metadata_1.0.0-1PIGSTY~noble_all.deb pigsty 1.0.0 13.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-dbms-metadata/postgresql-16-pg-dbms-metadata_1.0.0-1PIGSTY~noble_all.deb
+@ u24.aarch64 16 postgresql-16-pg-dbms-metadata postgresql-16-pg-dbms-metadata_1.0.0-1PIGSTY~noble_all.deb pigsty 1.0.0 13.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-dbms-metadata/postgresql-16-pg-dbms-metadata_1.0.0-1PIGSTY~noble_all.deb
+@ u26.x86_64 16 postgresql-16-pg-dbms-metadata postgresql-16-pg-dbms-metadata_1.0.0-1PIGSTY~resolute_all.deb pigsty 1.0.0 13.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-dbms-metadata/postgresql-16-pg-dbms-metadata_1.0.0-1PIGSTY~resolute_all.deb
+@ u26.aarch64 16 postgresql-16-pg-dbms-metadata postgresql-16-pg-dbms-metadata_1.0.0-1PIGSTY~resolute_all.deb pigsty 1.0.0 13.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-dbms-metadata/postgresql-16-pg-dbms-metadata_1.0.0-1PIGSTY~resolute_all.deb
 @ el8.x86_64 15 pg_dbms_metadata_15 pg_dbms_metadata_15-1.0.0-1PGDG.rhel8.noarch.rpm pgdg 1.0.0 17.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_dbms_metadata_15-1.0.0-1PGDG.rhel8.noarch.rpm
+@ el8.aarch64 15 pg_dbms_metadata_15 pg_dbms_metadata_15-1.0.0-2PIGSTY.el8.noarch.rpm pigsty 1.0.0 18.1KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_dbms_metadata_15-1.0.0-2PIGSTY.el8.noarch.rpm
 @ el9.x86_64 15 pg_dbms_metadata_15 pg_dbms_metadata_15-1.0.0-2PGDG.rhel9.8.noarch.rpm pgdg 1.0.0 17.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_dbms_metadata_15-1.0.0-2PGDG.rhel9.8.noarch.rpm
 @ el9.x86_64 15 pg_dbms_metadata_15 pg_dbms_metadata_15-1.0.0-1PGDG.rhel9.noarch.rpm pgdg 1.0.0 17.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_dbms_metadata_15-1.0.0-1PGDG.rhel9.noarch.rpm
 @ el9.aarch64 15 pg_dbms_metadata_15 pg_dbms_metadata_15-1.0.0-2PGDG.rhel9.8.noarch.rpm pgdg 1.0.0 17.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_dbms_metadata_15-1.0.0-2PGDG.rhel9.8.noarch.rpm
@@ -102,6 +139,16 @@ weight: 9240
 @ el10.x86_64 15 pg_dbms_metadata_15 pg_dbms_metadata_15-1.0.0-2PGDG.rhel10.noarch.rpm pgdg 1.0.0 17.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_dbms_metadata_15-1.0.0-2PGDG.rhel10.noarch.rpm
 @ el10.aarch64 15 pg_dbms_metadata_15 pg_dbms_metadata_15-1.0.0-2PGDG.rhel10.2.noarch.rpm pgdg 1.0.0 17.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_dbms_metadata_15-1.0.0-2PGDG.rhel10.2.noarch.rpm
 @ el10.aarch64 15 pg_dbms_metadata_15 pg_dbms_metadata_15-1.0.0-2PGDG.rhel10.noarch.rpm pgdg 1.0.0 17.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_dbms_metadata_15-1.0.0-2PGDG.rhel10.noarch.rpm
+@ d12.x86_64 15 postgresql-15-pg-dbms-metadata postgresql-15-pg-dbms-metadata_1.0.0-1PIGSTY~bookworm_all.deb pigsty 1.0.0 13.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-dbms-metadata/postgresql-15-pg-dbms-metadata_1.0.0-1PIGSTY~bookworm_all.deb
+@ d12.aarch64 15 postgresql-15-pg-dbms-metadata postgresql-15-pg-dbms-metadata_1.0.0-1PIGSTY~bookworm_all.deb pigsty 1.0.0 13.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-dbms-metadata/postgresql-15-pg-dbms-metadata_1.0.0-1PIGSTY~bookworm_all.deb
+@ d13.x86_64 15 postgresql-15-pg-dbms-metadata postgresql-15-pg-dbms-metadata_1.0.0-1PIGSTY~trixie_all.deb pigsty 1.0.0 13.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-dbms-metadata/postgresql-15-pg-dbms-metadata_1.0.0-1PIGSTY~trixie_all.deb
+@ d13.aarch64 15 postgresql-15-pg-dbms-metadata postgresql-15-pg-dbms-metadata_1.0.0-1PIGSTY~trixie_all.deb pigsty 1.0.0 13.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-dbms-metadata/postgresql-15-pg-dbms-metadata_1.0.0-1PIGSTY~trixie_all.deb
+@ u22.x86_64 15 postgresql-15-pg-dbms-metadata postgresql-15-pg-dbms-metadata_1.0.0-1PIGSTY~jammy_all.deb pigsty 1.0.0 13.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-dbms-metadata/postgresql-15-pg-dbms-metadata_1.0.0-1PIGSTY~jammy_all.deb
+@ u22.aarch64 15 postgresql-15-pg-dbms-metadata postgresql-15-pg-dbms-metadata_1.0.0-1PIGSTY~jammy_all.deb pigsty 1.0.0 13.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-dbms-metadata/postgresql-15-pg-dbms-metadata_1.0.0-1PIGSTY~jammy_all.deb
+@ u24.x86_64 15 postgresql-15-pg-dbms-metadata postgresql-15-pg-dbms-metadata_1.0.0-1PIGSTY~noble_all.deb pigsty 1.0.0 13.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-dbms-metadata/postgresql-15-pg-dbms-metadata_1.0.0-1PIGSTY~noble_all.deb
+@ u24.aarch64 15 postgresql-15-pg-dbms-metadata postgresql-15-pg-dbms-metadata_1.0.0-1PIGSTY~noble_all.deb pigsty 1.0.0 13.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-dbms-metadata/postgresql-15-pg-dbms-metadata_1.0.0-1PIGSTY~noble_all.deb
+@ u26.x86_64 15 postgresql-15-pg-dbms-metadata postgresql-15-pg-dbms-metadata_1.0.0-1PIGSTY~resolute_all.deb pigsty 1.0.0 13.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-dbms-metadata/postgresql-15-pg-dbms-metadata_1.0.0-1PIGSTY~resolute_all.deb
+@ u26.aarch64 15 postgresql-15-pg-dbms-metadata postgresql-15-pg-dbms-metadata_1.0.0-1PIGSTY~resolute_all.deb pigsty 1.0.0 13.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-dbms-metadata/postgresql-15-pg-dbms-metadata_1.0.0-1PIGSTY~resolute_all.deb
 @ el8.x86_64 14 pg_dbms_metadata_14 pg_dbms_metadata_14-1.0.0-1PGDG.rhel8.noarch.rpm pgdg 1.0.0 17.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_dbms_metadata_14-1.0.0-1PGDG.rhel8.noarch.rpm
 @ el8.aarch64 14 pg_dbms_metadata_14 pg_dbms_metadata_14-1.0.0-1PGDG.rhel8.noarch.rpm pgdg 1.0.0 17.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pg_dbms_metadata_14-1.0.0-1PGDG.rhel8.noarch.rpm
 @ el9.x86_64 14 pg_dbms_metadata_14 pg_dbms_metadata_14-1.0.0-2PGDG.rhel9.8.noarch.rpm pgdg 1.0.0 17.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_dbms_metadata_14-1.0.0-2PGDG.rhel9.8.noarch.rpm
@@ -112,15 +159,33 @@ weight: 9240
 @ el10.x86_64 14 pg_dbms_metadata_14 pg_dbms_metadata_14-1.0.0-2PGDG.rhel10.noarch.rpm pgdg 1.0.0 17.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_dbms_metadata_14-1.0.0-2PGDG.rhel10.noarch.rpm
 @ el10.aarch64 14 pg_dbms_metadata_14 pg_dbms_metadata_14-1.0.0-2PGDG.rhel10.2.noarch.rpm pgdg 1.0.0 17.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_dbms_metadata_14-1.0.0-2PGDG.rhel10.2.noarch.rpm
 @ el10.aarch64 14 pg_dbms_metadata_14 pg_dbms_metadata_14-1.0.0-2PGDG.rhel10.noarch.rpm pgdg 1.0.0 17.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_dbms_metadata_14-1.0.0-2PGDG.rhel10.noarch.rpm
+@ d12.x86_64 14 postgresql-14-pg-dbms-metadata postgresql-14-pg-dbms-metadata_1.0.0-1PIGSTY~bookworm_all.deb pigsty 1.0.0 13.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-dbms-metadata/postgresql-14-pg-dbms-metadata_1.0.0-1PIGSTY~bookworm_all.deb
+@ d12.aarch64 14 postgresql-14-pg-dbms-metadata postgresql-14-pg-dbms-metadata_1.0.0-1PIGSTY~bookworm_all.deb pigsty 1.0.0 13.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-dbms-metadata/postgresql-14-pg-dbms-metadata_1.0.0-1PIGSTY~bookworm_all.deb
+@ d13.x86_64 14 postgresql-14-pg-dbms-metadata postgresql-14-pg-dbms-metadata_1.0.0-1PIGSTY~trixie_all.deb pigsty 1.0.0 13.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-dbms-metadata/postgresql-14-pg-dbms-metadata_1.0.0-1PIGSTY~trixie_all.deb
+@ d13.aarch64 14 postgresql-14-pg-dbms-metadata postgresql-14-pg-dbms-metadata_1.0.0-1PIGSTY~trixie_all.deb pigsty 1.0.0 13.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-dbms-metadata/postgresql-14-pg-dbms-metadata_1.0.0-1PIGSTY~trixie_all.deb
+@ u22.x86_64 14 postgresql-14-pg-dbms-metadata postgresql-14-pg-dbms-metadata_1.0.0-1PIGSTY~jammy_all.deb pigsty 1.0.0 13.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-dbms-metadata/postgresql-14-pg-dbms-metadata_1.0.0-1PIGSTY~jammy_all.deb
+@ u22.aarch64 14 postgresql-14-pg-dbms-metadata postgresql-14-pg-dbms-metadata_1.0.0-1PIGSTY~jammy_all.deb pigsty 1.0.0 13.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-dbms-metadata/postgresql-14-pg-dbms-metadata_1.0.0-1PIGSTY~jammy_all.deb
+@ u24.x86_64 14 postgresql-14-pg-dbms-metadata postgresql-14-pg-dbms-metadata_1.0.0-1PIGSTY~noble_all.deb pigsty 1.0.0 13.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-dbms-metadata/postgresql-14-pg-dbms-metadata_1.0.0-1PIGSTY~noble_all.deb
+@ u24.aarch64 14 postgresql-14-pg-dbms-metadata postgresql-14-pg-dbms-metadata_1.0.0-1PIGSTY~noble_all.deb pigsty 1.0.0 13.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-dbms-metadata/postgresql-14-pg-dbms-metadata_1.0.0-1PIGSTY~noble_all.deb
+@ u26.x86_64 14 postgresql-14-pg-dbms-metadata postgresql-14-pg-dbms-metadata_1.0.0-1PIGSTY~resolute_all.deb pigsty 1.0.0 13.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-dbms-metadata/postgresql-14-pg-dbms-metadata_1.0.0-1PIGSTY~resolute_all.deb
+@ u26.aarch64 14 postgresql-14-pg-dbms-metadata postgresql-14-pg-dbms-metadata_1.0.0-1PIGSTY~resolute_all.deb pigsty 1.0.0 13.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-dbms-metadata/postgresql-14-pg-dbms-metadata_1.0.0-1PIGSTY~resolute_all.deb
 {{< /pgext_matrix >}}
+
+## 构建
+
+您可以使用 `pig build` 命令构建 `pg_dbms_metadata` 扩展的 DEB 包：
+
+```bash
+pig build pkg pg_dbms_metadata         # 构建 DEB 包
+```
 
 
 ## 安装
 
-您可以直接安装 `pg_dbms_metadata` 扩展包的预置二进制包，首先确保 [**PGDG**](/docs/repo/pgdg) 仓库已经添加并启用：
+您可以直接安装 `pg_dbms_metadata` 扩展包的预置二进制包，首先确保 [**PGDG**](/docs/repo/pgdg) 和 [**PIGSTY**](/docs/repo/pgsql) 仓库已经添加并启用：
 
 ```bash
-pig repo add pgdg -u          # 添加 PGDG 仓库并更新缓存
+pig repo add pgsql -u          # 添加仓库并更新缓存
 ```
 
 使用 [**pig**](/docs/pig) 或者是 `apt/yum/dnf` 安装扩展：
@@ -147,6 +212,15 @@ dnf install -y pg_dbms_metadata_17       # PG 17
 dnf install -y pg_dbms_metadata_16       # PG 16
 dnf install -y pg_dbms_metadata_15       # PG 15
 dnf install -y pg_dbms_metadata_14       # PG 14
+```
+{{% /tab %}}
+{{% tab header="apt" %}}
+```bash
+apt install -y postgresql-18-pg-dbms-metadata   # PG 18
+apt install -y postgresql-17-pg-dbms-metadata   # PG 17
+apt install -y postgresql-16-pg-dbms-metadata   # PG 16
+apt install -y postgresql-15-pg-dbms-metadata   # PG 15
+apt install -y postgresql-14-pg-dbms-metadata   # PG 14
 ```
 {{% /tab %}}
 {{< /tabpane >}}

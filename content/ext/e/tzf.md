@@ -38,9 +38,6 @@ weight: 1680
 {.ext-table .ext-table--rel}
 
 
-> pgrx patched to 0.18.1.
-
-
 ## 版本
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
@@ -69,86 +66,86 @@ weight: 1680
 | u24.aarch64 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 |
 | u26.x86_64 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 |
 | u26.aarch64 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 | AVAIL PIGSTY 0.3.0 1 |
-@ el8.x86_64 18 pg_tzf_18 pg_tzf_18-0.3.0-1PIGSTY.el8.x86_64.rpm pigsty 0.3.0 3.6MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_tzf_18-0.3.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 18 pg_tzf_18 pg_tzf_18-0.3.0-1PIGSTY.el8.aarch64.rpm pigsty 0.3.0 3.5MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_tzf_18-0.3.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 18 pg_tzf_18 pg_tzf_18-0.3.0-1PIGSTY.el9.x86_64.rpm pigsty 0.3.0 3.6MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_tzf_18-0.3.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 18 pg_tzf_18 pg_tzf_18-0.3.0-1PIGSTY.el9.aarch64.rpm pigsty 0.3.0 3.5MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_tzf_18-0.3.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 18 pg_tzf_18 pg_tzf_18-0.3.0-1PIGSTY.el10.x86_64.rpm pigsty 0.3.0 3.6MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_tzf_18-0.3.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 18 pg_tzf_18 pg_tzf_18-0.3.0-1PIGSTY.el10.aarch64.rpm pigsty 0.3.0 3.5MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_tzf_18-0.3.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 18 postgresql-18-tzf postgresql-18-tzf_0.3.0-1PIGSTY~bookworm_amd64.deb pigsty 0.3.0 3.2MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/t/tzf/postgresql-18-tzf_0.3.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 18 postgresql-18-tzf postgresql-18-tzf_0.3.0-1PIGSTY~bookworm_arm64.deb pigsty 0.3.0 3.0MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/t/tzf/postgresql-18-tzf_0.3.0-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 18 postgresql-18-tzf postgresql-18-tzf_0.3.0-1PIGSTY~trixie_amd64.deb pigsty 0.3.0 3.2MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/t/tzf/postgresql-18-tzf_0.3.0-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 18 postgresql-18-tzf postgresql-18-tzf_0.3.0-1PIGSTY~trixie_arm64.deb pigsty 0.3.0 3.1MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/t/tzf/postgresql-18-tzf_0.3.0-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 18 postgresql-18-tzf postgresql-18-tzf_0.3.0-1PIGSTY~jammy_amd64.deb pigsty 0.3.0 3.5MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/t/tzf/postgresql-18-tzf_0.3.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 18 postgresql-18-tzf postgresql-18-tzf_0.3.0-1PIGSTY~jammy_arm64.deb pigsty 0.3.0 3.4MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/t/tzf/postgresql-18-tzf_0.3.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 18 postgresql-18-tzf postgresql-18-tzf_0.3.0-1PIGSTY~noble_amd64.deb pigsty 0.3.0 3.5MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/tzf/postgresql-18-tzf_0.3.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 18 postgresql-18-tzf postgresql-18-tzf_0.3.0-1PIGSTY~noble_arm64.deb pigsty 0.3.0 3.4MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/tzf/postgresql-18-tzf_0.3.0-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 18 postgresql-18-tzf postgresql-18-tzf_0.3.0-1PIGSTY~resolute_amd64.deb pigsty 0.3.0 3.5MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/t/tzf/postgresql-18-tzf_0.3.0-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 18 postgresql-18-tzf postgresql-18-tzf_0.3.0-1PIGSTY~resolute_arm64.deb pigsty 0.3.0 3.4MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/t/tzf/postgresql-18-tzf_0.3.0-1PIGSTY~resolute_arm64.deb
-@ el8.x86_64 17 pg_tzf_17 pg_tzf_17-0.3.0-1PIGSTY.el8.x86_64.rpm pigsty 0.3.0 3.6MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_tzf_17-0.3.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 17 pg_tzf_17 pg_tzf_17-0.3.0-1PIGSTY.el8.aarch64.rpm pigsty 0.3.0 3.5MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_tzf_17-0.3.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 17 pg_tzf_17 pg_tzf_17-0.3.0-1PIGSTY.el9.x86_64.rpm pigsty 0.3.0 3.6MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_tzf_17-0.3.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 17 pg_tzf_17 pg_tzf_17-0.3.0-1PIGSTY.el9.aarch64.rpm pigsty 0.3.0 3.5MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_tzf_17-0.3.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 17 pg_tzf_17 pg_tzf_17-0.3.0-1PIGSTY.el10.x86_64.rpm pigsty 0.3.0 3.6MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_tzf_17-0.3.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 17 pg_tzf_17 pg_tzf_17-0.3.0-1PIGSTY.el10.aarch64.rpm pigsty 0.3.0 3.5MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_tzf_17-0.3.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 17 postgresql-17-tzf postgresql-17-tzf_0.3.0-1PIGSTY~bookworm_amd64.deb pigsty 0.3.0 3.2MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/t/tzf/postgresql-17-tzf_0.3.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 17 postgresql-17-tzf postgresql-17-tzf_0.3.0-1PIGSTY~bookworm_arm64.deb pigsty 0.3.0 3.0MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/t/tzf/postgresql-17-tzf_0.3.0-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 17 postgresql-17-tzf postgresql-17-tzf_0.3.0-1PIGSTY~trixie_amd64.deb pigsty 0.3.0 3.2MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/t/tzf/postgresql-17-tzf_0.3.0-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 17 postgresql-17-tzf postgresql-17-tzf_0.3.0-1PIGSTY~trixie_arm64.deb pigsty 0.3.0 3.1MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/t/tzf/postgresql-17-tzf_0.3.0-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 17 postgresql-17-tzf postgresql-17-tzf_0.3.0-1PIGSTY~jammy_amd64.deb pigsty 0.3.0 3.5MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/t/tzf/postgresql-17-tzf_0.3.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 17 postgresql-17-tzf postgresql-17-tzf_0.3.0-1PIGSTY~jammy_arm64.deb pigsty 0.3.0 3.4MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/t/tzf/postgresql-17-tzf_0.3.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 17 postgresql-17-tzf postgresql-17-tzf_0.3.0-1PIGSTY~noble_amd64.deb pigsty 0.3.0 3.5MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/tzf/postgresql-17-tzf_0.3.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 17 postgresql-17-tzf postgresql-17-tzf_0.3.0-1PIGSTY~noble_arm64.deb pigsty 0.3.0 3.4MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/tzf/postgresql-17-tzf_0.3.0-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 17 postgresql-17-tzf postgresql-17-tzf_0.3.0-1PIGSTY~resolute_amd64.deb pigsty 0.3.0 3.5MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/t/tzf/postgresql-17-tzf_0.3.0-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 17 postgresql-17-tzf postgresql-17-tzf_0.3.0-1PIGSTY~resolute_arm64.deb pigsty 0.3.0 3.4MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/t/tzf/postgresql-17-tzf_0.3.0-1PIGSTY~resolute_arm64.deb
-@ el8.x86_64 16 pg_tzf_16 pg_tzf_16-0.3.0-1PIGSTY.el8.x86_64.rpm pigsty 0.3.0 3.6MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_tzf_16-0.3.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 16 pg_tzf_16 pg_tzf_16-0.3.0-1PIGSTY.el8.aarch64.rpm pigsty 0.3.0 3.5MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_tzf_16-0.3.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 16 pg_tzf_16 pg_tzf_16-0.3.0-1PIGSTY.el9.x86_64.rpm pigsty 0.3.0 3.6MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_tzf_16-0.3.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 16 pg_tzf_16 pg_tzf_16-0.3.0-1PIGSTY.el9.aarch64.rpm pigsty 0.3.0 3.5MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_tzf_16-0.3.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 16 pg_tzf_16 pg_tzf_16-0.3.0-1PIGSTY.el10.x86_64.rpm pigsty 0.3.0 3.6MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_tzf_16-0.3.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 16 pg_tzf_16 pg_tzf_16-0.3.0-1PIGSTY.el10.aarch64.rpm pigsty 0.3.0 3.5MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_tzf_16-0.3.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 16 postgresql-16-tzf postgresql-16-tzf_0.3.0-1PIGSTY~bookworm_amd64.deb pigsty 0.3.0 3.2MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/t/tzf/postgresql-16-tzf_0.3.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 16 postgresql-16-tzf postgresql-16-tzf_0.3.0-1PIGSTY~bookworm_arm64.deb pigsty 0.3.0 3.0MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/t/tzf/postgresql-16-tzf_0.3.0-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 16 postgresql-16-tzf postgresql-16-tzf_0.3.0-1PIGSTY~trixie_amd64.deb pigsty 0.3.0 3.2MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/t/tzf/postgresql-16-tzf_0.3.0-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 16 postgresql-16-tzf postgresql-16-tzf_0.3.0-1PIGSTY~trixie_arm64.deb pigsty 0.3.0 3.1MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/t/tzf/postgresql-16-tzf_0.3.0-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 16 postgresql-16-tzf postgresql-16-tzf_0.3.0-1PIGSTY~jammy_amd64.deb pigsty 0.3.0 3.5MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/t/tzf/postgresql-16-tzf_0.3.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 16 postgresql-16-tzf postgresql-16-tzf_0.3.0-1PIGSTY~jammy_arm64.deb pigsty 0.3.0 3.4MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/t/tzf/postgresql-16-tzf_0.3.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 16 postgresql-16-tzf postgresql-16-tzf_0.3.0-1PIGSTY~noble_amd64.deb pigsty 0.3.0 3.5MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/tzf/postgresql-16-tzf_0.3.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 16 postgresql-16-tzf postgresql-16-tzf_0.3.0-1PIGSTY~noble_arm64.deb pigsty 0.3.0 3.4MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/tzf/postgresql-16-tzf_0.3.0-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 16 postgresql-16-tzf postgresql-16-tzf_0.3.0-1PIGSTY~resolute_amd64.deb pigsty 0.3.0 3.5MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/t/tzf/postgresql-16-tzf_0.3.0-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 16 postgresql-16-tzf postgresql-16-tzf_0.3.0-1PIGSTY~resolute_arm64.deb pigsty 0.3.0 3.4MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/t/tzf/postgresql-16-tzf_0.3.0-1PIGSTY~resolute_arm64.deb
-@ el8.x86_64 15 pg_tzf_15 pg_tzf_15-0.3.0-1PIGSTY.el8.x86_64.rpm pigsty 0.3.0 3.6MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_tzf_15-0.3.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 15 pg_tzf_15 pg_tzf_15-0.3.0-1PIGSTY.el8.aarch64.rpm pigsty 0.3.0 3.5MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_tzf_15-0.3.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 15 pg_tzf_15 pg_tzf_15-0.3.0-1PIGSTY.el9.x86_64.rpm pigsty 0.3.0 3.6MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_tzf_15-0.3.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 15 pg_tzf_15 pg_tzf_15-0.3.0-1PIGSTY.el9.aarch64.rpm pigsty 0.3.0 3.5MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_tzf_15-0.3.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 15 pg_tzf_15 pg_tzf_15-0.3.0-1PIGSTY.el10.x86_64.rpm pigsty 0.3.0 3.6MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_tzf_15-0.3.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 15 pg_tzf_15 pg_tzf_15-0.3.0-1PIGSTY.el10.aarch64.rpm pigsty 0.3.0 3.5MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_tzf_15-0.3.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 15 postgresql-15-tzf postgresql-15-tzf_0.3.0-1PIGSTY~bookworm_amd64.deb pigsty 0.3.0 3.2MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/t/tzf/postgresql-15-tzf_0.3.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 15 postgresql-15-tzf postgresql-15-tzf_0.3.0-1PIGSTY~bookworm_arm64.deb pigsty 0.3.0 3.0MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/t/tzf/postgresql-15-tzf_0.3.0-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 15 postgresql-15-tzf postgresql-15-tzf_0.3.0-1PIGSTY~trixie_amd64.deb pigsty 0.3.0 3.2MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/t/tzf/postgresql-15-tzf_0.3.0-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 15 postgresql-15-tzf postgresql-15-tzf_0.3.0-1PIGSTY~trixie_arm64.deb pigsty 0.3.0 3.1MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/t/tzf/postgresql-15-tzf_0.3.0-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 15 postgresql-15-tzf postgresql-15-tzf_0.3.0-1PIGSTY~jammy_amd64.deb pigsty 0.3.0 3.5MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/t/tzf/postgresql-15-tzf_0.3.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 15 postgresql-15-tzf postgresql-15-tzf_0.3.0-1PIGSTY~jammy_arm64.deb pigsty 0.3.0 3.4MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/t/tzf/postgresql-15-tzf_0.3.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 15 postgresql-15-tzf postgresql-15-tzf_0.3.0-1PIGSTY~noble_amd64.deb pigsty 0.3.0 3.5MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/tzf/postgresql-15-tzf_0.3.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 15 postgresql-15-tzf postgresql-15-tzf_0.3.0-1PIGSTY~noble_arm64.deb pigsty 0.3.0 3.4MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/tzf/postgresql-15-tzf_0.3.0-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 15 postgresql-15-tzf postgresql-15-tzf_0.3.0-1PIGSTY~resolute_amd64.deb pigsty 0.3.0 3.5MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/t/tzf/postgresql-15-tzf_0.3.0-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 15 postgresql-15-tzf postgresql-15-tzf_0.3.0-1PIGSTY~resolute_arm64.deb pigsty 0.3.0 3.4MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/t/tzf/postgresql-15-tzf_0.3.0-1PIGSTY~resolute_arm64.deb
-@ el8.x86_64 14 pg_tzf_14 pg_tzf_14-0.3.0-1PIGSTY.el8.x86_64.rpm pigsty 0.3.0 3.6MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_tzf_14-0.3.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 14 pg_tzf_14 pg_tzf_14-0.3.0-1PIGSTY.el8.aarch64.rpm pigsty 0.3.0 3.5MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_tzf_14-0.3.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 14 pg_tzf_14 pg_tzf_14-0.3.0-1PIGSTY.el9.x86_64.rpm pigsty 0.3.0 3.6MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_tzf_14-0.3.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 14 pg_tzf_14 pg_tzf_14-0.3.0-1PIGSTY.el9.aarch64.rpm pigsty 0.3.0 3.5MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_tzf_14-0.3.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 14 pg_tzf_14 pg_tzf_14-0.3.0-1PIGSTY.el10.x86_64.rpm pigsty 0.3.0 3.6MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_tzf_14-0.3.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 14 pg_tzf_14 pg_tzf_14-0.3.0-1PIGSTY.el10.aarch64.rpm pigsty 0.3.0 3.5MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_tzf_14-0.3.0-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 14 postgresql-14-tzf postgresql-14-tzf_0.3.0-1PIGSTY~bookworm_amd64.deb pigsty 0.3.0 3.2MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/t/tzf/postgresql-14-tzf_0.3.0-1PIGSTY~bookworm_amd64.deb
-@ d12.aarch64 14 postgresql-14-tzf postgresql-14-tzf_0.3.0-1PIGSTY~bookworm_arm64.deb pigsty 0.3.0 3.0MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/t/tzf/postgresql-14-tzf_0.3.0-1PIGSTY~bookworm_arm64.deb
-@ d13.x86_64 14 postgresql-14-tzf postgresql-14-tzf_0.3.0-1PIGSTY~trixie_amd64.deb pigsty 0.3.0 3.2MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/t/tzf/postgresql-14-tzf_0.3.0-1PIGSTY~trixie_amd64.deb
-@ d13.aarch64 14 postgresql-14-tzf postgresql-14-tzf_0.3.0-1PIGSTY~trixie_arm64.deb pigsty 0.3.0 3.1MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/t/tzf/postgresql-14-tzf_0.3.0-1PIGSTY~trixie_arm64.deb
-@ u22.x86_64 14 postgresql-14-tzf postgresql-14-tzf_0.3.0-1PIGSTY~jammy_amd64.deb pigsty 0.3.0 3.5MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/t/tzf/postgresql-14-tzf_0.3.0-1PIGSTY~jammy_amd64.deb
-@ u22.aarch64 14 postgresql-14-tzf postgresql-14-tzf_0.3.0-1PIGSTY~jammy_arm64.deb pigsty 0.3.0 2.0KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/t/tzf/postgresql-14-tzf_0.3.0-1PIGSTY~jammy_arm64.deb
-@ u24.x86_64 14 postgresql-14-tzf postgresql-14-tzf_0.3.0-1PIGSTY~noble_amd64.deb pigsty 0.3.0 3.5MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/tzf/postgresql-14-tzf_0.3.0-1PIGSTY~noble_amd64.deb
-@ u24.aarch64 14 postgresql-14-tzf postgresql-14-tzf_0.3.0-1PIGSTY~noble_arm64.deb pigsty 0.3.0 3.4MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/tzf/postgresql-14-tzf_0.3.0-1PIGSTY~noble_arm64.deb
-@ u26.x86_64 14 postgresql-14-tzf postgresql-14-tzf_0.3.0-1PIGSTY~resolute_amd64.deb pigsty 0.3.0 3.5MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/t/tzf/postgresql-14-tzf_0.3.0-1PIGSTY~resolute_amd64.deb
-@ u26.aarch64 14 postgresql-14-tzf postgresql-14-tzf_0.3.0-1PIGSTY~resolute_arm64.deb pigsty 0.3.0 3.4MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/t/tzf/postgresql-14-tzf_0.3.0-1PIGSTY~resolute_arm64.deb
+@ el8.x86_64 18 pg_tzf_18 pg_tzf_18-0.3.0-2PIGSTY.el8.x86_64.rpm pigsty 0.3.0 3.6MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_tzf_18-0.3.0-2PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 18 pg_tzf_18 pg_tzf_18-0.3.0-2PIGSTY.el8.aarch64.rpm pigsty 0.3.0 3.5MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_tzf_18-0.3.0-2PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 18 pg_tzf_18 pg_tzf_18-0.3.0-2PIGSTY.el9.x86_64.rpm pigsty 0.3.0 3.6MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_tzf_18-0.3.0-2PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 18 pg_tzf_18 pg_tzf_18-0.3.0-2PIGSTY.el9.aarch64.rpm pigsty 0.3.0 3.6MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_tzf_18-0.3.0-2PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 18 pg_tzf_18 pg_tzf_18-0.3.0-2PIGSTY.el10.x86_64.rpm pigsty 0.3.0 3.6MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_tzf_18-0.3.0-2PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 18 pg_tzf_18 pg_tzf_18-0.3.0-2PIGSTY.el10.aarch64.rpm pigsty 0.3.0 3.5MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_tzf_18-0.3.0-2PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-tzf postgresql-18-tzf_0.3.0-2PIGSTY~bookworm_amd64.deb pigsty 0.3.0 3.2MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/t/tzf/postgresql-18-tzf_0.3.0-2PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 18 postgresql-18-tzf postgresql-18-tzf_0.3.0-2PIGSTY~bookworm_arm64.deb pigsty 0.3.0 3.0MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/t/tzf/postgresql-18-tzf_0.3.0-2PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 18 postgresql-18-tzf postgresql-18-tzf_0.3.0-2PIGSTY~trixie_amd64.deb pigsty 0.3.0 3.2MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/t/tzf/postgresql-18-tzf_0.3.0-2PIGSTY~trixie_amd64.deb
+@ d13.aarch64 18 postgresql-18-tzf postgresql-18-tzf_0.3.0-2PIGSTY~trixie_arm64.deb pigsty 0.3.0 3.0MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/t/tzf/postgresql-18-tzf_0.3.0-2PIGSTY~trixie_arm64.deb
+@ u22.x86_64 18 postgresql-18-tzf postgresql-18-tzf_0.3.0-2PIGSTY~jammy_amd64.deb pigsty 0.3.0 3.5MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/t/tzf/postgresql-18-tzf_0.3.0-2PIGSTY~jammy_amd64.deb
+@ u22.aarch64 18 postgresql-18-tzf postgresql-18-tzf_0.3.0-2PIGSTY~jammy_arm64.deb pigsty 0.3.0 3.4MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/t/tzf/postgresql-18-tzf_0.3.0-2PIGSTY~jammy_arm64.deb
+@ u24.x86_64 18 postgresql-18-tzf postgresql-18-tzf_0.3.0-2PIGSTY~noble_amd64.deb pigsty 0.3.0 3.5MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/tzf/postgresql-18-tzf_0.3.0-2PIGSTY~noble_amd64.deb
+@ u24.aarch64 18 postgresql-18-tzf postgresql-18-tzf_0.3.0-2PIGSTY~noble_arm64.deb pigsty 0.3.0 3.4MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/tzf/postgresql-18-tzf_0.3.0-2PIGSTY~noble_arm64.deb
+@ u26.x86_64 18 postgresql-18-tzf postgresql-18-tzf_0.3.0-2PIGSTY~resolute_amd64.deb pigsty 0.3.0 3.5MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/t/tzf/postgresql-18-tzf_0.3.0-2PIGSTY~resolute_amd64.deb
+@ u26.aarch64 18 postgresql-18-tzf postgresql-18-tzf_0.3.0-2PIGSTY~resolute_arm64.deb pigsty 0.3.0 3.4MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/t/tzf/postgresql-18-tzf_0.3.0-2PIGSTY~resolute_arm64.deb
+@ el8.x86_64 17 pg_tzf_17 pg_tzf_17-0.3.0-2PIGSTY.el8.x86_64.rpm pigsty 0.3.0 3.6MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_tzf_17-0.3.0-2PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 17 pg_tzf_17 pg_tzf_17-0.3.0-2PIGSTY.el8.aarch64.rpm pigsty 0.3.0 3.5MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_tzf_17-0.3.0-2PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 17 pg_tzf_17 pg_tzf_17-0.3.0-2PIGSTY.el9.x86_64.rpm pigsty 0.3.0 3.6MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_tzf_17-0.3.0-2PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 17 pg_tzf_17 pg_tzf_17-0.3.0-2PIGSTY.el9.aarch64.rpm pigsty 0.3.0 3.6MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_tzf_17-0.3.0-2PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 17 pg_tzf_17 pg_tzf_17-0.3.0-2PIGSTY.el10.x86_64.rpm pigsty 0.3.0 3.6MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_tzf_17-0.3.0-2PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 17 pg_tzf_17 pg_tzf_17-0.3.0-2PIGSTY.el10.aarch64.rpm pigsty 0.3.0 3.5MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_tzf_17-0.3.0-2PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-tzf postgresql-17-tzf_0.3.0-2PIGSTY~bookworm_amd64.deb pigsty 0.3.0 3.2MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/t/tzf/postgresql-17-tzf_0.3.0-2PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 17 postgresql-17-tzf postgresql-17-tzf_0.3.0-2PIGSTY~bookworm_arm64.deb pigsty 0.3.0 3.0MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/t/tzf/postgresql-17-tzf_0.3.0-2PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 17 postgresql-17-tzf postgresql-17-tzf_0.3.0-2PIGSTY~trixie_amd64.deb pigsty 0.3.0 3.1MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/t/tzf/postgresql-17-tzf_0.3.0-2PIGSTY~trixie_amd64.deb
+@ d13.aarch64 17 postgresql-17-tzf postgresql-17-tzf_0.3.0-2PIGSTY~trixie_arm64.deb pigsty 0.3.0 3.0MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/t/tzf/postgresql-17-tzf_0.3.0-2PIGSTY~trixie_arm64.deb
+@ u22.x86_64 17 postgresql-17-tzf postgresql-17-tzf_0.3.0-2PIGSTY~jammy_amd64.deb pigsty 0.3.0 3.5MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/t/tzf/postgresql-17-tzf_0.3.0-2PIGSTY~jammy_amd64.deb
+@ u22.aarch64 17 postgresql-17-tzf postgresql-17-tzf_0.3.0-2PIGSTY~jammy_arm64.deb pigsty 0.3.0 3.4MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/t/tzf/postgresql-17-tzf_0.3.0-2PIGSTY~jammy_arm64.deb
+@ u24.x86_64 17 postgresql-17-tzf postgresql-17-tzf_0.3.0-2PIGSTY~noble_amd64.deb pigsty 0.3.0 3.5MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/tzf/postgresql-17-tzf_0.3.0-2PIGSTY~noble_amd64.deb
+@ u24.aarch64 17 postgresql-17-tzf postgresql-17-tzf_0.3.0-2PIGSTY~noble_arm64.deb pigsty 0.3.0 3.4MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/tzf/postgresql-17-tzf_0.3.0-2PIGSTY~noble_arm64.deb
+@ u26.x86_64 17 postgresql-17-tzf postgresql-17-tzf_0.3.0-2PIGSTY~resolute_amd64.deb pigsty 0.3.0 3.5MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/t/tzf/postgresql-17-tzf_0.3.0-2PIGSTY~resolute_amd64.deb
+@ u26.aarch64 17 postgresql-17-tzf postgresql-17-tzf_0.3.0-2PIGSTY~resolute_arm64.deb pigsty 0.3.0 3.4MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/t/tzf/postgresql-17-tzf_0.3.0-2PIGSTY~resolute_arm64.deb
+@ el8.x86_64 16 pg_tzf_16 pg_tzf_16-0.3.0-2PIGSTY.el8.x86_64.rpm pigsty 0.3.0 3.6MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_tzf_16-0.3.0-2PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 16 pg_tzf_16 pg_tzf_16-0.3.0-2PIGSTY.el8.aarch64.rpm pigsty 0.3.0 3.5MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_tzf_16-0.3.0-2PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 16 pg_tzf_16 pg_tzf_16-0.3.0-2PIGSTY.el9.x86_64.rpm pigsty 0.3.0 3.6MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_tzf_16-0.3.0-2PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 16 pg_tzf_16 pg_tzf_16-0.3.0-2PIGSTY.el9.aarch64.rpm pigsty 0.3.0 3.6MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_tzf_16-0.3.0-2PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 16 pg_tzf_16 pg_tzf_16-0.3.0-2PIGSTY.el10.x86_64.rpm pigsty 0.3.0 3.6MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_tzf_16-0.3.0-2PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 16 pg_tzf_16 pg_tzf_16-0.3.0-2PIGSTY.el10.aarch64.rpm pigsty 0.3.0 3.5MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_tzf_16-0.3.0-2PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 16 postgresql-16-tzf postgresql-16-tzf_0.3.0-2PIGSTY~bookworm_amd64.deb pigsty 0.3.0 3.1MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/t/tzf/postgresql-16-tzf_0.3.0-2PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 16 postgresql-16-tzf postgresql-16-tzf_0.3.0-2PIGSTY~bookworm_arm64.deb pigsty 0.3.0 3.0MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/t/tzf/postgresql-16-tzf_0.3.0-2PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 16 postgresql-16-tzf postgresql-16-tzf_0.3.0-2PIGSTY~trixie_amd64.deb pigsty 0.3.0 3.1MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/t/tzf/postgresql-16-tzf_0.3.0-2PIGSTY~trixie_amd64.deb
+@ d13.aarch64 16 postgresql-16-tzf postgresql-16-tzf_0.3.0-2PIGSTY~trixie_arm64.deb pigsty 0.3.0 3.0MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/t/tzf/postgresql-16-tzf_0.3.0-2PIGSTY~trixie_arm64.deb
+@ u22.x86_64 16 postgresql-16-tzf postgresql-16-tzf_0.3.0-2PIGSTY~jammy_amd64.deb pigsty 0.3.0 3.5MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/t/tzf/postgresql-16-tzf_0.3.0-2PIGSTY~jammy_amd64.deb
+@ u22.aarch64 16 postgresql-16-tzf postgresql-16-tzf_0.3.0-2PIGSTY~jammy_arm64.deb pigsty 0.3.0 3.4MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/t/tzf/postgresql-16-tzf_0.3.0-2PIGSTY~jammy_arm64.deb
+@ u24.x86_64 16 postgresql-16-tzf postgresql-16-tzf_0.3.0-2PIGSTY~noble_amd64.deb pigsty 0.3.0 3.5MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/tzf/postgresql-16-tzf_0.3.0-2PIGSTY~noble_amd64.deb
+@ u24.aarch64 16 postgresql-16-tzf postgresql-16-tzf_0.3.0-2PIGSTY~noble_arm64.deb pigsty 0.3.0 3.4MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/tzf/postgresql-16-tzf_0.3.0-2PIGSTY~noble_arm64.deb
+@ u26.x86_64 16 postgresql-16-tzf postgresql-16-tzf_0.3.0-2PIGSTY~resolute_amd64.deb pigsty 0.3.0 3.5MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/t/tzf/postgresql-16-tzf_0.3.0-2PIGSTY~resolute_amd64.deb
+@ u26.aarch64 16 postgresql-16-tzf postgresql-16-tzf_0.3.0-2PIGSTY~resolute_arm64.deb pigsty 0.3.0 3.4MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/t/tzf/postgresql-16-tzf_0.3.0-2PIGSTY~resolute_arm64.deb
+@ el8.x86_64 15 pg_tzf_15 pg_tzf_15-0.3.0-2PIGSTY.el8.x86_64.rpm pigsty 0.3.0 3.6MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_tzf_15-0.3.0-2PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 15 pg_tzf_15 pg_tzf_15-0.3.0-2PIGSTY.el8.aarch64.rpm pigsty 0.3.0 3.5MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_tzf_15-0.3.0-2PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 15 pg_tzf_15 pg_tzf_15-0.3.0-2PIGSTY.el9.x86_64.rpm pigsty 0.3.0 3.6MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_tzf_15-0.3.0-2PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 15 pg_tzf_15 pg_tzf_15-0.3.0-2PIGSTY.el9.aarch64.rpm pigsty 0.3.0 3.5MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_tzf_15-0.3.0-2PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 15 pg_tzf_15 pg_tzf_15-0.3.0-2PIGSTY.el10.x86_64.rpm pigsty 0.3.0 3.6MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_tzf_15-0.3.0-2PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 15 pg_tzf_15 pg_tzf_15-0.3.0-2PIGSTY.el10.aarch64.rpm pigsty 0.3.0 3.5MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_tzf_15-0.3.0-2PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 15 postgresql-15-tzf postgresql-15-tzf_0.3.0-2PIGSTY~bookworm_amd64.deb pigsty 0.3.0 3.1MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/t/tzf/postgresql-15-tzf_0.3.0-2PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 15 postgresql-15-tzf postgresql-15-tzf_0.3.0-2PIGSTY~bookworm_arm64.deb pigsty 0.3.0 3.0MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/t/tzf/postgresql-15-tzf_0.3.0-2PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 15 postgresql-15-tzf postgresql-15-tzf_0.3.0-2PIGSTY~trixie_amd64.deb pigsty 0.3.0 3.1MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/t/tzf/postgresql-15-tzf_0.3.0-2PIGSTY~trixie_amd64.deb
+@ d13.aarch64 15 postgresql-15-tzf postgresql-15-tzf_0.3.0-2PIGSTY~trixie_arm64.deb pigsty 0.3.0 3.0MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/t/tzf/postgresql-15-tzf_0.3.0-2PIGSTY~trixie_arm64.deb
+@ u22.x86_64 15 postgresql-15-tzf postgresql-15-tzf_0.3.0-2PIGSTY~jammy_amd64.deb pigsty 0.3.0 3.5MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/t/tzf/postgresql-15-tzf_0.3.0-2PIGSTY~jammy_amd64.deb
+@ u22.aarch64 15 postgresql-15-tzf postgresql-15-tzf_0.3.0-2PIGSTY~jammy_arm64.deb pigsty 0.3.0 3.4MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/t/tzf/postgresql-15-tzf_0.3.0-2PIGSTY~jammy_arm64.deb
+@ u24.x86_64 15 postgresql-15-tzf postgresql-15-tzf_0.3.0-2PIGSTY~noble_amd64.deb pigsty 0.3.0 3.5MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/tzf/postgresql-15-tzf_0.3.0-2PIGSTY~noble_amd64.deb
+@ u24.aarch64 15 postgresql-15-tzf postgresql-15-tzf_0.3.0-2PIGSTY~noble_arm64.deb pigsty 0.3.0 3.4MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/tzf/postgresql-15-tzf_0.3.0-2PIGSTY~noble_arm64.deb
+@ u26.x86_64 15 postgresql-15-tzf postgresql-15-tzf_0.3.0-2PIGSTY~resolute_amd64.deb pigsty 0.3.0 3.5MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/t/tzf/postgresql-15-tzf_0.3.0-2PIGSTY~resolute_amd64.deb
+@ u26.aarch64 15 postgresql-15-tzf postgresql-15-tzf_0.3.0-2PIGSTY~resolute_arm64.deb pigsty 0.3.0 3.4MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/t/tzf/postgresql-15-tzf_0.3.0-2PIGSTY~resolute_arm64.deb
+@ el8.x86_64 14 pg_tzf_14 pg_tzf_14-0.3.0-2PIGSTY.el8.x86_64.rpm pigsty 0.3.0 3.6MiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pg_tzf_14-0.3.0-2PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 14 pg_tzf_14 pg_tzf_14-0.3.0-2PIGSTY.el8.aarch64.rpm pigsty 0.3.0 3.5MiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pg_tzf_14-0.3.0-2PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 14 pg_tzf_14 pg_tzf_14-0.3.0-2PIGSTY.el9.x86_64.rpm pigsty 0.3.0 3.6MiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pg_tzf_14-0.3.0-2PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 14 pg_tzf_14 pg_tzf_14-0.3.0-2PIGSTY.el9.aarch64.rpm pigsty 0.3.0 3.5MiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pg_tzf_14-0.3.0-2PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 14 pg_tzf_14 pg_tzf_14-0.3.0-2PIGSTY.el10.x86_64.rpm pigsty 0.3.0 3.6MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_tzf_14-0.3.0-2PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 14 pg_tzf_14 pg_tzf_14-0.3.0-2PIGSTY.el10.aarch64.rpm pigsty 0.3.0 3.5MiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pg_tzf_14-0.3.0-2PIGSTY.el10.aarch64.rpm
+@ d12.x86_64 14 postgresql-14-tzf postgresql-14-tzf_0.3.0-2PIGSTY~bookworm_amd64.deb pigsty 0.3.0 3.1MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/t/tzf/postgresql-14-tzf_0.3.0-2PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 14 postgresql-14-tzf postgresql-14-tzf_0.3.0-2PIGSTY~bookworm_arm64.deb pigsty 0.3.0 3.0MiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/t/tzf/postgresql-14-tzf_0.3.0-2PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 14 postgresql-14-tzf postgresql-14-tzf_0.3.0-2PIGSTY~trixie_amd64.deb pigsty 0.3.0 3.1MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/t/tzf/postgresql-14-tzf_0.3.0-2PIGSTY~trixie_amd64.deb
+@ d13.aarch64 14 postgresql-14-tzf postgresql-14-tzf_0.3.0-2PIGSTY~trixie_arm64.deb pigsty 0.3.0 3.0MiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/t/tzf/postgresql-14-tzf_0.3.0-2PIGSTY~trixie_arm64.deb
+@ u22.x86_64 14 postgresql-14-tzf postgresql-14-tzf_0.3.0-2PIGSTY~jammy_amd64.deb pigsty 0.3.0 3.5MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/t/tzf/postgresql-14-tzf_0.3.0-2PIGSTY~jammy_amd64.deb
+@ u22.aarch64 14 postgresql-14-tzf postgresql-14-tzf_0.3.0-2PIGSTY~jammy_arm64.deb pigsty 0.3.0 3.4MiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/t/tzf/postgresql-14-tzf_0.3.0-2PIGSTY~jammy_arm64.deb
+@ u24.x86_64 14 postgresql-14-tzf postgresql-14-tzf_0.3.0-2PIGSTY~noble_amd64.deb pigsty 0.3.0 3.5MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/tzf/postgresql-14-tzf_0.3.0-2PIGSTY~noble_amd64.deb
+@ u24.aarch64 14 postgresql-14-tzf postgresql-14-tzf_0.3.0-2PIGSTY~noble_arm64.deb pigsty 0.3.0 3.4MiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/t/tzf/postgresql-14-tzf_0.3.0-2PIGSTY~noble_arm64.deb
+@ u26.x86_64 14 postgresql-14-tzf postgresql-14-tzf_0.3.0-2PIGSTY~resolute_amd64.deb pigsty 0.3.0 3.5MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/t/tzf/postgresql-14-tzf_0.3.0-2PIGSTY~resolute_amd64.deb
+@ u26.aarch64 14 postgresql-14-tzf postgresql-14-tzf_0.3.0-2PIGSTY~resolute_arm64.deb pigsty 0.3.0 3.4MiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/t/tzf/postgresql-14-tzf_0.3.0-2PIGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建

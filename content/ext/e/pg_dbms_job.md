@@ -6,10 +6,15 @@ weight: 9260
 ---
 
 <div class="ext-cards">
-  <a class="ext-card ext-card--repo" href="https://github.com/MigOpsRepos/pg_dbms_job">
+  <a class="ext-card ext-card--repo" href="https://github.com/HexaCluster/pg_dbms_job">
     <div class="ext-card__kicker">仓库</div>
-    <div class="ext-card__title">MigOpsRepos/pg_dbms_job</div>
-    <div class="ext-card__desc">https://github.com/MigOpsRepos/pg_dbms_job</div>
+    <div class="ext-card__title">HexaCluster/pg_dbms_job</div>
+    <div class="ext-card__desc">https://github.com/HexaCluster/pg_dbms_job</div>
+  </a>
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pg_dbms_job-2.0.tar.gz">
+    <div class="ext-card__kicker">源码</div>
+    <div class="ext-card__title">pg_dbms_job-2.0.tar.gz</div>
+    <div class="ext-card__desc">pg_dbms_job-2.0.tar.gz</div>
   </a>
 </div>
 
@@ -20,12 +25,12 @@ weight: 9260
 
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
-| [**`pg_dbms_job`**](/ext/e/pg_dbms_job) | `2.0` | <a class="ext-badge ext-badge--cate sim" href="/ext/cate/sim">SIM</a> | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> |
+| [**`pg_dbms_job`**](/ext/e/pg_dbms_job) | `2.0` | <a class="ext-badge ext-badge--cate sim" href="/ext/cate/sim">SIM</a> | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
 {.ext-table}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
 |:-----:|:-------------------------------------------------------------------------|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:---------------------------------------------:|:--------------------------------------------:|:--------------------------------------------:|:----------|
-| 9260  | [**`pg_dbms_job`**](/ext/e/pg_dbms_job) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `dbms_job` |
+| 9260  | [**`pg_dbms_job`**](/ext/e/pg_dbms_job) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `dbms_job` |
 {.ext-table}
 
 | **相关扩展** | [`pg_cron`](/ext/e/pg_cron) [`pg_task`](/ext/e/pg_task) [`pg_dbms_metadata`](/ext/e/pg_dbms_metadata) [`pg_dbms_lock`](/ext/e/pg_dbms_lock) [`pgagent`](/ext/e/pgagent) [`pg_jobmon`](/ext/e/pg_jobmon) [`oracle_fdw`](/ext/e/oracle_fdw) [`orafce`](/ext/e/orafce) |
@@ -33,33 +38,37 @@ weight: 9260
 {.ext-table .ext-table--rel}
 
 
+> Background worker; requires shared_preload_libraries=pg_dbms_job and restart. Worker connections also require valid database, user, and authentication settings.
+
+
 ## 版本
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#sim) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `2.0` | {{< pgvers "18,17,16,15,14" >}} | `pg_dbms_job` | - |
+| [**EXT**](/ext/list#sim) | <a class="ext-badge ext-badge--repo mixed" href="/ext/repo#mixed">MIXED</a> | `2.0` | {{< pgvers "18,17,16,15,14" >}} | `pg_dbms_job` | - |
 | [**RPM**](/ext/rpm#sim) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `2.0` | {{< pgvers "18,17,16,15,14" >}} | `pg_dbms_job_$v` | - |
+| [**DEB**](/ext/deb#sim) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `2.0` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pg-dbms-job` | `libpq5` |
 {.ext-table}
 
 {{< pgext_matrix >}}
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | BREAK PGDG 2.0 2 | BREAK PGDG 2.0 2 | BREAK PGDG 2.0 2 | BREAK PGDG 2.0 2 | BREAK PGDG 2.0 4 |
-| el8.aarch64 | BREAK PGDG 2.0 2 | BREAK PGDG 2.0 2 | BREAK PGDG 2.0 2 | BREAK PGDG 2.0 2 | BREAK PGDG 2.0 2 |
+| el8.x86_64 | AVAIL PGDG 2.0 2 | AVAIL PGDG 2.0 2 | AVAIL PGDG 2.0 2 | AVAIL PGDG 2.0 2 | AVAIL PGDG 2.0 4 |
+| el8.aarch64 | AVAIL PGDG 2.0 2 | AVAIL PGDG 2.0 2 | AVAIL PGDG 2.0 2 | AVAIL PGDG 2.0 2 | AVAIL PGDG 2.0 2 |
 | el9.x86_64 | AVAIL PGDG 2.0 4 | AVAIL PGDG 2.0 4 | AVAIL PGDG 2.0 4 | AVAIL PGDG 2.0 4 | AVAIL PGDG 2.0 6 |
 | el9.aarch64 | AVAIL PGDG 2.0 4 | AVAIL PGDG 2.0 4 | AVAIL PGDG 2.0 4 | AVAIL PGDG 2.0 4 | AVAIL PGDG 2.0 4 |
 | el10.x86_64 | AVAIL PGDG 2.0 4 | AVAIL PGDG 2.0 4 | AVAIL PGDG 2.0 4 | AVAIL PGDG 2.0 4 | AVAIL PGDG 2.0 4 |
 | el10.aarch64 | AVAIL PGDG 2.0 4 | AVAIL PGDG 2.0 4 | AVAIL PGDG 2.0 4 | AVAIL PGDG 2.0 4 | AVAIL PGDG 2.0 4 |
-| d12.x86_64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
-| d12.aarch64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
-| d13.x86_64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
-| d13.aarch64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
-| u22.x86_64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
-| u22.aarch64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
-| u24.x86_64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
-| u24.aarch64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
-| u26.x86_64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
-| u26.aarch64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
+| d12.x86_64 | AVAIL PIGSTY 2.0 1 | AVAIL PIGSTY 2.0 1 | AVAIL PIGSTY 2.0 1 | AVAIL PIGSTY 2.0 1 | AVAIL PIGSTY 2.0 1 |
+| d12.aarch64 | AVAIL PIGSTY 2.0 1 | AVAIL PIGSTY 2.0 1 | AVAIL PIGSTY 2.0 1 | AVAIL PIGSTY 2.0 1 | AVAIL PIGSTY 2.0 1 |
+| d13.x86_64 | AVAIL PIGSTY 2.0 1 | AVAIL PIGSTY 2.0 1 | AVAIL PIGSTY 2.0 1 | AVAIL PIGSTY 2.0 1 | AVAIL PIGSTY 2.0 1 |
+| d13.aarch64 | AVAIL PIGSTY 2.0 1 | AVAIL PIGSTY 2.0 1 | AVAIL PIGSTY 2.0 1 | AVAIL PIGSTY 2.0 1 | AVAIL PIGSTY 2.0 1 |
+| u22.x86_64 | AVAIL PIGSTY 2.0 1 | AVAIL PIGSTY 2.0 1 | AVAIL PIGSTY 2.0 1 | AVAIL PIGSTY 2.0 1 | AVAIL PIGSTY 2.0 1 |
+| u22.aarch64 | AVAIL PIGSTY 2.0 1 | AVAIL PIGSTY 2.0 1 | AVAIL PIGSTY 2.0 1 | AVAIL PIGSTY 2.0 1 | AVAIL PIGSTY 2.0 1 |
+| u24.x86_64 | AVAIL PIGSTY 2.0 1 | AVAIL PIGSTY 2.0 1 | AVAIL PIGSTY 2.0 1 | AVAIL PIGSTY 2.0 1 | AVAIL PIGSTY 2.0 1 |
+| u24.aarch64 | AVAIL PIGSTY 2.0 1 | AVAIL PIGSTY 2.0 1 | AVAIL PIGSTY 2.0 1 | AVAIL PIGSTY 2.0 1 | AVAIL PIGSTY 2.0 1 |
+| u26.x86_64 | AVAIL PIGSTY 2.0 1 | AVAIL PIGSTY 2.0 1 | AVAIL PIGSTY 2.0 1 | AVAIL PIGSTY 2.0 1 | AVAIL PIGSTY 2.0 1 |
+| u26.aarch64 | AVAIL PIGSTY 2.0 1 | AVAIL PIGSTY 2.0 1 | AVAIL PIGSTY 2.0 1 | AVAIL PIGSTY 2.0 1 | AVAIL PIGSTY 2.0 1 |
 @ el8.x86_64 18 pg_dbms_job_18 pg_dbms_job_18-2.0-1PGDG.rhel8.10.x86_64.rpm pgdg 2.0 31.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pg_dbms_job_18-2.0-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 18 pg_dbms_job_18 pg_dbms_job_18-1.5-5PGDG.rhel8.x86_64.rpm pgdg 1.5 26.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pg_dbms_job_18-1.5-5PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 18 pg_dbms_job_18 pg_dbms_job_18-2.0-1PGDG.rhel8.10.aarch64.rpm pgdg 2.0 30.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pg_dbms_job_18-2.0-1PGDG.rhel8.10.aarch64.rpm
@@ -80,6 +89,16 @@ weight: 9260
 @ el10.aarch64 18 pg_dbms_job_18 pg_dbms_job_18-2.0-1PGDG.rhel10.1.aarch64.rpm pgdg 2.0 30.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_dbms_job_18-2.0-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 18 pg_dbms_job_18 pg_dbms_job_18-2.0-1PGDG.rhel10.0.aarch64.rpm pgdg 2.0 30.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_dbms_job_18-2.0-1PGDG.rhel10.0.aarch64.rpm
 @ el10.aarch64 18 pg_dbms_job_18 pg_dbms_job_18-1.5-5PGDG.rhel10.aarch64.rpm pgdg 1.5 26.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_dbms_job_18-1.5-5PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-pg-dbms-job postgresql-18-pg-dbms-job_2.0-1PIGSTY~bookworm_amd64.deb pigsty 2.0 46.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-dbms-job/postgresql-18-pg-dbms-job_2.0-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 18 postgresql-18-pg-dbms-job postgresql-18-pg-dbms-job_2.0-1PIGSTY~bookworm_arm64.deb pigsty 2.0 45.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-dbms-job/postgresql-18-pg-dbms-job_2.0-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 18 postgresql-18-pg-dbms-job postgresql-18-pg-dbms-job_2.0-1PIGSTY~trixie_amd64.deb pigsty 2.0 46.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-dbms-job/postgresql-18-pg-dbms-job_2.0-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 18 postgresql-18-pg-dbms-job postgresql-18-pg-dbms-job_2.0-1PIGSTY~trixie_arm64.deb pigsty 2.0 45.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-dbms-job/postgresql-18-pg-dbms-job_2.0-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 18 postgresql-18-pg-dbms-job postgresql-18-pg-dbms-job_2.0-1PIGSTY~jammy_amd64.deb pigsty 2.0 49.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-dbms-job/postgresql-18-pg-dbms-job_2.0-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 18 postgresql-18-pg-dbms-job postgresql-18-pg-dbms-job_2.0-1PIGSTY~jammy_arm64.deb pigsty 2.0 48.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-dbms-job/postgresql-18-pg-dbms-job_2.0-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 18 postgresql-18-pg-dbms-job postgresql-18-pg-dbms-job_2.0-1PIGSTY~noble_amd64.deb pigsty 2.0 48.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-dbms-job/postgresql-18-pg-dbms-job_2.0-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 18 postgresql-18-pg-dbms-job postgresql-18-pg-dbms-job_2.0-1PIGSTY~noble_arm64.deb pigsty 2.0 47.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-dbms-job/postgresql-18-pg-dbms-job_2.0-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 18 postgresql-18-pg-dbms-job postgresql-18-pg-dbms-job_2.0-1PIGSTY~resolute_amd64.deb pigsty 2.0 48.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-dbms-job/postgresql-18-pg-dbms-job_2.0-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 18 postgresql-18-pg-dbms-job postgresql-18-pg-dbms-job_2.0-1PIGSTY~resolute_arm64.deb pigsty 2.0 47.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-dbms-job/postgresql-18-pg-dbms-job_2.0-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 17 pg_dbms_job_17 pg_dbms_job_17-2.0-1PGDG.rhel8.10.x86_64.rpm pgdg 2.0 31.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pg_dbms_job_17-2.0-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 pg_dbms_job_17 pg_dbms_job_17-1.5-3PGDG.rhel8.x86_64.rpm pgdg 1.5 26.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pg_dbms_job_17-1.5-3PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 17 pg_dbms_job_17 pg_dbms_job_17-2.0-1PGDG.rhel8.10.aarch64.rpm pgdg 2.0 30.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pg_dbms_job_17-2.0-1PGDG.rhel8.10.aarch64.rpm
@@ -100,6 +119,16 @@ weight: 9260
 @ el10.aarch64 17 pg_dbms_job_17 pg_dbms_job_17-2.0-1PGDG.rhel10.1.aarch64.rpm pgdg 2.0 30.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_dbms_job_17-2.0-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 17 pg_dbms_job_17 pg_dbms_job_17-2.0-1PGDG.rhel10.0.aarch64.rpm pgdg 2.0 30.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_dbms_job_17-2.0-1PGDG.rhel10.0.aarch64.rpm
 @ el10.aarch64 17 pg_dbms_job_17 pg_dbms_job_17-1.5-5PGDG.rhel10.aarch64.rpm pgdg 1.5 26.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_dbms_job_17-1.5-5PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-pg-dbms-job postgresql-17-pg-dbms-job_2.0-1PIGSTY~bookworm_amd64.deb pigsty 2.0 46.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-dbms-job/postgresql-17-pg-dbms-job_2.0-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 17 postgresql-17-pg-dbms-job postgresql-17-pg-dbms-job_2.0-1PIGSTY~bookworm_arm64.deb pigsty 2.0 45.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-dbms-job/postgresql-17-pg-dbms-job_2.0-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 17 postgresql-17-pg-dbms-job postgresql-17-pg-dbms-job_2.0-1PIGSTY~trixie_amd64.deb pigsty 2.0 46.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-dbms-job/postgresql-17-pg-dbms-job_2.0-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 17 postgresql-17-pg-dbms-job postgresql-17-pg-dbms-job_2.0-1PIGSTY~trixie_arm64.deb pigsty 2.0 45.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-dbms-job/postgresql-17-pg-dbms-job_2.0-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 17 postgresql-17-pg-dbms-job postgresql-17-pg-dbms-job_2.0-1PIGSTY~jammy_amd64.deb pigsty 2.0 51.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-dbms-job/postgresql-17-pg-dbms-job_2.0-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 17 postgresql-17-pg-dbms-job postgresql-17-pg-dbms-job_2.0-1PIGSTY~jammy_arm64.deb pigsty 2.0 50.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-dbms-job/postgresql-17-pg-dbms-job_2.0-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 17 postgresql-17-pg-dbms-job postgresql-17-pg-dbms-job_2.0-1PIGSTY~noble_amd64.deb pigsty 2.0 48.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-dbms-job/postgresql-17-pg-dbms-job_2.0-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 17 postgresql-17-pg-dbms-job postgresql-17-pg-dbms-job_2.0-1PIGSTY~noble_arm64.deb pigsty 2.0 47.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-dbms-job/postgresql-17-pg-dbms-job_2.0-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 17 postgresql-17-pg-dbms-job postgresql-17-pg-dbms-job_2.0-1PIGSTY~resolute_amd64.deb pigsty 2.0 48.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-dbms-job/postgresql-17-pg-dbms-job_2.0-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 17 postgresql-17-pg-dbms-job postgresql-17-pg-dbms-job_2.0-1PIGSTY~resolute_arm64.deb pigsty 2.0 47.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-dbms-job/postgresql-17-pg-dbms-job_2.0-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 16 pg_dbms_job_16 pg_dbms_job_16-2.0-1PGDG.rhel8.10.x86_64.rpm pgdg 2.0 31.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_dbms_job_16-2.0-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 pg_dbms_job_16 pg_dbms_job_16-1.5-3PGDG.rhel8.x86_64.rpm pgdg 1.5 26.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_dbms_job_16-1.5-3PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 16 pg_dbms_job_16 pg_dbms_job_16-2.0-1PGDG.rhel8.10.aarch64.rpm pgdg 2.0 30.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pg_dbms_job_16-2.0-1PGDG.rhel8.10.aarch64.rpm
@@ -120,6 +149,16 @@ weight: 9260
 @ el10.aarch64 16 pg_dbms_job_16 pg_dbms_job_16-2.0-1PGDG.rhel10.1.aarch64.rpm pgdg 2.0 30.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_dbms_job_16-2.0-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 16 pg_dbms_job_16 pg_dbms_job_16-2.0-1PGDG.rhel10.0.aarch64.rpm pgdg 2.0 30.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_dbms_job_16-2.0-1PGDG.rhel10.0.aarch64.rpm
 @ el10.aarch64 16 pg_dbms_job_16 pg_dbms_job_16-1.5-5PGDG.rhel10.aarch64.rpm pgdg 1.5 26.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_dbms_job_16-1.5-5PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 16 postgresql-16-pg-dbms-job postgresql-16-pg-dbms-job_2.0-1PIGSTY~bookworm_amd64.deb pigsty 2.0 46.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-dbms-job/postgresql-16-pg-dbms-job_2.0-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 16 postgresql-16-pg-dbms-job postgresql-16-pg-dbms-job_2.0-1PIGSTY~bookworm_arm64.deb pigsty 2.0 45.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-dbms-job/postgresql-16-pg-dbms-job_2.0-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 16 postgresql-16-pg-dbms-job postgresql-16-pg-dbms-job_2.0-1PIGSTY~trixie_amd64.deb pigsty 2.0 46.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-dbms-job/postgresql-16-pg-dbms-job_2.0-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 16 postgresql-16-pg-dbms-job postgresql-16-pg-dbms-job_2.0-1PIGSTY~trixie_arm64.deb pigsty 2.0 45.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-dbms-job/postgresql-16-pg-dbms-job_2.0-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 16 postgresql-16-pg-dbms-job postgresql-16-pg-dbms-job_2.0-1PIGSTY~jammy_amd64.deb pigsty 2.0 51.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-dbms-job/postgresql-16-pg-dbms-job_2.0-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 16 postgresql-16-pg-dbms-job postgresql-16-pg-dbms-job_2.0-1PIGSTY~jammy_arm64.deb pigsty 2.0 50.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-dbms-job/postgresql-16-pg-dbms-job_2.0-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 16 postgresql-16-pg-dbms-job postgresql-16-pg-dbms-job_2.0-1PIGSTY~noble_amd64.deb pigsty 2.0 48.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-dbms-job/postgresql-16-pg-dbms-job_2.0-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 16 postgresql-16-pg-dbms-job postgresql-16-pg-dbms-job_2.0-1PIGSTY~noble_arm64.deb pigsty 2.0 47.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-dbms-job/postgresql-16-pg-dbms-job_2.0-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 16 postgresql-16-pg-dbms-job postgresql-16-pg-dbms-job_2.0-1PIGSTY~resolute_amd64.deb pigsty 2.0 48.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-dbms-job/postgresql-16-pg-dbms-job_2.0-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 16 postgresql-16-pg-dbms-job postgresql-16-pg-dbms-job_2.0-1PIGSTY~resolute_arm64.deb pigsty 2.0 47.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-dbms-job/postgresql-16-pg-dbms-job_2.0-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 15 pg_dbms_job_15 pg_dbms_job_15-2.0-1PGDG.rhel8.10.x86_64.rpm pgdg 2.0 31.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_dbms_job_15-2.0-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 pg_dbms_job_15 pg_dbms_job_15-1.5-1.rhel8.x86_64.rpm pgdg 1.5 26.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_dbms_job_15-1.5-1.rhel8.x86_64.rpm
 @ el8.aarch64 15 pg_dbms_job_15 pg_dbms_job_15-2.0-1PGDG.rhel8.10.aarch64.rpm pgdg 2.0 30.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pg_dbms_job_15-2.0-1PGDG.rhel8.10.aarch64.rpm
@@ -140,6 +179,16 @@ weight: 9260
 @ el10.aarch64 15 pg_dbms_job_15 pg_dbms_job_15-2.0-1PGDG.rhel10.1.aarch64.rpm pgdg 2.0 30.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_dbms_job_15-2.0-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 15 pg_dbms_job_15 pg_dbms_job_15-2.0-1PGDG.rhel10.0.aarch64.rpm pgdg 2.0 30.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_dbms_job_15-2.0-1PGDG.rhel10.0.aarch64.rpm
 @ el10.aarch64 15 pg_dbms_job_15 pg_dbms_job_15-1.5-5PGDG.rhel10.aarch64.rpm pgdg 1.5 26.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_dbms_job_15-1.5-5PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 15 postgresql-15-pg-dbms-job postgresql-15-pg-dbms-job_2.0-1PIGSTY~bookworm_amd64.deb pigsty 2.0 46.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-dbms-job/postgresql-15-pg-dbms-job_2.0-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 15 postgresql-15-pg-dbms-job postgresql-15-pg-dbms-job_2.0-1PIGSTY~bookworm_arm64.deb pigsty 2.0 45.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-dbms-job/postgresql-15-pg-dbms-job_2.0-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 15 postgresql-15-pg-dbms-job postgresql-15-pg-dbms-job_2.0-1PIGSTY~trixie_amd64.deb pigsty 2.0 46.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-dbms-job/postgresql-15-pg-dbms-job_2.0-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 15 postgresql-15-pg-dbms-job postgresql-15-pg-dbms-job_2.0-1PIGSTY~trixie_arm64.deb pigsty 2.0 45.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-dbms-job/postgresql-15-pg-dbms-job_2.0-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 15 postgresql-15-pg-dbms-job postgresql-15-pg-dbms-job_2.0-1PIGSTY~jammy_amd64.deb pigsty 2.0 51.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-dbms-job/postgresql-15-pg-dbms-job_2.0-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 15 postgresql-15-pg-dbms-job postgresql-15-pg-dbms-job_2.0-1PIGSTY~jammy_arm64.deb pigsty 2.0 50.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-dbms-job/postgresql-15-pg-dbms-job_2.0-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 15 postgresql-15-pg-dbms-job postgresql-15-pg-dbms-job_2.0-1PIGSTY~noble_amd64.deb pigsty 2.0 48.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-dbms-job/postgresql-15-pg-dbms-job_2.0-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 15 postgresql-15-pg-dbms-job postgresql-15-pg-dbms-job_2.0-1PIGSTY~noble_arm64.deb pigsty 2.0 47.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-dbms-job/postgresql-15-pg-dbms-job_2.0-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 15 postgresql-15-pg-dbms-job postgresql-15-pg-dbms-job_2.0-1PIGSTY~resolute_amd64.deb pigsty 2.0 48.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-dbms-job/postgresql-15-pg-dbms-job_2.0-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 15 postgresql-15-pg-dbms-job postgresql-15-pg-dbms-job_2.0-1PIGSTY~resolute_arm64.deb pigsty 2.0 47.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-dbms-job/postgresql-15-pg-dbms-job_2.0-1PIGSTY~resolute_arm64.deb
 @ el8.x86_64 14 pg_dbms_job_14 pg_dbms_job_14-2.0-1PGDG.rhel8.10.x86_64.rpm pgdg 2.0 31.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_dbms_job_14-2.0-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 14 pg_dbms_job_14 pg_dbms_job_14-1.5-1.rhel8.x86_64.rpm pgdg 1.5 26.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_dbms_job_14-1.5-1.rhel8.x86_64.rpm
 @ el8.x86_64 14 pg_dbms_job_14 pg_dbms_job_14-1.4.0-1.rhel8.x86_64.rpm pgdg 1.4.0 26.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_dbms_job_14-1.4.0-1.rhel8.x86_64.rpm
@@ -164,15 +213,33 @@ weight: 9260
 @ el10.aarch64 14 pg_dbms_job_14 pg_dbms_job_14-2.0-1PGDG.rhel10.1.aarch64.rpm pgdg 2.0 30.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_dbms_job_14-2.0-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 14 pg_dbms_job_14 pg_dbms_job_14-2.0-1PGDG.rhel10.0.aarch64.rpm pgdg 2.0 30.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_dbms_job_14-2.0-1PGDG.rhel10.0.aarch64.rpm
 @ el10.aarch64 14 pg_dbms_job_14 pg_dbms_job_14-1.5-5PGDG.rhel10.aarch64.rpm pgdg 1.5 26.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_dbms_job_14-1.5-5PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 14 postgresql-14-pg-dbms-job postgresql-14-pg-dbms-job_2.0-1PIGSTY~bookworm_amd64.deb pigsty 2.0 46.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-dbms-job/postgresql-14-pg-dbms-job_2.0-1PIGSTY~bookworm_amd64.deb
+@ d12.aarch64 14 postgresql-14-pg-dbms-job postgresql-14-pg-dbms-job_2.0-1PIGSTY~bookworm_arm64.deb pigsty 2.0 45.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pg-dbms-job/postgresql-14-pg-dbms-job_2.0-1PIGSTY~bookworm_arm64.deb
+@ d13.x86_64 14 postgresql-14-pg-dbms-job postgresql-14-pg-dbms-job_2.0-1PIGSTY~trixie_amd64.deb pigsty 2.0 46.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-dbms-job/postgresql-14-pg-dbms-job_2.0-1PIGSTY~trixie_amd64.deb
+@ d13.aarch64 14 postgresql-14-pg-dbms-job postgresql-14-pg-dbms-job_2.0-1PIGSTY~trixie_arm64.deb pigsty 2.0 45.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pg-dbms-job/postgresql-14-pg-dbms-job_2.0-1PIGSTY~trixie_arm64.deb
+@ u22.x86_64 14 postgresql-14-pg-dbms-job postgresql-14-pg-dbms-job_2.0-1PIGSTY~jammy_amd64.deb pigsty 2.0 51.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-dbms-job/postgresql-14-pg-dbms-job_2.0-1PIGSTY~jammy_amd64.deb
+@ u22.aarch64 14 postgresql-14-pg-dbms-job postgresql-14-pg-dbms-job_2.0-1PIGSTY~jammy_arm64.deb pigsty 2.0 50.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pg-dbms-job/postgresql-14-pg-dbms-job_2.0-1PIGSTY~jammy_arm64.deb
+@ u24.x86_64 14 postgresql-14-pg-dbms-job postgresql-14-pg-dbms-job_2.0-1PIGSTY~noble_amd64.deb pigsty 2.0 48.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-dbms-job/postgresql-14-pg-dbms-job_2.0-1PIGSTY~noble_amd64.deb
+@ u24.aarch64 14 postgresql-14-pg-dbms-job postgresql-14-pg-dbms-job_2.0-1PIGSTY~noble_arm64.deb pigsty 2.0 47.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-dbms-job/postgresql-14-pg-dbms-job_2.0-1PIGSTY~noble_arm64.deb
+@ u26.x86_64 14 postgresql-14-pg-dbms-job postgresql-14-pg-dbms-job_2.0-1PIGSTY~resolute_amd64.deb pigsty 2.0 48.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-dbms-job/postgresql-14-pg-dbms-job_2.0-1PIGSTY~resolute_amd64.deb
+@ u26.aarch64 14 postgresql-14-pg-dbms-job postgresql-14-pg-dbms-job_2.0-1PIGSTY~resolute_arm64.deb pigsty 2.0 47.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-dbms-job/postgresql-14-pg-dbms-job_2.0-1PIGSTY~resolute_arm64.deb
 {{< /pgext_matrix >}}
+
+## 构建
+
+您可以使用 `pig build` 命令构建 `pg_dbms_job` 扩展的 DEB 包：
+
+```bash
+pig build pkg pg_dbms_job         # 构建 DEB 包
+```
 
 
 ## 安装
 
-您可以直接安装 `pg_dbms_job` 扩展包的预置二进制包，首先确保 [**PGDG**](/docs/repo/pgdg) 仓库已经添加并启用：
+您可以直接安装 `pg_dbms_job` 扩展包的预置二进制包，首先确保 [**PGDG**](/docs/repo/pgdg) 和 [**PIGSTY**](/docs/repo/pgsql) 仓库已经添加并启用：
 
 ```bash
-pig repo add pgdg -u          # 添加 PGDG 仓库并更新缓存
+pig repo add pgsql -u          # 添加仓库并更新缓存
 ```
 
 使用 [**pig**](/docs/pig) 或者是 `apt/yum/dnf` 安装扩展：
@@ -201,7 +268,23 @@ dnf install -y pg_dbms_job_15       # PG 15
 dnf install -y pg_dbms_job_14       # PG 14
 ```
 {{% /tab %}}
+{{% tab header="apt" %}}
+```bash
+apt install -y postgresql-18-pg-dbms-job   # PG 18
+apt install -y postgresql-17-pg-dbms-job   # PG 17
+apt install -y postgresql-16-pg-dbms-job   # PG 16
+apt install -y postgresql-15-pg-dbms-job   # PG 15
+apt install -y postgresql-14-pg-dbms-job   # PG 14
+```
+{{% /tab %}}
 {{< /tabpane >}}
+
+
+**预加载配置**：
+
+```bash
+shared_preload_libraries = 'pg_dbms_job';
+```
 
 
 **创建扩展**：

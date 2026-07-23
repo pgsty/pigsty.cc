@@ -33,33 +33,36 @@ weight: 2530
 {.ext-table .ext-table--rel}
 
 
+> RPM only: version 6.1 is available for PostgreSQL 15-18; PostgreSQL 14 remains on 3.5; no DEB package is available.
+
+
 ## 版本
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#olap) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `6.1` | {{< pgvers "17,16,15,14" >}} | `pg_strom` | - |
-| [**RPM**](/ext/rpm#olap) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `6.1` | {{< pgvers "17,16,15,14" >}} | `pg_strom_$v` | - |
+| [**EXT**](/ext/list#olap) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `6.1` | {{< pgvers "18,17,16,15,14" >}} | `pg_strom` | - |
+| [**RPM**](/ext/rpm#olap) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `6.1` | {{< pgvers "18,17,16,15,14" >}} | `pg_strom_$v` | - |
 {.ext-table}
 
 {{< pgext_matrix >}}
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
 | el8.x86_64 | AVAIL PGDG 6.1 1 | AVAIL PGDG 6.1 3 | AVAIL PGDG 6.1 9 | AVAIL PGDG 6.1 11 | AVAIL PGDG 3.5 2 |
-| el8.aarch64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
+| el8.aarch64 | N/A PGDG - 0 | N/A PGDG - 0 | N/A PGDG - 0 | N/A PGDG - 0 | N/A PGDG - 0 |
 | el9.x86_64 | AVAIL PGDG 6.1 2 | AVAIL PGDG 6.1 3 | AVAIL PGDG 6.1 9 | AVAIL PGDG 6.1 11 | AVAIL PGDG 3.5 3 |
-| el9.aarch64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
-| el10.x86_64 | AVAIL PGDG 6.1 2 | AVAIL PGDG 6.1 2 | AVAIL PGDG 6.1 2 | AVAIL PGDG 6.1 2 | MISS PGDG - 0 |
-| el10.aarch64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
-| d12.x86_64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
-| d12.aarch64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
-| d13.x86_64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
-| d13.aarch64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
-| u22.x86_64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
-| u22.aarch64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
-| u24.x86_64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
-| u24.aarch64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
-| u26.x86_64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
-| u26.aarch64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
+| el9.aarch64 | N/A PGDG - 0 | N/A PGDG - 0 | N/A PGDG - 0 | N/A PGDG - 0 | N/A PGDG - 0 |
+| el10.x86_64 | AVAIL PGDG 6.1 2 | AVAIL PGDG 6.1 2 | AVAIL PGDG 6.1 2 | AVAIL PGDG 6.1 2 | AVAIL PIGSTY 3.5 1 |
+| el10.aarch64 | N/A PGDG - 0 | N/A PGDG - 0 | N/A PGDG - 0 | N/A PGDG - 0 | N/A PGDG - 0 |
+| d12.x86_64 | N/A PGDG - 0 | N/A PGDG - 0 | N/A PGDG - 0 | N/A PGDG - 0 | N/A PGDG - 0 |
+| d12.aarch64 | N/A PGDG - 0 | N/A PGDG - 0 | N/A PGDG - 0 | N/A PGDG - 0 | N/A PGDG - 0 |
+| d13.x86_64 | N/A PGDG - 0 | N/A PGDG - 0 | N/A PGDG - 0 | N/A PGDG - 0 | N/A PGDG - 0 |
+| d13.aarch64 | N/A PGDG - 0 | N/A PGDG - 0 | N/A PGDG - 0 | N/A PGDG - 0 | N/A PGDG - 0 |
+| u22.x86_64 | N/A PGDG - 0 | N/A PGDG - 0 | N/A PGDG - 0 | N/A PGDG - 0 | N/A PGDG - 0 |
+| u22.aarch64 | N/A PGDG - 0 | N/A PGDG - 0 | N/A PGDG - 0 | N/A PGDG - 0 | N/A PGDG - 0 |
+| u24.x86_64 | N/A PGDG - 0 | N/A PGDG - 0 | N/A PGDG - 0 | N/A PGDG - 0 | N/A PGDG - 0 |
+| u24.aarch64 | N/A PGDG - 0 | N/A PGDG - 0 | N/A PGDG - 0 | N/A PGDG - 0 | N/A PGDG - 0 |
+| u26.x86_64 | N/A PGDG - 0 | N/A PGDG - 0 | N/A PGDG - 0 | N/A PGDG - 0 | N/A PGDG - 0 |
+| u26.aarch64 | N/A PGDG - 0 | N/A PGDG - 0 | N/A PGDG - 0 | N/A PGDG - 0 | N/A PGDG - 0 |
 @ el8.x86_64 18 pg_strom_18 pg_strom_18-6.1-2PGDG.rhel8.10.x86_64.rpm pgdg 6.1 725.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/18/redhat/rhel-8-x86_64/pg_strom_18-6.1-2PGDG.rhel8.10.x86_64.rpm
 @ el9.x86_64 18 pg_strom_18 pg_strom_18-6.1-2PGDG.rhel9.7.x86_64.rpm pgdg 6.1 691.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/18/redhat/rhel-9-x86_64/pg_strom_18-6.1-2PGDG.rhel9.7.x86_64.rpm
 @ el9.x86_64 18 pg_strom_18 pg_strom_18-6.1-1PGDG.el9.x86_64.rpm pgdg 6.1 691.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/18/redhat/rhel-9-x86_64/pg_strom_18-6.1-1PGDG.el9.x86_64.rpm
@@ -122,6 +125,7 @@ weight: 2530
 @ el9.x86_64 14 pg_strom_14 pg_strom_14-3.5-1.rhel9.x86_64.rpm pgdg 3.5 21.2MiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/14/redhat/rhel-9-x86_64/pg_strom_14-3.5-1.rhel9.x86_64.rpm
 @ el9.x86_64 14 pg_strom_14 pg_strom_14-3.4-1.rhel9.x86_64.rpm pgdg 3.4 21.0MiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/14/redhat/rhel-9-x86_64/pg_strom_14-3.4-1.rhel9.x86_64.rpm
 @ el9.x86_64 14 pg_strom_14 pg_strom_14-3.3.2-1.rhel9.x86_64.rpm pgdg 3.3.2 21.0MiB https://mirrors.aliyun.com/postgresql/repos/yum/non-free/14/redhat/rhel-9-x86_64/pg_strom_14-3.3.2-1.rhel9.x86_64.rpm
+@ el10.x86_64 14 pg_strom_14 pg_strom_14-3.5-1PIGSTY.el10.x86_64.rpm pigsty 3.5 25.7MiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pg_strom_14-3.5-1PIGSTY.el10.x86_64.rpm
 {{< /pgext_matrix >}}
 
 
@@ -143,6 +147,7 @@ pig install pg_strom;          # 当前活跃 PG 版本安装
 {{% /tab %}}
 {{% tab header="pig" %}}
 ```bash
+pig ext install -y pg_strom -v 18  # PG 18
 pig ext install -y pg_strom -v 17  # PG 17
 pig ext install -y pg_strom -v 16  # PG 16
 pig ext install -y pg_strom -v 15  # PG 15
@@ -151,6 +156,7 @@ pig ext install -y pg_strom -v 14  # PG 14
 {{% /tab %}}
 {{% tab header="dnf" %}}
 ```bash
+dnf install -y pg_strom_18       # PG 18
 dnf install -y pg_strom_17       # PG 17
 dnf install -y pg_strom_16       # PG 16
 dnf install -y pg_strom_15       # PG 15

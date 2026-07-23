@@ -1,7 +1,7 @@
 ---
 title: PostgreSQL
 weight: 2101
-description: 带有 531 扩展的原版 PostgreSQL 内核
+description: 带有 555 扩展的原版 PostgreSQL 内核
 icon: fa-solid fa-database
 module: [PGSQL]
 categories: [概念]
@@ -9,7 +9,7 @@ categories: [概念]
 
 [PostgreSQL](https://www.postgresql.org/) 是世界上最先进和最受欢迎的开源数据库。
 
-默认安装 PostgreSQL 18，支持 PostgreSQL 14 ~ 18，并提供 531 个 PG 扩展。
+默认安装 PostgreSQL 18，支持 PostgreSQL 14 ~ 18，并提供 555 个 PG 扩展。
 
 
 ------

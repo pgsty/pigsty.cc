@@ -51,16 +51,16 @@ weight: 5880
 | el9.aarch64 | AVAIL PGDG 4.2.3 2 | AVAIL PGDG 4.2.3 3 | AVAIL PGDG 4.2.3 3 | AVAIL PGDG 4.2.3 3 | AVAIL PGDG 4.2.3 3 |
 | el10.x86_64 | AVAIL PGDG 4.2.3 2 | AVAIL PGDG 4.2.3 2 | AVAIL PGDG 4.2.3 2 | AVAIL PGDG 4.2.3 2 | AVAIL PGDG 4.2.3 2 |
 | el10.aarch64 | AVAIL PGDG 4.2.3 2 | AVAIL PGDG 4.2.3 2 | AVAIL PGDG 4.2.3 2 | AVAIL PGDG 4.2.3 2 | AVAIL PGDG 4.2.3 2 |
-| d12.x86_64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
-| d12.aarch64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
-| d13.x86_64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
-| d13.aarch64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
-| u22.x86_64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
-| u22.aarch64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
-| u24.x86_64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
-| u24.aarch64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
-| u26.x86_64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
-| u26.aarch64 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 | MISS PGDG - 0 |
+| d12.x86_64 | AVAIL PGDG 4.2.3 1 | AVAIL PGDG 4.2.3 1 | AVAIL PGDG 4.2.3 1 | AVAIL PGDG 4.2.3 1 | AVAIL PGDG 4.2.3 1 |
+| d12.aarch64 | AVAIL PGDG 4.2.3 1 | AVAIL PGDG 4.2.3 1 | AVAIL PGDG 4.2.3 1 | AVAIL PGDG 4.2.3 1 | AVAIL PGDG 4.2.3 1 |
+| d13.x86_64 | AVAIL PGDG 4.2.3 1 | AVAIL PGDG 4.2.3 1 | AVAIL PGDG 4.2.3 1 | AVAIL PGDG 4.2.3 1 | AVAIL PGDG 4.2.3 1 |
+| d13.aarch64 | AVAIL PGDG 4.2.3 1 | AVAIL PGDG 4.2.3 1 | AVAIL PGDG 4.2.3 1 | AVAIL PGDG 4.2.3 1 | AVAIL PGDG 4.2.3 1 |
+| u22.x86_64 | AVAIL PGDG 4.2.3 1 | AVAIL PGDG 4.2.3 1 | AVAIL PGDG 4.2.3 1 | AVAIL PGDG 4.2.3 1 | AVAIL PGDG 4.2.3 1 |
+| u22.aarch64 | AVAIL PGDG 4.2.3 1 | AVAIL PGDG 4.2.3 1 | AVAIL PGDG 4.2.3 1 | AVAIL PGDG 4.2.3 1 | AVAIL PGDG 4.2.3 1 |
+| u24.x86_64 | AVAIL PGDG 4.2.3 1 | AVAIL PGDG 4.2.3 1 | AVAIL PGDG 4.2.3 1 | AVAIL PGDG 4.2.3 1 | AVAIL PGDG 4.2.3 1 |
+| u24.aarch64 | AVAIL PGDG 4.2.3 1 | AVAIL PGDG 4.2.3 1 | AVAIL PGDG 4.2.3 1 | AVAIL PGDG 4.2.3 1 | AVAIL PGDG 4.2.3 1 |
+| u26.x86_64 | AVAIL PGDG 4.2.3 1 | AVAIL PGDG 4.2.3 1 | AVAIL PGDG 4.2.3 1 | AVAIL PGDG 4.2.3 1 | AVAIL PGDG 4.2.3 1 |
+| u26.aarch64 | AVAIL PGDG 4.2.3 1 | AVAIL PGDG 4.2.3 1 | AVAIL PGDG 4.2.3 1 | AVAIL PGDG 4.2.3 1 | AVAIL PGDG 4.2.3 1 |
 @ el8.x86_64 18 pgagent_18 pgagent_18-4.2.3-1PGDG.rhel8.x86_64.rpm pgdg 4.2.3 135.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pgagent_18-4.2.3-1PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 18 pgagent_18 pgagent_18-4.2.3-1PGDG.rhel8.aarch64.rpm pgdg 4.2.3 129.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pgagent_18-4.2.3-1PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 18 pgagent_18 pgagent_18-4.2.3-9PGDG.rhel9.8.x86_64.rpm pgdg 4.2.3 122.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pgagent_18-4.2.3-9PGDG.rhel9.8.x86_64.rpm
@@ -71,6 +71,16 @@ weight: 5880
 @ el10.x86_64 18 pgagent_18 pgagent_18-4.2.3-1PGDG.rhel10.x86_64.rpm pgdg 4.2.3 126.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pgagent_18-4.2.3-1PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 18 pgagent_18 pgagent_18-4.2.3-9PGDG.rhel10.2.aarch64.rpm pgdg 4.2.3 117.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pgagent_18-4.2.3-9PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 18 pgagent_18 pgagent_18-4.2.3-1PGDG.rhel10.aarch64.rpm pgdg 4.2.3 116.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pgagent_18-4.2.3-1PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 18 pgagent pgagent_4.2.3-5.pgdg12+1_amd64.deb pgdg 4.2.3 95.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgagent/pgagent_4.2.3-5.pgdg12+1_amd64.deb
+@ d12.aarch64 18 pgagent pgagent_4.2.3-5.pgdg12+1_arm64.deb pgdg 4.2.3 85.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgagent/pgagent_4.2.3-5.pgdg12+1_arm64.deb
+@ d13.x86_64 18 pgagent pgagent_4.2.3-5.pgdg13+1_amd64.deb pgdg 4.2.3 102.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgagent/pgagent_4.2.3-5.pgdg13+1_amd64.deb
+@ d13.aarch64 18 pgagent pgagent_4.2.3-5.pgdg13+1_arm64.deb pgdg 4.2.3 90.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgagent/pgagent_4.2.3-5.pgdg13+1_arm64.deb
+@ u22.x86_64 18 pgagent pgagent_4.2.3-5.pgdg22.04+1_amd64.deb pgdg 4.2.3 87.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgagent/pgagent_4.2.3-5.pgdg22.04+1_amd64.deb
+@ u22.aarch64 18 pgagent pgagent_4.2.3-5.pgdg22.04+1_arm64.deb pgdg 4.2.3 79.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgagent/pgagent_4.2.3-5.pgdg22.04+1_arm64.deb
+@ u24.x86_64 18 pgagent pgagent_4.2.3-5.pgdg24.04+1_amd64.deb pgdg 4.2.3 87.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgagent/pgagent_4.2.3-5.pgdg24.04+1_amd64.deb
+@ u24.aarch64 18 pgagent pgagent_4.2.3-5.pgdg24.04+1_arm64.deb pgdg 4.2.3 78.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgagent/pgagent_4.2.3-5.pgdg24.04+1_arm64.deb
+@ u26.x86_64 18 pgagent pgagent_4.2.3-5.pgdg26.04+1_amd64.deb pgdg 4.2.3 92.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgagent/pgagent_4.2.3-5.pgdg26.04+1_amd64.deb
+@ u26.aarch64 18 pgagent pgagent_4.2.3-5.pgdg26.04+1_arm64.deb pgdg 4.2.3 79.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgagent/pgagent_4.2.3-5.pgdg26.04+1_arm64.deb
 @ el8.x86_64 17 pgagent_17 pgagent_17-4.2.3-1PGDG.rhel8.x86_64.rpm pgdg 4.2.3 135.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pgagent_17-4.2.3-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 17 pgagent_17 pgagent_17-4.2.2-5PGDG.rhel8.x86_64.rpm pgdg 4.2.2 133.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pgagent_17-4.2.2-5PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 17 pgagent_17 pgagent_17-4.2.3-1PGDG.rhel8.aarch64.rpm pgdg 4.2.3 129.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pgagent_17-4.2.3-1PGDG.rhel8.aarch64.rpm
@@ -85,6 +95,16 @@ weight: 5880
 @ el10.x86_64 17 pgagent_17 pgagent_17-4.2.3-1PGDG.rhel10.x86_64.rpm pgdg 4.2.3 126.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pgagent_17-4.2.3-1PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 17 pgagent_17 pgagent_17-4.2.3-9PGDG.rhel10.2.aarch64.rpm pgdg 4.2.3 117.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pgagent_17-4.2.3-9PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 17 pgagent_17 pgagent_17-4.2.3-1PGDG.rhel10.aarch64.rpm pgdg 4.2.3 116.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pgagent_17-4.2.3-1PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 17 pgagent pgagent_4.2.3-5.pgdg12+1_amd64.deb pgdg 4.2.3 95.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgagent/pgagent_4.2.3-5.pgdg12+1_amd64.deb
+@ d12.aarch64 17 pgagent pgagent_4.2.3-5.pgdg12+1_arm64.deb pgdg 4.2.3 85.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgagent/pgagent_4.2.3-5.pgdg12+1_arm64.deb
+@ d13.x86_64 17 pgagent pgagent_4.2.3-5.pgdg13+1_amd64.deb pgdg 4.2.3 102.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgagent/pgagent_4.2.3-5.pgdg13+1_amd64.deb
+@ d13.aarch64 17 pgagent pgagent_4.2.3-5.pgdg13+1_arm64.deb pgdg 4.2.3 90.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgagent/pgagent_4.2.3-5.pgdg13+1_arm64.deb
+@ u22.x86_64 17 pgagent pgagent_4.2.3-5.pgdg22.04+1_amd64.deb pgdg 4.2.3 87.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgagent/pgagent_4.2.3-5.pgdg22.04+1_amd64.deb
+@ u22.aarch64 17 pgagent pgagent_4.2.3-5.pgdg22.04+1_arm64.deb pgdg 4.2.3 79.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgagent/pgagent_4.2.3-5.pgdg22.04+1_arm64.deb
+@ u24.x86_64 17 pgagent pgagent_4.2.3-5.pgdg24.04+1_amd64.deb pgdg 4.2.3 87.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgagent/pgagent_4.2.3-5.pgdg24.04+1_amd64.deb
+@ u24.aarch64 17 pgagent pgagent_4.2.3-5.pgdg24.04+1_arm64.deb pgdg 4.2.3 78.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgagent/pgagent_4.2.3-5.pgdg24.04+1_arm64.deb
+@ u26.x86_64 17 pgagent pgagent_4.2.3-5.pgdg26.04+1_amd64.deb pgdg 4.2.3 92.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgagent/pgagent_4.2.3-5.pgdg26.04+1_amd64.deb
+@ u26.aarch64 17 pgagent pgagent_4.2.3-5.pgdg26.04+1_arm64.deb pgdg 4.2.3 79.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgagent/pgagent_4.2.3-5.pgdg26.04+1_arm64.deb
 @ el8.x86_64 16 pgagent_16 pgagent_16-4.2.3-1PGDG.rhel8.x86_64.rpm pgdg 4.2.3 135.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pgagent_16-4.2.3-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 16 pgagent_16 pgagent_16-4.2.2-3.rhel8.x86_64.rpm pgdg 4.2.2 133.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pgagent_16-4.2.2-3.rhel8.x86_64.rpm
 @ el8.aarch64 16 pgagent_16 pgagent_16-4.2.3-1PGDG.rhel8.aarch64.rpm pgdg 4.2.3 129.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pgagent_16-4.2.3-1PGDG.rhel8.aarch64.rpm
@@ -99,6 +119,16 @@ weight: 5880
 @ el10.x86_64 16 pgagent_16 pgagent_16-4.2.3-1PGDG.rhel10.x86_64.rpm pgdg 4.2.3 126.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pgagent_16-4.2.3-1PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 16 pgagent_16 pgagent_16-4.2.3-9PGDG.rhel10.2.aarch64.rpm pgdg 4.2.3 117.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pgagent_16-4.2.3-9PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 16 pgagent_16 pgagent_16-4.2.3-1PGDG.rhel10.aarch64.rpm pgdg 4.2.3 116.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pgagent_16-4.2.3-1PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 16 pgagent pgagent_4.2.3-5.pgdg12+1_amd64.deb pgdg 4.2.3 95.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgagent/pgagent_4.2.3-5.pgdg12+1_amd64.deb
+@ d12.aarch64 16 pgagent pgagent_4.2.3-5.pgdg12+1_arm64.deb pgdg 4.2.3 85.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgagent/pgagent_4.2.3-5.pgdg12+1_arm64.deb
+@ d13.x86_64 16 pgagent pgagent_4.2.3-5.pgdg13+1_amd64.deb pgdg 4.2.3 102.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgagent/pgagent_4.2.3-5.pgdg13+1_amd64.deb
+@ d13.aarch64 16 pgagent pgagent_4.2.3-5.pgdg13+1_arm64.deb pgdg 4.2.3 90.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgagent/pgagent_4.2.3-5.pgdg13+1_arm64.deb
+@ u22.x86_64 16 pgagent pgagent_4.2.3-5.pgdg22.04+1_amd64.deb pgdg 4.2.3 87.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgagent/pgagent_4.2.3-5.pgdg22.04+1_amd64.deb
+@ u22.aarch64 16 pgagent pgagent_4.2.3-5.pgdg22.04+1_arm64.deb pgdg 4.2.3 79.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgagent/pgagent_4.2.3-5.pgdg22.04+1_arm64.deb
+@ u24.x86_64 16 pgagent pgagent_4.2.3-5.pgdg24.04+1_amd64.deb pgdg 4.2.3 87.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgagent/pgagent_4.2.3-5.pgdg24.04+1_amd64.deb
+@ u24.aarch64 16 pgagent pgagent_4.2.3-5.pgdg24.04+1_arm64.deb pgdg 4.2.3 78.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgagent/pgagent_4.2.3-5.pgdg24.04+1_arm64.deb
+@ u26.x86_64 16 pgagent pgagent_4.2.3-5.pgdg26.04+1_amd64.deb pgdg 4.2.3 92.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgagent/pgagent_4.2.3-5.pgdg26.04+1_amd64.deb
+@ u26.aarch64 16 pgagent pgagent_4.2.3-5.pgdg26.04+1_arm64.deb pgdg 4.2.3 79.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgagent/pgagent_4.2.3-5.pgdg26.04+1_arm64.deb
 @ el8.x86_64 15 pgagent_15 pgagent_15-4.2.3-1PGDG.rhel8.x86_64.rpm pgdg 4.2.3 135.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pgagent_15-4.2.3-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 15 pgagent_15 pgagent_15-4.2.2-1.rhel8.x86_64.rpm pgdg 4.2.2 133.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pgagent_15-4.2.2-1.rhel8.x86_64.rpm
 @ el8.aarch64 15 pgagent_15 pgagent_15-4.2.3-1PGDG.rhel8.aarch64.rpm pgdg 4.2.3 129.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pgagent_15-4.2.3-1PGDG.rhel8.aarch64.rpm
@@ -113,6 +143,16 @@ weight: 5880
 @ el10.x86_64 15 pgagent_15 pgagent_15-4.2.3-1PGDG.rhel10.x86_64.rpm pgdg 4.2.3 126.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pgagent_15-4.2.3-1PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 15 pgagent_15 pgagent_15-4.2.3-9PGDG.rhel10.2.aarch64.rpm pgdg 4.2.3 117.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pgagent_15-4.2.3-9PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 15 pgagent_15 pgagent_15-4.2.3-1PGDG.rhel10.aarch64.rpm pgdg 4.2.3 116.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pgagent_15-4.2.3-1PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 15 pgagent pgagent_4.2.3-5.pgdg12+1_amd64.deb pgdg 4.2.3 95.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgagent/pgagent_4.2.3-5.pgdg12+1_amd64.deb
+@ d12.aarch64 15 pgagent pgagent_4.2.3-5.pgdg12+1_arm64.deb pgdg 4.2.3 85.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgagent/pgagent_4.2.3-5.pgdg12+1_arm64.deb
+@ d13.x86_64 15 pgagent pgagent_4.2.3-5.pgdg13+1_amd64.deb pgdg 4.2.3 102.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgagent/pgagent_4.2.3-5.pgdg13+1_amd64.deb
+@ d13.aarch64 15 pgagent pgagent_4.2.3-5.pgdg13+1_arm64.deb pgdg 4.2.3 90.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgagent/pgagent_4.2.3-5.pgdg13+1_arm64.deb
+@ u22.x86_64 15 pgagent pgagent_4.2.3-5.pgdg22.04+1_amd64.deb pgdg 4.2.3 87.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgagent/pgagent_4.2.3-5.pgdg22.04+1_amd64.deb
+@ u22.aarch64 15 pgagent pgagent_4.2.3-5.pgdg22.04+1_arm64.deb pgdg 4.2.3 79.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgagent/pgagent_4.2.3-5.pgdg22.04+1_arm64.deb
+@ u24.x86_64 15 pgagent pgagent_4.2.3-5.pgdg24.04+1_amd64.deb pgdg 4.2.3 87.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgagent/pgagent_4.2.3-5.pgdg24.04+1_amd64.deb
+@ u24.aarch64 15 pgagent pgagent_4.2.3-5.pgdg24.04+1_arm64.deb pgdg 4.2.3 78.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgagent/pgagent_4.2.3-5.pgdg24.04+1_arm64.deb
+@ u26.x86_64 15 pgagent pgagent_4.2.3-5.pgdg26.04+1_amd64.deb pgdg 4.2.3 92.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgagent/pgagent_4.2.3-5.pgdg26.04+1_amd64.deb
+@ u26.aarch64 15 pgagent pgagent_4.2.3-5.pgdg26.04+1_arm64.deb pgdg 4.2.3 79.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgagent/pgagent_4.2.3-5.pgdg26.04+1_arm64.deb
 @ el8.x86_64 14 pgagent_14 pgagent_14-4.2.3-1PGDG.rhel8.x86_64.rpm pgdg 4.2.3 135.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pgagent_14-4.2.3-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 14 pgagent_14 pgagent_14-4.2.2-1.rhel8.x86_64.rpm pgdg 4.2.2 133.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pgagent_14-4.2.2-1.rhel8.x86_64.rpm
 @ el8.x86_64 14 pgagent_14 pgagent_14-4.2.1-1.rhel8.x86_64.rpm pgdg 4.2.1 153.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pgagent_14-4.2.1-1.rhel8.x86_64.rpm
@@ -129,6 +169,16 @@ weight: 5880
 @ el10.x86_64 14 pgagent_14 pgagent_14-4.2.3-1PGDG.rhel10.x86_64.rpm pgdg 4.2.3 126.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pgagent_14-4.2.3-1PGDG.rhel10.x86_64.rpm
 @ el10.aarch64 14 pgagent_14 pgagent_14-4.2.3-9PGDG.rhel10.2.aarch64.rpm pgdg 4.2.3 117.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgagent_14-4.2.3-9PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 14 pgagent_14 pgagent_14-4.2.3-1PGDG.rhel10.aarch64.rpm pgdg 4.2.3 116.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pgagent_14-4.2.3-1PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 14 pgagent pgagent_4.2.3-5.pgdg12+1_amd64.deb pgdg 4.2.3 95.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgagent/pgagent_4.2.3-5.pgdg12+1_amd64.deb
+@ d12.aarch64 14 pgagent pgagent_4.2.3-5.pgdg12+1_arm64.deb pgdg 4.2.3 85.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgagent/pgagent_4.2.3-5.pgdg12+1_arm64.deb
+@ d13.x86_64 14 pgagent pgagent_4.2.3-5.pgdg13+1_amd64.deb pgdg 4.2.3 102.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgagent/pgagent_4.2.3-5.pgdg13+1_amd64.deb
+@ d13.aarch64 14 pgagent pgagent_4.2.3-5.pgdg13+1_arm64.deb pgdg 4.2.3 90.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgagent/pgagent_4.2.3-5.pgdg13+1_arm64.deb
+@ u22.x86_64 14 pgagent pgagent_4.2.3-5.pgdg22.04+1_amd64.deb pgdg 4.2.3 87.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgagent/pgagent_4.2.3-5.pgdg22.04+1_amd64.deb
+@ u22.aarch64 14 pgagent pgagent_4.2.3-5.pgdg22.04+1_arm64.deb pgdg 4.2.3 79.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgagent/pgagent_4.2.3-5.pgdg22.04+1_arm64.deb
+@ u24.x86_64 14 pgagent pgagent_4.2.3-5.pgdg24.04+1_amd64.deb pgdg 4.2.3 87.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgagent/pgagent_4.2.3-5.pgdg24.04+1_amd64.deb
+@ u24.aarch64 14 pgagent pgagent_4.2.3-5.pgdg24.04+1_arm64.deb pgdg 4.2.3 78.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgagent/pgagent_4.2.3-5.pgdg24.04+1_arm64.deb
+@ u26.x86_64 14 pgagent pgagent_4.2.3-5.pgdg26.04+1_amd64.deb pgdg 4.2.3 92.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgagent/pgagent_4.2.3-5.pgdg26.04+1_amd64.deb
+@ u26.aarch64 14 pgagent pgagent_4.2.3-5.pgdg26.04+1_arm64.deb pgdg 4.2.3 79.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pgagent/pgagent_4.2.3-5.pgdg26.04+1_arm64.deb
 {{< /pgext_matrix >}}
 
 
