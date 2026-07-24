@@ -1,0 +1,329 @@
+/* ============================================================
+   Pigsty Price v3 — 定价页组件（「通电主板」设计语言）
+   依赖 landing-v3.css 提供的设计令牌与基础组件
+   ============================================================ */
+
+/* —— 导航当前页高亮 —— */
+.landing-page .nav-link--active { color: var(--ink) !important; background: var(--bg-elev); }
+.landing-page .mobile-menu-link--active { color: var(--pg-strong) !important; }
+
+/* —— Hero —— */
+.price-hero {
+  position: relative;
+  padding: clamp(44px, 5.5vw, 76px) 0 clamp(6px, 1vw, 14px);
+  overflow: hidden;
+}
+.price-hero .section-head--hero { margin-bottom: 0; }
+.price-hero .section-subtitle { max-width: 640px; }
+
+/* —— 定价卡 —— */
+.pricing-section { padding: clamp(30px, 3.5vw, 48px) 0 clamp(40px, 4.5vw, 64px); }
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  align-items: stretch;
+}
+.pricing-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 26px 24px 24px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: var(--bg-elev);
+  transition: transform 200ms ease, border-color 200ms ease, box-shadow 200ms ease;
+}
+/* 芯片 Pin-1 标记 */
+.pricing-card::before {
+  content: '';
+  position: absolute;
+  top: 10px; left: 10px;
+  width: 5px; height: 5px;
+  border-radius: 50%;
+  background: var(--line-strong);
+  transition: background 200ms ease;
+}
+.pricing-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--card-hover-border);
+  box-shadow: var(--shadow-md);
+}
+.pricing-card:hover::before { background: var(--copper); }
+.pricing-card--featured { border-color: var(--copper-dim); box-shadow: var(--shadow-sm); }
+
+.pricing-badge {
+  position: absolute;
+  top: -12px; right: 16px;
+  padding: 3px 12px;
+  border: 1px solid var(--copper);
+  border-radius: 999px;
+  background: var(--bg-elev);
+  color: var(--copper);
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.pricing-tier {
+  margin-bottom: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--copper);
+}
+.pricing-name {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 1.2;
+  color: var(--ink);
+}
+.pricing-desc { margin-top: 2px; font-size: 0.85rem; color: var(--ink-mute); }
+
+.pricing-price {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  margin: 18px 0 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px dashed var(--line-strong);
+}
+.price-currency {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--copper);
+}
+.price-amount {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 2.1rem;
+  line-height: 1.05;
+  color: var(--ink);
+}
+.price-period { font-family: var(--font-mono); font-size: 0.78rem; color: var(--ink-mute); }
+
+.pricing-features {
+  flex: 1;
+  margin: 0 0 22px;
+  padding: 0;
+  list-style: none;
+}
+.pricing-features li {
+  display: flex;
+  align-items: baseline;
+  gap: 9px;
+  padding: 4.5px 0;
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+}
+.pricing-features li i { flex: none; font-size: 0.8em; }
+.pricing-features li i.fa-check { color: var(--ok); }
+.pricing-features li i.fa-times { color: var(--ink-mute); }
+.pricing-features .muted { color: var(--ink-mute); }
+
+.landing-page .pricing-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 11px 16px;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-sm);
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--ink);
+  transition: transform 160ms ease, border-color 160ms ease, color 160ms ease, background 160ms ease;
+}
+.landing-page .pricing-btn:hover {
+  transform: translateY(-2px);
+  border-color: var(--pg);
+  color: var(--pg-strong);
+}
+.landing-page .pricing-btn--pro {
+  background: var(--btn-primary-bg);
+  border-color: transparent;
+  color: var(--btn-primary-ink);
+  box-shadow: 0 6px 22px rgba(47, 103, 147, 0.35);
+}
+.landing-page .pricing-btn--pro:hover {
+  background: var(--btn-primary-bg-hover);
+  border-color: transparent;
+  color: var(--btn-primary-ink);
+  box-shadow: 0 10px 30px rgba(47, 103, 147, 0.45);
+}
+
+/* —— 规格对照表 —— */
+.comparison-table-wrapper {
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: var(--bg-elev);
+  box-shadow: var(--shadow-sm);
+}
+.comparison-table {
+  width: 100%;
+  min-width: 720px;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+.comparison-table th,
+.comparison-table td {
+  padding: 11px 16px;
+  text-align: center;
+  border-bottom: 1px solid var(--line);
+}
+.comparison-table thead th {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--silk);
+  background: var(--bg-elev-2);
+}
+.comparison-table th.feature-col,
+.comparison-table td:first-child { text-align: left; }
+.comparison-table td { color: var(--ink-soft); }
+.comparison-table .category-row td {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--copper);
+  background: rgba(224, 163, 92, 0.06);
+}
+.comparison-table th.highlight,
+.comparison-table td.highlight { background: rgba(65, 158, 219, 0.08); color: var(--ink); }
+.comparison-table .fa-check,
+.comparison-table .fa-circle-check { color: var(--ok); }
+.comparison-table .fa-times { color: var(--ink-mute); opacity: 0.6; }
+.comparison-table .price-row td {
+  border-bottom: none;
+  background: var(--bg-elev-2);
+  font-size: 0.95rem;
+  color: var(--ink);
+}
+
+/* —— 按需服务 —— */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+.service-card {
+  position: relative;
+  padding: 26px 20px 22px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: var(--bg-elev);
+  text-align: center;
+  transition: transform 200ms ease, border-color 200ms ease, box-shadow 200ms ease;
+}
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 9px; left: 9px;
+  width: 5px; height: 5px;
+  border-radius: 50%;
+  background: var(--line-strong);
+  transition: background 200ms ease;
+}
+.service-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--card-hover-border);
+  box-shadow: var(--shadow-md);
+}
+.service-card:hover::before { background: var(--copper); }
+.service-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px; height: 46px;
+  margin: 0 auto 14px;
+  border: 1px solid var(--line-strong);
+  border-radius: 10px;
+  color: var(--copper);
+  font-size: 1.05rem;
+}
+.service-title {
+  margin: 0 0 8px;
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--ink);
+}
+.service-desc {
+  margin: 0 0 14px;
+  font-size: 0.85rem;
+  line-height: 1.7;
+  color: var(--ink-mute);
+}
+.service-price { font-family: var(--font-mono); font-size: 0.9rem; color: var(--copper); }
+
+/* —— FAQ —— */
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+.faq-item {
+  padding: 20px 22px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: var(--bg-elev);
+  transition: border-color 200ms ease;
+}
+.faq-item:hover { border-color: var(--line-strong); }
+.faq-question {
+  margin: 0 0 8px;
+  font-family: var(--font-head);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--ink);
+}
+.faq-question::before {
+  content: 'Q';
+  margin-right: 9px;
+  font-family: var(--font-mono);
+  font-size: 0.82em;
+  color: var(--copper);
+}
+.faq-answer { margin: 0; font-size: 0.9rem; line-height: 1.8; color: var(--ink-soft); }
+
+/* —— 底部 CTA —— */
+.price-cta {
+  padding: clamp(56px, 6vw, 90px) 0 clamp(72px, 7vw, 110px);
+  text-align: center;
+}
+.price-cta-title {
+  margin: 0 0 10px;
+  font-family: var(--font-head);
+  font-weight: 900;
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  color: var(--ink);
+}
+.price-cta-desc { margin: 0 auto 26px; max-width: 560px; color: var(--ink-soft); }
+.price-cta-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+}
+
+/* —— 响应式 —— */
+@media (max-width: 1180px) {
+  .pricing-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .services-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 768px) {
+  .faq-grid { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 640px) {
+  .pricing-grid,
+  .services-grid { grid-template-columns: minmax(0, 1fr); }
+  .price-cta-buttons .btn { width: 100%; justify-content: center; }
+}
