@@ -25,7 +25,7 @@ weight: 6000
 
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
-| [**`pg_profile`**](/ext/e/pg_profile) | `4.11` | <a class="ext-badge ext-badge--cate stat" href="/ext/cate/stat">STAT</a> | <a class="ext-badge ext-badge--license bsd2clause" href="/ext/license#bsd2clause">BSD-2-Clause</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
+| [**`pg_profile`**](/ext/e/pg_profile) | `4.15` | <a class="ext-badge ext-badge--cate stat" href="/ext/cate/stat">STAT</a> | <a class="ext-badge ext-badge--license bsd2clause" href="/ext/license#bsd2clause">BSD-2-Clause</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
 {.ext-table}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
@@ -42,20 +42,20 @@ weight: 6000
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#stat) | <a class="ext-badge ext-badge--repo mixed" href="/ext/repo#mixed">MIXED</a> | `4.11` | {{< pgvers "18,17,16,15,14" >}} | `pg_profile` | `dblink`, `plpgsql` |
-| [**RPM**](/ext/rpm#stat) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `4.11` | {{< pgvers "18,17,16,15,14" >}} | `pg_profile_$v` | - |
+| [**EXT**](/ext/list#stat) | <a class="ext-badge ext-badge--repo mixed" href="/ext/repo#mixed">MIXED</a> | `4.15` | {{< pgvers "18,17,16,15,14" >}} | `pg_profile` | `dblink`, `plpgsql` |
+| [**RPM**](/ext/rpm#stat) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `4.15` | {{< pgvers "18,17,16,15,14" >}} | `pg_profile_$v` | - |
 | [**DEB**](/ext/deb#stat) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `4.11` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pg-profile` | - |
 {.ext-table}
 
 {{< pgext_matrix >}}
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PGDG 4.11 2 | AVAIL PGDG 4.11 4 | AVAIL PGDG 4.11 6 | AVAIL PGDG 4.11 6 | AVAIL PGDG 4.11 6 |
-| el8.aarch64 | AVAIL PGDG 4.11 2 | AVAIL PGDG 4.11 4 | AVAIL PGDG 4.11 6 | AVAIL PGDG 4.11 6 | AVAIL PGDG 4.11 6 |
-| el9.x86_64 | AVAIL PGDG 4.11 3 | AVAIL PGDG 4.11 5 | AVAIL PGDG 4.11 7 | AVAIL PGDG 4.11 7 | AVAIL PGDG 4.11 7 |
-| el9.aarch64 | AVAIL PGDG 4.11 3 | AVAIL PGDG 4.11 5 | AVAIL PGDG 4.11 7 | AVAIL PGDG 4.11 7 | AVAIL PGDG 4.11 7 |
-| el10.x86_64 | AVAIL PGDG 4.11 3 | AVAIL PGDG 4.11 4 | AVAIL PGDG 4.11 4 | AVAIL PGDG 4.11 4 | AVAIL PGDG 4.11 4 |
-| el10.aarch64 | AVAIL PGDG 4.11 3 | AVAIL PGDG 4.11 4 | AVAIL PGDG 4.11 4 | AVAIL PGDG 4.11 4 | AVAIL PGDG 4.11 4 |
+| el8.x86_64 | AVAIL PGDG 4.15 3 | AVAIL PGDG 4.15 5 | AVAIL PGDG 4.15 7 | AVAIL PGDG 4.15 7 | AVAIL PGDG 4.15 7 |
+| el8.aarch64 | AVAIL PGDG 4.15 3 | AVAIL PGDG 4.15 5 | AVAIL PGDG 4.15 7 | AVAIL PGDG 4.15 7 | AVAIL PGDG 4.15 7 |
+| el9.x86_64 | AVAIL PGDG 4.15 4 | AVAIL PGDG 4.15 6 | AVAIL PGDG 4.15 8 | AVAIL PGDG 4.15 8 | AVAIL PGDG 4.15 8 |
+| el9.aarch64 | AVAIL PGDG 4.15 4 | AVAIL PGDG 4.15 6 | AVAIL PGDG 4.15 8 | AVAIL PGDG 4.15 8 | AVAIL PGDG 4.15 8 |
+| el10.x86_64 | AVAIL PGDG 4.11 3 | AVAIL PGDG 4.15 5 | AVAIL PGDG 4.15 5 | AVAIL PGDG 4.15 5 | AVAIL PGDG 4.15 5 |
+| el10.aarch64 | AVAIL PGDG 4.15 4 | AVAIL PGDG 4.15 5 | AVAIL PGDG 4.15 5 | AVAIL PGDG 4.15 5 | AVAIL PGDG 4.15 5 |
 | d12.x86_64 | AVAIL PIGSTY 4.11 1 | AVAIL PIGSTY 4.11 1 | AVAIL PIGSTY 4.11 1 | AVAIL PIGSTY 4.11 1 | AVAIL PIGSTY 4.11 1 |
 | d12.aarch64 | AVAIL PIGSTY 4.11 1 | AVAIL PIGSTY 4.11 1 | AVAIL PIGSTY 4.11 1 | AVAIL PIGSTY 4.11 1 | AVAIL PIGSTY 4.11 1 |
 | d13.x86_64 | AVAIL PIGSTY 4.11 1 | AVAIL PIGSTY 4.11 1 | AVAIL PIGSTY 4.11 1 | AVAIL PIGSTY 4.11 1 | AVAIL PIGSTY 4.11 1 |
@@ -66,19 +66,24 @@ weight: 6000
 | u24.aarch64 | AVAIL PIGSTY 4.11 1 | AVAIL PIGSTY 4.11 1 | AVAIL PIGSTY 4.11 1 | AVAIL PIGSTY 4.11 1 | AVAIL PIGSTY 4.11 1 |
 | u26.x86_64 | AVAIL PIGSTY 4.11 1 | AVAIL PIGSTY 4.11 1 | AVAIL PIGSTY 4.11 1 | AVAIL PIGSTY 4.11 1 | AVAIL PIGSTY 4.11 1 |
 | u26.aarch64 | AVAIL PIGSTY 4.11 1 | AVAIL PIGSTY 4.11 1 | AVAIL PIGSTY 4.11 1 | AVAIL PIGSTY 4.11 1 | AVAIL PIGSTY 4.11 1 |
+@ el8.x86_64 18 pg_profile_18 pg_profile_18-4.15-1PGDG.rhel8.10.noarch.rpm pgdg 4.15 221.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pg_profile_18-4.15-1PGDG.rhel8.10.noarch.rpm
 @ el8.x86_64 18 pg_profile_18 pg_profile_18-4.11-1PGDG.rhel8.noarch.rpm pgdg 4.11 214.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pg_profile_18-4.11-1PGDG.rhel8.noarch.rpm
 @ el8.x86_64 18 pg_profile_18 pg_profile_18-4.10-1PGDG.rhel8.noarch.rpm pgdg 4.10 214.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pg_profile_18-4.10-1PGDG.rhel8.noarch.rpm
+@ el8.aarch64 18 pg_profile_18 pg_profile_18-4.15-1PGDG.rhel8.10.noarch.rpm pgdg 4.15 220.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pg_profile_18-4.15-1PGDG.rhel8.10.noarch.rpm
 @ el8.aarch64 18 pg_profile_18 pg_profile_18-4.11-1PGDG.rhel8.noarch.rpm pgdg 4.11 214.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pg_profile_18-4.11-1PGDG.rhel8.noarch.rpm
 @ el8.aarch64 18 pg_profile_18 pg_profile_18-4.10-1PGDG.rhel8.noarch.rpm pgdg 4.10 214.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pg_profile_18-4.10-1PGDG.rhel8.noarch.rpm
+@ el9.x86_64 18 pg_profile_18 pg_profile_18-4.15-1PGDG.rhel9.8.noarch.rpm pgdg 4.15 201.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pg_profile_18-4.15-1PGDG.rhel9.8.noarch.rpm
 @ el9.x86_64 18 pg_profile_18 pg_profile_18-4.11-1PGDG.rhel9.8.noarch.rpm pgdg 4.11 198.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pg_profile_18-4.11-1PGDG.rhel9.8.noarch.rpm
 @ el9.x86_64 18 pg_profile_18 pg_profile_18-4.11-1PGDG.rhel9.noarch.rpm pgdg 4.11 197.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pg_profile_18-4.11-1PGDG.rhel9.noarch.rpm
 @ el9.x86_64 18 pg_profile_18 pg_profile_18-4.10-1PGDG.rhel9.noarch.rpm pgdg 4.10 196.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pg_profile_18-4.10-1PGDG.rhel9.noarch.rpm
+@ el9.aarch64 18 pg_profile_18 pg_profile_18-4.15-1PGDG.rhel9.8.noarch.rpm pgdg 4.15 201.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pg_profile_18-4.15-1PGDG.rhel9.8.noarch.rpm
 @ el9.aarch64 18 pg_profile_18 pg_profile_18-4.11-1PGDG.rhel9.8.noarch.rpm pgdg 4.11 198.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pg_profile_18-4.11-1PGDG.rhel9.8.noarch.rpm
 @ el9.aarch64 18 pg_profile_18 pg_profile_18-4.11-1PGDG.rhel9.noarch.rpm pgdg 4.11 196.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pg_profile_18-4.11-1PGDG.rhel9.noarch.rpm
 @ el9.aarch64 18 pg_profile_18 pg_profile_18-4.10-1PGDG.rhel9.noarch.rpm pgdg 4.10 196.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pg_profile_18-4.10-1PGDG.rhel9.noarch.rpm
 @ el10.x86_64 18 pg_profile_18 pg_profile_18-4.11-1PGDG.rhel10.2.noarch.rpm pgdg 4.11 198.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pg_profile_18-4.11-1PGDG.rhel10.2.noarch.rpm
 @ el10.x86_64 18 pg_profile_18 pg_profile_18-4.11-1PGDG.rhel10.noarch.rpm pgdg 4.11 197.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pg_profile_18-4.11-1PGDG.rhel10.noarch.rpm
 @ el10.x86_64 18 pg_profile_18 pg_profile_18-4.10-1PGDG.rhel10.noarch.rpm pgdg 4.10 197.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pg_profile_18-4.10-1PGDG.rhel10.noarch.rpm
+@ el10.aarch64 18 pg_profile_18 pg_profile_18-4.15-1PGDG.rhel10.2.noarch.rpm pgdg 4.15 201.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_profile_18-4.15-1PGDG.rhel10.2.noarch.rpm
 @ el10.aarch64 18 pg_profile_18 pg_profile_18-4.11-1PGDG.rhel10.2.noarch.rpm pgdg 4.11 198.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_profile_18-4.11-1PGDG.rhel10.2.noarch.rpm
 @ el10.aarch64 18 pg_profile_18 pg_profile_18-4.11-1PGDG.rhel10.noarch.rpm pgdg 4.11 197.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_profile_18-4.11-1PGDG.rhel10.noarch.rpm
 @ el10.aarch64 18 pg_profile_18 pg_profile_18-4.10-1PGDG.rhel10.noarch.rpm pgdg 4.10 197.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_profile_18-4.10-1PGDG.rhel10.noarch.rpm
@@ -92,28 +97,34 @@ weight: 6000
 @ u24.aarch64 18 postgresql-18-pg-profile postgresql-18-pg-profile_4.11-1PIGSTY~noble_arm64.deb pigsty 4.11 191.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-profile/postgresql-18-pg-profile_4.11-1PIGSTY~noble_arm64.deb
 @ u26.x86_64 18 postgresql-18-pg-profile postgresql-18-pg-profile_4.11-1PIGSTY~resolute_amd64.deb pigsty 4.11 191.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-profile/postgresql-18-pg-profile_4.11-1PIGSTY~resolute_amd64.deb
 @ u26.aarch64 18 postgresql-18-pg-profile postgresql-18-pg-profile_4.11-1PIGSTY~resolute_arm64.deb pigsty 4.11 191.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-profile/postgresql-18-pg-profile_4.11-1PIGSTY~resolute_arm64.deb
+@ el8.x86_64 17 pg_profile_17 pg_profile_17-4.15-1PGDG.rhel8.10.noarch.rpm pgdg 4.15 221.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pg_profile_17-4.15-1PGDG.rhel8.10.noarch.rpm
 @ el8.x86_64 17 pg_profile_17 pg_profile_17-4.11-1PGDG.rhel8.noarch.rpm pgdg 4.11 214.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pg_profile_17-4.11-1PGDG.rhel8.noarch.rpm
 @ el8.x86_64 17 pg_profile_17 pg_profile_17-4.10-1PGDG.rhel8.noarch.rpm pgdg 4.10 214.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pg_profile_17-4.10-1PGDG.rhel8.noarch.rpm
 @ el8.x86_64 17 pg_profile_17 pg_profile_17-4.8-1PGDG.rhel8.noarch.rpm pgdg 4.8 130.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pg_profile_17-4.8-1PGDG.rhel8.noarch.rpm
 @ el8.x86_64 17 pg_profile_17 pg_profile_17-4.7-1PGDG.rhel8.noarch.rpm pgdg 4.7 130.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pg_profile_17-4.7-1PGDG.rhel8.noarch.rpm
+@ el8.aarch64 17 pg_profile_17 pg_profile_17-4.15-1PGDG.rhel8.10.noarch.rpm pgdg 4.15 220.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pg_profile_17-4.15-1PGDG.rhel8.10.noarch.rpm
 @ el8.aarch64 17 pg_profile_17 pg_profile_17-4.11-1PGDG.rhel8.noarch.rpm pgdg 4.11 214.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pg_profile_17-4.11-1PGDG.rhel8.noarch.rpm
 @ el8.aarch64 17 pg_profile_17 pg_profile_17-4.10-1PGDG.rhel8.noarch.rpm pgdg 4.10 214.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pg_profile_17-4.10-1PGDG.rhel8.noarch.rpm
 @ el8.aarch64 17 pg_profile_17 pg_profile_17-4.8-1PGDG.rhel8.noarch.rpm pgdg 4.8 130.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pg_profile_17-4.8-1PGDG.rhel8.noarch.rpm
 @ el8.aarch64 17 pg_profile_17 pg_profile_17-4.7-1PGDG.rhel8.noarch.rpm pgdg 4.7 130.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pg_profile_17-4.7-1PGDG.rhel8.noarch.rpm
+@ el9.x86_64 17 pg_profile_17 pg_profile_17-4.15-1PGDG.rhel9.8.noarch.rpm pgdg 4.15 201.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_profile_17-4.15-1PGDG.rhel9.8.noarch.rpm
 @ el9.x86_64 17 pg_profile_17 pg_profile_17-4.11-1PGDG.rhel9.8.noarch.rpm pgdg 4.11 198.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_profile_17-4.11-1PGDG.rhel9.8.noarch.rpm
 @ el9.x86_64 17 pg_profile_17 pg_profile_17-4.11-1PGDG.rhel9.noarch.rpm pgdg 4.11 197.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_profile_17-4.11-1PGDG.rhel9.noarch.rpm
 @ el9.x86_64 17 pg_profile_17 pg_profile_17-4.10-1PGDG.rhel9.noarch.rpm pgdg 4.10 196.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_profile_17-4.10-1PGDG.rhel9.noarch.rpm
 @ el9.x86_64 17 pg_profile_17 pg_profile_17-4.8-1PGDG.rhel9.noarch.rpm pgdg 4.8 117.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_profile_17-4.8-1PGDG.rhel9.noarch.rpm
 @ el9.x86_64 17 pg_profile_17 pg_profile_17-4.7-1PGDG.rhel9.noarch.rpm pgdg 4.7 115.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_profile_17-4.7-1PGDG.rhel9.noarch.rpm
+@ el9.aarch64 17 pg_profile_17 pg_profile_17-4.15-1PGDG.rhel9.8.noarch.rpm pgdg 4.15 201.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_profile_17-4.15-1PGDG.rhel9.8.noarch.rpm
 @ el9.aarch64 17 pg_profile_17 pg_profile_17-4.11-1PGDG.rhel9.8.noarch.rpm pgdg 4.11 198.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_profile_17-4.11-1PGDG.rhel9.8.noarch.rpm
 @ el9.aarch64 17 pg_profile_17 pg_profile_17-4.11-1PGDG.rhel9.noarch.rpm pgdg 4.11 196.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_profile_17-4.11-1PGDG.rhel9.noarch.rpm
 @ el9.aarch64 17 pg_profile_17 pg_profile_17-4.10-1PGDG.rhel9.noarch.rpm pgdg 4.10 196.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_profile_17-4.10-1PGDG.rhel9.noarch.rpm
 @ el9.aarch64 17 pg_profile_17 pg_profile_17-4.8-1PGDG.rhel9.noarch.rpm pgdg 4.8 117.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_profile_17-4.8-1PGDG.rhel9.noarch.rpm
 @ el9.aarch64 17 pg_profile_17 pg_profile_17-4.7-1PGDG.rhel9.noarch.rpm pgdg 4.7 115.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_profile_17-4.7-1PGDG.rhel9.noarch.rpm
+@ el10.x86_64 17 pg_profile_17 pg_profile_17-4.15-1PGDG.rhel10.2.noarch.rpm pgdg 4.15 201.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_profile_17-4.15-1PGDG.rhel10.2.noarch.rpm
 @ el10.x86_64 17 pg_profile_17 pg_profile_17-4.11-1PGDG.rhel10.2.noarch.rpm pgdg 4.11 198.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_profile_17-4.11-1PGDG.rhel10.2.noarch.rpm
 @ el10.x86_64 17 pg_profile_17 pg_profile_17-4.11-1PGDG.rhel10.noarch.rpm pgdg 4.11 197.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_profile_17-4.11-1PGDG.rhel10.noarch.rpm
 @ el10.x86_64 17 pg_profile_17 pg_profile_17-4.10-1PGDG.rhel10.noarch.rpm pgdg 4.10 197.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_profile_17-4.10-1PGDG.rhel10.noarch.rpm
 @ el10.x86_64 17 pg_profile_17 pg_profile_17-4.8-1PGDG.rhel10.noarch.rpm pgdg 4.8 117.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_profile_17-4.8-1PGDG.rhel10.noarch.rpm
+@ el10.aarch64 17 pg_profile_17 pg_profile_17-4.15-1PGDG.rhel10.2.noarch.rpm pgdg 4.15 201.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_profile_17-4.15-1PGDG.rhel10.2.noarch.rpm
 @ el10.aarch64 17 pg_profile_17 pg_profile_17-4.11-1PGDG.rhel10.2.noarch.rpm pgdg 4.11 198.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_profile_17-4.11-1PGDG.rhel10.2.noarch.rpm
 @ el10.aarch64 17 pg_profile_17 pg_profile_17-4.11-1PGDG.rhel10.noarch.rpm pgdg 4.11 197.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_profile_17-4.11-1PGDG.rhel10.noarch.rpm
 @ el10.aarch64 17 pg_profile_17 pg_profile_17-4.10-1PGDG.rhel10.noarch.rpm pgdg 4.10 197.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_profile_17-4.10-1PGDG.rhel10.noarch.rpm
@@ -128,18 +139,21 @@ weight: 6000
 @ u24.aarch64 17 postgresql-17-pg-profile postgresql-17-pg-profile_4.11-1PIGSTY~noble_arm64.deb pigsty 4.11 191.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-profile/postgresql-17-pg-profile_4.11-1PIGSTY~noble_arm64.deb
 @ u26.x86_64 17 postgresql-17-pg-profile postgresql-17-pg-profile_4.11-1PIGSTY~resolute_amd64.deb pigsty 4.11 191.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-profile/postgresql-17-pg-profile_4.11-1PIGSTY~resolute_amd64.deb
 @ u26.aarch64 17 postgresql-17-pg-profile postgresql-17-pg-profile_4.11-1PIGSTY~resolute_arm64.deb pigsty 4.11 191.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-profile/postgresql-17-pg-profile_4.11-1PIGSTY~resolute_arm64.deb
+@ el8.x86_64 16 pg_profile_16 pg_profile_16-4.15-1PGDG.rhel8.10.noarch.rpm pgdg 4.15 221.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_profile_16-4.15-1PGDG.rhel8.10.noarch.rpm
 @ el8.x86_64 16 pg_profile_16 pg_profile_16-4.11-1PGDG.rhel8.noarch.rpm pgdg 4.11 214.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_profile_16-4.11-1PGDG.rhel8.noarch.rpm
 @ el8.x86_64 16 pg_profile_16 pg_profile_16-4.10-1PGDG.rhel8.noarch.rpm pgdg 4.10 214.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_profile_16-4.10-1PGDG.rhel8.noarch.rpm
 @ el8.x86_64 16 pg_profile_16 pg_profile_16-4.8-1PGDG.rhel8.noarch.rpm pgdg 4.8 130.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_profile_16-4.8-1PGDG.rhel8.noarch.rpm
 @ el8.x86_64 16 pg_profile_16 pg_profile_16-4.7-1PGDG.rhel8.noarch.rpm pgdg 4.7 130.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_profile_16-4.7-1PGDG.rhel8.noarch.rpm
 @ el8.x86_64 16 pg_profile_16 pg_profile_16-4.6-1PGDG.rhel8.noarch.rpm pgdg 4.6 119.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_profile_16-4.6-1PGDG.rhel8.noarch.rpm
 @ el8.x86_64 16 pg_profile_16 pg_profile_16-4.4-1PGDG.rhel8.noarch.rpm pgdg 4.4 109.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_profile_16-4.4-1PGDG.rhel8.noarch.rpm
+@ el8.aarch64 16 pg_profile_16 pg_profile_16-4.15-1PGDG.rhel8.10.noarch.rpm pgdg 4.15 220.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pg_profile_16-4.15-1PGDG.rhel8.10.noarch.rpm
 @ el8.aarch64 16 pg_profile_16 pg_profile_16-4.11-1PGDG.rhel8.noarch.rpm pgdg 4.11 214.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pg_profile_16-4.11-1PGDG.rhel8.noarch.rpm
 @ el8.aarch64 16 pg_profile_16 pg_profile_16-4.10-1PGDG.rhel8.noarch.rpm pgdg 4.10 214.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pg_profile_16-4.10-1PGDG.rhel8.noarch.rpm
 @ el8.aarch64 16 pg_profile_16 pg_profile_16-4.8-1PGDG.rhel8.noarch.rpm pgdg 4.8 130.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pg_profile_16-4.8-1PGDG.rhel8.noarch.rpm
 @ el8.aarch64 16 pg_profile_16 pg_profile_16-4.7-1PGDG.rhel8.noarch.rpm pgdg 4.7 130.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pg_profile_16-4.7-1PGDG.rhel8.noarch.rpm
 @ el8.aarch64 16 pg_profile_16 pg_profile_16-4.6-1PGDG.rhel8.noarch.rpm pgdg 4.6 119.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pg_profile_16-4.6-1PGDG.rhel8.noarch.rpm
 @ el8.aarch64 16 pg_profile_16 pg_profile_16-4.4-1PGDG.rhel8.noarch.rpm pgdg 4.4 109.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pg_profile_16-4.4-1PGDG.rhel8.noarch.rpm
+@ el9.x86_64 16 pg_profile_16 pg_profile_16-4.15-1PGDG.rhel9.8.noarch.rpm pgdg 4.15 201.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_profile_16-4.15-1PGDG.rhel9.8.noarch.rpm
 @ el9.x86_64 16 pg_profile_16 pg_profile_16-4.11-1PGDG.rhel9.8.noarch.rpm pgdg 4.11 198.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_profile_16-4.11-1PGDG.rhel9.8.noarch.rpm
 @ el9.x86_64 16 pg_profile_16 pg_profile_16-4.11-1PGDG.rhel9.noarch.rpm pgdg 4.11 197.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_profile_16-4.11-1PGDG.rhel9.noarch.rpm
 @ el9.x86_64 16 pg_profile_16 pg_profile_16-4.10-1PGDG.rhel9.noarch.rpm pgdg 4.10 196.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_profile_16-4.10-1PGDG.rhel9.noarch.rpm
@@ -147,6 +161,7 @@ weight: 6000
 @ el9.x86_64 16 pg_profile_16 pg_profile_16-4.7-1PGDG.rhel9.noarch.rpm pgdg 4.7 115.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_profile_16-4.7-1PGDG.rhel9.noarch.rpm
 @ el9.x86_64 16 pg_profile_16 pg_profile_16-4.6-1PGDG.rhel9.noarch.rpm pgdg 4.6 107.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_profile_16-4.6-1PGDG.rhel9.noarch.rpm
 @ el9.x86_64 16 pg_profile_16 pg_profile_16-4.4-1PGDG.rhel9.noarch.rpm pgdg 4.4 99.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_profile_16-4.4-1PGDG.rhel9.noarch.rpm
+@ el9.aarch64 16 pg_profile_16 pg_profile_16-4.15-1PGDG.rhel9.8.noarch.rpm pgdg 4.15 201.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_profile_16-4.15-1PGDG.rhel9.8.noarch.rpm
 @ el9.aarch64 16 pg_profile_16 pg_profile_16-4.11-1PGDG.rhel9.8.noarch.rpm pgdg 4.11 198.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_profile_16-4.11-1PGDG.rhel9.8.noarch.rpm
 @ el9.aarch64 16 pg_profile_16 pg_profile_16-4.11-1PGDG.rhel9.noarch.rpm pgdg 4.11 196.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_profile_16-4.11-1PGDG.rhel9.noarch.rpm
 @ el9.aarch64 16 pg_profile_16 pg_profile_16-4.10-1PGDG.rhel9.noarch.rpm pgdg 4.10 196.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_profile_16-4.10-1PGDG.rhel9.noarch.rpm
@@ -154,10 +169,12 @@ weight: 6000
 @ el9.aarch64 16 pg_profile_16 pg_profile_16-4.7-1PGDG.rhel9.noarch.rpm pgdg 4.7 115.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_profile_16-4.7-1PGDG.rhel9.noarch.rpm
 @ el9.aarch64 16 pg_profile_16 pg_profile_16-4.6-1PGDG.rhel9.noarch.rpm pgdg 4.6 107.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_profile_16-4.6-1PGDG.rhel9.noarch.rpm
 @ el9.aarch64 16 pg_profile_16 pg_profile_16-4.4-1PGDG.rhel9.noarch.rpm pgdg 4.4 99.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_profile_16-4.4-1PGDG.rhel9.noarch.rpm
+@ el10.x86_64 16 pg_profile_16 pg_profile_16-4.15-1PGDG.rhel10.2.noarch.rpm pgdg 4.15 201.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_profile_16-4.15-1PGDG.rhel10.2.noarch.rpm
 @ el10.x86_64 16 pg_profile_16 pg_profile_16-4.11-1PGDG.rhel10.2.noarch.rpm pgdg 4.11 198.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_profile_16-4.11-1PGDG.rhel10.2.noarch.rpm
 @ el10.x86_64 16 pg_profile_16 pg_profile_16-4.11-1PGDG.rhel10.noarch.rpm pgdg 4.11 197.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_profile_16-4.11-1PGDG.rhel10.noarch.rpm
 @ el10.x86_64 16 pg_profile_16 pg_profile_16-4.10-1PGDG.rhel10.noarch.rpm pgdg 4.10 197.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_profile_16-4.10-1PGDG.rhel10.noarch.rpm
 @ el10.x86_64 16 pg_profile_16 pg_profile_16-4.8-1PGDG.rhel10.noarch.rpm pgdg 4.8 117.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_profile_16-4.8-1PGDG.rhel10.noarch.rpm
+@ el10.aarch64 16 pg_profile_16 pg_profile_16-4.15-1PGDG.rhel10.2.noarch.rpm pgdg 4.15 201.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_profile_16-4.15-1PGDG.rhel10.2.noarch.rpm
 @ el10.aarch64 16 pg_profile_16 pg_profile_16-4.11-1PGDG.rhel10.2.noarch.rpm pgdg 4.11 198.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_profile_16-4.11-1PGDG.rhel10.2.noarch.rpm
 @ el10.aarch64 16 pg_profile_16 pg_profile_16-4.11-1PGDG.rhel10.noarch.rpm pgdg 4.11 197.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_profile_16-4.11-1PGDG.rhel10.noarch.rpm
 @ el10.aarch64 16 pg_profile_16 pg_profile_16-4.10-1PGDG.rhel10.noarch.rpm pgdg 4.10 197.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_profile_16-4.10-1PGDG.rhel10.noarch.rpm
@@ -172,18 +189,21 @@ weight: 6000
 @ u24.aarch64 16 postgresql-16-pg-profile postgresql-16-pg-profile_4.11-1PIGSTY~noble_arm64.deb pigsty 4.11 191.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-profile/postgresql-16-pg-profile_4.11-1PIGSTY~noble_arm64.deb
 @ u26.x86_64 16 postgresql-16-pg-profile postgresql-16-pg-profile_4.11-1PIGSTY~resolute_amd64.deb pigsty 4.11 191.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-profile/postgresql-16-pg-profile_4.11-1PIGSTY~resolute_amd64.deb
 @ u26.aarch64 16 postgresql-16-pg-profile postgresql-16-pg-profile_4.11-1PIGSTY~resolute_arm64.deb pigsty 4.11 191.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-profile/postgresql-16-pg-profile_4.11-1PIGSTY~resolute_arm64.deb
+@ el8.x86_64 15 pg_profile_15 pg_profile_15-4.15-1PGDG.rhel8.10.noarch.rpm pgdg 4.15 221.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_profile_15-4.15-1PGDG.rhel8.10.noarch.rpm
 @ el8.x86_64 15 pg_profile_15 pg_profile_15-4.11-1PGDG.rhel8.noarch.rpm pgdg 4.11 214.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_profile_15-4.11-1PGDG.rhel8.noarch.rpm
 @ el8.x86_64 15 pg_profile_15 pg_profile_15-4.10-1PGDG.rhel8.noarch.rpm pgdg 4.10 214.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_profile_15-4.10-1PGDG.rhel8.noarch.rpm
 @ el8.x86_64 15 pg_profile_15 pg_profile_15-4.8-1PGDG.rhel8.noarch.rpm pgdg 4.8 130.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_profile_15-4.8-1PGDG.rhel8.noarch.rpm
 @ el8.x86_64 15 pg_profile_15 pg_profile_15-4.7-1PGDG.rhel8.noarch.rpm pgdg 4.7 130.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_profile_15-4.7-1PGDG.rhel8.noarch.rpm
 @ el8.x86_64 15 pg_profile_15 pg_profile_15-4.6-1PGDG.rhel8.noarch.rpm pgdg 4.6 119.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_profile_15-4.6-1PGDG.rhel8.noarch.rpm
 @ el8.x86_64 15 pg_profile_15 pg_profile_15-4.4-1PGDG.rhel8.noarch.rpm pgdg 4.4 109.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_profile_15-4.4-1PGDG.rhel8.noarch.rpm
+@ el8.aarch64 15 pg_profile_15 pg_profile_15-4.15-1PGDG.rhel8.10.noarch.rpm pgdg 4.15 220.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pg_profile_15-4.15-1PGDG.rhel8.10.noarch.rpm
 @ el8.aarch64 15 pg_profile_15 pg_profile_15-4.11-1PGDG.rhel8.noarch.rpm pgdg 4.11 214.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pg_profile_15-4.11-1PGDG.rhel8.noarch.rpm
 @ el8.aarch64 15 pg_profile_15 pg_profile_15-4.10-1PGDG.rhel8.noarch.rpm pgdg 4.10 214.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pg_profile_15-4.10-1PGDG.rhel8.noarch.rpm
 @ el8.aarch64 15 pg_profile_15 pg_profile_15-4.8-1PGDG.rhel8.noarch.rpm pgdg 4.8 130.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pg_profile_15-4.8-1PGDG.rhel8.noarch.rpm
 @ el8.aarch64 15 pg_profile_15 pg_profile_15-4.7-1PGDG.rhel8.noarch.rpm pgdg 4.7 130.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pg_profile_15-4.7-1PGDG.rhel8.noarch.rpm
 @ el8.aarch64 15 pg_profile_15 pg_profile_15-4.6-1PGDG.rhel8.noarch.rpm pgdg 4.6 119.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pg_profile_15-4.6-1PGDG.rhel8.noarch.rpm
 @ el8.aarch64 15 pg_profile_15 pg_profile_15-4.4-1PGDG.rhel8.noarch.rpm pgdg 4.4 109.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pg_profile_15-4.4-1PGDG.rhel8.noarch.rpm
+@ el9.x86_64 15 pg_profile_15 pg_profile_15-4.15-1PGDG.rhel9.8.noarch.rpm pgdg 4.15 201.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_profile_15-4.15-1PGDG.rhel9.8.noarch.rpm
 @ el9.x86_64 15 pg_profile_15 pg_profile_15-4.11-1PGDG.rhel9.8.noarch.rpm pgdg 4.11 198.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_profile_15-4.11-1PGDG.rhel9.8.noarch.rpm
 @ el9.x86_64 15 pg_profile_15 pg_profile_15-4.11-1PGDG.rhel9.noarch.rpm pgdg 4.11 197.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_profile_15-4.11-1PGDG.rhel9.noarch.rpm
 @ el9.x86_64 15 pg_profile_15 pg_profile_15-4.10-1PGDG.rhel9.noarch.rpm pgdg 4.10 196.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_profile_15-4.10-1PGDG.rhel9.noarch.rpm
@@ -191,6 +211,7 @@ weight: 6000
 @ el9.x86_64 15 pg_profile_15 pg_profile_15-4.7-1PGDG.rhel9.noarch.rpm pgdg 4.7 115.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_profile_15-4.7-1PGDG.rhel9.noarch.rpm
 @ el9.x86_64 15 pg_profile_15 pg_profile_15-4.6-1PGDG.rhel9.noarch.rpm pgdg 4.6 107.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_profile_15-4.6-1PGDG.rhel9.noarch.rpm
 @ el9.x86_64 15 pg_profile_15 pg_profile_15-4.4-1PGDG.rhel9.noarch.rpm pgdg 4.4 99.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_profile_15-4.4-1PGDG.rhel9.noarch.rpm
+@ el9.aarch64 15 pg_profile_15 pg_profile_15-4.15-1PGDG.rhel9.8.noarch.rpm pgdg 4.15 201.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_profile_15-4.15-1PGDG.rhel9.8.noarch.rpm
 @ el9.aarch64 15 pg_profile_15 pg_profile_15-4.11-1PGDG.rhel9.8.noarch.rpm pgdg 4.11 198.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_profile_15-4.11-1PGDG.rhel9.8.noarch.rpm
 @ el9.aarch64 15 pg_profile_15 pg_profile_15-4.11-1PGDG.rhel9.noarch.rpm pgdg 4.11 196.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_profile_15-4.11-1PGDG.rhel9.noarch.rpm
 @ el9.aarch64 15 pg_profile_15 pg_profile_15-4.10-1PGDG.rhel9.noarch.rpm pgdg 4.10 196.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_profile_15-4.10-1PGDG.rhel9.noarch.rpm
@@ -198,10 +219,12 @@ weight: 6000
 @ el9.aarch64 15 pg_profile_15 pg_profile_15-4.7-1PGDG.rhel9.noarch.rpm pgdg 4.7 115.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_profile_15-4.7-1PGDG.rhel9.noarch.rpm
 @ el9.aarch64 15 pg_profile_15 pg_profile_15-4.6-1PGDG.rhel9.noarch.rpm pgdg 4.6 107.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_profile_15-4.6-1PGDG.rhel9.noarch.rpm
 @ el9.aarch64 15 pg_profile_15 pg_profile_15-4.4-1PGDG.rhel9.noarch.rpm pgdg 4.4 99.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_profile_15-4.4-1PGDG.rhel9.noarch.rpm
+@ el10.x86_64 15 pg_profile_15 pg_profile_15-4.15-1PGDG.rhel10.2.noarch.rpm pgdg 4.15 201.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_profile_15-4.15-1PGDG.rhel10.2.noarch.rpm
 @ el10.x86_64 15 pg_profile_15 pg_profile_15-4.11-1PGDG.rhel10.2.noarch.rpm pgdg 4.11 198.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_profile_15-4.11-1PGDG.rhel10.2.noarch.rpm
 @ el10.x86_64 15 pg_profile_15 pg_profile_15-4.11-1PGDG.rhel10.noarch.rpm pgdg 4.11 197.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_profile_15-4.11-1PGDG.rhel10.noarch.rpm
 @ el10.x86_64 15 pg_profile_15 pg_profile_15-4.10-1PGDG.rhel10.noarch.rpm pgdg 4.10 197.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_profile_15-4.10-1PGDG.rhel10.noarch.rpm
 @ el10.x86_64 15 pg_profile_15 pg_profile_15-4.8-1PGDG.rhel10.noarch.rpm pgdg 4.8 117.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_profile_15-4.8-1PGDG.rhel10.noarch.rpm
+@ el10.aarch64 15 pg_profile_15 pg_profile_15-4.15-1PGDG.rhel10.2.noarch.rpm pgdg 4.15 201.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_profile_15-4.15-1PGDG.rhel10.2.noarch.rpm
 @ el10.aarch64 15 pg_profile_15 pg_profile_15-4.11-1PGDG.rhel10.2.noarch.rpm pgdg 4.11 198.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_profile_15-4.11-1PGDG.rhel10.2.noarch.rpm
 @ el10.aarch64 15 pg_profile_15 pg_profile_15-4.11-1PGDG.rhel10.noarch.rpm pgdg 4.11 197.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_profile_15-4.11-1PGDG.rhel10.noarch.rpm
 @ el10.aarch64 15 pg_profile_15 pg_profile_15-4.10-1PGDG.rhel10.noarch.rpm pgdg 4.10 197.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_profile_15-4.10-1PGDG.rhel10.noarch.rpm
@@ -216,18 +239,21 @@ weight: 6000
 @ u24.aarch64 15 postgresql-15-pg-profile postgresql-15-pg-profile_4.11-1PIGSTY~noble_arm64.deb pigsty 4.11 191.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pg-profile/postgresql-15-pg-profile_4.11-1PIGSTY~noble_arm64.deb
 @ u26.x86_64 15 postgresql-15-pg-profile postgresql-15-pg-profile_4.11-1PIGSTY~resolute_amd64.deb pigsty 4.11 191.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-profile/postgresql-15-pg-profile_4.11-1PIGSTY~resolute_amd64.deb
 @ u26.aarch64 15 postgresql-15-pg-profile postgresql-15-pg-profile_4.11-1PIGSTY~resolute_arm64.deb pigsty 4.11 191.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pg-profile/postgresql-15-pg-profile_4.11-1PIGSTY~resolute_arm64.deb
+@ el8.x86_64 14 pg_profile_14 pg_profile_14-4.15-1PGDG.rhel8.10.noarch.rpm pgdg 4.15 221.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_profile_14-4.15-1PGDG.rhel8.10.noarch.rpm
 @ el8.x86_64 14 pg_profile_14 pg_profile_14-4.11-1PGDG.rhel8.noarch.rpm pgdg 4.11 214.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_profile_14-4.11-1PGDG.rhel8.noarch.rpm
 @ el8.x86_64 14 pg_profile_14 pg_profile_14-4.10-1PGDG.rhel8.noarch.rpm pgdg 4.10 214.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_profile_14-4.10-1PGDG.rhel8.noarch.rpm
 @ el8.x86_64 14 pg_profile_14 pg_profile_14-4.8-1PGDG.rhel8.noarch.rpm pgdg 4.8 130.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_profile_14-4.8-1PGDG.rhel8.noarch.rpm
 @ el8.x86_64 14 pg_profile_14 pg_profile_14-4.7-1PGDG.rhel8.noarch.rpm pgdg 4.7 130.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_profile_14-4.7-1PGDG.rhel8.noarch.rpm
 @ el8.x86_64 14 pg_profile_14 pg_profile_14-4.6-1PGDG.rhel8.noarch.rpm pgdg 4.6 119.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_profile_14-4.6-1PGDG.rhel8.noarch.rpm
 @ el8.x86_64 14 pg_profile_14 pg_profile_14-4.4-1PGDG.rhel8.noarch.rpm pgdg 4.4 109.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_profile_14-4.4-1PGDG.rhel8.noarch.rpm
+@ el8.aarch64 14 pg_profile_14 pg_profile_14-4.15-1PGDG.rhel8.10.noarch.rpm pgdg 4.15 220.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pg_profile_14-4.15-1PGDG.rhel8.10.noarch.rpm
 @ el8.aarch64 14 pg_profile_14 pg_profile_14-4.11-1PGDG.rhel8.noarch.rpm pgdg 4.11 214.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pg_profile_14-4.11-1PGDG.rhel8.noarch.rpm
 @ el8.aarch64 14 pg_profile_14 pg_profile_14-4.10-1PGDG.rhel8.noarch.rpm pgdg 4.10 214.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pg_profile_14-4.10-1PGDG.rhel8.noarch.rpm
 @ el8.aarch64 14 pg_profile_14 pg_profile_14-4.8-1PGDG.rhel8.noarch.rpm pgdg 4.8 130.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pg_profile_14-4.8-1PGDG.rhel8.noarch.rpm
 @ el8.aarch64 14 pg_profile_14 pg_profile_14-4.7-1PGDG.rhel8.noarch.rpm pgdg 4.7 130.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pg_profile_14-4.7-1PGDG.rhel8.noarch.rpm
 @ el8.aarch64 14 pg_profile_14 pg_profile_14-4.6-1PGDG.rhel8.noarch.rpm pgdg 4.6 119.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pg_profile_14-4.6-1PGDG.rhel8.noarch.rpm
 @ el8.aarch64 14 pg_profile_14 pg_profile_14-4.4-1PGDG.rhel8.noarch.rpm pgdg 4.4 109.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pg_profile_14-4.4-1PGDG.rhel8.noarch.rpm
+@ el9.x86_64 14 pg_profile_14 pg_profile_14-4.15-1PGDG.rhel9.8.noarch.rpm pgdg 4.15 201.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_profile_14-4.15-1PGDG.rhel9.8.noarch.rpm
 @ el9.x86_64 14 pg_profile_14 pg_profile_14-4.11-1PGDG.rhel9.8.noarch.rpm pgdg 4.11 198.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_profile_14-4.11-1PGDG.rhel9.8.noarch.rpm
 @ el9.x86_64 14 pg_profile_14 pg_profile_14-4.11-1PGDG.rhel9.noarch.rpm pgdg 4.11 197.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_profile_14-4.11-1PGDG.rhel9.noarch.rpm
 @ el9.x86_64 14 pg_profile_14 pg_profile_14-4.10-1PGDG.rhel9.noarch.rpm pgdg 4.10 196.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_profile_14-4.10-1PGDG.rhel9.noarch.rpm
@@ -235,6 +261,7 @@ weight: 6000
 @ el9.x86_64 14 pg_profile_14 pg_profile_14-4.7-1PGDG.rhel9.noarch.rpm pgdg 4.7 115.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_profile_14-4.7-1PGDG.rhel9.noarch.rpm
 @ el9.x86_64 14 pg_profile_14 pg_profile_14-4.6-1PGDG.rhel9.noarch.rpm pgdg 4.6 107.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_profile_14-4.6-1PGDG.rhel9.noarch.rpm
 @ el9.x86_64 14 pg_profile_14 pg_profile_14-4.4-1PGDG.rhel9.noarch.rpm pgdg 4.4 99.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_profile_14-4.4-1PGDG.rhel9.noarch.rpm
+@ el9.aarch64 14 pg_profile_14 pg_profile_14-4.15-1PGDG.rhel9.8.noarch.rpm pgdg 4.15 201.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_profile_14-4.15-1PGDG.rhel9.8.noarch.rpm
 @ el9.aarch64 14 pg_profile_14 pg_profile_14-4.11-1PGDG.rhel9.8.noarch.rpm pgdg 4.11 198.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_profile_14-4.11-1PGDG.rhel9.8.noarch.rpm
 @ el9.aarch64 14 pg_profile_14 pg_profile_14-4.11-1PGDG.rhel9.noarch.rpm pgdg 4.11 197.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_profile_14-4.11-1PGDG.rhel9.noarch.rpm
 @ el9.aarch64 14 pg_profile_14 pg_profile_14-4.10-1PGDG.rhel9.noarch.rpm pgdg 4.10 196.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_profile_14-4.10-1PGDG.rhel9.noarch.rpm
@@ -242,10 +269,12 @@ weight: 6000
 @ el9.aarch64 14 pg_profile_14 pg_profile_14-4.7-1PGDG.rhel9.noarch.rpm pgdg 4.7 115.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_profile_14-4.7-1PGDG.rhel9.noarch.rpm
 @ el9.aarch64 14 pg_profile_14 pg_profile_14-4.6-1PGDG.rhel9.noarch.rpm pgdg 4.6 107.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_profile_14-4.6-1PGDG.rhel9.noarch.rpm
 @ el9.aarch64 14 pg_profile_14 pg_profile_14-4.4-1PGDG.rhel9.noarch.rpm pgdg 4.4 99.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_profile_14-4.4-1PGDG.rhel9.noarch.rpm
+@ el10.x86_64 14 pg_profile_14 pg_profile_14-4.15-1PGDG.rhel10.2.noarch.rpm pgdg 4.15 201.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_profile_14-4.15-1PGDG.rhel10.2.noarch.rpm
 @ el10.x86_64 14 pg_profile_14 pg_profile_14-4.11-1PGDG.rhel10.2.noarch.rpm pgdg 4.11 198.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_profile_14-4.11-1PGDG.rhel10.2.noarch.rpm
 @ el10.x86_64 14 pg_profile_14 pg_profile_14-4.11-1PGDG.rhel10.noarch.rpm pgdg 4.11 197.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_profile_14-4.11-1PGDG.rhel10.noarch.rpm
 @ el10.x86_64 14 pg_profile_14 pg_profile_14-4.10-1PGDG.rhel10.noarch.rpm pgdg 4.10 197.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_profile_14-4.10-1PGDG.rhel10.noarch.rpm
 @ el10.x86_64 14 pg_profile_14 pg_profile_14-4.8-1PGDG.rhel10.noarch.rpm pgdg 4.8 117.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_profile_14-4.8-1PGDG.rhel10.noarch.rpm
+@ el10.aarch64 14 pg_profile_14 pg_profile_14-4.15-1PGDG.rhel10.2.noarch.rpm pgdg 4.15 201.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_profile_14-4.15-1PGDG.rhel10.2.noarch.rpm
 @ el10.aarch64 14 pg_profile_14 pg_profile_14-4.11-1PGDG.rhel10.2.noarch.rpm pgdg 4.11 198.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_profile_14-4.11-1PGDG.rhel10.2.noarch.rpm
 @ el10.aarch64 14 pg_profile_14 pg_profile_14-4.11-1PGDG.rhel10.noarch.rpm pgdg 4.11 197.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_profile_14-4.11-1PGDG.rhel10.noarch.rpm
 @ el10.aarch64 14 pg_profile_14 pg_profile_14-4.10-1PGDG.rhel10.noarch.rpm pgdg 4.10 197.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_profile_14-4.10-1PGDG.rhel10.noarch.rpm

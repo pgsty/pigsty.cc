@@ -134,7 +134,7 @@ icon: fa-brands fa-debian
 | [`pg_parquet`](/ext/e/pg_parquet) | `0.5.1` | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `postgresql-$v-pg-parquet` | {{< pgvers "18,17,16,15,14" >}} | - |
 | [`pg_ducklake`](/ext/e/pg_ducklake) | `1.0.0` | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `postgresql-$v-pg-ducklake` | {{< pgvers "18,17,16,15,14" >}} | - |
 | [`pg_fkpart`](/ext/e/pg_fkpart) | `1.7.0` | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `postgresql-$v-pg-fkpart` | {{< pgvers "18,17,16,15,14" >}} | - |
-| [`pg_partman`](/ext/e/pg_partman) | `5.4.3` | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `postgresql-$v-partman` | {{< pgvers "18,17,16,15,14" >}} | - |
+| [`pg_partman`](/ext/e/pg_partman) | `5.5.0` | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `postgresql-$v-partman` | {{< pgvers "18,17,16,15,14" >}} | - |
 | [`plproxy`](/ext/e/plproxy) | `2.12.0` | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `postgresql-$v-plproxy` | {{< pgvers "18,17,16,15,14" >}} | - |
 | [`pg_orca`](/ext/e/pg_orca) | `1.0.0` | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `postgresql-$v-pg-orca` | {{< pgvers "18" >}} | - |
 | [`pg_sorted_heap`](/ext/e/pg_sorted_heap) | `0.14.0` | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `postgresql-$v-pg-sorted-heap` | {{< pgvers "16,17,18" >}} | - |

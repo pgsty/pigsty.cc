@@ -12,7 +12,7 @@ icon: fas fa-file-waveform
 
 | **扩展** | **包** | **版本** | **许可证** | **语言** | **描述** |
 |:---------|:-------|:--------:|:----------:|:--------:|:---------|
-| [`pg_profile`](/ext/e/pg_profile) | [`pg_profile`](https://github.com/zubkov-andrei/pg_profile) | `4.11` | <a class="ext-badge ext-badge--license bsd2clause" href="/ext/license#bsd2clause">BSD-2-Clause</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | PostgreSQL 数据库负载记录与AWR报表工具 |
+| [`pg_profile`](/ext/e/pg_profile) | [`pg_profile`](https://github.com/zubkov-andrei/pg_profile) | `4.15` | <a class="ext-badge ext-badge--license bsd2clause" href="/ext/license#bsd2clause">BSD-2-Clause</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | PostgreSQL 数据库负载记录与AWR报表工具 |
 | [`pg_tracing`](/ext/e/pg_tracing) | [`pg_tracing`](https://github.com/DataDog/pg_tracing) | `0.1.3` | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | PostgreSQL分布式Tracing |
 | [`pg_stat_ch`](/ext/e/pg_stat_ch) | [`pg_stat_ch`](https://github.com/ClickHouse/pg_stat_ch) | `0.3.6` | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang cpp" href="/ext/language#cpp">C++</a> | 将 PostgreSQL 查询遥测实时导出到 ClickHouse |
 | [`pg_stat_backtrace`](/ext/e/pg_stat_backtrace) | [`pg_stat_backtrace`](https://github.com/Nickyoung0/pg_stat_backtrace) | `1.0.0` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 捕获或记录 PostgreSQL 进程的 C 层调用栈 |
@@ -62,7 +62,7 @@ icon: fas fa-file-waveform
 
 ## pg_profile {#pg_profile}
 
-[**`pg_profile`**](/ext/e/pg_profile) - `4.11` : PostgreSQL 数据库负载记录与AWR报表工具
+[**`pg_profile`**](/ext/e/pg_profile) - `4.15` : PostgreSQL 数据库负载记录与AWR报表工具
 
 | **条目** | **属性** | **OS** | **x86_64** | **aarch64** |
 |:---:|:---|:---:|:---:|:---:|

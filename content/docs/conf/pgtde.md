@@ -16,8 +16,8 @@ categories: [参考]
 - 配置名称： `pgtde`
 - 节点数量： 单节点
 - 配置说明：Percona PostgreSQL 透明数据加密配置
-- 适用系统：`el8`, `el9`, `el10`, `d12`, `d13`, `u22`, `u24`
-- 适用架构：`x86_64`
+- 适用系统：`el8`, `el9`, `el10`, `d12`, `d13`, `u22`, `u24`, `u26`
+- 适用架构：`x86_64`, `aarch64`
 - 相关配置：[`meta`](/docs/conf/meta/)
 
 启用方式：
@@ -40,7 +40,9 @@ categories: [参考]
 
 ## 配置解读
 
-`pgtde` 模板使用 Percona PostgreSQL 内核，提供企业级透明数据加密能力。
+`pgtde` 模板设置 `pg_mode: pgtde` 并安装 `pgtde` 包别名。Pigsty 会将私有
+FHS 前缀 `/usr/pgtde-$v`（PostgreSQL 18 对应 `/usr/pgtde-18`）链接到稳定
+入口 `/usr/pgsql`。
 
 **关键特性**：
 - **透明数据加密**：数据在磁盘上自动加密，对应用透明
@@ -57,19 +59,26 @@ categories: [参考]
 **使用方法**：
 
 ```sql
+CREATE EXTENSION pg_tde;
+
+SELECT pg_tde_add_database_key_provider_file(
+    'local-file',
+    '/secure/path/pg_tde_keys'
+);
+SELECT pg_tde_set_principal_key('app-principal-key', 'local-file');
+
 -- 创建加密表
 CREATE TABLE sensitive_data (
     id SERIAL PRIMARY KEY,
     ssn VARCHAR(11)
-) USING pg_tde;
+) USING tde_heap;
 
 -- 或对现有表启用加密
-ALTER TABLE existing_table SET ACCESS METHOD pg_tde;
+ALTER TABLE existing_table SET ACCESS METHOD tde_heap;
 ```
 
 **注意事项**：
 - Percona PostgreSQL 基于 PostgreSQL 18
 - 加密会带来一定性能开销（通常 5-15%）
 - 需要妥善管理加密密钥
-- 不支持 ARM64 架构
-
+- 上述发行版均提供 `x86_64` 与 `aarch64` 软件包

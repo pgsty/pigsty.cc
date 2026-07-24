@@ -280,7 +280,7 @@ icon: fa-brands fa-redhat
 | [`pgelog`](/ext/e/pgelog) | AVAIL PIGSTY 1.0.2 1 | AVAIL PIGSTY 1.0.2 1 | AVAIL PIGSTY 1.0.2 1 | AVAIL PIGSTY 1.0.2 1 | AVAIL PIGSTY 1.0.2 1 |
 | [`pgagent`](/ext/e/pgagent) | AVAIL PGDG 4.2.3 2 | AVAIL PGDG 4.2.3 3 | AVAIL PGDG 4.2.3 3 | AVAIL PGDG 4.2.3 3 | AVAIL PGDG 4.2.3 4 |
 | [`pgpool`](/ext/e/pgpool_adm) | AVAIL PGDG 4.7.2 13 | AVAIL PGDG 4.7.2 18 | AVAIL PGDG 4.7.2 21 | AVAIL PGDG 4.7.2 24 | AVAIL PGDG 4.7.2 26 |
-| [`pg_profile`](/ext/e/pg_profile) | AVAIL PGDG 4.11 3 | AVAIL PGDG 4.11 5 | AVAIL PGDG 4.11 7 | AVAIL PGDG 4.11 7 | AVAIL PGDG 4.11 7 |
+| [`pg_profile`](/ext/e/pg_profile) | AVAIL PGDG 4.15 4 | AVAIL PGDG 4.15 6 | AVAIL PGDG 4.15 8 | AVAIL PGDG 4.15 8 | AVAIL PGDG 4.15 8 |
 | [`pg_tracing`](/ext/e/pg_tracing) | AVAIL PIGSTY 0.1.3 1 | AVAIL PIGSTY 0.1.3 1 | AVAIL PIGSTY 0.1.3 1 | AVAIL PIGSTY 0.1.3 1 | AVAIL PIGSTY 0.1.3 1 |
 | [`pg_stat_ch`](/ext/e/pg_stat_ch) | AVAIL PIGSTY 0.3.6 1 | AVAIL PIGSTY 0.3.6 1 | AVAIL PIGSTY 0.3.6 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
 | [`pg_stat_backtrace`](/ext/e/pg_stat_backtrace) | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 |

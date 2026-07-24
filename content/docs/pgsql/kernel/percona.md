@@ -9,7 +9,10 @@ categories: [概念]
 
 [Percona Postgres](https://www.percona.com/postgresql/software/postgresql-distribution) 是一个带有 [`pg_tde`](https://docs.percona.com/pg-tde/index.html)（透明数据加密）扩展的补丁 Postgres 内核。
 
-Pigsty v4.4.0 的 `percona-main` 包集使用 Percona PostgreSQL 18，并额外安装 `pg_tde`、PostGIS、pgvector、wal2json、pg_repack、pgaudit、pg_stat_monitor 等常用组件。
+Pigsty v4.4.0 将 Percona PostgreSQL 打包到私有前缀 `/usr/pgtde-$v`
+（PostgreSQL 18 对应 `/usr/pgtde-18`）。`pgtde` 包别名会同时安装内核包
+与 contrib 包，其中包含 `pg_tde`、PostGIS、pgvector、wal2json、pg_repack、
+pgaudit、pg_stat_monitor 等常用组件。
 
 - [Percona 透明数据加密（TDE）性能测试](https://andreas.scherbaum.la/post/2025-06-30_performance-test-for-percona-transparent-data-encryption-tde/)
 
@@ -39,6 +42,7 @@ pg-meta:
   hosts:
     10.10.10.10: { pg_seq: 1, pg_role: primary }
   vars:
+    pg_mode: pgtde
     pg_cluster: pg-meta
     pg_users:
       - { name: dbuser_meta ,password: DBUser.Meta   ,pgbouncer: true ,roles: [dbrole_admin   ] ,comment: pigsty admin user }
@@ -53,10 +57,13 @@ pg-meta:
       - { user: dbuser_view , db: all ,addr: infra ,auth: pwd ,title: 'allow grafana dashboard access cmdb from infra nodes' }
     node_crontab: [ '00 01 * * * postgres /pg/bin/pg-backup full' ] # 每天凌晨 1 点进行全量备份
 
-    # Percona PostgreSQL TDE 临时设置
-    pg_packages: [ percona-main, pgsql-common ]  # 安装 percona postgres 包
+    # Percona PostgreSQL TDE 内核设置
+    pg_packages: [ pgtde, pgsql-common ]
     pg_libs: 'pg_tde, pgaudit, pg_stat_statements, pg_stat_monitor, auto_explain'
 ```
+
+`pgtde` 软件包由 Pigsty 的 `pgsql` 仓库模块提供，此模板不再依赖旧的
+`percona` 仓库模块。
 
 
 ------
@@ -67,19 +74,19 @@ Percona Postgres 内核共有 **73** 个可用扩展，去除 PG Contrib 自带�
 
 | 扩展名                                                                 | 版本号     | 说明                                                                                                                                                                                                                                                        |
 |:--------------------------------------------------------------------|:--------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [address_standardizer](/ext/e/address_standardizer)                 | `3.5.6` | Used to parse an address into constituent elements. Generally used to support geocoding address normalization step.                                                                                                                                       |
-| [address_standardizer_data_us](/ext/e/address_standardizer_data_us) | `3.5.6` | Address Standardizer US dataset example                                                                                                                                                                                                                   |
+| [address_standardizer](/ext/e/address_standardizer)                 | `3.5.7` | Used to parse an address into constituent elements. Generally used to support geocoding address normalization step.                                                                                                                                       |
+| [address_standardizer_data_us](/ext/e/address_standardizer_data_us) | `3.5.7` | Address Standardizer US dataset example                                                                                                                                                                                                                   |
 | [pg_repack](/ext/e/pg_repack)                                       | `1.5.3` | Reorganize tables in PostgreSQL databases with minimal locks                                                                                                                                                                                              |
-| [pg_stat_monitor](/ext/e/pg_stat_monitor)                           | `2.3`   | The pg_stat_monitor is a PostgreSQL Query Performance Monitoring tool, based on PostgreSQL contrib module pg_stat_statements. pg_stat_monitor provides aggregated statistics, client information, plan details including plan, and histogram information. |
-| [pg_tde](/ext/e/pg_tde)                                             | `2.2`   | pg_tde access method                                                                                                                                                                                                                                      |
+| [pg_stat_monitor](/ext/e/pg_stat_monitor)                           | `2.3.2` | The pg_stat_monitor is a PostgreSQL Query Performance Monitoring tool, based on PostgreSQL contrib module pg_stat_statements. pg_stat_monitor provides aggregated statistics, client information, plan details including plan, and histogram information. |
+| [pg_tde](/ext/e/pg_tde)                                             | `2.2.1` | pg_tde access method                                                                                                                                                                                                                                      |
 | [pgaudit](/ext/e/pgaudit)                                           | `18.0`  | provides auditing functionality                                                                                                                                                                                                                           |
-| [postgis](/ext/e/postgis)                                           | `3.5.6` | PostGIS geometry and geography spatial types and functions                                                                                                                                                                                                |
-| [postgis_raster](/ext/e/postgis_raster)                             | `3.5.6` | PostGIS raster types and functions                                                                                                                                                                                                                        |
-| [postgis_sfcgal](/ext/e/postgis_sfcgal)                             | `3.5.6` | PostGIS SFCGAL functions                                                                                                                                                                                                                                  |
-| [postgis_tiger_geocoder](/ext/e/postgis_tiger_geocoder)             | `3.5.6` | PostGIS tiger geocoder and reverse geocoder                                                                                                                                                                                                               |
-| [postgis_topology](/ext/e/postgis_topology)                         | `3.5.6` | PostGIS topology spatial types and functions                                                                                                                                                                                                              |
+| [postgis](/ext/e/postgis)                                           | `3.5.7` | PostGIS geometry and geography spatial types and functions                                                                                                                                                                                                |
+| [postgis_raster](/ext/e/postgis_raster)                             | `3.5.7` | PostGIS raster types and functions                                                                                                                                                                                                                        |
+| [postgis_sfcgal](/ext/e/postgis_sfcgal)                             | `3.5.7` | PostGIS SFCGAL functions                                                                                                                                                                                                                                  |
+| [postgis_tiger_geocoder](/ext/e/postgis_tiger_geocoder)             | `3.5.7` | PostGIS tiger geocoder and reverse geocoder                                                                                                                                                                                                               |
+| [postgis_topology](/ext/e/postgis_topology)                         | `3.5.7` | PostGIS topology spatial types and functions                                                                                                                                                                                                              |
 | [set_user](/ext/e/set_user)                                         | `4.2.0` | similar to SET ROLE but with added logging                                                                                                                                                                                                                |
-| [vector](/ext/e/vector)                                             | `0.8.2` | vector data type and ivfflat and hnsw access methods                                                                                                                                                                                                      |
+| [vector](/ext/e/vector)                                             | `0.8.3` | vector data type and ivfflat and hnsw access methods                                                                                                                                                                                                      |
 {.full-width}
 
 ------

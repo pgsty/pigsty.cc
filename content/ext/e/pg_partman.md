@@ -25,7 +25,7 @@ weight: 2510
 
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
-| [**`pg_partman`**](/ext/e/pg_partman) | `5.4.3` | <a class="ext-badge ext-badge--cate olap" href="/ext/cate/olap">OLAP</a> | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
+| [**`pg_partman`**](/ext/e/pg_partman) | `5.5.0` | <a class="ext-badge ext-badge--cate olap" href="/ext/cate/olap">OLAP</a> | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
 {.ext-table}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
@@ -43,30 +43,31 @@ weight: 2510
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#olap) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `5.4.3` | {{< pgvers "18,17,16,15,14" >}} | `pg_partman` | `plpgsql` |
-| [**RPM**](/ext/rpm#olap) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `5.4.3` | {{< pgvers "18,17,16,15,14" >}} | `pg_partman_$v` | - |
-| [**DEB**](/ext/deb#olap) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `5.4.3` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-partman` | - |
+| [**EXT**](/ext/list#olap) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `5.5.0` | {{< pgvers "18,17,16,15,14" >}} | `pg_partman` | `plpgsql` |
+| [**RPM**](/ext/rpm#olap) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `5.5.0` | {{< pgvers "18,17,16,15,14" >}} | `pg_partman_$v` | - |
+| [**DEB**](/ext/deb#olap) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `5.5.0` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-partman` | - |
 {.ext-table}
 
 {{< pgext_matrix >}}
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PGDG 5.4.3 7 | AVAIL PGDG 5.4.3 12 | AVAIL PGDG 5.4.3 16 | AVAIL PGDG 5.4.3 20 | AVAIL PGDG 5.4.3 24 |
-| el8.aarch64 | AVAIL PGDG 5.4.3 7 | AVAIL PGDG 5.4.3 12 | AVAIL PGDG 5.4.3 16 | AVAIL PGDG 5.4.3 19 | AVAIL PGDG 5.4.3 19 |
+| el8.x86_64 | AVAIL PGDG 5.5.0 8 | AVAIL PGDG 5.5.0 13 | AVAIL PGDG 5.5.0 17 | AVAIL PGDG 5.5.0 21 | AVAIL PGDG 5.5.0 25 |
+| el8.aarch64 | AVAIL PGDG 5.5.0 8 | AVAIL PGDG 5.5.0 13 | AVAIL PGDG 5.5.0 17 | AVAIL PGDG 5.5.0 20 | AVAIL PGDG 5.5.0 20 |
 | el9.x86_64 | AVAIL PGDG 5.4.3 12 | AVAIL PGDG 5.4.3 17 | AVAIL PGDG 5.4.3 21 | AVAIL PGDG 5.4.3 25 | AVAIL PGDG 5.4.3 27 |
-| el9.aarch64 | AVAIL PGDG 5.4.3 12 | AVAIL PGDG 5.4.3 17 | AVAIL PGDG 5.4.3 21 | AVAIL PGDG 5.4.3 24 | AVAIL PGDG 5.4.3 24 |
-| el10.x86_64 | AVAIL PGDG 5.4.3 12 | AVAIL PGDG 5.4.3 12 | AVAIL PGDG 5.4.3 12 | AVAIL PGDG 5.4.3 12 | AVAIL PGDG 5.4.3 12 |
-| el10.aarch64 | AVAIL PGDG 5.4.3 12 | AVAIL PGDG 5.4.3 12 | AVAIL PGDG 5.4.3 12 | AVAIL PGDG 5.4.3 12 | AVAIL PGDG 5.4.3 12 |
-| d12.x86_64 | AVAIL PGDG 5.4.3 2 | AVAIL PGDG 5.4.3 2 | AVAIL PGDG 5.4.3 2 | AVAIL PGDG 5.4.3 2 | AVAIL PGDG 5.4.3 2 |
-| d12.aarch64 | AVAIL PGDG 5.4.3 2 | AVAIL PGDG 5.4.3 2 | AVAIL PGDG 5.4.3 2 | AVAIL PGDG 5.4.3 2 | AVAIL PGDG 5.4.3 2 |
-| d13.x86_64 | AVAIL PGDG 5.4.3 2 | AVAIL PGDG 5.4.3 2 | AVAIL PGDG 5.4.3 2 | AVAIL PGDG 5.4.3 2 | AVAIL PGDG 5.4.3 2 |
-| d13.aarch64 | AVAIL PGDG 5.4.3 2 | AVAIL PGDG 5.4.3 2 | AVAIL PGDG 5.4.3 2 | AVAIL PGDG 5.4.3 2 | AVAIL PGDG 5.4.3 2 |
-| u22.x86_64 | AVAIL PGDG 5.4.3 2 | AVAIL PGDG 5.4.3 2 | AVAIL PGDG 5.4.3 2 | AVAIL PGDG 5.4.3 2 | AVAIL PGDG 5.4.3 2 |
-| u22.aarch64 | AVAIL PGDG 5.4.3 2 | AVAIL PGDG 5.4.3 2 | AVAIL PGDG 5.4.3 2 | AVAIL PGDG 5.4.3 2 | AVAIL PGDG 5.4.3 2 |
-| u24.x86_64 | AVAIL PGDG 5.4.3 2 | AVAIL PGDG 5.4.3 2 | AVAIL PGDG 5.4.3 2 | AVAIL PGDG 5.4.3 2 | AVAIL PGDG 5.4.3 2 |
-| u24.aarch64 | AVAIL PGDG 5.4.3 2 | AVAIL PGDG 5.4.3 2 | AVAIL PGDG 5.4.3 2 | AVAIL PGDG 5.4.3 2 | AVAIL PGDG 5.4.3 2 |
-| u26.x86_64 | AVAIL PGDG 5.4.3 2 | AVAIL PGDG 5.4.3 2 | AVAIL PGDG 5.4.3 2 | AVAIL PGDG 5.4.3 2 | AVAIL PGDG 5.4.3 2 |
-| u26.aarch64 | AVAIL PGDG 5.4.3 2 | AVAIL PGDG 5.4.3 2 | AVAIL PGDG 5.4.3 2 | AVAIL PGDG 5.4.3 2 | AVAIL PGDG 5.4.3 2 |
+| el9.aarch64 | AVAIL PGDG 5.5.0 13 | AVAIL PGDG 5.5.0 18 | AVAIL PGDG 5.5.0 22 | AVAIL PGDG 5.5.0 25 | AVAIL PGDG 5.5.0 25 |
+| el10.x86_64 | AVAIL PGDG 5.5.0 13 | AVAIL PGDG 5.5.0 13 | AVAIL PGDG 5.5.0 13 | AVAIL PGDG 5.5.0 13 | AVAIL PGDG 5.5.0 13 |
+| el10.aarch64 | AVAIL PGDG 5.5.0 13 | AVAIL PGDG 5.5.0 13 | AVAIL PGDG 5.5.0 13 | AVAIL PGDG 5.5.0 13 | AVAIL PGDG 5.5.0 13 |
+| d12.x86_64 | AVAIL PGDG 5.5.0 3 | AVAIL PGDG 5.5.0 3 | AVAIL PGDG 5.5.0 3 | AVAIL PGDG 5.5.0 3 | AVAIL PGDG 5.5.0 3 |
+| d12.aarch64 | AVAIL PGDG 5.5.0 3 | AVAIL PGDG 5.5.0 3 | AVAIL PGDG 5.5.0 3 | AVAIL PGDG 5.5.0 3 | AVAIL PGDG 5.5.0 3 |
+| d13.x86_64 | AVAIL PGDG 5.5.0 3 | AVAIL PGDG 5.5.0 3 | AVAIL PGDG 5.5.0 3 | AVAIL PGDG 5.5.0 3 | AVAIL PGDG 5.5.0 3 |
+| d13.aarch64 | AVAIL PGDG 5.5.0 3 | AVAIL PGDG 5.5.0 3 | AVAIL PGDG 5.5.0 3 | AVAIL PGDG 5.5.0 3 | AVAIL PGDG 5.5.0 3 |
+| u22.x86_64 | AVAIL PGDG 5.5.0 3 | AVAIL PGDG 5.5.0 3 | AVAIL PGDG 5.5.0 3 | AVAIL PGDG 5.5.0 3 | AVAIL PGDG 5.5.0 3 |
+| u22.aarch64 | AVAIL PGDG 5.5.0 3 | AVAIL PGDG 5.5.0 3 | AVAIL PGDG 5.5.0 3 | AVAIL PGDG 5.5.0 3 | AVAIL PGDG 5.5.0 3 |
+| u24.x86_64 | AVAIL PGDG 5.5.0 3 | AVAIL PGDG 5.5.0 3 | AVAIL PGDG 5.5.0 3 | AVAIL PGDG 5.5.0 3 | AVAIL PGDG 5.5.0 3 |
+| u24.aarch64 | AVAIL PGDG 5.5.0 3 | AVAIL PGDG 5.5.0 3 | AVAIL PGDG 5.5.0 3 | AVAIL PGDG 5.5.0 3 | AVAIL PGDG 5.5.0 3 |
+| u26.x86_64 | AVAIL PGDG 5.5.0 3 | AVAIL PGDG 5.5.0 3 | AVAIL PGDG 5.5.0 3 | AVAIL PGDG 5.5.0 3 | AVAIL PGDG 5.5.0 3 |
+| u26.aarch64 | AVAIL PGDG 5.5.0 3 | AVAIL PGDG 5.5.0 3 | AVAIL PGDG 5.5.0 3 | AVAIL PGDG 5.5.0 3 | AVAIL PGDG 5.5.0 3 |
+@ el8.x86_64 18 pg_partman_18 pg_partman_18-5.5.0-1PGDG.rhel8.10.x86_64.rpm pgdg 5.5.0 284.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pg_partman_18-5.5.0-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 18 pg_partman_18 pg_partman_18-5.4.3-1PGDG.rhel8.10.x86_64.rpm pgdg 5.4.3 279.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pg_partman_18-5.4.3-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 18 pg_partman_18 pg_partman_18-5.4.2-1PGDG.rhel8.10.x86_64.rpm pgdg 5.4.2 279.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pg_partman_18-5.4.2-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 18 pg_partman_18 pg_partman_18-5.4.1-1PGDG.rhel8.10.x86_64.rpm pgdg 5.4.1 278.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pg_partman_18-5.4.1-1PGDG.rhel8.10.x86_64.rpm
@@ -74,6 +75,7 @@ weight: 2510
 @ el8.x86_64 18 pg_partman_18 pg_partman_18-5.3.1-1PGDG.rhel8.x86_64.rpm pgdg 5.3.1 271.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pg_partman_18-5.3.1-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 18 pg_partman_18 pg_partman_18-5.3.0-1PGDG.rhel8.x86_64.rpm pgdg 5.3.0 270.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pg_partman_18-5.3.0-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 18 pg_partman_18 pg_partman_18-5.2.4-2PGDG.rhel8.x86_64.rpm pgdg 5.2.4 262.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pg_partman_18-5.2.4-2PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 18 pg_partman_18 pg_partman_18-5.5.0-1PGDG.rhel8.10.aarch64.rpm pgdg 5.5.0 284.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pg_partman_18-5.5.0-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 18 pg_partman_18 pg_partman_18-5.4.3-1PGDG.rhel8.10.aarch64.rpm pgdg 5.4.3 279.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pg_partman_18-5.4.3-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 18 pg_partman_18 pg_partman_18-5.4.2-1PGDG.rhel8.10.aarch64.rpm pgdg 5.4.2 279.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pg_partman_18-5.4.2-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 18 pg_partman_18 pg_partman_18-5.4.1-1PGDG.rhel8.10.aarch64.rpm pgdg 5.4.1 278.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pg_partman_18-5.4.1-1PGDG.rhel8.10.aarch64.rpm
@@ -93,6 +95,7 @@ weight: 2510
 @ el9.x86_64 18 pg_partman_18 pg_partman_18-5.3.1-1PGDG.rhel9.x86_64.rpm pgdg 5.3.1 213.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pg_partman_18-5.3.1-1PGDG.rhel9.x86_64.rpm
 @ el9.x86_64 18 pg_partman_18 pg_partman_18-5.3.0-1PGDG.rhel9.x86_64.rpm pgdg 5.3.0 213.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pg_partman_18-5.3.0-1PGDG.rhel9.x86_64.rpm
 @ el9.x86_64 18 pg_partman_18 pg_partman_18-5.2.4-2PGDG.rhel9.x86_64.rpm pgdg 5.2.4 208.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pg_partman_18-5.2.4-2PGDG.rhel9.x86_64.rpm
+@ el9.aarch64 18 pg_partman_18 pg_partman_18-5.5.0-1PGDG.rhel9.8.aarch64.rpm pgdg 5.5.0 220.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pg_partman_18-5.5.0-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 18 pg_partman_18 pg_partman_18-5.4.3-1PGDG.rhel9.8.aarch64.rpm pgdg 5.4.3 218.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pg_partman_18-5.4.3-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 18 pg_partman_18 pg_partman_18-5.4.3-1PGDG.rhel9.7.aarch64.rpm pgdg 5.4.3 218.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pg_partman_18-5.4.3-1PGDG.rhel9.7.aarch64.rpm
 @ el9.aarch64 18 pg_partman_18 pg_partman_18-5.4.3-1PGDG.rhel9.6.aarch64.rpm pgdg 5.4.3 218.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pg_partman_18-5.4.3-1PGDG.rhel9.6.aarch64.rpm
@@ -105,6 +108,7 @@ weight: 2510
 @ el9.aarch64 18 pg_partman_18 pg_partman_18-5.3.1-1PGDG.rhel9.aarch64.rpm pgdg 5.3.1 213.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pg_partman_18-5.3.1-1PGDG.rhel9.aarch64.rpm
 @ el9.aarch64 18 pg_partman_18 pg_partman_18-5.3.0-1PGDG.rhel9.aarch64.rpm pgdg 5.3.0 212.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pg_partman_18-5.3.0-1PGDG.rhel9.aarch64.rpm
 @ el9.aarch64 18 pg_partman_18 pg_partman_18-5.2.4-2PGDG.rhel9.aarch64.rpm pgdg 5.2.4 207.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pg_partman_18-5.2.4-2PGDG.rhel9.aarch64.rpm
+@ el10.x86_64 18 pg_partman_18 pg_partman_18-5.5.0-1PGDG.rhel10.2.x86_64.rpm pgdg 5.5.0 223.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pg_partman_18-5.5.0-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 18 pg_partman_18 pg_partman_18-5.4.3-1PGDG.rhel10.2.x86_64.rpm pgdg 5.4.3 220.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pg_partman_18-5.4.3-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 18 pg_partman_18 pg_partman_18-5.4.3-1PGDG.rhel10.1.x86_64.rpm pgdg 5.4.3 220.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pg_partman_18-5.4.3-1PGDG.rhel10.1.x86_64.rpm
 @ el10.x86_64 18 pg_partman_18 pg_partman_18-5.4.3-1PGDG.rhel10.0.x86_64.rpm pgdg 5.4.3 221.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pg_partman_18-5.4.3-1PGDG.rhel10.0.x86_64.rpm
@@ -117,6 +121,7 @@ weight: 2510
 @ el10.x86_64 18 pg_partman_18 pg_partman_18-5.3.1-1PGDG.rhel10.x86_64.rpm pgdg 5.3.1 216.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pg_partman_18-5.3.1-1PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 18 pg_partman_18 pg_partman_18-5.3.0-1PGDG.rhel10.x86_64.rpm pgdg 5.3.0 215.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pg_partman_18-5.3.0-1PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 18 pg_partman_18 pg_partman_18-5.2.4-2PGDG.rhel10.x86_64.rpm pgdg 5.2.4 210.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pg_partman_18-5.2.4-2PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 18 pg_partman_18 pg_partman_18-5.5.0-1PGDG.rhel10.2.aarch64.rpm pgdg 5.5.0 223.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_partman_18-5.5.0-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 18 pg_partman_18 pg_partman_18-5.4.3-1PGDG.rhel10.2.aarch64.rpm pgdg 5.4.3 220.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_partman_18-5.4.3-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 18 pg_partman_18 pg_partman_18-5.4.3-1PGDG.rhel10.1.aarch64.rpm pgdg 5.4.3 220.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_partman_18-5.4.3-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 18 pg_partman_18 pg_partman_18-5.4.3-1PGDG.rhel10.0.aarch64.rpm pgdg 5.4.3 220.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_partman_18-5.4.3-1PGDG.rhel10.0.aarch64.rpm
@@ -129,26 +134,37 @@ weight: 2510
 @ el10.aarch64 18 pg_partman_18 pg_partman_18-5.3.1-1PGDG.rhel10.aarch64.rpm pgdg 5.3.1 216.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_partman_18-5.3.1-1PGDG.rhel10.aarch64.rpm
 @ el10.aarch64 18 pg_partman_18 pg_partman_18-5.3.0-1PGDG.rhel10.aarch64.rpm pgdg 5.3.0 215.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_partman_18-5.3.0-1PGDG.rhel10.aarch64.rpm
 @ el10.aarch64 18 pg_partman_18 pg_partman_18-5.2.4-2PGDG.rhel10.aarch64.rpm pgdg 5.2.4 210.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_partman_18-5.2.4-2PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-partman postgresql-18-partman_5.5.0-1.pgdg12+1_amd64.deb pgdg 5.5.0 242.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-18-partman_5.5.0-1.pgdg12+1_amd64.deb
 @ d12.x86_64 18 postgresql-18-partman postgresql-18-partman_5.4.3-1.pgdg12+1_amd64.deb pgdg 5.4.3 238.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-18-partman_5.4.3-1.pgdg12+1_amd64.deb
 @ d12.x86_64 18 postgresql-18-partman postgresql-18-partman_5.4.2-1.pgdg12+1_amd64.deb pgdg 5.4.2 237.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-18-partman_5.4.2-1.pgdg12+1_amd64.deb
+@ d12.aarch64 18 postgresql-18-partman postgresql-18-partman_5.5.0-1.pgdg12+1_arm64.deb pgdg 5.5.0 242.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-18-partman_5.5.0-1.pgdg12+1_arm64.deb
 @ d12.aarch64 18 postgresql-18-partman postgresql-18-partman_5.4.3-1.pgdg12+1_arm64.deb pgdg 5.4.3 238.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-18-partman_5.4.3-1.pgdg12+1_arm64.deb
 @ d12.aarch64 18 postgresql-18-partman postgresql-18-partman_5.4.2-1.pgdg12+1_arm64.deb pgdg 5.4.2 237.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-18-partman_5.4.2-1.pgdg12+1_arm64.deb
+@ d13.x86_64 18 postgresql-18-partman postgresql-18-partman_5.5.0-1.pgdg13+1_amd64.deb pgdg 5.5.0 242.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-18-partman_5.5.0-1.pgdg13+1_amd64.deb
 @ d13.x86_64 18 postgresql-18-partman postgresql-18-partman_5.4.3-1.pgdg13+1_amd64.deb pgdg 5.4.3 238.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-18-partman_5.4.3-1.pgdg13+1_amd64.deb
 @ d13.x86_64 18 postgresql-18-partman postgresql-18-partman_5.4.2-1.pgdg13+1_amd64.deb pgdg 5.4.2 237.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-18-partman_5.4.2-1.pgdg13+1_amd64.deb
+@ d13.aarch64 18 postgresql-18-partman postgresql-18-partman_5.5.0-1.pgdg13+1_arm64.deb pgdg 5.5.0 242.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-18-partman_5.5.0-1.pgdg13+1_arm64.deb
 @ d13.aarch64 18 postgresql-18-partman postgresql-18-partman_5.4.3-1.pgdg13+1_arm64.deb pgdg 5.4.3 238.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-18-partman_5.4.3-1.pgdg13+1_arm64.deb
 @ d13.aarch64 18 postgresql-18-partman postgresql-18-partman_5.4.2-1.pgdg13+1_arm64.deb pgdg 5.4.2 237.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-18-partman_5.4.2-1.pgdg13+1_arm64.deb
+@ u22.x86_64 18 postgresql-18-partman postgresql-18-partman_5.5.0-1.pgdg22.04+1_amd64.deb pgdg 5.5.0 234.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-18-partman_5.5.0-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 18 postgresql-18-partman postgresql-18-partman_5.4.3-1.pgdg22.04+1_amd64.deb pgdg 5.4.3 231.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-18-partman_5.4.3-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 18 postgresql-18-partman postgresql-18-partman_5.4.2-1.pgdg22.04+1_amd64.deb pgdg 5.4.2 231.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-18-partman_5.4.2-1.pgdg22.04+1_amd64.deb
+@ u22.aarch64 18 postgresql-18-partman postgresql-18-partman_5.5.0-1.pgdg22.04+1_arm64.deb pgdg 5.5.0 234.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-18-partman_5.5.0-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 18 postgresql-18-partman postgresql-18-partman_5.4.3-1.pgdg22.04+1_arm64.deb pgdg 5.4.3 230.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-18-partman_5.4.3-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 18 postgresql-18-partman postgresql-18-partman_5.4.2-1.pgdg22.04+1_arm64.deb pgdg 5.4.2 230.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-18-partman_5.4.2-1.pgdg22.04+1_arm64.deb
+@ u24.x86_64 18 postgresql-18-partman postgresql-18-partman_5.5.0-1.pgdg24.04+1_amd64.deb pgdg 5.5.0 234.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-18-partman_5.5.0-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 18 postgresql-18-partman postgresql-18-partman_5.4.3-1.pgdg24.04+1_amd64.deb pgdg 5.4.3 230.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-18-partman_5.4.3-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 18 postgresql-18-partman postgresql-18-partman_5.4.2-1.pgdg24.04+1_amd64.deb pgdg 5.4.2 230.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-18-partman_5.4.2-1.pgdg24.04+1_amd64.deb
+@ u24.aarch64 18 postgresql-18-partman postgresql-18-partman_5.5.0-1.pgdg24.04+1_arm64.deb pgdg 5.5.0 233.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-18-partman_5.5.0-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 18 postgresql-18-partman postgresql-18-partman_5.4.3-1.pgdg24.04+1_arm64.deb pgdg 5.4.3 230.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-18-partman_5.4.3-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 18 postgresql-18-partman postgresql-18-partman_5.4.2-1.pgdg24.04+1_arm64.deb pgdg 5.4.2 230.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-18-partman_5.4.2-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 18 postgresql-18-partman postgresql-18-partman_5.5.0-1.pgdg26.04+1_amd64.deb pgdg 5.5.0 233.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-18-partman_5.5.0-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 18 postgresql-18-partman postgresql-18-partman_5.4.3-1.pgdg26.04+1_amd64.deb pgdg 5.4.3 230.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-18-partman_5.4.3-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 18 postgresql-18-partman postgresql-18-partman_5.4.2-1.pgdg26.04+1_amd64.deb pgdg 5.4.2 230.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-18-partman_5.4.2-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 18 postgresql-18-partman postgresql-18-partman_5.5.0-1.pgdg26.04+1_arm64.deb pgdg 5.5.0 233.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-18-partman_5.5.0-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 18 postgresql-18-partman postgresql-18-partman_5.4.3-1.pgdg26.04+1_arm64.deb pgdg 5.4.3 230.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-18-partman_5.4.3-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 18 postgresql-18-partman postgresql-18-partman_5.4.2-1.pgdg26.04+1_arm64.deb pgdg 5.4.2 230.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-18-partman_5.4.2-1.pgdg26.04+1_arm64.deb
+@ el8.x86_64 17 pg_partman_17 pg_partman_17-5.5.0-1PGDG.rhel8.10.x86_64.rpm pgdg 5.5.0 284.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pg_partman_17-5.5.0-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 pg_partman_17 pg_partman_17-5.4.3-1PGDG.rhel8.10.x86_64.rpm pgdg 5.4.3 279.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pg_partman_17-5.4.3-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 pg_partman_17 pg_partman_17-5.4.2-1PGDG.rhel8.10.x86_64.rpm pgdg 5.4.2 279.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pg_partman_17-5.4.2-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 pg_partman_17 pg_partman_17-5.4.1-1PGDG.rhel8.10.x86_64.rpm pgdg 5.4.1 278.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pg_partman_17-5.4.1-1PGDG.rhel8.10.x86_64.rpm
@@ -161,6 +177,7 @@ weight: 2510
 @ el8.x86_64 17 pg_partman_17 pg_partman_17-5.2.1-1PGDG.rhel8.x86_64.rpm pgdg 5.2.1 259.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pg_partman_17-5.2.1-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 17 pg_partman_17 pg_partman_17-5.2.0-1PGDG.rhel8.x86_64.rpm pgdg 5.2.0 259.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pg_partman_17-5.2.0-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 17 pg_partman_17 pg_partman_17-5.1.0-2PGDG.rhel8.x86_64.rpm pgdg 5.1.0 254.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pg_partman_17-5.1.0-2PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 17 pg_partman_17 pg_partman_17-5.5.0-1PGDG.rhel8.10.aarch64.rpm pgdg 5.5.0 284.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pg_partman_17-5.5.0-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 17 pg_partman_17 pg_partman_17-5.4.3-1PGDG.rhel8.10.aarch64.rpm pgdg 5.4.3 279.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pg_partman_17-5.4.3-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 17 pg_partman_17 pg_partman_17-5.4.2-1PGDG.rhel8.10.aarch64.rpm pgdg 5.4.2 279.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pg_partman_17-5.4.2-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 17 pg_partman_17 pg_partman_17-5.4.1-1PGDG.rhel8.10.aarch64.rpm pgdg 5.4.1 278.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pg_partman_17-5.4.1-1PGDG.rhel8.10.aarch64.rpm
@@ -190,6 +207,7 @@ weight: 2510
 @ el9.x86_64 17 pg_partman_17 pg_partman_17-5.2.1-1PGDG.rhel9.x86_64.rpm pgdg 5.2.1 205.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_partman_17-5.2.1-1PGDG.rhel9.x86_64.rpm
 @ el9.x86_64 17 pg_partman_17 pg_partman_17-5.2.0-1PGDG.rhel9.x86_64.rpm pgdg 5.2.0 205.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_partman_17-5.2.0-1PGDG.rhel9.x86_64.rpm
 @ el9.x86_64 17 pg_partman_17 pg_partman_17-5.1.0-2PGDG.rhel9.x86_64.rpm pgdg 5.1.0 201.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_partman_17-5.1.0-2PGDG.rhel9.x86_64.rpm
+@ el9.aarch64 17 pg_partman_17 pg_partman_17-5.5.0-1PGDG.rhel9.8.aarch64.rpm pgdg 5.5.0 220.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_partman_17-5.5.0-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 17 pg_partman_17 pg_partman_17-5.4.3-1PGDG.rhel9.8.aarch64.rpm pgdg 5.4.3 218.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_partman_17-5.4.3-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 17 pg_partman_17 pg_partman_17-5.4.3-1PGDG.rhel9.7.aarch64.rpm pgdg 5.4.3 218.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_partman_17-5.4.3-1PGDG.rhel9.7.aarch64.rpm
 @ el9.aarch64 17 pg_partman_17 pg_partman_17-5.4.3-1PGDG.rhel9.6.aarch64.rpm pgdg 5.4.3 218.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_partman_17-5.4.3-1PGDG.rhel9.6.aarch64.rpm
@@ -207,6 +225,7 @@ weight: 2510
 @ el9.aarch64 17 pg_partman_17 pg_partman_17-5.2.1-1PGDG.rhel9.aarch64.rpm pgdg 5.2.1 205.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_partman_17-5.2.1-1PGDG.rhel9.aarch64.rpm
 @ el9.aarch64 17 pg_partman_17 pg_partman_17-5.2.0-1PGDG.rhel9.aarch64.rpm pgdg 5.2.0 205.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_partman_17-5.2.0-1PGDG.rhel9.aarch64.rpm
 @ el9.aarch64 17 pg_partman_17 pg_partman_17-5.1.0-2PGDG.rhel9.aarch64.rpm pgdg 5.1.0 201.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_partman_17-5.1.0-2PGDG.rhel9.aarch64.rpm
+@ el10.x86_64 17 pg_partman_17 pg_partman_17-5.5.0-1PGDG.rhel10.2.x86_64.rpm pgdg 5.5.0 223.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_partman_17-5.5.0-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 17 pg_partman_17 pg_partman_17-5.4.3-1PGDG.rhel10.2.x86_64.rpm pgdg 5.4.3 220.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_partman_17-5.4.3-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 17 pg_partman_17 pg_partman_17-5.4.3-1PGDG.rhel10.1.x86_64.rpm pgdg 5.4.3 220.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_partman_17-5.4.3-1PGDG.rhel10.1.x86_64.rpm
 @ el10.x86_64 17 pg_partman_17 pg_partman_17-5.4.3-1PGDG.rhel10.0.x86_64.rpm pgdg 5.4.3 221.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_partman_17-5.4.3-1PGDG.rhel10.0.x86_64.rpm
@@ -219,6 +238,7 @@ weight: 2510
 @ el10.x86_64 17 pg_partman_17 pg_partman_17-5.3.1-1PGDG.rhel10.x86_64.rpm pgdg 5.3.1 216.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_partman_17-5.3.1-1PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 17 pg_partman_17 pg_partman_17-5.3.0-1PGDG.rhel10.x86_64.rpm pgdg 5.3.0 215.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_partman_17-5.3.0-1PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 17 pg_partman_17 pg_partman_17-5.2.4-2PGDG.rhel10.x86_64.rpm pgdg 5.2.4 210.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_partman_17-5.2.4-2PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 17 pg_partman_17 pg_partman_17-5.5.0-1PGDG.rhel10.2.aarch64.rpm pgdg 5.5.0 223.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_partman_17-5.5.0-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 17 pg_partman_17 pg_partman_17-5.4.3-1PGDG.rhel10.2.aarch64.rpm pgdg 5.4.3 220.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_partman_17-5.4.3-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 17 pg_partman_17 pg_partman_17-5.4.3-1PGDG.rhel10.1.aarch64.rpm pgdg 5.4.3 220.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_partman_17-5.4.3-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 17 pg_partman_17 pg_partman_17-5.4.3-1PGDG.rhel10.0.aarch64.rpm pgdg 5.4.3 220.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_partman_17-5.4.3-1PGDG.rhel10.0.aarch64.rpm
@@ -231,26 +251,37 @@ weight: 2510
 @ el10.aarch64 17 pg_partman_17 pg_partman_17-5.3.1-1PGDG.rhel10.aarch64.rpm pgdg 5.3.1 216.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_partman_17-5.3.1-1PGDG.rhel10.aarch64.rpm
 @ el10.aarch64 17 pg_partman_17 pg_partman_17-5.3.0-1PGDG.rhel10.aarch64.rpm pgdg 5.3.0 215.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_partman_17-5.3.0-1PGDG.rhel10.aarch64.rpm
 @ el10.aarch64 17 pg_partman_17 pg_partman_17-5.2.4-2PGDG.rhel10.aarch64.rpm pgdg 5.2.4 210.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_partman_17-5.2.4-2PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-partman postgresql-17-partman_5.5.0-1.pgdg12+1_amd64.deb pgdg 5.5.0 242.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-17-partman_5.5.0-1.pgdg12+1_amd64.deb
 @ d12.x86_64 17 postgresql-17-partman postgresql-17-partman_5.4.3-1.pgdg12+1_amd64.deb pgdg 5.4.3 238.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-17-partman_5.4.3-1.pgdg12+1_amd64.deb
 @ d12.x86_64 17 postgresql-17-partman postgresql-17-partman_5.4.2-1.pgdg12+1_amd64.deb pgdg 5.4.2 237.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-17-partman_5.4.2-1.pgdg12+1_amd64.deb
+@ d12.aarch64 17 postgresql-17-partman postgresql-17-partman_5.5.0-1.pgdg12+1_arm64.deb pgdg 5.5.0 242.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-17-partman_5.5.0-1.pgdg12+1_arm64.deb
 @ d12.aarch64 17 postgresql-17-partman postgresql-17-partman_5.4.3-1.pgdg12+1_arm64.deb pgdg 5.4.3 238.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-17-partman_5.4.3-1.pgdg12+1_arm64.deb
 @ d12.aarch64 17 postgresql-17-partman postgresql-17-partman_5.4.2-1.pgdg12+1_arm64.deb pgdg 5.4.2 237.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-17-partman_5.4.2-1.pgdg12+1_arm64.deb
+@ d13.x86_64 17 postgresql-17-partman postgresql-17-partman_5.5.0-1.pgdg13+1_amd64.deb pgdg 5.5.0 242.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-17-partman_5.5.0-1.pgdg13+1_amd64.deb
 @ d13.x86_64 17 postgresql-17-partman postgresql-17-partman_5.4.3-1.pgdg13+1_amd64.deb pgdg 5.4.3 238.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-17-partman_5.4.3-1.pgdg13+1_amd64.deb
 @ d13.x86_64 17 postgresql-17-partman postgresql-17-partman_5.4.2-1.pgdg13+1_amd64.deb pgdg 5.4.2 237.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-17-partman_5.4.2-1.pgdg13+1_amd64.deb
+@ d13.aarch64 17 postgresql-17-partman postgresql-17-partman_5.5.0-1.pgdg13+1_arm64.deb pgdg 5.5.0 242.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-17-partman_5.5.0-1.pgdg13+1_arm64.deb
 @ d13.aarch64 17 postgresql-17-partman postgresql-17-partman_5.4.3-1.pgdg13+1_arm64.deb pgdg 5.4.3 238.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-17-partman_5.4.3-1.pgdg13+1_arm64.deb
 @ d13.aarch64 17 postgresql-17-partman postgresql-17-partman_5.4.2-1.pgdg13+1_arm64.deb pgdg 5.4.2 237.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-17-partman_5.4.2-1.pgdg13+1_arm64.deb
+@ u22.x86_64 17 postgresql-17-partman postgresql-17-partman_5.5.0-1.pgdg22.04+1_amd64.deb pgdg 5.5.0 239.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-17-partman_5.5.0-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 17 postgresql-17-partman postgresql-17-partman_5.4.3-1.pgdg22.04+1_amd64.deb pgdg 5.4.3 235.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-17-partman_5.4.3-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 17 postgresql-17-partman postgresql-17-partman_5.4.2-1.pgdg22.04+1_amd64.deb pgdg 5.4.2 235.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-17-partman_5.4.2-1.pgdg22.04+1_amd64.deb
+@ u22.aarch64 17 postgresql-17-partman postgresql-17-partman_5.5.0-1.pgdg22.04+1_arm64.deb pgdg 5.5.0 238.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-17-partman_5.5.0-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 17 postgresql-17-partman postgresql-17-partman_5.4.3-1.pgdg22.04+1_arm64.deb pgdg 5.4.3 235.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-17-partman_5.4.3-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 17 postgresql-17-partman postgresql-17-partman_5.4.2-1.pgdg22.04+1_arm64.deb pgdg 5.4.2 235.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-17-partman_5.4.2-1.pgdg22.04+1_arm64.deb
+@ u24.x86_64 17 postgresql-17-partman postgresql-17-partman_5.5.0-1.pgdg24.04+1_amd64.deb pgdg 5.5.0 234.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-17-partman_5.5.0-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 17 postgresql-17-partman postgresql-17-partman_5.4.3-1.pgdg24.04+1_amd64.deb pgdg 5.4.3 230.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-17-partman_5.4.3-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 17 postgresql-17-partman postgresql-17-partman_5.4.2-1.pgdg24.04+1_amd64.deb pgdg 5.4.2 230.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-17-partman_5.4.2-1.pgdg24.04+1_amd64.deb
+@ u24.aarch64 17 postgresql-17-partman postgresql-17-partman_5.5.0-1.pgdg24.04+1_arm64.deb pgdg 5.5.0 233.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-17-partman_5.5.0-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 17 postgresql-17-partman postgresql-17-partman_5.4.3-1.pgdg24.04+1_arm64.deb pgdg 5.4.3 230.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-17-partman_5.4.3-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 17 postgresql-17-partman postgresql-17-partman_5.4.2-1.pgdg24.04+1_arm64.deb pgdg 5.4.2 230.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-17-partman_5.4.2-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 17 postgresql-17-partman postgresql-17-partman_5.5.0-1.pgdg26.04+1_amd64.deb pgdg 5.5.0 233.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-17-partman_5.5.0-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 17 postgresql-17-partman postgresql-17-partman_5.4.3-1.pgdg26.04+1_amd64.deb pgdg 5.4.3 230.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-17-partman_5.4.3-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 17 postgresql-17-partman postgresql-17-partman_5.4.2-1.pgdg26.04+1_amd64.deb pgdg 5.4.2 230.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-17-partman_5.4.2-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 17 postgresql-17-partman postgresql-17-partman_5.5.0-1.pgdg26.04+1_arm64.deb pgdg 5.5.0 233.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-17-partman_5.5.0-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 17 postgresql-17-partman postgresql-17-partman_5.4.3-1.pgdg26.04+1_arm64.deb pgdg 5.4.3 229.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-17-partman_5.4.3-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 17 postgresql-17-partman postgresql-17-partman_5.4.2-1.pgdg26.04+1_arm64.deb pgdg 5.4.2 230.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-17-partman_5.4.2-1.pgdg26.04+1_arm64.deb
+@ el8.x86_64 16 pg_partman_16 pg_partman_16-5.5.0-1PGDG.rhel8.10.x86_64.rpm pgdg 5.5.0 284.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_partman_16-5.5.0-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 pg_partman_16 pg_partman_16-5.4.3-1PGDG.rhel8.10.x86_64.rpm pgdg 5.4.3 279.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_partman_16-5.4.3-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 pg_partman_16 pg_partman_16-5.4.2-1PGDG.rhel8.10.x86_64.rpm pgdg 5.4.2 279.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_partman_16-5.4.2-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 pg_partman_16 pg_partman_16-5.4.1-1PGDG.rhel8.10.x86_64.rpm pgdg 5.4.1 278.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_partman_16-5.4.1-1PGDG.rhel8.10.x86_64.rpm
@@ -267,6 +298,7 @@ weight: 2510
 @ el8.x86_64 16 pg_partman_16 pg_partman_16-5.0.0-1PGDG.rhel8.x86_64.rpm pgdg 5.0.0 248.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_partman_16-5.0.0-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 16 pg_partman_16 pg_partman_16-4.7.4-1PGDG.rhel8.x86_64.rpm pgdg 4.7.4 246.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_partman_16-4.7.4-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 16 pg_partman_16 pg_partman_16-4.7.3-3.rhel8.x86_64.rpm pgdg 4.7.3 246.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_partman_16-4.7.3-3.rhel8.x86_64.rpm
+@ el8.aarch64 16 pg_partman_16 pg_partman_16-5.5.0-1PGDG.rhel8.10.aarch64.rpm pgdg 5.5.0 284.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pg_partman_16-5.5.0-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 16 pg_partman_16 pg_partman_16-5.4.3-1PGDG.rhel8.10.aarch64.rpm pgdg 5.4.3 279.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pg_partman_16-5.4.3-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 16 pg_partman_16 pg_partman_16-5.4.2-1PGDG.rhel8.10.aarch64.rpm pgdg 5.4.2 278.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pg_partman_16-5.4.2-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 16 pg_partman_16 pg_partman_16-5.4.1-1PGDG.rhel8.10.aarch64.rpm pgdg 5.4.1 278.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pg_partman_16-5.4.1-1PGDG.rhel8.10.aarch64.rpm
@@ -304,6 +336,7 @@ weight: 2510
 @ el9.x86_64 16 pg_partman_16 pg_partman_16-5.0.0-1PGDG.rhel9.x86_64.rpm pgdg 5.0.0 197.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_partman_16-5.0.0-1PGDG.rhel9.x86_64.rpm
 @ el9.x86_64 16 pg_partman_16 pg_partman_16-4.7.4-1PGDG.rhel9.x86_64.rpm pgdg 4.7.4 198.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_partman_16-4.7.4-1PGDG.rhel9.x86_64.rpm
 @ el9.x86_64 16 pg_partman_16 pg_partman_16-4.7.3-3.rhel9.x86_64.rpm pgdg 4.7.3 194.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_partman_16-4.7.3-3.rhel9.x86_64.rpm
+@ el9.aarch64 16 pg_partman_16 pg_partman_16-5.5.0-1PGDG.rhel9.8.aarch64.rpm pgdg 5.5.0 220.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_partman_16-5.5.0-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 16 pg_partman_16 pg_partman_16-5.4.3-1PGDG.rhel9.8.aarch64.rpm pgdg 5.4.3 218.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_partman_16-5.4.3-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 16 pg_partman_16 pg_partman_16-5.4.3-1PGDG.rhel9.7.aarch64.rpm pgdg 5.4.3 218.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_partman_16-5.4.3-1PGDG.rhel9.7.aarch64.rpm
 @ el9.aarch64 16 pg_partman_16 pg_partman_16-5.4.3-1PGDG.rhel9.6.aarch64.rpm pgdg 5.4.3 218.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_partman_16-5.4.3-1PGDG.rhel9.6.aarch64.rpm
@@ -325,6 +358,7 @@ weight: 2510
 @ el9.aarch64 16 pg_partman_16 pg_partman_16-5.0.0-1PGDG.rhel9.aarch64.rpm pgdg 5.0.0 197.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_partman_16-5.0.0-1PGDG.rhel9.aarch64.rpm
 @ el9.aarch64 16 pg_partman_16 pg_partman_16-4.7.4-1PGDG.rhel9.aarch64.rpm pgdg 4.7.4 198.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_partman_16-4.7.4-1PGDG.rhel9.aarch64.rpm
 @ el9.aarch64 16 pg_partman_16 pg_partman_16-4.7.3-3.rhel9.aarch64.rpm pgdg 4.7.3 194.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_partman_16-4.7.3-3.rhel9.aarch64.rpm
+@ el10.x86_64 16 pg_partman_16 pg_partman_16-5.5.0-1PGDG.rhel10.2.x86_64.rpm pgdg 5.5.0 223.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_partman_16-5.5.0-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 16 pg_partman_16 pg_partman_16-5.4.3-1PGDG.rhel10.2.x86_64.rpm pgdg 5.4.3 220.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_partman_16-5.4.3-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 16 pg_partman_16 pg_partman_16-5.4.3-1PGDG.rhel10.1.x86_64.rpm pgdg 5.4.3 220.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_partman_16-5.4.3-1PGDG.rhel10.1.x86_64.rpm
 @ el10.x86_64 16 pg_partman_16 pg_partman_16-5.4.3-1PGDG.rhel10.0.x86_64.rpm pgdg 5.4.3 221.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_partman_16-5.4.3-1PGDG.rhel10.0.x86_64.rpm
@@ -337,6 +371,7 @@ weight: 2510
 @ el10.x86_64 16 pg_partman_16 pg_partman_16-5.3.1-1PGDG.rhel10.x86_64.rpm pgdg 5.3.1 216.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_partman_16-5.3.1-1PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 16 pg_partman_16 pg_partman_16-5.3.0-1PGDG.rhel10.x86_64.rpm pgdg 5.3.0 215.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_partman_16-5.3.0-1PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 16 pg_partman_16 pg_partman_16-5.2.4-2PGDG.rhel10.x86_64.rpm pgdg 5.2.4 210.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_partman_16-5.2.4-2PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 16 pg_partman_16 pg_partman_16-5.5.0-1PGDG.rhel10.2.aarch64.rpm pgdg 5.5.0 223.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_partman_16-5.5.0-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 16 pg_partman_16 pg_partman_16-5.4.3-1PGDG.rhel10.2.aarch64.rpm pgdg 5.4.3 220.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_partman_16-5.4.3-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 16 pg_partman_16 pg_partman_16-5.4.3-1PGDG.rhel10.1.aarch64.rpm pgdg 5.4.3 220.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_partman_16-5.4.3-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 16 pg_partman_16 pg_partman_16-5.4.3-1PGDG.rhel10.0.aarch64.rpm pgdg 5.4.3 220.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_partman_16-5.4.3-1PGDG.rhel10.0.aarch64.rpm
@@ -349,26 +384,37 @@ weight: 2510
 @ el10.aarch64 16 pg_partman_16 pg_partman_16-5.3.1-1PGDG.rhel10.aarch64.rpm pgdg 5.3.1 216.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_partman_16-5.3.1-1PGDG.rhel10.aarch64.rpm
 @ el10.aarch64 16 pg_partman_16 pg_partman_16-5.3.0-1PGDG.rhel10.aarch64.rpm pgdg 5.3.0 215.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_partman_16-5.3.0-1PGDG.rhel10.aarch64.rpm
 @ el10.aarch64 16 pg_partman_16 pg_partman_16-5.2.4-2PGDG.rhel10.aarch64.rpm pgdg 5.2.4 210.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_partman_16-5.2.4-2PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 16 postgresql-16-partman postgresql-16-partman_5.5.0-1.pgdg12+1_amd64.deb pgdg 5.5.0 242.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-16-partman_5.5.0-1.pgdg12+1_amd64.deb
 @ d12.x86_64 16 postgresql-16-partman postgresql-16-partman_5.4.3-1.pgdg12+1_amd64.deb pgdg 5.4.3 238.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-16-partman_5.4.3-1.pgdg12+1_amd64.deb
 @ d12.x86_64 16 postgresql-16-partman postgresql-16-partman_5.4.2-1.pgdg12+1_amd64.deb pgdg 5.4.2 237.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-16-partman_5.4.2-1.pgdg12+1_amd64.deb
+@ d12.aarch64 16 postgresql-16-partman postgresql-16-partman_5.5.0-1.pgdg12+1_arm64.deb pgdg 5.5.0 242.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-16-partman_5.5.0-1.pgdg12+1_arm64.deb
 @ d12.aarch64 16 postgresql-16-partman postgresql-16-partman_5.4.3-1.pgdg12+1_arm64.deb pgdg 5.4.3 238.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-16-partman_5.4.3-1.pgdg12+1_arm64.deb
 @ d12.aarch64 16 postgresql-16-partman postgresql-16-partman_5.4.2-1.pgdg12+1_arm64.deb pgdg 5.4.2 237.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-16-partman_5.4.2-1.pgdg12+1_arm64.deb
+@ d13.x86_64 16 postgresql-16-partman postgresql-16-partman_5.5.0-1.pgdg13+1_amd64.deb pgdg 5.5.0 242.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-16-partman_5.5.0-1.pgdg13+1_amd64.deb
 @ d13.x86_64 16 postgresql-16-partman postgresql-16-partman_5.4.3-1.pgdg13+1_amd64.deb pgdg 5.4.3 238.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-16-partman_5.4.3-1.pgdg13+1_amd64.deb
 @ d13.x86_64 16 postgresql-16-partman postgresql-16-partman_5.4.2-1.pgdg13+1_amd64.deb pgdg 5.4.2 237.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-16-partman_5.4.2-1.pgdg13+1_amd64.deb
+@ d13.aarch64 16 postgresql-16-partman postgresql-16-partman_5.5.0-1.pgdg13+1_arm64.deb pgdg 5.5.0 242.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-16-partman_5.5.0-1.pgdg13+1_arm64.deb
 @ d13.aarch64 16 postgresql-16-partman postgresql-16-partman_5.4.3-1.pgdg13+1_arm64.deb pgdg 5.4.3 238.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-16-partman_5.4.3-1.pgdg13+1_arm64.deb
 @ d13.aarch64 16 postgresql-16-partman postgresql-16-partman_5.4.2-1.pgdg13+1_arm64.deb pgdg 5.4.2 237.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-16-partman_5.4.2-1.pgdg13+1_arm64.deb
+@ u22.x86_64 16 postgresql-16-partman postgresql-16-partman_5.5.0-1.pgdg22.04+1_amd64.deb pgdg 5.5.0 238.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-16-partman_5.5.0-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 16 postgresql-16-partman postgresql-16-partman_5.4.3-1.pgdg22.04+1_amd64.deb pgdg 5.4.3 235.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-16-partman_5.4.3-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 16 postgresql-16-partman postgresql-16-partman_5.4.2-1.pgdg22.04+1_amd64.deb pgdg 5.4.2 235.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-16-partman_5.4.2-1.pgdg22.04+1_amd64.deb
+@ u22.aarch64 16 postgresql-16-partman postgresql-16-partman_5.5.0-1.pgdg22.04+1_arm64.deb pgdg 5.5.0 238.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-16-partman_5.5.0-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 16 postgresql-16-partman postgresql-16-partman_5.4.3-1.pgdg22.04+1_arm64.deb pgdg 5.4.3 235.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-16-partman_5.4.3-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 16 postgresql-16-partman postgresql-16-partman_5.4.2-1.pgdg22.04+1_arm64.deb pgdg 5.4.2 234.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-16-partman_5.4.2-1.pgdg22.04+1_arm64.deb
+@ u24.x86_64 16 postgresql-16-partman postgresql-16-partman_5.5.0-1.pgdg24.04+1_amd64.deb pgdg 5.5.0 233.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-16-partman_5.5.0-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 16 postgresql-16-partman postgresql-16-partman_5.4.3-1.pgdg24.04+1_amd64.deb pgdg 5.4.3 230.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-16-partman_5.4.3-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 16 postgresql-16-partman postgresql-16-partman_5.4.2-1.pgdg24.04+1_amd64.deb pgdg 5.4.2 230.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-16-partman_5.4.2-1.pgdg24.04+1_amd64.deb
+@ u24.aarch64 16 postgresql-16-partman postgresql-16-partman_5.5.0-1.pgdg24.04+1_arm64.deb pgdg 5.5.0 233.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-16-partman_5.5.0-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 16 postgresql-16-partman postgresql-16-partman_5.4.3-1.pgdg24.04+1_arm64.deb pgdg 5.4.3 230.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-16-partman_5.4.3-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 16 postgresql-16-partman postgresql-16-partman_5.4.2-1.pgdg24.04+1_arm64.deb pgdg 5.4.2 230.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-16-partman_5.4.2-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 16 postgresql-16-partman postgresql-16-partman_5.5.0-1.pgdg26.04+1_amd64.deb pgdg 5.5.0 233.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-16-partman_5.5.0-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 16 postgresql-16-partman postgresql-16-partman_5.4.3-1.pgdg26.04+1_amd64.deb pgdg 5.4.3 230.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-16-partman_5.4.3-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 16 postgresql-16-partman postgresql-16-partman_5.4.2-1.pgdg26.04+1_amd64.deb pgdg 5.4.2 230.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-16-partman_5.4.2-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 16 postgresql-16-partman postgresql-16-partman_5.5.0-1.pgdg26.04+1_arm64.deb pgdg 5.5.0 233.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-16-partman_5.5.0-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 16 postgresql-16-partman postgresql-16-partman_5.4.3-1.pgdg26.04+1_arm64.deb pgdg 5.4.3 229.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-16-partman_5.4.3-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 16 postgresql-16-partman postgresql-16-partman_5.4.2-1.pgdg26.04+1_arm64.deb pgdg 5.4.2 230.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-16-partman_5.4.2-1.pgdg26.04+1_arm64.deb
+@ el8.x86_64 15 pg_partman_15 pg_partman_15-5.5.0-1PGDG.rhel8.10.x86_64.rpm pgdg 5.5.0 284.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_partman_15-5.5.0-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 pg_partman_15 pg_partman_15-5.4.3-1PGDG.rhel8.10.x86_64.rpm pgdg 5.4.3 279.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_partman_15-5.4.3-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 pg_partman_15 pg_partman_15-5.4.2-1PGDG.rhel8.10.x86_64.rpm pgdg 5.4.2 279.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_partman_15-5.4.2-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 pg_partman_15 pg_partman_15-5.4.1-1PGDG.rhel8.10.x86_64.rpm pgdg 5.4.1 278.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_partman_15-5.4.1-1PGDG.rhel8.10.x86_64.rpm
@@ -389,6 +435,7 @@ weight: 2510
 @ el8.x86_64 15 pg_partman_15 pg_partman_15-4.7.2-1.rhel8.x86_64.rpm pgdg 4.7.2 245.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_partman_15-4.7.2-1.rhel8.x86_64.rpm
 @ el8.x86_64 15 pg_partman_15 pg_partman_15-4.7.1-1.rhel8.x86_64.rpm pgdg 4.7.1 260.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_partman_15-4.7.1-1.rhel8.x86_64.rpm
 @ el8.x86_64 15 pg_partman_15 pg_partman_15-4.7.0-2.rhel8.x86_64.rpm pgdg 4.7.0 260.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_partman_15-4.7.0-2.rhel8.x86_64.rpm
+@ el8.aarch64 15 pg_partman_15 pg_partman_15-5.5.0-1PGDG.rhel8.10.aarch64.rpm pgdg 5.5.0 284.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pg_partman_15-5.5.0-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 15 pg_partman_15 pg_partman_15-5.4.3-1PGDG.rhel8.10.aarch64.rpm pgdg 5.4.3 279.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pg_partman_15-5.4.3-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 15 pg_partman_15 pg_partman_15-5.4.2-1PGDG.rhel8.10.aarch64.rpm pgdg 5.4.2 278.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pg_partman_15-5.4.2-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 15 pg_partman_15 pg_partman_15-5.4.1-1PGDG.rhel8.10.aarch64.rpm pgdg 5.4.1 278.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pg_partman_15-5.4.1-1PGDG.rhel8.10.aarch64.rpm
@@ -433,6 +480,7 @@ weight: 2510
 @ el9.x86_64 15 pg_partman_15 pg_partman_15-4.7.2-1.rhel9.x86_64.rpm pgdg 4.7.2 198.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_partman_15-4.7.2-1.rhel9.x86_64.rpm
 @ el9.x86_64 15 pg_partman_15 pg_partman_15-4.7.1-1.rhel9.x86_64.rpm pgdg 4.7.1 213.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_partman_15-4.7.1-1.rhel9.x86_64.rpm
 @ el9.x86_64 15 pg_partman_15 pg_partman_15-4.7.0-2.rhel9.x86_64.rpm pgdg 4.7.0 213.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_partman_15-4.7.0-2.rhel9.x86_64.rpm
+@ el9.aarch64 15 pg_partman_15 pg_partman_15-5.5.0-1PGDG.rhel9.8.aarch64.rpm pgdg 5.5.0 220.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_partman_15-5.5.0-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 15 pg_partman_15 pg_partman_15-5.4.3-1PGDG.rhel9.8.aarch64.rpm pgdg 5.4.3 218.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_partman_15-5.4.3-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 15 pg_partman_15 pg_partman_15-5.4.3-1PGDG.rhel9.7.aarch64.rpm pgdg 5.4.3 218.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_partman_15-5.4.3-1PGDG.rhel9.7.aarch64.rpm
 @ el9.aarch64 15 pg_partman_15 pg_partman_15-5.4.3-1PGDG.rhel9.6.aarch64.rpm pgdg 5.4.3 218.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_partman_15-5.4.3-1PGDG.rhel9.6.aarch64.rpm
@@ -457,6 +505,7 @@ weight: 2510
 @ el9.aarch64 15 pg_partman_15 pg_partman_15-4.7.3-1.rhel9.aarch64.rpm pgdg 4.7.3 198.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_partman_15-4.7.3-1.rhel9.aarch64.rpm
 @ el9.aarch64 15 pg_partman_15 pg_partman_15-4.7.2-1.rhel9.aarch64.rpm pgdg 4.7.2 197.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_partman_15-4.7.2-1.rhel9.aarch64.rpm
 @ el9.aarch64 15 pg_partman_15 pg_partman_15-4.7.1-1.rhel9.aarch64.rpm pgdg 4.7.1 212.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_partman_15-4.7.1-1.rhel9.aarch64.rpm
+@ el10.x86_64 15 pg_partman_15 pg_partman_15-5.5.0-1PGDG.rhel10.2.x86_64.rpm pgdg 5.5.0 223.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_partman_15-5.5.0-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 15 pg_partman_15 pg_partman_15-5.4.3-1PGDG.rhel10.2.x86_64.rpm pgdg 5.4.3 220.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_partman_15-5.4.3-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 15 pg_partman_15 pg_partman_15-5.4.3-1PGDG.rhel10.1.x86_64.rpm pgdg 5.4.3 220.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_partman_15-5.4.3-1PGDG.rhel10.1.x86_64.rpm
 @ el10.x86_64 15 pg_partman_15 pg_partman_15-5.4.3-1PGDG.rhel10.0.x86_64.rpm pgdg 5.4.3 221.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_partman_15-5.4.3-1PGDG.rhel10.0.x86_64.rpm
@@ -469,6 +518,7 @@ weight: 2510
 @ el10.x86_64 15 pg_partman_15 pg_partman_15-5.3.1-1PGDG.rhel10.x86_64.rpm pgdg 5.3.1 216.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_partman_15-5.3.1-1PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 15 pg_partman_15 pg_partman_15-5.3.0-1PGDG.rhel10.x86_64.rpm pgdg 5.3.0 215.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_partman_15-5.3.0-1PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 15 pg_partman_15 pg_partman_15-5.2.4-2PGDG.rhel10.x86_64.rpm pgdg 5.2.4 210.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_partman_15-5.2.4-2PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 15 pg_partman_15 pg_partman_15-5.5.0-1PGDG.rhel10.2.aarch64.rpm pgdg 5.5.0 223.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_partman_15-5.5.0-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 15 pg_partman_15 pg_partman_15-5.4.3-1PGDG.rhel10.2.aarch64.rpm pgdg 5.4.3 220.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_partman_15-5.4.3-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 15 pg_partman_15 pg_partman_15-5.4.3-1PGDG.rhel10.1.aarch64.rpm pgdg 5.4.3 220.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_partman_15-5.4.3-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 15 pg_partman_15 pg_partman_15-5.4.3-1PGDG.rhel10.0.aarch64.rpm pgdg 5.4.3 220.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_partman_15-5.4.3-1PGDG.rhel10.0.aarch64.rpm
@@ -481,26 +531,37 @@ weight: 2510
 @ el10.aarch64 15 pg_partman_15 pg_partman_15-5.3.1-1PGDG.rhel10.aarch64.rpm pgdg 5.3.1 216.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_partman_15-5.3.1-1PGDG.rhel10.aarch64.rpm
 @ el10.aarch64 15 pg_partman_15 pg_partman_15-5.3.0-1PGDG.rhel10.aarch64.rpm pgdg 5.3.0 215.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_partman_15-5.3.0-1PGDG.rhel10.aarch64.rpm
 @ el10.aarch64 15 pg_partman_15 pg_partman_15-5.2.4-2PGDG.rhel10.aarch64.rpm pgdg 5.2.4 210.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_partman_15-5.2.4-2PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 15 postgresql-15-partman postgresql-15-partman_5.5.0-1.pgdg12+1_amd64.deb pgdg 5.5.0 242.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-15-partman_5.5.0-1.pgdg12+1_amd64.deb
 @ d12.x86_64 15 postgresql-15-partman postgresql-15-partman_5.4.3-1.pgdg12+1_amd64.deb pgdg 5.4.3 238.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-15-partman_5.4.3-1.pgdg12+1_amd64.deb
 @ d12.x86_64 15 postgresql-15-partman postgresql-15-partman_5.4.2-1.pgdg12+1_amd64.deb pgdg 5.4.2 237.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-15-partman_5.4.2-1.pgdg12+1_amd64.deb
+@ d12.aarch64 15 postgresql-15-partman postgresql-15-partman_5.5.0-1.pgdg12+1_arm64.deb pgdg 5.5.0 242.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-15-partman_5.5.0-1.pgdg12+1_arm64.deb
 @ d12.aarch64 15 postgresql-15-partman postgresql-15-partman_5.4.3-1.pgdg12+1_arm64.deb pgdg 5.4.3 237.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-15-partman_5.4.3-1.pgdg12+1_arm64.deb
 @ d12.aarch64 15 postgresql-15-partman postgresql-15-partman_5.4.2-1.pgdg12+1_arm64.deb pgdg 5.4.2 237.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-15-partman_5.4.2-1.pgdg12+1_arm64.deb
+@ d13.x86_64 15 postgresql-15-partman postgresql-15-partman_5.5.0-1.pgdg13+1_amd64.deb pgdg 5.5.0 242.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-15-partman_5.5.0-1.pgdg13+1_amd64.deb
 @ d13.x86_64 15 postgresql-15-partman postgresql-15-partman_5.4.3-1.pgdg13+1_amd64.deb pgdg 5.4.3 238.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-15-partman_5.4.3-1.pgdg13+1_amd64.deb
 @ d13.x86_64 15 postgresql-15-partman postgresql-15-partman_5.4.2-1.pgdg13+1_amd64.deb pgdg 5.4.2 237.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-15-partman_5.4.2-1.pgdg13+1_amd64.deb
+@ d13.aarch64 15 postgresql-15-partman postgresql-15-partman_5.5.0-1.pgdg13+1_arm64.deb pgdg 5.5.0 242.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-15-partman_5.5.0-1.pgdg13+1_arm64.deb
 @ d13.aarch64 15 postgresql-15-partman postgresql-15-partman_5.4.3-1.pgdg13+1_arm64.deb pgdg 5.4.3 238.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-15-partman_5.4.3-1.pgdg13+1_arm64.deb
 @ d13.aarch64 15 postgresql-15-partman postgresql-15-partman_5.4.2-1.pgdg13+1_arm64.deb pgdg 5.4.2 237.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-15-partman_5.4.2-1.pgdg13+1_arm64.deb
+@ u22.x86_64 15 postgresql-15-partman postgresql-15-partman_5.5.0-1.pgdg22.04+1_amd64.deb pgdg 5.5.0 238.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-15-partman_5.5.0-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 15 postgresql-15-partman postgresql-15-partman_5.4.3-1.pgdg22.04+1_amd64.deb pgdg 5.4.3 235.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-15-partman_5.4.3-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 15 postgresql-15-partman postgresql-15-partman_5.4.2-1.pgdg22.04+1_amd64.deb pgdg 5.4.2 235.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-15-partman_5.4.2-1.pgdg22.04+1_amd64.deb
+@ u22.aarch64 15 postgresql-15-partman postgresql-15-partman_5.5.0-1.pgdg22.04+1_arm64.deb pgdg 5.5.0 238.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-15-partman_5.5.0-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 15 postgresql-15-partman postgresql-15-partman_5.4.3-1.pgdg22.04+1_arm64.deb pgdg 5.4.3 235.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-15-partman_5.4.3-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 15 postgresql-15-partman postgresql-15-partman_5.4.2-1.pgdg22.04+1_arm64.deb pgdg 5.4.2 234.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-15-partman_5.4.2-1.pgdg22.04+1_arm64.deb
+@ u24.x86_64 15 postgresql-15-partman postgresql-15-partman_5.5.0-1.pgdg24.04+1_amd64.deb pgdg 5.5.0 233.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-15-partman_5.5.0-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 15 postgresql-15-partman postgresql-15-partman_5.4.3-1.pgdg24.04+1_amd64.deb pgdg 5.4.3 230.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-15-partman_5.4.3-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 15 postgresql-15-partman postgresql-15-partman_5.4.2-1.pgdg24.04+1_amd64.deb pgdg 5.4.2 230.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-15-partman_5.4.2-1.pgdg24.04+1_amd64.deb
+@ u24.aarch64 15 postgresql-15-partman postgresql-15-partman_5.5.0-1.pgdg24.04+1_arm64.deb pgdg 5.5.0 233.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-15-partman_5.5.0-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 15 postgresql-15-partman postgresql-15-partman_5.4.3-1.pgdg24.04+1_arm64.deb pgdg 5.4.3 230.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-15-partman_5.4.3-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 15 postgresql-15-partman postgresql-15-partman_5.4.2-1.pgdg24.04+1_arm64.deb pgdg 5.4.2 230.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-15-partman_5.4.2-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 15 postgresql-15-partman postgresql-15-partman_5.5.0-1.pgdg26.04+1_amd64.deb pgdg 5.5.0 233.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-15-partman_5.5.0-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 15 postgresql-15-partman postgresql-15-partman_5.4.3-1.pgdg26.04+1_amd64.deb pgdg 5.4.3 230.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-15-partman_5.4.3-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 15 postgresql-15-partman postgresql-15-partman_5.4.2-1.pgdg26.04+1_amd64.deb pgdg 5.4.2 230.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-15-partman_5.4.2-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 15 postgresql-15-partman postgresql-15-partman_5.5.0-1.pgdg26.04+1_arm64.deb pgdg 5.5.0 233.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-15-partman_5.5.0-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 15 postgresql-15-partman postgresql-15-partman_5.4.3-1.pgdg26.04+1_arm64.deb pgdg 5.4.3 229.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-15-partman_5.4.3-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 15 postgresql-15-partman postgresql-15-partman_5.4.2-1.pgdg26.04+1_arm64.deb pgdg 5.4.2 230.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-15-partman_5.4.2-1.pgdg26.04+1_arm64.deb
+@ el8.x86_64 14 pg_partman_14 pg_partman_14-5.5.0-1PGDG.rhel8.10.x86_64.rpm pgdg 5.5.0 284.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_partman_14-5.5.0-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 14 pg_partman_14 pg_partman_14-5.4.3-1PGDG.rhel8.10.x86_64.rpm pgdg 5.4.3 279.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_partman_14-5.4.3-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 14 pg_partman_14 pg_partman_14-5.4.2-1PGDG.rhel8.10.x86_64.rpm pgdg 5.4.2 279.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_partman_14-5.4.2-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 14 pg_partman_14 pg_partman_14-5.4.1-1PGDG.rhel8.10.x86_64.rpm pgdg 5.4.1 278.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_partman_14-5.4.1-1PGDG.rhel8.10.x86_64.rpm
@@ -525,6 +586,7 @@ weight: 2510
 @ el8.x86_64 14 pg_partman_14 pg_partman_14-4.6.1-1.rhel8.x86_64.rpm pgdg 4.6.1 255.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_partman_14-4.6.1-1.rhel8.x86_64.rpm
 @ el8.x86_64 14 pg_partman_14 pg_partman_14-4.6.0-1.rhel8.x86_64.rpm pgdg 4.6.0 252.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_partman_14-4.6.0-1.rhel8.x86_64.rpm
 @ el8.x86_64 14 pg_partman_14 pg_partman_14-4.5.1-2.rhel8.x86_64.rpm pgdg 4.5.1 246.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_partman_14-4.5.1-2.rhel8.x86_64.rpm
+@ el8.aarch64 14 pg_partman_14 pg_partman_14-5.5.0-1PGDG.rhel8.10.aarch64.rpm pgdg 5.5.0 284.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pg_partman_14-5.5.0-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 14 pg_partman_14 pg_partman_14-5.4.3-1PGDG.rhel8.10.aarch64.rpm pgdg 5.4.3 279.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pg_partman_14-5.4.3-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 14 pg_partman_14 pg_partman_14-5.4.2-1PGDG.rhel8.10.aarch64.rpm pgdg 5.4.2 279.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pg_partman_14-5.4.2-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 14 pg_partman_14 pg_partman_14-5.4.1-1PGDG.rhel8.10.aarch64.rpm pgdg 5.4.1 278.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pg_partman_14-5.4.1-1PGDG.rhel8.10.aarch64.rpm
@@ -571,6 +633,7 @@ weight: 2510
 @ el9.x86_64 14 pg_partman_14 pg_partman_14-4.7.0-1.rhel9.x86_64.rpm pgdg 4.7.0 213.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_partman_14-4.7.0-1.rhel9.x86_64.rpm
 @ el9.x86_64 14 pg_partman_14 pg_partman_14-4.6.2-1.rhel9.x86_64.rpm pgdg 4.6.2 211.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_partman_14-4.6.2-1.rhel9.x86_64.rpm
 @ el9.x86_64 14 pg_partman_14 pg_partman_14-4.6.1-1.rhel9.x86_64.rpm pgdg 4.6.1 210.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_partman_14-4.6.1-1.rhel9.x86_64.rpm
+@ el9.aarch64 14 pg_partman_14 pg_partman_14-5.5.0-1PGDG.rhel9.8.aarch64.rpm pgdg 5.5.0 220.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_partman_14-5.5.0-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 14 pg_partman_14 pg_partman_14-5.4.3-1PGDG.rhel9.8.aarch64.rpm pgdg 5.4.3 218.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_partman_14-5.4.3-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 14 pg_partman_14 pg_partman_14-5.4.3-1PGDG.rhel9.7.aarch64.rpm pgdg 5.4.3 218.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_partman_14-5.4.3-1PGDG.rhel9.7.aarch64.rpm
 @ el9.aarch64 14 pg_partman_14 pg_partman_14-5.4.3-1PGDG.rhel9.6.aarch64.rpm pgdg 5.4.3 218.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_partman_14-5.4.3-1PGDG.rhel9.6.aarch64.rpm
@@ -595,6 +658,7 @@ weight: 2510
 @ el9.aarch64 14 pg_partman_14 pg_partman_14-4.7.3-1.rhel9.aarch64.rpm pgdg 4.7.3 198.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_partman_14-4.7.3-1.rhel9.aarch64.rpm
 @ el9.aarch64 14 pg_partman_14 pg_partman_14-4.7.2-1.rhel9.aarch64.rpm pgdg 4.7.2 197.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_partman_14-4.7.2-1.rhel9.aarch64.rpm
 @ el9.aarch64 14 pg_partman_14 pg_partman_14-4.7.1-1.rhel9.aarch64.rpm pgdg 4.7.1 212.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_partman_14-4.7.1-1.rhel9.aarch64.rpm
+@ el10.x86_64 14 pg_partman_14 pg_partman_14-5.5.0-1PGDG.rhel10.2.x86_64.rpm pgdg 5.5.0 223.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_partman_14-5.5.0-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 14 pg_partman_14 pg_partman_14-5.4.3-1PGDG.rhel10.2.x86_64.rpm pgdg 5.4.3 220.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_partman_14-5.4.3-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 14 pg_partman_14 pg_partman_14-5.4.3-1PGDG.rhel10.1.x86_64.rpm pgdg 5.4.3 220.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_partman_14-5.4.3-1PGDG.rhel10.1.x86_64.rpm
 @ el10.x86_64 14 pg_partman_14 pg_partman_14-5.4.3-1PGDG.rhel10.0.x86_64.rpm pgdg 5.4.3 221.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_partman_14-5.4.3-1PGDG.rhel10.0.x86_64.rpm
@@ -607,6 +671,7 @@ weight: 2510
 @ el10.x86_64 14 pg_partman_14 pg_partman_14-5.3.1-1PGDG.rhel10.x86_64.rpm pgdg 5.3.1 216.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_partman_14-5.3.1-1PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 14 pg_partman_14 pg_partman_14-5.3.0-1PGDG.rhel10.x86_64.rpm pgdg 5.3.0 215.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_partman_14-5.3.0-1PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 14 pg_partman_14 pg_partman_14-5.2.4-2PGDG.rhel10.x86_64.rpm pgdg 5.2.4 210.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_partman_14-5.2.4-2PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 14 pg_partman_14 pg_partman_14-5.5.0-1PGDG.rhel10.2.aarch64.rpm pgdg 5.5.0 223.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_partman_14-5.5.0-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 14 pg_partman_14 pg_partman_14-5.4.3-1PGDG.rhel10.2.aarch64.rpm pgdg 5.4.3 220.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_partman_14-5.4.3-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 14 pg_partman_14 pg_partman_14-5.4.3-1PGDG.rhel10.1.aarch64.rpm pgdg 5.4.3 220.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_partman_14-5.4.3-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 14 pg_partman_14 pg_partman_14-5.4.3-1PGDG.rhel10.0.aarch64.rpm pgdg 5.4.3 220.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_partman_14-5.4.3-1PGDG.rhel10.0.aarch64.rpm
@@ -619,24 +684,34 @@ weight: 2510
 @ el10.aarch64 14 pg_partman_14 pg_partman_14-5.3.1-1PGDG.rhel10.aarch64.rpm pgdg 5.3.1 216.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_partman_14-5.3.1-1PGDG.rhel10.aarch64.rpm
 @ el10.aarch64 14 pg_partman_14 pg_partman_14-5.3.0-1PGDG.rhel10.aarch64.rpm pgdg 5.3.0 215.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_partman_14-5.3.0-1PGDG.rhel10.aarch64.rpm
 @ el10.aarch64 14 pg_partman_14 pg_partman_14-5.2.4-2PGDG.rhel10.aarch64.rpm pgdg 5.2.4 210.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_partman_14-5.2.4-2PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 14 postgresql-14-partman postgresql-14-partman_5.5.0-1.pgdg12+1_amd64.deb pgdg 5.5.0 242.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-14-partman_5.5.0-1.pgdg12+1_amd64.deb
 @ d12.x86_64 14 postgresql-14-partman postgresql-14-partman_5.4.3-1.pgdg12+1_amd64.deb pgdg 5.4.3 238.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-14-partman_5.4.3-1.pgdg12+1_amd64.deb
 @ d12.x86_64 14 postgresql-14-partman postgresql-14-partman_5.4.2-1.pgdg12+1_amd64.deb pgdg 5.4.2 237.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-14-partman_5.4.2-1.pgdg12+1_amd64.deb
+@ d12.aarch64 14 postgresql-14-partman postgresql-14-partman_5.5.0-1.pgdg12+1_arm64.deb pgdg 5.5.0 242.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-14-partman_5.5.0-1.pgdg12+1_arm64.deb
 @ d12.aarch64 14 postgresql-14-partman postgresql-14-partman_5.4.3-1.pgdg12+1_arm64.deb pgdg 5.4.3 238.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-14-partman_5.4.3-1.pgdg12+1_arm64.deb
 @ d12.aarch64 14 postgresql-14-partman postgresql-14-partman_5.4.2-1.pgdg12+1_arm64.deb pgdg 5.4.2 237.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-14-partman_5.4.2-1.pgdg12+1_arm64.deb
+@ d13.x86_64 14 postgresql-14-partman postgresql-14-partman_5.5.0-1.pgdg13+1_amd64.deb pgdg 5.5.0 242.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-14-partman_5.5.0-1.pgdg13+1_amd64.deb
 @ d13.x86_64 14 postgresql-14-partman postgresql-14-partman_5.4.3-1.pgdg13+1_amd64.deb pgdg 5.4.3 238.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-14-partman_5.4.3-1.pgdg13+1_amd64.deb
 @ d13.x86_64 14 postgresql-14-partman postgresql-14-partman_5.4.2-1.pgdg13+1_amd64.deb pgdg 5.4.2 237.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-14-partman_5.4.2-1.pgdg13+1_amd64.deb
+@ d13.aarch64 14 postgresql-14-partman postgresql-14-partman_5.5.0-1.pgdg13+1_arm64.deb pgdg 5.5.0 242.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-14-partman_5.5.0-1.pgdg13+1_arm64.deb
 @ d13.aarch64 14 postgresql-14-partman postgresql-14-partman_5.4.3-1.pgdg13+1_arm64.deb pgdg 5.4.3 238.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-14-partman_5.4.3-1.pgdg13+1_arm64.deb
 @ d13.aarch64 14 postgresql-14-partman postgresql-14-partman_5.4.2-1.pgdg13+1_arm64.deb pgdg 5.4.2 237.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-14-partman_5.4.2-1.pgdg13+1_arm64.deb
+@ u22.x86_64 14 postgresql-14-partman postgresql-14-partman_5.5.0-1.pgdg22.04+1_amd64.deb pgdg 5.5.0 237.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-14-partman_5.5.0-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 14 postgresql-14-partman postgresql-14-partman_5.4.3-1.pgdg22.04+1_amd64.deb pgdg 5.4.3 234.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-14-partman_5.4.3-1.pgdg22.04+1_amd64.deb
 @ u22.x86_64 14 postgresql-14-partman postgresql-14-partman_5.4.2-1.pgdg22.04+1_amd64.deb pgdg 5.4.2 233.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-14-partman_5.4.2-1.pgdg22.04+1_amd64.deb
+@ u22.aarch64 14 postgresql-14-partman postgresql-14-partman_5.5.0-1.pgdg22.04+1_arm64.deb pgdg 5.5.0 237.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-14-partman_5.5.0-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 14 postgresql-14-partman postgresql-14-partman_5.4.3-1.pgdg22.04+1_arm64.deb pgdg 5.4.3 233.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-14-partman_5.4.3-1.pgdg22.04+1_arm64.deb
 @ u22.aarch64 14 postgresql-14-partman postgresql-14-partman_5.4.2-1.pgdg22.04+1_arm64.deb pgdg 5.4.2 233.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-14-partman_5.4.2-1.pgdg22.04+1_arm64.deb
+@ u24.x86_64 14 postgresql-14-partman postgresql-14-partman_5.5.0-1.pgdg24.04+1_amd64.deb pgdg 5.5.0 233.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-14-partman_5.5.0-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 14 postgresql-14-partman postgresql-14-partman_5.4.3-1.pgdg24.04+1_amd64.deb pgdg 5.4.3 230.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-14-partman_5.4.3-1.pgdg24.04+1_amd64.deb
 @ u24.x86_64 14 postgresql-14-partman postgresql-14-partman_5.4.2-1.pgdg24.04+1_amd64.deb pgdg 5.4.2 230.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-14-partman_5.4.2-1.pgdg24.04+1_amd64.deb
+@ u24.aarch64 14 postgresql-14-partman postgresql-14-partman_5.5.0-1.pgdg24.04+1_arm64.deb pgdg 5.5.0 233.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-14-partman_5.5.0-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 14 postgresql-14-partman postgresql-14-partman_5.4.3-1.pgdg24.04+1_arm64.deb pgdg 5.4.3 230.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-14-partman_5.4.3-1.pgdg24.04+1_arm64.deb
 @ u24.aarch64 14 postgresql-14-partman postgresql-14-partman_5.4.2-1.pgdg24.04+1_arm64.deb pgdg 5.4.2 230.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-14-partman_5.4.2-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 14 postgresql-14-partman postgresql-14-partman_5.5.0-1.pgdg26.04+1_amd64.deb pgdg 5.5.0 233.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-14-partman_5.5.0-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 14 postgresql-14-partman postgresql-14-partman_5.4.3-1.pgdg26.04+1_amd64.deb pgdg 5.4.3 230.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-14-partman_5.4.3-1.pgdg26.04+1_amd64.deb
 @ u26.x86_64 14 postgresql-14-partman postgresql-14-partman_5.4.2-1.pgdg26.04+1_amd64.deb pgdg 5.4.2 230.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-14-partman_5.4.2-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 14 postgresql-14-partman postgresql-14-partman_5.5.0-1.pgdg26.04+1_arm64.deb pgdg 5.5.0 233.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-14-partman_5.5.0-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 14 postgresql-14-partman postgresql-14-partman_5.4.3-1.pgdg26.04+1_arm64.deb pgdg 5.4.3 229.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-14-partman_5.4.3-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 14 postgresql-14-partman postgresql-14-partman_5.4.2-1.pgdg26.04+1_arm64.deb pgdg 5.4.2 230.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-partman/postgresql-14-partman_5.4.2-1.pgdg26.04+1_arm64.deb
 {{< /pgext_matrix >}}
