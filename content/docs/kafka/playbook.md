@@ -1,7 +1,7 @@
 ---
 title: 预置剧本
 weight: 5045
-description: 使用 kafka.yml 与 kafka-rm.yml 执行 dynamic KRaft 生命周期、严格滚动、资源收敛、轮换与下线。
+description: 使用 kafka.yml 与 kafka-rm.yml 执行动态 KRaft 生命周期、严格滚动、资源收敛、轮换与下线。
 icon: fa-solid fa-scroll
 module: [KAFKA]
 categories: [任务]
@@ -9,11 +9,11 @@ aliases: [/docs/pilot/kafka/playbook]
 ---
 
 
-KAFKA 模块提供两个剧本：[`kafka.yml`](https://github.com/pgsty/pigsty/blob/main/kafka.yml) 用于部署 Apache Kafka 4.1+ dynamic KRaft 集群并收敛其安全、
+KAFKA 模块提供两个剧本：[`kafka.yml`](https://github.com/pgsty/pigsty/blob/main/kafka.yml) 用于部署 Apache Kafka 4.1+ 动态 KRaft 集群并收敛其安全、
 资源与监控状态；[`kafka-rm.yml`](https://github.com/pgsty/pigsty/blob/main/kafka-rm.yml) 用于下线集群或移除成员。
 
-{{% alert title="精确完整集群约束" color="warning" %}}
-每次生命周期操作必须用 `-l/--limit` 选择同一 `kafka_cluster` 的全部成员。缺少 Limit、只选部分成员或跨集群选择都会在写入前失败。先对完全相同的目标执行 `--check`；真实运行前仍需人工核验备份/重建意图、容量、业务窗口、回退方案与变更批准。
+{{% alert title="集群完整性约束" color="warning" %}}
+每个被选中的 `kafka_cluster` 必须包含其全部成员：部分选择会在写入前失败；选择一个集群、多个完整集群或不加 `-l` 裸跑全部集群都是允许的。先对完全相同的目标执行 `--check`；真实运行前仍需人工核验备份/重建意图、容量、业务窗口、回退方案与变更批准。
 {{% /alert %}}
 
 
@@ -36,14 +36,14 @@ Limit 规则是：**每个被选中的集群必须完整**。可以选择一个�
 
 ## 执行阶段
 
-`kafka.yml` 本身是一个薄封装：单一 Play 依次执行 `node_id` 与 `kafka` 两个角色，与 `pgsql.yml` 的结构一致。角色内部把生命周期拆成六个任务阶段；所有跨节点排序（并行 Bootstrap、逐个 Broker 准入、严格逐节点滚动）由启动阶段统一负责：
+`kafka.yml` 本身是一个薄封装：单一 Play 依次执行 `node_id` 与 `kafka` 两个角色，与 `pgsql.yml` 的结构一致。角色内部把生命周期拆成六个任务阶段；所有跨节点排序（并行 Bootstrap、逐个 Controller 加入、逐个 Broker 准入、严格逐节点滚动）由启动阶段统一负责：
 
 | 阶段   | 标签                | 作用                                                     |
 |:-----|:------------------|:-------------------------------------------------------|
-| 身份预检 | `kafka-id`        | 派生并断言身份、完整集群 Limit、角色、Rack、端口与保留键                      |
+| 身份预检 | `kafka-id`        | 派生并断言身份、集群完整性、角色、Rack、端口与保留键                      |
 | 安装   | `kafka_install`   | 创建 `kafka` 系统用户，安装 `java-runtime` 与 `kafka-stack` 软件包  |
 | 配置   | `kafka_config`    | 读取/恢复/创建 Manifest，签发安全材料，渲染配置，计算静态指纹，格式化空存储，判定生命周期路径   |
-| 启动   | `kafka_launch`    | 收敛不健康集群、逐个准入新 Broker、严格逐节点滚动，确认 Manifest 与已生效静态状态      |
+| 启动   | `kafka_launch`    | 收敛不健康集群、逐个加入 Controller 与准入 Broker、严格滚动，确认 Manifest 与已生效静态状态      |
 | 资源收敛 | `kafka_provision` | 收敛动态 minISR、用户凭据、ACL、Quota 与声明式 Topic，报告内部 Topic RF 漂移 |
 | 监控   | `kafka_monitor`   | 配置协议 Exporter 并注册 VictoriaMetrics Target               |
 {.full-width}
@@ -62,8 +62,8 @@ Play 使用 `any_errors_fatal: true`。某个阶段失败时，后续危险推�
 当集群停止或健康谓词不通过时，进入 Converge：
 
 1. 启动所有 Controller-capable 节点；
-2. 等待 Controller listener 与 dynamic quorum Leader；
-3. 验证初始 Controller Directory ID 仍在现场 quorum；
+2. 等待 Controller listener 与动态 Quorum Leader；
+3. 首次 Bootstrap 时验证初始 Controller Directory ID 已进入现场 Quorum；
 4. 启动纯 Broker；
 5. 等待 Broker listener 并要求完整集群健康；
 6. 只有配置已证明成功运行后，才持久化静态指纹。
@@ -75,7 +75,7 @@ JMX 不参与生命周期门禁：启动、准入与滚动的判定完全基于�
 
 新格式化的 `kafka_role: broker` 逐个准入（`admit`）：启动后要求它已经注册且未 Fenced 才继续下一个。
 
-新的 Combined/Controller 节点则逐个加入 dynamic quorum（`join`）：已 Commission 的集群以 `--no-initial-controllers` 全新格式化该节点，它以 Observer 身份启动并追平元数据，随后角色执行 `add-controller` 将其提升为 Voter，并用健康后置检查确认它进入 Voter 集合且集群完整健康。加入流程可重入：中断后重跑会从现场状态继续；若其 `node.id` 在 quorum 中残留着死去前任的 Voter 条目，配置阶段会快速失败并给出先行 `kafka-rm.yml` 退役的确切命令。
+新的 Combined/Controller 节点则逐个加入动态 Quorum（`join`）：已 Commission 的集群以 `--no-initial-controllers` 全新格式化该节点，它以 Observer 身份启动并追平元数据，随后角色执行 `add-controller` 将其提升为 Voter，并用健康后置检查确认它进入 Voter 集合且集群完整健康。加入流程可重入：中断后重跑会从现场状态继续；若其 `node.id` 在 Quorum 中残留着死去前任的 Voter 条目，配置阶段会快速失败并给出先行 `kafka-rm.yml` 退役的确切命令。
 
 准入/加入只证明服务成为成员；已有 Partition 不会自动迁移到新 Broker，必须另行执行显式 Reassignment。
 
@@ -88,7 +88,7 @@ JMX 不参与生命周期门禁：启动、准入与滚动的判定完全基于�
 - 重启后要求目标 Controller 回到 Voter 且重新追平、目标 Broker 注册且未 Fenced、其副本重新进入 ISR；
 - 任一门禁失败立即停止后续节点。
 
-如果故障修复与静态变化同时存在，Converge 只启动已停止的成员，不并行重启仍在线成员；quorum 恢复并追平后，尚未加载的静态变化继续进入严格滚动。
+如果故障修复与静态变化同时存在，Converge 只启动已停止的成员，不并行重启仍在线成员；Quorum 恢复并追平后，尚未加载的静态变化继续进入严格滚动。
 
 如果静态指纹没有变化，Kafka 不重启。动态资源变化仍会在资源收敛阶段在线生效。
 
@@ -104,7 +104,7 @@ JMX 不参与生命周期门禁：启动、准入与滚动的判定完全基于�
 | `kafka_user`                                  | 创建 `kafka` 系统用户与用户组                                 |
 | `kafka_pkg`                                   | 按平台映射安装 `java-runtime` 与 `kafka-stack` 软件包          |
 | `kafka_config`                                | Manifest、安全材料、配置渲染、静态指纹、存储格式化与路径判定                  |
-| `kafka_launch`                                | Converge、纯 Broker 串行准入、严格单节点滚动与 Manifest Commission |
+| `kafka_launch`                                | Converge、Controller 串行加入、Broker 串行准入、严格滚动与 Manifest Commission |
 | `kafka_provision`                             | 动态 minISR、Topic、User、ACL 与 Quota 收敛                 |
 | `kafka_monitor` / `monitor`                   | 协议 Exporter 配置与监控注册总入口                              |
 | `kafka_register` / `register` / `add_metrics` | 仅刷新 VictoriaMetrics 文件发现 Target                     |
@@ -115,18 +115,18 @@ JMX 不参与生命周期门禁：启动、准入与滚动的判定完全基于�
 
 --------
 
-## Identity、格式化与 Manifest
+## 身份、格式化与 Manifest
 
 角色在写配置前校验：
 
-- Limit 精确包含一个 Kafka 集群的所有成员；
+- 每个被选中的集群包含其全部成员；
 - `kafka_seq` 唯一，角色全部省略或全部显式；
 - 至少一个 Controller 和一个 Broker；
 - Rack 在所有 Broker-capable 节点上全有或全无；
 - 端口有效、互不冲突，角色自有键未被 `kafka_parameters` 覆盖；
 - Manifest、安全模式、`meta.properties` 与现场集群身份一致。
 
-新集群随机生成 Cluster ID 和初始 Controller Directory ID，并以明确 dynamic 模式格式化每个节点。已有 `${kafka_data}/metadata/meta.properties` 时在本地验证 Cluster ID 与 Node ID；初始 Controller Directory ID 则在启动后与现场 quorum 比对。角色不会自动重新格式化已有存储。
+新集群随机生成 Cluster ID 和初始 Controller Directory ID，并以显式动态 Quorum 模式格式化每个节点。已有 `${kafka_data}/metadata/meta.properties` 时在本地验证 Cluster ID 与 Node ID；初始 Controller Directory ID 只在首次 Bootstrap 启动后与现场 Quorum 比对，Commission 之后成员关系以 Raft 现场状态为准。角色不会自动重新格式化已有存储。
 
 Bootstrap Manifest 的权威副本位于每个集群成员上：
 
@@ -139,7 +139,7 @@ Bootstrap Manifest 的权威副本位于每个集群成员上：
 - 所有成员都没有 Manifest 副本而存储已格式化时，失败关闭并提示先在任一成员上恢复该文件；
 - Manifest 存在而所有数据盘为空时失败关闭；
 - Cluster ID、安全模式或 Controller Identity 冲突时失败关闭；
-- inventory 中新增的非初始 Controller 不会自动成为 Voter。
+- 新节点的 `node.id` 在 Quorum 中残留前任 Voter 条目时快速失败，要求先用 `kafka-rm.yml` 退役。
 
 不要删除 `meta.properties`、Manifest 或 Secret 来绕过保护。
 

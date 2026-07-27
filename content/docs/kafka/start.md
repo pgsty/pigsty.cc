@@ -23,14 +23,14 @@ aliases: [/docs/pilot/kafka/start]
 | 阶段 | 目标 | 最终结果 |
 |:---:|:---|:---|
 | 1 | 部署单节点开发集群 | 1 个 combined 节点、PLAINTEXT、RF=1 Topic、CLI 读写 |
-| 2 | 部署三节点安全 HA 演示基线 | 3 个 combined 节点、dynamic KRaft、TLS/SCRAM/ACL、RF=3/minISR=2 |
+| 2 | 部署三节点安全 HA 演示基线 | 3 个 combined 节点、动态 KRaft、TLS/SCRAM/ACL、RF=3/minISR=2 |
 | 3 | 接入应用客户端 | 使用应用 Principal、Pigsty CA 与 SASL_SSL 生产/消费 |
 | 4 | 修改核心参数 | 演示 Heap、Broker 参数、Topic Partition/保留和安全滚动 |
 | 5 | 上线验收 | 检查 Quorum、ISR、端到端读写、监控、容量与运行手册 |
 {.full-width}
 
 {{% alert title="两个示例是独立集群" color="warning" %}}
-下面的 `kf-dev` 与 `kf-main` 是两套独立新集群。如果确有需要，也可以给单节点 `kf-dev` 声明两个新的 combined 节点后重跑 `./kafka.yml -l kf-dev`，角色会逐个完成格式化、Observer 追平与 `add-controller` 提升，把它原地扩成三 Controller 集群——但演示环境仍建议直接建新集群，扩容语义详见[扩容与拓扑变更](/docs/kafka/admin#扩容新增-broker-或-controller)。
+下面的 `kf-dev` 与 `kf-main` 是两套独立新集群。如果确有需要，也可以给单节点 `kf-dev` 声明两个新的 combined 节点后重跑 `./kafka.yml -l kf-dev`，角色会逐个完成格式化、Observer 追平与 `add-controller` 提升，把它原地扩成三 Controller 集群——但演示环境仍建议直接建新集群，扩容语义详见[扩容集群](/docs/kafka/admin#扩容集群)。
 {{% /alert %}}
 
 
@@ -88,7 +88,7 @@ all:
 这个配置会得到：
 
 - 一个随机 Cluster ID；
-- 一个 dynamic KRaft combined 节点；
+- 一个动态 KRaft combined 节点；
 - 默认 RF=1、minISR=1；
 - 一个名为 `quickstart.events` 的单 Partition Topic；
 - JMX Exporter `:9404` 与一个协议 Exporter `:9308`。
@@ -147,7 +147,7 @@ sudo -u kafka /usr/local/bin/pigsty-kafka-health cluster \
   --command-config /etc/kafka/admin.properties
 ```
 
-返回 JSON 中应有 `"healthy": true`。继续检查 dynamic quorum 与 Topic：
+返回 JSON 中应有 `"healthy": true`。继续检查动态 Quorum 与 Topic：
 
 ```bash
 /opt/kafka/bin/kafka-metadata-quorum.sh \
@@ -257,7 +257,7 @@ all:
 这个配置的关键语义：
 
 - 三个节点全部省略 `kafka_role`，因此一致使用 `combined`；
-- 新集群直接 Bootstrap 为 dynamic KRaft；
+- 新集群直接 Bootstrap 为动态 KRaft；
 - `scram` 同时启用节点 TLS、Controller mTLS、SCRAM-SHA-512、ACL 和默认拒绝；
 - 三 Broker 初始复制策略自动派生为 RF=3、minISR=2；
 - `quickstart.events` 显式创建 12 个 Partition、3 副本；
@@ -509,7 +509,7 @@ kafka_parameters:
 ### 运行与监控
 
 - `/usr/local/bin/pigsty-kafka-health cluster` 返回健康；
-- dynamic quorum 只有一个 Leader，所有预期 Controller 都在 Current Voters；
+- 动态 Quorum 只有一个 Leader，所有预期 Controller 都在 Current Voters；
 - 没有 Offline、Under Replicated 或 Under Min ISR Partition；
 - 使用真实应用网络、真实 Principal 完成生产与消费验证；
 - [Kafka Overview](https://demo.pigsty.cc/ui/d/kafka-overview)、[Kafka Instance](https://demo.pigsty.cc/ui/d/kafka-instance) 与 [Kafka Node](https://demo.pigsty.cc/ui/d/kafka-node) 数据正常；

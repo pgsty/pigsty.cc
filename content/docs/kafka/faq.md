@@ -1,7 +1,7 @@
 ---
 title: 常见问题
 weight: 5048
-description: Pigsty Kafka 4.1+ dynamic KRaft 模块常见问题与故障排查。
+description: Pigsty Kafka 4.1+ 动态 KRaft 模块常见问题与故障排查。
 icon: fa-solid fa-circle-question
 module: [KAFKA]
 categories: [参考]
@@ -11,7 +11,7 @@ aliases: [/docs/pilot/kafka/faq]
 
 ## 当前 KAFKA 模块是什么成熟度？
 
-当前角色已实现生产级 v1 基线：dynamic KRaft、完整集群护栏、冷启动/修复、Broker 串行准入与 Controller 动态加入、成员退役（含死节点）、故障节点三步替换、严格滚动、TLS/SCRAM/ACL、Topic/User 声明式收敛、内部凭据/证书轮换以及完整监控链路。
+当前角色已实现生产级 v1 基线：动态 KRaft、完整集群护栏、冷启动/修复、Broker 串行准入与 Controller 动态加入、成员退役（含死节点）、故障节点三步替换、严格滚动、TLS/SCRAM/ACL、Topic/User 声明式收敛、内部凭据/证书轮换以及完整监控链路。
 
 它不是托管 Kafka 产品。生产仍需使用 `kafka_security: scram`、奇数 Controller、足够 Broker/RF/minISR，并补充容量规划、Reassignment/数据均衡、升级、备份、恢复与故障演练。默认 `plaintext` 只适合开发或可信隔离网络。
 
@@ -20,9 +20,9 @@ aliases: [/docs/pilot/kafka/faq]
 
 ## 为什么没有 ZooKeeper，也没有 `controller.quorum.voters`？
 
-本模块面向 Kafka 4.1+，使用原生 dynamic KRaft，不安装 ZooKeeper，也不创建静态 quorum。所有成员渲染 `controller.quorum.bootstrap.servers`；新集群显式使用 `--initial-controllers`/`--no-initial-controllers` 格式化，启动后角色会校验初始 Controller 的 Directory ID 已进入现场 quorum。
+本模块面向 Kafka 4.1+，使用原生动态 KRaft，不安装 ZooKeeper，也不创建静态 Quorum。所有成员渲染 `controller.quorum.bootstrap.servers`；新集群显式使用 `--initial-controllers`/`--no-initial-controllers` 格式化，启动后角色会校验初始 Controller 的 Directory ID 已进入现场 Quorum。
 
-初始 Controller Identity 写入 Bootstrap Manifest，但它只是"出生证明"：集群首次 Commission 之后，现场 quorum 的成员关系以 Raft 自身为准。后续 Controller 的增删由剧本编排完成——新增走 `kafka.yml` 的 Observer 追平 + `add-controller` 加入流程，删除走 `kafka-rm.yml` 真子集退役（自动 `remove-controller`）——你只需要编辑 inventory 并运行对应剧本。
+初始 Controller Identity 写入 Bootstrap Manifest，但它只是"出生证明"：集群首次 Commission 之后，现场 Quorum 的成员关系以 Raft 自身为准。后续 Controller 的增删由剧本编排完成——新增走 `kafka.yml` 的 Observer 追平 + `add-controller` 加入流程，删除走 `kafka-rm.yml` 真子集退役（自动 `remove-controller`）——你只需要编辑 inventory 并运行对应剧本。
 
 
 --------
@@ -64,7 +64,7 @@ getent hosts <inventory-hostname>
 
 ## 为什么提示 Cluster ID、Node ID 或 Directory ID 不匹配？
 
-角色会交叉校验 Bootstrap Manifest、`${kafka_data}/metadata/meta.properties`、inventory 与活 dynamic quorum。常见原因包括：
+角色会交叉校验 Bootstrap Manifest、`${kafka_data}/metadata/meta.properties`、inventory 与现场动态 Quorum。常见原因包括：
 
 - 修改了 `kafka_cluster` 或 `kafka_seq`；
 - 把其他集群的数据盘挂载到当前节点；
@@ -88,7 +88,7 @@ getent hosts <inventory-hostname>
 
 ## 为什么 `kafka_parameters` 中的某些键被拒绝？
 
-身份、dynamic quorum、Listener、存储、复制、Rack 和安全必须由角色统一管理。保留模式包括：
+身份、动态 Quorum、Listener、存储、复制、Rack 和安全必须由角色统一管理。保留模式包括：
 
 ```text
 process.roles, node.id, controller.quorum.*,

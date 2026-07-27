@@ -1,7 +1,7 @@
 ---
 title: 模块：Kafka
 weight: 4900
-description: 使用 Pigsty 部署、保护与监控 Apache Kafka 4.1+ dynamic KRaft 集群。
+description: 使用 Pigsty 部署、保护与监控 Apache Kafka 4.1+ 动态 KRaft 集群。
 icon: fas fa-share-nodes
 module: [KAFKA]
 categories: [参考]
@@ -9,11 +9,11 @@ aliases: [/docs/pilot/kafka]
 ---
 
 
-[Kafka](https://kafka.apache.org/) 是一个分布式事件流平台。Pigsty 的 [`KAFKA`](/docs/kafka) 模块使用 RPM/DEB 软件包，在纳管节点上部署 **Apache Kafka 4.1+ dynamic KRaft** 集群，并统一管理安全、资源、生命周期与可观测性。
+[Kafka](https://kafka.apache.org/) 是一个分布式事件流平台。Pigsty 的 [`KAFKA`](/docs/kafka) 模块使用 RPM/DEB 软件包，在纳管节点上部署 **Apache Kafka 4.1+ 动态 KRaft** 集群，并统一管理安全、资源、生命周期与可观测性。
 
 {{% alert title="当前状态：Beta 模块" color="info" %}}
 当前 Kafka 模块处于 Beta 状态。用于严肃生产环境前请务必充分测试，确保满足业务需求。
-包括 dynamic KRaft、严格滚动、TLS/SCRAM/ACL、声明式 Topic/User、凭据与证书轮换，以及完整监控链路。
+包括动态 KRaft、严格滚动、TLS/SCRAM/ACL、声明式 Topic/User、凭据与证书轮换，以及完整监控链路。
 {{% /alert %}}
 
 
@@ -23,7 +23,7 @@ aliases: [/docs/pilot/kafka]
 
 KAFKA 模块当前提供：
 
-- 使用原生 dynamic KRaft，不安装 ZooKeeper，也不渲染静态 `controller.quorum.voters`
+- 使用原生动态 KRaft，不安装 ZooKeeper，也不渲染静态 `controller.quorum.voters`
 - 支持 `combined`、`broker`、`controller` 三种原生角色和复合/分离拓扑
 - 为新集群随机生成 Cluster ID 与 Controller Directory ID，并以最小 Bootstrap Manifest 保护身份
 - 根据实时健康状态选择冷启动/修复、Broker 串行准入、Controller 动态加入或严格单节点滚动路径
@@ -44,7 +44,7 @@ KAFKA 模块依赖 [`NODE`](/docs/node) 完成节点纳管、仓库与基础监�
 
 ```mermaid
 flowchart LR
-    admin["Pigsty 管理节点"] -->|"kafka.yml / exact cluster"| kafka["Kafka 4.1+ / dynamic KRaft"]
+    admin["Pigsty 管理节点"] -->|"kafka.yml / exact cluster"| kafka["Kafka 4.1+ / 动态 KRaft"]
     kafka --> jmx["每个 Kafka JVM / JMX :9404"]
     kafka --> exporter["最多两个 Broker / kafka_exporter :9308"]
     kafka --> journal["Journald"]
@@ -71,7 +71,7 @@ flowchart LR
 | 文档                                 | 内容                                    |
 |:-----------------------------------|:--------------------------------------|
 | [快速上手](/docs/kafka/start)    | 从单节点到三节点安全集群、客户端接入、参数修改与上线检查          |
-| [集群配置](/docs/kafka/config)   | 拓扑、dynamic KRaft、网络、存储、安全与资源声明        |
+| [集群配置](/docs/kafka/config)   | 拓扑、动态 KRaft、网络、存储、安全与资源声明        |
 | [参数参考](/docs/kafka/param)    | 15 项持久公开参数及临时运维变量                     |
 | [日常管理](/docs/kafka/admin)    | 状态检查、Topic、消息、Consumer Group 与拓扑变更    |
 | [预置剧本](/docs/kafka/playbook) | `kafka.yml` 生命周期、任务标签、轮换与清理保护         |
@@ -88,7 +88,7 @@ flowchart LR
 [快速上手](/docs/kafka/start) 提供一条从零开始、由浅入深的完整路径：
 
 1. 部署一个 combined 单节点开发集群，完成 Topic 与消息读写；
-2. 部署独立的三节点 dynamic KRaft 集群，启用 TLS/SCRAM/ACL；
+2. 部署独立的三节点动态 KRaft 集群，启用 TLS/SCRAM/ACL；
 3. 创建应用 Principal、Topic、Quota，并从外部客户端安全接入；
 4. 修改 Heap、Broker 与 Topic 参数，观察在线收敛和严格滚动；
 5. 按 Quorum、ISR、网络、安全、监控和运行手册完成上线检查。
@@ -117,8 +117,7 @@ flowchart LR
 
 当前角色提供的是 Kafka 核心部署基线，不替代完整的流平台或托管服务。下列能力仍需显式运行手册或独立组件：
 
-- Controller 增删/替换：集群使用 dynamic quorum，但成员变更必须显式执行格式化、追平与 `add-controller`/`remove-controller` 流程；修改清单本身不会加入或移除 Voter
-- Broker 扩容后的既有 Partition Reassignment、Broker 退役与副本再均衡
+- Broker 扩容后的既有 Partition Reassignment 与副本再均衡（成员的加入/退役/替换已由剧本编排，数据搬迁仍需显式计划）
 - 扩容后提升冻结的 `default.replication.factor`：Kafka 4.3 需要显式数据迁移与静态配置维护窗口
 - 已有 Topic 的副本因子变更、Topic 删除与用户删除
 - 已格式化集群从 `plaintext` 在线迁移到 `scram`

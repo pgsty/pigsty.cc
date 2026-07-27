@@ -1,7 +1,7 @@
 ---
 title: 集群配置
 weight: 5042
-description: 规划 Kafka dynamic KRaft 拓扑、身份、网络、存储、安全与声明式资源。
+description: 规划 Kafka 动态 KRaft 拓扑、身份、网络、存储、安全与声明式资源。
 icon: fa-solid fa-code
 module: [KAFKA]
 categories: [参考]
@@ -124,14 +124,14 @@ kf-main:
 
 --------
 
-## Dynamic KRaft 与 Bootstrap Manifest
+## 动态 KRaft 与 Bootstrap Manifest
 
-新集群直接使用 dynamic quorum：所有节点渲染 `controller.quorum.bootstrap.servers`，不会生成静态 `controller.quorum.voters`。首次格式化时：
+新集群直接使用动态 Quorum：所有节点渲染 `controller.quorum.bootstrap.servers`，不会生成静态 `controller.quorum.voters`。首次格式化时：
 
 - Cluster ID 随机生成，不由集群名哈希；
 - 初始 Controller 的 Directory ID 随机生成并冻结；
 - 每个节点显式使用 `--initial-controllers` 或 `--no-initial-controllers` 格式化模式；
-- 启动后角色等待 dynamic quorum 选出 Leader，并校验每个初始 Controller 的 Directory ID 都在现场 quorum 中。
+- 首次 Bootstrap 启动后，角色等待动态 Quorum 选出 Leader，并校验每个初始 Controller 的 Directory ID 都已进入现场 Quorum。
 
 Bootstrap-only 事实保存在每个集群成员节点上：
 
@@ -146,7 +146,7 @@ Bootstrap-only 事实保存在每个集群成员节点上：
 - 所有成员都找不到 Manifest 副本而存储已格式化时，失败关闭并提示先在任一成员上恢复该文件；
 - 已格式化的 `scram` 集群在所有成员都没有 Secret 副本时同样失败关闭。
 
-增加、替换或删除 Controller 不是普通清单操作。新 Controller 必须针对现有集群显式格式化、启动并追平，然后执行 Kafka `add-controller`；删除则需要对应的 `remove-controller` 流程。角色会拒绝把未登记的新 Controller 仅凭 inventory 自动加入 Voter 集合。
+Manifest 是集群的"出生证明"：首次 Commission 之后，成员关系以 Raft 现场状态为权威。此后在清单中新增的 Combined/Controller 节点会由剧本编排加入动态 Quorum（全新格式化 → Observer 追平 → `add-controller` 提升），退役则由 `kafka-rm.yml` 真子集选择完成（自动 `remove-controller` 与 Broker 注销），详见[扩容集群](/docs/kafka/admin#扩容集群)与[缩容集群](/docs/kafka/admin#缩容集群)。
 
 
 --------
