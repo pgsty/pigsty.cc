@@ -22,9 +22,12 @@ KAFKA 模块提供两个剧本：[`kafka.yml`](https://github.com/pgsty/pigsty/b
 ## 基本用法
 
 ```bash
-./kafka.yml --check -l kf-main
-./kafka.yml -l kf-main
+./kafka.yml --check -l kf-main   # 先空跑
+./kafka.yml -l kf-main           # 创建或收敛单个集群
+./kafka.yml                      # 裸跑：一次创建/收敛清单中的所有 Kafka 集群
 ```
+
+Limit 规则是：**每个被选中的集群必须完整**。可以选择一个集群、多个集群，或不加 `-l` 对全部集群裸跑（集群内严格串行、集群间并发推进）；但部分选择某个集群的成员会被直接拒绝。
 
 检查模式验证公开 API、完整集群、角色、Rack、端口、Manifest 与可检查的文件变化，但会跳过格式化、服务启动和实时健康验收。因此 `--check` 成功不等于运行时一定成功。
 
@@ -68,11 +71,13 @@ Play 使用 `any_errors_fatal: true`。某个阶段失败时，后续危险推�
 JMX 不参与生命周期门禁：启动、准入与滚动的判定完全基于角色自有的 Kafka CLI/metadata 管理通道。
 
 
-### 健康集群增加纯 Broker
+### 健康集群新增 Broker 或 Controller
 
-角色只自动准入新格式化的 `kafka_role: broker`。每次处理一个新 Broker，并要求它已经注册且未 Fenced 后才继续。新增 Controller 或 combined 节点不能走该捷径。
+新格式化的 `kafka_role: broker` 逐个准入（`admit`）：启动后要求它已经注册且未 Fenced 才继续下一个。
 
-准入只证明服务加入；已有 Partition 不会自动迁移到新 Broker，必须另行执行显式 Reassignment。
+新的 Combined/Controller 节点则逐个加入 dynamic quorum（`join`）：已 Commission 的集群以 `--no-initial-controllers` 全新格式化该节点，它以 Observer 身份启动并追平元数据，随后角色执行 `add-controller` 将其提升为 Voter，并用健康后置检查确认它进入 Voter 集合且集群完整健康。加入流程可重入：中断后重跑会从现场状态继续；若其 `node.id` 在 quorum 中残留着死去前任的 Voter 条目，配置阶段会快速失败并给出先行 `kafka-rm.yml` 退役的确切命令。
+
+准入/加入只证明服务成为成员；已有 Partition 不会自动迁移到新 Broker，必须另行执行显式 Reassignment。
 
 
 ### 健康集群静态变化
@@ -229,7 +234,9 @@ Target 文件每次完整运行按当前 Exporter 放置刷新；Target 的删�
 `kafka_rm_data` 默认为 `true`：一次默认参数的 `kafka-rm.yml` 就会删除所选节点的数据/KRaft 元数据与 `/etc/kafka` 恢复状态。剧本没有确认字符串等额外闸门，执行前必须人工核对 `-l` 目标、备份或明确重建意图，并评估生产者/消费者影响。
 {{% /alert %}}
 
-`kafka-rm.yml` 只负责清理已经完成退役的单个成员（如 `-l 10.10.10.13`）：Broker 必须先迁走 Partition/Leader，Controller-capable 成员必须先完成显式 `remove-controller` 并确认新多数派，且缩容后的 Broker 数不能低于现有 Topic RF。跳过退役流程会让残留 Voter 或副本持续不健康；身份冲突、Exporter 异常或一般启动失败都不是删除数据的理由。
+用 `-l` 选择集群的**真子集**（如 `-l 10.10.10.13`）则是成员退役而非集群下线：剧本会通过一台幸存成员自动摘除该节点的 KRaft Voter 条目（`remove-controller`，多成员时严格串行）并注销其 Broker 注册（`unregister`），再执行本机清理。剧本容忍目标节点不可达，因此对已经死亡的节点同样适用——这也是[替换故障节点](/docs/kafka/admin#替换故障节点)的第一步。
+
+退役自动化不等于免除规划：缩容后剩余 Controller 应保持奇数并构成多数派，剩余 Broker 数不能低于现有 Topic 的最大 RF；若被退役 Broker 仍持有 Partition 副本，剧本会打印警告——计划内缩容应当先完成 Reassignment 排空。身份冲突、Exporter 异常或一般启动失败都不是删除数据的理由。
 
 
 --------
@@ -238,8 +245,7 @@ Target 文件每次完整运行按当前 Exporter 放置刷新；Target 的删�
 
 `kafka.yml` 当前不会自动完成：
 
-- Controller `add-controller` / `remove-controller` 成员流程；
-- 新 Broker 加入后的既有 Partition Reassignment、退役 Drain 与数据均衡；
+- 新 Broker 加入后的既有 Partition Reassignment、退役前的 Drain 与数据均衡；
 - 已有 Topic RF 变化、Topic 删除或用户删除；
 - 已格式化集群 `plaintext` 与 `scram` 之间的在线迁移；
 - Kafka 版本升级、Feature Level 终结、跨版本迁移与回滚；

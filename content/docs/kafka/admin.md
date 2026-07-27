@@ -222,6 +222,7 @@ Lag 要结合消费速率与业务 SLO 判断：短暂积压可能是批处理�
 角色根据现场健康和静态指纹自动选择路径：
 
 - 集群不健康或停止：只启动已停止的 Controller，恢复并追平 quorum 后再启动 Broker；若同时存在静态变化，仍在线成员随后进入严格滚动；
+- 存在待加入的 Controller-capable 节点：逐个以 Observer 追平后 `add-controller` 提升为 Voter；
 - 健康集群新增纯 Broker：逐个格式化、启动并确认注册；
 - 健康集群存在静态变化：严格逐节点滚动，每节点重启前后执行 Controller 零 Lag/最近追平、quorum、Offline Partition、Under Min ISR 与 ISR 追平门禁；
 - 没有静态变化：不重启 Kafka。
@@ -233,16 +234,24 @@ Lag 要结合消费速率与业务 SLO 判断：短暂积压可能是批处理�
 
 ## 扩容与拓扑变更
 
-### 增加纯 Broker
+### 扩容：新增 Broker 或 Controller
 
-健康集群可以新增 `kafka_role: broker` 节点。为新节点分配从未冲突的 `kafka_seq`，更新完整 inventory，然后仍以完整集群为目标：
+健康集群可以直接在 inventory 中声明新成员：`kafka_role: broker`、`combined` 或 `controller` 都可以。为新节点分配从未使用过的 `kafka_seq`（注意：一台主机同一时间只能属于一个 Kafka 集群），确保节点已被 Pigsty 纳管（`./node.yml -l <ip>`），然后仍以完整集群为目标：
 
 ```bash
 ./kafka.yml --check -l kf-main
 ./kafka.yml -l kf-main
 ```
 
-角色会将新格式化的纯 Broker 一次准入一个，并验证 Broker 已注册且未 Fenced。不能只 `-l` 新节点；也不能把新的 `combined` 或 `controller` 当作普通 Broker 加入。
+角色按成员类型自动选择准入路径，每次只处理一个新节点：
+
+- **纯 Broker**：格式化、启动，并验证 Broker 已注册且未 Fenced（`admit`）；
+- **Combined / Controller**：以 `--no-initial-controllers` 全新格式化、以 Observer 身份启动并追平元数据，再通过 `add-controller` 提升为 Voter，最后验证其已进入 Voter 集合且完整健康（`join`）。
+
+运行结束时的 `quorum-join-hosts` / `broker-admission-hosts` 摘要会列出本次实际处理的节点。两点提醒：
+
+- 新增 Controller-capable 节点会改变所有成员的 `controller.quorum.bootstrap.servers`，因此存量节点会随之执行一轮门禁保护下的严格滚动，属于预期行为；
+- 扩出偶数个 Controller 时角色会打印警告：偶数 quorum 不提升容错能力，请尽量保持奇数。
 
 新 Broker 加入不会迁移已有 Partition。必须另外生成、评审并监控 `kafka-reassign-partitions.sh` 计划，控制磁盘/网络负载并准备回退。“服务已注册”不等于“扩容完成”。
 
@@ -253,17 +262,32 @@ Reassignment，再规划 Controller 高可用或维护窗口，最后让新的�
 安全滚动生效；不能为了改默认值绕过停机门禁。
 
 
-### 增加、替换或删除 Controller
+### 缩容：退役成员
 
-集群从一开始就是 dynamic quorum，但 Controller 成员关系仍是显式 Kafka 管理动作：
+用 `kafka-rm.yml` 选择集群的**真子集**即为成员退役（选择整个集群则是[集群下线](/docs/kafka/playbook#集群下线)）。退役会通过一台幸存成员，自动从现场元数据中摘除该节点：
 
-1. 核对当前 Leader、Voter、Directory ID 与多数派；
-2. 针对现有 Cluster ID 显式格式化新 Controller；
-3. 启动并确认其追平；
-4. 执行并验证 `add-controller`；
-5. 删除时执行对应 `remove-controller`，确认新多数派后再退役节点。
+```bash
+./kafka-rm.yml -l 10.10.10.13     # 退役单个成员：摘除 Voter 条目、注销 Broker、清理本机
+```
 
-普通 inventory 变更不会自动执行这些步骤；角色会拒绝未在初始 Manifest 中登记的未格式化 Controller。该操作应使用 Kafka 官方成员变更流程与经过演练的独立运行手册。
+执行内容依次为：注销监控 Target → 停止服务 → `remove-controller` 摘除 KRaft Voter 条目（若该成员是 Voter；多成员退役时严格串行）→ `kafka-cluster.sh unregister` 注销 Broker → 清理本机配置与数据（受 `kafka_rm_data` 控制）。完成后从 `pigsty.yml` 中删除该成员条目。
+
+退役前请自行确认：剩余 Controller 仍构成多数派、保持奇数个 Controller、剩余 Broker 数不低于现有 Topic 的最大 RF。如果被退役 Broker 上仍有 Partition 副本，角色会打印警告：这些 Partition 将保持副本不足，直到同 `kafka_seq` 的替换节点重新加入（自动继承副本分配并补数据），或你显式执行 Reassignment 将副本迁走。**计划内缩容应当先 Reassignment 排空、再退役**。
+
+
+### 替换故障节点
+
+节点永久损坏（磁盘丢失、机器报废）时，保持其 IP 与 `kafka_seq` 不变，三步完成补换：
+
+```bash
+./kafka-rm.yml -l 10.10.10.13     # ① 退役死者：摘除 Voter 条目与 Broker 注册（节点不可达也能执行）
+./node.yml     -l 10.10.10.13     # ② 纳管替换机器（修复或换新，保持 IP）
+./kafka.yml    -l kf-main         # ③ 重新加入：格式化、追平、准入/提升，自动继承原副本分配并补数据
+```
+
+第 ① 步的所有元数据操作都委派给幸存成员执行，因此对已经无法连接的死节点同样有效；它还会一并清理监控 Target，避免死节点持续触发 `KafkaDown` 告警。第 ③ 步中，同 `kafka_seq` 的 Broker 会自动继承原 Partition 分配并从副本重新同步数据，无需手工 Reassignment。
+
+如果跳过第 ① 步直接重装节点并重跑 `kafka.yml`，角色会在配置阶段快速失败，并在报错中给出残留 Voter 条目的 Directory ID 与确切的 `kafka-rm.yml` 命令——按提示执行后重跑即可。加入流程可安全重入：任一步骤被中断后，重跑 `kafka.yml` 会从现场状态继续。
 
 
 ### 修改地址或端口
@@ -284,15 +308,15 @@ Reassignment，再规划 Controller 高可用或维护窗口，最后让新的�
 
 ## 数据保护与恢复
 
-Kafka 的数据保护依赖跨故障域副本、正确的 minISR、生产者 ACK 和经过演练的恢复流程。当前角色不提供 Kafka 数据备份、自动 Broker Drain、KRaft 恢复编排或跨地域灾难恢复。
+Kafka 的数据保护依赖跨故障域副本、正确的 minISR、生产者 ACK 和经过演练的恢复流程。当前角色不提供 Kafka 数据备份、自动 Broker Drain（计划内缩容需先手工 Reassignment）或跨地域灾难恢复。
 
 发生磁盘或节点故障时：
 
 1. 先查看 Kafka Overview/Node、quorum、ISR、Offline Partition 与 Under Min ISR；
 2. 保存 `journalctl -u kafka`、节点指标、Manifest、`server.properties` 与 `meta.properties` 证据；
 3. 确认节点角色、`node.id`、Cluster ID、Directory ID 与剩余副本可用性；
-4. 在明确恢复/替换方案前，不执行 `kafka-rm.yml`，不删除 `meta.properties`；
-5. 对重格式化、身份替换、Reassignment 或 Controller 成员操作使用独立运行手册。
+4. 节点确认无法恢复时，按[替换故障节点](#替换故障节点)三步走：`kafka-rm.yml` 退役 → `node.yml` 纳管 → `kafka.yml` 重入；磁盘尚存、仅服务异常时**不要**急于退役或删除 `meta.properties`，先尝试普通收敛拉起；
+5. 对 Reassignment、RF 变更等数据搬迁操作仍使用独立评审的运行手册。
 
 
 --------

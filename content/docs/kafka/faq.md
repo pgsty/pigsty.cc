@@ -11,9 +11,9 @@ aliases: [/docs/pilot/kafka/faq]
 
 ## 当前 KAFKA 模块是什么成熟度？
 
-当前角色已实现生产级 v1 基线：dynamic KRaft、完整集群护栏、冷启动/修复、纯 Broker 串行准入、严格滚动、TLS/SCRAM/ACL、Topic/User 声明式收敛、内部凭据/证书轮换以及完整监控链路。
+当前角色已实现生产级 v1 基线：dynamic KRaft、完整集群护栏、冷启动/修复、Broker 串行准入与 Controller 动态加入、成员退役（含死节点）、故障节点三步替换、严格滚动、TLS/SCRAM/ACL、Topic/User 声明式收敛、内部凭据/证书轮换以及完整监控链路。
 
-它不是托管 Kafka 产品。生产仍需使用 `kafka_security: scram`、奇数 Controller、足够 Broker/RF/minISR，并补充容量、Reassignment、Controller 成员、升级、备份、恢复与故障演练。默认 `plaintext` 只适合开发或可信隔离网络。
+它不是托管 Kafka 产品。生产仍需使用 `kafka_security: scram`、奇数 Controller、足够 Broker/RF/minISR，并补充容量规划、Reassignment/数据均衡、升级、备份、恢复与故障演练。默认 `plaintext` 只适合开发或可信隔离网络。
 
 
 --------
@@ -22,7 +22,7 @@ aliases: [/docs/pilot/kafka/faq]
 
 本模块面向 Kafka 4.1+，使用原生 dynamic KRaft，不安装 ZooKeeper，也不创建静态 quorum。所有成员渲染 `controller.quorum.bootstrap.servers`；新集群显式使用 `--initial-controllers`/`--no-initial-controllers` 格式化，启动后角色会校验初始 Controller 的 Directory ID 已进入现场 quorum。
 
-初始 Controller Identity 写入 Bootstrap Manifest。后续 Controller 增删仍必须执行显式 `add-controller`/`remove-controller` 管理流程，不能只编辑 inventory。
+初始 Controller Identity 写入 Bootstrap Manifest，但它只是"出生证明"：集群首次 Commission 之后，现场 quorum 的成员关系以 Raft 自身为准。后续 Controller 的增删由剧本编排完成——新增走 `kafka.yml` 的 Observer 追平 + `add-controller` 加入流程，删除走 `kafka-rm.yml` 真子集退役（自动 `remove-controller`）——你只需要编辑 inventory 并运行对应剧本。
 
 
 --------
@@ -40,7 +40,7 @@ aliases: [/docs/pilot/kafka/faq]
 
 ## Controller 端口 9093 会和 Alertmanager 冲突吗？
 
-Controller 默认使用 Kafka KRaft 的惯例端口 `9093`。Pigsty Infra 节点上的 Alertmanager 默认也使用 `9093`：两者只有在 Kafka 与 Infra 复用同一节点时才会冲突。此时请为该集群调整 [`kafka_controller_port`](/docs/kafka/param#kafka_controller_port)；角色只强制 `9092`、`9093`、`9308`、`9404` 四个 Kafka 端口彼此不同，不会自动检测与其他服务的端口冲突。
+Controller 默认使用 Kafka KRaft 的惯例端口 `9093`。Pigsty 当前版本的 Alertmanager 默认监听 [`alertmanager_port`](/docs/infra/param#alertmanager_port) `9059`（其集群端口为 `9094`），因此与 Infra 节点复用时默认端口并不冲突。若你显式改动过这些端口发生了碰撞，请为该集群调整 [`kafka_controller_port`](/docs/kafka/param#kafka_controller_port)；角色只强制 `9092`、`9093`、`9308`、`9404` 四个 Kafka 端口彼此不同，不会自动检测与其他服务的端口冲突。
 
 
 --------
@@ -208,23 +208,26 @@ curl -fsS http://<kafka-ip>:9404/metrics | head -n 40
 
 ## 可以直接增加一个 Broker 吗？
 
-健康集群支持新增**纯 Broker**。更新完整 inventory 后，仍需使用精确完整集群 Limit：
+可以。在 inventory 中声明新成员（`broker`、`combined`、`controller` 均可），然后以完整集群为目标运行：
 
 ```bash
 ./kafka.yml --check -l kf-main
 ./kafka.yml -l kf-main
 ```
 
-角色逐个格式化、启动并验证新 Broker 注册。不能只限制新节点。加入后既有 Partition 不会自动迁移，还要独立执行并监控 Reassignment；“Broker 已注册”不等于“容量已经均衡”。
+角色逐个格式化、启动并验证新 Broker 注册（Combined/Controller 还会追平后提升为 Voter）。不能只 `-l` 新节点。加入后既有 Partition 不会自动迁移，还要独立执行并监控 Reassignment；“Broker 已注册”不等于“容量已经均衡”。
 
 
 --------
 
 ## 可以直接增加或移除 Controller 吗？
 
-不能仅靠 inventory。集群虽然使用 dynamic quorum，但新 Controller 必须针对现有 Cluster ID 显式格式化、启动、追平，再执行 `add-controller`；删除需要 `remove-controller`、多数派验证和节点退役流程。
+可以。编辑 inventory 后由剧本编排完成 [KRaft 成员变更](https://kafka.apache.org/43/operations/kraft/#controller-membership-changes)的全部步骤：
 
-角色会拒绝把 inventory 中的新 Controller 自动当成 Voter。应使用 [Kafka 4.3 KRaft 成员变更](https://kafka.apache.org/43/operations/kraft/#controller-membership-changes) 与经过演练的独立运行手册。
+- **增加**：`./kafka.yml -l <cls>` 会把新的 Combined/Controller 节点以 `--no-initial-controllers` 格式化，以 Observer 追平后执行 `add-controller` 提升为 Voter，逐个处理并全程健康门禁；
+- **移除**：`./kafka-rm.yml -l <ip>`（集群真子集）会经幸存成员执行 `remove-controller` 与 Broker 注销，节点不可达也能完成，然后从 inventory 删除该成员。
+
+仍需自行保证：变更后 Controller 保持奇数且多数派存活；一次只做一个方向的成员变更；被移除 Broker 上的 Partition 副本先行排空（或由同 `kafka_seq` 的替换节点接管）。
 
 
 --------
@@ -240,6 +243,6 @@ curl -fsS http://<kafka-ip>:9404/metrics | head -n 40
 
 ## 如何安全清空 Kafka 数据？
 
-`kafka.yml` 永远不执行清理；集群下线使用独立的 `kafka-rm.yml` 剧本。它默认（`kafka_rm_data=true`）会永久删除数据/KRaft 元数据、节点上的 `/etc/kafka` 恢复状态与监控 Target；设为 `false` 则保留数据和恢复状态。`kafka_safeguard=true` 可强制中止一切删除。
+`kafka.yml` 永远不执行清理；下线使用独立的 `kafka-rm.yml` 剧本。`-l` 选择整个集群（或裸跑选择全部集群）即为集群下线；选择集群的真子集则是成员退役（先经幸存成员摘除 Voter/Broker 注册，再清理本机）。它默认（`kafka_rm_data=true`）会永久删除数据/KRaft 元数据、节点上的 `/etc/kafka` 恢复状态与监控 Target；设为 `false` 则保留数据和恢复状态。`kafka_safeguard=true` 可强制中止一切删除。
 
 该剧本没有确认字符串等额外闸门，执行前必须人工确认精确 `-l` 目标、可恢复备份或明确重建意图与业务停用状态。完整语义见 [预置剧本：集群下线](/docs/kafka/playbook#集群下线)。

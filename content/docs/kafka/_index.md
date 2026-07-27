@@ -26,7 +26,8 @@ KAFKA 模块当前提供：
 - 使用原生 dynamic KRaft，不安装 ZooKeeper，也不渲染静态 `controller.quorum.voters`
 - 支持 `combined`、`broker`、`controller` 三种原生角色和复合/分离拓扑
 - 为新集群随机生成 Cluster ID 与 Controller Directory ID，并以最小 Bootstrap Manifest 保护身份
-- 根据实时健康状态选择冷启动/修复、纯 Broker 串行准入或严格单节点滚动路径
+- 根据实时健康状态选择冷启动/修复、Broker 串行准入、Controller 动态加入或严格单节点滚动路径
+- 成员退役与故障节点替换由剧本编排：`kafka-rm.yml` 真子集退役（含死节点），三条命令完成补换
 - 在滚动前后检查 Controller 多数派与 Voter 追平、Offline Partition、Under Min ISR 与 ISR 追平
 - 提供 `plaintext` 与生产 `scram` 两种安全档位；后者启用 TLS、SCRAM-SHA-512、Controller mTLS、ACL 与默认拒绝授权
 - 声明式收敛 Topic、用户凭据、ACL 与 Quota，不隐式删除业务 Topic

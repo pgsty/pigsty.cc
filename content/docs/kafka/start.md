@@ -29,8 +29,8 @@ aliases: [/docs/pilot/kafka/start]
 | 5 | 上线验收 | 检查 Quorum、ISR、端到端读写、监控、容量与运行手册 |
 {.full-width}
 
-{{% alert title="不要把两个示例当作原地升级" color="warning" %}}
-下面的 `kf-dev` 与 `kf-main` 是两套独立新集群。不要通过给单节点 `kf-dev` 直接增加两个 combined 节点，把它原地改成三 Controller 集群；dynamic quorum 的 Controller 成员变化必须执行显式格式化、追平和 `add-controller` 流程。需要保留单节点数据时，应设计独立迁移方案。
+{{% alert title="两个示例是独立集群" color="warning" %}}
+下面的 `kf-dev` 与 `kf-main` 是两套独立新集群。如果确有需要，也可以给单节点 `kf-dev` 声明两个新的 combined 节点后重跑 `./kafka.yml -l kf-dev`，角色会逐个完成格式化、Observer 追平与 `add-controller` 提升，把它原地扩成三 Controller 集群——但演示环境仍建议直接建新集群，扩容语义详见[扩容与拓扑变更](/docs/kafka/admin#扩容新增-broker-或-controller)。
 {{% /alert %}}
 
 
@@ -283,7 +283,7 @@ all:
 ./kafka.yml -l kf-main
 ```
 
-不能只 `-l 10.10.10.11`，也不能一次选择 `kf-dev,kf-main`。角色会拒绝缺失、部分或跨集群 Limit。
+不能只 `-l 10.10.10.11`：每个被选中的集群必须完整，部分选择会被拒绝。同时选择多个完整集群（`-l kf-dev,kf-main`）或不加 `-l` 裸跑全部集群则是允许的。
 
 
 ### 3. 验证三节点健康
@@ -492,7 +492,7 @@ kafka_parameters:
 - `kafka_rack` 只表达真实故障域，且副本放置已经核验；
 - 数据盘容量、吞吐、延迟、保留时间、峰值写入和恢复时间已经压测；
 - 新 Broker 加入后有显式 Reassignment 计划，现有 Topic RF 不会自动提高；
-- 已明确 Kafka 数据备份/重建、Broker 替换、Controller 成员和灾难恢复流程。
+- 已明确 Kafka 数据备份/重建与灾难恢复流程，并演练过[故障节点三步替换](/docs/kafka/admin#替换故障节点)与成员退役。
 
 
 ### 安全与网络
