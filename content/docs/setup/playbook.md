@@ -22,7 +22,7 @@ Ansible 可以使用 **声明式** 的方式对服务器进行配置管理，所
 
 ## 部署剧本
 
-Pigsty 提供了一个 “一条龙” 部署剧本 **`deploy.yml`**，一次性在当前环境上安装所有模块（如果在配置中定义）：
+Pigsty 提供了一个 “一条龙” 部署剧本 **`deploy.yml`**，用于一次性部署核心链路：CA/软件仓库、NODE、INFRA、ETCD、PGSQL，以及配置中启用的 MINIO。Redis、Kafka、原生 MySQL 等可选模块即使已在清单中定义，也需要分别执行其模块剧本。
 
 | Playbook    | 命令            | 分组         | `infra` | `[nodes]` | `etcd` | `minio` | `[pgsql]` |
 |-------------|---------------|------------|:-------:|:---------:|:------:|:-------:|:---------:|
@@ -139,7 +139,7 @@ Ansible 剧本（Playbook）是包含要执行的一系列任务定义的可执�
 ./infra.yml -t repo          # 创建仓库
 ./node.yml  -t node_pkg      # 安装节点包
 ./pgsql.yml -t pg_install    # 安装 PG 包和扩展
-./etcd.yml  -t etcd_purge    # 销毁 ETCD 集群
+./etcd.yml  -t etcd_config   # 重新渲染 ETCD 配置
 ./minio.yml -t minio_alias   # 写入 MinIO CLI 配置
 ```
 
@@ -252,5 +252,10 @@ bin/redis-rm   <cls>            # 移除 Redis 集群：./redis-rm.yml -l <cls>
 | [**DOCKER**](/docs/docker/playbook/) | [**`docker.yml`**](https://github.com/pgsty/pigsty/blob/main/docker.yml)                   | 在节点上安装 Docker                 |
 | [**DOCKER**](/docs/docker/playbook/) | [**`app.yml`**](https://github.com/pgsty/pigsty/blob/main/app.yml)                         | 使用 Docker Compose 安装应用程序      |
 | [**FERRET**](/docs/ferret/playbook)  | [**`mongo.yml`**](https://github.com/pgsty/pigsty/blob/main/mongo.yml)                     | 在节点上安装 Mongo/FerretDB         |
+|  [**JUICE**](/docs/juice/playbook/)  | [**`juice.yml`**](https://github.com/pgsty/pigsty/blob/main/juice.yml)                     | 安装与配置 JuiceFS                  |
+|   [**VIBE**](/docs/vibe/playbook/)   | [**`vibe.yml`**](https://github.com/pgsty/pigsty/blob/main/vibe.yml)                       | 安装 Vibe 编码环境                  |
+|  [**KAFKA**](/docs/kafka/playbook/)  | [**`kafka.yml`**](https://github.com/pgsty/pigsty/blob/main/kafka.yml)                     | 创建或收敛 Kafka dynamic KRaft 集群 |
+|  [**KAFKA**](/docs/kafka/playbook/)  | [**`kafka-rm.yml`**](https://github.com/pgsty/pigsty/blob/main/kafka-rm.yml)               | 移除 Kafka 集群或成员               |
+| **MYSQL（试点）** | [**`mysql.yml`**](https://github.com/pgsty/pigsty/blob/main/mysql.yml)                         | 部署原生 MySQL 8.4 单节点或三节点集群    |
+| **MYSQL（试点）** | [**`mysql-rm.yml`**](https://github.com/pgsty/pigsty/blob/main/mysql-rm.yml)                   | 停止并退役原生 MySQL，保留本地状态        |
 {.full-width}
-

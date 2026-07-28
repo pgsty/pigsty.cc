@@ -53,8 +53,8 @@ Pigsty 默认从互联网上游 [**安装**](/docs/setup/install/) 所需软件�
 | RockyLinux 10 aarch64 | `el10.aarch64` | `10.1`    | [**`pigsty-pkg-v4.4.0.el10.aarch64.tgz`**](https://github.com/pgsty/pigsty/releases/download/v4.4.0/pigsty-pkg-v4.4.0.el10.aarch64.tgz) |
 | Debian 12 x86_64      | `d12.x86_64`   | `12.14`   | **`pigsty-pkg-v4.4.0.d12.x86_64.tgz`**                                                                                                  |
 | Debian 12 aarch64     | `d12.aarch64`  | `12.14`   | **`pigsty-pkg-v4.4.0.d12.aarch64.tgz`**                                                                                                 |
-| Debian 13 x86_64      | `d13.x86_64`   | `13.5`    | [**`pigsty-pkg-v4.4.0.d13.x86_64.tgz`**](https://github.com/pgsty/pigsty/releases/download/v4.4.0/pigsty-pkg-v4.4.0.d13.x86_64.tgz)     |
-| Debian 13 aarch64     | `d13.aarch64`  | `13.5`    | [**`pigsty-pkg-v4.4.0.d13.aarch64.tgz`**](https://github.com/pgsty/pigsty/releases/download/v4.4.0/pigsty-pkg-v4.4.0.d13.aarch64.tgz)   |
+| Debian 13 x86_64      | `d13.x86_64`   | `13.6`    | [**`pigsty-pkg-v4.4.0.d13.x86_64.tgz`**](https://github.com/pgsty/pigsty/releases/download/v4.4.0/pigsty-pkg-v4.4.0.d13.x86_64.tgz)     |
+| Debian 13 aarch64     | `d13.aarch64`  | `13.6`    | [**`pigsty-pkg-v4.4.0.d13.aarch64.tgz`**](https://github.com/pgsty/pigsty/releases/download/v4.4.0/pigsty-pkg-v4.4.0.d13.aarch64.tgz)   |
 | Ubuntu 26.04 x86_64   | `u26.x86_64`   | `26.04.0` | **`pigsty-pkg-v4.4.0.u26.x86_64.tgz`**                                                                                                  |
 | Ubuntu 26.04 aarch64  | `u26.aarch64`  | `26.04.0` | **`pigsty-pkg-v4.4.0.u26.aarch64.tgz`**                                                                                                 |
 | Ubuntu 24.04 x86_64   | `u24.x86_64`   | `24.04.4` | [**`pigsty-pkg-v4.4.0.u24.x86_64.tgz`**](https://github.com/pgsty/pigsty/releases/download/v4.4.0/pigsty-pkg-v4.4.0.u24.x86_64.tgz)     |
@@ -90,7 +90,7 @@ d092c48ee55116ed5e2c99a3d909ccdd  pigsty-pkg-v4.4.0.u24.aarch64.tgz
 
 当操作系统小版本不匹配时，有概率能用，也有概率失败，我们建议你不要冒险尝试。
 
-请务必注意，Pigsty 提供的 EL9/EL10 安装包基于 9.7 / 10.1 制作，Debian 安装包基于 12.14 / 13.5 制作。Ubuntu 安装包基于 22.04.5 / 24.04.4 / 26.04.0 制作。
+请务必注意，Pigsty 提供的 EL9/EL10 安装包基于 9.7 / 10.1 制作，Debian 安装包基于 12.14 / 13.6 制作。Ubuntu 安装包基于 22.04.5 / 24.04.4 / 26.04.0 制作。
 跨操作系统小版本可能因 OpenSSL 或系统库版本变化导致安装失败。您需要在安装相同操作系统的环境中执行在线安装后制作离线安装包，或联系我们定制离线软件包。
 
 {{% /alert %}}
@@ -107,7 +107,7 @@ d092c48ee55116ed5e2c99a3d909ccdd  pigsty-pkg-v4.4.0.u24.aarch64.tgz
 2. 下载 Pigsty 源码包，解压并进入目录（假设解压到家目录：**`cd ~/pigsty`**）
 3. [**`./bootstrap`**](#bootstrap)，它将解压软件包并配置使用本地仓库（并从中离线安装 [**`ansible`**](/docs/setup/playbook)）
 4. **`./configure -g -c rich`**，您可以直接使用配置好离线安装的模板 [**`rich`**](/docs/conf/rich)，或者自行配置
-5. 照常运行 **`./deploy.yml`**，它将从本地仓库安装所有内容
+5. 照常运行 **`./deploy.yml`**，从本地仓库安装核心链路所需软件；其他可选模块仍需执行各自的剧本
 
 {{< asciinema file="demo/install-offline.cast" markers="0:上传软件包,55:解压与使用,66:配置,80:部署" speed="1.3" autoplay="true" loop="true" >}}
 
@@ -144,9 +144,17 @@ Pigsty 将从上游仓库重新下载所需的 **增量**。
 如果您选择的操作系统不在默认列表中，您可以使用内置的 [**`cache.yml`**](https://github.com/pgsty/pigsty/blob/main/cache.yml) 剧本制作自己的离线软件包：
 
 1. 找到一台运行完全相同操作系统版本，且可以访问互联网的节点
-2. 使用 [**`rich`**](/docs/conf/rich) 配置模板执行 [**在线安装**](/docs/setup/install/)（`configure -c rich`）
-3. `cd ~/pigsty; ./cache.yml`：制作并获取离线软件包到 `~/pigsty/dist/${version}/`
-4. 将离线软件包复制到没有互联网访问的环境中（ftp、scp、usb 等），通过 `bootstrap` 解包使用
+2. 使用 [**`rich`**](/docs/conf/rich) 配置模板执行 [**在线安装**](/docs/setup/install/)（`./configure -c rich`），并确认目标 Infra 节点的 `/www/pigsty` 本地仓库已经生成；若尚未生成，可先对该节点执行 `./infra.yml -t repo`
+3. `cd ~/pigsty; ./cache.yml -l <infra-host>`：明确选择一个已经具备本地仓库的 Infra 节点，制作并取回离线软件包
+4. 默认制品位于 `~/pigsty/dist/${version}/pigsty-pkg-${version}.${os}.${arch}.tgz`；将它复制到离线环境（ftp、scp、usb 等），再通过 `bootstrap` 解包使用
+
+`cache.yml` 的当前默认值如下，可使用额外变量覆盖：
+
+| 参数 | 默认值 | 说明 |
+|:---|:---|:---|
+| `cache_pkg_name` | `pigsty-pkg-${version}.${os}.${arch}.tgz` | 离线包文件名模板 |
+| `cache_pkg_dir` | `dist/${version}` | 管理节点上的输出目录 |
+| `cache_repo` | `pigsty` | 从目标节点打包的本地仓库；多个仓库用逗号分隔 |
 
 我们提供 [**付费服务**](/docs/about/service/)，提供经过测试的预制 Linux 主版本。次版本制作离线软件包（**¥200**）。
 

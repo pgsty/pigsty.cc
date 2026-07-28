@@ -82,7 +82,7 @@ Pigsty 提供开箱即用的 Docker 镜像，发布在 [**Docker Hub**](https://
 | `pgsty/pigsty` | ~500MB | 1.3GB | Debian 13 + systemd + SSH + pig + Ansible |
 
 - 同时支持 **amd64**（x86_64）和 **arm64**（Apple Silicon、AWS Graviton）架构
-- 镜像标签与 Pigsty 版本一致：`v4.4.0`、`latest` 等
+- 镜像标签按 Pigsty 版本命名。当前 `main` 分支的 Docker 配置默认值是尚未正式发布的 `v4.5.0`，该源码默认值本身不证明远端已有同名镜像；最新正式发行版及其可确认使用的版本标签仍是 `v4.4.0`
 - 镜像内已预生成 docker 配置模板，可直接执行 `./deploy.yml` 部署
 
 镜像基于 **Debian 13 (Trixie)** 构建，预装了 [**`pig`**](/docs/pig/) CLI 工具和 Ansible，并已初始化好 Pigsty 源码。
@@ -127,7 +127,7 @@ make launch          # 启动容器 + 生成配置 + 执行部署
 您可以通过修改 [**`.env`**](https://github.com/pgsty/pigsty/blob/main/docker/.env) 文件来自定义镜像版本和端口映射：
 
 ```bash
-PIGSTY_VERSION=<version>      # 镜像版本标签（示例：v4.4.0 或 latest）
+PIGSTY_VERSION=v4.5.0         # 当前 main 的源码默认值；不代表远端已发布该标签
 PIGSTY_SSH_PORT=2222          # SSH 端口
 PIGSTY_HTTP_PORT=8080         # Nginx HTTP 端口
 PIGSTY_HTTPS_PORT=8443        # Nginx HTTPS 端口
@@ -138,7 +138,7 @@ PIGSTY_PG_PORT=5432           # PostgreSQL 端口
 
 | 环境变量                | 默认值         | 容器端口 | 说明                            |
 |:--------------------|:------------|:-----|:------------------------------|
-| `PIGSTY_VERSION`    | `<version>` | -    | 镜像版本标签（如 `v4.4.0` / `latest`） |
+| `PIGSTY_VERSION`    | `v4.5.0`    | -    | 当前 `main` 的源码默认值；远端标签需另行核验，最新正式发行版为 `v4.4.0` |
 | `PIGSTY_SSH_PORT`   | `2222`      | 22   | SSH 访问端口                      |
 | `PIGSTY_HTTP_PORT`  | `8080`      | 80   | Nginx HTTP 端口                 |
 | `PIGSTY_HTTPS_PORT` | `8443`      | 443  | Nginx HTTPS 端口                |
@@ -205,7 +205,7 @@ make rmi          # 删除当前版本的 pigsty 镜像
 
 ```bash
 make clean        # 停止并删除容器
-make purge        # 删除容器并清空数据（会提示确认）
+make purge        # 删除容器并清空数据（2 秒倒计时，可用 Ctrl+C 中止）
 ```
 
 
@@ -298,7 +298,7 @@ PIGSTY_HTTP_PORT=8888 PIGSTY_PG_PORT=5433 docker compose up -d
 容器数据默认挂载到 `./data` 目录。如果需要清空数据重新开始：
 
 ```bash
-make purge        # 删除容器并清空数据（会提示确认）
+make purge        # 删除容器并清空数据（2 秒倒计时，可用 Ctrl+C 中止）
 ```
 
 ### macOS 上的性能

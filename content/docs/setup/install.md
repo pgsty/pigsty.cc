@@ -135,11 +135,13 @@ Pigsty 提供了 [**`configure`**](https://github.com/pgsty/pigsty/blob/main/con
 ./configure -c ha/full -s    # 使用 4 节点沙箱配置模板，不进行 IP 替换和探测
 ```
 
-<details><summary>配置 / configure 过程的样例输出</summary>
+下面展示的是当前 `main` 分支（v4.5.0 开发版）的输出；若按上文安装 v4.4.0 正式版，首行版本号会显示为 `v4.4.0`。
+
+<details><summary>当前 main（v4.5.0 开发版）的 configure 样例输出</summary>
 
 ```bash
 vagrant@meta:~/pigsty$ ./configure
-configure pigsty v4.4.0 begin
+configure pigsty v4.5.0 begin
 [ OK ] region = china
 [ OK ] kernel  = Linux
 [ OK ] machine = x86_64
@@ -169,7 +171,7 @@ proceed with ./deploy.yml
 |:------------------------|:-----------------------------------------------------------------|
 | `-i\|--ip`              | 当前主机的首要内网 IP 地址，用于替换配置文件中的 IP 地址占位符 `10.10.10.10`                |
 | `-c\|--conf`            | 用于指定使用的 [**配置模板**](/docs/conf/)，相对于 `conf/` 目录，不带 `.yml` 后缀的配置名称 |
-| `-v\|--version`         | 用于指定要安装的 PostgreSQL 大版本，如 `14`、`15`、`16`、`17`、`18`               |
+| `-v\|--version`         | 指定 PostgreSQL 大版本 `14`～`19`；PG19 当前为 Beta，建议使用专用 [`pg19`](/docs/conf/pg19/) 模板 |
 | `-r\|--region`          | 用于指定上游软件源的区域，加速下载： (`default\|china\|europe`)                    |
 | `-n\|--non-interactive` | 直接使用命令行参数提供首要 IP 地址，跳过交互式向导                                      |
 | `-x\|--proxy`           | 使用当前环境变量配置 [`proxy_env`](/docs/infra/param#proxy_env) 变量         |
@@ -193,7 +195,7 @@ proceed with ./deploy.yml
 Pigsty 的 [**`deploy.yml`**](/docs/setup/playbook/) [**剧本**](/docs/setup/playbook/) 会将 [**配置**](#配置) 中生成的蓝图应用至目标节点。
 
 ```bash
-./deploy.yml     # 一次性在当前节点上部署所有定义的模块
+./deploy.yml     # 一次性部署核心链路中已定义的模块
 ```
 
 <details><summary>部署过程的样例输出</summary>

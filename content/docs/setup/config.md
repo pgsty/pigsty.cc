@@ -11,7 +11,7 @@ categories: [教程]
 除了使用 [**配置向导**](/docs/concept/iac/configure) 自动生成配置，您也可以从零开始手工编写 Pigsty 配置文件。
 本教程将指导您从头开始，逐步构建一个复杂的 [**配置清单**](/docs/concept/iac/inventory)。
 
-如果您事先就在 [**配置清单**](/docs/concept/iac/inventory) 中定义好了一切，那么只要 `deploy.yml` 剧本一把梭，即可完成所有部署工作，但它隐藏了所有细节。
+如果您事先在 [**配置清单**](/docs/concept/iac/inventory) 中定义好 NODE、INFRA、ETCD、MINIO 与 PGSQL，那么 `deploy.yml` 可以一次性完成这条核心链路的部署，但它隐藏了所有细节。Docker、Redis、Kafka、原生 MySQL、JUICE 与 VIBE 等可选模块需要另行执行各自的剧本。
 
 所以本文档会把所有模块与剧本拆解开来，介绍如何从一个简单的配置，通过增量添加的方式，形成一套复杂完备的部署。
 
@@ -175,7 +175,7 @@ all:
 
 我们在这里添加了两个新的分组：`etcd` 与 `pg-meta`，分别定义了一个单节点的 etcd 集群和一个单节点的 PostgreSQL 集群。
 
-您可以使用 `./deploy.yml` 重新部署所有内容，也可以使用以下命令进行增量部署：
+您可以使用 `./deploy.yml` 重新收敛核心链路中已定义的模块，也可以使用以下命令进行增量部署：
 
 ```bash title="~/pigsty"
 ./etcd.yml  -l etcd      # 在 etcd 组上安装 ETCD 模块
