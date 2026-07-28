@@ -55,6 +55,9 @@ bin/node-rm 10.10.10.10              # 移除节点 '10.10.10.10'
 
 您也可以选择一次性移除一个集群，或使用通配符匹配配置清单中要从 Pigsty 移除的节点。
 
+这里的“移除节点”是解除 NODE 纳管：剧本会注销监控/日志/HAProxy 入口，停止 NODE Exporter、Vector、HAProxy 及可选 VIP 服务，并删除 `vector_data`（默认 `/data/vector`）。
+它不会卸载软件包、删除管理员用户或 `node_data`，也不会停止 Docker 服务或删除 Docker 数据。详细边界参阅 [`node-rm.yml`](/docs/node/playbook#node-rmyml)。
+
 {{< asciinema file="demo/node-rm.cast" speed="1.2" autoplay="true" loop="true" >}}
 
 
@@ -137,6 +140,7 @@ proxy:
 ./node.yml -t node_tune      # 配置 tuned 调优模板
 ./node.yml -t node_sysctl    # 设置额外的 sysctl 参数
 ./node.yml -t node_profile   # 配置节点环境变量：/etc/profile.d/node.sh
+./node.yml -t node_alias     # 配置节点命令别名：/etc/profile.d/node.alias.sh
 ./node.yml -t node_ulimit    # 配置节点资源限制
 ./node.yml -t node_data      # 配置节点首要数据目录
 ./node.yml -t node_admin     # 配置管理员用户和ssh密钥

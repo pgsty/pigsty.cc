@@ -7,14 +7,14 @@ modules: [NODE]
 categories: [参考]
 ---
 
-Pigsty 中的 NODE 模块提供了 8 个监控面板和完善的告警规则。
+Pigsty 当前在 NODE 仪表盘目录中提供 10 个监控面板和完善的告警规则。
 
 
 ----------------
 
 ## 监控面板
 
-NODE 模块提供 8 个监控仪表板：
+NODE 仪表盘目录当前包含 10 个监控仪表板；其中 JuiceFS 与 Claude Code 面板只有在部署并产生相应指标后才会有数据。
 
 ### NODE Overview
 
@@ -70,6 +70,20 @@ NODE 模块提供 8 个监控仪表板：
 查看 Vector 采集与转发状态，以及日志管道健康度。
 
 [![node-vector.webp](/img/dashboard/node-vector.webp)](https://demo.pigsty.cc/d/node-vector)
+
+
+### Node JuiceFS
+
+查看 JuiceFS 客户端的缓存、对象存储、元数据操作与读写性能。
+
+[打开 Node JuiceFS Dashboard](https://demo.pigsty.cc/d/node-juice)
+
+
+### Claude Code
+
+查看 Claude Code 通过 OpenTelemetry 上报的会话、Token、成本与日志数据。
+
+[打开 Claude Code Dashboard](https://demo.pigsty.cc/d/claude-code)
 
 
 ----------------

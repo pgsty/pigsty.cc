@@ -1,7 +1,7 @@
 ---
 title: 参数列表
 weight: 3230
-description: NODE 模块提供了 11 组共 85 个配置参数
+description: NODE 模块提供了 11 组共 73 个配置参数
 icon: fa-solid fa-sliders
 modules: [NODE]
 categories: [参考]
@@ -315,11 +315,11 @@ node_dns_options:                 # dns resolv options in `/etc/resolv.conf`
 
 
 
-### node_write_etc_hosts
+### `node_write_etc_hosts`
 
 参数名称： `node_write_etc_hosts`， 类型： `bool`， 层次：`G|C|I`
 
-是否修改目标节点上的 `/etc/hosts`？例如，在容器环境中通常不允许修改此配置文件。
+是否修改目标节点上的 `/etc/hosts`？默认值为 `true`。例如，在容器环境中通常不允许修改此配置文件，此时可设为 `false` 跳过。
 
 
 
@@ -450,7 +450,7 @@ node_pip_packages: ''             # pip packages to be installed in uv venv
 
 在当前节点上要安装并升级的软件包列表，默认值为：`[openssh-server]`，即在安装时会将 sshd 升级到最新版本（避免安全漏洞）。
 
-每一个数组元素都是字符串：由逗号分隔的软件包名称。形式上与 [`node_packages_default`](#node_default_packages) 相同。本参数通常用于在节点/集群层面指定需要额外安装的软件包。
+每一个数组元素都是字符串：由逗号分隔的软件包名称。形式上与 [`node_default_packages`](#node_default_packages) 相同。本参数通常用于在节点/集群层面指定需要额外安装的软件包。
 
 在本参数中指定的软件包，会 **升级到可用的最新版本**，如果您需要保持现有节点软件版本不变（存在即可），请使用 [`node_default_packages`](#node_default_packages) 参数。
 
@@ -463,31 +463,30 @@ node_pip_packages: ''             # pip packages to be installed in uv venv
 
 参数名称： `node_default_packages`， 类型： `string[]`， 层次：`G`
 
-默认在所有节点上安装的软件包，默认值为一组按操作系统族区分的软件包列表（字符串数组，每个元素为逗号分隔的包名）：
+默认在所有节点上安装的软件包。该参数本身没有单一的跨平台默认值；如果用户未显式设置，`node_id` 角色会根据操作系统版本和 CPU 架构，从
+[`roles/node_id/vars`](https://github.com/pgsty/pigsty/tree/main/roles/node_id/vars) 对应的 `<os>.<arch>.yml` 文件中加载 `node_packages_default`。
 
-字符串数组类型，每一行都是 **由逗号分隔** 的软件包列表字符串，指定默认在所有节点上安装的软件包列表。
+这是字符串数组类型，每一行都是 **由逗号分隔** 的软件包列表字符串。不同发行版、版本与架构的映射可能不同，不能把某一份 EL 或 Debian 列表视为所有同族系统的通用默认值。
 
 在此变量中指定的软件包，只要求 **存在**，而不要求 **最新**。如果您需要安装最新版本的软件包，请使用 [`node_packages`](#node_packages) 参数。
 
-本参数没有默认值，即默认值为未定义状态。如果用户不在配置文件中显式指定本参数，则 Pigsty 会从根据当前节点的操作系统族，从定义于 [`roles/node_id/vars`](https://github.com/pgsty/pigsty/blob/main/roles/node_id/vars/) 中的 `node_packages_default` 变量中加载获取默认值。
-
-默认值（EL 系操作系统）：
+例如，当前 `EL 9 x86_64` 的平台映射值为：
 
 ```yaml
-- lz4,unzip,bzip2,pv,jq,git,ncdu,make,patch,bash,lsof,wget,tuned,nvme-cli,numactl,sysstat,iotop,htop,rsync,tcpdump
-- python3,socat,net-tools,ipvsadm,telnet,ca-certificates,openssl,keepalived,etcd,haproxy,chrony,cronie,pig,uv
-- zlib,yum,audit,bind-utils,readline,vim-minimal,node_exporter,grubby,openssh-server,openssh-clients,chkconfig,vector
+- bash,python3,sudo,acl,ca-certificates,openssl,curl,wget,lz4,zstd,unzip,bzip2,gzip,tar,tzdata,chrony,openssh-server,util-linux,rsync,psmisc,logrotate
+- pv,jq,git,make,patch,lsof,less,ncdu,htop,iotop,socat,net-tools,telnet,ipvsadm,tuned,numactl,nvme-cli,sysstat,keepalived,etcd,haproxy,vector,pig,uv
+- zlib,readline,xz,glibc-langpack-en,cronie,openssh-clients,node-exporter,bind-utils,iproute,iputils,nmap-ncat,procps-ng,vim-minimal,yum,audit,grubby,chkconfig
 ```
 
-默认值（Debian/Ubuntu）：
+当前 `Debian 13 x86_64` 的平台映射值为：
 
 ```yaml
-- lz4,unzip,bzip2,pv,jq,git,ncdu,make,patch,bash,lsof,wget,tuned,nvme-cli,numactl,sysstat,iotop,htop,rsync,tcpdump
-- python3,socat,net-tools,ipvsadm,telnet,ca-certificates,openssl,keepalived,etcd,haproxy,chrony,cron,pig,uv
-- zlib1g,acl,dnsutils,libreadline-dev,vim-tiny,node-exporter,openssh-server,openssh-client,vector
+- bash,python3,sudo,acl,ca-certificates,openssl,curl,wget,lz4,zstd,unzip,bzip2,gzip,tar,tzdata,chrony,openssh-server,util-linux,rsync,psmisc,logrotate
+- pv,jq,git,make,patch,lsof,less,ncdu,htop,iotop,socat,net-tools,telnet,ipvsadm,tuned,numactl,nvme-cli,sysstat,keepalived,etcd,haproxy,vector,pig,uv
+- zlib1g,libreadline-dev,xz-utils,locales,cron,openssh-client,node-exporter,bind9-dnsutils,iproute2,iputils-ping,netcat-openbsd,procps,vim-tiny
 ```
 
-本参数形式上与 [`node_packages`](#node_packages) 相同，但本参数通常用于全局层面指定所有节点都必须安装的默认软件包
+本参数形式上与 [`node_packages`](#node_packages) 相同，但通常用于全局层面覆盖平台映射，指定所有节点都必须安装的软件包。
 
 
 
@@ -965,7 +964,7 @@ Pigsty 默认使用 `nopass` 模式，管理员用户可以无需密码执行任
 例如，以下命令声明了一个名为 `dp` 的别名，用于快速执行 `docker compose pull` 命令：
 
 ```yaml
-node_alias:
+node_aliases:
   dp: 'docker compose pull'
 ```
 

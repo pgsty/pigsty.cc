@@ -36,6 +36,7 @@ node_kernel   ：配置操作系统内核模块
 node_tune     ：配置 tuned 调优模板
 node_sysctl   ：设置额外的 sysctl 参数
 node_profile  ：写入 /etc/profile.d/node.sh
+node_alias    ：写入 /etc/profile.d/node.alias.sh
 node_ulimit   ：配置资源限制
 node_data     ：配置数据目录
 node_admin    ：配置管理员用户和ssh密钥
@@ -69,6 +70,15 @@ vector         : 移除日志收集代理 vector
 node_crontab   : 恢复默认 /etc/crontab（当 node_crontab_overwrite=true 时）
 profile        : 移除 /etc/profile.d/node.sh 环境配置文件
 ```
+
+`node-rm.yml` 的作用是解除 Pigsty 纳管并停止 NODE 相关服务，并不是操作系统销毁或完整卸载：
+
+- 会注销 Node、Docker、Ping、VIP 等监控目标以及 HAProxy 管理入口；
+- 会停止并禁用 HAProxy、Node Exporter、Vector，以及启用时的 Keepalived/Exporter；
+- 会删除 HAProxy 配置、Node 的 Vector 配置，并删除 `vector_data`（默认 `/data/vector`）；
+- 不会卸载软件包、删除管理员用户、删除 `node_data`，也不会停止 Docker 服务或删除 Docker 数据。
+
+当前移除角色会直接删除 `vector_data`，并未使用安装角色中的 `vector_clean` 开关；执行前应确认其中没有需要保留的 Vector 缓冲数据。
 
 
 ----------------
@@ -117,6 +127,7 @@ bin/node-rm 10.10.10.10                # 移除节点 '10.10.10.10'
 ./node.yml -t node_tune                # 配置 tuned 调优模板
 ./node.yml -t node_sysctl              # 设置额外的 sysctl 参数
 ./node.yml -t node_profile             # 配置节点环境变量：/etc/profile.d/node.sh
+./node.yml -t node_alias               # 配置节点命令别名：/etc/profile.d/node.alias.sh
 ./node.yml -t node_ulimit              # 配置节点资源限制
 ./node.yml -t node_data                # 配置节点首要数据目录
 ./node.yml -t node_admin               # 配置管理员用户和ssh密钥
