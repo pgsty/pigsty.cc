@@ -15,14 +15,14 @@ categories: [参考]
 
 ## 概览
 
-TigerBeetle 模块目前仅在 Pigsty 专业版中提供 **Beta** 试用预览。
+当前开源源码树没有 TigerBeetle 角色或专用剧本，只在节点平台包映射中提供 `tigerbeetle` 安装别名；服务初始化与生命周期管理需按 TigerBeetle 官方文档完成。
 
 
 --------
 
 ## 安装
 
-Pigsty Infra 仓库中提供了 TigerBeetle 的 RPM / DEB 软件包，使用以下命令即可完成安装：
+使用以下命令可从 Pigsty Infra 仓库安装映射的软件包：
 
 ```bash
 ./node.yml -t node_install -e '{"node_repo_modules":"infra","node_packages":["tigerbeetle"]}'

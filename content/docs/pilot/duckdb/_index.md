@@ -16,7 +16,7 @@ DuckDB 是嵌入式数据库，不需要部署与服务化，只需要在节点�
 
 ## 安装
 
-[**Pigsty Infra 仓库**](/docs/repo/infra/list) 提供最新版本的 DuckDB RPM/DEB 包，直接安装即可。
+当前 Pigsty 节点平台映射包含 `duckdb` 软件包，可通过 Infra 仓库直接安装：
 
 ```bash
 ./node.yml -t node_install  -e '{"node_repo_modules":"infra","node_packages":["duckdb"]}'
@@ -35,9 +35,7 @@ pig install duckdb         # 安装 DuckDB 包
 
 Pigsty 为 PostgreSQL 提供了一些 DuckDB 相关的扩展插件：
 
-- [**`pg_duckdb`**](/ext/e/pg_analytics)，由 DuckDB 官方 MotherDuck 和 Hydra 出品的扩展插件
+- [**`pg_duckdb`**](/ext/e/pg_duckdb)，由 DuckDB 官方提供的 PostgreSQL 扩展
 - [**`pg_mooncake`**](/ext/e/pg_mooncake)，在 `pg_duckdb` 扩展的基础上更进一步提供列式存储引擎与同步功能。
 - [**`pg_analytics`**](/ext/e/pg_analytics)，旨在基于 DuckDB 提供高性能 OLAP 分析能力，已归档
-- [**`duckdb_fdw`**](/docs/pgsql/ext/)，DuckDB 外部数据源包装器，允许从 PG 中读写 DuckDB 数据文件，目前尚未更新
-
-
+- [**`duckdb_fdw`**](/ext/e/duckdb_fdw)，DuckDB 外部数据源包装器，允许从 PostgreSQL 中读写 DuckDB 数据文件

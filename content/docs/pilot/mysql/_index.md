@@ -1,185 +1,248 @@
 ---
 title: 模块：MySQL
 weight: 5010
-description: 使用 Pigsty 拉起过气的 MySQL 集群，用于测试，迁移，性能评估等目的。
+description: 使用 Pigsty 部署原生 MySQL 8.4 单机或三节点 InnoDB Cluster。
 icon: fas fa-fish
 module: [MYSQL]
 categories: [参考]
 ---
 
-> [MySQL](https://mysql.apache.org/) 曾经是“世界上最流行的开源关系型数据库”。 [安装](#安装) | [配置](#配置) | [管理](#管理) | [剧本](#剧本) | [监控](#监控) | [参数](#参数)
+> [MySQL](https://www.mysql.com/) 模块用于部署固定的原生 MySQL 8.4 平台，包括单机与三节点单主 InnoDB Cluster。该模块当前仍处于 **PILOT** 阶段。
 
 
 --------
 
-## 概览
+## 能力与边界
 
-MySQL 模块本身目前仅在 Pigsty 专业版中提供 Beta 试用预览，注意，请不要将这里的 MySQL 用于生产环境。
+当前 `roles/mysql` 在每个节点管理一个 MySQL 实例，只接受两种拓扑：
+
+- **1 个成员**：独立 MySQL；
+- **3 个成员**：使用 Group Replication 的单主 InnoDB Cluster。
+
+服务端、客户端、MySQL Shell、MySQL Router 与 XtraBackup 固定使用 8.4 系列。该角色不是通用 MySQL 安装器，软件版本、端口、目录、字符集、TLS 路径、内存大小和定时器表达式都不是公开参数。
+
+三节点模式由 MySQL Shell AdminAPI 创建并收敛集群。`mysql_seq=1` 只表示首次引导协调者；后续运行会发现现场 PRIMARY，不会强制把主库切回 1 号节点。每个 HA 成员都运行 MySQL Router。
+
+当前原生软件包平台门禁为：
+
+| 架构 | 支持的系统 |
+|:---|:---|
+| `x86_64` | EL 8/9/10、Debian 12/13、Ubuntu 22/24 |
+| `aarch64` | EL 9/10 |
+{.full-width}
+
+Debian/Ubuntu ARM64 当前会被拒绝，因为 Oracle APT 的 MySQL 8.4 组件没有相应的 `arm64` 载荷。
 
 
 --------
 
-## 安装
+## 前置条件
 
-您可以直接使用以下命令，在 Pigsty 管理的节点上，从官方软件源安装 MySQL（EL 使用 MySQL 8.4 社区仓库，Debian/Ubuntu 使用 MySQL 8.0 APT 仓库）：
-
-```bash
-# el9
-./node.yml -t node_install -e '{"node_repo_modules":"node,mysql","node_packages":["mysql-community-server,mysql-community-client"]}'
-
-# debian / ubuntu
-./node.yml -t node_install -e '{"node_repo_modules":"node,mysql","node_packages":["mysql-server"]}'
-```
-
-您也可以将 MySQL 软件包加入本地软件源后，使用 MySQL 剧本 `mysql.yml` 进行生产环境部署。
-
-
-
---------
-
-## 配置
-
-以下配置片段定义了一个单节点的 MySQL 实例，以及其中的 Database 与 User。
+目标节点应先完成 NODE 初始化，并安装 Pigsty 共享 CA 到 `/etc/pki/ca.crt`。软件仓库应包含 `mysql` 模块：
 
 ```yaml
-my-test:
-  hosts: { 10.10.10.10: { mysql_seq: 1, mysql_role: primary } }
+node_repo_modules: node,infra,mysql
+```
+
+MySQL 角色只签发并安装节点叶证书，不会代替 `node_ca` 创建共享 CA。
+
+
+--------
+
+## 公开参数
+
+清单只应使用以下 10 个公开参数：
+
+| 参数                       | 默认值              | 说明                     |
+|:-------------------------|:-----------------|:-----------------------|
+| `mysql_cluster`          | 必填               | 集群名，通常与清单分组名一致         |
+| `mysql_seq`              | 必填               | 单机为 `1`；HA 为连续的 `1..3` |
+| `mysql_root_password`    | `DBUser.Root`    | 本地 root 密码             |
+| `mysql_monitor_password` | `DBUser.Monitor` | Exporter 监控账号密码        |
+| `mysql_cluster_password` | `DBUser.Cluster` | AdminAPI 与备份身份密码       |
+| `mysql_databases`        | `[]`             | 增量收敛的业务数据库声明           |
+| `mysql_users`            | `[]`             | 增量收敛的业务用户与授权声明         |
+| `mysql_backup_enabled`   | `true`           | 启用每日一次的全量物理备份          |
+| `mysql_backup_repo`      | 见下文              | 本地备份目录与保留份数            |
+| `mysql_exporter_enabled` | `true`           | 启用 Exporter 与监控 Target |
+{.full-width}
+
+默认备份仓库为：
+
+```yaml
+mysql_backup_repo:
+  local: { path: /data/backups/mysql, retention: 7 }
+```
+
+不要继续使用旧页面曾列出的 `mysql_role`、`mysql_services`、`mysql_packages`、`mysql_data`、`mysql_port`、`mysql_replication_*` 或 `mysql_*_username` 等变量；它们不属于当前公开接口。
+
+
+--------
+
+## 配置示例
+
+下面同时定义一个单机集群与一个三节点 InnoDB Cluster：
+
+```yaml
+all:
+  children:
+    my-meta:
+      hosts:
+        10.10.10.10: { mysql_seq: 1 }
+      vars:
+        mysql_cluster: my-meta
+
+    my-test:
+      hosts:
+        10.10.10.11: { mysql_seq: 1 }
+        10.10.10.12: { mysql_seq: 2 }
+        10.10.10.13: { mysql_seq: 3 }
+      vars:
+        mysql_cluster: my-test
+        mysql_databases:
+          - { name: app }
+        mysql_users:
+          - name: app
+            host: '%'
+            password: DBUser.App
+            connlimit: 20
+            priv: { 'app.*': 'ALL PRIVILEGES' }
+
   vars:
-    mysql_cluster: my-test
-    mysql_databases:
-      - { name: meta }
-    mysql_users:
-      - { name: dbuser_meta    ,host: '%' ,password: 'dbuesr_meta'    ,priv: { "*.*": "SELECT, UPDATE, DELETE, INSERT" } }
-      - { name: dbuser_dba     ,host: '%' ,password: 'DBUser.DBA'     ,priv: { "*.*": "ALL PRIVILEGES" } }
-      - { name: dbuser_monitor ,host: '%' ,password: 'DBUser.Monitor' ,priv: { "*.*": "SELECT, PROCESS, REPLICATION CLIENT" } ,connlimit: 3 }  
+    mysql_root_password: DBUser.Root
+    mysql_monitor_password: DBUser.Monitor
+    mysql_cluster_password: DBUser.Cluster
 ```
 
+生产配置必须替换示例密码。`mysql_databases` 与 `mysql_users` 是增量声明：角色会创建或更新声明对象，但从列表删除条目不会自动删除数据库、用户或回收授权。
 
----------
+完整模板见 [`conf/demo/mysql.yml`](https://github.com/pgsty/pigsty/blob/main/conf/demo/mysql.yml)。
 
-## 管理
 
-以下是基本的 MySQL 集群基本管理操作：
+--------
 
-使用 `mysql.yml` 创建 MySQL 集群：
+## 部署与收敛
+
+每次 HA 操作都必须用 `-l` 选择该集群的全部三个清单成员；角色会拒绝部分成员选择。
 
 ```bash
-./mysql.yml -l my-test
+./node.yml  -l my-test             # NODE 与共享 CA 前置条件
+./mysql.yml -l my-test --check     # 预检完整三节点集群
+./mysql.yml -l my-test             # 经确认后执行真实收敛
+
+./mysql.yml -l my-meta --check     # 预检单机
+./mysql.yml -l my-meta             # 部署或收敛单机
 ```
 
+普通收敛会拒绝未知数据目录、属于其他集群/实例的 Pigsty 标记、外来的 InnoDB Cluster Metadata、对非新成员执行破坏性 Clone，以及完全停机集群的自动恢复。HA 环境也不能通过普通重跑隐式轮换 `mysql_cluster_password`。
 
 
+--------
+
+## 组件与端口
+
+| 组件 | 用途 | 固定端点 |
+|:---|:---|:---|
+| `mysqld` | 单机服务或 MGR 成员 | Classic `3306`、X Protocol `33060` |
+| Group Replication | 三节点复制与共识 | `33061` |
+| MySQL Router | HA 拓扑感知入口，每个成员均部署 | RW `6446`、RO `6447` |
+| MySQL Shell | AdminAPI 生命周期管理 | 本机控制面 |
+| XtraBackup | 每日全量物理备份 | 本地备份仓库 |
+| `mysqld_exporter` | MySQL 与 MGR 指标 | `9104` |
+{.full-width}
+
+角色创建并管理三个平台身份：
+
+- `dbuser_cluster@'%'`：要求 TLS 的 AdminAPI 身份；
+- `dbuser_monitor@'127.0.0.1'`：最小权限 Exporter 身份；
+- `dbuser_backup@'localhost'`：本地 XtraBackup 身份。
 
 
-----------------
+--------
 
-## 剧本
+## 剧本任务
 
-Pigsty 提供了一个与 MYSQL 模块相关的剧本，用于部署 MySQL 集群
+[`mysql.yml`](https://github.com/pgsty/pigsty/blob/main/mysql.yml) 的当前任务层级为：
 
-* [`mysql.yml`](#mysqlyml)： 根据配置清单部署 MySQL
-
-
-
-
-----------------
-
-### `mysql.yml`
-
-用于部署 MySQL 模式集群的 [`mysql.yml`](https://github.com/vonng/pigsty/blob/main/mysql.yml) 剧本包含以下子任务：
-
-```bash
-mysql-id       : generate mysql instance identity
-mysql_clean    : remove existing mysql instance (DANGEROUS)
-mysql_dbsu     : create os user mysql
-mysql_install  : install mysql rpm/deb packages
-mysql_dir      : create mysql data & conf dir
-mysql_config   : generate mysql config file
-mysql_boot     : bootstrap mysql cluster
-mysql_launch   : launch mysql service
-mysql_pass     : write mysql password
-mysql_db       : create mysql biz database
-mysql_user     : create mysql biz user
-mysql_exporter : launch mysql exporter
-mysql_register : register mysql service to VictoriaMetrics
+```text
+mysql
+├── mysql_check       # 校验身份、平台、范围、凭据与保留状态
+├── mysql_install     # 安装固定的 MySQL 8.4 平台软件包
+├── mysql_bootstrap
+│   ├── mysql_cert    # 签发并安装节点 TLS 证书
+│   ├── mysql_config  # 渲染配置，只初始化空数据目录
+│   ├── mysql_launch  # 启动 mysqld 并准备 AdminAPI 身份
+│   └── mysql_cluster # 收敛三节点 InnoDB Cluster
+├── mysql_access
+│   └── mysql_router  # 在 HA 成员上收敛 Router
+├── mysql_provision   # 收敛平台身份与声明的业务对象
+├── mysql_backup      # 配置每日全量备份
+├── mysql_monitor     # 配置 Exporter 与文件发现 Target
+└── mysql_done        # 输出实例摘要
 ```
 
+旧角色中的 `mysql_clean`、`mysql_dbsu`、`mysql_boot`、`mysql_pass` 等任务不属于当前实现。
 
 
+--------
+
+## 备份
+
+当前备份契约有意保持精简：
+
+- 只提供固定的每日 Systemd Timer；
+- 只执行 XtraBackup 全量物理备份；
+- 单机在本机备份，HA 只在当前 PRIMARY 上备份；
+- 只支持 `mysql_backup_repo.local` 中的本地目录与保留份数。
+
+当前角色不提供公开的调度表达式、增量备份链、连续 Binlog 归档、PITR 或自动恢复。物理恢复属于需要单独审批和验证近期备份的破坏性运维流程。
 
 
-
-----------------
+--------
 
 ## 监控
 
-Pigsty 提供了两个与 [`MYSQL`](/docs/pilot/mysql) 模块有关的监控面板：
+每个节点在 Infra 上生成一个 VictoriaMetrics 文件发现文档：
 
-[MYSQL Overview](https://demo.pigsty.cc/d/mysql-overview) 展示了 MySQL 集群的整体监控指标。
+```text
+/infra/targets/mysql/<mysql_instance>.yml
+```
 
-[MYSQL Instance](https://demo.pigsty.cc/d/mysql-instance) 展示了单个 MySQL 实例的监控指标详情
+当前随 Pigsty 提供 5 个 MySQL Dashboard：
 
-
-
+- [MySQL Overview](https://demo.pigsty.cc/ui/d/mysql-overview)：集群与实例总览；
+- [MySQL Cluster](https://demo.pigsty.cc/ui/d/mysql-cluster)：集群级工作负载与状态；
+- [MySQL Instance](https://demo.pigsty.cc/ui/d/mysql-instance)：单实例指标；
+- [MySQL Group Replication](https://demo.pigsty.cc/ui/d/mysql-replication)：MGR 拓扑与复制状态；
+- [MySQL Alert](https://demo.pigsty.cc/ui/d/mysql-alert)：MySQL 告警汇总。
 
 
 --------
 
-## 参数
+## 安全退役
 
-MySQL 的可用配置项：
+退役使用独立的 [`mysql-rm.yml`](https://github.com/pgsty/pigsty/blob/main/mysql-rm.yml)，每次都必须同时满足：
 
-```yaml
-#-----------------------------------------------------------------
-# MYSQL_IDENTITY
-#-----------------------------------------------------------------
-# mysql_cluster:           #CLUSTER  # mysql cluster name, required identity parameter
-# mysql_role: replica      #INSTANCE # mysql role, required, could be primary,replica
-# mysql_seq: 0             #INSTANCE # mysql instance seq number, required identity parameter
+- 显式设置 `mysql_safeguard=false`；
+- `mysql_rm_confirm` 精确等于目标实例名或整个集群名。
 
-#-----------------------------------------------------------------
-# MYSQL_BUSINESS
-#-----------------------------------------------------------------
-# mysql business object definition, overwrite in group vars
-mysql_users: []                      # mysql business users
-mysql_databases: []                  # mysql business databases
-mysql_services: []                   # mysql business services
+预览并退役一个三节点集群中的 SECONDARY：
 
-# global credentials, overwrite in global vars
-mysql_root_username: root
-mysql_root_password: DBUser.Root
-mysql_replication_username: replicator
-mysql_replication_password: DBUser.Replicator
-mysql_admin_username: dbuser_dba
-mysql_admin_password: DBUser.DBA
-mysql_monitor_username: dbuser_monitor
-mysql_monitor_password: DBUser.Monitor
+```bash
+./mysql-rm.yml -l 10.10.10.12 --check \
+  -e mysql_safeguard=false -e mysql_rm_confirm=my-test-2
 
-#-----------------------------------------------------------------
-# MYSQL_INSTALL
-#-----------------------------------------------------------------
-# - install - #
-mysql_dbsu: mysql                    # os dbsu name, mysql by default, better not change it
-mysql_dbsu_uid: 27                   # os dbsu uid and gid, 306 for default mysql users and groups
-mysql_dbsu_home: /var/lib/mysql      # mysql home directory, `/var/lib/mysql` by default
-mysql_dbsu_ssh_exchange: true        # exchange mysql dbsu ssh key among same mysql cluster
-mysql_packages:                      # mysql packages to be installed, `mysql-community*` by default
-  - mysql-community*
-  - mysqld_exporter
-
-# - bootstrap - #
-mysql_data: /data/mysql              # mysql data directory, `/data/mysql` by default
-mysql_listen: '0.0.0.0'              # mysql listen addresses, comma separated IP list
-mysql_port: 3306                     # mysql listen port, 3306 by default
-mysql_sock: /var/lib/mysql/mysql.sock # mysql socket dir, `/var/lib/mysql/mysql.sock` by default
-mysql_pid: /var/run/mysqld/mysqld.pid # mysql pid file, `/var/run/mysqld/mysqld.pid` by default
-mysql_conf: /etc/my.cnf              # mysql config file, `/etc/my.cnf` by default
-mysql_log_dir: /var/log              # mysql log dir, `/var/log/mysql` by default
-
-mysql_exporter_port: 9104            # mysqld_exporter listen port, 9104 by default
-
-mysql_parameters: {}                 # extra parameters for mysqld
-mysql_default_parameters:            # default parameters for mysqld
-
+./mysql-rm.yml -l 10.10.10.12 \
+  -e mysql_safeguard=false -e mysql_rm_confirm=my-test-2
 ```
 
+单成员退役只接受健康集群中的 `ONLINE SECONDARY`，并使用 AdminAPI `force: false` 摘除。当前替换契约要求在新机器上复用同一个服务地址，然后对完整三节点集群重新执行 `mysql.yml`；普通替换不支持改变成员地址，也不支持长期两节点拓扑。
+
+预览并退役整个单机或 HA 集群：
+
+```bash
+./mysql-rm.yml -l my-test --check \
+  -e mysql_safeguard=false -e mysql_rm_confirm=my-test
+```
+
+`mysql-rm.yml` 只会停止入口/服务、注销 Exporter Target 并写入持久退役标记；它不会删除数据目录、备份、配置、证书、软件包、Metadata Schema 或 Router 身份。退役标记会阻止普通 `mysql.yml` 重新接管；清除标记或销毁保留数据必须使用另行审批的操作手册。
