@@ -89,7 +89,7 @@ series:
 ```bash
 # Pigsty 封装的 failover 命令
 pg failover pg-test              # 故障转移到最佳候选
-pg failover pg-test pg-test-2    # 故障转移到指定从库
+pg failover pg-test --candidate pg-test-2  # 故障转移到指定从库
 ```
 
 ```
@@ -277,4 +277,3 @@ theme light
 | **safe** |     6s      |    66s     |    46s     | **8~11x**  |
 | **wide** |     7s      |    127s    |    87s     | **12~18x** |
 {.full-width}
-

@@ -113,13 +113,13 @@ cd ~/pigsty
 |:------------------------|:------------------------------------------------------------------|
 | `-c, --conf`            | 从 `conf/<template>.yml` 生成配置文件，支持子目录如 `ha/full`                   |
 | `-i, --ip`              | 用指定 IP 替换配置模板中的占位符 `10.10.10.10`                                  |
-| `-v, --version`         | 指定 PostgreSQL 大版本号（14-19）；PG19 为 Beta，建议直接使用 `pg19` 模板                |
+| `-v, --version`         | 指定 PostgreSQL 大版本号（14-19）；PG19 为 Beta，建议直接使用 `pg19` 模板            |
 | `-r, --region`          | 设置软件仓库镜像区域：`default`（默认）、`china`（中国镜像）、`europe`（欧洲镜像）             |
-| `-o, --output`          | 指定输出文件路径，默认为 `pigsty.yml`；相对路径基于 Pigsty 目录，绝对路径原样使用             |
-| `-s, --skip`            | 跳过 IP 探测、目标节点 SSH/Sudo 检查与实质 IP 替换，保留 `10.10.10.10` 占位符             |
+| `-o, --output`          | 指定输出文件路径，默认为 `pigsty.yml`；相对路径基于 Pigsty 目录，绝对路径原样使用               |
+| `-s, --skip`            | 跳过 IP 探测、目标节点 SSH/Sudo 检查与实质 IP 替换，保留 `10.10.10.10` 占位符           |
 | `-x, --proxy`           | 将当前环境的代理变量（`HTTP_PROXY`、`HTTPS_PROXY`、`ALL_PROXY`、`NO_PROXY`）写入配置 |
-| `-n, --non-interactive` | 非交互模式；单 IP 或演示 IP 可自动选择，多 IP 歧义时需配合 `-i`                           |
-| `-p, --port`            | 指定环境检查所用 SSH 端口；不会自动把 `ansible_port` 写入输出配置                         |
+| `-n, --non-interactive` | 非交互模式；单 IP 或演示 IP 可自动选择，多 IP 歧义时需配合 `-i`                          |
+| `-p, --port`            | 指定环境检查所用 SSH 端口；不会自动把 `ansible_port` 写入输出配置                       |
 | `-g, --generate`        | **为配置文件中的密码生成随机值，提高安全性（强烈推荐）**                                    |
 {.full-width}
 
@@ -323,8 +323,8 @@ $ ./configure -g
 | `app/mattermost` | Mattermost 协作平台配置  |
 |   `app/maybe`    | Maybe 财务应用配置       |
 |  `app/registry`  | Docker Registry 配置 |
-|  `app/immich`    | Immich 相册与视频管理配置   |
-| `app/jumpserver` | JumpServer 堡垒机配置    |
+|   `app/immich`   | Immich 相册与视频管理配置   |
+| `app/jumpserver` | JumpServer 堡垒机配置   |
 {.full-width}
 
 ### 特殊内核模板/模式
@@ -345,22 +345,22 @@ $ ./configure -g
 
 ### 演示与构建模板
 
-|       模板       | 说明                     |
-|:--------------:|:-----------------------|
-|     `vibe`     | Vibe Coding 开发环境模板     |
-|    `docker`    | Docker 容器内运行模板         |
-|  `demo/bare`   | 最小可读单节点配置示例           |
-|   `demo/el`    | EL 系发行版完整参数示例          |
-| `demo/debian`  | Debian/Ubuntu 完整参数示例    |
-|  `demo/demo`   | 多模块演示环境配置              |
-| `demo/kernel`  | 十节点数据库内核矩阵             |
-| `demo/redis`   | Redis 主从、哨兵与原生集群演示     |
-| `demo/minio`   | MinIO 多节点多盘集群演示        |
-| `demo/remote`  | 远程 PostgreSQL/RDS 监控示例  |
-|  `demo/saas`   | 传统单节点 SaaS 组件组合示例      |
-|  `demo/wool`   | 中国区低配云主机示例             |
-|  `build/oss`   | 跨发行版开源软件包构建环境         |
-|  `build/dev`   | 三节点开发与构建环境             |
+|      模板       | 说明                     |
+|:-------------:|:-----------------------|
+|    `vibe`     | Vibe Coding 开发环境模板     |
+|   `docker`    | Docker 容器内运行模板         |
+|  `demo/bare`  | 最小可读单节点配置示例            |
+|   `demo/el`   | EL 系发行版完整参数示例          |
+| `demo/debian` | Debian/Ubuntu 完整参数示例   |
+|  `demo/demo`  | 多模块演示环境配置              |
+| `demo/kernel` | 十节点数据库内核矩阵             |
+| `demo/redis`  | Redis 主从、哨兵与原生集群演示     |
+| `demo/minio`  | MinIO 多节点多盘集群演示        |
+| `demo/remote` | 远程 PostgreSQL/RDS 监控示例 |
+|  `demo/saas`  | 传统单节点 SaaS 组件组合示例      |
+|  `demo/wool`  | 中国区低配云主机示例             |
+|  `build/oss`  | 跨发行版开源软件包构建环境          |
+|  `build/dev`  | 三节点开发与构建环境             |
 {.full-width}
 
 
@@ -370,7 +370,7 @@ $ ./configure -g
 
 ```bash
 $ ./configure
-configure pigsty v4.4.0 begin
+configure pigsty v4.5.0 begin
 [ OK ] region = china
 [ OK ] kernel  = Linux
 [ OK ] machine = x86_64

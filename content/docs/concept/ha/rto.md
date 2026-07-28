@@ -21,7 +21,6 @@ categories: [概念]
 
 故障切换时的不可用时长上限由 [**`pg_rto`**](/docs/pgsql/param#pg_rto) 参数控制。Pigsty 提供了四种预设的 RTO 模式：
 `fast`、`norm`、`safe`、`wide`，分别针对不同的网络条件与部署场景进行了优化，默认使用 `norm` 模式（约 45 秒）。
-您也可以使用秒数直接指定 RTO 上限，系统会自动映射到最接近的模式。
 
 当主库发生故障时，整个恢复流程涉及多个阶段：Patroni 检测故障、DCS 锁过期、新主选举、执行 promote、HAProxy 感知新主。
 减小 RTO 意味着缩短各阶段的超时时间，这会使集群对网络抖动更加敏感，从而增加误切风险。
@@ -179,7 +178,7 @@ loop\_wait + 2 \times retry\_timeout \leq ttl
 建议仅在同机柜或同交换机部署时使用，并在生产环境充分测试后再启用。
 
 **norm 模式**（**默认**）是 Pigsty 默认使用的配置，对于绝大多数同机房部署的业务来说已经足够使用。
-平均 21 秒的恢复时间在可接受范围内，同时提供了合理的容错窗口，避免网络抖动导致的误切。
+按本文模型，被动/主动路径平均约 34/35 秒，同时提供了合理的容错窗口，避免网络抖动导致的误切。
 
 **safe 模式** 适用于同城跨机房部署，网络延迟较高或存在偶发抖动的场景。
 更长的容错窗口可以有效避免网络抖动导致的误切，是跨机房容灾的推荐配置。
@@ -200,7 +199,7 @@ loop\_wait + 2 \times retry\_timeout \leq ttl
 
 
 通常只需将 [**`pg_rto`**](/docs/pgsql/param#pg_rto) 设为模式名称，Pigsty 会自动配置 Patroni 与 HAProxy 参数。
-为了保持向后兼容性，Pigsty 仍然支持直接使用秒数配置 RTO，但效果相当于指定 `norm` 模式。
+当前模板通过 `pg_rto in pg_rto_plan` 查找模式；数字或未知键会直接回退到 `norm`，不应将这种回退当作“按秒数配置”。
 
 配置模式实际上是从 [**`pg_rto_plan`**](/docs/pgsql/param#pg_rto_plan) 中加载对应参数集，您可以修改或覆盖此配置以实现自定义 RTO 策略。
 
@@ -211,7 +210,5 @@ pg_rto_plan:  # [ttl, loop, retry, start, margin, inter, fastinter, downinter, r
   safe: [ 60  ,10 ,20 ,45 ,10 ,'3s' ,'1.5s' ,'3s' ,3 ,3 ]  # rto < 90s
   wide: [ 120 ,20 ,30 ,95 ,15 ,'4s' ,'2s'   ,'4s' ,3 ,3 ]  # rto < 150s
 ```
-
-
 
 

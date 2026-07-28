@@ -22,7 +22,7 @@ PGSQL 模块在生产环境中以 **集群** 的形式组织，这些 **集群**
 | [**`patroni`**](#patroni)                         | 高可用    | 托管 PostgreSQL 进程，协调故障转移、选主、配置变更。         |
 | [**`pgbouncer`**](#pgbouncer)                     | 连接池    | 轻量级连接池中间件，复用连接、降低开销、提供额外灵活性。             |
 | [**`pgbackrest`**](#pgbackrest)                   | 备份恢复   | 全量/增量备份与 WAL 归档，支持本地与对象存储。               |
-| [**`pg_exporter`**](#pg_exporter)                 | 指标导出   | 导出 PostgreSQL 监控指标供 Prometheus 抓取。       |
+| [**`pg_exporter`**](#pg_exporter)                 | 指标导出   | 导出 PostgreSQL 监控指标，以 Prometheus 兼容格式提供。  |
 | [**`pgbouncer_exporter`**](#pgbouncer_exporter)   | 指标导出   | 导出 [**Pgbouncer**](#pgbouncer) 连接池指标。    |
 | [**`pgbackrest_exporter`**](#pgbackrest_exporter) | 指标导出   | 导出 [**pgBackrest**](#pgbackrest) 备份状态指标。 |
 | [**`vip-manager`**](#vip-manager)                 | VIP 管理 | 将 L2 VIP 绑定到当前主库节点，实现透明漂移。【可选】           |
@@ -157,7 +157,7 @@ PGSQL 模块在生产环境中以 **集群** 的形式组织，这些 **集群**
 **关键交互**：
 - **[pgBackRest](#pgbackrest) → [PostgreSQL](#postgresql)**：执行备份命令，管理 WAL 归档
 - **[pgBackRest](#pgbackrest) → [Patroni](#patroni)**：恢复时可将副本引导为新的主库或备库
-- **[pgbackrest_exporter](#pgbackrest_exporter) → Prometheus**：导出备份状态指标，监控备份健康
+- **[pgbackrest_exporter](#pgbackrest_exporter) → VictoriaMetrics**：通过 Prometheus 兼容协议导出备份状态指标，监控备份健康
 
 更多信息请参阅：[**PITR**](/docs/concept/pitr/)、[**备份恢复**](/docs/pgsql/backup/) 与 [**配置：PGSQL - PG_BACKUP**](/docs/pgsql/param/#pg_backup)
 

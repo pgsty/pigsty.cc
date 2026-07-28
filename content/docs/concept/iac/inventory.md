@@ -87,7 +87,7 @@ all:
 如果您的部署规模较大，或者希望更好地组织配置文件，
 可以将配置清单 [**拆分为多个文件**](https://docs.ansible.com/projects/ansible/latest/inventory_guide/intro_inventory.html#id18)，便于管理与维护。
 
-```yaml
+```text
 inventory/
 ├── hosts.yml              # 主机和集群定义
 ├── group_vars/
@@ -126,5 +126,4 @@ inventory = pigsty.yml
 ```
 
 此外，Pigsty 还支持使用 [**CMDB 元数据库**](/docs/concept/iac/cmdb) 来存储配置清单，便于与现有系统对接整合。
-
 

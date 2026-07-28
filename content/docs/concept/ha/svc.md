@@ -28,7 +28,7 @@ categories: [概念]
 ```bash
 psql postgres://dbuser_dba:DBUser.DBA@10.10.10.10/meta     # 直接用 DBA 超级用户连上去
 psql postgres://dbuser_meta:DBUser.Meta@10.10.10.10/meta   # 用默认的业务管理员用户连上去
-psql postgres://dbuser_view:DBUser.View@pg-meta/meta       # 用默认的只读用户走实例域名连上去
+psql postgres://dbuser_view:DBUser.Viewer@pg-meta/meta     # 用默认的只读用户走实例域名连上去
 ```
 
 
@@ -78,8 +78,8 @@ Pigsty 的服务交付边界止步于集群的 HAProxy，用户可以用各种�
 
 | 类型        | 样例            | 描述                                       |
 |-----------|---------------|------------------------------------------|
-| 集群域名      | `pg-test`     | 通过集群域名访问（由 dnsmasq @ infra 节点解析）         |
-| 集群 VIP 地址 | `10.10.10.3`  | 通过由 `vip-manager` 管理的 L2 VIP 地址访问，绑定到主节点 |
+| 集群域名      | `pg-test`     | 由 infra 节点上的 dnsmasq 解析；`pg_dns_target: auto` 时，有 VIP 则指向 VIP，否则指向主库 IP |
+| 集群 VIP 地址 | `10.10.10.3`  | 启用 `pg_vip_enabled` 后，由 `vip-manager` 管理并绑定到主节点的 L2 VIP |
 | 实例主机名     | `pg-test-1`   | 通过任何实例主机名访问（由 dnsmasq @ infra 节点解析）      |
 | 实例 IP 地址  | `10.10.10.11` | 访问任何实例的 IP 地址                            |
 {.full-width}
@@ -102,7 +102,7 @@ Pigsty 使用不同的 **端口** 来区分 [pg services](#服务概述)
 
 
 ```bash
-# 通过集群域名访问
+# 通过集群域名访问（下例假定已启用集群 VIP；未启用时默认直接解析到主库 IP）
 postgres://test@pg-test:5432/test # DNS -> L2 VIP -> 主直接连接
 postgres://test@pg-test:6432/test # DNS -> L2 VIP -> 主连接池 -> 主
 postgres://test@pg-test:5433/test # DNS -> L2 VIP -> HAProxy -> 主连接池 -> 主
@@ -116,7 +116,7 @@ postgres://test@10.10.10.3:6432/test # L2 VIP -> 主连接池 -> 主
 postgres://test@10.10.10.3:5433/test # L2 VIP -> HAProxy -> 主连接池 -> 主
 postgres://test@10.10.10.3:5434/test # L2 VIP -> HAProxy -> 备份连接池 -> 备份
 postgres://dbuser_dba@10.10.10.3:5436/test # L2 VIP -> HAProxy -> 主直接连接 (用于管理员)
-postgres://dbuser_stats@10.10.10.3::5438/test # L2 VIP -> HAProxy -> 离线直接连接 (用于 ETL/个人查询)
+postgres://dbuser_stats@10.10.10.3:5438/test # L2 VIP -> HAProxy -> 离线直接连接 (用于 ETL/个人查询)
 
 # 直接指定任何集群实例名
 postgres://test@pg-test-1:5432/test # DNS -> 数据库实例直接连接 (单例访问)
@@ -138,5 +138,4 @@ postgres://dbuser_stats@10.10.10.11:5438/test # HAProxy -> 数据库离线读-�
 postgres://test@10.10.10.11:6432,10.10.10.12:6432,10.10.10.13:6432/test?target_session_attrs=primary
 postgres://test@10.10.10.11:6432,10.10.10.12:6432,10.10.10.13:6432/test?target_session_attrs=prefer-standby
 ```
-
 

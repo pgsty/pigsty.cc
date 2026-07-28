@@ -32,6 +32,7 @@ Pigsty 提供了 [**`configure`**](https://github.com/pgsty/pigsty/blob/main/con
 
 # 使用不同的数据库内核
 ./configure -c pgsql            # 原生 PostgreSQL 内核，基础功能 (14~18)
+./configure -c pg19             # PostgreSQL 19 Beta 专用试用模板
 ./configure -c mssql            # Babelfish 内核，兼容 SQL Server 协议 (17/18)
 ./configure -c polar            # PolarDB PG 内核，Aurora/RAC 风格 (17)
 ./configure -c ivory            # IvorySQL 内核，兼容 Oracle 语法 (18)
@@ -74,6 +75,7 @@ Pigsty 提供了 [**`configure`**](https://github.com/pgsty/pigsty/blob/main/con
 | 模板                                         | 说明                                  |
 |--------------------------------------------|-------------------------------------|
 | [**`pgsql.yml`**](/docs/conf/pgsql/)       | 原生 PostgreSQL 内核，基础功能 (14~18)       |
+| [**`pg19.yml`**](/docs/conf/pg19/)         | PostgreSQL 19 Beta 专用试用模板            |
 | [**`mssql.yml`**](/docs/conf/mssql/)       | Babelfish 内核，兼容 SQL Server 协议 (17/18) |
 | [**`polar.yml`**](/docs/conf/polar/)       | PolarDB PG 内核，Aurora/RAC 风格 (17)    |
 | [**`ivory.yml`**](/docs/conf/ivory/)       | IvorySQL 内核，兼容 Oracle 语法 (18)       |
@@ -138,7 +140,9 @@ Pigsty 提供了 [**`configure`**](https://github.com/pgsty/pigsty/blob/main/con
 | [**`debian.yml`**](/docs/conf/debian/) | Debian/Ubuntu 系统的全参数配置文件                     |
 | **`remote.yml`**                       | 监控远程 PostgreSQL 集群或 RDS 的示例配置                |
 | **`redis.yml`**                        | Redis 集群示例配置                                 |
-| [**`minio.yml`**](/docs/conf/minio/)   | 3 节点 MinIO 集群示例配置                            |
+| [**`minio.yml`**](/docs/conf/minio/)   | 4 节点 MinIO 集群示例配置                            |
+| [**`kafka.yml`**](/docs/conf/kafka/)   | 单节点开发集群 + 三节点安全集群的 Kafka dynamic KRaft 示例 |
+| [**`mysql.yml`**](/docs/conf/mysql84/) | 原生 MySQL 8.4 单节点/三节点试点示例；不同于 OpenHalo `conf/mysql.yml` |
 | [**`demo.yml`**](/docs/conf/demo/)     | Pigsty [公开演示站](https://demo.pigsty.cc) 的配置文件 |
 | [**`fat.yml`**](/docs/conf/fat/)       | 含本地软件源与完整功能的单节点配置文件                          |
 | [**`infra.yml`**](/docs/conf/infra/)   | 仅部署基础设施模块                                    |

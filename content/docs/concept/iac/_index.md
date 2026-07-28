@@ -47,7 +47,7 @@ minio: { hosts: { 10.10.10.10: { minio_seq: 1 } }, vars: { minio_cluster: minio 
 etcd: { hosts: { 10.10.10.10: { etcd_seq: 1 } }, vars: { etcd_cluster: etcd } }
 
 # PGSQL 示例集群: pg-meta
-pg-meta: { hosts: { 10.10.10.10: { pg_seq: 1, pg_role: primary }, vars: { pg_cluster: pg-meta } }
+pg-meta: { hosts: { 10.10.10.10: { pg_seq: 1, pg_role: primary } }, vars: { pg_cluster: pg-meta } }
 ```
 
 要真正安装这些模块，执行以下剧本：
