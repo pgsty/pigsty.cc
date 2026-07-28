@@ -20,8 +20,8 @@ categories: [任务]
 
 ```bash
 curl https://repo.pigsty.io/get | bash; cd ~/pigsty/
-./configure -c full
-./install
+./configure -c ha/full
+./deploy.yml
 ```
 
 现在以管理节点上的管理员用户（或 dbsu）身份操作。

@@ -105,7 +105,7 @@ pg-test:
 
 当启用同步备库（Sync Standby）时，PostgreSQL 将选择一个从库作为**同步备库**，其他所有从库作为**候选者**。 主数据库会等待备库实例刷新到磁盘，然后才确认提交，备库实例始终拥有最新的数据，没有复制延迟，主从切换至同步备库不会有数据丢失。
 
-PostgreSQL 默认使用异步流复制，这可能会有小的复制延迟（10KB / 10ms 数量级）。当主库失败时，可能会有一个小的数据丢失窗口（可以使用 [`pg_rpo`](/docs/pgsql/param#pg_rpo) 来控制），但对于大多数场景来说，这是可以接受的。
+PostgreSQL 默认使用异步流复制，主库故障时可能丢失尚未复制的 WAL。[`pg_rpo`](/docs/pgsql/param#pg_rpo) 配置的是 Patroni 候选副本的采样落后阈值，并非实际丢失量硬上限；实际窗口还取决于写入速率、复制状态与 Patroni 采样时机。
 
 但在某些关键场景中（例如，金融交易），数据丢失是完全不可接受的，或者，读取复制延迟是不可接受的。在这种情况下，您可以使用同步提交来解决这个问题。 要启用同步备库模式，您可以简单地使用 [`pg_conf`](/docs/pgsql/param#pg_conf) 中的`crit.yml`模板。
 
@@ -409,5 +409,4 @@ SELECT create_reference_table('pgbench_branches')         ; SELECT truncate_loca
 SELECT create_reference_table('pgbench_history')          ; SELECT truncate_local_data_after_distributing_table($$public.pgbench_history$$);
 SELECT create_reference_table('pgbench_tellers')          ; SELECT truncate_local_data_after_distributing_table($$public.pgbench_tellers$$);
 ```
-
 

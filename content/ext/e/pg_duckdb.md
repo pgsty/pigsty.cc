@@ -33,7 +33,7 @@ weight: 2430
 | 2430  | [**`pg_duckdb`**](/ext/e/pg_duckdb) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `public` |
 {.ext-table}
 
-| **相关扩展** | [`pg_mooncake`](/ext/e/pg_mooncake) [`duckdb_fdw`](/ext/e/duckdb_fdw) [`pg_analytics`](/ext/e/pg_analytics) [`pg_parquet`](/ext/e/pg_parquet) [`columnar`](/ext/e/columnar) [`citus`](/ext/e/citus) [`citus_columnar`](/ext/e/citus_columnar) [`orioledb`](/ext/e/orioledb) |
+| **相关扩展** | [`pg_mooncake`](/ext/e/pg_mooncake) [`duckdb_fdw`](/ext/e/duckdb_fdw) `pg_analytics` [`pg_parquet`](/ext/e/pg_parquet) [`columnar`](/ext/e/columnar) [`citus`](/ext/e/citus) [`citus_columnar`](/ext/e/citus_columnar) [`orioledb`](/ext/e/orioledb) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **下游依赖** | [`pg_mooncake`](/ext/e/pg_mooncake) |
 {.ext-table .ext-table--rel}

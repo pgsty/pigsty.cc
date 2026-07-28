@@ -33,7 +33,7 @@ weight: 2550
 | 2550  | [**`pg_sorted_heap`**](/ext/e/pg_sorted_heap) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | - |
 {.ext-table}
 
-| **相关扩展** | [`storage_engine`](/ext/e/storage_engine) [`pg_ivm`](/ext/e/pg_ivm) [`pgvector`](/ext/e/pgvector) [`vchord`](/ext/e/vchord) [`pg_search`](/ext/e/pg_search) |
+| **相关扩展** | [`storage_engine`](/ext/e/storage_engine) [`pg_ivm`](/ext/e/pg_ivm) [`vector`](/ext/e/vector) [`vchord`](/ext/e/vchord) [`pg_search`](/ext/e/pg_search) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

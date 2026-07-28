@@ -30,8 +30,8 @@ pg_databases:
   - name: mydb                # 默认加入连接池
     pool_auth_user: dbuser_meta # 可选，认证查询用户（配合 pgbouncer_auth_query）
     pool_mode: transaction    # 数据库级池化模式
-    pool_size: 64             # 默认池大小
-    pool_reserve: 32          # 保留池大小
+    pool_size: 50             # 默认池大小
+    pool_reserve: 30          # 保留池大小
     pool_size_min: 0          # 最小池大小
     pool_connlimit: 100       # 最大数据库连接数
   - name: internal
@@ -446,31 +446,18 @@ $ kill -SIGUSR2 $(cat /run/postgresql/pgbouncer.pid)
 
 ## 流量切换
 
-Pigsty 提供了 `pgb-route` 实用函数，可以将 Pgbouncer 流量快速切换至其他节点，用于零停机迁移：
+Pigsty 管理的数据库路由位于 `/etc/pgbouncer/database.txt`。要将某个数据库的 Pgbouncer 流量切换到其他节点，需要修改该文件、重载配置，再让已有服务端连接排空并重建：
 
 ```bash
-# 定义（已在 /etc/profile.d/pg-alias.sh 中）
-function pgb-route(){
-  local ip=${1-'\/var\/run\/postgresql'}
-  sed -ie "s/host=[^[:space:]]\+/host=${ip}/g" /etc/pgbouncer/pgbouncer.ini
-  cat /etc/pgbouncer/pgbouncer.ini
-}
-
-# 使用：将流量路由到 10.10.10.12
-$ pgb-route 10.10.10.12
-$ pgb -c "RECONNECT; WAIT_CLOSE;"
-```
-
-完整的零停机切换流程：
-
-```bash
-# 1. 修改路由目标
-$ pgb-route 10.10.10.12
+# 1. 仅把 mydb 的后端目标改为 10.10.10.12
+$ sed -i -E '/^mydb[[:space:]]*=/ s#host=[^[:space:]]+#host=10.10.10.12#' /etc/pgbouncer/database.txt
 
 # 2. 重载配置
 $ pgb -c "RELOAD;"
 
-# 3. 重建连接并等待旧连接释放
-$ pgb -c "RECONNECT;"
-$ pgb -c "WAIT_CLOSE;"
+# 3. 重建该数据库的连接并等待旧连接释放
+$ pgb -c "RECONNECT mydb;"
+$ pgb -c "WAIT_CLOSE mydb;"
 ```
+
+> 当前源码附带的 `pgb-route` 函数只修改 `/etc/pgbouncer/pgbouncer.ini`；该文件仅 include `database.txt`，并不包含 Pigsty 生成的逐库 `host=` 路由。因此它不会改变托管数据库的后端目标，请不要用它替代上述操作。

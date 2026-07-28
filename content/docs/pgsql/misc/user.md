@@ -63,7 +63,7 @@ pg-meta:
   roles: [dbrole_admin]           # 可选，默认角色为：dbrole_{admin,readonly,readwrite,offline}
   parameters: {}                  # 可选，使用 `ALTER ROLE SET` 针对这个角色，配置角色级的数据库参数
   pool_mode: transaction          # 可选，默认为 transaction 的 pgbouncer 池模式，用户级别
-  pool_connlimit: -1              # 可选，用户级别的最大数据库连接数，默认 -1 禁用限制
+  pool_connlimit: 100             # 可选，用户级连接池最大连接数；省略时继承全局默认 100
   search_path: public             # 可选，根据 postgresql 文档的键值配置参数（例如：使用 pigsty 作为默认 search_path）
 ```
 
@@ -87,7 +87,7 @@ Pigsty 提供一套内置的访问控制 / [ACL](/docs/concept/sec/ac#角色体�
 
 - [`pg_default_roles`](/docs/pgsql/param#pg_default_roles)：系统范围的角色和全局用户
 - [`pg_default_privileges`](/docs/pgsql/param#pg_default_privileges)：新建对象的默认权限
-- [`roles/pgsql/templates/pg-init-role.sql`](https://github.com/pgsty/pigsty/blob/main/roles/pgsql/templates/pg-init-role.sql)：角色创建 SQL 模板
+- [`roles/pgsql/templates/pg-init-roles.sql`](https://github.com/pgsty/pigsty/blob/main/roles/pgsql/templates/pg-init-roles.sql)：角色创建 SQL 模板
 - [`roles/pgsql/templates/pg-init-template.sql`](https://github.com/pgsty/pigsty/blob/main/roles/pgsql/templates/pg-init-template.sql)：权限 SQL 模板
 
 
@@ -165,8 +165,6 @@ dbuser_monitor              = pool_mode=session max_user_connections=8
 当您 [创建数据库](/docs/pgsql/admin/db#创建数据库) 时，Pgbouncer 的数据库列表定义文件将会被刷新，并通过在线重载配置的方式生效，不会影响现有的连接。
 
 Pgbouncer 使用和 PostgreSQL 同样的 `dbsu` 运行，默认为 `postgres` 操作系统用户，您可以使用 `pgb` 别名，使用 dbsu 访问 pgbouncer 管理功能。
-
-Pigsty 还提供了一个实用函数 `pgb-route`，可以将 pgbouncer 数据库流量快速切换至集群中的其他节点，用于零停机迁移：
 
 连接池用户配置文件 `userlist.txt` 与 `useropts.txt` 会在您 [创建用户](#创建用户) 时自动刷新，并通过在线重载配置的方式生效，正常不会影响现有的连接。
 

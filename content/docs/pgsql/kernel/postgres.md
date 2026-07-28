@@ -20,7 +20,7 @@ categories: [概念]
 
 ```bash
 ./configure -c pgsql     # 使用 postgres 内核
-./deploy.yml             # 使用 pigsty 设置一切
+./deploy.yml             # 部署 Pigsty 核心链路与原生 PostgreSQL
 ```
 
 大多数 [配置模板](/docs/conf/) 默认使用 PostgreSQL 内核，例如：
@@ -28,7 +28,7 @@ categories: [概念]
 - [`meta`](https://github.com/pgsty/pigsty/blob/main/conf/meta.yml) : **默认**，带有核心扩展（vector、postgis、timescale）的 postgres
 - [`rich`](https://github.com/pgsty/pigsty/blob/main/conf/rich.yml)：安装了所有扩展的 postgres
 - [`slim`](https://github.com/pgsty/pigsty/blob/main/conf/slim.yml)：仅 postgres，无监控基础设施
-- [`full`](https://github.com/pgsty/pigsty/blob/main/conf/full.yml)：用于 HA 演示的 4 节点沙盒
+- [`ha/full`](https://github.com/pgsty/pigsty/blob/main/conf/ha/full.yml)：用于 HA 演示的 4 节点沙盒
 - [`pgsql`](https://github.com/pgsty/pigsty/blob/main/conf/pgsql.yml)：最小的 postgres 内核配置示例
 
 

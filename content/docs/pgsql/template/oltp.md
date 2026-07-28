@@ -98,7 +98,7 @@ work_mem = min(max(shared_buffers / max_connections, 64MB), 1GB)
 OLTP 模板对并行查询做了适度限制，以避免并行查询抢占过多资源影响其他事务：
 
 ```yaml
-max_worker_processes: cpu + 8 (最小16)
+max_worker_processes: max(cpu + 16, 24)
 max_parallel_workers: 50% × cpu (最小2)
 max_parallel_workers_per_gather: 20% × cpu (2-8)
 max_parallel_maintenance_workers: 33% × cpu (最小2)
@@ -116,9 +116,9 @@ min_parallel_index_scan_size: 2MB    # 默认值 512kB 的四倍，倾向于不�
 ### WAL 配置
 
 ```yaml
-min_wal_size: 磁盘/20 (最大200GB)
-max_wal_size: 磁盘/5 (最大2000GB)
-max_slot_wal_keep_size: 磁盘×3/10 (最大3000GB)
+min_wal_size: 磁盘/20 (实际最大100GB)
+max_wal_size: 磁盘/5 (实际最大400GB)
+max_slot_wal_keep_size: 磁盘×3/10 (实际最大600GB)
 wal_buffers: 16MB
 wal_writer_delay: 20ms
 wal_writer_flush_after: 1MB
@@ -274,4 +274,3 @@ pg-oltp:
 - [**TINY 模板**](/docs/pgsql/template/tiny/)：微型实例模板对比
 - [集群配置](/docs/pgsql/config/cluster)：PostgreSQL 集群类型配置
 - [高可用](/docs/concept/ha)：高可用架构设计
-

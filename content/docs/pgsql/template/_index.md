@@ -14,7 +14,7 @@ Pigsty 提供四种预置的 Patroni/PostgreSQL 配置模板，针对不同的�
 |:-----------------------------------------------------------------|:-------|:----------|:--------------|
 | [**`/docs/pgsql/template/oltp.yml`**](/docs/pgsql/template/oltp) | 4-128C | OLTP 事务处理 | 高并发、低延迟、高吞吐   |
 | [**`/docs/pgsql/template/olap.yml`**](/docs/pgsql/template/olap) | 4-128C | OLAP 分析处理 | 大查询、高并行、长事务   |
-| [**`/docs/pgsql/template/crit.yml`**](/docs/pgsql/template/crit) | 4-128C | 核心/金融业务   | 数据安全、审计合规、零丢失 |
+| [**`/docs/pgsql/template/crit.yml`**](/docs/pgsql/template/crit) | 4-128C | 一致性优先业务   | 严格同步、校验和、详细连接日志 |
 | [**`/docs/pgsql/template/tiny.yml`**](/docs/pgsql/template/tiny) | 1-3C   | 微型实例      | 资源受限、低配环境     |
 {.full-width}
 
@@ -88,7 +88,7 @@ pg-dev:
 
 | 参数                                  | OLTP            | OLAP    | CRIT    | TINY    |
 |:------------------------------------|:----------------|:--------|:--------|:--------|
-| **max_worker_processes**            | cpu+8           | cpu+12  | cpu+8   | cpu+4   |
+| **max_worker_processes**            | max(cpu+16, 24) | max(cpu+20, 28) | max(cpu+16, 24) | max(cpu+12, 20) |
 | **max_parallel_workers**            | 50% cpu         | 80% cpu | 50% cpu | 50% cpu |
 | **max_parallel_workers_per_gather** | 20% cpu (max 8) | 50% cpu | 0（禁用）   | 0（禁用）   |
 | **parallel_setup_cost**             | 2000            | 1000    | 2000    | 1000    |
@@ -124,12 +124,12 @@ pg-dev:
 {.full-width}
 
 
-### IO 配置（PG18+）
+### IO 配置（PG18）
 
 | 参数                  | OLTP           | OLAP           | CRIT          | TINY    |
 |:--------------------|:---------------|:---------------|:--------------|:--------|
 | **io_workers**      | 25% cpu (4-16) | 50% cpu (4-32) | 25% cpu (4-8) | 3       |
-| **temp_file_limit** | 1/20 磁盘        | 1/5 磁盘         | 1/20 磁盘       | 1/20 磁盘 |
+| **temp_file_limit** | 1/20 磁盘，上限 100GB | 1/5 磁盘，上限 400GB | 1/20 磁盘，上限 100GB | 1/20 磁盘，上限 100GB |
 {.full-width}
 
 
@@ -204,7 +204,7 @@ pg-myapp:
 - [**`pg_conf`**](/docs/pgsql/param#pg_conf)：指定使用的 PostgreSQL 配置模板
 - [**`node_tune`**](/docs/node/param#node_tune)：指定使用的操作系统调优模板，应与 `pg_conf` 配套
 - [**`pg_rto`**](/docs/pgsql/param#pg_rto)：恢复时间目标，影响故障切换超时
-- [**`pg_rpo`**](/docs/pgsql/param#pg_rpo)：恢复点目标，影响同步复制模式
+- [**`pg_rpo`**](/docs/pgsql/param#pg_rpo)：候选副本落后阈值；设为 0 时通用模板启用同步复制
 - [**`pg_max_conn`**](/docs/pgsql/param#pg_max_conn)：覆盖模板的最大连接数
 - [**`pg_shared_buffer_ratio`**](/docs/pgsql/param#pg_shared_buffer_ratio)：共享缓冲区占内存比例
 - [**`pg_storage_type`**](/docs/pgsql/param#pg_storage_type)：存储类型，影响 IO 相关参数

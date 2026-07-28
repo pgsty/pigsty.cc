@@ -68,7 +68,7 @@ pg-meta:
     search_path: public
   pgbouncer: true                 # 可选，是否加入连接池用户列表，默认 false
   pool_mode: transaction          # 可选，用户级别的池化模式，默认 transaction
-  pool_connlimit: -1              # 可选，用户级别的连接池最大连接数，默认 -1 不限制
+  pool_connlimit: 100             # 可选，用户级别的连接池最大连接数；省略时继承全局默认 100
 ```
 
 > 用户级连接池限额字段统一使用 `pool_connlimit`（对应 Pgbouncer `max_user_connections`）。
@@ -558,7 +558,7 @@ dbuser_monitor  = pool_mode=session max_user_connections=8
 
 ### `pool_connlimit`
 
-整数，可变参数，用于设置用户级别的连接池最大连接数，默认值为 `-1`，表示不限制。
+整数，可变参数，用于设置用户级别的连接池最大连接数。省略时不生成用户级覆盖项，继承 Pigsty 在 `pgbouncer.ini` 中设置的全局默认值 `100`；PgBouncer 使用 `0` 表示不限制。
 
 ```yaml
 - name: dbuser_app
@@ -610,7 +610,7 @@ pg_users:
 
 - [**`pg_default_roles`**](/docs/pgsql/param#pg_default_roles)：系统范围的角色和全局用户
 - [**`pg_default_privileges`**](/docs/pgsql/param#pg_default_privileges)：新建对象的默认权限
-- [**`pg-init-role.sql`**](https://github.com/pgsty/pigsty/blob/main/roles/pgsql/templates/pg-init-role.sql)：角色创建 SQL 模板
+- [**`pg-init-roles.sql`**](https://github.com/pgsty/pigsty/blob/main/roles/pgsql/templates/pg-init-roles.sql)：角色创建 SQL 模板
 - [**`pg-init-template.sql`**](https://github.com/pgsty/pigsty/blob/main/roles/pgsql/templates/pg-init-template.sql)：权限 SQL 模板
 
 

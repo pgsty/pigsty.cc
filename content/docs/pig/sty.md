@@ -19,6 +19,7 @@ pig sty - Init (Download), Bootstrap, Configure, and Deploy Pigsty
   pig sty deploy                  # use pigsty to deploy everything (CAUTION!)
   pig sty get                     # download pigsty source tarball
   pig sty list                    # list available pigsty versions
+  pig sty grafana <verb>          # manage grafana dashboards (native HTTP)
 
 Examples:
   pig sty init                 # extract and init ~/pigsty
@@ -27,15 +28,20 @@ Examples:
   pig sty deploy               # run the deploy.yml playbook
 ```
 
-| 命令           | 描述              | 备注                |
-|:-------------|:----------------|:------------------|
-| `sty init`   | 安装 Pigsty       |                   |
-| `sty boot`   | 安装 Ansible 依赖   | 需要 sudo 或 root 权限 |
-| `sty conf`   | 生成配置            |                   |
-| `sty deploy` | 运行部署 playbook   |                   |
-| `sty list`   | 列出可用 Pigsty 版本  |                   |
-| `sty get`    | 下载 Pigsty 源码压缩包 |                   |
+| 命令            | 描述                     | 备注                |
+|:--------------|:-----------------------|:------------------|
+| `sty init`    | 安装 Pigsty              |                   |
+| `sty boot`    | 安装 Ansible 依赖          | 需要 sudo 或 root 权限 |
+| `sty conf`    | 生成配置                   |                   |
+| `sty deploy`  | 运行部署 playbook          |                   |
+| `sty list`    | 列出可用 Pigsty 版本         |                   |
+| `sty get`     | 下载 Pigsty 源码压缩包        |                   |
+| `sty grafana` | 管理 Grafana 仪表盘（别名 `gf`）| v1.6.0 新增         |
 {.full-width}
+
+> v1.6.0 起，原先的 `pig sty edit` / `validate` / `check` 已上移为根级
+> [`pig inventory`](/docs/pig/inventory/) 命令组；实验性的 `pig sty dashboard` 由
+> `pig sty grafana` 取代。
 
 
 ## 快速入门
@@ -120,12 +126,12 @@ pig sty conf --raw                 # 使用旧版 shell configure 工作流
 - `-r|--region`：上游仓库区域（default/china/europe）
 - `-m|--mirror`：等价于 `--region china`
 - `-O|--output-file`：输出配置文件路径（默认：pigsty.yml）
-- `-s|--skip`：跳过 IP 探测
+- `-s|--skip`：使用占位 IP，并跳过管理员 SSH/sudo 预检
 - `-p|--port`：SSH 端口
 - `-x|--proxy`：从环境变量写入代理配置
 - `-n|--non-interactive`：非交互模式
 - `-g|--generate`：生成随机默认密码（推荐！）
-- `--raw`：使用旧版 shell configure 工作流
+- `--raw`：使用旧版 shell configure 工作流（生成的密码将保持可见）
 
 详见：https://pigsty.io/docs/setup/install/#configure
 
@@ -136,15 +142,14 @@ pig sty conf --raw                 # 使用旧版 shell configure 工作流
 
 ```bash
 pig sty deploy       # 执行 deploy.yml（如果找不到则使用 install.yml）
-pig sty install      # 与 deploy 相同（向后兼容）
 pig sty d            # 短别名
 pig sty de           # 短别名
-pig sty ins          # 短别名
 ```
 
 此命令从您的 Pigsty 安装目录执行 deploy.yml 剧本。为保持向后兼容性，如果 deploy.yml 不存在但 install.yml 存在，将使用 install.yml 代替。
 
-> **警告**：此操作会修改您的系统。请谨慎使用！
+> **警告**：此操作会修改您的系统，且**调用即执行**——deploy 不设 `--yes` 确认门，
+> 误触发时请用 Ctrl+C 中断。（v1.6.0 起 `pig sty install` / `ins` 别名已移除。）
 
 
 ## sty list
@@ -165,3 +170,36 @@ pig sty get                      # 下载最新版本
 pig sty get v3.4.0               # 下载指定版本
 pig sty get -m                   # 优先使用 pigsty.cc 镜像
 ```
+
+
+## sty grafana
+
+自 v1.6.0 起，`pig sty grafana`（别名 `gf`）通过 Grafana 原生 HTTP API 管理仪表盘，
+取代了实验性的 `pig sty dashboard`。`PATH` 参数可以指向 grafana 根目录、单个文件夹或单个仪表盘
+JSON 文件；缺省时解析 `<PIGSTY_HOME>/files/grafana`，不会回退到当前目录。
+
+```bash
+pig sty grafana info             # 检查 Grafana 健康、认证与基本信息
+pig sty grafana list             # 列出当前组织的全部仪表盘
+pig sty grafana boot             # 围绕现有 pigsty 仪表盘引导 Grafana
+pig sty grafana init             # 加载完整仪表盘集，然后引导 Grafana
+pig sty grafana load [PATH]      # 按本地路径加载仪表盘
+pig sty grafana dump [PATH]      # 导出远端仪表盘到本地路径
+pig sty grafana clean [PATH]     # 删除本地路径对应的远端仪表盘（--dry-run/--yes）
+pig sty grafana lang zh-Hans     # 设置组织与当前用户语言
+pig sty grafana style            # 设置组织与当前用户界面风格
+```
+
+**连接与凭据**：
+
+| 参数                | 说明                                                    |
+|:------------------|:------------------------------------------------------|
+| `--endpoint`      | Grafana 地址与路径前缀（默认 `http://i.pigsty/ui`）              |
+| `--username`      | Grafana API 用户名                                       |
+| `--password`      | Grafana API 密码（**不安全**：对进程列表与 shell 历史可见）             |
+| `--password-file` | 仅属主可读的密码文件（推荐）                                        |
+{.full-width}
+
+密码解析顺序：`--password` → `--password-file` → `GRAFANA_PASSWORD` 环境变量 →
+Inventory 中的 `all.vars.grafana_admin_password`。
+HTTP 客户端带有超时与响应大小限制，并拒绝重定向；TLS 证书默认校验。

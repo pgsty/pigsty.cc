@@ -1,5 +1,5 @@
 ---
-title: "pig 1.5 文档"
+title: "pig 1.6 文档"
 weight: 5200
 description: "PostgreSQL 扩展生态包管理器与管理命令行工具"
 icon: fas fa-piggy-bank
@@ -61,10 +61,11 @@ $ pig install -y vector               # 您可以使用扩展名称（vector）�
 
 **Pigsty 管理**：
 
-- [**pig sty**](/docs/pig/sty/)：管理 Pigsty 安装
+- [**pig sty**](/docs/pig/sty/)：管理 Pigsty 安装与 Grafana 仪表盘
+- [**pig inventory**](/docs/pig/inventory/)：检视、编辑、校验与交换 Pigsty 配置清单
 - [**pig context**](/docs/pig/cmd/#pig-context)：采集主机、PostgreSQL、Patroni、pgBackRest 与扩展上下文
 - [**pig pg**](/docs/pig/pg/)：管理本地 PostgreSQL 服务
-- [**pig pt**](/docs/pig/pt/)：管理 Patroni HA 集群
+- [**pig pt**](/docs/pig/pt/)：透明运行 patronictl 管理 Patroni HA 集群
 - [**pig pb**](/docs/pig/pb/)：管理 pgBackRest 备份
 - [**pig pitr**](/docs/pig/pitr/)：时间点恢复工作流
 

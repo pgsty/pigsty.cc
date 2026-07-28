@@ -9,7 +9,7 @@ categories: [参考]
 
 > Pigsty 为 PostgreSQL 提供了诸多开箱即用的 Grafana 监控仪表盘： [Demo](https://demo.pigsty.cc/ui/d/pgsql-overview) & [Gallery](https://github.com/pgsty/pigsty/wiki/Gallery)。
 
-在 Pigsty 中共有 26 个与 PostgreSQL 相关的监控面板，按照层次分为 总览，集群，实例，数据库四大类，按照数据来源又分为 [PGSQL](#总览)，[PGCAT](#pgcat)，[PGLOG](#pglog) 三大类。
+当前源码共提供 31 个 PostgreSQL 相关面板：`files/grafana/pgsql` 中有 29 个 PostgreSQL / PGCAT 面板，`files/grafana/app` 中另有 2 个 PGLOG 面板。它们按层次分为总览、集群、实例、数据库四大类，按数据来源分为 [PGSQL](#总览)、[PGCAT](#pgcat)、[PGLOG](#pglog) 三类。
 
 ![pigsty-dashboard.jpg](/img/pigsty/dashboard.jpg)
 
@@ -575,5 +575,4 @@ categories: [参考]
 [![pglog-session.jpg](/img/dashboard/pglog-session.jpg)](https://demo.pigsty.cc/ui/d/pglog-session)
 
 </details>
-
 

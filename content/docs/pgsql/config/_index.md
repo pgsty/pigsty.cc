@@ -62,7 +62,7 @@ all:
           - { name: dbuser_bi, password: DBUser.BI, roles: [dbrole_admin], pgbouncer: true }
   vars:
     pg_version: 18
-    pg_packages: [ pgsql-main pgsql-common ]
+    pg_packages: [ pgsql-main, pgsql-common ]
     pg_hba_rules:
       - { user: dbuser_bi, db: bi, addr: intra, auth: ssl, title: 'BI 只允许内网 SSL 访问' }
 ```

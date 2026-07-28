@@ -5,7 +5,7 @@ description: "包含多个扩展的 PostgreSQL 扩展包"
 weight: 40
 ---
 
-以下 **24** 个扩展包中包含多个扩展，共计 **124** 个扩展。
+以下 **26** 个扩展包中包含多个扩展，共计 **128** 个扩展。
 
 在安装这些包时，您将同时获得包中的所有扩展。主扩展用粗体标出。
 
@@ -67,6 +67,26 @@ weight: 40
 |:------:|:-----------|:--------:|:--------:|:---------|:---------|
 | 1650 | [**`mobilitydb`**](/ext/e/mobilitydb) | `1.3.0` | `--sLd--` | - | MobilityDB地理空间投影数据管理分析平台 |
 | 1651 | [`mobilitydb_datagen`](/ext/e/mobilitydb_datagen) | `1.3.0` | `----d-r` | - | MobilityDB随机数据生成函数 |
+{.ext-table}
+
+### qdgc
+
+[`qdgc`](/ext/e/qdgc) 扩展包共有 **2** 个扩展：
+
+| **ID** | **扩展名** | **版本** | **属性** | **模式** | **描述** |
+|:------:|:-----------|:--------:|:--------:|:---------|:---------|
+| 1700 | [**`qdgc`**](/ext/e/qdgc) | `0.1.0` | `----dtr` | - | 用纯 SQL 编码、解码、遍历和填充扩展四分之一度网格单元（QDGC）编码。 |
+| 1710 | [`qdgc_postgis`](/ext/e/qdgc_postgis) | `0.1.0` | `----d-r` | - | 为 QDGC 增加 PostGIS geometry/geography 绑定与区域到网格单元的填充能力。 |
+{.ext-table}
+
+### pgcontext
+
+[`pgcontext`](/ext/e/pgcontext) 扩展包共有 **2** 个扩展：
+
+| **ID** | **扩展名** | **版本** | **属性** | **模式** | **描述** |
+|:------:|:-----------|:--------:|:--------:|:---------|:---------|
+| 1960 | [**`pgcontext`**](/ext/e/pgcontext) | `0.2.0` | `--s-d--` | `pgcontext` | 在 PostgreSQL 权威数据表上提供向量检索、过滤感知 HNSW 与混合检索。 |
+| 1970 | [`pgcontext_pgvector`](/ext/e/pgcontext_pgvector) | `0.2.0` | `--s-d--` | - | pgcontext HNSW 索引的可选 pgvector 兼容桥接扩展。 |
 {.ext-table}
 
 ### pgroonga

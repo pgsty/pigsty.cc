@@ -200,8 +200,8 @@ bin/pgsql-db pg-meta myapp    # 修改 myapp 数据库的属性使其符合配�
 - name: myapp
   pgbouncer: true              # 是否加入连接池（默认 true）
   pool_mode: transaction       # 池化模式：transaction/session/statement
-  pool_size: 64                # 默认池大小
-  pool_reserve: 32             # 保留池大小
+  pool_size: 50                # 默认池大小
+  pool_reserve: 30             # 保留池大小
   pool_size_min: 0             # 最小池大小
   pool_connlimit: 100          # 最大数据库连接
   pool_auth_user: dbuser_meta  # 认证查询使用用户（配合 pgbouncer_auth_query）

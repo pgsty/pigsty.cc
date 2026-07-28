@@ -69,7 +69,7 @@ pg-meta:
   tablespace: pg_default          # 可选，默认表空间，默认为 'pg_default'
   is_template: false              # 可选，是否标记为模板数据库，允许任何有 CREATEDB 权限的用户克隆
   allowconn: true                 # 可选，是否允许连接，默认为 true。显式设置 false 将完全禁止连接到此数据库
-  revokeconn: false               # 可选，撤销公共连接权限。默认为 false，设置为 true 时，属主和管理员之外用户的 CONNECT 权限会被回收
+  revokeconn: false               # 可选，撤销公共连接权限。设为 true 时仅为属主、管理员、监控与复制用户保留 CONNECT
   register_datasource: true       # 可选，是否将此数据库注册到 grafana 数据源？默认为 true，显式设置为 false 会跳过注册
   connlimit: -1                   # 可选，数据库连接限制，默认为 -1 ，不限制，设置为正整数则会限制连接数。
   parameters:                     # 可选，数据库级参数，通过 ALTER DATABASE SET 设置
@@ -77,8 +77,8 @@ pg-meta:
     statement_timeout: '30s'
   pool_auth_user: dbuser_meta     # 可选，连接到此 pgbouncer 数据库的所有连接都将使用此用户进行验证（启用 pgbouncer_auth_query 才有用）
   pool_mode: transaction          # 可选，数据库级别的 pgbouncer 池化模式，默认为 transaction
-  pool_size: 64                   # 可选，数据库级别的 pgbouncer 默认池子大小，默认为 64
-  pool_reserve: 32                # 可选，数据库级别的 pgbouncer 池子保留空间，默认为 32，当默认池子不够用时，最多再申请这么多条突发连接。
+  pool_size: 50                   # 可选，数据库级别的 pgbouncer 默认池子大小，默认为 50
+  pool_reserve: 30                # 可选，数据库级别的 pgbouncer 池子保留空间，默认为 30，当默认池子不够用时，最多再申请这么多条突发连接。
   pool_size_min: 0                # 可选，数据库级别的 pgbouncer 池的最小大小，默认为 0
   pool_connlimit: 100             # 可选，数据库级别的最大数据库连接数，默认为 100
 ```
@@ -116,15 +116,15 @@ pg-meta:
 | [**`allowconn`**](#allowconn)                     | 权限  | `bool`               | 可变  | 是否允许连接，默认 `true`                       |
 | [**`revokeconn`**](#revokeconn)                   | 权限  | `bool`               | 可变  | 是否回收 PUBLIC 的 CONNECT 权限               |
 | [**`connlimit`**](#connlimit)                     | 权限  | `int`                | 可变  | 连接数限制，`-1` 表示不限制                       |
-| [**`baseline`**](#baseline)                       | 初始化 | `string`             | 可变  | SQL 基线文件路径，仅首次创建时执行                    |
+| [**`baseline`**](#baseline)                       | 初始化 | `string`             | 可变  | SQL 基线文件路径，每次置备该数据库时执行                 |
 | [**`schemas`**](#schemas)                         | 初始化 | `(string\|object)[]` | 可变  | 要创建的模式定义数组                             |
 | [**`extensions`**](#extensions)                   | 初始化 | `(string\|object)[]` | 可变  | 要安装的扩展定义数组                             |
 | [**`parameters`**](#parameters)                   | 初始化 | `object`             | 可变  | 数据库级参数                                 |
 | [**`pgbouncer`**](#pgbouncer)                     | 连接池 | `bool`               | 可变  | 是否加入连接池，默认 `true`                      |
 | [**`pool_mode`**](#pool_mode)                     | 连接池 | `enum`               | 可变  | 池化模式：`transaction`（默认）                 |
-| [**`pool_size`**](#pool_size)                     | 连接池 | `int`                | 可变  | 默认池大小，默认 `64`                          |
+| [**`pool_size`**](#pool_size)                     | 连接池 | `int`                | 可变  | 默认池大小，默认 `50`                          |
 | [**`pool_size_min`**](#pool_size_min)             | 连接池 | `int`                | 可变  | 最小池大小，默认 `0`                           |
-| [**`pool_reserve`**](#pool_reserve)               | 连接池 | `int`                | 可变  | 保留池大小，默认 `32`                          |
+| [**`pool_reserve`**](#pool_reserve)               | 连接池 | `int`                | 可变  | 保留池大小，默认 `30`                          |
 | [**`pool_connlimit`**](#pool_connlimit)           | 连接池 | `int`                | 可变  | 最大数据库连接数，默认 `100`                      |
 | [**`pool_auth_user`**](#pool_auth_user)           | 连接池 | `string`             | 可变  | 认证查询用户                                 |
 | [**`register_datasource`**](#register_datasource) | 监控  | `bool`               | 可变  | 是否注册到 Grafana 数据源，默认 `true`            |
@@ -139,9 +139,7 @@ pg-meta:
 
 字符串，必选参数，表示数据库的名称，在一个数据库集群内必须唯一。
 
-数据库名称必须是有效的 PostgreSQL 标识符，长度不超过 63 个字符，不得使用 SQL 关键字，
-形式上以字母或下划线开头，后续字符可以是字母、数字或下划线，不能包含空格或特殊字符。
-形式应当满足正则表达式：**`^[A-Za-z_][A-Za-z0-9_$]{0,62}$`**
+当前角色没有对数据库名称实施这一正则校验，SQL 中也会用双引号引用名称；但名称同时参与临时文件路径与 Shell/SQL 命令拼接。为保证整条自动化链路安全可用，建议限制为 63 字节以内，并遵循 **`^[A-Za-z_][A-Za-z0-9_$]{0,62}$`**，不要使用空格、引号、斜杠或其他特殊字符。
 
 ```yaml
 - name: myapp              # 简单命名
@@ -186,7 +184,7 @@ GRANT ALL PRIVILEGES ON DATABASE "myapp" TO "new_owner";
 字符串，用于设置数据库的备注信息，如果不指定，默认值为 `business database {name}`。
 
 数据库备注信息通过 `COMMENT ON DATABASE` 语句设置，支持中文和特殊字符（Pigsty 会自动转义单引号）。
-备注信息会存储在系统目录 `pg_database.datacl` 中，可以通过 `\l+` 命令查看。
+备注信息会存储在共享对象注释目录 `pg_shdescription` 中，可以通过 `\l+` 命令查看。
 
 ```sql
 COMMENT ON DATABASE "myapp" IS '我的应用主数据库';
@@ -233,8 +231,8 @@ Pigsty 会在集群初始化阶段对 `template1` 进行定制配置，因此新
 
 | 策略          | 说明                | 适用场景          |
 |-------------|-------------------|---------------|
-| `FILE_COPY` | 直接复制数据文件，PG15+ 默认 | 大模板，通用场景      |
-| `WAL_LOG`   | 通过 WAL 日志记录复制     | 小模板，不阻塞模板上的连接 |
+| `FILE_COPY` | 直接复制数据文件，并在前后执行检查点 | 大模板、希望减少 WAL 量  |
+| `WAL_LOG`   | 逐块复制并写入 WAL，PG15+ 默认 | 小模板、不阻塞模板上的连接 |
 {.full-width}
 
 `WAL_LOG` 策略的优势是复制过程中不会阻塞模板数据库上的连接，但对于较大的模板效率不如 `FILE_COPY`。
@@ -447,12 +445,12 @@ ALTER DATABASE "limited_db" CONNECTION LIMIT 50;
 
 ### `baseline`
 
-字符串，一次性参数，用于指定数据库创建后要执行的 SQL 基线文件路径。
+字符串，用于指定数据库置备时要执行的 SQL 基线文件路径。
 
 基线文件通常包含表结构定义、初始数据、存储过程等，用于初始化新数据库。
 路径是相对于 Ansible 搜索路径的相对路径，通常放在 `files/` 目录下。
 
-基线文件仅在首次创建数据库时执行；如果数据库已存在则跳过。使用 `state: recreate` 重建数据库时会重新执行基线文件。
+只要定义了 `baseline`，当前角色在每次为该数据库执行置备任务时都会运行该文件，即使数据库已经存在；`state: recreate` 时也会重新执行。因此基线 SQL 应设计为幂等脚本，或避免在现有数据库上重复执行。
 
 ```yaml
 - name: myapp
@@ -513,7 +511,7 @@ extensions:
     state: absent            # 卸载扩展（使用 CASCADE）
 ```
 
-安装扩展时使用 `CASCADE`，如果已存在则会报错但跳过，同时自动安装依赖扩展；卸载扩展时使用 `CASCADE`，会同时删除依赖此扩展的对象。
+安装扩展时使用 `IF NOT EXISTS ... CASCADE`；如果扩展已存在，PostgreSQL 会给出 NOTICE 并跳过，同时可自动安装依赖扩展。卸载扩展时使用 `CASCADE`，会同时删除依赖此扩展的对象。
 
 ```sql
 CREATE EXTENSION IF NOT EXISTS "vector" WITH SCHEMA "public" VERSION '0.5.1' CASCADE;
@@ -576,9 +574,9 @@ ALTER DATABASE "myapp" SET "statement_timeout" = '30s';
 
 ### `pool_size`
 
-整数，可变参数，用于设置此数据库在 Pgbouncer 中的默认连接池大小，默认值为 `64`。
+整数，可变参数，用于设置此数据库在 Pgbouncer 中的默认连接池大小，默认值为 `50`。
 
-连接池大小决定了 Pgbouncer 为此数据库预留的后端连接数量。根据应用负载调整此值。
+连接池大小决定了此数据库连接池允许使用的常规后端连接上限；预热连接数由 `pool_size_min` 控制。请根据应用负载调整。
 
 ```yaml
 - name: high_load_db
@@ -598,14 +596,14 @@ ALTER DATABASE "myapp" SET "statement_timeout" = '30s';
 
 ### `pool_reserve`
 
-整数，可变参数，用于设置此数据库在 Pgbouncer 中的保留连接数，默认值为 `32`。
+整数，可变参数，用于设置此数据库在 Pgbouncer 中的保留连接数，默认值为 `30`。
 
 当默认池不够用时，Pgbouncer 最多可以额外申请 `pool_reserve` 个连接来处理突发流量。
 
 ```yaml
 - name: bursty_db
-  pool_size: 64
-  pool_reserve: 64           # 允许突发到 128 个连接
+  pool_size: 50
+  pool_reserve: 30           # 常规池用尽后最多再增加 30 个连接
 ```
 
 ### `pool_connlimit`

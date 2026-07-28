@@ -33,7 +33,7 @@ weight: 8710
 | 8710  | [**`redis_fdw`**](/ext/e/redis_fdw) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
 {.ext-table}
 
-| **相关扩展** | [`mongo_fdw`](/ext/e/mongo_fdw) [`redis`](/ext/e/redis) [`kafka_fdw`](/ext/e/kafka_fdw) [`wrappers`](/ext/e/wrappers) [`multicorn`](/ext/e/multicorn) [`spat`](/ext/e/spat) [`pgmemcache`](/ext/e/pgmemcache) [`odbc_fdw`](/ext/e/odbc_fdw) |
+| **相关扩展** | [`mongo_fdw`](/ext/e/mongo_fdw) [`redis`](/ext/e/redis) [`kafka_fdw`](/ext/e/kafka_fdw) [`wrappers`](/ext/e/wrappers) [`multicorn`](/ext/e/multicorn) `spat` [`pgmemcache`](/ext/e/pgmemcache) [`odbc_fdw`](/ext/e/odbc_fdw) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

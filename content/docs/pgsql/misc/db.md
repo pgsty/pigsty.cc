@@ -65,8 +65,8 @@ pg-meta:
   connlimit: -1                   # 可选，数据库连接限制，默认为 -1 ，不限制，设置为正整数则会限制连接数。
   pool_auth_user: dbuser_meta     # 可选，连接到此 pgbouncer 数据库的所有连接都将使用此用户进行验证（启用 pgbouncer_auth_query 才有用）
   pool_mode: transaction          # 可选，数据库级别的 pgbouncer 池化模式，默认为 transaction
-  pool_size: 64                   # 可选，数据库级别的 pgbouncer 默认池子大小，默认为 64
-  pool_reserve: 32           # 可选，数据库级别的 pgbouncer 池子保留空间，默认为 32，当默认池子不够用时，最多再申请这么多条突发连接。
+  pool_size: 50                   # 可选，数据库级别的 pgbouncer 默认池子大小，默认为 50
+  pool_reserve: 30                # 可选，数据库级别的 pgbouncer 池子保留空间，默认为 30，当默认池子不够用时，最多再申请这么多条突发连接。
   pool_size_min: 0                # 可选，数据库级别的 pgbouncer 池的最小大小，默认为 0
   pool_connlimit: 100           # 可选，数据库级别的最大数据库连接数，默认为 100
 ```
@@ -91,8 +91,8 @@ pg-meta:
 - `comment`：数据库备注信息。
 - `pool_auth_user`：启用 [`pgbouncer_auth_query`](/docs/pgsql/param#pgbouncer_auth_query) 时，连接到此 pgbouncer 数据库的所有连接都将使用这里指定的用户执行认证查询。你需要使用一个具有访问 `pg_shadow` 表权限的用户。
 - `pool_mode`：数据库级别的 pgbouncer 池化模式，默认为 transaction，即事物池化。如果留空，会使用 [`pgbouncer_poolmode`](/docs/pgsql/param#pgbouncer_poolmode) 参数作为默认值。
-- `pool_size`：数据库级别的 pgbouncer 默认池子大小，默认为 64
-- `pool_reserve`：数据库级别的 pgbouncer 池子保留空间，默认为 32，当默认池子不够用时，最多再申请这么多条突发连接。
+- `pool_size`：数据库级别的 pgbouncer 默认池子大小，默认为 50
+- `pool_reserve`：数据库级别的 pgbouncer 池子保留空间，默认为 30，当默认池子不够用时，最多再申请这么多条突发连接。
 - `pool_size_min`： 数据库级别的 pgbouncer 池的最小大小，默认为 0
 - `pool_connlimit`： 数据库级别的 pgbouncer 连接池最大数据库连接数，默认为 100
 
@@ -154,13 +154,14 @@ mongo                       = host=/var/run/postgresql
 
 Pgbouncer 使用和 PostgreSQL 同样的 `dbsu` 运行，默认为 `postgres` 操作系统用户，您可以使用 `pgb` 别名，使用 dbsu 访问 pgbouncer 管理功能。
 
-Pigsty 还提供了一个实用函数 `pgb-route`，可以将 pgbouncer 数据库流量快速切换至集群中的其他节点，用于零停机迁移：
+若要把某个托管数据库的 Pgbouncer 流量切换到其他节点，应修改实际承载路由的 `/etc/pgbouncer/database.txt`，然后依次重载配置并重建已有服务端连接：
 
 ```bash
-# route pgbouncer traffic to another cluster member
-function pgb-route(){
-  local ip=${1-'\/var\/run\/postgresql'}
-  sed -ie "s/host=[^[:space:]]\+/host=${ip}/g" /etc/pgbouncer/pgbouncer.ini
-  cat /etc/pgbouncer/pgbouncer.ini
-}
+# 仅修改 mydb 的后端目标
+sed -i -E '/^mydb[[:space:]]*=/ s#host=[^[:space:]]+#host=10.10.10.12#' /etc/pgbouncer/database.txt
+pgb -c "RELOAD;"
+pgb -c "RECONNECT mydb;"
+pgb -c "WAIT_CLOSE mydb;"
 ```
+
+> 当前源码附带的 `pgb-route` 函数只修改 `/etc/pgbouncer/pgbouncer.ini`，而 Pigsty 管理的数据库路由位于被该文件 include 的 `database.txt` 中，因此它不会改变这些托管路由；请勿用它替代上述操作。

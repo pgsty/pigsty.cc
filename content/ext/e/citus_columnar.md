@@ -34,7 +34,7 @@ weight: 2401
 | 2401  | [**`citus_columnar`**](/ext/e/citus_columnar) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `pg_catalog` |
 {.ext-table}
 
-| **相关扩展** | [`columnar`](/ext/e/columnar) [`pg_parquet`](/ext/e/pg_parquet) [`timescaledb`](/ext/e/timescaledb) [`pg_analytics`](/ext/e/pg_analytics) [`pg_mooncake`](/ext/e/pg_mooncake) [`pg_duckdb`](/ext/e/pg_duckdb) [`duckdb_fdw`](/ext/e/duckdb_fdw) [`orioledb`](/ext/e/orioledb) |
+| **相关扩展** | [`columnar`](/ext/e/columnar) [`pg_parquet`](/ext/e/pg_parquet) [`timescaledb`](/ext/e/timescaledb) `pg_analytics` [`pg_mooncake`](/ext/e/pg_mooncake) [`pg_duckdb`](/ext/e/pg_duckdb) [`duckdb_fdw`](/ext/e/duckdb_fdw) [`orioledb`](/ext/e/orioledb) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

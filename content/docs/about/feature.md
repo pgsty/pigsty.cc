@@ -21,7 +21,7 @@ categories: [参考]
 - [**可观测性**](/img/pigsty/dashboard.jpg)：基于 [**Victoria**](/docs/infra#victoria-可观测性套件) 与 [**Grafana**](/docs/infra#grafana) 的可观测性技术栈，提供惊艳的监控最佳实践。模块化设计，可独立使用：[**画廊**](https://github.com/pgsty/pigsty/wiki/Gallery) & [**Demo**](https://demo.pigsty.cc)。
 - [**可用性**](/img/pigsty/ha.png)：交付稳定可靠，自动路由，事务池化、读写分离的高性能数据库 [**服务**](/docs/pgsql/service/#默认服务)，通过 HAProxy，Pgbouncer，VIP 提供灵活的 [**接入**](/docs/pgsql/service/#接入服务) 模式。
 - [**可维护性**](/img/pigsty/iac.jpg)：[**简单易用**](/docs/setup/install)，[**基础设施即代码**](/docs/pgsql/config)，[**管理SOP预案**](/docs/pgsql/admin/)，自动调参，本地软件仓库，[**Vagrant**](/docs/deploy/vagrant) [**沙箱**](/docs/deploy/sandbox) 与 [**Terraform**](/docs/deploy/terraform) 模板，不停机 [**迁移**](/docs/pgsql/migration) 方案。
-- [**可组合性**](/img/pigsty/sandbox.png)：[**模块化**](/docs/concept/arch#模块) 架构设计，可复用的 [**Infra**](/docs/infra)，多样的可选 [**模块**](/docs/ref/module/)：[**Redis**](/docs/redis), [**MinIO**](/docs/minio), [**ETCD**](/docs/etcd), [**FerretDB**](/docs/ferret), [**DuckDB**](https://github.com/pgsty/pigsty/tree/master/app/duckdb), [**Docker**](/docs/app/), [**Supabase**](https://github.com/pgsty/pigsty/tree/master/app/supabase)。
+- [**可组合性**](/img/pigsty/sandbox.png)：[**模块化**](/docs/concept/arch#模块) 架构设计，可复用的 [**Infra**](/docs/infra)，多样的可选 [**模块**](/docs/ref/module/)：[**Redis**](/docs/redis), [**MinIO**](/docs/minio), [**ETCD**](/docs/etcd), [**FerretDB**](/docs/ferret), [**DuckDB**](/docs/pilot/duckdb/), [**Docker**](/docs/app/), [**Supabase**](https://github.com/pgsty/pigsty/tree/master/app/supabase)。
 
 ![](/img/pigsty/banner.png)
 
@@ -35,7 +35,7 @@ Pigsty 是一个更好的本地开源 RDS for PostgreSQL 替代：
 - [开箱即用的RDS](#开箱即用的rds)：从内核到 RDS 发行版，在 EL/Debian/Ubuntu 下提供 14-18 版本的生产级 PG 数据库服务。
 - [丰富的扩展插件](#丰富的扩展插件)：提供无可比拟的 555 扩展，提供开箱即用的分布式的时序地理空间图文向量多模态数据库能力。
 - [灵活的模块架构](#灵活的模块架构)：灵活组合，自由扩展：Redis/Etcd/MinIO/Mongo；可独立使用，监控现有 RDS/主机/数据库。
-- [惊艳的观测能力](#惊艳的观测能力)：基于现代可观测性技术栈 Prometheus/Grafana，提供令人惊艳，无可比拟的数据库观测能力。
+- [惊艳的观测能力](#惊艳的观测能力)：基于 Victoria 与 Grafana 的现代可观测性技术栈，使用 Prometheus 兼容指标与生态工具。
 - [验证过的可靠性](#久经考验的可靠性)：故障自愈的高可用架构：硬件故障自动切换，流量无缝衔接。并提供自动配置的 PITR 兜底删库！
 - [简单易用可维护](#简单易用可维护)：声明式 API，GitOps 就位，傻瓜式操作，Database/Infra-as-Code 以及管理 SOP 封装管理复杂度！
 - [扎实的安全实践](#扎实的安全实践)：提供 HBA、ACL、TLS、备份、日志与主机防火墙等基础能力，并说明默认边界与生产加固要求。
@@ -64,7 +64,7 @@ PostgreSQL 是一个足够完美的数据库内核，但它需要更多工具与
 Pigsty 为您解决使用 PostgreSQL 中会遇到的各种难题：内核扩展安装，连接池，负载均衡，服务接入，高可用 / 自动故障切换，日志收集，指标监控，告警，备份恢复，PITR，访问控制，参数调优，安全加密，证书签发，NTP，DNS，参数调优，配置管理，CMDB，管理预案… 您无需再为这些细节烦心劳神！
 
 
-Pigsty 支持 PostgreSQL 14 - 18 主干内核与其他兼容分支，可运行于 EL / Debian / Ubuntu 以及 [兼容操作系统发行版](/docs/ref/linux) 上，在 x86_64 与 ARM64 芯片架构上可用，且无需容器支持。
+Pigsty 对 PostgreSQL 14 - 18 主干内核与其他兼容分支提供稳定支持，并在当前 `main` 中提供 PostgreSQL 19 Beta 试用模板；可运行于 EL / Debian / Ubuntu 以及 [兼容操作系统发行版](/docs/ref/linux) 上，在 x86_64 与 ARM64 芯片架构上可用，且无需容器支持。
 除了数据库内核与大量开箱即用的扩展插件以外，Pigsty 还提供了数据库服务所需的完整基础设施与运行时，以及本地沙箱 / 生产环境 / 云 IaaS 自动部署方案。
 
 Pigsty 可以一键从裸机开始拉起整套环境，触达软件交付的最后一公里。普通研发运维均可快速上手并兼职进行数据库管理，无需数据库专家即可自建企业级 RDS 服务！
@@ -123,7 +123,7 @@ Pigsty 中的组件被抽象可独立部署的 [**模块**](/docs/ref/module/)�
 
 **使用现代开源可观测性技术栈，提供无与伦比的监控最佳实践！**
 
-Pigsty 提供了基于开源的 Grafana / Prometheus 现代可观测性技术栈做 [**监控**](/docs/pgsql/monitor) 的最佳实践：，Grafana 负责可视化呈现，VictoriaMetrics 用于收集监控指标，VictoriaLogs 用于日志收集与查询，Alertmanager 用于告警通知。Blackbox Exporter 负责检查服务可用性。整套系统同样被设计为一键拉起，开箱即用的 INFRA 模块。
+Pigsty 提供了基于开源 Grafana 与 Victoria Stack 的现代可观测性技术栈做 [**监控**](/docs/pgsql/monitor)：Grafana 负责可视化呈现，VictoriaMetrics 通过 Prometheus 兼容接口收集监控指标，VictoriaLogs 用于日志收集与查询，Alertmanager 用于告警通知，Blackbox Exporter 负责检查服务可用性。这些组件由 INFRA 模块部署。
 
 Pigsty 所管理的任何组件都会被自动纳入监控之中，包括主机节点，负载均衡 HAProxy，数据库 Postgres，连接池 Pgbouncer，元数据库 ETCD，KV 缓存 Redis，对象存储 MinIO，……，以及整套监控基础设施本身。大量的 Grafana 监控面板与预置告警规则会让你的系统观测能力有质的提升，当然，这套系统也可以被复用于您的应用监控基础设施，或者监控已有的数据库实例或 RDS。
 

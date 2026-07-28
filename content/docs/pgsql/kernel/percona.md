@@ -26,7 +26,7 @@ pgaudit、pg_stat_monitor 等常用组件。
 ```bash
 curl -fsSL https://repo.pigsty.io/get | bash; cd ~/pigsty;
 ./configure -c pgtde     # 使用 percona postgres 内核
-./deploy.yml             # 使用 pigsty 设置一切
+./deploy.yml             # 部署 Pigsty 核心链路与 Percona PostgreSQL
 ```
 
 

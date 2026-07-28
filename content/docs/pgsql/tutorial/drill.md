@@ -200,7 +200,7 @@ all:
 修复当前节点的监控
 
 ```bash
-./node.yml -t node_monitor
+./node.yml -t monitor
 ```
 
 

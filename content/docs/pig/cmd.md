@@ -13,11 +13,12 @@ categories: [参考]
 - [**pig ext**](/docs/pig/ext/)：管理 PostgreSQL 扩展
 - [**pig build**](/docs/pig/build/)：从源码构建扩展
 - **pig install**：使用原生包管理器安装包，并对 PostgreSQL 别名做翻译
-- [**pig sty**](/docs/pig/sty/)：管理 Pigsty 安装
+- [**pig sty**](/docs/pig/sty/)：管理 Pigsty 安装与 Grafana 仪表盘
+- [**pig inventory**](/docs/pig/inventory/)：检视、编辑、校验与交换 Pigsty 配置清单（v1.6.0 新增）
 - **pig do**：执行 Pigsty 管理 playbook 任务
 - **pig pe**：访问 pg_exporter 指标与配置
 - [**pig pg**](/docs/pig/pg/)：管理本地 PostgreSQL 服务器
-- [**pig pt**](/docs/pig/pt/)：管理 Patroni HA 集群
+- [**pig pt**](/docs/pig/pt/)：透明运行 patronictl，附带服务与配置辅助命令
 - [**pig pb**](/docs/pig/pb/)：管理 pgBackRest 备份与恢复
 - [**pig pitr**](/docs/pig/pitr/)：进行完整 PITR 工作流
 - **pig context**：输出面向人工和 Agent 的环境上下文快照
@@ -48,14 +49,15 @@ PostgreSQL Extension Manager
   repo        管理 Linux 软件仓库 (apt/dnf)
 
 Pigsty Management Commands
-  do          运行管理任务
-  pg          管理本地 PostgreSQL 服务器与数据库
-  pt          使用 patronictl 管理 Patroni 集群
-  pb          管理 pgBackRest 备份与恢复
-  pe          管理 pg_exporter 与监控指标
-  pitr        编排式时间点恢复
-  sty         管理 Pigsty 安装
   context     显示环境上下文快照
+  do          运行管理任务
+  inventory   检视、编辑、校验与交换 Pigsty 配置清单
+  patroni     透明运行 patronictl（附 Pigsty 服务与配置辅助）
+  pg_exporter 管理 pg_exporter 与监控指标
+  pgbackrest  管理 pgBackRest 备份与恢复
+  pitr        使用 pgBackRest 进行时间点恢复
+  postgres    管理本地 PostgreSQL 服务器与数据库
+  sty         管理 Pigsty 安装与控制器服务
 
 Additional Commands:
   completion  生成指定 shell 的自动补全脚本
@@ -164,6 +166,26 @@ pig sty init                     # 安装 Pigsty 到 ~/pigsty
 pig sty boot                     # 安装 Ansible 依赖
 pig sty conf                     # 生成配置
 pig sty deploy                   # 运行部署 playbook
+pig sty list                     # 列出可用 Pigsty 版本
+pig sty get 4.4.0                # 下载指定 Pigsty 版本
+pig sty grafana list             # 管理 Grafana 仪表盘（info/list/boot/load/init/dump/clean/lang/style）
+```
+
+
+## pig inventory
+
+检视、编辑、校验、体检并与 CMDB 交换 Pigsty 配置清单（`pigsty.yml`），根级命令组，别名 `inv`，
+详情请参考 [`pig inventory`](/docs/pig/inventory/)。（v1.6.0 新增）
+
+```bash
+pig inventory status             # 检视当前生效的清单来源
+pig inventory list               # 列出清单拓扑与取值类型
+pig inventory show               # 原样显示清单 YAML（可能包含敏感信息）
+pig inventory edit               # 在 $EDITOR 中编辑清单或选中片段
+pig inventory validate           # 校验一份完整的静态 Pigsty 清单
+pig inventory check              # 检查清单、控制器与目标节点就绪状态
+pig inventory diff other.yml     # 对比声明差异（不输出取值）
+pig inventory cmdb check         # 与 PostgreSQL CMDB 交换（实验性）
 ```
 
 
@@ -227,14 +249,15 @@ pig pg log tail                  # 实时查看日志
 
 ## pig pt
 
-管理 Patroni HA 集群，详情请参考 [`pig pt`](/docs/pig/pt/)
+透明运行 `patronictl` 管理 Patroni HA 集群，详情请参考 [`pig pt`](/docs/pig/pt/)
 
 ```bash
-pig pt list                      # 列出集群成员
-pig pt config show               # 显示集群配置
-pig pt config set ttl=60         # 修改集群配置
-pig pt status                    # 查看服务状态
-pig pt log -f                    # 实时查看日志
+pig pt list pg-meta              # 列出集群成员（原生透传）
+pig pt show-config pg-meta       # 显示集群动态配置（原生透传）
+pig pt set ttl=60                # 本地语法糖：修改 Patroni/PG 配置
+pig pt restart pg-test --pending # 应用待重启成员（原生透传）
+pig pt status                    # 本地命令：综合服务与集群状态
+pig pt log -f                    # 本地命令：实时查看日志
 ```
 
 
@@ -273,7 +296,7 @@ pig status                       # 显示当前环境状态
 pig status -o json               # 结构化状态输出
 pig update                       # 将 pig 自身升级到最新版
 pig update -m                    # 使用 pigsty.cc 镜像升级
-pig update -v 1.5.1              # 升级到指定版本
+pig update -v 1.6.0              # 升级到指定版本
 pig version                      # 显示 pig 版本信息
 pig version -o json              # 结构化版本输出
 ```

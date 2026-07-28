@@ -110,7 +110,7 @@ OLAP 查询可能涉及更多表（分区表、大量 JOIN），因此需要更�
 OLAP 模板激进启用并行查询：
 
 ```yaml
-max_worker_processes: cpu + 12 (最小20)      # OLTP: cpu + 8
+max_worker_processes: max(cpu + 20, 28)      # OLTP: max(cpu + 16, 24)
 max_parallel_workers: 80% × cpu (最小2)      # OLTP: 50%
 max_parallel_workers_per_gather: 50% × cpu   # OLTP: 20% (最大8)
 max_parallel_maintenance_workers: 33% × cpu
@@ -130,7 +130,7 @@ enable_partitionwise_join: on       # 分区表智能 JOIN
 enable_partitionwise_aggregate: on  # 分区表智能聚合
 ```
 
-### IO 配置（PG18+）
+### IO 配置（PG18）
 
 ```yaml
 io_workers: 50% × cpu (4-32)    # OLTP: 25% (4-16)
@@ -141,10 +141,10 @@ io_workers: 50% × cpu (4-32)    # OLTP: 25% (4-16)
 ### WAL 配置
 
 ```yaml
-min_wal_size: 磁盘/20 (最大200GB)
-max_wal_size: 磁盘/5 (最大2000GB)
-max_slot_wal_keep_size: 磁盘×3/10 (最大3000GB)
-temp_file_limit: 磁盘/5 (最大2000GB)   # OLTP: 磁盘/20
+min_wal_size: 磁盘/20 (实际最大100GB)
+max_wal_size: 磁盘/5 (实际最大400GB)
+max_slot_wal_keep_size: 磁盘×3/10 (实际最大600GB)
+temp_file_limit: 磁盘/5 (实际最大400GB)   # OLTP: 磁盘/20，实际最大100GB
 ```
 
 更大的 `temp_file_limit` 允许更大的中间结果溢出到磁盘。

@@ -41,7 +41,7 @@ Pigsty 默认提供的 [`supabase.yml`](https://github.com/pgsty/pigsty/blob/mai
 
 请在部署 Supabase 前，根据您的实际情况，修改 `pigsty.yml` 配置文件中 [关于 Supabase 的参数](#配置细节)（主要是密码！）
 
-然后，运行 [`supabase.yml`](https://github.com/Vonng/pigsty/blob/main/supabase.yml) 完成剩余的工作，拉起 Supabase 容器
+然后使用当前仓库根目录的 `docker.yml` 与 `app.yml` 完成剩余工作，安装容器运行时并拉起 `conf/supabase.yml` 中定义的 Supabase 应用：
 
 ```bash
 ./docker.yml       # 安装 Docker 模块

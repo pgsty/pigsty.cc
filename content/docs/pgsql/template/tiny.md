@@ -98,7 +98,7 @@ work_mem = min(max(shared_buffers / max_connections, 16MB), 256MB)
 TINY 模板完全禁用了并行查询：
 
 ```yaml
-max_worker_processes: cpu + 4 (最小12)      # OLTP: cpu + 8
+max_worker_processes: max(cpu + 12, 20)     # OLTP: max(cpu + 16, 24)
 max_parallel_workers: 50% × cpu (最小1)      # OLTP: 50% (最小2)
 max_parallel_workers_per_gather: 0           # 禁用并行查询
 max_parallel_maintenance_workers: 33% × cpu (最小1)
@@ -106,7 +106,7 @@ max_parallel_maintenance_workers: 33% × cpu (最小1)
 
 `max_parallel_workers_per_gather: 0` 确保查询不会启动并行工作进程，避免在低核心环境下争抢资源。
 
-### IO 配置（PG18+）
+### IO 配置（PG18）
 
 ```yaml
 io_workers: 3   # 固定值，OLTP: 25% cpu (4-16)
@@ -179,7 +179,7 @@ pg_stat_statements.track_planning: off
 |:-----|:-----|:-----|:---------|
 | max_connections | **250** | 500-1000 | 减少连接开销 |
 | work_mem 上限 | **256MB** | 1GB | 避免内存溢出 |
-| max_worker_processes | cpu+4 | cpu+8 | 减少后台进程 |
+| max_worker_processes | max(cpu+12, 20) | max(cpu+16, 24) | 减少后台进程 |
 | max_parallel_workers_per_gather | **0** | 20% cpu | 禁用并行查询 |
 | autovacuum_max_workers | **2** | 3 | 减少后台负载 |
 | default_statistics_target | **200** | 400 | 节省空间 |
@@ -201,7 +201,7 @@ shared_buffers: ~256MB
 work_mem: ~16MB
 maintenance_work_mem: ~64MB
 max_connections: 250
-max_worker_processes: ~12
+max_worker_processes: 20
 ```
 
 **PostgreSQL 进程内存占用**：约 400-600MB
@@ -213,7 +213,7 @@ shared_buffers: ~1GB
 work_mem: ~32MB
 maintenance_work_mem: ~256MB
 max_connections: 250
-max_worker_processes: ~12
+max_worker_processes: 20
 ```
 
 **PostgreSQL 进程内存占用**：约 1.5-2GB

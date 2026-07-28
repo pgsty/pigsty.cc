@@ -25,7 +25,7 @@ categories: [参考]
 ```bash
 psql postgres://dbuser_dba:DBUser.DBA@10.10.10.10/meta     # 直接用 DBA 超级用户连上去
 psql postgres://dbuser_meta:DBUser.Meta@10.10.10.10/meta   # 用默认的业务管理员用户连上去
-psql postgres://dbuser_view:DBUser.View@pg-meta/meta       # 用默认的只读用户走实例域名连上去
+psql postgres://dbuser_view:DBUser.Viewer@pg-meta/meta     # 用默认的只读用户走实例域名连上去
 ```
 
 
@@ -86,7 +86,7 @@ psql postgres://dbuser_stats:DBUser.Stats@pg-meta:5438/meta # pg-meta-offline : 
 
 [![pigsty-ha.png](/img/pigsty/ha.png)](/docs/concept/ha)
 
-注意在这里`pg-meta` 域名指向了集群的 L2 VIP，进而指向集群主库上的 haproxy 负载均衡器，它负责将流量路由到不同的实例上，详见 [服务接入](#接入服务)
+这里 `pg-meta` 的实际 DNS 目标由 [`pg_dns_target`](/docs/pgsql/param#pg_dns_target) 决定：默认 `auto` 在启用 L2 VIP 时指向 VIP，否则指向清单中的主实例 IP。默认配置并不启用 VIP，详见 [服务接入](#接入服务)。
 
 
 
@@ -149,9 +149,9 @@ Pigsty 允许您定义自己的服务：
   options: 'inter 3s fastinter 1s downinter 5s rise 3 fall 3 on-marked-down shutdown-sessions slowstart 30s maxconn 3000 maxqueue 128 weight 100'
 ```
 
-而上面的服务定义，在样例的三节点 `pg-test` 上将会被转换为 haproxy 配置文件 `/etc/haproxy/pg-test-standby.conf`：
+而上面的服务定义，在样例的三节点 `pg-test` 上将会被转换为 haproxy 配置文件 `/etc/haproxy/pg-test-standby.cfg`：
 
-```yaml
+```text
 #---------------------------------------------------------------------
 # service: pg-test-standby @ 10.10.10.11:5435
 #---------------------------------------------------------------------
@@ -167,13 +167,13 @@ listen pg-test-standby
     http-check send meth OPTIONS uri /sync   # <---- 这里使用 /sync ，Patroni 健康检查 API ，只有同步备库和主库才会返回 200 健康状态码。 
     http-check expect status 200             # <---- 健康检查返回代码 200 代表正常
     default-server inter 3s fastinter 1s downinter 5s rise 3 fall 3 on-marked-down shutdown-sessions slowstart 30s maxconn 3000 maxqueue 128 weight 100
-    # servers： # pg-test 集群全部三个实例都被 selector: "[]" 给圈中了，因为没有任何的筛选条件，所以都会作为 pg-test-replica 服务的后端服务器。但是因为还有 /sync 健康检查，所以只有主库和同步备库才能真正承载请求。
+    # servers： # pg-test 集群全部三个实例都被 selector: "[]" 圈中，成为 pg-test-standby 服务的后端；/sync 健康检查只放行主库和同步备库。
     server pg-test-1 10.10.10.11:6432 check port 8008 weight 100 backup  # <----- 唯独主库满足条件 pg_role == `primary`， 被 backup selector 选中。
     server pg-test-3 10.10.10.13:6432 check port 8008 weight 100         #        因此作为服务的兜底实例：平时不承载请求，其他从库全部宕机后，才会承载只读请求，从而最大避免了读写服务受到只读服务的影响
     server pg-test-2 10.10.10.12:6432 check port 8008 weight 100         #        
 ```
 
-在这里，`pg-test` 集群全部三个实例都被 `selector: "[]"` 给圈中了，渲染进入 `pg-test-replica` 服务的后端服务器列表中。但是因为还有 `/sync` 健康检查，Patroni Rest API 只有在主库和 [同步备库](/docs/pgsql/config/cluster#同步备库) 上才会返回代表健康的 HTTP 200 状态码，因此只有主库和同步备库才能真正承载请求。
+在这里，`pg-test` 集群全部三个实例都被 `selector: "[]"` 给圈中了，渲染进入 `pg-test-standby` 服务的后端服务器列表中。但是因为还有 `/sync` 健康检查，Patroni Rest API 只有在主库和 [同步备库](/docs/pgsql/config/cluster#同步备库) 上才会返回代表健康的 HTTP 200 状态码，因此只有主库和同步备库才能真正承载请求。
 此外，主库因为满足条件 `pg_role == primary`， 被 backup selector 选中，被标记为了备份服务器，只有当没有其他实例（也就是同步备库）可以满足需求时，才会顶上。
 
 
@@ -197,7 +197,7 @@ Primary 服务可能是生产环境中最关键的服务，它在 5433 端口提
 
 <details><summary>示例：pg-test-primary 的 haproxy 配置</summary>
 
-```yaml
+```text
 listen pg-test-primary
     bind *:5433         # <--- primary 服务默认使用 5433 端口
     mode tcp
@@ -277,7 +277,7 @@ Default 服务在 5436 端口上提供服务，它是 Primary 服务的变体。
 Default 服务总是绕过连接池直接连到主库上的 PostgreSQL，这对于管理连接、ETL 写入、CDC 数据变更捕获等都很有用。
 
 ```yaml
-- { name: primary ,port: 5433 ,dest: default  ,check: /primary   ,selector: "[]" }
+- { name: default ,port: 5436 ,dest: postgres ,check: /primary   ,selector: "[]" }
 ```
 
 如果 `pg_default_service_dest` 被修改为 `postgres`，那么可以说 Default 服务除了端口和名称内容之外，与 Primary 服务是完全等价的。在这种情况下，您可以考虑将 Default 从默认服务中剔除。
@@ -310,7 +310,7 @@ listen pg-test-default
 
 ### Offline服务
 
-Default 服务在 5438 端口上提供服务，它也绕开连接池直接访问 PostgreSQL 数据库，通常用于慢查询/分析查询/ETL 读取/个人用户交互式查询，其服务定义如下：
+Offline 服务在 5438 端口上提供服务，它绕开连接池直接访问 PostgreSQL 数据库，通常用于慢查询/分析查询/ETL 读取/个人用户交互式查询，其服务定义如下：
 
 ```yaml
 - { name: offline ,port: 5438 ,dest: postgres ,check: /replica   ,selector: "[? pg_role == `offline` || pg_offline_query ]" , backup: "[? pg_role == `replica` && !pg_offline_query]"}
@@ -346,8 +346,8 @@ listen pg-test-offline
 
 Offline 服务提供受限的只读服务，通常用于两类查询：交互式查询（个人用户），慢查询长事务（分析/ETL）。
 
-Offline 服务需要额外的维护照顾：当集群发生主从切换或故障自动切换时，集群的实例角色会发生变化，而 Haproxy 的配置却不会自动发生变化。对于有多个从库的集群来说，这通常并不是一个问题。
-然而对于一主一从，从库跑 Offline 查询的精简小集群而言，主从切换意味着从库变成了主库（健康检查失效），原来的主库变成了从库（不在 Offline 后端列表中），于是没有实例可以承载 Offline 服务了，因此需要手动 [重载服务](/docs/pgsql/admin/cluster#刷新服务) 以使变更生效。
+Offline 服务需要额外的维护照顾：HAProxy 的 `/replica` 健康检查会在主从切换后自动拒绝新主库，但 `selector` 使用的是配置清单中的静态 `pg_role` / `pg_offline_query` 标签。对于一主一从、仅从库承载 Offline 查询的精简集群，切换后可能暂时没有合格后端。
+仅重载未修改的清单并不会把原主库加入 Offline 后端。需要先按新的规划调整清单标签（或 `pg_offline_query`）再 [重载服务](/docs/pgsql/admin/cluster#刷新服务)，或者将主库切回原节点。
 
 如果您的业务模型较为简单，您可以考虑剔除 Default 服务与 Offline 服务，使用 Primary 服务与 Replica 服务直连数据库。
 
@@ -357,7 +357,7 @@ Offline 服务需要额外的维护照顾：当集群发生主从切换或故障
 
 ## 重载服务
 
-当集群成员发生变化，如添加/删除副本、主备切换或调整相对权重时， 你需要 [重载服务](/docs/pgsql/admin/cluster#刷新服务) 以使更改生效。
+当集群成员发生变化（添加/删除副本）、服务定义或静态选择标签变化、相对权重调整时，需要 [重载服务](/docs/pgsql/admin/cluster#刷新服务)。Primary/Replica 服务的正常主备切换由 Patroni 健康检查自动接管，不需要为此单独重载。
 
 ```bash
 bin/pgsql-svc <cls> [ip...]         # 为 lb 集群或 lb 实例重载服务
@@ -405,7 +405,7 @@ Pigsty 使用不同的 **端口** 来区分 [pg services](#服务概述)
 
 
 ```bash
-# 通过集群域名访问
+# 通过集群域名访问（以下示例假定已启用 L2 VIP；未启用时默认指向清单主实例 IP）
 postgres://test@pg-test:5432/test # DNS -> L2 VIP -> 主直接连接
 postgres://test@pg-test:6432/test # DNS -> L2 VIP -> 主连接池 -> 主
 postgres://test@pg-test:5433/test # DNS -> L2 VIP -> HAProxy -> 主连接池 -> 主

@@ -44,7 +44,7 @@ bin/node-add  <cls>     # 添加分组 <cls> 下的节点
 {{% /tab %}}
 {{% tab header="示例" %}}
 ```bash
-bin/pgsql-add pg-test   # 例子，添加 pg-test 分组下的节点，实际执行 ./node.yml -l pg-test
+bin/node-add pg-test    # 例子，添加 pg-test 分组下的节点，实际执行 ./node.yml -l pg-test
 ```
 {{% /tab %}}
 {{< /tabpane >}}
@@ -197,7 +197,7 @@ bin/node-rm 10.10.10.13   # 例子，从 Pigsty 管理中移除 10.10.10.13 节�
 {{% /tab %}}
 {{< /tabpane >}}
 
-缩容完成后，您应当从 [**配置清单**](/docs/concept/iac/inventory) 中移除该实例的定义，然后 [**刷新服务**](/docs/pgsql/admin/cluster#刷新服务) 以将已它从负载均衡器中踢除。
+缩容完成后，您应当从 [**配置清单**](/docs/concept/iac/inventory) 中移除该实例的定义，然后 [**刷新服务**](/docs/pgsql/admin/cluster#刷新服务) 以将它从负载均衡器中踢除。
 
 ```yaml
 pg-test:
@@ -300,7 +300,7 @@ pg-test: # 清理这个集群定义分组
 ## 刷新服务
 
 PostgreSQL 集群通过主机节点上的 [**HAProxy**](/docs/concept/arch/pgsql#haproxy) 对外提供 [**服务**](/docs/pgsql/service/)。
-当服务定义变化，实例权重变化，或者集群成员发生变化时（例如，集群 [**扩容**](#扩容集群) / [**缩容**](#缩容集群)，主从切换／故障转移），您需要择机刷新服务以更新负载均衡器的配置。
+当服务定义变化、实例权重变化，或者集群成员发生变化时（例如集群 [**扩容**](#扩容集群) / [**缩容**](#缩容集群)），您需要刷新服务以更新负载均衡器的静态成员配置。默认 Primary/Replica 服务通过 Patroni REST API 健康检查识别当前角色，正常的主从切换或故障转移会自动改道，不要求重新生成 HAProxy 配置。
 
 要在整个集群或特定实例上刷新服务配置（针对 **`<cls>`** 或 **`<ip>`** 执行 [**`pgsql.yml`**](/docs/pgsql/playbook#pgsqlyml) 的 `pg_service` 子任务）：
 
@@ -346,7 +346,7 @@ bin/pgsql-svc pg-test 10.10.10.13     # 例子，刷新 pg-test 集群中 10.10.
 ## 刷新HBA
 
 当您修改了 HBA 相关配置后，需要刷新 HBA 规则以应用更改。（[**`pg_hba_rules`**](/docs/pgsql/param#pg_hba_rules) / [**`pgb_hba_rules`**](/docs/pgsql/param#pgb_hba_rules)）
-如果您有任何特定于角色的 HBA 规则，或者在 IP 地址段中引用了集群成员的别名，那么当主从切换/集群扩缩容后也可能需要刷新 HBA。
+如果您有任何特定于清单角色的 HBA 规则，或者在 IP 地址段中引用了集群成员的别名，那么修改 `pg_role` 标签或集群扩缩容后也可能需要刷新 HBA。这里的角色筛选使用静态清单变量，不会随 Patroni 主从切换自动改变。
 
 要在整个集群或特定实例上刷新 PG 和 Pgbouncer 的 HBA 规则（针对 **`<cls>`** 或 **`<ip>`** 执行 [**`pgsql.yml`**](/docs/pgsql/playbook#pgsqlyml) 的 HBA 相关子任务）：
 
@@ -401,11 +401,11 @@ ansible pg-test -b -a 'systemctl reload patroni'    # 重载 Patroni 服务
 ## 克隆集群
 
 有两种克隆集群的方式：使用 [**备份集群**](/docs/pgsql/config/cluster#备份集群) 功能，或者使用 [**时间点恢复**](/docs/pgsql/backup/restore#快速上手) 功能。
-前者配置简单，无需依赖，但只能克隆指定集群的最新状态；后者依赖集中式的 [**备份仓库**](/docs/pgsql/backup/repository)（例如 MinIO），可以克隆到恢复窗口内的任意时间点。
+前者配置简单，无需备份仓库，但需要可达的复制上游，只能克隆指定集群的最新状态；后者依赖集中式的 [**备份仓库**](/docs/pgsql/backup/repository)（例如 MinIO），可以克隆到恢复窗口内的任意时间点。
 
 | 方式   | 优点        | 缺点        | 适用场景       |
 |:-----|:----------|:----------|:-----------|
-| 备份集群 | 配置简单，无需依赖 | 只能克隆最新状态  | 灾备，读写分离，迁移 |
+| 备份集群 | 无需备份仓库    | 需要可达上游，只能克隆最新状态 | 灾备，读写分离，迁移 |
 | PITR | 可恢复到窗口内任意时点 | 依赖集中式备份仓库 | 误操作恢复，数据审计 |
 
 

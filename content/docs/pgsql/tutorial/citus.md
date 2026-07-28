@@ -22,10 +22,9 @@ Patroni 在 v3.0 后，提供了对 Citus 原生高可用的支持，简化了 C
 
 ## Citus集群
 
-Pigsty 原生支持 Citus。可以参考 [`conf/citus.yml`](https://github.com/pgsty/pigsty/blob/main/conf/citus.yml)
+Pigsty 原生支持 Citus。当前完整配置模板见 [`conf/ha/citus.yml`](https://github.com/pgsty/pigsty/blob/main/conf/ha/citus.yml)。
 
-这里使用 Pigsty 四节点沙箱，定义了一个 Citus 集群 `pg-citus`，其中包括一个两节点的协调者集群 `pg-citus0`，
-以及两个 Worker 集群 `pg-citus1`，`pg-citus2`。
+下面先使用一个简化的四节点拓扑说明关键参数：一个两节点协调者集群 `pg-citus0`，以及两个单节点 Worker 集群 `pg-citus1`、`pg-citus2`。它不是当前完整模板的逐行摘录。
 
 ```yaml
 pg-citus:
@@ -43,12 +42,12 @@ pg-citus:
     pg_vip_interface: auto                    # auto detect vip interface for every member
     pg_dbsu_password: DBUser.Postgres         # all dbsu password access for citus cluster
     pg_extensions: [ citus, postgis, pgvector, topn, pg_cron, hll ]  # install these extensions
-    pg_libs: 'citus, pg_cron, pg_stat_statements' # citus will be added by patroni automatically
+    pg_libs: 'citus, pg_cron, pg_stat_statements' # 显式预加载 citus，且置于首位
     pg_users: [{ name: dbuser_citus ,password: DBUser.Citus ,pgbouncer: true ,roles: [ dbrole_admin ]    }]
     pg_databases: [{ name: citus ,owner: dbuser_citus ,extensions: [ citus, vector, topn, pg_cron, hll ] }]
     pg_parameters:
       cron.database_name: citus
-      citus.node_conninfo: 'sslmode=require sslrootcert=/pg/cert/ca.crt sslmode=verify-full'
+      citus.node_conninfo: 'sslrootcert=/pg/cert/ca.crt sslmode=verify-full'
     pg_hba_rules:
       - { user: 'all' ,db: all  ,addr: 127.0.0.1/32  ,auth: ssl   ,title: 'all user ssl access from localhost' }
       - { user: 'all' ,db: all  ,addr: intra         ,auth: ssl   ,title: 'all user ssl access from intranet'  }
@@ -58,7 +57,7 @@ pg-citus:
 
 - [`repo_packages`](/docs/infra/param#repo_packages)：必须包含 `citus` 扩展，或者你需要使用带有 Citus 扩展的 PostgreSQL 离线安装包。
 - [`pg_extensions`](/docs/pgsql/param#pg_extensions)：必须包含 `citus` 扩展，即你必须在每个节点上安装 `citus` 扩展。
-- [`pg_libs`](/docs/pgsql/param#pg_libs)：必须包含 `citus` 扩展，而且首位必须为 `citus`，但现在 Patroni 会自动完成这件事了。
+- [`pg_libs`](/docs/pgsql/param#pg_libs)：必须显式包含 `citus`，并将其置于首位；当前 Patroni 模板直接使用该参数生成 `shared_preload_libraries`。
 - [`pg_databases`](/docs/pgsql/param#pg_databases)： 这里要定义一个首要数据库，该数据库必须安装 `citus` 扩展。
 
 其次，你需要确保 Citus 集群的配置正确：
@@ -67,7 +66,7 @@ pg-citus:
 - [`pg_primary_db`](/docs/pgsql/param#pg_primary_db)：必须指定一个首要数据库的名称，该数据库必须安装 `citus` 扩展，这里名为 `citus`。
 - [`pg_shard`](/docs/pgsql/param#pg_shard)：必须指定一个统一的名称，字符串，作为所有水平分片 PG 集群的集群名称前缀，这里为 `pg-citus`。
 - [`pg_group`](/docs/pgsql/param#pg_group)：必须指定一个分片号，从零开始依次分配的整数，`0` 号固定代表协调者集群，其他为 Worker 集群。
-- [`pg_cluster`](/docs/pgsql/param#pg_cluster) 必须与 [`pg_shard`](/docs/pgsql/param#pg_shard) 和 [`pg_group`](/docs/pgsql/param#pg_group) 组合后的结果对应。
+- [`pg_cluster`](/docs/pgsql/param#pg_cluster) 必须在每个物理 PostgreSQL 集群间唯一。通常采用 `pg_shard` 加序号的命名约定，但当前角色不强制它与 `pg_group` 按字符串拼接结果相等。
 - [`pg_dbsu_password`](/docs/pgsql/param#pg_dbsu_password)：必须设置为非空的纯文本密码，否则 Citus 无法正常工作。
 - [`pg_parameters`](/docs/pgsql/param#pg_parameters)：建议设置 `citus.node_conninfo` 参数，强制要求 SSL 访问并要求节点间验证客户端证书。
 
@@ -195,7 +194,7 @@ pgbench --select-only -nv -P1 -c10 -T500 postgres://dbuser_citus:DBUser.Citus@10
 
 要将 Citus 用于生产环境，您通常需要为 Coordinator 和每个 Worker 集群设置流复制物理副本。
 
-例如，在 [`simu.yml`](https://github.com/pgsty/pigsty/blob/main/conf/simu.yml) 中定义了一个 10 节点的 Citus 集群。
+当前 [`conf/ha/citus.yml`](https://github.com/pgsty/pigsty/blob/main/conf/ha/citus.yml) 在 13 台主机上定义了 1 个 `pg-meta` 实例，以及 12 个 Citus 实例（6 个双节点物理集群，`pg_group` 为 0–5）。下面的 10 节点片段是另一种独立的生产拓扑示例，并非当前模板内容。
 
 ```yaml
 pg-citus: # citus group

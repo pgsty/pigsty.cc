@@ -35,7 +35,7 @@ categories: [任务]
 
 ```bash
 # 将会中止执行，保护数据安全
-./pgsql-rm.yml -l pg-test
+./pgsql-rm.yml -l pg-test -e pg_safeguard=true
 
 # 通过命令行参数强制覆盖保护开关
 ./pgsql-rm.yml -l pg-test -e pg_safeguard=false
@@ -53,7 +53,7 @@ categories: [任务]
 这些参数允许你根据实际需求精确控制移除行为：
 
 ```bash
-# 移除集群但保留数据目录（仅停止服务）
+# 移除实例的服务、监控、DCS 注册等组件，但保留数据目录
 ./pgsql-rm.yml -l pg-test -e pg_rm_data=false
 
 # 移除集群但保留备份数据
@@ -245,7 +245,7 @@ bin/pgsql-rm pg-test 10.10.10.13   # 从集群 pg-test 移除实例 10.10.10.13
 #
 # pg_monitor             : 从监控系统移除注册
 #   - pg_deregister      : 从基础设施移除 pg 监控目标
-#     - rm_metrics       : 从 prometheus 移除监控目标
+#     - rm_metrics       : 从 VictoriaMetrics 目标目录移除监控目标
 #     - rm_ds            : 从 grafana 移除数据源
 #     - rm_logs          : 从 vector 移除日志目标
 #   - pg_exporter        : 移除 pg_exporter
@@ -267,7 +267,7 @@ bin/pgsql-rm pg-test 10.10.10.13   # 从集群 pg-test 移除实例 10.10.10.13
 #
 # pg_backup              : 移除备份仓库（使用 pg_rm_backup=false 禁用）
 # pg_data                : 移除 postgres 数据（使用 pg_rm_data=false 禁用）
-# pg_pkg                 : 卸载 pg 软件包（使用 pg_rm_pkg=true 启用）
+# pg_pkg                 : 卸载 pg 软件包（默认启用；使用 pg_rm_pkg=false 禁用）
 #   - pg_ext             : 单独卸载 postgres 扩展
 ```
 
@@ -333,7 +333,7 @@ pg_users:
     roles: [dbrole_admin]           # 可选，所属角色
     parameters: {}                  # 可选，角色级参数
     pool_mode: transaction          # 可选，pgbouncer 用户级连接池模式
-    pool_connlimit: -1              # 可选，用户级最大连接数（映射为 max_user_connections）
+    pool_connlimit: 100             # 可选，用户级最大连接数；省略时继承全局默认 100
 ```
 
 详情请参考：[管理SOP：创建用户](/docs/pgsql/admin/user#创建用户)
@@ -391,8 +391,8 @@ pg_databases:
     connlimit: -1                   # 可选，连接数限制
     pool_auth_user: dbuser_meta     # 可选，认证查询使用的用户（配合 pgbouncer_auth_query）
     pool_mode: transaction          # 可选，pgbouncer 连接池模式
-    pool_size: 64                   # 可选，pgbouncer 默认池大小
-    pool_reserve: 32                # 可选，pgbouncer 保留池大小
+    pool_size: 50                   # 可选，pgbouncer 默认池大小
+    pool_reserve: 30                # 可选，pgbouncer 保留池大小
     pool_size_min: 0                # 可选，pgbouncer 最小池大小
     pool_connlimit: 100             # 可选，pgbouncer 最大数据库连接数
 ```
@@ -437,7 +437,7 @@ infra:
 ```
      ------ infra ------
      |                 |
-     |   prometheus    |            v---- pg-foo-1 ----v
+     | victoria-metrics|            v---- pg-foo-1 ----v
      |       ^         |  metrics   |         ^        |
      |   pg_exporter <-|------------|----  postgres    |
      |   (port: 20001) |            | 10.10.10.10:5432 |

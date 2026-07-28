@@ -71,6 +71,21 @@ Pigsty 当前文档对应版本为 [**v4.4.0**](#v440)。
 {.full-width}
 
 
+------
+
+## v4.5.0
+
+> WIP
+
+**亮点特性**
+
+- 扩展数量提升到 560 个，全新的 [PG 扩展目录](https://pgext.cloud)
+- 新增试点模块：Kafka
+- 新增试点模块：MySQL
+- 新增试点模块：Click（Clickhouse）
+- 重新编译 ivorysql 与 percona tde 内核
+
+
 
 ------
 
@@ -2448,11 +2463,11 @@ cd ~/pigsty; ./bootstrap; ./configure; ./install.yml
 * 参数强化：`infra_portal` 参数现在支持指定 `path` 选项，对外暴露本机上的目录，提供 web 服务。
 * 参数强化：`repo_url_packages` 中的 `repo.pigsty.io` 会在区域为中国时自动替换为 `repo.pigsty.cc`，解决科学上网问题，此外，现在可以指定下载后的文件名称。
 * 参数强化：`pg_databases.extensions` 中的 `extension` 字段现在可以支持字典与扩展名字符串两种模式，字典模式提供 `version` 支持，允许安装特定版本的扩展。
-* 参数强化：`repo_upstream` 参数如果没有显式覆盖定义，将从 [`rpm.yml`](https://github.com/pgsty/pigsty/blob/main/roles/node_id/vars/rpm.yml) 或 [`deb.yml`](https://github.com/pgsty/pigsty/blob/main/roles/node_id/vars/rpm.yml) 中定义的 `repo_upstream_default` 提取对应系统的默认值。
-* 参数强化：`repo_packages` 参数如果没有显式覆盖定义，将从 [`rpm.yml`](https://github.com/pgsty/pigsty/blob/main/roles/node_id/vars/rpm.yml) 或 [`deb.yml`](https://github.com/pgsty/pigsty/blob/main/roles/node_id/vars/rpm.yml) 中定义的 `repo_packages_default` 提取对应系统的默认值。
-* 参数强化：`infra_packages` 参数如果没有显式覆盖定义，将从 [`rpm.yml`](https://github.com/pgsty/pigsty/blob/main/roles/node_id/vars/rpm.yml) 或 [`deb.yml`](https://github.com/pgsty/pigsty/blob/main/roles/node_id/vars/rpm.yml) 中定义的 `infra_packages_default` 提取对应系统的默认值。
-* 参数强化：`node_default_packages` 参数如果没有显式覆盖定义，将从 [`rpm.yml`](https://github.com/pgsty/pigsty/blob/main/roles/node_id/vars/rpm.yml) 或 [`deb.yml`](https://github.com/pgsty/pigsty/blob/main/roles/node_id/vars/rpm.yml) 中定义的 `node_packages_default` 提取对应系统的默认值。
-* 参数强化：`pg_packages` 与 `pg_extensions` 中的扩展现在都会从  [`rpm.yml`](https://github.com/pgsty/pigsty/blob/main/roles/node_id/vars/rpm.yml) 或 [`deb.yml`](https://github.com/pgsty/pigsty/blob/main/roles/node_id/vars/rpm.yml) 中定义的 `pg_package_map` 执行一次查找与翻译。
+* 参数强化：`repo_upstream` 参数如果没有显式覆盖定义，将从 [`rpm.yml`](https://github.com/pgsty/pigsty/blob/v3.0.0/roles/node_id/vars/rpm.yml) 或 [`deb.yml`](https://github.com/pgsty/pigsty/blob/v3.0.0/roles/node_id/vars/deb.yml) 中定义的 `repo_upstream_default` 提取对应系统的默认值。
+* 参数强化：`repo_packages` 参数如果没有显式覆盖定义，将从 [`rpm.yml`](https://github.com/pgsty/pigsty/blob/v3.0.0/roles/node_id/vars/rpm.yml) 或 [`deb.yml`](https://github.com/pgsty/pigsty/blob/v3.0.0/roles/node_id/vars/deb.yml) 中定义的 `repo_packages_default` 提取对应系统的默认值。
+* 参数强化：`infra_packages` 参数如果没有显式覆盖定义，将从 [`rpm.yml`](https://github.com/pgsty/pigsty/blob/v3.0.0/roles/node_id/vars/rpm.yml) 或 [`deb.yml`](https://github.com/pgsty/pigsty/blob/v3.0.0/roles/node_id/vars/deb.yml) 中定义的 `infra_packages_default` 提取对应系统的默认值。
+* 参数强化：`node_default_packages` 参数如果没有显式覆盖定义，将从 [`rpm.yml`](https://github.com/pgsty/pigsty/blob/v3.0.0/roles/node_id/vars/rpm.yml) 或 [`deb.yml`](https://github.com/pgsty/pigsty/blob/v3.0.0/roles/node_id/vars/deb.yml) 中定义的 `node_packages_default` 提取对应系统的默认值。
+* 参数强化：`pg_packages` 与 `pg_extensions` 中的扩展现在都会从  [`rpm.yml`](https://github.com/pgsty/pigsty/blob/v3.0.0/roles/node_id/vars/rpm.yml) 或 [`deb.yml`](https://github.com/pgsty/pigsty/blob/v3.0.0/roles/node_id/vars/deb.yml) 中定义的 `pg_package_map` 执行一次查找与翻译。
 * 参数强化：`node_packages` 与 `pg_extensions` 参数中指定的软件包在安装时会升级至最新版本， `node_packages` 中现在默认值变为 `[openssh-server`]，帮助修复 [OpenSSH CVE](https://pigsty.io/zh/blog/db/cve-2024-6387/)
 * 参数强化：`pg_dbsu_uid` 会自动根据操作系统类型调整为 `26` （EL）或 `543` （Debian），避免了手工调整。
 * 设置了 pgbouncer 默认参数，`max_prepared_statements = 128` 启用了事物池化模式下的准备语句支持，并设置 `server_lifetime` 为 600，
@@ -2598,7 +2613,7 @@ Pigsty 专业版现在提供试点的 Kubernetes 部署支持与 Kafka KRaft 集
 
 - [Odoo](https://github.com/pgsty/pigsty/tree/master/app/odoo)：开源 ERP 软件与插件
 - [Jupyter](https://github.com/pgsty/pigsty/tree/master/app/jupyter)：使用容器运行 Jupyter Notebook
-- [PolarDB](https://github.com/pgsty/pigsty/tree/master/app/polardb)：运行“国产数据库” PolarDB，应付信创检查！
+- [PolarDB](https://github.com/pgsty/pigsty/tree/v2.7.0/app/polardb)：运行“国产数据库” PolarDB，应付信创检查！
 - [supabase](https://github.com/pgsty/pigsty/tree/master/app/supabase)：更新至最近的 GA 版本
 - [bytebase](https://github.com/pgsty/pigsty/tree/master/app/bytebase)：使用 `latest` 标签替代特定版本号。
 - [pg_exporter](https://github.com/pgsty/pigsty/tree/master/app/pg_exporter)：更新了 Docker 镜像的例子。
@@ -2756,7 +2771,7 @@ curl https://get.pigsty.cc/latest | bash
 
 **亮点特性**
 
-- [Ubuntu](https://github.com/pgsty/pigsty/blob/main/files/pigsty/ubuntu.yml) / [Debian](https://github.com/pgsty/pigsty/blob/main/files/pigsty/debian.yml)  支持： bullseye, bookworm, jammy, focal
+- [Ubuntu](https://github.com/pgsty/pigsty/blob/v2.5.0/files/pigsty/ubuntu.yml) / [Debian](https://github.com/pgsty/pigsty/blob/v2.5.0/files/pigsty/debian.yml)  支持： bullseye, bookworm, jammy, focal
 - 使用 CDN `repo.pigsty.cc` 软件源，提供 rpm/deb 软件包下载。
 - Anolis 操作系统支持（兼容 EL 8.8）。
 - 使用 PostgreSQL 16 替代 PostgreSQL 14 作为备选主要支持版本
@@ -2791,7 +2806,7 @@ curl https://get.pigsty.cc/latest | bash
 
 Pigsty 支持了 Ubuntu 22.04 (jammy) 与 20.04 (focal) 两个 LTS 版本，并提供相应的离线软件安装包。
 
-相比 EL 系操作系统，一些参数的默认值需要显式指定调整，详情请参考 [`ubuntu.yml`](https://github.com/pgsty/pigsty/blob/main/files/pigsty/ubuntu.yml)
+相比 EL 系操作系统，一些参数的默认值需要显式指定调整，详情请参考 [`ubuntu.yml`](https://github.com/pgsty/pigsty/blob/v2.5.0/files/pigsty/ubuntu.yml)
 
 - `repo_upstream`：按照 Ubuntu/Debian 的包名进行了调整
 - `repo_packages`：按照 Ubuntu/Debian 的包名进行了调整
@@ -4364,7 +4379,7 @@ exporter_binary_install: false                 # 功能被 exporter_install 覆�
 
 **定义结构变更**
 
-```yaml
+```text
 pg_default_roles                               # 变化细节参考 用户管理。
 pg_users                                       # 变化细节参考 用户管理。
 pg_databases                                   # 变化细节参考 数据库管理。
@@ -4372,7 +4387,7 @@ pg_databases                                   # 变化细节参考 数据库管
 
 **重命名选项**
 
-```yml
+```text
 pg_default_privilegs -> pg_default_privileges # 很明显这是一个错别字
 ```
 
@@ -4568,7 +4583,7 @@ haproxy_weight_fallback: 1                    # 配置集群主库在只读服�
 
 **移除选项**
 
-```yaml
+```text
 prometheus_metrics_path                       # 与 exporter_metrics_path 重复
 prometheus_retention                          # 功能被 prometheus_options 覆盖
 ```
@@ -4780,8 +4795,8 @@ pgbouncer_hba_rules_extra: []
 
 **数据库模板**
 
-* [pg-init-template.sql](https://github.com/pgsty/pigsty/blob/main/roles/postgres/templates/pg-init-template.sql) 用于初始化`template1`数据的脚本模板
-* [pg-init-business.sql](https://github.com/pgsty/pigsty/blob/main/roles/postgres/templates/pg-init-business.sql) 用于初始化其他业务数据库的脚本模板
+* [pg-init-template.sql](https://github.com/pgsty/pigsty/blob/v0.5.0/roles/postgres/templates/pg-init-template.sql) 用于初始化`template1`数据的脚本模板
+* [pg-init-business.sql](https://github.com/pgsty/pigsty/blob/v0.5.0/roles/postgres/templates/pg-init-business.sql) 用于初始化其他业务数据库的脚本模板
 
 
 **权限模型**

@@ -24,16 +24,16 @@ Pigsty 使用现代的可观测技术栈对 PostgreSQL 进行监控：
 
 **监控指标**
 
-PostgreSQL 本身的监控指标完全由 pg_exporter 配置文件所定义：[`pg_exporter.yml`](https://github.com/pgsty/pigsty/blob/main/roles/pgsql/templates/pg_exporter.yml)
-它将进一步被 Prometheus 记录规则和告警规则进行加工处理：[`files/prometheus/rules/pgsql.yml`](https://github.com/pgsty/pigsty/blob/main/files/prometheus/rules/pgsql.yml)。
+PostgreSQL 本身的监控指标完全由 pg_exporter 配置文件所定义：[`roles/pg_monitor/templates/pg_exporter.yml`](https://github.com/pgsty/pigsty/blob/main/roles/pg_monitor/templates/pg_exporter.yml)。
+它们会进一步由 VictoriaMetrics/vmalert 兼容的记录与告警规则加工处理：[`files/victoria/rules/pgsql.yml`](https://github.com/pgsty/pigsty/blob/main/files/victoria/rules/pgsql.yml)。
 
 Pigsty 使用三个身份标签：`cls`、`ins`、`ip`，它们将附加到所有指标和日志上。此外，Pgbouncer 的监控指标，主机节点 NODE，与负载均衡器的监控指标也会被 Pigsty 所使用，并尽可能地使用相同的标签以便于关联分析。
 
 ```yaml
-{ cls: pg-meta, ins: pg-meta-1, ip: 10.10.10.10 }
-{ cls: pg-meta, ins: pg-test-1, ip: 10.10.10.11 }
-{ cls: pg-meta, ins: pg-test-2, ip: 10.10.10.12 }
-{ cls: pg-meta, ins: pg-test-3, ip: 10.10.10.13 }
+- { cls: pg-meta, ins: pg-meta-1, ip: 10.10.10.10 }
+- { cls: pg-test, ins: pg-test-1, ip: 10.10.10.11 }
+- { cls: pg-test, ins: pg-test-2, ip: 10.10.10.12 }
+- { cls: pg-test, ins: pg-test-3, ip: 10.10.10.13 }
 ```
 
 **日志**
@@ -48,26 +48,27 @@ Pigsty 使用三个身份标签：`cls`、`ins`、`ip`，它们将附加到所�
 
 **目标管理**
 
-Prometheus 的监控目标在 `/etc/prometheus/targets/pgsql/` 下的静态文件中定义，每个实例都有一个相应的文件。以 `pg-meta-1` 为例：
+VictoriaMetrics 的监控目标在 `/infra/targets/pgsql/` 下的静态文件中定义，每个实例都有一个相应的文件。以 `pg-meta-1` 为例：
 
 ```yaml
 # pg-meta-1 [primary] @ 10.10.10.10
 - labels: { cls: pg-meta, ins: pg-meta-1, ip: 10.10.10.10 }
   targets:
     - 10.10.10.10:9630    # <--- pg_exporter 用于PostgreSQL指标
-    - 10.10.10.10:9631    # <--- pg_exporter 用于pgbouncer指标
+    - 10.10.10.10:9631    # <--- pgbouncer_exporter 用于 Pgbouncer 指标
     - 10.10.10.10:8008    # <--- patroni指标（未启用 API SSL 时）
+    - 10.10.10.10:9854    # <--- pgbackrest_exporter 用于备份指标
 ```
 
-当全局标志 [`patroni_ssl_enabled`](/docs/pgsql/param#patroni_ssl_enabled) 被设置时，patroni 目标将被移动到单独的文件 `/etc/prometheus/targets/patroni/<ins>.yml`。 因为此时使用的是 https 抓取端点。当您 [监控RDS](#监控rds) 实例时，监控目标会被单独放置于： `/etc/prometheus/targets/pgrds/` 目录下，并以**集群**为单位进行管理。
+当全局标志 [`patroni_ssl_enabled`](/docs/pgsql/param#patroni_ssl_enabled) 被设置时，Patroni 目标会单独写入 `/infra/targets/patroni/<ins>.yml`，因为此时使用 HTTPS 抓取端点。当您 [监控RDS](#监控rds) 实例时，监控目标会放在 `/infra/targets/pgrds/` 目录下，并以**集群**为单位进行管理。
 
-当使用 `bin/pgsql-rm` 或 `pgsql-rm.yml` 移除集群时，Prometheus 监控目标将被移除。您也可以手动移除它，或使用剧本里的子任务：
+当使用 `bin/pgsql-rm` 或 `pgsql-rm.yml` 移除集群时，相应监控目标会被移除。您也可以使用：
 
 ```bash
-bin/pgmon-rm <cls|ins>    # 从所有infra节点中移除 prometheus 监控目标
+bin/pgmon-rm <cls|ins>    # 从所有 infra 节点中移除监控目标
 ```
 
-远程 RDS 监控目标会被放置于 `/etc/prometheus/targets/pgrds/<cls>.yml`，它们是由 [`pgsql-monitor.yml`](/docs/pgsql/playbook#pgsql-monitoryml) 剧本或 `bin/pgmon-add` 脚本所创建的。
+远程 RDS 监控目标会被放置于 `/infra/targets/pgrds/<cls>.yml`，它们由 [`pgsql-monitor.yml`](/docs/pgsql/playbook#pgsql-monitoryml) 剧本或 `bin/pgmon-add` 脚本创建。
 
 
 
@@ -93,7 +94,7 @@ Pigsty 提供三种监控模式，以适应不同的监控需求。
 |   侵入 DB 节点    |         ✅ 无侵入         |       ⚠️ 安装 Exporter       |  ⚠️ 完全由 Pigsty 管理   |
 |    监控现有实例     |         ✅ 可支持         |           ✅ 可支持            |  ❌ 仅用于 Pigsty 托管实例  |
 |    监控用户与视图    |         人工创建          |            人工创建            |     Pigsty 自动创建     |
-|    部署使用剧本     | `bin/pgmon-add <cls>` | 部分执行 `pgsql.ym`/`node.yml` |     `pgsql.yml`     |
+|    部署使用剧本     | `bin/pgmon-add <cls>` | 部分执行 `pgsql.yml`/`node.yml` |     `pgsql.yml`     |
 |     所需权限      |   Infra 节点可达的 PGURL   |    DB 节点 ssh 与 sudo 权限     | DB 节点 ssh 与 sudo 权限 |
 |     功能概述      |     PGCAT + PGRDS     |           大部分功能            |        完整功能         |
 {.full-width}
@@ -115,7 +116,7 @@ Pigsty 提供三种监控模式，以适应不同的监控需求。
 ```bash
 ./node.yml  -l <cls> -t node_repo,node_pkg           # 在主机节点上添加 INFRA节点的 YUM 源并安装软件包。
 ./node.yml  -l <cls> -t node_exporter,node_register  # 配置主机监控，并加入 VictoriaMetrics
-./node.yml  -l <cls> -t vector                       # 配置主机日志采集，并发送至 victoria-logs
+./node.yml  -l <cls> -t vector                       # 配置主机日志采集，并发送至 VictoriaLogs
 ./pgsql.yml -l <cls> -t pg_exporter,pg_register      # 配置 PostgreSQL 监控，并注册至 Victoria/Grafana
 ```
 
@@ -133,7 +134,7 @@ Pigsty 提供三种监控模式，以适应不同的监控需求。
 ```
 ------ infra ------
 |                 |
-|   prometheus    |            v---- pg-foo-1 ----v
+| victoria-metrics|            v---- pg-foo-1 ----v
 |       ^         |  metrics   |         ^        |
 |   pg_exporter <-|------------|----  postgres    |
 |   (port: 20001) |            | 10.10.10.10:5432 |
@@ -152,7 +153,7 @@ Pigsty 提供三种监控模式，以适应不同的监控需求。
 
 {{% alert title="监控外部 Postgres 实例时的局限性" color="secondary" %}}
 
-- pgBoucner 连接池指标不可用
+- PgBouncer 连接池指标不可用
 - Patroni 高可用组件指标不可用
 - 主机节点监控指标不可用，以及节点 HAProxy，Keepalived 指标亦不可用。
 - 日志收集与日志衍生指标不可用
@@ -213,7 +214,7 @@ infra:            # 代理、监控、警报等的infra集群..
         pg_seq: 1                             # RDS 实例号 （身份参数，手工指定分配监控系统内名称）
         pg_host: pc-2ze379wb1d4irc18x.polardbpg.rds.aliyuncs.com # RDS 主机地址
         pg_port: 1921                         # RDS 端口（从控制台连接信息获取）
-        pg_exporter_auto_discovery: true      # 禁用新数据库自动发现功能
+        pg_exporter_auto_discovery: true      # 启用新数据库自动发现功能
         pg_exporter_include_database: 'test'  # 仅监控这个列表中的数据库（多个数据库用逗号分隔）
         pg_monitor_username: dbuser_monitor   # 监控用的用户名，覆盖全局配置
         pg_monitor_password: DBUser_Monitor   # 监控用的密码，覆盖全局配置
@@ -224,7 +225,7 @@ infra:            # 代理、监控、警报等的infra集群..
         pg_seq: 2                             # RDS 实例号 （身份参数，手工指定分配监控系统内名称）
         pg_host: pe-2ze7tg620e317ufj4.polarpgmxs.rds.aliyuncs.com # RDS 主机地址
         pg_port: 1521                         # RDS 端口（从控制台连接信息获取）
-        pg_exporter_auto_discovery: true      # 禁用新数据库自动发现功能
+        pg_exporter_auto_discovery: true      # 启用新数据库自动发现功能
         pg_exporter_include_database: 'test,postgres'  # 仅监控这个列表中的数据库（多个数据库用逗号分隔）
         pg_monitor_username: dbuser_monitor   # 监控用的用户名
         pg_monitor_password: DBUser_Monitor   # 监控用的密码
@@ -235,7 +236,7 @@ infra:            # 代理、监控、警报等的infra集群..
         pg_seq: 1                             # RDS 实例号 （身份参数，手工指定分配监控系统内名称）
         pg_host: pgm-2zern3d323fe9ewk.pg.rds.aliyuncs.com  # RDS 主机地址
         pg_port: 5432                         # RDS 端口（从控制台连接信息获取）
-        pg_exporter_auto_discovery: true      # 禁用新数据库自动发现功能
+        pg_exporter_auto_discovery: true      # 启用新数据库自动发现功能
         pg_exporter_include_database: 'rds'   # 仅监控这个列表中的数据库（多个数据库用逗号分隔）
         pg_monitor_username: dbuser_monitor   # 监控用的用户名
         pg_monitor_password: DBUser_Monitor   # 监控用的密码
@@ -349,6 +350,8 @@ ALTER USER dbuser_monitor SET search_path = monitor,public; -- 建议设置此�
 监控视图提供了若干常用的预处理结果，并对某些需要高权限的监控指标进行权限封装（例如共享内存分配），便于查询与使用。强烈建议在所有需要监控的数据库中创建
 
 <details><summary>监控模式与监控视图定义</summary>
+
+> 下列 SQL 便于理解监控对象；当前 Pigsty 实际渲染的完整定义以 [`roles/pgsql/templates/pg-init-template.sql`](https://github.com/pgsty/pigsty/blob/main/roles/pgsql/templates/pg-init-template.sql) 为准，当前模板还包含对安全搜索路径与权限边界的额外加固。
 
 ```sql
 ----------------------------------------------------------------------
@@ -572,9 +575,11 @@ GRANT SELECT ON monitor.pg_seq_scan TO pg_monitor;
 ```sql
 DROP FUNCTION IF EXISTS monitor.pg_shmem() CASCADE;
 CREATE OR REPLACE FUNCTION monitor.pg_shmem() RETURNS SETOF
-    pg_shmem_allocations AS $$ SELECT * FROM pg_shmem_allocations;$$ LANGUAGE SQL SECURITY DEFINER;
+    pg_shmem_allocations SET search_path = '' AS $$ SELECT * FROM pg_shmem_allocations;$$ LANGUAGE SQL SECURITY DEFINER;
 COMMENT ON FUNCTION monitor.pg_shmem() IS 'security wrapper for system view pg_shmem';
 REVOKE ALL ON FUNCTION monitor.pg_shmem() FROM PUBLIC;
+REVOKE ALL ON FUNCTION monitor.pg_shmem() FROM dbrole_readonly;
+REVOKE ALL ON FUNCTION monitor.pg_shmem() FROM dbrole_offline;
 GRANT EXECUTE ON FUNCTION monitor.pg_shmem() TO pg_monitor;
 ```
 

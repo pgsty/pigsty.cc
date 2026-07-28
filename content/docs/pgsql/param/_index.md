@@ -44,14 +44,14 @@ categories: [参考]
 
 | 参数                                      |    类型    | 级别  | 说明                                                          |
 |:----------------------------------------|:--------:|:---:|:------------------------------------------------------------|
-| [`pg_mode`](#pg_mode)                   |  `enum`  | `C` | pgsql 集群模式：pgsql,citus,mssql,mysql,ivory,pgtde,polar,oracle,gpsql |
+| [`pg_mode`](#pg_mode)                   |  `enum`  | `C` | pgsql 集群模式：pgsql,citus,mssql,mysql,ivory,pgtde,polar,gpsql,agens,oriole,pgedge |
 | [`pg_cluster`](#pg_cluster)             | `string` | `C` | pgsql 集群名称，必选身份参数                                           |
 | [`pg_seq`](#pg_seq)                     |  `int`   | `I` | pgsql 实例号，必选身份参数                                            |
-| [`pg_role`](#pg_role)                   |  `enum`  | `I` | pgsql 实例角色，必选身份参数，可为 primary，replica，offline                |
+| [`pg_role`](#pg_role)                   |  `enum`  | `I` | pgsql 实例角色，必选身份参数，可为 primary、replica、standby、offline、delayed |
 | [`pg_instances`](#pg_instances)         |  `dict`  | `I` | 在一个节点上定义多个 pg 实例，使用 `{port:ins_vars}` 格式                    |
-| [`pg_upstream`](#pg_upstream)           |   `ip`   | `I` | 级联从库或备份集群或的复制上游节点 IP 地址                                     |
-| [`pg_shard`](#pg_shard)                 | `string` | `C` | pgsql 分片名，对 citus 与 gpsql 等水平分片集群为必选身份参数                    |
-| [`pg_group`](#pg_group)                 |  `int`   | `C` | pgsql 分片号，正整数，对 citus 与 gpsql 等水平分片集群为必选身份参数                |
+| [`pg_upstream`](#pg_upstream)           |   `ip`   | `I` | 级联从库或备份集群的复制上游节点 IP 地址                                      |
+| [`pg_shard`](#pg_shard)                 | `string` | `C` | pgsql 分片名；水平分片集群建议显式指定                                      |
+| [`pg_group`](#pg_group)                 |  `int`   | `C` | pgsql 分片号，可使用非负整数；水平分片集群建议显式指定                            |
 | [`gp_role`](#gp_role)                   |  `enum`  | `C` | 这个集群的 greenplum 角色，可以是 master 或 segment                     |
 | [`pg_exporters`](#pg_exporters)         |  `dict`  | `C` | 在该节点上设置额外的 pg_exporters 用于监控远程 postgres 实例                  |
 | [`pg_offline_query`](#pg_offline_query) |  `bool`  | `I` | 设置为 true 将此只读实例标记为特殊的离线从库，承载 Offline 服务，允许离线查询              |
@@ -102,6 +102,7 @@ categories: [参考]
 
 | 参数                                                  |     类型     |  级别   | 说明                                                    |
 |:----------------------------------------------------|:----------:|:-----:|:------------------------------------------------------|
+| [`pg_data`](#pg_data)                               |   `path`   |  `C`  | PostgreSQL 数据目录，默认为 `/pg/data`                         |
 | [`pg_fs_main`](#pg_fs_main)                         |   `path`   |  `C`  | postgres 主数据的挂载点/路径，默认为 `/data/postgres`              |
 | [`pg_fs_backup`](#pg_fs_backup)                     |   `path`   |  `C`  | pg 备份数据的挂载点/路径，默认为 `/data/backups`                    |
 | [`pg_storage_type`](#pg_storage_type)               |   `enum`   |  `C`  | pg 主数据的存储类型，SSD、HDD，默认为 SSD，影响自动优化的参数。                |
@@ -126,7 +127,7 @@ categories: [参考]
 | [`pg_shared_buffer_ratio`](#pg_shared_buffer_ratio) |  `float`   |  `C`  | postgres 共享缓冲区内存比率，默认为 0.25，范围 0.1~0.4                |
 | [`pg_rto`](#pg_rto)                                 |   `enum`   |  `C`  | RTO 模式：`fast`,`norm`,`safe`,`wide`，默认 `norm`          |
 | [`pg_rto_plan`](#pg_rto_plan)                       |   `dict`   |  `G`  | RTO 预设配置，定义 Patroni HA 与 HAProxy 健康检查的超时参数            |
-| [`pg_rpo`](#pg_rpo)                                 |   `int`    |  `C`  | 恢复点目标（字节），默认为 `1MiB`                                  |
+| [`pg_rpo`](#pg_rpo)                                 |   `int`    |  `C`  | Patroni 故障切换候选从库的采样落后阈值，默认为 `1MiB`                    |
 | [`pg_libs`](#pg_libs)                               |  `string`  |  `C`  | 预加载的库，默认为 `pg_stat_statements,auto_explain`           |
 | [`pg_delay`](#pg_delay)                             | `interval` |  `I`  | 备份集群主库的 WAL 重放应用延迟，用于制备延迟从库                           |
 | [`pg_checksum`](#pg_checksum)                       |   `bool`   |  `C`  | 为 postgres 集群启用数据校验和？                                 |
@@ -303,10 +304,12 @@ PostgreSQL 集群模式，默认值为 `pgsql`，即标准的 PostgreSQL 集群�
 - `ivory`：IvorySQL Oracle 兼容内核
 - `pgtde`：带 pg_tde 的 Percona PostgreSQL 内核
 - `polar`：PolarDB for PostgreSQL 内核
-- `oracle`：PolarDB for Oracle 内核
 - `gpsql`：Greenplum 并行数据库集群（监控）
+- `agens`：AgensGraph 图数据库内核
+- `oriole`：OrioleDB 存储引擎内核
+- `pgedge`：pgEdge 分布式复制内核
 
-如果 `pg_mode` 设置为 `citus` 或 `gpsql`，则需要两个额外的必选身份参数 [`pg_shard`](#pg_shard) 和 [`pg_group`](#pg_group) 来定义水平分片集群的身份。
+`pg_shard` 与 `pg_group` 分别有 `pg_cluster` 和 `0` 作为默认值；当 `pg_mode` 设置为 `citus` 或 `gpsql` 并包含多个物理集群时，应显式设置这两个参数来定义水平分片集群的身份。
 
 在这两种情况下，每一个 PostgreSQL 集群都是一组更大的业务单元的一部分。
 
@@ -321,7 +324,7 @@ PostgreSQL 集群名称，必选的身份标识参数，没有默认值
 
 集群名将用作资源的命名空间。
 
-集群命名需要遵循特定的命名模式：`[a-z][a-z0-9-]*`，即，只使用数字与小写字母，且不以数字开头，以符合标识上的不同约束的要求。
+当前角色校验要求集群名匹配 `^[A-Za-z0-9-]+$`，且不能命名为 `root`。为保持 DNS、服务名与运维脚本中的命名一致，仍建议采用小写字母开头、仅含小写字母、数字与连字符的名称。
 
 
 
@@ -341,14 +344,15 @@ PostgreSQL 实例序列号，必选的身份标识参数，无默认值。
 
 参数名称： `pg_role`， 类型： `enum`， 层次：`I`
 
-PostgreSQL 实例角色，必选的身份标识参数，无默认值。取值可以是：`primary`, `replica`, `offline`
+PostgreSQL 实例角色，必选的身份标识参数，无默认值。当前校验接受：`primary`、`replica`、`standby`、`offline`、`delayed`。
 
-PGSQL 实例的角色，可以是：`primary`、`replica`、`standby` 或 `offline`。
+常用的服务成员标签如下：
 
 - `primary`：主实例，在集群中有且仅有一个。
 - `replica`：用于承载在线只读流量的副本，高负载下可能会有轻微复制延迟（10ms~100ms, 100KB）。
 - `offline`：用于处理离线只读流量的离线副本，如统计分析/ETL/个人查询等。
 
+`standby` 与 `delayed` 也是合法的清单角色值，但当前角色逻辑不会仅凭这两个字符串自动创建备份集群或延迟复制；相应拓扑仍需通过 [`pg_upstream`](#pg_upstream) 与 [`pg_delay`](#pg_delay) 配置。按角色筛选的 HBA 规则会直接使用这些清单标签。
 
 
 
@@ -383,7 +387,7 @@ PGSQL 实例的角色，可以是：`primary`、`replica`、`standby` 或 `offli
 
 参数名称： `pg_shard`， 类型： `string`， 层次：`C`
 
-PostgreSQL 水平分片名称，对于分片集群来说（例如 citus 集群），这是的必选标识参数。
+PostgreSQL 水平分片名称，默认值为 `pg_cluster`。对于包含多个物理集群的水平分片集群（例如 Citus 集群），建议显式指定。
 
 当多个标准的 PostgreSQL 集群一起以水平分片方式为同一业务提供服务时，Pigsty 将此组集群标记为 **水平分片集群**。
 
@@ -407,7 +411,7 @@ cls pg_group = 3:   pg-citus3
 
 参数名称： `pg_group`， 类型： `int`， 层次：`C`
 
-PostgreSQL 水平分片集群的分片索引号，对于分片集群来说（例如 citus 集群），这是的必选标识参数。
+PostgreSQL 水平分片集群的分片索引号，默认值为 `0`。对于包含多个物理集群的水平分片集群（例如 Citus 集群），建议显式指定。
 
 此参数与 [pg_shard](#pg_shard) 配对使用，通常可以使用非负整数作为索引号。
 
@@ -544,7 +548,7 @@ PostgreSQL 业务用户列表，需要在 PG 集群层面进行定义。默认�
     search_path: public
   pgbouncer: true                 # 可选，是否加入连接池用户列表，默认 false
   pool_mode: transaction          # 可选，用户级别的池化模式，默认 transaction
-  pool_connlimit: -1              # 可选，用户级别的连接池最大连接数，默认 -1 不限制
+  pool_connlimit: 100             # 可选，用户级连接池最大连接数；省略时继承 Pigsty 全局默认 100
 ```
 
 > 用户级连接池限额字段统一使用 `pool_connlimit`（对应 Pgbouncer `max_user_connections`）。
@@ -593,8 +597,8 @@ PostgreSQL 业务数据库列表，需要在 PG 集群层面进行定义。默�
     statement_timeout: '30s'
   pool_auth_user: dbuser_meta     # 可选，连接到此 pgbouncer 数据库的所有连接都将使用此用户进行验证（启用 pgbouncer_auth_query 才有用）
   pool_mode: transaction          # 可选，数据库级别的 pgbouncer 池化模式，默认为 transaction
-  pool_size: 64                   # 可选，数据库级别的 pgbouncer 默认池子大小，默认为 64
-  pool_reserve: 32                # 可选，数据库级别的 pgbouncer 池子保留空间，默认为 32，当默认池子不够用时，最多再申请这么多条突发连接
+  pool_size: 50                   # 可选，数据库级别的 pgbouncer 默认池子大小，默认为 50
+  pool_reserve: 30                # 可选，数据库级别的 pgbouncer 池子保留空间，默认为 30，当默认池子不够用时，最多再申请这么多条突发连接
   pool_size_min: 0                # 可选，数据库级别的 pgbouncer 池的最小大小，默认为 0
   pool_connlimit: 100             # 可选，数据库级别的最大数据库连接数，默认为 100
 ```
@@ -1048,7 +1052,7 @@ pg_conf: oltp.yml                 # config template: oltp,olap,crit,tiny. `oltp.
 pg_max_conn: auto                 # postgres max connections, `auto` will use recommended value
 pg_shared_buffer_ratio: 0.25      # postgres shared buffers ratio, 0.25 by default, 0.1~0.4
 pg_io_method: worker              # io method for postgres, auto,sync,worker,io_uring, worker by default
-pg_rto: norm                      # shared rto mode: fast,norm,safe,wide (or seconds for compatibility)
+pg_rto: norm                      # shared rto mode: fast,norm,safe,wide
 pg_rpo: 1048576                   # recovery point objective in bytes, `1MiB` at most by default
 pg_libs: 'pg_stat_statements, auto_explain'  # preloaded libraries, `pg_stat_statements,auto_explain` by default
 pg_delay: 0                       # replication apply delay for standby cluster leader
@@ -1439,22 +1443,22 @@ Postgres 共享缓冲区内存比例，默认为 `0.25`，正常范围在 `0.1`~
 
 Pigsty 提供四种预设的 RTO 模式，分别针对不同的网络条件与部署场景进行了优化：
 
-| 模式     | 适用场景     | 网络条件          | 平均 RTO  | 最坏 RTO   | 误切风险 |
-|:-------|:---------|:--------------|:--------|:---------|:-----|
-| `fast` | 同机柜/同交换机 | < 1ms，极稳定     | **14s** | **29s**  | 较高   |
-| `norm` | 同机房（默认）  | 1-5ms，正常      | **21s** | **43s**  | 中等   |
-| `safe` | 同省跨机房    | 10-50ms，跨机房   | **43s** | **91s**  | 较低   |
-| `wide` | 跨地域/跨洲   | 100-200ms，公网  | **92s** | **207s** | 极低   |
+| 模式     | 适用场景     | 网络条件          | 源码目标 RTO | Patroni TTL | 误切风险 |
+|:-------|:---------|:--------------|:---------|:------------|:-----|
+| `fast` | 同机柜/同交换机 | < 1ms，极稳定     | **< 30s**  | 20s         | 较高   |
+| `norm` | 同机房（默认）  | 1-5ms，正常      | **< 45s**  | 30s         | 中等   |
+| `safe` | 同省跨机房    | 10-50ms，跨机房   | **< 90s**  | 60s         | 较低   |
+| `wide` | 跨地域/跨洲   | 100-200ms，公网  | **< 150s** | 120s        | 极低   |
 
 减小 RTO 可以加快故障恢复速度，但会增加误切风险（网络抖动被误判为故障）。您需要根据实际网络条件选择合适的模式。
 更多详情请参阅 [**RTO 利弊权衡**](/docs/concept/ha/rto/) 文档。
 
-为了向后兼容，也支持直接指定秒数，系统会自动映射到最接近的模式：`< 30` → `fast`，`30-44` → `norm`，`45-89` → `safe`，`≥ 90` → `wide`。
+当前模板只识别这四个字符串键；其他值（包括数字）不会按秒数映射，而会回退到 `norm`。如需自定义时间组合，请修改 [`pg_rto_plan`](#pg_rto_plan) 并用新增的键名作为 `pg_rto`。
 
 ```yaml
 pg_rto: norm   # 默认模式，适合同机房部署
 pg_rto: safe   # 跨机房部署推荐
-pg_rto: 30     # 兼容旧版写法，等效于 norm
+# pg_rto: 30   # 非法键；当前模板会回退到 norm，请勿用数字表达秒数
 ```
 
 
@@ -1505,13 +1509,13 @@ pg_rto_plan:
 
 参数名称： `pg_rpo`， 类型： `int`， 层次：`C`
 
-以字节为单位的恢复点目标（RPO），默认值：`1048576`。
-
-默认为 1MiB，这意味着在故障转移期间最多可以容忍 1MiB 的数据丢失。
+以字节为单位的候选从库落后阈值，默认值：`1048576`（1MiB）。该值写入 Patroni 的
+`maximum_lag_on_failover`，用于判断从库是否有资格参与故障切换；它不是实际数据丢失量的硬上限。
+异步复制下，实际最坏丢失还取决于写入速率以及 Patroni 对主库 WAL 位置的采样时机。
 
 当主节点宕机并且所有副本都滞后时，你必须做出一个艰难的选择，**在可用性和一致性之间进行权衡**：
 
-- 提升一个从库成为新的主库，并尽快将系统恢复服务，但要付出可接受的数据丢失代价（例如，少于 1MB）。
+- 提升一个落后副本成为新的主库，并尽快恢复服务，但接受可能的数据丢失。
 - 等待主库重新上线（可能永远不会），或人工干预以避免任何数据丢失。
 
 你可以使用 `crit.yml` [conf](#pg_conf) 模板来确保在故障转移期间没有数据丢失，但这会牺牲一些性能。
@@ -1640,10 +1644,10 @@ PostgreSQL 的 IO 方法，默认为 `worker`。可选值包括：
 - `worker`：使用后台工作进程处理 IO（默认选项）
 - `io_uring`：使用 Linux 的 io_uring 异步 IO 接口
 
-此参数仅适用于 PostgreSQL 17 及以上版本，控制 PostgreSQL 数据块层的 IO 策略。
+此参数只会由当前调优模板写入 PostgreSQL 18 及以上版本的配置，用于选择异步 I/O 执行方式。
 
-- 在 PostgreSQL 17 中，`io_uring` 可以提供更高的 IO 性能，但需要操作系统内核支持（Linux 5.1+）并安装 `liburing` 库。
-- 在 PostgreSQL 18 中，默认 IO 方法已从 `sync` 改为 `worker`，使用后台工作进程处理异步 IO，无需额外依赖。
+- PostgreSQL 18 提供 `worker`、`io_uring`、`sync` 三个实际 GUC 枚举值；`auto` 是 Pigsty 模板的选择逻辑，并不是 PostgreSQL 自身的枚举值。
+- PostgreSQL 18 默认使用 `worker`，通过后台工作进程执行异步 I/O。
 - 如果您使用 Debian 12/Ubuntu 22+ 或 EL 10+ 系统，并希望获得最佳 IO 性能，可以考虑设置为 `io_uring`。
 
 请注意，在不支持 `io_uring` 的系统上设置此值可能导致 PostgreSQL 启动失败，因此 `auto` 或 `worker` 是更安全的选择。
@@ -2451,7 +2455,9 @@ pgbouncer_exporter_url: ''             # 如果指定，将覆盖自动生成的
 pgbouncer_exporter_options: ''         # 覆盖 pgbouncer_exporter 的额外选项
 pgbackrest_exporter_enabled: true      # 在 pgsql 主机上启用 pgbackrest_exporter 吗？
 pgbackrest_exporter_port: 9854         # pgbackrest_exporter 监听端口，默认为 9854
-pgbackrest_exporter_options: ''        # 覆盖 pgbackrest_exporter 的额外选项
+pgbackrest_exporter_options: >-        # 覆盖 pgbackrest_exporter 的额外选项
+  --collect.interval=120
+  --log.level=info
 ```
 
 
@@ -2473,11 +2479,9 @@ PG Exporter 用于监控 PostgreSQL 数据库实例，如果不想安装 pg_expo
 
 参数名称： `pg_exporter_config`， 类型： `string`， 层次：`C`
 
-pg_exporter 配置文件名，PG Exporter 和 PGBouncer Exporter 都会使用这个配置文件。默认值：`pg_exporter.yml`。
+pg_exporter 的收集器配置文件名，默认值：`pg_exporter.yml`。Pgbouncer Exporter 使用独立且固定的 `pgbouncer_exporter.yml` 模板，不受此参数影响。
 
-如果你想使用自定义配置文件，你可以在这里定义它。你的自定义配置文件应当放置于 `files/<name>.yml`。
-
-例如，当您希望监控一个远程的 PolarDB 数据库实例时，可以使用样例配置：`files/polar_exporter.yml`。
+默认模板位于 `roles/pg_monitor/templates/pg_exporter.yml`。若要使用自定义文件，需要将其放在 Ansible 的模板搜索路径中，并在这里填写对应模板名。
 
 
 
@@ -2609,8 +2613,8 @@ pg_exporter 连接超时（毫秒），默认为 `200` （单位毫秒）
 
 当使用空字符串时，会使用默认的命令参数：
 
-```bash
-{% if pg_exporter_port != '' %}
+```jinja2
+{% if pg_exporter_options != '' %}
 PG_EXPORTER_OPTS='--web.listen-address=:{{ pg_exporter_port }} {{ pg_exporter_options }}'
 {% else %}
 PG_EXPORTER_OPTS='--web.listen-address=:{{ pg_exporter_port }} --log.level=info'
@@ -2700,7 +2704,7 @@ pgbackrest_exporter 用于监控 pgBackRest 备份系统的状态，包括备份
 
 pgbackrest_exporter 监听端口号，默认值为：`9854`。
 
-此端口需要在 Prometheus 服务发现配置中引用，用于抓取备份相关的监控指标。
+此端口会注册到 VictoriaMetrics 兼容的抓取目标中，用于采集备份相关指标。
 
 
 
@@ -2709,9 +2713,15 @@ pgbackrest_exporter 监听端口号，默认值为：`9854`。
 
 参数名称： `pgbackrest_exporter_options`， 类型： `arg`， 层次：`C`
 
-传给 pgbackrest_exporter 的命令行参数，默认值为：`""` 空字符串。
+传给 pgbackrest_exporter 的命令行参数，默认值为：
 
-当使用空字符串时，会使用默认的命令参数配置。您可以在此指定额外的参数选项来调整 exporter 的行为。
+```yaml
+pgbackrest_exporter_options: >-
+  --collect.interval=120
+  --log.level=info
+```
+
+即每 120 秒采集一次，日志级别为 `info`。设置此参数会整体覆盖默认参数。
 
 
 

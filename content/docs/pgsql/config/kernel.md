@@ -9,7 +9,7 @@ categories: [参考]
 
 > 在 Pigsty 中选择"内核"意味着确定 PostgreSQL 大版本、模式/发行版、需要安装的包以及要加载的调优模板。
 
-Pigsty v4.4 当前支持 PostgreSQL 14 - 18，默认使用 18。下方内容展示如何通过配置文件完成这些选择。
+Pigsty v4.5 当前源码支持 PostgreSQL 14 - 18，默认使用 18。下方内容展示如何通过配置文件完成这些选择。
 
 
 ----------------
@@ -24,7 +24,7 @@ Pigsty v4.4 当前支持 PostgreSQL 14 - 18，默认使用 18。下方内容展�
 all:
   vars:
     pg_version: 18
-    pg_packages: [ pgsql-main pgsql-common ]
+    pg_packages: [ pgsql-main, pgsql-common ]
     pg_extensions: [ postgis, timescaledb, pgvector, pgml ]
 ```
 
@@ -52,27 +52,30 @@ Pigsty 的离线仓库中不同版本的扩展支持范围不同：14 可用扩�
 | `oriole` | OrioleDB 存储引擎                           |
 | `agens`  | AgensGraph 图数据库内核                       |
 | `pgedge` | pgEdge 分布式复制内核                          |
-| `oracle` | PostgreSQL + ora 兼容（`pg_mode: oracle`）  |
 {.full-width}
 
-选择模式后，Pigsty 会自动加载对应的模板、依赖包与 Patroni 配置。以部署 Citus 为例：
+`pg_mode` 决定二进制路径、Patroni 集成方式及部分内核特定逻辑；它本身不会自动替你补齐所有软件包、扩展与业务数据库。实际部署时应使用匹配的 `conf/*.yml` 配置模板，或显式配置 `pg_packages`、`pg_extensions`、`pg_libs` 与 `pg_databases`。以下是一个精简的 Citus 示例：
 
 ```yaml
 all:
   children:
-    pg-citus0:
-      hosts: { 10.10.10.11: { pg_seq: 1, pg_role: primary } }
-      vars: { pg_cluster: pg-citus0, pg_group: 0 }
     pg-citus1:
+      hosts: { 10.10.10.11: { pg_seq: 1, pg_role: primary } }
+      vars: { pg_cluster: pg-citus1, pg_group: 0 }
+    pg-citus2:
       hosts: { 10.10.10.12: { pg_seq: 1, pg_role: primary } }
-      vars: { pg_cluster: pg-citus1, pg_group: 1 }
+      vars: { pg_cluster: pg-citus2, pg_group: 1 }
   vars:
     pg_mode: citus
     pg_shard: pg-citus
-    patroni_citus_db: meta
+    pg_primary_db: citus
+    pg_extensions: [ citus ]
+    pg_libs: 'citus, pg_stat_statements'
+    pg_databases:
+      - { name: citus, extensions: [ citus ] }
 ```
 
-> 效果：所有成员会安装 Citus 相关包，Patroni 以分片模式写入 etcd，并自动在 `meta` 数据库内 `CREATE EXTENSION citus`。
+> `conf/ha/citus.yml` 提供了当前完整样例；上面的精简配置显式安装 Citus 包，并在 `citus` 数据库中创建扩展。
 
 
 ----------------
@@ -83,7 +86,7 @@ all:
 
 - `pg_libs`：写入 `shared_preload_libraries` 的列表。例如 `pg_libs: 'timescaledb, pg_stat_statements, auto_explain'`。
 - `pg_default_extensions` / `pg_default_schemas`：控制初始化脚本对 `template1` 与 `postgres` 预创建的 schema、扩展。
-- `pg_parameters`：为所有实例附加 `ALTER SYSTEM SET`（写入 `postgresql.auto.conf`）。
+- `pg_parameters`：由 Pigsty 在配置阶段渲染进 `postgresql.auto.conf`；不要再手工执行 `ALTER SYSTEM` 管理同一批参数。
 
 示例：启用 TimescaleDB、pgvector 并自定义一些系统参数。
 
@@ -91,16 +94,15 @@ all:
 pg-analytics:
   vars:
     pg_cluster: pg-analytics
-    pg_libs: 'timescaledb, pg_stat_statements, pgml'
+    pg_libs: 'timescaledb, pg_stat_statements, auto_explain'
     pg_default_extensions:
       - { name: timescaledb }
-      - { name: pgvector }
+      - { name: vector }
     pg_parameters:
       timescaledb.max_background_workers: 8
-      shared_preload_libraries: "'timescaledb,pg_stat_statements,pgml'"
 ```
 
-> 效果：初始化时 `template1` 会创建扩展、Patroni 的 `postgresql.conf` 注入对应参数，所有业务库继承这些设置。
+> 效果：初始化时 `template1` 与 `postgres` 会创建默认扩展；新建且使用 `template1` 的业务库会继承这些对象。`pg_parameters` 则直接写入 `postgresql.auto.conf`。
 
 
 ----------------
@@ -148,16 +150,16 @@ pg-rag:
     pg_version: 18
     pg_mode: pgsql
     pg_conf: olap.yml
-    pg_packages: [ pgsql-main pgsql-common ]
+    pg_packages: [ pgsql-main, pgsql-common ]
     pg_extensions: [ pgvector, pgml, postgis ]
-    pg_libs: 'pg_stat_statements, pgvector, pgml'
+    pg_libs: 'pg_stat_statements, auto_explain'
     pg_parameters:
       max_parallel_workers: 8
       shared_buffers: '32GB'
 ```
 
 - 第一台主库 + 一台 replica，使用 `olap.yml` 调优。
-- 安装 PG18 + RAG 常用扩展，自动在系统级加载 `pgvector/pgml`。
+- 安装 PG18 + RAG 常用扩展；只有需要预加载的库才应写入 `pg_libs`。
 - Patroni/pgbouncer/pgbackrest 由 Pigsty 生成，无需手工干预。
 
 根据业务需要替换上述参数即可完成内核层的全部定制。

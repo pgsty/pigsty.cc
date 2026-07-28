@@ -402,7 +402,7 @@ ORDER BY rolvaliduntil;
 ./pgsql.yml -t pg_conf,pg_pass,patroni_reload -e pg_reload=true
 
 # Step 3: 刷新 /infra/env/.pgpass 以及 /infra/conf/pg_service.conf 对管理员密码的引用
-./infra.yml -t env_pgpass,env_pg_service
+./infra.yml -t env_pgpass,env_pgscv
 ```
 
 要修改 [**`pg_monitor_password`**](/docs/pgsql/param#pg_monitor_password)，请执行以下命令：

@@ -213,7 +213,6 @@ pg switchover pg-test --leader pg-test-1 --candidate pg-test-2 --scheduled "2024
 
 ```bash
 pg failover <cls>                     # 交互式故障切换
-pg failover <cls> --leader <old>      # 指定原主库（用于验证，可选）
 pg failover <cls> --candidate <new>   # 指定要提升的从库
 pg failover <cls> --force             # 跳过确认提示
 ```
@@ -230,11 +229,11 @@ Successfully failed over to "pg-test-2"
 # 非交互式故障切换（紧急情况快速执行）
 pg failover pg-test --candidate pg-test-2 --force
 
-# 指定原主库进行验证（如果原主库名称不匹配会报错）
-pg failover pg-test --leader pg-test-1 --candidate pg-test-2 --force
 ```
 
 **Switchover 与 Failover 的区别**：Switchover 用于计划内维护，要求原主库在线，执行前会确保数据完全同步，不会丢失数据；Failover 用于紧急故障恢复，原主库可以离线，会直接提升从库，可能丢失未同步的数据。日常维护、升级请使用 Switchover；只有在主库彻底故障无法恢复时才使用 Failover。
+
+> 当前内置 Patroni 的 `failover` 子命令没有 `--leader` 选项；需要校验或指定原主库时应使用计划内的 `switchover --leader ...`，故障切换只指定候选从库。
 
 
 
@@ -242,7 +241,7 @@ pg failover pg-test --leader pg-test-1 --candidate pg-test-2 --force
 
 ## 重启实例
 
-使用 [**`restart`**](https://patroni.readthedocs.io/en/latest/patronictl.html#patronictl-restart) 子命令可以重启 PostgreSQL 实例，通常用于应用需要重启才能生效的参数更改。Patroni 会协调重启过程，对于整个集群的重启会采用滚动方式：先重启从库，最后重启主库，以最小化服务中断。
+使用 [**`restart`**](https://patroni.readthedocs.io/en/latest/patronictl.html#patronictl-restart) 子命令可以重启 PostgreSQL 实例，通常用于应用需要重启才能生效的参数更改。直接对整个集群执行时，`patronictl` 会逐个提交所选成员，但不保证“从库优先、主库最后”的顺序。若需要明确的 leader-last 顺序，应先按角色重启从库，再单独重启主库。
 
 ```bash
 pg restart <cls>                      # 重启整个集群的所有实例
@@ -270,14 +269,15 @@ $ pg list pg-test
 # 重启单个从库实例
 pg restart pg-test pg-test-2
 
-# 重启整个集群（滚动重启，先从库后主库）
+# 重启整个集群的所有成员（不承诺 leader-last 顺序）
 pg restart pg-test --force
 
 # 仅重启需要重启的实例
 pg restart pg-test --pending --force
 
-# 仅重启所有从库
+# 显式按“从库优先、主库最后”执行
 pg restart pg-test --role replica --force
+pg restart pg-test --role leader --force
 
 # 定时重启（在维护窗口执行）
 pg restart pg-test --scheduled "2024-12-01T03:00"
@@ -321,7 +321,7 @@ pg reload pg-test --force
 
 ## 重做从库
 
-使用 [**`reinit`**](https://patroni.readthedocs.io/en/latest/patronictl.html#patronictl-reinit) 子命令可以重新初始化从库。该操作会删除从库上的所有数据，然后从主库重新执行 `pg_basebackup` 进行完整的数据复制。适用于从库数据损坏无法修复、从库落后太多导致 WAL 已被清理无法追赶、或从库配置错误需要重置等场景。
+使用 [**`reinit`**](https://patroni.readthedocs.io/en/latest/patronictl.html#patronictl-reinit) 子命令可以重新初始化从库。该操作会删除从库上的所有数据，再按 Patroni 的 `create_replica_methods` 顺序重建：Pigsty 默认先尝试 `basebackup`（即 `pg_basebackup`）；启用远程 pgBackRest 仓库时还会配置 `pgbackrest` 作为后备方法。适用于从库数据损坏无法修复、从库落后太多导致 WAL 已被清理无法追赶、或从库配置错误需要重置等场景。
 
 ```bash
 pg reinit <cls> <member>              # 重新初始化指定从库
@@ -566,5 +566,4 @@ $ pg remove pg-test
 Please confirm the cluster name to remove: pg-test
 You are about to remove all information in DCS for pg-test, please type: "Yes I am aware": Yes I am aware
 ```
-
 

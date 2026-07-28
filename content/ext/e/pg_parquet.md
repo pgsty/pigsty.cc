@@ -33,7 +33,7 @@ weight: 2480
 | 2480  | [**`pg_parquet`**](/ext/e/pg_parquet) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | - |
 {.ext-table}
 
-| **相关扩展** | [`pg_analytics`](/ext/e/pg_analytics) [`pg_duckdb`](/ext/e/pg_duckdb) [`duckdb_fdw`](/ext/e/duckdb_fdw) [`citus_columnar`](/ext/e/citus_columnar) [`columnar`](/ext/e/columnar) [`pg_mooncake`](/ext/e/pg_mooncake) [`aws_s3`](/ext/e/aws_s3) [`citus`](/ext/e/citus) |
+| **相关扩展** | `pg_analytics` [`pg_duckdb`](/ext/e/pg_duckdb) [`duckdb_fdw`](/ext/e/duckdb_fdw) [`citus_columnar`](/ext/e/citus_columnar) [`columnar`](/ext/e/columnar) [`pg_mooncake`](/ext/e/pg_mooncake) [`aws_s3`](/ext/e/aws_s3) [`citus`](/ext/e/citus) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 
