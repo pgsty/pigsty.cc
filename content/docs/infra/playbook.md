@@ -9,7 +9,7 @@ categories: [任务]
 
 Pigsty 提供了三个与 INFRA 模块相关的剧本：
 
-- [`deploy.yml`](#deployyml)：在所有节点上一次性完整部署所有组件
+- [`deploy.yml`](#deployyml)：在所有节点上一次性部署 NODE、INFRA、ETCD、MINIO 与 PGSQL 核心模块
 - [`infra.yml`](#infrayml)：在 infra 节点上初始化 pigsty 基础设施
 - [`infra-rm.yml`](#infra-rmyml)：从 infra 节点移除基础设施组件
 
@@ -18,29 +18,31 @@ Pigsty 提供了三个与 INFRA 模块相关的剧本：
 
 ## `deploy.yml`
 
-在所有节点上一次性完整部署所有组件，解决 INFRA/NODE 循环依赖问题。
+在所有节点上一次性部署 NODE、INFRA、ETCD、MINIO 与 PGSQL 核心模块，解决 INFRA/NODE 循环依赖问题。
 
-该剧本会交叉执行 `infra.yml` 与 `node.yml` 的子任务，按以下顺序完成所有组件的部署：
+该剧本会交叉执行 `infra.yml` 与 `node.yml` 的子任务，按以下顺序完成核心组件的部署：
 
 1. **id**：生成节点与 PostgreSQL 身份标识
 2. **ca**：在本地创建自签名 CA 证书
 3. **repo**：在 infra 节点上创建本地软件仓库
-4. **node-init**：初始化节点、HAProxy 与 Docker
+4. **node-init**：初始化节点与 HAProxy
 5. **infra**：初始化 Nginx、DNS、VictoriaMetrics、Grafana 等
 6. **node-monitor**：初始化 node-exporter、vector
 7. **etcd**：初始化 etcd（PostgreSQL 高可用必需）
 8. **minio**：初始化 MinIO（可选）
-9. **pgsql**：初始化 PostgreSQL 集群
-10. **pgsql-monitor**：初始化 PostgreSQL 监控
+9. **pgsql**：初始化 PostgreSQL 集群并配置 PostgreSQL 监控
 
-该剧本等效于依次执行以下四个剧本：
+该剧本等效于依次执行以下五个剧本：
 
 ```bash
 ./infra.yml -l infra    # 在 infra 分组上部署基础设施
 ./node.yml              # 在所有节点上初始化节点
 ./etcd.yml              # 初始化 etcd 集群
+./minio.yml             # 初始化 MinIO 集群（可选）
 ./pgsql.yml             # 初始化 PostgreSQL 集群
 ```
+
+`deploy.yml` 当前不部署 Docker 模块；需要 Docker 时，应另行设置 `docker_enabled: true` 并单独执行 `docker.yml`。
 
 
 ----------------
@@ -91,26 +93,26 @@ Pigsty 提供了三个与 INFRA 模块相关的剧本：
 #     - repo_use         : add newly built repo into /etc/yum.repos.d
 #   - repo_nginx    : launch a nginx for repo if no nginx is serving
 #
-# node/haproxy/docker/monitor: setup infra node as a common node
+# node/haproxy/monitor: setup infra node as a common node
 #   - node_name, node_hosts, node_resolv, node_firewall, node_ca, node_repo, node_pkg
 #   - node_feature, node_kernel, node_tune, node_sysctl, node_profile, node_ulimit
 #   - node_data, node_admin, node_timezone, node_ntp, node_crontab, node_vip
 #   - haproxy_install, haproxy_config, haproxy_launch, haproxy_reload
-#   - docker_install, docker_admin, docker_config, docker_launch, docker_image
 #   - haproxy_register, node_exporter, node_register, vector
 #
 # infra: setup infra components
-#   - infra_env      : env_patroni, env_pg, env_pgadmin, env_var
-#   - infra_pkg      : install infra packages
 #   - infra_user     : setup infra os user group
+#   - infra_dir      : create infra data/config/runtime directories
+#   - infra_env      : env_patroni, env_pg, env_pgadmin, env_etcd, env_pglog, env_var
+#   - infra_pkg      : install infra packages
 #   - infra_cert     : issue cert for infra components
 #   - dns            : dns_config, dns_record, dns_launch
-#   - nginx          : nginx_config, nginx_cert, nginx_static, nginx_launch, nginx_certbot, nginx_reload, nginx_exporter
-#   - victoria       : vmetrics_config, vmetrics_launch, vlogs_config, vlogs_launch, vtraces_config, vtraces_launch, vmalert_config, vmalert_launch
+#   - nginx          : nginx_dir, nginx_config, nginx_cert, nginx_static, nginx_launch, nginx_certbot, nginx_reload, nginx_exporter
+#   - victoria       : vmetrics/vlogs/vtraces clean, config & launch; vmalert_config, vmalert_launch
 #   - alertmanager   : alertmanager_config, alertmanager_launch
 #   - blackbox       : blackbox_config, blackbox_launch
-#   - grafana        : grafana_clean, grafana_config, grafana_launch, grafana_provision
-#   - infra_register : register infra components to victoria
+#   - grafana        : grafana_clean, grafana_dir, grafana_config, grafana_launch, grafana_provision
+#   - infra_register : add_metrics, add_logs, add_ds
 ```
 
 
@@ -123,8 +125,15 @@ Pigsty 提供了三个与 INFRA 模块相关的剧本：
 常用子任务包括：
 
 ```bash
-./infra-rm.yml               # 移除 INFRA 模块
+./infra-rm.yml               # 执行全部阶段：注销、停服、删配置/环境/数据并卸载软件包
+./infra-rm.yml -t deregister # 仅注销监控目标、Grafana 数据源与 Nginx 日志采集
 ./infra-rm.yml -t service    # 停止 INFRA 上的基础设施服务
+./infra-rm.yml -t config     # 删除 INFRA 配置与 Systemd Unit
+./infra-rm.yml -t env        # 删除管理用户的 Pigsty/PostgreSQL 环境文件
 ./infra-rm.yml -t data       # 移除 INFRA 上的存留数据
 ./infra-rm.yml -t package    # 卸载 INFRA 上安装的软件包
 ```
+
+{{% alert title="全量移除会删除数据" color="danger" %}}
+`infra-rm.yml` 没有防误删开关；不带标签执行时会运行上面所有阶段。`data` 阶段会递归删除 `infra_data`（默认 `/data/infra`）、`nginx_data`（默认 `/data/nginx`）、`nginx_home`（默认 `/www`）与 `/var/lib/grafana`，其中包括监控/日志/追踪数据、软件仓库和 Grafana 本地数据。只想停服或注销时必须使用相应标签，并应在全量执行前单独备份需要保留的数据。
+{{% /alert %}}

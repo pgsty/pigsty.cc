@@ -44,36 +44,38 @@ INFRA 模块负责配置 Pigsty 的基础设施组件：本地软件源、Nginx�
 
 [`CA`](#ca) 参数组用于配置 Pigsty 自签名 CA 证书管理，包括是否创建 CA、CA 名称以及证书有效期。
 
-| 参数                                  |     类型      |  级别  | 说明                     |
-|:------------------------------------|:-----------:|:----:|:-----------------------|
-| [`ca_create`](#ca_create)           |   `bool`    | `G`  | 不存在时是否创建 CA？默认为 true   |
-| [`ca_cn`](#ca_cn)                   |  `string`   | `G`  | CA CN 名称，固定为 pigsty-ca  |
-| [`cert_validity`](#cert_validity)   | `interval`  | `G`  | 证书有效期，默认为 20 年         |
+| 参数                                |     类型     | 级别  | 说明                     |
+|:----------------------------------|:----------:|:---:|:-----------------------|
+| [`ca_create`](#ca_create)         |   `bool`   | `G` | 不存在时是否创建 CA？默认为 true   |
+| [`ca_cn`](#ca_cn)                 |  `string`  | `G` | CA CN 名称，固定为 pigsty-ca |
+| [`cert_validity`](#cert_validity) | `interval` | `G` | 证书有效期，默认为 20 年         |
 {.full-width}
 
 [`INFRA_ID`](#infra_id) 参数组用于定义基础设施节点的身份标识，包括节点序号、服务门户配置以及数据目录。
 
-| 参数                                |    类型    |  级别  | 说明                       |
-|:----------------------------------|:--------:|:----:|:-------------------------|
-| [`infra_seq`](#infra_seq)         |  `int`   | `I`  | 基础设施节点序号，必选身份参数          |
-| [`infra_portal`](#infra_portal)   |  `dict`  | `G`  | 通过 Nginx 门户暴露的基础设施服务列表   |
-| [`infra_data`](#infra_data)       |  `path`  | `G`  | 基础设施数据目录，默认为 /data/infra |
+| 参数                                              |     类型      | 级别  | 说明                       |
+|:------------------------------------------------|:-----------:|:---:|:-------------------------|
+| [`infra_seq`](#infra_seq)                       |    `int`    | `I` | 基础设施节点序号，必选身份参数          |
+| [`infra_portal`](#infra_portal)                 |   `dict`    | `G` | 通过 Nginx 门户暴露的基础设施服务列表   |
+| [`infra_data`](#infra_data)                     |   `path`    | `G` | 基础设施数据目录，默认为 /data/infra |
+| [`infra_services`](#infra_services)             | `service[]` | `G` | 首页内置导航入口列表               |
+| [`infra_extra_services`](#infra_extra_services) | `service[]` | `G` | 追加到首页的导航入口，默认为 `[]`      |
 {.full-width}
 
 [`REPO`](#repo) 参数组用于配置本地软件仓库，包括仓库启用开关、目录路径、上游源定义以及要下载的软件包列表。
 
-| 参数                                            |      类型       |   级别    | 说明                    |
-|:----------------------------------------------|:-------------:|:-------:|:----------------------|
-| [`repo_enabled`](#repo_enabled)               |    `bool`     | `G/I`   | 在此基础设施节点上创建软件仓库？      |
-| [`repo_home`](#repo_home)                     |    `path`     |  `G`    | 软件仓库主目录，默认为`/www`     |
-| [`repo_name`](#repo_name)                     |   `string`    |  `G`    | 软件仓库名称，默认为 pigsty     |
-| [`repo_endpoint`](#repo_endpoint)             |     `url`     |  `G`    | 仓库的访问点：域名或 `ip:port` 格式 |
-| [`repo_remove`](#repo_remove)                 |    `bool`     | `G/A`   | 构建本地仓库时是否移除现有上游仓库源定义文件？ |
-| [`repo_modules`](#repo_modules)               |   `string`    | `G/A`   | 启用的上游仓库模块列表，用逗号分隔     |
-| [`repo_upstream`](#repo_upstream)             | `upstream[]`  |  `G`    | 上游仓库源定义：从哪里下载上游包？     |
-| [`repo_packages`](#repo_packages)             |  `string[]`   |  `G`    | 从上游仓库下载哪些软件包？         |
-| [`repo_extra_packages`](#repo_extra_packages) |  `string[]`   | `G/C/I` | 从上游仓库下载哪些额外的软件包？      |
-| [`repo_url_packages`](#repo_url_packages)     |  `string[]`   |  `G`    | 使用 URL 下载的额外软件包列表       |
+| 参数                                            |      类型      |   级别    | 说明                      |
+|:----------------------------------------------|:------------:|:-------:|:------------------------|
+| [`repo_enabled`](#repo_enabled)               |    `bool`    |  `G/I`  | 在此基础设施节点上创建软件仓库？        |
+| [`repo_home`](#repo_home)                     |    `path`    |   `G`   | 软件仓库主目录，默认为`/www`       |
+| [`repo_name`](#repo_name)                     |   `string`   |   `G`   | 软件仓库名称，默认为 pigsty       |
+| [`repo_endpoint`](#repo_endpoint)             |    `url`     |   `G`   | 仓库的访问点：域名或 `ip:port` 格式 |
+| [`repo_remove`](#repo_remove)                 |    `bool`    |  `G/A`  | 构建本地仓库时是否移除现有上游仓库源定义文件？ |
+| [`repo_modules`](#repo_modules)               |   `string`   |  `G/A`  | 启用的上游仓库模块列表，用逗号分隔       |
+| [`repo_upstream`](#repo_upstream)             | `upstream[]` |   `G`   | 上游仓库源定义：从哪里下载上游包？       |
+| [`repo_packages`](#repo_packages)             |  `string[]`  |   `G`   | 从上游仓库下载哪些软件包？           |
+| [`repo_extra_packages`](#repo_extra_packages) |  `string[]`  | `G/C/I` | 从上游仓库下载哪些额外的软件包？        |
+| [`repo_url_packages`](#repo_url_packages)     |  `string[]`  |   `G`   | 使用 URL 下载的额外软件包列表       |
 {.full-width}
 
 [`INFRA_PACKAGE`](#infra_package) 参数组用于定义在基础设施节点上安装的软件包（RPM/DEB）。
@@ -85,81 +87,81 @@ INFRA 模块负责配置 Pigsty 的基础设施组件：本地软件源、Nginx�
 
 [`NGINX`](#nginx) 参数组用于配置 Nginx Web 服务器与反向代理，包括启用开关、端口、SSL 模式、证书以及基础认证。
 
-| 参数                                              |     类型     |   级别   | 说明                            |
-|:------------------------------------------------|:----------:|:------:|:------------------------------|
-| [`nginx_enabled`](#nginx_enabled)               |   `bool`   | `G/I`  | 在此基础设施节点上启用 nginx？            |
-| [`nginx_clean`](#nginx_clean)                   |   `bool`   | `G/A`  | 初始化时清理现有 nginx 配置？            |
-| [`nginx_exporter_enabled`](#nginx_exporter_enabled) |   `bool`   | `G/I`  | 在此基础设施节点上启用 nginx_exporter？   |
-| [`nginx_exporter_port`](#nginx_exporter_port)   |   `port`   |  `G`   | nginx_exporter 监听端口，默认为 9113  |
-| [`nginx_sslmode`](#nginx_sslmode)               |   `enum`   |  `G`   | nginx SSL 模式？disable,enable,enforce |
-| [`nginx_cert_validity`](#nginx_cert_validity)   | `duration` |  `G`   | nginx 自签名证书有效期，默认为 397d       |
-| [`nginx_home`](#nginx_home)                     |   `path`   |  `G`   | nginx 内容目录，默认为 `/www`，软链接到 nginx_data |
-| [`nginx_data`](#nginx_data)                     |   `path`   |  `G`   | nginx 实际数据目录，默认为 /data/nginx  |
-| [`nginx_users`](#nginx_users)                   |   `dict`   |  `G`   | nginx 基础认证用户：用户名和密码字典         |
-| [`nginx_port`](#nginx_port)                     |   `port`   |  `G`   | nginx 监听端口，默认为 80             |
-| [`nginx_ssl_port`](#nginx_ssl_port)             |   `port`   |  `G`   | nginx SSL 监听端口，默认为 443         |
-| [`certbot_sign`](#certbot_sign)                 |   `bool`   | `G/A`  | 是否使用 certbot 签署证书？            |
-| [`certbot_email`](#certbot_email)               |  `string`  | `G/A`  | certbot 通知邮箱地址                |
-| [`certbot_options`](#certbot_options)           |  `string`  | `G/A`  | certbot 额外的命令行参数              |
+| 参数                                                  |     类型     |  级别   | 说明                                    |
+|:----------------------------------------------------|:----------:|:-----:|:--------------------------------------|
+| [`nginx_enabled`](#nginx_enabled)                   |   `bool`   | `G/I` | 在此基础设施节点上启用 nginx？                    |
+| [`nginx_clean`](#nginx_clean)                       |   `bool`   | `G/A` | 初始化时清理现有 nginx 配置？                    |
+| [`nginx_exporter_enabled`](#nginx_exporter_enabled) |   `bool`   | `G/I` | 在此基础设施节点上启用 nginx_exporter？           |
+| [`nginx_exporter_port`](#nginx_exporter_port)       |   `port`   |  `G`  | nginx_exporter 监听端口，默认为 9113          |
+| [`nginx_sslmode`](#nginx_sslmode)                   |   `enum`   |  `G`  | nginx SSL 模式？disable,enable,enforce   |
+| [`nginx_cert_validity`](#nginx_cert_validity)       | `duration` |  `G`  | nginx 自签名证书有效期，默认为 397d               |
+| [`nginx_home`](#nginx_home)                         |   `path`   |  `G`  | nginx 内容目录，默认为 `/www`，软链接到 nginx_data |
+| [`nginx_data`](#nginx_data)                         |   `path`   |  `G`  | nginx 实际数据目录，默认为 /data/nginx          |
+| [`nginx_users`](#nginx_users)                       |   `dict`   |  `G`  | nginx 基础认证用户：用户名和密码字典                 |
+| [`nginx_port`](#nginx_port)                         |   `port`   |  `G`  | nginx 监听端口，默认为 80                     |
+| [`nginx_ssl_port`](#nginx_ssl_port)                 |   `port`   |  `G`  | nginx SSL 监听端口，默认为 443                |
+| [`certbot_sign`](#certbot_sign)                     |   `bool`   | `G/A` | 是否使用 certbot 签署证书？                    |
+| [`certbot_email`](#certbot_email)                   |  `string`  | `G/A` | certbot 通知邮箱地址                        |
+| [`certbot_options`](#certbot_options)               |  `string`  | `G/A` | certbot 额外的命令行参数                      |
 {.full-width}
 
 [`DNS`](#dns) 参数组用于配置 DNSMasq 域名解析服务，包括启用开关、监听端口以及动态 DNS 记录。
 
-| 参数                            |     类型      |   级别   | 说明                     |
-|:------------------------------|:-----------:|:------:|:-----------------------|
-| [`dns_enabled`](#dns_enabled) |   `bool`    | `G/I`  | 在此基础设施节点上设置 dnsmasq？    |
-| [`dns_port`](#dns_port)       |   `port`    |  `G`   | DNS 服务器监听端口，默认为 53     |
-| [`dns_records`](#dns_records) | `string[]`  |  `G`   | 由 dnsmasq 解析的动态 DNS 记录 |
+| 参数                            |     类型     |  级别   | 说明                     |
+|:------------------------------|:----------:|:-----:|:-----------------------|
+| [`dns_enabled`](#dns_enabled) |   `bool`   | `G/I` | 在此基础设施节点上设置 dnsmasq？   |
+| [`dns_port`](#dns_port)       |   `port`   |  `G`  | DNS 服务器监听端口，默认为 53     |
+| [`dns_records`](#dns_records) | `string[]` |  `G`  | 由 dnsmasq 解析的动态 DNS 记录 |
 {.full-width}
 
 [`VICTORIA`](#victoria) 参数组用于配置 VictoriaMetrics/Logs/Traces 可观测性套件，包括启用开关、端口、数据保留策略等。
 
-| 参数                                                      |     类型     |   级别   | 说明                          |
-|:--------------------------------------------------------|:----------:|:------:|:----------------------------|
-| [`vmetrics_enabled`](#vmetrics_enabled)                 |   `bool`   | `G/I`  | 在此基础设施节点上启用 VictoriaMetrics？ |
-| [`vmetrics_clean`](#vmetrics_clean)                     |   `bool`   | `G/A`  | 初始化时清理 VictoriaMetrics 数据？  |
-| [`vmetrics_port`](#vmetrics_port)                       |   `port`   |  `G`   | VictoriaMetrics 监听端口，默认为 8428 |
-| [`vmetrics_scrape_interval`](#vmetrics_scrape_interval) | `interval` |  `G`   | 全局抓取间隔，默认为 10s              |
-| [`vmetrics_scrape_timeout`](#vmetrics_scrape_timeout)   | `interval` |  `G`   | 全局抓取超时，默认为 8s               |
-| [`vmetrics_options`](#vmetrics_options)                 |   `arg`    |  `G`   | VictoriaMetrics 额外命令行参数     |
-| [`vlogs_enabled`](#vlogs_enabled)                       |   `bool`   | `G/I`  | 在此基础设施节点上启用 VictoriaLogs？   |
-| [`vlogs_clean`](#vlogs_clean)                           |   `bool`   | `G/A`  | 初始化时清理 VictoriaLogs 数据？     |
-| [`vlogs_port`](#vlogs_port)                             |   `port`   |  `G`   | VictoriaLogs 监听端口，默认为 9428  |
-| [`vlogs_options`](#vlogs_options)                       |   `arg`    |  `G`   | VictoriaLogs 额外命令行参数        |
-| [`vtraces_enabled`](#vtraces_enabled)                   |   `bool`   | `G/I`  | 在此基础设施节点上启用 VictoriaTraces？ |
-| [`vtraces_clean`](#vtraces_clean)                       |   `bool`   | `G/A`  | 初始化时清理 VictoriaTraces 数据？   |
-| [`vtraces_port`](#vtraces_port)                         |   `port`   |  `G`   | VictoriaTraces 监听端口，默认为 10428 |
-| [`vtraces_options`](#vtraces_options)                   |   `arg`    |  `G`   | VictoriaTraces 额外命令行参数      |
-| [`vmalert_enabled`](#vmalert_enabled)                   |   `bool`   | `G/I`  | 在此基础设施节点上启用 VMAlert？        |
-| [`vmalert_port`](#vmalert_port)                         |   `port`   |  `G`   | VMAlert 监听端口，默认为 8880       |
-| [`vmalert_options`](#vmalert_options)                   |   `arg`    |  `G`   | VMAlert 额外命令行参数             |
+| 参数                                                      |     类型     |  级别   | 说明                            |
+|:--------------------------------------------------------|:----------:|:-----:|:------------------------------|
+| [`vmetrics_enabled`](#vmetrics_enabled)                 |   `bool`   | `G/I` | 在此基础设施节点上启用 VictoriaMetrics？  |
+| [`vmetrics_clean`](#vmetrics_clean)                     |   `bool`   | `G/A` | 初始化时清理 VictoriaMetrics 数据？    |
+| [`vmetrics_port`](#vmetrics_port)                       |   `port`   |  `G`  | VictoriaMetrics 监听端口，默认为 8428 |
+| [`vmetrics_scrape_interval`](#vmetrics_scrape_interval) | `interval` |  `G`  | 全局抓取间隔，默认为 10s                |
+| [`vmetrics_scrape_timeout`](#vmetrics_scrape_timeout)   | `interval` |  `G`  | 全局抓取超时，默认为 8s                 |
+| [`vmetrics_options`](#vmetrics_options)                 |   `arg`    |  `G`  | VictoriaMetrics 额外命令行参数       |
+| [`vlogs_enabled`](#vlogs_enabled)                       |   `bool`   | `G/I` | 在此基础设施节点上启用 VictoriaLogs？     |
+| [`vlogs_clean`](#vlogs_clean)                           |   `bool`   | `G/A` | 初始化时清理 VictoriaLogs 数据？       |
+| [`vlogs_port`](#vlogs_port)                             |   `port`   |  `G`  | VictoriaLogs 监听端口，默认为 9428    |
+| [`vlogs_options`](#vlogs_options)                       |   `arg`    |  `G`  | VictoriaLogs 额外命令行参数          |
+| [`vtraces_enabled`](#vtraces_enabled)                   |   `bool`   | `G/I` | 在此基础设施节点上启用 VictoriaTraces？   |
+| [`vtraces_clean`](#vtraces_clean)                       |   `bool`   | `G/A` | 初始化时清理 VictoriaTraces 数据？     |
+| [`vtraces_port`](#vtraces_port)                         |   `port`   |  `G`  | VictoriaTraces 监听端口，默认为 10428 |
+| [`vtraces_options`](#vtraces_options)                   |   `arg`    |  `G`  | VictoriaTraces 额外命令行参数        |
+| [`vmalert_enabled`](#vmalert_enabled)                   |   `bool`   | `G/I` | 在此基础设施节点上启用 VMAlert？          |
+| [`vmalert_port`](#vmalert_port)                         |   `port`   |  `G`  | VMAlert 监听端口，默认为 8880         |
+| [`vmalert_options`](#vmalert_options)                   |   `arg`    |  `G`  | VMAlert 额外命令行参数               |
 {.full-width}
 
 [`PROMETHEUS`](#prometheus) 参数组用于配置 Alertmanager 与 Blackbox Exporter，提供告警管理和网络探测功能。
 
-| 参数                                              |    类型    |   级别   | 说明                          |
-|:------------------------------------------------|:--------:|:------:|:----------------------------|
-| [`blackbox_enabled`](#blackbox_enabled)         |  `bool`  | `G/I`  | 在此基础设施节点上设置 blackbox_exporter？ |
-| [`blackbox_port`](#blackbox_port)               |  `port`  |  `G`   | blackbox_exporter 监听端口，默认为 9115 |
-| [`blackbox_options`](#blackbox_options)         |  `arg`   |  `G`   | blackbox_exporter 额外的命令行参数选项 |
-| [`alertmanager_enabled`](#alertmanager_enabled) |  `bool`  | `G/I`  | 在此基础设施节点上设置 alertmanager？   |
-| [`alertmanager_port`](#alertmanager_port)       |  `port`  |  `G`   | AlertManager 监听端口，默认为 9059  |
-| [`alertmanager_options`](#alertmanager_options) |  `arg`   |  `G`   | alertmanager 额外的命令行参数选项     |
-| [`exporter_metrics_path`](#exporter_metrics_path) |  `path`  |  `G`   | exporter 指标路径，默认为 /metrics  |
+| 参数                                                |   类型   |  级别   | 说明                              |
+|:--------------------------------------------------|:------:|:-----:|:--------------------------------|
+| [`blackbox_enabled`](#blackbox_enabled)           | `bool` | `G/I` | 在此基础设施节点上设置 blackbox_exporter？  |
+| [`blackbox_port`](#blackbox_port)                 | `port` |  `G`  | blackbox_exporter 监听端口，默认为 9115 |
+| [`blackbox_options`](#blackbox_options)           | `arg`  |  `G`  | blackbox_exporter 额外的命令行参数选项    |
+| [`alertmanager_enabled`](#alertmanager_enabled)   | `bool` | `G/I` | 在此基础设施节点上设置 alertmanager？       |
+| [`alertmanager_port`](#alertmanager_port)         | `port` |  `G`  | AlertManager 监听端口，默认为 9059      |
+| [`alertmanager_options`](#alertmanager_options)   | `arg`  |  `G`  | alertmanager 额外的命令行参数选项         |
+| [`exporter_metrics_path`](#exporter_metrics_path) | `path` |  `G`  | exporter 指标路径，默认为 /metrics      |
 {.full-width}
 
 [`GRAFANA`](#grafana) 参数组用于配置 Grafana 可视化平台，包括启用开关、端口、管理员凭据以及数据源配置。
 
-| 参数                                              |     类型     |   级别   | 说明                         |
-|:------------------------------------------------|:----------:|:------:|:---------------------------|
-| [`grafana_enabled`](#grafana_enabled)           |   `bool`   | `G/I`  | 在此基础设施节点上启用 Grafana？       |
-| [`grafana_port`](#grafana_port)                 |   `port`   |  `G`   | Grafana 监听端口，默认为 3000      |
-| [`grafana_clean`](#grafana_clean)               |   `bool`   | `G/A`  | 初始化 Grafana 期间清除数据？          |
-| [`grafana_admin_username`](#grafana_admin_username) | `username` |  `G`   | Grafana 管理员用户名，默认为 `admin` |
-| [`grafana_admin_password`](#grafana_admin_password) | `password` |  `G`   | Grafana 管理员密码，默认为 `pigsty` |
-| [`grafana_auth_proxy`](#grafana_auth_proxy)     |   `bool`   |  `G`   | 启用 Grafana 身份代理？           |
-| [`grafana_pgurl`](#grafana_pgurl)               |   `url`    |  `G`   | 外部 PostgreSQL 数据库 URL（用于 Grafana 持久化） |
-| [`grafana_view_password`](#grafana_view_password) | `password` |  `G`   | Grafana 元数据库 PG 数据源密码      |
+| 参数                                                  |     类型     |  级别   | 说明                                    |
+|:----------------------------------------------------|:----------:|:-----:|:--------------------------------------|
+| [`grafana_enabled`](#grafana_enabled)               |   `bool`   | `G/I` | 在此基础设施节点上启用 Grafana？                  |
+| [`grafana_port`](#grafana_port)                     |   `port`   |  `G`  | Grafana 监听端口，默认为 3000                 |
+| [`grafana_clean`](#grafana_clean)                   |   `bool`   | `G/A` | 初始化 Grafana 期间清除数据？                   |
+| [`grafana_admin_username`](#grafana_admin_username) | `username` |  `G`  | Grafana 管理员用户名，默认为 `admin`            |
+| [`grafana_admin_password`](#grafana_admin_password) | `password` |  `G`  | Grafana 管理员密码，默认为 `pigsty`            |
+| [`grafana_auth_proxy`](#grafana_auth_proxy)         |   `bool`   |  `G`  | 启用 Grafana 身份代理？                      |
+| [`grafana_pgurl`](#grafana_pgurl)                   |   `url`    |  `G`  | 外部 PostgreSQL 数据库 URL（用于 Grafana 持久化） |
+| [`grafana_view_password`](#grafana_view_password)   | `password` |  `G`  | Grafana 元数据库 PG 数据源密码                 |
 {.full-width}
 
 
@@ -170,7 +172,7 @@ INFRA 模块负责配置 Pigsty 的基础设施组件：本地软件源、Nginx�
 这一小节指定了一套 Pigsty 部署的元数据：包括版本号，管理员节点 IP 地址，软件源镜像上游 [`区域`](#region)，默认语言，以及下载软件包时使用的 http(s) 代理。
 
 ```yaml
-version: v4.4.0                   # pigsty 版本号
+version: v4.5.0                   # pigsty 版本号
 admin_ip: 10.10.10.10             # 管理节点IP地址
 region: default                   # 上游镜像区域：default,china,europe
 language: en                      # 默认语言: en 或 zh
@@ -188,11 +190,11 @@ proxy_env:                        # 全局HTTPS代理，用于下载、安装软
 
 参数名称： `version`， 类型： `string`， 层次：`G`
 
-Pigsty 版本号字符串，默认值为当前版本：`v4.4.0`。
+Pigsty 版本号字符串，当前源码默认值为：`v4.5.0`。
 
 Pigsty 内部会使用版本号进行功能控制与内容渲染，请勿随意修改此参数。
 
-Pigsty 使用语义化版本号，版本号字符串通常以字符 `v` 开头，例如 `v4.4.0`。
+Pigsty 使用语义化版本号，版本号字符串通常以字符 `v` 开头，例如 `v4.5.0`。
 
 
 
@@ -361,6 +363,8 @@ openssl x509 -text -in /etc/pki/ca.crt
 infra_portal:                     # 通过 Nginx 门户暴露的基础设施服务
   home : { domain: i.pigsty }     # 默认首页服务器定义
 infra_data: /data/infra           # 基础设施默认数据目录
+infra_services: [...]             # 首页内置导航入口
+infra_extra_services: []          # 追加到首页的导航入口
 ```
 
 
@@ -454,6 +458,29 @@ Pigsty 会根据实际启用的组件自动配置相应的反向代理，用户�
 - 其他基础设施组件的持久化数据
 
 建议将此目录放置在独立的数据盘上，以便于管理和扩展。
+
+
+
+### `infra_services`
+
+参数名称：`infra_services`，类型：`service[]`，层次：`G`
+
+Pigsty 首页的内置导航入口列表。当前默认入口包括 Metrics、Logs、Traces、Monitor Targets、Alert Rules、Alert Manager、CA Certificate、Software Repo 与 Explain Visualizer。
+
+每项可使用 `name`、`url`、`desc`、`icon` 以及对应中文字段 `name_cn`、`desc_cn` 定义显示内容。此参数会整体覆盖默认列表；只想增加入口时应优先使用 [`infra_extra_services`](#infra_extra_services)。
+
+
+
+### `infra_extra_services`
+
+参数名称：`infra_extra_services`，类型：`service[]`，层次：`G`
+
+追加到 [`infra_services`](#infra_services) 后的首页导航入口列表，默认值为 `[]`。其项目结构与 `infra_services` 相同，例如：
+
+```yaml
+infra_extra_services:
+  - { name: My Service, url: 'https://example.com', desc: 'External Service', icon: 'database' }
+```
 
 
 
@@ -629,7 +656,7 @@ Pigsty 为当前支持的操作系统版本（EL 8/9/10、Debian 12/13、Ubuntu 
 
 ```yaml
 node-bootstrap:          "ansible python3 python3-pip python3-virtualenv python3-requests python3-jmespath python3-cryptography dnf-utils modulemd-tools createrepo_c sshpass"
-infra-package:           "nginx dnsmasq etcd haproxy vip-manager node_exporter keepalived_exporter pg_exporter pgbackrest_exporter redis_exporter redis minio mcli pig"
+infra-package:           "nginx dnsmasq etcd haproxy vip-manager node-exporter keepalived-exporter pg-exporter pgbackrest-exporter redis-exporter redis minio mcli pig"
 infra-addons:            "grafana grafana-plugins grafana-victoriametrics-ds grafana-victorialogs-ds victoria-metrics victoria-logs victoria-traces vlogscli vmutils vector alertmanager"
 ```
 
@@ -696,17 +723,18 @@ postgresql$v postgresql$v-server postgresql$v-libs postgresql$v-contrib postgres
 
 字符串数组类型，每一行都是 **由空格分隔** 的软件包列表字符串，指定将要在 Infra 节点上安装的软件包列表。
 
-本参数没有默认值，即默认值为未定义状态。如果用户不在配置文件中显式指定本参数，则 Pigsty 会从根据当前节点的操作系统族，从定义于 [`roles/node_id/vars`](https://github.com/pgsty/pigsty/blob/main/roles/node_id/vars/) 中的 `infra_packages_default` 变量中加载获取默认值。
+本参数没有单一的跨平台默认值。如果用户不显式指定，Pigsty 会根据操作系统版本与 CPU 架构，从
+[`roles/node_id/vars`](https://github.com/pgsty/pigsty/tree/main/roles/node_id/vars) 对应的平台文件中加载 `infra_packages_default`。
 
-v4.x 默认值（EL 系操作系统）：
+例如，当前 `EL 9 x86_64` 的平台映射值为：
 
 ```yaml
 infra_packages_default:
   - grafana,grafana-plugins,grafana-victorialogs-ds,grafana-victoriametrics-ds,victoria-metrics,victoria-logs,victoria-traces,vmutils,vlogscli,alertmanager
-  - node_exporter,blackbox_exporter,nginx_exporter,pg_exporter,pev2,nginx,dnsmasq,ansible,etcd,python3-requests,redis,mcli,restic,certbot,python3-certbot-nginx
+  - node-exporter,blackbox-exporter,nginx-exporter,pg-exporter,pev2,nginx,dnsmasq,ansible,etcd,python3-requests,redis,mcli,restic,certbot,python3-certbot-nginx
 ```
 
-默认值（Debian/Ubuntu）：
+当前 `Debian 13 x86_64` 的平台映射值为：
 
 ```yaml
 infra_packages_default:
@@ -1235,7 +1263,7 @@ VMAlert 的额外命令行参数，默认值为空字符串。
 
 此部分现在主要包含 Blackbox Exporter 和 Alertmanager 的配置。
 
-> 注意：Pigsty v4.x 使用 VictoriaMetrics 替代 Prometheus，原有的 `prometheus_*` 和 `pushgateway_*` 参数已移至 [`VICTORIA`](#victoria) 部分。
+> 注意：Pigsty v4.x 使用 VictoriaMetrics 替代 Prometheus；旧的 `prometheus_*` 与 `pushgateway_*` 参数已不再是当前接口，指标存储与规则评估请使用 [`VICTORIA`](#victoria) 中的 `vmetrics_*`、`vmalert_*` 参数。
 
 ```yaml
 blackbox_enabled: true            # 启用 blackbox_exporter？

@@ -13,18 +13,14 @@ categories: [参考]
 
 ## INFRA 模块中包含了哪些组件？
 
-- **Ansible**：用于自动化配置、部署和日常运维。
-- **Nginx**：对外暴露 Grafana、VictoriaMetrics（VMUI）、Alertmanager 等 WebUI，并托管本地 YUM/APT 仓库。
-- **自签名 CA**：为 Nginx、Patroni、pgBackRest 等组件签发 SSL/TLS 证书。
-- **VictoriaMetrics 套件**：替代 Prometheus/Loki，包含 VictoriaMetrics（TSDB）、VMAlert（告警评估）、VictoriaLogs（集中日志）、VictoriaTraces（链路追踪）。
-- **Vector**：节点侧日志采集器，负责将系统/数据库日志推送至 VictoriaLogs。
-- **AlertManager**：聚合并分发告警通知。
-- **Grafana**：监控/可视化平台，预置大量仪表板和数据源。
-- **Chronyd**：提供 NTP 时间同步。
+严格按当前源码区分，`infra` 角色直接管理以下组件：
+
+- **Nginx**：暴露 Grafana、VictoriaMetrics（VMUI）、Alertmanager 等 WebUI，并托管本地 YUM/APT 仓库。
 - **DNSMasq**：提供 DNS 注册与解析。
-- **ETCD**：作为 PostgreSQL 高可用 DCS（亦可在专用集群部署）。
-- **PostgreSQL**：在管理节点上充当 CMDB（可选）。
-- **Docker**：在节点上运行无状态工具或应用（可选）。
+- **VictoriaMetrics 套件**：VictoriaMetrics、VMAlert、VictoriaLogs 与 VictoriaTraces。
+- **Alertmanager、Blackbox Exporter 与 Grafana**：告警分发、黑盒探测与可视化。
+
+`infra.yml` 还会串联 CA、软件仓库、NODE、HAProxy 与节点监控角色，因此会在 Infra 节点上配置自签名 CA、Chronyd、Node Exporter 和 Vector 等配套能力。ETCD、PostgreSQL 与 Docker 是独立模块，不由 `infra.yml` 部署；应分别运行 `etcd.yml`、`pgsql.yml` 与 `docker.yml`。
 
 
 

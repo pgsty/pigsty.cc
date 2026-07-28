@@ -218,8 +218,11 @@ infra:
 
 ```bash
 ./infra.yml     # 在 infra 分组上安装 INFRA 模块
-./infra-rm.yml  # 从 infra 分组上卸载 INFRA 模块
+./infra-rm.yml  # 全量移除 INFRA（包括数据与软件包）
 ```
+
+`infra-rm.yml` 没有防误删开关；不带标签会删除 `infra_data`、`nginx_data`、`nginx_home`（默认 `/www`）与 `/var/lib/grafana`。
+只需停服或注销时请使用标签，完整边界见[预置剧本](/docs/infra/playbook/#infra-rmyml)。
 
 ----------------
 
@@ -264,9 +267,10 @@ infra:
 
 ```bash
 ./infra.yml -t infra           # 配置基础设施
-./infra.yml -t infra_env       # 配置管理节点上的环境变量：env_patroni, env_pg, env_pgadmin, env_var
-./infra.yml -t infra_pkg       # 安装 INFRA 所需的软件包：infra_packages
 ./infra.yml -t infra_user      # 设置 infra 操作系统用户组
+./infra.yml -t infra_dir       # 创建基础设施数据、配置与运行目录
+./infra.yml -t infra_env       # 配置管理节点环境：env_patroni, env_pg, env_pgadmin, env_etcd, env_pglog, env_var
+./infra.yml -t infra_pkg       # 安装 INFRA 所需的软件包：infra_packages
 ./infra.yml -t infra_cert      # 为 infra 组件颁发证书
 ./infra.yml -t dns             # 配置 DNSMasq：dns_config, dns_record, dns_launch
 ./infra.yml -t nginx           # 配置 Nginx：nginx_config, nginx_cert, nginx_static, nginx_launch, nginx_certbot, nginx_reload, nginx_exporter
@@ -297,7 +301,7 @@ Pigsty 提供了三个与 INFRA 模块相关的剧本：
 
 - [`infra.yml`](#infrayml)：在 infra 节点上初始化 pigsty 基础设施
 - [`infra-rm.yml`](#infra-rmyml)：从 infra 节点移除基础设施组件
-- [`deploy.yml`](#deployyml)：在当前节点上一次性完整安装 Pigsty
+- [`deploy.yml`](#deployyml)：一次性部署 NODE、INFRA、ETCD、MINIO 与 PGSQL 核心链路
 
 ----------------
 
@@ -339,18 +343,21 @@ INFRA 模块剧本 [`infra-rm.yml`](https://github.com/pgsty/pigsty/blob/main/in
 常用子任务包括：
 
 ```bash
-./infra-rm.yml               # 移除 INFRA 模块
+./infra-rm.yml               # 全量移除：注销、停服、删配置/环境/数据并卸载软件包
+./infra-rm.yml -t deregister # 仅注销监控目标、数据源与日志采集
 ./infra-rm.yml -t service    # 停止 INFRA 上的基础设施服务
 ./infra-rm.yml -t data       # 移除 INFRA 上的存留数据
 ./infra-rm.yml -t package    # 卸载 INFRA 上安装的软件包
 ```
+
+全量执行没有防误删开关，并会删除 `infra_data`、`nginx_data`、`nginx_home`（默认 `/www`）和 `/var/lib/grafana`；执行前请先备份要保留的数据。
 
 
 ----------------
 
 ### `deploy.yml`
 
-INFRA 模块剧本 [`deploy.yml`](https://github.com/pgsty/pigsty/blob/main/deploy.yml) 用于在**所有节点**上一次性完整安装 Pigsty
+INFRA 模块剧本 [`deploy.yml`](https://github.com/pgsty/pigsty/blob/main/deploy.yml) 用于在**所有节点**上一次性部署 NODE、INFRA、ETCD、MINIO 与 PGSQL 核心链路。Docker、Redis、Kafka、原生 MySQL、JUICE 与 VIBE 等可选模块需要另行执行各自的剧本。
 
 该剧本在 [剧本：一次性安装](/docs/setup/playbook#部署剧本) 中有更详细的介绍。
 
@@ -418,11 +425,11 @@ INFRA 模块剧本 [`deploy.yml`](https://github.com/pgsty/pigsty/blob/main/depl
 </details>
 
 
-[CMDB Overview](https://demo.pigsty.cc/d/cmdb-overview)：CMDB 可视化
+[CMDB Overview](https://demo.pigsty.cc/d/inventory-cmdb)：CMDB 可视化
 
 <details><summary>CMDB Overview Dashboard</summary>
 
-[![cmdb-overview.jpg](/img/dashboard/cmdb-overview.jpg)](https://demo.pigsty.cc/d/cmdb-overview)
+[![cmdb-overview.jpg](/img/dashboard/cmdb-overview.jpg)](https://demo.pigsty.cc/d/inventory-cmdb)
 
 </details>
 

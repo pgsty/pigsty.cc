@@ -28,8 +28,11 @@ categories: [任务]
 使用 [`infra-rm.yml`](/docs/infra/playbook/#infra-rmyml) 剧本从 `infra` 分组上卸载 INFRA 模块：
 
 ```bash
-./infra-rm.yml  # 从 infra 分组上卸载 INFRA 模块
+./infra-rm.yml  # 全量移除：注销、停服、删配置/环境/数据并卸载软件包
 ```
+
+该剧本没有防误删开关，且全量执行会删除 `infra_data`、`nginx_data`、`nginx_home`（默认 `/www`）和 `/var/lib/grafana`。
+如果只需要停止服务或注销目标，应使用 `-t service` 或 `-t deregister`；执行前请阅读[移除剧本的完整范围](/docs/infra/playbook/#infra-rmyml)并备份所需数据。
 
 
 ----------------
@@ -114,9 +117,10 @@ Nginx 相关的管理任务：
 
 ```bash
 ./infra.yml -t infra           # 配置基础设施
+./infra.yml -t infra_user      # 设置操作系统用户
+./infra.yml -t infra_dir       # 创建基础设施目录
 ./infra.yml -t infra_env       # 配置环境变量
 ./infra.yml -t infra_pkg       # 安装软件包
-./infra.yml -t infra_user      # 设置操作系统用户
 ./infra.yml -t infra_cert      # 颁发证书
 ./infra.yml -t dns             # 配置 DNSMasq
 ./infra.yml -t nginx           # 配置 Nginx
