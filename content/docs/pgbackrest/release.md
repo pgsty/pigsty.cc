@@ -14,12 +14,77 @@ categories: [参考]
 
 ## 简介
 
-pgBackRest 的版本号由主版本号和次版本号两部分组成。主版本升级**可能**破坏与上一主版本的兼容性，但 v2 版本与 v1 仓库完全兼容，且接受所有 v1 选项。次版本可包含漏洞修复和新功能，但不会更改仓库格式，并尽量避免修改选项和命名约定。v1 版本的文档可在 **[此处](http://www.pgbackrest.org/1)** 查阅。版本说明中还可能包含"附加说明"，此部分变更仅涉及文档或测试套件，不直接影响 pgBackRest 代码库。
+pgBackRest 的版本号由主版本号和次版本号两部分组成。主版本升级**可能**破坏与上一主版本的兼容性，但 v2 版本与 v1 仓库完全兼容，且接受所有 v1 选项。次版本可包含漏洞修复和新功能，但不会更改仓库格式，并尽量避免修改选项和命名约定。v1 版本的文档可在 **[此处](https://pgbackrest.org/1)** 查阅。版本说明中还可能包含"附加说明"，此部分变更仅涉及文档或测试套件，不直接影响 pgBackRest 代码库。
 
 
 --------
 
 ## 当前稳定版本
+
+
+### v2.59.0 版本说明
+
+*PostgreSQL 19 支持*
+
+*发布于 2026 年 7 月 20 日*
+
+**打包者注意**：现已提供新的发行版 tarball，其中包含预生成的 HTML 文档、手册页和代码，从而简化构建流程。该 tarball 作为附件随每个版本发布，命名为 `pgbackrest-{version}.tar.gz`。详情请参阅 tarball 中的 `README.md`。请使用新的发行版 tarball，以免今后需要额外的构建工具来生成代码。更多信息请参阅[新的发行版 tarball](/docs/pgbackrest/news/#distribution-tarball)。**打包者注意**：新增了对 `libsystemd` 的可选依赖。**重要提示**：从此版本开始，默认情况下只有 `restore` 命令允许由 root 用户运行。若要由 root 用户运行其他命令，请使用 `allow-root`（但不建议这样做）。
+
+**漏洞修复：**
+
+- 修复 `expire` 删除另一台主机上正在进行的备份的问题。（*由 Douglas J Hunley 审核，Dmitrii 报告。*）
+- 修复 WAL 文件出错时未执行 `archive-push-queue-max` 限制的问题。（*由 Stefan Fercot 审核，vut12 报告。*）
+- 修复跨时间线切换恢复期间异步 `archive-get` 失败的问题。（*由 Douglas J Hunley 审核，Jimmy Yih 报告。*）
+- 修复错误模块中潜在的缓冲区越界问题。（*由 Christophe Pettus 修复，David Steele 审核。*）
+- 修复并行协议客户端释放后使用的问题。（*由 Douglas J Hunley 审核，Georgy Shelkovy 报告。*）
+- 修复未设置 `pg1` 却设置 `pg` 选项时发生的堆溢出。（*由 Douglas J Hunley 审核，Naveen 报告。*）
+
+**新功能：**
+
+- 支持 PostgreSQL 19beta2。（*由 Stefan Fercot 审核。*）
+- 新增 `archive-expire-before` 选项，用于清理 WAL 归档。（*由 Stefan Fercot 贡献，David Steele 审核。*）
+- 为 Azure 存储添加批量删除功能。（*由 Douglas J Hunley、Crispy 审核。*）
+- 添加对 S3 Outposts 的支持。（*由 Shiva Kumar Ambigi 贡献，David Steele、Roberto Mello 审核。*）
+- 添加 S3 进程认证支持。（*由 Andrew Charlton 审核，Andrew Charlton 建议。*）
+
+**改进：**
+
+- 服务器断开空闲连接后，重新建立 SFTP 存储连接。（*由 Stefan Fercot 审核，mustafa0x、tisserat 建议。*）
+- 添加用户/组缓存，加快清单构建速度。（*由 Gunnar Lindholm 贡献，David Steele 审核。*）
+- 在 `info` 命令输出中添加各仓库的备份进度。（*由 Will Morland 贡献，David Steele、Stefan Fercot 审核。*）
+- 为 `verify` 命令添加 `backup.info` 检查。（*由 Denis Garsh 贡献，David Steele、Douglas J Hunley 审核。*）
+- 允许配置 S3 STS 端点。（*由 Simon Gratton 贡献，David Steele 审核。*）
+- 新增 `archive-push-batch-size`，用于限制每次异步运行推送的 WAL 数据量。（*由 Stefan Fercot 审核。*）
+- 异步 `archive-push` 遇到第一个错误时退出。（*由 Stefan Fercot 审核，Lardière Sébastien 建议。*）
+- 加固 HTTP 分块响应解析。（*由 Shubham 贡献，David Steele 审核。*）
+- 未启用 `allow-root` 时，由 root 用户运行命令将报错。（*由 Douglas J Hunley 审核。*）
+- 构建清单时减少二分查找次数。（*由 Gunnar Lindholm 贡献，David Steele 审核。*）
+- 提升块级增量 delta 恢复期间的文件定位性能。（*由 David Christensen、Douglas J Hunley 审核。*）
+- 按顺序将备份文件打包，不再扫描以寻找更合适的文件组合。（*由 Stefan Fercot 审核。*）
+- 查询未能完成时报告底层错误。（*由 Andrew Pogrebnoi 审核，Marco Fontana 建议。*）
+- S3 凭据请求失败时报告实际错误。（*由 Douglas J Hunley 审核，Mitchell Grice 建议。*）
+- 将 `archive-push` 的 `spool-path` 错误报告到 PostgreSQL 日志。（*由 Douglas J Hunley 审核，Don Seiler 建议。*）
+- 遇到不受支持的版本时，提示 pgBackRest 可能版本过旧。
+- 添加 systemd 通知集成。（*由 Andrew Jackson 贡献，David Steele 审核。*）
+- 在 meson 编译器探测中抑制 `unused parameter` 错误。（*由 Jörg Plate 贡献，David Steele 审核。*）
+- C11 现为最低 C 语言标准。（*由 Mohammad Ali Nazir Kosar 审核。*）
+
+**文档改进：**
+
+- 将 `repo-*` 命令的 `stanza` 选项设为内部选项。（*由 Stefan Fercot 审核。*）
+- 说明 `info` 会从全局配置节读取加密设置。（*由 Stefan Fercot 审核，Ron Johnson 建议。*）
+- 说明 `expire-auto` 使用 `backup` 命令的配置。（*由 Stefan Fercot 审核，Lardière Sébastien 建议。*）
+- 说明使用专用用户时需要调整 logrotate 的 `su` 指令。（*由 Douglas J Hunley 审核，lkanbus 建议。*）
+- 说明配置文件不支持行尾注释。（*由 Douglas J Hunley 审核，Alex Richman 建议。*）
+
+**测试套件改进：**
+
+- 修复 CI 容器中的 Alpine 用户组冲突。（*由 Artur Zakirov 贡献，David Steele 审核。*）
+
+
+--------
+
+## 稳定版本
 
 
 ### v2.58.0 版本说明
@@ -56,12 +121,6 @@ pgBackRest 的版本号由主版本号和次版本号两部分组成。主版本
 
 - 从用户指南中移除显式的 `max_wal_senders`/`wal_level` 配置说明。（*由 Jamie Nguyen 建议。*）
 - 阐明 bundling（包捆绑）在大块大小文件系统上的优势。（*由 Ron Johnson 建议。*）
-
-
---------
-
-## 稳定版本
-
 
 ### v2.57.0 版本说明
 

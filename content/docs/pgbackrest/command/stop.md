@@ -29,6 +29,19 @@ example: --force
 
 ## 通用选项
 
+### 允许以 root 用户运行选项（`--allow-root`）
+
+允许命令以 root 用户运行。
+
+默认情况下，仅 `restore` 命令可以由 root 用户运行，因为该命令会谨慎管理文件所有权。以 root 运行其他命令可能创建由 root 所有的文件（例如仓库中的文件），PostgreSQL 用户随后将无法访问这些文件，导致后续命令失败。
+
+启用此选项仍可强制以 root 运行命令。不过，更佳做法是使用仓库和 PostgreSQL 集群的所有者用户运行 pgBackRest。
+
+```yaml
+default: n
+example: --allow-root
+```
+
 ### 配置文件选项（`--config`）
 
 pgBackRest 配置文件。
@@ -79,9 +92,9 @@ example: --lock-path=/backup/db/lock
 
 使用中性 umask。
 
-将 umask 设置为 0000，以便以合理的权限创建仓库中的文件。目录的默认权限为 0750，文件的默认权限为 0640。锁文件和日志目录的目录及文件权限分别为 0770 和 0660。
+将 umask 设置为 0000，使仓库中的文件和目录以合理的权限创建。默认目录权限为 0750，默认文件权限为 0640。
 
-如需使用运行用户自身的 umask，请在配置文件中设置 `neutral-umask=n`，或在命令行中使用 `--no-neutral-umask`。
+若要使用运行用户自身的 umask，请在配置文件中指定 `neutral-umask=n`，或在命令行中使用 `--no-neutral-umask`。
 
 ```yaml
 default: y

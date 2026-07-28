@@ -1,5 +1,5 @@
 ---
-title: "pgBackRest 2.58 中文文档"
+title: "pgBackRest 2.59 中文文档"
 linkTitle: "pgbackrest 文档"
 weight: 8200
 icon: fas fa-couch
@@ -9,19 +9,42 @@ module: [PGBACKREST]
 categories: [概念]
 ---
 
-> 原始页面： <https://pgbackrest.org/>
+> pgBackRest 2.59 文档快照： <https://pgbackrest.org/>
 
 
 --------
 
 ## 简介
 
-pgBackRest 是一款可靠的 PostgreSQL 备份与恢复解决方案，可无缝扩展以应对超大规模数据库和高并发工作负载。
+pgBackRest 是一款可靠的 PostgreSQL 备份与恢复解决方案，可无缝扩展以应对超大规模数据库和各类工作负载。
 
-pgBackRest [`v2.58.0`](https://github.com/pgbackrest/pgbackrest/releases/tag/release/2.58.0) 是当前稳定版本。发布说明请查阅 [**发布历史**](/docs/pgbackrest/release/) 页面。
+pgBackRest [`v2.59.0`](https://github.com/pgbackrest/pgbackrest/releases/tag/release/2.59.0) 是当前稳定版本。发布说明请查阅 [**发布历史**](/docs/pgbackrest/release/) 页面。
 
-如果您喜欢 pgBackRest，欢迎在 [**GitHub**](https://github.com/pgbackrest/pgbackrest) 上给我们点星！如果您在企业中使用 pgBackRest，请考虑 [**赞助**](https://github.com/sponsors/dwsteele) 项目。
+如果您喜欢 pgBackRest，欢迎在 [**GitHub**](https://github.com/pgbackrest/pgbackrest) 上给我们点星！
 
+
+--------
+
+## 新闻
+
+**2026 年 7 月 20 日** - [新的发行版 tarball](/docs/pgbackrest/news/#distribution-tarball)
+
+**2026 年 7 月 20 日** - [pgBackRest 2.59.0 正式发布](/docs/pgbackrest/news/#release-2-59-0)
+
+**2026 年 5 月 18 日** - [pgBackRest 将继续维护！](/docs/pgbackrest/news/#will-continue)
+
+
+--------
+
+## 赞助商
+
+没有赞助就不会有 pgBackRest。开发新功能、修复缺陷、审核贡献、回答社区问题以及日常维护都需要投入大量时间。如果您在企业中使用 pgBackRest，请考虑 [**赞助**](https://github.com/sponsors/dwsteele) 项目。
+
+我们的赞助商：[AWS](https://aws.amazon.com)、[Supabase](https://supabase.com)、[pgEdge](https://pgedge.com)、[Tiger Data](https://tigerdata.com)、[Percona](https://percona.com)、[Eon](https://eon.io)、[Xata](https://xata.io)、[Dalibo](https://dalibo.com) 和 [Data Egret](https://dataegret.com)。
+
+感谢赞助商投资于惠及整个 PostgreSQL 社区的开源基础设施。
+
+曾经的赞助商：[Crunchy Data](https://crunchydata.com)、[Resonate](https://resonate.com)。
 
 
 --------
@@ -117,6 +140,13 @@ pgBackRest 仓库可存储在兼容 S3、Azure 和 GCS 的对象存储中，从�
 pgBackRest 支持对仓库加密，无论备份存储在何处，均能保障数据安全。
 
 
+### 勒索软件与恶意软件防护
+
+当仓库存储在启用了版本控制的对象存储中时，pgBackRest 可以按指定时间点读取仓库。如果备份因误操作、恶意软件或勒索软件而被删除或损坏，可以设置目标时间，恢复受损前的数据。
+
+兼容 S3、Azure 和 GCS 的对象存储均支持版本控制。S3 的对象锁定以及 GCS 或 Azure 的软删除可以提供额外的防篡改保护。
+
+
 ### 兼容十个 PostgreSQL 版本
 
 pgBackRest 支持十个 PostgreSQL 版本，包括五个仍在官方支持期内的版本和最近五个已终止支持（EOL）的版本，为用户升级到受支持版本留出了充足时间。
@@ -132,10 +162,6 @@ pgBackRest 致力于提供简便的配置和操作体验：
 - 常用命令行操作参考： [**`backup`**](/docs/pgbackrest/command/backup/)、 [**`restore`**](/docs/pgbackrest/command/restore/)、 [**`check`**](/docs/pgbackrest/command/check/) 和 [**`info`**](/docs/pgbackrest/command/info/)。
 - 创建 pgBackRest 配置的 [**配置参考**](/docs/pgbackrest/configuration/)。
 
-v1 版本的文档可在 [**此处**](http://www.pgbackrest.org/1) 查阅。v1 不再计划发布新版本，v2 与 v1 的选项和仓库完全向后兼容。
-
-
-
 
 --------
 
@@ -150,13 +176,6 @@ v1 版本的文档可在 [**此处**](http://www.pgbackrest.org/1) 查阅。v1 �
 
 pgBackRest 基于 [**MIT**](https://github.com/pgbackrest/pgbackrest/blob/main/LICENSE) 许可证完全免费开源，可用于个人或商业用途，不受任何限制。我们非常重视 Bug 报告，并将尽快处理。请在 [**此处**](https://github.com/pgbackrest/pgbackrest/issues) 提交 Bug。
 
-制定完善的容灾方案（包含合理的复制和备份策略）可能是一项复杂而艰巨的任务。在架构设计阶段和持续运营中，您可能需要专业支持以确保企业业务平稳运行。目前有多家 PostgreSQL 支持公司可提供此类服务。
+制定完善的容灾方案（包含合理的复制和备份策略）可能是一项复杂而艰巨的任务。在架构设计阶段和持续运营中，您可能需要专业支持以确保企业业务平稳运行。
 
-
---------
-
-## 致谢
-
-[Crunchy Data](http://www.crunchydata.com) 和 [Resonate](http://www.resonate.com) 慷慨地支持了 pgBackRest 的开发。
-
-[Armchair](https://thenounproject.com/icon/armchair-129971) 图标由 [Alexander Skowalsky](https://thenounproject.com/sandorsz) 设计。
+我们的[赞助商](#赞助商)所提供的产品和服务包含 pgBackRest 支持，可协助您满足容灾需求。

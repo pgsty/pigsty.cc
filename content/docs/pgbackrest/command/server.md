@@ -81,6 +81,19 @@ example: --tls-server-port=8000
 
 ## 通用选项
 
+### 允许以 root 用户运行选项（`--allow-root`）
+
+允许命令以 root 用户运行。
+
+默认情况下，仅 `restore` 命令可以由 root 用户运行，因为该命令会谨慎管理文件所有权。以 root 运行其他命令可能创建由 root 所有的文件（例如仓库中的文件），PostgreSQL 用户随后将无法访问这些文件，导致后续命令失败。
+
+启用此选项仍可强制以 root 运行命令。不过，更佳做法是使用仓库和 PostgreSQL 集群的所有者用户运行 pgBackRest。
+
+```yaml
+default: n
+example: --allow-root
+```
+
 ### 缓冲区大小选项（`--buffer-size`）
 
 I/O 操作的缓冲区大小。

@@ -18,6 +18,18 @@ pgBackRest 基于保留策略对全量备份进行轮换，策略可按数量或
 
 ## 命令选项
 
+### 归档过期截止点选项（`--archive-expire-before`）
+
+删除指定 WAL 段之前的 WAL 归档。
+
+删除指定段之前、且保留备份不再需要的 WAL 段，即早于要保留的最早备份集的 WAL 段；若仓库中没有备份，则可删除任意更早的 WAL 段。指定段及其后的所有内容都会保留。这与 PostgreSQL 传给 `archive_cleanup_command` 的 `%r` 值含义一致。
+
+此选项主要用于不存储备份、仅存放归档的仓库。尚未满足全量备份保留条件、因而无法触发归档过期时，也可用它回收首个备份之前的 WAL 归档空间。
+
+```yaml
+example: --archive-expire-before=000000010000000000000010
+```
+
 ### 最旧备份选项（`--oldest`）
 
 过期最旧的可删除备份集。
@@ -52,6 +64,19 @@ example: --set=20150131-153358F_20150131-153401I
 ```
 
 ## 通用选项
+
+### 允许以 root 用户运行选项（`--allow-root`）
+
+允许命令以 root 用户运行。
+
+默认情况下，仅 `restore` 命令可以由 root 用户运行，因为该命令会谨慎管理文件所有权。以 root 运行其他命令可能创建由 root 所有的文件（例如仓库中的文件），PostgreSQL 用户随后将无法访问这些文件，导致后续命令失败。
+
+启用此选项仍可强制以 root 运行命令。不过，更佳做法是使用仓库和 PostgreSQL 集群的所有者用户运行 pgBackRest。
+
+```yaml
+default: n
+example: --allow-root
+```
 
 ### 缓冲区大小选项（`--buffer-size`）
 
@@ -164,9 +189,9 @@ example: --lock-path=/backup/db/lock
 
 使用中性 umask。
 
-将 umask 设为 0000，使仓库中的文件和目录以合理的权限模式创建。默认目录权限为 0750，文件权限为 0640。锁文件和日志目录的权限分别为 0770（目录）和 0660（文件）。
+将 umask 设置为 0000，使仓库中的文件和目录以合理的权限创建。默认目录权限为 0750，默认文件权限为 0640。
 
-若要改用当前运行用户的 umask，请在配置文件中指定 `neutral-umask=n`，或在命令行中使用 `--no-neutral-umask`。
+若要使用运行用户自身的 umask，请在配置文件中指定 `neutral-umask=n`，或在命令行中使用 `--no-neutral-umask`。
 
 ```yaml
 default: y
@@ -788,6 +813,8 @@ S3 仓库密钥类型。
 - `shared` - 共享密钥
 - `auto` - 自动获取临时凭据
 - `web-id` - 自动获取 Web 身份凭据
+- `pod-id` - 自动获取 EKS Pod 身份凭据
+- `process` - 通过外部进程获取凭据
 
 ```yaml
 default: shared
@@ -802,6 +829,18 @@ S3 仓库 KMS 密钥。
 
 ```yaml
 example: --repo1-s3-kms-key-id=bceb4f13-6939-4be3-910d-df54dee817b7
+```
+
+### S3 认证进程命令选项（`--repo-s3-process-cmd`）
+
+S3 认证进程命令。
+
+用于获取临时 S3 凭据的命令（以及可选参数）。列表第一项是命令，其余项作为参数传递。
+
+该进程必须输出包含 `AccessKeyId`、`SecretAccessKey`、`SessionToken` 和 `Expiration` 字段的 JSON。凭据会在到期前自动刷新。有关格式细节，请参阅 [进程凭据提供程序](https://docs.aws.amazon.com/sdkref/latest/guide/feature-process-credentials.html#feature-process-credentials-output)。
+
+```yaml
+example: --repo1-s3-process-cmd=/usr/local/bin/get-credentials --repo1-s3-process-cmd=--role --repo1-s3-process-cmd=my-role
 ```
 
 ### S3 仓库区域选项（`--repo-s3-region`）
@@ -833,6 +872,28 @@ S3 仓库角色。
 
 ```yaml
 example: --repo1-s3-role=authrole
+```
+
+### S3 仓库服务选项（`--repo-s3-service`）
+
+S3 签名服务。
+
+在 SigV4 认证中使用的 S3 签名服务。标准 S3 端点默认为 `s3`；使用 S3 Outposts 端点时请设为 `s3-outposts`。
+
+```yaml
+default: s3
+example: --repo1-s3-service=s3-outposts
+```
+
+### S3 仓库 STS 端点选项（`--repo-s3-sts-host`）
+
+S3 仓库 STS 端点。
+
+配置 `repo-s3-key-type=web-id` 时，用于获取临时凭据的 STS 端点。可设为区域端点（例如 `sts.us-east-1.amazonaws.com`）以使用区域 STS；GovCloud、中国区域或需要降低延迟时可能必须这样设置。
+
+```yaml
+default: sts.amazonaws.com
+example: --repo1-s3-sts-host=sts.us-east-1.amazonaws.com
 ```
 
 ### S3 仓库 URI 风格选项（`--repo-s3-uri-style`）

@@ -140,9 +140,11 @@ example: --exclude=junk/
 
 ### 自动过期选项（`--expire-auto`）
 
-备份成功完成后自动执行 `expire` 命令。
+在成功备份后自动执行 `expire` 命令。
 
-此选项默认启用。禁用时需谨慎，因为这会导致所有备份和归档无限期保留，可能耗尽仓库空间。禁用后需定期手动运行 `expire` 命令以避免空间不足。
+此设置默认启用。禁用时请谨慎，因为这将导致所有备份和归档被无限期保留，可能耗尽仓库空间。禁用后需定期手动执行 `expire` 命令以防止此情况发生。
+
+成功备份后自动执行 `expire` 时，会使用 `backup` 命令的配置，因此仅设置在 `expire` 命令配置节（例如 `[global:expire]`）中的选项不会生效。若要应用 `expire` 专用配置，请禁用此选项并单独运行 `expire` 命令。
 
 ```yaml
 default: y
@@ -225,6 +227,19 @@ example: --type=full
 ```
 
 ## 通用选项
+
+### 允许以 root 用户运行选项（`--allow-root`）
+
+允许命令以 root 用户运行。
+
+默认情况下，仅 `restore` 命令可以由 root 用户运行，因为该命令会谨慎管理文件所有权。以 root 运行其他命令可能创建由 root 所有的文件（例如仓库中的文件），PostgreSQL 用户随后将无法访问这些文件，导致后续命令失败。
+
+启用此选项仍可强制以 root 运行命令。不过，更佳做法是使用仓库和 PostgreSQL 集群的所有者用户运行 pgBackRest。
+
+```yaml
+default: n
+example: --allow-root
+```
 
 ### 缓冲区大小选项（`--buffer-size`）
 
@@ -420,9 +435,9 @@ example: --lock-path=/backup/db/lock
 
 使用中性 umask。
 
-将 umask 设置为 0000，使仓库中创建的文件和目录具有合理的权限。默认目录模式为 0750，文件模式为 0640；锁文件和日志目录的目录模式为 0770，文件模式为 0660。
+将 umask 设置为 0000，使仓库中的文件和目录以合理的权限创建。默认目录权限为 0750，默认文件权限为 0640。
 
-如需改用执行用户的 umask，可在配置文件中设置 `neutral-umask=n`，或在命令行使用 `--no-neutral-umask`。
+若要使用运行用户自身的 umask，请在配置文件中指定 `neutral-umask=n`，或在命令行中使用 `--no-neutral-umask`。
 
 ```yaml
 default: y
@@ -781,9 +796,9 @@ example: --repo1-bundle-limit=10MiB
 
 文件包的目标大小。
 
-定义单个包中文件的总大小目标。大多数包会小于此值，但部分包可能略超此值，因此不要将此选项设置为文件系统允许的最大值。
+定义单个包所容纳文件的目标总大小。未压缩的包大小最大可能达到 `repo-bundle-size` + `repo-bundle-limit`，因此不要将此选项设置为文件系统允许的最大值。
 
-通常不建议将此值设置得过高，因为重试时需要重做整个包。
+通常不建议将此选项设置得过高，因为重试时需要重新执行整个包的操作。
 
 ```yaml
 default: 20MiB
@@ -1148,9 +1163,11 @@ S3 仓库密钥类型。
 
 支持以下类型：
 
-- `shared` — 共享密钥
-- `auto` — 自动获取临时凭证
-- `web-id` — 自动获取 Web 身份凭证
+- `shared` - 共享密钥
+- `auto` - 自动获取临时凭据
+- `web-id` - 自动获取 Web 身份凭据
+- `pod-id` - 自动获取 EKS Pod 身份凭据
+- `process` - 通过外部进程获取凭据
 
 ```yaml
 default: shared
@@ -1165,6 +1182,18 @@ S3 仓库 KMS 密钥。
 
 ```yaml
 example: --repo1-s3-kms-key-id=bceb4f13-6939-4be3-910d-df54dee817b7
+```
+
+### S3 认证进程命令选项（`--repo-s3-process-cmd`）
+
+S3 认证进程命令。
+
+用于获取临时 S3 凭据的命令（以及可选参数）。列表第一项是命令，其余项作为参数传递。
+
+该进程必须输出包含 `AccessKeyId`、`SecretAccessKey`、`SessionToken` 和 `Expiration` 字段的 JSON。凭据会在到期前自动刷新。有关格式细节，请参阅 [进程凭据提供程序](https://docs.aws.amazon.com/sdkref/latest/guide/feature-process-credentials.html#feature-process-credentials-output)。
+
+```yaml
+example: --repo1-s3-process-cmd=/usr/local/bin/get-credentials --repo1-s3-process-cmd=--role --repo1-s3-process-cmd=my-role
 ```
 
 ### S3 仓库区域选项（`--repo-s3-region`）
@@ -1196,6 +1225,28 @@ S3 仓库角色。
 
 ```yaml
 example: --repo1-s3-role=authrole
+```
+
+### S3 仓库服务选项（`--repo-s3-service`）
+
+S3 签名服务。
+
+在 SigV4 认证中使用的 S3 签名服务。标准 S3 端点默认为 `s3`；使用 S3 Outposts 端点时请设为 `s3-outposts`。
+
+```yaml
+default: s3
+example: --repo1-s3-service=s3-outposts
+```
+
+### S3 仓库 STS 端点选项（`--repo-s3-sts-host`）
+
+S3 仓库 STS 端点。
+
+配置 `repo-s3-key-type=web-id` 时，用于获取临时凭据的 STS 端点。可设为区域端点（例如 `sts.us-east-1.amazonaws.com`）以使用区域 STS；GovCloud、中国区域或需要降低延迟时可能必须这样设置。
+
+```yaml
+default: sts.amazonaws.com
+example: --repo1-s3-sts-host=sts.us-east-1.amazonaws.com
 ```
 
 ### S3 仓库 URI 风格选项（`--repo-s3-uri-style`）

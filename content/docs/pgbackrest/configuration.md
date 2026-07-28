@@ -96,6 +96,20 @@ default: y
 example: archive-missing-retry=n
 ```
 
+### 归档推送批量大小选项（`--archive-push-batch-size`）
+
+每轮异步执行可推送的最大 WAL 量。
+
+在异步模式下，`archive-push` 进程会在单轮执行中推送所有已就绪的 WAL 段。由于 `archive-push-queue-max` 只在每轮开始时检查，若单轮处理的 WAL 段数量非常多，队列可能在再次检查前增长到远超限制。
+
+此选项限制每轮处理的 WAL 量，使进程退出，并由下一次 `archive-push` 再次启动，从而重新检查队列。较小的值会更频繁地检查队列，但代价是更频繁地启动异步进程。该值会向下取整为 WAL 段大小的整数倍，但每轮至少会处理一个 WAL 段。
+
+```
+default: 16GiB
+allowed: [1MiB, 4PiB]
+example: archive-push-batch-size=1GiB
+```
+
 ### 最大 archive-push 队列大小选项（`--archive-push-queue-max`）
 
 PostgreSQL 归档队列的最大大小。
@@ -107,7 +121,9 @@ PostgreSQL 归档队列的最大大小。
 
 若发生此情况，归档日志流将被中断，此后将无法执行 PITR。需要执行新的备份才能恢复完整的恢复能力。
 
-在异步模式下，整个队列将被清空，以防止在队列再次超出限制之前出现短暂的 WAL 写入。
+在异步模式下会丢弃整个队列，以防队列再次超过上限前仍有零星 WAL 段进入归档。
+
+在异步模式下，此限制仅在每轮 `archive-push` 开始时检查，因此单轮执行期间队列可能增长到超过此限制。可减小 `archive-push-batch-size`，以更频繁地检查队列。
 
 此功能的目的是防止日志卷被写满——日志卷写满会导致 PostgreSQL 完全停止。宁可丢失备份，也好过让 PostgreSQL 宕机。
 
@@ -252,6 +268,8 @@ example: exclude=junk/
 
 此设置默认启用。禁用时请谨慎，因为这将导致所有备份和归档被无限期保留，可能耗尽仓库空间。禁用后需定期手动执行 `expire` 命令以防止此情况发生。
 
+成功备份后自动执行 `expire` 时，会使用 `backup` 命令的配置，因此仅设置在 `expire` 命令配置节（例如 `[global:expire]`）中的选项不会生效。若要应用 `expire` 专用配置，请禁用此选项并单独运行 `expire` 命令。
+
 ```
 default: y
 example: expire-auto=y
@@ -296,6 +314,19 @@ example: start-fast=y
 ## 通用选项
 
 `general` 部分定义了许多命令共用的选项。
+
+### 允许以 root 用户运行选项（`--allow-root`）
+
+允许命令以 root 用户运行。
+
+默认情况下，仅 `restore` 命令可以由 root 用户运行，因为该命令会谨慎管理文件所有权。以 root 运行其他命令可能创建由 root 所有的文件（例如仓库中的文件），PostgreSQL 用户随后将无法访问这些文件，导致后续命令失败。
+
+启用此选项仍可强制以 root 运行命令。不过，更佳做法是使用仓库和 PostgreSQL 集群的所有者用户运行 pgBackRest。
+
+```
+default: n
+example: allow-root=y
+```
 
 ### 缓冲区大小选项（`--buffer-size`）
 
@@ -458,7 +489,7 @@ example: lock-path=/backup/db/lock
 
 使用中性 umask。
 
-将 umask 设置为 0000，以便以合理的方式创建仓库中的文件权限。默认目录权限为 0750，默认文件权限为 0640。锁文件和日志目录的目录权限和文件权限分别设置为 0770 和 0660。
+将 umask 设置为 0000，使仓库中的文件和目录以合理的权限创建。默认目录权限为 0750，默认文件权限为 0640。
 
 若要使用运行用户自身的 umask，请在配置文件中指定 `neutral-umask=n`，或在命令行中使用 `--no-neutral-umask`。
 
@@ -893,7 +924,7 @@ example: repo1-bundle-limit=10MiB
 
 文件包的目标大小。
 
-定义添加到单个包中的文件总大小上限。大多数包会小于此大小，但某些包可能略大，因此不要将此选项设置为文件系统允许的最大值。
+定义单个包所容纳文件的目标总大小。未压缩的包大小最大可能达到 `repo-bundle-size` + `repo-bundle-limit`，因此不要将此选项设置为文件系统允许的最大值。
 
 通常不建议将此选项设置得过高，因为重试时需要重新执行整个包的操作。
 
@@ -908,6 +939,10 @@ example: repo1-bundle-size=10MiB
 仓库加密密码。
 
 用于加密/解密仓库文件的密码。
+
+注意：
+
+未指定 `stanza` 选项运行时，`info` 命令只从 `global` 配置节读取加密设置。若按 stanza 配置了加密设置，读取加密 stanza 时必须为 `info` 命令指定 `stanza` 选项。
 
 ```
 example: repo1-cipher-pass=zWaf6XtpjIVZC5444yXB+cgFDFl7MxGlgkZSaoPvTGirhPygu4jOKOXf9LO4vjfO
@@ -1307,6 +1342,8 @@ S3 仓库密钥类型。
 - `shared` - 共享密钥
 - `auto` - 自动获取临时凭据
 - `web-id` - 自动获取 Web 身份凭据
+- `pod-id` - 自动获取 EKS Pod 身份凭据
+- `process` - 通过外部进程获取凭据
 
 ```
 default: shared
@@ -1321,6 +1358,20 @@ S3 仓库 KMS 密钥。
 
 ```
 example: repo1-s3-kms-key-id=bceb4f13-6939-4be3-910d-df54dee817b7
+```
+
+### S3 认证进程命令选项（`--repo-s3-process-cmd`）
+
+S3 认证进程命令。
+
+用于获取临时 S3 凭据的命令（以及可选参数）。列表第一项是命令，其余项作为参数传递。
+
+该进程必须输出包含 `AccessKeyId`、`SecretAccessKey`、`SessionToken` 和 `Expiration` 字段的 JSON。凭据会在到期前自动刷新。有关格式细节，请参阅 [进程凭据提供程序](https://docs.aws.amazon.com/sdkref/latest/guide/feature-process-credentials.html#feature-process-credentials-output)。
+
+```
+example: repo1-s3-process-cmd=/usr/local/bin/get-credentials
+example: repo1-s3-process-cmd=--role
+example: repo1-s3-process-cmd=my-role
 ```
 
 ### S3 仓库区域选项（`--repo-s3-region`）
@@ -1354,6 +1405,17 @@ S3 仓库 IAM 角色。
 example: repo1-s3-role=authrole
 ```
 
+### S3 仓库服务选项（`--repo-s3-service`）
+
+S3 签名服务。
+
+在 SigV4 认证中使用的 S3 签名服务。标准 S3 端点默认为 `s3`；使用 S3 Outposts 端点时请设为 `s3-outposts`。
+
+```
+default: s3
+example: repo1-s3-service=s3-outposts
+```
+
 ### S3 仓库 SSE 客户密钥选项（`--repo-s3-sse-customer-key`）
 
 S3 仓库 SSE 客户密钥。
@@ -1362,6 +1424,17 @@ S3 仓库 SSE 客户密钥。
 
 ```
 example: repo1-s3-sse-customer-key=bceb4f13-6939-4be3-910d-df54dee817b7
+```
+
+### S3 仓库 STS 端点选项（`--repo-s3-sts-host`）
+
+S3 仓库 STS 端点。
+
+配置 `repo-s3-key-type=web-id` 时，用于获取临时凭据的 STS 端点。可设为区域端点（例如 `sts.us-east-1.amazonaws.com`）以使用区域 STS；GovCloud、中国区域或需要降低延迟时可能必须这样设置。
+
+```
+default: sts.amazonaws.com
+example: repo1-s3-sts-host=sts.us-east-1.amazonaws.com
 ```
 
 ### S3 仓库安全令牌选项（`--repo-s3-token`）
