@@ -43,6 +43,8 @@ FerretDB 服务配置了失败自动重启（`Restart=on-failure`），为这个
 - 清理配置文件和证书
 - 从 VictoriaMetrics 监控目标中注销
 
+此命令不会卸载 `ferretdb2` 软件包、删除 `mongod` 操作系统用户，也不会删除后端 PostgreSQL 中的数据。
+
 
 ----------------
 

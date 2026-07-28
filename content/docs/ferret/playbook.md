@@ -77,6 +77,8 @@ Pigsty 提供了一个内置剧本 [`mongo.yml`](https://github.com/pgsty/pigsty
 - 移除配置文件和 SSL 证书
 - 从 VictoriaMetrics 监控目标中注销
 
+该任务不会卸载 `ferretdb2` 软件包、删除 `mongod` 操作系统用户，也不会删除后端 PostgreSQL 中的数据。
+
 ### `mongo_config`
 
 配置 FerretDB 服务：

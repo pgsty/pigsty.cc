@@ -109,7 +109,8 @@ ferret:
 在这个高可用配置中：
 
 - **多实例部署**：在三个节点上部署 FerretDB 实例，所有实例连接到同一个 PostgreSQL 后端
-- **VIP 配置**：使用 Keepalived 绑定虚拟 IP `10.10.10.99`，实现 FerretDB 层的故障转移
+- **VIP 配置**：VIP 属于 NODE 角色；定义参数后还需要执行 `./node.yml -l ferret -t node_vip`，才能用 Keepalived 绑定虚拟 IP `10.10.10.99`
 - **服务地址**：使用 PostgreSQL 的服务地址（端口 5436 通常是主库服务），确保连接到正确的主库
 
-这样配置后，客户端可以通过 VIP 地址连接到 FerretDB，即使某个 FerretDB 实例故障，VIP 也会自动漂移到其他可用实例。
+这样配置后，客户端可以通过 VIP 地址连接到 FerretDB。当前 NODE VIP 配置没有跟踪 `ferretdb` 进程，只能在节点或 Keepalived/网络层故障时漂移；
+单纯的 FerretDB 服务故障不会触发 VIP 切换，需要另行配置服务健康检查或使用具备主动探测能力的负载均衡器。

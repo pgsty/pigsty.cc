@@ -54,7 +54,7 @@ mongo 集群名称，必选身份参数。
 
 没有默认值，您必须为生产环境显式定义它。
 
-集群名称需要符合正则表达式 `[a-z][a-z0-9-]*`，建议使用描述性名称。
+当前角色只校验集群名称已定义且非空。为与 Pigsty 其他模块的身份命名保持一致，建议使用符合 `[a-z][a-z0-9-]*` 的描述性名称。
 
 
 ----------------
@@ -153,10 +153,13 @@ mongo 指标收集的 Exporter 端口。
 
 FerretDB 服务器的额外环境变量。
 
-默认值为空字符串 `''`。您可以指定将传递给 FerretDB 进程的额外环境变量，格式为 `KEY=VALUE`，多个变量用空格分隔。
+默认值为空字符串 `''`。该文本会原样追加到 `/etc/default/ferretdb`；每个 `KEY=VALUE`
+应独占一行，多个变量请使用 YAML 多行字符串。
 
 例如：
 
 ```yaml
-mongo_extra_vars: 'FERRETDB_LOG_LEVEL=debug FERRETDB_TELEMETRY=disable'
+mongo_extra_vars: |
+  FERRETDB_LOG_LEVEL=debug
+  FERRETDB_TELEMETRY=disable
 ```
