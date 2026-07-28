@@ -82,7 +82,7 @@ module_hotfixes=1
 EOF
 
 sudo yum makecache;
-sudo yum install -y pg_exporter
+sudo yum install -y pg-exporter
 {{< /tab >}}
 
 {{< tab header="APT" lang="bash" >}}

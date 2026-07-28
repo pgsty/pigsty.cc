@@ -13,7 +13,7 @@ categories: [任务]
 
 ## Pigsty
 
-最简单的使用 `pg_exporter` 的方式是使用 [Pigsty](https://pigsty.cc)，这是一个完整的 PostgreSQL 发行版，内置了基于 `pg_exporter`、Prometheus 和 Grafana 的可观测性最佳实践。您甚至不需要了解 `pg_exporter` 的任何细节，它会直接为您提供所有指标和仪表盘面板。
+最简单的使用 `pg_exporter` 的方式是使用 [Pigsty](https://pigsty.cc)。Pigsty 内置了基于 `pg_exporter`、VictoriaMetrics（Prometheus 兼容指标抓取与查询）和 Grafana 的 PostgreSQL 可观测性方案；部署后即可使用预置指标、规则与仪表盘。
 
 ```bash
 curl -fsSL https://repo.pigsty.io/get | bash; cd ~/pigsty;
@@ -70,7 +70,7 @@ module_hotfixes=1
 EOF
 
 sudo yum makecache;
-sudo yum install -y pg_exporter
+sudo yum install -y pg-exporter
 ```
 
 ### APT
