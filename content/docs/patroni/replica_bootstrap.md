@@ -110,7 +110,7 @@ postgresql:
     wal_e:
         command: patroni_wale_restore
         no_leader: 1
-        envdir: {{WALE_ENV_DIR}}
+        envdir: '{{WALE_ENV_DIR}}'
         use_iam: 1
     basebackup:
         max-rate: '100M'
