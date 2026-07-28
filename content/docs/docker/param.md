@@ -102,10 +102,11 @@ Docker 镜像仓库加速地址列表，默认值为：`[]` 空数组。
 您可以使用 Docker 镜像站点加速镜像拉取，下面是一些中国大陆可用的镜像站点示例：
 
 ```yaml
-["https://docker.m.daocloud.io"]                # DaoCloud 镜像站点
-["https://docker.1ms.run"]                      # 毫秒镜像站点
-["https://mirror.ccs.tencentyun.com"]           # 腾讯云内网镜像站点
-["https://registry.cn-hangzhou.aliyuncs.com"]   # 阿里云镜像站点，需要登录
+docker_registry_mirrors:                        # 可任选一个或多个
+  - https://docker.m.daocloud.io                # DaoCloud 镜像站点
+  - https://docker.1ms.run                      # 毫秒镜像站点
+  - https://mirror.ccs.tencentyun.com           # 腾讯云内网镜像站点
+  - https://registry.cn-hangzhou.aliyuncs.com   # 阿里云镜像站点，需要登录
 ```
 
 您也可以考虑使用 Cloudflare Worker 搭建 [Docker Proxy](https://github.com/cmliu/CF-Workers-docker.io) 来加速访问。

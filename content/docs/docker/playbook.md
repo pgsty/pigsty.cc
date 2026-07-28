@@ -34,3 +34,6 @@ systemctl stop docker                        # 停止 Docker 守护进程服务
 yum remove docker-ce docker-compose-plugin   # 在 EL 系统上卸载 Docker 
 apt remove docker-ce docker-compose-plugin   # 在 Debian 系统上卸载 Docker
 ```
+
+将 `docker_enabled` 改为 `false` 只会让 `docker.yml` 跳过整个 Docker 角色，不会停止或卸载已部署的 Docker，也不会删除 `/data/docker`。
+上面的手工命令同样不会删除数据目录；Docker 的 VictoriaMetrics 文件发现目标可由 `node-rm.yml` 的 `node_deregister` 任务一并注销。
