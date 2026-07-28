@@ -45,8 +45,8 @@ minio: { hosts: { 10.10.10.10: { minio_seq: 1 } }, vars: { minio_cluster: minio 
 - 从 VictoriaMetrics 监控系统中注销 MinIO 目标
 - 从 INFRA 节点的 DNS 服务中移除记录
 - 停止并禁用 MinIO systemd 服务
-- 删除 MinIO 数据目录和配置文件（可选）
-- 卸载 MinIO 软件包（可选）
+- 删除 MinIO 数据目录和服务、客户端、Vector 配置（由 `minio_rm_data` 控制，默认执行）
+- 卸载 `minio` 与 `mcli` 软件包（由 `minio_rm_pkg` 控制，默认不执行）
 
 
 

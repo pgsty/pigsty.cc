@@ -72,7 +72,8 @@ mcli alias set sss https://sss.pigsty:9002 minioadmin S3User.MinIO            # 
 mcli alias set pgbackrest https://sss.pigsty:9000 pgbackrest S3User.Backup    # 使用备份用户
 ```
 
-在管理节点的管理用户上，已经默认配置了名为 `sss` 的 MinIO 别名，可以直接使用。
+完整执行 `minio.yml` 且启用 `minio_provision` 后，角色会为所有 Infra 节点与 MinIO 成员上的 Ansible
+执行用户配置名为 `sss` 的默认别名；Infra 与 MinIO 分组重叠时只写入一次。
 
 MinIO 客户端工具 `mcli` 的完整功能参考，请查阅文档： [MinIO 客户端](https://min.io/docs/minio/linux/reference/minio-mc.html)。
 
@@ -86,14 +87,14 @@ MinIO 客户端工具 `mcli` 的完整功能参考，请查阅文档： [MinIO �
 
 ## 用户管理
 
-使用 `mcli` 可以管理 MinIO 中的业务用户，例如这里我们可以使用命令行创建两个业务用户：
+使用 `mcli` 可以管理 MinIO 中的业务用户。默认置备已经创建 `pgbackrest`、`s3user_meta` 与 `s3user_data`；下面创建一个额外用户，并附加默认生成的 `data` 桶策略：
 
 ```bash
-mcli admin user list sss     # 列出 sss 上的所有用户
-set +o history # 在历史记录中隐藏密码并创建 minio 用户
-mcli admin user add sss dba S3User.DBA
-mcli admin user add sss pgbackrest S3User.Backup
-set -o history 
+mcli admin user list sss
+set +o history
+mcli admin user add sss appuser 'Replace.With.Strong.Password'
+mcli admin policy attach sss data --user=appuser
+set -o history
 ```
 
 
@@ -117,11 +118,11 @@ mcli rb --force sss/hello            # 强制删除 'hello' 桶
 **您也可以对存储桶内的对象进行增删改查**，详情请参考官方文档：[对象管理](https://min.io/docs/minio/linux/administration/object-management.html)
 
 ```bash
-mcli cp /www/pigsty/* sss/infra/     # 将本地软件源的内容上传到 MinIO 的 infra 桶中 
-mcli cp sss/infra/plugins.tgz /tmp/  # 从 minio 下载文件到本地
-mcli ls sss/infra                    # 列出 infra 桶中的所有文件
-mcli rm sss/infra/plugins.tgz        # 删除 infra 桶中的特定文件  
-mcli cat sss/infra/repo_complete     # 查看 infra 桶中的文件内容
+mcli cp /www/pigsty/* sss/data/      # 将本地软件源的内容上传到默认创建的 data 桶中
+mcli cp sss/data/plugins.tgz /tmp/   # 从 MinIO 下载文件到本地
+mcli ls sss/data                     # 列出 data 桶中的所有文件
+mcli rm sss/data/plugins.tgz         # 删除 data 桶中的特定文件
+mcli cat sss/data/repo_complete      # 查看 data 桶中的文件内容
 ```
 
 

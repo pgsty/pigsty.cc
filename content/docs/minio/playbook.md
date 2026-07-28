@@ -32,7 +32,7 @@ MinIO 模块提供了两个内置剧本用于集群管理：
 - `minio_launch`：minio 服务启动
 - `minio_register`：minio 纳入监控
 - `minio_provision`：创建 minio 别名/存储桶/业务用户
-  - `minio_alias`：创建 minio 客户端别名（管理节点上）
+  - `minio_alias`：在所有 Infra 节点与 MinIO 成员上创建客户端别名
   - `minio_bucket`：创建 minio 存储桶
   - `minio_user`：创建 minio 业务用户
 
@@ -58,8 +58,8 @@ MinIO 模块提供了两个内置剧本用于集群管理：
 - `minio_pause`：暂停 3 秒，允许用户中止操作（Ctrl+C 可取消）
 - `minio_deregister`：从 VictoriaMetrics 监控中移除目标，清理 DNS 记录
 - `minio_svc`：停止并禁用 minio systemd 服务
-- `minio_data`：移除 minio 数据目录（可通过 `minio_rm_data=false` 禁用）
-- `minio_pkg`：卸载 minio 软件包（可通过 `minio_rm_pkg=true` 启用）
+- `minio_data`：移除 MinIO 数据目录及服务、客户端、Vector 配置（可通过 `minio_rm_data=false` 禁用）
+- `minio_pkg`：卸载 `minio` 与 `mcli` 软件包（可通过 `minio_rm_pkg=true` 启用）
 
 {{% alert title="执行条件与安全机制" color="primary" %}}
 - 剧本会自动跳过未定义 [`minio_seq`](/docs/minio/param#minio_seq) 的主机，防止误操作非 MinIO 节点
@@ -70,8 +70,8 @@ MinIO 模块提供了两个内置剧本用于集群管理：
 移除剧本使用 **minio_remove** 角色，支持以下 [可配置参数](/docs/minio/param)：
 
 - [`minio_safeguard`](/docs/minio/param#minio_safeguard)：设置为 `true` 时阻止意外删除
-- [`minio_rm_data`](/docs/minio/param#minio_rm_data)：控制是否删除 MinIO 数据（默认 `true`）
-- [`minio_rm_pkg`](/docs/minio/param#minio_rm_pkg)：控制是否卸载 MinIO 软件包（默认 `false`）
+- [`minio_rm_data`](/docs/minio/param#minio_rm_data)：控制是否删除 MinIO 数据与配置（默认 `true`）
+- [`minio_rm_pkg`](/docs/minio/param#minio_rm_pkg)：控制是否卸载 `minio` 与 `mcli` 软件包（默认 `false`）
 
 
 ----------------
