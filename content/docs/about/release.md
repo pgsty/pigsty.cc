@@ -79,7 +79,7 @@ Pigsty 当前文档对应版本为 [**v4.4.0**](#v440)。
 
 **亮点特性**
 
-- 扩展数量提升到 560 个，全新的 [PG 扩展目录](https://pgext.cloud)
+- 已打包扩展数量提升到 562 个，[PGEXT.CLOUD 总目录](https://pgext.cloud) 扩充至 2230 个
 - 新增试点模块：Kafka
 - 新增试点模块：MySQL
 - 新增试点模块：Click（Clickhouse）

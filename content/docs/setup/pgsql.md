@@ -205,7 +205,7 @@ Pigsty 提供了许多 PostgreSQL [**监控面板**](/docs/pgsql/monitor)，覆�
 
 PostgreSQL 最强大的特性之一是其 [**扩展生态系统**](/docs/pgsql/ext)。扩展可以为数据库添加新的数据类型、函数、索引方法等能力。
 
-Pigsty 提供 [**555 个扩展**](/ext/list/)，涵盖时序、地理、向量、全文检索等 16 大类别，一键安装即可使用。
+Pigsty 提供 [**562 个扩展**](/ext/list/)，涵盖时序、地理、向量、全文检索等 16 大类别，一键安装即可使用。
 你可以先从三个常用功能扩展开始，然后按需 [**加装**](/docs/pgsql/ext/install) `timescaledb` 等更多扩展。
 
 - [**`postgis`**](/ext/e/postgis)：地理信息系统，处理地图、位置数据（默认安装）
