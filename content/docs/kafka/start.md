@@ -20,13 +20,13 @@ aliases: [/docs/pilot/kafka/start]
 
 ## 学习路径
 
-| 阶段 | 目标 | 最终结果 |
-|:---:|:---|:---|
-| 1 | 部署单节点开发集群 | 1 个 combined 节点、PLAINTEXT、RF=1 Topic、CLI 读写 |
-| 2 | 部署三节点安全 HA 演示基线 | 3 个 combined 节点、动态 KRaft、TLS/SCRAM/ACL、RF=3/minISR=2 |
-| 3 | 接入应用客户端 | 使用应用 Principal、Pigsty CA 与 SASL_SSL 生产/消费 |
-| 4 | 修改核心参数 | 演示 Heap、Broker 参数、Topic Partition/保留和安全滚动 |
-| 5 | 上线验收 | 检查 Quorum、ISR、端到端读写、监控、容量与运行手册 |
+| 阶段 | 目标              | 最终结果                                                 |
+|:--:|:----------------|:-----------------------------------------------------|
+| 1  | 部署单节点开发集群       | 1 个 combined 节点、PLAINTEXT、RF=1 Topic、CLI 读写          |
+| 2  | 部署三节点安全 HA 演示基线 | 3 个 combined 节点、动态 KRaft、TLS/SCRAM/ACL、RF=3/minISR=2 |
+| 3  | 接入应用客户端         | 使用应用 Principal、Pigsty CA 与 SASL_SSL 生产/消费            |
+| 4  | 修改核心参数          | 演示 Heap、Broker 参数、Topic Partition/保留和安全滚动            |
+| 5  | 上线验收            | 检查 Quorum、ISR、端到端读写、监控、容量与运行手册                       |
 {.full-width}
 
 {{% alert title="两个示例是独立集群" color="warning" %}}
@@ -391,13 +391,13 @@ kafka-console-consumer.sh \
 
 生产应用还应显式评审客户端语义：
 
-| 客户端配置 | 建议起点 | 说明 |
-|:---|:---|:---|
-| `acks` | `all` | 与 RF=3/minISR=2 配合，避免只等待 Leader |
+| 客户端配置                | 建议起点   | 说明                                     |
+|:---------------------|:-------|:---------------------------------------|
+| `acks`               | `all`  | 与 RF=3/minISR=2 配合，避免只等待 Leader        |
 | `enable.idempotence` | `true` | 降低重试导致重复写入的风险，需要 `IdempotentWrite` ACL |
-| `group.id` | 独立稳定名称 | 不同业务/消费语义不要复用 Group |
-| Offset 提交 | 按业务选择 | 自动提交简单；手动提交更容易绑定业务处理结果 |
-| `client.id` | 可识别实例名 | 便于日志、Quota 与客户端诊断 |
+| `group.id`           | 独立稳定名称 | 不同业务/消费语义不要复用 Group                    |
+| Offset 提交            | 按业务选择  | 自动提交简单；手动提交更容易绑定业务处理结果                 |
+| `client.id`          | 可识别实例名 | 便于日志、Quota 与客户端诊断                      |
 {.full-width}
 
 客户端 `acks`、重试、幂等、批量、压缩和 Offset 策略属于应用配置，不应写入 Broker 的 `kafka_parameters`。
@@ -409,14 +409,14 @@ kafka-console-consumer.sh \
 
 Kafka 的持久意图始终修改 `pigsty.yml`，不要直接编辑 `/etc/kafka/server.properties`。常见意图对应关系：
 
-| 目标 | 参数 | 行为 |
-|:---|:---|:---|
-| 调整 JVM Heap | `kafka_heap_opts` | 静态变化，健康集群进入严格单节点滚动 |
-| 调整线程、保留、Segment | `kafka_parameters` | 非角色自有 Broker 参数；静态变化需要滚动 |
-| 调整 Topic Partition/保留 | `kafka_topics` | 在线资源收敛；Partition 只增不减 |
-| 调整应用密码/ACL/Quota | `kafka_users` | 在线资源收敛；密码由秘密系统提供 |
-| 声明故障域 | `kafka_rack` | 所有 Broker-capable 节点全有或全无；变化会滚动但不搬迁数据 |
-| 选择安全档位 | `kafka_security` | 只能在新集群 Bootstrap 时决定，不能普通重跑在线切换 |
+| 目标                    | 参数                 | 行为                                    |
+|:----------------------|:-------------------|:--------------------------------------|
+| 调整 JVM Heap           | `kafka_heap_opts`  | 静态变化，健康集群进入严格单节点滚动                    |
+| 调整线程、保留、Segment       | `kafka_parameters` | 非角色自有 Broker 参数；静态变化需要滚动              |
+| 调整 Topic Partition/保留 | `kafka_topics`     | 在线资源收敛；Partition 只增不减                 |
+| 调整应用密码/ACL/Quota      | `kafka_users`      | 在线资源收敛；密码由秘密系统提供                      |
+| 声明故障域                 | `kafka_rack`       | 所有 Broker-capable 节点全有或全无；变化会滚动但不搬迁数据 |
+| 选择安全档位                | `kafka_security`   | 只能在新集群 Bootstrap 时决定，不能普通重跑在线切换       |
 {.full-width}
 
 
@@ -512,7 +512,7 @@ kafka_parameters:
 - 动态 Quorum 只有一个 Leader，所有预期 Controller 都在 Current Voters；
 - 没有 Offline、Under Replicated 或 Under Min ISR Partition；
 - 使用真实应用网络、真实 Principal 完成生产与消费验证；
-- [Kafka Overview](https://demo.pigsty.cc/ui/d/kafka-overview)、[Kafka Instance](https://demo.pigsty.cc/ui/d/kafka-instance) 与 [Kafka Node](https://demo.pigsty.cc/ui/d/kafka-node) 数据正常；
+- [Kafka Overview](https://demo.pigsty.cc/ui/d/kafka-overview)、[Kafka Instance](https://demo.pigsty.cc/ui/d/kafka-instance)、[Kafka Topic](https://demo.pigsty.cc/ui/d/kafka-topic) 与 [Kafka Consumer](https://demo.pigsty.cc/ui/d/kafka-consumer) 数据正常；
 - 告警路由、日志检索、容量阈值、值班责任和回退条件已经确认；
 - 升级、Feature Level、Topic 删除、用户删除与集群下线均有独立审批流程。
 
@@ -525,16 +525,16 @@ kafka_parameters:
 
 建议按以下路径继续阅读：
 
-| 您接下来要做什么 | 对应文档 |
-|:---|:---|
-| 规划 combined 或 Controller/Broker 分离拓扑、网络、Rack、存储与安全 | [集群配置](/docs/kafka/config) |
-| 查找 15 项公开参数、默认值、Schema 和保留键 | [参数参考](/docs/kafka/param) |
-| 理解 `kafka.yml` 生命周期、严格滚动、轮换与集群下线 | [预置剧本](/docs/kafka/playbook) |
-| 查看 Quorum、Topic、用户、消息、Consumer Group 与扩容操作 | [日常管理](/docs/kafka/admin) |
-| 使用 Dashboard、告警、PromQL 和 VictoriaLogs | [监控告警](/docs/kafka/monitor) |
-| 理解每一项 JMX/Exporter/Recording Rule 指标 | [指标定义](/docs/kafka/metric) |
-| 排查身份冲突、连接、SCRAM、Exporter、Lag 与扩缩容问题 | [常见问题](/docs/kafka/faq) |
-| 回到模块能力、默认端口与边界总览 | [Kafka 模块首页](/docs/kafka) |
+| 您接下来要做什么                                           | 对应文档                         |
+|:---------------------------------------------------|:-----------------------------|
+| 规划 combined 或 Controller/Broker 分离拓扑、网络、Rack、存储与安全 | [集群配置](/docs/kafka/config)   |
+| 查找 15 项公开参数、默认值、Schema 和保留键                        | [参数参考](/docs/kafka/param)    |
+| 理解 `kafka.yml` 生命周期、严格滚动、轮换与集群下线                   | [预置剧本](/docs/kafka/playbook) |
+| 查看 Quorum、Topic、用户、消息、Consumer Group 与扩容操作         | [日常管理](/docs/kafka/admin)    |
+| 使用 Dashboard、告警、PromQL 和 VictoriaLogs              | [监控告警](/docs/kafka/monitor)  |
+| 理解每一项 JMX/Exporter/Recording Rule 指标               | [指标定义](/docs/kafka/metric)   |
+| 排查身份冲突、连接、SCRAM、Exporter、Lag 与扩缩容问题                | [常见问题](/docs/kafka/faq)      |
+| 回到模块能力、默认端口与边界总览                                   | [Kafka 模块首页](/docs/kafka)    |
 {.full-width}
 
 一条推荐阅读链路是：**快速上手 → 集群配置 → 参数参考 → 预置剧本 → 日常管理 → 监控告警 → 常见问题**。

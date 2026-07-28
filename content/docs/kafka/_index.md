@@ -33,7 +33,7 @@ KAFKA 模块当前提供：
 - 声明式收敛 Topic、用户凭据、ACL 与 Quota，不隐式删除业务 Topic
 - 保护性轮换内部凭据与证书，并在失败时保留当前有效材料
 - 采集 JMX、Broker、请求、复制、KRaft、Topic、Partition 与 Consumer Group 指标
-- 将 Kafka 与 Exporter 日志接入 VictoriaLogs，并提供三个 Grafana Dashboard 与配套告警
+- 将 Kafka 与 Exporter 日志接入 VictoriaLogs，并提供四个 Grafana Dashboard 与配套告警
 
 
 --------
@@ -68,10 +68,10 @@ flowchart LR
 
 ## 文档导航
 
-| 文档                                 | 内容                                    |
-|:-----------------------------------|:--------------------------------------|
+| 文档                           | 内容                                    |
+|:-----------------------------|:--------------------------------------|
 | [快速上手](/docs/kafka/start)    | 从单节点到三节点安全集群、客户端接入、参数修改与上线检查          |
-| [集群配置](/docs/kafka/config)   | 拓扑、动态 KRaft、网络、存储、安全与资源声明        |
+| [集群配置](/docs/kafka/config)   | 拓扑、动态 KRaft、网络、存储、安全与资源声明             |
 | [参数参考](/docs/kafka/param)    | 15 项持久公开参数及临时运维变量                     |
 | [日常管理](/docs/kafka/admin)    | 状态检查、Topic、消息、Consumer Group 与拓扑变更    |
 | [预置剧本](/docs/kafka/playbook) | `kafka.yml` 生命周期、任务标签、轮换与清理保护         |

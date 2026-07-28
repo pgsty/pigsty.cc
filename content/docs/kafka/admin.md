@@ -339,7 +339,7 @@ Kafka 的数据保护依赖跨故障域副本、正确的 minISR、生产者 ACK
 
 发生磁盘或节点故障时：
 
-1. 先查看 Kafka Overview/Node、Quorum、ISR、Offline Partition 与 Under Min ISR；
+1. 先查看 Kafka Overview/Instance、Quorum、ISR、Offline Partition 与 Under Min ISR；
 2. 保存 `journalctl -u kafka`、节点指标、Manifest、`server.properties` 与 `meta.properties` 证据；
 3. 确认节点角色、`node.id`、Cluster ID、Directory ID 与剩余副本可用性；
 4. 节点确认无法恢复时，按[**替换故障节点**](#替换故障节点)三步走：`kafka-rm.yml` 退役 → `node.yml` 纳管 → `kafka.yml` 重入；磁盘尚存、仅服务异常时**不要**急于退役或删除 `meta.properties`，先尝试普通收敛拉起；

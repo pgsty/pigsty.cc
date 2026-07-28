@@ -294,3 +294,18 @@ kafka_topics:
 {.full-width}
 
 两种轮换动作互斥，且必须以精确完整集群为目标。`kafka-rm.yml` 默认删除数据目录与节点上的 `/etc/kafka` 恢复状态；`kafka_rm_data=false` 会同时保留二者。执行前必须显式确认目标集群与备份/重建意图，命令与完整语义见 [预置剧本](/docs/kafka/playbook)。
+
+
+### `kafka_safeguard`
+
+仅供 `kafka-rm.yml` 使用，默认 `false`。设为 `true` 时，移除角色会在注销、退群、停服和删除之前直接中止；这是布尔保护开关，不会探测集群是否存活。
+
+
+### `kafka_rm_data`
+
+仅供 `kafka-rm.yml` 使用，默认 `true`。启用时删除整个 `kafka_data` 和 `/etc/kafka`；后者包含 Manifest、凭据副本及重新接管保留存储所需的恢复状态。设为 `false` 会同时保留这两处，但仍会注销监控目标、停止服务并删除运行时集成配置。
+
+
+### `kafka_rm_pkg`
+
+仅供 `kafka-rm.yml` 使用，默认 `false`。设为 `true` 时卸载平台映射中的 `kafka-stack` 软件包（Kafka、Kafka Exporter 与 JMX Exporter 载荷）；共享的 Java Runtime 不会被卸载。

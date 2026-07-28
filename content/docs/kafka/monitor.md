@@ -18,12 +18,12 @@ Pigsty 为 KAFKA 模块提供指标、日志、Dashboard 与告警一体化的�
 
 KAFKA 模块使用两个互补的 Exporter：
 
-| 采集面 | 服务/方式 | Job | 节点范围 | 主要内容 |
-|:---|:---|:---|:---|:---|
-| JVM 与 Kafka 内部 | JMX Exporter Java Agent `:9404` | `kafka`（带 `role` 标签） | 所有 Kafka 节点 | JVM、Broker 吞吐、复制、请求路径、KRaft、Controller |
-| Kafka 协议视角 | `kafka_exporter :9308` | `kafka`（无 `role` 标签） | `kafka_seq` 最小的至多两个 Broker-capable 节点 | Broker、Topic、Partition、Offset、Consumer Group、Lag |
-| 主机资源 | node_exporter | `node` | 纳管节点 | CPU、内存、磁盘、网络、文件系统 |
-| 日志 | Journald → Vector → VictoriaLogs | `syslog` | 所有 Kafka 节点 | Kafka 与 Exporter 结构化检索日志 |
+| 采集面            | 服务/方式                            | Job                  | 节点范围                                  | 主要内容                                             |
+|:---------------|:---------------------------------|:---------------------|:--------------------------------------|:-------------------------------------------------|
+| JVM 与 Kafka 内部 | JMX Exporter Java Agent `:9404`  | `kafka`（带 `role` 标签） | 所有 Kafka 节点                           | JVM、Broker 吞吐、复制、请求路径、KRaft、Controller           |
+| Kafka 协议视角     | `kafka_exporter :9308`           | `kafka`（无 `role` 标签） | `kafka_seq` 最小的至多两个 Broker-capable 节点 | Broker、Topic、Partition、Offset、Consumer Group、Lag |
+| 主机资源           | node_exporter                    | `node`               | 纳管节点                                  | CPU、内存、磁盘、网络、文件系统                                |
+| 日志             | Journald → Vector → VictoriaLogs | `syslog`             | 所有 Kafka 节点                           | Kafka 与 Exporter 结构化检索日志                         |
 {.full-width}
 
 角色在每一个 Infra 节点为每个实例生成一个文件发现目标，JMX 目标与（被选中节点的）协议 Exporter 目标都在同一文件、同一 `kafka` 采集任务下：
@@ -43,15 +43,15 @@ KAFKA 模块使用两个互补的 Exporter：
 
 ### JMX 目标
 
-| 标签 | 含义 | 示例 |
-|:---|:---|:---|
-| `job` | 采集任务 | `kafka` |
-| `cls` | Kafka 集群名 | `kf-main` |
-| `ins` | Kafka 实例名 | `kf-main-1` |
-| `ip` | 清单主机地址 | `10.10.10.11` |
-| `instance` | JMX 抓取端点 | `10.10.10.11:9404` |
-| `role` | Pigsty Kafka 角色 | `combined`、`broker` 或 `controller` |
-| `node_id` | KRaft 节点号 | `1` |
+| 标签         | 含义              | 示例                                 |
+|:-----------|:----------------|:-----------------------------------|
+| `job`      | 采集任务            | `kafka`                            |
+| `cls`      | Kafka 集群名       | `kf-main`                          |
+| `ins`      | Kafka 实例名       | `kf-main-1`                        |
+| `ip`       | 清单主机地址          | `10.10.10.11`                      |
+| `instance` | JMX 抓取端点        | `10.10.10.11:9404`                 |
+| `role`     | Pigsty Kafka 角色 | `combined`、`broker` 或 `controller` |
+| `node_id`  | KRaft 节点号       | `1`                                |
 {.full-width}
 
 ### 协议 Exporter 目标
@@ -65,7 +65,7 @@ Exporter 从 Broker 查询整个 Kafka 集群，因此同一集群的两个 Expo
 
 ## Grafana Dashboard
 
-Pigsty 提供三个互补 Dashboard：
+Pigsty 当前提供四个互补 Dashboard；已不再提供旧的 Kafka Node 面板，其 JVM、KRaft 与主机资源内容已合并到 Kafka Instance。
 
 ### [Kafka Overview](https://demo.pigsty.cc/ui/d/kafka-overview)
 
@@ -85,49 +85,60 @@ Pigsty 提供三个互补 Dashboard：
 
 ### [Kafka Instance](https://demo.pigsty.cc/ui/d/kafka-instance)
 
-以 `ins` 变量选择一个运行 `kafka_exporter` 的 Broker 实例，从协议视角查看集群元数据与 Consumer 状态，并联动宿主机资源。
+以 `ins` 变量选择任意 Kafka Broker/Controller JVM，包括纯 Controller，并联动宿主机资源。
 
 主要内容：
 
-- Exporter 可用性、身份、运行时与抓取成本
-- Broker Directory、Topic Inventory、Partition Topology
-- Leader Distribution、ISR Deficit、Leaderless 与 Non-Preferred
-- Topic Offset Span、Append/Commit Progress
-- Consumer Group Inventory、Members、Offsets 与 Lag
-- 节点 CPU/内存、磁盘 I/O、网络、文件系统与日志
-
-常用变量：`ins`、`cls`、`ip`、`topic`、`consumergroup`、`topk`。
-
-
-### [Kafka Node](https://demo.pigsty.cc/ui/d/kafka-node)
-
-以 `ins` 变量选择任何 Kafka JVM，包括纯 Controller 节点，查看 JMX、Broker 与 KRaft 内部状态。
-
-主要内容：
-
+- 实例身份、角色、JMX 可用性与抓取质量
 - JVM Heap、GC、Thread、Buffer Pool、CPU、FD 与 Uptime
-- Broker 消息/网络/复制吞吐和 ISR Churn
-- 请求率、错误、P95/P99 延迟、队列与 Handler/Network Idle
-- Under Replicated、Under Min ISR、Offline Replica/Log Directory
-- KRaft Member State、Metadata Log、传播延迟与 Snapshot
-- Active Controller、Fenced Broker、Offline Partition 与事件延迟
-- JMX 抓取质量、宿主机压力与 Kafka 日志
+- Broker 吞吐、复制状态、请求错误/延迟/队列和 Handler/Network Idle
+- KRaft Member State、Metadata Log、Controller 健康与事件延迟
+- 节点 CPU/内存、磁盘 I/O、网络、文件系统与 Kafka 日志
 
 常用变量：`cls`、`ins`、`ip`。
+
+
+### [Kafka Topic](https://demo.pigsty.cc/ui/d/kafka-topic)
+
+以 `cls` 与 `topic` 选择逻辑 Topic，查看 Topic/Partition 的协议状态。
+
+主要内容：
+
+- Topic 与 Partition 清单、Leader、副本、ISR 和 Preferred Leader
+- Current Offset、保留跨度与消息追加速率
+- Leaderless、ISR Deficit 和 Non-Preferred Replica
+- 关联 Consumer Group、提交进度与 Lag
+
+常用变量：`cls`、`topic`、`topk`。
+
+
+### [Kafka Consumer](https://demo.pigsty.cc/ui/d/kafka-consumer)
+
+以 `cls` 与 `group` 选择 Consumer Group，查看成员、提交 Offset、消费进展与积压。
+
+主要内容：
+
+- Consumer Group 清单与成员数量
+- Group/Topic/Partition 的已提交 Offset
+- Commit Rate、总 Lag、最大 Partition Lag 与积压趋势
+- Group 到 Topic/Partition 的下钻
+
+常用变量：`cls`、`group`、`topic`、`topk`。
 
 
 --------
 
 ## Dashboard 选择
 
-| 问题 | 首选 Dashboard | 下钻方向 |
-|:---|:---|:---|
-| 哪个集群或 Topic 出现异常？ | Kafka Overview | 选择 `cls`、`topic`、`group` |
-| 某个 Consumer Group 为什么积压？ | Kafka Instance | Group → Topic → Partition Offset |
-| 某个 Broker 是否过载？ | Kafka Node | 请求路径 → JVM → Node 资源 |
-| KRaft Controller 是否健康？ | Kafka Node | KRaft Metadata Plane → Controller Health |
-| 是否存在 Leaderless/URP/ISR 问题？ | Kafka Overview | Cluster → Kafka Node |
-| Exporter 缺数还是 Kafka 本身异常？ | Instance + Node | 对比 `kafka_exporter_up` 与 `kafka_up` |
+| 问题                          | 首选 Dashboard        | 下钻方向                                     |
+|:----------------------------|:--------------------|:-----------------------------------------|
+| 哪个集群或 Topic 出现异常？           | Kafka Overview      | 选择 `cls`、`topic`、`group`                 |
+| 某个 Consumer Group 为什么积压？    | Kafka Consumer      | Group → Topic → Partition Offset         |
+| 某个 Topic/Partition 是否异常？    | Kafka Topic         | Topic → Partition → Consumer             |
+| 某个 Broker 是否过载？             | Kafka Instance      | 请求路径 → JVM → Node 资源                     |
+| KRaft Controller 是否健康？      | Kafka Instance      | KRaft Metadata Plane → Controller Health |
+| 是否存在 Leaderless/URP/ISR 问题？ | Kafka Overview      | Cluster → Kafka Instance / Topic         |
+| Exporter 缺数还是 Kafka 本身异常？   | Overview + Instance | 对比 `kafka_exporter_up` 与 `kafka_up`      |
 {.full-width}
 
 
@@ -137,20 +148,24 @@ Pigsty 提供三个互补 Dashboard：
 
 Kafka 规则文件位于 `/infra/rules/kafka.yml`。主要记录指标如下：
 
-| 指标 | 含义 |
-|:---|:---|
-| `kafka:topic:msg_rate1m/5m` | Topic 当前 Offset 的 1/5 分钟正向变化速率 |
-| `kafka:ins:msg_rate1m/5m` | 单个 Exporter 视图中的消息追加速率 |
-| `kafka:cls:msg_rate1m/5m` | 去重后的集群消息追加速率 |
-| `kafka:topic:csg_rate1m/5m` | Consumer Group Commit Offset 的 1/5 分钟正向变化速率 |
-| `kafka:ins:csg_rate1m/5m` | 单个 Exporter 视图中的消费提交速率 |
-| `kafka:cls:csg_rate1m/5m` | 去重后的集群消费提交速率 |
-| `kafka:ins:jvm_heap_used_ratio` | Kafka JVM Heap 使用率 |
-| `kafka:ins:jvm_cpu_cores` | Kafka JVM 消耗的 CPU Core 数 |
-| `kafka:ins:jvm_gc_time_rate5m` | 5 分钟 GC 时间速率 |
-| `kafka:ins:messages_in_rate5m` | Broker 5 分钟消息接收速率 |
-| `kafka:ins:bytes_in_rate5m` | Broker 5 分钟客户端入站字节速率 |
-| `kafka:ins:bytes_out_rate5m` | Broker 5 分钟客户端出站字节速率 |
+| 指标                                      | 含义                                |
+|:----------------------------------------|:----------------------------------|
+| `kafka:topic:msg_rate1m/5m`             | Topic 当前 Offset 的 1/5 分钟正向变化速率    |
+| `kafka:cls:msg_rate1m/5m`               | 去重后的集群消息追加速率                      |
+| `kafka:csg_topic:commit_rate5m`         | Consumer Group/Topic 的 5 分钟提交进展速率 |
+| `kafka:csg_topic:lag`                   | Consumer Group/Topic 的总 Lag       |
+| `kafka:csg:lag`                         | Consumer Group 跨 Topic 的总 Lag     |
+| `kafka:cls:lag`                         | Kafka 集群全部 Consumer Group 的总 Lag  |
+| `kafka:ins:jvm_heap_used_ratio`         | Kafka JVM Heap 使用率                |
+| `kafka:ins:jvm_cpu_cores`               | Kafka JVM 消耗的 CPU Core 数          |
+| `kafka:ins:load` / `kafka:cls:load`     | 实例最忙请求线程池与集群平均负载                  |
+| `kafka:ins:jvm_gc_time_rate5m`          | 5 分钟 GC 时间速率                      |
+| `kafka:ins:messages_in_rate5m`          | Broker 5 分钟消息接收速率                 |
+| `kafka:ins:bytes_in_rate5m`             | Broker 5 分钟客户端入站字节速率              |
+| `kafka:ins:bytes_out_rate5m`            | Broker 5 分钟客户端出站字节速率              |
+| `kafka:ins:request_error_rate5m`        | Broker 5 分钟请求错误速率                 |
+| `kafka:cls:under_replicated_partitions` | 集群 Under Replicated Partition 总数  |
+| `kafka:cls:offline_partitions`          | 集群 Offline Partition 数            |
 {.full-width}
 
 基于 Offset 变化得到的是进展速率，不是客户端请求数。日志截断、Offset 回退或 Exporter 重启可能造成瞬时负变化；规则使用 `clamp_min(..., 0)` 只保留正向进展。
@@ -160,21 +175,23 @@ Kafka 规则文件位于 `/infra/rules/kafka.yml`。主要记录指标如下：
 
 ## 告警规则
 
-| 告警 | 条件 | 持续时间 | 级别 | 首选下钻 |
-|:---|:---|:---:|:---:|:---|
-| `KafkaDown` | `up{job="kafka"} < 1` | 1m | CRIT | Kafka Node / `ins` |
-| `KafkaExporterDown` | `up{job="kafka_exporter"} < 1` | 1m | CRIT | Kafka Instance / `ins` |
-| `KafkaJmxScrapeError` | `jmx_scrape_error > 0` | 3m | WARN | Kafka Node / JMX Collector |
-| `KafkaJvmHeapHigh` | Heap 使用率 > 90% | 15m | WARN | Kafka Node / JVM Memory |
-| `KafkaJvmDeadlock` | JVM Deadlocked Thread > 0 | 1m | CRIT | Kafka Node / JVM Threads |
-| `KafkaRequestHandlerSaturated` | Handler Idle < 10% | 10m | WARN | Kafka Node / Request Path |
-| `KafkaUnderReplicatedPartitions` | URP > 0 | 5m | WARN | Kafka Node / Replication |
-| `KafkaUnderMinISR` | Under Min ISR > 0 | 1m | CRIT | Kafka Node / Replication |
-| `KafkaOfflineLogDirectory` | Offline Log Directory > 0 | 1m | CRIT | Kafka Node / Disk Pressure |
-| `KafkaOfflinePartitions` | Controller Offline Partition > 0 | 1m | CRIT | Kafka Node / `cls` |
-| `KafkaControllerCountMismatch` | Active Controller 数不等于 1 | 1m | CRIT | Kafka Node / `cls` |
-| `KafkaFencedBrokers` | Fenced Broker > 0 | 5m | WARN | Kafka Node / `cls` |
-| `KafkaUncleanLeaderElection` | 5 分钟出现不干净 Leader 选举 | 立即 | CRIT | Kafka Node / `cls` |
+| 告警                               | 条件                                  | 持续时间 |  级别  | 首选下钻                           |
+|:---------------------------------|:------------------------------------|:----:|:----:|:-------------------------------|
+| `KafkaDown`                      | `up{job="kafka",role=~".+"} < 1`    |  1m  | CRIT | Kafka Instance / `ins`         |
+| `KafkaExporterDown`              | `up{job="kafka",role=""} < 1`       |  1m  | CRIT | Kafka Instance / `ins`         |
+| `KafkaJmxScrapeError`            | `jmx_scrape_error{job="kafka"} > 0` |  3m  | WARN | Kafka Instance / JMX Collector |
+| `KafkaJvmHeapHigh`               | Heap 使用率 > 90%                      | 15m  | WARN | Kafka Instance / JVM Memory    |
+| `KafkaJvmDeadlock`               | JVM Deadlocked Thread > 0           |  1m  | CRIT | Kafka Instance / JVM Threads   |
+| `KafkaRequestHandlerSaturated`   | Handler Idle < 10%                  | 10m  | WARN | Kafka Instance / Request Path  |
+| `KafkaNetworkProcessorSaturated` | Network Processor Idle < 10%        | 10m  | WARN | Kafka Instance / Request Path  |
+| `KafkaUnderReplicatedPartitions` | URP > 0                             |  5m  | WARN | Kafka Instance / Replication   |
+| `KafkaUnderMinISR`               | Under Min ISR > 0                   |  1m  | CRIT | Kafka Instance / Replication   |
+| `KafkaOfflineLogDirectory`       | Offline Log Directory > 0           |  1m  | CRIT | Kafka Instance / Disk Pressure |
+| `KafkaOfflinePartitions`         | Controller Offline Partition > 0    |  1m  | CRIT | Kafka Overview / `cls`         |
+| `KafkaControllerCountMismatch`   | Active Controller 数不等于 1            |  1m  | CRIT | Kafka Overview / `cls`         |
+| `KafkaFencedBrokers`             | Fenced Broker > 0                   |  5m  | WARN | Kafka Overview / `cls`         |
+| `KafkaUncleanLeaderElection`     | 5 分钟出现不干净 Leader 选举                 |  立即  | CRIT | Kafka Overview / `cls`         |
+| `KafkaConsumerLagGrowing`        | Group Lag > 100000 且 30 分钟仍增长       | 30m  | WARN | Kafka Consumer / `group`       |
 {.full-width}
 
 不干净 Leader 选举可能意味着数据丢失，应立即保留 Controller/Broker 日志，确认受影响 Topic 与副本，再决定恢复动作。
@@ -229,7 +246,7 @@ job:syslog unit:kafka_exporter
 ip:10.10.10.11 job:syslog (unit:kafka OR app:kafka)
 ```
 
-Kafka Node Dashboard 的日志面板使用类似查询，并展示时间、级别、Systemd Unit 与消息。诊断时应把日志与同一时间窗口内的 KRaft、ISR、请求队列、GC、磁盘 I/O 和网络指标对齐。
+Kafka Instance Dashboard 的日志面板使用类似查询，并展示时间、级别、Systemd Unit 与消息。诊断时应把日志与同一时间窗口内的 KRaft、ISR、请求队列、GC、磁盘 I/O 和网络指标对齐。
 
 
 --------
