@@ -1,12 +1,12 @@
 ---
 title: pgsql
 weight: 410
-description: 原生 PostgreSQL 内核，支持 PostgreSQL 14 到 18 的多版本部署
+description: 原生 PostgreSQL 内核，稳定支持 PostgreSQL 14 到 18，并提供 PG19 Beta 试用
 icon: fa-brands fa-linux
 categories: [参考]
 ---
 
-`pgsql` 配置模板使用原生 PostgreSQL 内核，是 Pigsty 的默认数据库内核，支持 PostgreSQL 14 到 18 版本。
+`pgsql` 配置模板使用原生 PostgreSQL 内核，是 Pigsty 的默认数据库内核，稳定支持 PostgreSQL 14 到 18。当前 `configure` 也接受版本 19，但 PG19 仍是 Beta，建议使用专用 [`pg19`](/docs/conf/pg19/) 模板试用。
 
 
 --------
@@ -51,6 +51,7 @@ categories: [参考]
 **版本支持**：
 - PostgreSQL 18（默认）
 - PostgreSQL 17、16、15、14
+- PostgreSQL 19 Beta（试用；使用 `./configure -c pg19`）
 
 **适用场景**：
 - 需要使用最新 PostgreSQL 特性

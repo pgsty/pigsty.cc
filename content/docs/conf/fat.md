@@ -62,7 +62,7 @@ categories: [参考]
 |:--|:--|
 | PostgreSQL 14-18 | 五个大版本的内核和全部扩展 |
 | 扩展分类包 | `time`, `gis`, `rag`, `fts`, `olap`, `feat`, `lang`, `type`, `util`, `func`, `admin`, `stat`, `sec`, `fdw`, `sim`, `etl` |
-| 企业组件 | Kafka、Java 运行时、Sealos、TigerBeetle |
+| 企业组件 | `kafka-stack`、Java 运行时、Sealos、TigerBeetle |
 | 数据库内核 | PolarDB、IvorySQL |
 
 **与 rich 的区别**：

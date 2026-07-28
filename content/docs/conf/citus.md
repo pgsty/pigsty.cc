@@ -56,7 +56,7 @@ categories: [参考]
 
 **架构说明**：
 
-- **pg-meta**：基础设施节点，运行 Grafana、Prometheus、etcd 等监控组件，同时部署一个独立的 CMDB 数据库
+- **pg-meta**：基础设施节点，运行 Grafana、VictoriaMetrics、etcd 等组件，同时部署一个独立的 CMDB 数据库
 - **pg-citus1**：Citus 协调节点（group 0），负责接收客户端查询并路由到工作节点，1 主 1 从高可用配置
 - **pg-citus2~6**：Citus 工作节点（group 1~5），存储分片数据，每组 1 主 1 从，通过 Patroni 实现自动故障转移
 - **VIP**：每个节点组配置 L2 VIP，由 `vip-manager` 管理，确保故障转移时客户端连接自动切换

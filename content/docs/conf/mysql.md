@@ -16,8 +16,8 @@ categories: [参考]
 - 配置名称： `mysql`
 - 节点数量： 单节点
 - 配置说明：OpenHalo MySQL 兼容内核配置
-- 适用系统：`el8`, `el9`, `el10`, `d12`, `d13`, `u22`, `u24`
-- 适用架构：`x86_64`
+- 适用系统：EL 8/9/10、Debian 12/13、Ubuntu 22/24/26
+- 适用架构：`x86_64`、`aarch64`
 - 相关配置：[`meta`](/docs/conf/meta/)
 
 启用方式：
@@ -66,6 +66,4 @@ psql postgres://dbuser_meta:DBUser.Meta@10.10.10.10:5432/meta
 **注意事项**：
 - OpenHalo 基于 PostgreSQL 14，不支持更高版本特性
 - 部分 MySQL 语法可能存在兼容性差异
-- 仅支持 EL8/EL9 系统
-- 不支持 ARM64 架构
-
+- 当前 `openhalo` 包别名已覆盖 Pigsty 支持的 Linux 平台与双架构；实际安装仍以目标平台的软件仓库索引为准
