@@ -45,8 +45,10 @@ Pigsty 将使用 **`/data`** 作为默认数据目录，如果您有专用的主
 | [**`nginx_data`**](/docs/infra/param#nginx_data)       | Nginx 数据目录 | `/data/nginx`    |
 | [**`minio_data`**](/docs/minio/param#minio_data)       | MinIO 数据目录 | `/data/minio`    |
 | [**`redis_fs_main`**](/docs/redis/param#redis_fs_main) | Redis 数据目录 | `/data/redis`    |
+| [**`kafka_data`**](/docs/kafka/param#kafka_data)       | Kafka 数据目录 | `/data/kafka`    |
 {.full-width}
 
+原生 MySQL 8.4 试点模块当前不提供数据目录参数，固定使用 `/var/lib/mysql`。
 
 --------
 
@@ -135,9 +137,9 @@ Pigsty 默认使用一个本地静态域名 `i.pigsty` 来访问 WebUI，这是�
 
 ## Linux
 
-Pigsty 运行在 **Linux** 操作系统上，它支持 **14** 种主流 Linux 发行版：[**兼容操作系统列表**](/docs/ref/linux/)
+Pigsty 运行在 **Linux** 操作系统上，它支持 **16** 种主流 Linux 发行版：[**兼容操作系统列表**](/docs/ref/linux/)
 
-我们推荐使用 **RockyLinux 10.1**、**Debian 13.5** 或 **Ubuntu 26.04.0 / 24.04.4** 作为默认操作系统选项。
+我们推荐使用 **RockyLinux 10.1**、**Debian 13.6** 或 **Ubuntu 26.04.0 / 24.04.4** 作为默认操作系统选项。
 
 在 MacOS 和 Windows 上，您可以用各种虚拟机软件或者 Docker systemd 镜像来安装 Pigsty。
 

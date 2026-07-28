@@ -47,7 +47,7 @@ all:
       vars: { pg_cluster: pg-test }
 
   vars:
-    version: v4.4.0
+    version: v4.5.0
     admin_ip: 10.10.10.10
     region: default
     pg_version: 18
@@ -89,6 +89,7 @@ all:
 10.10.10.10 minio-1
 ```
 
+`ha/full.yml` 还声明了三种 Redis 示例拓扑，并在 Infra 节点启用了 Docker 安装开关；标准 `deploy.yml` 不会部署这两个可选模块，需要按需另行执行 `./redis.yml` 与 `./docker.yml`。
 
 
 ----------------
@@ -107,7 +108,7 @@ Pigsty 提供了开箱即用的模板，您可以使用 [**Vagrant**](/docs/depl
 运行完整的 4 节点沙箱，您的机器应至少拥有 **4 核 CPU** 与 **8GB 内存**。
 
 ```bash
-cd ~/pigsty
+cd ~/pigsty/vagrant
 make full       # 使用默认 Ubuntu 24.04 镜像创建 4 节点沙箱
 make full9      # 使用 RockyLinux 9 创建 4 节点沙箱
 make full12     # 使用 Debian 12 创建 4 节点沙箱
@@ -115,52 +116,13 @@ make full24     # 使用 Ubuntu 24.04 创建 4 节点沙箱
 make full26     # 使用 Ubuntu 26.04 创建 4 节点沙箱
 ```
 
-Pigsty v4.4 统一使用 [**Vagrant Cloud**](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image) 上的 `cloud-image/*` Box。下表列出 4 节点本地沙箱可使用的 VirtualBox/libvirt 镜像版本。
-
-#### VirtualBox
-
-| 系统           | Vagrant Box                                                                                                |    `amd64` 版本     |    `arm64` 版本     |
-|--------------|------------------------------------------------------------------------------------------------------------|:-----------------:|:-----------------:|
-| Rocky 8      | [`cloud-image/rocky-8`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/rocky-8)           | `8.10.20240528.0` | `8.10.20240528.0` |
-| Rocky 9      | [`cloud-image/rocky-9`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/rocky-9)           | `9.7.20251123.2`  | `9.7.20251123.2`  |
-| Rocky 10     | [`cloud-image/rocky-10`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/rocky-10)         | `10.1.20251116.0` | `10.1.20251116.0` |
-| Debian 11    | [`cloud-image/debian-11`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/debian-11)       | `20260419.2453.0` | `20260419.2453.0` |
-| Debian 12    | [`cloud-image/debian-12`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/debian-12)       | `20260413.2447.0` | `20260413.2447.0` |
-| Debian 13    | [`cloud-image/debian-13`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/debian-13)       | `20260413.2447.0` | `20260413.2447.0` |
-| Ubuntu 22.04 | [`cloud-image/ubuntu-22.04`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/ubuntu-22.04) |  `20260320.0.0`   |  `20260320.0.0`   |
-| Ubuntu 24.04 | [`cloud-image/ubuntu-24.04`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/ubuntu-24.04) |  `20260323.0.0`   |  `20260323.0.0`   |
-| Ubuntu 26.04 | [`cloud-image/ubuntu-26.04`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/ubuntu-26.04) |  `20260421.0.0`   |  `20260421.0.0`   |
-| AlmaLinux 8  | [`cloud-image/almalinux-8`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/almalinux-8)   |  `8.10.20260414`  |  `8.10.20260414`  |
-| AlmaLinux 9  | [`cloud-image/almalinux-9`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/almalinux-9)   |  `9.7.20260414`   |  `9.7.20260414`   |
-| AlmaLinux 10 | [`cloud-image/almalinux-10`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/almalinux-10) | `10.1.20260414.0` | `10.1.20260414.0` |
-{.full-width}
-
-#### libvirt
-
-| 系统           | Vagrant Box                                                                                                |    `amd64` 版本     |    `arm64` 版本     |
-|--------------|------------------------------------------------------------------------------------------------------------|:-----------------:|:-----------------:|
-| Rocky 8      | [`cloud-image/rocky-8`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/rocky-8)           | `8.10.20240528.0` | `8.10.20240528.0` |
-| Rocky 9      | [`cloud-image/rocky-9`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/rocky-9)           | `9.7.20251123.2`  | `9.7.20251123.2`  |
-| Rocky 10     | [`cloud-image/rocky-10`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/rocky-10)         | `10.1.20251116.0` | `10.1.20251116.0` |
-| Debian 11    | [`cloud-image/debian-11`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/debian-11)       | `20260419.2453.0` | `20260419.2453.0` |
-| Debian 12    | [`cloud-image/debian-12`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/debian-12)       | `20260413.2447.0` | `20260413.2447.0` |
-| Debian 13    | [`cloud-image/debian-13`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/debian-13)       | `20260413.2447.0` | `20260413.2447.0` |
-| Ubuntu 22.04 | [`cloud-image/ubuntu-22.04`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/ubuntu-22.04) |  `20260320.0.0`   |  `20260320.0.0`   |
-| Ubuntu 24.04 | [`cloud-image/ubuntu-24.04`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/ubuntu-24.04) |  `20260323.0.0`   |  `20260323.0.0`   |
-| Ubuntu 26.04 | [`cloud-image/ubuntu-26.04`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/ubuntu-26.04) |  `20260421.0.0`   |  `20260421.0.0`   |
-| AlmaLinux 8  | [`cloud-image/almalinux-8`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/almalinux-8)   |  `8.10.20260414`  |  `8.10.20260414`  |
-| AlmaLinux 9  | [`cloud-image/almalinux-9`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/almalinux-9)   |  `9.7.20260414`   |  `9.7.20260414`   |
-| AlmaLinux 10 | [`cloud-image/almalinux-10`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/almalinux-10) | `10.1.20260414.0` | `10.1.20260414.0` |
-{.full-width}
-
-更多详情请参考 [**Vagrant**](/docs/deploy/vagrant/) 文档。
-
+当前 Vagrant 配置统一使用 [**Vagrant Cloud**](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image) 上的 `cloud-image/*` Box。可用镜像、源码固定的版本以及架构说明以 [**Vagrant 文档**](/docs/deploy/vagrant/#支持的镜像) 为准；未在源码中固定版本的 Box 会由 Vagrant 解析其当前可用版本。
 
 ### 云沙箱（Terraform）
 
 云沙箱使用公有云 API 创建虚拟机，可以轻松创建和销毁，按需付费，非常适合快速测试。
 
-使用 [`spec/aliyun-full.tf`](https://github.com/pgsty/pigsty/tree/main/terraform/spec/aliyun-full.tf) 模板在阿里云上创建 4 节点沙箱：
+使用 [`spec/aliyun-full.tf`](https://github.com/pgsty/pigsty/blob/main/terraform/spec/aliyun-full.tf) 模板在阿里云上创建 4 节点沙箱：
 
 ```bash
 cd ~/pigsty/terraform
@@ -178,6 +140,12 @@ terraform apply
 ## 其他规格
 
 除了标准的 4 节点沙箱，Pigsty 还提供了其他规格的环境：
+
+以下 Makefile 快捷目标均在 `~/pigsty/vagrant` 目录中执行：
+
+```bash
+cd ~/pigsty/vagrant
+```
 
 ### 单节点开发箱（meta）
 

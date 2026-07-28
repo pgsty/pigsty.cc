@@ -190,7 +190,7 @@ ssh <ip|alias> 'sudo ls'
 - 要访问 PostgreSQL 数据库服务，您必须允许 PostgreSQL 的 `5432` 入站访问。
 
 如果您通过其他端口访问 PostgreSQL 服务，请相应地允许它们。
-Pigsty 组件使用的端口列表，请参考：[**使用的端口**](/docs/node/)。
+Pigsty 组件使用的端口列表，请参考：[**使用的端口**](/docs/ref/port/)。
 
 - `5432`：PostgreSQL 数据库
 - `6432`：Pgbouncer 连接池
@@ -198,5 +198,4 @@ Pigsty 组件使用的端口列表，请参考：[**使用的端口**](/docs/nod
 - `5434`：PG 副本服务
 - `5436`：PG 默认服务
 - `5438`：PG 离线服务
-
 

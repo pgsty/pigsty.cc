@@ -137,7 +137,7 @@ Pigsty 提供了 [**`configure`**](https://github.com/pgsty/pigsty/blob/main/con
 
 ```bash
 vagrant@meta:~/pigsty$ ./configure
-configure pigsty v4.4.0 begin
+configure pigsty v4.5.0 begin
 [ OK ] region = china
 [ OK ] kernel  = Linux
 [ OK ] machine = x86_64
@@ -170,7 +170,7 @@ proceed with ./deploy.yml
 | 参数                      | 说明                                                               |
 |:------------------------|:-----------------------------------------------------------------|
 | `-c\|--conf`            | 用于指定使用的 [**配置模板**](/docs/conf/)，相对于 `conf/` 目录，不带 `.yml` 后缀的配置名称 |
-| `-v\|--version`         | 用于指定要安装的 PostgreSQL 大版本，如 `14`、`15`、`16`、`17`、`18`               |
+| `-v\|--version`         | 指定 PostgreSQL 大版本 `14`～`19`；PG19 当前为 Beta                        |
 | `-r\|--region`          | 用于指定上游软件源的区域，加速下载： (`default\|china\|europe`)                    |
 | `-n\|--non-interactive` | 直接使用命令行参数提供首要 IP 地址，跳过交互式向导                                      |
 | `-x\|--proxy`           | 使用当前环境变量配置 [`proxy_env`](/docs/infra/param#proxy_env) 变量         |
@@ -195,7 +195,7 @@ proceed with ./deploy.yml
 Pigsty 的 [**`deploy.yml`**](/docs/setup/playbook/) [**剧本**](/docs/setup/playbook/) 会将 [**配置**](#配置) 中生成的蓝图应用至 **所有的目标节点**。
 
 ```bash
-./deploy.yml     # 一次性在所有节点上完成部署
+./deploy.yml     # 一次性在所有目标节点上部署核心模块
 ```
 
 <details><summary>部署过程的样例输出</summary>
