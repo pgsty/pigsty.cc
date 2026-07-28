@@ -20,7 +20,7 @@ psql postgres://dbuser_meta:DBUser.Meta@10.10.10.10:5432/meta
 如果你在用容器跑 Pigsty (`cd docker/; make launch`)，使用 `make pass` 打印出 `dbuser_meta` 的密码
 
 ```bash
-psql postgres://dbuser_meta:X3f8aVbTChqPppgzn0fbaDpy@127.0.01:5432/meta
+psql postgres://dbuser_meta:X3f8aVbTChqPppgzn0fbaDpy@127.0.0.1:5432/meta
 ```
 
 只要确保可以连上即可。
@@ -43,7 +43,6 @@ juicefs mount "postgres://dbuser_meta:DBUser.Meta@10.10.10.10:5432/meta" ~/work 
 ```
 
 需要注意，JuiceFS 在 MacOS 上运行时默认使用 [MacFUSE](https://macfuse.github.io/) 作为底层文件系统驱动。
-
 
 
 
