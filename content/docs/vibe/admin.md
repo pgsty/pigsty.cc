@@ -31,8 +31,8 @@ journalctl -u jupyter -f
 
 `vibe_dir` 会在 `vibe_data` 下创建：
 
-- `CLAUDE.md`
-- `AGENTS.md`（指向 `CLAUDE.md` 的符号链接）
+- `AGENTS.md`：由角色模板渲染的上下文文件
+- `CLAUDE.md`：指向 `AGENTS.md` 的符号链接
 
 默认位置（可由 `vibe_data` 调整）：
 

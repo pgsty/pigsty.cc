@@ -80,7 +80,7 @@ codex_enabled: true
 
 ### `vibe_data`
 
-工作目录，Code-Server 与 JupyterLab 的默认根目录，`CLAUDE.md` 与 `AGENTS.md` 也会写入此处。
+工作目录，默认值为 `/fs`。Code-Server 与 JupyterLab 默认以此作为工作区根目录；`vibe_dir` 会在这里渲染 `AGENTS.md`，并创建指向它的 `CLAUDE.md` 符号链接。
 
 --------
 
@@ -88,11 +88,11 @@ codex_enabled: true
 
 ### `code_enabled`
 
-是否启用 Code-Server。
+是否启用 Code-Server，默认值为 `true`。
 
 ### `code_port`
 
-监听端口，绑定 `127.0.0.1`，由 Nginx `/code/` 转发。
+监听端口，默认值为 `8443`；绑定 `127.0.0.1`，由 Nginx `/code/` 转发。
 
 ### `code_data`
 
@@ -100,7 +100,7 @@ codex_enabled: true
 
 ### `code_password`
 
-登录密码，生产环境必须修改。
+登录密码，默认值为 `Vibe.Coding`，生产环境必须修改。
 
 ### `code_gallery`
 
@@ -126,11 +126,11 @@ codex_enabled: true
 
 ### `jupyter_password`
 
-访问 Token，写入 `c.IdentityProvider.token`。
+访问 Token，默认值为 `Vibe.Coding`，写入 `c.IdentityProvider.token`。
 
 ### `jupyter_venv`
 
-JupyterLab 使用的 Python venv 路径，需要预先创建（通常由 `NODE` 模块完成）。
+JupyterLab 使用的 Python venv 路径，默认值为 `/data/venv`，需要预先创建（通常由 `NODE` 模块完成）。
 
 --------
 
@@ -138,7 +138,7 @@ JupyterLab 使用的 Python venv 路径，需要预先创建（通常由 `NODE` 
 
 ### `nodejs_enabled`
 
-是否启用 Node.js。
+是否启用独立的 Node.js 安装任务，默认值为 `true`。
 
 ### `nodejs_registry`
 
@@ -155,7 +155,7 @@ Claude Code 与 Codex CLI 由各自的独立任务安装，不需要加入此列
 
 ### `claude_enabled`
 
-启用 Claude Code 安装与配置任务。`claude_install` 安装 CLI，`claude_config` 写入配置。
+启用 Claude Code 安装与配置任务，默认值为 `true`。`claude_install` 安装 CLI，`claude_config` 写入配置。
 
 ### `claude_package`
 

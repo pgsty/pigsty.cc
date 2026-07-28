@@ -48,7 +48,7 @@ all:
 - Code-Server 默认打开目录
 - JupyterLab `root_dir`
 - Claude Code 的工作目录
-- `CLAUDE.md` / `AGENTS.md` 上下文文件
+- 渲染 `AGENTS.md` 上下文文件，并创建指向它的 `CLAUDE.md` 符号链接
 
 `vibe_dir` 任务会创建目录并写入上下文文件，文件属主为 `node_user`。
 

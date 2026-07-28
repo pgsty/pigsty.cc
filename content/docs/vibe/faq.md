@@ -66,7 +66,8 @@ nginx -t
 ### 修改 JupyterLab Token
 
 ```bash
-./vibe.yml -l <host> -e jupyter_password='NewToken' -t jupyter_config,jupyter_launch
+./vibe.yml -l <host> -e jupyter_password='NewToken' -t jupyter_config
+ssh <host> sudo systemctl restart jupyter
 ```
 
 --------

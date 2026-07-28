@@ -40,7 +40,7 @@ VIBE 依赖 [`NODE`](/docs/node) 与 [`INFRA`](/docs/infra)：
 
 ```bash
 ./configure -c vibe
-./deploy.yml        # 部署 NODE + INFRA + PGSQL
+./deploy.yml        # 部署清单中已定义的 NODE、INFRA、ETCD、MINIO 与 PGSQL
 ./juice.yml         # 可选，部署共享存储
 ./vibe.yml          # 部署 VIBE
 ```

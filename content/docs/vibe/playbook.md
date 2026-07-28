@@ -87,11 +87,12 @@ vibe
 
 ```bash
 ./vibe.yml -l <host> -t code_config,code_launch
-./vibe.yml -l <host> -t jupyter_config,jupyter_launch
+./vibe.yml -l <host> -t jupyter_config
+ssh <host> sudo systemctl restart jupyter
 ./vibe.yml -l <host> -t claude_config
 ```
 
-禁用组件：
+在本次执行中跳过组件：
 
 ```bash
 ./vibe.yml -l <host> -e code_enabled=false
@@ -101,12 +102,16 @@ vibe
 ./vibe.yml -l <host> -e codex_enabled=false
 ```
 
+这些开关是任务执行条件：设为 `false` 只会跳过对应安装与配置任务，不会停止、禁用或卸载此前已经部署的服务/软件。若要退役 Code-Server 或 JupyterLab，需要另行执行 `systemctl disable --now code-server` 或 `systemctl disable --now jupyter`；VIBE 当前没有独立的移除剧本。
+
+Node.js 是 Claude Code 与 Codex CLI 的运行时依赖：只设置 `nodejs_enabled=false`，但 `claude_enabled` 或 `codex_enabled` 仍为 `true` 时，`nodejs` 阶段依然会执行。只有三个开关都为 `false` 时才会跳过 Node.js 阶段。
+
 --------
 
 ## 部署顺序
 
 ```bash
-./deploy.yml      # NODE + INFRA + PGSQL
+./deploy.yml      # 清单中已定义的 NODE、INFRA、ETCD、MINIO 与 PGSQL
 ./juice.yml       # 可选共享存储
 ./vibe.yml        # VIBE
 ```
