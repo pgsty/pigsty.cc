@@ -75,14 +75,16 @@ Pigsty 的 [**自签名 CA**](/docs/concept/sec/ca) 位于 Pigsty 主目录下�
 #  ^-----@infra                              # (local_user) 0755，infra 客户端证书
 #  ^-----@pgsql                              # (local_user) 0755，pgsql 服务器证书
 #  ^-----@mongo                              # (local_user) 0755，mongodb/ferretdb 服务器证书
-#  ^-----@mysql                              # (local_user) 0755，mysql 服务器证书（占位符）
+#  ^-----@kafka                              # (local_user) 0755，kafka 服务器证书
+#  ^-----@mysql                              # (local_user) 0755，mysql 服务器证书
 ```
 
 被 Pigsty 所管理的节点将安装以下证书文件：
 
 ```
 /etc/pki/ca.crt                             # root:root 0644，所有节点都添加的根证书
-/etc/pki/ca-trust/source/anchors/ca.crt     # 软链接到系统受信任的锚点
+/etc/pki/ca-trust/source/anchors/ca.crt     # EL 系统受信任锚点
+/usr/local/share/ca-certificates/ca.crt     # Debian/Ubuntu 系统受信任锚点
 ```
 
 所有 infra 节点都会有以下证书：
@@ -162,7 +164,7 @@ rsync -avz ./ meta-2:~/pigsty
 
 节点的数据目录由参数 [`node_data`](/docs/node/param#node_data) 指定，默认为 `/data`，由 `root:root` 持有，权限为 `0755`。
 
-每个组件的默认数据目录都位于这个数据库目录下，如下所示：
+多数核心组件的默认数据目录位于这个目录下；个别试点模块使用自身固定目录，如原生 MySQL 8.4 当前使用 `/var/lib/mysql`：
 
 ```bash
 /data                                 # root:root 0755
@@ -173,6 +175,7 @@ rsync -avz ./ meta-2:~/pigsty
 #  ^-----@etcd                        # etcd:etcd 0700（etcd_data）
 #  ^-----@infra                       # root:infra 0771（infra 模块数据目录）
 #  ^-----@docker                      # root:root 0755（Docker 数据目录）
+#  ^-----@kafka                       # kafka:kafka 0700（kafka_data）
 #  ^-----@...                         # 其他组件的数据目录
 ```
 

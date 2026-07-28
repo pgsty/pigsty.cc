@@ -9,48 +9,60 @@ categories: [参考]
 
 以下为 Pigsty 中各模块组件使用的默认端口及其对应参数，您可以按需调整，或者作为内部防火墙精细配置的参考。
 
-|              模块              |                组件                |   端口    | 参数                                                                           | 状态      |
-|:----------------------------:|:--------------------------------:|:-------:|:-----------------------------------------------------------------------------|---------|
-|   [**`NODE`**](/docs/node)   |       **`node_exporter`**        | `9100`  | [**`node_exporter_port`**](/docs/node/param#node_exporter_port)              | ✅ 默认启用  |
-|   [**`NODE`**](/docs/node)   |          **`haproxy`**           | `9101`  | [**`haproxy_exporter_port`**](/docs/node/param#haproxy_exporter_port)        | ✅ 默认启用  |
-|   [**`NODE`**](/docs/node)   |           **`vector`**           | `9598`  | [**`vector_port`**](/docs/node/param#vector_port)                            | ✅ 默认启用  |
-|   [**`NODE`**](/docs/node)   |    **`keepalived_exporter`**     | `9650`  | [**`vip_exporter_port`**](/docs/node/param#vip_exporter_port)                | ⚠️ 按需启用 |
-|   [**`NODE`**](/docs/node)   |          **`chronyd`**           |  `123`  | -                                                                            | ✅ 默认启用  |
-| [**`DOCKER`**](/docs/docker) |           **`docker`**           | `9323`  | [**`docker_exporter_port`**](/docs/docker/param#docker_exporter_port)        | ⚠️ 按需启用 |
-|  [**`INFRA`**](/docs/infra)  |           **`nginx`**            |  `80`   | [**`nginx_port`**](/docs/infra/param#nginx_port)                             | ✅ 默认启用  |
-|  [**`INFRA`**](/docs/infra)  |           **`nginx`**            |  `443`  | [**`nginx_ssl_port`**](/docs/infra/param#nginx_ssl_port)                     | ✅ 默认启用  |
-|  [**`INFRA`**](/docs/infra)  |      **`nginx_exporter`**        | `9113`  | [**`nginx_exporter_port`**](/docs/infra/param#nginx_exporter_port)           | ✅ 默认启用  |
-|  [**`INFRA`**](/docs/infra)  |          **`grafana`**           | `3000`  | [**`grafana_port`**](/docs/infra/param#grafana_port)                         | ✅ 默认启用  |
-|  [**`INFRA`**](/docs/infra)  |      **`victoriaMetrics`**       | `8428`  | [**`vmetrics_port`**](/docs/infra/param#vmetrics_port)                       | ✅ 默认启用  |
-|  [**`INFRA`**](/docs/infra)  |        **`victoriaLogs`**        | `9428`  | [**`vlogs_port`**](/docs/infra/param#vlogs_port)                             | ✅ 默认启用  |
-|  [**`INFRA`**](/docs/infra)  |       **`victoriaTraces`**       | `10428` | [**`vtraces_port`**](/docs/infra/param#vtraces_port)                         | ✅ 默认启用  |
-|  [**`INFRA`**](/docs/infra)  |          **`vmalert`**           | `8880`  | [**`vmalert_port`**](/docs/infra/param#vmalert_port)                         | ✅ 默认启用  |
-|  [**`INFRA`**](/docs/infra)  |        **`alertmanager`**        | `9059`  | [**`alertmanager_port`**](/docs/infra/param#alertmanager_port)               | ✅ 默认启用  |
-|  [**`INFRA`**](/docs/infra)  |     **`blackbox_exporter`**      | `9115`  | [**`blackbox_port`**](/docs/infra/param#blackbox_port)                       | ✅ 默认启用  |
-|  [**`INFRA`**](/docs/infra)  |          **`dnsmasq`**           |  `53`   | [**`dns_port`**](/docs/infra/param#dns_port)                                 | ✅ 默认启用  |
-|   [**`ETCD`**](/docs/etcd)   |            **`etcd`**            | `2379`  | [**`etcd_port`**](/docs/etcd/param#etcd_port)                                | ✅ 默认启用  |
-|   [**`ETCD`**](/docs/etcd)   |            **`etcd`**            | `2380`  | [**`etcd_peer_port`**](/docs/etcd/param#etcd_peer_port)                      | ✅ 默认启用  |
-|  [**`MINIO`**](/docs/minio)  |           **`minio`**            | `9000`  | [**`minio_port`**](/docs/minio/param#minio_port)                             | ✅ 默认启用  |
-|  [**`MINIO`**](/docs/minio)  |           **`minio`**            | `9001`  | [**`minio_admin_port`**](/docs/minio/param#minio_admin_port)                 | ✅ 默认启用  |
-|  [**`REDIS`**](/docs/redis)  |           **`redis`**            | `6379`  | [**`redis_instances`**](/docs/redis/param#redis_instances)                   | ⚠️ 按需启用 |
-|  [**`REDIS`**](/docs/redis)  |       **`redis_exporter`**       | `9121`  | [**`redis_exporter_port`**](/docs/redis/param#redis_exporter_port)           | ⚠️ 按需启用 |
-| [**`FERRET`**](/docs/ferret) |          **`ferretdb`**          | `27017` | [**`mongo_port`**](/docs/ferret/param#mongo_port)                            | ⚠️ 按需启用 |
-| [**`FERRET`**](/docs/ferret) |      **`ferretdb (TLS)`**        | `27018` | [**`mongo_ssl_port`**](/docs/ferret/param#mongo_ssl_port)                    | ⚠️ 按需启用 |
-| [**`FERRET`**](/docs/ferret) |       **`mongo_exporter`**       | `9216`  | [**`mongo_exporter_port`**](/docs/ferret/param#mongo_exporter_port)          | ✅ 默认启用  |
-|   [**`VIBE`**](/docs/vibe)   |         **`code-server`**        | `8443`  | [**`code_port`**](/docs/vibe/param#code_port)                                | ⚠️ 按需启用 |
-|   [**`VIBE`**](/docs/vibe)   |         **`jupyterlab`**         | `8888`  | [**`jupyter_port`**](/docs/vibe/param#jupyter_port)                          | ⚠️ 按需启用 |
-|  [**`PGSQL`**](/docs/pgsql)  |          **`postgres`**          | `5432`  | [**`pg_port`**](/docs/pgsql/param#pg_port)                                   | ✅ 默认启用  |
-|  [**`PGSQL`**](/docs/pgsql)  |         **`pgbouncer`**          | `6432`  | [**`pgbouncer_port`**](/docs/pgsql/param#pgbouncer_port)                     | ✅ 默认启用  |
-|  [**`PGSQL`**](/docs/pgsql)  |          **`patroni`**           | `8008`  | [**`patroni_port`**](/docs/pgsql/param#patroni_port)                         | ✅ 默认启用  |
-|  [**`PGSQL`**](/docs/pgsql)  |        **`pg_exporter`**         | `9630`  | [**`pg_exporter_port`**](/docs/pgsql/param#pg_exporter_port)                 | ✅ 默认启用  |
-|  [**`PGSQL`**](/docs/pgsql)  |     **`pgbouncer_exporter`**     | `9631`  | [**`pgbouncer_exporter_port`**](/docs/pgsql/param#pgbouncer_exporter_port)   | ✅ 默认启用  |
-|  [**`PGSQL`**](/docs/pgsql)  |    **`pgbackrest_exporter`**     | `9854`  | [**`pgbackrest_exporter_port`**](/docs/pgsql/param#pgbackrest_exporter_port) | ✅ 默认启用  |
-|  [**`PGSQL`**](/docs/pgsql)  |  **`{{ pg_cluster }}-primary`**  | `5433`  | [**`pg_default_services`**](/docs/pgsql/param#pg_default_services)           | ✅ 默认启用  |
-|  [**`PGSQL`**](/docs/pgsql)  |  **`{{ pg_cluster }}-replica`**  | `5434`  | [**`pg_default_services`**](/docs/pgsql/param#pg_default_services)           | ✅ 默认启用  |
-|  [**`PGSQL`**](/docs/pgsql)  |  **`{{ pg_cluster }}-default`**  | `5436`  | [**`pg_default_services`**](/docs/pgsql/param#pg_default_services)           | ✅ 默认启用  |
-|  [**`PGSQL`**](/docs/pgsql)  |  **`{{ pg_cluster }}-offline`**  | `5438`  | [**`pg_default_services`**](/docs/pgsql/param#pg_default_services)           | ✅ 默认启用  |
-|  [**`PGSQL`**](/docs/pgsql)  | **`{{ pg_cluster }}-<service>`** | `543x`  | [**`pg_services`**](/docs/pgsql/param#pg_services)                           | ⚠️ 按需启用 |
+|                模块                 |                组件                |   端口    | 参数                                                                           | 状态       |
+|:---------------------------------:|:--------------------------------:|:-------:|:-----------------------------------------------------------------------------|----------|
+|     [**`NODE`**](/docs/node)      |       **`node_exporter`**        | `9100`  | [**`node_exporter_port`**](/docs/node/param#node_exporter_port)              | ✅ 默认启用   |
+|     [**`NODE`**](/docs/node)      |          **`haproxy`**           | `9101`  | [**`haproxy_exporter_port`**](/docs/node/param#haproxy_exporter_port)        | ✅ 默认启用   |
+|     [**`NODE`**](/docs/node)      |           **`vector`**           | `9598`  | [**`vector_port`**](/docs/node/param#vector_port)                            | ✅ 默认启用   |
+|     [**`NODE`**](/docs/node)      |    **`keepalived_exporter`**     | `9650`  | [**`vip_exporter_port`**](/docs/node/param#vip_exporter_port)                | ⚠️ 按需启用  |
+|     [**`NODE`**](/docs/node)      |          **`chronyd`**           |  `123`  | -                                                                            | ✅ 默认启用   |
+|   [**`DOCKER`**](/docs/docker)    |           **`docker`**           | `9323`  | [**`docker_exporter_port`**](/docs/docker/param#docker_exporter_port)        | ⚠️ 按需启用  |
+|    [**`INFRA`**](/docs/infra)     |           **`nginx`**            |  `80`   | [**`nginx_port`**](/docs/infra/param#nginx_port)                             | ✅ 默认启用   |
+|    [**`INFRA`**](/docs/infra)     |           **`nginx`**            |  `443`  | [**`nginx_ssl_port`**](/docs/infra/param#nginx_ssl_port)                     | ✅ 默认启用   |
+|    [**`INFRA`**](/docs/infra)     |       **`nginx_exporter`**       | `9113`  | [**`nginx_exporter_port`**](/docs/infra/param#nginx_exporter_port)           | ✅ 默认启用   |
+|    [**`INFRA`**](/docs/infra)     |          **`grafana`**           | `3000`  | [**`grafana_port`**](/docs/infra/param#grafana_port)                         | ✅ 默认启用   |
+|    [**`INFRA`**](/docs/infra)     |      **`victoriaMetrics`**       | `8428`  | [**`vmetrics_port`**](/docs/infra/param#vmetrics_port)                       | ✅ 默认启用   |
+|    [**`INFRA`**](/docs/infra)     |        **`victoriaLogs`**        | `9428`  | [**`vlogs_port`**](/docs/infra/param#vlogs_port)                             | ✅ 默认启用   |
+|    [**`INFRA`**](/docs/infra)     |       **`victoriaTraces`**       | `10428` | [**`vtraces_port`**](/docs/infra/param#vtraces_port)                         | ✅ 默认启用   |
+|    [**`INFRA`**](/docs/infra)     |          **`vmalert`**           | `8880`  | [**`vmalert_port`**](/docs/infra/param#vmalert_port)                         | ✅ 默认启用   |
+|    [**`INFRA`**](/docs/infra)     |        **`alertmanager`**        | `9059`  | [**`alertmanager_port`**](/docs/infra/param#alertmanager_port)               | ✅ 默认启用   |
+|    [**`INFRA`**](/docs/infra)     |     **`blackbox_exporter`**      | `9115`  | [**`blackbox_port`**](/docs/infra/param#blackbox_port)                       | ✅ 默认启用   |
+|    [**`INFRA`**](/docs/infra)     |          **`dnsmasq`**           |  `53`   | [**`dns_port`**](/docs/infra/param#dns_port)                                 | ✅ 默认启用   |
+|     [**`ETCD`**](/docs/etcd)      |            **`etcd`**            | `2379`  | [**`etcd_port`**](/docs/etcd/param#etcd_port)                                | ✅ 默认启用   |
+|     [**`ETCD`**](/docs/etcd)      |            **`etcd`**            | `2380`  | [**`etcd_peer_port`**](/docs/etcd/param#etcd_peer_port)                      | ✅ 默认启用   |
+|    [**`MINIO`**](/docs/minio)     |           **`minio`**            | `9000`  | [**`minio_port`**](/docs/minio/param#minio_port)                             | ✅ 默认启用   |
+|    [**`MINIO`**](/docs/minio)     |           **`minio`**            | `9001`  | [**`minio_admin_port`**](/docs/minio/param#minio_admin_port)                 | ✅ 默认启用   |
+|    [**`REDIS`**](/docs/redis)     |           **`redis`**            | `6379`  | [**`redis_instances`**](/docs/redis/param#redis_instances)                   | ⚠️ 按需启用  |
+|    [**`REDIS`**](/docs/redis)     |       **`redis_exporter`**       | `9121`  | [**`redis_exporter_port`**](/docs/redis/param#redis_exporter_port)           | ⚠️ 按需启用  |
+|   [**`FERRET`**](/docs/ferret)    |          **`ferretdb`**          | `27017` | [**`mongo_port`**](/docs/ferret/param#mongo_port)                            | ⚠️ 按需启用  |
+|   [**`FERRET`**](/docs/ferret)    |       **`ferretdb (TLS)`**       | `27018` | [**`mongo_ssl_port`**](/docs/ferret/param#mongo_ssl_port)                    | ⚠️ 按需启用  |
+|   [**`FERRET`**](/docs/ferret)    |       **`mongo_exporter`**       | `9216`  | [**`mongo_exporter_port`**](/docs/ferret/param#mongo_exporter_port)          | ✅ 默认启用   |
+|     [**`VIBE`**](/docs/vibe)      |        **`code-server`**         | `8443`  | [**`code_port`**](/docs/vibe/param#code_port)                                | ⚠️ 按需启用  |
+|     [**`VIBE`**](/docs/vibe)      |         **`jupyterlab`**         | `8888`  | [**`jupyter_port`**](/docs/vibe/param#jupyter_port)                          | ⚠️ 按需启用  |
+|    [**`KAFKA`**](/docs/kafka)     |           **`broker`**           | `9092`  | [**`kafka_port`**](/docs/kafka/param#kafka_port)                             | 🧪 BETA  |
+|    [**`KAFKA`**](/docs/kafka)     |      **`KRaft controller`**      | `9093`  | [**`kafka_controller_port`**](/docs/kafka/param#kafka_controller_port)       | 🧪 BETA  |
+|    [**`KAFKA`**](/docs/kafka)     |       **`kafka_exporter`**       | `9308`  | [**`kafka_exporter_port`**](/docs/kafka/param#kafka_exporter_port)           | 🧪 BETA  |
+|    [**`KAFKA`**](/docs/kafka)     |        **`JMX exporter`**        | `9404`  | [**`kafka_jmx_exporter_port`**](/docs/kafka/param#kafka_jmx_exporter_port)   | 🧪 BETA  |
+| [**`MYSQL`**](/docs/pilot/mysql/) |           **`mysqld`**           | `3306`  | 固定值（当前试点不提供端口参数）                                                             | 🧪 PILOT |
+| [**`MYSQL`**](/docs/pilot/mysql/) |      **`MySQL X Protocol`**      | `33060` | 固定值；单节点仅绑定回环地址，三节点拓扑对成员地址监听                                                  | 🧪 PILOT |
+| [**`MYSQL`**](/docs/pilot/mysql/) |     **`Group Replication`**      | `33061` | 固定值；仅三节点 InnoDB Cluster                                                      | 🧪 PILOT |
+| [**`MYSQL`**](/docs/pilot/mysql/) |      **`MySQL Router RW`**       | `6446`  | 固定值；仅三节点 InnoDB Cluster                                                      | 🧪 PILOT |
+| [**`MYSQL`**](/docs/pilot/mysql/) |      **`MySQL Router RO`**       | `6447`  | 固定值；仅三节点 InnoDB Cluster                                                      | 🧪 PILOT |
+| [**`MYSQL`**](/docs/pilot/mysql/) |      **`mysqld_exporter`**       | `9104`  | 固定值；受 `mysql_exporter_enabled` 控制                                            | 🧪 PILOT |
+|    [**`PGSQL`**](/docs/pgsql)     |          **`postgres`**          | `5432`  | [**`pg_port`**](/docs/pgsql/param#pg_port)                                   | ✅ 默认启用   |
+|    [**`PGSQL`**](/docs/pgsql)     |         **`pgbouncer`**          | `6432`  | [**`pgbouncer_port`**](/docs/pgsql/param#pgbouncer_port)                     | ✅ 默认启用   |
+|    [**`PGSQL`**](/docs/pgsql)     |          **`patroni`**           | `8008`  | [**`patroni_port`**](/docs/pgsql/param#patroni_port)                         | ✅ 默认启用   |
+|    [**`PGSQL`**](/docs/pgsql)     |        **`pg_exporter`**         | `9630`  | [**`pg_exporter_port`**](/docs/pgsql/param#pg_exporter_port)                 | ✅ 默认启用   |
+|    [**`PGSQL`**](/docs/pgsql)     |     **`pgbouncer_exporter`**     | `9631`  | [**`pgbouncer_exporter_port`**](/docs/pgsql/param#pgbouncer_exporter_port)   | ✅ 默认启用   |
+|    [**`PGSQL`**](/docs/pgsql)     |    **`pgbackrest_exporter`**     | `9854`  | [**`pgbackrest_exporter_port`**](/docs/pgsql/param#pgbackrest_exporter_port) | ✅ 默认启用   |
+|    [**`PGSQL`**](/docs/pgsql)     |  **`{{ pg_cluster }}-primary`**  | `5433`  | [**`pg_default_services`**](/docs/pgsql/param#pg_default_services)           | ✅ 默认启用   |
+|    [**`PGSQL`**](/docs/pgsql)     |  **`{{ pg_cluster }}-replica`**  | `5434`  | [**`pg_default_services`**](/docs/pgsql/param#pg_default_services)           | ✅ 默认启用   |
+|    [**`PGSQL`**](/docs/pgsql)     |  **`{{ pg_cluster }}-default`**  | `5436`  | [**`pg_default_services`**](/docs/pgsql/param#pg_default_services)           | ✅ 默认启用   |
+|    [**`PGSQL`**](/docs/pgsql)     |  **`{{ pg_cluster }}-offline`**  | `5438`  | [**`pg_default_services`**](/docs/pgsql/param#pg_default_services)           | ✅ 默认启用   |
+|    [**`PGSQL`**](/docs/pgsql)     | **`{{ pg_cluster }}-<service>`** | `543x`  | [**`pg_services`**](/docs/pgsql/param#pg_services)                           | ⚠️ 按需启用  |
 {.full-width}
+
+原生 MySQL 试点的 MySQL Shell AdminAPI 复用 `3306`，XtraBackup 由本机 Systemd 定时任务调用，没有独立监听端口；MySQL Router 的 REST 管理接口被角色显式禁用。上表只列出当前角色实际管理的网络入口。
 
 
 ## 公网开放端口建议
@@ -60,7 +72,7 @@ categories: [参考]
 - 最小管理面：`22, 80, 443`（推荐）
 - 需要公网直连数据库：额外开放 `5432`
 
-不建议直接对公网开放：`etcd`（`2379/2380`）、`patroni`（`8008`）、各类 exporter（`9xxx`）、`minio`（`9000/9001`）、`redis`（`6379`）、`ferretdb`（`27017/27018`）等内部组件端口。
+不建议直接对公网开放：`etcd`（`2379/2380`）、`patroni`（`8008`）、各类 exporter（`9xxx`）、`minio`（`9000/9001`）、`redis`（`6379`）、`ferretdb`（`27017/27018`）、Kafka（`9092/9093`）及 MySQL Group Replication（`33061`）等内部组件端口。
 
 ```yaml
 node_firewall_mode: zone

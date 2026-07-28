@@ -16,14 +16,14 @@ categories: [参考]
 |:-----------------------------:|:------:|:-----:|:---------------:|:----------------------------------------------------------|
 |  [**`PGSQL`**](/docs/pgsql)   | **核心** |  GA   |  `/docs/pgsql`  | 高可用 PostgreSQL 集群，内置备份、监控、SOP 与扩展生态。                      |
 |  [**`INFRA`**](/docs/infra)   | **核心** |  GA   |  `/docs/infra`  | 本地软件仓库 + VictoriaMetrics/Logs/Traces + Grafana 等基础设施。     |
-|   [**`NODE`**](/docs/node)    | **核心** |  GA   |  `/docs/node`   | 节点初始化与收敛：系统调优、管理员、HAProxy、Vector、Docker 等。                |
+|   [**`NODE`**](/docs/node)    | **核心** |  GA   |  `/docs/node`   | 节点初始化与收敛：系统调优、管理员、HAProxy、Vector、Keepalived 等。             |
 |   [**`ETCD`**](/docs/etcd)    | **核心** |  GA   |  `/docs/etcd`   | PostgreSQL 高可用 DCS（服务发现、配置、选主元数据）。                        |
 |  [**`MINIO`**](/docs/minio)   |   扩展   |  GA   |  `/docs/minio`  | S3 兼容对象存储，可作为 PostgreSQL 备份仓库。                            |
 |  [**`REDIS`**](/docs/redis)   |   扩展   |  GA   |  `/docs/redis`  | Redis 独立/哨兵/集群模式部署与监控。                                    |
 | [**`FERRET`**](/docs/ferret)  |   扩展   |  GA   | `/docs/ferret`  | FerretDB 模块（`MONGO` API 兼容），为 PG 提供 MongoDB 协议访问。         |
 | [**`DOCKER`**](/docs/docker)  |   扩展   |  GA   | `/docs/docker`  | Docker Daemon 及容器化应用运行基础能力。                               |
 |  [**`JUICE`**](/docs/juice)   |   扩展   | BETA  |  `/docs/juice`  | JuiceFS 分布式文件系统，使用 PostgreSQL 作为元数据引擎。                    |
-|   [**`VIBE`**](/docs/vibe)    |   扩展   | BETA  |  `/docs/vibe`   | 浏览器化开发环境，集成 Code-Server、JupyterLab、Node.js 与 Claude Code。 |
+|   [**`VIBE`**](/docs/vibe)    |   扩展   | BETA  |  `/docs/vibe`   | 浏览器化开发环境，集成 Code-Server、JupyterLab、Node.js、Claude Code 与 Codex CLI。 |
 |  [**`KAFKA`**](/docs/kafka)   |   扩展   | BETA  |  `/docs/kafka`  | Apache Kafka 4.x dynamic KRaft 集群部署、安全基线与监控。               |
 {.stretch-last}
 
@@ -36,7 +36,7 @@ Pigsty 提供了四个 <span class="text-primary"><b>基础</b></span> 功能模
 
 - [**`PGSQL`**](/docs/pgsql)：带有高可用，时间点恢复，IaC，SOP，监控系统，以及 [**555**](/ext/list/) 个扩展插件的自治的 PostgreSQL 集群。
 - [**`INFRA`**](/docs/infra)：本地软件仓库、VictoriaMetrics、VictoriaLogs、VictoriaTraces、Grafana、Alertmanager、Blackbox Exporter...
-- [**`NODE`**](/docs/node)：调整节点到所需状态、名称、时区、NTP、ssh、sudo、haproxy、docker、vector、keepalived
+- [**`NODE`**](/docs/node)：调整节点到所需状态、名称、时区、NTP、SSH、sudo、HAProxy、Vector、Keepalived
 - [**`ETCD`**](/docs/etcd)：分布式键值存储，用作高可用 Postgres 集群的 DCS：共识选主/配置管理/服务发现。
 
 尽管这四个模块通常会同时安装，但单独使用也是可行的 —— 只有 NODE 模块通常是必选的。
@@ -53,7 +53,7 @@ Pigsty 提供了七个 <span class="text-secondary"><b>扩展</b></span> 功能�
 - [**`MONGO`**](/docs/ferret)：FerretDB 原生部署支持 —— 它为 PostgreSQL 添加了 MongoDB 线缆协议级别的 API 兼容支持！
 - [**`DOCKER`**](/docs/docker)：Docker Daemon 服务，允许用户一键拉起容器化的无状态软件工具模板，为 Pigsty 加装各种功能！
 - [**`JUICE`**](/docs/juice)：JuiceFS 分布式文件系统模块，以 PostgreSQL 作为元数据引擎，提供可共享的 POSIX 存储能力。
-- [**`VIBE`**](/docs/vibe)：浏览器化开发环境模块，集成 Code-Server、JupyterLab、Node.js 与 Claude Code，开箱即用。
+- [**`VIBE`**](/docs/vibe)：浏览器化开发环境模块，集成 Code-Server、JupyterLab、Node.js、Claude Code 与 Codex CLI。
 - [**`KAFKA`**](/docs/kafka)：Apache Kafka 4.x dynamic KRaft 集群，提供 TLS/SCRAM/ACL 安全基线、声明式 Topic/User 与完整监控。
 
 
@@ -65,6 +65,7 @@ Pigsty 提供了七个 <span class="text-secondary"><b>扩展</b></span> 功能�
 
 - [**`SUPABASE`**](/docs/pgsql/kernel/supabase)、[**`DUCKDB`**](/docs/pilot/duckdb)：外围生态整合能力。
 - [**`MSSQL`**](/docs/pgsql/kernel/babelfish)、[**`IVORY`**](/docs/pgsql/kernel/ivorysql)、[**`POLAR`**](/docs/pgsql/kernel/polardb)、[**`CITUS`**](/docs/pgsql/kernel/citus)、[**`CLOUDBERRY`**](/docs/pgsql/kernel/cloudberry)、[**`PGEDGE`**](/docs/pgsql/kernel/pgedge)：内核替代、分布式与 MPP 形态。
-- [**`MYSQL`**](/docs/pgsql/kernel/openhalo)、[**`ORIOLE`**](/docs/pgsql/kernel/orioledb)、[**`PGTDE`**](/docs/pgsql/kernel/percona)、[**`AGENS`**](/docs/pgsql/kernel/agensgraph)：协议兼容、存储引擎、透明加密与图数据库内核。
+- [**`MYSQL` 兼容内核（OpenHalo）**](/docs/pgsql/kernel/openhalo)、[**`ORIOLE`**](/docs/pgsql/kernel/orioledb)、[**`PGTDE`**](/docs/pgsql/kernel/percona)、[**`AGENS`**](/docs/pgsql/kernel/agensgraph)：协议兼容、存储引擎、透明加密与图数据库内核。这里的 `MYSQL` 是 `pg_mode=mysql` 的 PostgreSQL 兼容内核，不是原生 MySQL 服务。
 - [**`GREENPLUM`**](/docs/pgsql/kernel/greenplum)、[**`NEON`**](/docs/pgsql/kernel/neon)：保留历史文档，不再作为默认开放能力。
-- [**`KUBE`**](/docs/pilot/kube/)、[**`VICTORIA`**](/blog/db/victoria-stack/)、[**`JUPYTER`**](/docs/app/jupyter/)：试点模块，当前不对外开放使用。
+- [**`MYSQL` 原生试点**](/docs/pilot/mysql/)：当前 `mysql.yml` / `mysql-rm.yml` 与 `roles/mysql*` 管理固定的原生 MySQL 8.4 平台，支持单节点或三节点单主 InnoDB Cluster；仍为 PILOT，不计入上述 11 个正式模块。
+- [**`KUBE`**](/docs/pilot/kube/)、[**`VICTORIA`**](/blog/db/victoria-stack/)、[**`JUPYTER`**](/docs/app/jupyter/)：其他试点模块，当前不对外开放使用。

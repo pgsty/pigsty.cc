@@ -22,6 +22,8 @@ categories: [参考]
 | [**`DOCKER`**](/docs/docker/playbook) | 1  | `docker.yml`                                                                                                                    |
 | [**`JUICE`**](/docs/juice/playbook)   | 1  | `juice.yml`                                                                                                                     |
 | [**`VIBE`**](/docs/vibe/playbook)     | 1  | `vibe.yml`                                                                                                                      |
+| [**`KAFKA`**](/docs/kafka/playbook)   | 2  | `kafka.yml` `kafka-rm.yml`                                                                                                      |
+| [**`MYSQL`（试点）**](/docs/pilot/mysql/) | 2  | `mysql.yml` `mysql-rm.yml`                                                                                                      |
 {.full-width}
 
 --------
@@ -52,6 +54,10 @@ categories: [参考]
 | [**`docker.yml`**](/docs/docker/playbook#dockeryml)                  | `DOCKER` | Docker 引擎部署                                  |
 | [**`juice.yml`**](/docs/juice/playbook#juiceyml)                     | `JUICE`  | JuiceFS 实例部署/移除                              |
 | [**`vibe.yml`**](/docs/vibe/playbook#vibeyml)                        |  `VIBE`  | VIBE 开发环境部署                                  |
+| [**`kafka.yml`**](/docs/kafka/playbook#kafkayml)                     | `KAFKA`  | 创建或收敛完整的 dynamic KRaft 集群                    |
+| [**`kafka-rm.yml`**](/docs/kafka/playbook#kafka-rmyml)               | `KAFKA`  | 移除 Kafka 集群，或安全退役单个成员                        |
+| [**`mysql.yml`**](/docs/pilot/mysql/)                                | `MYSQL`  | 收敛原生 MySQL 8.4 单节点或三节点 InnoDB Cluster（试点）    |
+| [**`mysql-rm.yml`**](/docs/pilot/mysql/)                             | `MYSQL`  | 停止/退役原生 MySQL 实例或集群并保留本地状态（试点）               |
 {.full-width}
 
 --------
@@ -79,8 +85,11 @@ categories: [参考]
 - **PGSQL**: [**`pg_safeguard`**](/docs/pgsql/param#pg_safeguard) 参数用于防止误删 PostgreSQL 集群
 - **ETCD**: [**`etcd_safeguard`**](/docs/etcd/param#etcd_safeguard) 参数用于防止误删 Etcd 集群
 - **MINIO**: [**`minio_safeguard`**](/docs/minio/param#minio_safeguard) 参数用于防止误删 MinIO 集群
+- **REDIS**: [**`redis_safeguard`**](/docs/redis/param#redis_safeguard) 参数用于防止误删 Redis 实例
+- **KAFKA**: [**`kafka_safeguard`**](/docs/kafka/playbook#kafka-rmyml) 参数用于阻止 Kafka 移除剧本
+- **MYSQL（试点）**: [`mysql_safeguard`](/docs/pilot/mysql/) 与精确匹配的 `mysql_rm_confirm` 共同保护原生 MySQL 退役流程
 
-默认情况下，这些 safeguard 参数均未启用（未定义）。建议在生产环境中为已初始化的集群显式设置为 `true`。
+PGSQL、ETCD、MINIO、REDIS 与 KAFKA 的角色默认值均显式为 `false`；生产环境可在已初始化的集群上设置为 `true`。原生 MySQL 试点相反：`mysql_safeguard` 默认是 `true`，且即使显式关闭，也必须提供与目标实例或集群完全一致的 `mysql_rm_confirm`。
 
 当保护开关设置为 `true` 时，对应的 `*-rm.yml` 剧本会立即中止执行，防止误删。可以通过命令行参数强制覆盖：
 
@@ -88,6 +97,9 @@ categories: [参考]
 ./pgsql-rm.yml -l pg-test -e pg_safeguard=false
 ./etcd-rm.yml  -l etcd    -e etcd_safeguard=false
 ./minio-rm.yml -l minio   -e minio_safeguard=false
+./redis-rm.yml -l redis-test -e redis_safeguard=false
+./kafka-rm.yml -l kf-main -e kafka_safeguard=false
+./mysql-rm.yml -l my-test -e mysql_safeguard=false -e mysql_rm_confirm=my-test
 ```
 
 
@@ -132,10 +144,10 @@ categories: [参考]
 ### INFRA 模块
 
 ```bash
-./deploy.yml                     # 一次性完整部署 Pigsty
+./deploy.yml                     # 一次性部署核心链路
 ./infra.yml                      # 初始化基础设施
 ./infra-rm.yml                   # 移除基础设施
-./cache.yml                      # 从现有仓库创建离线安装包
+./cache.yml -l <infra-host>      # 从指定 Infra 节点的现有仓库创建离线安装包
 ./cert.yml -e cn=<name>          # 签发客户端证书
 ```
 
@@ -203,3 +215,27 @@ bin/pgmon-add <cls>              # 监控远程集群 (包装脚本)
 ./docker.yml -l <host>           # 安装 Docker
 ./app.yml -e app=<name>          # 部署 Docker Compose 应用
 ```
+
+### KAFKA 模块
+
+```bash
+./kafka.yml -l <cls>             # 创建/收敛完整 Kafka 集群
+./kafka.yml -l <cls> --check     # 只读预检
+./kafka-rm.yml -l <cls>          # 移除完整集群
+./kafka-rm.yml -l <ip>           # 从集群退役单个成员
+```
+
+普通收敛的 `-l` 必须包含所选 Kafka 集群的全部已声明成员；`kafka-rm.yml` 才支持选择单个成员执行退役。
+
+### MYSQL 试点模块
+
+```bash
+./mysql.yml -l <cls> --check
+./mysql.yml -l <cls>             # 只接受完整的 1 或 3 成员集群范围
+./mysql-rm.yml -l <instance> --check \
+  -e mysql_safeguard=false -e mysql_rm_confirm=<instance>
+./mysql-rm.yml -l <cls> \
+  -e mysql_safeguard=false -e mysql_rm_confirm=<cls>
+```
+
+`mysql-rm.yml` 会停止服务、写入退役标记并注销监控，但不会删除数据目录、备份、配置、证书、软件包或 InnoDB Cluster 元数据。

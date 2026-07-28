@@ -13,7 +13,7 @@ Pigsty 不使用任何虚拟化容器化技术，直接运行于裸操作系统�
 
 ## 概述
 
-Pigsty 推荐使用的操作系统版本：RockyLinux 10.1 / 9.7、Ubuntu 26.04.0 / 24.04.4 / 22.04.5、Debian 13.5 / 12.14。
+Pigsty 推荐使用的操作系统版本：RockyLinux 10.1 / 9.7、Ubuntu 26.04.0 / 24.04.4 / 22.04.5、Debian 13.6 / 12.14。
 
 | 发行版                       |                 架构                 |                                              系统代码                                               |                       PG18                       |                       PG17                       |                       PG16                       |                       PG15                       |                       PG14                       |
 |:--------------------------|:----------------------------------:|:-----------------------------------------------------------------------------------------------:|:------------------------------------------------:|:------------------------------------------------:|:------------------------------------------------:|:------------------------------------------------:|:------------------------------------------------:|
@@ -94,7 +94,7 @@ Ubuntu 26.04 是最新 LTS 基线；如果您希望采用更保守的 Ubuntu 生
 
 ## Debian
 
-Pigsty 支持 Debian 12 / 13，推荐使用最新的 Debian 13.5。
+Pigsty 支持 Debian 12 / 13，推荐使用最新的 Debian 13.6。
 
 | Debian 发行版             |                 架构                 |                                             系统代码                                              |                       PG18                       |                       PG17                       |                          PG16                           |                          PG15                           |                          PG14                           |
 |:-----------------------|:----------------------------------:|:---------------------------------------------------------------------------------------------:|:------------------------------------------------:|:------------------------------------------------:|:-------------------------------------------------------:|:-------------------------------------------------------:|:-------------------------------------------------------:|
@@ -102,11 +102,11 @@ Pigsty 支持 Debian 12 / 13，推荐使用最新的 Debian 13.5。
 | Debian 13 (`trixie`)   | <b class="text-danger">aarch64</b> | [`d13.aarch64`](https://github.com/pgsty/pigsty/blob/main/roles/node_id/vars/d13.aarch64.yml) | <i class="fas fa-circle-check text-primary"></i> | <i class="fas fa-circle-check text-primary"></i> |    <i class="fas fa-circle-check text-primary"></i>     |    <i class="fas fa-circle-check text-primary"></i>     |    <i class="fas fa-circle-check text-primary"></i>     |
 | Debian 12 (`bookworm`) | <b class="text-sky-600">x86_64</b> |  [`d12.x86_64`](https://github.com/pgsty/pigsty/blob/main/roles/node_id/vars/d12.x86_64.yml)  | <i class="fas fa-circle-check text-primary"></i> | <i class="fas fa-circle-check text-primary"></i> |    <i class="fas fa-circle-check text-primary"></i>     |    <i class="fas fa-circle-check text-primary"></i>     |    <i class="fas fa-circle-check text-primary"></i>     |
 | Debian 12 (`bookworm`) | <b class="text-danger">aarch64</b> | [`d12.aarch64`](https://github.com/pgsty/pigsty/blob/main/roles/node_id/vars/d12.aarch64.yml) | <i class="fas fa-circle-check text-primary"></i> | <i class="fas fa-circle-check text-primary"></i> |    <i class="fas fa-circle-check text-primary"></i>     |    <i class="fas fa-circle-check text-primary"></i>     |    <i class="fas fa-circle-check text-primary"></i>     |
-| Debian 11 (`bullseye`) | <b class="text-sky-600">x86_64</b> |  [`d11.x86_64`](https://github.com/pgsty/pigsty/blob/main/roles/node_id/vars/d11.x86_64.yml)  |                                                  |                                                  | <i class="fas fa-triangle-exclamation text-danger"></i> | <i class="fas fa-triangle-exclamation text-danger"></i> | <i class="fas fa-triangle-exclamation text-danger"></i> |
+| Debian 11 (`bullseye`) | <b class="text-sky-600">x86_64</b> |                                    `d11.x86_64`（历史）                                    |                                                  |                                                  | <i class="fas fa-triangle-exclamation text-danger"></i> | <i class="fas fa-triangle-exclamation text-danger"></i> | <i class="fas fa-triangle-exclamation text-danger"></i> |
 | Debian 11 (`bullseye`) | <b class="text-danger">aarch64</b> |                                               -                                               |                                                  |                                                  |                                                         |                                                         |                                                         |
 {.full-width}
 
-{{% alert title="推荐使用 Debian 12.14 / 13.5" color="success" %}}
+{{% alert title="推荐使用 Debian 12.14 / 13.6" color="success" %}}
 {{% /alert %}}
 
 {{% alert title="Debian 11 EOL @ 2024-07" color="danger" %}}
@@ -126,7 +126,7 @@ Debian 11 已经于 2024-07 进入 EOL。如需在老旧操作系统上获得扩
 | Rocky 9.7      | [`cloud-image/rocky-9`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/rocky-9)           |
 | AlmaLinux 10.1 | [`cloud-image/almalinux-10`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/almalinux-10) |
 | Debian 12.14   | [`cloud-image/debian-12`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/debian-12)       |
-| Debian 13.5    | [`cloud-image/debian-13`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/debian-13)       |
+| Debian 13.6    | [`cloud-image/debian-13`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/debian-13)       |
 | Ubuntu 22.04.5 | [`cloud-image/ubuntu-22.04`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/ubuntu-22.04) |
 | Ubuntu 24.04.4 | [`cloud-image/ubuntu-24.04`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/ubuntu-24.04) |
 | Ubuntu 26.04.0 | [`cloud-image/ubuntu-26.04`](https://portal.cloud.hashicorp.com/vagrant/discover/cloud-image/ubuntu-26.04) |
