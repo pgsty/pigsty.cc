@@ -49,7 +49,7 @@ cascade:
 curl -fsSL https://repo.pigsty.cc/get | bash -s v4.4.0   # 下载 Pigsty 源码包
 cd ~/pigsty      # 进入源码目录
 ./configure      # 生成配置文件
-./install.yml    # 执行安装部署
+./deploy.yml     # 执行安装部署
 ```
 
 [**下载**](/docs/setup/install#安装)、[**配置**](/docs/setup/install#配置) 与 [**部署**](/docs/setup/install#部署)，Pigsty 会在几分钟内完成安装！您可以稍后 [**添加更多节点**](/docs/deploy/install) 与数据库集群。
@@ -67,7 +67,7 @@ Pigsty 由多个 [**模块**](/docs/ref/module) 组成。其中 `PGSQL` / `INFRA
 {{< nav-card title="PGSQL" link="/docs/pgsql/" icon="fa-solid fa-database" accent="copper" badge="核心" desc="自治自愈的高可用 PostgreSQL 集群：HA、PITR、IaC、ACL 与监控齐备，海量扩展开箱即用。" >}}
 [集群配置](/docs/pgsql/config/) [日常管理](/docs/pgsql/admin/) [备份恢复](/docs/pgsql/backup/) [服务接入](/docs/pgsql/service/) [内核分支](/docs/pgsql/kernel/) [参数列表](/docs/pgsql/param/)
 {{< /nav-card >}}
-{{< nav-card title="INFRA" link="/docs/infra/" icon="fa-solid fa-bank" accent="copper" badge="核心" desc="Nginx、本地软件仓库、DNS、NTP，以及 Prometheus 与 Grafana 可观测性技术栈。" >}}
+{{< nav-card title="INFRA" link="/docs/infra/" icon="fa-solid fa-bank" accent="copper" badge="核心" desc="Nginx、本地软件仓库、DNS、NTP，以及 VictoriaMetrics 与 Grafana 可观测性技术栈。" >}}
 [配置](/docs/infra/config) [管理](/docs/infra/admin/) [剧本](/docs/infra/playbook) [监控](/docs/infra/monitor) [参数](/docs/infra/param)
 {{< /nav-card >}}
 {{< nav-card title="NODE" link="/docs/node/" icon="fa-solid fa-server" accent="copper" badge="核心" desc="将主机节点纳管调整至期望状态：主机监控、日志收集、VIP 与 HAProxy 负载均衡。" >}}
