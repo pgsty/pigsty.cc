@@ -123,7 +123,7 @@ etcd:
     etcd_safeguard: true  # 打开防误删保护
 ```
 
-当 `etcd_safeguard` 设置为 `true` 时，`etcd-rm.yml` 剧本会检测到存活的 etcd 实例并主动中止，避免误删。您可以使用命令行参数来覆盖这一行为：
+当 `etcd_safeguard` 设置为 `true` 时，`etcd-rm.yml` 会在任何注销、退群、停服或删除动作前直接中止；它是布尔保护开关，并不探测实例是否存活。您可以使用命令行参数来覆盖这一行为：
 
 ```bash
 ./etcd-rm.yml -e etcd_safeguard=false  # 强制覆盖防误删保险

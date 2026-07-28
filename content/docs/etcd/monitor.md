@@ -40,6 +40,7 @@ Pigsty 针对 Etcd 提供了以下五条预置告警规则，定义于 [`files/v
 - `EtcdNetworkPeerRTSlow`：Etcd 网络时延缓慢，提醒
 - `EtcdWalFsyncSlow`：Etcd 磁盘刷盘缓慢，提醒
 
+以下片段原样反映当前规则源码。当前只随 Pigsty 提供 `etcd-overview` 仪表盘；两条延迟告警注释中的 `/ui/d/etcd-instance` 目标并不存在，应改用 `/ui/d/etcd-overview` 查看集群状态。这是规则注释中的已知源码偏差，不影响告警表达式本身。
 
 ```yaml
 #==============================================================#

@@ -241,6 +241,8 @@ etcdctl member remove <etcd_server_id>       # 从集群中踢出成员
 ./etcd-rm.yml -l <ins_ip>                    # 清理实例
 ```
 
+`etcd-rm.yml` 已经包含 `etcdctl member remove` 步骤。
+
 
 
 --------

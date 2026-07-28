@@ -38,11 +38,11 @@ ETCD 模块的参数列表，共有 **13** 个参数，分为两个部分：
 
 [`ETCD_REMOVE`](#etcd_remove) 参数组控制 etcd 集群的移除行为，包括防误删保险、数据清理以及软件包卸载。
 
-| 参数                                  |   类型   |   级别    | 说明                            |
-|:------------------------------------|:------:|:-------:|:------------------------------|
-| [`etcd_safeguard`](#etcd_safeguard) | `bool` | `G/C/A` | etcd 防误删保险，阻止清除正在运行的 etcd 实例？ |
-| [`etcd_rm_data`](#etcd_rm_data)     | `bool` | `G/C/A` | 移除时是否删除 etcd 数据？默认为 true      |
-| [`etcd_rm_pkg`](#etcd_rm_pkg)       | `bool` | `G/C/A` | 移除时是否卸载 etcd 软件包？默认为 false    |
+| 参数                                  |   类型   |   级别    | 说明                         |
+|:------------------------------------|:------:|:-------:|:---------------------------|
+| [`etcd_safeguard`](#etcd_safeguard) | `bool` | `G/C/A` | 为 `true` 时无条件拒绝移除操作        |
+| [`etcd_rm_data`](#etcd_rm_data)     | `bool` | `G/C/A` | 移除时是否删除 etcd 数据？默认为 true   |
+| [`etcd_rm_pkg`](#etcd_rm_pkg)       | `bool` | `G/C/A` | 移除时是否卸载 etcd 软件包？默认为 false |
 {.full-width}
 
 
@@ -265,7 +265,7 @@ etcd_root_password: 'YourSecurePassword'
 相关参数定义于 [`roles/etcd_remove/defaults/main.yml`](https://github.com/pgsty/pigsty/blob/main/roles/etcd_remove/defaults/main.yml)
 
 ```yaml
-etcd_safeguard: false             # 防误删保险，阻止移除正在运行的 etcd 实例？
+etcd_safeguard: false             # 为 true 时无条件拒绝移除操作
 etcd_rm_data: true                # 移除时是否删除 etcd 数据和配置文件？
 etcd_rm_pkg: false                # 移除时是否卸载 etcd 软件包？
 ```
@@ -276,9 +276,9 @@ etcd_rm_pkg: false                # 移除时是否卸载 etcd 软件包？
 
 参数名称： `etcd_safeguard`， 类型： `bool`， 层次：`G/C/A`
 
-防误删保险参数，防止清除正在运行的 etcd 实例？默认值为 `false`。
-
-如果启用安全保险，[`etcd-rm.yml`](/docs/etcd/playbook#etcd-rmyml) 剧本会在执行开始时直接中止，从而避免意外删除正在使用的 etcd 集群。需要显式使用命令行参数 `-e etcd_safeguard=false` 才能覆盖。
+防误删保险参数，默认值为 `false`。设置为 `true` 时，[`etcd-rm.yml`](/docs/etcd/playbook#etcd-rmyml)
+会在注销、退群、停服和删除之前直接中止；它是静态布尔开关，不会探测实例是否正在运行。
+需要显式使用命令行参数 `-e etcd_safeguard=false` 才能覆盖。
 
 **使用建议**：
 
