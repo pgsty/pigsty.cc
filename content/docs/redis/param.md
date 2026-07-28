@@ -22,35 +22,35 @@ REDIS 模块的参数列表，共有 **21** 个参数，分为两个部分：
 
 [`REDIS`](#redis) 参数组用于 Redis 集群的部署与配置，包括身份标识、实例定义、工作模式、内存配置、持久化以及监控。
 
-| 参数                                                  |     类型     |   级别    | 说明                                    |
-|:----------------------------------------------------|:----------:|:-------:|:--------------------------------------|
-| [`redis_cluster`](#redis_cluster)                   |  `string`  |   `C`   | Redis 数据库集群名称，必选身份参数                   |
-| [`redis_instances`](#redis_instances)               |   `dict`   |   `I`   | Redis 节点上的实例定义                         |
-| [`redis_node`](#redis_node)                         |   `int`    |   `I`   | Redis 节点编号，正整数，集群内唯一，必选身份参数            |
-| [`redis_fs_main`](#redis_fs_main)                   |   `path`   |   `C`   | Redis 主数据目录，默认为 `/data/redis`          |
-| [`redis_exporter_enabled`](#redis_exporter_enabled) |   `bool`   |   `C`   | Redis Exporter 是否启用？                  |
-| [`redis_exporter_port`](#redis_exporter_port)       |   `port`   |   `C`   | Redis Exporter 监听端口                    |
-| [`redis_exporter_options`](#redis_exporter_options) |  `string`  |  `C/I`  | Redis Exporter 命令参数                    |
-| [`redis_mode`](#redis_mode)                         |   `enum`   |   `C`   | Redis 集群模式：sentinel，cluster，standalone |
-| [`redis_conf`](#redis_conf)                         |  `string`  |   `C`   | Redis 配置文件模板，sentinel 除外               |
-| [`redis_bind_address`](#redis_bind_address)         |    `ip`    |   `C`   | Redis 监听地址，默认值 `0.0.0.0`，留空则绑定主机 IP       |
-| [`redis_max_memory`](#redis_max_memory)             |   `size`   |  `C/I`  | Redis 可用的最大内存                          |
-| [`redis_mem_policy`](#redis_mem_policy)             |   `enum`   |   `C`   | Redis 内存逐出策略                           |
-| [`redis_password`](#redis_password)                 | `password` |   `C`   | Redis 密码，默认留空则禁用密码                     |
-| [`redis_rdb_save`](#redis_rdb_save)                 | `string[]` |   `C`   | Redis RDB 保存指令，字符串列表，空数组则禁用 RDB        |
-| [`redis_aof_enabled`](#redis_aof_enabled)           |   `bool`   |   `C`   | Redis AOF 是否启用？                       |
-| [`redis_rename_commands`](#redis_rename_commands)   |   `dict`   |   `C`   | Redis 危险命令重命名列表                        |
-| [`redis_cluster_replicas`](#redis_cluster_replicas) |   `int`    |   `C`   | Redis 原生集群中每个主库配几个从库？                  |
-| [`redis_sentinel_monitor`](#redis_sentinel_monitor) | `master[]` |   `C`   | Redis 哨兵监控的主库列表，只在哨兵集群上使用              |
+| 参数                                                  |     类型     |  级别   | 说明                                     |
+|:----------------------------------------------------|:----------:|:-----:|:---------------------------------------|
+| [`redis_cluster`](#redis_cluster)                   |  `string`  |  `C`  | Redis 数据库集群名称，必选身份参数                   |
+| [`redis_instances`](#redis_instances)               |   `dict`   |  `I`  | Redis 节点上的实例定义                         |
+| [`redis_node`](#redis_node)                         |   `int`    |  `I`  | Redis 节点编号，正整数，集群内唯一，必选身份参数            |
+| [`redis_fs_main`](#redis_fs_main)                   |   `path`   |  `C`  | Redis 主数据目录，默认为 `/data/redis`          |
+| [`redis_exporter_enabled`](#redis_exporter_enabled) |   `bool`   |  `C`  | Redis Exporter 是否启用？                   |
+| [`redis_exporter_port`](#redis_exporter_port)       |   `port`   |  `C`  | Redis Exporter 监听端口                    |
+| [`redis_exporter_options`](#redis_exporter_options) |  `string`  | `C/I` | Redis Exporter 命令参数                    |
+| [`redis_mode`](#redis_mode)                         |   `enum`   |  `C`  | Redis 集群模式：sentinel，cluster，standalone |
+| [`redis_conf`](#redis_conf)                         |  `string`  |  `C`  | Redis 配置文件模板，sentinel 除外               |
+| [`redis_bind_address`](#redis_bind_address)         |    `ip`    |  `C`  | Redis 监听地址，默认值 `0.0.0.0`，留空则绑定主机 IP    |
+| [`redis_max_memory`](#redis_max_memory)             |   `size`   | `C/I` | Redis 可用的最大内存                          |
+| [`redis_mem_policy`](#redis_mem_policy)             |   `enum`   |  `C`  | Redis 内存逐出策略                           |
+| [`redis_password`](#redis_password)                 | `password` |  `C`  | Redis 密码，默认留空则禁用密码                     |
+| [`redis_rdb_save`](#redis_rdb_save)                 | `string[]` |  `C`  | Redis RDB 保存指令，字符串列表，空数组则禁用 RDB        |
+| [`redis_aof_enabled`](#redis_aof_enabled)           |   `bool`   |  `C`  | Redis AOF 是否启用？                        |
+| [`redis_rename_commands`](#redis_rename_commands)   |   `dict`   |  `C`  | Redis 危险命令重命名列表                        |
+| [`redis_cluster_replicas`](#redis_cluster_replicas) |   `int`    |  `C`  | Redis 原生集群中每个主库配几个从库？                  |
+| [`redis_sentinel_monitor`](#redis_sentinel_monitor) | `master[]` |  `C`  | Redis 哨兵监控的主库列表，只在哨兵集群上使用              |
 {.full-width}
 
 [`REDIS_REMOVE`](#redis_remove) 参数组控制 Redis 集群的移除行为，包括防误删保险、数据清理以及软件包卸载。
 
-| 参数                                    |   类型   |   级别    | 说明                         |
-|:--------------------------------------|:------:|:-------:|:---------------------------|
-| [`redis_safeguard`](#redis_safeguard) | `bool` | `G/C/A` | 禁止移除正在运行的 Redis 实例           |
-| [`redis_rm_data`](#redis_rm_data)     | `bool` | `G/C/A` | 移除 Redis 实例时是否一并移除数据目录？      |
-| [`redis_rm_pkg`](#redis_rm_pkg)       | `bool` | `G/C/A` | 移除 Redis 实例时是否卸载 Redis 软件包？    |
+| 参数                                    |   类型   |   级别    | 说明                          |
+|:--------------------------------------|:------:|:-------:|:----------------------------|
+| [`redis_safeguard`](#redis_safeguard) | `bool` | `G/C/A` | 为 `true` 时无条件拒绝移除操作         |
+| [`redis_rm_data`](#redis_rm_data)     | `bool` | `G/C/A` | 移除 Redis 实例时是否一并移除数据目录？     |
+| [`redis_rm_pkg`](#redis_rm_pkg)       | `bool` | `G/C/A` | 移除 Redis 实例时是否卸载 Redis 软件包？ |
 {.full-width}
 
 
@@ -91,7 +91,7 @@ redis_sentinel_monitor: []        # Redis哨兵监控的主库列表，仅用于
 #-----------------------------------------------------------------
 # REDIS_REMOVE
 #-----------------------------------------------------------------
-redis_safeguard: false            # 禁止移除正在运行的Redis实例
+redis_safeguard: false            # 为 true 时无条件拒绝移除操作
 redis_rm_data: true               # 移除Redis实例时是否一并移除数据目录？
 redis_rm_pkg: false               # 移除Redis实例时是否卸载Redis软件包？
 ```
@@ -183,6 +183,7 @@ Redis 使用的主数据目录，默认为`/data/redis`。
 默认启用，在每个 Redis 节点上部署一个，默认监听 [`redis_exporter_port`](#redis_exporter_port) `9121` 端口。所有本节点上 Redis 实例的监控指标都由它负责抓取。
 
 将此参数设为 `false` 时，`roles/redis/tasks/exporter.yml` 仍会渲染配置文件，但会跳过 `redis_exporter` systemd 服务的启动步骤（`redis_exporter_launch` 任务带有 `when: redis_exporter_enabled|bool` 判断），可用于在节点上保留手工配置的 exporter。
+`redis_register` 仍会写入该节点的 VictoriaMetrics 文件发现目标；如果没有自行提供同端口的 Exporter，应同时处理该监控目标，避免持续抓取失败。
 
 
 
@@ -389,9 +390,8 @@ redis_sentinel_monitor:  # primary list for redis sentinel, use cls as name, pri
 
 参数名称： `redis_safeguard`， 类型： `bool`， 层次：`G/C/A`
 
-Redis 的防误删安全保险开关：打开后 `redis-rm.yml` 剧本无法移除正在运行的 Redis 实例。
-
-默认值为 `false`，如果设置为 `true`，那么 `redis-rm.yml` 剧本会拒绝执行，防止误删正在运行的 Redis 实例。
+Redis 的防误删安全保险开关，默认值为 `false`。设置为 `true` 时，`redis-rm.yml` 会在注销、停服和删除之前
+直接中止；它是静态布尔开关，不会探测 Redis 实例是否正在运行。
 
 可以通过命令行参数 `-e redis_safeguard=false` 强制覆盖此保护。
 
@@ -411,6 +411,6 @@ Redis 的防误删安全保险开关：打开后 `redis-rm.yml` 剧本无法移�
 
 参数名称： `redis_rm_pkg`， 类型： `bool`， 层次：`G/C/A`
 
-移除 Redis 实例时，是否一并卸载 Redis 与 redis_exporter 软件包？默认为 `false`。
+移除 Redis 实例时，是否一并卸载 Redis 与 `redis-exporter` 软件包？默认为 `false`。
 
 通常情况下不需要卸载软件包，仅当需要彻底清理节点时才需要启用此选项。

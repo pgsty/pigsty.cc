@@ -24,7 +24,7 @@ REDIS 模块提供了两个剧本，用于部署/移除 Redis 集群/节点/实�
 
 ```bash
 redis_node        : 初始化redis节点
-  - redis_install : 安装redis & redis_exporter
+  - redis_install : 安装 Redis 与 `redis-exporter` 软件包
   - redis_user    : 创建操作系统用户 redis
   - redis_dir     : 配置 redis的FHS目录结构
 redis_exporter    : 配置 redis_exporter 监控
@@ -43,11 +43,11 @@ redis_join        : 组建redis原生集群（仅cluster模式）
 
 `redis.yml` 支持三种操作级别，通过 `-l` 限制目标范围，通过 `-e redis_port=<port>` 指定单个实例：
 
-| 操作级别 | 限制参数 | 说明 |
-|:--------|:--------|:-----|
-| **集群** | `-l <cluster>` | 部署整个 Redis 集群的所有节点和实例 |
-| **节点** | `-l <ip>` | 部署指定节点上的所有 Redis 实例 |
-| **实例** | `-l <ip> -e redis_port=<port>` | 仅部署指定节点上的单个实例 |
+| 操作级别   | 限制参数                           | 说明                    |
+|:-------|:-------------------------------|:----------------------|
+| **集群** | `-l <cluster>`                 | 部署整个 Redis 集群的所有节点和实例 |
+| **节点** | `-l <ip>`                      | 部署指定节点上的所有 Redis 实例   |
+| **实例** | `-l <ip> -e redis_port=<port>` | 仅部署指定节点上的单个实例         |
 {.full-width}
 
 
@@ -169,11 +169,11 @@ redis_pkg        : 卸载软件包（当 redis_rm_pkg=true）
 
 `redis-rm.yml` 同样支持三种操作级别：
 
-| 操作级别 | 限制参数 | 说明 |
-|:--------|:--------|:-----|
-| **集群** | `-l <cluster>` | 移除整个 Redis 集群的所有节点和实例 |
-| **节点** | `-l <ip>` | 移除指定节点上的所有 Redis 实例 |
-| **实例** | `-l <ip> -e redis_port=<port>` | 仅移除指定节点上的单个实例 |
+| 操作级别   | 限制参数                           | 说明                    |
+|:-------|:-------------------------------|:----------------------|
+| **集群** | `-l <cluster>`                 | 移除整个 Redis 集群的所有节点和实例 |
+| **节点** | `-l <ip>`                      | 移除指定节点上的所有 Redis 实例   |
+| **实例** | `-l <ip> -e redis_port=<port>` | 仅移除指定节点上的单个实例         |
 {.full-width}
 
 
@@ -235,14 +235,14 @@ redis_pkg        : 卸载软件包（当 redis_rm_pkg=true）
 
 当指定 `redis_port` 时的行为差异：
 
-| 组件 | 节点级别（无 redis_port） | 实例级别（有 redis_port） |
-|:-----|:------------------------|:------------------------|
-| 监控注册 | 删除整个节点的注册文件 | 仅从注册文件中移除该实例 |
-| redis_exporter | 停止并禁用 | **不操作**（其他实例还需要） |
-| Redis 实例 | 停止所有实例 | 仅停止指定端口的实例 |
-| 数据目录 | 删除 `redis_fs_main`（默认 `/data/redis/`）整个目录 | 仅删除 `redis_fs_main/<cluster>-<node>-<port>/`（`redis_fs_main=/data` 时按 `/data/redis` 兼容处理） |
-| Vector 配置 | 删除 `/etc/vector/redis.yaml` | **不操作**（其他实例还需要） |
-| 软件包 | 可选卸载 | **不操作** |
+| 组件             | 节点级别（无 redis_port）                        | 实例级别（有 redis_port）                                                                        |
+|:---------------|:------------------------------------------|:------------------------------------------------------------------------------------------|
+| 监控注册           | 删除整个节点的注册文件                               | 仅从注册文件中移除该实例                                                                              |
+| redis_exporter | 停止并禁用                                     | **不操作**（其他实例还需要）                                                                          |
+| Redis 实例       | 停止所有实例                                    | 仅停止指定端口的实例                                                                                |
+| 数据目录           | 删除 `redis_fs_main`（默认 `/data/redis/`）整个目录 | 仅删除 `redis_fs_main/<cluster>-<node>-<port>/`（`redis_fs_main=/data` 时按 `/data/redis` 兼容处理） |
+| Vector 配置      | 删除 `/etc/vector/redis.yaml`               | **不操作**（其他实例还需要）                                                                          |
+| 软件包            | 可选卸载                                      | **不操作**                                                                                   |
 {.full-width}
 
 
@@ -250,11 +250,11 @@ redis_pkg        : 卸载软件包（当 redis_rm_pkg=true）
 
 `redis-rm.yml` 提供以下控制参数：
 
-| 参数 | 默认值 | 说明 |
-|:----|:------|:-----|
+| 参数                | 默认值     | 说明                       |
+|:------------------|:--------|:-------------------------|
 | `redis_safeguard` | `false` | 安全保险，设为 `true` 时拒绝执行移除操作 |
-| `redis_rm_data` | `true` | 是否删除数据目录（RDB/AOF 文件） |
-| `redis_rm_pkg` | `false` | 是否卸载 Redis 软件包 |
+| `redis_rm_data`   | `true`  | 是否删除数据目录（RDB/AOF 文件）     |
+| `redis_rm_pkg`    | `false` | 是否卸载 Redis 软件包           |
 {.full-width}
 
 使用示例：

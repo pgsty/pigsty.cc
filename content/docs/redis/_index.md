@@ -1,7 +1,7 @@
 ---
 title: 模块：REDIS
 weight: 3800
-description: Pigsty 内置了开源高性能缓存 Redis 主从、集群、哨兵三种模式支持，课作为 PostgreSQL 的辅助与补充。
+description: Pigsty 内置了开源高性能缓存 Redis 主从、集群、哨兵三种模式支持，可作为 PostgreSQL 的辅助与补充。
 icon: fas fa-layer-group
 module: [REDIS]
 categories: [参考]

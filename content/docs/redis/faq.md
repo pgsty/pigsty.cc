@@ -12,7 +12,8 @@ categories: [参考]
 
 ## Redis移除失败：ABORT due to redis_safeguard enabled
 
-这意味着正准备移除的 Redis 实例打开了防误删保险：当 [`redis_safeguard`](/docs/redis/param#redis_safeguard) 设置为 `true` 时，`redis-rm.yml` 剧本会拒绝执行，防止误删正在运行的 Redis 实例。
+这意味着正准备移除的 Redis 实例打开了防误删保险：当 [`redis_safeguard`](/docs/redis/param#redis_safeguard) 设置为 `true` 时，`redis-rm.yml` 会无条件拒绝执行。
+该开关不会探测实例是否正在运行。
 
 您可以通过命令行参数 `-e redis_safeguard=false` 来覆盖此保护，强制移除 Redis 实例。这就是 `redis_safeguard` 的设计目的。
 
