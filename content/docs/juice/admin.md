@@ -77,8 +77,8 @@ juice_instances:
 ```
 
 ```bash
-./juice.yml -l <host> -t juice_clean
-./juice.yml -l <host> -e fsname=jfs -t juice_clean
+./juice.yml -l <host> -t juice_clean,juice_register
+./juice.yml -l <host> -e fsname=jfs -t juice_clean,juice_register
 ```
 
 移除动作：
@@ -87,8 +87,11 @@ juice_instances:
 - `umount -l` 懒卸载
 - 删除 unit 与环境文件
 - 重载 systemd
+- 重写该节点的 VictoriaMetrics 目标文件，移除 `state=absent` 的实例
 
 **不会删除** PostgreSQL 元数据与对象存储数据。
+
+只执行 `-t juice_clean` 不会更新监控目标，会暂时留下已移除实例的陈旧抓取地址；因此上面的命令同时执行 `juice_register`。
 
 -------------
 

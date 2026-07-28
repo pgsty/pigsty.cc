@@ -22,7 +22,7 @@ JUICE 模块执行逻辑与关键命令：
 juicefs format --no-update <data> "<meta>" "<name>"
 
 # 挂载
-juicefs mount <mount> --cache-dir <juice_cache> --metrics 0.0.0.0:<port> <meta> <path>
+juicefs mount <mount_opts> --cache-dir <juice_cache> --metrics 0.0.0.0:<port> <meta> <path>
 ```
 
 说明：
@@ -37,9 +37,9 @@ juicefs mount <mount> --cache-dir <juice_cache> --metrics 0.0.0.0:<port> <meta> 
 
 JUICE 模块仅有两个参数：
 
-| 参数 | 类型 | 级别 | 说明 |
-|:-----|:----:|:----:|:-----|
-| [`juice_cache`](/docs/juice/param#juice_cache) | `path` | `C` | JuiceFS 共享缓存目录 |
+| 参数                                                     |   类型   | 级别  | 说明                |
+|:-------------------------------------------------------|:------:|:---:|:------------------|
+| [`juice_cache`](/docs/juice/param#juice_cache)         | `path` | `C` | JuiceFS 共享缓存目录    |
 | [`juice_instances`](/docs/juice/param#juice_instances) | `dict` | `I` | JuiceFS 实例字典（可为空） |
 {.full-width}
 

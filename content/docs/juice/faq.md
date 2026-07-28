@@ -51,10 +51,11 @@ juice_instances:
 2. 执行：
 
 ```bash
-./juice.yml -l <host> -t juice_clean
+./juice.yml -l <host> -t juice_clean,juice_register
 ```
 
 移除不会删除 PostgreSQL 元数据或对象存储数据。
+`juice_register` 用于同步刷新目标文件；只运行 `juice_clean` 会留下陈旧的监控抓取地址。
 
 --------
 

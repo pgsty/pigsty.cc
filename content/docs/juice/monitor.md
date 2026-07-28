@@ -28,6 +28,9 @@ Grafana Dashboard
 /infra/targets/juice/<hostname>.yml
 ```
 
+当前源码随附 [Node JuiceFS](https://demo.pigsty.cc/d/node-juice) 仪表盘（UID：`node-juice`），
+用于查看单个节点上各 JuiceFS 挂载实例的容量、缓存、对象存储、元数据事务与客户端资源指标。
+
 --------
 
 ## 目标文件示例
@@ -49,26 +52,26 @@ Grafana Dashboard
 
 ### 对象存储
 
-| 指标 | 类型 | 说明 |
-|:-----|:----:|:-----|
+| 指标                                                   |    类型     | 说明       |
+|:-----------------------------------------------------|:---------:|:---------|
 | `juicefs_object_request_durations_histogram_seconds` | histogram | 对象存储请求延迟 |
-| `juicefs_object_request_errors` | counter | 对象存储错误数 |
+| `juicefs_object_request_errors`                      |  counter  | 对象存储错误数  |
 {.full-width}
 
 ### 缓存
 
-| 指标 | 类型 | 说明 |
-|:-----|:----:|:-----|
-| `juicefs_blockcache_hits` | counter | 缓存命中次数 |
+| 指标                        |   类型    | 说明      |
+|:--------------------------|:-------:|:--------|
+| `juicefs_blockcache_hits` | counter | 缓存命中次数  |
 | `juicefs_blockcache_miss` | counter | 缓存未命中次数 |
 {.full-width}
 
 ### 元数据事务
 
-| 指标 | 类型 | 说明 |
-|:-----|:----:|:-----|
-| `juicefs_transaction_durations_histogram_seconds` | histogram | 元数据事务延迟（直方图） |
-| `juicefs_transaction_durations_histogram_seconds_count` | counter | 元数据事务请求计数 |
+| 指标                                                      |    类型     | 说明           |
+|:--------------------------------------------------------|:---------:|:-------------|
+| `juicefs_transaction_durations_histogram_seconds`       | histogram | 元数据事务延迟（直方图） |
+| `juicefs_transaction_durations_histogram_seconds_count` |  counter  | 元数据事务请求计数    |
 {.full-width}
 
 --------
