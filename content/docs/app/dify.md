@@ -19,7 +19,7 @@ Pigsty 提供对自托管 Dify 的支持，允许您使用单个命令部署 Dif
 - [域名和 SSL](#域名和-ssl)
 - [文件备份](#文件备份)
 
-> `app/dify` 模板最后验证的 Dify 版本：`v1.8.1`（2025-09-08）
+> `app/dify` 模板最后验证的 Dify 版本：`v1.15.0`（2026-07-09）。模板包含一份针对 PostgreSQL 18 内置 `uuidv7()` 的 Dify 迁移脚本兼容补丁。
 
 ------
 
@@ -48,9 +48,9 @@ Dify 启动后，您可以安装各种扩展、配置系统模型并开始使用
 
 自托管 Dify 有很多原因，但主要动机是数据安全。Dify 提供的 DockerCompose 模板使用基本的默认数据库镜像，缺乏企业级功能，如高可用性、灾难恢复、监控、IaC 和 PITR 能力。
 
-Pigsty 为 Dify 优雅地解决了这些问题，基于配置文件使用单个命令部署所有组件，并使用镜像解决中国地区访问挑战。这使得 Dify 部署和交付变得非常顺畅。它一次性处理 PostgreSQL 主数据库、PGVector 向量数据库、MinIO 对象存储、Redis、VictoriaMetrics 监控、Grafana 可视化、Nginx 反向代理和免费 HTTPS 证书。
+Pigsty 为 Dify 优雅地解决了这些问题，基于配置文件使用单个命令部署所有组件，并使用镜像解决中国地区访问挑战。这使得 Dify 部署和交付变得非常顺畅。它一次性处理 PostgreSQL 主数据库、PGVector 向量数据库、Redis、VictoriaMetrics 监控、Grafana 可视化、Nginx 反向代理和免费 HTTPS 证书；文件默认保存到 `DIFY_DATA`（`/data/dify`），也可按需接入 MinIO/S3 对象存储。
 
-Pigsty 确保所有 Dify 状态都存储在外部管理的服务中，包括 PostgreSQL 中的元数据和文件系统中的其他数据。通过 Docker Compose 启动的 Dify 实例成为可以随时销毁和重建的无状态应用程序，大大简化了运维。
+当前模板把 PostgreSQL/pgvector 放在 Pigsty 管理的外部数据库中，并把 API 文件与插件数据定向到 `DIFY_DATA`（默认 `/data/dify`）。但 Compose 内置 Redis 的数据仍位于 `/opt/dify/volumes/redis/data`，Sandbox 依赖与 Certbot 数据也位于 `/opt/dify/volumes/`，因此整套应用并非完全无状态，备份时不能只保留数据库。
 
 ------
 
@@ -113,6 +113,11 @@ all:
               DIFY_PORT: 5001
               # dify 文件存储位置？默认是 ./volume，我们将使用上面创建的另一个卷
               DIFY_DATA: /data/dify
+              # 启用 collaboration profile，并设置 WebSocket / Trigger / Webhook 回调地址
+              COMPOSE_PROFILES: collaboration
+              NEXT_PUBLIC_SOCKET_URL: ws://dify.pigsty
+              TRIGGER_URL: http://dify.pigsty
+              ENDPOINT_URL_TEMPLATE: http://dify.pigsty/e/{hook_id}
 
               # 代理和镜像设置
               #PIP_MIRROR_URL: https://pypi.tuna.tsinghua.edu.cn/simple
@@ -120,11 +125,13 @@ all:
               #SANDBOX_HTTPS_PROXY: http://10.10.10.10:12345
 
               # 数据库凭据
+              DB_TYPE: postgresql
               DB_USERNAME: dify
               DB_PASSWORD: difyai123456
               DB_HOST: 10.10.10.10
               DB_PORT: 5432
               DB_DATABASE: dify
+              DB_SSL_MODE: disable
               VECTOR_STORE: pgvector
               PGVECTOR_HOST: 10.10.10.10
               PGVECTOR_PORT: 5432
@@ -134,24 +141,35 @@ all:
               PGVECTOR_MIN_CONNECTION: 2
               PGVECTOR_MAX_CONNECTION: 10
 
+              # 可选 MinIO/S3 文件存储，默认关闭，避免误用 pgBackRest 备份桶
+              #STORAGE_TYPE: s3
+              #S3_ENDPOINT: http://10.10.10.10:9000
+              #S3_BUCKET_NAME: dify
+              #S3_ACCESS_KEY: dify
+              #S3_SECRET_KEY: S3User.Dify
+              #S3_REGION: us-east-1
+              #S3_ADDRESS_STYLE: path
+
     pg-meta:
       hosts: { 10.10.10.10: { pg_seq: 1, pg_role: primary } }
       vars:
         pg_cluster: pg-meta
+        pg_extensions: [ pgvector ]
         pg_users:
           - { name: dify ,password: difyai123456 ,pgbouncer: true ,roles: [ dbrole_admin ] ,superuser: true ,comment: dify superuser }
         pg_databases:
-          - { name: dify        ,owner: dify ,revokeconn: true ,comment: dify main database  }
-          - { name: dify_plugin ,owner: dify ,revokeconn: true ,comment: dify plugin_daemon database }
+          - { name: dify        ,owner: dify ,extensions: [ { name: vector } ] ,comment: dify main database  }
+          - { name: dify_plugin ,owner: dify ,comment: dify plugin daemon database }
         pg_hba_rules:
-          - { user: dify ,db: all ,addr: 172.17.0.0/16  ,auth: pwd ,title: 'allow dify access from local docker network' }
-        node_crontab: [ '00 01 * * * postgres /pg/bin/pg-backup full' ] # 每天凌晨 1 点进行完整备份
+          - { user: dify ,db: all ,addr: 172.16.0.0/12  ,auth: pwd ,title: 'allow dify access from local docker networks' }
+        pg_crontab: [ '00 01 * * * /pg/bin/pg-backup full' ] # 每天凌晨 1 点进行完整备份
 
     infra: { hosts: { 10.10.10.10: { infra_seq: 1 } } }
     etcd:  { hosts: { 10.10.10.10: { etcd_seq: 1 } }, vars: { etcd_cluster: etcd } }
     #minio: { hosts: { 10.10.10.10: { minio_seq: 1 } }, vars: { minio_cluster: minio } }
 
   vars:                               # 全局变量
+    version: v4.5.0                   # 当前 main 分支版本
     admin_ip: 10.10.10.10             # 管理节点 ip 地址
     region: default                   # 上游镜像区域：default|china|europe
     node_tune: oltp                   # 节点调优规格：oltp,olap,tiny,crit
@@ -272,7 +290,7 @@ make cert
 
 ## 文件备份
 
-您可以使用 `restic` 备份 Dify 的文件存储（默认位于 `/data/dify` 目录），使用以下命令进行备份：
+您可以使用 `restic` 备份 Dify 的文件状态。当前模板至少需要保留 `/data/dify`、`/opt/dify/.env` 与 `/opt/dify/volumes/`；其中后者包含 Compose Redis、Sandbox 依赖和可能存在的 Certbot 数据。PostgreSQL 中的 Dify 数据仍应使用 Pigsty/pgBackRest 单独备份。
 
 ```bash
 export RESTIC_REPOSITORY=/data/backups/dify   # 指定 dify 备份目录
@@ -287,9 +305,9 @@ restic init
 export RESTIC_REPOSITORY=/data/backups/dify   # 指定 dify 备份目录
 export RESTIC_PASSWORD=some-strong-password   # 指定备份加密密码
 
-restic backup /data/dify                      # 将 /dify 数据目录备份到仓库
+restic backup /data/dify /opt/dify/.env /opt/dify/volumes
 restic snapshots                              # 查看备份快照列表
-restic restore -t /data/dify 0b11f778         # 将快照 xxxxxx 恢复到 /data/dify
+restic restore 0b11f778 --target /tmp/dify-restore  # 先恢复到临时目录，核对后再回填
 restic check                                  # 定期检查仓库完整性
 ```
 

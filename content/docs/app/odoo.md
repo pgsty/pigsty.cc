@@ -211,6 +211,9 @@ psql postgres://dbuser_odoo:DBUser.Odoo@10.10.10.10:5432/odoo
       blackbox     : { endpoint: "${admin_ip}:9115" }
       vlogs        : { endpoint: "${admin_ip}:9428" }
       odoo         : { domain: odoo.pigsty, endpoint: "127.0.0.1:8069", websocket: true }  # <------ 添加这一行
+```
+
+```bash
 ./infra.yml -t nginx   # 设置 nginx 基础设施门户
 ```
 
