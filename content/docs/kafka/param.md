@@ -1,6 +1,6 @@
 ---
 title: 参数参考
-weight: 5043
+weight: 4903
 description: KAFKA 模块 15 项持久公开参数与临时受保护运维变量。
 icon: fa-solid fa-sliders
 module: [KAFKA]
@@ -218,6 +218,8 @@ Exporter 使用的 Kafka 协议版本、TLS/SCRAM 参数和副本放置均为角
 
 `scram` 同时配置 Pigsty CA 签发的节点证书、角色自有管理/监控/内部身份、TLS/SCRAM 与 ACL 启用顺序。安全模式写入 Bootstrap Manifest；集群格式化后，普通重跑不能把 `plaintext` 切换成 `scram`，也不能反向切换。
 
+节点证书的有效期沿用 Pigsty 共享的 CA 参数 [`cert_validity`](/docs/infra/param#cert_validity)（默认 `7300d`），KAFKA 模块不提供独立的证书有效期参数。
+
 
 ### `kafka_users`
 
@@ -271,7 +273,7 @@ kafka_topics:
       retention.ms: 604800000
 ```
 
-`name` 在列表中唯一；Partition 与 RF 都必须至少为 1，RF 不能超过当前 Broker 数。收敛语义是：
+身份预检只校验 `name` 在列表中唯一；Partition 数与 RF 的合法性（至少为 1、RF 不超过当前 Broker 数）由 Kafka 在创建时判定，因此这类错误会在资源收敛阶段暴露，而不是在 `--check` 阶段。收敛语义是：
 
 - Topic 不存在时幂等创建；
 - Partition 只允许增加，减少会失败；

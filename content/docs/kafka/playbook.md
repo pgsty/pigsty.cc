@@ -1,6 +1,6 @@
 ---
 title: 预置剧本
-weight: 5045
+weight: 4905
 description: 使用 kafka.yml 与 kafka-rm.yml 执行动态 KRaft 生命周期、严格滚动、资源收敛、轮换与下线。
 icon: fa-solid fa-scroll
 module: [KAFKA]
@@ -19,7 +19,7 @@ KAFKA 模块提供两个剧本：[`kafka.yml`](https://github.com/pgsty/pigsty/b
 
 --------
 
-## 基本用法
+## `kafka.yml`
 
 ```bash
 ./kafka.yml --check -l kf-main   # 先空跑
@@ -216,9 +216,16 @@ Target 文件每次完整运行按当前 Exporter 放置刷新；Target 的删�
 
 --------
 
-## 集群下线
+## `kafka-rm.yml`
 
-集群移除不在 `kafka.yml` 中，而是使用独立的 [`kafka-rm.yml`](https://github.com/pgsty/pigsty/blob/main/kafka-rm.yml) 剧本：
+移除动作不在 `kafka.yml` 中，而是使用独立的 [`kafka-rm.yml`](https://github.com/pgsty/pigsty/blob/main/kafka-rm.yml) 剧本。`-l` 选中一个集群的**全部成员**即为集群下线，选中**真子集**即为成员退役，两者共用同一执行顺序：
+
+注销 VictoriaMetrics Target（`kafka_deregister`）→ 停止并禁用 `kafka`/`kafka_exporter` 服务（`kafka`）→ 经幸存成员摘除 KRaft Voter 条目与 Broker 注册（`kafka_retire`，仅在选中真子集时有幸存成员可用）→ 删除 Exporter 配置、Systemd 环境/Unit 与辅助脚本（`kafka_config`）→ 删除数据目录与节点上的 `/etc/kafka` 恢复状态（`kafka_data`，受 `kafka_rm_data` 控制）→ 可选卸载软件包（`kafka_pkg`，受 `kafka_rm_pkg` 控制）。
+
+防误删开关是 `kafka_safeguard`：设置为 `true`（命令行或清单中）时剧本直接中止，不删除任何东西。身份冲突、Exporter 异常或一般启动失败都不是删除数据的理由——先用 [`kafka.yml`](#kafkayml) 收敛并读取失败原因。
+
+
+### 集群下线
 
 ```bash
 ./kafka-rm.yml -l kf-main                          # 移除集群：注销监控、停服务，默认删除数据与 /etc/kafka 恢复状态
@@ -226,30 +233,24 @@ Target 文件每次完整运行按当前 Exporter 放置刷新；Target 的删�
 ./kafka-rm.yml -l kf-main -e kafka_rm_pkg=true     # 同时卸载 kafka-stack 软件包（共享的 Java 运行时不会卸载）
 ```
 
-执行顺序为：注销 VictoriaMetrics Target（`kafka_deregister`）→ 停止并禁用 `kafka`/`kafka_exporter` 服务（`kafka`）→ 删除 Exporter 配置、Systemd 环境/Unit 与辅助脚本（`kafka_config`）→ 删除数据目录与节点上的 `/etc/kafka` 恢复状态（`kafka_data`，受 `kafka_rm_data` 控制）→ 可选卸载软件包（`kafka_pkg`，受 `kafka_rm_pkg` 控制）。
-
-防误删开关是 `kafka_safeguard`：设置为 `true`（命令行或清单中）时剧本直接中止，不删除任何东西。
-
 {{% alert title="永久删除" color="danger" %}}
 `kafka_rm_data` 默认为 `true`：一次默认参数的 `kafka-rm.yml` 就会删除所选节点的数据/KRaft 元数据与 `/etc/kafka` 恢复状态。剧本没有确认字符串等额外闸门，执行前必须人工核对 `-l` 目标、备份或明确重建意图，并评估生产者/消费者影响。
 {{% /alert %}}
 
-用 `-l` 选择集群的**真子集**（如 `-l 10.10.10.13`）则是成员退役而非集群下线：剧本会通过一台幸存成员自动摘除该节点的 KRaft Voter 条目（`remove-controller`，多成员时严格串行）并注销其 Broker 注册（`unregister`），再执行本机清理。剧本容忍目标节点不可达，因此对已经死亡的节点同样适用——这也是[替换故障节点](/docs/kafka/admin#替换故障节点)的第一步。
 
-退役自动化不等于免除规划：缩容后剩余 Controller 应保持奇数并构成多数派，剩余 Broker 数不能低于现有 Topic 的最大 RF；若被退役 Broker 仍持有 Partition 副本，剧本会打印警告——计划内缩容应当先完成 Reassignment 排空。身份冲突、Exporter 异常或一般启动失败都不是删除数据的理由。
+### 成员退役
+
+```bash
+./kafka-rm.yml -l 10.10.10.13                      # 退役单个成员：摘除 Voter 条目与 Broker 注册，再清理本机
+```
+
+剧本通过一台幸存成员摘除该节点的 KRaft Voter 条目（`remove-controller`，多成员时严格串行）并注销其 Broker 注册（`unregister`），再执行本机清理。所有元数据操作都委派给幸存成员，因此对已经死亡、无法连接的节点同样适用——这也是[替换故障节点](/docs/kafka/admin#替换故障节点)的第一步。
+
+退役自动化不等于免除规划：缩容后剩余 Controller 应保持奇数并构成多数派，剩余 Broker 数不能低于现有 Topic 的最大 RF；若被退役 Broker 仍持有 Partition 副本，剧本会打印警告——计划内缩容应当先完成 Reassignment 排空。
 
 
 --------
 
 ## 剧本边界
 
-`kafka.yml` 当前不会自动完成：
-
-- 新 Broker 加入后的既有 Partition Reassignment、退役前的 Drain 与数据均衡；
-- 已有 Topic RF 变化、Topic 删除或用户删除；
-- 已格式化集群 `plaintext` 与 `scram` 之间的在线迁移；
-- Kafka 版本升级、Feature Level 终结、跨版本迁移与回滚；
-- Kafka 数据备份、恢复编排与灾难演练；
-- Connect、Schema Registry、MirrorMaker、Cruise Control 等生态组件。
-
-这些操作需要独立的生产运行手册。日常只读检查和资源管理见 [日常管理](/docs/kafka/admin)。
+两个剧本都不会自动完成 Partition Reassignment 与数据均衡、Topic/用户删除、`plaintext` 到 `scram` 的在线迁移、版本升级与 Feature Level 终结、数据备份与灾难恢复，也不部署 Connect、Schema Registry、MirrorMaker、Cruise Control 等生态组件。完整清单见 [模块边界](/docs/kafka#当前边界)；日常只读检查和资源管理见 [日常管理](/docs/kafka/admin)。

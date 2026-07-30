@@ -23,17 +23,15 @@ aliases: [/docs/pilot/kafka]
 
 KAFKA 模块当前提供：
 
-- 使用原生动态 KRaft，不安装 ZooKeeper，也不渲染静态 `controller.quorum.voters`
-- 支持 `combined`、`broker`、`controller` 三种原生角色和复合/分离拓扑
-- 为新集群随机生成 Cluster ID 与 Controller Directory ID，并以最小 Bootstrap Manifest 保护身份
-- 根据实时健康状态选择冷启动/修复、Broker 串行准入、Controller 动态加入或严格单节点滚动路径
+- 原生动态 KRaft：不安装 ZooKeeper，也不渲染静态 `controller.quorum.voters`
+- 三种原生角色 `combined` / `broker` / `controller`，支持复合与控制面/数据面分离拓扑
+- 新集群随机生成 Cluster ID 与 Controller Directory ID，由最小 Bootstrap Manifest 冻结身份，冲突时失败关闭
+- 按实时健康状态自动选路：冷启动/修复、Broker 串行准入、Controller 动态加入或严格单节点滚动
+- 滚动前后检查 Controller 多数派与 Voter 追平、Offline Partition、Under Min ISR 与 ISR 追平
 - 成员退役与故障节点替换由剧本编排：`kafka-rm.yml` 真子集退役（含死节点），三条命令完成补换
-- 在滚动前后检查 Controller 多数派与 Voter 追平、Offline Partition、Under Min ISR 与 ISR 追平
-- 提供 `plaintext` 与生产 `scram` 两种安全档位；后者启用 TLS、SCRAM-SHA-512、Controller mTLS、ACL 与默认拒绝授权
-- 声明式收敛 Topic、用户凭据、ACL 与 Quota，不隐式删除业务 Topic
-- 保护性轮换内部凭据与证书，并在失败时保留当前有效材料
-- 采集 JMX、Broker、请求、复制、KRaft、Topic、Partition 与 Consumer Group 指标
-- 将 Kafka 与 Exporter 日志接入 VictoriaLogs，并提供四个 Grafana Dashboard 与配套告警
+- 两种安全档位：`plaintext` 与生产 `scram`（TLS、SCRAM-SHA-512、Controller mTLS、ACL 与默认拒绝授权）
+- 声明式收敛 Topic、用户凭据、ACL 与 Quota，不隐式删除业务 Topic；内部凭据与证书支持保护性轮换
+- 完整可观测性：JMX 与协议双 Exporter、19 条 Recording Rule、15 条告警规则、4 个 Grafana Dashboard、日志入 VictoriaLogs
 
 
 --------
@@ -85,15 +83,9 @@ flowchart LR
 
 ## 第一次使用
 
-[快速上手](/docs/kafka/start) 提供一条从零开始、由浅入深的完整路径：
+[快速上手](/docs/kafka/start) 提供一条从零开始、由浅入深的完整路径：单节点开发集群 → 三节点 TLS/SCRAM/ACL 安全集群 → 应用客户端接入 → 参数与资源变更 → 上线检查。
 
-1. 部署一个 combined 单节点开发集群，完成 Topic 与消息读写；
-2. 部署独立的三节点动态 KRaft 集群，启用 TLS/SCRAM/ACL；
-3. 创建应用 Principal、Topic、Quota，并从外部客户端安全接入；
-4. 修改 Heap、Broker 与 Topic 参数，观察在线收敛和严格滚动；
-5. 按 Quorum、ISR、网络、安全、监控和运行手册完成上线检查。
-
-如果您已经熟悉 Kafka/Pigsty，可以直接进入 [集群配置](/docs/kafka/config) 或 [参数参考](/docs/kafka/param)。
+如果您已经熟悉 Kafka 与 Pigsty，可以直接进入 [集群配置](/docs/kafka/config) 或 [参数参考](/docs/kafka/param)。
 
 
 --------

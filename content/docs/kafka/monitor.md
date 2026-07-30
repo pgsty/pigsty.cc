@@ -1,6 +1,6 @@
 ---
 title: 监控告警
-weight: 5046
+weight: 4906
 description: Kafka 指标采集、Grafana Dashboard、日志查询与告警规则。
 icon: fa-solid fa-chart-line
 module: [KAFKA]
@@ -65,7 +65,7 @@ Exporter 从 Broker 查询整个 Kafka 集群，因此同一集群的两个 Expo
 
 ## Grafana Dashboard
 
-Pigsty 当前提供四个互补 Dashboard；已不再提供旧的 Kafka Node 面板，其 JVM、KRaft 与主机资源内容已合并到 Kafka Instance。
+Pigsty 提供四个互补 Dashboard：
 
 ### [Kafka Overview](https://demo.pigsty.cc/ui/d/kafka-overview)
 

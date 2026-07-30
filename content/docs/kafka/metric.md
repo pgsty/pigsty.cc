@@ -1,6 +1,6 @@
 ---
 title: 指标定义
-weight: 5047
+weight: 4907
 description: Kafka JMX、协议 Exporter 与 Recording Rule 指标字典。
 icon: fa-solid fa-gauge-high
 module: [KAFKA]

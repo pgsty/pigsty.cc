@@ -1,6 +1,6 @@
 ---
 title: 常见问题
-weight: 5048
+weight: 4908
 description: Pigsty Kafka 4.1+ 动态 KRaft 模块常见问题与故障排查。
 icon: fa-solid fa-circle-question
 module: [KAFKA]
@@ -40,7 +40,7 @@ aliases: [/docs/pilot/kafka/faq]
 
 ## Controller 端口 9093 会和 Alertmanager 冲突吗？
 
-Controller 默认使用 Kafka KRaft 的惯例端口 `9093`。Pigsty 当前版本的 Alertmanager 默认监听 [`alertmanager_port`](/docs/infra/param#alertmanager_port) `9059`（其集群端口为 `9094`），因此与 Infra 节点复用时默认端口并不冲突。若你显式改动过这些端口发生了碰撞，请为该集群调整 [`kafka_controller_port`](/docs/kafka/param#kafka_controller_port)；角色只强制 `9092`、`9093`、`9308`、`9404` 四个 Kafka 端口彼此不同，不会自动检测与其他服务的端口冲突。
+不冲突。Pigsty 的 Alertmanager 监听 [`alertmanager_port`](/docs/infra/param#alertmanager_port) `9059`，集群端口为 `9094`，与 KRaft Controller 的惯例端口 `9093` 错开。若你改动过这些端口而发生碰撞，为该集群调整 [`kafka_controller_port`](/docs/kafka/param#kafka_controller_port) 即可——角色只强制 `9092`、`9093`、`9308`、`9404` 四者互不相同，不会检测与其他服务的端口占用。
 
 
 --------
@@ -88,21 +88,9 @@ getent hosts <inventory-hostname>
 
 ## 为什么 `kafka_parameters` 中的某些键被拒绝？
 
-身份、动态 Quorum、Listener、存储、复制、Rack 和安全必须由角色统一管理。保留模式包括：
+身份、动态 Quorum、Listener、存储、复制、Rack 与安全必须保持单一权威，因此这些键由角色拥有：出现任意一个，身份预检都会在写文件前失败。完整保留列表见 [`kafka_parameters`](/docs/kafka/param#kafka_parameters)。
 
-```text
-process.roles, node.id, controller.quorum.*,
-listeners, advertised.listeners, listener.security.protocol.map,
-inter.broker.listener.name, controller.listener.names,
-log.dirs, metadata.log.dir, broker.rack,
-min.insync.replicas, default.replication.factor,
-offsets.topic.replication.factor,
-transaction.state.log.*, share.coordinator.state.topic.*,
-authorizer.class.name, super.users, allow.everyone.if.no.acl.found,
-sasl.*, ssl.*, listener.*
-```
-
-使用对应的 15 项公开参数；没有公开地址、路径子目录、Listener Map 或 Exporter options 变量。
+请改用对应的公开参数。角色不提供地址、路径子目录、Listener Map 或 Exporter options 变量。
 
 
 --------
@@ -197,37 +185,23 @@ curl -fsS http://<kafka-ip>:9404/metrics | head -n 40
 
 ## 应用要经过 HAProxy、Keepalived VIP 或 LB 吗？
 
-通常不要。Kafka Producer/Consumer 是集群感知的智能客户端：它先连接 `bootstrap.servers` 中任一可用种子获取元数据，随后直接连接各 Partition Leader。生产配置应给出至少两个、通常三个 Broker 种子地址，并允许应用直达所有 Broker 宣告的地址。
+不要。Kafka Producer/Consumer 是集群感知的智能客户端：连上 `bootstrap.servers` 中任一种子取得元数据后，它直接连接各 Partition Leader。VIP 或通用 TCP LB 既不理解 Partition Leader，也不会改写元数据中的 Broker 地址，放在数据面只会增加长连接状态、故障点与排障复杂度。
 
-一个 VIP 或通用 TCP LB 既不理解 Partition Leader，也不会改写 Kafka 元数据中的 Broker 地址；把它放在数据面通常只会增加长连接状态、额外故障点和排障复杂度。若企业平台强制要求统一发现入口，DNS 或 TCP LB 可以仅承担 bootstrap，但 `advertised.listeners` 仍要返回每个 Broker 的客户端可达地址，LB 不能成为唯一网络路径。
+若平台强制要求统一发现入口，DNS 或 TCP LB 可以只承担 bootstrap，但 `advertised.listeners` 仍返回每个 Broker 的可达地址，应用网络必须直达全部 Broker。跨 NAT、公网、多网络或 Kubernetes 暴露需要为每个 Broker 设计独立外部地址与额外 Listener，当前模块固定宣告清单地址，不支持这类映射。
 
-跨 NAT、公网、多网络或 Kubernetes 暴露通常需要每 Broker 独立外部地址与额外 Listener。当前模块固定宣告清单地址，不支持这类映射。参见[快速上手：为什么应用应直连多个 Broker](/docs/kafka/start#3-为什么应用应直连多个-broker)与[集群配置：网络与监听器](/docs/kafka/config#网络与监听器)。
-
-
---------
-
-## 可以直接增加一个 Broker 吗？
-
-可以。在 inventory 中声明新成员（`broker`、`combined`、`controller` 均可），然后以完整集群为目标运行：
-
-```bash
-./kafka.yml --check -l kf-main
-./kafka.yml -l kf-main
-```
-
-角色逐个格式化、启动并验证新 Broker 注册（Combined/Controller 还会追平后提升为 Voter）。不能只 `-l` 新节点。加入后既有 Partition 不会自动迁移，还要独立执行并监控 Reassignment；“Broker 已注册”不等于“容量已经均衡”。
+详见[快速上手：为什么应用应直连多个 Broker](/docs/kafka/start#3-为什么应用应直连多个-broker)与[集群配置：网络与监听器](/docs/kafka/config#网络与监听器)。
 
 
 --------
 
-## 可以直接增加或移除 Controller 吗？
+## 可以直接增删 Broker 或 Controller 吗？
 
 可以。编辑 inventory 后由剧本编排完成 [KRaft 成员变更](https://kafka.apache.org/43/operations/kraft/#controller-membership-changes)的全部步骤：
 
-- **增加**：`./kafka.yml -l <cls>` 会把新的 Combined/Controller 节点以 `--no-initial-controllers` 格式化，以 Observer 追平后执行 `add-controller` 提升为 Voter，逐个处理并全程健康门禁；
-- **移除**：`./kafka-rm.yml -l <ip>`（集群真子集）会经幸存成员执行 `remove-controller` 与 Broker 注销，节点不可达也能完成，然后从 inventory 删除该成员。
+- **增加**：在 inventory 中声明新成员（`broker`、`combined`、`controller` 均可），以**完整集群**为目标运行 `./kafka.yml -l <cls>`（不能只 `-l` 新节点）。纯 Broker 逐个格式化、启动并验证注册；Combined/Controller 以 `--no-initial-controllers` 格式化，Observer 追平后 `add-controller` 提升为 Voter。全程逐节点、全程健康门禁。
+- **移除**：`./kafka-rm.yml -l <ip>`（集群真子集）经幸存成员执行 `remove-controller` 与 Broker 注销，节点不可达也能完成，随后从 inventory 删除该成员。
 
-仍需自行保证：变更后 Controller 保持奇数且多数派存活；一次只做一个方向的成员变更；被移除 Broker 上的 Partition 副本先行排空（或由同 `kafka_seq` 的替换节点接管）。
+仍需自行保证：变更后 Controller 保持奇数且多数派存活；一次只做一个方向的成员变更；被移除 Broker 上的 Partition 副本先行排空（或由同 `kafka_seq` 的替换节点接管）。加入后既有 Partition 不会自动迁移，需独立执行并监控 Reassignment——“Broker 已注册”不等于“容量已均衡”。
 
 
 --------
@@ -243,6 +217,6 @@ curl -fsS http://<kafka-ip>:9404/metrics | head -n 40
 
 ## 如何安全清空 Kafka 数据？
 
-`kafka.yml` 永远不执行清理；下线使用独立的 `kafka-rm.yml` 剧本。`-l` 选择整个集群（或裸跑选择全部集群）即为集群下线；选择集群的真子集则是成员退役（先经幸存成员摘除 Voter/Broker 注册，再清理本机）。它默认（`kafka_rm_data=true`）会永久删除数据/KRaft 元数据、节点上的 `/etc/kafka` 恢复状态与监控 Target；设为 `false` 则保留数据和恢复状态。`kafka_safeguard=true` 可强制中止一切删除。
+`kafka.yml` 永远不执行清理，删除动作只在独立的 `kafka-rm.yml` 中：`-l` 选中整个集群（或裸跑选中全部集群）即为集群下线，选中真子集则是成员退役。默认 `kafka_rm_data=true` 会永久删除数据/KRaft 元数据、节点上的 `/etc/kafka` 恢复状态与监控 Target；`kafka_rm_data=false` 保留数据与恢复状态，`kafka_safeguard=true` 中止一切删除。
 
-该剧本没有确认字符串等额外闸门，执行前必须人工确认精确 `-l` 目标、可恢复备份或明确重建意图与业务停用状态。完整语义见 [预置剧本：集群下线](/docs/kafka/playbook#集群下线)。
+该剧本没有确认字符串等额外闸门，执行前必须人工确认精确 `-l` 目标、可恢复备份或明确重建意图与业务停用状态。完整语义见 [预置剧本：`kafka-rm.yml`](/docs/kafka/playbook#kafka-rmyml)。

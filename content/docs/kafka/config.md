@@ -1,6 +1,6 @@
 ---
 title: 集群配置
-weight: 5042
+weight: 4902
 description: 规划 Kafka 动态 KRaft 拓扑、身份、网络、存储、安全与声明式资源。
 icon: fa-solid fa-code
 module: [KAFKA]
@@ -45,9 +45,7 @@ KAFKA 模块使用 15 项持久公开参数表达集群意图，其余拓扑、�
 | `controller` | `controller` | － | ✓ | ✓ | － |
 {.full-width}
 
-`kafka_role` 按节点独立声明，省略即为默认 `combined`。集群必须至少包含一个
-Controller-capable 节点和一个 Broker-capable 节点；偶数 Controller 会给出警告，
-生产通常使用 3 个 Controller。
+`kafka_role` 是全有或全无的：集群成员要么全部省略（一致使用 `combined`），要么全部显式声明——混写会在身份预检阶段被拒绝。集群必须至少包含一个 Controller-capable 节点和一个 Broker-capable 节点；偶数 Controller 会给出警告，生产通常使用 3 个 Controller。
 
 
 --------
@@ -350,6 +348,7 @@ kafka_topics:
 | `/etc/kafka/jmx_exporter.yml` | 有界 JMX 指标规则 |
 | `/etc/kafka/manifest.yml` | 节点上的 Bootstrap Manifest 权威副本 |
 | `/etc/kafka/secrets.yml` | `scram` 节点上的内部 Secret 副本 |
+| `/etc/kafka/.pigsty-applied-static.sha256` | 已证明生效的静态配置指纹，滚动重启的判定依据 |
 | `/etc/kafka/pki/kafka.pem` | `scram` 节点 PEM 私钥与证书；信任锚使用系统 `/etc/pki/ca.crt` |
 | `${kafka_data}/data/` | Topic 日志数据 |
 | `${kafka_data}/metadata/` | KRaft 元数据与 `meta.properties` |

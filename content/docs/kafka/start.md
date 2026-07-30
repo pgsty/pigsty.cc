@@ -1,6 +1,6 @@
 ---
 title: 快速上手
-weight: 5041
+weight: 4901
 description: 从零部署单节点与三节点 Kafka，完成安全接入、参数调整和上线检查。
 icon: fa-solid fa-rocket
 module: [KAFKA]
@@ -355,16 +355,14 @@ Kafka Java 客户端支持 `SASL_SSL` + SCRAM，并支持 PEM Truststore。实�
 
 ### 3. 为什么应用应直连多个 Broker
 
-Kafka 客户端本身就是具备集群感知能力的智能客户端。`bootstrap.servers` 只用于取得初始元数据；连接成功后，客户端会根据元数据直接连接各 Partition 的 Leader Broker，并在 Leader 变化后刷新路由。因此生产环境的常规做法是：
+Kafka 客户端本身就具备集群感知能力。`bootstrap.servers` 只用于取得初始元数据；连接成功后，客户端根据元数据直接连接各 Partition 的 Leader Broker，并在 Leader 变化后刷新路由。因此生产环境的常规做法是：
 
 - 在 `bootstrap.servers` 中配置至少两个、通常三个位于不同故障域的 Broker 地址；
 - 放通应用到**所有 Broker** 的 `9092`，并保证 Broker 宣告的 `inventory_hostname` 可解析、可路由；
 - 让 Producer/Consumer 使用 Kafka 客户端自身的重试、元数据刷新、幂等与 Consumer Group 协议；
 - 不把 HAProxy、Keepalived VIP、四层 LB 或七层反向代理放在 Kafka 数据面前方。
 
-单个 VIP/LB 不能替代 Kafka 元数据中的 Broker 地址，也不能把一个连接透明转发到正确的 Partition Leader；它还会增加长连接状态、故障定位和容量规划复杂度。若平台必须提供统一的发现入口，可以使用 DNS 名称或 TCP LB 作为**仅用于 bootstrap 的入口**，但 Broker 的 `advertised.listeners` 仍必须返回客户端可直达的每个 Broker 地址，应用也不能只获准访问 LB。
-
-跨 NAT、公网、Kubernetes 或多网络场景通常需要为每个 Broker 设计独立的外部可达地址/端口和额外 Listener。当前模块固定使用清单地址作为 `advertised.listeners`，不支持这类任意 Listener 映射；不要用一个 HAProxy VIP 掩盖地址模型不成立的问题。
+单个 VIP/LB 既不能替代元数据中的 Broker 地址，也不能把一个连接透明转发到正确的 Partition Leader，只会增加长连接状态、故障定位与容量规划的复杂度。若平台必须提供统一发现入口，DNS 名称或 TCP LB 可以只承担 bootstrap，但 `advertised.listeners` 仍必须返回客户端可直达的每个 Broker 地址，应用也不能只获准访问 LB。跨 NAT、公网、Kubernetes 或多网络场景需要为每个 Broker 设计独立的外部可达地址与额外 Listener；当前模块固定宣告清单地址，不支持这类映射。
 
 
 ### 4. 用应用身份验证读写
@@ -529,12 +527,12 @@ kafka_parameters:
 |:---------------------------------------------------|:-----------------------------|
 | 规划 combined 或 Controller/Broker 分离拓扑、网络、Rack、存储与安全 | [集群配置](/docs/kafka/config)   |
 | 查找 15 项公开参数、默认值、Schema 和保留键                        | [参数参考](/docs/kafka/param)    |
+| 查看 Quorum、Topic、用户、消息、Consumer Group 与扩缩容操作        | [日常管理](/docs/kafka/admin)    |
 | 理解 `kafka.yml` 生命周期、严格滚动、轮换与集群下线                   | [预置剧本](/docs/kafka/playbook) |
-| 查看 Quorum、Topic、用户、消息、Consumer Group 与扩容操作         | [日常管理](/docs/kafka/admin)    |
 | 使用 Dashboard、告警、PromQL 和 VictoriaLogs              | [监控告警](/docs/kafka/monitor)  |
 | 理解每一项 JMX/Exporter/Recording Rule 指标               | [指标定义](/docs/kafka/metric)   |
 | 排查身份冲突、连接、SCRAM、Exporter、Lag 与扩缩容问题                | [常见问题](/docs/kafka/faq)      |
 | 回到模块能力、默认端口与边界总览                                   | [Kafka 模块首页](/docs/kafka)    |
 {.full-width}
 
-一条推荐阅读链路是：**快速上手 → 集群配置 → 参数参考 → 预置剧本 → 日常管理 → 监控告警 → 常见问题**。
+一条推荐阅读链路是：**快速上手 → 集群配置 → 参数参考 → 日常管理 → 预置剧本 → 监控告警 → 常见问题**。

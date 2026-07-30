@@ -1,6 +1,6 @@
 ---
 title: 日常管理
-weight: 5044
+weight: 4904
 description: Kafka 集群的状态检查、Topic 与用户管理、配置变更、扩容缩容、故障节点替换与安全轮换。
 icon: fa-solid fa-wrench
 module: [KAFKA]
@@ -11,7 +11,11 @@ aliases: [/docs/pilot/kafka/admin]
 
 KAFKA 模块把 Kafka 安装在 `/opt/kafka`，使用 Systemd 管理服务，并把持久意图保存在 `pigsty.yml`。节点上的生成文件不应手工修改。
 
-以下 Kafka CLI 示例都使用角色生成的 `/etc/kafka/admin.properties`。即使当前是 `plaintext`，也建议始终保留 `--command-config`，这样切换到 `scram` 管理通道时命令结构不变。将 `<broker>:9092` 替换为可达的 `inventory_hostname` 与端口。
+以下 Kafka CLI 示例都使用角色生成的 `/etc/kafka/admin.properties`。即使当前是 `plaintext` 也建议始终保留 `--command-config`：切换到 `scram` 管理通道时命令结构不变。将 `<broker>:9092` 替换为可达的 `inventory_hostname` 与端口。
+
+{{% alert title="Console 工具的 --command-config 需要 Kafka 4.2+ CLI" color="info" %}}
+[KIP-1147](https://cwiki.apache.org/confluence/display/KAFKA/KIP-1147:+Improve+consistency+of+command-line+arguments) 从 Kafka 4.2 起把所有 CLI 的配置文件参数统一为 `--command-config`、键值参数统一为 `--command-property`。节点上 `/opt/kafka/bin` 的 CLI 由 Pigsty 仓库提供（当前载荷 4.3.x），可直接使用；若从 4.1 或更早的外部 CLI 执行，Console Producer/Consumer 仍须使用旧名 `--producer.config` / `--consumer.config`。管理类工具（`kafka-topics.sh`、`kafka-configs.sh`、`kafka-acls.sh`、`kafka-consumer-groups.sh`、`kafka-metadata-quorum.sh` 等）一直使用 `--command-config`，不受影响。
+{{% /alert %}}
 
 
 --------
