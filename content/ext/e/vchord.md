@@ -33,7 +33,7 @@ weight: 1810
 | 1810  | [**`vchord`**](/ext/e/vchord) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
 {.ext-table}
 
-| **相关扩展** | [`vector`](/ext/e/vector) [`vectorscale`](/ext/e/vectorscale) [`vectorize`](/ext/e/vectorize) [`vchord_bm25`](/ext/e/vchord_bm25) [`pg_tiktoken`](/ext/e/pg_tiktoken) [`pgml`](/ext/e/pgml) [`pg_bestmatch`](/ext/e/pg_bestmatch) [`pg_similarity`](/ext/e/pg_similarity) [`smlar`](/ext/e/smlar) |
+| **相关扩展** | [`vector`](/ext/e/vector) [`vector`](/ext/e/vector) [`vectorscale`](/ext/e/vectorscale) [`pgcontext`](/ext/e/pgcontext) [`vectorize`](/ext/e/vectorize) [`pg_rrf`](/ext/e/pg_rrf) [`pg_search`](/ext/e/pg_search) [`vchord_bm25`](/ext/e/vchord_bm25) [`pg_bestmatch`](/ext/e/pg_bestmatch) [`pgml`](/ext/e/pgml) [`pg4ml`](/ext/e/pg4ml) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

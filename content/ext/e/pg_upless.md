@@ -33,7 +33,7 @@ weight: 5180
 | 5180  | [**`pg_upless`**](/ext/e/pg_upless) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | - |
 {.ext-table}
 
-| **相关扩展** | [`plpgsql`](/ext/e/plpgsql) [`pg_readonly`](/ext/e/pg_readonly) [`pg_savior`](/ext/e/pg_savior) [`safeupdate`](/ext/e/safeupdate) [`pg_permissions`](/ext/e/pg_permissions) [`pgaudit`](/ext/e/pgaudit) [`set_user`](/ext/e/set_user) [`pg_drop_events`](/ext/e/pg_drop_events) [`table_log`](/ext/e/table_log) |
+| **相关扩展** | [`plpgsql`](/ext/e/plpgsql) [`pg_qualstats`](/ext/e/pg_qualstats) [`online_advisor`](/ext/e/online_advisor) [`hypopg`](/ext/e/hypopg) [`pg_relusage`](/ext/e/pg_relusage) [`index_advisor`](/ext/e/index_advisor) [`pg_stat_plans`](/ext/e/pg_stat_plans) [`pg_hint_plan`](/ext/e/pg_hint_plan) [`pg_stat_statements`](/ext/e/pg_stat_statements) [`pg_track_optimizer`](/ext/e/pg_track_optimizer) [`plan_filter`](/ext/e/plan_filter) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

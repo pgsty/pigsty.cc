@@ -33,6 +33,10 @@ weight: 8680
 | 8680  | [**`nominatim_fdw`**](/ext/e/nominatim_fdw) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
 {.ext-table}
 
+| **相关扩展** | [`postgis`](/ext/e/postgis) [`ogr_fdw`](/ext/e/ogr_fdw) [`geoip`](/ext/e/geoip) [`tzf`](/ext/e/tzf) [`pg_geohash`](/ext/e/pg_geohash) [`rdf_fdw`](/ext/e/rdf_fdw) |
+|:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+{.ext-table .ext-table--rel}
+
 
 > PIGSTY RPM and DEB packages are aligned at 2.1.0 for PostgreSQL 14 through 18.
 

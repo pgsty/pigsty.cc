@@ -33,7 +33,7 @@ weight: 5870
 | 5870  | [**`pgelog`**](/ext/e/pgelog) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | - |
 {.ext-table}
 
-| **相关扩展** | [`dblink`](/ext/e/dblink) [`pg_variables`](/ext/e/pg_variables) [`table_log`](/ext/e/table_log) [`pgaudit`](/ext/e/pgaudit) [`logerrors`](/ext/e/logerrors) [`dblink`](/ext/e/dblink) |
+| **相关扩展** | [`dblink`](/ext/e/dblink) [`pg_variables`](/ext/e/pg_variables) [`pg_stat_log`](/ext/e/pg_stat_log) [`logerrors`](/ext/e/logerrors) [`pgaudit`](/ext/e/pgaudit) [`table_log`](/ext/e/table_log) [`pg_drop_events`](/ext/e/pg_drop_events) [`pgmemento`](/ext/e/pgmemento) [`pg_auth_mon`](/ext/e/pg_auth_mon) [`pg_sqlog`](/ext/e/pg_sqlog) [`log_fdw`](/ext/e/log_fdw) [`pgdisablelogerror`](/ext/e/pgdisablelogerror) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

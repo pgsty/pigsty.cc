@@ -34,7 +34,7 @@ weight: 1700
 | 1710  | [**`qdgc_postgis`**](/ext/e/qdgc_postgis) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
 {.ext-table}
 
-| **相关扩展** | [`h3`](/ext/e/h3) [`q3c`](/ext/e/q3c) [`pg_geohash`](/ext/e/pg_geohash) |
+| **相关扩展** | [`h3`](/ext/e/h3) [`pgrouting`](/ext/e/pgrouting) [`pg_geohash`](/ext/e/pg_geohash) [`q3c`](/ext/e/q3c) [`postgis_topology`](/ext/e/postgis_topology) [`pg_polyline`](/ext/e/pg_polyline) [`pg_eviltransform`](/ext/e/pg_eviltransform) [`mobilitydb`](/ext/e/mobilitydb) [`earthdistance`](/ext/e/earthdistance) [`pointcloud`](/ext/e/pointcloud) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **下游依赖** | [`qdgc_postgis`](/ext/e/qdgc_postgis) |
 {.ext-table .ext-table--rel}

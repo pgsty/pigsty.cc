@@ -33,7 +33,7 @@ weight: 1590
 | 1590  | [**`pg_geohash`**](/ext/e/pg_geohash) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
 {.ext-table}
 
-| **相关扩展** | [`postgis`](/ext/e/postgis) [`h3`](/ext/e/h3) [`q3c`](/ext/e/q3c) [`pg_polyline`](/ext/e/pg_polyline) [`postgis_topology`](/ext/e/postgis_topology) [`postgis_raster`](/ext/e/postgis_raster) [`postgis_sfcgal`](/ext/e/postgis_sfcgal) [`postgis_tiger_geocoder`](/ext/e/postgis_tiger_geocoder) |
+| **相关扩展** | [`h3`](/ext/e/h3) [`qdgc`](/ext/e/qdgc) [`pgrouting`](/ext/e/pgrouting) [`postgis_topology`](/ext/e/postgis_topology) [`q3c`](/ext/e/q3c) [`pg_polyline`](/ext/e/pg_polyline) [`pg_eviltransform`](/ext/e/pg_eviltransform) [`earthdistance`](/ext/e/earthdistance) [`geoip`](/ext/e/geoip) [`tzf`](/ext/e/tzf) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

@@ -28,7 +28,7 @@ weight: 3080
 | 3080  | [**`plsh`**](/ext/e/plsh) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
 {.ext-table}
 
-| **相关扩展** | [`plpgsql`](/ext/e/plpgsql) [`pg_cron`](/ext/e/pg_cron) [`pg_task`](/ext/e/pg_task) [`pg_tle`](/ext/e/pg_tle) [`plperl`](/ext/e/plperl) [`plperlu`](/ext/e/plperlu) [`plpython3u`](/ext/e/plpython3u) [`plv8`](/ext/e/plv8) |
+| **相关扩展** | [`plxslt`](/ext/e/plxslt) [`pltcl`](/ext/e/pltcl) [`plperl`](/ext/e/plperl) [`pljava`](/ext/e/pljava) [`plr`](/ext/e/plr) [`plperlu`](/ext/e/plperlu) [`plpython3u`](/ext/e/plpython3u) [`plpgsql`](/ext/e/plpgsql) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

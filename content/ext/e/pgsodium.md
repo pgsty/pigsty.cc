@@ -33,7 +33,7 @@ weight: 7020
 | 7020  | [**`pgsodium`**](/ext/e/pgsodium) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `pgsodium` |
 {.ext-table}
 
-| **相关扩展** | [`pgsmcrypto`](/ext/e/pgsmcrypto) [`pgcryptokey`](/ext/e/pgcryptokey) [`pgcrypto`](/ext/e/pgcrypto) [`anon`](/ext/e/anon) [`pg_tde`](/ext/e/pg_tde) [`sslutils`](/ext/e/sslutils) [`faker`](/ext/e/faker) |
+| **相关扩展** | [`pgcrypto`](/ext/e/pgcrypto) [`shacrypt`](/ext/e/shacrypt) [`cryptint`](/ext/e/cryptint) [`pguecc`](/ext/e/pguecc) [`pgcryptokey`](/ext/e/pgcryptokey) [`pgsmcrypto`](/ext/e/pgsmcrypto) [`column_encrypt`](/ext/e/column_encrypt) [`supabase_vault`](/ext/e/supabase_vault) [`pg_tde`](/ext/e/pg_tde) [`pg_enigma`](/ext/e/pg_enigma) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **下游依赖** | [`supabase_vault`](/ext/e/supabase_vault) |
 {.ext-table .ext-table--rel}

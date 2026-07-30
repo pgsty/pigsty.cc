@@ -33,7 +33,7 @@ weight: 5220
 | 5220  | [**`pg_cheat_funcs`**](/ext/e/pg_cheat_funcs) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
 {.ext-table}
 
-| **相关扩展** | [`pg_crash`](/ext/e/pg_crash) [`pg_snakeoil`](/ext/e/pg_snakeoil) [`pg_dirtyread`](/ext/e/pg_dirtyread) [`pg_savior`](/ext/e/pg_savior) [`pg_surgery`](/ext/e/pg_surgery) [`adminpack`](/ext/e/adminpack) [`pageinspect`](/ext/e/pageinspect) [`pg_repack`](/ext/e/pg_repack) |
+| **相关扩展** | [`pg_dirtyread`](/ext/e/pg_dirtyread) [`pg_savior`](/ext/e/pg_savior) [`pg_crash`](/ext/e/pg_crash) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

@@ -33,7 +33,7 @@ weight: 3210
 | 3210  | [**`faker`**](/ext/e/faker) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | - |
 {.ext-table}
 
-| **相关扩展** | [`plpython3u`](/ext/e/plpython3u) [`plpython3u`](/ext/e/plpython3u) [`pgtap`](/ext/e/pgtap) [`dbt2`](/ext/e/dbt2) [`jsonb_plpython3u`](/ext/e/jsonb_plpython3u) [`ltree_plpython3u`](/ext/e/ltree_plpython3u) [`hstore_plpython3u`](/ext/e/hstore_plpython3u) [`random`](/ext/e/random) [`pg_tle`](/ext/e/pg_tle) |
+| **相关扩展** | [`plpython3u`](/ext/e/plpython3u) [`dbt2`](/ext/e/dbt2) [`pg_mockable`](/ext/e/pg_mockable) [`pgtap`](/ext/e/pgtap) [`pgsqlmock`](/ext/e/pgsqlmock) [`omni_test`](/ext/e/omni_test) [`random`](/ext/e/random) [`tsm_system_time`](/ext/e/tsm_system_time) [`tsm_system_rows`](/ext/e/tsm_system_rows) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

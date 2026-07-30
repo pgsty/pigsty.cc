@@ -33,7 +33,7 @@ weight: 4140
 | 4140  | [**`pglock`**](/ext/e/pglock) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `pglock` |
 {.ext-table}
 
-| **相关扩展** | [`pg_cron`](/ext/e/pg_cron) [`pgmb`](/ext/e/pgmb) [`pgmq`](/ext/e/pgmq) [`pgq`](/ext/e/pgq) [`pg_cron`](/ext/e/pg_cron) |
+| **相关扩展** | [`pg_cron`](/ext/e/pg_cron) [`pg_task`](/ext/e/pg_task) [`pg_durable`](/ext/e/pg_durable) [`pg_background`](/ext/e/pg_background) [`pg_retry`](/ext/e/pg_retry) [`pg_later`](/ext/e/pg_later) [`pgmq`](/ext/e/pgmq) [`pg_dispatch`](/ext/e/pg_dispatch) [`ulak`](/ext/e/ulak) [`omni_worker`](/ext/e/omni_worker) [`pg_cron`](/ext/e/pg_cron) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

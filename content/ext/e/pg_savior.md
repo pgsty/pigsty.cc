@@ -33,7 +33,7 @@ weight: 5810
 | 5810  | [**`pg_savior`**](/ext/e/pg_savior) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
 {.ext-table}
 
-| **相关扩展** | [`pg_upless`](/ext/e/pg_upless) [`safeupdate`](/ext/e/safeupdate) [`pg_drop_events`](/ext/e/pg_drop_events) [`pg_cheat_funcs`](/ext/e/pg_cheat_funcs) [`table_log`](/ext/e/table_log) [`pg_snakeoil`](/ext/e/pg_snakeoil) [`pg_auditor`](/ext/e/pg_auditor) [`temporal_tables`](/ext/e/temporal_tables) |
+| **相关扩展** | [`table_log`](/ext/e/table_log) [`safeupdate`](/ext/e/safeupdate) [`pg_drop_events`](/ext/e/pg_drop_events) [`pg_strict`](/ext/e/pg_strict) [`pgmemento`](/ext/e/pgmemento) [`pgaudit`](/ext/e/pgaudit) [`pg_cheat_funcs`](/ext/e/pg_cheat_funcs) [`pg_crash`](/ext/e/pg_crash) [`pg_dirtyread`](/ext/e/pg_dirtyread) [`block_copy_command`](/ext/e/block_copy_command) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

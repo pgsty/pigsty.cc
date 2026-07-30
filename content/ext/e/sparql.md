@@ -33,7 +33,7 @@ weight: 4470
 | 4470  | [**`sparql`**](/ext/e/sparql) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `sparql` |
 {.ext-table}
 
-| **相关扩展** | [`plperl`](/ext/e/plperl) [`plperlu`](/ext/e/plperlu) [`pgjq`](/ext/e/pgjq) [`pgjwt`](/ext/e/pgjwt) [`gzip`](/ext/e/gzip) [`bzip`](/ext/e/bzip) [`zstd`](/ext/e/zstd) [`http`](/ext/e/http) [`pg_net`](/ext/e/pg_net) [`pg_curl`](/ext/e/pg_curl) |
+| **相关扩展** | [`plperl`](/ext/e/plperl) [`plperlu`](/ext/e/plperlu) [`pgrdf`](/ext/e/pgrdf) [`rdf_fdw`](/ext/e/rdf_fdw) [`xml2`](/ext/e/xml2) [`plxslt`](/ext/e/plxslt) [`omni_xml`](/ext/e/omni_xml) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

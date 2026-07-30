@@ -33,7 +33,7 @@ weight: 1870
 | 1870  | [**`pg_tiktoken`**](/ext/e/pg_tiktoken) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | - |
 {.ext-table}
 
-| **相关扩展** | [`vectorize`](/ext/e/vectorize) [`pg_summarize`](/ext/e/pg_summarize) [`pg4ml`](/ext/e/pg4ml) [`pgml`](/ext/e/pgml) [`vector`](/ext/e/vector) [`vchord`](/ext/e/vchord) [`vectorscale`](/ext/e/vectorscale) [`pg_graphql`](/ext/e/pg_graphql) |
+| **相关扩展** | [`pg_tiktoken_c`](/ext/e/pg_tiktoken_c) [`pg_tokenizer`](/ext/e/pg_tokenizer) [`pg_jieba`](/ext/e/pg_jieba) [`pg_cjk_parser`](/ext/e/pg_cjk_parser) [`zhparser`](/ext/e/zhparser) [`pg_bigm`](/ext/e/pg_bigm) [`pgroonga`](/ext/e/pgroonga) [`dict_xsyn`](/ext/e/dict_xsyn) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

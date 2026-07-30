@@ -28,7 +28,7 @@ weight: 9970
 | 9970  | [**`test_decoding`**](/ext/e/test_decoding) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | - |
 {.ext-table}
 
-| **相关扩展** | [`wal2json`](/ext/e/wal2json) [`decoderbufs`](/ext/e/decoderbufs) [`decoder_raw`](/ext/e/decoder_raw) [`pgoutput`](/ext/e/pgoutput) [`pglogical`](/ext/e/pglogical) [`pg_failover_slots`](/ext/e/pg_failover_slots) [`pgactive`](/ext/e/pgactive) [`kafka_fdw`](/ext/e/kafka_fdw) |
+| **相关扩展** | [`wal2json`](/ext/e/wal2json) [`decoderbufs`](/ext/e/decoderbufs) [`pgoutput`](/ext/e/pgoutput) [`wal2mongo`](/ext/e/wal2mongo) [`decoder_raw`](/ext/e/decoder_raw) [`pg_walinspect`](/ext/e/pg_walinspect) [`pg_logicalinspect`](/ext/e/pg_logicalinspect) [`kafka_fdw`](/ext/e/kafka_fdw) [`pgmqtt`](/ext/e/pgmqtt) [`pgq`](/ext/e/pgq) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

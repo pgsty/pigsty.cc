@@ -33,6 +33,10 @@ weight: 3760
 | 3760  | [**`postbis`**](/ext/e/postbis) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
 {.ext-table}
 
+| **相关扩展** | [`rdkit`](/ext/e/rdkit) [`vector`](/ext/e/vector) [`pg_similarity`](/ext/e/pg_similarity) [`smlar`](/ext/e/smlar) [`pg_trgm`](/ext/e/pg_trgm) [`pgcontext`](/ext/e/pgcontext) [`vectorize`](/ext/e/vectorize) [`imgsmlr`](/ext/e/imgsmlr) |
+|:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+{.ext-table .ext-table--rel}
+
 
 > The packaged repository is an untagged copy of PostBIS, inactive since 2019; Pigsty pins commit ce454ebf and patches PostgreSQL 14-18 compatibility plus alphabet output and indexed slice correctness.
 

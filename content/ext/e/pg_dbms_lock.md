@@ -33,7 +33,7 @@ weight: 9250
 | 9250  | [**`pg_dbms_lock`**](/ext/e/pg_dbms_lock) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `dbms_lock` |
 {.ext-table}
 
-| **相关扩展** | [`pg_background`](/ext/e/pg_background) [`orafce`](/ext/e/orafce) [`session_variable`](/ext/e/session_variable) [`pg_dbms_metadata`](/ext/e/pg_dbms_metadata) [`pg_dbms_job`](/ext/e/pg_dbms_job) [`oracle_fdw`](/ext/e/oracle_fdw) [`pgtt`](/ext/e/pgtt) [`pg_statement_rollback`](/ext/e/pg_statement_rollback) [`mysql_fdw`](/ext/e/mysql_fdw) |
+| **相关扩展** | [`pg_background`](/ext/e/pg_background) [`pg_dbms_job`](/ext/e/pg_dbms_job) [`pg_dbms_metadata`](/ext/e/pg_dbms_metadata) [`pg_utl_smtp`](/ext/e/pg_utl_smtp) [`pg_dbms_errlog`](/ext/e/pg_dbms_errlog) [`orafce`](/ext/e/orafce) [`pg_cron`](/ext/e/pg_cron) [`pgagent`](/ext/e/pgagent) [`pg_task`](/ext/e/pg_task) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

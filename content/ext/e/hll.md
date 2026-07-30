@@ -28,7 +28,7 @@ weight: 2700
 | 2700  | [**`hll`**](/ext/e/hll) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | - |
 {.ext-table}
 
-| **相关扩展** | [`topn`](/ext/e/topn) [`count_distinct`](/ext/e/count_distinct) [`omnisketch`](/ext/e/omnisketch) [`bloom`](/ext/e/bloom) [`roaringbitmap`](/ext/e/roaringbitmap) [`ddsketch`](/ext/e/ddsketch) [`tdigest`](/ext/e/tdigest) [`citus`](/ext/e/citus) |
+| **相关扩展** | [`count_distinct`](/ext/e/count_distinct) [`datasketches`](/ext/e/datasketches) [`omnisketch`](/ext/e/omnisketch) [`topn`](/ext/e/topn) [`ddsketch`](/ext/e/ddsketch) [`tdigest`](/ext/e/tdigest) [`roaringbitmap`](/ext/e/roaringbitmap) [`bloom`](/ext/e/bloom) [`rum`](/ext/e/rum) [`pgfaceting`](/ext/e/pgfaceting) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

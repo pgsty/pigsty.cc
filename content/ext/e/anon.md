@@ -33,7 +33,7 @@ weight: 7070
 | 7070  | [**`anon`**](/ext/e/anon) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `anon` |
 {.ext-table}
 
-| **相关扩展** | [`faker`](/ext/e/faker) [`pgsodium`](/ext/e/pgsodium) [`pgcrypto`](/ext/e/pgcrypto) [`pgaudit`](/ext/e/pgaudit) [`set_user`](/ext/e/set_user) [`pg_tde`](/ext/e/pg_tde) |
+| **相关扩展** | [`column_encrypt`](/ext/e/column_encrypt) [`pg_tde`](/ext/e/pg_tde) [`supabase_vault`](/ext/e/supabase_vault) [`pg_enigma`](/ext/e/pg_enigma) [`pgsodium`](/ext/e/pgsodium) [`pgcryptokey`](/ext/e/pgcryptokey) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

@@ -69,7 +69,7 @@ weight: 2942
 | 2979  | [**`omni_yaml`**](/ext/e/omni_yaml) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `omni_yaml` |
 {.ext-table}
 
-| **相关扩展** | [`omni_httpc`](/ext/e/omni_httpc) [`pgcrypto`](/ext/e/pgcrypto) [`omni_xml`](/ext/e/omni_xml) [`omni_web`](/ext/e/omni_web) |
+| **相关扩展** | [`omni_httpc`](/ext/e/omni_httpc) [`pgcrypto`](/ext/e/pgcrypto) [`omni_xml`](/ext/e/omni_xml) [`omni_web`](/ext/e/omni_web) [`aws_s3`](/ext/e/aws_s3) [`http`](/ext/e/http) [`pg_net`](/ext/e/pg_net) [`file_fdw`](/ext/e/file_fdw) [`pg_parquet`](/ext/e/pg_parquet) [`pg_bulkload`](/ext/e/pg_bulkload) [`pg_curl`](/ext/e/pg_curl) [`pg_graphql`](/ext/e/pg_graphql) [`pg_lake`](/ext/e/pg_lake) [`basic_archive`](/ext/e/basic_archive) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

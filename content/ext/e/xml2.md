@@ -28,7 +28,7 @@ weight: 3990
 | 3990  | [**`xml2`**](/ext/e/xml2) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | - |
 {.ext-table}
 
-| **相关扩展** | [`pgjq`](/ext/e/pgjq) [`prefix`](/ext/e/prefix) [`semver`](/ext/e/semver) [`unit`](/ext/e/unit) [`pgpdf`](/ext/e/pgpdf) [`pglite_fusion`](/ext/e/pglite_fusion) [`md5hash`](/ext/e/md5hash) [`asn1oid`](/ext/e/asn1oid) |
+| **相关扩展** | [`plxslt`](/ext/e/plxslt) [`omni_xml`](/ext/e/omni_xml) [`pgrdf`](/ext/e/pgrdf) [`sparql`](/ext/e/sparql) [`rdf_fdw`](/ext/e/rdf_fdw) [`pgpdf`](/ext/e/pgpdf) [`pgbson`](/ext/e/pgbson) [`hstore`](/ext/e/hstore) [`pglite_fusion`](/ext/e/pglite_fusion) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

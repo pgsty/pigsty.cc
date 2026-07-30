@@ -33,7 +33,7 @@ weight: 7190
 | 7190  | [**`pgmemento`**](/ext/e/pgmemento) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `pgmemento` |
 {.ext-table}
 
-| **相关扩展** | [`table_log`](/ext/e/table_log) [`table_version`](/ext/e/table_version) [`ddl_historization`](/ext/e/ddl_historization) |
+| **相关扩展** | [`table_log`](/ext/e/table_log) [`pgaudit`](/ext/e/pgaudit) [`table_version`](/ext/e/table_version) [`data_historization`](/ext/e/data_historization) [`ddl_historization`](/ext/e/ddl_historization) [`pg_drop_events`](/ext/e/pg_drop_events) [`periods`](/ext/e/periods) [`temporal_tables`](/ext/e/temporal_tables) [`emaj`](/ext/e/emaj) [`pgelog`](/ext/e/pgelog) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

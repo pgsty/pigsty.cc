@@ -34,7 +34,7 @@ weight: 9501
 | 9501  | [**`pglogical_origin`**](/ext/e/pglogical_origin) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `pglogical_origin` |
 {.ext-table}
 
-| **相关扩展** | [`pglogical_ticker`](/ext/e/pglogical_ticker) [`pgl_ddl_deploy`](/ext/e/pgl_ddl_deploy) [`pg_failover_slots`](/ext/e/pg_failover_slots) [`pgactive`](/ext/e/pgactive) [`wal2json`](/ext/e/wal2json) [`decoderbufs`](/ext/e/decoderbufs) [`repmgr`](/ext/e/repmgr) [`decoder_raw`](/ext/e/decoder_raw) |
+| **相关扩展** | [`spock`](/ext/e/spock) [`pgactive`](/ext/e/pgactive) [`pgoutput`](/ext/e/pgoutput) [`mimeo`](/ext/e/mimeo) [`wal2json`](/ext/e/wal2json) [`test_decoding`](/ext/e/test_decoding) [`postgres_fdw`](/ext/e/postgres_fdw) [`pgl_ddl_deploy`](/ext/e/pgl_ddl_deploy) [`logical_ddl`](/ext/e/logical_ddl) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 
@@ -54,22 +54,22 @@ weight: 9501
 {{< pgext_matrix >}}
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PGDG 2.4.6 1 | AVAIL PGDG 2.4.5 1 | AVAIL PGDG 2.4.4 1 | AVAIL PGDG 2.4.3 2 | AVAIL PGDG 2.4.3 4 |
-| el8.aarch64 | AVAIL PGDG 2.4.6 1 | AVAIL PGDG 2.4.5 1 | AVAIL PGDG 2.4.4 1 | AVAIL PGDG 2.4.3 2 | AVAIL PGDG 2.4.3 2 |
-| el9.x86_64 | AVAIL PGDG 2.4.6 2 | AVAIL PGDG 2.4.6 2 | AVAIL PGDG 2.4.6 2 | AVAIL PGDG 2.4.6 3 | AVAIL PGDG 2.4.6 4 |
-| el9.aarch64 | AVAIL PGDG 2.4.6 2 | AVAIL PGDG 2.4.6 2 | AVAIL PGDG 2.4.6 2 | AVAIL PGDG 2.4.6 3 | AVAIL PGDG 2.4.6 3 |
-| el10.x86_64 | AVAIL PGDG 2.4.6 2 | AVAIL PGDG 2.4.6 2 | AVAIL PGDG 2.4.6 2 | AVAIL PGDG 2.4.6 2 | AVAIL PGDG 2.4.6 2 |
-| el10.aarch64 | AVAIL PGDG 2.4.6 2 | AVAIL PGDG 2.4.6 2 | AVAIL PGDG 2.4.6 2 | AVAIL PGDG 2.4.6 2 | AVAIL PGDG 2.4.6 2 |
-| d12.x86_64 | AVAIL PGDG 2.4.7 2 | AVAIL PGDG 2.4.7 2 | AVAIL PGDG 2.4.7 2 | AVAIL PGDG 2.4.7 2 | AVAIL PGDG 2.4.7 2 |
-| d12.aarch64 | AVAIL PGDG 2.4.7 2 | AVAIL PGDG 2.4.7 2 | AVAIL PGDG 2.4.7 2 | AVAIL PGDG 2.4.7 2 | AVAIL PGDG 2.4.7 2 |
-| d13.x86_64 | AVAIL PGDG 2.4.7 2 | AVAIL PGDG 2.4.7 2 | AVAIL PGDG 2.4.7 2 | AVAIL PGDG 2.4.7 2 | AVAIL PGDG 2.4.7 2 |
-| d13.aarch64 | AVAIL PGDG 2.4.7 2 | AVAIL PGDG 2.4.7 2 | AVAIL PGDG 2.4.7 2 | AVAIL PGDG 2.4.7 2 | AVAIL PGDG 2.4.7 2 |
-| u22.x86_64 | AVAIL PGDG 2.4.7 2 | AVAIL PGDG 2.4.7 2 | AVAIL PGDG 2.4.7 2 | AVAIL PGDG 2.4.7 2 | AVAIL PGDG 2.4.7 2 |
-| u22.aarch64 | AVAIL PGDG 2.4.7 2 | AVAIL PGDG 2.4.7 2 | AVAIL PGDG 2.4.7 2 | AVAIL PGDG 2.4.7 2 | AVAIL PGDG 2.4.7 2 |
-| u24.x86_64 | AVAIL PGDG 2.4.7 2 | AVAIL PGDG 2.4.7 2 | AVAIL PGDG 2.4.7 2 | AVAIL PGDG 2.4.7 2 | AVAIL PGDG 2.4.7 2 |
-| u24.aarch64 | AVAIL PGDG 2.4.7 2 | AVAIL PGDG 2.4.7 2 | AVAIL PGDG 2.4.7 2 | AVAIL PGDG 2.4.7 2 | AVAIL PGDG 2.4.7 2 |
-| u26.x86_64 | AVAIL PGDG 2.4.7 2 | AVAIL PGDG 2.4.7 2 | AVAIL PGDG 2.4.7 2 | AVAIL PGDG 2.4.7 2 | AVAIL PGDG 2.4.7 2 |
-| u26.aarch64 | AVAIL PGDG 2.4.7 2 | AVAIL PGDG 2.4.7 2 | AVAIL PGDG 2.4.7 2 | AVAIL PGDG 2.4.7 2 | AVAIL PGDG 2.4.7 2 |
+| el8.x86_64 | AVAIL PGDG 2.4.8 2 | AVAIL PGDG 2.4.8 2 | AVAIL PGDG 2.4.8 2 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 5 |
+| el8.aarch64 | AVAIL PGDG 2.4.8 2 | AVAIL PGDG 2.4.8 2 | AVAIL PGDG 2.4.8 2 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 |
+| el9.x86_64 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 4 | AVAIL PGDG 2.4.8 5 |
+| el9.aarch64 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 4 | AVAIL PGDG 2.4.8 4 |
+| el10.x86_64 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 |
+| el10.aarch64 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 |
+| d12.x86_64 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 |
+| d12.aarch64 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 |
+| d13.x86_64 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 |
+| d13.aarch64 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 |
+| u22.x86_64 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 |
+| u22.aarch64 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 |
+| u24.x86_64 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 |
+| u24.aarch64 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 |
+| u26.x86_64 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 |
+| u26.aarch64 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 |
 {{< /pgext_matrix >}}
 
 

@@ -28,7 +28,7 @@ weight: 1070
 | 1070  | [**`pg_cron`**](/ext/e/pg_cron) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `pg_catalog` |
 {.ext-table}
 
-| **相关扩展** | [`timescaledb_toolkit`](/ext/e/timescaledb_toolkit) [`timescaledb`](/ext/e/timescaledb) [`periods`](/ext/e/periods) [`temporal_tables`](/ext/e/temporal_tables) [`pg_task`](/ext/e/pg_task) [`pg_later`](/ext/e/pg_later) [`emaj`](/ext/e/emaj) [`table_version`](/ext/e/table_version) |
+| **相关扩展** | [`pgagent`](/ext/e/pgagent) [`pg_task`](/ext/e/pg_task) [`pg_dbms_job`](/ext/e/pg_dbms_job) [`pg_dispatch`](/ext/e/pg_dispatch) [`pg_later`](/ext/e/pg_later) [`pg_jobmon`](/ext/e/pg_jobmon) [`pg_durable`](/ext/e/pg_durable) [`pg_background`](/ext/e/pg_background) [`pg_when`](/ext/e/pg_when) [`cron_utils`](/ext/e/cron_utils) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **下游依赖** | [`documentdb`](/ext/e/documentdb) [`pg_dispatch`](/ext/e/pg_dispatch) [`pglock`](/ext/e/pglock) [`pgmb`](/ext/e/pgmb) [`timeseries`](/ext/e/timeseries) [`vectorize`](/ext/e/vectorize) |
 {.ext-table .ext-table--rel}

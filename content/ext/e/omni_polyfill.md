@@ -69,7 +69,7 @@ weight: 2959
 | 2979  | [**`omni_yaml`**](/ext/e/omni_yaml) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `omni_yaml` |
 {.ext-table}
 
-| **相关扩展** |  |
+| **相关扩展** | [`orafce`](/ext/e/orafce) [`db2fce`](/ext/e/db2fce) [`pgsql_tweaks`](/ext/e/pgsql_tweaks) [`pg_statement_rollback`](/ext/e/pg_statement_rollback) [`babelfishpg_common`](/ext/e/babelfishpg_common) [`ivorysql_ora`](/ext/e/ivorysql_ora) [`pgtt`](/ext/e/pgtt) [`session_variable`](/ext/e/session_variable) [`tds_fdw`](/ext/e/tds_fdw) [`db_migrator`](/ext/e/db_migrator) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **下游依赖** | [`omni_auth`](/ext/e/omni_auth) [`omni_email`](/ext/e/omni_email) [`omni_ledger`](/ext/e/omni_ledger) [`omni_schema`](/ext/e/omni_schema) [`omni_session`](/ext/e/omni_session) |
 {.ext-table .ext-table--rel}

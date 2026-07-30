@@ -33,7 +33,7 @@ weight: 1060
 | 1060  | [**`table_version`**](/ext/e/table_version) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `table_version` |
 {.ext-table}
 
-| **相关扩展** | [`plpgsql`](/ext/e/plpgsql) [`periods`](/ext/e/periods) [`temporal_tables`](/ext/e/temporal_tables) [`emaj`](/ext/e/emaj) [`pg_cron`](/ext/e/pg_cron) [`timescaledb`](/ext/e/timescaledb) [`timescaledb_toolkit`](/ext/e/timescaledb_toolkit) [`timeseries`](/ext/e/timeseries) [`pg_task`](/ext/e/pg_task) |
+| **相关扩展** | [`plpgsql`](/ext/e/plpgsql) [`data_historization`](/ext/e/data_historization) [`pgmemento`](/ext/e/pgmemento) [`table_log`](/ext/e/table_log) [`ddl_historization`](/ext/e/ddl_historization) [`periods`](/ext/e/periods) [`temporal_tables`](/ext/e/temporal_tables) [`emaj`](/ext/e/emaj) [`pgaudit`](/ext/e/pgaudit) [`pg_drop_events`](/ext/e/pg_drop_events) [`pgauditlogtofile`](/ext/e/pgauditlogtofile) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

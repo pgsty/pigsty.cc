@@ -28,7 +28,7 @@ weight: 2990
 | 2990  | [**`bloom`**](/ext/e/bloom) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | - |
 {.ext-table}
 
-| **相关扩展** | [`hll`](/ext/e/hll) [`age`](/ext/e/age) [`rum`](/ext/e/rum) [`pg_graphql`](/ext/e/pg_graphql) [`pg_jsonschema`](/ext/e/pg_jsonschema) [`jsquery`](/ext/e/jsquery) [`pg_hint_plan`](/ext/e/pg_hint_plan) [`hypopg`](/ext/e/hypopg) |
+| **相关扩展** | [`rum`](/ext/e/rum) [`hll`](/ext/e/hll) [`roaringbitmap`](/ext/e/roaringbitmap) [`pgfaceting`](/ext/e/pgfaceting) [`parray_gin`](/ext/e/parray_gin) [`btree_gin`](/ext/e/btree_gin) [`btree_gist`](/ext/e/btree_gist) [`intarray`](/ext/e/intarray) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

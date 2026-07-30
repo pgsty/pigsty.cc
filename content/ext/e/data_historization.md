@@ -33,7 +33,7 @@ weight: 4320
 | 4320  | [**`data_historization`**](/ext/e/data_historization) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | - |
 {.ext-table}
 
-| **相关扩展** | [`plpgsql`](/ext/e/plpgsql) [`ddl_historization`](/ext/e/ddl_historization) [`temporal_tables`](/ext/e/temporal_tables) [`table_version`](/ext/e/table_version) [`gzip`](/ext/e/gzip) [`bzip`](/ext/e/bzip) [`zstd`](/ext/e/zstd) [`http`](/ext/e/http) [`pg_net`](/ext/e/pg_net) |
+| **相关扩展** | [`plpgsql`](/ext/e/plpgsql) [`table_log`](/ext/e/table_log) [`pgmemento`](/ext/e/pgmemento) [`table_version`](/ext/e/table_version) [`temporal_tables`](/ext/e/temporal_tables) [`periods`](/ext/e/periods) [`ddl_historization`](/ext/e/ddl_historization) [`emaj`](/ext/e/emaj) [`pgaudit`](/ext/e/pgaudit) [`pg_drop_events`](/ext/e/pg_drop_events) [`pgauditlogtofile`](/ext/e/pgauditlogtofile) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

@@ -28,7 +28,7 @@ weight: 4720
 | 4720  | [**`extra_window_functions`**](/ext/e/extra_window_functions) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
 {.ext-table}
 
-| **相关扩展** | [`pg_idkit`](/ext/e/pg_idkit) [`pgx_ulid`](/ext/e/pgx_ulid) [`pg_uuidv7`](/ext/e/pg_uuidv7) [`permuteseq`](/ext/e/permuteseq) [`pg_hashids`](/ext/e/pg_hashids) [`sequential_uuids`](/ext/e/sequential_uuids) [`topn`](/ext/e/topn) [`quantile`](/ext/e/quantile) |
+| **相关扩展** | [`tablefunc`](/ext/e/tablefunc) [`first_last_agg`](/ext/e/first_last_agg) [`pg_duckdb`](/ext/e/pg_duckdb) [`argm`](/ext/e/argm) [`pg_lake`](/ext/e/pg_lake) [`duckdb_fdw`](/ext/e/duckdb_fdw) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

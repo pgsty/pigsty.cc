@@ -69,7 +69,7 @@ weight: 2952
 | 2979  | [**`omni_yaml`**](/ext/e/omni_yaml) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `omni_yaml` |
 {.ext-table}
 
-| **相关扩展** |  |
+| **相关扩展** | [`pg_idkit`](/ext/e/pg_idkit) [`typeid`](/ext/e/typeid) [`pgx_ulid`](/ext/e/pgx_ulid) [`pg_uuidv7`](/ext/e/pg_uuidv7) [`pg_uuid_v8`](/ext/e/pg_uuid_v8) [`sequential_uuids`](/ext/e/sequential_uuids) [`uuid-ossp`](/ext/e/uuid-ossp) [`snowflake`](/ext/e/snowflake) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **下游依赖** | [`omni_auth`](/ext/e/omni_auth) [`omni_email`](/ext/e/omni_email) [`omni_ledger`](/ext/e/omni_ledger) [`omni_session`](/ext/e/omni_session) |
 {.ext-table .ext-table--rel}

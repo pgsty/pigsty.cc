@@ -28,7 +28,7 @@ weight: 3770
 | 3770  | [**`ip4r`**](/ext/e/ip4r) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
 {.ext-table}
 
-| **相关扩展** | [`pg_net`](/ext/e/pg_net) [`prefix`](/ext/e/prefix) [`semver`](/ext/e/semver) [`unit`](/ext/e/unit) [`pgpdf`](/ext/e/pgpdf) [`pglite_fusion`](/ext/e/pglite_fusion) [`md5hash`](/ext/e/md5hash) [`asn1oid`](/ext/e/asn1oid) |
+| **相关扩展** | [`prefix`](/ext/e/prefix) [`geoip`](/ext/e/geoip) [`postgis`](/ext/e/postgis) [`uri`](/ext/e/uri) [`nominatim_fdw`](/ext/e/nominatim_fdw) [`pg_sphere`](/ext/e/pg_sphere) [`earthdistance`](/ext/e/earthdistance) [`q3c`](/ext/e/q3c) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **下游依赖** | [`geoip`](/ext/e/geoip) |
 {.ext-table .ext-table--rel}

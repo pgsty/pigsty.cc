@@ -33,7 +33,7 @@ weight: 3660
 | 3660  | [**`country`**](/ext/e/country) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
 {.ext-table}
 
-| **相关扩展** | [`l10n_table_dependent_extension`](/ext/e/l10n_table_dependent_extension) [`pg_xenophile`](/ext/e/pg_xenophile) [`currency`](/ext/e/currency) [`geoip`](/ext/e/geoip) [`icu_ext`](/ext/e/icu_ext) [`prefix`](/ext/e/prefix) [`semver`](/ext/e/semver) [`unit`](/ext/e/unit) |
+| **相关扩展** | [`isn`](/ext/e/isn) [`pg_xenophile`](/ext/e/pg_xenophile) [`icu_ext`](/ext/e/icu_ext) [`currency`](/ext/e/currency) [`asn1oid`](/ext/e/asn1oid) [`uri`](/ext/e/uri) [`gb18030_2022`](/ext/e/gb18030_2022) [`pg_cjk_parser`](/ext/e/pg_cjk_parser) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

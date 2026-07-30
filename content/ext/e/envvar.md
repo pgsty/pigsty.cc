@@ -33,7 +33,7 @@ weight: 4270
 | 4270  | [**`envvar`**](/ext/e/envvar) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | - |
 {.ext-table}
 
-| **相关扩展** | [`session_variable`](/ext/e/session_variable) [`gzip`](/ext/e/gzip) [`bzip`](/ext/e/bzip) [`zstd`](/ext/e/zstd) [`http`](/ext/e/http) [`pg_net`](/ext/e/pg_net) [`pg_curl`](/ext/e/pg_curl) [`pgjq`](/ext/e/pgjq) |
+| **相关扩展** | [`external_file`](/ext/e/external_file) [`fio`](/ext/e/fio) [`omni_os`](/ext/e/omni_os) [`byteamagic`](/ext/e/byteamagic) [`floatfile`](/ext/e/floatfile) [`file_fdw`](/ext/e/file_fdw) [`basic_archive`](/ext/e/basic_archive) [`basebackup_to_shell`](/ext/e/basebackup_to_shell) [`aws_s3`](/ext/e/aws_s3) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

@@ -5,12 +5,12 @@ weight: 120
 icon: fas fa-puzzle-piece
 ---
 
-在 Pigsty 扩展目录中共有 **562** 个 PostgreSQL 扩展可用，共计 **405** 个扩展包。
+在 Pigsty 扩展目录中共有 **562** 个 PostgreSQL 扩展可用，共计 **396** 个扩展包。
 
 | **分类** | **All** | **PGDG** | **PIGSTY** | **CONTRIB** | | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
 |:--------:|:------:|:--------:|:----------:|:-----------:|:---:|:--------:|:--------:|:--------:|:--------:|:--------:|
-| [**EXT**](/ext/list) | 562 | 160 | 397 | 71 | | 557 | 543 | 531 | 511 | 488 |
-| [**PKG**](/ext/repo) | 405 | 144 | 322 | 0 | | 402 | 395 | 385 | 373 | 357 |
+| [**EXT**](/ext/list) | 562 | 160 | 397 | 71 | | 557 | 543 | 531 | 510 | 488 |
+| [**PKG**](/ext/repo) | 396 | 144 | 313 | 0 | | 393 | 386 | 376 | 363 | 348 |
 {.ext-table}
 
 
@@ -20,7 +20,7 @@ icon: fas fa-puzzle-piece
 
 | **扩展** | **包名** | **版本** | **属性** | **仓库** | **PG大版本** | **依赖** |
 |:---------|:---------|:--------:|:--------:|:--------:|:-----------:|:---------|
-| [`timescaledb`](/ext/e/timescaledb) | [`timescaledb`](https://github.com/timescale/timescaledb) | `2.28.3` | <span style="white-space:nowrap"><code>--sLdt-</code></span> | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | {{< pgvers "18,17,16,15" >}} | - |
+| [`timescaledb`](/ext/e/timescaledb) | [`timescaledb`](https://github.com/timescale/timescaledb) | `2.29.0` | <span style="white-space:nowrap"><code>--sLdt-</code></span> | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | {{< pgvers "18,17,16" >}} | - |
 | [`timescaledb_toolkit`](/ext/e/timescaledb_toolkit) | [`timescaledb_toolkit`](https://github.com/timescale/timescaledb-toolkit) | `1.23.0` | <span style="white-space:nowrap"><code>--s-d--</code></span> | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | {{< pgvers "18,17,16,15" >}} | - |
 | [`timeseries`](/ext/e/timeseries) | [`pg_timeseries`](https://github.com/ChuckHend/pg_timeseries) | `0.2.1` | <span style="white-space:nowrap"><code>----d--</code></span> | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | {{< pgvers "18,17,16,15,14" >}} | [`pg_cron`](/ext/e/pg_cron), [`pg_partman`](/ext/e/pg_partman) |
 | [`periods`](/ext/e/periods) | [`periods`](https://github.com/xocolatl/periods) | `1.2.3` | <span style="white-space:nowrap"><code>--s-d--</code></span> | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | {{< pgvers "18,17,16,15,14" >}} | [`btree_gist`](/ext/e/btree_gist) |
@@ -83,7 +83,7 @@ icon: fas fa-puzzle-piece
 
 | **扩展** | **包名** | **版本** | **属性** | **仓库** | **PG大版本** | **依赖** |
 |:---------|:---------|:--------:|:--------:|:--------:|:-----------:|:---------|
-| [`vector`](/ext/e/vector) | [`pgvector`](https://github.com/pgvector/pgvector) | `0.8.5` | <span style="white-space:nowrap"><code>--s-d-r</code></span> | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | {{< pgvers "18,17,16,15,14" >}} | - |
+| [`vector`](/ext/e/vector) | [`pgvector`](https://github.com/pgvector/pgvector) | `0.8.6` | <span style="white-space:nowrap"><code>--s-d-r</code></span> | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | {{< pgvers "18,17,16,15,14" >}} | - |
 | [`vchord`](/ext/e/vchord) | [`vchord`](https://github.com/tensorchord/VectorChord) | `1.1.1` | <span style="white-space:nowrap"><code>--sLd-r</code></span> | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | {{< pgvers "18,17,16,15,14" >}} | [`vector`](/ext/e/vector) |
 | [`vectorscale`](/ext/e/vectorscale) | [`pgvectorscale`](https://github.com/timescale/pgvectorscale) | `0.9.0` | <span style="white-space:nowrap"><code>--s-d--</code></span> | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | {{< pgvers "18,17,16,15,14" >}} | [`vector`](/ext/e/vector) |
 | [`vectorize`](/ext/e/vectorize) | [`pg_vectorize`](https://github.com/ChuckHend/pg_vectorize) | `0.26.2` | <span style="white-space:nowrap"><code>--sLd--</code></span> | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | {{< pgvers "18,17,16,15,14" >}} | [`pg_cron`](/ext/e/pg_cron), [`pgmq`](/ext/e/pgmq), [`vector`](/ext/e/vector) |
@@ -95,7 +95,7 @@ icon: fas fa-puzzle-piece
 | [`pg_tiktoken_c`](/ext/e/pg_tiktoken_c) | [`pg_tiktoken_c`](https://github.com/relytcloud/pg_tiktoken_c) | `1.1` | <span style="white-space:nowrap"><code>--s-d--</code></span> | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | {{< pgvers "18,17,16,15,14" >}} | - |
 | [`pg4ml`](/ext/e/pg4ml) | [`pg4ml`](https://gitee.com/guotiecheng/plpgsql_pg4ml) | `2.0` | <span style="white-space:nowrap"><code>----dtr</code></span> | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | {{< pgvers "18,17,16,15,14" >}} | [`plpgsql`](/ext/e/plpgsql), [`tablefunc`](/ext/e/tablefunc), [`cube`](/ext/e/cube), [`plpython3u`](/ext/e/plpython3u) |
 | [`pgml`](/ext/e/pgml) | [`pgml`](https://github.com/postgresml/postgresml) | `2.10.0` | <span style="white-space:nowrap"><code>--sLdt-</code></span> | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | {{< pgvers "17,16,15,14" >}} | - |
-| [`pgmnemo`](/ext/e/pgmnemo) | [`pgmnemo`](https://github.com/pgmnemo/pgmnemo) | `0.14.2` | <span style="white-space:nowrap"><code>----dt-</code></span> | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | {{< pgvers "18,17" >}} | [`vector`](/ext/e/vector) |
+| [`pgmnemo`](/ext/e/pgmnemo) | [`pgmnemo`](https://github.com/pgmnemo/pgmnemo) | `0.15.0` | <span style="white-space:nowrap"><code>----dt-</code></span> | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | {{< pgvers "18,17" >}} | [`vector`](/ext/e/vector) |
 | [`pgcontext`](/ext/e/pgcontext) | [`pgcontext`](https://pgxn.org/dist/pgContext/0.2.0/) | `0.2.0` | <span style="white-space:nowrap"><code>--s-d--</code></span> | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | {{< pgvers "18,17" >}} | - |
 | [`pgcontext_pgvector`](/ext/e/pgcontext_pgvector) | [`pgcontext`](https://pgxn.org/dist/pgContext/0.2.0/) | `0.2.0` | <span style="white-space:nowrap"><code>--s-d--</code></span> | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | {{< pgvers "18,17" >}} | [`pgcontext`](/ext/e/pgcontext), [`vector`](/ext/e/vector) |
 {.ext-table}
@@ -107,7 +107,7 @@ icon: fas fa-puzzle-piece
 
 | **扩展** | **包名** | **版本** | **属性** | **仓库** | **PG大版本** | **依赖** |
 |:---------|:---------|:--------:|:--------:|:--------:|:-----------:|:---------|
-| [`pg_search`](/ext/e/pg_search) | [`pg_search`](https://github.com/paradedb/paradedb/tree/dev/pg_search) | `0.24.3` | <span style="white-space:nowrap"><code>--sLd--</code></span> | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | {{< pgvers "18,17,16,15" >}} | - |
+| [`pg_search`](/ext/e/pg_search) | [`pg_search`](https://github.com/paradedb/paradedb/tree/main/pg_search) | `0.25.0` | <span style="white-space:nowrap"><code>--sLd--</code></span> | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | {{< pgvers "18,17,16,15" >}} | [`vector`](/ext/e/vector) |
 | [`pgroonga`](/ext/e/pgroonga) | [`pgroonga`](https://github.com/pgroonga/pgroonga) | `4.0.4` | <span style="white-space:nowrap"><code>--s-dtr</code></span> | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | {{< pgvers "18,17,16,15,14" >}} | - |
 | [`pgroonga_database`](/ext/e/pgroonga_database) | [`pgroonga`](https://github.com/pgroonga/pgroonga) | `4.0.4` | <span style="white-space:nowrap"><code>--s-dtr</code></span> | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | {{< pgvers "18,17,16,15,14" >}} | - |
 | [`pg_bigm`](/ext/e/pg_bigm) | [`pg_bigm`](https://github.com/pgbigm/pg_bigm) | `1.2` | <span style="white-space:nowrap"><code>--sLd-r</code></span> | <a class="ext-badge ext-badge--repo mixed" href="/ext/repo#mixed">MIXED</a> | {{< pgvers "18,17,16,15,14" >}} | - |
@@ -265,7 +265,7 @@ icon: fas fa-puzzle-piece
 | [`hstore_plluau`](/ext/e/hstore_plluau) | [`pllua`](https://github.com/pllua/pllua) | `2.0.12` | <span style="white-space:nowrap"><code>--s-d-r</code></span> | <a class="ext-badge ext-badge--repo mixed" href="/ext/repo#mixed">MIXED</a> | {{< pgvers "18,17,16,15,14" >}} | [`hstore`](/ext/e/hstore), [`plluau`](/ext/e/plluau) |
 | [`plprql`](/ext/e/plprql) | [`plprql`](https://github.com/kaspermarstal/plprql) | `18.0.1` | <span style="white-space:nowrap"><code>--s-d--</code></span> | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | {{< pgvers "18,17,16,15,14" >}} | - |
 | [`pldbgapi`](/ext/e/pldbgapi) | [`pldebugger`](https://github.com/EnterpriseDB/pldebugger) | `1.10` | <span style="white-space:nowrap"><code>--sLd-r</code></span> | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | {{< pgvers "18,17,16,15,14" >}} | - |
-| [`plpgsql_check`](/ext/e/plpgsql_check) | [`plpgsql_check`](https://github.com/okbob/plpgsql_check) | `2.10.3` | <span style="white-space:nowrap"><code>--sLd--</code></span> | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | {{< pgvers "18,17,16,15,14" >}} | [`plpgsql`](/ext/e/plpgsql) |
+| [`plpgsql_check`](/ext/e/plpgsql_check) | [`plpgsql_check`](https://github.com/okbob/plpgsql_check) | `2.10.3` | <span style="white-space:nowrap"><code>--s-d--</code></span> | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | {{< pgvers "18,17,16,15,14" >}} | [`plpgsql`](/ext/e/plpgsql) |
 | [`plprofiler`](/ext/e/plprofiler) | [`plprofiler`](https://github.com/bigsql/plprofiler) | `4.2.5` | <span style="white-space:nowrap"><code>--sLd-r</code></span> | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | {{< pgvers "18,17,16,15,14" >}} | - |
 | [`plsh`](/ext/e/plsh) | [`plsh`](https://github.com/petere/plsh) | `1.20220917` | <span style="white-space:nowrap"><code>--s-d-r</code></span> | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | {{< pgvers "18,17,16,15,14" >}} | - |
 | [`pljava`](/ext/e/pljava) | [`pljava`](https://github.com/tada/pljava) | `1.6.10` | <span style="white-space:nowrap"><code>--s-d--</code></span> | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | {{< pgvers "18,17,16,15,14" >}} | - |
@@ -390,7 +390,7 @@ icon: fas fa-puzzle-piece
 | [`sequential_uuids`](/ext/e/sequential_uuids) | [`sequential_uuids`](https://github.com/tvondra/sequential-uuids) | `1.0.3` | <span style="white-space:nowrap"><code>--s-d-r</code></span> | <a class="ext-badge ext-badge--repo mixed" href="/ext/repo#mixed">MIXED</a> | {{< pgvers "18,17,16,15,14" >}} | - |
 | [`typeid`](/ext/e/typeid) | [`pg_typeid`](https://github.com/blitss/typeid-postgres) | `0.3.0` | <span style="white-space:nowrap"><code>--s-d--</code></span> | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | {{< pgvers "18,17,16,15,14" >}} | - |
 | [`snowflake`](/ext/e/snowflake) | [`snowflake`](https://github.com/pgEdge/snowflake) | `2.5.0` | <span style="white-space:nowrap"><code>--s-d--</code></span> | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | {{< pgvers "18,17,16,15" >}} | - |
-| [`topn`](/ext/e/topn) | [`topn`](https://github.com/citusdata/postgresql-topn) | `2.7.0` | <span style="white-space:nowrap"><code>--s-d--</code></span> | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | {{< pgvers "18,17,16,15,14" >}} | - |
+| [`topn`](/ext/e/topn) | [`topn`](https://github.com/citusdata/postgresql-topn) | `2.7.1` | <span style="white-space:nowrap"><code>--s-d--</code></span> | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | {{< pgvers "18,17,16,15,14" >}} | - |
 | [`quantile`](/ext/e/quantile) | [`quantile`](https://github.com/tvondra/quantile) | `1.1.8` | <span style="white-space:nowrap"><code>--s-d--</code></span> | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | {{< pgvers "18,17,16,15,14" >}} | - |
 | [`lower_quantile`](/ext/e/lower_quantile) | [`lower_quantile`](https://github.com/tvondra/lower_quantile) | `1.0.3` | <span style="white-space:nowrap"><code>--s-d--</code></span> | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | {{< pgvers "18,17,16,15,14" >}} | - |
 | [`count_distinct`](/ext/e/count_distinct) | [`count_distinct`](https://github.com/tvondra/count_distinct) | `3.0.2` | <span style="white-space:nowrap"><code>--s-d-r</code></span> | <a class="ext-badge ext-badge--repo mixed" href="/ext/repo#mixed">MIXED</a> | {{< pgvers "18,17,16,15,14" >}} | - |
@@ -431,7 +431,7 @@ icon: fas fa-puzzle-piece
 | [`pg_repack`](/ext/e/pg_repack) | [`pg_repack`](https://github.com/reorg/pg_repack) | `1.5.3` | <span style="white-space:nowrap"><code>-bs-d--</code></span> | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | {{< pgvers "18,17,16,15,14" >}} | - |
 | [`pg_rewrite`](/ext/e/pg_rewrite) | [`pg_rewrite`](https://github.com/cybertec-postgresql/pg_rewrite) | `2.2` | <span style="white-space:nowrap"><code>--sLd-r</code></span> | <a class="ext-badge ext-badge--repo mixed" href="/ext/repo#mixed">MIXED</a> | {{< pgvers "18,17,16,15,14" >}} | - |
 | [`pg_query_rewrite`](/ext/e/pg_query_rewrite) | [`pg_query_rewrite`](https://github.com/pierreforstmann/pg_query_rewrite) | `0.0.5` | <span style="white-space:nowrap"><code>--sLd--</code></span> | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | {{< pgvers "18,17,16,15,14" >}} | - |
-| [`pg_squeeze`](/ext/e/pg_squeeze) | [`pg_squeeze`](https://github.com/cybertec-postgresql/pg_squeeze) | `1.9.3` | <span style="white-space:nowrap"><code>--sLd--</code></span> | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | {{< pgvers "18,17,16,15,14" >}} | - |
+| [`pg_squeeze`](/ext/e/pg_squeeze) | [`pg_squeeze`](https://github.com/cybertec-postgresql/pg_squeeze) | `1.9.4` | <span style="white-space:nowrap"><code>--sLd--</code></span> | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | {{< pgvers "18,17,16,15,14" >}} | - |
 | [`pg_dirtyread`](/ext/e/pg_dirtyread) | [`pg_dirtyread`](https://github.com/df7cb/pg_dirtyread) | `2.8` | <span style="white-space:nowrap"><code>--s-d-r</code></span> | <a class="ext-badge ext-badge--repo mixed" href="/ext/repo#mixed">MIXED</a> | {{< pgvers "18,17,16,15,14" >}} | - |
 | [`pgfincore`](/ext/e/pgfincore) | [`pgfincore`](https://github.com/klando/pgfincore) | `1.4.0` | <span style="white-space:nowrap"><code>--s-d-r</code></span> | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | {{< pgvers "18,17,16,15,14" >}} | - |
 | [`pg_cooldown`](/ext/e/pg_cooldown) | [`pg_cooldown`](https://github.com/rbergm/pg_cooldown) | `0.1` | <span style="white-space:nowrap"><code>--s-d-r</code></span> | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | {{< pgvers "18,17,16,15,14" >}} | - |
@@ -565,7 +565,7 @@ icon: fas fa-puzzle-piece
 | [`mysql_fdw`](/ext/e/mysql_fdw) | [`mysql_fdw`](https://github.com/EnterpriseDB/mysql_fdw) | `2.9.3` | <span style="white-space:nowrap"><code>--s-d-r</code></span> | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | {{< pgvers "18,17,16,15,14" >}} | - |
 | [`oracle_fdw`](/ext/e/oracle_fdw) | [`oracle_fdw`](https://github.com/laurenz/oracle_fdw) | `2.9.0` | <span style="white-space:nowrap"><code>--s-d--</code></span> | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | {{< pgvers "18,17,16,15,14" >}} | - |
 | [`tds_fdw`](/ext/e/tds_fdw) | [`tds_fdw`](https://github.com/tds-fdw/tds_fdw) | `2.0.5` | <span style="white-space:nowrap"><code>--s-d-r</code></span> | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | {{< pgvers "18,17,16,15,14" >}} | - |
-| [`db2_fdw`](/ext/e/db2_fdw) | [`db2_fdw`](https://github.com/wolfgangbrandl/db2_fdw) | `18.1.2` | <span style="white-space:nowrap"><code>--s-d--</code></span> | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | {{< pgvers "18,17,16,15,14" >}} | - |
+| [`db2_fdw`](/ext/e/db2_fdw) | [`db2_fdw`](https://github.com/wolfgangbrandl/db2_fdw) | `18.2.0` | <span style="white-space:nowrap"><code>--s-d--</code></span> | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | {{< pgvers "18,17,16,15,14" >}} | - |
 | [`sqlite_fdw`](/ext/e/sqlite_fdw) | [`sqlite_fdw`](https://github.com/pgspider/sqlite_fdw) | `2.5.0` | <span style="white-space:nowrap"><code>--s-d-r</code></span> | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | {{< pgvers "18,17,16,15,14" >}} | - |
 | [`pgbouncer_fdw`](/ext/e/pgbouncer_fdw) | [`pgbouncer_fdw`](https://github.com/CrunchyData/pgbouncer_fdw) | `1.4.0` | <span style="white-space:nowrap"><code>----d--</code></span> | <a class="ext-badge ext-badge--repo mixed" href="/ext/repo#mixed">MIXED</a> | {{< pgvers "18,17,16,15,14" >}} | [`dblink`](/ext/e/dblink) |
 | [`etcd_fdw`](/ext/e/etcd_fdw) | [`etcd_fdw`](https://github.com/cybertec-postgresql/etcd_fdw) | `0.0.1` | <span style="white-space:nowrap"><code>--s-d--</code></span> | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | {{< pgvers "18,17,16,15,14" >}} | - |
@@ -626,7 +626,7 @@ icon: fas fa-puzzle-piece
 
 | **扩展** | **包名** | **版本** | **属性** | **仓库** | **PG大版本** | **依赖** |
 |:---------|:---------|:--------:|:--------:|:--------:|:-----------:|:---------|
-| [`pglogical`](/ext/e/pglogical) | [`pglogical`](https://github.com/2ndQuadrant/pglogical) | `2.4.7` | <span style="white-space:nowrap"><code>--sLd--</code></span> | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | {{< pgvers "18,17,16,15,14" >}} | - |
+| [`pglogical`](/ext/e/pglogical) | [`pglogical`](https://github.com/2ndQuadrant/pglogical) | `2.4.8` | <span style="white-space:nowrap"><code>--sLd--</code></span> | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | {{< pgvers "18,17,16,15,14" >}} | - |
 | [`pglogical_origin`](/ext/e/pglogical_origin) | [`pglogical`](https://github.com/2ndQuadrant/pglogical) | `2.4.7` | <span style="white-space:nowrap"><code>--s-d--</code></span> | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | {{< pgvers "18,17,16,15,14" >}} | - |
 | [`pglogical_ticker`](/ext/e/pglogical_ticker) | [`pglogical_ticker`](https://github.com/enova/pglogical_ticker) | `1.4.1` | <span style="white-space:nowrap"><code>--sLd--</code></span> | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | {{< pgvers "18,17,16,15,14" >}} | [`pglogical`](/ext/e/pglogical) |
 | [`pgl_ddl_deploy`](/ext/e/pgl_ddl_deploy) | [`pgl_ddl_deploy`](https://github.com/enova/pgl_ddl_deploy) | `2.2.1` | <span style="white-space:nowrap"><code>--s-d--</code></span> | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | {{< pgvers "18,17,16,15,14" >}} | [`pglogical`](/ext/e/pglogical) |

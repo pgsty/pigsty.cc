@@ -28,7 +28,7 @@ weight: 3200
 | 3200  | [**`pgtap`**](/ext/e/pgtap) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | - |
 {.ext-table}
 
-| **相关扩展** | [`plpgsql`](/ext/e/plpgsql) [`plpgsql_check`](/ext/e/plpgsql_check) [`plpgsql`](/ext/e/plpgsql) [`pldbgapi`](/ext/e/pldbgapi) [`plprofiler`](/ext/e/plprofiler) [`faker`](/ext/e/faker) [`unit`](/ext/e/unit) [`dbt2`](/ext/e/dbt2) [`plperl`](/ext/e/plperl) |
+| **相关扩展** | [`plpgsql`](/ext/e/plpgsql) [`faker`](/ext/e/faker) [`dbt2`](/ext/e/dbt2) [`pg_mockable`](/ext/e/pg_mockable) [`pgsqlmock`](/ext/e/pgsqlmock) [`omni_test`](/ext/e/omni_test) [`random`](/ext/e/random) [`tsm_system_time`](/ext/e/tsm_system_time) [`tsm_system_rows`](/ext/e/tsm_system_rows) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

@@ -33,7 +33,7 @@ weight: 1580
 | 1580  | [**`pg_eviltransform`**](/ext/e/pg_eviltransform) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | `eviltransform_internal` |
 {.ext-table}
 
-| **相关扩展** | [`postgis`](/ext/e/postgis) [`postgis`](/ext/e/postgis) [`pgrouting`](/ext/e/pgrouting) [`pg_geohash`](/ext/e/pg_geohash) [`h3`](/ext/e/h3) [`q3c`](/ext/e/q3c) [`earthdistance`](/ext/e/earthdistance) [`tzf`](/ext/e/tzf) [`geoip`](/ext/e/geoip) |
+| **相关扩展** | [`postgis`](/ext/e/postgis) [`postgis`](/ext/e/postgis) [`h3`](/ext/e/h3) [`pg_geohash`](/ext/e/pg_geohash) [`pg_polyline`](/ext/e/pg_polyline) [`earthdistance`](/ext/e/earthdistance) [`qdgc`](/ext/e/qdgc) [`convert`](/ext/e/convert) [`pgrouting`](/ext/e/pgrouting) [`nominatim_fdw`](/ext/e/nominatim_fdw) [`q3c`](/ext/e/q3c) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

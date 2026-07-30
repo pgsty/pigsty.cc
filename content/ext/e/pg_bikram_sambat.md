@@ -33,7 +33,7 @@ weight: 3860
 | 3860  | [**`pg_bikram_sambat`**](/ext/e/pg_bikram_sambat) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
 {.ext-table}
 
-| **相关扩展** | [`pg_duration`](/ext/e/pg_duration) [`pg_rrule`](/ext/e/pg_rrule) [`pgcalendar`](/ext/e/pgcalendar) [`timestamp9`](/ext/e/timestamp9) [`pg_extra_time`](/ext/e/pg_extra_time) [`periods`](/ext/e/periods) [`temporal_tables`](/ext/e/temporal_tables) [`country`](/ext/e/country) |
+| **相关扩展** | [`pgcalendar`](/ext/e/pgcalendar) [`pg_rrule`](/ext/e/pg_rrule) [`pg_duration`](/ext/e/pg_duration) [`timestamp9`](/ext/e/timestamp9) [`pg_when`](/ext/e/pg_when) [`cron_utils`](/ext/e/cron_utils) [`pg_cron`](/ext/e/pg_cron) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

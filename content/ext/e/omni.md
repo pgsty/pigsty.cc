@@ -69,6 +69,10 @@ weight: 2940
 | 2979  | [**`omni_yaml`**](/ext/e/omni_yaml) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `omni_yaml` |
 {.ext-table}
 
+| **相关扩展** | [`pg_graphql`](/ext/e/pg_graphql) [`pg_net`](/ext/e/pg_net) [`pgmq`](/ext/e/pgmq) [`redis`](/ext/e/redis) [`pgmb`](/ext/e/pgmb) [`ulak`](/ext/e/ulak) [`http`](/ext/e/http) [`redis_fdw`](/ext/e/redis_fdw) [`pg_durable`](/ext/e/pg_durable) [`documentdb`](/ext/e/documentdb) |
+|:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+{.ext-table .ext-table--rel}
+
 
 > shared lib name is different from ext name!
 

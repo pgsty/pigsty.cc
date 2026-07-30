@@ -33,7 +33,7 @@ weight: 3130
 | 3130  | [**`pgsqlmock`**](/ext/e/pgsqlmock) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
 {.ext-table}
 
-| **相关扩展** | [`plpgsql`](/ext/e/plpgsql) [`pgtap`](/ext/e/pgtap) [`pgtap`](/ext/e/pgtap) [`pg_mockable`](/ext/e/pg_mockable) [`faker`](/ext/e/faker) [`unit`](/ext/e/unit) |
+| **相关扩展** | [`plpgsql`](/ext/e/plpgsql) [`pgtap`](/ext/e/pgtap) [`faker`](/ext/e/faker) [`dbt2`](/ext/e/dbt2) [`pg_mockable`](/ext/e/pg_mockable) [`pgtap`](/ext/e/pgtap) [`omni_test`](/ext/e/omni_test) [`random`](/ext/e/random) [`tsm_system_time`](/ext/e/tsm_system_time) [`tsm_system_rows`](/ext/e/tsm_system_rows) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

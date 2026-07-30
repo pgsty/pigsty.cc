@@ -33,7 +33,7 @@ weight: 8640
 | 8640  | [**`sqlite_fdw`**](/ext/e/sqlite_fdw) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
 {.ext-table}
 
-| **相关扩展** | [`mysql_fdw`](/ext/e/mysql_fdw) [`file_fdw`](/ext/e/file_fdw) [`postgres_fdw`](/ext/e/postgres_fdw) [`wrappers`](/ext/e/wrappers) [`multicorn`](/ext/e/multicorn) [`odbc_fdw`](/ext/e/odbc_fdw) [`jdbc_fdw`](/ext/e/jdbc_fdw) [`duckdb_fdw`](/ext/e/duckdb_fdw) |
+| **相关扩展** | [`duckdb_fdw`](/ext/e/duckdb_fdw) [`pglite_fusion`](/ext/e/pglite_fusion) [`omni_sqlite`](/ext/e/omni_sqlite) [`mysql_fdw`](/ext/e/mysql_fdw) [`oracle_fdw`](/ext/e/oracle_fdw) [`tds_fdw`](/ext/e/tds_fdw) [`db2_fdw`](/ext/e/db2_fdw) [`informix_fdw`](/ext/e/informix_fdw) [`postgres_fdw`](/ext/e/postgres_fdw) [`firebird_fdw`](/ext/e/firebird_fdw) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

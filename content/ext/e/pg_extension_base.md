@@ -40,7 +40,7 @@ weight: 2561
 | 2567  | [**`pg_lake_copy`**](/ext/e/pg_lake_copy) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `pg_catalog` |
 {.ext-table}
 
-| **相关扩展** |  |
+| **相关扩展** | [`pg_tle`](/ext/e/pg_tle) [`pg_readme`](/ext/e/pg_readme) [`pgextwlist`](/ext/e/pgextwlist) [`ddlx`](/ext/e/ddlx) [`pgdd`](/ext/e/pgdd) [`meta`](/ext/e/meta) [`pg_command_fw`](/ext/e/pg_command_fw) [`supautils`](/ext/e/supautils) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **下游依赖** | [`pg_extension_updater`](/ext/e/pg_extension_updater) [`pg_lake_engine`](/ext/e/pg_lake_engine) |
 {.ext-table .ext-table--rel}

@@ -33,7 +33,7 @@ weight: 6280
 | 6280  | [**`pg_wait_sampling`**](/ext/e/pg_wait_sampling) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
 {.ext-table}
 
-| **相关扩展** | [`powa`](/ext/e/powa) [`pg_stat_statements`](/ext/e/pg_stat_statements) [`pg_background`](/ext/e/pg_background) [`pg_stat_kcache`](/ext/e/pg_stat_kcache) [`system_stats`](/ext/e/system_stats) [`pgnodemx`](/ext/e/pgnodemx) [`pg_profile`](/ext/e/pg_profile) [`pgsentinel`](/ext/e/pgsentinel) |
+| **相关扩展** | [`pg_profile`](/ext/e/pg_profile) [`pgsentinel`](/ext/e/pgsentinel) [`pg_stat_monitor`](/ext/e/pg_stat_monitor) [`pg_datasentinel`](/ext/e/pg_datasentinel) [`powa`](/ext/e/powa) [`pgrowlocks`](/ext/e/pgrowlocks) [`pg_visibility`](/ext/e/pg_visibility) [`pg_show_plans`](/ext/e/pg_show_plans) [`pg_stat_statements`](/ext/e/pg_stat_statements) [`pg_stat_plans`](/ext/e/pg_stat_plans) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

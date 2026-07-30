@@ -33,7 +33,7 @@ weight: 5090
 | 5090  | [**`pglinter`**](/ext/e/pglinter) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | - |
 {.ext-table}
 
-| **相关扩展** | [`amcheck`](/ext/e/amcheck) [`supautils`](/ext/e/supautils) |
+| **相关扩展** | [`plpgsql_check`](/ext/e/plpgsql_check) [`pg_query_rewrite`](/ext/e/pg_query_rewrite) [`ddlx`](/ext/e/ddlx) [`pg_readme`](/ext/e/pg_readme) [`pldbgapi`](/ext/e/pldbgapi) [`pg_fsql`](/ext/e/pg_fsql) [`pgdd`](/ext/e/pgdd) [`meta`](/ext/e/meta) [`plprofiler`](/ext/e/plprofiler) [`pg_stat_plans`](/ext/e/pg_stat_plans) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

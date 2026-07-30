@@ -33,7 +33,7 @@ weight: 9200
 | 9200  | [**`db2fce`**](/ext/e/db2fce) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `db2` |
 {.ext-table}
 
-| **相关扩展** | [`plpgsql`](/ext/e/plpgsql) [`orafce`](/ext/e/orafce) [`pg_dbms_metadata`](/ext/e/pg_dbms_metadata) [`pg_dbms_job`](/ext/e/pg_dbms_job) |
+| **相关扩展** | [`plpgsql`](/ext/e/plpgsql) [`orafce`](/ext/e/orafce) [`pg_statement_rollback`](/ext/e/pg_statement_rollback) [`ivorysql_ora`](/ext/e/ivorysql_ora) [`pgtt`](/ext/e/pgtt) [`session_variable`](/ext/e/session_variable) [`babelfishpg_common`](/ext/e/babelfishpg_common) [`tds_fdw`](/ext/e/tds_fdw) [`db_migrator`](/ext/e/db_migrator) [`db2_fdw`](/ext/e/db2_fdw) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

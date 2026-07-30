@@ -69,7 +69,7 @@ weight: 2963
 | 2979  | [**`omni_yaml`**](/ext/e/omni_yaml) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `omni_yaml` |
 {.ext-table}
 
-| **相关扩展** | [`omni_sql`](/ext/e/omni_sql) [`omni_vfs`](/ext/e/omni_vfs) [`omni_polyfill`](/ext/e/omni_polyfill) [`omni_yaml`](/ext/e/omni_yaml) [`dblink`](/ext/e/dblink) [`postgres_fdw`](/ext/e/postgres_fdw) [`omni_types`](/ext/e/omni_types) [`omni_cloudevents`](/ext/e/omni_cloudevents) |
+| **相关扩展** | [`omni_sql`](/ext/e/omni_sql) [`omni_vfs`](/ext/e/omni_vfs) [`omni_polyfill`](/ext/e/omni_polyfill) [`omni_yaml`](/ext/e/omni_yaml) [`dblink`](/ext/e/dblink) [`postgres_fdw`](/ext/e/postgres_fdw) [`omni_types`](/ext/e/omni_types) [`omni_cloudevents`](/ext/e/omni_cloudevents) [`ddlx`](/ext/e/ddlx) [`pgdd`](/ext/e/pgdd) [`pg_permissions`](/ext/e/pg_permissions) [`pg_readme`](/ext/e/pg_readme) [`meta`](/ext/e/meta) [`pg_catcheck`](/ext/e/pg_catcheck) [`set_user`](/ext/e/set_user) [`pg_roast`](/ext/e/pg_roast) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

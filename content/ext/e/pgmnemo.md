@@ -1,7 +1,7 @@
 ---
 title: "pgmnemo"
 linkTitle: "pgmnemo"
-description: "面向 LLM 代理的 PostgreSQL 溯源向量记忆扩展"
+description: "PostgreSQL 单计划多模态智能体记忆扩展"
 weight: 1950
 ---
 
@@ -11,10 +11,10 @@ weight: 1950
     <div class="ext-card__title">pgmnemo/pgmnemo</div>
     <div class="ext-card__desc">https://github.com/pgmnemo/pgmnemo</div>
   </a>
-  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pgmnemo-0.14.2.tar.gz">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pgmnemo-0.15.0.tar.gz">
     <div class="ext-card__kicker">源码</div>
-    <div class="ext-card__title">pgmnemo-0.14.2.tar.gz</div>
-    <div class="ext-card__desc">pgmnemo-0.14.2.tar.gz</div>
+    <div class="ext-card__title">pgmnemo-0.15.0.tar.gz</div>
+    <div class="ext-card__desc">pgmnemo-0.15.0.tar.gz</div>
   </a>
 </div>
 
@@ -25,7 +25,7 @@ weight: 1950
 
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
-| [**`pgmnemo`**](/ext/e/pgmnemo) | `0.14.2` | <a class="ext-badge ext-badge--cate rag" href="/ext/cate/rag">RAG</a> | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> |
+| [**`pgmnemo`**](/ext/e/pgmnemo) | `0.15.0` | <a class="ext-badge ext-badge--cate rag" href="/ext/cate/rag">RAG</a> | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> |
 {.ext-table}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
@@ -33,74 +33,86 @@ weight: 1950
 | 1950  | [**`pgmnemo`**](/ext/e/pgmnemo) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | `pgmnemo` |
 {.ext-table}
 
-| **相关扩展** | [`vector`](/ext/e/vector) [`vector`](/ext/e/vector) [`pg_search`](/ext/e/pg_search) [`pg_ai_query`](/ext/e/pg_ai_query) [`pg_later`](/ext/e/pg_later) |
+| **相关扩展** | [`vector`](/ext/e/vector) [`pgcontext`](/ext/e/pgcontext) [`vector`](/ext/e/vector) [`vectorize`](/ext/e/vectorize) [`pgml`](/ext/e/pgml) [`pg4ml`](/ext/e/pg4ml) [`pg_summarize`](/ext/e/pg_summarize) [`provsql`](/ext/e/provsql) [`pg_rrf`](/ext/e/pg_rrf) [`pg_search`](/ext/e/pg_search) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 
 
-> SQL-only extension requiring pgvector 0.7.0 or newer; upstream 0.14.2 and PIGSTY packages support PostgreSQL 17 and 18.
+> SQL-only extension requiring pgvector 0.7.0 or newer; upstream 0.15.0 and PIGSTY packages support PostgreSQL 17 and 18.
 
 
 ## 版本
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#rag) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.14.2` | {{< pgvers "18,17" >}} | `pgmnemo` | `vector` |
-| [**RPM**](/ext/rpm#rag) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.14.2` | {{< pgvers "18,17" >}} | `pgmnemo_$v` | `pgvector_$v` |
-| [**DEB**](/ext/deb#rag) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.14.2` | {{< pgvers "18,17" >}} | `postgresql-$v-pgmnemo` | `postgresql-$v-pgvector` |
+| [**EXT**](/ext/list#rag) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.15.0` | {{< pgvers "18,17" >}} | `pgmnemo` | `vector` |
+| [**RPM**](/ext/rpm#rag) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.15.0` | {{< pgvers "18,17" >}} | `pgmnemo_$v` | `pgvector_$v` |
+| [**DEB**](/ext/deb#rag) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.15.0` | {{< pgvers "18,17" >}} | `postgresql-$v-pgmnemo` | `postgresql-$v-pgvector` |
 {.ext-table}
 
 {{< pgext_matrix >}}
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 0.14.2 1 | AVAIL PIGSTY 0.14.2 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 |
-| el8.aarch64 | AVAIL PIGSTY 0.14.2 1 | AVAIL PIGSTY 0.14.2 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 |
-| el9.x86_64 | AVAIL PIGSTY 0.14.2 1 | AVAIL PIGSTY 0.14.2 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 |
-| el9.aarch64 | AVAIL PIGSTY 0.14.2 1 | AVAIL PIGSTY 0.14.2 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 |
-| el10.x86_64 | AVAIL PIGSTY 0.14.2 1 | AVAIL PIGSTY 0.14.2 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 |
-| el10.aarch64 | AVAIL PIGSTY 0.14.2 1 | AVAIL PIGSTY 0.14.2 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 |
-| d12.x86_64 | AVAIL PIGSTY 0.14.2 1 | AVAIL PIGSTY 0.14.2 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 |
-| d12.aarch64 | AVAIL PIGSTY 0.14.2 1 | AVAIL PIGSTY 0.14.2 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 |
-| d13.x86_64 | AVAIL PIGSTY 0.14.2 1 | AVAIL PIGSTY 0.14.2 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 |
-| d13.aarch64 | AVAIL PIGSTY 0.14.2 1 | AVAIL PIGSTY 0.14.2 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 |
-| u22.x86_64 | AVAIL PIGSTY 0.14.2 1 | AVAIL PIGSTY 0.14.2 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 |
-| u22.aarch64 | AVAIL PIGSTY 0.14.2 1 | AVAIL PIGSTY 0.14.2 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 |
-| u24.x86_64 | AVAIL PIGSTY 0.14.2 1 | AVAIL PIGSTY 0.14.2 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 |
-| u24.aarch64 | AVAIL PIGSTY 0.14.2 1 | AVAIL PIGSTY 0.14.2 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 |
-| u26.x86_64 | AVAIL PIGSTY 0.14.2 1 | AVAIL PIGSTY 0.14.2 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 |
-| u26.aarch64 | AVAIL PIGSTY 0.14.2 1 | AVAIL PIGSTY 0.14.2 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 |
+| el8.x86_64 | AVAIL PIGSTY 0.15.0 2 | AVAIL PIGSTY 0.15.0 2 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 |
+| el8.aarch64 | AVAIL PIGSTY 0.15.0 2 | AVAIL PIGSTY 0.15.0 2 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 |
+| el9.x86_64 | AVAIL PIGSTY 0.15.0 2 | AVAIL PIGSTY 0.15.0 2 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 |
+| el9.aarch64 | AVAIL PIGSTY 0.15.0 2 | AVAIL PIGSTY 0.15.0 2 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 |
+| el10.x86_64 | AVAIL PIGSTY 0.15.0 2 | AVAIL PIGSTY 0.15.0 2 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 |
+| el10.aarch64 | AVAIL PIGSTY 0.15.0 2 | AVAIL PIGSTY 0.15.0 2 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 |
+| d12.x86_64 | AVAIL PIGSTY 0.15.0 1 | AVAIL PIGSTY 0.15.0 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 |
+| d12.aarch64 | AVAIL PIGSTY 0.15.0 1 | AVAIL PIGSTY 0.15.0 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 |
+| d13.x86_64 | AVAIL PIGSTY 0.15.0 1 | AVAIL PIGSTY 0.15.0 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 |
+| d13.aarch64 | AVAIL PIGSTY 0.15.0 1 | AVAIL PIGSTY 0.15.0 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 |
+| u22.x86_64 | AVAIL PIGSTY 0.15.0 1 | AVAIL PIGSTY 0.15.0 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 |
+| u22.aarch64 | AVAIL PIGSTY 0.15.0 1 | AVAIL PIGSTY 0.15.0 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 |
+| u24.x86_64 | AVAIL PIGSTY 0.15.0 1 | AVAIL PIGSTY 0.15.0 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 |
+| u24.aarch64 | AVAIL PIGSTY 0.15.0 1 | AVAIL PIGSTY 0.15.0 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 |
+| u26.x86_64 | AVAIL PIGSTY 0.15.0 1 | AVAIL PIGSTY 0.15.0 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 |
+| u26.aarch64 | AVAIL PIGSTY 0.15.0 1 | AVAIL PIGSTY 0.15.0 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 |
+@ el8.x86_64 18 pgmnemo_18 pgmnemo_18-0.15.0-1PIGSTY.el8.x86_64.rpm pigsty 0.15.0 187.2KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgmnemo_18-0.15.0-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 18 pgmnemo_18 pgmnemo_18-0.14.2-1PIGSTY.el8.x86_64.rpm pigsty 0.14.2 182.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgmnemo_18-0.14.2-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 18 pgmnemo_18 pgmnemo_18-0.15.0-1PIGSTY.el8.aarch64.rpm pigsty 0.15.0 187.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgmnemo_18-0.15.0-1PIGSTY.el8.aarch64.rpm
 @ el8.aarch64 18 pgmnemo_18 pgmnemo_18-0.14.2-1PIGSTY.el8.aarch64.rpm pigsty 0.14.2 182.3KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgmnemo_18-0.14.2-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 18 pgmnemo_18 pgmnemo_18-0.15.0-1PIGSTY.el9.x86_64.rpm pigsty 0.15.0 163.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgmnemo_18-0.15.0-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 18 pgmnemo_18 pgmnemo_18-0.14.2-1PIGSTY.el9.x86_64.rpm pigsty 0.14.2 158.1KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgmnemo_18-0.14.2-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 18 pgmnemo_18 pgmnemo_18-0.15.0-1PIGSTY.el9.aarch64.rpm pigsty 0.15.0 163.3KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgmnemo_18-0.15.0-1PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 18 pgmnemo_18 pgmnemo_18-0.14.2-1PIGSTY.el9.aarch64.rpm pigsty 0.14.2 158.1KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgmnemo_18-0.14.2-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 18 pgmnemo_18 pgmnemo_18-0.15.0-1PIGSTY.el10.x86_64.rpm pigsty 0.15.0 163.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgmnemo_18-0.15.0-1PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 18 pgmnemo_18 pgmnemo_18-0.14.2-1PIGSTY.el10.x86_64.rpm pigsty 0.14.2 158.2KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgmnemo_18-0.14.2-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 18 pgmnemo_18 pgmnemo_18-0.15.0-1PIGSTY.el10.aarch64.rpm pigsty 0.15.0 163.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgmnemo_18-0.15.0-1PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 18 pgmnemo_18 pgmnemo_18-0.14.2-1PIGSTY.el10.aarch64.rpm pigsty 0.14.2 158.1KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgmnemo_18-0.14.2-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 18 postgresql-18-pgmnemo postgresql-18-pgmnemo_0.14.2-1PIGSTY~bookworm_all.deb pigsty 0.14.2 145.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgmnemo/postgresql-18-pgmnemo_0.14.2-1PIGSTY~bookworm_all.deb
-@ d12.aarch64 18 postgresql-18-pgmnemo postgresql-18-pgmnemo_0.14.2-1PIGSTY~bookworm_all.deb pigsty 0.14.2 145.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgmnemo/postgresql-18-pgmnemo_0.14.2-1PIGSTY~bookworm_all.deb
-@ d13.x86_64 18 postgresql-18-pgmnemo postgresql-18-pgmnemo_0.14.2-1PIGSTY~trixie_all.deb pigsty 0.14.2 145.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgmnemo/postgresql-18-pgmnemo_0.14.2-1PIGSTY~trixie_all.deb
-@ d13.aarch64 18 postgresql-18-pgmnemo postgresql-18-pgmnemo_0.14.2-1PIGSTY~trixie_all.deb pigsty 0.14.2 145.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgmnemo/postgresql-18-pgmnemo_0.14.2-1PIGSTY~trixie_all.deb
-@ u22.x86_64 18 postgresql-18-pgmnemo postgresql-18-pgmnemo_0.14.2-1PIGSTY~jammy_all.deb pigsty 0.14.2 148.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgmnemo/postgresql-18-pgmnemo_0.14.2-1PIGSTY~jammy_all.deb
-@ u22.aarch64 18 postgresql-18-pgmnemo postgresql-18-pgmnemo_0.14.2-1PIGSTY~jammy_all.deb pigsty 0.14.2 148.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgmnemo/postgresql-18-pgmnemo_0.14.2-1PIGSTY~jammy_all.deb
-@ u24.x86_64 18 postgresql-18-pgmnemo postgresql-18-pgmnemo_0.14.2-1PIGSTY~noble_all.deb pigsty 0.14.2 148.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgmnemo/postgresql-18-pgmnemo_0.14.2-1PIGSTY~noble_all.deb
-@ u24.aarch64 18 postgresql-18-pgmnemo postgresql-18-pgmnemo_0.14.2-1PIGSTY~noble_all.deb pigsty 0.14.2 148.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgmnemo/postgresql-18-pgmnemo_0.14.2-1PIGSTY~noble_all.deb
-@ u26.x86_64 18 postgresql-18-pgmnemo postgresql-18-pgmnemo_0.14.2-1PIGSTY~resolute_all.deb pigsty 0.14.2 148.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgmnemo/postgresql-18-pgmnemo_0.14.2-1PIGSTY~resolute_all.deb
-@ u26.aarch64 18 postgresql-18-pgmnemo postgresql-18-pgmnemo_0.14.2-1PIGSTY~resolute_all.deb pigsty 0.14.2 148.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgmnemo/postgresql-18-pgmnemo_0.14.2-1PIGSTY~resolute_all.deb
+@ d12.x86_64 18 postgresql-18-pgmnemo postgresql-18-pgmnemo_0.15.0-1PIGSTY~bookworm_all.deb pigsty 0.15.0 150.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgmnemo/postgresql-18-pgmnemo_0.15.0-1PIGSTY~bookworm_all.deb
+@ d12.aarch64 18 postgresql-18-pgmnemo postgresql-18-pgmnemo_0.15.0-1PIGSTY~bookworm_all.deb pigsty 0.15.0 150.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgmnemo/postgresql-18-pgmnemo_0.15.0-1PIGSTY~bookworm_all.deb
+@ d13.x86_64 18 postgresql-18-pgmnemo postgresql-18-pgmnemo_0.15.0-1PIGSTY~trixie_all.deb pigsty 0.15.0 150.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgmnemo/postgresql-18-pgmnemo_0.15.0-1PIGSTY~trixie_all.deb
+@ d13.aarch64 18 postgresql-18-pgmnemo postgresql-18-pgmnemo_0.15.0-1PIGSTY~trixie_all.deb pigsty 0.15.0 150.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgmnemo/postgresql-18-pgmnemo_0.15.0-1PIGSTY~trixie_all.deb
+@ u22.x86_64 18 postgresql-18-pgmnemo postgresql-18-pgmnemo_0.15.0-1PIGSTY~jammy_all.deb pigsty 0.15.0 154.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgmnemo/postgresql-18-pgmnemo_0.15.0-1PIGSTY~jammy_all.deb
+@ u22.aarch64 18 postgresql-18-pgmnemo postgresql-18-pgmnemo_0.15.0-1PIGSTY~jammy_all.deb pigsty 0.15.0 154.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgmnemo/postgresql-18-pgmnemo_0.15.0-1PIGSTY~jammy_all.deb
+@ u24.x86_64 18 postgresql-18-pgmnemo postgresql-18-pgmnemo_0.15.0-1PIGSTY~noble_all.deb pigsty 0.15.0 153.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgmnemo/postgresql-18-pgmnemo_0.15.0-1PIGSTY~noble_all.deb
+@ u24.aarch64 18 postgresql-18-pgmnemo postgresql-18-pgmnemo_0.15.0-1PIGSTY~noble_all.deb pigsty 0.15.0 153.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgmnemo/postgresql-18-pgmnemo_0.15.0-1PIGSTY~noble_all.deb
+@ u26.x86_64 18 postgresql-18-pgmnemo postgresql-18-pgmnemo_0.15.0-1PIGSTY~resolute_all.deb pigsty 0.15.0 154.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgmnemo/postgresql-18-pgmnemo_0.15.0-1PIGSTY~resolute_all.deb
+@ u26.aarch64 18 postgresql-18-pgmnemo postgresql-18-pgmnemo_0.15.0-1PIGSTY~resolute_all.deb pigsty 0.15.0 154.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgmnemo/postgresql-18-pgmnemo_0.15.0-1PIGSTY~resolute_all.deb
+@ el8.x86_64 17 pgmnemo_17 pgmnemo_17-0.15.0-1PIGSTY.el8.x86_64.rpm pigsty 0.15.0 187.2KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgmnemo_17-0.15.0-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 17 pgmnemo_17 pgmnemo_17-0.14.2-1PIGSTY.el8.x86_64.rpm pigsty 0.14.2 182.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgmnemo_17-0.14.2-1PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 17 pgmnemo_17 pgmnemo_17-0.15.0-1PIGSTY.el8.aarch64.rpm pigsty 0.15.0 187.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgmnemo_17-0.15.0-1PIGSTY.el8.aarch64.rpm
 @ el8.aarch64 17 pgmnemo_17 pgmnemo_17-0.14.2-1PIGSTY.el8.aarch64.rpm pigsty 0.14.2 182.3KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgmnemo_17-0.14.2-1PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 17 pgmnemo_17 pgmnemo_17-0.15.0-1PIGSTY.el9.x86_64.rpm pigsty 0.15.0 163.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgmnemo_17-0.15.0-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 17 pgmnemo_17 pgmnemo_17-0.14.2-1PIGSTY.el9.x86_64.rpm pigsty 0.14.2 158.1KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgmnemo_17-0.14.2-1PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 17 pgmnemo_17 pgmnemo_17-0.15.0-1PIGSTY.el9.aarch64.rpm pigsty 0.15.0 163.3KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgmnemo_17-0.15.0-1PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 17 pgmnemo_17 pgmnemo_17-0.14.2-1PIGSTY.el9.aarch64.rpm pigsty 0.14.2 158.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/pgmnemo_17-0.14.2-1PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 17 pgmnemo_17 pgmnemo_17-0.15.0-1PIGSTY.el10.x86_64.rpm pigsty 0.15.0 163.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgmnemo_17-0.15.0-1PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 17 pgmnemo_17 pgmnemo_17-0.14.2-1PIGSTY.el10.x86_64.rpm pigsty 0.14.2 158.2KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/pgmnemo_17-0.14.2-1PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 17 pgmnemo_17 pgmnemo_17-0.15.0-1PIGSTY.el10.aarch64.rpm pigsty 0.15.0 163.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgmnemo_17-0.15.0-1PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 17 pgmnemo_17 pgmnemo_17-0.14.2-1PIGSTY.el10.aarch64.rpm pigsty 0.14.2 158.1KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/pgmnemo_17-0.14.2-1PIGSTY.el10.aarch64.rpm
-@ d12.x86_64 17 postgresql-17-pgmnemo postgresql-17-pgmnemo_0.14.2-1PIGSTY~bookworm_all.deb pigsty 0.14.2 145.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgmnemo/postgresql-17-pgmnemo_0.14.2-1PIGSTY~bookworm_all.deb
-@ d12.aarch64 17 postgresql-17-pgmnemo postgresql-17-pgmnemo_0.14.2-1PIGSTY~bookworm_all.deb pigsty 0.14.2 145.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgmnemo/postgresql-17-pgmnemo_0.14.2-1PIGSTY~bookworm_all.deb
-@ d13.x86_64 17 postgresql-17-pgmnemo postgresql-17-pgmnemo_0.14.2-1PIGSTY~trixie_all.deb pigsty 0.14.2 145.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgmnemo/postgresql-17-pgmnemo_0.14.2-1PIGSTY~trixie_all.deb
-@ d13.aarch64 17 postgresql-17-pgmnemo postgresql-17-pgmnemo_0.14.2-1PIGSTY~trixie_all.deb pigsty 0.14.2 145.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgmnemo/postgresql-17-pgmnemo_0.14.2-1PIGSTY~trixie_all.deb
-@ u22.x86_64 17 postgresql-17-pgmnemo postgresql-17-pgmnemo_0.14.2-1PIGSTY~jammy_all.deb pigsty 0.14.2 148.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgmnemo/postgresql-17-pgmnemo_0.14.2-1PIGSTY~jammy_all.deb
-@ u22.aarch64 17 postgresql-17-pgmnemo postgresql-17-pgmnemo_0.14.2-1PIGSTY~jammy_all.deb pigsty 0.14.2 148.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgmnemo/postgresql-17-pgmnemo_0.14.2-1PIGSTY~jammy_all.deb
-@ u24.x86_64 17 postgresql-17-pgmnemo postgresql-17-pgmnemo_0.14.2-1PIGSTY~noble_all.deb pigsty 0.14.2 148.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgmnemo/postgresql-17-pgmnemo_0.14.2-1PIGSTY~noble_all.deb
-@ u24.aarch64 17 postgresql-17-pgmnemo postgresql-17-pgmnemo_0.14.2-1PIGSTY~noble_all.deb pigsty 0.14.2 148.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgmnemo/postgresql-17-pgmnemo_0.14.2-1PIGSTY~noble_all.deb
-@ u26.x86_64 17 postgresql-17-pgmnemo postgresql-17-pgmnemo_0.14.2-1PIGSTY~resolute_all.deb pigsty 0.14.2 148.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgmnemo/postgresql-17-pgmnemo_0.14.2-1PIGSTY~resolute_all.deb
-@ u26.aarch64 17 postgresql-17-pgmnemo postgresql-17-pgmnemo_0.14.2-1PIGSTY~resolute_all.deb pigsty 0.14.2 148.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgmnemo/postgresql-17-pgmnemo_0.14.2-1PIGSTY~resolute_all.deb
+@ d12.x86_64 17 postgresql-17-pgmnemo postgresql-17-pgmnemo_0.15.0-1PIGSTY~bookworm_all.deb pigsty 0.15.0 150.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgmnemo/postgresql-17-pgmnemo_0.15.0-1PIGSTY~bookworm_all.deb
+@ d12.aarch64 17 postgresql-17-pgmnemo postgresql-17-pgmnemo_0.15.0-1PIGSTY~bookworm_all.deb pigsty 0.15.0 150.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/pgmnemo/postgresql-17-pgmnemo_0.15.0-1PIGSTY~bookworm_all.deb
+@ d13.x86_64 17 postgresql-17-pgmnemo postgresql-17-pgmnemo_0.15.0-1PIGSTY~trixie_all.deb pigsty 0.15.0 150.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgmnemo/postgresql-17-pgmnemo_0.15.0-1PIGSTY~trixie_all.deb
+@ d13.aarch64 17 postgresql-17-pgmnemo postgresql-17-pgmnemo_0.15.0-1PIGSTY~trixie_all.deb pigsty 0.15.0 150.0KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/pgmnemo/postgresql-17-pgmnemo_0.15.0-1PIGSTY~trixie_all.deb
+@ u22.x86_64 17 postgresql-17-pgmnemo postgresql-17-pgmnemo_0.15.0-1PIGSTY~jammy_all.deb pigsty 0.15.0 154.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgmnemo/postgresql-17-pgmnemo_0.15.0-1PIGSTY~jammy_all.deb
+@ u22.aarch64 17 postgresql-17-pgmnemo postgresql-17-pgmnemo_0.15.0-1PIGSTY~jammy_all.deb pigsty 0.15.0 154.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/pgmnemo/postgresql-17-pgmnemo_0.15.0-1PIGSTY~jammy_all.deb
+@ u24.x86_64 17 postgresql-17-pgmnemo postgresql-17-pgmnemo_0.15.0-1PIGSTY~noble_all.deb pigsty 0.15.0 153.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgmnemo/postgresql-17-pgmnemo_0.15.0-1PIGSTY~noble_all.deb
+@ u24.aarch64 17 postgresql-17-pgmnemo postgresql-17-pgmnemo_0.15.0-1PIGSTY~noble_all.deb pigsty 0.15.0 153.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/pgmnemo/postgresql-17-pgmnemo_0.15.0-1PIGSTY~noble_all.deb
+@ u26.x86_64 17 postgresql-17-pgmnemo postgresql-17-pgmnemo_0.15.0-1PIGSTY~resolute_all.deb pigsty 0.15.0 153.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgmnemo/postgresql-17-pgmnemo_0.15.0-1PIGSTY~resolute_all.deb
+@ u26.aarch64 17 postgresql-17-pgmnemo postgresql-17-pgmnemo_0.15.0-1PIGSTY~resolute_all.deb pigsty 0.15.0 153.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/pgmnemo/postgresql-17-pgmnemo_0.15.0-1PIGSTY~resolute_all.deb
 @ el8.x86_64 16 pgmnemo_16 pgmnemo_16-0.12.1-1PIGSTY.el8.x86_64.rpm pigsty 0.12.1 158.4KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/pgmnemo_16-0.12.1-1PIGSTY.el8.x86_64.rpm
 @ el8.aarch64 16 pgmnemo_16 pgmnemo_16-0.12.1-1PIGSTY.el8.aarch64.rpm pigsty 0.12.1 158.4KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/pgmnemo_16-0.12.1-1PIGSTY.el8.aarch64.rpm
 @ el9.x86_64 16 pgmnemo_16 pgmnemo_16-0.12.1-1PIGSTY.el9.x86_64.rpm pigsty 0.12.1 133.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/pgmnemo_16-0.12.1-1PIGSTY.el9.x86_64.rpm

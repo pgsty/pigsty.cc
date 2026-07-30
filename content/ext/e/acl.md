@@ -33,7 +33,7 @@ weight: 3810
 | 3810  | [**`acl`**](/ext/e/acl) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
 {.ext-table}
 
-| **相关扩展** | [`prefix`](/ext/e/prefix) [`semver`](/ext/e/semver) [`unit`](/ext/e/unit) [`pgpdf`](/ext/e/pgpdf) [`pglite_fusion`](/ext/e/pglite_fusion) [`md5hash`](/ext/e/md5hash) [`asn1oid`](/ext/e/asn1oid) [`roaringbitmap`](/ext/e/roaringbitmap) |
+| **相关扩展** | [`pgaudit`](/ext/e/pgaudit) [`pg_permissions`](/ext/e/pg_permissions) [`set_user`](/ext/e/set_user) [`pg_roast`](/ext/e/pg_roast) [`table_log`](/ext/e/table_log) [`pgmemento`](/ext/e/pgmemento) [`pg_auditor`](/ext/e/pg_auditor) [`pgelog`](/ext/e/pgelog) [`pg_auth_mon`](/ext/e/pg_auth_mon) [`pg_readonly`](/ext/e/pg_readonly) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

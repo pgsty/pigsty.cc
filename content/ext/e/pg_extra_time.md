@@ -33,7 +33,7 @@ weight: 4220
 | 4220  | [**`pg_extra_time`**](/ext/e/pg_extra_time) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
 {.ext-table}
 
-| **相关扩展** | [`pgsql_tweaks`](/ext/e/pgsql_tweaks) [`periods`](/ext/e/periods) [`temporal_tables`](/ext/e/temporal_tables) [`pg_cron`](/ext/e/pg_cron) [`gzip`](/ext/e/gzip) [`bzip`](/ext/e/bzip) [`zstd`](/ext/e/zstd) [`http`](/ext/e/http) |
+| **相关扩展** | [`pgcalendar`](/ext/e/pgcalendar) [`pg_math`](/ext/e/pg_math) [`pgsql_tweaks`](/ext/e/pgsql_tweaks) [`pg_rrule`](/ext/e/pg_rrule) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

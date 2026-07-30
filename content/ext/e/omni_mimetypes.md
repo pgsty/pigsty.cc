@@ -69,6 +69,10 @@ weight: 2957
 | 2979  | [**`omni_yaml`**](/ext/e/omni_yaml) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `omni_yaml` |
 {.ext-table}
 
+| **相关扩展** | [`byteamagic`](/ext/e/byteamagic) [`pgpdf`](/ext/e/pgpdf) [`pg_html5_email_address`](/ext/e/pg_html5_email_address) [`external_file`](/ext/e/external_file) [`emailaddr`](/ext/e/emailaddr) [`uri`](/ext/e/uri) |
+|:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+{.ext-table .ext-table--rel}
+
 
 ## 版本
 

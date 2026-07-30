@@ -33,7 +33,7 @@ weight: 1140
 | 1140  | [**`cron_utils`**](/ext/e/cron_utils) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
 {.ext-table}
 
-| **相关扩展** | [`pg_cron`](/ext/e/pg_cron) [`pg_when`](/ext/e/pg_when) [`pgcalendar`](/ext/e/pgcalendar) [`periods`](/ext/e/periods) |
+| **相关扩展** | [`pg_cron`](/ext/e/pg_cron) [`pgcalendar`](/ext/e/pgcalendar) [`pg_rrule`](/ext/e/pg_rrule) [`pg_when`](/ext/e/pg_when) [`pgagent`](/ext/e/pgagent) [`pg_task`](/ext/e/pg_task) [`pg_dbms_job`](/ext/e/pg_dbms_job) [`pg_duration`](/ext/e/pg_duration) [`pg_bikram_sambat`](/ext/e/pg_bikram_sambat) [`pg_dispatch`](/ext/e/pg_dispatch) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

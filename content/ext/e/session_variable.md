@@ -33,7 +33,7 @@ weight: 9120
 | 9120  | [**`session_variable`**](/ext/e/session_variable) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `session_variable` |
 {.ext-table}
 
-| **相关扩展** | [`orafce`](/ext/e/orafce) [`pgtt`](/ext/e/pgtt) [`pg_statement_rollback`](/ext/e/pg_statement_rollback) [`plpgsql`](/ext/e/plpgsql) [`set_user`](/ext/e/set_user) [`oracle_fdw`](/ext/e/oracle_fdw) [`pg_dbms_lock`](/ext/e/pg_dbms_lock) [`babelfishpg_common`](/ext/e/babelfishpg_common) |
+| **相关扩展** | [`orafce`](/ext/e/orafce) [`db2fce`](/ext/e/db2fce) [`pgtt`](/ext/e/pgtt) [`ivorysql_ora`](/ext/e/ivorysql_ora) [`pg_statement_rollback`](/ext/e/pg_statement_rollback) [`pg_variables`](/ext/e/pg_variables) [`omni_var`](/ext/e/omni_var) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

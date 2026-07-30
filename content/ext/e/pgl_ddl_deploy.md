@@ -28,7 +28,7 @@ weight: 9520
 | 9520  | [**`pgl_ddl_deploy`**](/ext/e/pgl_ddl_deploy) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `pgl_ddl_deploy` |
 {.ext-table}
 
-| **相关扩展** | [`pglogical`](/ext/e/pglogical) [`pglogical_origin`](/ext/e/pglogical_origin) [`pglogical_ticker`](/ext/e/pglogical_ticker) [`ddlx`](/ext/e/ddlx) [`pg_permissions`](/ext/e/pg_permissions) [`pg_failover_slots`](/ext/e/pg_failover_slots) [`pgactive`](/ext/e/pgactive) [`wal2json`](/ext/e/wal2json) [`decoderbufs`](/ext/e/decoderbufs) |
+| **相关扩展** | [`pglogical`](/ext/e/pglogical) [`pglogical`](/ext/e/pglogical) [`logical_ddl`](/ext/e/logical_ddl) [`spock`](/ext/e/spock) [`pgactive`](/ext/e/pgactive) [`mimeo`](/ext/e/mimeo) [`pgoutput`](/ext/e/pgoutput) [`lolor`](/ext/e/lolor) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

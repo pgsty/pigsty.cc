@@ -31,7 +31,7 @@ weight: 3262
 | 3263  | [**`jsonb_plperl`**](/ext/e/jsonb_plperl) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | - |
 {.ext-table}
 
-| **相关扩展** | [`hstore`](/ext/e/hstore) [`plperl`](/ext/e/plperl) [`hstore_pllua`](/ext/e/hstore_pllua) [`hstore_plluau`](/ext/e/hstore_plluau) [`hstore_plperlu`](/ext/e/hstore_plperlu) [`hstore_plpython3u`](/ext/e/hstore_plpython3u) [`hstore`](/ext/e/hstore) [`plperlu`](/ext/e/plperlu) [`plpgsql`](/ext/e/plpgsql) |
+| **相关扩展** | [`hstore`](/ext/e/hstore) [`plperl`](/ext/e/plperl) [`hstore_plpython3u`](/ext/e/hstore_plpython3u) [`hstore_pllua`](/ext/e/hstore_pllua) [`hstore_plperlu`](/ext/e/hstore_plperlu) [`hstore`](/ext/e/hstore) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

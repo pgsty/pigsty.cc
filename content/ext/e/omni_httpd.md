@@ -69,7 +69,7 @@ weight: 2951
 | 2979  | [**`omni_yaml`**](/ext/e/omni_yaml) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `omni_yaml` |
 {.ext-table}
 
-| **相关扩展** | [`omni_types`](/ext/e/omni_types) [`omni_http`](/ext/e/omni_http) |
+| **相关扩展** | [`omni_types`](/ext/e/omni_types) [`omni_http`](/ext/e/omni_http) [`pg_graphql`](/ext/e/pg_graphql) [`pg_net`](/ext/e/pg_net) [`pg_session_jwt`](/ext/e/pg_session_jwt) [`http`](/ext/e/http) [`documentdb`](/ext/e/documentdb) [`pgjwt`](/ext/e/pgjwt) [`pg_oidc_validator`](/ext/e/pg_oidc_validator) [`login_hook`](/ext/e/login_hook) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **下游依赖** | [`omni_rest`](/ext/e/omni_rest) [`omni_session`](/ext/e/omni_session) |
 {.ext-table .ext-table--rel}

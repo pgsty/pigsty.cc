@@ -38,7 +38,7 @@ weight: 9160
 | 9190  | [**`gb18030_2022`**](/ext/e/gb18030_2022) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | `pg_catalog` |
 {.ext-table}
 
-| **相关扩展** | [`ivorysql_ora`](/ext/e/ivorysql_ora) |
+| **相关扩展** | [`ivorysql_ora`](/ext/e/ivorysql_ora) [`orafce`](/ext/e/orafce) [`btree_gin`](/ext/e/btree_gin) [`btree_gist`](/ext/e/btree_gist) [`db2fce`](/ext/e/db2fce) [`parray_gin`](/ext/e/parray_gin) [`intarray`](/ext/e/intarray) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

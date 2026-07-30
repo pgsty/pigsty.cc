@@ -33,7 +33,7 @@ weight: 4850
 | 4850  | [**`convert`**](/ext/e/convert) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `convert` |
 {.ext-table}
 
-| **相关扩展** | [`unit`](/ext/e/unit) |
+| **相关扩展** | [`postgis`](/ext/e/postgis) [`pg_eviltransform`](/ext/e/pg_eviltransform) [`earthdistance`](/ext/e/earthdistance) [`h3`](/ext/e/h3) [`ogr_fdw`](/ext/e/ogr_fdw) [`nominatim_fdw`](/ext/e/nominatim_fdw) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

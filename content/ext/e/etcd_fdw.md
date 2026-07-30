@@ -33,7 +33,7 @@ weight: 8660
 | 8660  | [**`etcd_fdw`**](/ext/e/etcd_fdw) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | - |
 {.ext-table}
 
-| **相关扩展** | [`wrappers`](/ext/e/wrappers) [`redis_fdw`](/ext/e/redis_fdw) [`kafka_fdw`](/ext/e/kafka_fdw) [`postgres_fdw`](/ext/e/postgres_fdw) [`mysql_fdw`](/ext/e/mysql_fdw) [`mongo_fdw`](/ext/e/mongo_fdw) |
+| **相关扩展** | [`redis_fdw`](/ext/e/redis_fdw) [`rdf_fdw`](/ext/e/rdf_fdw) [`mongo_fdw`](/ext/e/mongo_fdw) [`redis`](/ext/e/redis) [`pgmq`](/ext/e/pgmq) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

@@ -33,7 +33,7 @@ weight: 4280
 | 4280  | [**`floatfile`**](/ext/e/floatfile) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
 {.ext-table}
 
-| **相关扩展** | [`pg_ivm`](/ext/e/pg_ivm) [`pg_bulkload`](/ext/e/pg_bulkload) [`gzip`](/ext/e/gzip) [`bzip`](/ext/e/bzip) [`zstd`](/ext/e/zstd) [`http`](/ext/e/http) [`pg_net`](/ext/e/pg_net) [`pg_curl`](/ext/e/pg_curl) |
+| **相关扩展** | [`external_file`](/ext/e/external_file) [`pg_parquet`](/ext/e/pg_parquet) [`arraymath`](/ext/e/arraymath) [`file_fdw`](/ext/e/file_fdw) [`byteamagic`](/ext/e/byteamagic) [`fio`](/ext/e/fio) [`aws_s3`](/ext/e/aws_s3) [`envvar`](/ext/e/envvar) [`pg_bulkload`](/ext/e/pg_bulkload) [`pg_lake`](/ext/e/pg_lake) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

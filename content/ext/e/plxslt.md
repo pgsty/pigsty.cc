@@ -33,7 +33,7 @@ weight: 3110
 | 3110  | [**`plxslt`**](/ext/e/plxslt) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
 {.ext-table}
 
-| **相关扩展** | [`plpgsql`](/ext/e/plpgsql) [`pgml`](/ext/e/pgml) [`plpython3u`](/ext/e/plpython3u) [`pg_tle`](/ext/e/pg_tle) [`plv8`](/ext/e/plv8) [`pljava`](/ext/e/pljava) [`plperl`](/ext/e/plperl) [`pllua`](/ext/e/pllua) |
+| **相关扩展** | [`pgrdf`](/ext/e/pgrdf) [`sparql`](/ext/e/sparql) [`xml2`](/ext/e/xml2) [`omni_xml`](/ext/e/omni_xml) [`pljava`](/ext/e/pljava) [`plsh`](/ext/e/plsh) [`rdf_fdw`](/ext/e/rdf_fdw) [`plr`](/ext/e/plr) [`plperl`](/ext/e/plperl) [`pltcl`](/ext/e/pltcl) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

@@ -28,7 +28,7 @@ weight: 4950
 | 4950  | [**`btree_gin`**](/ext/e/btree_gin) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | - |
 {.ext-table}
 
-| **相关扩展** | [`btree_gist`](/ext/e/btree_gist) [`unaccent`](/ext/e/unaccent) [`fuzzystrmatch`](/ext/e/fuzzystrmatch) [`pg_trgm`](/ext/e/pg_trgm) [`prefix`](/ext/e/prefix) [`citext`](/ext/e/citext) [`pg_idkit`](/ext/e/pg_idkit) [`pgx_ulid`](/ext/e/pgx_ulid) |
+| **相关扩展** | [`ora_btree_gin`](/ext/e/ora_btree_gin) [`btree_gist`](/ext/e/btree_gist) [`parray_gin`](/ext/e/parray_gin) [`intarray`](/ext/e/intarray) [`rum`](/ext/e/rum) [`bloom`](/ext/e/bloom) [`db2fce`](/ext/e/db2fce) [`orafce`](/ext/e/orafce) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

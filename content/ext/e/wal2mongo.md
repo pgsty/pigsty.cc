@@ -33,7 +33,7 @@ weight: 9640
 | 9640  | [**`wal2mongo`**](/ext/e/wal2mongo) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | - |
 {.ext-table}
 
-| **相关扩展** | [`mongo_fdw`](/ext/e/mongo_fdw) [`wal2json`](/ext/e/wal2json) [`decoderbufs`](/ext/e/decoderbufs) [`decoder_raw`](/ext/e/decoder_raw) [`documentdb`](/ext/e/documentdb) [`pglogical`](/ext/e/pglogical) [`test_decoding`](/ext/e/test_decoding) [`pgoutput`](/ext/e/pgoutput) |
+| **相关扩展** | [`wal2json`](/ext/e/wal2json) [`decoderbufs`](/ext/e/decoderbufs) [`test_decoding`](/ext/e/test_decoding) [`pgoutput`](/ext/e/pgoutput) [`decoder_raw`](/ext/e/decoder_raw) [`pgmqtt`](/ext/e/pgmqtt) [`kafka_fdw`](/ext/e/kafka_fdw) [`pgq`](/ext/e/pgq) [`pg_protobuf`](/ext/e/pg_protobuf) [`pgproto`](/ext/e/pgproto) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

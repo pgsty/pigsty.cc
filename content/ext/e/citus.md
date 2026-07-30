@@ -34,7 +34,7 @@ weight: 2400
 | 2401  | [**`citus_columnar`**](/ext/e/citus_columnar) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `pg_catalog` |
 {.ext-table}
 
-| **相关扩展** | [`pg_partman`](/ext/e/pg_partman) [`plproxy`](/ext/e/plproxy) [`columnar`](/ext/e/columnar) [`pg_fkpart`](/ext/e/pg_fkpart) [`timescaledb`](/ext/e/timescaledb) [`pg_duckdb`](/ext/e/pg_duckdb) [`tablefunc`](/ext/e/tablefunc) [`hll`](/ext/e/hll) |
+| **相关扩展** | [`plproxy`](/ext/e/plproxy) [`pgspider_ext`](/ext/e/pgspider_ext) [`postgres_fdw`](/ext/e/postgres_fdw) [`pg_partman`](/ext/e/pg_partman) [`timescaledb`](/ext/e/timescaledb) [`pg_ttl_index`](/ext/e/pg_ttl_index) [`pgactive`](/ext/e/pgactive) [`spock`](/ext/e/spock) [`pg_fkpart`](/ext/e/pg_fkpart) [`db_migrator`](/ext/e/db_migrator) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **下游依赖** | [`documentdb_distributed`](/ext/e/documentdb_distributed) |
 {.ext-table .ext-table--rel}

@@ -33,7 +33,7 @@ weight: 3920
 | 3920  | [**`chkpass`**](/ext/e/chkpass) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | - |
 {.ext-table}
 
-| **相关扩展** | [`prefix`](/ext/e/prefix) [`semver`](/ext/e/semver) [`unit`](/ext/e/unit) [`pgpdf`](/ext/e/pgpdf) [`pglite_fusion`](/ext/e/pglite_fusion) [`md5hash`](/ext/e/md5hash) [`asn1oid`](/ext/e/asn1oid) [`roaringbitmap`](/ext/e/roaringbitmap) |
+| **相关扩展** | [`column_encrypt`](/ext/e/column_encrypt) [`pg_enigma`](/ext/e/pg_enigma) [`pg_pwhash`](/ext/e/pg_pwhash) [`passwordcheck`](/ext/e/passwordcheck) [`supabase_vault`](/ext/e/supabase_vault) [`pg_tde`](/ext/e/pg_tde) [`passwordcheck_cracklib`](/ext/e/passwordcheck_cracklib) [`passwordpolicy`](/ext/e/passwordpolicy) [`credcheck`](/ext/e/credcheck) [`pgsodium`](/ext/e/pgsodium) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

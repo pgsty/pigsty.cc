@@ -33,7 +33,7 @@ weight: 5230
 | 5230  | [**`fio`**](/ext/e/fio) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
 {.ext-table}
 
-| **相关扩展** | [`pgfincore`](/ext/e/pgfincore) [`adminpack`](/ext/e/adminpack) [`file_fdw`](/ext/e/file_fdw) [`pageinspect`](/ext/e/pageinspect) [`pgstattuple`](/ext/e/pgstattuple) [`pg_repack`](/ext/e/pg_repack) [`pg_rewrite`](/ext/e/pg_rewrite) [`pg_squeeze`](/ext/e/pg_squeeze) |
+| **相关扩展** | [`external_file`](/ext/e/external_file) [`byteamagic`](/ext/e/byteamagic) [`envvar`](/ext/e/envvar) [`floatfile`](/ext/e/floatfile) [`file_fdw`](/ext/e/file_fdw) [`aws_s3`](/ext/e/aws_s3) [`basic_archive`](/ext/e/basic_archive) [`basebackup_to_shell`](/ext/e/basebackup_to_shell) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

@@ -33,7 +33,7 @@ weight: 5130
 | 5130  | [**`pgdd`**](/ext/e/pgdd) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `dd` |
 {.ext-table}
 
-| **相关扩展** | [`pg_catcheck`](/ext/e/pg_catcheck) [`pg_orphaned`](/ext/e/pg_orphaned) [`pg_checksums`](/ext/e/pg_checksums) |
+| **相关扩展** | [`ddlx`](/ext/e/ddlx) [`pg_readme`](/ext/e/pg_readme) [`meta`](/ext/e/meta) [`pg_catcheck`](/ext/e/pg_catcheck) [`pg_checksums`](/ext/e/pg_checksums) [`pg_render`](/ext/e/pg_render) [`pg_get_functiondef`](/ext/e/pg_get_functiondef) [`amcheck`](/ext/e/amcheck) [`pg_dbms_metadata`](/ext/e/pg_dbms_metadata) [`schedoc`](/ext/e/schedoc) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

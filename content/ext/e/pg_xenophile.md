@@ -34,7 +34,7 @@ weight: 3670
 | 3671  | [**`l10n_table_dependent_extension`**](/ext/e/l10n_table_dependent_extension) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
 {.ext-table}
 
-| **相关扩展** | [`hstore`](/ext/e/hstore) [`country`](/ext/e/country) [`currency`](/ext/e/currency) [`icu_ext`](/ext/e/icu_ext) [`prefix`](/ext/e/prefix) [`semver`](/ext/e/semver) [`unit`](/ext/e/unit) [`pgpdf`](/ext/e/pgpdf) [`pglite_fusion`](/ext/e/pglite_fusion) |
+| **相关扩展** | [`hstore`](/ext/e/hstore) [`icu_ext`](/ext/e/icu_ext) [`pg_cjk_parser`](/ext/e/pg_cjk_parser) [`gb18030_2022`](/ext/e/gb18030_2022) [`unaccent`](/ext/e/unaccent) [`pgroonga`](/ext/e/pgroonga) [`pg_tokenizer`](/ext/e/pg_tokenizer) [`country`](/ext/e/country) [`currency`](/ext/e/currency) [`isn`](/ext/e/isn) [`dict_xsyn`](/ext/e/dict_xsyn) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **下游依赖** | [`l10n_table_dependent_extension`](/ext/e/l10n_table_dependent_extension) |
 {.ext-table .ext-table--rel}

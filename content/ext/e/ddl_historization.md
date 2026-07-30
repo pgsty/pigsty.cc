@@ -33,7 +33,7 @@ weight: 4310
 | 4310  | [**`ddl_historization`**](/ext/e/ddl_historization) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | - |
 {.ext-table}
 
-| **相关扩展** | [`plpgsql`](/ext/e/plpgsql) [`pg_readme`](/ext/e/pg_readme) [`data_historization`](/ext/e/data_historization) [`table_version`](/ext/e/table_version) [`gzip`](/ext/e/gzip) [`bzip`](/ext/e/bzip) [`zstd`](/ext/e/zstd) [`http`](/ext/e/http) [`pg_net`](/ext/e/pg_net) |
+| **相关扩展** | [`plpgsql`](/ext/e/plpgsql) [`pgmemento`](/ext/e/pgmemento) [`table_log`](/ext/e/table_log) [`data_historization`](/ext/e/data_historization) [`table_version`](/ext/e/table_version) [`pgaudit`](/ext/e/pgaudit) [`periods`](/ext/e/periods) [`temporal_tables`](/ext/e/temporal_tables) [`emaj`](/ext/e/emaj) [`provsql`](/ext/e/provsql) [`pgmnemo`](/ext/e/pgmnemo) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **下游依赖** | [`schedoc`](/ext/e/schedoc) |
 {.ext-table .ext-table--rel}

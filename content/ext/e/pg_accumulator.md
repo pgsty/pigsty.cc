@@ -33,7 +33,7 @@ weight: 4845
 | 4845  | [**`pg_accumulator`**](/ext/e/pg_accumulator) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `accum` |
 {.ext-table}
 
-| **相关扩展** | [`plpgsql`](/ext/e/plpgsql) [`financial`](/ext/e/financial) [`topn`](/ext/e/topn) [`quantile`](/ext/e/quantile) [`first_last_agg`](/ext/e/first_last_agg) |
+| **相关扩展** | [`plpgsql`](/ext/e/plpgsql) [`currency`](/ext/e/currency) [`financial`](/ext/e/financial) [`omni_ledger`](/ext/e/omni_ledger) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

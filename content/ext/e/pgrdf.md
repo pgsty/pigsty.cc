@@ -33,7 +33,7 @@ weight: 2640
 | 2640  | [**`pgrdf`**](/ext/e/pgrdf) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `pgrdf` |
 {.ext-table}
 
-| **相关扩展** | [`rdf_fdw`](/ext/e/rdf_fdw) [`sparql`](/ext/e/sparql) [`rdkit`](/ext/e/rdkit) |
+| **相关扩展** | [`sparql`](/ext/e/sparql) [`rdf_fdw`](/ext/e/rdf_fdw) [`age`](/ext/e/age) [`pg_liquid`](/ext/e/pg_liquid) [`onesparse`](/ext/e/onesparse) [`graph`](/ext/e/graph) [`ltree`](/ext/e/ltree) [`xml2`](/ext/e/xml2) [`plxslt`](/ext/e/plxslt) [`omni_xml`](/ext/e/omni_xml) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

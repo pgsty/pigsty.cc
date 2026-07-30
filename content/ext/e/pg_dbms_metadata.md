@@ -33,7 +33,7 @@ weight: 9240
 | 9240  | [**`pg_dbms_metadata`**](/ext/e/pg_dbms_metadata) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `dbms_metadata` |
 {.ext-table}
 
-| **相关扩展** | [`orafce`](/ext/e/orafce) [`pgtt`](/ext/e/pgtt) [`pg_dbms_lock`](/ext/e/pg_dbms_lock) [`pg_dbms_job`](/ext/e/pg_dbms_job) [`oracle_fdw`](/ext/e/oracle_fdw) [`session_variable`](/ext/e/session_variable) [`pg_statement_rollback`](/ext/e/pg_statement_rollback) [`ddlx`](/ext/e/ddlx) |
+| **相关扩展** | [`pg_get_functiondef`](/ext/e/pg_get_functiondef) [`ddlx`](/ext/e/ddlx) [`orafce`](/ext/e/orafce) [`pg_readme`](/ext/e/pg_readme) [`pg_dbms_lock`](/ext/e/pg_dbms_lock) [`pg_dbms_job`](/ext/e/pg_dbms_job) [`pg_dbms_errlog`](/ext/e/pg_dbms_errlog) [`pg_utl_smtp`](/ext/e/pg_utl_smtp) [`pgdd`](/ext/e/pgdd) [`meta`](/ext/e/meta) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

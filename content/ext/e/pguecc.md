@@ -33,7 +33,7 @@ weight: 4460
 | 4460  | [**`pguecc`**](/ext/e/pguecc) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
 {.ext-table}
 
-| **相关扩展** | [`hashlib`](/ext/e/hashlib) [`shacrypt`](/ext/e/shacrypt) [`cryptint`](/ext/e/cryptint) [`pgcrypto`](/ext/e/pgcrypto) [`gzip`](/ext/e/gzip) [`bzip`](/ext/e/bzip) [`zstd`](/ext/e/zstd) [`http`](/ext/e/http) |
+| **相关扩展** | [`pgsodium`](/ext/e/pgsodium) [`pgcrypto`](/ext/e/pgcrypto) [`shacrypt`](/ext/e/shacrypt) [`cryptint`](/ext/e/cryptint) [`pgcryptokey`](/ext/e/pgcryptokey) [`pgsmcrypto`](/ext/e/pgsmcrypto) [`pg_oidc_validator`](/ext/e/pg_oidc_validator) [`sslutils`](/ext/e/sslutils) [`sslinfo`](/ext/e/sslinfo) [`hashlib`](/ext/e/hashlib) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

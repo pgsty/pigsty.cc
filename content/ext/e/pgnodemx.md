@@ -34,7 +34,7 @@ weight: 6440
 | 6450  | [**`pg_proctab`**](/ext/e/pg_proctab) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
 {.ext-table}
 
-| **相关扩展** | [`system_stats`](/ext/e/system_stats) [`pg_wait_sampling`](/ext/e/pg_wait_sampling) [`pgsentinel`](/ext/e/pgsentinel) [`pgmeminfo`](/ext/e/pgmeminfo) [`pgfincore`](/ext/e/pgfincore) [`prioritize`](/ext/e/prioritize) [`pg_buffercache`](/ext/e/pg_buffercache) |
+| **相关扩展** | [`system_stats`](/ext/e/system_stats) [`pgmonitor`](/ext/e/pgmonitor) [`pg_stat_ch`](/ext/e/pg_stat_ch) [`pgsentinel`](/ext/e/pgsentinel) [`pg_datasentinel`](/ext/e/pg_datasentinel) [`pg_stat_kcache`](/ext/e/pg_stat_kcache) [`pgmeminfo`](/ext/e/pgmeminfo) [`pgbouncer_fdw`](/ext/e/pgbouncer_fdw) [`pgpool_adm`](/ext/e/pgpool_adm) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

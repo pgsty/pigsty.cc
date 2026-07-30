@@ -33,7 +33,7 @@ weight: 5170
 | 5170  | [**`pre_prepare`**](/ext/e/pre_prepare) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
 {.ext-table}
 
-| **相关扩展** | [`pg_store_plans`](/ext/e/pg_store_plans) [`auto_explain`](/ext/e/auto_explain) [`pg_stat_statements`](/ext/e/pg_stat_statements) [`plpgsql_check`](/ext/e/plpgsql_check) [`pg_show_plans`](/ext/e/pg_show_plans) [`pg_qualstats`](/ext/e/pg_qualstats) [`pg_hint_plan`](/ext/e/pg_hint_plan) [`pgaudit`](/ext/e/pgaudit) |
+| **相关扩展** | [`pg_hint_plan`](/ext/e/pg_hint_plan) [`plan_filter`](/ext/e/plan_filter) [`pg_query_rewrite`](/ext/e/pg_query_rewrite) [`hypopg`](/ext/e/hypopg) [`pg_qualstats`](/ext/e/pg_qualstats) [`index_advisor`](/ext/e/index_advisor) [`online_advisor`](/ext/e/online_advisor) [`pg_stat_plans`](/ext/e/pg_stat_plans) [`pg_kpart`](/ext/e/pg_kpart) [`pg_fsql`](/ext/e/pg_fsql) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

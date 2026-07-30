@@ -34,7 +34,7 @@ weight: 1502
 | 1506  | [**`address_standardizer_data_us`**](/ext/e/address_standardizer_data_us) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
 {.ext-table}
 
-| **相关扩展** | [`postgis`](/ext/e/postgis) [`pointcloud_postgis`](/ext/e/pointcloud_postgis) [`pointcloud`](/ext/e/pointcloud) [`pgrouting`](/ext/e/pgrouting) [`h3`](/ext/e/h3) [`q3c`](/ext/e/q3c) [`ogr_fdw`](/ext/e/ogr_fdw) [`geoip`](/ext/e/geoip) [`pg_polyline`](/ext/e/pg_polyline) |
+| **相关扩展** | [`postgis`](/ext/e/postgis) [`pgh_raster`](/ext/e/pgh_raster) [`pointcloud`](/ext/e/pointcloud) [`ogr_fdw`](/ext/e/ogr_fdw) [`pgrouting`](/ext/e/pgrouting) [`q3c`](/ext/e/q3c) [`h3`](/ext/e/h3) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **下游依赖** | [`h3_postgis`](/ext/e/h3_postgis) [`pgh_hgm`](/ext/e/pgh_hgm) [`pgh_raster`](/ext/e/pgh_raster) |
 {.ext-table .ext-table--rel}

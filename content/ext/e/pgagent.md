@@ -28,7 +28,7 @@ weight: 5880
 | 5880  | [**`pgagent`**](/ext/e/pgagent) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | - |
 {.ext-table}
 
-| **相关扩展** | [`pg_cron`](/ext/e/pg_cron) [`pg_task`](/ext/e/pg_task) [`pg_jobmon`](/ext/e/pg_jobmon) [`pg_partman`](/ext/e/pg_partman) [`pglogical`](/ext/e/pglogical) [`pg_background`](/ext/e/pg_background) [`pg_repack`](/ext/e/pg_repack) [`pg_rewrite`](/ext/e/pg_rewrite) |
+| **相关扩展** | [`pg_cron`](/ext/e/pg_cron) [`pg_task`](/ext/e/pg_task) [`pg_dbms_job`](/ext/e/pg_dbms_job) [`pg_dispatch`](/ext/e/pg_dispatch) [`pg_later`](/ext/e/pg_later) [`pg_jobmon`](/ext/e/pg_jobmon) [`pg_background`](/ext/e/pg_background) [`pg_durable`](/ext/e/pg_durable) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

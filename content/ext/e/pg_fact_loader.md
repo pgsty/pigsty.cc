@@ -33,7 +33,7 @@ weight: 9820
 | 9820  | [**`pg_fact_loader`**](/ext/e/pg_fact_loader) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `fact_loader` |
 {.ext-table}
 
-| **相关扩展** | [`pg_cron`](/ext/e/pg_cron) [`pg_partman`](/ext/e/pg_partman) [`pg_jobmon`](/ext/e/pg_jobmon) [`mimeo`](/ext/e/mimeo) [`timescaledb`](/ext/e/timescaledb) [`citus`](/ext/e/citus) [`tablefunc`](/ext/e/tablefunc) [`pg_bulkload`](/ext/e/pg_bulkload) |
+| **相关扩展** | [`file_fdw`](/ext/e/file_fdw) [`pg_bulkload`](/ext/e/pg_bulkload) [`pg_parquet`](/ext/e/pg_parquet) [`aws_s3`](/ext/e/aws_s3) [`pg_lake`](/ext/e/pg_lake) [`pg_ducklake`](/ext/e/pg_ducklake) [`pg_csv`](/ext/e/pg_csv) [`omni_csv`](/ext/e/omni_csv) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

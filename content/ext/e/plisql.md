@@ -38,6 +38,10 @@ weight: 9180
 | 9190  | [**`gb18030_2022`**](/ext/e/gb18030_2022) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | `pg_catalog` |
 {.ext-table}
 
+| **相关扩展** | [`plpgsql`](/ext/e/plpgsql) [`plpgsql_wrap`](/ext/e/plpgsql_wrap) [`plx`](/ext/e/plx) [`orafce`](/ext/e/orafce) [`db2fce`](/ext/e/db2fce) |
+|:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+{.ext-table .ext-table--rel}
+
 
 > from src/pl/plisql/src/plisql.control and IvorySQL package metadata
 

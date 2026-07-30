@@ -28,7 +28,7 @@ weight: 3980
 | 3980  | [**`citext`**](/ext/e/citext) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | - |
 {.ext-table}
 
-| **相关扩展** | [`prefix`](/ext/e/prefix) [`semver`](/ext/e/semver) [`ltree`](/ext/e/ltree) [`unaccent`](/ext/e/unaccent) [`unit`](/ext/e/unit) [`pgpdf`](/ext/e/pgpdf) [`pglite_fusion`](/ext/e/pglite_fusion) [`md5hash`](/ext/e/md5hash) |
+| **相关扩展** | [`unaccent`](/ext/e/unaccent) [`icu_ext`](/ext/e/icu_ext) [`pg_trgm`](/ext/e/pg_trgm) [`pg_xenophile`](/ext/e/pg_xenophile) [`gb18030_2022`](/ext/e/gb18030_2022) [`pg_cjk_parser`](/ext/e/pg_cjk_parser) [`dict_xsyn`](/ext/e/dict_xsyn) [`pgroonga`](/ext/e/pgroonga) [`pg_tokenizer`](/ext/e/pg_tokenizer) [`pgpcre`](/ext/e/pgpcre) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

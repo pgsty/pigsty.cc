@@ -28,7 +28,7 @@ weight: 2650
 | 2650  | [**`pgq`**](/ext/e/pgq) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `pg_catalog` |
 {.ext-table}
 
-| **相关扩展** | [`age`](/ext/e/age) [`hll`](/ext/e/hll) [`rum`](/ext/e/rum) [`pg_graphql`](/ext/e/pg_graphql) [`pg_jsonschema`](/ext/e/pg_jsonschema) [`jsquery`](/ext/e/jsquery) [`pg_hint_plan`](/ext/e/pg_hint_plan) [`hypopg`](/ext/e/hypopg) |
+| **相关扩展** | [`pgmq`](/ext/e/pgmq) [`pgmb`](/ext/e/pgmb) [`ulak`](/ext/e/ulak) [`pgmqtt`](/ext/e/pgmqtt) [`redis`](/ext/e/redis) [`kafka_fdw`](/ext/e/kafka_fdw) [`wal2json`](/ext/e/wal2json) [`decoderbufs`](/ext/e/decoderbufs) [`tcn`](/ext/e/tcn) [`pg_durable`](/ext/e/pg_durable) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

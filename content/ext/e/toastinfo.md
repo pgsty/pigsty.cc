@@ -33,7 +33,7 @@ weight: 6530
 | 6530  | [**`toastinfo`**](/ext/e/toastinfo) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
 {.ext-table}
 
-| **相关扩展** | [`pageinspect`](/ext/e/pageinspect) [`pg_visibility`](/ext/e/pg_visibility) [`pgstattuple`](/ext/e/pgstattuple) [`amcheck`](/ext/e/amcheck) [`pg_relusage`](/ext/e/pg_relusage) [`pg_buffercache`](/ext/e/pg_buffercache) [`pg_freespacemap`](/ext/e/pg_freespacemap) [`pg_repack`](/ext/e/pg_repack) |
+| **相关扩展** | [`pg_buffercache`](/ext/e/pg_buffercache) [`pageinspect`](/ext/e/pageinspect) [`pagevis`](/ext/e/pagevis) [`pg_freespacemap`](/ext/e/pg_freespacemap) [`pg_visibility`](/ext/e/pg_visibility) [`pgstattuple`](/ext/e/pgstattuple) [`pgfincore`](/ext/e/pgfincore) [`pgcozy`](/ext/e/pgcozy) [`pg_prewarm`](/ext/e/pg_prewarm) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

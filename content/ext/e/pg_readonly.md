@@ -33,7 +33,7 @@ weight: 5120
 | 5120  | [**`pg_readonly`**](/ext/e/pg_readonly) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | - |
 {.ext-table}
 
-| **相关扩展** | [`pg_permissions`](/ext/e/pg_permissions) [`pg_upless`](/ext/e/pg_upless) [`safeupdate`](/ext/e/safeupdate) [`set_user`](/ext/e/set_user) [`pgaudit`](/ext/e/pgaudit) [`noset`](/ext/e/noset) [`sepgsql`](/ext/e/sepgsql) [`login_hook`](/ext/e/login_hook) |
+| **相关扩展** | [`plan_filter`](/ext/e/plan_filter) [`pg_kpart`](/ext/e/pg_kpart) [`prioritize`](/ext/e/prioritize) [`qos`](/ext/e/qos) [`pg_permissions`](/ext/e/pg_permissions) [`set_user`](/ext/e/set_user) [`pg_roast`](/ext/e/pg_roast) [`pg_command_fw`](/ext/e/pg_command_fw) [`pg_hint_plan`](/ext/e/pg_hint_plan) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

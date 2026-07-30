@@ -28,7 +28,7 @@ weight: 5140
 | 5140  | [**`pg_permissions`**](/ext/e/pg_permissions) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | - |
 {.ext-table}
 
-| **相关扩展** | [`pg_readonly`](/ext/e/pg_readonly) [`pgaudit`](/ext/e/pgaudit) [`set_user`](/ext/e/set_user) [`pg_upless`](/ext/e/pg_upless) [`safeupdate`](/ext/e/safeupdate) [`pgauditlogtofile`](/ext/e/pgauditlogtofile) [`credcheck`](/ext/e/credcheck) [`login_hook`](/ext/e/login_hook) |
+| **相关扩展** | [`set_user`](/ext/e/set_user) [`pg_roast`](/ext/e/pg_roast) [`pg_readonly`](/ext/e/pg_readonly) [`pgaudit`](/ext/e/pgaudit) [`pg_command_fw`](/ext/e/pg_command_fw) [`acl`](/ext/e/acl) [`pg_auditor`](/ext/e/pg_auditor) [`pg_snakeoil`](/ext/e/pg_snakeoil) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

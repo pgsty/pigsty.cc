@@ -33,7 +33,7 @@ weight: 6500
 | 6500  | [**`pg_sqlog`**](/ext/e/pg_sqlog) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `sqlog` |
 {.ext-table}
 
-| **相关扩展** | [`file_fdw`](/ext/e/file_fdw) [`pg_profile`](/ext/e/pg_profile) [`pg_tracing`](/ext/e/pg_tracing) [`pg_show_plans`](/ext/e/pg_show_plans) [`pg_stat_kcache`](/ext/e/pg_stat_kcache) [`pg_stat_monitor`](/ext/e/pg_stat_monitor) [`pg_qualstats`](/ext/e/pg_qualstats) [`pg_store_plans`](/ext/e/pg_store_plans) |
+| **相关扩展** | [`file_fdw`](/ext/e/file_fdw) [`log_fdw`](/ext/e/log_fdw) [`pg_stat_log`](/ext/e/pg_stat_log) [`logerrors`](/ext/e/logerrors) [`pgelog`](/ext/e/pgelog) [`file_fdw`](/ext/e/file_fdw) [`pg_csv`](/ext/e/pg_csv) [`aws_s3`](/ext/e/aws_s3) [`pgdisablelogerror`](/ext/e/pgdisablelogerror) [`pgaudit`](/ext/e/pgaudit) [`pg_auth_mon`](/ext/e/pg_auth_mon) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

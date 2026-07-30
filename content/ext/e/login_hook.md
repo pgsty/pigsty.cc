@@ -33,7 +33,7 @@ weight: 7360
 | 7360  | [**`login_hook`**](/ext/e/login_hook) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `login_hook` |
 {.ext-table}
 
-| **相关扩展** | [`pg_auth_mon`](/ext/e/pg_auth_mon) [`credcheck`](/ext/e/credcheck) [`set_user`](/ext/e/set_user) [`pg_permissions`](/ext/e/pg_permissions) [`passwordcheck_cracklib`](/ext/e/passwordcheck_cracklib) [`pgaudit`](/ext/e/pgaudit) [`auth_delay`](/ext/e/auth_delay) [`passwordcheck`](/ext/e/passwordcheck) |
+| **相关扩展** | [`pg_session_jwt`](/ext/e/pg_session_jwt) [`pg_oidc_validator`](/ext/e/pg_oidc_validator) [`pgjwt`](/ext/e/pgjwt) [`oidc_validator`](/ext/e/oidc_validator) [`pg_auth_mon`](/ext/e/pg_auth_mon) [`auth_delay`](/ext/e/auth_delay) [`set_user`](/ext/e/set_user) [`pgsodium`](/ext/e/pgsodium) [`sslinfo`](/ext/e/sslinfo) [`sslutils`](/ext/e/sslutils) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

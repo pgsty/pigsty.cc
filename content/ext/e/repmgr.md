@@ -28,7 +28,7 @@ weight: 9710
 | 9710  | [**`repmgr`**](/ext/e/repmgr) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `repmgr` |
 {.ext-table}
 
-| **相关扩展** | [`pglogical`](/ext/e/pglogical) [`pg_failover_slots`](/ext/e/pg_failover_slots) [`pgactive`](/ext/e/pgactive) [`bgw_replstatus`](/ext/e/bgw_replstatus) [`postgres_fdw`](/ext/e/postgres_fdw) [`pglogical_origin`](/ext/e/pglogical_origin) [`pglogical_ticker`](/ext/e/pglogical_ticker) [`dblink`](/ext/e/dblink) |
+| **相关扩展** | [`pg_failover_slots`](/ext/e/pg_failover_slots) [`bgw_replstatus`](/ext/e/bgw_replstatus) [`pgautofailover`](/ext/e/pgautofailover) [`pgpool_adm`](/ext/e/pgpool_adm) [`pglogical`](/ext/e/pglogical) [`pgactive`](/ext/e/pgactive) [`pglogical_ticker`](/ext/e/pglogical_ticker) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 
@@ -47,7 +47,7 @@ weight: 9710
 |:--:|:--:|:--:|:--:|:--:|:--:|
 | el8.x86_64 | AVAIL PGDG 5.5.0 1 | AVAIL PGDG 5.5.0 1 | AVAIL PGDG 5.5.0 2 | AVAIL PGDG 5.5.0 4 | AVAIL PGDG 5.5.0 7 |
 | el8.aarch64 | AVAIL PGDG 5.5.0 1 | AVAIL PGDG 5.5.0 1 | AVAIL PGDG 5.5.0 2 | AVAIL PGDG 5.5.0 4 | AVAIL PGDG 5.5.0 4 |
-| el9.x86_64 | AVAIL PGDG 5.5.0 3 | AVAIL PGDG 5.5.0 2 | AVAIL PGDG 5.5.0 3 | AVAIL PGDG 5.5.0 5 | AVAIL PGDG 5.5.0 7 |
+| el9.x86_64 | AVAIL PGDG 5.5.0 3 | AVAIL PGDG 5.5.0 1 | AVAIL PGDG 5.5.0 2 | AVAIL PGDG 5.5.0 4 | AVAIL PGDG 5.5.0 6 |
 | el9.aarch64 | AVAIL PGDG 5.5.0 3 | AVAIL PGDG 5.5.0 2 | AVAIL PGDG 5.5.0 3 | AVAIL PGDG 5.5.0 4 | AVAIL PGDG 5.5.0 4 |
 | el10.x86_64 | AVAIL PGDG 5.5.0 3 | AVAIL PGDG 5.5.0 2 | AVAIL PGDG 5.5.0 2 | AVAIL PGDG 5.5.0 2 | AVAIL PGDG 5.5.0 2 |
 | el10.aarch64 | AVAIL PGDG 5.5.0 3 | AVAIL PGDG 5.5.0 2 | AVAIL PGDG 5.5.0 2 | AVAIL PGDG 5.5.0 2 | AVAIL PGDG 5.5.0 2 |
@@ -88,7 +88,6 @@ weight: 9710
 @ el8.x86_64 17 repmgr_17 repmgr_17-5.5.0-1PGDG.rhel8.x86_64.rpm pgdg 5.5.0 295.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/repmgr_17-5.5.0-1PGDG.rhel8.x86_64.rpm
 @ el8.aarch64 17 repmgr_17 repmgr_17-5.5.0-1PGDG.rhel8.aarch64.rpm pgdg 5.5.0 285.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/repmgr_17-5.5.0-1PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 17 repmgr_17 repmgr_17-5.5.0-7PGDG.rhel9.8.x86_64.rpm pgdg 5.5.0 266.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/repmgr_17-5.5.0-7PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 17 repmgr_17 repmgr_17-5.5.0-1PGDG.rhel9.x86_64.rpm pgdg 5.5.0 267.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/repmgr_17-5.5.0-1PGDG.rhel9.x86_64.rpm
 @ el9.aarch64 17 repmgr_17 repmgr_17-5.5.0-7PGDG.rhel9.8.aarch64.rpm pgdg 5.5.0 260.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/repmgr_17-5.5.0-7PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 17 repmgr_17 repmgr_17-5.5.0-1PGDG.rhel9.aarch64.rpm pgdg 5.5.0 261.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/repmgr_17-5.5.0-1PGDG.rhel9.aarch64.rpm
 @ el10.x86_64 17 repmgr_17 repmgr_17-5.5.0-7PGDG.rhel10.2.x86_64.rpm pgdg 5.5.0 270.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/repmgr_17-5.5.0-7PGDG.rhel10.2.x86_64.rpm
@@ -110,7 +109,6 @@ weight: 9710
 @ el8.aarch64 16 repmgr_16 repmgr_16-5.5.0-1PGDG.rhel8.aarch64.rpm pgdg 5.5.0 282.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/repmgr_16-5.5.0-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 16 repmgr_16 repmgr_16-5.4.1-1PGDG.rhel8.aarch64.rpm pgdg 5.4.1 280.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/repmgr_16-5.4.1-1PGDG.rhel8.aarch64.rpm
 @ el9.x86_64 16 repmgr_16 repmgr_16-5.5.0-7PGDG.rhel9.8.x86_64.rpm pgdg 5.5.0 266.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/repmgr_16-5.5.0-7PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 16 repmgr_16 repmgr_16-5.5.0-1PGDG.rhel9.x86_64.rpm pgdg 5.5.0 268.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/repmgr_16-5.5.0-1PGDG.rhel9.x86_64.rpm
 @ el9.x86_64 16 repmgr_16 repmgr_16-5.4.1-1PGDG.rhel9.x86_64.rpm pgdg 5.4.1 266.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/repmgr_16-5.4.1-1PGDG.rhel9.x86_64.rpm
 @ el9.aarch64 16 repmgr_16 repmgr_16-5.5.0-7PGDG.rhel9.8.aarch64.rpm pgdg 5.5.0 260.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/repmgr_16-5.5.0-7PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 16 repmgr_16 repmgr_16-5.5.0-1PGDG.rhel9.aarch64.rpm pgdg 5.5.0 261.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/repmgr_16-5.5.0-1PGDG.rhel9.aarch64.rpm
@@ -138,7 +136,6 @@ weight: 9710
 @ el8.aarch64 15 repmgr_15 repmgr_15-5.4.0-1.rhel8.aarch64.rpm pgdg 5.4.0 280.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/repmgr_15-5.4.0-1.rhel8.aarch64.rpm
 @ el8.aarch64 15 repmgr_15 repmgr_15-5.3.3-1.rhel8.aarch64.rpm pgdg 5.3.3 276.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/repmgr_15-5.3.3-1.rhel8.aarch64.rpm
 @ el9.x86_64 15 repmgr_15 repmgr_15-5.5.0-7PGDG.rhel9.8.x86_64.rpm pgdg 5.5.0 268.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/repmgr_15-5.5.0-7PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 15 repmgr_15 repmgr_15-5.5.0-1PGDG.rhel9.x86_64.rpm pgdg 5.5.0 270.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/repmgr_15-5.5.0-1PGDG.rhel9.x86_64.rpm
 @ el9.x86_64 15 repmgr_15 repmgr_15-5.4.1-1PGDG.rhel9.x86_64.rpm pgdg 5.4.1 268.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/repmgr_15-5.4.1-1PGDG.rhel9.x86_64.rpm
 @ el9.x86_64 15 repmgr_15 repmgr_15-5.4.0-1.rhel9.x86_64.rpm pgdg 5.4.0 268.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/repmgr_15-5.4.0-1.rhel9.x86_64.rpm
 @ el9.x86_64 15 repmgr_15 repmgr_15-5.3.3-1.rhel9.x86_64.rpm pgdg 5.3.3 266.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/repmgr_15-5.3.3-1.rhel9.x86_64.rpm
@@ -172,7 +169,6 @@ weight: 9710
 @ el8.aarch64 14 repmgr_14 repmgr_14-5.4.0-1.rhel8.aarch64.rpm pgdg 5.4.0 278.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/repmgr_14-5.4.0-1.rhel8.aarch64.rpm
 @ el8.aarch64 14 repmgr_14 repmgr_14-5.3.3-1.rhel8.aarch64.rpm pgdg 5.3.3 275.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/repmgr_14-5.3.3-1.rhel8.aarch64.rpm
 @ el9.x86_64 14 repmgr_14 repmgr_14-5.5.0-7PGDG.rhel9.8.x86_64.rpm pgdg 5.5.0 268.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/repmgr_14-5.5.0-7PGDG.rhel9.8.x86_64.rpm
-@ el9.x86_64 14 repmgr_14 repmgr_14-5.5.0-1PGDG.rhel9.x86_64.rpm pgdg 5.5.0 269.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/repmgr_14-5.5.0-1PGDG.rhel9.x86_64.rpm
 @ el9.x86_64 14 repmgr_14 repmgr_14-5.4.1-1PGDG.rhel9.x86_64.rpm pgdg 5.4.1 268.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/repmgr_14-5.4.1-1PGDG.rhel9.x86_64.rpm
 @ el9.x86_64 14 repmgr_14 repmgr_14-5.4.0-1.rhel9.x86_64.rpm pgdg 5.4.0 267.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/repmgr_14-5.4.0-1.rhel9.x86_64.rpm
 @ el9.x86_64 14 repmgr_14 repmgr_14-5.3.3-1.rhel9.x86_64.rpm pgdg 5.3.3 266.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/repmgr_14-5.3.3-1.rhel9.x86_64.rpm

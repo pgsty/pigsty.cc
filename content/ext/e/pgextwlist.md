@@ -33,7 +33,7 @@ weight: 7390
 | 7390  | [**`pgextwlist`**](/ext/e/pgextwlist) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | - |
 {.ext-table}
 
-| **相关扩展** | [`ddlx`](/ext/e/ddlx) [`pgdd`](/ext/e/pgdd) [`pg_permissions`](/ext/e/pg_permissions) [`adminpack`](/ext/e/adminpack) [`pgaudit`](/ext/e/pgaudit) [`set_user`](/ext/e/set_user) [`pg_catcheck`](/ext/e/pg_catcheck) [`noset`](/ext/e/noset) |
+| **相关扩展** | [`pg_command_fw`](/ext/e/pg_command_fw) [`supautils`](/ext/e/supautils) [`block_copy_command`](/ext/e/block_copy_command) [`pg_kpart`](/ext/e/pg_kpart) [`noset`](/ext/e/noset) [`sepgsql`](/ext/e/sepgsql) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

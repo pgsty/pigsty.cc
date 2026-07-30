@@ -33,7 +33,7 @@ weight: 2670
 | 2670  | [**`pgmb`**](/ext/e/pgmb) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `pgmb` |
 {.ext-table}
 
-| **相关扩展** | [`pg_cron`](/ext/e/pg_cron) [`http`](/ext/e/http) [`pgmq`](/ext/e/pgmq) [`pgq`](/ext/e/pgq) [`pg_task`](/ext/e/pg_task) [`pg_cron`](/ext/e/pg_cron) [`pg_background`](/ext/e/pg_background) [`pg_later`](/ext/e/pg_later) [`pg_net`](/ext/e/pg_net) [`kafka_fdw`](/ext/e/kafka_fdw) |
+| **相关扩展** | [`pg_cron`](/ext/e/pg_cron) [`http`](/ext/e/http) [`pgmq`](/ext/e/pgmq) [`redis`](/ext/e/redis) [`ulak`](/ext/e/ulak) [`pgq`](/ext/e/pgq) [`pgmqtt`](/ext/e/pgmqtt) [`redis_fdw`](/ext/e/redis_fdw) [`tcn`](/ext/e/tcn) [`pg_durable`](/ext/e/pg_durable) [`fsm_core`](/ext/e/fsm_core) [`kafka_fdw`](/ext/e/kafka_fdw) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

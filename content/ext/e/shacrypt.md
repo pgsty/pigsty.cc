@@ -33,7 +33,7 @@ weight: 4440
 | 4440  | [**`shacrypt`**](/ext/e/shacrypt) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
 {.ext-table}
 
-| **相关扩展** | [`hashlib`](/ext/e/hashlib) [`xxhash`](/ext/e/xxhash) [`cryptint`](/ext/e/cryptint) [`pguecc`](/ext/e/pguecc) [`pgcrypto`](/ext/e/pgcrypto) [`gzip`](/ext/e/gzip) [`bzip`](/ext/e/bzip) [`zstd`](/ext/e/zstd) |
+| **相关扩展** | [`pgsodium`](/ext/e/pgsodium) [`pgcrypto`](/ext/e/pgcrypto) [`pguecc`](/ext/e/pguecc) [`cryptint`](/ext/e/cryptint) [`pgcryptokey`](/ext/e/pgcryptokey) [`pgsmcrypto`](/ext/e/pgsmcrypto) [`hashlib`](/ext/e/hashlib) [`xxhash`](/ext/e/xxhash) [`md5hash`](/ext/e/md5hash) [`hashtypes`](/ext/e/hashtypes) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

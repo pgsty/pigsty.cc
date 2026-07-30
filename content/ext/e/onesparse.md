@@ -33,7 +33,7 @@ weight: 2620
 | 2620  | [**`onesparse`**](/ext/e/onesparse) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `onesparse` |
 {.ext-table}
 
-| **相关扩展** | [`age`](/ext/e/age) [`pgrouting`](/ext/e/pgrouting) [`postgis`](/ext/e/postgis) |
+| **相关扩展** | [`age`](/ext/e/age) [`pg_liquid`](/ext/e/pg_liquid) [`graph`](/ext/e/graph) [`pgrdf`](/ext/e/pgrdf) [`ltree`](/ext/e/ltree) [`sparql`](/ext/e/sparql) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

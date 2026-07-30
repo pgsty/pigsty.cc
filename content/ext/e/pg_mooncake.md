@@ -33,7 +33,7 @@ weight: 2440
 | 2440  | [**`pg_mooncake`**](/ext/e/pg_mooncake) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | - |
 {.ext-table}
 
-| **相关扩展** | [`pg_duckdb`](/ext/e/pg_duckdb) [`pg_duckdb`](/ext/e/pg_duckdb) [`duckdb_fdw`](/ext/e/duckdb_fdw) `pg_analytics` [`columnar`](/ext/e/columnar) [`citus_columnar`](/ext/e/citus_columnar) [`pg_parquet`](/ext/e/pg_parquet) [`orioledb`](/ext/e/orioledb) [`timescaledb`](/ext/e/timescaledb) |
+| **相关扩展** | [`pg_duckdb`](/ext/e/pg_duckdb) [`pg_duckdb`](/ext/e/pg_duckdb) [`pg_ducklake`](/ext/e/pg_ducklake) [`columnar`](/ext/e/columnar) [`citus_columnar`](/ext/e/citus_columnar) [`pg_lake`](/ext/e/pg_lake) [`pg_parquet`](/ext/e/pg_parquet) [`orioledb`](/ext/e/orioledb) [`storage_engine`](/ext/e/storage_engine) [`pg_sorted_heap`](/ext/e/pg_sorted_heap) [`duckdb_fdw`](/ext/e/duckdb_fdw) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

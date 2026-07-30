@@ -33,6 +33,10 @@ weight: 2870
 | 2870  | [**`pg_durable`**](/ext/e/pg_durable) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `df` |
 {.ext-table}
 
+| **相关扩展** | [`pg_task`](/ext/e/pg_task) [`pgmq`](/ext/e/pgmq) [`pg_background`](/ext/e/pg_background) [`ulak`](/ext/e/ulak) [`pgmb`](/ext/e/pgmb) [`pg_later`](/ext/e/pg_later) [`pg_dispatch`](/ext/e/pg_dispatch) [`pg_retry`](/ext/e/pg_retry) [`fsm_core`](/ext/e/fsm_core) [`pglock`](/ext/e/pglock) |
+|:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+{.ext-table .ext-table--rel}
+
 
 > Requires shared_preload_libraries=pg_durable and a superuser worker role.
 

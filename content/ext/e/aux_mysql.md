@@ -33,6 +33,10 @@ weight: 9420
 | 9420  | [**`aux_mysql`**](/ext/e/aux_mysql) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `mysql` |
 {.ext-table}
 
+| **相关扩展** | [`mysql_fdw`](/ext/e/mysql_fdw) [`db_migrator`](/ext/e/db_migrator) [`postgres_fdw`](/ext/e/postgres_fdw) [`orafce`](/ext/e/orafce) [`db2fce`](/ext/e/db2fce) [`tds_fdw`](/ext/e/tds_fdw) [`db2_fdw`](/ext/e/db2_fdw) |
+|:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+{.ext-table .ext-table--rel}
+
 
 > module_pathname=$libdir/mysm; openHalo 14.x only
 

@@ -34,7 +34,7 @@ weight: 6061
 | 6061  | [**`pgfr_analyze`**](/ext/e/pgfr_analyze) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `pgfr_analyze` |
 {.ext-table}
 
-| **相关扩展** | [`pgfr_record`](/ext/e/pgfr_record) [`pgfr_record`](/ext/e/pgfr_record) [`pg_profile`](/ext/e/pg_profile) [`pg_stat_statements`](/ext/e/pg_stat_statements) |
+| **相关扩展** | [`pgfr_record`](/ext/e/pgfr_record) [`pg_profile`](/ext/e/pg_profile) [`pg_stat_monitor`](/ext/e/pg_stat_monitor) [`powa`](/ext/e/powa) [`pg_stat_statements`](/ext/e/pg_stat_statements) [`pg_stat_plans`](/ext/e/pg_stat_plans) [`pg_store_plans`](/ext/e/pg_store_plans) [`pg_tracing`](/ext/e/pg_tracing) [`pg_stat_backtrace`](/ext/e/pg_stat_backtrace) [`pg_stat_log`](/ext/e/pg_stat_log) [`pg_wait_sampling`](/ext/e/pg_wait_sampling) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

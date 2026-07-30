@@ -33,7 +33,7 @@ weight: 8540
 | 8540  | [**`pgspider_ext`**](/ext/e/pgspider_ext) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
 {.ext-table}
 
-| **相关扩展** | [`plproxy`](/ext/e/plproxy) [`wrappers`](/ext/e/wrappers) [`multicorn`](/ext/e/multicorn) [`postgres_fdw`](/ext/e/postgres_fdw) [`citus`](/ext/e/citus) [`mysql_fdw`](/ext/e/mysql_fdw) [`oracle_fdw`](/ext/e/oracle_fdw) [`mongo_fdw`](/ext/e/mongo_fdw) |
+| **相关扩展** | [`postgres_fdw`](/ext/e/postgres_fdw) [`db_migrator`](/ext/e/db_migrator) [`dblink`](/ext/e/dblink) [`citus`](/ext/e/citus) [`plproxy`](/ext/e/plproxy) [`pgactive`](/ext/e/pgactive) [`spock`](/ext/e/spock) [`mysql_fdw`](/ext/e/mysql_fdw) [`pgclone`](/ext/e/pgclone) [`mimeo`](/ext/e/mimeo) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

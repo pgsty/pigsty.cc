@@ -33,7 +33,7 @@ weight: 1090
 | 1090  | [**`pg_later`**](/ext/e/pg_later) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `pglater` |
 {.ext-table}
 
-| **相关扩展** | [`pgmq`](/ext/e/pgmq) [`pg_cron`](/ext/e/pg_cron) [`pg_task`](/ext/e/pg_task) [`pg_background`](/ext/e/pg_background) [`timescaledb`](/ext/e/timescaledb) [`timescaledb_toolkit`](/ext/e/timescaledb_toolkit) [`timeseries`](/ext/e/timeseries) [`periods`](/ext/e/periods) [`temporal_tables`](/ext/e/temporal_tables) |
+| **相关扩展** | [`pgmq`](/ext/e/pgmq) [`pg_task`](/ext/e/pg_task) [`pg_cron`](/ext/e/pg_cron) [`pg_dispatch`](/ext/e/pg_dispatch) [`pgagent`](/ext/e/pgagent) [`pg_dbms_job`](/ext/e/pg_dbms_job) [`pg_background`](/ext/e/pg_background) [`pg_durable`](/ext/e/pg_durable) [`omni_worker`](/ext/e/omni_worker) [`pg_jobmon`](/ext/e/pg_jobmon) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

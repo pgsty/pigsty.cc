@@ -69,6 +69,10 @@ weight: 2956
 | 2979  | [**`omni_yaml`**](/ext/e/omni_yaml) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `omni_yaml` |
 {.ext-table}
 
+| **相关扩展** | [`pg_tle`](/ext/e/pg_tle) [`pgextwlist`](/ext/e/pgextwlist) [`pg_readme`](/ext/e/pg_readme) [`ddlx`](/ext/e/ddlx) [`pgdd`](/ext/e/pgdd) [`meta`](/ext/e/meta) [`pg_command_fw`](/ext/e/pg_command_fw) [`supautils`](/ext/e/supautils) |
+|:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+{.ext-table .ext-table--rel}
+
 
 ## 版本
 

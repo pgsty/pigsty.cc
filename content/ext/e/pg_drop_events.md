@@ -33,7 +33,7 @@ weight: 5850
 | 5850  | [**`pg_drop_events`**](/ext/e/pg_drop_events) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `public` |
 {.ext-table}
 
-| **相关扩展** | [`plpgsql`](/ext/e/plpgsql) [`pg_savior`](/ext/e/pg_savior) [`table_log`](/ext/e/table_log) [`pgaudit`](/ext/e/pgaudit) [`pg_auditor`](/ext/e/pg_auditor) [`temporal_tables`](/ext/e/temporal_tables) [`emaj`](/ext/e/emaj) [`pg_upless`](/ext/e/pg_upless) [`pgauditlogtofile`](/ext/e/pgauditlogtofile) |
+| **相关扩展** | [`plpgsql`](/ext/e/plpgsql) [`table_log`](/ext/e/table_log) [`safeupdate`](/ext/e/safeupdate) [`pg_strict`](/ext/e/pg_strict) [`pg_savior`](/ext/e/pg_savior) [`pgmemento`](/ext/e/pgmemento) [`pgaudit`](/ext/e/pgaudit) [`pgelog`](/ext/e/pgelog) [`block_copy_command`](/ext/e/block_copy_command) [`pg_kpart`](/ext/e/pg_kpart) [`data_historization`](/ext/e/data_historization) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

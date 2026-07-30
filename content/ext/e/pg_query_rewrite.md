@@ -33,6 +33,10 @@ weight: 5030
 | 5030  | [**`pg_query_rewrite`**](/ext/e/pg_query_rewrite) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | - |
 {.ext-table}
 
+| **相关扩展** | [`pg_fsql`](/ext/e/pg_fsql) [`ddlx`](/ext/e/ddlx) [`pg_readme`](/ext/e/pg_readme) [`pglinter`](/ext/e/pglinter) [`omni_sql`](/ext/e/omni_sql) [`pg_variables`](/ext/e/pg_variables) [`pre_prepare`](/ext/e/pre_prepare) [`plan_filter`](/ext/e/plan_filter) [`pg_hint_plan`](/ext/e/pg_hint_plan) [`pgdd`](/ext/e/pgdd) |
+|:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+{.ext-table .ext-table--rel}
+
 
 > Requires shared_preload_libraries=pg_query_rewrite.
 

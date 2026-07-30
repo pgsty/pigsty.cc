@@ -28,7 +28,7 @@ weight: 7100
 | 7100  | [**`pgaudit`**](/ext/e/pgaudit) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
 {.ext-table}
 
-| **相关扩展** | [`pgauditlogtofile`](/ext/e/pgauditlogtofile) [`set_user`](/ext/e/set_user) [`pg_permissions`](/ext/e/pg_permissions) [`pg_auth_mon`](/ext/e/pg_auth_mon) [`pg_auditor`](/ext/e/pg_auditor) [`safeupdate`](/ext/e/safeupdate) [`pg_drop_events`](/ext/e/pg_drop_events) [`table_log`](/ext/e/table_log) |
+| **相关扩展** | [`pgauditlogtofile`](/ext/e/pgauditlogtofile) [`pg_auditor`](/ext/e/pg_auditor) [`pg_roast`](/ext/e/pg_roast) [`pgmemento`](/ext/e/pgmemento) [`table_log`](/ext/e/table_log) [`pg_drop_events`](/ext/e/pg_drop_events) [`pgelog`](/ext/e/pgelog) [`logerrors`](/ext/e/logerrors) [`pg_stat_log`](/ext/e/pg_stat_log) [`pg_auth_mon`](/ext/e/pg_auth_mon) [`data_historization`](/ext/e/data_historization) [`table_version`](/ext/e/table_version) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

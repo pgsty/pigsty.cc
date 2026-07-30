@@ -33,7 +33,7 @@ weight: 3650
 | 3650  | [**`pg_sphere`**](/ext/e/pg_sphere) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
 {.ext-table}
 
-| **相关扩展** | [`postgis`](/ext/e/postgis) [`q3c`](/ext/e/q3c) [`earthdistance`](/ext/e/earthdistance) [`prefix`](/ext/e/prefix) [`semver`](/ext/e/semver) [`unit`](/ext/e/unit) [`pgpdf`](/ext/e/pgpdf) [`pglite_fusion`](/ext/e/pglite_fusion) |
+| **相关扩展** | [`q3c`](/ext/e/q3c) [`postgis`](/ext/e/postgis) [`earthdistance`](/ext/e/earthdistance) [`pointcloud`](/ext/e/pointcloud) [`h3`](/ext/e/h3) [`pgrouting`](/ext/e/pgrouting) [`mobilitydb`](/ext/e/mobilitydb) [`ogr_fdw`](/ext/e/ogr_fdw) [`pg_geohash`](/ext/e/pg_geohash) [`qdgc`](/ext/e/qdgc) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

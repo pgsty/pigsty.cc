@@ -33,6 +33,10 @@ weight: 2946
 | 2946  | [**`omni_csv`**](/ext/e/omni_csv) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `omni_csv` |
 {.ext-table}
 
+| **相关扩展** | [`file_fdw`](/ext/e/file_fdw) [`pg_csv`](/ext/e/pg_csv) [`pg_bulkload`](/ext/e/pg_bulkload) [`aws_s3`](/ext/e/aws_s3) [`pg_parquet`](/ext/e/pg_parquet) [`pg_lake`](/ext/e/pg_lake) [`log_fdw`](/ext/e/log_fdw) [`pg_fact_loader`](/ext/e/pg_fact_loader) [`pg_ducklake`](/ext/e/pg_ducklake) [`pg_sqlog`](/ext/e/pg_sqlog) |
+|:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+{.ext-table .ext-table--rel}
+
 
 ## 版本
 

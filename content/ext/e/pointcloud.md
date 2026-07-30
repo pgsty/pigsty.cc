@@ -34,7 +34,7 @@ weight: 1520
 | 1521  | [**`pointcloud_postgis`**](/ext/e/pointcloud_postgis) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | - |
 {.ext-table}
 
-| **相关扩展** | [`postgis`](/ext/e/postgis) [`postgis_raster`](/ext/e/postgis_raster) [`postgis_topology`](/ext/e/postgis_topology) [`postgis_sfcgal`](/ext/e/postgis_sfcgal) [`postgis_tiger_geocoder`](/ext/e/postgis_tiger_geocoder) [`address_standardizer`](/ext/e/address_standardizer) [`address_standardizer_data_us`](/ext/e/address_standardizer_data_us) [`pgrouting`](/ext/e/pgrouting) |
+| **相关扩展** | [`postgis_raster`](/ext/e/postgis_raster) [`pgh_raster`](/ext/e/pgh_raster) [`ogr_fdw`](/ext/e/ogr_fdw) [`pgrouting`](/ext/e/pgrouting) [`pg_sphere`](/ext/e/pg_sphere) [`q3c`](/ext/e/q3c) [`mobilitydb`](/ext/e/mobilitydb) [`h3`](/ext/e/h3) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **下游依赖** | [`pointcloud_postgis`](/ext/e/pointcloud_postgis) |
 {.ext-table .ext-table--rel}

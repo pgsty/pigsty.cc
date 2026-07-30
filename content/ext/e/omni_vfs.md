@@ -69,7 +69,7 @@ weight: 2974
 | 2979  | [**`omni_yaml`**](/ext/e/omni_yaml) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `omni_yaml` |
 {.ext-table}
 
-| **相关扩展** | [`omni_vfs_types_v1`](/ext/e/omni_vfs_types_v1) [`dblink`](/ext/e/dblink) |
+| **相关扩展** | [`omni_vfs_types_v1`](/ext/e/omni_vfs_types_v1) [`dblink`](/ext/e/dblink) [`external_file`](/ext/e/external_file) [`floatfile`](/ext/e/floatfile) [`fio`](/ext/e/fio) [`byteamagic`](/ext/e/byteamagic) [`envvar`](/ext/e/envvar) [`file_fdw`](/ext/e/file_fdw) [`basic_archive`](/ext/e/basic_archive) [`basebackup_to_shell`](/ext/e/basebackup_to_shell) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **下游依赖** | [`omni_schema`](/ext/e/omni_schema) |
 {.ext-table .ext-table--rel}

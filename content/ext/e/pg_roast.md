@@ -33,7 +33,7 @@ weight: 7120
 | 7120  | [**`pg_roast`**](/ext/e/pg_roast) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `roast` |
 {.ext-table}
 
-| **相关扩展** | [`pglinter`](/ext/e/pglinter) [`pg_profile`](/ext/e/pg_profile) [`pg_stat_statements`](/ext/e/pg_stat_statements) |
+| **相关扩展** | [`pgaudit`](/ext/e/pgaudit) [`pg_auditor`](/ext/e/pg_auditor) [`pg_permissions`](/ext/e/pg_permissions) [`pgmemento`](/ext/e/pgmemento) [`table_log`](/ext/e/table_log) [`pgauditlogtofile`](/ext/e/pgauditlogtofile) [`set_user`](/ext/e/set_user) [`pg_snakeoil`](/ext/e/pg_snakeoil) [`pg_readonly`](/ext/e/pg_readonly) [`pg_command_fw`](/ext/e/pg_command_fw) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

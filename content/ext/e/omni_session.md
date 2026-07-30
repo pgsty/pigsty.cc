@@ -69,7 +69,7 @@ weight: 2966
 | 2979  | [**`omni_yaml`**](/ext/e/omni_yaml) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `omni_yaml` |
 {.ext-table}
 
-| **相关扩展** | [`omni_var`](/ext/e/omni_var) [`omni_id`](/ext/e/omni_id) [`omni_web`](/ext/e/omni_web) [`omni_httpd`](/ext/e/omni_httpd) [`omni_polyfill`](/ext/e/omni_polyfill) |
+| **相关扩展** | [`omni_var`](/ext/e/omni_var) [`omni_id`](/ext/e/omni_id) [`omni_web`](/ext/e/omni_web) [`omni_httpd`](/ext/e/omni_httpd) [`omni_polyfill`](/ext/e/omni_polyfill) [`pg_session_jwt`](/ext/e/pg_session_jwt) [`session_variable`](/ext/e/session_variable) [`pg_variables`](/ext/e/pg_variables) [`pgjwt`](/ext/e/pgjwt) [`pg_oidc_validator`](/ext/e/pg_oidc_validator) [`login_hook`](/ext/e/login_hook) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

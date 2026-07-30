@@ -28,7 +28,7 @@ weight: 3940
 | 3940  | [**`seg`**](/ext/e/seg) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | - |
 {.ext-table}
 
-| **相关扩展** | [`cube`](/ext/e/cube) [`intarray`](/ext/e/intarray) [`intagg`](/ext/e/intagg) [`prefix`](/ext/e/prefix) [`semver`](/ext/e/semver) [`unit`](/ext/e/unit) [`pgpdf`](/ext/e/pgpdf) [`pglite_fusion`](/ext/e/pglite_fusion) |
+| **相关扩展** | [`cube`](/ext/e/cube) [`prefix`](/ext/e/prefix) [`unit`](/ext/e/unit) [`ip4r`](/ext/e/ip4r) [`pgmp`](/ext/e/pgmp) [`numeral`](/ext/e/numeral) [`pg_rational`](/ext/e/pg_rational) [`uint`](/ext/e/uint) [`uint128`](/ext/e/uint128) [`ltree`](/ext/e/ltree) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

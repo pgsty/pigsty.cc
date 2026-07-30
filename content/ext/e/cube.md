@@ -28,7 +28,7 @@ weight: 3950
 | 3950  | [**`cube`**](/ext/e/cube) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | - |
 {.ext-table}
 
-| **相关扩展** | [`seg`](/ext/e/seg) [`intarray`](/ext/e/intarray) [`prefix`](/ext/e/prefix) [`semver`](/ext/e/semver) [`unit`](/ext/e/unit) [`pgpdf`](/ext/e/pgpdf) [`pglite_fusion`](/ext/e/pglite_fusion) [`md5hash`](/ext/e/md5hash) |
+| **相关扩展** | [`seg`](/ext/e/seg) [`prefix`](/ext/e/prefix) [`unit`](/ext/e/unit) [`ip4r`](/ext/e/ip4r) [`pgmp`](/ext/e/pgmp) [`numeral`](/ext/e/numeral) [`pg_rational`](/ext/e/pg_rational) [`uint`](/ext/e/uint) [`uint128`](/ext/e/uint128) [`ltree`](/ext/e/ltree) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **下游依赖** | [`earthdistance`](/ext/e/earthdistance) [`pg4ml`](/ext/e/pg4ml) |
 {.ext-table .ext-table--rel}

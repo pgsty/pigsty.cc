@@ -28,7 +28,7 @@ weight: 2390
 | 2390  | [**`pg_trgm`**](/ext/e/pg_trgm) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | - |
 {.ext-table}
 
-| **相关扩展** | [`pg_similarity`](/ext/e/pg_similarity) [`pg_bigm`](/ext/e/pg_bigm) [`fuzzystrmatch`](/ext/e/fuzzystrmatch) [`unaccent`](/ext/e/unaccent) [`smlar`](/ext/e/smlar) [`pgroonga_database`](/ext/e/pgroonga_database) [`rum`](/ext/e/rum) [`citext`](/ext/e/citext) |
+| **相关扩展** | [`pg_similarity`](/ext/e/pg_similarity) [`fuzzystrmatch`](/ext/e/fuzzystrmatch) [`smlar`](/ext/e/smlar) [`pg_bigm`](/ext/e/pg_bigm) [`pgpcre`](/ext/e/pgpcre) [`re2`](/ext/e/re2) [`biscuit`](/ext/e/biscuit) [`citext`](/ext/e/citext) [`unaccent`](/ext/e/unaccent) [`pgroonga`](/ext/e/pgroonga) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

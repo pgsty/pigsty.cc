@@ -33,7 +33,7 @@ weight: 4860
 | 4860  | [**`parray_gin`**](/ext/e/parray_gin) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
 {.ext-table}
 
-| **相关扩展** | [`intarray`](/ext/e/intarray) [`btree_gin`](/ext/e/btree_gin) [`btree_gist`](/ext/e/btree_gist) [`pg_trgm`](/ext/e/pg_trgm) [`smlar`](/ext/e/smlar) [`aggs_for_arrays`](/ext/e/aggs_for_arrays) [`aggs_for_vecs`](/ext/e/aggs_for_vecs) [`arraymath`](/ext/e/arraymath) |
+| **相关扩展** | [`intarray`](/ext/e/intarray) [`btree_gin`](/ext/e/btree_gin) [`btree_gist`](/ext/e/btree_gist) [`rum`](/ext/e/rum) [`bloom`](/ext/e/bloom) [`ora_btree_gin`](/ext/e/ora_btree_gin) [`orafce`](/ext/e/orafce) [`arraymath`](/ext/e/arraymath) [`hll`](/ext/e/hll) [`roaringbitmap`](/ext/e/roaringbitmap) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

@@ -33,7 +33,7 @@ weight: 3011
 | 3011  | [**`pljs`**](/ext/e/pljs) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `pg_catalog` |
 {.ext-table}
 
-| **相关扩展** | [`plv8`](/ext/e/plv8) [`jsquery`](/ext/e/jsquery) [`pllua`](/ext/e/pllua) [`pg_tle`](/ext/e/pg_tle) [`plpgsql`](/ext/e/plpgsql) [`pg_jsonschema`](/ext/e/pg_jsonschema) [`plperl`](/ext/e/plperl) [`plpython3u`](/ext/e/plpython3u) |
+| **相关扩展** | [`plv8`](/ext/e/plv8) [`pllua`](/ext/e/pllua) [`pgwasm`](/ext/e/pgwasm) [`pg_tle`](/ext/e/pg_tle) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

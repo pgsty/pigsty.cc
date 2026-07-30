@@ -33,7 +33,7 @@ weight: 7450
 | 7450  | [**`pg_kpart`**](/ext/e/pg_kpart) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
 {.ext-table}
 
-| **相关扩展** | [`pg_partman`](/ext/e/pg_partman) [`pg_fkpart`](/ext/e/pg_fkpart) [`plan_filter`](/ext/e/plan_filter) [`pg_hint_plan`](/ext/e/pg_hint_plan) [`citus`](/ext/e/citus) [`timescaledb`](/ext/e/timescaledb) |
+| **相关扩展** | [`plan_filter`](/ext/e/plan_filter) [`pg_partman`](/ext/e/pg_partman) [`safeupdate`](/ext/e/safeupdate) [`block_copy_command`](/ext/e/block_copy_command) [`pg_strict`](/ext/e/pg_strict) [`prioritize`](/ext/e/prioritize) [`qos`](/ext/e/qos) [`pg_readonly`](/ext/e/pg_readonly) [`pgextwlist`](/ext/e/pgextwlist) [`timescaledb`](/ext/e/timescaledb) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

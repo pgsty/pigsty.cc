@@ -31,7 +31,7 @@ weight: 3021
 | 3031  | [**`hstore_plluau`**](/ext/e/hstore_plluau) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | `pg_catalog` |
 {.ext-table}
 
-| **相关扩展** | [`hstore`](/ext/e/hstore) [`pllua`](/ext/e/pllua) [`hstore_plperl`](/ext/e/hstore_plperl) [`hstore_plperlu`](/ext/e/hstore_plperlu) [`hstore_plpython3u`](/ext/e/hstore_plpython3u) [`plpgsql`](/ext/e/plpgsql) |
+| **相关扩展** | [`hstore`](/ext/e/hstore) [`pllua`](/ext/e/pllua) [`hstore`](/ext/e/hstore) [`hstore_plpython3u`](/ext/e/hstore_plpython3u) [`hstore_plperl`](/ext/e/hstore_plperl) [`hstore_plperlu`](/ext/e/hstore_plperlu) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

@@ -106,15 +106,15 @@ weight: 40
 | **ID** | **扩展名** | **版本** | **属性** | **模式** | **描述** |
 |:------:|:-----------|:--------:|:--------:|:---------|:---------|
 | 2270 | [**`hunspell_cs_cz`**](/ext/e/hunspell_cs_cz) | `1.0` | `----d-r` | - | Hunspell捷克语全文检索词典 |
-| 2271 | [**`hunspell_de_de`**](/ext/e/hunspell_de_de) | `1.0` | `----d-r` | - | Hunspell德语全文检索词典 |
-| 2272 | [**`hunspell_en_us`**](/ext/e/hunspell_en_us) | `1.0` | `----d-r` | - | Hunspell英语全文检索词典 |
-| 2273 | [**`hunspell_fr`**](/ext/e/hunspell_fr) | `1.0` | `----d-r` | - | Hunspell法语全文检索词典 |
-| 2274 | [**`hunspell_ne_np`**](/ext/e/hunspell_ne_np) | `1.0` | `----d-r` | - | Hunspell尼泊尔语全文检索词典 |
-| 2275 | [**`hunspell_nl_nl`**](/ext/e/hunspell_nl_nl) | `1.0` | `----d-r` | - | Hunspell荷兰语全文检索词典 |
-| 2276 | [**`hunspell_nn_no`**](/ext/e/hunspell_nn_no) | `1.0` | `----d-r` | - | Hunspell挪威语全文检索词典 |
-| 2277 | [**`hunspell_pt_pt`**](/ext/e/hunspell_pt_pt) | `1.0` | `----d-r` | - | Hunspell葡萄牙语全文检索词典 |
-| 2278 | [**`hunspell_ru_ru`**](/ext/e/hunspell_ru_ru) | `1.0` | `----d-r` | - | Hunspell俄语全文检索词典 |
-| 2279 | [**`hunspell_ru_ru_aot`**](/ext/e/hunspell_ru_ru_aot) | `1.0` | `----d-r` | - | Hunspell俄语全文检索词典（来自AOT.ru小组） |
+| 2271 | [`hunspell_de_de`](/ext/e/hunspell_de_de) | `1.0` | `----d-r` | - | Hunspell德语全文检索词典 |
+| 2272 | [`hunspell_en_us`](/ext/e/hunspell_en_us) | `1.0` | `----d-r` | - | Hunspell英语全文检索词典 |
+| 2273 | [`hunspell_fr`](/ext/e/hunspell_fr) | `1.0` | `----d-r` | - | Hunspell法语全文检索词典 |
+| 2274 | [`hunspell_ne_np`](/ext/e/hunspell_ne_np) | `1.0` | `----d-r` | - | Hunspell尼泊尔语全文检索词典 |
+| 2275 | [`hunspell_nl_nl`](/ext/e/hunspell_nl_nl) | `1.0` | `----d-r` | - | Hunspell荷兰语全文检索词典 |
+| 2276 | [`hunspell_nn_no`](/ext/e/hunspell_nn_no) | `1.0` | `----d-r` | - | Hunspell挪威语全文检索词典 |
+| 2277 | [`hunspell_pt_pt`](/ext/e/hunspell_pt_pt) | `1.0` | `----d-r` | - | Hunspell葡萄牙语全文检索词典 |
+| 2278 | [`hunspell_ru_ru`](/ext/e/hunspell_ru_ru) | `1.0` | `----d-r` | - | Hunspell俄语全文检索词典 |
+| 2279 | [`hunspell_ru_ru_aot`](/ext/e/hunspell_ru_ru_aot) | `1.0` | `----d-r` | - | Hunspell俄语全文检索词典（来自AOT.ru小组） |
 {.ext-table}
 
 ### citus
@@ -341,7 +341,7 @@ weight: 40
 
 | **ID** | **扩展名** | **版本** | **属性** | **模式** | **描述** |
 |:------:|:-----------|:--------:|:--------:|:---------|:---------|
-| 9500 | [**`pglogical`**](/ext/e/pglogical) | `2.4.7` | `--sLd--` | `pglogical` | PostgreSQL逻辑复制：三方扩展实现 |
+| 9500 | [**`pglogical`**](/ext/e/pglogical) | `2.4.8` | `--sLd--` | `pglogical` | PostgreSQL逻辑复制：三方扩展实现 |
 | 9501 | [`pglogical_origin`](/ext/e/pglogical_origin) | `2.4.7` | `--s-d--` | `pglogical_origin` | 用于从 Postgres 9.4 升级时的兼容性虚拟扩展 |
 {.ext-table}
 

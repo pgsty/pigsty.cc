@@ -33,7 +33,7 @@ weight: 3640
 | 3640  | [**`pgfaceting`**](/ext/e/pgfaceting) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `faceting` |
 {.ext-table}
 
-| **相关扩展** | [`roaringbitmap`](/ext/e/roaringbitmap) [`pg_trgm`](/ext/e/pg_trgm) [`rum`](/ext/e/rum) [`prefix`](/ext/e/prefix) [`semver`](/ext/e/semver) [`unit`](/ext/e/unit) [`pgpdf`](/ext/e/pgpdf) [`pglite_fusion`](/ext/e/pglite_fusion) [`md5hash`](/ext/e/md5hash) |
+| **相关扩展** | [`roaringbitmap`](/ext/e/roaringbitmap) [`pg_search`](/ext/e/pg_search) [`pgroonga`](/ext/e/pgroonga) [`roaringbitmap`](/ext/e/roaringbitmap) [`rum`](/ext/e/rum) [`hll`](/ext/e/hll) [`bloom`](/ext/e/bloom) [`pg_tokenizer`](/ext/e/pg_tokenizer) [`pg_textsearch`](/ext/e/pg_textsearch) [`pg_fts`](/ext/e/pg_fts) [`vchord_bm25`](/ext/e/vchord_bm25) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

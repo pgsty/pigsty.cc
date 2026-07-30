@@ -33,7 +33,7 @@ weight: 4710
 | 4710  | [**`first_last_agg`**](/ext/e/first_last_agg) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
 {.ext-table}
 
-| **相关扩展** | [`aggs_for_arrays`](/ext/e/aggs_for_arrays) [`aggs_for_vecs`](/ext/e/aggs_for_vecs) [`topn`](/ext/e/topn) [`quantile`](/ext/e/quantile) [`lower_quantile`](/ext/e/lower_quantile) [`count_distinct`](/ext/e/count_distinct) [`arraymath`](/ext/e/arraymath) |
+| **相关扩展** | [`tablefunc`](/ext/e/tablefunc) [`extra_window_functions`](/ext/e/extra_window_functions) [`pg_duckdb`](/ext/e/pg_duckdb) [`argm`](/ext/e/argm) [`pg_lake`](/ext/e/pg_lake) [`duckdb_fdw`](/ext/e/duckdb_fdw) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

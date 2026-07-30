@@ -28,7 +28,7 @@ weight: 7370
 | 7370  | [**`set_user`**](/ext/e/set_user) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | - |
 {.ext-table}
 
-| **相关扩展** | [`pg_readonly`](/ext/e/pg_readonly) [`pg_permissions`](/ext/e/pg_permissions) [`pgaudit`](/ext/e/pgaudit) [`login_hook`](/ext/e/login_hook) [`pgauditlogtofile`](/ext/e/pgauditlogtofile) [`pg_auth_mon`](/ext/e/pg_auth_mon) [`credcheck`](/ext/e/credcheck) [`pgextwlist`](/ext/e/pgextwlist) |
+| **相关扩展** | [`pg_permissions`](/ext/e/pg_permissions) [`login_hook`](/ext/e/login_hook) [`pg_auth_mon`](/ext/e/pg_auth_mon) [`pg_session_jwt`](/ext/e/pg_session_jwt) [`auth_delay`](/ext/e/auth_delay) [`pgaudit`](/ext/e/pgaudit) [`pg_roast`](/ext/e/pg_roast) [`pg_readonly`](/ext/e/pg_readonly) [`acl`](/ext/e/acl) [`pg_command_fw`](/ext/e/pg_command_fw) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

@@ -34,7 +34,7 @@ weight: 6450
 | 6450  | [**`pg_proctab`**](/ext/e/pg_proctab) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
 {.ext-table}
 
-| **相关扩展** | [`prioritize`](/ext/e/prioritize) [`system_stats`](/ext/e/system_stats) [`pg_background`](/ext/e/pg_background) [`pg_wait_sampling`](/ext/e/pg_wait_sampling) [`pgmeminfo`](/ext/e/pgmeminfo) [`pgsentinel`](/ext/e/pgsentinel) [`pg_profile`](/ext/e/pg_profile) |
+| **相关扩展** | [`system_stats`](/ext/e/system_stats) [`pg_stat_kcache`](/ext/e/pg_stat_kcache) [`pgmeminfo`](/ext/e/pgmeminfo) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

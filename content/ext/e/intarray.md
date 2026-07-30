@@ -28,7 +28,7 @@ weight: 4960
 | 4960  | [**`intarray`**](/ext/e/intarray) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | - |
 {.ext-table}
 
-| **相关扩展** | [`aggs_for_arrays`](/ext/e/aggs_for_arrays) [`aggs_for_vecs`](/ext/e/aggs_for_vecs) [`arraymath`](/ext/e/arraymath) [`floatvec`](/ext/e/floatvec) [`vector`](/ext/e/vector) [`vchord`](/ext/e/vchord) [`vectorscale`](/ext/e/vectorscale) [`vectorize`](/ext/e/vectorize) |
+| **相关扩展** | [`arraymath`](/ext/e/arraymath) [`floatvec`](/ext/e/floatvec) [`aggs_for_vecs`](/ext/e/aggs_for_vecs) [`aggs_for_arrays`](/ext/e/aggs_for_arrays) [`collection`](/ext/e/collection) [`hstore`](/ext/e/hstore) [`pgbson`](/ext/e/pgbson) [`parray_gin`](/ext/e/parray_gin) [`btree_gin`](/ext/e/btree_gin) [`btree_gist`](/ext/e/btree_gist) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

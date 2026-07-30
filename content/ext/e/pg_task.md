@@ -33,7 +33,7 @@ weight: 1080
 | 1080  | [**`pg_task`**](/ext/e/pg_task) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | - |
 {.ext-table}
 
-| **相关扩展** | [`timescaledb`](/ext/e/timescaledb) [`pg_cron`](/ext/e/pg_cron) [`pg_later`](/ext/e/pg_later) [`pg_background`](/ext/e/pg_background) [`pg_partman`](/ext/e/pg_partman) [`timescaledb_toolkit`](/ext/e/timescaledb_toolkit) [`timeseries`](/ext/e/timeseries) [`periods`](/ext/e/periods) |
+| **相关扩展** | [`pg_cron`](/ext/e/pg_cron) [`pg_durable`](/ext/e/pg_durable) [`pg_background`](/ext/e/pg_background) [`pgagent`](/ext/e/pgagent) [`pg_dispatch`](/ext/e/pg_dispatch) [`pg_dbms_job`](/ext/e/pg_dbms_job) [`pg_later`](/ext/e/pg_later) [`pgmq`](/ext/e/pgmq) [`ulak`](/ext/e/ulak) [`pg_retry`](/ext/e/pg_retry) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

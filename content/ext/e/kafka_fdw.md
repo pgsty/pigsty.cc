@@ -33,7 +33,7 @@ weight: 8730
 | 8730  | [**`kafka_fdw`**](/ext/e/kafka_fdw) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
 {.ext-table}
 
-| **相关扩展** | [`pgmq`](/ext/e/pgmq) [`mongo_fdw`](/ext/e/mongo_fdw) [`redis_fdw`](/ext/e/redis_fdw) [`wrappers`](/ext/e/wrappers) [`multicorn`](/ext/e/multicorn) [`redis`](/ext/e/redis) [`hdfs_fdw`](/ext/e/hdfs_fdw) [`wal2json`](/ext/e/wal2json) |
+| **相关扩展** | [`pgmqtt`](/ext/e/pgmqtt) [`wal2json`](/ext/e/wal2json) [`decoderbufs`](/ext/e/decoderbufs) [`pgq`](/ext/e/pgq) [`test_decoding`](/ext/e/test_decoding) [`pgoutput`](/ext/e/pgoutput) [`pg_protobuf`](/ext/e/pg_protobuf) [`pgproto`](/ext/e/pgproto) [`hdfs_fdw`](/ext/e/hdfs_fdw) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

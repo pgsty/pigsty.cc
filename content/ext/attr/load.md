@@ -5,7 +5,7 @@ description: "需要动态加载的 PostgreSQL 扩展"
 weight: 10
 ---
 
-以下 **125** 个扩展需要在 [`shared_preload_libraries`](https://www.postgresql.org/docs/current/runtime-config-client.html#GUC-SHARED-PRELOAD-LIBRARIES) 中动态加载，才能正常使用。
+以下 **124** 个扩展需要在 [`shared_preload_libraries`](https://www.postgresql.org/docs/current/runtime-config-client.html#GUC-SHARED-PRELOAD-LIBRARIES) 中动态加载，才能正常使用。
 
 也就是说，您需要修改 PostgreSQL 配置文件 `postgresql.conf` 中的 [`shared_preload_libraries`](https://www.postgresql.org/docs/current/runtime-config-client.html#GUC-SHARED-PRELOAD-LIBRARIES) 参数，将扩展的库名添加进去，然后重启数据库才能生效。
 
@@ -54,7 +54,6 @@ weight: 10
 | [`omni`](/ext/e/omni) | `omni--0.2.14.so` | PostgreSQL即平台，Omnigres主扩展与加载器 |
 | [`pg_tle`](/ext/e/pg_tle) | `pg_tle` | AWS 可信语言扩展 |
 | [`pldbgapi`](/ext/e/pldbgapi) | `$libdir/plugin_debugger` | 用于调试 PL/pgSQL 函数的服务器端支持 |
-| [`plpgsql_check`](/ext/e/plpgsql_check) | `plpgsql_check` | 对 plpgsql 函数进行扩展检查 |
 | [`plprofiler`](/ext/e/plprofiler) | `plprofiler` | 剖析 PL/pgSQL 函数 |
 | [`pg_regresql`](/ext/e/pg_regresql) | `pg_regresql` | 用 pg_class 统计信息替代物理文件大小参与查询规划 |
 | [`pgpdf`](/ext/e/pgpdf) | `pgpdf` | PDF数据类型，管理函数与全文检索 |

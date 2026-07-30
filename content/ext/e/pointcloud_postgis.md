@@ -34,7 +34,7 @@ weight: 1521
 | 1521  | [**`pointcloud_postgis`**](/ext/e/pointcloud_postgis) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | - |
 {.ext-table}
 
-| **相关扩展** | [`postgis`](/ext/e/postgis) [`pointcloud`](/ext/e/pointcloud) [`postgis_raster`](/ext/e/postgis_raster) [`postgis_topology`](/ext/e/postgis_topology) [`postgis_sfcgal`](/ext/e/postgis_sfcgal) [`postgis_tiger_geocoder`](/ext/e/postgis_tiger_geocoder) [`address_standardizer`](/ext/e/address_standardizer) [`address_standardizer_data_us`](/ext/e/address_standardizer_data_us) [`pgrouting`](/ext/e/pgrouting) [`h3`](/ext/e/h3) |
+| **相关扩展** | [`postgis`](/ext/e/postgis) [`pointcloud`](/ext/e/pointcloud) [`postgis_raster`](/ext/e/postgis_raster) [`pgh_raster`](/ext/e/pgh_raster) [`ogr_fdw`](/ext/e/ogr_fdw) [`pgrouting`](/ext/e/pgrouting) [`q3c`](/ext/e/q3c) [`h3`](/ext/e/h3) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

@@ -28,7 +28,7 @@ weight: 5960
 | 5960  | [**`old_snapshot`**](/ext/e/old_snapshot) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | - |
 {.ext-table}
 
-| **相关扩展** | [`pageinspect`](/ext/e/pageinspect) [`pg_visibility`](/ext/e/pg_visibility) [`pgstattuple`](/ext/e/pgstattuple) [`pg_prewarm`](/ext/e/pg_prewarm) [`pg_buffercache`](/ext/e/pg_buffercache) [`amcheck`](/ext/e/amcheck) [`pg_surgery`](/ext/e/pg_surgery) [`toastinfo`](/ext/e/toastinfo) |
+| **相关扩展** | [`pg_dirtyread`](/ext/e/pg_dirtyread) [`pg_visibility`](/ext/e/pg_visibility) [`temporal_tables`](/ext/e/temporal_tables) [`pgstattuple`](/ext/e/pgstattuple) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

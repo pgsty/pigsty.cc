@@ -36,7 +36,7 @@ weight: 9320
 | 9330  | [**`babelfishpg_money`**](/ext/e/babelfishpg_money) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | - |
 {.ext-table}
 
-| **相关扩展** | [`babelfishpg_tsql`](/ext/e/babelfishpg_tsql) [`tds_fdw`](/ext/e/tds_fdw) [`babelfishpg_common`](/ext/e/babelfishpg_common) [`babelfishpg_money`](/ext/e/babelfishpg_money) [`pg_hint_plan`](/ext/e/pg_hint_plan) [`uuid-ossp`](/ext/e/uuid-ossp) [`session_variable`](/ext/e/session_variable) [`jdbc_fdw`](/ext/e/jdbc_fdw) [`db_migrator`](/ext/e/db_migrator) |
+| **相关扩展** | [`babelfishpg_tsql`](/ext/e/babelfishpg_tsql) [`tds_fdw`](/ext/e/tds_fdw) [`odbc_fdw`](/ext/e/odbc_fdw) [`jdbc_fdw`](/ext/e/jdbc_fdw) [`wrappers`](/ext/e/wrappers) [`multicorn`](/ext/e/multicorn) [`orafce`](/ext/e/orafce) [`db2fce`](/ext/e/db2fce) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

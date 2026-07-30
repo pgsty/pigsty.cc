@@ -33,7 +33,7 @@ weight: 9210
 | 9210  | [**`plpgsql_wrap`**](/ext/e/plpgsql_wrap) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | - |
 {.ext-table}
 
-| **相关扩展** | [`plpgsql`](/ext/e/plpgsql) [`orafce`](/ext/e/orafce) [`pg_dbms_metadata`](/ext/e/pg_dbms_metadata) [`pgaudit`](/ext/e/pgaudit) |
+| **相关扩展** | [`plpgsql`](/ext/e/plpgsql) [`plpgsql`](/ext/e/plpgsql) [`plisql`](/ext/e/plisql) [`orafce`](/ext/e/orafce) [`plx`](/ext/e/plx) [`db2fce`](/ext/e/db2fce) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

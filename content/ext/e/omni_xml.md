@@ -69,7 +69,7 @@ weight: 2978
 | 2979  | [**`omni_yaml`**](/ext/e/omni_yaml) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `omni_yaml` |
 {.ext-table}
 
-| **相关扩展** |  |
+| **相关扩展** | [`xml2`](/ext/e/xml2) [`plxslt`](/ext/e/plxslt) [`sparql`](/ext/e/sparql) [`pgrdf`](/ext/e/pgrdf) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **下游依赖** | [`omni_aws`](/ext/e/omni_aws) |
 {.ext-table .ext-table--rel}

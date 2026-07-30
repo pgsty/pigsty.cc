@@ -69,7 +69,7 @@ weight: 2948
 | 2979  | [**`omni_yaml`**](/ext/e/omni_yaml) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `omni_yaml` |
 {.ext-table}
 
-| **相关扩展** | [`omni_id`](/ext/e/omni_id) [`omni_cloudevents`](/ext/e/omni_cloudevents) [`omni_polyfill`](/ext/e/omni_polyfill) |
+| **相关扩展** | [`omni_id`](/ext/e/omni_id) [`omni_cloudevents`](/ext/e/omni_cloudevents) [`omni_polyfill`](/ext/e/omni_polyfill) [`pg_smtp_client`](/ext/e/pg_smtp_client) [`pg_utl_smtp`](/ext/e/pg_utl_smtp) [`pg_html5_email_address`](/ext/e/pg_html5_email_address) [`emailaddr`](/ext/e/emailaddr) [`uri`](/ext/e/uri) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

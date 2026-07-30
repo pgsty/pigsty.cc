@@ -33,6 +33,10 @@ weight: 4680
 | 4680  | [**`weighted_statistics`**](/ext/e/weighted_statistics) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
 {.ext-table}
 
+| **相关扩展** | [`vasco`](/ext/e/vasco) [`xicor`](/ext/e/xicor) [`pg_math`](/ext/e/pg_math) [`quantile`](/ext/e/quantile) [`fbsql`](/ext/e/fbsql) [`lower_quantile`](/ext/e/lower_quantile) [`ddsketch`](/ext/e/ddsketch) [`tdigest`](/ext/e/tdigest) |
+|:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+{.ext-table .ext-table--rel}
+
 
 ## 版本
 

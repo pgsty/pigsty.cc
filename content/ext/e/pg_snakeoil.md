@@ -33,7 +33,7 @@ weight: 7380
 | 7380  | [**`pg_snakeoil`**](/ext/e/pg_snakeoil) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
 {.ext-table}
 
-| **相关扩展** | [`pg_crash`](/ext/e/pg_crash) [`pg_cheat_funcs`](/ext/e/pg_cheat_funcs) [`pg_dirtyread`](/ext/e/pg_dirtyread) [`pg_savior`](/ext/e/pg_savior) [`pg_surgery`](/ext/e/pg_surgery) [`pageinspect`](/ext/e/pageinspect) [`pg_catcheck`](/ext/e/pg_catcheck) [`amcheck`](/ext/e/amcheck) |
+| **相关扩展** | [`pg_roast`](/ext/e/pg_roast) [`pg_permissions`](/ext/e/pg_permissions) [`pg_auditor`](/ext/e/pg_auditor) [`pgaudit`](/ext/e/pgaudit) [`set_user`](/ext/e/set_user) [`pgauditlogtofile`](/ext/e/pgauditlogtofile) [`pgmemento`](/ext/e/pgmemento) [`table_log`](/ext/e/table_log) [`pg_readonly`](/ext/e/pg_readonly) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

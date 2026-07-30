@@ -10,12 +10,12 @@ icon: fa-brands fa-redhat
 {{< pgext_os_matrix >}}
 | **PKG / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
 |:---|:--:|:--:|:--:|:--:|:--:|
-| [`timescaledb`](/ext/e/timescaledb) | AVAIL PIGSTY 2.28.3 17 | AVAIL PIGSTY 2.28.3 35 | AVAIL PIGSTY 2.28.3 41 | AVAIL PIGSTY 2.28.3 49 | AVAIL PIGSTY 2.19.3 29 |
+| [`timescaledb`](/ext/e/timescaledb) | AVAIL PIGSTY 2.29.0 20 | AVAIL PIGSTY 2.29.0 38 | AVAIL PIGSTY 2.29.0 44 | AVAIL PIGSTY 2.28.3 50 | AVAIL PIGSTY 2.19.3 29 |
 | [`timescaledb_toolkit`](/ext/e/timescaledb_toolkit) | AVAIL PIGSTY 1.23.0 1 | AVAIL PIGSTY 1.23.0 1 | AVAIL PIGSTY 1.23.0 1 | AVAIL PIGSTY 1.23.0 1 | N/A PIGSTY - 0 |
 | [`pg_timeseries`](/ext/e/timeseries) | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 | AVAIL PIGSTY 0.2.1 1 |
 | [`periods`](/ext/e/periods) | AVAIL PIGSTY 1.2.3 1 | AVAIL PIGSTY 1.2.3 3 | AVAIL PIGSTY 1.2.3 3 | AVAIL PIGSTY 1.2.3 4 | AVAIL PIGSTY 1.2.3 3 |
 | [`temporal_tables`](/ext/e/temporal_tables) | AVAIL PIGSTY 1.2.2 1 | AVAIL PGDG 1.2.2 3 | AVAIL PGDG 1.2.2 3 | AVAIL PGDG 1.2.2 3 | AVAIL PGDG 1.2.2 3 |
-| [`emaj`](/ext/e/emaj) | AVAIL PIGSTY 5.0.0 1 | AVAIL PIGSTY 5.0.0 1 | AVAIL PIGSTY 5.0.0 1 | AVAIL PIGSTY 5.0.0 1 | AVAIL PIGSTY 5.0.0 1 |
+| [`emaj`](/ext/e/emaj) | AVAIL PIGSTY 5.0.0 3 | AVAIL PIGSTY 5.0.0 6 | AVAIL PIGSTY 5.0.0 11 | AVAIL PIGSTY 5.0.0 12 | AVAIL PIGSTY 5.0.0 12 |
 | [`table_version`](/ext/e/table_version) | AVAIL PGDG 1.11.1 3 | AVAIL PGDG 1.11.1 4 | AVAIL PGDG 1.11.1 3 | AVAIL PGDG 1.11.1 3 | AVAIL PGDG 1.11.1 3 |
 | [`pg_cron`](/ext/e/pg_cron) | AVAIL PGDG 1.6.7 2 | AVAIL PGDG 1.6.7 4 | AVAIL PGDG 1.6.7 8 | AVAIL PGDG 1.6.7 11 | AVAIL PGDG 1.6.7 11 |
 | [`pg_task`](/ext/e/pg_task) | AVAIL PIGSTY 2.1.29 2 | AVAIL PIGSTY 2.1.29 2 | AVAIL PIGSTY 2.1.29 3 | AVAIL PIGSTY 2.1.29 3 | AVAIL PIGSTY 2.1.29 3 |
@@ -51,9 +51,9 @@ icon: fa-brands fa-redhat
 | [`pg_tiktoken_c`](/ext/e/pg_tiktoken_c) | AVAIL PIGSTY 1.1 1 | AVAIL PIGSTY 1.1 1 | AVAIL PIGSTY 1.1 1 | AVAIL PIGSTY 1.1 1 | AVAIL PIGSTY 1.1 1 |
 | [`pg4ml`](/ext/e/pg4ml) | AVAIL PIGSTY 2.0 1 | AVAIL PIGSTY 2.0 1 | AVAIL PIGSTY 2.0 1 | AVAIL PIGSTY 2.0 1 | AVAIL PIGSTY 2.0 1 |
 | [`pgml`](/ext/e/pgml) | N/A PIGSTY - 0 | AVAIL PIGSTY 2.10.0 1 | AVAIL PIGSTY 2.10.0 1 | AVAIL PIGSTY 2.10.0 1 | AVAIL PIGSTY 2.10.0 1 |
-| [`pgmnemo`](/ext/e/pgmnemo) | AVAIL PIGSTY 0.14.2 1 | AVAIL PIGSTY 0.14.2 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 |
+| [`pgmnemo`](/ext/e/pgmnemo) | AVAIL PIGSTY 0.15.0 2 | AVAIL PIGSTY 0.15.0 2 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 | AVAIL PIGSTY 0.12.1 1 |
 | [`pgcontext`](/ext/e/pgcontext) | AVAIL PIGSTY 0.2.0 1 | AVAIL PIGSTY 0.2.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
-| [`pg_search`](/ext/e/pg_search) | AVAIL PIGSTY 0.24.3 1 | AVAIL PIGSTY 0.24.3 1 | AVAIL PIGSTY 0.24.3 1 | AVAIL PIGSTY 0.24.3 1 | N/A PIGSTY - 0 |
+| [`pg_search`](/ext/e/pg_search) | AVAIL PIGSTY 0.25.0 2 | AVAIL PIGSTY 0.25.0 2 | AVAIL PIGSTY 0.25.0 2 | AVAIL PIGSTY 0.25.0 2 | N/A PIGSTY - 0 |
 | [`pgroonga`](/ext/e/pgroonga) | AVAIL PIGSTY 4.0.4 1 | AVAIL PIGSTY 4.0.4 1 | AVAIL PIGSTY 4.0.4 1 | AVAIL PIGSTY 4.0.4 1 | AVAIL PIGSTY 4.0.4 1 |
 | [`pg_bigm`](/ext/e/pg_bigm) | AVAIL PGDG 1.2 3 | AVAIL PGDG 1.2 4 | AVAIL PGDG 1.2 5 | AVAIL PGDG 1.2 5 | AVAIL PGDG 1.2 5 |
 | [`zhparser`](/ext/e/zhparser) | AVAIL PIGSTY 2.3 1 | AVAIL PIGSTY 2.3 1 | AVAIL PIGSTY 2.3 1 | AVAIL PIGSTY 2.3 1 | AVAIL PIGSTY 2.3 1 |
@@ -79,7 +79,7 @@ icon: fa-brands fa-redhat
 | [`pg_parquet`](/ext/e/pg_parquet) | AVAIL PIGSTY 0.5.1 1 | AVAIL PIGSTY 0.5.1 1 | AVAIL PIGSTY 0.5.1 1 | AVAIL PIGSTY 0.5.1 1 | AVAIL PIGSTY 0.5.1 1 |
 | [`pg_ducklake`](/ext/e/pg_ducklake) | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 | AVAIL PIGSTY 1.0.0 1 |
 | [`pg_fkpart`](/ext/e/pg_fkpart) | AVAIL PGDG 1.7.0 2 | AVAIL PGDG 1.7.0 3 | AVAIL PGDG 1.7.0 3 | AVAIL PGDG 1.7.0 3 | AVAIL PGDG 1.7.0 3 |
-| [`pg_partman`](/ext/e/pg_partman) | AVAIL PIGSTY 5.5.0 13 | AVAIL PIGSTY 5.5.0 18 | AVAIL PIGSTY 5.5.0 22 | AVAIL PIGSTY 5.5.0 26 | AVAIL PIGSTY 5.5.0 28 |
+| [`pg_partman`](/ext/e/pg_partman) | AVAIL PGDG 5.5.0 14 | AVAIL PGDG 5.5.0 19 | AVAIL PGDG 5.5.0 23 | AVAIL PGDG 5.5.0 27 | AVAIL PGDG 5.5.0 29 |
 | [`plproxy`](/ext/e/plproxy) | AVAIL PIGSTY 2.12.0 4 | AVAIL PIGSTY 2.12.0 4 | AVAIL PIGSTY 2.12.0 3 | AVAIL PIGSTY 2.12.0 5 | AVAIL PIGSTY 2.12.0 4 |
 | [`pg_strom`](/ext/e/pg_strom) | AVAIL PGDG 6.1 2 | AVAIL PGDG 6.1 3 | AVAIL PGDG 6.1 9 | AVAIL PGDG 6.1 11 | AVAIL PGDG 3.5 3 |
 | [`pg_orca`](/ext/e/pg_orca) | AVAIL PIGSTY 1.0.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
@@ -124,7 +124,7 @@ icon: fa-brands fa-redhat
 | [`pllua`](/ext/e/pllua) | AVAIL PIGSTY 2.0.12 1 | AVAIL PIGSTY 2.0.12 3 | AVAIL PIGSTY 2.0.12 3 | AVAIL PIGSTY 2.0.12 4 | AVAIL PIGSTY 2.0.12 3 |
 | [`plprql`](/ext/e/plprql) | AVAIL PIGSTY 18.0.1 1 | AVAIL PIGSTY 18.0.1 1 | AVAIL PIGSTY 18.0.1 1 | AVAIL PIGSTY 18.0.1 1 | AVAIL PIGSTY 18.0.1 1 |
 | [`pldebugger`](/ext/e/pldbgapi) | AVAIL PGDG 1.10 2 | AVAIL PGDG 1.10 2 | AVAIL PGDG 1.10 3 | AVAIL PGDG 1.10 3 | AVAIL PGDG 1.10 3 |
-| [`plpgsql_check`](/ext/e/plpgsql_check) | AVAIL PIGSTY 2.10.3 19 | AVAIL PIGSTY 2.10.3 24 | AVAIL PIGSTY 2.10.3 38 | AVAIL PIGSTY 2.10.3 46 | AVAIL PIGSTY 2.10.3 53 |
+| [`plpgsql_check`](/ext/e/plpgsql_check) | AVAIL PIGSTY 2.10.3 20 | AVAIL PIGSTY 2.10.3 25 | AVAIL PIGSTY 2.10.3 39 | AVAIL PIGSTY 2.10.3 47 | AVAIL PIGSTY 2.10.3 54 |
 | [`plprofiler`](/ext/e/plprofiler) | AVAIL PGDG 4.2.5 4 | AVAIL PGDG 4.2.5 4 | AVAIL PGDG 4.2.5 4 | AVAIL PGDG 4.2.5 6 | AVAIL PGDG 4.2.5 6 |
 | [`plsh`](/ext/e/plsh) | AVAIL PGDG 1.20220917 2 | AVAIL PGDG 1.20220917 2 | AVAIL PGDG 1.20220917 2 | AVAIL PGDG 1.20220917 2 | AVAIL PGDG 1.20220917 2 |
 | [`pljava`](/ext/e/pljava) | AVAIL PGDG 1.6.10 2 | AVAIL PGDG 1.6.10 3 | AVAIL PGDG 1.6.10 4 | AVAIL PGDG 1.6.10 4 | AVAIL PGDG 1.6.10 4 |
@@ -154,14 +154,14 @@ icon: fa-brands fa-redhat
 | [`pg_currency`](/ext/e/currency) | AVAIL PIGSTY 0.0.3 1 | AVAIL PIGSTY 0.0.3 1 | AVAIL PIGSTY 0.0.3 1 | AVAIL PIGSTY 0.0.3 1 | AVAIL PIGSTY 0.0.3 1 |
 | [`pgcollection`](/ext/e/collection) | AVAIL PIGSTY 2.0.0 1 | AVAIL PIGSTY 2.0.0 1 | AVAIL PIGSTY 2.0.0 1 | AVAIL PIGSTY 2.0.0 1 | AVAIL PIGSTY 2.0.0 1 |
 | [`pgmp`](/ext/e/pgmp) | AVAIL PIGSTY 1.0.6 3 | AVAIL PIGSTY 1.0.6 3 | AVAIL PIGSTY 1.0.6 3 | AVAIL PIGSTY 1.0.6 3 | AVAIL PIGSTY 1.0.6 2 |
-| [`numeral`](/ext/e/numeral) | AVAIL PIGSTY 1.3 1 | AVAIL PIGSTY 1.3 1 | AVAIL PIGSTY 1.3 1 | AVAIL PIGSTY 1.3 1 | AVAIL PIGSTY 1.3 1 |
+| [`numeral`](/ext/e/numeral) | AVAIL PGDG 1.3 3 | AVAIL PGDG 1.3 3 | AVAIL PGDG 1.3 3 | AVAIL PGDG 1.3 3 | AVAIL PGDG 1.3 3 |
 | [`pg_rational`](/ext/e/pg_rational) | AVAIL PIGSTY 0.0.2 1 | AVAIL PIGSTY 0.0.2 1 | AVAIL PIGSTY 0.0.2 1 | AVAIL PIGSTY 0.0.2 1 | AVAIL PIGSTY 0.0.2 1 |
 | [`pguint`](/ext/e/uint) | AVAIL PGDG 1.20250815 3 | AVAIL PGDG 1.20250815 4 | AVAIL PGDG 1.20250815 5 | AVAIL PGDG 1.20250815 4 | AVAIL PIGSTY 1.20250815 1 |
 | [`pg_uint128`](/ext/e/uint128) | AVAIL PIGSTY 1.2.0 1 | AVAIL PIGSTY 1.2.0 1 | AVAIL PIGSTY 1.2.0 1 | AVAIL PIGSTY 1.2.0 1 | AVAIL PIGSTY 1.2.0 1 |
 | [`hashtypes`](/ext/e/hashtypes) | AVAIL PIGSTY 0.1.5 1 | AVAIL PIGSTY 0.1.5 1 | AVAIL PIGSTY 0.1.5 1 | AVAIL PIGSTY 0.1.5 1 | AVAIL PIGSTY 0.1.5 1 |
 | [`postbis`](/ext/e/postbis) | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 |
 | [`ip4r`](/ext/e/ip4r) | AVAIL PGDG 2.4.3 8 | AVAIL PGDG 2.4.3 8 | AVAIL PGDG 2.4.3 8 | AVAIL PGDG 2.4.3 9 | AVAIL PGDG 2.4.3 8 |
-| [`pg_uri`](/ext/e/uri) | AVAIL PIGSTY 1.20251029 1 | AVAIL PIGSTY 1.20251029 1 | AVAIL PIGSTY 1.20251029 1 | AVAIL PIGSTY 1.20251029 1 | AVAIL PIGSTY 1.20251029 1 |
+| [`pg_uri`](/ext/e/uri) | AVAIL PIGSTY 1.20251029 3 | AVAIL PIGSTY 1.20251029 3 | AVAIL PIGSTY 1.20251029 3 | AVAIL PIGSTY 1.20251029 3 | AVAIL PIGSTY 1.20251029 3 |
 | [`pg_emailaddr`](/ext/e/emailaddr) | AVAIL PIGSTY 0 1 | AVAIL PIGSTY 0 1 | AVAIL PIGSTY 0 1 | AVAIL PIGSTY 0 1 | AVAIL PIGSTY 0 1 |
 | [`pg_acl`](/ext/e/acl) | AVAIL PIGSTY 1.0.4 1 | AVAIL PIGSTY 1.0.4 1 | AVAIL PIGSTY 1.0.4 1 | AVAIL PIGSTY 1.0.4 1 | AVAIL PIGSTY 1.0.4 1 |
 | [`debversion`](/ext/e/debversion) | N/A PGDG - 0 | N/A PGDG - 0 | N/A PGDG - 0 | N/A PGDG - 0 | N/A PGDG - 0 |
@@ -355,7 +355,7 @@ icon: fa-brands fa-redhat
 | [`mysql_fdw`](/ext/e/mysql_fdw) | AVAIL PGDG 2.9.3 2 | AVAIL PGDG 2.9.3 3 | AVAIL PGDG 2.9.3 4 | AVAIL PGDG 2.9.3 6 | AVAIL PGDG 2.9.3 7 |
 | [`oracle_fdw`](/ext/e/oracle_fdw) | AVAIL PGDG 2.9.0 5 | AVAIL PGDG 2.9.0 9 | AVAIL PGDG 2.9.0 11 | AVAIL PGDG 2.9.0 14 | AVAIL PGDG 2.9.0 14 |
 | [`tds_fdw`](/ext/e/tds_fdw) | AVAIL PGDG 2.0.5 2 | AVAIL PGDG 2.0.5 3 | AVAIL PGDG 2.0.5 4 | AVAIL PGDG 2.0.5 4 | AVAIL PGDG 2.0.5 4 |
-| [`db2_fdw`](/ext/e/db2_fdw) | AVAIL PGDG 18.1.2 4 | AVAIL PGDG 18.1.2 5 | AVAIL PGDG 18.1.2 6 | AVAIL PGDG 18.1.2 6 | AVAIL PGDG 18.1.2 7 |
+| [`db2_fdw`](/ext/e/db2_fdw) | AVAIL PGDG 18.2.0 5 | AVAIL PGDG 18.2.0 6 | AVAIL PGDG 18.2.0 7 | AVAIL PGDG 18.2.0 7 | AVAIL PGDG 18.2.0 8 |
 | [`sqlite_fdw`](/ext/e/sqlite_fdw) | AVAIL PIGSTY 2.5.0 1 | AVAIL PGDG 2.5.0 4 | AVAIL PGDG 2.5.0 4 | AVAIL PGDG 2.5.0 6 | AVAIL PGDG 2.5.0 6 |
 | [`pgbouncer_fdw`](/ext/e/pgbouncer_fdw) | AVAIL PGDG 1.4.0 2 | AVAIL PGDG 1.4.0 5 | AVAIL PGDG 1.4.0 7 | AVAIL PGDG 1.4.0 7 | AVAIL PGDG 1.4.0 7 |
 | [`etcd_fdw`](/ext/e/etcd_fdw) | AVAIL PIGSTY 0.0.1 1 | AVAIL PIGSTY 0.0.1 1 | AVAIL PIGSTY 0.0.1 1 | AVAIL PIGSTY 0.0.1 1 | AVAIL PIGSTY 0.0.1 1 |
@@ -387,7 +387,7 @@ icon: fa-brands fa-redhat
 | [`babelfish`](/ext/e/babelfishpg_common) | AVAIL PIGSTY 6.0.0 1 | AVAIL PIGSTY 5.4.0 1 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 |
 | [`pgmemcache`](/ext/e/pgmemcache) | AVAIL PGDG 2.3.0 2 | AVAIL PGDG 2.3.0 2 | AVAIL PGDG 2.3.0 2 | AVAIL PGDG 2.3.0 2 | AVAIL PGDG 2.3.0 1 |
 | [`openhalo`](/ext/e/aux_mysql) | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | N/A PIGSTY - 0 | AVAIL PIGSTY 1.0 1 |
-| [`pglogical`](/ext/e/pglogical) | AVAIL PGDG 2.4.6 2 | AVAIL PGDG 2.4.6 2 | AVAIL PGDG 2.4.6 2 | AVAIL PGDG 2.4.6 3 | AVAIL PGDG 2.4.6 4 |
+| [`pglogical`](/ext/e/pglogical) | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 3 | AVAIL PGDG 2.4.8 4 | AVAIL PGDG 2.4.8 5 |
 | [`pglogical_ticker`](/ext/e/pglogical_ticker) | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 | AVAIL PIGSTY 1.4.1 1 |
 | [`pgl_ddl_deploy`](/ext/e/pgl_ddl_deploy) | AVAIL PIGSTY 2.2.1 1 | AVAIL PGDG 2.2.1 2 | AVAIL PGDG 2.2.1 3 | AVAIL PGDG 2.2.1 2 | AVAIL PGDG 2.2.1 2 |
 | [`logical_ddl`](/ext/e/logical_ddl) | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 | AVAIL PIGSTY 0.1.0 1 |
@@ -403,7 +403,7 @@ icon: fa-brands fa-redhat
 | [`decoderbufs`](/ext/e/decoderbufs) | AVAIL PGDG 3.5.0 7 | AVAIL PGDG 3.5.0 9 | AVAIL PGDG 3.5.0 13 | AVAIL PGDG 3.5.0 13 | AVAIL PGDG 3.5.0 17 |
 | [`decoder_raw`](/ext/e/decoder_raw) | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 | AVAIL PIGSTY 1.0 1 |
 | [`mimeo`](/ext/e/mimeo) | AVAIL PIGSTY 1.5.1 1 | AVAIL PIGSTY 1.5.1 1 | AVAIL PIGSTY 1.5.1 1 | AVAIL PIGSTY 1.5.1 1 | AVAIL PIGSTY 1.5.1 1 |
-| [`repmgr`](/ext/e/repmgr) | AVAIL PGDG 5.5.0 3 | AVAIL PGDG 5.5.0 2 | AVAIL PGDG 5.5.0 3 | AVAIL PGDG 5.5.0 5 | AVAIL PGDG 5.5.0 7 |
+| [`repmgr`](/ext/e/repmgr) | AVAIL PGDG 5.5.0 3 | AVAIL PGDG 5.5.0 1 | AVAIL PGDG 5.5.0 2 | AVAIL PGDG 5.5.0 4 | AVAIL PGDG 5.5.0 6 |
 | [`pg_fact_loader`](/ext/e/pg_fact_loader) | AVAIL PGDG 2.0.1 2 | AVAIL PGDG 2.0.1 3 | AVAIL PGDG 2.0.1 3 | AVAIL PGDG 2.0.1 3 | AVAIL PGDG 2.0.1 3 |
 | [`pg_bulkload`](/ext/e/pg_bulkload) | AVAIL PIGSTY 3.1.23 4 | AVAIL PIGSTY 3.1.23 2 | AVAIL PIGSTY 3.1.23 3 | AVAIL PIGSTY 3.1.23 3 | AVAIL PIGSTY 3.1.23 3 |
 {{< /pgext_os_matrix >}}

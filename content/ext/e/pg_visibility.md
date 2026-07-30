@@ -28,7 +28,7 @@ weight: 6960
 | 6960  | [**`pg_visibility`**](/ext/e/pg_visibility) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | - |
 {.ext-table}
 
-| **相关扩展** | [`amcheck`](/ext/e/amcheck) [`pageinspect`](/ext/e/pageinspect) [`pg_freespacemap`](/ext/e/pg_freespacemap) [`pgstattuple`](/ext/e/pgstattuple) [`pgfincore`](/ext/e/pgfincore) [`pg_checksums`](/ext/e/pg_checksums) [`pg_catcheck`](/ext/e/pg_catcheck) [`pgcozy`](/ext/e/pgcozy) |
+| **相关扩展** | [`pageinspect`](/ext/e/pageinspect) [`toastinfo`](/ext/e/toastinfo) [`pagevis`](/ext/e/pagevis) [`pg_freespacemap`](/ext/e/pg_freespacemap) [`pg_buffercache`](/ext/e/pg_buffercache) [`pgstattuple`](/ext/e/pgstattuple) [`pgrowlocks`](/ext/e/pgrowlocks) [`pg_wait_sampling`](/ext/e/pg_wait_sampling) [`pg_show_plans`](/ext/e/pg_show_plans) [`old_snapshot`](/ext/e/old_snapshot) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

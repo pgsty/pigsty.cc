@@ -31,7 +31,7 @@ weight: 3290
 | 3293  | [**`hstore_plpython3u`**](/ext/e/hstore_plpython3u) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
 {.ext-table}
 
-| **相关扩展** | [`faker`](/ext/e/faker) [`plv8`](/ext/e/plv8) [`pllua`](/ext/e/pllua) [`plluau`](/ext/e/plluau) [`pltcl`](/ext/e/pltcl) [`pltclu`](/ext/e/pltclu) [`plperl`](/ext/e/plperl) [`plperlu`](/ext/e/plperlu) |
+| **相关扩展** | [`plperl`](/ext/e/plperl) [`plperlu`](/ext/e/plperlu) [`pllua`](/ext/e/pllua) [`pltcl`](/ext/e/pltcl) [`plsh`](/ext/e/plsh) [`pljava`](/ext/e/pljava) [`plr`](/ext/e/plr) [`plxslt`](/ext/e/plxslt) [`plpgsql`](/ext/e/plpgsql) [`plv8`](/ext/e/plv8) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **下游依赖** | [`hstore_plpython3u`](/ext/e/hstore_plpython3u) [`jsonb_plpython3u`](/ext/e/jsonb_plpython3u) [`ltree_plpython3u`](/ext/e/ltree_plpython3u) [`omni_python`](/ext/e/omni_python) [`pg4ml`](/ext/e/pg4ml) |
 {.ext-table .ext-table--rel}

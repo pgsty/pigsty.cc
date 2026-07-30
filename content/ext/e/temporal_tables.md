@@ -33,7 +33,7 @@ weight: 1040
 | 1040  | [**`temporal_tables`**](/ext/e/temporal_tables) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
 {.ext-table}
 
-| **相关扩展** | [`timescaledb_toolkit`](/ext/e/timescaledb_toolkit) [`timescaledb`](/ext/e/timescaledb) [`timeseries`](/ext/e/timeseries) [`periods`](/ext/e/periods) [`emaj`](/ext/e/emaj) [`table_version`](/ext/e/table_version) [`pg_cron`](/ext/e/pg_cron) [`pg_partman`](/ext/e/pg_partman) |
+| **相关扩展** | [`periods`](/ext/e/periods) [`table_version`](/ext/e/table_version) [`data_historization`](/ext/e/data_historization) [`pgmemento`](/ext/e/pgmemento) [`table_log`](/ext/e/table_log) [`emaj`](/ext/e/emaj) [`old_snapshot`](/ext/e/old_snapshot) [`pg_dirtyread`](/ext/e/pg_dirtyread) [`pg_visibility`](/ext/e/pg_visibility) [`ddl_historization`](/ext/e/ddl_historization) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

@@ -28,7 +28,7 @@ weight: 4910
 | 4910  | [**`tsm_system_rows`**](/ext/e/tsm_system_rows) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | - |
 {.ext-table}
 
-| **相关扩展** | [`random`](/ext/e/random) [`permuteseq`](/ext/e/permuteseq) [`tsm_system_time`](/ext/e/tsm_system_time) [`pg_crash`](/ext/e/pg_crash) [`pg_idkit`](/ext/e/pg_idkit) [`pgx_ulid`](/ext/e/pgx_ulid) [`pg_uuidv7`](/ext/e/pg_uuidv7) [`pg_hashids`](/ext/e/pg_hashids) |
+| **相关扩展** | [`faker`](/ext/e/faker) [`dbt2`](/ext/e/dbt2) [`random`](/ext/e/random) [`tsm_system_time`](/ext/e/tsm_system_time) [`pg_mockable`](/ext/e/pg_mockable) [`pgsqlmock`](/ext/e/pgsqlmock) [`pgtap`](/ext/e/pgtap) [`omni_test`](/ext/e/omni_test) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **下游依赖** | [`documentdb`](/ext/e/documentdb) |
 {.ext-table .ext-table--rel}

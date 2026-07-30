@@ -34,7 +34,7 @@ weight: 6060
 | 6061  | [**`pgfr_analyze`**](/ext/e/pgfr_analyze) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `pgfr_analyze` |
 {.ext-table}
 
-| **相关扩展** | [`pg_cron`](/ext/e/pg_cron) [`pg_stat_statements`](/ext/e/pg_stat_statements) [`pg_cron`](/ext/e/pg_cron) [`pg_profile`](/ext/e/pg_profile) [`pgmonitor`](/ext/e/pgmonitor) |
+| **相关扩展** | [`pg_cron`](/ext/e/pg_cron) [`pg_stat_log`](/ext/e/pg_stat_log) [`pg_tracing`](/ext/e/pg_tracing) [`pg_stat_backtrace`](/ext/e/pg_stat_backtrace) [`logerrors`](/ext/e/logerrors) [`pgelog`](/ext/e/pgelog) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **下游依赖** | [`pgfr_analyze`](/ext/e/pgfr_analyze) |
 {.ext-table .ext-table--rel}

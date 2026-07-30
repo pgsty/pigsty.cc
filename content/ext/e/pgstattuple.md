@@ -28,7 +28,7 @@ weight: 6970
 | 6970  | [**`pgstattuple`**](/ext/e/pgstattuple) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | - |
 {.ext-table}
 
-| **相关扩展** | [`pageinspect`](/ext/e/pageinspect) [`pg_freespacemap`](/ext/e/pg_freespacemap) [`pg_visibility`](/ext/e/pg_visibility) [`pg_rewrite`](/ext/e/pg_rewrite) [`pg_checksums`](/ext/e/pg_checksums) [`pg_catcheck`](/ext/e/pg_catcheck) [`amcheck`](/ext/e/amcheck) [`toastinfo`](/ext/e/toastinfo) |
+| **相关扩展** | [`pg_repack`](/ext/e/pg_repack) [`pg_squeeze`](/ext/e/pg_squeeze) [`pg_rewrite`](/ext/e/pg_rewrite) [`pg_dirtyread`](/ext/e/pg_dirtyread) [`pg_column_tetris`](/ext/e/pg_column_tetris) [`toastinfo`](/ext/e/toastinfo) [`pageinspect`](/ext/e/pageinspect) [`pagevis`](/ext/e/pagevis) [`pg_freespacemap`](/ext/e/pg_freespacemap) [`pg_buffercache`](/ext/e/pg_buffercache) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

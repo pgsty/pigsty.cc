@@ -33,7 +33,7 @@ weight: 4290
 | 4290  | [**`pg_render`**](/ext/e/pg_render) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | - |
 {.ext-table}
 
-| **相关扩展** | [`pg_html5_email_address`](/ext/e/pg_html5_email_address) [`pg_readme`](/ext/e/pg_readme) [`gzip`](/ext/e/gzip) [`bzip`](/ext/e/bzip) [`zstd`](/ext/e/zstd) [`http`](/ext/e/http) [`pg_net`](/ext/e/pg_net) [`pg_curl`](/ext/e/pg_curl) |
+| **相关扩展** | [`pg_readme`](/ext/e/pg_readme) [`ddlx`](/ext/e/ddlx) [`schedoc`](/ext/e/schedoc) [`pgpdf`](/ext/e/pgpdf) [`pgdd`](/ext/e/pgdd) [`meta`](/ext/e/meta) [`pg_get_functiondef`](/ext/e/pg_get_functiondef) [`pg_dbms_metadata`](/ext/e/pg_dbms_metadata) [`pg_catcheck`](/ext/e/pg_catcheck) [`pg_query_rewrite`](/ext/e/pg_query_rewrite) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

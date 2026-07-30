@@ -33,7 +33,7 @@ weight: 6400
 | 6400  | [**`pg_datasentinel`**](/ext/e/pg_datasentinel) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | - |
 {.ext-table}
 
-| **相关扩展** | [`pgsentinel`](/ext/e/pgsentinel) [`system_stats`](/ext/e/system_stats) [`pg_profile`](/ext/e/pg_profile) [`pg_stat_monitor`](/ext/e/pg_stat_monitor) [`pg_stat_kcache`](/ext/e/pg_stat_kcache) [`powa`](/ext/e/powa) |
+| **相关扩展** | [`pgsentinel`](/ext/e/pgsentinel) [`pg_profile`](/ext/e/pg_profile) [`pg_stat_monitor`](/ext/e/pg_stat_monitor) [`pg_wait_sampling`](/ext/e/pg_wait_sampling) [`pg_stat_ch`](/ext/e/pg_stat_ch) [`pgmonitor`](/ext/e/pgmonitor) [`system_stats`](/ext/e/system_stats) [`powa`](/ext/e/powa) [`pgnodemx`](/ext/e/pgnodemx) [`pg_stat_statements`](/ext/e/pg_stat_statements) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

@@ -38,6 +38,10 @@ weight: 9170
 | 9190  | [**`gb18030_2022`**](/ext/e/gb18030_2022) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | `pg_catalog` |
 {.ext-table}
 
+| **相关扩展** | [`ddlx`](/ext/e/ddlx) [`pg_readme`](/ext/e/pg_readme) [`pg_dbms_metadata`](/ext/e/pg_dbms_metadata) [`pgdd`](/ext/e/pgdd) [`meta`](/ext/e/meta) [`pg_render`](/ext/e/pg_render) [`pg_catcheck`](/ext/e/pg_catcheck) [`schedoc`](/ext/e/schedoc) [`pg_query_rewrite`](/ext/e/pg_query_rewrite) [`pgpdf`](/ext/e/pgpdf) |
+|:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+{.ext-table .ext-table--rel}
+
 
 > from contrib/pg_get_functiondef/pg_get_functiondef.control and package metadata
 

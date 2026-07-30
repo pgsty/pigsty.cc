@@ -33,7 +33,7 @@ weight: 7140
 | 7140  | [**`logerrors`**](/ext/e/logerrors) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
 {.ext-table}
 
-| **相关扩展** | [`pgauditlogtofile`](/ext/e/pgauditlogtofile) [`pg_auth_mon`](/ext/e/pg_auth_mon) [`pg_jobmon`](/ext/e/pg_jobmon) [`pg_stat_monitor`](/ext/e/pg_stat_monitor) [`auto_explain`](/ext/e/auto_explain) [`pg_track_settings`](/ext/e/pg_track_settings) [`pgaudit`](/ext/e/pgaudit) [`pgsentinel`](/ext/e/pgsentinel) |
+| **相关扩展** | [`pg_stat_log`](/ext/e/pg_stat_log) [`pgelog`](/ext/e/pgelog) [`pg_sqlog`](/ext/e/pg_sqlog) [`log_fdw`](/ext/e/log_fdw) [`pgaudit`](/ext/e/pgaudit) [`pgdisablelogerror`](/ext/e/pgdisablelogerror) [`pg_auth_mon`](/ext/e/pg_auth_mon) [`pgfr_record`](/ext/e/pgfr_record) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

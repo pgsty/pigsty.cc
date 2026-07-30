@@ -33,7 +33,7 @@ weight: 3710
 | 3710  | [**`numeral`**](/ext/e/numeral) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
 {.ext-table}
 
-| **相关扩展** | [`currency`](/ext/e/currency) [`pgmp`](/ext/e/pgmp) [`unit`](/ext/e/unit) [`prefix`](/ext/e/prefix) [`semver`](/ext/e/semver) [`pgpdf`](/ext/e/pgpdf) [`pglite_fusion`](/ext/e/pglite_fusion) [`md5hash`](/ext/e/md5hash) |
+| **相关扩展** | [`unit`](/ext/e/unit) [`pgmp`](/ext/e/pgmp) [`pg_rational`](/ext/e/pg_rational) [`uint`](/ext/e/uint) [`uint128`](/ext/e/uint128) [`seg`](/ext/e/seg) [`cube`](/ext/e/cube) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 
@@ -43,19 +43,19 @@ weight: 3710
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
 | [**EXT**](/ext/list#type) | <a class="ext-badge ext-badge--repo mixed" href="/ext/repo#mixed">MIXED</a> | `1.3` | {{< pgvers "18,17,16,15,14" >}} | `numeral` | - |
-| [**RPM**](/ext/rpm#type) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.3` | {{< pgvers "18,17,16,15,14" >}} | `numeral_$v` | - |
+| [**RPM**](/ext/rpm#type) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `1.3` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-numeral_$v` | - |
 | [**DEB**](/ext/deb#type) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `1.3` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-numeral` | - |
 {.ext-table}
 
 {{< pgext_matrix >}}
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 1.3 1 | AVAIL PIGSTY 1.3 1 | AVAIL PIGSTY 1.3 1 | AVAIL PIGSTY 1.3 1 | AVAIL PIGSTY 1.3 1 |
-| el8.aarch64 | AVAIL PIGSTY 1.3 1 | AVAIL PIGSTY 1.3 1 | AVAIL PIGSTY 1.3 1 | AVAIL PIGSTY 1.3 1 | AVAIL PIGSTY 1.3 1 |
-| el9.x86_64 | AVAIL PIGSTY 1.3 1 | AVAIL PIGSTY 1.3 1 | AVAIL PIGSTY 1.3 1 | AVAIL PIGSTY 1.3 1 | AVAIL PIGSTY 1.3 1 |
-| el9.aarch64 | AVAIL PIGSTY 1.3 1 | AVAIL PIGSTY 1.3 1 | AVAIL PIGSTY 1.3 1 | AVAIL PIGSTY 1.3 1 | AVAIL PIGSTY 1.3 1 |
-| el10.x86_64 | AVAIL PIGSTY 1.3 1 | AVAIL PIGSTY 1.3 1 | AVAIL PIGSTY 1.3 1 | AVAIL PIGSTY 1.3 1 | AVAIL PIGSTY 1.3 1 |
-| el10.aarch64 | AVAIL PIGSTY 1.3 1 | AVAIL PIGSTY 1.3 1 | AVAIL PIGSTY 1.3 1 | AVAIL PIGSTY 1.3 1 | AVAIL PIGSTY 1.3 1 |
+| el8.x86_64 | AVAIL PIGSTY 1.3 2 | AVAIL PIGSTY 1.3 2 | AVAIL PIGSTY 1.3 2 | AVAIL PIGSTY 1.3 2 | AVAIL PIGSTY 1.3 1 |
+| el8.aarch64 | AVAIL PIGSTY 1.3 2 | AVAIL PIGSTY 1.3 2 | AVAIL PIGSTY 1.3 2 | AVAIL PIGSTY 1.3 2 | AVAIL PIGSTY 1.3 2 |
+| el9.x86_64 | AVAIL PGDG 1.3 3 | AVAIL PGDG 1.3 3 | AVAIL PGDG 1.3 3 | AVAIL PGDG 1.3 3 | AVAIL PGDG 1.3 3 |
+| el9.aarch64 | AVAIL PGDG 1.3 3 | AVAIL PGDG 1.3 3 | AVAIL PGDG 1.3 3 | AVAIL PGDG 1.3 3 | AVAIL PGDG 1.3 3 |
+| el10.x86_64 | AVAIL PGDG 1.3 3 | AVAIL PGDG 1.3 3 | AVAIL PGDG 1.3 3 | AVAIL PGDG 1.3 3 | AVAIL PGDG 1.3 3 |
+| el10.aarch64 | AVAIL PGDG 1.3 3 | AVAIL PGDG 1.3 3 | AVAIL PGDG 1.3 3 | AVAIL PGDG 1.3 3 | AVAIL PGDG 1.3 3 |
 | d12.x86_64 | AVAIL PGDG 1.3 2 | AVAIL PGDG 1.3 2 | AVAIL PGDG 1.3 2 | AVAIL PGDG 1.3 2 | AVAIL PGDG 1.3 2 |
 | d12.aarch64 | AVAIL PGDG 1.3 2 | AVAIL PGDG 1.3 2 | AVAIL PGDG 1.3 2 | AVAIL PGDG 1.3 2 | AVAIL PGDG 1.3 2 |
 | d13.x86_64 | AVAIL PGDG 1.3 2 | AVAIL PGDG 1.3 2 | AVAIL PGDG 1.3 2 | AVAIL PGDG 1.3 2 | AVAIL PGDG 1.3 2 |
@@ -66,12 +66,22 @@ weight: 3710
 | u24.aarch64 | AVAIL PGDG 1.3 2 | AVAIL PGDG 1.3 2 | AVAIL PGDG 1.3 2 | AVAIL PGDG 1.3 2 | AVAIL PGDG 1.3 2 |
 | u26.x86_64 | AVAIL PGDG 1.3 2 | AVAIL PGDG 1.3 2 | AVAIL PGDG 1.3 2 | AVAIL PGDG 1.3 2 | AVAIL PGDG 1.3 2 |
 | u26.aarch64 | AVAIL PGDG 1.3 2 | AVAIL PGDG 1.3 2 | AVAIL PGDG 1.3 2 | AVAIL PGDG 1.3 2 | AVAIL PGDG 1.3 2 |
-@ el8.x86_64 18 numeral_18 numeral_18-1.3-1PIGSTY.el8.x86_64.rpm pigsty 1.3 33.1KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/numeral_18-1.3-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 18 numeral_18 numeral_18-1.3-1PIGSTY.el8.aarch64.rpm pigsty 1.3 32.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/numeral_18-1.3-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 18 numeral_18 numeral_18-1.3-1PIGSTY.el9.x86_64.rpm pigsty 1.3 31.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/numeral_18-1.3-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 18 numeral_18 numeral_18-1.3-1PIGSTY.el9.aarch64.rpm pigsty 1.3 32.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/numeral_18-1.3-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 18 numeral_18 numeral_18-1.3-1PIGSTY.el10.x86_64.rpm pigsty 1.3 32.5KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/numeral_18-1.3-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 18 numeral_18 numeral_18-1.3-1PIGSTY.el10.aarch64.rpm pigsty 1.3 32.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/numeral_18-1.3-1PIGSTY.el10.aarch64.rpm
+@ el8.x86_64 18 postgresql-numeral_18 postgresql-numeral_18-1.3-3PIGSTY.el8.x86_64.rpm pigsty 1.3 33.6KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/postgresql-numeral_18-1.3-3PIGSTY.el8.x86_64.rpm
+@ el8.x86_64 18 postgresql-numeral_18 postgresql-numeral_18-1.3-3PGDG.rhel8.x86_64.rpm pgdg 1.3 30.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/postgresql-numeral_18-1.3-3PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 18 postgresql-numeral_18 postgresql-numeral_18-1.3-3PIGSTY.el8.aarch64.rpm pigsty 1.3 32.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/postgresql-numeral_18-1.3-3PIGSTY.el8.aarch64.rpm
+@ el8.aarch64 18 postgresql-numeral_18 postgresql-numeral_18-1.3-3PGDG.rhel8.aarch64.rpm pgdg 1.3 29.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/postgresql-numeral_18-1.3-3PGDG.rhel8.aarch64.rpm
+@ el9.x86_64 18 postgresql-numeral_18 postgresql-numeral_18-1.3-5PGDG.rhel9.8.x86_64.rpm pgdg 1.3 30.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/postgresql-numeral_18-1.3-5PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 18 postgresql-numeral_18 postgresql-numeral_18-1.3-3PIGSTY.el9.x86_64.rpm pigsty 1.3 31.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/postgresql-numeral_18-1.3-3PIGSTY.el9.x86_64.rpm
+@ el9.x86_64 18 postgresql-numeral_18 postgresql-numeral_18-1.3-3PGDG.rhel9.x86_64.rpm pgdg 1.3 30.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/postgresql-numeral_18-1.3-3PGDG.rhel9.x86_64.rpm
+@ el9.aarch64 18 postgresql-numeral_18 postgresql-numeral_18-1.3-5PGDG.rhel9.8.aarch64.rpm pgdg 1.3 31.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/postgresql-numeral_18-1.3-5PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 18 postgresql-numeral_18 postgresql-numeral_18-1.3-3PIGSTY.el9.aarch64.rpm pigsty 1.3 32.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/postgresql-numeral_18-1.3-3PIGSTY.el9.aarch64.rpm
+@ el9.aarch64 18 postgresql-numeral_18 postgresql-numeral_18-1.3-3PGDG.rhel9.aarch64.rpm pgdg 1.3 30.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/postgresql-numeral_18-1.3-3PGDG.rhel9.aarch64.rpm
+@ el10.x86_64 18 postgresql-numeral_18 postgresql-numeral_18-1.3-5PGDG.rhel10.2.x86_64.rpm pgdg 1.3 31.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/postgresql-numeral_18-1.3-5PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 18 postgresql-numeral_18 postgresql-numeral_18-1.3-3PIGSTY.el10.x86_64.rpm pigsty 1.3 33.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/postgresql-numeral_18-1.3-3PIGSTY.el10.x86_64.rpm
+@ el10.x86_64 18 postgresql-numeral_18 postgresql-numeral_18-1.3-3PGDG.rhel10.x86_64.rpm pgdg 1.3 31.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/postgresql-numeral_18-1.3-3PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 18 postgresql-numeral_18 postgresql-numeral_18-1.3-5PGDG.rhel10.2.aarch64.rpm pgdg 1.3 32.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/postgresql-numeral_18-1.3-5PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 18 postgresql-numeral_18 postgresql-numeral_18-1.3-3PIGSTY.el10.aarch64.rpm pigsty 1.3 33.0KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/postgresql-numeral_18-1.3-3PIGSTY.el10.aarch64.rpm
+@ el10.aarch64 18 postgresql-numeral_18 postgresql-numeral_18-1.3-3PGDG.rhel10.aarch64.rpm pgdg 1.3 32.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/postgresql-numeral_18-1.3-3PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 18 postgresql-18-numeral postgresql-18-numeral_1.3-9.pgdg12+1_amd64.deb pgdg 1.3 74.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-numeral/postgresql-18-numeral_1.3-9.pgdg12+1_amd64.deb
 @ d12.x86_64 18 postgresql-18-numeral postgresql-18-numeral_1.3-8.pgdg12+1_amd64.deb pgdg 1.3 74.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-numeral/postgresql-18-numeral_1.3-8.pgdg12+1_amd64.deb
 @ d12.aarch64 18 postgresql-18-numeral postgresql-18-numeral_1.3-9.pgdg12+1_arm64.deb pgdg 1.3 72.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-numeral/postgresql-18-numeral_1.3-9.pgdg12+1_arm64.deb
@@ -92,12 +102,22 @@ weight: 3710
 @ u26.x86_64 18 postgresql-18-numeral postgresql-18-numeral_1.3-8.pgdg26.04+1_amd64.deb pgdg 1.3 73.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-numeral/postgresql-18-numeral_1.3-8.pgdg26.04+1_amd64.deb
 @ u26.aarch64 18 postgresql-18-numeral postgresql-18-numeral_1.3-9.pgdg26.04+1_arm64.deb pgdg 1.3 72.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-numeral/postgresql-18-numeral_1.3-9.pgdg26.04+1_arm64.deb
 @ u26.aarch64 18 postgresql-18-numeral postgresql-18-numeral_1.3-8.pgdg26.04+1_arm64.deb pgdg 1.3 72.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-numeral/postgresql-18-numeral_1.3-8.pgdg26.04+1_arm64.deb
-@ el8.x86_64 17 numeral_17 numeral_17-1.3-1PIGSTY.el8.x86_64.rpm pigsty 1.3 33.1KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/numeral_17-1.3-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 17 numeral_17 numeral_17-1.3-1PIGSTY.el8.aarch64.rpm pigsty 1.3 32.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/numeral_17-1.3-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 17 numeral_17 numeral_17-1.3-1PIGSTY.el9.x86_64.rpm pigsty 1.3 31.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/numeral_17-1.3-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 17 numeral_17 numeral_17-1.3-1PIGSTY.el9.aarch64.rpm pigsty 1.3 32.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/numeral_17-1.3-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 17 numeral_17 numeral_17-1.3-1PIGSTY.el10.x86_64.rpm pigsty 1.3 32.5KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/numeral_17-1.3-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 17 numeral_17 numeral_17-1.3-1PIGSTY.el10.aarch64.rpm pigsty 1.3 32.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/numeral_17-1.3-1PIGSTY.el10.aarch64.rpm
+@ el8.x86_64 17 postgresql-numeral_17 postgresql-numeral_17-1.3-3PIGSTY.el8.x86_64.rpm pigsty 1.3 33.6KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/postgresql-numeral_17-1.3-3PIGSTY.el8.x86_64.rpm
+@ el8.x86_64 17 postgresql-numeral_17 postgresql-numeral_17-1.3-1PGDG.rhel8.x86_64.rpm pgdg 1.3 30.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/postgresql-numeral_17-1.3-1PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 17 postgresql-numeral_17 postgresql-numeral_17-1.3-3PIGSTY.el8.aarch64.rpm pigsty 1.3 32.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/postgresql-numeral_17-1.3-3PIGSTY.el8.aarch64.rpm
+@ el8.aarch64 17 postgresql-numeral_17 postgresql-numeral_17-1.3-1PGDG.rhel8.aarch64.rpm pgdg 1.3 29.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/postgresql-numeral_17-1.3-1PGDG.rhel8.aarch64.rpm
+@ el9.x86_64 17 postgresql-numeral_17 postgresql-numeral_17-1.3-5PGDG.rhel9.8.x86_64.rpm pgdg 1.3 30.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/postgresql-numeral_17-1.3-5PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 17 postgresql-numeral_17 postgresql-numeral_17-1.3-3PIGSTY.el9.x86_64.rpm pigsty 1.3 31.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/postgresql-numeral_17-1.3-3PIGSTY.el9.x86_64.rpm
+@ el9.x86_64 17 postgresql-numeral_17 postgresql-numeral_17-1.3-1PGDG.rhel9.x86_64.rpm pgdg 1.3 30.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/postgresql-numeral_17-1.3-1PGDG.rhel9.x86_64.rpm
+@ el9.aarch64 17 postgresql-numeral_17 postgresql-numeral_17-1.3-5PGDG.rhel9.8.aarch64.rpm pgdg 1.3 31.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/postgresql-numeral_17-1.3-5PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 17 postgresql-numeral_17 postgresql-numeral_17-1.3-3PIGSTY.el9.aarch64.rpm pigsty 1.3 32.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/postgresql-numeral_17-1.3-3PIGSTY.el9.aarch64.rpm
+@ el9.aarch64 17 postgresql-numeral_17 postgresql-numeral_17-1.3-1PGDG.rhel9.aarch64.rpm pgdg 1.3 31.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/postgresql-numeral_17-1.3-1PGDG.rhel9.aarch64.rpm
+@ el10.x86_64 17 postgresql-numeral_17 postgresql-numeral_17-1.3-5PGDG.rhel10.2.x86_64.rpm pgdg 1.3 31.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/postgresql-numeral_17-1.3-5PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 17 postgresql-numeral_17 postgresql-numeral_17-1.3-3PIGSTY.el10.x86_64.rpm pigsty 1.3 33.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/postgresql-numeral_17-1.3-3PIGSTY.el10.x86_64.rpm
+@ el10.x86_64 17 postgresql-numeral_17 postgresql-numeral_17-1.3-3PGDG.rhel10.x86_64.rpm pgdg 1.3 31.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/postgresql-numeral_17-1.3-3PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 17 postgresql-numeral_17 postgresql-numeral_17-1.3-5PGDG.rhel10.2.aarch64.rpm pgdg 1.3 32.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/postgresql-numeral_17-1.3-5PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 17 postgresql-numeral_17 postgresql-numeral_17-1.3-3PIGSTY.el10.aarch64.rpm pigsty 1.3 33.1KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/postgresql-numeral_17-1.3-3PIGSTY.el10.aarch64.rpm
+@ el10.aarch64 17 postgresql-numeral_17 postgresql-numeral_17-1.3-3PGDG.rhel10.aarch64.rpm pgdg 1.3 32.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/postgresql-numeral_17-1.3-3PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 17 postgresql-17-numeral postgresql-17-numeral_1.3-9.pgdg12+1_amd64.deb pgdg 1.3 74.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-numeral/postgresql-17-numeral_1.3-9.pgdg12+1_amd64.deb
 @ d12.x86_64 17 postgresql-17-numeral postgresql-17-numeral_1.3-8.pgdg12+1_amd64.deb pgdg 1.3 74.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-numeral/postgresql-17-numeral_1.3-8.pgdg12+1_amd64.deb
 @ d12.aarch64 17 postgresql-17-numeral postgresql-17-numeral_1.3-9.pgdg12+1_arm64.deb pgdg 1.3 72.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-numeral/postgresql-17-numeral_1.3-9.pgdg12+1_arm64.deb
@@ -118,12 +138,22 @@ weight: 3710
 @ u26.x86_64 17 postgresql-17-numeral postgresql-17-numeral_1.3-8.pgdg26.04+1_amd64.deb pgdg 1.3 73.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-numeral/postgresql-17-numeral_1.3-8.pgdg26.04+1_amd64.deb
 @ u26.aarch64 17 postgresql-17-numeral postgresql-17-numeral_1.3-9.pgdg26.04+1_arm64.deb pgdg 1.3 72.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-numeral/postgresql-17-numeral_1.3-9.pgdg26.04+1_arm64.deb
 @ u26.aarch64 17 postgresql-17-numeral postgresql-17-numeral_1.3-8.pgdg26.04+1_arm64.deb pgdg 1.3 72.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-numeral/postgresql-17-numeral_1.3-8.pgdg26.04+1_arm64.deb
-@ el8.x86_64 16 numeral_16 numeral_16-1.3-1PIGSTY.el8.x86_64.rpm pigsty 1.3 33.1KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/numeral_16-1.3-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 16 numeral_16 numeral_16-1.3-1PIGSTY.el8.aarch64.rpm pigsty 1.3 32.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/numeral_16-1.3-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 16 numeral_16 numeral_16-1.3-1PIGSTY.el9.x86_64.rpm pigsty 1.3 31.4KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/numeral_16-1.3-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 16 numeral_16 numeral_16-1.3-1PIGSTY.el9.aarch64.rpm pigsty 1.3 32.0KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/numeral_16-1.3-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 16 numeral_16 numeral_16-1.3-1PIGSTY.el10.x86_64.rpm pigsty 1.3 32.5KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/numeral_16-1.3-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 16 numeral_16 numeral_16-1.3-1PIGSTY.el10.aarch64.rpm pigsty 1.3 32.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/numeral_16-1.3-1PIGSTY.el10.aarch64.rpm
+@ el8.x86_64 16 postgresql-numeral_16 postgresql-numeral_16-1.3-3PIGSTY.el8.x86_64.rpm pigsty 1.3 33.6KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/postgresql-numeral_16-1.3-3PIGSTY.el8.x86_64.rpm
+@ el8.x86_64 16 postgresql-numeral_16 postgresql-numeral_16-1.3-1PGDG.rhel8.x86_64.rpm pgdg 1.3 30.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/postgresql-numeral_16-1.3-1PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 16 postgresql-numeral_16 postgresql-numeral_16-1.3-3PIGSTY.el8.aarch64.rpm pigsty 1.3 32.7KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/postgresql-numeral_16-1.3-3PIGSTY.el8.aarch64.rpm
+@ el8.aarch64 16 postgresql-numeral_16 postgresql-numeral_16-1.3-1PGDG.rhel8.aarch64.rpm pgdg 1.3 29.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/postgresql-numeral_16-1.3-1PGDG.rhel8.aarch64.rpm
+@ el9.x86_64 16 postgresql-numeral_16 postgresql-numeral_16-1.3-5PGDG.rhel9.8.x86_64.rpm pgdg 1.3 30.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/postgresql-numeral_16-1.3-5PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 16 postgresql-numeral_16 postgresql-numeral_16-1.3-3PIGSTY.el9.x86_64.rpm pigsty 1.3 31.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/postgresql-numeral_16-1.3-3PIGSTY.el9.x86_64.rpm
+@ el9.x86_64 16 postgresql-numeral_16 postgresql-numeral_16-1.3-1PGDG.rhel9.x86_64.rpm pgdg 1.3 30.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/postgresql-numeral_16-1.3-1PGDG.rhel9.x86_64.rpm
+@ el9.aarch64 16 postgresql-numeral_16 postgresql-numeral_16-1.3-5PGDG.rhel9.8.aarch64.rpm pgdg 1.3 31.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/postgresql-numeral_16-1.3-5PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 16 postgresql-numeral_16 postgresql-numeral_16-1.3-3PIGSTY.el9.aarch64.rpm pigsty 1.3 32.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/postgresql-numeral_16-1.3-3PIGSTY.el9.aarch64.rpm
+@ el9.aarch64 16 postgresql-numeral_16 postgresql-numeral_16-1.3-1PGDG.rhel9.aarch64.rpm pgdg 1.3 31.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/postgresql-numeral_16-1.3-1PGDG.rhel9.aarch64.rpm
+@ el10.x86_64 16 postgresql-numeral_16 postgresql-numeral_16-1.3-5PGDG.rhel10.2.x86_64.rpm pgdg 1.3 31.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/postgresql-numeral_16-1.3-5PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 16 postgresql-numeral_16 postgresql-numeral_16-1.3-3PIGSTY.el10.x86_64.rpm pigsty 1.3 33.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/postgresql-numeral_16-1.3-3PIGSTY.el10.x86_64.rpm
+@ el10.x86_64 16 postgresql-numeral_16 postgresql-numeral_16-1.3-3PGDG.rhel10.x86_64.rpm pgdg 1.3 31.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/postgresql-numeral_16-1.3-3PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 16 postgresql-numeral_16 postgresql-numeral_16-1.3-5PGDG.rhel10.2.aarch64.rpm pgdg 1.3 32.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/postgresql-numeral_16-1.3-5PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 16 postgresql-numeral_16 postgresql-numeral_16-1.3-3PIGSTY.el10.aarch64.rpm pigsty 1.3 33.1KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/postgresql-numeral_16-1.3-3PIGSTY.el10.aarch64.rpm
+@ el10.aarch64 16 postgresql-numeral_16 postgresql-numeral_16-1.3-3PGDG.rhel10.aarch64.rpm pgdg 1.3 32.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/postgresql-numeral_16-1.3-3PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 16 postgresql-16-numeral postgresql-16-numeral_1.3-9.pgdg12+1_amd64.deb pgdg 1.3 74.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-numeral/postgresql-16-numeral_1.3-9.pgdg12+1_amd64.deb
 @ d12.x86_64 16 postgresql-16-numeral postgresql-16-numeral_1.3-8.pgdg12+1_amd64.deb pgdg 1.3 74.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-numeral/postgresql-16-numeral_1.3-8.pgdg12+1_amd64.deb
 @ d12.aarch64 16 postgresql-16-numeral postgresql-16-numeral_1.3-9.pgdg12+1_arm64.deb pgdg 1.3 72.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-numeral/postgresql-16-numeral_1.3-9.pgdg12+1_arm64.deb
@@ -144,12 +174,22 @@ weight: 3710
 @ u26.x86_64 16 postgresql-16-numeral postgresql-16-numeral_1.3-8.pgdg26.04+1_amd64.deb pgdg 1.3 73.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-numeral/postgresql-16-numeral_1.3-8.pgdg26.04+1_amd64.deb
 @ u26.aarch64 16 postgresql-16-numeral postgresql-16-numeral_1.3-9.pgdg26.04+1_arm64.deb pgdg 1.3 72.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-numeral/postgresql-16-numeral_1.3-9.pgdg26.04+1_arm64.deb
 @ u26.aarch64 16 postgresql-16-numeral postgresql-16-numeral_1.3-8.pgdg26.04+1_arm64.deb pgdg 1.3 72.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-numeral/postgresql-16-numeral_1.3-8.pgdg26.04+1_arm64.deb
-@ el8.x86_64 15 numeral_15 numeral_15-1.3-1PIGSTY.el8.x86_64.rpm pigsty 1.3 35.2KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/numeral_15-1.3-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 15 numeral_15 numeral_15-1.3-1PIGSTY.el8.aarch64.rpm pigsty 1.3 34.1KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/numeral_15-1.3-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 15 numeral_15 numeral_15-1.3-1PIGSTY.el9.x86_64.rpm pigsty 1.3 35.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/numeral_15-1.3-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 15 numeral_15 numeral_15-1.3-1PIGSTY.el9.aarch64.rpm pigsty 1.3 34.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/numeral_15-1.3-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 15 numeral_15 numeral_15-1.3-1PIGSTY.el10.x86_64.rpm pigsty 1.3 35.7KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/numeral_15-1.3-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 15 numeral_15 numeral_15-1.3-1PIGSTY.el10.aarch64.rpm pigsty 1.3 35.0KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/numeral_15-1.3-1PIGSTY.el10.aarch64.rpm
+@ el8.x86_64 15 postgresql-numeral_15 postgresql-numeral_15-1.3-3PIGSTY.el8.x86_64.rpm pigsty 1.3 35.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/postgresql-numeral_15-1.3-3PIGSTY.el8.x86_64.rpm
+@ el8.x86_64 15 postgresql-numeral_15 postgresql-numeral_15-1.3-1PGDG.rhel8.x86_64.rpm pgdg 1.3 32.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/postgresql-numeral_15-1.3-1PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 15 postgresql-numeral_15 postgresql-numeral_15-1.3-3PIGSTY.el8.aarch64.rpm pigsty 1.3 34.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/postgresql-numeral_15-1.3-3PIGSTY.el8.aarch64.rpm
+@ el8.aarch64 15 postgresql-numeral_15 postgresql-numeral_15-1.3-1PGDG.rhel8.aarch64.rpm pgdg 1.3 30.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/postgresql-numeral_15-1.3-1PGDG.rhel8.aarch64.rpm
+@ el9.x86_64 15 postgresql-numeral_15 postgresql-numeral_15-1.3-5PGDG.rhel9.8.x86_64.rpm pgdg 1.3 34.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/postgresql-numeral_15-1.3-5PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 15 postgresql-numeral_15 postgresql-numeral_15-1.3-3PIGSTY.el9.x86_64.rpm pigsty 1.3 35.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/postgresql-numeral_15-1.3-3PIGSTY.el9.x86_64.rpm
+@ el9.x86_64 15 postgresql-numeral_15 postgresql-numeral_15-1.3-1PGDG.rhel9.x86_64.rpm pgdg 1.3 33.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/postgresql-numeral_15-1.3-1PGDG.rhel9.x86_64.rpm
+@ el9.aarch64 15 postgresql-numeral_15 postgresql-numeral_15-1.3-5PGDG.rhel9.8.aarch64.rpm pgdg 1.3 33.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/postgresql-numeral_15-1.3-5PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 15 postgresql-numeral_15 postgresql-numeral_15-1.3-3PIGSTY.el9.aarch64.rpm pigsty 1.3 35.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/postgresql-numeral_15-1.3-3PIGSTY.el9.aarch64.rpm
+@ el9.aarch64 15 postgresql-numeral_15 postgresql-numeral_15-1.3-1PGDG.rhel9.aarch64.rpm pgdg 1.3 33.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/postgresql-numeral_15-1.3-1PGDG.rhel9.aarch64.rpm
+@ el10.x86_64 15 postgresql-numeral_15 postgresql-numeral_15-1.3-5PGDG.rhel10.2.x86_64.rpm pgdg 1.3 35.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/postgresql-numeral_15-1.3-5PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 15 postgresql-numeral_15 postgresql-numeral_15-1.3-3PIGSTY.el10.x86_64.rpm pigsty 1.3 36.2KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/postgresql-numeral_15-1.3-3PIGSTY.el10.x86_64.rpm
+@ el10.x86_64 15 postgresql-numeral_15 postgresql-numeral_15-1.3-3PGDG.rhel10.x86_64.rpm pgdg 1.3 35.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/postgresql-numeral_15-1.3-3PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 15 postgresql-numeral_15 postgresql-numeral_15-1.3-5PGDG.rhel10.2.aarch64.rpm pgdg 1.3 34.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/postgresql-numeral_15-1.3-5PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 15 postgresql-numeral_15 postgresql-numeral_15-1.3-3PIGSTY.el10.aarch64.rpm pigsty 1.3 35.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/postgresql-numeral_15-1.3-3PIGSTY.el10.aarch64.rpm
+@ el10.aarch64 15 postgresql-numeral_15 postgresql-numeral_15-1.3-3PGDG.rhel10.aarch64.rpm pgdg 1.3 34.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/postgresql-numeral_15-1.3-3PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 15 postgresql-15-numeral postgresql-15-numeral_1.3-9.pgdg12+1_amd64.deb pgdg 1.3 76.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-numeral/postgresql-15-numeral_1.3-9.pgdg12+1_amd64.deb
 @ d12.x86_64 15 postgresql-15-numeral postgresql-15-numeral_1.3-8.pgdg12+1_amd64.deb pgdg 1.3 76.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-numeral/postgresql-15-numeral_1.3-8.pgdg12+1_amd64.deb
 @ d12.aarch64 15 postgresql-15-numeral postgresql-15-numeral_1.3-9.pgdg12+1_arm64.deb pgdg 1.3 74.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-numeral/postgresql-15-numeral_1.3-9.pgdg12+1_arm64.deb
@@ -170,12 +210,21 @@ weight: 3710
 @ u26.x86_64 15 postgresql-15-numeral postgresql-15-numeral_1.3-8.pgdg26.04+1_amd64.deb pgdg 1.3 75.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-numeral/postgresql-15-numeral_1.3-8.pgdg26.04+1_amd64.deb
 @ u26.aarch64 15 postgresql-15-numeral postgresql-15-numeral_1.3-9.pgdg26.04+1_arm64.deb pgdg 1.3 74.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-numeral/postgresql-15-numeral_1.3-9.pgdg26.04+1_arm64.deb
 @ u26.aarch64 15 postgresql-15-numeral postgresql-15-numeral_1.3-8.pgdg26.04+1_arm64.deb pgdg 1.3 74.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-numeral/postgresql-15-numeral_1.3-8.pgdg26.04+1_arm64.deb
-@ el8.x86_64 14 numeral_14 numeral_14-1.3-1PIGSTY.el8.x86_64.rpm pigsty 1.3 35.2KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/numeral_14-1.3-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 14 numeral_14 numeral_14-1.3-1PIGSTY.el8.aarch64.rpm pigsty 1.3 34.1KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/numeral_14-1.3-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 14 numeral_14 numeral_14-1.3-1PIGSTY.el9.x86_64.rpm pigsty 1.3 35.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/numeral_14-1.3-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 14 numeral_14 numeral_14-1.3-1PIGSTY.el9.aarch64.rpm pigsty 1.3 34.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/numeral_14-1.3-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 14 numeral_14 numeral_14-1.3-1PIGSTY.el10.x86_64.rpm pigsty 1.3 35.7KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/numeral_14-1.3-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 14 numeral_14 numeral_14-1.3-1PIGSTY.el10.aarch64.rpm pigsty 1.3 34.9KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/numeral_14-1.3-1PIGSTY.el10.aarch64.rpm
+@ el8.x86_64 14 postgresql-numeral_14 postgresql-numeral_14-1.3-3PIGSTY.el8.x86_64.rpm pigsty 1.3 35.7KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/postgresql-numeral_14-1.3-3PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 14 postgresql-numeral_14 postgresql-numeral_14-1.3-3PIGSTY.el8.aarch64.rpm pigsty 1.3 34.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/postgresql-numeral_14-1.3-3PIGSTY.el8.aarch64.rpm
+@ el8.aarch64 14 postgresql-numeral_14 postgresql-numeral_14-1.3-1PGDG.rhel8.aarch64.rpm pgdg 1.3 30.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/postgresql-numeral_14-1.3-1PGDG.rhel8.aarch64.rpm
+@ el9.x86_64 14 postgresql-numeral_14 postgresql-numeral_14-1.3-5PGDG.rhel9.8.x86_64.rpm pgdg 1.3 33.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/postgresql-numeral_14-1.3-5PGDG.rhel9.8.x86_64.rpm
+@ el9.x86_64 14 postgresql-numeral_14 postgresql-numeral_14-1.3-3PIGSTY.el9.x86_64.rpm pigsty 1.3 35.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/postgresql-numeral_14-1.3-3PIGSTY.el9.x86_64.rpm
+@ el9.x86_64 14 postgresql-numeral_14 postgresql-numeral_14-1.3-1PGDG.rhel9.x86_64.rpm pgdg 1.3 33.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/postgresql-numeral_14-1.3-1PGDG.rhel9.x86_64.rpm
+@ el9.aarch64 14 postgresql-numeral_14 postgresql-numeral_14-1.3-5PGDG.rhel9.8.aarch64.rpm pgdg 1.3 33.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/postgresql-numeral_14-1.3-5PGDG.rhel9.8.aarch64.rpm
+@ el9.aarch64 14 postgresql-numeral_14 postgresql-numeral_14-1.3-3PIGSTY.el9.aarch64.rpm pigsty 1.3 35.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/postgresql-numeral_14-1.3-3PIGSTY.el9.aarch64.rpm
+@ el9.aarch64 14 postgresql-numeral_14 postgresql-numeral_14-1.3-1PGDG.rhel9.aarch64.rpm pgdg 1.3 33.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/postgresql-numeral_14-1.3-1PGDG.rhel9.aarch64.rpm
+@ el10.x86_64 14 postgresql-numeral_14 postgresql-numeral_14-1.3-5PGDG.rhel10.2.x86_64.rpm pgdg 1.3 35.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/postgresql-numeral_14-1.3-5PGDG.rhel10.2.x86_64.rpm
+@ el10.x86_64 14 postgresql-numeral_14 postgresql-numeral_14-1.3-3PIGSTY.el10.x86_64.rpm pigsty 1.3 36.2KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/postgresql-numeral_14-1.3-3PIGSTY.el10.x86_64.rpm
+@ el10.x86_64 14 postgresql-numeral_14 postgresql-numeral_14-1.3-3PGDG.rhel10.x86_64.rpm pgdg 1.3 35.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/postgresql-numeral_14-1.3-3PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 14 postgresql-numeral_14 postgresql-numeral_14-1.3-5PGDG.rhel10.2.aarch64.rpm pgdg 1.3 34.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/postgresql-numeral_14-1.3-5PGDG.rhel10.2.aarch64.rpm
+@ el10.aarch64 14 postgresql-numeral_14 postgresql-numeral_14-1.3-3PIGSTY.el10.aarch64.rpm pigsty 1.3 35.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/postgresql-numeral_14-1.3-3PIGSTY.el10.aarch64.rpm
+@ el10.aarch64 14 postgresql-numeral_14 postgresql-numeral_14-1.3-3PGDG.rhel10.aarch64.rpm pgdg 1.3 34.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/postgresql-numeral_14-1.3-3PGDG.rhel10.aarch64.rpm
 @ d12.x86_64 14 postgresql-14-numeral postgresql-14-numeral_1.3-9.pgdg12+1_amd64.deb pgdg 1.3 76.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-numeral/postgresql-14-numeral_1.3-9.pgdg12+1_amd64.deb
 @ d12.x86_64 14 postgresql-14-numeral postgresql-14-numeral_1.3-8.pgdg12+1_amd64.deb pgdg 1.3 76.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-numeral/postgresql-14-numeral_1.3-8.pgdg12+1_amd64.deb
 @ d12.aarch64 14 postgresql-14-numeral postgresql-14-numeral_1.3-9.pgdg12+1_arm64.deb pgdg 1.3 74.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/postgresql-numeral/postgresql-14-numeral_1.3-9.pgdg12+1_arm64.deb
@@ -234,11 +283,11 @@ pig ext install -y numeral -v 14  # PG 14
 {{% /tab %}}
 {{% tab header="dnf" %}}
 ```bash
-dnf install -y numeral_18       # PG 18
-dnf install -y numeral_17       # PG 17
-dnf install -y numeral_16       # PG 16
-dnf install -y numeral_15       # PG 15
-dnf install -y numeral_14       # PG 14
+dnf install -y postgresql-numeral_18       # PG 18
+dnf install -y postgresql-numeral_17       # PG 17
+dnf install -y postgresql-numeral_16       # PG 16
+dnf install -y postgresql-numeral_15       # PG 15
+dnf install -y postgresql-numeral_14       # PG 14
 ```
 {{% /tab %}}
 {{% tab header="apt" %}}

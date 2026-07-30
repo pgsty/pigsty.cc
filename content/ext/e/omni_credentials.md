@@ -69,7 +69,7 @@ weight: 2945
 | 2979  | [**`omni_yaml`**](/ext/e/omni_yaml) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `omni_yaml` |
 {.ext-table}
 
-| **相关扩展** | [`pgcrypto`](/ext/e/pgcrypto) [`omni_os`](/ext/e/omni_os) |
+| **相关扩展** | [`pgcrypto`](/ext/e/pgcrypto) [`omni_os`](/ext/e/omni_os) [`supabase_vault`](/ext/e/supabase_vault) [`pgcryptokey`](/ext/e/pgcryptokey) [`pgsodium`](/ext/e/pgsodium) [`column_encrypt`](/ext/e/column_encrypt) [`pg_tde`](/ext/e/pg_tde) [`pgcrypto`](/ext/e/pgcrypto) [`pg_enigma`](/ext/e/pg_enigma) [`shacrypt`](/ext/e/shacrypt) [`cryptint`](/ext/e/cryptint) [`pguecc`](/ext/e/pguecc) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

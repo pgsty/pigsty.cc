@@ -33,7 +33,7 @@ weight: 4330
 | 4330  | [**`schedoc`**](/ext/e/schedoc) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | - |
 {.ext-table}
 
-| **相关扩展** | [`ddl_historization`](/ext/e/ddl_historization) [`pg_readme_test_extension`](/ext/e/pg_readme_test_extension) [`pg_readme`](/ext/e/pg_readme) [`gzip`](/ext/e/gzip) [`bzip`](/ext/e/bzip) [`zstd`](/ext/e/zstd) [`http`](/ext/e/http) [`pg_net`](/ext/e/pg_net) [`pg_curl`](/ext/e/pg_curl) |
+| **相关扩展** | [`ddl_historization`](/ext/e/ddl_historization) [`pg_readme`](/ext/e/pg_readme) [`ddlx`](/ext/e/ddlx) [`pg_render`](/ext/e/pg_render) [`pgpdf`](/ext/e/pgpdf) [`pgdd`](/ext/e/pgdd) [`meta`](/ext/e/meta) [`pg_get_functiondef`](/ext/e/pg_get_functiondef) [`pg_dbms_metadata`](/ext/e/pg_dbms_metadata) [`pg_catcheck`](/ext/e/pg_catcheck) [`pg_query_rewrite`](/ext/e/pg_query_rewrite) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

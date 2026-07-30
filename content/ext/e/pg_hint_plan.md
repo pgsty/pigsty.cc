@@ -33,7 +33,7 @@ weight: 2780
 | 2780  | [**`pg_hint_plan`**](/ext/e/pg_hint_plan) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `hint_plan` |
 {.ext-table}
 
-| **相关扩展** | [`pg_show_plans`](/ext/e/pg_show_plans) [`pg_store_plans`](/ext/e/pg_store_plans) [`pg_stat_statements`](/ext/e/pg_stat_statements) [`hypopg`](/ext/e/hypopg) [`pg_qualstats`](/ext/e/pg_qualstats) [`auto_explain`](/ext/e/auto_explain) [`index_advisor`](/ext/e/index_advisor) [`pg_profile`](/ext/e/pg_profile) |
+| **相关扩展** | [`hypopg`](/ext/e/hypopg) [`online_advisor`](/ext/e/online_advisor) [`pg_qualstats`](/ext/e/pg_qualstats) [`index_advisor`](/ext/e/index_advisor) [`pg_stat_plans`](/ext/e/pg_stat_plans) [`plan_filter`](/ext/e/plan_filter) [`pg_strom`](/ext/e/pg_strom) [`pg_orca`](/ext/e/pg_orca) [`pg_regresql`](/ext/e/pg_regresql) [`pg_track_optimizer`](/ext/e/pg_track_optimizer) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

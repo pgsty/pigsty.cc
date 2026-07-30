@@ -33,7 +33,7 @@ weight: 9540
 | 9540  | [**`pg_failover_slots`**](/ext/e/pg_failover_slots) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
 {.ext-table}
 
-| **相关扩展** | [`pglogical`](/ext/e/pglogical) [`pglogical_origin`](/ext/e/pglogical_origin) [`pglogical_ticker`](/ext/e/pglogical_ticker) [`pgactive`](/ext/e/pgactive) [`repmgr`](/ext/e/repmgr) [`bgw_replstatus`](/ext/e/bgw_replstatus) [`pgl_ddl_deploy`](/ext/e/pgl_ddl_deploy) [`decoderbufs`](/ext/e/decoderbufs) |
+| **相关扩展** | [`repmgr`](/ext/e/repmgr) [`bgw_replstatus`](/ext/e/bgw_replstatus) [`pgautofailover`](/ext/e/pgautofailover) [`pgpool_adm`](/ext/e/pgpool_adm) [`pglogical`](/ext/e/pglogical) [`pgactive`](/ext/e/pgactive) [`pglogical_ticker`](/ext/e/pglogical_ticker) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

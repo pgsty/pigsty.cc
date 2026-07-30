@@ -28,7 +28,7 @@ weight: 4940
 | 4940  | [**`btree_gist`**](/ext/e/btree_gist) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | - |
 {.ext-table}
 
-| **相关扩展** | [`btree_gin`](/ext/e/btree_gin) [`unaccent`](/ext/e/unaccent) [`fuzzystrmatch`](/ext/e/fuzzystrmatch) [`pg_trgm`](/ext/e/pg_trgm) [`prefix`](/ext/e/prefix) [`citext`](/ext/e/citext) |
+| **相关扩展** | [`ora_btree_gist`](/ext/e/ora_btree_gist) [`btree_gin`](/ext/e/btree_gin) [`parray_gin`](/ext/e/parray_gin) [`intarray`](/ext/e/intarray) [`rum`](/ext/e/rum) [`bloom`](/ext/e/bloom) [`db2fce`](/ext/e/db2fce) [`orafce`](/ext/e/orafce) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **下游依赖** | [`emaj`](/ext/e/emaj) [`omni_auth`](/ext/e/omni_auth) [`periods`](/ext/e/periods) [`pg_lake_table`](/ext/e/pg_lake_table) [`pgautofailover`](/ext/e/pgautofailover) [`powa`](/ext/e/powa) |
 {.ext-table .ext-table--rel}

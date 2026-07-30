@@ -33,7 +33,7 @@ weight: 8800
 | 8800  | [**`aws_s3`**](/ext/e/aws_s3) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
 {.ext-table}
 
-| **相关扩展** | [`pg_parquet`](/ext/e/pg_parquet) [`hdfs_fdw`](/ext/e/hdfs_fdw) [`file_fdw`](/ext/e/file_fdw) [`duckdb_fdw`](/ext/e/duckdb_fdw) [`wrappers`](/ext/e/wrappers) [`pg_bulkload`](/ext/e/pg_bulkload) [`columnar`](/ext/e/columnar) `pg_analytics` |
+| **相关扩展** | [`file_fdw`](/ext/e/file_fdw) [`pg_parquet`](/ext/e/pg_parquet) [`pg_bulkload`](/ext/e/pg_bulkload) [`pg_lake`](/ext/e/pg_lake) [`pg_ducklake`](/ext/e/pg_ducklake) [`pg_fact_loader`](/ext/e/pg_fact_loader) [`pg_csv`](/ext/e/pg_csv) [`basic_archive`](/ext/e/basic_archive) [`duckdb_fdw`](/ext/e/duckdb_fdw) [`basebackup_to_shell`](/ext/e/basebackup_to_shell) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

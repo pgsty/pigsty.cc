@@ -28,7 +28,7 @@ weight: 5160
 | 5160  | [**`pg_catcheck`**](/ext/e/pg_catcheck) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | - |
 {.ext-table}
 
-| **相关扩展** | [`pg_checksums`](/ext/e/pg_checksums) [`amcheck`](/ext/e/amcheck) [`pg_surgery`](/ext/e/pg_surgery) [`pageinspect`](/ext/e/pageinspect) [`pg_visibility`](/ext/e/pg_visibility) [`pgstattuple`](/ext/e/pgstattuple) [`ddlx`](/ext/e/ddlx) [`pgdd`](/ext/e/pgdd) |
+| **相关扩展** | [`amcheck`](/ext/e/amcheck) [`pg_checksums`](/ext/e/pg_checksums) [`pg_surgery`](/ext/e/pg_surgery) [`pg_orphaned`](/ext/e/pg_orphaned) [`pg_pathcheck`](/ext/e/pg_pathcheck) [`pageinspect`](/ext/e/pageinspect) [`pg_isok`](/ext/e/pg_isok) [`pgdd`](/ext/e/pgdd) [`ddlx`](/ext/e/ddlx) [`meta`](/ext/e/meta) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

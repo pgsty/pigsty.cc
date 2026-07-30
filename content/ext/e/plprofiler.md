@@ -28,7 +28,7 @@ weight: 3070
 | 3070  | [**`plprofiler`**](/ext/e/plprofiler) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
 {.ext-table}
 
-| **相关扩展** | [`pldbgapi`](/ext/e/pldbgapi) [`plpgsql_check`](/ext/e/plpgsql_check) [`plpgsql`](/ext/e/plpgsql) [`pgtap`](/ext/e/pgtap) [`pg_profile`](/ext/e/pg_profile) [`pg_stat_statements`](/ext/e/pg_stat_statements) [`pg_store_plans`](/ext/e/pg_store_plans) [`auto_explain`](/ext/e/auto_explain) |
+| **相关扩展** | [`plpgsql_check`](/ext/e/plpgsql_check) [`pldbgapi`](/ext/e/pldbgapi) [`pglinter`](/ext/e/pglinter) [`pg_stat_plans`](/ext/e/pg_stat_plans) [`pg_stat_statements`](/ext/e/pg_stat_statements) [`auto_explain`](/ext/e/auto_explain) [`pg_store_plans`](/ext/e/pg_store_plans) [`pg_show_plans`](/ext/e/pg_show_plans) [`hypopg`](/ext/e/hypopg) [`index_advisor`](/ext/e/index_advisor) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

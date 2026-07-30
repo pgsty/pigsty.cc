@@ -28,7 +28,7 @@ weight: 2530
 | 2530  | [**`pg_strom`**](/ext/e/pg_strom) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | - |
 {.ext-table}
 
-| **相关扩展** | [`pg4ml`](/ext/e/pg4ml) [`pgml`](/ext/e/pgml) [`columnar`](/ext/e/columnar) [`citus`](/ext/e/citus) `pg_analytics` [`citus_columnar`](/ext/e/citus_columnar) [`pg_duckdb`](/ext/e/pg_duckdb) [`pg_mooncake`](/ext/e/pg_mooncake) |
+| **相关扩展** | [`pg_duckdb`](/ext/e/pg_duckdb) [`pg_mooncake`](/ext/e/pg_mooncake) [`pg_orca`](/ext/e/pg_orca) [`columnar`](/ext/e/columnar) [`citus`](/ext/e/citus) [`pg_clickhouse`](/ext/e/pg_clickhouse) [`storage_engine`](/ext/e/storage_engine) [`pg_hint_plan`](/ext/e/pg_hint_plan) [`hypopg`](/ext/e/hypopg) [`index_advisor`](/ext/e/index_advisor) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

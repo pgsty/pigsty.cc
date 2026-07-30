@@ -33,7 +33,7 @@ weight: 4190
 | 4190  | [**`url_encode`**](/ext/e/url_encode) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
 {.ext-table}
 
-| **相关扩展** | [`pg_html5_email_address`](/ext/e/pg_html5_email_address) [`base36`](/ext/e/base36) [`base62`](/ext/e/base62) [`gzip`](/ext/e/gzip) [`bzip`](/ext/e/bzip) [`zstd`](/ext/e/zstd) [`http`](/ext/e/http) [`pg_net`](/ext/e/pg_net) |
+| **相关扩展** | [`uri`](/ext/e/uri) [`pg_curl`](/ext/e/pg_curl) [`http`](/ext/e/http) [`pg_net`](/ext/e/pg_net) [`emailaddr`](/ext/e/emailaddr) [`pg_html5_email_address`](/ext/e/pg_html5_email_address) [`pg_smtp_client`](/ext/e/pg_smtp_client) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

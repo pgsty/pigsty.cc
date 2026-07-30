@@ -33,7 +33,7 @@ weight: 4695
 | 4695  | [**`fbsql`**](/ext/e/fbsql) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `fbsql` |
 {.ext-table}
 
-| **相关扩展** | [`plr`](/ext/e/plr) [`pg4ml`](/ext/e/pg4ml) [`pgml`](/ext/e/pgml) [`pg_math`](/ext/e/pg_math) [`weighted_statistics`](/ext/e/weighted_statistics) |
+| **相关扩展** | [`plr`](/ext/e/plr) [`weighted_statistics`](/ext/e/weighted_statistics) [`pg_math`](/ext/e/pg_math) [`vasco`](/ext/e/vasco) [`xicor`](/ext/e/xicor) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

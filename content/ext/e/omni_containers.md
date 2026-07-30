@@ -69,7 +69,7 @@ weight: 2944
 | 2979  | [**`omni_yaml`**](/ext/e/omni_yaml) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `omni_yaml` |
 {.ext-table}
 
-| **相关扩展** | [`omni_httpc`](/ext/e/omni_httpc) [`omni_web`](/ext/e/omni_web) |
+| **相关扩展** | [`omni_httpc`](/ext/e/omni_httpc) [`omni_web`](/ext/e/omni_web) [`external_file`](/ext/e/external_file) [`fio`](/ext/e/fio) [`pg_background`](/ext/e/pg_background) [`pg_task`](/ext/e/pg_task) [`pg_durable`](/ext/e/pg_durable) [`envvar`](/ext/e/envvar) [`byteamagic`](/ext/e/byteamagic) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

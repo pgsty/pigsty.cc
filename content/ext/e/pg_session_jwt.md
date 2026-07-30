@@ -33,7 +33,7 @@ weight: 7060
 | 7060  | [**`pg_session_jwt`**](/ext/e/pg_session_jwt) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | `auth` |
 {.ext-table}
 
-| **相关扩展** | [`pgjwt`](/ext/e/pgjwt) [`pgaudit`](/ext/e/pgaudit) [`pgsodium`](/ext/e/pgsodium) [`supabase_vault`](/ext/e/supabase_vault) [`anon`](/ext/e/anon) |
+| **相关扩展** | [`pg_oidc_validator`](/ext/e/pg_oidc_validator) [`pgjwt`](/ext/e/pgjwt) [`login_hook`](/ext/e/login_hook) [`oidc_validator`](/ext/e/oidc_validator) [`pg_auth_mon`](/ext/e/pg_auth_mon) [`pgsodium`](/ext/e/pgsodium) [`auth_delay`](/ext/e/auth_delay) [`set_user`](/ext/e/set_user) [`sslinfo`](/ext/e/sslinfo) [`sslutils`](/ext/e/sslutils) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

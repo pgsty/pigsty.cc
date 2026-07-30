@@ -33,7 +33,7 @@ weight: 4110
 | 4110  | [**`pg_fsql`**](/ext/e/pg_fsql) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `fsql` |
 {.ext-table}
 
-| **相关扩展** | [`plpgsql`](/ext/e/plpgsql) [`plpgsql`](/ext/e/plpgsql) [`pg_readme`](/ext/e/pg_readme) [`schedoc`](/ext/e/schedoc) |
+| **相关扩展** | [`plpgsql`](/ext/e/plpgsql) [`pg_query_rewrite`](/ext/e/pg_query_rewrite) [`ddlx`](/ext/e/ddlx) [`pg_readme`](/ext/e/pg_readme) [`pglinter`](/ext/e/pglinter) [`omni_sql`](/ext/e/omni_sql) [`pg_variables`](/ext/e/pg_variables) [`pgdd`](/ext/e/pgdd) [`meta`](/ext/e/meta) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

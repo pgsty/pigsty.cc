@@ -69,7 +69,7 @@ weight: 2970
 | 2979  | [**`omni_yaml`**](/ext/e/omni_yaml) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `omni_yaml` |
 {.ext-table}
 
-| **相关扩展** | [`dblink`](/ext/e/dblink) [`omni_cloudevents`](/ext/e/omni_cloudevents) |
+| **相关扩展** | [`dblink`](/ext/e/dblink) [`omni_cloudevents`](/ext/e/omni_cloudevents) [`pgtap`](/ext/e/pgtap) [`pg_mockable`](/ext/e/pg_mockable) [`pgsqlmock`](/ext/e/pgsqlmock) [`faker`](/ext/e/faker) [`dbt2`](/ext/e/dbt2) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

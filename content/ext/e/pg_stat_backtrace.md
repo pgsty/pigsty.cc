@@ -33,6 +33,10 @@ weight: 6030
 | 6030  | [**`pg_stat_backtrace`**](/ext/e/pg_stat_backtrace) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
 {.ext-table}
 
+| **相关扩展** | [`pg_stat_log`](/ext/e/pg_stat_log) [`pg_tracing`](/ext/e/pg_tracing) [`pgfr_record`](/ext/e/pgfr_record) [`logerrors`](/ext/e/logerrors) [`pgelog`](/ext/e/pgelog) |
+|:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+{.ext-table .ext-table--rel}
+
 
 > GitHub v1.0.0; C PGXS extension using ptrace(PTRACE_SEIZE) and libunwind; Linux only; runtime may need kernel.yama.ptrace_scope=0
 

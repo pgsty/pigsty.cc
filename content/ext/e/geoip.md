@@ -33,7 +33,7 @@ weight: 1560
 | 1560  | [**`geoip`**](/ext/e/geoip) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `geoip` |
 {.ext-table}
 
-| **相关扩展** | [`ip4r`](/ext/e/ip4r) [`postgis`](/ext/e/postgis) [`tzf`](/ext/e/tzf) [`country`](/ext/e/country) [`postgis_topology`](/ext/e/postgis_topology) [`postgis_raster`](/ext/e/postgis_raster) [`postgis_sfcgal`](/ext/e/postgis_sfcgal) [`postgis_tiger_geocoder`](/ext/e/postgis_tiger_geocoder) [`address_standardizer`](/ext/e/address_standardizer) |
+| **相关扩展** | [`ip4r`](/ext/e/ip4r) [`postgis_tiger_geocoder`](/ext/e/postgis_tiger_geocoder) [`tzf`](/ext/e/tzf) [`nominatim_fdw`](/ext/e/nominatim_fdw) [`pg_geohash`](/ext/e/pg_geohash) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

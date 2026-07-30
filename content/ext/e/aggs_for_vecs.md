@@ -33,7 +33,7 @@ weight: 4740
 | 4740  | [**`aggs_for_vecs`**](/ext/e/aggs_for_vecs) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
 {.ext-table}
 
-| **相关扩展** | [`aggs_for_arrays`](/ext/e/aggs_for_arrays) [`first_last_agg`](/ext/e/first_last_agg) [`arraymath`](/ext/e/arraymath) [`floatvec`](/ext/e/floatvec) [`vector`](/ext/e/vector) [`topn`](/ext/e/topn) |
+| **相关扩展** | [`intarray`](/ext/e/intarray) [`arraymath`](/ext/e/arraymath) [`floatvec`](/ext/e/floatvec) [`aggs_for_arrays`](/ext/e/aggs_for_arrays) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

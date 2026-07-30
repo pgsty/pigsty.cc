@@ -33,7 +33,7 @@ weight: 4650
 | 4650  | [**`ddsketch`**](/ext/e/ddsketch) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
 {.ext-table}
 
-| **相关扩展** | [`omnisketch`](/ext/e/omnisketch) [`quantile`](/ext/e/quantile) [`lower_quantile`](/ext/e/lower_quantile) [`topn`](/ext/e/topn) [`count_distinct`](/ext/e/count_distinct) [`hll`](/ext/e/hll) [`first_last_agg`](/ext/e/first_last_agg) |
+| **相关扩展** | [`tdigest`](/ext/e/tdigest) [`count_distinct`](/ext/e/count_distinct) [`topn`](/ext/e/topn) [`omnisketch`](/ext/e/omnisketch) [`datasketches`](/ext/e/datasketches) [`hll`](/ext/e/hll) [`quantile`](/ext/e/quantile) [`lower_quantile`](/ext/e/lower_quantile) [`weighted_statistics`](/ext/e/weighted_statistics) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

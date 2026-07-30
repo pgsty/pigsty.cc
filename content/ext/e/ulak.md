@@ -33,6 +33,10 @@ weight: 2680
 | 2680  | [**`ulak`**](/ext/e/ulak) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `ulak` |
 {.ext-table}
 
+| **相关扩展** | [`pgmq`](/ext/e/pgmq) [`pgmb`](/ext/e/pgmb) [`pg_durable`](/ext/e/pg_durable) [`redis`](/ext/e/redis) [`pgq`](/ext/e/pgq) [`pgmqtt`](/ext/e/pgmqtt) [`pg_task`](/ext/e/pg_task) [`tcn`](/ext/e/tcn) [`pg_background`](/ext/e/pg_background) [`fsm_core`](/ext/e/fsm_core) |
+|:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+{.ext-table .ext-table--rel}
+
 
 > preload required; rm README from RPM/DEB
 

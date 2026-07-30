@@ -33,7 +33,7 @@ weight: 1570
 | 1570  | [**`pg_polyline`**](/ext/e/pg_polyline) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | - |
 {.ext-table}
 
-| **相关扩展** | [`postgis`](/ext/e/postgis) [`pgrouting`](/ext/e/pgrouting) [`pg_geohash`](/ext/e/pg_geohash) [`postgis_topology`](/ext/e/postgis_topology) [`postgis_raster`](/ext/e/postgis_raster) [`postgis_sfcgal`](/ext/e/postgis_sfcgal) [`postgis_tiger_geocoder`](/ext/e/postgis_tiger_geocoder) [`address_standardizer`](/ext/e/address_standardizer) |
+| **相关扩展** | [`h3`](/ext/e/h3) [`pgrouting`](/ext/e/pgrouting) [`mobilitydb`](/ext/e/mobilitydb) [`postgis`](/ext/e/postgis) [`pg_geohash`](/ext/e/pg_geohash) [`qdgc`](/ext/e/qdgc) [`q3c`](/ext/e/q3c) [`pointcloud`](/ext/e/pointcloud) [`pg_eviltransform`](/ext/e/pg_eviltransform) [`earthdistance`](/ext/e/earthdistance) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

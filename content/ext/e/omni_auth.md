@@ -69,7 +69,7 @@ weight: 2941
 | 2979  | [**`omni_yaml`**](/ext/e/omni_yaml) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `omni_yaml` |
 {.ext-table}
 
-| **相关扩展** | [`omni_types`](/ext/e/omni_types) [`omni_id`](/ext/e/omni_id) [`pgcrypto`](/ext/e/pgcrypto) [`btree_gist`](/ext/e/btree_gist) [`omni_polyfill`](/ext/e/omni_polyfill) |
+| **相关扩展** | [`omni_types`](/ext/e/omni_types) [`omni_id`](/ext/e/omni_id) [`pgcrypto`](/ext/e/pgcrypto) [`btree_gist`](/ext/e/btree_gist) [`omni_polyfill`](/ext/e/omni_polyfill) [`pg_session_jwt`](/ext/e/pg_session_jwt) [`login_hook`](/ext/e/login_hook) [`set_user`](/ext/e/set_user) [`pgjwt`](/ext/e/pgjwt) [`pg_oidc_validator`](/ext/e/pg_oidc_validator) [`pg_auth_mon`](/ext/e/pg_auth_mon) [`auth_delay`](/ext/e/auth_delay) [`oidc_validator`](/ext/e/oidc_validator) [`pg_permissions`](/ext/e/pg_permissions) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

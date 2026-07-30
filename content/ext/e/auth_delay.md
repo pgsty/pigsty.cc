@@ -28,7 +28,7 @@ weight: 7970
 | 7970  | [**`auth_delay`**](/ext/e/auth_delay) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | - |
 {.ext-table}
 
-| **相关扩展** | [`pg_auth_mon`](/ext/e/pg_auth_mon) [`credcheck`](/ext/e/credcheck) [`login_hook`](/ext/e/login_hook) [`passwordcheck`](/ext/e/passwordcheck) [`passwordcheck_cracklib`](/ext/e/passwordcheck_cracklib) [`pgaudit`](/ext/e/pgaudit) [`set_user`](/ext/e/set_user) [`pg_permissions`](/ext/e/pg_permissions) |
+| **相关扩展** | [`pg_session_jwt`](/ext/e/pg_session_jwt) [`login_hook`](/ext/e/login_hook) [`set_user`](/ext/e/set_user) [`pg_auth_mon`](/ext/e/pg_auth_mon) [`pgjwt`](/ext/e/pgjwt) [`pg_oidc_validator`](/ext/e/pg_oidc_validator) [`oidc_validator`](/ext/e/oidc_validator) [`pg_permissions`](/ext/e/pg_permissions) [`pgaudit`](/ext/e/pgaudit) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

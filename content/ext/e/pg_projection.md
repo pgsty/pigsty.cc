@@ -33,7 +33,7 @@ weight: 9090
 | 9090  | [**`pg_projection`**](/ext/e/pg_projection) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
 {.ext-table}
 
-| **相关扩展** | [`pg_jsonschema`](/ext/e/pg_jsonschema) [`jsquery`](/ext/e/jsquery) [`pgjq`](/ext/e/pgjq) |
+| **相关扩展** | [`documentdb`](/ext/e/documentdb) [`mongo_fdw`](/ext/e/mongo_fdw) [`jsquery`](/ext/e/jsquery) [`pgbson`](/ext/e/pgbson) [`pg_jsonschema`](/ext/e/pg_jsonschema) [`pgjq`](/ext/e/pgjq) [`jsonschema`](/ext/e/jsonschema) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

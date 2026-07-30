@@ -33,7 +33,7 @@ weight: 4790
 | 4790  | [**`random`**](/ext/e/random) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
 {.ext-table}
 
-| **相关扩展** | [`permuteseq`](/ext/e/permuteseq) [`tsm_system_rows`](/ext/e/tsm_system_rows) [`tsm_system_time`](/ext/e/tsm_system_time) [`pg_idkit`](/ext/e/pg_idkit) [`sequential_uuids`](/ext/e/sequential_uuids) |
+| **相关扩展** | [`faker`](/ext/e/faker) [`dbt2`](/ext/e/dbt2) [`tsm_system_time`](/ext/e/tsm_system_time) [`tsm_system_rows`](/ext/e/tsm_system_rows) [`pg_mockable`](/ext/e/pg_mockable) [`pgsqlmock`](/ext/e/pgsqlmock) [`pgtap`](/ext/e/pgtap) [`omni_test`](/ext/e/omni_test) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

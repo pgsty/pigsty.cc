@@ -28,7 +28,7 @@ weight: 5940
 | 5940  | [**`basic_archive`**](/ext/e/basic_archive) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | - |
 {.ext-table}
 
-| **相关扩展** | [`basebackup_to_shell`](/ext/e/basebackup_to_shell) [`pg_walinspect`](/ext/e/pg_walinspect) [`pg_repack`](/ext/e/pg_repack) [`pg_rewrite`](/ext/e/pg_rewrite) [`pg_squeeze`](/ext/e/pg_squeeze) [`pg_dirtyread`](/ext/e/pg_dirtyread) [`pgfincore`](/ext/e/pgfincore) [`pg_cooldown`](/ext/e/pg_cooldown) |
+| **相关扩展** | [`aws_s3`](/ext/e/aws_s3) [`basebackup_to_shell`](/ext/e/basebackup_to_shell) [`external_file`](/ext/e/external_file) [`file_fdw`](/ext/e/file_fdw) [`repmgr`](/ext/e/repmgr) [`pg_parquet`](/ext/e/pg_parquet) [`pg_bulkload`](/ext/e/pg_bulkload) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

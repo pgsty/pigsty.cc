@@ -31,7 +31,7 @@ weight: 3291
 | 3293  | [**`hstore_plpython3u`**](/ext/e/hstore_plpython3u) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
 {.ext-table}
 
-| **相关扩展** | [`plpython3u`](/ext/e/plpython3u) [`faker`](/ext/e/faker) [`jsonb_plperl`](/ext/e/jsonb_plperl) [`jsonb_plperlu`](/ext/e/jsonb_plperlu) [`pg_jsonschema`](/ext/e/pg_jsonschema) [`jsquery`](/ext/e/jsquery) [`plpgsql`](/ext/e/plpgsql) |
+| **相关扩展** | [`plpython3u`](/ext/e/plpython3u) [`pgbson`](/ext/e/pgbson) [`pgjq`](/ext/e/pgjq) [`jsonb_plperl`](/ext/e/jsonb_plperl) [`jsonb_plperlu`](/ext/e/jsonb_plperlu) [`jsquery`](/ext/e/jsquery) [`pg_jsonschema`](/ext/e/pg_jsonschema) [`jsonschema`](/ext/e/jsonschema) [`pg_projection`](/ext/e/pg_projection) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 

@@ -28,6 +28,10 @@ weight: 8670
 | 8670  | [**`informix_fdw`**](/ext/e/informix_fdw) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
 {.ext-table}
 
+| **相关扩展** | [`mysql_fdw`](/ext/e/mysql_fdw) [`tds_fdw`](/ext/e/tds_fdw) [`db2_fdw`](/ext/e/db2_fdw) [`oracle_fdw`](/ext/e/oracle_fdw) [`sqlite_fdw`](/ext/e/sqlite_fdw) [`firebird_fdw`](/ext/e/firebird_fdw) [`postgres_fdw`](/ext/e/postgres_fdw) [`db2fce`](/ext/e/db2fce) [`orafce`](/ext/e/orafce) [`db_migrator`](/ext/e/db_migrator) |
+|:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+{.ext-table .ext-table--rel}
+
 
 > PGDG non-free (pgnf) only; no SQL-level extension dependency; runtime requires IBM Informix Client SDK (libifsql15a/libifasf15a/libifgen15a/libifos15a/libifgls)
 

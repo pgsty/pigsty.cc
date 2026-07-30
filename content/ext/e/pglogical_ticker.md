@@ -33,7 +33,7 @@ weight: 9510
 | 9510  | [**`pglogical_ticker`**](/ext/e/pglogical_ticker) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | `pglogical_ticker` |
 {.ext-table}
 
-| **相关扩展** | [`pglogical`](/ext/e/pglogical) [`pglogical_origin`](/ext/e/pglogical_origin) [`pgl_ddl_deploy`](/ext/e/pgl_ddl_deploy) [`pg_failover_slots`](/ext/e/pg_failover_slots) [`pgactive`](/ext/e/pgactive) [`wal2json`](/ext/e/wal2json) [`decoderbufs`](/ext/e/decoderbufs) [`repmgr`](/ext/e/repmgr) [`decoder_raw`](/ext/e/decoder_raw) |
+| **相关扩展** | [`pglogical`](/ext/e/pglogical) [`pglogical`](/ext/e/pglogical) [`bgw_replstatus`](/ext/e/bgw_replstatus) [`pg_failover_slots`](/ext/e/pg_failover_slots) [`repmgr`](/ext/e/repmgr) [`pgautofailover`](/ext/e/pgautofailover) [`spock`](/ext/e/spock) [`pgactive`](/ext/e/pgactive) [`mimeo`](/ext/e/mimeo) [`pgpool_adm`](/ext/e/pgpool_adm) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
 
