@@ -20,7 +20,8 @@ Linux amd64 可以直接下载二进制（其他平台与 RPM/DEB/Docker 安装�
 ```bash
 VERSION=$(curl -fsSL https://api.github.com/repos/pgsty/pg_exporter/releases/latest | sed -n 's/.*"tag_name": "v\([^"]*\)".*/\1/p')
 wget "https://github.com/pgsty/pg_exporter/releases/download/v${VERSION}/pg_exporter-${VERSION}.linux-amd64.tar.gz"
-tar -xf "pg_exporter-${VERSION}.linux-amd64.tar.gz"
+mkdir -p "pg_exporter-${VERSION}.linux-amd64"
+tar -xf "pg_exporter-${VERSION}.linux-amd64.tar.gz" -C "pg_exporter-${VERSION}.linux-amd64"
 sudo install "pg_exporter-${VERSION}.linux-amd64/pg_exporter" /usr/bin/
 sudo install "pg_exporter-${VERSION}.linux-amd64/pg_exporter.yml" /etc/pg_exporter.yml
 ```
@@ -29,7 +30,7 @@ sudo install "pg_exporter-${VERSION}.linux-amd64/pg_exporter.yml" /etc/pg_export
 
 ```bash
 pg_exporter --version
-# pg_exporter v1.4.0 (built with go1.26.5 on linux/amd64)
+# pg_exporter v1.4.1 (built with go1.26.5 on linux/amd64)
 ```
 
 

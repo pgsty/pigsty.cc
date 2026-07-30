@@ -18,15 +18,15 @@ description: 高级 PostgreSQL 与 PgBouncer 监控指标导出器
 
 | 特性        | 描述                                                          |
 |-----------|-------------------------------------------------------------|
-| **全指标覆盖** | 600+ 指标覆盖 PostgreSQL（10-19+）与 pgBouncer（1.8-1.25+）的几乎全部统计视图  |
-| **声明式采集** | 每个指标都来自 YAML 采集器定义——SQL 查询加执行条件，可自由增删改，无需改代码                 |
-| **动态规划**  | 按目标的版本、主从角色、已装扩展与标签自动裁决每个采集器是否执行、执行哪个分支                      |
-| **自动发现**  | 自动发现实例内的所有数据库并分别采集，指标以 `datname` 标签区分                        |
-| **健康检查**  | `/up`、`/primary`、`/replica` 等端点可直接充当负载均衡器探针，实现主从流量路由         |
-| **智能缓存**  | 采集器级 TTL 缓存把抓取频率与查询频率解耦，探针与抓取风暴不会穿透到数据库                      |
+| **全指标覆盖** | 600+ 指标覆盖 PostgreSQL（10-19+）与 pgBouncer（1.8-1.25+）的几乎全部统计视图 |
+| **声明式采集** | 每个指标都来自 YAML 采集器定义——SQL 查询加执行条件，可自由增删改，无需改代码                |
+| **动态规划**  | 按目标的版本、主从角色、已装扩展与标签自动裁决每个采集器是否执行、执行哪个分支                     |
+| **自动发现**  | 自动发现实例内的所有数据库并分别采集，指标以 `datname` 标签区分                       |
+| **健康检查**  | `/up`、`/primary`、`/replica` 等端点可直接充当负载均衡器探针，实现主从流量路由        |
+| **智能缓存**  | 采集器级 TTL 缓存把抓取频率与查询频率解耦，探针与抓取风暴不会穿透到数据库                     |
 | **快照直方图** | `HISTOGRAM` 列类型将 SQL 快照聚合为经典 Prometheus 直方图分布               |
 | **扩展感知**  | 原生支持 pg_stat_statements、pg_wait_sampling、citus、timescaledb  |
-| **生产就绪**  | 在真实环境中经过 6 年以上、12K+ 核心的实战检验                                  |
+| **生产就绪**  | 在真实环境中经过 6 年以上、12K+ 核心的实战检验                                 |
 {.full-width}
 
 
@@ -34,7 +34,7 @@ description: 高级 PostgreSQL 与 PgBouncer 监控指标导出器
 
 ## 版本信息
 
-- 当前稳定版本：[`v1.4.0`](https://github.com/pgsty/pg_exporter/releases/tag/v1.4.0)
+- 当前稳定版本：[`v1.4.1`](https://github.com/pgsty/pg_exporter/releases/tag/v1.4.1)
 - 默认配置支持：PostgreSQL **10-19+**
 - Legacy 配置支持：PostgreSQL **9.1-9.6**（使用 `legacy/` 配置包）
 - PgBouncer 支持：**1.8-1.25+**
@@ -97,7 +97,8 @@ sudo apt install -y pg-exporter
 {{< tab header="二进制" lang="bash" >}}
 VERSION=$(curl -fsSL https://api.github.com/repos/pgsty/pg_exporter/releases/latest | sed -n 's/.*"tag_name": "v\([^"]*\)".*/\1/p')
 wget "https://github.com/pgsty/pg_exporter/releases/download/v${VERSION}/pg_exporter-${VERSION}.linux-amd64.tar.gz"
-tar -xf "pg_exporter-${VERSION}.linux-amd64.tar.gz"
+mkdir -p "pg_exporter-${VERSION}.linux-amd64"
+tar -xf "pg_exporter-${VERSION}.linux-amd64.tar.gz" -C "pg_exporter-${VERSION}.linux-amd64"
 sudo install "pg_exporter-${VERSION}.linux-amd64/pg_exporter" /usr/bin/
 sudo install "pg_exporter-${VERSION}.linux-amd64/pg_exporter.yml" /etc/pg_exporter.yml
 {{< /tab >}}

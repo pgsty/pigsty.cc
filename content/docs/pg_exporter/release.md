@@ -5,10 +5,11 @@ icon: fa-solid fa-clipboard-list
 description: PG Exporter 版本发布历史
 ---
 
-`pg_exporter` 的最新稳定版本是 [v1.4.0](https://github.com/pgsty/pg_exporter/releases/tag/v1.4.0)
+`pg_exporter` 的最新稳定版本是 [v1.4.1](https://github.com/pgsty/pg_exporter/releases/tag/v1.4.1)
 
 |       版本        |     日期     | 摘要                                           |                               GitHub                               |
 |:---------------:|:----------:|----------------------------------------------|:------------------------------------------------------------------:|
+| [v1.4.1](#v141) | 2026-07-29 | 修复逻辑订阅计数与标签列校验，统一 RPM 包名                  | [v1.4.1](https://github.com/pgsty/pg_exporter/releases/tag/v1.4.1) |
 | [v1.4.0](#v140) | 2026-07-18 | 快照直方图支持，新增 pg_xact_age 采集器，HTTP 路由加固         | [v1.4.0](https://github.com/pgsty/pg_exporter/releases/tag/v1.4.0) |
 | [v1.3.0](#v130) | 2026-06-24 | PostgreSQL 19 支持，新增 PG19 采集器与分支              | [v1.3.0](https://github.com/pgsty/pg_exporter/releases/tag/v1.3.0) |
 | [v1.2.2](#v122) | 2026-04-14 | 例行更新到 Go 1.26.2，无功能改动                        | [v1.2.2](https://github.com/pgsty/pg_exporter/releases/tag/v1.2.2) |
@@ -42,6 +43,27 @@ description: PG Exporter 版本发布历史
 | [v0.0.2](#v002) | 2019-12-09 | 早期测试版本                                       | [v0.0.2](https://github.com/pgsty/pg_exporter/releases/tag/v0.0.2) |
 | [v0.0.1](#v001) | 2019-12-06 | 初始版本，支持 PgBouncer 模式                         | [v0.0.1](https://github.com/pgsty/pg_exporter/releases/tag/v0.0.1) |
 {.full-width}
+
+
+--------
+
+## v1.4.1
+
+`v1.4.1` 是一次聚焦监控准确性与 RPM 升级兼容性的维护版本。
+
+**变更摘要：**
+
+- 修复 `pg_subrel_count` 在并行逻辑复制工作进程场景下重复计数的问题：先按订阅 ID 与名称去重 `pg_stat_subscription`，再汇总各订阅关系状态
+- 查询结果缺少配置声明的 `LABEL` 列时，该采集器本轮采集会整体失败，不再生成空标签或沿用旧结果；其他非致命采集器仍会继续工作
+- 官方 RPM 包名及产物文件名前缀由 `pg_exporter` 统一为 `pg-exporter`；新包声明兼容并替换旧包名，可直接升级
+- 更新版本与独立安装包元数据，增加缺失标签列的回归测试，并在 CI 中校验 RPM 配置、产物名称及兼容元数据
+
+**升级提示：**
+
+- 自定义采集器的 SQL 必须返回全部 `LABEL` 列；即使结果为零行，返回结果的列定义也必须完整
+- 若脚本直接匹配 GitHub RPM 文件名，请将 `pg_exporter-*.rpm` 更新为 `pg-exporter-*.rpm`
+
+https://github.com/pgsty/pg_exporter/releases/tag/v1.4.1
 
 
 --------
