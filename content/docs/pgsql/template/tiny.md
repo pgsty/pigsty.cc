@@ -78,12 +78,12 @@ superuser_reserved_connections: 10
 
 TINY 模板使用保守的内存分配策略：
 
-| 参数 | 计算公式 | 说明 |
-|:-----|:---------|:-----|
-| `shared_buffers` | 内存 × `pg_shared_buffer_ratio` | 默认比例 0.25 |
-| `maintenance_work_mem` | shared_buffers × 25% | 用于 VACUUM、CREATE INDEX |
-| `work_mem` | 16MB - **256MB** | 更小的排序/哈希内存 |
-| `effective_cache_size` | 总内存 - shared_buffers | 可用于缓存的预估内存 |
+| 参数                     | 计算公式                          | 说明                     |
+|:-----------------------|:------------------------------|:-----------------------|
+| `shared_buffers`       | 内存 × `pg_shared_buffer_ratio` | 默认比例 0.25              |
+| `maintenance_work_mem` | shared_buffers × 25%          | 用于 VACUUM、CREATE INDEX |
+| `work_mem`             | 16MB - **256MB**              | 更小的排序/哈希内存             |
+| `effective_cache_size` | 总内存 - shared_buffers          | 可用于缓存的预估内存             |
 {.full-width}
 
 **work_mem 计算逻辑**（与 OLTP 不同）：
@@ -175,16 +175,16 @@ pg_stat_statements.track_planning: off
 
 ## 与 OLTP 模板的主要差异
 
-| 参数 | [**TINY**](/docs/pgsql/template/tiny/) | [**OLTP**](/docs/pgsql/template/oltp/) | 差异原因 |
-|:-----|:-----|:-----|:---------|
-| max_connections | **250** | 500-1000 | 减少连接开销 |
-| work_mem 上限 | **256MB** | 1GB | 避免内存溢出 |
-| max_worker_processes | max(cpu+12, 20) | max(cpu+16, 24) | 减少后台进程 |
-| max_parallel_workers_per_gather | **0** | 20% cpu | 禁用并行查询 |
-| autovacuum_max_workers | **2** | 3 | 减少后台负载 |
-| default_statistics_target | **200** | 400 | 节省空间 |
-| pg_stat_statements.max | **2500** | 10000 | 减少内存占用 |
-| io_workers | **3** | 25% cpu | 固定低值 |
+| 参数                              | [**TINY**](/docs/pgsql/template/tiny/) | [**OLTP**](/docs/pgsql/template/oltp/) | 差异原因   |
+|:--------------------------------|:---------------------------------------|:---------------------------------------|:-------|
+| max_connections                 | **250**                                | 500-1000                               | 减少连接开销 |
+| work_mem 上限                     | **256MB**                              | 1GB                                    | 避免内存溢出 |
+| max_worker_processes            | max(cpu+12, 20)                        | max(cpu+16, 24)                        | 减少后台进程 |
+| max_parallel_workers_per_gather | **0**                                  | 20% cpu                                | 禁用并行查询 |
+| autovacuum_max_workers          | **2**                                  | 3                                      | 减少后台负载 |
+| default_statistics_target       | **200**                                | 400                                    | 节省空间   |
+| pg_stat_statements.max          | **2500**                               | 10000                                  | 减少内存占用 |
+| io_workers                      | **3**                                  | 25% cpu                                | 固定低值   |
 {.full-width}
 
 

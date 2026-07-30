@@ -10,12 +10,12 @@ categories: [参考]
 
 Pigsty 提供四种预置的 Patroni/PostgreSQL 配置模板，针对不同的使用场景进行了参数优化：
 
-| 模板                                                               | CPU 核心 | 适用场景      | 特点            |
-|:-----------------------------------------------------------------|:-------|:----------|:--------------|
-| [**`/docs/pgsql/template/oltp.yml`**](/docs/pgsql/template/oltp) | 4-128C | OLTP 事务处理 | 高并发、低延迟、高吞吐   |
-| [**`/docs/pgsql/template/olap.yml`**](/docs/pgsql/template/olap) | 4-128C | OLAP 分析处理 | 大查询、高并行、长事务   |
-| [**`/docs/pgsql/template/crit.yml`**](/docs/pgsql/template/crit) | 4-128C | 一致性优先业务   | 严格同步、校验和、详细连接日志 |
-| [**`/docs/pgsql/template/tiny.yml`**](/docs/pgsql/template/tiny) | 1-3C   | 微型实例      | 资源受限、低配环境     |
+| 模板                                                               | CPU 核心 | 适用场景      | 特点          |
+|:-----------------------------------------------------------------|:-------|:----------|:------------|
+| [**`/docs/pgsql/template/oltp.yml`**](/docs/pgsql/template/oltp) | 4-128C | OLTP 事务处理 | 高并发、低延迟、高吞吐 |
+| [**`/docs/pgsql/template/olap.yml`**](/docs/pgsql/template/olap) | 4-128C | OLAP 分析处理 | 大查询、高并行、长事务 |
+| [**`/docs/pgsql/template/crit.yml`**](/docs/pgsql/template/crit) | 4-128C | 一致性优先业务   | 一致性优先、详细审计  |
+| [**`/docs/pgsql/template/tiny.yml`**](/docs/pgsql/template/tiny) | 1-3C   | 微型实例      | 资源受限、低配环境   |
 {.full-width}
 
 您可以通过 [**`pg_conf`**](/docs/pgsql/param#pg_conf) 参数来选择使用哪个配置模板，默认为 [**`/docs/pgsql/template/oltp.yml`**](/docs/pgsql/template/oltp)。
@@ -86,13 +86,13 @@ pg-dev:
 
 ### 并行查询
 
-| 参数                                  | OLTP            | OLAP    | CRIT    | TINY    |
-|:------------------------------------|:----------------|:--------|:--------|:--------|
+| 参数                                  | OLTP            | OLAP            | CRIT            | TINY            |
+|:------------------------------------|:----------------|:----------------|:----------------|:----------------|
 | **max_worker_processes**            | max(cpu+16, 24) | max(cpu+20, 28) | max(cpu+16, 24) | max(cpu+12, 20) |
-| **max_parallel_workers**            | 50% cpu         | 80% cpu | 50% cpu | 50% cpu |
-| **max_parallel_workers_per_gather** | 20% cpu (max 8) | 50% cpu | 0（禁用）   | 0（禁用）   |
-| **parallel_setup_cost**             | 2000            | 1000    | 2000    | 1000    |
-| **parallel_tuple_cost**             | 0.2             | 0.1     | 0.2     | 0.1     |
+| **max_parallel_workers**            | 50% cpu         | 80% cpu         | 50% cpu         | 50% cpu         |
+| **max_parallel_workers_per_gather** | 20% cpu (max 8) | 50% cpu         | 0（禁用）           | 0（禁用）           |
+| **parallel_setup_cost**             | 2000            | 1000            | 2000            | 1000            |
+| **parallel_tuple_cost**             | 0.2             | 0.1             | 0.2             | 0.1             |
 {.full-width}
 
 ### 同步复制
@@ -126,9 +126,9 @@ pg-dev:
 
 ### IO 配置（PG18）
 
-| 参数                  | OLTP           | OLAP           | CRIT          | TINY    |
-|:--------------------|:---------------|:---------------|:--------------|:--------|
-| **io_workers**      | 25% cpu (4-16) | 50% cpu (4-32) | 25% cpu (4-8) | 3       |
+| 参数                  | OLTP             | OLAP            | CRIT             | TINY             |
+|:--------------------|:-----------------|:----------------|:-----------------|:-----------------|
+| **io_workers**      | 25% cpu (4-16)   | 50% cpu (4-32)  | 25% cpu (4-8)    | 3                |
 | **temp_file_limit** | 1/20 磁盘，上限 100GB | 1/5 磁盘，上限 400GB | 1/20 磁盘，上限 100GB | 1/20 磁盘，上限 100GB |
 {.full-width}
 

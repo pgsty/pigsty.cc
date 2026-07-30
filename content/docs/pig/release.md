@@ -11,7 +11,7 @@ categories: [参考]
 
 |       版本        |     日期     | 摘要                                              |                                                     GitHub |
 |:---------------:|:----------:|-------------------------------------------------|-----------------------------------------------------------:|
-| [v1.6.0](#v160) | 2026-07-27 | 555 个扩展，pt 原生透传，inventory 与 CMDB，Grafana 管理           | [v1.6.0](https://github.com/pgsty/pig/releases/tag/v1.6.0) |
+| [v1.6.0](#v160) | 2026-07-28 | 562 个已打包扩展，pt 原生透传，inventory 与 CMDB，Grafana 管理 | [v1.6.0](https://github.com/pgsty/pig/releases/tag/v1.6.0) |
 | [v1.5.1](#v151) | 2026-07-08 | PG 内核分支包更新，镜像模式，修复若干问题                          | [v1.5.1](https://github.com/pgsty/pig/releases/tag/v1.5.1) |
 | [v1.5.0](#v150) | 2026-07-04 | 531 个扩展，pigsty v4.4，pg/pb/pt/pitr 重做，clone/fork | [v1.5.0](https://github.com/pgsty/pig/releases/tag/v1.5.0) |
 | [v1.4.2](#v142) | 2026-06-18 | 524 个扩展，PG19 beta，pgrx 0.18.1，Patroni 修复        | [v1.4.2](https://github.com/pgsty/pig/releases/tag/v1.4.2) |
@@ -59,7 +59,7 @@ categories: [参考]
 
 ## v1.6.0
 
-Pig `v1.6.0` 是一个大版本：`pig pt` 重写为 `patronictl` 原生透传，新增根级 `pig inventory` 命令组提供 `pigsty.yml` 的无损编辑与校验（附带实验性的 PostgreSQL CMDB 交换能力），`pig sty grafana` 提供原生 Grafana 仪表盘管理，扩展目录增至 555 个。
+Pig `v1.6.0` 是一个大版本：`pig pt` 重写为 `patronictl` 原生透传，新增根级 `pig inventory` 命令组提供 `pigsty.yml` 的无损编辑与校验（附带实验性的 PostgreSQL CMDB 交换能力），`pig sty grafana` 提供原生 Grafana 仪表盘管理，已打包扩展目录增至 562 个。
 
 **主要变化**
 
@@ -73,8 +73,8 @@ Pig `v1.6.0` 是一个大版本：`pig pt` 重写为 `patronictl` 原生透传�
 
 **扩展目录**
 
-- 可用扩展数量从 **531** 增加到 **555**。
-- 新增 26 个扩展，包括 `pg_lake` 家族（`pg_lake`、`pg_lake_table`、`pg_lake_engine`、`pg_lake_iceberg`、`pg_lake_copy`）、`pg_jieba`、`pg_cjk_parser`、`pg_fts`、`pgmonitor`、`pgmemento`、`pg_tiktoken_c`、`online_advisor`、`pgsqlmock`、`plx` 等。
+- 已打包扩展数量从 **531** 增加到 **562**；PGEXT.CLOUD 总目录收录 **2230** 个扩展。
+- 新增 33 个扩展，包括 `pg_lake` 家族（`pg_lake`、`pg_lake_table`、`pg_lake_engine`、`pg_lake_iceberg`、`pg_lake_copy`）、`pg_jieba`、`pg_cjk_parser`、`pg_fts`、`pgmonitor`、`pgmemento`、`pg_tiktoken_c`、`online_advisor`、`pgsqlmock`、`plx` 等。
 - 移除 2 个：`pg_analytics`、`spat`；刷新 58 个扩展版本，包括 `vector 0.8.5`、`timescaledb 2.28.3`、`pg_search 0.24.3`、`pg_tde 2.2.1`、`powa 5.2.0`。
 - 包别名与 Pigsty 同步：`kafka` 更名为 `kafka-stack`；Debian/Ubuntu 的 `postgresql` 别名收窄为仅 `postgresql-$v`（完整开发套件请用 `pgsql` / `pgsql-full`）。
 
@@ -87,7 +87,16 @@ Pig `v1.6.0` 是一个大版本：`pig pt` 重写为 `patronictl` 原生透传�
 
 **校验和**
 
-<!-- 待发布后补充 -->
+```bash
+6899e8a3e1c0adfe8c0c177c0632b0a00821b304ed5998fcbdf28d02660c6768  pig-1.6.0-1.aarch64.rpm
+cabe593fe7f5c31cdbcd8d546ae4925b57f98f70c564452335568389f3f9737c  pig-1.6.0-1.x86_64.rpm
+1f46d4a0b4710eed06b2cf8e7e17ee04b8d65331697c5c65afd513cc28282231  pig-v1.6.0.darwin-amd64.tar.gz
+845decb95697fc68bc5e12bc80cecfd4c6d23160afee96568b699d82f2e9261d  pig-v1.6.0.darwin-arm64.tar.gz
+4f1bb4fda8131db9f40db15e1575a6045b373dee609250cf5ee2bdedc2db89e2  pig-v1.6.0.linux-amd64.tar.gz
+4384d11150e31d614ed4ac3de4d6bf7ee7fa111ac84f5575753bb9f2f31f4ed8  pig-v1.6.0.linux-arm64.tar.gz
+e35ef0f2c76afe5f3512d34c0440abd8c0106c0e2775c5452e167ae3a4127e8e  pig_1.6.0-1_amd64.deb
+c3bc6d04c6acd7e5c3164a33b7525b25a93e2de9822ce957c15c18ee0d551901  pig_1.6.0-1_arm64.deb
+```
 
 发布：https://github.com/pgsty/pig/releases/tag/v1.6.0
 

@@ -82,12 +82,12 @@ OLAP 场景通常不需要大量连接，500 个连接足以应对大多数分�
 
 OLAP 模板的内存分配策略更为激进：
 
-| 参数 | 计算公式 | 说明 |
-|:-----|:---------|:-----|
-| `shared_buffers` | 内存 × `pg_shared_buffer_ratio` | 默认比例 0.25 |
-| `maintenance_work_mem` | shared_buffers × **50%** | 加速索引创建和 VACUUM |
-| `work_mem` | 64MB - **8GB** | 更大的排序/哈希内存 |
-| `effective_cache_size` | 总内存 - shared_buffers | 可用于缓存的预估内存 |
+| 参数                     | 计算公式                          | 说明             |
+|:-----------------------|:------------------------------|:---------------|
+| `shared_buffers`       | 内存 × `pg_shared_buffer_ratio` | 默认比例 0.25      |
+| `maintenance_work_mem` | shared_buffers × **50%**      | 加速索引创建和 VACUUM |
+| `work_mem`             | 64MB - **8GB**                | 更大的排序/哈希内存     |
+| `effective_cache_size` | 总内存 - shared_buffers          | 可用于缓存的预估内存     |
 {.full-width}
 
 **work_mem 计算逻辑**（与 OLTP 不同）：
@@ -203,25 +203,25 @@ idle_in_transaction_session_timeout: 0   # OLTP: 10min，禁用
 
 ## 与 OLTP 模板的主要差异
 
-| 参数 | [**OLAP**](/docs/pgsql/template/olap/) | [**OLTP**](/docs/pgsql/template/oltp/) | 差异原因 |
-|:-----|:-----|:-----|:---------|
-| max_connections | 500 | 500-1000 | 分析负载连接数少 |
-| work_mem 上限 | 8GB | 1GB | 支持更大的内存排序 |
-| maintenance_work_mem | 50% buffer | 25% buffer | 加速索引创建 |
-| max_locks_per_transaction | 2-4x | 1-2x | 更多表参与查询 |
-| max_parallel_workers | 80% cpu | 50% cpu | 激进并行 |
-| max_parallel_workers_per_gather | 50% cpu | 20% cpu | 激进并行 |
-| parallel_setup_cost | 1000 | 2000 | 默认值，鼓励并行 |
-| parallel_tuple_cost | 0.1 | 0.2 | 默认值，鼓励并行 |
-| enable_partitionwise_join | on | off | 分区表优化 |
-| enable_partitionwise_aggregate | on | off | 分区表优化 |
-| vacuum_cost_delay | 10ms | 20ms | 激进 vacuum |
-| vacuum_cost_limit | 10000 | 2000 | 激进 vacuum |
-| temp_file_limit | 1/5 磁盘 | 1/20 磁盘 | 允许更大临时文件 |
-| io_workers | 50% cpu | 25% cpu | 更多并行 IO |
-| log_min_duration_statement | 1000ms | 100ms | 放宽慢查询阈值 |
-| default_statistics_target | 1000 | 400 | 更精确统计 |
-| idle_in_transaction_session_timeout | 禁用 | 10min | 允许长事务 |
+| 参数                                  | [**OLAP**](/docs/pgsql/template/olap/) | [**OLTP**](/docs/pgsql/template/oltp/) | 差异原因      |
+|:------------------------------------|:---------------------------------------|:---------------------------------------|:----------|
+| max_connections                     | 500                                    | 500-1000                               | 分析负载连接数少  |
+| work_mem 上限                         | 8GB                                    | 1GB                                    | 支持更大的内存排序 |
+| maintenance_work_mem                | 50% buffer                             | 25% buffer                             | 加速索引创建    |
+| max_locks_per_transaction           | 2-4x                                   | 1-2x                                   | 更多表参与查询   |
+| max_parallel_workers                | 80% cpu                                | 50% cpu                                | 激进并行      |
+| max_parallel_workers_per_gather     | 50% cpu                                | 20% cpu                                | 激进并行      |
+| parallel_setup_cost                 | 1000                                   | 2000                                   | 默认值，鼓励并行  |
+| parallel_tuple_cost                 | 0.1                                    | 0.2                                    | 默认值，鼓励并行  |
+| enable_partitionwise_join           | on                                     | off                                    | 分区表优化     |
+| enable_partitionwise_aggregate      | on                                     | off                                    | 分区表优化     |
+| vacuum_cost_delay                   | 10ms                                   | 20ms                                   | 激进 vacuum |
+| vacuum_cost_limit                   | 10000                                  | 2000                                   | 激进 vacuum |
+| temp_file_limit                     | 1/5 磁盘                                 | 1/20 磁盘                                | 允许更大临时文件  |
+| io_workers                          | 50% cpu                                | 25% cpu                                | 更多并行 IO   |
+| log_min_duration_statement          | 1000ms                                 | 100ms                                  | 放宽慢查询阈值   |
+| default_statistics_target           | 1000                                   | 400                                    | 更精确统计     |
+| idle_in_transaction_session_timeout | 禁用                                     | 10min                                  | 允许长事务     |
 {.full-width}
 
 

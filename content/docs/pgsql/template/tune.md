@@ -63,34 +63,34 @@ Pigsty 默认会检测系统的内存大小，并以此为依据设定最大连�
 
 | OLTP                               | 设置逻辑                           | 范围限制                    |
 |------------------------------------|--------------------------------|-------------------------|
-| `max_worker_processes`             | `max(CPU + 8, 16) + 8`         | 即 `max(CPU + 16, 24)`      |
+| `max_worker_processes`             | `max(CPU + 8, 16) + 8`         | 即 `max(CPU + 16, 24)`   |
 | `max_parallel_workers`             | `max(ceil(50% CPU), 2)`        | 1/2 CPU 上取整，最少两个        |
 | `max_parallel_maintenance_workers` | `max(ceil(33% CPU), 2)`        | 1/3 CPU 上取整，最少两个        |
 | `max_parallel_workers_per_gather`  | `min(max(ceil(20% CPU), 2),8)` | 1/5 CPU 下取整，最少两个，最多 8 个 |
 {.full-width}
 
-| OLAP                               | 设置逻辑                     | 范围限制             |
-|------------------------------------|--------------------------|------------------|
+| OLAP                               | 设置逻辑                     | 范围限制                  |
+|------------------------------------|--------------------------|-----------------------|
 | `max_worker_processes`             | `max(CPU + 12, 20) + 8`  | 即 `max(CPU + 20, 28)` |
-| `max_parallel_workers`             | `max(ceil(80% CPU, 2))`  | 4/5 CPU 上取整，最少两个 |
-| `max_parallel_maintenance_workers` | `max(ceil(33% CPU), 2)`  | 1/3 CPU 上取整，最少两个 |
-| `max_parallel_workers_per_gather`  | `max(floor(50% CPU), 2)` | 1/2 CPU 上取整，最少两个 |
+| `max_parallel_workers`             | `max(ceil(80% CPU, 2))`  | 4/5 CPU 上取整，最少两个      |
+| `max_parallel_maintenance_workers` | `max(ceil(33% CPU), 2)`  | 1/3 CPU 上取整，最少两个      |
+| `max_parallel_workers_per_gather`  | `max(floor(50% CPU), 2)` | 1/2 CPU 上取整，最少两个      |
 {.full-width}
 
-| CRIT                               | 设置逻辑                    | 范围限制             |
-|------------------------------------|-------------------------|------------------|
+| CRIT                               | 设置逻辑                    | 范围限制                  |
+|------------------------------------|-------------------------|-----------------------|
 | `max_worker_processes`             | `max(CPU + 8, 16) + 8`  | 即 `max(CPU + 16, 24)` |
-| `max_parallel_workers`             | `max(ceil(50% CPU), 2)` | 1/2 CPU 上取整，最少两个 |
-| `max_parallel_maintenance_workers` | `max(ceil(33% CPU), 2)` | 1/3 CPU 上取整，最少两个 |
-| `max_parallel_workers_per_gather`  | `0`, 按需启用               |                  |
+| `max_parallel_workers`             | `max(ceil(50% CPU), 2)` | 1/2 CPU 上取整，最少两个      |
+| `max_parallel_maintenance_workers` | `max(ceil(33% CPU), 2)` | 1/3 CPU 上取整，最少两个      |
+| `max_parallel_workers_per_gather`  | `0`, 按需启用               |                       |
 {.full-width}
 
-| TINY                               | 设置逻辑                    | 范围限制             |
-|------------------------------------|-------------------------|------------------|
+| TINY                               | 设置逻辑                     | 范围限制                  |
+|------------------------------------|--------------------------|-----------------------|
 | `max_worker_processes`             | `max(CPU + 4, 12) + 8`   | 即 `max(CPU + 12, 20)` |
-| `max_parallel_workers`             | `max(floor(50% CPU), 1)`  | 50% CPU 下取整，最少 1 个 |
-| `max_parallel_maintenance_workers` | `max(floor(33% CPU), 1)`  | 33% CPU 下取整，最少 1 个 |
-| `max_parallel_workers_per_gather`  | `0`，按需启用                | 禁用单个查询的并行 gather |
+| `max_parallel_workers`             | `max(floor(50% CPU), 1)` | 50% CPU 下取整，最少 1 个    |
+| `max_parallel_maintenance_workers` | `max(floor(33% CPU), 1)` | 33% CPU 下取整，最少 1 个    |
+| `max_parallel_workers_per_gather`  | `0`，按需启用                 | 禁用单个查询的并行 gather      |
 {.full-width}
 
 请注意，CRIT 和 TINY 模板直接通过设置 `max_parallel_workers_per_gather = 0 ` 关闭了并行查询。
