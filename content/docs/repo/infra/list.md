@@ -55,7 +55,7 @@ allow_loading_unsigned_plugins = victoriametrics-logs-datasource,victoriametrics
 
 | 名称                                                                     | 版本       | 许可证                                                                               | 备注            |
 |------------------------------------------------------------------------|----------|-----------------------------------------------------------------------------------|---------------|
-| [`prometheus`](https://github.com/prometheus/prometheus)               | `3.13.1` | [Apache-2.0](https://github.com/prometheus/prometheus/blob/main/LICENSE)          | 云原生监控系统与时序数据库 |
+| [`prometheus`](https://github.com/prometheus/prometheus)               | `3.13.2` | [Apache-2.0](https://github.com/prometheus/prometheus/blob/main/LICENSE)          | 云原生监控系统与时序数据库 |
 | [`pushgateway`](https://github.com/prometheus/pushgateway)             | `1.11.3` | [Apache-2.0](https://github.com/prometheus/pushgateway/blob/master/LICENSE)       | 短生命周期任务指标推送网关 |
 | [`alertmanager`](https://github.com/prometheus/alertmanager)           | `0.33.1` | [Apache-2.0](https://github.com/prometheus/alertmanager/blob/main/LICENSE)        | 告警管理与通知分发     |
 | [`blackbox-exporter`](https://github.com/prometheus/blackbox_exporter) | `0.28.0` | [Apache-2.0](https://github.com/prometheus/blackbox_exporter/blob/master/LICENSE) | 黑盒探测，监控端点可用性  |
