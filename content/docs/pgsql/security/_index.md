@@ -41,7 +41,7 @@ PostgreSQL 安全由身份认证、权限控制、网络边界、加密通信、
 ## 管理与验证
 
 - [**用户管理**](/docs/pgsql/admin/user)：创建、更新和删除用户。
-- [**HBA 管理**](/docs/pgsql/admin/hba)：刷新规则、检查生效配置并排查认证问题。
+- [**HBA 管理**](/docs/pgsql/admin/hba/)：刷新规则、检查生效配置并排查认证问题。
 - [**安全考量**](/docs/deploy/security)：生产部署的加固与验收清单。
 - [**安全建议**](/docs/setup/security)：安装前最基本的密码、网络和文件检查。
 

@@ -115,7 +115,7 @@ Pigsty 不接管 SSH 服务端配置：禁用口令登录、限制 root 远程�
 - 强制启用数据校验和，不受 `pg_checksum` 参数影响；
 - 启用严格同步复制（`synchronous_mode_strict`），没有可用同步副本时阻塞需要同步确认的写入；
 - 记录连接与断开事件；PostgreSQL 18 还会区分连接接收、认证与授权阶段；
-- 将 [**watchdog**](/docs/concept/ha/failure/partition#2-linux-watchdog) 配置为 `automatic`，仅在系统存在可用设备时启用。
+- 将 [**watchdog**](/docs/concept/ha/failure/partition/#2-linux-watchdog) 配置为 `automatic`，仅在系统存在可用设备时启用。
 
 严格同步模式以不丢失已确认事务为目标，但仍依赖 `synchronous_commit`、同步副本状态和故障切换条件；[**RPO**](/docs/concept/ha/rpo) 需要通过目标拓扑上的故障演练验证。
 

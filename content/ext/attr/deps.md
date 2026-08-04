@@ -161,7 +161,7 @@ weight: 30
 | [`fuzzystrmatch`](/ext/e/fuzzystrmatch) | [`postgis_tiger_geocoder`](/ext/e/postgis_tiger_geocoder) | 确定字符串之间的相似性和距离 |
 | [`citus`](/ext/e/citus) | [`documentdb_distributed`](/ext/e/documentdb_distributed) | Citus 分布式数据库 |
 | [`pg_duckdb`](/ext/e/pg_duckdb) | [`pg_mooncake`](/ext/e/pg_mooncake) | 在PostgreSQL中的嵌入式DuckDB扩展 |
-| [`pg_partman`](/ext/e/pg_partman) | [`partman_to_cstore`](/ext/e/partman_to_cstore) [`timeseries`](/ext/e/timeseries) | 用于按时间或 ID 管理分区表的扩展 |
+| [`pg_partman`](/ext/e/pg_partman) | `partman_to_cstore` [`timeseries`](/ext/e/timeseries) | 用于按时间或 ID 管理分区表的扩展 |
 | [`pg_extension_base`](/ext/e/pg_extension_base) | [`pg_extension_updater`](/ext/e/pg_extension_updater) [`pg_lake_engine`](/ext/e/pg_lake_engine) | Snowflake 提供的 PostgreSQL 扩展开发基础设施，支持库预加载、扩展生命周期后台工作进程和依赖管理 |
 | [`pg_map`](/ext/e/pg_map) | [`pg_lake_engine`](/ext/e/pg_lake_engine) | pg_lake 内置并依赖的 PostgreSQL Map 数据类型。 |
 | [`pg_lake_engine`](/ext/e/pg_lake_engine) | [`pg_lake_copy`](/ext/e/pg_lake_copy) [`pg_lake_iceberg`](/ext/e/pg_lake_iceberg) [`pg_lake_table`](/ext/e/pg_lake_table) | 用于数据湖查询的查询引擎 |

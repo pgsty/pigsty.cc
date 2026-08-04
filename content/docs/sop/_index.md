@@ -105,7 +105,7 @@ categories: [教程, 参考]
 | 查看 HA 状态、切换、重启、重做从库                      | [**Patroni 管理**](/docs/pgsql/admin/patroni/)                              |
 | 管理连接池                                    | [**Pgbouncer 管理**](/docs/pgsql/admin/pgbouncer/)                          |
 | 启停 PostgreSQL、Patroni、Pgbouncer、Exporter | [**组件管理**](/docs/pgsql/admin/component/)                                  |
-| 管理备份、校验、清理、恢复                            | [**pgBackRest 管理**](/docs/pgsql/admin/pgbackrest/)                        |
+| 管理备份、校验、清理、恢复                            | [**备份恢复**](/docs/pgsql/backup/)                                         |
 | 配置备份、Vacuum、Analyze 等定时任务                | [**定时任务**](/docs/pgsql/admin/crontab/)                                    |
 | 升级版本与扩展                                  | [**版本升级**](/docs/pgsql/admin/upgrade/)，[**扩展管理**](/docs/pgsql/admin/ext/) |
 

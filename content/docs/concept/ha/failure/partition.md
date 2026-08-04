@@ -3,7 +3,6 @@ title: 网络分区
 weight: 50
 description: 主库与 DCS 网络分区，导致租约过期并触发脑裂防护与故障切换的路径
 icon: fa-solid fa-network-wired
-draft: true
 module: [PGSQL]
 categories: [概念]
 ---
