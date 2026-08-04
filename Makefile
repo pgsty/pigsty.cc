@@ -8,8 +8,13 @@ b:build
 build:
 	hugo build --minify
 
+c: check
+check:
+	hugo build --cleanDestinationDir --quiet
+	python3 bin/check_internal_links.py public
+
 s: sync
 sync:
 	rsync -avz public/ jp:/data/web/pigsty.cc/
 
-.PHONY: default d dev b build s sync
+.PHONY: default d dev b build c check s sync

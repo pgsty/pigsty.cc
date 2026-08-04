@@ -4,6 +4,8 @@ weight: 10
 module: [PIGSTY]
 categories: [参考]
 linkTitle: 文档
+icon: fa-solid fa-book
+sidebar_root_for: self
 no_list: true
 hide_feedback: true
 outputs:

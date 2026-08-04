@@ -10,7 +10,7 @@ other = "下一页"
 other = "阅读全文"
 
 [ui_search]
-other = "站内搜索……"
+other = "搜索"
 
 # Used in sentences such as "Posted in News"
 [ui_in]
@@ -89,3 +89,72 @@ other = "这个页面对您有帮助吗？"
 other = "有帮助"
 [feedback_negative]
 other = "没帮助"
+
+
+# Fumadocs 风格文档 chrome（侧栏 / TOC / 搜索弹窗）
+
+[toc_on_this_page]
+other = "本页目录"
+
+[toc_top_of_page]
+other = "回到顶部"
+
+[silo_sidebar_nav]
+other = "文档导航"
+
+[silo_sidebar_collapse]
+other = "收起侧边栏"
+
+[silo_sidebar_expand]
+other = "展开侧边栏"
+
+[silo_drawer_open]
+other = "打开导航"
+
+[silo_drawer_close]
+other = "关闭导航"
+
+[silo_theme_toggle]
+other = "切换主题"
+
+[silo_lang_label]
+other = "语言"
+
+[silo_search_nav]
+other = "切换"
+
+[silo_search_open]
+other = "选定"
+
+[silo_search_close]
+other = "关闭"
+
+[silo_search_empty]
+other = "没有找到相关结果"
+
+[silo_search_loading]
+other = "正在加载搜索索引……"
+
+[silo_root_menu_label]
+other = "切换文档集"
+
+[silo_footer_author]
+other = "冯若航"
+
+[silo_toc_hide]
+other = "隐藏此栏"
+
+[silo_toc_show]
+other = "显示本页目录"
+
+[silo_quick_docs]
+other = "文档"
+
+[silo_quick_blog]
+other = "博客"
+
+[silo_tags_title]
+other = "标签"
+
+[silo_published_on]
+other = "发布于"

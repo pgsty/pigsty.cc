@@ -1,0 +1,26 @@
+<div class="td-content">
+	<h1>{{ .Title }}</h1>
+	{{ with .Params.description }}<div class="lead">{{ . | markdownify }}</div>{{ end }}
+	{{/* byline：撰文 · 发布于 {日期} · {栏目链接}（栏目可点击回到对应博客专栏）。 */}}
+	<div class="td-byline mb-4">
+		{{ with .Params.author }}{{ T "post_byline_by" }}<b>{{ . | markdownify }}</b> ·{{ end }}
+		{{ T "silo_published_on" }} <time datetime="{{ $.Date.Format "2006-01-02" }}" class="text-body-secondary">{{ $.Date.Format $.Site.Params.time_format_blog }}</time>
+		{{- with .CurrentSection }} · <a class="td-byline__section" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>{{ end }}
+	</div>
+	<header class="article-meta">
+		{{ partial "taxonomy_terms_article_wrapper.html" . -}}
+		{{ if (and (not .Params.hide_readingtime) (.Site.Params.ui.readingtime.enable)) -}}
+			{{ partial "reading-time.html" . -}}
+		{{ end -}}
+	</header>
+	{{ .Render "_td-content-after-header" -}}
+	{{ .Content }}
+	{{ if (.Site.Config.Services.Disqus.Shortname) -}}
+		<br />
+		{{- partial "disqus-comment.html" . -}}
+		<br />
+	{{ end -}}
+
+	{{ partial "pager.html" . }}
+	{{ partial "page-meta-lastmod.html" . -}}
+</div>

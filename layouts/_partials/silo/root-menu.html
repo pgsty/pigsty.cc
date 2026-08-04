@@ -1,0 +1,53 @@
+{{- /* 根节点下拉（fumadocs v16 SidebarTabsDropdown 同款）。
+       条目 = 所有 sidebar_root_for: self 的 section（docs/ext/blog 与嵌套工具文档），
+       顶级在前按权重排序、嵌套根按标题续后；当前根打勾（最深匹配优先，
+       无从属关系时按 type 兜底——如 /tags/ 归入博客根）。
+       开关 params.ui.sidebar_root_menu；无 self 根 section 时整体不渲染。 */ -}}
+{{- if .Site.Params.ui.sidebar_root_menu -}}
+{{- $roots := where .Site.Pages "Params.sidebar_root_for" "self" -}}
+{{- if gt (len $roots) 0 -}}
+  {{- $top := slice -}}
+  {{- $nested := slice -}}
+  {{- range $roots -}}
+    {{- if eq .Parent .Site.Home }}{{ $top = $top | append . }}{{ else }}{{ $nested = $nested | append . }}{{ end -}}
+  {{- end -}}
+  {{- $entries := append (sort $nested "Title") (sort $top "Weight") -}}
+  {{- /* 当前根：eq / IsDescendant 命中者取路径最深的；否则按 type 匹配；再兜底 docs 根。 */ -}}
+  {{- $current := .Site.GetPage "/docs" -}}
+  {{- $depth := -1 -}}
+  {{- range $entries -}}
+    {{- if or (eq $ .) ($.IsDescendant .) -}}
+      {{- $d := len .RelPermalink -}}
+      {{- if gt $d $depth }}{{ $current = . }}{{ $depth = $d }}{{ end -}}
+    {{- end -}}
+  {{- end -}}
+  {{- if lt $depth 0 -}}
+    {{- range $entries }}{{ if eq $.Type .Type }}{{ $current = . }}{{ end }}{{ end -}}
+  {{- end -}}
+  {{- with $current -}}
+<div class="silo-root">
+  <button type="button" class="silo-root__trigger" data-silo-root-toggle
+    aria-haspopup="true" aria-expanded="false" aria-label="{{ T "silo_root_menu_label" }}">
+    <span class="silo-root__icon">{{ with .Params.Icon }}<i class="{{ . }}" aria-hidden="true"></i>{{ end }}</span>
+    <span class="silo-root__title">{{ .LinkTitle }}</span>
+    {{ partialCached "silo/icon.html" "chevrons-up-down" "chevrons-up-down" }}
+  </button>
+  <div class="silo-root__pop" hidden>
+    {{ range $entries -}}
+    {{ $active := eq . $current -}}
+    <a class="silo-root__item{{ if $active }} is-active{{ end }}" href="{{ .RelPermalink }}">
+      <span class="silo-root__icon">{{ with .Params.Icon }}<i class="{{ . }}" aria-hidden="true"></i>{{ end }}</span>
+      <span class="silo-root__meta">
+        <span class="silo-root__item-title">{{ .LinkTitle }}</span>
+        {{ with .Description }}<span class="silo-root__item-desc">{{ . }}</span>{{ end }}
+      </span>
+      <span class="silo-root__check{{ if not $active }} is-hidden{{ end }}">
+        {{- partialCached "silo/icon.html" "check" "check" -}}
+      </span>
+    </a>
+    {{ end -}}
+  </div>
+</div>
+  {{- end -}}
+{{- end -}}
+{{- end -}}

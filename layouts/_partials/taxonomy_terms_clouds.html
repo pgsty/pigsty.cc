@@ -1,54 +1,40 @@
-{{ $context := . -}}
-{{ $isDocsPage := or (hasPrefix .RelPermalink "/docs/") (hasPrefix .RelPermalink "/ext/") -}}
-{{ $isBlogPage := hasPrefix .RelPermalink "/blog/" -}}
-
-{{ if .Site.Params.taxonomy -}}
-	{{ if .Site.Params.Taxonomy.taxonomyCloud -}}
-		{{ range $index, $taxo := .Site.Params.Taxonomy.taxonomyCloud -}}
-			{{ $taxoName := lower (printf "%v" $taxo) -}}
-			{{ $showTaxo := true -}}
-			{{ if and $isDocsPage (eq $taxoName "tags") -}}
-				{{ $showTaxo = false -}}
-			{{ end -}}
-			{{ if and $isBlogPage (ne $taxoName "tags") -}}
-				{{ $showTaxo = false -}}
-			{{ end -}}
-			{{ if $showTaxo -}}
-				{{ if $.Site.Params.Taxonomy.taxonomyCloudTitle -}}
-					{{ $.Scratch.Set "title" (index $.Site.Params.Taxonomy.taxonomyCloudTitle $index) -}}
-				{{ else -}}
-					{{ $.Scratch.Set "title" (humanize $taxo) -}}
-				{{ end -}}
-				{{ partial "taxonomy_terms_cloud.html" (dict "context" $context "taxo" $taxo "title" ($.Scratch.Get "title")) -}}
-			{{ end -}}
-		{{ end }}
-	{{ else -}}
-		{{ range $taxo, $taxo_map := .Site.Taxonomies -}}
-			{{ $taxoName := lower (printf "%v" $taxo) -}}
-			{{ $showTaxo := true -}}
-			{{ if and $isDocsPage (eq $taxoName "tags") -}}
-				{{ $showTaxo = false -}}
-			{{ end -}}
-			{{ if and $isBlogPage (ne $taxoName "tags") -}}
-				{{ $showTaxo = false -}}
-			{{ end -}}
-			{{ if $showTaxo -}}
-				{{ partial "taxonomy_terms_cloud.html" (dict "context" $context "taxo" $taxo "title" (humanize $taxo)) -}}
-			{{ end -}}
-		{{ end }}
-	{{ end -}}
-{{ else -}}
-	{{ range $taxo, $taxo_map := .Site.Taxonomies -}}
-		{{ $taxoName := lower (printf "%v" $taxo) -}}
-		{{ $showTaxo := true -}}
-		{{ if and $isDocsPage (eq $taxoName "tags") -}}
-			{{ $showTaxo = false -}}
-		{{ end -}}
-		{{ if and $isBlogPage (ne $taxoName "tags") -}}
-			{{ $showTaxo = false -}}
-		{{ end -}}
-		{{ if $showTaxo -}}
-			{{ partial "taxonomy_terms_cloud.html" (dict "context" $context "taxo" $taxo "title" (humanize $taxo)) -}}
-		{{ end -}}
-	{{ end }}
-{{ end -}}
+{{- /* 右栏 taxonomy 云（chrome 页专用）：每个 taxonomy 一个可折叠区块
+       （复用树的 checkbox/chevron/grid-rows 动画机制），chips 按文章数降序。
+       可见性沿 pigsty 既有策略：docs/ext（type docs）显示 模块+分类，
+       blog 语境（含 /tags/）只显示 标签。标题取 params.taxonomy.taxonomyCloudTitle。 */ -}}
+{{- $p := . -}}
+{{- $clouds := $p.Site.Params.taxonomy.taxonomyCloud | default (slice "tags") -}}
+{{- $titles := $p.Site.Params.taxonomy.taxonomyCloudTitle -}}
+{{- range $i, $taxo := $clouds -}}
+  {{- $taxoName := lower (printf "%v" $taxo) -}}
+  {{- $show := true -}}
+  {{- if and (eq $p.Type "docs") (eq $taxoName "tags") }}{{ $show = false }}{{ end -}}
+  {{- if and (eq $p.Type "blog") (ne $taxoName "tags") }}{{ $show = false }}{{ end -}}
+  {{- if $show -}}
+    {{- $terms := index $p.Site.Taxonomies $taxoName -}}
+    {{- if gt (len $terms) 0 -}}
+      {{- $title := "" -}}
+      {{- if $titles }}{{ $title = index $titles $i }}{{ else }}{{ $title = humanize $taxo }}{{ end -}}
+<div class="silo-tags-cloud">
+  <input type="checkbox" class="silo-tree__state" id="silo-cloud-{{ $taxoName }}" checked>
+  <label class="silo-tree__row silo-tags-cloud__head" for="silo-cloud-{{ $taxoName }}">
+    <span class="silo-tags-cloud__title">{{ $title }}</span>
+    <span class="silo-tree__chevron" aria-hidden="true">
+      {{- partialCached "silo/icon.html" "chevron-down" "chevron-down" -}}
+    </span>
+  </label>
+  <div class="silo-tree__children">
+    <div class="silo-tree__children-inner">
+      <div class="silo-tags-cloud__chips">
+        {{ range $terms.ByCount -}}
+        <a class="silo-tag" href="{{ .Page.RelPermalink }}">
+          <span>{{ .Page.LinkTitle }}</span><span class="silo-tag__count">{{ .Count }}</span>
+        </a>
+        {{ end -}}
+      </div>
+    </div>
+  </div>
+</div>
+    {{- end -}}
+  {{- end -}}
+{{- end -}}

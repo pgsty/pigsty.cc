@@ -1,6 +1,8 @@
 ---
 title: Pigsty 已打包扩展目录
-linkTitle: Pigsty 已打包扩展目录
+linkTitle: 扩展目录
+icon: fa-solid fa-puzzle-piece
+sidebar_root_for: self
 description: >
   扩展是 PostgreSQL 的灵魂所在，Pigsty 制作、打包、收录并整合了 562 个 PG 生态扩展，供用户开箱即用。
 weight: 20

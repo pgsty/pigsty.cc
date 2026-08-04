@@ -1,0 +1,12 @@
+{{- /* 侧栏收起时左上角的浮动控件：展开按钮 + 搜索按钮。
+       默认 display:none，仅 html[data-silo-sidebar=collapsed] 且 ≥md 时由 CSS 显示。 */ -}}
+<div class="silo-float d-print-none">
+  <button type="button" class="silo-iconbtn" data-silo-sidebar-toggle
+    title="{{ T "silo_sidebar_expand" }}" aria-label="{{ T "silo_sidebar_expand" }}">
+    {{- partialCached "silo/icon.html" "panel-left" "panel-left" -}}
+  </button>
+  <button type="button" class="silo-iconbtn" data-silo-search-open
+    aria-label="{{ T "ui_search" }}">
+    {{- partialCached "silo/icon.html" "search" "search" -}}
+  </button>
+</div>

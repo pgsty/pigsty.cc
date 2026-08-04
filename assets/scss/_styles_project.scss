@@ -80,11 +80,11 @@
   }
 }
 
-// 覆盖 Docsy 默认的内容最大宽度（从 80% 改为 90%）
-// 影响：段落、代码块、blockquote、表格、asciinema 播放器等
+// 内容占满正文列：列宽本身由 .silo-article 的 page_width 参数管理
+//（normal 1050 / wide 1300 / full），不再用百分比二次收窄。
 .td-max-width-on-larger-screens {
   @include media-breakpoint-up(lg) {
-    max-width: 90%;
+    max-width: 100%;
   }
 }
 
@@ -100,87 +100,8 @@
   border-top: 1px solid #dee2e6;
 }
 
-// 加宽左侧导航栏（仅桌面端）
-@include media-breakpoint-up(xl) {
-  .td-sidebar__inner {
-    flex: 0 1 400px !important;  // 从默认 320px 增加到 400px
-  }
-}
-
-// 侧边栏分割线样式
-.td-sidebar-nav__section.sidebar-divider {
-  margin-top: 2rem;
-  margin-bottom: 0.5rem;
-  padding-top: 0;
-  padding-bottom: 0;
-  border: none;
-}
-
-// 分割线链接样式（不可点击）
-.td-sidebar-link__divider {
-  cursor: default !important;
-  pointer-events: none;
-  display: block !important;
-  font-weight: 600 !important;
-  font-size: 0.75rem !important;
-  color: #6c757d !important;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  padding: 0.75rem 0 0.5rem 0 !important;
-  margin: 0 !important;
-  position: relative;
-  background: transparent !important;
-
-  // 深色模式下的文字颜色
-  @media (prefers-color-scheme: dark) {
-    color: #adb5bd !important;
-  }
-
-  // 文字上方的分割线
-  &::before {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 1px;
-    background: linear-gradient(
-      to right,
-      rgba(108, 117, 125, 0.4) 0%,
-      rgba(108, 117, 125, 0.2) 70%,
-      rgba(108, 117, 125, 0) 100%
-    );
-    margin-bottom: 0.75rem;
-
-    @media (prefers-color-scheme: dark) {
-      background: linear-gradient(
-        to right,
-        rgba(173, 181, 189, 0.3) 0%,
-        rgba(173, 181, 189, 0.15) 70%,
-        rgba(173, 181, 189, 0) 100%
-      );
-    }
-  }
-
-  // 移除 hover 效果
-  &:hover {
-    background: transparent !important;
-    color: #6c757d !important;
-
-    @media (prefers-color-scheme: dark) {
-      color: #adb5bd !important;
-    }
-  }
-
-  // 移除图标（如果有）
-  i {
-    display: none;
-  }
-
-  // 文字容器
-  span {
-    display: block;
-    white-space: nowrap;
-  }
-}
+// （旧 .td-sidebar 加宽与 sidebar-divider 样式已随 fumadocs 化侧栏退役：
+//   分区丝印现由 silo/_sidebar.scss 的 .silo-tree__heading 渲染。）
 
 // 全宽表格样式（与正文宽度对齐，大屏幕上 90%）
 // 使用方法：在 Markdown 表格后添加 {.full-width}
@@ -1186,20 +1107,10 @@ a {
   --pg-grid-line: rgba(120, 150, 190, 0.045);
 }
 
-// 全页低噪点覆铜网格（首页同款，克制的 44px 格点）
-body.td-section,
-body.td-page,
-body.td-home,
-body.td-taxonomy,
-body.td-404 {
-  background-image:
-    linear-gradient(var(--pg-grid-line) 1px, transparent 1px),
-    linear-gradient(90deg, var(--pg-grid-line) 1px, transparent 1px);
-  background-size: 44px 44px;
-  background-attachment: fixed;
-}
+// （覆铜网格背景已从文档 chrome 移除 —— fumadocs 纯平基调；
+//   首页/价格页的格线在 landing-v3.css 中独立保留。）
 
-// ---- 导航栏：毛玻璃电路板顶盖 ----------------------------------
+// ---- 导航栏：毛玻璃电路板顶盖（仅服务 search 等非 chrome 页）----
 .td-navbar {
   --td-navbar-bg-color: var(--pg-header-bg);
   --td-navbar-backdrop-filter: blur(14px);
@@ -1290,97 +1201,48 @@ body.td-404 {
   }
 }
 
-// ---- 左侧边栏：目录树 ------------------------------------------
-.td-sidebar {
-  background: transparent;
+// （旧 .td-sidebar / .td-sidebar-nav / .td-toc / .td-page-meta 皮肤已随
+//   fumadocs 化 chrome 退役 —— 新样式见文件末尾的 silo/ 系列分部。）
 
-  @include media-breakpoint-up(md) {
-    border-right: 1px solid var(--bs-border-color);
-    padding-top: 1rem;
-  }
-
-  .td-sidebar__search .td-search__input {
-    background: var(--pg-elev);
-    border: 1px solid var(--bs-border-color);
-    border-radius: 8px;
-    color: var(--bs-body-color);
-
-    &:focus {
-      border-color: var(--bs-link-color);
-      box-shadow: 0 0 0 3px rgba(var(--bs-link-color-rgb), 0.12);
-    }
-  }
+// ---- 页底补充信息区：最后修改行（图标列 + 文本的统一行结构）------
+.td-content .td-page-meta__lastmod,
+.td-page-meta--child {
+  color: var(--bs-tertiary-color);
 }
 
-.td-sidebar-nav {
-  a.td-sidebar-link {
-    color: var(--bs-secondary-color);
-    transition: color 120ms ease;
+.td-content .td-page-meta__lastmod {
+  display: flex;
+  align-items: baseline;
+  gap: 0.45em;
+  font-size: 0.8rem;
+  line-height: 1.65;
+  color: var(--bs-tertiary-color) !important; // 压过 .text-body-secondary
+  margin-top: 2.75rem !important;
+  padding-top: 0.9rem !important;
+
+  a {
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
 
     &:hover {
-      color: var(--bs-body-color);
-    }
-
-    // 当前页：加粗 + PG 蓝（无背景板，不动排版）
-    &.active,
-    &.active:hover {
-      color: var(--bs-link-color);
-      font-weight: 700;
-      background: transparent;
-    }
-  }
-
-  // 章节标题（一级条目）
-  &__section-title > a.td-sidebar-link {
-    color: var(--bs-body-color);
-    font-weight: 600;
-  }
-
-  .foldable > input:checked ~ label > a {
-    color: var(--bs-body-color);
-  }
-}
-
-// 侧边栏分区丝印（既有 divider 机制，换成等宽丝印体 + 铜色圆点）
-.td-sidebar-link__divider {
-  font-family: var(--bs-font-monospace) !important;
-  font-size: 0.68rem !important;
-  font-weight: 500 !important;
-  letter-spacing: 0.16em !important;
-  color: var(--pg-silk) !important;
-
-  &::before {
-    background: linear-gradient(to right, var(--pg-copper-dim), transparent 85%) !important;
-    height: 1px;
-    opacity: 0.6;
-  }
-
-  &:hover {
-    color: var(--pg-silk) !important;
-  }
-}
-
-// ---- 右侧 TOC 与页面元信息 --------------------------------------
-.td-toc {
-  border-left: 1px solid var(--bs-border-color);
-
-  #TableOfContents {
-    a {
-      color: var(--bs-tertiary-color);
-      transition: color 120ms ease;
-
-      &:hover {
-        color: var(--bs-link-color);
-      }
+      color: var(--bs-link-hover-color);
     }
   }
 }
 
-.td-page-meta a {
-  color: var(--bs-secondary-color);
+// 图标列：FA 与 lucide SVG 共用，等宽居中对齐、弱化。
+.silo-origin__icon {
+  flex-shrink: 0;
+  display: inline-flex;
+  justify-content: center;
+  width: 1.25em;
+  opacity: 0.65;
 
-  &:hover {
-    color: var(--bs-link-color);
+  .silo-icon {
+    width: 1.05em;
+    height: 1.05em;
+    align-self: center;
   }
 }
 
@@ -1859,3 +1721,14 @@ body.td-404 {
     }
   }
 }
+
+// ============================================================
+// Fumadocs 风格文档 chrome（侧栏 / TOC / 搜索弹窗 / 布局壳）
+// 置于文件最末，享有整个样式管线的最高级联优先级。
+// ============================================================
+@import 'silo/tokens';
+@import 'silo/layout';
+@import 'silo/sidebar';
+@import 'silo/toc';
+@import 'silo/search';
+@import 'silo/blog';

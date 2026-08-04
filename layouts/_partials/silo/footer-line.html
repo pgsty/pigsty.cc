@@ -1,0 +1,22 @@
+{{- /* 单行页脚（docs/blog/ext 专用；非 chrome 页仍用完整版 footer.html）。
+       三段式（pg-footer 底行同款）：版权链接组 | ICP 备案（params.footer_icp，留空不渲染）| 单向跨站语言切换。 */ -}}
+{{- $languageTarget := printf "https://pigsty.io%s" .RelPermalink -}}
+{{- $languageLabel := "English" -}}
+<footer class="silo-footline d-print-none">
+  <div class="silo-footline__copy">
+    © {{ .Site.Params.copyright.from_year | default 2018 }}-{{ now.Year }}
+    <a href="https://vonng.com" target="_blank" rel="noopener">{{ T "silo_footer_author" }}</a>
+    (<a href="https://github.com/Vonng" target="_blank" rel="noopener">Vonng</a>)
+    @ <a href="https://github.com/pgsty" target="_blank" rel="noopener">PGSTY</a>
+  </div>
+  {{ with .Site.Params.footer_icp -}}
+  <div class="silo-footline__icp">
+    <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener">{{ . }}</a>
+  </div>
+  {{- end }}
+  {{ if $languageTarget -}}
+  <div class="silo-footline__lang">
+    <a href="{{ $languageTarget }}">{{ $languageLabel }}</a>
+  </div>
+  {{- end }}
+</footer>

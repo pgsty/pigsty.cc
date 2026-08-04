@@ -1,0 +1,7 @@
+{{- if partial "silo/is-chrome.html" . -}}
+  {{ partial "silo/search-dialog.html" . }}
+  {{- /* lunr 自托管并与 silo-docs.js 合并为单一指纹 bundle（不依赖 CDN，无加载竞态）。 */ -}}
+  {{- $bundle := slice (resources.Get "js/vendor/lunr.min.js") (resources.Get "js/silo-docs.js")
+        | resources.Concat "js/silo-docs-bundle.js" | minify | fingerprint -}}
+  <script src="{{ $bundle.RelPermalink }}" integrity="{{ $bundle.Data.Integrity }}" defer></script>
+{{- end -}}

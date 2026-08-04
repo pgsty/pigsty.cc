@@ -1,0 +1,296 @@
+// ============================================================
+// silo/toc —— 右侧「本页目录」：灰轨 + 1px 主色 thumb 竖条
+// thumb 的 top/height 由 silo-docs.js 写入 --silo-thumb-top / --silo-thumb-h。
+// ============================================================
+
+// 占位列（面板本体 fixed，右侧滚到底不随文档移动；整栏可隐藏）。
+.silo-toc {
+  display: none;
+
+  @include media-breakpoint-up(xl) {
+    display: block;
+    flex: 0 0 286px;
+    width: 286px;
+    transition: width 150ms ease, flex-basis 150ms ease;
+  }
+}
+
+.silo-toc__panel {
+  display: none;
+
+  @include media-breakpoint-up(xl) {
+    position: fixed;
+    inset: 0 0 0 auto;
+    width: 286px;
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    padding: 16px 20px 12px 8px;
+    transition: transform 200ms ease, opacity 150ms ease;
+  }
+}
+
+// 整栏隐藏（html[data-silo-toc=collapsed]）：列宽归零、面板右滑出。
+@include media-breakpoint-up(xl) {
+  [data-silo-toc='collapsed'] .silo-toc {
+    width: 0;
+    flex-basis: 0;
+  }
+
+  [data-silo-toc='collapsed'] .silo-toc__panel {
+    transform: translateX(100%);
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+// 右上恢复浮钮（仅 collapsed + ≥xl 显示）。
+.silo-toc-float {
+  display: none;
+  position: fixed;
+  top: 16px;
+  inset-inline-end: 16px;
+  z-index: 40;
+  padding: 2px;
+  border-radius: 12px;
+  border: 1px solid var(--bs-border-color);
+  background: var(--silo-card);
+  box-shadow: var(--silo-shadow-lg);
+}
+
+@include media-breakpoint-up(xl) {
+  [data-silo-toc='collapsed'] .silo-toc-float {
+    display: flex;
+    animation: silo-fade 300ms ease both;
+  }
+}
+
+/* actions 行：标题图标钮（=整栏隐藏开关）+ 标题 + 语言直切 + 亮暗直切 */
+
+.silo-toc__actions {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  flex-shrink: 0;
+  padding-bottom: 6px;
+}
+
+.silo-toc__title-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--silo-muted-fg);
+  transition: background-color 100ms ease, color 100ms ease;
+
+  .silo-icon {
+    width: 16px;
+    height: 16px;
+  }
+
+  &:hover {
+    background: var(--silo-accent);
+    color: var(--bs-body-color);
+  }
+}
+
+.silo-toc__title {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--silo-muted-fg);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.silo-toc__actions-spacer {
+  flex: 1 1 auto;
+}
+
+// 小号 ghost 钮（actions 行专用，紧凑排布容纳五枚）。
+.silo-iconbtn.silo-iconbtn--sm {
+  padding: 4px;
+  border-radius: 6px;
+
+  .silo-icon {
+    width: 16px;
+    height: 16px;
+  }
+
+  // FA 图标（Docs/Blog 快捷钮，与左侧导航同款）尺寸对齐 lucide。
+  i {
+    display: inline-block;
+    width: 16px;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+  }
+}
+
+// 亮暗直切钮：显示「目标模式」图标（亮色下出月亮，点击即切暗）。
+.silo-quick-theme .silo-icon--sun {
+  display: none;
+}
+
+html[data-bs-theme='dark'] .silo-quick-theme {
+  .silo-icon--moon {
+    display: none;
+  }
+
+  .silo-icon--sun {
+    display: inline-block;
+  }
+}
+
+.silo-toc__inner {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.silo-toc__body {
+  position: relative;
+  min-height: 0;
+  overflow-y: auto;
+  padding: 12px 0;
+  margin-inline-start: 1px;
+  scrollbar-width: none;
+  mask-image: linear-gradient(to bottom, transparent, #000 16px, #000 calc(100% - 16px), transparent);
+  -webkit-mask-image: linear-gradient(to bottom, transparent, #000 16px, #000 calc(100% - 16px), transparent);
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* v16「normal」变体：每条目一段 SVG 轨道 + 主色路径 clip-path 高亮 + 滑动圆点。
+   缩进（20/32/44px）由 silo-docs.js 以内联 padding-inline-start 写入。 */
+
+.silo-toc__body #TableOfContents {
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  a {
+    position: relative;
+    z-index: 0; // 让 z-index:-1 的轨道 SVG 垫在文字之下
+    display: block;
+    padding: 6px 0;
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--silo-muted-fg);
+    overflow-wrap: anywhere;
+    transition: color 150ms ease;
+
+    &:hover {
+      color: var(--bs-body-color);
+      text-decoration: none;
+    }
+
+    &.active {
+      color: var(--silo-primary);
+    }
+  }
+
+  > ul > li:first-child > a {
+    padding-top: 0;
+  }
+
+  > ul > li:last-child > a:only-child {
+    padding-bottom: 0;
+  }
+}
+
+// 每条目的灰色轨道段（line + 深度变化的贝塞尔连接线）。
+.silo-toc__rail {
+  position: absolute;
+  inset-inline-start: 0;
+  top: -6px;
+  height: calc(100% + 6px);
+  z-index: -1;
+  overflow: visible;
+
+  line,
+  path {
+    stroke: var(--silo-rail);
+    stroke-width: 1;
+    fill: none;
+  }
+
+  // 下一条目深度不同：本段提前 6px 结束，给连接曲线让位。
+  &--cut {
+    height: 100%;
+  }
+}
+
+// 活跃高亮：整列主色路径按 --silo-track-top/bottom 裁剪，150ms 平滑伸缩。
+.silo-toc__active {
+  position: absolute;
+  top: 0;
+  inset-inline-start: 0;
+  z-index: 1;
+  pointer-events: none;
+
+  svg {
+    display: block;
+    overflow: visible;
+    clip-path: polygon(
+      0 var(--silo-track-top, 0px),
+      100% var(--silo-track-top, 0px),
+      100% var(--silo-track-bottom, 0px),
+      0 var(--silo-track-bottom, 0px)
+    );
+    transition: clip-path 150ms ease;
+  }
+
+  path {
+    stroke: var(--silo-primary);
+    stroke-width: 1;
+    fill: none;
+  }
+}
+
+// 沿路径滑动的 4px 圆点（CSS motion path）。
+.silo-toc__dot {
+  position: absolute;
+  top: 0;
+  inset-inline-start: 0;
+  width: 4px;
+  height: 4px;
+  border-radius: 999px;
+  background: var(--silo-primary);
+  offset-distance: var(--silo-dot-d, 0px);
+  opacity: var(--silo-dot-o, 0);
+  transition: offset-distance 150ms ease, opacity 150ms ease;
+}
+
+/* TOC 下方的页面元链接（编辑 / 查看源码 / 提 issue …） */
+
+.silo-toc .td-page-meta {
+  margin: 16px 0 0 !important;
+  padding: 12px 0 0 !important;
+  border-top: 1px solid var(--bs-border-color);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+
+  a {
+    display: block;
+    padding: 3px 0;
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--silo-muted-fg);
+
+    &:hover {
+      color: var(--bs-body-color);
+      text-decoration: none;
+    }
+  }
+}

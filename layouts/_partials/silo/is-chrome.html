@@ -1,0 +1,5 @@
+{{- /* Single predicate for "this page renders the fumadocs-style docs chrome"
+       (sidebar panel, search dialog, silo-docs.js). Print output and pages
+       outside docs/blog (taxonomy terms, standalone layouts) are excluded. */ -}}
+{{- $of := partial "outputformat.html" . -}}
+{{- return and (ne $of "print") (or (eq .Type "docs") (eq .Type "blog")) -}}

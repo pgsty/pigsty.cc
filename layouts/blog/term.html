@@ -1,0 +1,15 @@
+{{ define "main" -}}
+{{/* 标签索引页（fumadocs 风格）：标题 + 标签过滤条 + Docsy 行版式的文章列表。 */}}
+<div class="td-content silo-blog-index">
+  <h1>{{ T "silo_tags_title" }}: {{ .Title }}</h1>
+</div>
+
+{{/* 正文不再重复标签导航（右栏已有标签云）；全量标签见 /tags/ 总索引。 */}}
+<div class="td-blog-posts">
+  <ul class="td-blog-posts-list">
+    {{ range .Pages.ByDate.Reverse -}}
+    {{ partial "silo/blog-row.html" . }}
+    {{ end -}}
+  </ul>
+</div>
+{{ end -}}

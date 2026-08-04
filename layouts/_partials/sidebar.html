@@ -1,0 +1,76 @@
+{{/* Docsy sidebar with the site home as the shared bilingual documentation root. */ -}}
+
+{{ $sidebarCacheLimit := .Site.Params.ui.sidebar_cache_limit | default 2000 -}}
+{{ $cacheSidebar := ge (len .Site.Pages) $sidebarCacheLimit -}}
+
+{{ $sidebarRoot := cond .Site.Params.ui.sidebar_root_enabled .Site.Home .FirstSection -}}
+{{ $navRoot := cond .Site.Params.ui.sidebar_root_enabled .Site.Home .FirstSection -}}
+{{ if .Site.Params.ui.sidebar_root_enabled -}}
+  {{ if and .IsSection (eq .Params.sidebar_root_for "self") -}}
+    {{ $sidebarRoot = . -}}
+  {{ else -}}
+    {{ range .Ancestors -}}
+      {{ if not .IsSection -}}
+        {{ continue -}}
+      {{ end -}}
+      {{ $rootFor := .Params.sidebar_root_for -}}
+      {{ if not $rootFor -}}
+        {{ continue -}}
+      {{ end -}}
+      {{ if not (or (eq $rootFor "self") (eq $rootFor "children")) -}}
+        {{ warnf "%s: sidebar_root_for should be 'self' or 'children'. Invalid value: '%s'." .Path $rootFor -}}
+        {{ continue -}}
+      {{ end -}}
+      {{ $sidebarRoot = . -}}
+      {{ break -}}
+    {{ end -}}
+  {{ end -}}
+
+  {{ $rootKind := $sidebarRoot.Params.sidebar_root_for -}}
+  {{ if and (eq $rootKind "self") (eq $sidebarRoot $navRoot) -}}
+    {{ $msg := slice
+        "Setting sidebar_root_for to `self` for a section that is already a root is redundant."
+        "The `self` mode is intended for nested sections proper."
+        "Did you mean to use `children` instead?"
+    -}}
+    {{ $filename := .Path -}}
+    {{ with $sidebarRoot.File -}}
+      {{ $filename = .Filename -}}
+    {{ end -}}
+    {{ warnf "%s: %s for page '%s'." $filename (delimit $msg " ") .Path -}}
+  {{ end -}}
+{{ end -}}
+
+{{/* blog 语境但不在 /blog/ 树内的页面（如 /tags/ 索引页）：树根兜底到博客根，
+     避免退化为站点全树。 */ -}}
+{{ if and (eq .Type "blog") (eq $sidebarRoot .Site.Home) -}}
+  {{ with .Site.GetPage "/blog" }}{{ $sidebarRoot = . }}{{ end -}}
+{{ end -}}
+
+{{ $sidebarRootID := $sidebarRoot.RelPermalink -}}
+{{ $args := dict
+    "context" .
+    "cacheSidebar" $cacheSidebar
+    "sidebarRoot" $sidebarRoot
+    "sidebarRootID" $sidebarRootID
+-}}
+{{/* pigsty.cc：无 data 驱动树，docs/blog/ext 统一走通用页面树。 */ -}}
+{{ $treePartial := "sidebar-tree.html" -}}
+{{ if $cacheSidebar -}}
+  {{ $mid := printf "m-%s" (.RelPermalink | anchorize) }}
+  <script>
+    $(function() {
+    $("#td-section-nav a").removeClass("active");
+    $("#td-section-nav .silo-tree__row").removeClass("silo-active");
+    var $link = $("#td-section-nav #{{ $mid }}");
+    $link.addClass("active").attr("aria-current", "page");
+    $link.closest(".silo-tree__row").addClass("silo-active");
+    $link.parents("li").addClass("active-path");
+    $("#td-section-nav li.active-path").children("input").prop('checked', true);
+    $("#td-sidebar-menu").toggleClass("d-none");
+    });
+  </script>
+  {{ partialCached $treePartial $args $sidebarRootID }}
+{{ else -}}
+  {{ partial $treePartial $args }}
+{{- end }}

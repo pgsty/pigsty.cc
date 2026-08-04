@@ -8,6 +8,8 @@ defaultContentLanguage: zh-cn
 enableRobotsTXT: true
 enableGitInfo: true
 rssLimit: 200
+# 标签等列表页标题保留作者原始大小写（不要把 pg_duckdb 渲染成 Pg_duckdb）。
+capitalizeListTitles: false
 
 #=======================================#
 # Hugo Module (replaces theme: docsy)
@@ -16,7 +18,7 @@ module:
   proxy: direct
   hugoVersion:
     extended: true
-    min: "0.146.0"
+    min: "0.155.0"
   imports:
     - path: github.com/google/docsy
       disable: false
@@ -88,6 +90,9 @@ markup:
     style: tango
     codeFences: true
     noClasses: false
+  tableOfContents:
+    startLevel: 2
+    endLevel: 4
 
 #=======================================#
 # Outputs
@@ -150,8 +155,16 @@ params:
     taxonomyCloudTitle: [模块, 分类, 标签]
     taxonomyPageHeader: [模块, 分类, 标签]
 
-  # Search
-  offlineSearch: true
+  # 正文列宽模式：normal（1050px，默认）| wide（1300px）| full（占满可用宽）。
+  # 页面 front matter 可单页覆盖（page_width: wide），栏目可经 cascade 继承。
+  page_width: normal
+  # ICP 备案号（单行页脚居中显示，链接到 beian.miit.gov.cn；留空则不渲染）。
+  footer_icp: 浙ICP备15016890号-2
+
+  # 站内搜索由项目自有的 ⌘K 弹窗实现（lunr 自托管 + /index.json 索引），
+  # 必须关闭 Docsy offlineSearch：否则其 offline-search.js 在页面上找不到
+  # .td-search input 时会 $.ajax(undefined) 抓当前页 HTML 并抛错。
+  offlineSearch: false
   prism_syntax_highlighting: false
 
   # UI settings
@@ -167,6 +180,20 @@ params:
     sidebar_menu_truncate: 2000
     ul_show: 3
     showLightDarkModeMenu: true
+    # TOC 高亮由 silo-docs.js 的 IntersectionObserver 实现；Docsy 的
+    # Bootstrap ScrollSpy 注入路径存在属性转义 bug，本就从未生效。
+    scrollSpy:
+      disable: true
+    # ---- Fumadocs 式侧栏定制（chrome）----
+    # 搜索框下方的根节点下拉：列出所有 sidebar_root_for: self 的 section
+    #（文档 / 扩展 / 博客 / Patroni / PgBackRest / PgBouncer）。
+    sidebar_root_menu: true
+    # 侧栏宽度（px）：默认宽随断点 268/286，可拖拽调整并持久化；
+    # min/max 为拖拽钳制范围，可在栏目 front matter 中经 cascade 覆盖。
+    sidebar_width_min: 220
+    sidebar_width_max: 480
+    # 侧栏条目文字溢出策略：ellipsis（省略号，默认）| wrap（换行）。
+    sidebar_item_overflow: ellipsis
 
     # Feedback section (requires Google Analytics)
     feedback:

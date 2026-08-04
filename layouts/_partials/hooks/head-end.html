@@ -1,0 +1,30 @@
+{{- $outputFormat := partial "outputformat.html" . -}}
+{{- if ne $outputFormat "print" }}
+<link rel="canonical" href="{{ .Permalink }}">
+{{- $author := "Ruohang Feng" -}}
+{{- with .Params.author }}{{ $author = . | markdownify | plainify }}{{ end }}
+<meta name="author" content="{{ $author }}">
+<meta name="application-name" content="{{ .Site.Title }}">
+{{- if partial "silo/is-chrome.html" . }}
+{{- /* 预绘制：首帧前恢复侧栏收起态（防闪），并抑制首帧内所有过渡动画
+       （silo-docs.js 在两帧后移除 data-silo-no-anim）。 */}}
+<script>
+  (function () {
+    var html = document.documentElement;
+    html.setAttribute('data-silo-no-anim', '');
+    try {
+      if (localStorage.getItem('silo-sidebar-collapsed') === '1'
+          && window.matchMedia('(min-width: 768px)').matches) {
+        html.setAttribute('data-silo-sidebar', 'collapsed');
+      }
+      var w = parseInt(localStorage.getItem('silo-sidebar-w'), 10);
+      if (w > 0) { html.style.setProperty('--silo-sidebar-w', w + 'px'); }
+      if (localStorage.getItem('silo-toc-collapsed') === '1'
+          && window.matchMedia('(min-width: 1200px)').matches) {
+        html.setAttribute('data-silo-toc', 'collapsed');
+      }
+    } catch (e) { /* ignore */ }
+  })();
+</script>
+{{- end }}
+{{- end }}

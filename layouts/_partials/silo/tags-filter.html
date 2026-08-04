@@ -1,0 +1,14 @@
+{{- /* 标签过滤条：全部博客 + 各标签（按文章数降序），当前项高亮。
+       用于 /tags/ 总索引与各标签索引页顶部。 */ -}}
+{{- $current := "" -}}
+{{- if eq .Kind "term" }}{{ $current = .Title }}{{ end -}}
+<div class="silo-tags-filter">
+  <a class="silo-tag{{ if not $current }} is-active{{ end }}" href="{{ relLangURL "blog/" }}">
+    <span>{{ T "ui_all" }}</span>
+  </a>
+  {{ range .Site.Taxonomies.tags.ByCount -}}
+  <a class="silo-tag{{ if eq .Page.Title $current }} is-active{{ end }}" href="{{ .Page.RelPermalink }}">
+    <span>{{ .Page.LinkTitle }}</span><span class="silo-tag__count">{{ .Count }}</span>
+  </a>
+  {{ end -}}
+</div>

@@ -1,0 +1,15 @@
+{{/* Docsy's last-modified block, restyled as an icon-column info row. */ -}}
+{{ if and .GitInfo .Site.Params.github_repo -}}
+<div class="td-page-meta__lastmod">
+  {{/* 统一 ISO 日期（YYYY-MM-DD）；图标列 + 文本的统一行结构。 */ -}}
+  <span class="silo-origin__icon"><i class="fa-solid fa-clock-rotate-left" aria-hidden="true"></i></span>
+  <span>
+  {{- T "post_last_mod" }}{{ if hasPrefix .Site.Language.Lang "zh" }}：{{ else }}: {{ end }}{{ .Lastmod.Format "2006-01-02" -}}
+  {{ with .GitInfo }}: {{/* Trim WS */ -}}
+    <a data-proofer-ignore href="{{ $.Site.Params.github_repo }}/commit/{{ .Hash }}">
+      {{- .Subject }} ({{ .AbbreviatedHash }}) {{- /* Trim WS */ -}}
+    </a>
+  {{- end -}}
+  </span>
+</div>
+{{ end -}}

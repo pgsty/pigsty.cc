@@ -8,22 +8,27 @@
   <head>
     {{ partial "head.html" . }}
   </head>
-  <body class="td-{{ .Kind }} td-blog {{- with .Page.Params.body_class }} {{ . }}{{ end }}">
-    <header>
-      {{ partial "navbar.html" . }}
-    </header>
+  {{ $toc := .TableOfContents -}}
+  {{ $hasToc := and (not .Params.notoc) $toc (ne $toc `<nav id="TableOfContents"></nav>`) -}}
+  {{ $sidebarMin := .Param "ui.sidebar_width_min" | default 220 -}}
+  {{ $sidebarMax := .Param "ui.sidebar_width_max" | default 480 -}}
+  {{ $navWrap := eq (.Param "ui.sidebar_item_overflow") "wrap" -}}
+  {{ $pw := .Param "page_width" | default "normal" -}}
+  {{ if not (in (slice "normal" "wide" "full") $pw) -}}
+    {{ errorf "invalid page_width %q in %s (allowed: normal | wide | full)" $pw .Path -}}
+  {{ end -}}
+  <body class="td-{{ .Kind }} td-blog silo-chrome{{ with .Page.Params.body_class }} {{ . }}{{ end }}">
+    {{ partial "silo/subnav.html" . }}
     <div class="container-fluid td-outer">
-      <div class="td-main" {{- partialCached "td/scrollspy-attr.txt" . .Section | safeHTMLAttr }}>
-        <div class="row flex-xl-nowrap">
-          <aside class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
-            {{ partial "sidebar.html" . }}
-          </aside>
-          <aside class="td-sidebar-toc">
-            {{ partial "page-meta-links.html" . }}
-            {{ partial "toc.html" . }}
-            {{ partial "taxonomy_terms_clouds.html" . }}
-          </aside>
-          <main class="col-12 col-md-9 col-xl-8 ps-md-5 pe-md-4" role="main">
+      <div class="td-main silo-layout silo-layout--w-{{ $pw }}{{ if not $hasToc }} silo-layout--no-toc{{ end }}{{ if $navWrap }} silo-layout--nav-wrap{{ end }}"
+           style="--silo-sidebar-min: {{ $sidebarMin }}px; --silo-sidebar-max: {{ $sidebarMax }}px;">
+        <aside id="silo-sidebar" class="silo-sidebar d-print-none">
+          {{ partial "silo/sidebar.html" . }}
+        </aside>
+        <div class="silo-drawer-backdrop d-md-none d-print-none" data-silo-drawer-close></div>
+        {{ partial "silo/floating-pill.html" . }}
+        <main class="silo-main" role="main">
+          <article class="silo-article">
             {{ with .CurrentSection.OutputFormats.Get "rss" -}}
             <a class="td-rss-button" title="RSS" href="{{ .RelPermalink | safeURL }}" target="_blank" rel="noopener">
               <i class="fa-solid fa-rss" aria-hidden="true"></i>
@@ -33,10 +38,11 @@
               {{ partial "breadcrumb.html" . -}}
             {{ end -}}
             {{ block "main" . }}{{ end }}
-          </main>
-        </div>
+          </article>
+        </main>
+        {{ partial "silo/toc-aside.html" (dict "page" . "hasToc" $hasToc) }}
       </div>
-      {{ partial "footer.html" . }}
+      {{ partial "silo/footer-line.html" . }}
     </div>
     {{ partial "scripts.html" . }}
   </body>
