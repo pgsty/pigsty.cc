@@ -317,7 +317,7 @@ psql -c 'SELECT pg_is_in_recovery()'   # 'f' 表示已提升为主库
 
 #### 归档模式
 
-Pigsty v4.4 的 `pgsql-pitr.yml` 默认使用 `archive: true`，裸 `pgbackrest restore` 也默认保留原归档设置。
+Pigsty {{< param version_short >}} 的 `pgsql-pitr.yml` 默认使用 `archive: true`，裸 `pgbackrest restore` 也默认保留原归档设置。
 只有显式使用 `archive: false` 或 `--archive-mode=off` 时，恢复结果才会在 `postgresql.auto.conf` 中写入 `archive_mode = off`。
 交还 Patroni 前检查该值；若恢复时关闭过归档，重置后再由 Patroni 重启 PostgreSQL。
 

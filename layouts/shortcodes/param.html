@@ -1,0 +1,7 @@
+{{- /* 输出站点参数值：{{< param version >}} / {{< param pgext_count >}}，参数不存在时构建报错 */ -}}
+{{- $name := .Get 0 -}}
+{{- $value := index .Site.Params $name -}}
+{{- if eq $value nil -}}
+  {{- errorf "%s: param shortcode: site param %q not found in hugo.yaml" .Position $name -}}
+{{- end -}}
+{{- $value -}}

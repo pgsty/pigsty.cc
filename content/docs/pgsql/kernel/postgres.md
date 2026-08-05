@@ -9,7 +9,7 @@ categories: [概念]
 
 [PostgreSQL](https://www.postgresql.org/) 是世界上最先进和最受欢迎的开源数据库。
 
-默认安装 PostgreSQL 18，支持 PostgreSQL 14 ~ 18，并提供 562 个 PG 扩展。
+默认安装 PostgreSQL 18，支持 PostgreSQL 14 ~ 18，并提供 {{< param pgext_count >}} 个 PG 扩展。
 
 
 ------

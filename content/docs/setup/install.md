@@ -78,13 +78,13 @@ cd ~/pigsty      # 进入 Pigsty 目录
 {{% tab header="pigsty.cc（中国）" %}}
 ```bash
 curl -fsSL https://repo.pigsty.cc/get | bash            # 安装当前默认版本
-curl -fsSL https://repo.pigsty.cc/get | bash -s v4.4.0  # 安装特定版本（示例：v4.4.0）
+curl -fsSL https://repo.pigsty.cc/get | bash -s {{< param version >}}  # 安装特定版本（示例：{{< param version >}}）
 ```
 {{% /tab %}}
 {{% tab header="pigsty.io（全球）" %}}
 ```bash
 curl -fsSL https://repo.pigsty.io/get | bash            # 安装当前默认版本
-curl -fsSL https://repo.pigsty.io/get | bash -s v4.4.0  # 安装特定版本（示例：v4.4.0）
+curl -fsSL https://repo.pigsty.io/get | bash -s {{< param version >}}  # 安装特定版本（示例：{{< param version >}}）
 ```
 {{% /tab %}}
 {{< /tabpane >}}
@@ -93,7 +93,7 @@ curl -fsSL https://repo.pigsty.io/get | bash -s v4.4.0  # 安装特定版本（�
 
 ```bash
 git clone https://github.com/pgsty/pigsty; cd pigsty;
-git checkout v4.4.0;  # 使用 git 安装时，请务必检出特定版本（示例：v4.4.0）
+git checkout {{< param version >}};  # 使用 git 安装时，请务必检出特定版本（示例：{{< param version >}}）
 ```
 
 手工下载克隆安装时，请额外执行 [**`bootstrap`**](/docs/setup/offline#bootstrap) 脚本以手动安装 Ansible 等部署依赖，您也可以 [**自行安装**](/docs/setup/playbook#安装-ansible)。
@@ -135,7 +135,7 @@ Pigsty 提供了 [**`configure`**](https://github.com/pgsty/pigsty/blob/main/con
 ./configure -c ha/full -s    # 使用 4 节点沙箱配置模板，不进行 IP 替换和探测
 ```
 
-下面展示的是当前 `main` 分支（v4.5.0 开发版）的输出；若按上文安装 v4.4.0 正式版，首行版本号会显示为 `v4.4.0`。
+下面展示的是当前 `main` 分支（v4.5.0 开发版）的输出；若按上文安装 {{< param version >}} 正式版，首行版本号会显示为 `{{< param version >}}`。
 
 <details><summary>当前 main（v4.5.0 开发版）的 configure 样例输出</summary>
 

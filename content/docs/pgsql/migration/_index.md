@@ -4,7 +4,7 @@ weight: 1700
 description: 如何将现有的 PostgreSQL 集群以最小的停机时间迁移至新的、由 Pigsty 管理的 PostgreSQL 集群？
 icon: fa-solid fa-truck-moving
 module: [PGSQL]
-categories: [任务，参考]
+categories: [任务, 参考]
 ---
 
 

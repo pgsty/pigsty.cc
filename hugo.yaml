@@ -119,7 +119,9 @@ cascade:
 params:
   # metadata
   description: 'Pigsty 是开源免费的 PostgreSQL 数据库发行版，提供本地优先的RDS，以及开箱即用的监控、管控、IaC、高可用，以及PG生态的 562 款插件与12款内核'
-  version: 4.4.0
+  version: v4.4.0           # Pigsty 最新正式版本号，模板用 .Site.Params.version，正文用 {{< param version >}}
+  version_short: v4.4       # 版本号短形式（major.minor），用于首页与价格页导航等展示场景
+  pgext_count: 562          # Pigsty 已打包 PG 扩展数量，模板用 .Site.Params.pgext_count，正文用 {{< param pgext_count >}}
   copyright:
     authors: Ruohang Feng
     from_year: 2018

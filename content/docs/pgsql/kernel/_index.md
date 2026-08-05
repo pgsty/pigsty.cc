@@ -17,7 +17,7 @@ Pigsty 支持多种 PostgreSQL 内核和兼容分支，让您能够在同一套�
 
 |                       内核                        |       关键特性        | 描述                                 |
 |:-----------------------------------------------:|:-----------------:|:-----------------------------------|
-|  [**PostgreSQL**](/docs/pgsql/kernel/postgres)  |   **原生内核，扩展齐备**   | 原版 PostgreSQL，配备 562 扩展            |
+|  [**PostgreSQL**](/docs/pgsql/kernel/postgres)  |   **原生内核，扩展齐备**   | 原版 PostgreSQL，配备 {{< param pgext_count >}} 扩展            |
 |   [**Supabase**](/docs/pgsql/kernel/supabase)   |     **后端即服务**     | 基于 PostgreSQL 的 BaaS，Firebase 替代方案 |
 |      [**Citus**](/docs/pgsql/kernel/citus)      |  **水平分布式扩展，多租户**  | 通过原生扩展实现分布式 PostgreSQL             |
  |  [**Babelfish**](/docs/pgsql/kernel/babelfish)  | **SQL Server 兼容** | SQL Server 线协议兼容（PG17/18）          |

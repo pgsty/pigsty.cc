@@ -4,7 +4,7 @@
     title  卡片标题（必填）
     link   目标链接（必填，整卡可点击）
     icon   Font Awesome 图标类名（可选，内联于标题之前）
-    desc   描述文本，支持 Markdown 行内语法（可选）
+    desc   描述文本，支持 Markdown 行内语法（可选）；{参数名} 占位符会展开为同名站点参数值，如 {pgext_count}
     accent 强调色变体：copper（必选模块）/ gray（可选模块），默认跟随链接色
     badge  右上角丝印徽标文本，如「必选」「可选」（可选）
   内部内容：Markdown 链接列表，渲染为卡片底部的快捷导航链接。
@@ -13,6 +13,11 @@
 {{- $link := .Get "link" -}}
 {{- $icon := .Get "icon" -}}
 {{- $desc := .Get "desc" -}}
+{{- range $token := findRE `\{[a-z][a-z0-9_]*\}` (string $desc) -}}
+  {{- with index site.Params (trim $token "{}") -}}
+    {{- $desc = replace $desc $token (string .) -}}
+  {{- end -}}
+{{- end -}}
 {{- $accent := .Get "accent" -}}
 {{- $badge := .Get "badge" -}}
 <div class="docs-nav__card{{ with $accent }} docs-nav__card--{{ . }}{{ end }}">

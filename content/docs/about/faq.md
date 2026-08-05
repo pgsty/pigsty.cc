@@ -47,7 +47,7 @@ Pigsty 沉淀了顶尖专家在最复杂，最大规模的甲方 PostgreSQL 场�
 
 ### Pigsty 为何比 RDS 好用？
 
-Pigsty 提供远超 RDS 的特性集与基础设施支持，包括 562 扩展插件与 12+ 内核支持。
+Pigsty 提供远超 RDS 的特性集与基础设施支持，包括 {{< param pgext_count >}} 扩展插件与 12+ 内核支持。
 Pigsty 提供 PG 生态中独一无二的专业级监控系统，与久经复杂场景打磨考验的架构最佳实践，简单易用。
 
 且用探探，苹果，阿里等顶级甲方场景打磨而成，用激情与热爱持续浇灌，深度与成熟度绝非 RDS 大锅饭可比。
@@ -64,7 +64,7 @@ Pigsty 能够同时降低软件许可/服务/人力的开销，自建无需加�
 
 ### Pigsty 对研发有什么帮助？
 
-Pigsty 整合了 PG 生态最全的扩展（562），提供了 All in PG 解决方案：单一组件替代 Redis, Kafka, MySQL, ES, 向量数据库，OLAP / 大数据分析等专用组件。
+Pigsty 整合了 PG 生态最全的扩展（{{< param pgext_count >}}），提供了 All in PG 解决方案：单一组件替代 Redis, Kafka, MySQL, ES, 向量数据库，OLAP / 大数据分析等专用组件。
 
 极大提高研发效能与敏捷性的同时降低复杂度成本，而且研发能在 Pigsty 的加持下实现自助管理，自主 DevOps，无需 DBA。
 

@@ -48,7 +48,7 @@ cascade:
 [**快速上手**](/docs/setup/install)：[**准备**](/docs/deploy/prepare) 一台全新安装 [**Linux**](/docs/ref/linux) 操作系统的节点，使用具有免密 `ssh` 与 `sudo` 权限的用户运行：
 
 ```bash
-curl -fsSL https://repo.pigsty.cc/get | bash -s v4.4.0   # 下载 Pigsty 源码包
+curl -fsSL https://repo.pigsty.cc/get | bash -s {{< param version >}}   # 下载 Pigsty 源码包
 cd ~/pigsty      # 进入源码目录
 ./configure      # 生成配置文件
 ./deploy.yml     # 执行安装部署
@@ -102,7 +102,7 @@ Pigsty 由多个 [**模块**](/docs/ref/module) 组成。其中 `PGSQL` / `INFRA
 {{< nav-card title="参考手册" link="/docs/ref/" icon="fa-solid fa-map" desc="详尽的参考信息列表：操作系统、文件结构、参数、监控指标与同类产品对比。" >}}
 [操作系统](/docs/ref/linux) [模块列表](/docs/ref/module) [文件结构](/docs/ref/fhs) [同类产品](/docs/about/compare) [成本参考](/docs/about/compare/cost) [运维 SOP](/docs/sop/)
 {{< /nav-card >}}
-{{< nav-card title="已打包扩展" link="/ext/" icon="fa-solid fa-puzzle-piece" desc="562 个已打包 PostgreSQL 生态扩展：元数据、文档、下载与支持矩阵。" >}}
+{{< nav-card title="已打包扩展" link="/ext/" icon="fa-solid fa-puzzle-piece" desc="{pgext_count} 个已打包 PostgreSQL 生态扩展：元数据、文档、下载与支持矩阵。" >}}
 [扩展列表](/ext/list) [系统支持](/ext/os) [软件仓库](/docs/repo/)
 {{< /nav-card >}}
 {{< nav-card title="开箱模板" link="/docs/conf/" icon="fa-solid fa-cubes" desc="开箱即用的集群配置模板，以及容器化的软件与应用模板。" >}}
