@@ -48,9 +48,11 @@
   <!-- Font Awesome -->
   <link rel="stylesheet" href="/vendor/fontawesome/css/all.min.css">
 
-  <!-- Landing Page CSS -->
-  <link rel="stylesheet" href="/css/landing-v3.css">
-  <link rel="stylesheet" href="/css/price-v3.css">
+  <!-- Landing Page CSS（指纹化：改动后 URL 变化，避免 CDN / 浏览器缓存旧样式） -->
+  {{ $landingCss := resources.Get "css/landing-v3.css" | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $landingCss.RelPermalink }}" integrity="{{ $landingCss.Data.Integrity }}">
+  {{ $priceCss := resources.Get "css/price-v3.css" | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $priceCss.RelPermalink }}" integrity="{{ $priceCss.Data.Integrity }}">
 
   <!-- ⌘K 搜索弹窗（复用文档站样式，桥接 landing 主题令牌） -->
   {{ $searchCss := resources.Get "scss/landing-search.scss" | toCSS | minify | fingerprint }}
@@ -698,7 +700,8 @@
     </div>
   </footer>
 
-<script src="/js/landing-v3.js"></script>
+{{ $landingJs := resources.Get "js/landing-v3.js" | minify | fingerprint }}
+<script src="{{ $landingJs.RelPermalink }}" integrity="{{ $landingJs.Data.Integrity }}"></script>
 
 {{ partial "silo/search-dialog.html" . }}
 {{ $searchJs := slice (resources.Get "js/vendor/lunr.min.js") (resources.Get "js/silo-search.js")
