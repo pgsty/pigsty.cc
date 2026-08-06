@@ -355,41 +355,54 @@ main { display: block; }
 }
 .nav-link:hover { color: var(--ink) !important; background: var(--bg-elev); }
 
+/* —— 右上角工具簇（搜索 / 亮暗 / 语言 / GitHub）：紧凑排布 —— */
+.nav-utils {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  margin-left: 8px;
+}
+
 .nav-util {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 36px;
-  height: 36px;
-  padding: 0 8px;
-  margin-left: 2px;
+  width: 32px;
+  height: 32px;
+  padding: 0;
   border: none;
   border-radius: 6px;
   background: transparent;
   color: var(--ink-mute) !important;
-  font-size: 0.95rem;
   cursor: pointer;
 }
 .nav-util:hover { color: var(--ink) !important; background: var(--bg-elev); }
+.nav-util .silo-icon { width: 17px; height: 17px; }
+
+/* 亮暗切换按钮：CSS 按当前主题决定显示哪枚图标（JS 只翻转 data-theme） */
+.nav-util .silo-icon--sun { display: none; }
+html[data-theme="dark"] .nav-util .silo-icon--moon { display: none; }
+html[data-theme="dark"] .nav-util .silo-icon--sun { display: block; }
 
 .nav-github {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  margin-left: 6px;
-  padding: 7px 12px;
+  gap: 6px;
+  height: 32px;
+  padding: 0 8px;
   border-radius: 6px;
-  color: var(--ink) !important;
-  font-size: 1.05rem;
+  color: var(--ink-mute) !important;
 }
-.nav-github:hover { background: var(--bg-elev); }
+.nav-github:hover { color: var(--ink) !important; background: var(--bg-elev); }
+.nav-github .silo-icon { width: 18px; height: 18px; }
 .nav-star {
   font-family: var(--font-body);
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   font-weight: 600;
+  line-height: 1;
   color: var(--ink-soft);
 }
-.nav-star i { color: var(--copper); font-size: 0.72rem; margin-right: 2px; }
+.nav-github:hover .nav-star { color: var(--ink); }
 
 /* —— 下拉菜单（文档 / 扩展）—— */
 .nav-item { position: relative; }

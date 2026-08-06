@@ -122,6 +122,7 @@ params:
   version: v4.4.0           # Pigsty 最新正式版本号，模板用 .Site.Params.version，正文用 {{< param version >}}
   version_short: v4.4       # 版本号短形式（major.minor），用于首页与价格页导航等展示场景
   pgext_count: 562          # Pigsty 已打包 PG 扩展数量，模板用 .Site.Params.pgext_count，正文用 {{< param pgext_count >}}
+  github_stars: 5.5k        # GitHub Star 数（约数），首页与价格页导航栏展示用
   copyright:
     authors: Ruohang Feng
     from_year: 2018

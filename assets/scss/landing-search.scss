@@ -1,0 +1,28 @@
+// ============================================================
+// landing-search —— landing 页（首页 / 价格页）⌘K 搜索弹窗样式。
+// 复用文档站 silo/_search.scss 的全部规则，此处仅把它引用的
+// --bs-* / --silo-* 变量桥接到 landing-v3.css 的主题令牌上
+// （landing 用 html[data-theme] 切换亮暗，令牌随之自动翻转）。
+// 由 home / price 模板经 Hugo pipes 编译为独立小 CSS，
+// 不引入 docsy 主样式，避免与 landing 样式冲突。
+// ============================================================
+
+html[data-theme] {
+  --bs-border-color: var(--line);
+  --bs-body-bg: var(--bg);
+  --bs-body-color: var(--ink);
+  --silo-popover: var(--bg-elev);
+  --silo-muted-fg: var(--ink-mute);
+  --silo-primary: var(--pg);
+  --silo-primary-dim: color-mix(in srgb, var(--pg) 11%, transparent);
+  --silo-shadow-lg: var(--shadow-md);
+  --silo-ease-dialog: cubic-bezier(0.16, 1, 0.3, 1); // 与 silo/_tokens.scss 同参
+}
+
+// 弹窗打开时锁定页面滚动（对应 silo/_tokens.scss 的同名规则）。
+html[data-silo-lock] {
+  overflow: hidden;
+}
+
+// 弹窗头部搜索图标的尺寸由 _search.scss 按 .silo-icon 类约束，无需额外规则。
+@import 'silo/search';

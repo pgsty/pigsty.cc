@@ -33,7 +33,7 @@
   --silo-muted-fg: var(--bs-tertiary-color);
   --silo-accent: rgba(22, 34, 46, 0.06);
   --silo-rail: rgba(22, 34, 46, 0.1);
-  --silo-popover: var(--silo-elev);
+  --silo-popover: var(--pg-elev);
   --silo-field: rgba(var(--bs-body-bg-rgb), 0.55);
   --silo-shadow-lg: 0 10px 30px -10px rgba(22, 34, 46, 0.25);
 }
@@ -45,7 +45,7 @@
   --silo-muted-fg: var(--bs-secondary-color); // 暗色侧栏文字提亮一档（fumadocs 同款处理）
   --silo-accent: rgba(232, 238, 246, 0.07);
   --silo-rail: rgba(232, 238, 246, 0.1);
-  --silo-popover: #121c29;
+  --silo-popover: var(--pg-elev);
   --silo-field: rgba(var(--bs-body-bg-rgb), 0.45);
   --silo-shadow-lg: 0 10px 30px -10px rgba(0, 0, 0, 0.6);
 }
