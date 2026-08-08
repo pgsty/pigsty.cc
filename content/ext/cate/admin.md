@@ -8,7 +8,7 @@ icon: fas fa-bank
 
 ## 扩展列表
 
-共有 **46** 个扩展，位于 **44** 个扩展包中。
+共有 **47** 个扩展，位于 **45** 个扩展包中。
 
 | **扩展** | **包** | **版本** | **许可证** | **语言** | **描述** |
 |:---------|:-------|:--------:|:----------:|:--------:|:---------|
@@ -40,6 +40,7 @@ icon: fas fa-bank
 | [`pgdisablelogerror`](/ext/e/pgdisablelogerror) | [`pgdisablelogerror`](https://github.com/fmbiete/pgdisablelogerror) | `1.0` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 按 SQLSTATE 错误码禁止部分错误写入 PostgreSQL 服务器日志。 |
 | [`online_advisor`](/ext/e/online_advisor) | [`online_advisor`](https://github.com/knizhnik/online_advisor) | `1.0` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 在线建议缺失索引、扩展统计信息与预备语句 |
 | [`pg_column_tetris`](/ext/e/pg_column_tetris) | [`pg_column_tetris`](https://github.com/rogerwelin/pg_column_tetris) | `0.1.0` | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> | 强制采用最优列对齐顺序，以减少 PostgreSQL 行数据中的填充浪费。 |
+| [`cat_tools`](/ext/e/cat_tools) | [`cat_tools`](https://github.com/Postgres-Extensions/cat_tools) | `0.3.0` | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> | 用于操作 PostgreSQL 系统目录的工具集 |
 | [`pg_savior`](/ext/e/pg_savior) | [`pg_savior`](https://github.com/viggy28/pg_savior) | `0.1.0` | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 阻止不带条件的全表更新以避免意外事故 |
 | [`safeupdate`](/ext/e/safeupdate) | [`safeupdate`](https://github.com/eradman/pg-safeupdate) | `1.5` | <a class="ext-badge ext-badge--license isc" href="/ext/license#isc">ISC</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 强制在 UPDATE 和 DELETE 时提供 Where 条件 |
 | [`pg_strict`](/ext/e/pg_strict) | [`pg_strict`](https://github.com/spa5k/pg_strict) | `1.0.5` | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | 防止不带WHERE条件的危险UPDATE和DELETE操作 |
@@ -586,6 +587,25 @@ icon: fas fa-bank
 | **扩展包** | [`pg_column_tetris`](https://github.com/rogerwelin/pg_column_tetris) | **el9** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
 | **RPM** | `pg_column_tetris_$v` | **el10** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
 | **DEB** | `postgresql-$v-pg-column-tetris` | **d12** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+| **语言** | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> | **d13** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+| **仓库** | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | **u22** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+| **协议** | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | **u24** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+| | | **u26** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+{.ext-table .ext-table--cate}
+
+
+---------
+
+## cat_tools {#cat_tools}
+
+[**`cat_tools`**](/ext/e/cat_tools) - `0.3.0` : 用于操作 PostgreSQL 系统目录的工具集
+
+| **条目** | **属性** | **OS** | **x86_64** | **aarch64** |
+|:---:|:---|:---:|:---:|:---:|
+| **扩展名** | [`cat_tools`](/ext/e/cat_tools) | **el8** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+| **扩展包** | [`cat_tools`](https://github.com/Postgres-Extensions/cat_tools) | **el9** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+| **RPM** | `cat_tools_$v` | **el10** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+| **DEB** | `postgresql-$v-cat-tools` | **d12** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
 | **语言** | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> | **d13** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
 | **仓库** | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | **u22** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
 | **协议** | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | **u24** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |

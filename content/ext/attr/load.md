@@ -5,7 +5,7 @@ description: "需要动态加载的 PostgreSQL 扩展"
 weight: 10
 ---
 
-以下 **124** 个扩展需要在 [`shared_preload_libraries`](https://www.postgresql.org/docs/current/runtime-config-client.html#GUC-SHARED-PRELOAD-LIBRARIES) 中动态加载，才能正常使用。
+以下 **126** 个扩展需要在 [`shared_preload_libraries`](https://www.postgresql.org/docs/current/runtime-config-client.html#GUC-SHARED-PRELOAD-LIBRARIES) 中动态加载，才能正常使用。
 
 也就是说，您需要修改 PostgreSQL 配置文件 `postgresql.conf` 中的 [`shared_preload_libraries`](https://www.postgresql.org/docs/current/runtime-config-client.html#GUC-SHARED-PRELOAD-LIBRARIES) 参数，将扩展的库名添加进去，然后重启数据库才能生效。
 
@@ -19,13 +19,13 @@ weight: 10
 | [`vchord`](/ext/e/vchord) | `vchord` | 使用Rust重写的高性能向量扩展 |
 | [`vectorize`](/ext/e/vectorize) | `vectorize` | 在PostgreSQL中封装RAG向量检索服务 |
 | [`pgml`](/ext/e/pgml) | `pgml` | PostgresML：用SQL运行机器学习算法并训练模型 |
-| [`pg_search`](/ext/e/pg_search) | `pg_search` | ParadeDB BM25算法全文检索插件，ES全文检索 |
+| [`pg_search`](/ext/e/pg_search) | `pg_search` | 使用 BM25 的 PostgreSQL 全文、分面与混合检索扩展 |
 | [`pg_bigm`](/ext/e/pg_bigm) | `pg_bigm` | 基于二字组的多语言全文检索扩展 |
 | [`pg_bestmatch`](/ext/e/pg_bestmatch) | `pg_bestmatch` | 在数据库内生成BM25稀疏向量 |
 | [`vchord_bm25`](/ext/e/vchord_bm25) | `vchord_bm25` | BM25排序算法 |
 | [`pg_tokenizer`](/ext/e/pg_tokenizer) | `pg_tokenizer` | 用于全文检索的分词器 |
 | [`pg_textsearch`](/ext/e/pg_textsearch) | `pg_textsearch` | 带有BM25排序的全文搜索扩展 |
-| [`citus`](/ext/e/citus) | `citus` | Citus 分布式数据库 |
+| [`citus`](/ext/e/citus) | `citus` | 将 PostgreSQL 横向扩展为分布式数据库 |
 | [`pg_duckdb`](/ext/e/pg_duckdb) | `pg_duckdb` | 在PostgreSQL中的嵌入式DuckDB扩展 |
 | [`pg_mooncake`](/ext/e/pg_mooncake) | `pg_mooncake` | PostgreSQL列式存储表 |
 | [`storage_engine`](/ext/e/storage_engine) | `storage_engine` | 带向量化执行的 colcompress 与 rowcompress 表访问方法 |
@@ -49,7 +49,8 @@ weight: 10
 | [`pg_ivm`](/ext/e/pg_ivm) | `pg_ivm` | 增量维护的物化视图 |
 | [`pg_trickle`](/ext/e/pg_trickle) | `pg_trickle` | 为 PostgreSQL 18 提供流式表与差分视图维护 |
 | [`pg_durable`](/ext/e/pg_durable) | `pg_durable` | 在 PostgreSQL 中使用 SQL 定义可持久化、可恢复的长时间运行函数 |
-| [`provsql`](/ext/e/provsql) | `provsql` | PostgreSQL 半环溯源与不确定性管理扩展 |
+| [`pg_disorder`](/ext/e/pg_disorder) | `pg_disorder` | 扰动无 ORDER BY 查询的行序以暴露依赖隐式顺序的测试 |
+| [`provsql`](/ext/e/provsql) | `provsql` | PostgreSQL 半环溯源、概率与不确定性管理扩展 |
 | [`orioledb`](/ext/e/orioledb) | `orioledb` | OrioleDB，下一代事务处理引擎 |
 | [`omni`](/ext/e/omni) | `omni--0.2.14.so` | PostgreSQL即平台，Omnigres主扩展与加载器 |
 | [`pg_tle`](/ext/e/pg_tle) | `pg_tle` | AWS 可信语言扩展 |
@@ -115,6 +116,7 @@ weight: 10
 | [`block_copy_command`](/ext/e/block_copy_command) | `block_copy_command` | 通过可配置的 ProcessUtility hook 阻止 COPY 命令 |
 | [`pg_kpart`](/ext/e/pg_kpart) | `pg_kpart` | 拒绝未使用分区键的全分区扫描查询 |
 | [`pg_tde`](/ext/e/pg_tde) | `pg_tde` | Percona 透明加密存储引擎 |
+| [`pg_vault_tde`](/ext/e/pg_vault_tde) | `pg_vault_tde` | 通过自定义表与索引访问方法为 PostgreSQL 提供透明数据加密 |
 | [`sepgsql`](/ext/e/sepgsql) | `sepgsql` | 基于SELinux标签的强制访问控制 |
 | [`auth_delay`](/ext/e/auth_delay) | `auth_delay` | 在返回认证失败前暂停一会，避免爆破 |
 | [`passwordcheck`](/ext/e/passwordcheck) | `$libdir/passwordcheck` | 用于强制拒绝修改弱密码的扩展 |

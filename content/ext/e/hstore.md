@@ -30,7 +30,7 @@ weight: 3970
 
 | **相关扩展** | [`pgbson`](/ext/e/pgbson) [`collection`](/ext/e/collection) [`jsonschema`](/ext/e/jsonschema) [`pgjq`](/ext/e/pgjq) [`jsquery`](/ext/e/jsquery) [`pg_jsonschema`](/ext/e/pg_jsonschema) [`intarray`](/ext/e/intarray) [`arraymath`](/ext/e/arraymath) [`pgpdf`](/ext/e/pgpdf) [`pglite_fusion`](/ext/e/pglite_fusion) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **下游依赖** | [`hstore_pllua`](/ext/e/hstore_pllua) [`hstore_plluau`](/ext/e/hstore_plluau) [`hstore_plperl`](/ext/e/hstore_plperl) [`hstore_plperlu`](/ext/e/hstore_plperlu) [`hstore_plpython3u`](/ext/e/hstore_plpython3u) [`pg_auditor`](/ext/e/pg_auditor) [`pg_readme`](/ext/e/pg_readme) [`pg_readme_test_extension`](/ext/e/pg_readme_test_extension) [`pg_xenophile`](/ext/e/pg_xenophile) |
+| **下游依赖** | `flux` `format` `hstore_hash_ops` `hstore_ops` [`hstore_pllua`](/ext/e/hstore_pllua) [`hstore_plluau`](/ext/e/hstore_plluau) [`hstore_plperl`](/ext/e/hstore_plperl) [`hstore_plperlu`](/ext/e/hstore_plperlu) `hstore_plpython2u` [`hstore_plpython3u`](/ext/e/hstore_plpython3u) `hstore_plpythonu` [`hstore_plruby`](/ext/e/hstore_plruby) `json_enhancements_with_hstore` `mbus` `meta_triggers` `numhstore` [`pg_auditor`](/ext/e/pg_auditor) [`pg_readme`](/ext/e/pg_readme) `pg_rowalesce` `pg_utility_trigger_functions` [`pg_xenophile`](/ext/e/pg_xenophile) `sys_syn_dblink` |
 {.ext-table .ext-table--rel}
 
 

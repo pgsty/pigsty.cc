@@ -33,27 +33,24 @@ weight: 5040
 {.ext-table .ext-table--rel}
 
 
-> Latest PGDG DEB/catalog version is 1.9.4; PGDG RPM remains on 1.9.2.
-
-
 ## 版本
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
 | [**EXT**](/ext/list#admin) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `1.9.4` | {{< pgvers "18,17,16,15,14" >}} | `pg_squeeze` | - |
-| [**RPM**](/ext/rpm#admin) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `1.9.2` | {{< pgvers "18,17,16,15,14" >}} | `pg_squeeze_$v` | - |
+| [**RPM**](/ext/rpm#admin) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `1.9.4` | {{< pgvers "18,17,16,15,14" >}} | `pg_squeeze_$v` | - |
 | [**DEB**](/ext/deb#admin) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `1.9.4` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-squeeze` | - |
 {.ext-table}
 
 {{< pgext_matrix >}}
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PGDG 1.9.2 2 | AVAIL PGDG 1.9.2 5 | AVAIL PGDG 1.9.2 6 | AVAIL PGDG 1.9.2 7 | AVAIL PGDG 1.9.2 8 |
-| el8.aarch64 | AVAIL PGDG 1.9.2 2 | AVAIL PGDG 1.9.2 5 | AVAIL PGDG 1.9.2 6 | AVAIL PGDG 1.9.2 7 | AVAIL PGDG 1.9.2 7 |
-| el9.x86_64 | AVAIL PGDG 1.9.2 5 | AVAIL PGDG 1.9.2 8 | AVAIL PGDG 1.9.2 9 | AVAIL PGDG 1.9.2 10 | AVAIL PGDG 1.9.2 11 |
-| el9.aarch64 | AVAIL PGDG 1.9.2 5 | AVAIL PGDG 1.9.2 8 | AVAIL PGDG 1.9.2 9 | AVAIL PGDG 1.9.2 10 | AVAIL PGDG 1.9.2 10 |
-| el10.x86_64 | AVAIL PGDG 1.9.2 5 | AVAIL PGDG 1.9.2 6 | AVAIL PGDG 1.9.2 6 | AVAIL PGDG 1.9.2 6 | AVAIL PGDG 1.9.2 6 |
-| el10.aarch64 | AVAIL PGDG 1.9.2 5 | AVAIL PGDG 1.9.2 6 | AVAIL PGDG 1.9.2 6 | AVAIL PGDG 1.9.2 6 | AVAIL PGDG 1.9.2 6 |
+| el8.x86_64 | AVAIL PGDG 1.9.4 3 | AVAIL PGDG 1.9.4 6 | AVAIL PGDG 1.9.4 7 | AVAIL PGDG 1.9.4 8 | AVAIL PGDG 1.9.4 9 |
+| el8.aarch64 | AVAIL PGDG 1.9.4 3 | AVAIL PGDG 1.9.4 6 | AVAIL PGDG 1.9.4 7 | AVAIL PGDG 1.9.4 8 | AVAIL PGDG 1.9.4 8 |
+| el9.x86_64 | AVAIL PGDG 1.9.4 6 | AVAIL PGDG 1.9.4 9 | AVAIL PGDG 1.9.4 10 | AVAIL PGDG 1.9.4 11 | AVAIL PGDG 1.9.4 12 |
+| el9.aarch64 | AVAIL PGDG 1.9.4 6 | AVAIL PGDG 1.9.4 9 | AVAIL PGDG 1.9.4 10 | AVAIL PGDG 1.9.4 11 | AVAIL PGDG 1.9.4 11 |
+| el10.x86_64 | AVAIL PGDG 1.9.4 6 | AVAIL PGDG 1.9.4 7 | AVAIL PGDG 1.9.4 7 | AVAIL PGDG 1.9.4 7 | AVAIL PGDG 1.9.4 7 |
+| el10.aarch64 | AVAIL PGDG 1.9.4 6 | AVAIL PGDG 1.9.4 7 | AVAIL PGDG 1.9.4 7 | AVAIL PGDG 1.9.4 7 | AVAIL PGDG 1.9.4 7 |
 | d12.x86_64 | AVAIL PGDG 1.9.4 3 | AVAIL PGDG 1.9.4 3 | AVAIL PGDG 1.9.4 3 | AVAIL PGDG 1.9.4 3 | AVAIL PGDG 1.9.4 3 |
 | d12.aarch64 | AVAIL PGDG 1.9.4 3 | AVAIL PGDG 1.9.4 3 | AVAIL PGDG 1.9.4 3 | AVAIL PGDG 1.9.4 3 | AVAIL PGDG 1.9.4 3 |
 | d13.x86_64 | AVAIL PGDG 1.9.4 3 | AVAIL PGDG 1.9.4 3 | AVAIL PGDG 1.9.4 3 | AVAIL PGDG 1.9.4 3 | AVAIL PGDG 1.9.4 3 |
@@ -64,25 +61,31 @@ weight: 5040
 | u24.aarch64 | AVAIL PGDG 1.9.4 3 | AVAIL PGDG 1.9.4 3 | AVAIL PGDG 1.9.4 3 | AVAIL PGDG 1.9.4 3 | AVAIL PGDG 1.9.4 3 |
 | u26.x86_64 | AVAIL PGDG 1.9.4 3 | AVAIL PGDG 1.9.4 3 | AVAIL PGDG 1.9.4 3 | AVAIL PGDG 1.9.4 3 | AVAIL PGDG 1.9.4 3 |
 | u26.aarch64 | AVAIL PGDG 1.9.4 3 | AVAIL PGDG 1.9.4 3 | AVAIL PGDG 1.9.4 3 | AVAIL PGDG 1.9.4 3 | AVAIL PGDG 1.9.4 3 |
+@ el8.x86_64 18 pg_squeeze_18 pg_squeeze_18-1.9.4-1PGDG.rhel8.10.x86_64.rpm pgdg 1.9.4 58.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pg_squeeze_18-1.9.4-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 18 pg_squeeze_18 pg_squeeze_18-1.9.2-1PGDG.rhel8.10.x86_64.rpm pgdg 1.9.2 58.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pg_squeeze_18-1.9.2-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 18 pg_squeeze_18 pg_squeeze_18-1.9.1-1PGDG.rhel8.x86_64.rpm pgdg 1.9.1 57.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/pg_squeeze_18-1.9.1-1PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 18 pg_squeeze_18 pg_squeeze_18-1.9.4-1PGDG.rhel8.10.aarch64.rpm pgdg 1.9.4 55.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pg_squeeze_18-1.9.4-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 18 pg_squeeze_18 pg_squeeze_18-1.9.2-1PGDG.rhel8.10.aarch64.rpm pgdg 1.9.2 55.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pg_squeeze_18-1.9.2-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 18 pg_squeeze_18 pg_squeeze_18-1.9.1-1PGDG.rhel8.aarch64.rpm pgdg 1.9.1 54.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/pg_squeeze_18-1.9.1-1PGDG.rhel8.aarch64.rpm
+@ el9.x86_64 18 pg_squeeze_18 pg_squeeze_18-1.9.4-1PGDG.rhel9.8.x86_64.rpm pgdg 1.9.4 57.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pg_squeeze_18-1.9.4-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 18 pg_squeeze_18 pg_squeeze_18-1.9.2-1PGDG.rhel9.8.x86_64.rpm pgdg 1.9.2 57.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pg_squeeze_18-1.9.2-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 18 pg_squeeze_18 pg_squeeze_18-1.9.2-1PGDG.rhel9.7.x86_64.rpm pgdg 1.9.2 56.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pg_squeeze_18-1.9.2-1PGDG.rhel9.7.x86_64.rpm
 @ el9.x86_64 18 pg_squeeze_18 pg_squeeze_18-1.9.2-1PGDG.rhel9.6.x86_64.rpm pgdg 1.9.2 57.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pg_squeeze_18-1.9.2-1PGDG.rhel9.6.x86_64.rpm
 @ el9.x86_64 18 pg_squeeze_18 pg_squeeze_18-1.9.1-3PGDG.rhel9.8.x86_64.rpm pgdg 1.9.1 56.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pg_squeeze_18-1.9.1-3PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 18 pg_squeeze_18 pg_squeeze_18-1.9.1-1PGDG.rhel9.x86_64.rpm pgdg 1.9.1 56.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/pg_squeeze_18-1.9.1-1PGDG.rhel9.x86_64.rpm
+@ el9.aarch64 18 pg_squeeze_18 pg_squeeze_18-1.9.4-1PGDG.rhel9.8.aarch64.rpm pgdg 1.9.4 55.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pg_squeeze_18-1.9.4-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 18 pg_squeeze_18 pg_squeeze_18-1.9.2-1PGDG.rhel9.8.aarch64.rpm pgdg 1.9.2 55.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pg_squeeze_18-1.9.2-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 18 pg_squeeze_18 pg_squeeze_18-1.9.2-1PGDG.rhel9.7.aarch64.rpm pgdg 1.9.2 55.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pg_squeeze_18-1.9.2-1PGDG.rhel9.7.aarch64.rpm
 @ el9.aarch64 18 pg_squeeze_18 pg_squeeze_18-1.9.2-1PGDG.rhel9.6.aarch64.rpm pgdg 1.9.2 55.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pg_squeeze_18-1.9.2-1PGDG.rhel9.6.aarch64.rpm
 @ el9.aarch64 18 pg_squeeze_18 pg_squeeze_18-1.9.1-3PGDG.rhel9.8.aarch64.rpm pgdg 1.9.1 54.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pg_squeeze_18-1.9.1-3PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 18 pg_squeeze_18 pg_squeeze_18-1.9.1-1PGDG.rhel9.aarch64.rpm pgdg 1.9.1 54.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/pg_squeeze_18-1.9.1-1PGDG.rhel9.aarch64.rpm
+@ el10.x86_64 18 pg_squeeze_18 pg_squeeze_18-1.9.4-1PGDG.rhel10.2.x86_64.rpm pgdg 1.9.4 57.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pg_squeeze_18-1.9.4-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 18 pg_squeeze_18 pg_squeeze_18-1.9.2-1PGDG.rhel10.2.x86_64.rpm pgdg 1.9.2 57.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pg_squeeze_18-1.9.2-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 18 pg_squeeze_18 pg_squeeze_18-1.9.2-1PGDG.rhel10.1.x86_64.rpm pgdg 1.9.2 57.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pg_squeeze_18-1.9.2-1PGDG.rhel10.1.x86_64.rpm
 @ el10.x86_64 18 pg_squeeze_18 pg_squeeze_18-1.9.2-1PGDG.rhel10.0.x86_64.rpm pgdg 1.9.2 57.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pg_squeeze_18-1.9.2-1PGDG.rhel10.0.x86_64.rpm
 @ el10.x86_64 18 pg_squeeze_18 pg_squeeze_18-1.9.1-3PGDG.rhel10.2.x86_64.rpm pgdg 1.9.1 57.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pg_squeeze_18-1.9.1-3PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 18 pg_squeeze_18 pg_squeeze_18-1.9.1-1PGDG.rhel10.x86_64.rpm pgdg 1.9.1 57.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/pg_squeeze_18-1.9.1-1PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 18 pg_squeeze_18 pg_squeeze_18-1.9.4-1PGDG.rhel10.2.aarch64.rpm pgdg 1.9.4 56.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_squeeze_18-1.9.4-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 18 pg_squeeze_18 pg_squeeze_18-1.9.2-1PGDG.rhel10.2.aarch64.rpm pgdg 1.9.2 55.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_squeeze_18-1.9.2-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 18 pg_squeeze_18 pg_squeeze_18-1.9.2-1PGDG.rhel10.1.aarch64.rpm pgdg 1.9.2 55.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_squeeze_18-1.9.2-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 18 pg_squeeze_18 pg_squeeze_18-1.9.2-1PGDG.rhel10.0.aarch64.rpm pgdg 1.9.2 55.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/pg_squeeze_18-1.9.2-1PGDG.rhel10.0.aarch64.rpm
@@ -118,16 +121,19 @@ weight: 5040
 @ u26.aarch64 18 postgresql-18-squeeze postgresql-18-squeeze_1.9.4-1.pgdg26.04+1_arm64.deb pgdg 1.9.4 110.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-squeeze/postgresql-18-squeeze_1.9.4-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 18 postgresql-18-squeeze postgresql-18-squeeze_1.9.3-1.pgdg26.04+1_arm64.deb pgdg 1.9.3 110.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-squeeze/postgresql-18-squeeze_1.9.3-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 18 postgresql-18-squeeze postgresql-18-squeeze_1.9.2-1.pgdg26.04+1_arm64.deb pgdg 1.9.2 110.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-squeeze/postgresql-18-squeeze_1.9.2-1.pgdg26.04+1_arm64.deb
+@ el8.x86_64 17 pg_squeeze_17 pg_squeeze_17-1.9.4-1PGDG.rhel8.10.x86_64.rpm pgdg 1.9.4 58.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pg_squeeze_17-1.9.4-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 pg_squeeze_17 pg_squeeze_17-1.9.2-1PGDG.rhel8.10.x86_64.rpm pgdg 1.9.2 58.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pg_squeeze_17-1.9.2-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 pg_squeeze_17 pg_squeeze_17-1.9.1-1PGDG.rhel8.x86_64.rpm pgdg 1.9.1 57.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pg_squeeze_17-1.9.1-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 17 pg_squeeze_17 pg_squeeze_17-1.8.0-1PGDG.rhel8.x86_64.rpm pgdg 1.8.0 56.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pg_squeeze_17-1.8.0-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 17 pg_squeeze_17 pg_squeeze_17-1.7.0-2PGDG.rhel8.x86_64.rpm pgdg 1.7.0 56.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pg_squeeze_17-1.7.0-2PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 17 pg_squeeze_17 pg_squeeze_17-1.7.0-1PGDG.rhel8.x86_64.rpm pgdg 1.7.0 56.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/pg_squeeze_17-1.7.0-1PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 17 pg_squeeze_17 pg_squeeze_17-1.9.4-1PGDG.rhel8.10.aarch64.rpm pgdg 1.9.4 55.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pg_squeeze_17-1.9.4-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 17 pg_squeeze_17 pg_squeeze_17-1.9.2-1PGDG.rhel8.10.aarch64.rpm pgdg 1.9.2 55.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pg_squeeze_17-1.9.2-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 17 pg_squeeze_17 pg_squeeze_17-1.9.1-1PGDG.rhel8.aarch64.rpm pgdg 1.9.1 54.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pg_squeeze_17-1.9.1-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 17 pg_squeeze_17 pg_squeeze_17-1.8.0-1PGDG.rhel8.aarch64.rpm pgdg 1.8.0 54.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pg_squeeze_17-1.8.0-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 17 pg_squeeze_17 pg_squeeze_17-1.7.0-2PGDG.rhel8.aarch64.rpm pgdg 1.7.0 53.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pg_squeeze_17-1.7.0-2PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 17 pg_squeeze_17 pg_squeeze_17-1.7.0-1PGDG.rhel8.aarch64.rpm pgdg 1.7.0 53.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/pg_squeeze_17-1.7.0-1PGDG.rhel8.aarch64.rpm
+@ el9.x86_64 17 pg_squeeze_17 pg_squeeze_17-1.9.4-1PGDG.rhel9.8.x86_64.rpm pgdg 1.9.4 57.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_squeeze_17-1.9.4-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 17 pg_squeeze_17 pg_squeeze_17-1.9.2-1PGDG.rhel9.8.x86_64.rpm pgdg 1.9.2 57.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_squeeze_17-1.9.2-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 17 pg_squeeze_17 pg_squeeze_17-1.9.2-1PGDG.rhel9.7.x86_64.rpm pgdg 1.9.2 57.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_squeeze_17-1.9.2-1PGDG.rhel9.7.x86_64.rpm
 @ el9.x86_64 17 pg_squeeze_17 pg_squeeze_17-1.9.2-1PGDG.rhel9.6.x86_64.rpm pgdg 1.9.2 57.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_squeeze_17-1.9.2-1PGDG.rhel9.6.x86_64.rpm
@@ -136,6 +142,7 @@ weight: 5040
 @ el9.x86_64 17 pg_squeeze_17 pg_squeeze_17-1.8.0-1PGDG.rhel9.x86_64.rpm pgdg 1.8.0 56.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_squeeze_17-1.8.0-1PGDG.rhel9.x86_64.rpm
 @ el9.x86_64 17 pg_squeeze_17 pg_squeeze_17-1.7.0-2PGDG.rhel9.x86_64.rpm pgdg 1.7.0 55.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_squeeze_17-1.7.0-2PGDG.rhel9.x86_64.rpm
 @ el9.x86_64 17 pg_squeeze_17 pg_squeeze_17-1.7.0-1PGDG.rhel9.x86_64.rpm pgdg 1.7.0 56.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/pg_squeeze_17-1.7.0-1PGDG.rhel9.x86_64.rpm
+@ el9.aarch64 17 pg_squeeze_17 pg_squeeze_17-1.9.4-1PGDG.rhel9.8.aarch64.rpm pgdg 1.9.4 55.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_squeeze_17-1.9.4-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 17 pg_squeeze_17 pg_squeeze_17-1.9.2-1PGDG.rhel9.8.aarch64.rpm pgdg 1.9.2 55.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_squeeze_17-1.9.2-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 17 pg_squeeze_17 pg_squeeze_17-1.9.2-1PGDG.rhel9.7.aarch64.rpm pgdg 1.9.2 55.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_squeeze_17-1.9.2-1PGDG.rhel9.7.aarch64.rpm
 @ el9.aarch64 17 pg_squeeze_17 pg_squeeze_17-1.9.2-1PGDG.rhel9.6.aarch64.rpm pgdg 1.9.2 55.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_squeeze_17-1.9.2-1PGDG.rhel9.6.aarch64.rpm
@@ -144,12 +151,14 @@ weight: 5040
 @ el9.aarch64 17 pg_squeeze_17 pg_squeeze_17-1.8.0-1PGDG.rhel9.aarch64.rpm pgdg 1.8.0 54.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_squeeze_17-1.8.0-1PGDG.rhel9.aarch64.rpm
 @ el9.aarch64 17 pg_squeeze_17 pg_squeeze_17-1.7.0-2PGDG.rhel9.aarch64.rpm pgdg 1.7.0 54.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_squeeze_17-1.7.0-2PGDG.rhel9.aarch64.rpm
 @ el9.aarch64 17 pg_squeeze_17 pg_squeeze_17-1.7.0-1PGDG.rhel9.aarch64.rpm pgdg 1.7.0 54.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/pg_squeeze_17-1.7.0-1PGDG.rhel9.aarch64.rpm
+@ el10.x86_64 17 pg_squeeze_17 pg_squeeze_17-1.9.4-1PGDG.rhel10.2.x86_64.rpm pgdg 1.9.4 57.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_squeeze_17-1.9.4-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 17 pg_squeeze_17 pg_squeeze_17-1.9.2-1PGDG.rhel10.2.x86_64.rpm pgdg 1.9.2 57.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_squeeze_17-1.9.2-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 17 pg_squeeze_17 pg_squeeze_17-1.9.2-1PGDG.rhel10.1.x86_64.rpm pgdg 1.9.2 57.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_squeeze_17-1.9.2-1PGDG.rhel10.1.x86_64.rpm
 @ el10.x86_64 17 pg_squeeze_17 pg_squeeze_17-1.9.2-1PGDG.rhel10.0.x86_64.rpm pgdg 1.9.2 57.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_squeeze_17-1.9.2-1PGDG.rhel10.0.x86_64.rpm
 @ el10.x86_64 17 pg_squeeze_17 pg_squeeze_17-1.9.1-3PGDG.rhel10.2.x86_64.rpm pgdg 1.9.1 57.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_squeeze_17-1.9.1-3PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 17 pg_squeeze_17 pg_squeeze_17-1.9.1-1PGDG.rhel10.x86_64.rpm pgdg 1.9.1 57.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_squeeze_17-1.9.1-1PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 17 pg_squeeze_17 pg_squeeze_17-1.8.0-1PGDG.rhel10.x86_64.rpm pgdg 1.8.0 56.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/pg_squeeze_17-1.8.0-1PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 17 pg_squeeze_17 pg_squeeze_17-1.9.4-1PGDG.rhel10.2.aarch64.rpm pgdg 1.9.4 56.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_squeeze_17-1.9.4-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 17 pg_squeeze_17 pg_squeeze_17-1.9.2-1PGDG.rhel10.2.aarch64.rpm pgdg 1.9.2 55.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_squeeze_17-1.9.2-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 17 pg_squeeze_17 pg_squeeze_17-1.9.2-1PGDG.rhel10.1.aarch64.rpm pgdg 1.9.2 55.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_squeeze_17-1.9.2-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 17 pg_squeeze_17 pg_squeeze_17-1.9.2-1PGDG.rhel10.0.aarch64.rpm pgdg 1.9.2 55.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/pg_squeeze_17-1.9.2-1PGDG.rhel10.0.aarch64.rpm
@@ -186,18 +195,21 @@ weight: 5040
 @ u26.aarch64 17 postgresql-17-squeeze postgresql-17-squeeze_1.9.4-1.pgdg26.04+1_arm64.deb pgdg 1.9.4 110.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-squeeze/postgresql-17-squeeze_1.9.4-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 17 postgresql-17-squeeze postgresql-17-squeeze_1.9.3-1.pgdg26.04+1_arm64.deb pgdg 1.9.3 110.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-squeeze/postgresql-17-squeeze_1.9.3-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 17 postgresql-17-squeeze postgresql-17-squeeze_1.9.2-1.pgdg26.04+1_arm64.deb pgdg 1.9.2 110.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-squeeze/postgresql-17-squeeze_1.9.2-1.pgdg26.04+1_arm64.deb
+@ el8.x86_64 16 pg_squeeze_16 pg_squeeze_16-1.9.4-1PGDG.rhel8.10.x86_64.rpm pgdg 1.9.4 58.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_squeeze_16-1.9.4-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 pg_squeeze_16 pg_squeeze_16-1.9.2-1PGDG.rhel8.10.x86_64.rpm pgdg 1.9.2 58.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_squeeze_16-1.9.2-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 pg_squeeze_16 pg_squeeze_16-1.9.1-1PGDG.rhel8.x86_64.rpm pgdg 1.9.1 57.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_squeeze_16-1.9.1-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 16 pg_squeeze_16 pg_squeeze_16-1.8.0-1PGDG.rhel8.x86_64.rpm pgdg 1.8.0 56.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_squeeze_16-1.8.0-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 16 pg_squeeze_16 pg_squeeze_16-1.7.0-1PGDG.rhel8.x86_64.rpm pgdg 1.7.0 56.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_squeeze_16-1.7.0-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 16 pg_squeeze_16 pg_squeeze_16-1.6.2-1PGDG.rhel8.x86_64.rpm pgdg 1.6.2 52.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_squeeze_16-1.6.2-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 16 pg_squeeze_16 pg_squeeze_16-1.6.1-1PGDG.rhel8.x86_64.rpm pgdg 1.6.1 52.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/pg_squeeze_16-1.6.1-1PGDG.rhel8.x86_64.rpm
+@ el8.aarch64 16 pg_squeeze_16 pg_squeeze_16-1.9.4-1PGDG.rhel8.10.aarch64.rpm pgdg 1.9.4 55.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pg_squeeze_16-1.9.4-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 16 pg_squeeze_16 pg_squeeze_16-1.9.2-1PGDG.rhel8.10.aarch64.rpm pgdg 1.9.2 55.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pg_squeeze_16-1.9.2-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 16 pg_squeeze_16 pg_squeeze_16-1.9.1-1PGDG.rhel8.aarch64.rpm pgdg 1.9.1 54.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pg_squeeze_16-1.9.1-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 16 pg_squeeze_16 pg_squeeze_16-1.8.0-1PGDG.rhel8.aarch64.rpm pgdg 1.8.0 54.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pg_squeeze_16-1.8.0-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 16 pg_squeeze_16 pg_squeeze_16-1.7.0-1PGDG.rhel8.aarch64.rpm pgdg 1.7.0 53.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pg_squeeze_16-1.7.0-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 16 pg_squeeze_16 pg_squeeze_16-1.6.2-1PGDG.rhel8.aarch64.rpm pgdg 1.6.2 50.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pg_squeeze_16-1.6.2-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 16 pg_squeeze_16 pg_squeeze_16-1.6.1-1PGDG.rhel8.aarch64.rpm pgdg 1.6.1 50.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/pg_squeeze_16-1.6.1-1PGDG.rhel8.aarch64.rpm
+@ el9.x86_64 16 pg_squeeze_16 pg_squeeze_16-1.9.4-1PGDG.rhel9.8.x86_64.rpm pgdg 1.9.4 57.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_squeeze_16-1.9.4-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 16 pg_squeeze_16 pg_squeeze_16-1.9.2-1PGDG.rhel9.8.x86_64.rpm pgdg 1.9.2 57.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_squeeze_16-1.9.2-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 16 pg_squeeze_16 pg_squeeze_16-1.9.2-1PGDG.rhel9.7.x86_64.rpm pgdg 1.9.2 56.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_squeeze_16-1.9.2-1PGDG.rhel9.7.x86_64.rpm
 @ el9.x86_64 16 pg_squeeze_16 pg_squeeze_16-1.9.2-1PGDG.rhel9.6.x86_64.rpm pgdg 1.9.2 57.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_squeeze_16-1.9.2-1PGDG.rhel9.6.x86_64.rpm
@@ -207,6 +219,7 @@ weight: 5040
 @ el9.x86_64 16 pg_squeeze_16 pg_squeeze_16-1.7.0-1PGDG.rhel9.x86_64.rpm pgdg 1.7.0 55.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_squeeze_16-1.7.0-1PGDG.rhel9.x86_64.rpm
 @ el9.x86_64 16 pg_squeeze_16 pg_squeeze_16-1.6.2-1PGDG.rhel9.x86_64.rpm pgdg 1.6.2 52.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_squeeze_16-1.6.2-1PGDG.rhel9.x86_64.rpm
 @ el9.x86_64 16 pg_squeeze_16 pg_squeeze_16-1.6.1-1PGDG.rhel9.x86_64.rpm pgdg 1.6.1 52.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/pg_squeeze_16-1.6.1-1PGDG.rhel9.x86_64.rpm
+@ el9.aarch64 16 pg_squeeze_16 pg_squeeze_16-1.9.4-1PGDG.rhel9.8.aarch64.rpm pgdg 1.9.4 55.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_squeeze_16-1.9.4-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 16 pg_squeeze_16 pg_squeeze_16-1.9.2-1PGDG.rhel9.8.aarch64.rpm pgdg 1.9.2 55.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_squeeze_16-1.9.2-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 16 pg_squeeze_16 pg_squeeze_16-1.9.2-1PGDG.rhel9.7.aarch64.rpm pgdg 1.9.2 55.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_squeeze_16-1.9.2-1PGDG.rhel9.7.aarch64.rpm
 @ el9.aarch64 16 pg_squeeze_16 pg_squeeze_16-1.9.2-1PGDG.rhel9.6.aarch64.rpm pgdg 1.9.2 55.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_squeeze_16-1.9.2-1PGDG.rhel9.6.aarch64.rpm
@@ -216,12 +229,14 @@ weight: 5040
 @ el9.aarch64 16 pg_squeeze_16 pg_squeeze_16-1.7.0-1PGDG.rhel9.aarch64.rpm pgdg 1.7.0 54.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_squeeze_16-1.7.0-1PGDG.rhel9.aarch64.rpm
 @ el9.aarch64 16 pg_squeeze_16 pg_squeeze_16-1.6.2-1PGDG.rhel9.aarch64.rpm pgdg 1.6.2 50.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_squeeze_16-1.6.2-1PGDG.rhel9.aarch64.rpm
 @ el9.aarch64 16 pg_squeeze_16 pg_squeeze_16-1.6.1-1PGDG.rhel9.aarch64.rpm pgdg 1.6.1 50.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/pg_squeeze_16-1.6.1-1PGDG.rhel9.aarch64.rpm
+@ el10.x86_64 16 pg_squeeze_16 pg_squeeze_16-1.9.4-1PGDG.rhel10.2.x86_64.rpm pgdg 1.9.4 57.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_squeeze_16-1.9.4-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 16 pg_squeeze_16 pg_squeeze_16-1.9.2-1PGDG.rhel10.2.x86_64.rpm pgdg 1.9.2 57.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_squeeze_16-1.9.2-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 16 pg_squeeze_16 pg_squeeze_16-1.9.2-1PGDG.rhel10.1.x86_64.rpm pgdg 1.9.2 57.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_squeeze_16-1.9.2-1PGDG.rhel10.1.x86_64.rpm
 @ el10.x86_64 16 pg_squeeze_16 pg_squeeze_16-1.9.2-1PGDG.rhel10.0.x86_64.rpm pgdg 1.9.2 57.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_squeeze_16-1.9.2-1PGDG.rhel10.0.x86_64.rpm
 @ el10.x86_64 16 pg_squeeze_16 pg_squeeze_16-1.9.1-3PGDG.rhel10.2.x86_64.rpm pgdg 1.9.1 57.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_squeeze_16-1.9.1-3PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 16 pg_squeeze_16 pg_squeeze_16-1.9.1-1PGDG.rhel10.x86_64.rpm pgdg 1.9.1 57.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_squeeze_16-1.9.1-1PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 16 pg_squeeze_16 pg_squeeze_16-1.8.0-1PGDG.rhel10.x86_64.rpm pgdg 1.8.0 56.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/pg_squeeze_16-1.8.0-1PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 16 pg_squeeze_16 pg_squeeze_16-1.9.4-1PGDG.rhel10.2.aarch64.rpm pgdg 1.9.4 56.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_squeeze_16-1.9.4-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 16 pg_squeeze_16 pg_squeeze_16-1.9.2-1PGDG.rhel10.2.aarch64.rpm pgdg 1.9.2 55.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_squeeze_16-1.9.2-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 16 pg_squeeze_16 pg_squeeze_16-1.9.2-1PGDG.rhel10.1.aarch64.rpm pgdg 1.9.2 55.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_squeeze_16-1.9.2-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 16 pg_squeeze_16 pg_squeeze_16-1.9.2-1PGDG.rhel10.0.aarch64.rpm pgdg 1.9.2 55.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/pg_squeeze_16-1.9.2-1PGDG.rhel10.0.aarch64.rpm
@@ -258,6 +273,7 @@ weight: 5040
 @ u26.aarch64 16 postgresql-16-squeeze postgresql-16-squeeze_1.9.4-1.pgdg26.04+1_arm64.deb pgdg 1.9.4 110.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-squeeze/postgresql-16-squeeze_1.9.4-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 16 postgresql-16-squeeze postgresql-16-squeeze_1.9.3-1.pgdg26.04+1_arm64.deb pgdg 1.9.3 110.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-squeeze/postgresql-16-squeeze_1.9.3-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 16 postgresql-16-squeeze postgresql-16-squeeze_1.9.2-1.pgdg26.04+1_arm64.deb pgdg 1.9.2 110.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-squeeze/postgresql-16-squeeze_1.9.2-1.pgdg26.04+1_arm64.deb
+@ el8.x86_64 15 pg_squeeze_15 pg_squeeze_15-1.9.4-1PGDG.rhel8.10.x86_64.rpm pgdg 1.9.4 58.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_squeeze_15-1.9.4-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 pg_squeeze_15 pg_squeeze_15-1.9.2-1PGDG.rhel8.10.x86_64.rpm pgdg 1.9.2 58.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_squeeze_15-1.9.2-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 pg_squeeze_15 pg_squeeze_15-1.9.1-1PGDG.rhel8.x86_64.rpm pgdg 1.9.1 57.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_squeeze_15-1.9.1-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 15 pg_squeeze_15 pg_squeeze_15-1.8.0-1PGDG.rhel8.x86_64.rpm pgdg 1.8.0 57.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_squeeze_15-1.8.0-1PGDG.rhel8.x86_64.rpm
@@ -265,6 +281,7 @@ weight: 5040
 @ el8.x86_64 15 pg_squeeze_15 pg_squeeze_15-1.6.2-1PGDG.rhel8.x86_64.rpm pgdg 1.6.2 52.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_squeeze_15-1.6.2-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 15 pg_squeeze_15 pg_squeeze_15-1.6.1-1PGDG.rhel8.x86_64.rpm pgdg 1.6.1 52.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_squeeze_15-1.6.1-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 15 pg_squeeze_15 pg_squeeze_15-1.5.0-1.rhel8.x86_64.rpm pgdg 1.5.0 46.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/pg_squeeze_15-1.5.0-1.rhel8.x86_64.rpm
+@ el8.aarch64 15 pg_squeeze_15 pg_squeeze_15-1.9.4-1PGDG.rhel8.10.aarch64.rpm pgdg 1.9.4 55.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pg_squeeze_15-1.9.4-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 15 pg_squeeze_15 pg_squeeze_15-1.9.2-1PGDG.rhel8.10.aarch64.rpm pgdg 1.9.2 55.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pg_squeeze_15-1.9.2-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 15 pg_squeeze_15 pg_squeeze_15-1.9.1-1PGDG.rhel8.aarch64.rpm pgdg 1.9.1 54.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pg_squeeze_15-1.9.1-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 15 pg_squeeze_15 pg_squeeze_15-1.8.0-1PGDG.rhel8.aarch64.rpm pgdg 1.8.0 54.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pg_squeeze_15-1.8.0-1PGDG.rhel8.aarch64.rpm
@@ -272,6 +289,7 @@ weight: 5040
 @ el8.aarch64 15 pg_squeeze_15 pg_squeeze_15-1.6.2-1PGDG.rhel8.aarch64.rpm pgdg 1.6.2 50.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pg_squeeze_15-1.6.2-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 15 pg_squeeze_15 pg_squeeze_15-1.6.1-1PGDG.rhel8.aarch64.rpm pgdg 1.6.1 50.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pg_squeeze_15-1.6.1-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 15 pg_squeeze_15 pg_squeeze_15-1.5.0-1.rhel8.aarch64.rpm pgdg 1.5.0 43.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/pg_squeeze_15-1.5.0-1.rhel8.aarch64.rpm
+@ el9.x86_64 15 pg_squeeze_15 pg_squeeze_15-1.9.4-1PGDG.rhel9.8.x86_64.rpm pgdg 1.9.4 58.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_squeeze_15-1.9.4-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 15 pg_squeeze_15 pg_squeeze_15-1.9.2-1PGDG.rhel9.8.x86_64.rpm pgdg 1.9.2 57.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_squeeze_15-1.9.2-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 15 pg_squeeze_15 pg_squeeze_15-1.9.2-1PGDG.rhel9.7.x86_64.rpm pgdg 1.9.2 57.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_squeeze_15-1.9.2-1PGDG.rhel9.7.x86_64.rpm
 @ el9.x86_64 15 pg_squeeze_15 pg_squeeze_15-1.9.2-1PGDG.rhel9.6.x86_64.rpm pgdg 1.9.2 57.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_squeeze_15-1.9.2-1PGDG.rhel9.6.x86_64.rpm
@@ -282,6 +300,7 @@ weight: 5040
 @ el9.x86_64 15 pg_squeeze_15 pg_squeeze_15-1.6.2-1PGDG.rhel9.x86_64.rpm pgdg 1.6.2 52.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_squeeze_15-1.6.2-1PGDG.rhel9.x86_64.rpm
 @ el9.x86_64 15 pg_squeeze_15 pg_squeeze_15-1.6.1-1PGDG.rhel9.x86_64.rpm pgdg 1.6.1 52.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_squeeze_15-1.6.1-1PGDG.rhel9.x86_64.rpm
 @ el9.x86_64 15 pg_squeeze_15 pg_squeeze_15-1.5.0-1.rhel9.x86_64.rpm pgdg 1.5.0 46.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/pg_squeeze_15-1.5.0-1.rhel9.x86_64.rpm
+@ el9.aarch64 15 pg_squeeze_15 pg_squeeze_15-1.9.4-1PGDG.rhel9.8.aarch64.rpm pgdg 1.9.4 56.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_squeeze_15-1.9.4-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 15 pg_squeeze_15 pg_squeeze_15-1.9.2-1PGDG.rhel9.8.aarch64.rpm pgdg 1.9.2 55.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_squeeze_15-1.9.2-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 15 pg_squeeze_15 pg_squeeze_15-1.9.2-1PGDG.rhel9.7.aarch64.rpm pgdg 1.9.2 55.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_squeeze_15-1.9.2-1PGDG.rhel9.7.aarch64.rpm
 @ el9.aarch64 15 pg_squeeze_15 pg_squeeze_15-1.9.2-1PGDG.rhel9.6.aarch64.rpm pgdg 1.9.2 55.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_squeeze_15-1.9.2-1PGDG.rhel9.6.aarch64.rpm
@@ -292,12 +311,14 @@ weight: 5040
 @ el9.aarch64 15 pg_squeeze_15 pg_squeeze_15-1.6.2-1PGDG.rhel9.aarch64.rpm pgdg 1.6.2 50.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_squeeze_15-1.6.2-1PGDG.rhel9.aarch64.rpm
 @ el9.aarch64 15 pg_squeeze_15 pg_squeeze_15-1.6.1-1PGDG.rhel9.aarch64.rpm pgdg 1.6.1 50.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_squeeze_15-1.6.1-1PGDG.rhel9.aarch64.rpm
 @ el9.aarch64 15 pg_squeeze_15 pg_squeeze_15-1.5.0-1.rhel9.aarch64.rpm pgdg 1.5.0 44.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/pg_squeeze_15-1.5.0-1.rhel9.aarch64.rpm
+@ el10.x86_64 15 pg_squeeze_15 pg_squeeze_15-1.9.4-1PGDG.rhel10.2.x86_64.rpm pgdg 1.9.4 58.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_squeeze_15-1.9.4-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 15 pg_squeeze_15 pg_squeeze_15-1.9.2-1PGDG.rhel10.2.x86_64.rpm pgdg 1.9.2 57.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_squeeze_15-1.9.2-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 15 pg_squeeze_15 pg_squeeze_15-1.9.2-1PGDG.rhel10.1.x86_64.rpm pgdg 1.9.2 57.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_squeeze_15-1.9.2-1PGDG.rhel10.1.x86_64.rpm
 @ el10.x86_64 15 pg_squeeze_15 pg_squeeze_15-1.9.2-1PGDG.rhel10.0.x86_64.rpm pgdg 1.9.2 58.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_squeeze_15-1.9.2-1PGDG.rhel10.0.x86_64.rpm
 @ el10.x86_64 15 pg_squeeze_15 pg_squeeze_15-1.9.1-3PGDG.rhel10.2.x86_64.rpm pgdg 1.9.1 57.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_squeeze_15-1.9.1-3PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 15 pg_squeeze_15 pg_squeeze_15-1.9.1-1PGDG.rhel10.x86_64.rpm pgdg 1.9.1 57.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_squeeze_15-1.9.1-1PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 15 pg_squeeze_15 pg_squeeze_15-1.8.0-1PGDG.rhel10.x86_64.rpm pgdg 1.8.0 57.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/pg_squeeze_15-1.8.0-1PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 15 pg_squeeze_15 pg_squeeze_15-1.9.4-1PGDG.rhel10.2.aarch64.rpm pgdg 1.9.4 56.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_squeeze_15-1.9.4-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 15 pg_squeeze_15 pg_squeeze_15-1.9.2-1PGDG.rhel10.2.aarch64.rpm pgdg 1.9.2 56.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_squeeze_15-1.9.2-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 15 pg_squeeze_15 pg_squeeze_15-1.9.2-1PGDG.rhel10.1.aarch64.rpm pgdg 1.9.2 56.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_squeeze_15-1.9.2-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 15 pg_squeeze_15 pg_squeeze_15-1.9.2-1PGDG.rhel10.0.aarch64.rpm pgdg 1.9.2 56.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/pg_squeeze_15-1.9.2-1PGDG.rhel10.0.aarch64.rpm
@@ -334,6 +355,7 @@ weight: 5040
 @ u26.aarch64 15 postgresql-15-squeeze postgresql-15-squeeze_1.9.4-1.pgdg26.04+1_arm64.deb pgdg 1.9.4 110.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-squeeze/postgresql-15-squeeze_1.9.4-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 15 postgresql-15-squeeze postgresql-15-squeeze_1.9.3-1.pgdg26.04+1_arm64.deb pgdg 1.9.3 110.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-squeeze/postgresql-15-squeeze_1.9.3-1.pgdg26.04+1_arm64.deb
 @ u26.aarch64 15 postgresql-15-squeeze postgresql-15-squeeze_1.9.2-1.pgdg26.04+1_arm64.deb pgdg 1.9.2 110.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/pg-squeeze/postgresql-15-squeeze_1.9.2-1.pgdg26.04+1_arm64.deb
+@ el8.x86_64 14 pg_squeeze_14 pg_squeeze_14-1.9.4-1PGDG.rhel8.10.x86_64.rpm pgdg 1.9.4 59.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_squeeze_14-1.9.4-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 14 pg_squeeze_14 pg_squeeze_14-1.9.2-1PGDG.rhel8.10.x86_64.rpm pgdg 1.9.2 58.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_squeeze_14-1.9.2-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 14 pg_squeeze_14 pg_squeeze_14-1.9.1-1PGDG.rhel8.x86_64.rpm pgdg 1.9.1 57.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_squeeze_14-1.9.1-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 14 pg_squeeze_14 pg_squeeze_14-1.8.0-1PGDG.rhel8.x86_64.rpm pgdg 1.8.0 57.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_squeeze_14-1.8.0-1PGDG.rhel8.x86_64.rpm
@@ -342,6 +364,7 @@ weight: 5040
 @ el8.x86_64 14 pg_squeeze_14 pg_squeeze_14-1.6.1-1PGDG.rhel8.x86_64.rpm pgdg 1.6.1 53.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_squeeze_14-1.6.1-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 14 pg_squeeze_14 pg_squeeze_14-1.5.0-1.rhel8.x86_64.rpm pgdg 1.5.0 46.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_squeeze_14-1.5.0-1.rhel8.x86_64.rpm
 @ el8.x86_64 14 pg_squeeze_14 pg_squeeze_14-1.4.1-2.rhel8.x86_64.rpm pgdg 1.4.1 112.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/pg_squeeze_14-1.4.1-2.rhel8.x86_64.rpm
+@ el8.aarch64 14 pg_squeeze_14 pg_squeeze_14-1.9.4-1PGDG.rhel8.10.aarch64.rpm pgdg 1.9.4 56.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pg_squeeze_14-1.9.4-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 14 pg_squeeze_14 pg_squeeze_14-1.9.2-1PGDG.rhel8.10.aarch64.rpm pgdg 1.9.2 55.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pg_squeeze_14-1.9.2-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 14 pg_squeeze_14 pg_squeeze_14-1.9.1-1PGDG.rhel8.aarch64.rpm pgdg 1.9.1 55.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pg_squeeze_14-1.9.1-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 14 pg_squeeze_14 pg_squeeze_14-1.8.0-1PGDG.rhel8.aarch64.rpm pgdg 1.8.0 54.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pg_squeeze_14-1.8.0-1PGDG.rhel8.aarch64.rpm
@@ -349,6 +372,7 @@ weight: 5040
 @ el8.aarch64 14 pg_squeeze_14 pg_squeeze_14-1.6.2-1PGDG.rhel8.aarch64.rpm pgdg 1.6.2 50.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pg_squeeze_14-1.6.2-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 14 pg_squeeze_14 pg_squeeze_14-1.6.1-1PGDG.rhel8.aarch64.rpm pgdg 1.6.1 50.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pg_squeeze_14-1.6.1-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 14 pg_squeeze_14 pg_squeeze_14-1.5.0-1.rhel8.aarch64.rpm pgdg 1.5.0 43.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/pg_squeeze_14-1.5.0-1.rhel8.aarch64.rpm
+@ el9.x86_64 14 pg_squeeze_14 pg_squeeze_14-1.9.4-1PGDG.rhel9.8.x86_64.rpm pgdg 1.9.4 57.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_squeeze_14-1.9.4-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 14 pg_squeeze_14 pg_squeeze_14-1.9.2-1PGDG.rhel9.8.x86_64.rpm pgdg 1.9.2 57.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_squeeze_14-1.9.2-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 14 pg_squeeze_14 pg_squeeze_14-1.9.2-1PGDG.rhel9.7.x86_64.rpm pgdg 1.9.2 57.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_squeeze_14-1.9.2-1PGDG.rhel9.7.x86_64.rpm
 @ el9.x86_64 14 pg_squeeze_14 pg_squeeze_14-1.9.2-1PGDG.rhel9.6.x86_64.rpm pgdg 1.9.2 57.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_squeeze_14-1.9.2-1PGDG.rhel9.6.x86_64.rpm
@@ -360,6 +384,7 @@ weight: 5040
 @ el9.x86_64 14 pg_squeeze_14 pg_squeeze_14-1.6.1-1PGDG.rhel9.x86_64.rpm pgdg 1.6.1 52.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_squeeze_14-1.6.1-1PGDG.rhel9.x86_64.rpm
 @ el9.x86_64 14 pg_squeeze_14 pg_squeeze_14-1.5.0-1.rhel9.x86_64.rpm pgdg 1.5.0 46.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_squeeze_14-1.5.0-1.rhel9.x86_64.rpm
 @ el9.x86_64 14 pg_squeeze_14 pg_squeeze_14-1.4.1-2.rhel9.x86_64.rpm pgdg 1.4.1 112.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/pg_squeeze_14-1.4.1-2.rhel9.x86_64.rpm
+@ el9.aarch64 14 pg_squeeze_14 pg_squeeze_14-1.9.4-1PGDG.rhel9.8.aarch64.rpm pgdg 1.9.4 56.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_squeeze_14-1.9.4-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 14 pg_squeeze_14 pg_squeeze_14-1.9.2-1PGDG.rhel9.8.aarch64.rpm pgdg 1.9.2 55.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_squeeze_14-1.9.2-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 14 pg_squeeze_14 pg_squeeze_14-1.9.2-1PGDG.rhel9.7.aarch64.rpm pgdg 1.9.2 55.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_squeeze_14-1.9.2-1PGDG.rhel9.7.aarch64.rpm
 @ el9.aarch64 14 pg_squeeze_14 pg_squeeze_14-1.9.2-1PGDG.rhel9.6.aarch64.rpm pgdg 1.9.2 55.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_squeeze_14-1.9.2-1PGDG.rhel9.6.aarch64.rpm
@@ -370,12 +395,14 @@ weight: 5040
 @ el9.aarch64 14 pg_squeeze_14 pg_squeeze_14-1.6.2-1PGDG.rhel9.aarch64.rpm pgdg 1.6.2 50.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_squeeze_14-1.6.2-1PGDG.rhel9.aarch64.rpm
 @ el9.aarch64 14 pg_squeeze_14 pg_squeeze_14-1.6.1-1PGDG.rhel9.aarch64.rpm pgdg 1.6.1 50.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_squeeze_14-1.6.1-1PGDG.rhel9.aarch64.rpm
 @ el9.aarch64 14 pg_squeeze_14 pg_squeeze_14-1.5.0-1.rhel9.aarch64.rpm pgdg 1.5.0 44.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/pg_squeeze_14-1.5.0-1.rhel9.aarch64.rpm
+@ el10.x86_64 14 pg_squeeze_14 pg_squeeze_14-1.9.4-1PGDG.rhel10.2.x86_64.rpm pgdg 1.9.4 58.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_squeeze_14-1.9.4-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 14 pg_squeeze_14 pg_squeeze_14-1.9.2-1PGDG.rhel10.2.x86_64.rpm pgdg 1.9.2 58.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_squeeze_14-1.9.2-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 14 pg_squeeze_14 pg_squeeze_14-1.9.2-1PGDG.rhel10.1.x86_64.rpm pgdg 1.9.2 58.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_squeeze_14-1.9.2-1PGDG.rhel10.1.x86_64.rpm
 @ el10.x86_64 14 pg_squeeze_14 pg_squeeze_14-1.9.2-1PGDG.rhel10.0.x86_64.rpm pgdg 1.9.2 58.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_squeeze_14-1.9.2-1PGDG.rhel10.0.x86_64.rpm
 @ el10.x86_64 14 pg_squeeze_14 pg_squeeze_14-1.9.1-3PGDG.rhel10.2.x86_64.rpm pgdg 1.9.1 57.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_squeeze_14-1.9.1-3PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 14 pg_squeeze_14 pg_squeeze_14-1.9.1-1PGDG.rhel10.x86_64.rpm pgdg 1.9.1 57.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_squeeze_14-1.9.1-1PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 14 pg_squeeze_14 pg_squeeze_14-1.8.0-1PGDG.rhel10.x86_64.rpm pgdg 1.8.0 57.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/pg_squeeze_14-1.8.0-1PGDG.rhel10.x86_64.rpm
+@ el10.aarch64 14 pg_squeeze_14 pg_squeeze_14-1.9.4-1PGDG.rhel10.2.aarch64.rpm pgdg 1.9.4 56.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_squeeze_14-1.9.4-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 14 pg_squeeze_14 pg_squeeze_14-1.9.2-1PGDG.rhel10.2.aarch64.rpm pgdg 1.9.2 56.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_squeeze_14-1.9.2-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 14 pg_squeeze_14 pg_squeeze_14-1.9.2-1PGDG.rhel10.1.aarch64.rpm pgdg 1.9.2 56.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_squeeze_14-1.9.2-1PGDG.rhel10.1.aarch64.rpm
 @ el10.aarch64 14 pg_squeeze_14 pg_squeeze_14-1.9.2-1PGDG.rhel10.0.aarch64.rpm pgdg 1.9.2 56.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/pg_squeeze_14-1.9.2-1PGDG.rhel10.0.aarch64.rpm
@@ -474,56 +501,72 @@ shared_preload_libraries = 'pg_squeeze';
 CREATE EXTENSION pg_squeeze;
 ```
 
-
-
-
 ## 用法
 
-> [pg_squeeze: 从关系中移除未使用空间的工具](https://github.com/cybertec-postgresql/pg_squeeze)
+来源：
 
-`pg_squeeze` 需要设置 `wal_level = logical`，并且必须添加到 `shared_preload_libraries` 中。它使用逻辑解码而非触发器，在允许并发读写的同时移除表膨胀。
+- [pg_squeeze REL1_9_4 发行版](https://github.com/cybertec-postgresql/pg_squeeze/releases/tag/REL1_9_4)
+- [pg_squeeze REL1_9_4 README](https://github.com/cybertec-postgresql/pg_squeeze/blob/REL1_9_4/README.md)
+- [pg_squeeze 发行说明](https://github.com/cybertec-postgresql/pg_squeeze/blob/REL1_9_4/NEWS)
 
-### 注册表进行定期处理
+`pg_squeeze` 可以在允许并发读写的同时清除表及其索引中的膨胀。它将存活元组复制到新存储，并通过逻辑解码应用并发变更，从而避免 `VACUUM FULL` 的长时间排他锁。只有在规划好复制槽、磁盘空间和表的副本标识后才应使用。
 
-向 `squeeze.tables` 插入数据以启用定期膨胀检查：
+### 配置与安装
 
-```sql
-INSERT INTO squeeze.tables (tabschema, tabname, schedule)
-VALUES ('public', 'foo', ('{30}', '{22}', NULL, NULL, '{3, 5}'));
+```conf
+max_replication_slots = 1  # or add one to the existing requirement
+shared_preload_libraries = 'pg_squeeze'
+wal_level = logical       # required on PostgreSQL versions before 19
 ```
 
-`schedule` 字段使用类似 crontab 的格式：`(minutes, hours, days_of_month, months, days_of_week)`。上面的配置在每周三和周五的 22:30 检查表 `foo`。
+重启 PostgreSQL，然后创建扩展：
 
-可选列：`free_space_extra`（触发所需的最小额外空闲空间百分比，默认 50）、`min_size`（最小 MB 数，默认 8）、`vacuum_max_age`（距上次 VACUUM 的最大时间，默认 1小时）、`max_retry`（重试次数，默认 0）、`clustering_index`（按此索引排序元组）、`rel_tablespace`、`ind_tablespaces`、`skip_analyze`。
+```sql
+CREATE EXTENSION pg_squeeze;
+```
 
-### 临时压缩
+表必须有标识索引。主键可配合默认副本标识使用；否则，请使用 `ALTER TABLE ... REPLICA IDENTITY USING INDEX` 选择合适的唯一索引。
+
+### 执行临时压缩
 
 ```sql
 SELECT squeeze.squeeze_table('public', 'pgbench_accounts');
-SELECT squeeze.squeeze_table('public', 'mytable', 'my_cluster_idx', 'target_tablespace');
+
+SELECT squeeze.squeeze_table(
+  'public',
+  'large_table',
+  'large_table_cluster_idx',
+  'target_tablespace'
+);
 ```
 
-### 启动/停止工作进程
+该函数会启动后台任务，并不具备普通 SQL 函数意义上的事务性。请监控操作，不要假定外围的 `ROLLBACK` 会取消它。
+
+### 调度表并监控任务
 
 ```sql
-SELECT squeeze.start_worker();   -- 启动调度器和压缩工作进程
-SELECT squeeze.stop_worker();    -- 停止当前数据库的所有工作进程
+INSERT INTO squeeze.tables (tabschema, tabname, schedule)
+VALUES ('public', 'events', ('{30}', '{22}', NULL, NULL, '{3,5}'));
+
+SELECT * FROM squeeze.get_active_workers();
+SELECT * FROM squeeze.log ORDER BY finished DESC;
+SELECT * FROM squeeze.errors;
 ```
 
-通过 `postgresql.conf` 在集群启动时自动启动：
+调度元组依次包含分钟、小时、月中日期、月份和星期。注册还支持阈值与放置选项，例如 `free_space_extra`、`min_size`、`vacuum_max_age`、`max_retry`、`clustering_index`、关系/索引表空间，以及 `skip_analyze`。
 
+如需自动启动：
+
+```conf
+squeeze.worker_autostart = 'my_database'
+squeeze.worker_role = 'postgres'
 ```
-squeeze.worker_autostart = 'my_database your_database'
-squeeze.worker_role = postgres
-```
 
-### 监控
+### 版本 1.9.4 与运维注意事项
 
-- **`squeeze.log`** -- 每个成功压缩的表对应一条记录（包含 `started`、`finished`、`ins_initial`、`ins`、`upd`、`del`）
-- **`squeeze.errors`** -- 压缩过程中的错误
-- **`squeeze.get_active_workers()`** -- 显示当前活动的压缩工作进程及其进度
-
-### 配置
-
-- **`squeeze.max_xlock_time`** -- 最大排他锁时间，毫秒（默认不限制）
-- **`squeeze.workers_per_database`** -- 每个数据库的并发压缩工作进程数（默认 1）
+- 版本 1.9.4 修复了动态构造的 `ANALYZE`、日志和错误语句中的不安全引用问题，其中包括一条超级用户 SQL 注入路径。应尽快升级早期 1.9 版本。
+- 全表压缩所需的空闲磁盘空间约为目标表及其索引总大小的两倍。
+- 破坏性 DDL、`VACUUM FULL`、`CLUSTER` 或 `TRUNCATE` 可能使正在进行的压缩中止。请协调模式变更并审慎设置 `max_retry`。
+- 与其他在线重写工具类似，`pg_squeeze` 会改变行可见性；对于持有旧快照的并发会话，它存在文档明确说明的 MVCC 注意事项。
+- 在对包含该扩展的数据库执行 `pg_upgrade` 或转储/恢复之前，请先在新集群的 `shared_preload_libraries` 中配置 `pg_squeeze`。
+- 当前 Pigsty 软件包覆盖 PostgreSQL 14-18。对于这些版本，请保持 `wal_level = logical`；上游针对 PostgreSQL 19 放宽的规则尚不适用于该软件包矩阵。

@@ -9,7 +9,7 @@ categories: [参考]
 本文是 Pigsty v4.x 的参数导航页，不重复展开每个参数的详细解释。
 参数细节请进入各模块的 `param` 页面查看。
 
-按照当前源码与参数参考页逐项对账，11 个正式模块合计 **380** 个公开参数。原生 MySQL 8.4 仍是试点模块，其 10 个公开参数单列，不计入正式模块合计。
+按照当前源码与参数参考页逐项对账，10 个正式模块合计 **371** 个公开参数。原生 MySQL 8.4 仍是试点模块，其 10 个公开参数单列，不计入正式模块合计。
 
 --------
 
@@ -23,7 +23,6 @@ categories: [参考]
 |   [**`ETCD`**](/docs/etcd/param)   |  2  | 13  | ETCD 集群与移除保护参数                       |
 |  [**`MINIO`**](/docs/minio/param)  |  2  | 21  | MinIO 部署与移除参数                        |
 |  [**`REDIS`**](/docs/redis/param)  |  2  | 21  | Redis 部署与移除参数                        |
-| [**`FERRET`**](/docs/ferret/param) |  1  |  9  | FerretDB（Mongo API）参数                |
 | [**`DOCKER`**](/docs/docker/param) |  1  |  8  | Docker 引擎参数                          |
 |  [**`JUICE`**](/docs/juice/param)  |  1  |  2  | JuiceFS 实例与缓存参数                      |
 |   [**`VIBE`**](/docs/vibe/param)   |  1  | 18  | Code/Jupyter/Node.js/Claude/Codex 配置 |
@@ -44,7 +43,6 @@ categories: [参考]
 |   [**`ETCD`**](/docs/etcd/param)   | [`ETCD`](/docs/etcd/param/#etcd)、[`ETCD_REMOVE`](/docs/etcd/param/#etcd_remove)                                                                                                                                                                                                                                                                                                                                                                                                         |
 |  [**`MINIO`**](/docs/minio/param)  | [`MINIO`](/docs/minio/param/#minio)、[`MINIO_REMOVE`](/docs/minio/param/#minio_remove)                                                                                                                                                                                                                                                                                                                                                                                                   |
 |  [**`REDIS`**](/docs/redis/param)  | [`REDIS`](/docs/redis/param/#redis)、[`REDIS_REMOVE`](/docs/redis/param/#redis_remove)                                                                                                                                                                                                                                                                                                                                                                                                   |
-| [**`FERRET`**](/docs/ferret/param) | [`FERRET`](/docs/ferret/param)                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | [**`DOCKER`**](/docs/docker/param) | [`DOCKER`](/docs/docker/param)                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 |  [**`JUICE`**](/docs/juice/param)  | [`JUICE`](/docs/juice/param)                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 |   [**`VIBE`**](/docs/vibe/param)   | [`VIBE`](/docs/vibe/param)                                                                                                                                                                                                                                                                                                                                                                                                                                                              |

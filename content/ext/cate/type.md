@@ -30,7 +30,7 @@ icon: fas fa-cubes
 | [`collection`](/ext/e/collection) | [`pgcollection`](https://github.com/aws/pgcollection) | `2.0.0` | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 在PlPGSQL中使用的内存优化高性能集合数据结构 |
 | [`pgmp`](/ext/e/pgmp) | [`pgmp`](https://github.com/dvarrazzo/pgmp/) | `1.0.6` | <a class="ext-badge ext-badge--license lgpl30" href="/ext/license#lgpl30">LGPL-3.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 多精度算术扩展 |
 | [`numeral`](/ext/e/numeral) | [`numeral`](https://github.com/df7cb/postgresql-numeral) | `1.3` | <a class="ext-badge ext-badge--license gpl20" href="/ext/license#gpl20">GPL-2.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 数值类型扩展 |
-| [`pg_rational`](/ext/e/pg_rational) | [`pg_rational`](https://github.com/begriffs/pg_rational) | `0.0.2` | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 使用BIGINT表示的有理数数据类型 |
+| [`pg_rational`](/ext/e/pg_rational) | [`pg_rational`](https://github.com/begriffs/pg_rational) | `0.0.3` | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 使用BIGINT表示的有理数数据类型 |
 | [`uint`](/ext/e/uint) | [`pguint`](https://github.com/petere/pguint) | `1.20250815` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 无符号整型数据类型 |
 | [`uint128`](/ext/e/uint128) | [`pg_uint128`](https://github.com/pg-uint/pg-uint128) | `1.2.0` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 原生128位无符号整型数据类型 |
 | [`hashtypes`](/ext/e/hashtypes) | [`hashtypes`](https://github.com/adjust/hashtypes/) | `0.1.5` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 包括SHA1，MD5在内的多种哈希数据类型 |
@@ -45,7 +45,7 @@ icon: fas fa-cubes
 | [`pg_rrule`](/ext/e/pg_rrule) | [`pg_rrule`](https://github.com/petropavel13/pg_rrule) | `0.3.0` | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 日历重复规则RRULE数据类型 |
 | [`pgcalendar`](/ext/e/pgcalendar) | [`pgcalendar`](https://github.com/h4kbas/pgcalendar) | `1.1.0` | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> | 为 PostgreSQL 提供循环日程、投影与例外处理的日历扩展 |
 | [`timestamp9`](/ext/e/timestamp9) | [`timestamp9`](https://github.com/optiver/timestamp9) | `1.4.0` | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 纳秒分辨率时间戳 |
-| [`pgbson`](/ext/e/pgbson) | [`pgbson`](https://github.com/buzzm/postgresbson) | `2.0.4` | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 为 PostgreSQL 提供 BSON 数据类型、比较与访问函数 |
+| [`pgbson`](/ext/e/pgbson) | [`pgbson`](https://github.com/buzzm/postgresbson) | `2.1.0` | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 为 PostgreSQL 提供 BSON 数据类型及访问函数 |
 | [`chkpass`](/ext/e/chkpass) | [`chkpass`](https://github.com/lacanoid/chkpass) | `1.0` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 数据类型：自动加密的密码 |
 | [`isn`](/ext/e/isn) | [`isn`](https://www.postgresql.org/docs/current/isn.html) | `1.2` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 用于国际产品编号标准的数据类型 |
 | [`seg`](/ext/e/seg) | [`seg`](https://www.postgresql.org/docs/current/seg.html) | `1.4` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 表示线段或浮点间隔的数据类型 |
@@ -403,7 +403,7 @@ icon: fas fa-cubes
 
 ## pg_rational {#pg_rational}
 
-[**`pg_rational`**](/ext/e/pg_rational) - `0.0.2` : 使用BIGINT表示的有理数数据类型
+[**`pg_rational`**](/ext/e/pg_rational) - `0.0.3` : 使用BIGINT表示的有理数数据类型
 
 | **条目** | **属性** | **OS** | **x86_64** | **aarch64** |
 |:---:|:---|:---:|:---:|:---:|
@@ -688,7 +688,7 @@ icon: fas fa-cubes
 
 ## pgbson {#pgbson}
 
-[**`pgbson`**](/ext/e/pgbson) - `2.0.4` : 为 PostgreSQL 提供 BSON 数据类型、比较与访问函数
+[**`pgbson`**](/ext/e/pgbson) - `2.1.0` : 为 PostgreSQL 提供 BSON 数据类型及访问函数
 
 | **条目** | **属性** | **OS** | **x86_64** | **aarch64** |
 |:---:|:---|:---:|:---:|:---:|

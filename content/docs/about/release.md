@@ -79,11 +79,16 @@ Pigsty 当前文档对应版本为 [**v4.4.0**](#v440)。
 
 **亮点特性**
 
-- 已打包扩展数量提升到 562 个，[PGEXT.CLOUD 总目录](https://pgext.cloud) 扩充至 2230 个
+- 已打包扩展数量提升到 572 个，[PGEXT.CLOUD 总目录](https://pgext.cloud) 扩充至 2230 个
 - 新增试点模块：Kafka
 - 新增试点模块：MySQL
 - 新增试点模块：Click（Clickhouse）
 - 重新编译 ivorysql 与 percona tde 内核
+- 独立 FERRET 模块由 [PostgreSQL Mongo 模式](/docs/conf/mongo/)与 FerretDB Docker APP 取代
+
+**升级说明**
+
+- 现有 FERRET 部署应移除旧的 `ferretdb` systemd 服务，并使用 `docker.yml` 与 `app.yml` 重新部署协议层；旧的 `mongo.yml` 剧本、`mongo_*` 参数、抓取任务和专用仪表盘不再提供。
 
 
 

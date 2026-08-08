@@ -8,7 +8,7 @@ icon: fas fa-brain
 
 ## 扩展列表
 
-共有 **15** 个扩展，位于 **14** 个扩展包中。
+共有 **16** 个扩展，位于 **15** 个扩展包中。
 
 | **扩展** | **包** | **版本** | **许可证** | **语言** | **描述** |
 |:---------|:-------|:--------:|:----------:|:--------:|:---------|
@@ -24,9 +24,10 @@ icon: fas fa-brain
 | [`pg_tiktoken_c`](/ext/e/pg_tiktoken_c) | [`pg_tiktoken_c`](https://github.com/relytcloud/pg_tiktoken_c) | `1.1` | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 使用 C 实现的 PostgreSQL 高性能 tiktoken BPE 分词扩展 |
 | [`pg4ml`](/ext/e/pg4ml) | [`pg4ml`](https://gitee.com/guotiecheng/plpgsql_pg4ml) | `2.0` | <a class="ext-badge ext-badge--license agpl30" href="/ext/license#agpl30">AGPL-3.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | PG4ML是一个机器学习框架 |
 | [`pgml`](/ext/e/pgml) | [`pgml`](https://github.com/postgresml/postgresml) | `2.10.0` | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | PostgresML：用SQL运行机器学习算法并训练模型 |
-| [`pgmnemo`](/ext/e/pgmnemo) | [`pgmnemo`](https://github.com/pgmnemo/pgmnemo) | `0.15.0` | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> | PostgreSQL 单计划多模态智能体记忆扩展 |
+| [`pgmnemo`](/ext/e/pgmnemo) | [`pgmnemo`](https://github.com/pgmnemo/pgmnemo) | `0.16.1` | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> | PostgreSQL 单计划多模态智能体记忆扩展 |
 | [`pgcontext`](/ext/e/pgcontext) | [`pgcontext`](https://pgxn.org/dist/pgContext/0.2.0/) | `0.2.0` | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | 在 PostgreSQL 权威数据表上提供向量检索、过滤感知 HNSW 与混合检索。 |
 | [`pgcontext_pgvector`](/ext/e/pgcontext_pgvector) | [`pgcontext`](https://pgxn.org/dist/pgContext/0.2.0/) | `0.2.0` | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | pgcontext HNSW 索引的可选 pgvector 兼容桥接扩展。 |
+| [`pg_turbovec`](/ext/e/pg_turbovec) | [`pg_turbovec`](https://codeberg.org/gregburd/pg_turbovec) | `1.29.0` | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | 基于 TurboQuant 压缩量化的 PostgreSQL 向量类型与 ANN 索引访问方法。 |
 {.ext-table}
 
 
@@ -262,7 +263,7 @@ icon: fas fa-brain
 
 ## pgmnemo {#pgmnemo}
 
-[**`pgmnemo`**](/ext/e/pgmnemo) - `0.15.0` : PostgreSQL 单计划多模态智能体记忆扩展
+[**`pgmnemo`**](/ext/e/pgmnemo) - `0.16.1` : PostgreSQL 单计划多模态智能体记忆扩展
 
 | **条目** | **属性** | **OS** | **x86_64** | **aarch64** |
 |:---:|:---|:---:|:---:|:---:|
@@ -312,5 +313,24 @@ icon: fas fa-brain
 | **仓库** | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | **u22** | {{< pgvers "18,17" >}} | {{< pgvers "18,17" >}} |
 | **协议** | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | **u24** | {{< pgvers "18,17" >}} | {{< pgvers "18,17" >}} |
 | | | **u26** | {{< pgvers "18,17" >}} | {{< pgvers "18,17" >}} |
+{.ext-table .ext-table--cate}
+
+
+---------
+
+## pg_turbovec {#pg_turbovec}
+
+[**`pg_turbovec`**](/ext/e/pg_turbovec) - `1.29.0` : 基于 TurboQuant 压缩量化的 PostgreSQL 向量类型与 ANN 索引访问方法。
+
+| **条目** | **属性** | **OS** | **x86_64** | **aarch64** |
+|:---:|:---|:---:|:---:|:---:|
+| **扩展名** | [`pg_turbovec`](/ext/e/pg_turbovec) | **el8** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+| **扩展包** | [`pg_turbovec`](https://codeberg.org/gregburd/pg_turbovec) | **el9** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+| **RPM** | `pg_turbovec_$v` | **el10** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+| **DEB** | `postgresql-$v-pg-turbovec` | **d12** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+| **语言** | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | **d13** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+| **仓库** | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | **u22** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+| **协议** | <a class="ext-badge ext-badge--license apache20" href="/ext/license#apache20">Apache-2.0</a> | **u24** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
+| | | **u26** | {{< pgvers "18,17,16,15,14" >}} | {{< pgvers "18,17,16,15,14" >}} |
 {.ext-table .ext-table--cate}
 

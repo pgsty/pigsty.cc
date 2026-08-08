@@ -1,7 +1,7 @@
 ---
 title: "plpgsql_check"
 linkTitle: "plpgsql_check"
-description: "对 plpgsql 函数进行扩展检查"
+description: "PL/pgSQL 函数的附加校验、性能分析与诊断工具"
 weight: 3060
 ---
 
@@ -11,10 +11,10 @@ weight: 3060
     <div class="ext-card__title">okbob/plpgsql_check</div>
     <div class="ext-card__desc">https://github.com/okbob/plpgsql_check</div>
   </a>
-  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/plpgsql_check-2.10.3.tar.gz">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/plpgsql_check-2.10.4.tar.gz">
     <div class="ext-card__kicker">源码</div>
-    <div class="ext-card__title">plpgsql_check-2.10.3.tar.gz</div>
-    <div class="ext-card__desc">plpgsql_check-2.10.3.tar.gz</div>
+    <div class="ext-card__title">plpgsql_check-2.10.4.tar.gz</div>
+    <div class="ext-card__desc">plpgsql_check-2.10.4.tar.gz</div>
   </a>
 </div>
 
@@ -25,7 +25,7 @@ weight: 3060
 
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
-| [**`plpgsql_check`**](/ext/e/plpgsql_check) | `2.10.3` | <a class="ext-badge ext-badge--cate lang" href="/ext/cate/lang">LANG</a> | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
+| [**`plpgsql_check`**](/ext/e/plpgsql_check) | `2.10.4` | <a class="ext-badge ext-badge--cate lang" href="/ext/cate/lang">LANG</a> | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
 {.ext-table}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
@@ -38,38 +38,38 @@ weight: 3060
 {.ext-table .ext-table--rel}
 
 
-> Core active checks work after CREATE EXTENSION; LOAD or shared_preload_libraries is optional for passive mode, early profiler/tracer initialization, and shared profiler statistics. PIGSTY RPM and DEB packages are aligned at 2.10.3 for PostgreSQL 14-18.
+> Core checks work after CREATE EXTENSION; LOAD or shared_preload_libraries is optional for passive mode and shared profiler features; META says BSD but the shipped LICENSE text is MIT.
 
 
 ## 版本
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#lang) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `2.10.3` | {{< pgvers "18,17,16,15,14" >}} | `plpgsql_check` | `plpgsql` |
-| [**RPM**](/ext/rpm#lang) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `2.10.3` | {{< pgvers "18,17,16,15,14" >}} | `plpgsql_check_$v` | - |
-| [**DEB**](/ext/deb#lang) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `2.10.3` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-plpgsql-check` | - |
+| [**EXT**](/ext/list#lang) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `2.10.4` | {{< pgvers "14,15,16,17,18" >}} | `plpgsql_check` | `plpgsql` |
+| [**RPM**](/ext/rpm#lang) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `2.10.4` | {{< pgvers "18,17,16,15,14" >}} | `plpgsql_check_$v` | - |
+| [**DEB**](/ext/deb#lang) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `2.10.4` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-plpgsql-check` | - |
 {.ext-table}
 
 {{< pgext_matrix >}}
 | **OS / PG** | **PG18** | **PG17** | **PG16** | **PG15** | **PG14** |
 |:--:|:--:|:--:|:--:|:--:|:--:|
-| el8.x86_64 | AVAIL PIGSTY 2.10.3 13 | AVAIL PIGSTY 2.10.3 18 | AVAIL PIGSTY 2.10.3 32 | AVAIL PIGSTY 2.10.3 40 | AVAIL PIGSTY 2.10.3 50 |
-| el8.aarch64 | AVAIL PIGSTY 2.10.3 13 | AVAIL PIGSTY 2.10.3 18 | AVAIL PIGSTY 2.10.3 32 | AVAIL PIGSTY 2.10.3 39 | AVAIL PIGSTY 2.10.3 39 |
-| el9.x86_64 | AVAIL PIGSTY 2.10.3 20 | AVAIL PIGSTY 2.10.3 25 | AVAIL PIGSTY 2.10.3 39 | AVAIL PIGSTY 2.10.3 47 | AVAIL PIGSTY 2.10.3 54 |
-| el9.aarch64 | AVAIL PIGSTY 2.10.3 20 | AVAIL PIGSTY 2.10.3 25 | AVAIL PIGSTY 2.10.3 39 | AVAIL PIGSTY 2.10.3 46 | AVAIL PIGSTY 2.10.3 46 |
-| el10.x86_64 | AVAIL PIGSTY 2.10.3 20 | AVAIL PIGSTY 2.10.3 21 | AVAIL PIGSTY 2.10.3 21 | AVAIL PIGSTY 2.10.3 21 | AVAIL PIGSTY 2.10.3 21 |
-| el10.aarch64 | AVAIL PIGSTY 2.10.3 20 | AVAIL PIGSTY 2.10.3 21 | AVAIL PIGSTY 2.10.3 21 | AVAIL PIGSTY 2.10.3 21 | AVAIL PIGSTY 2.10.3 21 |
-| d12.x86_64 | AVAIL PGDG 2.10.3 4 | AVAIL PGDG 2.10.3 4 | AVAIL PGDG 2.10.3 4 | AVAIL PGDG 2.10.3 4 | AVAIL PGDG 2.10.3 4 |
-| d12.aarch64 | AVAIL PGDG 2.10.3 4 | AVAIL PGDG 2.10.3 4 | AVAIL PGDG 2.10.3 4 | AVAIL PGDG 2.10.3 4 | AVAIL PGDG 2.10.3 4 |
-| d13.x86_64 | AVAIL PGDG 2.10.3 4 | AVAIL PGDG 2.10.3 4 | AVAIL PGDG 2.10.3 4 | AVAIL PGDG 2.10.3 4 | AVAIL PGDG 2.10.3 4 |
-| d13.aarch64 | AVAIL PGDG 2.10.3 4 | AVAIL PGDG 2.10.3 4 | AVAIL PGDG 2.10.3 4 | AVAIL PGDG 2.10.3 4 | AVAIL PGDG 2.10.3 4 |
-| u22.x86_64 | AVAIL PGDG 2.10.3 4 | AVAIL PGDG 2.10.3 4 | AVAIL PGDG 2.10.3 4 | AVAIL PGDG 2.10.3 4 | AVAIL PGDG 2.10.3 4 |
-| u22.aarch64 | AVAIL PGDG 2.10.3 4 | AVAIL PGDG 2.10.3 4 | AVAIL PGDG 2.10.3 4 | AVAIL PGDG 2.10.3 4 | AVAIL PGDG 2.10.3 4 |
-| u24.x86_64 | AVAIL PGDG 2.10.3 4 | AVAIL PGDG 2.10.3 4 | AVAIL PGDG 2.10.3 4 | AVAIL PGDG 2.10.3 4 | AVAIL PGDG 2.10.3 4 |
-| u24.aarch64 | AVAIL PGDG 2.10.3 4 | AVAIL PGDG 2.10.3 4 | AVAIL PGDG 2.10.3 4 | AVAIL PGDG 2.10.3 4 | AVAIL PGDG 2.10.3 4 |
-| u26.x86_64 | AVAIL PGDG 2.10.3 4 | AVAIL PGDG 2.10.3 4 | AVAIL PGDG 2.10.3 4 | AVAIL PGDG 2.10.3 4 | AVAIL PGDG 2.10.3 4 |
-| u26.aarch64 | AVAIL PGDG 2.10.3 4 | AVAIL PGDG 2.10.3 4 | AVAIL PGDG 2.10.3 4 | AVAIL PGDG 2.10.3 4 | AVAIL PGDG 2.10.3 4 |
-@ el8.x86_64 18 plpgsql_check_18 plpgsql_check_18-2.10.3-1PIGSTY.el8.x86_64.rpm pigsty 2.10.3 123.1KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/plpgsql_check_18-2.10.3-1PIGSTY.el8.x86_64.rpm
+| el8.x86_64 | AVAIL PIGSTY 2.10.4 13 | AVAIL PIGSTY 2.10.4 18 | AVAIL PIGSTY 2.10.4 32 | AVAIL PIGSTY 2.10.4 40 | AVAIL PIGSTY 2.10.4 50 |
+| el8.aarch64 | AVAIL PIGSTY 2.10.4 13 | AVAIL PIGSTY 2.10.4 18 | AVAIL PIGSTY 2.10.4 32 | AVAIL PIGSTY 2.10.4 39 | AVAIL PIGSTY 2.10.4 39 |
+| el9.x86_64 | AVAIL PIGSTY 2.10.4 20 | AVAIL PIGSTY 2.10.4 25 | AVAIL PIGSTY 2.10.4 39 | AVAIL PIGSTY 2.10.4 47 | AVAIL PIGSTY 2.10.4 54 |
+| el9.aarch64 | AVAIL PIGSTY 2.10.4 20 | AVAIL PIGSTY 2.10.4 25 | AVAIL PIGSTY 2.10.4 39 | AVAIL PIGSTY 2.10.4 46 | AVAIL PIGSTY 2.10.4 46 |
+| el10.x86_64 | AVAIL PIGSTY 2.10.4 20 | AVAIL PIGSTY 2.10.4 21 | AVAIL PIGSTY 2.10.4 21 | AVAIL PIGSTY 2.10.4 21 | AVAIL PIGSTY 2.10.4 21 |
+| el10.aarch64 | AVAIL PIGSTY 2.10.4 20 | AVAIL PIGSTY 2.10.4 21 | AVAIL PIGSTY 2.10.4 21 | AVAIL PIGSTY 2.10.4 21 | AVAIL PIGSTY 2.10.4 21 |
+| d12.x86_64 | AVAIL PGDG 2.10.4 4 | AVAIL PGDG 2.10.4 4 | AVAIL PGDG 2.10.4 4 | AVAIL PGDG 2.10.4 4 | AVAIL PGDG 2.10.4 4 |
+| d12.aarch64 | AVAIL PGDG 2.10.4 4 | AVAIL PGDG 2.10.4 4 | AVAIL PGDG 2.10.4 4 | AVAIL PGDG 2.10.4 4 | AVAIL PGDG 2.10.4 4 |
+| d13.x86_64 | AVAIL PGDG 2.10.4 4 | AVAIL PGDG 2.10.4 4 | AVAIL PGDG 2.10.4 4 | AVAIL PGDG 2.10.4 4 | AVAIL PGDG 2.10.4 4 |
+| d13.aarch64 | AVAIL PGDG 2.10.4 4 | AVAIL PGDG 2.10.4 4 | AVAIL PGDG 2.10.4 4 | AVAIL PGDG 2.10.4 4 | AVAIL PGDG 2.10.4 4 |
+| u22.x86_64 | AVAIL PGDG 2.10.4 4 | AVAIL PGDG 2.10.4 4 | AVAIL PGDG 2.10.4 4 | AVAIL PGDG 2.10.4 4 | AVAIL PGDG 2.10.4 4 |
+| u22.aarch64 | AVAIL PGDG 2.10.4 4 | AVAIL PGDG 2.10.4 4 | AVAIL PGDG 2.10.4 4 | AVAIL PGDG 2.10.4 4 | AVAIL PGDG 2.10.4 4 |
+| u24.x86_64 | AVAIL PGDG 2.10.4 4 | AVAIL PGDG 2.10.4 4 | AVAIL PGDG 2.10.4 4 | AVAIL PGDG 2.10.4 4 | AVAIL PGDG 2.10.4 4 |
+| u24.aarch64 | AVAIL PGDG 2.10.4 4 | AVAIL PGDG 2.10.4 4 | AVAIL PGDG 2.10.4 4 | AVAIL PGDG 2.10.4 4 | AVAIL PGDG 2.10.4 4 |
+| u26.x86_64 | AVAIL PGDG 2.10.4 4 | AVAIL PGDG 2.10.4 4 | AVAIL PGDG 2.10.4 4 | AVAIL PGDG 2.10.4 4 | AVAIL PGDG 2.10.4 4 |
+| u26.aarch64 | AVAIL PGDG 2.10.4 4 | AVAIL PGDG 2.10.4 4 | AVAIL PGDG 2.10.4 4 | AVAIL PGDG 2.10.4 4 | AVAIL PGDG 2.10.4 4 |
+@ el8.x86_64 18 plpgsql_check_18 plpgsql_check_18-2.10.4-1PIGSTY.el8.x86_64.rpm pigsty 2.10.4 123.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/plpgsql_check_18-2.10.4-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 18 plpgsql_check_18 plpgsql_check_18-2.10.3-1PGDG.rhel8.10.x86_64.rpm pgdg 2.10.3 125.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/plpgsql_check_18-2.10.3-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 18 plpgsql_check_18 plpgsql_check_18-2.10.2-1PGDG.rhel8.10.x86_64.rpm pgdg 2.10.2 125.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/plpgsql_check_18-2.10.2-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 18 plpgsql_check_18 plpgsql_check_18-2.10.1-1PGDG.rhel8.10.x86_64.rpm pgdg 2.10.1 124.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/plpgsql_check_18-2.10.1-1PGDG.rhel8.10.x86_64.rpm
@@ -82,7 +82,7 @@ weight: 3060
 @ el8.x86_64 18 plpgsql_check_18 plpgsql_check_18-2.8.4-1PGDG.rhel8.10.x86_64.rpm pgdg 2.8.4 113.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/plpgsql_check_18-2.8.4-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 18 plpgsql_check_18 plpgsql_check_18-2.8.3-1PGDG.rhel8.x86_64.rpm pgdg 2.8.3 113.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/plpgsql_check_18-2.8.3-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 18 plpgsql_check_18 plpgsql_check_18-2.8.2-1PGDG.rhel8.x86_64.rpm pgdg 2.8.2 113.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-x86_64/plpgsql_check_18-2.8.2-1PGDG.rhel8.x86_64.rpm
-@ el8.aarch64 18 plpgsql_check_18 plpgsql_check_18-2.10.3-1PIGSTY.el8.aarch64.rpm pigsty 2.10.3 114.4KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/plpgsql_check_18-2.10.3-1PIGSTY.el8.aarch64.rpm
+@ el8.aarch64 18 plpgsql_check_18 plpgsql_check_18-2.10.4-1PIGSTY.el8.aarch64.rpm pigsty 2.10.4 114.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/plpgsql_check_18-2.10.4-1PIGSTY.el8.aarch64.rpm
 @ el8.aarch64 18 plpgsql_check_18 plpgsql_check_18-2.10.3-1PGDG.rhel8.10.aarch64.rpm pgdg 2.10.3 116.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/plpgsql_check_18-2.10.3-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 18 plpgsql_check_18 plpgsql_check_18-2.10.2-1PGDG.rhel8.10.aarch64.rpm pgdg 2.10.2 116.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/plpgsql_check_18-2.10.2-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 18 plpgsql_check_18 plpgsql_check_18-2.10.1-1PGDG.rhel8.10.aarch64.rpm pgdg 2.10.1 115.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/plpgsql_check_18-2.10.1-1PGDG.rhel8.10.aarch64.rpm
@@ -95,7 +95,7 @@ weight: 3060
 @ el8.aarch64 18 plpgsql_check_18 plpgsql_check_18-2.8.4-1PGDG.rhel8.10.aarch64.rpm pgdg 2.8.4 105.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/plpgsql_check_18-2.8.4-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 18 plpgsql_check_18 plpgsql_check_18-2.8.3-1PGDG.rhel8.aarch64.rpm pgdg 2.8.3 105.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/plpgsql_check_18-2.8.3-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 18 plpgsql_check_18 plpgsql_check_18-2.8.2-1PGDG.rhel8.aarch64.rpm pgdg 2.8.2 104.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-8-aarch64/plpgsql_check_18-2.8.2-1PGDG.rhel8.aarch64.rpm
-@ el9.x86_64 18 plpgsql_check_18 plpgsql_check_18-2.10.3-1PIGSTY.el9.x86_64.rpm pigsty 2.10.3 116.7KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/plpgsql_check_18-2.10.3-1PIGSTY.el9.x86_64.rpm
+@ el9.x86_64 18 plpgsql_check_18 plpgsql_check_18-2.10.4-1PIGSTY.el9.x86_64.rpm pigsty 2.10.4 117.1KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/plpgsql_check_18-2.10.4-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 18 plpgsql_check_18 plpgsql_check_18-2.10.3-1PGDG.rhel9.8.x86_64.rpm pgdg 2.10.3 120.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/plpgsql_check_18-2.10.3-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 18 plpgsql_check_18 plpgsql_check_18-2.10.2-1PGDG.rhel9.8.x86_64.rpm pgdg 2.10.2 120.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/plpgsql_check_18-2.10.2-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 18 plpgsql_check_18 plpgsql_check_18-2.10.1-1PGDG.rhel9.8.x86_64.rpm pgdg 2.10.1 119.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/plpgsql_check_18-2.10.1-1PGDG.rhel9.8.x86_64.rpm
@@ -115,7 +115,7 @@ weight: 3060
 @ el9.x86_64 18 plpgsql_check_18 plpgsql_check_18-2.8.4-1PGDG.rhel9.6.x86_64.rpm pgdg 2.8.4 108.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/plpgsql_check_18-2.8.4-1PGDG.rhel9.6.x86_64.rpm
 @ el9.x86_64 18 plpgsql_check_18 plpgsql_check_18-2.8.3-1PGDG.rhel9.x86_64.rpm pgdg 2.8.3 109.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/plpgsql_check_18-2.8.3-1PGDG.rhel9.x86_64.rpm
 @ el9.x86_64 18 plpgsql_check_18 plpgsql_check_18-2.8.2-1PGDG.rhel9.x86_64.rpm pgdg 2.8.2 108.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-x86_64/plpgsql_check_18-2.8.2-1PGDG.rhel9.x86_64.rpm
-@ el9.aarch64 18 plpgsql_check_18 plpgsql_check_18-2.10.3-1PIGSTY.el9.aarch64.rpm pigsty 2.10.3 111.8KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/plpgsql_check_18-2.10.3-1PIGSTY.el9.aarch64.rpm
+@ el9.aarch64 18 plpgsql_check_18 plpgsql_check_18-2.10.4-1PIGSTY.el9.aarch64.rpm pigsty 2.10.4 111.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/plpgsql_check_18-2.10.4-1PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 18 plpgsql_check_18 plpgsql_check_18-2.10.3-1PGDG.rhel9.8.aarch64.rpm pgdg 2.10.3 116.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/plpgsql_check_18-2.10.3-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 18 plpgsql_check_18 plpgsql_check_18-2.10.2-1PGDG.rhel9.8.aarch64.rpm pgdg 2.10.2 116.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/plpgsql_check_18-2.10.2-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 18 plpgsql_check_18 plpgsql_check_18-2.10.1-1PGDG.rhel9.8.aarch64.rpm pgdg 2.10.1 114.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/plpgsql_check_18-2.10.1-1PGDG.rhel9.8.aarch64.rpm
@@ -135,7 +135,7 @@ weight: 3060
 @ el9.aarch64 18 plpgsql_check_18 plpgsql_check_18-2.8.4-1PGDG.rhel9.6.aarch64.rpm pgdg 2.8.4 103.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/plpgsql_check_18-2.8.4-1PGDG.rhel9.6.aarch64.rpm
 @ el9.aarch64 18 plpgsql_check_18 plpgsql_check_18-2.8.3-1PGDG.rhel9.aarch64.rpm pgdg 2.8.3 103.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/plpgsql_check_18-2.8.3-1PGDG.rhel9.aarch64.rpm
 @ el9.aarch64 18 plpgsql_check_18 plpgsql_check_18-2.8.2-1PGDG.rhel9.aarch64.rpm pgdg 2.8.2 103.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-9-aarch64/plpgsql_check_18-2.8.2-1PGDG.rhel9.aarch64.rpm
-@ el10.x86_64 18 plpgsql_check_18 plpgsql_check_18-2.10.3-1PIGSTY.el10.x86_64.rpm pigsty 2.10.3 118.8KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/plpgsql_check_18-2.10.3-1PIGSTY.el10.x86_64.rpm
+@ el10.x86_64 18 plpgsql_check_18 plpgsql_check_18-2.10.4-1PIGSTY.el10.x86_64.rpm pigsty 2.10.4 119.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/plpgsql_check_18-2.10.4-1PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 18 plpgsql_check_18 plpgsql_check_18-2.10.3-1PGDG.rhel10.2.x86_64.rpm pgdg 2.10.3 123.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/plpgsql_check_18-2.10.3-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 18 plpgsql_check_18 plpgsql_check_18-2.10.2-1PGDG.rhel10.2.x86_64.rpm pgdg 2.10.2 123.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/plpgsql_check_18-2.10.2-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 18 plpgsql_check_18 plpgsql_check_18-2.10.1-1PGDG.rhel10.2.x86_64.rpm pgdg 2.10.1 122.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/plpgsql_check_18-2.10.1-1PGDG.rhel10.2.x86_64.rpm
@@ -155,7 +155,7 @@ weight: 3060
 @ el10.x86_64 18 plpgsql_check_18 plpgsql_check_18-2.8.4-1PGDGrhel10.0.x86_64.rpm pgdg 2.8.4 111.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/plpgsql_check_18-2.8.4-1PGDGrhel10.0.x86_64.rpm
 @ el10.x86_64 18 plpgsql_check_18 plpgsql_check_18-2.8.3-1PGDG.rhel10.x86_64.rpm pgdg 2.8.3 111.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/plpgsql_check_18-2.8.3-1PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 18 plpgsql_check_18 plpgsql_check_18-2.8.2-1PGDG.rhel10.x86_64.rpm pgdg 2.8.2 111.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-x86_64/plpgsql_check_18-2.8.2-1PGDG.rhel10.x86_64.rpm
-@ el10.aarch64 18 plpgsql_check_18 plpgsql_check_18-2.10.3-1PIGSTY.el10.aarch64.rpm pigsty 2.10.3 113.3KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/plpgsql_check_18-2.10.3-1PIGSTY.el10.aarch64.rpm
+@ el10.aarch64 18 plpgsql_check_18 plpgsql_check_18-2.10.4-1PIGSTY.el10.aarch64.rpm pigsty 2.10.4 113.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/plpgsql_check_18-2.10.4-1PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 18 plpgsql_check_18 plpgsql_check_18-2.10.3-1PGDG.rhel10.2.aarch64.rpm pgdg 2.10.3 117.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/plpgsql_check_18-2.10.3-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 18 plpgsql_check_18 plpgsql_check_18-2.10.2-1PGDG.rhel10.2.aarch64.rpm pgdg 2.10.2 117.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/plpgsql_check_18-2.10.2-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 18 plpgsql_check_18 plpgsql_check_18-2.10.1-1PGDG.rhel10.2.aarch64.rpm pgdg 2.10.1 115.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/plpgsql_check_18-2.10.1-1PGDG.rhel10.2.aarch64.rpm
@@ -175,47 +175,47 @@ weight: 3060
 @ el10.aarch64 18 plpgsql_check_18 plpgsql_check_18-2.8.4-1PGDGrhel10.0.aarch64.rpm pgdg 2.8.4 105.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/plpgsql_check_18-2.8.4-1PGDGrhel10.0.aarch64.rpm
 @ el10.aarch64 18 plpgsql_check_18 plpgsql_check_18-2.8.3-1PGDG.rhel10.aarch64.rpm pgdg 2.8.3 105.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/plpgsql_check_18-2.8.3-1PGDG.rhel10.aarch64.rpm
 @ el10.aarch64 18 plpgsql_check_18 plpgsql_check_18-2.8.2-1PGDG.rhel10.aarch64.rpm pgdg 2.8.2 105.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/18/redhat/rhel-10-aarch64/plpgsql_check_18-2.8.2-1PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 18 postgresql-18-plpgsql-check postgresql-18-plpgsql-check_2.10.4-1.pgdg12+1_amd64.deb pgdg 2.10.4 316.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-18-plpgsql-check_2.10.4-1.pgdg12+1_amd64.deb
+@ d12.x86_64 18 postgresql-18-plpgsql-check postgresql-18-plpgsql-check_2.10.4-1PIGSTY~bookworm_amd64.deb pigsty 2.10.4 315.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/plpgsql-check/postgresql-18-plpgsql-check_2.10.4-1PIGSTY~bookworm_amd64.deb
 @ d12.x86_64 18 postgresql-18-plpgsql-check postgresql-18-plpgsql-check_2.10.3-1.pgdg12+1_amd64.deb pgdg 2.10.3 315.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-18-plpgsql-check_2.10.3-1.pgdg12+1_amd64.deb
-@ d12.x86_64 18 postgresql-18-plpgsql-check postgresql-18-plpgsql-check_2.10.3-1PIGSTY~bookworm_amd64.deb pigsty 2.10.3 313.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/plpgsql-check/postgresql-18-plpgsql-check_2.10.3-1PIGSTY~bookworm_amd64.deb
 @ d12.x86_64 18 postgresql-18-plpgsql-check postgresql-18-plpgsql-check_2.10.2-1.pgdg12+1_amd64.deb pgdg 2.10.2 315.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-18-plpgsql-check_2.10.2-1.pgdg12+1_amd64.deb
-@ d12.x86_64 18 postgresql-18-plpgsql-check postgresql-18-plpgsql-check_2.10.1-1.pgdg12+1_amd64.deb pgdg 2.10.1 313.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-18-plpgsql-check_2.10.1-1.pgdg12+1_amd64.deb
+@ d12.aarch64 18 postgresql-18-plpgsql-check postgresql-18-plpgsql-check_2.10.4-1.pgdg12+1_arm64.deb pgdg 2.10.4 305.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-18-plpgsql-check_2.10.4-1.pgdg12+1_arm64.deb
+@ d12.aarch64 18 postgresql-18-plpgsql-check postgresql-18-plpgsql-check_2.10.4-1PIGSTY~bookworm_arm64.deb pigsty 2.10.4 303.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/plpgsql-check/postgresql-18-plpgsql-check_2.10.4-1PIGSTY~bookworm_arm64.deb
 @ d12.aarch64 18 postgresql-18-plpgsql-check postgresql-18-plpgsql-check_2.10.3-1.pgdg12+1_arm64.deb pgdg 2.10.3 304.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-18-plpgsql-check_2.10.3-1.pgdg12+1_arm64.deb
-@ d12.aarch64 18 postgresql-18-plpgsql-check postgresql-18-plpgsql-check_2.10.3-1PIGSTY~bookworm_arm64.deb pigsty 2.10.3 303.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/plpgsql-check/postgresql-18-plpgsql-check_2.10.3-1PIGSTY~bookworm_arm64.deb
 @ d12.aarch64 18 postgresql-18-plpgsql-check postgresql-18-plpgsql-check_2.10.2-1.pgdg12+1_arm64.deb pgdg 2.10.2 304.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-18-plpgsql-check_2.10.2-1.pgdg12+1_arm64.deb
-@ d12.aarch64 18 postgresql-18-plpgsql-check postgresql-18-plpgsql-check_2.10.1-1.pgdg12+1_arm64.deb pgdg 2.10.1 302.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-18-plpgsql-check_2.10.1-1.pgdg12+1_arm64.deb
+@ d13.x86_64 18 postgresql-18-plpgsql-check postgresql-18-plpgsql-check_2.10.4-1.pgdg13+1_amd64.deb pgdg 2.10.4 317.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-18-plpgsql-check_2.10.4-1.pgdg13+1_amd64.deb
+@ d13.x86_64 18 postgresql-18-plpgsql-check postgresql-18-plpgsql-check_2.10.4-1PIGSTY~trixie_amd64.deb pigsty 2.10.4 315.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/plpgsql-check/postgresql-18-plpgsql-check_2.10.4-1PIGSTY~trixie_amd64.deb
 @ d13.x86_64 18 postgresql-18-plpgsql-check postgresql-18-plpgsql-check_2.10.3-1.pgdg13+1_amd64.deb pgdg 2.10.3 316.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-18-plpgsql-check_2.10.3-1.pgdg13+1_amd64.deb
-@ d13.x86_64 18 postgresql-18-plpgsql-check postgresql-18-plpgsql-check_2.10.3-1PIGSTY~trixie_amd64.deb pigsty 2.10.3 314.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/plpgsql-check/postgresql-18-plpgsql-check_2.10.3-1PIGSTY~trixie_amd64.deb
 @ d13.x86_64 18 postgresql-18-plpgsql-check postgresql-18-plpgsql-check_2.10.2-1.pgdg13+1_amd64.deb pgdg 2.10.2 316.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-18-plpgsql-check_2.10.2-1.pgdg13+1_amd64.deb
-@ d13.x86_64 18 postgresql-18-plpgsql-check postgresql-18-plpgsql-check_2.10.1-1.pgdg13+1_amd64.deb pgdg 2.10.1 313.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-18-plpgsql-check_2.10.1-1.pgdg13+1_amd64.deb
+@ d13.aarch64 18 postgresql-18-plpgsql-check postgresql-18-plpgsql-check_2.10.4-1.pgdg13+1_arm64.deb pgdg 2.10.4 306.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-18-plpgsql-check_2.10.4-1.pgdg13+1_arm64.deb
+@ d13.aarch64 18 postgresql-18-plpgsql-check postgresql-18-plpgsql-check_2.10.4-1PIGSTY~trixie_arm64.deb pigsty 2.10.4 304.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/plpgsql-check/postgresql-18-plpgsql-check_2.10.4-1PIGSTY~trixie_arm64.deb
 @ d13.aarch64 18 postgresql-18-plpgsql-check postgresql-18-plpgsql-check_2.10.3-1.pgdg13+1_arm64.deb pgdg 2.10.3 305.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-18-plpgsql-check_2.10.3-1.pgdg13+1_arm64.deb
-@ d13.aarch64 18 postgresql-18-plpgsql-check postgresql-18-plpgsql-check_2.10.3-1PIGSTY~trixie_arm64.deb pigsty 2.10.3 303.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/plpgsql-check/postgresql-18-plpgsql-check_2.10.3-1PIGSTY~trixie_arm64.deb
 @ d13.aarch64 18 postgresql-18-plpgsql-check postgresql-18-plpgsql-check_2.10.2-1.pgdg13+1_arm64.deb pgdg 2.10.2 305.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-18-plpgsql-check_2.10.2-1.pgdg13+1_arm64.deb
-@ d13.aarch64 18 postgresql-18-plpgsql-check postgresql-18-plpgsql-check_2.10.1-1.pgdg13+1_arm64.deb pgdg 2.10.1 303.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-18-plpgsql-check_2.10.1-1.pgdg13+1_arm64.deb
+@ u22.x86_64 18 postgresql-18-plpgsql-check postgresql-18-plpgsql-check_2.10.4-1.pgdg22.04+1_amd64.deb pgdg 2.10.4 327.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-18-plpgsql-check_2.10.4-1.pgdg22.04+1_amd64.deb
+@ u22.x86_64 18 postgresql-18-plpgsql-check postgresql-18-plpgsql-check_2.10.4-1PIGSTY~jammy_amd64.deb pigsty 2.10.4 342.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/plpgsql-check/postgresql-18-plpgsql-check_2.10.4-1PIGSTY~jammy_amd64.deb
 @ u22.x86_64 18 postgresql-18-plpgsql-check postgresql-18-plpgsql-check_2.10.3-1.pgdg22.04+1_amd64.deb pgdg 2.10.3 326.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-18-plpgsql-check_2.10.3-1.pgdg22.04+1_amd64.deb
-@ u22.x86_64 18 postgresql-18-plpgsql-check postgresql-18-plpgsql-check_2.10.3-1PIGSTY~jammy_amd64.deb pigsty 2.10.3 341.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/plpgsql-check/postgresql-18-plpgsql-check_2.10.3-1PIGSTY~jammy_amd64.deb
 @ u22.x86_64 18 postgresql-18-plpgsql-check postgresql-18-plpgsql-check_2.10.2-1.pgdg22.04+1_amd64.deb pgdg 2.10.2 326.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-18-plpgsql-check_2.10.2-1.pgdg22.04+1_amd64.deb
-@ u22.x86_64 18 postgresql-18-plpgsql-check postgresql-18-plpgsql-check_2.10.1-1.pgdg22.04+1_amd64.deb pgdg 2.10.1 323.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-18-plpgsql-check_2.10.1-1.pgdg22.04+1_amd64.deb
+@ u22.aarch64 18 postgresql-18-plpgsql-check postgresql-18-plpgsql-check_2.10.4-1.pgdg22.04+1_arm64.deb pgdg 2.10.4 315.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-18-plpgsql-check_2.10.4-1.pgdg22.04+1_arm64.deb
+@ u22.aarch64 18 postgresql-18-plpgsql-check postgresql-18-plpgsql-check_2.10.4-1PIGSTY~jammy_arm64.deb pigsty 2.10.4 335.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/plpgsql-check/postgresql-18-plpgsql-check_2.10.4-1PIGSTY~jammy_arm64.deb
 @ u22.aarch64 18 postgresql-18-plpgsql-check postgresql-18-plpgsql-check_2.10.3-1.pgdg22.04+1_arm64.deb pgdg 2.10.3 315.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-18-plpgsql-check_2.10.3-1.pgdg22.04+1_arm64.deb
-@ u22.aarch64 18 postgresql-18-plpgsql-check postgresql-18-plpgsql-check_2.10.3-1PIGSTY~jammy_arm64.deb pigsty 2.10.3 334.7KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/plpgsql-check/postgresql-18-plpgsql-check_2.10.3-1PIGSTY~jammy_arm64.deb
 @ u22.aarch64 18 postgresql-18-plpgsql-check postgresql-18-plpgsql-check_2.10.2-1.pgdg22.04+1_arm64.deb pgdg 2.10.2 315.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-18-plpgsql-check_2.10.2-1.pgdg22.04+1_arm64.deb
-@ u22.aarch64 18 postgresql-18-plpgsql-check postgresql-18-plpgsql-check_2.10.1-1.pgdg22.04+1_arm64.deb pgdg 2.10.1 311.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-18-plpgsql-check_2.10.1-1.pgdg22.04+1_arm64.deb
+@ u24.x86_64 18 postgresql-18-plpgsql-check postgresql-18-plpgsql-check_2.10.4-1.pgdg24.04+1_amd64.deb pgdg 2.10.4 316.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-18-plpgsql-check_2.10.4-1.pgdg24.04+1_amd64.deb
+@ u24.x86_64 18 postgresql-18-plpgsql-check postgresql-18-plpgsql-check_2.10.4-1PIGSTY~noble_amd64.deb pigsty 2.10.4 328.5KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/plpgsql-check/postgresql-18-plpgsql-check_2.10.4-1PIGSTY~noble_amd64.deb
 @ u24.x86_64 18 postgresql-18-plpgsql-check postgresql-18-plpgsql-check_2.10.3-1.pgdg24.04+1_amd64.deb pgdg 2.10.3 315.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-18-plpgsql-check_2.10.3-1.pgdg24.04+1_amd64.deb
-@ u24.x86_64 18 postgresql-18-plpgsql-check postgresql-18-plpgsql-check_2.10.3-1PIGSTY~noble_amd64.deb pigsty 2.10.3 327.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/plpgsql-check/postgresql-18-plpgsql-check_2.10.3-1PIGSTY~noble_amd64.deb
 @ u24.x86_64 18 postgresql-18-plpgsql-check postgresql-18-plpgsql-check_2.10.2-1.pgdg24.04+1_amd64.deb pgdg 2.10.2 315.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-18-plpgsql-check_2.10.2-1.pgdg24.04+1_amd64.deb
-@ u24.x86_64 18 postgresql-18-plpgsql-check postgresql-18-plpgsql-check_2.10.1-1.pgdg24.04+1_amd64.deb pgdg 2.10.1 312.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-18-plpgsql-check_2.10.1-1.pgdg24.04+1_amd64.deb
+@ u24.aarch64 18 postgresql-18-plpgsql-check postgresql-18-plpgsql-check_2.10.4-1.pgdg24.04+1_arm64.deb pgdg 2.10.4 304.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-18-plpgsql-check_2.10.4-1.pgdg24.04+1_arm64.deb
+@ u24.aarch64 18 postgresql-18-plpgsql-check postgresql-18-plpgsql-check_2.10.4-1PIGSTY~noble_arm64.deb pigsty 2.10.4 322.1KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/plpgsql-check/postgresql-18-plpgsql-check_2.10.4-1PIGSTY~noble_arm64.deb
 @ u24.aarch64 18 postgresql-18-plpgsql-check postgresql-18-plpgsql-check_2.10.3-1.pgdg24.04+1_arm64.deb pgdg 2.10.3 304.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-18-plpgsql-check_2.10.3-1.pgdg24.04+1_arm64.deb
-@ u24.aarch64 18 postgresql-18-plpgsql-check postgresql-18-plpgsql-check_2.10.3-1PIGSTY~noble_arm64.deb pigsty 2.10.3 321.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/plpgsql-check/postgresql-18-plpgsql-check_2.10.3-1PIGSTY~noble_arm64.deb
 @ u24.aarch64 18 postgresql-18-plpgsql-check postgresql-18-plpgsql-check_2.10.2-1.pgdg24.04+1_arm64.deb pgdg 2.10.2 304.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-18-plpgsql-check_2.10.2-1.pgdg24.04+1_arm64.deb
-@ u24.aarch64 18 postgresql-18-plpgsql-check postgresql-18-plpgsql-check_2.10.1-1.pgdg24.04+1_arm64.deb pgdg 2.10.1 301.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-18-plpgsql-check_2.10.1-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 18 postgresql-18-plpgsql-check postgresql-18-plpgsql-check_2.10.4-1.pgdg26.04+1_amd64.deb pgdg 2.10.4 314.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-18-plpgsql-check_2.10.4-1.pgdg26.04+1_amd64.deb
+@ u26.x86_64 18 postgresql-18-plpgsql-check postgresql-18-plpgsql-check_2.10.4-1PIGSTY~resolute_amd64.deb pigsty 2.10.4 326.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/plpgsql-check/postgresql-18-plpgsql-check_2.10.4-1PIGSTY~resolute_amd64.deb
 @ u26.x86_64 18 postgresql-18-plpgsql-check postgresql-18-plpgsql-check_2.10.3-1.pgdg26.04+1_amd64.deb pgdg 2.10.3 313.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-18-plpgsql-check_2.10.3-1.pgdg26.04+1_amd64.deb
-@ u26.x86_64 18 postgresql-18-plpgsql-check postgresql-18-plpgsql-check_2.10.3-1PIGSTY~resolute_amd64.deb pigsty 2.10.3 325.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/plpgsql-check/postgresql-18-plpgsql-check_2.10.3-1PIGSTY~resolute_amd64.deb
 @ u26.x86_64 18 postgresql-18-plpgsql-check postgresql-18-plpgsql-check_2.10.2-1.pgdg26.04+1_amd64.deb pgdg 2.10.2 313.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-18-plpgsql-check_2.10.2-1.pgdg26.04+1_amd64.deb
-@ u26.x86_64 18 postgresql-18-plpgsql-check postgresql-18-plpgsql-check_2.10.1-1.pgdg26.04+1_amd64.deb pgdg 2.10.1 310.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-18-plpgsql-check_2.10.1-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 18 postgresql-18-plpgsql-check postgresql-18-plpgsql-check_2.10.4-1.pgdg26.04+1_arm64.deb pgdg 2.10.4 301.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-18-plpgsql-check_2.10.4-1.pgdg26.04+1_arm64.deb
+@ u26.aarch64 18 postgresql-18-plpgsql-check postgresql-18-plpgsql-check_2.10.4-1PIGSTY~resolute_arm64.deb pigsty 2.10.4 319.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/plpgsql-check/postgresql-18-plpgsql-check_2.10.4-1PIGSTY~resolute_arm64.deb
 @ u26.aarch64 18 postgresql-18-plpgsql-check postgresql-18-plpgsql-check_2.10.3-1.pgdg26.04+1_arm64.deb pgdg 2.10.3 300.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-18-plpgsql-check_2.10.3-1.pgdg26.04+1_arm64.deb
-@ u26.aarch64 18 postgresql-18-plpgsql-check postgresql-18-plpgsql-check_2.10.3-1PIGSTY~resolute_arm64.deb pigsty 2.10.3 318.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/plpgsql-check/postgresql-18-plpgsql-check_2.10.3-1PIGSTY~resolute_arm64.deb
 @ u26.aarch64 18 postgresql-18-plpgsql-check postgresql-18-plpgsql-check_2.10.2-1.pgdg26.04+1_arm64.deb pgdg 2.10.2 300.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-18-plpgsql-check_2.10.2-1.pgdg26.04+1_arm64.deb
-@ u26.aarch64 18 postgresql-18-plpgsql-check postgresql-18-plpgsql-check_2.10.1-1.pgdg26.04+1_arm64.deb pgdg 2.10.1 297.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-18-plpgsql-check_2.10.1-1.pgdg26.04+1_arm64.deb
-@ el8.x86_64 17 plpgsql_check_17 plpgsql_check_17-2.10.3-1PIGSTY.el8.x86_64.rpm pigsty 2.10.3 122.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/plpgsql_check_17-2.10.3-1PIGSTY.el8.x86_64.rpm
+@ el8.x86_64 17 plpgsql_check_17 plpgsql_check_17-2.10.4-1PIGSTY.el8.x86_64.rpm pigsty 2.10.4 123.2KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/plpgsql_check_17-2.10.4-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 17 plpgsql_check_17 plpgsql_check_17-2.10.3-1PGDG.rhel8.10.x86_64.rpm pgdg 2.10.3 125.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/plpgsql_check_17-2.10.3-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 plpgsql_check_17 plpgsql_check_17-2.10.2-1PGDG.rhel8.10.x86_64.rpm pgdg 2.10.2 125.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/plpgsql_check_17-2.10.2-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 17 plpgsql_check_17 plpgsql_check_17-2.10.1-1PGDG.rhel8.10.x86_64.rpm pgdg 2.10.1 124.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/plpgsql_check_17-2.10.1-1PGDG.rhel8.10.x86_64.rpm
@@ -233,7 +233,7 @@ weight: 3060
 @ el8.x86_64 17 plpgsql_check_17 plpgsql_check_17-2.7.14-1PGDG.rhel8.x86_64.rpm pgdg 2.7.14 105.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/plpgsql_check_17-2.7.14-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 17 plpgsql_check_17 plpgsql_check_17-2.7.12-1PGDG.rhel8.x86_64.rpm pgdg 2.7.12 105.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/plpgsql_check_17-2.7.12-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 17 plpgsql_check_17 plpgsql_check_17-2.7.11-1PGDG.rhel8.x86_64.rpm pgdg 2.7.11 105.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-x86_64/plpgsql_check_17-2.7.11-1PGDG.rhel8.x86_64.rpm
-@ el8.aarch64 17 plpgsql_check_17 plpgsql_check_17-2.10.3-1PIGSTY.el8.aarch64.rpm pigsty 2.10.3 114.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/plpgsql_check_17-2.10.3-1PIGSTY.el8.aarch64.rpm
+@ el8.aarch64 17 plpgsql_check_17 plpgsql_check_17-2.10.4-1PIGSTY.el8.aarch64.rpm pigsty 2.10.4 114.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/plpgsql_check_17-2.10.4-1PIGSTY.el8.aarch64.rpm
 @ el8.aarch64 17 plpgsql_check_17 plpgsql_check_17-2.10.3-1PGDG.rhel8.10.aarch64.rpm pgdg 2.10.3 116.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/plpgsql_check_17-2.10.3-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 17 plpgsql_check_17 plpgsql_check_17-2.10.2-1PGDG.rhel8.10.aarch64.rpm pgdg 2.10.2 116.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/plpgsql_check_17-2.10.2-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 17 plpgsql_check_17 plpgsql_check_17-2.10.1-1PGDG.rhel8.10.aarch64.rpm pgdg 2.10.1 115.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/plpgsql_check_17-2.10.1-1PGDG.rhel8.10.aarch64.rpm
@@ -251,7 +251,7 @@ weight: 3060
 @ el8.aarch64 17 plpgsql_check_17 plpgsql_check_17-2.7.14-1PGDG.rhel8.aarch64.rpm pgdg 2.7.14 97.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/plpgsql_check_17-2.7.14-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 17 plpgsql_check_17 plpgsql_check_17-2.7.12-1PGDG.rhel8.aarch64.rpm pgdg 2.7.12 97.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/plpgsql_check_17-2.7.12-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 17 plpgsql_check_17 plpgsql_check_17-2.7.11-1PGDG.rhel8.aarch64.rpm pgdg 2.7.11 97.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-8-aarch64/plpgsql_check_17-2.7.11-1PGDG.rhel8.aarch64.rpm
-@ el9.x86_64 17 plpgsql_check_17 plpgsql_check_17-2.10.3-1PIGSTY.el9.x86_64.rpm pigsty 2.10.3 116.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/plpgsql_check_17-2.10.3-1PIGSTY.el9.x86_64.rpm
+@ el9.x86_64 17 plpgsql_check_17 plpgsql_check_17-2.10.4-1PIGSTY.el9.x86_64.rpm pigsty 2.10.4 117.1KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/plpgsql_check_17-2.10.4-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 17 plpgsql_check_17 plpgsql_check_17-2.10.3-1PGDG.rhel9.8.x86_64.rpm pgdg 2.10.3 120.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/plpgsql_check_17-2.10.3-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 17 plpgsql_check_17 plpgsql_check_17-2.10.2-1PGDG.rhel9.8.x86_64.rpm pgdg 2.10.2 120.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/plpgsql_check_17-2.10.2-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 17 plpgsql_check_17 plpgsql_check_17-2.10.1-1PGDG.rhel9.8.x86_64.rpm pgdg 2.10.1 118.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/plpgsql_check_17-2.10.1-1PGDG.rhel9.8.x86_64.rpm
@@ -276,7 +276,7 @@ weight: 3060
 @ el9.x86_64 17 plpgsql_check_17 plpgsql_check_17-2.7.14-1PGDG.rhel9.x86_64.rpm pgdg 2.7.14 102.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/plpgsql_check_17-2.7.14-1PGDG.rhel9.x86_64.rpm
 @ el9.x86_64 17 plpgsql_check_17 plpgsql_check_17-2.7.12-1PGDG.rhel9.x86_64.rpm pgdg 2.7.12 103.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/plpgsql_check_17-2.7.12-1PGDG.rhel9.x86_64.rpm
 @ el9.x86_64 17 plpgsql_check_17 plpgsql_check_17-2.7.11-1PGDG.rhel9.x86_64.rpm pgdg 2.7.11 103.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-x86_64/plpgsql_check_17-2.7.11-1PGDG.rhel9.x86_64.rpm
-@ el9.aarch64 17 plpgsql_check_17 plpgsql_check_17-2.10.3-1PIGSTY.el9.aarch64.rpm pigsty 2.10.3 111.6KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/plpgsql_check_17-2.10.3-1PIGSTY.el9.aarch64.rpm
+@ el9.aarch64 17 plpgsql_check_17 plpgsql_check_17-2.10.4-1PIGSTY.el9.aarch64.rpm pigsty 2.10.4 111.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/plpgsql_check_17-2.10.4-1PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 17 plpgsql_check_17 plpgsql_check_17-2.10.3-1PGDG.rhel9.8.aarch64.rpm pgdg 2.10.3 116.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/plpgsql_check_17-2.10.3-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 17 plpgsql_check_17 plpgsql_check_17-2.10.2-1PGDG.rhel9.8.aarch64.rpm pgdg 2.10.2 116.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/plpgsql_check_17-2.10.2-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 17 plpgsql_check_17 plpgsql_check_17-2.10.1-1PGDG.rhel9.8.aarch64.rpm pgdg 2.10.1 114.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/plpgsql_check_17-2.10.1-1PGDG.rhel9.8.aarch64.rpm
@@ -301,7 +301,7 @@ weight: 3060
 @ el9.aarch64 17 plpgsql_check_17 plpgsql_check_17-2.7.14-1PGDG.rhel9.aarch64.rpm pgdg 2.7.14 98.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/plpgsql_check_17-2.7.14-1PGDG.rhel9.aarch64.rpm
 @ el9.aarch64 17 plpgsql_check_17 plpgsql_check_17-2.7.12-1PGDG.rhel9.aarch64.rpm pgdg 2.7.12 98.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/plpgsql_check_17-2.7.12-1PGDG.rhel9.aarch64.rpm
 @ el9.aarch64 17 plpgsql_check_17 plpgsql_check_17-2.7.11-1PGDG.rhel9.aarch64.rpm pgdg 2.7.11 98.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-9-aarch64/plpgsql_check_17-2.7.11-1PGDG.rhel9.aarch64.rpm
-@ el10.x86_64 17 plpgsql_check_17 plpgsql_check_17-2.10.3-1PIGSTY.el10.x86_64.rpm pigsty 2.10.3 118.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/plpgsql_check_17-2.10.3-1PIGSTY.el10.x86_64.rpm
+@ el10.x86_64 17 plpgsql_check_17 plpgsql_check_17-2.10.4-1PIGSTY.el10.x86_64.rpm pigsty 2.10.4 118.8KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/plpgsql_check_17-2.10.4-1PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 17 plpgsql_check_17 plpgsql_check_17-2.10.3-1PGDG.rhel10.2.x86_64.rpm pgdg 2.10.3 122.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/plpgsql_check_17-2.10.3-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 17 plpgsql_check_17 plpgsql_check_17-2.10.2-1PGDG.rhel10.2.x86_64.rpm pgdg 2.10.2 122.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/plpgsql_check_17-2.10.2-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 17 plpgsql_check_17 plpgsql_check_17-2.10.1-1PGDG.rhel10.2.x86_64.rpm pgdg 2.10.1 121.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/plpgsql_check_17-2.10.1-1PGDG.rhel10.2.x86_64.rpm
@@ -322,7 +322,7 @@ weight: 3060
 @ el10.x86_64 17 plpgsql_check_17 plpgsql_check_17-2.8.3-1PGDG.rhel10.x86_64.rpm pgdg 2.8.3 111.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/plpgsql_check_17-2.8.3-1PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 17 plpgsql_check_17 plpgsql_check_17-2.8.2-1PGDG.rhel10.x86_64.rpm pgdg 2.8.2 111.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/plpgsql_check_17-2.8.2-1PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 17 plpgsql_check_17 plpgsql_check_17-2.8.1-1PGDG.rhel10.x86_64.rpm pgdg 2.8.1 110.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-x86_64/plpgsql_check_17-2.8.1-1PGDG.rhel10.x86_64.rpm
-@ el10.aarch64 17 plpgsql_check_17 plpgsql_check_17-2.10.3-1PIGSTY.el10.aarch64.rpm pigsty 2.10.3 113.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/plpgsql_check_17-2.10.3-1PIGSTY.el10.aarch64.rpm
+@ el10.aarch64 17 plpgsql_check_17 plpgsql_check_17-2.10.4-1PIGSTY.el10.aarch64.rpm pigsty 2.10.4 113.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/plpgsql_check_17-2.10.4-1PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 17 plpgsql_check_17 plpgsql_check_17-2.10.3-1PGDG.rhel10.2.aarch64.rpm pgdg 2.10.3 117.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/plpgsql_check_17-2.10.3-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 17 plpgsql_check_17 plpgsql_check_17-2.10.2-1PGDG.rhel10.2.aarch64.rpm pgdg 2.10.2 117.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/plpgsql_check_17-2.10.2-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 17 plpgsql_check_17 plpgsql_check_17-2.10.1-1PGDG.rhel10.2.aarch64.rpm pgdg 2.10.1 115.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/plpgsql_check_17-2.10.1-1PGDG.rhel10.2.aarch64.rpm
@@ -343,47 +343,47 @@ weight: 3060
 @ el10.aarch64 17 plpgsql_check_17 plpgsql_check_17-2.8.3-1PGDG.rhel10.aarch64.rpm pgdg 2.8.3 105.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/plpgsql_check_17-2.8.3-1PGDG.rhel10.aarch64.rpm
 @ el10.aarch64 17 plpgsql_check_17 plpgsql_check_17-2.8.2-1PGDG.rhel10.aarch64.rpm pgdg 2.8.2 105.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/plpgsql_check_17-2.8.2-1PGDG.rhel10.aarch64.rpm
 @ el10.aarch64 17 plpgsql_check_17 plpgsql_check_17-2.8.1-1PGDG.rhel10.aarch64.rpm pgdg 2.8.1 104.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/17/redhat/rhel-10-aarch64/plpgsql_check_17-2.8.1-1PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 17 postgresql-17-plpgsql-check postgresql-17-plpgsql-check_2.10.4-1.pgdg12+1_amd64.deb pgdg 2.10.4 316.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-17-plpgsql-check_2.10.4-1.pgdg12+1_amd64.deb
+@ d12.x86_64 17 postgresql-17-plpgsql-check postgresql-17-plpgsql-check_2.10.4-1PIGSTY~bookworm_amd64.deb pigsty 2.10.4 314.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/plpgsql-check/postgresql-17-plpgsql-check_2.10.4-1PIGSTY~bookworm_amd64.deb
 @ d12.x86_64 17 postgresql-17-plpgsql-check postgresql-17-plpgsql-check_2.10.3-1.pgdg12+1_amd64.deb pgdg 2.10.3 315.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-17-plpgsql-check_2.10.3-1.pgdg12+1_amd64.deb
-@ d12.x86_64 17 postgresql-17-plpgsql-check postgresql-17-plpgsql-check_2.10.3-1PIGSTY~bookworm_amd64.deb pigsty 2.10.3 314.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/plpgsql-check/postgresql-17-plpgsql-check_2.10.3-1PIGSTY~bookworm_amd64.deb
 @ d12.x86_64 17 postgresql-17-plpgsql-check postgresql-17-plpgsql-check_2.10.2-1.pgdg12+1_amd64.deb pgdg 2.10.2 315.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-17-plpgsql-check_2.10.2-1.pgdg12+1_amd64.deb
-@ d12.x86_64 17 postgresql-17-plpgsql-check postgresql-17-plpgsql-check_2.10.1-1.pgdg12+1_amd64.deb pgdg 2.10.1 312.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-17-plpgsql-check_2.10.1-1.pgdg12+1_amd64.deb
+@ d12.aarch64 17 postgresql-17-plpgsql-check postgresql-17-plpgsql-check_2.10.4-1.pgdg12+1_arm64.deb pgdg 2.10.4 305.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-17-plpgsql-check_2.10.4-1.pgdg12+1_arm64.deb
+@ d12.aarch64 17 postgresql-17-plpgsql-check postgresql-17-plpgsql-check_2.10.4-1PIGSTY~bookworm_arm64.deb pigsty 2.10.4 303.2KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/plpgsql-check/postgresql-17-plpgsql-check_2.10.4-1PIGSTY~bookworm_arm64.deb
 @ d12.aarch64 17 postgresql-17-plpgsql-check postgresql-17-plpgsql-check_2.10.3-1.pgdg12+1_arm64.deb pgdg 2.10.3 304.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-17-plpgsql-check_2.10.3-1.pgdg12+1_arm64.deb
-@ d12.aarch64 17 postgresql-17-plpgsql-check postgresql-17-plpgsql-check_2.10.3-1PIGSTY~bookworm_arm64.deb pigsty 2.10.3 302.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/plpgsql-check/postgresql-17-plpgsql-check_2.10.3-1PIGSTY~bookworm_arm64.deb
 @ d12.aarch64 17 postgresql-17-plpgsql-check postgresql-17-plpgsql-check_2.10.2-1.pgdg12+1_arm64.deb pgdg 2.10.2 304.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-17-plpgsql-check_2.10.2-1.pgdg12+1_arm64.deb
-@ d12.aarch64 17 postgresql-17-plpgsql-check postgresql-17-plpgsql-check_2.10.1-1.pgdg12+1_arm64.deb pgdg 2.10.1 301.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-17-plpgsql-check_2.10.1-1.pgdg12+1_arm64.deb
+@ d13.x86_64 17 postgresql-17-plpgsql-check postgresql-17-plpgsql-check_2.10.4-1.pgdg13+1_amd64.deb pgdg 2.10.4 317.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-17-plpgsql-check_2.10.4-1.pgdg13+1_amd64.deb
+@ d13.x86_64 17 postgresql-17-plpgsql-check postgresql-17-plpgsql-check_2.10.4-1PIGSTY~trixie_amd64.deb pigsty 2.10.4 315.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/plpgsql-check/postgresql-17-plpgsql-check_2.10.4-1PIGSTY~trixie_amd64.deb
 @ d13.x86_64 17 postgresql-17-plpgsql-check postgresql-17-plpgsql-check_2.10.3-1.pgdg13+1_amd64.deb pgdg 2.10.3 316.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-17-plpgsql-check_2.10.3-1.pgdg13+1_amd64.deb
-@ d13.x86_64 17 postgresql-17-plpgsql-check postgresql-17-plpgsql-check_2.10.3-1PIGSTY~trixie_amd64.deb pigsty 2.10.3 314.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/plpgsql-check/postgresql-17-plpgsql-check_2.10.3-1PIGSTY~trixie_amd64.deb
 @ d13.x86_64 17 postgresql-17-plpgsql-check postgresql-17-plpgsql-check_2.10.2-1.pgdg13+1_amd64.deb pgdg 2.10.2 316.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-17-plpgsql-check_2.10.2-1.pgdg13+1_amd64.deb
-@ d13.x86_64 17 postgresql-17-plpgsql-check postgresql-17-plpgsql-check_2.10.1-1.pgdg13+1_amd64.deb pgdg 2.10.1 313.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-17-plpgsql-check_2.10.1-1.pgdg13+1_amd64.deb
+@ d13.aarch64 17 postgresql-17-plpgsql-check postgresql-17-plpgsql-check_2.10.4-1.pgdg13+1_arm64.deb pgdg 2.10.4 306.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-17-plpgsql-check_2.10.4-1.pgdg13+1_arm64.deb
+@ d13.aarch64 17 postgresql-17-plpgsql-check postgresql-17-plpgsql-check_2.10.4-1PIGSTY~trixie_arm64.deb pigsty 2.10.4 304.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/plpgsql-check/postgresql-17-plpgsql-check_2.10.4-1PIGSTY~trixie_arm64.deb
 @ d13.aarch64 17 postgresql-17-plpgsql-check postgresql-17-plpgsql-check_2.10.3-1.pgdg13+1_arm64.deb pgdg 2.10.3 305.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-17-plpgsql-check_2.10.3-1.pgdg13+1_arm64.deb
-@ d13.aarch64 17 postgresql-17-plpgsql-check postgresql-17-plpgsql-check_2.10.3-1PIGSTY~trixie_arm64.deb pigsty 2.10.3 303.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/plpgsql-check/postgresql-17-plpgsql-check_2.10.3-1PIGSTY~trixie_arm64.deb
 @ d13.aarch64 17 postgresql-17-plpgsql-check postgresql-17-plpgsql-check_2.10.2-1.pgdg13+1_arm64.deb pgdg 2.10.2 305.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-17-plpgsql-check_2.10.2-1.pgdg13+1_arm64.deb
-@ d13.aarch64 17 postgresql-17-plpgsql-check postgresql-17-plpgsql-check_2.10.1-1.pgdg13+1_arm64.deb pgdg 2.10.1 302.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-17-plpgsql-check_2.10.1-1.pgdg13+1_arm64.deb
+@ u22.x86_64 17 postgresql-17-plpgsql-check postgresql-17-plpgsql-check_2.10.4-1.pgdg22.04+1_amd64.deb pgdg 2.10.4 403.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-17-plpgsql-check_2.10.4-1.pgdg22.04+1_amd64.deb
+@ u22.x86_64 17 postgresql-17-plpgsql-check postgresql-17-plpgsql-check_2.10.4-1PIGSTY~jammy_amd64.deb pigsty 2.10.4 421.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/plpgsql-check/postgresql-17-plpgsql-check_2.10.4-1PIGSTY~jammy_amd64.deb
 @ u22.x86_64 17 postgresql-17-plpgsql-check postgresql-17-plpgsql-check_2.10.3-1.pgdg22.04+1_amd64.deb pgdg 2.10.3 402.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-17-plpgsql-check_2.10.3-1.pgdg22.04+1_amd64.deb
-@ u22.x86_64 17 postgresql-17-plpgsql-check postgresql-17-plpgsql-check_2.10.3-1PIGSTY~jammy_amd64.deb pigsty 2.10.3 420.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/plpgsql-check/postgresql-17-plpgsql-check_2.10.3-1PIGSTY~jammy_amd64.deb
 @ u22.x86_64 17 postgresql-17-plpgsql-check postgresql-17-plpgsql-check_2.10.2-1.pgdg22.04+1_amd64.deb pgdg 2.10.2 402.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-17-plpgsql-check_2.10.2-1.pgdg22.04+1_amd64.deb
-@ u22.x86_64 17 postgresql-17-plpgsql-check postgresql-17-plpgsql-check_2.10.1-1.pgdg22.04+1_amd64.deb pgdg 2.10.1 398.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-17-plpgsql-check_2.10.1-1.pgdg22.04+1_amd64.deb
+@ u22.aarch64 17 postgresql-17-plpgsql-check postgresql-17-plpgsql-check_2.10.4-1.pgdg22.04+1_arm64.deb pgdg 2.10.4 391.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-17-plpgsql-check_2.10.4-1.pgdg22.04+1_arm64.deb
+@ u22.aarch64 17 postgresql-17-plpgsql-check postgresql-17-plpgsql-check_2.10.4-1PIGSTY~jammy_arm64.deb pigsty 2.10.4 413.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/plpgsql-check/postgresql-17-plpgsql-check_2.10.4-1PIGSTY~jammy_arm64.deb
 @ u22.aarch64 17 postgresql-17-plpgsql-check postgresql-17-plpgsql-check_2.10.3-1.pgdg22.04+1_arm64.deb pgdg 2.10.3 391.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-17-plpgsql-check_2.10.3-1.pgdg22.04+1_arm64.deb
-@ u22.aarch64 17 postgresql-17-plpgsql-check postgresql-17-plpgsql-check_2.10.3-1PIGSTY~jammy_arm64.deb pigsty 2.10.3 412.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/plpgsql-check/postgresql-17-plpgsql-check_2.10.3-1PIGSTY~jammy_arm64.deb
 @ u22.aarch64 17 postgresql-17-plpgsql-check postgresql-17-plpgsql-check_2.10.2-1.pgdg22.04+1_arm64.deb pgdg 2.10.2 390.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-17-plpgsql-check_2.10.2-1.pgdg22.04+1_arm64.deb
-@ u22.aarch64 17 postgresql-17-plpgsql-check postgresql-17-plpgsql-check_2.10.1-1.pgdg22.04+1_arm64.deb pgdg 2.10.1 386.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-17-plpgsql-check_2.10.1-1.pgdg22.04+1_arm64.deb
+@ u24.x86_64 17 postgresql-17-plpgsql-check postgresql-17-plpgsql-check_2.10.4-1.pgdg24.04+1_amd64.deb pgdg 2.10.4 316.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-17-plpgsql-check_2.10.4-1.pgdg24.04+1_amd64.deb
+@ u24.x86_64 17 postgresql-17-plpgsql-check postgresql-17-plpgsql-check_2.10.4-1PIGSTY~noble_amd64.deb pigsty 2.10.4 328.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/plpgsql-check/postgresql-17-plpgsql-check_2.10.4-1PIGSTY~noble_amd64.deb
 @ u24.x86_64 17 postgresql-17-plpgsql-check postgresql-17-plpgsql-check_2.10.3-1.pgdg24.04+1_amd64.deb pgdg 2.10.3 315.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-17-plpgsql-check_2.10.3-1.pgdg24.04+1_amd64.deb
-@ u24.x86_64 17 postgresql-17-plpgsql-check postgresql-17-plpgsql-check_2.10.3-1PIGSTY~noble_amd64.deb pigsty 2.10.3 327.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/plpgsql-check/postgresql-17-plpgsql-check_2.10.3-1PIGSTY~noble_amd64.deb
 @ u24.x86_64 17 postgresql-17-plpgsql-check postgresql-17-plpgsql-check_2.10.2-1.pgdg24.04+1_amd64.deb pgdg 2.10.2 315.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-17-plpgsql-check_2.10.2-1.pgdg24.04+1_amd64.deb
-@ u24.x86_64 17 postgresql-17-plpgsql-check postgresql-17-plpgsql-check_2.10.1-1.pgdg24.04+1_amd64.deb pgdg 2.10.1 312.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-17-plpgsql-check_2.10.1-1.pgdg24.04+1_amd64.deb
+@ u24.aarch64 17 postgresql-17-plpgsql-check postgresql-17-plpgsql-check_2.10.4-1.pgdg24.04+1_arm64.deb pgdg 2.10.4 304.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-17-plpgsql-check_2.10.4-1.pgdg24.04+1_arm64.deb
+@ u24.aarch64 17 postgresql-17-plpgsql-check postgresql-17-plpgsql-check_2.10.4-1PIGSTY~noble_arm64.deb pigsty 2.10.4 321.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/plpgsql-check/postgresql-17-plpgsql-check_2.10.4-1PIGSTY~noble_arm64.deb
 @ u24.aarch64 17 postgresql-17-plpgsql-check postgresql-17-plpgsql-check_2.10.3-1.pgdg24.04+1_arm64.deb pgdg 2.10.3 304.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-17-plpgsql-check_2.10.3-1.pgdg24.04+1_arm64.deb
-@ u24.aarch64 17 postgresql-17-plpgsql-check postgresql-17-plpgsql-check_2.10.3-1PIGSTY~noble_arm64.deb pigsty 2.10.3 321.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/plpgsql-check/postgresql-17-plpgsql-check_2.10.3-1PIGSTY~noble_arm64.deb
 @ u24.aarch64 17 postgresql-17-plpgsql-check postgresql-17-plpgsql-check_2.10.2-1.pgdg24.04+1_arm64.deb pgdg 2.10.2 303.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-17-plpgsql-check_2.10.2-1.pgdg24.04+1_arm64.deb
-@ u24.aarch64 17 postgresql-17-plpgsql-check postgresql-17-plpgsql-check_2.10.1-1.pgdg24.04+1_arm64.deb pgdg 2.10.1 301.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-17-plpgsql-check_2.10.1-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 17 postgresql-17-plpgsql-check postgresql-17-plpgsql-check_2.10.4-1.pgdg26.04+1_amd64.deb pgdg 2.10.4 313.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-17-plpgsql-check_2.10.4-1.pgdg26.04+1_amd64.deb
+@ u26.x86_64 17 postgresql-17-plpgsql-check postgresql-17-plpgsql-check_2.10.4-1PIGSTY~resolute_amd64.deb pigsty 2.10.4 325.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/plpgsql-check/postgresql-17-plpgsql-check_2.10.4-1PIGSTY~resolute_amd64.deb
 @ u26.x86_64 17 postgresql-17-plpgsql-check postgresql-17-plpgsql-check_2.10.3-1.pgdg26.04+1_amd64.deb pgdg 2.10.3 313.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-17-plpgsql-check_2.10.3-1.pgdg26.04+1_amd64.deb
-@ u26.x86_64 17 postgresql-17-plpgsql-check postgresql-17-plpgsql-check_2.10.3-1PIGSTY~resolute_amd64.deb pigsty 2.10.3 325.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/plpgsql-check/postgresql-17-plpgsql-check_2.10.3-1PIGSTY~resolute_amd64.deb
 @ u26.x86_64 17 postgresql-17-plpgsql-check postgresql-17-plpgsql-check_2.10.2-1.pgdg26.04+1_amd64.deb pgdg 2.10.2 313.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-17-plpgsql-check_2.10.2-1.pgdg26.04+1_amd64.deb
-@ u26.x86_64 17 postgresql-17-plpgsql-check postgresql-17-plpgsql-check_2.10.1-1.pgdg26.04+1_amd64.deb pgdg 2.10.1 310.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-17-plpgsql-check_2.10.1-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 17 postgresql-17-plpgsql-check postgresql-17-plpgsql-check_2.10.4-1.pgdg26.04+1_arm64.deb pgdg 2.10.4 301.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-17-plpgsql-check_2.10.4-1.pgdg26.04+1_arm64.deb
+@ u26.aarch64 17 postgresql-17-plpgsql-check postgresql-17-plpgsql-check_2.10.4-1PIGSTY~resolute_arm64.deb pigsty 2.10.4 318.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/plpgsql-check/postgresql-17-plpgsql-check_2.10.4-1PIGSTY~resolute_arm64.deb
 @ u26.aarch64 17 postgresql-17-plpgsql-check postgresql-17-plpgsql-check_2.10.3-1.pgdg26.04+1_arm64.deb pgdg 2.10.3 300.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-17-plpgsql-check_2.10.3-1.pgdg26.04+1_arm64.deb
-@ u26.aarch64 17 postgresql-17-plpgsql-check postgresql-17-plpgsql-check_2.10.3-1PIGSTY~resolute_arm64.deb pigsty 2.10.3 318.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/plpgsql-check/postgresql-17-plpgsql-check_2.10.3-1PIGSTY~resolute_arm64.deb
 @ u26.aarch64 17 postgresql-17-plpgsql-check postgresql-17-plpgsql-check_2.10.2-1.pgdg26.04+1_arm64.deb pgdg 2.10.2 300.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-17-plpgsql-check_2.10.2-1.pgdg26.04+1_arm64.deb
-@ u26.aarch64 17 postgresql-17-plpgsql-check postgresql-17-plpgsql-check_2.10.1-1.pgdg26.04+1_arm64.deb pgdg 2.10.1 298.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-17-plpgsql-check_2.10.1-1.pgdg26.04+1_arm64.deb
-@ el8.x86_64 16 plpgsql_check_16 plpgsql_check_16-2.10.3-1PIGSTY.el8.x86_64.rpm pigsty 2.10.3 122.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/plpgsql_check_16-2.10.3-1PIGSTY.el8.x86_64.rpm
+@ el8.x86_64 16 plpgsql_check_16 plpgsql_check_16-2.10.4-1PIGSTY.el8.x86_64.rpm pigsty 2.10.4 123.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/plpgsql_check_16-2.10.4-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 16 plpgsql_check_16 plpgsql_check_16-2.10.3-1PGDG.rhel8.10.x86_64.rpm pgdg 2.10.3 125.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/plpgsql_check_16-2.10.3-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 plpgsql_check_16 plpgsql_check_16-2.10.2-1PGDG.rhel8.10.x86_64.rpm pgdg 2.10.2 125.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/plpgsql_check_16-2.10.2-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 16 plpgsql_check_16 plpgsql_check_16-2.10.1-1PGDG.rhel8.10.x86_64.rpm pgdg 2.10.1 124.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/plpgsql_check_16-2.10.1-1PGDG.rhel8.10.x86_64.rpm
@@ -415,7 +415,7 @@ weight: 3060
 @ el8.x86_64 16 plpgsql_check_16 plpgsql_check_16-2.5.4-1PGDG.rhel8.x86_64.rpm pgdg 2.5.4 100.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/plpgsql_check_16-2.5.4-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 16 plpgsql_check_16 plpgsql_check_16-2.5.1-1PGDG.rhel8.x86_64.rpm pgdg 2.5.1 100.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/plpgsql_check_16-2.5.1-1PGDG.rhel8.x86_64.rpm
 @ el8.x86_64 16 plpgsql_check_16 plpgsql_check_16-2.5.0-1PGDG.rhel8.x86_64.rpm pgdg 2.5.0 100.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-x86_64/plpgsql_check_16-2.5.0-1PGDG.rhel8.x86_64.rpm
-@ el8.aarch64 16 plpgsql_check_16 plpgsql_check_16-2.10.3-1PIGSTY.el8.aarch64.rpm pigsty 2.10.3 114.2KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/plpgsql_check_16-2.10.3-1PIGSTY.el8.aarch64.rpm
+@ el8.aarch64 16 plpgsql_check_16 plpgsql_check_16-2.10.4-1PIGSTY.el8.aarch64.rpm pigsty 2.10.4 114.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/plpgsql_check_16-2.10.4-1PIGSTY.el8.aarch64.rpm
 @ el8.aarch64 16 plpgsql_check_16 plpgsql_check_16-2.10.3-1PGDG.rhel8.10.aarch64.rpm pgdg 2.10.3 116.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/plpgsql_check_16-2.10.3-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 16 plpgsql_check_16 plpgsql_check_16-2.10.2-1PGDG.rhel8.10.aarch64.rpm pgdg 2.10.2 116.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/plpgsql_check_16-2.10.2-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 16 plpgsql_check_16 plpgsql_check_16-2.10.1-1PGDG.rhel8.10.aarch64.rpm pgdg 2.10.1 115.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/plpgsql_check_16-2.10.1-1PGDG.rhel8.10.aarch64.rpm
@@ -447,7 +447,7 @@ weight: 3060
 @ el8.aarch64 16 plpgsql_check_16 plpgsql_check_16-2.5.4-1PGDG.rhel8.aarch64.rpm pgdg 2.5.4 93.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/plpgsql_check_16-2.5.4-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 16 plpgsql_check_16 plpgsql_check_16-2.5.1-1PGDG.rhel8.aarch64.rpm pgdg 2.5.1 93.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/plpgsql_check_16-2.5.1-1PGDG.rhel8.aarch64.rpm
 @ el8.aarch64 16 plpgsql_check_16 plpgsql_check_16-2.5.0-1PGDG.rhel8.aarch64.rpm pgdg 2.5.0 93.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-8-aarch64/plpgsql_check_16-2.5.0-1PGDG.rhel8.aarch64.rpm
-@ el9.x86_64 16 plpgsql_check_16 plpgsql_check_16-2.10.3-1PIGSTY.el9.x86_64.rpm pigsty 2.10.3 116.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/plpgsql_check_16-2.10.3-1PIGSTY.el9.x86_64.rpm
+@ el9.x86_64 16 plpgsql_check_16 plpgsql_check_16-2.10.4-1PIGSTY.el9.x86_64.rpm pigsty 2.10.4 117.1KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/plpgsql_check_16-2.10.4-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 16 plpgsql_check_16 plpgsql_check_16-2.10.3-1PGDG.rhel9.8.x86_64.rpm pgdg 2.10.3 120.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/plpgsql_check_16-2.10.3-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 16 plpgsql_check_16 plpgsql_check_16-2.10.2-1PGDG.rhel9.8.x86_64.rpm pgdg 2.10.2 120.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/plpgsql_check_16-2.10.2-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 16 plpgsql_check_16 plpgsql_check_16-2.10.1-1PGDG.rhel9.8.x86_64.rpm pgdg 2.10.1 118.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/plpgsql_check_16-2.10.1-1PGDG.rhel9.8.x86_64.rpm
@@ -486,7 +486,7 @@ weight: 3060
 @ el9.x86_64 16 plpgsql_check_16 plpgsql_check_16-2.5.4-1PGDG.rhel9.x86_64.rpm pgdg 2.5.4 99.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/plpgsql_check_16-2.5.4-1PGDG.rhel9.x86_64.rpm
 @ el9.x86_64 16 plpgsql_check_16 plpgsql_check_16-2.5.1-1PGDG.rhel9.x86_64.rpm pgdg 2.5.1 99.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/plpgsql_check_16-2.5.1-1PGDG.rhel9.x86_64.rpm
 @ el9.x86_64 16 plpgsql_check_16 plpgsql_check_16-2.5.0-1PGDG.rhel9.x86_64.rpm pgdg 2.5.0 99.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-x86_64/plpgsql_check_16-2.5.0-1PGDG.rhel9.x86_64.rpm
-@ el9.aarch64 16 plpgsql_check_16 plpgsql_check_16-2.10.3-1PIGSTY.el9.aarch64.rpm pigsty 2.10.3 111.7KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/plpgsql_check_16-2.10.3-1PIGSTY.el9.aarch64.rpm
+@ el9.aarch64 16 plpgsql_check_16 plpgsql_check_16-2.10.4-1PIGSTY.el9.aarch64.rpm pigsty 2.10.4 111.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/plpgsql_check_16-2.10.4-1PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 16 plpgsql_check_16 plpgsql_check_16-2.10.3-1PGDG.rhel9.8.aarch64.rpm pgdg 2.10.3 116.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/plpgsql_check_16-2.10.3-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 16 plpgsql_check_16 plpgsql_check_16-2.10.2-1PGDG.rhel9.8.aarch64.rpm pgdg 2.10.2 116.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/plpgsql_check_16-2.10.2-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 16 plpgsql_check_16 plpgsql_check_16-2.10.1-1PGDG.rhel9.8.aarch64.rpm pgdg 2.10.1 114.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/plpgsql_check_16-2.10.1-1PGDG.rhel9.8.aarch64.rpm
@@ -525,7 +525,7 @@ weight: 3060
 @ el9.aarch64 16 plpgsql_check_16 plpgsql_check_16-2.5.4-1PGDG.rhel9.aarch64.rpm pgdg 2.5.4 95.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/plpgsql_check_16-2.5.4-1PGDG.rhel9.aarch64.rpm
 @ el9.aarch64 16 plpgsql_check_16 plpgsql_check_16-2.5.1-1PGDG.rhel9.aarch64.rpm pgdg 2.5.1 94.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/plpgsql_check_16-2.5.1-1PGDG.rhel9.aarch64.rpm
 @ el9.aarch64 16 plpgsql_check_16 plpgsql_check_16-2.5.0-1PGDG.rhel9.aarch64.rpm pgdg 2.5.0 94.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-9-aarch64/plpgsql_check_16-2.5.0-1PGDG.rhel9.aarch64.rpm
-@ el10.x86_64 16 plpgsql_check_16 plpgsql_check_16-2.10.3-1PIGSTY.el10.x86_64.rpm pigsty 2.10.3 118.6KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/plpgsql_check_16-2.10.3-1PIGSTY.el10.x86_64.rpm
+@ el10.x86_64 16 plpgsql_check_16 plpgsql_check_16-2.10.4-1PIGSTY.el10.x86_64.rpm pigsty 2.10.4 118.9KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/plpgsql_check_16-2.10.4-1PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 16 plpgsql_check_16 plpgsql_check_16-2.10.3-1PGDG.rhel10.2.x86_64.rpm pgdg 2.10.3 123.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/plpgsql_check_16-2.10.3-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 16 plpgsql_check_16 plpgsql_check_16-2.10.2-1PGDG.rhel10.2.x86_64.rpm pgdg 2.10.2 122.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/plpgsql_check_16-2.10.2-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 16 plpgsql_check_16 plpgsql_check_16-2.10.1-1PGDG.rhel10.2.x86_64.rpm pgdg 2.10.1 121.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/plpgsql_check_16-2.10.1-1PGDG.rhel10.2.x86_64.rpm
@@ -546,7 +546,7 @@ weight: 3060
 @ el10.x86_64 16 plpgsql_check_16 plpgsql_check_16-2.8.3-1PGDG.rhel10.x86_64.rpm pgdg 2.8.3 111.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/plpgsql_check_16-2.8.3-1PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 16 plpgsql_check_16 plpgsql_check_16-2.8.2-1PGDG.rhel10.x86_64.rpm pgdg 2.8.2 111.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/plpgsql_check_16-2.8.2-1PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 16 plpgsql_check_16 plpgsql_check_16-2.8.1-1PGDG.rhel10.x86_64.rpm pgdg 2.8.1 110.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-x86_64/plpgsql_check_16-2.8.1-1PGDG.rhel10.x86_64.rpm
-@ el10.aarch64 16 plpgsql_check_16 plpgsql_check_16-2.10.3-1PIGSTY.el10.aarch64.rpm pigsty 2.10.3 113.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/plpgsql_check_16-2.10.3-1PIGSTY.el10.aarch64.rpm
+@ el10.aarch64 16 plpgsql_check_16 plpgsql_check_16-2.10.4-1PIGSTY.el10.aarch64.rpm pigsty 2.10.4 113.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/plpgsql_check_16-2.10.4-1PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 16 plpgsql_check_16 plpgsql_check_16-2.10.3-1PGDG.rhel10.2.aarch64.rpm pgdg 2.10.3 117.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/plpgsql_check_16-2.10.3-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 16 plpgsql_check_16 plpgsql_check_16-2.10.2-1PGDG.rhel10.2.aarch64.rpm pgdg 2.10.2 117.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/plpgsql_check_16-2.10.2-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 16 plpgsql_check_16 plpgsql_check_16-2.10.1-1PGDG.rhel10.2.aarch64.rpm pgdg 2.10.1 115.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/plpgsql_check_16-2.10.1-1PGDG.rhel10.2.aarch64.rpm
@@ -567,47 +567,47 @@ weight: 3060
 @ el10.aarch64 16 plpgsql_check_16 plpgsql_check_16-2.8.3-1PGDG.rhel10.aarch64.rpm pgdg 2.8.3 105.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/plpgsql_check_16-2.8.3-1PGDG.rhel10.aarch64.rpm
 @ el10.aarch64 16 plpgsql_check_16 plpgsql_check_16-2.8.2-1PGDG.rhel10.aarch64.rpm pgdg 2.8.2 105.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/plpgsql_check_16-2.8.2-1PGDG.rhel10.aarch64.rpm
 @ el10.aarch64 16 plpgsql_check_16 plpgsql_check_16-2.8.1-1PGDG.rhel10.aarch64.rpm pgdg 2.8.1 104.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/16/redhat/rhel-10-aarch64/plpgsql_check_16-2.8.1-1PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 16 postgresql-16-plpgsql-check postgresql-16-plpgsql-check_2.10.4-1.pgdg12+1_amd64.deb pgdg 2.10.4 316.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-16-plpgsql-check_2.10.4-1.pgdg12+1_amd64.deb
+@ d12.x86_64 16 postgresql-16-plpgsql-check postgresql-16-plpgsql-check_2.10.4-1PIGSTY~bookworm_amd64.deb pigsty 2.10.4 314.6KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/plpgsql-check/postgresql-16-plpgsql-check_2.10.4-1PIGSTY~bookworm_amd64.deb
 @ d12.x86_64 16 postgresql-16-plpgsql-check postgresql-16-plpgsql-check_2.10.3-1.pgdg12+1_amd64.deb pgdg 2.10.3 315.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-16-plpgsql-check_2.10.3-1.pgdg12+1_amd64.deb
-@ d12.x86_64 16 postgresql-16-plpgsql-check postgresql-16-plpgsql-check_2.10.3-1PIGSTY~bookworm_amd64.deb pigsty 2.10.3 313.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/plpgsql-check/postgresql-16-plpgsql-check_2.10.3-1PIGSTY~bookworm_amd64.deb
 @ d12.x86_64 16 postgresql-16-plpgsql-check postgresql-16-plpgsql-check_2.10.2-1.pgdg12+1_amd64.deb pgdg 2.10.2 315.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-16-plpgsql-check_2.10.2-1.pgdg12+1_amd64.deb
-@ d12.x86_64 16 postgresql-16-plpgsql-check postgresql-16-plpgsql-check_2.10.1-1.pgdg12+1_amd64.deb pgdg 2.10.1 312.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-16-plpgsql-check_2.10.1-1.pgdg12+1_amd64.deb
+@ d12.aarch64 16 postgresql-16-plpgsql-check postgresql-16-plpgsql-check_2.10.4-1.pgdg12+1_arm64.deb pgdg 2.10.4 305.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-16-plpgsql-check_2.10.4-1.pgdg12+1_arm64.deb
+@ d12.aarch64 16 postgresql-16-plpgsql-check postgresql-16-plpgsql-check_2.10.4-1PIGSTY~bookworm_arm64.deb pigsty 2.10.4 303.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/plpgsql-check/postgresql-16-plpgsql-check_2.10.4-1PIGSTY~bookworm_arm64.deb
 @ d12.aarch64 16 postgresql-16-plpgsql-check postgresql-16-plpgsql-check_2.10.3-1.pgdg12+1_arm64.deb pgdg 2.10.3 304.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-16-plpgsql-check_2.10.3-1.pgdg12+1_arm64.deb
-@ d12.aarch64 16 postgresql-16-plpgsql-check postgresql-16-plpgsql-check_2.10.3-1PIGSTY~bookworm_arm64.deb pigsty 2.10.3 302.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/plpgsql-check/postgresql-16-plpgsql-check_2.10.3-1PIGSTY~bookworm_arm64.deb
 @ d12.aarch64 16 postgresql-16-plpgsql-check postgresql-16-plpgsql-check_2.10.2-1.pgdg12+1_arm64.deb pgdg 2.10.2 304.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-16-plpgsql-check_2.10.2-1.pgdg12+1_arm64.deb
-@ d12.aarch64 16 postgresql-16-plpgsql-check postgresql-16-plpgsql-check_2.10.1-1.pgdg12+1_arm64.deb pgdg 2.10.1 301.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-16-plpgsql-check_2.10.1-1.pgdg12+1_arm64.deb
+@ d13.x86_64 16 postgresql-16-plpgsql-check postgresql-16-plpgsql-check_2.10.4-1.pgdg13+1_amd64.deb pgdg 2.10.4 317.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-16-plpgsql-check_2.10.4-1.pgdg13+1_amd64.deb
+@ d13.x86_64 16 postgresql-16-plpgsql-check postgresql-16-plpgsql-check_2.10.4-1PIGSTY~trixie_amd64.deb pigsty 2.10.4 315.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/plpgsql-check/postgresql-16-plpgsql-check_2.10.4-1PIGSTY~trixie_amd64.deb
 @ d13.x86_64 16 postgresql-16-plpgsql-check postgresql-16-plpgsql-check_2.10.3-1.pgdg13+1_amd64.deb pgdg 2.10.3 316.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-16-plpgsql-check_2.10.3-1.pgdg13+1_amd64.deb
-@ d13.x86_64 16 postgresql-16-plpgsql-check postgresql-16-plpgsql-check_2.10.3-1PIGSTY~trixie_amd64.deb pigsty 2.10.3 314.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/plpgsql-check/postgresql-16-plpgsql-check_2.10.3-1PIGSTY~trixie_amd64.deb
 @ d13.x86_64 16 postgresql-16-plpgsql-check postgresql-16-plpgsql-check_2.10.2-1.pgdg13+1_amd64.deb pgdg 2.10.2 316.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-16-plpgsql-check_2.10.2-1.pgdg13+1_amd64.deb
-@ d13.x86_64 16 postgresql-16-plpgsql-check postgresql-16-plpgsql-check_2.10.1-1.pgdg13+1_amd64.deb pgdg 2.10.1 313.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-16-plpgsql-check_2.10.1-1.pgdg13+1_amd64.deb
+@ d13.aarch64 16 postgresql-16-plpgsql-check postgresql-16-plpgsql-check_2.10.4-1.pgdg13+1_arm64.deb pgdg 2.10.4 306.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-16-plpgsql-check_2.10.4-1.pgdg13+1_arm64.deb
+@ d13.aarch64 16 postgresql-16-plpgsql-check postgresql-16-plpgsql-check_2.10.4-1PIGSTY~trixie_arm64.deb pigsty 2.10.4 304.4KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/plpgsql-check/postgresql-16-plpgsql-check_2.10.4-1PIGSTY~trixie_arm64.deb
 @ d13.aarch64 16 postgresql-16-plpgsql-check postgresql-16-plpgsql-check_2.10.3-1.pgdg13+1_arm64.deb pgdg 2.10.3 305.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-16-plpgsql-check_2.10.3-1.pgdg13+1_arm64.deb
-@ d13.aarch64 16 postgresql-16-plpgsql-check postgresql-16-plpgsql-check_2.10.3-1PIGSTY~trixie_arm64.deb pigsty 2.10.3 303.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/plpgsql-check/postgresql-16-plpgsql-check_2.10.3-1PIGSTY~trixie_arm64.deb
 @ d13.aarch64 16 postgresql-16-plpgsql-check postgresql-16-plpgsql-check_2.10.2-1.pgdg13+1_arm64.deb pgdg 2.10.2 305.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-16-plpgsql-check_2.10.2-1.pgdg13+1_arm64.deb
-@ d13.aarch64 16 postgresql-16-plpgsql-check postgresql-16-plpgsql-check_2.10.1-1.pgdg13+1_arm64.deb pgdg 2.10.1 302.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-16-plpgsql-check_2.10.1-1.pgdg13+1_arm64.deb
+@ u22.x86_64 16 postgresql-16-plpgsql-check postgresql-16-plpgsql-check_2.10.4-1.pgdg22.04+1_amd64.deb pgdg 2.10.4 397.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-16-plpgsql-check_2.10.4-1.pgdg22.04+1_amd64.deb
+@ u22.x86_64 16 postgresql-16-plpgsql-check postgresql-16-plpgsql-check_2.10.4-1PIGSTY~jammy_amd64.deb pigsty 2.10.4 414.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/plpgsql-check/postgresql-16-plpgsql-check_2.10.4-1PIGSTY~jammy_amd64.deb
 @ u22.x86_64 16 postgresql-16-plpgsql-check postgresql-16-plpgsql-check_2.10.3-1.pgdg22.04+1_amd64.deb pgdg 2.10.3 396.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-16-plpgsql-check_2.10.3-1.pgdg22.04+1_amd64.deb
-@ u22.x86_64 16 postgresql-16-plpgsql-check postgresql-16-plpgsql-check_2.10.3-1PIGSTY~jammy_amd64.deb pigsty 2.10.3 413.4KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/plpgsql-check/postgresql-16-plpgsql-check_2.10.3-1PIGSTY~jammy_amd64.deb
 @ u22.x86_64 16 postgresql-16-plpgsql-check postgresql-16-plpgsql-check_2.10.2-1.pgdg22.04+1_amd64.deb pgdg 2.10.2 395.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-16-plpgsql-check_2.10.2-1.pgdg22.04+1_amd64.deb
-@ u22.x86_64 16 postgresql-16-plpgsql-check postgresql-16-plpgsql-check_2.10.1-1.pgdg22.04+1_amd64.deb pgdg 2.10.1 393.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-16-plpgsql-check_2.10.1-1.pgdg22.04+1_amd64.deb
+@ u22.aarch64 16 postgresql-16-plpgsql-check postgresql-16-plpgsql-check_2.10.4-1.pgdg22.04+1_arm64.deb pgdg 2.10.4 385.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-16-plpgsql-check_2.10.4-1.pgdg22.04+1_arm64.deb
+@ u22.aarch64 16 postgresql-16-plpgsql-check postgresql-16-plpgsql-check_2.10.4-1PIGSTY~jammy_arm64.deb pigsty 2.10.4 407.2KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/plpgsql-check/postgresql-16-plpgsql-check_2.10.4-1PIGSTY~jammy_arm64.deb
 @ u22.aarch64 16 postgresql-16-plpgsql-check postgresql-16-plpgsql-check_2.10.3-1.pgdg22.04+1_arm64.deb pgdg 2.10.3 385.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-16-plpgsql-check_2.10.3-1.pgdg22.04+1_arm64.deb
-@ u22.aarch64 16 postgresql-16-plpgsql-check postgresql-16-plpgsql-check_2.10.3-1PIGSTY~jammy_arm64.deb pigsty 2.10.3 406.5KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/plpgsql-check/postgresql-16-plpgsql-check_2.10.3-1PIGSTY~jammy_arm64.deb
 @ u22.aarch64 16 postgresql-16-plpgsql-check postgresql-16-plpgsql-check_2.10.2-1.pgdg22.04+1_arm64.deb pgdg 2.10.2 384.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-16-plpgsql-check_2.10.2-1.pgdg22.04+1_arm64.deb
-@ u22.aarch64 16 postgresql-16-plpgsql-check postgresql-16-plpgsql-check_2.10.1-1.pgdg22.04+1_arm64.deb pgdg 2.10.1 381.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-16-plpgsql-check_2.10.1-1.pgdg22.04+1_arm64.deb
+@ u24.x86_64 16 postgresql-16-plpgsql-check postgresql-16-plpgsql-check_2.10.4-1.pgdg24.04+1_amd64.deb pgdg 2.10.4 316.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-16-plpgsql-check_2.10.4-1.pgdg24.04+1_amd64.deb
+@ u24.x86_64 16 postgresql-16-plpgsql-check postgresql-16-plpgsql-check_2.10.4-1PIGSTY~noble_amd64.deb pigsty 2.10.4 328.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/plpgsql-check/postgresql-16-plpgsql-check_2.10.4-1PIGSTY~noble_amd64.deb
 @ u24.x86_64 16 postgresql-16-plpgsql-check postgresql-16-plpgsql-check_2.10.3-1.pgdg24.04+1_amd64.deb pgdg 2.10.3 315.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-16-plpgsql-check_2.10.3-1.pgdg24.04+1_amd64.deb
-@ u24.x86_64 16 postgresql-16-plpgsql-check postgresql-16-plpgsql-check_2.10.3-1PIGSTY~noble_amd64.deb pigsty 2.10.3 327.7KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/plpgsql-check/postgresql-16-plpgsql-check_2.10.3-1PIGSTY~noble_amd64.deb
 @ u24.x86_64 16 postgresql-16-plpgsql-check postgresql-16-plpgsql-check_2.10.2-1.pgdg24.04+1_amd64.deb pgdg 2.10.2 315.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-16-plpgsql-check_2.10.2-1.pgdg24.04+1_amd64.deb
-@ u24.x86_64 16 postgresql-16-plpgsql-check postgresql-16-plpgsql-check_2.10.1-1.pgdg24.04+1_amd64.deb pgdg 2.10.1 312.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-16-plpgsql-check_2.10.1-1.pgdg24.04+1_amd64.deb
+@ u24.aarch64 16 postgresql-16-plpgsql-check postgresql-16-plpgsql-check_2.10.4-1.pgdg24.04+1_arm64.deb pgdg 2.10.4 304.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-16-plpgsql-check_2.10.4-1.pgdg24.04+1_arm64.deb
+@ u24.aarch64 16 postgresql-16-plpgsql-check postgresql-16-plpgsql-check_2.10.4-1PIGSTY~noble_arm64.deb pigsty 2.10.4 321.9KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/plpgsql-check/postgresql-16-plpgsql-check_2.10.4-1PIGSTY~noble_arm64.deb
 @ u24.aarch64 16 postgresql-16-plpgsql-check postgresql-16-plpgsql-check_2.10.3-1.pgdg24.04+1_arm64.deb pgdg 2.10.3 304.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-16-plpgsql-check_2.10.3-1.pgdg24.04+1_arm64.deb
-@ u24.aarch64 16 postgresql-16-plpgsql-check postgresql-16-plpgsql-check_2.10.3-1PIGSTY~noble_arm64.deb pigsty 2.10.3 321.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/plpgsql-check/postgresql-16-plpgsql-check_2.10.3-1PIGSTY~noble_arm64.deb
 @ u24.aarch64 16 postgresql-16-plpgsql-check postgresql-16-plpgsql-check_2.10.2-1.pgdg24.04+1_arm64.deb pgdg 2.10.2 304.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-16-plpgsql-check_2.10.2-1.pgdg24.04+1_arm64.deb
-@ u24.aarch64 16 postgresql-16-plpgsql-check postgresql-16-plpgsql-check_2.10.1-1.pgdg24.04+1_arm64.deb pgdg 2.10.1 300.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-16-plpgsql-check_2.10.1-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 16 postgresql-16-plpgsql-check postgresql-16-plpgsql-check_2.10.4-1.pgdg26.04+1_amd64.deb pgdg 2.10.4 313.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-16-plpgsql-check_2.10.4-1.pgdg26.04+1_amd64.deb
+@ u26.x86_64 16 postgresql-16-plpgsql-check postgresql-16-plpgsql-check_2.10.4-1PIGSTY~resolute_amd64.deb pigsty 2.10.4 326.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/plpgsql-check/postgresql-16-plpgsql-check_2.10.4-1PIGSTY~resolute_amd64.deb
 @ u26.x86_64 16 postgresql-16-plpgsql-check postgresql-16-plpgsql-check_2.10.3-1.pgdg26.04+1_amd64.deb pgdg 2.10.3 312.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-16-plpgsql-check_2.10.3-1.pgdg26.04+1_amd64.deb
-@ u26.x86_64 16 postgresql-16-plpgsql-check postgresql-16-plpgsql-check_2.10.3-1PIGSTY~resolute_amd64.deb pigsty 2.10.3 325.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/plpgsql-check/postgresql-16-plpgsql-check_2.10.3-1PIGSTY~resolute_amd64.deb
 @ u26.x86_64 16 postgresql-16-plpgsql-check postgresql-16-plpgsql-check_2.10.2-1.pgdg26.04+1_amd64.deb pgdg 2.10.2 312.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-16-plpgsql-check_2.10.2-1.pgdg26.04+1_amd64.deb
-@ u26.x86_64 16 postgresql-16-plpgsql-check postgresql-16-plpgsql-check_2.10.1-1.pgdg26.04+1_amd64.deb pgdg 2.10.1 310.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-16-plpgsql-check_2.10.1-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 16 postgresql-16-plpgsql-check postgresql-16-plpgsql-check_2.10.4-1.pgdg26.04+1_arm64.deb pgdg 2.10.4 301.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-16-plpgsql-check_2.10.4-1.pgdg26.04+1_arm64.deb
+@ u26.aarch64 16 postgresql-16-plpgsql-check postgresql-16-plpgsql-check_2.10.4-1PIGSTY~resolute_arm64.deb pigsty 2.10.4 318.8KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/plpgsql-check/postgresql-16-plpgsql-check_2.10.4-1PIGSTY~resolute_arm64.deb
 @ u26.aarch64 16 postgresql-16-plpgsql-check postgresql-16-plpgsql-check_2.10.3-1.pgdg26.04+1_arm64.deb pgdg 2.10.3 300.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-16-plpgsql-check_2.10.3-1.pgdg26.04+1_arm64.deb
-@ u26.aarch64 16 postgresql-16-plpgsql-check postgresql-16-plpgsql-check_2.10.3-1PIGSTY~resolute_arm64.deb pigsty 2.10.3 318.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/plpgsql-check/postgresql-16-plpgsql-check_2.10.3-1PIGSTY~resolute_arm64.deb
 @ u26.aarch64 16 postgresql-16-plpgsql-check postgresql-16-plpgsql-check_2.10.2-1.pgdg26.04+1_arm64.deb pgdg 2.10.2 300.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-16-plpgsql-check_2.10.2-1.pgdg26.04+1_arm64.deb
-@ u26.aarch64 16 postgresql-16-plpgsql-check postgresql-16-plpgsql-check_2.10.1-1.pgdg26.04+1_arm64.deb pgdg 2.10.1 297.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-16-plpgsql-check_2.10.1-1.pgdg26.04+1_arm64.deb
-@ el8.x86_64 15 plpgsql_check_15 plpgsql_check_15-2.10.3-1PIGSTY.el8.x86_64.rpm pigsty 2.10.3 125.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/plpgsql_check_15-2.10.3-1PIGSTY.el8.x86_64.rpm
+@ el8.x86_64 15 plpgsql_check_15 plpgsql_check_15-2.10.4-1PIGSTY.el8.x86_64.rpm pigsty 2.10.4 126.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/plpgsql_check_15-2.10.4-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 15 plpgsql_check_15 plpgsql_check_15-2.10.3-1PGDG.rhel8.10.x86_64.rpm pgdg 2.10.3 126.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/plpgsql_check_15-2.10.3-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 plpgsql_check_15 plpgsql_check_15-2.10.2-1PGDG.rhel8.10.x86_64.rpm pgdg 2.10.2 125.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/plpgsql_check_15-2.10.2-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 15 plpgsql_check_15 plpgsql_check_15-2.10.1-1PGDG.rhel8.10.x86_64.rpm pgdg 2.10.1 124.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/plpgsql_check_15-2.10.1-1PGDG.rhel8.10.x86_64.rpm
@@ -647,7 +647,7 @@ weight: 3060
 @ el8.x86_64 15 plpgsql_check_15 plpgsql_check_15-2.2.4-1.rhel8.x86_64.rpm pgdg 2.2.4 95.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/plpgsql_check_15-2.2.4-1.rhel8.x86_64.rpm
 @ el8.x86_64 15 plpgsql_check_15 plpgsql_check_15-2.2.3-1.rhel8.x86_64.rpm pgdg 2.2.3 95.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/plpgsql_check_15-2.2.3-1.rhel8.x86_64.rpm
 @ el8.x86_64 15 plpgsql_check_15 plpgsql_check_15-2.2.2-1.rhel8.x86_64.rpm pgdg 2.2.2 94.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-x86_64/plpgsql_check_15-2.2.2-1.rhel8.x86_64.rpm
-@ el8.aarch64 15 plpgsql_check_15 plpgsql_check_15-2.10.3-1PIGSTY.el8.aarch64.rpm pigsty 2.10.3 116.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/plpgsql_check_15-2.10.3-1PIGSTY.el8.aarch64.rpm
+@ el8.aarch64 15 plpgsql_check_15 plpgsql_check_15-2.10.4-1PIGSTY.el8.aarch64.rpm pigsty 2.10.4 116.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/plpgsql_check_15-2.10.4-1PIGSTY.el8.aarch64.rpm
 @ el8.aarch64 15 plpgsql_check_15 plpgsql_check_15-2.10.3-1PGDG.rhel8.10.aarch64.rpm pgdg 2.10.3 116.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/plpgsql_check_15-2.10.3-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 15 plpgsql_check_15 plpgsql_check_15-2.10.2-1PGDG.rhel8.10.aarch64.rpm pgdg 2.10.2 116.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/plpgsql_check_15-2.10.2-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 15 plpgsql_check_15 plpgsql_check_15-2.10.1-1PGDG.rhel8.10.aarch64.rpm pgdg 2.10.1 115.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/plpgsql_check_15-2.10.1-1PGDG.rhel8.10.aarch64.rpm
@@ -686,7 +686,7 @@ weight: 3060
 @ el8.aarch64 15 plpgsql_check_15 plpgsql_check_15-2.2.5-1.rhel8.aarch64.rpm pgdg 2.2.5 88.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/plpgsql_check_15-2.2.5-1.rhel8.aarch64.rpm
 @ el8.aarch64 15 plpgsql_check_15 plpgsql_check_15-2.2.4-1.rhel8.aarch64.rpm pgdg 2.2.4 88.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/plpgsql_check_15-2.2.4-1.rhel8.aarch64.rpm
 @ el8.aarch64 15 plpgsql_check_15 plpgsql_check_15-2.2.3-1.rhel8.aarch64.rpm pgdg 2.2.3 88.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-8-aarch64/plpgsql_check_15-2.2.3-1.rhel8.aarch64.rpm
-@ el9.x86_64 15 plpgsql_check_15 plpgsql_check_15-2.10.3-1PIGSTY.el9.x86_64.rpm pigsty 2.10.3 121.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/plpgsql_check_15-2.10.3-1PIGSTY.el9.x86_64.rpm
+@ el9.x86_64 15 plpgsql_check_15 plpgsql_check_15-2.10.4-1PIGSTY.el9.x86_64.rpm pigsty 2.10.4 121.9KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/plpgsql_check_15-2.10.4-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 15 plpgsql_check_15 plpgsql_check_15-2.10.3-1PGDG.rhel9.8.x86_64.rpm pgdg 2.10.3 120.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/plpgsql_check_15-2.10.3-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 15 plpgsql_check_15 plpgsql_check_15-2.10.2-1PGDG.rhel9.8.x86_64.rpm pgdg 2.10.2 120.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/plpgsql_check_15-2.10.2-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 15 plpgsql_check_15 plpgsql_check_15-2.10.1-1PGDG.rhel9.8.x86_64.rpm pgdg 2.10.1 118.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/plpgsql_check_15-2.10.1-1PGDG.rhel9.8.x86_64.rpm
@@ -733,7 +733,7 @@ weight: 3060
 @ el9.x86_64 15 plpgsql_check_15 plpgsql_check_15-2.2.4-1.rhel9.x86_64.rpm pgdg 2.2.4 95.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/plpgsql_check_15-2.2.4-1.rhel9.x86_64.rpm
 @ el9.x86_64 15 plpgsql_check_15 plpgsql_check_15-2.2.3-1.rhel9.x86_64.rpm pgdg 2.2.3 95.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/plpgsql_check_15-2.2.3-1.rhel9.x86_64.rpm
 @ el9.x86_64 15 plpgsql_check_15 plpgsql_check_15-2.2.2-1.rhel9.x86_64.rpm pgdg 2.2.2 94.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-x86_64/plpgsql_check_15-2.2.2-1.rhel9.x86_64.rpm
-@ el9.aarch64 15 plpgsql_check_15 plpgsql_check_15-2.10.3-1PIGSTY.el9.aarch64.rpm pigsty 2.10.3 116.2KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/plpgsql_check_15-2.10.3-1PIGSTY.el9.aarch64.rpm
+@ el9.aarch64 15 plpgsql_check_15 plpgsql_check_15-2.10.4-1PIGSTY.el9.aarch64.rpm pigsty 2.10.4 116.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/plpgsql_check_15-2.10.4-1PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 15 plpgsql_check_15 plpgsql_check_15-2.10.3-1PGDG.rhel9.8.aarch64.rpm pgdg 2.10.3 116.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/plpgsql_check_15-2.10.3-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 15 plpgsql_check_15 plpgsql_check_15-2.10.2-1PGDG.rhel9.8.aarch64.rpm pgdg 2.10.2 115.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/plpgsql_check_15-2.10.2-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 15 plpgsql_check_15 plpgsql_check_15-2.10.1-1PGDG.rhel9.8.aarch64.rpm pgdg 2.10.1 114.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/plpgsql_check_15-2.10.1-1PGDG.rhel9.8.aarch64.rpm
@@ -779,7 +779,7 @@ weight: 3060
 @ el9.aarch64 15 plpgsql_check_15 plpgsql_check_15-2.2.5-1.rhel9.aarch64.rpm pgdg 2.2.5 91.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/plpgsql_check_15-2.2.5-1.rhel9.aarch64.rpm
 @ el9.aarch64 15 plpgsql_check_15 plpgsql_check_15-2.2.4-1.rhel9.aarch64.rpm pgdg 2.2.4 91.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/plpgsql_check_15-2.2.4-1.rhel9.aarch64.rpm
 @ el9.aarch64 15 plpgsql_check_15 plpgsql_check_15-2.2.3-1.rhel9.aarch64.rpm pgdg 2.2.3 91.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-9-aarch64/plpgsql_check_15-2.2.3-1.rhel9.aarch64.rpm
-@ el10.x86_64 15 plpgsql_check_15 plpgsql_check_15-2.10.3-1PIGSTY.el10.x86_64.rpm pigsty 2.10.3 124.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/plpgsql_check_15-2.10.3-1PIGSTY.el10.x86_64.rpm
+@ el10.x86_64 15 plpgsql_check_15 plpgsql_check_15-2.10.4-1PIGSTY.el10.x86_64.rpm pigsty 2.10.4 123.5KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/plpgsql_check_15-2.10.4-1PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 15 plpgsql_check_15 plpgsql_check_15-2.10.3-1PGDG.rhel10.2.x86_64.rpm pgdg 2.10.3 123.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/plpgsql_check_15-2.10.3-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 15 plpgsql_check_15 plpgsql_check_15-2.10.2-1PGDG.rhel10.2.x86_64.rpm pgdg 2.10.2 122.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/plpgsql_check_15-2.10.2-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 15 plpgsql_check_15 plpgsql_check_15-2.10.1-1PGDG.rhel10.2.x86_64.rpm pgdg 2.10.1 121.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/plpgsql_check_15-2.10.1-1PGDG.rhel10.2.x86_64.rpm
@@ -800,7 +800,7 @@ weight: 3060
 @ el10.x86_64 15 plpgsql_check_15 plpgsql_check_15-2.8.3-1PGDG.rhel10.x86_64.rpm pgdg 2.8.3 115.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/plpgsql_check_15-2.8.3-1PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 15 plpgsql_check_15 plpgsql_check_15-2.8.2-1PGDG.rhel10.x86_64.rpm pgdg 2.8.2 114.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/plpgsql_check_15-2.8.2-1PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 15 plpgsql_check_15 plpgsql_check_15-2.8.1-1PGDG.rhel10.x86_64.rpm pgdg 2.8.1 113.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-x86_64/plpgsql_check_15-2.8.1-1PGDG.rhel10.x86_64.rpm
-@ el10.aarch64 15 plpgsql_check_15 plpgsql_check_15-2.10.3-1PIGSTY.el10.aarch64.rpm pigsty 2.10.3 117.4KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/plpgsql_check_15-2.10.3-1PIGSTY.el10.aarch64.rpm
+@ el10.aarch64 15 plpgsql_check_15 plpgsql_check_15-2.10.4-1PIGSTY.el10.aarch64.rpm pigsty 2.10.4 117.8KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/plpgsql_check_15-2.10.4-1PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 15 plpgsql_check_15 plpgsql_check_15-2.10.3-1PGDG.rhel10.2.aarch64.rpm pgdg 2.10.3 117.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/plpgsql_check_15-2.10.3-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 15 plpgsql_check_15 plpgsql_check_15-2.10.2-1PGDG.rhel10.2.aarch64.rpm pgdg 2.10.2 117.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/plpgsql_check_15-2.10.2-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 15 plpgsql_check_15 plpgsql_check_15-2.10.1-1PGDG.rhel10.2.aarch64.rpm pgdg 2.10.1 115.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/plpgsql_check_15-2.10.1-1PGDG.rhel10.2.aarch64.rpm
@@ -821,47 +821,47 @@ weight: 3060
 @ el10.aarch64 15 plpgsql_check_15 plpgsql_check_15-2.8.3-1PGDG.rhel10.aarch64.rpm pgdg 2.8.3 108.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/plpgsql_check_15-2.8.3-1PGDG.rhel10.aarch64.rpm
 @ el10.aarch64 15 plpgsql_check_15 plpgsql_check_15-2.8.2-1PGDG.rhel10.aarch64.rpm pgdg 2.8.2 108.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/plpgsql_check_15-2.8.2-1PGDG.rhel10.aarch64.rpm
 @ el10.aarch64 15 plpgsql_check_15 plpgsql_check_15-2.8.1-1PGDG.rhel10.aarch64.rpm pgdg 2.8.1 107.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/15/redhat/rhel-10-aarch64/plpgsql_check_15-2.8.1-1PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 15 postgresql-15-plpgsql-check postgresql-15-plpgsql-check_2.10.4-1.pgdg12+1_amd64.deb pgdg 2.10.4 320.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-15-plpgsql-check_2.10.4-1.pgdg12+1_amd64.deb
+@ d12.x86_64 15 postgresql-15-plpgsql-check postgresql-15-plpgsql-check_2.10.4-1PIGSTY~bookworm_amd64.deb pigsty 2.10.4 318.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/plpgsql-check/postgresql-15-plpgsql-check_2.10.4-1PIGSTY~bookworm_amd64.deb
 @ d12.x86_64 15 postgresql-15-plpgsql-check postgresql-15-plpgsql-check_2.10.3-1.pgdg12+1_amd64.deb pgdg 2.10.3 319.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-15-plpgsql-check_2.10.3-1.pgdg12+1_amd64.deb
-@ d12.x86_64 15 postgresql-15-plpgsql-check postgresql-15-plpgsql-check_2.10.3-1PIGSTY~bookworm_amd64.deb pigsty 2.10.3 317.7KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/plpgsql-check/postgresql-15-plpgsql-check_2.10.3-1PIGSTY~bookworm_amd64.deb
 @ d12.x86_64 15 postgresql-15-plpgsql-check postgresql-15-plpgsql-check_2.10.2-1.pgdg12+1_amd64.deb pgdg 2.10.2 319.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-15-plpgsql-check_2.10.2-1.pgdg12+1_amd64.deb
-@ d12.x86_64 15 postgresql-15-plpgsql-check postgresql-15-plpgsql-check_2.10.1-1.pgdg12+1_amd64.deb pgdg 2.10.1 316.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-15-plpgsql-check_2.10.1-1.pgdg12+1_amd64.deb
+@ d12.aarch64 15 postgresql-15-plpgsql-check postgresql-15-plpgsql-check_2.10.4-1.pgdg12+1_arm64.deb pgdg 2.10.4 307.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-15-plpgsql-check_2.10.4-1.pgdg12+1_arm64.deb
+@ d12.aarch64 15 postgresql-15-plpgsql-check postgresql-15-plpgsql-check_2.10.4-1PIGSTY~bookworm_arm64.deb pigsty 2.10.4 305.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/plpgsql-check/postgresql-15-plpgsql-check_2.10.4-1PIGSTY~bookworm_arm64.deb
 @ d12.aarch64 15 postgresql-15-plpgsql-check postgresql-15-plpgsql-check_2.10.3-1.pgdg12+1_arm64.deb pgdg 2.10.3 307.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-15-plpgsql-check_2.10.3-1.pgdg12+1_arm64.deb
-@ d12.aarch64 15 postgresql-15-plpgsql-check postgresql-15-plpgsql-check_2.10.3-1PIGSTY~bookworm_arm64.deb pigsty 2.10.3 305.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/plpgsql-check/postgresql-15-plpgsql-check_2.10.3-1PIGSTY~bookworm_arm64.deb
 @ d12.aarch64 15 postgresql-15-plpgsql-check postgresql-15-plpgsql-check_2.10.2-1.pgdg12+1_arm64.deb pgdg 2.10.2 307.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-15-plpgsql-check_2.10.2-1.pgdg12+1_arm64.deb
-@ d12.aarch64 15 postgresql-15-plpgsql-check postgresql-15-plpgsql-check_2.10.1-1.pgdg12+1_arm64.deb pgdg 2.10.1 304.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-15-plpgsql-check_2.10.1-1.pgdg12+1_arm64.deb
+@ d13.x86_64 15 postgresql-15-plpgsql-check postgresql-15-plpgsql-check_2.10.4-1.pgdg13+1_amd64.deb pgdg 2.10.4 320.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-15-plpgsql-check_2.10.4-1.pgdg13+1_amd64.deb
+@ d13.x86_64 15 postgresql-15-plpgsql-check postgresql-15-plpgsql-check_2.10.4-1PIGSTY~trixie_amd64.deb pigsty 2.10.4 318.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/plpgsql-check/postgresql-15-plpgsql-check_2.10.4-1PIGSTY~trixie_amd64.deb
 @ d13.x86_64 15 postgresql-15-plpgsql-check postgresql-15-plpgsql-check_2.10.3-1.pgdg13+1_amd64.deb pgdg 2.10.3 320.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-15-plpgsql-check_2.10.3-1.pgdg13+1_amd64.deb
-@ d13.x86_64 15 postgresql-15-plpgsql-check postgresql-15-plpgsql-check_2.10.3-1PIGSTY~trixie_amd64.deb pigsty 2.10.3 318.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/plpgsql-check/postgresql-15-plpgsql-check_2.10.3-1PIGSTY~trixie_amd64.deb
 @ d13.x86_64 15 postgresql-15-plpgsql-check postgresql-15-plpgsql-check_2.10.2-1.pgdg13+1_amd64.deb pgdg 2.10.2 319.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-15-plpgsql-check_2.10.2-1.pgdg13+1_amd64.deb
-@ d13.x86_64 15 postgresql-15-plpgsql-check postgresql-15-plpgsql-check_2.10.1-1.pgdg13+1_amd64.deb pgdg 2.10.1 317.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-15-plpgsql-check_2.10.1-1.pgdg13+1_amd64.deb
+@ d13.aarch64 15 postgresql-15-plpgsql-check postgresql-15-plpgsql-check_2.10.4-1.pgdg13+1_arm64.deb pgdg 2.10.4 308.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-15-plpgsql-check_2.10.4-1.pgdg13+1_arm64.deb
+@ d13.aarch64 15 postgresql-15-plpgsql-check postgresql-15-plpgsql-check_2.10.4-1PIGSTY~trixie_arm64.deb pigsty 2.10.4 306.7KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/plpgsql-check/postgresql-15-plpgsql-check_2.10.4-1PIGSTY~trixie_arm64.deb
 @ d13.aarch64 15 postgresql-15-plpgsql-check postgresql-15-plpgsql-check_2.10.3-1.pgdg13+1_arm64.deb pgdg 2.10.3 308.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-15-plpgsql-check_2.10.3-1.pgdg13+1_arm64.deb
-@ d13.aarch64 15 postgresql-15-plpgsql-check postgresql-15-plpgsql-check_2.10.3-1PIGSTY~trixie_arm64.deb pigsty 2.10.3 306.3KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/plpgsql-check/postgresql-15-plpgsql-check_2.10.3-1PIGSTY~trixie_arm64.deb
 @ d13.aarch64 15 postgresql-15-plpgsql-check postgresql-15-plpgsql-check_2.10.2-1.pgdg13+1_arm64.deb pgdg 2.10.2 308.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-15-plpgsql-check_2.10.2-1.pgdg13+1_arm64.deb
-@ d13.aarch64 15 postgresql-15-plpgsql-check postgresql-15-plpgsql-check_2.10.1-1.pgdg13+1_arm64.deb pgdg 2.10.1 305.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-15-plpgsql-check_2.10.1-1.pgdg13+1_arm64.deb
+@ u22.x86_64 15 postgresql-15-plpgsql-check postgresql-15-plpgsql-check_2.10.4-1.pgdg22.04+1_amd64.deb pgdg 2.10.4 401.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-15-plpgsql-check_2.10.4-1.pgdg22.04+1_amd64.deb
+@ u22.x86_64 15 postgresql-15-plpgsql-check postgresql-15-plpgsql-check_2.10.4-1PIGSTY~jammy_amd64.deb pigsty 2.10.4 419.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/plpgsql-check/postgresql-15-plpgsql-check_2.10.4-1PIGSTY~jammy_amd64.deb
 @ u22.x86_64 15 postgresql-15-plpgsql-check postgresql-15-plpgsql-check_2.10.3-1.pgdg22.04+1_amd64.deb pgdg 2.10.3 400.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-15-plpgsql-check_2.10.3-1.pgdg22.04+1_amd64.deb
-@ u22.x86_64 15 postgresql-15-plpgsql-check postgresql-15-plpgsql-check_2.10.3-1PIGSTY~jammy_amd64.deb pigsty 2.10.3 418.1KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/plpgsql-check/postgresql-15-plpgsql-check_2.10.3-1PIGSTY~jammy_amd64.deb
 @ u22.x86_64 15 postgresql-15-plpgsql-check postgresql-15-plpgsql-check_2.10.2-1.pgdg22.04+1_amd64.deb pgdg 2.10.2 399.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-15-plpgsql-check_2.10.2-1.pgdg22.04+1_amd64.deb
-@ u22.x86_64 15 postgresql-15-plpgsql-check postgresql-15-plpgsql-check_2.10.1-1.pgdg22.04+1_amd64.deb pgdg 2.10.1 396.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-15-plpgsql-check_2.10.1-1.pgdg22.04+1_amd64.deb
+@ u22.aarch64 15 postgresql-15-plpgsql-check postgresql-15-plpgsql-check_2.10.4-1.pgdg22.04+1_arm64.deb pgdg 2.10.4 389.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-15-plpgsql-check_2.10.4-1.pgdg22.04+1_arm64.deb
+@ u22.aarch64 15 postgresql-15-plpgsql-check postgresql-15-plpgsql-check_2.10.4-1PIGSTY~jammy_arm64.deb pigsty 2.10.4 411.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/plpgsql-check/postgresql-15-plpgsql-check_2.10.4-1PIGSTY~jammy_arm64.deb
 @ u22.aarch64 15 postgresql-15-plpgsql-check postgresql-15-plpgsql-check_2.10.3-1.pgdg22.04+1_arm64.deb pgdg 2.10.3 389.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-15-plpgsql-check_2.10.3-1.pgdg22.04+1_arm64.deb
-@ u22.aarch64 15 postgresql-15-plpgsql-check postgresql-15-plpgsql-check_2.10.3-1PIGSTY~jammy_arm64.deb pigsty 2.10.3 410.8KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/plpgsql-check/postgresql-15-plpgsql-check_2.10.3-1PIGSTY~jammy_arm64.deb
 @ u22.aarch64 15 postgresql-15-plpgsql-check postgresql-15-plpgsql-check_2.10.2-1.pgdg22.04+1_arm64.deb pgdg 2.10.2 387.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-15-plpgsql-check_2.10.2-1.pgdg22.04+1_arm64.deb
-@ u22.aarch64 15 postgresql-15-plpgsql-check postgresql-15-plpgsql-check_2.10.1-1.pgdg22.04+1_arm64.deb pgdg 2.10.1 385.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-15-plpgsql-check_2.10.1-1.pgdg22.04+1_arm64.deb
+@ u24.x86_64 15 postgresql-15-plpgsql-check postgresql-15-plpgsql-check_2.10.4-1.pgdg24.04+1_amd64.deb pgdg 2.10.4 320.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-15-plpgsql-check_2.10.4-1.pgdg24.04+1_amd64.deb
+@ u24.x86_64 15 postgresql-15-plpgsql-check postgresql-15-plpgsql-check_2.10.4-1PIGSTY~noble_amd64.deb pigsty 2.10.4 332.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/plpgsql-check/postgresql-15-plpgsql-check_2.10.4-1PIGSTY~noble_amd64.deb
 @ u24.x86_64 15 postgresql-15-plpgsql-check postgresql-15-plpgsql-check_2.10.3-1.pgdg24.04+1_amd64.deb pgdg 2.10.3 319.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-15-plpgsql-check_2.10.3-1.pgdg24.04+1_amd64.deb
-@ u24.x86_64 15 postgresql-15-plpgsql-check postgresql-15-plpgsql-check_2.10.3-1PIGSTY~noble_amd64.deb pigsty 2.10.3 332.0KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/plpgsql-check/postgresql-15-plpgsql-check_2.10.3-1PIGSTY~noble_amd64.deb
 @ u24.x86_64 15 postgresql-15-plpgsql-check postgresql-15-plpgsql-check_2.10.2-1.pgdg24.04+1_amd64.deb pgdg 2.10.2 319.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-15-plpgsql-check_2.10.2-1.pgdg24.04+1_amd64.deb
-@ u24.x86_64 15 postgresql-15-plpgsql-check postgresql-15-plpgsql-check_2.10.1-1.pgdg24.04+1_amd64.deb pgdg 2.10.1 316.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-15-plpgsql-check_2.10.1-1.pgdg24.04+1_amd64.deb
+@ u24.aarch64 15 postgresql-15-plpgsql-check postgresql-15-plpgsql-check_2.10.4-1.pgdg24.04+1_arm64.deb pgdg 2.10.4 308.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-15-plpgsql-check_2.10.4-1.pgdg24.04+1_arm64.deb
+@ u24.aarch64 15 postgresql-15-plpgsql-check postgresql-15-plpgsql-check_2.10.4-1PIGSTY~noble_arm64.deb pigsty 2.10.4 326.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/plpgsql-check/postgresql-15-plpgsql-check_2.10.4-1PIGSTY~noble_arm64.deb
 @ u24.aarch64 15 postgresql-15-plpgsql-check postgresql-15-plpgsql-check_2.10.3-1.pgdg24.04+1_arm64.deb pgdg 2.10.3 308.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-15-plpgsql-check_2.10.3-1.pgdg24.04+1_arm64.deb
-@ u24.aarch64 15 postgresql-15-plpgsql-check postgresql-15-plpgsql-check_2.10.3-1PIGSTY~noble_arm64.deb pigsty 2.10.3 325.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/plpgsql-check/postgresql-15-plpgsql-check_2.10.3-1PIGSTY~noble_arm64.deb
 @ u24.aarch64 15 postgresql-15-plpgsql-check postgresql-15-plpgsql-check_2.10.2-1.pgdg24.04+1_arm64.deb pgdg 2.10.2 307.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-15-plpgsql-check_2.10.2-1.pgdg24.04+1_arm64.deb
-@ u24.aarch64 15 postgresql-15-plpgsql-check postgresql-15-plpgsql-check_2.10.1-1.pgdg24.04+1_arm64.deb pgdg 2.10.1 305.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-15-plpgsql-check_2.10.1-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 15 postgresql-15-plpgsql-check postgresql-15-plpgsql-check_2.10.4-1.pgdg26.04+1_amd64.deb pgdg 2.10.4 317.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-15-plpgsql-check_2.10.4-1.pgdg26.04+1_amd64.deb
+@ u26.x86_64 15 postgresql-15-plpgsql-check postgresql-15-plpgsql-check_2.10.4-1PIGSTY~resolute_amd64.deb pigsty 2.10.4 330.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/plpgsql-check/postgresql-15-plpgsql-check_2.10.4-1PIGSTY~resolute_amd64.deb
 @ u26.x86_64 15 postgresql-15-plpgsql-check postgresql-15-plpgsql-check_2.10.3-1.pgdg26.04+1_amd64.deb pgdg 2.10.3 316.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-15-plpgsql-check_2.10.3-1.pgdg26.04+1_amd64.deb
-@ u26.x86_64 15 postgresql-15-plpgsql-check postgresql-15-plpgsql-check_2.10.3-1PIGSTY~resolute_amd64.deb pigsty 2.10.3 329.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/plpgsql-check/postgresql-15-plpgsql-check_2.10.3-1PIGSTY~resolute_amd64.deb
 @ u26.x86_64 15 postgresql-15-plpgsql-check postgresql-15-plpgsql-check_2.10.2-1.pgdg26.04+1_amd64.deb pgdg 2.10.2 316.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-15-plpgsql-check_2.10.2-1.pgdg26.04+1_amd64.deb
-@ u26.x86_64 15 postgresql-15-plpgsql-check postgresql-15-plpgsql-check_2.10.1-1.pgdg26.04+1_amd64.deb pgdg 2.10.1 313.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-15-plpgsql-check_2.10.1-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 15 postgresql-15-plpgsql-check postgresql-15-plpgsql-check_2.10.4-1.pgdg26.04+1_arm64.deb pgdg 2.10.4 305.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-15-plpgsql-check_2.10.4-1.pgdg26.04+1_arm64.deb
+@ u26.aarch64 15 postgresql-15-plpgsql-check postgresql-15-plpgsql-check_2.10.4-1PIGSTY~resolute_arm64.deb pigsty 2.10.4 323.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/plpgsql-check/postgresql-15-plpgsql-check_2.10.4-1PIGSTY~resolute_arm64.deb
 @ u26.aarch64 15 postgresql-15-plpgsql-check postgresql-15-plpgsql-check_2.10.3-1.pgdg26.04+1_arm64.deb pgdg 2.10.3 304.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-15-plpgsql-check_2.10.3-1.pgdg26.04+1_arm64.deb
-@ u26.aarch64 15 postgresql-15-plpgsql-check postgresql-15-plpgsql-check_2.10.3-1PIGSTY~resolute_arm64.deb pigsty 2.10.3 322.6KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/plpgsql-check/postgresql-15-plpgsql-check_2.10.3-1PIGSTY~resolute_arm64.deb
 @ u26.aarch64 15 postgresql-15-plpgsql-check postgresql-15-plpgsql-check_2.10.2-1.pgdg26.04+1_arm64.deb pgdg 2.10.2 304.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-15-plpgsql-check_2.10.2-1.pgdg26.04+1_arm64.deb
-@ u26.aarch64 15 postgresql-15-plpgsql-check postgresql-15-plpgsql-check_2.10.1-1.pgdg26.04+1_arm64.deb pgdg 2.10.1 301.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-15-plpgsql-check_2.10.1-1.pgdg26.04+1_arm64.deb
-@ el8.x86_64 14 plpgsql_check_14 plpgsql_check_14-2.10.3-1PIGSTY.el8.x86_64.rpm pigsty 2.10.3 125.8KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/plpgsql_check_14-2.10.3-1PIGSTY.el8.x86_64.rpm
+@ el8.x86_64 14 plpgsql_check_14 plpgsql_check_14-2.10.4-1PIGSTY.el8.x86_64.rpm pigsty 2.10.4 126.2KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/plpgsql_check_14-2.10.4-1PIGSTY.el8.x86_64.rpm
 @ el8.x86_64 14 plpgsql_check_14 plpgsql_check_14-2.10.3-1PGDG.rhel8.10.x86_64.rpm pgdg 2.10.3 125.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/plpgsql_check_14-2.10.3-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 14 plpgsql_check_14 plpgsql_check_14-2.10.2-1PGDG.rhel8.10.x86_64.rpm pgdg 2.10.2 125.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/plpgsql_check_14-2.10.2-1PGDG.rhel8.10.x86_64.rpm
 @ el8.x86_64 14 plpgsql_check_14 plpgsql_check_14-2.10.1-1PGDG.rhel8.10.x86_64.rpm pgdg 2.10.1 124.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/plpgsql_check_14-2.10.1-1PGDG.rhel8.10.x86_64.rpm
@@ -911,7 +911,7 @@ weight: 3060
 @ el8.x86_64 14 plpgsql_check_14 plpgsql_check_14-2.0.5-1.rhel8.x86_64.rpm pgdg 2.0.5 87.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/plpgsql_check_14-2.0.5-1.rhel8.x86_64.rpm
 @ el8.x86_64 14 plpgsql_check_14 plpgsql_check_14-2.0.3-1.rhel8.x86_64.rpm pgdg 2.0.3 87.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/plpgsql_check_14-2.0.3-1.rhel8.x86_64.rpm
 @ el8.x86_64 14 plpgsql_check_14 plpgsql_check_14-1.17.1-1.rhel8.x86_64.rpm pgdg 1.17.1 83.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-x86_64/plpgsql_check_14-1.17.1-1.rhel8.x86_64.rpm
-@ el8.aarch64 14 plpgsql_check_14 plpgsql_check_14-2.10.3-1PIGSTY.el8.aarch64.rpm pigsty 2.10.3 116.6KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/plpgsql_check_14-2.10.3-1PIGSTY.el8.aarch64.rpm
+@ el8.aarch64 14 plpgsql_check_14 plpgsql_check_14-2.10.4-1PIGSTY.el8.aarch64.rpm pigsty 2.10.4 116.8KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/plpgsql_check_14-2.10.4-1PIGSTY.el8.aarch64.rpm
 @ el8.aarch64 14 plpgsql_check_14 plpgsql_check_14-2.10.3-1PGDG.rhel8.10.aarch64.rpm pgdg 2.10.3 116.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/plpgsql_check_14-2.10.3-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 14 plpgsql_check_14 plpgsql_check_14-2.10.2-1PGDG.rhel8.10.aarch64.rpm pgdg 2.10.2 116.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/plpgsql_check_14-2.10.2-1PGDG.rhel8.10.aarch64.rpm
 @ el8.aarch64 14 plpgsql_check_14 plpgsql_check_14-2.10.1-1PGDG.rhel8.10.aarch64.rpm pgdg 2.10.1 115.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/plpgsql_check_14-2.10.1-1PGDG.rhel8.10.aarch64.rpm
@@ -950,7 +950,7 @@ weight: 3060
 @ el8.aarch64 14 plpgsql_check_14 plpgsql_check_14-2.2.5-1.rhel8.aarch64.rpm pgdg 2.2.5 88.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/plpgsql_check_14-2.2.5-1.rhel8.aarch64.rpm
 @ el8.aarch64 14 plpgsql_check_14 plpgsql_check_14-2.2.4-1.rhel8.aarch64.rpm pgdg 2.2.4 88.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/plpgsql_check_14-2.2.4-1.rhel8.aarch64.rpm
 @ el8.aarch64 14 plpgsql_check_14 plpgsql_check_14-2.2.3-1.rhel8.aarch64.rpm pgdg 2.2.3 88.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-8-aarch64/plpgsql_check_14-2.2.3-1.rhel8.aarch64.rpm
-@ el9.x86_64 14 plpgsql_check_14 plpgsql_check_14-2.10.3-1PIGSTY.el9.x86_64.rpm pigsty 2.10.3 121.2KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/plpgsql_check_14-2.10.3-1PIGSTY.el9.x86_64.rpm
+@ el9.x86_64 14 plpgsql_check_14 plpgsql_check_14-2.10.4-1PIGSTY.el9.x86_64.rpm pigsty 2.10.4 122.6KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/plpgsql_check_14-2.10.4-1PIGSTY.el9.x86_64.rpm
 @ el9.x86_64 14 plpgsql_check_14 plpgsql_check_14-2.10.3-1PGDG.rhel9.8.x86_64.rpm pgdg 2.10.3 120.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/plpgsql_check_14-2.10.3-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 14 plpgsql_check_14 plpgsql_check_14-2.10.2-1PGDG.rhel9.8.x86_64.rpm pgdg 2.10.2 120.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/plpgsql_check_14-2.10.2-1PGDG.rhel9.8.x86_64.rpm
 @ el9.x86_64 14 plpgsql_check_14 plpgsql_check_14-2.10.1-1PGDG.rhel9.8.x86_64.rpm pgdg 2.10.1 119.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/plpgsql_check_14-2.10.1-1PGDG.rhel9.8.x86_64.rpm
@@ -1004,7 +1004,7 @@ weight: 3060
 @ el9.x86_64 14 plpgsql_check_14 plpgsql_check_14-2.1.5-1.rhel9.x86_64.rpm pgdg 2.1.5 89.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/plpgsql_check_14-2.1.5-1.rhel9.x86_64.rpm
 @ el9.x86_64 14 plpgsql_check_14 plpgsql_check_14-2.1.3-1.rhel9.x86_64.rpm pgdg 2.1.3 88.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/plpgsql_check_14-2.1.3-1.rhel9.x86_64.rpm
 @ el9.x86_64 14 plpgsql_check_14 plpgsql_check_14-2.1.2-1.rhel9.x86_64.rpm pgdg 2.1.2 88.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-x86_64/plpgsql_check_14-2.1.2-1.rhel9.x86_64.rpm
-@ el9.aarch64 14 plpgsql_check_14 plpgsql_check_14-2.10.3-1PIGSTY.el9.aarch64.rpm pigsty 2.10.3 116.1KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/plpgsql_check_14-2.10.3-1PIGSTY.el9.aarch64.rpm
+@ el9.aarch64 14 plpgsql_check_14 plpgsql_check_14-2.10.4-1PIGSTY.el9.aarch64.rpm pigsty 2.10.4 116.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/plpgsql_check_14-2.10.4-1PIGSTY.el9.aarch64.rpm
 @ el9.aarch64 14 plpgsql_check_14 plpgsql_check_14-2.10.3-1PGDG.rhel9.8.aarch64.rpm pgdg 2.10.3 116.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/plpgsql_check_14-2.10.3-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 14 plpgsql_check_14 plpgsql_check_14-2.10.2-1PGDG.rhel9.8.aarch64.rpm pgdg 2.10.2 115.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/plpgsql_check_14-2.10.2-1PGDG.rhel9.8.aarch64.rpm
 @ el9.aarch64 14 plpgsql_check_14 plpgsql_check_14-2.10.1-1PGDG.rhel9.8.aarch64.rpm pgdg 2.10.1 114.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/plpgsql_check_14-2.10.1-1PGDG.rhel9.8.aarch64.rpm
@@ -1050,7 +1050,7 @@ weight: 3060
 @ el9.aarch64 14 plpgsql_check_14 plpgsql_check_14-2.2.5-1.rhel9.aarch64.rpm pgdg 2.2.5 91.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/plpgsql_check_14-2.2.5-1.rhel9.aarch64.rpm
 @ el9.aarch64 14 plpgsql_check_14 plpgsql_check_14-2.2.4-1.rhel9.aarch64.rpm pgdg 2.2.4 91.0KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/plpgsql_check_14-2.2.4-1.rhel9.aarch64.rpm
 @ el9.aarch64 14 plpgsql_check_14 plpgsql_check_14-2.2.3-1.rhel9.aarch64.rpm pgdg 2.2.3 90.9KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-9-aarch64/plpgsql_check_14-2.2.3-1.rhel9.aarch64.rpm
-@ el10.x86_64 14 plpgsql_check_14 plpgsql_check_14-2.10.3-1PIGSTY.el10.x86_64.rpm pigsty 2.10.3 124.3KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/plpgsql_check_14-2.10.3-1PIGSTY.el10.x86_64.rpm
+@ el10.x86_64 14 plpgsql_check_14 plpgsql_check_14-2.10.4-1PIGSTY.el10.x86_64.rpm pigsty 2.10.4 124.4KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/plpgsql_check_14-2.10.4-1PIGSTY.el10.x86_64.rpm
 @ el10.x86_64 14 plpgsql_check_14 plpgsql_check_14-2.10.3-1PGDG.rhel10.2.x86_64.rpm pgdg 2.10.3 123.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/plpgsql_check_14-2.10.3-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 14 plpgsql_check_14 plpgsql_check_14-2.10.2-1PGDG.rhel10.2.x86_64.rpm pgdg 2.10.2 123.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/plpgsql_check_14-2.10.2-1PGDG.rhel10.2.x86_64.rpm
 @ el10.x86_64 14 plpgsql_check_14 plpgsql_check_14-2.10.1-1PGDG.rhel10.2.x86_64.rpm pgdg 2.10.1 121.2KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/plpgsql_check_14-2.10.1-1PGDG.rhel10.2.x86_64.rpm
@@ -1071,7 +1071,7 @@ weight: 3060
 @ el10.x86_64 14 plpgsql_check_14 plpgsql_check_14-2.8.3-1PGDG.rhel10.x86_64.rpm pgdg 2.8.3 114.8KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/plpgsql_check_14-2.8.3-1PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 14 plpgsql_check_14 plpgsql_check_14-2.8.2-1PGDG.rhel10.x86_64.rpm pgdg 2.8.2 115.4KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/plpgsql_check_14-2.8.2-1PGDG.rhel10.x86_64.rpm
 @ el10.x86_64 14 plpgsql_check_14 plpgsql_check_14-2.8.1-1PGDG.rhel10.x86_64.rpm pgdg 2.8.1 114.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-x86_64/plpgsql_check_14-2.8.1-1PGDG.rhel10.x86_64.rpm
-@ el10.aarch64 14 plpgsql_check_14 plpgsql_check_14-2.10.3-1PIGSTY.el10.aarch64.rpm pigsty 2.10.3 117.3KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/plpgsql_check_14-2.10.3-1PIGSTY.el10.aarch64.rpm
+@ el10.aarch64 14 plpgsql_check_14 plpgsql_check_14-2.10.4-1PIGSTY.el10.aarch64.rpm pigsty 2.10.4 117.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/plpgsql_check_14-2.10.4-1PIGSTY.el10.aarch64.rpm
 @ el10.aarch64 14 plpgsql_check_14 plpgsql_check_14-2.10.3-1PGDG.rhel10.2.aarch64.rpm pgdg 2.10.3 117.3KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/plpgsql_check_14-2.10.3-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 14 plpgsql_check_14 plpgsql_check_14-2.10.2-1PGDG.rhel10.2.aarch64.rpm pgdg 2.10.2 117.1KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/plpgsql_check_14-2.10.2-1PGDG.rhel10.2.aarch64.rpm
 @ el10.aarch64 14 plpgsql_check_14 plpgsql_check_14-2.10.1-1PGDG.rhel10.2.aarch64.rpm pgdg 2.10.1 115.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/plpgsql_check_14-2.10.1-1PGDG.rhel10.2.aarch64.rpm
@@ -1092,46 +1092,46 @@ weight: 3060
 @ el10.aarch64 14 plpgsql_check_14 plpgsql_check_14-2.8.3-1PGDG.rhel10.aarch64.rpm pgdg 2.8.3 108.6KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/plpgsql_check_14-2.8.3-1PGDG.rhel10.aarch64.rpm
 @ el10.aarch64 14 plpgsql_check_14 plpgsql_check_14-2.8.2-1PGDG.rhel10.aarch64.rpm pgdg 2.8.2 108.5KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/plpgsql_check_14-2.8.2-1PGDG.rhel10.aarch64.rpm
 @ el10.aarch64 14 plpgsql_check_14 plpgsql_check_14-2.8.1-1PGDG.rhel10.aarch64.rpm pgdg 2.8.1 107.7KiB https://mirrors.aliyun.com/postgresql/repos/yum/14/redhat/rhel-10-aarch64/plpgsql_check_14-2.8.1-1PGDG.rhel10.aarch64.rpm
+@ d12.x86_64 14 postgresql-14-plpgsql-check postgresql-14-plpgsql-check_2.10.4-1.pgdg12+1_amd64.deb pgdg 2.10.4 320.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-14-plpgsql-check_2.10.4-1.pgdg12+1_amd64.deb
+@ d12.x86_64 14 postgresql-14-plpgsql-check postgresql-14-plpgsql-check_2.10.4-1PIGSTY~bookworm_amd64.deb pigsty 2.10.4 318.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/plpgsql-check/postgresql-14-plpgsql-check_2.10.4-1PIGSTY~bookworm_amd64.deb
 @ d12.x86_64 14 postgresql-14-plpgsql-check postgresql-14-plpgsql-check_2.10.3-1.pgdg12+1_amd64.deb pgdg 2.10.3 319.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-14-plpgsql-check_2.10.3-1.pgdg12+1_amd64.deb
-@ d12.x86_64 14 postgresql-14-plpgsql-check postgresql-14-plpgsql-check_2.10.3-1PIGSTY~bookworm_amd64.deb pigsty 2.10.3 317.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/plpgsql-check/postgresql-14-plpgsql-check_2.10.3-1PIGSTY~bookworm_amd64.deb
 @ d12.x86_64 14 postgresql-14-plpgsql-check postgresql-14-plpgsql-check_2.10.2-1.pgdg12+1_amd64.deb pgdg 2.10.2 319.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-14-plpgsql-check_2.10.2-1.pgdg12+1_amd64.deb
-@ d12.x86_64 14 postgresql-14-plpgsql-check postgresql-14-plpgsql-check_2.10.1-1.pgdg12+1_amd64.deb pgdg 2.10.1 316.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-14-plpgsql-check_2.10.1-1.pgdg12+1_amd64.deb
+@ d12.aarch64 14 postgresql-14-plpgsql-check postgresql-14-plpgsql-check_2.10.4-1.pgdg12+1_arm64.deb pgdg 2.10.4 308.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-14-plpgsql-check_2.10.4-1.pgdg12+1_arm64.deb
+@ d12.aarch64 14 postgresql-14-plpgsql-check postgresql-14-plpgsql-check_2.10.4-1PIGSTY~bookworm_arm64.deb pigsty 2.10.4 305.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/plpgsql-check/postgresql-14-plpgsql-check_2.10.4-1PIGSTY~bookworm_arm64.deb
 @ d12.aarch64 14 postgresql-14-plpgsql-check postgresql-14-plpgsql-check_2.10.3-1.pgdg12+1_arm64.deb pgdg 2.10.3 307.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-14-plpgsql-check_2.10.3-1.pgdg12+1_arm64.deb
-@ d12.aarch64 14 postgresql-14-plpgsql-check postgresql-14-plpgsql-check_2.10.3-1PIGSTY~bookworm_arm64.deb pigsty 2.10.3 305.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/plpgsql-check/postgresql-14-plpgsql-check_2.10.3-1PIGSTY~bookworm_arm64.deb
 @ d12.aarch64 14 postgresql-14-plpgsql-check postgresql-14-plpgsql-check_2.10.2-1.pgdg12+1_arm64.deb pgdg 2.10.2 307.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-14-plpgsql-check_2.10.2-1.pgdg12+1_arm64.deb
-@ d12.aarch64 14 postgresql-14-plpgsql-check postgresql-14-plpgsql-check_2.10.1-1.pgdg12+1_arm64.deb pgdg 2.10.1 304.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-14-plpgsql-check_2.10.1-1.pgdg12+1_arm64.deb
+@ d13.x86_64 14 postgresql-14-plpgsql-check postgresql-14-plpgsql-check_2.10.4-1.pgdg13+1_amd64.deb pgdg 2.10.4 320.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-14-plpgsql-check_2.10.4-1.pgdg13+1_amd64.deb
+@ d13.x86_64 14 postgresql-14-plpgsql-check postgresql-14-plpgsql-check_2.10.4-1PIGSTY~trixie_amd64.deb pigsty 2.10.4 318.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/plpgsql-check/postgresql-14-plpgsql-check_2.10.4-1PIGSTY~trixie_amd64.deb
 @ d13.x86_64 14 postgresql-14-plpgsql-check postgresql-14-plpgsql-check_2.10.3-1.pgdg13+1_amd64.deb pgdg 2.10.3 320.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-14-plpgsql-check_2.10.3-1.pgdg13+1_amd64.deb
-@ d13.x86_64 14 postgresql-14-plpgsql-check postgresql-14-plpgsql-check_2.10.3-1PIGSTY~trixie_amd64.deb pigsty 2.10.3 317.8KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/plpgsql-check/postgresql-14-plpgsql-check_2.10.3-1PIGSTY~trixie_amd64.deb
 @ d13.x86_64 14 postgresql-14-plpgsql-check postgresql-14-plpgsql-check_2.10.2-1.pgdg13+1_amd64.deb pgdg 2.10.2 319.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-14-plpgsql-check_2.10.2-1.pgdg13+1_amd64.deb
-@ d13.x86_64 14 postgresql-14-plpgsql-check postgresql-14-plpgsql-check_2.10.1-1.pgdg13+1_amd64.deb pgdg 2.10.1 316.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-14-plpgsql-check_2.10.1-1.pgdg13+1_amd64.deb
+@ d13.aarch64 14 postgresql-14-plpgsql-check postgresql-14-plpgsql-check_2.10.4-1.pgdg13+1_arm64.deb pgdg 2.10.4 309.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-14-plpgsql-check_2.10.4-1.pgdg13+1_arm64.deb
+@ d13.aarch64 14 postgresql-14-plpgsql-check postgresql-14-plpgsql-check_2.10.4-1PIGSTY~trixie_arm64.deb pigsty 2.10.4 307.1KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/plpgsql-check/postgresql-14-plpgsql-check_2.10.4-1PIGSTY~trixie_arm64.deb
 @ d13.aarch64 14 postgresql-14-plpgsql-check postgresql-14-plpgsql-check_2.10.3-1.pgdg13+1_arm64.deb pgdg 2.10.3 308.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-14-plpgsql-check_2.10.3-1.pgdg13+1_arm64.deb
-@ d13.aarch64 14 postgresql-14-plpgsql-check postgresql-14-plpgsql-check_2.10.3-1PIGSTY~trixie_arm64.deb pigsty 2.10.3 306.5KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/plpgsql-check/postgresql-14-plpgsql-check_2.10.3-1PIGSTY~trixie_arm64.deb
 @ d13.aarch64 14 postgresql-14-plpgsql-check postgresql-14-plpgsql-check_2.10.2-1.pgdg13+1_arm64.deb pgdg 2.10.2 308.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-14-plpgsql-check_2.10.2-1.pgdg13+1_arm64.deb
-@ d13.aarch64 14 postgresql-14-plpgsql-check postgresql-14-plpgsql-check_2.10.1-1.pgdg13+1_arm64.deb pgdg 2.10.1 305.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-14-plpgsql-check_2.10.1-1.pgdg13+1_arm64.deb
+@ u22.x86_64 14 postgresql-14-plpgsql-check postgresql-14-plpgsql-check_2.10.4-1.pgdg22.04+1_amd64.deb pgdg 2.10.4 384.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-14-plpgsql-check_2.10.4-1.pgdg22.04+1_amd64.deb
+@ u22.x86_64 14 postgresql-14-plpgsql-check postgresql-14-plpgsql-check_2.10.4-1PIGSTY~jammy_amd64.deb pigsty 2.10.4 401.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/plpgsql-check/postgresql-14-plpgsql-check_2.10.4-1PIGSTY~jammy_amd64.deb
 @ u22.x86_64 14 postgresql-14-plpgsql-check postgresql-14-plpgsql-check_2.10.3-1.pgdg22.04+1_amd64.deb pgdg 2.10.3 383.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-14-plpgsql-check_2.10.3-1.pgdg22.04+1_amd64.deb
-@ u22.x86_64 14 postgresql-14-plpgsql-check postgresql-14-plpgsql-check_2.10.3-1PIGSTY~jammy_amd64.deb pigsty 2.10.3 400.3KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/plpgsql-check/postgresql-14-plpgsql-check_2.10.3-1PIGSTY~jammy_amd64.deb
 @ u22.x86_64 14 postgresql-14-plpgsql-check postgresql-14-plpgsql-check_2.10.2-1.pgdg22.04+1_amd64.deb pgdg 2.10.2 383.3KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-14-plpgsql-check_2.10.2-1.pgdg22.04+1_amd64.deb
-@ u22.x86_64 14 postgresql-14-plpgsql-check postgresql-14-plpgsql-check_2.10.1-1.pgdg22.04+1_amd64.deb pgdg 2.10.1 379.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-14-plpgsql-check_2.10.1-1.pgdg22.04+1_amd64.deb
+@ u22.aarch64 14 postgresql-14-plpgsql-check postgresql-14-plpgsql-check_2.10.4-1.pgdg22.04+1_arm64.deb pgdg 2.10.4 373.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-14-plpgsql-check_2.10.4-1.pgdg22.04+1_arm64.deb
+@ u22.aarch64 14 postgresql-14-plpgsql-check postgresql-14-plpgsql-check_2.10.4-1PIGSTY~jammy_arm64.deb pigsty 2.10.4 394.6KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/plpgsql-check/postgresql-14-plpgsql-check_2.10.4-1PIGSTY~jammy_arm64.deb
 @ u22.aarch64 14 postgresql-14-plpgsql-check postgresql-14-plpgsql-check_2.10.3-1.pgdg22.04+1_arm64.deb pgdg 2.10.3 372.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-14-plpgsql-check_2.10.3-1.pgdg22.04+1_arm64.deb
-@ u22.aarch64 14 postgresql-14-plpgsql-check postgresql-14-plpgsql-check_2.10.3-1PIGSTY~jammy_arm64.deb pigsty 2.10.3 393.9KiB https://repo.pigsty.cc/apt/pgsql/jammy/pool/main/p/plpgsql-check/postgresql-14-plpgsql-check_2.10.3-1PIGSTY~jammy_arm64.deb
 @ u22.aarch64 14 postgresql-14-plpgsql-check postgresql-14-plpgsql-check_2.10.2-1.pgdg22.04+1_arm64.deb pgdg 2.10.2 372.0KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-14-plpgsql-check_2.10.2-1.pgdg22.04+1_arm64.deb
-@ u22.aarch64 14 postgresql-14-plpgsql-check postgresql-14-plpgsql-check_2.10.1-1.pgdg22.04+1_arm64.deb pgdg 2.10.1 368.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-14-plpgsql-check_2.10.1-1.pgdg22.04+1_arm64.deb
+@ u24.x86_64 14 postgresql-14-plpgsql-check postgresql-14-plpgsql-check_2.10.4-1.pgdg24.04+1_amd64.deb pgdg 2.10.4 320.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-14-plpgsql-check_2.10.4-1.pgdg24.04+1_amd64.deb
+@ u24.x86_64 14 postgresql-14-plpgsql-check postgresql-14-plpgsql-check_2.10.4-1PIGSTY~noble_amd64.deb pigsty 2.10.4 332.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/plpgsql-check/postgresql-14-plpgsql-check_2.10.4-1PIGSTY~noble_amd64.deb
 @ u24.x86_64 14 postgresql-14-plpgsql-check postgresql-14-plpgsql-check_2.10.3-1.pgdg24.04+1_amd64.deb pgdg 2.10.3 319.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-14-plpgsql-check_2.10.3-1.pgdg24.04+1_amd64.deb
-@ u24.x86_64 14 postgresql-14-plpgsql-check postgresql-14-plpgsql-check_2.10.3-1PIGSTY~noble_amd64.deb pigsty 2.10.3 331.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/plpgsql-check/postgresql-14-plpgsql-check_2.10.3-1PIGSTY~noble_amd64.deb
 @ u24.x86_64 14 postgresql-14-plpgsql-check postgresql-14-plpgsql-check_2.10.2-1.pgdg24.04+1_amd64.deb pgdg 2.10.2 319.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-14-plpgsql-check_2.10.2-1.pgdg24.04+1_amd64.deb
-@ u24.x86_64 14 postgresql-14-plpgsql-check postgresql-14-plpgsql-check_2.10.1-1.pgdg24.04+1_amd64.deb pgdg 2.10.1 316.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-14-plpgsql-check_2.10.1-1.pgdg24.04+1_amd64.deb
+@ u24.aarch64 14 postgresql-14-plpgsql-check postgresql-14-plpgsql-check_2.10.4-1.pgdg24.04+1_arm64.deb pgdg 2.10.4 308.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-14-plpgsql-check_2.10.4-1.pgdg24.04+1_arm64.deb
+@ u24.aarch64 14 postgresql-14-plpgsql-check postgresql-14-plpgsql-check_2.10.4-1PIGSTY~noble_arm64.deb pigsty 2.10.4 326.3KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/plpgsql-check/postgresql-14-plpgsql-check_2.10.4-1PIGSTY~noble_arm64.deb
 @ u24.aarch64 14 postgresql-14-plpgsql-check postgresql-14-plpgsql-check_2.10.3-1.pgdg24.04+1_arm64.deb pgdg 2.10.3 307.9KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-14-plpgsql-check_2.10.3-1.pgdg24.04+1_arm64.deb
-@ u24.aarch64 14 postgresql-14-plpgsql-check postgresql-14-plpgsql-check_2.10.3-1PIGSTY~noble_arm64.deb pigsty 2.10.3 325.6KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/plpgsql-check/postgresql-14-plpgsql-check_2.10.3-1PIGSTY~noble_arm64.deb
 @ u24.aarch64 14 postgresql-14-plpgsql-check postgresql-14-plpgsql-check_2.10.2-1.pgdg24.04+1_arm64.deb pgdg 2.10.2 307.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-14-plpgsql-check_2.10.2-1.pgdg24.04+1_arm64.deb
-@ u24.aarch64 14 postgresql-14-plpgsql-check postgresql-14-plpgsql-check_2.10.1-1.pgdg24.04+1_arm64.deb pgdg 2.10.1 304.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-14-plpgsql-check_2.10.1-1.pgdg24.04+1_arm64.deb
+@ u26.x86_64 14 postgresql-14-plpgsql-check postgresql-14-plpgsql-check_2.10.4-1.pgdg26.04+1_amd64.deb pgdg 2.10.4 317.5KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-14-plpgsql-check_2.10.4-1.pgdg26.04+1_amd64.deb
+@ u26.x86_64 14 postgresql-14-plpgsql-check postgresql-14-plpgsql-check_2.10.4-1PIGSTY~resolute_amd64.deb pigsty 2.10.4 330.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/plpgsql-check/postgresql-14-plpgsql-check_2.10.4-1PIGSTY~resolute_amd64.deb
 @ u26.x86_64 14 postgresql-14-plpgsql-check postgresql-14-plpgsql-check_2.10.3-1.pgdg26.04+1_amd64.deb pgdg 2.10.3 316.8KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-14-plpgsql-check_2.10.3-1.pgdg26.04+1_amd64.deb
-@ u26.x86_64 14 postgresql-14-plpgsql-check postgresql-14-plpgsql-check_2.10.3-1PIGSTY~resolute_amd64.deb pigsty 2.10.3 329.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/plpgsql-check/postgresql-14-plpgsql-check_2.10.3-1PIGSTY~resolute_amd64.deb
 @ u26.x86_64 14 postgresql-14-plpgsql-check postgresql-14-plpgsql-check_2.10.2-1.pgdg26.04+1_amd64.deb pgdg 2.10.2 316.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-14-plpgsql-check_2.10.2-1.pgdg26.04+1_amd64.deb
-@ u26.x86_64 14 postgresql-14-plpgsql-check postgresql-14-plpgsql-check_2.10.1-1.pgdg26.04+1_amd64.deb pgdg 2.10.1 313.7KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-14-plpgsql-check_2.10.1-1.pgdg26.04+1_amd64.deb
+@ u26.aarch64 14 postgresql-14-plpgsql-check postgresql-14-plpgsql-check_2.10.4-1.pgdg26.04+1_arm64.deb pgdg 2.10.4 305.1KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-14-plpgsql-check_2.10.4-1.pgdg26.04+1_arm64.deb
+@ u26.aarch64 14 postgresql-14-plpgsql-check postgresql-14-plpgsql-check_2.10.4-1PIGSTY~resolute_arm64.deb pigsty 2.10.4 323.0KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/plpgsql-check/postgresql-14-plpgsql-check_2.10.4-1PIGSTY~resolute_arm64.deb
 @ u26.aarch64 14 postgresql-14-plpgsql-check postgresql-14-plpgsql-check_2.10.3-1.pgdg26.04+1_arm64.deb pgdg 2.10.3 304.4KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-14-plpgsql-check_2.10.3-1.pgdg26.04+1_arm64.deb
-@ u26.aarch64 14 postgresql-14-plpgsql-check postgresql-14-plpgsql-check_2.10.3-1PIGSTY~resolute_arm64.deb pigsty 2.10.3 322.2KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/plpgsql-check/postgresql-14-plpgsql-check_2.10.3-1PIGSTY~resolute_arm64.deb
 @ u26.aarch64 14 postgresql-14-plpgsql-check postgresql-14-plpgsql-check_2.10.2-1.pgdg26.04+1_arm64.deb pgdg 2.10.2 304.6KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-14-plpgsql-check_2.10.2-1.pgdg26.04+1_arm64.deb
-@ u26.aarch64 14 postgresql-14-plpgsql-check postgresql-14-plpgsql-check_2.10.1-1.pgdg26.04+1_arm64.deb pgdg 2.10.1 301.2KiB https://mirrors.aliyun.com/postgresql/repos/apt/pool/main/p/plpgsql-check/postgresql-14-plpgsql-check_2.10.1-1.pgdg26.04+1_arm64.deb
 {{< /pgext_matrix >}}
 
 ## 构建
@@ -1199,21 +1199,20 @@ CREATE EXTENSION plpgsql_check CASCADE;  -- 依赖: plpgsql
 
 来源：
 
-- [plpgsql_check 2.10.3 README](https://github.com/okbob/plpgsql_check/blob/v2.10.3/README.md)
-- [plpgsql_check 2.10.3 发行说明](https://github.com/okbob/plpgsql_check/releases/tag/v2.10.3)
-- [plpgsql_check 2.10.2 发行说明](https://github.com/okbob/plpgsql_check/releases/tag/v2.10.2)
-- [plpgsql_check 2.10.3 控制文件](https://github.com/okbob/plpgsql_check/blob/v2.10.3/plpgsql_check.control)
-- [plpgsql_check 2.10.1 到 2.10.3 的变更](https://github.com/okbob/plpgsql_check/compare/v2.10.1...v2.10.3)
+- [plpgsql_check 2.10.4 README](https://github.com/okbob/plpgsql_check/blob/v2.10.4/README.md)
+- [plpgsql_check 2.10.4 发行版](https://github.com/okbob/plpgsql_check/releases/tag/v2.10.4)
+- [plpgsql_check 2.10.4 控制文件](https://github.com/okbob/plpgsql_check/blob/v2.10.4/plpgsql_check.control)
+- [plpgsql_check 2.10.3 到 2.10.4 的变更](https://github.com/okbob/plpgsql_check/compare/v2.10.3...v2.10.4)
 
-`plpgsql_check` 是一个 PL/pgSQL 检查器、语法检查工具、性能分析器、跟踪器和覆盖率工具。它使用 PostgreSQL 自身的解析器和执行器基础设施来分析 PL/pgSQL 函数体，因此许多问题可以在开发或 CI 阶段被发现而不会在运行时才出现。
+`plpgsql_check` 是面向 PL/pgSQL 的检查器、代码规范检查器、性能分析器、跟踪器和覆盖率工具。它利用 PostgreSQL 自身的解析器和执行器基础设施分析 PL/pgSQL 函数体，因此许多原本只会在运行时出现的问题，可以在开发或 CI 阶段被发现。
 
-2.10.3 软件包安装的 SQL 扩展版本是 `2.10`。该标签下的控制文件覆盖 PostgreSQL 14-18 软件包，源码还包含对后续 PostgreSQL 开发分支的兼容性工作。
+软件包发行版 2.10.4 安装的 SQL 扩展版本为 `2.10`。该发行版还会在依赖项输出中报告被用作声明类型的关系。
 
 ```sql
 CREATE EXTENSION IF NOT EXISTS plpgsql_check;
 ```
 
-### 检查一个函数
+### 检查函数
 
 ```sql
 SELECT *
@@ -1223,7 +1222,7 @@ SELECT *
 FROM plpgsql_check_function('public.refresh_totals(int, text)', fatal_errors := false);
 ```
 
-返回表的变体更容易过滤、存储或用于 CI 输出：
+返回表的变体更容易筛选、存储或用于 CI 输出：
 
 ```sql
 SELECT functionid, lineno, statement, sqlstate, message, level
@@ -1238,9 +1237,9 @@ SELECT * FROM plpgsql_check_function('fx()', format := 'json');
 SELECT * FROM plpgsql_check_function('fx()', format := 'xml');
 ```
 
-### 触发函数
+### 触发器函数
 
-触发函数需要它们操作的关系：
+检查触发器函数时，需要指定其操作的关系：
 
 ```sql
 SELECT *
@@ -1268,10 +1267,10 @@ FROM plpgsql_check_function(
 );
 ```
 
-- `extra_warnings` 包括缺少返回值、死代码、遮蔽变量和未使用的参数。
-- `performance_warnings` 包括隐式转换、类型修饰符以及可能阻止索引使用的模式。
+- `extra_warnings` 覆盖缺少返回值、死代码、变量遮蔽和未使用参数。
+- `performance_warnings` 覆盖隐式类型转换、类型修饰符以及可能妨碍索引使用的模式。
 - `security_warnings` 包括动态 SQL 和 SQL 注入风险检查。
-- `compatibility_warnings` 报告过时或版本敏感的 PL/pgSQL 模式。
+- `compatibility_warnings` 报告过时或对版本敏感的 PL/pgSQL 模式。
 
 ### 批量检查
 
@@ -1285,11 +1284,11 @@ WHERE l.lanname = 'plpgsql'
   AND n.nspname NOT IN ('pg_catalog', 'information_schema');
 ```
 
-在迁移管道中使用此模式来捕获更改依赖关系、删除列、不安全转换和 PL/pgSQL 错误，以确保发布前的安全性。
+可以在迁移流水线中使用这一模式，在发布前发现依赖项变化、列被删除、不安全的类型转换以及 PL/pgSQL 错误。
 
 ### 被动检查
 
-被动模式会在函数启动时进行检查。它适用于开发和预生产环境，但会增加开销。
+被动模式会在函数启动时执行检查。它适用于开发和预生产环境，但会增加开销。
 
 ```sql
 LOAD 'plpgsql_check';
@@ -1305,7 +1304,7 @@ plpgsql_check.show_nonperformance_warnings = false
 plpgsql_check.show_performance_warnings = false
 ```
 
-### 分析器
+### 性能分析器
 
 ```sql
 SELECT plpgsql_check_profiler(true);
@@ -1322,17 +1321,17 @@ SELECT * FROM plpgsql_profiler_functions_all();
 SELECT plpgsql_profiler_reset_all();
 ```
 
-为了共享分析器统计信息并可靠地早期初始化，在加载 `plpgsql` 之前预加载 `plpgsql_check`：
+要共享性能分析器统计信息并确保可靠的早期初始化，请在 `plpgsql_check` 之前预加载 `plpgsql`：
 
 ```conf
 shared_preload_libraries = 'plpgsql,plpgsql_check'
 ```
 
-如果没有共享预加载，分析器数据将仅限于当前会话。
+如果未共享预加载，性能分析器数据仅限当前活动会话。
 
-### 跟踪和覆盖率
+### 跟踪器与覆盖率
 
-跟踪会在函数和语句的入口/出口处发出通知，并可以暴露变量值。默认情况下禁用此功能，必须由超级用户控制设置启用。
+跟踪功能会在进入和退出函数及语句时发出通知，并可能暴露变量值。它默认禁用，必须通过由超级用户控制的设置启用。
 
 ```sql
 SET plpgsql_check.enable_tracer = on;
@@ -1342,9 +1341,9 @@ SELECT * FROM plpgsql_coverage_statements('public.refresh_totals()');
 SELECT * FROM plpgsql_coverage_branches('public.refresh_totals()');
 ```
 
-### 断言
+### 编译指示
 
-在函数内部使用断言调用来描述动态 SQL、临时表、推断出的记录类型或局部检查设置：
+在函数内使用编译指示调用来描述动态 SQL、临时表、推断出的记录类型或局部检查设置：
 
 ```sql
 CREATE OR REPLACE FUNCTION fx(anyelement) RETURNS text AS $$
@@ -1357,7 +1356,7 @@ END;
 $$ LANGUAGE plpgsql;
 ```
 
-版本 2.10 添加了 `plpgsql_make_pragma(regprocedure)`，它会规划临时表创建但不执行，并返回可传给检查器的表断言。2.10.2 进一步支持更多 `CREATE TABLE` 语句形式：
+版本 2.10 新增了 `plpgsql_make_pragma(regprocedure)`，它会规划临时表创建但不实际执行，并返回可提供给检查器的表编译指示。发行版 2.10.2 将其扩展至更多 `CREATE TABLE` 语句形式：
 
 ```sql
 SELECT *
@@ -1371,8 +1370,8 @@ FROM plpgsql_check_function(
 
 ### 注意事项
 
-- `plpgsql_check` 需要 `plpgsql`。
-- 活动检查可选地预加载，但共享分析器存储和稳健的跟踪/分析器初始化需要预加载。
-- 跟踪输出可能包括函数参数和局部变量值；不要在敏感生产工作负载中广泛启用它。
-- 检查器无法完全理解每个动态 SQL 字符串。使用断言来记录预期的动态对象并减少误报。
-- 2.10.2 与 2.10.3 修复了复合参数分析中的潜在崩溃，以及对含多态参数函数生成覆盖率或分析器报告时的潜在崩溃。使用这些路径时应采用 2.10.3。
+- `plpgsql_check` 依赖 `plpgsql`。
+- 主动检查不强制要求预加载，但共享性能分析器存储以及可靠的跟踪器/性能分析器初始化需要预加载。
+- 跟踪器输出可能包含函数参数和局部变量值；不要在敏感的生产工作负载中广泛启用。
+- 检查器无法完美理解所有动态 SQL 字符串。请使用编译指示记录预期的动态对象，以减少误报。
+- 发行版 2.10.2 和 2.10.3 修复了分析复合参数时可能发生的崩溃，以及为带多态参数的函数生成覆盖率或性能分析报告时可能发生的崩溃。版本 2.10.4 保留这些修复并改进了依赖项报告。

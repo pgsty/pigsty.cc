@@ -1,20 +1,20 @@
 ---
 title: "pg_readme_test_extension"
 linkTitle: "pg_readme_test_extension"
-description: "为模式与扩展生成Markdown文档"
+description: "用于测试 pg_readme 文档生成的夹具扩展"
 weight: 4301
 ---
 
 <div class="ext-cards">
-  <a class="ext-card ext-card--repo" href="https://github.com/bigsmoke/pg_readme">
+  <a class="ext-card ext-card--repo" href="https://github.com/bigsmoke/pg_readme/tree/master/pg_readme_test_extension">
     <div class="ext-card__kicker">仓库</div>
-    <div class="ext-card__title">bigsmoke/pg_readme</div>
-    <div class="ext-card__desc">https://github.com/bigsmoke/pg_readme</div>
+    <div class="ext-card__title">master/pg_readme_test_extension</div>
+    <div class="ext-card__desc">https://github.com/bigsmoke/pg_readme/tree/master/pg_readme_test_extension</div>
   </a>
-  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pg_readme-0.7.0.tar.gz">
+  <a class="ext-card ext-card--source" href="https://repo.pigsty.cc/ext/src/pg_readme-0.7.1.tar.gz">
     <div class="ext-card__kicker">源码</div>
-    <div class="ext-card__title">pg_readme-0.7.0.tar.gz</div>
-    <div class="ext-card__desc">pg_readme-0.7.0.tar.gz</div>
+    <div class="ext-card__title">pg_readme-0.7.1.tar.gz</div>
+    <div class="ext-card__desc">pg_readme-0.7.1.tar.gz</div>
   </a>
 </div>
 
@@ -25,7 +25,7 @@ weight: 4301
 
 | **扩展包名** | **版本** | **分类** | **许可证** | **语言** |
 |:---------------------------------------------------:|:-------:|:--------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------:|
-| [**`pg_readme`**](/ext/e/pg_readme) | `0.7.0` | <a class="ext-badge ext-badge--cate util" href="/ext/cate/util">UTIL</a> | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> |
+| [**`pg_readme`**](/ext/e/pg_readme) | `0.7.1` | <a class="ext-badge ext-badge--cate util" href="/ext/cate/util">UTIL</a> | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang sql" href="/ext/language#sql">SQL</a> |
 {.ext-table}
 
 |  ID   | **扩展名** | **Bin** | **Lib** | **Load** | **Create** | **Trust** | **Reloc** | **模式** |
@@ -34,18 +34,21 @@ weight: 4301
 | 4301  | [**`pg_readme_test_extension`**](/ext/e/pg_readme_test_extension) | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | <span class="ext-flag ext-flag--no">否</span> | <span class="ext-flag ext-flag--yes">是</span> | - |
 {.ext-table}
 
-| **相关扩展** | [`hstore`](/ext/e/hstore) [`schedoc`](/ext/e/schedoc) [`ddlx`](/ext/e/ddlx) [`pgpdf`](/ext/e/pgpdf) [`pg_render`](/ext/e/pg_render) [`pgdd`](/ext/e/pgdd) [`meta`](/ext/e/meta) |
+| **相关扩展** | [`pg_readme`](/ext/e/pg_readme) [`schedoc`](/ext/e/schedoc) [`ddlx`](/ext/e/ddlx) [`pgpdf`](/ext/e/pgpdf) [`pg_render`](/ext/e/pg_render) [`pgdd`](/ext/e/pgdd) [`meta`](/ext/e/meta) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 {.ext-table .ext-table--rel}
+
+
+> Bundled test fixture; its control default_version is forever and it does not require hstore; package ownership follows pg_readme: PGDG RPM 0.7.0 and PIGSTY DEB 0.7.1.
 
 
 ## 版本
 
 | 类型 | 仓库 | 版本 | PG 大版本 | 包名 | 依赖 |
 |:----:|:----:|:----:|:------:|:--------:|:----:|
-| [**EXT**](/ext/list#util) | <a class="ext-badge ext-badge--repo mixed" href="/ext/repo#mixed">MIXED</a> | `0.7.0` | {{< pgvers "18,17,16,15,14" >}} | `pg_readme` | `hstore` |
+| [**EXT**](/ext/list#util) | <a class="ext-badge ext-badge--repo mixed" href="/ext/repo#mixed">MIXED</a> | `0.7.1` | {{< pgvers "14,15,16,17,18" >}} | `pg_readme` | - |
 | [**RPM**](/ext/rpm#util) | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `0.7.0` | {{< pgvers "18,17,16,15,14" >}} | `pg_readme_$v` | - |
-| [**DEB**](/ext/deb#util) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.7.0` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pg-readme` | - |
+| [**DEB**](/ext/deb#util) | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `0.7.1` | {{< pgvers "18,17,16,15,14" >}} | `postgresql-$v-pg-readme` | - |
 {.ext-table}
 
 {{< pgext_matrix >}}
@@ -57,16 +60,16 @@ weight: 4301
 | el9.aarch64 | AVAIL PGDG 0.7.0 2 | AVAIL PGDG 0.7.0 2 | AVAIL PGDG 0.7.0 2 | AVAIL PGDG 0.7.0 2 | AVAIL PGDG 0.7.0 2 |
 | el10.x86_64 | AVAIL PGDG 0.7.0 2 | AVAIL PGDG 0.7.0 2 | AVAIL PGDG 0.7.0 2 | AVAIL PGDG 0.7.0 2 | AVAIL PGDG 0.7.0 2 |
 | el10.aarch64 | AVAIL PGDG 0.7.0 2 | AVAIL PGDG 0.7.0 2 | AVAIL PGDG 0.7.0 2 | AVAIL PGDG 0.7.0 2 | AVAIL PGDG 0.7.0 2 |
-| d12.x86_64 | AVAIL PIGSTY 0.7.0 1 | AVAIL PIGSTY 0.7.0 1 | AVAIL PIGSTY 0.7.0 1 | AVAIL PIGSTY 0.7.0 1 | AVAIL PIGSTY 0.7.0 1 |
-| d12.aarch64 | AVAIL PIGSTY 0.7.0 1 | AVAIL PIGSTY 0.7.0 1 | AVAIL PIGSTY 0.7.0 1 | AVAIL PIGSTY 0.7.0 1 | AVAIL PIGSTY 0.7.0 1 |
-| d13.x86_64 | AVAIL PIGSTY 0.7.0 1 | AVAIL PIGSTY 0.7.0 1 | AVAIL PIGSTY 0.7.0 1 | AVAIL PIGSTY 0.7.0 1 | AVAIL PIGSTY 0.7.0 1 |
-| d13.aarch64 | AVAIL PIGSTY 0.7.0 1 | AVAIL PIGSTY 0.7.0 1 | AVAIL PIGSTY 0.7.0 1 | AVAIL PIGSTY 0.7.0 1 | AVAIL PIGSTY 0.7.0 1 |
-| u22.x86_64 | AVAIL PIGSTY 0.7.0 1 | AVAIL PIGSTY 0.7.0 1 | AVAIL PIGSTY 0.7.0 1 | AVAIL PIGSTY 0.7.0 1 | AVAIL PIGSTY 0.7.0 1 |
-| u22.aarch64 | AVAIL PIGSTY 0.7.0 1 | AVAIL PIGSTY 0.7.0 1 | AVAIL PIGSTY 0.7.0 1 | AVAIL PIGSTY 0.7.0 1 | AVAIL PIGSTY 0.7.0 1 |
-| u24.x86_64 | AVAIL PIGSTY 0.7.0 1 | AVAIL PIGSTY 0.7.0 1 | AVAIL PIGSTY 0.7.0 1 | AVAIL PIGSTY 0.7.0 1 | AVAIL PIGSTY 0.7.0 1 |
-| u24.aarch64 | AVAIL PIGSTY 0.7.0 1 | AVAIL PIGSTY 0.7.0 1 | AVAIL PIGSTY 0.7.0 1 | AVAIL PIGSTY 0.7.0 1 | AVAIL PIGSTY 0.7.0 1 |
-| u26.x86_64 | AVAIL PIGSTY 0.7.0 1 | AVAIL PIGSTY 0.7.0 1 | AVAIL PIGSTY 0.7.0 1 | AVAIL PIGSTY 0.7.0 1 | AVAIL PIGSTY 0.7.0 1 |
-| u26.aarch64 | AVAIL PIGSTY 0.7.0 1 | AVAIL PIGSTY 0.7.0 1 | AVAIL PIGSTY 0.7.0 1 | AVAIL PIGSTY 0.7.0 1 | AVAIL PIGSTY 0.7.0 1 |
+| d12.x86_64 | AVAIL PIGSTY 0.7.1 1 | AVAIL PIGSTY 0.7.1 1 | AVAIL PIGSTY 0.7.1 1 | AVAIL PIGSTY 0.7.1 1 | AVAIL PIGSTY 0.7.1 1 |
+| d12.aarch64 | AVAIL PIGSTY 0.7.1 1 | AVAIL PIGSTY 0.7.1 1 | AVAIL PIGSTY 0.7.1 1 | AVAIL PIGSTY 0.7.1 1 | AVAIL PIGSTY 0.7.1 1 |
+| d13.x86_64 | AVAIL PIGSTY 0.7.1 1 | AVAIL PIGSTY 0.7.1 1 | AVAIL PIGSTY 0.7.1 1 | AVAIL PIGSTY 0.7.1 1 | AVAIL PIGSTY 0.7.1 1 |
+| d13.aarch64 | AVAIL PIGSTY 0.7.1 1 | AVAIL PIGSTY 0.7.1 1 | AVAIL PIGSTY 0.7.1 1 | AVAIL PIGSTY 0.7.1 1 | AVAIL PIGSTY 0.7.1 1 |
+| u22.x86_64 | AVAIL PIGSTY 0.7.1 1 | AVAIL PIGSTY 0.7.1 1 | AVAIL PIGSTY 0.7.1 1 | AVAIL PIGSTY 0.7.1 1 | AVAIL PIGSTY 0.7.1 1 |
+| u22.aarch64 | AVAIL PIGSTY 0.7.1 1 | AVAIL PIGSTY 0.7.1 1 | AVAIL PIGSTY 0.7.1 1 | AVAIL PIGSTY 0.7.1 1 | AVAIL PIGSTY 0.7.1 1 |
+| u24.x86_64 | AVAIL PIGSTY 0.7.1 1 | AVAIL PIGSTY 0.7.1 1 | AVAIL PIGSTY 0.7.1 1 | AVAIL PIGSTY 0.7.1 1 | AVAIL PIGSTY 0.7.1 1 |
+| u24.aarch64 | AVAIL PIGSTY 0.7.1 1 | AVAIL PIGSTY 0.7.1 1 | AVAIL PIGSTY 0.7.1 1 | AVAIL PIGSTY 0.7.1 1 | AVAIL PIGSTY 0.7.1 1 |
+| u26.x86_64 | AVAIL PIGSTY 0.7.1 1 | AVAIL PIGSTY 0.7.1 1 | AVAIL PIGSTY 0.7.1 1 | AVAIL PIGSTY 0.7.1 1 | AVAIL PIGSTY 0.7.1 1 |
+| u26.aarch64 | AVAIL PIGSTY 0.7.1 1 | AVAIL PIGSTY 0.7.1 1 | AVAIL PIGSTY 0.7.1 1 | AVAIL PIGSTY 0.7.1 1 | AVAIL PIGSTY 0.7.1 1 |
 {{< /pgext_matrix >}}
 
 ## 构建
@@ -127,20 +130,38 @@ apt install -y postgresql-14-pg-readme   # PG 14
 **创建扩展**：
 
 ```sql
-CREATE EXTENSION pg_readme_test_extension CASCADE;  -- 依赖: hstore
+CREATE EXTENSION pg_readme_test_extension;
 ```
-
-
-
 
 ## 用法
 
-> [pg_readme_test_extension: pg_readme 的测试扩展](https://github.com/bigsmoke/pg_readme)
+来源：
 
-这是 `pg_readme` 扩展的配套测试扩展。它的存在仅用于测试 `pg_readme` 从 PostgreSQL `COMMENT` 对象生成文档的功能。
+- [pg_readme 0.7.1 README](https://api.pgxn.org/src/pg_readme/pg_readme-0.7.1/README.md)
+- [测试扩展控制文件](https://api.pgxn.org/src/pg_readme/pg_readme-0.7.1/pg_readme_test_extension/pg_readme_test_extension.control)
+- [测试扩展 SQL 固件](https://api.pgxn.org/src/pg_readme/pg_readme-0.7.1/pg_readme_test_extension/pg_readme_test_extension--forever.sql)
+- [Pigsty 软件包矩阵](https://pgext.cloud/ext/pg_readme_test_extension)
 
-该扩展不适用于生产环境。它作为参考实现，演示了如何组织扩展注释和处理指令，以便 `pg_readme` 生成正确的 README 文档。
+`pg_readme_test_extension` 是 `pg_readme` 随附的集成测试固件。它会安装带注释的域、类型、表、视图、例程、触发器和处理指令，以便上游验证 `pg_extension_readme()`。它不是应用功能，也不是生产依赖。
 
-### 相关
+### 使用测试固件
 
-参见 [`pg_readme`](https://github.com/bigsmoke/pg_readme) 扩展了解实际的文档生成功能。
+```sql
+CREATE EXTENSION pg_readme CASCADE;
+CREATE EXTENSION pg_readme_test_extension;
+
+SELECT pg_extension_readme('pg_readme_test_extension'::name);
+```
+
+使用输出测试或演示生成器，然后从一次性数据库中移除该固件：
+
+```sql
+DROP EXTENSION pg_readme_test_extension;
+```
+
+### 边界与注意事项
+
+- 上游发行版本为 0.7.1，但该固件的控制版本刻意使用字面量 `forever`。
+- 该固件随 `pg_readme` 一起提供；当前 Pigsty DEB 软件包为 0.7.1，而 RPM 软件包仍为 0.7.0。两边的扩展版本都保持 `forever`。
+- 它可重定位，本身不要求 `hstore`，并会创建使用通用名称的示例对象。仅应安装在这些对象不会与真实应用模式冲突的环境中。
+- 它的 SQL 接口用于覆盖生成器行为，并可能随测试演进而改变。不要让应用代码依赖这些固件对象。

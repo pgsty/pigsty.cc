@@ -30,7 +30,7 @@ Pigsty 采用模块化设计，有六个主要的默认模块：[`PGSQL`](/docs/
 
 你可以声明式地自由组合它们。如果你想要主机监控，在基础设施节点上安装 [`INFRA`](/docs/infra) 模块，并在纳管节点上安装 [`NODE`](/docs/node) 模块就足够了。
 [`ETCD`](/docs/etcd) 和 [`PGSQL`](/docs/pgsql) 模块用于搭建高可用 PG 集群，将模块安装在多个节点上，可以自动形成一个高可用的数据库集群。
-您可以复用 Pigsty 基础架构并开发您自己的模块，[`REDIS`](/docs/redis) 和 [`MINIO`](/docs/minio) 可以作为一个样例。后续还会有更多的模块加入，例如对 Mongo 与 MySQL 的初步支持已经提上了日程。
+您可以复用 Pigsty 基础架构并开发自己的模块，[`REDIS`](/docs/redis) 和 [`MINIO`](/docs/minio) 可作为样例。像 [PostgreSQL Mongo 模式](/docs/conf/mongo/)这样的协议兼容层，则通过标准 PGSQL 与 Docker APP 工作流组合实现。
 
 请注意，所有模块都强依赖 `NODE` 模块：在 Pigsty 中节点必须先安装 `NODE` 模块，被 Pigsty 纳管后方可部署其他模块。
 当节点（默认）使用本地软件源进行安装时，`NODE` 模块对 `INFRA` 模块有弱依赖。因此安装 `INFRA` 模块的管理节点/基础设施节点会在 [`deploy.yml`](/docs/setup/playbook) 剧本中完成 Bootstrap 过程，解决循环依赖。

@@ -41,7 +41,6 @@ categories: [参考]
 - 部署 MinIO 对象存储
 - 预置多个业务数据库和用户
 - 添加 Redis 主从实例示例
-- 添加 FerretDB MongoDB 兼容集群
 - 添加 Kafka 样例集群
 
 
@@ -63,7 +62,7 @@ categories: [参考]
 **关键特性**：
 - 配置 HTTPS 证书和自定义域名
 - 安装所有可用的 PostgreSQL 扩展
-- 集成 Redis、FerretDB、Kafka 等组件
+- 集成 Redis、Kafka 等组件
 - 配置 Docker 镜像加速
 
 **适用场景**：
@@ -75,4 +74,3 @@ categories: [参考]
 - 需要准备 SSL 证书文件
 - 需要配置 DNS 解析
 - 部分扩展在 ARM64 架构不可用
-

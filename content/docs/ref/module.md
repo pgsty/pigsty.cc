@@ -20,7 +20,6 @@ categories: [参考]
 |   [**`ETCD`**](/docs/etcd)    | **核心** |  GA   |  `/docs/etcd`   | PostgreSQL 高可用 DCS（服务发现、配置、选主元数据）。                        |
 |  [**`MINIO`**](/docs/minio)   |   扩展   |  GA   |  `/docs/minio`  | S3 兼容对象存储，可作为 PostgreSQL 备份仓库。                            |
 |  [**`REDIS`**](/docs/redis)   |   扩展   |  GA   |  `/docs/redis`  | Redis 独立/哨兵/集群模式部署与监控。                                    |
-| [**`FERRET`**](/docs/ferret)  |   扩展   |  GA   | `/docs/ferret`  | FerretDB 模块（`MONGO` API 兼容），为 PG 提供 MongoDB 协议访问。         |
 | [**`DOCKER`**](/docs/docker)  |   扩展   |  GA   | `/docs/docker`  | Docker Daemon 及容器化应用运行基础能力。                               |
 |  [**`JUICE`**](/docs/juice)   |   扩展   | BETA  |  `/docs/juice`  | JuiceFS 分布式文件系统，使用 PostgreSQL 作为元数据引擎。                    |
 |   [**`VIBE`**](/docs/vibe)    |   扩展   | BETA  |  `/docs/vibe`   | 浏览器化开发环境，集成 Code-Server、JupyterLab、Node.js、Claude Code 与 Codex CLI。 |
@@ -46,11 +45,10 @@ Pigsty 提供了四个 <span class="text-primary"><b>基础</b></span> 功能模
 
 ## 扩展模块
 
-Pigsty 提供了七个 <span class="text-secondary"><b>扩展</b></span> 功能模块，它们对于核心功能来说并非必须，但可以用于增强 PostgreSQL 的能力：
+Pigsty 提供了六个 <span class="text-secondary"><b>扩展</b></span> 功能模块，它们对于核心功能来说并非必须，但可以用于增强 PostgreSQL 的能力：
 
 - [**`MINIO`**](/docs/minio)：S3 兼容的简单对象存储服务器，可作为可选的 PostgreSQL 数据库备份仓库，带有生产部署支持与监控。
 - [**`REDIS`**](/docs/redis)：Redis 服务器，高性能数据结构服务器，支持独立主从、哨兵、集群模式生产部署，并带有完善的监控支持。
-- [**`MONGO`**](/docs/ferret)：FerretDB 原生部署支持 —— 它为 PostgreSQL 添加了 MongoDB 线缆协议级别的 API 兼容支持！
 - [**`DOCKER`**](/docs/docker)：Docker Daemon 服务，允许用户一键拉起容器化的无状态软件工具模板，为 Pigsty 加装各种功能！
 - [**`JUICE`**](/docs/juice)：JuiceFS 分布式文件系统模块，以 PostgreSQL 作为元数据引擎，提供可共享的 POSIX 存储能力。
 - [**`VIBE`**](/docs/vibe)：浏览器化开发环境模块，集成 Code-Server、JupyterLab、Node.js、Claude Code 与 Codex CLI。
@@ -61,11 +59,11 @@ Pigsty 提供了七个 <span class="text-secondary"><b>扩展</b></span> 功能�
 
 ## 生态模块
 
-以下模块与 PostgreSQL 生态紧密相关，属于可选生态能力，不计入上述 11 个正式模块：
+以下模块与 PostgreSQL 生态紧密相关，属于可选生态能力，不计入上述 10 个正式模块：
 
 - [**`SUPABASE`**](/docs/pgsql/kernel/supabase)、[**`DUCKDB`**](/docs/pilot/duckdb)：外围生态整合能力。
 - [**`MSSQL`**](/docs/pgsql/kernel/babelfish)、[**`IVORY`**](/docs/pgsql/kernel/ivorysql)、[**`POLAR`**](/docs/pgsql/kernel/polardb)、[**`CITUS`**](/docs/pgsql/kernel/citus)、[**`CLOUDBERRY`**](/docs/pgsql/kernel/cloudberry)、[**`PGEDGE`**](/docs/pgsql/kernel/pgedge)：内核替代、分布式与 MPP 形态。
 - [**`MYSQL` 兼容内核（OpenHalo）**](/docs/pgsql/kernel/openhalo)、[**`ORIOLE`**](/docs/pgsql/kernel/orioledb)、[**`PGTDE`**](/docs/pgsql/kernel/percona)、[**`AGENS`**](/docs/pgsql/kernel/agensgraph)：协议兼容、存储引擎、透明加密与图数据库内核。这里的 `MYSQL` 是 `pg_mode=mysql` 的 PostgreSQL 兼容内核，不是原生 MySQL 服务。
 - [**`GREENPLUM`**](/docs/pgsql/kernel/greenplum)、[**`NEON`**](/docs/pgsql/kernel/neon)：保留历史文档，不再作为默认开放能力。
-- [**`MYSQL` 原生试点**](/docs/pilot/mysql/)：当前 `mysql.yml` / `mysql-rm.yml` 与 `roles/mysql*` 管理固定的原生 MySQL 8.4 平台，支持单节点或三节点单主 InnoDB Cluster；仍为 PILOT，不计入上述 11 个正式模块。
+- [**`MYSQL` 原生试点**](/docs/pilot/mysql/)：当前 `mysql.yml` / `mysql-rm.yml` 与 `roles/mysql*` 管理固定的原生 MySQL 8.4 平台，支持单节点或三节点单主 InnoDB Cluster；仍为 PILOT，不计入上述 10 个正式模块。
 - [**`KUBE`**](/docs/pilot/kube/)、[**`VICTORIA`**](/blog/db/victoria-stack/)、[**`JUPYTER`**](/docs/app/jupyter/)：其他试点模块，当前不对外开放使用。

@@ -21,7 +21,7 @@ categories: [参考]
 - [**可观测性**](/img/pigsty/dashboard.jpg)：基于 [**Victoria**](/docs/infra#victoria-可观测性套件) 与 [**Grafana**](/docs/infra#grafana) 的可观测性技术栈，提供惊艳的监控最佳实践。模块化设计，可独立使用：[**画廊**](https://github.com/pgsty/pigsty/wiki/Gallery) & [**Demo**](https://demo.pigsty.cc)。
 - [**可用性**](/img/pigsty/ha.png)：交付稳定可靠，自动路由，事务池化、读写分离的高性能数据库 [**服务**](/docs/pgsql/service/#默认服务)，通过 HAProxy，Pgbouncer，VIP 提供灵活的 [**接入**](/docs/pgsql/service/#接入服务) 模式。
 - [**可维护性**](/img/pigsty/iac.jpg)：[**简单易用**](/docs/setup/install)，[**基础设施即代码**](/docs/pgsql/config)，[**管理SOP预案**](/docs/pgsql/admin/)，自动调参，本地软件仓库，[**Vagrant**](/docs/deploy/vagrant) [**沙箱**](/docs/deploy/sandbox) 与 [**Terraform**](/docs/deploy/terraform) 模板，不停机 [**迁移**](/docs/pgsql/migration) 方案。
-- [**可组合性**](/img/pigsty/sandbox.png)：[**模块化**](/docs/concept/arch#模块) 架构设计，可复用的 [**Infra**](/docs/infra)，多样的可选 [**模块**](/docs/ref/module/)：[**Redis**](/docs/redis), [**MinIO**](/docs/minio), [**ETCD**](/docs/etcd), [**FerretDB**](/docs/ferret), [**DuckDB**](/docs/pilot/duckdb/), [**Docker**](/docs/app/), [**Supabase**](https://github.com/pgsty/pigsty/tree/master/app/supabase)。
+- [**可组合性**](/img/pigsty/sandbox.png)：[**模块化**](/docs/concept/arch#模块) 架构设计，可复用的 [**Infra**](/docs/infra)，多样的可选 [**模块**](/docs/ref/module/)：[**Redis**](/docs/redis), [**MinIO**](/docs/minio), [**ETCD**](/docs/etcd), [**DuckDB**](/docs/pilot/duckdb/), [**Docker**](/docs/app/), [**Supabase**](https://github.com/pgsty/pigsty/tree/master/app/supabase)。
 
 ![](/img/pigsty/banner.png)
 
@@ -34,7 +34,7 @@ Pigsty 是一个更好的本地开源 RDS for PostgreSQL 替代：
 
 - [开箱即用的RDS](#开箱即用的rds)：从内核到 RDS 发行版，在 EL/Debian/Ubuntu 下提供 14-18 版本的生产级 PG 数据库服务。
 - [丰富的扩展插件](#丰富的扩展插件)：提供无可比拟的 {{< param pgext_count >}} 扩展，提供开箱即用的分布式的时序地理空间图文向量多模态数据库能力。
-- [灵活的模块架构](#灵活的模块架构)：灵活组合，自由扩展：Redis/Etcd/MinIO/Mongo；可独立使用，监控现有 RDS/主机/数据库。
+- [灵活的模块架构](#灵活的模块架构)：组合 Redis/Etcd/MinIO 模块与 Mongo 等 PostgreSQL 模式；可独立监控现有 RDS、主机和数据库。
 - [惊艳的观测能力](#惊艳的观测能力)：基于 Victoria 与 Grafana 的现代可观测性技术栈，使用 Prometheus 兼容指标与生态工具。
 - [验证过的可靠性](#久经考验的可靠性)：故障自愈的高可用架构：硬件故障自动切换，流量无缝衔接。并提供自动配置的 PITR 兜底删库！
 - [简单易用可维护](#简单易用可维护)：声明式 API，GitOps 就位，傻瓜式操作，Database/Infra-as-Code 以及管理 SOP 封装管理复杂度！
@@ -51,7 +51,7 @@ PostgreSQL 整合了生态中的工具与最佳实践：
 - 基于 [Ansible](https://www.ansible.com/) 提供声明式的 API 对复杂度进行抽象，以 **Database-as-Code** 的方式极大简化了日常运维管理操作。
 - Pigsty 用途广泛，可用作完整应用运行时，开发演示数据/可视化应用，大量使用 PG 的软件可用 [Docker](https://www.docker.com/) 模板一键拉起。
 - 提供基于 [Vagrant](https://www.vagrantup.com/) 的本地开发测试沙箱环境，与基于 [Terraform](https://www.terraform.io/) 的云端自动部署方案，开发测试生产保持环境一致。
-- 部署并监控专用的 [Redis](https://redis.io/)（主从，哨兵，集群），MinIO，Etcd，Haproxy，MongoDB ([FerretDB](https://www.ferretdb.io/)) 集群
+- 使用 DocumentDB 与 FerretDB Docker APP 运行 [PostgreSQL Mongo 兼容模式](/docs/conf/mongo/)
 
 
 ----------------
@@ -108,7 +108,7 @@ Pigsty 中的组件被抽象可独立部署的 [**模块**](/docs/ref/module/)�
 此外，Pigsty 还提供 PG 兼容 / 衍生内核的支持，您可以使用 [**`Babelfish`**](/docs/pgsql/kernel/babelfish) 提供 MS SQL Server 兼容性，使用 [**`IvorySQL`**](/docs/pgsql/kernel/ivorysql) 提供 Oracle 兼容性，
 使用 [**`OpenHaloDB`**](/docs/pgsql/kernel/openhalo) 提供 MySQL 兼容性，使用 [**`OrioleDB`**](/docs/pgsql/kernel/orioledb) 提供极致的 OLTP 性能。
 
-不仅如此，你还可以使用 [**`FerretDB`**](/docs/ferret/) 提供 MongoDB 兼容性，使用 [**`Supabase`**](/docs/pgsql/kernel/supabase) 提供 Firebase 兼容，并使用 [**`PolarDB`**](/docs/pgsql/kernel/polardb) 满足国产化合规要求。
+不仅如此，你还可以使用 [**PostgreSQL Mongo 模式**](/docs/conf/mongo/) 提供 MongoDB 兼容性，使用 [**`Supabase`**](/docs/pgsql/kernel/supabase) 提供 Firebase 兼容，并使用 [**`PolarDB`**](/docs/pgsql/kernel/polardb) 满足国产化合规要求。
 消息队列可以使用 [**`KAFKA`**](/docs/kafka/) 模块部署 Kafka 4.x dynamic KRaft 集群。更多专业版/试点模块将不断引入 Pigsty，如 [**`GPSQL`**](/docs/pgsql/kernel/greenplum)，[DUCKDB](/docs/pilot/duckdb/)，[VICTORIA](/blog/db/victoria-stack/)，[TIGERBEETLE](/docs/pilot/tigerbeetle/)，[KUBERNETES](/docs/pilot/kube/)，[CONSUL](/docs/pilot/consul/)，[JUPYTER](/docs/app/jupyter/)，[GREENPLUM](/docs/pgsql/kernel/greenplum/)，[CLOUDBERRY](/docs/pgsql/kernel/cloudberry/)，[MYSQL](/docs/pilot/mysql/), …
 
 [![pigsty-sandbox](/img/pigsty/sandbox.png)](/docs/ref/module/)

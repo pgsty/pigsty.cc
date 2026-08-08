@@ -15,7 +15,7 @@ categories: [参考]
 
 - 配置名称： `demo/kernel`
 - 节点数量：10 个节点，其中 1 个同时承载 INFRA/ETCD 与 `pg-citus`
-- 配置说明：PostgreSQL 内核矩阵演示，覆盖 Citus、IvorySQL、Babelfish、PolarDB、Percona TDE、OrioleDB、OpenHalo、DocumentDB/FerretDB、AgensGraph、pgEdge
+- 配置说明：PostgreSQL 内核矩阵演示，覆盖 Citus、IvorySQL、Babelfish、PolarDB、Percona TDE、OrioleDB、OpenHalo、DocumentDB、AgensGraph、pgEdge
 - 适用系统：以各内核包实际支持的平台为准
 - 适用架构：以各内核包实际支持的平台为准
 - 相关配置：[`pgsql`](/docs/conf/pgsql/)、[`mssql`](/docs/conf/mssql/)、[`mongo`](/docs/conf/mongo/)
@@ -51,7 +51,7 @@ categories: [参考]
 - `pg-tde`：Percona PostgreSQL 18 + `pg_tde`
 - `pg-oriole`：OrioleDB，支持 PostgreSQL 16、17、18；当前演示配置默认使用 PG18
 - `pg-mysql`：OpenHalo，兼容 PostgreSQL 14
-- `pg-mongo`：DocumentDB + FerretDB，默认 PostgreSQL 18
+- `pg-mongo`：PostgreSQL Mongo 模式的 DocumentDB 后端，默认 PostgreSQL 18
 - `pg-agens`：AgensGraph，兼容 PostgreSQL 17
 - `pg-edge`：pgEdge，兼容 PostgreSQL 18
 

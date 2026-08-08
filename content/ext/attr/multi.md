@@ -5,7 +5,7 @@ description: "包含多个扩展的 PostgreSQL 扩展包"
 weight: 40
 ---
 
-以下 **26** 个扩展包中包含多个扩展，共计 **128** 个扩展。
+以下 **27** 个扩展包中包含多个扩展，共计 **132** 个扩展。
 
 在安装这些包时，您将同时获得包中的所有扩展。主扩展用粗体标出。
 
@@ -123,8 +123,8 @@ weight: 40
 
 | **ID** | **扩展名** | **版本** | **属性** | **模式** | **描述** |
 |:------:|:-----------|:--------:|:--------:|:---------|:---------|
-| 2400 | [**`citus`**](/ext/e/citus) | `14.1.0` | `--sLd--` | `pg_catalog` | Citus 分布式数据库 |
-| 2401 | [`citus_columnar`](/ext/e/citus_columnar) | `14.1.0` | `--s-d--` | `pg_catalog` | Citus 列式存储引擎 |
+| 2400 | [**`citus`**](/ext/e/citus) | `14.2.0` | `--sLd--` | `pg_catalog` | 将 PostgreSQL 横向扩展为分布式数据库 |
+| 2401 | [`citus_columnar`](/ext/e/citus_columnar) | `14.2.0` | `--s-d--` | `pg_catalog` | Citus 列式存储引擎 |
 {.ext-table}
 
 ### pg_lake
@@ -200,6 +200,18 @@ weight: 40
 | 3031 | [`hstore_plluau`](/ext/e/hstore_plluau) | `2.0.12` | `--s-d-r` | `pg_catalog` | Lua 程序语言的Hstore适配扩展（不受信任的） |
 {.ext-table}
 
+### plruby
+
+[`plruby`](/ext/e/plruby) 扩展包共有 **4** 个扩展：
+
+| **ID** | **扩展名** | **版本** | **属性** | **模式** | **描述** |
+|:------:|:-----------|:--------:|:--------:|:---------|:---------|
+| 3160 | [**`plruby`**](/ext/e/plruby) | `2.5` | `--s-d--` | `pg_catalog` | 将 MRI Ruby 嵌入 PostgreSQL，提供非可信过程语言 |
+| 3161 | [`jsonb_plruby`](/ext/e/jsonb_plruby) | `1.0` | `--s-d-r` | - | 在 jsonb 与 PL/Ruby 原生 Ruby 数据之间转换 |
+| 3162 | [`hstore_plruby`](/ext/e/hstore_plruby) | `1.0` | `--s-d-r` | - | 在 hstore 与 PL/Ruby 的 Ruby Hash 之间转换 |
+| 3163 | [`ltree_plruby`](/ext/e/ltree_plruby) | `1.0` | `--s-d-r` | - | 在 ltree 与 PL/Ruby 的 Ruby Array 之间转换 |
+{.ext-table}
+
 ### pltcl
 
 [`pltcl`](/ext/e/pltcl) 扩展包共有 **2** 个扩展：
@@ -262,8 +274,8 @@ weight: 40
 
 | **ID** | **扩展名** | **版本** | **属性** | **模式** | **描述** |
 |:------:|:-----------|:--------:|:--------:|:---------|:---------|
-| 4300 | [**`pg_readme`**](/ext/e/pg_readme) | `0.7.0` | `----d-r` | - | 为模式与扩展生成Markdown文档 |
-| 4301 | [`pg_readme_test_extension`](/ext/e/pg_readme_test_extension) | `0.7.0` | `----d-r` | - | 为模式与扩展生成Markdown文档 |
+| 4300 | [**`pg_readme`**](/ext/e/pg_readme) | `0.7.1` | `----d-r` | - | 根据 PostgreSQL COMMENT 对象生成 Markdown README |
+| 4301 | [`pg_readme_test_extension`](/ext/e/pg_readme_test_extension) | `0.7.1` | `----d-r` | - | 用于测试 pg_readme 文档生成的夹具扩展 |
 {.ext-table}
 
 ### pgpool

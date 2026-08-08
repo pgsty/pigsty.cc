@@ -18,7 +18,6 @@ categories: [参考]
 | [**`PGSQL`**](/docs/pgsql/playbook)   | 7  | `pgsql.yml` `pgsql-rm.yml` <br> `pgsql-user.yml` `pgsql-db.yml` <br> `pgsql-monitor.yml` `pgsql-migration.yml` `pgsql-pitr.yml` |
 | [**`REDIS`**](/docs/redis/playbook)   | 2  | `redis.yml` `redis-rm.yml`                                                                                                      |
 | [**`MINIO`**](/docs/minio/playbook)   | 2  | `minio.yml` `minio-rm.yml`                                                                                                      |
-| [**`FERRET`**](/docs/ferret/playbook) | 1  | `mongo.yml`                                                                                                                     |
 | [**`DOCKER`**](/docs/docker/playbook) | 1  | `docker.yml`                                                                                                                    |
 | [**`JUICE`**](/docs/juice/playbook)   | 1  | `juice.yml`                                                                                                                     |
 | [**`VIBE`**](/docs/vibe/playbook)     | 1  | `vibe.yml`                                                                                                                      |
@@ -50,7 +49,6 @@ categories: [参考]
 | [**`redis-rm.yml`**](/docs/redis/playbook#redis-rmyml)               | `REDIS`  | Redis 移除                                     |
 | [**`minio.yml`**](/docs/minio/playbook#minioyml)                     | `MINIO`  | MinIO 部署                                     |
 | [**`minio-rm.yml`**](/docs/minio/playbook#minio-rmyml)               | `MINIO`  | MinIO 移除                                     |
-| [**`mongo.yml`**](/docs/ferret/playbook#mongoyml)                    | `FERRET` | FerretDB（Mongo API）部署                        |
 | [**`docker.yml`**](/docs/docker/playbook#dockeryml)                  | `DOCKER` | Docker 引擎部署                                  |
 | [**`juice.yml`**](/docs/juice/playbook#juiceyml)                     | `JUICE`  | JuiceFS 实例部署/移除                              |
 | [**`vibe.yml`**](/docs/vibe/playbook#vibeyml)                        |  `VIBE`  | VIBE 开发环境部署                                  |
@@ -201,12 +199,6 @@ bin/pgmon-add <cls>              # 监控远程集群 (包装脚本)
 ```bash
 ./minio.yml -l <cls>             # 初始化 MinIO 集群
 ./minio-rm.yml -l <cls>          # 移除 MinIO 集群
-```
-
-### FERRET 模块
-
-```bash
-./mongo.yml -l ferret            # 安装 FerretDB
 ```
 
 ### DOCKER 模块

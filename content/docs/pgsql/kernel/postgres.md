@@ -1,7 +1,7 @@
 ---
 title: PostgreSQL
 weight: 2101
-description: 带有 562 扩展的原版 PostgreSQL 内核
+description: 带有 572 扩展的原版 PostgreSQL 内核
 icon: fa-solid fa-database
 module: [PGSQL]
 categories: [概念]

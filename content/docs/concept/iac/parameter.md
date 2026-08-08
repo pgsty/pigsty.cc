@@ -14,7 +14,7 @@ categories: [概念]
 
 ## 参数列表
 
-Pigsty 提供了 **359** 个配置参数，分布在 10 个模块中，用于精细控制系统的各个方面，完整列表见 [**参考-参数列表**](/docs/ref/param)。
+Pigsty 提供了 **350** 个配置参数，分布在 9 个模块中，用于精细控制系统的各个方面，完整列表见 [**参考-参数列表**](/docs/ref/param)。
 
 | 模块                               | 参数组 | 参数数 | 说明                             |
 |:---------------------------------|:---:|:---:|:-------------------------------|
@@ -24,7 +24,6 @@ Pigsty 提供了 **359** 个配置参数，分布在 10 个模块中，用于精
 | [**ETCD**](/docs/etcd/param)     |  2  | 13  | ETCD 集群与移除保护参数                 |
 | [**MINIO**](/docs/minio/param)   |  2  | 21  | MinIO 部署与移除参数                  |
 | [**REDIS**](/docs/redis/param)   |  2  | 21  | Redis 部署与移除参数                  |
-| [**FERRET**](/docs/ferret/param) |  1  |  9  | FerretDB（Mongo API）参数          |
 | [**DOCKER**](/docs/docker/param) |  1  |  8  | Docker 引擎参数                    |
 | [**JUICE**](/docs/juice/param)   |  1  |  2  | JuiceFS 实例与缓存参数                |
 | [**VIBE**](/docs/vibe/param)     |  1  | 16  | Code/Jupyter/Node.js/Claude 配置 |

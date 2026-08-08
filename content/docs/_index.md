@@ -86,7 +86,7 @@ Pigsty 由多个 [**模块**](/docs/ref/module) 组成。其中 `PGSQL` / `INFRA
 {{< nav-card title="MINIO" link="/docs/minio/" icon="fa-solid fa-boxes-stacked" accent="gray" badge="可选" desc="S3 兼容的对象存储，可用作数据库备份的集中存储仓库。" />}}
 {{< nav-card title="REDIS" link="/docs/redis/" icon="fa-solid fa-layer-group" accent="gray" badge="可选" desc="高性能内存数据结构服务器，主从、集群、哨兵三种模式。" />}}
 {{< nav-card title="DOCKER" link="/docs/docker/" icon="fa-brands fa-docker" accent="gray" badge="可选" desc="容器运行时，一键拉起容器化的无状态软件与应用模板。" />}}
-{{< nav-card title="FERRET" link="/docs/ferret/" icon="fa-solid fa-leaf" accent="gray" badge="可选" desc="基于 PostgreSQL 提供 MongoDB 协议兼容能力。" />}}
+{{< nav-card title="PG MONGO" link="/docs/conf/mongo/" icon="fa-solid fa-leaf" accent="gray" badge="模式" desc="由 DocumentDB 与 FerretDB Docker APP 实现的 PostgreSQL Mongo 模式。" />}}
 {{< nav-card title="JUICE" link="/docs/juice/" icon="fa-solid fa-folder-tree" accent="gray" badge="可选" desc="JuiceFS 分布式文件系统，将 PostgreSQL 挂载为文件系统" />}}
 {{< nav-card title="VIBE" link="/docs/vibe/" icon="fa-solid fa-laptop-code" accent="gray" badge="可选" desc="AI 编程沙箱，Claude/Codex 开发环境，Agent 运行时" />}}
 {{< nav-card title="KAFKA" link="/docs/kafka/" icon="fa-solid fa-share-nodes" accent="gray" badge="可选" desc="Apache Kafka 4.x dynamic KRaft 消息队列集群，安全与监控齐备。" />}}

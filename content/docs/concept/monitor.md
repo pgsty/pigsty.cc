@@ -22,7 +22,7 @@ Pigsty 监控覆盖的核心对象包括：
 - PostgreSQL 集群与实例（SQL 性能、连接、复制、事务、检查点、WAL）
 - 基础设施组件（Grafana、VictoriaMetrics、Alertmanager、Nginx 等）
 - 宿主机节点（CPU、内存、磁盘、网络、内核）
-- 关键中间件（ETCD、MINIO、REDIS、FERRET、JUICE、VIBE 等）
+- 关键中间件（ETCD、MINIO、REDIS、JUICE、VIBE 等）
 
 
 --------

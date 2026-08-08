@@ -12,8 +12,8 @@ icon: fas fa-chart-line
 
 | **扩展** | **包** | **版本** | **许可证** | **语言** | **描述** |
 |:---------|:-------|:--------:|:----------:|:--------:|:---------|
-| [`citus`](/ext/e/citus) | [`citus`](https://github.com/citusdata/citus) | `14.1.0` | <a class="ext-badge ext-badge--license agpl30" href="/ext/license#agpl30">AGPL-3.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | Citus 分布式数据库 |
-| [`citus_columnar`](/ext/e/citus_columnar) | [`citus`](https://github.com/citusdata/citus) | `14.1.0` | <a class="ext-badge ext-badge--license agpl30" href="/ext/license#agpl30">AGPL-3.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | Citus 列式存储引擎 |
+| [`citus`](/ext/e/citus) | [`citus`](https://github.com/citusdata/citus) | `14.2.0` | <a class="ext-badge ext-badge--license agpl30" href="/ext/license#agpl30">AGPL-3.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 将 PostgreSQL 横向扩展为分布式数据库 |
+| [`citus_columnar`](/ext/e/citus_columnar) | [`citus`](https://github.com/citusdata/citus) | `14.2.0` | <a class="ext-badge ext-badge--license agpl30" href="/ext/license#agpl30">AGPL-3.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | Citus 列式存储引擎 |
 | [`columnar`](/ext/e/columnar) | [`hydra`](https://github.com/hydradatabase/hydra) | `1.1.2` | <a class="ext-badge ext-badge--license agpl30" href="/ext/license#agpl30">AGPL-3.0</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 开源列式存储扩展 |
 | [`pg_duckdb`](/ext/e/pg_duckdb) | [`pg_duckdb`](https://github.com/duckdb/pg_duckdb) | `1.1.1` | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang cpp" href="/ext/language#cpp">C++</a> | 在PostgreSQL中的嵌入式DuckDB扩展 |
 | [`pg_mooncake`](/ext/e/pg_mooncake) | [`pg_mooncake`](https://github.com/Mooncake-Labs/pg_mooncake) | `0.2.0` | <a class="ext-badge ext-badge--license mit" href="/ext/license#mit">MIT</a> | <a class="ext-badge ext-badge--lang rust" href="/ext/language#rust">Rust</a> | PostgreSQL列式存储表 |
@@ -44,7 +44,7 @@ icon: fas fa-chart-line
 
 ## citus {#citus}
 
-[**`citus`**](/ext/e/citus) - `14.1.0` : Citus 分布式数据库
+[**`citus`**](/ext/e/citus) - `14.2.0` : 将 PostgreSQL 横向扩展为分布式数据库
 
 | **条目** | **属性** | **OS** | **x86_64** | **aarch64** |
 |:---:|:---|:---:|:---:|:---:|
@@ -63,7 +63,7 @@ icon: fas fa-chart-line
 
 ## citus_columnar {#citus_columnar}
 
-[**`citus`**](/ext/e/citus_columnar) - `14.1.0` : Citus 列式存储引擎
+[**`citus`**](/ext/e/citus_columnar) - `14.2.0` : Citus 列式存储引擎
 
 | **条目** | **属性** | **OS** | **x86_64** | **aarch64** |
 |:---:|:---|:---:|:---:|:---:|

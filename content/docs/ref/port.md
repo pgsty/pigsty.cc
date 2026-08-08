@@ -34,9 +34,6 @@ categories: [参考]
 |    [**`MINIO`**](/docs/minio)     |           **`minio`**            | `9001`  | [**`minio_admin_port`**](/docs/minio/param#minio_admin_port)                 | ✅ 默认启用   |
 |    [**`REDIS`**](/docs/redis)     |           **`redis`**            | `6379`  | [**`redis_instances`**](/docs/redis/param#redis_instances)                   | ⚠️ 按需启用  |
 |    [**`REDIS`**](/docs/redis)     |       **`redis_exporter`**       | `9121`  | [**`redis_exporter_port`**](/docs/redis/param#redis_exporter_port)           | ⚠️ 按需启用  |
-|   [**`FERRET`**](/docs/ferret)    |          **`ferretdb`**          | `27017` | [**`mongo_port`**](/docs/ferret/param#mongo_port)                            | ⚠️ 按需启用  |
-|   [**`FERRET`**](/docs/ferret)    |       **`ferretdb (TLS)`**       | `27018` | [**`mongo_ssl_port`**](/docs/ferret/param#mongo_ssl_port)                    | ⚠️ 按需启用  |
-|   [**`FERRET`**](/docs/ferret)    |       **`mongo_exporter`**       | `9216`  | [**`mongo_exporter_port`**](/docs/ferret/param#mongo_exporter_port)          | ✅ 默认启用   |
 |     [**`VIBE`**](/docs/vibe)      |        **`code-server`**         | `8443`  | [**`code_port`**](/docs/vibe/param#code_port)                                | ⚠️ 按需启用  |
 |     [**`VIBE`**](/docs/vibe)      |         **`jupyterlab`**         | `8888`  | [**`jupyter_port`**](/docs/vibe/param#jupyter_port)                          | ⚠️ 按需启用  |
 |    [**`KAFKA`**](/docs/kafka)     |           **`broker`**           | `9092`  | [**`kafka_port`**](/docs/kafka/param#kafka_port)                             | 🧪 BETA  |

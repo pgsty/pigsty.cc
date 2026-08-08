@@ -74,7 +74,6 @@ Pigsty 的 [**自签名 CA**](/docs/concept/sec/ca) 位于 Pigsty 主目录下�
 #  ^-----@nginx                              # (local_user) 0755，nginx SSL 证书
 #  ^-----@infra                              # (local_user) 0755，infra 客户端证书
 #  ^-----@pgsql                              # (local_user) 0755，pgsql 服务器证书
-#  ^-----@mongo                              # (local_user) 0755，mongodb/ferretdb 服务器证书
 #  ^-----@kafka                              # (local_user) 0755，kafka 服务器证书
 #  ^-----@mysql                              # (local_user) 0755，mysql 服务器证书
 ```
@@ -145,7 +144,6 @@ rsync -avz ./ meta-2:~/pigsty
 #            ^-----@pgrds                  # pgrds 目标（文件 0640）
 #            ^-----@redis                  # redis 目标（文件 0640）
 #            ^-----@minio                  # minio 目标（文件 0640）
-#            ^-----@mongo                  # mongo 目标（文件 0640）
 #            ^-----@juice                  # juicefs 目标（文件 0640）
 #            ^-----@mysql                  # mysql 目标（文件 0640）
 #            ^-----@kafka                  # kafka 目标（文件 0640）
@@ -210,7 +208,6 @@ rsync -avz ./ meta-2:~/pigsty
 #            ^-----@pgrds            # pgsql 远程 RDS 目标
 #            ^-----@redis            # redis 静态目标
 #            ^-----@minio            # minio 静态目标
-#            ^-----@mongo            # mongo 静态目标
 #            ^-----@mysql            # mysql 静态目标
 #            ^-----@etcd             # etcd 静态目标
 #            ^-----@ping             # ping 静态目标

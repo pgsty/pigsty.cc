@@ -30,7 +30,7 @@ weight: 4930
 
 | **相关扩展** | [`pg_uuidv7`](/ext/e/pg_uuidv7) [`sequential_uuids`](/ext/e/sequential_uuids) [`pg_idkit`](/ext/e/pg_idkit) [`pgx_ulid`](/ext/e/pgx_ulid) [`snowflake`](/ext/e/snowflake) [`pg_uuid_v8`](/ext/e/pg_uuid_v8) [`typeid`](/ext/e/typeid) |
 |:--------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **下游依赖** | [`babelfishpg_tsql`](/ext/e/babelfishpg_tsql) [`provsql`](/ext/e/provsql) |
+| **下游依赖** | [`babelfishpg_tsql`](/ext/e/babelfishpg_tsql) `bundle` `datalink` `launchql-extension-verify` `launchql-inflection` `launchql-jwt-claims` `npm` `pg_abris` `pg_dms` [`provsql`](/ext/e/provsql) `ruid` `skitch-extension-jobs` `skitch-extension-verify` `supa_audit` `types` |
 {.ext-table .ext-table--rel}
 
 

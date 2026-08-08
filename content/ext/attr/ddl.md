@@ -6,7 +6,7 @@ weight: 20
 slug: ddl
 ---
 
-以下 **29** 个扩展不需要执行 `CREATE EXTENSION` 即可使用。
+以下 **30** 个扩展不需要执行 `CREATE EXTENSION` 即可使用。
 
 这些扩展通常以共享库（Hook）或独立工具的形式存在，安装后直接通过配置参数启用或自动生效，无需在数据库中显式创建扩展对象。
 
@@ -14,6 +14,7 @@ slug: ddl
 |:-----------|:-------------|:--------:|:--------:|:---------|
 | [`pg_task`](/ext/e/pg_task) | [`pg_task`](https://github.com/RekGRpth/pg_task) | `2.1.29` | `--sL---` | 在特定时间点在后台执行SQL命令 |
 | [`plan_filter`](/ext/e/plan_filter) | [`pg_plan_filter`](https://github.com/pgexperts/pg_plan_filter) | `0.0.1` | `--sL---` | 使用执行计划代价过滤阻止特定查询语句 |
+| [`pg_disorder`](/ext/e/pg_disorder) | [`pg_disorder`](https://github.com/viralpraxis/pg_disorder) | `0.1.0` | `--sL---` | 扰动无 ORDER BY 查询的行序以暴露依赖隐式顺序的测试 |
 | [`pg_checksums`](/ext/e/pg_checksums) | [`pg_checksums`](https://github.com/credativ/pg_checksums) | `1.3` | `--s---r` | 在离线模式下激活/启用/禁用数据库集群的校验和功能 |
 | [`pg_crash`](/ext/e/pg_crash) | [`pg_crash`](https://github.com/cybertec-postgresql/pg_crash) | `1.0` | `--sL---` | 向数据库进程随机发送信号模拟故障 |
 | [`pg_pathcheck`](/ext/e/pg_pathcheck) | [`pg_pathcheck`](https://github.com/danolivo/pg_pathcheck) | `0.9.1` | `--sL---` | 校验 planner Path 树，诊断已释放或损坏的内存引用 |

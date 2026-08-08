@@ -39,7 +39,7 @@ VictoriaMetrics 通过 `/infra/targets/<job>/*.yml` 目录进行静态服务发�
 ./redis.yml  -t redis_register   # 重新渲染 Redis 目标
 ```
 
-其他模块（如 `pg_monitor.yml`、`mongo.yml`、`mysql.yml`）也提供了对应的 `*_register` 标签，可按需执行。
+其他模块（如 `pg_monitor.yml`、`mysql.yml`）也提供了对应的 `*_register` 标签，可按需执行。
 
 
 

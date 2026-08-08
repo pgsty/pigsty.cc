@@ -251,7 +251,6 @@ bin/redis-rm   <cls>            # 移除 Redis 集群：./redis-rm.yml -l <cls>
 |  [**MINIO**](/docs/minio/playbook/)  | [**`minio-rm.yml`**](https://github.com/pgsty/pigsty/blob/main/minio-rm.yml)               | 移除 MinIO 集群与数据                |
 | [**DOCKER**](/docs/docker/playbook/) | [**`docker.yml`**](https://github.com/pgsty/pigsty/blob/main/docker.yml)                   | 在节点上安装 Docker                 |
 | [**DOCKER**](/docs/docker/playbook/) | [**`app.yml`**](https://github.com/pgsty/pigsty/blob/main/app.yml)                         | 使用 Docker Compose 安装应用程序      |
-| [**FERRET**](/docs/ferret/playbook)  | [**`mongo.yml`**](https://github.com/pgsty/pigsty/blob/main/mongo.yml)                     | 在节点上安装 Mongo/FerretDB         |
 |  [**JUICE**](/docs/juice/playbook/)  | [**`juice.yml`**](https://github.com/pgsty/pigsty/blob/main/juice.yml)                     | 安装与配置 JuiceFS                  |
 |   [**VIBE**](/docs/vibe/playbook/)   | [**`vibe.yml`**](https://github.com/pgsty/pigsty/blob/main/vibe.yml)                       | 安装 Vibe 编码环境                  |
 |  [**KAFKA**](/docs/kafka/playbook/)  | [**`kafka.yml`**](https://github.com/pgsty/pigsty/blob/main/kafka.yml)                     | 创建或收敛 Kafka dynamic KRaft 集群 |

@@ -1,7 +1,7 @@
 ---
 title: Supabase 企业级自建
 weight: 555
-description: 使用 Pigsty 自托管企业级 supabase，带有监控，高可用，PITR，IaC 以及 562 PG 扩展。
+description: 使用 Pigsty 自托管企业级 supabase，带有监控，高可用，PITR，IaC 以及 572 PG 扩展。
 module: [SOFTWARE]
 categories: [参考]
 ---

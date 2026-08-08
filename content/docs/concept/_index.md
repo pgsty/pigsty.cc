@@ -51,7 +51,7 @@ Pigsty 为您提供：
 
 - **模块化的架构设计**
 
-  采用模块化 [**架构**](/docs/concept/arch) 设计，可自由组合以适应不同场景。除了核心的 PostgreSQL 模块外，还提供 Redis、MinIO、Etcd、FerretDB 等可选模块，以及对多种 PG 兼容内核的支持。
+  采用模块化 [**架构**](/docs/concept/arch) 设计，可自由组合以适应不同场景。除了核心的 PostgreSQL 模块外，还提供 Redis、MinIO、Etcd 等可选模块，以及对多种 PG 兼容内核与模式的支持。
 
 - [**扎实的安全最佳实践**](/docs/concept/sec/)
 

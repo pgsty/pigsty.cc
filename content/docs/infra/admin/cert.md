@@ -41,8 +41,7 @@ files/pki/
 ├── pgsql/                    # PostgreSQL 证书
 ├── minio/                    # MinIO 证书
 ├── infra/                    # 基础设施证书
-├── nginx/                    # Nginx 证书
-└── mongo/                    # FerretDB 证书
+└── nginx/                    # Nginx 证书
 ```
 
 ### CA 变量
