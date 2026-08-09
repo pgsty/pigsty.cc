@@ -53,7 +53,7 @@ curl -fsSL https://repo.pigsty.cc/pig | bash -s 1.6.0
 - `https://repo.pigsty.io/pkg/pig/v1.6.0/<filename>`
 - `https://repo.pigsty.cc/pkg/pig/v1.6.0/<filename>`
 
-```
+```text
 v1.6.0
 ├── pig_1.6.0-1_amd64.deb
 ├── pig_1.6.0-1_arm64.deb

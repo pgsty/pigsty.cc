@@ -128,4 +128,3 @@ Pigsty 在实现高可用时使用 etcd 作为分布式配置存储(DCS)，etcd 
 请使用该功能的用户及时迁移至 PostgreSQL 原生表或者 TimescaleDB 默认引擎
 
 详细介绍：《[PG新存储引擎故障案例](https://mp.weixin.qq.com/s/LdZVVyOj4BA9C892I25lQw)》
-

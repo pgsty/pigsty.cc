@@ -38,11 +38,11 @@ categories: [参考]
 在 Pigsty 中，[PGSQL](/docs/pgsql) 模块会使用到 [**INFRA节点**](/docs/concept/arch/node#infra节点) 上的一些服务，具体来说包括：
 
 * 数据库集群/主机节点的域名，依赖 INFRA 节点的 DNSMASQ **解析**。
-* 在数据库节点软件上**安装**，需要用到 INFRA 节点上的 Nginx 托管的本地 yum/apt 软件源。
-* 数据库集群/节点的监控**指标**，会被 INFRA 节点上的 VictoriaMetrics 拉取并存储，可通过 VMUI / PromQL 访问。
+* 在数据库节点软件上 **安装**，需要用到 INFRA 节点上的 Nginx 托管的本地 yum/apt 软件源。
+* 数据库集群/节点的监控 **指标**，会被 INFRA 节点上的 VictoriaMetrics 拉取并存储，可通过 VMUI / PromQL 访问。
 * 数据库与节点运行日志由 Vector 收集，统一推送到 INFRA 上的 VictoriaLogs，支持在 Grafana 中检索。
-* VMAlert 根据 VictoriaMetrics 中的指标**评估**告警规则，并将事件转发到 Alertmanager。
-* 用户会从 Infra/Admin 节点上使用 Ansible 或其他工具发起对数据库节点的**管理**：
+* VMAlert 根据 VictoriaMetrics 中的指标 **评估** 告警规则，并将事件转发到 Alertmanager。
+* 用户会从 Infra/Admin 节点上使用 Ansible 或其他工具发起对数据库节点的 **管理**：
   * 执行集群创建，扩缩容，实例/集群回收
   * 创建业务用户、业务数据库、修改服务、HBA 修改；
   * 执行日志采集、垃圾清理，备份，巡检等
@@ -59,7 +59,7 @@ Nginx 是 Pigsty 所有 WebUI 类服务的访问入口，默认使用管理节�
 
 有许多带有 WebUI 的基础设施组件通过 Nginx 对外暴露服务，例如 Grafana、VictoriaMetrics（VMUI）、AlertManager，以及 HAProxy 流量管理页等，此外 yum/apt 仓库等静态文件资源也通过 Nginx 对外提供服务。
 
-Nginx 默认通过 `i.pigsty` 的子路径暴露内置 Web 服务，也可以根据 [`infra_portal`](/docs/infra/param#infra_portal) 的内容，通过**域名**区分并转发至对应的上游组件。
+Nginx 默认通过 `i.pigsty` 的子路径暴露内置 Web 服务，也可以根据 [`infra_portal`](/docs/infra/param#infra_portal) 的内容，通过 **域名** 区分并转发至对应的上游组件。
 如果您使用了其他的域名，或者公网域名，可以在这里进行相应修改：
 
 ```yaml
@@ -79,7 +79,7 @@ Pigsty 强烈建议使用域名访问 Pigsty UI 系统，而不是直接通过 I
 * 一些组件默认只监听 127.0.0.1，因此只能通过 Nginx 代理访问。
 * 域名更容易记忆，并提供了额外的配置灵活性。
 
-如果您没有可用的互联网域名或本地 DNS 解析，您可以在 `/etc/hosts` （MacOS/Linux）或`C:\Windows\System32\drivers\etc\hosts` （Windows）中添加本地静态解析记录。
+如果您没有可用的互联网域名或本地 DNS 解析，您可以在 `/etc/hosts` （MacOS/Linux）或 `C:\Windows\System32\drivers\etc\hosts` （Windows）中添加本地静态解析记录。
 
 Nginx 相关配置参数位于：[配置：INFRA - NGINX](/docs/infra/param#nginx)
 
@@ -156,7 +156,7 @@ Pigsty 默认会在元节点上安装 Ansible，Ansible 是一个流行的运维
 
 ### DNSMASQ
 
-DNSMASQ 提供环境内的 DNS**解析**服务，其他模块的域名将会注册到 INFRA 节点上的 DNSMASQ 服务中。
+DNSMASQ 提供环境内的 DNS **解析** 服务，其他模块的域名将会注册到 INFRA 节点上的 DNSMASQ 服务中。
 
 DNS 记录默认放置于所有 INFRA 节点的 `/etc/dnsmasq.d/pigsty/` 目录中。
 
@@ -222,7 +222,7 @@ infra:
 ```
 
 `infra-rm.yml` 没有防误删开关；不带标签会删除 `infra_data`、`nginx_data`、`nginx_home`（默认 `/www`）与 `/var/lib/grafana`。
-只需停服或注销时请使用标签，完整边界见[预置剧本](/docs/infra/playbook/#infra-rmyml)。
+只需停服或注销时请使用标签，完整边界见 [预置剧本](/docs/infra/playbook/#infra-rmyml)。
 
 ----------------
 
@@ -314,12 +314,12 @@ INFRA 模块剧本 [`infra.yml`](https://github.com/pgsty/pigsty/blob/main/infra
 * 配置元节点的目录与环境变量
 * 下载并建立一个本地软件源，加速后续安装。（若使用离线软件包，则跳过下载阶段）
 * 将当前元节点作为一个普通节点纳入 Pigsty 管理
-* 部署**基础设施**组件，包括 VictoriaMetrics/Logs/Traces、VMAlert、Grafana、Alertmanager、Blackbox Exporter 等
+* 部署 **基础设施** 组件，包括 VictoriaMetrics/Logs/Traces、VMAlert、Grafana、Alertmanager、Blackbox Exporter 等
 
-**该剧本默认在 [**INFRA节点**](/docs/concept/arch/node#infra节点) 上执行**
+**该剧本默认在 [INFRA 节点](/docs/concept/arch/node#infra节点) 上执行**
 
-* Pigsty 默认将使用**当前执行此剧本的节点**作为 Pigsty 的 [**Infra节点**](/docs/concept/arch/node#infra节点) 与 [**ADMIN节点**](/docs/concept/arch/node#admin节点)。
-* Pigsty 在 [配置过程](/docs/setup/install#配置) 中默认会将当前节点标记为 Infra/Admin 节点，并使用**当前节点首要 IP 地址**替换配置模板中的占位 IP 地址`10.10.10.10`。
+* Pigsty 默认将使用 **当前执行此剧本的节点** 作为 Pigsty 的 [**Infra节点**](/docs/concept/arch/node#infra节点) 与 [**ADMIN节点**](/docs/concept/arch/node#admin节点)。
+* Pigsty 在 [配置过程](/docs/setup/install#配置) 中默认会将当前节点标记为 Infra/Admin 节点，并使用 **当前节点首要 IP 地址** 替换配置模板中的占位 IP 地址 `10.10.10.10`。
 * 该节点除了可以发起管理，部署有基础设施，与一个部署普通托管节点并无区别。
 * 单机安装时，ETCD 也会安装在此节点上，提供 DCS 服务
 
@@ -357,7 +357,7 @@ INFRA 模块剧本 [`infra-rm.yml`](https://github.com/pgsty/pigsty/blob/main/in
 
 ### `deploy.yml`
 
-INFRA 模块剧本 [`deploy.yml`](https://github.com/pgsty/pigsty/blob/main/deploy.yml) 用于在**所有节点**上一次性部署 NODE、INFRA、ETCD、MINIO 与 PGSQL 核心链路。Docker、Redis、Kafka、原生 MySQL、JUICE 与 VIBE 等可选模块需要另行执行各自的剧本。
+INFRA 模块剧本 [`deploy.yml`](https://github.com/pgsty/pigsty/blob/main/deploy.yml) 用于在 **所有节点** 上一次性部署 NODE、INFRA、ETCD、MINIO 与 PGSQL 核心链路。Docker、Redis、Kafka、原生 MySQL、JUICE 与 VIBE 等可选模块需要另行执行各自的剧本。
 
 该剧本在 [剧本：一次性安装](/docs/setup/playbook#部署剧本) 中有更详细的介绍。
 

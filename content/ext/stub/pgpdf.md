@@ -258,17 +258,17 @@ SELECT pdf_version('/tmp/pgintro.pdf');
 Install [poppler](https://poppler.freedesktop.org) dependencies
 
 **Linux**
-```
+```text
 sudo apt install -y libpoppler-glib-dev pkg-config
 ```
 
 **Homebrew/MacOS**
 
-```
+```text
 brew install poppler pkgconf
 ```
 
-```
+```text
 cd /tmp
 git clone https://github.com/Florents-Tselai/pgpdf.git
 cd pgpdf

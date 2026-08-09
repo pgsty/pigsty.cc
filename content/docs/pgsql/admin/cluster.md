@@ -29,7 +29,7 @@ categories: [任务]
 
 ## 创建集群
 
-要创建一个新的 PostgreSQL 集群，请首先在 [**配置清单**](/docs/concept/iac/inventory) 中 [**定义集群**](/docs/pgsql/config/cluster)，然后 [**纳管节点**](/docs/node/admin#添加节点)并进行初始化：
+要创建一个新的 PostgreSQL 集群，请首先在 [**配置清单**](/docs/concept/iac/inventory) 中 [**定义集群**](/docs/pgsql/config/cluster)，然后 [**纳管节点**](/docs/node/admin#添加节点) 并进行初始化：
 
 {{< tabpane text=true persist=header >}}
 {{% tab header="脚本" %}}
@@ -383,7 +383,7 @@ bin/pgsql-hba pg-test 10.10.10.13     # 例子，刷新 pg-test 集群中 10.10.
 
 PostgreSQL 的配置参数由 Patroni 管理，初始参数由 [**Patroni 配置模板**](/docs/pgsql/template/) 指定。
 集群初始化之后，配置存储在 Etcd 中，并由 Patroni 进行动态管理，并在集群中同步与共享。
-Patroni 本身的 [**配置参数**](/docs/pgsql/admin/patroni#修改配置) 大部分可以通过 `patronictl`命令行工具修改。
+Patroni 本身的 [**配置参数**](/docs/pgsql/admin/patroni#修改配置) 大部分可以通过 `patronictl` 命令行工具修改。
 其余参数（例如，etcd DCS 配置，日志/RestAPI 等配置）则可以通过下面的子任务进行更新。例如，当 [**etcd**](/docs/etcd) 集群成员发生变动时，你可以刷新 Patroni 配置：
 
 ```bash

@@ -179,12 +179,12 @@ categories: [参考]
 
 ## `NODE_ID`
 
-每个节点都有**身份参数**，通过在`<cluster>.hosts`与`<cluster>.vars`中的相关参数进行配置。
+每个节点都有 **身份参数**，通过在`<cluster>.hosts`与`<cluster>.vars`中的相关参数进行配置。
 
-Pigsty 使用**IP 地址**作为**数据库节点**的唯一标识，**该 IP 地址必须是数据库实例监听并对外提供服务的 IP 地址**，但不宜使用公网 IP 地址。
+Pigsty 使用 **IP 地址** 作为 **数据库节点** 的唯一标识，**该 IP 地址必须是数据库实例监听并对外提供服务的 IP 地址**，但不宜使用公网 IP 地址。
 尽管如此，用户并不一定非要通过该 IP 地址连接至该数据库。例如，通过 SSH 隧道或跳板机中转的方式间接操作管理目标节点也是可行的。
 但在标识数据库节点时，首要 IPv4 地址依然是节点的核心标识符。**这一点非常重要，用户应当在配置时保证这一点**。
-IP 地址即配置清单中主机的`inventory_hostname`，体现为`<cluster>.hosts`对象中的`key`。
+IP 地址即配置清单中主机的 `inventory_hostname`，体现为`<cluster>.hosts`对象中的 `key`。
 
 ```yaml
 node-test:
@@ -205,7 +205,7 @@ node_load1{cls="pg-test", ins="pg-test-2", ip="10.10.10.12", job="nodes"}
 node_load1{cls="pg-test", ins="pg-test-3", ip="10.10.10.13", job="nodes"}
 ```
 
-在执行默认的 PostgreSQL 部署时，因为 Pigsty 默认采用节点独占1:1部署，因此可以通过 [`node_id_from_pg`](#node_id_from_pg) 参数，将数据库实例的身份参数（[`pg_cluster`](/docs/pgsql/param#pg_cluster) 借用至节点的`ins`与`cls`标签上。
+在执行默认的 PostgreSQL 部署时，因为 Pigsty 默认采用节点独占1:1部署，因此可以通过 [`node_id_from_pg`](#node_id_from_pg) 参数，将数据库实例的身份参数（[`pg_cluster`](/docs/pgsql/param#pg_cluster) 借用至节点的 `ins` 与 `cls` 标签上。
 
 |               名称                |    类型    |  层级   | 必要性    | 说明           |
 |:-------------------------------:|:--------:|:-----:|--------|--------------|
@@ -242,7 +242,7 @@ node_id_from_pg: true             # 如果可行，是否借用 postgres 身份�
 
 参数名称： `node_cluster`， 类型： `string`， 层次：`C`
 
-该选项可为节点显式指定一个集群名称，通常在节点集群层次定义才有意义。使用默认空值将直接使用固定值`nodes`作为节点集群标识。
+该选项可为节点显式指定一个集群名称，通常在节点集群层次定义才有意义。使用默认空值将直接使用固定值 `nodes` 作为节点集群标识。
 
 如果启用了 [`node_id_from_pg`](#node_id_from_pg) 选项（默认启用），且 `node_cluster` 没有被显式指定，那么 [`node_cluster`](#node_cluster) 会尝试使用 `${pg_cluster}` 作为集群身份参数，如果集群没有定义 PGSQL 模块，那么会回归到默认值 `nodes`。
 
@@ -274,7 +274,7 @@ node_id_from_pg: true             # 如果可行，是否借用 postgres 身份�
 
 是否在剧本节点间交换主机名？默认值为：`false`
 
-启用此参数时，同一批组执行 [**`node.yml`**](/docs/node/playbook#nodeyml) 剧本的节点之间会相互交换节点名称，写入`/etc/hosts`中。
+启用此参数时，同一批组执行 [**`node.yml`**](/docs/node/playbook#nodeyml) 剧本的节点之间会相互交换节点名称，写入 `/etc/hosts` 中。
 
 
 
@@ -360,8 +360,8 @@ node_dns_options:                 # dns resolv options in `/etc/resolv.conf`
 
 如何配置 DNS 服务器？有三种选项：`add`、`none`、`overwrite`，默认值为 `add`。
 
-* `add`：将 [`node_dns_servers`](#node_dns_servers) 中的记录**追加**至`/etc/resolv.conf`，并保留已有 DNS 服务器。（默认）
-* `overwrite`：使用将 [`node_dns_servers`](#node_dns_servers) 中的记录覆盖`/etc/resolv.conf`
+* `add`：将 [`node_dns_servers`](#node_dns_servers) 中的记录 **追加** 至 `/etc/resolv.conf`，并保留已有 DNS 服务器。（默认）
+* `overwrite`：使用将 [`node_dns_servers`](#node_dns_servers) 中的记录覆盖 `/etc/resolv.conf`
 * `none`：跳过 DNS 服务器配置，如果您的环境中已经配置有 DNS 服务器，则可以直接跳过 DNS 配置。
 
 
@@ -387,7 +387,7 @@ node_dns_options:                 # dns resolv options in `/etc/resolv.conf`
 - "options single-request-reopen timeout:1"
 ```
 
-如果 [`node_dns_method`](#node_dns_method) 配置为`add`或`overwrite`，则本配置项中的记录会被首先写入`/etc/resolv.conf` 中。具体格式请参考 Linux 文档关于`/etc/resolv.conf`的说明
+如果 [`node_dns_method`](#node_dns_method) 配置为 `add` 或 `overwrite`，则本配置项中的记录会被首先写入 `/etc/resolv.conf` 中。具体格式请参考 Linux 文档关于 `/etc/resolv.conf` 的说明
 
 
 
@@ -436,7 +436,7 @@ node_pip_packages: ''             # pip packages to be installed in uv venv
 
 是否移除节点已有的软件仓库定义？默认值为：`true`。
 
-如果启用，则 Pigsty 会 **移除** 节点上`/etc/yum.repos.d`中原有的配置文件，并备份至`/etc/yum.repos.d/backup`。
+如果启用，则 Pigsty 会 **移除** 节点上 `/etc/yum.repos.d` 中原有的配置文件，并备份至 `/etc/yum.repos.d/backup`。
 在 Debian/Ubuntu 系统上，则是 `/etc/apt/sources.list(.d)` 备份至 `/etc/apt/backup`。
 
 
@@ -664,7 +664,7 @@ node_kernel_modules: [ softdog, ip_vs, ip_vs_rr, ip_vs_wrr, ip_vs_sh ]
 
 参数名称： `node_tune`， 类型： `enum`， 层次：`C`
 
-针对机器进行调优的预制方案，基于`tuned` 提供服务。有四种预制模式：
+针对机器进行调优的预制方案，基于 `tuned` 提供服务。有四种预制模式：
 
 * `tiny`：微型虚拟机
 * `oltp`：常规 OLTP 模板，优化延迟（默认值）
@@ -861,7 +861,7 @@ node_aliases: {}                  # shell aliases to write into `/etc/profile.d/
 
 是否在本节点上创建一个专用管理员用户？默认值为：`true`。
 
-Pigsty 默认会在每个节点上创建一个管理员用户（拥有免密 sudo 与 ssh 权限），默认的管理员名为`dba (uid=88)`的管理用户，可以从元节点上通过 SSH 免密访问环境中的其他节点并执行免密 sudo。
+Pigsty 默认会在每个节点上创建一个管理员用户（拥有免密 sudo 与 ssh 权限），默认的管理员名为 `dba (uid=88)` 的管理用户，可以从元节点上通过 SSH 免密访问环境中的其他节点并执行免密 sudo。
 
 
 
@@ -946,7 +946,7 @@ Pigsty 默认使用 `nopass` 模式，管理员用户可以无需密码执行任
 
 可登陆管理员的公钥列表，默认值为：`[]` 空数组。
 
-数组的每一个元素为字符串，内容为写入到管理员用户`~/.ssh/authorized_keys`中的公钥，持有对应私钥的用户可以以管理员身份登录。
+数组的每一个元素为字符串，内容为写入到管理员用户 `~/.ssh/authorized_keys` 中的公钥，持有对应私钥的用户可以以管理员身份登录。
 
 生产环境部署时，请务必注意此参数，仅将信任的密钥加入此列表中。
 

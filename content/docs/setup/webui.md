@@ -26,7 +26,7 @@ Pigsty [**单机安装**](/docs/setup/install) 完成后，您在当前节点上
 {.full-width}
 
 
-[![](/img/pigsty/home.png)](https://demo.pigsty.cc/zh)
+[![Pigsty 在线演示首页](/img/pigsty/home.png)](https://demo.pigsty.cc/zh)
 
 
 ------

@@ -10,7 +10,7 @@ main_menu: True
 
 Pigsty 是一个可移植、可扩展的开源 PostgreSQL 发行版，用于在本地环境中构建生产级数据库服务，方便进行声明式配置和自动化。它拥有庞大的生态系统，提供了一整套工具、脚本和最佳实践，让 PostgreSQL 真正达到企业级 RDS 的服务水准。
 
-Pigsty 名字源自 **P**ostgreSQL **I**n **G**reat **STY**le，也可理解为 **P**ostgres， **I**nfras， **G**raphics， **S**ervice， **T**oolbox， it's all **Y**ours —— 属于您的 PostgreSQL 图形化自建工具箱。您可以在 [**GitHub**](https://github.com/pgsty/pigsty) 上找到源代码，访问 [**官方文档**](https://pigsty.io) 了解更多信息，或在 [**在线演示**](https://demo.pigsty.cc) 中体验 [**Web 界面**](/docs/setup/webui)。
+Pigsty 名字源自 <strong>P</strong>ostgreSQL <strong>I</strong>n <strong>G</strong>reat <strong>STY</strong>le，也可理解为 <strong>P</strong>ostgres，<strong>I</strong>nfras，<strong>G</strong>raphics，<strong>S</strong>ervice，<strong>T</strong>oolbox，it's all <strong>Y</strong>ours —— 属于您的 PostgreSQL 图形化自建工具箱。您可以在 [**GitHub**](https://github.com/pgsty/pigsty) 上找到源代码，访问 [**官方文档**](https://pigsty.io) 了解更多信息，或在 [**在线演示**](https://demo.pigsty.cc) 中体验 [**Web 界面**](/docs/setup/webui)。
 
 [![pigsty-banner](/img/pigsty/banner.png)](https://pigsty.cc)
 

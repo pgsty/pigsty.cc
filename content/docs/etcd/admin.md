@@ -119,7 +119,7 @@ e endpoint status                # 查看端点状态
 
 Pigsty 自 v4.0 起默认启用 etcd 的 RBAC（基于角色的访问控制）认证机制。在集群初始化时，`etcd_auth` 任务会自动创建 root 用户并启用认证。
 
-**root 用户密码**由 [`etcd_root_password`](/docs/etcd/param#etcd_root_password) 参数指定，默认值为 `Etcd.Root`。密码存储在 `/etc/etcd/etcd.pass` 文件中，权限为 `0640`（root 所有，etcd 组可读）。
+**root 用户密码** 由 [`etcd_root_password`](/docs/etcd/param#etcd_root_password) 参数指定，默认值为 `Etcd.Root`。密码存储在 `/etc/etcd/etcd.pass` 文件中，权限为 `0640`（root 所有，etcd 组可读）。
 
 **在生产环境中，强烈建议修改默认密码**：
 
@@ -201,7 +201,7 @@ ETCD 参考: [添加成员](https://etcd.io/docs/v3.6/op-guide/runtime-configura
 
 ### 推荐方式：使用便捷脚本
 
-使用 `bin/etcd-add` 脚本是向现有 etcd 集群添加新成员的**推荐方式**：
+使用 `bin/etcd-add` 脚本是向现有 etcd 集群添加新成员的 **推荐方式**：
 
 ```bash
 # 首先在配置清单中添加新成员定义，然后执行：
@@ -309,7 +309,7 @@ $ em list                # 再次检查，新成员已提升为正式成员
 
 ### 推荐方式：使用便捷脚本
 
-使用 `bin/etcd-rm` 脚本是从 etcd 集群移除成员的**推荐方式**：
+使用 `bin/etcd-rm` 脚本是从 etcd 集群移除成员的 **推荐方式**：
 
 ```bash
 bin/etcd-rm <ip>              # 移除指定成员
@@ -330,7 +330,7 @@ bin/etcd-rm                   # 移除整个 etcd 集群
 1. **保持成员仍在配置清单中**：移除剧本需要清单里的 `etcd_seq`、集群成员和连接端点信息
 2. **清理实例**：对目标运行 `etcd-rm.yml`；剧本会先尝试 `member remove`，再停服并按参数清理
 3. **更新配置清单**：成功后再从配置清单中注释或删除该实例
-4. **重载引用**：按[重载配置](#重载配置)刷新其余 etcd 成员及 Patroni/VIP-Manager 的端点
+4. **重载引用**：按 [重载配置](#重载配置) 刷新其余 etcd 成员及 Patroni/VIP-Manager 的端点
 
 ```bash
 # 此时 <ip> 必须仍在 etcd 清单组中
@@ -381,7 +381,7 @@ Member 93fcf23b220473fb removed from cluster 6646fbcf5debc68f
 
 手工踢除后仍需在目标尚存于清单时运行 `./etcd-rm.yml -l 10.10.10.12` 完成停服、注销和清理；其退出步骤找不到已删除的成员时会跳过。
 
-实例清理成功后，才从配置清单中删除 `10.10.10.12`，并按[重载配置](#重载配置)刷新其余 etcd 成员和所有客户端引用，移除成员至此完成。
+实例清理成功后，才从配置清单中删除 `10.10.10.12`，并按 [重载配置](#重载配置) 刷新其余 etcd 成员和所有客户端引用，移除成员至此完成。
 
 重复以上步骤，可以移除更多成员，与 [添加成员](#添加成员) 配合使用，可以对 etcd 集群进行滚动升级搬迁。
 

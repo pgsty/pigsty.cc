@@ -12,7 +12,7 @@ categories: [参考]
 
 一组 PostgreSQL 服务器可以同时服务于多个 **数据库** （Database）。在 Pigsty 中，你可以在集群配置中 [定义](#定义数据库) 好所需的数据库。
 
-Pigsty 会对默认模板数据库`template1`进行修改与定制，创建默认模式，安装默认扩展，配置默认权限，新创建的数据库默认会从`template1`继承这些设置。
+Pigsty 会对默认模板数据库 `template1` 进行修改与定制，创建默认模式，安装默认扩展，配置默认权限，新创建的数据库默认会从 `template1` 继承这些设置。
 
 默认情况下，所有业务数据库都会被1:1添加到 Pgbouncer 连接池中；`pg_exporter` 默认会通过 **自动发现** 机制查找所有业务数据库并进行库内对象监控。
 
@@ -22,7 +22,7 @@ Pigsty 会对默认模板数据库`template1`进行修改与定制，创建默�
 ## 定义数据库
 
 业务数据库定义在数据库集群参数  [`pg_databases`](/docs/pgsql/param#pg_databases) 中，这是一个数据库定义构成的对象数组。
-数组内的数据库按照**定义顺序**依次创建，因此后面定义的数据库可以使用先前定义的数据库作为**模板**。
+数组内的数据库按照 **定义顺序** 依次创建，因此后面定义的数据库可以使用先前定义的数据库作为 **模板**。
 
 下面是 Pigsty 演示环境中默认集群 `pg-meta` 中的数据库定义：
 
@@ -74,20 +74,20 @@ pg-meta:
 唯一必选的字段是 `name`，它应该是当前 PostgreSQL 集群中有效且唯一的数据库名称，其他参数都有合理的默认值。
 
 - `name`：数据库名称，**必选项**。
-- `baseline`：SQL 文件路径（Ansible 搜索路径，通常位于`files`），用于初始化数据库内容。
-- `owner`：数据库属主，默认为`postgres`
-- `template`：数据库创建时使用的模板，默认为`template1`
-- `encoding`：数据库默认字符编码，默认为`UTF8`，默认与实例保持一致。建议不要配置与修改。
-- `locale`：数据库默认的本地化规则，默认为`C`，建议不要配置，与实例保持一致。
-- `lc_collate`：数据库默认的本地化字符串排序规则，默认与实例设置相同，建议不要修改，必须与模板数据库一致。强烈建议不要配置，或配置为`C`。
-- `lc_ctype`：数据库默认的 LOCALE，默认与实例设置相同，建议不要修改或设置，必须与模板数据库一致。建议配置为 C 或`en_US.UTF8`。
-- `allowconn`：是否允许连接至数据库，默认为`true`，不建议修改。
-- `revokeconn`：是否回收连接至数据库的权限？默认为`false`。如果为`true`，则数据库上的`PUBLIC CONNECT`权限会被回收。只有默认用户（`dbsu|monitor|admin|replicator|owner`）可以连接。此外，`admin|owner` 会拥有 GRANT OPTION，可以赋予其他用户连接权限。
-- `tablespace`：数据库关联的表空间，默认为`pg_default`。
-- `connlimit`：数据库连接数限制，默认为`-1`，即没有限制。
-- `extensions`：对象数组，每一个对象定义了一个数据库中的**扩展**，以及其安装的**模式**。
-- `parameters`：KV 对象，每一个 KV 定义了一个需要针对数据库通过`ALTER DATABASE`修改的参数。
-- `pgbouncer`：布尔选项，是否将该数据库加入到 Pgbouncer 中。所有数据库都会加入至 Pgbouncer 列表，除非显式指定`pgbouncer: false`。
+- `baseline`：SQL 文件路径（Ansible 搜索路径，通常位于 `files`），用于初始化数据库内容。
+- `owner`：数据库属主，默认为 `postgres`
+- `template`：数据库创建时使用的模板，默认为 `template1`
+- `encoding`：数据库默认字符编码，默认为 `UTF8`，默认与实例保持一致。建议不要配置与修改。
+- `locale`：数据库默认的本地化规则，默认为 `C`，建议不要配置，与实例保持一致。
+- `lc_collate`：数据库默认的本地化字符串排序规则，默认与实例设置相同，建议不要修改，必须与模板数据库一致。强烈建议不要配置，或配置为 `C`。
+- `lc_ctype`：数据库默认的 LOCALE，默认与实例设置相同，建议不要修改或设置，必须与模板数据库一致。建议配置为 C 或 `en_US.UTF8`。
+- `allowconn`：是否允许连接至数据库，默认为 `true`，不建议修改。
+- `revokeconn`：是否回收连接至数据库的权限？默认为 `false`。如果为 `true`，则数据库上的 `PUBLIC CONNECT` 权限会被回收。只有默认用户（`dbsu|monitor|admin|replicator|owner`）可以连接。此外，`admin|owner` 会拥有 GRANT OPTION，可以赋予其他用户连接权限。
+- `tablespace`：数据库关联的表空间，默认为 `pg_default`。
+- `connlimit`：数据库连接数限制，默认为 `-1`，即没有限制。
+- `extensions`：对象数组，每一个对象定义了一个数据库中的 **扩展**，以及其安装的 **模式**。
+- `parameters`：KV 对象，每一个 KV 定义了一个需要针对数据库通过 `ALTER DATABASE` 修改的参数。
+- `pgbouncer`：布尔选项，是否将该数据库加入到 Pgbouncer 中。所有数据库都会加入至 Pgbouncer 列表，除非显式指定 `pgbouncer: false`。
 - `comment`：数据库备注信息。
 - `pool_auth_user`：启用 [`pgbouncer_auth_query`](/docs/pgsql/param#pgbouncer_auth_query) 时，连接到此 pgbouncer 数据库的所有连接都将使用这里指定的用户执行认证查询。你需要使用一个具有访问 `pg_shadow` 表权限的用户。
 - `pool_mode`：数据库级别的 pgbouncer 池化模式，默认为 transaction，即事物池化。如果留空，会使用 [`pgbouncer_poolmode`](/docs/pgsql/param#pgbouncer_poolmode) 参数作为默认值。

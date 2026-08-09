@@ -73,7 +73,7 @@ all:                            # <------- 顶级对象：all
 - 使用全局变量上的全局参数 `node_ntp_servers` 指定全局 NTP 服务器
 - 如果没有设置 [**`pg_version`**](/docs/pgsql/param#pg_version)，Pigsty 将使用 [**`pgsql`**](https://github.com/pgsty/pigsty/blob/main/roles/pgsql/defaults/main.yml#L42) 角色实现的默认值（默认为 `18`）
 
-除了**身份参数** 外，每个参数都有适当的默认值，因此无需显式设置。
+除了 **身份参数** 外，每个参数都有适当的默认值，因此无需显式设置。
 
 
 ------

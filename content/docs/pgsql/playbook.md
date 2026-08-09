@@ -25,7 +25,7 @@ categories: [任务]
 
 ## 保护机制
 
-使用 [`PGSQL`](/docs/pgsql) 剧本时需要**特别注意**，剧本 [`pgsql.yml`](#pgsqlyml) 与 [`pgsql-rm.yml`](#pgsql-rmyml) 使用不当会有误删数据库的风险！
+使用 [`PGSQL`](/docs/pgsql) 剧本时需要 **特别注意**，剧本 [`pgsql.yml`](#pgsqlyml) 与 [`pgsql-rm.yml`](#pgsql-rmyml) 使用不当会有误删数据库的风险！
 
 * 在执行时添加 `-l` 参数，限制命令执行的对象范围，并确保自己在正确的目标上执行正确的任务。
 * 限制范围通常以一个数据库集群为宜，使用不带参数的 `pgsql.yml` 在生产环境中是一个高危操作，务必三思而后行。
@@ -434,7 +434,7 @@ infra:
 
 **架构示意**
 
-```
+```text
      ------ infra ------
      |                 |
      | victoria-metrics|            v---- pg-foo-1 ----v

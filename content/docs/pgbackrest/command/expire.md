@@ -166,7 +166,7 @@ I/O 超时时间。
 
 用于连接和读写操作的超时时间（秒）。
 
-请注意，整个读写操作无需在此时间内完成，但*必须*持续有所进展，哪怕每次只传输一个字节。
+请注意，整个读写操作无需在此时间内完成，但 *必须* 持续有所进展，哪怕每次只传输一个字节。
 
 ```yaml
 default: 1m
@@ -695,7 +695,7 @@ example: --repo1-path=/backup/db/backrest
 
 若未设置此值且 `repo-retention-full-type` 为 `count`（默认值），则归档过期策略默认与 `repo-retention-archive-type` 对应的 `repo-retention-full`（或 `repo-retention-diff`）值一致——前提是 `repo-retention-archive-type` 设为 `full`（或 `diff`）。这确保了 WAL 仅在对应备份过期时才同步过期。若 `repo-retention-full-type` 为 `time`，则此值默认删除比满足 `repo-retention-full` 设置后所保留的最旧全量备份更早的归档。
 
-若 `repo-retention-archive-type` 设为 `incr`，则必须设置此选项。在磁盘空间紧张时，此选项与 `repo-retention-archive-type` 配合可更激进地过期 WAL 段，但代价是相关备份将无法执行 PITR，因此**不推荐**。
+若 `repo-retention-archive-type` 设为 `incr`，则必须设置此选项。在磁盘空间紧张时，此选项与 `repo-retention-archive-type` 配合可更激进地过期 WAL 段，但代价是相关备份将无法执行 PITR，因此 **不推荐**。
 
 ```yaml
 allowed: [1, 9999999]

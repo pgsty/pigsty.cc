@@ -33,6 +33,3 @@ Plv8 build breaks on EL10 (x86/arm) with the following problems:
 - find g++ problem
 - g++ 14 include `<algorithm>` problem
 - lto problem, g++14 link time optimization issue
-
-
-

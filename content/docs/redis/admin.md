@@ -36,7 +36,7 @@ categories: [任务]
 
 -------------
 
-### 初始化Redis
+## 初始化Redis
 
 您可以使用 [`redis.yml`](/docs/redis/playbook#redisyml) 剧本来初始化 Redis 集群、节点、或实例：
 
@@ -61,7 +61,7 @@ bin/redis-add 10.10.10.10 6379  # 初始化 redis 实例 '10.10.10.10:6379'
 
 -------------
 
-### 下线Redis
+## 下线Redis
 
 您可以使用 [`redis-rm.yml`](/docs/redis/playbook#redis-rmyml) 剧本来下线 Redis 集群、节点、或实例：
 
@@ -89,7 +89,7 @@ bin/redis-rm 10.10.10.10 6379  # 下线 redis 实例 '10.10.10.10:6379'
 
 -------------
 
-### 重新配置Redis
+## 重新配置Redis
 
 您可以部分执行 [`redis.yml`](/docs/redis/playbook#redisyml) 剧本来重新配置 Redis 集群、节点、或实例：
 
@@ -116,7 +116,7 @@ OK
 "10"
 ```
 
-Redis 提供了`redis-benchmark`工具，可以用于 Redis 的性能评估，或生成一些负载用于测试。
+Redis 提供了 `redis-benchmark` 工具，可以用于 Redis 的性能评估，或生成一些负载用于测试。
 
 ```bash
 redis-benchmark -h 10.10.10.13 -p 6379
@@ -124,7 +124,7 @@ redis-benchmark -h 10.10.10.13 -p 6379
 
 -------------
 
-### 手工设置Redis从库
+## 手工设置Redis从库
 
 https://redis.io/commands/replicaof/
 
@@ -140,7 +140,7 @@ https://redis.io/commands/replicaof/
 
 -------------
 
-### 设置Redis主从高可用
+## 设置Redis主从高可用
 
 Redis 独立主从集群可以通过 Redis 哨兵集群配置自动高可用，详细用户请参考 [Sentinel官方文档](https://redis.io/docs/management/sentinel/)
 
@@ -176,7 +176,7 @@ redis_sentinel_monitor:  # 需要被监控的主库列表，端口、密码、�
 
 -------------
 
-### 初始化 Redis 原生集群
+## 初始化 Redis 原生集群
 
 当 [`redis_mode`](/docs/redis/param#redis_mode) 设置为 `cluster` 时，`redis.yml` 会额外执行 `redis-join` 阶段：
 在 `/tmp/<cluster>-join.sh` 中使用 `redis-cli --cluster create --cluster-yes ... --cluster-replicas {{ redis_cluster_replicas }}` 把所有实例拼成原生集群。
@@ -186,9 +186,9 @@ redis_sentinel_monitor:  # 需要被监控的主库列表，端口、密码、�
 
 -------------
 
-### 扩容Redis节点
+## 扩容Redis节点
 
-#### 扩容独立主从集群
+### 扩容独立主从集群
 
 向现有的 Redis 主从集群添加新节点/实例时，首先在配置清单中添加新的定义：
 
@@ -206,7 +206,7 @@ redis-ms:
 ./redis.yml -l 10.10.10.11   # 仅部署新增的节点
 ```
 
-#### 扩容原生集群
+### 扩容原生集群
 
 向 Redis 原生集群添加新节点需要额外的步骤：
 
@@ -222,7 +222,7 @@ redis-cli --cluster add-node 10.10.10.14:6379 10.10.10.12:6379
 redis-cli --cluster reshard 10.10.10.12:6379
 ```
 
-#### 扩容哨兵集群
+### 扩容哨兵集群
 
 向 Sentinel 集群添加新实例后，需要同时完成实例部署与纳管目标刷新：
 
@@ -237,9 +237,9 @@ redis-cli --cluster reshard 10.10.10.12:6379
 
 -------------
 
-### 缩容Redis节点
+## 缩容Redis节点
 
-#### 缩容独立主从集群
+### 缩容独立主从集群
 
 ```bash
 # 1. 如果要移除的是从库，直接移除即可
@@ -255,7 +255,7 @@ redis-cli -h 10.10.10.10 -p 6379 REPLICAOF 10.10.10.10 6380  # 降级原主库
 # 4. 更新配置清单，移除相关定义
 ```
 
-#### 缩容原生集群
+### 缩容原生集群
 
 ```bash
 # 1. 先迁移数据槽位
@@ -274,9 +274,9 @@ redis-cli --cluster del-node 10.10.10.12:6379 <node-id>
 
 -------------
 
-### 数据备份与恢复
+## 数据备份与恢复
 
-#### 手动备份
+### 手动备份
 
 ```bash
 # 触发 RDB 快照
@@ -289,7 +289,7 @@ redis-cli -h 10.10.10.10 -p 6379 -a <password> LASTSAVE
 cp /data/redis/redis-ms-1-6379/dump.rdb /backup/redis-ms-$(date +%Y%m%d).rdb
 ```
 
-#### 数据恢复
+### 数据恢复
 
 ```bash
 # 1. 停止 Redis 实例
@@ -303,7 +303,7 @@ chown redis:redis /data/redis/redis-ms-1-6379/dump.rdb
 sudo systemctl start redis-ms-1-6379
 ```
 
-#### 使用 AOF 持久化
+### 使用 AOF 持久化
 
 如果需要更高的数据安全性，可以启用 AOF：
 
@@ -323,9 +323,9 @@ redis-ms:
 
 -------------
 
-### 常见问题诊断
+## 常见问题诊断
 
-#### 连接问题排查
+### 连接问题排查
 
 ```bash
 # 检查 Redis 服务状态
@@ -341,7 +341,7 @@ sudo iptables -L -n | grep 6379
 redis-cli -h 10.10.10.10 -p 6379 PING
 ```
 
-#### 内存问题排查
+### 内存问题排查
 
 ```bash
 # 查看内存使用情况
@@ -354,7 +354,7 @@ redis-cli -h 10.10.10.10 -p 6379 --bigkeys
 redis-cli -h 10.10.10.10 -p 6379 MEMORY DOCTOR
 ```
 
-#### 性能问题排查
+### 性能问题排查
 
 ```bash
 # 查看慢查询日志
@@ -367,7 +367,7 @@ redis-cli -h 10.10.10.10 -p 6379 MONITOR
 redis-cli -h 10.10.10.10 -p 6379 CLIENT LIST
 ```
 
-#### 复制问题排查
+### 复制问题排查
 
 ```bash
 # 查看复制状态
@@ -380,9 +380,9 @@ redis-cli -h 10.10.10.10 -p 6380 INFO replication | grep lag
 
 -------------
 
-### 性能调优
+## 性能调优
 
-#### 内存优化
+### 内存优化
 
 ```yaml
 redis-cache:
@@ -392,7 +392,7 @@ redis-cache:
     redis_conf: redis.conf
 ```
 
-#### 持久化优化
+### 持久化优化
 
 ```yaml
 # 纯缓存场景：禁用持久化
@@ -408,7 +408,7 @@ redis-data:
     redis_aof_enabled: true
 ```
 
-#### 连接池配置建议
+### 连接池配置建议
 
 客户端应用连接 Redis 时，建议：
 
@@ -417,7 +417,7 @@ redis-data:
 - 启用 TCP keepalive
 - 对于高并发场景，考虑使用 Pipeline 批量操作
 
-#### 监控关键指标
+### 监控关键指标
 
 通过 Grafana 仪表盘关注以下指标：
 

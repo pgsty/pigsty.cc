@@ -8,7 +8,7 @@ categories: [参考]
 ---
 
 
-`oltp.yml` 是 Pigsty 的默认配置模板，针对**在线事务处理**（OLTP）负载进行了优化。适用于 4-128 核 CPU 的服务器，特点是高并发连接、低延迟响应、高事务吞吐量。
+`oltp.yml` 是 Pigsty 的默认配置模板，针对 **在线事务处理**（OLTP）负载进行了优化。适用于 4-128 核 CPU 的服务器，特点是高并发连接、低延迟响应、高事务吞吐量。
 
 > 建议同时使用 [**`node_tune`**](/docs/node/param#node_tune) = `oltp` 进行操作系统级别的配套调优。
 
@@ -87,7 +87,7 @@ OLTP 模板的内存分配策略：
 {.full-width}
 
 **work_mem 计算逻辑**：
-```
+```text
 work_mem = min(max(shared_buffers / max_connections, 64MB), 1GB)
 ```
 

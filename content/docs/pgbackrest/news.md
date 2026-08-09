@@ -20,7 +20,7 @@ categories: [参考]
 
 tarball 包含 pgBackRest 源码及预生成代码、命令参考手册页、HTML 文档，以及用于验证构建的冒烟测试。仅需 pgBackRest 通常依赖的库，即可使用 meson 和 ninja 进行构建。
 
-该 tarball 会以 `pgbackrest-{version}.tar.gz` 的名称作为附件随每个版本发布，并同时提供对应的 `.sha256sum` 校验和文件。请从 GitHub 的[版本发布](https://github.com/pgbackrest/pgbackrest/releases)页面下载，然后参阅 tarball 中的 `README.md` 了解构建与测试说明。
+该 tarball 会以 `pgbackrest-{version}.tar.gz` 的名称作为附件随每个版本发布，并同时提供对应的 `.sha256sum` 校验和文件。请从 GitHub 的 [版本发布](https://github.com/pgbackrest/pgbackrest/releases) 页面下载，然后参阅 tarball 中的 `README.md` 了解构建与测试说明。
 
 建议打包者使用发行版 tarball 进行构建，以避免未来版本因生成代码和文档而需要额外的构建工具。
 
@@ -35,7 +35,7 @@ pgBackRest 社区很高兴地宣布 [pgBackRest](https://pgbackrest.org) 2.59.0 
 
 pgBackRest 为管理备份与恢复基础设施提供了丰富而强大的功能，包括：并行备份与恢复、全量/差异/增量备份、块级增量备份、多仓库、delta 恢复、并行异步归档、恶意软件/勒索软件防护、逐文件校验和、备份期间验证页面校验和（启用时）、多种压缩类型、加密、部分备份/失败备份续传、从备库执行备份、表空间与链接支持、S3/Azure/GCS/SFTP 支持、备份过期、本地或通过 SSH/TLS 进行远程操作、灵活配置，以及更多功能。
 
-pgBackRest 可从 [PostgreSQL Yum 仓库](https://yum.postgresql.org)或 [PostgreSQL APT 仓库](https://apt.postgresql.org)安装，许多其他发行版也提供相应软件包。源码可从[版本发布](/docs/pgbackrest/release/)页面下载。
+pgBackRest 可从 [PostgreSQL Yum 仓库](https://yum.postgresql.org) 或 [PostgreSQL APT 仓库](https://apt.postgresql.org) 安装，许多其他发行版也提供相应软件包。源码可从 [版本发布](/docs/pgbackrest/release/) 页面下载。
 
 ### 重要新功能与改进 {#feature}
 
@@ -58,7 +58,7 @@ pgBackRest 可从 [PostgreSQL Yum 仓库](https://yum.postgresql.org)或 [Postgr
 ### 重要提示 {#note}
 
 - 默认情况下，只有 `restore` 命令允许由 root 用户运行。若要由 root 用户运行其他命令，请使用 `allow-root`（但不建议这样做）。
-- 每个版本现在都会附带一个新的发行版 tarball，其中包含预生成的文档、手册页和代码，从而简化打包流程。详情请参阅[新的发行版 tarball](#distribution-tarball)。
+- 每个版本现在都会附带一个新的发行版 tarball，其中包含预生成的文档、手册页和代码，从而简化打包流程。详情请参阅 [新的发行版 tarball](#distribution-tarball)。
 - 新增了对 `libsystemd` 的可选依赖。
 
 ### 相关链接 {#link}

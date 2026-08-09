@@ -8,7 +8,7 @@ categories: [概念]
 ---
 
 {{< infographic >}}
-```
+```text
 infographic list-row-simple-horizontal-arrow
 data
   title 网络分区故障切换流程
@@ -83,8 +83,8 @@ series:
 | **网络分区**（本文场景）  | 存活但无法访问 DCS |   可能仍在运行（需要主动降级）   | 被动等待 TTL 过期 | **有，需防护** |
 {.full-width}
 
-在网络分区场景中，主库 PostgreSQL 可能仍在运行并接受写入，这会导致**脑裂**问题。
-Patroni 通过**主动降级**机制解决：当无法刷新 Leader Key 时，主动将 PostgreSQL 降级为只读或关闭。
+在网络分区场景中，主库 PostgreSQL 可能仍在运行并接受写入，这会导致 **脑裂** 问题。
+Patroni 通过 **主动降级** 机制解决：当无法刷新 Leader Key 时，主动将 PostgreSQL 降级为只读或关闭。
 
 
 --------
@@ -95,7 +95,7 @@ Patroni 通过**主动降级**机制解决：当无法刷新 Leader Key 时，�
 
 当主库 Patroni 与 DCS 网络分区后，无法刷新 Leader Key，开始重试。
 
-```
+```text
 时间线：
   分区发生      检测分区      重试超时      主库降级
      |           |            |            |
@@ -121,7 +121,7 @@ loop + retry & \text{最坏（分区刚好在刷新后）}
 
 主库降级后，Leader Key 仍然存在于 DCS 中，需要等待 TTL 自然过期。
 
-```
+```text
 时间线：
   主库降级                   TTL 过期
      |                         |
@@ -141,7 +141,7 @@ T_{expire} = ttl - loop - retry \quad \text{（近似常数）}
 
 从库在 `loop_wait` 周期醒来后检查 DCS 中的 Leader Key 状态。
 
-```
+```text
 时间线：
     租约过期      从库醒来
        |            |
@@ -165,7 +165,7 @@ loop & \text{最坏}
 
 从库发现 Leader Key 过期后，开始竞选过程。
 
-```
+```text
 选举流程：
   从库A ──→ 查询复制位置 ──→ 比较 ──→ 尝试抢锁 ──→ 成功
   从库B ──→ 查询复制位置 ──→ 比较 ──→ 尝试抢锁 ──→ 失败
@@ -188,7 +188,7 @@ T_{elect} = \begin{cases}
 
 HAProxy 检测新主库上线，需要连续 `rise` 次健康检查成功。
 
-```
+```text
 检测时序：
   新主提升    首次检查    第二次检查   第三次检查（UP）
      |          |           |           |
@@ -284,7 +284,7 @@ pg_rto_plan:  # [ttl, loop, retry, start, margin, inter, fastinter, downinter, r
 
 ## 脑裂防护
 
-网络分区的最大风险是**脑裂**：老主库可能仍在运行并接受写入。Patroni 提供多重防护机制：
+网络分区的最大风险是 **脑裂**：老主库可能仍在运行并接受写入。Patroni 提供多重防护机制：
 
 ### 1. 主库自我降级
 
@@ -323,7 +323,7 @@ watchdog:
 
 这是最常见的网络分区场景，本文主要分析此场景。
 
-```
+```text
 ┌─────────┐         ╳         ┌─────────┐
 │  主库   │ ←── 分区 ──→ │   DCS   │
 │ Patroni │                   │  etcd   │
@@ -343,7 +343,7 @@ watchdog:
 
 ### 场景 B：主库正常，从库与 DCS 分区
 
-```
+```text
 ┌─────────┐                   ┌─────────┐
 │  主库   │ ←── 正常 ──→ │   DCS   │
 │ Patroni │                   │  etcd   │
@@ -363,7 +363,7 @@ watchdog:
 
 ### 场景 C：所有节点与 DCS 分区
 
-```
+```text
 ┌─────────┐         ╳         ┌─────────┐
 │  主库   │ ←── 分区 ──→ │   DCS   │
 │ Patroni │                   │  etcd   │
@@ -394,4 +394,3 @@ watchdog:
 
 **关键洞察**：网络分区的 RTO 与过期故障相同，但需要额外的脑裂防护机制。
 确保满足 `loop_wait + 2 × retry_timeout ≤ ttl` 约束是防止脑裂的关键设计。
-

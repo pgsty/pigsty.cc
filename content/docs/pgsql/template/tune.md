@@ -93,7 +93,7 @@ Pigsty 默认会检测系统的内存大小，并以此为依据设定最大连�
 | `max_parallel_workers_per_gather`  | `0`，按需启用                 | 禁用单个查询的并行 gather      |
 {.full-width}
 
-请注意，CRIT 和 TINY 模板直接通过设置 `max_parallel_workers_per_gather = 0 ` 关闭了并行查询。
+请注意，CRIT 和 TINY 模板直接通过设置 `max_parallel_workers_per_gather = 0` 关闭了并行查询。
 用户可以按需在需要时设置此参数以启用并行查询。
 
 OLTP 和 CRIT 模板都额外设置了以下参数，将并行查询的 Cost x 2，以降低使用并行查询的倾向。
@@ -127,7 +127,7 @@ temp_file_limit: {{ ([pg_size_twentieth, 200])|min }}GB               # 1/20 of 
 ```
 
 - `pg_size_twentieth` 先按磁盘容量的 1/20 向上取整，并限制在 1～100GB。
-- 因此前三种标准模板中，`temp_file_limit` 与 `min_wal_size` 的**实际有效上限是 100GB**。
+- 因此前三种标准模板中，`temp_file_limit` 与 `min_wal_size` 的 **实际有效上限是 100GB**。
 - `max_wal_size` 的实际有效上限是 400GB。
 - `max_slot_wal_keep_size` 的实际有效上限是 600GB。
 

@@ -80,7 +80,7 @@ Pigsty 的 [**自签名 CA**](/docs/concept/sec/ca) 位于 Pigsty 主目录下�
 
 被 Pigsty 所管理的节点将安装以下证书文件：
 
-```
+```text
 /etc/pki/ca.crt                             # root:root 0644，所有节点都添加的根证书
 /etc/pki/ca-trust/source/anchors/ca.crt     # EL 系统受信任锚点
 /usr/local/share/ca-certificates/ca.crt     # Debian/Ubuntu 系统受信任锚点
@@ -88,7 +88,7 @@ Pigsty 的 [**自签名 CA**](/docs/concept/sec/ca) 位于 Pigsty 主目录下�
 
 所有 infra 节点都会有以下证书：
 
-```
+```text
 /etc/pki/infra.crt                          # root:infra 0644，infra 节点证书
 /etc/pki/infra.key                          # root:infra 0640，infra 节点密钥
 ```
@@ -234,9 +234,9 @@ rsync -avz ./ meta-2:~/pigsty
 
 以下参数和内部变量均与 PostgreSQL 数据库目录结构相关：
 
-* [**`pg_dbsu_home`**](/docs/pgsql/param#pg_dbsu_home)： Postgres 默认用户的家目录，默认为`/var/lib/pgsql`
-* [**`pg_bin_dir`**](/docs/pgsql/param#pg_bin_dir)： Postgres 二进制目录，默认为`/usr/pgsql/bin/`
-* [**`pg_fs_main`**](/docs/pgsql/param#pg_fs_main)：Postgres 主数据目录，默认为`/data/postgres`
+* [**`pg_dbsu_home`**](/docs/pgsql/param#pg_dbsu_home)： Postgres 默认用户的家目录，默认为 `/var/lib/pgsql`
+* [**`pg_bin_dir`**](/docs/pgsql/param#pg_bin_dir)： Postgres 二进制目录，默认为 `/usr/pgsql/bin/`
+* [**`pg_fs_main`**](/docs/pgsql/param#pg_fs_main)：Postgres 主数据目录，默认为 `/data/postgres`
 * [**`pg_fs_backup`**](/docs/pgsql/param#pg_fs_backup)：Postgres 备份盘挂载点，默认为 `/data/backups`（可选，也可以选择备份到主数据盘上的子目录）
 * [**`pg_data`**](/docs/pgsql/param#pg_data)：内部变量，固定表示 Postgres 数据目录软链 `/pg/data`
 * **`pg_cluster_dir`**：派生变量，`{{ pg_fs_main }}/{{ pg_cluster }}-{{ pg_version }}`
@@ -347,7 +347,7 @@ export PGDATA=/pg/data
 
 ## Pgbouncer FHS
 
-Pgbouncer 使用与 `{{ pg_dbsu }}`（默认为 `postgres`）相同的用户运行，配置文件位于`/etc/pgbouncer`。
+Pgbouncer 使用与 `{{ pg_dbsu }}`（默认为 `postgres`）相同的用户运行，配置文件位于 `/etc/pgbouncer`。
 
 * `pgbouncer.ini`：连接池主配置文件（`postgres:postgres 0640`）
 * `database.txt`：定义连接池中的数据库（`postgres:postgres 0600`）

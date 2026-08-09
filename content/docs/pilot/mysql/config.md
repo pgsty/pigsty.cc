@@ -7,7 +7,7 @@ module: [MYSQL]
 categories: [参考]
 ---
 
-MYSQL 模块通过清单（Inventory）声明集群，`mysql.yml` 将现场收敛到声明状态。本页介绍拓扑规划与全部配置项的写法；参数细节见[参数参考](/docs/pilot/mysql/param)。
+MYSQL 模块通过清单（Inventory）声明集群，`mysql.yml` 将现场收敛到声明状态。本页介绍拓扑规划与全部配置项的写法；参数细节见 [参数参考](/docs/pilot/mysql/param)。
 
 
 --------
@@ -79,7 +79,7 @@ my-test:
 部署后形成单主 MGR：一个 PRIMARY 可写，两个 SECONDARY 只读，容忍一台故障。每个成员运行 Router，从任一成员的 `6446` 都能到达当前主库。
 
 {{% alert title="每次操作都要选择完整集群" color="warning" %}}
-所有 `mysql.yml` 操作必须用 `-l` 选中该集群的**全部成员**（或不加 `-l` 收敛所有 MySQL 集群）。部分成员选择会在预检阶段被拒绝，这是防止拓扑分歧的刻意设计。
+所有 `mysql.yml` 操作必须用 `-l` 选中该集群的 **全部成员**（或不加 `-l` 收敛所有 MySQL 集群）。部分成员选择会在预检阶段被拒绝，这是防止拓扑分歧的刻意设计。
 {{% /alert %}}
 
 
@@ -103,7 +103,7 @@ mysql_databases:
 | `encrypt` | `false` | 库级 `DEFAULT ENCRYPTION`；需自行配置 InnoDB Keyring 组件（平台未预置，未配置时建表会失败） |
 {.full-width}
 
-声明是**增量收敛**：重跑会创建缺失的库，但从列表删除条目不会 DROP 数据库。删除数据属于手工运维操作。
+声明是 **增量收敛**：重跑会创建缺失的库，但从列表删除条目不会 DROP 数据库。删除数据属于手工运维操作。
 
 {{% alert title="所有表都必须有主键" color="info" %}}
 平台默认启用 `sql_require_primary_key=ON`：创建无主键表会报 `ERROR 3750`。这不是刁难——无主键表在 MGR 下只读不可写，还会在灾难恢复时阻塞 AdminAPI 重建集群。请为所有表定义主键（或使用不可见列主键）；确有特殊需要时可通过 `mysql_parameters` 关闭。
@@ -132,7 +132,7 @@ mysql_users:
 行为约定：
 
 - 用户不存在则创建，存在则按声明更新密码与连接数上限；
-- `priv` 中的授权会被执行（GRANT），但**移除映射不会自动 REVOKE**；
+- `priv` 中的授权会被执行（GRANT），但 **移除映射不会自动 REVOKE**；
 - 不能声明 `root`、`dbuser_monitor`、`dbuser_cluster`、`dbuser_backup` 这些平台身份；
 - 服务端强制 TLS：客户端默认的 `PREFERRED` 模式会自动协商加密，明文连接（`DISABLED`）会被拒绝；建议显式使用 `VERIFY_CA` 校验证书。
 
@@ -158,7 +158,7 @@ my-test:
 - 键名须为普通选项名（字母开头，可含 `._-`），值必须是单行标量；
 - 渲染后的配置仍会经过 `mysqld --validate-config` 校验，非法参数在部署阶段即失败，不会影响运行中的服务；
 - **平台保留参数不可覆盖**：身份（`server_id`、`datadir`、`port`、`socket`、`bind_address`、`report_host` 等）、复制（`gtid_mode`、`log_bin`、`group_replication_*`）与 TLS（`require_secure_transport`、`ssl_*`）由角色统一管理，声明即拒绝；
-- 参数变更会触发[编排式滚动重启](/docs/pilot/mysql/admin#修改集群参数)：从库先行、主库殿后。
+- 参数变更会触发 [编排式滚动重启](/docs/pilot/mysql/admin#修改集群参数)：从库先行、主库殿后。
 
 内存基线无需配置：缓冲池为节点内存的 25%（下限 256MB），Redo 容量为缓冲池一半（128MB–4GB），复制并行度按 CPU 推导。需要精确控制时用 `mysql_parameters` 覆盖 `innodb_buffer_pool_size` 等参数即可。
 
@@ -175,15 +175,15 @@ mysql_backup_repo:
     retention: 7                      # 保留最近 7 份全量
 ```
 
-备份契约（详见[日常管理](/docs/pilot/mysql/admin#管理备份)）：
+备份契约（详见 [日常管理](/docs/pilot/mysql/admin#管理备份)）：
 
 - 每日一次 XtraBackup **全量物理备份**，备份后立即 prepare，产出可直接恢复的目录；
-- 单机在本机备份；HA 由每个成员的定时器各自触发，但**只有当前 PRIMARY 真正执行**，其余成员自动跳过；
+- 单机在本机备份；HA 由每个成员的定时器各自触发，但 **只有当前 PRIMARY 真正执行**，其余成员自动跳过；
 - 目录布局 `<path>/<cluster>/<UTC 时间戳>/`，`latest` 符号链接原子指向最新一份，按 `retention` 剪枝；
 - 没有增量链、Binlog 归档与 PITR；单机场景的恢复点就是最近一次备份。
 
 {{% alert title="备份位置跟随主库" color="warning" %}}
-HA 集群发生主从切换后，新备份会落在新主库的本地磁盘上。恢复前请在**所有成员**上检查 `latest` 指向的时间戳，取最新的一份。异地容灾请自行同步备份目录（如 rclone/rsync 定时任务）。
+HA 集群发生主从切换后，新备份会落在新主库的本地磁盘上。恢复前请在 **所有成员** 上检查 `latest` 指向的时间戳，取最新的一份。异地容灾请自行同步备份目录（如 rclone/rsync 定时任务）。
 {{% /alert %}}
 
 

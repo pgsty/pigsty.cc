@@ -32,7 +32,7 @@ categories: [任务]
 ```
 
 该剧本没有防误删开关，且全量执行会删除 `infra_data`、`nginx_data`、`nginx_home`（默认 `/www`）和 `/var/lib/grafana`。
-如果只需要停止服务或注销目标，应使用 `-t service` 或 `-t deregister`；执行前请阅读[移除剧本的完整范围](/docs/infra/playbook/#infra-rmyml)并备份所需数据。
+如果只需要停止服务或注销目标，应使用 `-t service` 或 `-t deregister`；执行前请阅读 [移除剧本的完整范围](/docs/infra/playbook/#infra-rmyml) 并备份所需数据。
 
 
 ----------------

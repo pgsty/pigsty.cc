@@ -112,7 +112,7 @@ redis_rm_pkg: false               # 移除Redis实例时是否卸载Redis软件�
 
 身份参数，必选参数，必须显式在集群层面配置，将用作集群内资源的命名空间。
 
-需要遵循特定命名规则：`[a-z][a-z0-9-]*`，以兼容不同约束对身份标识的要求，建议使用`redis-`作为集群名前缀。
+需要遵循特定命名规则：`[a-z][a-z0-9-]*`，以兼容不同约束对身份标识的要求，建议使用 `redis-` 作为集群名前缀。
 
 
 
@@ -146,7 +146,7 @@ redis-test: # redis native cluster: 3m x 3s
   vars: { redis_cluster: redis-test ,redis_password: 'redis.test' ,redis_mode: cluster, redis_max_memory: 32MB }
 ```
 
-每一个 Redis 实例在对应节点上监听一个唯一端口，实例配置项中`replica_of` 用于设置一个实例的上游主库地址，构建主从复制关系。
+每一个 Redis 实例在对应节点上监听一个唯一端口，实例配置项中 `replica_of` 用于设置一个实例的上游主库地址，构建主从复制关系。
 
 ```yaml
 redis_instances:
@@ -164,7 +164,7 @@ redis_instances:
 
 参数名称： `redis_fs_main`， 类型： `path`， 层次：`C`
 
-Redis 使用的主数据目录，默认为`/data/redis`。
+Redis 使用的主数据目录，默认为 `/data/redis`。
 
 部署阶段不允许使用旧值 `/data`（`redis` 角色的 identity `assert` 会直接报错）；移除阶段为兼容旧配置，`redis-rm.yml` 在 `redis_fs_main=/data` 时会按 `/data/redis` 执行删除。
 
@@ -220,9 +220,9 @@ Redis 集群的工作模式，有三种选项：`standalone`, `cluster`, `sentin
 * `cluster`： Redis 原生集群模式
 * `sentinel`：Redis 高可用组件：哨兵
 
-当使用`standalone`模式时，Pigsty 会根据 `replica_of` 参数设置 Redis 主从复制关系。
+当使用 `standalone` 模式时，Pigsty 会根据 `replica_of` 参数设置 Redis 主从复制关系。
 
-当使用`cluster`模式时，Pigsty 会根据 [`redis_cluster_replicas`](#redis_cluster_replicas) 参数使用所有定义的实例创建原生 Redis 集群。
+当使用 `cluster` 模式时，Pigsty 会根据 [`redis_cluster_replicas`](#redis_cluster_replicas) 参数使用所有定义的实例创建原生 Redis 集群。
 
 当 `redis_mode=sentinel` 时，`redis.yml` 会执行 `redis-ha` 阶段（`redis.yml` 第 80~130 行）将 [`redis_sentinel_monitor`](#redis_sentinel_monitor) 中的目标批量下发到所有哨兵；当 `redis_mode=cluster` 时还会执行 `redis-join` 阶段（`redis.yml` 第 134~180 行）调用 `redis-cli --cluster create --cluster-yes ... --cluster-replicas {{ redis_cluster_replicas }}`。这两个阶段均在普通 `./redis.yml -l <cluster>` 中自动触发，也可以通过 `-t redis-ha` 或 `-t redis-join` 单独运行。
 
@@ -256,7 +256,7 @@ Redis 服务器绑定的 IP 地址，空字符串将使用配置清单中定义�
 
 在生产环境中出于安全性考虑，建议仅绑定内网 IP，即将此值设置为空字符串 `''`
 
-当该值为空字符串时，模板 [`roles/redis/templates/redis.conf`](https://github.com/pgsty/pigsty/blob/main/roles/redis/templates/redis.conf) 
+当该值为空字符串时，模板 [`roles/redis/templates/redis.conf`](https://github.com/pgsty/pigsty/blob/main/roles/redis/templates/redis.conf)
 会使用 `inventory_hostname` 渲染 `bind <ip>`，从而绑定到清单中声明的管理地址。
 
 

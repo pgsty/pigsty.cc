@@ -50,7 +50,7 @@ make reload-station   # 相当于先下载最新的Station数据再加载：get-
 **获取并导入最新的 `isd.daily` 数据**
 
 `isd.daily` 是一个每日更新的数据集，包含了全球各气象站的日观测数据摘要，使用以下命令下载并导入。
-请注意，直接从 NOAA 网站下载的原始数据需要经过**解析**方可入库，所以你需要下载或构建一个 ISD 数据 Parser。
+请注意，直接从 NOAA 网站下载的原始数据需要经过 **解析** 方可入库，所以你需要下载或构建一个 ISD 数据 Parser。
 
 ```bash
 make get-parser       # 从 Github 下载 Parser 二进制，当然你也可以用 make build 直接用 go 构建。

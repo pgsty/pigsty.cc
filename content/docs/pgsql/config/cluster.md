@@ -52,7 +52,7 @@ Demo 展示，开发测试，承载临时需求，进行无关紧要的计算分
 
 ## 只读从库
 
-要添加一台只读从库（Replica）实例，您可以在 `pg-test` 中添加一个新节点，并将其 [`pg_role`](/docs/pgsql/param#pg_role) 设置为`replica`。
+要添加一台只读从库（Replica）实例，您可以在 `pg-test` 中添加一个新节点，并将其 [`pg_role`](/docs/pgsql/param#pg_role) 设置为 `replica`。
 
 ```yaml
 pg-test:
@@ -80,7 +80,7 @@ bin/pgsql-add pg-test 10.10.10.12   # 添加从库到现有的集群
 
 离线实例（Offline）是专门用于服务慢查询、ETL、OLAP 流量和交互式查询等的专用只读从库。慢查询/长事务对在线业务的性能与稳定性有不利影响，因此最好将它们与在线业务隔离开来。
 
-要添加离线实例，请为其分配一个新实例，并将 [`pg_role`](/docs/pgsql/param#pg_role) 设置为`offline`。
+要添加离线实例，请为其分配一个新实例，并将 [`pg_role`](/docs/pgsql/param#pg_role) 设置为 `offline`。
 
 ```yaml
 pg-test:
@@ -92,7 +92,7 @@ pg-test:
     pg_cluster: pg-test
 ```
 
-专用离线实例的工作方式与常见的从库实例类似，但它在 `pg-test-replica` 服务中用作备份服务器。 也就是说，只有当所有`replica`实例都宕机时，离线和主实例才会提供此项只读服务。
+专用离线实例的工作方式与常见的从库实例类似，但它在 `pg-test-replica` 服务中用作备份服务器。 也就是说，只有当所有 `replica` 实例都宕机时，离线和主实例才会提供此项只读服务。
 
 许多情况下，数据库资源有限，单独使用一台服务器作为离线实例是不经济的做法。作为折中，您可以选择一台现有的从库实例，打上 [`pg_offline_query`](/docs/pgsql/param#pg_offline_query) 标记，将其标记为一台可以承载"离线查询"的实例。在这种情况下，这台只读从库会同时承担在线只读请求与离线类查询。您可以使用 [`pg_default_hba_rules`](/docs/pgsql/param#pg_default_hba_rules) 和 [`pg_hba_rules`](/docs/pgsql/param#pg_hba_rules) 对离线实例进行额外的访问控制。
 
@@ -103,11 +103,11 @@ pg-test:
 
 ## 同步备库
 
-当启用同步备库（Sync Standby）时，PostgreSQL 将选择一个从库作为**同步备库**，其他所有从库作为**候选者**。 主数据库会等待备库实例刷新到磁盘，然后才确认提交，备库实例始终拥有最新的数据，没有复制延迟，主从切换至同步备库不会有数据丢失。
+当启用同步备库（Sync Standby）时，PostgreSQL 将选择一个从库作为 **同步备库**，其他所有从库作为 **候选者**。 主数据库会等待备库实例刷新到磁盘，然后才确认提交，备库实例始终拥有最新的数据，没有复制延迟，主从切换至同步备库不会有数据丢失。
 
 PostgreSQL 默认使用异步流复制，主库故障时可能丢失尚未复制的 WAL。[`pg_rpo`](/docs/pgsql/param#pg_rpo) 配置的是 Patroni 候选副本的采样落后阈值，并非实际丢失量硬上限；实际窗口还取决于写入速率、复制状态与 Patroni 采样时机。
 
-但在某些关键场景中（例如，金融交易），数据丢失是完全不可接受的，或者，读取复制延迟是不可接受的。在这种情况下，您可以使用同步提交来解决这个问题。 要启用同步备库模式，您可以简单地使用 [`pg_conf`](/docs/pgsql/param#pg_conf) 中的`crit.yml`模板。
+但在某些关键场景中（例如，金融交易），数据丢失是完全不可接受的，或者，读取复制延迟是不可接受的。在这种情况下，您可以使用同步提交来解决这个问题。 要启用同步备库模式，您可以简单地使用 [`pg_conf`](/docs/pgsql/param#pg_conf) 中的 `crit.yml` 模板。
 
 ```yaml
 pg-test:
@@ -143,7 +143,7 @@ $ pg edit-config pg-test    # 在管理员节点以管理员用户身份运行
 
 法定人数提交（Quorum Commit）提供了比同步备库更强大的控制能力：特别是当您有多个从库时，您可以设定提交成功的标准，实现更高/更低的一致性级别（以及可用性之间的权衡）。
 
-如果想要**最少两个从**库来确认提交，可以通过 Patroni [配置集群](/docs/pgsql/admin/cluster#配置集群)，调整参数 [`synchronous_node_count`](https://patroni.readthedocs.io/en/latest/replication_modes.html#synchronous-replication-factor) 并应用生效
+如果想要 **最少两个从** 库来确认提交，可以通过 Patroni [配置集群](/docs/pgsql/admin/cluster#配置集群)，调整参数 [`synchronous_node_count`](https://patroni.readthedocs.io/en/latest/replication_modes.html#synchronous-replication-factor) 并应用生效
 
 ```yaml
 synchronous_mode: true          # 确保同步提交已经启用
@@ -219,7 +219,7 @@ Apply these changes? [y/N]: y
 
 备份集群的定义方式与正常集群的定义基本相同，除了在主库上额外定义了 [`pg_upstream`](/docs/pgsql/param#pg_upstream) 参数，备份集群的主库被称为 **备份集群领导者** （Standby Leader）。
 
-例如，下面定义了一个`pg-test`集群，以及其备份集群`pg-test2`，其配置清单可能如下所示：
+例如，下面定义了一个 `pg-test` 集群，以及其备份集群 `pg-test2`，其配置清单可能如下所示：
 
 ```yaml
 # pg-test 是原始集群
@@ -236,7 +236,7 @@ pg-test2:
   vars: { pg_cluster: pg-test2 }
 ```
 
-而 `pg-test2` 集群的主节点 `pg-test2-1` 将是 `pg-test` 的下游从库，并在`pg-test2`集群中充当备份集群领导者（**Standby Leader**）。
+而 `pg-test2` 集群的主节点 `pg-test2-1` 将是 `pg-test` 的下游从库，并在 `pg-test2` 集群中充当备份集群领导者（**Standby Leader**）。
 
 只需确保备份集群的主节点上配置了 [`pg_upstream`](/docs/pgsql/param#pg_upstream) 参数，以便自动从原始上游拉取备份。
 
@@ -249,7 +249,7 @@ bin/pgsql-add pg-test2    # 创建备份集群
 
 如有必要（例如，上游发生主从切换/故障转移），您可以通过 [配置集群](/docs/pgsql/admin/cluster#配置集群) 更改备份集群的复制上游。
 
-要这样做，只需将`standby_cluster.host`更改为新的上游 IP 地址并应用。
+要这样做，只需将 `standby_cluster.host` 更改为新的上游 IP 地址并应用。
 
 ```bash
 $ pg edit-config pg-test2
@@ -272,7 +272,7 @@ $ pg edit-config pg-test2
 
 你可以随时将备份集群提升为独立集群，这样该集群就可以独立承载写入请求，并与原集群分叉。
 
-为此，你必须 [配置](/docs/pgsql/admin/cluster#配置集群) 该集群并完全擦除`standby_cluster`部分，然后应用。
+为此，你必须 [配置](/docs/pgsql/admin/cluster#配置集群) 该集群并完全擦除 `standby_cluster` 部分，然后应用。
 
 ```bash
 $ pg edit-config pg-test2
@@ -409,4 +409,3 @@ SELECT create_reference_table('pgbench_branches')         ; SELECT truncate_loca
 SELECT create_reference_table('pgbench_history')          ; SELECT truncate_local_data_after_distributing_table($$public.pgbench_history$$);
 SELECT create_reference_table('pgbench_tellers')          ; SELECT truncate_local_data_after_distributing_table($$public.pgbench_tellers$$);
 ```
-

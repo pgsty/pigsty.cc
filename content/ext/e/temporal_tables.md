@@ -259,13 +259,13 @@ CREATE EXTENSION temporal_tables;
 
 时态表（temporal table）是一种记录行有效时间段的表。系统时段（system period）是由系统自动维护的列（或列对），包含该行在数据库层面有效的时间范围。当你向这样的表中插入行时，系统会自动生成时段的起止值。当你更新或删除系统时段时态表中的行时，旧版本会自动归档到另一张表——即历史表（history table）。
 
-更多用法可参考这篇[优秀教程](http://clarkdave.net/2015/02/historical-records-with-postgresql-and-temporal-tables-and-sql-2011/)。
+更多用法可参考这篇 [优秀教程](http://clarkdave.net/2015/02/historical-records-with-postgresql-and-temporal-tables-and-sql-2011/)。
 
 ### 创建系统时段时态表
 
 该扩展使用一个通用触发器函数来维护系统时段时态表的行为：
 
-```
+```text
 versioning(<system_period_column_name>, <history_table_name>, <adjust>)
 ```
 

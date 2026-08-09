@@ -14,9 +14,9 @@ categories: [参考]
 
 ## 预加载扩展
 
-大多数扩展安装后可直接使用 `CREATE EXTENSION` 启用，但部分使用 PostgreSQL Hook 机制的扩展需要**预加载**。
+大多数扩展安装后可直接使用 `CREATE EXTENSION` 启用，但部分使用 PostgreSQL Hook 机制的扩展需要 **预加载**。
 
-预加载通过 `shared_preload_libraries` 参数指定，修改后需**重启数据库**生效。
+预加载通过 `shared_preload_libraries` 参数指定，修改后需 **重启数据库** 生效。
 
 ### 需要预加载的扩展
 
@@ -43,7 +43,7 @@ categories: [参考]
 
 `shared_preload_libraries` 中扩展的加载顺序很重要：
 
-- `timescaledb` 和 `citus` 必须放在**最前面**
+- `timescaledb` 和 `citus` 必须放在 **最前面**
 - 如果同时使用，`citus` 应在 `timescaledb` 之前
 - 统计类扩展应在 `pg_stat_statements` 之后，以使用相同的 query_id
 
@@ -154,4 +154,3 @@ pg edit-config pg-meta --force -p 'pg_stat_statements.track=all'
 ```sql
 SHOW shared_preload_libraries;
 ```
-

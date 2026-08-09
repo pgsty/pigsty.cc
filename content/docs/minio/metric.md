@@ -9,8 +9,8 @@ categories: [参考]
 
 本页快照记录 [**`MINIO`**](/docs/minio) 模块的 79 类监控指标；实际运行时的指标集合会随软件包版本、启用的采集器和目标状态变化。
 
-| Metric Name                                      | Type    | Labels                                                         | Description                                                                                                                                 | 
-|--------------------------------------------------|---------|----------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------| 
+| Metric Name                                      | Type    | Labels                                                         | Description                                                                                                                                 |
+|--------------------------------------------------|---------|----------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------|
 | minio_audit_failed_messages                      | counter | `ip`, `job`, `target_id`, `cls`, `instance`, `server`, `ins`   | Total number of messages that failed to send since start                                                                                    |
 | minio_audit_target_queue_length                  | gauge   | `ip`, `job`, `target_id`, `cls`, `instance`, `server`, `ins`   | Number of unsent messages in queue for target                                                                                               |
 | minio_audit_total_messages                       | counter | `ip`, `job`, `target_id`, `cls`, `instance`, `server`, `ins`   | Total number of messages sent since start                                                                                                   |

@@ -14,7 +14,7 @@ PostgreSQL 并不是一个简单的关系型数据库，而是一个数据管理
 
 ## OLAP 领域迎来踢馆者
 
-在 2016 年的一次数据库沙龙里，我提出了一个观点： 现在 PostgreSQL 生态的一个主要遗憾是，缺少一个**足够好**的列式存储分析插件来做 OLAP 分析。尽管 PostgreSQL 本身提供了很强大的分析功能集，应付常规的分析任务绰绰有余。但在较大数据量下全量分析的**性能**，相比专用的实时数仓仍然有些不够看。
+在 2016 年的一次数据库沙龙里，我提出了一个观点： 现在 PostgreSQL 生态的一个主要遗憾是，缺少一个 **足够好** 的列式存储分析插件来做 OLAP 分析。尽管 PostgreSQL 本身提供了很强大的分析功能集，应付常规的分析任务绰绰有余。但在较大数据量下全量分析的 **性能**，相比专用的实时数仓仍然有些不够看。
 
 以分析领域的权威评测 [**ClickBench**](https://benchmark.clickhouse.com/) 为例，我们在其中标注出了 PostgreSQL 与生态扩展插件以及兼容衍生数据库在其中的性能表现。原生未经过调优的 PostgreSQL 表现较为拉垮（**x1050**），但经过调优后可以达到（**x47**）；此外还有三个与分析有关系的扩展：列存 **Hydra**（**x42**），时序扩展 **TimescaleDB**（**x103**），以及分布式扩展 **Citus**（**x262**）。
 
@@ -42,13 +42,13 @@ ParadeDB 与 DuckDB 的出现让 PostgreSQL 的分析性能来到了 OLAP 的第
 
 在相当一段时间里，数据处理的最佳实践是使用 MySQL / PG 处理 OLTP 工作负载，并通过 ETL 将数据同步到专用的 OLAP 组件中去处理，比如 Greenplum, ClickHouse, Doris, Snowflake 等等。
 
-![](/img/hero/eater/ddia.jpg)
+![《设计数据密集型应用》](/img/hero/eater/ddia.jpg)
 
 > 设计数据密集型应用，Martin Kleppmann，[第三章](http://ddia.vonng.com/#/ch3)
 
-与许多 “专用数据库” 一样，专业的 OLAP 组件的优势往往在于**性能** —— 相比原生 PG、MySQL 上有 1～3 个数量级的提升；而代价则是数据冗余、 大量不必要的数据搬运工作、分布式组件之间缺乏一致性、额外的专业技能带来的复杂度成本、学习成本、以及人力成本、 额外的软件许可费用、极其有限的查询语言能力、可编程性、可扩展性、有限的工具链、以及与 OLTP 数据库相比更差的数据完整性和可用性 —— **但这是一个合理的利弊权衡**。
+与许多 “专用数据库” 一样，专业的 OLAP 组件的优势往往在于 **性能** —— 相比原生 PG、MySQL 上有 1～3 个数量级的提升；而代价则是数据冗余、 大量不必要的数据搬运工作、分布式组件之间缺乏一致性、额外的专业技能带来的复杂度成本、学习成本、以及人力成本、 额外的软件许可费用、极其有限的查询语言能力、可编程性、可扩展性、有限的工具链、以及与 OLTP 数据库相比更差的数据完整性和可用性 —— **但这是一个合理的利弊权衡**。
 
-然而天下大势，**分久必合，合久必分**。[硬件遵循摩尔定律又发展了三十年](/blog/cloud/bonus/)，性能翻了几个数量级，成本下降了几个数量级。在 2024 年的当下，x86 单机可以达到几百核 (512 vCPU [EPYC 9754](https://www.amd.com/zh-hans/products/cpu/amd-epyc-9754)x2)，几个 TB 的内存，单卡 NVMe SSD 可达 64TB，全闪单机柜 2PB；S3 这样对象存储更是能实现几乎没有上限的存储。
+然而天下大势，**分久必合，合久必分**。[硬件遵循摩尔定律又发展了三十年](/blog/cloud/bonus/)，性能翻了几个数量级，成本下降了几个数量级。在 2024 年的当下，x86 单机可以达到几百核 (512 vCPU [EPYC 9754](https://www.amd.com/zh-hans/products/cpu/amd-epyc-9754) x2)，几个 TB 的内存，单卡 NVMe SSD 可达 64TB，全闪单机柜 2PB；S3 这样对象存储更是能实现几乎没有上限的存储。
 
 ![io-bandwidth.jpg](/img/hero/eater/io-bandwidth.jpg)
 
@@ -75,13 +75,13 @@ ParadeDB 与 DuckDB 的出现让 PostgreSQL 的分析性能来到了 OLAP 的第
 
 [![ecosystem.jpg](/img/hero/eater/ecosystem.jpg)](/ext/list)
 
-然 PostgreSQL 有何德何能，可当此大任？诚然 PostgreSQL 先进，但 Oracle 也先进；PostgreSQL 开源，但 MySQL 也开源。PostgreSQL **先进且开源**，这是它与 Oracle / MySQL 竞争的底气，但要说其独一无二的特点，那还得是它的**极致可扩展性，与繁荣的扩展生态**！
+然 PostgreSQL 有何德何能，可当此大任？诚然 PostgreSQL 先进，但 Oracle 也先进；PostgreSQL 开源，但 MySQL 也开源。PostgreSQL **先进且开源**，这是它与 Oracle / MySQL 竞争的底气，但要说其独一无二的特点，那还得是它的 **极致可扩展性，与繁荣的扩展生态**！
 
 [![survey.jpg](/img/hero/eater/survey.jpg)](https://www.timescale.com/state-of-postgres/2022/)
 
 > TimescaleDB 2022 社区调研：用户 [选择 PostgreSQL 的原因](/blog/pg/pg-is-best/)：开源，先进，**扩展**。
 
-PostgreSQL 并不是一个简单的关系型数据库，而是一个数据管理的抽象框架，**具有囊括一切，吞噬整个数据库世界的力量**。而它的核心竞争力（除了开源与先进）来自**可扩展性**，即基础设施的**可复用性**与扩展插件的**可组合性**。
+PostgreSQL 并不是一个简单的关系型数据库，而是一个数据管理的抽象框架，**具有囊括一切，吞噬整个数据库世界的力量**。而它的核心竞争力（除了开源与先进）来自 **可扩展性**，即基础设施的 **可复用性** 与扩展插件的 **可组合性**。
 
 
 
@@ -93,7 +93,7 @@ PostgreSQL 允许用户开发功能模块，复用数据库公共基础设施，
 
 为什么？因为 PGVECTOR 作者不需要操心数据库的通用额外复杂度：事务 ACID，故障恢复，备份 PITR，高可用，访问控制，监控，部署，三方生态工具，客户端驱动这些需要成百上千万行代码才能解决好的问题，只需要关注自己所需问题的本质复杂度即可。
 
-[![](/img/hero/eater/vectordbs.jpg)](/blog/db/svdb-is-dead/)
+[![向量数据库对比](/img/hero/eater/vectordbs.jpg)](/blog/db/svdb-is-dead/)
 
 > 向量数据库哪家强？
 
@@ -105,15 +105,15 @@ PostgreSQL 允许用户开发功能模块，复用数据库公共基础设施，
 
 ------
 
-可扩展性带来的另一点巨大优势是扩展的**可组合性**，让不同扩展相互合作，产生出 1+1 >> 2 的协同效应。例如，TimescaleDB 可以与 PostGIS 组合使用，提供时空数据支持；再比如，提供全文检索能力的 BM25 扩展可以和提供语义模糊检索的 PGVector 扩展组合使用，提供混合检索能力。
+可扩展性带来的另一点巨大优势是扩展的 **可组合性**，让不同扩展相互合作，产生出 1+1 >> 2 的协同效应。例如，TimescaleDB 可以与 PostGIS 组合使用，提供时空数据支持；再比如，提供全文检索能力的 BM25 扩展可以和提供语义模糊检索的 PGVector 扩展组合使用，提供混合检索能力。
 
-再比如，**分布式**扩展 Citus 可以将单机主从数据库集群，原地升级改造为透明水平分片的分布式数据库集群。而这个能力是可以与其他功能正交组合的，因此，PostGIS 可以成为分布式地理数据库，PGVector 可以成为分布式向量数据库，ParadeDB 可以成为分布式全文搜索数据库，诸如此类。
+再比如，**分布式** 扩展 Citus 可以将单机主从数据库集群，原地升级改造为透明水平分片的分布式数据库集群。而这个能力是可以与其他功能正交组合的，因此，PostGIS 可以成为分布式地理数据库，PGVector 可以成为分布式向量数据库，ParadeDB 可以成为分布式全文搜索数据库，诸如此类。
 
 ------
 
-更强大的地方在于，扩展插件是**独立演进**的，不需要繁琐的主干合并，联调协作。因此可以 Scale  —— PG 的可扩展性允许无数个团队并行探索数据库前研发展方向，而扩展全部都是的可选的，不会影响主干核心能力的稳定性。那些非常强大成熟的特性，则有机会以稳定的形态进入主干中。
+更强大的地方在于，扩展插件是 **独立演进** 的，不需要繁琐的主干合并，联调协作。因此可以 Scale  —— PG 的可扩展性允许无数个团队并行探索数据库前研发展方向，而扩展全部都是的可选的，不会影响主干核心能力的稳定性。那些非常强大成熟的特性，则有机会以稳定的形态进入主干中。
 
-通过极致可扩展性的魔法，PostgreSQL 做到了**守正出奇，实现了主干极致稳定性与功能敏捷性的统一。**扎实的基本盘配上惊人的演进速度，让它成为了数据库世界中的一个异数，改变了数据库世界的游戏规则。
+通过极致可扩展性的魔法，PostgreSQL 做到了 **守正出奇，实现了主干极致稳定性与功能敏捷性的统一。** 扎实的基本盘配上惊人的演进速度，让它成为了数据库世界中的一个异数，改变了数据库世界的游戏规则。
 
 
 
@@ -124,7 +124,7 @@ PostgreSQL 允许用户开发功能模块，复用数据库公共基础设施，
 
 **PostgreSQL 的出现，改变了数据库领域的游戏规则**：任何试图开发“新数据库内核”的团队，都需要经过这道试炼与考验 —— 相比开源免费、功能齐备的 Postgres，价值点在哪里？
 
-至少到硬件出现革命性突破前，实用的通用数据库新内核都不太可能诞生了，因为任何单一数据库都无法与所有扩展加持下的 PG 在**整体实力**上相抗衡 —— 包括 Oracle，因为 PG 还有开源免费的必杀技。
+至少到硬件出现革命性突破前，实用的通用数据库新内核都不太可能诞生了，因为任何单一数据库都无法与所有扩展加持下的 PG 在 **整体实力** 上相抗衡 —— 包括 Oracle，因为 PG 还有开源免费的必杀技。
 
 而某个细分领域的数据库产品，如果能在单点属性（通常是性能）上相比 PostgreSQL 实现超过一个数量级的优势，那也许还有一个专用数据库的生态位存在。但通常用不了多久，便会有 PostgreSQL 生态的开源替代扩展插件滚滚而来。因为选择开发 PG 扩展，而不是一个完整数据库的团队会在追赶复刻速度上有碾压性优势！
 
@@ -157,11 +157,11 @@ PostgreSQL 对于绝大多数场景都已经是一个足够完美的数据库内
 
 这好比今天我们看 Linux 操作系统内核一样，尽管市面上有这么多的 Linux 操作系统发行版，但大家都选择使用同样的 Linux 内核，吃饱了撑着魔改内核属于没有困难创造困难也要上，会被业界当成山炮看待。
 
-同理，数据库内核本身已经不再是主要矛盾，焦点将会集中到两个方向上 —— 数据库**扩展**与数据库**服务**！前者体现为数据库内部的可扩展性， 后者体现为数据库外部的可组合性。而竞争的形式，正如操作系统生态一样 —— 集中于**数据库发行版**上。对于数据库领域来说，只有那些以扩展和服务作为核心价值主张的发行版，才有最终成功的可能。
+同理，数据库内核本身已经不再是主要矛盾，焦点将会集中到两个方向上 —— 数据库 **扩展** 与数据库 **服务**！前者体现为数据库内部的可扩展性， 后者体现为数据库外部的可组合性。而竞争的形式，正如操作系统生态一样 —— 集中于 **数据库发行版** 上。对于数据库领域来说，只有那些以扩展和服务作为核心价值主张的发行版，才有最终成功的可能。
 
 做内核的厂商不温不火，MariaDB 作为 MySQL 的亲爹 Fork 甚至都已经濒临退市，而白嫖内核自己做服务与扩展卖 RDS 的 AWS 可以赚的钵满盆翻。投资机构已经出手了许多 PG 生态的扩展插件与服务发行版：Citus，TimescaleDB，Hydra，PostgresML，ParadeDB，FerretDB，StackGres，Aiven，Neon，Supabase，Tembo，PostgresAI，以及我们正在做的 Pigsty。
 
-![](https://pigsty.io/img/players.png)
+![PostgreSQL 生态厂商](https://pigsty.io/img/players.png)
 
 
 
@@ -192,8 +192,8 @@ PostgreSQL 生态中的一个困境就是，许多扩展插件，生态工具都
 > | 模糊分词     | <i class="fas fa-circle-check text-success"></i> zhparser 1.1 / pg_bigm 1.2     |                           <i class="fas fa-circle-check text-success"></i> zhparser 1.0 / pg_jieba                            |                           <i class="fas fa-circle-check text-success"></i> pg_bigm 1.2                           |
 > | CDC 抽取    | <i class="fas fa-circle-check text-success"></i> wal2json 2.5.3                 |                                        <i class="fas fa-circle-xmark text-danger"></i>                                        |                          <i class="fas fa-circle-check text-success"></i> wal2json 2.5                           |
 > | 膨胀治理     | <i class="fas fa-circle-check text-success"></i> pg_repack 1.5.0                |                               <i class="fas fa-circle-check text-success"></i> pg_repack 1.4.8                                |                         <i class="fas fa-circle-check text-success"></i> pg_repack 1.5.0                         |
-> 
-> 
+>
+>
 > 许多关键扩展在 RDS 中并不可用
 
 扩展是 PostgreSQL 的灵魂，无法自由使用扩展的 Postgres 就像做菜不放盐。只能和 MySQL 放在同一个 RDS 的框子里同台，龙游浅水，虎落平阳。
@@ -209,25 +209,25 @@ PostgreSQL 生态中的一个困境就是，许多扩展插件，生态工具都
 
 虽然接触 MySQL 和 MSSQL 要早得多，但我在 2015 年第一次上手 PostgreSQL 时，就相信它会是数据库领域的未来了。快十年过去，我也从 PG 的使用者，管理者，变为了贡献者，开发者。也不断见证着 PG 走向这一目标。
 
-在与形形色色的用户沟通交流中，我早已发现数据库领域的木桶短板不是内核 —— 现有的 PostgreSQL 已经足够好了，而是**用好数据库内核本身的能力**，这也是 RDS 这样的服务赚的钵满盆翻的原因。
+在与形形色色的用户沟通交流中，我早已发现数据库领域的木桶短板不是内核 —— 现有的 PostgreSQL 已经足够好了，而是 **用好数据库内核本身的能力**，这也是 RDS 这样的服务赚的钵满盆翻的原因。
 
 但我希望这样的能力，应该像自由软件运动所倡导的理念那样，像 PostgreSQL 内核本身一样 —— 普及到每一个用户手中，而不是必须向赛博空间上的封建云领主花大价钱租赁。
 
 所以我打造了 **[Pigsty](https://pigsty.io)** —— 一个开箱即用的开源 PostgreSQL 数据库发行版，旨在凝聚 PostgreSQL 生态扩展的合力，并把提供优质数据库服务的能力普及到每个用户手中。
 
-![](https://pigsty.io/img/banner.en.jpg)
+![Pigsty 英文版横幅](https://pigsty.io/img/banner.en.jpg)
 
-> Pigsty 是 **P**ostgreSQL **i**n **G**reat **STY**le 的缩写，意为 **PostgreSQL 的全盛状态**。
+> Pigsty 是 <strong>P</strong>ostgreSQL <strong>i</strong>n <strong>G</strong>reat <strong>STY</strong>le 的缩写，意为 **PostgreSQL 的全盛状态**。
 
-我们提出了六点核心价值主张，对应 PostgreSQL 数据库服务中的的六个核心问题：**Postgres 的可扩展性**，**基础设施的可靠性**，**图形化的可观测性**，**服务的可用性**，**工具的可维护性**，以及**扩展模块和三方组件可组合性**。
+我们提出了六点核心价值主张，对应 PostgreSQL 数据库服务中的的六个核心问题：**Postgres 的可扩展性**，**基础设施的可靠性**，**图形化的可观测性**，**服务的可用性**，**工具的可维护性**，以及 **扩展模块和三方组件可组合性**。
 
 Pigsty 六点价值主张的首字母合起来，则为 Pigsty 提供了另外一种缩写解释：
 
-> **P**ostgres, **I**nfras, **G**raphics, **S**ervice, **T**oolbox, **Y**ours.
+> <strong>P</strong>ostgres, <strong>I</strong>nfras, <strong>G</strong>raphics, <strong>S</strong>ervice, <strong>T</strong>oolbox, <strong>Y</strong>ours.
 >
 > 属于你的图形化 Postgres 基础设施服务工具箱。
 
-![](/img/pigsty/homepage.png)
+![Pigsty 首页](/img/pigsty/homepage.png)
 
 **可扩展的 PostgreSQL** 是这个发行版中最重要的价值主张。在刚刚发布的 [**Pigsty v2.6**](http://mp.weixin.qq.com/s?__biz=MzU5ODAyNTM5Ng==&mid=2247487025&idx=1&sn=c32f102718e3e9cf55cdefa7133f259f&chksm=fe4b3beac93cb2fc25c2c2c4f9ea74d4353e565ef90c5e2bbaf5881a3a031cbdff706971af9a&scene=21#wechat_redirect) 中，我们整合了上面提到的 DuckdbFDW 与 ParadeDB 扩展，这两个插件让 PostgreSQL 的分析能力得到史诗级增强，而我们确保每个用户都能轻松用得上这样的能力。
 
@@ -252,7 +252,7 @@ Pigsty 六点价值主张的首字母合起来，则为 Pigsty 提供了另外�
 
 > Pigsty 支持的 572 [**扩展列表**](/ext/list)
 
-![](https://pigsty.io/img/desc.png)
+![Pigsty 功能说明](https://pigsty.io/img/desc.png)
 
 开发者朋友们，你们的选择会塑造数据库世界的未来。希望我的这些工作，可以帮助你们更好的用好这世界上最先进的开源数据库内核 —— PostgreSQL。
 

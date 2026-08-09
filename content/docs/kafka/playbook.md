@@ -218,7 +218,7 @@ Target 文件每次完整运行按当前 Exporter 放置刷新；Target 的删�
 
 ## `kafka-rm.yml`
 
-移除动作不在 `kafka.yml` 中，而是使用独立的 [`kafka-rm.yml`](https://github.com/pgsty/pigsty/blob/main/kafka-rm.yml) 剧本。`-l` 选中一个集群的**全部成员**即为集群下线，选中**真子集**即为成员退役，两者共用同一执行顺序：
+移除动作不在 `kafka.yml` 中，而是使用独立的 [`kafka-rm.yml`](https://github.com/pgsty/pigsty/blob/main/kafka-rm.yml) 剧本。`-l` 选中一个集群的 **全部成员** 即为集群下线，选中 **真子集** 即为成员退役，两者共用同一执行顺序：
 
 注销 VictoriaMetrics Target（`kafka_deregister`）→ 停止并禁用 `kafka`/`kafka_exporter` 服务（`kafka`）→ 经幸存成员摘除 KRaft Voter 条目与 Broker 注册（`kafka_retire`，仅在选中真子集时有幸存成员可用）→ 删除 Exporter 配置、Systemd 环境/Unit 与辅助脚本（`kafka_config`）→ 删除数据目录与节点上的 `/etc/kafka` 恢复状态（`kafka_data`，受 `kafka_rm_data` 控制）→ 可选卸载软件包（`kafka_pkg`，受 `kafka_rm_pkg` 控制）。
 
@@ -244,7 +244,7 @@ Target 文件每次完整运行按当前 Exporter 放置刷新；Target 的删�
 ./kafka-rm.yml -l 10.10.10.13                      # 退役单个成员：摘除 Voter 条目与 Broker 注册，再清理本机
 ```
 
-剧本通过一台幸存成员摘除该节点的 KRaft Voter 条目（`remove-controller`，多成员时严格串行）并注销其 Broker 注册（`unregister`），再执行本机清理。所有元数据操作都委派给幸存成员，因此对已经死亡、无法连接的节点同样适用——这也是[替换故障节点](/docs/kafka/admin#替换故障节点)的第一步。
+剧本通过一台幸存成员摘除该节点的 KRaft Voter 条目（`remove-controller`，多成员时严格串行）并注销其 Broker 注册（`unregister`），再执行本机清理。所有元数据操作都委派给幸存成员，因此对已经死亡、无法连接的节点同样适用——这也是 [替换故障节点](/docs/kafka/admin#替换故障节点) 的第一步。
 
 退役自动化不等于免除规划：缩容后剩余 Controller 应保持奇数并构成多数派，剩余 Broker 数不能低于现有 Topic 的最大 RF；若被退役 Broker 仍持有 Partition 副本，剧本会打印警告——计划内缩容应当先完成 Reassignment 排空。
 

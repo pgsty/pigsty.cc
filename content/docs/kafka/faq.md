@@ -189,16 +189,16 @@ curl -fsS http://<kafka-ip>:9404/metrics | head -n 40
 
 若平台强制要求统一发现入口，DNS 或 TCP LB 可以只承担 bootstrap，但 `advertised.listeners` 仍返回每个 Broker 的可达地址，应用网络必须直达全部 Broker。跨 NAT、公网、多网络或 Kubernetes 暴露需要为每个 Broker 设计独立外部地址与额外 Listener，当前模块固定宣告清单地址，不支持这类映射。
 
-详见[快速上手：为什么应用应直连多个 Broker](/docs/kafka/start#3-为什么应用应直连多个-broker)与[集群配置：网络与监听器](/docs/kafka/config#网络与监听器)。
+详见 [快速上手：为什么应用应直连多个 Broker](/docs/kafka/start#3-为什么应用应直连多个-broker) 与 [集群配置：网络与监听器](/docs/kafka/config#网络与监听器)。
 
 
 --------
 
 ## 可以直接增删 Broker 或 Controller 吗？
 
-可以。编辑 inventory 后由剧本编排完成 [KRaft 成员变更](https://kafka.apache.org/43/operations/kraft/#controller-membership-changes)的全部步骤：
+可以。编辑 inventory 后由剧本编排完成 [KRaft 成员变更](https://kafka.apache.org/43/operations/kraft/#controller-membership-changes) 的全部步骤：
 
-- **增加**：在 inventory 中声明新成员（`broker`、`combined`、`controller` 均可），以**完整集群**为目标运行 `./kafka.yml -l <cls>`（不能只 `-l` 新节点）。纯 Broker 逐个格式化、启动并验证注册；Combined/Controller 以 `--no-initial-controllers` 格式化，Observer 追平后 `add-controller` 提升为 Voter。全程逐节点、全程健康门禁。
+- **增加**：在 inventory 中声明新成员（`broker`、`combined`、`controller` 均可），以 **完整集群** 为目标运行 `./kafka.yml -l <cls>`（不能只 `-l` 新节点）。纯 Broker 逐个格式化、启动并验证注册；Combined/Controller 以 `--no-initial-controllers` 格式化，Observer 追平后 `add-controller` 提升为 Voter。全程逐节点、全程健康门禁。
 - **移除**：`./kafka-rm.yml -l <ip>`（集群真子集）经幸存成员执行 `remove-controller` 与 Broker 注销，节点不可达也能完成，随后从 inventory 删除该成员。
 
 仍需自行保证：变更后 Controller 保持奇数且多数派存活；一次只做一个方向的成员变更；被移除 Broker 上的 Partition 副本先行排空（或由同 `kafka_seq` 的替换节点接管）。加入后既有 Partition 不会自动迁移，需独立执行并监控 Reassignment——“Broker 已注册”不等于“容量已均衡”。

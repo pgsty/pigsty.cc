@@ -221,7 +221,7 @@ journalctl -u haproxy -f
 
 HAProxy 提供 Web 管理界面，默认监听在 9101 端口：
 
-```
+```text
 http://<node_ip>:9101/haproxy
 ```
 
@@ -348,7 +348,7 @@ pg list <cls>          # 确认主库位置
 
 PGSQL 模块组件的推荐启动顺序：
 
-```
+```text
 1. patroni          # 首先启动 Patroni（会自动启动 PostgreSQL）
 2. pgbouncer        # 然后启动连接池
 3. haproxy          # 启动负载均衡器

@@ -14,7 +14,7 @@ categories: [参考]
 
 ## 简介
 
-pgBackRest 的版本号由主版本号和次版本号两部分组成。主版本升级**可能**破坏与上一主版本的兼容性，但 v2 版本与 v1 仓库完全兼容，且接受所有 v1 选项。次版本可包含漏洞修复和新功能，但不会更改仓库格式，并尽量避免修改选项和命名约定。v1 版本的文档可在 **[此处](https://pgbackrest.org/1)** 查阅。版本说明中还可能包含"附加说明"，此部分变更仅涉及文档或测试套件，不直接影响 pgBackRest 代码库。
+pgBackRest 的版本号由主版本号和次版本号两部分组成。主版本升级 **可能** 破坏与上一主版本的兼容性，但 v2 版本与 v1 仓库完全兼容，且接受所有 v1 选项。次版本可包含漏洞修复和新功能，但不会更改仓库格式，并尽量避免修改选项和命名约定。v1 版本的文档可在 **[此处](https://pgbackrest.org/1)** 查阅。版本说明中还可能包含"附加说明"，此部分变更仅涉及文档或测试套件，不直接影响 pgBackRest 代码库。
 
 
 --------
@@ -28,7 +28,7 @@ pgBackRest 的版本号由主版本号和次版本号两部分组成。主版本
 
 *发布于 2026 年 7 月 20 日*
 
-**打包者注意**：现已提供新的发行版 tarball，其中包含预生成的 HTML 文档、手册页和代码，从而简化构建流程。该 tarball 作为附件随每个版本发布，命名为 `pgbackrest-{version}.tar.gz`。详情请参阅 tarball 中的 `README.md`。请使用新的发行版 tarball，以免今后需要额外的构建工具来生成代码。更多信息请参阅[新的发行版 tarball](/docs/pgbackrest/news/#distribution-tarball)。**打包者注意**：新增了对 `libsystemd` 的可选依赖。**重要提示**：从此版本开始，默认情况下只有 `restore` 命令允许由 root 用户运行。若要由 root 用户运行其他命令，请使用 `allow-root`（但不建议这样做）。
+**打包者注意**：现已提供新的发行版 tarball，其中包含预生成的 HTML 文档、手册页和代码，从而简化构建流程。该 tarball 作为附件随每个版本发布，命名为 `pgbackrest-{version}.tar.gz`。详情请参阅 tarball 中的 `README.md`。请使用新的发行版 tarball，以免今后需要额外的构建工具来生成代码。更多信息请参阅 [新的发行版 tarball](/docs/pgbackrest/news/#distribution-tarball)。**打包者注意**：新增了对 `libsystemd` 的可选依赖。**重要提示**：从此版本开始，默认情况下只有 `restore` 命令允许由 root 用户运行。若要由 root 用户运行其他命令，请使用 `allow-root`（但不建议这样做）。
 
 **漏洞修复：**
 
@@ -1561,7 +1561,7 @@ pgBackRest 的版本号由主版本号和次版本号两部分组成。主版本
 
 **漏洞修复：**
 
-- 修复 `$PGDATA` 中*相对*链接可能以错误路径存入备份的问题。此问题不影响绝对链接，相对表空间链接已由其他检查捕获。（*报告：Cynthia Shang。*）
+- 修复 `$PGDATA` 中 *相对* 链接可能以错误路径存入备份的问题。此问题不影响绝对链接，相对表空间链接已由其他检查捕获。（*报告：Cynthia Shang。*）
 - 从 `check` 命令中移除未完全实现的 `online` 选项。离线操作与该命令的目的（检查归档和备份是否正常工作）相悖。（*报告：Jason O'Donnell。*）
 - 修复 C 中抛出的错误在由 Perl 调用时未被记录的问题。pgBackRest 以正确的错误码退出，但缺少有助于调试的错误消息。（*报告：Douglas J Hunley。*）
 - 修复布尔型选项（如 `delta`）被多次指定时的错误。（*报告：Yogesh Sharma。*）
@@ -2095,7 +2095,7 @@ pgBackRest 的版本号由主版本号和次版本号两部分组成。主版本
 
 *发布于 2017 年 2 月 5 日*
 
-**重要说明**：异步归档的新实现不再将 WAL 复制到独立队列。升级到 1.13 后，旧队列中残留的 WAL 将被放弃，**不会**推送到仓库。为避免数据丢失，请在升级前通过设置 `archive_command = false` 停止归档，然后执行 `pgbackrest --stanza=[stanza-name] archive-push` 清空异步队列并等待进程结束，确认 `[spool-path]/archive/[stanza-name]/out` 中的队列已清空，最后再安装 1.13 并恢复原始 `archive_command`。**重要说明**：`stanza-create` 命令不再是可选步骤，在**新** stanza 上执行备份或归档前必须先执行该命令。已有 stanza 无需重新执行。
+**重要说明**：异步归档的新实现不再将 WAL 复制到独立队列。升级到 1.13 后，旧队列中残留的 WAL 将被放弃，**不会** 推送到仓库。为避免数据丢失，请在升级前通过设置 `archive_command = false` 停止归档，然后执行 `pgbackrest --stanza=[stanza-name] archive-push` 清空异步队列并等待进程结束，确认 `[spool-path]/archive/[stanza-name]/out` 中的队列已清空，最后再安装 1.13 并恢复原始 `archive_command`。**重要说明**：`stanza-create` 命令不再是可选步骤，在 **新** stanza 上执行备份或归档前必须先执行该命令。已有 stanza 无需重新执行。
 
 **漏洞修复：**
 

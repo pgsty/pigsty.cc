@@ -129,5 +129,4 @@ make load       # 从 /tmp 加载 pgadmin 镜像
 
 默认用户名与密码: `admin@pigsty.cc` / `pigsty`
 
-![](/img/docs/app/pgadmin.jpeg)
-
+![pgAdmin](/img/docs/app/pgadmin.jpeg)

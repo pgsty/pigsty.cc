@@ -17,7 +17,7 @@ Pigsty 仓库中所有的 RPM / DEB 软件包都使用 GPG 密钥（指纹：`B9
 
 完整摘要： `9592A7BC7A682E7333376E09E7935D8DB9BD8B20` Ruohang Feng (Pigsty) [rh@vonng.com](mailto:rh@vonng.com)
 
-```
+```text
 pub   rsa4096 2024-07-16 [SC]
       9592A7BC7A682E7333376E09E7935D8DB9BD8B20
 uid           [ultimate] Ruohang Feng (Pigsty) <rh@vonng.com>
@@ -71,7 +71,7 @@ curl -fsSL https://repo.pigsty.cc/key | sudo gpg --dearmor -o /etc/apt/keyrings/
 
 Pigsty 仓库使用的 GPG 公钥内容如下：
 
-```
+```text
 -----BEGIN PGP PUBLIC KEY BLOCK-----
 
 mQINBGaV5PwBEACbErI+7yOrsXTT3mR83O6Fw9WyHJqozhyNPF3dA1gAtWpfWqd4
@@ -225,4 +225,3 @@ SignWith: 9592A7BC7A682E7333376E09E7935D8DB9BD8B20
 ```
 
 同理，将这里的 `SignWith` 替换为你自己的 GPG 密钥指纹即可，`reprepro` 会自动使用它进行签名。
-

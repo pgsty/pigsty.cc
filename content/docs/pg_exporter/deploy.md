@@ -104,7 +104,7 @@ PG_EXPORTER_URL='postgres://monitor@localhost:5432/postgres'
 ```
 
 {{% alert title="RPM/DEB 包安装场景" color="info" %}}
-包安装的服务以 `prometheus` 系统用户运行。自 v1.4.0 起该用户的 HOME 指向 `/var/lib/prometheus`（libpq 查找 `~/.pgpass` 的位置），但安装包**不会**创建这个目录。使用 `.pgpass` 前请先执行：
+包安装的服务以 `prometheus` 系统用户运行。自 v1.4.0 起该用户的 HOME 指向 `/var/lib/prometheus`（libpq 查找 `~/.pgpass` 的位置），但安装包 **不会** 创建这个目录。使用 `.pgpass` 前请先执行：
 `install -d -o prometheus -g prometheus /var/lib/prometheus`
 {{% /alert %}}
 

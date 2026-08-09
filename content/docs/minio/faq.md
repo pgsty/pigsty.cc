@@ -109,6 +109,3 @@ Pigsty 为 MinIO 提供了开箱即用的监控能力：
 - **MinIO 内置控制台**：通过 `https://<minio-ip>:9001` 访问
 
 详情请参阅 [监控告警](/docs/minio/monitor) 文档
-
-
-

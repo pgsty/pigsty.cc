@@ -8,7 +8,7 @@ categories: [概念]
 ---
 
 {{< infographic >}}
-```
+```text
 infographic list-row-simple-horizontal-arrow
 data
   title 租约过期故障切换流程
@@ -90,7 +90,7 @@ DCS 中的租约只能等待 TTL 自然过期后触发集群选举。
 
 Patroni 主库会在每个 `loop_wait` 周期刷新 Leader Key，将 TTL 重置为配置值。
 
-```
+```text
 时间线：
      t-loop        t          t+ttl-loop    t+ttl
        |           |              |           |
@@ -116,7 +116,7 @@ ttl & \text{最坏}
 
 从库在 `loop_wait` 周期醒来后检查 DCS 中的 Leader Key 状态。
 
-```
+```text
 时间线：
     租约过期      从库醒来
        |            |
@@ -144,7 +144,7 @@ loop & \text{最坏}
 2. 比较 WAL 位置，确定最优候选，各从库尝试创建 Leader Key（CAS 原子操作）
 3. 执行 `pg_ctl promote` 提升自己为主库（很快，通常忽略不计）
 
-```
+```text
 选举流程：
   从库A ──→ 查询复制位置 ──→ 比较 ──→ 尝试抢锁 ──→ 成功
   从库B ──→ 查询复制位置 ──→ 比较 ──→ 尝试抢锁 ──→ 失败
@@ -167,7 +167,7 @@ T_{elect} = \begin{cases}
 
 HAProxy 检测新主库上线，需要连续 `rise` 次健康检查成功。
 
-```
+```text
 检测时序：
   新主提升    首次检查    第二次检查   第三次检查（UP）
      |          |           |           |
@@ -239,4 +239,3 @@ pg_rto_plan:  # [ttl, loop, retry, start, margin, inter, fastinter, downinter, r
 |  健康检查  |  `1` / `2` / `2`   |  `2` / `3` / `4`   |   `3` / `5` / `6`   |    `4` / `6` / `8`    |
 | **总计** | `16` / `23` / `29` | `27` / `34` / `41` | `53` / `66` / `78`  | `104` / `127` / `150` |
 {.full-width}
-

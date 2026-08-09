@@ -45,7 +45,7 @@ ansible all -b -a 'chronyc -a makestep'     # 同步时间
 
 ## 远程节点无法通过SSH访问怎么办？
 
-如果目标机器隐藏在 SSH 跳板机后面， 或者进行了一些无法直接使用`ssh ip`访问的自定义操作， 可以使用诸如 `ansible_port`
+如果目标机器隐藏在 SSH 跳板机后面， 或者进行了一些无法直接使用 `ssh ip` 访问的自定义操作， 可以使用诸如 `ansible_port`
 或 `ansible_host` 这一类 [Ansible连接参数](https://docs.ansible.com/ansible/latest/inventory_guide/connection_details.html) 来指定各种 SSH 连接信息，如下所示：
 
 ```bash
@@ -63,11 +63,11 @@ pg-test:
 
 ## 远程节点SSH与SUDO需要密码怎么办？
 
-**执行部署和更改时**，使用的管理员用户**必须**对所有节点拥有`ssh`和`sudo`权限。无需密码免密登录。
+**执行部署和更改时**，使用的管理员用户 **必须** 对所有节点拥有 `ssh` 和 `sudo` 权限。无需密码免密登录。
 
 您可以在执行剧本时通过 `-k|-K` 参数传入 ssh 和 sudo 密码，甚至可以通过 `-e ansible_user=<another_user>` 使用另一个用户来运行剧本。
 
-但是，Pigsty 强烈建议为管理员用户配置 SSH**无密码登录**以及无密码的`sudo`。
+但是，Pigsty 强烈建议为管理员用户配置 SSH **无密码登录** 以及无密码的 `sudo`。
 
 
 
@@ -101,9 +101,9 @@ Pigsty 会在 infra 节点上构建的本地软件仓库源中包含所有依赖
 
 这一设计从而避免了互联网访问，增强了安装过程的稳定性与可靠性。所有原有的源定义文件会被移动到 `/etc/yum.repos.d/backup` 目录中，您只要按需复制回来即可。
 
-如果您想在普通节点安装过程中保留原有的源定义文件，将 [`node_repo_remove`](/docs/node/param#node_repo_remove) 设置为`false`即可。
+如果您想在普通节点安装过程中保留原有的源定义文件，将 [`node_repo_remove`](/docs/node/param#node_repo_remove) 设置为 `false` 即可。
 
-如果您想在 Infra 节点构建本地源的过程中保留原有的源定义文件，将 [`repo_remove`](/docs/infra/param#repo_remove) 设置为`false`即可。
+如果您想在 Infra 节点构建本地源的过程中保留原有的源定义文件，将 [`repo_remove`](/docs/infra/param#repo_remove) 设置为 `false` 即可。
 
 
 

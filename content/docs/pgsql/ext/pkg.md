@@ -7,7 +7,7 @@ module: [PGSQL]
 categories: [参考]
 ---
 
-Pigsty 使用**包别名**机制简化扩展的安装与管理。
+Pigsty 使用 **包别名** 机制简化扩展的安装与管理。
 
 
 --------
@@ -24,7 +24,7 @@ Pigsty 使用**包别名**机制简化扩展的安装与管理。
 | DEB 包名 | `postgresql-18-pgvector` | `postgresql-18-postgis-3*`         |
 {.full-width}
 
-Pigsty 提供**包别名**抽象层，让用户无需关心具体的 RPM/DEB 包名：
+Pigsty 提供 **包别名** 抽象层，让用户无需关心具体的 RPM/DEB 包名：
 
 ```yaml
 pg_extensions: [ pgvector, postgis, timescaledb ]  # 使用包别名
@@ -32,7 +32,7 @@ pg_extensions: [ pgvector, postgis, timescaledb ]  # 使用包别名
 
 Pigsty 会根据操作系统和 PostgreSQL 版本自动翻译为正确的包名。
 
-> 注意：`CREATE EXTENSION` 时使用的是**扩展名**（如 `vector`），而非包别名（`pgvector`）。
+> 注意：`CREATE EXTENSION` 时使用的是 **扩展名**（如 `vector`），而非包别名（`pgvector`）。
 
 
 --------

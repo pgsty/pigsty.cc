@@ -55,7 +55,7 @@ Patroni 将集群配置存储在 DCS（分布式配置存储，默认为 etcd）
 
 **配置存储结构**：
 
-```
+```text
 /pigsty/                          # 命名空间（patroni_namespace）
   └── pg-meta/                    # 集群名称（pg_cluster）
       ├── config                  # 集群配置（所有成员共享）
@@ -85,7 +85,7 @@ Patroni 将集群配置存储在 DCS（分布式配置存储，默认为 etcd）
 
 Patroni 会将 DCS 中的配置渲染到本地 PostgreSQL 配置文件，形成以下层次结构：
 
-```
+```text
 /pg/data/
 ├── postgresql.conf          # 主配置文件（由 Patroni 动态管理）
 ├── postgresql.base.conf     # 基础配置（通过 include 指令加载）
@@ -205,7 +205,7 @@ pg_parameters:
   shared_preload_libraries: timescaledb, pg_stat_statements   # YAML 会解析为数组！
 ```
 
-Pigsty 会自动识别以下列表类型参数，在渲染到配置文件时**不添加外层引号**：
+Pigsty 会自动识别以下列表类型参数，在渲染到配置文件时 **不添加外层引号**：
 
 | 参数                          | 说明               | 示例值                                 |
 |-----------------------------|------------------|-------------------------------------|
@@ -396,7 +396,7 @@ ALTER USER dbuser_app RESET ALL;
 
 当同一参数在多个层级设置时，PostgreSQL 按以下优先级应用（从低到高）：
 
-```
+```text
 postgresql.conf           ← 集群级参数（Patroni DCS）
        ↓
 postgresql.auto.conf      ← 实例级参数（pg_parameters / ALTER SYSTEM）

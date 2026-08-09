@@ -19,7 +19,7 @@ categories: [任务]
 
 ## 操作步骤
 
-以下是将现有 PostgreSQL 集群转换为 Patroni 托管集群的步骤概览。本步骤假设现有集群的所有节点当前均在运行，并且您**不打算**在迁移过程中修改 PostgreSQL 配置。具体步骤如下：
+以下是将现有 PostgreSQL 集群转换为 Patroni 托管集群的步骤概览。本步骤假设现有集群的所有节点当前均在运行，并且您 **不打算** 在迁移过程中修改 PostgreSQL 配置。具体步骤如下：
 
 1.  按照 Patroni 配置中 [**认证**](/docs/patroni/config/yaml#postgresql_settings) 章节的说明创建 PostgreSQL 用户。下方代码块中提供了创建用户的示例 SQL 命令，请根据您的实际环境替换用户名和密码。如果相关用户已存在，可跳过此步骤。
 
@@ -69,6 +69,7 @@ categories: [任务]
     ```
 
 <a id="major_upgrade"></a>
+
 ## PostgreSQL 大版本升级
 
 目前，进行大版本升级的唯一可行方式是：

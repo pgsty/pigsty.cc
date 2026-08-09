@@ -22,7 +22,7 @@ Pigsty 为您提供完整的 Supabase 一键自建方案。自建的 Supabase �
 完整自建教程，请参考：《[**Supabase自建手册**](/docs/app/supabase)》
 
 
-![](/img/pigsty/supabase.webp)
+![Supabase](/img/pigsty/supabase.webp)
 
 -------
 

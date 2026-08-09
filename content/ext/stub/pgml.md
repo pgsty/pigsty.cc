@@ -35,4 +35,3 @@ CREATE EXTENSION
 ```
 
 You are all set! Check PostgresML for more details: https://postgresml.org/docs/guides/use-cases/
-

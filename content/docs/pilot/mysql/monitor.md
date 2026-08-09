@@ -40,7 +40,7 @@ Exporter 启用的采集器包括：全局状态/变量、Binlog 尺寸、InnoDB
 | `topology` | 拓扑类型 | `innodb_cluster` / `standalone` |
 {.full-width}
 
-衍生规则以 `mysql:ins:*`（实例级）与 `mysql:cls:*`（集群级）命名，完整清单见[指标定义](/docs/pilot/mysql/metric)。
+衍生规则以 `mysql:ins:*`（实例级）与 `mysql:cls:*`（集群级）命名，完整清单见 [指标定义](/docs/pilot/mysql/metric)。
 
 
 --------
@@ -104,12 +104,12 @@ curl -s http://<infra>:9428/select/logsql/query \
   -d 'query=job:syslog cls:my-test (app:~"mysqld-" OR unit:mysql-backup) _time:1h | limit 100'
 ```
 
-注意日志的 `cls` 标签取自**节点**集群名（`node_cluster`）——像配置示例那样保持 `node_cluster` 与 `mysql_cluster` 一致，指标与日志的标签才能对齐。
+注意日志的 `cls` 标签取自 **节点** 集群名（`node_cluster`）——像配置示例那样保持 `node_cluster` 与 `mysql_cluster` 一致，指标与日志的标签才能对齐。
 
 已知边界：
 
 - **慢查询日志**（`slow.log`，阈值 1 秒）仅落本地文件，不进入 VictoriaLogs；分析慢查询请登录实例查看文件，或使用性能模式语句摘要指标（`mysql:ins:statement_latency` 等）；
-- **Router 运行日志**写入 `/var/log/mysqlrouter/`，同样仅限本地文件。
+- **Router 运行日志** 写入 `/var/log/mysqlrouter/`，同样仅限本地文件。
 
 
 --------

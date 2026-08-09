@@ -29,7 +29,7 @@ categories: [参考]
 
 加入微信社群，请用搜索 “Pigsty小助手”，（微信号 `pigsty-cc`） 备注或发送 “加群” ，小助手会将您拉入群组中。
 
-![](/img/pigsty/pigsty-cc.jpg)
+![Pigsty 中文社区](/img/pigsty/pigsty-cc.jpg)
 
 
 ---------------
@@ -59,7 +59,7 @@ Discord: https://discord.gg/j5pG8qfKxU
 
 **Pigsty 版本号与操作系统版本** (**必选项**)
 
-```
+```text
 $ grep version pigsty.yml 
 
 $ cat /etc/os-release
@@ -75,7 +75,7 @@ $ uname -a
 
 > 请不要忘记抹掉任何敏感信息：密码，内部密钥，敏感配置等。
 
-```
+```text
 cat ~/pigsty/pigsty.yml
 ```
 

@@ -74,4 +74,3 @@ https://maybe.pigsty
 - 必须修改 `SECRET_KEY_BASE`，使用 `openssl rand -hex 64` 生成
 - 首次访问时需要注册管理员账号
 - 可选配置 Synth API 以获取股票价格数据
-

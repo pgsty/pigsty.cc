@@ -65,7 +65,7 @@ Pig `v1.6.0` 是一个大版本：`pig pt` 重写为 `patronictl` 原生透传�
 
 - `pig pt` 重写为 `patronictl` 原生透传：所有集群命令（`list`、`restart`、`switchover`、`failover`、`edit-config` 等）直接转发，使用原生参数、交互确认、输出与退出码，patronictl 的新功能无需等待 pig 发版即可使用。本地保留 `status`、`log`、`set`、`service/svc` 辅助命令，新增 `-c/--config-file`、`-d/--dcs-url`、`-k/--insecure` 选项与 `pig pt -- …` 逃逸写法。
 - 新增根级 `pig inventory` 命令组（别名 `inv`）：`status` / `list` / `show` / `edit` / `validate` / `check` / `diff` —— 无损 YAML 引擎逐字节保留注释、格式、键序与锚点；`edit` 先校验再原子写入，非法 YAML 不可能落盘。
-- 新增**实验性** `pig inventory cmdb` 子命令（`check` / `init` / `load` / `dump` / `enable` / `disable`），通过原生驱动与 Pigsty 的 PostgreSQL CMDB 交换配置清单，破坏性操作带超时限界与摘要锁定的确认门。
+- 新增 **实验性** `pig inventory cmdb` 子命令（`check` / `init` / `load` / `dump` / `enable` / `disable`），通过原生驱动与 Pigsty 的 PostgreSQL CMDB 交换配置清单，破坏性操作带超时限界与摘要锁定的确认门。
 - 新增 `pig sty grafana`（别名 `gf`）通过 HTTP 原生管理 Grafana 仪表盘：`info` / `list` / `boot` / `load` / `init` / `dump` / `clean` / `lang` / `style`。`pig sty` 命令面简化：移除 `sty edit` / `validate` / `check` / `cmdb` / `dashboard` / `release`，改用 `pig inventory`、`pig sty grafana` 与 `pig sty list` / `get`。
 - 可靠性强化：仓库 / 目录 / 下载写入全部原子化（中断不再留下半截文件）；结构化输出 `-o json|yaml` 下 stdout 只包含结果信封，被包裹命令的输出走 stderr；退出码更精确（用法错误 → 2，缺少 `--yes` 确认 → 7）；Ansible 列表变量改用 JSON 编码防注入。
 - 仓库刷新：MySQL 仓库升级到 8.4 LTS，新增 Percona XtraBackup（`pxb84`）与 MySQL Tools 仓库，Kubernetes 升级到 v1.36，LLVM apt 覆盖 Debian/Ubuntu 26，Percona TDE 改用 repo.percona.com 官方源，移除 `wiltondb` 仓库。
@@ -80,7 +80,7 @@ Pig `v1.6.0` 是一个大版本：`pig pt` 重写为 `patronictl` 原生透传�
 
 **兼容性提醒**
 
-- ⚠ `pig pt failover <name>`：位置参数现在是**集群名**而不是晋升候选成员 —— 请改用 `pig pt failover CLUSTER --candidate MEMBER`，升级前务必检查 failover 自动化脚本。
+- ⚠ `pig pt failover <name>`：位置参数现在是 **集群名** 而不是晋升候选成员 —— 请改用 `pig pt failover CLUSTER --candidate MEMBER`，升级前务必检查 failover 自动化脚本。
 - `pig pt` 位置参数改为原生的集群优先形式（`restart CLUSTER [MEMBER]`）；转发命令返回 patronictl 原生退出码、由 patronictl 自行交互确认（`-y` 不再门禁这些命令），且不再支持 `-o json`（请改用原生 `--format json`）。`pig pt config` 由 `pig pt set K=V` 与原生 `show-config` / `edit-config` 取代。
 - 结构化输出模式下，被包裹工具的输出移至 stderr，stdout 只有 JSON/YAML 信封 —— 请更新解析混合输出的脚本。
 - `pig inventory edit` 编辑成功后会将配置文件权限收紧为 0600（文件可能包含数据库凭据）。
@@ -182,7 +182,7 @@ d4de9ef1c28d0a3661c4a4d47c469b7bfd5f5bddb610325796afb669ab162234  pig-v1.5.0.lin
 
 --------
 
-# v1.4.2
+## v1.4.2
 
 - 内置扩展目录从 **510** 个可用扩展刷新到 **524** 个，新增 14 个扩展：`pg_stl`、`pgmnemo`、`psql_bm25s`、`pg_orca`、`pg_sorted_heap`、`graph`、`pgrdf`、`fsm_core`、`jsonschema`、`pg_durable`、`pg_mockable`、`pg_uuid_v8`、`pg_stat_backtrace`、`pg_projection`。
 - 更新 48 个已有扩展的软件包元数据，包括 `timescaledb 2.28.0`、`timescaledb_toolkit 1.23.0`、`pg_task 2.1.29`、`pg_search 0.24.0`、`pg_clickhouse 0.3.2`、`pg_graphql 1.6.1`、`documentdb 0.112`、`toastinfo 1.7`、`wrappers 0.6.1`、`pgclone 4.3.2` 等；没有扩展被移除或降级。
@@ -211,7 +211,7 @@ c536c324e40a861217e31f4699ee5f0e6c2daeb4e6f0f0e8cc5f606da9d787eb  pig-v1.4.2.lin
 
 --------
 
-# v1.4.1
+## v1.4.1
 
 - 扩展目录更新到 **510** 个扩展，新增 3 个扩展，更新 17 个扩展。
 - 新增 Ubuntu 26.04 `resolute` 支持，移除 Ubuntu 20.04 `focal` 支持。
@@ -236,7 +236,7 @@ d09fd6e747cb65acda225ffd5448a8fba3f676ce8044f4237d75a59b3d6a5b4e  pig_1.4.1-1_ar
 
 --------
 
-# v1.4.0
+## v1.4.0
 
 - 刷新扩展目录，可用扩展总数增加到 **510**，并更新 `timescaledb 2.26.3`、`decoderbufs 3.5.0`、`pgclone 4.0.0`、`nominatim_fdw 1.3` 等版本。
 - 默认 `pgrx` 从 `0.17.0` 升级到 `0.18.0`，同步对齐相关 Rust 扩展构建版本。
@@ -262,7 +262,7 @@ d60515f72fb9f8963554dc5668d2398e5ecefd0153a7756a9d555de90115bcce  pig_1.4.0-1_ar
 
 --------
 
-# v1.3.4
+## v1.3.4
 
 扩展数量更新至 **504** 个。
 
@@ -284,7 +284,7 @@ f25c4f336edba5c9d2145368082f54e5b1a8b2d4261285b7a1721c088df4caa4  pig-v1.3.4.lin
 
 --------
 
-# v1.3.3
+## v1.3.3
 
 - 扩展目录刷新，可用扩展总数增加到 **481** 个。
 - Go 工具链从 `1.26.0` 升级到 `1.26.2`。
@@ -337,7 +337,7 @@ f4c91ce86b787b6ab8cd584949d38c2ca87eb82d5e066bab91b80345252f43d8  pig_1.3.3-1_ar
 
 --------
 
-# v1.3.2
+## v1.3.2
 
 例行维护版本。
 
@@ -364,7 +364,7 @@ d6c1cf2c52962045f6bbfb2a669058e7f903088526591d6c939e7723f3928d30  pig_1.3.2-1_am
 
 --------
 
-# v1.3.1
+## v1.3.1
 
 这是从 `v1.3.0` 到 `v1.3.1` 的一次小型维护版本。
 
@@ -393,7 +393,7 @@ e495678ae1c762194a56e8c9969fd2109e7a59830f34a4747039fb978f7820cc  pig_1.3.1-1_ar
 
 --------
 
-# v1.3.0
+## v1.3.0
 
 这是从 `v1.2.0` 到 `v1.3.0` 的一次工程强化与目录扩展版本：15 commits、74 files changed、代码行 `+1184 / -236`。
 
@@ -478,7 +478,7 @@ d61430eeafc8005a22918a9aa60dea5c987916f9834331b5484f761b8235644f  pig-v1.3.0.lin
 
 --------
 
-# v1.2.0
+## v1.2.0
 
 - 扩展目录与别名解析增强：
   - 引入动态 PG 分类别名解析，按 PG 主版本选择别名映射。
@@ -983,7 +983,7 @@ f635c12d9ad46a779aa7174552977d11  pig-v0.6.0.linux-amd64.tar.gz
 
 **校验和**
 
-```
+```text
 9ec6f3caf3edbe867caab5de0e0ccb33  pig_0.5.0-1_amd64.deb
 4fbb0a42cd8a88bce50b3c9d85745d77  pig_0.5.0-1_arm64.deb
 9cf8208396b068cab438f72c90d39efe  pig-0.5.0-1.aarch64.rpm

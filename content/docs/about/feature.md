@@ -7,7 +7,7 @@ module: [PIGSTY]
 categories: [参考]
 ---
 
-> "**P**ostgreSQL **I**n **G**reat **STY**le": **P**ostgres, **I**nfras, **G**raphics, **S**ervice, **T**oolbox, it's all **Y**ours.
+> "<strong>P</strong>ostgreSQL <strong>I</strong>n <strong>G</strong>reat <strong>STY</strong>le": <strong>P</strong>ostgres, <strong>I</strong>nfras, <strong>G</strong>raphics, <strong>S</strong>ervice, <strong>T</strong>oolbox, it's all <strong>Y</strong>ours.
 >
 > —— **开箱即用、本地优先的 PostgreSQL 发行版，开源 RDS 替代**
 
@@ -23,7 +23,7 @@ categories: [参考]
 - [**可维护性**](/img/pigsty/iac.jpg)：[**简单易用**](/docs/setup/install)，[**基础设施即代码**](/docs/pgsql/config)，[**管理SOP预案**](/docs/pgsql/admin/)，自动调参，本地软件仓库，[**Vagrant**](/docs/deploy/vagrant) [**沙箱**](/docs/deploy/sandbox) 与 [**Terraform**](/docs/deploy/terraform) 模板，不停机 [**迁移**](/docs/pgsql/migration) 方案。
 - [**可组合性**](/img/pigsty/sandbox.png)：[**模块化**](/docs/concept/arch#模块) 架构设计，可复用的 [**Infra**](/docs/infra)，多样的可选 [**模块**](/docs/ref/module/)：[**Redis**](/docs/redis), [**MinIO**](/docs/minio), [**ETCD**](/docs/etcd), [**DuckDB**](/docs/pilot/duckdb/), [**Docker**](/docs/app/), [**Supabase**](https://github.com/pgsty/pigsty/tree/master/app/supabase)。
 
-![](/img/pigsty/banner.png)
+![Pigsty 功能概览](/img/pigsty/banner.png)
 
 
 ----------------

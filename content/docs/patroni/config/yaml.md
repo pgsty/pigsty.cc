@@ -429,7 +429,7 @@ Warning
 </div>
 
 - **`restapi.connect_address`** 必须可从该 Patroni 集群的所有节点访问。Patroni 在主库竞选期间会在内部使用它来查找复制延迟最小的节点。
-- 若启用了客户端证书验证（**`restapi.verify_client`** 设为 **`required`**），还**必须**在 **`ctl.certfile`**、**`ctl.keyfile`**、**`ctl.keyfile_password`** 中提供有效的客户端证书，否则 Patroni 将无法正常工作。
+- 若启用了客户端证书验证（**`restapi.verify_client`** 设为 **`required`**），还 **必须** 在 **`ctl.certfile`**、**`ctl.keyfile`**、**`ctl.keyfile_password`** 中提供有效的客户端证书，否则 Patroni 将无法正常工作。
 
 </div>
 

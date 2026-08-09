@@ -79,7 +79,7 @@ mysql
 
 ## 安全护栏
 
-`mysql.yml` 的预检与收敛在以下情况**主动拒绝**，错误信息会说明原因与处置：
+`mysql.yml` 的预检与收敛在以下情况 **主动拒绝**，错误信息会说明原因与处置：
 
 | 拒绝场景 | 说明 |
 |:---|:---|
@@ -119,7 +119,7 @@ mysql
 
 执行内容与边界：
 
-- 单成员退役：用 AdminAPI（`force: false`）从集群摘除 `ONLINE SECONDARY`（或确认已脱离集群成员的摘除状态），随后停止本机服务。摘除脚本在目标机上执行，因此**要求目标可达**；机器已死亡时改用手工强制摘除（见[替换故障成员](/docs/pilot/mysql/admin#替换故障成员)）。**不允许直接退役主库**（先 [`setPrimaryInstance`](/docs/pilot/mysql/admin#主从切换) 切走），也不允许一次退役 3 成员中的 2 个；
+- 单成员退役：用 AdminAPI（`force: false`）从集群摘除 `ONLINE SECONDARY`（或确认已脱离集群成员的摘除状态），随后停止本机服务。摘除脚本在目标机上执行，因此 **要求目标可达**；机器已死亡时改用手工强制摘除（见 [替换故障成员](/docs/pilot/mysql/admin#替换故障成员)）。**不允许直接退役主库**（先 [`setPrimaryInstance`](/docs/pilot/mysql/admin#主从切换) 切走），也不允许一次退役 3 成员中的 2 个；
 - 整簇下线：停止 Router 与备份定时器 → 从库先停、主库最后 → 注销 Exporter 与监控 Target；
 - 每个数据目录写入退役标记 `.pigsty-mysql-retired`，阻止普通 `mysql.yml` 重新接管；
 - **保留一切数据**：数据目录、备份、配置、证书、软件包、Metadata、Router 身份全部原样保留。彻底销毁是另一件事，请在确认备份后手工执行。
@@ -131,7 +131,7 @@ mysql
 
 ## 剧本边界
 
-以下操作**不属于**剧本职责，对应的人工流程见[日常管理](/docs/pilot/mysql/admin)：
+以下操作 **不属于** 剧本职责，对应的人工流程见 [日常管理](/docs/pilot/mysql/admin)：
 
 - 计划内主从切换（`setPrimaryInstance`）；
 - 不可达死机成员的强制摘除（`removeInstance` + `force: true`）；

@@ -135,7 +135,7 @@ AWS RDS for PostgreSQL 16 可用扩展（已刨除 PG 自带扩展）
 
 <details><summary>Aliyun RDS PG 可用扩展</summary>
 
-阿里云 RDS for PostgreSQL 16 可用扩展（已刨除 PG 自带扩展） 
+阿里云 RDS for PostgreSQL 16 可用扩展（已刨除 PG 自带扩展）
 
 | name                 | pg16 | pg15 | pg14 | pg13 | pg12 | pg11 | pg10 | ali\_desc                                      |
 |:---------------------|:-----|:-----|:-----|:-----|:-----|:-----|:-----|:-----------------------------------------------|
@@ -199,11 +199,11 @@ AWS RDS for PostgreSQL 16 可用扩展（已刨除 PG 自带扩展）
 
 Pigsty 提供近 3000 类监控指标与 50+ 监控面板，覆盖数据库、主机、连接池、负载均衡等对象，提供完整的可观测性能力。
 
-![](/img/pigsty/dashboard.jpg)
+![Pigsty 监控仪表盘](/img/pigsty/dashboard.jpg)
 
 Pigsty 提供了 638 与 PostgreSQL 有关的监控指标，而 AWS RDS 只有 99 个，阿里云 RDS 更是只有个位数指标：
 
-![](/img/docs/compare/aliyun.png)
+![阿里云 RDS PostgreSQL 监控指标](/img/docs/compare/aliyun.png)
 
 此外，也有一些项目提供了监控 PostgreSQL 的能力，但都相对比较简单初级：
 

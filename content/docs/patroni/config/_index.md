@@ -30,7 +30,7 @@ Patroni 的配置分为 3 种类型：
 
 ### 由 Patroni 控制的 PostgreSQL 参数
 
-某些 PostgreSQL 参数**必须在主库和从库上保持相同的值**。对于这些参数，**在本地 Patroni 配置文件或通过环境变量设置的值不会生效**。要修改或设置这些参数的值，必须通过 DCS 修改共享配置。以下是这类参数的列表，包含默认值和最小值：
+某些 PostgreSQL 参数 **必须在主库和从库上保持相同的值**。对于这些参数，**在本地 Patroni 配置文件或通过环境变量设置的值不会生效**。要修改或设置这些参数的值，必须通过 DCS 修改共享配置。以下是这类参数的列表，包含默认值和最小值：
 
 - **`max_connections`**：默认值 100，最小值 25
 - **`max_locks_per_transaction`**：默认值 64，最小值 32
@@ -80,6 +80,7 @@ Patroni 的配置分为 3 种类型：
 这种设计允许为所有节点统一配置（2），通过 **`ALTER SYSTEM`** 为特定节点配置（3），确保 Patroni 运行所必需的参数得到执行（4），同时为直接管理 **`postgresql.conf`** 而不涉及 Patroni 的配置工具预留空间（1）。
 
 <a id="shared_memory_gucs"></a>
+
 ### 影响共享内存的 PostgreSQL 参数
 
 PostgreSQL 有一些参数决定了其使用的共享内存大小：
@@ -101,23 +102,23 @@ PostgreSQL 有一些参数决定了其使用的共享内存大小：
 
 由于这些设置管理共享内存，重启节点时需要格外注意：
 
-- 若要**增大**上述任一设置的值：
+- 若要 **增大** 上述任一设置的值：
 
   > 1. 先重启所有从库
   > 2. 之后再重启主库
 
-- 若要**减小**上述任一设置的值：
+- 若要 **减小** 上述任一设置的值：
 
   > 1. 先重启主库
   > 2. 之后再重启所有从库
 
-**注意：** 如果在**减小**上述任一设置值后尝试一次性重启所有节点，Patroni 将忽略该变更并用原始设置值重启从库，从而需要之后再次重启从库。Patroni 这样处理是为了防止从库进入无限崩溃循环，因为如果尝试将上述任一参数设置为低于从库的 **`pg_controldata`** 中可见值的值，PostgreSQL 会以 **`FATAL`** 消息退出。换句话说，只有当从库的 **`pg_controldata`** 与主库关于这些更改保持一致后，才能在从库上减小该设置。
+**注意：** 如果在 **减小** 上述任一设置值后尝试一次性重启所有节点，Patroni 将忽略该变更并用原始设置值重启从库，从而需要之后再次重启从库。Patroni 这样处理是为了防止从库进入无限崩溃循环，因为如果尝试将上述任一参数设置为低于从库的 **`pg_controldata`** 中可见值的值，PostgreSQL 会以 **`FATAL`** 消息退出。换句话说，只有当从库的 **`pg_controldata`** 与主库关于这些更改保持一致后，才能在从库上减小该设置。
 
 更多信息请参阅 [PostgreSQL 管理员概述](https://www.postgresql.org/docs/current/hot-standby.html#HOT-STANDBY-ADMIN)。
 
 ### Patroni 配置参数
 
-以下 Patroni 配置选项**只能通过动态配置方式修改**：
+以下 Patroni 配置选项 **只能通过动态配置方式修改**：
 
 - **`ttl`**：30
 - **`loop_wait`**：10
@@ -144,9 +145,10 @@ Patroni 提供了用于生成和验证 Patroni [**本地配置文件**](/docs/pa
 - 验证给定的 Patroni 配置文件。
 
 <a id="generate_sample_config"></a>
+
 ### 示例 Patroni 配置
 
-```
+```text
 patroni --generate-sample-config [configfile]
 ```
 
@@ -167,9 +169,10 @@ patroni --generate-sample-config [configfile]
 **`configfile`** - 用于存储结果的配置文件完整路径。如果不提供，结果将输出到 **`stdout`**。
 
 <a id="generate_config"></a>
+
 ### 为运行中实例生成 Patroni 配置
 
-```
+```text
 patroni --generate-config [--dsn DSN] [configfile]
 ```
 
@@ -210,7 +213,7 @@ patroni --generate-config [--dsn DSN] [configfile]
 
 ### 验证 Patroni 配置
 
-```
+```text
 patroni --validate-config [configfile] [--ignore-listen-port | -i]
 ```
 

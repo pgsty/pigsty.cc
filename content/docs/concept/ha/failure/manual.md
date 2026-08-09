@@ -9,7 +9,7 @@ categories: [概念]
 ---
 
 {{< infographic >}}
-```
+```text
 infographic list-row-simple-horizontal-arrow
 data
 
@@ -75,7 +75,7 @@ series:
 | **人工切换**（Failover） | **跳过** | **跳过** |    健康检查     | **1s ~ 11s** |
 {.full-width}
 
-人工切换跳过了最耗时的**租约过期**和**从库检测**阶段，RTO 大幅缩短。
+人工切换跳过了最耗时的 **租约过期** 和 **从库检测** 阶段，RTO 大幅缩短。
 
 
 --------
@@ -92,7 +92,7 @@ pg failover pg-test              # 故障转移到最佳候选
 pg failover pg-test --candidate pg-test-2  # 故障转移到指定从库
 ```
 
-```
+```text
 时间线：
   执行命令      API响应      开始提升
      |           |           |
@@ -116,7 +116,7 @@ T_{command} = \begin{cases}
 
 Patroni 获取 Leader Key 并执行 `pg_ctl promote` 将目标从库提升为新主库。
 
-```
+```text
 提升流程：
   Patroni ──→ 获取 Leader Key ──→ pg_ctl promote ──→ 新主库就绪
 ```
@@ -138,7 +138,7 @@ T_{promote} = \begin{cases}
 
 HAProxy 检测新主库上线，需要连续 `rise` 次健康检查成功。
 
-```
+```text
 检测时序：
   新主提升    首次检查    第二次检查   第三次检查（UP）
      |          |           |           |
@@ -227,7 +227,7 @@ pg switchover pg-test pg-test-2    # 切换到指定从库
 ```
 
 {{< infographic >}}
-```
+```text
 infographic list-row-simple-horizontal-arrow
 data
   title Switchover 计划切换流程

@@ -72,7 +72,7 @@ infra_portal:
 | `/blackbox/` | [**Blackbox**](/docs/infra/)               | `9115`   | 黑盒探测器              |                                                                |
 {.full-width}
 
-[![](/img/pigsty/home.png)](https://demo.pigsty.cc/zh)
+[![Pigsty 在线演示首页](/img/pigsty/home.png)](https://demo.pigsty.cc/zh)
 
 Pigsty 允许对 **Nginx** 进行丰富的定制，将其作为本地文件服务器，或者反向代理服务器，配置自签名或者真正的 HTTPS 证书。
 
@@ -344,7 +344,7 @@ Chronyd 本质上归属 [**Node 模块**](/docs/node) 管理，但在网络隔�
 
 --------
 
-## INFRA节点与ADMIN节点 
+## INFRA节点与ADMIN节点
 
 通常发起管理的 [**ADMIN节点**](/docs/concept/arch/node#admin节点) 会与基础设施节点（[**INFRA节点**](/docs/concept/arch/node#infra节点)）重合。
 在 [**单机部署**](/docs/setup/install) 就是这样的。在多节点部署中，如果有多个 INFRA 节点，管理节点通常是 `infra` 分组中的第一个，其余作为备用。
@@ -378,7 +378,7 @@ all:
 默认情况下，Pigsty 只需要一个 INFRA 节点即可满足大部分需求。INFRA 模块挂了，也不会影响其他节点上的数据库服务。
 
 但是，在一些对监控与告警要求极高的生产环境中，您可能希望部署多个 INFRA 节点，来提升基础设施的可用性。
-一种常见的部署是使用两个 Infra 节点，提供一份冗余副本，并互相监控对方… 
+一种常见的部署是使用两个 Infra 节点，提供一份冗余副本，并互相监控对方…
 或者使用更多，部署分布式的 Victoria 集群实现无限水平扩展。
 
 每个 Infra 节点都是 **独立** 的，Nginx 指向的都是本机上的服务。
@@ -390,4 +390,4 @@ VictoriaMetrics 也是独立抓取环境中所有服务的监控指标，
 如果您对 Grafana 进行修改，例如添加新的仪表板，或者修改数据源配置，这些变更只会影响当前节点上的 Grafana 实例。
 如果您希望所有节点上的 Grafana 保持一致，可以使用一个 PostgreSQL 数据库作为共享存储，详情参考 [**教程：配置 Grafana 高可用**](/docs/infra/admin/grafana)。
 
-[![](/img/dashboard/infra-overview.webp)](https://demo.pigsty.cc/ui/d/infra-overview)
+[![INFRA Overview 仪表盘](/img/dashboard/infra-overview.webp)](https://demo.pigsty.cc/ui/d/infra-overview)

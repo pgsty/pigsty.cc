@@ -10,7 +10,10 @@ build:
 
 c: check
 check:
+	python3 bin/check-markdown.py README.md
+	python3 bin/check-markdown.py content
 	hugo build --cleanDestinationDir --quiet
+	python3 bin/check-markdown.py --rendered public
 	python3 bin/check_internal_links.py public
 
 s: sync

@@ -116,7 +116,7 @@ juice_instances:
 
 `juice_register` 会在 **infra 节点** 写入目标文件：
 
-```
+```text
 /infra/targets/juice/<hostname>.yml
 ```
 

@@ -66,7 +66,7 @@ Metabase 可以连接到 Pigsty 管理的 PostgreSQL 数据库。
 
 在 Metabase 初始化或添加数据库时，选择「PostgreSQL」，然后输入连接信息：
 
-```
+```text
 数据库类型：PostgreSQL
 名称：自定义名称（如 "生产数据库"）
 主机：10.10.10.10

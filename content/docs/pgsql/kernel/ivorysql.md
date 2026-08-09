@@ -18,7 +18,7 @@ Pigsty PGSQL 仓库直接提供 IvorySQL 5.4 软件包，兼容 PostgreSQL 18.4�
 在线安装使用 Pigsty 的 `pgsql` 仓库；商业版同时提供对应平台的离线交付方案。
 
 
-![](/img/pigsty/ivory.jpg)
+![IvorySQL](/img/pigsty/ivory.jpg)
 
 当前 Pigsty 的 `ivorysql` 包别名指向 IvorySQL 5，兼容 PostgreSQL 18。不同发行版的真实包名由 `roles/node_id/vars/` 中的平台变量映射，例如 EL 使用 `ivorysql5`，Debian/Ubuntu 使用 `ivorysql-5`。
 

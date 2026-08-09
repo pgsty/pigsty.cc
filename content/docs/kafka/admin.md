@@ -116,7 +116,7 @@ sudo -u kafka /usr/local/bin/pigsty-kafka-health cluster \
   describe --replication
 ```
 
-如果没有 Leader、成员长期落后或 Voter 集合与预期不一致，应先停止其他变更，保留日志、Manifest 与 `meta.properties` 证据再分析。死掉的 Voter 用[缩容](#缩容集群)或[替换故障节点](#替换故障节点)流程摘除；不要手工改写 quorum 状态。
+如果没有 Leader、成员长期落后或 Voter 集合与预期不一致，应先停止其他变更，保留日志、Manifest 与 `meta.properties` 证据再分析。死掉的 Voter 用 [缩容](#缩容集群) 或 [替换故障节点](#替换故障节点) 流程摘除；不要手工改写 quorum 状态。
 
 
 --------
@@ -291,7 +291,7 @@ Reassignment，再规划 Controller 高可用或维护窗口，最后让新的�
 
 ## 缩容集群
 
-用 `kafka-rm.yml` 选择集群的**真子集**即为成员退役（选择整个集群则是[**集群下线**](/docs/kafka/playbook#集群下线)）。退役会通过一台幸存成员，自动从现场元数据中摘除该节点：
+用 `kafka-rm.yml` 选择集群的 **真子集** 即为成员退役（选择整个集群则是 [**集群下线**](/docs/kafka/playbook#集群下线)）。退役会通过一台幸存成员，自动从现场元数据中摘除该节点：
 
 ```bash
 ./kafka-rm.yml -l 10.10.10.13     # 退役单个成员：摘除 Voter 条目、注销 Broker、清理本机
@@ -346,7 +346,7 @@ Kafka 的数据保护依赖跨故障域副本、正确的 minISR、生产者 ACK
 1. 先查看 Kafka Overview/Instance、Quorum、ISR、Offline Partition 与 Under Min ISR；
 2. 保存 `journalctl -u kafka`、节点指标、Manifest、`server.properties` 与 `meta.properties` 证据；
 3. 确认节点角色、`node.id`、Cluster ID、Directory ID 与剩余副本可用性；
-4. 节点确认无法恢复时，按[**替换故障节点**](#替换故障节点)三步走：`kafka-rm.yml` 退役 → `node.yml` 纳管 → `kafka.yml` 重入；磁盘尚存、仅服务异常时**不要**急于退役或删除 `meta.properties`，先尝试普通收敛拉起；
+4. 节点确认无法恢复时，按 [**替换故障节点**](#替换故障节点) 三步走：`kafka-rm.yml` 退役 → `node.yml` 纳管 → `kafka.yml` 重入；磁盘尚存、仅服务异常时 **不要** 急于退役或删除 `meta.properties`，先尝试普通收敛拉起；
 5. 对 Reassignment、RF 变更等数据搬迁操作仍使用独立评审的运行手册。
 
 

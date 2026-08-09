@@ -21,4 +21,3 @@ categories: [教程]
 
 对于生产环境部署，您通常需要准备至少三个 [**节点**](/docs/deploy/prepare) 以实现高可用。您需要进一步了解 Pigsty 的 [**相关概念**](/docs/concept) 以及常见操作的管理 SOP。
 包括如何通过 [**参数配置**](/docs/setup/config) 进行定制，如何执行 [**Ansible 剧本**](/docs/setup/playbook) 进行部署。以及如何加固部署的 [**安全性**](/docs/deploy/security) 以满足企业合规要求。
-

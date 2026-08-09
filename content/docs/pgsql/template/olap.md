@@ -8,7 +8,7 @@ categories: [参考]
 ---
 
 
-`olap.yml` 是针对**在线分析处理**（OLAP）负载优化的配置模板。适用于 4-128 核 CPU 的服务器，特点是支持大查询、高并行度、宽松的超时设置和激进的 Vacuum 策略。
+`olap.yml` 是针对 **在线分析处理**（OLAP）负载优化的配置模板。适用于 4-128 核 CPU 的服务器，特点是支持大查询、高并行度、宽松的超时设置和激进的 Vacuum 策略。
 
 > 建议同时使用 [**`node_tune`**](/docs/node/param#node_tune) = `olap` 进行操作系统级别的配套调优。
 
@@ -91,7 +91,7 @@ OLAP 模板的内存分配策略更为激进：
 {.full-width}
 
 **work_mem 计算逻辑**（与 OLTP 不同）：
-```
+```text
 work_mem = min(max(shared_buffers / max_connections, 64MB), 8GB)
 ```
 

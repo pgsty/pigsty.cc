@@ -74,7 +74,7 @@ mysql -h <任一成员> -P 6447 -u app -pDBUser.App --ssl-mode=VERIFY_CA --ssl-c
 接入建议：
 
 - 服务端强制 TLS，明文连接会被拒绝；普通客户端默认的 `PREFERRED` 模式即可自动协商加密，建议显式 `VERIFY_CA`（JDBC：`sslMode=VERIFY_CA`）并信任 Pigsty CA；
-- 模块不提供 VIP/DNS 接入层。为避免单一 Router 节点成为断点，应用侧建议配置**多地址 DSN**，例如 JDBC `jdbc:mysql://10.10.10.11:6446,10.10.10.12:6446,10.10.10.13:6446/app`，或在应用侧负载均衡器中列出全部成员；
+- 模块不提供 VIP/DNS 接入层。为避免单一 Router 节点成为断点，应用侧建议配置 **多地址 DSN**，例如 JDBC `jdbc:mysql://10.10.10.11:6446,10.10.10.12:6446,10.10.10.13:6446/app`，或在应用侧负载均衡器中列出全部成员；
 - 单机集群没有 Router，直连 `3306`；
 - 成员被隔离或失去多数派时，本机 Router 会主动拒绝读写连接（fail-safe），不会提供过期读。
 
@@ -152,8 +152,8 @@ dba.getCluster().setPrimaryInstance("10.10.10.12:3306");   // 指定新主库
 | 某成员 `MEMBER_STATE` 长期 `OFFLINE`（进程在、GR 停了） | 重跑 `./mysql.yml -l <集群>`，剧本会将其 rejoin 回集群 |
 | 成员反复无法入组，日志报 `peers not configured` | 同上：收敛会把 `group_replication_group_seeds` 钉回声明值 |
 | 网络分区恢复后成员未回归 | 等待约 1 分钟自动重连；仍未回归则重跑剧本 |
-| 全部成员 `OFFLINE` | 完全停机场景，见[完全停机恢复](#完全停机恢复) |
-| 机器损坏无法修复 | 见[替换故障成员](#替换故障成员) |
+| 全部成员 `OFFLINE` | 完全停机场景，见 [完全停机恢复](#完全停机恢复) |
+| 机器损坏无法修复 | 见 [替换故障成员](#替换故障成员) |
 {.full-width}
 
 对应告警：`MySQLClusterMemberOffline`（WARN）、`MySQLClusterNoPrimary` / `MySQLClusterQuorumLost`（CRIT）。
@@ -188,8 +188,8 @@ dba.getCluster("my-test").removeInstance("10.10.10.13:3306", {force: true});'
 
 要点：
 
-- 第 1 步的本质是把该地址从集群 Metadata 中摘除——只有不在 Metadata 中的地址才会走全新 Clone 路径。退役剧本要求**目标可达**（在线 SECONDARY 或已脱离集群的成员）；死机场景用 1b 的强制摘除代替；
-- 新机器必须是**全新状态**（空数据目录、无 Router 密钥残留）——重装系统即可保证；带残留状态的"半新机器"会被预检或 Router 引导拒绝；
+- 第 1 步的本质是把该地址从集群 Metadata 中摘除——只有不在 Metadata 中的地址才会走全新 Clone 路径。退役剧本要求 **目标可达**（在线 SECONDARY 或已脱离集群的成员）；死机场景用 1b 的强制摘除代替；
+- 新机器必须是 **全新状态**（空数据目录、无 Router 密钥残留）——重装系统即可保证；带残留状态的"半新机器"会被预检或 Router 引导拒绝；
 - Clone 会全量复制数据，耗时与数据量成正比，期间集群保持可用（1 主 1 从在线）；
 - 不支持在替换时更换成员地址，也不支持长期两节点运行。
 
@@ -204,14 +204,14 @@ dba.getCluster("my-test").removeInstance("10.10.10.13:3306", {force: true});'
 ./mysql-rm.yml -l my-test -e mysql_safeguard=false -e mysql_rm_confirm=my-test
 ```
 
-下线后每个成员的数据目录会留下退役标记 `/var/lib/mysql/.pigsty-mysql-retired`，它会**阻止普通 `mysql.yml` 重新接管**，防止误操作复活已退役实例。确认要原地复活时，删除标记后重新收敛：
+下线后每个成员的数据目录会留下退役标记 `/var/lib/mysql/.pigsty-mysql-retired`，它会 **阻止普通 `mysql.yml` 重新接管**，防止误操作复活已退役实例。确认要原地复活时，删除标记后重新收敛：
 
 ```bash
 ansible my-test -b -a 'rm -f /var/lib/mysql/.pigsty-mysql-retired'
 ./mysql.yml -l my-test
 ```
 
-单机实例两条命令即可复活。**HA 集群**多一步：重跑会把服务拉起，但三个成员的 GR 都处于 OFFLINE（防脑裂：无人自举），剧本会以完全停机报错退出——继续按[完全停机恢复](#完全停机恢复)第 3-4 步重建仲裁即可。
+单机实例两条命令即可复活。**HA 集群** 多一步：重跑会把服务拉起，但三个成员的 GR 都处于 OFFLINE（防脑裂：无人自举），剧本会以完全停机报错退出——继续按 [完全停机恢复](#完全停机恢复) 第 3-4 步重建仲裁即可。
 
 彻底销毁（删除数据目录、备份、软件包）不由剧本代劳，属于确认过备份的手工操作。
 
@@ -226,7 +226,7 @@ systemctl start mysql-backup                      # 手工触发（HA 上仅主�
 journalctl -u mysql-backup --since today          # 查看备份日志
 ```
 
-备份目录布局（在**当前主库**的本地磁盘上）：
+备份目录布局（在 **当前主库** 的本地磁盘上）：
 
 ```text
 /data/backups/mysql/<集群名>/
@@ -238,7 +238,7 @@ journalctl -u mysql-backup --since today          # 查看备份日志
 └── latest -> 20260729T053900Z # 原子指向最新一份
 ```
 
-检查备份新鲜度（HA 集群要在**所有成员**上检查，因为备份跟随主库落盘）：
+检查备份新鲜度（HA 集群要在 **所有成员** 上检查，因为备份跟随主库落盘）：
 
 ```bash
 ansible my-test -b -a 'ls -l /data/backups/mysql/my-test/latest'
@@ -296,7 +296,7 @@ sudo mysql --defaults-extra-file=/etc/mysql/pigsty/root.cnf -e 'SELECT @@gtid_ex
 
 ## 完全停机恢复
 
-三个成员全部 `OFFLINE`（机房断电、级联故障）时，MGR 出于防脑裂考虑**不会自动重建仲裁**，`mysql.yml` 也会明确拒绝并在报错中给出指引。恢复流程：
+三个成员全部 `OFFLINE`（机房断电、级联故障）时，MGR 出于防脑裂考虑 **不会自动重建仲裁**，`mysql.yml` 也会明确拒绝并在报错中给出指引。恢复流程：
 
 ```bash
 # 1. 确认所有成员的 mysqld 进程在运行（systemd 通常已自动拉起），GR 全部 OFFLINE
@@ -323,7 +323,7 @@ print(c.status().defaultReplicaSet.status);'
 要点：
 
 - 第 3 步通常已把所有可达成员一并带回；个别成员仍 OFFLINE 时由第 4 步的剧本收敛完成 rejoin，无需逐台手工处理；
-- 若在少数成员上重建（其余机器已损坏），先完成重建恢复写入，再按[替换故障成员](#替换故障成员)补齐；
+- 若在少数成员上重建（其余机器已损坏），先完成重建恢复写入，再按 [替换故障成员](#替换故障成员) 补齐；
 - 重建完成前集群无法写入（`super_read_only`）；多数场景下各成员仍可只读访问，个别曾被驱逐的成员可能处于 `offline_mode` 拒绝普通连接；
 - 平台默认 `sql_require_primary_key=ON` 已从源头拦截会阻塞该流程的无主键表。
 
@@ -332,7 +332,7 @@ print(c.status().defaultReplicaSet.status);'
 
 ## 平台密码的边界
 
-三个平台密码的运维边界（详见[参数参考](/docs/pilot/mysql/param#凭据参数)）：
+三个平台密码的运维边界（详见 [参数参考](/docs/pilot/mysql/param#凭据参数)）：
 
 - `mysql_monitor_password`：改清单后重跑即可轮换（Exporter 配置随之更新）；
 - `mysql_root_password`：不支持隐式重置。轮换流程：主库手工 `ALTER USER 'root'@'localhost' IDENTIFIED BY '新密码';` → 更新清单 → 重跑收敛凭据文件；

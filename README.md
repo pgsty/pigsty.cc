@@ -10,7 +10,6 @@ This is the website repo for http://pigsty.cc
 
 Powered by [**Hugo**](https://gohugo.io/) and [**Docsy**](https://docsy.dev)
 
-
 ---------------
 
 ## Build
@@ -35,9 +34,6 @@ Run hugo build
 hugo
 ```
 
-
 ## License
 
 [CC-BY 4.0](LICENSE)
-
-

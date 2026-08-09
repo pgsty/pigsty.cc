@@ -72,4 +72,3 @@ weight: 50
 | [`spock`](/ext/e/spock) | [`spock`](https://github.com/pgEdge/spock) | `5.0.10` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | PostgreSQL 多主逻辑复制扩展 |
 | [`lolor`](/ext/e/lolor) | [`lolor`](https://github.com/pgEdge/lolor) | `1.2.2` | <a class="ext-badge ext-badge--license postgresql" href="/ext/license#postgresql">PostgreSQL</a> | <a class="ext-badge ext-badge--lang c" href="/ext/language#c">C</a> | 让 PostgreSQL 大对象兼容逻辑复制的扩展 |
 {.ext-table}
-

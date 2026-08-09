@@ -15,7 +15,7 @@ main_menu: True
 
 ## 互联网
 
-**探探**：两百台+物理机，用于 PostgreSQL 与 Redis 服务 
+**探探**：两百台+物理机，用于 PostgreSQL 与 Redis 服务
 
 **哔哩**：用于支持 PostgreSQL 创新业务
 

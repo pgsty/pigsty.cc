@@ -126,4 +126,3 @@ inventory = pigsty.yml
 ```
 
 此外，Pigsty 还支持使用 [**CMDB 元数据库**](/docs/concept/iac/cmdb) 来存储配置清单，便于与现有系统对接整合。
-

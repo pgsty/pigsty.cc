@@ -94,7 +94,7 @@ hide_feedback: true
 
 ## 监控
 
->  在 Grafana [仪表盘](/docs/pgsql/monitor) 中查阅 PostgreSQL 的详情状态。
+> 在 Grafana [仪表盘](/docs/pgsql/monitor) 中查阅 PostgreSQL 的详情状态。
 
 当前源码的 `files/grafana/pgsql` 中共有 29 个 PostgreSQL / PGCAT 监控面板：
 

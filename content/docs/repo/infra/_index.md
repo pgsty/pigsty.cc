@@ -185,4 +185,3 @@ sudo yum makecache;
 ```
 {{% /tab %}}
 {{< /tabpane >}}
-

@@ -251,7 +251,7 @@ Pigsty 使用的上游软件仓库（如 Linux / PGDG 仓库）可能会因为�
 
 对于生产环境的多节点高可用 PostgreSQL 集群来说，您需要通过 [**服务接入**](/docs/pgsql/misc/svc) 来使用数据库服务，实现流量自动路由。
 
-[![](/img/pigsty/home.png)](https://demo.pigsty.cc/zh)
+[![Pigsty 在线演示首页](/img/pigsty/home.png)](https://demo.pigsty.cc/zh)
 
 
 ----------------

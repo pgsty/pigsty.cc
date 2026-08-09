@@ -67,4 +67,3 @@ categories: [参考]
 - 精简安装后无法通过 Grafana 查看数据库状态
 - 如需监控功能，请使用 [`meta`](/docs/conf/meta/) 或 [`rich`](/docs/conf/rich/) 模板
 - 可按需添加从库实现高可用
-

@@ -241,7 +241,7 @@ Replica 服务在生产环境中的重要性仅次于 Primary 服务，它在 54
 - `dest` 默认值 `default` 会被替换为 `pg_default_service_dest` 的值，默认为 `pgbouncer`，这一点和 [Primary服务](#primary服务) 相同
 - 默认情况下 Replica 服务的目的地默认是从库上的连接池，也就是由 [`pgbouncer_port`](/docs/pgsql/param#pgbouncer_port) 指定的端口，默认为 6432
 
-<details><summary>示例：pg-test-replica 的 haproxy 配置</summary> 
+<details><summary>示例：pg-test-replica 的 haproxy 配置</summary>
 
 ```ini
 listen pg-test-replica
@@ -282,7 +282,7 @@ Default 服务总是绕过连接池直接连到主库上的 PostgreSQL，这对�
 
 如果 `pg_default_service_dest` 被修改为 `postgres`，那么可以说 Default 服务除了端口和名称内容之外，与 Primary 服务是完全等价的。在这种情况下，您可以考虑将 Default 从默认服务中剔除。
 
-<details><summary>示例：pg-test-default 的 haproxy 配置</summary> 
+<details><summary>示例：pg-test-default 的 haproxy 配置</summary>
 
 ```ini
 listen pg-test-default
@@ -324,7 +324,7 @@ Offline 服务将流量直接路由到专用的 [离线从库](/docs/pgsql/confi
 - 健康检查 `/replica` 只会针对从库返回 200， 主库会返回错误，因此 Offline 服务 永远不会将流量分发到主库实例上去，哪怕集群中只剩这一台主库。
 - 同时，主库实例既不会被选择器圈中，也不会被备份选择器圈中，因此它永远不会承载 Offline 服务。因此 Offline 服务总是可以避免用户访问主库，从而避免对主库的影响。
 
-<details><summary>示例：pg-test-offline 的 haproxy 配置</summary> 
+<details><summary>示例：pg-test-offline 的 haproxy 配置</summary>
 
 ```ini
 listen pg-test-offline
@@ -476,6 +476,6 @@ pg_service_provider: proxy       # 使用端口 10013 上的 `proxy` 组的负�
 pg_default_services:  [{ name: primary ,port: 10013 ,dest: postgres  ,check: /primary   ,selector: "[]" }]
 ```
 
-用户需要确保每个委托服务的端口，在代理集群中都是**唯一**的。
+用户需要确保每个委托服务的端口，在代理集群中都是 **唯一** 的。
 
 在 20 节点生产环境仿真 [**沙箱**](/docs/deploy/sandbox) 中提供了一个使用专用负载均衡器集群的例子：[`conf/ha/simu.yml`](https://github.com/pgsty/pigsty/blob/main/conf/ha/simu.yml)

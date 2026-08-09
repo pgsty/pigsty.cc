@@ -90,13 +90,13 @@ Unix 套接字使用的组名。对抽象命名空间中的套接字无效，Win
 
 增大此设置时，操作系统的文件描述符限制可能也需要相应提高。注意，实际可能使用的文件描述符数量多于 `max_client_conn`。如果每个用户以自己的用户名连接到服务器，理论最大值为：
 
-```
+```text
 max_client_conn + (max pool_size * total databases * total users)
 ```
 
 如果连接字符串中指定了数据库用户（所有用户以同一用户名连接），理论最大值为：
 
-```
+```text
 max_client_conn + (max pool_size * total databases)
 ```
 
@@ -265,7 +265,7 @@ PgBouncer 内部会检查客户端作为预处理语句发送的所有查询，�
 
 那么，PgBouncer 处理这些预处理语句所需的最大内存量为：
 
-```
+```text
 200 x 5kB + 1000 x 4 x 4kB = ~17MB of memory.
 ```
 
@@ -275,7 +275,7 @@ PgBouncer 内部会检查客户端作为预处理语句发送的所有查询，�
 
 复用预处理语句有一个缺点。如果预处理语句的返回类型或参数类型在多次执行之间发生变化，PostgreSQL 当前会抛出如下错误：
 
-```
+```text
 ERROR:  cached plan must not change result type
 ```
 
@@ -886,7 +886,7 @@ bar = host=foo dbname=bar
 
 示例：
 
-```
+```text
 host=localhost
 host=127.0.0.1
 host=2001:0db8:85a3:0000:0000:8a2e:0370:7334
@@ -1077,7 +1077,7 @@ peer_id = connection string
 
 示例：
 
-```
+```text
 host=localhost
 host=127.0.0.1
 host=2001:0db8:85a3:0000:0000:8a2e:0370:7334
@@ -1112,7 +1112,7 @@ PgBouncer 配置文件可以包含 include 指令，用于指定要读取和处�
 
 本节描述 `auth_file` 设置所指定文件的格式。该文件是如下格式的文本文件：
 
-```
+```text
 "username1" "password" ...
 "username2" "md5abcdef012342345" ...
 "username2" "SCRAM-SHA-256$<iterations>:<salt>$<storedkey>:<serverkey>"
@@ -1122,7 +1122,7 @@ PgBouncer 配置文件可以包含 include 指令，用于指定要读取和处�
 
 PostgreSQL MD5 哈希密码格式：
 
-```
+```text
 "md5" + md5(password + username)
 ```
 
@@ -1130,7 +1130,7 @@ PostgreSQL MD5 哈希密码格式：
 
 PostgreSQL SCRAM 密钥格式：
 
-```
+```text
 SCRAM-SHA-256$<iterations>:<salt>$<storedkey>:<serverkey>
 ```
 

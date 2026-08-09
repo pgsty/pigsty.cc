@@ -45,5 +45,3 @@ flowchart LR
 在一套 Pigsty 部署中，只需要一套 etcd 集群。同一套 etcd 集群可以为多套 PostgreSQL 集群提供 DCS 服务支持。
 Pigsty 中的 etcd 默认启用 RBAC，不同 PostgreSQL 集群使用独立的用户名与密码访问 etcd，从而实现多租户管理隔离。
 管理员使用 etcd root 用户，拥有对所有 PostgreSQL 集群的管理权限。
-
-

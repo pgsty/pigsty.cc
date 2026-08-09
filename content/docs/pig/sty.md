@@ -148,7 +148,7 @@ pig sty de           # 短别名
 
 此命令从您的 Pigsty 安装目录执行 deploy.yml 剧本。为保持向后兼容性，如果 deploy.yml 不存在但 install.yml 存在，将使用 install.yml 代替。
 
-> **警告**：此操作会修改您的系统，且**调用即执行**——deploy 不设 `--yes` 确认门，
+> **警告**：此操作会修改您的系统，且 **调用即执行**——deploy 不设 `--yes` 确认门，
 > 误触发时请用 Ctrl+C 中断。（v1.6.0 起 `pig sty install` / `ins` 别名已移除。）
 
 

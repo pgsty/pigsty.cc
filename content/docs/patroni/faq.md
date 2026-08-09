@@ -218,7 +218,7 @@ Patroni 会在受影响的成员上标记 **`pending restart`** 标志。
 
 Patroni 会在所有节点上创建永久物理复制槽，确保不删除这些槽，并根据成员已消费的 LSN 在所有节点上推进槽的 LSN。
 
-之后，如果你决定移除相应成员，需要**由你负责**调整永久槽配置，否则 Patroni 将永久保留这些槽。
+之后，如果你决定移除相应成员，需要 **由你负责** 调整永久槽配置，否则 Patroni 将永久保留这些槽。
 
 **注意：** 在 Patroni **`3.2.0`** 之前的版本中，成员槽仍可配置为永久物理复制槽，但仅由当前主库管理。也就是说，在故障转移/主从切换时，这些槽会在新主库上创建，但不能保证新主库拥有缺席节点所需的全部 WAL 段。
 
@@ -258,7 +258,7 @@ Postgres 配置由 Patroni 管理，直接编辑配置文件的尝试可能会�
 
 **可以直接重启 Postgres 节点吗？**
 
-不，你**不应该**直接管理 Postgres！
+不，你 **不应该** 直接管理 Postgres！
 
 任何绕过 Patroni 直接重启 Postgres 服务器的尝试都可能导致集群发生故障转移。
 
@@ -274,7 +274,7 @@ Postgres 配置由 Patroni 管理，直接编辑配置文件的尝试可能会�
 
 Patroni 通过运行 Postgres 二进制文件（如 **`pg_ctl`** 和 **`postgres`**）来负责启动和停止 Postgres。
 
-因此，你**必须**禁用所有其他可能管理 Postgres 集群的来源，例如 systemd 单元 **`postgresql.service`**。只有 Patroni 才能启动、停止和提升集群中的 Postgres 实例。不这样做可能导致脑裂场景。例如：如果运行主库的节点故障，而 **`postgresql.service`** 单元已启用，它可能会将 Postgres 重新启动并导致脑裂。
+因此，你 **必须** 禁用所有其他可能管理 Postgres 集群的来源，例如 systemd 单元 **`postgresql.service`**。只有 Patroni 才能启动、停止和提升集群中的 Postgres 实例。不这样做可能导致脑裂场景。例如：如果运行主库的节点故障，而 **`postgresql.service`** 单元已启用，它可能会将 Postgres 重新启动并导致脑裂。
 
 --------
 

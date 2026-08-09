@@ -64,7 +64,7 @@ pg_exporter_build_info{version="v1.4.1",branch="main",revision="<git-sha>",build
 
 指标遵循 Prometheus 暴露格式：
 
-```
+```text
 # HELP <metric_name> <description>
 # TYPE <metric_name> <type>
 <metric_name>{<label_name>="<label_value>",...} <value> <timestamp>

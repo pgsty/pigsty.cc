@@ -94,7 +94,7 @@ Pigsty 的文档与网站（包括但不限于：[**pigsty.cc**](https://pigsty.
 
 ## Apache-2.0 许可证原文
 
-```
+```text
 
                                  Apache License
                            Version 2.0, January 2004

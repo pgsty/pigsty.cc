@@ -10,7 +10,7 @@ Jupyter Lab 是基于 IPython Notebook 的完整数据科学研发环境，可�
 
 Pigsty 提供了 Docker Compose 模板，可以一键在容器中启动 Jupyter Lab 服务，并方便地访问 PostgreSQL 数据库。
 
-![](/img/docs/app/jupyter.jpeg)
+![JupyterLab](/img/docs/app/jupyter.jpeg)
 
 
 

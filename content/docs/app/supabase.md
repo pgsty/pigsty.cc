@@ -33,7 +33,7 @@ vi pigsty.yml              # 编辑域名、密码、密钥...
 
 安装完毕后，使用浏览器访问 `8000` 端口造访 Supa Studio，用户名 `supabase`，密码 `pigsty`。
 
-![](/img/pigsty/supabase.webp)
+![Supabase](/img/pigsty/supabase.webp)
 
 {{< asciinema file="demo/supabase.cast" markers="0:检查环境,11:安装,43:配置,307:Docker,321:域名,340:App,350:检查" speed="1.3" autoplay="true" loop="true" >}}
 
@@ -146,7 +146,7 @@ vi pigsty.yml              # 编辑域名、密码、密钥...
 如果配置无误，大约十分钟后，就可以在本地网络通过 `http://<your_ip_address>:8000` 访问到 Supabase Studio 图形管理界面了。
 默认的用户名与密码分别是： `supabase` 与 `pigsty`。
 
-![](/img/pigsty/supabase.webp)
+![Supabase](/img/pigsty/supabase.webp)
 
 **注意事项：**
 
@@ -164,7 +164,7 @@ vi pigsty.yml              # 编辑域名、密码、密钥...
 
 以下是一些自建 Supabase 会涉及到的关键技术决策，供您参考：
 
-使用默认的**单节点部署** Supabase 无法享受到 PostgreSQL / MinIO 的高可用能力。
+使用默认的 **单节点部署** Supabase 无法享受到 PostgreSQL / MinIO 的高可用能力。
 尽管如此，单节点部署相比官方纯 Docker Compose 方案依然要有显著优势： 例如开箱即用的监控系统，自由安装扩展的能力，各个组件的扩缩容能力，以及提供兜底数据库时间点恢复能力等。
 
 Pigsty 的 Supabase 模板不启动上游 Compose 中的 `db` 与 `supavisor` 容器，也不使用 Supabase 自带连接池。

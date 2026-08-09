@@ -247,7 +247,7 @@ Pigsty 单机安装完成后，您在当前节点上通常会安装有四个功�
 
 [**`PGSQL`**](/docs/pgsql/) 模块提供了一个 [**PostgreSQL 数据库服务器**](/docs/setup/pgsql)，监听 **5432** 端口，也可通过 Pgbouncer / HAProxy [**代理访问**](/docs/pgsql/service)。
 
-[![](/img/pigsty/home.png)](https://demo.pigsty.cc/zh)
+[![Pigsty 在线演示首页](/img/pigsty/home.png)](https://demo.pigsty.cc/zh)
 
 
 ----------------

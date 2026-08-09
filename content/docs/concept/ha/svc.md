@@ -138,4 +138,3 @@ postgres://dbuser_stats@10.10.10.11:5438/test # HAProxy -> 数据库离线读-�
 postgres://test@10.10.10.11:6432,10.10.10.12:6432,10.10.10.13:6432/test?target_session_attrs=primary
 postgres://test@10.10.10.11:6432,10.10.10.12:6432,10.10.10.13:6432/test?target_session_attrs=prefer-standby
 ```
-

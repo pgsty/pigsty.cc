@@ -144,7 +144,7 @@ Bootstrap-only 事实保存在每个集群成员节点上：
 - 所有成员都找不到 Manifest 副本而存储已格式化时，失败关闭并提示先在任一成员上恢复该文件；
 - 已格式化的 `scram` 集群在所有成员都没有 Secret 副本时同样失败关闭。
 
-Manifest 是集群的"出生证明"：首次 Commission 之后，成员关系以 Raft 现场状态为权威。此后在清单中新增的 Combined/Controller 节点会由剧本编排加入动态 Quorum（全新格式化 → Observer 追平 → `add-controller` 提升），退役则由 `kafka-rm.yml` 真子集选择完成（自动 `remove-controller` 与 Broker 注销），详见[扩容集群](/docs/kafka/admin#扩容集群)与[缩容集群](/docs/kafka/admin#缩容集群)。
+Manifest 是集群的"出生证明"：首次 Commission 之后，成员关系以 Raft 现场状态为权威。此后在清单中新增的 Combined/Controller 节点会由剧本编排加入动态 Quorum（全新格式化 → Observer 追平 → `add-controller` 提升），退役则由 `kafka-rm.yml` 真子集选择完成（自动 `remove-controller` 与 Broker 注销），详见 [扩容集群](/docs/kafka/admin#扩容集群) 与 [缩容集群](/docs/kafka/admin#缩容集群)。
 
 
 --------
@@ -187,7 +187,7 @@ Manifest 是集群的"出生证明"：首次 Commission 之后，成员关系以
 
 因此客户端必须能够解析并直达每一个 Broker 的 `inventory_hostname`。当前 v1 不支持 NAT、公网映射、同一 Broker 多客户端网络或任意 raw listener 覆盖；这些场景不能通过 `kafka_parameters` 拼装绕过。
 
-Kafka 的标准接入模型是智能客户端直连 Broker：`bootstrap.servers` 配置多个种子地址，客户端获取集群元数据后直接连接 Partition Leader。HAProxy、Keepalived VIP、云 LB 不应作为常规 Kafka 数据面入口，因为它们不了解 Kafka 元数据和 Partition Leader，且无法免除客户端访问所有 `advertised.listeners` 地址的要求。DNS 或 TCP LB 最多作为可选的 bootstrap 发现入口；即使如此，应用网络仍必须直达全部 Broker。详见[快速上手：接入应用客户端](/docs/kafka/start#三接入应用客户端)。
+Kafka 的标准接入模型是智能客户端直连 Broker：`bootstrap.servers` 配置多个种子地址，客户端获取集群元数据后直接连接 Partition Leader。HAProxy、Keepalived VIP、云 LB 不应作为常规 Kafka 数据面入口，因为它们不了解 Kafka 元数据和 Partition Leader，且无法免除客户端访问所有 `advertised.listeners` 地址的要求。DNS 或 TCP LB 最多作为可选的 bootstrap 发现入口；即使如此，应用网络仍必须直达全部 Broker。详见 [快速上手：接入应用客户端](/docs/kafka/start#三接入应用客户端)。
 
 最小网络流向：
 

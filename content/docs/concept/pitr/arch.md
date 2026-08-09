@@ -33,7 +33,7 @@ pgBackRest 是 PostgreSQL 生态中事实上的标准备份工具，Pigsty 用�
 在仓库内部，pgBackRest 使用 **stanza**（节）隔离不同集群的备份。Pigsty 将 stanza 直接映射为集群名
 [**`pg_cluster`**](/docs/pgsql/param#pg_cluster)，因此多套集群可以安全地共享同一个备份仓库：
 
-```
+```text
 备份仓库
 ├── backup/
 │   ├── pg-meta/          # pg-meta 集群的基础备份

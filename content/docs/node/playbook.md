@@ -21,7 +21,7 @@ Pigsty 提供两个与 NODE 模块相关的剧本：
 
 向 Pigsty 添加节点的 [`node.yml`](https://github.com/pgsty/pigsty/blob/main/node.yml) 包含以下子任务：
 
-```
+```text
 node-id       ：生成节点身份标识
 node_name     ：设置主机名
 node_hosts    ：配置 /etc/hosts 记录
@@ -55,7 +55,7 @@ monitor       ：配置节点监控：node_exporter & vector
 
 从 Pigsty 中移除节点的剧本 [`node-rm.yml`](https://github.com/pgsty/pigsty/blob/main/node-rm.yml) 包含以下子任务：
 
-```
+```text
 node_deregister   : 移除节点注册信息（VictoriaMetrics / Vector / DNS）
   - rm_metrics    : 移除已注册的 VictoriaMetrics 监控目标
   - rm_logs       : 移除已注册的 Vector 日志采集配置

@@ -74,4 +74,3 @@ http://elec.pigsty:8003/metrics
 - Electric 用户需要 `replication` 权限
 - 需要启用 PostgreSQL 逻辑复制
 - 生产环境建议使用 SSL 连接（已配置 `sslmode=require`）
-

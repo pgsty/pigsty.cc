@@ -137,7 +137,7 @@ pg list <cls> -W 5                    # 每 5 秒刷新一次（--watch）
 
 输出示例：
 
-```
+```text
 + Cluster: pg-test (7322261897169354773) -----+----+--------------+
 | Member    | Host        | Role    | State   | TL | Lag in MB    |
 +-----------+-------------+---------+---------+----+--------------+
@@ -151,7 +151,7 @@ pg list <cls> -W 5                    # 每 5 秒刷新一次（--watch）
 
 如果某个实例需要重启才能应用配置更改，实例名称后会显示 `*` 标记：
 
-```
+```text
 + Cluster: pg-test (7322261897169354773) -------+----+--------------+
 | Member      | Host        | Role    | State   | TL | Lag in MB    |
 +-------------+-------------+---------+---------+----+--------------+
@@ -346,7 +346,7 @@ pg reinit pg-test pg-test-2 --force --wait
 
 重建过程中，可以使用 `pg list` 查看进度。从库状态会显示为 `creating replica`：
 
-```
+```text
 + Cluster: pg-test (7322261897169354773) --------------+----+------+
 | Member    | Host        | Role    | State            | TL | Lag  |
 +-----------+-------------+---------+------------------+----+------+
@@ -566,4 +566,3 @@ $ pg remove pg-test
 Please confirm the cluster name to remove: pg-test
 You are about to remove all information in DCS for pg-test, please type: "Yes I am aware": Yes I am aware
 ```
-

@@ -9,7 +9,7 @@ categories: [概念]
 
 
 INFRA 模块在 Pigsty 中承担着特殊的角色：它不是传统意义上的"集群"，而是由一组 **基础设施节点** 构成的管理中枢，为整个 Pigsty 部署提供核心服务。
-每个 INFRA 节点都是一个**自治**的基础设施服务单元，运行着 Nginx、Grafana、VictoriaMetrics 等核心组件，共同为纳管的数据库集群提供可观测性与管理能力。
+每个 INFRA 节点都是一个 **自治** 的基础设施服务单元，运行着 Nginx、Grafana、VictoriaMetrics 等核心组件，共同为纳管的数据库集群提供可观测性与管理能力。
 
 在 Pigsty 的 INFRA 模块中有两种核心实体：
 
@@ -151,7 +151,7 @@ INFRA 节点的数量取决于部署规模和高可用需求：
 
 ## 监控标签体系
 
-Pigsty 的监控系统会采集 INFRA 组件自身的指标。与数据库模块不同，INFRA 模块的每个**组件**都被视为独立的监控对象，通过 `cls`（类）标签区分不同组件类型。
+Pigsty 的监控系统会采集 INFRA 组件自身的指标。与数据库模块不同，INFRA 模块的每个 **组件** 都被视为独立的监控对象，通过 `cls`（类）标签区分不同组件类型。
 
 | 标签    | 说明                                | 示例              |
 |:------|:----------------------------------|:----------------|
@@ -184,5 +184,3 @@ vm_app_version{cls="vmetrics", ins="vmetrics-1", ip="10.10.10.10", job="infra"}
 vlogs_rows_ingested_total{cls="vlogs", ins="vlogs-1", ip="10.10.10.10", job="infra"}
 alertmanager_alerts{cls="alertmanager", ins="alertmanager-1", ip="10.10.10.10", job="infra"}
 ```
-
-

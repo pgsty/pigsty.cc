@@ -40,10 +40,10 @@ Pigsty 使用三个身份标签：`cls`、`ins`、`ip`，它们将附加到所�
 
 与 PostgreSQL 有关的日志由 vector 负责收集，并发送至 infra 节点上的 VictoriaLogs 日志存储/查询服务。
 
-- [`pg_log_dir`](/docs/pgsql/param#pg_log_dir)：postgres 日志目录，默认为`/pg/log/postgres`
-- [`pgbouncer_log_dir`](/docs/pgsql/param#pgbouncer_log_dir)：pgbouncer 日志目录，默认为`/pg/log/pgbouncer`
-- [`patroni_log_dir`](/docs/pgsql/param#patroni_log_dir)：patroni 日志目录，默认为`/pg/log/patroni`
-- [`pgbackrest_log_dir`](/docs/pgsql/param#pgbackrest_log_dir)：pgbackrest 日志目录，默认为`/pg/log/pgbackrest`
+- [`pg_log_dir`](/docs/pgsql/param#pg_log_dir)：postgres 日志目录，默认为 `/pg/log/postgres`
+- [`pgbouncer_log_dir`](/docs/pgsql/param#pgbouncer_log_dir)：pgbouncer 日志目录，默认为 `/pg/log/pgbouncer`
+- [`patroni_log_dir`](/docs/pgsql/param#patroni_log_dir)：patroni 日志目录，默认为 `/pg/log/patroni`
+- [`pgbackrest_log_dir`](/docs/pgsql/param#pgbackrest_log_dir)：pgbackrest 日志目录，默认为 `/pg/log/pgbackrest`
 
 
 **目标管理**
@@ -60,7 +60,7 @@ VictoriaMetrics 的监控目标在 `/infra/targets/pgsql/` 下的静态文件中
     - 10.10.10.10:9854    # <--- pgbackrest_exporter 用于备份指标
 ```
 
-当全局标志 [`patroni_ssl_enabled`](/docs/pgsql/param#patroni_ssl_enabled) 被设置时，Patroni 目标会单独写入 `/infra/targets/patroni/<ins>.yml`，因为此时使用 HTTPS 抓取端点。当您 [监控RDS](#监控rds) 实例时，监控目标会放在 `/infra/targets/pgrds/` 目录下，并以**集群**为单位进行管理。
+当全局标志 [`patroni_ssl_enabled`](/docs/pgsql/param#patroni_ssl_enabled) 被设置时，Patroni 目标会单独写入 `/infra/targets/patroni/<ins>.yml`，因为此时使用 HTTPS 抓取端点。当您 [监控RDS](#监控rds) 实例时，监控目标会放在 `/infra/targets/pgrds/` 目录下，并以 **集群** 为单位进行管理。
 
 当使用 `bin/pgsql-rm` 或 `pgsql-rm.yml` 移除集群时，相应监控目标会被移除。您也可以使用：
 
@@ -99,7 +99,7 @@ Pigsty 提供三种监控模式，以适应不同的监控需求。
 |     功能概述      |     PGCAT + PGRDS     |           大部分功能            |        完整功能         |
 {.full-width}
 
-由 Pigsty 完全管理的数据库会自动纳入监控，并拥有最好的监控支持，通常不需要任何配置。对于现有的 PostgreSQL 集群或者 RDS 服务，如果目标 DB 节点**可以被 Pigsty 所管理**（ssh 可达，sudo 可用），那么您可以考虑 [托管部署](#监控现有集群)，实现与 Pigsty 基本类似的监控管理体验。如果您**只能通过 PGURL**（数据库连接串）的方式访问目标数据库，例如远程的 RDS 服务，则可以考虑使用 [精简模式](#监控rds) 监控目标数据库。
+由 Pigsty 完全管理的数据库会自动纳入监控，并拥有最好的监控支持，通常不需要任何配置。对于现有的 PostgreSQL 集群或者 RDS 服务，如果目标 DB 节点 **可以被 Pigsty 所管理**（ssh 可达，sudo 可用），那么您可以考虑 [托管部署](#监控现有集群)，实现与 Pigsty 基本类似的监控管理体验。如果您 **只能通过 PGURL**（数据库连接串）的方式访问目标数据库，例如远程的 RDS 服务，则可以考虑使用 [精简模式](#监控rds) 监控目标数据库。
 
 
 
@@ -108,7 +108,7 @@ Pigsty 提供三种监控模式，以适应不同的监控需求。
 
 ## 监控现有集群
 
-**如果目标 DB 节点可以被 Pigsty 所管理**（`ssh`可达且`sudo`可用），那么您可以使用 [`pgsql.yml`](/docs/pgsql/playbook#pgsqlyml) 剧本中的`pg_exporter`任务，
+**如果目标 DB 节点可以被 Pigsty 所管理**（`ssh` 可达且 `sudo` 可用），那么您可以使用 [`pgsql.yml`](/docs/pgsql/playbook#pgsqlyml) 剧本中的 `pg_exporter` 任务，
 使用与标准部署相同的方式，在目标节点上部署监控组件：PG Exporter。您也可以使用该剧本的 `pgbouncer`，`pgbouncer_exporter` 任务在已有实例节点上部署连接池及其监控。此外，您也可以使用 [**`node.yml`**](/docs/node/playbook#nodeyml) 中的 `node_exporter`， `haproxy`， `vector` 部署主机监控，负载均衡，日志收集组件。从而获得与原生 Pigsty 数据库实例完全一致的使用体验。
 
 现有集群的定义方式与 Pigsty 所管理的集群定义方式完全相同，您只是选择性执行 `pgsql.yml` 剧本中的部分任务，而不是执行整个剧本。
@@ -129,9 +129,9 @@ Pigsty 提供三种监控模式，以适应不同的监控需求。
 
 ## 监控RDS
 
-如果您**只能通过 PGURL**（数据库连接串）的方式访问目标数据库，那么可以参照这里的说明进行配置。在这种模式下，Pigsty 在 [**INFRA节点**](/docs/concept/arch/node#infra节点) 上部署对应的 PG Exporter，抓取远端数据库指标信息。如下图所示：
+如果您 **只能通过 PGURL**（数据库连接串）的方式访问目标数据库，那么可以参照这里的说明进行配置。在这种模式下，Pigsty 在 [**INFRA节点**](/docs/concept/arch/node#infra节点) 上部署对应的 PG Exporter，抓取远端数据库指标信息。如下图所示：
 
-```
+```text
 ------ infra ------
 |                 |
 | victoria-metrics|            v---- pg-foo-1 ----v
@@ -172,7 +172,7 @@ Pigsty 提供三种监控模式，以适应不同的监控需求。
       vars:           # 在组'infra'上为远程postgres RDS安装pg_exporter
         pg_exporters: # 在此列出所有远程实例，为k分配一个唯一的未使用的本地端口
           20001: { pg_cluster: pg-foo, pg_seq: 1, pg_host: 10.10.10.10 , pg_databases: [{ name: meta }] } # 注册 meta 数据库为 Grafana 数据源
-    
+
           20002: { pg_cluster: pg-bar, pg_seq: 1, pg_host: 10.10.10.11 , pg_port: 5432 } # 几种不同的连接串拼接方法
           20003: { pg_cluster: pg-bar, pg_seq: 2, pg_host: 10.10.10.12 , pg_exporter_url: 'postgres://dbuser_monitor:DBUser.Monitor@10.10.10.12:5432/postgres?sslmode=disable'}
           20004: { pg_cluster: pg-bar, pg_seq: 3, pg_host: 10.10.10.13 , pg_monitor_username: dbuser_monitor, pg_monitor_password: DBUser.Monitor }
@@ -274,14 +274,14 @@ infra:            # 代理、监控、警报等的infra集群..
 
 - [ ] [监控用户](#监控用户)：默认使用的用户名为 `dbuser_monitor`， 该用户属于 `pg_monitor` 角色组，或确保具有相关视图访问权限。
 - [ ] [监控认证](#监控认证)：默认使用密码访问，您需要确保 HBA 策略允许监控用户从管理机或 DB 节点本地访问数据库。
-- [ ] [监控模式](#监控模式)：固定使用名称 `monitor`，用于安装额外的**监控视图**与扩展插件，非必选，但建议创建。
-- [ ] [监控扩展](#监控扩展)：**强烈建议**启用 PG 自带的监控扩展 `pg_stat_statements`。
+- [ ] [监控模式](#监控模式)：固定使用名称 `monitor`，用于安装额外的 **监控视图** 与扩展插件，非必选，但建议创建。
+- [ ] [监控扩展](#监控扩展)：**强烈建议** 启用 PG 自带的监控扩展 `pg_stat_statements`。
 - [ ] [监控视图](#监控视图)：监控视图是可选项，可以提供更多的监控指标支持。
 
 
 ### 监控用户
 
-以 Pigsty 默认使用的监控用户`dbuser_monitor`为例，在目标数据库集群创建以下用户。
+以 Pigsty 默认使用的监控用户 `dbuser_monitor` 为例，在目标数据库集群创建以下用户。
 
 ```sql
 CREATE USER dbuser_monitor;                                       -- 创建监控用户
@@ -315,7 +315,7 @@ host    all  dbuser_monitor  <管理机器IP地址>/32 md5
 
 ### 监控模式
 
-监控模式**可选项**，即使没有，Pigsty 监控系统的主体也可以正常工作，但我们强烈建议设置此模式。
+监控模式 **可选项**，即使没有，Pigsty 监控系统的主体也可以正常工作，但我们强烈建议设置此模式。
 
 ```sql
 CREATE SCHEMA IF NOT EXISTS monitor;               -- 创建监控专用模式

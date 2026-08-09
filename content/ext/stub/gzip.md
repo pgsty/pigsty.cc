@@ -51,4 +51,3 @@ To convert a `bytea` back into an equivalent `text` you must use the `encode()` 
                           encode
     -----------------------------------------------------
      this text has been compressed and then decompressed
-

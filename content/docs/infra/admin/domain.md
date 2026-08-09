@@ -16,7 +16,7 @@ categories: [任务]
 
 将以下静态解析记录添加到 `/etc/hosts`：
 
-```
+```text
 10.10.10.10 i.pigsty
 ```
 
@@ -77,7 +77,7 @@ notepad C:\Windows\System32\drivers\etc\hosts
 
 添加内容：
 
-```
+```text
 10.10.10.10 i.pigsty m.pigsty
 ```
 

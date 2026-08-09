@@ -37,7 +37,7 @@ Redis [**身份参数**](/docs/redis/config#身份参数) 是定义 Redis 集群
 - [`redis_instances`](/docs/redis/param#redis_instances)：JSON 对象，Key 为实例端口号，Value 为包含实例其他配置 JSON 对象。
 
 
--------- 
+--------
 
 ## 工作模式
 
@@ -219,5 +219,3 @@ redis-secure:
       DEBUG: ''                        # 禁用命令
       CONFIG: 'ADMIN_CONFIG'
 ```
-
-

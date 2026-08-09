@@ -128,7 +128,7 @@ example: --no-checksum-page
 
 所有被排除的文件都会以 `info` 级别写入日志，并注明排除规则。请仔细审查被排除的文件列表，确认没有意外排除重要内容。
 
-> **注意：** delta 恢复不遵循排除规则。备份时被排除的文件/目录，在 delta 恢复时会被*删除*。
+> **注意：** delta 恢复不遵循排除规则。备份时被排除的文件/目录，在 delta 恢复时会被 *删除*。
 
 不应使用此选项排除 PostgreSQL 日志。可通过 PostgreSQL 的 `log_directory` 参数将日志目录移到 `PGDATA` 之外，这样还能在恢复后保留日志。
 
@@ -412,7 +412,7 @@ I/O 超时时间。
 
 连接及读写操作的超时时间（秒）。
 
-注意，整个读写操作不必在此超时时间内完成，但必须有*一定*进展，哪怕只是传输了一个字节。
+注意，整个读写操作不必在此超时时间内完成，但必须有 *一定* 进展，哪怕只是传输了一个字节。
 
 ```yaml
 default: 1m
@@ -688,7 +688,7 @@ example: --no-page-header-check
 
 警告：
 
-使用此选项时请谨慎，因为 `pg_control` 和 WAL 头仍会按指定版本的预期格式读取，即官方开源 PostgreSQL 版本的格式。如果分支版本或开发版本修改了 pgBackRest 所依赖字段的格式，将导致不可预期的行为。通常，只有当分支版本将所有自定义结构成员添加在标准 PostgreSQL 成员*之后*时，此选项才能按预期工作。
+使用此选项时请谨慎，因为 `pg_control` 和 WAL 头仍会按指定版本的预期格式读取，即官方开源 PostgreSQL 版本的格式。如果分支版本或开发版本修改了 pgBackRest 所依赖字段的格式，将导致不可预期的行为。通常，只有当分支版本将所有自定义结构成员添加在标准 PostgreSQL 成员 *之后* 时，此选项才能按预期工作。
 
 ```yaml
 example: --pg-version-force=15
@@ -1051,7 +1051,7 @@ example: --repo1-path=/backup/db/backrest
 
 若未设置此值且 `repo-retention-full-type` 为 `count`（默认值），则归档过期默认值为 `repo-retention-full`（或 `repo-retention-diff`）对应 `repo-retention-archive-type`（设置为 `full` 或 `diff`）的值，确保 WAL 仅在对应备份过期后才会过期。若 `repo-retention-full-type` 为 `time`，则此值默认为移除早于满足 `repo-retention-full` 设置后保留的最旧全量备份的归档。
 
-若 `repo-retention-archive-type` 设置为 `incr`，则必须设置此选项。在磁盘空间极为紧张时，可结合 `repo-retention-archive-type` 使用此选项激进地清理 WAL 段。但这样做会导致无法从已清理 WAL 的备份执行 PITR，因此**不推荐**。
+若 `repo-retention-archive-type` 设置为 `incr`，则必须设置此选项。在磁盘空间极为紧张时，可结合 `repo-retention-archive-type` 使用此选项激进地清理 WAL 段。但这样做会导致无法从已清理 WAL 的备份执行 PITR，因此 **不推荐**。
 
 ```yaml
 allowed: [1, 9999999]

@@ -21,4 +21,3 @@ LIMIT 10
 ```
 
 This fdw is read-only for now.
-

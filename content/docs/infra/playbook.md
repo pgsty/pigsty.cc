@@ -69,7 +69,7 @@ Pigsty 提供了三个与 INFRA 模块相关的剧本：
 
 ### 可用任务列表
 
-```
+```text
 # ca: create self-signed CA on localhost files/pki
 #   - ca_dir        : create CA directory
 #   - ca_private    : generate ca private key: files/pki/ca/ca.key

@@ -41,4 +41,4 @@ cd ~/pigsty; ./configure -g                   # 生成配置（使用默认单�
 
 是的，就是这么简单。您完全可以在不了解任何细节的情况下，使用 [**预制配置模板**](/docs/concept/iac/template) 一键拉起 Pigsty。
 
-接下来，您可以探索 [**图形用户界面**](/docs/setup/webui/)，访问 [**PostgreSQL 数据库服务**](/docs/setup/pgsql/)；或者进行 [**配置定制**](/docs/setup/config) 并 [**执行剧本**](/docs/setup/playbook) 部署更多集群。 
+接下来，您可以探索 [**图形用户界面**](/docs/setup/webui/)，访问 [**PostgreSQL 数据库服务**](/docs/setup/pgsql/)；或者进行 [**配置定制**](/docs/setup/config) 并 [**执行剧本**](/docs/setup/playbook) 部署更多集群。

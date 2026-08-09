@@ -382,7 +382,7 @@ example: --no-log-timestamp
 
 警告：
 
-使用此选项时请务必谨慎，因为 `pg_control` 和 WAL 头部仍将按照指定版本所对应的官方 PostgreSQL 格式进行解析。若分支版本或开发版本修改了 pgBackRest 所依赖字段的格式，将导致不可预期的行为。通常情况下，此选项仅在分支版本将所有自定义结构成员追加在标准 PostgreSQL 成员*之后*时才能正常工作。
+使用此选项时请务必谨慎，因为 `pg_control` 和 WAL 头部仍将按照指定版本所对应的官方 PostgreSQL 格式进行解析。若分支版本或开发版本修改了 pgBackRest 所依赖字段的格式，将导致不可预期的行为。通常情况下，此选项仅在分支版本将所有自定义结构成员追加在标准 PostgreSQL 成员 *之后* 时才能正常工作。
 
 ```yaml
 example: --pg-version-force=15

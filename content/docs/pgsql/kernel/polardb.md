@@ -20,7 +20,7 @@ PolarDB for PostgreSQL 当前以 PostgreSQL 17 为基线，Pigsty 中的 `polar`
 Pigsty 的 PGSQL 仓库中提供了 PolarDB PG 开源版安装包，但不会在 Pigsty 安装时下载到本地软件仓库。
 
 
-![](/img/pigsty/polar.jpg)
+![PolarDB for PostgreSQL](/img/pigsty/polar.jpg)
 
 
 --------

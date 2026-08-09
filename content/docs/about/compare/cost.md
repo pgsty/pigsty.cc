@@ -116,7 +116,7 @@ categories: [参考]
 | IOPS     | 4K 随机读：600K ~ 1.1M 4K 随机写 200K ~ 350K                | 4K 随机读：最大 1M                                                                                                                                                                                                    | 16K 随机 IOPS： 256K                                                                                                                                                   |
 | 延迟       | 4K 随机读：75µs 4K 随机写：15µs                              | 4K 随机读： 200µs                                                                                                                                                                                                   | 随机 IO：500µs 上下文推断为16K                                                                                                                                               |
 | 可靠性      | UBER < 1e-18，折合18个9 MTBF: 200万小时 5DWPD，持续三年          | 数据可靠性 9个9 [存储与数据可靠性](https://help.aliyun.com/document_detail/476273.html)                                                                                                                                       | **持久性**：99.999%，5个9 （0.001% 年故障率） [io2 说明](https://aws.amazon.com/cn/blogs/storage/achieve-higher-database-performance-using-amazon-ebs-io2-block-express-volumes/) |
-| 成本       | **16 ¥/TB·****月** ( 5年均摊 / 3.2T MLC ) 5 年质保，¥3000 零售 | **3200¥/TB·****月** （原价 6400¥，包月4000¥） 3年预付整体打5折才有此价格                                                                                                                                                            | **1900 ¥/TB·****月** 使用最大规格 65536GB 256K IOPS 最优惠状态                                                                                                                  |
+| 成本       | **16 ¥/TB·** **月** ( 5年均摊 / 3.2T MLC ) 5 年质保，¥3000 零售 | **3200¥/TB·** **月** （原价 6400¥，包月4000¥） 3年预付整体打5折才有此价格                                                                                                                                                            | **1900 ¥/TB·** **月** 使用最大规格 65536GB 256K IOPS 最优惠状态                                                                                                                  |
 | SLA      | 5年质保 出问题直接换新                                         | [Aliyun RDS SLA](https://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud201910310944_35008.html?spm=a2c4g.11186623.0.0.270e6e37n8Exh5) 可用性 99.99%: 月费 15% 99%: 月费 30% 95%: 月费 100% | [Amazon RDS SLA](https://d1.awsstatic.com/legal/amazonrdsservice/Amazon-RDS-Service-Level-Agreement-Chinese.pdf) 可用性 99.95%: 月费 15% 99%: 月费 25% 95%: 月费 100%        |
 {.full-width}
 
@@ -215,7 +215,7 @@ categories: [参考]
 
 **云厂商画像篇**
 
-- [互联网技术大师速成班 ](https://mp.weixin.qq.com/s/8ZffsCgchv8LH5ujv0lRGQ)【转载】
+- [互联网技术大师速成班](https://mp.weixin.qq.com/s/8ZffsCgchv8LH5ujv0lRGQ)【转载】
 
 - [门内的国企如何看门外的云厂商](https://mp.weixin.qq.com/s/qSTEf9txjHNTHeEFv3NkWg)【转载】
 

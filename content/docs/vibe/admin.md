@@ -36,7 +36,7 @@ journalctl -u jupyter -f
 
 默认位置（可由 `vibe_data` 调整）：
 
-```
+```text
 /fs/CLAUDE.md
 /fs/AGENTS.md
 ```

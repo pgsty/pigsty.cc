@@ -110,7 +110,7 @@ Pigsty 旨在聚集 PG 生态的合力，并用自动驾驶的数据库管控软
 <li>软件缺陷修复</li>
 <li>疑难杂症分析</li>
 <li>专家答疑解惑</li>
-<li>备份合规建议</li> 
+<li>备份合规建议</li>
 <li>升级路径支持</li>
 <li>性能瓶颈定位</li>
 <li>年度架构评估</li>
@@ -288,7 +288,7 @@ Pigsty 的定价策略确保用户物有所值 —— 您可以立即获得顶�
 
 {{% alert title="专家顾问：300,000 ¥ / 三年" color="primary" %}}
 
-<br> 
+<br>
 在三年内，提供 10 次关于 PostgreSQL 与 Pigsty 的复杂案例处理，以及不限量答疑。
 
 {{% /alert %}}
@@ -304,7 +304,7 @@ Pigsty 的定价策略确保用户物有所值 —— 您可以立即获得顶�
 {{% alert title="专家咨询：3000 ¥ / 例" color="success" %}}
 
 <br>
-咨询任何您想要了解的问题，关于 Pigsty， PostgreSQL，数据库，云计算，AI…… 
+咨询任何您想要了解的问题，关于 Pigsty， PostgreSQL，数据库，云计算，AI……
 数据库老司机，云计算泥石流与您分享行业顶级洞察、认知与研判。
 
 {{% /alert %}}
@@ -328,7 +328,7 @@ Pigsty 目前由作者 **冯若航** 独资运营维护，商业主体为：
 - 海口龙华辟技数据中心 / 92460000MAG0XJ569B
 - 海口龙华越航科技中心 / 92460000MACCYGBQ1N
 
-PIGSTY® 与 PGSTY® 为海口龙华越航科技中心的注册商标。 
+PIGSTY® 与 PGSTY® 为海口龙华越航科技中心的注册商标。
 
 商务咨询请发送邮件至 [**rh@vonng.com**](mailto:rh@vonng.com)。中国大陆地区用户欢迎添加微信号 `RuohangFeng`。
 

@@ -9,7 +9,7 @@ linkTitle: PGLOG CSV 日志分析
 ---
 
 
-PGLOG 是 Pigsty 自带的一个样例应用，固定使用 MetaDB 中`pglog.sample`表作为数据来源。您只需要将日志灌入该表，然后访问相关 Dashboard 即可。
+PGLOG 是 Pigsty 自带的一个样例应用，固定使用 MetaDB 中 `pglog.sample` 表作为数据来源。您只需要将日志灌入该表，然后访问相关 Dashboard 即可。
 
 Pigsty 提供了一些趁手的命令，用于拉取 csv 日志，并灌入样本表中。在元节点上，默认提供下列快捷命令：
 
@@ -28,20 +28,19 @@ catlog node-1 '2021-07-15' | pglog   # 分析node-1在2021-07-15的csvlog
 
 * [PGLOG Overview](https://demo.pigsty.cc/d/pglog-overview)：呈现整份 CSV 日志样本详情，按多种维度聚合。
 
-[![](/img/dashboard/pglog-overview.jpg)](https://demo.pigsty.cc/d/pglog-overview)
+[![PGLOG Overview 仪表盘](/img/dashboard/pglog-overview.jpg)](https://demo.pigsty.cc/d/pglog-overview)
 
 * [PGLOG Session](https://demo.pigsty.cc/d/pglog-session)：呈现日志样本中一条具体连接的详细信息。
 
-[![](/img/dashboard/pglog-session.jpg)](https://demo.pigsty.cc/d/pglog-session)
+[![PGLOG Session 仪表盘](/img/dashboard/pglog-session.jpg)](https://demo.pigsty.cc/d/pglog-session)
 
-`catlog`命令从特定节点拉取特定日期的 CSV 数据库日志，写入`stdout`
+`catlog` 命令从特定节点拉取特定日期的 CSV 数据库日志，写入 `stdout`
 
-默认情况下，`catlog`会拉取当前节点当日的日志，您可以通过参数指定节点与日期。
+默认情况下，`catlog` 会拉取当前节点当日的日志，您可以通过参数指定节点与日期。
 
-组合使用`pglog`与`catlog`，即可快速拉取数据库 CSV 日志进行分析。
+组合使用 `pglog` 与 `catlog`，即可快速拉取数据库 CSV 日志进行分析。
 
 ```bash
 catlog | pglog                       # 分析当前节点当日的日志
 catlog node-1 '2021-07-15' | pglog   # 分析node-1在2021-07-15的csvlog
 ```
-

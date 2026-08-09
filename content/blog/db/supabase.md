@@ -32,7 +32,7 @@ vi pigsty.yml              # 编辑域名、密码、密钥...
 
 安装完毕后，使用浏览器访问 `8000` 端口造访 Supa Studio，用户名 `supabase`，密码 `pigsty`。
 
-![](https://doc.pgsty.com/img/docs/supabase-login.png)
+![Supabase 登录界面](https://doc.pgsty.com/img/docs/supabase-login.png)
 
 
 {{< asciinema file="demo/supabase.cast" markers="0:检查环境,11:安装,43:配置,307:Docker,321:域名,340:App,350:检查" speed="1.3" autoplay="true" loop="true" >}}
@@ -42,13 +42,13 @@ vi pigsty.yml              # 编辑域名、密码、密钥...
 
 ## 目录
 
-- [Supabase是什么？](#supabase是什么)
+- [Supabase是什么？](#supabase-是什么)
 - [为什么要自建它？](#为什么要自建)
 - [单机自建快速上手](#单节点自建快速上手)
 - [进阶主题：安全加固](#进阶主题安全加固)
 - [进阶主题：域名接入](#进阶主题域名接入)
 - [进阶主题：外部对象存储](#进阶主题外部对象存储)
-- [进阶主题：使用SMTP](#进阶主题使用smtp)
+- [进阶主题：使用SMTP](#进阶主题使用-smtp)
 - [进阶主题：真·高可用](#进阶主题真高可用)
 
 ------
@@ -97,7 +97,7 @@ Supabase 内置了一系列由他们自己开发维护的 PG 扩展插件，并�
 | [`supautils`](/ext/e/supautils/)         | 用于在云环境中确保数据库集群的安全，C 扩展，由 PIGSTY 提供                        |
 | [`pg_plan_filter`](/ext/e/plan_filter/)  | 使用执行计划代价过滤阻止特定查询语句，C 扩展，由 PIGSTY 提供                       |
 
-同时，我们在 Supabase 自建部署中默认 [安装](https://doc.pgsty.com/zh/pgsql/extension/install)绝大多数扩展，您可以参考可用扩展列表按需 [启用](https://doc.pgsty.com/zh/pgsql/extension/create)。
+同时，我们在 Supabase 自建部署中默认 [安装](https://doc.pgsty.com/zh/pgsql/extension/install) 绝大多数扩展，您可以参考可用扩展列表按需 [启用](https://doc.pgsty.com/zh/pgsql/extension/create)。
 
 同时，Pigsty 还会负责好底层 [高可用](https://doc.pgsty.com/feat/ha/) [PostgreSQL](/docs/pgsql/) 数据库集群，高可用 [MinIO](/docs/minio/) 对象存储集群的自动搭建，甚至是 [Docker](/docs/docker/) 容器底座的部署与 [Nginx](/docs/infra/admin/portal) 反向代理，[域名配置](https://doc.pgsty.com/zh/admin/domain) 与 [HTTPS证书签发](https://doc.pgsty.com/zh/admin/cert)。 您可以使用 Docker Compose 拉起任意数量的无状态 Supabase 容器集群，并将状态存储在外部 Pigsty 自托管数据库服务中。
 
@@ -130,7 +130,7 @@ vi pigsty.yml              # 编辑域名、密码、密钥...
 如果配置无误，大约十分钟后，就可以在本地网络通过 `http://<your_ip_address>:8000` 访问到 Supabase Studio 图形管理界面了。
 默认的用户名与密码分别是： `supabase` 与 `pigsty`。
 
-![](https://doc.pgsty.com/img/docs/supabase-home.png)
+![Supabase 首页](https://doc.pgsty.com/img/docs/supabase-home.png)
 
 <Callout title="中国大陆地区 DockerHub 被墙" type="warning">
 
@@ -162,7 +162,7 @@ vi pigsty.yml              # 编辑域名、密码、密钥...
 
 以下是一些自建 Supabase 会涉及到的关键技术决策，供您参考：
 
-使用默认的**单节点部署** Supabase 无法享受到 PostgreSQL / MinIO 的高可用能力。
+使用默认的 **单节点部署** Supabase 无法享受到 PostgreSQL / MinIO 的高可用能力。
 尽管如此，单节点部署相比官方纯 Docker Compose 方案依然要有显著优势： 例如开箱即用的监控系统，自由安装扩展的能力，各个组件的扩缩容能力，以及提供兜底数据库时间点恢复能力等。
 
 如果您只有一台服务器，或者选择在云服务器上自建，Pigsty 建议您使用外部的 S3 替代本地的 MinIO 作为对象存储，存放 PostgreSQL 的备份，并承载 Supabase Storage 服务。
@@ -379,7 +379,7 @@ all:
 单节点的 RTO / RPO 依赖外部对象存储服务提供兜底，如果您的这个节点挂了，外部 S3 存储中保留了备份，您可以在新的节点上重新部署 Supabase，然后从备份中恢复。
 这样的部署在故障时可以提供一个最低标准的 RTO （小时级恢复时长）/ RPO （MB 级数据损失）[兜底容灾水平](https://doc.pgsty.com/zh/pgsql/backup) 兜底。
 
-如果想要达到 RTO < 30s，切换零数据丢失，那么需要使用[多节点](https://doc.pgsty.com/zh/install/multinode)进行高可用部署，这涉及到：
+如果想要达到 RTO < 30s，切换零数据丢失，那么需要使用 [多节点](https://doc.pgsty.com/zh/install/multinode) 进行高可用部署，这涉及到：
 
 - [ETCD](https://doc.pgsty.com/zh/etcd/)： DCS 需要使用三个节点或以上，才能容忍一个节点的故障。
 - [PGSQL](https://doc.pgsty.com/zh/pgsql/)： PGSQL 同步提交不丢数据模式，建议使用至少三个节点。

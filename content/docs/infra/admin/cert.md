@@ -7,7 +7,7 @@ categories: [任务]
 ---
 
 
-Pigsty 默认使用**自签名证书颁发机构 (CA)** 进行内部 SSL/TLS 加密。本文档包含：
+Pigsty 默认使用 **自签名证书颁发机构 (CA)** 进行内部 SSL/TLS 加密。本文档包含：
 
 - [自签名 CA](#自签名-ca)：默认的 PKI 基础设施
 - [签发证书](#签发证书)：使用 `cert.yml` 签发额外证书
@@ -30,7 +30,7 @@ Pigsty 在基础设施初始化 (`infra.yml`) 时自动创建自签名 CA。该 
 
 ### PKI 目录结构
 
-```
+```text
 files/pki/
 ├── ca/
 │   ├── ca.key                # CA 私钥（务必保管好！）

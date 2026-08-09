@@ -241,7 +241,7 @@ Warning
 </div>
 
 - **`PATRONI_RESTAPI_CONNECT_ADDRESS`** 必须可从指定 Patroni 集群的所有节点访问。Patroni 在领导者竞选期间会使用该地址查找复制延迟最小的节点。
-- 若启用了客户端证书验证（**`PATRONI_RESTAPI_VERIFY_CLIENT`** 设置为 **`required`**），还**必须**在 **`PATRONI_CTL_CERTFILE`**、**`PATRONI_CTL_KEYFILE`**、**`PATRONI_CTL_KEYFILE_PASSWORD`** 中提供**有效的客户端证书**，否则 Patroni 将无法正常工作。
+- 若启用了客户端证书验证（**`PATRONI_RESTAPI_VERIFY_CLIENT`** 设置为 **`required`**），还 **必须** 在 **`PATRONI_CTL_CERTFILE`**、**`PATRONI_CTL_KEYFILE`**、**`PATRONI_CTL_KEYFILE_PASSWORD`** 中提供 **有效的客户端证书**，否则 Patroni 将无法正常工作。
 
 </div>
 

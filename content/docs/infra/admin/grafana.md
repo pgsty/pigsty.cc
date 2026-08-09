@@ -46,11 +46,11 @@ systemctl restart grafana-server
 
 ## 创建数据库集群
 
-我们可以在`pg-meta`上定义一个新的数据库`grafana`，也可以在新的机器节点上创建一个专用于 Grafana 的数据库集群：`pg-grafana`
+我们可以在 `pg-meta` 上定义一个新的数据库 `grafana`，也可以在新的机器节点上创建一个专用于 Grafana 的数据库集群：`pg-grafana`
 
 ### 定义集群
 
-如果需要创建新的专用数据库集群`pg-grafana`，部署在`10.10.10.11`，`10.10.10.12`两台机器上，可以使用以下配置文件：
+如果需要创建新的专用数据库集群 `pg-grafana`，部署在 `10.10.10.11`，`10.10.10.12` 两台机器上，可以使用以下配置文件：
 
 ```yaml
 pg-grafana: 
@@ -74,7 +74,7 @@ pg-grafana:
 
 ### 创建集群
 
-使用以下命令完成数据库集群`pg-grafana`的创建：[`pgsql.yml`](/docs/pgsql/playbook#pgsqlyml)。
+使用以下命令完成数据库集群 `pg-grafana` 的创建：[`pgsql.yml`](/docs/pgsql/playbook#pgsqlyml)。
 
 ```bash
 ./pgsql.yml -l pg-grafana    # 初始化pg-grafana集群
@@ -94,7 +94,7 @@ postgres://dbuser_grafana:DBUser.Grafana@10.10.10.12:5436/grafana # 直连defaul
 postgres://dbuser_grafana:DBUser.Grafana@10.10.10.12:5433/grafana # 连接串读写服务
 ```
 
-因为默认情况下 Pigsty 安装在**单个元节点**上，接下来的步骤我们会在已有的`pg-meta`数据库集群上创建 Grafana 所需的用户与数据库，而并非使用这里创建的`pg-grafana`集群。
+因为默认情况下 Pigsty 安装在 **单个元节点** 上，接下来的步骤我们会在已有的 `pg-meta` 数据库集群上创建 Grafana 所需的用户与数据库，而并非使用这里创建的 `pg-grafana` 集群。
 
 
 
@@ -103,11 +103,11 @@ postgres://dbuser_grafana:DBUser.Grafana@10.10.10.12:5433/grafana # 连接串读
 ## 创建Grafana业务用户
 
 通常业务对象管理的惯例是：先创建用户，再创建数据库。
-因为如果为数据库配置了`owner`，数据库对相应的用户存在依赖。
+因为如果为数据库配置了 `owner`，数据库对相应的用户存在依赖。
 
 ### 定义用户
 
-要在`pg-meta`集群上创建用户`dbuser_grafana`，首先将以下用户定义添加至`pg-meta`的 [集群定义](#定义集群) 中：
+要在 `pg-meta` 集群上创建用户 `dbuser_grafana`，首先将以下用户定义添加至 `pg-meta` 的 [集群定义](#定义集群) 中：
 
 添加位置：`all.children.pg-meta.vars.pg_users`
 
@@ -123,7 +123,7 @@ postgres://dbuser_grafana:DBUser.Grafana@10.10.10.12:5433/grafana # 连接串读
 
 ### 创建用户
 
-使用以下命令完成`dbuser_grafana`用户的创建（任一均可）。
+使用以下命令完成 `dbuser_grafana` 用户的创建（任一均可）。
 
 ```bash
 bin/pgsql-user pg-meta dbuser_grafana # 在pg-meta集群上创建`dbuser_grafana`用户
@@ -146,7 +146,7 @@ bin/pgsql-user pg-meta dbuser_grafana # 在pg-meta集群上创建`dbuser_grafana
 
 ### 定义数据库
 
-创建业务数据库的方式与业务用户一致，首先在`pg-meta`的集群定义中添加新数据库`grafana`的 [定义](#定义集群)。
+创建业务数据库的方式与业务用户一致，首先在 `pg-meta` 的集群定义中添加新数据库 `grafana` 的 [定义](#定义集群)。
 
 添加位置：`all.children.pg-meta.vars.pg_databases`
 
@@ -156,7 +156,7 @@ bin/pgsql-user pg-meta dbuser_grafana # 在pg-meta集群上创建`dbuser_grafana
 
 ### 创建数据库
 
-使用以下命令完成`grafana`数据库的创建（任一均可）。
+使用以下命令完成 `grafana` 数据库的创建（任一均可）。
 
 ```bash
 bin/pgsql-db pg-meta grafana # 在`pg-meta`集群上创建`grafana`数据库
@@ -283,11 +283,11 @@ export GRAFANA_USERNAME=admin
 export GRAFANA_PASSWORD=pigsty
 ```
 
-题外话，使用`grafana.py clean`会清空目标监控面板，使用`grafana.py load`会加载当前目录下所有监控面板，当 Pigsty 的监控面板发生变更，可以使用这两个命令升级所有的监控面板。
+题外话，使用 `grafana.py clean` 会清空目标监控面板，使用 `grafana.py load` 会加载当前目录下所有监控面板，当 Pigsty 的监控面板发生变更，可以使用这两个命令升级所有的监控面板。
 
 ## 管理Postgres数据源
 
-当使用 [`pgsql.yml`](/docs/pgsql/playbook#pgsqlyml) 创建新 PostgreSQL 集群，或使用 [`pgsql-db.yml`](/docs/pgsql/playbook#pgsql-dbyml) 创建新业务数据库时，Pigsty 会在 Grafana 中注册新的 PostgreSQL 数据源，您可以使用默认的监控用户通过 Grafana 直接访问目标数据库实例。应用`pgcat`的绝大部分功能有赖于此。
+当使用 [`pgsql.yml`](/docs/pgsql/playbook#pgsqlyml) 创建新 PostgreSQL 集群，或使用 [`pgsql-db.yml`](/docs/pgsql/playbook#pgsql-dbyml) 创建新业务数据库时，Pigsty 会在 Grafana 中注册新的 PostgreSQL 数据源，您可以使用默认的监控用户通过 Grafana 直接访问目标数据库实例。应用 `pgcat` 的绝大部分功能有赖于此。
 
 要注册 Postgres 数据库数据源，可以使用 [`pgsql.yml`](/docs/pgsql/playbook#pgsqlyml) 中的 `add_ds` 任务（或使用更全面的 `pg_register`）：
 

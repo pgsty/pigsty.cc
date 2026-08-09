@@ -620,6 +620,7 @@ $ curl -s -XPUT -d \
 ## 主从切换与故障转移端点
 
 <a id="switchover_api"></a>
+
 ### 主从切换（Switchover）
 
 **`/switchover`** 端点仅在集群健康（存在领导者）时有效，也支持在指定时间调度主从切换。
@@ -683,6 +684,7 @@ Successfully failed over to "postgresql1"
 | 可调度执行               | 否       | 是（非暂停模式下）             |
 
 <a id="failover_healthcheck"></a>
+
 ### 健康备库
 
 集群成员需满足以下所有条件，才能在主从切换期间参与主库竞选，或被选为故障转移/主从切换的候选节点：

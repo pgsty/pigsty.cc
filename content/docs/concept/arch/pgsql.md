@@ -43,7 +43,7 @@ PGSQL 模块在生产环境中以 **集群** 的形式组织，这些 **集群**
 各种 Exporter 与 [Vector](#vector) 构成 [可观测性子系统](#可观测性子系统)；
 最后还可以替换不同的 [**内核 CPU**](/docs/pgsql/kernel) 与 [**扩展卡**](/docs/pgsql/ext)。
 
-![](/img/pigsty/motherboard.gif)
+![Pigsty PostgreSQL 集群架构](/img/pigsty/motherboard.gif)
 
 
 | 子系统                     | 组件                                                                                                                                        | 功能                  |

@@ -659,4 +659,3 @@ Java 语言编写的扩展（1 个）
 |:---------|:-------|:--------:|:--------:|:----------:|:---------|
 | [`pljava`](/ext/e/pljava) | [`pljava`](https://github.com/tada/pljava) | `1.6.10` | <a class="ext-badge ext-badge--cate lang" href="/ext/cate/lang">LANG</a> | <a class="ext-badge ext-badge--license bsd3clause" href="/ext/license#bsd3clause">BSD-3-Clause</a> | Java 程序语言 |
 {.ext-table}
-

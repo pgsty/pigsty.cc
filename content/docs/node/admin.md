@@ -223,8 +223,8 @@ node_firewall_intranet:
 
 ### 删除规则（手动）
 
-> **重要提示**：Pigsty 的防火墙管理是**只增不删**的。从配置中移除条目并重新执行
-> **不会**删除已存在的规则。您需要手动删除规则。
+> **重要提示**：Pigsty 的防火墙管理是 **只增不删** 的。从配置中移除条目并重新执行
+> **不会** 删除已存在的规则。您需要手动删除规则。
 
 {{< tabpane text=true persist=header >}}
 {{% tab header="EL (firewalld)" %}}

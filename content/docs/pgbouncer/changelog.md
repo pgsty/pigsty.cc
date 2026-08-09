@@ -29,7 +29,7 @@ categories: [参考]
 **2025-12-03  -  PgBouncer 1.25.1  -  "Fixing a bunch of bugs before Christmas（圣诞节前修复一堆 Bug）"**
 
 - 安全
-  * 修复 CVE-2025-12819：在此版本之前，未经身份验证的攻击者可以在认证过程中，通过在 StartupMessage 中提供恶意的 `search_path` 参数来执行任意 SQL。同时满足以下**所有**条件的系统存在此漏洞：
+  * 修复 CVE-2025-12819：在此版本之前，未经身份验证的攻击者可以在认证过程中，通过在 StartupMessage 中提供恶意的 `search_path` 参数来执行任意 SQL。同时满足以下 **所有** 条件的系统存在此漏洞：
 
     1. `track_extra_parameters` 包含 `search_path`（非默认配置，通常仅在涉及 Citus 或 PostgreSQL 18 的场景中配置）
     2. `auth_user` 被设置为非空字符串（非默认配置）
@@ -132,7 +132,7 @@ categories: [参考]
   * 新增 `max_user_client_connections` 设置，支持全局配置及用户级别配置。（[#1137]）
   * 新增 `max_db_client_connections` 设置，支持全局配置及数据库级别配置。（[#1138]）
   * 在 `SHOW USERS` 和 `SHOW DATABASES` 输出中新增 `current_client_connections` 计数器。（[#1137]，[#1138]）
-  * 新增 `load_balance_hosts` 参数，支持**禁止**在多个主机之间进行负载均衡。（[#736]）
+  * 新增 `load_balance_hosts` 参数，支持 **禁止** 在多个主机之间进行负载均衡。（[#736]）
   * 在 `SHOW STATS` 中暴露预备语句使用计数器。（[#1192]）
   * 新增 `client_idle_timeout` 设置。（[#1189]）
   * 新增用户级别的 `query_timeout` 和 `reserve_pool_size`。（[#1180]，[#1228]）
@@ -203,7 +203,7 @@ categories: [参考]
 **2024-07-03  -  PgBouncer 1.23.0  -  "Into the new beginnings（迈向新的起点）"**
 
 - 功能
-  * 新增滚动重启支持。SIGTERM 不再触发 PgBouncer 进程的立即关闭，现在改为执行"超安全关闭"：等待所有客户端断开连接后再关闭。新的 SIGTERM 行为允许在负载均衡器后对多个 PgBouncer 进程进行滚动重启，或在使用 `so_reuseport` 监听同一端口的场景下滚动重启。这是一个**次要的破坏性变更**：如果您在 Dockerfile 或 Systemd 服务文件中依赖 SIGTERM 的旧行为，现在应改用 SIGQUIT。（[#902]）
+  * 新增滚动重启支持。SIGTERM 不再触发 PgBouncer 进程的立即关闭，现在改为执行"超安全关闭"：等待所有客户端断开连接后再关闭。新的 SIGTERM 行为允许在负载均衡器后对多个 PgBouncer 进程进行滚动重启，或在使用 `so_reuseport` 监听同一端口的场景下滚动重启。这是一个 **次要的破坏性变更**：如果您在 Dockerfile 或 Systemd 服务文件中依赖 SIGTERM 的旧行为，现在应改用 SIGQUIT。（[#902]）
   * 新增对 `cert` 和 `peer` 认证方式的用户名映射支持。此功能提供了灵活性，使发起连接的用户无需与数据库用户相同。PgBouncer 对用户名映射的支持与 PostgreSQL 非常相似，但存在文档中列出的若干例外。（[#996]）
   * 新增通过 PgBouncer 进行复制连接的支持。（[#876]）
 
@@ -241,6 +241,7 @@ categories: [参考]
 [#1034]: https://github.com/pgbouncer/pgbouncer/pull/1034
 
 --------
+
 ## PgBouncer 1.22.x
 
 **2024-03-04  -  PgBouncer 1.22.1  -  "It's summer in Bangalore（班加罗尔的夏天）"**
@@ -450,6 +451,7 @@ categories: [参考]
   * 多项 CI 更新
 
 --------
+
 ## PgBouncer 1.17.x
 
 **2022-03-23  -  PgBouncer 1.17.0  -  "A line has been drawn"（界限已划定）**
@@ -581,6 +583,7 @@ categories: [参考]
   * libevent API 的使用已更新为版本 2 风格的接口，不再使用版本 1 中已弃用的接口。
 
 --------
+
 ## PgBouncer 1.12.x
 
 **2019-10-17  -  PgBouncer 1.12.0  -  "It's about learning and getting better"（关于学习与持续进步）**
@@ -762,6 +765,7 @@ categories: [参考]
   * 修复不带参数的 `--with-cares` 配置选项——此前不带参数时该选项无法正常工作。
 
 --------
+
 ## PgBouncer 1.6.x
 
 **2015-09-03  -  PgBouncer 1.6.1  -  "Studio Audience Approves（观众席报以掌声）"**
@@ -812,7 +816,7 @@ categories: [参考]
   * 新增 DISABLE/ENABLE 命令，用于阻止新连接接入。
     （William Grant）
 
-  * 新增 DNS 后端：c-ares。这是唯一支持所有关键特性的 DNS 后端：支持自动刷新的 /etc/hosts、SOA 查询、大响应（通过 TCP/EDNS+UDP）以及 IPv6。它现在是首选后端，未来可能成为**唯一**后端，因为维护一套功能残缺的库没有意义。
+  * 新增 DNS 后端：c-ares。这是唯一支持所有关键特性的 DNS 后端：支持自动刷新的 /etc/hosts、SOA 查询、大响应（通过 TCP/EDNS+UDP）以及 IPv6。它现在是首选后端，未来可能成为 **唯一** 后端，因为维护一套功能残缺的库没有意义。
 
     注意：c-ares 版本 <= 1.10 存在一个 bug，当启用 IPv6 时会导致 CNAME 支持失效（上游已修复）。作为临时规避措施，c-ares <= 1.10 将仅使用 IPv4。因此，PgBouncer 将在 c-ares >1.10（尚未发布）发布一段时间后，才会放弃其他后端……
 

@@ -560,4 +560,3 @@ icon: fa-brands fa-redhat
 | [`pg_fact_loader`](/ext/e/pg_fact_loader) | `2.0.1` | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `pg_fact_loader_$v` | {{< pgvers "18,17,16,15,14" >}} | - |
 | [`pg_bulkload`](/ext/e/pg_bulkload) | `3.1.23` | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `pg_bulkload_$v` | {{< pgvers "18,17,16,15,14" >}} | - |
 {.ext-table}
-

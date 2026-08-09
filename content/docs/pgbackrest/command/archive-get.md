@@ -177,7 +177,7 @@ I/O 超时时间。
 
 用于连接及读/写操作的超时时间（秒）。
 
-注意：整个读/写操作不必在此超时内全部完成，但**必须**持续有进展，哪怕每次只传输一个字节。
+注意：整个读/写操作不必在此超时内全部完成，但 **必须** 持续有进展，哪怕每次只传输一个字节。
 
 ```yaml
 default: 1m
@@ -459,7 +459,7 @@ example: --no-log-timestamp
 
 警告：
 
-使用此选项需谨慎。`pg_control` 和 WAL 头部仍会按指定版本的预期格式（即 PostgreSQL 官方开源版本的格式）进行读取。若分支或开发版本修改了 pgBackRest 所依赖字段的格式，将导致不可预期的行为。通常只有当分支在标准 PostgreSQL 成员**之后**添加自定义结构体成员时，此选项才能正常工作。
+使用此选项需谨慎。`pg_control` 和 WAL 头部仍会按指定版本的预期格式（即 PostgreSQL 官方开源版本的格式）进行读取。若分支或开发版本修改了 pgBackRest 所依赖字段的格式，将导致不可预期的行为。通常只有当分支在标准 PostgreSQL 成员 **之后** 添加自定义结构体成员时，此选项才能正常工作。
 
 ```yaml
 example: --pg-version-force=15
@@ -889,7 +889,7 @@ SFTP 仓库主机指纹。
 
 SFTP 仓库主机指纹的生成方式应与 `repo-sftp-host-key-hash-type` 匹配。可通过以下命令生成指纹：
 
-```
+```text
 awk '{print $2}' ssh_host_xxx_key.pub | base64 -d | (md5sum or sha1sum) -b
 ```
 

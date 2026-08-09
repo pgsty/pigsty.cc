@@ -1,7 +1,7 @@
 
 ## Usage
 
-###  Getting Started
+### Getting Started
 
 Create a vector column with 3 dimensions
 
@@ -249,7 +249,7 @@ SET maintenance_work_mem = '8GB';
 
 A notice is shown when the graph no longer fits
 
-```
+```text
 NOTICE:  hnsw graph no longer fits into maintenance_work_mem after 100000 tuples
 DETAIL:  Building will take significantly more time.
 HINT:  Increase maintenance_work_mem to speed up builds.

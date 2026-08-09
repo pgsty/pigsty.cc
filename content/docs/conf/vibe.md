@@ -63,7 +63,7 @@ categories: [参考]
 
 此模板通过分类包组安装 PostgreSQL 18 的完整扩展集合：
 
-```
+```text
 pg18-main, pg18-time, pg18-gis, pg18-rag, pg18-fts, pg18-olap,
 pg18-feat, pg18-lang, pg18-type, pg18-util, pg18-func, pg18-admin,
 pg18-stat, pg18-sec, pg18-fdw, pg18-sim, pg18-etl

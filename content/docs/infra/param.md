@@ -67,7 +67,7 @@ INFRA 模块负责配置 Pigsty 的基础设施组件：本地软件源、Nginx�
 | 参数                                            |      类型      |   级别    | 说明                      |
 |:----------------------------------------------|:------------:|:-------:|:------------------------|
 | [`repo_enabled`](#repo_enabled)               |    `bool`    |  `G/I`  | 在此基础设施节点上创建软件仓库？        |
-| [`repo_home`](#repo_home)                     |    `path`    |   `G`   | 软件仓库主目录，默认为`/www`       |
+| [`repo_home`](#repo_home)                     |    `path`    |   `G`   | 软件仓库主目录，默认为 `/www`       |
 | [`repo_name`](#repo_name)                     |   `string`   |   `G`   | 软件仓库名称，默认为 pigsty       |
 | [`repo_endpoint`](#repo_endpoint)             |    `url`     |   `G`   | 仓库的访问点：域名或 `ip:port` 格式 |
 | [`repo_remove`](#repo_remove)                 |    `bool`    |  `G/A`  | 构建本地仓库时是否移除现有上游仓库源定义文件？ |
@@ -408,7 +408,7 @@ Pigsty 会根据实际启用的组件自动配置相应的反向代理，用户�
   - 默认记录：home 是固定名称，请不要修改。
   - 作为 Nginx 配置文件名称的一部分，对应配置文件：`/etc/nginx/conf.d/<name>.conf`
   - 没有 domain 字段的 Nginx 服务器不会生成配置文件，但会被用作引用。
-- `domain`: **可选**，当服务需要通过 Nginx 对外暴露时为**必填**字段，指定使用的域名
+- `domain`: **可选**，当服务需要通过 Nginx 对外暴露时为 **必填** 字段，指定使用的域名
   - 在 Pigsty 自签名 Nginx HTTPS 证书中，域名将被添加到 Nginx SSL 证书的 SAN 字段
   - Pigsty 网页交叉引用将使用这里的默认域名
 - `endpoint`：通常作为 path 的替代，指定上游服务器地址。设置 endpoint 表示这是一个反向代理服务器

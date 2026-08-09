@@ -25,7 +25,7 @@ categories: [任务]
 
 ## 报告缺陷
 
-提交缺陷报告前，请务必**在最新版 Patroni 上复现该问题**！同时请检查 [Issues Tracker](https://github.com/patroni/patroni/issues) 中是否已存在相同问题。
+提交缺陷报告前，请务必 **在最新版 Patroni 上复现该问题**！同时请检查 [Issues Tracker](https://github.com/patroni/patroni/issues) 中是否已存在相同问题。
 
 --------
 

@@ -77,4 +77,3 @@ psql postgresql://dbuser_teable:DBUser.Teable@10.10.10.10:5432/teable
 - Teable 用户需要 superuser 权限
 - 需要正确配置 `PUBLIC_ORIGIN` 为外部访问地址
 - 支持邮件通知（可选配置 SMTP）
-

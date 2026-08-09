@@ -53,4 +53,3 @@ CREATE FOREIGN TABLE iceberg_table (x INT)
 -- Success! You can now query the Iceberg table
 SELECT COUNT(*) FROM iceberg_table;
 ```
-

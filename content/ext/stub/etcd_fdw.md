@@ -133,4 +133,3 @@ The following operations are pushed down to etcd for better performance:
 
 - `UPDATE` on key column is not supported. Workaround: `INSERT` new key, then `DELETE` old key.
 - Requires etcd v3 API.
-

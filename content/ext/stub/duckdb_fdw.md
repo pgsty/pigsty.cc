@@ -62,4 +62,3 @@ IMPORT FOREIGN SCHEMA public FROM SERVER duckdb_server INTO public;
 - [DuckDB Website](https://duckdb.org/)
 - [GitHub: duckdb_fdw](https://github.com/alitrack/duckdb_fdw/)
 - [Building libduckdb](https://github.com/digoal/blog/blob/master/202401/20240124_01.md)
-

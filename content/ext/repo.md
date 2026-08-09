@@ -626,4 +626,3 @@ PostgreSQL 内置的 Contrib 扩展模块，总计 71 个扩展，PG 随内核 c
 | [`test_decoding`](/ext/e/test_decoding) | <a class="ext-badge ext-badge--cate etl" href="/ext/cate/etl">ETL</a> | - | 18, 17, 16, 15, 14 | 基于SQL的WAL逻辑解码样例 |
 | [`pgoutput`](/ext/e/pgoutput) | <a class="ext-badge ext-badge--cate etl" href="/ext/cate/etl">ETL</a> | - | 18, 17, 16, 15, 14 | PG内置的逻辑解码输出插件 |
 {.ext-table}
-

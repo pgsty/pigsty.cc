@@ -7,8 +7,8 @@ module: [PIG]
 categories: [参考]
 ---
 
-`pig patroni` 命令（别名 `pig pt`）自 v1.6.0 起是已安装 `patronictl` 的**透明启动器**：
-pig 只负责选择配置文件与少量本地辅助命令，其余一切命令与参数**原样转发**给 `patronictl`，
+`pig patroni` 命令（别名 `pig pt`）自 v1.6.0 起是已安装 `patronictl` 的 **透明启动器**：
+pig 只负责选择配置文件与少量本地辅助命令，其余一切命令与参数 **原样转发** 给 `patronictl`，
 使用原生的参数、交互确认、输出与退出码——patronictl 的新功能无需等待 pig 发版即可使用。
 
 ```bash
@@ -53,7 +53,7 @@ patronictl. Use "pig pt -- COMMAND ..." to bypass a local-name collision.
 | `pig pt query -c 'select 1'`                  | 原生查询（此处 `-c` 是 query 自己的 SQL 参数）    |
 {.full-width}
 
-转发命令的位置参数遵循 patronictl 原生的**集群优先**（CLUSTER-first）语义，
+转发命令的位置参数遵循 patronictl 原生的 **集群优先**（CLUSTER-first）语义，
 确认提示、输出格式与退出码（含 Click 用法错误退出码 `2`）均由 patronictl 负责。
 
 **本地命令**（pig 实现）：
@@ -68,7 +68,7 @@ patronictl. Use "pig pt -- COMMAND ..." to bypass a local-name collision.
 | `pt log`     | `l`           | 查看本地 Patroni 日志（show / tail / grep）       |
 {.full-width}
 
-注意：顶层 `pt restart` **不是**重启 patroni 守护进程的快捷方式，它会转发给
+注意：顶层 `pt restart` **不是** 重启 patroni 守护进程的快捷方式，它会转发给
 `patronictl restart` 用于重启 PostgreSQL；重启守护进程请使用 `pt svc restart`。
 
 
@@ -101,7 +101,7 @@ pig pt log grep ERROR                       # 搜索日志
 
 ## Pig/PT 选项
 
-以下包装层选项**必须出现在原生命令之前**；一旦出现原生命令词，其后的所有参数都属于 patronictl：
+以下包装层选项 **必须出现在原生命令之前**；一旦出现原生命令词，其后的所有参数都属于 patronictl：
 
 | 参数              | 简写   | 说明                                     |
 |:----------------|:-----|:---------------------------------------|
@@ -130,7 +130,7 @@ pig pt query -c 'select 1'                 # 原生 query 的 -c：SQL 语句，
 5. 兜底回退 `/etc/patroni/patroni.yml`，让 patronictl 的报错指向常规位置。
 
 显式路径与环境变量路径具有权威性：文件缺失或不可读时 pig 不会静默换用其他候选；
-相对路径会在切换 OS 用户前转换为绝对路径。常规候选文件的可读性按**实际执行用户（DBSU）**探测，
+相对路径会在切换 OS 用户前转换为绝对路径。常规候选文件的可读性按 **实际执行用户（DBSU）** 探测，
 而非简单检查权限位。解析是惰性的：`pt svc start` 这类纯 systemd 操作不会触发配置解析；
 原生 `-h/--help` 走免配置快速路径，在未配置 Patroni 的机器上也能查看帮助。
 
@@ -146,7 +146,7 @@ patronictl -c <选中配置> [--dcs-url URL] [--insecure] <原生命令与参数
 ```
 
 **结构化输出**：转发路径只支持 pig 的 `text` 模式。在原生命令之前出现的
-`-o json` / `-o yaml` 会被**明确拒绝**（提示改用原生输出选项）；
+`-o json` / `-o yaml` 会被 **明确拒绝**（提示改用原生输出选项）；
 出现在原生命令之后的参数原样转发，由 patronictl 自行校验：
 
 ```bash
@@ -176,10 +176,10 @@ pig pt set KEY=VALUE [KEY=VALUE ...] [--yes] [--plan]
   `synchronous_mode_strict`、`synchronous_node_count`、`failsafe_mode`、
   `check_timeline`、`member_slots_ttl`（`pause` 不在其列——请使用原生 `pause`/`resume`）；
 - 其余键一律视为 PostgreSQL 参数，翻译为原生 `--pg`（含 `timescaledb.telemetry_level` 这类带点自定义 GUC）；
-- 以 `postgresql.`、`standby_cluster.`、`slots.`、`ignore_slots.` 开头的结构性键会被**拒绝**，
+- 以 `postgresql.`、`standby_cluster.`、`slots.`、`ignore_slots.` 开头的结构性键会被 **拒绝**，
   并提示改用原生 `pig pt edit-config --set`。
 
-所有键值对按输入顺序合并为**一次**原生 `edit-config` 调用，产生一次 diff、一次确认、一次 DCS 更新：
+所有键值对按输入顺序合并为 **一次** 原生 `edit-config` 调用，产生一次 diff、一次确认、一次 DCS 更新：
 
 ```bash
 pig pt set ttl=60 max_connections=200 synchronous_mode=on
@@ -251,11 +251,11 @@ pig pt log grep ERROR          # 搜索日志
 
 ## 从 v1.5.x 迁移
 
-v1.6.0 的透传重写是**破坏性变更**，升级前请检查自动化脚本：
+v1.6.0 的透传重写是 **破坏性变更**，升级前请检查自动化脚本：
 
 | v1.5.x 用法                          | v1.6.0 用法                                        |
 |:-----------------------------------|:-------------------------------------------------|
-| `pig pt failover <候选成员>`           | ⚠ `pig pt failover CLUSTER --candidate MEMBER`（位置参数语义反转：现在是**集群名**） |
+| `pig pt failover <候选成员>`           | ⚠ `pig pt failover CLUSTER --candidate MEMBER`（位置参数语义反转：现在是 **集群名**） |
 | `pig pt restart [成员]`（自动定位集群）      | `pig pt restart CLUSTER [MEMBER]`（需显式集群名）        |
 | `pig pt list -o json`              | `pig pt list --format json`（原生 JSON，schema 不同）   |
 | `pig pt config show`               | `pig pt show-config`                             |

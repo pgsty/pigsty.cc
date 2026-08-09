@@ -98,6 +98,3 @@ Pigsty 使用 **main** 主干分支进行开发，请始终使用带有版本号
 - pg_backtrace https://github.com/postgrespro/pg_backtrace
 - connection_limits https://github.com/tvondra/connection_limits
 - fixeddecimal https://github.com/2ndQuadrant/fixeddecimal
-
-
-

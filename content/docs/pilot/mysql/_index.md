@@ -7,12 +7,12 @@ module: [MYSQL]
 categories: [参考]
 ---
 
-[MySQL](https://www.mysql.com/) 是世界上最流行的开源关系型数据库之一。Pigsty 的 **MYSQL** 模块在纳管节点上部署固定的**原生 MySQL 8.4 LTS 平台**：单机实例，或基于 Group Replication 的三节点单主 InnoDB Cluster，并统一管理 TLS、备份、监控与生命周期。
+[MySQL](https://www.mysql.com/) 是世界上最流行的开源关系型数据库之一。Pigsty 的 **MYSQL** 模块在纳管节点上部署固定的 **原生 MySQL 8.4 LTS 平台**：单机实例，或基于 Group Replication 的三节点单主 InnoDB Cluster，并统一管理 TLS、备份、监控与生命周期。
 
 {{% alert title="当前状态：Pilot 试点模块" color="info" %}}
 MYSQL 是补充性的试点模块，定位是「简单、廉价、够用」的 MySQL 集群，不追求与 PGSQL 模块同级的完备性。
 核心能力（部署收敛、高可用切换、每日备份、监控告警）已经过系统性测试；
-完全停机恢复、物理备份恢复等破坏性流程刻意保留为手工运维操作，参见[日常管理](/docs/pilot/mysql/admin)中的操作手册。
+完全停机恢复、物理备份恢复等破坏性流程刻意保留为手工运维操作，参见 [日常管理](/docs/pilot/mysql/admin) 中的操作手册。
 {{% /alert %}}
 
 
@@ -103,11 +103,11 @@ Debian/Ubuntu ARM64 会被预检拒绝：Oracle APT 仓库的 MySQL 8.4 组件�
 
 ## 能力边界
 
-MYSQL 是固定平台，不是通用 MySQL 安装器。以下事项**有意不做**，使用前请确认可以接受：
+MYSQL 是固定平台，不是通用 MySQL 安装器。以下事项 **有意不做**，使用前请确认可以接受：
 
-- **拓扑固定为 1 或 3 节点**：不支持 1→3 原地升级、3→5 扩容或长期两节点拓扑；容量升级通过逻辑迁移完成，硬件更换通过[同地址替换](/docs/pilot/mysql/admin#替换故障成员)完成
+- **拓扑固定为 1 或 3 节点**：不支持 1→3 原地升级、3→5 扩容或长期两节点拓扑；容量升级通过逻辑迁移完成，硬件更换通过 [同地址替换](/docs/pilot/mysql/admin#替换故障成员) 完成
 - **版本、端口、目录、字符集固定**：不暴露相应参数；内存参数按节点规格自动推导，可用 [`mysql_parameters`](/docs/pilot/mysql/param#mysql_parameters) 覆盖关键参数
-- **备份为每日本地全量**：无增量链、无 Binlog 连续归档、无 PITR；物理恢复是手工流程（附[操作手册](/docs/pilot/mysql/admin#恢复物理备份)）
+- **备份为每日本地全量**：无增量链、无 Binlog 连续归档、无 PITR；物理恢复是手工流程（附 [操作手册](/docs/pilot/mysql/admin#恢复物理备份)）
 - **完全停机恢复保留为手工操作**：防止自动化误判造成脑裂，剧本失败信息会给出恢复指引
 - **无 VIP / DNS / HAProxy 接入层**：客户端通过任一成员的 Router 端口或多地址 DSN 接入
 

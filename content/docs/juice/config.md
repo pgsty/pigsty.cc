@@ -44,7 +44,7 @@ JUICE 模块仅有两个参数：
 {.full-width}
 
 - `juice_cache`：所有实例共享的本地缓存目录，默认 `/data/juice`
-- `juice_instances`：在**实例级别**定义的实例字典，Key 为文件系统名称；空字典表示不管理实例
+- `juice_instances`：在 **实例级别** 定义的实例字典，Key 为文件系统名称；空字典表示不管理实例
 
 --------
 

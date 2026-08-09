@@ -210,5 +210,3 @@ pg_rto_plan:  # [ttl, loop, retry, start, margin, inter, fastinter, downinter, r
   safe: [ 60  ,10 ,20 ,45 ,10 ,'3s' ,'1.5s' ,'3s' ,3 ,3 ]  # rto < 90s
   wide: [ 120 ,20 ,30 ,95 ,15 ,'4s' ,'2s'   ,'4s' ,3 ,3 ]  # rto < 150s
 ```
-
-

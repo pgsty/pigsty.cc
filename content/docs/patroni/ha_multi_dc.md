@@ -37,7 +37,7 @@ PostgreSQL 方面，至少需要在不同数据中心部署 2 个节点，然后
 
 ## 异步复制
 
-如果只有两个数据中心，更好的方案是部署两个独立的 etcd 集群，并在第二个数据中心运行 Patroni [**备用集群**](/docs/patroni/standby_cluster#standby_cluster)。当第一个站点宕机时，可以**手动**提升备用集群。
+如果只有两个数据中心，更好的方案是部署两个独立的 etcd 集群，并在第二个数据中心运行 Patroni [**备用集群**](/docs/patroni/standby_cluster#standby_cluster)。当第一个站点宕机时，可以 **手动** 提升备用集群。
 
 架构图如下：
 

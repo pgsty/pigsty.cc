@@ -73,7 +73,7 @@ Patroni 提供了 [patronictl](/docs/patroni/patronictl#patronictl) 命令行工
 
 以下是 [patronictl](/docs/patroni/patronictl#patronictl) 命令的使用语法：
 
-```
+```text
 patronictl [ { -c | --config-file } CONFIG_FILE ]
   [ { -d | --dcs-url | --dcs } DCS_URL ]
   [ { -k | --insecure } ]
@@ -93,12 +93,14 @@ patronictl [ { -c | --config-file } CONFIG_FILE ]
 以下各小节介绍 [patronictl](/docs/patroni/patronictl#patronictl) 的每个子命令，示例均使用 Patroni GitHub 仓库中的配置文件（**`postgres0.yml`**、**`postgres1.yml`** 和 **`postgres2.yml`**）。
 
 <a id="patronictl_dsn"></a>
+
 ### patronictl dsn
 
 <a id="patronictl_dsn_synopsis"></a>
+
 #### 语法
 
-```
+```text
 dsn
   [ CLUSTER_NAME ]
   [ { { -r | --role } { leader | primary | standby-leader | replica | standby | any } | { -m | --member } MEMBER_NAME } ]
@@ -106,6 +108,7 @@ dsn
 ```
 
 <a id="patronictl_dsn_description"></a>
+
 #### 描述
 
 **`patronictl dsn`** 获取 Patroni 集群指定成员的连接字符串。
@@ -113,6 +116,7 @@ dsn
 若多个成员符合条件，将优先返回主库的连接字符串。
 
 <a id="patronictl_dsn_parameters"></a>
+
 #### 参数
 
 **`CLUSTER_NAME`**
@@ -143,6 +147,7 @@ Patroni 集群名称。
 **`CITUS_GROUP`** 为 Citus 组 ID。
 
 <a id="patronictl_dsn_examples"></a>
+
 #### 示例
 
 获取主库的 DSN：
@@ -160,12 +165,14 @@ host=127.0.0.1 port=5433
 ```
 
 <a id="patronictl_edit_config"></a>
+
 ### patronictl edit-config
 
 <a id="patronictl_edit_config_synopsis"></a>
+
 #### 语法
 
-```
+```text
 edit-config
   [ CLUSTER_NAME ]
   [ --group CITUS_GROUP ]
@@ -177,6 +184,7 @@ edit-config
 ```
 
 <a id="patronictl_edit_config_description"></a>
+
 #### 描述
 
 **`patronictl edit-config`** 修改集群的动态配置并将其更新到 DCS。
@@ -185,6 +193,7 @@ edit-config
 > 通过 TTY 调用时，该命令会通过分页器显示动态配置的差异，默认使用 **`less`** 或 **`more`**。若需要使用其他分页器，请通过 **`PAGER`** 环境变量指定。
 
 <a id="patronictl_edit_config_parameters"></a>
+
 #### 参数
 
 **`CLUSTER_NAME`**
@@ -234,6 +243,7 @@ Patroni 集群名称。
 跳过确认提示，适合在脚本中使用。
 
 <a id="patronictl_edit_config_examples"></a>
+
 #### 示例
 
 修改 **`max_connections`** Postgres GUC 参数：
@@ -297,7 +307,7 @@ Configuration changed
 
 #### 语法
 
-```
+```text
 failover
   [ CLUSTER_NAME ]
   [ --group CITUS_GROUP ]
@@ -323,6 +333,7 @@ failover
 > 故障转移可能导致数据丢失，具体取决于被提升的从库与主库的同步程度。
 
 <a id="patronictl_failover"></a>
+
 #### 参数
 
 **`CLUSTER_NAME`**
@@ -344,6 +355,7 @@ Patroni 集群名称。
 跳过确认提示，适合在脚本中使用。
 
 <a id="patronictl_failover_synopsis"></a>
+
 #### 示例
 
 故障转移到节点 **`postgresql2`**：
@@ -369,12 +381,14 @@ Current cluster topology
 ```
 
 <a id="patronictl_failover_description"></a>
+
 ### patronictl flush
 
 <a id="patronictl_failover_parameters"></a>
+
 #### 语法
 
-```
+```text
 flush
   CLUSTER_NAME
   [ MEMBER_NAME [, ... ] ]
@@ -385,11 +399,13 @@ flush
 ```
 
 <a id="patronictl_failover_examples"></a>
+
 #### 描述
 
 **`patronictl flush`** 取消已调度的事件。
 
 <a id="patronictl_flush"></a>
+
 #### 参数
 
 **`CLUSTER_NAME`**
@@ -431,6 +447,7 @@ Patroni 集群名称。
 跳过确认提示，适合在脚本中使用。
 
 <a id="patronictl_flush_synopsis"></a>
+
 #### 示例
 
 取消已调度的主从切换事件：
@@ -471,12 +488,14 @@ Success: flush scheduled restart for member postgresql1
 ```
 
 <a id="patronictl_flush_description"></a>
+
 ### patronictl history
 
 <a id="patronictl_flush_parameters"></a>
+
 #### 语法
 
-```
+```text
 history
   [ CLUSTER_NAME ]
   [ --group CITUS_GROUP ]
@@ -484,6 +503,7 @@ history
 ```
 
 <a id="patronictl_flush_examples"></a>
+
 #### 描述
 
 **`patronictl history`** 显示集群故障转移和主从切换事件的历史记录。
@@ -506,6 +526,7 @@ history
 在事件中被提升的 Patroni 成员。
 
 <a id="patronictl_history"></a>
+
 #### 参数
 
 **`CLUSTER_NAME`**
@@ -533,6 +554,7 @@ Patroni 集群名称。
 默认为 **`pretty`**。
 
 <a id="patronictl_history_synopsis"></a>
+
 #### 示例
 
 显示事件历史记录：
@@ -576,12 +598,14 @@ $ patronictl -c postgres0.yml history batman -f yaml
 ```
 
 <a id="patronictl_history_description"></a>
+
 ### patronictl list
 
 <a id="patronictl_history_parameters"></a>
+
 #### 语法
 
-```
+```text
 list
   [ CLUSTER_NAME [, ... ] ]
   [ --group CITUS_GROUP ]
@@ -592,6 +616,7 @@ list
 ```
 
 <a id="patronictl_history_examples"></a>
+
 #### 描述
 
 **`patronictl list`** 显示 Patroni 集群及其成员的信息。
@@ -697,6 +722,7 @@ Citus 组 ID。
 > 显示在表格底部，仅在集群已暂停且输出格式为 **`pretty`** 时显示。
 
 <a id="patronictl_list"></a>
+
 #### 参数
 
 **`CLUSTER_NAME`**
@@ -735,6 +761,7 @@ Patroni 集群名称。
 按指定间隔（秒）自动刷新信息。
 
 <a id="patronictl_list_synopsis"></a>
+
 #### 示例
 
 以美观表格格式显示集群信息：
@@ -797,12 +824,14 @@ $ patronictl -c postgres0.yml list batman -f yaml -t
 ```
 
 <a id="patronictl_list_description"></a>
+
 ### patronictl pause
 
 <a id="patronictl_list_parameters"></a>
+
 #### 语法
 
-```
+```text
 pause
   [ CLUSTER_NAME ]
   [ --group CITUS_GROUP ]
@@ -810,11 +839,13 @@ pause
 ```
 
 <a id="patronictl_list_examples"></a>
+
 #### 描述
 
 **`patronictl pause`** 将 Patroni 集群临时置于维护模式，暂停自动故障转移。
 
 <a id="patronictl_pause"></a>
+
 #### 参数
 
 **`CLUSTER_NAME`**
@@ -833,6 +864,7 @@ Patroni 集群名称。
 等待所有 Patroni 成员均进入暂停状态后再返回。
 
 <a id="patronictl_pause_synopsis"></a>
+
 #### 示例
 
 将集群置于维护模式，并等待所有节点都完成暂停：
@@ -844,12 +876,14 @@ Success: cluster management is paused
 ```
 
 <a id="patronictl_pause_description"></a>
+
 ### patronictl query
 
 <a id="patronictl_pause_parameters"></a>
+
 #### 语法
 
-```
+```text
 query
   [ CLUSTER_NAME ]
   [ --group CITUS_GROUP ]
@@ -864,11 +898,13 @@ query
 ```
 
 <a id="patronictl_pause_examples"></a>
+
 #### 描述
 
 **`patronictl query`** 在 Patroni 集群指定成员上执行 SQL 命令或脚本。
 
 <a id="patronictl_query"></a>
+
 #### 参数
 
 **`CLUSTER_NAME`**
@@ -933,6 +969,7 @@ Patroni 集群名称。
 按指定间隔（秒）自动重新执行查询。
 
 <a id="patronictl_query_synopsis"></a>
+
 #### 示例
 
 以 **`postgres`** 用户执行 SQL 命令，并要求输入密码：
@@ -998,12 +1035,14 @@ port
 ```
 
 <a id="patronictl_query_description"></a>
+
 ### patronictl reinit
 
 <a id="patronictl_query_parameters"></a>
+
 #### 语法
 
-```
+```text
 reinit
   CLUSTER_NAME
   [ MEMBER_NAME [, ... ] ]
@@ -1014,11 +1053,13 @@ reinit
 ```
 
 <a id="patronictl_query_examples"></a>
+
 #### 描述
 
 **`patronictl reinit`** 重新初始化 Patroni 集群从库成员管理的 PostgreSQL 备库实例。
 
 <a id="patronictl_reinit"></a>
+
 #### 参数
 
 **`CLUSTER_NAME`**
@@ -1042,6 +1083,7 @@ Patroni 集群名称。
 直接从领导者节点获取基础备份。
 
 <a id="patronictl_reinit_synopsis"></a>
+
 #### 示例
 
 重新初始化集群所有从库成员（不等待完成）：
@@ -1090,12 +1132,14 @@ Success: reinitialize for member postgresql2
 ```
 
 <a id="patronictl_reinit_description"></a>
+
 ### patronictl reload
 
 <a id="patronictl_reinit_parameters"></a>
+
 #### 语法
 
-```
+```text
 reload
   CLUSTER_NAME
   [ MEMBER_NAME [, ... ] ]
@@ -1105,6 +1149,7 @@ reload
 ```
 
 <a id="patronictl_reinit_examples"></a>
+
 #### 描述
 
 **`patronictl reload`** 请求一个或多个 Patroni 成员重载本地配置。
@@ -1112,6 +1157,7 @@ reload
 同时也会对被管理的 PostgreSQL 实例触发 **`pg_ctl reload`**，即使没有配置发生变化。
 
 <a id="patronictl_reload"></a>
+
 #### 参数
 
 **`CLUSTER_NAME`**
@@ -1139,6 +1185,7 @@ Patroni 集群名称。
 跳过确认提示，适合在脚本中使用。
 
 <a id="patronictl_reload_synopsis"></a>
+
 #### 示例
 
 重载集群所有成员的本地配置：
@@ -1158,12 +1205,14 @@ Reload request received for member postgresql2 and will be processed within 10 s
 ```
 
 <a id="patronictl_reload_description"></a>
+
 ### patronictl remove
 
 <a id="patronictl_reload_parameters"></a>
+
 #### 语法
 
-```
+```text
 remove
   CLUSTER_NAME
   [ --group CITUS_GROUP ]
@@ -1171,6 +1220,7 @@ remove
 ```
 
 <a id="patronictl_reload_examples"></a>
+
 #### 描述
 
 **`patronictl remove`** 从 DCS 中删除指定集群的所有信息，为交互式操作。
@@ -1179,6 +1229,7 @@ remove
 > 此操作将永久清除 DCS 中该 Patroni 集群的所有数据。
 
 <a id="patronictl_remove"></a>
+
 #### 参数
 
 **`CLUSTER_NAME`**
@@ -1193,6 +1244,7 @@ Patroni 集群名称。
 确认提示中成员列表的输出格式，可以是 **`pretty`**（默认）、**`tsv`**、**`json`** 或 **`yaml`**。
 
 <a id="patronictl_remove_synopsis"></a>
+
 #### 示例
 
 从 DCS 中删除 Patroni 集群 **`batman`** 的信息：
@@ -1212,12 +1264,14 @@ This cluster currently is healthy. Please specify the leader name to continue: p
 ```
 
 <a id="patronictl_remove_description"></a>
+
 ### patronictl restart
 
 <a id="patronictl_remove_parameters"></a>
+
 #### 语法
 
-```
+```text
 restart
   CLUSTER_NAME
   [ MEMBER_NAME [, ...] ]
@@ -1232,11 +1286,13 @@ restart
 ```
 
 <a id="patronictl_remove_examples"></a>
+
 #### 描述
 
 **`patronictl restart`** 请求重启 Patroni 集群指定成员管理的 PostgreSQL 实例，可以立即执行，也可以调度在稍后执行。
 
 <a id="patronictl_restart"></a>
+
 #### 参数
 
 **`CLUSTER_NAME`**
@@ -1274,6 +1330,7 @@ Patroni 集群名称。
 跳过确认提示，适合在脚本中使用。
 
 <a id="patronictl_restart_synopsis"></a>
+
 #### 示例
 
 立即重启集群所有成员：
@@ -1323,12 +1380,14 @@ Success: restart scheduled on member postgresql2
 ```
 
 <a id="patronictl_restart_description"></a>
+
 ### patronictl resume
 
 <a id="patronictl_restart_parameters"></a>
+
 #### 语法
 
-```
+```text
 resume
   [ CLUSTER_NAME ]
   [ --group CITUS_GROUP ]
@@ -1336,11 +1395,13 @@ resume
 ```
 
 <a id="patronictl_restart_examples"></a>
+
 #### 描述
 
 **`patronictl resume`** 将 Patroni 集群从维护模式中恢复，重新启用自动故障转移。
 
 <a id="patronictl_resume"></a>
+
 #### 参数
 
 **`CLUSTER_NAME`**
@@ -1359,6 +1420,7 @@ Patroni 集群名称。
 等待所有 Patroni 成员均退出暂停状态后再返回。
 
 <a id="patronictl_resume_synopsis"></a>
+
 #### 示例
 
 将集群从维护模式中恢复：
@@ -1370,23 +1432,27 @@ Success: cluster management is resumed
 ```
 
 <a id="patronictl_resume_description"></a>
+
 ### patronictl show-config
 
 <a id="patronictl_resume_parameters"></a>
+
 #### 语法
 
-```
+```text
 show-config
   [ CLUSTER_NAME ]
   [ --group CITUS_GROUP ]
 ```
 
 <a id="patronictl_resume_examples"></a>
+
 #### 描述
 
 **`patronictl show-config`** 显示存储在 DCS 中的集群动态配置。
 
 <a id="patronictl_show_config"></a>
+
 #### 参数
 
 **`CLUSTER_NAME`**
@@ -1402,6 +1468,7 @@ Patroni 集群名称。
 若未指定，[patronictl](/docs/patroni/patronictl#patronictl) 将尝试从 **`citus.group`** 配置中获取（如果存在）。
 
 <a id="patronictl_show_config_synopsis"></a>
+
 #### 示例
 
 显示集群 **`batman`** 的动态配置：
@@ -1421,12 +1488,14 @@ ttl: 30
 ```
 
 <a id="patronictl_show_config_description"></a>
+
 ### patronictl switchover
 
 <a id="patronictl_show_config_parameters"></a>
+
 #### 语法
 
-```
+```text
 switchover
   [ CLUSTER_NAME ]
   [ --group CITUS_GROUP ]
@@ -1436,6 +1505,7 @@ switchover
 ```
 
 <a id="patronictl_show_config_examples"></a>
+
 #### 描述
 
 **`patronictl switchover`** 在集群中执行主从切换，适用于集群健康的场景（存在领导者，同步集群中有可用的同步备库）。
@@ -1444,6 +1514,7 @@ switchover
 > 若集群不健康，可考虑使用 **`patronictl failover`**。
 
 <a id="patronictl_switchover"></a>
+
 #### 参数
 
 **`CLUSTER_NAME`**
@@ -1469,6 +1540,7 @@ Patroni 集群名称。
 跳过确认提示，适合在脚本中使用。
 
 <a id="patronictl_switchover_synopsis"></a>
+
 #### 示例
 
 切换到节点 **`postgresql2`**：
@@ -1519,12 +1591,14 @@ Switchover scheduled at: 2023-09-13T18:00:00-03:00
 ```
 
 <a id="patronictl_switchover_description"></a>
+
 ### patronictl topology
 
 <a id="patronictl_switchover_parameters"></a>
+
 #### 语法
 
-```
+```text
 topology
   [ CLUSTER_NAME [, ... ] ]
   [ --group CITUS_GROUP ]
@@ -1532,6 +1606,7 @@ topology
 ```
 
 <a id="patronictl_switchover_examples"></a>
+
 #### 描述
 
 **`patronictl topology`** 以树形视图显示 Patroni 集群及其成员的信息，按复制关系呈现节点层级。
@@ -1560,6 +1635,7 @@ PostgreSQL 系统标识符，显示在表格标题中。
 集群自动故障转移当前是否已暂停，显示在表格底部，仅在集群已暂停时显示。
 
 <a id="patronictl_topology"></a>
+
 #### 参数
 
 **`CLUSTER_NAME`**
@@ -1579,6 +1655,7 @@ Patroni 集群名称。
 按指定间隔（秒）自动刷新信息。
 
 <a id="patronictl_topology_synopsis"></a>
+
 #### 示例
 
 显示集群 **`batman`** 的拓扑结构（**`postgresql1`** 和 **`postgresql2`** 均从 **`postgresql0`** 复制）：
@@ -1595,12 +1672,14 @@ $ patronictl -c postgres0.yml topology batman
 ```
 
 <a id="patronictl_topology_description"></a>
+
 ### patronictl version
 
 <a id="patronictl_topology_parameters"></a>
+
 #### 语法
 
-```
+```text
 version
   [ CLUSTER_NAME [, ... ] ]
   [ MEMBER_NAME [, ... ] ]
@@ -1608,11 +1687,13 @@ version
 ```
 
 <a id="patronictl_topology_examples"></a>
+
 #### 描述
 
 **`patronictl version`** 显示 [patronictl](/docs/patroni/patronictl#patronictl) 自身的版本，也可同时显示 Patroni 集群及其成员的版本信息。
 
 <a id="patronictl_version"></a>
+
 #### 参数
 
 **`CLUSTER_NAME`**
@@ -1627,6 +1708,7 @@ Patroni 集群成员名称。
 **`CITUS_GROUP`** 为 Citus 组 ID。
 
 <a id="patronictl_version_synopsis"></a>
+
 #### 示例
 
 获取 [patronictl](/docs/patroni/patronictl#patronictl) 自身的版本：

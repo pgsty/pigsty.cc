@@ -213,4 +213,3 @@ CROSS JOIN LATERAL qdgc_polygon_to_cells(
 - `qdgc`、`qdgc_postgis` 及其被调用依赖应安装到当前 `search_path` 可见的模式中，因为这些可迁移 SQL 函数使用未限定名称调用彼此。
 - 上游测试了 PostgreSQL 13–17；不能因为该扩展没有编译代码就推断 PostgreSQL 18 已获支持。
 - 即使采用剪枝，深层级区域填充仍可能生成巨量结果。应把 `qdgc_estimate_cell_count` 作为运维保护，并在调用 `qdgc_polygon_to_cells` 前施加应用侧规模限制。
-

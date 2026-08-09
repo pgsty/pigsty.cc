@@ -62,7 +62,7 @@ NocoDB 可以连接到 Pigsty 管理的 PostgreSQL 数据库。
 
 在 NocoDB 界面中添加新项目时，选择「External Database」，然后输入 PostgreSQL 连接信息：
 
-```
+```text
 主机：10.10.10.10
 端口：5432
 数据库名：your_database

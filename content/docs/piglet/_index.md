@@ -17,15 +17,15 @@ PIGLET 是基于 Pigsty 的轻量运行时环境，专为 **AI Web Coding** 打�
 
 ## 核心特性
 
-|    特性     | 说明                                                                                           |                                                                                           
-|:---------:|:---------------------------------------------------------------------------------------------|                                                                                               
+|    特性     | 说明                                                                                           |
+|:---------:|:---------------------------------------------------------------------------------------------|
 | 🤖 AI 编码  | 预装 **Claude Code**、**Codex CLI**、OpenCode、VS Code、Jupyter 全家桶，Python/Go/Node.js 开发环境开箱即用     |
 |  🐘 数据全能  | PostgreSQL 18 + [**{{< param pgext_count >}}**](/ext/list/) 扩展，向量/时序/地理/图/分析一网打尽，可加装 Supabase，复杂应用不求人              |
-|  💾 共享存储  | [**JuiceFS**](/docs/juice) 将工作目录存入数据库，多 Agent / 多用户同时协作，文件永不丢失，还能回滚至任意时间点                    |                                                                            
-|  ⏱️ 时光机器  | 数据库 **PITR** + 文件系统快照联动，搞砸了？一键回到任意时间点，文件系统与数据库保持一致与同步！                                       |                                                                            
-|  🔀 瞬间克隆  | **CoW** 百毫秒级 [**Fork 巨型数据库**](/docs/pgsql/admin/db#克隆数据库)，Fork 现有实例与集群，不占额外存储空间，随时快速重建，放心折腾！ |                                                                            
-|  🌐 一键上线  | 内置 **Nginx** 搞定域名、证书、代理，静态网页，动态网站，从出嘴到上线交付一步到位，省略中间步骤！                                       |                                                                           
-|  📊 全栈监控  | **VictoriaMetrics** + **Grafana** 全景大盘，特供 Claude Code 可观测性，一切细节尽在掌控！                         |                                                                                     
+|  💾 共享存储  | [**JuiceFS**](/docs/juice) 将工作目录存入数据库，多 Agent / 多用户同时协作，文件永不丢失，还能回滚至任意时间点                    |
+|  ⏱️ 时光机器  | 数据库 **PITR** + 文件系统快照联动，搞砸了？一键回到任意时间点，文件系统与数据库保持一致与同步！                                       |
+|  🔀 瞬间克隆  | **CoW** 百毫秒级 [**Fork 巨型数据库**](/docs/pgsql/admin/db#克隆数据库)，Fork 现有实例与集群，不占额外存储空间，随时快速重建，放心折腾！ |
+|  🌐 一键上线  | 内置 **Nginx** 搞定域名、证书、代理，静态网页，动态网站，从出嘴到上线交付一步到位，省略中间步骤！                                       |
+|  📊 全栈监控  | **VictoriaMetrics** + **Grafana** 全景大盘，特供 Claude Code 可观测性，一切细节尽在掌控！                         |
 | 🇨🇳 国内畅通 | 全球 CDN + 国内镜像双通道，免翻墙，一行配置 CC + **GLM-5.2** 国产模型，无需魔法，合法合规！                                   |
 {.full-width}
 
@@ -89,12 +89,12 @@ curl -fsSL https://repo.pigsty.cc/get | bash; cd ~/pigsty
 你可以直接 ssh 登陆服务器然后 `cd /fs`，常规使用 `claude` 或 `codex` 启动对应 CLI；预置的 `x` 是 Codex YOLO 别名，`xx` 是 Claude YOLO 别名，涉及真实数据时慎用。
 你也可以直接利用 Code Server 与 Jupyter 的终端，或者 VS Code / Jupyter 的 Claude 插件启动 Claude Code。
 
-![](/img/pigsty/vscode.webp)
+![VS Code 中的 AI Coding 环境](/img/pigsty/vscode.webp)
 
 这里的 Claude 已经将日志与监控指标默认接入到 Grafana 大盘，你可以通过 Grafana 监控 Claude 的运行状态。
 Codex CLI 在 VIBE 中是 package-only：默认安装命令行软件包，但登录、Provider 与配置文件仍按 Codex 自身方式管理。
 
-![](/img/pigsty/claude-monitor-1.webp)
+![Claude Code 监控仪表盘](/img/pigsty/claude-monitor-1.webp)
 
 -------
 
@@ -116,7 +116,7 @@ claude_env:
 
 然后重新执行 `./vibe.yml -t claude` 即可。这只影响 Claude Code；Codex CLI 的账号与 Provider 配置不由 VIBE 管理。
 
-![](/img/pigsty/claude-monitor-2.webp)
+![Claude Code 可观测性数据](/img/pigsty/claude-monitor-2.webp)
 
 
 ## Claude Code 接入监控

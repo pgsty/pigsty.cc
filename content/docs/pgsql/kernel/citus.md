@@ -10,7 +10,7 @@ categories: [概念]
 
 Pigsty 原生支持 Citus。这是一个基于原生 PostgreSQL 内核的分布式水平扩展插件。
 
-![](/img/pigsty/citus.jpg)
+![Citus](/img/pigsty/citus.jpg)
 
 
 --------

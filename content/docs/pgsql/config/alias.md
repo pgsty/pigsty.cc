@@ -12,7 +12,7 @@ categories: [参考]
 PostgreSQL 在不同操作系统上的软件包命名规则存在显著差异：
 
 - **EL 系统**（RHEL/Rocky/Alma/...）使用 `pgvector_18`，`postgis36_18*` 这样的格式
-- **Debian/Ubuntu 系统**使用 `postgresql-18-pgvector`，`postgresql-18-postgis-3` 这样的格式
+- **Debian/Ubuntu 系统** 使用 `postgresql-18-pgvector`，`postgresql-18-postgis-3` 这样的格式
 
 这种差异给用户带来了额外的认知负担：您需要记住不同系统的包名规则，还要处理 PostgreSQL 版本号嵌入的问题。
 
@@ -137,5 +137,3 @@ Pigsty 的别名系统使用 `$v` 作为 PostgreSQL 版本号的占位符。当�
 - `postgresql18*` 会匹配 `postgresql18`、`postgresql18-server`、`postgresql18-libs`、`postgresql18-contrib` 等
 
 这种设计确保您无需逐一列出每个子包，一个别名即可安装完整的扩展。
-
-

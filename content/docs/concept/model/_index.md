@@ -9,7 +9,7 @@ categories: [概念]
 
 在 Pigsty 中最大的实体概念叫做 **部署（Deployment）**，一套部署中的主要实体与关系（E-R 图）如下所示：
 
-![](/img/pigsty/er-full.svg)
+![Pigsty 数据模型 ER 图](/img/pigsty/er-full.svg)
 
 一套部署也可以理解为一个 **环境（Environment）**。例如，生产环境（Prod），用户测试环境（UTA），预发环境（Staging），测试环境（Testing），开发环境（Devbox），等等。
 每个环境中，都对应着一份 Pigsty [**配置清单**](/docs/concept/iac/inventory)，描述了环境中的所有实体与属性。

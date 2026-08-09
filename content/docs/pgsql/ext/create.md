@@ -48,7 +48,7 @@ CREATE EXTENSION postgis_topology CASCADE;
 CREATE EXTENSION IF NOT EXISTS vector;
 ```
 
-> 注意：`CREATE EXTENSION` 使用的是**扩展名**（如 `vector`），而非包别名（`pgvector`）。
+> 注意：`CREATE EXTENSION` 使用的是 **扩展名**（如 `vector`），而非包别名（`pgvector`）。
 
 
 --------
@@ -145,4 +145,3 @@ SELECT * FROM pg_extension_config_dump('vector');
 -- 查看扩展版本
 SELECT extversion FROM pg_extension WHERE extname = 'vector';
 ```
-

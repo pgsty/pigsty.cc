@@ -32,7 +32,7 @@ categories: [参考]
   - Pigsty 已支持 PostgreSQL 小版本发布：18.2...
 
 - **2026-02-04**：Extension for Everyone 主题入选 PGCon.Dev 2026 演讲！
-  - [**中国厂商首次站上 PGConf.dev 主题演讲台**](https://mp.weixin.qq.com/s/rThnqXp2JXVV9UQncNV3kg) 
+  - [**中国厂商首次站上 PGConf.dev 主题演讲台**](https://mp.weixin.qq.com/s/rThnqXp2JXVV9UQncNV3kg)
 
 - **2026-02-03**: **Pigsty v4.0 正式发布！** 迈入 Agent 时代！
   - PostgreSQL 官方网站新闻：《[Pigsty v4.0 Released: Ready for the Agent Era](https://www.postgresql.org/about/news/pigsty-v40-released-ready-for-the-agent-era-3228/)》

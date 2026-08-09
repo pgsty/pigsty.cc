@@ -14,7 +14,7 @@ JuiceFS 实例通过 `juicefs mount --metrics` 暴露 Prometheus 指标。
 
 ## 监控架构
 
-```
+```text
 JuiceFS Mount (metrics: 0.0.0.0:<port>)
     ↓
 VictoriaMetrics (scrape)
@@ -24,7 +24,7 @@ Grafana Dashboard
 
 若已部署 [`INFRA`](/docs/infra)，`juice_register` 会自动写入抓取目标：
 
-```
+```text
 /infra/targets/juice/<hostname>.yml
 ```
 

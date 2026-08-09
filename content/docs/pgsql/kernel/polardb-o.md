@@ -12,13 +12,13 @@ Pigsty 允许使用 PolarDB 创建带有 “国产化信创资质” 的 PolarDB
 
 根据 【[安全可靠测评结果公告（2023年第1号）](http://www.itsec.gov.cn/aqkkcp/cpgg/202312/t20231226_162074.html)】，附表三、集中式数据库。PolarDB v2.0 属于自主可控，安全可靠的国产信创数据库。
 
-PolarDB for Oracle 是基于 PolarDB for PostgreSQL 进行二次开发的 Oracle 兼容版本，两者共用同一套内核，通过 `--compatibility-mode` 参数进行区分。 
+PolarDB for Oracle 是基于 PolarDB for PostgreSQL 进行二次开发的 Oracle 兼容版本，两者共用同一套内核，通过 `--compatibility-mode` 参数进行区分。
 
 我们与阿里云内核团队合作，提供基于 PolarDB v2.0 内核与 Pigsty 的完整数据库解决方案，请联系销售咨询，或在阿里云市场自行采购。
 
 PolarDB for Oracle 内核目前仅在 EL7 (CentOS 7) 系统中可用。
 
-![](/img/pigsty/polar.jpg)
+![PolarDB for Oracle](/img/pigsty/polar.jpg)
 
 
 

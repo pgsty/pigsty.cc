@@ -87,7 +87,7 @@ pig build pkg citus              # get + dep + ext
 
 ### 目录结构
 
-```
+```text
 ~/ext/                           # 真实工作目录
 ├── pkg/                         # 构建产物输出目录
 ├── src/                         # 源码 tarball 下载目录

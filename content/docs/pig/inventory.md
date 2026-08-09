@@ -7,7 +7,7 @@ module: [PIG]
 categories: [参考]
 ---
 
-`pig inventory` 命令组（别名 `pig inv`）自 v1.6.0 起提供，用于以**无损**方式检视、编辑、
+`pig inventory` 命令组（别名 `pig inv`）自 v1.6.0 起提供，用于以 **无损** 方式检视、编辑、
 校验与体检 Pigsty 配置清单（`pigsty.yml`），并可通过实验性的 `cmdb` 子命令与 PostgreSQL CMDB 交换配置。
 
 无损引擎会逐字节保留 YAML 的注释、格式、键序、锚点与换行风格；`edit` 在写盘前重新解析整个文档并原子写入，
@@ -63,7 +63,7 @@ pig inventory diff /path/other.yml       # 与另一份清单对比声明
 
 ## 选择器
 
-`list` / `show` / `edit` 接受可选的**选择器**参数，定位清单中的一个片段：
+`list` / `show` / `edit` 接受可选的 **选择器** 参数，定位清单中的一个片段：
 
 ```bash
 pig inv e                                # 整个清单
@@ -115,7 +115,7 @@ pig inv v --strict -o json               # 结构化输出（CI 友好）
 {.full-width}
 
 > `validate` 是 **Pigsty 语义校验器**，不是通用 Ansible linter；其规则与 Pigsty 自带的
-> `bin/validate` 保持对齐（个别地方更严格）。此外，清单解析对**重复键**与**多文档 YAML**
+> `bin/validate` 保持对齐（个别地方更严格）。此外，清单解析对 **重复键** 与 **多文档 YAML**
 > 直接拒绝——此类文件连 `show` / `edit` 都无法使用。
 
 
@@ -152,7 +152,7 @@ pig inv ck -p ssh --sudo                 # SSH 探测并验证 sudo -n
 |:----------|:----------------------------------------------------------|
 | `check`   | 只读：验证 CMDB 投影，并可选校验与静态清单的一致性                              |
 | `init`    | 应用 `cmdb.sql` 基线（存在既有 schema 时需 `--yes` 确认；支持 `--plan` 预览） |
-| `load`    | 用静态清单**替换全部** CMDB 声明行（单事务；需 `--yes`；支持 `--plan`/`--strict`）|
+| `load`    | 用静态清单 **替换全部** CMDB 声明行（单事务；需 `--yes`；支持 `--plan`/`--strict`）|
 | `dump`    | 将 CMDB 导出为静态清单文件（目标不同时需 `--force` 覆盖）                      |
 | `enable`  | 守卫式切换 `ansible.cfg` 的 inventory 指向 CMDB（`inventory.sh`）    |
 | `disable` | 切回静态 `pigsty.yml`（与 `enable` 均支持 `--plan`，原子写入可回滚）         |
@@ -167,6 +167,6 @@ pig inventory cmdb enable                # 切换 ansible 清单源到 CMDB
 pig inventory cmdb disable               # 切回静态 pigsty.yml
 ```
 
-> **注意**：`init` 会直接应用 `cmdb.sql` 基线，**不会**先备份既有 CMDB——对已有数据的 CMDB
+> **注意**：`init` 会直接应用 `cmdb.sql` 基线，**不会** 先备份既有 CMDB——对已有数据的 CMDB
 > 执行前请自行备份；`load` 会替换全部声明行。破坏性操作均有基于目标指纹的确认门，
 > 结构化输出模式下必须显式 `--yes`。

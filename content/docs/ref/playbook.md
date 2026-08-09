@@ -119,7 +119,7 @@ PGSQL、ETCD、MINIO、REDIS 与 KAFKA 的角色默认值均显式为 `false`；
 
 大部分剧本都是幂等的，可以重复执行。但需要注意：
 
-- `infra.yml` 默认**不会**清除数据，可安全重复执行。所有 clean 参数（`vmetrics_clean`、`vlogs_clean`、`vtraces_clean`、`grafana_clean`、`nginx_clean`）默认均为 `false`
+- `infra.yml` 默认 **不会** 清除数据，可安全重复执行。所有 clean 参数（`vmetrics_clean`、`vlogs_clean`、`vtraces_clean`、`grafana_clean`、`nginx_clean`）默认均为 `false`
 - 如需清除基础设施数据重建，需显式设置对应的 clean 参数为 `true`
 - 重复执行 `*-rm.yml` 删除剧本需格外小心，确保在正确的目标上执行
 

@@ -34,7 +34,7 @@ categories: [参考]
 etcd: { hosts: { 10.10.10.10: { etcd_seq: 1 } }, vars: { etcd_cluster: etcd } }
 ```
 
-在 Pigsty 提供的所有单机配置模板中，都有这样一项，其中的占位 IP 地址：`10.10.10.10` 默认会被替换为当前管理节点的 IP。 
+在 Pigsty 提供的所有单机配置模板中，都有这样一项，其中的占位 IP 地址：`10.10.10.10` 默认会被替换为当前管理节点的 IP。
 
 除了 IP 地址外，这里唯一必要的参数是 [`etcd_seq`](/docs/etcd/param#etcd_seq) 和 [`etcd_cluster`](/docs/etcd/param#etcd_cluster)，它们会唯一标识每一个 Etcd 实例。
 
@@ -46,7 +46,7 @@ etcd: { hosts: { 10.10.10.10: { etcd_seq: 1 } }, vars: { etcd_cluster: etcd } }
 
 三节点的 Etcd 集群最为常见，它可以容忍一个节点的故障，适用于中小规模的生产环境。
 
-例如，Pigsty 的三节点模板：[`trio`](/docs/conf/trio) 和 [`safe`](/docs/conf/safe) 就使用了三节点的 Etcd 集群，如下所示： 
+例如，Pigsty 的三节点模板：[`trio`](/docs/conf/trio) 和 [`safe`](/docs/conf/safe) 就使用了三节点的 Etcd 集群，如下所示：
 
 ```yaml
 etcd: 

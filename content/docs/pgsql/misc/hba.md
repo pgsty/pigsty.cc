@@ -20,7 +20,7 @@ categories: [参考]
 
 要连接到 PostgreSQL 数据库，用户必须先经过认证（默认使用密码）。
 
-您可以在连接字符串中提供密码（不安全）或使用`PGPASSWORD`环境变量或`.pgpass`文件传递密码。参考 [`psql`](https://www.postgresql.org/docs/current/app-psql.html#usage) 文档和 [PostgreSQL连接字符串](https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-CONNSTRING) 以获取更多详细信息。
+您可以在连接字符串中提供密码（不安全）或使用 `PGPASSWORD` 环境变量或 `.pgpass` 文件传递密码。参考 [`psql`](https://www.postgresql.org/docs/current/app-psql.html#usage) 文档和 [PostgreSQL连接字符串](https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-CONNSTRING) 以获取更多详细信息。
 
 ```bash
 psql 'host=<host> port=<port> dbname=<dbname> user=<username> password=<password>'
@@ -36,7 +36,7 @@ psql postgres://dbuser_dba:DBUser.DBA@10.10.10.10:5432/meta
 PGPASSWORD=DBUser.DBA; psql -U dbuser_dba -h 10.10.10.10 -p 5432 -d meta
 ```
 
-默认配置下，Pigsty 会启用服务端 SSL 加密，但不验证客户端 SSL 证书。要使用客户端 SSL 证书连接，你可以使用`PGSSLCERT`和`PGSSLKEY`环境变量或`sslkey`和`sslcert`参数提供客户端参数。
+默认配置下，Pigsty 会启用服务端 SSL 加密，但不验证客户端 SSL 证书。要使用客户端 SSL 证书连接，你可以使用 `PGSSLCERT` 和 `PGSSLKEY` 环境变量或 `sslkey` 和 `sslcert` 参数提供客户端参数。
 
 ```bash
 psql 'postgres://dbuser_dba:DBUser.DBA@10.10.10.10:5432/meta?sslkey=/path/to/dbuser_dba.key&sslcert=/path/to/dbuser_dba.crt'
@@ -76,18 +76,18 @@ psql 'postgres://dbuser_dba:DBUser.DBA@10.10.10.10:5432/meta?sslkey=/path/to/dbu
 
 在这种形式中，`rules` 字段是字符串数组，每一行都是条原始形式的 [HBA规则](https://www.postgresql.org/docs/current/auth-pg-hba-conf.html)。`title` 字段会被渲染为一条注释，解释下面规则的作用。
 
-`role` 字段用于说明该规则适用于哪些实例角色，当实例的 [`pg_role`](/docs/pgsql/param#pg_role) 与`role`相同时，HBA 规则将被添加到这台实例的 HBA 中。
-- `role: common`的 HBA 规则将被添加到所有实例上。
+`role` 字段用于说明该规则适用于哪些实例角色，当实例的 [`pg_role`](/docs/pgsql/param#pg_role) 与 `role` 相同时，HBA 规则将被添加到这台实例的 HBA 中。
+- `role: common` 的 HBA 规则将被添加到所有实例上。
 - `role: primary` 的 HBA 规则只会添加到主库实例上。
 - `role: replica` 的 HBA 规则只会添加到从库实例上。
-- `role: offline`的 HBA 规则将被添加到离线实例上（[`pg_role`](/docs/pgsql/param#pg_role) = `offline`或 [`pg_offline_query`](/docs/pgsql/param#pg_offline_query) = `true`）
+- `role: offline` 的 HBA 规则将被添加到离线实例上（[`pg_role`](/docs/pgsql/param#pg_role) = `offline` 或 [`pg_offline_query`](/docs/pgsql/param#pg_offline_query) = `true`）
 
 
 
 
 ### 2. 别名形式
 
-别名形式允许您用更简单清晰便捷的方式维护 HBA 规则：它用`addr`、`auth`、`user`和`db` 字段替换了 `rules`。 `title`、`role` 和 `order` 字段则仍然生效。
+别名形式允许您用更简单清晰便捷的方式维护 HBA 规则：它用 `addr`、`auth`、`user` 和 `db` 字段替换了 `rules`。 `title`、`role` 和 `order` 字段则仍然生效。
 
 ```yaml
 - addr: 'intra'    # world|intra|infra|admin|local|localhost|cluster|<cidr>

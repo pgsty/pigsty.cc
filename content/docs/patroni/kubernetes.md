@@ -36,6 +36,7 @@ Patroni 可以利用 Kubernetes 对象来存储集群状态并管理领导者键
 Patroni 的 Kubernetes [**配置项**](/docs/patroni/config/yaml#kubernetes_settings) 和 [**环境变量**](/docs/patroni/config/env#kubernetes_environment) 在文档的通用章节中有详细说明。
 
 <a id="kubernetes_role_values"></a>
+
 ### 自定义角色标签
 
 默认情况下，Patroni 会根据节点角色在其所在 Pod 上设置对应标签，例如 **`role=primary`**。标签的键名和值可通过 **`kubernetes.role_label`**、**`kubernetes.leader_label_value`**、**`kubernetes.follower_label_value`** 和 **`kubernetes.standby_leader_label_value`** 进行自定义。

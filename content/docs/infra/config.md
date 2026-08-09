@@ -9,7 +9,7 @@ categories: [参考]
 
 ## 配置说明
 
-INFRA 主要用于提供**监控**基础设施，对于 PostgreSQL 数据库是**可选项**。
+INFRA 主要用于提供 **监控** 基础设施，对于 PostgreSQL 数据库是 **可选项**。
 
 除非手工配置了对 INFRA 节点上 DNS/NTP 服务的依赖，否则 INFRA 模块故障通常不影响 PostgreSQL 数据库集群运行。
 

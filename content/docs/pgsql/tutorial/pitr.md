@@ -50,7 +50,7 @@ function pb() {
 
 您可以看到初始备份信息，这是一个全量备份：
 
-```
+```text
 root@pg-meta-1:~# pb info
 stanza: pg-meta
     status: ok
@@ -282,7 +282,7 @@ restore_command = 'pgbackrest --stanza=pg-meta archive-get %f "%p"'
 recovery_target_time = '2025-07-13 03:03:00+00'
 ```
 
-如果数据正确，您可以**提升**它为主库，将其标记为新的领导者并准备接受写入。
+如果数据正确，您可以 **提升** 它为主库，将其标记为新的领导者并准备接受写入。
 
 {{< tabpane persist="disabled" >}}
 {{% tab header="提升主库" disabled=true /%}}

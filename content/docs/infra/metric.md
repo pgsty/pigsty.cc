@@ -993,8 +993,8 @@ categories: [参考]
 **`PING`** 任务包含有 54 类可用监控指标，由 `blackbox_epxorter` 提供。
 
 
-| Metric Name                           | Type    | Labels                                         | Description                                                                        | 
-|---------------------------------------|---------|------------------------------------------------|------------------------------------------------------------------------------------| 
+| Metric Name                           | Type    | Labels                                         | Description                                                                        |
+|---------------------------------------|---------|------------------------------------------------|------------------------------------------------------------------------------------|
 | agent_up                              | Unknown | `ins`, `ip`, `job`, `instance`, `cls`          | N/A                                                                                |
 | probe_dns_lookup_time_seconds         | gauge   | `ins`, `ip`, `job`, `instance`, `cls`          | Returns the time taken for probe dns lookup in seconds                             |
 | probe_duration_seconds                | gauge   | `ins`, `ip`, `job`, `instance`, `cls`          | Returns how long the probe took to complete in seconds                             |
@@ -1018,8 +1018,8 @@ categories: [参考]
 PushGateway 提供 44 类监控指标。
 
 
-| Metric Name                           | Type    | Labels                                                                                                        | Description                                                                                                                                                 | 
-|---------------------------------------|---------|---------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------| 
+| Metric Name                           | Type    | Labels                                                                                                        | Description                                                                                                                                                 |
+|---------------------------------------|---------|---------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | agent_up                              | Unknown | `job`, `cls`, `instance`, `ins`, `ip`                                                                         | N/A                                                                                                                                                         |
 | go_gc_duration_seconds                | summary | `job`, `cls`, `instance`, `ins`, `quantile`, `ip`                                                             | A summary of the pause duration of garbage collection cycles.                                                                                               |
 | go_gc_duration_seconds_count          | Unknown | `job`, `cls`, `instance`, `ins`, `ip`                                                                         | N/A                                                                                                                                                         |

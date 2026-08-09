@@ -271,4 +271,4 @@ ALTER USER only_cheap_queries SET plan_filter.statement_cost_limit = 10000;
 
 ### 注意事项
 
-`statement_cost_limit` 基于**估算成本**取消计划。PostgreSQL 规划器返回的成本估算可能与实际查询执行时间无关。请准备好应对误报取消的情况，并将限制值设置得宽裕一些。
+`statement_cost_limit` 基于 **估算成本** 取消计划。PostgreSQL 规划器返回的成本估算可能与实际查询执行时间无关。请准备好应对误报取消的情况，并将限制值设置得宽裕一些。

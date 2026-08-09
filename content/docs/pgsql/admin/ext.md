@@ -125,7 +125,7 @@ bin/pgsql-ext pg-meta pg_duckdb pg_mooncake   # 在 pg-meta 集群上安装指�
 
 {{< /tabpane >}}
 
-您也可以使用 [**pig**](/docs/pig) 包管理器命令行工具在单个节点上安装扩展，同样会自动进行 [**包别名**](/docs/pgsql/config/alias) 解析。 
+您也可以使用 [**pig**](/docs/pig) 包管理器命令行工具在单个节点上安装扩展，同样会自动进行 [**包别名**](/docs/pgsql/config/alias) 解析。
 
 ```bash
 pig install postgis timescaledb       # 安装多个扩展
@@ -207,7 +207,7 @@ pg-meta:
 ```
 
 
-对于已有集群，您可以参考 [**修改配置**](/docs/pgsql/admin/patroni#修改配置) 的介绍，修改 `shared_preload_libraries`参数：
+对于已有集群，您可以参考 [**修改配置**](/docs/pgsql/admin/patroni#修改配置) 的介绍，修改 `shared_preload_libraries` 参数：
 
 ```bash
 pg edit-config pg-meta --force -p shared_preload_libraries='timescaledb, pg_stat_statements, auto_explain'

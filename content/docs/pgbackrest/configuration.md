@@ -64,7 +64,7 @@ pgBackRest 可以完全通过命令行参数使用，但当配置较为复杂或
 
 异步操作效率更高，可复用连接并利用并行处理优势。详情请参阅 `spool-path`、`archive-get-queue-max` 和 `archive-push-queue-max` 选项。
 
-```
+```text
 default: n
 example: archive-async=y
 ```
@@ -75,7 +75,7 @@ example: archive-async=y
 
 启用 `archive-async` 时，指定 `archive-get` 队列的最大大小。队列存储在 `spool-path` 中，用于加速向 PostgreSQL 提供 WAL。
 
-```
+```text
 default: 128MiB
 allowed: [0B, 4PiB]
 example: archive-get-queue-max=1GiB
@@ -91,7 +91,7 @@ example: archive-get-queue-max=1GiB
 
 禁用此选项时，务必确保 stanza 的缓冲区路径为空。若在恢复时配置了缓冲区路径，`restore` 命令会自动清空该路径；否则需要用户手动清空。
 
-```
+```text
 default: y
 example: archive-missing-retry=n
 ```
@@ -104,7 +104,7 @@ example: archive-missing-retry=n
 
 此选项限制每轮处理的 WAL 量，使进程退出，并由下一次 `archive-push` 再次启动，从而重新检查队列。较小的值会更频繁地检查队列，但代价是更频繁地启动异步进程。该值会向下取整为 WAL 段大小的整数倍，但每轮至少会处理一个 WAL 段。
 
-```
+```text
 default: 16GiB
 allowed: [1MiB, 4PiB]
 example: archive-push-batch-size=1GiB
@@ -116,7 +116,7 @@ PostgreSQL 归档队列的最大大小。
 
 达到限制后，将发生以下情况：
 
-- pgBackRest 会通知 PostgreSQL WAL 已成功归档，然后将其**丢弃**。
+- pgBackRest 会通知 PostgreSQL WAL 已成功归档，然后将其 **丢弃**。
 - 会在 PostgreSQL 日志中输出一条警告。
 
 若发生此情况，归档日志流将被中断，此后将无法执行 PITR。需要执行新的备份才能恢复完整的恢复能力。
@@ -127,7 +127,7 @@ PostgreSQL 归档队列的最大大小。
 
 此功能的目的是防止日志卷被写满——日志卷写满会导致 PostgreSQL 完全停止。宁可丢失备份，也好过让 PostgreSQL 宕机。
 
-```
+```text
 allowed: [0B, 4PiB]
 example: archive-push-queue-max=1TiB
 ```
@@ -140,7 +140,7 @@ example: archive-push-queue-max=1TiB
 
 设置等待每个 WAL 段到达 pgBackRest 归档仓库的最长时间（秒）。该超时适用于 `check` 和 `backup` 命令等待备份一致性所需的 WAL 段完成归档的场景。
 
-```
+```text
 default: 1m
 allowed: [100ms, 1d]
 example: archive-timeout=30
@@ -160,7 +160,7 @@ example: archive-timeout=30
 
 注解会在 `info` 命令通过 `--set` 指定备份时以文本形式输出，并始终出现在 JSON 输出中。
 
-```
+```text
 example: annotation=source="Sunday backup for website database"
 ```
 
@@ -172,7 +172,7 @@ example: annotation=source="Sunday backup for website database"
 
 若启用了 `archive-copy`，则必须同时启用此选项。
 
-```
+```text
 default: y
 example: archive-check=n
 ```
@@ -189,7 +189,7 @@ example: archive-check=n
 
 若启用了 `archive-copy`，则必须同时启用 `archive-check` 选项。
 
-```
+```text
 default: n
 example: archive-copy=y
 ```
@@ -206,7 +206,7 @@ example: archive-copy=y
 
 若禁用此选项，则必须确保只有一个归档进程通过 `archive-push` 命令向仓库写入数据。
 
-```
+```text
 default: y
 example: archive-mode-check=n
 ```
@@ -223,7 +223,7 @@ example: archive-mode-check=n
 - `prefer` - 优先从备库备份，若备库不可用则从主库备份。
 - `n` - 仅从主库备份。
 
-```
+```text
 default: n
 example: backup-standby=y
 ```
@@ -236,7 +236,7 @@ example: backup-standby=y
 
 校验和验证失败不会中止备份，而是会在日志中（以及使用默认设置时在控制台中）输出警告，并将无效页面列表存储在备份的清单文件（manifest）中。
 
-```
+```text
 example: checksum-page=n
 ```
 
@@ -252,13 +252,13 @@ example: checksum-page=n
 
 注意：
 
-delta 恢复中不遵守排除规则。备份中被排除的文件/目录在 delta 恢复时将被*删除*。
+delta 恢复中不遵守排除规则。备份中被排除的文件/目录在 delta 恢复时将被 *删除*。
 
 不建议使用此选项来排除 PostgreSQL 日志文件。可以通过 PostgreSQL 的 `log_directory` 设置将日志移出 `PGDATA` 目录，这还有一个好处，即恢复后日志仍可保留。
 
 可以在命令行或配置文件中指定多个排除规则。
 
-```
+```text
 example: exclude=junk/
 ```
 
@@ -270,7 +270,7 @@ example: exclude=junk/
 
 成功备份后自动执行 `expire` 时，会使用 `backup` 命令的配置，因此仅设置在 `expire` 命令配置节（例如 `[global:expire]`）中的选项不会生效。若要应用 `expire` 专用配置，请禁用此选项并单独运行 `expire` 命令。
 
-```
+```text
 default: y
 example: expire-auto=y
 ```
@@ -281,7 +281,7 @@ example: expire-auto=y
 
 定义备份过程中清单文件的保存频率。定期保存清单文件非常重要，因为它存储了校验和信息，使断点续传功能能够高效工作。实际使用的阈值为备份大小的 1% 与 `manifest-save-threshold` 中的较大值。
 
-```
+```text
 default: 1GiB
 allowed: [1B, 1TiB]
 example: manifest-save-threshold=8GiB
@@ -293,7 +293,7 @@ example: manifest-save-threshold=8GiB
 
 定义是否启用断点续传功能。断点续传可以大幅减少在相同类型的上一次备份失败后重新执行备份所需的时间。但它也增加了复杂性，因此在不需要此功能的环境中可以选择禁用。
 
-```
+```text
 default: y
 example: resume=n
 ```
@@ -304,7 +304,7 @@ example: resume=n
 
 通过强制执行检查点（向备份启动函数的 `fast` 参数传入 `y`），使备份立即开始，而不是等待下一个常规检查点。
 
-```
+```text
 default: n
 example: start-fast=y
 ```
@@ -323,7 +323,7 @@ example: start-fast=y
 
 启用此选项仍可强制以 root 运行命令。不过，更佳做法是使用仓库和 PostgreSQL 集群的所有者用户运行 pgBackRest。
 
-```
+```text
 default: n
 example: allow-root=y
 ```
@@ -336,7 +336,7 @@ I/O 操作的缓冲区大小。
 
 允许的值为：`16KiB`、`32KiB`、`64KiB`、`128KiB`、`256KiB`、`512KiB`、`1MiB`、`2MiB`、`4MiB`、`8MiB` 和 `16MiB`。
 
-```
+```text
 default: 1MiB
 example: buffer-size=2MiB
 ```
@@ -351,7 +351,7 @@ pgBackRest 在某些情况下需要生成命令字符串，例如 `restore` 命�
 
 对 pgBackRest 命令进行包装可能导致不可预期的行为，不建议这样做。
 
-```
+```text
 default: [path of executed pgbackrest binary]
 example: cmd=/var/lib/pgsql/bin/pgbackrest_wrapper.sh
 ```
@@ -362,7 +362,7 @@ SSH 客户端命令。
 
 当需要使用特定的 SSH 客户端，或 `ssh` 命令不在 `$PATH` 中时，使用此选项指定 SSH 客户端命令。
 
-```
+```text
 default: ssh
 example: cmd-ssh=/usr/bin/ssh
 ```
@@ -375,7 +375,7 @@ example: cmd-ssh=/usr/bin/ssh
 
 此选项已弃用，请改用 `compress-type` 选项。
 
-```
+```text
 default: y
 example: compress=n
 ```
@@ -386,7 +386,7 @@ example: compress=n
 
 当 `compress-type` 不等于 `none` 或使用（已弃用的）`compress=y` 时，设置文件压缩所使用的级别。
 
-```
+```text
 default (depending on compress-type):
    bz2 - 9
    gz - 6
@@ -408,7 +408,7 @@ example: compress-level=9
 
 当 `compress-type=none` 且命令不在与仓库相同的主机上运行时，设置网络传输的压缩级别，以减少网络流量。当 `compress-type` 不等于 `none` 时，此设置将被忽略，改用 `compress-level`，从而只对文件压缩一次。
 
-```
+```text
 default: 1
 allowed: [-5, 12]
 example: compress-level-network=1
@@ -426,7 +426,7 @@ example: compress-level-network=1
 - `lz4` - lz4 压缩格式（并非所有平台均可用）
 - `zst` - Zstandard 压缩格式（并非所有平台均可用）
 
-```
+```text
 default: gz
 example: compress-type=none
 ```
@@ -441,7 +441,7 @@ example: compress-type=none
 
 `db-timeout` 选项的值必须小于 `protocol-timeout` 选项的值。
 
-```
+```text
 default: 30m
 allowed: [100ms, 7d]
 example: db-timeout=600
@@ -455,7 +455,7 @@ example: db-timeout=600
 
 执行备份时，此选项将使用校验和而非时间戳来判断文件是否需要复制。
 
-```
+```text
 default: n
 example: delta=y
 ```
@@ -466,9 +466,9 @@ I/O 超时时间。
 
 用于连接及读写操作的超时时间（秒）。
 
-注意，整个读写操作不需要在此超时时间内完成，但必须有*一定*进展，哪怕只是传输了一个字节。
+注意，整个读写操作不需要在此超时时间内完成，但必须有 *一定* 进展，哪怕只是传输了一个字节。
 
-```
+```text
 default: 1m
 allowed: [100ms, 1h]
 example: io-timeout=120
@@ -480,7 +480,7 @@ example: io-timeout=120
 
 pgBackRest 将锁文件存放在此路径下，以防止并发运行相互冲突的操作。
 
-```
+```text
 default: /tmp/pgbackrest
 example: lock-path=/backup/db/lock
 ```
@@ -493,7 +493,7 @@ example: lock-path=/backup/db/lock
 
 若要使用运行用户自身的 umask，请在配置文件中指定 `neutral-umask=n`，或在命令行中使用 `--no-neutral-umask`。
 
-```
+```text
 default: y
 example: neutral-umask=n
 ```
@@ -504,7 +504,7 @@ example: neutral-umask=n
 
 定义内核调度器为进程分配的优先级（即 nice 值）。正值降低优先级，负值提高优先级。大多数情况下，进程没有权限提高自身优先级。
 
-```
+```text
 allowed: [-20, 19]
 example: priority=19
 ```
@@ -515,7 +515,7 @@ example: priority=19
 
 每个进程都会执行压缩和传输操作以加快命令运行速度，但不要将 `process-max` 设置得过高，以免影响数据库性能。
 
-```
+```text
 default: 1
 allowed: [1, 999]
 example: process-max=4
@@ -531,7 +531,7 @@ example: process-max=4
 
 `protocol-timeout` 选项的值必须大于 `db-timeout` 选项的值。
 
-```
+```text
 default: 31m
 allowed: [100ms, 7d]
 example: protocol-timeout=630
@@ -543,7 +543,7 @@ example: protocol-timeout=630
 
 在套接字连接上启用 keep-alive 消息。
 
-```
+```text
 default: y
 example: sck-keep-alive=n
 ```
@@ -556,13 +556,13 @@ example: sck-keep-alive=n
 
 异步 `archive-push` 命令在成功将 WAL 存储到归档后，会向缓冲区路径写入确认信息（失败时写入错误信息），以便前台进程快速通知 PostgreSQL。确认文件非常小（成功时为零字节，错误时为几百字节）。
 
-异步 `archive-get` 命令会将 WAL 缓存到缓冲区路径，以便在 PostgreSQL 请求时快速提供。当缓冲区路径与 `pg_xlog`/`pg_wal` 在同一文件系统上时，文件传输效率最高。但不建议将缓冲区路径放置在 `pg_xlog`/`pg_wal` 目录*内部*，这可能会给 `pg_rewind` 等 PostgreSQL 工具带来问题。
+异步 `archive-get` 命令会将 WAL 缓存到缓冲区路径，以便在 PostgreSQL 请求时快速提供。当缓冲区路径与 `pg_xlog`/`pg_wal` 在同一文件系统上时，文件传输效率最高。但不建议将缓冲区路径放置在 `pg_xlog`/`pg_wal` 目录 *内部*，这可能会给 `pg_rewind` 等 PostgreSQL 工具带来问题。
 
 存储在缓冲区路径中的数据并非严格意义上的临时数据，因为它可以且应该在系统重启后保留。但缓冲区路径中的数据丢失也不会造成问题——pgBackRest 只需重新检查每个 WAL 段，以确保 `archive-push` 操作安全归档，并为 `archive-get` 重建队列。
 
 缓冲区路径应位于本地 Posix 兼容文件系统上，而非 NFS 或 CIFS 等远程文件系统。
 
-```
+```text
 default: /var/spool/pgbackrest
 example: spool-path=/backup/db/spool
 ```
@@ -575,7 +575,7 @@ keep-alive 探测包数量。
 
 此选项在支持 `TCP_KEEPCNT` 套接字选项的系统上可用。
 
-```
+```text
 allowed: [1, 32]
 example: tcp-keep-alive-count=3
 ```
@@ -588,7 +588,7 @@ keep-alive 空闲等待时间。
 
 此选项在支持 `TCP_KEEPIDLE` 套接字选项的系统上可用。
 
-```
+```text
 allowed: [1, 3600]
 example: tcp-keep-alive-idle=60
 ```
@@ -601,7 +601,7 @@ keep-alive 重传间隔时间。
 
 此选项在支持 `TCP_KEEPINTVL` 套接字选项的系统上可用。
 
-```
+```text
 allowed: [1, 900]
 example: tcp-keep-alive-interval=30
 ```
@@ -618,7 +618,7 @@ pgBackRest 客户端与服务端之间的所有 TLS 连接均已加密。默认�
 
 可以根据需要调整可接受的密码套件。除非有特定的安全要求，示例中的值是合理的选择。若未设置（默认），则使用底层 OpenSSL 库的默认值。
 
-```
+```text
 example: tls-cipher-12=HIGH:MEDIUM:+3DES:!aNULL
 ```
 
@@ -634,7 +634,7 @@ pgBackRest 客户端与服务端之间的所有 TLS 连接均已加密。默认�
 
 可以根据需要调整可接受的密码套件。若未设置（默认），则使用底层 OpenSSL 库的默认值。
 
-```
+```text
 example: tls-cipher-13=TLS_AES_256_GCM_SHA384:TLS_CHACHA20_POLY1305_SHA256
 ```
 
@@ -662,7 +662,7 @@ Trace 级别日志可能会暴露密钥和密码等敏感信息，请谨慎使�
 - `debug` - 记录调试、详细信息、信息、警告和错误
 - `trace` - 记录追踪（非常详细的调试）、调试、信息、警告和错误
 
-```
+```text
 default: warn
 example: log-level-console=error
 ```
@@ -681,7 +681,7 @@ example: log-level-console=error
 - `debug` - 记录调试、详细信息、信息、警告和错误
 - `trace` - 记录追踪（非常详细的调试）、调试、信息、警告和错误
 
-```
+```text
 default: info
 example: log-level-file=debug
 ```
@@ -702,7 +702,7 @@ stderr 日志级别。
 - `debug` - 记录调试、详细信息、信息、警告和错误
 - `trace` - 记录追踪（非常详细的调试）、调试、信息、警告和错误
 
-```
+```text
 default: off
 example: log-level-stderr=error
 ```
@@ -713,7 +713,7 @@ example: log-level-stderr=error
 
 pgBackRest 将日志文件存放在此路径下。注意，若 `log-level-file=off`，则不需要日志路径。
 
-```
+```text
 default: /var/log/pgbackrest
 example: log-path=/backup/db/log
 ```
@@ -724,7 +724,7 @@ example: log-path=/backup/db/log
 
 为此进程创建的所有子进程启用文件日志记录，日志级别由 `log-level-file` 指定。
 
-```
+```text
 default: n
 example: log-subprocess=y
 ```
@@ -735,7 +735,7 @@ example: log-subprocess=y
 
 在控制台和文件日志中启用时间戳。此选项在生成文档等特殊情况下会被禁用。
 
-```
+```text
 default: y
 example: log-timestamp=n
 ```
@@ -760,7 +760,7 @@ example: log-timestamp=n
 
 因此，禁用此检查相对安全，但仅在必要时才应禁用，例如 WAL 已加密的情况。
 
-```
+```text
 default: y
 example: archive-header-check=n
 ```
@@ -773,7 +773,7 @@ example: archive-header-check=n
 
 除非必要（例如页面已加密），否则应避免禁用此选项。
 
-```
+```text
 default: y
 example: page-header-check=n
 ```
@@ -786,9 +786,9 @@ example: page-header-check=n
 
 警告：
 
-使用此选项时请谨慎，因为 `pg_control` 和 WAL 头部仍将按照指定版本的预期格式（即官方开源 PostgreSQL 版本的格式）进行读取。如果分支或开发版本更改了 pgBackRest 所依赖字段的格式，将导致意外行为。总体而言，此选项只有在分支将所有自定义结构成员添加在标准 PostgreSQL 成员*之后*时，才能按预期工作。
+使用此选项时请谨慎，因为 `pg_control` 和 WAL 头部仍将按照指定版本的预期格式（即官方开源 PostgreSQL 版本的格式）进行读取。如果分支或开发版本更改了 pgBackRest 所依赖字段的格式，将导致意外行为。总体而言，此选项只有在分支将所有自定义结构成员添加在标准 PostgreSQL 成员 *之后* 时，才能按预期工作。
 
-```
+```text
 example: pg-version-force=15
 ```
 
@@ -808,7 +808,7 @@ Azure 仓库账户。
 
 用于存储仓库的 Azure 账户。
 
-```
+```text
 example: repo1-azure-account=pg-backup
 ```
 
@@ -820,7 +820,7 @@ Azure 仓库容器。
 
 通过设置 `repo-path=/`，pgBackRest 仓库可以存储在容器根目录下，但通常最好指定一个前缀（如 `/repo`），以便日志和其他 Azure 生成的内容也能存储在该容器中。
 
-```
+```text
 example: repo1-azure-container=pg-backup
 ```
 
@@ -832,7 +832,7 @@ Azure 仓库端点。
 
 对于自定义/测试配置，`repo-storage-ca-file`、`repo-storage-ca-path`、`repo-storage-host`、`repo-storage-port` 和 `repo-storage-verify-tls` 等选项可能很有用。
 
-```
+```text
 default: blob.core.windows.net
 example: repo1-azure-endpoint=blob.core.usgovcloudapi.net
 ```
@@ -843,7 +843,7 @@ Azure 仓库密钥。
 
 根据 `repo-azure-key-type` 选项的设置，此选项为共享密钥或共享访问签名。
 
-```
+```text
 example: repo1-azure-key=T+9+aov82qNhrcXSNGZCzm9mjd4d75/oxxOr6r1JVpgTLA==
 ```
 
@@ -857,7 +857,7 @@ Azure 仓库密钥类型。
 - `sas` - 共享访问签名
 - `auto` - 使用 Azure 托管标识自动授权
 
-```
+```text
 default: shared
 example: repo1-azure-key-type=sas
 ```
@@ -871,7 +871,7 @@ Azure URI 风格。
 - `host` - 连接到 `account.endpoint` 主机。
 - `path` - 连接到 `endpoint` 主机，并在 URI 中添加账户前缀。
 
-```
+```text
 default: host
 example: repo1-azure-uri-style=path
 ```
@@ -890,7 +890,7 @@ example: repo1-azure-uri-style=path
 
 块级增量备份在为所有备份类型（包括全量备份）启用时效率最高。这会使全量备份稍大，但后续的差异备份和增量备份可以利用全量备份生成的块映射来节省空间。
 
-```
+```text
 default: n
 example: repo1-block=y
 ```
@@ -901,7 +901,7 @@ example: repo1-block=y
 
 将较小的文件打包（合并）在一起，以减少写入仓库的文件总数。写入更少的文件通常效率更高，尤其是在 S3 等对象存储上。此外，零字节文件不会被存储（清单文件中除外），从而节省时间和空间。
 
-```
+```text
 default: n
 example: repo1-bundle=y
 ```
@@ -914,7 +914,7 @@ example: repo1-bundle=y
 
 打包后的文件在备份断点续传时无法被复用，因此此选项控制哪些文件可以断点续传——较高的值意味着可续传的文件更少。
 
-```
+```text
 default: 2MiB
 allowed: [8KiB, 1PiB]
 example: repo1-bundle-limit=10MiB
@@ -928,7 +928,7 @@ example: repo1-bundle-limit=10MiB
 
 通常不建议将此选项设置得过高，因为重试时需要重新执行整个包的操作。
 
-```
+```text
 default: 20MiB
 allowed: [1MiB, 1PiB]
 example: repo1-bundle-size=10MiB
@@ -944,7 +944,7 @@ example: repo1-bundle-size=10MiB
 
 未指定 `stanza` 选项运行时，`info` 命令只从 `global` 配置节读取加密设置。若按 stanza 配置了加密设置，读取加密 stanza 时必须为 `info` 命令指定 `stanza` 选项。
 
-```
+```text
 example: repo1-cipher-pass=zWaf6XtpjIVZC5444yXB+cgFDFl7MxGlgkZSaoPvTGirhPygu4jOKOXf9LO4vjfO
 ```
 
@@ -959,7 +959,7 @@ example: repo1-cipher-pass=zWaf6XtpjIVZC5444yXB+cgFDFl7MxGlgkZSaoPvTGirhPygu4jOK
 
 注意，即使仓库类型（如 S3）支持加密，加密操作始终在客户端执行。
 
-```
+```text
 default: none
 example: repo1-cipher-type=aes-256-cbc
 ```
@@ -972,7 +972,7 @@ GCS 仓库存储桶。
 
 通过设置 `repo-path=/`，pgBackRest 仓库可以存储在存储桶根目录下，但通常最好指定一个前缀（如 `/repo`），以便日志和其他 GCS 生成的内容也能存储在该存储桶中。
 
-```
+```text
 example: repo1-gcs-bucket=/pg-backup
 ```
 
@@ -982,7 +982,7 @@ GCS 仓库端点。
 
 用于连接存储服务的端点。可以更新为使用本地 GCS 服务器或备用端点。
 
-```
+```text
 default: storage.googleapis.com
 example: repo1-gcs-endpoint=localhost
 ```
@@ -993,7 +993,7 @@ GCS 仓库密钥。
 
 根据 `repo-gcs-key-type` 选项的设置，此选项为令牌或服务密钥文件。
 
-```
+```text
 example: repo1-gcs-key=/etc/pgbackrest/gcs-key.json
 ```
 
@@ -1009,7 +1009,7 @@ GCS 仓库密钥类型。
 
 当 `repo-gcs-key-type=service` 时，身份验证令牌续期时将重新加载凭据。
 
-```
+```text
 default: service
 example: repo1-gcs-key-type=auto
 ```
@@ -1020,7 +1020,7 @@ GCS 项目 ID。
 
 用于确定请求计费的 GCS 项目 ID。
 
-```
+```text
 example: repo1-gcs-user-project=my-project
 ```
 
@@ -1030,7 +1030,7 @@ example: repo1-gcs-user-project=my-project
 
 为差异备份和增量备份中的文件与其对应的全量备份启用硬链接。这在文件系统层面使每个备份看起来都像一个全量备份。但请注意，修改硬链接的文件会影响集合中的所有备份。
 
-```
+```text
 default: n
 example: repo1-hardlink=y
 ```
@@ -1043,7 +1043,7 @@ example: repo1-hardlink=y
 
 若备份和归档到本地挂载的文件系统，则不需要此设置。
 
-```
+```text
 example: repo1-host=repo1.domain.com
 ```
 
@@ -1055,7 +1055,7 @@ example: repo1-host=repo1.domain.com
 
 连接到仓库主机时，使用非系统默认的 CA 文件。
 
-```
+```text
 example: repo1-host-ca-file=/etc/pki/tls/certs/ca-bundle.crt
 ```
 
@@ -1065,7 +1065,7 @@ example: repo1-host-ca-file=/etc/pki/tls/certs/ca-bundle.crt
 
 连接到仓库主机时，使用非系统默认的 CA 路径。
 
-```
+```text
 example: repo1-host-ca-path=/etc/pki/tls/certs
 ```
 
@@ -1075,7 +1075,7 @@ example: repo1-host-ca-path=/etc/pki/tls/certs
 
 发送给仓库主机以证明客户端身份。
 
-```
+```text
 example: repo1-host-cert-file=/path/to/client.crt
 ```
 
@@ -1085,7 +1085,7 @@ example: repo1-host-cert-file=/path/to/client.crt
 
 仅当本地主机和仓库主机上的 pgBackRest 命令路径不同时才需要设置。若未定义，仓库主机命令将与本地命令相同。
 
-```
+```text
 default: [path of executed pgbackrest binary]
 example: repo1-host-cmd=/usr/lib/backrest/bin/pgbackrest
 ```
@@ -1098,7 +1098,7 @@ example: repo1-host-cmd=/usr/lib/backrest/bin/pgbackrest
 
 设置仓库主机上配置文件的位置。仅当仓库主机上的配置文件与本地配置文件位于不同位置时才需要设置。
 
-```
+```text
 default: CFGOPTDEF_CONFIG_PATH "/" PROJECT_CONFIG_FILE
 example: repo1-host-config=/conf/pgbackrest/pgbackrest.conf
 ```
@@ -1111,7 +1111,7 @@ example: repo1-host-config=/conf/pgbackrest/pgbackrest.conf
 
 设置仓库主机上配置包含路径的位置。仅当仓库主机上的配置包含路径与本地配置包含路径位于不同位置时才需要设置。
 
-```
+```text
 default: CFGOPTDEF_CONFIG_PATH "/" PROJECT_CONFIG_INCLUDE_PATH
 example: repo1-host-config-include-path=/conf/pgbackrest/conf.d
 ```
@@ -1122,7 +1122,7 @@ example: repo1-host-config-include-path=/conf/pgbackrest/conf.d
 
 设置仓库主机上配置路径的位置。仅当仓库主机上的配置路径与本地配置路径位于不同位置时才需要设置。
 
-```
+```text
 default: CFGOPTDEF_CONFIG_PATH
 example: repo1-host-config-path=/conf/pgbackrest
 ```
@@ -1133,7 +1133,7 @@ example: repo1-host-config-path=/conf/pgbackrest
 
 证明客户端证书由所有者发送。
 
-```
+```text
 example: repo1-host-key-file=/path/to/client.key
 ```
 
@@ -1147,7 +1147,7 @@ example: repo1-host-key-file=/path/to/client.key
 
 当 `repo-host-type=ssh` 时，`repo-host-port` 没有默认值。此时端口将使用 `cmd-ssh` 指定命令所配置的端口。
 
-```
+```text
 default (depending on repo-host-type):
    tls - 8432
 
@@ -1166,7 +1166,7 @@ example: repo1-host-port=25
 - `ssh` - 安全外壳协议（Secure Shell）。
 - `tls` - pgBackRest TLS 服务端。
 
-```
+```text
 default: ssh
 example: repo1-host-type=tls
 ```
@@ -1177,7 +1177,7 @@ example: repo1-host-type=tls
 
 设置 `repo-host` 时，定义在仓库主机上执行操作的用户。最好不要使用 `postgres` 用户，而是使用 `pgbackrest` 等其他用户。若 PostgreSQL 运行在仓库主机上，可以将 `postgres` 用户加入 `pgbackrest` 组，使其对仓库拥有读取权限，同时避免意外损坏仓库内容。
 
-```
+```text
 default: pgbackrest
 example: repo1-host-user=repo-user
 ```
@@ -1192,7 +1192,7 @@ example: repo1-host-user=repo-user
 
 提前估算所需空间可能比较困难。最好的方法是先执行一些备份，然后记录不同类型备份（全量/增量/差异）的大小，并测量每天生成的 WAL 量。这可以让你对所需空间有一个大致了解，当然随着数据库的增长，需求也会随时间变化。
 
-```
+```text
 default: /var/lib/pgbackrest
 example: repo1-path=/backup/db/backrest
 ```
@@ -1207,9 +1207,9 @@ example: repo1-path=/backup/db/backrest
 
 若未设置此值且 `repo-retention-full-type` 为 `count`（默认），则归档过期策略将默认使用与 `repo-retention-archive-type` 对应的 `repo-retention-full`（或 `repo-retention-diff`）值（若类型为 `full` 或 `diff`）。这将确保 WAL 仅在对应备份已过期后才过期。若 `repo-retention-full-type` 为 `time`，则此值将默认删除早于满足 `repo-retention-full` 设置后所保留的最旧全量备份的归档。
 
-若 `repo-retention-archive-type` 设置为 `incr`，则必须设置此选项。若磁盘空间紧张，可以结合 `repo-retention-archive-type` 使用此选项来积极清理 WAL 段。但这样做会使具有已过期 WAL 的备份无法执行 PITR，因此**不**推荐这样做。
+若 `repo-retention-archive-type` 设置为 `incr`，则必须设置此选项。若磁盘空间紧张，可以结合 `repo-retention-archive-type` 使用此选项来积极清理 WAL 段。但这样做会使具有已过期 WAL 的备份无法执行 PITR，因此 **不** 推荐这样做。
 
-```
+```text
 allowed: [1, 9999999]
 example: repo1-retention-archive=2
 ```
@@ -1222,7 +1222,7 @@ WAL 归档保留所依据的备份类型。
 
 若设置为 `full`，pgBackRest 将为 `repo-retention-archive` 定义的全量备份数量保留归档日志。若设置为 `diff`（差异），pgBackRest 将为 `repo-retention-archive` 定义的全量备份和差异备份数量保留归档日志，即若最近一次备份是全量备份，则在计算 repo-retention 时将其视为差异备份。若设置为 `incr`（增量），pgBackRest 将为 `repo-retention-archive` 定义的全量、差异和增量备份数量保留归档日志。建议保留此设置的默认值——默认行为仅在全量备份过期时才清理 WAL。
 
-```
+```text
 default: full
 example: repo1-retention-archive-type=diff
 ```
@@ -1237,7 +1237,7 @@ example: repo1-retention-archive-type=diff
 
 注意，在计算过期时，全量备份也会被计入差异备份的数量。这在大多数情况下会略微减少需要保留的差异备份数量。
 
-```
+```text
 allowed: [1, 9999999]
 example: repo1-retention-diff=3
 ```
@@ -1250,7 +1250,7 @@ example: repo1-retention-diff=3
 
 全量备份过期时，与该全量备份关联的所有差异和增量备份也会一并过期。若未定义此选项，将发出警告。若希望永久保留，可将此选项设置为最大值。
 
-```
+```text
 allowed: [1, 9999999]
 example: repo1-retention-full=2
 ```
@@ -1269,7 +1269,7 @@ example: repo1-retention-full=2
 
 注意，备份必须成功完成后才会纳入保留计算。例如，若 `repo-retention-full-type` 为 `count` 且 `repo-retention-full` 为 `2`，则必须有 3 个完整的全量备份，最旧的才会过期。
 
-```
+```text
 default: count
 example: repo1-retention-full-type=time
 ```
@@ -1284,7 +1284,7 @@ example: repo1-retention-full-type=time
 
 当全量备份历史清单过期时，与该全量备份关联的所有差异和增量备份历史清单也会一并过期。
 
-```
+```text
 allowed: [0, 9999999]
 example: repo1-retention-history=365
 ```
@@ -1297,7 +1297,7 @@ S3 仓库存储桶。
 
 通过设置 `repo-path=/`，pgBackRest 仓库可以存储在存储桶根目录下，但通常最好指定一个前缀（如 `/repo`），以便日志和其他 AWS 生成的内容也能存储在该存储桶中。
 
-```
+```text
 example: repo1-s3-bucket=pg-backup
 ```
 
@@ -1309,7 +1309,7 @@ AWS 端点应与所选区域匹配。
 
 对于自定义/测试配置，`repo-storage-ca-file`、`repo-storage-ca-path`、`repo-storage-host`、`repo-storage-port` 和 `repo-storage-verify-tls` 等选项可能很有用。
 
-```
+```text
 example: repo1-s3-endpoint=s3.amazonaws.com
 ```
 
@@ -1319,7 +1319,7 @@ S3 仓库访问密钥。
 
 用于访问此存储桶的 AWS 密钥。
 
-```
+```text
 example: repo1-s3-key=AKIAIOSFODNN7EXAMPLE
 ```
 
@@ -1329,7 +1329,7 @@ S3 仓库秘密访问密钥。
 
 用于访问此存储桶的 AWS 秘密密钥。
 
-```
+```text
 example: repo1-s3-key-secret=wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
 ```
 
@@ -1345,7 +1345,7 @@ S3 仓库密钥类型。
 - `pod-id` - 自动获取 EKS Pod 身份凭据
 - `process` - 通过外部进程获取凭据
 
-```
+```text
 default: shared
 example: repo1-s3-key-type=auto
 ```
@@ -1356,7 +1356,7 @@ S3 仓库 KMS 密钥。
 
 使用指定的 AWS 密钥管理服务密钥启用 S3 服务端加密。
 
-```
+```text
 example: repo1-s3-kms-key-id=bceb4f13-6939-4be3-910d-df54dee817b7
 ```
 
@@ -1368,7 +1368,7 @@ S3 认证进程命令。
 
 该进程必须输出包含 `AccessKeyId`、`SecretAccessKey`、`SessionToken` 和 `Expiration` 字段的 JSON。凭据会在到期前自动刷新。有关格式细节，请参阅 [进程凭据提供程序](https://docs.aws.amazon.com/sdkref/latest/guide/feature-process-credentials.html#feature-process-credentials-output)。
 
-```
+```text
 example: repo1-s3-process-cmd=/usr/local/bin/get-credentials
 example: repo1-s3-process-cmd=--role
 example: repo1-s3-process-cmd=my-role
@@ -1380,7 +1380,7 @@ S3 仓库区域。
 
 创建存储桶所在的 AWS 区域。
 
-```
+```text
 example: repo1-s3-region=us-east-1
 ```
 
@@ -1390,7 +1390,7 @@ S3 请求者付费模式。
 
 启用 S3 请求者付费模式。
 
-```
+```text
 default: n
 example: repo1-s3-requester-pays=n
 ```
@@ -1401,7 +1401,7 @@ S3 仓库 IAM 角色。
 
 当 `repo-s3-key-type=auto` 时，用于获取临时凭据的 AWS 角色名称（非完整 ARN）。
 
-```
+```text
 example: repo1-s3-role=authrole
 ```
 
@@ -1411,7 +1411,7 @@ S3 签名服务。
 
 在 SigV4 认证中使用的 S3 签名服务。标准 S3 端点默认为 `s3`；使用 S3 Outposts 端点时请设为 `s3-outposts`。
 
-```
+```text
 default: s3
 example: repo1-s3-service=s3-outposts
 ```
@@ -1422,7 +1422,7 @@ S3 仓库 SSE 客户密钥。
 
 使用指定的客户密钥启用 S3 服务端加密。
 
-```
+```text
 example: repo1-s3-sse-customer-key=bceb4f13-6939-4be3-910d-df54dee817b7
 ```
 
@@ -1432,7 +1432,7 @@ S3 仓库 STS 端点。
 
 配置 `repo-s3-key-type=web-id` 时，用于获取临时凭据的 STS 端点。可设为区域端点（例如 `sts.us-east-1.amazonaws.com`）以使用区域 STS；GovCloud、中国区域或需要降低延迟时可能必须这样设置。
 
-```
+```text
 default: sts.amazonaws.com
 example: repo1-s3-sts-host=sts.us-east-1.amazonaws.com
 ```
@@ -1443,7 +1443,7 @@ S3 仓库安全令牌。
 
 与临时凭据一起使用的 AWS 安全令牌。
 
-```
+```text
 example: repo1-s3-token=AQoDYXdzEPT//////////wEXAMPLEtc764bNrC9SAPBSM22 ...
 ```
 
@@ -1456,7 +1456,7 @@ S3 URI 风格。
 - `host` - 连接到 `bucket.endpoint` 主机。
 - `path` - 连接到 `endpoint` 主机，并在 URI 中添加存储桶前缀。
 
-```
+```text
 default: host
 example: repo1-s3-uri-style=path
 ```
@@ -1467,7 +1467,7 @@ SFTP 仓库主机。
 
 包含仓库的 SFTP 主机。
 
-```
+```text
 example: repo1-sftp-host=sftprepo.domain
 ```
 
@@ -1477,7 +1477,7 @@ SFTP 仓库主机指纹。
 
 SFTP 仓库主机指纹的生成方式应与 `repo-sftp-host-key-hash-type` 匹配。可通过 `awk '{print $2}' ssh_host_xxx_key.pub | base64 -d | (md5sum or sha1sum) -b` 生成指纹。SSH 主机密钥通常位于 `/etc/ssh` 目录中。
 
-```
+```text
 example: repo1-sftp-host-fingerprint=f84e172dfead7aeeeae6c1fdfb5aa8cf
 ```
 
@@ -1492,7 +1492,7 @@ SFTP 主机密钥检查类型。
 - `fingerprint` - pgBackRest 将根据 `repo-sftp-host-fingerprint` 选项指定的指纹检查主机密钥。
 - `none` - 不执行主机密钥检查。
 
-```
+```text
 default: strict
 example: repo1-sftp-host-key-check-type=accept-new
 ```
@@ -1503,7 +1503,7 @@ SFTP 仓库主机密钥哈希类型。
 
 声明在 SSH 启动时用于计算远程系统主机密钥摘要的哈希类型。较新版本的 `libssh2` 除 md5 和 sha1 外，还支持 `sha256`。
 
-```
+```text
 example: repo1-sftp-host-key-hash-type=sha256
 ```
 
@@ -1511,7 +1511,7 @@ example: repo1-sftp-host-key-hash-type=sha256
 
 SFTP 仓库主机端口。
 
-```
+```text
 default: 22
 allowed: [1, 65535]
 example: repo1-sftp-host-port=22
@@ -1523,7 +1523,7 @@ SFTP 仓库主机用户。
 
 用于存储仓库的主机上的用户。
 
-```
+```text
 example: repo1-sftp-host-user=pg-backup
 ```
 
@@ -1533,7 +1533,7 @@ SFTP 已知主机文件。
 
 身份验证期间，在此文件中搜索 SFTP 主机匹配项。若未指定，pgBackRest 默认搜索 `~/.ssh/known_hosts`、`~/.ssh/known_hosts2`、`/etc/ssh/ssh_known_hosts` 和 `/etc/ssh/ssh_known_hosts2`。若配置了一个或多个文件路径，pgBackRest 将在这些路径中搜索匹配项。文件路径必须是完整路径或以波浪号开头的路径。此选项可以多次传入，以指定多个已知主机文件进行搜索。要使用已知主机文件检查，不得指定 `repo-sftp-host-fingerprint`。另请参阅 `repo-sftp-host-check-type` 选项。
 
-```
+```text
 example: repo1-sftp-known-host=/home/postgres/.ssh/known_hosts
 ```
 
@@ -1543,7 +1543,7 @@ SFTP 私钥文件。
 
 用于身份验证的 SFTP 私钥文件。
 
-```
+```text
 example: repo1-sftp-private-key-file=~/.ssh/id_ed25519
 ```
 
@@ -1553,7 +1553,7 @@ SFTP 私钥密码。
 
 用于访问私钥的密码。在创建 SSH 公钥/私钥对时，这是一个可选功能。
 
-```
+```text
 example: repo1-sftp-private-key-passphrase=BeSureToGenerateAndUseASecurePassphrase
 ```
 
@@ -1563,7 +1563,7 @@ SFTP 公钥文件。
 
 用于身份验证的 SFTP 公钥文件。若针对 OpenSSL 编译，此项为可选；若针对其他库编译，则为必填。
 
-```
+```text
 example: repo1-sftp-public-key-file=~/.ssh/id_ed25519.pub
 ```
 
@@ -1573,7 +1573,7 @@ example: repo1-sftp-public-key-file=~/.ssh/id_ed25519.pub
 
 连接存储（如 S3、Azure）时，使用非系统默认的 CA 文件。
 
-```
+```text
 example: repo1-storage-ca-file=/etc/pki/tls/certs/ca-bundle.crt
 ```
 
@@ -1585,7 +1585,7 @@ example: repo1-storage-ca-file=/etc/pki/tls/certs/ca-bundle.crt
 
 连接存储（如 S3、Azure）时，使用非系统默认的 CA 路径。
 
-```
+```text
 example: repo1-storage-ca-path=/etc/pki/tls/certs
 ```
 
@@ -1597,7 +1597,7 @@ example: repo1-storage-ca-path=/etc/pki/tls/certs
 
 连接到存储（如 S3、Azure）端点之外的其他主机。通常用于测试。
 
-```
+```text
 example: repo1-storage-host=127.0.0.1
 ```
 
@@ -1609,7 +1609,7 @@ example: repo1-storage-host=127.0.0.1
 
 连接到存储（如 S3、Azure）端点（或指定主机）时使用的端口。
 
-```
+```text
 default: 443
 allowed: [1, 65535]
 example: repo1-storage-port=9000
@@ -1625,7 +1625,7 @@ example: repo1-storage-port=9000
 
 pgBackRest 没有提供修改这些标签的功能，因此请在运行 `stanza-create` 之前正确设置，以确保整个仓库的标签统一。
 
-```
+```text
 example: repo1-storage-tag=key1=value1
 ```
 
@@ -1641,7 +1641,7 @@ example: repo1-storage-tag=key1=value1
 
 若文件大于 1GiB（PostgreSQL 默认创建的最大文件大小），则块大小将逐步增加直至允许的最大值，以完成文件上传。
 
-```
+```text
 default (depending on repo-type):
    azure - 4MiB
    gcs - 4MiB
@@ -1661,7 +1661,7 @@ example: repo1-storage-upload-chunk-size=16MiB
 
 启用或禁用对存储（如 S3、Azure）服务端 TLS 证书的验证。禁用此选项仅应用于测试场景或使用自签名证书的情况。
 
-```
+```text
 default: y
 example: repo1-storage-verify-tls=n
 ```
@@ -1676,7 +1676,7 @@ example: repo1-storage-verify-tls=n
 
 此功能对绝大多数用户可能没有实际用途，但出于历史兼容性原因仍默认启用。对于不支持符号链接的类 Posix 存储，禁用符号链接可能是有益的。
 
-```
+```text
 default: y
 example: repo1-symlink=n
 ```
@@ -1693,7 +1693,7 @@ example: repo1-symlink=n
 
 注意，与存储时间戳的比较为小于等于（<=）所提供的时间戳，且提供的时间戳中的毫秒部分将被截断。
 
-```
+```text
 example: repo-target-time=2024-08-08 12:12:12+00
 ```
 
@@ -1712,7 +1712,7 @@ example: repo-target-time=2024-08-08 12:12:12+00
 
 当使用 NFS 挂载作为 `posix` 仓库时，适用于 pgBackRest 的规则与 PostgreSQL 文档中描述的相同，请参阅 [**Creating a Database Cluster - File Systems**](https://www.postgresql.org/docs/current/creating-cluster.html#CREATING-CLUSTER-FILESYSTEM)。
 
-```
+```text
 default: posix
 example: repo1-type=cifs
 ```
@@ -1736,7 +1736,7 @@ example: repo1-type=cifs
 
 **注意**：此选项在 PostgreSQL 12 以下版本不可用。
 
-```
+```text
 default: preserve
 example: archive-mode=off
 ```
@@ -1749,7 +1749,7 @@ example: archive-mode=off
 
 与 `--db-include` 选项一起使用时，`--db-exclude` 仅适用于标准系统数据库（`template0`、`template1` 和 `postgres`）。
 
-```
+```text
 example: db-exclude=db_main
 ```
 
@@ -1767,7 +1767,7 @@ example: db-exclude=db_main
 
 详细信息和注意事项请参阅 [**选择性数据库恢复**](/docs/pgbackrest/user-guide/#选择性数据库恢复)。
 
-```
+```text
 example: db-include=db_main
 ```
 
@@ -1777,7 +1777,7 @@ example: db-include=db_main
 
 默认情况下，符号链接的目录和文件在 `$PGDATA` 中被恢复为普通目录和文件。这是因为在不同于原始备份执行的系统上，将符号链接恢复到其原始目标位置可能不安全。此选项将完全按照原始系统中的状态恢复所有符号链接。
 
-```
+```text
 default: n
 example: link-all=y
 ```
@@ -1788,7 +1788,7 @@ example: link-all=y
 
 允许在恢复时更改符号链接的目标文件或路径。当恢复目标系统的存储布局与原始备份系统不同时，此选项很有用。
 
-```
+```text
 example: link-map=pg_xlog=/data/xlog
 ```
 
@@ -1806,7 +1806,7 @@ example: link-map=pg_xlog=/data/xlog
 
 由于 pgBackRest 在写入 `postgresql.auto.conf` 或 `recovery.conf` 文件后不会启动 PostgreSQL，因此在手动重启之前，始终可以编辑/检查 `postgresql.auto.conf` 或 `recovery.conf`。
 
-```
+```text
 example: recovery-option=primary_conninfo=db.mydomain.com
 ```
 
@@ -1818,7 +1818,7 @@ example: recovery-option=primary_conninfo=db.mydomain.com
 
 表空间位置不存储在 `pg_tablespace` 中，因此可以随意移动表空间。但不建议将表空间移动到 `data_directory`，这可能会导致问题。有关移动表空间的更多信息，[**Moving Tablespaces**](http://www.databasesoup.com/2013/11/moving-tablespaces.html) 是一个很好的参考资源。
 
-```
+```text
 example: tablespace-map=ts_01=/db/ts_01
 ```
 
@@ -1834,7 +1834,7 @@ example: tablespace-map=ts_01=/db/ts_01
 
 备份启动后创建的表空间将不会被映射。若需要表空间映射，请在创建表空间后执行新的备份。
 
-```
+```text
 example: tablespace-map-all=/data/tablespace
 ```
 
@@ -1850,7 +1850,7 @@ TLS 服务端监听地址。
 
 服务端监听客户端请求的 IP 地址。
 
-```
+```text
 default: localhost
 example: tls-server-address=*
 ```
@@ -1863,7 +1863,7 @@ TLS 服务端授权客户端列表。
 
 可以通过向 `tls-server-auth` 选项提供逗号分隔的列表，为一个客户端 CN 授权多个 stanza；也可以通过指定 `tls-server-auth=client-cn=*` 授权所有 stanza。客户端 CN 不支持通配符。
 
-```
+```text
 example: tls-server-auth=client-cn=stanza1,stanza2
 ```
 
@@ -1873,7 +1873,7 @@ TLS 服务端证书颁发机构文件。
 
 验证客户端证书是否由受信任的证书颁发机构签名。
 
-```
+```text
 example: tls-server-ca-file=/path/to/server.ca
 ```
 
@@ -1883,7 +1883,7 @@ TLS 服务端证书文件。
 
 发送给客户端以展示服务端身份。
 
-```
+```text
 example: tls-server-cert-file=/path/to/server.crt
 ```
 
@@ -1893,7 +1893,7 @@ TLS 服务端密钥文件。
 
 证明服务端证书由所有者发送。
 
-```
+```text
 example: tls-server-key-file=/path/to/server.key
 ```
 
@@ -1903,7 +1903,7 @@ TLS 服务端监听端口。
 
 服务端监听客户端请求的端口。
 
-```
+```text
 default: 8432
 allowed: [1, 65535]
 example: tls-server-port=8000
@@ -1925,7 +1925,7 @@ stanza（stanza 是 pgBackRest 中用于标识一个 PostgreSQL 集群备份配�
 
 注意，出于历史兼容性原因，`PGDATABASE` 环境变量的设置将被忽略。
 
-```
+```text
 default: postgres
 example: pg1-database=backupdb
 ```
@@ -1936,7 +1936,7 @@ example: pg1-database=backupdb
 
 用于 PostgreSQL 主机与仓库主机不同的备份场景。
 
-```
+```text
 example: pg1-host=db.domain.com
 ```
 
@@ -1948,7 +1948,7 @@ PostgreSQL 主机证书颁发机构文件。
 
 连接到 PostgreSQL 主机时，使用非系统默认的 CA 文件。
 
-```
+```text
 example: pg1-host-ca-file=/etc/pki/tls/certs/ca-bundle.crt
 ```
 
@@ -1958,7 +1958,7 @@ PostgreSQL 主机证书颁发机构路径。
 
 连接到 PostgreSQL 主机时，使用非系统默认的 CA 路径。
 
-```
+```text
 example: pg1-host-ca-path=/etc/pki/tls/certs
 ```
 
@@ -1968,7 +1968,7 @@ PostgreSQL 主机证书文件。
 
 发送给 PostgreSQL 主机以证明客户端身份。
 
-```
+```text
 example: pg1-host-cert-file=/path/to/client.crt
 ```
 
@@ -1978,7 +1978,7 @@ PostgreSQL 主机上的 pgBackRest 命令路径。
 
 仅当本地主机和 PostgreSQL 主机上的 pgBackRest 命令路径不同时才需要设置。若未定义，PostgreSQL 主机命令将与本地命令相同。
 
-```
+```text
 default: [path of executed pgbackrest binary]
 example: pg1-host-cmd=/usr/lib/backrest/bin/pgbackrest
 ```
@@ -1991,7 +1991,7 @@ PostgreSQL 主机上的 pgBackRest 配置文件路径。
 
 设置 PostgreSQL 主机上配置文件的位置。仅当 PostgreSQL 主机上的配置文件与本地配置文件位于不同位置时才需要设置。
 
-```
+```text
 default: CFGOPTDEF_CONFIG_PATH "/" PROJECT_CONFIG_FILE
 example: pg1-host-config=/conf/pgbackrest/pgbackrest.conf
 ```
@@ -2004,7 +2004,7 @@ PostgreSQL 主机上的 pgBackRest 配置包含路径。
 
 设置 PostgreSQL 主机上配置包含路径的位置。仅当 PostgreSQL 主机上的配置包含路径与本地配置包含路径位于不同位置时才需要设置。
 
-```
+```text
 default: CFGOPTDEF_CONFIG_PATH "/" PROJECT_CONFIG_INCLUDE_PATH
 example: pg1-host-config-include-path=/conf/pgbackrest/conf.d
 ```
@@ -2015,7 +2015,7 @@ PostgreSQL 主机上的 pgBackRest 配置路径。
 
 设置 PostgreSQL 主机上配置路径的位置。仅当 PostgreSQL 主机上的配置路径与本地配置路径位于不同位置时才需要设置。
 
-```
+```text
 default: CFGOPTDEF_CONFIG_PATH
 example: pg1-host-config-path=/conf/pgbackrest
 ```
@@ -2026,7 +2026,7 @@ PostgreSQL 主机密钥文件。
 
 证明客户端证书由所有者发送。
 
-```
+```text
 example: pg1-host-key-file=/path/to/client.key
 ```
 
@@ -2040,7 +2040,7 @@ PostgreSQL 主机端口。
 
 当 `pg-host-type=ssh` 时，`pg-host-port` 没有默认值。此时端口将使用 `cmd-ssh` 指定命令所配置的端口。
 
-```
+```text
 default (depending on pg-host-type):
    tls - 8432
 
@@ -2059,7 +2059,7 @@ PostgreSQL 主机协议类型。
 - `ssh` - 安全外壳协议（Secure Shell）。
 - `tls` - pgBackRest TLS 服务端。
 
-```
+```text
 default: ssh
 example: pg1-host-type=tls
 ```
@@ -2070,7 +2070,7 @@ PostgreSQL 主机登录用户。
 
 设置 `pg-host` 时，指定此用户。该用户还将拥有远程 pgBackRest 进程，并将发起到 PostgreSQL 的连接。为使其正常工作，该用户应为 PostgreSQL 数据库集群的所有者，通常为 `postgres`（即默认值）。
 
-```
+```text
 default: postgres
 example: pg1-host-user=db_owner
 ```
@@ -2085,7 +2085,7 @@ PostgreSQL 数据目录。
 
 每次在线备份时，`pg-path` 选项都会与 PostgreSQL 报告的值进行比对，因此应始终保持最新。
 
-```
+```text
 example: pg1-path=/data/db
 ```
 
@@ -2097,7 +2097,7 @@ PostgreSQL 端口。
 
 PostgreSQL 运行的端口。由于大多数 PostgreSQL 集群使用默认端口，通常不需要指定此选项。
 
-```
+```text
 default: 5432
 allowed: [0, 65535]
 example: pg1-port=6543
@@ -2111,7 +2111,7 @@ PostgreSQL Unix 套接字目录路径。
 
 启动 PostgreSQL 时指定的 Unix 套接字目录。pgBackRest 会自动查找操作系统的标准位置，因此通常不需要指定此设置，除非通过 `postgresql.conf` 中的 `unix_socket_directories` 显式修改了套接字目录。
 
-```
+```text
 example: pg1-socket-path=/var/run/postgresql
 ```
 
@@ -2123,6 +2123,6 @@ example: pg1-socket-path=/var/run/postgresql
 
 若未指定，pgBackRest 将使用本地操作系统用户或 `PGUSER` 进行连接。
 
-```
+```text
 example: pg1-user=backupuser
 ```

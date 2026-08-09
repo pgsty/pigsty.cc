@@ -69,7 +69,7 @@ mysql_cluster: my-test
 mysql_root_password: MySQL.Root
 ```
 
-首次启动时设置；此后如果现场密码与声明不一致，任务会**拒绝隐式重置**并明确报错——修改 root 密码需要先手工 `ALTER USER` 再同步清单。
+首次启动时设置；此后如果现场密码与声明不一致，任务会 **拒绝隐式重置** 并明确报错——修改 root 密码需要先手工 `ALTER USER` 再同步清单。
 
 ### `mysql_monitor_password`
 
@@ -104,7 +104,7 @@ mysql_databases:
   - { name: app2, encoding: utf8mb4, collate: utf8mb4_general_ci, encrypt: false }
 ```
 
-只创建与更新，不会因移除条目而删除数据库。写法与校验规则见[集群配置](/docs/pilot/mysql/config#业务数据库)。
+只创建与更新，不会因移除条目而删除数据库。写法与校验规则见 [集群配置](/docs/pilot/mysql/config#业务数据库)。
 
 ### `mysql_users`
 
@@ -119,7 +119,7 @@ mysql_users:
     priv: { 'app.*': 'ALL PRIVILEGES' }
 ```
 
-授权只增不减（移除映射不会 REVOKE）；平台身份（root、monitor、cluster、backup）不可声明。写法与校验规则见[集群配置](/docs/pilot/mysql/config#业务用户)。
+授权只增不减（移除映射不会 REVOKE）；平台身份（root、monitor、cluster、backup）不可声明。写法与校验规则见 [集群配置](/docs/pilot/mysql/config#业务用户)。
 
 
 --------
@@ -171,7 +171,7 @@ mysql_backup_repo:
     retention: 7                  # 保留最近 N 份已提交全量（1-9999）
 ```
 
-目录布局与恢复流程见[日常管理](/docs/pilot/mysql/admin#管理备份)。
+目录布局与恢复流程见 [日常管理](/docs/pilot/mysql/admin#管理备份)。
 
 
 --------
@@ -193,7 +193,7 @@ mysql_exporter_enabled: true
 
 ## 固定平台约定
 
-以下值由角色固定或推导，**不是**清单参数，列出供运维参考：
+以下值由角色固定或推导，**不是** 清单参数，列出供运维参考：
 
 | 项目 | 值 |
 |:---|:---|

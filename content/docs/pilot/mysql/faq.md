@@ -9,7 +9,7 @@ categories: [参考]
 
 ## 当前 MYSQL 模块是什么成熟度？
 
-Pilot 试点模块，定位「简单、廉价、够用」的 MySQL 集群。部署收敛、高可用切换、每日备份、监控告警四大核心能力经过系统性实测（含故障注入与完全停机演练）；恢复类破坏性流程刻意保留为手工操作并配有[操作手册](/docs/pilot/mysql/admin)。不追求与 PGSQL 模块同级的完备度：没有 PITR、没有接入层 VIP/DNS、没有自动扩缩容。用于严肃生产环境前，请按业务要求验证并演练恢复流程。
+Pilot 试点模块，定位「简单、廉价、够用」的 MySQL 集群。部署收敛、高可用切换、每日备份、监控告警四大核心能力经过系统性实测（含故障注入与完全停机演练）；恢复类破坏性流程刻意保留为手工操作并配有 [操作手册](/docs/pilot/mysql/admin)。不追求与 PGSQL 模块同级的完备度：没有 PITR、没有接入层 VIP/DNS、没有自动扩缩容。用于严肃生产环境前，请按业务要求验证并演练恢复流程。
 
 
 ## 为什么固定 MySQL 8.4，不能选版本？
@@ -23,14 +23,14 @@ MYSQL 是「固定平台」而不是通用安装器：Server、Client、Shell、
 
 扩容路径：
 
-- **纵向**：换更大机器，走[同地址替换](/docs/pilot/mysql/admin#替换故障成员)逐台完成（滚动换硬件）；
+- **纵向**：换更大机器，走 [同地址替换](/docs/pilot/mysql/admin#替换故障成员) 逐台完成（滚动换硬件）；
 - **单机 → HA**：新建三节点集群，用 `mysqldump`/`mysqlsh util.dumpInstance` 逻辑迁移；
 - **读扩展**：只读流量走 `6447` 由两个从库分担。
 
 
 ## 为什么建表报 ERROR 3750（要求主键）？
 
-平台默认 `sql_require_primary_key=ON`。无主键表在 Group Replication 下**只读不可写**，还会在完全停机恢复时阻塞 AdminAPI 重建集群——与其让它在灾难现场爆炸，不如在建表时拦截。请为所有表定义主键；接入既有系统确实无法改表时，可用参数覆盖关闭：
+平台默认 `sql_require_primary_key=ON`。无主键表在 Group Replication 下 **只读不可写**，还会在完全停机恢复时阻塞 AdminAPI 重建集群——与其让它在灾难现场爆炸，不如在建表时拦截。请为所有表定义主键；接入既有系统确实无法改表时，可用参数覆盖关闭：
 
 ```yaml
 mysql_parameters: { sql_require_primary_key: false }
@@ -63,12 +63,12 @@ Router 是每节点本地部署，没有统一 VIP。应用侧请使用多地址
 
 ## 三台全挂了怎么恢复？
 
-这是唯一需要手工介入的可用性场景（防脑裂的刻意设计）：在数据最新的成员上执行 `dba.rebootClusterFromCompleteOutage()`，然后重跑剧本收敛其余成员。完整步骤见[完全停机恢复手册](/docs/pilot/mysql/admin#完全停机恢复)。`mysql.yml` 在这种状态下的报错会直接给出该指引。
+这是唯一需要手工介入的可用性场景（防脑裂的刻意设计）：在数据最新的成员上执行 `dba.rebootClusterFromCompleteOutage()`，然后重跑剧本收敛其余成员。完整步骤见 [完全停机恢复手册](/docs/pilot/mysql/admin#完全停机恢复)。`mysql.yml` 在这种状态下的报错会直接给出该指引。
 
 
 ## 备份在哪里？能恢复到任意时间点吗？
 
-备份是**每日一次的全量物理备份**，落在**当前主库**的 `/data/backups/mysql/<集群>/` 下（主从切换后新备份跟随新主库，检查时要看所有成员）。没有增量与 Binlog 归档，因此**不支持 PITR**：单机的恢复点就是最近一次备份（最坏损失一天写入）；HA 集群的数据安全主要靠三副本同步复制，备份用于兜底与整簇重建。恢复步骤见[恢复物理备份手册](/docs/pilot/mysql/admin#恢复物理备份)。异地容灾请自行同步备份目录。
+备份是 **每日一次的全量物理备份**，落在 **当前主库** 的 `/data/backups/mysql/<集群>/` 下（主从切换后新备份跟随新主库，检查时要看所有成员）。没有增量与 Binlog 归档，因此 **不支持 PITR**：单机的恢复点就是最近一次备份（最坏损失一天写入）；HA 集群的数据安全主要靠三副本同步复制，备份用于兜底与整簇重建。恢复步骤见 [恢复物理备份手册](/docs/pilot/mysql/admin#恢复物理备份)。异地容灾请自行同步备份目录。
 
 
 ## 备份失败会有告警吗？
@@ -78,7 +78,7 @@ Router 是每节点本地部署，没有统一 VIP。应用侧请使用多地址
 
 ## 为什么 `mysql_parameters` 里有些参数被拒绝？
 
-身份（`server_id`、`datadir`、端口等）、复制（`gtid_mode`、`log_bin`、`group_replication_*`）与 TLS 全族是平台保证的一部分，被列为保留参数——覆盖它们会破坏集群身份或安全底线，预检直接拒绝（`-` 与 `_` 写法同判）。其余参数放行，且渲染后仍经 `mysqld --validate-config` 校验。完整保留清单见[参数参考](/docs/pilot/mysql/param#mysql_parameters)。
+身份（`server_id`、`datadir`、端口等）、复制（`gtid_mode`、`log_bin`、`group_replication_*`）与 TLS 全族是平台保证的一部分，被列为保留参数——覆盖它们会破坏集群身份或安全底线，预检直接拒绝（`-` 与 `_` 写法同判）。其余参数放行，且渲染后仍经 `mysqld --validate-config` 校验。完整保留清单见 [参数参考](/docs/pilot/mysql/param#mysql_parameters)。
 
 
 ## 修改参数会导致停机吗？
@@ -95,7 +95,7 @@ Router 是每节点本地部署，没有统一 VIP。应用侧请使用多地址
 
 ## 下线的集群怎么复活？误删了退役标记会怎样？
 
-`mysql-rm.yml` 下线时保留全部数据并写入退役标记；复活 = 删除各成员的 `/var/lib/mysql/.pigsty-mysql-retired` 后重跑 `mysql.yml`（见[下线与复活集群](/docs/pilot/mysql/admin#下线与复活集群)）。单机两步即可；HA 集群还需按[完全停机恢复](/docs/pilot/mysql/admin#完全停机恢复)重建仲裁。标记的意义是防止「下线后被无意重新拉起」；数据目录属主校验（`.pigsty-mysql-initialized`）独立存在，删除退役标记不会让别的集群接管这份数据。
+`mysql-rm.yml` 下线时保留全部数据并写入退役标记；复活 = 删除各成员的 `/var/lib/mysql/.pigsty-mysql-retired` 后重跑 `mysql.yml`（见 [下线与复活集群](/docs/pilot/mysql/admin#下线与复活集群)）。单机两步即可；HA 集群还需按 [完全停机恢复](/docs/pilot/mysql/admin#完全停机恢复) 重建仲裁。标记的意义是防止「下线后被无意重新拉起」；数据目录属主校验（`.pigsty-mysql-initialized`）独立存在，删除退役标记不会让别的集群接管这份数据。
 
 
 ## `conf/mysql.yml` 模板怎么和这个模块对不上？
@@ -105,9 +105,9 @@ Router 是每节点本地部署，没有统一 VIP。应用侧请使用多地址
 
 ## 剧本失败显示 `no ONLINE member holds the cluster`？
 
-这是完全停机（或仅存成员不可达）的判定：没有任何 ONLINE 成员持有集群。按报错给出的指引执行[完全停机恢复](/docs/pilot/mysql/admin#完全停机恢复)。如果实际上有成员在线却报此错，先检查 seq=1 协调成员（收敛脚本在其上执行）到各成员 3306 的连通性，以及该成员上的 CA（`/etc/pki/ca.crt`）是否就位。
+这是完全停机（或仅存成员不可达）的判定：没有任何 ONLINE 成员持有集群。按报错给出的指引执行 [完全停机恢复](/docs/pilot/mysql/admin#完全停机恢复)。如果实际上有成员在线却报此错，先检查 seq=1 协调成员（收敛脚本在其上执行）到各成员 3306 的连通性，以及该成员上的 CA（`/etc/pki/ca.crt`）是否就位。
 
 
 ## 监控没有数据 / Dashboard 空白？
 
-按链路排查：`curl http://<成员>:9104/metrics | grep mysql_up`（Exporter 本体）→ Infra 上确认 `/infra/targets/mysql/` 有实例文件 → VictoriaMetrics 查询 `up{job="mysql"}`。GR Dashboard 选中了单机集群时 MGR 面板显示 No data 属正常现象。完整自检命令见[监控告警](/docs/pilot/mysql/monitor#验证监控链路)。
+按链路排查：`curl http://<成员>:9104/metrics | grep mysql_up`（Exporter 本体）→ Infra 上确认 `/infra/targets/mysql/` 有实例文件 → VictoriaMetrics 查询 `up{job="mysql"}`。GR Dashboard 选中了单机集群时 MGR 面板显示 No data 属正常现象。完整自检命令见 [监控告警](/docs/pilot/mysql/monitor#验证监控链路)。

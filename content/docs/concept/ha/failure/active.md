@@ -8,7 +8,7 @@ categories: [概念]
 ---
 
 {{< infographic >}}
-```
+```text
 infographic list-row-simple-horizontal-arrow
 data
   title 崩溃故障切换流程
@@ -83,8 +83,8 @@ series:
 | **被动故障**（节点宕机） |  随节点一起死亡   | 无法主动释放，只能等待 TTL 过期 |          `ttl`          |
 {.full-width}
 
-在主动故障场景中，Patroni 仍然存活，能够**主动检测到 PG 崩溃并尝试重启**。
-如果重启成功，服务自愈；如果超时仍未恢复，Patroni 会**主动释放 Leader Key**，触发集群选举。
+在主动故障场景中，Patroni 仍然存活，能够 **主动检测到 PG 崩溃并尝试重启**。
+如果重启成功，服务自愈；如果超时仍未恢复，Patroni 会 **主动释放 Leader Key**，触发集群选举。
 
 
 --------
@@ -95,7 +95,7 @@ series:
 
 Patroni 在每个 `loop_wait` 周期检查 PostgreSQL 状态（通过 `pg_isready` 或检查进程）。
 
-```
+```text
 时间线：
     上次检测      PG崩溃      下次检测
        |           |           |
@@ -119,7 +119,7 @@ loop & \text{最坏}
 
 Patroni 检测到 PG 崩溃后，会尝试重启 PostgreSQL。此阶段有两种可能的结果：
 
-```
+```text
 时间线：
   检测到崩溃     尝试重启     重启成功/超时
       |           |             |
@@ -151,7 +151,7 @@ start & \text{最坏}
 
 从库在 `loop_wait` 周期醒来后检查 DCS 中的 Leader Key 状态。当主库 Patroni 释放 Leader Key 后，从库发现后开始竞选。
 
-```
+```text
 时间线：
     租约释放      从库醒来
        |            |
@@ -179,7 +179,7 @@ loop & \text{最坏}
 2. 比较 WAL 位置，确定最优候选，各从库尝试创建 Leader Key（CAS 原子操作）
 3. 执行 `pg_ctl promote` 提升自己为主库（很快，通常忽略不计）
 
-```
+```text
 选举流程：
   从库A ──→ 查询复制位置 ──→ 比较 ──→ 尝试抢锁 ──→ 成功
   从库B ──→ 查询复制位置 ──→ 比较 ──→ 尝试抢锁 ──→ 失败
@@ -202,7 +202,7 @@ T_{elect} = \begin{cases}
 
 HAProxy 检测新主库上线，需要连续 `rise` 次健康检查成功。
 
-```
+```text
 检测时序：
   新主提升    首次检查    第二次检查   第三次检查（UP）
      |          |           |           |

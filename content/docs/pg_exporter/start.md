@@ -118,6 +118,6 @@ scrape_configs:
 
 ## 下一步
 
-- 监控 **pgBouncer**、启用**自动发现**、配置 **systemd/Docker/Kubernetes** 生产部署：[部署指南](/docs/pg_exporter/deploy/)
-- 理解与定制**采集器**（GAUGE/COUNTER/HISTOGRAM、TTL、标签、版本门槛）：[配置参考](/docs/pg_exporter/config/)
-- **健康检查与主从流量路由**端点（`/up`、`/primary`、`/replica`）：[API 参考](/docs/pg_exporter/api/)
+- 监控 **pgBouncer**、启用 **自动发现**、配置 **systemd/Docker/Kubernetes** 生产部署：[部署指南](/docs/pg_exporter/deploy/)
+- 理解与定制 **采集器**（GAUGE/COUNTER/HISTOGRAM、TTL、标签、版本门槛）：[配置参考](/docs/pg_exporter/config/)
+- **健康检查与主从流量路由** 端点（`/up`、`/primary`、`/replica`）：[API 参考](/docs/pg_exporter/api/)

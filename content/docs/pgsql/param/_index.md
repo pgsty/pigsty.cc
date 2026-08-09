@@ -255,7 +255,7 @@ categories: [参考]
 pg_offline_query: false #INSTANCE # 设置为 true 以在此实例上启用离线查询
 ```
 
-您必须显式指定这些**身份参数**，它们没有默认值：
+您必须显式指定这些 **身份参数**，它们没有默认值：
 
 |             名称              |    类型    |  级别   | 扩展说明            |
 |:---------------------------:|:--------:|:-----:|-----------------|
@@ -273,7 +273,7 @@ pg_offline_query: false #INSTANCE # 设置为 true 以在此实例上启用离�
 - `{{ pg_cluster }}-{{ pg_role }}` 用于标识集群内的服务，即 `pg_service`。
 - [`pg_shard`](#pg_shard) 和 [`pg_group`](#pg_group) 用于水平分片集群，仅用于 citus、greenplum 和 matrixdb。
 
-[`pg_cluster`](#pg_cluster)、[`pg_role`](#pg_role)、[`pg_seq`](#pg_seq) 是核心**标识参数**，对于任何 Postgres 集群都是**必选**的，并且必须显式指定。以下是一个示例：
+[`pg_cluster`](#pg_cluster)、[`pg_role`](#pg_role)、[`pg_seq`](#pg_seq) 是核心 **标识参数**，对于任何 Postgres 集群都是 **必选** 的，并且必须显式指定。以下是一个示例：
 
 ```yaml
 pg-test:
@@ -285,7 +285,7 @@ pg-test:
     pg_cluster: pg-test
 ```
 
-所有其他参数都可以从全局配置或默认配置继承，但标识参数必须**明确指定**和**手动分配**。
+所有其他参数都可以从全局配置或默认配置继承，但标识参数必须 **明确指定** 和 **手动分配**。
 
 
 
@@ -335,7 +335,7 @@ PostgreSQL 集群名称，必选的身份标识参数，没有默认值
 
 PostgreSQL 实例序列号，必选的身份标识参数，无默认值。
 
-此实例的序号，在其**集群**内是唯一分配的，通常使用自然数，从0或1开始分配，通常不会回收重用。
+此实例的序号，在其 **集群** 内是唯一分配的，通常使用自然数，从0或1开始分配，通常不会回收重用。
 
 
 
@@ -395,7 +395,7 @@ PostgreSQL 水平分片名称，默认值为 `pg_cluster`。对于包含多个�
 
 例如，如果我们有一个分片组 `pg-citus`，并且其中有4个集群，它们的标识参数将是：
 
-```
+```text
 cls pg_shard: pg-citus
 cls pg_group = 0:   pg-citus0
 cls pg_group = 1:   pg-citus1
@@ -484,7 +484,7 @@ pg_exporters: # list all remote instances here, alloc a unique unused local port
 
 定制集群模板：用户，数据库，服务，权限规则。
 
-用户需**重点关注**此部分参数，因为这里是业务声明自己所需数据库对象的地方。
+用户需 **重点关注** 此部分参数，因为这里是业务声明自己所需数据库对象的地方。
 
 * 业务用户定义： [**`pg_users`**](#pg_users)
 * 业务数据库定义： [**`pg_databases`**](#pg_databases)
@@ -874,7 +874,7 @@ PostgreSQL 使用的操作系统 dbsu 用户名， 默认为 `postgres`，改这
 - `all`：完全的 `sudo` 权限，需要密码。
 - `nopass`：不需要密码的完全 `sudo` 权限（不推荐）。
 
-- 默认值为 `limit`，只允许执行 `sudo systemctl <start|stop|reload> <postgres|patroni|pgbouncer|...> `。
+- 默认值为 `limit`，只允许执行 `sudo systemctl <start|stop|reload> <postgres|patroni|pgbouncer|...>`。
 
 
 
@@ -1084,7 +1084,7 @@ pg_lc_ctype: C                    # database character type, `C` by default
 
 参数名称： `pg_fs_main`， 类型： `path`， 层次：`C`
 
-PostgreSQL 主数据盘的挂载点/文件系统路径，默认为`/data/postgres`。
+PostgreSQL 主数据盘的挂载点/文件系统路径，默认为 `/data/postgres`。
 
 默认值：`/data/postgres`，它将直接用作 PostgreSQL 主数据目录的父目录。
 
@@ -1100,7 +1100,7 @@ PostgreSQL 主数据盘的挂载点/文件系统路径，默认为`/data/postgre
 
 参数名称： `pg_fs_backup`， 类型： `path`， 层次：`C`
 
-PostgreSQL 备份数据盘的挂载点/文件系统路径，默认为`/data/backups`。
+PostgreSQL 备份数据盘的挂载点/文件系统路径，默认为 `/data/backups`。
 
 如果您使用的是默认的 [`pgbackrest_method`](#pgbackrest_method) = `local`，建议为备份存储使用一个单独的磁盘。
 
@@ -1116,7 +1116,7 @@ PostgreSQL 备份数据盘的挂载点/文件系统路径，默认为`/data/back
 
 参数名称： `pg_storage_type`， 类型： `enum`， 层次：`C`
 
-PostgreSQL 数据存储介质的类型：`SSD`或`HDD`，默认为`SSD`。
+PostgreSQL 数据存储介质的类型：`SSD` 或 `HDD`，默认为 `SSD`。
 
 默认值：`SSD`，它会影响一些调优参数，如 `random_page_cost` 和 `effective_io_concurrency`。
 
@@ -1127,9 +1127,9 @@ PostgreSQL 数据存储介质的类型：`SSD`或`HDD`，默认为`SSD`。
 
 参数名称： `pg_dummy_filesize`， 类型： `size`， 层次：`C`
 
-`/pg/dummy`的大小，默认值为`64MiB`，用于紧急使用的64MB 磁盘空间。
+`/pg/dummy` 的大小，默认值为 `64MiB`，用于紧急使用的64MB 磁盘空间。
 
-当磁盘已满时，删除占位符文件可以为紧急使用释放一些空间，建议生产使用至少`8GiB`。
+当磁盘已满时，删除占位符文件可以为紧急使用释放一些空间，建议生产使用至少 `8GiB`。
 
 
 
@@ -1139,13 +1139,13 @@ PostgreSQL 数据存储介质的类型：`SSD`或`HDD`，默认为`SSD`。
 
 参数名称： `pg_listen`， 类型： `ip`， 层次：`C`
 
-PostgreSQL / Pgbouncer 的监听地址，默认为`0.0.0.0`（所有 ipv4 地址）。
+PostgreSQL / Pgbouncer 的监听地址，默认为 `0.0.0.0`（所有 ipv4 地址）。
 
-您可以在此变量中使用占位符，例如：`'${ip},${lo}'`或`'${ip},${vip},${lo}'`：
+您可以在此变量中使用占位符，例如：`'${ip},${lo}'` 或 `'${ip},${vip},${lo}'`：
 
 - `${ip}`：转换为 `inventory_hostname`，它是配置清单中定义的首要内网 IP 地址。
 - `${vip}`：如果启用了 [`pg_vip_enabled`](#pg_vip_enabled)，将使用 [`pg_vip_address`](#pg_vip_address) 的主机部分。
-- `${lo}`：将替换为`127.0.0.1`
+- `${lo}`：将替换为 `127.0.0.1`
 
 对于高安全性要求的生产环境，建议限制监听的 IP 地址。
 
@@ -1166,7 +1166,7 @@ PostgreSQL 服务器监听的端口，默认为 `5432`。
 
 参数名称： `pg_localhost`， 类型： `path`， 层次：`C`
 
-本地主机连接 PostgreSQL 使用的 Unix 套接字目录，默认值为`/var/run/postgresql`。
+本地主机连接 PostgreSQL 使用的 Unix 套接字目录，默认值为 `/var/run/postgresql`。
 
 PostgreSQL 和 Pgbouncer 本地连接的 Unix 套接字目录，[`pg_exporter`](/docs/concept/arch/pgsql#pg_exporter) 和 patroni 都会优先使用 Unix 套接字访问 PostgreSQL。
 
@@ -1201,7 +1201,7 @@ PostgreSQL 和 Pgbouncer 本地连接的 Unix 套接字目录，[`pg_exporter`](
 Patroni 工作模式：`default`，`pause`，`remove`。默认值：`default`。
 
 - `default`：正常使用 Patroni 引导 PostgreSQL 集群
-- `pause`：与`default`相似，但在引导后进入维护模式
+- `pause`：与 `default` 相似，但在引导后进入维护模式
 - `remove`：使用 Patroni 初始化集群，然后删除 Patroni 并使用原始 PostgreSQL。
 
 
@@ -1211,7 +1211,7 @@ Patroni 工作模式：`default`，`pause`，`remove`。默认值：`default`。
 
 参数名称： `patroni_port`， 类型： `port`， 层次：`C`
 
-patroni 监听端口，默认为`8008`，不建议更改。
+patroni 监听端口，默认为 `8008`，不建议更改。
 
 Patroni API 服务器在此端口上监听健康检查和 API 请求。
 
@@ -1234,7 +1234,7 @@ patroni 日志目录，默认为 `/pg/log/patroni`，由 Vector 日志代理收�
 
 参数名称： `patroni_ssl_enabled`， 类型： `bool`， 层次：`G`
 
-使用 SSL 保护 patroni RestAPI 通信吗？默认值为`false`。
+使用 SSL 保护 patroni RestAPI 通信吗？默认值为 `false`。
 
 此参数是一个全局标志，只能在部署之前预先设置。因为如果为 patroni 启用了 SSL，您将必须使用 HTTPS 而不是 HTTP 执行健康检查、获取指标，调用 API。
 
@@ -1250,11 +1250,11 @@ patroni 看门狗模式：`automatic`，`required`，`off`，默认值为 `off`�
 
 在主库故障的情况下，Patroni 可以使用 [**看门狗**](https://patroni.readthedocs.io/en/latest/watchdog.html) 来强制关机旧主库节点以避免脑裂。
 
-- `off`：不使用`看门狗`。完全不进行 Fencing （默认行为）
-- `automatic`：如果内核启用了`softdog`模块并且看门狗属于 dbsu，则启用 `watchdog`。
-- `required`：强制启用 `watchdog`，如果`softdog`不可用则拒绝启动 Patroni/PostgreSQL。
+- `off`：不使用 `看门狗`。完全不进行 Fencing （默认行为）
+- `automatic`：如果内核启用了 `softdog` 模块并且看门狗属于 dbsu，则启用 `watchdog`。
+- `required`：强制启用 `watchdog`，如果 `softdog` 不可用则拒绝启动 Patroni/PostgreSQL。
 
-默认值为`off`，您不应该在 Infra 节点 启用看门狗，数据一致性优先于可用性的关键系统，特别是与钱有关的业务集群可以考虑打开此选项。
+默认值为 `off`，您不应该在 Infra 节点 启用看门狗，数据一致性优先于可用性的关键系统，特别是与钱有关的业务集群可以考虑打开此选项。
 
 > **注意**：当使用 [`pg_conf`](#pg_conf) = `crit` 配置模板时，`off` 会被自动提升为 `automatic`，以确保关键业务系统的数据一致性。
 
@@ -1280,7 +1280,7 @@ Patroni 的危险 REST API （比如重启集群）由额外的用户名/密码�
 
 参数名称： `patroni_password`， 类型： `password`， 层次：`C`
 
-Patroni REST API 密码，默认为`Patroni.API`。
+Patroni REST API 密码，默认为 `Patroni.API`。
 
 > 警告：务必生产环境中修改此参数！
 
@@ -1378,7 +1378,7 @@ pg_files: [ license.lic ]
 
 参数名称： `pg_conf`， 类型： `enum`， 层次：`C`
 
-配置模板：`{oltp,olap,crit,tiny}.yml`，默认为`oltp.yml`。
+配置模板：`{oltp,olap,crit,tiny}.yml`，默认为 `oltp.yml`。
 
 - `tiny.yml`：为小节点、虚拟机、小型演示优化（1-8核，1-16GB）
 - `oltp.yml`：为 OLTP 工作负载和延迟敏感应用优化（4C8GB+）（默认模板）
@@ -1534,7 +1534,7 @@ pg_rto_plan:
 
 如果您想使用 TimescaleDB 或 Citus 扩展，您需要将 `timescaledb` 或 `citus` 添加到此列表中。`timescaledb` 和 `citus` 应当放在这个列表的最前面，例如：
 
-```
+```text
 citus,timescaledb,pg_stat_statements,auto_explain
 ```
 
@@ -1788,7 +1788,7 @@ pgb_default_hba_rules:            # pgbouncer 默认 HBA 规则集，按 order �
 
 参数名称： `pg_provision`， 类型： `bool`， 层次：`C`
 
-在集群拉起后，完整本节定义的 PostgreSQL 集群置备工作。默认值为`true`。
+在集群拉起后，完整本节定义的 PostgreSQL 集群置备工作。默认值为 `true`。
 
 如果禁用，不会置备 PostgreSQL 集群。对于一些特殊的 "PostgreSQL" 集群，比如 Greenplum，可以关闭此选项跳过置备阶段。
 
@@ -1799,7 +1799,7 @@ pgb_default_hba_rules:            # pgbouncer 默认 HBA 规则集，按 order �
 
 参数名称： `pg_init`， 类型： `string`， 层次：`G/C`
 
-用于初始化数据库模板的 Shell 脚本位置，默认为 `pg-init`，该脚本会被拷贝至`/pg/bin/pg-init`后执行。
+用于初始化数据库模板的 Shell 脚本位置，默认为 `pg-init`，该脚本会被拷贝至 `/pg/bin/pg-init` 后执行。
 
 该脚本位于 [`roles/pgsql/templates/pg-init`](https://github.com/pgsty/pigsty/blob/main/roles/pgsql/templates/pg-init)
 
@@ -1873,7 +1873,7 @@ Pigsty 基于默认角色系统提供相应的默认权限设置，请查看 [PG
 
 参数名称： `pg_default_schemas`， 类型： `string[]`， 层次：`G/C`
 
-要创建的默认模式，默认值为：`[ monitor ]`，这将在所有数据库上创建一个`monitor`模式，用于放置各种监控扩展、表、视图、函数。
+要创建的默认模式，默认值为：`[ monitor ]`，这将在所有数据库上创建一个 `monitor` 模式，用于放置各种监控扩展、表、视图、函数。
 
 
 
@@ -1917,9 +1917,9 @@ pg_default_extensions: # default extensions to be created
 
 参数名称： `pg_reload`， 类型： `bool`， 层次：`A`
 
-在 hba 更改后重新加载 PostgreSQL，默认值为`true`
+在 hba 更改后重新加载 PostgreSQL，默认值为 `true`
 
-当您想在应用 HBA 更改之前进行检查时，将其设置为`false`以禁用自动重新加载配置。
+当您想在应用 HBA 更改之前进行检查时，将其设置为 `false` 以禁用自动重新加载配置。
 
 
 
@@ -1977,7 +1977,7 @@ pgb_default_hba_rules:            # pgbouncer default host-based authentication 
 
 默认的 Pgbouncer HBA 规则很简单：
 
-1. 允许从**本地**使用密码登陆
+1. 允许从 **本地** 使用密码登陆
 2. 允许从内网网断使用密码登陆
 
 用户可以按照自己的需求进行定制。
@@ -2212,7 +2212,7 @@ Pgbouncer 日志目录，默认为 `/pg/log/pgbouncer`，Vector 日志代理会�
 Pgbouncer 连接池池化模式：`transaction`,`session`,`statement`，默认为 `transaction`。
 
 - `session`：会话级池化，具有最佳的功能兼容性。
-- `transaction`：事务级池化，具有更好的性能（许多小连接），可能会破坏某些会话级特性，如`NOTIFY/LISTEN` 等...
+- `transaction`：事务级池化，具有更好的性能（许多小连接），可能会破坏某些会话级特性，如 `NOTIFY/LISTEN` 等...
 - `statements`：语句级池化，用于简单的只读查询。
 
 如果您的应用出现功能兼容性问题，可以考虑修改此参数为 `session`。
@@ -2280,7 +2280,7 @@ PgBouncer 忽略的启动参数列表，默认值为：
 
 如果指定，PostgreSQL 服务将注册到专用的 haproxy 节点组，而不是当下的 PGSQL 集群节点。
 
-请记住为每个服务在专用的 haproxy 节点上分配**唯一**的端口！
+请记住为每个服务在专用的 haproxy 节点上分配 **唯一** 的端口！
 
 例如，如果我们在3节点的 `pg-test` 集群上定义以下参数：
 
@@ -2302,7 +2302,7 @@ pg_default_services:             # alloc port 10001 and 10002 for pg-test primar
 
 默认值： `pgbouncer`，意味着5433主服务和5434副本服务将默认将流量路由到 pgbouncer。
 
-如果您不想使用 pgbouncer，将其设置为`postgres`。流量将直接路由到 postgres。
+如果您不想使用 pgbouncer，将其设置为 `postgres`。流量将直接路由到 postgres。
 
 
 
@@ -2334,7 +2334,7 @@ pg_default_services:               # postgres default service definitions
 
 参数名称： `pg_vip_enabled`， 类型： `bool`， 层次：`C`
 
-为 PGSQL 集群启用 L2 VIP 吗？默认值是`false`，表示不创建 L2 VIP。
+为 PGSQL 集群启用 L2 VIP 吗？默认值是 `false`，表示不创建 L2 VIP。
 
 启用 L2 VIP 后，会有一个 VIP 绑定在集群主实例节点上，由 `vip-manager` 管理，根据 `etcd` 中的数据进行判断。
 
@@ -2350,7 +2350,7 @@ L2 VIP 只能在相同的 L2 网络中使用，这可能会对您的网络拓扑
 
 如果启用 vip，则需要`<ipv4>/<mask>`格式的 vip 地址。
 
-默认值： `127.0.0.1/24`。这个值由两部分组成：`ipv4`和`mask`，用`/`分隔。
+默认值： `127.0.0.1/24`。这个值由两部分组成：`ipv4` 和 `mask`，用 `/` 分隔。
 
 
 
@@ -2414,11 +2414,11 @@ default values: `auto` , which will bind to `pg_vip_address` if `pg_vip_enabled`
 * `<ipv4>`：bind to the given IP address
 
 
-可以是：`auto`、`primary`、`vip`、`none`或一个特定的 IP 地址，它将是集群 DNS 记录的解析目标 IP 地址。
+可以是：`auto`、`primary`、`vip`、`none` 或一个特定的 IP 地址，它将是集群 DNS 记录的解析目标 IP 地址。
 
-默认值： `auto`，如果`pg_vip_enabled`，将绑定到`pg_vip_address`，否则会回退到集群主实例的 IP 地址。
+默认值： `auto`，如果 `pg_vip_enabled`，将绑定到 `pg_vip_address`，否则会回退到集群主实例的 IP 地址。
 
-- `vip`：绑定到`pg_vip_address`
+- `vip`：绑定到 `pg_vip_address`
 - `primary`：解析为集群主实例 IP 地址
 - `auto`：如果 [`pg_vip_enabled`](#pg_vip_enabled)，解析为 [`pg_vip_address`](#pg_vip_address)，或回退到集群主实例 ip 地址。
 - `none`：不绑定到任何 ip 地址
@@ -2542,7 +2542,7 @@ pg_exporter 所使用 DSN 中额外的 URL PATH 参数。
 
 如果没有指定此参数，PG Exporter 默认会使用以下的连接串访问 PostgreSQL：
 
-```
+```text
 postgres://{{ pg_monitor_username }}:{{ pg_monitor_password }}@{{ pg_host }}:{{ pg_port }}/postgres{% if pg_exporter_params != '' %}?{{ pg_exporter_params }}{% endif %}
 ```
 
@@ -2655,7 +2655,7 @@ pgbouncer_exporter 监听端口号，默认值为：`9631`
 
 如果没有指定此参数，Pgbouncer Exporter 默认会使用以下的连接串访问 Pgbouncer：
 
-```
+```text
 postgres://{{ pg_monitor_username }}:{{ pg_monitor_password }}@:{{ pgbouncer_port }}/pgbouncer?host={{ pg_localhost }}&sslmode=disable
 ```
 

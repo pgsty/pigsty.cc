@@ -25,7 +25,7 @@ Pigsty 内置了一个剧本 [`pgsql-migration.yml`](https://github.com/pgsty/pi
 
 这个迁移任务要将 `pg-meta.meta` 在线迁移到 `pg-test.test`，前者称为 **源集群（SRC）**， 后者称为 **宿集群（DST）**。
 
-```
+```text
 pg-meta-1	10.10.10.10  --> pg-test-1	10.10.10.11 (10.10.10.12,10.10.10.13)
 ```
 

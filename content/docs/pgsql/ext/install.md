@@ -131,4 +131,3 @@ SELECT * FROM pg_available_extensions WHERE name = 'vector';
 -- 查看扩展文件是否存在
 \dx
 ```
-

@@ -9,7 +9,7 @@ categories: [参考]
 
 公开 Demo 地址：[http://wiki.pigsty.cc](http://wiki.pigsty.cc)
 
-![](/img/docs/app/wiki.jpg)
+![Wiki.js](/img/docs/app/wiki.jpg)
 
 
 ## 太长;不看
@@ -64,6 +64,3 @@ services:
 ./infra.yml -t nginx_config
 ansible all -b -a 'nginx -s reload'
 ```
-
-
-

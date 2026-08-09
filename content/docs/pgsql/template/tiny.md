@@ -8,7 +8,7 @@ categories: [参考]
 ---
 
 
-`tiny.yml` 是针对**微型实例**和资源受限环境优化的配置模板。适用于 1-3 核 CPU 的服务器，特点是最小化资源占用、保守的内存分配、禁用并行查询。
+`tiny.yml` 是针对 **微型实例** 和资源受限环境优化的配置模板。适用于 1-3 核 CPU 的服务器，特点是最小化资源占用、保守的内存分配、禁用并行查询。
 
 > 建议同时使用 [**`node_tune`**](/docs/node/param#node_tune) = `tiny` 进行操作系统级别的配套调优。
 
@@ -87,7 +87,7 @@ TINY 模板使用保守的内存分配策略：
 {.full-width}
 
 **work_mem 计算逻辑**（与 OLTP 不同）：
-```
+```text
 work_mem = min(max(shared_buffers / max_connections, 16MB), 256MB)
 ```
 

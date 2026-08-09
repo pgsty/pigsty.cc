@@ -50,7 +50,7 @@ vi pigsty.yml                 # 修改密码、域名、IP、密钥
 ## 轻量 Compose 应用
 
 对于 `bytebase`、`gitea`、`jupyter`、`kong`、`metabase`、`minio`、`nocodb`、`pgadmin`、`pgweb`、`postgrest`、`pg_exporter`、`wiki` 等应用，也可直接使用对应目录下的 Compose 模板。
-FerretDB 现在是 [PostgreSQL Mongo 模式](/docs/conf/mongo/)的 Docker APP 协议层，通过 `mongo` 配置模板配合 `docker.yml` 与 `app.yml` 部署。
+FerretDB 现在是 [PostgreSQL Mongo 模式](/docs/conf/mongo/) 的 Docker APP 协议层，通过 `mongo` 配置模板配合 `docker.yml` 与 `app.yml` 部署。
 
 ```bash
 cd ~/pigsty/app/<name>

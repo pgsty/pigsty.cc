@@ -75,21 +75,101 @@ Pigsty 当前文档对应版本为 [**v4.4.0**](#v440)。
 
 ## v4.5.0
 
-> WIP
+> **WIP**：本草案根据截至 **2026-08-09** 的源码、软件包目录与开发记录整理。候选包版本、平台范围与交付状态仍以最终仓库索引、签名制品和发布验收为准；Silo 默认切换、MINIO 多集群、SOW 仓库生成与 Grafana Dashboard API v2 导入仍在收口，不视为已经发布。
+
+Pigsty v4.5.0 是一个以新试点模块、可替换数据服务、集群身份编排和软件供应链为重点的功能版本。它引入 Kafka KRaft 与 MySQL 8.4 模块，为 Redis 增加 Valkey 引擎，为 MINIO 模块增加 RustFS 后端，并将扩展目录推进到 572 个已打包扩展。
 
 **亮点特性**
 
-- 已打包扩展数量提升到 572 个，[PGEXT.CLOUD 总目录](https://pgext.cloud) 扩充至 2230 个
-- 新增试点模块：Kafka
-- 新增试点模块：MySQL
-- 新增试点模块：Click（Clickhouse）
-- 重新编译 ivorysql 与 percona tde 内核
-- 独立 FERRET 模块由 [PostgreSQL Mongo 模式](/docs/conf/mongo/)与 FerretDB Docker APP 取代
+- **572 个扩展**：已打包扩展由 531 个增加到 572 个，[PGEXT.CLOUD 总目录](https://pgext.cloud) 扩充至 2238 个。
+- **Kafka KRaft 模块**：新增 Pigsty 原生 Kafka 编排，支持多集群、动态成员加入与退役、SCRAM/TLS、安全轮转、监控指标和 Grafana 仪表盘。
+- **MySQL 8.4 模块**：新增单机与三节点 InnoDB Cluster、MySQL Router、XtraBackup、用户与数据库置备、监控告警和幂等协调能力。
+- **Valkey 与 RustFS**：REDIS 模块新增 `redis_type: valkey`；MINIO 模块新增 `minio_type: rustfs`，配套专用监控、告警和 Grafana 仪表盘。
+- **更安全的集群身份编排**：PGSQL、REDIS、MINIO、KAFKA、MYSQL 及其移除剧本按显式集群身份选择主机，无关主机提前退出；etcd 委派和 DBSU 密钥交换也改用实际集群成员。
+- **内核与工具链更新**：完善 PostgreSQL 19 beta2 的 pgBackRest 支持，启用 Percona PostgreSQL TDE 集群模式，修正 IvorySQL 初始化与 WAL 压缩，并更新 Pig 的 SOW 仓库生成和 Grafana Dashboard API v2 支持。
 
-**升级说明**
+**新模块与数据服务**
+
+- [Kafka 模块](/docs/kafka/) 采用节点状态为权威源的动态 KRaft 编排，可在同一清单中管理多个集群，并对不完整限域、已有格式化状态、成员加入、控制器退役和凭据轮转执行显式检查。
+- [MySQL 试点模块](/docs/pilot/mysql/) 面向 MySQL 8.4 LTS，支持一节点独立实例或三节点 InnoDB Cluster；包括 MySQL Shell/Router、XtraBackup 定时备份、TLS、账户置备、主键约束检查和完整监控面板。
+- REDIS 模块保留 `redis` 默认引擎，同时可通过 `redis_type: valkey` 部署 Valkey；服务单元改用 `Type=notify`，并加强拓扑校验、密码处理和重建保护。
+- MINIO 模块可通过 `minio_type: rustfs` 部署 RustFS，复用既有的集群、用户、桶与服务暴露接口，并增加 RustFS 专用指标采集、告警和仪表盘。
+- Infra 软件包线新增 `silo` 与 `mcli`。Silo 沿用 S3/Admin API、`/minio/*` 路由、`MINIO_*` 环境变量和磁盘格式；Pigsty 角色中的默认后端切换与多集群改造仍列为发布前待冻结项。
+- 独立 FERRET 模块由 [PostgreSQL Mongo 模式](/docs/conf/mongo/) 与 FerretDB Docker APP 取代；PostgreSQL 负责 DocumentDB 数据层，Docker Compose 负责 FerretDB 协议层。
+
+**编排、安全与问题修复**
+
+- `deploy.yml`、`slim.yml` 以及 PGSQL、REDIS、MINIO、KAFKA、MYSQL 的初始化/移除剧本现在根据对应的 `*_cluster` 身份跳过无关主机；角色内部仍保留第二层身份校验。
+- PGSQL 配置、PITR 与移除流程仅在存在实际 etcd 成员时进行委派，不再假定固定组名或静默回退到本机；DBSU SSH 密钥按 `pg_cluster_members` 交换，可正确覆盖 Citus 等跨清单组拓扑。
+- HAProxy 采用 `/etc/haproxy/haproxy.cfg` 与 `/etc/haproxy/conf.d` 的固定布局，并使用上游 master-worker 模式、master socket 与 `Type=notify`；dnsmasq 可处理晚于 INFRA 初始化加入的节点地址。
+- Pigsty 管理的渲染后 systemd 单元统一放在 `/etc/systemd/system`，敏感配置和特权文件权限进一步收紧；移除流程会先停服务，再进入数据清理阶段。
+- 本地 YUM 仓库不再生成伪造的 ModuleMD 元数据，避免 DNF 模块流干扰 PostgreSQL 软件包选择；同时修复 Ansible 旧版本中的集群规模类型比较问题。
+- 修复 `pg_exporter` 1.4.1 中 `pg_subrel` 查询产生重复时间序列的问题，并优化 RustFS 与 MinIO 仪表盘。
+
+**PostgreSQL 内核与扩展软件包**
+
+- PostgreSQL 19 beta2 模板补齐 pgBackRest 软件包与备份支持。
+- Percona PostgreSQL 18 TDE 模式改为集群模式，继续使用 Pigsty 私有前缀包避免与原生 PostgreSQL 冲突。
+- IvorySQL 补齐默认数据库初始化，并在工作负载模板中启用兼容的 WAL 压缩设置。
+- 2026-07-31 至 2026-08-08 扩展批次涉及 18 个包族、23 个扩展名；RPM 与 DEB 的具体平台差异见 [RPM 变更日志](/docs/repo/pgsql/rpm/#2026-08-08) 和 [DEB 变更日志](/docs/repo/pgsql/deb/#2026-08-08)。
+
+| 包族               | 旧版本    | 候选版本   | 摘要                                                        |
+|:-----------------|:-------|:-------|:----------------------------------------------------------|
+| `cat_tools`      | -      | 0.3.0  | 新增纯 SQL 扩展，PG14-18                                        |
+| `citus`          | 14.1.0 | 14.2.0 | 包含 `citus_columnar`，PG16-18                               |
+| `pg_describe`    | -      | 1.0.0  | 新增，PG17-18                                               |
+| `pg_disorder`    | -      | 0.1.0  | 新增，PG14-18                                               |
+| `pg_mentat`      | -      | 1.5.7  | 从仅源码收录提升为软件包，PG14-18                                    |
+| `pg_rational`    | 0.0.2  | 0.0.3  | PIGSTY RPM 已更新；DEB 仍沿用 PGDG 包                              |
+| `pg_readme`      | 0.7.0  | 0.7.1  | 包含 `pg_readme_test_extension`；RPM 入库待完成                   |
+| `pg_search`      | 0.25.0 | 0.25.1 | PG15-18，pgrx 0.19.1                                      |
+| `pg_squeeze`     | 1.9.2  | 1.9.4  | PGDG 软件包，PG14-18                                          |
+| `pg_turbovec`    | -      | 1.28.3 | PG14-18；软件包版本与上游 1.29.0 元数据尚待统一                         |
+| `pg_vault_tde`   | -      | 1.7.0  | PG17-18，需要预加载；RPM 仅 EL9/10                                |
+| `pgbson`         | 2.0.4  | 2.1.0  | 包名为 `postgresbson`，PG14-18                                |
+| `pgmnemo`        | 0.15.0 | 0.16.1 | PG17-18                                                   |
+| `plpgsql_check`  | 2.10.3 | 2.10.4 | PG14-18                                                   |
+| `plruby`         | -      | 2.5.0  | 包含三个 transform 扩展，PG14-18                                |
+| `provsql`        | 1.11.0 | 1.12.0 | PG14-18                                                   |
+| `timescaledb`    | 2.29.0 | 2.29.1 | PG16-18                                                   |
+| `vector`         | 0.8.6  | 0.8.6  | PGDG 0.8.6 补充入库，PG14-18                                  |
+{.stretch-last}
+
+**基础设施软件包候选更新**
+
+本轮基础设施仓库集中更新对象存储、可观测性、数据库工具和 Agent CLI。以下为草案中的主要版本，构建完成不等同于已完成仓库索引、签名、同步和离线包验收；完整记录见 [Infra 变更日志](/docs/repo/infra/log/)。
+
+| 软件包                                  | 候选版本                         | 备注                         |
+|:-------------------------------------|:-----------------------------|:---------------------------|
+| `silo` / `mcli`                      | 20260806000000               | Silo 正式接替 MinIO 包名；双架构制品已核验 |
+| `rustfs`                             | 1.0.0-rc1                    | 上游 `rc.1-preview.1`         |
+| `haproxy`                            | 3.4.3                        | Pigsty 修订包，匹配新版 systemd 单元    |
+| `redis` / `valkey`                   | 7.2.15 / 9.1.1               | 双引擎软件包与跨平台构建                |
+| `grafana`                            | 13.1.3                       | 双架构官方制品                    |
+| `victoria-metrics`                   | 1.149.0                      | 包含主包、cluster 与 vmutils        |
+| `postgrest`                          | 16.0                         | 最低支持 PostgreSQL 14           |
+| `k3s` / `k3s-images`                 | 1.36.3                       | 二进制与双架构离线镜像配套              |
+| `seaweedfs` / `pgschema`             | 4.41 / 1.12.2                | 存储与模式管理工具更新                 |
+| `codex` / `claude` / `opencode`      | 0.147.0 / 2.1.226 / 1.18.15 | Agent CLI 集中更新                |
+| `pig`                                | 1.6.1（后续提交）                 | 扩展目录刷新；后续提交接入 SOW 与 Dashboard v2 |
+{.stretch-last}
+
+**兼容性变化与升级说明**
 
 - 现有 FERRET 部署应移除旧的 `ferretdb` systemd 服务，并使用 `docker.yml` 与 `app.yml` 重新部署协议层；旧的 `mongo.yml` 剧本、`mongo_*` 参数、抓取任务和专用仪表盘不再提供。
+- HAProxy 单元不再由 Pigsty 渲染 `/etc/default/haproxy`，但会可选读取该文件。仅使用 `EXTRAOPTS` 传递进程参数，不再使用 `OPTIONS`；若覆盖 `EXTRAOPTS`，必须保留 `-S /run/haproxy-master.sock`，且不得在其中加入 `-f`。
+- 新版模块剧本要求目标主机显式定义对应的 `pg_cluster`、`redis_cluster`、`minio_cluster`、`kafka_cluster` 或 `mysql_cluster`。过去依赖固定组名但缺少集群身份变量的自定义清单需要先补齐身份定义。
+- Valkey 与 RustFS 均为显式选择：分别设置 `redis_type: valkey` 与 `minio_type: rustfs`。已有 Redis/MinIO 集群不会因为新增引擎而自动迁移数据。
+- Silo 与 MinIO 在协议和磁盘格式上保持兼容，但服务名、软件包名和二进制名不同。现有 MinIO 集群升级时应显式设置 `minio_type: minio`，待迁移流程与回滚步骤完成验收后再切换；不得把软件包替换当作自动数据迁移。
+- `pig repo create` 在检测到 SOW 时优先调用 `sow create --pigsty`，Linux 上暂时保留 `createrepo_c` / `dpkg-scanpackages` 回退；macOS 创建本地仓库需要安装 SOW。
 
+**发布前待冻结**
+
+- 完成 Silo 默认后端、多 MINIO 集群、删除安全边界以及 Metrics V3 抓取/告警闭环，并核对 `.minio` / `.silo` 运行目录兼容性。
+- 决定 Pigsty 核心 REPO 角色是否完全切换到 SOW，以及旧离线包中缺少 SOW 时的兼容策略。
+- 完成 Grafana Dashboard API v2 导入器与 MinIO Metrics V3 面板的端到端验证。
+- 解决 `pg_turbovec` 版本/元数据差异与 `pg_readme` RPM 入库，复核 RPM/DEB 差异，并完成候选包索引、签名、同步和公共仓库可用性检查。
+- 对 Kafka、MySQL、Valkey、RustFS/Silo 及标准操作系统矩阵执行最终生命周期与离线部署验收；CLICK 当前仅完成 ClickHouse 软件源模块接入，独立部署剧本仍不应列为已交付特性。
 
 
 ------
@@ -506,7 +586,7 @@ fd1ea5cd5554bfe91fadd51ad80860e3  pigsty-pkg-v4.3.0.u26.x86_64.tgz
 - Insforge 2.0.1 自建模板
 - Infra 软件包批量更新，MinIO/MCLI 更新至 20260321
 - 新增 infra 软件包：tigerfs, pgstream, sql-studio, rainfog, crush
-- 更新 PG 工具：数据恢复 pdu，连接池 pgdog 
+- 更新 PG 工具：数据恢复 pdu，连接池 pgdog
 - 更新 PG 扩展：pg_search, pgsentinel, pg_track_optimizer, pgcollection, pg_ttl_index, pg_clickhouse
 - 更新 PG 内核：IvorySQL 5.1 -> 5.3
 
@@ -829,7 +909,7 @@ curl https://pigsty.cc/get | bash -s v4.1.0
 
 - 新增 7 个扩展，总计 **451** 个扩展支持。
 - `pig` 从传统脚本接口升级为 **Agent-Native CLI**（`1.0.0 -> 1.1.0`），支持主动暴露上下文并提供 JSON/YAML 输出。
-- `pig` 新增 PostgreSQL / OS **大小版本更新**统一能力（覆盖 major/minor 升级流程）。
+- `pig` 新增 PostgreSQL / OS **大小版本更新** 统一能力（覆盖 major/minor 升级流程）。
 - `pg_exporter` 升级到 **v1.2.0**（`1.1.2 -> 1.2.0`），并修复 PG17/18 指标链路与单位换算。
 - 防火墙默认安全策略更新：`node_firewall_mode` 默认改为 `zone`，`node_firewall_public_port` 默认从 `[22,80,443,5432]` 收敛为 `[22,80,443]`。
 - PostgreSQL 小版本更新：18.2、17.8、16.12、15.16、14.21。
@@ -921,7 +1001,7 @@ curl https://pigsty.cc/get | bash -s v4.1.0
 
 **提交清单（v4.0.0..v4.1.0，共 72，2026-02-02 ~ 2026-02-13）**
 
-```
+```text
 7410de401 v4.1.0 release
 fa31213ce conf(node): default firewall to zone with single-node 5432 override
 bb8382c58 update default extension list to 451
@@ -1952,10 +2032,10 @@ c927238f0343cde82a4a9ab230ecd2ac  pigsty-pkg-v3.4.0.u24.aarch64.tgz
 - 新增扩展包: [`Omnigres`](/ext/e/omni) 33个扩展，将 postgres 作为应用开发平台
 - 新增扩展: [`pg_mooncake`](/ext/e/pg_mooncake)：postgres 中的 duckdb
 - 新增扩展: [`pg_xxhash`](/ext/e/xxhash)
-- 新增扩展: [`timescaledb_toolkit `](/ext/e/timescaledb_toolkit)
-- 新增扩展: [`pg_xenophile `](/ext/e/pg_xenophile)
-- 新增扩展: [`pg_drop_events `](/ext/e/pg_drop_events)
-- 新增扩展: [`pg_incremental `](/ext/e/pg_incremental)
+- 新增扩展: [`timescaledb_toolkit`](/ext/e/timescaledb_toolkit)
+- 新增扩展: [`pg_xenophile`](/ext/e/pg_xenophile)
+- 新增扩展: [`pg_drop_events`](/ext/e/pg_drop_events)
+- 新增扩展: [`pg_incremental`](/ext/e/pg_incremental)
 - 升级 [`citus`](https://github.com/citusdata/citus/tree/v13.0.0) 至13.0.0，支持 PostgreSQL 17
 - 升级 [`pgml`](https://github.com/postgresml/postgresml/releases/tag/v2.10.0) 至2.10.0
 - 升级 [`pg_extra_time`](/ext/e/pg_extra_time) 至2.0.0
@@ -1965,10 +2045,10 @@ c927238f0343cde82a4a9ab230ecd2ac  pigsty-pkg-v3.4.0.u24.aarch64.tgz
 
 - 升级 IvorySQL 至4.2版本(基于 PostgreSQL 17.2)
 - 为 PolarDB 内核添加 Arm64 和 Debian 支持
-- 在默认`infra_packages`中添加 certbot 和 certbot-nginx
+- 在默认 `infra_packages` 中添加 certbot 和 certbot-nginx
 - 增加 pgbouncer 的 max_prepared_statements 参数至256
-- 移除`pgxxx-citus`包别名
-- 在`pg_extensions`中默认隐藏`pgxxx-olap`类别（因为存在两对扩展冲突）
+- 移除 `pgxxx-citus` 包别名
+- 在 `pg_extensions` 中默认隐藏 `pgxxx-olap` 类别（因为存在两对扩展冲突）
 
 
 
@@ -2114,7 +2194,7 @@ c927238f0343cde82a4a9ab230ecd2ac  pigsty-pkg-v3.4.0.u24.aarch64.tgz
 
 **软件包校验和**
 
-```
+```text
 8fdc6a60820909b0a2464b0e2b90a3a6  pigsty-v3.2.0.tgz
 d2b85676235c9b9f2f8a0ad96c5b15fd  pigsty-pkg-v3.2.0.el9.aarch64.tgz
 649f79e1d94ec1845931c73f663ae545  pigsty-pkg-v3.2.0.el9.x86_64.tgz
@@ -2175,7 +2255,7 @@ ebb818f98f058f932b57d093d310f5c2  pigsty-pkg-v3.2.0.d12.x86_64.tgz
 
 **校验和**
 
-```
+```text
 e62f9ce9f89a58958609da7b234bf2f2  pigsty-v3.1.0.tgz
 ```
 
@@ -2314,7 +2394,7 @@ e62f9ce9f89a58958609da7b234bf2f2  pigsty-v3.1.0.tgz
 - [PolarDB PG 15](https://github.com/ApsaraDB/PolarDB-for-PostgreSQL) 的原生支持。
 - 优化 `monitor.pg_table_bloat` 与 `monitor.pg_index_bloat`，使用安全定义包装函数规避 PolarDB 统计视图权限问题。
 - 在各模块的监控注册阶段，尊重 `prometheus_enabled` 与 `grafana_enabled` 配置选项，关闭时不再注册。
-- 在 `/etc/profile.d/pgsql.sh` 中添加 `PGDATABASE` 与 `PGPORT` 环境变量，设置为 `pg_primary_db`（默认`postgres`）
+- 在 `/etc/profile.d/pgsql.sh` 中添加 `PGDATABASE` 与 `PGPORT` 环境变量，设置为 `pg_primary_db`（默认 `postgres`）
 
 **变更**
 
@@ -2718,7 +2798,7 @@ f3304bfd896b7e3234d81d8ff4b83577  pigsty-pkg-v2.7.0.debian12.x86_64.tgz
 - 升级图扩展插件 [age](https://github.com/apache/age) 至 v1.5.0，新增 PG 16 支持。
 - 升级 GraphQL 插件 [pg_graphql](https://github.com/supabase/pg_graphql) 版本至 v1.5.0，支持 Supabase。
 
-```
+```text
 330e9bc16a2f65d57264965bf98174ff  pigsty-v2.6.0.tgz
 81abcd0ced798e1198740ab13317c29a  pigsty-pkg-v2.6.0.debian11.x86_64.tgz
 7304f4458c9abd3a14245eaf72f4eeb4  pigsty-pkg-v2.6.0.debian12.x86_64.tgz
@@ -2755,7 +2835,7 @@ fc23d122d0743d1c1cb871ca686449c0  pigsty-pkg-v2.6.0.el8.x86_64.tgz
 * 新的配置模板 `wool.yml`，为阿里云免费99 ECS 单机针对设计。
 * 为 EL9 新增 `python3-jmespath` 软件包，解决 Ansible 依赖更新后 bootstrap 缺少 jmespath 的问题
 
-```
+```text
 31ee48df1007151009c060e0edbd74de  pigsty-pkg-v2.5.1.el7.x86_64.tgz
 a40f1b864ae8a19d9431bcd8e74fa116  pigsty-pkg-v2.5.1.el8.x86_64.tgz
 c976cd4431fc70367124fda4e2eac0a7  pigsty-pkg-v2.5.1.el9.x86_64.tgz
@@ -2843,7 +2923,7 @@ Pigsty 支持了 Ubuntu 22.04 (jammy) 与 20.04 (focal) 两个 LTS 版本，并�
 
 - Patroni 所有模板默认移除 `wal_keep_size` 参数，避免触发 Patroni 3.1.1 的错误，其功能由 `min_wal_size` 覆盖。
 
-```
+```text
 87e0be2edc35b18709d7722976e305b0  pigsty-pkg-v2.5.0.el7.x86_64.tgz
 e71304d6f53ea6c0f8e2231f238e8204  pigsty-pkg-v2.5.0.el8.x86_64.tgz
 39728496c134e4352436d69b02226ee8  pigsty-pkg-v2.5.0.el9.x86_64.tgz
@@ -2889,7 +2969,7 @@ c5b2b1a4867eee624e57aed58ac65a80  pigsty-pkg-v2.5.0.ubuntu22.x86_64.tgz
 - 减少 EL9 离线软件包的大小，移除非必须依赖项 `proj-data*`
 - 修复了 Patroni 3.1.1 的错误
 
-```
+```text
 efabe7632d8994f3fb58f9838b8f9d7d  pigsty-pkg-v2.5.0.el7.x86_64.tgz # 1.1G
 ea78957e8c8434b120d1c8c43d769b56  pigsty-pkg-v2.5.0.el8.x86_64.tgz # 1.4G
 4ef280a7d28872814e34521978b851bb  pigsty-pkg-v2.5.0.el9.x86_64.tgz # 1.3G
@@ -2924,7 +3004,7 @@ ea78957e8c8434b120d1c8c43d769b56  pigsty-pkg-v2.5.0.el8.x86_64.tgz # 1.4G
 
 - 修复 Grafana 10.1 注册数据源时缺少 `uid` 的问题
 
-```
+```text
 MD5 (pigsty-pkg-v2.4.0.el7.x86_64.tgz) = 257443e3c171439914cbfad8e9f72b17
 MD5 (pigsty-pkg-v2.4.0.el8.x86_64.tgz) = 41ad8007ffbfe7d5e8ba5c4b51ff2adc
 MD5 (pigsty-pkg-v2.4.0.el9.x86_64.tgz) = 9a950aed77a6df90b0265a6fa6029250
@@ -2970,7 +3050,7 @@ MD5 (pigsty-pkg-v2.4.0.el9.x86_64.tgz) = 9a950aed77a6df90b0265a6fa6029250
 - sealos 4.3.3
 - pgbadger 1.12.2
 
-```
+```text
 ce69791eb622fa87c543096cdf11f970  pigsty-pkg-v2.3.1.el7.x86_64.tgz
 495aba9d6d18ce1ebed6271e6c96b63a  pigsty-pkg-v2.3.1.el8.x86_64.tgz
 38b45582cbc337ff363144980d0d7b64  pigsty-pkg-v2.3.1.el9.x86_64.tgz
@@ -3011,7 +3091,7 @@ ce69791eb622fa87c543096cdf11f970  pigsty-pkg-v2.3.1.el7.x86_64.tgz
 - `NODE`.`VIP`.`vip_dns_suffix`：节点 vip dns 名称后缀，默认为空字符串
 - `NODE`.`VIP`.`vip_exporter_port`：keepalived 导出器监听端口，默认为 9650
 
-```
+```text
 MD5 (pigsty-pkg-v2.3.0.el7.x86_64.tgz) = 81db95f1c591008725175d280ad23615
 MD5 (pigsty-pkg-v2.3.0.el8.x86_64.tgz) = 6f4d169b36f6ec4aa33bfd5901c9abbe
 MD5 (pigsty-pkg-v2.3.0.el9.x86_64.tgz) = 4bc9ae920e7de6dd8988ca7ee681459d
@@ -3331,7 +3411,7 @@ curl -L https://github.com/pgsty/pigsty/releases/download/v2.0.0/pigsty-pkg-v2.0
 
 * 启用了一个完整的本地自签名 CA：`pigsty-ca`，用于签发内网组件所使用的证书。
 * 创建用户/修改密码的操作将不再会在日志文件中留下痕迹。
-* Nginx 默认启用 SSL 支持（如需 HTTPS，您需要在系统中信任`pigsty-ca`，或使用 Chrome `thisisunsafe`）
+* Nginx 默认启用 SSL 支持（如需 HTTPS，您需要在系统中信任 `pigsty-ca`，或使用 Chrome `thisisunsafe`）
 * ETCD 全面启用 SSL 加密客户端与服务端对等通信
 * PostgreSQL 添加并默认启用了 SSL 支持，管理链接默认都使用 SSL 访问。
 * Pgbouncer 添加了 SSL 支持，出于性能考虑默认不启用。
@@ -3467,7 +3547,7 @@ Pigsty v2.0 进行了大量变更，新增64个参数，移除13个参数，重�
 
 **Checksums**
 
-```
+```text
 MD5 (pigsty-pkg-v2.0.0-rc1.el7.x86_64.tgz) = af4b5db9dc38c860de609956a8f1f0d3
 MD5 (pigsty-pkg-v2.0.0-rc1.el8.x86_64.tgz) = 5b7152e142df3e3cbc06de30bd70e433
 MD5 (pigsty-pkg-v2.0.0-rc1.el9.x86_64.tgz) = 1362e2a5680fc1a3a014cc4f304100bd
@@ -3498,7 +3578,7 @@ Pigsty v1.5.1 升级默认 PostgreSQL 版本至 14.4 强烈建议尽快更新。
 
 **问题修复**
 
-* 修复了`pgsql-migration.yml`中的 TYPO
+* 修复了 `pgsql-migration.yml` 中的 TYPO
 * 移除了 HAProxy 配置文件中的 PID 配置项
 * 移除了默认软件包中的 i686 软件包
 * 默认启用所有 Systemd Redis Service
@@ -3525,7 +3605,7 @@ Pigsty v1.5.1 升级默认 PostgreSQL 版本至 14.4 强烈建议尽快更新。
 * 基础设施自我监控：Nginx， ETCD， Consul， Prometheus， Grafana， Loki 自我监控
 * CMDB 升级：兼容性改善，支持 Redis 集群/Greenplum 集群元数据，配置文件可视化。
 * 服务发现改进：可以使用 Consul 自动发现所有待监控对象，并纳入 Prometheus 中。
-* 更好的冷备份支持：默认定时备份任务，添加`pg_probackup`备份工具，一键创建延时从库。
+* 更好的冷备份支持：默认定时备份任务，添加 `pg_probackup` 备份工具，一键创建延时从库。
 * ETCD 现在可以用作 PostgreSQL/Patroni 的 DCS 服务，作为 Consul 的备选项。
 * Redis 剧本/角色改善：现在允许对单个 Redis 实例，而非整个 Redis 节点进行初始化与移除。
 
@@ -3543,11 +3623,11 @@ Pigsty v1.5.1 升级默认 PostgreSQL 版本至 14.4 强烈建议尽快更新。
 **监控架构**
 
 * 现在允许使用 Consul 进行服务发现（当所有服务注册至 Consul 时）
-* 现在所有的 Infra 组件会启用自我监控，并通过`infra_register`角色注册至 Prometheus 与 Consul 中。
+* 现在所有的 Infra 组件会启用自我监控，并通过 `infra_register` 角色注册至 Prometheus 与 Consul 中。
 * 指标收集器 pg_exporter 更新至 v0.5.0，添加新功能，`scale` 与 `default`，允许为指标指定一个倍乘因子，以及指定默认值。
 *  `pg_bgwriter`, `pg_wal`, `pg_query`, `pg_db`, `pgbouncer_stat` 关于时间的指标，单位由默认的毫秒或微秒统一缩放至秒。
-* `pg_table` 中的相关计数器指标，现在配置有默认值 `0`，替代原有的`NaN`。
-* `pg_class`指标收集器默认移除，相关指标添加至 `pg_table` 与 `pg_index` 收集器中。
+* `pg_table` 中的相关计数器指标，现在配置有默认值 `0`，替代原有的 `NaN`。
+* `pg_class` 指标收集器默认移除，相关指标添加至 `pg_table` 与 `pg_index` 收集器中。
 * `pg_table_size` 指标收集器现在默认启用，默认设置有300秒的缓存时间。
 
 **部署方案**
@@ -3556,12 +3636,12 @@ Pigsty v1.5.1 升级默认 PostgreSQL 版本至 14.4 强烈建议尽快更新。
 * 新增角色 ETCD，可以在 DCS Servers 指定的节点上自动部署 ETCD 服务，并自动纳入监控。
 * 允许通过 `pg_dcs_type` 指定 PG 高可用使用的 DCS 服务，Consul（默认），ETCD（备选）
 * 允许通过 `node_crontab` 参数，为节点配置定时任务，例如数据库备份、VACUUM，统计收集等。
-* 新增了 `pg_checksum`  选项，启用时，数据库集群将启用数据校验和（此前只有`crit`模板默认启用）
-* 新增了`pg_delay`选项，当实例为 Standby Cluster Leader 时，此参数可以用于配置一个**延迟从库**
-* 新增了软件包 `pg_probackup`，默认角色`replicator`现在默认赋予了备份相关函数所需的权限。
-* Redis 部署现在拆分为两个部分：Redis 节点与 Redis 实例，通过`redis_port`参数可以精确控制一个具体实例。
+* 新增了 `pg_checksum`  选项，启用时，数据库集群将启用数据校验和（此前只有 `crit` 模板默认启用）
+* 新增了 `pg_delay` 选项，当实例为 Standby Cluster Leader 时，此参数可以用于配置一个 **延迟从库**
+* 新增了软件包 `pg_probackup`，默认角色 `replicator` 现在默认赋予了备份相关函数所需的权限。
+* Redis 部署现在拆分为两个部分：Redis 节点与 Redis 实例，通过 `redis_port` 参数可以精确控制一个具体实例。
 * Loki 与 Promtail 现在使用 `frpm` 制作的 RPM 软件包进行安装。
-* DCS3 配置模板现在使用一个3节点的`pg-meta`集群，与一个单节点的延迟从库。
+* DCS3 配置模板现在使用一个3节点的 `pg-meta` 集群，与一个单节点的延迟从库。
 
 **软件升级**
 
@@ -3682,10 +3762,10 @@ Pigsty v1.5.1 升级默认 PostgreSQL 版本至 14.4 强烈建议尽快更新。
 
 - 将监控系统分为5大类别：`INFRA`、`NODES`、`REDIS`、`PGSQL`、`APP`
 - 默认启用日志记录
-    - 现在默认启用`loki`和`promtail`，带有预构建的 [loki-rpm](https://github.com/Vonng/loki-rpm)。
+    - 现在默认启用 `loki` 和 `promtail`，带有预构建的 [loki-rpm](https://github.com/Vonng/loki-rpm)。
 - 模型和标签
-    - 为所有仪表板添加了一个隐藏的`ds` prometheus 数据源变量，因此您只需选择一个新的数据源而不是修改 Grafana 数据源和仪表板。
-    - 为所有指标添加了一个`ip`标签，并将其用作数据库指标和节点指标之间的连接键。
+    - 为所有仪表板添加了一个隐藏的 `ds` prometheus 数据源变量，因此您只需选择一个新的数据源而不是修改 Grafana 数据源和仪表板。
+    - 为所有指标添加了一个 `ip` 标签，并将其用作数据库指标和节点指标之间的连接键。
 - INFRA 监控
     - Infra 主仪表板：INFRA 概览
     - 添加日志仪表板：日志实例
@@ -3694,11 +3774,11 @@ Pigsty v1.5.1 升级默认 PostgreSQL 版本至 14.4 强烈建议尽快更新。
     - 如果您完全不关心数据库，现在可以单独使用 Pigsty 作为主机监控软件！
     - 包括4个核心仪表板：节点概览 & 节点集群 & 节点实例 & 节点警报
     - 为节点引入新的身份变量：`node_cluster` 和 `nodename`
-    - 变量`pg_hostname`现在意味着将主机名设置为与 postgres 实例名相同，以保持向后兼容性
-    - 变量`nodename_overwrite` 控制是否用 nodename 覆盖节点的主机名
-    - 变量`nodename_exchange` 将 nodename 写入彼此的`/etc/hosts`
-    - 所有节点指标引用都经过修订，通过`ip`连接
-    - 节点监控目标在`/etc/prometheus/targets/nodes`下单独管理
+    - 变量 `pg_hostname` 现在意味着将主机名设置为与 postgres 实例名相同，以保持向后兼容性
+    - 变量 `nodename_overwrite` 控制是否用 nodename 覆盖节点的主机名
+    - 变量 `nodename_exchange` 将 nodename 写入彼此的 `/etc/hosts`
+    - 所有节点指标引用都经过修订，通过 `ip` 连接
+    - 节点监控目标在 `/etc/prometheus/targets/nodes` 下单独管理
 - PGSQL 监控增强
     - 完全新的 PGSQL 集群，简化并专注于集群中的重要内容。
     - 新仪表板 PGSQL 数据库是集群级对象监控。例如整个集群而不是单个实例的表和查询。
@@ -3709,7 +3789,7 @@ Pigsty v1.5.1 升级默认 PostgreSQL 版本至 14.4 强烈建议尽快更新。
 
 **MatrixDB 支持**
 
-- 通过`pigsty-matrix.yml` playbook 可以部署 MatrixDB（Greenplum 7）
+- 通过 `pigsty-matrix.yml` playbook 可以部署 MatrixDB（Greenplum 7）
 - MatrixDB 监控仪表板：PGSQL MatrixDB
 - 添加示例配置：`pigsty-mxdb.yml`
 
@@ -3717,10 +3797,10 @@ Pigsty v1.5.1 升级默认 PostgreSQL 版本至 14.4 强烈建议尽快更新。
 
 - 将监控系统分为5大类别：`INFRA`、`NODES`、`REDIS`、`PGSQL`、`APP`
 - 默认启用日志记录
-    - 现在默认启用`loki`和`promtail`，带有预构建的 [loki-rpm](https://github.com/Vonng/loki-rpm)。
+    - 现在默认启用 `loki` 和 `promtail`，带有预构建的 [loki-rpm](https://github.com/Vonng/loki-rpm)。
 - 模型和标签
-    - 为所有仪表板添加了一个隐藏的`ds` prometheus 数据源变量，因此您只需选择一个新的数据源而不是修改 Grafana 数据源和仪表板。
-    - 为所有指标添加了一个`ip`标签，并将其用作数据库指标和节点指标之间的连接键。
+    - 为所有仪表板添加了一个隐藏的 `ds` prometheus 数据源变量，因此您只需选择一个新的数据源而不是修改 Grafana 数据源和仪表板。
+    - 为所有指标添加了一个 `ip` 标签，并将其用作数据库指标和节点指标之间的连接键。
 - INFRA 监控
     - Infra 主仪表板：INFRA 概览
     - 添加日志仪表板：日志实例
@@ -3729,11 +3809,11 @@ Pigsty v1.5.1 升级默认 PostgreSQL 版本至 14.4 强烈建议尽快更新。
     - 如果您完全不关心数据库，现在可以单独使用 Pigsty 作为主机监控软件！
     - 包括4个核心仪表板：节点概览 & 节点集群 & 节点实例 & 节点警报
     - 为节点引入新的身份变量：`node_cluster` 和 `nodename`
-    - 变量`pg_hostname`现在意味着将主机名设置为与 postgres 实例名相同，以保持向后兼容性
-    - 变量`nodename_overwrite` 控制是否用 nodename 覆盖节点的主机名
-    - 变量`nodename_exchange` 将 nodename 写入彼此的`/etc/hosts`
-    - 所有节点指标引用都经过修订，通过`ip`连接
-    - 节点监控目标在`/etc/prometheus/targets/nodes`下单独管理
+    - 变量 `pg_hostname` 现在意味着将主机名设置为与 postgres 实例名相同，以保持向后兼容性
+    - 变量 `nodename_overwrite` 控制是否用 nodename 覆盖节点的主机名
+    - 变量 `nodename_exchange` 将 nodename 写入彼此的 `/etc/hosts`
+    - 所有节点指标引用都经过修订，通过 `ip` 连接
+    - 节点监控目标在 `/etc/prometheus/targets/nodes` 下单独管理
 - PGSQL 监控增强
     - 完全新的 PGSQL 集群，简化并专注于集群中的重要内容。
     - 新仪表板 PGSQL 数据库是集群级对象监控。例如整个集群而不是单个实例的表和查询。
@@ -3744,7 +3824,7 @@ Pigsty v1.5.1 升级默认 PostgreSQL 版本至 14.4 强烈建议尽快更新。
 
 **MatrixDB 支持**
 
-- 通过`pigsty-matrix.yml` playbook 可以部署 MatrixDB（Greenplum 7）
+- 通过 `pigsty-matrix.yml` playbook 可以部署 MatrixDB（Greenplum 7）
 - MatrixDB 监控仪表板：PGSQL MatrixDB
 - 添加示例配置：`pigsty-mxdb.yml`
 
@@ -3753,7 +3833,7 @@ Pigsty v1.5.1 升级默认 PostgreSQL 版本至 14.4 强烈建议尽快更新。
 
 现在 pigsty 的工作流如下：
 
-```
+```text
  infra.yml ---> 在单一的元节点上安装 pigsty
       |          然后将更多节点加入 pigsty 的管理下
       |
@@ -3814,7 +3894,7 @@ infra-demo.yml =
 - `pg_provision`：布尔值变量，表示是否执行 `postgres` 角色的资源配置部分（模板，数据库，用户）
 - `no_cmdb`：用于 `infra.yml` 和 `infra-demo.yml` 播放书，不会在元节点上创建 cmdb。
 
-```
+```text
 MD5 (app.tgz) = f887313767982b31a2b094e5589a75ea
 MD5 (matrix.tgz) = 3d063437c482d94bd7e35df1a08bbc84
 MD5 (pigsty.tgz) = e143b88ebea1474f9ebaffddc6072c49
@@ -4092,30 +4172,30 @@ v0.9 极大简化了安装流程，进行了大量日志相关改进，开发了
   /bin/bash -c "$(curl -fsSL https://pigsty.cc/install)"
   ```
 
-* 开发命令行工具 `pigsty-cli`封装常用 Ansible 命令，目前 pigsty-cli 处于 Beta 状态
+* 开发命令行工具 `pigsty-cli` 封装常用 Ansible 命令，目前 pigsty-cli 处于 Beta 状态
 * 使用 Loki 与 Promtail 收集日志：
     * 默认收集 Postgres，Pgbouncer，Patroni 日志
-    * 新增部署脚本`infra-loki.yml` 与 `pgsql-promtail.yml`
+    * 新增部署脚本 `infra-loki.yml` 与 `pgsql-promtail.yml`
     * 定义基于日志的监控指标
     * 使用 Grafana 制作日志相关可视化面板。
-* 监控组件可以使用二进制安装，使用`files/get_bin.sh`下载监控二进制组件。
+* 监控组件可以使用二进制安装，使用 `files/get_bin.sh` 下载监控二进制组件。
 * 飞升模式：
-  当集群元节点初始化完成后，可以使用`bin/upgrade`升级为动态 Inventory
+  当集群元节点初始化完成后，可以使用 `bin/upgrade` 升级为动态 Inventory
   使用 pg-meta 上的数据库代替 YAML 配置文件。
 
 
 **问题修复**
 
 * 集中修复日志相关问题：
-    * 修复了 HAProxy 健康检查造成 PG 日志中大量 `connection reset by peer`的问题。
-    * 修复了 HAProxy 健康检查造成 Patroni 日志中大量出现`Connect Reset` Exception 的问题
+    * 修复了 HAProxy 健康检查造成 PG 日志中大量 `connection reset by peer` 的问题。
+    * 修复了 HAProxy 健康检查造成 Patroni 日志中大量出现 `Connect Reset` Exception 的问题
     * 修复了 Patroni 日志时间戳格式，去除毫秒时间戳，附加完整时区信息。
-    * 为`dbuser_monitor`配置1秒的`log_min_duration_statement`，避免监控查询出现在日志中。
+    * 为 `dbuser_monitor` 配置1秒的 `log_min_duration_statement`，避免监控查询出现在日志中。
 * 重构 Grafana 角色
     * 在保持 API 不变的前提下重构 Grafana 角色。
     * 使用 CDN 下载预打包的 Grafana 插件，加速插件下载
 * 其他问题修复
-    * 修复了`pgbouncer-create-user` 未能正确处理 md5 密码的问题。
+    * 修复了 `pgbouncer-create-user` 未能正确处理 md5 密码的问题。
     * 完善了数据库与用户创建 SQL 模版中参数空置检查。
     * 修复了 NODE DNS 配置时如果手工中断执行，DNS 配置可能出错的问题。
     * 重构了 Makefile 快捷方式 Makefile 中的错别字
@@ -4124,11 +4204,11 @@ v0.9 极大简化了安装流程，进行了大量日志相关改进，开发了
 
 * `node_disable_swap` 默认为 False，默认不会关闭 SWAP。
 * `node_sysctl_params` 不再有默认修改的系统参数。
-*  `grafana_plugin` 的默认值`install` 现在意味着当插件缓存不存在时，从 CDN 下载。
+*  `grafana_plugin` 的默认值 `install` 现在意味着当插件缓存不存在时，从 CDN 下载。
 * `repo_url_packages` 现在从 Pigsty CDN 下载额外的 RPM 包，解决墙内无法访问的问题。
-* `proxy_env.no_proxy`现在将 Pigsty CDN 加入到 NOPROXY 列表中。
-* `grafana_customize` 现在默认为`false`，启用意味着安装 Pigsty Pro 版 UI（默认不开源所以不要启用）
-* `node_admin_pk_current`，新增选项，启用后会将当前用户的`~/.ssh/id_rsa.pub`添加至管理员的 Key 中
+* `proxy_env.no_proxy` 现在将 Pigsty CDN 加入到 NOPROXY 列表中。
+* `grafana_customize` 现在默认为 `false`，启用意味着安装 Pigsty Pro 版 UI（默认不开源所以不要启用）
+* `node_admin_pk_current`，新增选项，启用后会将当前用户的 `~/.ssh/id_rsa.pub` 添加至管理员的 Key 中
 * `loki_clean`：新增选项，安装 Loki 时是否清除现有数据
 * `loki_data_dir`：新增选项，指明安装 Loki 时的数据目录
 * `promtail_enabled` 是否启用 Promtail 日志收集服务？
@@ -4148,7 +4228,7 @@ v0.9 极大简化了安装流程，进行了大量日志相关改进，开发了
 
 ## v0.8.0
 
-v0.8 针对 **服务（Service）** 接入部分进行了彻底的重做。现在除了默认的`primary`, `replica`服务外，用户可以自行定义新的服务。服务的接口可以支持多种不同的实现，例如 L4 DPKG VIP 可作为 Haproxy 的替代品与 Pigsty 集成。同时，针对用户反馈的一些问题进行了集中处理与改进。
+v0.8 针对 **服务（Service）** 接入部分进行了彻底的重做。现在除了默认的 `primary`, `replica` 服务外，用户可以自行定义新的服务。服务的接口可以支持多种不同的实现，例如 L4 DPKG VIP 可作为 Haproxy 的替代品与 Pigsty 集成。同时，针对用户反馈的一些问题进行了集中处理与改进。
 
 <details><br>
 
@@ -4158,7 +4238,7 @@ v0.8 是供给方案定稿版本，此后供给系统的 API 将保持稳定。
 
 **API 变更**
 
-原有`vip`与`haproxy`角色的所有配置项，现在迁移至`service`角色中。
+原有 `vip` 与 `haproxy` 角色的所有配置项，现在迁移至 `service` 角色中。
 
 ```yaml
 #------------------------------------------------------------------------------
@@ -4258,17 +4338,17 @@ vip_enabled                                   # vip_enabled参数被vip_mode覆�
 
 **服务管理**
 
-`pg_services` 与 `pg_services_extra` 定义了集群中的**服务**，每一个服务的定义结构如下例所示：
+`pg_services` 与 `pg_services_extra` 定义了集群中的 **服务**，每一个服务的定义结构如下例所示：
 
 一个服务必须指定以下内容：
 
-* **名称**：服务的完整名称以数据库集群名为前缀，以`service.name`为后缀，通过`-`连接。例如在`pg-test`集群中`name=primary`的服务，其完整服务名称为`pg-test-primary`。
+* **名称**：服务的完整名称以数据库集群名为前缀，以 `service.name` 为后缀，通过 `-` 连接。例如在 `pg-test` 集群中 `name=primary` 的服务，其完整服务名称为 `pg-test-primary`。
 
 * **端口**：在 Pigsty 中，服务默认采用 NodePort 的形式对外暴露，因此暴露端口为必选项。但如果使用外部负载均衡服务接入方案，您也可以通过其他的方式区分服务。
 
-* **选择器**：选择器指定了服务的成员，采用 JMESPath 的形式，从所有集群实例成员中筛选变量。默认的`[]`选择器会选取所有的集群成员。
+* **选择器**：选择器指定了服务的成员，采用 JMESPath 的形式，从所有集群实例成员中筛选变量。默认的 `[]` 选择器会选取所有的集群成员。
 
-  此外`selector_backup`会选择或标记用于 backup 的实例列表（当集群中所有其他成员失效时方才接管服务）
+  此外 `selector_backup` 会选择或标记用于 backup 的实例列表（当集群中所有其他成员失效时方才接管服务）
 
 ```yaml
   # default service will route {ip|name}:5436 to primary postgres (5436->5432 primary)
@@ -4289,7 +4369,7 @@ vip_enabled                                   # vip_enabled参数被vip_mode覆�
 
 **数据库管理**
 
-数据库现在可以对 locale 的细分选项：`lc_ctype`与`lc_collate`分别进行指定。支持这一功能的主要原因是 PG 的扩展插件`pg_trgm`需要在`lc_ctype!=C`的环境中才能正常支持中文。
+数据库现在可以对 locale 的细分选项：`lc_ctype` 与 `lc_collate` 分别进行指定。支持这一功能的主要原因是 PG 的扩展插件 `pg_trgm` 需要在 `lc_ctype!=C` 的环境中才能正常支持中文。
 
 **旧接口定义**
 
@@ -4345,7 +4425,7 @@ pg_databases:
 
 ## v0.7.0
 
-v0.7 针对**接入已有数据库实例**进行了改进，现在用户可以采用 **仅监控部署（Monly Deployment）** 模式使用 Pigsty。同时新增了专用于管理数据库与用户、以及单独部署监控的剧本，并对数据库与用户的定义进行改进。
+v0.7 针对 **接入已有数据库实例** 进行了改进，现在用户可以采用 **仅监控部署（Monly Deployment）** 模式使用 Pigsty。同时新增了专用于管理数据库与用户、以及单独部署监控的剧本，并对数据库与用户的定义进行改进。
 
 <details><br>
 
@@ -4404,9 +4484,9 @@ Pigsty 提供了仅监控部署（monly, monitor-only 模式，剥离供给方�
 
 仅监控模式的部署流程与标准模式大体上保持一致，但省略了很多步骤
 
-- 在**元节点**上完成基础设施初始化的部分与标准流程保持一致，仍然通过`./infra.yml`完成。
-- 不需要在**数据库节点**上完成 **基础设施初始化**。
-- 不需要在**数据库节点**上执行数据库初始化的绝大多数任务，而是通过专用的`./pgsql-monitor.yml` 完成仅监控系统部署。
+- 在 **元节点** 上完成基础设施初始化的部分与标准流程保持一致，仍然通过 `./infra.yml` 完成。
+- 不需要在 **数据库节点** 上完成 **基础设施初始化**。
+- 不需要在 **数据库节点** 上执行数据库初始化的绝大多数任务，而是通过专用的 `./pgsql-monitor.yml` 完成仅监控系统部署。
 - 实际使用的配置项大大减少，只保留基础设施相关变量，与 监控系统相关的少量变量。
 
 
@@ -4454,13 +4534,13 @@ pg_databases:
 
 **数据库变更**
 
-在运行中集群中创建新数据库可以使用`pgsql-createdb.yml`剧本，在配置中定义完新数据库后，执行以下剧本。
+在运行中集群中创建新数据库可以使用 `pgsql-createdb.yml` 剧本，在配置中定义完新数据库后，执行以下剧本。
 
 ```bash
 ./pgsql-createdb.yml -e pg_database=<your_new_database_name>
 ```
 
-通过`-e pg_datbase=`告知需要创建的数据库名称，则该数据库即会被创建（或修改）。具体执行的命令参见集群主库`/pg/tmp/pg-db-{{ database.name}}.sql`文件。
+通过 `-e pg_datbase=` 告知需要创建的数据库名称，则该数据库即会被创建（或修改）。具体执行的命令参见集群主库 `/pg/tmp/pg-db-{{ database.name}}.sql` 文件。
 
 **用户管理**
 
@@ -4513,13 +4593,13 @@ pg_users:
 
 **用户管理**
 
-在运行中集群中创建新数据库可以使用`pgsql-createuser.yml`剧本，在配置中定义完新数据库后，执行以下剧本。
+在运行中集群中创建新数据库可以使用 `pgsql-createuser.yml` 剧本，在配置中定义完新数据库后，执行以下剧本。
 
 ```bash
 ./pgsql-createuser.yml -e pg_user=<your_new_user_name>
 ```
 
-通过`-e pg_user=`告知需要创建的数据库名称，则该数据库即会被创建（或修改）。具体执行的命令参见集群主库`/pg/tmp/pg-user-{{ user.name}}.sql`文件。
+通过 `-e pg_user=` 告知需要创建的数据库名称，则该数据库即会被创建（或修改）。具体执行的命令参见集群主库 `/pg/tmp/pg-user-{{ user.name}}.sql` 文件。
 
 </details>
 
@@ -4539,7 +4619,7 @@ v0.6 对数据库供给方案进行了修改与调整，根据用户的反馈添
 
 * 修复了新版本 Patroni 重启后会重置 PG HBA 的问题
 * 修复了 PG Overview Dashboard 标题中的别字
-* 修复了沙箱集群`pg-test`的默认主库，原来为`pg-test-2`，应当为`pg-test-1`
+* 修复了沙箱集群 `pg-test` 的默认主库，原来为 `pg-test-2`，应当为 `pg-test-1`
 * 修复了过时代码注释
 
 **功能改进**
@@ -4548,17 +4628,17 @@ v0.6 对数据库供给方案进行了修改与调整，根据用户的反馈添
     * 允许在无基础设施的情况下对已有 PG 集群进行监控部署，便于监控系统与其他供给方案集成。[#11](https://github.com/pgsty/pigsty/issues/11)
     * 基于 Inventory 渲染所有监控对象的静态列表，用于静态服务发现。[#11](https://github.com/pgsty/pigsty/issues/11)
     * Prometheus 添加了静态对象模式，用于替代动态服务发现，集中进行身份管理 [#11](https://github.com/pgsty/pigsty/issues/11)
-    * 监控 Exporter 现在添加了`service_registry`选项，Consul 服务注册变为可选项 [#13](https://github.com/pgsty/pigsty/issues/13)
+    * 监控 Exporter 现在添加了 `service_registry` 选项，Consul 服务注册变为可选项 [#13](https://github.com/pgsty/pigsty/issues/13)
     * Exporter 现在可以通过拷贝二进制的方式直接安装：`exporter_binary_install`，[#14](https://github.com/pgsty/pigsty/issues)
-    * Exporter 现在具有`xxx_enabled`选项，控制是否启用该组件。
+    * Exporter 现在具有 `xxx_enabled` 选项，控制是否启用该组件。
 * Haproxy 供给重构与改进  [#8](https://github.com/pgsty/pigsty/issues/8)
-    * 新增了全局 HAProxy 管理界面导航，默认域名`h.pigsty`
+    * 新增了全局 HAProxy 管理界面导航，默认域名 `h.pigsty`
     * 允许将主库加入只读服务集中，当集群中所有从库宕机时自动承接读流量。 [#8](https://github.com/pgsty/pigsty/issues/8)
     * 允许位 Haproxy 实例管理界面启用认证 `haproxy_admin_auth_enabled`
     * 允许通过配置项调整每个服务对应后端的流量权重. [#10](https://github.com/pgsty/pigsty/issues/10)
 * 访问控制模型改进。[#7](https://github.com/pgsty/pigsty/issues/7)
-    * 添加了默认角色`dbrole_offline`，用于慢查询，ETL，交互式查询场景。
-    * 修改默认 HBA 规则，允许`dbrole_offline`分组的用户访问`pg_role == 'offline'`及`pg_offline_query == true`的实例。
+    * 添加了默认角色 `dbrole_offline`，用于慢查询，ETL，交互式查询场景。
+    * 修改默认 HBA 规则，允许 `dbrole_offline` 分组的用户访问 `pg_role == 'offline'` 及 `pg_offline_query == true` 的实例。
 * 软件更新 Release v0.6
     * PostgreSQL 13.2
     * Prometheus 2.25
@@ -4614,7 +4694,7 @@ Pigsty 现在有了官方网站啦：[pigsty.cc](https://pigsty.cc/) 🎉 !
 * 对默认 [访问控制](/docs/concept/sec/ac/) 模型进行了改进
 * 重构了 HBA 管理的逻辑，现在将由 Pigsty 替代 Patroni 直接负责生成 HBA
 * 将 Grafana 监控系统的供给方案从 sqlite 改为 JSON 文件静态 Provision
-* 将`pg-cluster-replication`面板加入 Pigsty 开源免费套餐。
+* 将 `pg-cluster-replication` 面板加入 Pigsty 开源免费套餐。
 * 最新的经过测试的离线安装包：[pkg.tgz](https://github.com/pgsty/pigsty/releases/download/v0.5.0/pkg.tgz) (v0.5)
 
 **定制数据库**
@@ -4800,7 +4880,7 @@ pgbouncer_hba_rules_extra: []
 
 **数据库模板**
 
-* [pg-init-template.sql](https://github.com/pgsty/pigsty/blob/v0.5.0/roles/postgres/templates/pg-init-template.sql) 用于初始化`template1`数据的脚本模板
+* [pg-init-template.sql](https://github.com/pgsty/pigsty/blob/v0.5.0/roles/postgres/templates/pg-init-template.sql) 用于初始化 `template1` 数据的脚本模板
 * [pg-init-business.sql](https://github.com/pgsty/pigsty/blob/v0.5.0/roles/postgres/templates/pg-init-business.sql) 用于初始化其他业务数据库的脚本模板
 
 
@@ -4808,16 +4888,16 @@ pgbouncer_hba_rules_extra: []
 
 v0.5 改善了默认的权限模型，主要是针对单实例多租户的场景进行优化，并收紧权限控制。
 
-* 撤回了普通业务用户对非所属数据库的默认`CONNECT`权限
-* 撤回了非管理员用户对所属数据库的默认`CREATE`权限
-* 撤回了所有用户在`public`模式下的默认创建权限。
+* 撤回了普通业务用户对非所属数据库的默认 `CONNECT` 权限
+* 撤回了非管理员用户对所属数据库的默认 `CREATE` 权限
+* 撤回了所有用户在 `public` 模式下的默认创建权限。
 
 
 **供给方式**
 
 原先 Pigsty 采用直接拷贝 Grafana 自带的 grafana.db 的方式完成监控系统的初始化。
 这种方式虽然简单粗暴管用，但不适合进行精细化的版本控制管理。在 v0.5 中，Pigsty 采用了 Grafana API 完成了监控系统面板供给的工作。
-您所需的就是在`grafana_url`中填入带有用户名密码的 Grafana URL。
+您所需的就是在 `grafana_url` 中填入带有用户名密码的 Grafana URL。
 因此，监控系统可以背方便地添加至已有的 Grafana 中。
 
 </details>
@@ -4834,7 +4914,7 @@ v0.5 改善了默认的权限模型，主要是针对单实例多租户的场景
 
 **监控系统**
 
-Pigsty v0.4 对监控系统进行了整体升级改造，精心挑选了10个面板作为标准的 Pigsty 开源内容。同时，针对 Grafana 7.3的不兼容升级进行了大量适配改造工作。使用升级的`pg_exporter v0.3.1`作为默认指标导出器，调整了监控报警规则的监控面板连接。
+Pigsty v0.4 对监控系统进行了整体升级改造，精心挑选了10个面板作为标准的 Pigsty 开源内容。同时，针对 Grafana 7.3的不兼容升级进行了大量适配改造工作。使用升级的 `pg_exporter v0.3.1` 作为默认指标导出器，调整了监控报警规则的监控面板连接。
 
 
 **Pigsty 开源版**

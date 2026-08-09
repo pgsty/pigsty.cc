@@ -30,7 +30,7 @@ aliases: [/docs/pilot/kafka/start]
 {.full-width}
 
 {{% alert title="两个示例是独立集群" color="warning" %}}
-下面的 `kf-dev` 与 `kf-main` 是两套独立新集群。如果确有需要，也可以给单节点 `kf-dev` 声明两个新的 combined 节点后重跑 `./kafka.yml -l kf-dev`，角色会逐个完成格式化、Observer 追平与 `add-controller` 提升，把它原地扩成三 Controller 集群——但演示环境仍建议直接建新集群，扩容语义详见[扩容集群](/docs/kafka/admin#扩容集群)。
+下面的 `kf-dev` 与 `kf-main` 是两套独立新集群。如果确有需要，也可以给单节点 `kf-dev` 声明两个新的 combined 节点后重跑 `./kafka.yml -l kf-dev`，角色会逐个完成格式化、Observer 追平与 `add-controller` 提升，把它原地扩成三 Controller 集群——但演示环境仍建议直接建新集群，扩容语义详见 [扩容集群](/docs/kafka/admin#扩容集群)。
 {{% /alert %}}
 
 
@@ -264,7 +264,7 @@ all:
 - `quickstart-app` 可读写 `quickstart.*` Topic、读取 `quickstart.*` Group，并可使用幂等 Producer；
 - 最多两个 Broker 运行 `kafka_exporter`，三个 Kafka JVM 都运行 JMX Exporter。
 
-如果三个 Broker 确实位于不同故障域，可以在**全部**节点上分别增加 `kafka_rack: az-a/az-b/az-c`。不要用虚构 Rack 标签制造不存在的容灾保证，详细规则见 [集群配置：Rack](/docs/kafka/config#存储heap-与-rack)。
+如果三个 Broker 确实位于不同故障域，可以在 **全部** 节点上分别增加 `kafka_rack: az-a/az-b/az-c`。不要用虚构 Rack 标签制造不存在的容灾保证，详细规则见 [集群配置：Rack](/docs/kafka/config#存储heap-与-rack)。
 
 
 ### 2. 纳管并部署
@@ -358,7 +358,7 @@ Kafka Java 客户端支持 `SASL_SSL` + SCRAM，并支持 PEM Truststore。实�
 Kafka 客户端本身就具备集群感知能力。`bootstrap.servers` 只用于取得初始元数据；连接成功后，客户端根据元数据直接连接各 Partition 的 Leader Broker，并在 Leader 变化后刷新路由。因此生产环境的常规做法是：
 
 - 在 `bootstrap.servers` 中配置至少两个、通常三个位于不同故障域的 Broker 地址；
-- 放通应用到**所有 Broker** 的 `9092`，并保证 Broker 宣告的 `inventory_hostname` 可解析、可路由；
+- 放通应用到 **所有 Broker** 的 `9092`，并保证 Broker 宣告的 `inventory_hostname` 可解析、可路由；
 - 让 Producer/Consumer 使用 Kafka 客户端自身的重试、元数据刷新、幂等与 Consumer Group 协议；
 - 不把 HAProxy、Keepalived VIP、四层 LB 或七层反向代理放在 Kafka 数据面前方。
 
@@ -490,7 +490,7 @@ kafka_parameters:
 - `kafka_rack` 只表达真实故障域，且副本放置已经核验；
 - 数据盘容量、吞吐、延迟、保留时间、峰值写入和恢复时间已经压测；
 - 新 Broker 加入后有显式 Reassignment 计划，现有 Topic RF 不会自动提高；
-- 已明确 Kafka 数据备份/重建与灾难恢复流程，并演练过[故障节点三步替换](/docs/kafka/admin#替换故障节点)与成员退役。
+- 已明确 Kafka 数据备份/重建与灾难恢复流程，并演练过 [故障节点三步替换](/docs/kafka/admin#替换故障节点) 与成员退役。
 
 
 ### 安全与网络

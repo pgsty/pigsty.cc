@@ -135,7 +135,7 @@ Learner 实例不计入集群仲裁成员数。例如，3 节点集群中有 1 �
 
 参数名称： `etcd_data`， 类型： `path`， 层次：`C`
 
-etcd 数据目录，默认为`/data/etcd`。
+etcd 数据目录，默认为 `/data/etcd`。
 
 
 
@@ -146,7 +146,7 @@ etcd 数据目录，默认为`/data/etcd`。
 
 参数名称： `etcd_port`， 类型： `port`， 层次：`C`
 
-etcd 客户端端口号，默认为`2379`。
+etcd 客户端端口号，默认为 `2379`。
 
 
 
@@ -179,7 +179,7 @@ etcd 初始集群状态，可以是 `new` 或 `existing`，默认值：`new`。
 **重要说明**：
 
 {{% alert title="扩容时必须使用 existing" color="warning" %}}
-向现有 etcd 集群添加新成员时，**必须**设置 `etcd_init=existing`。否则新实例会尝试创建独立的新集群，导致脑裂或初始化失败。
+向现有 etcd 集群添加新成员时，**必须** 设置 `etcd_init=existing`。否则新实例会尝试创建独立的新集群，导致脑裂或初始化失败。
 {{% /alert %}}
 
 **使用示例**：

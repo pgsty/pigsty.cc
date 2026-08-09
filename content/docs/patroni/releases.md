@@ -332,6 +332,7 @@ categories: [参考]
   Patroni 过去会将新版本中引入的参数传递到连接字符串中，导致连接错误。
 
 --------
+
 ## Version 4.0.3
 
 发布于 2024-10-18
@@ -490,6 +491,7 @@ categories: [参考]
   在故障安全处理日志中定义了正确的请求 URL，并修复了 postmaster 检查日志中时间戳的顺序。
 
 --------
+
 ## Version 3.3.2
 
 发布于 2024-07-11
@@ -696,6 +698,7 @@ categories: [参考]
   这些结果用于确定哪些 GUC 可用于验证 PostgreSQL 配置，我们不期望在 Patroni 运行期间此列表会发生变化。
 
 --------
+
 ## Version 3.2.0
 
 发布于 2023-10-25
@@ -861,7 +864,7 @@ categories: [参考]
   之前，如果 **`ctl`** 部分中没有相应的配置参数，Patroni 会使用 **`restapi.keyfile`** 和 **`restapi.certfile`** 作为客户端证书的后备。
 
 > [!WARNING]
-> 如果你启用了客户端证书验证（**`restapi.verify_client`** 设置为 **`required`**），你还**必须**在 **`ctl.certfile`**、**`ctl.keyfile`**、**`ctl.keyfile_password`** 中提供**有效的客户端证书**。如果未提供，Patroni 将无法正常工作。
+> 如果你启用了客户端证书验证（**`restapi.verify_client`** 设置为 **`required`**），你还 **必须** 在 **`ctl.certfile`**、**`ctl.keyfile`**、**`ctl.keyfile_password`** 中提供 **有效的客户端证书**。如果未提供，Patroni 将无法正常工作。
 
 **新特性**
 
@@ -926,6 +929,7 @@ categories: [参考]
   当领导者键过期时，备用集群中的副本不会跟随远程节点，而是保持 **`primary_conninfo`** 不变。
 
 --------
+
 ## Version 3.0.4
 
 发布于 2023-07-13
@@ -1090,6 +1094,7 @@ categories: [参考]
   Patroni 之前在提升时错误地向 **`on_role_change`** 回调脚本传递了 **`promoted`** 角色。传递的角色名称已恢复为 **`master`**。此回退在3.0.0中引入。
 
 --------
+
 ## Version 3.0.0
 
 发布于 2023-01-30
@@ -1301,6 +1306,7 @@ categories: [参考]
   不这样做会导致"rpc error making call: rpc error making call: ACL not found"错误。
 
 --------
+
 ## Version 2.1.4
 
 发布于 2022-06-01
@@ -1582,6 +1588,7 @@ categories: [参考]
   **`pg_stat_replication`** 视图似乎可能在 **`state = 'streaming'`** 时，**`replay_lsn`**、**`flush_lsn`** 或 **`write_lsn`** 字段中包含 NULL 值。
 
 --------
+
 ## Version 2.1.0
 
 发布于 2021-07-06
@@ -1817,6 +1824,7 @@ categories: [参考]
   Patroni 无法在 PostgreSQL 12上获取 **`restore_command`** 的值，因此为 **`pg_rewind`** 获取缺失 WAL 的功能不起作用。
 
 --------
+
 ## Version 2.0.0
 
 发布于 2020-09-02
@@ -2281,6 +2289,7 @@ $ patronictl list
   在较旧版本上，除非安装了最新版本的 **`libpq`**，否则无法保证 **`passfile`** 能正常工作。
 
 --------
+
 ## Version 1.6.1
 
 发布于 2019-11-15
@@ -2996,6 +3005,7 @@ $ patronictl list
   添加分配给集群 pod 的 Service account、仅包含必要权限的 role，以及连接 Service account 和 Role 的 rolebinding。
 
 --------
+
 ## Version 1.4.1
 
 发布于 2018-01-17
@@ -3232,6 +3242,7 @@ $ patronictl list
 - 由于 **`_MemberStatus`** 的更改，通过 API 进行的故障转移被破坏（Alexander Kukushkin）
 
 --------
+
 ## Version 1.3
 
 发布于 2017-07-27
@@ -3508,6 +3519,7 @@ Version 1.3增加了自定义引导功能，显著改进了对 pg_rewind 的支�
   确保不符合槽命名规则的备用名称不会导致槽创建和备用启动失败。将槽名称中的短横线替换为下划线，将槽名称中不允许的所有其他字符替换为其 unicode 码点。
 
 --------
+
 ## Version 1.0
 
 发布于 2016-07-05
@@ -3528,7 +3540,7 @@ Version 1.3增加了自定义引导功能，显著改进了对 pg_rewind 的支�
 
   关于哪些参数可以更改以及不同配置源的处理顺序，请参阅 [**Patroni配置**](/docs/patroni/config#config)。
 
-  自 v0.90 以来配置文件格式*已更改*。Patroni 仍兼容旧的配置文件，但要利用引导参数需要进行更改。建议用户参考 [**动态配置文档页面**](/docs/patroni/config/dynamic#dynamic) 进行更新。
+  自 v0.90 以来配置文件格式 *已更改*。Patroni 仍兼容旧的配置文件，但要利用引导参数需要进行更改。建议用户参考 [**动态配置文档页面**](/docs/patroni/config/dynamic#dynamic) 进行更新。
 
 **更灵活的配置**\*
 
@@ -3670,7 +3682,7 @@ Version 1.3增加了自定义引导功能，显著改进了对 pg_rewind 的支�
 
 发布于 2016-03-14
 
-此版本添加了对*级联复制*的支持，并通过提供*计划性故障转移*简化了 Patroni 管理。可以将旧版本的 Patroni（特别是0.78）与此版本组合使用以迁移到新版本。请注意，计划性故障转移和级联复制相关功能仅适用于 Patroni 0.80及以上版本。
+此版本添加了对 *级联复制* 的支持，并通过提供 *计划性故障转移* 简化了 Patroni 管理。可以将旧版本的 Patroni（特别是0.78）与此版本组合使用以迁移到新版本。请注意，计划性故障转移和级联复制相关功能仅适用于 Patroni 0.80及以上版本。
 
 **级联复制**
 

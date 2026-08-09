@@ -32,7 +32,7 @@ Pigsty 支持多种 PostgreSQL 内核和兼容分支，让您能够在同一套�
 |     [**pgEdge**](/docs/pgsql/kernel/pgedge)     |  **Spock 多主复制**   | 面向边缘场景的分布式 PostgreSQL 发行版          |
 {.full-width}
 
-![](/img/pigsty/pg-forks.webp)
+![PostgreSQL 分支与兼容内核](/img/pigsty/pg-forks.webp)
 
 
 

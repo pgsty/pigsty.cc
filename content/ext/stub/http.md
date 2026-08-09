@@ -5,7 +5,7 @@ https://github.com/pramsey/pgsql-http
 
 Request / Response Schema:
 
-```
+```text
      Composite type "public.http_request"
     Column    |       Type        | Modifiers
 --------------+-------------------+-----------
@@ -79,4 +79,3 @@ SELECT status, content_type, content::json->>'data' AS data
 ```
 
 Issue http post request:
-
