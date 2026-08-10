@@ -558,3 +558,4 @@ icon: fa-brands fa-debian
 | [`pg_fact_loader`](/ext/e/pg_fact_loader) | `2.0.1` | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | `postgresql-$v-pg-fact-loader` | {{< pgvers "18,17,16,15,14" >}} | - |
 | [`pg_bulkload`](/ext/e/pg_bulkload) | `3.1.23` | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | `postgresql-$v-pg-bulkload` | {{< pgvers "18,17,16,15,14" >}} | - |
 {.ext-table}
+

@@ -573,3 +573,4 @@ icon: fas fa-user-ninja
 | **协议** | <a class="ext-badge ext-badge--license gpl30" href="/ext/license#gpl30">GPL-3.0</a> | **u24** | {{< pgvers "14" >}} | {{< pgvers "14" >}} |
 | | | **u26** | {{< pgvers "14" >}} | {{< pgvers "14" >}} |
 {.ext-table .ext-table--cate}
+

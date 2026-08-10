@@ -657,3 +657,4 @@ icon: fas fa-puzzle-piece
 | [`pg_fact_loader`](/ext/e/pg_fact_loader) | [`pg_fact_loader`](https://github.com/enova/pg_fact_loader) | `2.0.1` | <span style="white-space:nowrap"><code>--s-d--</code></span> | <a class="ext-badge ext-badge--repo pgdg" href="/ext/repo#pgdg">PGDG</a> | {{< pgvers "18,17,16,15,14" >}} | - |
 | [`pg_bulkload`](/ext/e/pg_bulkload) | [`pg_bulkload`](https://github.com/ossc-db/pg_bulkload) | `3.1.23` | <span style="white-space:nowrap"><code>-bs-d--</code></span> | <a class="ext-badge ext-badge--repo pigsty" href="/ext/repo#pigsty">PIGSTY</a> | {{< pgvers "18,17,16,15,14" >}} | - |
 {.ext-table}
+

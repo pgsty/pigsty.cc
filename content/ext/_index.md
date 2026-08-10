@@ -27,7 +27,7 @@ pig install pg_duckdb -v 18                   # 例：针对 PG 18 安装 pg_duc
 
 一切都皆可用 PostgreSQL 解决！请参阅我们的博客文章：[**PostgreSQL 正在吞噬数据库世界！**](/blog/pg/pg-eat-db-world)
 
-![Pigsty PostgreSQL 扩展生态](/img/pigsty/ecosystem.png)
+![](/img/pigsty/ecosystem.png)
 
 
 --------

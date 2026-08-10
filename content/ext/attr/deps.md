@@ -227,3 +227,4 @@ weight: 30
 | [`babelfishpg_tsql`](/ext/e/babelfishpg_tsql) | [`babelfishpg_tds`](/ext/e/babelfishpg_tds) | SQL Server SQL语法兼容性扩展 |
 | [`pglogical`](/ext/e/pglogical) | [`pgl_ddl_deploy`](/ext/e/pgl_ddl_deploy) [`pglogical_ticker`](/ext/e/pglogical_ticker) | PostgreSQL逻辑复制：三方扩展实现 |
 {.ext-table}
+

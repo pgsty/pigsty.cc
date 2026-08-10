@@ -257,7 +257,7 @@ nc localhost 5400
 
 ### HAProxy 配置示例
 
-```text
+```
 frontend test
     bind 127.0.0.1:5999
     default_backend pgcluster

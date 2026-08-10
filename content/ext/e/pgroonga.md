@@ -233,7 +233,7 @@ CREATE EXTENSION pgroonga;
 - [用户](https://pgroonga.github.io/users/)：列出 PGroonga 的用户。
 - [开发](https://pgroonga.github.io/development/)：说明如何参与 PGroonga 的开发。
 
-以下是一个关于如何使用 PGroonga 的快速 [教程](https://pgroonga.github.io/tutorial/)：
+以下是一个关于如何使用 PGroonga 的快速[教程](https://pgroonga.github.io/tutorial/)：
 
 ```sql
 CREATE EXTENSION IF NOT EXISTS pgroonga;

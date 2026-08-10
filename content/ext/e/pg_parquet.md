@@ -310,7 +310,7 @@ SELECT * FROM parquet.schema('/tmp/product_example.parquet') LIMIT 10;
 
 调用 `SELECT * FROM parquet.metadata(<uri>)` 可查看指定 URI 处 Parquet 文件的详细元数据，例如列统计信息等。
 
-```text
+```
 SELECT uri, row_group_id, row_group_num_rows, row_group_num_columns, row_group_bytes, column_id, file_offset, num_values, path_in_schema, type_name FROM parquet.metadata('/tmp/product_example.parquet') LIMIT 1;
              uri              | row_group_id | row_group_num_rows | row_group_num_columns | row_group_bytes | column_id | file_offset | num_values | path_in_schema | type_name
 ------------------------------+--------------+--------------------+-----------------------+-----------------+-----------+-------------+------------+----------------+-----------
@@ -320,7 +320,7 @@ SELECT uri, row_group_id, row_group_num_rows, row_group_num_columns, row_group_b
 
 
 
-```text
+```
 SELECT stats_null_count, stats_distinct_count, stats_min, stats_max, compression, encodings, index_page_offset, dictionary_page_offset, data_page_offset, total_compressed_size, total_uncompressed_size FROM parquet.metadata('/tmp/product_example.parquet') LIMIT 1;
  stats_null_count | stats_distinct_count | stats_min | stats_max |    compression     |        encodings         | index_page_offset | dictionary_page_offset | data_page_offset | total_compressed_size | total_uncompressed_size
 ------------------+----------------------+-----------+-----------+--------------------+--------------------------+-------------------+------------------------+------------------+-----------------------+-------------------------
@@ -332,7 +332,7 @@ SELECT stats_null_count, stats_distinct_count, stats_min, stats_max, compression
 
 调用 `SELECT * FROM parquet.file_metadata(<uri>)` 可查看指定 URI 处 Parquet 文件的文件级元数据，例如格式版本等。
 
-```text
+```
 SELECT * FROM parquet.file_metadata('/tmp/product_example.parquet')
              uri              | created_by | num_rows | num_row_groups | format_version
 ------------------------------+------------+----------+----------------+----------------
@@ -344,7 +344,7 @@ SELECT * FROM parquet.file_metadata('/tmp/product_example.parquet')
 
 调用 `SELECT * FROM parquet.kv_metadata(<uri>)` 可查询指定 URI 处 Parquet 文件的自定义键值元数据。
 
-```text
+```
 SELECT uri, encode(key, 'escape') as key, encode(value, 'escape') as value FROM parquet.kv_metadata('/tmp/product_example.parquet');
              uri              |     key      |    value
 ------------------------------+--------------+---------------------
@@ -358,7 +358,7 @@ SELECT uri, encode(key, 'escape') as key, encode(value, 'escape') as value FROM 
 
 调用 `SELECT * FROM parquet.column_stats(<uri>)` 可查看指定 URI 处 Parquet 文件的列统计信息，例如列的最小值和最大值等。
 
-```text
+```
 SELECT * FROM parquet.column_stats('/tmp/product_example.parquet')
  column_id | field_id |         stats_min          |         stats_max          | stats_null_count | stats_distinct_count
 -----------+----------+----------------------------+----------------------------+------------------+----------------------

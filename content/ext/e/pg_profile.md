@@ -434,7 +434,7 @@ SELECT * FROM v_sample_timings;
 
 ### 推荐配置
 
-```text
+```
 track_activities = on
 track_counts = on
 track_io_timing = on

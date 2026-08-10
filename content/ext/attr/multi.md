@@ -9,7 +9,7 @@ weight: 40
 
 在安装这些包时，您将同时获得包中的所有扩展。主扩展用粗体标出。
 
-## postgis
+### postgis
 
 [`postgis`](/ext/e/postgis) 扩展包共有 **7** 个扩展：
 
@@ -24,7 +24,7 @@ weight: 40
 | 1506 | [`address_standardizer_data_us`](/ext/e/address_standardizer_data_us) | `3.6.4` | `--s-d-r` | - | 地址标准化函数：美国数据集示例 |
 {.ext-table}
 
-## pointcloud
+### pointcloud
 
 [`pointcloud`](/ext/e/pointcloud) 扩展包共有 **2** 个扩展：
 
@@ -34,7 +34,7 @@ weight: 40
 | 1521 | [`pointcloud_postgis`](/ext/e/pointcloud_postgis) | `1.2.5` | `--s-dt-` | - | 将激光雷达点云与PostGIS几何类型相集成 |
 {.ext-table}
 
-## pg_h3
+### pg_h3
 
 [`pg_h3`](/ext/e/h3) 扩展包共有 **2** 个扩展：
 
@@ -44,7 +44,7 @@ weight: 40
 | 1531 | [`h3_postgis`](/ext/e/h3_postgis) | `4.2.3` | `--s-d-r` | - | H3与PostGIS集成的扩展插件 |
 {.ext-table}
 
-## pghydro
+### pghydro
 
 [`pghydro`](/ext/e/pghydro) 扩展包共有 **7** 个扩展：
 
@@ -59,7 +59,7 @@ weight: 40
 | 1606 | [`pgh_consistency`](/ext/e/pgh_consistency) | `6.6` | `----d--` | `pgh_consistency` | PgHydro Pfafstetter 一致性检查扩展 |
 {.ext-table}
 
-## mobilitydb
+### mobilitydb
 
 [`mobilitydb`](/ext/e/mobilitydb) 扩展包共有 **2** 个扩展：
 
@@ -69,7 +69,7 @@ weight: 40
 | 1651 | [`mobilitydb_datagen`](/ext/e/mobilitydb_datagen) | `1.3.0` | `----d-r` | - | MobilityDB随机数据生成函数 |
 {.ext-table}
 
-## qdgc
+### qdgc
 
 [`qdgc`](/ext/e/qdgc) 扩展包共有 **2** 个扩展：
 
@@ -79,7 +79,7 @@ weight: 40
 | 1710 | [`qdgc_postgis`](/ext/e/qdgc_postgis) | `0.1.0` | `----d-r` | - | 为 QDGC 增加 PostGIS geometry/geography 绑定与区域到网格单元的填充能力。 |
 {.ext-table}
 
-## pgcontext
+### pgcontext
 
 [`pgcontext`](/ext/e/pgcontext) 扩展包共有 **2** 个扩展：
 
@@ -89,7 +89,7 @@ weight: 40
 | 1970 | [`pgcontext_pgvector`](/ext/e/pgcontext_pgvector) | `0.2.0` | `--s-d--` | - | pgcontext HNSW 索引的可选 pgvector 兼容桥接扩展。 |
 {.ext-table}
 
-## pgroonga
+### pgroonga
 
 [`pgroonga`](/ext/e/pgroonga) 扩展包共有 **2** 个扩展：
 
@@ -99,7 +99,7 @@ weight: 40
 | 2111 | [`pgroonga_database`](/ext/e/pgroonga_database) | `4.0.4` | `--s-dtr` | - | PGGroonga 数据库管理模块 |
 {.ext-table}
 
-## hunspell
+### hunspell
 
 [`hunspell`](/ext/e/hunspell_cs_cz) 扩展包共有 **10** 个扩展：
 
@@ -117,7 +117,7 @@ weight: 40
 | 2279 | [`hunspell_ru_ru_aot`](/ext/e/hunspell_ru_ru_aot) | `1.0` | `----d-r` | - | Hunspell俄语全文检索词典（来自AOT.ru小组） |
 {.ext-table}
 
-## citus
+### citus
 
 [`citus`](/ext/e/citus) 扩展包共有 **2** 个扩展：
 
@@ -127,7 +127,7 @@ weight: 40
 | 2401 | [`citus_columnar`](/ext/e/citus_columnar) | `14.2.0` | `--s-d--` | `pg_catalog` | Citus 列式存储引擎 |
 {.ext-table}
 
-## pg_lake
+### pg_lake
 
 [`pg_lake`](/ext/e/pg_lake) 扩展包共有 **8** 个扩展：
 
@@ -143,7 +143,7 @@ weight: 40
 | 2567 | [`pg_lake_copy`](/ext/e/pg_lake_copy) | `3.4` | `--sLd--` | `pg_catalog` | 在 PostgreSQL 与对象存储数据湖文件之间执行 COPY 的扩展 |
 {.ext-table}
 
-## omnigres
+### omnigres
 
 [`omnigres`](/ext/e/omni) 扩展包共有 **37** 个扩展：
 
@@ -188,7 +188,7 @@ weight: 40
 | 2979 | [`omni_yaml`](/ext/e/omni_yaml) | `0.1.0` | `--s-d--` | `omni_yaml` | Omnigres YAML工具包 |
 {.ext-table}
 
-## pllua
+### pllua
 
 [`pllua`](/ext/e/pllua) 扩展包共有 **4** 个扩展：
 
@@ -200,7 +200,7 @@ weight: 40
 | 3031 | [`hstore_plluau`](/ext/e/hstore_plluau) | `2.0.12` | `--s-d-r` | `pg_catalog` | Lua 程序语言的Hstore适配扩展（不受信任的） |
 {.ext-table}
 
-## plruby
+### plruby
 
 [`plruby`](/ext/e/plruby) 扩展包共有 **4** 个扩展：
 
@@ -212,7 +212,7 @@ weight: 40
 | 3163 | [`ltree_plruby`](/ext/e/ltree_plruby) | `1.0` | `--s-d-r` | - | 在 ltree 与 PL/Ruby 的 Ruby Array 之间转换 |
 {.ext-table}
 
-## pltcl
+### pltcl
 
 [`pltcl`](/ext/e/pltcl) 扩展包共有 **2** 个扩展：
 
@@ -222,7 +222,7 @@ weight: 40
 | 3250 | [`pltclu`](/ext/e/pltclu) | `1.0` | `c---d--` | `pg_catalog` | PL/TCL 存储过程语言（未受信/高权限） |
 {.ext-table}
 
-## plperl
+### plperl
 
 [`plperl`](/ext/e/plperl) 扩展包共有 **4** 个扩展：
 
@@ -234,7 +234,7 @@ weight: 40
 | 3263 | [`jsonb_plperl`](/ext/e/jsonb_plperl) | `1.0` | `c---dt-` | - | 在 jsonb 和 plperl 之间转换 |
 {.ext-table}
 
-## plperlu
+### plperlu
 
 [`plperlu`](/ext/e/plperlu) 扩展包共有 **4** 个扩展：
 
@@ -246,7 +246,7 @@ weight: 40
 | 3273 | [`hstore_plperlu`](/ext/e/hstore_plperlu) | `1.0` | `c---d--` | - | 在 hstore 和 plperlu 之间转换适配类型 |
 {.ext-table}
 
-## plpython3u
+### plpython3u
 
 [`plpython3u`](/ext/e/plpython3u) 扩展包共有 **4** 个扩展：
 
@@ -258,7 +258,7 @@ weight: 40
 | 3293 | [`hstore_plpython3u`](/ext/e/hstore_plpython3u) | `1.0` | `c---d-r` | - | 在 hstore 和 plpython3u 之间转换 |
 {.ext-table}
 
-## pg_xenophile
+### pg_xenophile
 
 [`pg_xenophile`](/ext/e/pg_xenophile) 扩展包共有 **2** 个扩展：
 
@@ -268,7 +268,7 @@ weight: 40
 | 3671 | [`l10n_table_dependent_extension`](/ext/e/l10n_table_dependent_extension) | `0.8.3` | `----d-r` | - | PostgreSQL l10n 工具包 |
 {.ext-table}
 
-## pg_readme
+### pg_readme
 
 [`pg_readme`](/ext/e/pg_readme) 扩展包共有 **2** 个扩展：
 
@@ -278,7 +278,7 @@ weight: 40
 | 4301 | [`pg_readme_test_extension`](/ext/e/pg_readme_test_extension) | `0.7.1` | `----d-r` | - | 用于测试 pg_readme 文档生成的夹具扩展 |
 {.ext-table}
 
-## pgpool
+### pgpool
 
 [`pgpool`](/ext/e/pgpool_adm) 扩展包共有 **3** 个扩展：
 
@@ -289,7 +289,7 @@ weight: 40
 | 5920 | [`pgpool_regclass`](/ext/e/pgpool_regclass) | `4.7.2` | `----d--` | - | PGPool辅助扩展，RegClass替代 |
 {.ext-table}
 
-## pg_flight_recorder
+### pg_flight_recorder
 
 [`pg_flight_recorder`](/ext/e/pgfr_record) 扩展包共有 **2** 个扩展：
 
@@ -299,7 +299,7 @@ weight: 40
 | 6061 | [`pgfr_analyze`](/ext/e/pgfr_analyze) | `2.29.2` | `----d--` | `pgfr_analyze` | pgfr_record 采集数据的报告与性能分析函数 |
 {.ext-table}
 
-## pgnodemx
+### pgnodemx
 
 [`pgnodemx`](/ext/e/pgnodemx) 扩展包共有 **2** 个扩展：
 
@@ -309,7 +309,7 @@ weight: 40
 | 6450 | [`pg_proctab`](/ext/e/pg_proctab) | `2.0.1` | `--s-d-r` | - | 通过SQL接口访问操作系统进程表 |
 {.ext-table}
 
-## documentdb
+### documentdb
 
 [`documentdb`](/ext/e/documentdb) 扩展包共有 **4** 个扩展：
 
@@ -321,7 +321,7 @@ weight: 40
 | 9030 | [`documentdb_extended_rum`](/ext/e/documentdb_extended_rum) | `0.114` | `--sLd-r` | - | DocumentDB扩展RUM索引访问方法 |
 {.ext-table}
 
-## ivorysql
+### ivorysql
 
 [`ivorysql`](/ext/e/ivorysql_ora) 扩展包共有 **6** 个扩展：
 
@@ -335,7 +335,7 @@ weight: 40
 | 9190 | [`gb18030_2022`](/ext/e/gb18030_2022) | `1.0` | `--s-dt-` | `pg_catalog` | 支持 GB18030-2022 与 UTF-8 编码转换 |
 {.ext-table}
 
-## babelfish
+### babelfish
 
 [`babelfish`](/ext/e/babelfishpg_common) 扩展包共有 **4** 个扩展：
 
@@ -347,7 +347,7 @@ weight: 40
 | 9330 | [`babelfishpg_money`](/ext/e/babelfishpg_money) | `1.1.0` | `--s-dt-` | - | SQL Server 货币数据类型兼容扩展 |
 {.ext-table}
 
-## pglogical
+### pglogical
 
 [`pglogical`](/ext/e/pglogical) 扩展包共有 **2** 个扩展：
 
@@ -356,3 +356,4 @@ weight: 40
 | 9500 | [**`pglogical`**](/ext/e/pglogical) | `2.4.8` | `--sLd--` | `pglogical` | PostgreSQL逻辑复制：三方扩展实现 |
 | 9501 | [`pglogical_origin`](/ext/e/pglogical_origin) | `2.4.7` | `--s-d--` | `pglogical_origin` | 用于从 Postgres 9.4 升级时的兼容性虚拟扩展 |
 {.ext-table}
+
