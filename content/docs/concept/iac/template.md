@@ -72,19 +72,19 @@ Pigsty 提供了 [**`configure`**](https://github.com/pgsty/pigsty/blob/main/con
 
 适用于各类数据库管理系统与内核的模板：
 
-| 模板                                         | 说明                                  |
-|--------------------------------------------|-------------------------------------|
-| [**`pgsql.yml`**](/docs/conf/pgsql/)       | 原生 PostgreSQL 内核，基础功能 (14~18)       |
-| [**`pg19.yml`**](/docs/conf/pg19/)         | PostgreSQL 19 Beta 专用试用模板            |
+| 模板                                         | 说明                                    |
+|--------------------------------------------|---------------------------------------|
+| [**`pgsql.yml`**](/docs/conf/pgsql/)       | 原生 PostgreSQL 内核，基础功能 (14~18)         |
+| [**`pg19.yml`**](/docs/conf/pg19/)         | PostgreSQL 19 Beta 专用试用模板             |
 | [**`mssql.yml`**](/docs/conf/mssql/)       | Babelfish 内核，兼容 SQL Server 协议 (17/18) |
-| [**`polar.yml`**](/docs/conf/polar/)       | PolarDB PG 内核，Aurora/RAC 风格 (17)    |
-| [**`ivory.yml`**](/docs/conf/ivory/)       | IvorySQL 内核，兼容 Oracle 语法 (18)       |
-| [**`mysql.yml`**](/docs/conf/mysql/)       | OpenHalo 内核，兼容 MySQL (14)           |
-| [**`pgtde.yml`**](/docs/conf/pgtde/)       | Percona PostgreSQL Server 透明加密 (18) |
-| [**`oriole.yml`**](/docs/conf/oriole/)     | OrioleDB 内核，OLTP 增强 (16~18)         |
-| [**`agens.yml`**](/docs/conf/agens/)       | AgensGraph 图数据库内核 (17)              |
-| [**`pgedge.yml`**](/docs/conf/pgedge/)     | pgEdge 分布式数据库内核 (15~18，默认 18)      |
-| [**`supabase.yml`**](/docs/conf/supabase/) | Supabase 自托管配置 (15~18)              |
+| [**`polar.yml`**](/docs/conf/polar/)       | PolarDB PG 内核，Aurora/RAC 风格 (17)      |
+| [**`ivory.yml`**](/docs/conf/ivory/)       | IvorySQL 内核，兼容 Oracle 语法 (18)         |
+| [**`mysql.yml`**](/docs/conf/mysql/)       | OpenHalo 内核，兼容 MySQL (14)             |
+| [**`pgtde.yml`**](/docs/conf/pgtde/)       | Percona PostgreSQL Server 透明加密 (18)   |
+| [**`oriole.yml`**](/docs/conf/oriole/)     | OrioleDB 内核，OLTP 增强 (16~18)           |
+| [**`agens.yml`**](/docs/conf/agens/)       | AgensGraph 图数据库内核 (17)                |
+| [**`pgedge.yml`**](/docs/conf/pgedge/)     | pgEdge 分布式数据库内核 (15~18，默认 18)         |
+| [**`supabase.yml`**](/docs/conf/supabase/) | Supabase 自托管配置 (15~18)                |
 {.full-width}
 
 您可以后续添加更多节点，或使用 [高可用模板](#高可用模板) 在一开始就规划好集群。
@@ -102,6 +102,7 @@ Pigsty 提供了 [**`configure`**](https://github.com/pgsty/pigsty/blob/main/con
 | [**`trio.yml`**](/docs/conf/trio/)      | 3 节点标准高可用部署                     |
 | [**`full.yml`**](/docs/conf/full/)      | 4 节点标准部署                        |
 | [**`safe.yml`**](/docs/conf/safe/)      | 4 节点安全增强部署，含延迟从库                |
+| [**`octo.yml`**](/docs/conf/octo/)      | 8 节点紧凑高可用仿真                     |
 | [**`simu.yml`**](/docs/conf/simu/)      | 20 节点生产环境模拟                     |
 | [**`ha/citus.yml`**](/docs/conf/citus/) | Citus 分布式高可用 PostgreSQL (14~18) |
 {.full-width}
@@ -134,21 +135,22 @@ Pigsty 提供了 [**`configure`**](https://github.com/pgsty/pigsty/blob/main/con
 
 除主要模板外，Pigsty 还提供了一组面向不同场景的演示模板：
 
-| 模板                                     | 说明                                           |
-|----------------------------------------|----------------------------------------------|
-| [**`el.yml`**](/docs/conf/el/)         | EL 8/9 系统的全参数配置文件                            |
-| [**`debian.yml`**](/docs/conf/debian/) | Debian/Ubuntu 系统的全参数配置文件                     |
-| **`remote.yml`**                       | 监控远程 PostgreSQL 集群或 RDS 的示例配置                |
-| **`redis.yml`**                        | Redis 集群示例配置                                 |
-| [**`minio.yml`**](/docs/conf/minio/)   | 4 节点 MinIO 集群示例配置                            |
-| [**`kafka.yml`**](/docs/conf/kafka/)   | 单节点开发集群 + 三节点安全集群的 Kafka dynamic KRaft 示例 |
+| 模板                                     | 说明                                                     |
+|----------------------------------------|--------------------------------------------------------|
+| [**`el.yml`**](/docs/conf/el/)         | EL 8/9 系统的全参数配置文件                                      |
+| [**`debian.yml`**](/docs/conf/debian/) | Debian/Ubuntu 系统的全参数配置文件                               |
+| **`remote.yml`**                       | 监控远程 PostgreSQL 集群或 RDS 的示例配置                          |
+| **`redis.yml`**                        | Redis 集群示例配置                                           |
+| [**`minio.yml`**](/docs/conf/minio/)   | 4 节点 Silo（源码默认）多盘集群示例                                  |
+| [**`rustfs.yml`**](/docs/conf/rustfs/) | 4 节点 RustFS 分布式对象存储示例                                  |
+| [**`kafka.yml`**](/docs/conf/kafka/)   | 单节点开发集群 + 三节点安全集群的 Kafka dynamic KRaft 示例              |
 | [**`mysql.yml`**](/docs/conf/mysql84/) | 原生 MySQL 8.4 单节点/三节点试点示例；不同于 OpenHalo `conf/mysql.yml` |
-| [**`demo.yml`**](/docs/conf/demo/)     | Pigsty [公开演示站](https://demo.pigsty.cc) 的配置文件 |
-| [**`fat.yml`**](/docs/conf/fat/)       | 含本地软件源与完整功能的单节点配置文件                          |
-| [**`infra.yml`**](/docs/conf/infra/)   | 仅部署基础设施模块                                    |
-| [**`vibe.yml`**](/docs/conf/vibe/)     | Vibe Coding / AI 应用开发模板                      |
-| [**`mongo.yml`**](/docs/conf/mongo/)   | FerretDB / MongoDB 兼容示例                      |
-| [**`docker.yml`**](/docs/conf/docker/) | Docker 应用宿主模板                                |
+| [**`demo.yml`**](/docs/conf/demo/)     | Pigsty [公开演示站](https://demo.pigsty.cc) 的配置文件           |
+| [**`fat.yml`**](/docs/conf/fat/)       | 含本地软件源与完整功能的单节点配置文件                                    |
+| [**`infra.yml`**](/docs/conf/infra/)   | 仅部署基础设施模块                                              |
+| [**`vibe.yml`**](/docs/conf/vibe/)     | Vibe Coding / AI 应用开发模板                                |
+| [**`mongo.yml`**](/docs/conf/mongo/)   | FerretDB / MongoDB 兼容示例                                |
+| [**`docker.yml`**](/docs/conf/docker/) | Docker 应用宿主模板                                          |
 {.full-width}
 
 

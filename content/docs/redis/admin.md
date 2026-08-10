@@ -11,6 +11,9 @@ categories: [任务]
 
 以下是一些常见的 Redis 管理任务 SOP（预案）：
 
+REDIS 模块默认使用 `redis_type: redis`；选择 `redis_type: valkey` 时，服务端与客户端命令分别改为 `valkey-server` / `valkey-cli`。
+本文命令行示例使用默认的 `redis-cli`，Valkey 集群请替换为 `valkey-cli`；剧本内部会自动选择正确的 CLI。
+
 **基础运维**
 - [初始化Redis](#初始化redis)
 - [下线Redis](#下线redis)
@@ -69,7 +72,7 @@ bin/redis-add 10.10.10.10 6379  # 初始化 redis 实例 '10.10.10.10:6379'
 # 下线 Redis 集群 `redis-test`
 ./redis-rm.yml -l redis-test
 
-# 下线 Redis 集群 `redis-test` 并卸载 Redis 软件包
+# 下线 Redis 集群 `redis-test` 并卸载所选引擎与 exporter
 ./redis-rm.yml -l redis-test -e redis_rm_pkg=true
 
 # 下线 Redis 节点 10.10.10.13 上的所有实例
@@ -104,7 +107,7 @@ bin/redis-rm 10.10.10.10 6379  # 下线 redis 实例 '10.10.10.10:6379'
 
 ## 使用Redis客户端
 
-使用 `redis-cli` 访问 Reids 实例：
+默认 Redis 引擎使用 `redis-cli` 访问实例；Valkey 使用 `valkey-cli`，参数与下列示例相同：
 
 ```bash
 $ redis-cli -h 10.10.10.10 -p 6379 # <--- 使用 Host 与 Port 访问对应 Redis 实例
@@ -179,9 +182,8 @@ redis_sentinel_monitor:  # 需要被监控的主库列表，端口、密码、�
 ## 初始化 Redis 原生集群
 
 当 [`redis_mode`](/docs/redis/param#redis_mode) 设置为 `cluster` 时，`redis.yml` 会额外执行 `redis-join` 阶段：
-在 `/tmp/<cluster>-join.sh` 中使用 `redis-cli --cluster create --cluster-yes ... --cluster-replicas {{ redis_cluster_replicas }}` 把所有实例拼成原生集群。
-该步骤在首次部署时自动运行，后续重新执行 `./redis.yml -l <cluster> -t redis-join` 将再次生成并运行相同命令；
-由于 `--cluster create` 并非幂等操作， 只有在你确认需要重建整个原生集群时才应单独触发这一阶段。
+剧本会使用 `redis_type` 对应的 CLI 执行 `--cluster create --cluster-yes ... --cluster-replicas {{ redis_cluster_replicas }}`，把所有清单实例拼成原生集群。
+该步骤在首次部署时自动运行；后续执行 `./redis.yml -l <cluster> -t redis-join` 会先检查种子实例的 `cluster_state:ok`，健康集群会直接退出。该保护不负责 add-node、reshard 或修复部分初始化的拓扑，只有确认当前拓扑状态后才应单独触发。
 
 
 -------------

@@ -32,8 +32,8 @@ Pigsty 的默认凭证公开写在文档与源码中，仅供演示与本地开�
 | PostgreSQL 管理、监控、复制用户                       | `DBUser.DBA`、`DBUser.Monitor`、`DBUser.Replicator` |       是        |
 | Patroni REST API                            | `Patroni.API`                                     |       是        |
 | etcd root                                   | `Etcd.Root`                                       |       是        |
-| MinIO root                                  | `S3User.MinIO`                                    |       是        |
-| MinIO 备份与示例业务用户                             | `S3User.Backup`、`S3User.Meta`、`S3User.Data`       |       是        |
+| MINIO 模块对象存储 root                           | `S3User.MinIO`                                    |       是        |
+| 对象存储备份与示例业务用户                               | `S3User.Backup`、`S3User.Meta`、`S3User.Data`       |       是        |
 | 示例数据库用户                                     | `DBUser.Meta`、`DBUser.Supa`、`Vibe.Coding`         |       是        |
 | pgBackRest 加密口令                             | `cipher_pass: pgBackRest`                         |     **否**      |
 | `ha/safe` 中的 MinIO 用户与 `pgBR.${pg_cluster}` | 模板示例值                                             |     **否**      |
@@ -46,7 +46,7 @@ Pigsty 的默认凭证公开写在文档与源码中，仅供演示与本地开�
 ./configure -g     # 生成配置清单，并随机化向导识别的默认凭据
 ```
 
-配置向导会把生成的密码输出到终端，因此终端记录和自动化日志也应按敏感信息保护。生成完成后还要检查配置文件，单独替换 pgBackRest `cipher_pass`、`ha/safe` 中未覆盖的 MinIO 示例值和自定义凭据。
+配置向导会把生成的密码输出到终端，因此终端记录和自动化日志也应按敏感信息保护。生成完成后还要检查配置文件，单独替换 pgBackRest `cipher_pass`、`ha/safe` 中未覆盖的 MINIO 模块示例值和自定义凭据。
 
 
 ---------------------
@@ -66,7 +66,7 @@ Pigsty 的默认凭证公开写在文档与源码中，仅供演示与本地开�
 
 **部署后**：
 
-- [ ] 确认 `configure -g` 覆盖的凭据与未覆盖的备份、MinIO、自定义凭据均已修改
+- [ ] 确认 `configure -g` 覆盖的凭据与未覆盖的备份、对象存储、自定义凭据均已修改
 - [ ] 审查实际生效的 [**HBA 规则**](/docs/concept/sec/auth)（`/pg/data/pg_hba.conf`）是否与声明及预期一致
 - [ ] 查询实际用户、角色、[**默认权限**](/docs/concept/sec/ac#默认权限) 和数据库 `CONNECT` 授权，并与配置清单比较
 - [ ] 执行一次全量备份与 [**恢复演练**](/docs/concept/pitr/scenarios)，验证备份链路可用
@@ -115,7 +115,7 @@ Pigsty 的默认凭证公开写在文档与源码中，仅供演示与本地开�
 | 通信保密性      | 本地 CA 与 TLS，HBA 强制 `ssl` 或 `cert`               | 强制 TLS、客户端 `verify-full` 与证书轮换 |
 | 数据完整性      | 页级校验和（默认启用），严格同步复制（CRIT）                        | 存储保护、故障模型与演练                   |
 | 数据保密性      | 备份 AES 加密，TDE 与列级加密路径                           | 按需启用                           |
-| 数据备份恢复     | pgBackRest、PITR 与远端仓库（MinIO）                    | 恢复演练制度                         |
+| 数据备份恢复     | pgBackRest、PITR 与远端 S3 兼容仓库                     | 恢复演练制度                         |
 | 剩余信息保护     | -                                               | 介质销毁与擦除流程                      |
 {.full-width}
 

@@ -1,16 +1,16 @@
 ---
 title: 参数列表
 weight: 3630
-description: MinIO 模块提供了 21 个相关配置参数，用于定制所需的 MinIO 集群。
+description: MINIO 模块提供 28 个公开参数，用于选择并配置 Silo、MinIO 或 RustFS 对象存储集群。
 icon: fa-solid fa-terminal
 module: [MINIO]
 categories: [参考]
 ---
 
-MinIO 模块的参数列表，共有 **21** 个参数，分为两个部分：
+MINIO 模块共有 **28** 个公开参数，分为两个部分：
 
-- [**`MINIO`**](#minio)：18 个参数，用于 MinIO 集群的部署与配置
-- [**`MINIO_REMOVE`**](#minio_remove)：3 个参数，控制 MinIO 集群的移除
+- [**`MINIO`**](#minio)：25 个参数，用于选择引擎并部署对象存储集群
+- [**`MINIO_REMOVE`**](#minio_remove)：3 个参数，控制对象存储集群的移除
 
 {{% alert title="架构变化：Pigsty v3.6+" color="info" %}}
 自 Pigsty v3.6 起，`minio.yml` 剧本不再包含移除功能，移除相关参数已迁移至独立的 `minio_remove` 角色和 `minio-rm.yml` 剧本。
@@ -21,14 +21,15 @@ MinIO 模块的参数列表，共有 **21** 个参数，分为两个部分：
 
 ## 参数概览
 
-[`MINIO`](#minio) 参数组用于 MinIO 集群的部署与配置，包括身份标识、存储路径、端口、认证凭据以及存储桶和用户的置备。
+[`MINIO`](#minio) 参数组用于选择并配置对象存储集群，包括身份、存储路径、端口、认证凭据、RustFS 可观测性以及存储桶和用户置备。
 
 | 参数                                      |     类型     |  级别   | 说明                             |
 |:----------------------------------------|:----------:|:-----:|:-------------------------------|
+| [`minio_type`](#minio_type)             |   `enum`   | `G/C` | 对象存储引擎：`silo`、`minio`、`rustfs` |
 | [`minio_seq`](#minio_seq)               |   `int`    |  `I`  | minio 实例标识符，必填                 |
-| [`minio_cluster`](#minio_cluster)       |  `string`  |  `C`  | minio 集群名称，默认为 minio           |
+| [`minio_cluster`](#minio_cluster)       |  `string`  |  `C`  | 对象存储集群名称，必填                  |
 | [`minio_user`](#minio_user)             | `username` |  `C`  | minio 操作系统用户，默认为 `minio`       |
-| [`minio_https`](#minio_https)           |   `bool`   | `G/C` | 是否为 MinIO 启用 HTTPS？默认为 true    |
+| [`minio_https`](#minio_https)           |   `bool`   | `G/C` | 是否为对象存储启用 HTTPS？默认为 true      |
 | [`minio_node`](#minio_node)             |  `string`  |  `C`  | minio 节点名模式                    |
 | [`minio_data`](#minio_data)             |   `path`   |  `C`  | minio 数据目录，使用 `{x...y}` 指定多个磁盘 |
 | [`minio_volumes`](#minio_volumes)       |  `string`  |  `C`  | minio 核心参数，指定成员节点与磁盘，默认不指定     |
@@ -41,17 +42,23 @@ MinIO 模块的参数列表，共有 **21** 个参数，分为两个部分：
 | [`minio_provision`](#minio_provision)   |   `bool`   | `G/C` | 是否执行 minio 资源置备任务？默认为 true     |
 | [`minio_alias`](#minio_alias)           |  `string`  |  `G`  | minio 部署的客户端别名                 |
 | [`minio_endpoint`](#minio_endpoint)     |  `string`  |  `C`  | minio 部署的客户端别名对应的端点            |
+| [`rustfs_metrics_enabled`](#rustfs_metrics_enabled) | `bool` | `G/C` | 是否通过 OTLP/HTTP 导出 RustFS 指标 |
+| [`rustfs_metrics_endpoint`](#rustfs_metrics_endpoint) | `string` | `G/C` | RustFS OTLP 指标接收端点 |
+| [`rustfs_metrics_interval`](#rustfs_metrics_interval) | `int` | `G/C` | RustFS 指标导出周期（秒） |
+| [`rustfs_metrics_environment`](#rustfs_metrics_environment) | `string` | `G/C` | OTEL 部署环境资源属性 |
+| [`rustfs_log_enabled`](#rustfs_log_enabled) | `bool` | `G/C` | 是否向 journald 输出结构化日志 |
+| [`rustfs_log_level`](#rustfs_log_level) | `string` | `G/C` | RustFS 日志级别 |
 | [`minio_buckets`](#minio_buckets)       | `bucket[]` |  `C`  | 待创建的 minio 存储桶列表               |
 | [`minio_users`](#minio_users)           |  `user[]`  |  `C`  | 待创建的 minio 用户列表                |
 {.full-width}
 
-[`MINIO_REMOVE`](#minio_remove) 参数组控制 MinIO 集群的移除行为，包括防误删保险、数据清理以及软件包卸载。
+[`MINIO_REMOVE`](#minio_remove) 参数组控制对象存储集群的移除行为，包括防误删保险、数据清理以及软件包卸载。
 
 | 参数                                    |   类型   |   级别    | 说明                          |
 |:--------------------------------------|:------:|:-------:|:----------------------------|
 | [`minio_safeguard`](#minio_safeguard) | `bool` | `G/C/A` | 防止意外删除？默认为 false            |
 | [`minio_rm_data`](#minio_rm_data)     | `bool` | `G/C/A` | 移除时是否删除 minio 数据？默认为 true   |
-| [`minio_rm_pkg`](#minio_rm_pkg)       | `bool` | `G/C/A` | 移除时是否卸载 minio 软件包？默认为 false |
+| [`minio_rm_pkg`](#minio_rm_pkg)       | `bool` | `G/C/A` | 移除时是否卸载所选引擎与 mcli？默认为 false |
 {.full-width}
 
 其中，`minio_volumes` 与 `minio_endpoint` 为自动生成的参数，但您可以显式覆盖指定这两个参数。
@@ -62,14 +69,15 @@ MinIO 模块的参数列表，共有 **21** 个参数，分为两个部分：
 
 ## 默认参数
 
-`MINIO`：18 个参数，定义于 [`roles/minio/defaults/main.yml`](https://github.com/pgsty/pigsty/blob/main/roles/minio/defaults/main.yml)
+`MINIO`：25 个公开参数，定义于 [`roles/minio/defaults/main.yml`](https://github.com/pgsty/pigsty/blob/main/roles/minio/defaults/main.yml)
 
 ```yaml
 #-----------------------------------------------------------------
-# MINIO
+# SILO / MINIO / RUSTFS
 #-----------------------------------------------------------------
+minio_type: silo                  # 对象存储引擎：silo、minio 或 rustfs
 #minio_seq: 1                     # minio 实例标识符，必填
-minio_cluster: minio              # minio 集群名称，默认为 minio
+#minio_cluster: minio             # minio 集群标识符，必填
 minio_user: minio                 # minio 操作系统用户，默认为 `minio`
 minio_https: true                 # 是否为 MinIO 启用 HTTPS？默认为 true
 minio_node: '${minio_cluster}-${minio_seq}.pigsty' # minio 节点名模式
@@ -84,6 +92,12 @@ minio_extra_vars: ''              # minio 服务器的额外环境变量
 minio_provision: true             # 是否执行 minio 资源置备任务？
 minio_alias: sss                  # minio 部署的客户端别名
 #minio_endpoint: https://sss.pigsty:9000 # minio 别名对应的接入点，如果未指定，则使用拼接生成的默认值
+rustfs_metrics_enabled: true      # 是否通过 OTLP/HTTP 向 VictoriaMetrics 导出 RustFS 指标？
+rustfs_metrics_endpoint: ''       # 显式 OTLP 端点；空值使用首个 infra 节点上的 VictoriaMetrics
+rustfs_metrics_interval: 15       # RustFS OTLP 指标导出周期，单位秒
+rustfs_metrics_environment: production # OTEL deployment.environment.name 资源属性
+rustfs_log_enabled: true          # 是否向 journald 输出 RustFS 结构化日志？
+rustfs_log_level: warn            # RustFS 日志级别；info 的日志量很大
 minio_buckets:                    # 待创建的 minio 存储桶列表
   - { name: pgsql }
   - { name: meta ,versioning: true }
@@ -117,6 +131,24 @@ minio_rm_pkg: false               # 移除时是否卸载 minio 软件包？默�
 这些是 [`minio.yml`](/docs/minio/playbook#minioyml) 剧本使用的操作标志参数。
 
 
+### `minio_type`
+
+参数名称：`minio_type`，类型：`enum`，层次：`G/C`
+
+选择对象存储服务端，允许值为 `silo`、`minio`、`rustfs`，当前源码默认值为 `silo`。
+
+- `silo`：Pigsty 当前默认后端，沿用 MinIO S3/Admin API、`MINIO_*` 环境变量与磁盘格式。
+- `minio`：兼容已有 MinIO 部署；升级旧集群时应显式设置此值。
+- `rustfs`：使用 RustFS 包、二进制、systemd 单元、证书目录和原生 OTLP 指标。
+
+修改此参数会改变安装的软件包、服务名和配置路径，但不会执行数据迁移。特别是 RustFS 数据目录不能视为 MinIO/Silo 数据目录的原地替代。
+
+这里的默认值来自部署角色。出于删除安全考虑，`minio_remove` 角色不为 `minio_type` 提供默认值；执行 `minio-rm.yml` 前必须在清单中显式设置实际引擎，或通过 `-e minio_type=<engine>` 指定，否则身份校验会中止。
+
+
+
+--------
+
 ### `minio_seq`
 
 参数名称： `minio_seq`， 类型： `int`， 层次：`I`
@@ -138,13 +170,14 @@ MinIO 实例标识符，必需的身份参数。没有默认值，您必须手�
 
 参数名称： `minio_cluster`， 类型： `string`， 层次：`C`
 
-MinIO 集群名称，默认为 `minio`。当部署多个 MinIO 集群时，可以使用此参数进行区分。
+对象存储集群名称，必填且没有默认值。当部署多个集群时，使用此参数区分各自的成员与监控身份。
 
 集群名称与序列号 [`minio_seq`](#minio_seq) 一起，唯一标识每一个 MinIO 实例。
 例如，当集群名为 `minio`，序列号为 `1` 时，实例名称为 `minio-1`。
 
-请注意，Pigsty 默认一套部署中只有一个 MinIO 集群。如果您需要部署多个 MinIO 集群，
-需要显式设置 [`minio_alias`](#minio_alias)、[`minio_domain`](#minio_domain)、[`minio_endpoint`](#minio_endpoint) 等参数以避免命名冲突。
+角色会在整个清单中按主机的 `minio_cluster` 值查找成员，因此 Ansible Group 名称可以与集群标识不同。请在对象存储分组的集群变量中显式定义本参数，不要放入 `all.vars`，否则会把所有主机标记为 MINIO 模块成员。
+
+部署多套集群时，还应分别设置 [`minio_alias`](#minio_alias)、[`minio_domain`](#minio_domain)、[`minio_endpoint`](#minio_endpoint)，避免共享客户端别名与域名冲突。
 
 
 
@@ -156,9 +189,9 @@ MinIO 集群名称，默认为 `minio`。当部署多个 MinIO 集群时，可�
 
 参数名称： `minio_user`， 类型： `username`， 层次：`C`
 
-MinIO 操作系统用户名，默认为 `minio`。
+对象存储操作系统用户名，默认为 `minio`。
 
-MinIO 服务将以此用户身份运行，该用户的家目录（默认为 `/home/minio`）中将存储 MinIO 使用的 SSL 证书（位于 `~/.minio/certs/` 目录下）。
+所选服务将以此用户身份运行。Silo/MinIO 证书位于 `~/.minio/certs/`；RustFS 证书位于 `~/.rustfs/certs/`。
 
 
 
@@ -169,11 +202,11 @@ MinIO 服务将以此用户身份运行，该用户的家目录（默认为 `/ho
 
 参数名称： `minio_https`， 类型： `bool`， 层次：`G/C`
 
-是否为 MinIO 服务启用 HTTPS？默认为 `true`，即使用 HTTPS。
+是否为对象存储服务启用 HTTPS？默认为 `true`。
 
 Pigsty 默认的 pgBackRest `minio` 仓库配置使用 HTTPS，并通过 `/etc/pki/ca.crt` 校验证书，因此按默认配置使用时应保持本参数为 `true`。pgBackRest 本身并不强制 MinIO 使用 HTTPS；若显式改用 HTTP，还必须同步调整 `pgbackrest_repo` 的存储 TLS 选项，不能只切换本参数。
 
-启用 HTTPS 后，Pigsty 会自动为 MinIO 服务器签发 SSL 证书，证书包含 [`minio_domain`](#minio_domain) 指定的域名以及各个节点的 IP 地址。
+启用 HTTPS 后，Pigsty 会自动为所选服务端签发证书，证书包含 [`minio_domain`](#minio_domain) 指定的域名以及各个节点的 IP 地址。
 
 
 
@@ -324,7 +357,7 @@ MinIO 控制台端口，默认为 `9001`。
 
 参数名称： `minio_extra_vars`， 类型： `string`， 层次：`C`
 
-MinIO 服务器的额外环境变量。查看 [MinIO Server](https://min.io/docs/minio/linux/reference/minio-server/minio-server.html) 文档以获取完整列表。
+所选对象存储服务器的额外环境变量。Silo/MinIO 使用 `MINIO_*` 变量；RustFS 特有覆盖必须使用 `RUSTFS_*` 变量。
 
 默认值为空字符串，您可以使用多行字符串来传递多个环境变量。例如：
 
@@ -389,6 +422,62 @@ mcli alias set {{ minio_alias }} {% if minio_endpoint is defined and minio_endpo
 
 
 
+
+
+--------
+
+### `rustfs_metrics_enabled`
+
+参数名称：`rustfs_metrics_enabled`，类型：`bool`，层次：`G/C`
+
+是否让 RustFS 通过 OTLP/HTTP 主动向 VictoriaMetrics 导出原生指标，默认值为 `true`。该参数只对 `minio_type: rustfs` 生效；独立的 HTTPS 就绪探测仍由 MINIO 监控任务注册。
+
+
+--------
+
+### `rustfs_metrics_endpoint`
+
+参数名称：`rustfs_metrics_endpoint`，类型：`string`，层次：`G/C`
+
+RustFS 指标的显式 OTLP/HTTP 接收端点，默认值为空。留空时，角色使用清单中第一个 `infra` 节点的 VictoriaMetrics `/opentelemetry/v1/metrics`。
+
+多个独立的单机 VictoriaMetrics 不会复制主动推送的样本。如果需要监控存储层复制，应将本参数指向已经具备复制语义的 VictoriaMetrics Cluster/VIP，而不是独立实例前的普通负载均衡器。
+
+
+--------
+
+### `rustfs_metrics_interval`
+
+参数名称：`rustfs_metrics_interval`，类型：`int`，层次：`G/C`
+
+RustFS OTLP 指标导出周期，单位为秒，默认值为 `15`。
+
+
+--------
+
+### `rustfs_metrics_environment`
+
+参数名称：`rustfs_metrics_environment`，类型：`string`，层次：`G/C`
+
+写入 OTEL `deployment.environment.name` 的资源属性，默认值为 `production`。Pigsty 的 `cls`、`ins`、`ip` 标签才是稳定身份，查询时不要用可能随运行环境变化的资源属性替代它们。
+
+
+--------
+
+### `rustfs_log_enabled`
+
+参数名称：`rustfs_log_enabled`，类型：`bool`，层次：`G/C`
+
+是否让 RustFS 向 systemd journal 输出结构化应用日志，默认值为 `true`。这些日志可由 Pigsty 现有通用 syslog 链路采集；角色不会增加 RustFS 专用 Vector 管道。
+
+
+--------
+
+### `rustfs_log_level`
+
+参数名称：`rustfs_log_level`，类型：`string`，层次：`G/C`
+
+RustFS 日志级别，默认值为 `warn`。`info` 会产生大量节点间 HTTP/RPC 日志，只建议在短期诊断时启用。
 
 
 --------
@@ -484,7 +573,7 @@ minio_safeguard: true   # 启用后，minio-rm.yml 将拒绝执行
 
 移除时是否删除 MinIO 数据与配置？默认值为 `true`。
 
-当启用时，[`minio-rm.yml`](/docs/minio/playbook/#minio-rmyml) 剧本将在集群移除过程中删除 MinIO 数据目录，以及 `/etc/default/minio`、MinIO 用户目录下的 `.minio`、systemd 单元和 Vector 配置。设置为 `false` 会保留这些数据与配置，但不会阻止服务注销、停止和禁用。
+启用后，[`minio-rm.yml`](/docs/minio/playbook/#minio-rmyml) 会删除数据目录、`/etc/default/<minio_type>`、对应的 `.minio` 或 `.rustfs` 用户目录，以及 `/etc/systemd/system/<minio_type>.service`。旧 MinIO 后端还会清理其 Vector 配置。设置为 `false` 会保留这些数据与配置，但不会阻止服务注销、停止和禁用。
 
 
 
@@ -495,6 +584,6 @@ minio_safeguard: true   # 启用后，minio-rm.yml 将拒绝执行
 
 参数名称： `minio_rm_pkg`， 类型： `bool`， 层次：`G/C/A`
 
-移除时是否卸载 MinIO 软件包？默认值为 `false`。
+移除时是否卸载所选对象存储软件包？默认值为 `false`。
 
-当启用时，[`minio-rm.yml`](/docs/minio/playbook/#minio-rmyml) 剧本将在集群移除过程中同时卸载 `minio` 与 `mcli` 软件包。默认禁用此选项，以便保留软件包供将来可能的使用。
+启用后，[`minio-rm.yml`](/docs/minio/playbook/#minio-rmyml) 会卸载 `minio_type` 指定的 `silo`、`minio` 或 `rustfs` 软件包，以及 `mcli`。默认禁用此选项，以便保留软件包供后续使用。

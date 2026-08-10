@@ -17,21 +17,21 @@ Pigsty 提供了 [**INFRA 模块**](/docs/infra) 来解决这个问题 —— �
 下图是 [**单机部署**](/docs/setup/install) 时的架构示意图，图中右半部分即为 [**INFRA 模块**](/docs/infra) 所包含的组件，其中包括：
 
 
-| 组件                                        | 种类     | 描述                                                                  |
-|:------------------------------------------|--------|:--------------------------------------------------------------------|
+| 组件                                        | 种类      | 描述                                                                  |
+|:------------------------------------------|---------|:--------------------------------------------------------------------|
 | [**Nginx**](#nginx)                       | Web 服务器 | [**Web 界面**](/docs/setup/webui) 的统一入口，[**本地软件仓库**](#repo)，内部服务的反向代理 |
-| [**Repo**](#repo)                         | 软件仓库   | APT / DNF 仓库，下载有所有部署需要的 RPM/DEB 包及其依赖                               |
-| [**Grafana**](#grafana)                   | 可视化平台  | 呈现监控指标、日志与链路追踪，承载监控大屏、巡检报表以及自定义数据应用。                                |
-| [**VictoriaMetrics**](#victoriametrics)   | 时序数据库  | 拉取全部监控指标，兼容 Prometheus API，并通过 VMUI 提供查询界面。                         |
-| [**VictoriaLogs**](#victorialogs)         | 日志平台   | 集中收集存储日志，所有节点默认运行 Vector，将系统日志与数据库日志推送到此。                           |
-| [**VictoriaTraces**](#victoriatraces)     | 链路追踪   | 收集慢 SQL、服务链路等追踪数据。                                                  |
-| [**VMAlert**](#vmalert)                   | 告警计算   | 评估告警规则，将事件推送至 Alertmanager。                                         |
-| [**AlertManager**](#alertmanager)         | 告警管理   | 聚合告警事件，分发告警通知，支持邮件、Webhook 等渠道。                                     |
-| [**BlackboxExporter**](#blackboxexporter) | 黑盒探测   | 探测各个 IP/VIP/URL 的可达性。                                               |
+| [**Repo**](#repo)                         | 软件仓库    | APT / DNF 仓库，下载有所有部署需要的 RPM/DEB 包及其依赖                               |
+| [**Grafana**](#grafana)                   | 可视化平台   | 呈现监控指标、日志与链路追踪，承载监控大屏、巡检报表以及自定义数据应用。                                |
+| [**VictoriaMetrics**](#victoriametrics)   | 时序数据库   | 拉取全部监控指标，兼容 Prometheus API，并通过 VMUI 提供查询界面。                         |
+| [**VictoriaLogs**](#victorialogs)         | 日志平台    | 集中收集存储日志，所有节点默认运行 Vector，将系统日志与数据库日志推送到此。                           |
+| [**VictoriaTraces**](#victoriatraces)     | 链路追踪    | 收集慢 SQL、服务链路等追踪数据。                                                  |
+| [**VMAlert**](#vmalert)                   | 告警计算    | 评估告警规则，将事件推送至 Alertmanager。                                         |
+| [**AlertManager**](#alertmanager)         | 告警管理    | 聚合告警事件，分发告警通知，支持邮件、Webhook 等渠道。                                     |
+| [**BlackboxExporter**](#blackboxexporter) | 黑盒探测    | 探测各个 IP/VIP/URL 的可达性。                                               |
 | [**DNSMASQ**](#dnsmasq)                   | DNS 解析  | 提供 DNS 解析服务，解析 Pigsty 内部使用到的域名。【可选】                                 |
-| [**Chronyd**](#chronyd)                   | 时间同步   | 提供 NTP 时间同步服务，确保所有节点时间一致。 【可选】                                      |
-| [**CA**](/docs/concept/sec/ca)            | 证书签发   | 签发环境内的加密证书                                                          |
-| [**Ansible**](/docs/setup/playbook)       | 发起管理   | 批量，声明式，无 Agent 管理大量服务器的工具                                           |
+| [**Chronyd**](#chronyd)                   | 时间同步    | 提供 NTP 时间同步服务，确保所有节点时间一致。 【可选】                                      |
+| [**CA**](/docs/concept/sec/ca)            | 证书签发    | 签发环境内的加密证书                                                          |
+| [**Ansible**](/docs/setup/playbook)       | 发起管理    | 批量，声明式，无 Agent 管理大量服务器的工具                                           |
 
 [![pigsty-arch](/img/pigsty/arch.png)](/docs/infra/)
 
@@ -96,7 +96,8 @@ Pigsty 会在安装时，默认在 Infra 节点上创建一个 **本地软件仓
 {.full-width}
 
 Pigsty 支持 [**离线安装**](/docs/setup/offline)，实质上是将做好的本地软件仓库提前复制到目标环境中。
-当 Pigsty 执行生产部署，需要创建本地软件仓库时，如果发现本地已经存在 **`/www/pigsty/repo_complete`** 标记文件，则会跳过从上游下载软件包的步骤，直接使用已有的软件包，避免联网下载。
+当 Pigsty 执行部署并发现 **`/www/pigsty/repo_complete`** 时，会跳过上游下载并直接使用已有仓库。
+当前源码由 [sow](https://sow.pgsty.com/zh) 生成该文件，它既是完成标记也是仓库内容的 SHA-256 清单；需要强制重建时使用 `./infra.yml -t repo_build -e repo_build=true`。
 
 [![repo](/img/pigsty/repo.webp)](https://demo.pigsty.cc/pigsty/)
 

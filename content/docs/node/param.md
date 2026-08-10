@@ -1362,7 +1362,7 @@ haproxy_services:                   # list of haproxy service
 
 ```
 
-每个服务定义会被渲染为 `/etc/haproxy/<service.name>.cfg` 配置文件，并在 Haproxy 重载后生效。
+每个服务定义会被渲染为 `/etc/haproxy/conf.d/<service.name>.cfg` 配置文件，并在 HAProxy 重载后生效；主配置固定为 `/etc/haproxy/haproxy.cfg`。
 
 
 

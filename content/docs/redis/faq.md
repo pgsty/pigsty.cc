@@ -36,7 +36,11 @@ categories: [参考]
 
 ----------------
 
-## 是否有计划升级到 Valkey 或最新版本？
+## 如何选择 Redis 或 Valkey？
 
-当前 Pigsty v4.x 仍以 Redis 7.2 BSD 分支作为默认实现，尚未切换到 Redis 新许可证版本或 Valkey 作为默认组件。
-不同操作系统渠道里的 Redis 小版本可能不同（例如 APT 渠道可见 7.2.7），请以您实际使用仓库中的包版本为准。
+当前源码默认使用 `redis_type: redis`，同时已经支持显式设置 `redis_type: valkey`。
+角色会据此安装 `redis` 或 `valkey` 软件包，并在实例单元中调用对应的 `redis-server` / `valkey-server` 与 CLI；
+配置路径、实例服务名、监控 `job` 和参数前缀仍保留 `redis` 命名空间。
+
+默认 Redis 软件包继续采用 7.2 BSD 分支，不同操作系统渠道里的小版本可能不同，请以实际仓库元数据为准。
+已有集群改用 Valkey 不等于自动迁移：切换前应核对目标版本的数据文件兼容性、复制与 Sentinel/Cluster 行为，并准备回滚方案。

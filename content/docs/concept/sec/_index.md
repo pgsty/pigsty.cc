@@ -49,20 +49,20 @@ pg-meta:
 
 合理的默认值可以减少遗漏。以下能力在 Pigsty 默认配置下即处于启用状态：
 
-| 能力          | 默认行为                                    | 相关参数                                                             |
-|:------------|:----------------------------------------|:-----------------------------------------------------------------|
-| 密码哈希        | 新设置或更新的 PostgreSQL 口令使用 SCRAM-SHA-256   | [`pg_pwd_enc`](/docs/pgsql/param#pg_pwd_enc)                     |
-| 数据校验和       | 集群初始化时启用页级校验和，捕获静默数据损坏                  | [`pg_checksum`](/docs/pgsql/param#pg_checksum)                   |
-| 服务端 TLS     | PostgreSQL 服务器证书就位并启用 `ssl`，可以接受 TLS 连接 | -                                                                |
-| 本地 CA       | 自动创建自签名 CA，为受管组件签发证书                    | [`ca_create`](/docs/infra/param#ca_create)                       |
-| [**etcd**](/docs/concept/model/etcd) 加密认证   | 客户端与对等通信 TLS，RBAC 密码认证                  | [`etcd_root_password`](/docs/etcd/param#etcd_root_password)      |
-| [**MinIO**](/docs/concept/model/minio) HTTPS | 备份存储流量默认走 HTTPS                         | [`minio_https`](/docs/minio/param#minio_https)                   |
-| [**Nginx**](/docs/concept/arch/infra#nginx) HTTPS | Web 入口默认同时监听 80、443                     | [`nginx_sslmode`](/docs/infra/param#nginx_sslmode)               |
-| HBA 规则集     | 分层放行：本地 ident，内网口令，公网管理员强制 SSL          | [`pg_default_hba_rules`](/docs/pgsql/param#pg_default_hba_rules) |
-| 角色与权限       | 四层角色模型与默认权限模板，提供最小权限基线                  | [`pg_default_roles`](/docs/pgsql/param#pg_default_roles)         |
-| 备份恢复        | [**pgBackRest**](/docs/concept/arch/pgsql#pgbackrest) 默认启用，本地仓库保留两份全量备份            | [`pgbackrest_enabled`](/docs/pgsql/param#pgbackrest_enabled)     |
-| 防火墙         | zone 模式：信任内网网段，公网仅放行必要端口                | [`node_firewall_mode`](/docs/node/param#node_firewall_mode)      |
-| 受限 sudo     | 数据库系统用户的 sudo 被限制在必要命令集内                | [`pg_dbsu_sudo`](/docs/pgsql/param#pg_dbsu_sudo)                 |
+| 能力                                                | 默认行为                                                                    | 相关参数                                                             |
+|:--------------------------------------------------|:------------------------------------------------------------------------|:-----------------------------------------------------------------|
+| 密码哈希                                              | 新设置或更新的 PostgreSQL 口令使用 SCRAM-SHA-256                                   | [`pg_pwd_enc`](/docs/pgsql/param#pg_pwd_enc)                     |
+| 数据校验和                                             | 集群初始化时启用页级校验和，捕获静默数据损坏                                                  | [`pg_checksum`](/docs/pgsql/param#pg_checksum)                   |
+| 服务端 TLS                                           | PostgreSQL 服务器证书就位并启用 `ssl`，可以接受 TLS 连接                                 | -                                                                |
+| 本地 CA                                             | 自动创建自签名 CA，为受管组件签发证书                                                    | [`ca_create`](/docs/infra/param#ca_create)                       |
+| [**etcd**](/docs/concept/model/etcd) 加密认证         | 客户端与对等通信 TLS，RBAC 密码认证                                                  | [`etcd_root_password`](/docs/etcd/param#etcd_root_password)      |
+| [**MINIO 对象存储**](/docs/concept/model/minio) HTTPS | Silo、MinIO 或 RustFS 备份流量默认走 HTTPS                                       | [`minio_https`](/docs/minio/param#minio_https)                   |
+| [**Nginx**](/docs/concept/arch/infra#nginx) HTTPS | Web 入口默认同时监听 80、443                                                     | [`nginx_sslmode`](/docs/infra/param#nginx_sslmode)               |
+| HBA 规则集                                           | 分层放行：本地 ident，内网口令，公网管理员强制 SSL                                          | [`pg_default_hba_rules`](/docs/pgsql/param#pg_default_hba_rules) |
+| 角色与权限                                             | 四层角色模型与默认权限模板，提供最小权限基线                                                  | [`pg_default_roles`](/docs/pgsql/param#pg_default_roles)         |
+| 备份恢复                                              | [**pgBackRest**](/docs/concept/arch/pgsql#pgbackrest) 默认启用，本地仓库保留两份全量备份 | [`pgbackrest_enabled`](/docs/pgsql/param#pgbackrest_enabled)     |
+| 防火墙                                               | zone 模式：信任内网网段，公网仅放行必要端口                                                | [`node_firewall_mode`](/docs/node/param#node_firewall_mode)      |
+| 受限 sudo                                           | 数据库系统用户的 sudo 被限制在必要命令集内                                                | [`pg_dbsu_sudo`](/docs/pgsql/param#pg_dbsu_sudo)                 |
 {.full-width}
 
 

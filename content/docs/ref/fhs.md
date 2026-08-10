@@ -177,6 +177,19 @@ rsync -avz ./ meta-2:~/pigsty
 #  ^-----@...                         # 其他组件的数据目录
 ```
 
+### HAProxy
+
+Pigsty 使用自带的 systemd 单元启动 HAProxy，并将主配置与服务片段分开管理：
+
+```bash
+/etc/systemd/system/haproxy.service   # Pigsty 渲染的 systemd 单元
+/etc/haproxy/haproxy.cfg              # HAProxy 主配置
+/etc/haproxy/conf.d/*.cfg             # 节点与 PostgreSQL 服务片段
+/etc/default/haproxy                  # 可选的用户环境文件，Pigsty 不主动创建
+```
+
+如需在 `/etc/default/haproxy` 中追加启动参数，请使用 `EXTRAOPTS`，并保留默认的 `-S /run/haproxy-master.sock`；配置文件已经由 systemd 单元通过 `-f` 显式加载，不要再把 `-f` 写入 `EXTRAOPTS`。
+
 
 
 ----------------
@@ -224,6 +237,8 @@ rsync -avz ./ meta-2:~/pigsty
 # /etc/blackbox.yml                  # 黑盒探测主配置（prometheus:infra 0644）
 # /etc/default/blackbox_exporter     # 黑盒探测环境变量（prometheus:infra 0644）
 ```
+
+Pigsty 自行渲染的 INFRA 单元统一位于 `/etc/systemd/system/`，包括 `vmetrics`、`vlogs`、`vtraces`、`vmalert`、`alertmanager`、`blackbox_exporter`、`nginx_exporter` 与 `dnsmasq`；发行版软件包自带的单元目录不是这些角色的写入目标。
 
 
 
@@ -341,6 +356,8 @@ export PGDATA=/pg/data
 /usr/lib/postgresql/${pg_version}/bin
 ```
 
+Pigsty 渲染的 PostgreSQL 运行单元同样统一位于 `/etc/systemd/system/`，主要包括 `patroni.service`、`postgres.service`、`pgbouncer.service`、`pg_exporter.service`、`pgbackrest_exporter.service`、`pgbouncer_exporter.service`，以及启用 VIP 时的 `vip-manager.service`。
+
 
 
 ----------------
@@ -371,28 +388,41 @@ Pgbouncer 使用与 `{{ pg_dbsu }}`（默认为 `postgres`）相同的用户运�
 
 ----------------
 
-## Redis FHS
+## Object Storage FHS
 
-Pigsty 提供了对 Redis 部署与监控的基础支持。
-
-Redis 二进制通常由系统包管理器安装（服务调用路径为 `/bin/*`，在多数发行版上由 `/usr/bin/*` 软链接兼容）：
+MINIO 模块根据 `minio_type` 渲染 Silo、MinIO 或 RustFS。以下 `<engine>` 表示 `silo`、`minio` 或 `rustfs`：
 
 ```bash
-redis-server    
-redis-cli       
-redis-sentinel  
-redis-check-rdb 
-redis-check-aof 
-redis-benchmark 
-/usr/libexec/redis-shutdown
+/etc/default/<engine>                         # root:minio 0640，服务环境变量
+/etc/systemd/system/<engine>.service          # root:root 0644，Pigsty 渲染的单元
+/data/minio/                                  # minio:minio 0750，默认数据目录
+/infra/targets/minio/<cluster>-<seq>.yml      # victoria:infra 0640，FileSD 目标
+/home/minio/.mcli/config.json                 # mcli 客户端别名（执行用户家目录亦会写入）
+```
+
+Silo/MinIO 的证书位于 `/home/minio/.minio/certs/`；RustFS 的证书位于 `/home/minio/.rustfs/certs/`。角色参数仍使用 `minio_*` 兼容前缀，实际服务文件则跟随所选引擎。
+
+
+----------------
+
+## Redis FHS
+
+Pigsty 使用同一套目录与实例命名管理 Redis 或 Valkey。
+
+服务单元会按 `redis_type` 调用对应二进制（`/bin/*` 在多数发行版上与 `/usr/bin/*` 兼容）：
+
+```bash
+/bin/redis-server  /bin/redis-cli    # redis_type: redis
+/bin/valkey-server /bin/valkey-cli   # redis_type: valkey
 ```
 
 对于一个名为 `redis-test-1-6379` 的 Redis 实例，与其相关的资源如下所示：
 
 ```bash
-/usr/lib/systemd/system/redis-test-1-6379.service     # root:root 0644（Debian系为 /lib/systemd/system）
+/etc/systemd/system/redis-test-1-6379.service         # root:root 0644（Pigsty 渲染）
+/etc/systemd/system/redis_exporter.service            # root:root 0644（Pigsty 渲染）
 /etc/redis/                                           # redis:redis 0700
-/etc/redis/redis-test-1-6379.conf                     # redis:redis 0700
+/etc/redis/redis-test-1-6379.conf                     # redis:redis 0600
 /data/redis/                                          # redis:redis 0700
 /data/redis/redis-test-1-6379                         # redis:redis 0700
 /data/redis/redis-test-1-6379/redis-test-1-6379.rdb   # RDB 文件
@@ -403,4 +433,4 @@ redis-benchmark
 /var/run/redis/redis-test-1-6379.pid                  # PID
 ```
 
-对于 Ubuntu / Debian 而言，systemd 服务的默认目录不是 `/usr/lib/systemd/system/` 而是 `/lib/systemd/system/`
+Pigsty 渲染的 Redis/Valkey 实例与 exporter 单元统一放在 `/etc/systemd/system/`，实例单元使用 `Type=notify`；软件包自带的单元可能仍位于发行版目录，但不是角色写入的位置。

@@ -104,6 +104,10 @@ Pigsty 在 [`vagrant/spec/`](https://github.com/pgsty/pigsty/tree/main/vagrant/s
 
 每个规格文件包含一个描述虚拟机节点的 `Specs` 变量。例如，`full.rb` 包含 4 节点沙箱的定义：
 
+当前 Vagrant 模板会为每台虚拟机显式置备 **32 GB 主系统盘**。普通节点另外创建一个数据盘，容量由规格中的 `disk` 指定、未指定时为 128 GB；
+名称以 `minio` 开头的对象存储节点则创建四块 32 GB 数据盘并挂载到 `/data1` 至 `/data4`。
+这些磁盘依赖 Vagrant 的实验性 disks 功能：使用仓库 Makefile 时已自动导出 `VAGRANT_EXPERIMENTAL=disks`，直接运行 `vagrant` 时需自行设置。
+
 ```ruby
 # full: pigsty full-featured 4-node sandbox for HA-testing & tutorial & practices
 
@@ -258,7 +262,7 @@ export VM_SPEC='meta'              # 规格名称
 export VM_IMAGE='cloud-image/rocky-9' # 镜像名称
 export VM_SCALE='1'                # 资源缩放倍数
 export VM_PROVIDER='virtualbox'    # 虚拟化提供商
-export VAGRANT_EXPERIMENTAL=disks  # 启用实验性磁盘功能
+export VAGRANT_EXPERIMENTAL=disks  # 直接运行 vagrant 时启用磁盘功能；Makefile 已自动设置
 ```
 
 

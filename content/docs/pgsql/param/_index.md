@@ -898,6 +898,8 @@ postgresql 主目录，默认为 `/var/lib/pgsql`，与官方的 pgdg RPM 保持
 
 默认值为 `true`，意味着同一集群中的数据库超级用户可以互相 ssh 访问。
 
+交换范围由当前清单中实际匹配同一 `pg_cluster` 的 `pg_cluster_members` 决定，不依赖存在一个与集群同名的 Ansible Group。执行时的 `-l` 仍会限制本次剧本目标，请确保限域覆盖需要配置的成员。
+
 
 
 

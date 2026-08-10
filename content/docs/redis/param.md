@@ -1,14 +1,14 @@
 ---
 title: 参数列表
 weight: 3820
-description: REDIS 模块提供了 18 个部署参数 + 3 个移除参数
+description: REDIS 模块提供 19 个部署参数与 3 个移除参数，可选择 Redis 或 Valkey 引擎。
 icon: fa-solid fa-sliders
 categories: [参考]
 ---
 
-REDIS 模块的参数列表，共有 **21** 个参数，分为两个部分：
+REDIS 模块的参数列表，共有 **22** 个参数，分为两个部分：
 
-- [**`REDIS`**](#redis)：18 个参数，用于 Redis 集群的部署与配置
+- [**`REDIS`**](#redis)：19 个参数，用于 Redis/Valkey 集群的部署与配置
 - [**`REDIS_REMOVE`**](#redis_remove)：3 个参数，控制 Redis 集群的移除
 
 {{% alert title="架构变化：Pigsty v3.6+" color="info" %}}
@@ -31,6 +31,7 @@ REDIS 模块的参数列表，共有 **21** 个参数，分为两个部分：
 | [`redis_exporter_enabled`](#redis_exporter_enabled) |   `bool`   |  `C`  | Redis Exporter 是否启用？                   |
 | [`redis_exporter_port`](#redis_exporter_port)       |   `port`   |  `C`  | Redis Exporter 监听端口                    |
 | [`redis_exporter_options`](#redis_exporter_options) |  `string`  | `C/I` | Redis Exporter 命令参数                    |
+| [`redis_type`](#redis_type)                         |   `enum`   | `G/C` | 服务端引擎：`redis`（默认）或 `valkey`            |
 | [`redis_mode`](#redis_mode)                         |   `enum`   |  `C`  | Redis 集群模式：sentinel，cluster，standalone |
 | [`redis_conf`](#redis_conf)                         |  `string`  |  `C`  | Redis 配置文件模板，sentinel 除外               |
 | [`redis_bind_address`](#redis_bind_address)         |    `ip`    |  `C`  | Redis 监听地址，默认值 `0.0.0.0`，留空则绑定主机 IP    |
@@ -46,11 +47,11 @@ REDIS 模块的参数列表，共有 **21** 个参数，分为两个部分：
 
 [`REDIS_REMOVE`](#redis_remove) 参数组控制 Redis 集群的移除行为，包括防误删保险、数据清理以及软件包卸载。
 
-| 参数                                    |   类型   |   级别    | 说明                          |
-|:--------------------------------------|:------:|:-------:|:----------------------------|
-| [`redis_safeguard`](#redis_safeguard) | `bool` | `G/C/A` | 为 `true` 时无条件拒绝移除操作         |
-| [`redis_rm_data`](#redis_rm_data)     | `bool` | `G/C/A` | 移除 Redis 实例时是否一并移除数据目录？     |
-| [`redis_rm_pkg`](#redis_rm_pkg)       | `bool` | `G/C/A` | 移除 Redis 实例时是否卸载 Redis 软件包？ |
+| 参数                                    |   类型   |   级别    | 说明                           |
+|:--------------------------------------|:------:|:-------:|:-----------------------------|
+| [`redis_safeguard`](#redis_safeguard) | `bool` | `G/C/A` | 为 `true` 时无条件拒绝移除操作          |
+| [`redis_rm_data`](#redis_rm_data)     | `bool` | `G/C/A` | 移除 Redis 实例时是否一并移除数据目录？      |
+| [`redis_rm_pkg`](#redis_rm_pkg)       | `bool` | `G/C/A` | 移除时是否卸载所选引擎与 redis-exporter？ |
 {.full-width}
 
 
@@ -59,7 +60,7 @@ REDIS 模块的参数列表，共有 **21** 个参数，分为两个部分：
 
 ## 默认参数
 
-`REDIS`：18 个参数，定义于 [`roles/redis/defaults/main.yml`](https://github.com/pgsty/pigsty/blob/main/roles/redis/defaults/main.yml)
+`REDIS`：19 个参数，定义于 [`roles/redis/defaults/main.yml`](https://github.com/pgsty/pigsty/blob/main/roles/redis/defaults/main.yml)
 
 ```yaml
 #-----------------------------------------------------------------
@@ -72,6 +73,7 @@ redis_fs_main: /data/redis        # Redis主数据目录，默认为 `/data/redi
 redis_exporter_enabled: true      # Redis Exporter 是否启用？
 redis_exporter_port: 9121         # Redis Exporter监听端口
 redis_exporter_options: ''        # Redis Exporter命令参数
+redis_type: redis                 # 服务端引擎：redis 或 valkey
 redis_mode: standalone            # Redis集群模式：sentinel，cluster，standalone
 redis_conf: redis.conf            # Redis配置文件模板，sentinel 除外
 redis_bind_address: '0.0.0.0'     # Redis监听地址，默认 `0.0.0.0`，留空则会绑定主机IP
@@ -93,7 +95,7 @@ redis_sentinel_monitor: []        # Redis哨兵监控的主库列表，仅用于
 #-----------------------------------------------------------------
 redis_safeguard: false            # 为 true 时无条件拒绝移除操作
 redis_rm_data: true               # 移除Redis实例时是否一并移除数据目录？
-redis_rm_pkg: false               # 移除Redis实例时是否卸载Redis软件包？
+redis_rm_pkg: false               # 是否卸载所选引擎与 redis-exporter？
 ```
 
 
@@ -210,6 +212,20 @@ Redis Exporter 监听端口，默认值为：`9121`
 
 
 
+### `redis_type`
+
+参数名称：`redis_type`，类型：`enum`，层次：`G/C`
+
+选择 REDIS 模块使用的服务端实现，允许值为 `redis` 与 `valkey`，默认 `redis`。
+
+角色会安装与该值同名的软件包，并在实例 systemd 单元中调用 `/bin/redis-server` / `/bin/redis-cli` 或 `/bin/valkey-server` / `/bin/valkey-cli`。配置路径、数据目录、实例服务名、Exporter 与监控标签仍使用 `redis` 命名空间，以保持现有清单和运维入口兼容。
+
+应在集群层为所有成员设置相同值。修改 `redis_type` 只会改变角色选择的软件包和二进制，不会自动验证 RDB/AOF、复制、Sentinel 或 Cluster 的跨版本兼容性；已有集群切换前应先演练并准备回滚。
+
+
+
+
+
 ### `redis_mode`
 
 参数名称： `redis_mode`， 类型： `enum`， 层次：`C`
@@ -224,7 +240,7 @@ Redis 集群的工作模式，有三种选项：`standalone`, `cluster`, `sentin
 
 当使用 `cluster` 模式时，Pigsty 会根据 [`redis_cluster_replicas`](#redis_cluster_replicas) 参数使用所有定义的实例创建原生 Redis 集群。
 
-当 `redis_mode=sentinel` 时，`redis.yml` 会执行 `redis-ha` 阶段（`redis.yml` 第 80~130 行）将 [`redis_sentinel_monitor`](#redis_sentinel_monitor) 中的目标批量下发到所有哨兵；当 `redis_mode=cluster` 时还会执行 `redis-join` 阶段（`redis.yml` 第 134~180 行）调用 `redis-cli --cluster create --cluster-yes ... --cluster-replicas {{ redis_cluster_replicas }}`。这两个阶段均在普通 `./redis.yml -l <cluster>` 中自动触发，也可以通过 `-t redis-ha` 或 `-t redis-join` 单独运行。
+当 `redis_mode=sentinel` 时，`redis.yml` 会执行 `redis-ha` 阶段，将 [`redis_sentinel_monitor`](#redis_sentinel_monitor) 中的目标批量下发到所有哨兵；当 `redis_mode=cluster` 时还会执行 `redis-join` 阶段，调用所选引擎的 `redis-cli` 或 `valkey-cli` 执行 `--cluster create`。这两个阶段均在普通 `./redis.yml -l <cluster>` 中自动触发，也可以通过 `-t redis-ha` 或 `-t redis-join` 单独运行。
 
 
 
@@ -303,7 +319,7 @@ Redis 密码，空字符串将禁用密码，这是默认行为。
 
 注意，由于 redis_exporter 的实现限制，您每个节点只能设置一个 `redis_password`。这通常不是问题，因为 pigsty 不允许在同一节点上部署两个不同的 Redis 集群。
 
-Pigsty 会自动将此密码写入 `/etc/default/redis_exporter`（`REDIS_PASSWORD=...`）并在 `redis-ha` 阶段用于 `redis-cli -a <password>`，因此无需重复配置 exporter 或 Sentinel 的认证口令。
+Pigsty 会自动将此密码写入 `/etc/default/redis_exporter`（`REDIS_PASSWORD=...`），并通过 `REDISCLI_AUTH` 传给 `redis-ha` 与 `redis-join` 所选的 `redis-cli` / `valkey-cli`，避免把密码直接放在命令行参数中。
 
 > 请在生产环境中使用强密码
 
@@ -411,6 +427,6 @@ Redis 的防误删安全保险开关，默认值为 `false`。设置为 `true` �
 
 参数名称： `redis_rm_pkg`， 类型： `bool`， 层次：`G/C/A`
 
-移除 Redis 实例时，是否一并卸载 Redis 与 `redis-exporter` 软件包？默认为 `false`。
+移除 Redis 节点时，是否一并卸载 `redis_type` 指定的引擎与 `redis-exporter` 软件包？默认为 `false`。指定 `redis_port` 只移除单个实例时不会卸载共享软件包。
 
 通常情况下不需要卸载软件包，仅当需要彻底清理节点时才需要启用此选项。

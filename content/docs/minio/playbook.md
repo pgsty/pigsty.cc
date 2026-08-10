@@ -1,116 +1,105 @@
 ---
 title: 预置剧本
 weight: 3640
-description: 如何使用预置的 ansible 剧本来管理 MinIO 集群，常用管理命令速查。
+description: 使用预置 Ansible 剧本部署或移除 Silo、MinIO 与 RustFS 对象存储集群。
 icon: fa-solid fa-scroll
 module: [MINIO]
 categories: [任务]
 ---
 
 
-MinIO 模块提供了两个内置剧本用于集群管理：
+MINIO 模块提供两个内置剧本：
 
-- [`minio.yml`](#minioyml)：用于安装 MinIO 集群
-- [`minio-rm.yml`](#minio-rmyml)：用于移除 MinIO 集群
+- [`minio.yml`](#minioyml)：安装并配置 `minio_type` 选中的对象存储引擎
+- [`minio-rm.yml`](#minio-rmyml)：移除所选引擎、配置和可选数据
 
 
 --------
 
 ## `minio.yml`
 
-剧本 [`minio.yml`](https://github.com/pgsty/pigsty/blob/main/minio.yml) 用于在节点上安装 MinIO 模块。
+[`minio.yml`](https://github.com/pgsty/pigsty/blob/main/minio.yml) 以 `hosts: all` 运行，但会在预任务阶段跳过没有定义 [`minio_cluster`](/docs/minio/param#minio_cluster) 的主机。进入角色后还会校验：
 
-- `minio-id`：生成/校验 minio 身份参数
-- `minio_install`：安装 minio
-  - `minio_os_user`：创建操作系统用户 minio
-  - `minio_pkg`：安装 minio/mcli 软件包
-  - `minio_dir`：创建 minio 目录
-- `minio_config`：生成 minio 配置
-  - `minio_conf`：minio 主配置文件
-  - `minio_cert`：minio SSL 证书签发
-  - `minio_dns`：minio DNS 记录插入
-- `minio_launch`：minio 服务启动
-- `minio_register`：minio 纳入监控
-- `minio_provision`：创建 minio 别名/存储桶/业务用户
-  - `minio_alias`：在所有 Infra 节点与 MinIO 成员上创建客户端别名
-  - `minio_bucket`：创建 minio 存储桶
-  - `minio_user`：创建 minio 业务用户
+- `minio_cluster` 已定义且非空
+- `minio_seq` 已定义且为非负整数
+- `minio_type` 是 `silo`、`minio`、`rustfs` 之一
 
-在执行剧本前，请先在 [配置清单](/docs/setup/config) 中，完成 MinIO 集群的 [配置](/docs/minio/config/)。
+因此，`minio_cluster` 是模块成员门控，而 `minio_seq` 与 `minio_type` 的错误会让身份校验明确失败。不要在 `all.vars` 中定义 `minio_cluster`。
 
-{{% alert title="执行条件" color="primary" %}}
-剧本会自动跳过未定义 [`minio_seq`](/docs/minio/param#minio_seq) 的主机。这意味着您可以安全地在混合主机组上执行剧本，只有真正的 MinIO 节点才会被处理。
-{{% /alert %}}
+主要任务标签如下：
 
-{{% alert title="架构变更：Pigsty v3.6+" color="info" %}}
-从 Pigsty v3.6 开始，**minio.yml** 剧本专注于集群安装。所有移除操作已迁移至专用的 **minio-rm.yml** 剧本，使用 **minio_remove** 角色执行。
-{{% /alert %}}
+- `minio-id`：校验身份，并按 `minio_cluster` 从整个清单计算实际成员、节点名与卷参数
+- `minio_install`：创建 `minio` OS 用户，安装所选引擎与 `mcli`，准备数据目录
+  - `minio_os_user`
+  - `minio_pkg`
+  - `minio_dir`
+- `minio_config`：渲染 `/etc/default/<minio_type>`、`/etc/systemd/system/<minio_type>.service`、证书和 DNS
+  - `minio_conf`
+  - `minio_cert`
+  - `minio_dns`
+- `minio_launch`：启动或重启所选 systemd 服务
+- `minio_register`：写入 VictoriaMetrics FileSD 目标；RustFS 同时注册就绪探测
+- `minio_provision`：由集群首个成员执行一次 `mcli` 别名、存储桶与用户置备
+
+重新执行 `minio.yml` 可能重启正在运行的对象存储服务，但不会主动重建数据。生产环境应按集群故障预算安排执行窗口。
 
 
 --------
 
 ## `minio-rm.yml`
 
-剧本 [`minio-rm.yml`](https://github.com/pgsty/pigsty/blob/main/minio-rm.yml) 用于移除 MinIO 集群。
+[`minio-rm.yml`](https://github.com/pgsty/pigsty/blob/main/minio-rm.yml) 使用相同的 `minio_cluster` 成员门控和身份校验，并执行：
 
-- `minio-id`：生成 minio 身份参数用于移除操作（启用 `any_errors_fatal`，身份验证失败时立即停止）
-- `minio_safeguard`：安全检查，防止意外删除（默认：`false`）
-- `minio_pause`：暂停 3 秒，允许用户中止操作（Ctrl+C 可取消）
-- `minio_deregister`：从 VictoriaMetrics 监控中移除目标，清理 DNS 记录
-- `minio_svc`：停止并禁用 minio systemd 服务
-- `minio_data`：移除 MinIO 数据目录及服务、客户端、Vector 配置（可通过 `minio_rm_data=false` 禁用）
-- `minio_pkg`：卸载 `minio` 与 `mcli` 软件包（可通过 `minio_rm_pkg=true` 启用）
+- `minio_safeguard`：防误删检查，默认 `false`
+- `minio_pause`：暂停 3 秒，允许 Ctrl+C 中止
+- `minio_deregister`：删除 VictoriaMetrics 目标与 DNS 记录
+- `minio_svc`：停止并禁用 `minio_type` 对应的服务
+- `minio_data`：按 [`minio_rm_data`](/docs/minio/param#minio_rm_data) 删除数据与配置
+- `minio_pkg`：按 [`minio_rm_pkg`](/docs/minio/param#minio_rm_pkg) 卸载所选引擎与 `mcli`
 
-{{% alert title="执行条件与安全机制" color="primary" %}}
-- 剧本会自动跳过未定义 [`minio_seq`](/docs/minio/param#minio_seq) 的主机，防止误操作非 MinIO 节点
-- 身份验证阶段启用了 `any_errors_fatal`，一旦检测到无效的 MinIO 身份，剧本会立即停止
-- 移除前会暂停 3 秒，给用户提供中止操作的机会
+{{% alert title="危险操作" color="danger" %}}
+`minio_rm_data` 默认为 `true`。完整执行移除剧本会删除展开后的所有 `minio_data` 目录；运行前必须核对 `minio_cluster`、`minio_seq`、`minio_type` 与磁盘挂载路径。只想退役服务并保留数据时，请显式设置 `-e minio_rm_data=false`。
 {{% /alert %}}
 
-移除剧本使用 **minio_remove** 角色，支持以下 [可配置参数](/docs/minio/param)：
-
-- [`minio_safeguard`](/docs/minio/param#minio_safeguard)：设置为 `true` 时阻止意外删除
-- [`minio_rm_data`](/docs/minio/param#minio_rm_data)：控制是否删除 MinIO 数据与配置（默认 `true`）
-- [`minio_rm_pkg`](/docs/minio/param#minio_rm_pkg)：控制是否卸载 `minio` 与 `mcli` 软件包（默认 `false`）
+部署角色默认 `minio_type: silo`，但移除角色刻意没有引擎默认值。清单若省略了 `minio_type`，运行移除剧本时必须补充 `-e minio_type=silo`、`minio` 或 `rustfs`；这项显式确认用于防止清理错误的软件包、服务和证书目录。
 
 
 ----------------
 
 ## 命令速查
 
-MINIO 剧本常用命令：
-
 ```bash
-./minio.yml -l <cls>                      # 在 <cls> 分组上安装 MINIO 模块
-./minio.yml -l minio -t minio_install     # 在节点上安装 MinIO 服务，准备数据目录，但不配置启动
-./minio.yml -l minio -t minio_config      # 重新配置 MinIO 集群
-./minio.yml -l minio -t minio_launch      # 重启 MinIO 集群
-./minio.yml -l minio -t minio_provision   # 重新执行资源置备（创建存储桶和用户）
+./minio.yml -l <group>                         # 部署该限域内具有 minio_cluster 身份的成员
+./minio.yml -l minio -t minio_install         # 安装所选引擎与 mcli，准备目录
+./minio.yml -l minio -t minio_config          # 重新渲染配置、证书和 DNS
+./minio.yml -l minio -t minio_launch          # 重启所选对象存储服务
+./minio.yml -l minio -t minio_register        # 刷新监控目标
+./minio.yml -l minio -t minio_provision       # 重新置备别名、存储桶和用户
 
-./minio-rm.yml -l minio                   # 移除 MinIO 集群（使用专用移除剧本）
-./minio-rm.yml -l minio -e minio_rm_data=false  # 移除集群但保留数据
-./minio-rm.yml -l minio -e minio_rm_pkg=true    # 移除集群并卸载软件包
+./minio-rm.yml -l minio -e minio_type=silo                       # 移除 Silo 服务、配置与数据
+./minio-rm.yml -l minio -e minio_type=silo -e minio_rm_data=false  # 移除服务但保留数据和配置
+./minio-rm.yml -l minio -e minio_type=silo -e minio_rm_pkg=true    # 同时卸载 Silo 与 mcli
 ```
 
+如果配置组名与 `minio_cluster` 不同，`-l` 使用的是 Ansible 分组或主机模式，而不是逻辑集群名；请用能覆盖完整目标成员的限域表达式。
 
 
 --------
 
 ## 保护机制
 
-出于防止误删的目的，Pigsty 的 MINIO 模块提供了防误删保险，由参数 [`minio_safeguard`](/docs/minio/param#minio_safeguard) 控制。
-
-默认情况下，`minio_safeguard` 为 `false`，允许执行移除操作。如果您希望保护 MinIO 集群不被意外删除，可以在配置清单中启用此保险：
+生产集群建议在集群变量中启用防误删保险：
 
 ```yaml
-minio_safeguard: true   # 启用后，minio-rm.yml 将拒绝执行
+minio_safeguard: true
 ```
 
-如果您确实需要移除受保护的集群，可以在执行时使用命令行参数覆盖：
+确需销毁时，可在充分核对目标和备份后显式覆盖：
 
 ```bash
-./minio-rm.yml -l minio -e minio_safeguard=false
+./minio-rm.yml -l minio -e minio_type=silo -e minio_safeguard=false
 ```
+
 
 --------
 

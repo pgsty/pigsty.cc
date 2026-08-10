@@ -205,8 +205,12 @@ make rmi          # 删除当前版本的 pigsty 镜像
 
 ```bash
 make clean        # 停止并删除容器
-make purge        # 删除容器并清空数据（2 秒倒计时，可用 Ctrl+C 中止）
+make purge        # 停止并删除容器，然后直接删除当前目录的 ./data
 ```
+
+{{% alert title="谨慎执行 make purge" color="warning" %}}
+当前 Makefile 不再提供倒计时确认；`make purge` 会在移除容器后直接执行 `rm -rf -- ./data`。请先确认当前目录与待删除数据，必要时先备份。
+{{% /alert %}}
 
 
 ----------------
@@ -232,7 +236,7 @@ docker exec -it pigsty ./deploy.yml
 make run          # 使用 docker run 启动
 make exec         # 进入容器
 make clean        # 停止并删除容器
-make purge        # 删除容器并清空数据
+make purge        # 删除容器并直接删除当前目录的 ./data
 ```
 
 
@@ -298,7 +302,7 @@ PIGSTY_HTTP_PORT=8888 PIGSTY_PG_PORT=5433 docker compose up -d
 容器数据默认挂载到 `./data` 目录。如果需要清空数据重新开始：
 
 ```bash
-make purge        # 删除容器并清空数据（2 秒倒计时，可用 Ctrl+C 中止）
+make purge        # 删除容器并直接删除当前目录的 ./data（无倒计时确认）
 ```
 
 ### macOS 上的性能

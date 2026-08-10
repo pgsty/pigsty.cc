@@ -46,7 +46,7 @@ INFRA 模块负责配置 Pigsty 的基础设施组件：本地软件源、Nginx�
 
 | 参数                                |     类型     | 级别  | 说明                     |
 |:----------------------------------|:----------:|:---:|:-----------------------|
-| [`ca_create`](#ca_create)         |   `bool`   | `G` | 不存在时是否创建 CA？默认为 true   |
+| [`ca_create`](#ca_create)         |   `bool`   | `G` | 私钥缺失时是否允许创建？默认为 true  |
 | [`ca_cn`](#ca_cn)                 |  `string`  | `G` | CA CN 名称，固定为 pigsty-ca |
 | [`cert_validity`](#cert_validity) | `interval` | `G` | 证书有效期，默认为 20 年         |
 {.full-width}
@@ -286,7 +286,7 @@ proxy_env:
 Pigsty 使用自签名 CA 证书，用于支持高级安全特性，例如 HTTPS 访问、PostgreSQL SSL 连接等。
 
 ```yaml
-ca_create: true                   # 如果 CA 不存在，是否创建？默认为 true
+ca_create: true                   # CA 私钥缺失时是否允许创建？默认为 true
 ca_cn: pigsty-ca                  # CA CN名称，固定为 pigsty-ca
 cert_validity: 7300d              # 证书有效期，默认为 20 年
 ```
@@ -296,16 +296,16 @@ cert_validity: 7300d              # 证书有效期，默认为 20 年
 
 参数名称： `ca_create`， 类型： `bool`， 层次：`G`
 
-如果 CA 不存在，是否创建？默认值为 `true`。
+如果 CA 私钥不存在，是否允许创建？默认值为 `true`。
 
-当设置为 `true` 时，如果 `files/pki/ca` 目录中不存在 CA 公私钥对，Pigsty 将会自动创建一个新的 CA。
+当设置为 `true` 时，如果 `files/pki/ca/ca.key` 不存在，Pigsty 将自动创建新的 CA 私钥；如果 `ca.crt` 不存在，则使用现有或新建的私钥签发 CA 证书。
 
 如果您已经有了一对 CA 公私钥对，可以将其复制到 `files/pki/ca` 目录下：
 
 - `files/pki/ca/ca.crt`：CA 公钥证书
 - `files/pki/ca/ca.key`：CA 私钥文件
 
-Pigsty 将会使用现有的 CA 公私钥对，而不是新建一个。如果 CA 不存在且此参数设置为 `false`，则会报错终止。
+Pigsty 将复用现有的 CA 公私钥对。如果私钥不存在且此参数设置为 `false`，则会报错终止；仅缺少 `ca.crt` 时仍会用现有私钥重新签发证书。因此，请始终把匹配的 `ca.key` 与 `ca.crt` 成对备份和恢复，避免出现证书与私钥不匹配的状态。
 
 **请务必保留并备份好部署过程中新生成的 CA 私钥文件，这对于后续签发新证书至关重要。**
 
@@ -495,7 +495,9 @@ infra_extra_services:
 
 在初始化过程中，Pigsty 会从互联网上游仓库（由 [`repo_upstream`](#repo_upstream) 指定）下载所有软件包及其依赖项（由 [`repo_packages`](#repo_packages) 指定）到 [`{{ nginx_home }}`](#nginx_home) / [`{{ repo_name }}`](#repo_name) （默认为 `/www/pigsty`），所有软件及其依赖的总大小约为 1GB 左右。
 
-创建本地软件仓库时，如果仓库已存在（判断方式：仓库目录中有一个名为 `repo_complete` 的标记文件）Pigsty 将认为仓库已经创建完成，跳过软件下载阶段，直接使用构建好的仓库。
+当前源码使用 SOW 0.2.0 统一生成 RPM/APT 元数据。创建成功后，仓库目录中的 `repo_complete` 同时是 SHA-256 校验清单与完成标记；检测到该文件时，Pigsty 默认跳过下载和重建，直接使用已有仓库。强制重建需要执行 `./infra.yml -t repo_build -e repo_build=true`。
+
+`repo_create` 与 `cache_create` 都直接调用 `sow create --pigsty`，不再回退到 `createrepo_c` 或 `dpkg-scanpackages`。旧离线包或旧本地仓库若不含 SOW，必须先刷新介质或从 Pigsty INFRA 仓库安装 SOW。
 
 如果某些软件包的下载速度太慢，您可以通过使用 [`proxy_env`](#proxy_env) 配置项来设置下载代理来完成首次下载，或直接下载预打包的 [离线软件包](/docs/setup/offline)，离线软件包本质上就是在同样操作系统上构建好的本地软件源。
 
@@ -534,7 +536,7 @@ repo_url_packages: []             # 通过 URL 下载的额外软件包
 
 本地软件仓库的家目录，默认为 Nginx 的根目录，也就是： `/www`。
 
-这个目录实际上是指向 [`nginx_data`](#nginx_data) 的软链接，不建议修改此目录。如果修改，需要和 [`nginx_home`](#nginx_home) 保持一致。
+全新安装且该路径不存在时，角色会创建指向 [`nginx_data`](#nginx_data) 的软链接；已经存在的目录或软链接会原样保留。通常不建议修改此目录；如需修改，应与 [`nginx_home`](#nginx_home) 保持一致。
 
 
 
@@ -592,6 +594,8 @@ Pigsty 默认会在基础设施节点 80/443 端口启动 Nginx，对外提供�
 
 当 Pigsty 尝试添加上游仓库时，会根据此参数的值来过滤 [`repo_upstream`](#repo_upstream) 中的条目，只有 `module` 字段与此参数值匹配的条目才会被添加到本地软件源中。
 
+构建阶段会自动把 `infra` 加入实际模块列表，以确保可以安装 SOW；即使用户覆盖 `repo_modules` 时漏写 `infra`，该引导依赖仍会被补齐。
+
 模块以逗号分隔，可用的模块列表请参考 `repo_upstream` 中的定义，常见模块包括：
 
 - `local`：本地 Pigsty 仓库
@@ -633,7 +637,10 @@ Pigsty 为当前支持的操作系统版本（EL 8/9/10、Debian 12/13、Ubuntu 
   baseurl:                        # 仓库 URL，按区域配置
     default: 'https://repo.pigsty.io/yum/pgsql/el$releasever.$basearch'
     china: 'https://repo.pigsty.cc/yum/pgsql/el$releasever.$basearch'
+  # meta: { module_hotfixes: 1 } # 仅在明确替代 EL 模块流时启用
 ```
+
+RPM 上游仓库默认保留系统原生 DNF 模块过滤；只有确实要替代模块流的软件源才应显式设置 `meta.module_hotfixes`。Pigsty 聚合本地仓库自身会以 `module_hotfixes=1` 使用，但不会生成伪造的 `modules.yaml` / ModuleMD 元数据。
 
 用户通常不需要修改此参数，除非有特殊的仓库需求。详细的仓库定义请参考 [`roles/node_id/vars/`](https://github.com/pgsty/pigsty/blob/main/roles/node_id/vars/) 目录下对应操作系统的配置文件。
 
@@ -649,14 +656,14 @@ Pigsty 为当前支持的操作系统版本（EL 8/9/10、Debian 12/13、Ubuntu 
 本参数没有默认值，即默认值为未定义状态。如果该参数没有被显式定义，那么 Pigsty 会从 [`roles/node_id/vars`](https://github.com/pgsty/pigsty/blob/main/roles/node_id/vars/) 中定义的 `repo_packages_default` 变量中加载获取默认值，默认值为：
 
 ```yaml
-[ node-bootstrap, infra-package, infra-addons, node-package1, node-package2, pgsql-utility, extra-modules ]
+[ node-bootstrap, infra-package, infra-addons, node-package1, node-package2, node-package3, pgsql-utility, extra-modules ]
 ```
 
 该参数中的每个元素，都会在上述文件中定义的 `package_map` 中，根据特定的操作系统发行版大版本进行翻译。例如在 EL 系统上会翻译为：
 
 ```yaml
-node-bootstrap:          "ansible python3 python3-pip python3-virtualenv python3-requests python3-jmespath python3-cryptography dnf-utils modulemd-tools createrepo_c sshpass"
-infra-package:           "nginx dnsmasq etcd haproxy vip-manager node-exporter keepalived-exporter pg-exporter pgbackrest-exporter redis-exporter redis minio mcli pig"
+node-bootstrap:          "ansible python3 python3-requests python3-jmespath python3-cryptography dnf-utils sow sshpass"
+infra-package:           "nginx dnsmasq etcd haproxy vip-manager node-exporter keepalived-exporter pg-exporter pgbackrest-exporter redis-exporter redis valkey silo mcli sow pig"
 infra-addons:            "grafana grafana-plugins grafana-victoriametrics-ds grafana-victorialogs-ds victoria-metrics victoria-logs victoria-traces vlogscli vmutils vector alertmanager"
 ```
 

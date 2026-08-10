@@ -1,12 +1,12 @@
 ---
 title: demo/minio
 weight: 1040
-description: 四节点 x 四盘位的高可用多节点多盘 MinIO 集群演示
+description: 四节点 x 四盘位的高可用 S3 对象存储集群演示；当前源码默认使用 Silo。
 icon: fa-solid fa-box-archive
 categories: [参考]
 ---
 
-`demo/minio` 配置模板演示了如何部署一套四节点 x 四盘位、总计十六盘的高可用 MinIO 集群，提供 S3 兼容的对象存储服务。
+`demo/minio` 配置模板演示如何部署四节点 x 四盘位、总计十六盘的高可用 S3 对象存储集群。模板沿用 MINIO 模块的兼容命名，但没有覆盖 `minio_type`，因此当前源码会部署默认的 **Silo**；如需旧 MinIO 或 RustFS，应分别显式设置 `minio_type: minio` 或 `minio_type: rustfs`。移除角色没有引擎默认值，使用原样模板执行 `minio-rm.yml` 时还必须显式传入 `-e minio_type=silo`。
 
 更多教程，请参考 **[MINIO](/docs/minio/)** 模块文档。
 
@@ -17,7 +17,7 @@ categories: [参考]
 
 - 配置名称： `demo/minio`
 - 节点数量： 四节点
-- 配置说明：高可用多节点多盘 MinIO 集群演示
+- 配置说明：高可用多节点多盘 S3 对象存储集群演示（当前默认 Silo）
 - 适用系统：`el8`, `el9`, `el10`, `d12`, `d13`, `u22`, `u24`, `u26`
 - 适用架构：`x86_64`, `aarch64`
 - 相关配置：[`meta`](/docs/conf/meta/)
@@ -44,7 +44,7 @@ categories: [参考]
 
 ## 配置解读
 
-`demo/minio` 模板是 MinIO 生产级部署的参考配置，展示了多节点多盘 (MNMD) 架构。
+`demo/minio` 模板是对象存储生产部署的参考配置，展示了多节点多盘（MNMD）架构。其卷布局、HAProxy 健康检查与客户端仍使用 MinIO 兼容接口。
 
 **关键特性**：
 - **多节点多盘架构**：4 节点 × 4 盘 = 16 盘纠删码组
@@ -55,7 +55,7 @@ categories: [参考]
 **访问方式**：
 
 ```bash
-# 使用 mcli 配置 MinIO 别名（通过 HAProxy 负载均衡）
+# 使用 mcli 配置 S3 别名（通过 HAProxy 负载均衡）
 mcli alias set sss https://sss.pigsty:9002 minioadmin S3User.MinIO
 
 # 列出存储桶

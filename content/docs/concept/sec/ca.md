@@ -26,8 +26,8 @@ Pigsty 的做法是把 PKI 也纳入声明式管理：部署时自动创建本�
 | `files/pki/ca/ca.crt` | CA 根证书：可以自由分发         | `0644`            |
 {.full-width}
 
-- CA 的行为由 [`ca_create`](/docs/infra/param#ca_create) 控制：CA 文件已存在则原样复用（幂等），不存在则新建；
-  设为 `false` 时若找不到 CA 文件，部署会直接报错中止，防止意外生成新的信任根。
+- CA 的行为由 [`ca_create`](/docs/infra/param#ca_create) 控制：已有私钥与证书会原样复用；证书缺失但私钥存在时，会用该私钥重新签发证书。
+  `ca_create: false` 只禁止创建缺失的 CA 私钥；找不到 `ca.key` 时部署会直接中止，防止意外生成新的信任根。请始终成对备份和恢复 `ca.key` 与 `ca.crt`。
 - CA 证书的 CN 由 [`ca_cn`](/docs/infra/param#ca_cn) 指定，默认 `pigsty-ca`；密钥为 RSA 4096 位。
 - 有效期：CA 根证书 100 年，组件证书默认 20 年（[`cert_validity`](/docs/infra/param#cert_validity)：`7300d`）。
   面向浏览器的 Nginx 证书是例外，当前默认有效期为 397 天。
@@ -75,7 +75,9 @@ psql "host=pg-meta dbname=postgres user=dbuser_dba sslmode=verify-full sslrootce
 | [**PgBouncer**](/docs/concept/arch/pgsql#pgbouncer)   | 复用 PostgreSQL 证书    | `/pg/cert/`                  | TLS 默认关闭（[`pgbouncer_sslmode`](/docs/pgsql/param#pgbouncer_sslmode)）           |
 | [**Patroni**](/docs/concept/arch/pgsql#patroni)       | 复用 PostgreSQL 证书    | `/pg/cert/`                  | API HTTPS 默认关闭（[`patroni_ssl_enabled`](/docs/pgsql/param#patroni_ssl_enabled)） |
 | [**etcd**](/docs/concept/arch/pgsql#etcd)             | `<实例名>`             | `/etc/etcd/server.{crt,key}` | 客户端与对等通信使用 TLS                                                                 |
-| [**MinIO**](/docs/concept/model/minio)                | `<节点名>`             | `~minio/.minio/certs/`       | HTTPS 默认开启（[`minio_https`](/docs/minio/param#minio_https)）                     |
+| [**对象存储**](/docs/concept/model/minio)                | `<节点名>`             | Silo/MinIO：`~minio/.minio/certs/`；RustFS：`~minio/.rustfs/certs/` | HTTPS 默认开启（[`minio_https`](/docs/minio/param#minio_https)）                     |
+| [**Kafka**](/docs/kafka/)                            | `<集群>-<序号>`         | `/etc/kafka/pki/kafka.pem`  | `kafka_security: scram` 时启用 SASL_SSL/SSL；默认 `plaintext`                         |
+| [**MySQL**](/docs/pilot/mysql/)                      | `<实例名>`             | `/etc/mysql/pki/server.{crt,key}` | 强制安全传输；客户端与组复制校验证书链                                                        |
 | [**Nginx**](/docs/concept/arch/infra#nginx)           | `pigsty`（SAN 含门户域名） | `/etc/nginx/conf.d/cert/`    | HTTPS 默认开启（[`nginx_sslmode`](/docs/infra/param#nginx_sslmode)）                 |
 | [**INFRA 节点**](/docs/concept/arch/node#infra节点)       | `<节点名>`             | `/etc/pki/infra.{crt,key}`   | 供基础设施组件使用                                                                      |
 {.full-width}
@@ -83,7 +85,7 @@ psql "host=pg-meta dbname=postgres user=dbuser_dba sslmode=verify-full sslrootce
 表中的“加密状态”一列如实反映了默认配置的取舍：
 
 - **部署时启用**：PostgreSQL 服务端可以接受 SSL 连接，etcd 的客户端与对等通信使用 TLS。
-- **默认加密**：MinIO（备份流量）与 Nginx（Web 流量）默认启用 HTTPS。
+- **默认加密**：MINIO 模块的对象存储备份流量与 Nginx Web 流量默认启用 HTTPS。
 - **默认关闭，按需启用**：Patroni REST API 与 PgBouncer 的 TLS 默认关闭，证书已经就位，可以通过相应参数开启；[**`ha/safe`**](/docs/conf/safe) 模板中两者均默认开启。
 
 还有一层需要分清的区别：**服务端支持 SSL 不等于强制客户端使用 SSL，更不等于客户端验证了服务端身份**。
@@ -115,7 +117,7 @@ files/pki/ca/ca.key    # 您的 CA 私钥（或中间 CA 私钥）
 files/pki/ca/ca.crt    # 对应的 CA 证书
 ```
 
-同时建议设置 `ca_create: false`：这样当文件缺失时部署会显式失败，避免意外创建新的自签名 CA，破坏既有的信任链。
+同时建议设置 `ca_create: false`：这样当私钥缺失时部署会显式失败，避免意外创建新的信任根。该开关不会阻止角色在私钥存在、证书缺失时重新签发 CA 证书，因此仍应成对检查并恢复这两个文件。
 
 
 ---------------

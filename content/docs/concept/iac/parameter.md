@@ -14,19 +14,20 @@ categories: [概念]
 
 ## 参数列表
 
-Pigsty 提供了 **350** 个配置参数，分布在 9 个模块中，用于精细控制系统的各个方面，完整列表见 [**参考-参数列表**](/docs/ref/param)。
+按照当前源码与参数参考页对账，Pigsty 的 10 个正式模块共有 **379** 个公开参数，用于精细控制系统的各个方面；完整列表见 [**参考-参数列表**](/docs/ref/param)。原生 MySQL 8.4 试点模块的 10 个公开参数单列，不计入该合计。
 
-| 模块                               | 参数组 | 参数数 | 说明                             |
-|:---------------------------------|:---:|:---:|:-------------------------------|
-| [**PGSQL**](/docs/pgsql/param)   |  9  | 124 | PostgreSQL 高可用集群配置             |
-| [**INFRA**](/docs/infra/param)   | 10  | 72  | 软件仓库与 Victoria 可观测基础设施         |
-| [**NODE**](/docs/node/param)     | 11  | 73  | 节点初始化、系统调优与运维基线                |
-| [**ETCD**](/docs/etcd/param)     |  2  | 13  | ETCD 集群与移除保护参数                 |
-| [**MINIO**](/docs/minio/param)   |  2  | 21  | MinIO 部署与移除参数                  |
-| [**REDIS**](/docs/redis/param)   |  2  | 21  | Redis 部署与移除参数                  |
-| [**DOCKER**](/docs/docker/param) |  1  |  8  | Docker 引擎参数                    |
-| [**JUICE**](/docs/juice/param)   |  1  |  2  | JuiceFS 实例与缓存参数                |
-| [**VIBE**](/docs/vibe/param)     |  1  | 16  | Code/Jupyter/Node.js/Claude 配置 |
+| 模块                               | 参数组 | 参数数 | 说明                                   |
+|:---------------------------------|:---:|:---:|:-------------------------------------|
+| [**PGSQL**](/docs/pgsql/param)   |  9  | 124 | PostgreSQL 高可用集群配置                   |
+| [**INFRA**](/docs/infra/param)   | 10  | 73  | 软件仓库与 Victoria 可观测基础设施               |
+| [**NODE**](/docs/node/param)     | 11  | 73  | 节点初始化、系统调优与运维基线                      |
+| [**ETCD**](/docs/etcd/param)     |  2  | 13  | ETCD 集群与移除保护参数                       |
+| [**MINIO**](/docs/minio/param)   |  2  | 28  | Silo、MinIO、RustFS 部署、观测与移除参数         |
+| [**REDIS**](/docs/redis/param)   |  2  | 22  | Redis/Valkey 部署与移除参数                 |
+| [**DOCKER**](/docs/docker/param) |  1  |  8  | Docker 引擎参数                          |
+| [**JUICE**](/docs/juice/param)   |  1  |  2  | JuiceFS 实例与缓存参数                      |
+| [**VIBE**](/docs/vibe/param)     |  1  | 18  | Code/Jupyter/Node.js/Claude/Codex 配置 |
+| [**KAFKA**](/docs/kafka/param)   |  2  | 18  | Kafka 部署参数与移除保护参数                    |
 {.stretch-last}
 
 
@@ -91,6 +92,6 @@ all:                            # <------- 顶级对象：all
 | [**`REDIS`**](/docs/redis/param/)         | `redis_cluster`, `redis_node`, `redis_instances` |
 | [**`INFRA`**](/docs/infra/param#infra_id) | `infra_seq`                                      |
 
-例外是，[**`etcd_cluster`**](/docs/etcd/param#etcd_cluster) 与 [**`minio_cluster`**](/docs/minio/param#minio_cluster) 有默认值。
-它假设每套部署只有一套 etcd 集群用于 DCS，和一套可选 MinIO 集群用于集中备份存储，因此为其分配了默认的集群名称 `etcd` 与 `minio`。
-但您依然可以使用其他名称部署多套 etcd 或 MinIO 集群。
+例外是 [**`etcd_cluster`**](/docs/etcd/param#etcd_cluster) 仍有默认值 `etcd`。
+对象存储的 [**`minio_cluster`**](/docs/minio/param#minio_cluster) 已不再提供默认值，必须在每个对象存储集群的变量中显式定义；
+不要放在 `all.vars` 中，否则会把所有主机标记为 MINIO 模块成员。

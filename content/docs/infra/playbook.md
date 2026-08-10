@@ -63,7 +63,7 @@ Pigsty 提供了三个与 INFRA 模块相关的剧本：
 - 本剧本为幂等剧本，重复执行默认不会清理历史数据与 Grafana 数据
 - 如需保留历史监控数据，请先将 `vmetrics_clean`、`vlogs_clean`、`vtraces_clean` 设置为 `false`
 - 如果设置 `grafana_clean` 为 `true`，Grafana 数据库会被清理，原有仪表盘与配置会丢失
-- 当本地软件仓库 `/www/pigsty/repo_complete` 存在时，本剧本会跳过从互联网下载软件的任务
+- 当本地软件仓库 `/www/pigsty/repo_complete` 存在时，本剧本会跳过互联网下载；该文件是 SOW 生成的 SHA-256 清单与完成标记
 - 完整执行该剧本耗时约1～3分钟，视机器配置与网络条件而异
 
 
@@ -87,9 +87,9 @@ Pigsty 提供了三个与 INFRA 模块相关的剧本：
 #       - repo_add       : add upstream repo files to /etc/yum.repos.d
 #     - repo_url_pkg     : download packages from internet defined by repo_url_packages
 #     - repo_cache       : make upstream yum cache with yum makecache
-#     - repo_boot_pkg    : install bootstrap pkg such as createrepo_c,yum-utils,...
+#     - repo_boot_pkg    : install sow and dnf/yum download utilities
 #     - repo_pkg         : download packages & dependencies from upstream repo
-#     - repo_create      : create a local yum repo with createrepo_c & modifyrepo_c
+#     - repo_create      : atomically create RPM/APT metadata with sow create --pigsty
 #     - repo_use         : add newly built repo into /etc/yum.repos.d
 #   - repo_nginx    : launch a nginx for repo if no nginx is serving
 #

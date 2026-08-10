@@ -70,7 +70,7 @@ pg_listen: '${ip},${vip},${lo}'
 - PostgreSQL 服务端默认启用 TLS，但内网 HBA 默认不强制 TLS；
 - PgBouncer TLS 默认关闭，由 [**`pgbouncer_sslmode`**](/docs/pgsql/param#pgbouncer_sslmode) 控制；
 - Patroni REST API HTTPS 默认关闭，由 [**`patroni_ssl_enabled`**](/docs/pgsql/param#patroni_ssl_enabled) 控制；
-- Nginx 与 MinIO 默认启用 HTTPS；etcd 客户端和对等通信使用 TLS。
+- Nginx 与 MINIO 模块所选对象存储后端默认启用 HTTPS；etcd 客户端和对等通信使用 TLS。
 
 HBA 的 `auth: ssl` 只要求加密连接。客户端还应使用 `sslmode=verify-full` 和可信 CA 验证数据库服务端，详见 [**加密通信**](/docs/concept/sec/ca#客户端验证服务端)。
 
@@ -120,7 +120,7 @@ watchdog 在 CRIT 中配置为 `automatic`，只有系统存在可用 watchdog �
 ## 备份与恢复
 
 - 本地 pgBackRest 仓库默认不加密，并与数据库主机共享故障域；
-- MinIO 仓库默认启用 AES-256-CBC，但 `cipher_pass: pgBackRest` 是公开值，必须替换；
+- `pgbackrest_method: minio` 对象存储仓库默认启用 AES-256-CBC，但 `cipher_pass: pgBackRest` 是公开值，必须替换；
 - `ha/safe` 中的 `pgBR.${pg_cluster}` 也是示例值，不应作为最终密钥；
 - 重要备份应保存到独立故障域，并评估对象锁、版本控制或离线副本；
 - 定期执行全量恢复和 PITR 演练，验证 WAL、密钥、恢复时间和应用一致性。

@@ -77,22 +77,22 @@ pgbackrest_repo:                  # pgbackrest 仓库配置: https://pgbackrest.
 
 ## 使用 MinIO 仓库
 
-[**MinIO**](/docs/minio) 是 Pigsty 内置支持的 S3 兼容对象存储，作为集中备份仓库使用时，
-为备份提供独立于数据库主机的故障域。启用方式：部署 MinIO 集群，然后将备份方法切换为 `minio`：
+[**MINIO 模块**](/docs/minio) 可部署 Silo、MinIO 或 RustFS S3 兼容对象存储。
+作为集中备份仓库时，它为备份提供独立于数据库主机的故障域。部署对象存储集群后，将备份方法切换为 `minio`：
 
 ```yaml
 all:
   vars:
     pgbackrest_method: minio      # 使用 minio 作为默认备份仓库
   children:                       # 定义一个单节点 minio SNSD 集群
-    minio: { hosts: { 10.10.10.10: { minio_seq: 1 }} ,vars: { minio_cluster: minio }}
+    minio: { hosts: { 10.10.10.10: { minio_seq: 1 }} ,vars: { minio_cluster: minio, minio_type: silo }}
 ```
 
-Pigsty 的 MinIO 仓库预设通过域名（默认 `sss.pigsty`）和 HTTPS 端点访问对象存储，
+Pigsty 的 `minio` 仓库预设通过域名（默认 `sss.pigsty`）和 HTTPS 端点访问对象存储，
 并使用自签名 CA（`/etc/pki/ca.crt`）验证这条链路。
-默认的 `pgsql` 桶与 `pgbackrest` 访问用户在 MinIO 集群初始化时自动创建。
+默认的 `pgsql` 桶与 `pgbackrest` 访问用户在 MINIO 模块初始化时自动创建。
 
-对于严肃的生产部署，建议使用多节点 MinIO 集群（MNMD，纠删码容错），参阅 [**MinIO 配置**](/docs/minio)。
+对于严肃的生产部署，建议使用经过验证的多节点对象存储集群（MNMD，纠删码容错），参阅 [**MINIO 配置**](/docs/minio/config)。
 
 
 --------

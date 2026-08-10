@@ -175,7 +175,7 @@ pg_users:
 [**Patroni REST API**](/docs/concept/arch/pgsql#patroni) 承载高可用控制指令（重启、切换、重载配置），写操作要求 HTTP Basic 认证（[`patroni_username`](/docs/pgsql/param#patroni_username) 与 [`patroni_password`](/docs/pgsql/param#patroni_password)），
 且来源受地址白名单限制；启用 [`patroni_ssl_enabled`](/docs/pgsql/param#patroni_ssl_enabled) 后 API 全程走 HTTPS。
 
-Grafana、HAProxy 管理界面、MinIO、etcd 等组件的凭证同样在配置清单中声明，完整清单与修改方式见 [**合规实践**](/docs/concept/sec/compliance#默认凭证清单)。
+Grafana、HAProxy 管理界面、MINIO 模块对象存储后端、etcd 等组件的凭证同样在配置清单中声明，完整清单与修改方式见 [**合规实践**](/docs/concept/sec/compliance#默认凭证清单)。
 
 
 ---------------------

@@ -62,7 +62,7 @@ redis_join        : 组建redis原生集群（仅cluster模式）
 ```
 
 集群级别操作会：
-- 在所有节点上安装 Redis 软件包
+- 按 `redis_type` 安装 Redis 或 Valkey，并安装 `redis-exporter`
 - 在所有节点上创建 redis 用户和目录结构
 - 启动所有节点上的 redis_exporter
 - 部署并启动所有定义的 Redis 实例
@@ -85,7 +85,7 @@ redis_join        : 组建redis原生集群（仅cluster模式）
 - 重新部署某个节点上的所有实例
 - 节点故障恢复后重新初始化
 
-> **注意**：节点级别命令仍会进入 `redis-ha` / `redis-join` 的模式判断：在 `sentinel` 模式下会刷新哨兵纳管目标，在 `cluster` 模式下可能再次触发 `--cluster create`（该步骤 `ignore_errors: true`，但并非幂等）。扩容原生集群时仍建议手工执行 `redis-cli --cluster add-node` 与 `reshard`。
+> **注意**：节点级别命令仍会进入 `redis-ha` / `redis-join` 的模式判断：在 `sentinel` 模式下会刷新哨兵纳管目标；在 `cluster` 模式下，剧本先使用所选 CLI 检查种子实例的 `cluster_state:ok`，已健康则退出，否则执行 `--cluster create`。这个检查不会替代扩容流程，向既有原生集群加节点仍应手工执行 `redis-cli` / `valkey-cli --cluster add-node` 与 `reshard`。
 
 
 ### 实例级别操作
@@ -137,11 +137,11 @@ redis_join        : 组建redis原生集群（仅cluster模式）
 
 ### 幂等性说明
 
-`redis.yml` 的大部分任务可安全重复执行，但 `redis-join` 例外：
+`redis.yml` 的大部分任务可安全重复执行；原生集群初始化仍需注意拓扑状态：
 
 - `redis_node` / `redis_exporter` / `redis_instance` / `redis_register` 重复执行会覆盖配置并重启实例
 - `redis-ha` 重复执行会按 `redis_sentinel_monitor` 重新下发 `SENTINEL REMOVE/MONITOR`
-- `redis-join` 使用 `redis-cli --cluster create`，不是幂等操作；重复执行在已建集群上通常会报错（剧本当前为 `ignore_errors: true`）
+- `redis-join` 会先检查种子实例是否已经达到 `cluster_state:ok`，健康集群会直接退出；未完成、损坏或正在扩容的拓扑不会由这个检查自动修复，不能把它当作通用的 add-node/reshard 操作
 
 > **提示**：如果只想更新配置而不想重启所有实例，可以使用 `-t redis_config` 仅渲染配置，然后手动重启需要的实例。
 
@@ -161,7 +161,7 @@ redis_deregister : 从监控系统移除注册信息
 redis_exporter   : 停止并禁用 redis_exporter
 redis            : 停止并禁用 redis 实例
 redis_data       : 删除数据目录（当 redis_rm_data=true）
-redis_pkg        : 卸载软件包（当 redis_rm_pkg=true）
+redis_pkg        : 卸载所选引擎与 redis-exporter（当 redis_rm_pkg=true）
 ```
 
 
@@ -191,7 +191,7 @@ redis_pkg        : 卸载软件包（当 redis_rm_pkg=true）
 - 停止所有节点上的 redis_exporter
 - 停止并禁用所有 Redis 实例
 - 删除所有数据目录（如果 `redis_rm_data=true`）
-- 卸载软件包（如果 `redis_rm_pkg=true`）
+- 卸载 `redis_type` 指定的引擎与 `redis-exporter`（如果 `redis_rm_pkg=true`）
 
 
 ### 节点级别移除
@@ -254,7 +254,7 @@ redis_pkg        : 卸载软件包（当 redis_rm_pkg=true）
 |:------------------|:--------|:-------------------------|
 | `redis_safeguard` | `false` | 安全保险，设为 `true` 时拒绝执行移除操作 |
 | `redis_rm_data`   | `true`  | 是否删除数据目录（RDB/AOF 文件）     |
-| `redis_rm_pkg`    | `false` | 是否卸载 Redis 软件包           |
+| `redis_rm_pkg`    | `false` | 是否卸载所选引擎与 redis-exporter |
 {.full-width}
 
 使用示例：

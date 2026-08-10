@@ -37,7 +37,9 @@ pg-test:
     pg_cluster: pg-test
 ```
 
-这段配置言简意赅，自我描述，仅由 [**身份参数**](/docs/concept/model/pgsql#身份参数) 构成，请注意 Ansible Group 分组名应当与 [`pg_cluster`](/docs/pgsql/param#pg_cluster) 保持一致。
+这段配置言简意赅，自我描述，仅由 [**身份参数**](/docs/concept/model/pgsql#身份参数) 构成。为方便使用 `-l pg-test` 限定目标，
+通常仍建议让 Ansible Group 分组名与 [`pg_cluster`](/docs/pgsql/param#pg_cluster) 一致，但这不是成员发现的硬约束；
+当前源码会按各主机的 `pg_cluster` 身份计算实际成员，因此同一 PostgreSQL 集群可以跨越多个清单分组。
 
 使用以下命令创建该集群：
 

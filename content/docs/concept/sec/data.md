@@ -59,7 +59,7 @@ Pigsty 默认启用 [**pgBackRest**](/docs/concept/arch/pgsql#pgbackrest)（[`pg
 
 静态数据的保密性分三层展开：
 
-**备份加密**。MinIO 备份仓库默认启用 AES-256-CBC 加密，但默认加密口令（`pgBackRest`）是公开的，生产环境必须修改。
+**备份加密**。`pgbackrest_method: minio` 表示 S3 兼容对象存储仓库（可由 Silo、MinIO、RustFS 或外部 S3 提供），默认启用 AES-256-CBC 加密；默认加密口令 `pgBackRest` 是公开值，生产环境必须修改。
 [**`ha/safe`**](/docs/conf/safe) 模板按集群名称区分加密口令：
 
 ```yaml

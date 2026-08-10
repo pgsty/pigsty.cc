@@ -133,7 +133,7 @@ Pigsty 允许您定义自己的服务：
 - [`haproxy_services`](/docs/node/param#haproxy_services)：直接定制 HAProxy 服务内容，可以用于其他组件的接入
 
 对于 PostgreSQL 集群来说，通常只需要关注前两者即可。
-每一条服务定义都会在所有相关 HAProxy 实例的配置目录下生成一个新的配置文件：[`/etc/haproxy/<pg_cluster>-<service>.cfg`](https://github.com/pgsty/pigsty/blob/main/roles/pgsql/templates/service.cfg)
+每一条服务定义都会在所有相关 HAProxy 实例的配置目录下生成一个新的配置文件：[`/etc/haproxy/conf.d/<pg_cluster>-<service>.cfg`](https://github.com/pgsty/pigsty/blob/main/roles/pgsql/templates/service.cfg)
 下面是一个自定义的服务样例 `standby`：当您想要对外提供没有复制延迟的只读服务时，就可以在  [`pg_services`](/docs/pgsql/param#pg_services) 新增这条记录：
 
 ```yaml
@@ -149,7 +149,7 @@ Pigsty 允许您定义自己的服务：
   options: 'inter 3s fastinter 1s downinter 5s rise 3 fall 3 on-marked-down shutdown-sessions slowstart 30s maxconn 3000 maxqueue 128 weight 100'
 ```
 
-而上面的服务定义，在样例的三节点 `pg-test` 上将会被转换为 haproxy 配置文件 `/etc/haproxy/pg-test-standby.cfg`：
+而上面的服务定义，在样例的三节点 `pg-test` 上将会被转换为 HAProxy 配置文件 `/etc/haproxy/conf.d/pg-test-standby.cfg`：
 
 ```text
 #---------------------------------------------------------------------

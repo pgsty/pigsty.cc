@@ -143,6 +143,9 @@ Pigsty 将从上游仓库重新下载所需的 **增量**。
 
 如果您选择的操作系统不在默认列表中，您可以使用内置的 [**`cache.yml`**](https://github.com/pgsty/pigsty/blob/main/cache.yml) 剧本制作自己的离线软件包：
 
+> [!IMPORTANT]
+> 当前 v4.5 开发源码的 `repo_create` 与 `cache_create` 都要求 SOW 0.2.0，并会执行 `sow create --pigsty`。v4.4.0 正式离线包是旧发布制品，不能据此推断其中已经包含 SOW；用当前源码重建旧仓库前，应先从 Pigsty INFRA 仓库补齐 SOW，或刷新为匹配开发版本的离线介质。
+
 1. 找到一台运行完全相同操作系统版本，且可以访问互联网的节点
 2. 使用 [**`rich`**](/docs/conf/rich) 配置模板执行 [**在线安装**](/docs/setup/install/)（`./configure -c rich`），并确认目标 Infra 节点的 `/www/pigsty` 本地仓库已经生成；若尚未生成，可先对该节点执行 `./infra.yml -t repo`
 3. `cd ~/pigsty; ./cache.yml -l <infra-host>`：明确选择一个已经具备本地仓库的 Infra 节点，制作并取回离线软件包

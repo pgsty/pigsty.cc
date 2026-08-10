@@ -92,8 +92,7 @@ Pigsty 会在安装时首先建立一个本地软件源，以加速后续软件�
 
 该软件源由 Nginx 提供服务，默认位于为 `/www/pigsty`，可以访问 `http://i.pigsty/pigsty` 使用。
 
-Pigsty 的离线软件包即是将已经建立好的软件源目录（yum/apt）整个打成压缩包，当 Pigsty 尝试构建本地源时，如果发现本地源目录 `/www/pigsty` 已经存在，
-且带有 `/www/pigsty/repo_complete` 标记文件，则会认为本地源已经构建完成，从而跳过从原始上游下载软件的步骤，消除了对互联网访问的依赖。
+Pigsty 的离线软件包即是将已建立的软件源目录（RPM/APT）打成压缩包。当前源码使用 SOW 创建仓库；如果 `/www/pigsty/repo_complete` 已存在，则认为本地源已经完整构建并跳过上游下载。该文件包含 SHA-256 校验内容，不只是一个空标记。
 
 Repo 定义文件位于 `/www/pigsty.repo`，默认可以通过 `http://${admin_ip}/pigsty.repo` 获取
 
@@ -228,7 +227,7 @@ infra:
 
 ### 管理本地软件仓库
 
-您可以使用以下剧本子任务，管理 Infra 节点 上的本地 yun 源：
+您可以使用以下剧本子任务，管理 Infra 节点上的本地 RPM/APT 软件源：
 
 ```bash
 ./infra.yml -t repo              #从互联网或离线包中创建本地软件源
@@ -242,9 +241,9 @@ infra:
 ./infra.yml     -t repo_add          # 将上游仓库文件添加到 /etc/yum.repos.d （或 /etc/apt/sources.list.d）
 ./infra.yml     -t repo_url_pkg      # 从由 repo_url_packages 定义的互联网下载包
 ./infra.yml     -t repo_cache        # 使用 yum makecache / apt update 创建上游软件源元数据缓存
-./infra.yml     -t repo_boot_pkg     # 安装如 createrepo_c、yum-utils 等的引导包...（或 dpkg-）
+./infra.yml     -t repo_boot_pkg     # 安装 SOW，以及 dnf/yum 下载工具
 ./infra.yml     -t repo_pkg          # 从上游仓库下载包 & 依赖项
-./infra.yml     -t repo_create       # 使用 createrepo_c & modifyrepo_c 创建本地软件源
+./infra.yml     -t repo_create       # 使用 sow create --pigsty 原子创建 RPM/APT 元数据
 ./infra.yml     -t repo_use          # 将新建的仓库添加到 /etc/yum.repos.d | /etc/apt/sources.list.d 用起来
 ./infra.yml -t repo_nginx        # 如果没有 nginx 在服务，启动一个 nginx 作为 Web Server
 ```
@@ -254,7 +253,7 @@ infra:
 ```bash
 ./infra.yml     -t repo_upstream     # 向 INFRA 节点添加 repo_upstream 中定义的上游软件源
 ./infra.yml     -t repo_pkg          # 从上游仓库下载包及其依赖项。
-./infra.yml     -t repo_create       # 使用 createrepo_c & modifyrepo_c 创建/更新本地 yum 仓库
+./infra.yml     -t repo_create       # 使用 SOW 创建/更新本地 RPM/APT 仓库元数据
 ```
 
 

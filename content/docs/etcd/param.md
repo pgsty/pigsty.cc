@@ -308,7 +308,7 @@ etcd_rm_pkg: false                # 移除时是否卸载 etcd 软件包？
 - `/etc/etcd/` - 配置目录（包括证书和密码文件）
 - `/var/lib/etcd/` - 备用数据目录
 - `{{ etcd_data }}` - 主数据目录（默认 `/data/etcd`）
-- `{{ systemd_dir }}/etcd.service` - Systemd 服务单元文件
+- `/etc/systemd/system/etcd.service` - Systemd 服务单元文件
 - `/etc/profile.d/etcdctl.sh` - 客户端环境变量脚本
 - `/etc/vector/etcd.yaml` - Vector 日志采集配置
 

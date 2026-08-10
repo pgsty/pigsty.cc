@@ -1,13 +1,13 @@
 ---
 title: 集群配置
 weight: 3620
-description: 根据需求场景选择合适的 MinIO 部署类型，并对外提供可靠的接入。
+description: 选择 Silo、MinIO 或 RustFS，并按单机、多盘、多节点模式配置可靠的 S3 对象存储接入。
 icon: fa-solid fa-code
 module: [MINIO]
 categories: [参考]
 ---
 
-在部署 MinIO 之前，你需要在 [配置清单](/docs/setup/config) 中定义一个 MinIO 集群，MinIO 有三种经典部署模式：
+在部署 MINIO 模块之前，需要在 [配置清单](/docs/setup/config) 中定义对象存储集群，并用 [`minio_type`](/docs/minio/param#minio_type) 选择服务端。三种引擎共用以下清单部署模式：
 
 - [单机单盘：SNSD](#单机单盘)：单机单盘模式，可以使用任意目录作为数据盘，仅作为开发、测试、演示使用。
 - [单机多盘：SNMD](#单机多盘)：折中模式，在单台服务器上使用多块磁盘 (>=2)，仅当资源极为有限时使用。
@@ -15,9 +15,29 @@ categories: [参考]
 
 通常我们建议使用 SNSD 与 MNMD 这两种模式，前者用于开发测试，后者用于生产部署，SNMD 仅在资源有限（只有一台服务器）的情况下使用。
 
-此外，还可以使用 [多池部署](#多池部署) 来实现现有 MinIO 集群的扩容，或者直接部署 [多套集群](#多套集群)。
+此外，MinIO/Silo 可以使用 [多池部署](#多池部署) 扩容，或直接部署 [多套集群](#多套集群)。RustFS 的存储池变更能力应以实际使用版本的上游文档与迁移测试为准。
 
-使用多节点 MinIO 集群时，访问任意节点都可以获取服务，因此最佳实践是在 MinIO 集群前使用负载均衡与 [高可用服务接入机制](#服务接入)。
+使用多节点集群时，访问任意成员都可以获取 S3 服务，因此最佳实践是在集群前使用负载均衡与 [高可用服务接入机制](#服务接入)。
+
+
+----------------
+
+## 引擎选择
+
+```yaml
+minio_type: silo   # silo（当前源码默认）、minio 或 rustfs
+```
+
+| 值 | 软件包与服务 | 配置和证书 |
+|:---|:---|:---|
+| `silo` | `silo` / `silo.service` | `/etc/default/silo`、`~/.minio/certs/` |
+| `minio` | `minio` / `minio.service` | `/etc/default/minio`、`~/.minio/certs/` |
+| `rustfs` | `rustfs` / `rustfs.service` | `/etc/default/rustfs`、`~/.rustfs/certs/` |
+{.full-width}
+
+`minio_type` 只选择角色行为，不执行数据迁移。已有 MinIO 集群升级时应显式保留 `minio_type: minio`；切换到 Silo 或 RustFS 前必须独立验证数据、升级和回滚路径。
+
+下文部分拓扑片段为简洁起见省略 `minio_type`，按当前源码会部署默认的 Silo；文中引用的 MinIO 拓扑术语和上游链接用于说明 Silo/MinIO 兼容行为，并不表示角色仍默认安装 `minio` 软件包。
 
 
 
@@ -25,15 +45,14 @@ categories: [参考]
 
 ## 核心参数
 
-MinIO 部署中，[`MINIO_VOLUMES`](https://min.io/docs/minio/linux/reference/minio-server/settings/core.html#envvar.MINIO_VOLUMES) 是一个核心配置参数，用于指定 MinIO 的部署模式。
-Pigsty 提供了一些便捷的参数用于自动根据配置清单，生成 `MINIO_VOLUMES` 与其他配置参数的值，但您也可以直接指定它们。
+Pigsty 使用 [`minio_volumes`](/docs/minio/param#minio_volumes) 统一描述成员与磁盘。它会渲染为 Silo/MinIO 的 `MINIO_VOLUMES`，或 RustFS 的 `RUSTFS_VOLUMES`。角色会根据清单自动生成该值，也允许显式覆盖。
 
-- 单机单盘： `MINIO_VOLUMES` 指向本机上的一个普通目录，默认由 [`minio_data`](/docs/minio/param#minio_data) 指定，默认位置为 `/data/minio`。
-- 单机多盘： `MINIO_VOLUMES` 指向本机上的序列挂载点，同样是由 [`minio_data`](/docs/minio/param#minio_data) 指定，但需要用特殊语法显式覆盖指定真实挂载点，例如 `/data{1...4}`。
-- 多机多盘： `MINIO_VOLUMES` 指向多台服务器上的序列挂载点，由以下两部分自动组合生成：
+- 单机单盘：`minio_volumes` 指向本机上的普通目录，默认由 [`minio_data`](/docs/minio/param#minio_data) 生成，默认位置为 `/data/minio`。
+- 单机多盘：`minio_volumes` 指向本机上的序列挂载点，同样由 `minio_data` 生成，例如 `/data{1...4}`。
+- 多机多盘：`minio_volumes` 指向多台服务器上的序列挂载点，由以下两部分自动组合生成：
   - 首先要使用 [`minio_data`](/docs/minio/param#minio_data) 指定集群每个成员的磁盘挂载点序列 `/data{1...4}`，
   - 还需要使用 [`minio_node`](/docs/minio/param#minio_node) 指定节点的命名模式 `${minio_cluster}-${minio_seq}.pigsty`
-- 多池部署： 您需要显式指定 [`minio_volumes`](/docs/minio/param#minio_volumes) 参数来分配每个存储池的节点，从而实现集群扩容
+- 多池部署：对 MinIO/Silo，需要显式指定 `minio_volumes` 来分配每个存储池的节点；RustFS 应以所用版本的上游能力为准。
 
 
 ----------------
@@ -45,8 +64,8 @@ SNSD 模式，部署参考教程：[MinIO 单机单盘部署](https://min.io/doc
 在 Pigsty 中，定义一个单例 MinIO 实例非常简单：
 
 ```yaml
-# 1 节点 1 驱动器（默认）
-minio: { hosts: { 10.10.10.10: { minio_seq: 1 } }, vars: { minio_cluster: minio } }
+# 1 节点 1 数据目录
+minio: { hosts: { 10.10.10.10: { minio_seq: 1 } }, vars: { minio_cluster: minio, minio_type: silo } }
 ```
 
 单机模式下，唯一必要的参数是 [`minio_seq`](/docs/minio/param#minio_seq) 和 [`minio_cluster`](/docs/minio/param#minio_cluster)，它们会唯一标识每一个 MinIO 实例。
@@ -79,7 +98,7 @@ SNMD 模式，部署参考教程：[MinIO 单机多盘部署](https://min.io/doc
 minio:
   hosts: { 10.10.10.10: { minio_seq: 1 } }
   vars:
-    minio_cluster: minio         # minio 集群名称，默认为 minio
+    minio_cluster: minio         # 对象存储集群标识，必填
     minio_data: '/data{1...4}'   # minio 数据目录，使用 {x...y} 记号来指定多块磁盘
 ```
 
@@ -142,7 +161,7 @@ minio:
 默认情况下，节点名称是 `${minio_cluster}-${minio_seq}.pigsty`，其中 `${minio_cluster}` 是集群名称，`${minio_seq}` 是节点序号。
 MinIO 实例的名称非常重要，会自动写入到 MinIO 节点的 `/etc/hosts` 中进行静态解析。MinIO 依靠这些名称来识别并访问集群中的其他节点。
 
-在这种情况下，`MINIO_VOLUMES` 将被设置为 `https://minio-{1...4}.pigsty:9000/data{1...4}`，以标识四个节点上的四块盘。
+在这种情况下，派生的 `minio_volumes` 为 `https://minio-{1...4}.pigsty:9000/data{1...4}`，以标识四个节点上的四块盘；角色再按引擎写入相应环境变量。
 您可以直接在 MinIO 集群中指定 [`minio_volumes`](/docs/minio/param#minio_volumes) 参数，来覆盖自动根据规则生成的值。
 但通常不需要这样做，因为 Pigsty 会自动根据配置清单生成它。
 
@@ -214,7 +233,7 @@ minio2:
     minio_endpoint: https://sss2.pigsty:9000
 ```
 
-请注意，Pigsty 默认一套部署中只有一个 MinIO 集群，如果您需要部署多个 MinIO 集群，那么一些带有默认值的参数需要显式设置，无法省略，否则会出现命名冲突，如上所示。
+`minio_cluster` 没有默认值，每套集群都必须显式定义。多集群共存时，还必须使用不同的 `minio_alias`、`minio_domain` 与 `minio_endpoint`，否则 Infra 节点上的共享客户端别名或域名会互相覆盖。Ansible 分组名可以与 `minio_cluster` 不同，角色按身份参数从整个清单发现成员。
 
 
 
@@ -223,15 +242,14 @@ minio2:
 
 ## 服务接入
 
-MinIO 默认使用 `9000` 端口提供服务。多节点 MinIO 集群可以通过访问 **任意一个节点** 来访问其服务。
+所选对象存储引擎默认使用 `9000` 端口提供 S3 服务。多节点集群可以通过访问 **任意一个成员** 来访问服务。
 
 服务接入属于 [NODE](/docs/node) 模块的功能范畴，这里仅做基本介绍。
 
-多节点 MinIO 集群的高可用接入可以使用 L2 VIP 或 HAProxy 实现。例如，您可以选择使用 keepalived 在 MinIO 集群上绑定一个 L2 [VIP](/docs/node/param#node_vip)，
-或者使用由 [`NODE`](/docs/node) 模块的提供的 [`haproxy`](/docs/node/param#haproxy) 组件，通过负载均衡器对外暴露 MinIO 服务。
+多节点对象存储集群的高可用接入可以使用 L2 VIP 或 HAProxy 实现。例如，可用 keepalived 绑定 L2 [VIP](/docs/node/param#node_vip)，或使用 [`NODE`](/docs/node) 模块提供的 [`haproxy`](/docs/node/param#haproxy) 组件暴露 S3 服务。
 
 ```yaml
-# minio cluster with 4 nodes and 4 drivers per node
+# object storage cluster with 4 nodes and 4 drives per node
 minio:
   hosts:
     10.10.10.10: { minio_seq: 1 , nodename: minio-1 }
@@ -352,7 +370,7 @@ minio_ha:
 
 ## 暴露管控
 
-MinIO 默认通过 `9001` 端口（由 [`minio_admin_port`](/docs/minio/param#minio_admin_port) 参数指定）提供 Web 管控界面。
+所选对象存储引擎默认通过 `9001` 端口（由 [`minio_admin_port`](/docs/minio/param#minio_admin_port) 指定）提供 Web 管控界面；RustFS 控制台位于该端口的 `/rustfs/console/`。
 
 将后台管理界面暴露给外部可能存在安全隐患。如果你希望这样做，请将 MinIO 添加到 [`infra_portal`](/docs/infra/param#infra_portal) 并刷新 Nginx 配置。
 
@@ -366,7 +384,7 @@ infra_portal:
   blackbox     : { endpoint: "${admin_ip}:9115" }
   vlogs        : { endpoint: "${admin_ip}:9428" }
 
-  # MinIO 管理页面需要 HTTPS / Websocket 才能工作
+  # 对象存储管理页面需要 HTTPS / Websocket
   minio        : { domain: m.pigsty     ,endpoint: "10.10.10.10:9001" ,scheme: https ,websocket: true }
   minio10      : { domain: m10.pigsty   ,endpoint: "10.10.10.10:9001" ,scheme: https ,websocket: true }
   minio11      : { domain: m11.pigsty   ,endpoint: "10.10.10.11:9001" ,scheme: https ,websocket: true }
@@ -374,7 +392,7 @@ infra_portal:
   minio13      : { domain: m13.pigsty   ,endpoint: "10.10.10.13:9001" ,scheme: https ,websocket: true }
 ```
 
-请注意，MinIO 管控页面需要使用 HTTPS，请 **不要** 在生产环境中暴露未加密的 MinIO 管控页面。
+请 **不要** 在生产环境中暴露未加密的对象存储管控页面。
 
 这意味着，您通常需要在您的 DNS 服务器，或者本机 `/etc/hosts` 中添加 `m.pigsty` 的解析记录，以便访问 MinIO 管控页面。
 

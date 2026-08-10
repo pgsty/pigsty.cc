@@ -148,16 +148,16 @@ etcd:
 
 etcd 模块在目标主机上创建以下目录和文件：
 
-| 路径                                                                          | 用途         | 权限              |
-|:----------------------------------------------------------------------------|:-----------|:----------------|
-| `/etc/etcd/`                                                                | 配置目录       | 0750, etcd:etcd |
-| `/etc/etcd/etcd.conf`                                                       | 主配置文件      | 0644, etcd:etcd |
-| `/etc/etcd/etcd.pass`                                                       | root 密码文件  | 0640, root:etcd |
-| `/etc/etcd/ca.crt`                                                          | CA 证书      | 0644, etcd:etcd |
-| `/etc/etcd/server.crt`                                                      | 服务器证书      | 0644, etcd:etcd |
-| `/etc/etcd/server.key`                                                      | 服务器私钥      | 0600, etcd:etcd |
-| `/var/lib/etcd/`                                                            | 备用数据目录     | 0770, etcd:etcd |
-| `/data/etcd/`                                                               | 主数据目录（可配置） | 0700, etcd:etcd |
-| `/etc/profile.d/etcdctl.sh`                                                 | 客户端环境变量    | 0755, root:root |
-| `/usr/lib/systemd/system/etcd.service` 或 `/lib/systemd/system/etcd.service` | Systemd 服务 | 0644, root:root |
+| 路径                                 | 用途           | 权限              |
+|:-----------------------------------|:-------------|:----------------|
+| `/etc/etcd/`                       | 配置目录         | 0750, etcd:etcd |
+| `/etc/etcd/etcd.conf`              | 主配置文件        | 0644, etcd:etcd |
+| `/etc/etcd/etcd.pass`              | root 密码文件    | 0640, root:etcd |
+| `/etc/etcd/ca.crt`                 | CA 证书        | 0644, etcd:etcd |
+| `/etc/etcd/server.crt`             | 服务器证书        | 0644, etcd:etcd |
+| `/etc/etcd/server.key`             | 服务器私钥        | 0600, etcd:etcd |
+| `/var/lib/etcd/`                   | 备用数据目录       | 0770, etcd:etcd |
+| `/data/etcd/`                      | 主数据目录（可配置）   | 0700, etcd:etcd |
+| `/etc/profile.d/etcdctl.sh`        | 客户端环境变量      | 0644, root:root |
+| `/etc/systemd/system/etcd.service` | Systemd 服务定义 | 0644, root:root |
 {.full-width}

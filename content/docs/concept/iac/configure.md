@@ -305,6 +305,7 @@ $ ./configure -g
 | `ha/trio`  | 3 节点高可用集群         |
 | `ha/full`  | 4 节点完整沙箱环境        |
 | `ha/safe`  | 安全加固版高可用配置        |
+| `ha/octo`  | 8 节点紧凑高可用仿真       |
 | `ha/simu`  | 20 节点生产仿真环境       |
 | `ha/citus` | 13 节点 Citus 分布式集群 |
 {.full-width}
@@ -355,7 +356,10 @@ $ ./configure -g
 |  `demo/demo`  | 多模块演示环境配置              |
 | `demo/kernel` | 十节点数据库内核矩阵             |
 | `demo/redis`  | Redis 主从、哨兵与原生集群演示     |
-| `demo/minio`  | MinIO 多节点多盘集群演示        |
+| `demo/minio`  | Silo（源码默认）多节点多盘集群演示    |
+| `demo/rustfs` | RustFS 四节点分布式集群演示      |
+| `demo/kafka`  | Kafka KRaft 开发与安全集群演示  |
+| `demo/mysql`  | 原生 MySQL 8.4 试点演示      |
 | `demo/remote` | 远程 PostgreSQL/RDS 监控示例 |
 |  `demo/saas`  | 传统单节点 SaaS 组件组合示例      |
 |  `demo/wool`  | 中国区低配云主机示例             |

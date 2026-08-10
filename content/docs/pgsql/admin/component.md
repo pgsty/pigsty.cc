@@ -215,7 +215,7 @@ systemctl status haproxy
 journalctl -u haproxy -f
 ```
 
-**配置文件位置**：`/etc/haproxy/haproxy.cfg`
+**配置文件位置**：主配置为 `/etc/haproxy/haproxy.cfg`，Pigsty 生成的服务片段位于 `/etc/haproxy/conf.d/`。
 
 **管理界面**
 
@@ -402,10 +402,10 @@ journalctl -u <service> --since "5 min ago"  # 查看最近 5 分钟日志
 
 **HAProxy 无法启动**
 
-| 现象       | 可能原因             | 解决方案                                     |
-|:---------|:-----------------|:-----------------------------------------|
-| 配置文件语法错误 | haproxy.cfg 格式错误 | `haproxy -c -f /etc/haproxy/haproxy.cfg` |
-| 端口被占用    | 服务端口冲突           | `lsof -i :5433`                          |
+| 现象       | 可能原因         | 解决方案                                                                   |
+|:---------|:-------------|:-----------------------------------------------------------------------|
+| 配置文件语法错误 | 主配置或服务片段格式错误 | `haproxy -Ws -f /etc/haproxy/haproxy.cfg -f /etc/haproxy/conf.d -c -q` |
+| 端口被占用    | 服务端口冲突       | `lsof -i :5433`                                                        |
 
 
 ----------------

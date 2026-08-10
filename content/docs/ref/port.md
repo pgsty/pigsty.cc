@@ -30,9 +30,9 @@ categories: [参考]
 |    [**`INFRA`**](/docs/infra)     |          **`dnsmasq`**           |  `53`   | [**`dns_port`**](/docs/infra/param#dns_port)                                 | ✅ 默认启用   |
 |     [**`ETCD`**](/docs/etcd)      |            **`etcd`**            | `2379`  | [**`etcd_port`**](/docs/etcd/param#etcd_port)                                | ✅ 默认启用   |
 |     [**`ETCD`**](/docs/etcd)      |            **`etcd`**            | `2380`  | [**`etcd_peer_port`**](/docs/etcd/param#etcd_peer_port)                      | ✅ 默认启用   |
-|    [**`MINIO`**](/docs/minio)     |           **`minio`**            | `9000`  | [**`minio_port`**](/docs/minio/param#minio_port)                             | ✅ 默认启用   |
-|    [**`MINIO`**](/docs/minio)     |           **`minio`**            | `9001`  | [**`minio_admin_port`**](/docs/minio/param#minio_admin_port)                 | ✅ 默认启用   |
-|    [**`REDIS`**](/docs/redis)     |           **`redis`**            | `6379`  | [**`redis_instances`**](/docs/redis/param#redis_instances)                   | ⚠️ 按需启用  |
+|    [**`MINIO`**](/docs/minio)     |     **Silo / RustFS S3 API**     | `9000`  | [**`minio_port`**](/docs/minio/param#minio_port)                             | ⚠️ 按需启用  |
+|    [**`MINIO`**](/docs/minio)     |      **Silo / RustFS 管理端口**      | `9001`  | [**`minio_admin_port`**](/docs/minio/param#minio_admin_port)                 | ⚠️ 按需启用  |
+|    [**`REDIS`**](/docs/redis)     |        **Redis / Valkey**        | `6379`  | [**`redis_instances`**](/docs/redis/param#redis_instances)                   | ⚠️ 按需启用  |
 |    [**`REDIS`**](/docs/redis)     |       **`redis_exporter`**       | `9121`  | [**`redis_exporter_port`**](/docs/redis/param#redis_exporter_port)           | ⚠️ 按需启用  |
 |     [**`VIBE`**](/docs/vibe)      |        **`code-server`**         | `8443`  | [**`code_port`**](/docs/vibe/param#code_port)                                | ⚠️ 按需启用  |
 |     [**`VIBE`**](/docs/vibe)      |         **`jupyterlab`**         | `8888`  | [**`jupyter_port`**](/docs/vibe/param#jupyter_port)                          | ⚠️ 按需启用  |
@@ -69,7 +69,7 @@ categories: [参考]
 - 最小管理面：`22, 80, 443`（推荐）
 - 需要公网直连数据库：额外开放 `5432`
 
-不建议直接对公网开放：`etcd`（`2379/2380`）、`patroni`（`8008`）、各类 exporter（`9xxx`）、`minio`（`9000/9001`）、`redis`（`6379`）、`ferretdb`（`27017/27018`）、Kafka（`9092/9093`）及 MySQL Group Replication（`33061`）等内部组件端口。
+不建议直接对公网开放：`etcd`（`2379/2380`）、`patroni`（`8008`）、各类 exporter（`9xxx`）、对象存储 S3/管理端口（`9000/9001`）、`redis`（`6379`）、`ferretdb`（`27017/27018`）、Kafka（`9092/9093`）及 MySQL Group Replication（`33061`）等内部组件端口。
 
 ```yaml
 node_firewall_mode: zone

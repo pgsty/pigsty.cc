@@ -18,6 +18,10 @@ REDIS 模块与 PGSQL 模块核心的区别在于，Redis 通常采用 **单机�
 
 在 Pigsty 管理的 Redis 中，节点完全隶属于集群，即目前尚不允许在一个节点上部署两个不同集群的 Redis 实例，但这并不影响您在一个节点上部署多个独立 Redis 主从实例。当然这样也会有一些局限性，例如在这种情况下您就无法为同一个节点上的不同实例指定不同的密码了。
 
+服务端实现由 [`redis_type`](/docs/redis/param#redis_type) 选择：默认 `redis`，也可设为 `valkey`。
+该参数应在集群层统一设置；角色会切换软件包、`*-server` 与 `*-cli` 二进制，但继续使用 `/etc/redis`、`/data/redis`、实例 systemd 单元名和 `redis` 监控命名空间。
+已有集群切换引擎前必须单独验证数据与回滚路径。
+
 
 -------
 
@@ -25,8 +29,8 @@ REDIS 模块与 PGSQL 模块核心的区别在于，Redis 通常采用 **单机�
 
 Redis [**身份参数**](/docs/redis/config#身份参数) 是定义 Redis 集群时必须提供的信息，包括：
 
-|                              名称                               |     属性      |  说明  |            例子             |
-|:-------------------------------------------------------------:|:-----------:|:----:|:-------------------------:|
+|                           名称                           |     属性      |  说明  |            例子             |
+|:------------------------------------------------------:|:-----------:|:----:|:-------------------------:|
 |   [`redis_cluster`](/docs/redis/param#redis_cluster)   | **必选**，集群级别 | 集群名  |       `redis-test`        |
 |      [`redis_node`](/docs/redis/param#redis_node)      | **必选**，节点级别 | 节点号  |          `1`,`2`          |
 | [`redis_instances`](/docs/redis/param#redis_instances) | **必选**，节点级别 | 实例定义 | `{ 6001 : {} ,6002 : {}}` |
@@ -74,6 +78,8 @@ redis-test: # redis 原生集群： 3主 x 3从
     10.10.10.13: { redis_node: 2 ,redis_instances: { 6379: { } ,6380: { } ,6381: { } } }
   vars: { redis_cluster: redis-test ,redis_password: 'redis.test' ,redis_mode: cluster, redis_max_memory: 32MB }
 ```
+
+以上示例省略了 `redis_type`，因此使用默认 Redis。若要部署 Valkey，在对应集群的 `vars` 中增加 `redis_type: valkey`；不要在同一逻辑集群内混用两种引擎。
 
 
 --------

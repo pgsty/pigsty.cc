@@ -1,7 +1,7 @@
 ---
 title: 管理预案
 weight: 3650
-description: MinIO 集群管理 SOP：创建，销毁，扩容，缩容，节点故障与磁盘故障的处理。
+description: Silo、MinIO 与 RustFS 对象存储集群的创建、销毁、升级与故障处理；区分引擎升级和数据迁移。
 icon: fa-solid fa-building-columns
 module: [MINIO]
 categories: [任务]
@@ -15,13 +15,13 @@ categories: [任务]
 要创建一个集群，在配置清单中定义好后，执行 [`minio.yml`](/docs/minio/playbook#minioyml) 剧本即可。
 
 ```yaml
-minio: { hosts: { 10.10.10.10: { minio_seq: 1 } }, vars: { minio_cluster: minio } }
+minio: { hosts: { 10.10.10.10: { minio_seq: 1 } }, vars: { minio_cluster: minio, minio_type: silo } }
 ```
 
-例如，上面的配置定义了一个 SNSD [单机单盘](/docs/minio/config#单机单盘) MinIO 集群，使用以下命令即可创建该 MinIO 集群：
+例如，上面的配置定义了一个 SNSD [单机单盘](/docs/minio/config#单机单盘) Silo 集群，使用以下命令即可创建所选对象存储集群：
 
 ```bash
-./minio.yml -l minio  # 在 minio 分组上安装 MinIO 模块 
+./minio.yml -l minio  # 在 minio 分组上安装 MINIO 模块所选引擎
 ```
 
 
@@ -32,27 +32,31 @@ minio: { hosts: { 10.10.10.10: { minio_seq: 1 } }, vars: { minio_cluster: minio 
 要销毁一个集群，执行专用的 [`minio-rm.yml`](/docs/minio/playbook#minio-rmyml) 剧本即可：
 
 ```bash
-./minio-rm.yml -l minio                   # 移除 MinIO 集群
-./minio-rm.yml -l minio -e minio_rm_data=false  # 移除集群但保留数据
-./minio-rm.yml -l minio -e minio_rm_pkg=true    # 移除集群并卸载软件包
+./minio-rm.yml -l minio -e minio_type=silo                         # 移除 Silo 集群
+./minio-rm.yml -l minio -e minio_type=silo -e minio_rm_data=false  # 移除集群但保留数据
+./minio-rm.yml -l minio -e minio_type=silo -e minio_rm_pkg=true    # 移除集群并卸载软件包
 ```
+
+删除角色不为 `minio_type` 提供默认值。若清单中未显式定义实际引擎，必须像上例一样通过 `-e minio_type=silo|minio|rustfs` 指定；该值必须与目标集群实际使用的后端一致。
 
 {{% alert title="架构变更：Pigsty v3.6+" color="info" %}}
 从 Pigsty v3.6 开始，集群移除操作已从 `minio.yml` 剧本迁移至专用的 `minio-rm.yml` 剧本。旧的 `minio_clean` 任务已被弃用。
 {{% /alert %}}
 
 移除剧本会自动完成以下操作：
-- 从 VictoriaMetrics 监控系统中注销 MinIO 目标
+- 从 VictoriaMetrics 监控系统中注销对象存储目标
 - 从 INFRA 节点的 DNS 服务中移除记录
-- 停止并禁用 MinIO systemd 服务
-- 删除 MinIO 数据目录和服务、客户端、Vector 配置（由 `minio_rm_data` 控制，默认执行）
-- 卸载 `minio` 与 `mcli` 软件包（由 `minio_rm_pkg` 控制，默认不执行）
+- 停止并禁用 `minio_type` 对应的 systemd 服务
+- 删除数据目录和所选引擎的配置（由 `minio_rm_data` 控制，默认执行）
+- 卸载所选引擎与 `mcli` 软件包（由 `minio_rm_pkg` 控制，默认不执行）
 
 
 
 --------
 
 ## 集群扩容
+
+本节的存储池扩容、缩容、故障盘恢复命令面向 MinIO/Silo 兼容行为。RustFS 使用独立实现与数据格式，执行同类操作前必须以所用版本的上游文档和专项演练为准。
 
 - [集群扩容教程](https://min.io/docs/minio/linux/operations/install-deploy-manage/expand-minio-deployment.html)
 
@@ -68,6 +72,7 @@ minio:
     10.10.10.12: { minio_seq: 3 , nodename: minio-3 }
     10.10.10.13: { minio_seq: 4 , nodename: minio-4 }
   vars:
+    minio_type: silo
     minio_cluster: minio
     minio_data: '/data{1...4}'
     minio_buckets: [ { name: pgsql }, { name: infra }, { name: redis } ]
@@ -116,6 +121,7 @@ minio:
     10.10.10.17: { minio_seq: 8 , nodename: minio-8 }
 
   vars:
+    minio_type: silo
     minio_cluster: minio
     minio_data: '/data{1...4}'
     minio_volumes: 'https://minio-{1...4}.pigsty:9000/data{1...4} https://minio-{5...8}.pigsty:9000/data{1...4}'  # 新增的集群配置
@@ -204,27 +210,30 @@ MinIO 无法在节点/磁盘级别上缩容，但可以在存储池（多个节�
 
 - [集群升级教程](https://min.io/docs/minio/linux/operations/install-deploy-manage/upgrade-minio-deployment.html)
 
-首先，将新版本的 MinIO 软件包下载至 INFRA 节点的本地软件仓库，然后重建软件仓库索引：
+首先，将所选引擎的新软件包下载至 INFRA 节点的本地软件仓库，然后使用 SOW 重建仓库索引：
 
-从 Pigsty v4.1 开始，建议优先使用 Pigsty Infra 软件源中的 `minio` / `mcli` 包（由 Pigsty 维护构建），
-同步到本地仓库后重建索引：
+Silo、MinIO、RustFS 与 `mcli` 均从 Pigsty INFRA 软件源获取。同步到本地仓库后重建元数据：
 
 ```bash
 ./infra.yml -t repo_create
 ```
 
-其次，使用 Ansible 批量升级 MinIO 软件包版本：
+其次，只升级清单中实际选择的软件包与 `mcli`。以下三条服务端命令三选一：
 
 ```bash
-ansible minio -m package -b -a 'name=minio state=latest'  # 升级 MinIO 服务器软件版本
-ansible minio -m package -b -a 'name=mcli state=latest'   # 升级 MinIO 客户端软件版本
+ansible minio -m package -b -a 'name=silo state=latest'    # minio_type: silo
+ansible minio -m package -b -a 'name=minio state=latest'   # minio_type: minio
+ansible minio -m package -b -a 'name=rustfs state=latest'  # minio_type: rustfs
+ansible minio -m package -b -a 'name=mcli state=latest'    # 通用客户端
 ```
 
-最后，使用 mcli 命令行工具通知 MinIO 集群重启：
+最后，使用角色按所选引擎重启完整集群：
 
 ```bash
-mcli admin service restart sss
+./minio.yml -l minio -t minio_config,minio_launch
 ```
+
+软件包升级与引擎迁移是两件事。升级期间不要顺便修改 `minio_type`；任何 MinIO → Silo 或 MinIO/Silo → RustFS 切换都需要独立的数据验证、停机窗口与回滚方案。
 
 
 
@@ -279,7 +288,7 @@ mcli admin heal
 
 ## 管理 MinIO 密码
 
-[**`minio_secret_key`**](/docs/minio/param#minio_secret_key)（默认 `S3User.MinIO`）是 MinIO root 用户密码，渲染到 `/etc/default/minio` 中。
+[**`minio_secret_key`**](/docs/minio/param#minio_secret_key)（默认 `S3User.MinIO`）是对象存储 root 用户密码，渲染到 `/etc/default/<minio_type>`，例如 `/etc/default/silo`。
 
 修改密码后，使用以下命令刷新配置并重启服务（需同时重启整个集群）：
 

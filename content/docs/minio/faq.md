@@ -10,7 +10,18 @@ categories: [参考]
 
 ----------------
 
-## Pigsty 使用的 MinIO 是什么版本？
+## MINIO 模块默认部署哪个引擎？
+
+当前源码默认 `minio_type: silo`，也可显式选择 `minio` 或 `rustfs`。MINIO 是兼容模块名，不表示一定运行 MinIO 服务端。
+
+- 新建集群建议显式写出 `minio_type`，锁定升级语义。
+- 已有 MinIO 集群升级时应设置 `minio_type: minio`，避免默认值变化触发换包与换服务名。
+- RustFS 使用独立数据格式，不能直接复用 MinIO/Silo 数据目录。
+
+
+----------------
+
+## 兼容的 MinIO 后端是什么版本？
 
 MinIO 于 2025-12-03 宣布进入 **维护模式**，不再发布新的功能版本，只会发布安全补丁与维护版本，并且在 2025-10-15 停止发布二进制 RPM/DEB。
 所以 Pigsty fork 了自己的 [MinIO](https://github.com/pgsty/minio)，并使用 [`minio/pkger`](https://github.com/minio/pkger) 制作了最新的 2025-12-03 版本。
@@ -21,20 +32,18 @@ MinIO 于 2025-12-03 宣布进入 **维护模式**，不再发布新的功能版
 
 ----------------
 
-## 为什么 MinIO 强制要求 HTTPS？
+## 为什么对象存储默认启用 HTTPS？
 
-当 pgbackrest 使用对象存储作为备份仓库时，强制要求使用 HTTPS，以确保数据传输的安全性。
-如果您的 MinIO 并非用于 pgbackrest 备份，您仍然可以选择使用 HTTP 协议。
-可以通过修改参数 [`minio_https`](/docs/minio/param#minio_https) 来关闭 HTTPS。
+Pigsty 默认的 pgBackRest `minio` 仓库配置使用 HTTPS，并通过 `/etc/pki/ca.crt` 校验证书，以保护备份流量。pgBackRest 并非绝对禁止 HTTP；如果明确选择 HTTP，除了关闭 [`minio_https`](/docs/minio/param#minio_https)，还必须同步修改 `pgbackrest_repo` 的 TLS 选项，不能只改服务端开关。
 
 
 ----------------
 
 ## 从容器中访问 MinIO 提示证书无效？
 
-除非您使用真正的企业 CA 颁发的证书，否则 MinIO 默认使用自签名证书，这会导致容器内的客户端工具（如 mc / rclone / awscli 等）无法验证 MinIO 服务器的身份，从而提示证书无效。
+对象存储服务端证书默认由 Pigsty 私有 CA 签发；它不是服务端自签名证书，但容器镜像通常不信任这套私有 CA，因此 `mcli`、rclone、AWS CLI 等客户端会提示证书链无效。
 
-例如，对于 Node.js 应用程序，可以 MinIO 服务器的 CA 证书挂载到容器内，并通过环境变量 `NODE_EXTRA_CA_CERTS` 指定 CA 证书路径：
+例如，对于 Node.js 应用程序，可以把 Pigsty CA 证书挂载到容器内，并通过环境变量 `NODE_EXTRA_CA_CERTS` 指定路径：
 
 ```yaml
     environment:
@@ -76,14 +85,16 @@ MinIO 于 2025-12-03 宣布进入 **维护模式**，不再发布新的功能版
 从 Pigsty v3.6 开始，移除 MinIO 集群需要使用专用的 `minio-rm.yml` 剧本：
 
 ```bash
-./minio-rm.yml -l minio                   # 移除 MinIO 集群
-./minio-rm.yml -l minio -e minio_rm_data=false  # 移除集群但保留数据
+./minio-rm.yml -l minio -e minio_type=silo                         # 移除 Silo 集群
+./minio-rm.yml -l minio -e minio_type=silo -e minio_rm_data=false  # 移除集群但保留数据
 ```
+
+删除角色没有 `minio_type` 默认值；如果清单中未定义它，必须在命令行显式指定目标实际使用的 `silo`、`minio` 或 `rustfs`。
 
 如果您启用了 [`minio_safeguard`](/docs/minio/param#minio_safeguard) 保护，需要显式覆盖才能执行移除：
 
 ```bash
-./minio-rm.yml -l minio -e minio_safeguard=false
+./minio-rm.yml -l minio -e minio_type=silo -e minio_safeguard=false
 ```
 
 

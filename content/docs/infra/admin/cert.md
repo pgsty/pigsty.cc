@@ -38,8 +38,10 @@ files/pki/
 ├── csr/                      # 证书签名请求
 ├── misc/                     # 杂项证书（cert.yml 输出）
 ├── etcd/                     # ETCD 证书
+├── kafka/                    # Kafka 节点证书
 ├── pgsql/                    # PostgreSQL 证书
-├── minio/                    # MinIO 证书
+├── minio/                    # MINIO 模块对象存储证书
+├── mysql/                    # MySQL 节点证书
 ├── infra/                    # 基础设施证书
 └── nginx/                    # Nginx 证书
 ```
@@ -48,7 +50,7 @@ files/pki/
 
 | 变量              | 默认值         | 说明               |
 |-----------------|-------------|------------------|
-| `ca_create`     | `true`      | 如果不存在则创建 CA，否则中止 |
+| `ca_create`     | `true`      | CA 私钥缺失时是否允许创建      |
 | `ca_cn`         | `pigsty-ca` | CA 证书通用名称        |
 | `cert_validity` | `7300d`     | 签发证书的默认有效期       |
 {.full-width}
@@ -81,6 +83,8 @@ files/pki/
    ```
 
 3. 运行 `./infra.yml`
+
+`ca_create: false` 只要求 `ca.key` 必须存在；若仅缺少 `ca.crt`，角色仍会使用现有私钥重新签发证书。请始终成对备份、校验和恢复两者。
 
 ### 备份 CA 文件
 

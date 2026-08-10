@@ -26,7 +26,7 @@ categories: [任务, 概念]
 如果你通过其他方式绕开 HAProxy 访问集群，那么可以跳过这一步。
 如果你通过 HAProxy 方式访问数据库集群，那么你需要调整负载均衡配置，将读写流量手工指向主库。
 
-- 编辑  `/etc/haproxy/<pg_cluster>-primary.cfg` 配置文件，其中 `<pg_cluster>` 为你的 PostgreSQL 集群名称，例如 `pg-meta`。
+- 编辑 `/etc/haproxy/conf.d/<pg_cluster>-primary.cfg` 配置文件，其中 `<pg_cluster>` 为你的 PostgreSQL 集群名称，例如 `pg-meta`。
 - 将健康检查配置选项注释，停止进行健康检查。
 - 将服务器列表中，其他两台故障的机器注释掉，只保留当前主库服务器。
 

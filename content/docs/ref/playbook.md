@@ -48,7 +48,7 @@ categories: [参考]
 | [**`redis.yml`**](/docs/redis/playbook#redisyml)                     | `REDIS`  | Redis 部署                                     |
 | [**`redis-rm.yml`**](/docs/redis/playbook#redis-rmyml)               | `REDIS`  | Redis 移除                                     |
 | [**`minio.yml`**](/docs/minio/playbook#minioyml)                     | `MINIO`  | MinIO 部署                                     |
-| [**`minio-rm.yml`**](/docs/minio/playbook#minio-rmyml)               | `MINIO`  | MinIO 移除                                     |
+| [**`minio-rm.yml`**](/docs/minio/playbook#minio-rmyml)               | `MINIO`  | 移除所选 Silo、MinIO 或 RustFS 后端                  |
 | [**`docker.yml`**](/docs/docker/playbook#dockeryml)                  | `DOCKER` | Docker 引擎部署                                  |
 | [**`juice.yml`**](/docs/juice/playbook#juiceyml)                     | `JUICE`  | JuiceFS 实例部署/移除                              |
 | [**`vibe.yml`**](/docs/vibe/playbook#vibeyml)                        |  `VIBE`  | VIBE 开发环境部署                                  |
@@ -94,7 +94,7 @@ PGSQL、ETCD、MINIO、REDIS 与 KAFKA 的角色默认值均显式为 `false`；
 ```bash
 ./pgsql-rm.yml -l pg-test -e pg_safeguard=false
 ./etcd-rm.yml  -l etcd    -e etcd_safeguard=false
-./minio-rm.yml -l minio   -e minio_safeguard=false
+./minio-rm.yml -l minio   -e minio_type=silo -e minio_safeguard=false
 ./redis-rm.yml -l redis-test -e redis_safeguard=false
 ./kafka-rm.yml -l kf-main -e kafka_safeguard=false
 ./mysql-rm.yml -l my-test -e mysql_safeguard=false -e mysql_rm_confirm=my-test
@@ -197,8 +197,8 @@ bin/pgmon-add <cls>              # 监控远程集群 (包装脚本)
 ### MINIO 模块
 
 ```bash
-./minio.yml -l <cls>             # 初始化 MinIO 集群
-./minio-rm.yml -l <cls>          # 移除 MinIO 集群
+./minio.yml -l <cls>                       # 初始化 MINIO 模块所选对象存储后端
+./minio-rm.yml -l <cls> -e minio_type=silo # 移除后端；按实际引擎改为 minio 或 rustfs
 ```
 
 ### DOCKER 模块

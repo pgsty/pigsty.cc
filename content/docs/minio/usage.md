@@ -1,13 +1,13 @@
 ---
 title: 使用方法
 weight: 3610
-description: 快速上手，如何上手使用 MinIO？如何可靠地接入 MinIO？如何使用 mc / rclone 客户端工具？
+description: 快速使用 MINIO 模块部署的 Silo、MinIO 或 RustFS，并通过 mcli、rclone 与 pgBackRest 接入。
 icon: fa-solid fa-bell-concierge
 module: [MINIO]
 categories: [参考]
 ---
 
-当您 [配置](/docs/minio/config/) 并执行 [剧本](/docs/minio/playbook/) 部署 MinIO 集群后，可以参考这里的说明开始使用与接入 MinIO 集群。
+当您 [配置](/docs/minio/config/) 并执行 [剧本](/docs/minio/playbook/) 部署对象存储集群后，可以参考本页通过统一的 S3 与 `mcli` 接口使用它。除非另有说明，以下命令适用于 Silo、MinIO 与 RustFS。
 
 
 
@@ -15,10 +15,10 @@ categories: [参考]
 
 ## 部署集群
 
-在 Pigsty 中部署一个开箱即用的 单机单盘 MinIO 实例非常简单：首先在 [配置清单](/docs/setup/config/) 中定义一套 MinIO 集群：
+首先在 [配置清单](/docs/setup/config/) 中定义单机单盘对象存储集群，并显式锁定引擎：
 
 ```yaml
-minio: { hosts: { 10.10.10.10: { minio_seq: 1 } }, vars: { minio_cluster: minio } }
+minio: { hosts: { 10.10.10.10: { minio_seq: 1 } }, vars: { minio_cluster: minio, minio_type: silo } }
 ```
 
 然后，针对定义的分组（这里为 `minio`）执行 Pigsty 提供的 [`minio.yml`](/docs/minio/playbook/) 剧本即可：
@@ -29,7 +29,7 @@ minio: { hosts: { 10.10.10.10: { minio_seq: 1 } }, vars: { minio_cluster: minio 
 
 请注意在 [`deploy.yml`](/docs/setup/playbook#部署剧本) 中，事先定义好的 MinIO 集群将自动创建，无需手动再次执行 `minio.yml` 剧本。
 
-如果您计划部署一个生产等级的大规模多节点 MinIO 集群，我们强烈建议您通读 Pigsty MinIO [配置文档](/docs/minio/config/) 与 MinIO [官方文档](https://min.io/docs/minio/linux/operations/concepts.html) 后再进行。
+生产多节点部署应通读 Pigsty [配置文档](/docs/minio/config/)，并另外核对所选引擎版本的上游文档；不要将 S3 API 兼容理解为扩缩容和数据格式完全相同。
 
 
 
@@ -37,9 +37,9 @@ minio: { hosts: { 10.10.10.10: { minio_seq: 1 } }, vars: { minio_cluster: minio 
 
 ## 接入集群
 
-请注意：生产环境建议通过域名与 HTTPS 访问 MinIO（默认配置也是 HTTPS）。
+生产环境建议通过域名与 HTTPS 访问对象存储（默认配置也是 HTTPS）。
 如果您显式设置 [`minio_https`](/docs/minio/param#minio_https) 为 `false`，也可以使用 HTTP 访问。
-无论哪种方式，都请确保 MinIO 服务域名（默认为 `sss.pigsty`）正确指向 MinIO 服务器节点。
+无论哪种方式，都请确保对象存储服务域名（默认为 `sss.pigsty`）正确指向服务节点或负载均衡器。
 
 1. 您可以在 [`node_etc_hosts`](/docs/node/param#node_etc_hosts) 中添加静态解析记录，或者手工修改 `/etc/hosts` 文件
 2. 您可以在内网的 DNS 服务器上添加一条记录，如果已经有了现成的 DNS 服务
@@ -48,7 +48,7 @@ minio: { hosts: { 10.10.10.10: { minio_seq: 1 } }, vars: { minio_cluster: minio 
 对于生产环境访问 MinIO，通常我们建议使用第一种方式：静态 DNS 解析记录，避免 MinIO 对于 DNS 的额外依赖。
 
 您应当将 MinIO 服务域名指向 MinIO 服务器节点的 IP 地址与服务端口，或者负载均衡器的 IP 地址与服务端口。
-Pigsty 默认使用的 MinIO 服务域名是 `sss.pigsty`，在单机部署时默认指向本机，在 `9000` 端口提供服务。
+Pigsty 默认使用 `sss.pigsty` 作为 S3 服务域名，并在 `9000` 端口提供服务；角色不会自动为 `minio_domain` 创建全局 DNS 解析，需要按上文显式配置。
 
 在一些例子中，MinIO 集群上还部署了 HAProxy 实例对外暴露服务，在这种情况下，`9002` 是模板中使用的服务端口。
 
@@ -72,8 +72,7 @@ mcli alias set sss https://sss.pigsty:9002 minioadmin S3User.MinIO            # 
 mcli alias set pgbackrest https://sss.pigsty:9000 pgbackrest S3User.Backup    # 使用备份用户
 ```
 
-完整执行 `minio.yml` 且启用 `minio_provision` 后，角色会为所有 Infra 节点与 MinIO 成员上的 Ansible
-执行用户配置名为 `sss` 的默认别名；Infra 与 MinIO 分组重叠时只写入一次。
+完整执行 `minio.yml` 且启用 `minio_provision` 后，角色会为所有 Infra 节点与按 `minio_cluster` 发现的实际对象存储成员上的 Ansible 执行用户配置默认别名；同一主机同时属于两者时只写入一次。
 
 MinIO 客户端工具 `mcli` 的完整功能参考，请查阅文档： [MinIO 客户端](https://min.io/docs/minio/linux/reference/minio-mc.html)。
 
@@ -157,7 +156,7 @@ rclone ls sss:/
 
 ## 配置备份仓库
 
-在 Pigsty 中，MinIO 默认的用例是作为 pgBackRest 的备份存储仓库。
+在 Pigsty 中，MINIO 模块的主要用例是作为 pgBackRest 的 S3 备份仓库。
 当您修改 [`pgbackrest_method`](/docs/pgsql/param#pgbackrest_method) 为 `minio` 时，PGSQL 模块会自动将备份存储仓库切换到 MinIO 上。
 
 ```yaml
