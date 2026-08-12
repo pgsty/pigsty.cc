@@ -42,14 +42,14 @@ PIG 与 Pigsty 扩展仓库支持以下 Linux 发行版和 PostgreSQL 版本组�
 | `el7.x86_64`   | EL     |  7  |   7.9   | CentOS 7 x86      | 13-15 |  EOL   |
 | `el8.x86_64`   | EL     |  8  |  8.10   | RockyLinux 8 x86  | 14-18 | 即将 EOL |
 | `el8.aarch64`  | EL     |  8  |  8.10   | RockyLinux 8 ARM  | 14-18 | 即将 EOL |
-| `el9.x86_64`   | EL     |  9  |   9.7   | RockyLinux 9 x86  | 14-18 |   ✅    |
-| `el9.aarch64`  | EL     |  9  |   9.7   | RockyLinux 9 ARM  | 14-18 |   ✅    |
-| `el10.x86_64`  | EL     | 10  |  10.1   | RockyLinux 10 x86 | 14-18 |   ✅    |
-| `el10.aarch64` | EL     | 10  |  10.1   | RockyLinux 10 ARM | 14-18 |   ✅    |
+| `el9.x86_64`   | EL     |  9  |   9.8   | RockyLinux 9 x86  | 14-18 |   ✅    |
+| `el9.aarch64`  | EL     |  9  |   9.8   | RockyLinux 9 ARM  | 14-18 |   ✅    |
+| `el10.x86_64`  | EL     | 10  |  10.2   | RockyLinux 10 x86 | 14-18 |   ✅    |
+| `el10.aarch64` | EL     | 10  |  10.2   | RockyLinux 10 ARM | 14-18 |   ✅    |
 | `d11.x86_64`   | Debian | 11  |  11.11  | Debian 11 x86     | 14-18 |  EOL   |
 | `d11.aarch64`  | Debian | 11  |  11.11  | Debian 11 ARM     | 14-18 |  EOL   |
-| `d12.x86_64`   | Debian | 12  |  12.14  | Debian 12 x86     | 14-18 |   ✅    |
-| `d12.aarch64`  | Debian | 12  |  12.14  | Debian 12 ARM     | 14-18 |   ✅    |
+| `d12.x86_64`   | Debian | 12  |  12.15  | Debian 12 x86     | 14-18 |   ✅    |
+| `d12.aarch64`  | Debian | 12  |  12.15  | Debian 12 ARM     | 14-18 |   ✅    |
 | `d13.x86_64`   | Debian | 13  |  13.6   | Debian 13 x86     | 14-18 |   ✅    |
 | `d13.aarch64`  | Debian | 13  |  13.6   | Debian 13 ARM     | 14-18 |   ✅    |
 | `u22.x86_64`   | Ubuntu | 22  | 22.04.5 | Ubuntu 22.04 x86  | 14-18 |   ✅    |

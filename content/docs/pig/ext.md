@@ -229,7 +229,7 @@ pig ext update                   # no-op：必须显式指定目标
 pig ext update pg_duckdb         # 更新特定扩展
 pig ext update postgis timescaledb  # 更新多个扩展
 pig ext update pg_duckdb -y      # 自动确认更新
-pig ext update pg_duckdb -m      # 使用 pigsty.cc 镜像/代理源
+pig ext update pg_duckdb -m      # 选择内置中国区域软件源
 ```
 
 **选项：**

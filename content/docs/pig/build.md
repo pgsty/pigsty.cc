@@ -139,7 +139,7 @@ pig build spec -m                # 优先使用 pigsty.cc 中国镜像
 
 ```bash
 pig build repo                   # 等同于：pig repo set -ru
-pig build repo -m                # 使用 pigsty.cc 镜像/代理源
+pig build repo -m                # 选择内置中国区域软件源
 pig build repo --beta            # 同时启用 PostgreSQL 19 beta 仓库模块
 ```
 
@@ -148,7 +148,7 @@ pig build repo --beta            # 同时启用 PostgreSQL 19 beta 仓库模块
 **选项：**
 
 - `-b|--beta`：额外启用 PostgreSQL beta 仓库模块
-- `-m|--mirror`：优先使用 `pigsty.cc` 镜像/代理源
+- `-m|--mirror`：选择内置的 `china` 区域软件源
 
 
 ## build tool

@@ -118,10 +118,12 @@ cascade:
 #=======================================#
 params:
   # metadata
-  description: 'Pigsty 是开源免费的 PostgreSQL 数据库发行版，提供本地优先的RDS，以及开箱即用的监控、管控、IaC、高可用，以及PG生态的 572 款插件与12款内核'
+  description: 'Pigsty 是开源免费的 PostgreSQL 数据库发行版，提供本地优先的 RDS，以及开箱即用的监控、管控、IaC、高可用，以及 PG 生态的 575 款插件与 12 款内核'
   version: v4.4.0           # Pigsty 最新正式版本号，模板用 .Site.Params.version，正文用 {{< param version >}}
   version_short: v4.4       # 版本号短形式（major.minor），用于首页与价格页导航等展示场景
-  pgext_count: 572          # Pigsty 已打包 PG 扩展数量，模板用 .Site.Params.pgext_count，正文用 {{< param pgext_count >}}
+  pig_version: 1.7.0        # PIG 最新版本号，PIG 文档正文用 {{< param pig_version >}}
+  pigsty_version: 4.5.0     # PIG 内置的 Pigsty 版本，PIG 文档正文用 {{< param pigsty_version >}}
+  pgext_count: 575          # Pigsty 在线已打包 PG 扩展数量，模板用 .Site.Params.pgext_count，正文用 {{< param pgext_count >}}
   github_stars: 5.5k        # GitHub Star 数（约数），首页与价格页导航栏展示用
   copyright:
     authors: Ruohang Feng
