@@ -764,7 +764,7 @@ weight: 7110
 pig repo add pgdg -u          # 添加 PGDG 仓库并更新缓存
 ```
 
-使用 [**pig**](/docs/pig) 或者是 `apt/yum/dnf` 安装扩展：
+使用 [**pig**](https://pig.pgsty.com/zh) 或者是 `apt/yum/dnf` 安装扩展：
 
 {{< tabpane text=true persist=header >}}
 {{% tab header="安装" %}}

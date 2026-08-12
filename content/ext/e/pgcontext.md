@@ -122,7 +122,7 @@ pig build pkg pgcontext         # 构建 RPM / DEB 包
 pig repo add pgsql -u          # 添加仓库并更新缓存
 ```
 
-使用 [**pig**](/docs/pig) 或者是 `apt/yum/dnf` 安装扩展：
+使用 [**pig**](https://pig.pgsty.com/zh) 或者是 `apt/yum/dnf` 安装扩展：
 
 {{< tabpane text=true persist=header >}}
 {{% tab header="安装" %}}

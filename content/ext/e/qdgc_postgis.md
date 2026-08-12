@@ -86,7 +86,7 @@ pig build pkg qdgc         # 构建 RPM / DEB 包
 pig repo add pgsql -u          # 添加仓库并更新缓存
 ```
 
-使用 [**pig**](/docs/pig) 或者是 `apt/yum/dnf` 安装扩展：
+使用 [**pig**](https://pig.pgsty.com/zh) 或者是 `apt/yum/dnf` 安装扩展：
 
 {{< tabpane text=true persist=header >}}
 {{% tab header="安装" %}}
@@ -213,4 +213,3 @@ CROSS JOIN LATERAL qdgc_polygon_to_cells(
 - `qdgc`、`qdgc_postgis` 及其被调用依赖应安装到当前 `search_path` 可见的模式中，因为这些可迁移 SQL 函数使用未限定名称调用彼此。
 - 上游测试了 PostgreSQL 13–17；不能因为该扩展没有编译代码就推断 PostgreSQL 18 已获支持。
 - 即使采用剪枝，深层级区域填充仍可能生成巨量结果。应把 `qdgc_estimate_cell_count` 作为运维保护，并在调用 `qdgc_polygon_to_cells` 前施加应用侧规模限制。
-

@@ -73,12 +73,12 @@ weight: 3160
 | u24.aarch64 | AVAIL PIGSTY 2.5.0 1 | AVAIL PIGSTY 2.5.0 1 | AVAIL PIGSTY 2.5.0 1 | AVAIL PIGSTY 2.5.0 1 | AVAIL PIGSTY 2.5.0 1 |
 | u26.x86_64 | AVAIL PIGSTY 2.5.0 1 | AVAIL PIGSTY 2.5.0 1 | AVAIL PIGSTY 2.5.0 1 | AVAIL PIGSTY 2.5.0 1 | AVAIL PIGSTY 2.5.0 1 |
 | u26.aarch64 | AVAIL PIGSTY 2.5.0 1 | AVAIL PIGSTY 2.5.0 1 | AVAIL PIGSTY 2.5.0 1 | AVAIL PIGSTY 2.5.0 1 | AVAIL PIGSTY 2.5.0 1 |
-@ el8.x86_64 18 plruby_18 plruby_18-2.5.0-1PIGSTY.el8.x86_64.rpm pigsty 2.5.0 63.1KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/plruby_18-2.5.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 18 plruby_18 plruby_18-2.5.0-1PIGSTY.el8.aarch64.rpm pigsty 2.5.0 61.4KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/plruby_18-2.5.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 18 plruby_18 plruby_18-2.5.0-1PIGSTY.el9.x86_64.rpm pigsty 2.5.0 62.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/plruby_18-2.5.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 18 plruby_18 plruby_18-2.5.0-1PIGSTY.el9.aarch64.rpm pigsty 2.5.0 61.1KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/plruby_18-2.5.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 18 plruby_18 plruby_18-2.5.0-1PIGSTY.el10.x86_64.rpm pigsty 2.5.0 62.1KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/plruby_18-2.5.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 18 plruby_18 plruby_18-2.5.0-1PIGSTY.el10.aarch64.rpm pigsty 2.5.0 61.1KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/plruby_18-2.5.0-1PIGSTY.el10.aarch64.rpm
+@ el8.x86_64 18 plruby_18 plruby_18-2.5.0-2PIGSTY.el8.x86_64.rpm pigsty 2.5.0 63.2KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/plruby_18-2.5.0-2PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 18 plruby_18 plruby_18-2.5.0-2PIGSTY.el8.aarch64.rpm pigsty 2.5.0 61.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/plruby_18-2.5.0-2PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 18 plruby_18 plruby_18-2.5.0-2PIGSTY.el9.x86_64.rpm pigsty 2.5.0 62.8KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/plruby_18-2.5.0-2PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 18 plruby_18 plruby_18-2.5.0-2PIGSTY.el9.aarch64.rpm pigsty 2.5.0 61.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/plruby_18-2.5.0-2PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 18 plruby_18 plruby_18-2.5.0-2PIGSTY.el10.x86_64.rpm pigsty 2.5.0 62.3KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/plruby_18-2.5.0-2PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 18 plruby_18 plruby_18-2.5.0-2PIGSTY.el10.aarch64.rpm pigsty 2.5.0 61.3KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/plruby_18-2.5.0-2PIGSTY.el10.aarch64.rpm
 @ d12.x86_64 18 postgresql-18-plruby postgresql-18-plruby_2.5.0-1PIGSTY~bookworm_amd64.deb pigsty 2.5.0 138.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/plruby/postgresql-18-plruby_2.5.0-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 18 postgresql-18-plruby postgresql-18-plruby_2.5.0-1PIGSTY~bookworm_arm64.deb pigsty 2.5.0 135.9KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/plruby/postgresql-18-plruby_2.5.0-1PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 18 postgresql-18-plruby postgresql-18-plruby_2.5.0-1PIGSTY~trixie_amd64.deb pigsty 2.5.0 135.6KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/plruby/postgresql-18-plruby_2.5.0-1PIGSTY~trixie_amd64.deb
@@ -89,12 +89,12 @@ weight: 3160
 @ u24.aarch64 18 postgresql-18-plruby postgresql-18-plruby_2.5.0-1PIGSTY~noble_arm64.deb pigsty 2.5.0 141.8KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/plruby/postgresql-18-plruby_2.5.0-1PIGSTY~noble_arm64.deb
 @ u26.x86_64 18 postgresql-18-plruby postgresql-18-plruby_2.5.0-1PIGSTY~resolute_amd64.deb pigsty 2.5.0 140.3KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/plruby/postgresql-18-plruby_2.5.0-1PIGSTY~resolute_amd64.deb
 @ u26.aarch64 18 postgresql-18-plruby postgresql-18-plruby_2.5.0-1PIGSTY~resolute_arm64.deb pigsty 2.5.0 139.1KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/plruby/postgresql-18-plruby_2.5.0-1PIGSTY~resolute_arm64.deb
-@ el8.x86_64 17 plruby_17 plruby_17-2.5.0-1PIGSTY.el8.x86_64.rpm pigsty 2.5.0 62.9KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/plruby_17-2.5.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 17 plruby_17 plruby_17-2.5.0-1PIGSTY.el8.aarch64.rpm pigsty 2.5.0 61.4KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/plruby_17-2.5.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 17 plruby_17 plruby_17-2.5.0-1PIGSTY.el9.x86_64.rpm pigsty 2.5.0 62.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/plruby_17-2.5.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 17 plruby_17 plruby_17-2.5.0-1PIGSTY.el9.aarch64.rpm pigsty 2.5.0 61.1KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/plruby_17-2.5.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 17 plruby_17 plruby_17-2.5.0-1PIGSTY.el10.x86_64.rpm pigsty 2.5.0 62.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/plruby_17-2.5.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 17 plruby_17 plruby_17-2.5.0-1PIGSTY.el10.aarch64.rpm pigsty 2.5.0 61.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/plruby_17-2.5.0-1PIGSTY.el10.aarch64.rpm
+@ el8.x86_64 17 plruby_17 plruby_17-2.5.0-2PIGSTY.el8.x86_64.rpm pigsty 2.5.0 63.1KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/plruby_17-2.5.0-2PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 17 plruby_17 plruby_17-2.5.0-2PIGSTY.el8.aarch64.rpm pigsty 2.5.0 61.5KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/plruby_17-2.5.0-2PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 17 plruby_17 plruby_17-2.5.0-2PIGSTY.el9.x86_64.rpm pigsty 2.5.0 62.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/plruby_17-2.5.0-2PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 17 plruby_17 plruby_17-2.5.0-2PIGSTY.el9.aarch64.rpm pigsty 2.5.0 61.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/plruby_17-2.5.0-2PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 17 plruby_17 plruby_17-2.5.0-2PIGSTY.el10.x86_64.rpm pigsty 2.5.0 62.2KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/plruby_17-2.5.0-2PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 17 plruby_17 plruby_17-2.5.0-2PIGSTY.el10.aarch64.rpm pigsty 2.5.0 61.3KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/plruby_17-2.5.0-2PIGSTY.el10.aarch64.rpm
 @ d12.x86_64 17 postgresql-17-plruby postgresql-17-plruby_2.5.0-1PIGSTY~bookworm_amd64.deb pigsty 2.5.0 138.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/plruby/postgresql-17-plruby_2.5.0-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 17 postgresql-17-plruby postgresql-17-plruby_2.5.0-1PIGSTY~bookworm_arm64.deb pigsty 2.5.0 135.4KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/plruby/postgresql-17-plruby_2.5.0-1PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 17 postgresql-17-plruby postgresql-17-plruby_2.5.0-1PIGSTY~trixie_amd64.deb pigsty 2.5.0 135.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/plruby/postgresql-17-plruby_2.5.0-1PIGSTY~trixie_amd64.deb
@@ -105,12 +105,12 @@ weight: 3160
 @ u24.aarch64 17 postgresql-17-plruby postgresql-17-plruby_2.5.0-1PIGSTY~noble_arm64.deb pigsty 2.5.0 141.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/plruby/postgresql-17-plruby_2.5.0-1PIGSTY~noble_arm64.deb
 @ u26.x86_64 17 postgresql-17-plruby postgresql-17-plruby_2.5.0-1PIGSTY~resolute_amd64.deb pigsty 2.5.0 139.9KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/plruby/postgresql-17-plruby_2.5.0-1PIGSTY~resolute_amd64.deb
 @ u26.aarch64 17 postgresql-17-plruby postgresql-17-plruby_2.5.0-1PIGSTY~resolute_arm64.deb pigsty 2.5.0 138.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/plruby/postgresql-17-plruby_2.5.0-1PIGSTY~resolute_arm64.deb
-@ el8.x86_64 16 plruby_16 plruby_16-2.5.0-1PIGSTY.el8.x86_64.rpm pigsty 2.5.0 62.9KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/plruby_16-2.5.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 16 plruby_16 plruby_16-2.5.0-1PIGSTY.el8.aarch64.rpm pigsty 2.5.0 61.4KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/plruby_16-2.5.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 16 plruby_16 plruby_16-2.5.0-1PIGSTY.el9.x86_64.rpm pigsty 2.5.0 62.3KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/plruby_16-2.5.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 16 plruby_16 plruby_16-2.5.0-1PIGSTY.el9.aarch64.rpm pigsty 2.5.0 61.2KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/plruby_16-2.5.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 16 plruby_16 plruby_16-2.5.0-1PIGSTY.el10.x86_64.rpm pigsty 2.5.0 62.0KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/plruby_16-2.5.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 16 plruby_16 plruby_16-2.5.0-1PIGSTY.el10.aarch64.rpm pigsty 2.5.0 61.0KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/plruby_16-2.5.0-1PIGSTY.el10.aarch64.rpm
+@ el8.x86_64 16 plruby_16 plruby_16-2.5.0-2PIGSTY.el8.x86_64.rpm pigsty 2.5.0 63.0KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/plruby_16-2.5.0-2PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 16 plruby_16 plruby_16-2.5.0-2PIGSTY.el8.aarch64.rpm pigsty 2.5.0 61.4KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/plruby_16-2.5.0-2PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 16 plruby_16 plruby_16-2.5.0-2PIGSTY.el9.x86_64.rpm pigsty 2.5.0 62.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/plruby_16-2.5.0-2PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 16 plruby_16 plruby_16-2.5.0-2PIGSTY.el9.aarch64.rpm pigsty 2.5.0 61.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/plruby_16-2.5.0-2PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 16 plruby_16 plruby_16-2.5.0-2PIGSTY.el10.x86_64.rpm pigsty 2.5.0 62.1KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/plruby_16-2.5.0-2PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 16 plruby_16 plruby_16-2.5.0-2PIGSTY.el10.aarch64.rpm pigsty 2.5.0 61.2KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/plruby_16-2.5.0-2PIGSTY.el10.aarch64.rpm
 @ d12.x86_64 16 postgresql-16-plruby postgresql-16-plruby_2.5.0-1PIGSTY~bookworm_amd64.deb pigsty 2.5.0 138.0KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/plruby/postgresql-16-plruby_2.5.0-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 16 postgresql-16-plruby postgresql-16-plruby_2.5.0-1PIGSTY~bookworm_arm64.deb pigsty 2.5.0 135.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/plruby/postgresql-16-plruby_2.5.0-1PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 16 postgresql-16-plruby postgresql-16-plruby_2.5.0-1PIGSTY~trixie_amd64.deb pigsty 2.5.0 134.9KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/plruby/postgresql-16-plruby_2.5.0-1PIGSTY~trixie_amd64.deb
@@ -121,12 +121,12 @@ weight: 3160
 @ u24.aarch64 16 postgresql-16-plruby postgresql-16-plruby_2.5.0-1PIGSTY~noble_arm64.deb pigsty 2.5.0 141.2KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/plruby/postgresql-16-plruby_2.5.0-1PIGSTY~noble_arm64.deb
 @ u26.x86_64 16 postgresql-16-plruby postgresql-16-plruby_2.5.0-1PIGSTY~resolute_amd64.deb pigsty 2.5.0 139.7KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/plruby/postgresql-16-plruby_2.5.0-1PIGSTY~resolute_amd64.deb
 @ u26.aarch64 16 postgresql-16-plruby postgresql-16-plruby_2.5.0-1PIGSTY~resolute_arm64.deb pigsty 2.5.0 138.4KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/plruby/postgresql-16-plruby_2.5.0-1PIGSTY~resolute_arm64.deb
-@ el8.x86_64 15 plruby_15 plruby_15-2.5.0-1PIGSTY.el8.x86_64.rpm pigsty 2.5.0 63.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/plruby_15-2.5.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 15 plruby_15 plruby_15-2.5.0-1PIGSTY.el8.aarch64.rpm pigsty 2.5.0 61.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/plruby_15-2.5.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 15 plruby_15 plruby_15-2.5.0-1PIGSTY.el9.x86_64.rpm pigsty 2.5.0 63.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/plruby_15-2.5.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 15 plruby_15 plruby_15-2.5.0-1PIGSTY.el9.aarch64.rpm pigsty 2.5.0 62.4KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/plruby_15-2.5.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 15 plruby_15 plruby_15-2.5.0-1PIGSTY.el10.x86_64.rpm pigsty 2.5.0 62.3KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/plruby_15-2.5.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 15 plruby_15 plruby_15-2.5.0-1PIGSTY.el10.aarch64.rpm pigsty 2.5.0 62.4KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/plruby_15-2.5.0-1PIGSTY.el10.aarch64.rpm
+@ el8.x86_64 15 plruby_15 plruby_15-2.5.0-2PIGSTY.el8.x86_64.rpm pigsty 2.5.0 63.4KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/plruby_15-2.5.0-2PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 15 plruby_15 plruby_15-2.5.0-2PIGSTY.el8.aarch64.rpm pigsty 2.5.0 62.0KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/plruby_15-2.5.0-2PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 15 plruby_15 plruby_15-2.5.0-2PIGSTY.el9.x86_64.rpm pigsty 2.5.0 63.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/plruby_15-2.5.0-2PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 15 plruby_15 plruby_15-2.5.0-2PIGSTY.el9.aarch64.rpm pigsty 2.5.0 62.6KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/plruby_15-2.5.0-2PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 15 plruby_15 plruby_15-2.5.0-2PIGSTY.el10.x86_64.rpm pigsty 2.5.0 62.4KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/plruby_15-2.5.0-2PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 15 plruby_15 plruby_15-2.5.0-2PIGSTY.el10.aarch64.rpm pigsty 2.5.0 62.5KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/plruby_15-2.5.0-2PIGSTY.el10.aarch64.rpm
 @ d12.x86_64 15 postgresql-15-plruby postgresql-15-plruby_2.5.0-1PIGSTY~bookworm_amd64.deb pigsty 2.5.0 137.5KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/plruby/postgresql-15-plruby_2.5.0-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 15 postgresql-15-plruby postgresql-15-plruby_2.5.0-1PIGSTY~bookworm_arm64.deb pigsty 2.5.0 135.1KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/plruby/postgresql-15-plruby_2.5.0-1PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 15 postgresql-15-plruby postgresql-15-plruby_2.5.0-1PIGSTY~trixie_amd64.deb pigsty 2.5.0 134.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/plruby/postgresql-15-plruby_2.5.0-1PIGSTY~trixie_amd64.deb
@@ -137,12 +137,12 @@ weight: 3160
 @ u24.aarch64 15 postgresql-15-plruby postgresql-15-plruby_2.5.0-1PIGSTY~noble_arm64.deb pigsty 2.5.0 141.4KiB https://repo.pigsty.cc/apt/pgsql/noble/pool/main/p/plruby/postgresql-15-plruby_2.5.0-1PIGSTY~noble_arm64.deb
 @ u26.x86_64 15 postgresql-15-plruby postgresql-15-plruby_2.5.0-1PIGSTY~resolute_amd64.deb pigsty 2.5.0 139.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/plruby/postgresql-15-plruby_2.5.0-1PIGSTY~resolute_amd64.deb
 @ u26.aarch64 15 postgresql-15-plruby postgresql-15-plruby_2.5.0-1PIGSTY~resolute_arm64.deb pigsty 2.5.0 138.5KiB https://repo.pigsty.cc/apt/pgsql/resolute/pool/main/p/plruby/postgresql-15-plruby_2.5.0-1PIGSTY~resolute_arm64.deb
-@ el8.x86_64 14 plruby_14 plruby_14-2.5.0-1PIGSTY.el8.x86_64.rpm pigsty 2.5.0 63.2KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/plruby_14-2.5.0-1PIGSTY.el8.x86_64.rpm
-@ el8.aarch64 14 plruby_14 plruby_14-2.5.0-1PIGSTY.el8.aarch64.rpm pigsty 2.5.0 61.9KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/plruby_14-2.5.0-1PIGSTY.el8.aarch64.rpm
-@ el9.x86_64 14 plruby_14 plruby_14-2.5.0-1PIGSTY.el9.x86_64.rpm pigsty 2.5.0 63.0KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/plruby_14-2.5.0-1PIGSTY.el9.x86_64.rpm
-@ el9.aarch64 14 plruby_14 plruby_14-2.5.0-1PIGSTY.el9.aarch64.rpm pigsty 2.5.0 62.5KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/plruby_14-2.5.0-1PIGSTY.el9.aarch64.rpm
-@ el10.x86_64 14 plruby_14 plruby_14-2.5.0-1PIGSTY.el10.x86_64.rpm pigsty 2.5.0 62.5KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/plruby_14-2.5.0-1PIGSTY.el10.x86_64.rpm
-@ el10.aarch64 14 plruby_14 plruby_14-2.5.0-1PIGSTY.el10.aarch64.rpm pigsty 2.5.0 62.4KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/plruby_14-2.5.0-1PIGSTY.el10.aarch64.rpm
+@ el8.x86_64 14 plruby_14 plruby_14-2.5.0-2PIGSTY.el8.x86_64.rpm pigsty 2.5.0 63.3KiB https://repo.pigsty.cc/yum/pgsql/el8.x86_64/plruby_14-2.5.0-2PIGSTY.el8.x86_64.rpm
+@ el8.aarch64 14 plruby_14 plruby_14-2.5.0-2PIGSTY.el8.aarch64.rpm pigsty 2.5.0 62.1KiB https://repo.pigsty.cc/yum/pgsql/el8.aarch64/plruby_14-2.5.0-2PIGSTY.el8.aarch64.rpm
+@ el9.x86_64 14 plruby_14 plruby_14-2.5.0-2PIGSTY.el9.x86_64.rpm pigsty 2.5.0 63.5KiB https://repo.pigsty.cc/yum/pgsql/el9.x86_64/plruby_14-2.5.0-2PIGSTY.el9.x86_64.rpm
+@ el9.aarch64 14 plruby_14 plruby_14-2.5.0-2PIGSTY.el9.aarch64.rpm pigsty 2.5.0 62.9KiB https://repo.pigsty.cc/yum/pgsql/el9.aarch64/plruby_14-2.5.0-2PIGSTY.el9.aarch64.rpm
+@ el10.x86_64 14 plruby_14 plruby_14-2.5.0-2PIGSTY.el10.x86_64.rpm pigsty 2.5.0 62.7KiB https://repo.pigsty.cc/yum/pgsql/el10.x86_64/plruby_14-2.5.0-2PIGSTY.el10.x86_64.rpm
+@ el10.aarch64 14 plruby_14 plruby_14-2.5.0-2PIGSTY.el10.aarch64.rpm pigsty 2.5.0 62.6KiB https://repo.pigsty.cc/yum/pgsql/el10.aarch64/plruby_14-2.5.0-2PIGSTY.el10.aarch64.rpm
 @ d12.x86_64 14 postgresql-14-plruby postgresql-14-plruby_2.5.0-1PIGSTY~bookworm_amd64.deb pigsty 2.5.0 138.3KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/plruby/postgresql-14-plruby_2.5.0-1PIGSTY~bookworm_amd64.deb
 @ d12.aarch64 14 postgresql-14-plruby postgresql-14-plruby_2.5.0-1PIGSTY~bookworm_arm64.deb pigsty 2.5.0 135.8KiB https://repo.pigsty.cc/apt/pgsql/bookworm/pool/main/p/plruby/postgresql-14-plruby_2.5.0-1PIGSTY~bookworm_arm64.deb
 @ d13.x86_64 14 postgresql-14-plruby postgresql-14-plruby_2.5.0-1PIGSTY~trixie_amd64.deb pigsty 2.5.0 134.2KiB https://repo.pigsty.cc/apt/pgsql/trixie/pool/main/p/plruby/postgresql-14-plruby_2.5.0-1PIGSTY~trixie_amd64.deb
@@ -172,7 +172,7 @@ pig build pkg plruby         # 构建 RPM / DEB 包
 pig repo add pgsql -u          # 添加仓库并更新缓存
 ```
 
-使用 [**pig**](/docs/pig) 或者是 `apt/yum/dnf` 安装扩展：
+使用 [**pig**](https://pig.pgsty.com/zh) 或者是 `apt/yum/dnf` 安装扩展：
 
 {{< tabpane text=true persist=header >}}
 {{% tab header="安装" %}}

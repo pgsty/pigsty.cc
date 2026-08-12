@@ -29,7 +29,6 @@ weight: 10
 | [`pg_duckdb`](/ext/e/pg_duckdb) | `pg_duckdb` | 在PostgreSQL中的嵌入式DuckDB扩展 |
 | [`pg_mooncake`](/ext/e/pg_mooncake) | `pg_mooncake` | PostgreSQL列式存储表 |
 | [`storage_engine`](/ext/e/storage_engine) | `storage_engine` | 带向量化执行的 colcompress 与 rowcompress 表访问方法 |
-| [`pg_clickhouse`](/ext/e/pg_clickhouse) | `pg_clickhouse` | 从PostgreSQL中查询ClickHouse的接口 |
 | [`pg_parquet`](/ext/e/pg_parquet) | `pg_parquet` | 在PostgreSQL与本地/S3中的Parquet文件复制数据 |
 | [`pg_ducklake`](/ext/e/pg_ducklake) | `pg_ducklake` | 基于 DuckDB 与 Parquet 的 DuckLake 湖仓一体扩展 |
 | [`pg_orca`](/ext/e/pg_orca) | `pg_orca` | PostgreSQL ORCA 查询优化器扩展 |
@@ -50,6 +49,7 @@ weight: 10
 | [`pg_trickle`](/ext/e/pg_trickle) | `pg_trickle` | 为 PostgreSQL 18 提供流式表与差分视图维护 |
 | [`pg_durable`](/ext/e/pg_durable) | `pg_durable` | 在 PostgreSQL 中使用 SQL 定义可持久化、可恢复的长时间运行函数 |
 | [`pg_disorder`](/ext/e/pg_disorder) | `pg_disorder` | 扰动无 ORDER BY 查询的行序以暴露依赖隐式顺序的测试 |
+| [`pg_local_cache`](/ext/e/pg_local_cache) | `pg_local_cache` | 为普通 PostgreSQL 主键读取提供事务感知的共享内存缓存 |
 | [`provsql`](/ext/e/provsql) | `provsql` | PostgreSQL 半环溯源、概率与不确定性管理扩展 |
 | [`orioledb`](/ext/e/orioledb) | `orioledb` | OrioleDB，下一代事务处理引擎 |
 | [`omni`](/ext/e/omni) | `omni--0.2.14.so` | PostgreSQL即平台，Omnigres主扩展与加载器 |
@@ -138,4 +138,3 @@ weight: 10
 | [`decoderbufs`](/ext/e/decoderbufs) | `decoderbufs` | 将WAL逻辑解码为ProtocolBuffer协议的消息 |
 | [`repmgr`](/ext/e/repmgr) | `repmgr` | PostgreSQL复制管理组件 |
 {.ext-table}
-

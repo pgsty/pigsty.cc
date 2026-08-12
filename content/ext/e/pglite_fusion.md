@@ -165,7 +165,7 @@ pig build pkg pglite_fusion         # 构建 RPM / DEB 包
 pig repo add pgsql -u          # 添加仓库并更新缓存
 ```
 
-使用 [**pig**](/docs/pig) 或者是 `apt/yum/dnf` 安装扩展：
+使用 [**pig**](https://pig.pgsty.com/zh) 或者是 `apt/yum/dnf` 安装扩展：
 
 {{< tabpane text=true persist=header >}}
 {{% tab header="安装" %}}
@@ -352,6 +352,7 @@ CREATE TABLE people (
 -----
 
 ### `get_sqlite_text`
+
 从 `query_sqlite` 返回的行中提取指定列的文本值。使用此函数可从查询结果中获取文本类型的值。
 
 #### 参数：
